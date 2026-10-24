@@ -1,0 +1,276 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\one}{\mathbf 1}
+\title{An Exact Infimum-over-Flows Formula for Relaxation Time}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Aldous and Fill ask whether the relaxation time of a finite reversible Markov chain admits an exact characterization as an infimum over flows, rather than only the familiar path-congestion upper bounds. We give such a characterization. For the weighted divergence operator of the chain, the problem is exactly the minimum-operator-norm right-inverse problem. The Moore--Penrose inverse, equivalently electrical routing, is optimal, and its norm is the reciprocal of the smallest positive singular value of the weighted divergence. Reversibility identifies that singular value with the square root of the spectral gap. We also give an equivalent centered state-to-stationarity Gram-flow formulation and record exact small-chain counterexamples to two natural scalar flow formulas.
+\end{abstract}
+
+\section{Setup and statement}
+Let $P$ be the transition matrix of a finite irreducible reversible Markov chain on a finite state space $V$, with stationary distribution $\pi$. Put
+\[
+\Pi=\operatorname{diag}(\pi).
+\]
+Orient each physical non-loop edge once. For an oriented edge $e=(x,y)$ set
+\[
+c_e=\pi_xP(x,y)=\pi_yP(y,x)>0,
+\]
+let $C=\operatorname{diag}(c_e)$, and let $B$ be the oriented incidence matrix, with the $e=(x,y)$ column equal to $e_x-e_y$. Then
+\[
+L:=BCB^T=\Pi(I-P).
+\tag{1.1}
+\]
+Self-loops do not create edge coordinates; they are nevertheless represented in (1.1), since
+\[
+L_{xx}=\pi_x(1-P(x,x))=\sum_{y\ne x}\pi_xP(x,y).
+\]
+
+Let
+\[
+\cH_0=\{b\in\R^V:\one^Tb=0\}.
+\]
+A linear routing is a map $R:\cH_0\to\R^E$ satisfying
+\[
+BR=I_{\cH_0}.
+\tag{1.2}
+\]
+Thus $Rb$ is a flow with divergence $b$. We use the demand norm and flow-energy norm
+\[
+\|b\|_{\Pi^{-1}}^2=b^T\Pi^{-1}b,
+\qquad
+\|\theta\|_{C^{-1}}^2=\theta^TC^{-1}\theta.
+\]
+Write
+\[
+\tau_2=(1-\lambda_2)^{-1},
+\]
+where $1=\lambda_1>\lambda_2\ge\cdots$ are the eigenvalues of $P$.
+
+\begin{theorem}[Exact flow characterization]\label{thm:main}
+For every finite irreducible reversible chain,
+\[
+\boxed{
+\tau_2=
+\inf_{R:\,BR=I_{\cH_0}}
+\sup_{0\ne b\in\cH_0}
+\frac{(Rb)^TC^{-1}(Rb)}{b^T\Pi^{-1}b}.
+}
+\tag{1.3}
+\]
+The infimum is attained by electrical routing
+\[
+\boxed{R_*=CB^TL^+,}
+\tag{1.4}
+\]
+where $L^+$ is the Moore--Penrose inverse of $L$.
+\end{theorem}
+
+This answers Aldous--Fill Open Problem 3.44 in the finite irreducible reversible-chain setting with the source normalization unchanged.
+
+\section{A right-inverse lemma}
+We first isolate the linear-algebraic statement behind the formula.
+
+\begin{lemma}\label{lem:rightinverse}
+Let $D:E\to H$ be a surjective linear map between finite-dimensional Euclidean spaces. If $\sigma_{\min}(D)$ is its smallest singular value, then
+\[
+\inf_{S:\,DS=I_H}\|S\|_{\mathrm{op}}
+=\frac1{\sigma_{\min}(D)}.
+\tag{2.1}
+\]
+The Moore--Penrose inverse $D^+$ attains the infimum.
+\end{lemma}
+
+\begin{proof}
+Let $u$ be a unit left singular vector corresponding to $\sigma_{\min}(D)$. Every solution of $Dx=u$ has Euclidean norm at least that of the minimum-norm solution $D^+u$, namely $1/\sigma_{\min}(D)$. Hence every right inverse $S$ satisfies
+\[
+\|S\|_{\mathrm{op}}\ge \|Su\|\ge \frac1{\sigma_{\min}(D)}.
+\]
+Conversely, $D^+$ is a right inverse because $D$ is surjective, and
+\[
+\|D^+\|_{\mathrm{op}}=\frac1{\sigma_{\min}(D)}.
+\]
+\end{proof}
+
+\section{Proof of Theorem \ref{thm:main}}
+Define the weighted divergence operator
+\[
+D=\Pi^{-1/2}BC^{1/2}.
+\tag{3.1}
+\]
+Its range is $\sqrt\pi^{\,\perp}$. Indeed, if $b\in\cH_0$ and
+\[
+y=\Pi^{-1/2}b,
+\]
+then
+\[
+\sqrt\pi^{\,T}y=\one^Tb=0.
+\]
+If a physical flow is written as $\theta=C^{1/2}x$, then
+\[
+B\theta=b
+\quad\Longleftrightarrow\quad
+Dx=y,
+\tag{3.2}
+\]
+and the two quadratic norms become Euclidean:
+\[
+\theta^TC^{-1}\theta=\|x\|_2^2,
+\qquad
+b^T\Pi^{-1}b=\|y\|_2^2.
+\tag{3.3}
+\]
+Consequently the right side of (1.3) is the square of the least possible Euclidean operator norm of a right inverse of $D$ on $\sqrt\pi^{\,\perp}$.
+
+By (1.1),
+\[
+DD^T
+=\Pi^{-1/2}BCB^T\Pi^{-1/2}
+=\Pi^{-1/2}L\Pi^{-1/2}
+=I-\Pi^{1/2}P\Pi^{-1/2}.
+\tag{3.4}
+\]
+Reversibility makes
+\[
+K:=\Pi^{1/2}P\Pi^{-1/2}
+\]
+symmetric. It is similar to $P$, so its eigenvalues are $1=\lambda_1>\lambda_2\ge\cdots$. Therefore the eigenvalues of $DD^T$ on $\sqrt\pi^{\,\perp}$ are
+\[
+1-\lambda_2,\ldots,1-\lambda_{|V|}.
+\]
+Thus
+\[
+\sigma_{\min}(D)=\sqrt{1-\lambda_2}.
+\tag{3.5}
+\]
+Lemma \ref{lem:rightinverse} and (3.3) give
+\[
+\inf_{R:\,BR=I_{\cH_0}}
+\sup_{b\ne0}
+\frac{\|Rb\|_{C^{-1}}^2}{\|b\|_{\Pi^{-1}}^2}
+=\frac1{1-\lambda_2}=\tau_2.
+\]
+
+It remains only to identify the optimizer in physical flow coordinates. For $b\in\cH_0$, set
+\[
+R_*b=CB^TL^+b.
+\]
+Since $\ker L=\operatorname{span}\{\one\}$ and $b\perp\one$,
+\[
+BR_*b=BCB^TL^+b=LL^+b=b.
+\]
+Moreover
+\[
+(R_*b)^TC^{-1}(R_*b)=b^TL^+b,
+\]
+and the Moore--Penrose argument above says this is the minimum energy among all flows with divergence $b$. Hence $R_*$ is the minimizing right inverse in (1.3).
+\qed
+
+\section{Centered state-to-stationarity flows}
+The operator formula has a source-facing version involving one flow from each state to stationarity.
+
+For a feasible routing $R$, define
+\[
+\psi^x=R(e_x-\pi),
+\qquad x\in V.
+\tag{4.1}
+\]
+Then
+\[
+B\psi^x=e_x-\pi,
+\qquad
+\sum_x\pi_x\psi^x=0.
+\tag{4.2}
+\]
+Conversely, if a family $\Psi=(\psi^x)_{x\in V}$ satisfies (4.2), then
+\[
+Rb:=\sum_x b_x\psi^x
+\]
+defines a feasible routing on $\cH_0$.
+
+Let
+\[
+G_\Psi(x,y)=\ip{\psi^x}{\psi^y}_{C^{-1}}
+=(\psi^x)^TC^{-1}\psi^y.
+\tag{4.3}
+\]
+If $b=\Pi h$ with $\pi^Th=0$, then
+\[
+\frac{\|Rb\|_{C^{-1}}^2}{\|b\|_{\Pi^{-1}}^2}
+=
+\frac{h^T\Pi G_\Psi\Pi h}{h^T\Pi h}.
+\]
+With $z=\Pi^{1/2}h$, this is the Rayleigh quotient of
+\[
+A_\Psi=\Pi^{1/2}G_\Psi\Pi^{1/2}
+\]
+on $\sqrt\pi^{\,\perp}$. The centering in (4.2) gives $A_\Psi\sqrt\pi=0$, so the supremum is the ordinary largest eigenvalue. Hence Theorem \ref{thm:main} is equivalent to
+\[
+\boxed{
+\tau_2=
+\inf_{\Psi:\,B\psi^x=e_x-\pi,\ \sum_x\pi_x\psi^x=0}
+\lambda_{\max}\!\left(\Pi^{1/2}G_\Psi\Pi^{1/2}\right).
+}
+\tag{4.4}
+\]
+Electrical state-to-stationarity flows attain the infimum.
+
+\section{Why two natural scalarizations are not exact}
+The operator-valued energy in (4.4) is essential. Two tempting scalar reductions already fail on very small chains; the accompanying exact-arithmetic script checks the values below.
+
+\paragraph{Path congestion on $P_4$.}
+For simple random walk on the four-vertex path,
+\[
+\tau_2=2.
+\]
+The unique simple paths give the optimized scalar path-congestion expression $5/2$. Thus the familiar path formula is a strict upper bound, with ratio $5/4$.
+
+\paragraph{Average pairwise Thomson energy on $K_3$.}
+For simple random walk on the triangle,
+\[
+\tau_2=\frac23,
+\]
+whereas the stationary average of independently minimized pairwise Thomson energies is
+\[
+\frac43.
+\]
+The ratio is $2$. Thus minimizing each pair separately and then taking a scalar average discards precisely the cross-demand quadratic information retained by (4.4).
+
+These examples reject the proposed scalar formulas; they do not refute the Aldous--Fill existence question.
+
+\section{Prior-art scope}
+The abstract mechanism behind Theorem \ref{thm:main} is classical: Moore--Penrose inverses give minimum-norm solutions of incidence/divergence equations, and bounded right inverses of divergence are standard in inf--sup/Babu\v{s}ka--Aziz theory. Recent work of Kook and Vempala also rewrites spectral-gap questions through dual certificates and a Babu\v{s}ka--Aziz constant. Accordingly, no broad novelty claim is made for right-inverse or pseudoinverse duality itself.
+
+A bounded literature search through 17 September 2026 did not locate a primary source explicitly stating (1.3) or (4.4) for finite reversible Markov chains with the stationary $\Pi^{-1}$ demand norm and identifying it as the resolution of Aldous--Fill Open Problem 3.44. This negative search is not a novelty certificate; publication novelty remains to be assessed separately from the mathematical answer to the numbered source question.
+
+\section{Continuous-time analogue}
+For a finite irreducible reversible generator $Q$, put
+\[
+L=-\Pi Q,
+\qquad
+c_{xy}=\pi_xq_{xy}.
+\]
+The same weighted-divergence proof applies. The nonzero eigenvalues of $DD^T$ are the positive eigenvalues of $-Q$, so the corresponding flow infimum equals the reciprocal of the smallest positive eigenvalue of $-Q$, i.e. the continuous-time relaxation time.
+
+\begin{thebibliography}{9}
+\bibitem{AF}
+D. Aldous and J. Fill,
+\emph{Reversible Markov Chains and Random Walks on Graphs},
+unfinished monograph (2002; recompilation 2014), Chapter 3, Open Problem 3.44.
+\url{https://www.stat.berkeley.edu/~aldous/RWG/Book_Ralph/Ch3.S8.html}
+
+\bibitem{KV}
+Y. Kook and S. S. Vempala,
+\emph{Spectral Gaps of Hit-and-Run and Coordinate Hit-and-Run},
+arXiv:2608.16878, 2026.
+\end{thebibliography}
+
+\end{document}

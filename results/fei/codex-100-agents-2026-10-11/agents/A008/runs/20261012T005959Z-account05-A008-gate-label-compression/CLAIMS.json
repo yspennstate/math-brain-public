@@ -1,0 +1,115 @@
+[
+  {
+    "claim_id": "A006-SUNFLOWER-POSTERIOR-FOREST-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every integer m>=1, f_m=2*1[x0=1]*1[at least one xi=1 for 1<=i<=m]-1 on the uniform (m+1)-cube, represented as the union of the m distinct clauses (x0 AND xi), with supports ordered (0,i), M_i=1, pi_i=1/4 and lambda_i=1/m, has exact finite posterior partition weights S_B({0})=1/4, S_B(T)=m^(-t)*(a/4)^t, and S_B({0} union T)=t!*a^(t-1)/(4*m^t)*(1+(1-t/m)*a), where t=|T|>=1 and a=2^(-6/5). Its complete conditioned all-partition residual is <=(43/10) I(f_m), and its exact conditioned all-partition run-cost expectation is <=(23/2) I(f_m). A normalized prior w_k=1/((k+1)(k+2)) on lambda_i^(k)=2^(-k)/m pays at most v additional bits, giving bounds (53/10) I and (25/2) I respectively. Every point-mass posterior choice in this representation has residual/I tending to infinity as m tends to infinity.",
+    "hypotheses": [
+      "integer m>=1",
+      "uniform independent physical signs",
+      "specified fixed sunflower DNF and support orders",
+      "distinct actual finite partition-forest runs only, including ordered child-label draws",
+      "base-two entropy and costs, gamma=6/5, natural logarithms for rank F",
+      "failed/infinite paths have zero output mass; reference is conditioned on nonempty initial roots"
+    ],
+    "statement_sha256": "7e7317fec14ec08f79bad0d58f97d00f9b8f632634d84aca4509375a674ab5c5",
+    "contributors": [
+      "account05/A006"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261011T210855Z-account05-A006-posterior-forest-optimization\\REPORT.md",
+      "sections": "complete derivation, Sections 2-6"
+    },
+    "proof_dependencies": [
+      {
+        "source": "source_material/reductions/paper/forests.tex",
+        "locator": "thm:posteriorforest and eq:forestcost",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "status": "SOURCE_COMPLETE_BASELINE_READ"
+      },
+      {
+        "source": "SEED_LEMMAS.md",
+        "locator": "Section 2 normalized prior over complete reference laws",
+        "sha256": "7381273c5e374727f6069a06390e60a6463bccead35c46a9ff1f652e55366dc3",
+        "status": "SOURCE_COMPLETE_BASELINE_READ"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A008",
+        "verdict": "HOLDS_AT_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261012T005959Z-account05-A008-gate-label-compression\\REVIEW_A006.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261012T005959Z-account05-A008-gate-label-compression\\out\\REVIEW_A006_CHECK.json",
+        "method": "generic assignment/source-SCC/parent/attachment enumeration; formal residual polynomial and independent sequential queue probabilities; analytic all-m proof",
+        "reviewer_supplied_substantive_repair": false,
+        "timestamp_utc": "2026-10-12T02:16:24.192720+00:00"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_ACCEPTED_LOCALLY_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "uniform dimension-independent deterministic forest residual payment in the specified sunflower DNF"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A007",
+      "A008",
+      "A009",
+      "A010",
+      "A014",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "B02-A008-UNEQUAL-READONCE-DNF-FOREST-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every nonconstant uniform Boolean read-once DNF consisting of m>=1 disjoint nonempty signed conjunction clauses of arbitrary widths w_l>=1, the original conditioned forests.tex generator with the exact prime-implicant table, lambda_l=1 and one fixed order per clause has one partition-forest run per nonempty set. Its complete source residual R is <=(16/5+log2(e))*I<47I/10. The actual conditioned probabilities of these finite once-per-block zero-child runs have full nonempty spectral cross-entropy C_pf<=(26/5+2log2(3)+2log2(e))*I. Including the empty/nonempty entropy split, h2(Var f)+C_pf<67I/5. These are ideal complete-reference costs, without optional binary-prefix rounding or optional mixture-selector charges, not a new FEI class or a universal PI-J bound.",
+    "hypotheses": [
+      "all finite m and positive integer clause widths",
+      "uniform independent physical signs; entropy in bits and gamma=6/5",
+      "each variable occurs in one clause and blocks are pairwise disjoint",
+      "one globally fixed prime-implicant table, feasible lambda_l=1 and full orders",
+      "original queue conditioned on nonempty initial roots; failed and infinite paths retain no output mass",
+      "selected finite run family uses all touched blocks as roots, zero children, and disjoint selected subsets",
+      "no sampled-set-dependent table or scale selection"
+    ],
+    "statement_sha256": "d20b46b85cf1295d2501ffa585e32d5880bf50cf69b11c5b7d556649b60d62d7",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261012T005959Z-account05-A008-gate-label-compression\\READ_ONCE_DNF.tex",
+      "ledger": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261012T005959Z-account05-A008-gate-label-compression\\CODE_COST_LEDGER.json",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261012T005959Z-account05-A008-gate-label-compression\\out\\BLOCK_CERTIFICATES.json"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locators": [
+          "eq:forestconditioning",
+          "eq:forestcost",
+          "thm:posteriorforest",
+          "lem:forestnormalizer",
+          "h2(v)<=2I source-level entropy estimate"
+        ],
+        "status": "SOURCE_COMPLETE_BASELINE_READ"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_RATIONAL_INTERVAL_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A007",
+      "A009",
+      "A010",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  }
+]

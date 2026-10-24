@@ -1,0 +1,33 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261011T210906Z-account01-B15-A071-two-address-domain",
+  "claims": [
+    {
+      "claim_id": "B15-A071-C022-EDGE-DOMAIN-MAX",
+      "version": "v1",
+      "exact_statement": "For every Boolean F in the frozen six-variable edge-partition family F(y,x)=g(x)+chi_01(y)1_E01(x)+chi_10(y)1_E10(x)+chi_11(y)1_E11(x), where the E_a are three disjoint four-cube edges, g is sign-valued off their union and zero on it, and all four address-conditioned squared spectra are product laws, H(F)/I(F) <= 40/17. Equality occurs in 1,792 of the 1,015,808 enumerated symmetry representatives.",
+      "hypotheses": [
+        "two address bits and four physical bits",
+        "three pairwise vertex-disjoint physical cube edges",
+        "one nonzero address character per edge",
+        "residual ternary slice zero exactly on the edge union",
+        "normalized residual squared Walsh law is product",
+        "uniform cube and entropy in bits"
+      ],
+      "statement_sha256": "bc70dc2dd2ef5fded90b3f3f7ca28c3751084e20e4e2f41acd646bf2704f0b06",
+      "contributors": ["account01/B15"],
+      "proof_source": "REPORT.md sections 2-4; exact_two_address_search.py; OUTPUT.txt",
+      "proof_dependencies": [
+        "C016/C022 conventions from supplement CLAIMS.md",
+        "two-address construction in ONE_BIT_ENDPOINT.md blob 0848515367f7fc3493f51820de999a30234905a4",
+        "integer Walsh transform and exact product-law identities"
+      ],
+      "review_records": [],
+      "status": "FINITE_DOMAIN_EXHAUSTED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": "existence of a ratio larger than 40/17 inside the frozen edge-partition domain",
+      "first_unproved_line": "No inference to arbitrary C022 functions, larger physical dimension, or non-edge conditional cells is proved.",
+      "next_consumers": ["A072", "A075", "A085", "A092"]
+    }
+  ]
+}

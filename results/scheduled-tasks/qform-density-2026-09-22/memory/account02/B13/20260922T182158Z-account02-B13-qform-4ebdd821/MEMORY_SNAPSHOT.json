@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B13",
+  "run_id": "20260922T182158Z-account02-B13-qform-4ebdd821",
+  "source_control_commit": "ac9dc5a387e67f95612a4e9e165d42c953a4c1b2",
+  "owner_control_revision": "2026-09-22.11",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d511859edaa636cdc00fcd64155ab07506875c3d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260922T182158Z-account02-B13-qform-4ebdd821/REPORT.md"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B13/20260922T182158Z-account02-B13-qform-4ebdd821.md",
+    "commit": "e7a87664a2d6f1bdde289dba22ad075c2e962608"
+  },
+  "partner_result_applied": {
+    "worker": "account03/B13",
+    "run_id": "20260922T182042Z-account03-B13-qform-r14",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "58dc674aade01aa82bb10fcaf254af03f41575fa",
+    "claim": "QFORM-ZERO-PAIR-CROSSBANK-AGGREGATE-v1",
+    "application": "An arbitrary-rank zero physical pair with D_cross>=1/225 has density cap <=2sqrt(15e)=12.770940047919; exact-rank-three nontrivial zero-pair crossbank is impossible by Witt index one, separating the partner branch from the surviving rank-three mixed geometry."
+  },
+  "other_premises": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "604a08009638981da254a72f09a24dd50e3a3c94",
+      "claim": "exact cap-one product bang-bang reduction"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "94bb5d8d6a87b78d1cdda3e8db9f00d07c494e5c",
+      "claim": "support-free near-null pair and exact-rank-three aggregate theorem"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "773b7fb6f0e6a8142066f0bac08d228dfc164fdb",
+      "claim": "diffuse separable-phase density theorem"
+    },
+    {
+      "claim": "orientation-free physical-pivot exact-rank-three theorem",
+      "source": "current research / completed rank-two half-Riesz proof"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-RANK3-LIGHT-FULL-DIFFUSE-v1",
+      "status": "ANALYTIC_PROOF_SUPPLIED",
+      "statement": "With heavy threshold c_i>3/10 and light Gram S, if lambda_min(S)>=3/5 then ||p_Q||inf<=5e."
+    },
+    {
+      "id": "QFORM-RANK3-HEAVY-PAIR-PAID-v1",
+      "status": "ANALYTIC_PROOF_SUPPLIED",
+      "statement": "If the second eigenvalue of the light Gram S is <=3/5, exterior Cauchy-Binet forces a heavy pair wedge Delta>=1/225, and physical-pivot/near-null alternatives give ||p_Q||inf<1127."
+    },
+    {
+      "id": "QFORM-RANK3-HEAVY-LIGHT-TRICHOTOMY-v1",
+      "status": "ANALYTIC_PROOF_SUPPLIED",
+      "statement": "Every exact-rank-three target is paid in the regimes s3>=3/5 or s2<=3/5; the sole remaining Gram regime is s3<3/5<s2."
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "mechanism_change": "Moved from the preceding local near-null hyperbola interpolation to global heavy/light Parseval-frame aggregation, exterior Cauchy-Binet pair forcing, and a compression max-entry lemma.",
+  "unresolved_implication": "QFORM-RANK3-MIXED-ONEHEAVY-TWODIFFUSE-v1: close the sole exact-rank-three regime s3<3/5<s2 by aggregating the light two-plane before combining it with the one-dimensional heavy bank; then extend the exhaustive bridge to arbitrary additional spectrum.",
+  "next_step": "Use the diffuse light two-plane as a grouped rank-two fractional-trace source and pay the remaining heavy one-dimensional spectral mass without conditioning away product provenance.",
+  "verification": {
+    "checker_status": "PASS",
+    "parseval_frames": 10000,
+    "maxentry_tests": 20000,
+    "role": "sanity_only_not_proof"
+  }
+}

@@ -1,0 +1,61 @@
+run: NM13-08-T07-2026-09-20T14-37-32Z
+runtime_model: GPT-5.6 Sol
+reasoning_effort: UNVERIFIED
+parent:
+  problem: pairwise negative edge correlation for the uniform measure on all forests of every finite graph
+  status_before: OPEN
+  status_after: OPEN
+  complete_all_simple_graph_order_before: 9
+  complete_all_simple_graph_order_after: 9
+  counterexample_order_lower_bound_before: 10
+  counterexample_order_lower_bound_after: 10
+claims:
+  - id: T07-ONE-EDGE-TERMINAL-ALGEBRA-26
+    statement: normalized unmarked and one-edge-required mixed-spider transfers lie in the five-state algebra C(x,z), with C(x,z)C(y,w)=C(x+y,z+w+kappa(x,y)) and kappa(x,y)=(sum x)(sum y)-x dot y
+    proof_status: PROVED_EXACT_SYMBOLIC
+  - id: T07-CROSS-COMPONENT-QUADRATIC-SIGN-26
+    statement: for marked edges in two distinct mixed-spider components, after the response-strip substitution v=u^2/2-hu the normalized Rayleigh numerator is (4de-3k)u^2+[2ae+2bd-k(s0-6h)]u+(ab-H0k); all 38 physical symbolic schemes are strictly positive on h in [43/360,1/8]
+    proof_status: PROVED_EXACT_SYMBOLIC_COMPUTATIONAL
+  - id: T07-INDEPENDENT-MIXED-SPIDER-FOREST-PNC-26
+    statement: for every finite multiset H=disjoint_union_j D_{p_j,q_j}, G=bar(K3) join H has pairwise negative edge correlation under the uniform all-forests law; strict for every pair except the degenerate G=K3,1
+    proof_status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+mechanism_gain:
+  before: one arbitrary mixed-spider component plus isolated right vertices; cross-component mixed-spider pairs unresolved
+  after: commutative one-edge terminal-response algebra plus exact cross-component quadratic sign theorem; arbitrary finite mixed-spider forests allowed
+exact_certificate:
+  schemes: 38
+  strip: [43/360, 1/8]
+  certificate_sha256: 8d698ab33fa8c259dc545089080b8253f78fe5221bbd1bf5f0ddd56d63d79f0b
+  compressed_replay_sha256: fdd36c53bea6943a0d2699cddf66380411e9bf399ef51e6c8a753ccae4117952
+  minimum_positive_numerator_coefficients:
+    k: 264600
+    L2: 691488
+    L1lo: 154893312
+    C: 963780608
+  result: ALL_EXACT_CHECKS_PASS
+sanity_graph:
+  graph: bar(K3) join (D_0,2 disjoint_union D_0,2)
+  vertices: 13
+  edges: 38
+  forests: 533404640
+  minimum_Rayleigh_numerator: 11018693065536
+  minimizing_pair: internal i1 edge in one subdivided arm of each component
+complementarity:
+  NM13-04: triangle-seeded arbitrary-star-forest line
+  this_run: independent-terminal arbitrary finite forest of depth-two mixed spiders; no seed triangle; unbounded number of components and unbounded branch sizes
+scope_example:
+  family: G_{m,q}=bar(K3) join (m D_{0,q}), m>=2, q>=3
+  vertices: 3 + m*(1+2*q)
+  edges: m*(3+8*q)
+  properties: 3-connected; contains K3,3; nonplanar; non-series-parallel; right components have diameter 4 and degree-q branch vertices
+failed_execution_routes:
+  - two monolithic symbolic regeneration attempts exceeded the local execution cap; staged exact batches and a compressed replay checker succeeded
+residual_obstruction:
+  current: arbitrary right trees/components beyond the two-depth mixed-spider algebra are not covered; arbitrary finite graphs need not admit a distinguished independent terminal triple with this decomposition
+  next_attack: derive a center-gluing or depth-three branch operator criterion preserving the C(x,z) one-edge cone, or obtain an abstract sufficient condition on one-edge response increments eliminating atom-specific 38-scheme checks
+novelty_priority: UNVERIFIED
+artifacts:
+  report: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T14-37-32Z__mixed-spider-forest-cross-response-report.md
+  checker: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T14-37-32Z__mixed-spider-forest-cross-response-checker.py
+  output: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T14-37-32Z__mixed-spider-forest-cross-response-checker.out
+  ledger_delta: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T14-37-32Z__ledger_delta.yaml

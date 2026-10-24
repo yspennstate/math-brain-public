@@ -1,0 +1,74 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w553",
+  "bundle_slug": "percolation-nonuniqueness-audit-001",
+  "entries": [
+    {
+      "key": "connectivity-operator",
+      "namespace": "probability.percolation",
+      "logical_name": "bernoulli-bond-connectivity-operator-counting-measure",
+      "kind": "definition",
+      "title": "Bond-percolation connectivity operator on counting measure",
+      "statement": "For Bernoulli bond percolation on a countable graph G=(V,E), each edge is independently open with probability p. Write tau_p(x,y)=P_p(x and y are connected by a finite open path), allowing a path of length zero. The connectivity kernel T_p has entries tau_p(x,y) and acts initially on finitely supported functions by (T_p f)(x)=sum_y tau_p(x,y)f(y). Boundedness means that this action extends to a bounded operator on l2(V) with counting measure.",
+      "proof_text": null,
+      "assumptions": ["Countable graph", "Bernoulli bond model", "Counting-measure l2"],
+      "domain": "probability",
+      "source": {"source_id": "owner-own-work:percolation-connectivity-audit-definition", "url": "https://arxiv.org/abs/1904.05804", "revision": "draft-2026-10-10-referee-pending", "license": "owner-own-work (original exposition; attributed, not reproduced)", "excerpt": null}
+    },
+    {
+      "key": "critical-norm-route",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-connectivity-norm-sprinkling-route",
+      "kind": "concept",
+      "title": "Draft conditional route from a critical connectivity norm",
+      "statement": "DRAFT, independent review pending. On a countable simple graph of maximum degree D, if p<1 and the counting-measure connectivity operator T_p has norm M<infinity, then independent sprinkling with epsilon D M<1 gives ||T_(p+(1-p)epsilon)|| <= M/(1-epsilon D M). On an infinite connected quasi-transitive graph with pc<1, a finite norm M=||T_pc|| would therefore yield pu>=pc+(1-pc)/(2DM)>pc. The missing input is a finite critical norm for every prescribed nonamenable Cayley graph; nonamenability has not been shown here to supply it. This is a sufficient route, not a solution of the universal conjecture.",
+      "proof_text": null,
+      "assumptions": ["Bernoulli bond percolation", "Countable simple bounded-degree graph", "Finite T_p norm", "Quasi-transitivity for the uniqueness comparison", "pc<1 for the critical application"],
+      "domain": "probability",
+      "source": {"source_id": "owner-own-work:percolation-critical-norm-sprinkling-reduction", "url": "https://arxiv.org/abs/1904.05804", "revision": "draft-2026-10-10-referee-pending", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "zero-infimum-route",
+      "namespace": "probability.percolation",
+      "logical_name": "supercritical-zero-connectivity-infimum-route",
+      "kind": "concept",
+      "title": "Draft route through separated pairs above criticality",
+      "statement": "DRAFT, independent review pending. For Bernoulli bond percolation on an infinite connected locally finite quasi-transitive graph, one parameter p1>pc with inf_(x,y) tau_p1(x,y)=0 would imply pu>=p1>pc. Entrywise monotonicity propagates the zero infimum to every q<=p1, whereas almost-sure uniqueness and FKG give a strictly positive uniform lower bound on tau_q. Thus uniform exponential connectivity decay at a strictly supercritical parameter is sufficient for nonuniqueness, without proving an l2 norm bound. The unresolved input is to produce separated pairs above pc for every prescribed nonamenable Cayley graph.",
+      "proof_text": null,
+      "assumptions": ["Infinite connected locally finite quasi-transitive graph", "Bernoulli bond model", "p1>pc", "Zero infimum of connectivity at p1"],
+      "domain": "probability",
+      "source": {"source_id": "owner-own-work:percolation-zero-infimum-reduction", "url": "https://arxiv.org/abs/1904.05804", "revision": "draft-2026-10-10-referee-pending", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "tree-norm-obstruction",
+      "namespace": "probability.percolation",
+      "logical_name": "regular-tree-exponential-connectivity-unbounded-operator-obstruction",
+      "kind": "concept",
+      "title": "Draft obstruction to inferring an operator bound from exponential decay",
+      "statement": "DRAFT, independent review pending. On the 4-regular tree, a Cayley graph of the free group on two generators, Bernoulli bond connectivity is tau_p(o,x)=p^dist(o,x). It decays exponentially for every p<1, but the squared row sum is 1+4p^2 sum_(j>=0)(3p^2)^j and diverges whenever p>=1/sqrt(3). Hence the counting-measure l2 operator is unbounded there. At p=3/4 the radius-R partial sum is exactly 1+(36/11)((27/16)^R-1). This refutes the decay-to-l2 inference; it does not refute the nonuniqueness conjecture or critical operator boundedness. The zero-infimum criterion still holds at this parameter.",
+      "proof_text": null,
+      "assumptions": ["4-regular tree", "Bernoulli bond percolation", "Counting-measure l2", "0<p<1"],
+      "domain": "probability",
+      "source": {"source_id": "owner-own-work:percolation-regular-tree-operator-obstruction", "url": "https://arxiv.org/abs/1904.05804", "revision": "draft-2026-10-10-referee-pending", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "spectral-normalization",
+      "namespace": "probability.percolation",
+      "logical_name": "cayley-percolation-spectral-criterion-degree-normalization",
+      "kind": "concept",
+      "title": "Draft correction to spectral-criterion normalization",
+      "statement": "DRAFT source correction, independent review pending. If rho is the simple-random-walk spectral radius on a d-regular Cayley graph and A is its adjacency operator, then ||A||=d rho. The Benjamini-Schramm sufficient spectral criterion is p d rho<1 at a percolating parameter p; in particular pc d rho<1 suffices for pc<pu. Omitting d and using pc<1/rho misstates that argument: nonamenability gives rho<1, so the omitted-factor inequality is automatic since pc<=1. For the 4-regular tree, pc=1/3 and rho=sqrt(3)/2, so pc d rho=2sqrt(3)/3>1; the sufficient spectral argument does not cover this graph even though its nonuniqueness phase is known.",
+      "proof_text": null,
+      "assumptions": ["Infinite d-regular Cayley graph", "rho denotes simple-random-walk spectral radius", "A denotes the adjacency operator", "The spectral criterion is sufficient, not equivalent to the conjecture"],
+      "domain": "probability",
+      "source": {"source_id": "owner-own-work:percolation-spectral-normalization-audit", "url": "https://emis.de/ft/41630", "revision": "draft-2026-10-10-primary-theorem-4-checked-referee-pending", "license": "owner-own-work (original source comparison; attributed, not reproduced)", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "critical-norm-route", "to_key": "connectivity-operator", "kind": "depends_on", "rationale": "The conditional sprinkling route assumes a finite norm of exactly the counting-measure connectivity operator defined here."},
+    {"from_key": "zero-infimum-route", "to_key": "connectivity-operator", "kind": "depends_on", "rationale": "The sufficient zero-infimum criterion is expressed in the entries tau_p of this operator; no l2 boundedness is assumed."},
+    {"from_key": "tree-norm-obstruction", "to_key": "zero-infimum-route", "kind": "semantic_association", "rationale": "At p=3/4 on the 4-regular tree, the connectivity infimum is zero while the l2 row sum diverges, so the separated-pairs input is weaker than a finite operator norm at that parameter."},
+    {"from_key": "spectral-normalization", "to_key": "critical-norm-route", "kind": "semantic_association", "rationale": "The adjacency resolvent supplies a sufficient norm regime only when p||A||=p d rho<1. Nonamenability alone does not establish this regime at pc."},
+    {"from_key": "spectral-normalization", "to_existing_logical": "math:probability.statmech:attempt-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a", "kind": "cites", "rationale": "The existing attempt says 'p_c < 1/rho where rho is the spectral radius of simple random walk'. The primary Theorem 4 instead displays 'rho(G)kp < 1'. This link identifies the exact stored attribution requiring the degree-factor correction; it does not endorse the attempt or resolve its parent conjecture."}
+  ]
+}

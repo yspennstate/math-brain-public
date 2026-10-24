@@ -1,0 +1,75 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "LYONS-CONJ2.6-X095",
+  "report_kind": "new-methods research",
+  "input_snapshot_sha": "38d499a6e0deb42713b69cc16f9f698a0ee64914",
+  "delivery_preflight_head_sha": "843afe7678ae28546ae0bf8378bf03b9672ee2f5",
+  "previous_report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/runs/2026-09-16/2026-09-16T16-40-39Z__report.md",
+  "previous_report_commit": "cb5ef4280fcadcb34c5e3b8810a0f72607f34eff",
+  "previous_report_blob": "ae9c8fe449bcc11b7cf5e5b148039fc3f0a22425",
+  "frozen_metric": "certified GLOBAL lower bound B_Phi for exact X095 Phi on complete admissible three-site domain",
+  "metric_before": "UNMEASURED",
+  "metric_after": "UNMEASURED",
+  "metric_movement": "no global movement",
+  "unchanged_count": "UNKNOWN",
+  "methods_tried": [3, 11, 24],
+  "method_outcomes": {
+    "B3": "PROVED a stronger global theorem: entropy concavity on every three-site fixed-nullspace rank-two face, including complex kernels and boundary limits.",
+    "B11": "Coarse-grained full atom Fisher information to the cardinality statistic and obtained an exact lower bound paying all positive-determinant tangent directions.",
+    "B24": "Solved the three-point entropy extremum controlling the frozen-log coefficient; uniform null-vector mass is extremal, yielding the needed logarithmic upper bound."
+  },
+  "mathematical_status": "PARTIAL",
+  "source_status": {
+    "source": "Russell Lyons (2014), Determinantal Probability: Basic Properties and Conjectures, arXiv:1406.2707, Conjecture 2.6",
+    "checked_date": "2026-09-16",
+    "current_scope": "No universal finite-kernel proof or refutation located in bounded current search; three-site milestone remains partial.",
+    "later_author_check": "Andras Meszaros, arXiv:1905.11459, concerns limiting/invariant determinantal entropy, not a universal finite-kernel resolution.",
+    "access_gaps": "Bounded search only; negative search is not proof of novelty or openness."
+  },
+  "new_claims": [
+    "Global entropy concavity on every three-site face K=UAU* with fixed isometry U:C^2->C^3 and 0<=A<=I_2.",
+    "Strict fixed-nullspace tangent negativity on every generic rank-two boundary point.",
+    "Via archived C019 normal form, a one-sided simple-eigenvalue collar at every generic rank-two boundary point; uniform on compact generic strata."
+  ],
+  "remaining_obligations": [
+    "u_i=0 and intersecting compactification boundary strata",
+    "P11 field/rare-site collar work",
+    "certified residual compact-core X095 Phi optimization",
+    "P26 audit and one distinct qualified OTHER-task audit for any closure-level claim"
+  ],
+  "audit_refs": {
+    "new_theorem": [],
+    "dependency": "proofnet24/lyons-entropy/creative-2026-09-15/agents/C019.md",
+    "closure_audits_required": ["P26", "distinct qualified OTHER task"]
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/runs/2026-09-16/2026-09-16T18-45-00Z__report.md",
+    "creation_commit": "6afe493d678be74a7cba586504906a0d5accc2f4",
+    "readback": "VERIFIED"
+  },
+  "artifact_refs": [
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/artifacts/2026-09-16T18-45-00Z__rank2_face_symbolic_check.py",
+      "creation_commit": "c35d8ba4a913a88bd7fb08ce5f3311b06e91860e",
+      "readback": "VERIFIED",
+      "local_sha256_before_upload": "df038a454c8c00a263c893629c4a65e3da8d4c163439f9d49b3a0574d271b9ee"
+    },
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/artifacts/2026-09-16T18-45-00Z__rank2_face_symbolic_output.txt",
+      "creation_commit": "f89e542cda53b4de7652423c4270a742c57dc5a8",
+      "readback": "VERIFIED",
+      "local_sha256_before_upload": "404b4033cf4a680461a147e04e56e405e669783c336bc3efd0a81c6a2aa145a8"
+    }
+  ],
+  "model_runtime": {
+    "actual_exposed_model": "GPT-5.6 Sol",
+    "reasoning_level": "UNVERIFIED",
+    "requested": "GPT-6 maximum",
+    "scheduler_model_selector": false,
+    "scheduler_reasoning_selector": false
+  },
+  "interval_repair": {
+    "status": "already adopted; not rerun",
+    "corrected_sha256": "c7041ccc556e6bee8e64afb43f506693f8fc6962e7cedc4ad12fd3d3c6bc9e7c"
+  }
+}

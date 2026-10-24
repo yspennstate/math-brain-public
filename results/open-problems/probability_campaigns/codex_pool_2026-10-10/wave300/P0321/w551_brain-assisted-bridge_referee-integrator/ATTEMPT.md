@@ -1,0 +1,17 @@
+# P0321 referee attempt and bridge check — 2026-10-10
+
+The exact primary source is Lewin (2022), arXiv:2202.09240v2, Section VI.B. It describes a *prediction*, not a fixed quantified theorem: a 2D intermediate hexatic with rapid positional and slow sixfold orientational correlations. It mentions short-range `s>2` and Jellium `s=0,1`. I use `s>2` only as a working formalization because Lewin's Theorem 47 guarantees translation invariance for `s>d`; it gives no orientational-order conclusion and does not cover `s=0,1` in 2D.
+
+I attempted to bridge a source theorem to the desired microscopic order parameter. Theorem 47's complete positive-temperature hypothesis is `d∈{1,2}, s>d, beta<∞`, for equilibrium states in `R_{s,beta,mu}`; its conclusion is translation invariance. P0321 additionally needs a specified nonempty parameter interval and a Gibbs state where a *defined* bond-orientational correlation has an algebraic lower bound while positional order is short range. Translation invariance permits both slow and fast orientational correlations, so it is insufficient.
+
+w549 closes one geometric step: on a seven-disk shield event a spatial Delaunay sixfold mark depends on a finite `3r` window. The exact covariance upper bound is `16 alpha+28V`; choosing a logarithmic radius turns uniform window mixing and void bounds into an orientational upper bound. This is a valid necessary-dependence obstruction, not a lower bound. The tempting route from particle-density pair decorrelation to whole-window alpha mixing is invalid; w549's shared-parity blocks have pair independence but alpha=1/4 between blocks.
+
+w550 closes a separate inference check: an effective-field correlation with a power tail can be uniformly approximated within an arbitrarily small fixed error by a bounded-field correlation with a superpolynomial tail. Hence a microscopic comparison must have error on the *same scale* as the claimed power law, with a strict coefficient gap. The algebraic transfer inequality is valid but its hypotheses are unproved for a Riesz state.
+
+w550 also gives a stationary planar Cox process with exactly finite-range truncated particle-density correlations and Gaussian void tails, yet persistent alpha dependence between distant unit-square restrictions. I independently checked its common-bit conditioning, the two matching conditional means/variances, and its vacancy Laplace-transform lower bound. This proves that even a strong density-pair estimate plus fast voids does not supply w549's whole-window alpha hypothesis.
+
+Single hardest remaining open piece: construct, for one specified Riesz exponent, ensemble and nonempty temperature interval, a thermodynamic Gibbs state whose actual microscopic sixfold Delaunay bond correlation has a positive algebraic lower bound while positional correlations are fast. Neither Theorem 47 nor the reviewed bridges establishes this. Current openness and novelty: UNKNOWN.
+
+Read-only math-brain retrieval command is in `recall_probe.py`; `RECALL_MEASUREMENT.json` records 54.541 s, 10 hits, P0321 at rank 1, and no scope or Delaunay bridge title in the 10 hits. Repair: ingest one short primary-source scope guard and the already independently checked counterexample bridge, each with an exact relation to P0321; then repeat the same top-10 query and check whether the guards surface without obscuring the target. This is a proposed improvement, not a measured post-ingestion gain.
+
+NEXT: Validate and hand off the small draft bundle; request independent review only if a genuinely new lemma is added.

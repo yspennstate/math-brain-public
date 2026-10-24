@@ -1,0 +1,18 @@
+{
+  "helper_version": "A071-f6-biased-reserve-v1",
+  "target": "Test the proposed (not previously asserted) f6-specific nonnegative signed admission reserve L_m(beta_i^2)>=0; also record exact per-coordinate erasure transfer and fixed-K admission controls.",
+  "actual_Boolean_family": "F=h(g_1,...,g_6), six disjoint identical copies of actual core truth table g; h negative exactly at 0,1,2,4,8,16,32,6,17,40. Actual core means retained.",
+  "parameter_domain": "All core truth tables n=0,1,2,3; additionally n=6 core h and all 64 Hamming-distance-one truth-table edits, each and its output complement.",
+  "case_count": 408,
+  "tagged_coordinate_count_before_relevance_filter": 1584,
+  "pilot_domain": "All 22 core tables n<=2 plus h itself: 23 cases, 42 tagged coordinates",
+  "symmetry": "No quotient used. Block permutations and the matched-pair wreath-product action make six copies equivalent. Core input translations/permutations and output complements are retained as distinct actual cases; output complement changes bias and cannot be quotiented for this outer gate.",
+  "completeness": "Complete only for the stated 408 tagged actual cores, hence for all physical coordinates of their six-block compositions by identical-copy symmetry. No arbitrary-core or continuum completeness claim.",
+  "arithmetic": "Exact integer Walsh transform, Fraction centered biased outer transform; 96-bit rigorous log2 intervals from 128-bit natural-log arithmetic, 48-term positive atanh series with geometric tail. Zero-singleton reserve handled symbolically. No floating-point decisions.",
+  "memory_estimate_MB": 120,
+  "pilot_max_runtime_seconds": 55,
+  "full_max_runtime_seconds": 600,
+  "max_dimension": "core 6; implicit composition 36; no full 36-bit truth table",
+  "resource_limits": "one job, no GPU/background execution; below 300MB so memok gate not triggered",
+  "why_this_family": "Consumes A075's pending matching-family closure and its transitive six-bit seed; probes its arbitrary-core biased admission NEXT using A056's exact signed empty-sector interface, without repeating matching/path growth or a full n=6 census."
+}

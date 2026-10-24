@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "control_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260924T042233Z-account03-B06-qform-r52",
+  "source_control_commit": "0f17ba16607dc0f969459c7daa8cd0594a71692c",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "result_status": "PROVED_SUPPORTING_STRUCTURAL_THEOREMS_AND_SCOPED_DENSITY_BRANCH",
+  "full_conjecture_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "GLOBAL_OPEN; R52_SCALAR_PIVOT_BRANCH_ESSENTIAL_BOUND_ONLY; PARTNER_OFFFOLD_SCOPE_CONTINUOUS_C0",
+  "math_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "87d28c657b28f8f816f4b72e6b92af8dd52398c0",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T042233Z-account03-B06-qform-r52/REPORT.md"
+  },
+  "handoff_source": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "50ee12b7dd6ccc68497d6cafa22416d66468cbc0",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B06/20260924T042233Z-account03-B06-qform-r52.md"
+  },
+  "proved_results": [
+    {
+      "id": "QFORM-LOWDISJOINT-MIXED-LAYER-MASS-v1",
+      "statement": "For the r51 low-disjoint three-hub normal form R=R_H[I,Z], G=ZZ^T, the complete rank-three spectral volume decomposes exactly into Pk=|detB| e_k(G), k=0..3, and detG/det(I+G)<2^-12 forces max(P0,P1,P2)>5P/16."
+    },
+    {
+      "id": "QFORM-THREEHUB-NEARNULL-ROW-DECOMPOSITION-v1",
+      "statement": "Low disjointness gives s3<1/15. If s2>0, one literal hub deletion has W_h>=s1s2/3>=e2/9 and true normal residual squared detG/W_h<=3s3<1/5; if s2=0 then rank Z<=1."
+    },
+    {
+      "id": "QFORM-THREEHUB-POSTPIVOT-TANGENTIAL-NORMAL-SPLIT-v1",
+      "statement": "For actual hub pivot a=a0+d_h, the residual cross matrix is [(d_h/a)bq+C-bb^T/a]Z_J+(d_h/a)b n_h; only the second term is truly normal to the strong two-row tail plane."
+    }
+  ],
+  "scoped_density_implication": "When the selected hub diagonal perturbation vanishes and core pivot a is nonzero, Delta_h=|detB|sqrt(W_h)/|a| and the completed scalar-pivot/rank-two-cross theorem gives ||p_Q||_inf <= 8[|a||detB|sqrt(W_h)]^-1/4.",
+  "partner_result_applied": {
+    "account": "account04",
+    "slot": "B06",
+    "run_id": "20260924T001014Z-account04-B06-QFORM-r3",
+    "result_id": "QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1",
+    "application": "After whitening the strong two-row tail frame, under max leverage<=1/2 the tangential shared leakage is removed exactly. At r=1/64, ||g_off||_inf<=256/|lambda_*|. The residual shared component is the true normal n_h with norm<1/sqrt(5). If the leverage gate fails, at most three literal tail coordinates have leverage>1/2."
+  },
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1",
+    "bounded-density alone does not give law-uniform pointwise quadratic-phase van-der-Corput decay",
+    "general rotations destroy independence"
+  ],
+  "unresolved_implication": "Jointly consume max(P0,P1,P2)>5P/16 and the remaining true normal statistic without discarding the same-bank diagonal perturbation or taking a curved-fiber supremum.",
+  "next_step": "QFORM-MIXED-LAYER-NORMAL-INNOVATION-RECEIVER-v1: build a product-weighted curved receiver for the normal term; on failure of the diffuse two-frame gate, route the at-most-three heavy tail coordinates to a finite physical-hub compiler.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_counters": null
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260923T122734Z-account03-B15-qform-auto18",
+  "status": "ESSENTIAL_STEP_APPLIED_UNIFORM_INTERVAL_PROFILE_TRACE_MOVING_SHEET_TRACE_FULL_TARGET_OPEN",
+  "control": {
+    "initial_main_commit": "849984e0a6e7460d0b21f44e6e2995b0f1202b5c",
+    "prepublication_main_commit": "086e04c720f2a230fc61b46b2ee5fdbd73dc6d2d",
+    "revision": "2026-09-22.15",
+    "sole_target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES",
+    "pause_observed": false
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "prior B15 no-law-uniform matrix-modulus obstruction"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "scope": "certified original-coordinate volume branch: density <=24 sqrt(3)e/(5a), continuous C0"
+    },
+    {
+      "source": "yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T211430Z-account04-B15-heat-regularity-r4/REPORT.md",
+      "scope": "exact Gaussian heat-height identity for arbitrary probability laws"
+    }
+  ],
+  "new_results": [
+    "If mu_m=>mu and mu is atomless, distribution functions converge uniformly and all interval masses converge uniformly over both endpoints.",
+    "Fixed-dimensional simultaneous cap-one weak-input and quadratic-coefficient limits inherit the all-center/all-width interval-profile convergence when the limiting polynomial is nonconstant.",
+    "A common interval bound P(Q_m in I)<=C|I| passes to the rough limit with exactly the same C.",
+    "Moving polynomial-sheet submeasures converge weakly when the limiting sheet boundary has zero source mass; common sheet density caps pass with zero loss.",
+    "Every nonconstant quadratic polynomial sends an absolutely continuous input law to an absolutely continuous output law by local coarea away from its null critical affine set."
+  ],
+  "partner_application": "Combining the traced volume bound with account04/B15 yields sup_{epsilon>0,y} E gamma_epsilon(Q-y) <=24 sqrt(3)e/(5a).",
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "be22adf9f67e9fa02063418c000bc5ee2d2d0c43",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T122734Z-account03-B15-qform-auto18/REPORT.md",
+    "blob": "7622a15ba04915672af0bc1beb028e3c5884430a"
+  },
+  "handoff": {
+    "commit": "f2d748dfdbeb6e2f7b4ab37bb7c972847ad699fa",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B15/20260923T122734Z-account03-B15-qform-auto18.md"
+  },
+  "continuity_status": "Separate. This run does not prove continuity via limits and does not alter the live shared continuity claim. Partner report source-reports a fixed-instance C0 chain, not independently reviewed here.",
+  "unresolved_implication": "Obtain a universal direct small-ball or heat-height estimate on near-null/high-leverage or low-cross-rank survivors not covered by current volume/ridge exits; then use this trace compiler to close rough and algebraic endpoints.",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

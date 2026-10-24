@@ -1,0 +1,1905 @@
+This section records ensemble extensions that are immediate from the principle,
+and separates them from extensions that require new input.
+
+\subsection{Division algebras}
+
+The real and complex Gaussian cases correspond to real dimensions \(d=1\) and
+\(d=2\) of one scalar coordinate.  The same hard-edge bookkeeping applies to
+quaternionic Gaussian matrices, where one scalar has real dimension \(d=4\).
+
+For quaternionic matrices we use the following conventions; see
+\cite{Zhang1997Quaternions} for quaternion matrix background.  Row vectors in
+\(\HH^m\) carry the inner product
+\[
+  \langle x,y\rangle_{\HH}=\sum_{j=1}^m x_j\overline{y_j},
+\]
+linear in the first variable, and \(\spn_{\HH}\) denotes left
+\(\HH\)-span.  For \(A\in\HH^{n\times m}\),
+\[
+  \smin(A)=\inf_{\|x\|_2=1}\|Ax\|_2 .
+\]
+Equivalently, \(\smin(A)^2\) is the least eigenvalue of \(A^*A\), and it is
+also the least singular value of the realification; the realification only
+repeats quaternionic singular values with multiplicity four.  A standard
+quaternion Gaussian scalar is
+\[
+  q=q_0+q_1\mathbf i+q_2\mathbf j+q_3\mathbf k,
+  \qquad q_\ell\sim N(0,1/4)\quad\hbox{iid},
+\]
+so \(\EE|q|^2=1\), \(|q|^2=(1/4)\chi^2_4\), and
+\[
+  p_{\HH}(t):=\PP\{|q|\le t\}=2t^4+O(t^6)\qquad(t\downarrow0).
+\]
+The compact symplectic group is
+\[
+  \Sp(m)=\{U\in\HH^{m\times m}:U^*U=UU^*=I_m\},
+\]
+acting on row vectors by right multiplication.
+
+\begin{theorem}[Quaternion Gaussian extremal hard edge]\label{thm:quaternion-gaussian-base}
+Let \(A_m\in\HH^{N_m\times m}\) have iid standard quaternion Gaussian entries
+and \(N_m/m\to\gamma>1\).  Put
+\[
+  M_m^{\HH}=\min_{\substack{T\subset[N_m]\\ |T|=m}}\smin(A_{m,T}).
+\]
+Then
+\[
+  \frac{1}{m}\log M_m^{\HH}
+  \xrightarrow{\PP}-\frac{h(\gamma)}{4}.
+\]
+\end{theorem}
+
+\begin{proof}
+The lower side is a quaternionic one-matrix hard-edge bound.  Let
+\(G\in\HH^{m\times m}\) have iid standard quaternion Gaussian rows \(a_i\).
+The quaternionic negative second-moment identity gives
+\[
+  \sum_{k=1}^m\sigma_k(G)^{-2}
+  =
+  \sum_{i=1}^m
+  \dist\big(a_i,\spn_{\HH}\{a_j:j\ne i\}\big)^{-2}.
+\]
+Thus \(\smin(G)\le t\) forces, for some \(i\),
+\[
+  \dist\big(a_i,\spn_{\HH}\{a_j:j\ne i\}\big)\le \sqrt m\,t .
+\]
+Conditioning on the other rows, this distance is
+\(|\langle a_i,u\rangle_{\HH}|\) for an \(\HH\)-unit normal \(u\), and this
+scalar is a standard quaternion Gaussian.  Hence, for \(0<t\le1\),
+\[
+  \PP\{\smin(G)\le t\}
+  \le m\,p_{\HH}(\sqrt m\,t)
+  \le C m^3t^4.
+\]
+The union bound over \(\binom{N_m}{m}=e^{(h(\gamma)+o(1))m}\) row sets gives
+\[
+  \PP\{M_m^{\HH}\le e^{-sm}\}\to0\qquad(s>h(\gamma)/4).
+\]
+
+For the upper side, fix \(s<h(\gamma)/4\), set \(t=e^{-sm}\), and write
+\(N=N_m\).  Let \(x=a_N\).  For each
+\((m-1)\)-set \(S\subset[N-1]\), let \(L_S\) be the quaternionic normal line to
+\(\spn_{\HH}\{a_i:i\in S\}\), and define
+\[
+  E_S=\{\dist(x,\spn_{\HH}\{a_i:i\in S\})\le t\}.
+\]
+Equivalently, for any unit representative \(u_S\in L_S\),
+\(E_S=\{|\langle x,u_S\rangle_{\HH}|\le t\}\); this condition is independent of
+the unit-quaternion phase of \(u_S\).  Let
+\[
+  Z_t=\sum_{\substack{S\subset[N-1]\\ |S|=m-1}}\mathbf1_{E_S},
+  \qquad B_m=\binom{N-1}{m-1}.
+\]
+If \(Z_t>0\), then \(M_m^{\HH}\le t\).  Since \(x\) is independent of the
+normal lines,
+\[
+  \EE Z_t=B_m p_{\HH}(t)=\exp\{(h(\gamma)-4s+o(1))m\}\to\infty.
+\]
+
+It remains to show \(\EE Z_t^2/(\EE Z_t)^2\to1\).  Fix two sets \(S,T\) and put
+\[
+  D=m-|S\cap T|.
+\]
+The case \(D=1\) is the diagonal \(S=T\).  If \(D\ge2\), condition on the rows
+indexed by \(S\cap T\).  Their orthogonal complement is isomorphic to
+\(\HH^D\).  The remaining rows in \(S\setminus T\) and \(T\setminus S\) are
+independent \(\Sp(D)\)-invariant quaternion Gaussian vectors, so the normal
+lines \(L_S,L_T\) are independent Haar points of quaternionic projective space
+\(\HH P^{D-1}\).
+
+Choose unit representatives \(u,v\) and set
+\(\rho=\langle u,v\rangle_{\HH}\).  The quantities below depend only on
+\(|\rho|\).  If \(D\ge3\), then
+\[
+  |\rho|^2\sim\operatorname{Beta}(2,2(D-1))
+\]
+and
+\[
+  \EE\big[(1-|\rho|^2)^{-2}\mid D\big]
+  =
+  \frac{(2D-1)(2D-2)}{(2D-3)(2D-4)}
+  =1+\frac2D+O(D^{-2}).
+\]
+This negative moment is finite exactly in the range \(D\ge3\), which is why
+the case \(D=2\) is split off below.
+
+For fixed \(u,v\) with \(|\rho|<1\), a quaternionic unitary rotation and a
+unit-quaternion phase change put
+\[
+  u=e_1,\qquad
+  v=e_1\rho+e_2(1-|\rho|^2)^{1/2}.
+\]
+In the two quaternionic coordinates \((x_1,x_2)\), the real Jacobian of
+\[
+  (x_1,x_2)\mapsto
+  \big(\langle x,u\rangle_{\HH},\langle x,v\rangle_{\HH}\big)
+\]
+is \((1-|\rho|^2)^2\).  Since the joint quaternion Gaussian density is maximal
+at the origin,
+\[
+  \PP\{|\langle x,u\rangle_{\HH}|\le t,\,
+        |\langle x,v\rangle_{\HH}|\le t\mid u,v\}
+  \le (1+O(t^2))p_{\HH}(t)^2(1-|\rho|^2)^{-2}.
+\]
+For \(D=2\) we only use the trivial bound by \(p_{\HH}(t)\).
+
+For a uniformly chosen ordered pair \((S,T)\) of \((m-1)\)-sets in \([N-1]\),
+\[
+  \PP\{D=d\}
+  =
+  \frac{\binom{m-1}{d-1}\binom{N-m}{d-1}}{\binom{N-1}{m-1}},
+  \qquad 1\le d\le m,
+\]
+and
+\[
+  \EE\frac1D
+  =
+  \frac{N}{m(N-m+1)}
+  =O(m^{-1}).
+\]
+Also
+\[
+  \PP\{D=2\}
+  =
+  \frac{(m-1)(N-m)}{\binom{N-1}{m-1}}.
+\]
+Therefore
+\[
+  \frac{\PP\{D=2\}}{p_{\HH}(t)}
+  \le m^{O(1)}\exp\{-(h(\gamma)-4s+o(1))m\}\to0,
+\]
+and the same bound with \(\PP\{D=1\}=1/B_m\) handles the diagonal contribution.
+Combining the estimates,
+\[
+  \frac{\EE Z_t^2}{(\EE Z_t)^2}
+  \le o(1)
+     +(1+O(t^2))
+      \sum_{d=3}^m \PP\{D=d\}\bigl(1+2/d+O(d^{-2})\bigr)
+  =1+o(1).
+\]
+The reverse inequality is automatic from \(\Var Z_t\ge0\).  Chebyshev's
+inequality gives \(\PP\{Z_t=0\}\to0\), hence
+\(\PP\{M_m^{\HH}\le e^{-sm}\}\to1\) for every \(s<h(\gamma)/4\).  Together
+with the lower side, this proves the claimed convergence.
+\end{proof}
+
+\begin{theorem}[Quaternion random number of Gaussian rows]\label{thm:quat-random-row-count-gaussian}
+For each \(m\), let \((R_{im})_{i\ge1}\) be an infinite sequence of independent
+standard quaternion Gaussian rows in \(\HH^m\).  For an integer \(n\ge m\), put
+\[
+  M_m^{\HH}(n)=
+  \min_{\substack{T\subset[n]\\ |T|=m}}\smin((R_{im})_{i\in T}).
+\]
+Let \(N_m\) be integer-valued random variables, possibly dependent on the row
+array, such that
+\[
+  \frac{N_m}{m}\xrightarrow{\PP}\gamma>1 .
+\]
+Extend \(M_m^{\HH}(N_m)\) by any fixed positive value on the event \(N_m<m\).
+This event has probability tending to zero, and
+\[
+  \frac1m\log M_m^{\HH}(N_m)
+  \xrightarrow{\PP}
+  -\frac{h(\gamma)}4 .
+\]
+The normalized square Gram statistic
+\[
+  \Gamma_m^{\HH}(N_m)=
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}
+  \lambda_{\min}\!\left(m^{-1}R_T^*R_T\right)
+\]
+has logarithmic limit \(-h(\gamma)/2\), with the same convention on
+\(\{N_m<m\}\).  If the row arrays are realized on a common probability space
+and \(N_m/m\to\gamma\) almost surely, then the corresponding lower envelopes
+also hold:
+\[
+  \liminf_{m\to\infty}\frac1m\log M_m^{\HH}(N_m)
+  \ge -\frac{h(\gamma)}4,\qquad
+  \liminf_{m\to\infty}\frac1m\log \Gamma_m^{\HH}(N_m)
+  \ge -\frac{h(\gamma)}2
+  \qquad\hbox{a.s.}
+\]
+\end{theorem}
+
+\begin{proof}
+The map \(n\mapsto M_m^{\HH}(n)\) is nonincreasing, since increasing the number
+of available prefix rows only enlarges the family of tested square submatrices.
+Fix
+\[
+  1<\gamma_-<\gamma<\gamma_+ .
+\]
+With probability tending to one,
+\[
+  \lfloor\gamma_-m\rfloor\le N_m\le\lceil\gamma_+m\rceil .
+\]
+On this event,
+\[
+  M_m^{\HH}(\lceil\gamma_+m\rceil)
+  \le M_m^{\HH}(N_m)
+  \le M_m^{\HH}(\lfloor\gamma_-m\rfloor).
+\]
+Theorem~\ref{thm:quaternion-gaussian-base}, applied to the two deterministic
+row counts, gives limits \(-h(\gamma_+)/4\) and \(-h(\gamma_-)/4\).  Letting
+\(\gamma_-\uparrow\gamma\) and \(\gamma_+\downarrow\gamma\) proves the
+convergence in probability.  No independence between \(N_m\) and the row array
+is used for this prefix-count statement.
+
+The Gram convergence follows from Corollary~\ref{cor:gram-transfer}.  For the
+almost-sure lower envelope, fix \(\gamma_+>\gamma\).  Eventually almost surely,
+\(N_m\le\lceil\gamma_+m\rceil\), hence
+\[
+  M_m^{\HH}(N_m)\ge M_m^{\HH}(\lceil\gamma_+m\rceil).
+\]
+The summable lower-side estimate in the proof of
+Theorem~\ref{thm:quaternion-gaussian-base} gives the deterministic-row-count
+lower envelope at \(\gamma_+\); then let \(\gamma_+\downarrow\gamma\).  The
+Gram lower envelope follows by the same pathwise squaring identity.
+\end{proof}
+
+\begin{corollary}[Quaternion Poissonization and independent thinning]\label{cor:quat-poisson-thinning}
+The conclusion of Theorem~\ref{thm:quat-random-row-count-gaussian} applies when
+\(N_m\) is independent of the quaternion Gaussian row values and one of the
+following conditions holds:
+\begin{enumerate}
+\item \(N_m\) is Poisson with mean \(\nu_m\), and \(\nu_m/m\to\gamma>1\);
+\item \(N_m\) is binomial \(\operatorname{Bin}(n_m^{\rm pool},p_m)\), with
+      \(n_m^{\rm pool}p_m/m\to\gamma>1\);
+\item \(N_m=\sum_{i=1}^{n_m^{\rm pool}}\xi_{im}\), where the \(\xi_{im}\) are
+      independent Bernoulli retention indicators, independent of the row
+      values, and \(\nu_m=\sum_i\EE\xi_{im}\) satisfies
+      \(\nu_m/m\to\gamma>1\).
+\end{enumerate}
+In the thinning case, conditional on the retained count, the retained rows can
+be reindexed as iid quaternion Gaussian rows; the statistic is invariant under
+row order.  Value-dependent thinning or selection is not covered.
+\end{corollary}
+
+\begin{corollary}[Quaternion random-prefix conditioning transfer]\label{cor:quat-random-prefix-conditioning-exact}
+For each \(m\), let \((R_{im})_{i\ge1}\) be an infinite sequence of independent
+standard quaternion Gaussian rows in \(\HH^m\).  Let \(N_m\) be integer-valued,
+possibly dependent on the row array, with
+\[
+  \frac{N_m}{m}\xrightarrow{\PP}\gamma>1 .
+\]
+Let \(d_{im}>0\), \(i\ge1\), be finite real random row weights and let
+\(S_m\in\HH^{m\times m}\) be invertible.  The weights and \(S_m\) may be
+random and dependent on \(N_m\) and on the row array.  For
+\(T\subset[N_m]\), \(|T|=m\), set
+\[
+  B_{m,T}=\operatorname{diag}(d_{im}:i\in T)\,(R_{im})_{i\in T}\,S_m .
+\]
+Assume
+\[
+  \Delta_m^{\rm rpref}:=
+  \max_{1\le i\le N_m}|\log d_{im}|
+  +\bigl|\log\smin(S_m)\bigr|+\bigl|\log\|S_m\|\bigr|
+  =o_\PP(m).
+\]
+Absent row weights or the absent right factor are omitted.  On the event
+\(N_m<m\), give the statistics below any fixed positive value.  Then
+\[
+  \frac1m\log
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}\smin(B_{m,T})
+  \xrightarrow{\PP}
+  -\frac{h(\gamma)}4
+\]
+and
+\[
+  \frac1m\log
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}
+  \lambda_{\min}\!\left(m^{-1}B_{m,T}^*B_{m,T}\right)
+  \xrightarrow{\PP}
+  -\frac{h(\gamma)}2 .
+\]
+If the row arrays are realized on a common probability space,
+\(N_m/m\to\gamma\) almost surely, and
+\(\Delta_m^{\rm rpref}=o(m)\) almost surely, then the corresponding lower
+envelopes hold:
+\[
+  \liminf_{m\to\infty}\frac1m\log
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}\smin(B_{m,T})
+  \ge -\frac{h(\gamma)}4,
+\]
+and the normalized square Gram lower envelope has base \(-h(\gamma)/2\).
+
+Positive real column diagonal factors are included by taking \(S_m\) diagonal.
+Consequently, row-normalized random-prefix quaternion Gaussian matrices and
+full-prefix column-normalized quaternion Gaussian matrices have the same
+square-row bases, provided the prefix count hypotheses above hold.  For
+independent Bernoulli thinning, this is read after the retained iid rows are
+reindexed and after the same conditioning-extrema hypothesis is imposed.
+\end{corollary}
+
+\begin{proof}
+On the event \(N_m\ge m\), for every \(T\subset[N_m]\), \(|T|=m\),
+\[
+  e^{-\Delta_m^{\rm rpref}}\smin((R_{im})_{i\in T})
+  \le
+  \smin(B_{m,T})
+  \le
+  e^{\Delta_m^{\rm rpref}}\smin((R_{im})_{i\in T}).
+\]
+The inequalities are the usual singular-value bounds for a positive real left
+diagonal factor and a global right factor.  They are pathwise and uniform in
+\(T\), so after taking minima,
+\[
+  \left|
+  \frac1m\log
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}\smin(B_{m,T})
+  -
+  \frac1m\log M_m^{\HH}(N_m)
+  \right|
+  \le \frac{\Delta_m^{\rm rpref}}m
+\]
+outside the event \(N_m<m\), whose probability tends to zero.  The singular
+convergence follows from
+Theorem~\ref{thm:quat-random-row-count-gaussian}.  The Gram convergence follows
+from the pathwise identity in Corollary~\ref{cor:gram-transfer}.  The
+almost-sure lower envelopes use the same lower sandwich together with the
+almost-sure lower envelopes in Theorem~\ref{thm:quat-random-row-count-gaussian}.
+
+For row normalization, on the high-probability bracket
+\(N_m\le\lceil\gamma_+m\rceil\), the row-norm extrema over the realized prefix
+are bounded by the extrema over the deterministic prefix
+\(\lceil\gamma_+m\rceil\).  For column normalization, on
+\(\lfloor\gamma_-m\rfloor\le N_m\le\lceil\gamma_+m\rceil\), each column norm is
+bracketed between the corresponding deterministic-prefix column norms.  The
+same \(\chi^2\) upper-tail and ball-volume lower-tail estimates used in
+Corollary~\ref{cor:quat-square-diagonal-normalized-exact} give
+subexponential extrema in probability and, on common couplings with eventual
+deterministic brackets, almost surely.
+\end{proof}
+
+\begin{corollary}[All-field square random-prefix row and right-factor exact transfer]\label{cor:random-prefix-square-row-right-factor-exact}\label{cor:random-prefix-square-diagonal-exact}
+Let \(\F\in\{\R,\C,\HH\}\), with \(d_\F=1,2,4\), respectively.  For each
+\(m\), let \((R_{im})_{i\ge1}\) be an infinite sequence of iid standard
+\(\F^m\)-Gaussian rows.  Let \(N_m\) be integer-valued, possibly dependent on
+the row array, with
+\[
+  \frac{N_m}{m}\xrightarrow{\PP}\gamma>1 .
+\]
+Let \(d_{im}>0\), \(i\ge1\), be finite real random row weights and let
+\(S_m\in GL_m(\F)\).  The weights and \(S_m\) may be random and dependent on
+the rows and on \(N_m\).  Assume
+\[
+  \Delta_m^{\rm sqrf}
+  =
+  \max_{1\le i\le N_m}|\log d_{im}|
+  +|\log\smin(S_m)|+|\log\|S_m\||
+  =o_\PP(m),
+\]
+with an absent row factor replaced by \(d_{im}\equiv1\) and an absent right
+factor replaced by \(S_m=I_m\).  For \(N_m\ge m\) and \(T\subset[N_m]\),
+\(|T|=m\), set
+\[
+  B_{m,T}=\operatorname{diag}(d_{im}:i\in T)\,(R_{im})_{i\in T}\,S_m .
+\]
+On the event \(N_m<m\), give the following two statistics any fixed positive
+finite value.  Then
+\[
+  \frac1m\log
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}\smin(B_{m,T})
+  \xrightarrow{\PP}
+  -\frac{h(\gamma)}{d_\F},
+\]
+and
+\[
+  \frac1m\log
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}
+  \lambda_{\min}\!\left(m^{-1}B_{m,T}^*B_{m,T}\right)
+  \xrightarrow{\PP}
+  -\frac{2h(\gamma)}{d_\F}.
+\]
+If the row arrays are realized on a common probability space,
+\(N_m/m\to\gamma\) almost surely, and
+\(\Delta_m^{\rm sqrf}=o(m)\) almost surely, then the corresponding lower
+envelopes hold:
+\[
+  \liminf_{m\to\infty}\frac1m\log
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}\smin(B_{m,T})
+  \ge -\frac{h(\gamma)}{d_\F},
+\]
+and the normalized square column-Gram lower envelope has base
+\(-2h(\gamma)/d_\F\).
+
+Positive real column diagonal factors are included by taking \(S_m\) diagonal.
+Consequently, the same conclusions apply to row-normalized random-prefix
+Gaussian rows and to full-prefix column-normalized Gaussian columns, where the
+column normalization is computed from all rows in the realized prefix \([N_m]\).
+\end{corollary}
+
+\begin{proof}
+On the event \(N_m\ge m\), for every \(T\subset[N_m]\), \(|T|=m\),
+\[
+  e^{-\Delta_m^{\rm sqrf}}\smin((R_{im})_{i\in T})
+  \le \smin(B_{m,T})
+  \le e^{\Delta_m^{\rm sqrf}}\smin((R_{im})_{i\in T}).
+\]
+The selected rows commute with the single global all-column right factor:
+\((R S_m)_T=R_T S_m\).  The displayed estimate is the min--max singular-value
+inequality for the positive real row diagonal factor and \(S_m\).  Taking minima
+over \(T\) gives
+\[
+  \left|
+  \frac1m\log
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}\smin(B_{m,T})
+  -
+  \frac1m\log M_{\F,m}(N_m)
+  \right|
+  \le \frac{\Delta_m^{\rm sqrf}}m
+\]
+outside the event \(N_m<m\), where \(M_{\F,m}(N_m)\) denotes the corresponding
+unweighted square-prefix statistic.  The event \(N_m<m\) has probability
+tending to zero.  For \(\F=\R,\C\), use
+Theorem~\ref{thm:random-row-count-gaussian}; for \(\F=\HH\), use
+Theorem~\ref{thm:quat-random-row-count-gaussian}.  The singular-value
+convergence follows because \(\Delta_m^{\rm sqrf}=o_\PP(m)\).
+
+The Gram statistic is transferred by the eigenvalue identity
+\[
+  \lambda_{\min}\!\left(m^{-1}B_{m,T}^*B_{m,T}\right)
+  =m^{-1}\smin(B_{m,T})^2.
+\]
+For the almost-sure lower envelopes, keep only the lower side of the pathwise
+sandwich.  In the real and complex cases, the source lower envelope is
+Corollary~\ref{cor:random-row-count-bd} with bounded Gaussian density and
+\(\kappa=0\); in the quaternion case it is the a.s. part of
+Theorem~\ref{thm:quat-random-row-count-gaussian}.  The Gram lower envelope
+again follows by squaring.
+
+For row normalization, on the high-probability bracket
+\(N_m\le\lceil\gamma_+m\rceil\), the realized-prefix row-norm extrema are bounded
+by deterministic-prefix extrema.  For full-prefix column normalization, on
+\(\lfloor\gamma_-m\rfloor\le N_m\le\lceil\gamma_+m\rceil\), each column norm is
+bracketed between the corresponding deterministic-prefix column norms.  Standard
+Gaussian norm upper tails and ball-volume lower tails give
+\(\Delta_m^{\rm sqrf}=o_\PP(m)\), and give the a.s. version under common
+a.s. prefix-count convergence.
+
+This is only a square random-prefix row/right-factor exact transfer.  It
+subsumes Corollary~\ref{cor:quat-random-prefix-conditioning-exact} in the
+quaternion case and contains the positive column-diagonal case.  It is the exact square
+strengthening of Corollary~\ref{cor:random-prefix-diagonal-fixed-excess-fixed-k}
+at \(r=0,k=1\), but it does not extend to fixed-excess exact laws.  Column
+selection does not commute with a non-diagonal right factor, so no
+selected-column or two-sided non-diagonal covariance statement is implied.  Nor
+is there a value-dependent row-selection theorem, selected-submatrix column
+normalization, row-Gram statement for \(r>0\), quaternionic non-real row
+weighting, condition-number-only covariance claim, or almost-sure exact law.
+\end{proof}
+
+\begin{corollary}[Quaternion square diagonal and normalized exact base]\label{cor:quat-square-diagonal-normalized-exact}
+Let \(G_m\in\HH^{N_m\times m}\) have iid standard quaternion Gaussian entries
+with \(N_m/m\to\gamma>1\).  Let
+\[
+  \widetilde G_m=D_m^{\rm row}G_mE_m,
+\]
+where \(D_m^{\rm row}\) and \(E_m\) are positive real diagonal matrices, random
+and possibly dependent on \(G_m\), with strictly positive finite entries, and
+where either diagonal factor may be absent.  Assume
+\[
+  \Delta_m^{\rm diag}:=
+  \max_i|\log(D_m^{\rm row})_{ii}|
+  +
+  \max_j|\log(E_m)_{jj}|=o_\PP(m),
+\]
+omitting absent terms.  Put
+\[
+  M_{\widetilde G,\HH}
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}\smin((\widetilde G_m)_T)
+\]
+and
+\[
+  \Gamma_{\widetilde G,\HH}
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}
+  \lambda_{\min}\!\left(m^{-1}(\widetilde G_m)_T^*
+  (\widetilde G_m)_T\right).
+\]
+Then
+\[
+  \frac1m\log M_{\widetilde G,\HH}
+  \xrightarrow{\PP}
+  -\frac{h(\gamma)}4,
+  \qquad
+  \frac1m\log \Gamma_{\widetilde G,\HH}
+  \xrightarrow{\PP}
+  -\frac{h(\gamma)}2 .
+\]
+If \(\Delta_m^{\rm diag}=o(m)\) almost surely on a common coupling, then the
+corresponding lower envelopes hold:
+\[
+  \liminf_{m\to\infty}\frac1m\log M_{\widetilde G,\HH}
+  \ge -\frac{h(\gamma)}4,
+  \qquad
+  \liminf_{m\to\infty}\frac1m\log \Gamma_{\widetilde G,\HH}
+  \ge -\frac{h(\gamma)}2
+  \qquad\hbox{a.s.}
+\]
+
+In particular, the same square-row convergence in probability and lower
+envelopes hold for row-normalized quaternion Gaussian rows and for full-matrix
+column-normalized quaternion Gaussian columns.
+\end{corollary}
+
+\begin{proof}
+For every row set \(T\) with \(|T|=m\),
+\[
+  (\widetilde G_m)_T=(D_m^{\rm row})_T(G_m)_TE_m .
+\]
+The entries of the diagonal factors are positive real scalars, hence central in
+\(\HH\).  The min--max singular-value inequalities therefore give, uniformly
+in \(T\),
+\[
+  e^{-\Delta_m^{\rm diag}}\smin((G_m)_T)
+  \le \smin((\widetilde G_m)_T)
+  \le e^{\Delta_m^{\rm diag}}\smin((G_m)_T).
+\]
+Taking the minimum over \(T\), logs, and division by \(m\) gives
+\[
+  \left|
+  \frac1m\log M_{\widetilde G,\HH}
+  -\frac1m\log M_{G,\HH}
+  \right|
+  \le \frac{\Delta_m^{\rm diag}}m
+\]
+on the almost-sure event that all square row submatrices of \(G_m\) are
+nonsingular.  Theorem~\ref{thm:quaternion-gaussian-base} and
+\(\Delta_m^{\rm diag}=o_\PP(m)\) give the singular-value convergence.  The
+Gram convergence follows from Corollary~\ref{cor:gram-transfer}.
+
+For the almost-sure lower envelope, use the same pathwise comparison together
+with the \(r=0,k=1\) lower-envelope case of
+Theorem~\ref{thm:quat-fixed-excess-fixed-k-lower} and
+Corollary~\ref{cor:quat-rect-kth-gram-lower}.  For row normalization, one row
+norm squared is \((1/4)\chi^2_{4m}\); for column normalization, one column norm
+squared is \((1/4)\chi^2_{4N_m}\).  The Markov upper-tail and ball-volume
+lower-tail estimates used below for quaternion normalization show that the
+corresponding logarithmic extrema are \(o_\PP(m)\), and are \(o(m)\) almost
+surely after the \(O(m)\) row or column unions.  The rows and columns are
+nonzero almost surely.
+\end{proof}
+
+\begin{corollary}[Quaternion square row and right-factor conditioning]\label{cor:quat-square-row-covariance-conditioning-exact}
+Let \(G_m\in\HH^{N_m\times m}\) have iid standard quaternion Gaussian entries
+with \(N_m/m\to\gamma>1\).  Let
+\[
+  B_m=D_m^{\rm row}G_mS_m,
+\]
+where \(D_m^{\rm row}\) is a positive real diagonal row factor with strictly
+positive finite entries, possibly absent, and \(S_m\in\HH^{m\times m}\) is
+invertible.  The factors may be random and dependent on \(G_m\).  Assume
+\[
+  \Delta_m^{\rm rf}:=
+  \max_i|\log(D_m^{\rm row})_{ii}|
+  +\bigl|\log\smin(S_m)\bigr|+\bigl|\log\|S_m\|\bigr|=o_\PP(m),
+\]
+omitting the row term if \(D_m^{\rm row}\) is absent.  Put
+\[
+  M_{B,\HH}=\min_{\substack{T\subset[N_m]\\ |T|=m}}\smin((B_m)_T)
+\]
+and
+\[
+  \Gamma_{B,\HH}
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}
+  \lambda_{\min}\!\left(m^{-1}(B_m)_T^*(B_m)_T\right).
+\]
+Then
+\[
+  \frac1m\log M_{B,\HH}
+  \xrightarrow{\PP}
+  -\frac{h(\gamma)}4,
+  \qquad
+  \frac1m\log \Gamma_{B,\HH}
+  \xrightarrow{\PP}
+  -\frac{h(\gamma)}2 .
+\]
+If \(\Delta_m^{\rm rf}=o(m)\) almost surely on a common coupling, then the
+corresponding lower envelopes hold with the same bases.
+
+In particular, deterministic uniformly elliptic quaternion right factors,
+including \(S_m=\Sigma_m^{1/2}\) with
+\(0<c\le\lambda_{\min}(\Sigma_m)\le\lambda_{\max}(\Sigma_m)\le C<\infty\),
+preserve the square-row quaternion bases.  Absolute singular-value scale is
+needed: a subexponential condition number alone would not rule out an
+exponential scalar shift.
+\end{corollary}
+
+\begin{proof}
+For every row set \(T\) with \(|T|=m\),
+\[
+  (B_m)_T=(D_m^{\rm row})_T(G_m)_TS_m .
+\]
+Using the quaternionic operator norm and singular-value conventions fixed
+above,
+\[
+  \smin((D_m^{\rm row})_T)\smin(S_m)\smin((G_m)_T)
+  \le \smin((B_m)_T)
+  \le \|(D_m^{\rm row})_T\|\,\|S_m\|\,\smin((G_m)_T).
+\]
+The bounds are uniform over \(T\).  Taking minima, logs, and division by \(m\)
+shows
+\[
+  \left|
+  \frac1m\log M_{B,\HH}
+  -\frac1m\log M_{G,\HH}
+  \right|
+  \le \frac{\Delta_m^{\rm rf}}m
+\]
+on the almost-sure event that all square row submatrices of \(G_m\) are
+nonsingular.  The singular-value convergence follows from
+Theorem~\ref{thm:quaternion-gaussian-base}; the Gram convergence follows from
+Corollary~\ref{cor:gram-transfer}.  The lower-envelope statement uses the same
+pathwise comparison and the \(r=0,k=1\) lower-envelope cases of
+Theorem~\ref{thm:quat-fixed-excess-fixed-k-lower} and
+Corollary~\ref{cor:quat-rect-kth-gram-lower}.
+\end{proof}
+
+\begin{lemma}[Quaternion fixed-excess fixed-\(k\) Laguerre tail]\label{lem:quat-rect-kth-laguerre-tail}
+Fix \(r\ge0\) and \(k\ge1\).  There are constants
+\(C_{\HH,r,k}\ge1\) and \(B_{\HH,r,k}\ge0\) such that, for every \(m\ge k\),
+every iid standard quaternion Gaussian matrix \(G\in\HH^{(m+r)\times m}\), and
+every \(0<t\le1\),
+\[
+  \PP\{\sigma_{m-k+1}(G)\le t\}
+  \le C_{\HH,r,k}m^{B_{\HH,r,k}}t^{4k(k+r)} .
+\]
+\end{lemma}
+
+\begin{proof}
+Let \(0\le\lambda_1\le\cdots\le\lambda_m\) be the eigenvalues of the quaternion
+Hermitian matrix \(G^*G\), each counted once as a quaternionic eigenvalue.  With
+the standard quaternion Gaussian normalization fixed above, these eigenvalues
+have the \(\beta=4\) Laguerre density
+\[
+  \frac{m!}{Z_m(q)}
+  e^{-2\sum_i\lambda_i}
+  \prod_{i=1}^m \lambda_i^{q-1}
+  \prod_{i<j}(\lambda_j-\lambda_i)^4,
+  \qquad q=2(r+1),
+\]
+in ordered coordinates; this is the quaternion Wishart/Laguerre ensemble, see
+\cite[Chs.~3--4]{Forrester2010} together with the quaternion matrix conventions
+in \cite{Zhang1997Quaternions}.  Put \(\delta=t^2\).  On
+\(\lambda_k\le\delta\), write \(x_i=\lambda_i\) for \(1\le i\le k\) and
+\(y_j=\lambda_{k+j}\) for \(1\le j\le m-k\).  Since \(0\le x_i\le y_j\),
+\[
+  \prod_{i\le k<j}(\lambda_j-\lambda_i)^4
+  \le \prod_{j=1}^{m-k}y_j^{4k}.
+\]
+The integral over the \(k\) bottom variables contributes
+\[
+  \int_{[0,\delta]^k}\prod_i x_i^{q-1}
+       \prod_{i<j}|x_i-x_j|^4\,dx
+  =
+  C_{r,k}\delta^{kq+4\binom{k}{2}}
+  =
+  C_{r,k}\delta^{2k(k+r)}.
+\]
+The remaining variables are bounded by a Laguerre--Selberg integral with
+parameter \(q+4k\), so
+\[
+  \PP\{\lambda_k\le\delta\}
+  \le
+  C_{r,k}\delta^{2k(k+r)}
+  \frac{m!}{(m-k)!}\frac{Z_{m-k}(q+4k)}{Z_m(q)} .
+\]
+For fixed \(r,k\), the Laguerre--Selberg product and Stirling's formula bound
+the ratio by \(C_{r,k}m^{B_{r,k}}\), after absorbing finitely many small \(m\)
+into the constant.  Since \(\sigma_{m-k+1}(G)=\sqrt{\lambda_k}\), this gives the
+claimed singular-value tail.
+\end{proof}
+
+\begin{theorem}[Quaternion fixed-excess fixed-\(k\) lower side]\label{thm:quat-fixed-excess-fixed-k-lower}
+Fix \(r\ge0\) and \(k\ge1\).  Let \(A_m\in\HH^{N_m\times m}\) have iid standard
+quaternion Gaussian entries, with \(N_m\ge m+r\), and put
+\[
+  M_{\HH,m}^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}\sigma_{m-k+1}(A_{m,T}).
+\]
+There are constants \(C_{\HH,r,k}\ge1\) and \(B_{\HH,r,k}\ge0\) such that, for
+every \(u_m>0\),
+\[
+  \PP\left\{M_{\HH,m}^{(r)}[k]\le
+  \exp\left[-\frac{\log\binom{N_m}{m+r}
+    +B_{\HH,r,k}\log m+\log C_{\HH,r,k}+u_m}{4k(k+r)}\right]\right\}
+  \le e^{-u_m}.
+\]
+If \(N_m/m\to\gamma>1\), then, for every \(\varepsilon>0\),
+\[
+  \PP\left\{M_{\HH,m}^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{h(\gamma)}{4k(k+r)}+\varepsilon\right)m\right]\right\}
+  \to0.
+\]
+On any common coupling over \(m\),
+\[
+  \liminf_{m\to\infty}\frac1m\log M_{\HH,m}^{(r)}[k]
+  \ge -\frac{h(\gamma)}{4k(k+r)}
+  \qquad\hbox{a.s.}
+\]
+\end{theorem}
+
+\begin{proof}
+The finite-budget estimate is the union bound over the
+\(\binom{N_m}{m+r}\) selected row sets, using
+Lemma~\ref{lem:quat-rect-kth-laguerre-tail}.  Taking
+\(u_m=4k(k+r)\varepsilon m\) and absorbing the logarithmic terms gives the
+fixed-aspect lower side.  The same choice with, say, half the displayed
+\(\varepsilon\)-slack gives summable failure probabilities, so the almost-sure
+lower envelope follows from the first Borel--Cantelli lemma.
+\end{proof}
+
+\begin{corollary}[Quaternion fixed-excess fixed-\(k\) column-Gram lower side]\label{cor:quat-rect-kth-gram-lower}
+Under the hypotheses of Theorem~\ref{thm:quat-fixed-excess-fixed-k-lower}, let
+\[
+  \Lambda_{\HH,m}^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}
+  \lambda_{(k)}\!\left((m+r)^{-1}A_{m,T}^*A_{m,T}\right),
+\]
+where \(\lambda_{(k)}\) is the \(k\)-th smallest quaternionic eigenvalue of the
+Hermitian column Gram matrix.  If \(N_m/m\to\gamma>1\), then, for every
+\(\varepsilon>0\),
+\[
+  \PP\left\{\Lambda_{\HH,m}^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{h(\gamma)}{2k(k+r)}+\varepsilon\right)m\right]\right\}
+  \to0,
+\]
+and, on any common coupling,
+\[
+  \liminf_{m\to\infty}\frac1m\log \Lambda_{\HH,m}^{(r)}[k]
+  \ge -\frac{h(\gamma)}{2k(k+r)}
+  \qquad\hbox{a.s.}
+\]
+\end{corollary}
+
+\begin{proof}
+Pathwise,
+\[
+  \Lambda_{\HH,m}^{(r)}[k]
+  =(m+r)^{-1}\bigl(M_{\HH,m}^{(r)}[k]\bigr)^2,
+\]
+and \(m^{-1}\log(m+r)\to0\).  Apply
+Theorem~\ref{thm:quat-fixed-excess-fixed-k-lower}.
+\end{proof}
+
+\begin{corollary}[Random-prefix fixed-excess fixed-\(k\) lower sides]\label{cor:random-prefix-fixed-excess-fixed-k-lower}
+Let \(\F\in\{\R,\C,\HH\}\), with \(d_\F=1,2,4\), respectively.  For each
+\(m\), let \((R_{im})_{i\ge1}\) be an infinite sequence of iid standard
+\(\F^m\)-Gaussian rows.  Fix \(r\ge0\) and \(k\ge1\).  For an integer
+\(n\ge m+r\), put
+\[
+  M_{\F,m}^{(r)}[k](n)
+  =
+  \min_{\substack{T\subset[n]\\ |T|=m+r}}
+  \sigma_{m-k+1}((R_{im})_{i\in T}),
+\]
+and
+\[
+  \Lambda_{\F,m}^{(r)}[k](n)
+  =
+  \min_{\substack{T\subset[n]\\ |T|=m+r}}
+  \lambda_{(k)}\!\left((m+r)^{-1}(R_{im})_{i\in T}^*
+  (R_{im})_{i\in T}\right).
+\]
+Let \(N_m\) be integer-valued, possibly dependent on the row array, with
+\[
+  \frac{N_m}{m}\xrightarrow{\PP}\gamma>1 .
+\]
+Extend both statistics by \(+\infty\) on the event \(N_m<m+r\).  This event has
+probability tending to zero; the convention only makes the monotonicity
+comparison literal.
+Then, for every \(\varepsilon>0\),
+\[
+  \PP\left\{M_{\F,m}^{(r)}[k](N_m)\le
+  \exp\!\left[-\left(\frac{h(\gamma)}{d_\F k(k+r)}
+  +\varepsilon\right)m\right]\right\}\to0
+\]
+and
+\[
+  \PP\left\{\Lambda_{\F,m}^{(r)}[k](N_m)\le
+  \exp\!\left[-\left(\frac{2h(\gamma)}{d_\F k(k+r)}
+  +\varepsilon\right)m\right]\right\}\to0.
+\]
+On a common coupling, if \(N_m/m\to\gamma\) almost surely, then
+\[
+  \liminf_{m\to\infty}\frac1m\log M_{\F,m}^{(r)}[k](N_m)
+  \ge -\frac{h(\gamma)}{d_\F k(k+r)}
+\]
+and
+\[
+  \liminf_{m\to\infty}\frac1m\log \Lambda_{\F,m}^{(r)}[k](N_m)
+  \ge -\frac{2h(\gamma)}{d_\F k(k+r)}
+  \qquad\hbox{a.s.}
+\]
+\end{corollary}
+
+\begin{proof}
+The map \(n\mapsto M_{\F,m}^{(r)}[k](n)\) is nonincreasing, because increasing
+the prefix row count enlarges the tested family.  Fix \(\varepsilon>0\), and
+choose \(\gamma_+>\gamma\) so close that
+\[
+  \frac{h(\gamma_+)}{d_\F k(k+r)}
+  <
+  \frac{h(\gamma)}{d_\F k(k+r)}+\frac{\varepsilon}{2}.
+\]
+With probability tending to one,
+\[
+  N_m\le \lceil\gamma_+m\rceil .
+\]
+On this event, including the convention \(M=+\infty\) when \(N_m<m+r\),
+\[
+  M_{\F,m}^{(r)}[k](N_m)
+  \ge M_{\F,m}^{(r)}[k](\lceil\gamma_+m\rceil).
+\]
+Apply the deterministic-count fixed-aspect lower side
+Corollary~\ref{rect-kth:fixed-aspect-lower} for \(\F=\R,\C\), and
+Theorem~\ref{thm:quat-fixed-excess-fixed-k-lower} for \(\F=\HH\), at the
+deterministic aspect \(\gamma_+\).  At the threshold
+\[
+  \exp\left[-\left(\frac{h(\gamma)}{d_\F k(k+r)}+\varepsilon\right)m\right],
+\]
+this deterministic lower side applies with at least \(\varepsilon/2\) slack.
+No independence between \(N_m\) and the rows is used.
+
+The column-Gram statement is pathwise:
+\[
+  \Lambda_{\F,m}^{(r)}[k](N_m)
+  =(m+r)^{-1}\bigl(M_{\F,m}^{(r)}[k](N_m)\bigr)^2,
+\]
+on the event \(N_m\ge m+r\), while both sides are \(+\infty\) under the
+extension on the complement; \(m^{-1}\log(m+r)\to0\).  For the almost-sure
+lower envelopes, fix a countable decreasing sequence \(\gamma_j\downarrow\gamma\).
+Almost surely, eventually \(N_m\le\lceil\gamma_jm\rceil\) for each \(j\);
+combine the preceding pathwise comparison with the deterministic-count
+almost-sure lower envelope at \(\gamma_j\), then let \(j\to\infty\).
+
+This is only the lower-side monotonicity transfer.  In the overlapping square
+case \(r=0,k=1\), the exact random-prefix laws are the earlier square results;
+the present corollary adds fixed-excess fixed-\(k\) lower sides and normalized
+column-Gram lower sides only.  It does not assert an upper side, exact
+fixed-excess law, value-dependent row-selection theorem, row-Gram statement for
+\(r>0\), beta interpolation, or proportional Wishart-edge law.
+\end{proof}
+
+\begin{corollary}[Random-prefix diagonal fixed-excess fixed-\(k\) lower sides]\label{cor:random-prefix-diagonal-fixed-excess-fixed-k}
+Let \(\F\in\{\R,\C,\HH\}\), with \(d_\F=1,2,4\), respectively.  For each
+\(m\), let \((R_{im})_{i\ge1}\) be an infinite sequence of iid standard
+\(\F^m\)-Gaussian rows.  Let \(N_m\) be integer-valued, possibly dependent on
+the row array, with
+\[
+  \frac{N_m}{m}\xrightarrow{\PP}\gamma>1 .
+\]
+Fix \(r\ge0\) and \(k\ge1\).  Let \(d_{im}>0\), \(i\ge1\), and
+\(e_{jm}>0\), \(1\le j\le m\), be finite real random weights, possibly
+dependent on the rows and on \(N_m\).  Assume
+\[
+  \Delta_m^{\rm rpdiag}
+  =
+  \max_{1\le i\le N_m}|\log d_{im}|
+  +\max_{1\le j\le m}|\log e_{jm}|
+  =o_\PP(m),
+\]
+with the convention that an absent row or column factor is replaced by weights
+identically equal to \(1\).  For \(N_m\ge m+r\) and \(T\subset[N_m]\),
+\(|T|=m+r\), set
+\[
+  B_{m,T}=\operatorname{diag}(d_{im}:i\in T)\,(R_{im})_{i\in T}\,
+  \operatorname{diag}(e_{1m},\ldots,e_{mm})
+\]
+and define
+\[
+  M_{\rm rpdiag,\F}^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}
+  \sigma_{m-k+1}(B_{m,T}),
+\]
+\[
+  \Lambda_{\rm rpdiag,\F}^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}
+  \lambda_{(k)}\!\left((m+r)^{-1}B_{m,T}^*B_{m,T}\right).
+\]
+Extend both statistics by \(+\infty\) on \(\{N_m<m+r\}\).  Then, for every
+\(\varepsilon>0\),
+\[
+  \PP\left\{M_{\rm rpdiag,\F}^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{h(\gamma)}{d_\F k(k+r)}
+    +\varepsilon\right)m\right]\right\}\to0
+\]
+and
+\[
+  \PP\left\{\Lambda_{\rm rpdiag,\F}^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{2h(\gamma)}{d_\F k(k+r)}
+    +\varepsilon\right)m\right]\right\}\to0.
+\]
+On a common coupling, if \(N_m/m\to\gamma\) almost surely and
+\(\Delta_m^{\rm rpdiag}=o(m)\) almost surely, then
+\[
+  \liminf_{m\to\infty}\frac1m\log M_{\rm rpdiag,\F}^{(r)}[k]
+  \ge -\frac{h(\gamma)}{d_\F k(k+r)}
+\]
+and
+\[
+  \liminf_{m\to\infty}\frac1m\log \Lambda_{\rm rpdiag,\F}^{(r)}[k]
+  \ge -\frac{2h(\gamma)}{d_\F k(k+r)}
+  \qquad\hbox{a.s.}
+\]
+The same conclusions apply to row-normalized random-prefix Gaussian rows and
+to full-prefix column-normalized Gaussian columns, where the column
+normalization is computed from all rows in the realized prefix \([N_m]\).  For
+independent thinning, this is read only after the retained iid rows are
+reindexed; value-dependent thinning or row selection is not covered.
+\end{corollary}
+
+\begin{proof}
+On the feasible event \(\{N_m\ge m+r\}\), for every selected row set \(T\),
+\[
+  \sigma_{m-k+1}(B_{m,T})
+  \ge
+  e^{-\Delta_m^{\rm rpdiag}}
+  \sigma_{m-k+1}\!\left((R_{im})_{i\in T}\right).
+\]
+Taking minima over \(T\) gives the same lower sandwich for the random-prefix
+singular-value statistics, and the normalized column-Gram statistic has the
+squared sandwich.  Hence, with
+\(c=h(\gamma)/(d_\F k(k+r))\),
+\[
+  \PP\{M_{\rm rpdiag,\F}^{(r)}[k]\le e^{-(c+\varepsilon)m}\}
+  \le
+  \PP\{\Delta_m^{\rm rpdiag}>\varepsilon m/2\}
+  +\PP\{M_{\F,m}^{(r)}[k](N_m)\le e^{-(c+\varepsilon/2)m}\}.
+\]
+The first term tends to zero by the diagonal-extrema hypothesis, and the second
+by Corollary~\ref{cor:random-prefix-fixed-excess-fixed-k-lower}.  The Gram
+claim follows in the same way, using the lower sandwich
+\(\Lambda_{\rm rpdiag,\F}^{(r)}[k]\ge
+e^{-2\Delta_m^{\rm rpdiag}}\Lambda_{\F,m}^{(r)}[k](N_m)\) on the feasible
+event and splitting the slack accordingly.  The almost-sure lower envelopes use
+the same pathwise inequalities together with the a.s. part of
+Corollary~\ref{cor:random-prefix-fixed-excess-fixed-k-lower}.
+
+For row normalization, on the high-probability bracket
+\(N_m\le\lceil\gamma_+m\rceil\), the row-norm extrema over the realized prefix
+are bounded by the extrema over the deterministic prefix
+\(\lceil\gamma_+m\rceil\).  For column normalization, on
+\(\lfloor\gamma_-m\rfloor\le N_m\le\lceil\gamma_+m\rceil\), each full-prefix
+column norm is bracketed between the corresponding deterministic-prefix column
+norms.  The same Gaussian norm upper-tail and ball-volume lower-tail estimates
+used in the fixed-count normalization corollaries give
+\(\Delta_m^{\rm rpdiag}=o_\PP(m)\) and, under common a.s. count convergence,
+\(\Delta_m^{\rm rpdiag}=o(m)\) almost surely.
+
+This is only a random-prefix diagonal lower-side transfer.  In the overlapping
+square case \(r=0,k=1\), the exact random-prefix square laws above are stronger.
+No upper side, exact fixed-excess law, value-dependent row-selection theorem,
+row-Gram result for \(r>0\), selected-submatrix column normalization,
+non-diagonal covariance statement, beta interpolation, proportional Wishart
+edge, or supercritical phase-retrieval consequence is implied.
+\end{proof}
+
+\begin{corollary}[Random-prefix all-column fixed-excess fixed-\(k\) lower sides]\label{cor:random-prefix-right-factor-fixed-excess-fixed-k-lower}
+Let \(\F\in\{\R,\C,\HH\}\), with \(d_\F=1,2,4\), respectively.  For each
+\(m\), let \((R_{im})_{i\ge1}\) be an infinite sequence of iid standard
+\(\F^m\)-Gaussian rows.  Let \(N_m\) be integer-valued, possibly dependent on
+the row array, with
+\[
+  \frac{N_m}{m}\xrightarrow{\PP}\gamma>1 .
+\]
+Fix \(r\ge0\) and \(k\ge1\).  Let \(d_{im}>0\), \(i\ge1\), be finite real
+random row weights, and let \(S_m\in\F^{m\times m}\) be invertible.  The row
+weights and \(S_m\) may be random and dependent on \(N_m\) and on the row array.
+Assume
+\[
+  \Delta_m^{\rm rpcond}
+  =
+  \max_{1\le i\le N_m}|\log d_{im}|
+  +\bigl|\log\smin(S_m)\bigr|+\bigl|\log\|S_m\|\bigr|
+  =o_\PP(m),
+\]
+omitting the row-weight term when row weights are absent.  For \(N_m\ge m+r\)
+and \(T\subset[N_m]\), \(|T|=m+r\), set
+\[
+  B_{m,T}=\operatorname{diag}(d_{im}:i\in T)\,(R_{im})_{i\in T}S_m
+\]
+and define
+\[
+  M_{\rm rpcond,\F}^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}\sigma_{m-k+1}(B_{m,T}),
+\]
+\[
+  \Lambda_{\rm rpcond,\F}^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}
+  \lambda_{(k)}\!\left((m+r)^{-1}B_{m,T}^*B_{m,T}\right).
+\]
+Extend both statistics by \(+\infty\) on \(\{N_m<m+r\}\).  Then, for every
+\(\varepsilon>0\),
+\[
+  \PP\left\{M_{\rm rpcond,\F}^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{h(\gamma)}{d_\F k(k+r)}
+    +\varepsilon\right)m\right]\right\}\to0
+\]
+and
+\[
+  \PP\left\{\Lambda_{\rm rpcond,\F}^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{2h(\gamma)}{d_\F k(k+r)}
+    +\varepsilon\right)m\right]\right\}\to0.
+\]
+On a common coupling, if \(N_m/m\to\gamma\) almost surely and
+\(\Delta_m^{\rm rpcond}=o(m)\) almost surely, then
+\[
+  \liminf_{m\to\infty}\frac1m\log M_{\rm rpcond,\F}^{(r)}[k]
+  \ge -\frac{h(\gamma)}{d_\F k(k+r)}
+\]
+and
+\[
+  \liminf_{m\to\infty}\frac1m\log \Lambda_{\rm rpcond,\F}^{(r)}[k]
+  \ge -\frac{2h(\gamma)}{d_\F k(k+r)}
+  \qquad\hbox{a.s.}
+\]
+Positive column diagonals are included by taking \(S_m\) diagonal.  Deterministic
+or random full-column covariance and whitening factors are included only under
+the absolute singular-scale hypothesis above.  Row-normalized random-prefix
+Gaussian rows and full-prefix column-normalized Gaussian columns may be combined
+with this all-column right factor when their realized-prefix logarithmic extrema
+are included in \(\Delta_m^{\rm rpcond}\).
+\end{corollary}
+
+\begin{proof}
+On the feasible event \(\{N_m\ge m+r\}\), for every selected row set \(T\),
+\[
+  \sigma_{m-k+1}(B_{m,T})
+  \ge
+  e^{-\Delta_m^{\rm rpcond}}
+  \sigma_{m-k+1}\!\left((R_{im})_{i\in T}\right).
+\]
+For \(\F=\HH\), the positive row weights are real scalars and hence central,
+while \(S_m\) is one global quaternionic right factor; the same min--max
+singular-value sandwich applies.  Taking minima over \(T\) gives the lower
+sandwich for the random-prefix singular-value statistics.  With
+\(c=h(\gamma)/(d_\F k(k+r))\),
+\[
+  \PP\{M_{\rm rpcond,\F}^{(r)}[k]\le e^{-(c+\varepsilon)m}\}
+  \le
+  \PP\{\Delta_m^{\rm rpcond}>\varepsilon m/2\}
+  +\PP\{M_{\F,m}^{(r)}[k](N_m)\le e^{-(c+\varepsilon/2)m}\},
+\]
+and both terms tend to zero by the conditioning hypothesis and
+Corollary~\ref{cor:random-prefix-fixed-excess-fixed-k-lower}.  No independence
+among the count, row array, row weights, and \(S_m\) is used.
+
+For the normalized column Gram, the identity
+\[
+  \lambda_{(k)}\!\left((m+r)^{-1}B_{m,T}^*B_{m,T}\right)
+  =(m+r)^{-1}\sigma_{m-k+1}(B_{m,T})^2
+\]
+gives
+\[
+  \Lambda_{\rm rpcond,\F}^{(r)}[k]\ge
+  e^{-2\Delta_m^{\rm rpcond}}\Lambda_{\F,m}^{(r)}[k](N_m)
+\]
+on the feasible event.  Hence
+\[
+  \PP\{\Lambda_{\rm rpcond,\F}^{(r)}[k]\le e^{-(2c+\varepsilon)m}\}
+  \le
+  \PP\{\Delta_m^{\rm rpcond}>\varepsilon m/4\}
+  +\PP\{\Lambda_{\F,m}^{(r)}[k](N_m)\le e^{-(2c+\varepsilon/2)m}\},
+\]
+which tends to zero by the same two inputs.  The almost-sure lower envelopes
+follow by intersecting the a.s. lower-envelope event from
+Corollary~\ref{cor:random-prefix-fixed-excess-fixed-k-lower} with
+\(\Delta_m^{\rm rpcond}=o(m)\).
+
+This is only a random-prefix row-submatrix lower-side transfer under one global
+all-column right factor.  A subexponential condition number alone is
+insufficient, since a scalar factor \(e^{cm}I\) shifts the exponential scale.
+The statement does not assert an upper side, fixed-excess exact law,
+value-dependent row-selection theorem, selected-column covariance transfer,
+selected-submatrix column normalization, row-Gram statement for \(r>0\), beta
+interpolation, proportional Wishart-edge law, or supercritical phase-retrieval
+consequence.
+\end{proof}
+
+\begin{conjecture}[Quaternionic fixed-excess hard edge]\label{conj:quat-fixed-excess}
+Let \(A_m\in\HH^{N_m\times m}\) have iid standard quaternion Gaussian entries
+and \(N_m/m\to\gamma>1\).  For each fixed integer \(r\ge1\), one expects
+\[
+  \frac{1}{m}\log\min_{\substack{T\subset[N_m]\\ |T|=m+r}}\smin(A_{m,T})
+  \xrightarrow{\PP}-\frac{h(\gamma)}{4(r+1)}.
+\]
+The lower side is the \(k=1\) case of
+Theorem~\ref{thm:quat-fixed-excess-fixed-k-lower}; the matching upper side still
+requires a quaternionic fixed-excess pair-correlation theorem.
+\end{conjecture}
+
+\begin{remark}
+The quaternion results above use quaternionic singular values, not the repeated
+realification indices.  They are lower-side extensions except for the square
+least-singular-value theorem and its positive-real diagonal/normalization
+transfer and square all-column right-factor transfer, whose upper sides are
+proved separately.  They do not assert a quaternionic version of the
+spherical-radial transfer theorem, whose statement in this paper is restricted
+to \(\F\in\{\R,\C\}\), and they do not promote fixed-excess quaternion exact
+laws, selected-column non-diagonal covariance transfers, proportional-excess
+Wishart-edge laws, beta-interpolation statements, or row-Gram statements for
+\(r>0\).
+\end{remark}
+
+\subsection{Deterministic row and column conditioning}
+
+\begin{proposition}[Subexponential deterministic conditioning transfer]\label{prop:cov-transfer}
+Let \(G_m\in\F^{N_m\times m}\), \(N_m/m\to\gamma>1\), have iid standard
+Gaussian entries.  Let \(D_m=\operatorname{diag}(d_{1m},\dots,d_{N_m,m})\) be
+deterministic with positive diagonal entries, let \(\Sigma_m\) be deterministic
+positive definite, and put
+\[
+  A_m=D_mG_m\Sigma_m^{1/2}.
+\]
+Assume
+\[
+  \frac1m\log\!\left(\min_i d_{im}\sqrt{\lambda_{\min}(\Sigma_m)}\right)\to0,
+  \qquad
+  \frac1m\log\!\left(\max_i d_{im}\sqrt{\lambda_{\max}(\Sigma_m)}\right)\to0.
+\]
+Then
+\[
+  \frac{1}{m}\log\min_{|T|=m}\smin(A_{m,T})
+  -
+  \frac{1}{m}\log\min_{|T|=m}\smin(G_{m,T})
+  \to0
+\]
+deterministically.  Consequently
+\[
+  \frac{1}{m}\log\min_{|T|=m}\smin(A_{m,T})
+  \xrightarrow{\PP}-\frac{h(\gamma)}{d_\F}.
+\]
+\end{proposition}
+
+\begin{proof}
+For every row set \(T\), write \(D_T\) for the diagonal submatrix of \(D_m\) on
+the selected rows.  Then
+\[
+  A_{m,T}=D_TG_{m,T}\Sigma_m^{1/2},
+\]
+and therefore
+\[
+  \left(\min_i d_{im}\right)\sqrt{\lambda_{\min}(\Sigma_m)}\,\smin(G_{m,T})
+  \le \smin(A_{m,T})
+  \le
+  \left(\max_i d_{im}\right)\sqrt{\lambda_{\max}(\Sigma_m)}\,\smin(G_{m,T}).
+\]
+Taking minima over \(T\), logs, and dividing by \(m\) gives the deterministic
+comparison.  The limit then follows from the Gaussian source theorem.
+\end{proof}
+
+\begin{corollary}[Uniformly elliptic row-scaled Gaussian frames]\label{cor:elliptic-gaussian}
+If, for constants \(0<c<C<\infty\),
+\[
+  c\le d_{im}\le C,\qquad
+  c\le\lambda_{\min}(\Sigma_m)\le\lambda_{\max}(\Sigma_m)\le C
+\]
+for all \(i,m\), then the extremal row-submatrix base is the Gaussian base
+\(h(\gamma)/d_\F\).  This includes Gaussian frames with common covariance and
+bounded deterministic row weights.
+\end{corollary}
+
+\begin{proof}
+The uniform ellipticity assumptions imply the two logarithmic conditioning
+hypotheses in Proposition~\ref{prop:cov-transfer}.
+\end{proof}
+
+\begin{proposition}[Random row-weight transfer]\label{prop:random-row-weight}
+Let \(A_m\in\F^{N_m\times n_m}\) be arbitrary random matrices and let
+\(\mathcal T_m\) be any family of row sets for which the selected least
+singular values are defined.  Put
+\[
+  M_m(A)=\min_{T\in\mathcal T_m}\smin((A_m)_T).
+\]
+Let \(D_m^{\rm row}=\operatorname{diag}(w_{1m},\ldots,w_{N_m,m})\) have positive
+random diagonal entries, possibly dependent on \(A_m\), and set
+\(B_m=D_m^{\rm row}A_m\).  For
+any scale \(a_m\to\infty\), define
+\[
+  \Delta_m=\max_{1\le i\le N_m}|\log w_{im}|.
+\]
+On the event \(M_m(A)>0\),
+\[
+  \left|\frac1{a_m}\log M_m(B)-\frac1{a_m}\log M_m(A)\right|
+  \le \frac{\Delta_m}{a_m}.
+\]
+Consequently, if \(\PP\{M_m(A)>0\}\to1\),
+\(\Delta_m=o_\PP(a_m)\), and
+\(a_m^{-1}\log M_m(A)\to L\) in probability, then
+\[
+  \frac1{a_m}\log M_m(B)\xrightarrow{\PP} L.
+\]
+\end{proposition}
+
+\begin{proof}
+For every row set \(T\),
+\[
+  (B_m)_T=(D_m^{\rm row})_T(A_m)_T.
+\]
+Since \(e^{-\Delta_m}\le w_{im}\le e^{\Delta_m}\) for every row,
+\[
+  e^{-\Delta_m}\smin((A_m)_T)
+  \le \smin((B_m)_T)
+  \le e^{\Delta_m}\smin((A_m)_T).
+\]
+The constants are independent of \(T\).  Taking minima over \(T\), logs, and
+division by \(a_m\) gives the displayed comparison.
+\end{proof}
+
+\begin{proposition}[Random column-weight transfer]\label{prop:random-column-weight}
+Let \(A_m\in\F^{N_m\times n_m}\) be arbitrary random matrices.  Let
+\(\mathcal I_m\) be any nonempty family of row-column pairs \((R,C)\) for which the
+least singular values of \((A_m)_{R,C}\) are defined, and put
+\[
+  M_m(A)=\min_{(R,C)\in\mathcal I_m}\smin((A_m)_{R,C}).
+\]
+Let \(E_m=\operatorname{diag}(e_{1m},\ldots,e_{n_m,m})\) have strictly positive
+finite random diagonal entries, possibly dependent on \(A_m\), and set
+\(B_m=A_mE_m\).  For any scale \(a_m\to\infty\), define
+\[
+  \Delta_m^{\rm col}=\max_{1\le j\le n_m}|\log e_{jm}|.
+\]
+On the event \(M_m(A)>0\),
+\[
+  \left|\frac1{a_m}\log M_m(B)-\frac1{a_m}\log M_m(A)\right|
+  \le \frac{\Delta_m^{\rm col}}{a_m}.
+\]
+Consequently, if \(\PP\{M_m(A)>0\}\to1\),
+\(\Delta_m^{\rm col}=o_\PP(a_m)\), and
+\(a_m^{-1}\log M_m(A)\to L\) in probability, then
+\[
+  \frac1{a_m}\log M_m(B)\xrightarrow{\PP} L.
+\]
+\end{proposition}
+
+\begin{proof}
+For every selected pair \((R,C)\),
+\[
+  (B_m)_{R,C}=(A_m)_{R,C}(E_m)_C ,
+\]
+where \((E_m)_C\) is the positive diagonal submatrix of \(E_m\) on the selected
+columns.  Since
+\[
+  e^{-\Delta_m^{\rm col}}\le e_{jm}\le e^{\Delta_m^{\rm col}}
+  \qquad(1\le j\le n_m),
+\]
+the singular-value inequalities for a right diagonal factor give
+\[
+  e^{-\Delta_m^{\rm col}}\smin((A_m)_{R,C})
+  \le \smin((B_m)_{R,C})
+  \le e^{\Delta_m^{\rm col}}\smin((A_m)_{R,C}).
+\]
+The constants are uniform over \((R,C)\).  Taking minima, logs, and division by
+\(a_m\) proves the comparison.
+\end{proof}
+
+\begin{corollary}[Gaussian row-normalized frames]\label{cor:row-normalized-gaussian}
+Let \(G_m\in\F^{N_m\times m}\) have iid standard Gaussian entries, with
+\(N_m/m\to\gamma>1\).  Let \(U_m\) be the row-normalized matrix
+\[
+  (U_m)_i=\frac{(G_m)_i}{\|(G_m)_i\|_2}.
+\]
+Then
+\[
+  \frac1m\log\min_{|T|=m}\smin((U_m)_T)
+  \xrightarrow{\PP}-\frac{h(\gamma)}{d_\F}.
+\]
+On any common coupling over \(m\), the lower envelope also satisfies
+\[
+  \liminf_{m\to\infty}\frac1m\log\min_{|T|=m}\smin((U_m)_T)
+  \ge -\frac{h(\gamma)}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+\end{corollary}
+
+\begin{proof}
+Apply Proposition~\ref{prop:random-row-weight} with
+\[
+  w_{im}=\|(G_m)_i\|_2^{-1},\qquad a_m=m.
+\]
+The Gaussian rows are nonzero almost surely, and all square Gaussian row
+submatrices are nonsingular almost surely, so the positive-weight and
+\(M_m(G)>0\) hypotheses of the transfer proposition hold with probability one.
+It remains to check
+\[
+  \max_i|\log\|(G_m)_i\|_2|=o_\PP(m).
+\]
+For every fixed \(\delta>0\), standard Gaussian norm tails give
+\[
+  \PP\left\{\max_{i\le N_m}\|(G_m)_i\|_2>e^{\delta m}\right\}\to0.
+\]
+For the lower tail, a ball-volume estimate in real dimension \(d_\F m\) gives
+\[
+  \PP\left\{\min_{i\le N_m}\|(G_m)_i\|_2<e^{-\delta m}\right\}
+  \le \exp\{-d_\F\delta m^2+O(m\log m)\}\to0.
+\]
+Thus the random row weights have subexponential extrema, and the Gaussian
+source theorem transfers to \(U_m\).
+
+For the almost-sure lower envelope, only the upper row-norm extreme is needed:
+\[
+  \min_{|T|=m}\smin((U_m)_T)
+  \ge
+  \frac{\min_{|T|=m}\smin((G_m)_T)}
+       {\max_{i\le N_m}\|(G_m)_i\|_2}.
+\]
+Since \(N_m=O(m)\), Markov's inequality gives
+\[
+  \sum_m
+  \PP\left\{\max_{i\le N_m}\|(G_m)_i\|_2>e^{\delta m}\right\}
+  \le
+  \sum_m N_m\,\EE\|(G_m)_1\|_2^2 e^{-2\delta m}<\infty .
+\]
+Corollary~\ref{cor:as-square-lower-envelope}, Borel--Cantelli for this
+row-norm bound, and then \(\delta\downarrow0\) give the almost-sure lower
+envelope.
+\end{proof}
+
+\begin{remark}[Normalized non-Gaussian rows]
+For lower-side estimates, one only needs the upper row-norm extreme.  If
+\(B_i=A_i/\|A_i\|_2\), the rows are nonzero with high probability, and
+\[
+  \max_{i\le N_m}\|A_i\|_2=e^{o_\PP(m)},
+\]
+then \(M_m(B)\ge e^{-o_\PP(m)}M_m(A)\).  Hence any lower-side exponential
+bound already proved for \(A_m\) transfers to the row-normalized ensemble.
+Bounded scalar density alone does not imply this row-tail condition for
+pathologically heavy-tailed laws; it should be assumed, or replaced by a
+sufficient tail hypothesis such as
+\[
+  N_m m\,\PP\{|X_m|>e^{\delta m}/\sqrt m\}\to0
+  \qquad(\delta>0).
+\]
+The normalized rows are sphere-supported and their coordinates are dependent,
+so the bounded-density entry theorem cannot be applied directly to \(B_m\).
+\end{remark}
+
+\begin{corollary}[Gaussian column-normalized matrices]\label{cor:column-normalized-gaussian}
+Let \(G_m\in\F^{N_m\times m}\) have iid standard Gaussian entries, with
+\(N_m/m\to\gamma>1\).  Let \(V_m\) be the column-normalized matrix
+\[
+  (V_m)^{(j)}=\frac{(G_m)^{(j)}}{\|(G_m)^{(j)}\|_2},
+  \qquad 1\le j\le m,
+\]
+where \((G_m)^{(j)}\) denotes the \(j\)-th column.  Then
+\[
+  \frac1m\log\min_{|T|=m}\smin((V_m)_T)
+  \xrightarrow{\PP}-\frac{h(\gamma)}{d_\F}.
+\]
+On any common coupling over \(m\), the lower envelope also satisfies
+\[
+  \liminf_{m\to\infty}\frac1m\log\min_{|T|=m}\smin((V_m)_T)
+  \ge -\frac{h(\gamma)}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+\end{corollary}
+
+\begin{proof}
+Write \(V_m=G_mE_m\), where
+\[
+  E_m=\operatorname{diag}\bigl(\|(G_m)^{(1)}\|_2^{-1},\ldots,
+  \|(G_m)^{(m)}\|_2^{-1}\bigr).
+\]
+The Gaussian columns are nonzero almost surely.  We apply
+Proposition~\ref{prop:random-column-weight} to the row-column family
+\((T,[m])\), \(|T|=m\); Gaussian square row submatrices are nonsingular almost
+surely, so the required positivity event has probability one.
+By Proposition~\ref{prop:random-column-weight}, it is enough for convergence in
+probability to prove
+\[
+  \max_{1\le j\le m}\left|\log\|(G_m)^{(j)}\|_2\right|=o_\PP(m).
+\]
+For the almost-sure lower envelope, the same estimates will be summable.  For
+the upper tail, Markov's inequality gives, for every fixed \(\delta>0\),
+\[
+  \PP\{\|(G_m)^{(j)}\|_2>e^{\delta m}\}
+  \le N_m e^{-2\delta m},
+\]
+and the union over \(j\le m\) is summable in \(m\).  For the lower tail, the
+column lives in real dimension \(d_\F N_m\), so a ball-volume estimate gives
+\[
+  \PP\{\|(G_m)^{(j)}\|_2<e^{-\delta m}\}
+  \le \exp\{-d_\F\delta N_m m+O(N_m\log N_m)\}.
+\]
+Since \(N_m/m\to\gamma>1\), the union over \(j\le m\) is again summable.  Thus
+the column weights have subexponential extrema in probability and almost
+surely.  The Gaussian source theorem gives the convergence in probability, and
+Corollary~\ref{cor:as-square-lower-envelope} plus the pathwise sandwich gives
+the almost-sure lower envelope.
+\end{proof}
+
+\begin{remark}[Product variance profiles]
+For real Gaussian entries \(A_{ij}=d_i g_{ij}c_j\), this is a bounded product
+variance profile.  It is not a theorem for arbitrary variance profiles
+\(\sigma_{ij}g_{ij}\): row types may have different entropy and small-ball
+prefactors, so the sharp base should be profile-dependent.
+\end{remark}
+
+\begin{corollary}[Fixed-excess transfer]\label{cor:fixed-excess-transfer}
+Under the hypotheses of Proposition~\ref{prop:cov-transfer}, fix \(r\ge0\) and
+define
+\[
+  M_A^{(r)}=\min_{|T|=m+r}\smin(A_{m,T}),
+  \qquad
+  M_G^{(r)}=\min_{|T|=m+r}\smin(G_{m,T}).
+\]
+Then
+\[
+  \frac1m\log M_A^{(r)}-\frac1m\log M_G^{(r)}\to0
+\]
+deterministically.  Consequently the fixed-excess lower side of
+Theorem~\ref{rect:lower} transfers to \(A_m\): for every \(\varepsilon>0\),
+\[
+  \PP\left\{M_A^{(r)}\le
+     \exp\!\left[-\left(\frac{h(\gamma)}{d_\F(r+1)}+\varepsilon\right)m\right]\right\}
+  \to0.
+\]
+\end{corollary}
+
+\begin{proof}
+The singular-value sandwich in the proof of Proposition~\ref{prop:cov-transfer}
+does not use \(|T|=m\).  It applies uniformly to every \((m+r)\)-row set \(T\).
+Taking minima, logs, and dividing by \(m\) gives the deterministic comparison,
+and Theorem~\ref{rect:lower} gives the lower side.
+\end{proof}
+
+\begin{corollary}[Fixed-excess fixed-\(k\) transfer]\label{cor:fixed-excess-fixed-k-transfer}
+Under the hypotheses of Proposition~\ref{prop:cov-transfer}, with
+\(\F\in\{\R,\C\}\), fix integers \(r\ge0\) and \(k\ge1\).  For \(m\ge k\), put
+\[
+  M_A^{(r)}[k]=
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}\sigma_{m-k+1}(A_{m,T}),
+  \qquad
+  M_G^{(r)}[k]=
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}\sigma_{m-k+1}(G_{m,T}).
+\]
+Then
+\[
+  \frac1m\log M_A^{(r)}[k]-\frac1m\log M_G^{(r)}[k]\to0
+\]
+deterministically.  Consequently the fixed-excess fixed-\(k\) lower side of
+Corollary~\ref{rect-kth:fixed-aspect-lower} transfers to \(A_m\): for every
+\(\varepsilon>0\),
+\[
+  \PP\left\{M_A^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{h(\gamma)}{d_\F k(k+r)}+\varepsilon\right)m\right]\right\}
+  \to0.
+\]
+The normalized column-Gram statistic
+\[
+  \Lambda_A^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}
+  \lambda_{(k)}\!\left((m+r)^{-1}A_{m,T}^*A_{m,T}\right)
+\]
+has the same deterministic transfer from the corresponding statistic
+\(\Lambda_G^{(r)}[k]\) defined with \(G_m\) in place of \(A_m\), and hence has
+the lower-side base \(2h(\gamma)/(d_\F k(k+r))\) under the same hypotheses.
+On any common coupling over \(m\), the lower envelopes also satisfy
+\[
+  \liminf_{m\to\infty}\frac1m\log M_A^{(r)}[k]
+  \ge -\frac{h(\gamma)}{d_\F k(k+r)}
+  \qquad\hbox{almost surely},
+\]
+and
+\[
+  \liminf_{m\to\infty}\frac1m\log \Lambda_A^{(r)}[k]
+  \ge -\frac{2h(\gamma)}{d_\F k(k+r)}
+  \qquad\hbox{almost surely}.
+\]
+\end{corollary}
+
+\begin{proof}
+For every row set \(T\), the min--max singular-value inequalities applied to
+\[
+  A_{m,T}=D_TG_{m,T}\Sigma_m^{1/2}
+\]
+give
+\[
+\begin{aligned}
+  \left(\min_i d_{im}\right)\sqrt{\lambda_{\min}(\Sigma_m)}\,
+  \sigma_{m-k+1}(G_{m,T})
+  &\le \sigma_{m-k+1}(A_{m,T})\\
+  &\le
+  \left(\max_i d_{im}\right)\sqrt{\lambda_{\max}(\Sigma_m)}\,
+  \sigma_{m-k+1}(G_{m,T}).
+\end{aligned}
+\]
+The constants are independent of \(T\).  Taking minima, logs, and dividing by
+\(m\) gives the deterministic comparison, and
+Corollary~\ref{rect-kth:fixed-aspect-lower} gives the lower side.  Squaring the
+same comparison and multiplying by \((m+r)^{-1}\) gives the normalized
+column-Gram transfer, using Corollary~\ref{rect-kth:gram-lower}.  On a common
+coupling over \(m\), Corollary~\ref{cor:as-geometric-lower-envelopes} gives the
+Gaussian lower envelopes for \(M_G^{(r)}[k]\) and \(\Lambda_G^{(r)}[k]\).  The
+deterministic comparison above and its squared Gram version have \(o(1)\)
+logarithmic error after division by \(m\), so the two liminf bounds transfer to
+\(A_m\).  Absolute extreme eigenvalue control is used here; a subexponential
+condition number alone would not prevent a global exponential rescaling.
+\end{proof}
+
+\begin{remark}[Random diagonal weights at fixed excess]\label{rem:random-diagonal-fixed-k}
+The same min--max argument used in
+Propositions~\ref{prop:random-row-weight} and~\ref{prop:random-column-weight}
+applies to the fixed-excess fixed-\(k\) statistics above.  Let
+\[
+  \widetilde A_m=D_m^{\rm row}A_mE_m,
+\]
+where the diagonal entries are strictly positive and finite, random and
+possibly dependent on \(A_m\), and set
+\[
+  \Delta_m^{\rm diag}
+  =
+  \max_{i\le N_m}|\log (D_m^{\rm row})_{ii}|
+  +
+  \max_{j\le m}|\log (E_m)_{jj}|,
+\]
+omitting the absent term if only one side is weighted.  On the event
+\(M_A^{(r)}[k]>0\),
+\[
+  \left|
+  \frac1m\log M_{\widetilde A}^{(r)}[k]
+  -\frac1m\log M_A^{(r)}[k]\right|
+  \le \frac{\Delta_m^{\rm diag}}{m},
+  \qquad
+  \left|
+  \frac1m\log \Lambda_{\widetilde A}^{(r)}[k]
+  -\frac1m\log \Lambda_A^{(r)}[k]\right|
+  \le \frac{2\Delta_m^{\rm diag}}{m}.
+\]
+The first comparison is uniform over \(|T|=m+r\), and the normalized
+column-Gram comparison is its square.  Hence these lower sides transfer
+whenever \(\Delta_m^{\rm diag}=o_\PP(m)\), and the corresponding lower
+envelopes transfer on a common coupling whenever
+\(\Delta_m^{\rm diag}=o(m)\) almost surely.  This remains only a diagonal
+lower-side transfer; no upper side, exact law, row-Gram statement for \(r>0\),
+or non-diagonal column-covariance statement is implied.
+\end{remark}
+
+\begin{corollary}[Normalized Gaussian fixed-excess fixed-\(k\) lower sides]\label{cor:normalized-gaussian-fixed-excess-fixed-k}
+Let \(\F\in\{\R,\C\}\), and let \(G_m\in\F^{N_m\times m}\) have iid standard
+Gaussian entries with \(N_m/m\to\gamma>1\).  Let \(U_m\) and \(V_m\) be the row-
+and column-normalized matrices of Corollaries~\ref{cor:row-normalized-gaussian}
+and~\ref{cor:column-normalized-gaussian}.  Fix \(r\ge0\) and \(k\ge1\).  For
+\(m\ge k\), \(N_m\ge m+r\), and either choice \(B_m=U_m\) or \(B_m=V_m\), put
+\[
+  M_B^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}\sigma_{m-k+1}((B_m)_T),
+\]
+and
+\[
+  \Lambda_B^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}
+  \lambda_{(k)}\!\left((m+r)^{-1}(B_m)_T^*(B_m)_T\right).
+\]
+Then, for every \(\varepsilon>0\),
+\[
+  \PP\left\{M_B^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{h(\gamma)}{d_\F k(k+r)}
+    +\varepsilon\right)m\right]\right\}
+  \to0,
+\]
+and
+\[
+  \PP\left\{\Lambda_B^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{2h(\gamma)}{d_\F k(k+r)}
+    +\varepsilon\right)m\right]\right\}
+  \to0.
+\]
+On any common coupling over \(m\), the corresponding almost-sure lower
+envelopes hold:
+\[
+  \liminf_{m\to\infty}\frac1m\log M_B^{(r)}[k]
+  \ge -\frac{h(\gamma)}{d_\F k(k+r)},
+  \qquad
+  \liminf_{m\to\infty}\frac1m\log \Lambda_B^{(r)}[k]
+  \ge -\frac{2h(\gamma)}{d_\F k(k+r)} .
+\]
+\end{corollary}
+
+\begin{proof}
+Gaussian \((m+r)\)-row submatrices have rank \(m\) almost surely.  For
+\(B_m=U_m\), the normalization is a positive random row diagonal weighting of
+\(G_m\); for \(B_m=V_m\), it is a positive random column diagonal weighting.
+The Gaussian norm estimates in the proofs of
+Corollaries~\ref{cor:row-normalized-gaussian} and
+\ref{cor:column-normalized-gaussian} give the corresponding diagonal logarithmic
+extrema \(o_\PP(m)\).  The upper row-norm, upper column-norm, and lower
+column-norm tail bounds there are summable; the displayed row ball-volume lower
+tail is summable after the union over \(N_m=O(m)\) rows as well.  Hence the same
+diagonal logarithmic extrema are \(o(m)\) almost surely on any common coupling.
+Apply Remark~\ref{rem:random-diagonal-fixed-k} with \(A_m=G_m\), using
+Corollaries~\ref{rect-kth:fixed-aspect-lower} and~\ref{rect-kth:gram-lower} for
+the lower sides and Corollary~\ref{cor:as-geometric-lower-envelopes} for the
+Gaussian almost-sure lower envelopes.
+\end{proof}
+
+\begin{corollary}[Quaternion diagonal and normalized fixed-excess fixed-\(k\) lower sides]\label{cor:quat-diagonal-normalized-fixed-excess-fixed-k}
+Let \(G_m\in\HH^{N_m\times m}\) have iid standard quaternion Gaussian entries
+with \(N_m/m\to\gamma>1\).  Fix \(r\ge0\) and \(k\ge1\).  Let
+\[
+  \widetilde G_m=D_m^{\rm row}G_mE_m,
+\]
+where \(D_m^{\rm row}\) and \(E_m\) are positive real diagonal matrices, random
+and possibly dependent on \(G_m\), with strictly positive finite entries, and
+where either diagonal factor may be absent.  Assume
+\[
+  \max_i|\log(D_m^{\rm row})_{ii}|
+  +
+  \max_j|\log(E_m)_{jj}|
+  =o_\PP(m),
+\]
+again omitting absent terms.  Put
+\[
+  M_{\widetilde G,\HH}^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}
+  \sigma_{m-k+1}((\widetilde G_m)_T)
+\]
+and
+\[
+  \Lambda_{\widetilde G,\HH}^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}
+  \lambda_{(k)}\!\left((m+r)^{-1}(\widetilde G_m)_T^*
+  (\widetilde G_m)_T\right),
+\]
+with quaternionic singular values and Hermitian eigenvalues counted once.  Then,
+for every \(\varepsilon>0\),
+\[
+  \PP\left\{M_{\widetilde G,\HH}^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{h(\gamma)}{4k(k+r)}
+    +\varepsilon\right)m\right]\right\}
+  \to0
+\]
+and
+\[
+  \PP\left\{\Lambda_{\widetilde G,\HH}^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{h(\gamma)}{2k(k+r)}
+    +\varepsilon\right)m\right]\right\}
+  \to0.
+\]
+If the displayed logarithmic extreme is \(o(m)\) almost surely on a common
+coupling, then the corresponding a.s. lower envelopes also hold with the same
+bases.
+
+In particular, the same conclusions hold when \(D_m^{\rm row}\) row-normalizes
+the quaternion Gaussian rows, or when \(E_m\) column-normalizes the full
+quaternion Gaussian columns.
+For the square least-singular-value case \(r=0,k=1\), the stronger convergence
+in probability under the same diagonal hypotheses is
+Corollary~\ref{cor:quat-square-diagonal-normalized-exact}.
+\end{corollary}
+
+\begin{proof}
+The entries of the diagonal factors are positive real scalars, hence central in
+\(\HH\), and the min--max singular-value sandwich in
+Remark~\ref{rem:random-diagonal-fixed-k} applies with the quaternionic
+conventions fixed above.  The source lower sides are
+Theorem~\ref{thm:quat-fixed-excess-fixed-k-lower} and
+Corollary~\ref{cor:quat-rect-kth-gram-lower}; the same remark gives the
+corresponding common-coupling lower envelopes when the logarithmic extreme is
+\(o(m)\) almost surely.
+
+For row normalization, the squared norm of one row is \((1/4)\chi^2_{4m}\); for
+column normalization, the squared norm of one column is \((1/4)\chi^2_{4N_m}\).
+The Markov upper-tail estimates and ball-volume lower-tail estimates used in
+Corollaries~\ref{cor:row-normalized-gaussian} and
+\ref{cor:column-normalized-gaussian}, with real dimensions \(4m\) and \(4N_m\),
+show that the corresponding row or column logarithmic extremes are \(o_\PP(m)\)
+and \(o(m)\) almost surely after the \(O(m)\) unions.  Gaussian rows and columns
+are nonzero almost surely, so the normalizations are well defined.
+\end{proof}
+
+\begin{corollary}[Two-sided diagonal transfer]\label{cor:two-sided-diagonal-transfer}
+Let \(G_k\in\F^{N_k\times n_k}\) have iid standard Gaussian entries with
+\(N_k/k\to\gamma_R>1\) and \(n_k/k\to\gamma_C>1\).  Let
+\[
+  A_k=D_kG_kE_k
+\]
+where \(D_k\) and \(E_k\) are deterministic positive diagonal matrices.  Assume
+\[
+  \frac1k\log\!\left((\min_i D_{k,ii})(\min_j E_{k,jj})\right)\to0,\qquad
+  \frac1k\log\!\left((\max_i D_{k,ii})(\max_j E_{k,jj})\right)\to0.
+\]
+For
+\[
+  M_A^{\rm two}=\min_{|R|=|C|=k}\smin((A_k)_{R,C}),\qquad
+  M_G^{\rm two}=\min_{|R|=|C|=k}\smin((G_k)_{R,C}),
+\]
+one has
+\[
+  \frac1k\log M_A^{\rm two}-\frac1k\log M_G^{\rm two}\to0
+\]
+deterministically.  Thus the two-sided lower side of
+Theorem~\ref{two:lower} transfers to \(A_k\).
+\end{corollary}
+
+\begin{proof}
+For each \(R,C\), \((A_k)_{R,C}=D_R(G_k)_{R,C}E_C\).  Therefore
+\[
+  (\min_i D_{k,ii})(\min_j E_{k,jj})\,\smin((G_k)_{R,C})
+  \le \smin((A_k)_{R,C})
+  \le
+  (\max_i D_{k,ii})(\max_j E_{k,jj})\,\smin((G_k)_{R,C}).
+\]
+Take minima over \(R,C\), logs, and divide by \(k\).
+\end{proof}
+
+The same pathwise comparison remains true if the positive diagonal matrices
+\(D_k,E_k\) are random and possibly dependent on \(G_k\): the absolute
+difference of the normalized logarithms is bounded by
+\[
+  \frac1k\left(\max_i|\log D_{k,ii}|+\max_j|\log E_{k,jj}|\right).
+\]
+Consequently the two-sided lower-side transfer holds in probability whenever
+this bound is \(o_\PP(1)\), and it holds pathwise for almost-sure lower
+envelopes whenever the bound is \(o(1)\) almost surely.  This is still only a
+diagonal statement.
+
+\begin{remark}
+The two-sided diagonal transfer should not be replaced by a general column
+covariance statement.  Column selection does not commute with multiplication by
+a non-diagonal \(\Sigma^{1/2}\), since
+\((G\Sigma^{1/2})_{R,C}=G_R(\Sigma^{1/2})_{:,C}\), not a selected Gaussian minor
+times a \(C\times C\) covariance factor.
+\end{remark}
+
+\subsection{Gram and sample-covariance transfer}
+
+At the exponential scales of this paper, passing from singular values to Gram
+or sample-covariance eigenvalues is deterministic bookkeeping.  It changes
+logarithmic constants by a factor of two and preserves the proof status of the
+underlying singular-value statement.
+
+\begin{corollary}[Gram and sample-covariance transfer]\label{cor:gram-transfer}
+Let \(B_{m,I}\), \(I\in\mathcal I_m\), be a finite family of \(q_m\times n_m\)
+matrices over \(\R\), \(\C\), or \(\HH\), with \(q_m\ge1\).  In the quaternionic
+case use the adjoint and singular-value conventions fixed above.  Put
+\[
+  M_m=\min_{I\in\mathcal I_m}\smin(B_{m,I}),\qquad
+  \Lambda_m=\min_{I\in\mathcal I_m}
+  \lambda_{\min}\!\left(q_m^{-1}B_{m,I}^*B_{m,I}\right).
+\]
+Then pathwise
+\[
+  \Lambda_m=q_m^{-1}M_m^2.
+\]
+Consequently, if \(a_m\to\infty\), \(\log q_m=o(a_m)\), and
+\[
+  \frac1{a_m}\log M_m\to L
+\]
+in probability, then
+\[
+  \frac1{a_m}\log\Lambda_m\to 2L
+\]
+in probability.  The same implication holds for deterministic comparisons and
+for almost-sure lower envelopes, with a lower bound \(L\) replaced by the lower
+bound \(2L\).
+\end{corollary}
+
+\begin{proof}
+For every index \(I\),
+\[
+  \lambda_{\min}(B_{m,I}^*B_{m,I})=\smin(B_{m,I})^2.
+\]
+Since \(x\mapsto q_m^{-1}x^2\) is increasing on \([0,\infty)\), taking the
+minimum over \(I\) gives the pathwise identity.  Taking logarithms gives
+\[
+  \frac1{a_m}\log\Lambda_m
+  =
+  2\frac1{a_m}\log M_m-\frac{\log q_m}{a_m},
+\]
+on the event \(M_m>0\), and the stated consequences follow from
+\(\log q_m=o(a_m)\).
+\end{proof}
+
+For iid standard Gaussian square row submatrices over \(\F\in\{\R,\C\}\),
+Corollary~\ref{cor:gram-transfer} and the source theorem give
+\[
+  \frac1m\log
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}
+  \lambda_{\min}\!\left(m^{-1}A_{m,T}^*A_{m,T}\right)
+  \xrightarrow{\PP}
+  -\frac{2h(\gamma)}{d_\F}.
+\]
+The quaternionic theorem above gives, for iid standard quaternion Gaussian
+entries,
+\[
+  \frac1m\log
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}
+  \lambda_{\min}\!\left(m^{-1}A_{m,T}^*A_{m,T}\right)
+  \xrightarrow{\PP}
+  -\frac{h(\gamma)}{2}.
+\]
+Combining the same identity with Proposition~\ref{prop:cov-transfer}, the
+square sample-covariance exponent is unchanged for
+\(A_m=D_mG_m\Sigma_m^{1/2}\) under the subexponential conditioning hypotheses
+there, in particular for uniformly elliptic Gaussian samples with common
+population covariance.  A subexponential condition number alone is not enough:
+an exponential scalar multiple of the covariance shifts the logarithmic edge.
+Fixed-excess, two-sided, and finite-budget lower sides also translate by the
+same identity, but only with their original status.  A lower-side singular-value
+theorem gives a lower-side Gram theorem; a conditional exact theorem remains
+conditional.
+
+\begin{remark}
+This corollary is only a change of variables from singular values to Gram
+eigenvalues.  It does not identify the proportional-excess Wishart lower edge
+on the \(\sqrt m\) singular-value scale, nor the corresponding \(m\)-scale
+sample-covariance edge.  Those require the left-tail large-deviation input
+described in Section~\ref{sec:geometric}.
+\end{remark}
+
+\subsection{General rows}
+
+For independent rows, entry independence is not needed for the square lower
+side.  Corollary~\ref{cor:directional-row-lower} gives a finite budget from
+uniform affine directional anti-concentration of the row laws.  The fixed-excess
+analogue is Corollary~\ref{rect:directional-row-fixed-excess}: the hard-edge
+exponent \(r+1\) comes from \(r+1\) remaining rows tested against the normal to
+an \(m-1\)-row block.  Thus iid real isotropic log-concave rows have the square
+lower-side base \(h(\gamma)\), by Corollary~\ref{cor:logconcave-lower}, and for
+each fixed \(r\ge0\),
+\[
+  \PP\left\{M_m^{(r)}
+  \le \exp\left[-\left(\frac{h(\gamma)}{r+1}+\varepsilon\right)m\right]\right\}
+  \to0 .
+\]
+The exact laws remain open: the second moment would need simultaneous
+incompressibility of random normals and local anti-concentration for two
+projections of a fresh row, now without product coordinates.
+
+\begin{problem}[Log-concave row-submatrix hard edge]
+Let \(X_1,\dots,X_N\) be iid isotropic log-concave vectors in \(\R^m\), with
+\(N/m\to\gamma>1\), and let \(A\) be the matrix with rows \(X_i\).  Determine
+whether
+\[
+  \frac{1}{m}\log\min_{|T|=m}\smin(A_T)\to -h(\gamma)
+\]
+in probability.  The lower bound at every threshold below \(-h(\gamma)\) is
+proved above; the open part is the matching upper side and the
+pair-correlation mechanism for dependent coordinates.
+\end{problem}
+
+\begin{problem}[Non-square sample-covariance edge]\label{prob:sample-cov-edge}
+For iid samples \(X_i\in\R^m\), determine the extremal lower edge of
+\(\ell^{-1}A_T^*A_T\) over row sets \(|T|=\ell\ge m\), beyond the square
+Gaussian and elliptic Gaussian cases covered by
+Corollary~\ref{cor:gram-transfer}.  For fixed \(\ell-m=r\), this is the
+squared fixed-excess hard-edge problem and has only the transferred lower side
+unless Conjecture~\ref{rect:exact} is proved.  For \(\ell/m\to\zeta>1\), the
+exponential scale is trivial and the remaining question is the constant-order
+Wishart edge governed by Problem~\ref{prob:rectangular}.
+\end{problem}

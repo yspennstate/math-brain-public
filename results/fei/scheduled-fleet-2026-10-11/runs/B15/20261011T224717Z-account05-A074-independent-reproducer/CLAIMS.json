@@ -1,0 +1,110 @@
+[
+  {
+    "claim_id": "A071-B09-THREEBIT-GRID-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f on {0,1}^3, every product-bias vector p in {1/8,1/4,1/2,3/4,7/8}^3, and every nonempty proper physical block A, J_A <= M_A + Delta_A(p), with M_A=H(S_A|S_B), J_A=H(S_B)-E_Z H(mu_Z), Delta_A=sum_i_in_A[h2(p_i)+log2(max(p_i,1-p_i))], and mu_Z the inherited biased squared Fourier law of the actual restriction. Entropy is in bits.",
+    "hypotheses": [
+      "Actual Boolean truth table, not arbitrary real amplitudes",
+      "Independent physical coordinates at the specified finite bias grid",
+      "Inherited normalized product Fourier basis",
+      "Zero spectral masses contribute zero entropy"
+    ],
+    "statement_sha256": "5efb03f6210bfac4a3f7e79e26f42c6b767ff0dab7fede1da1cf0e056cc102ec",
+    "contributors": [
+      "account05/A071"
+    ],
+    "proof_source": [
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T214639Z-account05-A071-search-space-design\\REPORT.md",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T214639Z-account05-A071-search-space-design\\code\\search.py",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T214639Z-account05-A071-search-space-design\\code\\resolve_zeros.py",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T214639Z-account05-A071-search-space-design\\out\\search.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T214639Z-account05-A071-search-space-design\\out\\zero_certificates.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A073",
+        "at": "2026-10-11T22:40:55.991824+00:00",
+        "verdict": "SELECTED_RECORDS_CONFIRMED_ONLY_FULL_GRID_REVIEW_PENDING",
+        "scope": "Code4 p=(1/8,1/8,1/2) A={2} strict positive; code15 at same p,A exact zero; does not accept all 20736 cases, symmetries, or minimum assertion",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261011T222436Z-account05-A073-certified-logarithms\\REPORT.md",
+        "method": "Integer-product sign comparison, one eight-term rational interval, direct centered moment and unfactored-product reconstruction"
+      },
+      {
+        "reviewer": "account05/A074",
+        "at": "2026-10-11T22:59:36.750563+00:00",
+        "verdict": "SELECTED_RECORDS_CONFIRMED_ONLY_FULL_GRID_REVIEW_PENDING",
+        "scope": "Selected minimum_positive and exact_zero only; no minimum or coverage acceptance",
+        "method": "Independent subset Moebius reconstruction, direct entropy of conditional/channel law, positive Taylor rational enclosure; no original code used",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261011T224717Z-account05-A074-independent-reproducer\\REPORT.md"
+      }
+    ],
+    "status": "EXACT_FINITE_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A072",
+      "A073",
+      "A074",
+      "A085",
+      "A092",
+      "B09",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "B09-TAXFREE-AND-COUNTEREXAMPLE-REPAIRED",
+    "version": 1,
+    "exact_statement": "For g(X,Y)=(-1)^(XY), independent P(X=1)=1/8 and P(Y=1)=1/4, with physical block A={X}, J_A-M_A>1195/10000 bits. Thus universal tax-free J_A<=M_A under arbitrary product biases is false.",
+    "hypotheses": [
+      "two-bit actual Boolean sign",
+      "specified interior independent biases",
+      "biased orthonormal Fourier basis",
+      "entropy in bits"
+    ],
+    "statement_sha256": "3654bf6460ad26235f25803c92c8bad40c0da83b37b5744104c7bbed64b0ec4c",
+    "contributors": [
+      "B09 original construction",
+      "concurrent interactive certificate repair"
+    ],
+    "proof_source": {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "a1ff93577685acd461b154b04e0c1aa0c65645c8",
+      "path": "reports/fei-2026-10-11/verification/B09_interval_repair_20261011/REPORT.md"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A073",
+        "at": "2026-10-11T22:40:55.991824+00:00",
+        "verdict": "FIXED_COUNTEREXAMPLE_RECONFIRMED_BY_ALTERNATE_PRODUCT_REPRESENTATION",
+        "scope": "Specified two-bit witness and J-M>1195/10000 only",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261011T222436Z-account05-A073-certified-logarithms\\REPORT.md"
+      },
+      {
+        "reviewer": "account05/A074",
+        "at": "2026-10-11T22:59:36.750563+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "scope": "Fixed Boolean AND, p=(1/8,1/4), A={0}, J-M>1195/10000 bits",
+        "method": "Independent subset Moebius reconstruction, direct entropy of conditional/channel law, positive Taylor rational enclosure; no original code used",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261011T224717Z-account05-A074-independent-reproducer\\REPORT.md"
+      }
+    ],
+    "status": "FINITE_COUNTEREXAMPLE_CERTIFIED_WITH_INDEPENDENT_REPAIR",
+    "supersedes": [
+      "original B09 interval implementation as a rigorous certificate"
+    ],
+    "refutes": [
+      "universal arbitrary-product-bias J_A<=M_A"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B09",
+      "B17",
+      "B18",
+      "B19",
+      "B20"
+    ]
+  }
+]

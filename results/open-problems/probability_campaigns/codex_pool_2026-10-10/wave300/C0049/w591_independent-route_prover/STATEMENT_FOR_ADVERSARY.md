@@ -1,0 +1,7 @@
+# C0049: statement for an independent adversary
+
+Recovered intake statement (primary-source verification pending): critical random-cluster exploration in square-lattice approximations of Dobrushin domains should converge to chordal SLE(kappa), with kappa=4*pi/(pi-arccos(sqrt(q)/2)), for 0<q<=4. The assignment excludes the known q=2 case. A triangular-lattice site-percolation theorem does not prove the q=1 square-lattice bond-random-cluster case.
+
+To make the proposed partial lemma precise: let W be an adapted continuous chordal Loewner driver, W0=0, with dg_t(z)/dt=2/(g_t(z)-W_t). Choose 0<x1<x2<y. Stop before any of these points is swallowed, and localize so 0<Ui<1 and all denominators stay bounded away from zero, where Ui=(g_t(xi)-W_t)/(g_t(y)-W_t). Let H_kappa(u)=integral from 1/2 to u of v^(-4/kappa)(1-v)^(8/kappa-2) dv, for fixed kappa>0. Proposed conditional conclusion: if both H_kappa(U1) and H_kappa(U2) are continuous local martingales in the driver's filtration, then W is a continuous local martingale with quadratic variation kappa times stopped capacity time on that interval. No semimartingale hypothesis on W is intended.
+
+This file deliberately contains no proof. Please attack inverse-function localization, the two-observable drift/bracket determination, and extension past swallowed marked points. For the parent problem, the missing FK-to-H_kappa convergence is explicitly assumed, not proved. Current openness: UNKNOWN pending primary-source checks.

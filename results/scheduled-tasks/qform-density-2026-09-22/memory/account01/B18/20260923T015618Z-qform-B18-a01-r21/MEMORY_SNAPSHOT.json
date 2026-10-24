@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260923T015618Z-qform-B18-a01-r21",
+  "source_control_commit_prepublication": "d83e0a9b1a5b058e3b4163682d35ca086c19f7b7",
+  "owner_control_revision": "2026-09-22.15",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "execution_context": "scheduled_automation",
+  "full_brain_connected": false,
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "primary_source": {
+    "citation": "Livshyts--Paouris--Pivovarov, On sharp bounds for marginal densities of product measures, arXiv:1507.07949v2, Theorem 1.1",
+    "hypotheses_used": "product probability density; bounded 1D factors; orthogonal k-dimensional marginal",
+    "consequences": [
+      "normalized 1D projection cap <= sqrt(2)",
+      "normalized 2D projection joint cap <= 2"
+    ]
+  },
+  "partner_applied": {
+    "partner": "account02/B18",
+    "source_commit": "ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260923T013147Z-bf13c29b/REPORT.md",
+    "result": "QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1",
+    "inequality": "||p||_inf <= 3(2MK)^(2/3)|det H|^(-1/3) for zero scalar pivot"
+  },
+  "mathematical_output": {
+    "id": "QFORM-RANK2BANK-NULLRAY-PACKET-SHARPENED-v1",
+    "status": "PROVED_SUPPORTING_TARGET_LEVEL_SHARPENING",
+    "statement": "In the exact-rank-three null-ray/rank-two-bank packet geometry with D=|det M| and T=m h delta, ||p_Q||_inf <= 3*2^(5/3) [D T]^(-1/3).",
+    "constant": 9.524406311809198,
+    "prior_constant": 12,
+    "improvement_factor": 0.7937005259840998,
+    "continuity": "YES on the same branch, but sourced separately from the prior account03/B10 theorem with constant 12; not inferred from the sharper partner kernel"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "406753a39f5fbaf78396b31075f36ae5682ef3ad",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260923T015618Z-qform-B18-a01-r21/REPORT.md",
+    "readback_blob": "351c31935e5df1f72c03176afccc035591c8d67f"
+  },
+  "continuity_dependency": {
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B10/20260922T231827Z-account03-B10-QFORM-r21/REPORT.md",
+    "readback_blob": "d34a92896ab80e510e8807c9fb26b84304ad7d5d",
+    "scope": "same exact null-ray/rank-two-bank packet hypotheses"
+  },
+  "unresolved_implication": "From remaining arbitrary matrices, obtain a product-preserving null-ray/rank-two-bank packet with D*T bounded below, or route the complementary regime to an already-paid branch; the bare spectral hypothesis does not force the exact packet.",
+  "next_step": "Test the near-null interpolation and aggregate packet extraction against current heavy-core/ridge decompositions without replacing small curvature by zero.",
+  "login_note": "The account01/B18 login path for UTC hour 2026-09-23T01Z already existed from another actual B18 invocation; it was not overwritten. This run has its own immutable start/finish records."
+}

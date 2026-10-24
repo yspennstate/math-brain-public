@@ -1,0 +1,130 @@
+{
+  "candidate_id": "C0047",
+  "author_agent": "w552",
+  "checked_date": "2026-10-10",
+  "lane": "core-proof prover: finite-volume Russo/BK norm bootstrap",
+  "percolation_model": "Bernoulli bond",
+  "quantifiers": "Every infinite finitely generated group and every fixed finite symmetric generating set (simple undirected Cayley graph).",
+  "target_status": "public-resolution-claim-unverified",
+  "current_openness": "UNKNOWN",
+  "latest_primary_evidence": {
+    "url": "https://arxiv.org/html/2608.06644v1",
+    "published": "2026-08-06",
+    "location": "Section 1.B",
+    "supports": "The general nonamenable pc<pu assertion is still described as widely believed in this primary note; no exhaustive October novelty clearance."
+  },
+  "original_source": {
+    "authors": [
+      "Itai Benjamini",
+      "Oded Schramm"
+    ],
+    "year": 1996,
+    "doi": "10.1214/ECP.v1-978",
+    "url": "https://www.maths.tcd.ie/EMIS/journals/EJP-ECP/article/download/978/978-3321-1-PB.pdf",
+    "location": "Conjecture 6, printed p.76; site/bond convention printed p.72",
+    "model_note": "Original paper uses site percolation and explicitly extends nonplanar questions to bond percolation."
+  },
+  "modern_primary": {
+    "authors": [
+      "Tom Hutchcroft"
+    ],
+    "url": "https://arxiv.org/pdf/1804.10191",
+    "revision": "1804.10191v3",
+    "locations": [
+      "Conjecture 1.1",
+      "Section 2",
+      "Remark 2.5"
+    ],
+    "prior_route_note": "Operator route and related quantitative sprinkling estimates are established literature; the worker does not claim novelty."
+  },
+  "recall": {
+    "command": "python -X utf8 ~/.claude/dreaming/brain.py recall 'C0047 Benjamini Schramm percolation proof mistakes'",
+    "result": "timed out after 60 seconds",
+    "fallback_slug": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "rule_used": "A completed pipeline or passing numerical check does not discharge its hardest mathematical gap."
+  },
+  "owner_solved_retired_check": "Named percolation project README explicitly unfinished; June proof_strategy has an unproved global escape bridge. Its solved-register note excludes percolation from that local solved register. Bounded check, not exhaustive October clearance.",
+  "prior_attempt_check": "Exact C0047 and C0047-A001 rows preserved in PRIOR_RECORDS.json; bounded H/I and Lean searches found no proof theorem.",
+  "served_model_evidence": {
+    "author": {
+      "status": "UNKNOWN",
+      "reason": "No response-side served-model receipt exposed to this thread; requested model and reasoning settings do not prove served identity."
+    },
+    "referee": {
+      "agent": "w554",
+      "status": "pending"
+    }
+  },
+  "promotion": {
+    "prepared": true,
+    "submitted": true,
+    "reviewed": false,
+    "ingested": false,
+    "retrievable": false,
+    "submission_meaning": "Complete concept-only DRAFT staged in the explicitly authorized inbox; mathematical/model gates pending."
+  },
+  "single_hardest_gap": "Uniform finiteness of sup over finite F of ||T_pc(G)^F||_2 for every nonamenable Cayley graph.",
+  "intake_primary": {
+    "source_id": "duminil_copin_icm_2018",
+    "url": "https://arxiv.org/pdf/1712.04651",
+    "revision": "1712.04651v1",
+    "location": "Conjecture 2, printed p.4",
+    "source_record_pdf_sha256": "d46fd63bd798736d1a463aade6e4c04f365da2e45d05d956a1812ec9c55950f2",
+    "hash_status": "prior intake metadata, not independently rehashed by w552"
+  },
+  "adjacent_recent_paper": {
+    "url": "https://arxiv.org/pdf/2609.07768",
+    "revision": "2609.07768v1",
+    "finding": "Introduction Remark 1.5 discussion concerns pc<1, BS96 Question 2, not the pc<pu conjecture."
+  },
+  "statement_first_delivery": {
+    "to": "w553",
+    "message_id": "msg-76ee3bde2c",
+    "method": "direct mesh after team_comm team routing failed"
+  },
+  "public_resolution_claim": {
+    "family": 214,
+    "date_in_manuscript_path": "2026-09-24",
+    "overview_url": "https://github.com/openai/math/blob/main/overview.tex",
+    "manuscript_url": "https://github.com/openai/math/blob/main/preprints/Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive-graphs-September-24-2026/paper.pdf",
+    "claimed_scope": "Every infinite connected locally finite nonamenable quasi-transitive graph; Bernoulli bond; pc<p2to2<=pu.",
+    "source_claim_verified": true,
+    "mathematical_proof_verified_by_w552": false,
+    "formal_receipt": false,
+    "comparator_url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/BenjaminiSchramm.lean",
+    "comparator_note": "full_main, critical_laws and cayley_main have sorry placeholders; this challenge file is not evidence about a separate library proof.",
+    "effect": "August 2026 conjectural status is historical only. No current-openness or novelty certification."
+  },
+  "route_obstruction": {
+    "claim_id": "w552-C0047-OB1",
+    "route": "nonamenability universally implies pc beta<1",
+    "status": "refuted by author special case; independent check pending",
+    "parent_conjecture_refuted": false
+  },
+  "store_snapshot": {
+    "path": "~\\brain_workers\\w552\\STORE_SNAPSHOT.json",
+    "store_mode": "ro",
+    "targeted_rows": 2,
+    "live_edits": false
+  },
+  "mathematical_feedback": [
+    {
+      "from": "w553",
+      "claims": [
+        "L1",
+        "L2",
+        "L3 conditional only"
+      ],
+      "verdict_reported": "KEEP",
+      "evidence_pointer": "~/brain_workers/w553/PROVER_AUDIT.md",
+      "evidence_type": "peer mesh message read at 07:10 UTC; not rereviewed",
+      "served_model_receipt": "UNKNOWN",
+      "formal_referee_w554": "pending"
+    }
+  ],
+  "peer_boundaries": {
+    "w555": "cuts/block-branching; overlapping normalization correction noted",
+    "w559": "independent triangle family; our added scope is pc beta obstruction, no duplicate enumeration",
+    "w561": "independently saved Russo/BK continuation; overlapping baseline reduction noted"
+  }
+}

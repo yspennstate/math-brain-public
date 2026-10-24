@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B08",
+  "run_id": "20260923T190424Z-account03-B08-qform-diffuse-r45",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "startup_control_head": "1f56c81943530d7134d6e8c32f2862aac24156a3",
+  "prepublication_control_head": "173eed3ec5bc98b5529ba92f90935cc4c7785385",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "continuity_status": {
+    "full_target": "OPEN",
+    "zero_twohub_arbitrary_edge_branch": "CONTINUOUS_C0_PROVED",
+    "indefinite_schur_mismatch_branch": "ESSENTIAL_BOUNDEDNESS_ONLY"
+  },
+  "source_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a3624cdb18747a63e9e6991d83233c30e1664f4b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260923T190424Z-account03-B08-qform-diffuse-r45/REPORT.md"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "source": "account03/B08 r43",
+      "commit": "87f0f4b7b8a9b5dc4f1050ecef61e527dac7a541",
+      "scope": "two physical hubs, two rank-two arms, common-plane decomposition C=M1^T R M2+T with P1TP2=0 and S_r>L^2/(64sqrt896)"
+    },
+    {
+      "source": "account03/B08 r36",
+      "commit": "3c4c6882813d9530dc5c3884ce3e25f5993c7062",
+      "scope": "physical indefinite pair + literal post-Schur E2 cross block implies essential Linfinity bound"
+    },
+    {
+      "source": "account03/B08 r44",
+      "commit": "b67617d493939430685adfa2ebf5e943d9094b56",
+      "scope": "two-dimensional projected arm density cap and exact zero-edge path endpoint"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-COMMONPLANE-SCHUR-MISMATCH-E2-v1",
+      "status": "SUPPORTING_ANALYTIC_PROOF_PENDING_INDEPENDENT_REVIEW",
+      "statement": "E2(C_B)>=S1^2 S2^2 |det(R-B^{-1})|^2; tail cancellation is impossible in the decisive row-space compression."
+    },
+    {
+      "id": "QFORM-R2-COMMONPLANE-SCHUR-MISMATCH-LEAKAGE-STABLE-v1",
+      "status": "SUPPORTING_ANALYTIC_PROOF_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For indefinite invertible physical B, ||p_Q||inf<16.511 Delta^{-9/38}kappa^{-5/19}[S1S2|det(R-B^{-1})|]^{-5/38}; r43 normalized constant <120.649 tau^{-14/19}delta^{-5/38}/L."
+    },
+    {
+      "id": "QFORM-ZERO-TWOHUB-ARBITRARY-LIGHT-EDGE-v1",
+      "status": "SUPPORTING_ANALYTIC_PROOF_PENDING_INDEPENDENT_REVIEW",
+      "statement": "If A[H,H]=0 then arbitrary light-light edge/tail and same-bank curvature are allowed; ||p_Q||inf<=2sqrt(pi/max(S1,S2))<155.158/L and p_Q is continuous C0."
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B08",
+    "source_commit": "abbec61f52e1f4b4d367fd67e73e4d2501ac9c74",
+    "result": "QFORM-ANISOTROPIC-RANK1-E2-DIRECTSUM-RECEIVER-v1",
+    "actual_inequality": "||p_{Q_(R,L)}||inf<7.251/L for R>=3 at exact source scope"
+  },
+  "regression": {
+    "tests": 5000,
+    "violations": 0,
+    "marker": "QFORM_B08_R45_CHECK_PASS"
+  },
+  "unresolved_implication": "Pay singular/near-singular nonzero two-hub blocks or rank-at-most-one/near-zero Schur mismatch while retaining arbitrary tail, rough cap-one laws, same-bank curvature and unused spectrum.",
+  "next_step": "QFORM-R2-SCHUR-MATCHED-RANK1-OR-SINGULAR-HUB-RECEIVER-v1"
+}

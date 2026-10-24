@@ -1,0 +1,1596 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\lam}{\lambda}
+\newcommand{\eps}{\varepsilon}
+\DeclareMathOperator{\supp}{supp}
+
+\title{The one-copy Bernoulli convolution at $2/3$:\\ an $L^2$ dictionary, two theorems, and the routes it closes}
+\date{8 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $Y=\tfrac13\sum_{k\ge0}B_k(2/3)^k$ with $B_k$ fair independent bits, and let $\mu$ be its law.
+Whether $\mu$ is absolutely continuous is a long-standing open question. We record an $L^2$ route: an
+elementary reduction, two theorems that make the independence heuristics of the subject exact, an
+unconditional partial-sum bound, and proofs that several natural ways of finishing cannot work. Nothing
+here settles the question, and we say precisely where each attempt stops. One route is not closed. Recast as a charge on the runs of the exact digit
+recursion $2A_{n+1}-3A_n\in\{0,\pm1,\pm2\}$, a strictly local and finite-order combinatorial cost yields
+a bound on the octave energy that decays, at $R^{-0.28}$ over nineteen octaves by exact enumeration,
+where every previously tested cost grows; making that a theorem requires a large-deviation estimate for
+the run statistics of the $\times3/2$ orbit, and we say what is measured and what is not. What survives is a single
+statement about $I_K=\int_1^2\prod_{m\le K}\bigl(1+\cos(2\pi x(3/2)^m/3)\bigr)dx$, the integral of a
+Riesz product with the non-Pisot ratio $3/2$ over a single octave: membership in $L^2$ is equivalent to
+$\sum_K(3/4)^KI_K<\infty$, so what has to be excluded is growth at rate $4/3$ per step rather than mere
+unboundedness. Boundedness of $I_K$ is sufficient and strictly stronger. The lattice, the window position and
+every Diophantine property of $(3/2)^K$ disappear from the statement; that equivalence is measured here
+rather than proved, and we say what its proof would require. Throughout, claims are tested by substituting a biased coin, which leaves the ratio, the lattice
+and the period unchanged but makes the measure singular for a small enough bias: an argument that
+survives that substitution is proving too much. The measure itself, its characteristic function as an
+infinite product, its self-similarity and the functional equation are formalised in Lean~4 with Mathlib,
+as are the two theorems and the arithmetic lemma behind them.
+\end{abstract}
+
+\section{The reduction to $L^2$}
+
+Write $\mu_n$ for the law of $\{2^nY\}$. For $U\sim\mu_n$ put $2U=H+Z$ with $H=\lfloor 2U\rfloor$,
+$u_n(Z)=\mathbb E[(-1)^H\mid Z]$ and $j_n=\log2-H(H\mid Z)$. The $j_n$ are the fibre deficits, and
+$\sum_n j_n$ is the relative entropy of $\mu$ against Lebesgue measure, so summability is equivalent to
+$\mu$ having a density of finite entropy.
+
+Two remarks. First, $\mu$ is symmetric about $1/2$, so $\mu_n([0,\tfrac12))=\tfrac12$ at every level and
+$j_n=I(H_n;Z_n)$ is a mutual information: the question is whether the total information the binary digits
+of $Y$ carry about the tail is finite. Second, with $f$ the density and $A=\int f^2$, the inequality
+$\log t\le t-1$ gives $\int f\log f-\log A=\int f\log(f/A)\le\int f(f/A-1)=0$, so
+\begin{equation}\label{eq:red}
+  \sum_n j_n=\int f\log f\;\le\;\log\Bigl(1+2\sum_{k\ge1}|\hat\mu(k)|^2\Bigr).
+\end{equation}
+\begin{sloppypar}
+An $L^2$ density therefore gives summable deficits outright. The target becomes
+$S=\sum_{k\ge1}|\hat\mu(k)|^2<\infty$, and numerically $S=0.103155$, so that
+$\|f\|_2^2=1+2S=1.206310$.
+\end{sloppypar}
+
+\section{Two exact identities}
+
+Since $3Y=B_0+2Y'$ with $Y'$ an independent copy, $\{3Y\}$ and $\{2Y\}$ have the same law, so
+\begin{equation}\label{eq:fe}
+  \hat\mu(3k)=\hat\mu(2k)\qquad\text{for every }k\in\mathbb Z .
+\end{equation}
+Writing $k=2^a3^bm$ with $(m,6)=1$ and applying \eqref{eq:fe} $b$ times gives
+$\hat\mu(2^a3^bm)=\hat\mu(2^{a+b}m)$: the transform is constant on the anti-diagonals of the $2$--$3$
+lattice, whence
+\begin{equation}\label{eq:rearr}
+  \sum_{k\ge1}|\hat\mu(k)|^2=\sum_{(m,6)=1}\ \sum_{s\ge0}(s+1)\,|\hat\mu(2^sm)|^2 .
+\end{equation}
+Membership in $L^2$ is thus a lacunary sum with a linear multiplicity weight. Numerically \eqref{eq:fe}
+holds to $9\cdot10^{-16}$ for $k\le4000$. One practical consequence: within an octave the dominant
+frequencies occur as lattice twins with identical values, for instance $108=2^23^3$ and $72=2^33^2$, so
+neighbouring octaves are not independent.
+
+In continuous form $\hat\mu(\xi)=c(\xi)\hat\mu(2\xi/3)$ with $c(\xi)=(1+e^{-2\pi i\xi/3})/2$ and
+$|c(\xi)|^2=\cos^2(\pi\xi/3)$. Substituting $\eta=2\xi/3$ in $\int_{\mathbb R}|\hat\mu|^2$ and applying
+Plancherel gives, whenever the density lies in $L^2$,
+\begin{equation}\label{eq:half}
+  \|f\|_2^2=3\int f(x)f(x+\tfrac12)\,dx .
+\end{equation}
+Measured, $1.206310$ against $3\times0.402103$, agreeing to $6\cdot10^{-7}$; the same relation applied to
+the folded measure gives $1.005$ against $1.496$ and fails, so \eqref{eq:half} is not an artefact.
+Iterating the functional equation produces a family of such exact relations among finitely many
+autocorrelation values, the next being $\tfrac79A(0)=A(\tfrac12)+A(\tfrac34)+\tfrac12A(\tfrac14)$.
+
+Summing \eqref{eq:fe} over $k$ gives one more, on the spectral side. The multiples of $3$ carry
+$\sum_{j\ge1}|\hat\mu(3j)|^2=\sum_{j\ge1}|\hat\mu(2j)|^2$, which is the energy on the even indices, so
+subtracting from $S$ in two ways,
+\[
+  \sum_{3\nmid k}|\hat\mu(k)|^2=\sum_{k\ \mathrm{odd}}|\hat\mu(k)|^2 :
+\]
+the energy on indices coprime to $3$ equals the energy on odd indices. Both sides measure $0.100526$ to
+a relative $9\cdot10^{-8}$ at $N=3\cdot10^6$, and the functional equation itself holds termwise to
+$1.7\cdot10^{-15}$ over the same range. The rearrangement with the $(s+1)$ weight reproduces
+$S=0.103155$ over exactly the $2\cdot10^6$ indices coprime to $3$ below $N$, so the multiplicity is
+counted once and not twice, which is the obvious way for this bookkeeping to be wrong. Finally the two
+sides of the dictionary meet: $1+2S=1.206310$ against the meet-in-the-middle $\|f\|_2^2=1.206310$,
+computed with no shared step.
+
+\section{The seed form and two theorems}
+
+For $\xi\ge3$ there is a unique $K$ with $x=\xi(2/3)^K/3\in[1,3/2)$, and the product splits there:
+\begin{equation}\label{eq:seed}
+  |\hat\mu(\xi)|=P_K(x)\,T(x)\le P_K(x),\qquad
+  P_K(x)=\prod_{j=0}^{K}\bigl|\cos(\pi(3/2)^jx)\bigr|,\quad
+  T(x)=\prod_{m\ge1}\bigl|\cos(\pi x(2/3)^m)\bigr| .
+\end{equation}
+The tail $T$ does not tend to $1$: on $[1,3/2]$ it has supremum $0.046$, mean square $1.11\cdot10^{-3}$,
+and a double zero at $x=9/8$. Only the inequality is used below, which is the safe direction; a constant
+read off as if \eqref{eq:seed} were an equality is wrong by three orders of magnitude, though the
+exponents are unaffected. Equivalently, for integers $k$,
+$|\hat\mu(k)|^2=\prod_{i\ge0}\cos^2(\pi k2^i/3^{i+1})$, each factor depending only on $k \bmod 3^{i+1}$.
+
+\begin{lemma}\label{lem:dis}
+Let $n_i=2^i3^{K-i}$ for $0\le i\le K$. If $\eps_i\in\{0,\pm1,\pm2\}$ and $\sum_i\eps_in_i=0$, then
+$\eps_i=0$ for every $i$.
+\end{lemma}
+
+\begin{proof}
+Otherwise let $i_1$ be the largest index with $\eps_{i_1}\ne0$. As $\eps_{i_1}$ is prime to $3$, the
+$3$-adic valuation of $\eps_{i_1}n_{i_1}$ is exactly $K-i_1$, while every other nonzero term has index
+$i<i_1$ and valuation $K-i>K-i_1$. A sum whose terms have a unique minimal valuation has that valuation,
+so it is nonzero.
+\end{proof}
+
+The frequencies are therefore dissociate; an exhaustive search finds no $\{0,\pm1,\pm2\}$ relation for
+$K\le8$.
+
+\begin{theorem}\label{thm:period}
+For every $K$,
+\begin{equation}\label{eq:period}
+  3^{-(K+1)}\sum_{k \bmod 3^{K+1}}\ \prod_{i=0}^{K}\cos^2\!\Bigl(\frac{\pi k2^i}{3^{i+1}}\Bigr)=2^{-(K+1)},
+\end{equation}
+exactly.
+\end{theorem}
+
+\begin{proof}
+Expand $\cos^2(\pi\theta)=(1+\cos2\pi\theta)/2$. Averaging over a full period retains exactly those
+$\eps\in\{0,\pm1\}^{K+1}$ with $3^{K+1}\mid\sum_i\eps_in_i$; by the valuation count of
+Lemma~\ref{lem:dis} that sum has valuation $K-i_1\le K<K+1$ whenever $\eps\ne0$. Only $\eps=0$ survives,
+contributing $2^{-(K+1)}$.
+\end{proof}
+
+Verified to ten decimals for $K=0,\dots,9$. The independence heuristic behind estimates of this kind is
+thus exact at the level of full periods, with no error term.
+
+\begin{remark}
+Lemma~\ref{lem:dis}, the orthogonality relation it is combined with, the expansion of the product, and
+their assembly are formalised in Lean~4 with Mathlib in \texttt{BC23Full.lean}, which compiles with no
+\texttt{sorry}; every theorem there prints only \texttt{propext}, \texttt{Classical.choice} and
+\texttt{Quot.sound}. Three further files carry the rest of the chain, also \texttt{sorry}-free with the
+same axioms: \texttt{BC23Entropy.lean} for the reduction \eqref{eq:red}, in both its integral and its
+finite-sum form; \texttt{BC23PartialSum.lean} for Proposition~\ref{prop:partial}, derived from the period
+bound taken as a hypothesis, with the constant $3/2$ shown sharp by a worst-case aggregation check; and
+\texttt{BC23Step\-Contraction.lean} for the step and two-level contraction implications.
+
+A further file has the measure itself, which the others do not: \texttt{BC23Measure.lean} builds $\mu$ as
+the pushforward of the infinite product of fair Bernoulli measures under $Y$, and derives
+$\mu([0,1])=1$, the characteristic function as a limit of finite products, the product formula
+$|\hat\mu(\xi)|=\lim_n\bigl|\prod_{k<n}\cos(\pi\xi(2/3)^k/3)\bigr|$, the self-similarity
+$\hat\mu(\xi)=\tfrac12\bigl(1+e(-\xi/3)\bigr)\hat\mu(2\xi/3)$, and \eqref{eq:fe} for integer arguments.
+Everything before this was stated about an assumed density; these are statements about $\mu$.
+
+The eight files were recompiled as a set on 8 September against the same Mathlib: $39$ certified
+statements, no \texttt{sorry}, no \texttt{sorryAx} in any axiom report, no errors, and only
+\texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound} throughout. As a control that the
+check can fail, a copy of \texttt{BC23Measure.lean} with \eqref{eq:fe} altered to
+$\hat\mu(3m)=\hat\mu(5m)$ does not typecheck.
+\end{remark}
+
+\begin{proposition}\label{prop:partial}
+For every $M\ge1$, $\ \sum_{k=1}^{M}|\hat\mu(k)|^2\le\tfrac32\,M^{\log(3/2)/\log3}=\tfrac32M^{0.36907}$.
+\end{proposition}
+
+\begin{proof}
+Every factor is at most one, so $|\hat\mu(k)|^2\le F_I(k):=\prod_{i=0}^{I}\cos^2(\pi k2^i/3^{i+1})$ for
+any $I$. By Theorem~\ref{thm:period} the sum of $F_I$ over a full period $3^{I+1}$ is $(3/2)^{I+1}$.
+Take $I+1=\lceil\log_3M\rceil$ and use nonnegativity.
+\end{proof}
+
+In correlation-dimension terms this reads $D_2\ge1-\log(3/2)/\log3=0.63093$. It is a power saving over
+the $M(\log M)^{-0.46}$ that the proved logarithmic Fourier decay at a rational non-Pisot parameter would
+give, and it is comprehensively superseded, which should be said plainly. A two-line folklore argument
+already gives $D_2\ge\log2/\log(9/4)=0.85476$; Kleptsyn, Pollicott and Vytnova prove rigorously, by a
+computer-assisted method stated for exactly representable rational parameters, that
+$D_2(\mu_\lam)\ge0.97580$ for every $\lam\in[0.617,0.743]$, an interval containing $2/3$, with a refined
+pass giving $0.9900$ on $[0.5703,0.8)$; and Shmerkin's $L^q$-dimension theorem applies verbatim here,
+with exponential separation $\Gamma_k=3^{-(k+1)}$ and an exceptional set containing no rational, giving
+$D_2=1$ outright, that is $\sum_{|k|\le R}|\hat\mu(k)|^2=O_\eps(R^\eps)$, though with ineffective
+constants. Proposition~\ref{prop:partial} is therefore a short self-contained derivation and nothing
+more; it is recorded because it follows from Theorem~\ref{thm:period} in four lines, not because it is
+competitive. The three comparisons in this paragraph come from a literature search and I have not read
+the primary sources myself; the numbers should be checked against them before being relied on.
+
+\section{What remains, and what is closed}
+
+The octave statement is not new terminology. That $\sum_{R\le k<2R}|\hat\mu(k)|^2\le CR^{-\delta}$ for all
+$R$ is, up to $\eps$, Sobolev regularity: $\mu\in L^2_\sigma$ for every $\sigma<\delta/2$, equivalently
+Sobolev dimension exceeding $1$ by $\delta$. For a rational non-Pisot parameter nothing of the kind is
+published, not even $\delta=0$, and absolute continuity is open for every rational $p/q\in(1/2,1)$ with
+$p\ge2$.
+
+It is worth recording exactly why the modern criteria do not reach $2/3$, because the answer is sharper
+than ``not yet''. Kittle's theorem (arXiv:2103.12684, Ann.\ Sci.\ ENS 57 (2024) 1191--1230) asks for
+$(d\log M_F-h_F)(\log M_F)^2<\tfrac1{27}(\log M_F-\log\lam^{-1})^3\lam^2$. At $2/3$ every input is
+exact: the entropy is maximal, $h_F=\log2$, since the digit map is injective; $M_F=M_\lam=3$, the
+minimal nonzero $|\nu|$ being $1$; and $\log M_F-h_F=\log(3/2)$ with $\log M_F-\log\lam^{-1}=\log2$. The
+left side is $0.4893757$ and the right $0.0054819$, so the criterion fails by a factor $89.27$. That is
+not a near miss. The condition is equivalent to $M_\lam<F(\lam)$ with $F$ increasing and bounded by
+$2^{27/26}=2.0540$, while every rational $p/q$ in $(1/2,1)$ has $M=q\ge3$: Kittle's criterion can reach
+no rational parameter at all. Varju's theorem (arXiv:1602.00261, JAMS 32 (2019)) does admit rationals,
+but only for $1-\lam<7\cdot10^{-37}$, against $1-\lam=\tfrac13$ here.
+
+Kittle and Kogler (arXiv:2409.18936, Cor.~1.11) leave the question in an unusually concrete state. Their
+condition $(1-\lam)^{-1}h_\lam>C\bigl(\max\{1,\log\log M/h\}\bigr)^2$ collapses at $2/3$, where the
+maximum is $1$, to the single requirement $C<3\log2=2.0794$ on one absolute constant; their own
+unoptimised estimate is $C\approx10^{10}$. In the other direction the golden ratio, where the measure is
+singular, forces $C\ge1.2544$. So absolute continuity at $2/3$ sits inside a factor $1.66$ of one
+constant in an existing framework, with about nine of those ten orders of magnitude being machinery
+loss rather than mathematics. Provenance, since it matters here: these papers were read and every number
+re-derived by two independent passes, but not by me, and I have not read the primary sources myself; the
+$10^{10}$ is the authors' own estimate of their own method and is not a theorem, resting as it does on an
+unspecified absolute constant from Breuillard--Varj\'u. The claim that no published criterion reaches
+$2/3$ is a literature-wide negative built on four papers read and three abstracts, and should be treated
+as the current state of a search rather than as a fact.
+
+An octave $[R,2R)$ supplies about $R=(3/2)^K$ consecutive integers, a fraction of order $R^{-1.71}$ of
+the period $3^{K+1}$. Through the character expansion,
+\begin{equation}\label{eq:err}
+  \sum_{k\in W}F_K(k)=2^{-(K+1)}\bigl(L+\mathrm{Err}\bigr),\qquad
+  \mathrm{Err}=\sum_{\eps\ne0}c_\eps D(\nu_\eps),
+\end{equation}
+with $c_\eps=2^{-|\supp\eps|}$, $\nu_\eps=\sum_i\eps_in_i$, $|D(\nu)|\le\min(L,P/2|\nu|)$. The main term
+alone gives $E(R)\ll R^{-0.71}$, which suffices, since $S$ is a sum over octaves and
+$E(R)\le CR^{-\delta}$ for any $\delta>0$ is enough. Everything turns on $\mathrm{Err}$.
+
+\paragraph{The image, and how the weight sits on it.} The map $\eps\mapsto\nu_\eps$ is injective on
+$\{-1,0,1\}^{K+1}$, and its image contains every integer with $|m|\le2^{K+1}-1$, the full range being
+$|\nu_\eps|\le\sum_i n_i=3^{K+1}-2^{K+1}$. Uniqueness is the same induction as
+Lemma~\ref{lem:dis} read as a digit algorithm: modulo $3$ only the $i=K$ term survives and $\{-1,0,1\}$ is
+a complete residue system, so the top digit is forced; divide by $3$ and repeat. Verified exhaustively for
+$K\le9$. Writing $c(m)=2^{-\#\{\text{nonzero digits of }m\}}$ for the forced expansion, \eqref{eq:err}
+becomes $\mathrm{Err}=2\sum_{m\ge1}c(m)\,\mathrm{Re}\,D_W(m)$, an arithmetically weighted sum with
+$\sum_mc(m)=2^{K+1}-1$. That total runs over the whole image, which is spread over
+$|m|\le3^{K+1}-2^{K+1}$ and is not consecutive; the consecutive block $|m|\le2^{K+1}-1$ is a sub-block
+carrying a shrinking share of the weight, measured by exhaustive enumeration at
+$6.11\%,2.74\%,1.23\%$ for $K=8,10,12$ (and $5.20\%,2.31\%,1.03\%$ of the patterns). Injectivity and
+the surjectivity onto that block are exact, and were verified by enumeration at the same $K$ with zero
+duplicates; what is not true is that the sum runs over consecutive integers, and the shrinking share
+above is how far from it the truth is. In the rescaled variable $u=m/2^K$ the window sum has a clean
+limit. Since $L/P=1/(3\cdot2^K)$, both
+$Lm/P$ and $k_0m/P$ equal $u/3$, so $D_W(m)\sim(3L/2\pi iu)\bigl(e(2u/3)-e(u/3)\bigr)$ and
+\[
+  \frac{\mathrm{Re}\,D_W(m)}{L}\;\longrightarrow\;g(u):=\frac{3}{\pi u}\cos(\pi u)\sin\!\Bigl(\frac{\pi u}{3}\Bigr),
+\]
+which matches the exact sum to $2\cdot10^{-9}$ at $m=1$ and to $5\cdot10^{-3}$ at $m=2000$ for $K=10$.
+The kernel has mean zero, $\int_0^\infty g=0$ to nine digits, because it is a difference of two sinc
+profiles and the window omits the origin; numerically $\sum_mg(m/2^K)=-1.87$ against
+$\sum_m|g(m/2^K)|=2147$. What that zero mean gives is an annihilation, not yet an explanation: every
+locally polynomial model of the weight $c$ contributes nothing, so the leading term of any smooth model
+dies. Whether it also accounts for the \emph{size} of $\mathrm{Err}$ is open and the evidence points both
+ways. An independent recomputation puts the smooth-model consequence at $2$--$4\%$ of $\mathrm{Err}$
+($-0.0113,-0.0135,-0.0103$ against $-0.3066,-0.3893,-0.4988$ at $K=8,10,12$), which would leave the value
+carried by the fine correlation between $c$ and the kernel. Smoothing $c$ over $16$ consecutive
+frequencies inside the block instead reproduces the block sum to within $6\%$ at $K=8$ and $0.5\%$ at
+$K=12$, and overshoots as the smoothing widens. The two computations run over different index sets, so
+they do not yet contradict each other; until that is settled the mechanism should be stated as the
+annihilation and nothing more. The sharp form of what remains is
+$\sum_{m\ge1}c(m)g(m/2^K)=O(1)$ against $\sum_mc(m)|g(m/2^K)|$ growing geometrically: a local limit
+theorem for the weight against one fixed mean-zero kernel. Computing both directly, with $c$ read off by
+the digit algorithm, gives for $K=4,\dots,12$ the signed values
+$-0.880,-0.930,-0.936,-0.955,-0.955,-0.948,-0.942,-0.930,-0.915$
+against absolute values $6.0,9.3,14.0,20.8,30.5,44.3,63.7,91.1,129.5$. The signed sum is the same flat
+$-0.93$ found earlier in the sign-pattern coordinates, reached here through a completely different
+route, while the absolute sum grows like $1.4^K$. Those signed values are $\mathrm{Err}/L$, not
+$\mathrm{Err}$; the deviation is comparable to the main term and cancels most of it, and it is worth
+saying so plainly, because read as $\mathrm{Err}=O(1)$ they would settle the problem on the spot.
+
+\begin{sloppypar}
+\paragraph{How much cancellation is needed, exactly.} What suffices is $\mathrm{Err}\le CL$: then
+$\sum_{k\in W}F_K(k)\le(1+C)2^{-(K+1)}L$, and with $L=R=(3/2)^K$ this is $E(R)\ll R^{-0.7095}$, summable
+over octaves with room to spare. So the whole problem is an upper bound on one deviation by a constant
+multiple of the main term. The triangle inequality does not give it, and the margin can be measured.
+Writing $D(\nu)=\sum_{k\in W}e(k\nu/P)$ exactly and summing $|c_\eps D(\nu_\eps)|$ over all $3^{K+1}$
+patterns gives $10.6,\,24.6,\,50.5,\,105.2$ times $L$ at $K=4,6,8,10$, roughly doubling every two
+steps, against the true $\mathrm{Err}/L=-0.868,-0.936,-0.955,-0.943$ on the same windows. The identity
+itself is exact: $2^{-(K+1)}(L+\mathrm{Err})$ reproduces the direct sum $\sum_{k\in W}F_K(k)$ to every
+printed digit at each of those $K$. The phase in $D$ is the whole content --- dropping it and keeping
+only $|\sin(\pi L\nu/P)/\sin(\pi\nu/P)|$ turns a quantity near $-0.94L$ into one near $+40L$.
+Restricting to the consecutive block flatters the bound but does not rescue it: $6.96,13.4,24.1,43.8$
+times $L$ at the same $K$.
+\end{sloppypar}
+
+\paragraph{The second moment is exact, and it names the obstruction again.} Average over the window
+position instead. Writing $D_{k_0}(\nu)=e(k_0\nu/P)G(\nu)$ with $G(\nu)=\sum_{j<L}e(j\nu/P)$, every
+$\nu\ne0$ is killed by the average, so $\mathbb E_{k_0}[\mathrm{Err}]=0$ exactly. For the second moment,
+distinct $\eps$ give distinct $\nu_\eps$ with $|\nu_\eps|\le3^{K+1}-2^{K+1}<P$, so no two collide
+modulo $P$ and
+\[
+  \operatorname{Var}_{k_0}(\mathrm{Err})=\sum_{\eps\ne0}c_\eps^2|G(\nu_\eps)|^2 .
+\]
+The no-collision step is exactly Lemma~\ref{lem:dis}, not the range bound: differences $\nu_\eps-
+\nu_{\eps'}$ have coefficients in $\{0,\pm1,\pm2\}$ and can exceed $P$ in absolute value, so the range
+alone does not close it. What closes it is that $3^{K+1}$ divides such a sum only if every coefficient
+vanishes, which is the same $3$-adic induction, with the same $\{0,\pm1,\pm2\}$ coefficient set the
+lemma was stated for.
+
+This reproduces the variance computed directly from every window in a full period, to six digits at
+$K=6,8,10,12,14$. Now $\sum_\eps c_\eps^2=\prod_i(1+2\cdot\tfrac14)=(3/2)^{K+1}$ exactly, so the
+normalised weight makes the coordinates independent with $\mathbb P(0)=\tfrac23$ and
+$\mathbb P(\pm1)=\tfrac16$. Solving $p(1-p)=\tfrac16$ gives $p=\tfrac12(1+3^{-1/2})=0.7886751$, and then
+$1-2p(1-p)=\tfrac23$: the auxiliary digit law is exactly $\eta=B-B'$ for $B$ Bernoulli$(p)$, verified to
+$3\cdot10^{-17}$ against the product law at $K=4,6,8$.
+
+So the second moment is governed by the correlation integral of the \emph{biased} Bernoulli convolution
+at the same ratio $2/3$ with $p=0.78868$. It is tempting to call that a harder instance, on the ground
+that the dimension ratio $H(p)/\log(3/2)=1.2719$ is below the unbiased $\log2/\log(3/2)=1.7095$. That
+compares the wrong exponent. The quantity governing an $L^2$ statement is
+$\log\bigl(p^2+(1-p)^2\bigr)/\log(2/3)$, and at this $p$ the numerator is $\log\tfrac23$ exactly, so the
+exponent is $1$ --- the auxiliary measure is exactly $L^2$-critical, which is the same fact as
+$\alpha(p)=0$ below, not a harder open problem. For the unbiased measure the two exponents coincide,
+both $1.7095$, which is what makes the substitution easy to get wrong. The consequence is favourable
+rather than otherwise: a variance linear in $K$ gives a typical $\mathrm{Err}$ of order $L\sqrt K$, and
+$R^{-0.70951}\sqrt{\log R}$ is still summable over octaves. Numerically the auxiliary object is well behaved
+--- $\operatorname{Var}(\mathrm{Err}/L)$ measures $1.90,2.15,2.54,2.91,3.28$ at $K=6,8,10,12,14$, linear
+in $K$ and so logarithmic in $R$, which is exactly why the quantiles of $\mathrm{Err}/L$ over positions
+are stable --- but the proof one would need is a harder case of the theorem being proved.
+
+That logarithm is not an accident, and saying why sharpens the whole picture. For the biased measure the
+full-period average of the truncated square is $(1-2p(1-p))^{K+1}$, so the main term of the octave sum
+has exponent
+\[
+  \alpha(p)=1+\frac{\log\bigl(1-2p(1-p)\bigr)}{\log(3/2)},
+\]
+which is negative exactly when $p(1-p)>\tfrac16$, that is for $p$ strictly between the two roots
+$\tfrac12(1\mp3^{-1/2})=0.2113249$ and $0.7886751$. But $p(1-p)=\tfrac16$ is precisely the condition
+that defined the auxiliary law: the off-diagonal weight of the normalised $c_\eps^2$. So the auxiliary
+measure sits exactly on the boundary $\alpha=0$, and a critical exponent produces a logarithm rather
+than a power. That is an identity, not a numerical coincidence, and it accounts for the measured linear
+growth in $K$. Measured against the prediction, the octave slope is $-0.783$ at $p=\tfrac12$ (against
+$-0.7095$), $-0.364$ at $p=0.3$ (against $-0.3435$), $-0.007$ at the critical $p$ (against $0$),
+$+0.043$ at $p=0.2$ (against $+0.0488$) and $+0.509$ at $p=0.1$ (against $+0.5106$). At $p=\tfrac12$ the
+measured decay beats the main term by about $0.07$, which is the deviation helping rather than hurting,
+consistent with $\mathrm{Err}/L\approx-0.94$.
+
+Two thresholds in $p$ therefore sit near each other and should not be confused: the measure is forced
+singular below $p=0.14028$, where $H(p)<\log(3/2)$, while the main term stops supplying decay already at
+$p=0.2113$. In between, the measure has dimension one and the elementary route gives nothing --- the
+same predicament as at $2/3$ itself, but with less room. There is in fact a third threshold between them, and naming it matters for what
+follows. The biased factor is $|(1-p)+pe^{i\varphi}|^2=1-2p(1-p)(1-\cos\varphi)$, whose arithmetic average
+over an equidistributed phase is $1-2p(1-p)$ --- the quantity $\alpha(p)$ above is built from --- while its
+logarithmic average is $2\log(1-p)$, by $\int\log|a+be^{i\varphi}|^2=2\log\max(a,b)$. Annealed and quenched
+averages therefore give different thresholds: the typical per-frequency decay turns over at
+$(3/2)(1-p)^2=1$, that is $p=0.183503$, strictly between the entropy threshold $0.140277$ and the
+main-term threshold $0.211325$. At the latter the annealed log-factor is $-0.40542$ against
+$\log(2/3)=-0.40547$, which is $\alpha=0$ to five digits.
+
+This is worth stating because the biased coin is also the one available second control. Every statistic in
+this note was calibrated at $1/\varphi$ and $2^{-1/2}$, both algebraic with the singular one Pisot, and
+the Pisot reading is forced rather than measured. The biased coin at the \emph{same} ratio $3/2$ supplies
+a structurally different singularity --- entropy deficiency rather than arithmetic coincidence --- with
+identical frequencies, lattice and window, and its singularity needs nothing deep: the dimension is at
+most $H(p)/\log(3/2)<1$ for $p<0.140277$, and a measure on the line of dimension below one is not
+absolutely continuous. But it can only be used outside the middle band. Below $0.140277$ the measure is
+singular and a criterion should fire; above $0.211325$ the main term supplies decay and it should pass;
+between them the measure has dimension one while the main term already diverges, so neither outcome
+carries information. A control point placed there has no known answer to calibrate against.
+
+What such a control could establish is detection of entropy-deficient singularity at a non-Pisot ratio,
+which is more than this note currently has. What it cannot supply is a measure of dimension one that is
+singular for an arithmetic reason --- which is what $\mu$ at the unbiased $2/3$ would have to be, and for
+which no example is known. The hole therefore narrows rather than closes.
+ That dimension claim deserves its warrant, since the note leans on it more than once. At
+$\lam=2/3$ the digit map is injective, and elementarily so: if $\sum_{i\le n}a_i(2/3)^i=0$ with
+$a_i\in\{-1,0,1\}$, clearing denominators gives $\sum_ia_i2^i3^{\,n-i}=0$, and reducing modulo $3$ leaves
+$a_n2^n\equiv0$, so $a_n=0$ because $a_n\in\{-1,0,1\}$; induction removes the rest. Hence $2/3$ is a root
+of no nonzero polynomial with coefficients in $\{-1,0,1\}$, distinct digit strings stay separated at
+every level, and exponential separation holds trivially rather than by any Diophantine input. Under that
+hypothesis the dimension is $\min\{1,H(p)/\log(3/2)\}$, equal to one exactly when $H(p)\ge\log(3/2)$.
+The arithmetic just given is elementary and was checked here; the theorem it feeds is quoted under the
+same caveat as the criteria above, from the literature rather than from a reading of its proof. The
+point of stating it is the contrast: dimension at $2/3$ is settled, and settled by an injectivity that
+costs nothing, while absolute continuity is open --- so the whole difficulty of this note lives in the
+gap between full dimension and an $L^2$ density, not in any scarcity of separation.
+
+Applying the substitution to the reduction itself is a check worth making, since a formulation that
+quietly hides the conclusion in its error term would pass every other test here. Measuring
+$\mathrm{Err}/L$ at the octave position for $K=6,\dots,16$ gives $-0.94$ at $p=\tfrac12$, $-0.78$ at
+$p=0.35$, $-0.38$ at the critical $p$, $-0.12$ at $p=0.10$ and $-0.044$ at $p=0.05$, each stable in $K$
+to the third digit. It is bounded, and comfortably so, at every $p$ including the singular ones. The
+deviation term therefore carries no part of the conclusion: all the decay lives in $\alpha(p)$, and
+$\mathrm{Err}=O(L)$ is exactly the supplementary fact it was advertised as. That is the outcome one
+wants, and it was not guaranteed.
+
+That the bound cannot be uniform in the position is worth recording separately, since it rules out every
+argument that does not look at where the octave sits. Sweeping $k_0$ over a full period, the median of
+$\mathrm{Err}/L$ is $-0.34$, the ninetieth percentile $+1.19$ and the ninety-ninth $+6.4$, all stable in
+$K$; but the maximum is $13.0,22.7,41.6,75.0,134.4$ at $K=6,\dots,14$, growing like $(4/3)^K$. The
+extreme positions are the windows meeting the peak at the origin, where $F_K=1$ and
+$\mathrm{Err}\approx2^{K+1}-L$. About $11\%$ of positions have $\mathrm{Err}>L$ at every $K$ tried. The
+octave position $k_0=R$ sits near the bottom of the distribution at $-0.94$, and a proof has to know
+that.
+
+\paragraph{What the octave position does to the phases.} It does something exact, and it is the
+cleanest description of the mechanism we have. The terms that matter are those with $|\nu|\lesssim P/L=
+3\cdot2^K$, since $G$ is small outside that range --- which is why a block carrying about one percent of
+the weight carries the sum. On that range the phase is $e(k_0\nu/P)$ with $k_0=R=(3/2)^K$, and
+\[
+  \frac{k_0\nu}{P}=\frac{(3/2)^K\nu}{3^{K+1}}=\frac{\nu}{3\cdot2^K}
+  \qquad\text{because}\qquad (3/2)^K\cdot2^K=3^K .
+\]
+The phase is exactly linear in $\nu$, with slope the reciprocal of the effective range, so it completes
+one turn on each side of the origin across precisely the region where $G$ lives. In the rescaled
+variable $u=\nu/2^K$ it is the single frequency $e(u/3)$. Since $k_0$ must be an integer the true slope
+is $\lfloor(3/2)^K\rceil/3^{K+1}$, but the rounding is immaterial: the ratio to the idealised slope is
+$1.00024$ by $K=14$, and substituting the idealised phase reproduces $\mathrm{Err}/L$ to five digits
+($-0.93644$ against $-0.93566$ at $K=6$, $-0.91563$ against $-0.91559$ at $K=12$).
+
+Now $g$ is the normalised transform of the octave band, which in this variable is $[\tfrac13,\tfrac23]$,
+so $\hat g$ is a multiple of $1_{[1/3,2/3]}(|t|)$. The frequency the octave supplies is exactly
+$\tfrac13$: the left endpoint of that band. Evaluating $\hat g$ by tapered quadrature gives
+$-0.00000,-0.00000$ at $t=0.20,0.30$ below the band, $1.50000$ at $t=0.40$ and $t=0.50$ inside it,
+$-0.00000$ at $t=0.80$ above it, and $0.75000$ at both endpoints $t=\tfrac13$ and $t=\tfrac23$ ---
+exactly half the interior value, as a jump discontinuity gives. So the octave, which is precisely the
+window whose starting point equals its length, places the phase frequency on the edge of its own band,
+where the transform takes half its interior value rather than the full value it would take strictly
+inside or the zero it would take strictly outside. That is a clean account of why the answer is a
+bounded $O(1)$ number instead of either extreme, and it is specific to $k_0=R$. It is not a proof: the
+leading term is only the smooth part of the weight, and the deviation of $c$ from smooth is exactly what
+carries the value. But it says what is special about the octave, in one line, exactly.
+
+\paragraph{The octave sits between two exact zeros, and that proves most of the cancellation.} The same
+fact has a second face, in the original variable, and this one is an identity with no numerics in it.
+Read $F_K(x)=\prod_{i=0}^K\cos^2(\pi x2^i/3^{i+1})$ as a function on the reals. At $x=R=(3/2)^K$ the
+factor $i=K-1$ has argument
+\[
+  \pi\cdot\frac{(3/2)^K\,2^{K-1}}{3^K}=\pi\cdot\frac{2^{K-1}}{2^K}=\frac\pi2 ,
+\]
+so it vanishes; at $x=2R$ the factor $i=K-2$ has argument $3\pi/2$ and vanishes. The octave $[R,2R]$ is
+therefore \emph{exactly} the gap between two consecutive zeros of $F_K$, for every $K$, identically and
+not approximately. Confirmed in sixty-digit arithmetic: the identified factor is the smallest of the
+$K+1$ at each endpoint and equals zero to working precision at $K=6,10,14$.
+
+The consequence is the strongest structural statement here. Since $k_0\nu/P=\nu/(3\cdot2^K)$ the phase
+is a character modulo $3\cdot2^K$, and its $c$-weighted law is exactly uniform: for every $h$ with
+$v_2(h)\le K-1$ the expectation $\mathbb E[e(h\theta)]=\prod_n\cos^2(\pi h3^{n-1}/2^n)$ vanishes, since
+the single index $n=v_2(h)+1$ puts that argument at exactly $\pi/2$. So replacing $G(\nu)$ by $G(0)=L$
+gives $\mathrm{Err}/L=-1$, against the measured $-0.955$: the phases alone annihilate the entire main
+term, and the bulk of the cancellation a proof needs is an identity rather than a numerical coincidence.
+
+Three things should be said plainly about how much that buys, and the first of them takes most of it
+back. The bound $\mathrm{Err}\ge-L$ is free: $F_K$ is a square, so $\sum_{k\in W}F_K\ge0$, and the window
+identity turns that into $L+\mathrm{Err}\ge0$ immediately --- no Fourier expansion, no equidistribution,
+at every $p$ and every window position. Measured, $\min_WF_K$ is $8.7\cdot10^{-13}$ at $K=8$ falling to
+$7.0\cdot10^{-24}$ at $K=20$, positive throughout. The zeroth-order computation lands exactly on that
+free floor: it predicts $A_K=1+\mathrm{Err}/L=0$ where the truth is about $0.05$, so it captures none of
+the quantity at issue and bounds it in neither direction. Against $L$ the step looks like most of the
+cancellation; against $A_K$, which is what must be bounded, it is none of it.
+
+Second, the zero is at the real point
+$(3/2)^K$, while $k_0$ must be an integer; at the integer start the zeroth-order term is small but not
+zero, measuring $2^{K+1}F_K(k_0)=4.8\cdot10^{-5},5.5\cdot10^{-5},7.0\cdot10^{-7},2.3\cdot10^{-8}$ at
+$K=6,8,10,12$. It is shrinking, so nothing depends on this, but ``exactly'' belongs to the real point.
+Third, the character sum obeys
+$\sum_\eps c_\eps e(k\nu_\eps/P)=\prod_i\bigl(1+\cos(2\pi kn_i/P)\bigr)=2^{K+1}F_K(k)$, since
+$1+\cos2\pi t=2\cos^2\pi t$. So $L+\mathrm{Err}=2^{K+1}\sum_{k\in W}F_K(k)$ identically, and $A_K$ is the
+normalised window sum itself --- verified to eight digits by computing it both ways at $K=6,8,10,12$.
+So $A_K$ is the same object throughout, and what the exact zero contributes is a clean description of the
+octave's position rather than progress against it.
+
+\paragraph{The integrality drops out, and what is left is a Riesz product.} The one reformulation here
+that does change the shape of the problem is the passage to the continuum. Comparing $A_K$ with
+\[
+  \int_1^2\ \prod_{m=0}^{K}\Bigl(1+\cos\bigl(2\pi x(3/2)^m/3\bigr)\Bigr)\,dx
+\]
+is not an approximation but an identity of integrands. Substituting $k=Rx$,
+\[
+  \frac{R\,2^i}{3^{i+1}}=\frac{(3/2)^K2^i}{3^{i+1}}=\frac13\Bigl(\frac32\Bigr)^{K-i},
+\]
+exactly, so $\prod_i\bigl(1+\cos(2\pi k2^i/3^{i+1})\bigr)$ and $\prod_m\bigl(1+\cos(2\pi x(3/2)^m/3)\bigr)$
+are the same function with the index reversed. $A_K$ and the integral are therefore the Riemann sum and
+the integral of one function, and only quadrature error separates them. Measured, that error is
+$A_K-I_K=0.342003\cdot2^{-(K+1)}$, with the constant flat to six digits across $K=9,\dots,27$: it halves
+at every step, and the earlier impression that the agreement was erratic --- gaps of $1.7\cdot10^{-5}$ at
+$K=8$ against $1.2\cdot10^{-4}$ at $K=12$ --- was noise in an under-resolved quadrature, not a feature.
+The true gaps are $6.7\cdot10^{-4}$ and $4.2\cdot10^{-5}$, on the clean geometric ladder. So
+$\mathrm{Err}=O(L)$, and therefore the whole $L^2$ target, follows from the boundedness in $K$ of
+that integral: a Riesz product with the non-Pisot ratio $3/2$, integrated over a single octave. The
+implication is one way only, and the sharper statement is worth having. Writing $I_K$ for that integral
+and $B_K$ for the mass of $Q^2dv$ on the block $[(3/2)^K,(3/2)^{K+1})$, the substitution
+$\theta=(2/3)^Kv$ relates them, but not by a clean identity: it carries the weight
+$\prod_{i\ge1}\cos^2(\pi(2/3)^iv)$, which is bounded above and below on the block and is the reason the
+comparison is not exact. Writing $C_K=(3/4)^KI_K/(3B_K)$, the measured values run from $119.0$ at $K=8$ to
+$244.3$ at $K=12$, with median $187.1$ over $K=8,\dots,35$, a level shift near $K=11$, and flat at
+$0.9968$ per step over $K=13,\dots,35$: bounded within a factor of two, which is all that is needed, and
+not a constant. Two earlier drafts got this wrong in opposite directions --- one quoted the ratio at two
+endpoints as though it were constant, the second promoted it to an exact identity $B_K=(3/4)^KI_K/2$,
+which would force $C_K\equiv2$ and is refuted by the measurements above. With the comparison in hand,
+\[
+  \mu\in L^2\iff\sum_K(3/4)^KI_K<\infty ,
+\]
+so $I_K$ may grow, just not at rate $4/3$; boundedness of $I_K$ is sufficient and strictly stronger, since
+$B_K=0.9^K$ is summable while $B_K(4/3)^K=1.2^K$ diverges.
+
+What the measurements exclude should be stated without choosing an estimator. Over $K=8,\dots,35$ the
+per-step rate of $I_K$ is $1.0032$ as an arithmetic mean of the ratios, $0.9973$ as a geometric mean, and
+$0.9829$ by least squares on $\log I_K$; the spread is Jensen's gap, $\sigma^2/2=0.0061$, and the sign of
+the drift is not determined by the data. No single rate should be quoted, and earlier drafts quoted two
+different ones. What survives every estimator is the exclusion that matters: $\log(4/3)$ sits $13.6$
+standard errors above the mean increment and would have produced a factor of $2362$ across the window,
+against an observed total factor of $0.930$. So the $L^2$ failure mode is dead over the reachable range.
+The resolution is model-dependent and both readings belong here: treating the increments as a random walk
+gives a two-standard-error band of $[0.956,1.040]$ on the per-step rate, while under the bounded
+hypothesis actually being tested the endpoint estimator resolves a total log-drift of
+$0.7506/27=0.0278$. Boundedness itself --- the strictly stronger claim --- is untested either way, and
+every sub-exponential law stays invisible: $K^{1/2}$ and $(\log K)^b$ for $b<2.11$ are inside the noise,
+while $K^1$ would not be.
+
+The direction the theorem needs is close to rigorous. Since $H$ vanishes at both endpoints of the window,
+$|A_K-I_K|\le(2R)^{-1}\int_W|H'|\le\pi D_KI_K$ with $D_K=\sum_i\theta_i\bigl(\int H_i/\int H\bigr)$
+measured at $1.10\pm0.03$ for $K=12,\dots,20$. So $\sup_KI_K<\infty$ would give $\sup_KA_K<\infty$ and
+hence $\mu\in L^2$, once $D_K=O(1)$ is proved; the converse remains measured only.
+No property of $(3/2)^K$ modulo $3^{K+1}$ is available or needed, and the arithmetic of the lattice, the
+window position and the choice of integer start have all disappeared. That is the classical form of the
+question --- Erd\H{o}s's 1939 setting, and Kahane--Salem territory --- reached from the entropy side.
+
+\paragraph{Why the Riesz-product literature does not reach it, and it is not the ratio.} Two thresholds
+are usually run together. Ratio $\ge2$ makes every $\{0,\pm1\}$ combination of the frequencies nonzero,
+so the product has mean one; ratio $\ge3$ makes those combinations distinct, so the coefficients are read
+off uniquely. Both hold here. The frequencies $\lam_m=(3/2)^m/3=3^{m-1}/2^m$ have strictly decreasing
+$2$-adic valuations, so $\sum_m\eps_m\lam_m=0$ with $\eps\in\{0,\pm1\}^{K+1}$ forces $\eps_K$ even, hence
+zero, hence all zero by induction --- the same argument as Lemma~\ref{lem:dis} with the roles of $2$ and
+$3$ exchanged. The set is dissociate for the coefficients Lemma~
+ef{lem:dis} allows, and the constant term of the
+product is exactly $1$. It is not dissociate beyond them: $3n_m=2n_{m+1}$ identically for
+$n_m=3^m2^{K-m}$, so relations with a coefficient $3$ exist in quantity, and an earlier phrasing here
+calling the set dissociate in the strongest sense was wrong.
+
+What fails is not that the frequencies leave $\mathbb Z$ --- scaling by $3\cdot2^K$ returns the integers
+$n_m=3^m2^{K-m}$ with ratio $3/2$, a circle Riesz product of the classical kind. It is that the frequency
+set depends on $K$: each new factor rescales all the others, so there is no one sequence for the
+classical theory to attach to. Since $\lam_0=\tfrac13$ the product has period
+$3\cdot2^K$, and $A_K$ is its average over a window that is $1/(3\cdot2^K)$ of that period. The classical
+theorems conclude about the mean over the whole group, or about singularity and dimension; none of them
+bounds a partial-period average. That last clause is a survey-wide negative, assembled from a literature
+search covering Riesz, Zygmund, Peyri\`ere, Brown--Moran, Kilmer--Saeki, Parreau, Ritter and Fan, and I
+have not read those sources myself; the dissociateness and constant-term statements around it are
+elementary and were checked here in exact arithmetic, but the claim that nobody has bounded such a
+quantity should be treated as the current state of a search. On the Bohr compactification, where the classical criterion applies
+verbatim, it gives orthogonality to Haar measure, which says nothing about $[1,2]$ because $\mathbb R$ is
+Haar-null there. So the gap is not lacunarity but locality.
+
+Two measurements make the position concrete. Over one period at $K=10$ the $3072$ unit windows have mean
+exactly $1$, median $0.804$ and maximum $21.4$ at the alignment spike $t=0$ --- so, taking the maximum over unit
+windows of the window \emph{mean} of $P_K$ in the $x$ coordinate, $\sup_t\int_t^{t+1}P_K=\|f\|_2^2(4/3)^K$,
+measured $1.20646,1.20618,1.20621$ at $K=8,10,12$ against $\|f\|_2^2=1.206310$. A proposed correction
+putting that supremum at $2\|f\|_2^2(4/3)^K$ does not survive a direct measurement in this
+normalisation; the factor two presumably belongs to a different window length --- the window $[1,2]$ ranks
+$486$th, at the sixteenth percentile. That rank is one value of $K$ and it drifts by eight to twenty per
+cent over $K=3,\dots,12$, so it locates the octave in the lower part of the distribution without pinning
+it. The octave is also the immediate neighbour of the one growing window: the ratio of the window at the
+origin to the next is $32,107,269,372,411,451$ at $K=4,\dots,12$, itself of order $(4/3)^K$. And the independence prediction
+$\prod_m\int_1^2\bigl(1+\cos2\pi x\lam_m\bigr)dx$ converges to $0.2784$, about five times $A_K$, with the
+the shortfall being genuine negative correlation between the factors. Whether it accumulates cannot be
+read off this ratio: the denominator converges by $m\approx10$, so the ratio simply tracks $A_K$, and
+inherits both the decline through the transient below $K\approx25$ and the flatness after it. Readings
+of ``stable'' and of ``monotonically accumulating'' have both been offered here, and each was measured
+over a range sitting mostly inside the transient.
+
+The trough has a one-line cause, and it is a single factor. Of the $K+1$ factors, only the lowest is
+small on $[1,2]$:
+\[
+  \int_1^2\Bigl(1+\cos\frac{2\pi x}{3}\Bigr)dx=1-\frac{3\sqrt3}{2\pi}=0.1730067,
+\]
+against a mean of $1$ over the whole line. It takes the value $\tfrac12$ at both endpoints and vanishes
+at the midpoint $x=\tfrac32$. Every other factor averages about one on $[1,2]$ --- measured
+$1.000,1.212,1.041,1.154,1.036,1.017$ for $m=1,\dots,6$ --- so the independence value $0.2784$ is
+essentially that one integral times a product of terms near unity. The endpoints are themselves zeros of
+low-index factors: $x=1$ annihilates the $m=1$ factor and $x=2$ the $m=2$ factor, which is the continuum
+face of the exact zeros of $F_K$ at $R$ and $2R$.
+
+So the anatomy of $A_K\approx0.05$ is: a factor $0.173$ from the lowest frequency alone, a factor near
+$1.6$ from the rest, and a further factor near $0.18$ from correlation among the factors. The first two
+are explicit and bounded. The whole of the difficulty is the third.
+
+That splitting can be made exact, and it turns the target into a correlation inequality with a normaliser
+one can write down. The product of the individual means converges absolutely: each factor has
+\[
+  \Bigl|\int_1^2\bigl(1+\cos2\pi x\lam_m\bigr)dx-1\Bigr|
+  =\frac{|\sin4\pi\lam_m-\sin2\pi\lam_m|}{2\pi\lam_m}\le\frac1{\pi\lam_m}=\frac{3}{\pi(3/2)^m},
+\]
+which is summable, so $\prod_m\int_1^2(1+\cos2\pi x\lam_m)dx$ converges; numerically it is
+$0.2783515$, already stable to seven digits by $m=30$. Since that limit is a fixed positive number,
+$A_K=O(1)$ is exactly the statement that the ratio
+\[
+  \frac{\int_1^2\prod_{m\le K}\bigl(1+\cos2\pi x\lam_m\bigr)dx}
+       {\prod_{m\le K}\int_1^2\bigl(1+\cos2\pi x\lam_m\bigr)dx}
+\]
+stays bounded as factors are added --- measured near $0.18$ and flat in $K$. This is a restatement rather
+than a bound, but it is the sharpest one available: it names the difficulty as the failure of the factors
+to behave independently on a fixed interval, and it supplies the normaliser explicitly, so nothing in the
+problem now depends on an unevaluated constant.
+
+Where that dependence comes from is visible at the start of the product. Taking the factors in order, the
+ratio above reads $1.0000,\,1.0000,\,0.2652,\,0.3297,\,0.4752,\,0.2683,\,0.2394,\,0.1623$ for the first
+one through eight. The first two are \emph{exactly} uncorrelated; the defect is created when the third
+joins, and the reason is a coincidence of zeros. Inside $[1,2]$ the lowest factors each vanish once, and
+at different places: $m=0$ at the midpoint $x=\tfrac32$, $m=1$ at the left endpoint $x=1$, $m=2$ at the
+right endpoint $x=2$, then $m=3$ at $\tfrac43$ and $m=4$ at $1.4815$. Three zeros at the two ends and the
+middle leave the product small across the whole interval, which no independence estimate can see, since
+each factor separately is small only near its own zero. After that the ratio fluctuates rather than
+decaying, later factors contributing correlation and anti-correlation in turn.
+
+Carried to $26$ factors the ratio stays in $[0.1596,0.4752]$, with the maximum attained early, at $n=4$.
+Whether it is settling has to be measured carefully: the range over $n\ge n_0$ shrinks as $n_0$ grows for
+purely formal reasons, so it is no evidence at all. Fixed-width blocks are not forced to narrow, and over
+$n=2$--$6$, $7$--$11$, $12$--$16$, $17$--$21$, $22$--$26$ the block ranges are
+$0.236,0.088,0.091,0.039,0.036$ with means $0.316,0.192,0.239,0.180,0.174$. Read alone that looks like
+damping toward $0.175$. It should not be read alone: the same quantity carried to $K=40$ has its
+five-point running mean fall to $0.041$ and then rise again over the last eight values, so the apparent
+settling is inside a window that stops before the next excursion. Taken with the limitation above --- the
+oscillation and a logarithm are the same size over every $K$ that can be computed --- the honest summary
+is that the ratio has stayed between about $0.16$ and $0.48$ for forty factors and that nothing in the
+data decides whether it stays bounded.
+
+One more feature of the parameter deserves recording, because it explains the silence in the literature
+better than anything else here. At bias $p$ the same product is $\prod_m(1+a\cos2\pi x\lam_m)$ with
+$a=2p(1-p)/(1-2p(1-p))$, and $a=1$ exactly at $p=\tfrac12$. The one classical extension below ratio $3$
+requires $\sup_j|a_j|<1$ strictly. It therefore covers every bias except the fair coin, and degenerates
+precisely at the case that is open. The endpoint $a=1$ is where this machinery has always stopped.
+
+What is left is exact,
+\[
+  L\,A_K=\sum_\eps c_\eps\,e(\theta_\eps)\bigl(G(\nu_\eps)-L\bigr),
+\]
+a decorrelation between the now exactly uniform fractional part of $\theta$ and its own envelope. The
+substitution kills this cleanly, as it must: at bias $p$ the vanishing factor becomes $1-4p(1-p)$, zero
+only at $p=\tfrac12$. The mechanism belongs to the fair coin, not to the functional equation, and
+supplies nothing where the measure is singular. Independently $\mathrm{Err}/L$ has been carried to
+$K=38$, a window of $4\,914\,370$ terms, where it reads $-0.954$.
+
+In these terms the remaining task is compact. Writing $A_K=1+\mathrm{Err}/L$, the window identity gives
+$E(R)\le2^{-(K+1)}LA_K=\tfrac12R^{-0.7095}A_K$, so $A_K=O(1)$ is the whole of what is left, and the
+zeroth-order computation above says $A_K$ has no main term at all. Measured at the octave for every $K$
+from $6$ to $40$ --- the last window has $11\,057\,332$ terms --- it runs between $0.0399$ at $K=32$ and
+$0.0846$ at $K=12$, a factor of $2.12$, oscillating rather than settling. No trend should be read into
+it: log-linear fits give $R^{-0.030}$ from $K\ge6$, $R^{-0.039}$ from $K\ge10$, $R^{-0.011}$ from
+$K\ge20$ and $R^{+0.014}$ from $K\ge26$, the sign turning with the fitting window, and the five-point
+running mean falls from $0.069$ to $0.041$ and then rises again over the last eight values. An earlier
+draft of this note fitted $R^{-0.047}$ on a stride of four and read it as slow decay; that was the
+stride's trend, not the sequence's.
+
+Carried further, on an independent code path with composite Gauss--Legendre quadrature and exact integer
+phase arithmetic, the integral reaches $K=37$ and settles: over $K=25,\dots,37$ the log-drift is
+$+0.00009$ per step at level $0.0427$, and the apparent decay in the earlier ladder is a transient below
+$K=25$. Two structural facts come with it, both of which change what a proof should look for. The
+recursion is exact, $I_K=I_{K-1}+C_K$ with $C_K=\int_1^2\cos(2\pi f_Kt)P_{K-1}(t)\,dt$ the Fourier
+coefficient of the previous product at its own next frequency --- and its multiplier is one, not less:
+the geometric mean of $I_K/I_{K-1}$ over $K\ge20$ is $0.9990\pm0.017$. \emph{So the theorem cannot come
+from a contraction}, and that route is closed by measurement rather than by argument. What the same data
+does show is mean reversion: $\operatorname{Var}(\log I_{K+j}-\log I_K)$ saturates near $0.019$ instead
+of growing linearly in $j$, the lag-$8$ variance ratio being $0.28$. Boundedness here is a fluctuation
+statement about a driftless positive sequence, not a decay statement.
+
+Which rules out the obvious way to use it. The per-step standard deviation is $0.071$, so independent
+increments would give $\operatorname{Var}=0.0403$ over eight steps against the $0.0113$ implied by the
+measured ratio; each step contributes about $0.005$ to a sum that therefore diverges linearly. So
+$\sum_KC_K^2$ does \emph{not} converge, and a proof cannot come from the increments being square-summable
+--- the natural martingale route, and it is closed by the same data that suggests it. Bounded variance
+over $j$ steps is bought entirely by cancellation between increments. What has to be proved is that the
+$C_K$ are negatively dependent, a mixing statement, and not that they are small.
+
+That target can be localised. Writing $\Phi(u)=\int_1^2\cos(2\pi ut)P_{K-1}(t)\,dt$ and using
+$f_{K+1}=\tfrac32f_K$, the product-to-sum identity gives exactly
+\[
+  C_K=\Phi(f_K),\qquad
+  C_{K+1}=\Phi\bigl(\tfrac32f_K\bigr)+\tfrac12\Phi\bigl(\tfrac12f_K\bigr)+\tfrac12\Phi\bigl(\tfrac52f_K\bigr),
+\]
+all against the same $P_{K-1}$, verified to $10^{-15}$. The last term is negligible, and for a structural
+reason rather than by accident: the largest frequency of $P_{K-1}$ is
+$\sum_{m\le K-1}(3/2)^m/3=2f_K-\tfrac23$, so $\tfrac12f_K$, $f_K$ and $\tfrac32f_K$ all lie inside the
+spectrum while $\tfrac52f_K$ lies outside it. Measured, $|\Phi(\tfrac52f_K)|$ relative to $C_{K+1}$ falls
+from $2\cdot10^{-4}$ at $K=8$ to $10^{-10}$ at $K=16$. So the recursion is effectively two-term:
+successive increments are one function sampled at $f_K$ and at its two multiplicative neighbours
+$\tfrac12f_K$ and $\tfrac32f_K$, and the half-frequency term is the larger of the two in four of the five
+$K$ examined. Whether that produces the required anti-correlation is not settled by the five sign pairs
+available, three of which flip.
+
+The reduction should not be mistaken for progress. Expanding $\Phi$ over the same characters gives
+$\Phi(u)=\tfrac12\sum_\eps c_\eps\bigl[W(\nu_\eps+u)+W(\nu_\eps-u)\bigr]$ with
+$W(v)=\int_1^2e(vt)\,dt$ and $|W(v)|\le\min(1,1/\pi|v|)$, so the triangle bound on an increment is again
+the weight sitting within $O(1)$ of $\pm u$ --- the same count that defeats the triangle inequality for
+$A_K$ itself. Measured, that bound is $21.3,43.4,87.0,172.2$ at $K=8,10,12,14$ against true values
+$9.7\cdot10^{-5}$, $5.3\cdot10^{-3}$, $1.5\cdot10^{-2}$, $2.6\cdot10^{-3}$: overshoots of four to five
+orders of magnitude, growing. The two-term form is exact and it is a simplification of shape; the
+cancellation it needs is the cancellation we started with, in the same amount.
+
+\paragraph{What the closed routes have in common.} Every route closed in this note ends the same way: as
+a weighted count of characters near a distinguished frequency, with the true value exponentially below
+the count. The triangle bound on $\mathrm{Err}$ over all $3^{K+1}$ patterns, the block weight $(4/3)^K$,
+the test-function identity, the second moment, and the increment bound just given are five instances,
+with overshoots from a factor $10$ to $10^5$ and growing in $K$.
+
+The common step is not the upper bound; it is \emph{linearisation}. Each of those routes expands
+$P_K=\sum_\eps c_\eps e(\nu_\eps t)$ and then bounds term by term, and that discards the cancellation
+which is the whole content. But $P_K$ is a product of factors in $[0,2]$ and so is nonnegative: a route
+that works with it directly --- covering $[1,2]$ and bounding the function on each piece --- discards
+nothing, because for a nonnegative integrand there is no cancellation to lose. That is exactly the
+difference between the routes above and the two that remain open. Counting the peaks bounds
+$\sum\text{height}\times\text{width}$ for the nonnegative $P_K$; the Erd\H{o}s--Kahane argument is a digit
+count over $k\in[R,2R)$ on the object itself. Neither linearises. That is not evidence either will work,
+and the peak count walks into $(3/2)^m$ modulo one; but it says which question to ask of a proposed
+route, and the question is whether it expands into characters, not whether it ends in an inequality.
+
+\paragraph{The integral is a Birkhoff average for the $\times3/2$ map.} There is a second change of
+coordinates, and it is exact. Since $\theta_m(x)=x(3/2)^m/3\bmod1$ satisfies
+$\theta_{m+1}=\tfrac32\theta_m\bmod1$, and $1+\cos(2\pi x(3/2)^m/3)=e^{\varphi(\theta_m)}$ with
+$\varphi(\theta)=\log(1+\cos2\pi\theta)$, substituting $x=3\theta$ gives
+\begin{equation}\label{eq:birkhoff}
+  I_K=3\int_{1/3}^{2/3}\exp\Bigl(\sum_{m=0}^{K}\varphi\bigl(T^m\theta\bigr)\Bigr)d\theta,
+  \qquad T\theta=\tfrac32\theta\bmod1 .
+\end{equation}
+Verified against the direct product to all printed digits at $K=6,\dots,16$. So the question is whether a
+Laplace average of Birkhoff-type sums along the sequence $(3/2)^m$ modulo one, taken over Lebesgue
+measure on a fixed subinterval,
+grows at rate exactly one. That is thermodynamic formalism rather than counting: the natural objects are
+the transfer operator of $T$ tilted by $\varphi$ and its leading eigenvalue, and the natural statement is
+that the growth rate vanishes with a bounded prefactor. It reaches the $\times3/2$ map, as everything
+here eventually does, but through pressure rather than through the orbit of a point --- which is the one
+door the peak count could not use.
+
+A correction belongs here, because the dynamical reading of \eqref{eq:birkhoff} was wrong and the error
+survived several pages of this note. The identity itself is a change of variables and is correct; it was
+checked against the direct product to every printed digit. But the sequence $\theta_m$ is \emph{not} the
+orbit of $\theta\mapsto\tfrac32\theta\bmod1$. Writing $\theta_m=u_m-k_m$ with $k_m$ the stripped integer,
+\[
+  \theta_{m+1}=\tfrac32(\theta_m+k_m)\bmod1=\tfrac32\theta_m+\tfrac12[k_m\ \text{odd}]\bmod1,
+\]
+and the parity of $k_m$ is not a function of $\theta_m$. In exact rational arithmetic $212$ of $429$
+consecutive pairs fail the plain map and none fails the skewed form; $x=3$ gives
+$\theta=0,\tfrac12,\tfrac14,\tfrac38$, where the plain map sends $0$ to $0$. Nor is this repaired by
+another modulus --- reducing modulo $2$ fails as well, and multiplication by $3/2$ is an endomorphism of
+$\mathbb R/P\mathbb Z$ only if $\tfrac32k\in\mathbb Z$ for every integer $k$, which holds for no $P$. The
+sequence is the orbit of no circle map at all; its natural home is a skew product carrying a parity bit,
+or the $2$-adic solenoid. That is precisely the difficulty in Mahler's problem, and it is not something a
+one-dimensional transfer operator reaches.
+
+So what \eqref{eq:birkhoff} delivers is a Birkhoff-\emph{type} sum along the sequence
+$x(3/2)^m\bmod1$, and not a thermodynamic formalism with an operator behind it. The operator written
+below was built for a map that is not the dynamics here, which is the honest explanation of why it
+returned a degenerate eigenmeasure concentrated at a fixed point rather than anything about $\mu$: its
+leading eigenvalue $4/3$ is a fact about that operator, and the $(4/3)^K$ in this problem is established
+independently, by the elementary window decomposition. Everything derived from the closed-form product
+rather than from a map is untouched --- the window constant, $\|f\|_2^2=6\int_0^\infty Q^2$, the tail
+renewal, the block criterion and the line count all stand, since none of them uses a map.
+
+The way the error survived is worth a sentence. The substitution was verified by checking the
+\emph{integrand} in closed form, which is exactly the test that cannot see a false recursion; the
+recursion itself was asserted from a one-line manipulation and never checked. It surfaced only because a
+separate line of work arrived at a parity-skewed coding and said plainly that it had not proved its
+coding equivalent to the one used here.
+
+\paragraph{The atom was a frozen bit, and the annealed rate is exactly one.} The correction above says the
+phase is not driven by a circle map; what drives it is $x_{m+1}=\{\tfrac32x_m+\tfrac12b_m\}$ with
+$b_m$ the parity of $\lfloor(3/2)^m\theta\rfloor$, a skew product over the two-point fibre. That makes the
+earlier atom transparent. For $\theta<(2/3)^{K-1}$ every $b_m$ is zero, which is the one deterministic
+branch fixing the origin, and it carries height $2^K$ on measure $(2/3)^K$ --- the whole of the $(4/3)^K$.
+Every $\theta$ in the octave leaves that region in a single step and never returns. So the atom is an
+artefact of freezing the bit, and the object to look at is the operator averaged over the bits.
+
+There the answer is exact and immediate. For every $x$,
+\[
+  \bigl(1+\cos2\pi\{\tfrac32x\}\bigr)+\bigl(1+\cos2\pi\{\tfrac32x+\tfrac12\}\bigr)
+  =2+\cos3\pi x+\cos(3\pi x+\pi)=2 ,
+\]
+so averaging over $b_m$ contributes exactly $1$ at every step and the product telescopes:
+$\mathbb E_b\bigl[\prod_{m<K}(1+\cos2\pi x_m)\bigr]=1+\cos2\pi x_0$, for every $x_0$ and every $K$. The
+annealed octave integral is therefore the $K$-free constant
+$\int_{1/3}^{2/3}(1+\cos2\pi\theta)d\theta=\tfrac13-\tfrac{\sqrt3}{2\pi}=0.0576689$, and the annealed
+growth rate is exactly one. Nothing is left to prove on that side.
+
+What remains is the whole problem, and one exact rewriting is available. Since
+$x_m=\{\tfrac32x_{m-1}+\tfrac12b_{m-1}\}$,
+\[
+  \cos2\pi x_m=\cos\bigl(3\pi x_{m-1}+\pi b_{m-1}\bigr)=(-1)^{b_{m-1}}\cos3\pi x_{m-1},
+\]
+so the weight is $w(x_m)=1+(-1)^{b_{m-1}}\cos3\pi x_{m-1}$ identically. Writing $J_K$ for the octave
+integral and $A=\tfrac13-\tfrac{\sqrt3}{2\pi}$ for the annealed value, this expresses the increment
+$J_m-J_{m-1}$ as an integral of the past product against $(-1)^{b_{m-1}}\cos3\pi x_{m-1}$, and hence
+$J_K/A=\prod_{m\le K}(1+\eps_m)$ with $\eps_m$ that increment divided by $J_{m-1}$.
+
+It must be said plainly that the product formula is a telescoping tautology: $\eps_m=J_m/J_{m-1}-1$ by
+construction, so verifying $\prod(1+\eps_m)$ to $10^{-16}$ verifies $J_m=J_{m-1}+(J_m-J_{m-1})$, and an
+earlier draft here presented it as a result. Its content is the trig identity above, which gives $\eps_m$
+an interpretation --- a past-weighted correlation between the parity bit and the phase --- exactly as
+$\rho_n$ was given one earlier, and with exactly the same standing: a reformulation, not a reduction. For
+the same reason the target $\limsup K^{-1}\sum\log(1+\eps_m)<\log\tfrac43$ is the statement that $J_K$
+grows slower than $4/3$ per step, written in other coordinates.
+
+The arithmetic behind the interpretation is real. With $N_m=(3/2)^mv=A_m+x_m$, the relation
+$N_{m-1}=\tfrac23N_m$ gives $x_{m-1}=\{((2A_m\bmod3)+2x_m)/3\}$ --- checked here in exact rational
+arithmetic, $780$ of $780$ --- so $x_{m-k}$ depends on $x_m$ and $A_m\bmod3^k$ alone while $b_m=A_m\bmod2$.
+Since $A_m$ ranges over about $L=(3/2)^m/3$ consecutive integers on the octave, the correlation of $b_m$
+with the $k$ preceding phases is $O(3^k/L)$, small for $k$ below
+$(m\log\tfrac32-\log6)/\log3=0.36907\,m-1.63$. That is a decay, not an exact vanishing, and the
+distinction matters: an independent check finds the inside-window floor falling like $1/L$
+($1.1\cdot10^{-4}$ at $m=24$ against $1.5\cdot10^{-5}$ at $m=30$) and the depth growing with $m$ at the
+predicted slope, but no step at the boundary --- a factor of $1.9$ between the last inside and first
+outside value at $m=24$, and at $m=30$ none at all.
+
+Nor does it license the conclusion an earlier draft drew from it. What is nearly orthogonal to $b_m$ is
+the recent-$k$ \emph{truncation} of the product; $\prod_{j<m}w_j$ does not factor into a recent and a deep
+piece, so nothing transfers that smallness to $\eps_m$ itself. Measured, the truncated defect inside the
+window is about $10^{-4}$ against a full $|\eps_m|$ of $0.048$: the part that is provably small is not the
+part that carries the gap.
+
+As for the gap itself, it should not be called a constant. Computed exactly to $K=36$ the ratio runs
+between $0.2307$ and $0.4886$, and its median moves from $0.2745$ over $K=8,\dots,35$ to $0.2435$ over
+$K=25,\dots,36$. On the octave $|\eps_m|$ is flat across disjoint blocks, $0.0473$ on $m=25,\dots,30$
+against $0.0480$ on $m=31,\dots,36$, so it does not decay where it matters; only an ensemble of generic
+octaves decays, at $1.4$ standard errors, and this octave is a trough rather than a generic one. What is
+established is the absence of drift, $-0.0121$ per step against a critical $\log(4/3)=0.28768$, at about
+eighteen standard errors --- with the caveat that twelve increments of a single deterministic curve are
+not twelve independent observations, and that the estimate swings by a factor of ten as the window start
+moves from $K=8$ to $K=26$. Absence of drift is nevertheless what the theorem needs, since a driftless
+walk of step $0.058$ gives $|\log r_K|\sim0.058\sqrt K$.
+
+The margin is wide and is worth stating correctly: the trivial bound $w\le2$ gives $\log2=0.693$ per step
+against an allowance of $0.28768$, a factor of $2.41$, while the measurement is $-0.012$. What is asked
+for is only an average bound --- no decay rate, no summability, no convergence, no sharp constant. What
+is not available is any argument that supplies it, and the deciding measurement is pre-registered: run
+this octave alone to $K\approx60$ in exact arithmetic and ask whether $|\eps_m|$ on the disjoint blocks
+$m=49,\dots,54$ and $55,\dots,60$ falls below $0.030$. If it does, the ratio is a genuine constant; if it
+holds near $0.048$, only the driftlessness is real.
+
+The operator this suggests is explicit, and computing it says what the problem is. Preimages under $T$
+are $x=2y/3$ always and $x=2(y+1)/3$ only for $y<\tfrac12$ --- two branches below a half, one above,
+which is where the map's difficulty sits --- so with weight $e^\varphi=1+\cos2\pi x$ and $|T'|=3/2$,
+\[
+  (\mathcal Lg)(y)=\tfrac23\Bigl[\bigl(1+\cos\tfrac{4\pi y}{3}\bigr)g\bigl(\tfrac{2y}3\bigr)
+  +\mathbf 1_{y<1/2}\bigl(1+\cos\tfrac{4\pi(y+1)}{3}\bigr)g\bigl(\tfrac{2(y+1)}3\bigr)\Bigr].
+\]
+Power iteration on grids of $2^{10},\dots,2^{16}$ gives $1.335037,1.335065,1.335071,1.335073$: six digits
+of apparent convergence on a number that is not the eigenvalue. The leading eigenvalue is exactly $4/3$,
+and the argument is one line. The preimages of $y$ are $2y/3$ and $2(y+1)/3$, so $2y/3=0$ forces $y=0$
+while $2(y+1)/3=0$ forces $y=-1\notin[0,1)$; the point $0$ receives from nothing but itself, and the
+adjoint's eigen-equation at an atom there reads $\lambda a=\tfrac23(1+\cos0)a=\tfrac43a$. The leading
+eigenmeasure is atomic --- the atom at the fixed point together with the fast-decaying chain on the orbit
+$(2/3)^n$ into which it leaks --- and a grid cannot carry an atom. The discretisation smears it and
+converges, cleanly and consistently, on the wrong value. Four refinements agreeing to six digits was
+evidence about resolution, not about the object being resolved. What that atom is has already been
+identified above: it is the frozen-bit branch of the skew product, and averaging over the bit removes it
+and leaves a rate of exactly one. The operator here is the one with the bit held at zero, so its $4/3$
+is correct and describes a single deterministic branch rather than the octave.
+
+The direct measurement settles it and exhibits the mechanism with no spectral theory in it. Split
+$\int_0^1\exp\bigl(\sum_{m\le K}\varphi(T^m\theta)\bigr)d\theta$ at $\theta=M(2/3)^K$. On the window,
+substitute $\theta=(2/3)^Ku$; since $\theta(3/2)^m=(2/3)^{K-m}u$, the integrand becomes
+$2^{K+1}\prod_{j=0}^{K}\cos^2\bigl(\pi(2/3)^ju\bigr)$, so the window equals
+\begin{equation}\label{eq:window}
+  2\Bigl(\tfrac43\Bigr)^{K}\int_0^M\prod_{j=0}^{K}\cos^2\bigl(\pi(2/3)^ju\bigr)\,du,
+\end{equation}
+a $K$-free constant times $(4/3)^K$. Measured, the window over $(4/3)^K$ reads $0.402071$, $0.402035$,
+$0.402029$, $0.402028$, $0.402028$, $0.402028$, $0.402028$ at $K=12,14,\dots,24$ --- flat to six digits
+across twelve steps, where an eigenvalue of $1.335073$ would drift it by $1.6\%$. Everything outside the
+window stays bounded over the same range, at $0.32,0.29,0.26,0.23,0.23,0.26,0.27$, and the octave's share
+of that remainder is flat between $0.015$ and $0.028$, reproducing from independent code the $A_K$
+oscillation measured on the Fourier side.
+
+So the mechanism is elementary. A point with $\theta$ of order $(2/3)^K$ keeps its first $K$ iterates near
+zero, where $1+\cos$ is $2$, and so carries height $2^K$; the set of such points has measure $(2/3)^K$;
+the product is $(4/3)^K$. That is the whole of the growth, and it is an alignment effect at the fixed
+point rather than anything dynamical. The octave is disjoint from the window for every $K$ past $12$, so
+its flatness is not cancellation --- it never had this growth to lose. The $4/3$ an earlier draft called
+the universal obstruction and then withdrew is real and sits here: branching $2$ against contraction
+$2/3$, as measure times height at a fixed point, and not as an obstruction to any particular route.
+
+\paragraph{The growth constant is the norm being bounded.} The constant in \eqref{eq:window} is not a new
+number. Write $Q(u)=\prod_{j\ge0}\cos\bigl(\pi(2/3)^ju\bigr)$, so that the window is $2(4/3)^K\int_0^MQ^2$
+and $\hat\mu(k)=Q(k/3)$. Since $Q(u)=\hat\nu(u/2)$ for $\nu$ the law of $\sum_{j\ge0}\pm(2/3)^j$, setting
+$\rho=\nu*\nu$ gives $Q(u)^2=\hat\rho(u/2)$, whose Fourier transform is $2\rho(2x)$ and is supported in
+$|x|\le3$. Poisson summation at spacing $1/3$ then gives, with only $n=0$ landing inside that support,
+\begin{equation}\label{eq:constant}
+  \|f\|_2^2=\sum_{k\in\mathbb Z}\bigl|\hat\mu(k)\bigr|^2=\sum_{k\in\mathbb Z}Q(k/3)^2
+  =3\sum_{n}\widehat{Q^2}(3n)=6\sum_n\rho(6n)=6\rho(0)=6\int_0^\infty Q(u)^2\,du .
+\end{equation}
+Numerically $6\int_0^MQ^2$ reads $1.205739$, $1.206198$, $1.206295$, $1.206307$, $1.206310$ at
+$M=10,10^2,\dots,10^5$, against $1+2S=1.206310$ computed independently on the Fourier side. Hence
+$\int_0^1\exp\bigl(\sum_{m\le K}\varphi(T^m\theta)\bigr)\sim\tfrac13\|f\|_2^2\,(4/3)^K$: the constant
+standing in front of the operator's leading eigenvalue is the very norm whose finiteness is the question.
+The transfer-operator route is circular in the same way the majorant class is --- it returns the quantity
+it was meant to bound --- and this is the same fact as the weight profile recorded below, where
+$\mathrm{Cum}(u)(4/3)^{-K}\to\frac23\|f\|_2^2u$, reached from the opposite side.
+
+\paragraph{The tail obeys an exact renewal, and $L^2$ is one decorrelation.} $Q$ is self-similar:
+$Q(u)=\cos(\pi u)\,Q(2u/3)$, so $Q\bigl(\tfrac32v\bigr)=\cos\bigl(\tfrac{3\pi v}{2}\bigr)Q(v)$ and,
+substituting $u=\tfrac32v$ in the tail of \eqref{eq:constant},
+\begin{equation}\label{eq:renewal}
+  \int_M^\infty Q(u)^2\,du=\tfrac32\int_{2M/3}^\infty\cos^2\bigl(\tfrac{3\pi v}{2}\bigr)Q(v)^2\,dv .
+\end{equation}
+This is exact. Were $\cos^2(3\pi v/2)$ to decorrelate from $Q(v)^2$ on tail windows it would contribute
+its mean $\tfrac12$, the energy would fall by $3/4$ at each $\tfrac32$-step, and the exponent would be
+$\log(4/3)/\log(3/2)=0.7095$ --- the endpoint exponent already recorded here. Membership in $L^2$ is
+therefore exactly a statement that this one correlation does not persist, which is the phase question in
+the only place it can be watched directly across many scales.
+Measured on the ladder $N_n=(3/2)^n$ up to $10^5$ in one sweep, the ratio
+$\mathrm{corr}_n=\int_{N_n}^{N_{n+1}}\cos^2(3\pi v/2)Q^2\big/\tfrac12\int_{N_n}^{N_{n+1}}Q^2$ has mean
+$0.978$ with standard deviation $0.087$ over $n=8,\dots,27$, a standard error of $0.020$, and an
+ordinary-least-squares slope of $+0.001$ per step: no drift across twenty scales. The realised block
+ratios give exponent $0.775$, faster than the decorrelated $0.7095$ by exactly the amount
+$\mathrm{corr}<1$ accounts for, and agreeing with the octave energy $E(R)\approx R^{-0.78}$ measured by
+unrelated code.
+
+The power of that null matters more than the null. A correlation biased high by $d$ multiplies the
+per-step ratio by $d$ and costs $\log d/\log(3/2)$ of exponent: $d=1.05$ costs $0.12$ and sits $3.6$
+standard errors away, while $d=1.35$ --- which would stop the decay outright --- sits at twenty. So the
+flat reading is informative rather than merely quiet. What it is not is a proof: $\mathrm{corr}_n$
+fluctuates with standard deviation $0.087$ per block, twenty scales of a single curve are not twenty
+independent draws, and the permanent limit stands --- over any reachable range, bounded and slowly
+divergent cannot be told apart.
+Unwound on blocks the renewal gives a threshold, and that is the sharpest form of the question here.
+Writing $B_n=\int_{N_n}^{N_{n+1}}Q^2$ and $C_n$ for the same integral against $\cos(3\pi v)$, with
+$N_n=(3/2)^n$ and $\rho_n=C_n/B_n$, \eqref{eq:renewal} on a single block reads
+\begin{equation}\label{eq:blocks}
+  B_n=\tfrac34\bigl(1+\rho_{n-1}\bigr)B_{n-1},\qquad\text{so}\qquad
+  B_n=B_0\prod_{k<n}\tfrac34\bigl(1+\rho_k\bigr),
+\end{equation}
+verified against the measured ladder at all nineteen consecutive pairs to $8\cdot10^{-5}$, which is the
+rounding of the tabulated values. Membership in $L^2$ is the summability of that product, and the decay
+stops exactly when $\tfrac34(1+\rho)=1$: the critical value is $\rho=1/3$.
+
+That $1/3$ is the same number as the half-shift identity, and it is worth being exact about how little
+that says. Summing $V_n=\tfrac43B_{n+1}-B_n$ over all $n\in\mathbb Z$ telescopes, so
+$\sum V_n/\sum B_n=1/3$ for \emph{any} positive summable sequence $B_n$: the whole-line ratio is forced
+by the renewal alone and carries no information about correlation. It coincides with the critical value
+for the same reason --- $1/3$ is where the multiplier $\tfrac34(1+\rho)$ equals one --- so $\rho=1/3$ is
+the neutral point of the recursion, pinned at $M=0$ by an identity that reads $A(0)=A(0)$, and free at
+every other scale. An earlier draft of this section read the coincidence as the bulk sitting at
+criticality; that was a tautology dressed as a fact, and what actually matters is only how $\rho$
+behaves in the tail. Measured, it falls fast: the tail cross-ratio reads $0.032,-0.039,-0.008,-0.041$ at
+$M=10,10^2,10^3,10^4$, and over the blocks $n=8,\dots,27$ the mean is $-0.0224$ with block standard
+deviation $0.0860$ and standard error $0.0192$. The margin to the threshold is $0.356$, about four block
+standard deviations. What is not available is any reason it must stay there.
+\paragraph{An equivalent reformulation, and what validates it.} Write
+$c(n)=B_n^{-1}\int_{N_n}^{N_{n+1}}e^{3\pi iv}Q(v)^2dv$, so that $\rho_n=\operatorname{Re}c(n)$. Then
+\eqref{eq:blocks} gives
+\[
+  \text{if }\ \operatorname{Re}c(n)\le\tfrac13-\delta\ \text{ for all }n\ge n_0,\ \text{ then }\
+  B_{n+1}\le\bigl(1-\tfrac34\delta\bigr)B_n,\ \text{ so }\ \sum B_n<\infty,
+\]
+and $\mu$ has an $L^2$ density. It must be said plainly what this is and is not. By \eqref{eq:blocks},
+$\rho_n=\tfrac43B_{n+1}/B_n-1$ identically, so the hypothesis is the conclusion in other coordinates: it
+is an equivalent reformulation, not a reduction, and the statement above reads ``if the blocks decay
+geometrically then the series converges''. Three further limits belong with it. It is sufficient only
+--- $B_n=n^{-2}$ is summable with $\rho_n\to1/3$ and no $\delta$, so a failure of the hypothesis refutes
+nothing. Only the real part is needed, so bounding $|c(n)|$ instead is strictly harder than the criterion
+it would establish. And it targets $L^2$, which is strictly stronger than absolute continuity, so $\mu$
+could be absolutely continuous with $\sum B_n$ divergent.
+
+What survives is worth having anyway, because the reformulation gives $\rho_n$ a meaning the block ratio
+does not wear on its face: it is a windowed Fourier coefficient, so ``the blocks decay'' becomes ``the
+mass of $Q^2dv$ on $[(3/2)^n,(3/2)^{n+1})$ is not aligned with the phase $v\bmod\tfrac23$''. A windowed
+equidistribution statement is a legitimate proof target even when it is equivalent to its conclusion, and
+it is a target of a different shape from anything else in this note.
+
+Measured out to $u=1.5\cdot10^6$ --- thirty-four active cosine factors --- $|c(n)|$ has mean $0.112$ over
+$n\ge20$ and mean $0.080$ with maximum $0.115$ over $n\ge28$. Reproduced here independently at
+$n=28,30,32$: $0.0386$, $0.1151$, $0.0700$, with grid spacings $h=1/16$ and $h=1/48$ agreeing to five
+decimals and $B_n$ moving by $10^{-12}$, so the quadrature is converged and the discretisation failure
+that produced the spurious $1.335$ above is absent here.
+
+The right way to test a statistic like this is not a standard error but a control at parameters whose
+answer is known, and it passes. At $\lam=1/\varphi$, a Pisot number where $\mu$ is singular and
+$\sum B_n$ must diverge, the same construction over the same range gives mean $\rho=+0.2404$ against its
+own critical value $+0.2361$, with $B_n$ flat to rising and $\rho_n$ stable to eight digits under grid
+refinement --- the statistic reads criticality to three digits where criticality is the truth. At
+$\lam=2^{-1/2}$, a Garsia number with a bounded density, it gives mean $\rho=-0.4991$ and twenty-six
+$e$-folds of decay. At $2/3$ it gives mean $\rho=-0.0231$ with $6.3$ $e$-folds, sitting with the
+convergent case and $0.356$ below its own critical value. So the statistic is not blind, and that control
+is worth more than any variance estimate computed inside a single deterministic curve.
+One limitation outranks the others and should close this section, and it is worse than it first appears.
+Every statistic here has been given standing by the same two controls: $\lam=1/\varphi$, where the measure
+is singular, and $\lam=2^{-1/2}$, where it has a bounded density. Both are algebraic, and the singular one
+is Pisot --- and by Erd\H os's theorem Pisot implies singular, while no non-Pisot singular parameter in
+$(1/2,1)$ is known at all. So the controls demonstrate that these statistics detect \emph{Pisot}
+criticality and nothing else.
+
+Even that overstates them. At a Pisot $\lam$ the criterion is forced by an identity rather than detecting
+anything: the cell at $\xi=1$ has $\|\lam^{-m}\|\to0$ geometrically, so its total cost is bounded while
+its width is of order $\lam^{K}$, and that single cell already gives $I_K\ge c\,(2/\lam)^{-K}$, which is
+exactly the threshold. The observed near-equality at $\varphi$ --- failing by $0.0037$ --- is therefore a
+structural lower bound wearing the costume of a validation, and its flatness is the flatness of one
+localised cell rather than of an extensive sum. At $2/3$ the same quantity wobbles by $0.028$ per step,
+fifty times larger, because there the sum lives on hundreds of cells. The control tells us nothing about
+the measurement at issue.
+
+So if $\mu$ at $2/3$ is singular, it is singular for a reason with no exhibited example, against which the
+measured power of every null in this note is not merely unknown but, as the subject stands, unmeasurable.
+That $2/3$ sits with the absolutely continuous case is a statement that it is not Pisot-like, which was
+never in doubt --- and $2/3$ also sits exactly at the boundary $3\lam=2$, where a smoothed escape rate
+equals $\lam$ identically, so at that one parameter a correct computation and a broken one agree.
+
+\paragraph{One register, too small.} The obstructions above were found separately and read as a list; they
+are one arithmetic fact. Everything in the product is a function of $\xi$, hence of the pair
+$(A_m,x_m)$ with $A_m=\operatorname{round}((3/2)^m\xi)$. The parity bit is $A_m\bmod2$, while the depth-$k$
+phase history is determined by $x_m$ together with $A_m\bmod3^k$, since
+$x_{m-1}=\{((2A_m\bmod3)+2x_m)/3\}$ and that iterates. So the entire coupling between bit and history is
+governed by whether $A_m$ equidistributes modulo $2\cdot3^k$ --- and on the octave $A_m$ ranges over only
+about $(3/2)^m$ consecutive integers.
+
+Three consequences follow, and they are the three obstructions. The free window is exactly
+$k<m\log(3/2)/\log3=0.36907\,m$, the depth at which $3^k$ still fits inside the available range: that is
+the constant measured earlier, now explained rather than observed. The full history wants $3^m$ residues
+against $(3/2)^m$ supplied, a shortfall of $2^m$; and $\log3-\log(3/2)=\log2$ exactly, which is
+simultaneously the gap between the entropy rate of orbit-sampled digit statistics and that of the leaf
+strings the criterion runs over. Against the budget, $\log2/\log(4/3)=2.4094$, so the deficit is not
+marginally too large but larger by a factor of two and a half, in every formulation.
+
+One quantity should not be folded into that. Dropping the parity constraint does not merely admit $2^K$
+times as many strings: the parity-dropped sum with the exact cost is $(3/2)^K$ identically, a rate of
+$0.40547$, so the loss is $0.40547-\Phi\approx0.7255$ rather than $\log2=0.69315$. The extra $0.032$ is the
+weight bias of the admitted strings, which carry more than the true ones. The information deficit is
+exactly $\log2$; the relaxation penalty is that deficit plus a bias, and calling them one number is tidier
+than the arithmetic allows.
+
+What this bounds, and what it does not, is worth being exact about. It bounds any argument that
+\emph{decouples} the bit from the deep history: such an argument asks $A_m$ to equidistribute past its own
+range and pays $\log2$ per step, whatever its cost model, cost order or automaton size. It says nothing
+against an argument that keeps them coupled and estimates the actual correlation, whose measured
+per-step defect is about $0.048$ --- far below what any worst-case relaxation must pay. That remaining
+route is the decoupling statement for a leaf of the $2$-adic solenoid, and the deficit explains precisely
+why it cannot be reached by relaxation, only by genuine equidistribution input about $(3/2)^m$.
+
+Two structural cautions belong beside it, both established here on a second operator. The killed transfer
+operator for $x\mapsto\lam x+\eta$ on its trapping window has escape rate exactly $\lam$ once
+$3\lam\le2$, because each branch preimage has length $4\lam$ and fits inside the window; so any smoothed
+version of the problem returns the critical coincidence by arithmetic, at every resolution rather than in
+a limit. An exact-overlap discretisation confirms it, giving $\lam$ flat to six digits at grids of $500$
+through $32000$ --- and a floating-point particle filter converges confidently to
+$0.618014\pm0.000039$, which is $\lam$ to five places, erasing the $0.37\%$ signal it was built to see,
+while the exact filter recovers $0.6202986$. Smoothing does not degrade the answer gradually; it replaces
+it. That is the same failure as the spurious $1.335073$ above, in a different operator, now with an
+analytic reason behind it. (An earlier draft reported a grid ladder drifting away from the truth; that
+does not reproduce, and the correct statement is the stronger one just given.)
+
+There is a second reason to read the escape rate at $2/3$ narrowly. That parameter sits exactly at the
+boundary $3\lam=2$, where the smoothed rate equals $\lam$ identically, so a correct computation and a
+broken one return the same value there; and $\rho=\lam$ is the first-moment count already known to be
+exactly critical, since the cells per unit and the mean cell length multiply to one at every level. A
+Pisot-sized excess is therefore excluded at $2/3$ by a statistic validated on Pisot parameters, at a
+place where Pisot behaviour was already ruled out by the dissociativity above. It is a consistent
+reading, not an informative one.
+
+Its limit is exact and should be stated as such. The Pisot control has no transient --- $\rho_n$ is
+essentially constant from the first block --- so it establishes that the statistic detects criticality
+that is present from the start, and says nothing about a measure which mimics decorrelation for thirty
+scales and then re-correlates. What the measurement excludes is therefore the onset of re-correlation
+before $n\approx34$; onset after that is untouched, and no finite ladder of blocks can touch it. An
+earlier draft of this section reported a drift in the segment means and exponents as the signature such a
+tail would leave. That is withdrawn: the segments were nested, one block carries about sixty per cent of
+the apparent gap, and on disjoint windows there is no gradient at all.
+There is a structural reason $|c(n)|$ is small, and it is the same arithmetic that runs through the rest
+of this note. Rescale the block by $v=(3/2)^nw$ with $w\in[1,3/2)$. Since
+$Q\bigl((3/2)^nw\bigr)=\prod_{i=1}^{n}\cos\bigl(\pi(3/2)^iw\bigr)\,Q(w)$, the integrand becomes a Riesz
+product of ratio $3/2$,
+\[
+  \prod_{i=1}^{n}\cos^2\bigl(\pi(3/2)^iw\bigr)
+  =\prod_{i=1}^{n}\tfrac12\bigl(1+\cos(2\pi(3/2)^iw)\bigr),
+\]
+weighted by $Q(w)^2$, and $c(n)$ is its normalised Fourier coefficient at frequency $(3/2)^{n+1}$. That
+frequency is not in the spectrum. The coefficients live on $\sum_{i\le n}\eps_i(3/2)^i$ with
+$\eps_i\in\{0,\pm1\}$; were $(3/2)^{n+1}$ such a sum, clearing denominators would give
+$3^{n+1}=\sum_{i\le n}\eps_i3^i2^{\,n+1-i}$, and reducing modulo $3$ kills every term but $i=0$, forcing
+$\eps_0=0$; dividing by $3$ reproduces the same equation one degree lower, so every $\eps_i$ vanishes and
+$3^{n+1}=0$. An exhaustive search over $\{0,\pm1\}^{n+1}$ confirms it for $n\le9$.
+
+So $c(n)$ would be exactly zero on a full period, and what the block measures is only the leakage from
+the finite window $[1,3/2)$ and the weight $Q(w)^2$. That is why the measured values sit near $0.08$
+rather than near $1$. It is an explanation and not a bound, and the gap between the two is the one this
+note keeps arriving at: expanding the product into its $3^{n+1}$ characters and estimating the window
+transform against each overshoots by exactly $2^n$, since the coefficients have total variation
+$\prod(1+\tfrac12+\tfrac12)=2^{n+1}$ against a mean of $1$. Nor does exactness help by itself --- the
+distance from $(3/2)^{n+1}$ to the nearest attained sum is
+$|3^{n+1}-\sum\eps_i3^i2^{\,n+1-i}|/2^{\,n+1}$, whose numerator is a nonzero integer and so at least one,
+which bounds the distance below only by $2^{-(n+1)}$. Lines may therefore approach the target
+exponentially closely, and a proof must count how many do, not merely observe that none is exact. That is
+the same distinction already drawn for the dissociateness lemma above.
+That count can be done exactly, and it settles the matter against this line of attack. Writing
+$S_\eps=\sum_{i\le n}\eps_i3^i2^{\,n+1-i}$, the number of $\eps\in\{0,\pm1\}^{n+1}$ with
+$|3^{n+1}-S_\eps|\le D\,2^{\,n+1}$ --- that is, with frequency distance at most $D$ --- is, by
+meet-in-the-middle at every $n$ from $4$ to $16$ and every $D\in\{\tfrac12,1,2,4\}$, exactly
+\[
+  N(n,D)=D\,2^{\,n},
+\]
+with the smallest attained integer gap equal to $1$ throughout, so the nearest line lies at frequency
+distance $2^{-(n+1)}$. And $D2^n$ is precisely what uniform spreading predicts: $3^{n+1}$ values spread
+over a range of about $4\cdot3^{n+1}$ have density $\tfrac14$ per integer, giving
+$2D2^{\,n+1}/4=D2^{\,n}$. The measured count matches to the last digit at every $n$.
+
+So there is no arithmetic conspiracy near this frequency and no Diophantine obstruction to be found; the
+sum-set is as evenly spread as a random set of the same size, and the difficulty is density rather than
+arithmetic. The consequence is negative and worth stating plainly: counting cannot prove the criterion.
+Any estimate that treats the leakage line by line in absolute value sums $2^n$ terms of size $O(1)$ and
+fails by exactly the factor that closes every linearising route in this note --- the same $2^n$, reached
+now from a third direction. What the criterion needs is cancellation among the leakage phases. That
+leaves it a genuine reformulation of the question rather than a way around it, which is the honest
+description of everything in this section.
+\paragraph{Erd\H os--Kahane at a fixed parameter: the count is an identity, but the route is live.} The one remaining route
+that does not linearise survives, but not in the form it is usually given: its counting step is empty here,
+and what carries any decay is the per-cell charge instead. The apparatus is exact arithmetic here. With $x_n=(3/2)^{n-N}\xi$,
+$A_n=\operatorname{round}(x_n)$ and $d_n=x_n-A_n$,
+\begin{equation}\label{eq:ek}
+  e_n:=2A_{n+1}-3A_n=3d_n-2d_{n+1}\in\{0,\pm1,\pm2\},\qquad e_n\equiv A_n\bmod 2,
+\end{equation}
+checked in rational arithmetic over $12{,}000$ steps without a failure, so the digit string of $\xi$ is
+the itinerary of a full-branch expanding map of slope $3/2$ and $\xi$ is its initial condition.
+
+The engine of the method is that the number of admissible strings times the parameter measure carried by
+each tends to zero. Over $\lam$ that measure is exponentially small. At a fixed $\lam$ it is not: the
+number of cells per unit of $\xi$ is $\sum_m(2/3)^m=3$ exactly, independent of $N$, the mean cell length
+is $1/3$, and cylinder measure times contraction is $(3/2)^N(2/3)^N=1$. Three independent derivations
+agree, so the product is exactly $1$ and the counting step does no work at any $N$. The mechanism is that
+$\xi$ enters its own orbit through a single linear coordinate, $dx_n/d\xi=(3/2)^{n-N}\le1$, so the
+level-$n$ constraints are nested and intersect to the tightest one; over $\lam$ they are transversal and
+multiply. Rationality of $1/\lam=3/2$ is what supplies the exact finite alphabet in \eqref{eq:ek} and
+simultaneously empties the count.
+
+Two numerical facts are worth keeping. Membership in $L^2$ needs a cost exceeding
+$\tfrac12\log(3/2)=0.20273$ nats per step; the support-only version of the method delivers $0.1832$, and
+a version aware of $|e_n|$ delivers a mean of $0.304$ --- half again what is required. And yet the bound
+it actually yields, $R\,\mathbb E[e^{-2\,\mathrm{cost}}]$, \emph{grows}, as $R^{+0.126\pm0.027}$; the
+support-only version grows as $R^{+0.34}$; the truth decays as $R^{-0.8}$. Using $e^{-2\mathbb E[\cdot]}$
+in place of $\mathbb E[e^{-2\cdot}]$ is Jensen's inequality in the wrong direction, and here it reverses
+the sign of the conclusion rather than merely weakening it: the annealed average is dominated by the rare
+strings that avoid $|e_n|=2$ entirely. It is worth recording as a general caution, since the mean cost
+comfortably clears the target while the method fails.
+
+What that does \emph{not} establish is that the route is closed, and an earlier draft of this paragraph
+said it was. The claim was that any cost function good enough to decay must encode the cylinder geometry
+and would therefore be evaluating the integral rather than counting strings. Exact cell enumeration
+refutes it. Charging each maximal run of nonzero $e_n$ its own constrained optimum --- a relaxation, since
+dropping the couplings between runs only raises the maximum and so lowers the charge, giving a valid
+majorant, audited directly at $+1.1\cdot10^{-13}$ over all $82{,}738$ runs at $N=21$ --- produces a bound
+that \emph{decays}, at $R^{-0.28}$ to $R^{-0.31}$, falling monotonically at every $N$ from $11$ to $30$
+and by a factor of $9.1$ over nineteen octaves. On the identical machinery the per-symbol cost grows at
+$R^{+0.11}$, so the test could plainly have come out the other way; and the exact enumeration removes the
+sampling caveats that attended the earlier Monte Carlo estimate of the same growth.
+
+The crossover sits at order two. Charging only disjoint blocks of at most two consecutive jump symbols
+already decays, at $R^{-0.15}$, and order six is within two per cent of the full cost. That cost is a
+strictly local, finite-order, purely combinatorial function of the digit string: it discards every
+coupling between runs and everything at the roughly one third of indices carrying $e_n=0$, and at $N=25$
+it sits some $3\cdot10^5$ above the true octave energy while decaying at less than half the true rate.
+It is not the integral in disguise.
+
+So the route is live, and the obstruction is not where it appeared to be. It is not the counting step ---
+that really is an identity, and no variant will draw decay from it --- but the free energy of the digit
+process. What a theorem needs here is a rigorous large-deviation estimate for the run-pattern statistics
+of the actual $\times3/2$ orbit, and that process is demonstrably not independent: an independent model
+misses the measured per-symbol exponent by about $0.05$ nats per step, in the direction and of the size
+that the measured over-dispersion of the $|e_n|=2$ counts predicts. A numerically decaying bound over
+nineteen octaves is a measurement, not a proof, and these are nested octaves rather than independent
+observations, so what carries the sign is the strict monotonicity rather than any standard error.
+
+
+
+\paragraph{The recursion closes on the integers, and that is why it cannot help.} Write
+$T(f)=\int_{\mathbb R}\cos(2\pi fv)Q(v)^2dv$. The self-similarity $Q(v)^2=\cos^2(\pi v)Q(2v/3)^2$ together
+with $\cos^2(\pi v)=\tfrac12+\tfrac12\cos2\pi v$ gives an exact three-term relation,
+\begin{equation}\label{eq:trec}
+  T(f)=\tfrac34T\bigl(\tfrac{3f}{2}\bigr)+\tfrac38T\bigl(\tfrac{3(f+1)}{2}\bigr)
+       +\tfrac38T\bigl(\tfrac{3(f-1)}{2}\bigr).
+\end{equation}
+Since $T(f)=2\rho(2f)$ and $\rho=\nu*\nu$ is supported in $|x|\le6$, $T$ vanishes for $|f|>3$; the
+three-term step at an integer reaches only $0,\tfrac32,3,\tfrac92$, and that truncation closes the
+system. Taking $f=0,1,2,3$ in turn gives $T(3/2)=T(0)/3$, then $T(1)=\tfrac58T(0)$, then
+$T(2)=\tfrac18T(0)$, with $T(3)=0$ consistent. Measured on the direct integral to $M=10^5$:
+$0.62500006$, $0.33333349$, $0.12500006$, and $T(3),T(7/2),T(4)$ zero to $10^{-15}$. The points that do
+not close look nothing like rationals, $T(1/2)/T(0)=0.88359189$ and $T(5/2)/T(0)=0.02328172$, which is
+what the escape into quarters predicts.
+
+In terms of the autocorrelation itself, with $A(s)=3T(3s)$, these read
+$A(1/3)=\tfrac58A(0)$, $A(1/2)=\tfrac13A(0)$, $A(2/3)=\tfrac18A(0)$ and $A(1)=0$. The middle one is the
+half-shift identity; the outer two came from the same recursion. The last is free, since $f$ lives on
+$[0,1]$, and so serves as a check on the correspondence rather than as a result. A second check needs no
+computation at all: $A$ is even, supported in $[-1,1]$, and integrates to $(\int f)^2=1$, so
+$\int_0^1A=\tfrac12$ exactly, and the four predicted values $1.206310,0.753944,0.150789,0$ give
+$0.502629$ under the trapezoid rule at $h=1/3$ --- inside its own error on four points, and overshooting
+as it must for a convex $A$. All four are confirmed at once by a constraint none of them was derived
+from.
+
+None of it can settle the question, and the reason is structural rather than technical.
+Equation~\eqref{eq:trec} is linear and homogeneous in $T$, so it determines $T$ up to a single scalar,
+and that scalar is $T(0)=\|f\|_2^2/3$ --- the unknown. Every identity in this family constrains the shape
+of the autocorrelation and none constrains its scale; and each presupposes what it would prove, since
+were $\|f\|_2^2$ infinite the relations would read $\infty=\infty$. The measure's defining property is
+self-similarity, self-similarity generates homogeneous linear relations, and finiteness of the $L^2$ norm
+is exactly the inhomogeneous information that self-similarity cannot supply. That is the same fact as
+the observation running through this note, that every closed route ends in a phase count: the phases are
+what the functional equation does not carry. A proof must inject something that is not a linear
+identity --- the arithmetic of $(3/2)^m$, or a counting argument on the nonnegative product.
+
+
+
+
+A numerical caution belongs with \eqref{eq:birkhoff}, since it cost an hour. Generating the orbit by
+iterating $\theta\mapsto\tfrac32\theta\bmod1$ in floating point multiplies the error by $3/2$ at every
+step and destroys the fractional part: done that way the right-hand side reads $0.045,0.097,0.186,0.341,
+0.614,1.100$ at $K=6,\dots,16$, growing, against a true value near $0.05$. Computing each
+$\theta_m=\theta(3/2)^m\bmod1$ in closed form instead reproduces the direct value exactly. A chaotic map
+must not be iterated numerically when its orbit is available in closed form.
+
+\paragraph{What the peak count would have to supply.} Being outside the shape is not the same as being
+easy, and the requirement can be written down. Cover $[1,2]$, bound $P_K$ on each piece, and sum height
+against measure. A point meeting a fraction $\alpha$ of the $K$ conditions $\|t\lam_m\|<\delta$ carries
+height about $2^{\alpha K}$; if those conditions behaved independently, with $p_0=2\delta$, the measure
+of the set meeting at least $\alpha K$ of them would be $e^{-KD(\alpha\|p_0)}$, and the level would
+contribute $\bigl(2^\alpha e^{-D(\alpha\|p_0)}\bigr)^K$. Optimising over $\alpha$ gives the log moment
+generating function exactly,
+\[
+  \sup_\alpha\bigl[\alpha\log2-D(\alpha\|p_0)\bigr]=\log(1+p_0),
+\]
+so the independence estimate is $(1+2\delta)^K$ --- which is just the first moment
+$\mathbb E\,2^{\#\text{met}}$, and exceeds one for every threshold. Numerically $1.20^K$, $1.30^K$,
+$1.40^K$ at $\delta=0.10,0.15,0.20$. No choice of $\delta$ rescues it.
+
+Against that, the measured carrier has measure $0.7119^K$ and height $1.4046^K$, whose product is $1$ by
+construction, being the flatness of $I_K$ rather than an independent fact. The gap between $0.7119$ and
+the independence values $0.80$, $0.9165$, $0.9798$ at $\alpha=\tfrac12$ is what a proof would have to
+supply: the conditions $\|t\lam_m\|<\delta$ must be shown \emph{positively correlated at a definite
+rate}, not merely counted. That is the honest price of the route that survives, and it is why it runs
+into the distribution of $(3/2)^m$ rather than around it.
+
+A caution applies to all of these increment statistics, and to several figures earlier in this note.
+There is a transient below $K\approx25$, and the range a laptop reaches in reasonable time lies wholly
+inside it. Measured here, the log-drift of $I_K$ per step is $-0.0165$ over $K=7,\dots,26$ and $-0.0247$
+over $K=15,\dots,26$, against $+0.00009$ over $K=25,\dots,37$ from the longer run: two regimes, not a
+disagreement. The same split explains the standard deviation of the relative increments, $0.089$ to
+$0.137$ below $K=26$ against $0.071$ above $K=20$. It is also the common cause of the trend readings
+withdrawn above --- the stride fit, the sign-turning window fits, the declining correlation ratio, and
+the dispute over whether the correlation accumulates. None of those was a property of the object. Any
+statement here fitted below $K=25$ describes the transient.
+
+The mass has a fixed carrier. At $K=20,24,28$ the same peak locations recur --- $1.869287$, $1.878192$,
+$1.871758$, $1.881893$, $1.622273$ --- with heights growing like $1.40^K$ and widths like $(2/3)^K$,
+and the set is closed under $t\mapsto2t/3$, the ratio-$3/2$ dynamics acting on it. The top $10^{-3}$ of
+Lebesgue measure carries $55\%$ of the integral at $K=20$, $80\%$ at $K=26$ and $95\%$ at $K=32$. So
+$A_K=O(1)$ would follow from counting those peaks and bounding height against width, which is a concrete
+programme rather than a hope. These measurements are an agent's, on its own code, and their adversarial
+check had not returned when this was written.
+
+They do cohere, and the check is not circular, because one of the four numbers is forced rather than
+measured. Height $1.4046^K$ against width $(2/3)^K$ gives $0.9364^K$ per peak, so a flat integral
+requires the number of peaks to grow like $1.0679^K$; that count was never measured. It then predicts a
+carrying set of measure $(2/3\cdot1.0679)^K=0.7119^K$, namely $1.1\cdot10^{-3}$ at $K=20$,
+$1.5\cdot10^{-4}$ at $K=26$ and $1.9\cdot10^{-5}$ at $K=32$ --- against the reported concentration, where
+the top $10^{-3}$ of Lebesgue measure carries $55\%$, $80\%$ and $95\%$ at those same three values, and
+the top $10^{-5}$ carries $31\%$ at $K=32$. The predicted carrier crosses $10^{-3}$ exactly where the
+reported share stops being partial, and at $K=32$ sits at about twice $10^{-5}$, which is what a $31\%$
+share of it wants. Four independently produced quantities, one of them derived from the other three,
+agreeing at three depths.
+
+It is worth seeing what a peak is, because it says where the counting programme leads. A factor is near
+its maximum when $t(3/2)^m/3$ is near an integer, so a tall peak is a $t$ at which many of those
+quantities are simultaneously small. At the reported top peak $t=1.869287$, fourteen of the first
+twenty-eight are within $0.15$ of an integer, against eight at the generic point $t=\tfrac32$; and
+$1.4046^K=2^{0.4903K}$ is exactly what half the factors contributing a two apiece would give. The
+threshold is arbitrary and the reading is indicative rather than established --- a second listed peak has
+only five of twenty-eight within $0.15$ and is still tall --- but the shape is clear enough. Counting the
+peaks means counting the $t\in[1,2]$ for which $\|t(3/2)^m/3\|$ is small for a positive proportion of
+$m\le K$, and that is a question about the orbit of $(3/2)^m$ modulo one: Mahler's problem, where even
+density is unknown. The programme is concrete, and it is concrete about something hard.
+
+One consequence deserves emphasis because it retires a control used throughout this note. Writing the
+factors as $1+c\cos$, the level and volatility of $A_K$ move smoothly through $c=1$. At
+$c=0.6,0.8,0.9,0.95,0.98,1$ the means are $0.498$, $0.250$, $0.140$, $0.092$, $0.067$, $0.052$ and the
+increment standard deviations $0.0035$, $0.017$, $0.036$, $0.055$, $0.073$, $0.090$. The fair coin is not a phase
+transition for this quantity, so a proof uniform in $c$ would be correct, and the biased-coin
+substitution --- decisive elsewhere here --- carries no information about $A_K$ at all.
+
+The limitation is worth stating in full, because it is permanent. Boundedness and logarithmic growth
+cannot be told apart here by computation. Over $K=6$ to $40$ the quantity $\log K$ spans a factor
+$2.06$, and the observed oscillation spans $2.12$: the data has exactly the amplitude a logarithm would
+have. Separating the two would need $K$ of order $1600$, so $R$ of order $10^{280}$. Every numerical
+statement in this note about $A_K$ staying bounded is therefore consistent with $A_K\sim c\log K$, which
+would sink the route, and no amount of further computing will change that. The freedom to move the window is real but not
+needed: splitting the octave into $m$ blocks and letting each window slide within its block, the worst
+block's best constant is $0.09$ at $m=4$ and $0.21$ at $m=16$, both flat in $K$ across $K=10$ to $30$,
+so a cover with a bounded constant exists --- but the direct position is already better than any of them.
+
+\paragraph{No window can remove that growth.} Since only an upper bound on $E(R)$ is needed and
+$F_K\ge0$, the sharp octave indicator may be replaced by any nonnegative majorant, and a smooth one has
+a kernel decaying like $|u|^{-p}$ instead of $|u|^{-1}$. It is natural to hope the geometric growth is
+an artifact of the sharp window. It is not, and the reason is visible without choosing a window. Let
+$\mathrm{Cum}(u)=\sum_{0<m\le u2^K}c(m)$ be the weight the kernel meets inside $|u|$. Exhaustive
+enumeration gives $\mathrm{Cum}(u)(4/3)^{-K}$ equal to
+$0.15156,0.17050,0.18577,0.19095,0.19514$ at $u=\tfrac14$ and
+$0.74250,0.77842,0.78679,0.79493,0.79931$ at $u=1$, for $K=6,8,10,12,14$: a fixed profile, with the
+successive ratios converging to $(4/3)^2=1.7778$ at every $u$. The profile is moreover linear in $u$,
+so the weight density is flat across the block at rate $(4/3)^K$ per unit of $u$, and the weight already
+grows like $(4/3)^K$ inside $|m|\le\tfrac142^K$ alone. Consequently $\sum_mc(m)|G(m/2^K)|\asymp
+(4/3)^K\int_0^2|G|$ for any kernel at all: fast decay does not help, and neither does vanishing to high
+order at the origin, since the mass is not concentrated there. The only escape would be a kernel whose
+$L^1$ norm on the block vanishes, and such a function does not majorise the indicator.
+
+\begin{sloppypar}
+What that closes, and what it does not, needs stating carefully, since the two are easily conflated.
+The absolute sum bounds $\sup_{k_0}|\mathrm{Err}|$, and that supremum genuinely does grow
+like $(4/3)^K$ --- so no term-by-term absolute bound on a nonnegative majorant can work, at any
+$\lam\in(1/2,1)$. But the lane needs one window, $k_0=R$, and there the quantity is flat: computing
+$\mathrm{Err}/L$ directly from $\sum_{k\in W}F_K(k)$, with no character expansion at all, it stays
+between $-0.916$ and $-0.959$ at every even $K$ from $6$ to $30$ --- $-0.936$ at $K=6$, $-0.916$ at
+$K=12$, $-0.955$ at $K=20$, $-0.957$ at $K=30$, the last on a window of $191\,751$ terms. The $(4/3)^K$ enters at the triangle
+inequality and is not in the lane. So what is closed is every argument that discards the phases; an
+argument that keeps them and uses the octave position is not touched by any of this.
+\end{sloppypar}
+
+That closure reads a linear profile as the signature of an $L^2$ density, so it is worth checking that
+the reading discriminates rather than always returning the same answer. Run the same estimator on a
+measure known to be singular: the middle-thirds Cantor measure, of correlation dimension
+$\log2/\log3=0.6309$. At radii $0.05,0.02,0.01,0.005,0.002$ the ratio $\mathbb P(|D|\le r)/r$ is
+$2.398,2.409,2.411,2.413,2.414$ for $\mu$, flat to $0.7\%$ and converging to $2\|f\|_2^2=2.4126$, and
+$2.86,3.87,5.54,6.64,9.30$ for the Cantor measure, growing without settling, with local exponent
+$0.649,0.654,0.628,0.643,0.641$ against the predicted $0.6309$. The estimator separates them cleanly,
+so the linear profile is a real signature and not an artifact. The ratio is also much the sharper of
+the two tests at these radii: for $\mu$ the naive exponent $\log\mathbb P/\log r$ reads
+$0.708,0.775,0.809,0.834,0.858$, still well short of $1$, because $\mathbb P\sim cr$ with $c\ne1$ makes
+that estimator converge only logarithmically. A reader who tested only the exponent would conclude the
+correlation integral is sublinear, and be wrong.
+
+A sharper control is available inside the same family, and it is the one to use. Let
+$Y_p=\tfrac13\sum_kB_k(2/3)^k$ with $\mathbb P(B=1)=p$. Then
+$\hat\mu_p(3\xi)/\hat\mu_p(2\xi)=(1-p)+pe^{-2\pi i\xi}$, which equals $1$ at every integer, so
+\eqref{eq:fe} holds for \emph{every} $p$, while for $p<0.14028$ the measure is singular, its dimension
+$H(p)/\log(3/2)$ falling below $1$. The functional equation therefore carries no information about
+absolute continuity by itself, and any argument that uses only \eqref{eq:fe} is refuted by substituting
+$p=0.1$. That substitution is the right test for everything in this note, because it changes nothing
+about the ratio, the lattice, or the period --- only the bias. Applying it to the correlation-integral
+reading, at depth $K=12$ the ratio $\mathbb P(|Y_p-Y_p'|\le r)/r$ across
+$r=0.05,\dots,0.002$ is
+\[
+  \begin{array}{lll}
+    p=0.5    &2.398,2.410,2.414,2.413,2.404 &\text{flat}\\
+    p=0.2113 &3.81,4.39,4.83,5.19,5.64      &\text{growing}\\
+    p=0.10   &7.82,12.77,18.19,25.36,41.15  &\text{growing sharply}
+  \end{array}
+\]
+so the reading separates $p=1/2$ from the singular case at the same ratio and the same lattice. It also
+carries a warning for the second moment below: $p=0.2113$ is exactly the auxiliary bias that appears
+there, and its correlation integral is visibly not linear at this depth.
+
+The profile also names itself, which says what the growth really is. Since $c(m)=2^{K+1}\mathbb
+P(V=m)$ below, $\mathrm{Cum}(u)=2^K\,\mathbb P\bigl(0<|3(Y-Y')|\le u(2/3)^K\bigr)$, so a linear
+correlation integral forces $\mathrm{Cum}(u)\sim\tfrac23\|f\|_2^2\,u\,(4/3)^K$. Measured at $u=1$ the
+sequence extrapolates geometrically to $0.804446$ against $\tfrac23\|f\|_2^2=0.804207$. The identity
+$c(m)=2^{K+1}\mathbb P(V=m)$ itself holds exactly, to $0$ in floating point over all $3^{K+1}$ patterns
+at $K=3,5,7$. So the $(4/3)^K$ is not an obstruction sitting between us and the theorem: it is the
+theorem, seen in the size of the absolute sum, and a proof must cancel exactly that much and no more.
+
+The circle closes exactly here, and it is worth seeing how. The weight is a probability: $c(m)=2^{K+1}
+\mathbb P(V=m)$ where $V=\sum_i\eta_i2^i3^{K-i}$ with $\eta_i$ independent, taking $0$ with probability
+$\tfrac12$ and $\pm1$ with probability $\tfrac14$. But $\eta=B-B'$ for independent fair bits, so
+\[
+  V/3^K=\sum_i\eta_i(2/3)^i=3(Y-Y'),\qquad Y,Y'\ \text{independent copies of}\ \mu .
+\]
+Checked against the exact law at $K=9$ and a Monte Carlo for $3|Y-Y'|$: the two agree to three digits at
+every radius from $0.5$ down to $0.02$. So the local limit theorem the reformulation asks for is a
+statement about $\mathbb P(|Y-Y'|\le r)$, the correlation integral of $\mu$, and the bound it needs is
+$O(r)$ exactly, which is $\mu\in L^2$. Measuring that integral from the exact law at $K=11$, the ratio
+$\mathbb P(|3(Y-Y')|\le r)/r$ is $0.7702,\,0.7969,\,0.8021,\,0.8038,\,0.8042$ at
+$r=0.5,\,0.2,\,0.1,\,0.05,\,0.02$, flat until the truncation scale $(2/3)^{11}=0.0116$ is reached. For an
+$L^2$ density the slope should be $\tfrac23\|f\|_2^2=\tfrac23\cdot1.206310=0.80421$, which is the
+measured value to four digits: the identification, the $L^2$ norm and the correlation integral all agree.
+A finer scan, $400$ radii spaced logarithmically at $K=12$, gives $\mathbb P(|Y-Y'|\le r)/r$ with maximum
+$2.4154$ against the predicted $2\|f\|_2^2=2.4126$, and over $r<0.1$ the whole range of the ratio is
+$2.3702$ to $2.4154$, an oscillation under two per cent. Repeating at $K=14$, which reaches radii a factor of two finer, gives the same
+window $2.3702$ to $2.4139$. There is no sparse sequence of radii on which the ratio grows; whatever a
+counterexample would look like, it does not show here. The reformulation is therefore genuinely a change of coordinates
+and nothing more; but it is a change of coordinates in which the cancellation has a visible cause rather
+than being a coincidence among $2^{K+1}$ phases.
+
+The correlation integral has its own exact recursion, which is worth recording because it says where the
+linear behaviour comes from. Since $3(Y-Y')=\eta+2(Y-Y')'$ in law, with $\eta=B-B'$ independent of the
+copy, writing $C(t)=\mathbb P(|Y-Y'|\le t)$ and $M(t)=\mathbb P(|\,|Y-Y'|-\tfrac12|\le t)$ gives
+\[
+  C(u)=2\,C(2u/3)-\tfrac12M(u),
+\]
+which holds against the exact law at $K=11$ to one part in $10^4$ at every radius from $0.4$ down to
+$0.03$.
+Read downward it is a contraction. Writing $\kappa(u)=C(u)/u$ and $m(u)=M(u)/2u$, the same relation is
+\[
+  \kappa(2u/3)=\tfrac34\bigl(\kappa(u)+m(u)\bigr),
+\]
+verified to $10^{-4}$ at every radius from $0.4$ to $0.02$. So passing to smaller scales contracts by
+$3/4$ with $m$ as source, and $\kappa$ stays bounded if and only if $m$ does; the fixed point is
+$\kappa=3m$, and measured $\kappa\to2.4126$ against $m\to0.8042$, which is that relation to five digits.
+That fixed point is worth a second look, because it is the same statement as \eqref{eq:half} reached from
+a different direction, and it is what pins the factor $\tfrac12$ in the recursion. If $A$ is the
+autocorrelation density then $C(u)\sim2A(0)u$ and $M(u)\sim4A(\tfrac12)u$, so the linear limit of the
+recursion reads $2A(0)=\tfrac43\cdot2A(0)-\tfrac12\cdot4A(\tfrac12)$, that is $A(0)=3A(\tfrac12)$, which is
+\eqref{eq:half} exactly. Clearing denominators the law at depth $K$ lives on the lattice $3^{-(K+1)}$ and
+can be built by integer shift-adds; at $K=13$ this gives $C(u)/M(u)=1.500107$ at $u=0.005$, with
+$C(u)/u\to2.4132$ and $M(u)/u\to1.6087$ against the predicted $2\|f\|_2^2=2.412620$ and
+$\tfrac43\|f\|_2^2=1.608413$. The recursion written with $M$ in place of $\tfrac12M$ would force
+$C/M\to3$ and $A(0)=6A(\tfrac12)$, so the identity excludes it by a factor of two.
+The linear behaviour of $C$ is therefore driven entirely by the mass near the half-integer translate, and
+the question has moved rather than closed. The source itself satisfies a recursion involving further translates, and one can
+say exactly how badly the resulting system fails to close. Writing $C_a(u)=\mathbb P(|Y-Y'-a|\le u)$, the
+same computation gives
+\[
+  C_a(u)=\sum_{\eta}p_\eta\,C_{(3a-\eta)/2}(3u/2),
+\]
+so the translate moves by $a\mapsto(3a-\eta)/2$, which \emph{expands} by $3/2$. Starting from $a=0$ the
+reachable translates inside $[-1,1]$ number $3,7,15,31,\dots,2^{n+1}-1$ after $n$ steps, and they are
+exactly the dyadic rationals $j/2^n$: the orbit generates a dense set. The system over translates is
+therefore infinite-dimensional and dense, not finite, which is the structural reason the
+transfer-operator picture over translates does not close. Controlling $C$ at the origin requires
+controlling $\mu$ near every dyadic point at once.
+
+The system has a name once one passes to densities. Writing $A(a)=\int f(x)f(x+a)\,dx$ for the
+autocorrelation, $C_a(u)\sim2uA(a)$ as $u\to0$, and the translate recursion becomes a functional equation
+for $A$ alone:
+\begin{equation}\label{eq:auto}
+  A(a)=\tfrac32\sum_\eta p_\eta\,A\!\Bigl(\frac{3a-\eta}{2}\Bigr).
+\end{equation}
+Measured at $u=0.02$ and $K=13$ it holds to $7\cdot10^{-4}$ at every $a$ tried, and $A(0)=1.2043$ against
+$\|f\|_2^2=1.206310$. At $a=0$ the two outer terms coincide by symmetry and \eqref{eq:auto} collapses to
+$A(0)=3A(\tfrac12)$, which is exactly the half-shift identity \eqref{eq:half}: measured
+$A(0)/A(\tfrac12)=2.9930$. So \eqref{eq:half}, the family of relations after it, and the whole translate
+system are one equation read at different points, and the question is whether \eqref{eq:auto} admits a
+bounded solution, which is $f\in L^2$.
+
+Discretising the operator behind \eqref{eq:auto} on grids of $301$ and $601$ points gives a top eigenvalue
+of $0.99996$ with the next moduli near $0.76$ and $0.80$: eigenvalue one with a gap of about $0.2$, which
+is why the numerics converge so cleanly. It settles nothing, and the reason is worth stating, because it
+is the same trap as assuming a density: a finite grid imposes boundedness by construction, and the
+discretised operator is a nonnegative matrix whose Perron eigenvector exists whatever the continuum does.
+What the computation does say is that if a solution exists in a space where the discretisation converges,
+it is unique and stable.
+
+The eigenvalue is exactly one, not approximately. Applying the operator to the constant and integrating,
+the three branches contribute $\tfrac12,\tfrac14,\tfrac14$ after accounting for the mass that leaves
+$[-1,1]$, and the total is exactly $1$; the $0.99996$ above is grid error. So the constant functional is a
+left eigenvector at eigenvalue one, and $1$ lies in the spectrum unconditionally. This sharpens the
+statement of the problem as far as it will go: the autocorrelation \emph{measure} of $\mu$ always
+satisfies \eqref{eq:auto}, whatever $\mu$ is. What is open is only whether that measure has a bounded
+density.
+
+Iterating \eqref{eq:auto} on a grid of $4001$ points from the constant function converges in $200$ steps
+to a residual of $2\cdot10^{-9}$, and the normalised limit is $A(0)=1.2063$, $A(\tfrac14)=0.9225$,
+$A(\tfrac12)=0.4021$, $A(\tfrac34)=0.0749$, against the values $1.204,0.922,0.402,0.075$ measured from the
+law directly. In particular it returns $\|f\|_2^2=1.2063$, agreeing with the meet-in-the-middle value
+$1.206310$ to five digits: a fifth independent route to that number. The same caveat applies as above,
+that the grid supplies the boundedness the continuum question is about.
+
+That caveat can be tested, and it is the sharpest numerical evidence in this note. If the continuum fixed
+point were a singular measure, refining the grid would make its peak grow: the value at the origin would
+behave like $N^{1-d}$ for a local dimension $d<1$. Running the iteration at $N=501,1001,2001,4001,8001,
+16001$, a refinement by a factor of $32$, gives $A(0)/\!\int\!A$ equal to
+$1.206361,\,1.206323,\,1.206316,\,1.206312,\,1.206311,\,1.206311$, and the supremum equals the value at the
+origin throughout. It converges, to the meet-in-the-middle value $1.206310$ to six digits, rather than
+growing. This is not a proof, since the interpolation smooths at scale $1/N$ and a sufficiently slowly
+growing singularity would survive such a test, but it is the test one would run to look for one, and
+nothing appears.
+
+Counting the branching explains the constant that appears everywhere in this note. Of the three children
+of each translate, two stay inside $[-1,1]$ and one escapes, so the active set doubles at every step while
+the scale contracts by $2/3$; the product is $2\cdot\tfrac23=\tfrac43$. That is the same $4/3$ by which the
+size-only bound overshoots, the same $4/3$ separating $\tfrac12$ from $\tfrac23$ in the Riesz exponent,
+and the same $4/3$ in the allowance a window bound would be given. The routes are not failing for
+unrelated reasons: they are all reading one branching-times-contraction ratio that sits on the wrong side
+of one.
+
+\paragraph{A test function returns the autocorrelation.} The cleanest statement of why the majorant
+idea cannot work needs no truncation, no window shape and no counting. Since the $|\hat\mu(k)|^2$ are
+exactly the Fourier coefficients of the autocorrelation density $A$, for any $M:\mathbb Z\to\mathbb R$
+with enough decay,
+\begin{equation}\label{eq:testfn}
+  \sum_kM(k)|\hat\mu(k)|^2=\int_0^1A(t)\,\check M(t)\,dt,\qquad \check M(t)=\sum_kM(k)e(kt).
+\end{equation}
+So every nonnegative test function dominating $1_W$ returns an integral of $A$ against its own
+transform: it does not bound the correlation integral, it hands it back. Checked at $R=4096$ with an
+explicit raised-cosine majorant, the two sides agree to a relative $2\cdot10^{-12}$, and the series for
+$A$ returns $A(0)=1.206310$, a third independent route to $\|f\|_2^2$.
+
+The earlier version of this paragraph set the collapse threshold at $Q\asymp(3/2)^K$ and observed that
+$\min_{\eps\ne0}|\nu_\eps|=1$ for every $K\le22$, flat, while $(3/2)^K$ runs to $7482$; that verdict was
+right but its threshold was too generous, since efficiency forces $Q=dP\ge P/L=3\cdot2^K$, larger by
+$3(4/3)^K$. Dissociateness says no combination vanishes; it says nothing about how near zero one can
+come. One caution on the other side, since it was proposed and does not hold: there is no per-octave
+floor of $2\|f\|_2^2$ for majorant bounds. That would follow from $\int_{-d}^d\check M=M(0)\ge1$, but an
+octave window does not contain the origin, so domination gives no lower bound at $k=0$ --- measured,
+$M(0)=0$ for the majorant above, which nonetheless costs only a factor $1.59$ over $E(R)$ itself.
+Majorants are not lossy here; they are simply circular.
+
+\paragraph{A size-only bound cannot work.} Bounding $\mathrm{Err}$ by absolute values exceeds the
+requirement by a factor growing like $(4/3)^K$, matching $\sum_\eps c_\eps=2^{K+1}$ against a requirement
+of order $(3/2)^K$.
+
+\paragraph{How much cancellation there is.} Computing the signed $\mathrm{Err}$ exactly, two ways that
+share no code and agree to six digits:
+
+\begin{center}
+\begin{tabular}{lccccccc}
+\toprule
+$K$ & 3 & 5 & 7 & 9 & 11 & 12 & 13\\
+\midrule
+$\mathrm{Err}/L$ & $-0.867$ & $-0.978$ & $-0.949$ & $-0.936$ & $-0.925$ & $-0.917$ & $-0.938$\\
+bound$/L$ & $10.8$ & $26.0$ & $63.4$ & $140.2$ & $295.5$ & $422.7$ & $606$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The quantity a proof must bound above is flat at about $-0.93$, and negative, so the window sum falls
+below its main term. Over the eleven values its mean is $-0.926$ with standard deviation $0.038$, and a linear
+fit in $K$ has slope $-0.0046$ against a standard error of $0.0036$, so the trend is indistinguishable from flat;
+the window-to-period ratio averages $0.074$. The only available bound on it is off by a factor $646$ by $K=13$ and grows
+geometrically. Both methods are limited by the period and stop at $K=13$.
+
+\paragraph{The octave form is an equivalence, not a reduction.} (The symbol here is local: $\widetilde I_K$ denotes a different normalisation from the octave integral $I_K$ of the main text.) With $\widetilde I_K=\int_1^{3/2}P_K^2$, the bound
+$\widetilde I_K\le Cq^K$ with $q<2/3$ implies $\mu\in L^2$, and $\mu\in L^2$ implies $\widetilde I_K\le C(2/3)^K$ by a Fej\'er
+minorant. The substitution $y=(3/2)^Kx$ makes this visible in one line:
+\[
+  \widetilde I_K=(2/3)^K\int_{(3/2)^K}^{(3/2)^{K+1}}\prod_{i=0}^{K}\cos^2(\pi(2/3)^iy)\,dy,
+\]
+so $\widetilde I_K$ is $(2/3)^K$ times a Fourier energy over one octave. Checked to six figures at
+$K=6,10,14,18$.
+
+\paragraph{The spectral gap lands exactly on the threshold.} For the self-similar variable
+$D=\eps/3+(2/3)D'$ the composition operator $\mathcal C\varphi(t)=\sum_\eps p_\eps\varphi(\eps/3+(2/3)t)$
+is compact on analytic functions on a disc of radius $>1$, since each branch maps it strictly inside
+itself. Its spectrum is exactly $\{(2/3)^n\}\cup\{0\}$: all three branches share the derivative $2/3$, so
+$\mathcal C(t^n)=(2/3)^nt^n+\text{lower order}$ and the operator is triangular in the monomial basis. A
+Chebyshev discretisation at $24,40,60,80$ nodes returns $1,0.666667,0.444444,0.296296,\dots$ The second
+eigenvalue is $2/3$ exactly, so no argument whose only input is this gap can produce the strict
+inequality.
+
+\paragraph{Phase-blind arguments cannot work.} The relevant small-ball quantity has infimum exactly
+$2/3$ by pigeonhole and Fekete, and attaining that infimum is \emph{equivalent} to $\mu\in L^2$. Every
+Frostman-type or small-ball argument therefore yields a dimension bound and provably never $L^2$.
+
+\section{Numerical record}
+
+All figures come from methods sharing no code: exact prefix densities at depths $20,24,26$; a
+stationary-equation solver on grids of $1.8$, $3.5$ and $7.1$ million cells; a twenty-million-draw Monte
+Carlo; the closed cosine product; and exact integer counts.
+
+\begin{center}
+\small
+\begin{tabular}{ll}
+\toprule
+fibre deficits & $j_0=\log(9/8)=0.117783$, then $0.002024$, $0.000584$,\\
+& $4.95\cdot10^{-5}$, $1.35\cdot10^{-5}$, $1.30\cdot10^{-5}$\\
+their sum & $0.120467$ nats, equal to $\int f\log f$ to fourteen digits\\
+$L^2$ norm & $\int f^2=1.206310$ and $\sum_{k\ge1}|\hat\mu(k)|^2=0.103155$,\\
+& the two sides meeting as $1+2S=\|f\|_2^2$\\
+octave energy & $E(R)\approx R^{-0.78}$ over octaves $4$ to $18$, stable across sub-windows\\
+octave maxima & $\max|\hat\mu|\,R^{1/2}$ within $0.034$--$0.073$ over octaves $14$ to $24$,\\
+& no monotone trend, though the last six drift mildly upward;\\
+& the truncated $P_K$ grows and is a different object\\
+weight profile & $\mathrm{Cum}(u)(4/3)^{-K}\to\tfrac23\|f\|_2^2\,u$; measured $0.804446$ at $u=1$\\
+endpoint exponent & $f(x)\approx x^{0.71}$, matching $\log2/\log(3/2)-1=0.7095$\\
+window constant & $\int_0^1\exp(\sum\varphi)$ over $(4/3)^K$ equal to $0.402028$ at\\
+& $K=16,\dots,24$, six digits flat; the remainder bounded\\
+growth constant & $6\int_0^MQ^2=1.205739,1.206198,1.206295,1.206307,1.206310$\\
+& at $M=10,\dots,10^5$, against $1+2S=1.206310$\\
+half-shift, second route & $\int\cos(3\pi v)Q^2/\int Q^2=0.33333349$ against $1/3$, i.e.\\
+& $\rho(0)=3\rho(3)$, which is $A(0)=3A(1/2)$ in $\nu$'s coordinates\\
+tail cross-ratio & $0.032,-0.039,-0.008,-0.041$ from $M=10$ to $10^4$; the $1/3$ sits\\
+& entirely in $u<10$, which carries $99.95\%$ of the mass\\
+renewal correlation & mean $0.978$, s.d.\ $0.087$, s.e.\ $0.020$, slope $+0.001$ per step\\
+& over $n=8,\dots,27$; exponent $0.775$ against $E(R)\approx R^{-0.78}$\\
+comparability & $C_K=(3/4)^KI_K/(3B_K)$ runs $119.0$ to $244.3$ over $K=8,\dots,35$,\\
+& median $187.1$, factor $2.05$; bounded, not constant\\
+octave rate & per-step rate of $I_K$ over $K=8,\dots,35$: arithmetic $1.0032$,\\
+& geometric $0.9973$, OLS $0.9829$; sign undetermined, Jensen gap $0.0061$\\
+escape rate, $1/\varphi$ & exact $0.6202985760$ four ways; float filter converges to\\
+& $0.618014\pm0.000039=\lam$; smoothing gives $\lam$ at every resolution\\
+lines near the target & $\#\{|3^{n+1}-S_\eps|\le D2^{\,n+1}\}=D\,2^{\,n}$ exactly, $n=4,\dots,16$,\\
+& matching uniform spreading; nearest line at distance $2^{-(n+1)}$\\
+one-step ratios & $0.019,\ 0.289,\ 0.085,\ 0.273,\ 0.966,\ 0.007,\ 0.119,\ 0.736,\ 0.533,\ 0.187$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The fifth of those ratios deserves a line: the contraction of the fibre bias is not uniform in $n$, and
+any argument assuming it is will fail at level four.
+
+\end{document}

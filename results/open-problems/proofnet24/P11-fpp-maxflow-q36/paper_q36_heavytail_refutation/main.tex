@@ -1,0 +1,237 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\Ee}{\mathbb E}
+
+\title{A heavy-tail obstruction to the literal no-moment version of\\
+Auffinger--Damron--Hanson Question 36}
+\author{ProofNet24 P11 research package}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Auffinger, Damron and Hanson ask whether the straight-cylinder maximal-flow limit in their equation (7.2) exists without the exponential-moment assumption.  Interpreting this literally as deleting the exponential-moment hypothesis without imposing a replacement tail condition, we give a counterexample in the intended corrected Kesten geometry.  The capacity law is finite almost surely, has no atom at zero and has no positive exponential moment.  For a legal slowly growing cylinder height, the normalized maximal flow diverges to infinity along a deterministic subsequence almost surely.  The decisive lower bound is proved both by an explicit feasible flow and by max-flow/min-cut.  This note does not address the separate positive problem of finding the weakest replacement tail hypothesis.
+\end{abstract}
+
+\section{Source scope and the height correction}
+
+Let independent nonnegative capacities be assigned to the nearest-neighbour edges of \(\mathbb Z^3\).  For a rectangular box
+\[
+  \Lambda(k,l,m)=[0,k]\times[0,l]\times[0,m]\cap\mathbb Z^3,
+\]
+write \(\Phi(k,l,m)\) for the maximal flow from the bottom face to the top face inside the box.
+
+In Section 7.1 of Auffinger--Damron--Hanson (ADH), the theorem immediately preceding Question 36 asserts, under a positivity condition at zero, a height-growth condition and a positive exponential moment, that the normalized flow converges almost surely and in \(L^1\) to a finite positive constant.  Question 36 asks:
+
+\begin{quote}
+Determine if the limit in (7.2) exists without the exponential moment assumption.
+\end{quote}
+
+The ADH survey prints Kesten's height condition with the wrong sign/direction.  That printed direction is incompatible with the theorem: sufficiently enormous heights create overwhelmingly many opportunities for a zero horizontal cut under a Bernoulli capacity law.  The intended Kesten condition is the sub-surface-exponential one.  In particular, Grimmett's 2021 retrospective, Theorem 7.12, states that for some \(\delta>0\),
+\[
+  k^{-1+\delta}\log n(k)\longrightarrow0.
+\]
+Our height below satisfies this corrected condition by a wide margin (and, in fact, satisfies the analogous condition with either horizontal side length).  Thus the counterexample does not exploit the ADH transcription defect.
+
+\section{Counterexample}
+
+\begin{theorem}[Source-exact heavy-tail obstruction]
+\label{thm:counterexample}
+There exists an iid nonnegative capacity law \(G\), finite almost surely, with \(G(\{0\})=0\) and with
+\[
+  \Ee e^{\gamma T}=\infty\qquad\text{for every }\gamma>0,
+\]
+and there exists a deterministic height function \(m(k,l)\to\infty\) satisfying the corrected Kesten sub-surface-exponential condition, such that along a deterministic diagonal subsequence \(k=l=N_r\),
+\[
+  \frac{\Phi(N_r,N_r,m(N_r,N_r))}{N_r^2}\longrightarrow+\infty
+  \qquad\text{almost surely}.
+\]
+Consequently the finite maximal-flow law-of-large-numbers conclusion in ADH equation (7.2) does not survive literal deletion of all replacement tail control.
+\end{theorem}
+
+\begin{proof}
+Define the capacity law by
+\begin{equation}
+\label{eq:law}
+  \Pp(T=1)=\frac12,
+  \qquad
+  \Pp\bigl(T=2^{s^3}\bigr)=2^{-s-1},\quad s=1,2,\dots.
+\end{equation}
+The masses sum to one, so \(T<\infty\) almost surely, and clearly \(\Pp(T=0)=0\).
+
+For any \(\gamma>0\), each term
+\[
+  2^{-s-1}e^{\gamma 2^{s^3}}
+\]
+is a lower bound for \(\Ee e^{\gamma T}\).  These terms do not even tend to zero as \(s\to\infty\), so no positive exponential moment exists.
+
+For integers \(r\ge1\), set
+\begin{equation}
+\label{eq:ar}
+  a_r=2^{r^3}.
+\end{equation}
+The tail at this threshold is exactly
+\begin{equation}
+\label{eq:qr}
+  q_r:=\Pp(T\ge a_r)
+  =\sum_{s\ge r}2^{-s-1}
+  =2^{-r}.
+\end{equation}
+
+Now define, for horizontal side lengths at least two,
+\begin{equation}
+\label{eq:height}
+  m(k,l)=\max\left\{1,
+    \left\lfloor\sqrt{\log_2(\min\{k,l\})}\right\rfloor
+  \right\}.
+\end{equation}
+Then \(m(k,l)\to\infty\) whenever both horizontal side lengths tend to infinity.  Moreover, for every fixed \(\delta<1\),
+\[
+  (\min\{k,l\})^{-1+\delta}\log m(k,l)
+  =O\!\left((\min\{k,l\})^{-1+\delta}\log\log(\min\{k,l\})\right)
+  \longrightarrow0.
+\]
+Hence the height is safely inside the corrected Kesten regime.
+
+Take the diagonal sequence
+\begin{equation}
+\label{eq:Nr}
+  N_r=2^{r^2}.
+\end{equation}
+Then \(m(N_r,N_r)=r\).  The box
+\[
+  \Lambda_r=[0,N_r]^2\times[0,r]\cap\mathbb Z^3
+\]
+contains
+\[
+  M_r=(N_r+1)^2
+\]
+pairwise edge-disjoint vertical bottom-to-top columns, each consisting of exactly \(r\) vertical edges.
+
+Call a column \emph{\(r\)-high} if every one of its \(r\) vertical edges has capacity at least \(a_r\).  By independence and \eqref{eq:qr},
+\begin{equation}
+\label{eq:phigh}
+  \Pp(\text{a fixed column is \(r\)-high})
+  =q_r^r
+  =2^{-r^2}
+  =\frac1{N_r}.
+\end{equation}
+Because distinct vertical columns use disjoint edge sets, their high-column indicators are independent.  If \(Y_r\) denotes the number of \(r\)-high columns, then
+\[
+  Y_r\sim\operatorname{Bin}\left((N_r+1)^2,\frac1{N_r}\right),
+\]
+and
+\begin{equation}
+\label{eq:mu}
+  \mu_r:=\Ee Y_r
+  =\frac{(N_r+1)^2}{N_r}
+  \ge N_r.
+\end{equation}
+Since \(\operatorname{Var}(Y_r)\le\mu_r\), Chebyshev's inequality yields
+\begin{equation}
+\label{eq:cheb}
+  \Pp\left(Y_r<\frac{\mu_r}{2}\right)
+  \le \frac{4\operatorname{Var}(Y_r)}{\mu_r^2}
+  \le \frac4{\mu_r}
+  \le 4\,2^{-r^2}.
+\end{equation}
+The right-hand side is summable in \(r\).  The first Borel--Cantelli lemma therefore gives
+\begin{equation}
+\label{eq:bc}
+  Y_r\ge\frac{\mu_r}{2}
+\end{equation}
+for all sufficiently large \(r\), almost surely.
+
+We now obtain the same deterministic flow lower bound in two ways.
+
+\paragraph{Primal flow.}
+On each \(r\)-high column, send \(a_r\) units of flow vertically upward, and send zero on all other edges.  The selected columns are edge-disjoint, every used edge has capacity at least \(a_r\), and conservation holds at every interior vertex of each selected column.  This is therefore a feasible bottom-to-top flow of value \(a_rY_r\).  Hence
+\begin{equation}
+\label{eq:primal}
+  \Phi_r\ge a_rY_r,
+  \qquad
+  \Phi_r:=\Phi(N_r,N_r,r).
+\end{equation}
+
+\paragraph{Dual cut.}
+Let \(E\) be any edge cut separating the bottom face of \(\Lambda_r\) from the top face.  Every vertical column is itself a bottom-to-top path, so \(E\) must meet every vertical column.  In particular, for every \(r\)-high column choose one edge of \(E\) on that column.  The columns are edge-disjoint, so the chosen cut edges are distinct, and each chosen edge has capacity at least \(a_r\).  Thus every separating cut has capacity at least \(a_rY_r\).  Max-flow/min-cut gives again
+\begin{equation}
+\label{eq:dual}
+  \Phi_r\ge a_rY_r.
+\end{equation}
+
+Combining \eqref{eq:bc}, \eqref{eq:mu}, \eqref{eq:ar} and \eqref{eq:primal} (or \eqref{eq:dual}), eventually almost surely
+\begin{align*}
+  \frac{\Phi_r}{N_r^2}
+  &\ge \frac{a_r\mu_r}{2N_r^2}\\
+  &\ge \frac{2^{r^3}}{2N_r}\\
+  &=2^{r^3-r^2-1}
+  \longrightarrow+\infty.
+\end{align*}
+This proves the theorem.
+\end{proof}
+
+\begin{remark}[What is and is not refuted]
+The theorem gives a negative answer to the literal reading in which the exponential-moment hypothesis is simply deleted.  The chosen law has infinite mean.  Therefore this theorem does not refute a finite-mean, finite-second-moment, or finite-column-minimum replacement theorem.  Those positive weakening questions are logically separate.
+\end{remark}
+
+\section{Relation to no-moment flow-constant results}
+
+Rossignol and Th\'eret proved existence and continuity of the flow constant without moment assumptions and convergence of natural maximal flows in regimes adapted to their construction.  Those results are essential neighboring prior art, but they do not force the ADH straight-cylinder conclusion for an arbitrarily slowly growing height such as \eqref{eq:height}.  The present obstruction exploits the fact that an enormous but very sparse capacity level can create many parallel columns whose joint capacity is of order larger than the horizontal area along a tailored sequence.
+
+Recent work on minimal surfaces and superconcentration, such as Dembin--Garban, treats bounded/two-valued capacities and different fluctuation questions.  It does not exclude the heavy-tail mechanism above.
+
+A bounded literature search dated 17 September 2026 did not locate a published source explicitly giving this exact slow-height counterexample or declaring ADH Question 36 negatively resolved in this literal scope.  This is not a novelty certificate.
+
+\section{Audit and computational record}
+
+The finite algebraic core is checked by the accompanying exact-arithmetic script \texttt{check.py}; its archived output is \texttt{check.out}.  The asymptotic probability and flow arguments are the written proof above.
+
+Two distinct outside tracks independently audited the exact claim scope:
+\begin{itemize}
+\item P04: \texttt{P04-AUDIT-P11-I0062-Q36-SOURCE-REFUTATION-02P-10 = PASS (CLAIM-SCOPED)}, report creation commit \texttt{2898565e9814059a45cf36ca60c187b457663915}.
+\item P26: \texttt{P26-AUDIT-P11-I0062-Q36-SOURCE-REFUTATION-02P-21 = PASS\_FULL\_MATHEMATICAL\_PROOF / SOURCE\_LITERAL\_QUESTION\_PASS / CORRECTED\_HEIGHT\_PROVEN / ORIGINAL\_1987\_HEIGHT\_PROVENANCE\_UNVERIFIED / PRIOR\_ART\_UNVERIFIED / CLAIM\_SCOPED}, report creation commit \texttt{f00d576231bfcc2ac0a91746b0646a1a5eb6a5d7}.
+\end{itemize}
+P26 records the reconciliation \texttt{P26-RECONCILE-P11-I0062-Q36-02P-2OF2-21 = PASS}.
+
+\section{References}
+
+\begin{thebibliography}{9}
+
+\bibitem{ADH}
+A. Auffinger, M. Damron, J. Hanson,
+\emph{50 years of first-passage percolation},
+University Lecture Series 68, AMS; arXiv:1511.03262.
+
+\bibitem{Kesten}
+H. Kesten,
+\emph{Surfaces with minimal random weights and maximal flows: a higher dimensional version of first-passage percolation},
+Illinois J. Math. 31 (1987), 99--166.
+DOI: 10.1215/ijm/1255989405.
+
+\bibitem{Grimmett}
+G. R. Grimmett,
+\emph{Harry Kesten's work in probability theory},
+Probab. Theory Relat. Fields 181 (2021), 17--55.
+
+\bibitem{RT}
+R. Rossignol, M. Th\'eret,
+\emph{Existence and continuity of the flow constant in first passage percolation},
+Electron. J. Probab. 23 (2018), no. 99, 1--42.
+DOI: 10.1214/18-EJP214; arXiv:1707.08766.
+
+\bibitem{DG}
+B. Dembin, C. Garban,
+\emph{Superconcentration for minimal surfaces in first passage percolation and disordered Ising ferromagnets},
+Probab. Theory Relat. Fields (2024); arXiv:2301.11248.
+
+\end{thebibliography}
+
+\end{document}

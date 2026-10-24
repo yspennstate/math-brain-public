@@ -1,0 +1,89 @@
+{
+  "helper_version": "A077-geometric-mark-v1-chunks",
+  "mode": "chunk",
+  "roots": 1,
+  "restriction_states": 2187,
+  "local_queries": 7290,
+  "eligible_private_rows": 60,
+  "sharp_contraction_rows": 24,
+  "assertions": 29294,
+  "elapsed_seconds": 6.651384000000235,
+  "records": [
+    {
+      "k": 4,
+      "r": 2,
+      "states": 2187,
+      "queries": 7290,
+      "eligible_private_rows": 60,
+      "sharp_contraction_rows": 24,
+      "policies": [
+        {
+          "policy": "first",
+          "consumed_data": "63/128",
+          "consumed_selector": "13/128",
+          "remaining_data": "0",
+          "remaining_selector": "0",
+          "retained_bank": "0",
+          "terminal_entropy": {}
+        },
+        {
+          "policy": "last",
+          "consumed_data": "63/128",
+          "consumed_selector": "13/128",
+          "remaining_data": "0",
+          "remaining_selector": "0",
+          "retained_bank": "0",
+          "terminal_entropy": {}
+        },
+        {
+          "policy": "bad",
+          "consumed_data": "63/128",
+          "consumed_selector": "13/128",
+          "remaining_data": "0",
+          "remaining_selector": "0",
+          "retained_bank": "0",
+          "terminal_entropy": {}
+        },
+        {
+          "policy": "max",
+          "consumed_data": "63/128",
+          "consumed_selector": "13/128",
+          "remaining_data": "0",
+          "remaining_selector": "0",
+          "retained_bank": "0",
+          "terminal_entropy": {}
+        },
+        {
+          "policy": "stop2",
+          "consumed_data": "9/64",
+          "consumed_selector": "0",
+          "remaining_data": "45/128",
+          "remaining_selector": "13/128",
+          "retained_bank": "83/64",
+          "terminal_entropy": {
+            "2": "17/2",
+            "3": "-2187/2048",
+            "5": "-225/256",
+            "13": "-169/512",
+            "29": "-841/2048"
+          }
+        },
+        {
+          "policy": "stop3",
+          "consumed_data": "7/64",
+          "consumed_selector": "13/128",
+          "remaining_data": "49/128",
+          "remaining_selector": "0",
+          "retained_bank": "0",
+          "terminal_entropy": {
+            "2": "5/2",
+            "3": "-297/1024",
+            "5": "-425/1024"
+          }
+        }
+      ]
+    }
+  ],
+  "arithmetic": "exact rational FWHT/edge counts and bank releases; prime-log equalities and certified rational sign intervals",
+  "selector_partition": -1
+}

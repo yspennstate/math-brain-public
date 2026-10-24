@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-10T06:45:22.258829+00:00",
+  "reviewer": "w374",
+  "primary_verdict_file": "~\\brain_workers\\w374\\REVIEW_PACKET.md",
+  "verdicts": {
+    "S1.w372.L1": "KEEP",
+    "S1.w372.L1-short": "KEEP",
+    "S1.w372.L2": "KEEP",
+    "S1.w372.L3": "KEEP conditional",
+    "S1.w372.CEX": "KEEP",
+    "S1.w372.L4": "KEEP conditional",
+    "S1.w372.CEX-global": "KEEP"
+  },
+  "verdict_rows": [
+    "| w372 `CLAIMS.jsonl`, `w372-P0110-SOURCE-01` | KEEP | Ranking line 551 gives tier 5, title, `attempted_un`; it does not state dimension or exponent definitions. | Source metadata only. The ledger's Question 22 citation is correct for arXiv v2. |",
+    "| w372 `STATEMENT.md` | FIX locator, KEEP mathematics | Checked arXiv:1511.03262v2: Question 22 is on **printed p.88** (PDF p.89), citing (4.19); Chatterjee's Theorem 1.1 has the stated uniform upper/lower exponent conditions. | The packet says printed p.89, one page too high. The mathematical target is accurate. |",
+    "| w372 `S1.w372.L1` | KEEP | With `k=2d` origin edges, each all-low/all-high event has probability `p=4^(-k)`. Conditional-copy variance is at least `(1/2)(2p^2)(1/2)^2=p^2/4=4^(-(4d+1))`. Positive weights and the `2||v||_1` path bound give finite minimizing paths; continuity gives uniqueness. | Uniform positive variance floor only; no positive power or exponent match. |",
+    "| w372 `S1.w372.L1-short`; w373 small-endpoint obstruction | KEEP | Direct edge cost at most 2, every alternative simple path has at least 3 edges and cost at least 3. For `2e_1`, direct cost is strictly below 4 almost surely, every detour costs at least 4. | Refutes an all-nonzero-endpoint positive wandering lower bound for Uniform[1,2], while Chatterjee (A4) excludes a finite neighborhood. |",
+    "| w372 `S1.w372.L2` | KEEP | Put `r=sd G_i`. Centering gives `|r-s|<=delta`. Since both errors are nonnegative, `||Delta_1-Delta_2||_2^2<=2delta^2`. Independence of `G_1,G_2` gives `||G_1-G_2||_2=sqrt(2)r`; both triangle inequalities yield the stated `2(s\u00b12delta)^2` bounds. | No independence of unrestricted passage times or conditioned geodesics is used. Application still needs `delta/s -> 0`. |",
+    "| w372 `S1.w372.L3` | KEEP conditional | In deterministic disjoint cylinders `G_i` are iid; `0<=G_i-F_i<=n` and the error vanishes on geodesic containment, so `delta<=n sqrt(p)`. With `s>=c n^b`, `p<=C n^-q`, the ratio `delta/s=O(n^(1-b-q/2))`, which tends to zero exactly under the stated strict inequality `q>2(1-b)`. | The bound on cylinder departure for a useful sublinear width is unproved. |",
+    "| w372 `S1.w372.CEX`; w373 high-probability agreement example | KEEP | For the common-shock example `Var F_i=n^(2b)(1-p_n)` but `F_1-F_2=0`. For w373's example, agreement probability is `1-1/n` while variance changes from 0 to `n-1`. | Both are abstract counterexamples to an inference, not FPP counterexamples. |",
+    "| w372 `S1.w372.L4` | KEEP conditional | For an off-cylinder geodesic vertex `z`, additivity gives `H_n <= |T(0,z)-m(z)|+|T(z,v)-m(v-z)|+|T(0,v)-m(v)|`. Apply exponential Markov to each fixed `z`; the `l1` ball has at most `(4n+1)^d` vertices. | Requires an unproved uniform positive mean gap `H_n`; it does not imply global exponent matching. |",
+    "| w372 `S1.w372.CEX-global` | KEEP | With `p=e^(-sqrt(n))`, independent Bernoulli and sign terms give variance `n^(2/3)+(n^2/16)p(1-p)~n^(2/3)`. At scale `sqrt(n)` the exponential moment is bounded; on the rare event `X_n>=n/8`, so every exponent below `1/2` fails. | Abstract bounded cost family, not an iid FPP metric. |"
+  ],
+  "adversary": {
+    "reviewer": "w373",
+    "verdict": "KEEP AS PARTIAL REDUCTIONS",
+    "artifact": "~/brain_workers/w373/PAIRED_AUDIT.md",
+    "scope": "Frozen L2/L4 reductions; H_MEAN and H_GLOBAL remain open"
+  },
+  "statement_correction": "Question 22: printed page 88, PDF page 89",
+  "parent_problem_solved": false,
+  "formal_check_receipt": null,
+  "reviewer_served_model": "UNKNOWN",
+  "different_model_gate": "UNVERIFIED",
+  "independent_account_gate": "UNVERIFIED",
+  "ingestion_receipt": null,
+  "retrieval_receipt": null
+}

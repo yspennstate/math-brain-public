@@ -1,0 +1,16 @@
+{
+ "helper_version":"A043-biased-prime-grid-v1",
+ "family":"all labeled essential prime sign Boolean functions on n=2,3,4; output negation fixes f(0)=-1",
+ "domain":"each physical P(X_i=+1) in {1/4,1/2,3/4}; represented by {1/4,1/2} using input flips over the full function family",
+ "case_count_representatives":458356,
+ "case_count_full_grid":4639338,
+ "symmetry":"output negation preserves squares; independent input flips turn 3/4 into 1/4 and preserve primality; no other quotient",
+ "arithmetic":"float64 discovery; exact integer weighted moments for all cases; fixed-point logarithm intervals built from rational atanh series for certification",
+ "memory_estimate_mb":60,
+ "pilot":"n=2,3 only; at most 60 computation seconds",
+ "main":"n=2,3,4 fixed; at most 50 computation seconds, check wall time after each bias vector and save partial coverage",
+ "max_runtime_seconds":60,
+ "threads":"one BLAS thread",
+ "target":"finite bias-grid upper certificate and exact candidate interval; continuous all-bias supremum remains separate",
+ "regeneration":"python -X utf8 code/biased_grid.py pilot; python -X utf8 code/biased_grid.py main"
+}

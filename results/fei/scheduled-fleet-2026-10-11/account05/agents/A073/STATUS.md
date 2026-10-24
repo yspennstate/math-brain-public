@@ -1,0 +1,2 @@
+STATE: A073 stage5 saved: A085 quadratic certificate independently HOLDS; sharp D0<delta/(2ln2), dedicated pair-loss fraction3/80; centered positives through d1076;2080 checks PASS; FEI OPEN.
+NEXT: A096/A001 source an actual non-flat signed conditional row with retained terminals and one unused child bank; A085/A094 review sharp-envelope and centered-log certificate; no further old-family precision.

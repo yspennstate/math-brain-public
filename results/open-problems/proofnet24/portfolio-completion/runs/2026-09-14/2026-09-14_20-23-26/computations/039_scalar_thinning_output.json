@@ -1,0 +1,221 @@
+{
+  "method": "six fixed cases; rational thinning and derivatives; floating logarithms; no sampling",
+  "results": [
+    {
+      "name": "independent_with_deterministic_coordinates",
+      "n": 4,
+      "t": "2/3",
+      "fisher_exact": "333/44",
+      "entropy_first": -0.28850681588855304,
+      "entropy_second": -7.568181818181818,
+      "marginal_entropy_second": -7.568181818181818,
+      "chi_square_penalty": 0.0,
+      "other_edge_penalty": 0.0,
+      "maximum_kl_identity_error": 1.1102230246251565e-16,
+      "curvature_identity_error": 0.0,
+      "kl_rows": [
+        {
+          "coordinate": 1,
+          "mean": "1",
+          "kl": 1.0986122886681096,
+          "kl_derivative": 3.0,
+          "chi_square": "0"
+        },
+        {
+          "coordinate": 2,
+          "mean": "2/5",
+          "kl": 0.3101549283038394,
+          "kl_derivative": 0.5454545454545454,
+          "chi_square": "0"
+        },
+        {
+          "coordinate": 3,
+          "mean": "3/4",
+          "kl": 0.6931471805599453,
+          "kl_derivative": 1.5,
+          "chi_square": "0"
+        }
+      ]
+    },
+    {
+      "name": "perfect_positive_dependence",
+      "n": 2,
+      "t": "1/2",
+      "fisher_exact": "12/5",
+      "entropy_first": 0.80471895621705,
+      "entropy_second": -4.0094379124341,
+      "marginal_entropy_second": -2.6666666666666665,
+      "chi_square_penalty": 0.5333333333333333,
+      "other_edge_penalty": 0.8094379124341002,
+      "maximum_kl_identity_error": 4.440892098500626e-16,
+      "curvature_identity_error": 0.0,
+      "kl_rows": [
+        {
+          "coordinate": 0,
+          "mean": "1/2",
+          "kl": 0.5815754049028404,
+          "kl_derivative": 2.0094379124341,
+          "chi_square": "4/5"
+        },
+        {
+          "coordinate": 1,
+          "mean": "1/2",
+          "kl": 0.5815754049028404,
+          "kl_derivative": 2.0094379124341,
+          "chi_square": "4/5"
+        }
+      ]
+    },
+    {
+      "name": "one_hot_negative_dependence",
+      "n": 3,
+      "t": "3/5",
+      "fisher_exact": "25/6",
+      "entropy_first": 0.6059391565991873,
+      "entropy_second": -4.166666666666667,
+      "marginal_entropy_second": -2.193562610229277,
+      "chi_square_penalty": 0.445326278659612,
+      "other_edge_penalty": 1.5277777777777777,
+      "maximum_kl_identity_error": 2.220446049250313e-16,
+      "curvature_identity_error": 8.881784197001252e-16,
+      "kl_rows": [
+        {
+          "coordinate": 0,
+          "mean": "1/2",
+          "kl": 0.9162907318741551,
+          "kl_derivative": 2.5,
+          "chi_square": "3/4"
+        },
+        {
+          "coordinate": 1,
+          "mean": "1/3",
+          "kl": 0.9162907318741551,
+          "kl_derivative": 2.5,
+          "chi_square": "1"
+        },
+        {
+          "coordinate": 2,
+          "mean": "1/6",
+          "kl": 0.9162907318741551,
+          "kl_derivative": 2.5,
+          "chi_square": "5/4"
+        }
+      ]
+    },
+    {
+      "name": "even_parity",
+      "n": 3,
+      "t": "4/5",
+      "fisher_exact": "375/56",
+      "entropy_first": -0.45594772612332385,
+      "entropy_second": -9.615293795011542,
+      "marginal_entropy_second": -3.125,
+      "chi_square_penalty": 1.8571428571428572,
+      "other_edge_penalty": 4.633150937868684,
+      "maximum_kl_identity_error": 8.881784197001252e-16,
+      "curvature_identity_error": 0.0,
+      "kl_rows": [
+        {
+          "coordinate": 0,
+          "mean": "1/2",
+          "kl": 1.2202558826230379,
+          "kl_derivative": 5.160195863341027,
+          "chi_square": "52/35"
+        },
+        {
+          "coordinate": 1,
+          "mean": "1/2",
+          "kl": 1.2202558826230379,
+          "kl_derivative": 5.160195863341027,
+          "chi_square": "52/35"
+        },
+        {
+          "coordinate": 2,
+          "mean": "1/2",
+          "kl": 1.2202558826230379,
+          "kl_derivative": 5.160195863341027,
+          "chi_square": "52/35"
+        }
+      ]
+    },
+    {
+      "name": "asymmetric_four_site_law",
+      "n": 4,
+      "t": "3/7",
+      "fisher_exact": "516750409/82406700",
+      "entropy_first": 2.1120119036174403,
+      "entropy_second": -7.711510018061025,
+      "marginal_entropy_second": -6.057357942603844,
+      "chi_square_penalty": 0.3742944230411822,
+      "other_edge_penalty": 1.279857652415998,
+      "maximum_kl_identity_error": 4.440892098500626e-16,
+      "curvature_identity_error": 0.0,
+      "kl_rows": [
+        {
+          "coordinate": 0,
+          "mean": "3/10",
+          "kl": 0.5909994967694097,
+          "kl_derivative": 2.0400808430233393,
+          "chi_square": "3484627/5493780"
+        },
+        {
+          "coordinate": 1,
+          "mean": "3/5",
+          "kl": 0.3865841804797967,
+          "kl_derivative": 1.349523508033962,
+          "chi_square": "9208531/51916221"
+        },
+        {
+          "coordinate": 2,
+          "mean": "1/2",
+          "kl": 0.3718614393067317,
+          "kl_derivative": 1.3424532711179158,
+          "chi_square": "6752171/25080300"
+        },
+        {
+          "coordinate": 3,
+          "mean": "3/5",
+          "kl": 0.5135982004697373,
+          "kl_derivative": 1.5864639301800343,
+          "chi_square": "388744/1373445"
+        }
+      ]
+    },
+    {
+      "name": "non_diagonal_three_site_dpp",
+      "n": 3,
+      "t": "5/7",
+      "fisher_exact": "56790772683533932051022147/21571119569916998849952000",
+      "entropy_first": 1.0431640149227268,
+      "entropy_second": -2.5022278126259003,
+      "marginal_entropy_second": -2.485388888888889,
+      "chi_square_penalty": 0.006251878755832094,
+      "other_edge_penalty": 0.010587044981179261,
+      "maximum_kl_identity_error": 1.6653345369377348e-16,
+      "curvature_identity_error": 0.0,
+      "kl_rows": [
+        {
+          "coordinate": 0,
+          "mean": "1/2",
+          "kl": 0.4463316956212688,
+          "kl_derivative": 0.7937459378952726,
+          "chi_square": "38751610849/4355842797000"
+        },
+        {
+          "coordinate": 1,
+          "mean": "2/5",
+          "kl": 0.340843656789662,
+          "kl_derivative": 0.5745259761689403,
+          "chi_square": "6096643945/701122874856"
+        },
+        {
+          "coordinate": 2,
+          "mean": "1/3",
+          "kl": 0.27482723690782324,
+          "kl_derivative": 0.44663335963206324,
+          "chi_square": "84608006147/14613385986000"
+        }
+      ]
+    }
+  ]
+}

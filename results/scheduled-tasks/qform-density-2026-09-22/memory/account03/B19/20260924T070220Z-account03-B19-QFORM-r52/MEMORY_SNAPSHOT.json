@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B19",
+  "run_id": "20260924T070220Z-account03-B19-QFORM-r52",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_commit_start": "baa01934f6a0f49fdbac5600772948e341986443",
+  "prepublication_control_commit": "82036a61fa566979deed83d19dc53d0923d83d69",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "5ec1cc2bf208bc0249ea89d86fd7298b62ac324e",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260924T070220Z-account03-B19-QFORM-r52/",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B19/20260924T070220Z-account03-B19-QFORM-r52.md",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-MOVING-RIDGE-JOINT-CAP-BARRIER-v1"
+  ],
+  "premises": [
+    "account03/B19 r51 BL-compatible rank-two peel: normalized light frames have row leverage <=1/2 and their Gram eigenvalues are >=4/7",
+    "account03/B19 r49 common-plane branch: aligned light self-curvature has a four-latent skeleton, with diffuse residual self blocks and a retained nonzero cross tail",
+    "interactive Theorem H at math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+    "designated partner account04/B19 r2 exact null-coloop theorem and r4 moving-ridge provenance barrier"
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-BL-FOURLATENT-DETERMINANT-ENDPOINT-v1",
+      "status": "PROVED_SUPPORTING_RECEIVER",
+      "statement": "If A[I,I]=D+W H W^T with D physical diagonal, W^T W=I_4, every row leverage <=1/2 and H invertible symmetric 4x4, then the full ambient law has continuous C0 density with ||p_Q||_infinity<=8|det H|^(-1/4)."
+    },
+    {
+      "id": "QFORM-R51-FOURLATENT-DET-OR-RANK3-COLLAPSE-v1",
+      "status": "PROVED_QUANTITATIVE_FUNNEL",
+      "statement": "For the normalized r49/r51 four-latent skeleton, s2 of its latent cross block is >=1/112 and s4(H_L)<=112 sqrt(|det H_L|). Thus |det H_L|>=2^-40 pays the exact skeleton by <=8192, while failure puts H_L within 0.0001068115234375 in operator norm of rank<=3."
+    }
+  ],
+  "partner_result_applied": {
+    "source": "account04/B19",
+    "null_coloop_gate": "2^-56<=D_res<=1 and |det M_3|>=1 imply ||p_Q||_infinity<214.540383<215 with continuous density",
+    "moving_ridge_boundary": "epsilon=2^-20 gives dependent joint-cap-one surrogate density >=2^20/9=116508.444444..., prohibiting arbitrary-joint compression"
+  },
+  "checker": {
+    "trials": 5000,
+    "max_normalized_determinant_residual": 1.772897745163291e-15,
+    "max_leverage_excess_over_half": 0.0,
+    "determinant_collapse_violations": 0,
+    "terminal_marker": "QFORM_B19_R52_FOURLATENT_CHECK_PASS"
+  },
+  "first_unresolved_implication": "QFORM-BL-R2-PLUS-DIFFUSE-THIRD-SOURCE-RETAINED-TAIL-ENDPOINT-v2",
+  "unresolved_scope": "The actual light block retains nonseparable E_R direct_sum E_C and the genuine cross tail T_cross; these cannot be dropped or treated as small random noise. Need to combine their diffuse third/high-spectrum resource with the BL-compatible rank-two carrier, especially in the latent rank-three-collapse branch.",
+  "full_target_status": "OPEN",
+  "full_continuity_status": "OPEN"
+}

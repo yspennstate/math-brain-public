@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T010723Z-account03-B18-QFORM-auto15",
+  "status": "PASS",
+  "claim": "QFORM-STABLERANK-CROSS-NEGATIVE-MOMENT-v1",
+  "checks": [
+    {
+      "id": "primary_source_hypotheses",
+      "status": "PASS",
+      "detail": "Rudelson-Vershynin arXiv:1402.4492 Theorem 1.2 and Corollary 8.6 require independent real coordinates with bounded densities; these are genuine original-coordinate product banks here. No moment/log-concavity/iid/support hypothesis is introduced."
+    },
+    {
+      "id": "stable_rank_definition",
+      "status": "PASS",
+      "detail": "r(M)=floor(||M||_HS^2/||M||_op^2), exactly as in the primary source. The theorem is invoked only for r>=2."
+    },
+    {
+      "id": "layer_cake_constant",
+      "status": "PASS",
+      "detail": "From F(t)<=min(1,(C_RV t/S)^r), t0=S/C_RV: integral_0^t0 F(t)t^-2 dt=C_RV/((r-1)S), and integral_t0^infinity t^-2 dt=C_RV/S, totaling C_RV*r/((r-1)S)."
+    },
+    {
+      "id": "conditional_linear_density",
+      "status": "PASS",
+      "detail": "For fixed Y=y, Theorem 1.2 gives ||p||_inf<=sqrt(2)/||My+alpha||. Corollary 8.6 implies P(My+alpha=0)=0 when r>=2."
+    },
+    {
+      "id": "ambient_scaling",
+      "status": "PASS",
+      "detail": "For A_II=0, conditioning K yields M=2B; stable rank is unchanged and ||2B||op=2||B||op, giving (C_RV/sqrt(2))*r/(r-1)/||B||op."
+    },
+    {
+      "id": "target_family_spectrum",
+      "status": "PASS",
+      "detail": "For B_N=diag(1,N^-1/2 I_N) and D_m=J_m/m, spectrum of [[0,B_N],[B_N,0]] direct_sum D_m is {+1,-1,+1, +/-N^-1/2 each N times, 0^(m-1)}; for N>=2 exactly three eigenvalues have modulus>=1."
+    },
+    {
+      "id": "target_family_stable_rank",
+      "status": "PASS",
+      "detail": "||B_N||op=1 and ||B_N||HS^2=1+N*(1/N)=2, so floored stable rank is exactly 2 and the new density bound is sqrt(2) C_RV, independent of N,m."
+    },
+    {
+      "id": "partner_core",
+      "status": "PASS",
+      "detail": "The selected 4x4 core has characteristic polynomial lambda(lambda-1)(lambda+1)(lambda-2/m); partner parameters are a=1, s=2/m, L=1, hence its theorem gives (576^(1/3)/2)m=4.1601676461038...m."
+    },
+    {
+      "id": "continuity_scope",
+      "status": "PASS",
+      "detail": "Generic stable-rank receiver claims only essential boundedness. C0 continuity is claimed only for the block-diagonal target family after convolution with the independent diffuse-square L1 density."
+    },
+    {
+      "id": "live_corrections",
+      "status": "PASS",
+      "detail": "No pointwise quadratic van-der-Corput estimate, arbitrary-joint coarea, rotated independence, conditional-cap-as-independence, fixed-good-minor extraction, or small-coefficient deletion is used."
+    }
+  ],
+  "finite_checks": {
+    "partner_prefactor": 4.160167646103808,
+    "previous_selected_two_bound_growth": "2*sqrt(pi)*N^(1/4)",
+    "new_bound_growth": "sqrt(2)*C_RV"
+  }
+}

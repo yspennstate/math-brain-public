@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B07",
+  "run_id": "20260924T064126Z-account03-B07-qform-r49",
+  "execution_context": "scheduled_automation",
+  "brain_state": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "startup_control_commit": "9cc7dd6916694f784adbbcb8abd281374a7febcc",
+  "prepublication_control_commit": "1f620a0a861dc8e8b2ee6a2fd0b6696ade9a46d6",
+  "owner_control_revision": "2026-09-22.15",
+  "target_status": "FULL_QFORM_OPEN_FULL_TARGET_CONTINUITY_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "incoming_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "cdd0eb22227a505e827a658038a1512897c0ad56",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260924T053826Z-account03-B07-qform-r48/REPORT.md"
+  },
+  "analytic_receiver": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "df738b7f0821d9af56dfd992cab10ecc6704e3fb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260923T184716Z-account02-B03-QFORM-auto11/REPORT.md",
+    "result_used": "QFORM-Z3-CROSSING-MARGINAL-FREE-v1"
+  },
+  "partner_result": {
+    "partner": "account04/B07",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "dab16464e87c939cc0cf3fd01d070045290192fa",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B07/20260923T161510Z-account04-B07-coordinate-core-r2/REPORT.md",
+    "result_used": "QFORM-DIAGONAL-RANK-TAIL-CORE-v1",
+    "actual_application": "r=24, m=27, d=1/64, epsilon<5.43834026762e-4 gives s3>9.41481e-4 and ambient essential-density <47923.746 when 27 good pair blocks each provide one large physical diagonal"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-PAIRBLOCK-RANDOMCUT-E3-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "For the r48 global pair-matched rank-two separator, all but at most five pairs are good. For each good pair K, its complete transfer determinant packet F_K is at least (z0/2)q_K^2. A random cut of whole pair blocks yields one literal physical crossing with e3>(z0/32) sum_K q_K^2."
+    },
+    {
+      "id": "QFORM-GLOBAL-R2-PAIRBLOCK-NORMALFORM-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "If the E3 payment at tau=2^-30 fails and E_star<=1, then on the matched physical bank A[S,S]=B_pair+R_24+E_S with B_pair literal 2x2-pair-block diagonal, rank R_24<=24, and ||E_S||_F<5.43834026762e-4."
+    }
+  ],
+  "quantitative_paid_branches": {
+    "physical_E3": {
+      "threshold": "2^-30",
+      "density_bound": 337.605402597274,
+      "continuity": true
+    },
+    "partner_core": {
+      "s3_lower_bound": 0.0009414812774444677,
+      "density_bound": 47923.745298290676,
+      "continuity": false
+    }
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8faa92df02294280a5ed8315598cc4d605d71515",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260924T064126Z-account03-B07-qform-r49/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260924T064126Z-account03-B07-qform-r49/CHECKS.txt",
+    "checks_status": "PASS"
+  },
+  "unresolved": [
+    "QFORM-PAIRBLOCK-R24-SMALLTAIL-RECEIVER-v1",
+    "E_star>1 same-bank physical-star branch",
+    "full QFORM bounded-density theorem",
+    "full-target continuity"
+  ],
+  "next_action": "Consume the pair-block-diagonal plus rank<=24 plus Frobenius-small tail survivor without deleting pair off-diagonals or global cross tail; separately compile E_star>1 into physical third volume by determinant-weighted random cuts."
+}

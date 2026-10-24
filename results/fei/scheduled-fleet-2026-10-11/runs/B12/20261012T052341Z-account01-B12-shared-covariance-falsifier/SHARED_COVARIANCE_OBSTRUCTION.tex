@@ -1,0 +1,148 @@
+\section*{Simultaneous shared-coordinate covariance obstruction}
+
+All logarithms are natural.  Let
+\[
+ q=\|b\|_2^2,\quad Z=\mathcal E_{\rm raw}(b),\quad
+ V=\operatorname{Var}(h),\quad J=\mathbf I(h).
+\]
+The preceding B12 theorem uses the potential
+\[
+ P=C_*qJ+VZ,\qquad C_*=4+2\log2+2/e,
+\]
+when source and child coordinates are disjoint.  This note determines what
+happens if one physical coordinate is shared.
+
+\subsection*{Exact simultaneous-update formula}
+
+Restrict one shared coordinate and denote its two children by signs \(+,-\).
+Use bars and half-differences:
+\[
+ \bar q=(q_++q_-)/2,\quad \delta q=(q_+-q_-)/2,
+\]
+and similarly for \(Z,V,J\).  Parseval and the usual restriction identities
+give
+\[
+ q=\bar q,\qquad J=\operatorname{Inf}_i(h)+\bar J,
+ \qquad V=\alpha^2+\bar V,
+ \qquad Z=\bar Z+D_Z,
+\]
+where \(D_Z\ge0\) is the scalar-kernel entropy dissipation of \(b\).  Hence,
+for arbitrary constants \(A,\lambda\),
+\begin{align}
+ AqJ+\lambda VZ-\frac{A(q_+J_++q_-J_-)
+ +\lambda(V_+Z_++V_-Z_-)}2
+ ={}&A\bigl(q\operatorname{Inf}_i(h)-\delta q\,\delta J\bigr)\\
+ &+\lambda\bigl(\alpha^2Z+\bar V D_Z-\delta V\,\delta Z\bigr).
+ \tag{1}
+\end{align}
+The last term on each line is a genuine shared-coordinate covariance.  It is
+absent when only one block changes.
+
+\subsection*{A four-bit genuine Boolean falsifier}
+
+In lexicographic truth-table order, take
+\[
+\begin{split}
+ g_+={}&(1,-1,-1,1,-1,-1,-1,1,-1,-1,1,-1,-1,-1,-1,1),\\
+ g_-={}&(1,-1,-1,-1,1,-1,-1,1,-1,-1,1,-1,-1,-1,1,-1),\\
+ h={}&(1,1,1,1,1,1,1,1,1,1,1,1,1,1,-1,1).
+\end{split}
+\tag{2}
+\]
+Query coordinate \(i=2\) if coordinates are numbered from one (bit one in
+zero-based indexing).  Put \(a=(g_++g_-)/2\),
+\(b=(g_+-g_-)/2\), and \(F=a+hb\).
+
+This is not a free-array relaxation.  All three functions are genuine Boolean
+signs.  The disagreement support of the two branches is
+\(\{3,4,14,15\}\) in zero-based truth-table indexing.  Off that support
+\(h=1\), while on it \(h\) takes both signs.  Thus both branches are actually
+selected where they differ; the example is not an inactive-child encoding.
+
+Direct rational Walsh calculation gives
+\[
+ q=\frac14,\qquad Z=\frac54\log2,qquad
+ V=\frac{15}{64},\qquad J=\frac12.
+\]
+The zero-child data are
+\[
+ (q_0,Z_0,V_0,J_0)=
+ \left(\frac18,\frac34\log2,0,0\right),
+\]
+and the one-child data are
+\[
+ (q_1,Z_1,V_1,J_1)=
+ \left(\frac38,\frac94\log2-\frac9{16}\log3,
+       \frac7{16},\frac34\right).
+\]
+Consequently the two component drops are
+\[
+ qJ-\frac{q_0J_0+q_1J_1}{2}=-\frac1{64},                         \tag{3}
+\]
+\[
+ VZ-\frac{V_0Z_0+V_1Z_1}{2}
+ =\frac{63\log3-102\log2}{512}<0.                                \tag{4}
+\]
+The sign in (4) is exact because
+\(3^{63}<2^{102}\); for instance \(3^5<2^8\) and
+\(3^3<2^6\).
+
+Equations (3)--(4) prove:
+
+\paragraph{Proposition (refutation).}
+No nonzero potential of the form
+\[
+ P_{A,\lambda}=Aq\mathbf I(h)+\lambda\operatorname{Var}(h)
+                 \mathcal E_{\rm raw}(b),\qquad A,\lambda\ge0,
+\]
+is a supermartingale under all genuine Boolean shared-coordinate
+restrictions.  This includes every attempt to repair the preceding B12
+potential merely by increasing the coefficient on its terminal reserve.
+
+The output function itself is harmless:
+\[
+ H(F)=3\text{ bits},\qquad \mathbf I(F)=2,qquad H(F)/\mathbf I(F)=3/2.
+\]
+Thus this refutes the two-term potential extension, not FEI.
+
+\subsection*{Unbounded-dimensional tensor lift}
+
+For each \(k\ge0\), let \(s_k\) be the standard bent Boolean sign on
+\(2k\) fresh variables,
+\[
+ s_k(x,y)=(-1)^{x\cdot y}.
+\]
+It has
+\[
+ H(s_k)=2k\text{ bits},\qquad \mathbf I(s_k)=k.
+\]
+Replace \(g_\pm\) by \(g_\pm s_k\) and leave \(h\) unchanged.  Then
+\(b\) becomes \(bs_k\), and exact tensor entropy gives
+\[
+ \mathcal E_{\rm raw}(bs_k)=\mathcal E_{\rm raw}(b)+qH(s_k)\log2.
+\]
+The two drops become
+\[
+ \Delta(qJ)=-\frac1{64},
+\]
+\[
+ \Delta(VZ)=
+ \frac{63\log3-(102+24k)\log2}{512}<0.                            \tag{5}
+\]
+Thus the obstruction persists, and the reserve drift tends to
+\(-\infty\), in a genuine unbounded-dimensional near-tensor family.  Yet
+\[
+ \frac{H(Fs_k)}{\mathbf I(Fs_k)}
+ =\frac{2k+3}{k+2}\longrightarrow2.
+\]
+Again this is not an FEI counterfamily.
+
+\subsection*{Consequence for the live proof route}
+
+The disjoint interleaving theorem remains valid: its proof never encounters
+the covariance terms in (1).  What is refuted is a direct overlapping-input
+extension using only positive multiples of \(qI(h)\) and
+\(\operatorname{Var}(h)\mathcal E_{\rm raw}(b)\).  Any repair must retain a
+signed joint correction, quotient the composition by representation/activation
+equivalence, or charge an actual output split quantity.  A larger coefficient
+on the old terminal reserve cannot work.

@@ -1,0 +1,393 @@
+"""Batch 1 of intake G (2026-09-10, claude-prob1000-0910): fifteen rows from eight fresh arXiv sources
+(August-September 2026), none of which appears in the 426-source union of the earlier ledgers. Statements are
+copied from the fetched PDFs (Downloads/Probability_1000_intake_G_20260910/sources/<id>/text.txt); the attempt
+text is this agent's own first attack, written in the time available, and every row is labelled accordingly."""
+import json
+from pathlib import Path
+
+rows = []
+
+def row(pid, title, src, loc, statement, status_search, attempt=None, admitted=True, dedup=None, **kw):
+    r = {"problem_id": pid, "title": title, "source_id": src, "locator": loc, "statement": statement,
+         "status_search": status_search, "admitted": admitted}
+    if dedup: r["dedup_key"] = dedup
+    if attempt: r["attempt"] = attempt
+    r.update(kw)
+    rows.append(r)
+
+def att(method, result, obstruction, key_identity="", result_status="attempted_unsolved", substantive=True):
+    return {"method": method, "result": result, "obstruction": obstruction, "key_identity": key_identity,
+            "result_status": result_status, "substantive": substantive}
+
+# ---------------------------------------------------------------- Cerf, theta(p_c, Z^d) = 0 ?  (arXiv:2608.23661, 708 pp.)
+CERF = "cerf_theta_pc_2026"
+row("G0001", "Stretched-exponential finite-cluster tail wherever theta(p) > 0 (site percolation, d >= 3)", CERF,
+    "Conjecture 1.4, Section 1, PDF p. 3",
+    "Bernoulli site percolation on Z^d, d >= 3, C(0) the cluster of the origin. Conjecture 1.4. Let d >= 3. For any "
+    "p in ]0,1[, we have the implication theta(p, Z^d) > 0 => liminf_{n -> infinity} (1/ln n) ln ln (1 / P_p(n <= |C(0)| < "
+    "+infinity)) > 0. [Context: Theorem 1.2 of the source proves that at p = p_c either theta(p_c, Z^d) = 0 or that liminf is "
+    "0; the source says 'it could be that the correct way to prove that theta(p_c, Z^d) = 0 is to prove separately "
+    "theorem 1.3 and conjecture 1.4'.]",
+    "Source (Cerf, 2026-08-22) states it as a conjecture; the campaign ledgers carry theta(p_c) = 0 itself (C0023, C0094) but "
+    "not this tail statement. No other search run.",
+    att("Split the conjecture by p. For p > p_c the supercritical finite-cluster tail is stretched exponential with "
+        "exponent (d-1)/d (Kesten and Zhang 1990 for bond percolation, Grimmett's book Theorem 8.65; the site version "
+        "follows the same Grimmett-Marstrand renormalisation), so the liminf is at least (d-1)/d > 0 and the conjecture "
+        "holds there. The only case left is p = p_c with theta(p_c) > 0.",
+        "Conjecture 1.4 is EQUIVALENT to Conjecture 1.1 (theta(p_c, Z^d) = 0) modulo the supercritical tail theorem: "
+        "1.4 at p = p_c together with the source's Theorem 1.2 gives theta(p_c) = 0 (if theta(p_c) > 0 then 1.4 makes the "
+        "liminf positive while 1.2 makes it zero); conversely if theta(p_c) = 0 the p = p_c case of 1.4 is vacuous and the "
+        "p > p_c case is Kesten-Zhang. So the row is a reformulation of C0023 rather than a new target, and its only "
+        "content beyond theta(p_c) = 0 is the site-percolation version of the supercritical tail bound.",
+        "Nothing beyond theta(p_c) = 0 itself; the reformulation does not suggest a new route because Theorem 1.2 already "
+        "consumes the tail information at p_c.",
+        key_identity="theta(p_c) > 0 and Thm 1.2 => liminf = 0; Conj 1.4 => liminf > 0; contradiction"),
+    dedup="cerf_theta_pc_2026::conjecture_1.4")
+
+row("G0002", "Second-order pivotal maximisers of increasing sets sit between Hamming levels n/2 - 2 and n/2 + 1", CERF,
+    "Conjecture 53.1, Section 53, PDF p. 407",
+    "Setting of the source's Part on pivots (Sections 47-58): for an increasing subset A of {0,1}^n, P^+_k(A, omega) is the "
+    "set of pivots of order k of A at omega and phi_2(A) = sum_omega |P^+_2(A, omega)|, phi_{2 \\ 1}(A) the analogous "
+    "sum over second-order pivots that are not first-order pivots (formulas (51.1) and (52.1) of the source). Conjecture "
+    "53.1. Let n >= 1 be fixed. If A* is an increasing subset of {0,1}^n which realizes the maximum of phi_{2\\1} or of "
+    "phi_2, then { omega : sum_i omega(i) >= n/2 + 1 } is contained in A* which is contained in { omega : sum_i omega(i) "
+    ">= n/2 - 2 }. [The source: the conjecture 'holds for n <= 7' by exhaustive search and 'yields a valuable upper bound' "
+    "E|P^+_2(A)| <= 6 sqrt(n) for every increasing A; Section 59 tries Steiner symmetrisation and fails.]",
+    "Source states it as a conjecture verified only for n <= 7. Not in the earlier ledgers (no row mentions pivots of "
+    "order two). No other search run.",
+    att("Compare with the first-order analogue: for increasing A at p = 1/2, E|P^+_1(A)| = sum_i Inf_i(1_A) = 2 E[1_A "
+        "(sum_i (2 omega_i - 1))] (monotone functions), which is maximised exactly by the majority set, i.e. the "
+        "first-order maximiser IS a Hamming ball. Conjecture 53.1 asks the second-order functional to be maximised "
+        "within two Hamming levels of majority.",
+        "The first-order statement is a two-line theorem; the second-order one has no such linear representation because "
+        "a pivot of order two is a pair (i,j) with omega + e_i + e_j in A but neither single flip in A, a quadratic "
+        "functional of 1_A. Sanity check: for A = majority with n odd, the second-order pivots at omega with sum = "
+        "(n-3)/2 are all pairs of zero coordinates, of order n^2/4 per such omega, and the level has weight of order "
+        "n^{-1/2}, giving phi_2/2^n of order n^{3/2}, not sqrt(n); so the bound E|P^+_2| <= 6 sqrt n quoted in the source "
+        "must be read with the source's own normalisation of P^+_2 (which I did not verify in Section 51), and the row "
+        "should be re-read against formulas (51.1)-(52.1) before any attack.",
+        "Exact form of phi_2 (formula (52.1), a 708-page source) not extracted in this session; the magnitude check above "
+        "disagrees with the quoted bound and must be settled first."),
+    dedup="cerf_theta_pc_2026::conjecture_53.1")
+
+row("G0003", "Deviations pivotal inequality for disconnection events", CERF,
+    "Conjecture 58.2, Section 58, PDF p. 437",
+    "Conjecture 58.2 (Deviations pivotal inequality). Let n >= 1 and let p in ]0,1[. There exists a constant c = c(p) "
+    "which depends on p only such that, for a decreasing subset D of {0,1}^n which is of the disconnection type, we have "
+    "for all k in {1, ..., n}: P_p(D) <= exp( -(c/k)/n * E[ |P^+_k(D)| | D ]^2 ). [Source: 'Conjecture 58.2, if true, would "
+    "imply that theta(p_c, Z^d) = 0'; 'the case k = 1 of these conjectures has been proved rigorously in proposition 39.5 "
+    "and corollary 40.3'; and, crucially, 'so far we did not succeed in defining properly a class of disconnection events "
+    "for which the conjecture could be verified, which is why this concept is left intentionally vague'.]",
+    "Source states it. NOT ADMITTED: the hypothesis 'of the disconnection type' is undefined by the source's own account, "
+    "so the statement has no truth value until a class is fixed; recorded so that a later reader does not re-mine it.",
+    admitted=False, current_status="not_well_posed_in_source",
+    resolved_by="Not a resolution: excluded because the source leaves the hypothesis class intentionally undefined "
+                "(Section 58, PDF p. 437). Re-admit if a later version fixes the class.",
+    dedup="cerf_theta_pc_2026::conjecture_58.2")
+
+# ---------------------------------------------------------------- Flammant, finite-graph conjecture (arXiv:2609.03492)
+FLA = "flammant_finite_graph_2026"
+row("G0004", "Increasing-events boundary-connectivity conjecture on finite graphs (implies theta(p_c) = 0)", FLA,
+    "Conjecture 2.2 (Main conjecture), Section 2, PDF p. 2",
+    "Bernoulli bond percolation with parameter p on a finite graph G = (V,E), o in V, B a subset of V. An event A is "
+    "increasing with respect to the percolation configuration if omega -> P[A | pi = omega] is increasing on {0,1}^E "
+    "(pi the configuration; the event may depend on extra randomness). Conjecture 2.2. There exists a universal "
+    "function phi : (0, +infinity) -> R, independent of G, o, B and p, such that phi(eps) -> 1 as eps -> 0, and such "
+    "that the following statement always holds. Let eps > 0. Let (E_b)_{b in B} be a family of events which are "
+    "increasing with respect to the percolation configuration. Assume that P[E_b] >= 1 - eps for every b in B. Then "
+    "P[ union_{b in B} ({o <-> b} cap E_b) ] >= phi(eps) P[o <-> B]. [Theorem 2.4 of the source: the conjecture implies "
+    "theta(p_c) = 0 for every d >= 2, via Kozma and Nitzan's Theorem 6.]",
+    "Posted 2026-09-07; the source calls it its main conjecture. The earlier ledgers have no finite-graph connectivity "
+    "conjecture (Kozma-Nitzan's is not there either, see G0005). No other search run.",
+    att("Test the extreme cases. |B| = 1: {o <-> b} and E_b are both increasing, so Harris-FKG gives P[{o<->b} cap E_b] >= "
+        "P[o<->b] P[E_b] >= (1-eps) P[o<->b], i.e. phi(eps) = 1 - eps works. General B: for the family of graphs where the "
+        "connections o <-> b, b in B, are independent (disjoint routes) with common probability q, take the adversarial "
+        "choice E_b = {o <-> B \\ {b}}; then P[E_b] >= 1 - eps forces (1-q)^{|B|-1} <= eps and the union event is {N >= 2} "
+        "with N ~ Binomial(|B|, q), whose failure P[N = 1] = |B| q (1-q)^{|B|-1} <= |B| q eps is at most eps log(1/eps) "
+        "(1+o(1)) times P[N >= 1]; so on that family phi(eps) = 1 - O(eps log(1/eps)) works for this E_b.",
+        "Two supporting cases, no proof and no counterexample. The conjecture is strictly stronger than Kozma-Nitzan's "
+        "Conjecture 3 (the source proves the implication), so it is at least as hard as that.",
+        "A counterexample needs 'o connects to exactly one boundary point with high probability, uniformly over many "
+        "candidates'; positive association of the connection events works against such concentration, and I could not "
+        "build a Bernoulli example with P[N = 1 | N >= 1] -> 1 while every P[o <-> B \\ b] -> 1.",
+        key_identity="|B| = 1: FKG, phi = 1 - eps"),
+    dedup="flammant_finite_graph_2026::conjecture_2.2")
+
+row("G0005", "Kozma-Nitzan high-probability connectivity conjecture on finite graphs", FLA,
+    "proof of Theorem 2.4, Section 2, PDF p. 3 (restating Kozma and Nitzan, Conjecture 3)",
+    "Bernoulli bond percolation with common parameter p on a finite graph G = (V,E). Conjecture (Kozma-Nitzan, Conjecture "
+    "3, finite constant-parameter form as restated by the source): for every eta > 0 there exists delta = delta(eta) > 0 "
+    "such that, for every finite graph G, every A subset of V and every o, z in V, if P[o <-> A] > 1 - delta and "
+    "P[a <-> z] > 1 - delta for every a in A, then P[o <-> z] > 1 - eta. [Kozma and Nitzan's Theorem 6: this implies "
+    "theta(p_c, Z^d) = 0 for all d >= 2.]",
+    "Kozma-Nitzan's paper is cited by both Cerf (as [90]) and Flammant as very recent and unresolved. The earlier ledgers "
+    "have C0138 (a different Kozma conjecture) only. No other search run.",
+    att("Union bound with FKG. P[o <-> z] >= P[o <-> A] - P[exists a in A: o <-> a, a not<-> z]. For fixed a the event "
+        "{o <-> a} is increasing and {a not<-> z} is decreasing, so P[o<->a, a not<->z] <= P[o<->a] P[a not<->z] <= delta "
+        "P[o<->a]. Summing, P[o <-> z] >= 1 - delta - delta E[N_A], where N_A is the number of a in A joined to o.",
+        "The conjecture holds with eta = 2 delta (K + 1) on every instance where E[N_A] <= K: in particular whenever |A| "
+        "is bounded, and more generally whenever the cluster of o meets A in a bounded expected number of points. The "
+        "open content is exactly the regime where o's cluster meets A in many points, where the union bound over a is "
+        "wasteful; what is needed is that the cluster of o, given it reaches A, reaches A at some point a whose own "
+        "event {a <-> z} occurs, i.e. an FKG-type statement conditional on the cluster, which is Flammant's Conjecture "
+        "2.2 with E_a = {a <-> z}.",
+        "No control of N_A in the interesting instances (boxes in Z^d with A a face: N_A is of order n^{d-1} there).",
+        key_identity="P[o<->z] >= 1 - delta - delta E[N_A] (FKG on increasing x decreasing)"),
+    dedup="flammant_finite_graph_2026::kozma_nitzan_conjecture_3")
+
+# ---------------------------------------------------------------- Fernley-Jacob, contact process on the tree (arXiv:2609.09972)
+FJ = "fernley_jacob_contact_tree_2026"
+row("G0006", "Is lambda_1 < lambda_p for the contact process on Z^d, d >= 2 (percolation of the upper invariant measure)", FJ,
+    "Introduction, PDF pp. 1-2 (question attributed to [8])",
+    "Contact process with infection rate lambda on Z^d; lambda_1 the critical value for survival (lambda_1 = lambda_c "
+    "on Z^d), and lambda_p the critical value beyond which the infected vertices of the upper invariant measure "
+    "nu_lambda percolate. Source: '[8] proves in particular that ... lambda_p(Z) = +infinity, lambda_p(Z^d) <= 6.25 < "
+    "+infinity for d >= 2. The same paper also raises the natural question whether we have lambda_1 < lambda_p on Z^d "
+    "when d >= 2, which remains a difficult open problem. To the best of our knowledge, such a result has previously "
+    "never been proven for any graph with lambda_p < +infinity.' The source proves lambda_1 < lambda_p on the regular "
+    "tree T_d for all d >= 3 (and 0 < lambda_1 < lambda_p < lambda_2 < lambda_p^c < infinity for d >= 7).",
+    "Source (2026-09-09) calls it a long-standing open problem on Z^d. The earlier ledgers carry one contact-process row "
+    "(E0007, two-type exclusion), not this. No other search run.",
+    att("Read the tree proof for what breaks on Z^d: the source dominates nu_lambda from below by a product Bernoulli "
+        "measure with parameter p_lambda and uses p_lambda < 1/(d-1) (the tree's site-percolation threshold) for lambda "
+        "slightly above lambda_1; on the tree the branches below a vertex are conditionally independent, so a "
+        "one-vertex density bound converts into a product-measure comparison. On Z^d there is no such conditional "
+        "independence and the density of nu_lambda near lambda_1 is small (it vanishes continuously at lambda_c, "
+        "Bezuidenhout-Grimmett), so the natural route is instead: show nu_lambda is dominated by a product measure of "
+        "small density near lambda_c (which would give lambda_p > lambda_1 via p_c(Z^d) > 0).",
+        "No result; the sharper formulation is: does the upper invariant measure at lambda_c + eps stochastically "
+        "dominate no product measure of density above p_c^site(Z^d)? A positive answer for small eps gives the "
+        "conjecture, since 'dominated by' is the wrong direction for percolation but 'density of infected sites tends to "
+        "0 as lambda -> lambda_c' (continuity of the transition) plus a finite-range decoupling of nu_lambda would give "
+        "non-percolation for lambda near lambda_c.",
+        "nu_lambda has no known finite-range decoupling; its correlations near lambda_c are exactly the hard part."),
+    dedup="fernley_jacob_contact_tree_2026::lambda_1_lt_lambda_p_zd")
+
+row("G0007", "Continuity of the two percolation transitions of the upper invariant measure on T_d", FJ,
+    "Section 2, PDF p. 5 (paragraph before Figure 1)",
+    "Contact process on the regular tree T_d with upper invariant measure nu_lambda; lambda_p the percolation threshold "
+    "of the infected set, lambda_p^c the threshold before which the healthy set percolates. Source: 'the figure suggests "
+    "that both transitions are continuous, and it's possible as well that the probability to be in an infinite healthy "
+    "component has a continuous derivative at lambda = lambda_p^c while the probability to be in an infinite infected "
+    "component at lambda = lambda_p does not. We leave both questions as interesting open problems.' Question: are the "
+    "functions lambda -> nu_lambda(0 in an infinite infected component) and lambda -> nu_lambda(0 in an infinite healthy "
+    "component) continuous at lambda_p and lambda_p^c respectively, and is the first derivative continuous at "
+    "lambda_p^c but not at lambda_p?",
+    "Source poses it (2026-09-09). Not in the earlier ledgers. No other search run.",
+    att("Reduce to a percolation-in-random-environment statement: nu_lambda is a translation-invariant (in the tree's "
+        "automorphism group) measure with positive association (it is the limit of an attractive spin system started "
+        "from all-infected, so it satisfies FKG, Harris 1977). For FKG measures on trees, continuity of the "
+        "percolation function at the threshold is not automatic; the standard route (Bezuidenhout-Grimmett style "
+        "finite-size criterion) needs a finite-range or exponentially decaying dependence, and nu_lambda on the tree is "
+        "a Markov chain along rays only in the Boltzmann sense, not a genuine finite-range field.",
+        "No result. First concrete sub-question: does nu_lambda have exponential decay of correlations along the tree at "
+        "every lambda > lambda_1? If so, a Grimmett-Marstrand type argument in the tree setting would give continuity of "
+        "the infected-percolation function at lambda_p.",
+        "Decay of correlations of the upper invariant measure on T_d is not in the source and I did not find it "
+        "elsewhere in the session."),
+    dedup="fernley_jacob_contact_tree_2026::continuity_of_the_two_transitions")
+
+# ---------------------------------------------------------------- Campos-de Lima (arXiv:2601.00291)
+CL = "campos_delima_nonmonotone_2026"
+row("G0008", "Monotonicity of the two-point connection probability in the distance on Z^2", CL,
+    "Abstract and Introduction, PDF p. 1; Section 3, PDF p. 4",
+    "Bernoulli bond percolation on Z^2 with parameter p. Source: 'on the square lattice is an open question to prove that "
+    "the probability of the origin being connected to the vertex (0,n) is monotone in n' and, after the construction of "
+    "a transitive graph without the property, 'it remains an open question whether graphs like Z^d satisfy the "
+    "monotonic property or not'. Question: for every p in (0,1), is n -> P_p(0 <-> (0,n)) non-increasing on Z^2 (and on "
+    "Z^d)? [The source traces the question to Hammersley and Welsh (1965) in first-passage percolation.]",
+    "Source (2026-01-01) calls it open; the transitive counterexample there is for a different graph. The earlier "
+    "ledgers' 34 'monoton' rows are about other objects (checked by title). No other search run.",
+    att("Check the trivial regimes. p small: P_p(0 <-> (0,n)) = p^n (1 + O(p)) with the correction from the number of "
+        "self-avoiding paths of length n + 2k, so monotonicity holds for p below some p_0 by the connective-constant "
+        "bound (number of paths of length m between the points is at most mu^m and the ratio of consecutive terms is "
+        "p mu (1+o(1)) < 1). p close to 1: P_p(0 <-> (0,n)) = theta(p)^2 + (finite-cluster term) where the second term "
+        "decays exponentially in n with a monotone leading behaviour; monotonicity for large n follows from the "
+        "Ornstein-Zernike asymptotics of the truncated two-point function (Campanino-Ioffe-Velenik), which give "
+        "C n^{-1/2} e^{-n/xi} (1 + o(1)) along an axis, so P is eventually decreasing for every p != p_c.",
+        "Partial: monotonicity holds for all n when p is small, and for all n >= n_0(p) when p != p_c (Ornstein-Zernike "
+        "axis asymptotics at p < p_c, and at p > p_c via the truncated function). The open content is (i) all n at "
+        "intermediate p, where exact enumeration to moderate n is the natural test, and (ii) p = p_c, where the two-point "
+        "function decays as n^{-1/4+o(1)} on the triangular lattice and no monotonicity mechanism is known.",
+        "No mechanism at p = p_c; at other p, uniformity of the Ornstein-Zernike error terms in n from n = 1 is not "
+        "available.", result_status="partial_result"),
+    dedup="campos_delima_nonmonotone_2026::monotone_two_point_z2")
+
+# ---------------------------------------------------------------- Christoph-Morawski-Wigderson (arXiv:2608.19145)
+CMW = "christoph_morawski_wigderson_finite_pc_2026"
+row("G0009", "Conditions for a giant component in supercritical percolation on a general finite graph", CMW,
+    "Question 5.1, Section 5, PDF p. 19",
+    "Bernoulli bond percolation G_p on a finite graph G; lambda(G) the spectral radius of its adjacency matrix. "
+    "Question 5.1. What natural conditions on G imply that if p >= (1 + eps)/lambda(G) then with constant probability G_p "
+    "contains a component of size Omega(|G|)? [The source: 'the main difficulty ... is that lambda(G) can be governed by "
+    "a very small part of the graph', with G possibly containing an induced subgraph H on (1 - o(1))|G| vertices with "
+    "lambda(H) << lambda(G); the source determines the critical probability 1/lambda(G) for the emergence of a component "
+    "of size comparable to the maximum degree.]",
+    "Source (2026-08-19) poses it. C0140 in the earlier ledgers is the transitive-graph giant-component question, a "
+    "different setting. No other search run.",
+    att("Identify the obvious sufficient condition and the obvious obstruction. Sufficient: lambda(G) attained by a "
+        "'spread' Perron vector, e.g. the vector v with v^T A v = lambda |v|^2 having ||v||_infinity^2 <= C |v|^2 / |G| "
+        "(delocalised Perron eigenvector); then the expected number of vertices in large components is controlled by the "
+        "same second-moment computation that gives the source's maximum-degree-size components, and a sprinkling "
+        "argument of Krivelevich-Sudakov type should give Omega(|G|). Obstruction: a clique of size s attached to a "
+        "path of length |G| - s has lambda ~ s and p = 2/s gives components of size O(s), so no condition weaker than "
+        "'the Perron mass is not concentrated on o(|G|) vertices' can suffice.",
+        "A candidate answer: delocalisation of the Perron eigenvector (||v||_infinity^2 <= C |v|_2^2/|G|) is necessary up "
+        "to constants and plausibly sufficient; not proved.",
+        "The sprinkling step needs expansion between the many maximum-degree-size components, which delocalisation "
+        "alone does not give (a disjoint union of many small dense pieces has a delocalised Perron vector and no giant)."
+        " So the correct condition must also bound the number of components at scale Delta, i.e. involve the second "
+        "eigenvalue.", ),
+    dedup="christoph_morawski_wigderson_finite_pc_2026::question_5.1")
+
+row("G0010", "Tight subcritical bound on the largest component in terms of the maximum degree and the spectral radius", CMW,
+    "Question 5.2, Section 5, PDF p. 19",
+    "Bernoulli bond percolation G_p on a finite graph G with maximum degree Delta(G) and spectral radius lambda(G), "
+    "p <= (1 - eps)/lambda(G). Theorem 1.4 of the source: a.a.s. the largest component has size at most "
+    "O( sqrt(|G| Delta(G)) log|G| / lambda(G) ), optimal when lambda(G) >> sqrt|G| (e.g. K_{s,s^3}) but not in all "
+    "regimes (for lambda(G) = Delta(G) and G connected the true bound is O(log |G|)). Question 5.2. For a graph with given "
+    "Delta(G) and lambda(G), what is the tight upper bound for the typical size of the largest component of G_p, when "
+    "p <= (1 - eps)/lambda(G)? The source singles out the near-regular case Delta(G) <= (1 + delta) lambda(G).",
+    "Source (2026-08-19) poses it. Not in the earlier ledgers. No other search run.",
+    att("Interpolate the two known ends. Regular: largest component O(log|G|) (branching-process comparison with mean "
+        "p Delta < 1). Complete bipartite K_{s,t}, t >> s: components of size about s log s at p = (1-eps)/sqrt(st). "
+        "A natural guess is that the answer is governed by the largest eigenvalue of the 'non-backtracking' or "
+        "'square-root-degree-normalised' matrix restricted to a subgraph: the size of the largest component is "
+        "max over induced subgraphs H of (log|H|) / log(1/(p lambda(H))) up to constants, i.e. the subgraph that is "
+        "closest to critical dominates.",
+        "A conjectural answer, no proof: largest component of order max_H log|H| / log(1/(p lambda(H))) with H ranging "
+        "over induced subgraphs (for the regular graph H = G gives log|G|; for K_{s,t} the star K_{1,t} gives the t "
+        "vertices of a star at p ~ 1/sqrt(st), consistent with the s log s scale only after the union over s stars, so "
+        "the guess needs a multiplicity term).",
+        "The multiplicity term (how many near-critical subgraphs there are) is what the source's log|G| factor hides; "
+        "no clean formulation reached."),
+    dedup="christoph_morawski_wigderson_finite_pc_2026::question_5.2")
+
+row("G0011", "Long cycles in supercritical percolation on graphs of average degree d (Krivelevich-Samotij)", CMW,
+    "Conjecture 5.3, Section 5, PDF p. 20 (restating Krivelevich-Samotij [28], see also [15])",
+    "Conjecture 5.3 ([15, 28]). For every eps > 0 there exist d_0, gamma > 0 such that the following holds. If G is a "
+    "graph of average degree d >= d_0 and p >= (1 + eps)/d, then G_p contains a cycle of length at least gamma d a.a.s. as "
+    "|G| -> infinity. [Known: for d-regular G, Krivelevich-Sudakov give a path of length Omega(d) and Krivelevich-Samotij "
+    "a cycle of length Omega(d); for average degree d and p >= C/d, [10] gives a cycle of length (1 - gamma) d with "
+    "gamma -> 0 as C -> infinity; the source suggests combining its techniques with [10].]",
+    "Source (2026-08-19) restates it as open. Not in the earlier ledgers (no Krivelevich row). No other search run.",
+    att("Reduce to a minimum-degree statement by the standard subgraph lemma: a graph of average degree d contains a "
+        "subgraph of minimum degree at least d/2 (delete vertices of degree < d/2 one at a time). On that subgraph H, "
+        "p >= (1+eps)/d = (1+eps)/(2 delta(H)) is only half-critical for H's minimum degree, so the reduction loses the "
+        "factor 2 that makes the problem hard: the cycle must come from the sparse-but-dense-on-average structure, not "
+        "from a min-degree core. Second reduction: by the source's own theorem, p >= (1+eps)/lambda(G) already gives a "
+        "component of size Omega(Delta) at least; since lambda(G) >= d (average degree), p >= (1+eps)/d is supercritical "
+        "for the spectral threshold, so a large component of size at least the maximum degree exists; the gap is turning "
+        "a large component into a long cycle, which for regular graphs is the Krivelevich-Samotij DFS argument.",
+        "Two reductions and no proof; the second identifies the exact missing step (large component => long cycle "
+        "without regularity).",
+        "The DFS/rotation-extension arguments need a degree lower bound on the explored subgraph; average degree gives "
+        "none after the first deletions."),
+    dedup="christoph_morawski_wigderson_finite_pc_2026::conjecture_5.3")
+
+# ---------------------------------------------------------------- Dozier, birthday paradox for NB walks (arXiv:2608.26321)
+DOZ = "dozier_birthday_nonbacktracking_2026"
+row("G0012", "Alon-Peres conjecture: non-backtracking walks of length C sqrt(n) are rarely simple (minimum degree 3)", DOZ,
+    "Conjecture 1.5 (Alon-Peres), Section 1, PDF p. 2",
+    "Conjecture 1.5 (Alon-Peres). For any eps > 0, there exists a C = C(eps) such that if Gamma is a graph on n vertices "
+    "with all degrees at least 3, and k > C sqrt(n), then for any edge delta, the probability that a length-k random "
+    "non-backtracking walk starting with delta is simple is less than eps. [The source proves the fixed-degree "
+    "(regular) case; 'one could also explore analogs of these statements for (non-backtracking) closed loops'.]",
+    "Source (2026-08-28) attributes the general conjecture to Alon and Peres and proves only the regular case. Not in the "
+    "earlier ledgers. No other search run.",
+    att("Look for the degree-inhomogeneous obstruction to the source's method. Its proof samples a 'plan' (a successor "
+        "edge for every edge) and shows a simple plan has many deviations that must self-intersect, by an excursion "
+        "reversal that is measure-preserving for the uniform non-backtracking step in a regular graph. With variable "
+        "degrees the reversal changes the walk's law by the ratio of degrees along the excursion, which is the only place "
+        "regularity enters; bounded degree ratio (max degree / min degree <= K) should therefore give the conjecture "
+        "with C depending on K by the same proof.",
+        "Plausible extension to bounded degree ratio (not carried out); the genuine content of the conjecture is "
+        "unbounded degrees (e.g. a few hubs of degree ~ n attached to a cubic graph), where a walk that hits a hub is "
+        "sent to a uniformly random neighbour and the sqrt n scale competes with hub revisits.",
+        "For a star-like hub of degree n the walk returns to the hub only if it re-enters through a neighbour, so hubs "
+        "can make simple walks LONGER; a quantitative birthday bound in the hub regime is the open part."),
+    dedup="dozier_birthday_nonbacktracking_2026::conjecture_1.5")
+
+# ---------------------------------------------------------------- Schrott, couplings farthest from independence (arXiv:2609.10467)
+SCH = "schrott_couplings_gaussian_2026"
+row("G0013", "Catalano-Lavenant conjecture: the diagonal couplings of the uniform law are farthest from independence", SCH,
+    "Conjecture 1.1, Section 1, PDF p. 1 (restating Catalano and Lavenant [4, Remark 3])",
+    "Conjecture 1.1 ([4, Remark 3]). Let lambda denote the uniform probability measure on [0,1]. Then the diagonal and "
+    "antidiagonal couplings (id,id)_# lambda and (id, 1 - id)_# lambda maximize the 2-Wasserstein distance from the "
+    "independent coupling lambda (x) lambda among all elements of Pi(lambda, lambda). [The source proves the Gaussian "
+    "analogue for all n: the couplings Law(Z, ..., +-Z) maximise W_2^2(gamma_n, .) over Pi_n(gamma), via the Gaussian "
+    "isoperimetric inequality; the uniform case 'remains open to the best of our knowledge'.]",
+    "Source (2026-09-09) says open. Not in the earlier ledgers (no Wasserstein-dependence row). No other search run.",
+    att("Write the objective as a maximisation of a supremum over transport plans: W_2^2(pi, lambda(x)lambda) = "
+        "int |x|^2 dpi + int |y|^2 d(lambda(x)lambda) - 2 sup_{T in Pi(pi, lambda(x)lambda)} int <x,y> dT, and the first "
+        "two terms are constant over Pi(lambda,lambda) (marginals fixed). So the conjecture says the diagonal coupling "
+        "MINIMISES the maximal correlation sup_T int <x,y> dT with the product measure, over couplings of two uniforms. "
+        "For the diagonal coupling this maximal correlation is that of the uniform law on the diagonal segment against "
+        "the uniform law on the square, which is computable (the optimal map projects the square onto the diagonal "
+        "monotonically along the direction (1,1)): value 1/2 + 1/12 ... (not computed to the end in this session).",
+        "A reformulation only: the conjecture is a MINIMISATION of the maximal correlation with the product law over "
+        "bivariate copulas. The Gaussian proof uses that the extremal set is determined by an isoperimetric inequality; "
+        "the analogous tool for the square is the (known) isoperimetric profile of the cube, which suggests the same "
+        "proof scheme could go through for the uniform law, with the diagonal replacing the Gaussian half-space "
+        "extremals.",
+        "The Gaussian argument's key step (a Gaussian isoperimetric bound for the correlation functional) has no "
+        "obvious uniform analogue with the right extremal set; not attempted further."),
+    dedup="schrott_couplings_gaussian_2026::conjecture_1.1")
+
+# ---------------------------------------------------------------- Kumar-Dudeja, threshold cascades on unimodular trees (arXiv:2608.21125)
+KD = "kumar_dudeja_threshold_cascades_2026"
+row("G0014", "Bramson correction for the front of threshold cascades on unimodular random trees", KD,
+    "Conjecture 3.2, Section 3.2, PDF p. 4",
+    "Threshold cascades of interacting diffusions on unimodular random trees, in the setting of the source's Theorem 2.1 "
+    "(supercritical branching-random-walk representation with tilt parameter theta*, speed c*, derivative martingale "
+    "dW_n). Conjecture 3.2 (Uniform integrability of the derivative martingale => Bramson delay). Under the hypotheses "
+    "of Theorem 2.1, the derivative martingale dW_n is uniformly integrable (equivalently, dW_infinity > 0 a.s. on "
+    "survival), and consequently the time-indexed front obeys F(t) = c* t - (3/(2 theta* c*)) log t + O_P(1), with the "
+    "tightness and the limiting law of the recentred front given by a randomly-shifted Gumbel decorated point process, "
+    "the shift being a multiple of log dW_infinity, exactly as for branching Brownian motion. [Source's Programme 3.3 "
+    "lists the three ingredients, of which the x log^2 x moment condition for the offspring point process is the "
+    "missing one.]",
+    "Source (2026-08-21) states it as the missing step of its Bramson programme. Not in the earlier ledgers (D0064 is "
+    "the star-scale-invariance equation, a different object). No other search run.",
+    att("Check the source's own reduction. Uniform integrability of the derivative martingale of a branching random "
+        "walk holds if and only if the offspring point process satisfies the x log^2 x condition (Biggins-Kyprianou, "
+        "Aidekon; Chen 2015 for the 'if and only if'), under the boundary case normalisation. So the conjecture's first "
+        "half is a theorem the moment the cascade's offspring point process is shown to have E[X log_+^2 X] < infinity "
+        "with X = sum over children of e^{theta* displacement}; the source's 'exponential-moment hypothesis on the "
+        "offspring count' gives this directly when the displacements are bounded (then X <= N e^{theta* M} and E N log^2 "
+        "N < infinity follows from the exponential moment).",
+        "Under bounded displacements the first half (uniform integrability) follows from known results plus the "
+        "source's exponential-moment hypothesis; the second half (Bramson delay and the decorated Gumbel limit) then "
+        "needs the Aidekon / Madaule programme for branching random walks with the cascade's spine structure, which the "
+        "source says is available from its [1, App. A]. If the displacements are unbounded the x log^2 x condition "
+        "needs a separate tail estimate.",
+        "I did not read Theorem 2.1's hypotheses to confirm whether displacements are bounded; the row's status depends "
+        "on that one check.", result_status="partial_result"),
+    dedup="kumar_dudeja_threshold_cascades_2026::conjecture_3.2")
+
+row("G0015", "Continuum-random-tree scaling limit of the critical cascade cluster with a continuous type space", KD,
+    "Conjecture 7.2, Section 7, PDF p. 8",
+    "Conjecture 7.2 (Continuous-type CRT scaling limit). Under the hypotheses of Theorem 6.1 at criticality rho(K) = 1, "
+    "with the additional exponential-moment hypothesis on the offspring count (as in [1, Thm. 6.4]), the critical cluster "
+    "conditioned on {|S| = n}, with graph distance rescaled by Sigma_c / sqrt n, converges in the Gromov-Hausdorff-"
+    "Prokhorov sense to Aldous' Continuum Random Tree, with an explicit constant Sigma_c built from sigma^2_off and the "
+    "tilted stationary law varpi*. [Source's Programme 7.3: the obstacle is that the type space is the Polish space R "
+    "(or D x R), not finite, so Miermont's finite-type invariance principle does not apply directly; the missing input "
+    "is a tightness estimate uniform in the discretisation mesh.]",
+    "Source (2026-08-21) states it. Not in the earlier ledgers. No other search run.",
+    att("Route around Miermont. For multitype Galton-Watson trees with a general (Polish) type space and a spectral gap "
+        "for the mean-offspring kernel, the CRT limit can be obtained from the Lukasiewicz-path / height-process route "
+        "of the single-type theory by projecting types away: the total-progeny walk is a Markov additive process with "
+        "finite variance under the spectral-gap assumption, and de Raphelis (2017, 'Scaling limit of multitype Galton-"
+        "Watson trees with infinitely many types') already handles infinitely many types under a spectral-gap/moment "
+        "condition, giving the CRT with an explicit constant; the conjecture's constant Sigma_c should match his.",
+        "A literature route (de Raphelis 2017) that appears to cover the conjecture's setting, which would make the "
+        "conjecture a corollary once the cascade cluster is written as a multitype Galton-Watson tree with the source's "
+        "kernel K. Not verified against the source's exact hypotheses in this session.",
+        "de Raphelis's conditions (a Doeblin-type condition on the type kernel and moment bounds) must be checked against "
+        "K; the 'D x R' type space with a diffusion coordinate may fail the Doeblin condition."),
+    dedup="kumar_dudeja_threshold_cascades_2026::conjecture_7.2")
+
+out = Path(__file__).resolve().parent / "b01_g0001_g0015.json"
+out.write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
+print("wrote", out, len(rows), "rows")

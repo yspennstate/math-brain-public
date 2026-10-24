@@ -1,0 +1,39 @@
+PROB20-20 entropy-band finite-model checker output
+
+The checker was executed locally before archival.  The finite toy law was
+pi = [0.35, 0.25, 0.15, 0.10, 0.07, 0.04, 0.025, 0.015].
+
+Case n=5, m=12, K=1, L=5
+P(S_n=m) = 0.05119401875000001
+b = 2.9721325750498755
+D(mu||pi) = 0.10167008572971675
+a = 1.6376809644388388
+Q = 1.08
+Phi(a,Q) = 0.12411862674733398
+b - n D = 2.4637821464012917 > 0
+D - Phi/L = 0.07684636038024996 > 0
+PASS
+
+Case n=6, m=15, K=1, L=5
+P(S_n=m) = 0.03666593062500052
+b = 3.305907275922935
+D(mu||pi) = 0.12286795270930195
+a = 1.6547561378035853
+Q = 1.08
+Phi(a,Q) = 0.13131607436698522
+b - n D = 2.5686995596671234 > 0
+D - Phi/L = 0.09660473783590491 > 0
+PASS
+
+Case n=6, m=18, K=2, L=6
+P(S_n=m) = 0.014311853781249936
+b = 4.246667149342026
+D(mu||pi) = 0.27179059720894627
+a = 2.07440569134345
+Q = 0.9300000000000002
+Phi(a,Q) = 0.5197767150174939
+b - n D = 2.6159235660883486 > 0
+D - Phi/L = 0.18516114470603062 > 0
+PASS
+
+These finite computations only check the exact algebraic inequalities.  They are not evidence that Janson Problem 18.39 is solved and do not test any asymptotic radius-one claim.

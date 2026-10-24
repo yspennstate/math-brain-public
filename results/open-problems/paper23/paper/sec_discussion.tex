@@ -1,0 +1,44 @@
+\section{Discussion}\label{sec:discussion}
+
+The paper makes one claim in two registers. In random-matrix terms: the worst conditioning of a chain
+of coordinate-optimized Gaussian submatrices decays at the sharp entropy rate $(k+1)H(\alpha)/\dF$, and
+the optimized operator norm moves only to a bracket set by the retained-mass constants
+$\kappa,\kcheck$. In network terms: a wide Gaussian network is fragile at the $1/\sqrt n$ scale at every
+input, robust at exactly the reciprocal scale, and un-certifiable pattern-by-pattern below the same
+entropy rate --- and all three are the same law read through the dictionary that gates are coordinate
+selections and the Jacobian is a submatrix product.
+
+Three features distinguish the account from its predecessors. It needs no oddness or bias-free
+hypothesis: the small output comes either from a random readout, which is symmetry-free, or from
+balance, which covers trained classifiers, and the gradient facts come from submatrix conditioning,
+which does not see the sign structure. It is two-sided: the same bracket that produces the attack
+produces a matching certificate, so the scale is pinned rather than bounded on one side. And it is
+uniform over inputs, because the arrangement bound makes the union over realized gate patterns
+affordable in the wide regime. The cost is the wide regime itself, $dL\log\bar n=o(\min_\ell n_\ell)$,
+and the Gaussian (or subgaussian, or Gaussian-plus-bounded-deviation) weights; the fully trained,
+proportional-width regime is reached only through the perturbation-stability theorem, which keeps the
+scale but not the constants.
+
+Several questions remain. The product rate is proved for equal densities and square bottlenecks; the
+unequal-density cascade of \Cref{rem:unequal} should give the general rate, but the sharp constant for a
+genuine rectangular bottleneck chain is open, as is the corresponding operator-norm edge for unequal
+densities \cite{shmaloProducts}. The transformer theorem covers the simplified, standard-temperature
+architecture at random init in the wide regime; the fully standard transformer, with biases, positional
+embeddings, affine normalization, and GELU, breaks the balance that supplies the small output, and the
+random-readout route does not obviously apply because the readout is a learned class token. The
+certification gap is stated for pattern-uniform certificates; whether a certificate that adapts to the
+realized pattern but is stable under a single gate flip can beat the $1/\sqrt n$ scale is the precise form
+of the ``can we certify robustness'' question, and \Cref{rem:cert-interp} suggests the answer is no
+without controlling the flip, which is what the adversary controls. Finally, the weight-tied dynamical
+limit shows the eigenvalue radius, not the operator norm, governs the sustained gain; making the
+infinite-time contraction unconditional requires the multi-time sign-decoupling estimate identified in
+\cite{relumap}, which is the one genuinely open problem in the reused-weight theory.
+
+The unifying point is methodological. Adversarial fragility has been explained by feature compression
+\cite{fawzi18}, by computational hardness \cite{bubeckSS19}, and by isoperimetry
+\cite{shafahi19,advExt}; the present account locates it in the spectral theory of the network's own
+Jacobian, and shows that the same spectral object --- a product of Gaussian submatrix blocks, optimized
+over supports --- controls the attack, the certificate, and the gap between them, quantitatively and with
+matching constants. The random-matrix theorems were the missing ingredient; with them the geometry of
+adversarial examples in deep networks is, in the wide Gaussian regime, a corollary of the conditioning
+of coordinate-optimized Gaussian maps.

@@ -1,0 +1,361 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\emp}{\bar\mu_N}
+\newcommand{\vol}{\operatorname{vol}}
+
+\title{The edge exponent of the uniform doubling condition, II:\\
+the matching upper bound}
+\author{Yitzchak Shmalo\\
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In the companion note [\emph{The edge exponent of the uniform doubling
+condition and an interpolation conjecture}] we proved that for i.i.d.\ uniform
+samples on the unit ball truncated by a single transversal half-space, the
+uniform doubling condition of [Shmalo, \emph{Ann.\ Math.\ Artif.\ Intell.}
+(2024)] fails with probability $1-o(1)$ at every scaling factor below
+$c(\log N/N)^{2/(n+2)}$, and we conjectured the interpolation law:
+critical exponent $2/(2n-j)$ when the lowest transversal boundary stratum of
+the truncation regions has dimension $j$.  Here we prove the matching upper
+bound: the condition holds with probability $1-1/N$ at scaling
+$\ell_N=O\bigl((\log N/N)^{2/(n+2)}\bigr)$.  Hence the critical scaling for
+the half-space truncation of the ball is exactly
+$\Theta\bigl((\log N/N)^{2/(n+2)}\bigr)$, and the interpolation law is now
+proved at all three anchor points $j=n-1$, $j=n-2$ and $j=0$.  The geometric
+heart is a uniform section bound for $G=B^n\cap\{x_1\le0\}$: at depth $h$
+below the extreme point of $G$ in \emph{any} direction, the level section has
+$(n-1)$-volume at least $c_nh^{n/2}$.  Its proof splits into one half-section
+estimate for feasible directions and, for infeasible directions, two
+overlapping regimes about the angular scale $\sin\varphi\asymp\sqrt h$,
+each elementary.
+\end{abstract}
+
+\section{Setting and result}\label{sec:intro}
+
+Let $K=B^n$ be the closed unit ball, $n\ge2$, $\mu$ the uniform probability
+measure on $K$, $T=\{X_1,\dots,X_N\}$ i.i.d.\ samples with empirical measure
+$\emp$, and
+\[
+H:=\{x:\ x_1\le0\},\qquad G:=K\cap H .
+\]
+Truncated slabs $S_w=\{x:|\langle x-s,u\rangle|\le\frac w2\}\cap H$ and the
+uniform doubling condition (UDC) with constants
+$(\kappa,\delta,\sigma,\beta,\ell)$ for the single truncation set
+$\{(e_1,0)\}$ are as in \cite{ShmaloUDC,companion2,companion6}.  In
+\cite{companion6} we proved the lower bound: with probability $1-o(1)$
+(for $n\ge3$) the UDC requires $\ell\ge c(\log N/N)^{2/(n+2)}$.  Here we
+complete the picture.
+
+\begin{theorem}\label{thm:main}
+Let $n\ge2$.  With the constants
+$\kappa=1+150$, $\sigma=1$, $\delta=\delta(n)>0$, $\beta=2$ of the companion
+papers (here $\widetilde R=1$ and the thickness radius is
+$r_0=\tfrac12$, since $B(-\tfrac12e_1,\tfrac12)\subseteq G$), there are
+$C(n)$ and $N_0(n,\kappa)$ such that for all $N\ge N_0$, with probability at
+least $1-\frac1N$, the sample satisfies the UDC for the truncation set
+$\{(e_1,0)\}$ with scaling factor
+\[
+\ell_N\;=\;C(n)\,\Bigl(\frac{\log N}{N}\Bigr)^{2/(n+2)} .
+\]
+Consequently, by \cite{companion6}, the critical scaling for this truncation
+is exactly $\Theta\bigl((\log N/N)^{2/(n+2)}\bigr)$, and the interpolation
+exponent $\frac{2}{2n-j}$ of \cite[Conjecture 1.2]{companion6} is established
+at $j=n-2$, alongside the proven cases $j=n-1$
+\cite{companion3,companion4} and $j=0$ \cite{companion3,companion5}.
+\end{theorem}
+
+By the proof skeleton of \cite{companion2}, as isolated in
+\cite[Section 2]{companion3}, Theorem~\ref{thm:main} reduces to a
+deterministic estimate: the doubling inequality holds at all scales
+$w\in[\ell_N,\beta)$ on the VC event provided every truncated slab of width
+$w$ containing a sample point has widened population mass
+$\mu(S_{\kappa w})\ge32u_N$, where $u_N\asymp\log N/N$ is the VC rate; and
+this follows from a uniform slab-volume bound.  We therefore prove:
+
+\begin{theorem}[Slab volume]\label{thm:slab}
+There are $c(n)>0$ and $L_0(n)>0$ such that for every $x\in G$, every unit
+vector $u$, and every $0<L\le L_0$,
+\[
+\vol\Bigl(G\cap\bigl\{y:\ |\langle y-x,u\rangle|\le L\bigr\}\Bigr)
+\;\ge\;c(n)\,L^{\frac{n+2}2} .
+\]
+\end{theorem}
+
+Granting Theorem~\ref{thm:slab}, the proof of Theorem~\ref{thm:main} is
+verbatim the assembly of \cite[Proof of Theorem 1.2]{companion3} (equivalently
+\cite[Section 3]{companion4}): the population dichotomy of
+\cite{companion2} applies since $G$ contains a $\tfrac12$-ball; the VC
+relative deviations apply to the class of truncated slabs; a sample point
+$x\in S_w$ gives, via Theorem~\ref{thm:slab} applied with
+$L=\min\bigl(\tfrac{(\kappa-1)w}2,L_0\bigr)$ and the inclusion
+$\{|\langle y-x,u\rangle|\le L\}\subseteq S'_{\kappa w}(u,s)$,
+\[
+\mu(S_{\kappa w})\;\ge\;\frac{c(n)}{\vol(B^n)}\,
+\min\Bigl(\tfrac{(\kappa-1)w}2,\,L_0\Bigr)^{\frac{n+2}2}
+\;\ge\;32\,u_N
+\qquad(w\ge\ell_N),
+\]
+by the definition of $\ell_N$ and, for large $w$, the choice of $N_0$.  The
+rest of this paper proves Theorem~\ref{thm:slab}.
+
+\section{The section lemma}\label{sec:section}
+
+For a unit vector $u$ write
+$\tau(x):=\langle x,u\rangle$, $\tau_{\max}(u):=\max_G\tau$, and
+\[
+A_u(h)\;:=\;\vol_{n-1}\Bigl(G\cap\{\tau(x)=\tau_{\max}(u)-h\}\Bigr).
+\]
+Decompose $u=u_1e_1+u'$ with $u'\perp e_1$, and set
+$\sin\varphi:=u_1$ when $u_1>0$.
+
+\begin{lemma}[Section lemma]\label{lem:section}
+There are $a(n)>0$ and $h_0(n)\in(0,\tfrac14]$ such that for every unit
+vector $u$ and every $0<h\le h_0$,
+\[
+A_u(h)\;\ge\;a(n)\,h^{\,n/2}.
+\]
+\end{lemma}
+
+The three exponent regimes behind the proof: for $u_1\le0$ the bound holds at
+the better rate $h^{(n-1)/2}$; for $u_1>0$ the extreme sits on the edge (or
+face) and the rate $h^{n/2}$ is sharp.
+
+\begin{proof}
+\emph{Case I: $u_1\le0$.}  Here the unconstrained maximizer of
+$\tau$ over $K$, namely $x=u$, lies in $H$, so $\tau_{\max}=1$ with extreme
+point $u$, and the level set of $K$ at depth $h$ is the $(n-1)$-ball
+\[
+D_h:=K\cap\{\tau=1-h\},
+\qquad\text{center }c_h=(1-h)u,\quad\text{radius }r_h=\sqrt{2h-h^2}\ge\sqrt h .
+\]
+If $u=-e_1$, then $D_h=\{x_1=1-h\}\cdot(-1)$ --- precisely, the level set is
+$\{x\in K: x_1=-(1-h)\}\subseteq H$, so $A_u(h)=\vol_{n-1}(D_h)
+=\omega_{n-1}r_h^{n-1}$.  Otherwise $e_1$ is not parallel to $u$ and the
+trace of $\partial H$ on the level hyperplane is an affine hyperplane of that
+hyperplane; the center satisfies $(c_h)_1=(1-h)u_1\le0$, i.e.\ the center
+lies in the kept half, and a half-ball through the center is kept:
+\[
+A_u(h)\;\ge\;\tfrac12\,\omega_{n-1}\,r_h^{\,n-1}
+\;\ge\;\tfrac{\omega_{n-1}}2\,h^{\frac{n-1}2}
+\;\ge\;\tfrac{\omega_{n-1}}2\,h^{\frac n2},
+\]
+using $h\le1$.
+
+\emph{Case II: $u_1=\sin\varphi>0$, $u'\ne0$.}  Write $p:=u'/|u'|$, so
+$|u'|=\cos\varphi$ and, for $x\in G$,
+\[
+\tau(x)=\sin\varphi\,x_1+\cos\varphi\,\langle x,p\rangle
+\;\le\;0+\cos\varphi\cdot|x|\;\le\;\cos\varphi,
+\]
+with equality iff $x_1=0$, $x=p$: the extreme is the edge point $p$, and
+$\tau_{\max}=\cos\varphi$.  Let
+\[
+\Lambda(h)\;:=\;\vol\bigl(\{x\in G:\ \tau(x)\ge\cos\varphi-h\}\bigr)
+\;=\;\int_0^hA_u(t)\,dt .
+\]
+We first show
+\begin{equation}\label{eq:capmass}
+\Lambda(h)\;\ge\;b(n)\,h^{\frac{n+2}2}
+\qquad(0<h\le h_0),
+\end{equation}
+and then convert \eqref{eq:capmass} into the section bound.
+
+\emph{Regime IIa: $\sin^2\varphi\ge h\cos\varphi$.}  Write
+$h':=h/\cos\varphi\le1$ and note the regime means
+$h'\le\tan^2\varphi$.  Parametrize $x=(-t,x_2,x'')$ in coordinates where
+$p=e_2$: the cap is
+$\{t\ge0,\ |x|\le1,\ x_2\ge1-h'+t\tan\varphi\}$.  Restrict to
+\[
+0\le t\le\frac{h'}{4\tan\varphi},
+\qquad
+|x''|^2\le\frac{h'}2 .
+\]
+Then $t\tan\varphi\le\frac{h'}4$ and
+$t^2\le\frac{h'^2}{16\tan^2\varphi}\le\frac{h'}{16}$ by the regime
+condition, so, using $\sqrt{1-s}\ge1-s$,
+\[
+\sqrt{1-t^2-|x''|^2}-\bigl(1-h'+t\tan\varphi\bigr)
+\;\ge\;h'-t\tan\varphi-t^2-|x''|^2
+\;\ge\;h'\Bigl(1-\tfrac14-\tfrac1{16}-\tfrac12\Bigr)
+\;=\;\tfrac{3h'}{16},
+\]
+i.e.\ the $x_2$-fibre has length at least $\frac{3h'}{16}$ on the whole
+restricted $(t,x'')$-box.  Hence
+\[
+\Lambda(h)\;\ge\;\frac{3h'}{16}\cdot\frac{h'}{4\tan\varphi}\cdot
+\omega_{n-2}\Bigl(\frac{h'}2\Bigr)^{\frac{n-2}2}
+\;=\;b_1(n)\,\frac{h'^{\frac{n+2}2}}{\tan\varphi}
+\;=\;b_1(n)\,h^{\frac{n+2}2}\cdot\frac{\cos^{-\frac n2}\varphi}{\sin\varphi}
+\;\ge\;b_1(n)\,h^{\frac{n+2}2},
+\]
+since $\cos^{-n/2}\varphi\ge1$ and $\sin\varphi\le1$.
+
+\emph{Regime IIb: $\sin^2\varphi\le h\cos\varphi$.}  Then
+$1-\cos\varphi\le\sin^2\varphi\le h$, so with
+$\hat h:=h+(1-\cos\varphi)\le2h$ the cap contains
+$\bigl\{x\in K:\ \langle x,p\rangle\ge1-\tfrac{\hat h}{16},\ x_1\le0\bigr\}$:
+indeed for such $x$,
+$|x-p|^2=2(1-\langle x,p\rangle)\le\tfrac{\hat h}8$ gives
+$|x_1|\le\sqrt{\hat h/8}$, whence
+\[
+\tau(x)\;\ge\;-\sin\varphi\sqrt{\tfrac{\hat h}8}+\cos\varphi
+\Bigl(1-\tfrac{\hat h}{16}\Bigr)
+\;\ge\;\cos\varphi-\Bigl(\sqrt{h\cos\varphi}\cdot\sqrt{\tfrac{2h}8}
++\tfrac{2h}{16}\Bigr)
+\;\ge\;\cos\varphi-h,
+\]
+using $\sin\varphi\le\sqrt{h\cos\varphi}$, $\hat h\le2h$ and
+$\tfrac h2+\tfrac h8\le h$.  The set
+$\{\langle x,p\rangle\ge1-\tfrac{\hat h}{16}\}\cap K$ is a spherical cap
+centered at $p$, and $p_1=0$, so the reflection $x_1\mapsto-x_1$ maps it to
+itself and exactly half of it lies in $\{x_1\le0\}$.  Hence
+\[
+\Lambda(h)\;\ge\;\tfrac12\,\vol\Bigl(\text{cap of depth }\tfrac{\hat h}{16}\Bigr)
+\;\ge\;b_2(n)\,h^{\frac{n+1}2}\;\ge\;b_2(n)\,h^{\frac{n+2}2},
+\]
+by the standard two-sided cap-volume asymptotic and $h\le1$.  The two regimes
+cover all $\varphi\in(0,\tfrac\pi2)$, proving \eqref{eq:capmass}.
+
+\emph{From cap mass to sections.}  By the Brunn--Minkowski inequality,
+$A_u^{1/(n-1)}$ is concave on the range of $\tau$ over $G$, hence
+$A_u$ is unimodal in the depth variable $h$.  We first record a bulk anchor.
+The inner ball $B^-:=B(-\tfrac12e_1,\tfrac12)\subseteq G$ has $\tau$-center
+$m^-:=\tau(-\tfrac12e_1)=-\tfrac12\sin\varphi$, and its sections at
+$\tau$-distance at most $\tfrac14$ from $m^-$ have radius at least
+$\sqrt{\tfrac14-\tfrac1{16}}=\tfrac{\sqrt3}4$.  The corresponding depths are
+$h=\tau_{\max}-\lambda$ with $\lambda\in[m^--\tfrac14,m^-+\tfrac14]$, i.e.\
+$h\in[h^\dagger-\tfrac14,h^\dagger+\tfrac14]$ where
+$h^\dagger:=\tau_{\max}-m^-=\cos\varphi+\tfrac12\sin\varphi
+\in[\tfrac12,\tfrac98]$ for $\varphi\in(0,\tfrac\pi2)$.  In particular there
+is a depth $h^\dagger\ge\tfrac12\ge h_0$ with
+$A_u(h^\dagger)\ge\omega_{n-1}\bigl(\tfrac{\sqrt3}4\bigr)^{n-1}=:a_1(n)$.
+
+Now let $h\le h_0$ and let $h^*$ be a maximizer of $A_u$.  If $h\le h^*$,
+then $A_u$ is nondecreasing on $[0,h]$ and
+\[
+A_u(h)\;\ge\;\frac1h\int_0^hA_u\;=\;\frac{\Lambda(h)}h
+\;\ge\;b(n)\,h^{n/2}
+\]
+by \eqref{eq:capmass}.  If $h>h^*$, then $A_u$ is nonincreasing on
+$[h^*,h^\dagger]\ni h$, so
+$A_u(h)\ge A_u(h^\dagger)\ge a_1(n)\ge a_1(n)h^{n/2}$.  In both cases
+$A_u(h)\ge a(n)h^{n/2}$ with $a(n):=\min\{b(n),a_1(n)\}$.
+
+\emph{Case II-degenerate: $u'=0$, i.e.\ $u=e_1$.}  Then
+$\tau_{\max}=0$, attained on the whole face $K\cap\{x_1=0\}$, and
+$A_u(h)=\vol_{n-1}(K\cap\{x_1=-h\})=\omega_{n-1}(1-h^2)^{\frac{n-1}2}
+\ge a(n)$ for $h\le\tfrac12$.  (The case $u=-e_1$ was covered in Case I.)
+\end{proof}
+
+\section{The slab-volume bound}\label{sec:slab}
+
+\begin{proof}[Proof of Theorem \ref{thm:slab}]
+Fix $x\in G$, $u$, and $L\le L_0:=\tfrac{h_0}4$.  Let
+$\tau_{\max}:=\tau_{\max}(u)$ and $\tau_{\min}:=\min_G\tau=-\tau_{\max}(-u)$,
+and let $A:=A_u$ denote the section profile, extended over the full range
+$[\tau_{\min},\tau_{\max}]$, which has length at least $1$ (the inner ball
+$B(-\tfrac12e_1,\tfrac12)$ has $\tau$-range of length $1$).  By
+Lemma~\ref{lem:section} applied to $u$ and to $-u$,
+\[
+A(\tau_{\max}-a)\;\ge\;a(n)\Bigl(\tfrac L4\Bigr)^{n/2}=:A^*,
+\qquad
+A(\tau_{\min}+a')\;\ge\;A^*,
+\]
+with anchor depths $a=a'=\tfrac L4$.  By unimodality (Brunn--Minkowski),
+$A\ge A^*$ on the middle interval
+$M:=[\tau_{\min}+\tfrac L4,\ \tau_{\max}-\tfrac L4]$, whose complement in the
+range has length $\tfrac L2$.  The slab's level interval
+$[\tau(x)-L,\tau(x)+L]$ meets the range in an interval of length at least
+$L$ (the range has length $\ge1\ge2L$ and contains $\tau(x)$), hence meets
+$M$ in a set of length at least $\tfrac L2$.  Therefore
+\[
+\vol\Bigl(G\cap\{|\langle y-x,u\rangle|\le L\}\Bigr)
+=\int_{\tau(x)-L}^{\tau(x)+L}A
+\;\ge\;\frac L2\,A^*
+\;=\;\frac{a(n)}{2\cdot4^{n/2}}\,L^{\frac{n+2}2}.
+\]
+\end{proof}
+
+\section{Conclusion}\label{sec:concl}
+
+Theorem~\ref{thm:main} follows, as explained in Section~\ref{sec:intro}, by
+inserting Theorem~\ref{thm:slab} into the proof skeleton of
+\cite{companion2,companion3}.  Together with
+\cite{companion6}, the critical scaling of the uniform doubling condition for
+the half-space truncation of the ball is
+$\Theta\bigl((\log N/N)^{2/(n+2)}\bigr)$, and the interpolation law
+$\ell_N\asymp(\log N/N)^{2/(2n-j)}$ is now proved at its three anchor strata:
+smooth ($j=n-1$), transversal edge ($j=n-2$), and conical point ($j=0$).  The
+remaining cases $1\le j\le n-3$ --- transversal strata of intermediate
+dimension, produced by $n-1-j$ half-spaces in general position --- should
+follow from the same two-step scheme: a section lemma with rate
+$h^{(2n-j-2)/2}$ via the regime split at the angular scale
+$\sqrt h$ in each transverse direction, and the multi-cap second moment of
+\cite{companion4,companion5,companion6} for the lower bound.  We leave the
+general case to future work.
+
+\subsection*{Acknowledgments}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.\ 101041711), by the Israel Science
+Foundation (grant number 2258/19) and by the Israel Science Foundation (ISF
+Grant 4101/25).
+
+\subsection*{Declaration on generative AI}
+During the preparation of this work the author used generative AI tools to
+accelerate drafting and revision.  All mathematical claims, proofs, and
+bibliographic information were subsequently reviewed and edited by the author,
+who takes full responsibility for the content of the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{ShmaloUDC}
+Y.~Shmalo,
+\emph{Stability of accuracy for the training of DNNs via the uniform doubling
+condition},
+Ann.\ Math.\ Artif.\ Intell.\ (2024), DOI 10.1007/s10472-023-09919-1.
+
+\bibitem{companion2}
+Y.~Shmalo,
+\emph{The uniform doubling condition holds with high probability for
+independent samples}, manuscript, 2026.
+
+\bibitem{companion3}
+Y.~Shmalo,
+\emph{The critical scaling of the uniform doubling condition: smooth bodies
+versus truncations}, manuscript, 2026.
+
+\bibitem{companion4}
+Y.~Shmalo,
+\emph{The logarithm is necessary: exact critical scaling of the uniform
+doubling condition on the ball}, manuscript, 2026.
+
+\bibitem{companion5}
+Y.~Shmalo,
+\emph{The exact critical scaling of the uniform doubling condition with
+truncations}, manuscript, 2026.
+
+\bibitem{companion6}
+Y.~Shmalo,
+\emph{The edge exponent of the uniform doubling condition and an
+interpolation conjecture}, manuscript, 2026.
+
+\end{thebibliography}
+
+\end{document}

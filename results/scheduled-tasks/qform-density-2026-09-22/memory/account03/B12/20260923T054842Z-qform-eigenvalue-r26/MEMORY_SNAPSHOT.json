@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260923T054842Z-qform-eigenvalue-r26",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "initial_commit": "39ff8865a90d56ba0504cedbf169820091726afd",
+    "prepublication_commit": "1dab3805585798e3faf353dffa663b2f1512b8ce",
+    "readme_blob": "fca13a89d221115332ce5e60d49554ee0e213efa",
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+    "pause_or_stop_observed": false
+  },
+  "corrections_consumed": [
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-FRACTIONAL-THREE-VOLUME",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "scope_used": "volume-marginal inequality W<=(E2/Z)MM^T and q=4/3 continuous-density bound"
+    },
+    {
+      "id": "account04-B12-spectral-defect-hostile-tail-r2",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f319b51a1b43b4904c8784348f0a3725954bb7e7",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260923T051424Z-account04-B12-spectral-defect-hostile-tail-r2/REPORT.md",
+      "scope_used": "actual inequality with k equal to the count of hostile local eigenvalues above theta times the protected gap"
+    },
+    {
+      "id": "finite-physical-core-endpoint",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "8a6269fae9183252b85ba2ee787aedd905deef2a",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260923T045406Z-account01-B12-QFORM-r25/REPORT.md",
+      "scope_used": "read underlying finite-core endpoint behind partner theorem"
+    }
+  ],
+  "results": [
+    {
+      "id": "QFORM-CROSS-ENERGY-ROWCAP-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement_short": "If an actual physical cross block has S=||M||F^2, c=||M||op^2, rho=min(max row norm^2,max col norm^2), S>2c and S-2c>=(9/2)rho, then ||p_Q||inf <=(9sqrt(3)e/2)[S(S-c)(S-2c)/6]^(-1/6), with continuous C0 density."
+    },
+    {
+      "id": "QFORM-DIFFUSE-PROJECTION-PACKET-STABILITY-v1",
+      "status": "PROVED_COROLLARY",
+      "statement_short": "A rank-k repeated spectral projection packet with small physical leverage supplies a random coordinate cut satisfying the cross-energy gate; rank-6 leverage 1/6 gives coefficient 28.86895/|beta|, and a rank-8 leverage-1/8 packet tolerates arbitrary-rank cross operator perturbation |beta|/32 with coefficient <25.943/|beta|."
+    },
+    {
+      "id": "QFORM-HOSTILE-EIGENVALUE-COUNT-STABILITY-v1",
+      "status": "PROVED_PARTNER_COROLLARY",
+      "statement_short": "On a protected physical core, only the number K_theta of hostile added compression eigenvalues above theta times the surviving gap is charged; their magnitudes are arbitrary and the remaining hostile cloud may have arbitrary rank."
+    }
+  ],
+  "partner_result_applied": {
+    "account_slot": "account04/B12",
+    "run_id": "20260923T051424Z-account04-B12-spectral-defect-hostile-tail-r2",
+    "commit": "f319b51a1b43b4904c8784348f0a3725954bb7e7",
+    "equation_use": "Set k=K_theta, so beta_(k+1)<=theta g and L>= (1-theta)g; substitute into the partner density inequality."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "dbecfc8f7a8aa12df1052fbdcba2e0e2e8c5c2b1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T054842Z-qform-eigenvalue-r26/REPORT.md",
+    "report_blob": "1b8cc413e448e0541f7a3ef58b2ccedd39355281",
+    "checker_result_blob": "62e0e297f66da7e308acf348986272532c9898d4",
+    "read_back": true
+  },
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "PROVED_ON_CROSS_ENERGY_BRANCH_ONLY_FULL_TARGET_OPEN",
+  "unresolved_implication": "From only s3(A)>=1, force a protected one-sided physical core, an actual cross block satisfying the cross-energy gate, or an already-paid grouped-bank/hub/ridge certificate.",
+  "next_mechanism": "Attack the concentrated-cross-energy/heavy-row survivor structurally, rather than another perturbative estimate."
+}

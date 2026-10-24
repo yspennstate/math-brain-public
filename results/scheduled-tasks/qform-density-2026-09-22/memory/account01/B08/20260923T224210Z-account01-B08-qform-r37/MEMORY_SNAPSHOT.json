@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260923T224210Z-account01-B08-qform-r37",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "control_revision": "2026-09-22.15",
+  "prepublication_brain_head": "660557228f967a1b82cae3d7578684aebb3eff69",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY:REFUTED_BY_PHASE_ALIGNED_DENSITIES",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-GSTAR-SCALE-FORCING-FALSE-v1",
+    "no post-rotation independence",
+    "no small-random-quadratic interpretation of small coefficient tails"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-DELETE1-TRANSVERSE-STAR-AMPLIFICATION-v1",
+      "source": "yspennstate/math-open-problems@e7518cad31bf0381bdf682478ca472a0c08f77b9:proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T213743Z-account01-B08-qform-r36/REPORT.md",
+      "scope": "after deleting one original coordinate, tau>=(1-x)L sqrt((1-p)/p) and s2(C)>=sqrt(1-p)L"
+    },
+    {
+      "id": "account02/B08 balanced physical half-cut",
+      "source": "yspennstate/math-open-problems@66582bd87d50634f3525a57c87acffdbde97aea1:proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/20260923T153836Z-account02-B08-qform-r28/REPORT.md",
+      "scope": "orthonormal 3-frame with max row leverage <=1/48 admits original-coordinate cut with both restricted Grams between I/4 and 3I/4"
+    },
+    {
+      "id": "exact-rank crossing Fourier theorem",
+      "source": "yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+      "scope": "for exact rank r>2 original-coordinate crossing, density <=2r/(r-2)*(product singular values)^(-1/r), continuous C0"
+    },
+    {
+      "id": "QFORM-THREEEIG-PHYSICAL-PAIR-619-GATE-v1",
+      "source": "yspennstate/math-open-problems@34c64bff0ddefd088c372ef60e7a1e1266a18a43:proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/20260923T214909Z-account02-B08-qform-diffuse-r28/REPORT.md",
+      "scope": "if any original 2x2 principal block has sigma_min>=L/64, essential density <619/L; continuity not claimed"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-DELETE1-RANK2-ANGLEFREE-VOLUME-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "under p<=1/48, s3(C)=0 and diffuse W=[w,U], an original-coordinate half-cut has literal crossing M with s1(M)s2(M)s3(M)>=47 sqrt(47)L^3/1536, independent of child/star alignment"
+    },
+    {
+      "id": "QFORM-DIFFUSE-DELETE1-RANK2-ALLANGLES-PAID-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "same hypotheses imply a continuous C0 density with ||p_Q||infinity <10.098/L for arbitrary independent cap-one inputs"
+    }
+  ],
+  "canonical_math_commit": "e5813313484d19bc3f655f4761c0c97522772143",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T224210Z-account01-B08-qform-r37/REPORT.md",
+  "early_calculation_commit": "d31006e418b17a3c2e5af385a2c664e4d4d4d2c4",
+  "checks_commit": "c5d8a376ad04607fbb31cb699988ba4c14f434ba",
+  "unresolved_implication": "QFORM-ANGLEFREE-VOLUME-WITH-SPECTRAL-TAIL-v1",
+  "next_step": "make the product-volume receiver uniform for 0<s3(C)<<L without discarding C_tail[S,T]; route localized tail directions by original-coordinate conditioning and diffuse tails by an actual projected-crossing/volume estimate",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null,
+  "provider_thinking_usage": null
+}

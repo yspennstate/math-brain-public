@@ -1,0 +1,3 @@
+Pilot: 9 exact truth-table cases PASS in 0.0913385 seconds. The first command failed only because out/ had not yet been created; no mathematical assertion failed. Directory created within A020, and same frozen pilot rerun unchanged. No precision or dimension amendment.
+
+Immediate analytic finding: for the connected family (-1)^((product shared bits)*(xor private bits)), the smallest repeated shared influence loss over all module shared-character orientations is k(r-1)2^-k while private influence is r2^-k. Thus a width-independent extension of the one-bit owner budget is false. At r=k^2, that same loss divided by the actual product influence is exactly k-1. This is a mechanism obstruction; its actual Fourier entropy has an explicit joint reference paid below4I.

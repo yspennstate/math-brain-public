@@ -1,0 +1,490 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs,booktabs,microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black,breaklinks=true]{hyperref}
+\hypersetup{pdftitle={Fixed-point uniqueness and constructive stability for four-type strictly non-Volterra quadratic stochastic operators},pdfauthor={Yitzchak Shmalo},pdfsubject={Four-type fixed-point uniqueness, stability, and certified computation}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\D}{\Delta_3}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert_1}
+\newcommand{\cstar}{c}
+\title[Four-type strictly non-Volterra operators]{Fixed-point uniqueness and constructive stability for four-type strictly non-Volterra quadratic stochastic operators}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{15 September 2026}
+\keywords{quadratic stochastic operator, strictly non-Volterra operator, fixed point, contraction, certified computation}
+\begin{document}
+\begin{abstract}
+We prove that every strictly non-Volterra quadratic stochastic operator on four types has a unique fixed point, allowing arbitrary zeros among the permitted coefficients and fixed points on the boundary of the simplex. The proof combines the universal coordinate bound $(3-\sqrt5)/2$ with an inequality for transfers across a partition into two pairs. The same inequality gives a constructive contraction: the averaged map $3I/5+2V/5$ enters a fixed capped simplex in at most three steps and then contracts in the $\ell^1$ norm with factor $23/25$. We derive a residual certificate, a coefficient perturbation bound with constant $2\sqrt5-1$, nondegeneracy and local real-analytic dependence of the fixed point, and global exponential convergence of the associated continuous-time dynamics. For rational coefficients, an exact rounded iteration computes a certified approximation in polynomial bit complexity. The result addresses the four-type uniqueness clause of the higher-dimensional question in Ganikhodzhaev and Rozikov's survey; it does not assert convergence of the unaveraged discrete dynamics or a classification of cycles.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+A quadratic stochastic operator describes the distribution of an offspring type when two parental types are sampled independently from the current population. In a strictly non-Volterra operator, the offspring cannot have either sampled parental type. Although this exclusion rule is elementary, it places a substantial restriction on the interaction between the coordinates of the evolution map.
+
+For three types, Rozikov and Zhamilov proved uniqueness of the fixed point and studied the possible cycles \cite{RZ09}. Ganikhodzhaev and Rozikov reproduced this result as Theorem~6 in their survey and asked, in Problem~11, whether it extends to four or more types \cite{GR09}. That question has several clauses: uniqueness, non-attractiveness, and periodic behavior. Its uniqueness clause is the subject of this paper.
+
+The nearest earlier four-type result we have identified is Jamilov's paper on symmetric strictly non-Volterra operators on the three-dimensional simplex \cite{Jam16}. Its publisher abstract states uniqueness in that symmetric class and describes additional dynamical results. The complete hypotheses of that subscription paper have not been available for comparison in preparing this version. Accordingly, we state the full coefficient class of the present theorem explicitly and make no claim of historical priority over every earlier four-type uniqueness theorem. A five-type example with more than one fixed point already appears in Jamilov's later work \cite{Jam17}; it is not a new counterexample of this paper.
+
+Our main observation is a two-pair transfer inequality. If two distinct fixed points existed, their difference could have neither a single positive coordinate nor a single negative coordinate. In four dimensions the signs must therefore split into two pairs. The exclusion rule then forces two parental rows to send all their mass to prescribed sides of the cut. This supplies the strict inequality that rules out the two fixed points. The argument uses no positivity assumption on the permitted coefficients and applies without a separate interiority argument.
+
+The transfer estimate also bounds an operator norm on the entire zero-sum tangent space. This yields a globally convergent averaged iteration and quantitative consequences that are useful even when the original discrete evolution is oscillatory. We give complete proofs of the uniqueness theorem, the contraction and stability estimates, the continuous-time result, and an exact finite algorithm. All constants stated as convergence rates or perturbation bounds are sufficient constants; no optimality is asserted unless explicitly proved.
+
+\subsection*{Organization}
+Section~\ref{sec:unique} proves uniqueness and classifies boundary support. Section~\ref{sec:average} gives the contraction and residual bound. Sections~\ref{sec:dependence} and \ref{sec:flow} treat coefficient dependence and continuous dynamics. Section~\ref{sec:algorithm} gives a certified rational algorithm. Section~\ref{sec:examples} illustrates sharpness of the coordinate cap and failure of convergence for raw iterates.
+
+\section{The transfer inequality and fixed-point uniqueness}\label{sec:unique}
+Write
+\[
+\D=\{x\in\R^4:x_i\ge0,\ \one^{\mathsf T}x=1\},
+\qquad E=\{z\in\R^4:\one^{\mathsf T}z=0\}.
+\]
+Throughout the paper, the coefficients satisfy
+\begin{equation}\label{eq:coeff}
+ P_{ij,k}=P_{ji,k}\ge0,\qquad
+ \sum_{k=1}^4P_{ij,k}=1,\qquad
+ P_{ij,k}=0\quad\text{if }k\in\{i,j\}.
+\end{equation}
+Define
+\begin{equation}\label{eq:V}
+ V_k(x)=\sum_{i,j=1}^4P_{ij,k}x_ix_j.
+\end{equation}
+The sum is over ordered parent pairs. The symmetry in \eqref{eq:coeff} is symmetry between the two parents, part of the usual definition of a quadratic stochastic operator. No symmetry under permutations of the four types is assumed. The coefficients permitted by the exclusion rule may vanish. Nonnegativity and normalization show that $V(\D)\subseteq\D$.
+
+\begin{theorem}\label{thm:unique}
+Every operator satisfying \eqref{eq:coeff} has exactly one fixed point in $\D$.
+\end{theorem}
+
+Set
+\begin{equation}\label{eq:c}
+ c=\frac{3-\sqrt5}{2},\qquad a=1-2c=\sqrt5-2>0.
+\end{equation}
+
+\begin{lemma}[Coordinate cap]\label{lem:cap}
+For every $x\in\D$ and every $k$,
+\[
+ 0\le V_k(x)\le(1-x_k)^2.
+\]
+Consequently every fixed point satisfies $x_k\le c<1/2$.
+\end{lemma}
+\begin{proof}
+All terms involving parent $k$ vanish in $V_k$. Every remaining coefficient is at most one, so
+\[
+ V_k(x)\le\sum_{i,j\ne k}x_ix_j=(1-x_k)^2.
+\]
+If $V(x)=x$, then $x_k^2-3x_k+1\ge0$. Its only allowed interval inside $[0,1]$ is $[0,c]$.
+\end{proof}
+
+For $m\in\D$, introduce the matrix
+\begin{equation}\label{eq:A}
+ A(m)_{rj}=\sum_{b=1}^4P_{bj,r}m_b.
+\end{equation}
+It is nonnegative and column-stochastic, and its diagonal is zero. Parent symmetry gives the exact polarization identity
+\begin{equation}\label{eq:polar}
+ V(x)-V(y)=2A(m)(x-y),\qquad m=\frac{x+y}{2}.
+\end{equation}
+Indeed, $x_ix_j-y_iy_j=m_i(x_j-y_j)+(x_i-y_i)m_j$, and the two resulting sums agree.
+
+\begin{lemma}[Two-pair transfer]\label{lem:transfer}
+Let $G,H$ partition the four types into two pairs. If $i\in G$ and $j\in H$, then
+\begin{equation}\label{eq:transfer}
+ \one_G^{\mathsf T}A(m)(e_i-e_j)\le\max(m_i,m_j).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write $G=\{i,k\}$ and $H=\{j,\ell\}$, and set
+\[
+ p_{uv}=\sum_{r\in G}P_{uv,r}.
+\]
+Then $0\le p_{uv}\le1$ and $p_{uv}=p_{vu}$. For parents $k,i$, neither output in $G$ is allowed, hence $p_{ki}=0$. For parents $\ell,j$, both outputs in $H$ are forbidden, hence $p_{\ell j}=1$. Therefore
+\begin{align*}
+ \one_G^{\mathsf T}A(m)(e_i-e_j)
+ &=m_i(p_{ii}-p_{ij})+m_j(p_{ij}-p_{jj})
+      -m_kp_{kj}+m_\ell(p_{\ell i}-1)\\
+ &\le m_i(1-p_{ij})+m_jp_{ij}
+ \le\max(m_i,m_j).
+\end{align*}
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:unique}]
+Existence follows from Brouwer's fixed-point theorem. Suppose $x\ne y$ are fixed points and put $z=x-y\in E$. If $z_i$ were its only positive coordinate, then $x_j\le y_j$ for every $j\ne i$. The polynomial $V_i$ has nonnegative coefficients and involves only those other coordinates. Thus $V_i(x)\le V_i(y)$, contrary to $x_i>y_i$. Interchanging $x,y$ rules out a single negative coordinate as well. Since there are four coordinates, $z$ has exactly two positive and two negative entries, with no zero entries.
+
+Let $G=\{i:z_i>0\}$, $H=\{j:z_j<0\}$, and $h=\sum_{i\in G}z_i>0$. The numbers
+\[
+ \theta_{ij}=\frac{z_i(-z_j)}{h^2},\qquad i\in G,\ j\in H,
+\]
+are nonnegative and sum to one. They give the transfer decomposition
+\begin{equation}\label{eq:decomp}
+ z=h\sum_{i\in G,\ j\in H}\theta_{ij}(e_i-e_j).
+\end{equation}
+Every coordinate of $m=(x+y)/2$ is at most $c$ by Lemma~\ref{lem:cap}. Using \eqref{eq:polar} and Lemma~\ref{lem:transfer},
+\[
+ h=\one_G^{\mathsf T}(V(x)-V(y))
+   =2h\sum_{i,j}\theta_{ij}\one_G^{\mathsf T}A(m)(e_i-e_j)
+   \le2ch<h,
+\]
+a contradiction.
+\end{proof}
+
+\begin{proposition}[Boundary support]\label{prop:support}
+The unique fixed point has support of size three or four. For a type $r$, it has $x_r=0$ if and only if $P_{ij,r}=0$ for every parent pair $i,j$. In that case its other three coordinates are positive. In particular, if every allowed coefficient is positive, the fixed point is interior.
+\end{proposition}
+\begin{proof}
+Let $S$ be the support of a fixed point. If $r\notin S$, then
+\[
+ 0=V_r(x)=\sum_{i,j\in S}P_{ij,r}x_ix_j
+\]
+is a sum of nonnegative terms with positive products $x_ix_j$. Thus $P_{ij,r}=0$ whenever $i,j\in S$: the face on $S$ is invariant. A singleton support is impossible because the square of its sole type must produce a different type. A two-type support $\{i,j\}$ is impossible because the mixed pair, of positive mass $2x_ix_j$, must produce outside that pair. Hence $|S|\ge3$.
+
+If $|S|=3$ and $r$ is omitted, the preceding argument eliminates all rows with both parents in $S$. Every remaining parent pair includes $r$, so its output-$r$ coefficient is zero by \eqref{eq:coeff}. Conversely, if every output-$r$ coefficient is zero, then $V_r$ vanishes identically and the fixed point has $x_r=0$. Its support must have size three by the first part.
+\end{proof}
+
+\section{A constructive contraction}\label{sec:average}
+For $q\ge c$, put
+\[
+ K_q=\{x\in\D:\max_i x_i\le q\},
+ \qquad T_\lambda=(1-\lambda)I+\lambda V.
+\]
+We first record the norm identity used below. If a real matrix $B$ has equal column sums, then it preserves $E$ and
+\begin{equation}\label{eq:cutnorm}
+ \|B|_E\|_{1\to1}
+ =\max_{i,j}\frac12\norm{Be_i-Be_j}
+ =\max_{G\subseteq\{1,2,3,4\},\ i,j}
+       \one_G^{\mathsf T}B(e_i-e_j).
+\end{equation}
+For the upper bound in the first equality, decompose any zero-sum vector into transfers as in \eqref{eq:decomp}, with total transfer mass equal to half its norm. Equality follows by testing $e_i-e_j$. The second equality is the positive-mass formula for a zero-sum vector. This identity does not require column sums equal to one.
+
+\begin{theorem}\label{thm:contract}
+Suppose $c\le q<1/2$ and $0<\lambda\le q$. Then $T_\lambda$ preserves $K_q$ and
+\begin{equation}\label{eq:contract}
+ \norm{T_\lambda(x)-T_\lambda(y)}
+ \le L(q,\lambda)\norm{x-y},\qquad
+ L(q,\lambda)=1-\lambda(1-2q)<1
+\end{equation}
+for all $x,y\in K_q$.
+\end{theorem}
+\begin{proof}
+For $s=x_i\in[0,q]$, Lemma~\ref{lem:cap} gives
+\[
+ (T_\lambda x)_i\le f(s):=(1-\lambda)s+\lambda(1-s)^2.
+\]
+The convex function $f$ attains its maximum on $[0,q]$ at an endpoint. We have $f(0)=\lambda\le q$ and $f(q)\le q$, since $(1-q)^2\le q$ for $q\ge c$. This proves invariance.
+
+With $m=(x+y)/2$,
+\[
+ T_\lambda(x)-T_\lambda(y)=B(m)(x-y),\qquad
+ B(m)=(1-\lambda)I+2\lambda A(m).
+\]
+The columns of $B$ sum to $1+\lambda$, so \eqref{eq:cutnorm} applies. Empty and full cuts give zero. For distinct column indices, there are four remaining cases.
+
+If both indices are in $G$, or both outside it, the identity contribution cancels. Column stochasticity of $A$ bounds the cut difference by $2\lambda$. If $i\notin G$ and $j\in G$, the bound is $-(1-\lambda)+2\lambda=3\lambda-1\le2\lambda$. If $i\in G$, $j\notin G$ and $|G|=1$, the $A$ contribution is $-A_{ij}\le0$; if $|G|=3$, it is $-A_{ji}\le0$. These two cases give at most $1-\lambda$. Finally, if $i\in G$, $j\notin G$ and $|G|=2$, Lemma~\ref{lem:transfer} gives at most $1-\lambda+2\lambda q$.
+
+The last quantity dominates all the bounds, because
+\[
+ 1-\lambda+2\lambda q-2\lambda
+ =1-\lambda(3-2q)
+ \ge1-q(3-2q)=(1-q)(1-2q)>0.
+\]
+This proves \eqref{eq:contract}.
+\end{proof}
+
+Banach's theorem gives a second proof of uniqueness: $T_\lambda$ has a unique fixed point in $K_q$, its fixed points are those of $V$, and every fixed point of $V$ lies in $K_c$.
+
+\begin{corollary}[A global rational iteration]\label{cor:global}
+Let $T=3I/5+2V/5$ and $x_{n+1}=T(x_n)$. Every $x_0\in\D$ enters $K_{2/5}$ in at most three steps. If $x^*$ is the fixed point, then
+\begin{equation}\label{eq:global}
+ \norm{x_n-x^*}\le2(23/25)^{n-3},\qquad n\ge3.
+\end{equation}
+For $x\in K_q$ under the hypotheses of Theorem~\ref{thm:contract},
+\begin{equation}\label{eq:residual}
+ \norm{x-x^*}\le\frac{\norm{V(x)-x}}{1-2q}.
+\end{equation}
+In particular the residual multiplier on $K_{2/5}$ is five.
+\end{corollary}
+\begin{proof}
+Here $f(s)=2/5-s/5+2s^2/5$. Successive endpoint bounds for this convex function give
+\[
+ 1\longmapsto\frac35\longmapsto\frac{53}{125}\longmapsto\frac25.
+\]
+In the last step, $f(0)=2/5$ and $f(53/125)=30243/78125<2/5$. Theorem~\ref{thm:contract} with $q=\lambda=2/5$ gives factor $23/25$. Since the simplex has diameter two, \eqref{eq:global} follows. For the residual estimate, the triangle inequality gives
+\[
+ \norm{x-x^*}\le\norm{x-T_\lambda x}
+       +L(q,\lambda)\norm{x-x^*}.
+\]
+Use $x-T_\lambda x=\lambda(x-V(x))$ and divide by $1-L(q,\lambda)$.
+\end{proof}
+
+The choice $q=\lambda=c$ yields the smaller bound
+\[
+ L(c,c)=\frac{13-5\sqrt5}{2}.
+\]
+It is the minimum of this particular bound over $c\le q<1/2$, $0<\lambda\le q$: first choose the largest permitted $\lambda=q$, and then minimize $1-q+2q^2$, which is increasing for $q\ge c>1/4$. The rational choice above is convenient for certification and gives finite entrance to its cap. This optimization does not assert optimality among all averaged algorithms.
+
+\section{Coefficient dependence and nondegeneracy}\label{sec:dependence}
+\begin{theorem}[A quantitative perturbation estimate]\label{thm:perturb}
+Let $P,Q$ satisfy \eqref{eq:coeff}, with fixed points $x_P,x_Q$, and put
+\[
+ \eta=\max_{i,j}\sum_k|P_{ij,k}-Q_{ij,k}|.
+\]
+Then
+\begin{equation}\label{eq:perturb}
+ \norm{x_P-x_Q}\le\min\{2,(2\sqrt5-1)\eta\}.
+\end{equation}
+The coefficient norm here is the full row $\ell^1$ norm.
+\end{theorem}
+\begin{proof}
+Set $x=x_P$, $y=x_Q$, $z=x-y$, and suppose $z\ne0$. Write $G=\{i:z_i>0\}$ and $h=\norm z/2$. The perturbation in the total probability of any output group is at most $\eta/2$ in each parental row: the full row difference has sum zero.
+
+If either sign support of $z$ is a singleton, interchange $P,Q$ and $x,y$ if needed so that $G$ is that singleton. Monotonicity of the relevant coordinate polynomial gives
+\[
+ \sum_{r\in G}[V_{P,r}(x)-V_{P,r}(y)]\le0.
+\]
+The coefficient contribution at $y$ is at most $\eta/2$, hence $h\le\eta/2$ and $\norm z\le\eta$.
+
+Otherwise the signs split into pairs $G=\{i,k\}$, $H=\{j,\ell\}$. The transfer estimate and the cap give
+\begin{align*}
+ h&=\sum_{r\in G}[V_{P,r}(x)-V_{P,r}(y)]
+      +\sum_{r\in G}[V_{P,r}(y)-V_{Q,r}(y)]\\
+  &\le2ch+\frac\eta2[1-2(y_iy_k+y_jy_\ell)].
+\end{align*}
+The factor in brackets appears because the mixed parental rows $\{i,k\}$ and $\{j,\ell\}$ have group-output probabilities forced to zero and one, respectively, for both coefficient arrays. Thus these rows contribute no perturbation.
+
+Since every $y_r\le c$ and $\sum_r y_r=1$,
+\[
+ 0\le(c-y_i)(c-y_k)+(c-y_j)(c-y_\ell)
+     =2c^2-c+y_iy_k+y_jy_\ell.
+\]
+Consequently $y_iy_k+y_jy_\ell\ge c(1-2c)$. Rearrangement yields
+\[
+ \norm z\le\left(\frac1{1-2c}-2c\right)\eta
+             =(2\sqrt5-1)\eta.
+\]
+The other bound in \eqref{eq:perturb} is the diameter of $\D$.
+\end{proof}
+
+Let $\mathcal P$ be the coefficient polytope \eqref{eq:coeff}. Let $\mathscr A$ be its affine hull, obtained by dropping nonnegativity but retaining parent symmetry, normalization and exclusion. It has dimension fourteen: each of four repeated-parent rows has two independent parameters, and each of six distinct-parent rows has one. The ambient affine state space is $\mathscr X=\{x:\one^{\mathsf T}x=1\}$, with tangent space $E$.
+
+\begin{proposition}[Nondegeneracy and analytic dependence]\label{prop:analytic}
+At every $P\in\mathcal P$, including its boundary, let $p=x_P$ and $J=DV_P(p)=2A_P(p)$. Then
+\begin{equation}\label{eq:inverse}
+ \|(I-J|_E)^{-1}\|_{1\to1}\le\frac1{1-2c}=\sqrt5+2,
+ \qquad \det(I-J|_E)>0.
+\end{equation}
+The fixed-point map has a local real-analytic extension near each $P$ in $\mathscr A$. For an affine coefficient direction $H$ with row sums zero,
+\begin{equation}\label{eq:derivative}
+ Dp(P)[H]=(I-J|_E)^{-1}V_H(p),
+ \quad V_H(p)_k=\sum_{i,j}H_{ij,k}p_ip_j.
+\end{equation}
+The extension need not have nonnegative coordinates outside $\mathcal P$.
+\end{proposition}
+\begin{proof}
+The matrix proof of Theorem~\ref{thm:contract}, at $m=p$ and $q=\lambda=c$, bounds the norm on the entire linear space $E$ of
+\[
+ M=(1-c)I+cJ
+\]
+by $1-c(1-2c)<1$. It applies even when $p$ is on a face: its proof uses column differences, not a choice of feasible perturbation directions inside that face. Since $I-M=c(I-J)$ on $E$,
+\[
+ (I-J|_E)^{-1}=c\sum_{n=0}^\infty(M|_E)^n,
+\]
+which gives the first estimate in \eqref{eq:inverse}.
+
+For the determinant sign, every positive real eigenvalue $\rho$ of $J|_E$ satisfies $\rho\le2c$. Indeed, a real eigenvector cannot have just one positive or just one negative coordinate, because $J$ is nonnegative with zero diagonal. Its signs therefore form two pairs, and \eqref{eq:decomp} and Lemma~\ref{lem:transfer} applied to $Jz=\rho z$ give $\rho h\le2ch$. Thus $I-sJ|_E$ is nonsingular for all $0\le s\le1$. Its real determinant starts at one and is continuous, proving positivity at $s=1$.
+
+Finally, the polynomial map $F(P,x)=x-V_P(x)$ takes $\mathscr A\times\mathscr X$ into $E$. Its state derivative is invertible by \eqref{eq:inverse}, so the real-analytic implicit-function theorem applies on these affine spaces. For admissible nearby arrays, the branch agrees with their unique fixed point: Theorem~\ref{thm:perturb} puts those points in the local implicit-function neighborhood. Differentiating $p(P)=V_P(p(P))$ proves \eqref{eq:derivative}.
+\end{proof}
+
+The positivity result also expresses the fixed-point determinant in ambient coordinates. If $e_3(A)$ denotes the sum of the principal minors of order three, then
+\begin{equation}\label{eq:detidentity}
+ 3+4e_3(A(p))-12\det A(p)>0.
+\end{equation}
+To see this, use $\operatorname{tr}A=0$, the eigenvalue $1$, and
+$\det(I-A)=1+e_2(A)-e_3(A)+\det A=0$ to obtain
+$\det(I-2A)=-3-4e_3(A)+12\det A$. At the fixed point, $Jp=2p$ and $\R^4=E\oplus\R p$, so $\det(I-J)=-\det(I-J|_E)$.
+
+\section{Continuous-time dynamics}\label{sec:flow}
+Consider the equation
+\begin{equation}\label{eq:ode}
+ \dot x=V(x)-x,
+\end{equation}
+and write $\Phi_t(x^0)$ for its solution. Put $d=(3+\sqrt5)/2$ and
+\begin{equation}\label{eq:u}
+ u(t)=\frac{c+dc\,e^{-\sqrt5t}}{1+c\,e^{-\sqrt5t}},
+ \qquad b(t)=\frac{1+c}{1+c\,e^{-\sqrt5t}}.
+\end{equation}
+
+\begin{theorem}\label{thm:flow}
+Equation~\eqref{eq:ode} defines a global forward flow on $\D$. Every $K_q$ with $q\ge c$ is invariant. For any $x^0,y^0\in\D$ and $t\ge0$,
+\begin{align}
+ \norm{\Phi_t(x^0)-\Phi_t(y^0)}
+ &\le b(t)^2e^{-(\sqrt5-2)t}\norm{x^0-y^0},\label{eq:flowtwo}\\
+ \norm{\Phi_t(x^0)-x^*}
+ &\le b(t)e^{-(\sqrt5-2)t}\norm{x^0-x^*}.\label{eq:flowone}
+\end{align}
+Every trajectory enters $K_q$ in finite time for $q>c$. For $c<q<1$, a sufficient entrance time is
+\begin{equation}\label{eq:entry}
+ T_q=\frac1{\sqrt5}\log\frac{c(d-q)}{q-c}.
+\end{equation}
+For initial points in $K_q$ with $c\le q<1/2$, the simpler contraction estimate is
+\begin{equation}\label{eq:flowcap}
+ \norm{\Phi_t(x^0)-\Phi_t(y^0)}
+ \le e^{-(1-2q)t}\norm{x^0-y^0}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+The vector field is locally Lipschitz. Its variation-of-constants equation
+\[
+ x(t)=e^{-t}x^0+\int_0^t e^{-(t-s)}V(x(s))\,ds
+\]
+preserves nonnegativity in the local Picard construction. Also, writing $s=\sum_i x_i$, normalization gives $s'=s^2-s$. The initial value $s(0)=1$ therefore remains one. Compactness of $\D$ gives global existence.
+
+Every coordinate satisfies
+\[
+ x_i'\le (1-x_i)^2-x_i=(x_i-c)(x_i-d).
+\]
+The scalar solution with initial value one is $u(t)$ in \eqref{eq:u}. Scalar comparison gives $x_i(t)\le u(t)$ for every trajectory. It also proves invariance of $K_q$ for $c\le q\le1$, since the right side is nonpositive at $q$. Caps with $q\ge1$ are the whole simplex. Solving $u(T_q)=q$ gives \eqref{eq:entry}.
+
+We next give the difference estimate without differentiating the absolute-value norm coordinate by coordinate. For any $m\in\D$ with $\max_i m_i\le v$ and any sufficiently small $h>0$, the cut calculation in Theorem~\ref{thm:contract} gives
+\begin{equation}\label{eq:smallstep}
+ \|[(1-h)I+2hA(m)]|_E\|_{1\to1}
+ \le1+h(2v-1).
+\end{equation}
+Indeed the possible bounds are $2h$, $3h-1$, $1-h$ and $1-h+2hv$; the last dominates for all sufficiently small $h$. This argument is valid for $0\le v\le1$ and does not require invariance of a cap under a fixed nonzero step.
+
+For two solutions, let $z=x-y$ and $m=(x+y)/2$. Polarization gives $z'=[2A(m)-I]z$. Using \eqref{eq:smallstep} in the first-order expansion of $z(t+h)$ yields the upper right Dini derivative bound
+\[
+ D^+\norm{z(t)}\le(2\max_i m_i(t)-1)\norm{z(t)}.
+\]
+Since $\max_i m_i(t)\le u(t)$, Gronwall's inequality applies. Now
+\[
+ u(t)-c=\frac{\sqrt5\,c e^{-\sqrt5t}}{1+c e^{-\sqrt5t}},
+ \qquad \int_0^t(u(s)-c)\,ds=\log b(t).
+\]
+Integration proves \eqref{eq:flowtwo}. When $y=x^*$, its cap improves the midpoint bound to $\max_i m_i(t)\le(u(t)+c)/2$, giving \eqref{eq:flowone}. If both initial points belong to an invariant $K_q$, the constant midpoint bound $q$ gives \eqref{eq:flowcap}.
+\end{proof}
+
+Since $1\le b(t)\le1+c$, the equilibrium is globally exponentially stable. The theorem concerns the flow and the averaged maps; it makes no assertion of global convergence of $V^n$.
+
+\section{Exact rational computation}\label{sec:algorithm}
+Assume in this section that all coefficients are rational, represented by exact integer numerators and positive denominators. A finite residual certificate follows from Corollary~\ref{cor:global}, but a naive exact quadratic iteration may repeatedly square its denominators. Rounding to a fixed simplex grid avoids that growth while retaining a proved termination guarantee.
+
+For a positive integer $N$ divisible by five, define $Q_N(y)$ as follows. Round each $Ny_i$ down to an integer. Allocate the remaining units to the largest fractional remainders, breaking ties by the smaller coordinate index, and divide the resulting four integers by $N$. The sum of the fractional remainders is precisely the integer number of units to allocate. Thus this operation preserves the simplex.
+
+\begin{lemma}\label{lem:round}
+If $y\in K_{2/5}$ and $5$ divides $N$, then $Q_N(y)\in K_{2/5}$ and
+\[
+ \norm{Q_N(y)-y}\le4/N.
+\]
+\end{lemma}
+\begin{proof}
+Every output is the floor or ceiling of $Ny_i$, divided by $N$. The cap $2N/5$ is integral, so neither can exceed it. To justify the floor-or-ceiling assertion also at integral coordinates, let $r$ be the number of remaining units. If $r>0$, more than $r$ fractional remainders are positive; otherwise their sum would be strictly less than $r$. Hence no zero remainder is incremented. Each coordinate changes by less than $1/N$, proving the stated bound.
+\end{proof}
+
+\begin{theorem}[Polynomial bit complexity]\label{thm:algorithm}
+For every rational tensor satisfying \eqref{eq:coeff} and every positive rational tolerance $\varepsilon$, the following procedure returns a rational $x\in\D$ with an exact certificate
+\[
+ \norm{x-x^*}\le5\norm{V(x)-x}\le\varepsilon.
+\]
+Its bit complexity is polynomial in the binary encoding lengths of the tensor and the tolerance.
+
+Set
+\begin{equation}\label{eq:N}
+ N=20\max\{1,\lceil75/\varepsilon\rceil\},\quad
+ k=\min\{j\ge0:2^j\ge60/\varepsilon\},\quad t_*=9k.
+\end{equation}
+Start from $x_0=(1/4,1/4,1/4,1/4)$, and compute
+\begin{equation}\label{eq:rounded}
+ x_{t+1}=Q_N\left(\frac35x_t+\frac25V(x_t)\right).
+\end{equation}
+Evaluate the residual exactly at each step, returning as soon as its certificate is at most $\varepsilon$. This occurs by step $t_*$.
+\end{theorem}
+\begin{proof}
+Every iterate belongs to $K_{2/5}$ by Theorem~\ref{thm:contract} and Lemma~\ref{lem:round}. With $L=23/25$ and $d_t=\norm{x_t-x^*}$,
+\[
+ d_{t+1}\le Ld_t+4/N,\qquad
+ d_t\le2L^t+50/N.
+\]
+Polarization and stochasticity of $A$ give $\norm{V(x)-V(y)}\le2\norm{x-y}$ throughout the simplex. Hence
+\[
+ 5\norm{V(x_t)-x_t}\le15d_t.
+\]
+The integer inequality $2\cdot23^9\le25^9$ implies $L^{9k}\le2^{-k}$. By \eqref{eq:N},
+\[
+ 2L^{t_*}\le\varepsilon/30,\qquad 50/N\le\varepsilon/30.
+\]
+Therefore $5\norm{V(x_{t_*})-x_{t_*}}\le\varepsilon$. No floating-point estimate is used to select the horizon.
+
+For completeness, let $D$ be the tensor's least common denominator, and write $C_{ij,r}=DP_{ij,r}$. Represent a grid point by integer counts $n_i=Nx_i$. Define
+\begin{equation}\label{eq:integer}
+ S_r=\sum_{i\le j}(2-\mathbf1_{i=j})C_{ij,r}n_in_j.
+\end{equation}
+Then
+\begin{equation}\label{eq:intstep}
+ N(Tx)_r=\frac{3DNn_r+2S_r}{5DN},\qquad
+ \norm{V(x)-x}=\frac{\sum_r|S_r-DNn_r|}{DN^2}.
+\end{equation}
+Four integer divisions and a sort of four remainders implement the next step. If $b$ is the tensor's encoding length and $h$ the tolerance's encoding length, then $\log D=O(b)$, $\log N=O(1+h)$, and $t_*=O(1+h)$. All integers in \eqref{eq:integer}--\eqref{eq:intstep} have $O(1+b+h)$ bits. The least common multiple can be computed by Euclidean algorithms; standard integer multiplication and division are polynomial in their bit lengths. There are a fixed number of such operations per step. Crucially, the algorithm does not enumerate the grid and does not carry a squared denominator from one step into the next. These observations prove the complexity claim.
+\end{proof}
+
+The theorem gives finite certified approximation, not indefinite convergence of a rounded orbit to a fixed point outside its grid. The accompanying implementation uses only exact integer and rational arithmetic. Its certificate is the residual of $V$; the corresponding residual of $T$ would have multiplier $25/2$.
+
+\section{Examples and scope}\label{sec:examples}
+\begin{example}[Sharpness of the coordinate cap]\label{ex:cap}
+Give every parental pair with neither parent equal to $1$ the deterministic output $1$. For the pair $(1,1)$, distribute the output uniformly over $\{2,3,4\}$. For a mixed pair $(1,j)$, $j\ne1$, distribute uniformly over the two types outside $\{1,j\}$. This defines an admissible tensor with
+\[
+ V_1(x)=(1-x_1)^2.
+\]
+Its fixed point is
+\[
+ \left(c,\frac{1-c}{3},\frac{1-c}{3},\frac{1-c}{3}\right).
+\]
+The first fixed-point equation is $c=(1-c)^2$; each other equation reduces to $1-c=2c-c^2$, the same identity. Thus the universal cap $c$ cannot be decreased. In the associated flow with $x_1(0)=1$, the first coordinate is exactly $u(t)$, so the scalar entrance bound \eqref{eq:entry} is attained. It decreases to $c$ without entering $K_c$ in finite time.
+\end{example}
+
+\begin{example}[Unique fixed point with a raw two-cycle]\label{ex:cycle}
+Set $P_{11,2}=P_{22,1}=P_{33,4}=P_{44,3}=1$. For each distinct parent pair distribute equally over its two permitted output types. Then
+\begin{align*}
+ V_1&=x_2^2+x_2x_3+x_2x_4+x_3x_4,&
+ V_2&=x_1^2+x_1x_3+x_1x_4+x_3x_4,\\
+ V_3&=x_4^2+x_1x_2+x_1x_4+x_2x_4,&
+ V_4&=x_3^2+x_1x_2+x_1x_3+x_2x_3.
+\end{align*}
+The uniform vector is fixed and hence is the unique fixed point. Nevertheless, $V(e_1)=e_2$ and $V(e_2)=e_1$, so the raw discrete orbit of $e_1$ does not converge. The averaged algorithm and the continuous flow still converge by the theorems above.
+\end{example}
+
+The distinction from higher dimensions is structural. In four dimensions the failure of singleton sign supports forces a two-pair partition, and the exclusion rule forces the two rows used in Lemma~\ref{lem:transfer}. In five dimensions a sign pattern can split into two and three; the same argument no longer forces both rows. Known five-type nonuniqueness \cite{Jam17} is consistent with this obstruction. The paper neither classifies all higher-dimensional fixed-point sets nor answers the cycle clauses of Problem~11 in \cite{GR09}.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+This paper forms part of the author's ongoing project on AI systems for research mathematics, provisionally called Math Brain. Its mathematical development, computation and preparation were carried out with AI systems. The declaration follows the contribution-by-contribution format used in the author's September 2026 paper on the sharp unimodality threshold for free Brownian motion. The record relevant to this manuscript is as follows.
+\begin{enumerate}
+\item The earlier project manuscript recorded the four-type uniqueness question and the determinant expression in \eqref{eq:detidentity}. Its history and its higher-dimensional examples are preserved separately; those examples are not presented here as newly discovered results.
+\item On 14--15 September 2026, an OpenAI Codex research campaign using GPT-6 Astra developed the two-pair transfer proof, the averaged contraction, and the accompanying quantitative consequences. The archived campaign contains separate derivations and reviews of the core uniqueness and contraction arguments.
+\item The coefficient perturbation estimate was developed in archived report~013; continuous-time estimates in reports~012 and~103; analytic coefficient dependence in report~044; and the guaranteed rational algorithm in report~065. This paper gives its own complete presentations of the statements used from those reports.
+\item On 15 September 2026, OpenAI Codex assembled the present manuscript, checked its algebra and exact computational examples, prepared the rational implementation, and rendered the paper. The primary survey and the publisher abstract of \cite{Jam16} were read for the statement of the source problem and the qualification concerning prior work. The full hypotheses of \cite{Jam16} remain to be compared.
+\end{enumerate}
+The author's role is to set the goals of the project, commission and direct the work, and decide on its release. The author does not claim to have personally carried out the mathematics, computations or writing. No complete formal proof-assistant verification of the uniqueness theorem is claimed in this paper. Exact arithmetic verifies the finite examples and emitted numerical certificates; it does not replace the general proofs. The prior AI reviews are not human peer review. The author takes responsibility for the decision to publish.
+
+\section*{Source and code availability}
+The \LaTeX{} source, exact solver and reproducible example output accompany this manuscript in the author's research repository. The full preceding research record is preserved at commit
+\texttt{3810dc7f5ca7df1f6f4637f4628304161efa34e0} of
+\href{https://github.com/yspennstate/math-open-problems}{\texttt{yspennstate/math-open-problems}}.
+Access to this research archive is currently controlled by the repository owner. Historical priority remains unverified; the theorem statements and proofs above are independent of a priority claim.
+
+\begin{thebibliography}{9}
+\bibitem{GR09} R. N. Ganikhodzhaev and U. A. Rozikov, \emph{Quadratic stochastic operators: results and open problems}, arXiv:0902.4207, 2009. \url{https://arxiv.org/abs/0902.4207}.
+\bibitem{Jam16} U. U. Jamilov, On symmetric strictly non-Volterra quadratic stochastic operators, \emph{Discontinuity, Nonlinearity, and Complexity} \textbf{5} (2016), no.~3, 263--283. \url{https://doi.org/10.5890/DNC.2016.09.006}.
+\bibitem{Jam17} U. U. Jamilov, Dynamics of a strictly non-Volterra quadratic stochastic operator on $S^4$, \emph{Uzbek Mathematical Journal} (2017), no.~2, 66--75.
+\bibitem{RZ09} U. A. Rozikov and U. U. Zhamilov, The dynamics of strictly non-Volterra quadratic stochastic operators on the 2-simplex, \emph{Sbornik: Mathematics} \textbf{200} (2009), no.~9, 1339--1351.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260923T010156Z-account03-B17-QFORM-r21",
+  "source_control_commit_at_refresh": "6fda8f39f22a4258db938d2d8d570676098c8ff2",
+  "owner_control_revision": "2026-09-22.15",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "mathematical_result": {
+    "status": "NEW_SUPPORTING_THEOREM",
+    "statement": "If U=Y1^2+Y2^2 with independent even unimodal Y1,Y2 and decreasing square-sum density h, then for every independent cap-one X, ||p_(U-X^2)||_infinity <= 2 int_0^(1/2) h(v^2)dv, sharply over all cap-one laws of X. Applied to A_m=diag(J_m/m,J_m/m,-1) with two centered-uniform banks, the exact heavy-law optimum C_m tends to sqrt(6*pi)erf(sqrt(3/2))=3.9801056750...<3sqrt(2), with first correction -kappa/m and kappa>0.",
+    "scope": "one fully localized minority-sign physical coordinate; two independent same-sign centered-uniform diffuse banks; arbitrary cap-one law for heavy coordinate",
+    "continuity": "proved for this finite-m family for m>=2; not proved for full QFORM"
+  },
+  "partner_result_applied": {
+    "worker": "account04/B17",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2156b76156ad5956c214a881fcfd6d977d6f3b9f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B17/20260922T211900Z-account04-B17-QFORM-r3/REPORT.md",
+    "use": "weighted local Edgeworth expansion for normalized centered-uniform bank densities, inserted into the exact heavy-coordinate bathtub inequality"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9661cb6a0a2ab0075e8b7f62145a7af3c147c243",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T010156Z-account03-B17-QFORM-r21/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T010156Z-account03-B17-QFORM-r21/verify_heavy_minority.py",
+    "check_output": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T010156Z-account03-B17-QFORM-r21/CHECK_OUTPUT.txt"
+  },
+  "unresolved": [
+    "full universal QFORM upper bound",
+    "full-target continuity",
+    "one heavy coordinate in the majority-sign pair",
+    "multiple non-infinitesimal shared-coordinate rows and arbitrary additional spectrum"
+  ],
+  "next_step": "Optimize the one-heavy majority-sign mixed-leverage family, where the diffuse residual is a difference of two Gaussianized squares with a logarithmic kernel; seek either an exact cap-one bound <=3sqrt(2) or a new lower-bound witness.",
+  "native_memory_note": "Repository retrieval and durable writes occurred; no authenticated native brain receiver-use event was observed."
+}

@@ -1,0 +1,38 @@
+raise SystemExit('Not executed: the new Lean result was pending at closure. Use the recorded pending result; do not certify a nonexistent compiler success.')
+from pathlib import Path
+import json
+# Run only after the SurvivingExtrema Lean command has exited successfully.
+p=Path('ATTEMPT.md'); t=p.read_text(encoding='utf-8-sig')
+t=t.replace('Its check is queued through the machine\'s shared Lean-slot mechanism; it will be recorded as checked only after a successful exit.','Its check completed successfully: lake env lean SurvivingExtrema.lean exited 0 after waiting for the shared Lean slot. The proof is an ordinary kernel-checked proof; this does not formalize the stochastic theorems or the measurable-event argument.')
+t=t.replace('Mathematical assessment: SOLVED by deduction from the checked published results, subject to completing the outstanding finite-order Lean check as a verification artifact.','Mathematical assessment: SOLVED by deduction from the checked published results. The finite-order Lean artifact has also completed successfully. No remaining mathematical gap was identified in the hostile self-audit.')
+t=t.replace('# F0036 research attempt — 2026-10-12','# F0036 research attempt — 2026-10-12\n\nLatest assessment: SOLVED after the reopened attempt in Sections 9–12; full proof in PROOF.md. Sections 1–8 preserve the historical PARTIAL assessment and its gap, now superseded.')
+p.write_text(t,encoding='utf8')
+p=Path('PROOF.md'); t=p.read_text(encoding='utf-8-sig'); t+='''
+## Verification artifacts
+
+SurvivingExtrema.lean compiled successfully with `lake env lean ~/brain_workers/TRIO_1011/op/F0036/SurvivingExtrema.lean` from ~/lean_verify, final exit code 0. It checks only the key order implication preserving a strict gap under canonical bounds. It imports Mathlib.Data.Real.Basic, uses ordinary kernel-checked proof terms, and contains no sorry or native_decide. The stochastic and descriptive-set-theoretic proof is written in full above, using the explicitly identified published inputs.
+
+reversal_experiment.py checked contact/fork correspondence in 500 finite occupied arrow images with 1,562 contact sites and zero mismatches. reversal_checks.json contains the per-case records. This is a finite geometry check, not a proof of Brownian reversal or absolute continuity.
+
+Final verdict after the self-audit: SOLVED, as a deduction from published results. No claim of novelty or of an exact solving theorem already printed in the literature is made.
+'''; p.write_text(t,encoding='utf8')
+p=Path('CLAIMS.jsonl'); rows=[json.loads(x) for x in p.read_text(encoding='utf8').splitlines()]
+for x in rows:
+ if x['claim']=='The full set of potential most recent common ancestors in the standard Brownian net is almost surely locally finite.':
+  x['status']='proved'; x['proof_location']='PROOF.md, Lemmas 1-6 and Conclusion; ATTEMPT.md Sections 9-12'; x['remaining_gap']='None identified in the completed deduction. Novelty and independent external review are not assessed.'; x['checks']='Primary image-property/backbone-rotation/containment statements checked; local-equivalence equation (3.3) read in the 2009 proof; separation structure audited; analytic event and common spatial bound proved; 500 finite geometry cases checked; surviving-extrema order step compiled in Lean.'
+new=[
+('Every continuous finite forward segment contained in the stationary backbone image is a segment of a backbone net path.','proved','PROOF.md Lemma 1','None, using the published image-set property including starting time minus infinity.','Endpoint grafting to existing backbone past and future; original Sun-Swart Proposition 1.13 checked directly.'),
+('A common incoming net segment followed by two paths strictly separated throughout a fixed future interval gives a relevant separation point.','proved','PROOF.md Lemma 2; SurvivingExtrema.lean','None, using the published simultaneous special-point structure and containment.','True incoming canonical representatives identified via the subscript-s type definition; local bounds propagated; order step Lean exit 0.'),
+('The event of infinitely many compact-image first contacts with continuous finite-horizon witnesses is analytic and its null status transfers under absolute continuity.','proved','PROOF.md Lemmas 3 and 5','None, using universal measurability of analytic sets.','Strict order expressed by positive minima on a countable exhaustion; countably many distinct witnesses form a Borel relation; Borel null envelopes used for completed laws.'),
+('All time-zero paths visiting a fixed compact target box have a common finite spatial bound over any specified preceding positive cut and later finite horizon.','proved','PROOF.md Lemma 6','None. This is stronger localization than assigning one radius per witness.','Summable Gaussian barrier probabilities, Borel-Cantelli without independence, correct one-sided comparison after the barrier start time.'),
+('For each fixed deterministic s>0, the union of E_s(p,q) over p<q in Xi_s is locally finite above s.','proved','PROOF.md appended corollary','None for deterministic s. No assertion for a random cut.','Simultaneous deterministic-time hopping extends arbitrary site-pair witnesses to time-zero paths; finite compact-image observable and common localization apply.'),
+('Forward first contacts separated since a positive cut matched surviving forks in the reversed occupied image in 500 finite arrow systems.','numerical_evidence','reversal_experiment.py; reversal_checks.json','This finite test does not establish the Brownian reversal law; that law is a published input.','Seed 3612; 1,562 contact sites; zero mismatches; finite memory and seconds-scale computation.')]
+for c,st,loc,gap,ch in new: rows.append(dict(problem_id='F0036',claim=c,status=st,proof_location=loc,remaining_gap=gap,checks=ch))
+p.write_text(''.join(json.dumps(x,ensure_ascii=False)+'\n' for x in rows),encoding='utf8')
+p=Path('lean_check.txt'); t=p.read_text(encoding='utf8'); t+='\n2026-10-12 reopened attempt\nWorking directory: ~/lean_verify\nCommand: lake env lean ~/brain_workers/TRIO_1011/op/F0036/SurvivingExtrema.lean\nFinal exit code: 0\nThe command waited for the automatic shared Lean slot. The only new theorem formalized is surviving_extrema.\n'; p.write_text(t,encoding='utf8')
+p=Path('LITERATURE.md'); t=p.read_text(encoding='utf8'); t+='\nFinal reopened assessment: the full proof in PROOF.md survived the documented self-audit. Verdict SOLVED by deduction from the published local-equivalence, image-property, backbone-rotation and separation-finiteness results. The exact problem was not found as a stated proved theorem in the inspected literature; SOLVED_IN_LITERATURE is not used.\n'; p.write_text(t,encoding='utf8')
+p=Path('STATUS.md'); t=p.read_text(encoding='utf8'); lines=t.splitlines(); lines[0]='STATE: DONE'; lines[1]='NEXT: Independent external review of PROOF.md and a novelty check; no mathematical gap remains identified in this deduction.'; lines[2]='VERDICT: SOLVED'; t='\n'.join(lines)+'\n2026-10-12: Reopened proof completed and self-audited. Primary source statements verified; 500 finite reversal cases checked; final order lemma compiled in Lean after the shared-slot wait. Full result is SOLVED by deduction, not SOLVED_IN_LITERATURE.\n'; p.write_text(t,encoding='utf8')
+for name in ['PROOF.md','ATTEMPT.md','STATUS.md','LITERATURE.md','SurvivingExtrema.lean','reversal_experiment.py']:
+ p=Path(name); p.write_text(p.read_text(encoding='utf-8-sig'),encoding='utf8')
+print(Path('STATUS.md').read_text(encoding='utf8')[:330])
+print('Claims:',len(rows))

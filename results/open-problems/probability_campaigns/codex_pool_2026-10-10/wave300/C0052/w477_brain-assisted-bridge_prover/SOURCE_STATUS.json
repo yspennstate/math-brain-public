@@ -1,0 +1,81 @@
+{
+  "worker": "w477",
+  "target": "C0052",
+  "checked_date": "2026-10-10",
+  "historical_status": "source_says_open",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "exact_source_target": "For the zero-field free nearest-neighbour Ising state on Z^3, prove that g(beta)=sum_{x,y,z}U4(0,x,y,z)/(chi(beta)^2 xi(beta)^3) does not tend to zero as beta increases to beta_c from below. Here chi is the susceptibility, xi is the exponential correlation length along a coordinate axis, and the source convention has g<=0.",
+  "primary_source": {
+    "author": "Hugo Duminil-Copin",
+    "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+    "url": "https://arxiv.org/pdf/1707.00520",
+    "version": "1707.00520v1, 2017-07-03",
+    "locator": "printed p.94 (zero-based PDF page 93), equations 7.1-7.2 and Conjecture 6",
+    "verified_by": "direct primary PDF extracted text; page screenshot requested, visual receipt unavailable",
+    "short_quote": "Prove that the three-dimensional Ising model is non-trivial",
+    "intake_recorded_sha256": "cc442344d0cc21c5d57163719b06dfaf1d243dee8731716bf89d21c593f98a5b",
+    "intake_hash_revalidated": false
+  },
+  "supporting_sources": [
+    {
+      "url": "https://arxiv.org/html/1912.07973",
+      "version": "1912.07973v4",
+      "locator": "section 3.2 equations 3.11 and 3.13",
+      "verified_scope": "original two-current Ursell identity; adding sourceless currents yields an upper comparison; infinite-volume identity at beta<=beta_c uses the continuity/no-infinite-path input"
+    },
+    {
+      "url": "https://arxiv.org/abs/1311.1937",
+      "verified_scope": "continuity of critical magnetization in 3D, supporting the primary source's infinite-volume extension; not a non-Gaussianity theorem"
+    },
+    {
+      "url": "https://arxiv.org/abs/1612.02436",
+      "verified_scope": "abstract describes conformal-bootstrap extraction of a non-Gaussian four-point function; it is not accepted here as a verified lattice scaling-limit proof"
+    }
+  ],
+  "prior_records": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+      "line": 52,
+      "role": "exact C0052 intake row"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "line": 42,
+      "attempt_id": "C0052-A001",
+      "result": "current intersection variance estimate unclosed; fractal dimension discussion remains heuristic"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_attempts_H_20260912",
+      "result": "no exact C0052 hit in bounded targeted text-format search"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_attempts_I_20260914",
+      "result": "no exact C0052 hit in bounded targeted text-format search"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md",
+      "line": 592,
+      "result": "dated attempted_un label; no Lean proof receipt recovered"
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "result": "no visible C0052 row"
+    }
+  ],
+  "owner_solved_retired_check": "Named intake and attempt records checked by exact ID. No complete solved/retired index was identified in the authorized packet; current openness therefore remains UNKNOWN.",
+  "formulation_correction": "Initial statement used critical smeared-field cumulants. The exact primary source uses a subcritical susceptibility/correlation-length coupling. ATTEMPT.md L007 handles the latter separately; no equivalence is assumed.",
+  "formal_check": {
+    "performed": false,
+    "receipt": null,
+    "trusted_axioms": null
+  },
+  "served_model_evidence": {
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "max",
+    "requested_tier": "Fast",
+    "response_side_receipt": null,
+    "served_identity": "UNKNOWN"
+  },
+  "review_state": "w478 scoped KEEP for L001/L002/L003/L007; w479 and different-model receipt gates pending; no promotion"
+}

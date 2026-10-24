@@ -1,0 +1,130 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w379",
+  "bundle_slug": "p0110-w379-axial-detour-boundary-001",
+  "entries": [
+    {
+      "key": "axial-values",
+      "namespace": "probability.percolation",
+      "logical_name": "axial-monotone-and-undirected-passage-values",
+      "kind": "definition",
+      "title": "Axial monotone and unrestricted FPP passage values",
+      "statement": "On nearest-neighbor Z^2 with finite nonnegative edge weights, T_N is the infimum of sums along all paths from 0 to N e1. D_N is the infimum restricted to coordinatewise nondecreasing paths. There is exactly one such axial path, so D_N is the sum of its N horizontal edge weights. A restriction comparison concerns raw passage values unless separate deterministic centerings are explicitly specified.",
+      "proof_text": null,
+      "assumptions": [
+        "integer N>=1",
+        "finite nonnegative weights"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner:probability300:P0110:w379:axial-values",
+        "url": "file:///~/brain_workers/w379/INDEPENDENT.md",
+        "revision": "2026-10-10-w380-keep-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "raw-bridge",
+      "namespace": "probability.percolation",
+      "logical_name": "raw-axial-monotone-fpp-transfer-hypothesis",
+      "kind": "concept",
+      "title": "Draft audit target: raw axial monotone FPP transfer",
+      "statement": "DRAFT AUXILIARY HYPOTHESIS FOR AUDIT, NOT A THEOREM: For a fixed iid finite nonnegative nonconstant edge law on nearest-neighbor Z^2, could the unrestricted value T_N and the monotone axial value D_N satisfy D_N-T_N=o(N) almost surely? Narrow bounded support alone does not validate this route; the independently checked detour derivation gives a positive lower linear gap. This question concerns the uncentered axial restriction and does not assert a bridge for differently centered fluctuations or interior directions.",
+      "proof_text": null,
+      "assumptions": [
+        "one fixed iid finite nonnegative nonconstant edge law",
+        "raw axial passage values as defined in axial-values"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner:probability300:P0110:w379:raw-bridge",
+        "url": "file:///~/brain_workers/w379/INDEPENDENT.md",
+        "revision": "2026-10-10-w380-keep-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "finite-detour",
+      "namespace": "probability.percolation",
+      "logical_name": "finite-axial-detour-obstruction-to-monotone-restriction",
+      "kind": "concept",
+      "title": "Reviewed draft: finite axial detour obstruction",
+      "statement": "DRAFT MATHEMATICAL DERIVATION, INDEPENDENTLY CHECKED BY w380 (KEEP); COORDINATOR INTEGRATION PENDING: For iid finite nonnegative nonconstant edge weights on Z^2, choose 0<l<h with p_l=P(tau<=l)>0 and p_h=P(tau>=h)>0 and integer n>2l/(h-l). The n-edge direct axis path and a height-one detour of n+2 edges share no edges. The event that all direct edges are >=h and all detour edges are <=l has probability q=p_h^n p_l^(n+2)>0 and yields D_n-T_n>=delta=n(h-l)-2l>0. For fair weights {1,2} take n=3: the direct cost is 6, a detour costs 5, and this event has probability 1/256. No values on other edges are imposed.",
+      "proof_text": null,
+      "assumptions": [
+        "iid finite nonnegative nonconstant edge law",
+        "l,h,n,p_l,p_h as stated"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner:probability300:P0110:w379:finite-detour",
+        "url": "file:///~/brain_workers/w379/INDEPENDENT.md",
+        "revision": "2026-10-10-w380-keep-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "linear-gap",
+      "namespace": "probability.percolation",
+      "logical_name": "positive-linear-axial-monotone-restriction-gap",
+      "kind": "concept",
+      "title": "Reviewed draft: positive linear axial restriction gap",
+      "statement": "DRAFT MATHEMATICAL DERIVATION, INDEPENDENTLY CHECKED BY w380 (KEEP); COORDINATOR INTEGRATION PENDING: In iid FPP with finite nonnegative nonconstant weights on nearest-neighbor Z^2, let T_N be unrestricted passage from 0 to N e1 and D_N the unique monotone axial path sum. Choose 0<l<h with p_l=P(tau<=l)>0, p_h=P(tau>=h)>0, n>2l/(h-l), L=n+2, delta=n(h-l)-2l and q=p_h^n p_l^(n+2). Then almost surely liminf_{N->infinity}(D_N-T_N)/N>=delta*q/L>0. Independent detour blocks at spacing L give an explicit path saving delta for each successful block. If E tau=m<infinity, also limsup T_N/N<=m-delta*q/L. For fair {1,2} weights, n=3 gives the bound 1/1280. This is an independently checked special-case obstruction to raw axial transfer; it does not prove or refute the original existential KPZ exponent problem.",
+      "proof_text": null,
+      "assumptions": [
+        "iid finite nonnegative nonconstant edge law",
+        "l,h,n and positive masses as stated",
+        "finite mean only for the final upper bound"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner:probability300:P0110:w379:linear-gap",
+        "url": "file:///~/brain_workers/w379/INDEPENDENT.md",
+        "revision": "2026-10-10-w380-keep-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "raw-bridge",
+      "to_key": "axial-values",
+      "kind": "depends_on",
+      "rationale": "The route compares exactly these raw axial passage values."
+    },
+    {
+      "from_key": "finite-detour",
+      "to_key": "axial-values",
+      "kind": "depends_on",
+      "rationale": "The independent event makes an unrestricted candidate cheaper than the unique monotone axial path."
+    },
+    {
+      "from_key": "linear-gap",
+      "to_key": "axial-values",
+      "kind": "depends_on",
+      "rationale": "The lower rate concerns D_N minus T_N as defined, with no separate centering."
+    },
+    {
+      "from_key": "linear-gap",
+      "to_key": "finite-detour",
+      "kind": "depends_on",
+      "rationale": "The author proof concatenates edge-disjoint copies of this heavy-direct/light-detour event and uses their iid Bernoulli strong law."
+    },
+    {
+      "from_key": "linear-gap",
+      "to_key": "raw-bridge",
+      "kind": "refutes",
+      "rationale": "The independently checked positive lower linear rate contradicts an almost-sure o(N) raw axial restriction error in the stated nonconstant-law class; differently centered or interior-direction bridges are outside both endpoints."
+    },
+    {
+      "from_key": "linear-gap",
+      "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
+      "kind": "semantic_association",
+      "rationale": "This independently checked raw axial restriction obstruction identifies a failing auxiliary route relevant to the existing existential fixed-law KPZ target. It neither proves nor refutes that original problem. Both target and prior conditional attempt were read by exact ID from the read-only store."
+    }
+  ]
+}

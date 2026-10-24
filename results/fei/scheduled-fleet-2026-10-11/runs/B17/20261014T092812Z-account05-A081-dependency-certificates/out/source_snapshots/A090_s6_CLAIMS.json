@@ -1,0 +1,107 @@
+[
+  {
+    "claim_id": "A001-SHARED-CORE-FOUR-CELL-OWNERSHIP",
+    "version": 1,
+    "exact_statement": "For every even d>=2 and integer r>=1, let b be the canonical d-bit quadratic bent sign, Q_r the product of r independent two-bit signs negative only at 11, and F=b+1_(y=0)(Q_r-1). Put delta=2^-d,t=sqrt(delta),alpha=2^-r,w=4^(1-r),e=delta/2,A=1-delta+2delta alpha^2,R_sigma=1+2sigma t(alpha-1)+delta[(alpha-1)^2+alpha^2], and D_y=sum_sigma N_sigma delta log2(A/R_sigma). Every selector influence is e and every core influence is a=1/2+delta(1-alpha). Retaining only a queried selector bit partner gives binary laws (1/2,1/2),(1-e,e) and total influence-weighted binary loss at least r delta(3d/8-1/2) for r>=2; at r=2^d this loss cannot be paid by a fixed multiple of one specified core influence. Retaining also the empty/nonempty occupancy of all other selector pairs gives complete four-cell laws (w/2,(1-w)/2,w/2,(1-w)/2) and (A,e(1-w),ew,e(1-w)). Its per-row loss is e w D_y/2, with 0<=D_y<=log2(3)<2, and its retained price is M_i^C/e=1+(w/2)[d+2r-1+log2 A]. Summing over ALL selectors, their retained prices plus discarded losses above total selector influence J=r delta cost less than (3/2)a, charged once to y_1. Consequently the enlarged root audit bill 2I_core+sum_selector(M_i^C+L_i^C)+J/ln2 is <=(7/2)I(F), and dominates B(F). All spectral atoms are positive and H(F)<=4I(F). This is a complete root-row ownership fixture, not a universal signed partition, hereditary terminal-child reserve, or FEI theorem.",
+    "hypotheses": [
+      "Actual Boolean signs on the uniform physical cube; entropy/KL in bits and ordinary influence",
+      "Even d>=2; r>=1 disjoint selector pairs and the specified bent core, edited only at its zero vertex",
+      "Complete row laws are marginalized, never conditioned on derivative support; zero cells omitted continuously",
+      "The single owner y_1 is allocated its baseline plus the combined selector extra once; no hereditary terminal-child surplus is inferred"
+    ],
+    "statement_sha256": "b8c939819a50f5e8e1d629bc294a29f1b253dbede4e8c637e985b2e6da1da206",
+    "contributors": [
+      "A001"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261014T035113Z-account05-A001-quantifier-audit\\REPORT.md",
+      "locator": "complete derivation sections 2-6",
+      "validation": [
+        "out/PHYSICAL.json",
+        "out/SYMBOLIC.json"
+      ],
+      "immediate_derivation": "DERIVATION.md"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A090",
+        "timestamp": "2026-10-14T07:53:58.991820+00:00",
+        "verdict": "ACCEPT_AT_FULL_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "method": "Reconstructed from theorem statement before reading source derivation; independent complete cell sums, likelihood fibers, joint extra-debit bound and conditional entropy bound; separate integer Walsh/physical flip/Fraction implementation",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A090\\runs\\20261014T074809Z-account05-A090-independent-reconstruction\\RECONSTRUCTION.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A090\\runs\\20261014T074809Z-account05-A090-independent-reconstruction\\out\\check.json",
+        "source_statement_sha256": "53c94ca5a277d7bef21361a34cf2094ddade642943010fb9b80b2572ce9c1674",
+        "recomputed_exact_statement_utf8_sha256": "b8c939819a50f5e8e1d629bc294a29f1b253dbede4e8c637e985b2e6da1da206",
+        "hash_metadata_note": "Source supplied hash differs from UTF8 exact_statement hash; exact statement preserved verbatim, local hash corrected, source untouched; no mathematical repair.",
+        "reviewer_contributed_repair": false,
+        "scope": "Every original clause, all even d>=2 and r>=1; enlarged complete root bill, all-selector loss counterexample, positive atoms and H<=4I. No hereditary child surplus or full FEI accepted."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_FULL_ORIGINAL_SCOPE_BY_A090_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "All shared-core binary quotient losses for this family have a uniform payment by a fixed multiple of one core-coordinate influence"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A073",
+      "A098",
+      "A099",
+      "A004",
+      "A086",
+      "A094",
+      "B01",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A090-ARBITRARY-GATE-SIGNED-REFUND-PARTITION",
+    "version": 1,
+    "exact_statement": "For every even d>=4 and every Boolean sign g on r>=1 disjoint physical bits, let b(y)=(-1)^(sum_j y_(2j-1)y_(2j)), delta=2^-d, t=2^(-d/2), and F=b(y)+1[y=0](g(x)-1). Write hat b(R)=sigma_R t and a_V=hat g(V). For each relevant gate query i, retaining the residual gate mask V and sigma_R preserves the complete normalized derivative/reference KL exactly. Retaining only V loses influence-weighted KL L_i=delta a_i^2 D0_i, where D0_i=sum_sigma N_sigma delta log2(rho_i/c_(i,sigma)), N_sigma=(2^d+sigma 2^(d/2))/2, rho_i=1-delta+delta(a_empty^2+a_i^2), c_(i,sigma)=(sigma+t(a_empty-1))^2+delta a_i^2. The combined gate-row losses satisfy 0<=sum_i L_i<=2delta sum_i a_i^2<=2delta <=Inf_(y_1)(F)/4, and Inf_(y_j)(F)=1/2+delta(1-a_empty). This is a dedicated single reserve for precisely these quotient losses; no other charge, universal terminal payment, non-flat-core extension or full FEI conclusion is asserted.",
+    "hypotheses": [
+      "Uniform finite physical Boolean cube; entropy and KL in bits",
+      "Even d>=4; specified quadratic bent core; any r>=1 and any Boolean gate on disjoint bits",
+      "Complete row laws mu_i(T)=p_(T+i)/e_i and r_i(T)=p_T+p_(T+i); irrelevant queries omitted",
+      "If a_i=0 the exceptional derivative cell has zero weight; no conditioning of reference on derivative support",
+      "The reserved quarter of Inf_(y_1) is dedicated only to the sum of the specified quotient losses"
+    ],
+    "statement_sha256": "aa9f2ffec7988741dcbb1cadbf3e37e8b2a1563bab5520c7a4476a6a285e240d",
+    "contributors": [
+      "A090"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A090\\runs\\20261014T034626Z-account05-A090-independent-reconstruction\\DERIVATION.md",
+      "locator": "Signed conditional partition for arbitrary gates; complete derivation and single physical reserve"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A096",
+        "timestamp": "2026-10-14T04:38:42.711282+00:00",
+        "verdict": "ACCEPT_AT_FULL_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "method": "Independent arbitrary-core coefficient/conditional-law derivation, then bent specialization and direct physical-edge quarter reserve; own integer Walsh/Fraction/prime-log checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261014T042803Z-account05-A096-live-gap-ledger\\DERIVATION.md",
+        "locator": "Sections 1-2, bent specialization",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261014T042803Z-account05-A096-live-gap-ledger\\out\\CHECK.json",
+        "source_claim_bytes_sha256": "31f5c226d684e18270d5ae6511caf2f08b3e21ccf9b6a9f432eaf50ec8d25adc",
+        "scope": "All original gates, even d>=4, sufficient signed partition, exact L_i, summed Parseval bound and dedicated quarter only; no retained terminal payment",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_FULL_STATED_SCOPE_BY_A096_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A001",
+      "A073",
+      "A098",
+      "A099",
+      "B18",
+      "B20"
+    ]
+  }
+]

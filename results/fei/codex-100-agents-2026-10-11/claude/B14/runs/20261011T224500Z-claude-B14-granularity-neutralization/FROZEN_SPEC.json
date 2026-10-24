@@ -1,0 +1,19 @@
+{
+  "frozen_at_utc": "2026-10-11T22:47:00Z",
+  "helper_version": "check_b14.py v1 (written for this run; numpy integer FWHT + fractions.Fraction; no import of any agent code)",
+  "families": [
+    "R1: all Boolean truth tables n=0..4 (65,814 tables) for the A067 local-granularity lemma (exact divisibility)",
+    "R2: structured random Boolean functions n=5..9 (random decision trees, random thresholds, random products), seed 20261011, 400 per n, exact divisibility",
+    "R3: dictator surgery g_n = x1 - 2*1{x=all+}, n=2..12, exact Fraction formulas for I, v, U",
+    "R4: F_n = Maj3(z)*(1-2*1{y=all+}), n=2..5, all 2^(n+3) anchors, exact min_A of 2*sum q(d-1) against 3n/2",
+    "R5: addressing a=1..4 (N=a+2^a <= 20), exact d=a+1, U=a/2, |hat f|=2^-a",
+    "R6: point defect f_n n=2..10: spectrum, closed form J/I as a polynomial identity in z, exact area",
+    "N1: point-defect neutralization: f in {x1, Maj3, AND2, addressing a=2} padded to N<=14 and flipped at x0=all+; exact d=N on support, |dI|<=2N 2^-N, L1 spectral change bound, U=N v - I",
+    "N2: hybrid granularity/influence-code bound on g_n (n<=14), F_n (n<=10), point-defected addressing a=2,3; floating evaluation as support only",
+    "N3: heavy-block restriction bound sanity check on 300 random structured functions n<=6 (floating, support only)"
+  ],
+  "arithmetic": "integer Walsh numerators and Fraction for every equality/divisibility/inequality labelled exact; logarithms only in N2/N3 floating support values",
+  "symmetry_reduction": "none",
+  "memory_estimate": "< 200 MB (largest array 2^20 int64)",
+  "max_runtime_seconds": 600
+}

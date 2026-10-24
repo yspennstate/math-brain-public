@@ -1,0 +1,37 @@
+{
+  "by_dimension": {
+    "1": 4,
+    "2": 32,
+    "3": 768,
+    "4": 262144
+  },
+  "constant_1_over_ln2": 1.4426950408889634,
+  "exhaustive_coordinate_cases": 262948,
+  "max_child_budget_violation": 0.0,
+  "max_curvature_step_violation": 0.0,
+  "max_derivative_triangle_violation": 0.0,
+  "star_cubic_r1": {
+    "curvature_over_query_charge_exact": "4/1",
+    "curvature_over_query_charge_float": 4.0,
+    "hereditary_upper_from_child_budget_float": 1.360673760222241,
+    "hereditary_upper_over_root_influence_float": 1.8142316802963212,
+    "quadratic_child_influence_exact": "1",
+    "query_influence_exact": "1/4",
+    "r": 1,
+    "root_influence_exact": "3/4",
+    "two_I_slack_float": 0.13932623977775904
+  },
+  "star_cubic_r16": {
+    "curvature_over_query_charge_exact": "2097152/65535",
+    "curvature_over_query_charge_float": 32.000488288700694,
+    "hereditary_upper_from_child_budget_float": 16.721336513554828,
+    "hereditary_upper_over_root_influence_float": 1.9672178261453825,
+    "quadratic_child_influence_exact": "16",
+    "query_influence_exact": "65535/131072",
+    "r": 16,
+    "root_influence_exact": "1114111/131072",
+    "two_I_slack_float": 0.2786482276561095
+  },
+  "star_exact_formula": "curvature/query = 2 r/(1-2^{-r}); root I = r/2+(1-2^{-r})/2; hereditary upper = r+(1/ln2)(1-2^{-r})/2 <= 2 I",
+  "status": "PASS"
+}

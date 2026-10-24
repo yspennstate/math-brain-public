@@ -1,0 +1,19 @@
+from pathlib import Path
+import json
+R=Path(__file__).resolve().parent
+extra=[
+ {'problem_id':'F0072','claim':'For reflected components separated by a single root, normalized pinning ratios obey r_union<=r_half^2, by conditional independence and Jensen.','status':'proved_special_case','proof_location':'SECOND_ATTEMPT.md, structural explanation following the reflection counterexample','remaining_gap':'Lattice reflection planes are not single-root separators; this does not prove wall-edge repulsion.','checks':'Explicit marginal tilt by q and q^2, E(q^2)>=(E q)^2.'},
+ {'problem_id':'F0072','claim':'The exact sign-set law under partial SOS walls is independent of inverse temperature after rescaling heights.','status':'proved','proof_location':'SECOND_ATTEMPT.md, Temperature check','remaining_gap':'There is no low-temperature small parameter that supplies GAP-SB.','checks':'z_beta(S)=beta^(-|S|)z_1(S), so w_beta has a single common beta^(-|V|) factor.'},
+ {'problem_id':'F0072','claim':'Positive SOS heights on a finite grounded domain are exactly the vertex deletion times of an attractive pure-death chain with rates lambda_v(S)=z(S minus {v})/z(S), total rate cut(S), and lambda_v(S)<=deg(v).','status':'proved','proof_location':'SECOND_ATTEMPT.md, Exact attractive pure-death-process representation','remaining_gap':'Uniform survival to a log M at partial-wall edges under the conditioned random initial sign set is not proved; the rates are nonlocal.','checks':'Telescoping joint density over deletion orders and exponential gaps; increasing partition ratios; explicit common-clock inclusion coupling; Lipschitz one-site energy bound.'},
+ {'problem_id':'F0072','claim':'Positive-domain partitions are not determined by vertex count and perimeter: a four-site path and star in Z^2 both have cut 10 but z=19/1920 and 13/1280.','status':'counterexample','proof_location':'SECOND_ATTEMPT.md, Further exact probe; coarea_probe.json','remaining_gap':'Counterexample to collapsing the recursion to volume/perimeter data, not to F0072.','checks':'Complete hand recursion for sizes 1-4 and exact fraction DP agree; ratio 39/38.'}
+]
+existing=[json.loads(x) for x in (R/'CLAIMS.jsonl').read_text(encoding='utf8').splitlines() if x.strip()]
+with (R/'CLAIMS.jsonl').open('a',encoding='utf8') as stream:
+ for c in extra:
+  if not any(x['claim']==c['claim'] for x in existing):stream.write(json.dumps(c)+'\n')
+marker='## Gap-specific brain recall in the second attempt'
+p=R/'LITERATURE.md';s=p.read_text(encoding='utf8')
+if marker not in s:
+ s+='\n'+marker+'\n\n2026-10-12: Read-only math_recall.py queries: (1) entropic repulsion hard wall boundary subbox reflection positivity chessboard Velenik; (2) absolute value FKG continuous SOS Lammers Lis; (3) convex gradient model conditional fluctuations hard wall Brascamp Lieb duplication. All three completed; full outputs are gap_recall_1.txt, gap_recall_2.txt and gap_recall_3.txt. These were gap/toolkit recalls, not fresh network searches.\n\nRelevant returned references were J. Fröhlich, R. Israel, E. H. Lieb and B. Simon, “Phase transitions and reflection positivity. I. General theory and long range lattice models”, Communications in Mathematical Physics 62 (1978), 1–34, DOI 10.1007/BF01940327; and Richard Holley, “Remarks on the FKG inequalities”, Communications in Mathematical Physics 36 (1974), 227–231, DOI 10.1007/BF01645980. The reflection-positivity technique card explicitly warns that altered wall/field geometry requires rechecking the structure. Neither recalled reference was verified as a theorem resolving this SOS wall-edge gap. The other matches were largely unrelated (basic absolute values, graph-theory SOS, optimization convexity). No original proof here rests on a recalled unverified statement.\n'
+ p.write_text(s,encoding='utf8')
+print('Saved new claims and brain recall log',flush=True)

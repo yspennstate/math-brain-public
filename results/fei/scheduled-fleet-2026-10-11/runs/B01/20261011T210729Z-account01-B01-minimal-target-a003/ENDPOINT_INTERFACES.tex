@@ -1,0 +1,105 @@
+\section*{A003 endpoint interfaces (bits throughout)}
+Let $S\sim P_f$, $P_f(A)=\widehat f(A)^2$, $\alpha_i=\Pr(i\in S)$, and
+\[
+ E_i=H(1_{\{i\in S\}}\mid S\setminus\{i\}),\qquad
+ \Delta_iH=H(f)-\frac{H(f_{i,+})+H(f_{i,-})}{2}.
+\]
+Only coordinates with $\alpha_i>0$ are relevant.
+
+\paragraph{Exact split identities.}
+Writing $a_T=\widehat f(T)$ and $b_T=\widehat f(T\cup\{i\})$, the child laws are
+$r_\pm(T)=(a_T\pm b_T)^2$ and their midpoint is $q(T)=a_T^2+b_T^2$. Hence
+\[
+ \Delta_iH=E_i+\operatorname{JS}(r_+,r_-),\qquad
+ I(f)-\frac{I(f_{i,+})+I(f_{i,-})}{2}=\alpha_i,
+\]
+and
+\[
+ 0\le\operatorname{JS}(r_+,r_-)
+ \le\frac2{\ln2}\sum_T\min(a_T^2,b_T^2)
+ \le\frac2{\ln2}\min(\alpha_i,1-\alpha_i).
+\]
+The pointwise scalar inequality is
+\[
+ \frac{(1+t)\log_2(1+t)+(1-t)\log_2(1-t)}2
+ \le\frac{1-\sqrt{1-t^2}}{\ln2}\quad(|t|\le1).
+\]
+
+\paragraph{R: relevant-coordinate step criterion.}
+\[
+ \mathsf{STEP}(K):\quad
+ \forall n\ \forall f\text{ nonconstant}\ \exists i\ (\alpha_i>0):
+ \Delta_iH(f)\le K\alpha_i.
+\]
+Strong induction gives $\mathsf{STEP}(K)\Rightarrow\mathsf{FEI}(K)$.
+Moreover $B(f)=\sum_iE_i\le H(f)$, so
+\[
+ \mathsf{FEI}(C)\Rightarrow\mathsf{STEP}(C+2/\ln2).
+\]
+Thus $C_{\rm FEI}\le C_{\rm step}\le C_{\rm FEI}+2/\ln2$.
+
+\paragraph{Signed Booleanity/downward criterion.}
+For signed coefficients $a_A$, require the complete system
+\[
+ \sum_Aa_A^2=1,\qquad \sum_Aa_Aa_{A\triangle U}=0
+ \quad(\varnothing\ne U\subseteq[n]).
+\]
+Set $p_A=a_A^2$ and
+\[
+ L=\sum_Ap_A\sum_{i\in A}\log_2\left(1+\frac{p_{A\setminus\{i\}}}{p_A}\right).
+\]
+Pairing $T,T\cup\{i\}$ proves
+\[
+ L_i\le E_i\le L_i+\alpha_i/\ln2,qquad L\le B\le L+I/\ln2.
+\]
+Therefore
+\[
+ \mathsf{DOWN}(K):\ \forall a\text{ satisfying full signed Booleanity},\ L\le KI
+ \quad\Longrightarrow\quad \mathsf{FEI}(K+3/\ln2),
+\]
+while $\mathsf{FEI}(C)\Rightarrow\mathsf{DOWN}(C)$. Hence
+$C_L\le C_{\rm FEI}\le C_L+3/\ln2$.
+
+\paragraph{J: complete conditioned posterior residual.}
+For admissible ordered gates, fractional weights, and laws $\mathcal P_A$ on
+distinct actual finite partition-forest runs producing $A$, define
+\[
+ \mathcal J_f=
+ v(\Lambda+\log_2Z)+\sum_{A\ne\varnothing}P_f(A)
+ \left[\mathbb E_{r\sim\mathcal P_A}B_\lambda(A;r)-H(\mathcal P_A)\right],
+\]
+where $\Lambda=\sum_l\log_2(1+\lambda_l\pi_l)$ and $Z=1-2^{-\Lambda}$.
+The recovered theorem is
+\[
+ H(f)\le h_2(v)+K_{\rm ref}I(f)+\mathcal J_f,qquad
+ K_{\rm ref}=3+2\log_2 3+\log_2(6e).
+\]
+Consequently
+\[
+ \mathsf{WF}(K):\quad \forall n\ \forall f\ \exists
+ (\text{admissible data})\quad \mathcal J_f\le KI(f)
+ \Longrightarrow \mathsf{FEI}(2+K_{\rm ref}+K).
+\]
+No converse from FEI to $\mathsf{WF}$ is known.
+
+\paragraph{Implication graph.}
+\[
+ \begin{array}{ccccc}
+ \mathsf{WF}(K)&\Longrightarrow&\mathsf{FEI}(2+K_{\rm ref}+K)\\[2mm]
+ \mathsf{FEI}(C)&\Longrightarrow&\mathsf{STEP}(C+2/\ln2)&\Longrightarrow&
+ \mathsf{FEI}(C+2/\ln2)\\[2mm]
+ \mathsf{FEI}(C)&\Longrightarrow&\mathsf{DOWN}(C)&\Longrightarrow&
+ \mathsf{FEI}(C+3/\ln2).
+ \end{array}
+\]
+The first arrows in the last two rows use $B\le H$ and $L\le B$; the final
+arrows use physical restriction induction. The three unpaid leaves are the
+dimension-independent bounds $\mathsf{WF}(K)$, $\mathsf{STEP}(K)$, and
+$\mathsf{DOWN}(K)$.
+
+\paragraph{Arbitrary-seed admission.}
+For $F(x,y)=f(x)g(y)$ on disjoint variables, $H,I,L$ are additive and a
+coordinate's $(\Delta_iH,\alpha_i)$ pair is unchanged from its factor.
+Therefore tensor powers preserve the obstructing ratios. Each target also
+quantifies over every genuine Boolean seed, including sparse defects,
+addressing functions, near tensors, and prime gates.

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B19",
+  "run_id": "20260923T230008Z-account03-B19-QFORM-r44",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_prepublication": "6d5d44409de6f56360ac6897dbed78bd4d55fbeb",
+  "control_revision": "2026-09-22.15",
+  "full_brain_connected": false,
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY refuted by phase-aligned fragmented supports",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "principal-minimal same-constant induction",
+      "source": "yspennstate/math-open-problems@ef38106705da5fab5a2fb6dbdd64745206580f62",
+      "scope": "full affine QFORM reduces to principal-minimal matrices by conditioning original coordinates"
+    },
+    {
+      "id": "finite-core exact base split",
+      "source": "yspennstate/math-open-problems@5d9892edb6f33beda5ce5e10c4482fcc5fe994a8",
+      "scope": "unpaid branch has |H|<=124 and exact base D=A[L,L] with retained finite-rank/cross structure"
+    },
+    {
+      "id": "account04/B19 adaptive null-coloop HY",
+      "source": "yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a",
+      "scope": "residual-diffuse exact-rank-three null-coloop only"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-THRESHOLD-SCHUR-COUNT-v1",
+    "status": "proved target-level structural implication",
+    "statement": "For A=[[B,C],[C^T,D]], the closed threshold counts at +1 and -1 equal the corresponding base counts plus the closed-side inertia of reduced Moore-Penrose Schur operators compressed to ker((C P_ker(D-sigma I))^T). Exact and repeated threshold eigenvalues are included.",
+    "corollary": "In a threshold-free base, principal minimality forces every H coordinate to be essential to at least one threshold Schur mode; for four target modes every coordinate is essential to both signs. If N_D(1)=2, the remaining three-mode branch is a one-mode all-coordinate-essential Schur core."
+  },
+  "partner_application": "On the exact partner null-coloop branch, 2^-80<=D_res<=1 gives ||p_Q||_infinity<34 sqrt(log(e 2^80))=255.456946<256; D_res=0 remains the separate <5.844 Witt endpoint.",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "75f9b7e661bb09ce540c7633ed4758f70cdd53ba",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260923T230008Z-account03-B19-QFORM-r44/",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B19/20260923T230008Z-account03-B19-QFORM-r44.md",
+  "diagnostics": {
+    "generalized_threshold_tests": 3000,
+    "generalized_threshold_mismatches": 0,
+    "threshold_free_tests": 1018,
+    "threshold_free_max_relation_residual": 7.525871778400108e-13
+  },
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN globally; continuous only on cited partner branch",
+  "first_unresolved_implication": "QFORM-ESSENTIAL-THRESHOLD-SCHUR-CORE-PAYMENT-v1",
+  "next_step": "Construct a product-safe receiver for the N_D(1)=2 one-extra-mode essential Schur core without dividing by dist(spec D,{+1,-1}), or route that geometry into an existing grouped/null-coloop payment."
+}

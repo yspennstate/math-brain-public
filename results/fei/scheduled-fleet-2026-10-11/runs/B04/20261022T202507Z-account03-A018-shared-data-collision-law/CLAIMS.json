@@ -1,0 +1,55 @@
+[
+  {
+    "claim_id": "A018-EQUAL-MEAN-QUERY-REFUND",
+    "version": 1,
+    "exact_statement": "For any Boolean private core h(q,u) with equal child means beta0=beta1=beta, any independent Boolean mask s of mean sigma, and F=1 on fresh gate x0 and h*s on x1, supply normalized finite-cost complete child references Q0,Q1 and the SAME mask reference Qs. The incoming core reference is fixed as the actual queried-frequency conditional lift of average Qb, assigning queried frequency absent on zero true rows. Put Dc=average KL(Pb||Qb)-KL(Ph||Qh), ab=Qb(empty), a=average ab, t=Qs(empty), m=sigma^2, p=m*beta^2, E=beta^2*log2(a/sqrt(a0*a1)) with E=0 when beta=0, and J=log2(1+t*a)-average log2(1+t*ab). Then 0<=E<=Dc, J>=0, and the SAME physical-label activation references have exact CE_parent-average CE_child=Delta H_h/2+Lambda with Lambda=-(Dc-m*E+(1+p)*J)/2<=0. Thus any already certified core query Delta H_h<=K*d transfers at the same K to this activation query, whose influence is d/2, with all supplied terminal costs retained. Finite consistent mean-preserving stopping histories telescope; arbitrary unequal-mean histories and inexpensive core reference supply remain open.",
+    "hypotheses": [
+      "Uniform independent physical bits; Boolean signs; finite cubes of arbitrary dimensions; entropy/CE/KL in bits.",
+      "Core and mask blocks disjoint; one fresh activation gate; arbitrary normalized supplied finite-cost mask and child core references.",
+      "Equal ACTUAL child means, not merely equal squared means or small means.",
+      "Incoming core reference fixed consistently before sampling, with absent-query convention on zero true unqueried rows; no arbitrary incoming-reference reset.",
+      "Full terminal activation reference costs retained; no free or renewed child bank; conditional core query certificate required for same-K corollary."
+    ],
+    "statement_sha256": "1295751b2787c1f09cbc7f071356085fd63559f8f9b75bd448ea0b402f726488",
+    "contributors": [
+      "A018/account03"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A018\\runs\\20261022T202507Z-account03-A018-shared-data-collision-law\\REPORT.md",
+      "locators": [
+        "complete derivation or exact first unsupported line"
+      ],
+      "certificates": [
+        "out/CHECKS.json",
+        "out/BOUNDARIES.json"
+      ]
+    },
+    "proof_dependencies": [
+      "A018-JOINT-CONSTANT-BRANCH-REFERENCE@1 (normalized reference identity, independently rederived here)",
+      "Finite KL log-sum and log concavity, with rowwise proof in REPORT.md"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A018/account03",
+        "independent": false,
+        "verdict": "AUTHOR_ANALYTIC_PROOF_AND_EXACT_CHECKS",
+        "cases": 4248,
+        "assertions": 97432,
+        "formal_status": "Lean sign-algebra source uncompiled; compiler admission refused by memok exit1"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_CHECKED_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A019",
+      "A020",
+      "A090",
+      "A091",
+      "A094",
+      "B04-lead",
+      "B20"
+    ]
+  }
+]

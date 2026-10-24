@@ -1,0 +1,10 @@
+m=2 U1=2*L+7 max_L_for_U1_le_49=21
+m=3 U1=4*L+19 max_L_for_U1_le_49=7
+m=4 U1=8*L+39 max_L_for_U1_le_49=1
+m=5 U1=16*L+71 max_L_for_U1_le_49=none
+m=6 U1=32*L+119 max_L_for_U1_le_49=none
+m=7 U1=64*L+183 max_L_for_U1_le_49=none
+m=8 U1=128*L+247 max_L_for_U1_le_49=none
+r2_formula=min(2L+7,L+28-|P|+h(P))
+sufficient_conditions=L<=21 OR L+h(P)-|P|<=21
+AUDIT_ARITHMETIC_PASS

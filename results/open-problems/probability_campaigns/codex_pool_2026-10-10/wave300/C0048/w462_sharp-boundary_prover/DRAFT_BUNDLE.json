@@ -1,0 +1,172 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w462",
+  "bundle_slug": "c0048-conditional-cutsets-boundary-w462-20261010",
+  "entries": [
+    {
+      "key": "target-scope",
+      "namespace": "probability.randomcluster",
+      "logical_name": "potts-discontinuity-critical-magnetization-conjecture-scope",
+      "kind": "concept",
+      "title": "C0048: exact critical magnetization target",
+      "statement": "CONJECTURE; CURRENT OPENNESS UNKNOWN. For every integer q>=3,d>=3, the zero-field nearest-neighbor unit-coupling Potts model on Z^d is conjectured to satisfy m(beta_c)>0, where its weight is exp(beta sum 1{equal neighboring spins}), m(beta)=(q mu^1_beta(sigma_0=1)-1)/(q-1), and beta_c=inf{beta:m(beta)>0}. Equivalently theta^w(p_c,q)>0 for ordinary FK open connectivity and p=1-exp(-beta). The 2017 primary Conjecture 2 and the 2026-09-07 ranking are dated evidence, not a current openness certificate.",
+      "proof_text": null,
+      "assumptions": [
+        "integer q>=3",
+        "integer d>=3",
+        "zero field",
+        "nearest-neighbor unit ferromagnetic couplings"
+      ],
+      "domain": "probability theory and statistical mechanics",
+      "source": {
+        "source_id": "owner:C0048:w462:boundary-packet:2026-10-10:target-scope",
+        "url": "file:///~/brain_workers/w462/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "conditional-cuts",
+      "namespace": "probability.randomcluster",
+      "logical_name": "fk-conditioned-disjoint-cut-bound",
+      "kind": "concept",
+      "title": "FK: sharp conditional product bound for disjoint edge sets",
+      "statement": "DRAFT AUTHOR PROOF; INDEPENDENT REVIEW PENDING; NO NOVELTY CLAIM. For a finite FK measure with arbitrary boundary partition, 0<p<1 and q>=1, and disjoint nonempty edge sets C_i, P(each C_i contains an open edge)<=product_i(1-(1-p)^|C_i|). This is sharp for the cut-event intersection at q=1. It passes to infinite-volume limits for finite cylinder events; separating cuts with sum_i(1-p)^|C_i|=infinity rule out an infinite ordinary open cluster at the separated vertex.",
+      "proof_text": null,
+      "assumptions": [
+        "q>=1",
+        "0<p<1",
+        "pairwise disjoint finite edge sets",
+        "for the infinite-cluster corollary, every infinite ordinary path meets every C_i",
+        "locally finite infinite graph for the infinite-cluster corollary"
+      ],
+      "domain": "probability theory and statistical mechanics",
+      "source": {
+        "source_id": "owner:C0048:w462:boundary-packet:2026-10-10:conditional-cuts",
+        "url": "file:///~/brain_workers/w462/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "finite-strip",
+      "namespace": "probability.randomcluster",
+      "logical_name": "finite-strip-potts-no-finite-temperature-magnetization",
+      "kind": "concept",
+      "title": "Finite-width FK strips: no finite-temperature Potts order",
+      "statement": "DRAFT AUTHOR PROOF; INDEPENDENT REVIEW PENDING; NO NOVELTY CLAIM. If H is finite connected with m vertices and G=Z Cartesian-product H, then for every q>=1 and p<1, ordinary connectivity across n layers is at most [1-(1-p)^m]^n, uniformly over finite-volume boundary partitions. The root-to-end-layer probability in a centered interval is at most twice this bound. Free and wired FK infinite-volume limits have no infinite ordinary open cluster for p<1. For integer q>=2 the monochromatic Potts magnetization is zero at every finite delta-convention beta, so beta_c=infinity.",
+      "proof_text": null,
+      "assumptions": [
+        "H finite connected",
+        "ordinary paths use graph edges and not auxiliary wiring identifications",
+        "0<p<1",
+        "q>=1 for FK; integer q>=2 for Potts",
+        "homogeneous unit ferromagnetic couplings and zero field"
+      ],
+      "domain": "probability theory and statistical mechanics",
+      "source": {
+        "source_id": "owner:C0048:w462:boundary-packet:2026-10-10:finite-strip",
+        "url": "file:///~/brain_workers/w462/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "degree-six",
+      "namespace": "probability.randomcluster",
+      "logical_name": "six-regular-amenable-strip-obstruction-potts-ordering",
+      "kind": "concept",
+      "title": "Six-regular amenable strip obstructs a degree-only ordering bridge",
+      "statement": "DRAFT AUTHOR PROOF; INDEPENDENT REVIEW PENDING; NO NOVELTY CLAIM. The graph Z Cartesian-product K5 is connected, simple, vertex transitive, amenable and six-regular, but its q=3 zero-field ferromagnetic Potts model has beta_c=infinity. Thus q>=3 plus six-regularity, transitivity and amenability alone do not imply finite-temperature order or a finite-temperature first-order transition.",
+      "proof_text": null,
+      "assumptions": [
+        "the hypothetical bridge has no Z^3 geometry, growth-dimension or p_c<1 hypothesis",
+        "all couplings are homogeneous and equal to 1",
+        "beta denotes the delta-spin convention"
+      ],
+      "domain": "probability theory and statistical mechanics",
+      "source": {
+        "source_id": "owner:C0048:w462:boundary-packet:2026-10-10:degree-six",
+        "url": "file:///~/brain_workers/w462/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "dependent-cuts",
+      "namespace": "probability.randomcluster",
+      "logical_name": "random-cluster-ladder-disjoint-cut-dependence",
+      "kind": "concept",
+      "title": "Exact q=3 ladder witness against marginal-product upper bounds",
+      "statement": "DRAFT AUTHOR PROOF; INDEPENDENT REVIEW PENDING; NO NOVELTY CLAIM. On the free FK width-two three-layer ladder with q=3,p=1/2, let A and B mean that the two respective longitudinal two-edge cuts contain an open edge. P(A)=P(B)=409/925, P(A intersection B)=181/925, and P(A intersection B)-P(A)P(B)=144/855625>0. The disjoint cuts are dependent, so multiplying their marginal probabilities does not give an upper bound.",
+      "proof_text": null,
+      "assumptions": [
+        "free boundary",
+        "q=3",
+        "p=1/2",
+        "six vertices and seven edges listed in check_cutsets.py",
+        "cut crossing means nonempty cut, not actual point connectivity"
+      ],
+      "domain": "probability theory and statistical mechanics",
+      "source": {
+        "source_id": "owner:C0048:w462:boundary-packet:2026-10-10:dependent-cuts",
+        "url": "file:///~/brain_workers/w462/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "real-q-scope",
+      "namespace": "probability.randomcluster",
+      "logical_name": "potts-integer-versus-real-cluster-weight-quantifier-warning",
+      "kind": "concept",
+      "title": "Integer Potts states do not determine a real-q phase threshold",
+      "statement": "DRAFT AUTHOR PROOF; INDEPENDENT REVIEW PENDING; NO NOVELTY CLAIM. If q_c is a threshold over real cluster weights, discontinuity for every integer q>=3 together with continuity at q=2 does not logically imply q_c=2. The monotone predicate D(q) iff q>5/2 satisfies these integer assertions while its real threshold is 5/2. The intake parenthetical equivalence needs this quantifier distinction and a definition of q_c.",
+      "proof_text": null,
+      "assumptions": [
+        "q_c is interpreted over real q",
+        "this is a logical countermodel, not a random-cluster model",
+        "source-context correction remains conditional until reviewed"
+      ],
+      "domain": "probability theory and statistical mechanics",
+      "source": {
+        "source_id": "owner:C0048:w462:boundary-packet:2026-10-10:real-q-scope",
+        "url": "file:///~/brain_workers/w462/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "finite-strip",
+      "to_key": "conditional-cuts",
+      "kind": "depends_on",
+      "rationale": "From \"H is finite connected with m vertices\" and to \"disjoint nonempty edge sets C_i\": the m longitudinal edges in each layer boundary form such disjoint cuts, giving the strip bound."
+    },
+    {
+      "from_key": "degree-six",
+      "to_key": "finite-strip",
+      "kind": "depends_on",
+      "rationale": "From \"Z Cartesian-product K5\" and to \"H is finite connected with m vertices\": taking H=K5 gives zero finite-temperature magnetization on the six-regular graph."
+    },
+    {
+      "from_key": "dependent-cuts",
+      "to_key": "conditional-cuts",
+      "kind": "semantic_association",
+      "rationale": "From \"The disjoint cuts are dependent\" and to \"P(each C_i contains an open edge)<=product_i(1-(1-p)^|C_i|)\": the witness explains the conditional chain required by the upper bound."
+    },
+    {
+      "from_key": "real-q-scope",
+      "to_key": "target-scope",
+      "kind": "semantic_association",
+      "rationale": "From \"threshold over real cluster weights\" and to \"For every integer q>=3,d>=3\": the latter quantifier does not settle the former threshold."
+    }
+  ]
+}

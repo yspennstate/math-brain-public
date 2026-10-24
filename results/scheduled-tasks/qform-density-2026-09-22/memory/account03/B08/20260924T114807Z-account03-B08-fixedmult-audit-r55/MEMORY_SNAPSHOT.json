@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "objective": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "account": "account03",
+  "slot": "B08",
+  "run_id": "20260924T114807Z-account03-B08-fixedmult-audit-r55",
+  "source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+    "blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "sha256": "9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69"
+  },
+  "review_output": {
+    "commit": "1cb1abecf56b73b8788d7e14a7bfcd6bcb75e963",
+    "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/audits/account03/B08/20260924T114807Z-account03-B08-fixedmult-audit-r55/AUDIT.md",
+    "verdict": "PASS_ONE_WORKER_FULL_TEXTUAL_AUDIT_NO_FATAL_GAP_FOUND"
+  },
+  "mathematical_findings": [
+    "Nonsymmetric interpolation P exactly matches rows S and columns T.",
+    "R[L,L]=P[L,L], hence restricted rank <=r.",
+    "R-P is supported in rows T or columns S; rank(R-P)<=2r and rank R<=3r.",
+    "D vanishes on the seed S union T.",
+    "Spectral-to-volume conversion with m=4k-3 is valid and uses m>=4r+1 exactly.",
+    "An exact rational no-pivot r=1 example attains global rank 3r, restricted rank r, and correction rank 2r, so the simplest rank-bound shortcut cannot lower threshold 17."
+  ],
+  "repository_gap": "At the inspected current manuscript root, SOURCE_MANIFEST.json, proof_map.csv, verify.py, and checks.json were absent although README/AUDIT refer to them; finite diagnostics therefore were not independently rerunnable from that root.",
+  "unresolved": [
+    "A second genuinely separate complete review is still required before independent validation.",
+    "Lowering 17 needs a new mechanism, not merely improved constants in the present rank bookkeeping.",
+    "The unrestricted three-eigenvalue conjecture remains open."
+  ],
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

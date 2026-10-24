@@ -1,0 +1,41 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "I0067",
+  "report_kind": "stuck_recovery_thinking",
+  "input_snapshot_sha": "862f0c1aa73799f324cefef387e3fc51a6544774",
+  "previous_report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/I0067/runs/2026-09-17/2026-09-17T01-50-00Z__report.md",
+  "previous_report_commit": "8248d239ee440f304feb374b46d8780434586c1d",
+  "report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/I0067/runs/2026-09-17/2026-09-17T02-36-58Z__report.md",
+  "report_creation_commit": "f6035e9749b08cafbf7abb7197237af0ec13dc1f",
+  "report_readback_blob": "fc73d788d6e87cf695009cf96787b3625137d2ea",
+  "source": {
+    "authors": "Antonio Agresti and Mark Veraar",
+    "year": 2025,
+    "title": "Nonlinear SPDEs and Maximal Regularity: An Extended Survey",
+    "locator": "arXiv:2501.18561v5 / NoDEA 32 (2025), Article 123, Problem 10"
+  },
+  "frozen_metric": "E_endpoint",
+  "metric_before": 0,
+  "metric_after": 0,
+  "unchanged_count": 3,
+  "stuck_recovery_cycle": 1,
+  "methods": [18, 6, 30],
+  "outcomes": {
+    "B18": "Reformulated divergence-free variable transport as Lie transport plus a zero-order Hodge correction, exposing the moving Hodge/Stokes geometry hidden by the constant-translation special case; no theorem-level source progress claimed.",
+    "B6": "Froze smooth transport coefficients to the already solved constant point on parabolic tents. Coefficient oscillation becomes scale-small, but the needed Koch-Tataru T^{infinity,2}/Carleson endpoint estimate for the random moving Stokes/Hodge operator is not supplied by the finite-p stochastic tent-space theory found.",
+    "B30": "Isolated one nonconstant divergence-free periodic shear b(x)=sigma a(x_2)e_1 as the simplest source-valid special case. Its stochastic flow and pathwise elliptic shear metric are explicit, but endpoint control of the moving Hodge projection, convection and zero-order transport correction remains missing."
+  },
+  "mathematical_status": "PARTIAL/STUCK1",
+  "source_status": "Problem 10 remains unresolved in a bounded literature check through 2026-09-17. Later stochastic-flow, deterministic VMO^{-1}, and stochastic tent-space results supply complementary pieces but no source-matching arbitrary-smooth-transport endpoint theorem or counterexample was found; negative search is not a novelty certificate.",
+  "history_gaps": [
+    "Deployment text names predecessor handoff 2026-09-16T23-38-00Z__handoff.md, but the actual handoff body was recovered from creation commit 6ccbfad7a7fbcc7dbd839e38e00f2c6f3961afda and the immutable 23-47 report path."
+  ],
+  "audit_refs": [],
+  "artifact_refs": [],
+  "recovery_choice": "port_nearest_solved_technique",
+  "simplest_unproved_special_case": "T^3, g=0, a single smooth nonconstant divergence-free shear transport b(x)=sigma a(x_2)e_1 under the source parabolicity bound, at order -1 / smoothness <= -1/2.",
+  "next_methods": [11, 12, 8],
+  "next_obligation": "For the single-shear model, formulate and prove or decisively obstruct a flow-adapted Koch-Tataru estimate for the time-dependent Stokes/Hodge evolution, using pressure/Hodge duality, volume-preserving invariants, and dyadic parabolic freezing. Do not repeat B18/B6/B30.",
+  "model_actual": "GPT-5.6 Sol",
+  "reasoning_actual": "UNVERIFIED"
+}

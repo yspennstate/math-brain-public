@@ -1,0 +1,21 @@
+{
+  "helper_version": "A040-biased-rare-row-review-v1",
+  "target": "Independently review A046-SEPARATOR-LAYER-CUTOFF-RESERVE@2 and test its constant-row calculation after a core-data query",
+  "family": "F=1+[WUV OR S(U OR V)](g-1), disjoint positive point blocks; balanced g for source review, arbitrary Boolean g for narrow rare-row extension",
+  "source_review_physical": "j in {1,2},L=1,R=T=4; core z or Maj3:4 nodes",
+  "biased_physical": "same j,L,R,T; all 16 labeled Boolean functions on two core bits:32 nodes, no symmetry quotient",
+  "interleaved_physical": "same j,L,R,T; parent cores Maj3, parity3, a 3-bit one-point defect and its negative:8 parent nodes; every one of 3 core queries and both children:48 child nodes",
+  "physical_node_occurrences": 92,
+  "formal_moment_domain": "j=1..8,L=1..3,R,T independently 4..8,a in {0,1/64,1/8,1/2,1,3/2,2}:4200 formal rational rows",
+  "source_reserve_domain": "s=1..6,L=1..3,R,T independently 1..6,formal I(g) in {1,5/2}:1296 account cases",
+  "scalar_certificates": "rational atanh lower bounds for ln2, exponential-series upper bound euler<87/32, integer power (87/56)^20<2^13, exact biased rate 10063/2520<4",
+  "symmetry": "No physical quotient; formal moment identities follow from Boolean Parseval and means, not replacement by biased control masks",
+  "arithmetic": "integer sign tables/Walsh, direct physical flips, Fraction moments and influences, exact prime-log entropy vectors and rigorous rational log intervals",
+  "memory_estimate_mb": 160,
+  "maximum_truth_table_dimension": 14,
+  "maximum_runtime_seconds_per_job": 55,
+  "checkpoint_rule": "Separate source/biased/interleaved/account jobs; stop before starting a new case after 40 seconds, resume same saved prefix only",
+  "pilot": "first balanced source node only, under 55 seconds",
+  "helper_provenance": "Own prior-run exact arithmetic copied into this run; no A046 author executable imported",
+  "analytic_scope": "Claim source theorem only if independently reconstructed; proposed new extension only separator queries with unexposed W,U,V and e<=1/8, arbitrary biased independent core; no free data-query entropy or reference reset"
+}

@@ -1,0 +1,17 @@
+CRITICAL_MASK_PARTIAL_ROW_CHECKER
+gamma=2, k=sqrt(m), sigma=m^(-1/3), q=log(m)/(4m), L=4log(m)
+m=1e+06 q=3.45387763949e-06 mu_row=3.45387763949 mu_col=6.90775527898 L/k=0.0552620422319 log_occ_ub=-44.7380212165 S1=17.8406715018 S2=0.019420680744 clean_aspect=0.063245175967 latest_mu=6.90775527898 global_def_ratio=6907.75527898 log_2d_tail_c001=8.21034037198
+m=1e+09 q=5.18081645924e-09 mu_row=5.18081645924 mu_col=10.3616329185 L/k=0.00262130882408 log_occ_ub=-67.6563379691 S1=126.458136945 S2=0.000905392384627 clean_aspect=0.0112468263529 latest_mu=10.3616329185 global_def_ratio=327663.60301 log_2d_tail_c001=3.81551055796
+m=1e+12 q=6.90775527898e-12 mu_row=6.90775527898 mu_col=13.815510558 L/k=0.000110524084464 log_occ_ub=-90.5746547217 S1=979.399279131 S2=3.78413614879e-05 clean_aspect=0.00199999999995 latest_mu=13.815510558 global_def_ratio=13815510.558 log_2d_tail_c001=-81.579319256
+m=1e+18 q=1.03616329185e-17 mu_row=10.3616329185 mu_col=20.7232658369 L/k=1.65786126696e-07 log_occ_ub=-136.411288227 S1=67496.8301691 S2=5.62620422319e-08 clean_aspect=6.32455532034e-05 latest_mu=20.7232658369 global_def_ratio=20723265836.9 log_2d_tail_c001=-9972.36897888
+occupancy_power = -3.317766166719344
+clean_aspect_ratio_to_2m^-1/4_at_1e18 = 1.0000000000000002
+fixed_depth_atoms_positive = True
+ASYMPTOTIC_IDENTITIES:
+max row/column defects = O_P(log m) = o(sqrt(m))
+m sigma^2/log(e/sigma) -> infinity
+k[log m+log(e/sigma)]/m -> 0
+N q ~ (1/2)log m -> infinity: latest predecessor fails
+clean-row aspect ~ 2 m^(-1/4) -> 0: row thinning fails decisively
+sigma^-2 exp(-c m sigma^2) -> 0 for every fixed c>0
+ALL_CRITICAL_MASK_PARTIAL_ROW_CHECKS_PASS

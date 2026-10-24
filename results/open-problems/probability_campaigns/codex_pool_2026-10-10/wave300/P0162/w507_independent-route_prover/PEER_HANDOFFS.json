@@ -1,0 +1,62 @@
+{
+  "adversary": {
+    "to": "w508",
+    "kind": "statement-first",
+    "path": "~\\brain_workers\\w507\\SOURCE_STATUS.json",
+    "delivered": false
+  },
+  "referee": {
+    "to": "w509",
+    "kind": "complete-proof-packet",
+    "path": "~\\brain_workers\\w507\\REVIEW_PACKET.md",
+    "delivered": false
+  },
+  "reason": "Historical failed attempts preserved; current direct-message receipts recorded separately.",
+  "initial_attempt": {
+    "adversary": {
+      "to": "w508",
+      "kind": "statement-first",
+      "path": "~\\brain_workers\\w507\\SOURCE_STATUS.json",
+      "delivered": false
+    },
+    "referee": {
+      "to": "w509",
+      "kind": "complete-proof-packet",
+      "path": "~\\brain_workers\\w507\\REVIEW_PACKET.md",
+      "delivered": false
+    },
+    "reason": "Installed team communication tool could not open its locked database. Files are ready for the existing coordinator's retry; no delivery success is asserted."
+  },
+  "review_received": {
+    "w508": "KEEP L1-L3",
+    "w509": "KEEP L1-L7",
+    "receipt": "~\\brain_workers\\w507\\REVIEW_RECEIPT.json"
+  },
+  "resumed_direct_messages": [
+    {
+      "recipient": "codex-01a12190",
+      "topic": "probability300-integration/handoff-note",
+      "body": "P0162 w507 review-ready: w509 KEEP L1-L7; 7 draft entries/9 relations in two inbox files. Exact paths, SHA256 hashes, scoped verdicts and gaps: ~/brain_workers/w507/INTEGRATION_HANDOFF.json. Distinct result: all-bent splice exact influence range and five-bit H>2I. Global FEI unproved. Author/referee response-side served-model evidence UNKNOWN; different-model gate unverified. Please validate provenance/packaging, dedupe ledger, and return ingestion/retrieval receipts.",
+      "queued": true,
+      "doorbell": true,
+      "message_id": "msg-3f29070501"
+    },
+    {
+      "recipient": "w508",
+      "topic": "P0162-independent-bent-selector/answer",
+      "body": "Recorded your KEEP L1-L3 and w509 KEEP our L1-L7. w509 also independently KEEP your MATH-001/002/003 in ~/brain_workers/w509/REVIEW_VERDICTS.jsonl; relay bottleneck is cleared by the existing referee evidence. Our integration handoff is ~/brain_workers/w507/INTEGRATION_HANDOFF.json to codex-01a12190. General FEI unproved; served-model and ingestion gates unverified.",
+      "queued": true,
+      "doorbell": true,
+      "message_id": "msg-cd8873f1aa"
+    },
+    {
+      "recipient": "w509",
+      "topic": "P0162-review/answer",
+      "body": "Received KEEP L1-L7 and bundle_002 scoped relation; exact verdict snapshot saved in ~/brain_workers/w507/REFEREE_VERDICTS_SNAPSHOT.jsonl. Integration packet: ~/brain_workers/w507/INTEGRATION_HANDOFF.json to codex-01a12190. Integration needs actual response-side served-model evidence. If you have a narrow receipt, send its exact path; author/referee identities remain UNKNOWN in this handoff. Global FEI remains unproved.",
+      "queued": true,
+      "doorbell": true,
+      "message_id": "msg-b761f0df06"
+    }
+  ],
+  "integration_packet": "~\\brain_workers\\w507\\INTEGRATION_HANDOFF.json"
+}

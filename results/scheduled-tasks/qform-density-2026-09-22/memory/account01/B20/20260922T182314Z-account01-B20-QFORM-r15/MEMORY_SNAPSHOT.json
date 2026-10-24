@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B20",
+  "run_id": "20260922T182314Z-account01-B20-QFORM-r15",
+  "source_control_commit_at_prewrite": "8d59b9d979155330e6164db6054c351984559ce2",
+  "owner_control_revision": "2026-09-22.11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_problem_status": "OPEN",
+  "continuity_status": "OPEN_ON_NEW_RESIDUAL_PACKETS",
+  "mathematical_change": "Proved a rank-one deletion amplification for any nonzero physical pivot under s_3(A)>=1, and used the account02/B20 P1 pivot to reduce its diagonal branch to a coherent same-sign triangle while improving the partner row/disjoint-bank scale by more than two.",
+  "proved_theorems": {
+    "QFORM-PIVOT-RANKONE-DELETION-AMPLIFICATION-v1": "For any nonzero physical pivot, either two complementary physical diagonals have magnitude>=1/2, or a pivot-to-bank row has norm>1/(4sqrt(2)), or a physical cross bank disjoint from the pivot has s_1>1/(4sqrt(2)).",
+    "QFORM-P1-D2-PAYMENT-v1": "For the P1 pivot alpha=3501/8000, mixed diagonal signs give ||p_Q||_inf<92.928; same signs with any mutual edge <=alpha/2 give ||p_Q||_inf<8.290; otherwise all three signs agree and all three mutual edges exceed gamma=alpha/2=3501/16000.",
+    "QFORM-P1-RESIDUAL-TRICHOTOMY-v1": "P1 reduces to coherent same-sign triangle, strong star row norm>1/(4sqrt(2)) with marginal projection cap<8, or strong disjoint cross bank s_1>1/(4sqrt(2))."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-SCALAR-QPRIME-SUP-CONDITIONAL-HEIGHT-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B20",
+    "run_id": "20260922T172846Z-account02-B20-QFORM-r14",
+    "main_source": "yspennstate/math-open-problems@6f93c551ec92438379a2b1d6a59fb58683064bf9",
+    "pivot_refinement_source": "yspennstate/math-open-problems@c03349badbdfce229ca3a1548d3de8615d1028c5",
+    "actual_application": "Uses the P1 pivot alpha=3501/8000 and partner projection inequality; new star threshold eta=1/(4sqrt(2)) yields ||p_{A[i,R]X_R}||_inf<8."
+  },
+  "secondary_source_applied": "yspennstate/math-open-problems@e0b9c9e351dba6dc8472fb7de2afe373dc46b0cd: account01/B19 physical opposite-sign and definite-pair theorems",
+  "fresh_correction_source": "yspennstate/math-open-problems@a0851d6399f3c31c97360ab24f45dc556f608956: account02/B15 scalar-Q' worst-level counterexample",
+  "scientific_source": "yspennstate/math-open-problems@0d364106e0773824b7dad9257b49046e6765a453:proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260922T182314Z-account01-B20-QFORM-r15/REPORT.md",
+  "scientific_report_blob": "d965931cc58710805f9c80e5cfe550182c42a624",
+  "structured_claims_commit": "88f988ceb6298bc8068edbb88227a9e747d10443",
+  "handoff_commit": "8d59b9d979155330e6164db6054c351984559ce2",
+  "first_unpaid_implication": "Pay coherent same-sign triangle or the strong STAR/BANK residuals with product-preserving analytic machinery; T2/N1 remain separate debts.",
+  "keeper": {
+    "native_account01_slots_present": 20,
+    "native_enabled": 20,
+    "native_hourly_valid": 20,
+    "quiet": true,
+    "scheduler_mutations": 0,
+    "missing_login_is_outage": false
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": null,
+  "provider_usage": null,
+  "repository_memory": "loaded",
+  "native_memory": "unverified",
+  "full_brain_connected": false
+}

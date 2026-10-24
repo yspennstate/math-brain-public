@@ -1,0 +1,14 @@
+{
+  "helper_version": "A069-final-reference-v2",
+  "actual_Boolean_family": "F=q2 G(c,u,Y), G has four Boolean Y cores; ancestral g=q1 G and edit q1 q2; degenerate q2=1 outputs; two canceled-event witnesses and nonfactorizing Maj3/literal example",
+  "parameter_domain": "m=1,2,3; k=1 all 4^4=256 core quadruples; k=2 exactly 256 prescribed quadruples indexed j=0..255 with truth masks(j mod16,floor(j/16),(5j+3) mod16,(7j+1) mod16). All four c*,u* assignments; z* canonical zero by reflection. Degenerate q2=1 at m=k=1 all256 quadruples. Three witnesses: A070 t5, F=y, nonfactorizing 3-bit cores.",
+  "case_count": 6403,
+  "case_count_detail": "2*3*4*256+256+3",
+  "symmetry": "Only reflection of Z coordinates reduces z* to zero; source G independent of Z, fixed cells preserved. All c*,u* assignments explicit. Prescribed k2 grid is not all16^4 quadruples.",
+  "arithmetic": "integer Walsh, rational physical influences and normalized references; exact row-square flatness and inherited core marginal; cardinality via integer inequalities; coefficient certificate20^5<2^8*7^5. Entropy flag paid analytically, no floating entropy signs.",
+  "memory_estimate_MB": 64,
+  "maximum_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "heavy_job": false,
+  "repair": "Correct unnormalized Walsh multiplier in equation(4) to2; original normalization failure logged. Domain, case count, symmetry, arithmetic, memory and55s cap unchanged."
+}

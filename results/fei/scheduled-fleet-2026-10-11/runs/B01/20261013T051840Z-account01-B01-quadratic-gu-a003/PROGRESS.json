@@ -1,0 +1,84 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2 plus owner control 2026-10-12.1",
+  "run_id": "20261013T051840Z-account01-B01-quadratic-gu-a003",
+  "stream": "B01",
+  "packet_id": "A003",
+  "packet_ids": ["A003"],
+  "gap_id": "G-UPPER-SET-ASYMMETRY",
+  "related_gap_ids": ["OVERLAP_PRODUCT", "BENT_SELECTOR"],
+  "attempt_id": "A003-GUP-QUADRATIC-CLASS-5",
+  "bounded_objective": "After the exact KL-by-JS falsifier, freeze b=0 and prove a concrete GU inequality first on an expanding restriction-closed tensor class, then derive an all-dimensional coherent family formula that removes block-dimension dependence.",
+  "method": "Exact exhaustive prime-log certification through four variables; tensor additivity; analytic Walsh classification of clique-quadratic and general quadratic bent phases through affine parity-hyperplane child spectra.",
+  "prior_status": "sum_i KL_i^U<=sum_i JS_i^H was refuted by an exact four-bit all-depth tensor family; no corrected aI+bU theorem had been proved on a new broad class.",
+  "new_status": "SHARP_FACTOR4_GU_11_OVER_4_PROVED_PENDING_REVIEW; RESTRICTION_CLOSED_CLIQUE_QUADRATIC_GU_3_PROVED_PENDING_REVIEW; GENERAL_QUADRATIC_BENT_FORMULA_PROVED_PENDING_REVIEW; UNIVERSAL_GU_OPEN; FULL_FEI_OPEN",
+  "mathematical_status": "RESTRICTED_CLASS_ADVANCE; UNIVERSAL_TARGET_OPEN",
+  "mathematical_delta": "G<=11I/4 is exact and sharp on arbitrary products of all <=4-bit Boolean factors. More substantially, the restriction-closed tensor class of arbitrary-size dense clique-quadratic blocks satisfies the parameter-free sharp-supremum G<=3I. Every quadratic bent phase has exact G/I=3-(2/n)sum_i2^{-r_i}. This removes total dimension, block dimension, block count and dense quadratic overlap within the stated class, but not arbitrary coherent plateaued unions.",
+  "case_extension": {
+    "starting_class": "Prior fixed-core activation and surgery classes, plus a refuted direct KL-by-JS payment.",
+    "new_class": "All finite disjoint products of arbitrary <=4-bit factors, and independently all finite disjoint products of arbitrary-size clique-quadratic blocks.",
+    "quantifiers": "Every number of factors, every total dimension, both epsilon values, all block sizes n>=1; every quadratic bent phase for the exact row-weight formula.",
+    "previous_bound": "No corrected GU constant for these growing classes after the KL-by-JS failure.",
+    "new_bound": "GU'(11/4,0) sharply on the factor-4 class; GU'(3,0) with sharp supremum on the clique-quadratic class; G/I<3 for all quadratic bent phases.",
+    "parameter_dependence": "Independent of total dimension, factor count, clique block size and inverse-polar row weights; arbitrary changing plateaued-support unions remain unpaid.",
+    "proof_status": "AUTHOR_PROVED_PENDING_A086_A094_REVIEW",
+    "universal_gap": "No all-Boolean bound on the aggregate upper-set asymmetry mismatch."
+  },
+  "deliverable_status": {
+    "A003-D1": "ADVANCED: implication graph now contains two exact GU class endpoints with explicit constants and a general quadratic-bent formula",
+    "A003-D2": "ADVANCED: block-size dependence removed on a dense restriction-closed quadratic class; first unsupported extension is coherent unions of changing plateaued supports",
+    "packet_target": "SUBSTANTIVE_RESTRICTION_CLOSED_CLASS_EXTENSION_WITH_EXACT_CONSTANTS"
+  },
+  "claim_versions_used": [
+    "U-universal source blob 5797e9cc38598cbee391cc99d4b1abcd554b662e: H<=2I+2U, GU', U-loc",
+    "B01-A003-KL-BY-JS-v1 refuted at canonical commit 83cdeea45b17a296c70da0007e130a89af6402a9"
+  ],
+  "claims_created_or_changed": [
+    "B01-A003-FACTOR4-GU-v1",
+    "B01-A003-CLIQUE-QUADRATIC-GU-v1",
+    "B01-A003-QUADRATIC-BENT-GU-FORMULA-v1"
+  ],
+  "source_artifacts": {
+    "owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "assignment_blob": "ac038a028831d59ad053dd56b2b527e2a71ffdee",
+    "u_universal_blob": "5797e9cc38598cbee391cc99d4b1abcd554b662e",
+    "prior_report_commit": "83cdeea45b17a296c70da0007e130a89af6402a9",
+    "prior_report_blob": "682c6f20648c8b9e0439307e1c9979efe7a6f22a",
+    "canonical_head_at_research": "4ed1a25cf984e46def45cf57d1c322f511d4766a",
+    "brain_head_at_research": "c4fc536adfbbf26f8b2d26c5d72067c6d0f9bf80"
+  },
+  "acceptance_evidence": [
+    "REPORT.md: complete factor-tensor, clique restriction-closure, parity-hyperplane and quadratic-bent derivations",
+    "CHECK_FACTOR4_GU.py/CHECK_FACTOR4_GU.out: 32768 exact complement representatives, no floating sign decisions",
+    "CHECK_QUADRATIC_BENT.py/CHECK_QUADRATIC_BENT.out: exact reconstruction for all n=2,4 invertible alternating matrices/linear shifts and bounded n=6 pilot",
+    "CHECK_CLIQUE_CLASS.py/CHECK_CLIQUE_CLASS.out: exact direct checks through n=10"
+  ],
+  "remaining_obstacle": "General restrictions can coherently combine several changing plateaued supports. No dimension-independent single-use payment controls their overlapping upper cones, equivalently the aggregate B_i-Gamma_i+KL_i asymmetry mismatch.",
+  "next_consumers": ["A005", "A063", "A068", "A086", "A094", "B20"],
+  "independent_reviewers": ["A086", "A094"],
+  "next_action": "Replace one parity-hyperplane child pair by a union of two affine plateaued cosets, derive the exact signed cap interaction, and test whether the 3I payment survives without charging an upper cone twice.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Affine parity-hyperplane cancellation does not yet extend to coherent unions with changing supports.",
+    "The universal aggregate upper-set asymmetry mismatch remains uncontrolled.",
+    "Full FEI remains open."
+  ],
+  "validation": {
+    "commands": ["python CHECK_FACTOR4_GU.py", "python CHECK_QUADRATIC_BENT.py", "python CHECK_CLIQUE_CLASS.py"],
+    "arithmetic": "Exact Fraction Walsh and upper-cap arithmetic; exact prime-log vectors; integer-product sign comparisons.",
+    "search_scope": "All 32768 output-complement representatives at n=4; all invertible alternating matrices and all linear shifts at n=2,4; deterministic 192-case n=6 pilot; clique phases through n=10.",
+    "status": "PASS",
+    "scope_note": "The finite factor theorem is exhaustive and exact. The clique and general quadratic-bent all-dimensional claims are analytic; their computations are convention checks."
+  },
+  "literature": {
+    "primary_sources_checked": ["U-universal source blob 5797e9cc38598cbee391cc99d4b1abcd554b662e", "original prior KL-by-JS proof artifact at commit 83cdeea45b17a296c70da0007e130a89af6402a9"],
+    "novelty_claim": "NONE; campaign-internal source-bound class theorem."
+  },
+  "delivery_status": {
+    "canonical": {"status": "TEN_FILE_SUBSTANTIVE_CORE_CREATED_AND_EXACTLY_READ_BACK", "repository": "yspennstate/math-open-problems", "package_commit": "4b5c51804df04c0f4d5fecc679f49367297112db", "path": "reports/fei-2026-10-11/runs/B01/20261013T051840Z-account01-B01-quadratic-gu-a003/", "verified_files": 10, "report_blob": "2f0cacfb04bd741a1e2f8e8204657adae3a70b6f"},
+    "brain_mirror": {"status": "TEN_FILE_SUBSTANTIVE_CORE_CREATED_AND_EXACTLY_READ_BACK", "repository": "yspennstate/math-research-brain", "package_commit": "a26773161b690d51155450aa9ab2f56b3dd32ae1", "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B01/20261013T051840Z-account01-B01-quadratic-gu-a003/", "verified_files": 10, "report_blob": "2f0cacfb04bd741a1e2f8e8204657adae3a70b6f"},
+    "independent_review": "NOT_YET; A086/A094 requested",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {"model": "Codex as exposed by runtime instructions", "reasoning_effort": "not exposed", "subagents": 0, "scheduler_or_graph_mutation": false}
+}

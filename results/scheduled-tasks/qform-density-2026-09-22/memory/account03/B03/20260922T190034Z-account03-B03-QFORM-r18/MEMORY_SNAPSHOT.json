@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260922T190034Z-account03-B03-QFORM-r18",
+  "source_control_initial_commit": "c8735ec7f6108704f37ed2a4d1e03ca0c3950b36",
+  "source_control_prepublication_commit": "ac228f82a4026e7cf87f815931c4f409987acfb5",
+  "owner_control_revision": "2026-09-22.12",
+  "assignment": "Decoupled time integral",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FOR_NEW_BRANCH",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d18302d55f907552185a42994d48b09f39737cbd",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260922T190034Z-account03-B03-QFORM-r18/REPORT.md",
+    "supplement_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260922T190034Z-account03-B03-QFORM-r18/SUPPLEMENT.md",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260922T190034Z-account03-B03-QFORM-r18/CHECK_OUTPUT.txt",
+    "checker_status": "QFORM_B03_R18_CHECK_PASS"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-ISOTROPIC-CROSSBANK-HALF-RIESZ-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For disjoint original-coordinate banks U,V,W and R=2 U^T T V+b(W)^T U+c(V,W), rank(T)=r>=1, Delta_r=product positive singular values, sup_s E|R-s|^{-1/2} <= C_r Delta_r^{-1/(2r)}, C_r=[4r/(2r-1)]sqrt(e) v_r^{1/(2r)}."
+    },
+    {
+      "id": "QFORM-CROSSBANK-COLLISION-HALF-RIESZ-v1",
+      "status": "PROVED_FROM_COMPLETED_PEER_THEOREM",
+      "statement": "For an arbitrary physical cross bank satisfying the completed account01/B03 collision envelope, E|R-R'|^{-1/2} <= [8r/(2r-1)] Delta_r^{-1/(2r)}."
+    },
+    {
+      "id": "QFORM-PIVOT-ISOTROPIC-BANK-DENSITY-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "If Q=a(Z+h)^2+R with an additional independent cap-one physical coordinate Z and R in the isotropic-bank theorem, then ||p_Q||_infinity <= C_r |a|^{-1/2} Delta_r^{-1/(2r)}, hence linear interval small-ball scaling."
+    }
+  ],
+  "peer_mathematics_applied": [
+    {
+      "worker": "account02/B06",
+      "result": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+      "source": "yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5",
+      "use": "Original-coordinate scalar/r-dimensional projection density caps in the half-Riesz proof."
+    },
+    {
+      "worker": "account01/B03",
+      "result": "QFORM-COPY-RECTANGULAR-CROSS-v1",
+      "source": "yspennstate/math-open-problems@3d6fefe9c92674dff38c97ef8a502787ec3426a2",
+      "use": "Independent-copy |phi|^2 envelope integrated to the explicit collision half-Riesz inequality."
+    },
+    {
+      "worker": "account04/B01",
+      "result": "QFORM-SIGNED-FEJER-EXACT-INTERFACE-v1",
+      "source": "yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79",
+      "use": "Applied new density cap to D_T law(Q)(y) for every T,y."
+    }
+  ],
+  "designated_partner": {
+    "worker": "account04/B03",
+    "completed_current_result_observed": false,
+    "note": "No current-QFORM handoff directory or canonical artifact was observed at startup or pre-publication scan; no result fabricated."
+  },
+  "unresolved_implication": "From only three eigenvalues |lambda|>=1, force a completed diffuse/ridge/local branch or a quantitatively useful physical pivot with an isotropic Schur bank, or extend the half-Riesz mechanism to a low-rank nonzero self block on the active bank.",
+  "next_step": "Attack the first non-isotropic extension: a low-rank self block plus a transverse original-coordinate bank, aggregating product structure before any conditional supremum.",
+  "telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_configured": "UNKNOWN",
+    "reasoning_effort_requested": "maximum actually supported",
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null
+  }
+}

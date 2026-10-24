@@ -1,0 +1,2 @@
+STATE: A039 stage 3 saved: all-m AND optimal tree ratio tends to 2; exact B05 k=2,4 optima; five data-exposed descendants refute hereditary control-first; alternate implementation PASS; external review pending; FEI OPEN.
+NEXT: Compare one signed Bayes product/occupancy reset with A038 owned reserve release on a three-state priority gate after nonconstant data exposure, retaining child cores/terminal entropy; A088/A094 review.

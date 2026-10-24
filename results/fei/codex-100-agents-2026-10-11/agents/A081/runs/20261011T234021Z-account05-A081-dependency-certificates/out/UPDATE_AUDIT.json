@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "structural_fixtures": 8,
+  "fixtures": [
+    {
+      "fixture": "new selectable route cannot assume FEI",
+      "status": "PASS",
+      "error_code": "CYCLE_THROUGH_FINAL_FEI"
+    },
+    {
+      "fixture": "MU pinned statement cannot drift",
+      "status": "PASS",
+      "error_code": "STATEMENT_HASH"
+    },
+    {
+      "fixture": "B09 dependency must name exact MU hash",
+      "status": "PASS",
+      "error_code": "DEPENDENCY_HASH"
+    },
+    {
+      "fixture": "unaccepted MU source blocks accepted B09 closure",
+      "status": "PASS",
+      "error_code": "ACCEPTED_DEPENDS_ON_UNRESOLVED"
+    },
+    {
+      "fixture": "C018 candidate cannot pay its own premise",
+      "status": "PASS",
+      "error_code": "ROUTE_ASSUMES_CONCLUSION"
+    },
+    {
+      "fixture": "an unknown version of finite certificate is not usable",
+      "status": "PASS",
+      "error_code": "MISSING_EXACT_DEPENDENCY"
+    },
+    {
+      "fixture": "source locator cannot disappear",
+      "status": "PASS",
+      "error_code": "MISSING_LOCATOR"
+    },
+    {
+      "fixture": "primary-source bytes are checked",
+      "status": "PASS",
+      "error_code": "SOURCE_BYTES"
+    }
+  ],
+  "accepted_B09_core_closure": [],
+  "accepted_KB5_cutoff_closure": [],
+  "all_six_FEI_routes_conditional": true,
+  "elapsed_seconds": 0.02755490003619343,
+  "finite_census_repeated": false,
+  "old_cycle_engine": "unchanged, stage1 exhaustive 66067 graph cases retained as source-bound evidence"
+}

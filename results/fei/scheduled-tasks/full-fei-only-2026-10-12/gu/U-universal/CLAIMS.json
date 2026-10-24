@@ -1,0 +1,148 @@
+{
+ "route": "U-universal (campaign ledger C000, C018, C019, C024)",
+ "author": "Opus agent, workflow claude-51330238, 2026-10-12",
+ "full_FEI": "OPEN",
+ "claims": [
+  {
+   "id": "U-A",
+   "status": "PROVED",
+   "statement": "Constant sandwich: with C_FEI = sup H/I, K_E = sup B/I, K_L = sup L/I, K_loc = sup_f min_{i:Inf_i>0} B_i/Inf_i, K_Delta = sup_f min_i Delta_i H/Inf_i: K_loc <= K_E <= C_FEI <= K_Delta <= K_loc + 2/ln2 and K_L <= K_E <= K_L + log2 e.",
+   "where": "NOTES.md sec. 2.1 (Theorem A)",
+   "remaining_gap": "none; the C018 parts are baseline (ER sec. 1-4)"
+  },
+  {
+   "id": "U-B",
+   "status": "KNOWN",
+   "statement": "Tensor reformulation: if H <= C I + Psi with Psi(f^{(x)t})/t -> 0 (e.g. o(n), o(deg), o(I)), then H <= C I; same for B and L.",
+   "where": "NOTES.md sec. 2.2 (Theorem B)",
+   "remaining_gap": "standard tensor trick, recorded for completeness"
+  },
+  {
+   "id": "U-C",
+   "status": "PROVED",
+   "statement": "Profile of an extremizer of c_n = max H/I on n bits: ratio-critical; all Inf_i <= 1/2; Delta_i H >= c Inf_i and B_i >= (c-2/ln2) Inf_i for every i; DTC <= sum_i JS_i <= (2/ln2) J; H(S_A|S_{A^c}) >= (c-2/ln2) I_A for every block; Inf_i <= Var 2^{6.0782-c}; deg f >= 1 + cI/2; random-order erasure profile (c-2/ln2) I <= beta(t) <= (c-2/ln2) I + (2/ln2) I/t; random restrictions at density t have expected deficit E[c I - H] <= (2/ln2)(1-t) I.",
+   "where": "NOTES.md sec. 2.4 (Theorem C)",
+   "remaining_gap": "none (uses the variance-local bound of RM sec. 2.2 for item vi)"
+  },
+  {
+   "id": "U-C1",
+   "status": "PROVED",
+   "statement": "FEI holds iff there is A < infinity with H(f) <= A (I(f) + DTC(f)) for all Boolean f (DTC = H - B, dual total correlation of the spectral sample).",
+   "where": "NOTES.md sec. 2.4 (Corollary C1)",
+   "remaining_gap": "the inequality itself is FEI-equivalent and open"
+  },
+  {
+   "id": "U-C2",
+   "status": "PROVED",
+   "statement": "FEI iff there is K such that every ratio-critical f with all Inf_i <= 1/2 has a coordinate with H(S_i|S_{-i}) <= K Inf_i.",
+   "where": "NOTES.md sec. 1 (M) and sec. 2.4 (Corollary C2)",
+   "remaining_gap": "(M) itself is open"
+  },
+  {
+   "id": "U-C019-C024",
+   "status": "PROVED",
+   "statement": "C019's stopping-tree hypothesis and C024's linear path-cost payment are each FEI-equivalent (constants shift by at most 2/ln2 resp. 3 and 1 nat units); their local form is (LDI).",
+   "where": "NOTES.md sec. 2.3 and 2.5",
+   "remaining_gap": "C024 bounds are the campaign's RM sec. 11.13"
+  },
+  {
+   "id": "U-LIT",
+   "status": "KNOWN",
+   "statement": "Best universal bounds in the literature: H <= sum_i h(Inf_i) (Keller-Mossel-Schlank arXiv:1105.2651; Han arXiv:2312.08271); H[f^{<=D}] <= K sum_{|S|<=D} |S| log(|S|+1) fhat(S)^2 + K I (Kelman-Kindler-Lifshitz-Minzer-Safra arXiv:1911.10579v2, Thm 1.3); H <= 2 aUC_parity (Arunachalam et al. arXiv:1809.09819); H <= 2(deg-1) (granularity). Classes: plateaued functions sharp constant 4 (Potapov arXiv:2609.21563); Hod lower bound 6.454784 (arXiv:1711.00762).",
+   "where": "NOTES.md sec. 3",
+   "remaining_gap": "CKLS 2016 (TCS 654) statement not re-read"
+  },
+  {
+   "id": "U-Q",
+   "status": "PROVED",
+   "statement": "Meta-obstruction: Slote (arXiv:2608.01424) gives quantum Boolean functions (Hermitian unitaries) of Pauli degree d with exp(Theta(d^2)) equal-magnitude Pauli terms, so H/I = Theta(d). Hence any argument whose steps all remain valid for quantum Boolean functions (Parseval, hypercontractivity, LSI, KKL/Talagrand/Friedgut-type estimates, operator Booleanity A^2 = I) cannot prove FEI or any bound H <= C sum_P p_P psi(|P|) + C I with psi(d) = o(d); in particular KKLMS Thm 1.3 fails quantumly, so its proof must use classical structure. Mechanism: anticommuting labels P_l make sum_l P_l (x) B_l unitary whenever sum_l B_l^2 = I (verified for the smallest case).",
+   "where": "NOTES.md sec. 4; code/slote_check.py",
+   "remaining_gap": "logical statement only; does not say which classical ingredient suffices"
+  },
+  {
+   "id": "U-Gkey",
+   "status": "PROVED",
+   "statement": "For every Boolean f and nonempty S: |fhat(S)| <= 2^{|S|-1} I_S(f), where I_S(f) = sum_{T superset of S} fhat(T)^2 = E[(d_S f)^2]; equivalently p_S <= 4^{|S|-1} pi(S)^2. (d_S f takes values in 2^{1-|S|} Z because it is 2^{-|S|} times a sum of 2^{|S|} signs.)",
+   "where": "NOTES.md sec. 5.3 (Lemma G-key); exact integer check code/check_Gkey.py",
+   "remaining_gap": "none; novelty unverified (elementary)"
+  },
+  {
+   "id": "U-G",
+   "status": "PROVED",
+   "statement": "Theorem G: for every Boolean f, H(f) <= 2(I(f) - Var(f)) + 2 U(f) - (1-Var) log2(1/(1-Var)) <= 2 I(f) + 2 U(f), where U(f) = sum_S p_S log2(pi(S)/p_S) and pi(S) = sum_{T superset of S} p_T. Also U <= H, so FEI holds iff sup U/I < infinity, with C_FEI <= 2 + 2 sup(U/I) and sup(U/I) >= (6.4548-2)/2 by Hod.",
+   "where": "NOTES.md sec. 5 (Theorem G, Corollary G0)",
+   "remaining_gap": "the FEI-equivalent statement U <= K I is open"
+  },
+  {
+   "id": "U-G-tight",
+   "status": "EVIDENCE",
+   "statement": "Theorem G is tight: equality for all addressing functions tested and 2-bit bent; ratio H/(2(I-Var)+2U) -> 1 on point defects and reaches 0.986 on near-extremal read-once AND/OR formulas with H/I = 5.91 (U/I = 2.06), so on the extremal family C_FEI is governed by sup U/I.",
+   "where": "NOTES.md sec. 5 (Corollary G0 evidence); code/families.py, compose_rec.py, readonce_beam.py",
+   "remaining_gap": "finite/structured computations with floating logarithms"
+  },
+  {
+   "id": "U-G1G2",
+   "status": "PROVED",
+   "statement": "Level-only universal bounds: H <= 2(I-Var) + 2H(W) + 2 sum_{k>=1} W_k log2 E[binom(|S|,k)] (W_k = P(|S| = k); equal to Theorem G for symmetric functions); and, tensor-stable, H <= 2(I-Var) + 2 inf_{lambda>0} [log2 E(1+lambda)^{|S|} - I log2 lambda] (lambda = 1: H <= 2I + 2 log2 E 2^{|S|}).",
+   "where": "NOTES.md sec. 5 (Corollaries G1, G2)",
+   "remaining_gap": "both lose on heavy |S|-tails (G1 not tensor-stable; G2 weak for majority); incomparable with KKLMS"
+  },
+  {
+   "id": "U-comp",
+   "status": "PROVED",
+   "statement": "For read-once compositions f = g(h_1..h_k) with independent inner functions: U(f) = U(P_g^mu) + sum_j P(j in J) U(q_j), parallel to H(f) = H(P_g^mu) + sum_j P(j in J) H(q_j), I(f) = sum_j P(j in J) E_{q_j}|T|.",
+   "where": "NOTES.md sec. 5 (composition formula); code/compose_rec.py (brute-force check)",
+   "remaining_gap": "none"
+  },
+  {
+   "id": "U-loc",
+   "status": "PROVED",
+   "statement": "Exact restriction identity: Delta_i U = sum_{T not containing i} m_T [ s_T log2(r_T/s_T) + (1-s_T) log2(1/(1-s_T)) + D2((1+eta_T)/2 || (1+x_T)/2) ], with m_T = fhat(T)^2 + fhat(T+i)^2, s_T = fhat(T+i)^2/m_T, r_T = pi(T+i)/pi(T), eta_T and x_T the restriction asymmetries of the T-coefficient and of the T-upper-set mass. Equivalently Delta_i U = B_i - Gamma_i + K_i with K_i = U(law of S minus i) - avg U(f_{i,+-}) >= 0. Chain rules for any law: H = sum_k B_{i_k}(P_k), U = sum_k [B - Gamma]_{i_k}(P_k), H - U = sum_k Gamma_{i_k}(P_k) along any marginalisation order.",
+   "where": "NOTES.md sec. 5.1 and 5.3; verified to 1e-10 in code/dU_exact.py and exactly in code/chainU.py",
+   "remaining_gap": "none"
+  },
+  {
+   "id": "U-X003",
+   "status": "EVIDENCE",
+   "statement": "U is immune to the sparse-activation local-log obstruction: on X003 (k=4..10) Delta_y U/Inf_y = 3.69, 4.10, 4.25, 4.30 while Delta_y H/Inf_y = 8.33..14.33 grows like k; on X009 (m=4..12) 3.57..4.31 vs 8.0..16.3; on X002 -> 3.0.",
+   "where": "NOTES.md sec. 5.1; code/x003_scan.py, stress_dU.py",
+   "remaining_gap": "no proof that the selector ratio stays bounded for all k"
+  },
+  {
+   "id": "U-locfail",
+   "status": "EVIDENCE",
+   "statement": "The universal local form 'Delta_i U <= K Inf_i for every coordinate i' is not supported: annealing over selector pairs gives max Delta_y U/Inf_y = 4.78, 5.11, 5.48, 6.15 at n = 6, 7, 8, 9, dominated by the KL asymmetry term.",
+   "where": "NOTES.md sec. 5.1; data/anneal_sel.json, anneal_sel2.json",
+   "remaining_gap": "not a proof of unboundedness"
+  },
+  {
+   "id": "U-GU",
+   "status": "CONJECTURE",
+   "statement": "GU: sum_i Delta_i U(f) <= K I(f) for all Boolean f (K about 3.1); weaker GU': sum_i Delta_i U <= a I + b U with b < 1. Either implies U <= K' I by restriction induction (K' = a/(1-b)) and hence FEI with C <= 2 + 2K'.",
+   "where": "NOTES.md sec. 5.2",
+   "remaining_gap": "unproved; evidence: max G/I = 2.75 (all n <= 4), 2.82 (annealing n = 5..8), 3.09 (maj3 o g5, n = 15); on near-extremal read-once AND/OR formulas G/I plateaus near 2.285 (sizes up to 2048 leaves, H/I up to 5.91); n <= 4: G <= 1.75 I + U and G <= 2.25 I + 0.5 U"
+  },
+  {
+   "id": "U-GU-implies-FEI",
+   "status": "PROVED",
+   "statement": "If for all Boolean f, sum_i Delta_i U(f) <= a I(f) + b U(f) with b < 1, then U <= (a/(1-b)) I and H <= (2 + 2a/(1-b)) I for all f.",
+   "where": "NOTES.md sec. 5.2",
+   "remaining_gap": "hypothesis open"
+  },
+  {
+   "id": "U-num",
+   "status": "EVIDENCE",
+   "statement": "Exhaustive n <= 4: max H/I = 3.4025, max B/I = 2.7042, K_loc >= 2.6725, K_Delta >= 4.8677, max U/I = 1.465, max G/I = 2.75, Theorem G holds with minimum slack 0.",
+   "where": "NOTES.md sec. 2.1, 5; data/exhaust_n2_4.json; code/exhaust.py, upward.py, globalU.py",
+   "remaining_gap": "floating logarithms"
+  },
+  {
+   "id": "U-Han",
+   "status": "PROVED",
+   "statement": "Random-restriction entropy inequality: for every Boolean f and t in (0,1], H(f) <= (1/t) E[H(f_{J,X})] + (2/ln2)((1-t)/t) I(f), with J a Binomial(t) live set and X uniform on its complement; more precisely the deficit c I - H is a supermartingale up to (2/ln2)(1-t) I under random restriction.",
+   "where": "NOTES.md sec. 2.4 (proof of Theorem C (viii),(ix)) and sec. 6 F1",
+   "remaining_gap": "used inductively it only gives c_n = O(log n); recorded as a failed route"
+  }
+ ],
+ "best_next_step": "Prove the FEI-equivalent statement U(f) <= K I(f) through the restriction identity of sec. 5.1: the local logarithm is already refunded, so it suffices to bound the KL asymmetry term K_i = U(law of S minus i) - avg U(f_{i,+-}) (the concavity gap of U under merging the two restriction spectra) in aggregate, e.g. sum_i K_i <= a I + b U with b < 1 minus the L_down - Gamma part. Since U-statements are not contradicted by the quantum counterexample, hypercontractive or log-Sobolev arguments on the upper-set masses pi(S) = E[(d_S f)^2] are admissible here, while the classical-only input is already spent in Lemma G-key."
+}

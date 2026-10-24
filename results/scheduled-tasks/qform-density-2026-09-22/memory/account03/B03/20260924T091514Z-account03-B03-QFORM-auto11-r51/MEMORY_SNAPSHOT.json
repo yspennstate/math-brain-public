@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260924T091514Z-account03-B03-QFORM-auto11-r51",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit_start": "5b2462256dc607a1360bc0fc8125b6e9c37699c3",
+  "control_commit_prepublication_observed": "a155acabbd7c4a3df14d65a900267c7393ac7ca1",
+  "math_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "faf23dfea63b775cc82d14dfdc40e237258a1068",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260924T091514Z-account03-B03-QFORM-auto11-r51/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260924T091514Z-account03-B03-QFORM-auto11-r51/CHECKS.md",
+    "check_result": "QFORM_B03_R51_CHECK_PASS"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "new_result": {
+    "id": "QFORM-SAMEBANK-PAIR-HYPERBOLIC-SQUARE-v1",
+    "status": "SUPPORTING_THEOREM_PROVED",
+    "scope": "If (S,R) has arbitrary joint density cap M and V is independent with density cap N, then for ab!=0 the translated form a(S+d)^2+2b(R+alpha)(V+beta)+c has essential density cap at most 6 M^(2/3) N^(2/3)|a|^(-1/3)|b|^(-2/3). No conditional cap between S and R is used.",
+    "product_bank_specialization": "For orthogonal projections S,T of the same original-coordinate product bank and V from a disjoint bank, ||p_Q||inf <=12(rho sigma tau)^(-2/3)|a|^(-1/3)|b|^(-2/3), including the shear T+cS.",
+    "strict_target": "Q_*=3S^2+6(S+T)V has three eigenvalues with modulus >1 and ||p_Q*||inf<=4, hence P(Q_* in I)<=4|I|.",
+    "assigned_time_bound": "For H=||p_Q||inf, int |t|^(-1/2)|phi_Q(t)|^2 dt <=4sqrt(pi H). For Q_* this is <=8sqrt(pi)=14.179630807244127... .",
+    "continuity": "NOT_PROVED"
+  },
+  "partner_result_applied": {
+    "partner": "account04/B03",
+    "source_commit": "5f93186cf8952b2b8b0255e08a78fd8506c613e4",
+    "theorem_scope": "Exact-rank-three overlap-two Plucker branch: ||p_Q||inf <=129.924435862525374 J_2(H)^(-1/6).",
+    "actual_inequality": "On the same strict target, w_124=w_134=w_234=1/3, H={1,4}, Delta=27, J_2(H)=162, so ||p_Q*||inf<=55.64656197133566 and the whole-copy time bound is <=52.88762884254536."
+  },
+  "handoff_commit": "b2bbe38e79d16c7068b11aea9a05f5d2ba592161",
+  "global_status": "FULL_QFORM_OPEN_AND_FULL_TARGET_CONTINUITY_OPEN",
+  "unresolved_implication": "A structural theorem is still needed to force every remaining heavy-hub/rank-two geometry into this same-bank square/hyperbolic overlap compiler or another completed receiver with universal coefficient/projection currency.",
+  "next_step": "Search the current global survivor for a quantitatively controlled dependent two-projection same-bank packet plus one disjoint scalar; if a coefficient or projection norm degenerates, route that degeneration into balanced-carrier/E3 or other already-paid branches without conditional-cap shortcuts."
+}

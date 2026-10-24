@@ -1,0 +1,37 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261014T051824Z-account01-B12-gu-collision-cocycle",
+  "stream": "B12",
+  "primary_packet_id": "A058",
+  "universal_gu_status": "OPEN",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "B12-A058-GU-COLLISION-COCYCLE",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every Boolean pair g,h and coordinate i, the signed U-collision satisfies delta_i C = Delta_i U(gh)-Delta_i U(g)-Delta_i U(h); over every branch-dependent adaptive physical restriction tree, the reach-weighted internal drifts equal the root collision minus the reach-weighted terminal collisions.",
+      "scope": "All finite uniform cubes, arbitrary adaptive coordinate choices, arbitrary pruning and terminal depths; exact actual reach weights and explicit terminal reserve."
+    },
+    {
+      "claim_id": "B12-A058-GU-DEFECT-COMPOSITION",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For D_{a,b}=G-aI-bU, every Boolean product satisfies D(gh)=D(g)+D(h)+LC(g,h)+2aJ(g,h)-bC(g,h), where J is total joint pivotal probability. Iteration gives the exact signed composition-forest GU criterion.",
+      "scope": "Every a>=0 and real b; the FEI implication is invoked only for 0<=b<1 and a restriction-closed universal construction."
+    },
+    {
+      "claim_id": "B12-A058-TERMWISE-PRODUCT-CLOSURE",
+      "version": "v1",
+      "status": "REFUTED",
+      "statement": "The universal helper R_{a,b}(g,h)<=0 at every overlapping product node is false for every admissible a,b. A three-bit Boolean pair has C>0, LC=3C, J=1/2 and hence R=(3-b)C+a>0.",
+      "scope": "Certified exact witness; this refutes only termwise product closure, not universal GU or FEI."
+    },
+    {
+      "claim_id": "B12-A058-SHARED-COORDINATE-OVERLAP",
+      "version": "v10",
+      "status": "OPEN",
+      "statement": "Adaptive collision drift now telescopes exactly, but the simultaneous all-coordinate G collision and joint-pivotal cost still need a global companion-sign/posterior/terminal allocation with single-use ownership."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "run_id": "20260923T191921Z-account03-B08-qform-diffuse-r43",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "full_target_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-SCHUR-PYTHAGOREAN-RANK2-AREA-v1",
+      "status": "PROVED_SUPPORTING_IDENTITY",
+      "statement": "For M in R^{2xm} full row rank, b=k^T M+e with e orthogonal to row(M), scalar pivot a!=0, hub coupling h=(h1,h2), d=a-k.h, and M'=M-hb/a, det(M'M'^T)=(d^2/a^2)det(MM^T)+(||(-h2,h1)M||^2/a^2)||e||^2."
+    },
+    {
+      "id": "QFORM-RANK2-PLUS-DEPENDENT-SQUARE-OPT-v1",
+      "status": "PROVED_SUPPORTING_ANALYTIC_THEOREM",
+      "statement": "If a physical scalar pivot of coefficient a!=0 has exact post-Schur two-physical-row crossing B of full row rank two, then the full conditional/unconditional quadratic-affine form has an essentially bounded density with ||p_Q||_infinity <= 8(2/3)^(1/4)|a|^(-1/2)[s1(B)s2(B)]^(-1/4). Arbitrary same-bank curvature and conditioned outside couplings are retained. Continuity is not claimed."
+    },
+    {
+      "id": "QFORM-R2-PIVOT-ADAPTIVE-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_ROUTER",
+      "statement": "In r42/R2, for a designated physical scalar pivot |a|>=tau L, either its incident row-pair exterior bank exceeds 9L^4/8192, or the pivot-excluding physical pair has singular product >3L^2/(64sqrt2). In the latter case either |a-k.h|>=|a|/2 or transverse leakage product >=[3/(128sqrt2)]|a|L^2, and then ||p_Q||_infinity<20.148 tau^(-1/2)/L; otherwise both adaptive-cancellation quantities are simultaneously small as stated in REPORT.md."
+    },
+    {
+      "id": "QFORM-ADAPTIVE-SCHUR-FACTOR-AUTOMATIC-LOWER-BOUND-FALSE-v1",
+      "status": "REFUTED_INTERMEDIATE_IMPLICATION",
+      "statement": "The three-large-eigenvalue target hypothesis does not force |a-k.h|/|a| away from zero. The explicit 5x5 matrix in REPORT.md has characteristic polynomial (lambda-1)(lambda+1)^2(lambda^2-2lambda-1), hence at least three eigenvalues of modulus >=1, but has a=1, M=I_2, h=k=(1,0), e=0 and d=a-k.h=0. This is not a QFORM counterexample."
+    },
+    {
+      "id": "QFORM-PARTNER-account04-B08-APPLICATION-r43",
+      "status": "COMPLETED_PARTNER_RESULT_APPLIED",
+      "statement": "The account04/B08 anisotropic family Q=LX0^2+2LRU1V1+2LR^{-1}U2V2 lies in the new Schur-survival branch with a=L, h=b=e=0, d=L and S(M)=L^2. The partner theorem gives ||p_Q||_infinity<7.251/L for all cap-one product laws."
+    }
+  ]
+}

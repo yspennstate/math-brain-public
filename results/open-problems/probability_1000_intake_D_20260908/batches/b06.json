@@ -1,0 +1,170 @@
+[
+ {
+  "problem_id": "D0066",
+  "source_id": "grimmett_li_saw_2017",
+  "locator": "Question 1.2, Section 1.3, PDF p. 6",
+  "title": "Does the uniform self-avoiding walk on Z^2 converge to SLE_{8/3}?",
+  "statement": "Does a uniformly distributed n-step self-avoiding walk from the origin of Z^2 converge, suitably rescaled, to the random curve SLE_{8/3}? Gwynne and Miller proved that a self-avoiding walk on a random quadrangulation converges to SLE_{8/3} on a Liouville-gravity surface.",
+  "status_search": "WebSearch 2026-09-08 on self-avoiding walks and connective constants; the results found (Grimmett-Li's own book chapter, weighted SAW papers, extendable SAW) plus general knowledge of the field confirm this is the central open problem of two-dimensional SAW: even the existence of a scaling limit is open, and the only proved SLE_{8/3} statement is on random quadrangulations (Gwynne-Miller), as the source says. No evidence of resolution.",
+  "attempt": {
+   "method": "Locate what is missing relative to the models where convergence to SLE is proved (percolation, Ising, LERW, UST). In every one of those the proof supplies (a) a discrete observable that is exactly or approximately discrete holomorphic and (b) a domain Markov property.",
+   "result": "Self-avoiding walk HAS a domain Markov property in a weak, restriction-type form (the SAW measure satisfies the restriction property in the continuum, which is exactly why SLE_{8/3} is the predicted limit -- it is the unique restriction measure with the right exponent), so the missing ingredient is entirely on the observable side. The candidate observable is the parafermionic observable of Duminil-Copin and Smirnov, which for SAW on the hexagonal lattice satisfies an exact discrete relation at the critical fugacity 1/sqrt(2 + sqrt 2); that relation is what gives the connective constant of the hexagonal lattice. So the honest state is: the observable exists and is exact on the hexagonal lattice, but only its discrete divergence-free part is known, and the discrete curl (the second half of discrete holomorphicity) is not, which is exactly what is needed to identify the scaling limit.",
+   "obstruction": "The wall is the missing half of discrete holomorphicity for the SAW parafermionic observable, together with the absence of any a-priori tightness/RSW theory for SAW: even sub-sequential scaling limits are not known to exist, because the SAW measure has no positive association and the standard RSW arguments fail.",
+   "key_identity": "SLE_{8/3} is the unique conformal restriction measure with exponent 5/8; the SAW parafermionic observable is exactly divergence-free on the hexagonal lattice but its curl is not controlled."
+  }
+ },
+ {
+  "problem_id": "D0067",
+  "source_id": "grimmett_li_saw_2017",
+  "locator": "Question 1.3, Section 1.3, PDF p. 6",
+  "title": "Does the ratio of successive SAW counts converge on Z^2?",
+  "statement": "Is it the case for self-avoiding walks on Z^2 that sigma_{n+1}/sigma_n converges to mu, the connective constant? (Submultiplicativity gives sigma_n^{1/n} converging to mu but says nothing about the ratio.)",
+  "status_search": "WebSearch 2026-09-08 on self-avoiding walks and connective constants. The literature located (Grimmett-Li 2017/2019, Bauerschmidt-Duminil-Copin-Goodman-Slade lecture notes -- the latter already in the Codex source list) treats sigma_n^{1/n} and the hexagonal-lattice connective constant; the ratio limit is a classical open problem and nothing found resolves it. No evidence of resolution.",
+  "attempt": {
+   "method": "See what the ratio limit is equivalent to. Submultiplicativity sigma_{m+n} <= sigma_m sigma_n gives sigma_n >= mu^n and sigma_n^{1/n} decreasing to mu. The ratio limit is a Tauberian upgrade and would follow from a subadditivity-with-error statement.",
+   "result": "The ratio limit is equivalent to the statement that sigma_n mu^{-n} is asymptotically 'smooth' -- precisely, if sigma_n = mu^n n^{gamma - 1} L(n) with L slowly varying and monotone-type regularity, the ratio converges. Kesten's pattern theorem gives sigma_{n+1}/sigma_n >= mu and sigma_{n+2}/sigma_n converging to mu^2 on the SUBSEQUENCE of even n in some lattices, and the classical partial result is that the ratio converges in the Cesaro sense (immediate from sigma_n^{1/n} to mu). So the honest content is that the ratio limit is a regularity statement about the correction to exponential growth, and the only lattice-independent tool available is submultiplicativity, which cannot see it. I record one genuine implication not stated in the source: the ratio limit follows immediately if the generating function sum sigma_n z^n has a unique singularity of the same modulus on |z| = 1/mu with an algebraic (rather than oscillatory) behaviour, i.e. from an aperiodicity plus Tauberian condition -- which is exactly what a proof of the conjectured gamma = 43/32 exponent would supply.",
+   "obstruction": "The wall is that nothing is known about the analytic structure of the SAW generating function on its circle of convergence beyond the location of the singularity, and no combinatorial argument produces a ratio limit from submultiplicativity alone (there are submultiplicative sequences with oscillating ratios). On lattices where a parafermionic observable exists (hexagonal) the connective constant is known but the correction exponent is not.",
+   "key_identity": "Ratio convergence follows from a Tauberian condition on the singularity of sum sigma_n z^n at z = 1/mu; submultiplicativity alone is compatible with oscillating ratios."
+  }
+ },
+ {
+  "problem_id": "D0068",
+  "source_id": "grimmett_li_saw_2017",
+  "locator": "Question 1.4, Section 1.3, PDF p. 7",
+  "title": "Existence and constancy of the connective constant on a supercritical percolation cluster",
+  "statement": "Let I be the infinite cluster of supercritical bond percolation on Z^2 with p > 1/2, and let sigma_n(v) be the number of n-step SAWs on I starting at v. Does the limit mu(v) = lim_n sigma_n(v)^{1/n} exist almost surely, and satisfy mu(v) = mu(w) almost surely on the event {v, w in I}?",
+  "status_search": "WebSearch 2026-09-08 'self-avoiding walk infinite percolation cluster connective constant exists almost surely Lacoin'. Lacoin, 'Non-coincidence of quenched and annealed connective constants on the supercritical planar percolation cluster' (arXiv:1203.6051, Probab. Theory Related Fields 2014) and 'Existence of a non-averaging regime ... high-dimensional infinite percolation cluster' (arXiv:1212.4641, J. Stat. Phys. 2014) prove that the LIMSUP quantity is almost surely non-random and strictly below the annealed value in d = 2 for every p in (1/2,1). The existence of the limit itself (as opposed to the limsup) is not asserted in the abstracts I read. Recorded as open on the existence half, with the constancy half essentially settled by Lacoin's non-randomness.",
+  "attempt": {
+   "method": "Split the question. Constancy across vertices (given existence) is a zero-one law: the value is measurable with respect to the percolation configuration and is invariant under the translations of Z^2 restricted to the cluster, so ergodicity gives a deterministic value. Existence of the limit is a subadditive-ergodic question.",
+   "result": "The two halves separate cleanly and only one is hard. Constancy: log sigma_n(v) is not subadditive along the cluster because concatenating two SAWs on the cluster need not give a SAW, but the QUANTITY limsup sigma_n(v)^{1/n} is a translation-invariant function of the environment, hence a.s. constant by ergodicity of Bernoulli percolation -- this is Lacoin's non-randomness and it does not need the limit to exist. Existence: the natural route is a subadditive ergodic theorem applied to the number of BRIDGES (SAWs that stay in a slab determined by their endpoints) on the cluster, since bridges do concatenate; on Z^2 the equality of the bridge and connective constants is Hammersley-Welsh, and the source's Section 6 shows the same equality on quasi-transitive graphs with a graph height function. The infinite cluster is not quasi-transitive, but it is unimodular and has an approximate height function (the coordinate), so the honest reduction is: existence of mu(v) would follow from a Hammersley-Welsh bridge decomposition valid on the cluster with a subexponential error uniform in the environment.",
+   "obstruction": "The wall is the uniformity of the Hammersley-Welsh error in the environment: the bridge decomposition costs exp(c sqrt n) on Z^2, and on the cluster the constant c depends on the local geometry, which is unbounded (the cluster has arbitrarily long thin necks), so the error is not uniformly subexponential. Controlling it needs a renormalisation of the cluster into good blocks, and the block estimate would have to survive the SAW's self-avoidance constraint across blocks.",
+   "key_identity": "Constancy is ergodicity applied to a translation-invariant functional; existence needs a Hammersley-Welsh bridge decomposition with environment-uniform exp(o(n)) error."
+  }
+ },
+ {
+  "problem_id": "D0069",
+  "source_id": "grimmett_li_saw_2017",
+  "locator": "Question 2.2, Section 2.2, PDF p. 9",
+  "title": "The sqrt(Delta - 1) lower bound for the connective constant of non-simple transitive multigraphs of degree at least 5",
+  "statement": "Theorem 2.1 states that an infinite, connected, Delta-regular, transitive, loopless multigraph with Delta >= 2 satisfies mu(G) >= sqrt(Delta - 1) if either (a) G is simple or (b) G is non-simple and Delta <= 4. Is the same true in the non-simple case with Delta >= 5?",
+  "status_search": "WebSearch 2026-09-08 on connective constants and degree bounds; the results found (Grimmett-Li 'Cubic graphs and the golden mean', 'Counting self-avoiding walks', the 2019 book chapter, the 2026 preprint on Grigorchuk graphs) all cite Theorem 2.1 in its stated form with the Delta <= 4 restriction in the non-simple case. No evidence of resolution.",
+  "attempt": {
+   "method": "Trace the proof. The bound comes from sigma^F_{2n}(v) >= (Delta - 1)^n, proved by showing that every 2n-step forward-extendable SAW has at least n(Delta - 2) extendable pairs (x,e), subject to a condition Pi; the theorem's cases are exactly the cases where Pi is verified.",
+   "result": "Condition Pi is a local statement about the multigraph and the obstruction for Delta >= 5 is combinatorial, not conceptual. In a non-simple multigraph an extendable pair (x,e) can fail to give a NEW walk when e is parallel to an edge already used, and the number of parallel classes at a vertex is what controls the loss. For Delta <= 4 a vertex has at most two parallel classes of multiplicity >= 2 and the loss can be absorbed; for Delta >= 5 there can be a parallel class of multiplicity 3 or more, and the counting of extendable pairs double counts. I record the following reduction: the bound mu >= sqrt(Delta-1) for non-simple transitive multigraphs is equivalent to the same bound for the associated SIMPLE graph with edge multiplicities, where a walk crossing a multi-edge of multiplicity k has k choices; the generating function then has a k-fold weight and the extremal case is the 'bridge graph' B_Delta for which the source records mu(B_Delta) = sqrt(Delta - 1) exactly. So the conjecture is that B_Delta is extremal in every degree, and the case Delta <= 4 is the verified part.",
+   "obstruction": "The wall is proving extremality of B_Delta without condition Pi. The natural route -- a Fisher-transformation or an entropy comparison with the bridge graph -- needs a monotonicity of mu under the operation of merging parallel edges, and the source's Section 4 shows mu is strictly monotone under ADDING edges but says nothing about redistributing multiplicities at fixed degree.",
+   "key_identity": "The extremal case is the bridge graph B_Delta with mu = sqrt(Delta-1); the proof of Theorem 2.1 needs condition Pi, which fails when a vertex carries a parallel class of multiplicity 3 or more."
+  }
+ },
+ {
+  "problem_id": "D0070",
+  "source_id": "grimmett_li_saw_2017",
+  "locator": "Question 2.3, Section 2.2, PDF p. 10",
+  "title": "The sharp lower bound for the connective constant over graphs of given degree",
+  "statement": "For Delta >= 3, what is the sharp lower bound mu_min(Delta) = inf{mu(G) : G in G_Delta}, where G_Delta is the class of infinite, connected, transitive, simple graphs of degree Delta? How does mu_min(Delta) behave as Delta tends to infinity? Question 3.4 asks whether mu_min(3) equals the golden mean.",
+  "status_search": "WebSearch 2026-09-08 'Grimmett Li connective constant cubic graph golden mean conjecture resolved' and the SAW searches above. The cubic case (Delta = 3) is the Grimmett-Li golden-mean conjecture, confirmed only for special families (finitely presented groups with positive first Betti number, TLF-planar cubic graphs, two-ended cubic Cayley graphs via Georgakopoulos-Wendland) and open in general; no value or asymptotic for general Delta was found. No evidence of resolution.",
+  "attempt": {
+   "method": "Test candidate extremisers and see what asymptotic they force. The known general lower bound is mu >= sqrt(Delta - 1) (Theorem 2.1) and the conjectured value at Delta = 3 is the golden mean phi = 1.618..., against sqrt(2) = 1.414.",
+   "result": "The candidate extremiser at Delta = 3 identified in the Grimmett-Li work is a specific 3-regular graph whose connective constant is the golden mean; the golden mean arises as the growth rate of the Fibonacci recursion counting SAWs on a ladder-like cubic graph. Extrapolating that mechanism to general Delta, the natural candidate extremiser is the 'ladder' obtained by taking a cycle-of-cliques structure of degree Delta, whose SAW counting satisfies a linear recursion with growth rate the largest root of a degree-Delta polynomial. This predicts mu_min(Delta) = Delta - 1 - c + o(1) for large Delta only if the extremiser is close to the tree, which it is not; the honest prediction from the sqrt(Delta-1) bound and the golden-mean value at Delta = 3 is that mu_min(Delta) grows like sqrt(Delta) up to constants, i.e. that the bound sqrt(Delta - 1) has the right ORDER, with the constant improving from 1 (bridge graphs) to phi/sqrt 2 = 1.144 at Delta = 3 for simple graphs. Whether the constant tends to a limit as Delta grows is the second half of the question and I have no candidate.",
+   "obstruction": "The wall is that mu_min is an infimum over an uncountable class with no compactness: the Babai metric on rooted graphs makes G_Delta compact, but mu is not continuous on it -- that lack of continuity is exactly the locality problem of Question 7.1 (D0075 here). So one cannot even assert that the infimum is attained.",
+   "key_identity": "sqrt(Delta - 1) <= mu_min(Delta); at Delta = 3 the conjectured value is the golden mean, giving a constant phi/sqrt 2 = 1.144 over the general bound."
+  }
+ },
+ {
+  "problem_id": "D0071",
+  "source_id": "grimmett_li_saw_2017",
+  "locator": "Question 3.4, Section 3.2, PDF p. 13",
+  "title": "The golden-mean conjecture: mu(G) >= phi for every cubic transitive graph",
+  "statement": "Is it the case that mu(G) >= phi = (1 + sqrt 5)/2 for every G in G_3, the class of infinite, connected, transitive, simple, cubic graphs? Known in various classes including TLF-planar graphs; the best general lower bounds are mu >= x with 1/x^2 + 1/x^3 = 1/sqrt 2 for girth at least 3 and mu >= 12^{1/6} for girth at least 4.",
+  "status_search": "WebSearch 2026-09-08 'Grimmett Li connective constant cubic graph golden mean conjecture resolved'. The search summary states the inequality is proved for (i) Cayley graphs of infinite groups with three generators and strictly positive first Betti number, (ii) infinite transitive TLF-planar cubic graphs, (iii) cubic Cayley graphs with two ends (Georgakopoulos and Wendland, via Lipschitz harmonic functions on recurrent graphs quasi-isometric to R), and states explicitly that 'the conjecture remains unresolved for the general case'. Open.",
+  "attempt": {
+   "method": "Ask why the golden mean and not sqrt 2. The golden mean is the growth rate of the number of binary strings with no two consecutive equal symbols in a suitable coding, and it appears as the connective constant of a specific cubic graph, so the conjecture says that graph is extremal.",
+   "result": "The two solved regimes suggest the correct general mechanism, and naming it is the contribution. Both the positive-first-Betti-number case and the two-ended case work by producing a graph height function (respectively from a surjection onto Z coming from the abelianisation, and from a Lipschitz harmonic function). Given a graph height function the source's own bridge theory (Section 6) gives mu = the bridge constant, and the bridge counting on a cubic graph with a height function yields the Fibonacci recursion and hence phi. So the conjecture reduces to: EVERY infinite transitive cubic simple graph carries a graph height function (possibly after passing to a quotient). That reduction is exactly the programme the source describes in Sections 7-8, and it converts a counting conjecture into a group-theoretic existence statement.",
+   "obstruction": "The wall is that a transitive cubic graph whose group has trivial first Betti number and infinitely many ends need not admit a height function -- the natural candidates are Cayley graphs of infinite torsion groups with three generators (Grigorchuk-type), for which no surjection onto Z exists and no Lipschitz harmonic function is known. The 2026 preprint on connective constants of Grigorchuk graphs found in the status search is presumably attacking exactly this case, and I did not fetch it.",
+   "key_identity": "With a graph height function the bridge constant equals mu and cubic bridge counting gives the Fibonacci recursion with growth phi; the conjecture reduces to the existence of a height function."
+  }
+ },
+ {
+  "problem_id": "D0072",
+  "source_id": "grimmett_li_saw_2017",
+  "locator": "Question 4.5, Section 4.2, PDF p. 16",
+  "title": "Are non-normal quotients of transitive graphs realisable as normal quotients?",
+  "statement": "Let Gamma be a subgroup of Aut(G) acting transitively on G. Can there exist a non-normal subgroup A of Gamma such that (i) the quotient graph G_A is transitive, and (ii) there is no normal subgroup N of some transitively acting Gamma' with G_A isomorphic to G_N? Is it relevant to assume that A acts freely on the vertex set?",
+  "status_search": "WebSearch 2026-09-08 on connective constants and graph quotients; the sources found (Grimmett-Li 'Self-avoiding walks and connective constants', the 2019 book chapter, 'A study of 2-ended graphs via harmonic functions') restate the question without answering it. No evidence of resolution.",
+  "attempt": {
+   "method": "This is a pure group/graph-theory question underlying the strict-inequality theorems for quotients. Ask whether transitivity of the quotient forces a normal structure.",
+   "result": "The relevant standard fact is that G_A is transitive if and only if Gamma acts transitively on the set of A-orbits, i.e. A's orbit partition is Gamma-invariant, which is equivalent to A being contained in a subgroup whose orbit partition is a Gamma-congruence -- and a block system for a transitive group is exactly the orbit partition of a subgroup that is normalised by a point stabiliser, NOT necessarily normal in Gamma. So the honest statement is: transitivity of G_A forces the orbits of A to form a Gamma-invariant block system, and the question becomes whether every block system of a transitive group arises from a normal subgroup of SOME transitive overgroup. For finite permutation groups the answer is negative in general (imprimitive groups with non-normal block stabilisers exist), which strongly suggests a positive answer to the source's question; the free-action hypothesis is what would make the block system regular, and for regular block systems the block stabiliser IS the kernel of the action on blocks, hence normal.",
+   "obstruction": "Turning the finite intuition into an infinite graph example requires exhibiting an infinite transitive graph with an imprimitivity system whose block kernel is not realisable as a normal subgroup of any transitive overgroup of Aut(G), and one must range over ALL transitively acting Gamma', including Aut(G) itself, which is a large and hard-to-control group. That quantification over all overgroups is the wall.",
+   "key_identity": "G_A transitive iff the A-orbits form a Gamma-invariant block system; if A acts freely the block system is regular and its kernel is normal."
+  }
+ },
+ {
+  "problem_id": "D0073",
+  "source_id": "grimmett_li_saw_2017",
+  "locator": "Question 4.6, Section 4.2, PDF p. 17",
+  "title": "Strict inequality of connective constants for free quotients by non-normal subgroups",
+  "statement": "Is mu(G_A) < mu(G) whenever A is a non-trivial (not necessarily normal) subgroup of Gamma acting freely on the vertex set, such that G_A is transitive? An affirmative answer is known under the extra condition that there exists l in N such that G_A has a cycle of length l but G has none.",
+  "status_search": "WebSearch 2026-09-08 as for D0072; the strict-inequality theorems located are Grimmett-Li's own (normal subgroups, finite index) and no extension to arbitrary free actions was found. No evidence of resolution.",
+  "attempt": {
+   "method": "Recall why quotienting increases the count. In G_A a SAW may use a cycle that lifts to a non-closed path, so sigma_n(G_A) >= sigma_n(G) always and mu(G_A) >= mu(G); the strictness needs a quantitative gain, i.e. a positive density of walks in G_A that do not lift.",
+   "result": "The known proof for normal A produces the gain by exhibiting a specific short cycle in G_A that does not lift, then applying a pattern theorem to say a positive density of walks uses it. That is exactly the stated extra condition. So the general question is whether a free action with transitive quotient always creates a NEW cycle length. It does create new cycles (any non-trivial A gives a closed walk in G_A lifting to a path from v to av), so the issue is only whether the new cycles can all have lengths that already occur in G. I record the following reduction: strictness follows from the pattern theorem as soon as G_A contains a cycle C such that the set of walks in G_A traversing C has positive density -- which by Kesten's pattern theorem holds as soon as C is a PROPER INTERNAL PATTERN of G_A, i.e. can be repeated arbitrarily often. A new cycle of a length already occurring in G is still a new pattern if the local structure differs, so the length condition in the known theorem is sufficient but far from necessary.",
+   "obstruction": "The wall is that the pattern theorem gives a gain in the number of walks CONTAINING the pattern, but to beat mu(G) one needs the gain to survive the comparison with the lift, and without normality there is no canonical lifting map: the fibre of G -> G_A is an A-orbit but the covering is not regular unless A is normal in a group acting transitively upstairs. Building the injection from walks in G into walks in G_A that misses a positive-density set requires that regularity.",
+   "key_identity": "mu(G_A) >= mu(G) always; strictness needs a proper internal pattern of G_A that does not lift, and the known sufficient condition is a new cycle length."
+  }
+ },
+ {
+  "problem_id": "D0074",
+  "source_id": "grimmett_li_saw_2017",
+  "locator": "Question 4.10, Section 4.3, PDF p. 17",
+  "title": "Strict inequality under augmentation without the normality hypothesis",
+  "statement": "Let Gamma act transitively on G and let A be a subgroup of Gamma acting quasi-transitively on G. If A is contained in Aut(G'), where G' is obtained from G by adding edges, is it necessarily the case that mu(G) < mu(G')? (Theorem 4.7 gives this when A is normal in Gamma acting quasi-transitively, or when the index of A in Gamma is finite.)",
+  "status_search": "WebSearch 2026-09-08 as for D0072; nothing found removing the normality/finite-index hypothesis in the augmentation theorem. No evidence of resolution.",
+  "attempt": {
+   "method": "Examine the role of normality in the proof of Theorem 4.7. The proof constructs, from a SAW in G', a SAW in G by removing the new edges, and controls the entropy cost by a quasi-transitive averaging over the orbits of A; normality is used to make the orbit structure compatible with the transitive Gamma-action so that the averaging is uniform.",
+   "result": "The source itself points to the right repair, in its Question 4.11: normality can be dispensed with if there is a transitive Gamma containing A with Gamma intersect Stab_v contained in A. That is precisely the condition making the orbit-averaging uniform, so Question 4.10 follows from Question 4.11, and the honest content of this attempt is the confirmation that the two questions are linked in that direction (the source asserts the implication; I checked it is the averaging step that needs it). Beyond that, a direct route avoiding both: since the added edges are A-invariant and A is quasi-transitive, the density of new edges along a walk is bounded below by a constant depending only on the number of A-orbits, so a pattern-theorem argument applies to the new edge as a pattern and gives mu(G') > mu(G) PROVIDED the new edge can be repeated arbitrarily often in a SAW, which holds unless the new edges form a set of bounded 'reach'. So the residual case is augmentations by edges that cannot be used repeatedly.",
+   "obstruction": "The wall is that quasi-transitivity of A alone bounds the number of orbits but not the geometry within an orbit, so the added edges can be arranged (in principle) so that using two of them in the same SAW is impossible; ruling that out is where the normality or finite-index hypothesis enters.",
+   "key_identity": "Question 4.10 follows from Question 4.11; failing that, a pattern-theorem argument works unless the added edges cannot be used repeatedly in a single SAW."
+  }
+ },
+ {
+  "problem_id": "D0075",
+  "source_id": "grimmett_li_saw_2017",
+  "locator": "Question 4.11, Section 4.3, PDF p. 18",
+  "title": "When can a quasi-transitive subgroup be embedded compatibly in a transitive group?",
+  "statement": "Let G be in the class G and let A <= Aut(G) act quasi-transitively on G. When does there exist a subgroup Gamma of Aut(G) acting transitively on G such that A <= Gamma and Gamma intersect Stab_v <= A for every vertex v?",
+  "status_search": "WebSearch 2026-09-08 as for D0072; the question is restated in the source's references [32] without an answer, and nothing later was found. No evidence of resolution.",
+  "attempt": {
+   "method": "Read the condition Gamma intersect Stab_v <= A as saying that Gamma is 'no bigger than A on stabilisers', i.e. Gamma is generated by A together with elements moving the base point, with no extra local symmetry.",
+   "result": "The condition is exactly that Gamma acts on G with A as the stabiliser of the A-orbit partition and with a FREE action on the orbit space, so the question asks when a quasi-transitive action extends to a transitive action with no new point stabilisers. A necessary condition is that the A-orbits all have the same 'local type', since Gamma must map orbits to orbits isomorphically; this is a finite check when A has finitely many orbits. A sufficient condition in the finitely generated case: if the orbit space carries a free transitive action of some group H and the extension problem for the pair (A, H) has a solution (i.e. the relevant group cohomology class in H^2(H, A) is the one realised by the graph), then Gamma exists. So the answer is governed by a group-extension obstruction, which is the structural output of this attempt.",
+   "obstruction": "Computing the obstruction requires knowing Aut(G), and for a general quasi-transitive graph Aut(G) is a topological group whose structure is not determined by the combinatorics; there is no algorithm even to decide transitivity of a given subgroup in general. That is the wall.",
+   "key_identity": "The condition says Gamma has no stabiliser beyond A, so existence is a group-extension problem with obstruction class in H^2(orbit group, A)."
+  }
+ },
+ {
+  "problem_id": "D0076",
+  "source_id": "grimmett_li_saw_2017",
+  "locator": "Question 7.1, Section 7.1, PDF p. 22",
+  "title": "Locality of the connective constant",
+  "statement": "Under what conditions on G in Q and a sequence {G_n} in Q is it the case that mu(G_n) converges to mu(G) whenever K(G, G_n) tends to infinity, where K(G,G') is the largest k such that the balls of radius k about the roots are isomorphic? (Locality of critical values in the Babai metric.)",
+  "status_search": "WebSearch 2026-09-08 on connective constants and locality; the source's own Section 7.2 gives a locality theorem under the existence of a graph height function with control on the parameters d and r, and later work found in the search ('A study of 2-ended graphs via harmonic functions', the Grigorchuk-graphs preprint) extends the class of graphs carrying height functions rather than removing the hypothesis. No evidence of a general resolution.",
+  "attempt": {
+   "method": "Test the naive statement. Locality cannot hold without hypotheses: the connective constant of a large-girth graph can be far from that of a tree with the same local structure, in the same way that p_c is not local without a growth hypothesis.",
+   "result": "The natural obstruction is uniform amenability, and identifying it is the content here. Take G_n a sequence of graphs that look like the 3-regular tree in balls of radius n but are globally amenable (for example a large-girth 3-regular Cayley graph of a finite group, made infinite by a suitable limit). Then K(G, G_n) tends to infinity with G the tree and mu(G) = 2, while mu(G_n) can be strictly smaller because the global structure forces walks to return. This is the graph-counting analogue of the failure of locality for p_c on amenable graphs, and it shows that any general condition must exclude such sequences -- exactly what the graph-height-function hypothesis of Theorem 8.1 does, by supplying a uniform bridge decomposition. So the honest conjecture is: locality holds along sequences carrying graph height functions with UNIFORMLY BOUNDED parameters (d, r), and the source's Theorem proves a version of this; the open part is whether the uniform bound can be relaxed to a growth or non-amenability condition.",
+   "obstruction": "Removing the height function needs a bridge decomposition (or some other way to make mu an infimum of local quantities) valid without it; mu is a limsup of local counts and is upper semicontinuous in the Babai metric, so the only failure is from below, i.e. one needs a matching lower bound from local data, which is exactly what a height function provides.",
+   "key_identity": "mu is upper semicontinuous in the Babai metric; locality fails only from below, and a graph height function supplies the missing local lower bound via bridges."
+  }
+ },
+ {
+  "problem_id": "D0077",
+  "source_id": "grimmett_li_saw_2017",
+  "locator": "Question 9.1, Section 9, PDF p. 25",
+  "title": "Positive speed of self-avoiding walk on nonamenable Cayley graphs",
+  "statement": "Is it the case that, for any nonamenable Cayley graph G of an infinite finitely generated group, the self-avoiding walk on G has positive speed? Nachmias and Peres proved this for nonamenable transitive graphs satisfying (Delta - 1) rho < mu, where rho is the spectral radius of simple random walk.",
+  "status_search": "WebSearch 2026-09-08 on self-avoiding walks on nonamenable graphs; the source's own account (Nachmias-Peres condition (Delta-1) rho < mu) is the state of the art in the results found, and nothing removing the condition appeared. No evidence of resolution.",
+  "attempt": {
+   "method": "Understand the Nachmias-Peres condition. Bounding the number of SAWs by the number of non-backtracking walks gives an entropy of (Delta-1)^n against a return probability rho^n; when (Delta-1) rho < mu the entropy of SAWs exceeds the cost of returning, so walks that return are exponentially rare and the speed is positive.",
+   "result": "The condition is exactly an entropy-versus-return comparison, and the honest statement of the gap is that it can fail even for very nonamenable graphs. Since mu <= Delta - 1 always, the condition (Delta-1) rho < mu requires rho < mu/(Delta-1) <= 1, so it is a quantitative nonamenability requirement, and it fails when mu is much smaller than Delta - 1, i.e. for graphs with many short cycles (girth 3 with many triangles) even if rho is small. So the residual class is: nonamenable graphs with small connective constant relative to degree. For those, the free-energy/bridge route is more promising: on a nonamenable transitive graph the bridge generating function should have a strictly positive radius gap, and positive speed would follow from an exponential bound on the number of SAWs returning to a ball of radius eps n.",
+   "obstruction": "The wall is that the number of SAWs of length n staying within distance eps n of the origin is not known to be exponentially smaller than sigma_n on a general nonamenable graph; proving this is a large-deviation statement for SAW which currently requires the same entropy comparison. A route through the (unproved) equality of bridge and connective constants on all quasi-transitive graphs -- which needs a graph height function, exactly the object missing in Question 3.4 and 7.1 -- is available for graphs that carry one.",
+   "key_identity": "Nachmias-Peres: (Delta-1) rho < mu compares SAW entropy with the return cost; it fails when mu is much below Delta - 1."
+  }
+ }
+]

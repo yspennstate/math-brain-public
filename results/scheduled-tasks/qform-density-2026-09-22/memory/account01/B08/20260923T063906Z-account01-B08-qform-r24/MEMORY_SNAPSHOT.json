@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260923T063906Z-account01-B08-qform-r24",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "control_revision": "2026-09-22.15",
+  "control_refresh_commit": "2985014203b3e35ac721a31c65fad258b8f862a1",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BALANCED-FIXED-PACKET-EXTRACTION-FALSE-v1"
+  ],
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "a11ebd02f863b82324e449b4a31d468ec654f080",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T063906Z-account01-B08-qform-r24/REPORT.md",
+  "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T063906Z-account01-B08-qform-r24/CHECK.py",
+  "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T063906Z-account01-B08-qform-r24/CHECK_OUTPUT.txt",
+  "claim_ids": [
+    "QFORM-FIXED-K-VOLUME-MARGINAL-STAR-v1",
+    "QFORM-S3-VOLUME-OR-BILATERAL-STAR-v1",
+    "QFORM-HIGH-SPECTRAL-MU13-K0-BILATERAL-STAR-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-SELF-DUAL-REDUCING-PROJECTION-LADDER-v1",
+      "source": "yspennstate/math-open-problems@5d2f07b086dec22993a28780c0e98fd7aef4c464",
+      "scope_used": "high-spectral projection leverage <=1/3; k=0 child-count branch gives s3(B)>d>3L/40"
+    },
+    {
+      "id": "QFORM-MIXED-ORDER-JENSEN-v1",
+      "source": "yspennstate/math-open-problems@2df2c9bc0e4d9a0dcd2cdde85390d3c33ae8c334",
+      "partner": "account02/B08",
+      "scope_used": "canonical fixed order-three squared-minor law, q in [1,3/2), arbitrary same-bank curvature/outside couplings retained"
+    }
+  ],
+  "proved_summary": "For any physical cross block B with sigma=s3(B)>0 and any 1<=q<3/2, either the full ambient Q has continuous C0 density <=6sqrt(e)/((3-2q)sqrt(q)sigma), or both a physical row star and a physical column star exceed sigma sqrt(q/6). This follows from an exact fixed-k squared-minor marginal bound alpha_i<=k||row_i||^2/s_k^2. On the prior basis-invariant leverage<=1/3 self-dual k=0 branch, q=1 gives density <80sqrt(e)/L or bilateral stars >3L/(40sqrt6).",
+  "continuity_status": "PROVED_ON_PAID_BRANCH_ONLY",
+  "full_target_status": "OPEN",
+  "unresolved_implication": "QFORM-BILATERAL-STAR-WITH-ARBITRARY-LEAKAGE-v1",
+  "next_step": "Aggregate the two opposite-side star Jacobians before inversion while retaining arbitrary quadratic leakage on/between both arm banks; do not select one edge or take a worst fiber.",
+  "partner_result_actually_applied": "account02/B08 QFORM-MIXED-ORDER-JENSEN-v1 at the canonical order-three minor law",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "full_brain_connected": false
+}

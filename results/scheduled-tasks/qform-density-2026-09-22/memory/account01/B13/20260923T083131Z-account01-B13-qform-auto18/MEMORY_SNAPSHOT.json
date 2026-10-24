@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260923T083131Z-account01-B13-qform-auto18",
+  "owner_control_revision": "2026-09-22.15",
+  "control_head_at_prepublication_refresh": "1e83cadef8c7ebea70e7767abd539e91a043d50a",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8e2af3912ee61067865fa258060d75ddb0162b73",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260923T083131Z-account01-B13-qform-auto18/REPORT.md",
+    "blob": "2b978b2a126e1c7c27830a8fb6fa83dea5f8972a"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "1bda468477560bfb047f44832968b1d2da6c0f1b",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B13/20260923T083131Z-account01-B13-qform-auto18.md"
+  },
+  "partner_result_applied": {
+    "account_slot": "account02/B13",
+    "run": "20260923T040105Z-account02-B13-extremal-r23",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "892bfe36756e09cbaff3f05070f7a3e20fea0fd1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260923T040105Z-account02-B13-extremal-r23/REPORT.md",
+    "theorem": "QFORM-SCALAR-E2-LINF-OR-TRIHUB-v1",
+    "actual_application": "Applied to the inner scalar-Schur remainder R=X_{-k}^T S X_{-k}; in its paid branch ||p_R||inf<=29.922421174319 |a|^-1/2 e2(M^TM)^-1/8, then the outer physical X_k square and half-Riesz trace yield the new nested L-infinity estimate."
+  },
+  "proved_results": [
+    "QFORM-EXTREMAL-PRODUCT-POSITIVE-KERNEL-v1",
+    "QFORM-FRACTIONAL-TRACE-SMALLBALL-v1",
+    "QFORM-NESTED-PIVOT-E2-FRACTIONAL-TRACE-v1",
+    "exact two-pivot bordered-four-volume identity",
+    "QFORM-PAIR-BORDER4-LINF-OR-TRIHUB-v1"
+  ],
+  "key_formulae": {
+    "positive_kernel_extremal": "sup_{f_i cap1,mass1} int K prod f_i = sup_{|E_i|=1} int_{prod E_i} K for every measurable K>=0",
+    "fractional_trace": "P(|R-t|<r)<=min(1,A r^alpha), alpha>1/2 => sup_t E|R-t|^-1/2 <= 2alpha/(2alpha-1) A^(1/(2alpha))",
+    "nested_paid": "||p_Q||inf <15.472 |d|^-1/2 |a|^-1/4 E^-1/16",
+    "border_identity": "V_{4,K}(I,J)=Delta^2 e2(T[I,J]^T T[I,J])",
+    "global_dichotomy": "either ||p_Q||inf <18.400 (|A_kk|^4 |Delta|^2 Omega_{4,K}^perp)^-1/16 or <=3 row hubs and <=3 column hubs carry >Omega/32 bordered volume on the selected cut"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "arbitrary-joint coarea L-infinity correction",
+    "positive conditional-projection-moment correction"
+  ],
+  "scope_notes": "All pivots/banks in the new theorem are original physical coordinates. No single interval, centering, support diameter, fixed fragment count, post-rotation independence, or continuity conclusion is assumed.",
+  "unresolved_implication": "QFORM-PAIR-BORDER4-TRIHUB-THIRD-CURVATURE-CLOSURE-v1",
+  "next_step": "Use the >Omega/32 finite bordered hub packet together with a genuine global third-large-eigenvalue resource before conditioning away hub variables; force an already-paid grouped-bank, square/pair, null-Schur, or diffuse spectral-window certificate.",
+  "independent_review": "not yet performed"
+}

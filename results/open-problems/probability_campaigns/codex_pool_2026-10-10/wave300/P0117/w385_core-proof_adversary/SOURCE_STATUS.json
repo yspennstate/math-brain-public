@@ -1,0 +1,108 @@
+{
+  "worker": "w385",
+  "target": "P0117",
+  "checked_at": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "ranking": {
+    "date": "2026-09-07",
+    "tier": 5,
+    "status": "attempted_un",
+    "line": 552
+  },
+  "exact_statement": "Precise working target: nearest-neighbor undirected Z^2; iid finite nonnegative weights with an atomless law; E[min(t1,t2,t3,t4)^2]<infinity; almost surely no injective doubly infinite path all of whose finite segments attain the global passage metric. No shape regularity assumed.",
+  "scope_warning": "Original survey Question 31 is recovered. The fuller continuous-iid conjecture is corroborated by Damron-Hanson Conjecture 1. The explicit min-of-four moment restriction is a chosen, source-pinned working subcase, not a restriction silently imposed on the original broad question.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1609.02447",
+      "title": "Random coalescing geodesics in first-passage percolation",
+      "locators": [
+        "A1",
+        "Theorem 2.1",
+        "Theorem 2.2",
+        "Theorems 2.5–2.6"
+      ],
+      "verified_scope": "Atomless iid min-of-four second moment regime; deterministic endpoint sequence midpoint decay; fixed differentiability-direction exclusion."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00039-024-00672-z",
+      "title": "Coalescence of Geodesics and the BKS Midpoint Problem in Planar First-Passage Percolation",
+      "locators": [
+        "Theorem 1.2",
+        "Theorem 1.3",
+        "discussion following Theorem 1.3"
+      ],
+      "verified_scope": "Power-law marginal midpoint bound and restricted endpoint-family union bound; additional law and limit-shape assumptions apply."
+    },
+    {
+      "url": "https://arxiv.org/abs/2208.11576",
+      "title": "The number of geodesics in planar first-passage percolation grows sublinearly",
+      "verified_scope": "Primary source located; theorem-level audit not yet performed."
+    },
+    {
+      "url": "https://arxiv.org/html/1512.00804",
+      "title": "Bigeodesics in first-passage percolation",
+      "locators": [
+        "Conjecture 1",
+        "A1 prime"
+      ],
+      "verified_scope": "The full simultaneous atomless iid two-dimensional conjecture, and the separate standard min-of-four moment regime."
+    }
+  ],
+  "recent_claim": {
+    "index_url": "https://kisonecat.github.io/openai-math/probability-and-statistical-mechanics.html",
+    "primary_pdf_url": "https://github.com/openai/math/blob/main/preprints/No-bigeodesics-in-planar-first-passage-percolation-September-24-2026/main.pdf",
+    "claimed_date": "2026-09-24",
+    "claim": "Full moment-restricted no-bigeodesics conclusion",
+    "mathematical_status": "UNVERIFIED",
+    "latex_retrieval": "main.tex returned HTTP 404; original 39-page main.pdf successfully retrieved",
+    "pdf_receipt": "sources/openai_20260924_pdf_receipt.json",
+    "verified_statement_scope": "Theorem 1.1 matches the complete working moment-restricted target; no correctness certification supplied."
+  },
+  "owner_prior_work_check": {
+    "ranking_raw": "Exact P0117 row says the prior compactness attempt lacked anchoring.",
+    "attempts_H_I": "Targeted exact-ID searches produced no P0117 hits.",
+    "lean": "Annotated ranking matches P0117; no target formal-proof receipt found.",
+    "export": "Targeted exact-ID search produced no P0117 hits.",
+    "team_O": "No current P0117 holder row found by exact ID or bigeodesic title search.",
+    "retirement_check": "No exhaustive current solved/retired certification; current openness remains UNKNOWN.",
+    "selected_math_store": {
+      "mode": "read-only",
+      "matched_nodes": 2,
+      "evidence": "STORE_SOURCE_CHECK.json",
+      "recorded_status": "historical unverified / attempted_unsolved"
+    }
+  },
+  "independent_analysis_saved": true,
+  "paired_statement_read": true,
+  "paired_proof_read": true,
+  "paired_proof_audit": "AUDIT_W384.jsonl: reductions kept; full theorem has explicitly unproved support-collapse input",
+  "recall": {
+    "receipt": "recall_receipt.json",
+    "result": "60-second cooperative timeout; direct named memory fallback used",
+    "fallback_slugs": [
+      "perceptron_proof_open_gaps_fleet_2026_07_12",
+      "proof_steps_need_derived_joint_structure_2026_09_09"
+    ]
+  },
+  "next": "Independent referee checks the novel candidate reductions, especially S1.6; validating coordinator records subsequent ingestion and retrieval.",
+  "original_primary_question": {
+    "url": "https://arxiv.org/pdf/1511.03262",
+    "locator": "Question 31, printed p.98 / zero-based PDF page 97",
+    "quote": "Do geodesic lines exist?",
+    "canonical_logical_id": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp"
+  },
+  "broader_standard_conjecture": {
+    "url": "https://arxiv.org/html/1512.00804",
+    "locator": "Conjecture 1",
+    "statement": "For iid finite nonnegative edge weights on nearest-neighbor Z^2 with continuous common distribution, almost surely there are no bigeodesics. The conjecture itself does not impose the min-of-four moment condition.",
+    "working_scope": "The present shape-theorem route and recent manuscript claim use the explicit min-of-four second-moment subcase; the deleted-edge and local compactness reductions do not require that upper-tail moment."
+  },
+  "measurements": "MEASUREMENTS.json: PASS; finite controls only",
+  "states": {
+    "submitted": "submitted",
+    "reviewed": "pending w386 independent check of new reductions",
+    "ingested": "not observed; worker did not invoke integrator",
+    "retrievable": "not checked"
+  },
+  "submission_receipt": "SUBMISSION.json"
+}

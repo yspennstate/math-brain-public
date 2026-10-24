@@ -1,0 +1,13 @@
+{
+  "helper_version": "A019-biased-empty-row-v1",
+  "family": "h_b(u,v)=(1-E(v))*u+(-1)^b E(v), E=1[v=0]; F=1 at x=0 and h*s at x=1, s a two-bit point-defect sign",
+  "domain": "k=2..8; pilot k=2. Exhaustive supplementary ALL ordered Boolean child pairs on two data bits with contaminated references, including constants and zero means",
+  "case_count": "7 structured cases; supplementary finite domain exactly 256 ordered pairs",
+  "symmetry": "none; all specified cases retained",
+  "arithmetic": "Fraction Walsh coefficients, exact prime-log expressions, rational atanh logarithm enclosures with rigorous geometric tail; no numerical sign tolerances",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "outputs": "out/CERTIFICATE.json, out/PILOT.json",
+  "checks": ["direct truth-table spectrum versus closed coefficients", "both children nonconstant and unequal in mean", "parent empty reference forced zero", "full core KL conservation", "complete activation CE insertion including both terminal costs", "positive Lambda and fixed lower bound", "one unused original half-core bank pays Lambda", "boundary k=1 assessed separately"]
+}

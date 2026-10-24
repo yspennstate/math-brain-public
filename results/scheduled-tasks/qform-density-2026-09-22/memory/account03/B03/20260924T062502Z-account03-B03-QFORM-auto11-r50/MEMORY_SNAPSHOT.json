@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260924T062502Z-account03-B03-QFORM-auto11-r50",
+  "source_control_commit": "22729953946cedd225a40b90c0ec084b44127606",
+  "owner_control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "source_match_update": {
+    "stale_prior_debt": "B03 r49 listed the bare null-pivot near-coloop density as unpaid.",
+    "matched_source": "yspennstate/math-open-problems@be8062b160868bcc71aff45a77c56ff2d0501a9a:proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260923T203140Z-account02-B16-QFORM-r36/REPORT.md",
+    "effect": "The exact zero-hub-square/divisible-twist branch is already paid. The live target is the small nonzero physical hub square."
+  },
+  "premises": [
+    {
+      "scope": "live nonzero near-coloop collar and caps-only obstruction",
+      "source": "yspennstate/math-open-problems@bdbe6e38a3ee3d586e8e6119e518c573310253fb"
+    },
+    {
+      "scope": "completed two-bank local-phase Plancherel crossing theorem",
+      "source": "yspennstate/math-open-problems@545738ea4ac5730dc20e6ed5f50315dfcf3322f1:proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T215603Z-account03-B03-QFORM-r41/REPORT.md"
+    },
+    {
+      "scope": "newest designated partner Pluecker overlap-two theorem",
+      "source": "yspennstate/math-open-problems@5f93186cf8952b2b8b0255e08a78fd8506c613e4:proofnet24/QFORM-density/fleet-2026-09-22/account04/B03/20260924T051411Z-account04-B03-plucker-overlap2-r4/REPORT.md"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-FRESH-HUB-SLOPE-PLANCHEREL-v1",
+      "status": "supporting theorem proved",
+      "statement": "For Q=aH^2+2gamma H L+R with H a genuine cap-one physical source independent of W, L=L(W) marginal density <=M and arbitrary R(W), |phi_Q(t)|^2<=min(1,pi M/(|gamma||t|)); hence integral |t|^-1/2|phi_Q|^2 <=8sqrt(pi M/|gamma|)."
+    },
+    {
+      "id": "QFORM-NONZERO-NEARCOLOOP-COLLISION-TIME-v1",
+      "status": "supporting theorem proved on the exact current collar",
+      "statement": "In the exact-rank-three collar c>63/64, D>=1, 0<|a|D<2^-12, the whole-copy weighted time integral is <16.929038195804875 and E|Q-Q'|^-1/2<6.753709102837353, retaining the nonzero hub square and all leaf dependence."
+    },
+    {
+      "id": "QFORM-COMPLEMENTARY-WEIGHT-SPLICE-v1",
+      "status": "scoped density compiler proved",
+      "statement": "If independent S,T satisfy A_-=int |t|^-1/2|phi_S|^2 and A_+=int |t|^1/2|phi_T|^2, then S+T has continuous density <=(2pi)^-1 sqrt(A_-A_+). With a source-disjoint invertible 2x2 B03-r41 crossing this gives [2^(13/4)/sqrt(3)](M/|gamma|)^(1/4)|det C|^-3/8."
+    },
+    {
+      "id": "QFORM-A04B03-R4-TIME-APPLICATION-v1",
+      "status": "designated partner applied at equation level",
+      "statement": "From account04/B03 r4 ||p_Q||inf<=129.924435862525374 J2(H)^-1/6, derive integral |t|^-1/2|phi_Q|^2 <=80.81283593365677 J2(H)^-1/12; under its normalized diffuse branch this is <129.54782623760602."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "26a0511670af0acbbacfb7ea86f56b889c3cdaef",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260924T062502Z-account03-B03-QFORM-auto11-r50/",
+    "files": ["EARLY.md", "REPORT.md", "CHECKS.md"],
+    "check_marker": "QFORM_B03_R50_CHECK_PASS"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "f71554f88323e19c7c2edf73954c54afa3fa0c22",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B03/20260924T062502Z-account03-B03-QFORM-auto11-r50.md"
+  },
+  "scope_boundary": "The new time/collision estimate does not alone imply a one-copy L-infinity density bound for the bare nonzero near-coloop collar. Linear small-ball is proved after a genuinely source-disjoint complementary positive-half time resource, such as the stated invertible two-bank crossing.",
+  "continuity": "proved only on the complementary-weight splice branch; full-target continuity remains open",
+  "full_target": "OPEN",
+  "next_step": "Upgrade the uniform nonzero-collar collision/time resource to a one-copy height bound using the actual product provenance of (S,U,V), or structurally force a source-disjoint complementary positive-half time resource."
+}

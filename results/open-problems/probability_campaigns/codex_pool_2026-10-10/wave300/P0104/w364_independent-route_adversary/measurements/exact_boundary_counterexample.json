@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "proof_status": "exact reproduction; independent mathematical review pending",
+  "assignments": 16,
+  "dijkstra_checks": 32,
+  "single_edge_forcing_checks": 64,
+  "chosen_geodesic_membership_false_positives": 12,
+  "exact_moments": {
+    "mean_T": "21/8",
+    "variance_T": "23/64",
+    "mean_L": "5/2",
+    "variance_L": "3/8",
+    "mean_G": "1/8",
+    "variance_G": "7/64",
+    "covariance_L_G": "-1/16"
+  },
+  "T_counts": {
+    "2": 7,
+    "3": 8,
+    "4": 1
+  },
+  "L_counts": {
+    "2": 9,
+    "3": 6,
+    "4": 1
+  },
+  "before_scalar_stitch": {
+    "wrong_predictions": 2,
+    "total_predictions": 16,
+    "mean_absolute_error": "1/8",
+    "absolute_variance_error": "1/64"
+  },
+  "after_matched_boundary_composition": {
+    "wrong_predictions": 0,
+    "total_predictions": 16,
+    "mean_absolute_error": "0",
+    "absolute_variance_error": "0"
+  },
+  "elapsed_seconds": 0.013107600039802492,
+  "command": "python -X utf8 check_boundary_profile.py",
+  "infinite_lattice_extension": "Positive weights remove loops. Every alternative simple path has at least four edges, hence cost >=4; either two-edge path has cost <=4. Finite-box Dijkstra is an independent computational cross-check, while this argument supplies the infinite-lattice extension.",
+  "forcing_scope": "Forcing the tested edge to 1 gives a two-edge route of cost at most 3. All other simple paths cost at least 4. Hence all forced-low minimizing paths are among the two checked routes, also on the full lattice."
+}

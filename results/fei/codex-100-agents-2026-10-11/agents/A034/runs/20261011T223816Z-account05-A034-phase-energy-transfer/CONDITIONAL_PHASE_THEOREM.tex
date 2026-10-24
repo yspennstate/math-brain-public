@@ -1,0 +1,142 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{Quadratic affine-row conditional phase payment}\author{A034}\maketitle
+All entropy is in bits. Identify physical uniform sign cubes with binary
+vector spaces by $x_i=(-1)^{u_i}$. The physical input law is always the
+independent uniform product law. No correlated physical law is invoked.
+
+\begin{theorem}
+Let $d\ge1$ be an integer. Let nonempty affine subsets
+$A_j=a_j+V_j$ partition $\mathbb F_2^m$. Put
+$k_j=m-\dim V_j$ and $\alpha_j=2^{-k_j}$. Let $S_j$ be distinct subsets
+of the physical $X$ coordinates with $|S_j|\le d$, including possibly
+the empty subset. Let $q_j$ be binary polynomials of degree at most two
+on $Y$ (a polynomial on the affine cell suffices). Define
+\[
+ f(X,Y)=\sum_j\chi_{S_j}(X)1_{A_j}(Y)(-1)^{q_j(Y)}.
+\]
+Let $r_j$ be the rank of the polar bilinear form of $q_j$ on $V_j$.
+The squared Fourier row conditional on $S_X=S_j$ is uniform on an
+affine spectral subspace $L_j\subseteq\mathbb F_2^m$ of dimension
+$k_j+r_j$. Define $a_j'$ to be the number of coordinates that vary
+on $L_j$, and $b_j'$ the number constantly equal to one on $L_j$.
+Then
+\begin{align*}
+ H(S_X)&=\sum_j\alpha_j k_j,\\
+ H(S_Y\mid S_X)&=\sum_j\alpha_j(k_j+r_j)\le2I_Y(f),\\
+ H(f)&=\sum_j\alpha_j(2k_j+r_j)\le4I_Y(f)\le4I(f),\\
+ I_Y(f)&=\sum_j\alpha_j(a_j'/2+b_j'),\qquad
+ I_X(f)=\sum_j\alpha_j|S_j|.
+\end{align*}
+The class is closed under arbitrary coordinate restrictions in $Y$,
+and under coordinate restrictions in $X$ for which the surviving labels
+$S_j\setminus R$ are distinct. It does not admit an arbitrary Boolean
+tensor factor on fresh $Y$ coordinates: any such factor must be a
+quadratic Boolean phase.
+\end{theorem}
+
+\paragraph{Proof.}
+Exactly one cell is occupied at each physical $Y$, so $f$ is an actual
+Boolean sign, not merely a normalized Fourier vector. Distinct $X$
+labels imply that its partial Fourier row is precisely
+$u_j(Y)=1_{A_j}(Y)(-1)^{q_j(Y)}$. Its squared norm is $\alpha_j$.
+
+Fix one cell $A=a+V$, $t=\dim V$, $k=m-t$, and put
+$Q(v)=q(a+v)$. Its polar form is
+\[
+ B(v,w)=Q(v+w)+Q(v)+Q(w)+Q(0).
+\]
+This is bilinear and alternating over $\mathbb F_2$.
+Let $K$ be its kernel, of dimension $t-r$. For $\ell\in V^*$ set
+$W(\ell)=\mathbb E_{v\in V}(-1)^{Q(v)+\ell(v)}$.
+Preserving signs before the cancellation gives
+\begin{align*}
+ W(\ell)^2
+ &=\mathbb E_{w\in V}(-1)^{Q(w)+Q(0)+\ell(w)}
+           \mathbb E_{v\in V}(-1)^{B(v,w)}\\
+ &=2^{-t}\sum_{w\in K}(-1)^{Q(w)+Q(0)+\ell(w)}.
+\end{align*}
+On $K$, $Q(w)+Q(0)$ is linear, so the last sum is either
+$2^{t-r}$ or zero. Thus $W(\ell)^2=2^{-r}$ exactly when
+$\ell|_K=(Q+Q(0))|_K$, and is otherwise zero.
+This is an affine $r$-dimensional set of functionals. Every ambient
+spectral character restricts to a functional on $V$, and the restriction
+map has kernel $V^\perp$ of dimension $k$. Since
+\[
+ \widehat u(T)=2^{-k}(-1)^{T\cdot a}W(T|_V),
+\]
+the ambient occupied spectral set is affine of dimension $k+r$.
+Each squared coefficient is $2^{-2k-r}$, hence the row mass is
+$2^{-k}$ and its normalized spectrum is uniform on $2^{k+r}$ atoms.
+The marginal row law is $\alpha_j$, whose entropy is $\sum\alpha_jk_j$.
+The chain rule now yields both entropy identities with the entire
+conditional term retained.
+
+Every varying coordinate of a uniform affine spectral law is a fair
+bit; each other coordinate is deterministic. Therefore its expected
+Hamming weight is $a'/2+b'$. Its translation subspace has dimension
+$k+r$ and is supported on its $a'$ varying coordinates, so
+$a'\ge k+r$. Summing gives
+$H(S_Y\mid S_X)\le2I_Y$.
+Also $2k+r\le2(k+r)$, proving the joint constant four.
+Cardinality on $X$ gives the stated exact $I_X$. No use of the
+recovered marginal inequality is needed, and its energy is not spent
+twice. Constants and $I_Y=0$ are covered by the same formulas.
+
+An arbitrary coordinate restriction in $Y$ intersects each cell with a
+coordinate affine subspace. Empty intersections disappear; the others
+are affine cells partitioning the remaining uniform cube. Each phase
+remains quadratic, and the $X$ labels stay distinct. An $X$ restriction
+only deletes coordinates from labels and introduces constant signs,
+so the theorem applies if those labels remain injective.
+
+For the tensor guard, suppose $F(X,Y,Z)=h(X,Y)g(Z)$, with $Z$ fresh,
+belongs to the class. A nonzero partial $X$ row has the form
+$u_S(Y)g(Z)$ and also is a unit signed quadratic phase on an affine
+support. Since $g$ never vanishes, its support is
+$\operatorname{supp}(u_S)\times\mathbb F_2^{|Z|}$. Fix any $y_0$ in
+that support. The row on $(y_0,Z)$ is a constant sign times $g(Z)$;
+restricting its quadratic phase proves $g(Z)=\pm(-1)^{q(Z)}$ for
+some degree-at-most-two $q$. Thus arbitrary Boolean factors are
+excluded by an algebraic condition, without assuming FEI.
+\hfill$\square$
+
+\paragraph{Scope, sharpness, and baseline.}
+For $r_j=0$ and nonempty labels this specializes to the affine-selector
+baseline (threshold paper Corollary 8.2), with linear phases shifting
+spectral cosets. The contribution here is the conditional quadratic
+rank term, its exact energy payment, and the tensor/stability guard;
+no new general FEI class or literature novelty is claimed.
+Ordinary addressing with $k$ control bits, distinct singleton $X$
+labels and singleton control cells has $H(S_Y\mid S_X)=k$,
+$I_Y=k/2$, so the conditional constant two is sharp. Its $H=2k$
+and $I=1+k/2$ also show sharpness of four as a limiting joint constant.
+The normalized non-Boolean vector
+$\psi_N(Y)=N^{-1/2}\sum_{i=1}^N y_i$ has
+$H(S_Y\mid S_X)=\log_2N$ and $I_Y=1$, contradicting the claimed
+conditional bound for $N\ge5$ if Boolean quadratic admission is
+dropped. It is excluded by the physical sign requirement.
+
+\begin{theorem}[Full restriction-closure scope obstruction]
+If a class contains ordinary addressing with arbitrarily many control
+bits and is closed under all physical coordinate restrictions, then it
+contains every Boolean sign on every finite cube. Consequently a
+conditional payment $H(S_Y\mid S_X)\le K I_Y$ on this full hereditary
+closure is FEI-strength, even with $X$-degree at most one.
+\end{theorem}
+\paragraph{Proof.}
+For any $g:\mathbb F_2^k\to\{-1,1\}$ take addressing
+$f(X,Y)=X_Y$, with $2^k$ distinct physical $X$ data bits. Restrict
+$X_a=g(a)$ for every address $a$. The resulting function is exactly
+$g(Y)$. Keep an unused $X$ coordinate if a nonempty $X$ block is
+required. Its $X$ degree is zero, hence at most $d=1$; its $S_X$
+is deterministic and its conditional entropy is $H(g)$.
+The asserted payment is then precisely $H(g)\le K I(g)$.
+\hfill$\square$
+
+The first unsupported universal step is a payment for colliding
+$X$ labels or nonquadratic row phases. It is not obtained by closing
+the restricted theorem under every $X$ restriction.
+\end{document}

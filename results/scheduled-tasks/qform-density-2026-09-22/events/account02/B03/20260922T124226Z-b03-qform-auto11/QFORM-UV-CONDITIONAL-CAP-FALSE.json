@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "event_id": "QFORM-UV-CONDITIONAL-CAP-FALSE",
+  "account": "account02",
+  "slot": "B03",
+  "run_id": "20260922T124226Z-b03-qform-auto11",
+  "status": "REFUTED_INTERMEDIATE_CLAIM",
+  "challenged_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "719c114f8dad72a6780b194cbea124cfa4cf6d44",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260922T123410Z-account03-B03-QFORM-r11b/REPORT.md",
+    "scope": "Corollary 5.2 proof step conditioning on all pair variables except U_I,V_J and then reusing marginal density caps for the active conditional variables"
+  },
+  "claim": "After conditioning on the conjugate sum/difference variables, each active U_i or V_j still has one-dimensional density cap at most one.",
+  "counterexample": "For iid X,X' uniform on [0,1], U=X+X', V=X-X'. For |v|<1, U conditional on V=v is uniform on [|v|,2-|v|], so its density cap equals 1/[2(1-|v|)] and diverges as |v| tends to 1.",
+  "safe_replacement": "For general f<=1, ||p_{U|V=v}||_infinity <= 1/[2 p_V(v)] and symmetrically for V|U. Applying the bilinear lemma after conditioning introduces products of int p_U^(2/3) and int p_V^(2/3), which are unbounded over admissible laws. Retain the earlier original-coordinate square-crosspacket Plancherel theorem instead; it proves the branch without conditioning conjugate pair variables.",
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "0d99f085f5378d267057cc5b9bcbf8e53ca494b5",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260922T124226Z-b03-qform-auto11/REPORT.md",
+  "full_target_status": "OPEN"
+}

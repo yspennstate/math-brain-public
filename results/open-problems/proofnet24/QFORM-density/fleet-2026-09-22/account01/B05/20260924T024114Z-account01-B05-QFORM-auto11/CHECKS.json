@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T024114Z-account01-B05-QFORM-auto11",
+  "checks": [
+    {
+      "name": "witt_shell_identity",
+      "status": "PASS",
+      "identity": "2*a*v*(h + k*u + A*v/(2*a) + (delta*z^2-t)/(2*a*v)) = 2*a*v*h + 2*a*k*u*v + A*v^2 + delta*z^2 - t",
+      "symbolic_remainder": "0"
+    },
+    {
+      "name": "partner_borel_constant",
+      "status": "PASS",
+      "K0": 6.8954305003384135,
+      "K_T_at_kappa_zero": 13.790861000676827
+    },
+    {
+      "name": "profile_compiler_constant",
+      "status": "PASS",
+      "formula": "3*2^(-5/3)*(K_T*(1+sqrt(2)))^(2/3)",
+      "value_at_K_T_2K0": 9.779484731487997,
+      "target_value_using_a2_delta_ge_half": 12.32137867032724
+    },
+    {
+      "name": "generic_joint_counterexample_volume",
+      "status": "PASS",
+      "parameters": "L=kappa/(r*epsilon)",
+      "volume": "r*L*(epsilon/kappa)=1",
+      "tube_image": "0 <= kappa*u+w^2/(2*v) <= epsilon on D"
+    }
+  ],
+  "scope": "finite symbolic/algebraic checks only; not a proof of the unresolved product-projection Borel tube"
+}

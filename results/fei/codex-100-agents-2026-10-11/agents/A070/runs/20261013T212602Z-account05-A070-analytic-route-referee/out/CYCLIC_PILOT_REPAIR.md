@@ -1,0 +1,3 @@
+The first independent cyclic pilot stopped while serializing its first certified fixture: exact Fraction denominator growth exceeded Python's 4300-digit integer-to-string limit. It did not find a mathematical failure; all assertions preceding serialization passed. No result from that failed execution is counted.
+
+Helper v1.1 preserves the family and arithmetic and adds explicit outward rounding of each logarithm interval to denominator 2^80. Floor/ceiling preserve containment exactly. Weighted sums of masses then keep compact dyadic endpoints. The Python integer-string limit is not raised. The revised helper and rounding convention were saved before retry.

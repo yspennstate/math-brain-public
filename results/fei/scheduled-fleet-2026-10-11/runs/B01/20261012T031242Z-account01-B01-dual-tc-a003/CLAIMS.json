@@ -1,0 +1,71 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261012T031242Z-account01-B01-dual-tc-a003",
+  "claims": [
+    {
+      "claim_id": "B01-A003-DUAL-TC-PAYMENT",
+      "version": "v1",
+      "exact_statement": "For every nonconstant genuine Boolean f on a finite uniform cube that is restriction-critical, let S have Fourier spectral law, X_i=1_{i in S}, E_i=H(X_i|X_{-i}), J_i=Delta_i H-E_i, and Ddual(S)=H(S)-sum_i E_i. Then 0<=Ddual(S)<=sum_i J_i<=(2/ln 2)sum_i min(I_i(f),1-I_i(f))<=(2/ln 2)I(f).",
+      "hypotheses": [
+        "finite uniform Boolean cube",
+        "genuine Boolean sign",
+        "nonconstant",
+        "restriction-critical: Delta_i H >= (H/I) I_i for every relevant coordinate",
+        "entropy measured in bits"
+      ],
+      "contributors": ["B01"],
+      "proof_source": "DUAL_TC_ENDPOINT.tex equations (1)-(6)",
+      "proof_dependencies": [
+        "direct chain rule for Ddual nonnegativity",
+        "directly reproduced A003 split Delta_i H=E_i+J_i",
+        "A003 scalar Jensen-Shannon minority-mass bound"
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_REVIEW",
+      "first_unproved_line": "Control high-ratio critical-prime Boolean spectra when Ddual/H is arbitrarily small.",
+      "next_consumers": ["A001", "A005", "A026", "A081", "A086", "A094", "B20"]
+    },
+    {
+      "claim_id": "B01-A003-DUAL-TC-RESTRICTED-FEI",
+      "version": "v1",
+      "exact_statement": "For every fixed epsilon>0, every restriction-critical genuine Boolean f satisfying Ddual(S)>=epsilon H(S) obeys H(f)<=(2/(epsilon ln 2))I(f). Consequently every restriction-critical sequence with H/I tending to infinity has Ddual(S)/H(S)<=2/((H/I)ln 2) tending to zero.",
+      "hypotheses": [
+        "hypotheses of B01-A003-DUAL-TC-PAYMENT-v1",
+        "fixed epsilon>0 for the restricted class endpoint"
+      ],
+      "contributors": ["B01"],
+      "proof_source": "DUAL_TC_ENDPOINT.tex equations (7)-(8)",
+      "proof_dependencies": ["B01-A003-DUAL-TC-PAYMENT-v1"],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_REVIEW",
+      "scope": "RESTRICTED_CLASS_ONLY",
+      "does_not_prove": [
+        "a uniform lower bound on Ddual/H",
+        "FEI for low-dual-correlation spectra",
+        "full FEI"
+      ],
+      "first_unproved_line": "Prove a Booleanity or nonlocal-payment bound in the simultaneous critical-prime, exponentially diffuse, vanishing-Ddual/H regime.",
+      "next_consumers": ["A001", "A005", "A081", "A086", "A094", "B20"]
+    },
+    {
+      "claim_id": "B01-A003-FOUR-PROPERTY-COUNTERFAMILY-NORMAL-FORM",
+      "version": "v1",
+      "exact_statement": "If FEI is false, there exists a genuine Boolean counterfamily h_k with H(h_k)/I(h_k) tending to infinity that is restriction-critical, tensor-prime, satisfies max_i I_i(h_k)<=e^3*2^(-H(h_k)/I(h_k)), and satisfies Ddual(S_k)/H(S_k)<=2/((H(h_k)/I(h_k))ln2) tending to zero.",
+      "hypotheses": ["failure of full FEI"],
+      "contributors": ["B01"],
+      "proof_source": "REPORT.md Sections 2-4 and source-pinned A001 descent",
+      "proof_dependencies": [
+        "B01-A001-CRITICAL-PRIME-NORMAL-FORM-v1",
+        "B01-A001-CRITICAL-DIFFUSE-NORMAL-FORM-v1",
+        "B01-A003-DUAL-TC-PAYMENT-v1"
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_REVIEW",
+      "does_not_prove": ["existence of a counterfamily", "full FEI"],
+      "first_unproved_line": "Exclude or bound the four-property residual class.",
+      "next_consumers": ["A001", "A002", "A081", "A086", "A094", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}
+

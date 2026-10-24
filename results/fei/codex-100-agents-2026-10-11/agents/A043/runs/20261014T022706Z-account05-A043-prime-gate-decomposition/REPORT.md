@@ -1,0 +1,65 @@
+# A043 stage4: exact two-term prime decomposition and overlap payment
+
+## exact target, quantifiers, hypotheses and units
+
+Resume the biased-prime payment after the four-input companion obstruction, consuming the new A042 review and selector certificate. All inputs are independent Bernoulli bits. E=(ln2)Hplus is natural corrected entropy, Hplus is in bits, and delta=I-Var uses spectral influence. Constants/literals are contracted before normalizing. A genuine prime has no proper essential block of size at least two with two distinct cofactor rows; every decomposition asserted here uses disjoint physical groups.
+
+Result: every Boolean sign whose positive event is the union of two conjunction terms, in every finite arity and at every product bias, satisfies
+
+    Hplus <= K delta, K=4+12/ln2,
+    21.312340490667 <= K <= 21.312340490668.
+
+The same constant gives ordinary H<=K I at uniform physical inputs. Output negation preserves this result. The bound is not asserted sharp. With at most one opposing shared literal, genuine factorization gives the sharper established Cstar=2+4/ln2. The remaining nonbinary prime root shapes are precisely ternary mux and antipodal-corner gates T_{r,g}, r>=2, g=0,1,2 free guard wires, after deleting constant and irrelevant groups. All T_{r,g} are genuine primes, including the binary r=2,g=0 case. Thus an unbounded-arity prime family is closed, not just a finite bias grid.
+
+This closes the full four-bias inequality for the previous obstruction prime mask33152 with the nonsharp K. Its sharp all-bias optimum remains unresolved. Exactly336 labeled n4 primes, counting output negations, lie in this newly certified class. All-arity prime FEI+ and full FEI remain OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Read BOARD.md at stage start, snapshot2026-10-14 02:22UTC, specifically re-read B09/B10 after the long output was truncated; own STATUS/LEARNED; B09 STREAM_NOTES v2 dated2026-10-11 23:33; and EXECUTION_PROTOCOL.json revision2026-10-11-execution-v2 in full. The lead's target remains n<=4 prime product biases and its review cap requires review/repair before broad new candidates. The source review is completed before developing the active prime-overlap mechanism. No lead tax or rare-AND coefficient is recomputed.
+
+Read original A042 stage4 REPORT.md, CLAIMS.json, PROOF.md and out/SCOPED_REVIEW.json, run20261014T015254Z-account05-A042-bias-endpoint-certificates. Source claim A042-RETAINED-SINGLETON-RESERVE-SELECTOR-ENDPOINT@1 has statement hash34db76116f2e3e71acdafec19f3dfa7494ce740480dca6a32187eced16171fbd. Independently reconstruct its exact slack identity, full fair-data selector continuum and both endpoint expansions in PROOF.md section1. Verdict HOLDS at the complete stated narrow scope; no source repair supplied. General data biases and all-arity payment were explicitly excluded by that source and are not retroactively attributed to it.
+
+Consume A042's actual scoped review of own stage3 claim A043-TERNARY-PRIME-CLOSURE-AND-RESERVE-OBSTRUCTION@1, hash020b97a3820a338acb78f02d9b22287302d18dfc754cb34eabc90fcc455b0e86. Accepted portions: signed reserve, three new ternary orbit bounds/paths and exact prime obstruction. Excluded: full catalogue, mux dependency, majority bundle and whole formula closure. This does not mark the complete earlier bundle accepted.
+
+Read A044 stage3 REPORT/CLAIMS, run20261013T235618Z-account05-A044-non-symmetric-gate-classes: A044-EQUAL-MEAN-ADDRESS-NARROW@2, hashce6233ea0cd04d989f05f012a86b86a446b01d0e87d26877e6382451eeb0441c. Only its three-input mux bound and disjoint identities are used. The earlier independent mux reconstruction in own stage3 remains the relevant scoped evidence; no new full-profile review is claimed. The source explicitly repairs reused-wire beta versus independent-cell t^2; neither profile theorem is needed here. Known binary conjunction constant is consumed via A042-SHARP-BINARY-PRIME-ENDPOINT@1 (hashe163ebefc916767a00214eea2d54e56e53c9666821565f612f15a7ef4f17d5e8), previously source-read and reconstructed. No arbitrary many-term DNF theorem, paper novelty claim, unreviewed sharp tax, Brain query or new web result is a premise. Local source receipts pin the bytes actually read.
+
+## complete derivation or exact first unsupported line
+
+PROOF.md and DECOMPOSITION.md give the complete analytic argument. If conjunction events A and B disagree on at least two common literal coordinates, they are disjoint and their physical derivatives have disjoint supports. Consequently I(F)=I(fA)+I(fB), Var(F)=Var(fA)+Var(fB)-8P(A)P(B), and delta(F)>=delta(fA)+delta(fB), for F=fA+fB+1.
+
+Each individual conjunction's normalized mixed difference on a set S of size>=2 has absolute value<=1/2. The scalar inequality h(a+b)<=2h(a)+2h(b), h(t)=t^2ln(1/t^2), holds at that cap. For equal signs, Cauchy and log inequalities pay the squared amplitude; for opposite signs h is increasing on[0,1/2], so cancellation is paid by the larger original entropy. This does not permit arbitrary singleton amplitudes near1.
+
+Apply the scalar bound only to higher-degree sets and use the known read-once conjunction bound E(fi)<=C0 delta(fi), C0=4+ln4. The universal signed singleton reserve pays E_single(F)<=4delta(F). Thus E(F)<=4delta(F)+2C0[delta(fA)+delta(fB)]<=(12+4ln2)delta(F). The constituent higher-degree entropy ledgers and singleton cost are explicitly added with these constants against the output deficit; no triple mass or coefficient-one slack is spent twice.
+
+For arbitrary two-term DNFs, group coordinates into agreeing common literals, opposing common literals, first-private literals and second-private literals. These are disjoint physical groups. Zero conflicts give an OR of two private conjunctions, multiplied by the common conjunction; one conflict gives a mux of those private conjunctions; both have genuine composition constant Cstar. At least two conflicts leave T_{r,g}. Its three distinct cofactor rows are exhibited for every type of proper block, establishing exact primality. This proves the entire class at K and identifies its irreducible root gates. The exact census is10,52,168 natural two-term primes at n=2,3,4, or10,80,336 with output negation. The n4 natural cases are8 T_{4,0},64 T_{3,1},96 T_{2,2} instances. Every outer bias is the actual induced bias of its disjoint child conjunction; there is no balanced-output assumption.
+
+A concrete next fixture is independently certified: prime mask56067, positive on A={Y1=1,Y2=1,Z=1}, B={Y1=0,Y3=1,Z=1}, C={Y2=0,Y3=0}. Its three events are mutually exclusive, but A/B share the agreeing guard Z in addition to their opposing Y1 literal. The exact all-bias deficit loss is delta(F)-sum delta(fi)=-2v1*p2*p3*p4*(1-p4). At uniform bias it is-1/8: constituent deficits5/16,5/16,1/4, output I=7/4, Var=1, delta=3/4. NEXT_FIXTURE.md gives the derivation, which distinguishes influence cross terms that cancel against covariance from true deficit loss.
+
+The exact first unsupported replacement is an exclusive payment for that coherent shared-guard loss, together with retained constituent entropy, when arbitrary primes or three-term cofactor collisions replace the separated two-event interface. Neither irreducibility nor the A042 slack identity alone proves it. No general corrected bound or sharp optimum for mask56067 is asserted here.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+All specs were saved before their respective jobs. Memory estimates20-80MB; peak not measured; every pilot below60seconds; no >300MB job, GPU, background service or automatic domain escalation. Sampling dimensions were fixed by the explicitly stated infinite family, not raised adaptively.
+
+- `python -X utf8 code/check.py`:159 frozen fixtures (110 actual Boolean product-law cases and49 scalar collision pairs),31,728 exact assertions,20.032seconds, PASS. Family k=2..6 at four fixed laws each, mask33152 on{1/8,1/2,7/8}^4, and nine fair-data selector values including contracted endpoints. Independent tensor centered moments match Mobius partials; physical derivatives check influence/deficit/cancellation identities. A042's selector formula and retained singleton slack are exact rational-log dictionary equalities. Strict signs and constant enclosure use24-term rational atanh intervals. Saved out/checks.json.
+- The first checker pilot failed at z=0 because a local log dictionary retained a zero-coefficient key while the spectral dictionary deleted it. out/PILOT_FAILURE.md preserves the diagnosis. Removing that exact zero entry allowed the identical frozen domain to pass; no theorem or source repair was needed.
+- `python -X utf8 code/decompose.py`:all7,380 ordered pairs of consistent conjunctions at n=1..4, every truth assignment, and all nine T_{r,g} skeletons with r=2..4,g=0..2. Initial factorization run passed118,682 assertions in1.456seconds. The same domain was rerun after freezing the census extension:118,684 assertions in2.072seconds, PASS, including exact168/336 n4 prime counts. Saved out/decomposition_checks.json with explicit natural prime masks. Identical truth tables are deduplicated; no input/output symmetry reduction is assumed.
+- `python -X utf8 code/next_fixture.py`:one prescribed n4 gate, all ten proper blocks, actual dyadic Walsh masses and component ledgers;35 exact assertions in0.00083seconds, PASS. Saved out/next_fixture.json.
+
+Log intervals use exact power-of-two reduction and z=(x-1)/(x+1)<=1/3. The24-term positive atanh tail is bounded by2z^49/[49(1-z^2)]. All reported decimal-grid enclosures are outward rational rounding of those intervals. Source acceptance and continuum/arbitrary-arity theorem use the written derivations, not extrapolation from these fixtures. New claims still need independent review.
+
+## proof dependencies and changed downstream conclusions
+
+The overlap theorem uses actual conjunction mixed differences, the proved scalar collision lemma, derivative support separation, and the established binary-corner disjoint closure. All are reconstructed or explicitly source-scoped. The zero/one-conflict decomposition consumes the actual A044 mux bound at every induced law and the exact corrected composition identity, not its general profile theorem. The full A042 stage4 claim is independently reviewed locally, and its review of prior A043 portions is recorded with exclusions. No shared claim index was changed.
+
+B09 can now remove the entire two-term DNF prime subclass, including the full bias continuum of mask33152, from possible divergent-ratio families. This accounts for336 of the57,240 labeled essential n4 primes, rather than all of them. B20/A041/A045 receive a valid overlap payment with explicit derivative-separation hypotheses, and a prime mask56067 showing exactly where the superadditive deficit mechanism next fails. The proof does not imply a many-term or arbitrary-profile bound. Sharp K for this class and full FEI remain open; supervisor adoption and two new independent reviews remain pending.
+
+## one next mathematical action and independent reviewer
+
+NEXT: pay the exact shared-guard deficit loss on prime56067 over its product-bias continuum while preserving actual normalized profiles and unused singleton/terminal slack. This is the first coherent-intersection extension of the successful overlap mechanism, not another two-term grid. A042/A091 should reconstruct the amplitude lemma and the all-bias overlap ledger; A044/A090 should independently verify the exact prime skeleton characterization and the shared-guard loss. No acceptance is assigned before they do that work.
+
+## actual persistence receipts or precise save blocker
+
+The four protocol files, PROOF.md, DECOMPOSITION.md, NEXT_FIXTURE.md, frozen specs, all scripts, exact outputs, scoped source reviews and local hash receipts are saved under this run. PROGRESS/PACKET_DELTA are byte-identical and packet_ids=[A043]. STATUS has exactly two lines; dated WORKLOG and durable LEARNED are appended. Previous runs and all other agents' folders are unchanged. Final validation checks required fields, canonical statement hashes, passed outputs and file-size limits. New independent review, registry adoption, supervisor copies, Brain ingestion and remote mirror verification remain pending; local save has no blocker.
+
+**Universal bridge:** This stage moves the lead's C025/G-BIASED-LTF prime localization bridge by proving a uniform all-product-bias payment for every two-term DNF, precisely factoring its disjoint groups and certifying its remaining antipodal prime gates in unbounded arity. It closes336 labeled n4 primes and the complete four-bias inequality for mask33152 at K=4+12/ln2, while independently accepting A042's retained-slack/selector theorem at its stated scope. The arbitrary-prime cofactor payment and full FEI remain open. NEXT targets the certified-1/8 shared-guard deficit loss in prime56067, because controlling that coherent interaction is the shortest extension from the successful separated overlap payment toward general prime gates, rather than another isolated class census.

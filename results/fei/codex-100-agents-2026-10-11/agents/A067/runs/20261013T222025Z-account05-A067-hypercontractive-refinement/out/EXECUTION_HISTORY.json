@@ -1,0 +1,14 @@
+{
+  "provenance": "Transcribed from successful command outputs in this stage; separates final primary certificates from targeted diagnostic revisions.",
+  "runs": [
+    {"command": "python -X utf8 code/check.py pilot", "cases": 12, "assertions": 291, "elapsed_seconds": 0.0110675000178162, "role": "final primary pilot"},
+    {"command": "python -X utf8 code/check.py full", "cases": 14098, "assertions": 243717, "elapsed_seconds": 3.748292500007665, "role": "final primary full certificate"},
+    {"command": "python -X utf8 code/check_diagnostic.py", "helper_version": "1.0", "cases": 7, "assertions": 26, "elapsed_seconds": 0.0013273000076878816, "role": "initial fixed diagnostic, before real-field guard"},
+    {"command": "python -X utf8 code/check_diagnostic.py", "helper_version": "1.1", "cases": 8, "assertions": 31, "elapsed_seconds": 0.001343499985523522, "role": "real-field guard added under separately updated frozen specification"},
+    {"command": "python -X utf8 code/check_diagnostic.py", "helper_version": "1.1", "cases": 8, "assertions": 31, "elapsed_seconds": 0.0011346999963279814, "role": "final diagnostic; replaced redundant cap check by explicit non-Boolean value check"}
+  ],
+  "final_primary_assertions": 244039,
+  "all_executed_assertions_including_replays": 244096,
+  "domain_escalation": "The outside-domain guard was explicitly frozen as a compressed 16-coefficient real field; no added Boolean search or 16-bit truth table.",
+  "failures": []
+}

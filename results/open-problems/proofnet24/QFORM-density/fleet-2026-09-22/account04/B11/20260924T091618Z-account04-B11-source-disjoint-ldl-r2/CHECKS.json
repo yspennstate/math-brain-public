@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T091618Z-account04-B11-source-disjoint-ldl-r2",
+  "theorem": "QFORM-LDL-SOURCE-DISJOINT-THIRD-CURVATURE-v1",
+  "symbolic_checks": [
+    "M block diagonal implies spec(M)=spec(B2) union {d}",
+    "D2>=s^2 and |d|>=s",
+    "D2^(-1/4)|d|^(-1/2)<=s^(-1)",
+    "|ad|sqrt(1+(r/a)^2)=|d|sqrt(a^2+r^2)=|M e1 wedge M e3|"
+  ],
+  "constants": {
+    "general_normalized_linear_form": "128*sqrt(2)/s",
+    "literal_coordinate": "128/s",
+    "inverse_two_jacobian": "sqrt(2*pi)/s"
+  },
+  "scope": "exact rank three; source-disjoint third curvature; arbitrary signs and affine terms",
+  "not_claimed": [
+    "shared-source third curvature",
+    "arbitrary additional spectrum",
+    "full QFORM",
+    "full-target continuity"
+  ]
+}

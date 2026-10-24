@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260923T004313Z-qform-eigenvalue-r21",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "initial_control_commit": "c2c5488e1dba1d5be8bd5dc9af8f38246f0cedb6",
+  "final_control_refresh_commit": "3760cdda93517109aa8eb8d1782beecef6b90a21",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-THRESHOLD-PRESERVING-SCHUR-INHERITANCE-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For any invertible p-coordinate physical principal pivot, the Schur complement retains at least N_abs(A;L)-p eigenvalues at the identical threshold L, and separately at least N_+(A;L)-p positive and N_-(A;L)-p negative threshold eigenvalues."
+    },
+    {
+      "id": "QFORM-PROTECTED-TRIPLE-ARBITRARY-COMPLETION-6SQRTPI-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "If a final physical 3x3 principal block has sigma_min>=sigma, arbitrary outside spectrum/couplings give ||p_Q||inf<=6sqrt(pi)/sigma. A baseline triple with local added footprint delta<kappa gives 6sqrt(pi)/(kappa-delta)."
+    },
+    {
+      "id": "QFORM-SCALAR-PIVOT-PROTECTED-SCHUR-CORE-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "If a scalar pivot has magnitude |a| and its Schur complement has a protected physical 3x3 block with sigma_min>=sigma, then ||p_Q||inf<=4sqrt(6sqrt(pi)/(|a|sigma))."
+    }
+  ],
+  "source_check": {
+    "source": "yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md",
+    "status": "CHECKED_SUBSTEPS_PASS",
+    "checked": [
+      "logarithmic auxiliary layer-cake constants",
+      "determinant-only physical-pair algebra and constants",
+      "Gaussian-padding preservation of strict no-tau-pivot class",
+      "spectral-count inheritance, independently reproved"
+    ],
+    "not_claimed": "N3 itself remains unproved; no end-to-end full-QFORM review is claimed."
+  },
+  "partner_result_applied": {
+    "worker": "account04/B12",
+    "run_id": "20260922T192552Z-account04-B12-mixed-shear-r1",
+    "source": "yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e:proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260922T192552Z-account04-B12-mixed-shear-r1/REPORT.md",
+    "equation": "M(h)<=6sqrt(pi)/sigma implies ||p_(U+psi(Z))||inf<=6sqrt(pi)/sigma for the arbitrary dependent outside quadratic remainder."
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "dd754a0bfed889fd29c931b7112c8c3285fc83e8",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T004313Z-qform-eigenvalue-r21/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T004313Z-qform-eigenvalue-r21/CHECK_RESULT.json",
+    "readback": true
+  },
+  "checker": {
+    "threshold_tests": 50000,
+    "violations": 0,
+    "status": "SANITY_ONLY_NOT_PROOF"
+  },
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "NOT_PROVED_BY_THIS_RUN",
+  "unresolved_implication": "Prove N3: a universal density bound in the no-tau-pivot three-large-eigenvalue hybrid/dense class. The new Schur theorem shows extra large eigenvalues can be peeled without threshold degradation, but does not construct product-preserving smoothing in N3.",
+  "next_mechanism": "Combine threshold-preserving physical Schur peeling with grouped-bank or weighted-volume certificates inside N3, paying the account04/B12 mixed norm only after product aggregation.",
+  "scheduler_mutation": false,
+  "notification_mutation": false,
+  "email_sent": false
+}

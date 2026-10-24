@@ -1,0 +1,24 @@
+Execution environment: local exact-integer Python execution during R7-02 run, 2026-09-19 UTC.
+Script: research7_2026-09-17/R7-02/artifacts/2026-09-19/p0169_exact_small_n_walsh.py
+Arithmetic: integer Walsh numerators and exact Fraction output; no floating-point comparisons.
+
+n=1
+  exact_degree_counts={0: 2, 1: 2}
+  degree_cap=1 functions=4 max_linear_sum=1 witness_table=0x1 witness_exact_degree=1
+n=2
+  exact_degree_counts={0: 2, 1: 4, 2: 10}
+  degree_cap=1 functions=6 max_linear_sum=1 witness_table=0x3 witness_exact_degree=1
+  degree_cap=2 functions=16 max_linear_sum=1 witness_table=0x1 witness_exact_degree=2
+n=3
+  exact_degree_counts={0: 2, 1: 6, 2: 62, 3: 186}
+  degree_cap=1 functions=8 max_linear_sum=1 witness_table=0xf witness_exact_degree=1
+  degree_cap=2 functions=70 max_linear_sum=1 witness_table=0x3 witness_exact_degree=2
+  degree_cap=3 functions=256 max_linear_sum=3/2 witness_table=0x17 witness_exact_degree=3
+n=4
+  exact_degree_counts={0: 2, 1: 8, 2: 212, 3: 12648, 4: 52666}
+  degree_cap=1 functions=10 max_linear_sum=1 witness_table=0xff witness_exact_degree=1
+  degree_cap=2 functions=222 max_linear_sum=1 witness_table=0xf witness_exact_degree=2
+  degree_cap=3 functions=12870 max_linear_sum=3/2 witness_table=0x17f witness_exact_degree=3
+  degree_cap=4 functions=65536 max_linear_sum=3/2 witness_table=0x117 witness_exact_degree=4
+
+Interpretation limited to enumerated n: no counterexample to the weak sqrt(d) bound occurs for n<=4; every degree<=2 truth table has linear sum <=1; every degree<=3 truth table with n<=4 has linear sum <=3/2. The latter equals the three-bit majority linear sum, but this output is not a universal d=3 proof.

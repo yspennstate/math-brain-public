@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260922T173618Z-account03-B14-QFORM-r15",
+  "source_control_commit_at_publication": "a910d83b4b2e903825e1e57b6541e4f3c13af0cc",
+  "control_revision": "2026-09-22.9",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "actual_mathematical_premises": [
+    "Independent original coordinates have marginal probability densities bounded by one.",
+    "Conditioning outside an original-coordinate active set preserves independence and cap-one laws on the active coordinates.",
+    "For a nonsingular zero-diagonal 3x3 symmetric block, affine terms are exactly removable by coordinate translation because the block is invertible.",
+    "Account04/B14 cap-preserving compact completion transfers a uniform finite-fragment small-ball bound to arbitrary unbounded cap-one products with no constant loss."
+  ],
+  "partner_result": {
+    "account": "account04/B14",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "430065de1a8e478dc6156f6b489aa46a63681c09",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260922T171953Z-account04-B14-QFORM-r2/REPORT.md",
+    "scope_applied": "C_all=C_compact=C_finite-interval-unions for quadratic small-ball constants, with no support-diameter, translation, gap or fragment-count loss."
+  },
+  "new_result": {
+    "status": "proved_in_stated_scope",
+    "statement": "For a nonsingular zero-diagonal physical principal triple B=[[0,a,b],[a,0,c],[b,c,0]], arbitrary affine perturbations and arbitrary outside conditioning, ||p_Q||_infinity <= 21*2^(1/3)*exp(-2/3)*|det B|^(-1/3) < 13.585*|det B|^(-1/3).",
+    "mechanism": "Exact affine completion plus a conditional product factorization and a cap-one logarithmic trace integral.",
+    "full_qform": "OPEN",
+    "continuity": "OPEN"
+  },
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "49f1c21b47979575eaa8c34b90d066c8034140b4",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260922T173618Z-account03-B14-QFORM-r15/REPORT.md",
+    "blob": "fa9584e09d7d27d540685d9f93aa7b632de4fc27"
+  },
+  "unresolved_implication": "Extend the determinant-scale bound to near-zero diagonal physical triples without scalar-pivot blowup, then prove an exhaustive original-coordinate structural reduction from the bare three-large-eigenvalue hypothesis to this or another already-controlled branch.",
+  "next_step": "Treat diagonal terms as a perturbation of the exact product factorization and quantify the maximum scale-free diagonal/off-diagonal regime for which the one-dimensional logarithmic trace remains uniformly integrable."
+}

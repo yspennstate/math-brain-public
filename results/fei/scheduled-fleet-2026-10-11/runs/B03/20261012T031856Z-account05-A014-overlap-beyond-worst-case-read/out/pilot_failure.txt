@@ -1,0 +1,3 @@
+Pilot helper v1 failed its first Fourier-amplitude sign assertion at check.py line 103.
+Reason: FWHT uses characters (-1)^bit while positive AND gates use coordinates 2*bit-1; individual amplitudes at an odd Fourier index are negative in that FWHT convention. All gates' amplitudes at that index have the SAME sign, and their cross products remain nonnegative as required by the proof.
+Correction v1.1: check (-1)^|T| times every amplitude >=0. Keep the exact nonnegative-cross and reconstruction assertions unchanged. This is a coordinate-convention repair, not a changed mathematical hypothesis or searched domain.

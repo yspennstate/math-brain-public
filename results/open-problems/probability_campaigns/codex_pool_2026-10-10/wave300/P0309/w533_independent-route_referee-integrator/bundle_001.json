@@ -1,0 +1,81 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w533",
+  "bundle_slug": "p0309-scope-and-referee-gap-20261010",
+  "entries": [
+    {
+      "key": "p0309-intake-scope",
+      "namespace": "probability.riesz",
+      "logical_name": "p0309-finite-temperature-intake-scope",
+      "kind": "concept",
+      "title": "P0309 intake scope and status",
+      "statement": "The 2026-09-07 campaign ledger asks for existence of a crystalline Gibbs phase at sufficiently low strictly positive temperature for a three-dimensional Coulomb or Riesz gas in regimes predicted by Lewin's review. The ledger itself marks current status unverified. It does not fix one Riesz exponent, ensemble, renormalized conditional kernel, or exact positional-order criterion; a chosen special case must be identified as such.",
+      "proof_text": null,
+      "assumptions": ["This is a record of the campaign's problem formulation, not a solution or a current openness certificate."],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-codex-20260906:op-p0309",
+        "url": "urn:probability-research:20260906:codex-campaign:op-p0309",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work",
+        "excerpt": "current status unverified"
+      }
+    },
+    {
+      "key": "p0309-source-distinction",
+      "namespace": "probability.riesz",
+      "logical_name": "positive-temperature-phase-distinct-from-groundstate-crystallization",
+      "kind": "concept",
+      "title": "Finite-temperature Riesz phase versus ground-state crystallization",
+      "statement": "Lewin's 2022 review discusses finite-temperature Riesz phase transitions in Section VI through nonuniqueness and symmetry breaking of Gibbs point processes, and reports numerical BCC/FCC phase diagrams in three dimensions. Its Conjecture 38 in Section IV.B instead concerns zero-temperature equilibrium configurations. Proving that conjecture, or finite phonon variance around an assumed lattice, does not by itself construct a positive-temperature crystalline Gibbs state.",
+      "proof_text": null,
+      "assumptions": ["Lewin review version 2, 2022-04-30", "The source's finite-beta Gibbs class is stated directly for short-range s>d; long-range Gibbs specifications require separate formulation."],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:2202.09240v2:sections-IVB-VI",
+        "url": "https://arxiv.org/pdf/2202.09240",
+        "revision": "v2-2022-04-30-read-2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "For larger values of Upsilon, it is believed to form a solid."
+      }
+    },
+    {
+      "key": "p0309-referee-gap",
+      "namespace": "probability.riesz",
+      "logical_name": "p0309-pressure-cusp-and-dlr-review-gap",
+      "kind": "concept",
+      "title": "P0309 referee gap for a short-range pressure route",
+      "statement": "A reviewed conditional route for the unlabelled three-dimensional short-range Riesz gas s>3 uses a periodic source. If the infinite-volume pressure has a strictly positive right derivative at zero source, and a selected zero-source local limit satisfies the Gibbs DLR specification, then its mean intensity has a nonzero reciprocal-lattice Fourier coefficient and continuous translations are broken. Neither the positive pressure slope nor DLR passage has been proved for the full gas in this packet; the harmonic lattice calculation is a reference model only.",
+      "proof_text": null,
+      "assumptions": ["This is a draft review summary, not an unconditional theorem.", "Short-range s>3 specialization only; positive pressure slope and DLR membership are stated as unproved premises."],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w533-P0309-referee-20261010",
+        "url": "urn:owner-work:w533:P0309:REVIEW_PACKET.md",
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": "The cusp m>0 has not been shown for any full Riesz gas"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0309-intake-scope",
+      "to_key": "p0309-source-distinction",
+      "kind": "cites",
+      "rationale": "The campaign statement explicitly names Lewin's review as the source; the second concept records the review's relevant finite versus zero-temperature distinction."
+    },
+    {
+      "from_key": "p0309-referee-gap",
+      "to_key": "p0309-intake-scope",
+      "kind": "specializes",
+      "rationale": "The reviewed pressure argument is restricted to the s>3 short-range part of the intake's Coulomb-or-Riesz target."
+    },
+    {
+      "from_key": "p0309-intake-scope",
+      "to_existing_logical": "math:probability.core:open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "semantic_association",
+      "rationale": "Both ends refer to the same P0309 campaign entry op-p0309; this draft adds scope and current-status caveats to the existing concept card."
+    }
+  ]
+}

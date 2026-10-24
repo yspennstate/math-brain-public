@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T043752Z-account03-B05-QFORM-r40",
+  "status": "DIAGNOSTIC_CHECKS_ONLY_NOT_PROOF",
+  "symbolic": {
+    "crossstar_decomposition": "simplify((1-s)*(t-c^2/s)+s*((1-t)-c^2/(1-s))+s*(1-s)*(c/s+c/(1-s))^2 - (s*(1-t)+(1-s)*t+2*c^2)) == 0",
+    "grouped_matrix_determinant": "factor(det(M)) == -a^2*delta*(alpha_J-alpha_K)^2"
+  },
+  "random_regression": {
+    "samples": 1000,
+    "seed": 20260924,
+    "max_abs_residual_crossstar_and_currency_identity": 1.0408340855860843e-15,
+    "max_abs_residual_grouped_matrix_determinant": 4.263256414560601e-14
+  },
+  "constant_checks": {
+    "C_star": 491.735145127033,
+    "C_gap_at_S_ge_half_G_ge_one_six": 1787.0841168592647,
+    "C_Walsh_at_S_ge_half_G_eq_one": 983.470290254066
+  },
+  "scope_checks": [
+    "No arbitrary-joint coarea lemma used.",
+    "No conditional projection density cap used.",
+    "No independence after a global rotation used.",
+    "Y and Z independence comes only from disjoint original-coordinate banks.",
+    "Continuity is not claimed for the new theorem."
+  ]
+}

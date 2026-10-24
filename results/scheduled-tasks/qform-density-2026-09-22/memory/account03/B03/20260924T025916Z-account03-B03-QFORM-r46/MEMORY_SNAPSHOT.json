@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260924T025916Z-account03-B03-QFORM-r46",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_head_initial": "97cfd2a3d5d1d8a9f7775c3d7c0c3fdae6bfa64a",
+  "source_control_head_prepublication": "a3d54bfa6adf395ea09e8db84d6971c805ae1983",
+  "execution_context": "scheduled_automation",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "target_status": "OPEN",
+  "full_target_continuity": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-SMALL-NONZERO-TAIL-CANNOT-BE-DROPPED",
+    "account02/B03-20260924-rank-two-triangle-instability"
+  ],
+  "premises": [
+    {
+      "source": "math-open-problems@335802072fb0f102ee9245045dd52b73ddc575b9",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260924T020413Z-account03-B03-QFORM-r45/REPORT.md",
+      "scope": "standard cap-one product projection constants used there: scalar sqrt(2), planar 2"
+    },
+    {
+      "source": "math-open-problems@1af51417c2d6a42394faa853627b8bb38d5f4d75",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/b03-20260924T011542Z-auto11/REPORT.md",
+      "scope": "rank-two triangle instability showing nonzero same-bank curvature cannot be added perturbatively"
+    }
+  ],
+  "partner_result": {
+    "partner": "account04/B03",
+    "brain_final_pin": "a920eaceda182a4f6b40ac9552eaf13e838b6301",
+    "math_commit": "19345adf8bb78f11da95a556d6fdcc47af957b19",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B03/20260924T021651Z-account04-B03-hyperbola-fourvolume-r3/REPORT.md",
+    "applied_statement": "||p_Q||inf,ess <= 8 Delta^(-1/4) on the literal hyperbolic-pair determinant branch",
+    "new_application": "int |t|^(-1/2)|phi_Q(t)|^2 dt <= 8 sqrt(2pi) Delta^(-1/8); for the partner unit-determinant block this is <=20.053026197048002"
+  },
+  "proved_results": [
+    {
+      "id": "QFORM-ONE-LINEAR-BANK-R2-DENSITY-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For S=F(X,Z)+2<M^T X+q(Z), with X,Y disjoint cap-one product banks, Y entering only linearly, and actual crossing singular values s1>=s2>0, ||p_S||inf,ess <=2sqrt(pi)(s1s2)^(-1/2). Extra crossing singular directions are retained."
+    },
+    {
+      "id": "QFORM-ONE-LINEAR-BANK-R2-TIME-v1",
+      "status": "PROVED_ASSIGNED_INTEGRATED_ESTIMATE",
+      "statement": "For an independent copy of the whole output, int |t|^(-1/2)|phi_S(t)|^2 dt <=4sqrt(2)pi^(3/4)(s1s2)^(-1/4). The one-copy density bound is proved first, so linear small-ball scaling is already available."
+    }
+  ],
+  "canonical_math_commit": "4da579fc8bcb3169099543b99ef99e1a829b3833",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260924T025916Z-account03-B03-QFORM-r46/REPORT.md",
+  "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260924T025916Z-account03-B03-QFORM-r46/CHECKS.md",
+  "handoff_commit": "1cf0858366daa79d44d1fd7c61e49bbeb6ae6c81",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B03/20260924T025916Z-account03-B03-QFORM-r46.md",
+  "unresolved_implication": "The live general aligned-rank-two collar may contain nonzero self-curvature on both physical banks. The new theorem is exact and tail-stable only when one conditioned bank is linear.",
+  "next_step": "Use an exact physical-coordinate Schur/hyperbolic identity to expose a linear bank, or extend the dependence-safe time integral to retain one same-bank quadratic block without reproducing the rank-two logarithmic singularity.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

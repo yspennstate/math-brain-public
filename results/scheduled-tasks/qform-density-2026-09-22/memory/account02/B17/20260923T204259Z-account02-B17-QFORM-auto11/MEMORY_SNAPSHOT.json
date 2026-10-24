@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "20260923T204259Z-account02-B17-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_initial": "cfd0d0ef51c48679957bf648422676b15207031c",
+  "control_commit_prepublication": "0082f302e675e9ab32b727c257b59cb67559d105",
+  "status": "FULL_TARGET_OPEN_SUPPORTING_GLOBAL_FRAGMENT_WITNESS_EXCLUSION",
+  "theorem_id": "QFORM-DENSE-FRAGMENT-GLOBAL-AGGREGATE-v1",
+  "headline": "For the exact dense six-variable Householder matrix with nonzero spectrum {1,1,-1}, arbitrary finite/countable interval-indicator cap-one marginals with nonkernel pair-sum center gap Delta>sqrt(6)/2 satisfy ||p_Q||_infinity <= p_*(0)+6sqrt(6)/(Delta-sqrt(6)/2), where p_*(0)=4.063070616806037...<3sqrt(2).",
+  "exact_certificates": [
+    "Delta>=84 implies ||p_Q||_infinity<140/33<3sqrt(2)",
+    "For eta=10^-3 and f_R=1_[ -(1-eta)/2,(1-eta)/2 ]+1_[R,R+eta] on all six coordinates, R>=110 implies the global bound ||p_QR||_infinity<140/33<3sqrt(2)",
+    "The R>=110 rational margin to 140/33 is 766/1786125"
+  ],
+  "partner_applied": {
+    "account_slot": "account03/B17",
+    "commit": "e79bba262d16c5f629722431a39f563c0d8c4094",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T200542Z-account03-B17-QFORM-auto11/REPORT.md",
+    "use": "Its countable-fragment exact-kernel bank domination h_j0<=h_* and fragment-count-free six-chart gradient estimate were upgraded from cone-tip to all-output measure/density bounds."
+  },
+  "required_source_applied": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md",
+    "result": "Theorem C ruled one-sheet identity",
+    "use": "For the connected triangular control, the identity plus symmetric log-concave Prekopa marginals gives p_*(s)<=p_*(0) for every s>=0. The generic pi*sqrt(2) constant alone is too large and is treated only as a proof-constant limitation."
+  },
+  "negative_side_source": {
+    "commit": "9cee470f9b774f59ad36ba4bbcdbc6339de4abe6",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260923T195220Z-account01-B17-QFORM-auto11/REPORT.md",
+    "use": "Special triangular-bank two-sheet proof gives the global connected-control identity ||p_*||_infinity=p_*(0), while respecting the correction that a generic two-sheet X-ray-only argument is false."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "math_bundle_commit": "c9a6d151fa7192bfb3bb973de4fd09823e707b55",
+  "math_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260923T204259Z-account02-B17-QFORM-auto11/REPORT.md",
+  "handoff_commit": "fa43bf70f705211c82bd2ab65d49c09fb41621cc",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B17/20260923T204259Z-account02-B17-QFORM-auto11.md",
+  "checker_status": "PASS QFORM-DENSE-FRAGMENT-GLOBAL-AGGREGATE-v1",
+  "unresolved_implication": "Near-kernel resonance: countably many nonkernel cells whose physical centers become remote while |Tc| remains O(1), so the center-gap derivative lower bound does not improve.",
+  "next_step": "Construct a source-valid near-kernel resonant stress family and either obtain a genuine >3sqrt(2) peak or prove a replacement global bound paid by fragment lengths/mass rather than center separation. Keep additional-spectrum and arbitrary rough-law branches explicit.",
+  "full_brain_connected": false,
+  "native_memory_status": "WITHOUT_VERIFIED_BRAIN"
+}

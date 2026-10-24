@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B05",
+  "run_id": "20260922T195340Z-account01-B05-QFORM-r17",
+  "control_revision": "2026-09-22.15",
+  "control_commit_observed_prepublication": "883375fea4b0d7ddf97ac30aa983fa8ff3dedfa0",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "NOT_PROVED",
+  "outcome": "ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREM_PROVED / PRECISE_MISSING_FACTOR_IDENTIFIED",
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-SCALAR-REMAINDER-CONDITIONAL-SUP-FALSE"
+  ],
+  "partner_result": {
+    "worker": "account02/B05",
+    "name": "QFORM-2D-PARSEVAL-PROJECTION-CAP-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260922T155206Z-b05-qform-779c4c9b/REPORT.md",
+    "application": "Scaled to ||p_(S_rho,L_rho)||_infinity <= e/sqrt(det Gram), producing a rho^{-2} far-tail bound at q=0."
+  },
+  "new_result": {
+    "name": "QFORM-HEAVY-ISOTROPIC-ZERO-LEVEL-CURVATURE-v1",
+    "statement": "In the exact-rank-three heavy-isotropic branch, the curvature-sector density at q=0 is at most e+4sqrt(2e), and the full density at q=0 is at most e+5sqrt(2e)<14.377.",
+    "structural_identity": "Explicit M^{-1} gives |tau|>=1 and 4gamma^2+kappa^2+1<=B^2; the pair Gram determinant D(rho)=(1-c)(1+(kappa-rho)^2)+(gamma+tau rho^2/(2B))^2 yields the rho^{-2} gain."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d5aecac785f127174d8349c01db0f492035ad341",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260922T195340Z-account01-B05-QFORM-r17/REPORT.md",
+    "blob": "5ec9461cffd4c4dcf1454c21863368c3b63a90e5"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "b85031862a0359e5baa29fd1c005c26afd6df6d0",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B05/20260922T195340Z-account01-B05-QFORM-r17.md"
+  },
+  "unresolved_implication": "QFORM-TRANSLATION-UNIFORM-HYPERBOLIC-CURVE-TRACE-v1",
+  "next_step": "Control the q/y hyperbolic trace uniformly in q while retaining the original product provenance and an integrable radial gain; do not replace it by a fiber supremum.",
+  "scheduler_mutation": false,
+  "notifications_changed": false,
+  "email_sent": false,
+  "public_release": false
+}

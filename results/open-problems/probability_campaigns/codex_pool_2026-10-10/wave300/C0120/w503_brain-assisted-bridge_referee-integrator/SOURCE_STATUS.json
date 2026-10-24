@@ -1,0 +1,33 @@
+{
+  "problem_id": "C0120",
+  "as_of": "2026-10-10",
+  "checks": [
+    {
+      "kind": "ranking_catalog",
+      "verdict": "VERIFIED_CATALOG_ENTRY_ONLY",
+      "source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:544",
+      "quote": "5,C0120,Fluctuation exponent of directed polymers beyond the logarithmic improvement,attempted_un,power improvement of polymer variance (KPZ)",
+      "corrected_statement": "The 2026-09-07 ranking records a tier-5 attempted-unsolved candidate about a power improvement of directed-polymer variance; this catalog row neither specifies the model and quantifiers nor certifies current openness."
+    },
+    {
+      "kind": "primary_source_correction",
+      "verdict": "FIX_INTAKE_STATEMENT",
+      "source": "https://arxiv.org/pdf/0810.4221, Section 8, Theorem 8.1, PDF pp. 37-38; Section 12 problem (3), PDF p. 59",
+      "source_quote": "(3) Improve the fluctuation exponent in directed polymers. The current proof via hypercontractivity gives only a log n correction.",
+      "model_quote": "The (1+1)-dimensional directed polymer model in Gaussian environment is defined as follows.",
+      "theorem_quote": "Theorem 8.1. For some universal constant C, we have Var(M) <= Cn/log n.",
+      "corrected_statement": "For i.i.d. standard Gaussian weights on vertices of the nonnegative quadrant, let M_n be the maximum sum over directed length-n paths from the origin taking up or right steps. The source asks to improve the fluctuation exponent beyond Theorem 8.1's Var(M_n) <= C n/log n. A natural precise power target is: find epsilon>0 and C_epsilon with Var(M_n) <= C_epsilon n^(1-epsilon) for all sufficiently large n. The power target is an interpretation of the source's wording, not a verbatim question."
+    },
+    {
+      "kind": "bounded_status_check",
+      "verdict": "CURRENT_OPENNESS_UNKNOWN",
+      "source": "https://arxiv.org/pdf/0909.1352, Theorem 1.3; https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/blms.12941, Sections 1.1-1.2; local solved_register.md and solved_so_far.md targeted search",
+      "finding": "The 2009 paper gives an n/log n Gaussian bound for fixed diagonal endpoints in general dimension; the 2024 paper studies fixed endpoints and nonnegative weight laws, cites n/log n nearly-Gamma bounds, and reports exact exponent only for integrable weights. Neither is a verified resolution of the source's Gaussian free-endpoint target. Targeted C0120/directed-polymer searches found no entry in the local solved registers or intake D-G status files. This bounded check cannot certify that no later solution or owner-retired result exists."
+    }
+  ],
+  "exact_source_statement": "Source Section 12(3): Improve the fluctuation exponent in the Section 8 (1+1)-dimensional Gaussian zero-temperature directed-polymer model beyond its logarithmic correction; proposed quantitative target Var(M_n)=O(n^(1-epsilon)) for some epsilon>0.",
+  "current_open_status": "UNKNOWN",
+  "solved_retired_status": "NO_MATCH_IN_TARGETED_LOCAL_REGISTERS; NOT_CERTIFIED",
+  "primary_pdf_sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+  "intake_mismatch": "The 2026-09-07 problems.jsonl C0120 row substitutes Var(log Z_n) and general dimension for source Theorem 8.1's Var(M_n) in 1+1 Gaussian directed last-passage percolation. The 2026-09-07 attempt inherits this mismatch."
+}

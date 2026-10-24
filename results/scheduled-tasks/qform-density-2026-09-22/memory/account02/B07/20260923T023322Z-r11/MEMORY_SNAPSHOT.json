@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B07",
+  "run_id": "20260923T023322Z-r11",
+  "status": "ESSENTIAL_STEP_APPLIED_BOUNDED_MARGINAL_TAIL_CORE_PAID_FULL_TARGET_OPEN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "control_commit_pre_handoff": "f0e79e34042ac7ed02fb2e116f0c135fc357a98b",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null,
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "1f5ab2ddba6e99675fb9177666c5e64e396e54e5",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T023322Z-r11/REPORT.md",
+    "checkpoint_commit": "7c395c519b657c99fa0d2e6bed16ccb520334779",
+    "checkpoint_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T023322Z-r11/CHECKPOINT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "4d9ee5dcf567f15f1348ad46b8d38048433f965e",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B07/20260923T023322Z-r11.md"
+  },
+  "sources_applied": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "use": "Theorem MF pays the exact diffuse bi-anchor target family: |phi(t)|<=16 pi^3 |t|^-3 and ||p_Q||inf<=3*2^(1/3)"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "472b70df7d1edbb3afac23269bc2e4368ae0e371",
+      "path": "proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md",
+      "use": "Corollary 4.1 converts three actual eigenvalues on the bounded ORIGINAL-coordinate core into a full-form density bound after conditioning outside"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "614efa23e499755678e37d2825a10938074a7021",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260923T013716Z-account03-B07-qform-r21b/REPORT.md",
+      "use": "latest designated partner packet masses P0>=1/5184, P1>=1/3125, P2>=1/512, P3>=1/18; q2 bounded-support case receives ||p_Q||inf<198.014 before reciprocal pair payment"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-DETERMINANT-MARGINAL-TAIL-CORE-v1",
+    "statement": "For any determinant-weighted physical 3-minor packet of total mass P, if row/column support sets R0,C0 have determinant-inclusion tail sums delta_R,delta_C with theta=1-delta_R-delta_C>0, then Z3(A[R0,C0])>=theta P and s3(A[R0,C0])>=sqrt(theta P)/(sqrt(C(r,3))||A[R0,C0]||op^2). The symmetric principal core A[R0 union C0] therefore has three actual eigenvalues at that scale. In N3(tau), ||p_Q||inf<=2 sqrt(6 pi d) sqrt(C(r,3)) p q (tau+tau^2)/sqrt(theta P).",
+    "scope": "all bounded determinant-marginal-support branches of the partner colored third-compound packets; no individual minor selection",
+    "partner_application": "For active q2 with P2>=1/512, p=q=4, theta>=1/2, tau=1/128 gives ||p_Q||inf<198.014."
+  },
+  "construction": {
+    "id": "QFORM-DIFFUSE-BIANCHOR-RANK3-MODEL-v1",
+    "statement": "For even N, M_N=[[0,u^T],[v,xy^T]] with u=v=constant unit vector and x=y=alternating-sign unit vector has singular values 1,1,1; A_N=[[0,M_N],[M_N^T,0]] has spectrum +/-1 three times. All nonzero third minors contain fixed row/column anchors, total anchored mass is 1, each residual inclusion marginal is 2/N, and every fixed-size principal core has operator norm O(N^-1/2). For N>128 the family is in N3(1/128).",
+    "scope": "refutes only bounded-cardinality core extraction from constant bi-anchor mass; not QFORM",
+    "payment": "e5 Theorem MF with two heavy anchors and rank-two light block gives ||p_Q||inf<=3*2^(1/3)<3.780"
+  },
+  "remaining_implication": "QFORM-SUPPORT-DIFFUSE-ANCHOR-WITH-CURVATURE-v1: combine determinant-marginal support diffusion with the partner transverse four-bank / positive-motif reserve in a product-preserving analytic receiver while retaining arbitrary same-side light-bank quadratic curvature; do not delete curvature, rotate and assert independence, or select one reciprocal minor.",
+  "independent_review": "NOT_PERFORMED",
+  "continuity_status": "OPEN_UNRESTRICTED",
+  "scheduler_or_notification_mutation": false
+}

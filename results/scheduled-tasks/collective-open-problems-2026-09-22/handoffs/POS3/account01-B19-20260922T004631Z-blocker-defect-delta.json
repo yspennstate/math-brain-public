@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "directive": "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z",
+  "campaign": "POS3",
+  "producer": {"account":"account01","slot":"B19","run_id":"20260922T004631Z-b19-pos3-r11"},
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "parent_status": "OPEN_NOT_PROVED",
+  "base_handoff_blob_sha1": "89146c58b8fd4ec86b3b032db2d83bdc444b5bbc",
+  "scientific_addendum": {
+    "repository": "yspennstate/math-open-problems",
+    "path": "proofnet24/collective-POS3/account01/B19/20260922T004631Z-b19-pos3-r11/BLOCKER_DEFECT_ADDENDUM.md",
+    "commit": "c817c0757d2182957dcea7cf28137c1f20cbb653",
+    "git_blob_sha1": "561469fde749cb6f90f671f6ae823861f1f1ab69",
+    "verifier_blob_sha1": "c604bfc2d4b48cf04d9d0d285e45a6d7b5114bcc",
+    "verifier_terminal": "POS3_CHAIN_BLOCKER_DEFECT_CHECK_PASS",
+    "verified_contexts": 27026
+  },
+  "new_bridge": {
+    "direct_swap_identity": "For adjacent incomparable u,v in the Q-projection, swapping their positions in a full lift gives an involution on valid swaps; W_C(uv)-W_C(vu) equals forward C-blocker mass minus reverse C-blocker mass.",
+    "ordered_profiles": "If lambda(u)<=lambda(v) and rho(u)<=rho(v), reverse C-blockers are absent and the exact weight gradient equals the number of forward lifts having at least one chain blocker between u and v.",
+    "blocker_segments": "Forward chain blockers are exactly indices lambda(u)<j<=lambda(v) below v/incomparable u and rho(u)<j<=rho(v) above u/incomparable v; their total raw count is the interval midpoint displacement.",
+    "one_element_recovery": "For |C|=1 an incomparable ordered profile has at most one chain blocker, recovering account04/B20's |Delta W|<=1 theorem.",
+    "collective_connection": "The chain-deletion weight gradient is the projected-fiber form of account03/B11's swap-defect blocker obstruction. Nested profiles are precisely the signed two-sided blocker case."
+  },
+  "next_obligation": "Use the signed blocker-union formula simultaneously across a three-chain cover to show the three required balance-destroying chain projections cannot coexist in the connected module-prime strong-majority core, or isolate a further exact invariant.",
+  "next_recipients": ["account02/B10","account04/B10","account03/B11"],
+  "privacy_review": {"benchmark_gold":false,"credentials":false,"scheduler_identifiers":false,"machine_paths":false,"unrelated_private_data":false,"email_or_drive_content":false,"public_posting_or_permission_change":false}
+}

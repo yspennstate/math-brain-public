@@ -1,0 +1,23 @@
+{
+  "state": "DRAFT; curator action and w374 source-scope audit pending",
+  "legacy_node_id": "claim_3ccc6fc493b4e17b5c29966949004f575c51205c8a4f0ba3bc516d0b752ebea4",
+  "legacy_logical_id": null,
+  "exact_fragments_to_correct": [
+    "general i.i.d. edge-weight distributions on Z^d",
+    "It does not by itself lower-bound the variance"
+  ],
+  "replacement_title": "Damron-Hanson-Houdré-Xu 2019: planar quantile separation and logarithmic variance consequence",
+  "replacement_statement": "For iid nonnegative nearest-neighbor edge weights on Z^2, let I=inf supp(F). Under F(0)<p_c(2) and, when I>0, F(I)<the two-dimensional oriented bond threshold, arXiv:1810.08270v2 Theorem 1 provides two positive-probability quantiles of T(0,x) separated by c sqrt(log ||x||) for all sufficiently large ||x||. The sharp two-quantile variance inequality then gives Var(T(0,x))>=c' log ||x|| whenever T(0,x) is square-integrable. The paper's d>2 discussion gives only constant-scale fluctuation lower bounds by this method; its higher-dimensional extension is for thin cylinders under an extra moment assumption. These results do not establish a positive power-law fluctuation exponent or chi=1/3.",
+  "source": {
+    "url": "https://arxiv.org/html/1810.08270v2",
+    "locator": "condition (1.2.1), Theorem 1, Remark 2, Theorem 2 discussion",
+    "license": "arxiv-nonexclusive"
+  },
+  "proof_of_variance_consequence": "If P(X<=a)>=p and P(X>=b)>=q for a<b, then Var(X)>=pq(b-a)^2/(p+q) by minimizing the two tail contributions to E(X-EX)^2. Apply with b-a>=c sqrt(log ||x||).",
+  "independent_review": {
+    "mathematical_implication": "w369 author, w371 independently checked; w370 independently checked the interval version",
+    "source_scope": "w371 checked primary source; w374 audit requested"
+  },
+  "curator_action": "Supersede or retract the exact legacy node id, preserving provenance. The submitted BUNDLE_SPEC draft adds correct nodes but cannot itself suppress this legacy node because it has no logical_id for a cross-bundle supersession relation.",
+  "current_global_problem_status": "UNKNOWN; P0104 not solved"
+}

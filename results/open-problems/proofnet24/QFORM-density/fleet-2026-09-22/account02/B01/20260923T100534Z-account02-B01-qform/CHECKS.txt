@@ -1,0 +1,21 @@
+QFORM account02/B01 20260923T100534Z regression checks
+
+1. Constant simplification:
+(3/pi)*[(pi/2)*sqrt(27*pi/2)]^(2/3) = 4.5 exactly.
+partner constant 3*(pi/2)^(1/3) = 3.4873420545288796 < 3.488.
+
+2. Stress-family finite regression at epsilon=0.1, N=16, Sylvester H_N:
+- sigma = epsilon^(-1/2).
+- ||epsilon H_N/N||op = 0.025 = epsilon/sqrt(N).
+- computed extremal eigenvalues include approximately
+  -3.16678639, -3.15794804, ..., 3.15794804, 3.16678639;
+  exactly four eigenvalues have |lambda|>=1 in this instance.
+- max physical diagonal magnitude = 0.1.
+- max physical 2x2 principal determinant magnitude = 0.625 = 1/(epsilon N), attained by a hub-leaf pair.
+These checks match the symbolic bounds in REPORT.md. They are auxiliary regression evidence, not a proof.
+
+3. Hyperbolic dependent-joint obstruction:
+For delta=1/log R and E_R={(x,y):1<=x<=R,0<=y<=delta/x}, area(E_R)=delta log R=1.
+For 0<s<delta, pushforward density of xy is log R; hence its L2-square is (log R)^2*delta=log R, divergent.
+
+STATUS=PASS

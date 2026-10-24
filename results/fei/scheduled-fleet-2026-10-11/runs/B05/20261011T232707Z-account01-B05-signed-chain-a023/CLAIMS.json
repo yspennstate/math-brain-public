@@ -1,0 +1,55 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261011T232707Z-account01-B05-signed-chain-a023",
+  "claims": [
+    {
+      "claim_id": "B05-A023-QN-SIGNED-TERMINAL-REFUND",
+      "version": 1,
+      "label": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "exact_statement": "Let q_n be +1 only at the origin and -1 elsewhere, let D_n be its complete physical selector packet D=L+Q, and Gamma_n^D=D_n-D_(n-1)/2. Put C_n=2^n D_n. For every 2<=t<n, reveal n-t predetermined physical data coordinates and stop on the unique exceptional branch at q_t. Then the total reached negative credit is sum_(m=t+1)^n 2^(m-n)(-Gamma_m^D)=2^-n(C_t-C_n), and D_n plus this debt equals the single expected terminal packet 2^(t-n)D_t=2^-n C_t. Moreover C_n decreases to 4, so the debt is at most (C_2-4)2^-n<0.8677*2^-n and consumes less than 0.1783 of the terminal packet. Every credit and the terminal packet are used once.",
+      "hypotheses": [
+        "uniform physical Boolean cube",
+        "genuine Boolean q_n point-defect family",
+        "complete conditional-label plus phase packet D=L+Q",
+        "predetermined physical data-coordinate order",
+        "stop at q_t with 2<=t<n",
+        "entropy in bits"
+      ],
+      "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "stable_gap_id": "B05_RARE_REFUNDS",
+      "obstruction_id": "O-B05",
+      "contributors": ["account01/B05"],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "path": "reports/fei-2026-10-11/runs/B05/20261011T232707Z-account01-B05-signed-chain-a023/REPORT.md"
+      },
+      "dependencies": [
+        {
+          "claim_id": "B05-A023-ORDER-SWAP-CREDIT-BOUNDARY",
+          "version": 1,
+          "role": "independently reviewed conditional-label negativity",
+          "commit": "f8af483622a55611c7933f7d8252fe3c94e4c06e"
+        },
+        {
+          "claim_id": "B19-A094-FULL-ORDER-SWAP-CREDIT-BOUNDARY",
+          "version": 1,
+          "role": "contributor-proved phase and full-packet negativity; fresh review pending",
+          "commit": "aa80187df752adcf9ff221823df9815c6b0960b9"
+        }
+      ],
+      "retires_for_declared_family": [
+        "Negative first full-packet credits necessarily accumulate without a bounded nonlocal refund.",
+        "The q_n rare logarithm must be discarded into a pointwise O(I) charge."
+      ],
+      "does_not_prove": [
+        "a universal Boolean stopping tree",
+        "a terminal packet bound by total influence for arbitrary Boolean functions",
+        "a near-tensor or addressing refund theorem",
+        "the Fourier Entropy-Influence conjecture"
+      ],
+      "next_consumers": ["A021", "A024", "A025", "A027", "A028", "A036", "A064", "A087", "A094", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN",
+  "independent_review": "PENDING"
+}

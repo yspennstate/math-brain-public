@@ -1,0 +1,13 @@
+{
+  "helper_version": "A018-collision-v1",
+  "family": "All Boolean truth tables in dimensions 0 through 3, each prefix selector block; signed common literal branches; quadratic bent source spliced with its one-point flip",
+  "parameter_domain": "0<=n<=3, 0<=a<=n; literal phases on a=1,2,3; even bent dimensions m=2,4,6,8,10,12",
+  "case_count": {"exhaustive_block_cases":1082,"signed_literal_cases":276,"bent_splices":6},
+  "symmetry": "No truth-table reduction. Prefix block covers every block up to physical coordinate permutation; exhaustive tables are invariant under that permutation. No claim of minimality.",
+  "arithmetic": "Integer Walsh transforms, Fraction probabilities and influence; entropy identities as exact rational linear combinations of log2(prime); outward rational atanh-series logarithm bounds for inequalities",
+  "memory_estimate_mb": 60,
+  "max_runtime_seconds":60,
+  "pilot": "Full bounded domain is the pilot; no automatic escalation; stop on first failed assertion",
+  "gpu":false,
+  "independent_reproduction": "Direct character sum versus FWHT on all n<=3; physical edge disagreement versus spectral influence on all cases. This is author verification, not independent agent acceptance."
+}

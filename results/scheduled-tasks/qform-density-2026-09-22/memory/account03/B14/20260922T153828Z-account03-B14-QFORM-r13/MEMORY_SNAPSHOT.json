@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260922T153828Z-account03-B14-QFORM-r13",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit": "bc3ca7f6ed1225c1db91048541ec63466325e439",
+  "execution_context": "scheduled_automation",
+  "without_verified_brain": true,
+  "full_brain_connected": false,
+  "assignment": "Translations and localization",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "partner_result": {
+    "worker": "account04/B14",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8fcc9ba5db68dfd4cd5daeb181a39666ceeda322",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md",
+    "scope_applied": "fixed-interval bathtub extremization to unit-measure indicator marginals and finite-fragment approximation"
+  },
+  "new_result": {
+    "status": "PROVED_IN_STATED_SCOPE",
+    "name": "global convex-mixture localization",
+    "statement": "Every admissible one-dimensional density is an L1 limit of finite convex combinations of compact finite-union unit-set indicators; therefore every admissible product law, and its pushforward under any measurable map, is in TV closure of finite convex mixtures of extreme product laws. For Q=x^T A x this preserves the exact optimal small-ball/L-infinity constant.",
+    "canonical_report_repository": "yspennstate/math-open-problems",
+    "canonical_report_commit": "871a2d4c9f1ea58d89748ab1abab05021b4408de",
+    "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260922T153828Z-account03-B14-QFORM-r13/REPORT.md"
+  },
+  "key_proof_mechanism": [
+    "cap-preserving compactification without moments or renormalization",
+    "mass-preserving grid conditional expectation on cells of length 1/N",
+    "finite hypersimplex decomposition into 0-1 vectors with exactly N ones",
+    "product L1 telescoping and pushforward TV contraction"
+  ],
+  "unresolved_implication": "Prove a universal small-ball bound on compact finite-fragment indicator products uniformly in component count, locations, separations, grid scale and support diameter.",
+  "continuity_status": "OPEN",
+  "next_step": "Use the law-level mixture reduction only with estimates uniform in all localization parameters; do not impose a fixed fragment count or diameter."
+}

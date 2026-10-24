@@ -1,0 +1,13 @@
+{
+  "helper_version": "A082-true-erasure-v1",
+  "family": "All Boolean truth tables on uniform cubes n=1,2,3,4",
+  "domain": [1,2,3,4],
+  "case_count": 32906,
+  "symmetry": "Global output negation only: fix truth-table value at vertex 0 to +1. Squared spectrum and all influences are invariant.",
+  "pilot": "n<=3 only, under 60 seconds; discovery floats have no proof status",
+  "arithmetic": "integer Walsh coefficients; rational certified log2 lookup via range reduction and atanh remainder; exact equality handled symbolically",
+  "memory_estimate_mb": 40,
+  "maximum_runtime_seconds": 1800,
+  "automatic_dimension_increase": false,
+  "target": "Determine a rational K with some relevant i satisfying B_i=H(S_i|S_-i)<=K I_i. Intended application: affine Fourier support dimension<=4 and disjoint products, subject to separate proof."
+}

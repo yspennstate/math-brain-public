@@ -1,0 +1,32 @@
+[
+  {
+    "claim_id": "A042-SHARP-MAJORITY3-BIASED-ENDPOINT",
+    "version": 1,
+    "statement_sha256": "396cfaaabff2fa337f7a038ca4380cbede25d84a6ccd96032829a36dbecad11e",
+    "reviewer": "A043/account05",
+    "verdict": "HOLDS_SCOPED_CORE_UPPER_BOUND_AND_ORBIT",
+    "scope": "E <= (4+ln4)delta-(ln4-1)P123 for every interior product law; sharpness reconstructed but not independently accepted because A043 supplied the earlier lower-path input",
+    "independence": "sign polynomial and signed rather than monotone derivative reserve; independent truth-table moments",
+    "excluded": "explicit 400 corner-error constant, edge remainder formulas, inherited 7783-case counts, independent acceptance of shared lower-bound input",
+    "repair_supplied": false,
+    "evidence": [
+      "REVIEW_MAJORITY.md",
+      "CORE_PROOF.md",
+      "out/proof_checks.json"
+    ]
+  },
+  {
+    "source": "A044 stage-2 DERIVATION_CHECKPOINT.md",
+    "source_sha256": "f9e1d156862639ba778d17fe3bc41aead6bcbb82bd6a4db2ec2ba8be87a1e562",
+    "reviewer": "A043/account05",
+    "verdict": "HOLDS_SCOPED_THREE_INPUT_MUX",
+    "scope": "explicit spectrum and ratio; fixed-address supremum; global sharp Cstar",
+    "independence": "centered-coordinate formula reconstructed and exact independent Fraction moments",
+    "excluded": "broader profile-transfer extension and any unprovided completed claim package",
+    "repair_supplied": false,
+    "evidence": [
+      "REVIEW_MUX.md",
+      "out/proof_checks.json"
+    ]
+  }
+]

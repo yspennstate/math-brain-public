@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B17",
+  "run_id": "QFORM-B17-20260923T030409Z-r12",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit_prepublication": "b2f8465aa252bbaf69068880594ff17620422180",
+  "control_readme_blob": "fca13a89d221115332ce5e60d49554ee0e213efa",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "new_result_id": "QFORM-NULLPAIR-SQUARE-GLOBAL-4-v1",
+  "status": "NEW_SUPPORTING_THEOREM",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "statement": "For independent cap-one X,Y,Z and nonzero a,b, Q=2aXY+bZ^2 has a continuous density with sup norm at most 4/sqrt(|ab|). Thus the exact physical matrix [[0,a,0],[a,0,0],[0,0,b]] has density bound 4 whenever |a|,|b|>=1; the same bound survives arbitrary affine terms and therefore arbitrary outside conditioning when this is a physical principal block.",
+  "proof_premises": [
+    "Exact density formula for bZ^2 in the original physical coordinate: k_b(w)<=(b w)^(-1/2) after output reflection to b>0.",
+    "One-dimensional bathtub/layer-cake maximization for a decreasing one-sided u^(-1/2) kernel under density cap one and mass one.",
+    "Second bathtub maximization of integral f_Y(y)|y|^(-1/2)dy by the centered unit interval.",
+    "L1 convolution continuity plus dominated convergence using the integrable |y|^(-1/2) envelope.",
+    "Translations preserve original-coordinate independence and density caps."
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B17",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "06aea167c49a7d7574f1c2f518c756f22413371a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260923T014533Z-r14-multiscale/REPORT.md",
+    "result": "QFORM-ONE-HEAVY-MAJORITY-GAUSSIAN-NOESCAPE-v1",
+    "application": "Combined with the new null-pair theorem to give sup over the union of the aligned-majority Gaussian-completion branch and exact complementary-null branch <= max(C_maj,4)=C_maj<3sqrt(2)."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e3247688b12fb55b0075daca3f4321e97e7410b1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260923T030409Z-r12/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260923T030409Z-r12/verify_nullpair.py",
+    "checks": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260923T030409Z-r12/CHECKS.txt",
+    "checks_status": "PASS_AND_READ_BACK"
+  },
+  "unpaid_implication": "No reduction from an arbitrary three-large-eigenvalue physical matrix to this exact null-pair principal block is proved. General non-null, non-collinear multi-heavy-row coupling remains open; full QFORM remains open.",
+  "next_step": "Attack the smallest exact three-heavy non-null/non-collinear physical family not reducible by translations to 2aXY+bZ^2; preserve product provenance and seek a global-output bound or source-valid counterexample.",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

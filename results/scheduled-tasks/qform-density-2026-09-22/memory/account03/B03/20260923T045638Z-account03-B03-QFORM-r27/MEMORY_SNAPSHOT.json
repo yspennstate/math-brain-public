@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260923T045638Z-account03-B03-QFORM-r27",
+  "control_start_commit": "449c763a3d505331d18f8c80a490eefa34b826fc",
+  "control_prepublication_commit": "0a5196970e2ae4e43ed0cd91eb01194c50e36735",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_worker",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FULL_TARGET_NOT_PROVED_IN_R27_BRANCH",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "b580b09027d8c20c3d3bbea0bea6cf8caa04d541",
+    "bundle_tip": "1a22432a82eedc319592275869c940149ea13cb0",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T045638Z-account03-B03-QFORM-r27/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T045638Z-account03-B03-QFORM-r27/CHECK.txt",
+    "checker_status": "QFORM_B03_R27_CHECK_PASS"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B03/20260923T045638Z-account03-B03-QFORM-r27.md",
+    "commit": "9a031d9b54f56e6318e1b7ec11fa12ff2dde3b97"
+  },
+  "mathematical_result": {
+    "id": "QFORM-HEAVY-ROW-SCHUR-HALFRIESZ-v1",
+    "classification": "ESSENTIAL_STEP_APPLIED",
+    "statement": "In the current exact-rank-three one-sided-overlap packet Q=a^{-1}H^2+2 sigma U V, if a physical right row r has eta_r=v_r^2+q_r^2>1/2 and h_r=beta v_r+m q_r is nonzero, then pivoting X_r leaves an exact rank-two Schur residual with |pdet|>=sigma^2 m^2 eta_r/h_r^2. Consequently int |t|^{-1/2}|phi_R(t)|^2 dt <=16 sqrt(60 pi) sqrt(|h_r|/(|sigma|m sqrt(eta_r))) and ||p_Q||inf <=16 sqrt(30) sqrt(|a|/(|sigma|m sqrt(eta_r)|h_r|)).",
+    "target_normalized_consequence": "Using m=rho y, y^2>1/2, eta_r>1/2 and (rho^2/|a|)|sigma|>=s3(A)^2 gives ||p_Q||inf <=(16 sqrt(60)/s3(A)) sqrt(rho/|h_r|).",
+    "continuity": "not proved in this branch"
+  },
+  "premises": [
+    {"id":"QFORM-RANK2-AFFINE-HALF-RIESZ-v1","source":"yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md","scope_used":"no-affine exact-rank-two case, constant 16 sqrt(30)"},
+    {"id":"QFORM-ONESIDED-HEAVY-RIGHT-PLANE","source":"yspennstate/math-open-problems@9838f01d705e379c6ff9b855bf1bb787d94b1c5c:proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260923T043620Z-account01-B06-QFORM-r24/REPORT.md","scope_used":"one-sided exact-rank-three endpoint with a right-plane physical row eta_r>1/2"},
+    {"id":"QFORM-COLLISION-LEMMA","source":"yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38:proofnet24/QFORM-density/fleet-2026-09-22/account04/B03/20260922T193150Z-account04-B03-collision-l2-r1/REPORT.md","scope_used":"only P(|Y-Y'|<=eps)<=2 eps ||p_Y||_2^2; refuted weighted-L2 compiler excluded"}
+  ],
+  "corrections_consumed": ["QFORM-POINTWISE-DECAY-FALSE","QFORM-UV-CONDITIONAL-CAP-FALSE","QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE","QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE","QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1","QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1","QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"],
+  "partner_result_applied": {"partner":"account04/B03","valid_part":"collision convolution lemma","actual_inequality":"P(|Q-Q'|<=eps)<=32 sqrt(30) sqrt(|a|/(|sigma|m sqrt(eta_r)|h_r|)) eps"},
+  "first_unresolved_implication": "QFORM-HEAVY-ROW-ANGULAR-CANCELLATION-ENDPOINT-v1",
+  "next_step": "In the surviving eta_r>1/2 and |beta v_r+m q_r|<<rho regime, retain the small transverse term and use the exact near-coloop/grouped-hub/aggregate-volume structure to obtain a bound stable as h_r tends to zero.",
+  "quiet_delivery": true,
+  "notifications_changed": false,
+  "email_changed": false,
+  "tasks_changed": false
+}

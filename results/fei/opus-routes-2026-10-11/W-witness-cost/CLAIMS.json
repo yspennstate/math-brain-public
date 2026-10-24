@@ -1,0 +1,127 @@
+{
+  "route": "W-witness-cost (C008, C009, C020)",
+  "updated": "2026-10-12",
+  "full_FEI": "OPEN",
+  "claims": [
+    {
+      "id": "W-L1",
+      "status": "PROVED",
+      "statement": "If f = OR of gates h_l that are mutually exclusive (at most one true at each input), then fhat(A) = sum_l hhat_l(A) for every nonempty A; hence every nonempty Fourier set of f lies inside the relevant set R_l of a single gate.",
+      "where": "NOTES.md section 3, Lemma 3.1",
+      "remaining_gap": "none"
+    },
+    {
+      "id": "W-L2",
+      "status": "PROVED",
+      "statement": "For the paper's queue law with any root odds rho_l > 0 (paper: rho_l = lambda*pi_l), Q(A) >= 2^{-Lambda} * sum over gates l with A subset R_l of rho_l * [1/(s(s+1))] * [prod_{j in A} theta^l_s(j)/Z^l_s] * 1/2, s=|A|: distinct single-root witnesses are disjoint runs and their probabilities add.",
+      "where": "NOTES.md section 3, Lemma 3.2",
+      "remaining_gap": "none"
+    },
+    {
+      "id": "W-P41",
+      "status": "PROVED",
+      "statement": "Exact spectrum of selector trees f(x,y)=g_{leaf(x)}(y) with regular leaves on disjoint data blocks: block sets T u B (B nonempty in supp g_i, T subset path(i)) have fhat = 2^{-c_i} sigma(T) ghat_i(B); for read-once control trees the sets inside the control coordinates are exactly S u {v}, S subset anc(v), with |fhat| = 2^{-d_v}|m_+(v)-m_-(v)|; Inf_{x(v)}(f) = P(reach v)(1 - m_+ m_-)/2; I(f) = sum_i p_i[Var_i c_i/2 + I(g_i)] + sum_v w_v (d_v+1)/2.",
+      "where": "NOTES.md section 4, Proposition 4.1 (exact checks: code/test_spectrum.py, 400 instances)",
+      "remaining_gap": "none"
+    },
+    {
+      "id": "W-T51",
+      "status": "PROVED",
+      "statement": "Let K be the class of selector trees with regular leaves on pairwise disjoint fresh data blocks, where either all leaf means are equal (any decision tree; contains addressing C009 and every subcube selector with balanced regular leaves) or the control tree is read-once (arbitrary leaf biases; contains decision lists x1?g1:(x2?g2:...) with regular outputs). With gates h_i = [x in C_i] AND [g_i = 1] and the paper's queue law Q_{1,1} (lambda = 1, a = 6/5), the complete code length satisfies H(f) <= h(v) + v*Lambda_1 + sum_{A nonempty} fhat(A)^2 log(1/Q_{1,1}(A)) <= 17 I(f), with every term (root normalizer, roots, subset sizes, normalizers, rank weights, child counts) kept. Equal-mean case: one minimum-cost single-root witness per set suffices. Read-once case: the phi-sets use the sum over single-root witnesses (W-L2).",
+      "where": "NOTES.md section 5, Theorem 5.1 and proof",
+      "remaining_gap": "none for the stated class; the class is new for the witness route (C020) but not for FEI (equal-mean balanced: C010/C011; read-once fresh blocks: plausibly O'Donnell-Tan composition plus Theorem A, MUX biased constant not checked)"
+    },
+    {
+      "id": "W-N61",
+      "status": "PROVED",
+      "statement": "The minimum-witness variational bound (W) of Prop. joint-witness (C008) is not linear in I on the read-once part of K: for F_{D,w} (root x_0; plus side complete read-once depth-D tree with OR_w leaves, minus side with AND_w leaves, fresh blocks), for every lambda > 0 and D >= 4, RHS(W) >= (1-2*2^{-w})^2 (D/2 + 2) (the large-lambda case handled separately: the root normalizer 2^D log(1+t) dominates the negative root terms), also for the complemented (intersection) representation, and for the scale-mixture repair of SEED_LEMMAS section 2 when w <= 2^D - D - 1; with w = ceil(log2 D), I(F) <= 3.75 for D >= 16, so RHS/I -> infinity linearly in D. For the same law, log(1/Q_{1,1}({x_0})) < 7.21 bits for all D. The missing ingredient is witness multiplicity (equivalently gate-dependent root odds / an entropy code for the owner gate).",
+      "where": "NOTES.md section 6, Proposition 6.1; evidence code/n1_analytic.py (D up to 128: min-witness/I = 45, witness-sum/I = 4.8, H/I = 2.7)",
+      "remaining_gap": "the lower bound is for the cell-and-leaf representation and its complement; other bounded-M union representations of F_{D,w} are not excluded"
+    },
+    {
+      "id": "W-C71",
+      "status": "PROVED",
+      "statement": "Direct spectral FEI on K: H(f) <= (C_reg + log2 e) I(f) < 10.38 I(f) for every f in K.",
+      "where": "NOTES.md section 7",
+      "remaining_gap": "none; likely KNOWN-equivalent for the fresh-block read-once case via composition (not verified), new constant only"
+    },
+    {
+      "id": "W-E1",
+      "status": "EVIDENCE",
+      "statement": "On 300 random selector trees (read-once and general trees, regular leaves, up to 16 variables) the queue-law code lengths satisfy minW/I <= 6.17, witness-sum/I <= 6.17, owner-coded/I <= 4.97, H/I <= 3.40; in particular nothing near the proved 17.",
+      "where": "NOTES.md section 7; code/run_costs.py random 7 300",
+      "remaining_gap": "finite sample"
+    },
+    {
+      "id": "W-T111",
+      "status": "PROVED",
+      "statement": "Term decision lists f = tau_1 ? g_1 : (tau_2 ? g_2 : ... : g_{m+1}) with read-once terms (conjunctions of fresh disjoint blocks of arbitrary widths w_k >= 1, arbitrary length m) and regular outputs on fresh blocks with one common mean mu in (-1,1): with the unfolded-path gates h_{j,t} = [x in C_{j,t}] AND [g_j = 1] and the 'deficit order' inside each gate (true block first, then the false prefixes by increasing w_k - t_k, ties to earlier blocks), the paper's law Q_{1,1} has complete code length h(v) + v Lambda_1 + sum fhat(A)^2 log(1/Q(A)) <= 27 I(f). Uses the sum over owner gates (Lemma 3.2) plus Jensen over the owner law.",
+      "where": "NOTES.md section 11.1 (Theorem and proof); setup and exact spectrum in section 11",
+      "remaining_gap": "none for equal output means; FEI itself for this class is very likely obtainable by read-once composition, so the new content is the witness-route bound"
+    },
+    {
+      "id": "W-P112",
+      "status": "PARTIAL",
+      "statement": "Same as W-T111 but with arbitrary output means (term decision lists in general).",
+      "where": "NOTES.md section 11 (root term proved for all sets; rank term proved for block sets) and 11.1 scope remarks",
+      "remaining_gap": "only the rank term of phi-sets whose owner paths run past the top block K to a later true output J (the owner's true block X_J and the continuation's false prefixes compete with S_K); the root term is now proved for all sets (NOTES section 11, 'Phi-sets (written out)'); evidence: equal widths with adversarial outputs <= 12.6 I"
+    },
+    {
+      "id": "W-E2",
+      "status": "EVIDENCE",
+      "statement": "The C008 rank term is order-sensitive on term decision lists: with the natural path order, m = 2^w terms of width w have rank-term/I growing about linearly in w (0.30, 0.77, 1.39, 2.11, 2.88, 3.73 for w = 2..7); with the length (=deficit) order it stays <= 0.56 up to w = 10 and the total stays near 8.5-8.9 I. With mixed widths (one narrow top block before about 10*2^W wide terms of negligible influence, I = 1.0) the length order gives rank/I = 2.8, 3.8, 6.0, 8.0, 9.4 for W = 3, 4, 6, 8, 9 and the deficit order 2.1 to 3.55 (log-like growth): the true-block-first convention charges the owner's whole true block to a set that does not use it.",
+      "where": "NOTES.md section 11; code/termdl.py, code/run_termdl.py (Monte Carlo over the exact spectral law; validated against exact witness sums in code/validate_termdl.py: v and I exact, Jensen upper bound within 0.07-0.19 bits)",
+      "remaining_gap": "Monte Carlo, finite parameter ranges; the natural-order and mixed-width growth are not proved as lower bounds"
+    },
+    {
+      "id": "W-L120",
+      "status": "PROVED",
+      "statement": "Owner mass lemma: if f^{-1}(b) is partitioned into subcubes C_l with fixed-coordinate sets V_l and probabilities p_l, then |fhat(A)| <= 2 sum_{l: A subset V_l} p_l for every nonempty A.",
+      "where": "NOTES.md section 12, Lemma 12.0 (checked exactly on all instances of code/rank_term.py)",
+      "remaining_gap": "none (elementary; possibly folklore)"
+    },
+    {
+      "id": "W-P121",
+      "status": "PROVED",
+      "statement": "Reduction to the rank term: for every nonconstant f, every subcube partition {C_l} of a level set f^{-1}(b) (e.g. the b-leaves of any decision tree) and every choice of orders r_l, the paper's queue law over the gates 1_{C_l} gives H(f) <= [8 + 3 log2 e + 2 log2(3ea/(a-1))] I(f) + 2a R(f) (= 23.55 I + 2.4 R at a = 6/5), where R(f) = sum_A fhat(A)^2 E_{l ~ w_A}[sum_{x in A} log2+(r_l(x)/|A|)] and w_A is proportional to p_l over the cells whose fixed set contains A. Roots, labels, attachments, normalizers and sizes are all absorbed (root cost <= 1 + (1/2) log(1/fhat(A)^2) by W-L120 and witness sums).",
+      "where": "NOTES.md section 12, Proposition 12.1 and proof",
+      "remaining_gap": "none for the inequality; it reduces the queue route (on subcube partitions) to bounding R; prior art: decision-tree path coding is Wan-Wright-Wu (arXiv:1312.3003), whose accounting differs (explicit path bits, Cov[T]); half-entropy root bound not found in the literature checked"
+    },
+    {
+      "id": "W-CJ122",
+      "status": "CONJECTURE",
+      "statement": "There is an absolute K such that every nonconstant Boolean f has a subcube partition of f^{-1}(1) or f^{-1}(-1) (e.g. the leaves of a decision tree) and orders with R(f) <= K I(f). By W-P121 this implies FEI with C = 23.55 + 2.4 K. Read with R_mix (W-P123) in place of R.",
+      "where": "NOTES.md section 12 consequences (a); evidence there and in W-E3",
+      "remaining_gap": "open and FEI-strength (implies FEI); the converse is not known. Evidence for it: n <= 4 exhaustive, majority, random functions and read-k trees (W-E3, W-E4). Evidence against its natural instances: on read-once AND/OR formulas the short-circuit cells with path, reversed, mixed or certificate-first orders give R/I rising with depth while H/I saturates (W-E5); adapted per-cell orders and other trees were not tested at large depth"
+    },
+    {
+      "id": "W-E3",
+      "status": "EVIDENCE",
+      "statement": "Decision-tree witness code and rank term: all f with n <= 4 (222 NPN classes for n=4, best of 24 ordered reduced trees and f, -f): witness-sum code/I <= 6.06, min-witness <= 6.17. Majority (sequential tree, n = 3..13): witness-sum code/I falls 4.06 -> 3.88 while min-witness rises 4.69 -> 6.55; R/I = 0.43 -> 0.76 (n <= 11; heuristic limit 2 e^{-1/2}/ln 2 = 1.75). Read-once AND/OR formulas (short-circuit trees): AND-OR trees depth 1-4 code/I <= 6.14, R/I path order 0.25 -> 0.97, adapted order 0.25 -> 0.55; 150 random formulas code/I <= 7.59, R/I <= 1.47. Random functions n = 5 (150) and n = 6 (60), greedy trees: code/I <= 6.34, R/I <= 0.38.",
+      "where": "NOTES.md section 12; code/dt_code_exhaustive.py, code/rank_term.py, code/random_R.py, code/readonce_formulas.py",
+      "remaining_gap": "finite sizes; AND-OR trees beyond depth 4 not computed"
+    },
+    {
+      "id": "W-P123",
+      "status": "PROVED",
+      "statement": "Mixture-of-orders refinement of W-P121: giving each cell C_l copies (l,c) with orders r_{l,c} and gate-dependent root odds p_l*gamma_{l,c} (sum_c gamma_{l,c} = 1) yields H(f) <= 23.55 I(f) + 2a R_mix(f), R_mix = sum_A fhat(A)^2 E_{l ~ w_A}[min_c((1/a) log2(1/gamma_{l,c}) + sum_{x in A} log2+(r_{l,c}(x)/|A|))]. This repairs the block-structure loss of a single order per cell (one bit instead of log(|B1|/|B2|) per element).",
+      "where": "NOTES.md section 12, 'Refinement' paragraph",
+      "remaining_gap": "uses gate-dependent root odds (a harmless generalization of C008, Lemma 3.2 remark)"
+    },
+    {
+      "id": "W-E4",
+      "status": "EVIDENCE",
+      "statement": "On Wan-Wright-Wu's bad tree (l dummy levels above copies of MAJ_5, l = 0..6) the path-order rank term grows (R/I 0.58 -> 1.89, code/I 4.04 -> 6.46) while the adapted-order rank term is exactly constant (R/I = 0.428): the reduction with adapted orders is immune to the dummy-level obstruction that costs their protocol 2l characters. Random read-k trees (k <= 8): R/I <= 0.62 (path), <= 0.37 (adapted).",
+      "where": "NOTES.md section 12 evidence; code/readk_R.py and the inline bad-tree script recorded there",
+      "remaining_gap": "finite sizes"
+    },
+    {
+      "id": "W-E5",
+      "status": "EVIDENCE",
+      "statement": "On read-once AND/OR formulas with left-to-right short-circuit cells, the rank term of W-P121 grows with formula depth while H/I saturates: AND-OR trees depth 1..12 have H/I = 2.00 ... 5.29 (levelling near 5.3) but R_path/I = 0.25 ... 2.85 and R_mix/I (path and reversed orders) = 0.63 ... 2.39, rising about 0.2 per level; a near-balanced AND2/OR3 control shows the same (d=5: H/I 4.53, R_path/I 1.63; d=7: H/I 5.48, R_path/I 2.51). Candidate obstruction to W-CJ122 in its single-gate rank-code form; suggests a hierarchical subset code inside each gate. With the structural certificate-first order on the rarer level set the rank term still grows: R/I = 0.24, 0.34, 0.54, 0.72, 0.89, 1.11, 1.25, 1.47, 1.55, 1.75, 1.75, 1.89 for depth 1..12.",
+      "where": "NOTES.md section 12.4; code/andor_sampler.py, code/andor_k.py (validated against exact values at depth <= 4), data/andor_balanced.txt, code/cert_order.py",
+      "remaining_gap": "finite depth, Monte Carlo; adapted per-gate orders and other decision trees not computed at large depth; no proof of unbounded growth",
+      "correction": "12 Oct, L2 stream (claude-6bb7036b-s07): the exact H/I values on the fan-in 2 AND-OR tree are 2.0000, 2.2169, 3.6125, 3.6842 for d = 1..4 (printed by referee_code/check_andor.py itself) and 5.3190 at d = 12 (closed-form composition, L2-level-two/code/readonce_witness.py, checked against brute force and an 80-digit expansion); the statement's 2.23, 3.66 and 5.29 are slips. The limit is about 5.345 (5.3441 at d = 22). The R/I values were not rechecked."
+    }
+  ]
+}

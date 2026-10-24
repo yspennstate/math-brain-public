@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B11",
+  "run_id": "20260923T095139Z-account02-B11-qform-r11-86d203a2",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_at_final_refresh": "f3a88bdc4661d957449a13cf25d2114a04428cd0",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "source": "math-open-problems@c5a085c3995af258cb161d94cb051d58bbd98b24:proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T093835Z-account03-B11-QFORM-r26/REPORT.md",
+      "scope": "balanced near-rank-one target-valid family with all fixed physical packets losing the collective second/third directions",
+      "actual_use": "used its exact A_delta family and fixed-packet obstruction as the normalization test; this run closes that family by growing-bank product estimates"
+    },
+    {
+      "source": "math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md and FOURIER_ROUTE_REPORT.md",
+      "scope": "Theorem F low-leverage Fresnel-Brascamp-Lieb and Theorem D original-coordinate three-volume bound",
+      "actual_use": "Theorem F gives 12|abc|^-1/3 for the flat three-mode frame plus arbitrary diagonal twist; Theorem D gives 12sqrt(e)|abc|^-1/3 for an equal four-bank crosscut with arbitrary same-side and outside curvature"
+    },
+    {
+      "source": "math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md",
+      "scope": "Theorem C ruled one-sheet estimate for exact rank-three (+,+,-) forms",
+      "actual_use": "p_core(s)<=pi sqrt(2) on the one-sheet side; the two-sheet side is paid instead by Theorem F, respecting the X-ray-only correction"
+    },
+    {
+      "source": "math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "scope": "operator-stable three-volume certificate, source itself marked independent-review pending",
+      "actual_use": "for balanced crosscut M0 with s3=mu/2 and leverage 6/n, ||E||op<=mu/32 gives ||p_Q||inf<46/mu while arbitrary self/outside curvature remains"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-WALSH-THREE-MODE-DIAGONAL-TWIST-v1",
+      "status": "PROVED_SOURCE_DERIVED_SUPPORTING_COROLLARY",
+      "statement": "For n=4m>=8, the balanced flat frame r0,rv,ru has leverage 3/n; arbitrary diagonal twist plus nonzero three-mode coefficients a,b,c has continuous output density bounded by 12|abc|^-1/3. This covers both (+,+,-) and (+,-,-) coefficient signatures without post-rotation independence."
+    },
+    {
+      "id": "QFORM-BALANCED-R26-FAMILY-CLOSED-v1",
+      "status": "PROVED_TARGET_VALID_FAMILY_BOUND",
+      "statement": "For the latest partner family A_delta=(1-2delta)J+delta vv^T-delta uu^T+2delta I in its target-valid range delta(n-2)>=1, ||p||inf<=9/4^(1/3)=5.6696447245..., although every fixed physical packet can degenerate."
+    },
+    {
+      "id": "QFORM-WALSH-FOUR-BANK-CROSSCUT-v1",
+      "status": "PROVED_SOURCE_DERIVED_SUPPORTING_COROLLARY",
+      "statement": "For n=8m>=16, an equal sign-class split with actual cross block R_I diag(a,b,c) R_J^T gives ||p_Q||inf<=12sqrt(e)|abc|^-1/3, with arbitrary same-side blocks, outside couplings and affine terms."
+    },
+    {
+      "id": "QFORM-WALSH-CROSSCUT-OP-STABILITY-v1",
+      "status": "PROVED_COROLLARY_INHERITING_SOURCE_REVIEW_PENDING",
+      "statement": "For the same balanced cut, if the actual cross block differs from R_I diag(a,b,c)R_J^T by operator norm at most mu/32, mu=min(|a|,|b|,|c|), then ||p_Q||inf<46/mu; this is a matrix-level Fourier stability statement, not a small-random-variable perturbation."
+    }
+  ],
+  "rank_two_control": "In the same four-bank Walsh geometry, V^2-U^2=(4/n)(S_{++}-S_{--})(S_{-+}-S_{+-}); the two factors use disjoint original-coordinate banks. For centered unit uniforms their product density diverges logarithmically at zero. Algebraic Schur removal of the third common mode leaves exactly this opposite-sign saddle. The third mode removes the divergence analytically by changing joint Fresnel decay from the nonintegrable |t|^-1 endpoint to |t|^-3/2 in the original-coordinate product integral.",
+  "unresolved_implication": "QFORM-BALANCED-CROSSCUT-STABILITY-v1: in a general unfrustrated near-rank-one N3 survivor with no fixed packet, force a growing original-coordinate cut with target-scale third volume and admissible marginals (possibly after operator stability), or a low-leverage three-mode plus diagonal product bank, or an already-paid scalar/pair/sign-frustration/ridge/hub exit. The account03/B11 r26 family is the normalization test.",
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "terminal_commit": "ba000d70d1d4f523a2396155a24d5088d5c94802",
+    "report": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260923T095139Z-account02-B11-qform-r11-86d203a2/REPORT.md",
+    "checkpoint": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260923T095139Z-account02-B11-qform-r11-86d203a2/CHECKPOINT.md",
+    "addendum": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260923T095139Z-account02-B11-qform-r11-86d203a2/ADDENDUM.md",
+    "handoff_commit": "a33595e44dfd1e54578e32ba091e0b5bd84f2650"
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_reasoning_time": null
+}

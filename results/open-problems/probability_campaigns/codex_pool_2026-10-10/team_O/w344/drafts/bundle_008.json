@@ -1,0 +1,104 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w344",
+  "bundle_slug": "w344-open-problem-c0139-checked-partials-20261010",
+  "entries": [
+    {
+      "key": "isoperimetric-dimension-greater-than-one-percolation-goal",
+      "namespace": "probability.percolation",
+      "logical_name": "isoperimetric-dimension-greater-than-one-percolation-goal",
+      "kind": "concept",
+      "title": "C0139: nontrivial percolation threshold under isoperimetric dimension greater than one",
+      "statement": "Historical open-problem target, current status unverified: for an infinite connected bounded-degree graph G satisfying |boundary_E S|>=c|S|^((d-1)/d) for every finite nonempty S, for some c>0 and d>1, must independent bond percolation have p_c(G)<1? The local intake attributes this to the Benjamini-Schramm conjecture in Pete lecture notes, Conjecture 12.7. Positive-Cheeger expansion is a stronger sufficient hypothesis; it does not cover the entire finite-dimensional isoperimetric condition. This goal card fills an exact C0139 anchor absent from the read-only population snapshot and supplies no claimed resolution.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite connected bounded-degree graph",
+        "Uniform isoperimetric constant and dimension d>1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:isoperimetric-dimension-greater-than-one-percolation-goal",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; archival problem context; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "Historical open-problem target, current status unverified: for an infinite connected bounded-degree graph G satisfying |boundary_E S|>=c|S|^((d-1)/d) for every"
+      }
+    },
+    {
+      "key": "positive-edge-cheeger-explicit-bond-percolation-threshold-bound",
+      "namespace": "probability.percolation",
+      "logical_name": "positive-edge-cheeger-explicit-bond-percolation-threshold-bound",
+      "kind": "lemma",
+      "title": "Positive edge-Cheeger constant gives an explicit nontrivial bond threshold",
+      "statement": "Let G be an infinite connected graph of maximum degree D<infinity and edge-Cheeger constant h=inf_(finite nonempty S)|boundary_E S|/|S|>0. For independent bond percolation, 1/(D-1)<=p_c<=1/(1+h)<1. A simple-path first moment proves the lower bound. During cluster exploration after s discoveries and f failures, at least h(s+1)-f boundary edges remain untested. For p>1/(1+h), the comparison walk h+hs-f has positive drift and positive probability to remain positive forever, forcing an infinite cluster. This proves a positive-Cheeger special case; the drift argument does not decide critical equality or the full finite-dimensional isoperimetric conjecture.",
+      "proof_text": "The cached Pete problem asks whether bounded-degree isoperimetric dimension >1 ensures p_c<1. The intake credits the dimension >4/Cayley results and leaves the non-Cayley intermediate regime unresolved. We give a self-contained stronger-hypothesis special case, not a new general resolution.\n\nFor an infinite connected graph of maximum degree D<infinity with edge-Cheeger constant h=inf_(finite nonempty S) |boundary_E S|/|S|>0, independent bond percolation satisfies\n\n    1/(D-1) <= p_c <= 1/(1+h) < 1.\n\nThe lower bound is the union bound over at most D(D-1)^(r-1) simple paths of length r from a fixed vertex, for p(D-1)<1. To prove the upper bound, explore a cluster by testing only unrevealed edges from discovered vertices to undiscovered vertices. After s successful discoveries and f failures, the discovered set has s+1 vertices, and at least h(s+1)-f boundary edges remain untested. Thus the exploration cannot finish while Z=h+hs-f>0. The tests are an independent Bernoulli(p) sequence: each success adds h to Z and each failure subtracts 1. If p>1/(1+h), its drift is positive. For sufficiently small lambda>0, p exp(-lambda h)+(1-p) exp(lambda)<1. Then exp(-lambda Z), stopped at the first Z<=0, is a nonnegative supermartingale, and the probability ever reaching Z<=0 is at most exp(-lambda h)<1. With positive probability exploration never terminates, proving the upper bound. Critical equality itself is not decided by this drift argument. For the d-regular tree h=d-2, the upper bound matches its exact critical probability.\n\nIP_(1+epsilon) does not supply a positive uniform h: the square lattice has a two-dimensional isoperimetric inequality but its square boxes have boundary/volume tending to zero. This explains the remaining gap rather than incorrectly applying the proved bound to the whole question.",
+      "assumptions": [
+        "Independent bond percolation",
+        "Infinite connected graph",
+        "Finite maximum degree",
+        "Uniform positive edge-Cheeger constant"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:positive-edge-cheeger-explicit-bond-percolation-threshold-bound",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "Let G be an infinite connected graph of maximum degree D<infinity and edge-Cheeger constant h=inf_(finite nonempty S)|boundary_E S|/|S|>0."
+      }
+    },
+    {
+      "key": "square-lattice-finite-isoperimetry-with-zero-cheeger",
+      "namespace": "probability.percolation",
+      "logical_name": "square-lattice-finite-isoperimetry-with-zero-cheeger",
+      "kind": "lemma",
+      "title": "Finite isoperimetric dimension does not imply a positive Cheeger constant",
+      "statement": "Every finite nonempty S in the square lattice Z^2 has |boundary_E S|>=4sqrt(|S|), while the edge-Cheeger constant of Z^2 is zero. Indeed, if S occupies a columns and b rows then its edge boundary is at least 2a+2b>=4sqrt(ab)>=4sqrt(|S|); square boxes of side r have boundary/volume=4/r. Thus an IP_2 inequality cannot be substituted for the uniform positive-Cheeger hypothesis in the explicit threshold proof. This does not refute the conjecture that finite isoperimetric dimension greater than one ensures p_c<1.",
+      "proof_text": "The cached Pete problem asks whether bounded-degree isoperimetric dimension >1 ensures p_c<1. The intake credits the dimension >4/Cayley results and leaves the non-Cayley intermediate regime unresolved. We give a self-contained stronger-hypothesis special case, not a new general resolution.\n\nFor an infinite connected graph of maximum degree D<infinity with edge-Cheeger constant h=inf_(finite nonempty S) |boundary_E S|/|S|>0, independent bond percolation satisfies\n\n    1/(D-1) <= p_c <= 1/(1+h) < 1.\n\nThe lower bound is the union bound over at most D(D-1)^(r-1) simple paths of length r from a fixed vertex, for p(D-1)<1. To prove the upper bound, explore a cluster by testing only unrevealed edges from discovered vertices to undiscovered vertices. After s successful discoveries and f failures, the discovered set has s+1 vertices, and at least h(s+1)-f boundary edges remain untested. Thus the exploration cannot finish while Z=h+hs-f>0. The tests are an independent Bernoulli(p) sequence: each success adds h to Z and each failure subtracts 1. If p>1/(1+h), its drift is positive. For sufficiently small lambda>0, p exp(-lambda h)+(1-p) exp(lambda)<1. Then exp(-lambda Z), stopped at the first Z<=0, is a nonnegative supermartingale, and the probability ever reaching Z<=0 is at most exp(-lambda h)<1. With positive probability exploration never terminates, proving the upper bound. Critical equality itself is not decided by this drift argument. For the d-regular tree h=d-2, the upper bound matches its exact critical probability.\n\nIP_(1+epsilon) does not supply a positive uniform h: the square lattice has a two-dimensional isoperimetric inequality but its square boxes have boundary/volume tending to zero. This explains the remaining gap rather than incorrectly applying the proved bound to the whole question.",
+      "assumptions": [
+        "Unweighted square lattice",
+        "Finite nonempty vertex sets"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:square-lattice-finite-isoperimetry-with-zero-cheeger",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "Every finite nonempty S in the square lattice Z^2 has |boundary_E S|>=4sqrt(|S|), while the edge-Cheeger constant of Z^2"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "isoperimetric-dimension-greater-than-one-percolation-goal",
+      "to_existing_logical": "math:harvest.wikipedia:wiki-cheeger-constant-graph-theory",
+      "kind": "cites",
+      "rationale": "New end: \"Historical open-problem target, current status unverified: for an infinite connected bounded-degree graph G satisfying |boundary_E S|>=c|S|^((d-1)/d) for every\"; existing end: \"In mathematics, the Cheeger constant of a graph is a numerical measure of whether or not a graph\". This result addresses or audits C0139; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    },
+    {
+      "from_key": "positive-edge-cheeger-explicit-bond-percolation-threshold-bound",
+      "to_existing_logical": "math:harvest.wikipedia:wiki-cheeger-constant-graph-theory",
+      "kind": "cites",
+      "rationale": "New end: \"Let G be an infinite connected graph of maximum degree D<infinity and edge-Cheeger constant h=inf_(finite nonempty S)|boundary_E S|/|S|>0.\"; existing end: \"In mathematics, the Cheeger constant of a graph is a numerical measure of whether or not a graph\". This result addresses or audits C0139; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    },
+    {
+      "from_key": "square-lattice-finite-isoperimetry-with-zero-cheeger",
+      "to_existing_logical": "math:harvest.wikipedia:wiki-cheeger-constant-graph-theory",
+      "kind": "cites",
+      "rationale": "New end: \"Every finite nonempty S in the square lattice Z^2 has |boundary_E S|>=4sqrt(|S|), while the edge-Cheeger constant of Z^2\"; existing end: \"In mathematics, the Cheeger constant of a graph is a numerical measure of whether or not a graph\". This result addresses or audits C0139; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    },
+    {
+      "from_key": "positive-edge-cheeger-explicit-bond-percolation-threshold-bound",
+      "to_key": "isoperimetric-dimension-greater-than-one-percolation-goal",
+      "kind": "cites",
+      "rationale": "New end: \"Let G be an infinite connected graph of maximum degree D<infinity and edge-Cheeger constant h=inf_(finite nonempty S)|boundary_E S|/|S|>0.\"; goal end: \"Historical open-problem target, current status unverified: for an infinite connected bounded-degree graph G satisfying |boundary_E S|>=c|S|^((d-1)/d) for every\". The positive-Cheeger result and the zero-Cheeger IP_2 example identify the proved special case and its remaining hypothesis gap."
+    },
+    {
+      "from_key": "square-lattice-finite-isoperimetry-with-zero-cheeger",
+      "to_key": "isoperimetric-dimension-greater-than-one-percolation-goal",
+      "kind": "cites",
+      "rationale": "New end: \"Every finite nonempty S in the square lattice Z^2 has |boundary_E S|>=4sqrt(|S|), while the edge-Cheeger constant of Z^2\"; goal end: \"Historical open-problem target, current status unverified: for an infinite connected bounded-degree graph G satisfying |boundary_E S|>=c|S|^((d-1)/d) for every\". The positive-Cheeger result and the zero-Cheeger IP_2 example identify the proved special case and its remaining hypothesis gap."
+    }
+  ]
+}

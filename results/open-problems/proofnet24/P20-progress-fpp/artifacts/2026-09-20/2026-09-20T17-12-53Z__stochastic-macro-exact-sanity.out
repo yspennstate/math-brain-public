@@ -1,0 +1,14 @@
+P20-STOCHASTIC-MACRO-EXACT-SANITY: ALL_EXACT_CHECKS_PASS
+toy_reference = [Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+S1(z) = [Fraction(1, 2), Fraction(7, 8), Fraction(5, 8)]
+S2(z) = [Fraction(17, 16), Fraction(23, 16), Fraction(9, 8)]
+S1(S1(z)) = [Fraction(9, 8), Fraction(23, 16), Fraction(19, 16)]
+Lambda1 = 7/8 = 0.875
+Lambda2_per_block = 23/32 = 0.71875
+strict_toy_macro_gain = 5/32 = 0.15625
+jensen_gap = [Fraction(1, 16), Fraction(0, 1), Fraction(1, 16)]
+upward_projection_length3_sequences_checked = 8
+M_48 = 64247422146097977376474165077/1237940039285380274899124224 = 51.89865430250223
+2*M_48 = 103.79730860500446
+2*M_48+2W = 199.79730860500445
+NOTE = algebraic sanity only; no source-level FPP claim

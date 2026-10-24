@@ -1,0 +1,13 @@
+{
+  "helper_version": "A063-central-refund-v2; outward endpoint rounding at 384 bits repairs serialization growth without changing the mathematical domain",
+  "actual_Boolean_family": "B05 F=1+A_r(z)[b_k(x)-1-(1-y)1_{x=0}], b_k=(-1)^(x1*x2+...); r=2k, k even",
+  "parameter_domain": "k=4,6,...,40; two-query block consisting of selector y and one control z1; both orders",
+  "case_count": "19 parameter values, 38 two-query orders; direct full truth-table/Walsh reproduction only at k=4,r=8",
+  "symmetry": "Exact six residual coefficient classes by data coefficient +/-2^(-k/2), empty data, and empty/nonempty remaining control mask; multiplicities proved, not assumed",
+  "arithmetic": "Fraction joint kernels and exact Walsh integers; rational atanh logarithm enclosures with 64 terms and explicit remainder; interval combinations rounded outward to denominator 2^384; no floating sign decision",
+  "memory_estimate_mb": 70,
+  "pilot_max_runtime_seconds": 60,
+  "max_runtime_seconds": 60,
+  "dimension_escalation": false,
+  "target": "Verify all refund lies in empty residual packet, R<=16*d^2 in both orders; certify comparison with the MU ceiling and retain terminal child spectra"
+}

@@ -1,0 +1,38 @@
+{
+  "target": "C0041",
+  "checked_date": "2026-10-10",
+  "historical_source": {
+    "title": "Selected Topics in Random Walk in Random Environment",
+    "authors": ["Alexander Drewitz", "Alejandro F. Ramirez"],
+    "url": "https://arxiv.org/abs/1309.2589",
+    "version": "1309.2589v1 (2013-09-10)",
+    "locator": "Open question 2.20, PDF page 24 (zero-based 23), printed page 22; definitions 2.13-2.14 on printed page 18",
+    "primary_wording_verified": true,
+    "historical_conclusion": "Almost-sure positive liminf of projected speed; deterministic velocity is a standard equivalent consequence in this iid UE setting.",
+    "local_intake": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:41"
+  },
+  "exact_target": "For every d>=2, every iid law of nearest-neighbour site transition kernels on Z^d with deterministic uniform lower bound kappa>0 on all 2d transitions, and every fixed unit vector ell: if the annealed law from 0 satisfies X_n dot ell -> +infinity almost surely, then X_n/n -> a deterministic vector v with v dot ell>0 almost surely.",
+  "prior_attempts": [{"id":"C0041-A001","file":"~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl:32","gap":"Transience yields finite regeneration times almost surely, but not their finite expectation.","assessment":"The regeneration-integrability obstruction is retained; heuristic trap-density statements are not adopted as proofs."}],
+  "recent_resolution_claim": {
+    "found": true,
+    "claimed_manuscript_date": "2026-09-23",
+    "scope_url": "https://github.com/openai/math/blob/main/lean/docs/220.md",
+    "manuscript_url": "https://github.com/openai/math/blob/main/preprints/Directional-transience-implies-ballisticity-September-23-2026/paper.pdf",
+    "comparator_url": "https://github.com/openai/math/blob/main/lean/ComparatorChallenges/DirectionalBallisticity.lean",
+    "exact_comparator_theorem": "OAI.DirectionalTransience.directional_transience_implies_ballisticity",
+    "comparator_assumptions": ["d>=2", "probability measure nu on nearest-neighbour rows", "product iid environment law", "uniform ellipticity", "unit direction", "annealed almost-sure directional transience"],
+    "comparator_body": "by sorry",
+    "verdict": "The linked comparator is an admitted statement, not a formal proof receipt. Its placeholder does not invalidate a separate paper or proof artifact.",
+    "actual_proof_entrypoint": "https://raw.githubusercontent.com/openai/math/main/lean/OAI/Probability/Ballisticity/Main.lean",
+    "formalization_index": "https://raw.githubusercontent.com/openai/math/main/lean/formalization.yaml",
+    "actual_proof_artifact_checked": "32-line entrypoint only, delegates to directional_transience_implies_ballisticity_unit; transitive proof not checked",
+    "lean_build_run": false,
+    "trusted_axioms_receipt": null
+  },
+  "current_openness": "UNKNOWN",
+  "kalikow_external_dependency": {"theorem":"Kalikow's uniform positive finite-domain drift criterion implies ballisticity for iid UE nearest-neighbour RWRE, with deterministic limiting velocity","primary_author_paper_url":"https://arxiv.org/abs/1902.08920","locator":"introduction pp.1 and 3","original_reference":"Sznitman-Zerner (1999), A law of large numbers for random walks in random environment","proof_here":"not re-proved; used as an explicit standard dependency"},
+  "novelty": "No novelty or parent-target resolution claim.",
+  "recall": {"status":"TIMEOUT_60S","fallback_memory_slug":"perceptron_proof_open_gaps_fleet_2026_07_12","lesson":"A pipeline/source/formal statement check is not proof of the hardest mathematical gap."},
+  "independent_review": {"requested_referee":"w452","received":false},
+  "served_model_evidence": {"author":"UNAVAILABLE: no response-side model identity exposed","referee":"UNAVAILABLE: no review received"}
+}

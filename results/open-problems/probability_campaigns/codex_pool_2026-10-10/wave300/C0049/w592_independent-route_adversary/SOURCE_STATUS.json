@@ -1,0 +1,76 @@
+{
+  "target": "C0049",
+  "exact_statement_recovered": true,
+  "statement": "Fix 0<q<=4 and p=p_c(q). For square-lattice Dobrushin domains (Omega_delta,a_delta,b_delta) approximating a simply connected domain with two marked boundary points, the FK exploration path is conjectured to converge weakly to chordal SLE with kappa=4*pi/(pi-arccos(sqrt(q)/2)). The assigned target excludes q=2.",
+  "topology_note": "Conjecture 3 does not itself spell out the full curve topology/prime-end approximation convention; any proof must state these. ATTEMPT.md supplies a proposed Jordan-domain formulation, not a stronger source attribution.",
+  "q_less_than_one_note": "The finite identities hold for q>0. Do not infer p_c=p_sd or RSW for q<1 from q>=1 theorems.",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "sources": [
+    {
+      "source_id": "duminil_copin_ising_potts_2017",
+      "url": "https://www.ihes.fr/~/duminil/publi/2017PIMS.pdf",
+      "locator": "Conjecture 3, printed p.93, zero-based PDF page 92",
+      "checked": "exact primary statement and adjacent sufficient observable route",
+      "excerpt": "the previous conjecture would follow from the convergence of vertex parafermionic observables"
+    },
+    {
+      "source_id": "smirnov_icm_2006",
+      "url": "https://www.unige.ch/~smirnov/papers/icm-publ.pdf",
+      "locator": "Conjecture 4, printed p.1429, zero-based PDF page 8",
+      "checked": "square-lattice loop/Dobrushin formulation and equivalent kappa formula"
+    },
+    {
+      "source_id": "averous_et_al_fk4_20261006",
+      "url": "https://unige.ch/~duminil/publi/2026%20conformal%20invariance%20FK%20q=4.pdf",
+      "date_on_pdf": "2026-10-06",
+      "locator": "Theorem 1.2, printed p.4, zero-based PDF page 3",
+      "checked": "q=4,p=2/3,free boundary loop convergence to CLE(4), Caratheodory approximation, Camia-Newman topology",
+      "chordal_transfer": "not certified by this audit; no full C0049 retirement",
+      "arxiv_id": "not verified; author page used a placeholder"
+    },
+    {
+      "source_id": "dst_2015",
+      "url": "https://arxiv.org/abs/1505.04159",
+      "checked": "abstract scope q in [1,4] and RSW; no extrapolation below 1"
+    }
+  ],
+  "prior_work": {
+    "intake_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:49",
+    "attempt_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl:39",
+    "earlier_method": "parafermionic observable and missing full discrete relations",
+    "H_I_search": "No C0049 or FK/SLE/P0124 exact text match returned from scoped H/I searches; not a corpus-wide novelty check.",
+    "lean_search": "C0049 only in annotated ranked list; no exact C0049 Lean theorem found in the scoped scan.",
+    "owner_solved_retired_search": "No exact C0049/P0124/random-cluster-SLE hit returned in the permitted notes/research directories; current solved/retired status remains UNKNOWN.",
+    "team_O": "C0049 absent from Team O board; P0124 assigned to w341.",
+    "export_ids": [
+      "claim_347e594687b6554f3064529196a1a3a40b60b0076bb44dfa5593974e31ea4f4c",
+      "claim_3908da7919a7318bc7b220dc189ceb958a0b62e279555dd907896a7f04d7bf77"
+    ],
+    "canonical_exact_id_receipt": "STORE_EVIDENCE.json",
+    "duplication_note": "Finite next-edge connectivity dependence already appears in the P0124 attempt; no novelty claimed for that diagnostic."
+  },
+  "independence": {
+    "independent_file": "ATTEMPT.md",
+    "written_before_paired_statement_read": true,
+    "paired_statement": "~/brain_workers/w591/STATEMENT_FOR_ADVERSARY.md",
+    "paired_proof_at_first_read": "ATTEMPT.md was a placeholder; returned a separately derived proof of the frozen statement",
+    "paired_proof_read_after_independent_derivation": true,
+    "paired_proof_snapshot": "PEER_PROOF_SNAPSHOT.md",
+    "paired_proof_sha256": "3555d65a7a5d9222f13b139f62b19d6be9b01b636dbcd4293d5c28e229ac8ce5"
+  },
+  "served_identity": {
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "max",
+    "requested_tier": "Fast",
+    "response_side_evidence": "unavailable",
+    "author_served_model": "UNKNOWN",
+    "referee_served_model": "UNKNOWN"
+  },
+  "mathematical_review": {
+    "referee": "w593",
+    "state": "requested, pending",
+    "independent_referee_for_new_referee_results": "w596"
+  },
+  "last_updated": "2026-10-10T07:27:57.106756+00:00"
+}

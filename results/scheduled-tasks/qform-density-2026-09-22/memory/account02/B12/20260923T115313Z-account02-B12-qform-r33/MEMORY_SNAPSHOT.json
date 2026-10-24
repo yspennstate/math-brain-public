@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B12",
+  "title": "Additional eigenvalue control",
+  "run_id": "20260923T115313Z-account02-B12-qform-r33",
+  "status": "PROVED_SUPPORTING_STABILITY_THEOREM_FULL_QFORM_OPEN_NOT_INDEPENDENTLY_REVIEWED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit": "f3061e07051a5f6426c2fd5a9e3c94afe7ce67cc",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-UNIFORM-MATRIX-PERTURBATION-CONTINUITY-FALSE-v1",
+    "QFORM-ARBITRARY-JOINT-INDEFINITE-PLANAR-L2-FALSE-v1"
+  ],
+  "required_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "files": [
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+    ],
+    "result_applied": "D5: ||p_Q||inf <= 5 sqrt(2e) e_5(M^T M)^(-1/10) for an actual original-coordinate cross block, no marginal condition"
+  },
+  "partner_source": {
+    "account_slot": "account03/B12",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "eb3111d97a233b15ea18088a2cf97bc17d9d4c25",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T114533Z-qform-eigenvalue-r32/REPORT.md",
+    "result_applied": "s_j(B+R)>=s_{j+k}(B)-s_{k+1}(R), compiled into an adaptive physical-core reserve envelope"
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-ADAPTIVE-RESERVE-ENVELOPE-v1",
+      "statement": "For M_final=M0+L+R+T with rank L<=r and ||T||op<=delta, s_q(M_final)>=max_p[s_{q+r+p}(M0)-s_{p+1}(R)]-delta."
+    },
+    {
+      "id": "QFORM-SCHATTEN2-RESERVE-DILUTION-v1",
+      "statement": "If s_N(M0)>=kappa and N>=r+q, then s_q(M_final)>=kappa-delta-||R||F/sqrt(N-r-q+1); the aggregate coefficient is sharp from this information."
+    },
+    {
+      "id": "QFORM-D5-SCHATTEN2-TAIL-COMPILER-v1",
+      "statement": "For an actual original-coordinate cross block and q=5, positive reserve gap gamma implies ||p_Q||inf<=5 sqrt(2e)/gamma by the pinned D5 theorem, with arbitrary same-bank blocks and outside couplings."
+    }
+  ],
+  "exact_target_family": "Two 64-coordinate banks with baseline cross 2I_64, any number of +2 spectators mixed with g1 into an arbitrary-eigenvalue packet of rank-one cross footprint, plus 63 further +2 to +3 eigenvalue replacements and any symmetric dense tail ||T||op<=1/4. The Frobenius reserve gap is at least 7/4-(1/2)sqrt(63/59), giving density cap 9.452645656349882; 64 untouched -2 directions keep the exact global target hypothesis.",
+  "unresolved_implication": "Bare global s_3(A)>=1 still does not force a long original-coordinate cross/core reserve. Force such a positive adaptive reserve envelope in the no-pivot/N3 survivor or exit through an already-paid volume/hub/ridge/grouped-bank/pair/triple/Schur certificate.",
+  "outputs": {
+    "checkpoint_commit": "b0cfe3b765304e1b5070713de0a6f40ecc8716a9",
+    "report_commit": "64268d2bee76cd374e2bf1a34868e0e6a1b7e84d",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260923T115313Z-account02-B12-qform-r33/REPORT.md",
+    "handoff_commit": "f25d6eb4fe513daef074be33b32cb5735268c48d",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B12/20260923T115313Z-account02-B12-qform-r33.md"
+  },
+  "review_status": "NOT_INDEPENDENTLY_REVIEWED",
+  "full_problem_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity": "PROVED_ONLY_IN_THE_D5_CROSS_BRANCH_USED_HERE; NOT_CLAIMED_FOR_THE_GENERAL_PHYSICAL_CORE_RECEIVER",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_tokens": null,
+  "provider_thinking_time": null
+}

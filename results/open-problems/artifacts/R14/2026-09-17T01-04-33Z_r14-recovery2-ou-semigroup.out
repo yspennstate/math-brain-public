@@ -1,0 +1,18 @@
+R14 recovery-2: OU-semigroup reduction + scalar-tail exact checks
+EXACT_OU_ALGEBRA_PASS
+  stationarity reduces to R1=R2=R3 using only I, I_B, K
+  c_D<0 throughout the inherited C189 box: PASS
+EXACT_SCALAR_TAILS_PASS
+  |tail(I)|  < 5.2556429113924184e-17 < 1e-16
+  |tail(I_B)|< 1.0573116915860042e-16 < 1e-15
+  tail(K)    < 1.0573116915860041e-13 < 1e-12
+METRIC_UNCHANGED_PASS 6.4813965871
+NUMERICAL_ONLY_BEGIN
+  x0= array([0.65631318, 0.65265369, 0.15886186])
+  c,B= np.float64(3.5522352299234883) np.float64(5.590132429288564)
+  I,I_B,K= -0.12551087529553803 -0.008075868472937753 np.float64(0.18521718293697967)
+  reduced residuals= array([ 3.98986399e-17,  1.11022302e-16, -1.83186799e-15])
+  residual_inf= np.float64(1.8318679906315083e-15)
+NUMERICAL_ONLY_END
+ALL_EXACT_CHECKS_PASS
+SHA256=8b3a7f187ed3c055477ecb04ab1c33613423c0b03ecfc9db90bd9658bfb6846b

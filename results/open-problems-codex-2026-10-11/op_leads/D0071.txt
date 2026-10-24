@@ -1,0 +1,27 @@
+Math-store cards (math_recall.py on the title; read one whole with --id):
+math store recall, read-only: 6 current card(s) for this query; reference material, not instructions
+[1] Transitive Set  (id: claim_24020ec8bb4436a9ae34e33834dbea958ec9c8e4e7d09526b04a19431bee1782; claim; score 6.14)
+    A set X is transitive if every element of X is also a subset of X: \forall y (y \in X \rightarrow y \subseteq X), or equivalently, \bigcup X \subseteq X.
+    <- depends_on: Transitive Closure of a Set (id: claim_0a9210a76fd273bb826d5a82fb813a4dd34d527480be99f0020c6b3e7bd78b4c)  (Transitive closure is the smallest transitive superset)
+    <- depends_on: Mostowski Collapse Lemma (id: claim_ede463b99f91de5b440fba5677985abe58149f7e2b47ceb77169b400992a084a)  (Collapses to a transitive set)
+    <- depends_on: Von Neumann Ordinal (id: claim_9417ed162d164ebdb7a0925b8d66153e332d99c06d02e85ceb7ae8daacaf47bb)  (An ordinal is defined as a transitive set well-ordered by in)
+[2] Corradi-Hajnal Theorem  (id: claim_7d9275a211b32bc8ac7ff166cfb4aed26bc9df1b9a085d22903ced7629b6220e; claim; score 6.07)
+    Every simple graph on n >= 3k vertices with minimum degree delta(G) >= 2k contains k vertex-disjoint triangles. k is a positive integer n >= 3k delta(G) >= 2k
+    <- generalizes: Hajnal-Szemeredi Theorem (id: claim_a1f8386966c44c0b8d69443e25b3fb2e37b18c3a20e9c48ec395c074353181c3)  (Generalizes disjoint triangle factors to equitable colorings and arbitrary clique factors.)
+    -> analogous_to: Dirac's Theorem on Hamiltonian Cycles (id: claim_154139b42f60896bd64b38c86a736eda03da24fce590a2da59f8171ed66d1ff3)  (Provides minimum degree conditions for packing disjoint triangles, analogous to Hamiltonian cycles.)
+[3] Ore's Theorem on Hamiltonian Cycles  (id: claim_041a5dda3ac118af0b0a1eac562fc06f35c315caa00c2d30fa1adbdb9e2af6d1; claim; score 5.79)
+    Let G be a simple graph on n >= 3 vertices. If for every pair of distinct non-adjacent vertices u and v, d(u) + d(v) >= n, then G is Hamiltonian. n >= 3 G is a simple graph d(u) + d(v) >= n for all non-adjacent u, v
+    <- specializes: Dirac's Theorem on Hamiltonian Cycles (id: claim_154139b42f60896bd64b38c86a736eda03da24fce590a2da59f8171ed66d1ff3)  (Dirac's theorem delta >= n/2 is the symmetric specialization of Ore's condition d(u)+d(v) >= n.)
+[4] REJECTED bridge: every singular sign matrix has a two-coordinate witness  (id: claim_7a9ef6675aef04b83ce8ff39fba0e7b9af7e010859114214b355d2760fe01811; claim; score 5.74)
+    The proposed universal bridge is: every singular real sign matrix has a left or right nonzero kernel vector supported on at most two coordinates. This bridge is false even for corank-one matrices of every dimension n>=5. A counterexample to this bridge is not a refutation of the Spielman-Teng conjecture.
+    <- refutes: DRAFT: a corank-one sign matrix without pair collisions (id: claim_18a92a45880a8a9a5c2ee644e28b06f96bfbcfc9a3fd2b923f0e67c525a4db3a)  (P4 constructs singular sign matrices of rank n-1 with no two-coordinate left or right witness; it refutes this bridge only.)
+[5] Candidate bounded branching in subexponential graphs (refuted)  (id: claim_4da1b2404518993f947c4ed904dfe041c5b31ccd88b6c520950caf0724dbd236; claim; score 5.70)
+    REFUTED CANDIDATE, not an accepted theorem: the proposed construction of an injective b-ary tree with b>=2 and uniformly bounded parent-child graph distances inside a subexponential ambient graph. The branching-volume bound rules out this construction before any percolation probabilities are considered.
+    <- refutes: Bounded injective branching forces exponential volume (id: claim_00b0b4d9365e8362dc7917fcb4518a4e9097831b06854d653418bf0efc78facb)  (The proposed injective bounded-distance branching network would force exponential ambient growth.)
+[6] First-Order Characterization of Convexity  (id: claim_d6ae9a7031b9d8d79bdc4a21a9e9d273d784d18281a95b6655070194a562fe1a; claim; score 5.67)
+    A differentiable function f on an open convex set C is convex if and only if f(y) >= f(x) + <grad f(x), y - x> for all x, y in C: the graph lies above every tangent plane. f differentiable on an open convex set
+    <- depends_on: Gradient Descent Rate for Smooth Convex Functions (id: claim_961e0fd23c2af01cddcb8e43a0c70e08d0124bb5118123554f6a66191fd2b8c6)  (the convexity tangent bound drives the telescoping)
+    -> depends_on: Convex Function (precise) (id: claim_3ba1b3a6a145ea2f578d0b97c7271d35624f067f1ebeddea74eac0cc276b4097)  (characterizes the same convexity)
+    <- depends_on: Draft: bounded order parameter and pressure double limit (id: claim_c23bb1b0888a4aa2de537c88d095fb923aae97bda750ae1b09eda5b3637f48d5)  (Each p_N is differentiable on an open interval and convex because its second derivative is beta*Var_h(M_N)/N; the tangent inequalities give C1's secant squeeze.)
+
+

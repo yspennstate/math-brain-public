@@ -1,0 +1,6 @@
+PASS MOC4-MIXED-SCHUR-TRUST-COLLAPSE-v1
+trust_multiplier = -A*B
+residual_psd = [[A*B-m^2, -(A*r2+m*s2)], [-(A*r2+m*s2), A*(H-rho^2)-s2^2]]
+simple_boundary_equiv = H >= rho^2 + (A*r2^2+2*m*r2*s2+B*s2^2)/(A*B-m^2)
+great_circle_cubic = A*r1 + sqrt(A*B)*s1 = 0
+double_boundary_equiv = second cubic relation plus H >= rho1^2+rho2^2

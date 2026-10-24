@@ -1,0 +1,12 @@
+STATE: DONE
+NEXT: Prove H(theta^n) <= theta^n/(1+theta) for intrinsic genuine feasible burning times under endogeny, or construct a genuine violating solution; alternatively prove every full solution is captured by finite-cutoff approximations.
+VERDICT: PARTIAL
+
+2026-10-11: Started source verification and read-only brain recall.
+2026-10-11: Reopened at the user's request for one further serious attempt; previous PARTIAL results retained.
+2026-10-11: Developed both new approaches in SECOND_ATTEMPT.md. Proved intrinsic feasible-set identities, characterized the spurious local-recursion relaxation, and proved finite-cutoff convergence under endogeny. Added equivalent scalar uniqueness criteria; final checks and claim records in progress.
+2026-10-11: Completed the additional attempt and hostile referee checks. New reductions are Propositions D, G and H; Proposition F proves convergence of genuine finite-cutoff solutions under endogeny, with explicit TV bounds, sharp for theta<=1/2. Proposition E and top-state inflation refute auxiliary set-recursion claims only, not P0360.
+2026-10-11: Final Lean check passed (exit 0) for branching set membership and comparable antitone fixed points. Exact computation checked 2025 branching cases, 288 inflation identities, and 35 cutoff-law bounds. All new claims saved in CLAIMS.jsonl and proofs in SECOND_ATTEMPT.md, with a summary in ATTEMPT.md. Full unrestricted uniqueness remains unproved, including theta<1/2. Final verdict PARTIAL; no claim of a solution in print or a counterexample to P0360.
+2026-10-11: Downloaded and verified Question 1, equation (1.3), Lemma 7 and Theorem 9 from arXiv:2103.14408v2. Searched arXiv, OpenAlex, Crossref, Semantic Scholar and GitHub. No matching solution found in this bounded search; OpenAlex citation queries remained rate limited.
+2026-10-11: Proved unrestricted uniqueness for well-ordered freezing sets; proved a necessary descending alternating disagreement-path condition; proved that the weaker activation-tail ray obstruction occurs almost surely. Full proofs and referee checks are in ATTEMPT.md.
+2026-10-11: Lean 4 checked the abstract well-founded induction and strict-time inequality, exit code 0. Exact rational offspring checks and bounded numerical iterations passed. Recorded all claims and explicit limitations. Full Question 1, including geometric theta<1/2, remains unresolved in this attempt. Stopped with the remaining gap written down.

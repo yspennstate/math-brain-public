@@ -1,0 +1,46 @@
+{
+  "slot": "NM13-10",
+  "date": "2026-09-20",
+  "source": "Agresti-Veraar arXiv:2501.18561 Problem 3",
+  "frozen_pair": {
+    "X0": "H^{-1}(Torus)",
+    "X_half": "L^2(Torus)",
+    "X1": "H^1(Torus)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "brownian_drivers": 1
+  },
+  "fixed_source_metric": {
+    "name": "strong maximal-regularity endpoint",
+    "before": "r_*=3, p=3 excluded",
+    "after": "r_*=3, p=3 excluded",
+    "movement": false
+  },
+  "critical_exponent_metric": {
+    "name": "alpha_*(T) for L^3 -> Z_{3,alpha}(T)",
+    "before": "[2/3,1]",
+    "after": "[2/3,1]",
+    "movement": false
+  },
+  "quantitative_endpoint_metric": {
+    "name": "certified lower bound on the norm of any possible L^3 -> Z_{3,2/3}(T) estimate",
+    "before": "2^(5/3)/9 = 0.35275578932626656",
+    "after": "4/9 = 0.44444444444444444",
+    "movement": true,
+    "factor": "2^(1/3) = 1.2599210498948732"
+  },
+  "mechanism_gain": "For the explicit source-valid additive critical-exponential witness Y=M, Z=M(W-t), solve the exact level boundary q+log q=(3/2)r+(1/2)t+log(cr) and perform the Gaussian saddle. This gives exp(9r/2) times the scaled spacetime tail converging to 16/(9c^3), hence the invariant R^3 m ~ (16/9)r^3 and the critical norm lower constant 4/9.",
+  "status": "CANDIDATE_FULL / SELF-CHECKED / PENDING INDEPENDENT REVIEW; full critical endpoint remains PARTIAL",
+  "residual_obstruction": "Prove or refute boundedness of the full frozen-pair map L^3 -> Z_{3,2/3}(T) for arbitrary progressive full-spectrum inputs.",
+  "failed_or_nonclosing_routes_this_run": [
+    "The subcritical norm-only limiting extrapolation still yields logarithmic exponent 1 and cannot certify exponent 2/3.",
+    "A direct arbitrary-progressive quotient/Hardy estimate under the M^3 tilt was not closed without an extra time-growth loss, so no full positive endpoint is claimed."
+  ],
+  "next_attack": "Derive a sharp arbitrary-progressive good-lambda/energy-stopping inequality under the critical M^3 tilt and then lift it across the self-adjoint spectrum. T05 fallback is not due because this run has a strict quantitative gain.",
+  "artifacts": [
+    "2026-09-20T08-47-52+0300__exact_additive_saddle_check.py",
+    "2026-09-20T08-47-52+0300__exact_additive_saddle_check.out",
+    "2026-09-20T08-47-52+0300__exact-additive-saddle-critical-constant.md"
+  ]
+}

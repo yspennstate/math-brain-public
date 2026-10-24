@@ -1,0 +1,92 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w523",
+  "bundle_slug": "lqg-dependent-set-kpz-counterexample-001",
+  "entries": [
+    {
+      "key": "thick-dimensions",
+      "namespace": "probability.lqg",
+      "logical_name": "subcritical-gamma-thick-point-metric-dimension-inputs",
+      "kind": "concept",
+      "title": "Subcritical gamma-thick-point dimensions",
+      "statement": "DRAFT, independent review pending. Fix gamma in (0,2). Let h be a whole-plane GFF and D_h its gamma-LQG metric, with deterministic dimension d_gamma. Let T_h^gamma={z: lim_{r->0} h_r(z)/log(1/r)=gamma}. For this fixed gamma, almost surely its Euclidean Hausdorff dimension is 2-gamma^2/2 and its D_h-Hausdorff dimension is d_gamma. These are published source inputs: Gwynne-Pfeffer equation (1.11) with deterministic ambient C, and Corollary 1.7. No numerical value of d_gamma is supplied.",
+      "proof_text": null,
+      "assumptions": [
+        "gamma fixed in (0,2)",
+        "whole-plane GFF h with fixed additive normalization",
+        "D_h is the gamma-LQG metric",
+        "published thick-point theorem and Corollary 1.7"
+      ],
+      "domain": "probability theory; random geometry",
+      "source": {
+        "source_id": "owner-own-work:lqg-dependent-kpz-route-audit",
+        "url": "https://arxiv.org/abs/1905.11790",
+        "revision": "campaign-derivation-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "false-bridge",
+      "namespace": "probability.lqg",
+      "logical_name": "refuted-unrestricted-field-dependent-metric-kpz-bridge",
+      "kind": "concept",
+      "title": "Refuted unrestricted metric KPZ bridge",
+      "statement": "REFUTED AUXILIARY BRIDGE; draft campaign audit pending. Extending the independent-set metric KPZ equality dim_E(X)=xi*Q*dim_D(X)-(xi^2/2)*dim_D(X)^2 to every random Borel set X, with no restriction on dependence on the GFF h, is false. The published exact equality assumes deterministic X or random X independent of h. This failure concerns a proposed extension of a theorem, not the problem of determining the LQG metric dimension.",
+      "proof_text": null,
+      "assumptions": [
+        "gamma fixed in (0,2)",
+        "xi=gamma/d_gamma",
+        "Q=2/gamma+gamma/2",
+        "distinguish Euclidean and metric Hausdorff dimensions"
+      ],
+      "domain": "probability theory; random geometry",
+      "source": {
+        "source_id": "owner-own-work:lqg-dependent-kpz-route-audit",
+        "url": "https://arxiv.org/abs/1905.11790",
+        "revision": "campaign-derivation-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "counterexample",
+      "namespace": "probability.lqg",
+      "logical_name": "gamma-thick-point-counterexample-to-unrestricted-metric-kpz",
+      "kind": "concept",
+      "title": "Gamma-thick-point counterexample to unrestricted metric KPZ",
+      "statement": "DRAFT source-backed counterexample, independent review pending. For every fixed gamma in (0,2), choose the field-dependent random Borel set X=T_h^gamma. Its Euclidean dimension is 2-gamma^2/2 and metric dimension d_gamma. With xi=gamma/d_gamma and Q=2/gamma+gamma/2, the unrestricted metric KPZ expression instead equals gamma*Q-gamma^2/2=2. The error is exactly gamma^2/2>0, and equals 4/3 at gamma=sqrt(8/3). Retain the published independence premise or use a valid dependent-set theorem. This counterexample does not compute d_gamma and is not a flaw attributed to a proof that already retains the premise.",
+      "proof_text": null,
+      "assumptions": [
+        "gamma fixed in (0,2)",
+        "X is the gamma-thick-point set of the same field h",
+        "two published dimension inputs in thick-dimensions",
+        "xi=gamma/d_gamma",
+        "Q=2/gamma+gamma/2"
+      ],
+      "domain": "probability theory; random geometry",
+      "source": {
+        "source_id": "owner-own-work:lqg-dependent-kpz-route-audit",
+        "url": "https://arxiv.org/abs/1905.11790",
+        "revision": "campaign-derivation-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "counterexample",
+      "to_key": "thick-dimensions",
+      "kind": "depends_on",
+      "rationale": "The counterexample substitutes the two exact source-backed dimensions of this same field-dependent set."
+    },
+    {
+      "from_key": "counterexample",
+      "to_key": "false-bridge",
+      "kind": "refutes",
+      "rationale": "The proposed equality predicts 2 for the chosen set, differing from its actual Euclidean dimension by gamma^2/2>0."
+    }
+  ],
+  "review_state": "unreviewed concept-only DRAFT; assigned referee pending"
+}

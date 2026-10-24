@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A052 stage 2: optimal recentring and singleton collapse}
+Let $S$ have the squared Fourier law of a Boolean sign on a finite uniform
+cube. Entropy is in bits. For a nonempty physical block $A$, $C=A^c$, put
+\[
+ B_A=H(S_A\mid S_C),\quad
+ \beta_A=\sum_{i\in A}\mathbb E\min\{\Pr(i\in S\mid S_C),
+                                      \Pr(i\notin S\mid S_C)\},
+ \quad U_A=B_A+\frac2{\ln2}\beta_A.
+\]
+The independently reconstructed lead channel lemma implies
+$L_A=B_A+J_A\le U_A$. Hence ratio criticality gives
+$R(f)I_A\le U_A$ for every proper block; a dimension-critical $K$-witness
+gives $KI_A+D_K(f)\le U_A$. The child-deficit comparison is the only use
+of criticality, and no inherited child criticality is needed.
+
+\paragraph{Singleton-collapse theorem.}
+For every binary law, not merely Boolean spectra,
+\[
+ B_A\ge\sum_{i\in A}B_i,\qquad
+ \beta_A\ge\sum_{i\in A}\beta_i,\qquad
+ U_A\ge\sum_{i\in A}U_i.\tag{1}
+\]
+The first inequality is the conditional chain rule followed by conditioning
+on all remaining coordinates. For the second, use conditional Jensen
+with the concave function $q\mapsto\min(q,1-q)$ and the martingale
+identity $\Pr(i\in S\mid S_C)=\mathbb E[\Pr(i\in S\mid S_{-i})\mid S_C]$.
+Write $d_i=\Pr(i\in S)$. If $n\ge2$ and $I=\sum d_i>0$, then
+\[
+ \min_{\varnothing\ne A\subsetneq[n],\,I_A>0}\frac{U_A}{I_A}
+ =\min_{i:d_i>0}\frac{U_i}{d_i}.\tag{2}
+\]
+Indeed (1) supplies the weighted-average lower bound, while proper
+singletons attain the right side. Coordinates with $d_i=0$ have $U_i=0$.
+The information-cap repair $U_A^{\rm cap}=B_A+
+\min\{|A|,(2/\ln2)\beta_A\}$ also collapses to singletons, since
+$\min(\sum a_i,\sum b_i)\ge\sum\min(a_i,b_i)$.
+
+\paragraph{Exact all-dimensional obstruction at the source ratio.}
+For $F_m=\prod_{j=1}^m(-1)^{x_jy_j}$ on $2m$ fair bits, $m\ge2$, the
+spectrum is uniform. Thus $H=2m$, $I=m$, and for every proper block
+\[
+ \frac{U_A}{I_A}=2+\frac2{\ln2}>R(F_m)=2,
+ \qquad\frac{U_A^{\rm cap}}{I_A}=4.
+\]
+The actual decrement is $L_A=2t(A)$, where $t(A)$ counts pairs intersecting
+$A$. Its joint channel is $J_A=2t(A)-|A|$, so revealing one complete pair
+has $J_A=0$ and $L_A/I_A=2$. All physical children have ratio at most two;
+this is a non-strict descendant-ratio-critical family, not a dimension-
+minimal or high-ratio critical family. Tensoring a two-bit factor with a
+three-bit point defect similarly gives strict actual descent, while all
+recentred upper certificates fail. Complete proofs and the criticality
+scope are in \texttt{SINGLETON\_COLLAPSE.md}.
+
+\paragraph{Exact finite decision.}
+On A051's saved $6$--$9$-bit NAND-shape family, (2) allows complete
+decisions using all relevant singletons: $265$ of $1150$ formulas pass
+$U_A\le R I_A$, and $885$ fail every proper block. Of the failures, $479$
+have a directly rechecked actual block with $L_A<R I_A$. All seven
+separately defined Hod-named seed/hybrid controls fail the upper
+certificate; four still have rechecked strict actual descent. Integer
+Walsh transforms, rational prime-log certificates, and physical-child
+reproduction are saved with the report. There is no universal constant
+or unbounded-ratio counterfamily in this result.
+
+\paragraph{First unpaid implication.}
+To move toward FEI one needs a joint-channel or stopping-tree estimate
+that pays $B_A+J_A$ with a fixed physical influence budget and retains
+terminal entropy. Optimizing block size in $U_A$ cannot achieve more than
+the singleton optimum (2). The counterexamples reject a certificate at
+the source's own ratio; they do not reject a larger fixed universal
+constant or high-threshold dimension-critical restriction.
+\end{document}

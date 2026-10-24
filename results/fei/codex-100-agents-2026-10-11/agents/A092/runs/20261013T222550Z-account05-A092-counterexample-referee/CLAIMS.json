@@ -1,0 +1,110 @@
+[
+  {
+    "claim_id": "A050-OUTPUT-CONDITIONAL-TAX-REPAIR",
+    "version": 1,
+    "exact_statement": "For every finite Boolean sign f under an independent interior product law and every finite deterministic physical singleton stopping tree, let Pi be its full transcript, Y=f(X), w_v the physical node probabilities, c_v=H(X_i|Y,history=v), and tau*(p)=h2(p)-min_t[h2(sin^2 t)+h2(sin^2(t-beta))] with sin^2 beta=min(p,1-p). Then sum_v w_v[tau*(p_i)-c_v/2]_+<=I(Pi;Y)/2<=I_phys(f)/2 and sum_v w_v tau*(p_i)<=I_phys(f)/2+H(Pi|Y)/2. In the ordered family of uniform bounds A_T<=C I_phys(f)+lambda H(Pi|f), with finite fixed C and nonnegative lambda, the smallest coefficient over all product-biased Boolean functions and essential computing trees is lambda=1/2. The exact terminal-inclusive Fourier ledger is Hhat(f)=E Hhat(f_leaf)+2 sum_v w_v M_v+H(Pi|Y)/2+I(Pi;Y)/2-sum_v w_v[h2(p_i)/2-(J_v-M_v)]. Funding the output-conditional bank on a compatible spectral reference and paying the remaining erasure/terminal residual are not established.",
+    "hypotheses": [
+      "Actual Boolean sign and fixed independent interior product input law",
+      "Finite deterministic physical singleton stopping tree; inherited probabilities; no coordinate query repeated along a path",
+      "Transcript includes chosen coordinates and stopping information; choices determined by recorded history",
+      "Physical pivotal influence distinguished from biased spectral energy",
+      "Refund conditioning is on actual physical output; availability as a spectral-reference credit is an explicit unpaid hypothesis"
+    ],
+    "statement_sha256": "903e0d540ea1f75fc2196ed44f3e7b4cb4e3987568583b5110fd5abc41eaf773",
+    "contributors": [
+      "A050"
+    ],
+    "proof_source": {
+      "original_run": "~\\brain_workers\\FEI100_20261011\\agents\\A050\\runs\\20261013T212442Z-account05-A050-repair-with-scope",
+      "original_report_sha256": "e6220c7480a42e46369c19851061213d39ae4e0ee9b15153758ed2825f5eeb11",
+      "original_claim_sha256": "3f4cb25ce4cc7743da0be3f9eff11c4c6f76f599722bb8386b63bb1d5b477bfd",
+      "original_statement_sha256": "c675ec8f6765d38276e2e143c666d2c290adc03c6d427880e378b8951946ab50",
+      "canonical_statement_sha256": "903e0d540ea1f75fc2196ed44f3e7b4cb4e3987568583b5110fd5abc41eaf773",
+      "prior_review": "~\\brain_workers\\FEI100_20261011\\agents\\A046\\runs\\20261013T215251Z-account05-A046-current-candidate-intake\\CLAIMS.json",
+      "independent_review_run": "20261013T222550Z-account05-A092-counterexample-referee",
+      "independent_report": "REPORT.md",
+      "independent_code": "code/audit.py"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A046",
+        "decision": "INDEPENDENTLY_ACCEPTED_AT_EXACT_STATED_SCOPE",
+        "statement_sha256": "c675ec8f6765d38276e2e143c666d2c290adc03c6d427880e378b8951946ab50",
+        "source_run": "20261013T215251Z-account05-A046-current-candidate-intake",
+        "proof": "REPORT.md sections 1,3; distinct direct probability-table and coherent-joint implementation code/check.py",
+        "validation": "out/CHECK.json: 22694 exact assertions PASS",
+        "conflict": "No substantive repair supplied; original statement and hypotheses unchanged",
+        "scope": "Refund and coefficient optimality accepted; universal compatible-reference funding remains explicitly unproved"
+      },
+      {
+        "reviewer": "account05/A092",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "REPORT.md; code/audit.py; out/RESULT.json; out/UNDERREFUND.json",
+        "method": "Independent analytic repair and sharpness reconstruction; recursive centered truth-table spectra; direct coherent root/transcript joint; exact prime-log entropy cancellations; independent extreme-endpoint sign certificate",
+        "substantive_repair_supplied": false
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "A normalized compatible reference supplies the output-conditional transcript bank once with correct spectral side conditioning/channel resets, and pays the signed erasure residual plus all terminal Fourier entropy.",
+    "next_consumers": [
+      "A092",
+      "A087",
+      "A085",
+      "A037",
+      "A039",
+      "A057",
+      "A064",
+      "A073",
+      "A091",
+      "A095",
+      "B10",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A092-UNIFORM-SIGNED-TRANSCRIPT-BANK-CONVERSION",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f on a finite uniform cube and every finite deterministic physical singleton stopping tree without repeated coordinates along a path, use the function-specific coherent coupling of root Fourier set S0 and physical transcript Pi, extending to a computing tree only to attach the actual output Y=f(X). Put R=I(f)-E I(f_leaf), J_T=sum_v w_v J_v, and C_T=H(Pi|Y)-H(Pi|S0). Then C_T=J_T-I(Pi;Y) and -I(Pi;Y)<=C_T<=(2/ln2)*R-I(Pi;Y). Consequently [C_T]_+/2<=R/ln2. This bounds the signed output-to-root-spectral conditional-bank conversion; it does not supply H(Pi|S0), reference-reset credit, arbitrary witness conditioning or terminal Fourier entropy payment.",
+    "hypotheses": [
+      "finite actual Boolean sign; uniform physical inputs",
+      "finite deterministic adaptive singleton physical stopping tree; inherited fair branches; no repeated query on a path",
+      "function-specific coherent root-spectral/transcript coupling with branch kernel childhat_b(T)^2/(2q_T) on positive fibers",
+      "actual output attached by any finite computing completion; stopped transcript remains the prescribed prefix",
+      "Shannon entropy in bits; physical influence equals spectral influence only in this uniform scope",
+      "same consumed influence R cannot be spent again in descendant or reference accounts"
+    ],
+    "statement_sha256": "c89760d342c1dae8edfae7474c238db3774ba50882b854eab3ab2bc5dbbfbe63",
+    "contributors": [
+      "account05/A092"
+    ],
+    "proof_source": {
+      "run_id": "20261013T222550Z-account05-A092-counterexample-referee",
+      "path": "REPORT.md",
+      "locator": "complete derivation: new quantitative conversion proof",
+      "code": "code/audit.py",
+      "output": "out/RESULT.json; out/SHARED_CONTROL.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "A prescribed normalized compatible reference funds the root-spectral or witness-conditioned bank and all signed reset/erasure/terminal residuals from the remaining exclusive influence budget.",
+    "next_consumers": [
+      "A050",
+      "A057",
+      "A064",
+      "A037",
+      "A039",
+      "A091",
+      "A095",
+      "A087",
+      "A085",
+      "B19",
+      "B20"
+    ]
+  }
+]

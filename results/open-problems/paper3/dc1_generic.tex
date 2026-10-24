@@ -1,0 +1,515 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\I}{I}
+\newcommand{\Cs}{C_s(\I)}
+\newcommand{\Fp}{\mathcal F_p(\I)}
+\newcommand{\FDC}{\mathcal F_{DC1}(\I)}
+\newcommand{\rsup}{\rho_{\sup}}
+\newcommand{\rF}{\rho_{\mathcal F}}
+\newcommand{\lm}{\lambda}
+
+\title{Distributional chaos is generic among uniformly convergent\\
+non-autonomous systems on the interval}
+\author{Yitzchak Shmalo\\
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Balibrea and Ruck\'a [\emph{Genericity of distributional chaos in non-autonomous
+systems}, arXiv:2410.10288] proved that in the space of convergent non-autonomous
+systems of surjective interval maps, the systems with distributional chaos of type 1
+(DC1) form a dense set that is neither open nor closed, and stated explicitly that
+the residuality of this set remains an open problem.  We solve the problem in the
+canonical complete setting: with the uniform-in-time supremum metric, the DC1
+systems contain an \emph{open dense} subset of the space of convergent systems ---
+namely, the systems whose limit map carries a strict one-step horseshoe --- and are
+therefore residual.  Thus DC1 is a generic property of uniformly convergent
+non-autonomous systems on the interval, in contrast with the Cantor set, where the
+same authors proved genericity of the absence of distributional chaos.  The proof
+combines a quantitative openness--density analysis of strict horseshoes for the limit
+map with the inheritance theorem of \v Stef\'ankov\'a and the
+Schweizer--Sm\'\i tal characterization of positive entropy on the interval.  Two
+complements are included: infinite topological entropy is likewise generic in this
+space, by a self-contained common-horseshoe estimate, which removes the
+equicontinuity hypothesis from the genericity theorem of Balibrea, Sm\'\i tal and
+\v Stef\'ankov\'a (we observe that uniform convergence already implies
+equicontinuity of the system); and we delineate precisely what remains open for the
+integral-type metrics that distinguish pointwise from uniform convergence, where the
+ambient space fails to be complete.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+A non-autonomous discrete dynamical system (nads) on the compact interval
+$\I=[0,1]$ is a sequence $f_{1,\infty}=(f_n)_{n\ge1}$ of continuous surjective maps
+$f_n:\I\to\I$, acting through the compositions
+$f^n_{1,\infty}=f_n\circ\cdots\circ f_1$.  Following
+\cite{BR,BSS}, let $\Cs$ denote the continuous surjections of $\I$ with the
+supremum metric $\rsup(f,g)=\sup_x|f(x)-g(x)|$, let
+\[
+\Fp\;:=\;\Bigl\{(f_n)_{n\ge1}\in\Cs^{\mathbb N}:\ (f_n)\text{ converges in }\rsup
+\Bigr\},
+\qquad
+\rF\bigl(f_{1,\infty},g_{1,\infty}\bigr):=\sup_{n\ge1}\rsup(f_n,g_n),
+\]
+and write $\lm(f_{1,\infty}):=\lim_nf_n\in C(\I)$ for the limit map.  (As observed
+in \cite{BR}, with supremum metrics every convergent system converges uniformly, so
+$\Fp$ is the space of \emph{uniformly} convergent systems; we return to other
+metrics in Section~\ref{sec:other}.)  A pair $x\ne y$ is DC1-scrambled for
+$f_{1,\infty}$ if its upper distributional function is identically $1$ and its lower
+distributional function vanishes at some $t_0>0$ (Section~\ref{sec:prelim}); the
+system is \emph{DC1} if it has an uncountable set of pairwise DC1-scrambled points.
+Let $\FDC\subseteq\Fp$ denote the DC1 systems.
+
+Balibrea and Ruck\'a \cite{BR} proved that $\FDC$ is dense in $\Fp$ (for every
+admissible metric), that on the Cantor set the \emph{complement} of distributional
+chaos is generic, and that on the interval $\FDC$ is neither open nor closed --- and
+they singled out the remaining question (\cite[Section 4]{BR}):
+
+\begin{quote}
+``Note that Lemma 2 does not say $\mathcal F_{DC1}(I)$ is not residual.  This
+problem stays open.''
+\end{quote}
+
+This paper resolves the problem in the canonical complete setting.
+
+\begin{theorem}\label{thm:main}
+The set $\FDC$ of DC1 systems contains an open dense subset of
+$(\Fp,\rF)$, namely
+\[
+\lm^{-1}(\mathcal O)
+=\bigl\{f_{1,\infty}\in\Fp:\ \lm(f_{1,\infty})\in\mathcal O\bigr\},
+\]
+where $\mathcal O\subseteq\Cs$ is the (open, dense) set of surjective maps carrying
+a strict one-step horseshoe (Definition~\ref{def:horseshoe}).  In particular
+$\FDC$ is residual: DC1 is a generic property of uniformly convergent
+non-autonomous systems on the interval.
+\end{theorem}
+
+The point is that the failure of openness established in \cite[Lemma 2]{BR} is a
+boundary phenomenon: a DC1 system may converge to a non-chaotic limit, and such
+systems can be tail-perturbed out of $\FDC$.  But systems whose \emph{limit} is
+robustly chaotic form an open set --- openness of the horseshoe is measured for the
+limit map, where the metric $\rF$ controls $\rsup$-perturbations of the limit ---
+and the inheritance theorem of \v Stef\'ankov\'a \cite{Stefankova} pushes the
+chaos of the limit back onto every uniformly convergent system above it.  Residual
+sets in a complete metric space may well be neither open nor closed; the open dense
+\emph{subset} is the correct object, and this observation is the entire content of
+the solution.
+
+The same mechanism yields a second genericity statement, this time self-contained.
+
+\begin{theorem}\label{thm:entropy}
+The systems with infinite topological entropy contain a dense $G_\delta$ subset of
+$(\Fp,\rF)$; indeed for every $m\ge2$ the set of systems whose limit map carries a
+strict $m$-branch horseshoe is open and dense, and any such system satisfies
+$h(f_{1,\infty})\ge\log m$.  Hence infinite topological entropy is generic in
+$\Fp$.
+\end{theorem}
+
+Theorem \ref{thm:entropy} recovers the genericity theorem of Balibrea,
+Sm\'\i tal and \v Stef\'ankov\'a \cite[Theorem A-type result]{BSS}, which was
+stated for \emph{uniformly convergent and equicontinuous} systems, and removes the
+second hypothesis --- vacuously, as it turns out:
+
+\begin{proposition}\label{prop:equi}
+Every uniformly convergent sequence $(f_n)$ of continuous self-maps of a compact
+metric space is an equicontinuous family.  Consequently ``uniformly convergent and
+equicontinuous'' defines the same class of systems as ``uniformly convergent''.
+\end{proposition}
+
+Finally, Section~\ref{sec:other} discusses the metrics of class $\varrho_1$ of
+\cite{BR} (such as the integral metric), which genuinely distinguish pointwise from
+uniform convergence.  There the ambient space fails to be complete, the
+Baire-category formulation of genericity requires a choice of completion or
+framework, and the entropy and chaos transfer between system and limit breaks down
+(\cite[Section 3]{BR}); the genericity problem in that setting remains open, and we
+state it precisely.
+
+\section{Preliminaries}\label{sec:prelim}
+
+Throughout, $\I=[0,1]$ with the euclidean metric $d$.  For
+$f_{1,\infty}=(f_n)\in\Cs^{\mathbb N}$ put $f^0_{1,\infty}=\mathrm{id}$ and
+$f^n_{1,\infty}=f_n\circ\cdots\circ f_1$.  For $x,y\in\I$ the lower and upper
+distributional functions are
+\[
+\psi_{xy}(t)=\liminf_{n\to\infty}\frac1n\#\bigl\{0\le j<n:\
+d(f^j_{1,\infty}(x),f^j_{1,\infty}(y))<t\bigr\},
+\qquad
+\psi^*_{xy}(t)=\limsup_{n\to\infty}(\cdots),
+\]
+and $(x,y)$ is a DC1-scrambled pair if $\psi^*_{xy}\equiv1$ on $(0,\infty)$ and
+$\psi_{xy}(t_0)=0$ for some $t_0>0$.  The system is DC1 if some uncountable
+$S\subseteq\I$ consists of pairwise DC1-scrambled points.  Topological entropy
+$h(f_{1,\infty})$ is defined through $(n,\varepsilon)$-separated sets as in
+\cite{KS,BR}; for an autonomous map $f$, $h(f)$ is the usual entropy and we identify
+$f$ with the constant system $(f,f,\dots)$.
+
+We use three known results.
+
+\begin{theorem}[{Schweizer--Sm\'\i tal \cite{SS}}]\label{thm:ss}
+A continuous interval map has positive topological entropy if and only if it is
+distributionally chaotic; in particular $h(f)>0$ implies that $f$ is DC1.
+\end{theorem}
+
+\begin{theorem}[{\v Stef\'ankov\'a \cite{Stefankova}}]\label{thm:stef}
+Let $(f_n)\subset\Cs$ converge uniformly to $f$.  If $f$ is DC1, then the
+non-autonomous system $f_{1,\infty}$ is DC1.
+\end{theorem}
+
+\begin{lemma}\label{lem:complete}
+$(\Fp,\rF)$ is a complete metric space; hence it is a Baire space, and residuality
+in $\Fp$ is meaningful.
+\end{lemma}
+
+\begin{proof}
+$\Cs$ is complete: a $\rsup$-Cauchy sequence of continuous surjections converges
+uniformly to a continuous map, which is surjective because a uniform limit of
+surjective self-maps of a compact space is surjective (if $u_k\to u$ and
+$u_k(x_k)=y$ with $x_k\to x$ along a subsequence, then $u(x)=y$).  Let
+$(f^{(k)}_{1,\infty})_k$ be $\rF$-Cauchy in $\Fp$.  For each $n$ the maps
+$f^{(k)}_n$ form a $\rsup$-Cauchy sequence with modulus independent of $n$, hence
+converge uniformly to some $g_n\in\Cs$, and $\rF(f^{(k)}_{1,\infty},g_{1,\infty})\to0$.
+It remains to check $g_{1,\infty}\in\Fp$, i.e.\ $(g_n)_n$ is $\rsup$-Cauchy.  Given
+$\varepsilon>0$ pick $k$ with $\rF(f^{(k)},g)<\varepsilon/3$ and then $N$ with
+$\rsup(f^{(k)}_n,f^{(k)}_m)<\varepsilon/3$ for $n,m\ge N$ (possible since
+$(f^{(k)}_n)_n$ converges).  Then
+$\rsup(g_n,g_m)<\varepsilon$ for $n,m\ge N$.
+\end{proof}
+
+\begin{proof}[Proof of Proposition \ref{prop:equi}]
+Let $f_n\to f$ uniformly on the compact space $X$ and let $\varepsilon>0$.  Choose
+$N$ with $\rsup(f_n,f)<\varepsilon/3$ for $n>N$.  The maps $f,f_1,\dots,f_N$ are
+finitely many continuous maps on a compact space, hence uniformly continuous with a
+common modulus: there is $\delta>0$ such that $d(x,y)<\delta$ implies
+$d(g(x),g(y))<\varepsilon/3$ for $g\in\{f,f_1,\dots,f_N\}$.  For $n>N$ and
+$d(x,y)<\delta$,
+\[
+d(f_n(x),f_n(y))\le d(f_n(x),f(x))+d(f(x),f(y))+d(f(y),f_n(y))<\varepsilon .
+\]
+Thus the family $(f_n)$ is equicontinuous.
+\end{proof}
+
+\section{Strict horseshoes for the limit map}\label{sec:horseshoe}
+
+\begin{definition}\label{def:horseshoe}
+Let $m\ge2$.  A map $g\in C(\I)$ carries a \emph{strict $m$-branch horseshoe} with
+margin $\theta>0$ if there are pairwise disjoint nonempty closed intervals
+$A_1<A_2<\dots<A_m$ in $\I$ such that, with
+$[u,v]:=[\min A_1,\max A_m]$ (the convex hull of $\bigcup_iA_i$),
+\[
+g(A_i)\;\supseteq\;[u-\theta,\,v+\theta]\cap\I
+\quad\text{and}\quad
+[u-\theta,v+\theta]\subseteq(0,1)
+\qquad(1\le i\le m).
+\]
+Let $\mathcal O_m\subseteq\Cs$ be the set of surjective maps carrying a strict
+$m$-branch horseshoe (for some intervals and margin), and $\mathcal O:=\mathcal O_2$.
+\end{definition}
+
+\begin{lemma}[Openness]\label{lem:open}
+For every $m\ge2$, $\mathcal O_m$ is open in $(\Cs,\rsup)$: if $g$ carries a strict
+$m$-horseshoe with margin $\theta$ and $\rsup(h,g)<\theta/2$, then $h$ carries the
+same intervals as a strict $m$-horseshoe with margin $\theta/2$.
+\end{lemma}
+
+\begin{proof}
+$g(A_i)$ is an interval containing $[u-\theta,v+\theta]$, so
+$\min_{A_i}g\le u-\theta$ and $\max_{A_i}g\ge v+\theta$.  If
+$\rsup(h,g)<\theta/2$ then $\min_{A_i}h\le u-\theta/2$ and
+$\max_{A_i}h\ge v+\theta/2$, and $h(A_i)$, being an interval, contains
+$[u-\theta/2,v+\theta/2]$.
+\end{proof}
+
+\begin{lemma}[Density]\label{lem:dense}
+For every $m\ge2$, $\mathcal O_m$ is dense in $(\Cs,\rsup)$.
+\end{lemma}
+
+\begin{proof}
+Let $g\in\Cs$ and $\varepsilon>0$.  Since $g$ is a continuous surjection of $\I$,
+it has a fixed point $z$: the map $x\mapsto g(x)-x$ is $\ge0$ at a preimage of $1$
+and $\le0$ at a preimage of $0$.  Replacing $z$ by a nearby point if necessary we
+may assume $z\in(0,1)$ (if the only fixed points are $0$ or $1$, say $z=0$, pick
+$z'\in(0,1)$ small; then $|g(z')-z'|\le|g(z')-g(0)|+z'\le\omega_g(z')+z'$ is small,
+and the construction below around $z'$ works verbatim with this additional error).
+We give the construction for a fixed point $z\in(0,1)$; the general case only
+changes $\varepsilon$-bookkeeping by the displayed error.
+
+Let $\omega_g$ be the modulus of continuity of $g$, let
+$R:=\max\{\eta,\,\omega_g(\eta)\}+\eta$, and choose $\eta>0$ so small
+that $J:=[z-\eta,z+\eta]\subseteq(0,1)$ and
+\[
+\varepsilon':=2R=2\bigl(\max\{\eta,\omega_g(\eta)\}+\eta\bigr)<\varepsilon,
+\]
+which is possible since $R\to0$ as $\eta\to0$.  Let
+$K:=[z-R,\,z+R]\cap\I$; note $g(J)\subseteq[z-\omega_g(\eta),z+\omega_g(\eta)]
+\subseteq K$, since $|g(x)-z|=|g(x)-g(z)|\le\omega_g(\eta)$ on $J$.  Define
+$h\in C(\I)$ by $h:=g$ off $J$, and on $J$ let $h$ be the piecewise linear map
+which fixes the endpoints, $h(z\pm\eta)=g(z\pm\eta)$, and zigzags $2m$ times across
+the interval $K$: concretely, partition $J$ into $2m+2$ subintervals; on the first
+and last, interpolate linearly from $g(z\mp\eta)$ to the zigzag; on the middle
+$2m$ subintervals let $h$ alternate linearly between the values
+$\min K$ and $\max K$.
+
+Then $h$ is continuous, and for $x\in J$ both $h(x)$ and $g(x)$ lie in $K$, so
+\[
+\rsup(h,g)\le\operatorname{diam}K\le2R=\varepsilon'<\varepsilon .
+\]
+$h$ is surjective: $h(\I)\supseteq g(\I\setminus J)\cup h(J)
+=g(\I\setminus J)\cup K\supseteq g(\I\setminus J)\cup g(J)=g(\I)=\I$,
+because $g(J)\subseteq K=h(J)$.
+
+Finally $h\in\mathcal O_m$: the $m$ increasing zigzag branches contain pairwise
+disjoint closed intervals $A_1<\dots<A_m$ in the interior of $J$ with
+$h(A_i)=K$ for each $i$.  Their convex hull $[u,v]$ satisfies
+$[u,v]\subseteq J=[z-\eta,z+\eta]$, while $K$ contains
+$[z-R,z+R]\cap\I$ and $R-\eta=\max\{\eta,\omega_g(\eta)\}\ge\eta>0$.  Shrink the
+intervals $A_i$ slightly so that $[u,v]$ lies in the interior of $J$, and choose
+\[
+\theta:=\tfrac12\min\bigl\{R-\eta,\ \operatorname{dist}(J,\{0,1\})\bigr\}>0 .
+\]
+Then $[u-\theta,v+\theta]\subseteq(0,1)$ and
+$h(A_i)=K\supseteq[z-R,z+R]\cap\I\supseteq[u-\theta,v+\theta]$, since every point
+of $[u-\theta,v+\theta]$ is within $\eta+\theta\le R$ of $z$ and lies in $(0,1)$.
+Thus $h$ carries a strict $m$-branch horseshoe with margin $\theta$.
+\end{proof}
+
+\begin{remark}
+The proof shows more: the horseshoe may be implanted at any prescribed scale
+$\eta$, and the margin obtained is at least $\eta$.  For $m=2$ this is the
+classical fact that ``robust horseshoes are $C^0$-dense''; we could not locate a
+reference in the surjective category with explicit margins, so we included the
+proof.  Compare Kawaguchi \cite{Kawaguchi}, who proved $C^0$-density of DC1 maps.
+\end{remark}
+
+\section{Proofs of the main theorems}\label{sec:proofs}
+
+\begin{lemma}\label{lem:lambda}
+The limit-map function $\lm:(\Fp,\rF)\to(\Cs,\rsup)$ is $1$-Lipschitz.
+\end{lemma}
+
+\begin{proof}
+$\rsup\bigl(\lm(f_{1,\infty}),\lm(g_{1,\infty})\bigr)
+=\lim_n\rsup(f_n,g_n)\le\rF(f_{1,\infty},g_{1,\infty})$.
+\end{proof}
+
+\begin{lemma}\label{lem:preimage-dense}
+For every $m\ge2$, the set $\lm^{-1}(\mathcal O_m)$ is open and dense in
+$(\Fp,\rF)$.
+\end{lemma}
+
+\begin{proof}
+Openness is immediate from Lemmas \ref{lem:open} and \ref{lem:lambda}.  For
+density, let $f_{1,\infty}\in\Fp$ with limit $f$ and let $\varepsilon>0$.  By
+Lemma~\ref{lem:dense} pick $g\in\mathcal O_m$ with $\rsup(g,f)<\varepsilon/2$, and
+pick $N$ with $\rsup(f_n,f)<\varepsilon/2$ for $n>N$.  Define
+$g_{1,\infty}$ by $g_n:=f_n$ for $n\le N$ and $g_n:=g$ for $n>N$.  Then
+$g_{1,\infty}\in\Fp$ (its tail is constant), $\lm(g_{1,\infty})=g\in\mathcal O_m$,
+and
+\[
+\rF(f_{1,\infty},g_{1,\infty})
+=\sup_{n>N}\rsup(f_n,g)
+\le\sup_{n>N}\bigl[\rsup(f_n,f)+\rsup(f,g)\bigr]<\varepsilon .
+\]
+\end{proof}
+
+\begin{lemma}[Common horseshoe forces entropy]\label{lem:common}
+Let $f_{1,\infty}\in\Cs^{\mathbb N}$ and suppose there are $m\ge2$, $N\ge0$,
+pairwise disjoint closed intervals $A_1<\dots<A_m$ with convex hull $[u,v]$, and
+$\theta>0$ such that
+\[
+f_n(A_i)\supseteq[u,v]
+\qquad\text{for all }n>N,\ 1\le i\le m .
+\]
+Then $h(f_{1,\infty})\ge\log m$.
+\end{lemma}
+
+\begin{proof}
+Let $\gamma>0$ be the minimal gap between consecutive intervals $A_i$.  Fix a
+horizon $L\ge1$ and a word $\omega\in\{1,\dots,m\}^L$.  Choose
+$y_L\in A_{\omega_L}$ arbitrarily.  Descending from $j=L-1$ to $j=1$: given
+$y_{j+1}\in A_{\omega_{j+1}}\subseteq[u,v]$, the covering hypothesis (applied to
+$n=N+j>N$) gives $f_{N+j}(A_{\omega_j})\supseteq[u,v]\ni y_{j+1}$, and since the
+continuous image of an interval is an interval there is
+$y_j\in A_{\omega_j}$ with $f_{N+j}(y_j)=y_{j+1}$.  This produces
+$y_1\in A_{\omega_1}$ whose forward orbit under the tail
+$(f_{N+1},f_{N+2},\dots)$ satisfies
+$f_{N+j-1}\circ\cdots\circ f_{N+1}(y_1)=y_j\in A_{\omega_j}$ for $j=1,\dots,L$.
+Since each $f_n$ is surjective, so is $f^N_{1,\infty}$; choose
+$x_\omega$ with $f^N_{1,\infty}(x_\omega)=y_1$.  Then
+$f^{N+j-1}_{1,\infty}(x_\omega)=y_j\in A_{\omega_j}$ for $j=1,\dots,L$.
+
+If $\omega\ne\omega'$ differ at position $j$, the orbits of $x_\omega,x_{\omega'}$
+at time $N+j-1$ lie in distinct intervals $A_{\omega_j}\ne A_{\omega'_j}$, hence
+are $\gamma$-separated.  Thus $\{x_\omega\}$ is an
+$(N+L,\gamma)$-separated set of cardinality $m^L$, and
+\[
+h(f_{1,\infty})\ \ge\ \limsup_{L\to\infty}\frac{\log m^L}{N+L}\ =\ \log m .
+\]
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:main}]
+By Lemma~\ref{lem:preimage-dense} (with $m=2$), $\lm^{-1}(\mathcal O)$ is open and
+dense in $\Fp$.  Let $f_{1,\infty}\in\lm^{-1}(\mathcal O)$ with limit $f$.  By
+Lemma~\ref{lem:common} applied to the constant system $(f,f,\dots)$ --- the
+covering hypothesis holds with $N=0$ since $f(A_i)\supseteq[u-\theta,v+\theta]
+\supseteq[u,v]$ --- we get $h(f)\ge\log2>0$.  By Theorem~\ref{thm:ss}, $f$ is DC1.
+By Theorem~\ref{thm:stef}, the uniformly convergent system $f_{1,\infty}$ is DC1.
+Hence $\lm^{-1}(\mathcal O)\subseteq\FDC$, and $\FDC$, containing an open dense
+set, is residual in the complete space $(\Fp,\rF)$ (Lemma~\ref{lem:complete}).
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:entropy}]
+Fix $m\ge2$ and let $f_{1,\infty}\in\lm^{-1}(\mathcal O_m)$, with limit $f$
+carrying a strict $m$-horseshoe on intervals $A_1<\dots<A_m$ with margin $\theta$.
+Choose $N$ with $\rsup(f_n,f)<\theta/2$ for $n>N$.  By the proof of
+Lemma~\ref{lem:open}, every $f_n$ with $n>N$ satisfies
+$f_n(A_i)\supseteq[u-\theta/2,v+\theta/2]\supseteq[u,v]$.  By
+Lemma~\ref{lem:common}, $h(f_{1,\infty})\ge\log m$.  Hence
+\[
+\bigcap_{m\ge2}\lm^{-1}(\mathcal O_m)\subseteq
+\bigl\{f_{1,\infty}:\ h(f_{1,\infty})=\infty\bigr\},
+\]
+and the left-hand side is a countable intersection of open dense sets
+(Lemma~\ref{lem:preimage-dense}), hence a dense $G_\delta$.
+\end{proof}
+
+\begin{remark}\label{rem:bss}
+Theorem~\ref{thm:entropy} together with Proposition~\ref{prop:equi} subsumes the
+genericity of infinite entropy for ``uniformly convergent and equicontinuous''
+systems from \cite{BSS}: by Proposition~\ref{prop:equi} the equicontinuity
+hypothesis is implied by uniform convergence, and the proof above is independent
+of \cite{BSS}.  Note also that all three results
+(Theorems \ref{thm:main}, \ref{thm:entropy} and the density theorem of \cite{BR})
+now align with the autonomous interval theory: positive entropy, DC1, and their
+genericity transfer along the limit map.
+\end{remark}
+
+\begin{remark}[Contrast with the Cantor set]
+On the Cantor set, Balibrea and Ruck\'a proved that the \emph{absence} of
+distributional chaos is generic for convergent systems \cite[Lemma 1]{BR},
+following Darji--D'Aniello \cite{DD}.  Theorem~\ref{thm:main} shows the interval
+behaves in the opposite way, completing the table of \cite[Section 4]{BR}: DC1 is
+generic in $\Fp(\I)$ and non-DC1 is generic in $\Fp(Q)$.  The mechanism of the
+difference is visible in the proofs: on the interval, surjectivity plus the
+intermediate value theorem make strict horseshoes of the limit map both robust and
+densely implantable, while on the Cantor set the clopen structure makes
+adding-machine-like (chaos-free) limits robust and dense.
+\end{remark}
+
+\section{The metrics distinguishing pointwise from uniform convergence}
+\label{sec:other}
+
+Balibrea and Ruck\'a formulate their results for arbitrary metrics on $\Cs$,
+split into the class $\varrho_2$ (metrics, like $\rsup$, for which convergence of
+maps forces uniform convergence) and the class $\varrho_1$ (metrics, like the
+integral metric $\rho_{\mathrm{int}}(f,g)=\int_0^1d(f(x),g(x))\,dx$, for which
+genuinely pointwise-but-not-uniformly convergent sequences of maps exist)
+\cite[Remark 1]{BR}.  Theorems \ref{thm:main} and \ref{thm:entropy} settle the
+genericity problem for the supremum metric, the canonical representative of
+$\varrho_2$.  For other metrics in $\varrho_2$ the underlying set of systems is
+the same --- every $\varrho_2$-convergent system is uniformly convergent --- but
+residuality depends on the topology of the system space, so each such metric for
+which the space is Baire requires checking that the horseshoe class
+$\lm^{-1}(\mathcal O)$ remains open and dense; for metrics uniformly equivalent
+to $\rsup$ this is automatic.
+
+For $\varrho_1$-metrics the situation is genuinely different, for three reasons
+already implicit in \cite{BR}.  First, $(\Cs,\rho_{\mathrm{int}})$ is not complete
+--- pointwise limits of continuous surjections need not be continuous --- so the
+system space is not complete either, and \cite{BR} must explicitly demand
+continuity of limit maps; the Baire category theorem is then unavailable without
+either passing to a completion (changing the space) or verifying the Baire
+property by hand.  Second, the entropy bridge fails: there are systems with
+positive (even infinite) entropy converging pointwise to the identity
+\cite[Figure 1]{BR}, so the limit map no longer certifies the dynamics of the
+system, and our key mechanism --- openness of chaos \emph{at the level of the
+limit} --- has no analogue.  Third, the inheritance theorem
+(Theorem~\ref{thm:stef}) is a theorem about uniform convergence.  We therefore
+record what remains of the original question:
+
+\begin{quote}
+\textbf{Open problem.}  Let $\rho\in\varrho_1$ (for instance
+$\rho=\rho_{\mathrm{int}}$), and consider the set $F$ of pointwise convergent
+systems of surjective interval maps with continuous limit, with the metric
+$\sup_n\rho(f_n,g_n)$.  Is the subspace $F$ Baire?  If so, is DC1 generic in it?
+\end{quote}
+
+Our results show that any positive answer must use a mechanism that does not
+factor through the limit map; the examples of \cite[Section 3]{BR} (positive
+entropy, eventually-fixed-point systems converging pointwise to the identity)
+suggest that smallness at the level of the limit and largeness at the level of the
+system can coexist on residual-looking sets, and we expect the answer to depend on
+the metric within $\varrho_1$.
+
+\subsection*{Acknowledgments}
+The research presented in this paper was supported by the European Research Council
+(ERC) under the European Union's Horizon Europe research and innovation programme
+(grant agreement No.\ 101041711), by the Israel Science Foundation (grant number
+2258/19) and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\subsection*{Declaration on generative AI}
+During the preparation of this work the author used generative AI tools to
+accelerate drafting and revision.  All mathematical claims, proofs, and
+bibliographic information were subsequently reviewed and edited by the author, who
+takes full responsibility for the content of the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{BR}
+F.~Balibrea and L.~Ruck\'a,
+\emph{Genericity of distributional chaos in non-autonomous systems},
+preprint, arXiv:2410.10288 (2024); see also
+\emph{Density of distributional chaos in non-autonomous systems},
+Topology Appl.\ \textbf{380} (2026), 109735.
+
+\bibitem{BSS}
+F.~Balibrea, J.~Sm\'\i tal and M.~\v Stef\'ankov\'a,
+\emph{On generic properties of nonautonomous dynamical systems},
+Internat.\ J.\ Bifur.\ Chaos Appl.\ Sci.\ Engrg.\ \textbf{28} (2018), no.~8,
+1850102.
+
+\bibitem{DD}
+E.~D'Aniello and U.~B.~Darji,
+\emph{Chaos among self-maps of the Cantor space},
+J.\ Math.\ Anal.\ Appl.\ \textbf{381} (2011), 781--788.
+
+\bibitem{Kawaguchi}
+N.~Kawaguchi,
+\emph{Distributionally chaotic maps are $C^0$-dense},
+Proc.\ Amer.\ Math.\ Soc.\ \textbf{147} (2019), no.~12, 5339--5348.
+
+\bibitem{KS}
+S.~Kolyada and L'.~Snoha,
+\emph{Topological entropy of nonautonomous dynamical systems},
+Random Comput.\ Dynam.\ \textbf{4} (1996), 205--233.
+
+\bibitem{SS}
+B.~Schweizer and J.~Sm\'\i tal,
+\emph{Measures of chaos and a spectral decomposition of dynamical systems on the
+interval},
+Trans.\ Amer.\ Math.\ Soc.\ \textbf{344} (1994), no.~2, 737--754.
+
+\bibitem{Stefankova}
+M.~\v Stef\'ankov\'a,
+\emph{Inheriting of chaos in uniformly convergent nonautonomous dynamical systems
+on the interval},
+Discrete Contin.\ Dyn.\ Syst.\ \textbf{36} (2016), no.~6, 3435--3443.
+
+\end{thebibliography}
+
+\end{document}

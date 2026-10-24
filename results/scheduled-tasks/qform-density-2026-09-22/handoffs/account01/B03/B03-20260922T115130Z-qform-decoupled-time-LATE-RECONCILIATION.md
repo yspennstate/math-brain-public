@@ -1,0 +1,7 @@
+# B03 late reconciliation — concurrent B09 result
+
+The immutable B03 report remains at `yspennstate/math-open-problems@f2f04d1933c12fd58c9abf12dcb8bcf2877b172c`, but after B03 finish a concurrent B09 result became visible and was consumed from `yspennstate/math-open-problems@6dc9ff8894e196a28a48c3eb6ce917103722f0ec:proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260922T114609Z-account01-B09-qform-bilinear-v1/REPORT.md`.
+
+B09 independently generalizes B03's square mixed-minor theorem to arbitrary cuts of cross rank `r>=3`; for square `r x r` blocks it recovers B03's constant exactly. B09 also performs determinant-mass aggregation for exact rank three: if `delta=max_i ||R_i||^2`, then disjoint basis-pair mass `M_disj>=1-sum_i ell_i^2>=1-3delta`, and some coordinate cut has cross singular product `D>=sqrt(M_disj)/8`, yielding density bound `<=12 M_disj^(-1/6)` when `M_disj>0`. Its additional high-leverage argument closes the exact-rank-three definite branch with constant `<13.5`.
+
+Therefore B03's originally stated `QFORM-AGGREGATED-MIXED-MINOR-L1` is partially paid: the exact-rank-three diffuse case is no longer the first blocker. The narrower live blocker is the localized **indefinite** exact-rank-three case and robustness to additional spectral components/cancellation. Full target remains OPEN. Canonical B03 reconciliation: `yspennstate/math-open-problems@3cf59cde7c983b849ff2312a4089b71215d006bc:proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/B03-20260922T115130Z-qform-decoupled-time/LATE_RECONCILIATION.md`.

@@ -1,0 +1,7 @@
+STATE: DONE
+NEXT: Prove E*X^(d/2)=infinity for the critical stable two-colour Poisson matching in each d>=3; the conjectured upper half is now established in SECOND_ATTEMPT.md.
+VERDICT: PARTIAL
+2026-10-11: Reopened, reread the first attempt, and queried the brain on its actual residual-fluctuation gap. Recorded two new approaches: conservative insertion/variance tensorization and radius-ordered annihilation/pair correlations. Selected insertion.
+2026-10-11: Proved that finite one-colour insertion changes the signed residual measure by one atom. Product-slot variance tensorization and a justified Poisson/torus limit give E D_r(Q)^2<=2|Q|, hence P*(X>r)<=C_d r^(-d/2) in every d>=1.
+2026-10-11: Consequently all positive moments alpha<d/2 are finite. In d=2, source Theorem 2 gives the divergent endpoint and completes the exact positive-moment criterion. In d>=3 the divergent endpoint remains unproved; no counterexample found.
+2026-10-11: Audited finite comparative statics, unconditional atom uniformity, count uniform integrability, descending-path localization, and local dominated convergence. Checked 41040 exhaustive strict finite edge orders, 4500 further insertion samples, independent-Poisson torus simulations; all passed. InsertionChecks.lean compiled with exit 0 (no sorry/native_decide); only finite arithmetic is formalized. Full proofs and gap are in SECOND_ATTEMPT.md, linked from ATTEMPT.md. Twelve claim records saved. All-dimensions verdict remains PARTIAL.

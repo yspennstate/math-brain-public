@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260923T065845Z-account03-B04-qform-auto11-r27",
+  "control_revision": "2026-09-22.15",
+  "control_commit_prepublication": "d25c940d7b47f428ae4e1c46a17f6cba14d64e90",
+  "correction_inbox_sha": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-2D-INVERSE-RADIUS-BATHTUB-v1",
+      "statement": "For a planar probability density cap L, sup_c E|W-c|^{-1} <= 2 sqrt(pi L)."
+    },
+    {
+      "id": "QFORM-ROWSTAR-CLEANBANK-LINF-v1",
+      "statement": "For a rank-two physical cross block M whose deletion of one hub row has rank at most one, if the opposite original-coordinate bank is quadratically clean, then ||p_Q||_infinity <= 2^(3/4)sqrt(pi) E_2(M)^(-1/4), with arbitrary self-curvature on the hub-side bank and arbitrary outside-conditioned affine terms on the clean bank."
+    },
+    {
+      "id": "QFORM-DOUBLESTAR-E2-IDENTITY-v1",
+      "statement": "For M=[[m00,lambda b^T],[mu a,a b^T]], E_2(M)=(m00-lambda mu)^2||a||^2||b||^2."
+    },
+    {
+      "id": "QFORM-OVERLAP-STAR-UNIFORM-COMPILER-v1",
+      "statement": "Combining B04 r26 with account01/B01 gives H_{1/2}(R) <= E_2^(-1/8) min(26.3340461808,13.0190353138 delta_3^(-1/24)) when delta_3>0, and the unconditional first term at delta_3=0."
+    }
+  ],
+  "peer_result_applied": {
+    "worker": "account01/B01",
+    "theorem": "QFORM-PAIRVOLUME-HALF-RIESZ-UNCONDITIONAL-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "55255bcb25271145aa9f5a1a93a0cc84ad8e1c3d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T030821Z-account01-B01-qform-auto11/REPORT.md",
+    "actual_application": "Physical-square lift: ||p_Q||_infinity <=26.3340461808 |a|^(-1/2)E_2(M)^(-1/8)."
+  },
+  "designated_partner": {
+    "worker": "account04/B04",
+    "completed_current_qform_result_visible": false,
+    "action": "No theorem fabricated; continued asynchronously."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "62ea4dbfd636b7c4a019fec8b428fc5450f4a5fc",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T065845Z-account03-B04-qform-auto11-r27/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T065845Z-account03-B04-qform-auto11-r27/CHECKS.json"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "a018cc5ce134a8e91aaeeba8e7a5d6e3d147e99d",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B04/20260923T065845Z-account03-B04-qform-auto11-r27.md"
+  },
+  "regularity": {
+    "rowstar_theorem": "ABSOLUTE_CONTINUITY_AND_ESSENTIAL_LINFINITY; CONTINUITY_NOT_PROVED_IN_FULL_SCOPE",
+    "explicit_family_after_independent_square_convolution": "CONTINUOUS_C0"
+  },
+  "next_implication": "QFORM-SPECTRAL-TO-CLEANSTAR-OR-PIVOT-E2-v1",
+  "next_step": "From s_3(A)>=1, route remaining structural survivors to either a row/column star with a quadratically clean bank, a nonzero physical square with dimension-free |a|^4 E_2 control in the Schur residual, or an already-paid grouped/ridge/hub endpoint, without selecting a vanishing local coefficient or minor.",
+  "privacy_review": "Manual scoped review only: mathematical formulas, public-style theorem references, repository commits/paths, and nonsecret run metadata; no credentials, scheduler IDs, machine paths, signed URLs, personal data, or unrelated material."
+}

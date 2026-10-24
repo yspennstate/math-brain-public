@@ -1,0 +1,16 @@
+command: TIMEFORMAT='real %3R\\nuser %3U\\nsys %3S'; time python3 run_20261011T232432Z/check_selector_tax_sharpness.py
+scope: exact D=two-bit point defect and K=three-bit point defect selector splice
+randomness: none
+D integer Walsh coefficients: [2, 2, 2, -2]
+K integer Walsh coefficients: [6, 2, 2, -2, 2, -2, -2, 2]
+exact H(D)=2, I(D)=1, I_selector(K)=1/4, I(K)=3/4
+selector-tax coefficient lower: 4.867668746754797183458174752234825705904
+selector-tax coefficient upper: 4.867668746754797183458174752234825710597
+FEI ratio H(K)/I(K) lower: 2.955889582251599061152724917411608568635
+FEI ratio H(K)/I(K) upper: 2.955889582251599061152724917411608570199
+certified: c0>4.867, so a coefficient-4 selector-tax inequality is false
+certified: disjoint tensor powers preserve the smaller FEI ratio, not c0
+PASS
+real 0.039
+user 0.030
+sys 0.009

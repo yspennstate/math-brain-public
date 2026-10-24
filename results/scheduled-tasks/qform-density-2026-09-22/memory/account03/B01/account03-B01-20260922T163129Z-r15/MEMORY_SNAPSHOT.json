@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260922T163129Z-r15",
+  "source_control_commit_initial": "68ae429fb1286c919dfbdcb6e85106681521130d",
+  "source_control_commit_prepublication": "f82c4a3d36f960c63cccac343219c3853bb1704e",
+  "control_revision": "2026-09-22.7",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "assignment": "Oscillatory replacement",
+  "correction_ids_consumed": ["QFORM-POINTWISE-DECAY-FALSE","QFORM-FIBER-SUP-DIMENSION-LOSS","QFORM-NO-INDEPENDENCE-AFTER-ROTATION","QFORM-CROSSMINOR-ALONE-FALSE","QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE","QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE","QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"],
+  "premises": [
+    {"id":"QFORM-DIFFUSE-AVERAGED-LP-v1","scope":"rank-two spectral frame with all row leverages <=1/2 gives L3 density bound","source_commit":"d54e3a5d40a1d9837d39a1e525781fcf44ec0d9d"},
+    {"id":"bounded-density-projection","scope":"normalized one-dimensional projection of independent cap-one coordinates has universal density cap C_RV","source_commit":"508b0985ba8bb658a7f6a935af5138a195cb89de"},
+    {"id":"QFORM-SIGNED-FEJER-EXACT-INTERFACE-v1","scope":"uniform signed Fejer cap is equivalent to bounded density","source_commit":"a3693ed6d50e8e4143b2f33bf997c5de2cb52d79"}
+  ],
+  "partner_result_applied": {"partner":"account04/B01","result":"QFORM-SIGNED-FEJER-EXACT-INTERFACE-v1","actual_application":"converted the new nonzero-pivot rank-three density inequality into the exact uniform signed-Fejer bound with the same constant"},
+  "new_results": ["QFORM-CONDITIONAL-BINARY-HALFRIESZ-v1","QFORM-RANK2-TRANSLATION-HALFRIESZ-v1","QFORM-RANK3-SCHUR-HALFRIESZ-v1"],
+  "canonical_math_commit": "76fd4f9ccae2e422498fec6d4156bfd64775c8e4",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260922T163129Z-r15/REPORT.md",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B01/account03-B01-20260922T163129Z-r15.md",
+  "status": "PROVED_SUPPORTING_THEOREM_FULL_TARGET_OPEN",
+  "continuity": "NOT_PROVED_FOR_NEW_BRANCH",
+  "unresolved_implication": "zero/near-zero physical-pivot rank-three branch, followed by exhaustive higher-rank product-preserving reduction",
+  "next_step": "apply the arbitrary-orientation half-Riesz theorem before/across pivot selection to the zero or near-isotropic physical-pivot branch without false conditional independence"
+}

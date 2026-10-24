@@ -1,0 +1,18 @@
+R17 PROB10-02 exact profile-sum / obstruction checker
+guaranteed-survival depths and Moore survival-language quotient
+m=2 edge_states=16 guaranteed_counts=[0] max_guaranteed_depth=0 moore_non_sink_classes=10 moore_with_sink=11 refinement=[7, 10, 10]
+m=3 edge_states=96 guaranteed_counts=[22, 0] max_guaranteed_depth=1 moore_non_sink_classes=68 moore_with_sink=69 refinement=[8, 33, 53, 67, 68, 68]
+m=4 edge_states=512 guaranteed_counts=[204, 32, 0] max_guaranteed_depth=2 moore_non_sink_classes=356 moore_with_sink=357 refinement=[8, 45, 181, 275, 328, 350, 356, 356]
+m=5 edge_states=2560 guaranteed_counts=[1314, 426, 16, 0] max_guaranteed_depth=3 moore_non_sink_classes=1768 moore_with_sink=1769 refinement=[8, 51, 365, 970, 1341, 1566, 1686, 1734, 1762, 1768, 1768]
+m=6 edge_states=12288 guaranteed_counts=[7288, 3346, 598, 24, 0] max_guaranteed_depth=4 moore_non_sink_classes=8216 moore_with_sink=8217 refinement=[8, 53, 530, 2651, 4853, 6364, 7256, 7822, 8038, 8140, 8190, 8212, 8216, 8216]
+m=7 edge_states=57344 guaranteed_counts=[37326, 20922, 6522, 688, 4, 0] max_guaranteed_depth=5
+m=8 edge_states=262144 guaranteed_counts=[182052, 115492, 49310, 10552, 740, 0] max_guaranteed_depth=5
+PROFILE m=8 T=32
+alpha_T=666247718450140937/18446744073709551616=0.036117361187857674
+lambda_T=994266288913277/1142366470455998=0.870356680301021202
+prefix_sum=8267869265554729535/288230376151711744=28.684933822529824710
+C_profile=6644424357182428304096283719647571/170747884136781082886635253661696=38.913655596808311543
+m=8 exact profile-summed finite-horizon/stationary certificate: C_8^profile < 39; PASS
+inherited T=32 alpha/lambda exact cross-check: PASS
+guaranteed-survival and Moore quotient exact finite checks: PASS
+ALL_EXACT_CHECKS_PASS

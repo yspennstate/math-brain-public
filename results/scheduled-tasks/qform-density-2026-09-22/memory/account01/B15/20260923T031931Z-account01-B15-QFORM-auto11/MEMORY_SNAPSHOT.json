@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260923T031931Z-account01-B15-QFORM-auto11",
+  "source_control_commit": "1e80a97d3850cbe50d2f759b8009c05c7eec5a15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "status": "ESSENTIAL_STEP_APPLIED_EXACT_COMPACT_SMOOTH_KERNEL_NORMAL_FORM_FULL_QFORM_OPEN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4757d75ed13e479586d0bf87865798b0d7caed65",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T031931Z-account01-B15-QFORM-auto11/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "9ad457334f751d7c128e8d59ab7eff1fda272599",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B15/20260923T031931Z-account01-B15-QFORM-auto11.md"
+  },
+  "mathematical_premises": [
+    "Target inputs have an absolutely continuous product law because each physical marginal has a density.",
+    "A target matrix is nonzero and in fact has rank at least three.",
+    "Coarea away from the critical affine subspace proves absolute continuity of any nonconstant quadratic pushforward.",
+    "Lebesgue differentiation for one-dimensional L1 densities recovers density values at almost every point from a fixed compact approximate identity after scaling the matrix.",
+    "Original-coordinate bathtub optimization is valid separately in each physical marginal for the positive bounded kernel payoff."
+  ],
+  "new_results": [
+    "For every nonnegative compactly supported L1 kernel K of mass one and every R>0, the sharp QFORM constant C_* equals sup_{target, |y|>=R} s_3(A) E K(y-X^TAX), in the extended sense, without assuming continuity or boundedness of the individual raw density.",
+    "For one fixed C-infinity bump kappa supported in (-1,1), the full target is exactly equivalent to a positive fixed-scale smooth integral with |y|>=2, hence separated from the only critical output value zero.",
+    "The same sharp supremum can be restricted to original-coordinate indicator marginals 1_{E_i}, |E_i|=1, and then to bounded finite unions of intervals, with no uniform fragment-count or separation bound.",
+    "The smoothed profile H(y)=E kappa(y-Q) has uniform derivative bounds ||H^(m)||_infinity<=||kappa^(m)||_infinity for every m; this is distinct from raw-output regularity."
+  ],
+  "partner_result_applied": {
+    "partner": "account02/B15",
+    "source": "yspennstate/math-open-problems@159482a9594e177145fa61c337bf16e1f9fefc55",
+    "statement": "A definite original-coordinate 2x2 principal block B gives ||p_Q||_infinity<=pi/sqrt(|det B|) under arbitrary outside couplings.",
+    "application": "s_3(A) E kappa(y-Q)<=pi s_3(A)/sqrt(|det B|); if |det B|>=eta s_3(A)^2 this is <=pi/sqrt(eta)."
+  },
+  "newest_partner_handoff_consumed": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B15/20260923T030440Z-account02-B15-QFORM-auto11.md",
+  "corrections_consumed": [
+    "uniform pointwise quadratic Fourier decay is false",
+    "spectral rotation does not preserve independence",
+    "arbitrary-joint rank-three coarea cap is false",
+    "positive conditional projection-cap moment gates are false",
+    "two-sheet X-ray-only control is false",
+    "no uniform fixed fragment-count bathtub reduction"
+  ],
+  "unresolved_implication": "Prove a universal bound for s_3(A) integral_{E_1x...xE_n} kappa(y-x^TAx) dx for |y|>=2 and arbitrary measure-one finite-fragment physical sets, using aggregate product geometry before reciprocal local-minor payment.",
+  "full_solution": false,
+  "full_brain_connected": false
+}

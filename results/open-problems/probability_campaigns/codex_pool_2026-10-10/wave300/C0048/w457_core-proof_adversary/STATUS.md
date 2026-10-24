@@ -1,0 +1,15 @@
+STATE: NEEDS_REVIEW
+NEXT: Control the spatial-correlation correction to SP(3,3)'s constrained potential uniformly as beta decreases to beta_c; keep the parent claim unproved.
+
+2026-10-10: Read PRIMARY_DIRECTIVE.md. Started C0048 core-proof adversarial lane. All research claims remain drafts until independent referee review.
+2026-10-10: Saved first source row in CLAIMS.jsonl and exact target in SOURCE_STATUS.json within the first 20 turns. Recall exceeded its 60-second limit; targeted memory fallback is underway.
+2026-10-10: Saved independent ATTEMPT.md before reading w456: explicit q=3,d=3 subcritical FK obstruction and proof of the valid right-continuity reduction. The critical magnetization gap remains unproved.
+2026-10-10: Exact check passed: 7 cases, 12,352 configurations, 73,856 conditional checks, 0 mismatches in 0.679 seconds. The four-cycle joint/marginal-product ratio is 2.71521754; measurements.json is saved.
+2026-10-10: Saved CUBIC_OBSTRUCTION.md independently: fourth-cumulant mixing variance, inverse-Legendre ratios, and an S_3-invariant continuous-onset example. Mesh claims failed on missing membership; COMMUNICATION.md records the fallback.
+2026-10-10: Recovered exact intake record C0048 and no-result attempt C0048-A001; read both named scars. H/I/Lean targeted scans found no later C0048 proof. No Potts-specific solved/retired match was found in the named Big Open folder's text records.
+2026-10-10: Read w456's paired proof after independent checkpoints. Saved AUDIT_w456.md with scoped KEEP for L1-L5 and the mean-field constants. SP(q,d), particularly q=d=3, is the unresolved mathematical input.
+2026-10-10: Spin/FK independent check passed 6/6 cumulant equalities; omitted fourth-cumulant formula failed 2/2 examples, corrected errors 0. Direct mesh claims/review requests now have accepted receipts. The exact two canonical C0048 nodes remain unverified; OPEN_VOTES.json was empty.
+2026-10-10: Bundle builder's first run failed on quoted derivative notation; corrected the string literal. Submission is not counted until the JSON is written and validated.
+2026-10-10: Corrected builder passed and submitted bundle_001.json: four concept-only entries and four supported relations. Local hook and unified proposal patch prepared; no hook deployment or store promotion performed.
+2026-10-10: Saved w458's scoped KEEP receipts for FK bounds, right continuity, finite mixing identity and S3 obstruction. Parent C0048 stays unproved; separate fourth-Legendre derivative/numerical receipts and served-model attestations are still absent.
+2026-10-10 10:22 Asia/Jerusalem: Deliverables complete and measured: 9 claim rows, 4 draft concepts, 4 supported relations, scoped referee receipts, hook proposal/patch, and review hashes. check_packet.py passed. Integration handoff accepted as msg-52a2e32618; referee completion handoff accepted as msg-66b26283be. FINAL_HANDOFF_RECEIPTS.json preserves receipts. Ingestion/retrieval and the owner progress-page post remain unobserved; prepared event supplied to integration.

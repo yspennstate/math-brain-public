@@ -1,0 +1,77 @@
+{
+  "target_id": "P0043",
+  "checked_on": "2026-10-10",
+  "exact_statement": "For iid Bernoulli bond percolation on every infinite connected locally finite quasi-transitive graph G with p_c(G)<1, G[p_c(G)] has no infinite clusters almost surely.",
+  "source_status": "Exact statement verified in Hutchcroft arXiv:1605.05301; original P0043 intake locator recovered, book version not independently retrieved.",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "ranking": {
+    "date": "2026-09-07",
+    "tier": 5,
+    "status": "attempted_un",
+    "line": 549
+  },
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1605.05301",
+      "version": "1605.05301v1, 2016-05-17",
+      "author": "Tom Hutchcroft",
+      "locator": "Introduction, Benjamini--Schramm conjecture; Theorem 1; Theorem 6",
+      "source_quote": "If p_c(G)<1, then G[p_c] has no infinite clusters almost surely.",
+      "supports": [
+        "p_c<1 is required",
+        "exponential-growth quasi-transitive case is solved",
+        "finite susceptibility stated for p<p_c, not p=p_c"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2310.10983",
+      "version": "2310.10983v1, 2023-10-17",
+      "authors": [
+        "Philip Easo",
+        "Tom Hutchcroft"
+      ],
+      "supports": [
+        "locality of critical probability for vertex-transitive graphs; does not itself assert absence of critical infinite clusters on all quasi-transitive graphs"
+      ]
+    }
+  ],
+  "local_retirement_check": "No certified retirement found in the targeted H/I/Lean exact-ID checks. Exported P0043 and C0084 cards are explicitly unverified attempt/open-problem material. A peer reports a recent October collection making a full claim; its primary proof was not supplied or verified here, so current openness stays UNKNOWN.",
+  "paired_proof_read": true,
+  "independent_derivation": "INDEPENDENT.md",
+  "reviewer": "w440",
+  "deployment": "no live store changes",
+  "original_intake": {
+    "file": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json",
+    "key": "op-p0043",
+    "logical_id": "math:probability.core:open-problem-p0043-absence-of-infinite-clusters-at-critical-percolation",
+    "source_locator_as_recorded": "Lyons and Peres, Probability on Trees and Networks, paperback electronic version 19 August 2026, Conjecture 8.15, printed p.285",
+    "locator_verification": "intake recovered; primary book fetch failed because 21 MB exceeded browser fetch limit"
+  },
+  "related_intake": {
+    "file": "~/<private-repo>/06_math_research/probability_1000_intake_H_20260914/problems.jsonl",
+    "line": 16,
+    "id": "H0016",
+    "claimed_source": "arXiv:2608.23661, Cerf",
+    "verification": "secondary lookup record explicitly unverified; not relied on as primary evidence"
+  },
+  "target_store_rows": "PRIOR_TARGET_ROWS.json, exact P0043/C0084 export rows only",
+  "source_correction": {
+    "existing_logical_id": "math:probability.percolation:attempt-c0084-no-infinite-cluster-at-criticality-on-quasi-transitive-graphs-with-p-c",
+    "existing_claim_id": "claim_074b08d2f079277d5ce5423b113d46801b9ed62cd7be7598eb47b46fb59b1aeb",
+    "scope": "Repair the account of Hutchcroft's method: susceptibility finite only below p_c, then supermultiplicativity and left continuity of the infimum connectivity rate; no assertion of finite critical susceptibility or a branching-random-walk proof."
+  },
+  "paired_proof_order": "INDEPENDENT.md and claims 001-003 saved before w438 ATTEMPT.md was read",
+  "paired_proof_audit": "AUDIT_W438.md",
+  "recall": {
+    "result": "60-second timeout",
+    "file": "recall.txt",
+    "fallback_slug": "perceptron_proof_open_gaps_fleet_2026_07_12"
+  },
+  "independent_review": {
+    "reviewer": "w440",
+    "verdict": "KEEP on boundary claims 001-003",
+    "receipt": "REVIEW_RECEIPT_w440.md",
+    "source_correction_004": "pending"
+  }
+}

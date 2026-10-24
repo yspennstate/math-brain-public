@@ -1,0 +1,52 @@
+{
+  "seeds": [
+    "A096-SHARP-FIXED-PAIR-BIASED-ENDPOINT",
+    "A096-UNIFORM-SINGLETON-HALF-TAX",
+    "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+    "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO-v1",
+    "B19-REVIEW-B05-SPARSE-ACTIVATION-NOGO-v1"
+  ],
+  "reachable_claim_ids": [
+    "A029-CHILD-DEFICIT-BENCHMARKS",
+    "A081-VERSIONED-DEPENDENCY-CERTIFICATE",
+    "A096-SHARP-FIXED-PAIR-BIASED-ENDPOINT",
+    "A096-UNIFORM-SINGLETON-HALF-TAX",
+    "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+    "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO-v1",
+    "B19-REVIEW-B05-SPARSE-ACTIVATION-NOGO-v1"
+  ],
+  "edges": [
+    {
+      "from": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+      "to": "A029-CHILD-DEFICIT-BENCHMARKS",
+      "file": "~\\brain_workers\\FEI100_20261011\\agents\\A029\\runs\\20261011T223746Z-account05-A029-child-deficit-transport\\CLAIMS.json",
+      "dependency": {
+        "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+        "version": 1,
+        "status": "INDEPENDENTLY_REVIEWED_CONSTRUCTION_ONLY"
+      }
+    },
+    {
+      "from": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+      "to": "A081-VERSIONED-DEPENDENCY-CERTIFICATE",
+      "file": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261011T214745Z-account05-A081-dependency-certificates\\CLAIMS.json",
+      "dependency": {
+        "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+        "version": 1,
+        "statement_sha256": "331eeffbfcb3e4cec0f5a1db9d76852528ecfee2918d3f440ba420f284a20149"
+      }
+    },
+    {
+      "from": "A096-SHARP-FIXED-PAIR-BIASED-ENDPOINT",
+      "to": "A096-UNIFORM-SINGLETON-HALF-TAX",
+      "file": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261011T215017Z-account05-A096-live-gap-ledger\\CLAIMS.json",
+      "dependency": {
+        "claim_id": "A096-SHARP-FIXED-PAIR-BIASED-ENDPOINT",
+        "version": 1,
+        "acceptance": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+        "used_for": "Matching lower endpoint coefficient; upper bound is self-contained"
+      }
+    }
+  ],
+  "note": "Declared dependencies only; textual citations audited separately. No status mutation inferred from a citation alone."
+}

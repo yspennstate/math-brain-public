@@ -1,0 +1,66 @@
+PROB10-07 exact terminal-partition certificate
+scope=uniform measure on ALL forests; families K_{a,b,n}, n>=1
+families= [(1, 3), (2, 2), (1, 4), (2, 3)]
+arithmetic=exact integers/Fraction; no floating point
+FAMILY K_{1,3,n}: m=4 Bell=15 base=5 orbits=10 N^4=0
+  ORBIT 01 rep=((0, 1), (0, 2)) k=0 multiplicity_at_n2=3 denominator=625 coeff_low_to_high=[0, 380, 373, 131, 16]
+  ORBIT 02 rep=((0, 1), (0, 4)) k=1 multiplicity_at_n2=6 denominator=312 coeff_low_to_high=[50625, 48165, 17399, 2835, 176]
+  ORBIT 03 rep=((0, 1), (1, 4)) k=1 multiplicity_at_n2=6 denominator=312 coeff_low_to_high=[112500, 92040, 27699, 3635, 176]
+  ORBIT 04 rep=((0, 1), (2, 4)) k=1 multiplicity_at_n2=12 denominator=312 coeff_low_to_high=[11250, 8590, 2309, 285, 16]
+  ORBIT 05 rep=((0, 4), (0, 5)) k=2 multiplicity_at_n2=1 denominator=104 coeff_low_to_high=[480000, 369680, 107512, 13995, 688]
+  ORBIT 06 rep=((0, 4), (1, 4)) k=1 multiplicity_at_n2=6 denominator=15625 coeff_low_to_high=[2531250, 3275625, 1782249, 518803, 84553, 7264, 256]
+  ORBIT 07 rep=((0, 4), (1, 5)) k=2 multiplicity_at_n2=6 denominator=312 coeff_low_to_high=[540000, 362440, 91661, 10485, 464]
+  ORBIT 08 rep=((1, 4), (1, 5)) k=2 multiplicity_at_n2=3 denominator=312 coeff_low_to_high=[3651250, 2339840, 548186, 55585, 2064]
+  ORBIT 09 rep=((1, 4), (2, 4)) k=1 multiplicity_at_n2=6 denominator=15625 coeff_low_to_high=[562500, 1489625, 1174399, 428703, 79753, 7264, 256]
+  ORBIT 10 rep=((1, 4), (2, 5)) k=2 multiplicity_at_n2=6 denominator=312 coeff_low_to_high=[981250, 617340, 138736, 13285, 464]
+  BRUTE n=1: edges=7 pairs=21 forests=81 PASS
+  BRUTE n=2: edges=11 pairs=55 forests=712 PASS
+FAMILY K_{1,3,n} ALL_N_EXACT_PASS
+FAMILY K_{2,2,n}: m=4 Bell=15 base=5 orbits=9 N^4=0
+  ORBIT 01 rep=((0, 2), (0, 3)) k=0 multiplicity_at_n2=4 denominator=625 coeff_low_to_high=[2500, 3145, 1388, 251, 16]
+  ORBIT 02 rep=((0, 2), (0, 4)) k=1 multiplicity_at_n2=16 denominator=312 coeff_low_to_high=[193750, 136285, 35699, 4115, 176]
+  ORBIT 03 rep=((0, 2), (1, 3)) k=0 multiplicity_at_n2=2 denominator=312 coeff_low_to_high=[1250, 635, 88, 2]
+  ORBIT 04 rep=((0, 2), (1, 4)) k=1 multiplicity_at_n2=16 denominator=312 coeff_low_to_high=[26250, 15085, 3409, 365, 16]
+  ORBIT 05 rep=((0, 4), (0, 5)) k=2 multiplicity_at_n2=4 denominator=312 coeff_low_to_high=[5189375, 2960785, 629461, 59065, 2064]
+  ORBIT 06 rep=((0, 4), (1, 4)) k=1 multiplicity_at_n2=4 denominator=15625 coeff_low_to_high=[2500000, 4365250, 2633714, 757553, 113433, 8544, 256]
+  ORBIT 07 rep=((0, 4), (1, 5)) k=2 multiplicity_at_n2=4 denominator=312 coeff_low_to_high=[1805000, 924285, 175886, 14765, 464]
+  ORBIT 08 rep=((0, 4), (2, 4)) k=1 multiplicity_at_n2=8 denominator=15625 coeff_low_to_high=[6687500, 7395250, 3440964, 851303, 117433, 8544, 256]
+  ORBIT 09 rep=((0, 4), (2, 5)) k=2 multiplicity_at_n2=8 denominator=312 coeff_low_to_high=[1128125, 625285, 133011, 12765, 464]
+  BRUTE n=1: edges=8 pairs=28 forests=134 PASS
+  BRUTE n=2: edges=12 pairs=66 forests=1083 PASS
+FAMILY K_{2,2,n} ALL_N_EXACT_PASS
+FAMILY K_{1,4,n}: m=5 Bell=52 base=6 orbits=10 N^5=0
+  ORBIT 01 rep=((0, 1), (0, 2)) k=0 multiplicity_at_n2=6 denominator=46656 coeff_low_to_high=[0, 94176, 160678, 114231, 42169, 8025, 625]
+  ORBIT 02 rep=((0, 1), (0, 5)) k=1 multiplicity_at_n2=8 denominator=5832 coeff_low_to_high=[8503056, 12826026, 8136445, 2780805, 540367, 56625, 2500]
+  ORBIT 03 rep=((0, 1), (1, 5)) k=1 multiplicity_at_n2=8 denominator=2916 coeff_low_to_high=[12754584, 17142435, 9473852, 2748111, 439946, 36750, 1250]
+  ORBIT 04 rep=((0, 1), (2, 5)) k=1 multiplicity_at_n2=24 denominator=23328 coeff_low_to_high=[7558272, 9810720, 5078314, 1349859, 198373, 16125, 625]
+  ORBIT 05 rep=((0, 5), (0, 6)) k=2 multiplicity_at_n2=1 denominator=11664 coeff_low_to_high=[1337720832, 1621323648, 823071694, 223998915, 34464661, 2842125, 98125]
+  ORBIT 06 rep=((0, 5), (1, 5)) k=1 multiplicity_at_n2=8 denominator=1679616 coeff_low_to_high=[2448880128, 4420119456, 3508116588, 1595349336, 453087445, 81931500, 9167350, 577500, 15625]
+  ORBIT 07 rep=((0, 5), (1, 6)) k=2 multiplicity_at_n2=8 denominator=5832 coeff_low_to_high=[203046912, 216242352, 95781188, 22673670, 3042953, 221250, 6875]
+  ORBIT 08 rep=((1, 5), (1, 6)) k=2 multiplicity_at_n2=4 denominator=11664 coeff_low_to_high=[4372227072, 4629396672, 2010660322, 457133007, 57185161, 3719625, 98125]
+  ORBIT 09 rep=((1, 5), (2, 5)) k=1 multiplicity_at_n2=12 denominator=1679616 coeff_low_to_high=[544195584, 1674670464, 1852139844, 1063516836, 357878425, 73008000, 8829850, 577500, 15625]
+  ORBIT 10 rep=((1, 5), (2, 6)) k=2 multiplicity_at_n2=12 denominator=5832 coeff_low_to_high=[356451840, 376343064, 161329682, 35854233, 4345703, 271875, 6875]
+  BRUTE n=1: edges=9 pairs=36 forests=270 PASS
+  BRUTE n=2: edges=14 pairs=91 forests=3648 PASS
+FAMILY K_{1,4,n} ALL_N_EXACT_PASS
+FAMILY K_{2,3,n}: m=5 Bell=52 base=6 orbits=15 N^5=0
+  ORBIT 01 rep=((0, 2), (0, 3)) k=0 multiplicity_at_n2=6 denominator=46656 coeff_low_to_high=[1679616, 2993328, 2136274, 781011, 154069, 15525, 625]
+  ORBIT 02 rep=((0, 2), (0, 5)) k=1 multiplicity_at_n2=12 denominator=2916 coeff_low_to_high=[38257920, 41940639, 19038626, 4572768, 611696, 43125, 1250]
+  ORBIT 03 rep=((0, 2), (1, 2)) k=0 multiplicity_at_n2=3 denominator=46656 coeff_low_to_high=[4199040, 6050376, 3576742, 1108767, 189889, 17025, 625]
+  ORBIT 04 rep=((0, 2), (1, 3)) k=0 multiplicity_at_n2=6 denominator=11664 coeff_low_to_high=[419904, 415908, 154036, 25721, 1766, 25]
+  ORBIT 05 rep=((0, 2), (1, 5)) k=1 multiplicity_at_n2=12 denominator=23328 coeff_low_to_high=[40310784, 37101240, 14210482, 2920443, 342973, 22125, 625]
+  ORBIT 06 rep=((0, 2), (2, 5)) k=1 multiplicity_at_n2=12 denominator=5832 coeff_low_to_high=[110131488, 114698538, 49146397, 11090715, 1390567, 91875, 2500]
+  ORBIT 07 rep=((0, 2), (3, 5)) k=1 multiplicity_at_n2=24 denominator=23328 coeff_low_to_high=[41897088, 38610216, 14641150, 2962779, 343873, 22125, 625]
+  ORBIT 08 rep=((0, 5), (0, 6)) k=2 multiplicity_at_n2=2 denominator=11664 coeff_low_to_high=[9477000000, 8550324252, 3195059260, 632312175, 69824311, 4075125, 98125]
+  ORBIT 09 rep=((0, 5), (1, 5)) k=1 multiplicity_at_n2=2 denominator=1679616 coeff_low_to_high=[7739670528, 14097328128, 10553166180, 4296016188, 1048666081, 158008920, 14400850, 727500, 15625]
+  ORBIT 10 rep=((0, 5), (1, 6)) k=2 multiplicity_at_n2=2 denominator=5832 coeff_low_to_high=[1166691600, 964197702, 329125547, 59321193, 5948378, 314625, 6875]
+  ORBIT 11 rep=((0, 5), (2, 5)) k=1 multiplicity_at_n2=12 denominator=1679616 coeff_low_to_high=[16016818176, 23025000384, 14537857068, 5237841600, 1172865901, 166655220, 14648350, 727500, 15625]
+  ORBIT 12 rep=((0, 5), (2, 6)) k=2 multiplicity_at_n2=12 denominator=5832 coeff_low_to_high=[854178048, 712895202, 249432833, 46907394, 5002028, 286500, 6875]
+  ORBIT 13 rep=((2, 5), (2, 6)) k=2 multiplicity_at_n2=3 denominator=11664 coeff_low_to_high=[13964374080, 11922315372, 4192385800, 777393939, 80205811, 4367625, 98125]
+  ORBIT 14 rep=((2, 5), (3, 5)) k=1 multiplicity_at_n2=6 denominator=1679616 coeff_low_to_high=[5972714496, 12109751424, 9641835396, 4080906468, 1021365481, 156250320, 14355850, 727500, 15625]
+  ORBIT 15 rep=((2, 5), (3, 6)) k=2 multiplicity_at_n2=6 denominator=5832 coeff_low_to_high=[1362541824, 1114749810, 373255319, 65520375, 6369578, 325875, 6875]
+  BRUTE n=1: edges=11 pairs=55 forests=712 PASS
+  BRUTE n=2: edges=16 pairs=120 forests=8166 PASS
+FAMILY K_{2,3,n} ALL_N_EXACT_PASS
+total_edge_pair_orbits= 44
+PROB10_07_TRIPARTITE_SUM5_EXACT_PASS

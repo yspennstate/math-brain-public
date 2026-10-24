@@ -1,0 +1,78 @@
+{
+  "exhaustive": {
+    "cases": 65804,
+    "functions_seen": 65812,
+    "max_H_minus_2R": 0.0,
+    "max_R_minus_H": 0.0,
+    "max_direct_ratio": 3.4024755511985876,
+    "max_direct_violation": 0.0,
+    "max_tree_ratio": 1.8266230937148955,
+    "max_tree_violation": 0.0
+  },
+  "named": {
+    "cases": 20,
+    "labels": [
+      "one_point_2",
+      "one_point_3",
+      "one_point_4",
+      "one_point_5",
+      "one_point_6",
+      "one_point_7",
+      "one_point_8",
+      "one_point_9",
+      "one_point_10",
+      "one_point_11",
+      "one_point_12",
+      "majority_3",
+      "majority_5",
+      "majority_7",
+      "majority_9",
+      "bent_quadratic_2",
+      "bent_quadratic_4",
+      "bent_quadratic_6",
+      "bent_quadratic_8",
+      "bent_quadratic_10"
+    ],
+    "max_H_minus_2R": 0.0,
+    "max_R_minus_H": -0.010944017946454805,
+    "max_direct_ratio": 3.9060445667335273,
+    "max_direct_violation": 0.0,
+    "max_tree_ratio": 2.0439639625069645,
+    "max_tree_violation": 0.0
+  },
+  "notes": [
+    "Exhaustive sweep includes all 65,812 Boolean truth tables in dimensions 1 through 4; constant functions are seen but omitted from ratio counters.",
+    "tree_R constructs the balanced-block hereditary tree used in the proof, choosing between the two block-first orientations using the proved coefficient profiles.",
+    "Checks R<=H<=2R validate the inherited full-tree allocation/recombination identity numerically on the constructed trees; they are not used as a proof of the new recursion."
+  ],
+  "random": {
+    "cases": 1150,
+    "max_H_minus_2R": 0.0,
+    "max_R_minus_H": -1.337067813695926,
+    "max_direct_ratio": 2.477944791125799,
+    "max_direct_violation": -7.939253058645081,
+    "max_tree_ratio": 1.2787481639955338,
+    "max_tree_violation": -6.116984157340312,
+    "samples_by_dimension": {
+      "5": 500,
+      "6": 350,
+      "7": 200,
+      "8": 100
+    }
+  },
+  "rho_2_over_ln2": 2.8853900817779268,
+  "status": "PASS",
+  "theorem_constants": [
+    {"D": 2.0, "K": 1.0, "L": 1},
+    {"D": 4.885390081777927, "K": 2.9426950408889634, "L": 2},
+    {"D": 7.7707801635558535, "K": 5.356737602222409, "L": 3},
+    {"D": 10.65617024533378, "K": 8.006453923778095, "L": 4},
+    {"D": 13.541560327111707, "K": 10.7740071254449, "L": 5},
+    {"D": 16.426950408889635, "K": 13.600478767167267, "L": 6},
+    {"D": 19.31234049066756, "K": 16.456409628917413, "L": 7},
+    {"D": 22.197730572445487, "K": 19.32707010068145, "L": 8},
+    {"D": 25.083120654223414, "K": 22.20509537745243, "L": 9},
+    {"D": 27.968510736001342, "K": 25.086803056726886, "L": 10},
+    {"D": 30.85390081777927, "K": 27.970351937253078, "L": 11}
+  ]
+}

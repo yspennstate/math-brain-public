@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T044241Z-b08-moc4-r12",
+  "account": "account01",
+  "slot": "B08",
+  "campaign": "MOC4",
+  "utc_start": "2026-09-22T04:42:41Z",
+  "utc_end": "2026-09-22T04:58:25Z",
+  "control_commit_initial": "6ebb7af0dd711c0c521409663452aa39ea26d1b5",
+  "control_commit_final": "c893724b18b5a6f199821362103dab2b1876b1d7",
+  "control_revision": "2026-09-22.2",
+  "control_readme_git_blob": "3d4a9372c87802ab734141a3374d04c8823372e3",
+  "control_readme_sha256": "UNVERIFIED_NOT_COMPUTED",
+  "owner_message_sha256": "UNVERIFIED_NOT_COMPUTED",
+  "directives": {
+    "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z": "implemented",
+    "STOP_NEW_INSTALLATION_AND_BENCHMARK_WORK": "implemented",
+    "MOC4_ACCOUNT01_B08_ASSIGNMENT": "implemented",
+    "QUIET_DELIVERY": "implemented"
+  },
+  "canonical_login": {
+    "status": "existing_same_utc_hour_create_only_record_observed",
+    "path": "scheduled_tasks/status/account01/logins/2026-09-22T04Z/B08.json",
+    "note": "Protocol permits one slot login per UTC hour; an earlier B08 invocation had already created the current-hour record, so it was not overwritten."
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "model_self_report_source": "self_report",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_configured_source": "not_exposed",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  },
+  "thinking_proxy": {
+    "observed_start_utc": "2026-09-22T04:42:41Z",
+    "observed_end_utc": "2026-09-22T04:58:25Z",
+    "wall_seconds": 944.413,
+    "label": "elapsed_execution_not_pure_thinking",
+    "tool_calls_made": null,
+    "tool_calls_source": "not_exhaustively_instrumented",
+    "output_characters": null
+  },
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "peer_result_consumed": {
+    "account_slot": "account02/B09",
+    "run": "20260922T034112Z-account02-B09-MOC4-r14",
+    "result": "MOC4-ZERO-FIBER-HAAR-LIFT-v1",
+    "report_blob": "20a1ea240bb65b81b880cad265e4db5f225d2a8a"
+  },
+  "scientific_results": [
+    "MOC4-COMPLEX-HADAMARD-COMMON-LIFT-v1 proved with one explicit 24-state law reproducing all exterior degrees for the full order-four complex-Hadamard family.",
+    "MOC4-V4-BIRKHOFF-GLUE-v1 proved as an exact determinant-relevant same-unitary P/R gluing criterion.",
+    "MOC4-PR-INTERIOR-CERTIFICATE-v1 proved: 8 min(P)+min(R) >= 2 implies the target inclusion for every spectra pair."
+  ],
+  "parent_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "first_missing_implication": "MOC4-MAXIMIZER-V4-GLUE-v1",
+  "artifacts": {
+    "report_blob": "f7391a0c2fdeaef6c5fac2bdfbca4513245e5abf",
+    "verification_blob": "68eec174432c6acc0fa923ae65315f13715cda7f",
+    "shared_handoff_blob": "169337c0cd89ae09548e0f2d99aeab76302450cc"
+  },
+  "delivery_status": "private_archive_and_shared_source_bound_handoff_written_and_read_back",
+  "notifications": "quiet; no email or agent-generated notification sent",
+  "scheduler_mutations": 0
+}

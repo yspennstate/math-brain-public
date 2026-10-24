@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260923T095028Z-account03-B04-qform-auto11-r31",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "SUPPORTING_THEOREM_PROVED_FULL_TARGET_OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "repository": "yspennstate/math-research-brain",
+    "commit_final": "19b70c1dacd27bf465d3f862acc0482b2b4a1717",
+    "owner_control_revision": "2026-09-22.15",
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-ENTROPY-WEIGHTED-DPRIME-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "For an original-coordinate cross block M and any 1/2<=h<3/4, if G_h is the maximum determinant-entropy currency over physical 3x3-minor weights with every row marginal <=h, then ||p_Q||inf <=6 sqrt(e)(2h)^(-1/2)(3-4h)^(-1) G_h^(-1/6), with a continuous C0 density."
+    },
+    {
+      "id": "QFORM-ENTROPY-DUAL-COMPOUND-HUB-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "G_h has the exact nonnegative-lambda entropy dual. For every integer m>3/h some |H|<=m satisfies E3(M_{H^c,*})<=E3(M)(G_h/E3(M))^((1-3/m)/(1-h)). At h=2/3,m=6, failure of a quantitative Fourier exit forces a six-row hub; two orientations give a six-by-six compound hub."
+    },
+    {
+      "id": "QFORM-SUPPORT-INFEASIBLE-RANK2-DELETION-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "If G_{2/3}(M)=0, fractional matching/vertex-cover duality gives |H|<=4 meeting every supported row triple, hence rank(M_{H^c,*})<=2."
+    }
+  ],
+  "peer_result_applied": {
+    "designated_partner": "account04/B04",
+    "designated_partner_status": "NO_COMPLETED_CURRENT_QFORM_REPORT_OR_HANDOFF_VISIBLE_AT_FRESH_LOOKUP",
+    "actual_existing_worker": "account03/B18",
+    "source": "yspennstate/math-open-problems@dfbc17f17b702ed7c7191ba24648a70f67dda851:proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T092851Z-account03-B18-QFORM-r26/REPORT.md",
+    "application": "After conditioning the <=4 exact support-deficiency hub coordinates, residual rank-two cross block B obeys sup_u E(|R-u|^-1/2|X_H)<=8(sigma1 sigma2)^-1/4 uniformly in conditioned values."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1c9eda73c97b03bf78aa6750726df00ce3768d21",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T095028Z-account03-B04-qform-auto11-r31/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T095028Z-account03-B04-qform-auto11-r31/CHECKS.json",
+    "readback": "SUCCESS"
+  },
+  "explicit_example": {
+    "spectrum": [1,1,1,-1,-1,-1,0,0,0],
+    "natural_max_third_volume_row_marginal": 0.9,
+    "optimized_h_half_currency": 0.6,
+    "density_bound": 10.771428003025216,
+    "continuity": true
+  },
+  "unresolved_implication": "QFORM-FINITE-COMPOUND-HUB-PAYMENT-v1: turn the <=6-row/<=6-column third-volume compound hub, or exact rank-two deletion residue, into a target-scale L-infinity endpoint without selecting a vanishing coefficient.",
+  "next_step": "Combine finite compound hubs with mixed-hub/Fresnel, scalar-square, zero-pivot, grouped-bank, or Schur half-Riesz endpoints while preserving E3 scale.",
+  "full_solution": false
+}

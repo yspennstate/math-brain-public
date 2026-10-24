@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B08",
+  "run_id": "20260923T114243Z-account02-B08-qform-auto11",
+  "owner_revision": "2026-09-22.15",
+  "source_control_commit": "430898c0250c311fef2d9173dff4f103da59f9bf",
+  "execution_context": "scheduled_task_runtime",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "status": "NEW_SUPPORTING_HYBRID_ROUTER_AND_TARGET_VALID_MACROSCOPIC_GROUPING_OBSTRUCTION",
+  "result_ids": [
+    "QFORM-K1-PAIR-TAIL-RANK5-ROUTER-v1",
+    "QFORM-K1-MACROSCOPIC-GROUPING-BARRIER-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "cbd875bb357d1f85b4228e21c67e44b02da92b5e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/20260923T114243Z-account02-B08-qform-auto11/REPORT.md",
+    "blob": "b6ac5e6dd7ec88b7a0ebf2cc925a9ec6ca6a7c44",
+    "checkpoint_commit": "5a61fe5887bbd6a4a9f7b925eb6a6d483c367810",
+    "checker_commit": "3f2eb774de12a982aeeca8a070bfa99b87e5f3a0",
+    "checker_output_commit": "d2fafa992bdecd4cee4a87dd6258208f73bdcb71",
+    "checker_status": "QFORM_B08_AUTO11_CHECK_PASS"
+  },
+  "handoff": {
+    "commit": "f68f7ab3b5614499cf517b40d42be6dfefcb4368",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B08/20260923T114243Z-account02-B08-qform-auto11.md",
+    "blob": "4f057174e0504b4f95db323a2ee3ab66037507fd"
+  },
+  "source_premises": [
+    {
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "scope_used": "D5 marginal-free fifth-volume bound and rank-r Fresnel--Brascamp--Lieb bound"
+    },
+    {
+      "source": "yspennstate/math-open-problems@3c4c6882813d9530dc5c3884ce3e25f5993c7062",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260923T115108Z-account03-B08-qform-diffuse-r36/REPORT.md",
+      "scope_used": "physical-pair post-Schur E2 Linfinity receiver and rank-two leakage high-tail router"
+    },
+    {
+      "source": "yspennstate/math-open-problems@ac7e9c4772e977672044e7cacd55b74c91ea8b6d",
+      "scope_used": "account02/B08 predecessor actual k=1 spectral gate and D5 rank-four router"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "small matrix norm is not a uniformly small random quadratic perturbation"
+  ],
+  "new_mathematics": {
+    "pair_router": "At the actual k=1 gate, a physical cross pair with sigma_min>=tau L either gives ||p_Q||inf<17.281 tau^(-14/19) rho^(-5/19)/L via partner r36 or forces dist_F(B,rank<=5)<rho L. At tau=rho=1/64 the paid constant is <1106/L. Combined with D5, an unpaid state has dist_op(B,rank<=4)<L/64 and either no good indefinite cross pair or also dist_F(B,rank<=5)<L/64.",
+    "macroscopic_barrier": "For the target-valid k=1 Hadamard hybrid A_m(d), every entry is <=17/(10m), hence every g-coordinate principal block has operator norm <=17g/(10m). Capturing the child gate c1=(1/2)sqrt(3/5) requires g>=(sqrt(15)/17)m=0.2278225...m. This remains true after original-coordinate conditioning because principal submatrices retain the entry bound.",
+    "exact_partner_application": "On a matching left/right physical pair in the same family, pair eigenvalues are 3/m and -(1/5+2d)/m. Exact pair Schur completion leaves residual cross singular values 4/5 and |(14d-4)/(10d+1)|, so E2=64(7d-2)^2/[25(10d+1)^2]>=676/625. Partner r36 yields ||p_Q||inf<24.423 m^(14/19), quantifying the nonuniform pair-first cost.",
+    "fixed_source_application": "The exact six-dimensional Hadamard range has leverage 3/m<=1/2 and |det Lambda|>=(36/125), so the required fixed-source Fresnel theorem gives ||p_Q||inf<=6(125/36)^(1/6)=7.3833337853... for every cap-one product source. Thus the witness is not a QFORM counterexample."
+  },
+  "unresolved_implication": "QFORM-K1-MACROSCOPIC-CHILD-LOWRANK-CROSS-COMPILER-v1",
+  "next_step": "Build an integrated original-coordinate compiler that aggregates the macroscopic child eigendirection before reciprocal pivot payment, while retaining arbitrary same-bank curvature, affine terms, complementary spectrum, and the simultaneous rank-four operator/rank-five Frobenius cross tubes. It must recover a dimension-free estimate on the Hadamard witness and survive sparse coordinate conditioning.",
+  "independent_review_status": "supporting results only; no end-to-end full-candidate review claimed",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

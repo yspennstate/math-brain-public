@@ -1,0 +1,38 @@
+{
+  "schema": "fei-open-lemmas/2",
+  "run_id": "20261012T031242Z-account01-B01-dual-tc-a003",
+  "primary_packet": "A003",
+  "proved_interfaces": [
+    {
+      "claim": "B01-A003-DUAL-TC-PAYMENT-v1",
+      "statement": "For every restriction-critical Boolean f, 0<=Ddual(S)<=sum_i JS_i<=(2/ln2) I(f).",
+      "constant_bits": "2/ln2",
+      "status": "AUTHOR_PROVED_PENDING_REVIEW"
+    },
+    {
+      "claim": "B01-A003-DUAL-TC-RESTRICTED-FEI-v1",
+      "statement": "For every epsilon>0, restriction-critical Boolean f with Ddual(S)>=epsilon H(S) satisfies H(f)<=(2/(epsilon ln2)) I(f).",
+      "constant_bits": "2/(epsilon ln2)",
+      "status": "AUTHOR_PROVED_PENDING_REVIEW"
+    }
+  ],
+  "remaining_lemma": {
+    "gap_id": "G-CRITICAL-STEP",
+    "quantifiers": "Determine whether H/I is uniformly bounded on all genuine Boolean f that are restriction-critical, tensor-prime, satisfy max_i I_i<=e^3*2^(-H/I), and have Ddual(S)/H(S) arbitrarily small; alternatively derive a complete signed-Booleanity or nonlocal restriction contradiction for that simultaneous regime.",
+    "status": "OPEN",
+    "must_survive": [
+      "near tensors",
+      "rare activation equivalence",
+      "whole-set addressing",
+      "shared-variable interference",
+      "parity-zero erasure",
+      "actual prime Boolean gates"
+    ]
+  },
+  "not_claimed": [
+    "a uniform positive lower bound on Ddual/H",
+    "a tensor-prime quantitative dependence gap",
+    "a full-FEI proof",
+    "a counterfamily"
+  ]
+}

@@ -1,0 +1,45 @@
+--- a/~/math-brain-inbox/w336/bundle_007.json
++++ b/~/math-brain-inbox/w336/bundle_007.json
+@@ -0,0 +1,42 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w336",
++  "bundle_slug": "w336-c0074-checked-attempt-20261010",
++  "audit_status": "PENDING_W346_KEEP; do not promote to audited or solved",
++  "entries": [
++    {
++      "key": "tree-volume-and-resistance-orders-do-not-imply-walk-convergence",
++      "namespace": "probability.scaling-limits",
++      "logical_name": "tree-volume-and-resistance-orders-do-not-imply-walk-convergence",
++      "kind": "lemma",
++      "title": "Uniform resistance orders do not imply a walk scaling limit",
++      "statement": "On paths 0,...,n, put conductance c_n=1 for odd n and 2 for even n, normalized counting measure, and spatial scale 1/n. Graph metric-measure spaces converge and resistance is between half and all of graph distance. The stationary variable-speed walks accelerated by n^2 have no common limit of finite-dimensional laws: their cosine two-time covariance tends for t>0 to (1/2)exp(-pi^2*t) along odd n and (1/2)exp(-2*pi^2*t) along even n. This weighted-path example diagnoses the need for actual scaled resistance convergence; it is not a counterexample to an IIC scaling limit.",
++      "proof_text": "# C0074: constant-order resistance estimates do not give convergence\n\nStatus: proof written; w346 KEEP pending. This weighted-path example diagnoses a reduction, not the unweighted IIC itself.\n\nFor each n>=2 take the path with vertices 0,...,n, normalized counting measure and distance |i-j|/n. Put conductance c_n on every edge, with c_n=1 for odd n and c_n=2 for even n. These metric-measure spaces converge to the interval with uniform measure. Effective resistance is |i-j|/c_n, so it is uniformly between half and all of graph distance, yet the resistance distance divided by n has no single limit.\n\nLet the continuous-time variable-speed walk have generator L_n h(i)=c_n*sum_{j adjacent i}(h(j)-h(i)), start in its uniform stationary law, and accelerate time by n^2. Its process laws do not have a single scaling limit along all n.\n\nProof: the nonconstant eigenfunction u_n(i)=cos(pi*(i+1/2)/(n+1)) has eigenvalue -lambda_n, where lambda_n=2*c_n*(1-cos(pi/(n+1))). Its uniform mean is zero and its uniform second moment is 1/2. Thus\n\n    E[u_n(X_0)*u_n(X_(n^2*t))]=(1/2)*exp(-n^2*lambda_n*t).\n\nu_n is uniformly close to the fixed spatial observable cos(pi*i/n). For any fixed t>0, the displayed bounded two-time expectation tends to (1/2)*exp(-pi^2*t) along odd n and (1/2)*exp(-2*pi^2*t) along even n. A common limit of finite-dimensional laws would force the same bounded continuous expectation, a contradiction. Also the endpoint hitting mean from 0 is n(n+1)/(2*c_n), independently confirming the two time constants.\n\nEvery graph here is a tree; both volume and resistance orders are controlled. To use a resistance-form convergence theorem for the IIC one must establish actual scaled resistance and measure convergence, matching embedding and time normalization, rather than replace convergence by constant-factor estimates. The example does not assert that the IIC has this alternation, or that its scaling limit fails.\n\nChecks: finite generator eigenvectors and stationary correlations, plus exact endpoint hitting systems. No literature closure of the unoriented high-dimensional IIC problem was verified offline.\n",
++      "assumptions": [
++        "All hypotheses and scope restrictions in the statement apply."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner:campaign:w336:C0074:tree-volume-and-resistance-orders-do-not-imply-walk-convergence",
++        "url": "~\\brain_workers\\w336\\proofs\\C0074.md",
++        "revision": "author-proof-2026-10-10; independent audit w346 pending",
++        "license": "owner-own-work; campaign proof, no novelty claim",
++        "excerpt": "On paths 0,...,n, put conductance c_n=1 for odd n and 2 for even n, normalized counting measure, and spatial s"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "tree-volume-and-resistance-orders-do-not-imply-walk-convergence",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0074-scaling-limit-of-random-walk-on-the-high-dimensional-incipient-infinit",
++      "kind": "cites",
++      "rationale": "New: \"On paths 0,...,n, put conductance c_n=1 for odd n and 2 for even n, normalized counting measure, and spatial scale 1/n. Graph metric-measure spaces converge and resistance is betwe\"; existing: \"Prove that random walk on the incipient infinite cluster of high-dimensional (d > 6) percolation has a non-degenerate scaling limit.\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
++    },
++    {
++      "from_key": "tree-volume-and-resistance-orders-do-not-imply-walk-convergence",
++      "to_existing_logical": "math:probability.percolation:attempt-c0074-scaling-limit-of-random-walk-on-the-high-dimensional-incipient-infinit",
++      "kind": "cites",
++      "rationale": "New: \"On paths 0,...,n, put conductance c_n=1 for odd n and 2 for even n, normalized counting measure, and spatial scale 1/n. Graph metric-measure spaces converge and resistance is betwe\"; existing: \"If the IIC converges (as a measure-valued process indexed by intrinsic distance) to incipient infinite super-Brownian motion, then the walk on the IIC should converge to the Brownian motion on the associated continuum random tree embedded i\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
++    }
++  ]
++}

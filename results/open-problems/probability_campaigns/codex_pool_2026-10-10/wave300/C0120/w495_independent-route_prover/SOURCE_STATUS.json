@@ -1,0 +1,111 @@
+{
+  "target_id": "C0120",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "primary_source": {
+    "source_id": "chatterjee_chaos_2008",
+    "url": "https://arxiv.org/abs/0810.4221v2",
+    "revision": "v2, 2008-12-16",
+    "model_locator": "section 8, pp. 37-38, Theorem 8.1; introduction pp. 2-3",
+    "question_locator": "section 12, problem (3), p. 59",
+    "source_excerpt": "Improve the fluctuation exponent in directed polymers. The current proof via hypercontractivity gives only a log n correction.",
+    "verified_via": "Public arXiv abstract and PDF; exact PDF question and Theorem 8.1 inspected",
+    "source_hash_check": "complete local check recorded; mathematical correctness is a separate question",
+    "intake_pdf_sha256_unreplayed": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+    "local_hash_checks": [
+      {
+        "path": "~/Downloads/Probability_1000_intake_claude_20260907/sources/chatterjee_chaos_2008/source.pdf",
+        "catalog_sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+        "available": true,
+        "sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+        "bytes": 586944,
+        "catalog_match": true
+      },
+      {
+        "path": "~/Downloads/Probability_1000_intake_claude_20260907/sources/chatterjee_chaos_2008/text.txt",
+        "catalog_sha256": "e58058138c0f797174c513fc8579af201360f9d093f241af8c24fe3503017956",
+        "available": true,
+        "sha256": "e58058138c0f797174c513fc8579af201360f9d093f241af8c24fe3503017956",
+        "bytes": 136841,
+        "catalog_match": true
+      }
+    ]
+  },
+  "intake_record": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 120,
+    "status": "needs statement correction",
+    "scope_mismatch": [
+      "log partition function versus ground-state maximum",
+      "general dimension versus source's two-dimensional oriented lattice",
+      "arbitrary weights versus independent standard Gaussians"
+    ]
+  },
+  "prior_attempt": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 98,
+    "id": "C0120-A001",
+    "method": "qualitative quantitative-chaos reduction and analogy with FPP",
+    "gap": "No polynomial quantitative decorrelation estimate; FPP exponent relations are not an automatic theorem for this polymer."
+  },
+  "owner_solved_retired_check": "Bounded recall and target-ID reads completed; canonical live-store result not certified. Current openness remains UNKNOWN.",
+  "served_model_evidence": {
+    "requested": "gpt-6.1-sol, reasoning max, Fast service tier",
+    "response_side_evidence": null,
+    "status": "UNVERIFIED; requested settings and this thread's identity do not establish a served-model receipt"
+  },
+  "brain_pipeline": {
+    "prepared": true,
+    "submitted": true,
+    "reviewed": false,
+    "ingested": false,
+    "retrievable": false
+  },
+  "draft_path": "~/math-brain-inbox/w495/bundle_001.json",
+  "local_raw_extraction": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/raw/chatterjee_chaos_2008_loose.txt",
+    "sha256": "4957f4a7993bd62ad0793195622c7cc7ecaceeeb8c19f7b8ca90d19f0b96aa39",
+    "scope": "intake loose excerpts only; not the complete primary PDF"
+  },
+  "prior_attempt_other_roots": "Targeted C0120 scans of named H, I and Lean Markdown/JSONL/Lean artifacts found no additional C0120 proof. Exact intake A001 is the recovered attempt. This is not a whole-corpus exclusion.",
+  "peer_review_receipts": [
+    {
+      "auditor": "w496",
+      "subject": "w495-L0",
+      "verdict": "KEEP",
+      "scope": "Gradient-energy-only obstruction, not a C0120 solution",
+      "path": "~/brain_workers/w496/AUDIT_w495.jsonl"
+    },
+    {
+      "auditor": "w496",
+      "subject": "w495-S1",
+      "verdict": "KEEP",
+      "scope": "Historical primary-source scope only",
+      "path": "~/brain_workers/w496/AUDIT_w495.jsonl"
+    }
+  ],
+  "main_proof_review": {
+    "referee": "w497",
+    "status": "pending",
+    "request_message": "msg-051c033861"
+  },
+  "resource_gate_receipt": "MEASUREMENTS.json; numerical controls skipped, 76 artifact checks passed",
+  "adversary_proof_review": {
+    "auditor": "w496",
+    "path": "~/brain_workers/w496/AUDIT_W495_PROOF.md",
+    "sha256": "a64aea52f625213194868751ac4218c5b7e83b1c2d01ef760f4466a574ae92a7",
+    "subjects": [
+      "w495-L1",
+      "w495-L2",
+      "w495-L3",
+      "w495-L4",
+      "w495-L5"
+    ],
+    "verdict": "KEEP",
+    "scope": "binary-tree-plus-chains graph family; sufficiently large r; beta fixed strictly positive for L5",
+    "different_model_or_login_gate": "UNATTESTED",
+    "parent_problem_proof": false
+  },
+  "brain_pipeline_reviewed_meaning": "Full inbox bundle/model-login gate is not certified; scoped adversary KEEP receipts are recorded separately."
+}

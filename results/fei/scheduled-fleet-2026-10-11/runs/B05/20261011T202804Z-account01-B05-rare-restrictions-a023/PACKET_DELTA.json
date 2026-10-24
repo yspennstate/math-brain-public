@@ -1,0 +1,79 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T202804Z-account01-B05-rare-restrictions-a023",
+  "stream": "B05",
+  "packet_id": "A023",
+  "packet_ids": ["A023"],
+  "gap_id": "B05_RARE_REFUNDS",
+  "obstruction_id": "O-B05",
+  "attempt_id": "A023-ORDER-1",
+  "method": "Exact physical restriction-order comparison for the accepted sparse activated bent one-point-defect family; activation Fourier transform plus a one-use control-prefix stopping rule.",
+  "mathematical_delta": "Proved that control-first revelation transports the selector packet with coefficient one: L_CF=p L_core, while the selector-first packet differs only on the empty-data frequency by at most p delta^2(3k+7). Both normalized packets equal k+log2(e)+o(1), so the d*k term remains unpaid.",
+  "deliverable_status": {
+    "A023-D1": "PARTIAL_NO_GO_COMPLETE_FOR_DECLARED_STOPPING_RULE",
+    "A023-D2": "COMPLETE_FAMILY_LEDGER_PENDING_INDEPENDENT_REVIEW",
+    "packet_target": "OPEN; no positive complete amortization theorem"
+  },
+  "mathematical_status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO-v1"
+  ],
+  "claims_created_or_changed": [
+    "B05-A023-CONTROL-FIRST-ORDER-TRANSPORT-NOGO-v1"
+  ],
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "80cc2e5027efa56d79c4ecdf7d4949759ef2068b",
+      "path": "reports/fei-2026-10-11/runs/B05/20261011T193057Z-account01-B05-rare-restrictions/REPORT.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "7955d427222392911dc6af2e4ee3aa8aab67ac8c",
+      "path": "reports/fei-2026-10-11/runs/B19/20261011T195038Z-account01-B19-independent-review/REPORT.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "ba64c22ce44969cb56166874de8224207800dec9",
+      "path": "reports/fei-2026-10-11/assignments/B05.json",
+      "blob_sha": "05447e6d999437bb82a266b427bd76a4b37266b6"
+    }
+  ],
+  "next_consumers": ["A027", "A028", "A064", "A087", "A094", "B20"],
+  "independent_reviewers": ["A087", "A094"],
+  "next_action": "On the all-zero control branch, query one data coordinate before the selector and compute whether conditional KL credits telescope against the surviving d*k debt or merely redistribute it.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "No positive universal or family-level amortization theorem yet.",
+    "Independent reconstruction of the new order-transport bound is pending."
+  ],
+  "validation": {
+    "command": "python3 rare_order_checker.py",
+    "observed_runtime_seconds": 4.6,
+    "random_seed": null,
+    "direct_truth_table_parameters": [2, 4],
+    "aggregated_parameters": [4, 6, 8, 10, 12, 16, 20],
+    "arithmetic": "binary64 corroboration; analytic proof supplies all-k statement"
+  },
+  "delivery_status": {
+    "canonical": {
+      "status": "SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "7d435927371f5654ad2275718a1890a0a3414443",
+      "path": "reports/fei-2026-10-11/runs/B05/20261011T202804Z-account01-B05-rare-restrictions-a023/",
+      "verified_files": 5,
+      "report_blob": "4b02b427aaf3f2d683a4ec195c9b747976035272"
+    },
+    "brain_mirror": {
+      "status": "SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-research-brain",
+      "commit": "a399b7453e29eb6e22c23eb0f5425ba1087b623e",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B05/20261011T202804Z-account01-B05-rare-restrictions-a023/",
+      "verified_files": 5,
+      "report_blob": "4b02b427aaf3f2d683a4ec195c9b747976035272"
+    },
+    "native_brain_ingestion": "NOT_CLAIMED",
+    "independent_review": "PENDING"
+  }
+}

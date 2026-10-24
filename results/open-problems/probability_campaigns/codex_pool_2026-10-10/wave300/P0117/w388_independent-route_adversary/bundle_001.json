@@ -1,0 +1,233 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w388",
+  "bundle_slug": "p0117-one-sided-shell-obstruction-20261010-w388",
+  "entries": [
+    {
+      "key": "source-state",
+      "namespace": "probability.fpp",
+      "logical_name": "planar-fpp-bigeodesic-source-status-20261010",
+      "kind": "concept",
+      "title": "P0117 source status and exact assumptions",
+      "statement": "DRAFT source audit, 10 October 2026. The planar undirected nearest-neighbor FPP conjecture concerns iid finite nonnegative edge weights with an atomless common law and excludes every injective doubly infinite path whose finite segments achieve global passage times. Damron-Hanson arXiv:1512.00804v2 Conjecture1 states the moment-free target. The A1 working class adds E[min(X1,X2,X3,X4)^2]<infinity. A public OpenAI manuscript dated24 September2026, No bigeodesics in planar first-passage percolation, Theorem1.1 claims the full result in A1 without shape regularity; its main proof has not been independently certified in this packet. Current openness UNKNOWN; no novelty claim. A local source hash and a posterior sublemma audit do not certify that main theorem. The 7September2026 attempted-unsolved ranking is a historical status only.",
+      "proof_text": null,
+      "assumptions": [
+        "Graph Z^2, undirected nearest-neighbor edges",
+        "iid finite nonnegative weights",
+        "atomless law",
+        "additional A1 moment only where explicitly imposed"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:20261010:w388:P0117:source-state",
+        "url": "urn:owner-own-work:20261010:w388:P0117:source-state",
+        "revision": "draft-review-20261010-v1",
+        "license": "owner-own-work (campaign derivation or attributed literature audit; concept only)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "unit-counterexample",
+      "namespace": "probability.fpp",
+      "logical_name": "constant-weight-planar-fpp-bigeodesic-counterexample",
+      "kind": "concept",
+      "title": "Continuity is essential to the displayed iid target",
+      "statement": "Independently checked by w389; draft concept only. The bare assertion that every planar iid nonnegative weight law has no bigeodesic is false. With t_e=1 almost surely, each horizontal line v_k=(k,c), k in Z, is a bigeodesic: its segment between i and j costs |j-i|, and every competing lattice path has at least |j-i| edges. This degenerate iid example does not refute the intended atomless-law conjecture.",
+      "proof_text": null,
+      "assumptions": [
+        "Nearest-neighbor Z^2",
+        "Degenerate iid unit weights"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:20261010:w388:P0117:unit-counterexample",
+        "url": "urn:owner-own-work:20261010:w388:P0117:unit-counterexample",
+        "revision": "draft-review-20261010-v1",
+        "license": "owner-own-work (campaign derivation or attributed literature audit; concept only)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "root-crossing",
+      "namespace": "probability.fpp",
+      "logical_name": "global-root-crossing-compactness-certificate",
+      "kind": "concept",
+      "title": "Exact root-crossing compactness certificate",
+      "statement": "Independently checked by w389; draft concept only. For any finite nonnegative weights on Z^2 let B_n={||x||_infinity<=n}, S_n={||x||_infinity=n}, and E_n be existence of a simple GLOBAL geodesic through0 with endpoints on S_n and all other vertices in B_(n-1). Then E_(n+1) is a subset of E_n, and their intersection equals existence of a bigeodesic through0. Stop each arm at its first boundary hit for restriction; consistent central finite strings follow by finite-degree diagonal compactness. Consequently P(bigeodesic through0)=lim P(E_n). Under translation invariance, absence everywhere is equivalent to this limit being0. This reduction supplies no decay bound or novelty claim.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite nonnegative weights",
+        "Global minimizing metric, not a restricted box metric",
+        "Simple paths",
+        "Translation invariance only for the everywhere conclusion"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:20261010:w388:P0117:root-crossing",
+        "url": "urn:owner-own-work:20261010:w388:P0117:root-crossing",
+        "revision": "draft-review-20261010-v1",
+        "license": "owner-own-work (campaign derivation or attributed literature audit; concept only)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "shell-route",
+      "namespace": "probability.fpp",
+      "logical_name": "all-ray-shell-incidence-route-withdrawn",
+      "kind": "concept",
+      "title": "All-ray shell route withdrawn after referee correction",
+      "statement": "REFUTED ROUTE, retained as a draft warning. In A1 planar iid FPP let T_x contain all infinite geodesic rays fromx and q(z)=P(z in T_0). Every bigeodesic through0 yields two distinct shell vertices whose rays visit0, so P(H)<=one-half sum_{x in S_n}q(-x)<=4n max_{x in S_n}q(x). The all-ray density theorem arXiv:2208.11576 Theorem1.1 gives uniform q(z)->0, with A1's continuous law and finite second moment of the minimum of four weights. Trying to make the displayed shell sum vanish is impossible: every infinite ray from0 hits S_n, so its sum is at least1 and the maximum at least1/(8n). The valid incidence inequality does not make that contradictory premise a viable proof route. A genuinely two-ended/root-crossing statistic is required; no new decay estimate is obtained.",
+      "proof_text": null,
+      "assumptions": [
+        "A1 continuous iid law, finite second moment of minimum of four weights",
+        "T_x is the union of all infinite rays"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:20261010:w388:P0117:shell-route",
+        "url": "urn:owner-own-work:20261010:w388:P0117:shell-route",
+        "revision": "draft-review-20261010-v1",
+        "license": "owner-own-work (campaign derivation or attributed literature audit; concept only)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "shell-floor",
+      "namespace": "probability.fpp",
+      "logical_name": "all-ray-shell-incidence-positive-floor",
+      "kind": "concept",
+      "title": "Every all-ray geodesic tree has a positive shell floor",
+      "statement": "DRAFT correction originated by w389; designated w392 check pending. If T_0 is the union of infinite simple rays from0 and at least one such ray exists almost surely, then for S_n={||x||_infinity=n}, sum_{x in S_n}P(x in T_0)=E|T_0 intersect S_n|>=1 and max_{x in S_n}P(x in T_0)>=1/(8n). A ray leaves every finite box, so it supplies a shell vertex. A1 planar FPP has such rays by compactness of geodesic prefixes anchored at0. This obstructs vanishing one-sided all-ray incidence even if bigeodesics are absent; it says nothing about whether bigeodesics exist.",
+      "proof_text": null,
+      "assumptions": [
+        "At least one infinite simple ray from0 almost surely",
+        "All rays included in T_0",
+        "|S_n|=8n"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:20261010:w389:P0117:shell-floor",
+        "url": "urn:owner-own-work:20261010:w389:P0117:shell-floor",
+        "revision": "draft-review-20261010-v1",
+        "license": "owner-own-work (campaign derivation or attributed literature audit; concept only)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "witness-union",
+      "namespace": "probability.fpp",
+      "logical_name": "shrinking-witness-marginals-do-not-control-existence",
+      "kind": "concept",
+      "title": "Uniform marginal decay does not control a growing witness union",
+      "statement": "Independently checked by w389; draft concept only. For U uniform[0,1), the n^2 events A_(n,j)={floor(n^2 U)=j}, 0<=j<n^2, each have probability1/n^2 while their union has probability1 for every n; union events can thus be decreasing without their probabilities vanishing. This is a logical counterexample, not an iid FPP example. S_n has8n vertices and 32n^2-4n unordered endpoint pairs, so a union-bound route to root-crossing decay needs cardinality times the prescribed-pair bound to vanish. A uniform o(n^-2) pair bound suffices; merely tending to0 does not.",
+      "proof_text": null,
+      "assumptions": [
+        "Growing set of possible witnesses",
+        "No joint union bound supplied"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:20261010:w388:P0117:witness-union",
+        "url": "urn:owner-own-work:20261010:w388:P0117:witness-union",
+        "revision": "draft-review-20261010-v1",
+        "license": "owner-own-work (campaign derivation or attributed literature audit; concept only)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bounded-localization",
+      "namespace": "probability.fpp",
+      "logical_name": "positive-bounded-fpp-global-distance-localization",
+      "kind": "concept",
+      "title": "Deterministic localization preserves global distances",
+      "statement": "Independently checked by w389; draft concept only. If all weights on Z^2 satisfy0<a<=t_e<=b<infinity, then global distances between any u,v in B_n equal distances computed in B_R, R=n+ceil(4bn/a). A coordinate path costs at most4bn; every no-dearer competitor has at most floor(4bn/a) edges and stays in B_R. The finitely many such paths attain the infimum. Thus global root-crossing E_n uses only edges in B_R. Computing in B_n itself can misclassify a geodesic: an explicit positive-weight example has a B_1 minimizing path through0 costing20, but an outside ten-edge detour costs10.",
+      "proof_text": null,
+      "assumptions": [
+        "Deterministically bounded positive weights",
+        "Global distances",
+        "No iid or uniqueness requirement"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:20261010:w388:P0117:bounded-localization",
+        "url": "urn:owner-own-work:20261010:w388:P0117:bounded-localization",
+        "revision": "draft-review-20261010-v1",
+        "license": "owner-own-work (campaign derivation or attributed literature audit; concept only)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "posterior",
+      "namespace": "probability.fpp",
+      "logical_name": "output-conditioned-monotone-edge-raise-kernel",
+      "kind": "concept",
+      "title": "Posterior law for raises after output-measurable path selection",
+      "statement": "DRAFT narrow sublemma independently checked by w389; validating-coordinator review remains required. Take edgewise independent triples X_e~G,U_e uniform[0,1],Z_e~G conditioned on[b,infinity), independent across edges. Let a<b, p_a=G([0,a])>0,p_b=G([b,infinity))>0 and deterministic0<=delta_e<p_a on a finite deterministic set F. Put xi_e=1{X_e<=a,U_e<=delta_e/p_a}, Y_e=Z_e if xi_e=1 and X_e otherwise; outside F keep Y_e=X_e. Given the ENTIRE individual output Y, including exterior, the xi_e are independent Bernoulli with theta_e=1_[b,infinity)(Y_e)delta_e/(p_b+delta_e). Divide the joint raised-output density by the output density and factor independent coordinate kernels. A finite simple path prefix selected from Y alone is fixed by this conditioning and inherits that kernel. No other site's output or later marking success is conditioned on. This checks the September2026 manuscript's Lemma7.2 only, not its main theorem.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent triples and independent coordinates",
+        "Deterministic finite modified edge set",
+        "Output-only measurable selection",
+        "Distinct edges in a simple prefix"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:20261010:w388:P0117:posterior",
+        "url": "urn:owner-own-work:20261010:w388:P0117:posterior",
+        "revision": "draft-review-20261010-v1",
+        "license": "owner-own-work (campaign derivation or attributed literature audit; concept only)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "unit-counterexample",
+      "to_key": "source-state",
+      "kind": "semantic_association",
+      "rationale": "The counterexample explains why the target's atomless-law qualification matters."
+    },
+    {
+      "from_key": "root-crossing",
+      "to_key": "source-state",
+      "kind": "semantic_association",
+      "rationale": "The root-crossing event is an exact finite-path certificate for the target's two-ended existence event."
+    },
+    {
+      "from_key": "shell-floor",
+      "to_key": "shell-route",
+      "kind": "refutes",
+      "rationale": "The route proposes a vanishing sum over all rays; the count is at least1 on every shell, so that premise is impossible."
+    },
+    {
+      "from_key": "witness-union",
+      "to_key": "root-crossing",
+      "kind": "semantic_association",
+      "rationale": "Root crossing has a growing set of possible boundary witnesses; their uniform marginal convergence requires a union estimate."
+    },
+    {
+      "from_key": "bounded-localization",
+      "to_key": "root-crossing",
+      "kind": "specializes",
+      "rationale": "For bounded positive weights the same global crossing event is determined inside an explicitly enlarged finite box."
+    },
+    {
+      "from_key": "posterior",
+      "to_key": "source-state",
+      "kind": "cites",
+      "rationale": "The source-status concept records the September manuscript whose Lemma7.2 is the precise audited posterior law."
+    },
+    {
+      "from_key": "source-state",
+      "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+      "kind": "cites",
+      "rationale": "The existing card records a September7 attempted-unsolved status; this audit supplies the dated September24 claimed theorem and retains UNKNOWN correctness."
+    },
+    {
+      "from_key": "root-crossing",
+      "to_existing_logical": "math:probability.core:attempt-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+      "kind": "cites",
+      "rationale": "The prior attempt identifies lost anchoring; E_n explicitly anchors the compactness argument at0 without claiming a decay estimate."
+    }
+  ]
+}

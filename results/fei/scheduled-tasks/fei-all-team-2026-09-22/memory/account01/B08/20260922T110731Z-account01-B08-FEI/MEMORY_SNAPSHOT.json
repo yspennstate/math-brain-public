@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260922T110731Z-account01-B08-FEI",
+  "control_revision": "2026-09-22.3",
+  "starting_control_head": "5f4825fbe3bf3fc299f38e759406aec1e1a08ce0",
+  "latest_control_head_observed_before_snapshot": "a8c4245d290c17a7c7bedb661ebb5c7a05443c9f",
+  "state_revision": "FEI-20260922T1000Z-v1",
+  "correction_watermark": [
+    "FEI-DELTA-20260922-01-FIXED-POTENTIAL-AND-EXTREMALITY",
+    "FEI-DELTA-20260922-02-QUADRATIC-0337",
+    "FEI-DELTA-20260922-03-QUADRATIC-034",
+    "FEI-DELTA-20260922-04-SHAPED-WITNESS-REPAIR",
+    "FEI-DELTA-20260922-05-KL-HIERARCHY-TERM",
+    "FEI-DELTA-20260922-06-UNWEIGHTED-L2-NOGO",
+    "FEI-DELTA-20260922-07-RAW-U4-TERMINAL-NOGO",
+    "FEI-DELTA-20260922-08-BALANCED-SLICE-NOT-CLOSURE",
+    "FEI-DELTA-20260922-09-SAFE-DIRECTION-NOT-POTENTIAL-PROOF",
+    "FEI-DELTA-20260922-10-COPAIR-JOINT-CONSTRAINTS",
+    "FEI-DELTA-20260922-11-QUARTIC-WITNESS-REPAIR",
+    "FEI-DELTA-20260922-12-LATEST-SHAPED-FRONTIER",
+    "FEI-DELTA-20260922-13-LOWLEVEL-KL-PROJECTION-NOGO",
+    "FEI-DELTA-20260922-14-SAFE-CONE-SELECTOR-GAP"
+  ],
+  "pending_inbox_events_consumed": [],
+  "assignment_id": "FEI-20260922-account01-B08",
+  "assignment_title": "Rare-event weighted shift certificate",
+  "partner_result_consumed": {
+    "worker": "account02/B08",
+    "run_id": "B08-20260922T103745Z-0f440e",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a83d4009cc98aeb739af4f40b1c2cfa8be7269d0",
+    "path": "proofnet24/P03-fei/fleet-2026-09-22/account02/B08/B08-20260922T103745Z-0f440e/REPORT.md",
+    "applied_result": "single-event oriented-cancellation DV certificate with one-half leading sparse KL; generalized here to a one-test multilevel partition"
+  },
+  "current_claims": [
+    {
+      "id": "B08-MULTISHIFT-DV-CERT-v1",
+      "status": "PROVED_IN_SOURCE"
+    },
+    {
+      "id": "B08-SPARSE-OI-LOSS-v1",
+      "status": "PROVED_IN_SOURCE"
+    },
+    {
+      "id": "B08-HIERARCHICAL-MULTISHIFT-PARTITION-v1",
+      "status": "OPEN"
+    }
+  ],
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "41f45b8c2dc1c3387bfd842bf8b4bde787dd13f8",
+    "report_path": "proofnet24/P03-fei/fleet-2026-09-22/account01/B08/20260922T110731Z-account01-B08-FEI/REPORT.md",
+    "claims_path": "proofnet24/P03-fei/fleet-2026-09-22/account01/B08/20260922T110731Z-account01-B08-FEI/CLAIMS.json"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "3d83e7c5a88964a7e3a7406ffe0a96bcdaf72e09",
+    "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/handoffs/account01/B08/20260922T110731Z-account01-B08-FEI.md",
+    "recipient": "account03/B15"
+  },
+  "mathematical_delta": "A single multishift partition DV statistic is always <= K_occ; on the genuine sparse suspension an explicit level/shift choice has K_occ-certificate=(1/ln 2+o(1))I, upgrading the partner's one-half leading recovery to asymptotically full logarithmic recovery up to O(I).",
+  "next_implication": "B08-HIERARCHICAL-MULTISHIFT-PARTITION-v1: build a hierarchy-aware source-valid partition/shift family for arbitrary balanced Boolean sources that survives recursive-majority high scales and pays the Bellman deficit with one finite C without repeated KL credit.",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "repository_memory": "loaded",
+  "native_memory": "unverified",
+  "full_brain_connected": false
+}

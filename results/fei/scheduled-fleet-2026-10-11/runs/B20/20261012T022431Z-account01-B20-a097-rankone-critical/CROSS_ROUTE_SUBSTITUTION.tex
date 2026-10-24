@@ -1,0 +1,108 @@
+\section*{Critical-endpoint classification for rank-one selector overlap}
+
+Let $A=\{-1,1\}^t$ and $X=\{-1,1\}^m$, both with the uniform
+measure.  Suppose $F(a,x)=g_a(x)$ has balanced genuine Boolean branches and
+that the branch-by-nonconstant-frequency Fourier matrix has rank one.  The
+A014 rank-one overlap theorem gives genuine Boolean functions
+$\sigma:A\to\{-1,1\}$ and $g:X\to\{-1,1\}$ such that
+\[
+        F(a,x)=\sigma(a)g(x),
+        \qquad H(F)=H(\sigma)+H(g),
+        \qquad I(F)=I(\sigma)+I(g).
+\]
+The variables are physically disjoint.  Put $R(h)=H(h)/I(h)$ for every
+nonconstant $h$ and
+\[
+ w_\sigma=\frac{I(\sigma)}{I(\sigma)+I(g)},\qquad
+ w_g=\frac{I(g)}{I(\sigma)+I(g)}.
+\]
+
+Call $h$ $\eta$-descendant-critical if every nonconstant physical
+descendant $u$ satisfies $R(u)\le R(h)+\eta$.
+
+\paragraph{Theorem (exact cross-route transfer).}
+Assume that both factors are nonconstant.
+\begin{enumerate}
+\item If $F$ is descendant-critical ($\eta=0$), then
+\[
+ R(\sigma)=R(g)=R(F),
+\]
+and both $\sigma$ and $g$ are descendant-critical.
+\item Conversely, if $\sigma$ and $g$ are descendant-critical and have the
+same ratio, then $F$ is descendant-critical.
+\item More generally, if $F$ is $\eta$-descendant-critical, then
+\[
+ |R(\sigma)-R(g)|\le
+ \frac{\eta}{\min\{w_\sigma,w_g\}},
+\]
+and each physical descendant $u\preceq\sigma$ satisfies
+\[
+ R(u)\le R(\sigma)+\frac{\eta}{w_\sigma},
+\]
+with the symmetric estimate for descendants of $g$.
+\item No nontrivial rank-one selector product is a strict critical core (a
+function strictly dominating every proper nonconstant physical descendant).
+Consequently, a strict critical core in the A014 rank-one class has constant
+controller after irrelevant address variables are deleted.
+\end{enumerate}
+
+\emph{Proof.}
+Tensor additivity gives the exact weighted average
+\[
+ R(F)=w_\sigma R(\sigma)+w_g R(g).                 \tag{1}
+\]
+Fixing the $x$ block at any input produces $\pm\sigma$ as an actual
+physical descendant, and fixing the $a$ block produces $\pm g$.  If $F$ is
+critical, both factor ratios are at most $R(F)$; (1) forces equality.
+Any descendant $u\preceq\sigma$ is also a descendant of $F$ after fixing
+the $g$ block, so $R(u)\le R(F)=R(\sigma)$.  This proves (1).
+
+For the converse, every physical descendant of $F$ is a disjoint product
+$u(a')v(x')$, where $u\preceq\sigma$ and $v\preceq g$; either factor may be
+constant.  Its ratio is the influence-weighted average of the ratios of its
+nonconstant factors, hence at most their common root ratio.
+
+For the quantitative statement, A052's physical tensor-purity calculation
+applied after the A014 factorization gives
+\[
+ R(F)-\frac{w_g}{w_\sigma}\eta\le R(\sigma)\le R(F)+\eta
+\]
+and its symmetric counterpart.  Equivalently, if
+$R(\sigma)\ge R(g)$, then
+$R(\sigma)-R(F)=w_g(R(\sigma)-R(g))\le\eta$;
+the other ordering is symmetric.  This yields the displayed gap bound.  If
+$u\preceq\sigma$, then $u$ is a physical descendant of $F$, so
+\[
+ R(u)\le R(F)+\eta
+       \le R(\sigma)+\eta/w_\sigma.
+\]
+Finally, (1) implies that at least one factor has ratio at least $R(F)$.
+That factor is a proper physical descendant, contradicting strict
+criticality. \qed
+
+\paragraph{Explicit A014 family.}
+For $F_t(a,x)=h_t(a)\operatorname{Maj}_3(x)$, where $h_t$ is negative at
+one address only,
+\[
+ I(h_t)=t2^{1-t},\qquad R(\operatorname{Maj}_3)=\frac43,
+ \qquad R(h_t)\longrightarrow4.
+\]
+For $t\ge2$, $R(h_t)>4/3$, and any $\eta$ for which $F_t$ is
+$\eta$-descendant-critical must satisfy
+\[
+ \eta\ge
+ \frac{3/2}{t2^{1-t}+3/2}\left(R(h_t)-\frac43\right)
+ \longrightarrow\frac83.
+\]
+Thus the unbounded-read, fractional-congestion-one, spectral-rank-one family
+is not merely non-strict: asymptotically it stays a constant distance from
+descendant-criticality.
+
+\paragraph{Debt paid and remaining debt.}
+This substitution pays the complete critical-endpoint classification for
+the exact rank-one balanced-selector regime.  It does not bound rank at least
+two, distance from rank one, unbalanced branches, or prime critical sources.
+Full FEI remains open; the surviving structural target is a quantitative
+rank-$r$/near-rank-one decomposition with its interference paid, or a bound
+on the critical step ratio in the resulting prime remainder.
+

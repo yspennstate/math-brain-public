@@ -1,0 +1,2623 @@
+{
+  "status": "PASS exact literal-backbone Hessian verification",
+  "simple_graph_sweeps": [
+    {
+      "vertices": 3,
+      "simple_backbones": 8,
+      "complete_graph_forest_count": 7,
+      "all_weak_and_degree_sharpened_matrix_checks": "PASS"
+    },
+    {
+      "vertices": 4,
+      "simple_backbones": 64,
+      "complete_graph_forest_count": 38,
+      "all_weak_and_degree_sharpened_matrix_checks": "PASS"
+    },
+    {
+      "vertices": 5,
+      "simple_backbones": 1024,
+      "complete_graph_forest_count": 291,
+      "all_weak_and_degree_sharpened_matrix_checks": "PASS"
+    },
+    {
+      "vertices": 6,
+      "simple_backbones": 32768,
+      "complete_graph_forest_count": 2932,
+      "all_weak_and_degree_sharpened_matrix_checks": "PASS"
+    }
+  ],
+  "total_unweighted_simple_backbones": 33864,
+  "column_profiles": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      7,
+      2,
+      11
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      3
+    ]
+  ],
+  "weighted_conditioned_cases": [
+    {
+      "name": "empty backbone",
+      "vertices": 3,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted hidden Steiner star",
+      "vertices": 4,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        11,
+        6,
+        10,
+        15,
+        30
+      ],
+      "augmented_triangle_coefficients": [
+        72,
+        36,
+        32,
+        11,
+        27,
+        11,
+        11,
+        0
+      ],
+      "homogeneous_degree": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "parallel edges and loop",
+      "vertices": 4,
+      "backbone_edges": 6,
+      "port_partition_weights": [
+        9,
+        162,
+        117,
+        15,
+        2571
+      ],
+      "augmented_triangle_coefficients": [
+        2874,
+        141,
+        186,
+        9,
+        288,
+        9,
+        9,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "conditioning identifies two ports",
+      "vertices": 4,
+      "backbone_edges": 5,
+      "port_partition_weights": [
+        0,
+        18,
+        0,
+        0,
+        228
+      ],
+      "augmented_triangle_coefficients": [
+        246,
+        0,
+        18,
+        0,
+        18,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "conditioning identifies all ports",
+      "vertices": 5,
+      "backbone_edges": 5,
+      "port_partition_weights": [
+        0,
+        0,
+        0,
+        0,
+        570
+      ],
+      "augmented_triangle_coefficients": [
+        570,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 0",
+      "vertices": 6,
+      "backbone_edges": 9,
+      "port_partition_weights": [
+        2510,
+        13540,
+        5440,
+        8520,
+        96080
+      ],
+      "augmented_triangle_coefficients": [
+        126090,
+        16470,
+        24570,
+        2510,
+        21490,
+        2510,
+        2510,
+        0
+      ],
+      "homogeneous_degree": 10,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 1",
+      "vertices": 4,
+      "backbone_edges": 4,
+      "port_partition_weights": [
+        5,
+        38,
+        55,
+        0,
+        418
+      ],
+      "augmented_triangle_coefficients": [
+        516,
+        60,
+        43,
+        5,
+        98,
+        5,
+        5,
+        0
+      ],
+      "homogeneous_degree": 7,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 2",
+      "vertices": 7,
+      "backbone_edges": 8,
+      "port_partition_weights": [
+        5292,
+        14700,
+        0,
+        42336,
+        117600
+      ],
+      "augmented_triangle_coefficients": [
+        179928,
+        47628,
+        62328,
+        5292,
+        19992,
+        5292,
+        5292,
+        0
+      ],
+      "homogeneous_degree": 10,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 3",
+      "vertices": 6,
+      "backbone_edges": 9,
+      "port_partition_weights": [
+        612,
+        2232,
+        3672,
+        1224,
+        25200
+      ],
+      "augmented_triangle_coefficients": [
+        32940,
+        5508,
+        4068,
+        612,
+        6516,
+        612,
+        612,
+        0
+      ],
+      "homogeneous_degree": 11,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 4",
+      "vertices": 4,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        8,
+        40,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        48,
+        8,
+        48,
+        8,
+        48,
+        8,
+        8,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 5",
+      "vertices": 6,
+      "backbone_edges": 9,
+      "port_partition_weights": [
+        0,
+        900,
+        0,
+        0,
+        11160
+      ],
+      "augmented_triangle_coefficients": [
+        12060,
+        0,
+        900,
+        0,
+        900,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 6",
+      "vertices": 4,
+      "backbone_edges": 6,
+      "port_partition_weights": [
+        8,
+        104,
+        56,
+        32,
+        1368
+      ],
+      "augmented_triangle_coefficients": [
+        1568,
+        96,
+        144,
+        8,
+        168,
+        8,
+        8,
+        0
+      ],
+      "homogeneous_degree": 7,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 7",
+      "vertices": 3,
+      "backbone_edges": 1,
+      "port_partition_weights": [
+        1,
+        0,
+        7,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        8,
+        8,
+        1,
+        1,
+        8,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 8",
+      "vertices": 3,
+      "backbone_edges": 2,
+      "port_partition_weights": [
+        0,
+        0,
+        0,
+        0,
+        20
+      ],
+      "augmented_triangle_coefficients": [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 9",
+      "vertices": 5,
+      "backbone_edges": 10,
+      "port_partition_weights": [
+        30,
+        420,
+        330,
+        780,
+        24120
+      ],
+      "augmented_triangle_coefficients": [
+        25680,
+        1140,
+        1230,
+        30,
+        780,
+        30,
+        30,
+        0
+      ],
+      "homogeneous_degree": 10,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 10",
+      "vertices": 5,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 11",
+      "vertices": 4,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 12",
+      "vertices": 6,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        18,
+        90,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        108,
+        18,
+        108,
+        18,
+        108,
+        18,
+        18,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 13",
+      "vertices": 3,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 14",
+      "vertices": 5,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        15,
+        48,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        63,
+        15,
+        63,
+        15,
+        63,
+        15,
+        15,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 15",
+      "vertices": 4,
+      "backbone_edges": 2,
+      "port_partition_weights": [
+        1,
+        10,
+        7,
+        0,
+        70
+      ],
+      "augmented_triangle_coefficients": [
+        88,
+        8,
+        11,
+        1,
+        18,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 16",
+      "vertices": 7,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 17",
+      "vertices": 4,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 18",
+      "vertices": 3,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        1,
+        4,
+        0,
+        6,
+        24
+      ],
+      "augmented_triangle_coefficients": [
+        35,
+        7,
+        11,
+        1,
+        5,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 19",
+      "vertices": 5,
+      "backbone_edges": 4,
+      "port_partition_weights": [
+        44,
+        0,
+        0,
+        132,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        176,
+        176,
+        176,
+        44,
+        44,
+        44,
+        44,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 20",
+      "vertices": 4,
+      "backbone_edges": 1,
+      "port_partition_weights": [
+        1,
+        0,
+        11,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        12,
+        12,
+        1,
+        1,
+        12,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 21",
+      "vertices": 7,
+      "backbone_edges": 2,
+      "port_partition_weights": [
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 22",
+      "vertices": 4,
+      "backbone_edges": 2,
+      "port_partition_weights": [
+        0,
+        15,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        15,
+        0,
+        15,
+        0,
+        15,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 23",
+      "vertices": 7,
+      "backbone_edges": 9,
+      "port_partition_weights": [
+        0,
+        0,
+        540540,
+        0,
+        2702700
+      ],
+      "augmented_triangle_coefficients": [
+        3243240,
+        540540,
+        0,
+        0,
+        540540,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 24",
+      "vertices": 6,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        42,
+        0,
+        0,
+        126,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        168,
+        168,
+        168,
+        42,
+        42,
+        42,
+        42,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 25",
+      "vertices": 7,
+      "backbone_edges": 10,
+      "port_partition_weights": [
+        0,
+        0,
+        35750,
+        0,
+        358500
+      ],
+      "augmented_triangle_coefficients": [
+        394250,
+        35750,
+        0,
+        0,
+        35750,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 8,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 26",
+      "vertices": 3,
+      "backbone_edges": 1,
+      "port_partition_weights": [
+        1,
+        0,
+        10,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        11,
+        11,
+        1,
+        1,
+        11,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 27",
+      "vertices": 7,
+      "backbone_edges": 7,
+      "port_partition_weights": [
+        3120,
+        10656,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        13776,
+        3120,
+        13776,
+        3120,
+        13776,
+        3120,
+        3120,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 28",
+      "vertices": 7,
+      "backbone_edges": 11,
+      "port_partition_weights": [
+        8640,
+        17280,
+        43200,
+        60480,
+        509760
+      ],
+      "augmented_triangle_coefficients": [
+        639360,
+        112320,
+        86400,
+        8640,
+        69120,
+        8640,
+        8640,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 29",
+      "vertices": 6,
+      "backbone_edges": 9,
+      "port_partition_weights": [
+        0,
+        0,
+        8190,
+        0,
+        156240
+      ],
+      "augmented_triangle_coefficients": [
+        164430,
+        8190,
+        0,
+        0,
+        8190,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 10,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 30",
+      "vertices": 5,
+      "backbone_edges": 2,
+      "port_partition_weights": [
+        4,
+        36,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        40,
+        4,
+        40,
+        4,
+        40,
+        4,
+        4,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 31",
+      "vertices": 5,
+      "backbone_edges": 7,
+      "port_partition_weights": [
+        185,
+        280,
+        2370,
+        360,
+        8880
+      ],
+      "augmented_triangle_coefficients": [
+        12075,
+        2915,
+        825,
+        185,
+        2835,
+        185,
+        185,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 32",
+      "vertices": 5,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 33",
+      "vertices": 7,
+      "backbone_edges": 11,
+      "port_partition_weights": [
+        7176,
+        185640,
+        83904,
+        0,
+        2170560
+      ],
+      "augmented_triangle_coefficients": [
+        2447280,
+        91080,
+        192816,
+        7176,
+        276720,
+        7176,
+        7176,
+        0
+      ],
+      "homogeneous_degree": 12,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 34",
+      "vertices": 3,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        1,
+        0,
+        4,
+        2,
+        8
+      ],
+      "augmented_triangle_coefficients": [
+        15,
+        7,
+        3,
+        1,
+        5,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 35",
+      "vertices": 7,
+      "backbone_edges": 11,
+      "port_partition_weights": [
+        13440,
+        10368,
+        87552,
+        145632,
+        1132128
+      ],
+      "augmented_triangle_coefficients": [
+        1389120,
+        246624,
+        169440,
+        13440,
+        111360,
+        13440,
+        13440,
+        0
+      ],
+      "homogeneous_degree": 11,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 36",
+      "vertices": 5,
+      "backbone_edges": 1,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 37",
+      "vertices": 5,
+      "backbone_edges": 4,
+      "port_partition_weights": [
+        0,
+        30,
+        0,
+        0,
+        270
+      ],
+      "augmented_triangle_coefficients": [
+        300,
+        0,
+        30,
+        0,
+        30,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 38",
+      "vertices": 3,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 39",
+      "vertices": 7,
+      "backbone_edges": 6,
+      "port_partition_weights": [
+        15336,
+        56808,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        72144,
+        15336,
+        72144,
+        15336,
+        72144,
+        15336,
+        15336,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 40",
+      "vertices": 3,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        0,
+        5,
+        0,
+        0,
+        65
+      ],
+      "augmented_triangle_coefficients": [
+        70,
+        0,
+        5,
+        0,
+        5,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 41",
+      "vertices": 5,
+      "backbone_edges": 8,
+      "port_partition_weights": [
+        27,
+        189,
+        27,
+        540,
+        4509
+      ],
+      "augmented_triangle_coefficients": [
+        5292,
+        594,
+        756,
+        27,
+        243,
+        27,
+        27,
+        0
+      ],
+      "homogeneous_degree": 8,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 42",
+      "vertices": 7,
+      "backbone_edges": 11,
+      "port_partition_weights": [
+        7084,
+        35420,
+        113344,
+        0,
+        566720
+      ],
+      "augmented_triangle_coefficients": [
+        722568,
+        120428,
+        42504,
+        7084,
+        155848,
+        7084,
+        7084,
+        0
+      ],
+      "homogeneous_degree": 11,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 43",
+      "vertices": 7,
+      "backbone_edges": 12,
+      "port_partition_weights": [
+        403076,
+        3569088,
+        1526520,
+        373680,
+        18501648
+      ],
+      "augmented_triangle_coefficients": [
+        24374012,
+        2303276,
+        4345844,
+        403076,
+        5498684,
+        403076,
+        403076,
+        0
+      ],
+      "homogeneous_degree": 15,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 44",
+      "vertices": 3,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        0,
+        0,
+        0,
+        1,
+        14
+      ],
+      "augmented_triangle_coefficients": [
+        15,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 45",
+      "vertices": 4,
+      "backbone_edges": 6,
+      "port_partition_weights": [
+        18,
+        152,
+        152,
+        148,
+        3788
+      ],
+      "augmented_triangle_coefficients": [
+        4258,
+        318,
+        318,
+        18,
+        322,
+        18,
+        18,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 46",
+      "vertices": 7,
+      "backbone_edges": 12,
+      "port_partition_weights": [
+        0,
+        0,
+        9264,
+        0,
+        57048
+      ],
+      "augmented_triangle_coefficients": [
+        66312,
+        9264,
+        0,
+        0,
+        9264,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 11,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 47",
+      "vertices": 5,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        267,
+        0,
+        693,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        960,
+        960,
+        267,
+        267,
+        960,
+        267,
+        267,
+        0
+      ],
+      "homogeneous_degree": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 48",
+      "vertices": 7,
+      "backbone_edges": 2,
+      "port_partition_weights": [
+        45,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 49",
+      "vertices": 4,
+      "backbone_edges": 6,
+      "port_partition_weights": [
+        27,
+        202,
+        152,
+        233,
+        4210
+      ],
+      "augmented_triangle_coefficients": [
+        4824,
+        412,
+        462,
+        27,
+        381,
+        27,
+        27,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 50",
+      "vertices": 7,
+      "backbone_edges": 2,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 51",
+      "vertices": 3,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 52",
+      "vertices": 5,
+      "backbone_edges": 6,
+      "port_partition_weights": [
+        10,
+        0,
+        50,
+        130,
+        650
+      ],
+      "augmented_triangle_coefficients": [
+        840,
+        190,
+        140,
+        10,
+        60,
+        10,
+        10,
+        0
+      ],
+      "homogeneous_degree": 7,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 53",
+      "vertices": 7,
+      "backbone_edges": 10,
+      "port_partition_weights": [
+        7560,
+        186840,
+        15120,
+        52920,
+        1787400
+      ],
+      "augmented_triangle_coefficients": [
+        2049840,
+        75600,
+        247320,
+        7560,
+        209520,
+        7560,
+        7560,
+        0
+      ],
+      "homogeneous_degree": 11,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 54",
+      "vertices": 6,
+      "backbone_edges": 8,
+      "port_partition_weights": [
+        1638,
+        14742,
+        0,
+        6132,
+        55188
+      ],
+      "augmented_triangle_coefficients": [
+        77700,
+        7770,
+        22512,
+        1638,
+        16380,
+        1638,
+        1638,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 55",
+      "vertices": 6,
+      "backbone_edges": 8,
+      "port_partition_weights": [
+        0,
+        0,
+        0,
+        14720,
+        235520
+      ],
+      "augmented_triangle_coefficients": [
+        250240,
+        14720,
+        14720,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 56",
+      "vertices": 5,
+      "backbone_edges": 9,
+      "port_partition_weights": [
+        68,
+        852,
+        868,
+        392,
+        20812
+      ],
+      "augmented_triangle_coefficients": [
+        22992,
+        1328,
+        1312,
+        68,
+        1788,
+        68,
+        68,
+        0
+      ],
+      "homogeneous_degree": 11,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 57",
+      "vertices": 3,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 58",
+      "vertices": 4,
+      "backbone_edges": 2,
+      "port_partition_weights": [
+        12,
+        0,
+        0,
+        10,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        22,
+        22,
+        22,
+        12,
+        12,
+        12,
+        12,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 59",
+      "vertices": 3,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        1,
+        1,
+        10,
+        7,
+        87
+      ],
+      "augmented_triangle_coefficients": [
+        106,
+        18,
+        9,
+        1,
+        12,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 60",
+      "vertices": 3,
+      "backbone_edges": 1,
+      "port_partition_weights": [
+        1,
+        5,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        6,
+        1,
+        6,
+        1,
+        6,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 61",
+      "vertices": 6,
+      "backbone_edges": 12,
+      "port_partition_weights": [
+        1536,
+        1580,
+        30284,
+        8428,
+        206812
+      ],
+      "augmented_triangle_coefficients": [
+        248640,
+        40248,
+        11544,
+        1536,
+        33400,
+        1536,
+        1536,
+        0
+      ],
+      "homogeneous_degree": 12,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 62",
+      "vertices": 4,
+      "backbone_edges": 4,
+      "port_partition_weights": [
+        0,
+        0,
+        0,
+        28,
+        72
+      ],
+      "augmented_triangle_coefficients": [
+        100,
+        28,
+        28,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 63",
+      "vertices": 5,
+      "backbone_edges": 4,
+      "port_partition_weights": [
+        3,
+        39,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        42,
+        3,
+        42,
+        3,
+        42,
+        3,
+        3,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 64",
+      "vertices": 5,
+      "backbone_edges": 9,
+      "port_partition_weights": [
+        0,
+        0,
+        0,
+        1040,
+        6310
+      ],
+      "augmented_triangle_coefficients": [
+        7350,
+        1040,
+        1040,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 65",
+      "vertices": 5,
+      "backbone_edges": 10,
+      "port_partition_weights": [
+        0,
+        120,
+        0,
+        0,
+        1920
+      ],
+      "augmented_triangle_coefficients": [
+        2040,
+        0,
+        120,
+        0,
+        120,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 8,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 66",
+      "vertices": 3,
+      "backbone_edges": 1,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 67",
+      "vertices": 6,
+      "backbone_edges": 5,
+      "port_partition_weights": [
+        120,
+        480,
+        0,
+        240,
+        960
+      ],
+      "augmented_triangle_coefficients": [
+        1800,
+        360,
+        840,
+        120,
+        600,
+        120,
+        120,
+        0
+      ],
+      "homogeneous_degree": 7,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 68",
+      "vertices": 7,
+      "backbone_edges": 9,
+      "port_partition_weights": [
+        0,
+        0,
+        2002,
+        0,
+        6566
+      ],
+      "augmented_triangle_coefficients": [
+        8568,
+        2002,
+        0,
+        0,
+        2002,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 8,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 69",
+      "vertices": 6,
+      "backbone_edges": 11,
+      "port_partition_weights": [
+        7092,
+        48636,
+        5400,
+        18252,
+        178416
+      ],
+      "augmented_triangle_coefficients": [
+        257796,
+        30744,
+        73980,
+        7092,
+        61128,
+        7092,
+        7092,
+        0
+      ],
+      "homogeneous_degree": 11,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 70",
+      "vertices": 4,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 71",
+      "vertices": 7,
+      "backbone_edges": 2,
+      "port_partition_weights": [
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 72",
+      "vertices": 5,
+      "backbone_edges": 5,
+      "port_partition_weights": [
+        16,
+        0,
+        0,
+        160,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        176,
+        176,
+        176,
+        16,
+        16,
+        16,
+        16,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 73",
+      "vertices": 7,
+      "backbone_edges": 6,
+      "port_partition_weights": [
+        118,
+        590,
+        0,
+        80,
+        400
+      ],
+      "augmented_triangle_coefficients": [
+        1188,
+        198,
+        788,
+        118,
+        708,
+        118,
+        118,
+        0
+      ],
+      "homogeneous_degree": 7,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 74",
+      "vertices": 5,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        49,
+        49,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        98,
+        49,
+        98,
+        49,
+        98,
+        49,
+        49,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 75",
+      "vertices": 3,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        1,
+        11,
+        0,
+        2,
+        22
+      ],
+      "augmented_triangle_coefficients": [
+        36,
+        3,
+        14,
+        1,
+        12,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 76",
+      "vertices": 5,
+      "backbone_edges": 10,
+      "port_partition_weights": [
+        0,
+        0,
+        0,
+        6275,
+        126775
+      ],
+      "augmented_triangle_coefficients": [
+        133050,
+        6275,
+        6275,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 12,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 77",
+      "vertices": 4,
+      "backbone_edges": 6,
+      "port_partition_weights": [
+        13,
+        13,
+        61,
+        104,
+        653
+      ],
+      "augmented_triangle_coefficients": [
+        844,
+        178,
+        130,
+        13,
+        87,
+        13,
+        13,
+        0
+      ],
+      "homogeneous_degree": 8,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 78",
+      "vertices": 5,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        4,
+        0,
+        24,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        28,
+        28,
+        4,
+        4,
+        28,
+        4,
+        4,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 79",
+      "vertices": 3,
+      "backbone_edges": 1,
+      "port_partition_weights": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 80",
+      "vertices": 3,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        1,
+        9,
+        0,
+        8,
+        72
+      ],
+      "augmented_triangle_coefficients": [
+        90,
+        9,
+        18,
+        1,
+        10,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 81",
+      "vertices": 4,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 82",
+      "vertices": 4,
+      "backbone_edges": 2,
+      "port_partition_weights": [
+        7,
+        0,
+        28,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        35,
+        35,
+        7,
+        7,
+        35,
+        7,
+        7,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 83",
+      "vertices": 6,
+      "backbone_edges": 9,
+      "port_partition_weights": [
+        3870,
+        14364,
+        450,
+        35010,
+        136062
+      ],
+      "augmented_triangle_coefficients": [
+        189756,
+        39330,
+        53244,
+        3870,
+        18684,
+        3870,
+        3870,
+        0
+      ],
+      "homogeneous_degree": 11,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 84",
+      "vertices": 3,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 85",
+      "vertices": 6,
+      "backbone_edges": 1,
+      "port_partition_weights": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 86",
+      "vertices": 5,
+      "backbone_edges": 1,
+      "port_partition_weights": [
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 87",
+      "vertices": 7,
+      "backbone_edges": 8,
+      "port_partition_weights": [
+        0,
+        0,
+        217920,
+        0,
+        826200
+      ],
+      "augmented_triangle_coefficients": [
+        1044120,
+        217920,
+        0,
+        0,
+        217920,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 88",
+      "vertices": 5,
+      "backbone_edges": 5,
+      "port_partition_weights": [
+        0,
+        0,
+        0,
+        36,
+        36
+      ],
+      "augmented_triangle_coefficients": [
+        72,
+        36,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 89",
+      "vertices": 3,
+      "backbone_edges": 2,
+      "port_partition_weights": [
+        1,
+        0,
+        8,
+        1,
+        8
+      ],
+      "augmented_triangle_coefficients": [
+        18,
+        10,
+        2,
+        1,
+        9,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 90",
+      "vertices": 3,
+      "backbone_edges": 0,
+      "port_partition_weights": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 91",
+      "vertices": 3,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        1,
+        11,
+        8,
+        0,
+        88
+      ],
+      "augmented_triangle_coefficients": [
+        108,
+        9,
+        12,
+        1,
+        20,
+        1,
+        1,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 92",
+      "vertices": 6,
+      "backbone_edges": 1,
+      "port_partition_weights": [
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 93",
+      "vertices": 4,
+      "backbone_edges": 4,
+      "port_partition_weights": [
+        9,
+        16,
+        0,
+        72,
+        128
+      ],
+      "augmented_triangle_coefficients": [
+        225,
+        81,
+        97,
+        9,
+        25,
+        9,
+        9,
+        0
+      ],
+      "homogeneous_degree": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 94",
+      "vertices": 6,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        110,
+        1100,
+        0,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        1210,
+        110,
+        1210,
+        110,
+        1210,
+        110,
+        110,
+        0
+      ],
+      "homogeneous_degree": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 95",
+      "vertices": 4,
+      "backbone_edges": 5,
+      "port_partition_weights": [
+        24,
+        56,
+        56,
+        280,
+        1456
+      ],
+      "augmented_triangle_coefficients": [
+        1872,
+        360,
+        360,
+        24,
+        136,
+        24,
+        24,
+        0
+      ],
+      "homogeneous_degree": 7,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 96",
+      "vertices": 6,
+      "backbone_edges": 8,
+      "port_partition_weights": [
+        2680,
+        13400,
+        0,
+        12600,
+        63000
+      ],
+      "augmented_triangle_coefficients": [
+        91680,
+        15280,
+        28680,
+        2680,
+        16080,
+        2680,
+        2680,
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 97",
+      "vertices": 7,
+      "backbone_edges": 6,
+      "port_partition_weights": [
+        0,
+        0,
+        2160,
+        0,
+        0
+      ],
+      "augmented_triangle_coefficients": [
+        2160,
+        2160,
+        0,
+        0,
+        2160,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 4,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 98",
+      "vertices": 6,
+      "backbone_edges": 11,
+      "port_partition_weights": [
+        480,
+        10912,
+        32,
+        896,
+        21184
+      ],
+      "augmented_triangle_coefficients": [
+        33504,
+        1408,
+        12288,
+        480,
+        11424,
+        480,
+        480,
+        0
+      ],
+      "homogeneous_degree": 12,
+      "status": "PASS"
+    },
+    {
+      "name": "weighted conditioned random multigraph 99",
+      "vertices": 3,
+      "backbone_edges": 3,
+      "port_partition_weights": [
+        0,
+        6,
+        0,
+        0,
+        132
+      ],
+      "augmented_triangle_coefficients": [
+        138,
+        0,
+        6,
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "homogeneous_degree": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "rational fields",
+      "vertices": 5,
+      "backbone_edges": 6,
+      "port_partition_weights": [
+        "1968415/323323",
+        "4377335/969969",
+        "21390/29393",
+        "35650/46189",
+        "1290530/969969"
+      ],
+      "augmented_triangle_coefficients": [
+        "169190/12597",
+        "350465/46189",
+        "1575890/138567",
+        "1968415/323323",
+        "998950/88179",
+        "1968415/323323",
+        "1968415/323323",
+        0
+      ],
+      "homogeneous_degree": 9,
+      "status": "PASS"
+    }
+  ],
+  "formal_row_obstruction": {
+    "row": [
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "F": 2,
+    "B": 3,
+    "M": 3,
+    "J": 1,
+    "cone_gap": -3,
+    "matrix_all_ones_quadratic_form": -3
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "account": "account04",
+  "slot": "B12",
+  "run_id": "20260923T051424Z-account04-B12-spectral-defect-hostile-tail-r2",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "PROVED_SUPPORTING_STABILITY_THEOREM_FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit": "c6450eeb9b45d5505db5ecee471d04d7b336fa3f",
+  "math_source_commit": "5704e7da5b6134fc8e3bdde6caedc7358a666f65",
+  "partner": {
+    "account": "account01/B12",
+    "commit": "8a6269fae9183252b85ba2ee787aedd905deef2a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260923T045406Z-account01-B12-QFORM-r25/REPORT.md",
+    "applied": "finite physical-core endpoint at report equation (4.7)"
+  },
+  "result": {
+    "commit": "f319b51a1b43b4904c8784348f0a3725954bb7e7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260923T051424Z-account04-B12-spectral-defect-hostile-tail-r2/REPORT.md",
+    "claim": "If a baseline physical core has at most r uncontrolled sign directions and an arbitrary addition has only k uncharged hostile modes plus residual hostile eigenvalue beta_(k+1), then L=kappa-delta-beta_(k+1)>0 yields an actual (r+k+3)-coordinate final core with three eigenvalues >=L and density cap 2 sqrt(6 pi (r+k+3))/L."
+  },
+  "concrete_bound": "r=k=1,kappa=2,delta<=1/2,beta_2<=1/2 gives ||p_Q||inf<=2sqrt(30pi)<19.417",
+  "unresolved": "The bare s3(A)>=1 hypothesis does not yet force bounded r+k and positive L on a physical core; diffuse/high-hostile-tail branch remains.",
+  "continuity": "separate; not proved here",
+  "correction_compliance": [
+    "no post-rotation independence",
+    "no arbitrary-joint coarea",
+    "no worst-fiber cap",
+    "operator norm only used deterministically",
+    "no universal good minor"
+  ]
+}

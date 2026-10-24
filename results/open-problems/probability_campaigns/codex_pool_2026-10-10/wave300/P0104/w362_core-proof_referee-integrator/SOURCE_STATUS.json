@@ -1,0 +1,118 @@
+{
+  "problem_id": "P0104",
+  "checked_on": "2026-10-10",
+  "exact_intake": {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 175,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "subdiffusive_and_kpz_passage-time_fluctuation_exponents",
+      "historical_status": "source_says_open",
+      "locator": "Questions13 and15, PDF pp.34 and40; Section3",
+      "problem_id": "P0104",
+      "recorded_at": "2026-09-06T19:30:23Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "fpp_survey_2015",
+      "source_statement_date": "2016-09-26",
+      "statement": "Under suitable nondegenerate iid passage-time assumptions, prove a fluctuation exponent strictly below1/2, identify the planar exponent as1/3, and establish a positive exponent in a suitable dimension.",
+      "statement_caveat": "These closely related exponent-range targets are grouped. Different definitions using variances or stronger concentration must be specified before claiming equivalence.",
+      "title": "Subdiffusive and KPZ passage-time fluctuation exponents",
+      "verification": "primary_statement_checked"
+    }
+  },
+  "original_attempt": {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 106,
+    "record": {
+      "attempt_id": "P0104-A001",
+      "depth": "first_pass",
+      "full_problem_solved": false,
+      "independent_check": "The logarithm calculation is exact in the limit; the example has additive variances. It is not asserted to be FPP.",
+      "independent_review": "none",
+      "method": "Subdiffusive and KPZ passage-time fluctuation exponents structural argument",
+      "novelty": "not_claimed",
+      "obstruction": "Known sublinear-variance estimates leave a polynomial-exponent gap. An additional power saving, and a matching lower bound for identification, are required.",
+      "problem_id": "P0104",
+      "recorded_at": "2026-09-06T19:30:23Z",
+      "result": "A variance upper bound of order n/log n does not establish an exponent below1/2. Indeed log(n/log n)/(2log n) tends to1/2. Sums of floor(n/log n) independent mean-zero variance-one variables realize that variance order in an elementary model.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  "primary_source": {
+    "title": "50 years of first passage percolation",
+    "authors": [
+      "Antonio Auffinger",
+      "Michael Damron",
+      "Jack Hanson"
+    ],
+    "url": "https://arxiv.org/pdf/1511.03262v2",
+    "arxiv_revision_date": "2016-09-23",
+    "intake_source_statement_date": "2016-09-26",
+    "source_id": "fpp_survey_2015",
+    "verified_questions": [
+      13,
+      15
+    ],
+    "verified_locator": "Questions 13 and 15: one-based PDF page 37, section 3.1; variance convention equation (3.1): PDF pages 34-35",
+    "saved_text_locations": {
+      "question_13": [
+        1772,
+        1773
+      ],
+      "question_15": [
+        1777
+      ]
+    },
+    "short_source_quotes": [
+      "under suitable conditions on F",
+      "If d = 2, show that χ = 1/3.",
+      "For suitable d, show that χ > 0."
+    ],
+    "complete_scope_in_own_words": "For nondegenerate iid nonnegative edge weights on nearest-neighbor Z^d, find suitable distributional conditions and a precise fluctuation-exponent definition under which chi<1/2 for d>=2; establish chi=1/3 in d=2; establish chi>0 in a suitable dimension. The original source does not give a complete universal hypothesis package and discusses multiple meanings of variance scaling.",
+    "locator_correction": {
+      "old": "Questions13 and15, PDF pp.34 and40; Section3",
+      "new": "Questions 13/15 are together on PDF page 37 in the checked 160-page v2, not identified by the intake's page 34/40 pointer."
+    },
+    "hash_receipt": "SOURCE_HASH_RECEIPT.json",
+    "hash_check_is_mathematical_proof": false
+  },
+  "restricted_attempt": {
+    "law": "iid Uniform[1,2]",
+    "graph": "undirected nearest-neighbor Z^2",
+    "endpoints": [
+      "(0,0)",
+      "(n,0)"
+    ],
+    "n": "positive integer",
+    "goal": "Var(T_n)=n^(2/3+o(1))",
+    "exponent_definition": "lim log Var(T_n)/(2 log n)",
+    "full_parent_generality": false
+  },
+  "recent_primary_literature": {
+    "url": "https://arxiv.org/html/2604.01214v1",
+    "date": "2026-04-01",
+    "locator": "Theorem 1; sections 1.1 and 1.3",
+    "scope_checked": "Bounded positive smooth isotropic Riemannian field built from a nonnegative compactly supported radial kernel and Gaussian white noise or a Poisson process, with a monotone smooth transform; the published polynomial variance bound is for this specified continuum model.",
+    "lattice_transfer": "Not proved by this paper; its section 1.3 discusses a possible extension with an additional uniform-curvature assumption.",
+    "paper_proof_independently_audited": false
+  },
+  "owner_solved_retired_check": {
+    "original_attempt_full_problem_solved": false,
+    "ranking_status": "attempted_un on 2026-09-07",
+    "H_I_and_lean_ID_probe": "No P0104 proof row found in the named H/I attempt paths or lean directory; ranking annotation is historical only.",
+    "prior_FPP_store_evidence": [
+      "claim_f2576eacbf43455993d206cbe36d536a",
+      "claim_925a5f66e641446fa12df62c9b4b5b34",
+      "claim_8155eb9223844b2b91e0bc3b4ae43a49"
+    ],
+    "interpretation": "Checked campaign cards separate the proved abstract resampling engine from an unproved variance-ratio wall and explicitly leave chi=1/3 unmoved. This is a targeted check, not an exhaustive proof of current openness or retirement status."
+  },
+  "current_openness": "UNKNOWN",
+  "parent_solved": false,
+  "novelty_claim": false,
+  "next": "Audit the actual quantitative coupled-threshold estimate; source verification and the exact identity are finished, and the geometric crossover remains unproved."
+}

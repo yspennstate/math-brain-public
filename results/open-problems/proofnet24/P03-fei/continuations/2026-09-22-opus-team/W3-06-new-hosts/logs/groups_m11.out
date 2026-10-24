@@ -1,0 +1,11 @@
+AGL(1,11): m=11 |G|=110 pi=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) orbits=30 pairs=15 forced holes=0 [exhaustive] best R = 5.1661655395 (98.3s)
+C11:C5: m=11 |G|=55 pi=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) orbits=44 pairs=22 forced holes=0 [anneal 6x40000] best R = 5.1661655395 (3.2s)
+C11:C5: m=11 |G|=55 pi=(0, 2, 4, 6, 8, 10, 1, 3, 5, 7, 9) orbits=44 pairs=22 forced holes=0 [anneal 6x40000] best R = 5.1661655395 (2.6s)
+Traceback (most recent call last):
+  File "~\mop-fei-opus\proofnet24\P03-fei\continuations\2026-09-22-opus-team\W3-06-new-hosts\code\run_groups.py", line 128, in <module>
+    run(name, G, m, pi, topk=5, log=logf, anneal_iters=40000, restarts=6)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\mop-fei-opus\proofnet24\P03-fei\continuations\2026-09-22-opus-team\W3-06-new-hosts\code\symsearch.py", line 165, in run
+    assert npairs <= 62
+           ^^^^^^^^^^^^
+AssertionError

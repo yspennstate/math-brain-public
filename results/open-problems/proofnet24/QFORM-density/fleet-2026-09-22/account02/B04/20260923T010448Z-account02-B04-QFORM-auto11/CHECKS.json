@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T010448Z-account02-B04-QFORM-auto11",
+  "family": "m=2^k>=256, N=m-2, delta=N^(-1/2), M=H_m/sqrt(m) diag(1,1,delta^N) H_m/sqrt(m)^T, A=[[0,M],[M,0]]",
+  "exact": {
+    "spectrum_large": "+1,+1,-1,-1",
+    "volume_row_marginal": "3/m",
+    "Z_N": "1+(N-1)/N+(N-1)(N-2)/(6N^2)",
+    "max_cross_entry_cN": "N^(-1/2)+2(1-N^(-1/2))/(N+2)",
+    "gamma": "53/100",
+    "theta_N": "2/(1+gamma^2)+1/(gamma^2+1/N)",
+    "D_N": "(1+gamma^(-2))^2(1+1/(N gamma^2))^N"
+  },
+  "N_254": {
+    "Z": 2.160766321532643,
+    "audited_e5_volume_bound": 8.70022580293425,
+    "sharp_volume_bound_pending_review": 7.172123670595899,
+    "ridge_theta": 5.072181891597136,
+    "ridge_max_diag": 0.019813210514051313,
+    "ridge_D": 713.303940649929,
+    "ridge_direct_value": 3.1331740652036646,
+    "ridge_uniform_monotone_bound": 3.1527310243363744,
+    "max_cross_entry": 0.07006788066605167,
+    "partner_best_pair_half_riesz_certificate": 238.43229497133706
+  },
+  "spot_checks": [
+    {"N":510,"audited_volume":8.698240703149576,"sharp_volume":7.170487232476173,"ridge":3.129345113314239,"pair_certificate":288.0318563684634},
+    {"N":1022,"audited_volume":8.697254510448403,"sharp_volume":7.1696742540344545,"ridge":3.1274555165216658,"pair_certificate":346.5252319482409},
+    {"N":2046,"audited_volume":8.696762991558847,"sharp_volume":7.169269065210374,"ridge":3.1265168867655713,"pair_certificate":415.59280004475767}
+  ],
+  "notes": "Finite arithmetic checks only; theorem proofs and source statuses are in REPORT.md. Elapsed execution is not pure thinking."
+}

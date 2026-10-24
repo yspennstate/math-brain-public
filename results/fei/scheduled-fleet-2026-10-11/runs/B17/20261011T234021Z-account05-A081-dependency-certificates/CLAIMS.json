@@ -1,0 +1,369 @@
+[
+  {
+    "claim_id": "B17-JS-PACKET-SCALAR",
+    "version": 1,
+    "exact_statement": "For every z in [-1,1], ((1+z)ln(1+z)+(1-z)ln(1-z))/2 <= 1-sqrt(1-z^2). Consequently, for every Boolean f and coordinate i, 0 <= JS_i <= (2/ln2) sum over T not containing i of min(fhat(T)^2, fhat(T+i)^2) <= (2/ln2) min(I_i, 1-I_i).",
+    "hypotheses": [
+      "f: {0,1}^n -> {-1,1}, uniform measure",
+      "S random with P(S)=fhat(S)^2",
+      "entropies in bits, 0 log 0 = 0",
+      "I_i = sum over S containing i of fhat(S)^2",
+      "B_i = H(S_i | S_-i)",
+      "Delta_i H = H(f) - (H(f|x_i=0)+H(f|x_i=1))/2, JS_i = Delta_i H - B_i"
+    ],
+    "statement_sha256": "c9d247c5f7e65a53b9843006b192db674a51bc6dc125aa9995476bd95dc4c3c6",
+    "contributors": [
+      "claude-B17-lead"
+    ],
+    "proof_source": {
+      "original": "StructuredOutput of run 20261011T224300Z-claude-B17-erasure-census-affine-bridge (report text; REPORT.md save refused by the harness), derivation sections (1)-(3): coefficientwise comparison of even power series; a_k=C(2k,k)/4^k satisfies a_{k+1}=a_k(2k+1)/(2k+2) and a_k>=1/(2k); packet identity s(1-sqrt(1-z^2)) = 2min(u^2,v^2).",
+      "reconstruction": {
+        "run_id": "20261011T234021Z-account05-A081-dependency-certificates",
+        "path": "REPORT.md",
+        "exact_certificate": null
+      }
+    },
+    "proof_dependencies": [
+      {
+        "claim_key": "BASE-PACKET-RESTRICTION-IDENTITIES@1",
+        "statement_sha256": "5224dba7a3211ab426e1da35fca3f5de3100fabc25988dec71bb6f3b12d84217",
+        "hypothesis_instantiation": "Use u=fhat(T), v=fhat(T+i), s=u^2+v^2 and z=2uv/s. Sum finite nonzero packets; scalar bound extends by evenness and endpoint continuity.",
+        "unit_conversion": null
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A081",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent derivative/induction/packet reconstruction",
+        "source": {
+          "run_id": "20261011T234021Z-account05-A081-dependency-certificates",
+          "path": "REPORT.md"
+        },
+        "date_utc": "2026-10-11T23:56:56.132090+00:00",
+        "repair_supplied": false
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "C005",
+      "C018",
+      "C019",
+      "A026-AFFINE4-GOOD-COORDINATE",
+      "A082-AFFINE4-ERASURE-BRIDGE",
+      "A083 formalization"
+    ]
+  },
+  {
+    "claim_id": "B17-KB-TWO-SIDED",
+    "version": 1,
+    "exact_statement": "Let K_B(n) = max over nonconstant Boolean f with at most n relevant coordinates of min over relevant i of B_i/I_i, and C(n) = max H/I over the same set. Then K_B(n) <= C(n) <= K_B(n) + 2/ln2 for every n >= 1. With K_B = sup_n K_B(n) and C_FEI = sup_n C(n): C_FEI - 2/ln2 <= K_B <= C_FEI, so FEI holds iff K_B is finite.",
+    "hypotheses": [
+      "f: {0,1}^n -> {-1,1}, uniform measure",
+      "S random with P(S)=fhat(S)^2",
+      "entropies in bits, 0 log 0 = 0",
+      "I_i = sum over S containing i of fhat(S)^2",
+      "B_i = H(S_i | S_-i)",
+      "Delta_i H = H(f) - (H(f|x_i=0)+H(f|x_i=1))/2, JS_i = Delta_i H - B_i"
+    ],
+    "statement_sha256": "49f4bdbb2c280d8179f2387bbabbd565c3b9933fdc0fe90469ee6c1fe31442b2",
+    "contributors": [
+      "claude-B17-lead"
+    ],
+    "proof_source": {
+      "original": "StructuredOutput of run 20261011T224300Z-claude-B17-erasure-census-affine-bridge (report text; REPORT.md save refused by the harness), derivation sections (4)-(5): induction on relevant coordinates via Delta_i H = B_i + JS_i and I(f|0)+I(f|1) = 2(I-I_i); converse from sum_i B_i <= H.",
+      "reconstruction": {
+        "run_id": "20261011T234021Z-account05-A081-dependency-certificates",
+        "path": "REPORT.md",
+        "exact_certificate": null
+      }
+    },
+    "proof_dependencies": [
+      {
+        "claim_key": "B17-JS-PACKET-SCALAR@1",
+        "statement_sha256": "c9d247c5f7e65a53b9843006b192db674a51bc6dc125aa9995476bd95dc4c3c6",
+        "hypothesis_instantiation": "Choose a relevant i minimizing B_i/I_i; constants K_sel(n) nondecreasing in n. Each child has at most n-1 relevant coordinates.",
+        "unit_conversion": null
+      },
+      {
+        "claim_key": "BASE-PACKET-RESTRICTION-IDENTITIES@1",
+        "statement_sha256": "5224dba7a3211ab426e1da35fca3f5de3100fabc25988dec71bb6f3b12d84217",
+        "hypothesis_instantiation": "Sum_i B_i<=H gives min_i B_i/I_i<=H/I by weighting by I_i/I. Influence decomposition pays each node once.",
+        "unit_conversion": null
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A081",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent derivative/induction/packet reconstruction",
+        "source": {
+          "run_id": "20261011T234021Z-account05-A081-dependency-certificates",
+          "path": "REPORT.md"
+        },
+        "date_utc": "2026-10-11T23:56:56.132090+00:00",
+        "repair_supplied": false
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Application, not lemma gap: universal finiteness of K_sel remains open.",
+    "next_consumers": [
+      "C018",
+      "C019",
+      "G-R-SELECT",
+      "B15",
+      "A081 graph"
+    ]
+  },
+  {
+    "claim_id": "B17-ZERO-ERASURE-TRANSPORT",
+    "version": 1,
+    "exact_statement": "For Boolean f and coordinate i, B_i(f)=0 iff fhat(T)fhat(T+i)=0 for every T not containing i. Then both restrictions f|x_i=b have squared spectrum equal to the image of fhat^2 under S -> S minus {i}, so H(f|x_i=b)=H(f), JS_i=0 and I(f|x_i=b)=I(f)-I_i(f). For n >= 2, every maximizer of H/I over nonconstant Boolean functions with at most n relevant coordinates has B_i > 0 at every relevant coordinate.",
+    "hypotheses": [
+      "f: {0,1}^n -> {-1,1}, uniform measure",
+      "S random with P(S)=fhat(S)^2",
+      "entropies in bits, 0 log 0 = 0",
+      "I_i = sum over S containing i of fhat(S)^2",
+      "B_i = H(S_i | S_-i)",
+      "Delta_i H = H(f) - (H(f|x_i=0)+H(f|x_i=1))/2, JS_i = Delta_i H - B_i"
+    ],
+    "statement_sha256": "27f45d107abbfbde5b482edc5938f0bc9ec5484c404273f60730e3c316848123",
+    "contributors": [
+      "claude-B17-lead"
+    ],
+    "proof_source": {
+      "original": "StructuredOutput of run 20261011T224300Z-claude-B17-erasure-census-affine-bridge (report text; REPORT.md save refused by the harness), derivation sections (6).",
+      "reconstruction": {
+        "run_id": "20261011T234021Z-account05-A081-dependency-certificates",
+        "path": "REPORT.md",
+        "exact_certificate": null
+      }
+    },
+    "proof_dependencies": [
+      {
+        "claim_key": "BASE-PACKET-RESTRICTION-IDENTITIES@1",
+        "statement_sha256": "5224dba7a3211ab426e1da35fca3f5de3100fabc25988dec71bb6f3b12d84217",
+        "hypothesis_instantiation": "Each conditional packet entropy is nonnegative and vanishes iff u*v=0. Children u+v,u-v have the same squared coefficients u^2+v^2; projection is injective on support.",
+        "unit_conversion": null
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A081",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent derivative/induction/packet reconstruction",
+        "source": {
+          "run_id": "20261011T234021Z-account05-A081-dependency-certificates",
+          "path": "REPORT.md"
+        },
+        "date_utc": "2026-10-11T23:56:56.132090+00:00",
+        "repair_supplied": false
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A082-AFFINE4-ERASURE-BRIDGE (generalizes its free restriction step)",
+      "B15",
+      "B06"
+    ]
+  },
+  {
+    "claim_id": "B17-KB5-CUTOFF",
+    "version": 1,
+    "exact_statement": "Let g:{0,1}^5->{-1,1}, g(x)=-1 iff sum_j x_j 2^j is in {5,12,13} (equivalently x1=0, x2=1, x4=0 and (x0 or x3)). All five coordinates are relevant; for i in {1,2,4}: I_i=3/16 and B_i/I_i = 16/3-(3/8)log2 3-(169/24)log2 13+(89/24)log2 89 (=2.6958875...); for i in {0,3}: I_i=1/16 and B_i/I_i = 16-(63/8)log2 3+15 log2 5-(169/8)log2 13+(85/8)log2 17 (=3.6048453...). Hence min_i B_i/I_i(g) > 107/40 > 4+(5/2)log2 5-(9/2)log2 3, and K_B(5) > K_B(4).",
+    "hypotheses": [
+      "f: {0,1}^n -> {-1,1}, uniform measure",
+      "S random with P(S)=fhat(S)^2",
+      "entropies in bits, 0 log 0 = 0",
+      "I_i = sum over S containing i of fhat(S)^2",
+      "B_i = H(S_i | S_-i)",
+      "Delta_i H = H(f) - (H(f|x_i=0)+H(f|x_i=1))/2, JS_i = Delta_i H - B_i"
+    ],
+    "statement_sha256": "5c663114fa7a8e4f1292101b89294b2ebce902c7eeee7f767bd0494ca7145992",
+    "contributors": [
+      "claude-B17-lead"
+    ],
+    "proof_source": {
+      "original": "20261011T224300Z-claude-B17-erasure-census-affine-bridge/code/search_n56.py certify(), out/search_n56.json; exact forms in out/family_scan.json; Walsh vector in the report, section (8)",
+      "reconstruction": {
+        "run_id": "20261011T234021Z-account05-A081-dependency-certificates",
+        "path": "REPORT.md",
+        "exact_certificate": "out/FIVEBIT_EXACT.json"
+      }
+    },
+    "proof_dependencies": [
+      {
+        "claim_key": "A082-FINITE-TRUE-ERASURE@1",
+        "statement_sha256": "b7c26774325a8310ff52af2d16afa9f442d576f2af2f9cd8d0c9335d9242ee6e",
+        "hypothesis_instantiation": "Only the four-variable selectable constant is used; full B17 compound census maxima are not prerequisites.",
+        "unit_conversion": null
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A081",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Integer Walsh, physical influences and 48-term Fraction log certificates; A082 finite value supplied by its recorded independent B18 review.",
+        "source": {
+          "run_id": "20261011T234021Z-account05-A081-dependency-certificates",
+          "path": "REPORT.md"
+        },
+        "date_utc": "2026-10-11T23:56:56.132090+00:00",
+        "repair_supplied": false
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      "the statement K_B = K_B(4), i.e. any extension of the four-coordinate erasure constant to five relevant coordinates; the A082 claims are scoped and are not refuted"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A082 exact K_B(5)",
+      "G-R-SELECT",
+      "B15",
+      "A081 graph"
+    ]
+  },
+  {
+    "claim_id": "B09-BIASED-BLOCK-UNCERTAINTY",
+    "version": 1,
+    "exact_statement": "For every Boolean sign under an interior product bias p and a physical block A, the exact entropy decrement L_A=M_A+J_A obeys 0<=J_A<=M_A+Delta_A, where M_A=H(S_A|S_B), J_A=I(Z;S_B) for the actual physical-child/spectral experiment, and Delta_A=sum_i_in_A[h2(p_i)+log2(max(p_i,1-p_i))].",
+    "hypotheses": [
+      "genuine Boolean sign",
+      "independent physical inputs",
+      "all p_i in (0,1)",
+      "biased orthonormal Fourier basis",
+      "entropy in bits"
+    ],
+    "statement_sha256": "988abea63a1906de7c54826cb36bb40c443bc1f346d25715d0826d3740985695",
+    "contributors": [
+      "account01/B09 original construction"
+    ],
+    "proof_source": {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "adb671ffcda143fa68347806bb96e8c305621a7d",
+      "path": "reports/fei-2026-10-11/runs/B09/20261011T195500Z-account01-B09-biased-restriction-uncertainty/REPORT.md",
+      "blob_sha": "71b68e4decf9658a42fef6bb2668e19f25bd214a"
+    },
+    "proof_dependencies": [
+      {
+        "claim_key": "MU-FINITE-UNITARY-1988@1",
+        "statement_sha256": "ebbc591a00df8ffc11a7d71e9558b0d33be6592354385d688c06676afd058a9e",
+        "hypothesis_instantiation": "For each nonzero residual spectral fiber T, use N=2^|A|, normalized real a_R=fhat(R union T)/sqrt(q_T), U=tensor_i [[sqrt(1-p_i),-sqrt(p_i)],[sqrt(p_i),sqrt(1-p_i)]]. Orthogonality and norm one hold by product Parseval; c=product_i sqrt(max(p_i,1-p_i)). Average over q_T, then subtract from H(Z)=sum_i h2(p_i).",
+        "unit_conversion": "Natural-to-bit conversion divides both sides by ln(2); c^2=product_i max(p_i,1-p_i)."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A093 account05 B19",
+        "verdict": "ACCEPT_AT_STATED_SCOPE_CORE_ONLY",
+        "source": "REPORT.md; out/VALIDATION.json; PRIMARY_SOURCE_OVERLAP.md",
+        "method": "Primary Maassen-Uffink theorem matched to physical normalized fibers; independent rational child-marginal implementation",
+        "date_utc": "2026-10-11T22:46:39.797288+00:00",
+        "scope_exclusions": [
+          "No uniform influence payment",
+          "No claim of optimal tax",
+          "No broad substitution additivity",
+          "No new interval-certificate acceptance"
+        ]
+      },
+      {
+        "reviewer": "A081",
+        "verdict": "PRIMARY_PIN_AND_APPLICATION_CONFIRMED_CORE_ONLY",
+        "source": {
+          "run_id": "20261011T234021Z-account05-A081-dependency-certificates",
+          "path": "REPORT.md"
+        },
+        "method": "Primary pp.1103–1104 visually inspected; finite unitary hypotheses and normalized physical posterior reconstructed; no stronger tax/composition claim accepted.",
+        "date_utc": "2026-10-11T23:56:56.132090+00:00"
+      }
+    ],
+    "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED_CORE_ONLY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B09",
+      "B12",
+      "B13",
+      "B18",
+      "B19",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A081-VERSIONED-DEPENDENCY-CERTIFICATE",
+    "version": 2,
+    "exact_statement": "The A081 stage-2 dependency certificate preserves exact statements for six B17 claims, distinguishes selectable and aggregate erasure constants, imports the independently reviewed B09 core with an exact finite-unitary Maassen-Uffink source pin, and is structurally acyclic. The five-bit Boolean witness at negative vertices {5,12,13} exactly has min_i B_i/I_i in [2.695887520153100810486497,2.695887520153100810486498], exceeding 107/40, without refuting the original four-variable A082 theorem. All six displayed universal FEI routes still have unpaid premises.",
+    "hypotheses": [
+      "Frozen local byte snapshots in this stage PROOF_DEPENDENCIES.json",
+      "Uniform cube and bit entropy for the selectable-erasure witness",
+      "B09 has interior independent biases and biased orthonormal Fourier basis",
+      "Source acceptance limited to recorded independently reconstructed scope"
+    ],
+    "statement_sha256": "be618696246d14a314d68d9f3c561d0a3cfcaa7783e3f36b2fa0719fba973648",
+    "contributors": [
+      "A081"
+    ],
+    "proof_source": {
+      "run_id": "20261011T234021Z-account05-A081-dependency-certificates",
+      "path": "REPORT.md",
+      "graph": "PROOF_DEPENDENCIES.json",
+      "validation": "out/VALIDATION.json",
+      "mutation_audit": "out/UPDATE_AUDIT.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "B17-JS-PACKET-SCALAR",
+        "version": 1,
+        "statement_sha256": "c9d247c5f7e65a53b9843006b192db674a51bc6dc125aa9995476bd95dc4c3c6"
+      },
+      {
+        "claim_id": "B17-KB-TWO-SIDED",
+        "version": 1,
+        "statement_sha256": "49f4bdbb2c280d8179f2387bbabbd565c3b9933fdc0fe90469ee6c1fe31442b2"
+      },
+      {
+        "claim_id": "B17-ZERO-ERASURE-TRANSPORT",
+        "version": 1,
+        "statement_sha256": "27f45d107abbfbde5b482edc5938f0bc9ec5484c404273f60730e3c316848123"
+      },
+      {
+        "claim_id": "B17-KB5-CUTOFF",
+        "version": 1,
+        "statement_sha256": "5c663114fa7a8e4f1292101b89294b2ebce902c7eeee7f767bd0494ca7145992"
+      },
+      {
+        "claim_id": "B09-BIASED-BLOCK-UNCERTAINTY",
+        "version": 1,
+        "statement_sha256": "988abea63a1906de7c54826cb36bb40c443bc1f346d25715d0826d3740985695"
+      }
+    ],
+    "review_records": [],
+    "status": "LOCAL_CERTIFICATE_COMPLETE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      "A081-VERSIONED-DEPENDENCY-CERTIFICATE@1"
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A083",
+      "A085",
+      "A090",
+      "A094",
+      "A096",
+      "A097",
+      "A099",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B05",
+  "run_id": "20260923T091843Z-account01-B05-QFORM-r29",
+  "owner_control_revision": "2026-09-22.15",
+  "control_commit_start_refresh": "63f10ac0853a06df9a3861a46f1a8b328e8137d2",
+  "control_commit_final_refresh": "6a22ceba579fc6651c02f88a98fc9218c56dd583",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "mathematical_status": "SUPPORTING_TRANSITION_THEOREM_PROVED_FULL_TARGET_OPEN",
+  "theorem_id": "QFORM-HEAVY-NULL-SPREAD-LEAK-DETERMINANT-CANCELLATION-v1",
+  "statement": "In the exact-rank-three heavy-null normal form A=RBR^T with s_min(B)>=1, heavy row sqrt(c)e1, 1/2<c<1, and normalized residual frame (w,v,uhat) satisfying w_j^2+v_j^2+uhat_j^2<=1/2, one has ||p_Q||inf <= 9.6 |det B|^(-1/3)[c(1-c)]^(-1/6) <= 9.6[c(1-c)]^(-1/6). The density in this positive-leak branch is continuous C0. For c<=127/128 the bound is <24.191.",
+  "exact_structural_identities": [
+    "After transverse active rotation B=[[0,beta,0],[beta,alpha,delta],[0,delta,gamma]].",
+    "|beta|>=1 and det B=-beta^2 gamma.",
+    "Residual coefficient vectors satisfy ||u||^2=1-c, ||w||=||v||=1 and u,w,v are pairwise orthogonal.",
+    "After scaling Q_* = Q/(beta sqrt(c)), the transverse cross magnitude is epsilon=sqrt((1-c)/c) and the square coefficient is lambda=gamma/(beta sqrt(c)).",
+    "The density scale collapses exactly to |det B|^(-1/3)[c(1-c)]^(-1/6)."
+  ],
+  "premises": [
+    {
+      "result": "single_hub_core Proposition 2.3",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "1679e3fca3c06c3dda173f23b19638c6459d20b5",
+      "path": "proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md",
+      "scope": "arbitrary hub law; light orthonormal (w,v,qhat) frame; density <=9.6(eps|lambda|)^(-1/3); characteristic function O(|t|^-3/2)"
+    },
+    {
+      "result": "B05 r28 overlap-Gram exit",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "7b0448e370bab13079027a6d94a47830c5c2a292",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T073123Z-account01-B05-QFORM-r28/REPORT.md",
+      "scope": "||p_Q||inf<248/(1-kappa); in particular kappa<=1/2 gives <496"
+    },
+    {
+      "result": "rank_three_geometry named TW sufficient estimate",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "744f7d0ad7e50f9bcdeff772cf243dd6363ac031",
+      "path": "proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/rank_three_geometry/REPORT.md",
+      "scope": "TW J(tau)<=K(1+|tau|) suffices for uniform light-frame hub/twist closure"
+    }
+  ],
+  "designated_partner_result_applied": {
+    "partner": "account02/B05",
+    "result": "QFORM-HEAVY-ROW-SUPPORT-SEPARATED-CLOSURE-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ad7874e3ee0f4541714b2376aa09154517e60867",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T062009Z-account02-B05-QFORM-r23/REPORT.md",
+    "actual_application": "At c=1 Parseval forces u=0, so the frame is support-separated; with s_min(B)>=1 the partner theorem gives ||p_Q||inf<248."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0af1b35ce0aaff7a2ac5dbed3ce54588e48da75e",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T091843Z-account01-B05-QFORM-r29/REPORT.md",
+    "report_blob": "9f73fb4eedc5211852e0f671c7fa520a45477eee",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T091843Z-account01-B05-QFORM-r29/CHECKS.json"
+  },
+  "narrowed_survivor": "Under the normalized light-frame hypothesis it is enough, after r28 and this run, to treat 127/128<c<1, overlap Gram kappa>1/2, with total longitudinal leak ||u||^2=1-c<1/128. The exact c=1 endpoint is paid by the partner theorem.",
+  "unresolved_implication": "QFORM-TINY-LEAK-ENDPOINT-STABILITY-v1: obtain a bound uniform as epsilon=sqrt((1-c)/c)->0+ in the product-linear light-frame hub/twist core, equivalently pay the named TW estimate or a coarea substitute with the same endpoint stability.",
+  "continuity": "proved in the positive-leak spread subbranch by integrable O(|t|^-3/2) Fourier decay; full-target continuity remains open",
+  "independent_review": "PENDING",
+  "full_target": "OPEN_NOT_PROVED",
+  "scheduler_mutation": false,
+  "email_mutation": false,
+  "notification_mutation": false,
+  "public_release_mutation": false,
+  "permissions_mutation": false
+}

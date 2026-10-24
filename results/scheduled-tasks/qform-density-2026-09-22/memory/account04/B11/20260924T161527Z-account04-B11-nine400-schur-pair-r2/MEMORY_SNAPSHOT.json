@@ -1,0 +1,37 @@
+{
+  "objective_id": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "account": "account04",
+  "slot": "B11",
+  "run_id": "20260924T161527Z-account04-B11-nine400-schur-pair-r2",
+  "source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "eeb752c8943536541b34b42b8bf48e924f4d3d2f",
+    "blob": "19fb119877426b640b2c0dae19ec2f78a399fe11",
+    "sha256_owner_recorded": "bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3"
+  },
+  "verdict": "PASS_ONE_INDEPENDENT_END_TO_END_RECONSTRUCTION",
+  "theorem": "If independent coordinate densities are bounded by K and s_9(A)>=s>0, then the density of X^TAX+b^TX+c is essentially bounded by 385 K^2/s.",
+  "audit_commit": "f381205787986693f2b25caf78dc434ab6a1a568",
+  "improvement_commit": "582b941e4fc5270d3b5cc2da4675888929288ade",
+  "key_checks": [
+    "Schur complement loses at most the pivot dimension, including singular ambient matrices.",
+    "Hyperbolic pair full half-potential scales as D^(-1/4); no half-line-to-full-line inference.",
+    "Rough laws pass through interval bounds/total-variation approximation.",
+    "No-pivot interpolation keeps global rank <=3r distinct from seed-restricted rank <=r.",
+    "All exhaustive branch constants are below 385."
+  ],
+  "exact_constant_certificate": {
+    "bottleneck": "200+80 log(10)+1/e",
+    "log_bound": "log(10)<923/400",
+    "reciprocal_bound": "1/e<3/8",
+    "rational_upper_bound": "15399/40=384.975"
+  },
+  "remaining": [
+    "A second genuinely independent complete audit is still required for independent-validation status.",
+    "No product-preserving receiver yet lowers s_9 to s_8.",
+    "The full three-eigenvalue conjecture remains open.",
+    "Continuity is separate."
+  ],
+  "model_metadata": "UNKNOWN",
+  "thinking_metadata": "UNKNOWN"
+}

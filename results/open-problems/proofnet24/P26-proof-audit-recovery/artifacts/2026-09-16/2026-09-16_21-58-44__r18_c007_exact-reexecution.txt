@@ -1,0 +1,41 @@
+P26 independent reexecution transcript for R18-I0080-C007
+Date: 2026-09-16
+Audit ID: P26-AUDIT-R18-I0080-C007-ENDTOEND-05
+
+Source checker executed independently from:
+artifacts/R18/2026-09-16_15-06-33_UTC__R18__i0080-single-global-witness__checker.py
+source create commit: 911e611727f962864cdafd5f348110b654189b60
+source blob: e28ecac31305092a7bcb115a067b76e4abb39725
+
+Independent execution output:
+pi coarse enclosure certified: 333/106 < pi < 22/7
+LOW_POINT rational margin = 109/28350
+HIGH_ZERO lower = 202241/206250
+HIGH_ZERO margin over 19/20 = 12607/412500
+tanh(5) certificate core e^10 partial = 61
+e^5 partial lower = 523/8
+HIGH_MID lower = 118941/125000
+HIGH_MID margin over 19/20 = 191/125000
+pi lower margin over high-mid requirement = 75373/27017386
+parameter algebra: d/B^2=95; p<=2/125; switch t=20/(19*pi)
+PASS
+
+Distinct-auditor checker also executed independently from:
+artifacts/R17/20260916_1515Z_spantrunc_a63e_checker.py
+source create commit: 131d6c3bbb2738069ee06b4853ed94a4b30a3d03
+source blob: cee14555f6bd75e14faee9631fb9be77db42e240
+
+Independent execution summary:
+C006 exact exhaustive checks: 50368; largest observed LCS-Q gap: 4
+C007 concatenation-superadditivity exact checks: 640
+R18 AUDIT FINITE CORE PASS
+exact source-normalization algebra: PASS
+exact global t-parameter algebra: PASS
+exact high/low/high rational margins: PASS
+PASS
+
+Archived source outputs were also read back:
+R18 output commit 5c98e24f556af403c02cdb796c436fd11e11ad8d, blob 9a652b9c421f004173f22d7dc5b82fcbbe41f6f3.
+R17 output commit d09158911a2bda38900342b721d14f315fdec87d, blob aec9fb8a29b04646952a9b4cd4f4d8c381de49a2.
+
+This transcript certifies only the finite/exact portions. The universal theorem is carried by the written analytic proof and the independent proof audit in the P26 run report.

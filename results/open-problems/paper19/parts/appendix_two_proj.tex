@@ -1,0 +1,124 @@
+% Appendix: full proof of Lemma lem:two-proj (two-projection anti-concentration).
+% Real case in full; the complex case is identical with d_F=2. Uses manuscript macros and \varrho.
+
+We give the complete proof of Lemma~\ref{lem:two-proj}.  Throughout $\F=\R$ (the complex case is
+identical with $d_\F=2$, replacing each slab by a disk and $\sqrt{1-\varrho^2}$ by $1-|\varrho|^2$).
+Recall $x\in\R^m$ has i.i.d.\ entries with mean $0$, variance $1$, density $f\le K$; $u,v$ are
+deterministic unit vectors with $\|u\|_\infty,\|v\|_\infty\le\beta:=m^{-1/2+\delta}$,
+$\varrho=\langle u,v\rangle$, $|\varrho|\le1-\kappa_0$; and $S_1=\langle x,u\rangle$,
+$S_2=\langle x,v\rangle$, with $p(t)=\PP\{|S_1|\le t\}$, $q(t)=\PP\{|S_1|\le t,|S_2|\le t\}$.
+
+Let $\psi(\theta)=\EE e^{i\theta x_1}$ denote the (common) entry characteristic function.
+
+\begin{lemma}[Characteristic-function bound]\label{app:cf}
+There are constants $\eta>0$ and $C_\psi<\infty$, depending only on the entry law, with
+\[
+  |\psi(\theta)|\le e^{-\eta\min(\theta^2,1)}\quad(\theta\in\R),
+  \qquad \|\psi\|_{L^2(\R)}^2=2\pi\!\int f^2\le 2\pi K=:C_\psi .
+\]
+\end{lemma}
+\begin{proof}
+Let $x_1'$ be an independent copy and $Y=x_1-x_1'$, so $\EE Y^2=2$ and
+$|\psi(\theta)|^2=\EE\cos(\theta Y)$.  From $1-\cos s\ge\tfrac14 s^2$ for $|s|\le1$, choosing
+$\theta_0\in(0,1]$ with $\EE[Y^2\mathbf 1_{|Y|>1/\theta_0}]\le1$ gives, for $|\theta|\le\theta_0$,
+$1-|\psi(\theta)|^2\ge\tfrac14\theta^2\,\EE[Y^2\mathbf 1_{|\theta Y|\le1}]\ge\tfrac14\theta^2$,
+so $|\psi(\theta)|\le e^{-\theta^2/8}$ (only finite variance is used).  Since $f$ is a density,
+$x_1$ is non-lattice, $|\psi|<1$ off $0$, and $\psi\to0$ at infinity (Riemann--Lebesgue), so
+$\kappa:=\sup_{|\theta|\ge\theta_0}|\psi|<1$.  Taking $\eta=\min\{\tfrac18,\log(1/\kappa)\}$ gives
+the pointwise bound on the three ranges $|\theta|\le\theta_0$, $\theta_0\le|\theta|\le1$,
+$|\theta|\ge1$.  Plancherel gives $\|\psi\|_2^2=2\pi\int f^2\le2\pi K$.
+\end{proof}
+
+Set $w_j=(u_j,v_j)\in\R^2$ and $c_j(\xi)=\langle\xi,w_j\rangle$ for $\xi\in\R^2$, so that
+$\xi_1S_1+\xi_2S_2=\sum_jc_j(\xi)x_j$ and, since $\|u\|=\|v\|=1$, $\langle u,v\rangle=\varrho$,
+\begin{equation}\label{app:frame}
+  \sum_{j}w_jw_j^{\top}=\Sigma:=\begin{pmatrix}1&\varrho\\\varrho&1\end{pmatrix},\quad
+  \sum_j c_j(\xi)^2=\xi^\top\Sigma\xi\ge\kappa_0|\xi|^2,\quad
+  |c_j(\xi)|\le\sqrt2\,\beta|\xi|,
+\end{equation}
+using $\lambda_{\min}(\Sigma)=1-|\varrho|\ge\kappa_0$ and $\det\Sigma=1-\varrho^2\ge\kappa_0$.
+The joint characteristic function factorizes as $\phi_m(\xi)=\prod_j\psi(c_j(\xi))$, and the
+target Gaussian has $\widehat{\Gamma_\Sigma}(\xi)=e^{-\frac12\xi^\top\Sigma\xi}$.
+
+\begin{lemma}[Transverse pairs and integrability]\label{app:transverse}
+For $m$ large there are two disjoint index pairs $\{p_i,q_i\}$ ($i=1,2$) with
+$|\det[w_{p_i}\,|\,w_{q_i}]|\ge\Delta:=\sqrt{\kappa_0}/m$.  Consequently $\phi_m\in L^1(\R^2)$ with
+$\int_{\R^2}|\phi_m|\le \|\psi\|_2^4/\Delta\le m\,C_\psi^2/\sqrt{\kappa_0}$.
+\end{lemma}
+\begin{proof}
+With $W=[w_1\,|\cdots|\,w_m]$, Cauchy--Binet gives $\sum_{p<q}\det[w_p|w_q]^2=\det(WW^\top)=
+\det\Sigma\ge\kappa_0$; as there are $<m^2/2$ pairs, some pair has $|\det|\ge\sqrt{2\kappa_0}/m$.
+Removing it changes $\Sigma$ by $\le4\beta^2$ in operator norm, leaving determinant
+$\ge\kappa_0/2$, so a second disjoint pair exists with $|\det|\ge\sqrt{\kappa_0}/m$.  Bounding the
+other $m-4$ factors of $|\phi_m|$ by $1$, Cauchy--Schwarz over the two pairs and the linear change
+of variables $\xi\mapsto(c_{p_i},c_{q_i})$ (Jacobian $\ge\Delta$) with Lemma~\ref{app:cf} give
+$\int|\phi_m|\le\prod_{i=1,2}(\int|\psi(c_{p_i})\psi(c_{q_i})|^2)^{1/2}\le\|\psi\|_2^4/\Delta$.
+\end{proof}
+
+\begin{lemma}[Energy bound]\label{app:energy}
+$F(\xi):=\sum_j\min(c_j(\xi)^2,1)\ge\tfrac{\kappa_0}{4}\min(|\xi|^2,\beta^{-2})$, hence by
+Lemma~\ref{app:cf}, $|\phi_m(\xi)|\le\exp\{-\tfrac{\eta\kappa_0}{4}\min(|\xi|^2,\beta^{-2})\}$.
+\end{lemma}
+\begin{proof}
+If $|\xi|\le(\sqrt2\beta)^{-1}$ then all $|c_j|\le1$ and $F=\sum c_j^2\ge\kappa_0|\xi|^2$.  If
+$|\xi|>(\sqrt2\beta)^{-1}$, split into $\mathcal B=\{|c_j|>1\}$ and its complement.  If
+$|\mathcal B|\ge\tfrac{\kappa_0}4\beta^{-2}$ then $F\ge|\mathcal B|\ge\tfrac{\kappa_0}4\beta^{-2}$;
+otherwise $\sum_{j\notin\mathcal B}c_j^2\ge\xi^\top\Sigma\xi-|\mathcal B|\,2\beta^2|\xi|^2\ge
+\tfrac{\kappa_0}2|\xi|^2>\tfrac{\kappa_0}4\beta^{-2}$.  In all cases $F\ge\tfrac{\kappa_0}4\min(|\xi|^2,\beta^{-2})$.
+\end{proof}
+
+\begin{proposition}[Local CLT]\label{app:lclt}
+$(S_1,S_2)$ has a bounded continuous density $g_m$, and
+$\varepsilon_m:=\sup_w|g_m(w)-\Gamma_\Sigma(w)|\le(2\pi)^{-2}\int_{\R^2}|\phi_m-\widehat{\Gamma_\Sigma}|\to0$,
+uniformly over delocalized unit $u,v$ with $|\varrho|\le1-\kappa_0$.
+\end{proposition}
+\begin{proof}
+$\phi_m\in L^1$ (Lemma~\ref{app:transverse}) and $\widehat{\Gamma_\Sigma}\in L^1$
+($\det\Sigma\ge\kappa_0$) justify Fourier inversion and the displayed bound.  Fix $\varepsilon>0$
+and split $\int|\phi_m-\widehat{\Gamma_\Sigma}|$ over $|\xi|\le R$, $R<|\xi|\le\beta^{-1}$,
+$|\xi|>\beta^{-1}$.  Choose $R=R(\kappa_0,\varepsilon)$ with
+$\int_{|\xi|>R}e^{-\kappa_0|\xi|^2/2}\le\varepsilon$.
+\emph{(I) $|\xi|\le R$:} since $\max_j|c_j|\le\sqrt2\beta R\to0$, the expansion
+$\psi(\theta)=1-\tfrac12\theta^2+\theta^2\omega(|\theta|)$ ($\omega\to0$) gives
+$\log\phi_m(\xi)=-\tfrac12\xi^\top\Sigma\xi+E_m(\xi)$ with $|E_m|\le\omega^*(\sqrt2\beta R)\,
+\xi^\top\Sigma\xi\le2R^2\omega^*(\sqrt2\beta R)\to0$; hence the integrand $\to0$ uniformly on the
+ball and term I $\to0$.  \emph{(II) $R<|\xi|\le\beta^{-1}$:} here $\min(|\xi|^2,\beta^{-2})=|\xi|^2$,
+so by Lemma~\ref{app:energy} the integrand is $\le e^{-\frac{\eta\kappa_0}4|\xi|^2}+
+e^{-\frac{\kappa_0}2|\xi|^2}$, with integral $\le\varepsilon$ for $R$ large.  \emph{(III)
+$|\xi|>\beta^{-1}$:} the residual $m-4$ indices have $\lambda_{\min}\ge\kappa_0/2$, so
+Lemma~\ref{app:energy} gives $\sum_{j\notin Q}\min(c_j^2,1)\ge\tfrac{\kappa_0}8\beta^{-2}$, and with
+Lemma~\ref{app:transverse},
+$\int_{|\xi|>\beta^{-1}}|\phi_m|\le e^{-\frac{\eta\kappa_0}8 m^{1-2\delta}} m C_\psi^2/\sqrt{\kappa_0}\to0$;
+the Gaussian far tail $\to0$ likewise.  Thus $\limsup_m\int|\phi_m-\widehat{\Gamma_\Sigma}|\le2\varepsilon$.
+\end{proof}
+
+\begin{proof}[Proof of Lemma~\ref{lem:two-proj}]
+The one-dimensional specialization of Proposition~\ref{app:lclt} (single form $S_1$, coefficients
+$u_j$, integrability from the two largest coefficients $u_{(1)}^2\ge1/m$, $u_{(2)}^2\ge1/(2m)$)
+gives $\varepsilon_m':=\sup_w|g_{1,m}(w)-\Gamma_1(w)|\to0$, where $\Gamma_1$ is the standard
+Gaussian density and $g_{1,m}$ the density of $S_1$.  Write $V_t=2t$.  Since the Gaussian densities
+peak at the origin, with $\Gamma_\Sigma(0)=\Gamma_1(0)^2/\sqrt{1-\varrho^2}$,
+\[
+  q(t)\le(\Gamma_\Sigma(0)+\varepsilon_m)V_t^2,\qquad
+  p(t)\ge\bigl(\Gamma_1(0)(1-\tfrac12t^2)-\varepsilon_m'\bigr)V_t .
+\]
+As $|\varrho|\le1-\kappa_0$ keeps $\Gamma_\Sigma(0)\le\Gamma_1(0)^2\kappa_0^{-1/2}$ bounded, both
+$\varepsilon_m/\Gamma_\Sigma(0)\to0$ and $\varepsilon_m'/\Gamma_1(0)\to0$ uniformly, so for $t\to0$
+\[
+  \frac{q(t)}{p(t)^2}\le\frac{(\Gamma_\Sigma(0)+\varepsilon_m)V_t^2}
+       {(\Gamma_1(0)(1-\tfrac12t^2)-\varepsilon_m')^2V_t^2}
+  =\frac{\Gamma_\Sigma(0)}{\Gamma_1(0)^2}(1+o(1))=\frac{1+o(1)}{\sqrt{1-\varrho^2}} .
+\]
+For $\F=\C$ the argument is the same with the following substitutions, all routine.
+Coefficients $c_j(\xi)\in\C$ ($\xi\in\C^2$); the entry characteristic function is
+$\psi(\theta)=\EE e^{i\Re(\bar\theta x_1)}$, and Lemma~\ref{app:cf} holds verbatim from
+$\EE x_1=0$, $\EE|x_1|^2=1$ (properness $\EE x_1^2=0$ makes the quadratic term
+$\tfrac12|\theta|^2$ isotropic) and the bounded $\R^2$-density, with
+$\|\psi\|_{L^2(\R^2)}^2=(2\pi)^2\!\int f^2\le(2\pi)^2K$.  The frame lives in $\C^2\simeq\R^4$:
+$w_j=(u_j,v_j)$, $\sum_j w_jw_j^{*}=\Sigma$, and Cauchy--Binet (now over the $4\times2m$ real form
+of $W$) again yields two transverse pairs with $|\det|\gtrsim m^{-1}$, so $\phi_m\in L^1(\C^2)$.
+The energy bound and three-region inversion are unchanged, giving
+$\|g_m-\Gamma_\Sigma\|_\infty\to0$ for the proper complex Gaussian $\Gamma_\Sigma$ on $\C^2$ with
+$\Gamma_\Sigma(0)=\Gamma_1(0)^2/(1-|\varrho|^2)$.  Converting with disks ($V_t=\pi t^2$,
+$d_\F=2$) gives $q(t)\le(1+o(1))p(t)^2/(1-|\varrho|^2)$.
+\end{proof}

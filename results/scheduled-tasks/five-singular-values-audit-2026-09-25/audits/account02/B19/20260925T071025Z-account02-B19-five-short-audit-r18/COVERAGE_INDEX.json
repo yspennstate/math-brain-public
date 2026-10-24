@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "run_id": "20260925T071025Z-account02-B19-five-short-audit-r18",
+  "source_lines": 676,
+  "passes": [
+    {
+      "pass_id": "P13-forward-adversarial-boundary",
+      "coverage": "1-676 complete",
+      "files": [
+        "P13_LINES_001-169.jsonl",
+        "P13_LINES_170-253.jsonl",
+        "P13_LINES_254-338.jsonl",
+        "P13_LINES_339-507.jsonl",
+        "P13_LINES_508-676.jsonl"
+      ]
+    },
+    {
+      "pass_id": "P14-reverse-dependency-repair-regression",
+      "coverage": "1-676 complete",
+      "files": [
+        "P14_LINES_001-084.jsonl",
+        "P14_LINES_085-169_COMPACT.jsonl",
+        "P14_LINES_170-338.jsonl",
+        "P14_LINES_339-507.jsonl",
+        "P14_LINES_508-676.jsonl"
+      ],
+      "note": "Two attempts to store raw-excerpt L85-169 P14 chunks were blocked by platform safety checks. Compact P14 rows preserve statuses/repair refs and point to P13 exact excerpts from the identical pinned blob."
+    }
+  ],
+  "first_unchecked_mathematical_clause": null,
+  "nonproof_unchecked": [
+    "L62 current literature status",
+    "remaining related-work/bibliographic attribution metadata"
+  ],
+  "rendered_pdf_visual": "UNCHECKED_BLOCKED"
+}

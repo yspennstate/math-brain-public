@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_start": "6cabc47d5148fce8242be3f0b92bb0ecae14ae51",
+  "source_control_commit_prepublication": "e21290ba49b111998339dcb68bb6d34c73019f45",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260923T085555Z-account03-B15-qform-auto17",
+  "status": "ESSENTIAL_STEP_APPLIED_BALANCED_MODE_ONE_SIDED_NORMAL_FORM_FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-GAUSSIAN-HEAT-HEIGHT-CLOSURE",
+      "partner": "account04/B15",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "ad7e5daa036cc8330b1432285ad40fec611d37dd",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T211430Z-account04-B15-heat-regularity-r4/REPORT.md",
+      "scope": "For every probability law mu, sup_{epsilon>0,y}(mu*gamma_epsilon)(y)=||p_mu||_infinity, with +infinity if no bounded density exists."
+    },
+    {
+      "id": "QFORM-FIXED-MATRIX-C0-REGULARITY",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "fae0d267003aa0a7773fa1f0d92b33771e5dba78",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T002819Z-account03-B15-qform-r22/REPORT.md",
+      "scope": "Source-reported and previously checked: every fixed rank-at-least-three target instance has an individually bounded C0 density; constants may depend on A."
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-LAPLACE-MODE-ONE-SIDED-EXACT-v1",
+      "statement": "For C_*=sup s3(A)||p_Q||inf and ell(u)=exp(-|u|)/2, C_*=sup s3(A) max_y E ell(Q-y). At every global Laplace mode y_*, the exponentially weighted masses to the right and left are exactly equal and each equals the kernel height. Hence C_* equals the supremum of either one-sided exponential contribution over Laplace modes, with zero constant loss."
+    },
+    {
+      "id": "QFORM-TENT-MODE-BALANCE-COMPILER-v1",
+      "statement": "For tau(u)=(1-|u|)_+, C_*=sup s3(A) max_y E tau(Q-y). At every global tent mode y_*, P(y_*-1<Q<y_*)=P(y_*<Q<y_*+1). If B_* is the supremum of s3(A) times either adjacent unit-window mass over tent modes, then B_*<=C_*<=2B_*."
+    },
+    {
+      "id": "QFORM-FIXED-KERNEL-SHARP-CONSTANT-IDENTITY-v1",
+      "statement": "Applying account04/B15 heat-height plus scalar homogeneity gives equality of the optimal sharp constant C_* with the fixed unit Gaussian, unit Laplace, and unit tent positive-kernel functionals."
+    }
+  ],
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fccc46ddffe0873ba2fccad767cce028ccef9fb8",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T085555Z-account03-B15-qform-auto17/REPORT.md",
+    "status": "supporting theorem; full universal constant still open"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "f4e5cdbdc32bd9c4031092f172f4435634e1e5ca",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B15/20260923T085555Z-account03-B15-qform-auto17.md"
+  },
+  "unresolved_implication": "Exploit the Laplace-mode one-sided exponential balance or the tent-mode equal adjacent-window constraint together with original-coordinate product geometry to prove a uniform O(1/s3(A)) bound; do so before fiber supremum or reciprocal tiny-minor payment.",
+  "next_step": "Insert the balanced center into the minority/two-sheet or grouped-coordinate receiver. Test whether equal opposite-side mass rules out the free-center shell counterexamples that defeated punctured-kernel arguments.",
+  "canonical_login_status": "The actual-hour account03/B15 login already existed from a prior same-hour invocation and was preserved rather than overwritten. This run has unique start/finish records."
+}

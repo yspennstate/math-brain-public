@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260923T174459Z-account01-B04-QFORM-auto11-r16",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit": "72038b4bc2ab4c369014cff17eeb8efc17973188",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "mathematical_result": {
+    "claim_id": "QFORM-FRACTIONAL-GROUPED-PROJECTED-CROSSING-v1",
+    "statement": "For grouped projected crossing with k hub dimensions, ell-volume canonical projected-crossing law w, row marginals alpha_i, D_q=kq+ell, alpha_i<=q/2 and D_q>2q, the density obeys the exact fractional product-Fourier bound in REPORT (4.5), with matching Fourier L1 and hence C0 continuity.",
+    "full_target_proved": false,
+    "full_target_disproved": false,
+    "continuity_full_target_proved": false,
+    "continuity_supporting_branch_proved": true,
+    "independent_review": "pending"
+  },
+  "key_identity": {
+    "finite_measure_jensen": "I_t^q <= m^(q-1) E[kappa(BD) prod |psi_i|^q]",
+    "mass_cap": "m<=2^(k/2)/S",
+    "fractional_subset_bound": "I_t <= 2^(k/2+ell/(2q))(2pi)^(ell/q) q^(-ell/(2q)) S^(-1) Z_ell^(-1/(2q)) E(w)^(1/q)|t|^(-ell/q)",
+    "entropy_factor": "E(w)=exp((H(w)+sum alpha_i log alpha_i)/2)"
+  },
+  "one_hub_two_cross_consequence": {
+    "integrability_condition": "q<2",
+    "support_scope": "every non-coloop canonical two-volume law alpha_*<1 is admissible by some q<2",
+    "old_gate_removed": "fixed q=1 condition alpha_*<=1/2 is no longer structural",
+    "endpoint": "alpha_*=1 promotes a physical row into the existing two-hub/one-crossing cascade"
+  },
+  "explicit_target": {
+    "cross_block": "[[1,1,1,1],[3/2,3/2,-1/2,-1/2],[3/2,-1/2,3/2,-1/2],[3/2,-1/2,-1/2,3/2]]",
+    "ambient_matrix": "[[J4/100,M],[M^T,J4/100]]",
+    "S": 2,
+    "Z2": 48,
+    "row_marginals": "2/3 each",
+    "q": "4/3",
+    "entropy_factor": "2/sqrt(3)",
+    "density_bound_exact": "5/2^(1/5)",
+    "density_bound_decimal": 4.352752816480621,
+    "fourier_L1_exact": "10*pi/2^(1/5)",
+    "spectral_certificate": "cross squared singular values 4,4,(11+-sqrt57)/2; after J4/100 self-block perturbation every eigenvalue modulus >=sqrt(3/2)-1/25>1"
+  },
+  "partner_applied": {
+    "account_slot": "account02/B04",
+    "claim": "QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1",
+    "source_commit": "00e728cf7f226ccce4b41ad751d494c5c94f67ec",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/account02-B04-20260923T111930Z-qform/REPORT.md",
+    "application": "same four-row M has E3=304 and unavoidable max third-volume row marginal >=3/4",
+    "bound_exact": "6*76^(-1/6)",
+    "bound_decimal": 2.915293728384209
+  },
+  "attempted_but_open": {
+    "claim": "current Claude single-hub hub-that-sees-P statement SP",
+    "source_commit": "c4c23b784395630c094ba299a50712209921d1ae",
+    "reason_not_used": "conditional hub density depends on P, so the independent-hub Plancherel step is not valid; source maximal functional remains open"
+  },
+  "source_inputs": [
+    "math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+    "math-open-problems@c4c23b784395630c094ba299a50712209921d1ae:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md",
+    "math-open-problems@00e728cf7f226ccce4b41ad751d494c5c94f67ec:proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/account02-B04-20260923T111930Z-qform/REPORT.md"
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "8d19ef916b35c81fcc7461911a0e941128ca3abf",
+    "bundle_tail_commit": "5a00537dec25fdd230861429591f2efc3da32d47",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T174459Z-account01-B04-QFORM-auto11-r16/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T174459Z-account01-B04-QFORM-auto11-r16/CHECKS.json",
+    "handoff_commit": "f249180eda4e12f7b04d3f05e778ebf59c33aba7"
+  },
+  "first_unproved_step": "QFORM-FRACTIONAL-PROJECTED-CROSSING-NEARCOLOOP-SPLICE-v1",
+  "next_action": "Optimize the switch between q<2 one-hub fractional projected crossing and physical promotion to two hubs in the quantitative near-coloop regime, retaining all nonzero tails and arbitrary same-bank curvature; keep the dependent-hub SP branch separate."
+}

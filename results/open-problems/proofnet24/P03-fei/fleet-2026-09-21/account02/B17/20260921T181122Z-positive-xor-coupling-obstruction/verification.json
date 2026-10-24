@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "claim_scope": "analytic formulas checked n=3..12; exact sharp n=3 transport witness",
+  "family": "f_u=1-2*1_{x=u}, u=0 and v=3 (Hamming weight 2)",
+  "all_dimensional_formula": "TV(any positive parent coupling XOR, child spectrum) >= 2(N-4)/N^2 for N=2^n,n>=3",
+  "n3_exact_min_tv": "1/8",
+  "n3_parent_spectrum": [
+    "9/16",
+    "1/16",
+    "1/16",
+    "1/16",
+    "1/16",
+    "1/16",
+    "1/16",
+    "1/16"
+  ],
+  "n3_child_support": [
+    0,
+    3,
+    4,
+    7
+  ],
+  "n3_xor_law_of_optimal_witness": [
+    "3/8",
+    "0",
+    "0",
+    "1/8",
+    "1/4",
+    "0",
+    "0",
+    "1/4"
+  ],
+  "n3_transport_matrix_units_1_over_16": [
+    [6,0,0,1,1,0,0,1],
+    [0,0,0,0,0,0,1,0],
+    [0,0,0,0,0,1,0,0],
+    [1,0,0,0,0,0,0,0],
+    [1,0,0,0,0,0,0,0],
+    [0,1,0,0,0,0,0,0],
+    [0,0,1,0,0,0,0,0],
+    [1,0,0,0,0,0,0,0]
+  ],
+  "rows": [
+    {"n":3,"N":8,"parent_H_mass":"3/4","frechet_xor_zero_floor":"3/8","child_xor_zero_target":"1/4","tv_lower_bound":"1/8","simultaneous_overlap":"0","parent_total_influence":"3/4","child_total_influence":"3/2"},
+    {"n":4,"N":16,"parent_H_mass":"7/8","frechet_xor_zero_floor":"21/32","child_xor_zero_target":"9/16","tv_lower_bound":"3/32","simultaneous_overlap":"0","parent_total_influence":"1/2","child_total_influence":"1"},
+    {"n":5,"N":32,"parent_H_mass":"15/16","frechet_xor_zero_floor":"105/128","child_xor_zero_target":"49/64","tv_lower_bound":"7/128","simultaneous_overlap":"0","parent_total_influence":"5/16","child_total_influence":"5/8"},
+    {"n":6,"N":64,"parent_H_mass":"31/32","frechet_xor_zero_floor":"465/512","child_xor_zero_target":"225/256","tv_lower_bound":"15/512","simultaneous_overlap":"0","parent_total_influence":"3/16","child_total_influence":"3/8"},
+    {"n":7,"N":128,"parent_H_mass":"63/64","frechet_xor_zero_floor":"1953/2048","child_xor_zero_target":"961/1024","tv_lower_bound":"31/2048","simultaneous_overlap":"0","parent_total_influence":"7/64","child_total_influence":"7/32"},
+    {"n":8,"N":256,"parent_H_mass":"127/128","frechet_xor_zero_floor":"8001/8192","child_xor_zero_target":"3969/4096","tv_lower_bound":"63/8192","simultaneous_overlap":"0","parent_total_influence":"1/16","child_total_influence":"1/8"},
+    {"n":9,"N":512,"parent_H_mass":"255/256","frechet_xor_zero_floor":"32385/32768","child_xor_zero_target":"16129/16384","tv_lower_bound":"127/32768","simultaneous_overlap":"0","parent_total_influence":"9/256","child_total_influence":"9/128"},
+    {"n":10,"N":1024,"parent_H_mass":"511/512","frechet_xor_zero_floor":"130305/131072","child_xor_zero_target":"65025/65536","tv_lower_bound":"255/131072","simultaneous_overlap":"0","parent_total_influence":"5/256","child_total_influence":"5/128"},
+    {"n":11,"N":2048,"parent_H_mass":"1023/1024","frechet_xor_zero_floor":"522753/524288","child_xor_zero_target":"261121/262144","tv_lower_bound":"511/524288","simultaneous_overlap":"0","parent_total_influence":"11/1024","child_total_influence":"11/512"},
+    {"n":12,"N":4096,"parent_H_mass":"2047/2048","frechet_xor_zero_floor":"2094081/2097152","child_xor_zero_target":"1046529/1048576","tv_lower_bound":"1023/2097152","simultaneous_overlap":"0","parent_total_influence":"3/512","child_total_influence":"3/256"}
+  ],
+  "full_FEI_status": "OPEN / NOT PROVED",
+  "finite_checks_only": true
+}

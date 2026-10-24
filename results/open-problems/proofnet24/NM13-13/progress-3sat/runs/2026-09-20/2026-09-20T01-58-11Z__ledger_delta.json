@@ -1,0 +1,33 @@
+{
+  "worker": "NM13-13",
+  "parent": "T04",
+  "status": "OPEN_PARTIAL",
+  "runtime_model": "GPT-5.6 Sol",
+  "runtime_reasoning": "UNVERIFIED",
+  "source_model": "classical iid random 3-SAT with three distinct variables per clause and independent uniform signs",
+  "threshold_object_correction": "For fixed k=3 a single limiting threshold is not known to exist; rigorous statements concern the Friedgut sharp-threshold sequence. The 2026 Chatterjee-Coja-Oghlan-Greenhill-Pfenninger-Rolvien-Zakharov-Zampetakis paper states that interpolation yields a rigorous upper functional matching the 1RSB prediction; its table reports the physics value d_sat(3)≈12.801 in d=3 alpha normalization. This run does not independently interval-certify 12.801.",
+  "source_threshold_before_explicit_decimal": "[3.52, 4.4898]",
+  "source_threshold_after_explicit_decimal": "[3.52, 4.4898]",
+  "source_threshold_movement": "NONE_FLEET_PRODUCED",
+  "strongest_supported_theorem_form": "3.52 <= liminf c_n and limsup c_n <= U_1RSB(3), where the interpolation theorem supplies U_1RSB(3); current literature reports the corresponding physics value near alpha≈4.267, but this worker has not independently certified that decimal evaluation.",
+  "mechanism_gain": {
+    "name": "anchored degree-one rescue matching penalty",
+    "result": "Inside the Diaz M=23 type count, refine t_(1,1) roots through clause type alpha_safe=((ps,ns),(pu,nu))=((1,1),(1,0)) and j=1,k=1 false children through beta=((0,1),(1,1)). When a selected root's sole nu copy occupies the beta nu slot of a selected child, the two-flip endpoint is flat-satisfying and the root-child pairs are disjoint. A positive-score global maximum therefore pays 2^{-E} for E such matched pairs.",
+    "variational_inequality": "Let P=ell_ps,T=t_11,A=c_alpha_safe,Q=ell_ns1,F=sum_i f_(i,1,1),B=c_beta,L=ell_nu. Refining by root overlap u and child overlap h gives exponent correction at most I_hyp(u;A,T,P)+I_hyp(h;B,F,Q)-u*h/(2L). Its maximum is strictly negative whenever 0<T,A<P, 0<F,B<Q and L>0. The -u*h/(2L) follows from Maclaurin's inequality applied to the exact hypergeometric score factor E[2^{-E}].",
+    "transfer_status": "PROVED_AS_REFINEMENT_LEMMA; NUMERIC_SOURCE_ENDPOINT_TRANSFER_NOT_YET_CERTIFIED"
+  },
+  "prior_failures_preserved": [
+    "clause-local multiplicative second-moment weights hit the 3.1062837 barrier",
+    "solution-graph balls of radius o(n/log n) change counts only by exp(o(n))",
+    "full-component quotient still lacks cross-component overlap control",
+    "naive multi-child rescue-star composition is false by an exact four-variable counterexample",
+    "whitening/core-history quotient lacks a uniform multiplicity lower bound"
+  ],
+  "companion_nonduplication": "NM13-06 is on the constructive majority/two-choice local-repair route; this run stays on cluster-aware upper-bound counting and variational penalties.",
+  "artifacts": {
+    "code": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T01-58-11Z__anchored_matching_exact.py",
+    "output": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T01-58-11Z__anchored_matching_exact.out",
+    "result": "ALL_EXACT_CHECKS_PASS = True"
+  },
+  "next_attack": "Because 4.4898 is no longer the strongest theorem-form upper target, lift the anchored matching penalty from the Diaz historical count into a cover/1RSB-compatible order parameter or independently interval-certify the k=3 interpolation upper functional. Do not spend the next run merely reoptimizing a bound still above the supported 1RSB upper unless it yields a transferable cluster lemma."
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B08",
+  "run_id": "20260922T174745Z-account03-B08-qform-diffuse-r15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.10",
+  "control_source_commit": "a84d1bf96bdd03250005f01ff90508319d9556a6",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "scientific_repository": "yspennstate/math-open-problems",
+  "scientific_commit": "0e80922c4f26f72fe3bb2b06728dd7a40da0c765",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260922T174745Z-account03-B08-qform-diffuse-r15/REPORT.md",
+  "result": {
+    "name": "QFORM-TRANSVERSE-5/6-RIDGE-CLOSURE-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "statement": "In the calibrated O0 setup theta_gamma(B)=8/3, after a nonzero original-coordinate scalar pivot and arbitrary Schur shear, theta_(gamma/4)(H)>=16/9. If max diag K_(gamma/4)(H)<=5/6, then the output law is absolutely continuous and ||p_Q||_infinity < 97/sqrt(|a| gamma).",
+    "continuity": "NOT_PROVED_BY_THIS_BRANCH"
+  },
+  "premises": [
+    {
+      "source": "account03/B07 QFORM-THIRD-COMPOUND-OVERLAP-REDUCTION-v1",
+      "scope": "full-matrix O0 cross-block branch and calibration theta_gamma(B)=8/3"
+    },
+    {
+      "source": "account03/B08 r14",
+      "scope": "Schur-shear invariant transverse reserve e2(DD^T)>=2/3 and ||D||op<=1"
+    },
+    {
+      "source": "QFORM-RIDGE-DENSITY-v1",
+      "scope": "fractional-q original-coordinate cross-block characteristic-function estimate"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "correction_inbox_sha": "6335a8d51fc8081123635a8d0848738b615cb082",
+  "partner": {
+    "designated": "account04/B08",
+    "designated_status": "NO_COMPLETED_CURRENT_QFORM_PATH_FOUND_AT_FRESH_CHECK",
+    "compatible_completed_result_applied": "account04/B18 QFORM-DEPENDENT-SQUARE-SMOOTHING-v1",
+    "application": "If max diag K_g(H)<=1/2 and theta_g(H)>2, then ||p_Q||_infinity <= 2 [sqrt(e)/(sqrt(2)|a|g) * theta/(theta-2)]^(1/2)."
+  },
+  "unresolved_implication": "Pay the nested residual localization max diag K_(gamma/4)(H)>5/6, including zero/near-zero physical pivots, by an original-coordinate grouped mechanism; O1/O2/O3 overlap branches remain open.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "verification": {
+    "terminator": "QFORM_TRANSVERSE_5_6_CHECK_PASS",
+    "explicit_constant": 96.74459724535009
+  }
+}

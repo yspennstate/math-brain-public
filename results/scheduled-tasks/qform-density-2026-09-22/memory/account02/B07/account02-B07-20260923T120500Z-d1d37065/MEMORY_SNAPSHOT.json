@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B07",
+  "run_id": "account02-B07-20260923T120500Z-d1d37065",
+  "status": "ESSENTIAL_STEP_APPLIED / FIXED-ANCHOR PACKET RECEIVER + ONE-SIDED ROW-TAIL BRANCH PAID / LOCAL E2-TO-DENSITY CANDIDATE REFUTED / FULL_TARGET_OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "control_revision": "2026-09-22.15",
+  "canonical_report_commit": "461d425697ff42550209df665a62f265777ed08c",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/account02-B07-20260923T120500Z-d1d37065/REPORT.md",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B07/account02-B07-20260923T120500Z-d1d37065.md",
+  "new_results": [
+    "QFORM-FIXED-ANCHOR-VOLUME-PLANCHEREL-v1",
+    "QFORM-ONE-SIDED-ROW-TAIL-RECEIVER-v1"
+  ],
+  "key_equations": [
+    "|phi_Q(t)| <= 2^(k/4) pi^(k/2) det(GG^T)^(-1/4) |t|^(-k/2)",
+    "for k>=3: ||p_Q||inf <= sqrt(2) k/(k-2) det(GG^T)^(-1/(2k))",
+    "for k=2: H_(1/2)(Q) <= 2^(11/4) det(GG^T)^(-1/8)",
+    "row-tail: ||p_Q||inf <= 3sqrt(2)[C(m,3)/((1-delta_R)Z_3)]^(1/6)"
+  ],
+  "partner_source": "math-open-problems@7ad9327f11c39bd465780bd1539d52de9feaacdd account03/B07 20260923T110409Z",
+  "partner_application": "Aggregate E2 packets Z2>=H^4/4096 or H^4/64 now give curvature-safe H_1/2 bounds 17717.1595489 and 10534.6860966 with arbitrary nonzero anchor block.",
+  "required_source": "math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 FOURIER_ROUTE_REPORT Section 2.4 and Lemma 4.1",
+  "obstruction": "Two-anchor E2 plus arbitrary same-bank curvature does not imply density: a diffuse rank-two product family has Z2=1, nonzero anchor block, arbitrarily small physical pair determinants, and logarithmically unbounded output density. It lacks a third eigenvalue and is not a QFORM counterexample.",
+  "target_stress": "Three-anchor/three-diffuse-bank family has spectrum +/-1 each multiplicity three, Z3=1, individual 3x3 minors m^-3/2, no bounded physical spectral core, and is paid by ||p||inf<=3sqrt(2).",
+  "first_unpaid": "QFORM-TWOANCHOR-HALFRIESZ-PLUS-THIRDVOLUME-UPGRADE-v1: combine the fixed-two-anchor half-Riesz/|t|^-1 currency with genuine third-volume currency without Schur loss or selecting one reciprocal minor.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time_seconds": null
+}

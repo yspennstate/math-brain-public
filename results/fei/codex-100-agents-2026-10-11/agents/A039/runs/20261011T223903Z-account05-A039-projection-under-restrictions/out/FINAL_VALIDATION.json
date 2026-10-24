@@ -1,0 +1,53 @@
+{
+  "schema_checks": "PASS",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "required_report_fields": 7,
+  "claim_fields": 14,
+  "progress_fields": 18,
+  "packet_delta_identical": true,
+  "new_claim_independent_review": "PENDING",
+  "A037_review": "ACCEPT_AT_STATED_SCOPE_LOCALLY",
+  "A038_review": "PARTIAL_INTERFACE_ONLY",
+  "validation_summary": {
+    "VALIDATION.json": {
+      "status": "PASS",
+      "assertions": 5958,
+      "runtime_seconds": 4.828405800042674,
+      "exhaustive_splits": 768,
+      "arithmetic": "exact rational probabilities/formal logarithm identities and directed rational intervals"
+    },
+    "RESET_VALIDATION.json": {
+      "status": "PASS",
+      "assertions": 21,
+      "runtime_seconds": 0.24686780001502484,
+      "scope": "12 root reference resets, same frozen k=4,6,8 family"
+    },
+    "CENSUS4.json": {
+      "status": "PASS",
+      "representatives": 32768,
+      "full_sign_functions_covered": 65536,
+      "coordinate_splits_checked": 131072,
+      "full_sign_splits_covered": 262144,
+      "assertions": 431936,
+      "isospectral_representative_splits": 5952,
+      "runtime_seconds": 183.65105489990674,
+      "arithmetic": "integer Walsh; integer coefficients of formal logarithms of primes; no floating sign checks",
+      "global_sign_symmetry": "f and -f have identical parent and named child squared spectra"
+    },
+    "CENSUS4_PILOT.json": {
+      "status": "PASS",
+      "representatives": 256,
+      "full_sign_functions_covered": 512,
+      "coordinate_splits_checked": 1024,
+      "full_sign_splits_covered": 2048,
+      "assertions": 3418,
+      "isospectral_representative_splits": 90,
+      "runtime_seconds": 0.07096000004094094,
+      "arithmetic": "integer Walsh; integer coefficients of formal logarithms of primes; no floating sign checks",
+      "global_sign_symmetry": "f and -f have identical parent and named child squared spectra"
+    }
+  },
+  "saved_at": "2026-10-11T23:12:55.615074+00:00",
+  "mirrors": "NOT_OBSERVED",
+  "final_baseline_replay": "Stopped by 59-second runtime guard; original 5958-assertion certificate retained; no second pass claimed."
+}

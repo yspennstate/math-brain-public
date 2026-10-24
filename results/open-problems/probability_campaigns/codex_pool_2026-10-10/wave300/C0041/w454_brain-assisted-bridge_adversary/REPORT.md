@@ -1,0 +1,9 @@
+The independent audit checks w453 L1/L2 and its scoped L3 countermodel. The proposed radius route still needs a quantitative tail rate. My future-conditioning extension keeps the probability denominator; own claims await w455 review.
+
+Exact C0041 retrieval was missing in title/body despite a correct logical-ID alias. The read-only prototype changes that exact lookup from 0 to 1 matching target. Five malformed IDs were rejected; lowercase equivalence and an unknown-ID empty result passed. Run: python -B -X utf8 ~/brain_workers/w454/measure_alias.py. Two observed timings were 1.470 and 53.317 seconds; both returned the same target. Lookup coverage is the measured effect. Main-brain recall separately timed out after 60.363 seconds with no output. This is a bounded diagnostic, not a general recall improvement claim.
+
+Apply: reviewer can copy candidate_alias_ro.py to ~/.claude/brain_graph/bin/candidate_alias_ro.py after reviewing patches/01_candidate_alias_ro.diff, then run it with python -B -X utf8, the read-only population database and C0041; policy wiring remains proposed. The helper depends on JSON logical IDs and returns the existing trust/status metadata unchanged. No live store or global recall control was edited.
+
+The historical source is arXiv:1309.2589, Open question 2.20. A September 23 preprint now claims the exact result; its full proof and formal dependencies are not certified here. Current openness is UNKNOWN and no novelty is claimed. Three DRAFT concepts and exact edges are prepared; check BUNDLE_STATE.json for submission/review/ingestion/retrieval separately. Hook and progress records are staged locally for the reviewer under the folder-only rule.
+
+NEXT: Independently review the conditioned clock extension, deploy the checked exact-ID fallback, and address the quantitative radius-tail premise or verify the newer source proof.

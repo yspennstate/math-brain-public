@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260923T092138Z-account03-B06-qform-r31",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "source_control_refresh_commit": "1b99c84ee47fb5e985dd17ede547f55ec35ad26d",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "execution_context": "scheduled_automation",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_requested": "maximum actually supported",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "actual_premises": [
+    {
+      "result": "QFORM-RANK2-AFFINE-HALF-RIESZ-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e542b1a6ef471b329e4e88a6553e1aacb45acc1a",
+      "path": "proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md",
+      "scope": "orientation-free rank-two half-Riesz bound with arbitrary original-coordinate affine term"
+    },
+    {
+      "result": "QFORM-DEPENDENT-SQUARE-SMOOTHING-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T113729Z-account04-B18-qform-r1/REPORT.md",
+      "scope": "dependence-safe square smoothing after disintegration"
+    },
+    {
+      "result": "QFORM-NULL-SCALAR-DEPENDENT-PAIR-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "5bf3d5e6765ecd1dd091fc7d862f6f04211c530f",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260922T232932Z-account02-B16-QFORM-auto11/REPORT.md",
+      "scope": "exact-null scalar independent of possibly dependent projected pair"
+    },
+    {
+      "result": "newest Claude ruled one-sheet bound",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md",
+      "scope": "rank-three one-sheet side, product-projection line marginal proof"
+    },
+    {
+      "result": "volume-stability gate",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/",
+      "scope": "near-diffuse cross-volume exit with full ambient continuous density bound"
+    }
+  ],
+  "partner_status": {
+    "designated_partner": "account04/B06",
+    "designated_partner_completed_current_qform_artifact_observed": false,
+    "compatible_account04_result_used": "account04/B18 QFORM-DEPENDENT-SQUARE-SMOOTHING-v1"
+  },
+  "result": {
+    "id": "QFORM-COUPLED-NONZERO-PIVOT-DISCRIMINANT-HALFRIESZ-v1",
+    "status": "PROVED_SCOPED_PRODUCT_PROVENANCE_TRANSDUCER",
+    "statement_summary": "For Y=gamma X+H(Z,W), U=u.Z, V=v.Z with X independent of the shared product bank, nonzero delta and beta give an essential density bound 128(L_X/|gamma|)[k^2|delta beta|detGram(u,v)]^(-1/4), improved to 16sqrt(30) when the affine term lies in the pair span. Opposite signs improve to 2sqrt(2pi) via account04/B18.",
+    "continuity": "not asserted for the new general theorem"
+  },
+  "scope_refresh_note": "Fresh search found earlier account03/B05 fixed-nonzero-coloop half-Riesz theorem. r31 does not claim novelty for generic nonzero-pivot smoothing; its useful scope is shared-bank discriminant cancellation, arbitrary affine coupling, target-valid same-bank families and the account04 sign sharpening.",
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "ef271858f8c0fccccd81db100e064bf2c807299c",
+    "final_directory_commit": "96e839ba118466ea4c2a5381653316f031dd662c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T092138Z-account03-B06-qform-r31/REPORT.md",
+    "handoff_commit": "b62a5a6a771e37a12087944f73ce0a0f78ef2ec1",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B06/20260923T092138Z-account03-B06-qform-r31.md"
+  },
+  "full_conjecture_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "FULL_OPEN",
+  "unresolved_implication": "QFORM-FULLY-COUPLED-EXACT-NULL-ROOT-SELECTOR-v1",
+  "next_step": "At delta=0 aggregate the shared-bank pair (U,V) and translation H under the original product law before the absolute root Jacobian, seeking a weak-L^(3/2) weighted curved-fiber bound or force a paid volume/ridge/grouped-coordinate branch."
+}

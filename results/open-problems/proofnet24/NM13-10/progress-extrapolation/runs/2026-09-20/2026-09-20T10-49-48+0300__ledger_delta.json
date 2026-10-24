@@ -1,0 +1,39 @@
+{
+  "slot": "NM13-10",
+  "source": "Agresti-Veraar arXiv:2501.18561 / NoDEA 32 (2025), Problem 3",
+  "frozen_pair": {
+    "X0": "H^{-1}(T)",
+    "X1_2": "L^2(T)",
+    "X1": "H^1(T)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "brownian_dimension": 1
+  },
+  "fixed_source_endpoint_before": "r_*=3, endpoint excluded",
+  "fixed_source_endpoint_after": "r_*=3, endpoint excluded",
+  "critical_spacetime_exponent_bracket_before": "[2/3,1]",
+  "critical_spacetime_exponent_bracket_after": "[2/3,1]",
+  "quantitative_spacetime_endpoint_lower_constant": "4/9 -> unchanged",
+  "terminal_trace_exponent_bracket": "[1/2,2/3] -> unchanged",
+  "mechanism_gain": "At the critical p=3 endpoint, after the stochastic input is switched off at an arbitrary stopping time, unequal Fourier shells lose their common-Brownian cubic coherence exponentially. For shell speeds a_n=sqrt(1+n^2), E[(M_n M_m)^(3/2)]=exp(-(9/8)(a_n-a_m)^2 t). After grouping equal-eigenvalue multiplicity, the full-torus off-diagonal cubic excess has a horizon-uniform occupation bound integral_0^infinity [E||Z||^3-sum_n ||P_n Z_0||^3] dt <= C_dec ||Z_0||^3 with C_dec=8*pi^2*(sqrt(2)+1)/27 < 7.06. The same holds conditionally after any stopping time with finite cubic state moment.",
+  "new_theorem": {
+    "name": "NM10-AVP3-CRITICAL-CROSS-SCALE-DECOHERENCE-12",
+    "status": "CANDIDATE_FULL / SELF-CHECKED / PENDING INDEPENDENT REVIEW",
+    "scope": "exact frozen torus pair, homogeneous continuation after arbitrary stopping-time seed; full spectrum after grouping equal eigenspaces"
+  },
+  "source_level_movement": "none: strong endpoint and critical spacetime exponent bracket unchanged",
+  "why_this_is_progress": "This is a materially different covariance/Hellinger route after repeated unchanged parent brackets. It proves that passive unequal-scale common-noise coherence has finite critical memory; any worse critical endpoint mechanism must repeatedly inject or adapt control while forcing is active, rather than seed once and exploit unequal scales.",
+  "failed_or_nonclosing_routes_this_run": [
+    "The decoherence estimate does not by itself control active forcing intervals, so it does not yet prove L^3 -> Z_{3,2/3}(T).",
+    "It does not change the parent exponent bracket because diagonal shell cubic moments are exactly critical and persist after forcing stops."
+  ],
+  "essential_artifacts": [
+    "2026-09-20T10-49-48+0300__critical_cross_scale_decoherence_check.py",
+    "2026-09-20T10-49-48+0300__critical_cross_scale_decoherence_check.out"
+  ],
+  "next_attack": "Insert the stopping-time decoherence kernel into a level/energy stopping decomposition for active forcing. Prove a Carleson-type charge on the active intervals; the off-interval cross-shell contribution is now already summable with explicit constant C_dec.",
+  "unchanged_parent_runs_note": "The parent bracket has remained [2/3,1] across multiple substantive runs, so this invocation deliberately changed method from Bellman/moment optimization to exact cubic covariance/Hellinger comparison.",
+  "t05_fallback_due": false,
+  "t05_reason": "No two failed recovery routes have accumulated after the method change; this run produced a new theorem-level mechanism on the exact P24 pair."
+}

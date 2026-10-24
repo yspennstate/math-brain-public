@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260923T025537Z-account03-B18-QFORM-r22",
+  "control_revision": "2026-09-22.15",
+  "prepublication_control_commit": "f6e2e6c6335ac032af0c5f290cd59d1849699061",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "new_results": [
+    {
+      "id": "QFORM-STRICTN3-CLIQUE-FACTOR-IMPOSSIBLE-v1",
+      "statement": "Under clique-factor off-diagonal geometry, |Aii|<tau, and all physical principal 2x2 determinant magnitudes <tau, s3(A)<tau+sqrt(tau+tau^2). Hence no such target with s3(A)>=1 exists for tau<1/3."
+    },
+    {
+      "id": "QFORM-STRICTN3-EXACT-CUTRANK1-IMPOSSIBLE-v1",
+      "statement": "At tau=1/128, combining the exact star/triangle/clique classification with the new clique estimate rules out every exact all-cut-rank-one strict-N3 target matrix. Therefore some disjoint physical cross cut has rank at least two, without any quantitative second-singular-value claim."
+    }
+  ],
+  "partner_application": {
+    "partner": "account04/B18",
+    "source_commit": "ce50e74f705c49f66524aa6565d4aa4a9be88061",
+    "theorem": "QFORM-SHARP-DISJOINT-TWOBANK-ZEROPIVOT-v1",
+    "actual_inequality": "For K0=[[0,1,1],[1,0,1],[1,1,0]] and three independent cap-one scalar inputs, continuous density and ||p||inf <= 6/2^(1/3) = 4.762203155904598..."
+  },
+  "sources_checked": [
+    "Eckart-Young 1936 DOI 10.1007/BF02288367",
+    "Mirsky 1960 DOI 10.1093/qmath/11.1.50",
+    "Juskevicius-Lee arXiv:1503.09190",
+    "Livshyts-Paouris-Pivovarov arXiv:1507.07949"
+  ],
+  "correction_boundary": [
+    "no law-uniform pointwise quadratic-phase decay",
+    "no post-rotation independence",
+    "no arbitrary-joint rank-three coarea",
+    "no positive conditional projection-density moment gate",
+    "no fixed uniformly good minor or cross-cut extraction"
+  ],
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b44b4c27df3064ac538aaa28f24ba18c0ce70cd2",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T025537Z-account03-B18-QFORM-r22/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T025537Z-account03-B18-QFORM-r22/CHECK_OUTPUT.txt",
+    "readback": true
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "4b99e57c61e3808234c7fcf1997d355b1d9b8533",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B18/20260923T025537Z-account03-B18-QFORM-r22.md"
+  },
+  "next_implication": "Robustify the exact cut-rank-one exclusion: in the approximate all-cut-near-rank-one state, force a quantitatively payable rank-two product-preserving packet or route to an existing ridge/grouped/pair mechanism, without claiming one fixed uniformly good minor.",
+  "continuity": "Partner zero-pivot control branch continuous; new strict-N3 result is an exclusion theorem; full-target continuity remains open."
+}

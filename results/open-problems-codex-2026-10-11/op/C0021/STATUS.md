@@ -1,0 +1,18 @@
+STATE: DONE
+NEXT: Develop a residual-state-dependent quadratic-variation/cost lower potential and audit it on unrestricted interleaving states.
+VERDICT: PARTIAL
+2026-10-12: Exact source confirmed: arXiv:1102.5761, Exercise VIII.5, PDF p.97 / printed p.95; fair independent bits, zero-error single-bit algorithms.
+2026-10-12: Bounded literature search completed with limitations: no source-matching solution verified; OpenAlex and Semantic Scholar returned HTTP 429, preventing a completed citing-work search. All requests and failures recorded in LITERATURE.md and JSON logs.
+2026-10-12: Complete handwritten proofs recovered and checked: delta_k=D_k/3^k, submultiplicativity and logarithmic exponent existence, D_k>=(9/4)^k, sigma<=log_3(4/3). Strict recursively depth-first optimum (5/2)^k proved; interleaving is necessary for better algorithms.
+2026-10-12: Independent finite computations reproduced D1=5/2, D2=393/64, D3=15796051/1048576. Raw depth-two DP agreed; complete depth-three structural certificate checked 14,066 states / 66,946 successor pairs with zero errors.
+2026-10-12: Lean six rational checks passed (exit 0); no sorry/native_decide; axioms propext, Classical.choice, Quot.sound. Probability proofs and the DP are not Lean formalized.
+2026-10-12: Two new bounded depth-four rollout jobs hit caps and gave no completed new bound. Full archived policy-gain replay hit its time cap. Final-only archived policy replay succeeded: 52 legal overrides, 29,757 reached states, exact U4=1332467382289843607/36028797018963968, about 236 seconds.
+2026-10-12: Strongest checked bounds: 1-log(U4)/(4 log 3) <= sigma <= log(4/3)/log 3, approximately [0.1784023402720471, 0.2618595071429149]. This verifies earlier work; it does not determine sigma. Precise remaining gap is recorded in ATTEMPT.md. Attempt finished with partial results, not a solved-problem claim.
+2026-10-12: Reopened at user request for one further serious attempt.
+2026-10-12: Further attempt proved bounded-increment test-function obstruction and optimal monotone transport coupling. Independent LPs agree. Constrained median DP independently certified at depth 3, giving a strict restricted-class gap; exponent interval unchanged.
+2026-10-12: Further attempt completed. Two new routes were written and pursued: optimized martingale/transport lower tests and recursive posterior-median construction.
+2026-10-12: Proved exact bounded-increment obstruction, including vector tests and fixed weights; constructed an all-depth optimal monotone transport bijection of mean Hamming distance (3/2)^k. Independent edge and relaxed-history LPs agree.
+2026-10-12: Extended transport route: every fixed finite-order W_p has exponential base 3/2; optimum maximum displacement is exactly 2^k. Exact squared transport at depth two is 337/64, not D2=393/64, with full integer primal/dual certificate and independent 65536-pair verification. These auxiliary results do not determine sigma.
+2026-10-12: Posterior-median class with optimal adaptive ties has M3=257554309/16777216>D3; gap 4817493/16777216. Independent structural verification: 2207 states, 2625 transition pairs, zero errors. Three-query median-eligible optimal prefix reaches a state with positive next-query median regret 477/32768.
+2026-10-12: Combined Lean finite coupling/rational gap check passed, exit 0; finite facts use decide +kernel; no sorry/native_decide. General probability proofs are handwritten, not Lean formalized.
+2026-10-12: No exponent improvement or solution obtained. Previously checked interval approximately [0.1784023402720471,0.2618595071429149] remains unchanged. Complete new proofs and remaining gap saved in ATTEMPT.md and SECOND_ATTEMPT.md.

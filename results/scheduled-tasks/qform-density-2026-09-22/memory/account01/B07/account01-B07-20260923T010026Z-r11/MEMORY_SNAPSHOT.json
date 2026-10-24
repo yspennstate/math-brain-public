@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "account01-B07-20260923T010026Z-r11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "target_status": "OPEN",
+  "continuity_status": "PROVED_ONLY_ON_PAIRED_BL_SUBBRANCH",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "account_slot": "account02/B07",
+    "name": "QFORM-Q0-DIFFUSE-OR-BIANCHOR-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "edccaf86c8d51e96d800658b8efafe12fd443508",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T003127Z-account02-B07-r11/REPORT.md",
+    "application": "Partner fixed-anchor packet mass >1/15552 is dominated by full anchored M00; new exterior/correlation theorem converts it into paired edge volume or star-star-transverse volume, and the paired-light N3 branch is paid by a continuous density bound <223."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-ANCHORED-THIRD-WEDGE-DECOMPOSITION-v1",
+      "status": "PROVED",
+      "statement": "For B=[[b,r^T],[c,C]], the anchored third-minor array is T=b wedge^2 C-L_c C i_r; ||L_c C i_r||_HS^2=||r||^2||c||^2||P_cperp C P_rperp||_F^2."
+    },
+    {
+      "id": "QFORM-BIANCHOR-PAIRED-23-BL-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "For paired anchored 3x3/residual 2x2 volume Z_pair and one residual paired marginal side <=h<5/8, the full form has continuous density <=10 e^(2/5)2^(-1/10)(2h)^(-1/2)/(5-8h) Z_pair^(-1/5)."
+    },
+    {
+      "id": "QFORM-Q0-BIANCHOR-N3-LIGHT-PAID-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "In N3(tau), tau<=1, the partner bi-anchor packet plus U-correlation and paired marginal max<=9/16 gives ||p_Q||_inf<223 continuously; otherwise a four-anchor paired packet >1/(248832 sqrt2) remains."
+    }
+  ],
+  "unresolved_implication": "QFORM-BIANCHOR-FOURANCHOR-OR-TRANSVERSE-PAYMENT-v1: in N3 pay either paired four-anchor volume >1/(248832 sqrt2) or ||r||^2||c||^2||P_cperp C P_rperp||_F^2>1/62208 while retaining arbitrary same-side curvature and extra spectrum. q=1,2,3 overlap branches remain separate.",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b3a92337e7ff978bd203ce76fff618e57a9380e0",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T010026Z-r11/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "36a2f480f032f9197e129ec0f0de0111b5583bfa",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B07/account01-B07-20260923T010026Z-r11.md"
+  }
+}

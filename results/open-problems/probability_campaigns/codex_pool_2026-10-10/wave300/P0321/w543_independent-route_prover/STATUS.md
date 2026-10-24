@@ -1,0 +1,9 @@
+STATE: NEEDS_REVIEW
+NEXT: Coordinator checks admission/login provenance for bundle_001; next proof step is a defect-aware microscopic angle approximation with error o(C6(r)).
+
+2026-10-10: Read PRIMARY_DIRECTIVE.md. Began source and local-attempt recovery; no mathematical success or current openness asserted.
+2026-10-10: Historical source row saved in CLAIMS.jsonl; route recorded before peer proofs. Recovered Lewin section VI.2; exact decay quantifiers are absent. Recall timed out after 60 seconds; named joint-structure and perceptron-gap scars read. Statement-first message and lemma-boundary claim queued to peers.
+2026-10-10: Saved H1-H4 and the single microscopic reduction gap immediately in ATTEMPT.md and CLAIMS_MODEL.jsonl. Prior local P0321 attempt concerns one-point symmetry averaging; this Fourier/shear route is disjoint. Initial unqualified team sends failed; retried via the existing team with explicit direct recipients.
+2026-10-10: Direct mesh statement-first receipt to w544 confirmed; boundary notices delivered to w545, w540, w546 and w549. Both team-name routes failed and were replaced. Read-only population query recovered exactly two P0321 nodes. Prepared six concept/definition cards and six typed relations; no unreviewed theorem entries. Fresh pressure gates deny numerical experiments; a bounded runner records WITHHELD rather than a pass.
+
+2026-10-10: Delivered complete packet to w545 (msg-cbf4132688); H1-H4 scoped KEEP by w544 and w545, audited proof byte match true. Submitted six definition/concept drafts and six typed relations to ~\math-brain-inbox\w543\bundle_001.json with exact readback. Final integrity checks: 81 pass, zero fail. Numerical checker: WITHHELD, zero cases. Full P0321 remains unresolved, current openness UNKNOWN; no cross-account admission, ingestion or retrieval claim.

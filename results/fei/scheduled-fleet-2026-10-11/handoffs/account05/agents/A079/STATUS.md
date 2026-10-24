@@ -1,0 +1,2 @@
+STATE: Stage5 complete: A034 all-product conditional theorem independently HOLDS; A032 acceptance consumed; nonproduct fair-branch endpoint H<=2I proved, sharp H3/I1.5; exact checks PASS; FEI OPEN.
+NEXT: Unequal-mass nonfair frequency-branch transfer with actual partial-row norms/heights, h2(q), both full spectra, signed address gap and one unused physical reserve; A032/A034 consume, A088/A094 review.

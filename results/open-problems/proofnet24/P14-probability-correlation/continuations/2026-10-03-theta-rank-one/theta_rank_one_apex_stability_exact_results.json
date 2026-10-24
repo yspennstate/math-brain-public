@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "sympy_version": "1.14.0",
+  "scope": "K_{2,3}: w_(0,j)=p*a_j and w_(1,j)=q*a_j, all five parameters positive",
+  "backbone_forests": 54,
+  "augmented_forests_at_unit_weights": 712,
+  "spoke_polynomial_terms": 32,
+  "template_identity_checks": 13,
+  "pair_reductions": {
+    "endpoint_endpoint": [
+      [
+        0,
+        1
+      ]
+    ],
+    "endpoint_internal": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ]
+    ],
+    "internal_internal": [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ]
+  },
+  "certificates": {
+    "endpoint_pair_leading_form": {
+      "removed_monomial": [
+        0,
+        0
+      ],
+      "U_term_count": 4,
+      "W_term_count": 4,
+      "determinant_term_count": 14,
+      "determinant_factorization": "b**2*c**2*p**2*q**2*(b**2*c*p**2*q + b**2*c*p*q**2 + b**2*p*q + b*c**2*p**2*q + b*c**2*p*q**2 + b*c*p**2 + 2*b*c*p*q + b*c*q**2 + b*p + b*q + c**2*p*q + c*p + c*q + 1)"
+    },
+    "shared_endpoint_discriminant_form": {
+      "removed_monomial": [
+        0,
+        0
+      ],
+      "U_term_count": 14,
+      "W_term_count": 14,
+      "determinant_term_count": 96,
+      "determinant_factorization": "b**2*c**2*(a*p + 1)*(a*q + 1)*(a**2*b*c*p**3*q + 2*a**2*b*c*p**2*q**2 + a**2*b*c*p*q**3 + a**2*b*p**2*q + a**2*b*p*q**2 + a**2*c*p**2*q + a**2*c*p*q**2 + a**2*p*q + a*b**2*c*p**3*q + 2*a*b**2*c*p**2*q**2 + a*b**2*c*p*q**3 + a*b**2*p**2*q + a*b**2*p*q**2 + a*b*c**2*p**3*q + 2*a*b*c**2*p**2*q**2 + a*b*c**2*p*q**3 + a*b*c*p**3 + 3*a*b*c*p**2*q + 3*a*b*c*p*q**2 + a*b*c*q**3 + a*b*p**2 + 2*a*b*p*q + a*b*q**2 + a*c**2*p**2*q + a*c**2*p*q**2 + a*c*p**2 + 2*a*c*p*q + a*c*q**2 + a*p + a*q + b**2*c*p**2*q + b**2*c*p*q**2 + b**2*p*q + b*c**2*p**2*q + b*c**2*p*q**2 + b*c*p**2 + 2*b*c*p*q + b*c*q**2 + b*p + b*q + c**2*p*q + c*p + c*q + 1)"
+    },
+    "internal_pair_leading_form": {
+      "removed_monomial": [
+        0,
+        0
+      ],
+      "U_term_count": 4,
+      "W_term_count": 4,
+      "determinant_term_count": 14,
+      "determinant_factorization": "a**2*b**2*p**2*q**2*(a**2*b*p**2*q + a**2*b*p*q**2 + a**2*p*q + a*b**2*p**2*q + a*b**2*p*q**2 + a*b*p**2 + 2*a*b*p*q + a*b*q**2 + a*p + a*q + b**2*p*q + b*p + b*q + 1)"
+    },
+    "internal_pair_discriminant_form": {
+      "removed_monomial": [
+        0,
+        0
+      ],
+      "U_term_count": 51,
+      "W_term_count": 51,
+      "determinant_term_count": 411,
+      "determinant_factorization": "p**2*q**2*(a*p + a*q + b*p + b*q + 2)*(a*p + a*q + c*p + c*q + 2)*(b*p + b*q + c*p + c*q + 2)*(a**2*b*c*p**3*q + 2*a**2*b*c*p**2*q**2 + a**2*b*c*p*q**3 + a**2*b*p**2*q + a**2*b*p*q**2 + a**2*c*p**2*q + a**2*c*p*q**2 + a**2*p*q + a*b**2*c*p**3*q + 2*a*b**2*c*p**2*q**2 + a*b**2*c*p*q**3 + a*b**2*p**2*q + a*b**2*p*q**2 + a*b*c**2*p**3*q + 2*a*b*c**2*p**2*q**2 + a*b*c**2*p*q**3 + a*b*c*p**3 + 3*a*b*c*p**2*q + 3*a*b*c*p*q**2 + a*b*c*q**3 + a*b*p**2 + 2*a*b*p*q + a*b*q**2 + a*c**2*p**2*q + a*c**2*p*q**2 + a*c*p**2 + 2*a*c*p*q + a*c*q**2 + a*p + a*q + b**2*c*p**2*q + b**2*c*p*q**2 + b**2*p*q + b*c**2*p**2*q + b*c**2*p*q**2 + b*c*p**2 + 2*b*c*p*q + b*c*q**2 + b*p + b*q + c**2*p*q + c*p + c*q + 1)"
+    }
+  },
+  "conclusion": "all ten Rayleigh differences are nonnegative on R^5; the multiaffine polynomial is real stable"
+}

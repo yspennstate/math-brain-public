@@ -1,0 +1,9 @@
+# P0046: a sufficient infinite-interface condition (proof, pending w347)
+
+Let G be a connected countable locally finite graph and F a random spanning forest. Conditional on F, form a graph H on the F-components, joining two distinct components when infinitely many G-edges run between them. Suppose H is connected almost surely (a single component is permitted). Then for any 0<delta<1, F united with independent Bernoulli(delta) G-edges is connected almost surely.
+
+Proof. For any given adjacent pair in H, the probability that none of its first k boundary edges is added is (1-delta)^k, which tends to zero. There are at most countably many pairs of components; conditional on F, almost surely every edge of H has at least one added representative. A finite H-path between any two F-components therefore lifts to a finite G-path using F-edges and added representatives. This proves connectivity. If the law of F is invariant under the given graph action, independent identical edge sprinkling preserves that invariance. Every edge is added outside F with probability delta P(e not in F)<=delta. Choose delta<epsilon for the strict inequality requested in P0046.
+
+Example: in Z^2 take F to be all vertical edges. Its components are columns, adjacent columns have infinitely many horizontal boundary edges, and H is the line. Every positive sprinkling connects F. In a window of 2H+1 horizontal levels with q columns, the exact connectivity probability is [1-(1-delta)^(2H+1)]^(q-1).
+
+The hypothesis is not established for a general FUSF. The source explicitly notes that independent sprinkling fails on some nonamenable graphs, so this criterion is only a sufficient special case and a diagnostic for the missing interface structure. It does not solve Question 10.12 or the associated cost-equality problem.

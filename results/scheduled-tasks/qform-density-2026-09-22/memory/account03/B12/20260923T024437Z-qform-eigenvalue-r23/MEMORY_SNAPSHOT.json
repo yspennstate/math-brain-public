@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260923T024437Z-qform-eigenvalue-r23",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_start_commit": "c95efc153570fce4684fcdd4c31b10c168a09e61",
+  "final_control_refresh_commit": "6a3eccc60f520b86a30dbaddae7a28e9477cec9f",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-THRESHOLD-PRESERVING-SCHUR-INHERITANCE-v1",
+      "source": "yspennstate/math-open-problems@dd754a0bfed889fd29c931b7112c8c3285fc83e8:proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T004313Z-qform-eigenvalue-r21/REPORT.md",
+      "scope": "invertible ORIGINAL-coordinate physical Schur elimination loses at most pivot dimension in threshold count, with no threshold-scale loss"
+    },
+    {
+      "id": "account04/B12-mixed-norm-shear",
+      "source": "yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e:proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260922T192552Z-account04-B12-mixed-shear-r1/REPORT.md",
+      "scope": "M(h)=integral esssup_u h(u,z) dz controls U+psi(Z) for arbitrary measurable psi without independence"
+    }
+  ],
+  "results": [
+    {
+      "id": "QFORM-ONE-SIDED-SCALAR-SCHUR-COMPILER-v2",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "If Q=a(X+m(Y))^2+R(Y), X is an original cap-one coordinate, and ||p_R||inf<=M, then ||p_Q||inf<=2sqrt(M/|a|)."
+    },
+    {
+      "id": "QFORM-CERTIFICATE-ADAPTED-PIVOT-CHAIN-v1",
+      "status": "PROVED_SUPPORTING_REDUCTION",
+      "statement": "For |a_j|>=tau_j L and terminal cap B/L, B0<=4^(1-2^-k) B^(2^-k) product_j tau_j^(-2^-j). In particular pivots >=(4/B)L preserve the same terminal constant B/L through arbitrary chain length."
+    }
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B12",
+    "run": "20260922T192552Z-account04-B12-mixed-shear-r1",
+    "actual_inequality": "M(h)<=B/L implies terminal ||p_(U+psi(Z))||inf<=B/L; composing with the new pivot chain yields the same B/L if all preceding physical pivots satisfy |a_j|>=(4/B)L. For the partner's B=4pi example, threshold=1/pi and the final cap remains 4pi."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4894ced504d555e84620c46029ed08a2af389d9f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T024437Z-qform-eigenvalue-r23/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T024437Z-qform-eigenvalue-r23/CHECK.py",
+    "checker_result": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T024437Z-qform-eigenvalue-r23/CHECK_RESULT.json"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B12/20260923T024437Z-qform-eigenvalue-r23.md",
+  "unresolved_implication": "Extract a grouped-bank or weighted-volume terminal certificate in the dense mixed-sign residual class after certificate-adapted peeling, especially when every physical diagonal is below about 0.1888 L at the present collective-tail constant and local minors are tiny.",
+  "next_mechanism": "Use the grouped-bank/weighted-volume rather than another one-coordinate pivot; preserve product provenance before inverse curvature costs.",
+  "full_target_status": "OPEN",
+  "continuity_status": "NOT_PROVED_BY_THIS_RUN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

@@ -1,0 +1,242 @@
+[
+ {
+  "problem_id": "D0049",
+  "source_id": "ddg_lqg_metric_intro_2021",
+  "locator": "Problem 5.1, PDF p. 23",
+  "title": "The Hausdorff dimension of gamma-LQG, equivalently the relation between Q and xi",
+  "statement": "For gamma in (0,2), compute the Hausdorff dimension d_gamma of the plane equipped with the gamma-LQG metric. More generally, for xi > 0 determine the relationship between the parameters Q and xi of Liouville first passage percolation. The only known case is d_{sqrt(8/3)} = 4, equivalently Q(1/sqrt 6) = 5/sqrt 6. The source notes that the relation between Q and xi is not universal across different log-correlated Gaussian fields, which is one indication of the difficulty.",
+  "dedup_key": "lqg_hausdorff_dimension_d_gamma",
+  "status_search": "WebSearch 2026-09-08 for LQG metric dimension results; the sources located (Ding-Gwynne dimension monotonicity and bounds, Ang, Gwynne-Pfeffer numerical bounds, and the source's own Section 5) all give bounds rather than a value, and the source itself, dated 2021, is the most recent survey I fetched. The best rigorous bounds quoted are 3.550408 <= d_{sqrt 2} <= 3.63299. No evidence of resolution.",
+  "attempt": {
+   "method": "Ask what kind of object d_gamma is. The known relations are d_gamma = 2 Q / xi with Q = 2/gamma + gamma/2, so a formula for d_gamma is the same as a formula for the LFPP exponent xi in terms of gamma. The exponent xi is defined by a subadditive limit for the LFPP distance, so it is a Lyapunov-type exponent for a multiplicative cascade of Gaussian weights.",
+   "result": "The honest structural statement is that d_gamma is a first-passage percolation time constant for a log-correlated environment, and the only quantity of that type with a known closed form in two dimensions is the sqrt(8/3) case, which is known NOT from the metric side at all but from the Brownian-map bijections. That is a strong warning against expecting a closed form: the value 4 is a combinatorial output of the Schaeffer bijection, and no bijection is available for other gamma. Two soft constraints I can record: (i) d_gamma is strictly increasing in gamma (Ding-Gwynne), continuous, with d_0+ = 2 and d_{2-} = 4 * something at criticality; (ii) the Watabiki prediction is false at small gamma (Ding-Goswami), so any conjectural formula must fail to match Watabiki near gamma = 0, which rules out the whole family of formulas obtained by analytic continuation of the Watabiki ansatz.",
+   "obstruction": "The wall is that no exactly solvable structure is known for the LQG metric away from gamma = sqrt(8/3). Every exponent that has been computed in LQG (measure exponents, the KPZ relation, ball boundary dimensions) is a consequence of the multiplicative structure of the MEASURE, which is exactly solvable; the metric is a first-passage time and is not a function of the measure. This is the same wall that prevents computing the time constant in ordinary first-passage percolation, and there is no reason to think the LQG case is easier except that its environment is exactly scale invariant.",
+   "key_identity": "d_gamma = 2Q/xi with Q = 2/gamma + gamma/2; d_{sqrt(8/3)} = 4 is known only through the Brownian map bijections."
+  }
+ },
+ {
+  "problem_id": "D0050",
+  "source_id": "ddg_lqg_metric_intro_2021",
+  "locator": "Problem 5.2, PDF p. 24",
+  "title": "Gromov-Hausdorff convergence of weighted random planar maps to gamma-LQG for gamma other than sqrt(8/3)",
+  "statement": "Show that for each gamma in (0,2], the appropriate types of random planar maps, equipped with their rescaled graph distance, converge in the Gromov-Hausdorff sense to gamma-LQG surfaces equipped with the gamma-LQG metric. Uniform maps correspond to gamma = sqrt(8/3), spanning-tree-weighted maps to gamma = sqrt 2, Ising-weighted maps to gamma = sqrt 3. So far the problem is solved only for gamma = sqrt(8/3).",
+  "dedup_key": "planar_map_gromov_hausdorff_convergence_to_lqg_metric",
+  "status_search": "WebSearch 2026-09-08 on LQG metric convergence; the results and the source both record the sqrt(8/3) case (Le Gall, Miermont, Miller-Sheffield) as the only solved one, and later work (Ding-Gwynne, Gwynne-Miller on the metric's existence and uniqueness for all gamma) constructs the continuum metric without proving map convergence. No evidence of resolution.",
+  "attempt": {
+   "method": "Identify what the sqrt(8/3) proof uses and what is available for other gamma. The Miller-Sheffield programme identifies the Brownian map with sqrt(8/3)-LQG using the QLE growth process and the fact that the Brownian map has an intrinsic metric constructed from the Brownian snake; for other gamma there is no discrete metric-space limit theorem at all.",
+   "result": "The available discrete input for general gamma is the mating-of-trees convergence, which gives the map together with a space-filling curve in the peanosphere topology, plus the strong-coupling results with the mated-CRT map that give graph distances up to polylogarithmic errors (this is the content of the companion survey by Gwynne, Holden and Sun, recorded in this ledger as D0061-D0071). So the honest reduction is: Problem 5.2 for a given map model follows from (a) an up-to-constants comparison of graph distance in the model with the mated-CRT map, and (b) a Gromov-Hausdorff convergence of the mated-CRT map to the LQG metric. Item (b) is the more likely to be within reach because the mated-CRT map is defined directly from the continuum, and item (a) is exactly what the polylogarithmic strong-coupling errors fail to give.",
+   "obstruction": "The concrete wall is the polylogarithmic loss in the strong coupling of the encoding walk with Brownian motion (the Komlos-Major-Tusnady/Zaitsev rate), which is not good enough for a scaling limit of distances: a Gromov-Hausdorff statement needs distances correct up to a factor tending to 1, whereas the coupling gives them up to a polylogarithmic factor. Removing the loss would require a strong-coupling theorem with error o(n^{eps}) for every eps, which is false in general for the KMT rate.",
+   "key_identity": "Route: model to mated-CRT map up to constants, then mated-CRT map to the LQG metric; the polylogarithmic coupling error blocks the first step."
+  }
+ },
+ {
+  "problem_id": "D0051",
+  "source_id": "ddg_lqg_metric_intro_2021",
+  "locator": "Problem 5.3, PDF p. 24",
+  "title": "The thickness spectrum of a point on an LQG geodesic",
+  "statement": "Let xi > 0 and let P be a D_h-geodesic for the LQG metric. Compute the Hausdorff dimension of the intersection of P with the set T^alpha_h of alpha-thick points, for each alpha in [-2,2], with respect to both D_h and the Euclidean metric. More weakly, is there a unique value of alpha maximising this dimension, i.e. a typical thickness for a point on an LQG geodesic? The analogue for the boundary of a metric ball is solved, with maximiser alpha = xi (Euclidean) and alpha = gamma (LQG).",
+  "status_search": "WebSearch 2026-09-08 on LQG geodesics and thick points; the ball-boundary analogue (Ding-Gwynne; Gwynne-Pfeffer-Sheffield) is solved and is cited in the source, and the source (2021) states the geodesic case is open. Nothing found resolving it. No evidence of resolution.",
+  "attempt": {
+   "method": "Compare with the solved ball-boundary case and see which step transfers. For the ball boundary the dimension is computed by a first-moment count over alpha-thick points weighted by the probability that a thick point lies on the boundary, and the maximiser comes from optimising a concave exponent in alpha.",
+   "result": "The same first-moment scheme sets up cleanly for geodesics and identifies the missing input. The number of Euclidean eps-balls containing an alpha-thick point is eps^{-(2 - alpha^2/2)}; the probability that a given eps-ball is hit by the geodesic is eps^{2 - d_geo} where d_geo is the Euclidean dimension of the geodesic. If these two events were independent the answer would be the naive intersection dimension max(0, 2 - alpha^2/2 - d_geo-complement), with a unique maximiser at alpha = 0. But they are strongly positively correlated for alpha of the sign that makes the metric locally SHORT (negative alpha, thin points), because a geodesic prefers to travel through thin points -- the LQG metric assigns small length to regions where the field is low. So the correct exponent involves the joint law and the maximiser should be at a NEGATIVE alpha, in contrast to the ball boundary where it is at the positive value xi. That sign prediction is the output of this attempt and it is testable.",
+   "obstruction": "The joint law of the field along a geodesic is exactly what is not available: a geodesic is a measurable function of the whole field and there is no known description of the conditional law of the field given the geodesic (no analogue of the Markov property along an SLE curve). Every existing computation of geodesic properties uses only up-to-constants estimates, which cannot produce a dimension.",
+   "key_identity": "Naive independent count gives max(0, 2 - alpha^2/2 - (2 - d_geo)); positive correlation with thin points should push the maximiser to negative alpha."
+  }
+ },
+ {
+  "problem_id": "D0052",
+  "source_id": "gwynne_random_surfaces_2020",
+  "locator": "Problem 1, PDF p. 9",
+  "title": "The Hausdorff dimension of gamma-LQG as a metric space (Notices survey statement)",
+  "statement": "What is the Hausdorff dimension d_gamma of a gamma-LQG surface viewed as a metric space, for gamma in (0,2) other than sqrt(8/3)? The value is not known even at a physics level of rigour: Watabiki's prediction was disproved for small gamma by Ding and Goswami; it is known that gamma maps to d_gamma is strictly increasing, and 3.550408 <= d_{sqrt 2} <= 3.63299.",
+  "dedup_key": "lqg_hausdorff_dimension_d_gamma",
+  "status_search": "Same as D0049: WebSearch 2026-09-08 found only bounds and monotonicity, no value. No evidence of resolution. NOTE: this is the same mathematical problem as D0049, stated independently in a second source; the shared dedup_key makes the pair count once in the distinct-problem total.",
+  "attempt": {
+   "method": "Use the bounds quoted in this source as a numerical constraint on candidate closed forms, which the other statement of the problem (D0049) does not do.",
+   "result": "The interval 3.550408 <= d_{sqrt 2} <= 3.63299 is narrow enough to eliminate simple guesses, and doing that elimination is the concrete contribution here. Watabiki's formula gives d_gamma = 1 + gamma^2/4 + sqrt((1+gamma^2/4)^2 + gamma^2), which at gamma = sqrt 2 evaluates to 1.5 + sqrt(2.25 + 2) = 1.5 + 2.0616 = 3.5616, inside the interval -- so the quoted bounds do NOT by themselves refute Watabiki at gamma = sqrt 2 (the refutation of Ding-Goswami is at SMALL gamma, as the source says). The linear interpolation between d_0 = 2 and d_{sqrt(8/3)} = 4 gives 2 + 2*(sqrt2/sqrt(8/3)) = 2 + 2*0.8660 = 3.732, which is ABOVE the upper bound 3.63299 and is therefore refuted; so d_gamma is strictly concave somewhere on (0, sqrt(8/3)) if it is smooth. That concavity is a genuine, checkable consequence of the quoted bounds that I did not find stated in either source.",
+   "obstruction": "Same wall as D0049: no exactly solvable structure for the metric away from gamma = sqrt(8/3). The numerical eliminations above constrain but do not determine the function.",
+   "key_identity": "Linear interpolation between d_0 = 2 and d_{sqrt(8/3)} = 4 predicts d_{sqrt 2} = 3.732 > 3.63299, so d_gamma is not affine; Watabiki's value 3.5616 at gamma = sqrt 2 is inside the rigorous window."
+  }
+ },
+ {
+  "problem_id": "D0053",
+  "source_id": "gwynne_random_surfaces_2020",
+  "locator": "Problem 2, PDF p. 10",
+  "title": "Convergence of weighted random planar maps to gamma-LQG in the Gromov-Hausdorff sense and under embeddings",
+  "statement": "Show that weighted random planar map models converge in distribution to gamma-LQG surfaces for gamma in (0,2) other than sqrt(8/3), both in the Gromov-Hausdorff sense and under suitable embeddings into the plane. Both types of convergence are known for certain uniform planar maps toward sqrt(8/3)-LQG.",
+  "dedup_key": "planar_map_gromov_hausdorff_convergence_to_lqg_metric",
+  "status_search": "Same as D0050: WebSearch 2026-09-08 found only the sqrt(8/3) results plus the continuum metric construction. No evidence of resolution. NOTE: same mathematical problem as D0050 from a second source; shared dedup_key so the pair counts once.",
+  "attempt": {
+   "method": "Look at the embedded (conformal) half of the statement, which the other formulation (D0050) does not emphasise, and ask what the Cardy-embedding proof for uniform triangulations used.",
+   "result": "The embedded convergence for uniform triangulations (Holden-Sun) is proved via the Cardy embedding, whose definition uses percolation observables on the map, and the key probabilistic input is the joint convergence of the map with TWO independent percolation configurations (this is Problem 6.4 of the mating-of-trees survey, recorded here as D0064). So the honest statement is that for each new model one needs an embedding defined from an observable of the corresponding statistical mechanics model plus a two-independent-copies joint convergence theorem for that observable. That is a concrete programme, model by model, and it is why the general statement is hard: it is not one theorem but a family indexed by the decorating model.",
+   "obstruction": "For spanning-tree-weighted maps (gamma = sqrt 2) the natural observable is the Mullin-bijection walk, and the two-copies statement is exactly Problem 6.4 for that model; for Ising-weighted maps (gamma = sqrt 3) the corresponding bijection is the hamburger-cheeseburger encoding whose walk is non-Markovian, so even the strong coupling with Brownian motion is unavailable (Problem 6.2 of the other survey, D0062 here). Those two are the walls.",
+   "key_identity": "Embedded convergence needs a model-specific embedding from a statistical-mechanics observable plus a two-independent-copies joint convergence theorem."
+  }
+ },
+ {
+  "problem_id": "D0054",
+  "source_id": "gwynne_random_surfaces_2020",
+  "locator": "Problem 3, PDF p. 10",
+  "title": "Random metrics from log-correlated Gaussian fields in dimension three and higher",
+  "statement": "Is it possible to construct random metrics associated with log-correlated Gaussian fields on R^n, or on n-dimensional manifolds, for n >= 3? Regularised random measures associated with such fields exist in every dimension, but the associated metric has been constructed only in dimension 2.",
+  "status_search": "WebSearch 2026-09-08 on LQG metrics and log-correlated fields; the metric construction literature found (Ding-Dubedat-Dunlap-Falconet; Gwynne-Miller uniqueness) is two-dimensional throughout, and the higher-dimensional work found concerns measures (Rhodes-Vargas; Berestycki) rather than metrics. No evidence of resolution.",
+  "attempt": {
+   "method": "Check whether the two-dimensional construction's key inputs have n-dimensional analogues. The 2D construction goes through Liouville first passage percolation: mollify the field, define the length of a path as the integral of exp(xi h_eps) along it, prove tightness of the normalised metric, then prove uniqueness of the subsequential limit from a list of axioms.",
+   "result": "Two of the three steps transfer verbatim and one does not, and locating the failure is the useful output. (a) The mollified LFPP metric is defined in every dimension with no change. (b) The tightness proof rests on a multiplicative-chaos-style moment bound plus the Efron-Stein/percolation argument for the concentration of distances, both of which are dimension-agnostic. (c) The UNIQUENESS axioms include the Weyl scaling relation and, crucially, a locality/Markov property of the field, and the axiomatic characterisation of Gwynne-Miller uses conformal covariance -- an essentially two-dimensional input, since the Weyl transformation of the metric under a conformal map has no analogue for n >= 3 (conformal maps of R^n for n >= 3 are Mobius by Liouville's theorem, an extremely rigid family). So the existence half of the problem is plausibly within reach in every dimension, and the uniqueness half is genuinely two-dimensional.",
+   "obstruction": "The wall is the rigidity of conformal maps in dimension >= 3 (Liouville's theorem): the uniqueness argument in 2D uses the infinite-dimensional conformal group to transport the metric between subdomains, and in higher dimensions that group is finite dimensional and cannot do the job. A replacement would have to be a purely metric-measure characterisation, e.g. by a Weyl scaling plus a Markov property with respect to arbitrary subdomains, and no such characterisation is known.",
+   "key_identity": "Tightness is dimension-agnostic; uniqueness in 2D uses the infinite-dimensional conformal group, which by Liouville's theorem does not exist for n >= 3."
+  }
+ },
+ {
+  "problem_id": "D0055",
+  "source_id": "maxtype_recursive_open_2017",
+  "locator": "Conjecture of Derrida and Retaux, equation (3), Section 1, PDF p. 2",
+  "title": "The Derrida-Retaux free-energy conjecture: essential singularity with exponent 1/2",
+  "statement": "In the parametric setting P_{X_0} = (1-p) delta_0 + p P_{Y_0}, let F_infinity(p) be the free energy of the max-type recursion X_{n+1} = (X_n^{(1)} + ... + X_n^{(m)} - 1)_+. If p_c > 0 then F_infinity(p) = exp(-(K + o(1)) / (p - p_c)^{1/2}) as p decreases to p_c, for some constant K in (0, infinity). The source states 'We have not been able to prove or disprove the conjecture.'",
+  "status_search": "WebSearch 2026-09-08 'Derrida-Retaux conjecture recursive model proved Chen Dagard Derrida Hu Lifshits Shi'. Chen, Dagard, Derrida, Hu, Lifshits and Shi, 'The Derrida-Retaux conjecture on recursive models', arXiv:1907.01601, Ann. Probab. 49 (2021) 637-670: the search summary states they prove that in the nearly supercritical regime, under a suitable integrability assumption on the initial distribution, the free energy vanishes at the transition with an essential singularity with exponent 1/2, confirming the conjecture under that condition. Resolved (with the integrability caveat).",
+  "admitted": false,
+  "current_status": "resolved_in_literature",
+  "result_status": "not_attempted_resolved",
+  "resolved_by": "X. Chen, V. Dagard, B. Derrida, Y. Hu, M. Lifshits and Z. Shi, 'The Derrida-Retaux conjecture on recursive models', arXiv:1907.01601, Ann. Probab. 49 (2021) 637-670. CAVEAT: the result is proved under a suitable integrability assumption on the initial law, and the source's statement allows 'possibly under some additional integrability conditions', so the match is good; the fully unconditional statement was not confirmed by me. Abstract and search summaries read 2026-09-08 (bounded recall)."
+ },
+ {
+  "problem_id": "D0056",
+  "source_id": "maxtype_recursive_open_2017",
+  "locator": "Conjecture 1, PDF p. 3",
+  "title": "Survival probability of the critical Derrida-Retaux recursion decays like 4/((m-1)^2 n^2)",
+  "statement": "Assume the critical condition (m-1) E(X_0 m^{X_0}) = E(m^{X_0}) < infinity with X_0 valued in Z_+. Then P(X_n != 0) is asymptotic to (4/(m-1)^2) n^{-2} as n tends to infinity. For m = 2 this was already conjectured by Collet et al. and by Derrida and Retaux.",
+  "status_search": "WebSearch 2026-09-08 as for D0055 plus 'critical P(X_n nonzero) n^{-2}'. The results found (the Ann. Probab. 2021 paper on the nearly supercritical free energy; 'Infinite differentiability of the free energy for a Derrida-Retaux system' arXiv:2405.09741; 'The Derrida-Retaux model on a geometric Galton-Watson tree' arXiv:2502.02991) concern the free energy and variants, and the search explicitly reported that the P(X_n != 0) asymptotic does not appear. No evidence of resolution.",
+  "attempt": {
+   "method": "Use the source's own Lemma 4 identity P(X_n = 0) = (1 - m E(X_n) + E(X_{n+1}))^{1/m} and the generating-function recursion to see what the conjecture is equivalent to.",
+   "result": "The four conjectures form a tight logical package, and disentangling it is the useful step. From Lemma 4, Conjecture 1 (survival probability asymptotic to 4/((m-1)^2 n^2)) plus the source's Lemma 5 implies Conjecture 3 (E(X_n) asymptotic to 4m/((m-1)^3 n^2)), as the source itself notes. Conversely, Conjecture 2 (conditional geometric limit with P(Y_infinity = k) = (m-1)/m^k) plus Conjecture 1 gives Conjecture 3 immediately since the conditional mean of the geometric law is m/(m-1). And Theorem 3 of the source, which is proved, gives E(m^{X_n}) - 1 of exact order 1/n, which is the b) half of Conjecture 4 up to the constant. So the whole package reduces to identifying the CONSTANT in the proved 1/n order of E(m^{X_n}) - 1, namely showing it equals 2/(m-1); Conjecture 4b then gives Conjecture 1 through the generating-function relation. That is a sharp reduction: the qualitative rate is already a theorem, and only the constant is missing.",
+   "obstruction": "The proved bounds of Theorem 3 have constants c_1, c_2 depending on m with a gap of order sqrt(Lambda_0 / P(X_0=0)), i.e. depending on the initial law, whereas the conjectured constant 2/(m-1) is universal. Closing the gap requires a renewal or fixed-point argument showing the recursion forgets its initial law at the critical point, and the natural candidate -- a smoothing/contraction estimate for the map on generating functions -- degenerates exactly at criticality because the linearisation has spectral radius 1. That is the wall.",
+   "key_identity": "P(X_n = 0) = (1 - m E(X_n) + E(X_{n+1}))^{1/m}; the package reduces to identifying the universal constant 2/(m-1) in E(m^{X_n}) - 1 ~ 2/((m-1) n)."
+  }
+ },
+ {
+  "problem_id": "D0057",
+  "source_id": "maxtype_recursive_open_2017",
+  "locator": "Conjecture 2, PDF p. 4",
+  "title": "Conditional geometric limit for the critical Derrida-Retaux recursion",
+  "statement": "Assume the critical condition (4). Conditionally on X_n != 0, the random variable X_n converges weakly to a limit Y_infinity with the geometric law P(Y_infinity = k) = (m-1)/m^k for integers k >= 1.",
+  "status_search": "Same WebSearch as D0056 on 2026-09-08; nothing found on the conditional limit law. No evidence of resolution.",
+  "attempt": {
+   "method": "Ask why the geometric law with ratio 1/m should be the fixed point. The critical condition is (m-1) E(X_0 m^{X_0}) = E(m^{X_0}), which is a statement about the tilted law with density proportional to m^{x}; so the natural object is the m-tilt of the law of X_n.",
+   "result": "The geometric law with P(Y = k) proportional to m^{-k} is exactly the law whose m-tilt is uniform on Z_+ in the improper sense, i.e. the unique law making the tilting weight m^{x} constant against the law. Concretely, the conjecture says that conditionally on survival, the critical recursion converges to the law that is invariant under the m-tilt up to normalisation. This identifies the conjectured limit as a quasi-stationary law for the tilted recursion, which is the correct framework: Y_infinity should be the Yaglom limit of the recursion conditioned on non-extinction, and the geometric shape is forced by the requirement that the tilted process be a martingale. So the conjecture is a Yaglom-type limit theorem, and the two ingredients needed are (i) tightness of the conditional laws and (ii) uniqueness of the quasi-stationary law.",
+   "obstruction": "Item (i) is the wall: the conditional law given survival could a priori escape to infinity, since the recursion adds m independent copies and subtracts 1, so conditioned on survival the value can grow. Ruling this out needs an upper bound on E(X_n | X_n != 0) of order 1, which by Conjectures 1 and 3 is equivalent to the constants in those conjectures, i.e. the same missing universal constant as in D0056.",
+   "key_identity": "The geometric law with ratio 1/m is the fixed point of the m-tilting operation; Conjecture 2 is a Yaglom limit for the recursion conditioned on non-extinction."
+  }
+ },
+ {
+  "problem_id": "D0058",
+  "source_id": "maxtype_recursive_open_2017",
+  "locator": "Conjecture 3, PDF p. 4",
+  "title": "Moment asymptotics for the critical Derrida-Retaux recursion",
+  "statement": "Assume the critical condition (4). Then E(X_n) is asymptotic to (4m/(m-1)^3) n^{-2}, and more generally for every real r in (0, infinity), E(X_n^r) is asymptotic to c(r)/n^2 with c(r) = (4/(m-1)) sum_{k >= 1} k^r m^{-k}.",
+  "status_search": "Same WebSearch as D0056 on 2026-09-08; nothing found. No evidence of resolution.",
+  "attempt": {
+   "method": "Combine the source's own reductions. The source shows (its Lemma 4 plus Lemma 5) that Conjecture 1 implies the E(X_n) half of Conjecture 3 without using Conjecture 2.",
+   "result": "The general-r half is exactly Conjectures 1 and 2 together, and saying so precisely is the content here: if P(X_n != 0) ~ 4/((m-1)^2 n^2) and the conditional law converges to the geometric law with ratio 1/m, then E(X_n^r) = P(X_n != 0) E(X_n^r | X_n != 0) tends to (4/((m-1)^2 n^2)) * sum_k k^r (m-1)/m^k = (4/((m-1) n^2)) sum_k k^r m^{-k} = c(r)/n^2, which is exactly the conjectured constant. So Conjecture 3 carries NO independent content beyond Conjectures 1 and 2 plus uniform integrability of X_n^r conditioned on survival. I verified the constant arithmetic: with r = 1, sum_k k m^{-k} = m/(m-1)^2, so c(1) = 4m/((m-1)(m-1)^2) = 4m/(m-1)^3, matching the source's stated constant. That arithmetic check is a control on my reading of the extracted formulas.",
+   "obstruction": "The uniform integrability of X_n^r given survival is not free for large r: the conditional law is conjecturally geometric with all moments, but a priori the conditional distribution could have a heavy tail contributed by rare large values, and controlling it requires the same moment bounds as D0056. So Conjecture 3 inherits both walls.",
+   "key_identity": "E(X_n^r) = P(X_n != 0) E(X_n^r | X_n != 0); with the two conjectured inputs this gives c(r) = (4/(m-1)) sum_k k^r m^{-k}, and c(1) = 4m/(m-1)^3 as stated."
+  }
+ },
+ {
+  "problem_id": "D0059",
+  "source_id": "maxtype_recursive_open_2017",
+  "locator": "Conjecture 4, PDF p. 4",
+  "title": "Generating-function asymptotics at criticality for the Derrida-Retaux recursion",
+  "statement": "Assume (4). Then (a) for s in (0,m) with s != 1, E(s^{X_n}) - 1 is asymptotic to (4m/(m-1)^2) ((s-1)/(m-s)) n^{-2}; and (b) E(m^{X_n}) - 1 is asymptotic to (2/(m-1)) n^{-1}. Part (b) is a strictly different order from part (a), and only the order (not the constant) in (b) is proved (Theorem 3 of the source).",
+  "status_search": "Same WebSearch as D0056 on 2026-09-08; nothing found. No evidence of resolution.",
+  "attempt": {
+   "method": "Check the internal consistency of (a) and (b) as s tends to m, which is the natural test of the conjectured constants and is not done in the source.",
+   "result": "The two parts are consistent in a way that explains the change of order, and verifying this is the contribution. Formula (a) has a pole at s = m with residue (4m/(m-1)^2)(m-1)/(m-s) = (4m/(m-1)) / (m-s), so as s increases to m the n^{-2} asymptotic degenerates. Matching the two regimes requires the crossover to occur when (m-s) is of order 1/n, and substituting s = m - a/n into (a) gives (4m/(m-1)^2)((m-1-a/n)/(a/n)) n^{-2} = (4m/(m-1)) /(a n) + O(n^{-2}), i.e. an n^{-1} law with an a-dependent constant. Setting a to the crossover scale a = 2m/(... ) recovers an n^{-1} term; in particular the CONJECTURED constant in (b), 2/(m-1), is not the naive s -> m limit of (a) but a genuinely new constant, so (b) is independent information. The conjectures are therefore consistent but (b) is not implied by (a).",
+   "obstruction": "The same wall as D0056: the proved Theorem 3 gives the 1/n order in (b) with initial-law-dependent constants, and identifying the universal constant needs a forgetting-of-the-initial-law argument at criticality where the linearisation has spectral radius 1.",
+   "key_identity": "Formula (a) has a pole at s = m with residue 4m/(m-1); the crossover to the n^{-1} regime of (b) happens at m - s of order 1/n."
+  }
+ },
+ {
+  "problem_id": "D0060",
+  "source_id": "lyons_nonamenable_2000",
+  "locator": "Conjecture 3.6, Section 3, PDF p. 9",
+  "title": "One-ended transitive nonamenable graphs have p_u < 1",
+  "statement": "If G is a transitive nonamenable graph with one end, then p_u(G) < 1, where p_u is the threshold for uniqueness of the infinite percolation cluster. The source records confirmations for Cayley graphs of finitely presented groups (Babson-Benjamini), planar graphs (Lalley; Benjamini-Schramm), cartesian products of two infinite graphs (Haggstrom-Peres-Schonmann) and Cayley graphs of Kazhdan groups.",
+  "status_search": "WebSearch 2026-09-08 on percolation uniqueness thresholds for nonamenable transitive graphs. The confirmations listed in the source were reproduced by the search, and the substantial later progress (Hutchcroft's work on nonunimodular transitive graphs and on hyperbolic graphs) concerns the p_c < p_u conjecture rather than p_u < 1. I found no announcement of a general proof of p_u < 1 for one-ended transitive nonamenable graphs, but I did not do an exhaustive search of the 2020-2026 literature; recorded as open with that caveat.",
+  "attempt": {
+   "method": "Look at what the known proofs have in common. Babson-Benjamini use a finite presentation to build a cocycle/co-boundary argument showing that at p close to 1 two infinite clusters would force an infinite 'interface' surface with too much cost; the planar case uses duality; the product case uses a slab argument.",
+   "result": "The unifying mechanism is that all four proofs produce, from a hypothetical pair of infinite clusters at p near 1, a surface (interface) with area much larger than its boundary, contradicting a counting bound. Finite presentation supplies the surface via relators of bounded length; planarity supplies it via the dual graph; a product supplies it via a slab. The obstruction to the general case is therefore exactly the class of one-ended transitive nonamenable graphs with NO bounded-length surface structure -- infinitely presented groups. Two structural remarks I can add: (i) one-endedness is necessary, since a tree (infinitely many ends) has p_u = 1; (ii) the conjecture is a statement at p near 1, hence a low-temperature/perturbative regime, so it should be more accessible than p_c < p_u, and the known results support that.",
+   "obstruction": "Infinitely presented groups are the wall: for such a group every candidate surface has unbounded-length relators, so the counting bound has no uniform cost per unit area. A proof for that class would need either a new invariant replacing the presentation complex or an argument that infinitely presented one-ended nonamenable groups do not exist with the relevant geometry, which is false.",
+   "key_identity": "All known proofs build a bounded-cost interface surface from two infinite clusters at p near 1; infinitely presented groups have no such surface."
+  }
+ },
+ {
+  "problem_id": "D0061",
+  "source_id": "lyons_nonamenable_2000",
+  "locator": "Conjecture 3.8 (Benjamini-Schramm 1996), Section 3, PDF p. 10",
+  "title": "p_c < p_u on every transitive nonamenable graph",
+  "statement": "If G is a transitive nonamenable graph then p_c(G) < p_u(G), i.e. there is a nonempty phase of non-uniqueness. The source records confirmations for products with a high-degree regular tree, planar graphs, graphs with edge or vertex Cheeger constant at least d/sqrt 2 (Schonmann), and Cayley graphs of certain groups.",
+  "status_search": "WebSearch 2026-09-08 on the Benjamini-Schramm nonuniqueness conjecture. The searches surfaced the classical confirmations and Hutchcroft's later results (nonunimodular transitive graphs; hyperbolic graphs; percolation on groups of exponential growth), all of which are partial classes. I found no announcement of a proof in full generality; recorded as open with the caveat that I did not exhaustively search 2020-2026 preprints.",
+  "attempt": {
+   "method": "Ask what quantity separates p_c and p_u. The uniqueness threshold is characterised by the vanishing of the two-point function's exponential decay in the 'touching' sense, and Schonmann's proof for large Cheeger constant compares the cluster growth with a branching random walk on the graph.",
+   "result": "The branching-random-walk comparison is the right frame and it identifies exactly what a general proof needs: at p slightly above p_c the cluster of the origin behaves like the range of a branching random walk with mean offspring slightly above 1, and on a nonamenable graph such a range has spectral radius strictly less than 1, hence two independent copies do not intersect and uniqueness fails. Making this rigorous needs a comparison of the cluster with a branching random walk that is valid at ALL p in a right neighbourhood of p_c, i.e. an estimate of the form: the expected number of open paths of length n from the origin grows at most like (p * branching rate)^n with the SAME exponent as the branching random walk. The source itself points to this analogy (its remark connecting Conjecture 3.8 to branching random walk and the Benjamini-Schramm Theorem 4). So the missing input is a sharp upper bound on the number of open self-avoiding paths, which is the same object as the connective constant appearing in the self-avoiding walk problems recorded here as D0072-D0083.",
+   "obstruction": "The wall is that the number of open paths is not the number of paths times p^n: paths share edges, and the correlations between them are exactly what makes percolation hard. Every known proof of p_c < p_u either has enough geometry to bound the sharing (planarity, product structure) or enough spectral gap to absorb it (Schonmann's Cheeger condition), and neither is available in general.",
+   "key_identity": "Nonuniqueness near p_c should follow from a branching-random-walk comparison with spectral radius < 1; the missing input is a sharp count of open self-avoiding paths."
+  }
+ },
+ {
+  "problem_id": "D0062",
+  "source_id": "steif_dynamical_percolation_2009",
+  "locator": "Conjecture 10.1, Section 10, PDF p. 24",
+  "title": "Conformal invariance of the crossing probability and Cardy's formula on a general lattice",
+  "statement": "For a domain Omega with boundary points A, B, C, D, the crossing probability P(Omega, A, B, C, D, n) of critical percolation at mesh 1/n converges as n tends to infinity to a limit P(Omega, A, B, C, D, infinity) which is conformally invariant: P(Omega, A, B, C, D, infinity) = P(f(Omega), f(A), f(B), f(C), f(D), infinity) for every conformal map f; and the limit is given by Cardy's formula when Omega is a rectangle with A, B, C, D its corners.",
+  "status_search": "WebSearch not repeated for this classical statement; the status is standard knowledge and is stated in the source itself: Smirnov proved conformal invariance and Cardy's formula for site percolation on the TRIANGULAR lattice, and the statement for any other lattice (in particular bond percolation on Z^2) is open. Cross-checked against the campaign's existing percolation entries (Werner's 2d percolation lecture notes and Duminil-Copin's ICM survey are already in the 09-07 and Codex source lists) which record the same status. Open for every lattice other than the triangular one.",
+  "attempt": {
+   "method": "Identify what Smirnov's proof uses that is lattice-specific. The proof builds three discrete harmonic-conjugate observables from the three colours of a hexagonal face and uses the exact combinatorial identity that a single site flip changes the three crossing events in a balanced way; the identity is special to the triangular lattice's three-fold structure.",
+   "result": "The known route to universality has two candidate replacements for Smirnov's observable, and stating them is the useful output. (i) A discrete-holomorphic parafermionic observable, which for the random-cluster model exists at every q and is used by Duminil-Copin and collaborators, but whose discrete holomorphicity is exact only on the isoradial/self-dual lattices and only for a specific spin; for percolation (q=1) on Z^2 the observable is not exactly discrete holomorphic. (ii) A renormalisation/RSW route: the RSW theory for bond percolation on Z^2 is complete and gives tightness of the crossing probabilities and rotational invariance up to sub-sequences, so the missing step is precisely the identification of the subsequential limits, i.e. a uniqueness statement, not an existence one. The recent proof of rotational invariance for the random-cluster model by Duminil-Copin, Kozlowski, Krachun, Manolescu and Oulamara is a big step on route (ii); full conformal invariance still needs the dilation/translation-to-conformal upgrade.",
+   "obstruction": "The wall on route (ii) is going from rotational invariance to conformal invariance: rotational invariance gives that the scaling limit is invariant under the isometry group, whereas conformal invariance requires invariance under a much larger, infinite-dimensional group, and no known argument bootstraps one to the other without an exactly holomorphic observable.",
+   "key_identity": "Smirnov's observable uses the three-colour identity special to the triangular lattice; on Z^2 the RSW theory gives tightness and now rotational invariance, but not the conformal upgrade."
+  }
+ },
+ {
+  "problem_id": "D0063",
+  "source_id": "rhodes_vargas_gmc_review_2014",
+  "locator": "Conjecture 6.3, Section 6.2, PDF p. 51",
+  "title": "Atomic limit of the supercritical (glassy) Gaussian multiplicative chaos measure",
+  "statement": "For gamma above the critical value sqrt(2d), the normalised chaos measure converges: c^{3 gamma/(2 sqrt(2d))} exp(c n (gamma/sqrt 2 - sqrt(d/2))) M_{n,gamma}(dx) converges in law to d_gamma N_alpha(dx) as the cutoff parameter tends to infinity, where alpha = sqrt(2d)/gamma and N_alpha is the alpha-stable atomic random measure indexed by the derivative chaos. Consequently the associated Gibbs measure converges to N_alpha(dx)/N_alpha(B) and its reordered atoms form a Poisson-Dirichlet process.",
+  "status_search": "WebSearch 2026-09-08 on Gaussian multiplicative chaos in the glassy phase; the source itself (a review updated to 2024 on its title page) states that the Poisson-Dirichlet approach has made important progress and that proving Conjecture 6.3 remains a further step. I did not find a paper proving the stated convergence of the measures (as opposed to the point-process statement). Recorded as open with that caveat.",
+  "attempt": {
+   "method": "Separate the two statements the conjecture bundles: convergence of the reordered atom masses (a Poisson-Dirichlet statement, known in several settings from the branching random walk literature) and convergence of the measures with their SPATIAL positions.",
+   "result": "The spatial half is the genuinely open half and it can be reduced to a decorated point process statement: N_alpha should be the alpha-stable subordinator applied to the derivative martingale measure M', i.e. N_alpha(dx) = sum_i p_i delta_{x_i} where (x_i) are sampled from M'/M'(B) and (p_i) are the jumps of an independent alpha-stable subordinator. This is exactly the structure of the extremal process of branching random walk (a decorated Poisson point process with intensity the derivative martingale), so the conjecture is the GMC analogue of the Aidekon and Arguin-Bovier-Kistler description of branching random walk extremes. The transfer therefore requires a multiscale decomposition of the log-correlated field into a branching structure with a controlled error, which is exactly the modified second moment method used for the maximum.",
+   "obstruction": "The wall is the same one that makes the maximum problem hard: the log-correlated field is only approximately a branching random walk, and the error in the approximation is of the same order as the correction terms (the 3/(2 sqrt(2d)) log c term) that the conjecture asserts. Controlling the error to that precision needs a comparison at the level of the whole extremal process, not just of the maximum, and the available comparison (Kahane's convexity inequality) is one-sided and loses constants.",
+   "key_identity": "Conjectured limit N_alpha = alpha-stable subordinator jumps placed at points sampled from the derivative martingale M', the GMC analogue of the decorated Poisson point process for branching random walk."
+  }
+ },
+ {
+  "problem_id": "D0064",
+  "source_id": "rhodes_vargas_gmc_review_2014",
+  "locator": "Conjecture 6.4 (Solutions to the star-equation), Section 6.3, PDF p. 52",
+  "title": "Classification of the solutions of the star-scale-invariance equation",
+  "statement": "Classify the solutions M of the star-equation (star-scale invariance) according to the parameters alpha and gamma: (1) if alpha = 1 and gamma^2 < 2d, M is the standard Gaussian multiplicative chaos; (2) if alpha = 1 and gamma^2 = 2d, M is the derivative martingale M'; (3) if alpha < 1 and gamma^2 < 2d, M is an atomic chaos of the dual phase; (4) if alpha < 1 and gamma^2 = 2d, M is an atomic chaos of the frozen phase.",
+  "status_search": "WebSearch 2026-09-08 as for D0063. The star-equation classification is a fixed-point (smoothing transform) problem; the search found the GMC review itself and related uniqueness results for chaos measures (Shamov's characterisation of subcritical GMC), which settles case (1) in a strong sense but not the atomic cases. Recorded as open for cases (2)-(4).",
+  "attempt": {
+   "method": "Recognise the star-equation as a continuous smoothing transform (a fixed-point equation for a random measure under a multiplicative cascade) and import the classification technology from the discrete smoothing transform, where the solutions of M = sum_i A_i M_i are classified by the Biggins-Kyprianou theory.",
+   "result": "The four cases match the four regimes of the discrete smoothing transform exactly, which is the structural point worth recording: alpha is the index of the stable law entering the fixed point and gamma^2 = 2d is the boundary where the multiplicative martingale degenerates. In the discrete case the classification is a theorem: the fixed points of the smoothing transform are the (possibly stable-subordinated) multiples of the additive martingale limit in the subcritical case and of the derivative martingale at the boundary. So the conjecture asserts that the continuous star-equation has no solutions beyond the discrete list, and its content is a rigidity statement. For case (1) Shamov's characterisation of subcritical GMC as the unique measure with the right Cameron-Martin shift behaviour gives the answer, so the open content is cases (2)-(4).",
+   "obstruction": "The wall is that the continuous star-equation has no branching structure to induce on: the discrete classification uses the tree, and in the continuum the 'cascade' is only approximate, so the standard argument (analyse the Laplace exponent of the fixed point and show it satisfies a functional equation with a known solution set) requires knowing that the fixed point has finite Laplace exponent, which fails exactly in the atomic cases (3) and (4) where the measure has infinite mean.",
+   "key_identity": "The star-equation is a continuous smoothing transform; the four cases correspond to the four regimes of the discrete Biggins-Kyprianou classification."
+  }
+ },
+ {
+  "problem_id": "D0065",
+  "source_id": "rhodes_vargas_gmc_review_2014",
+  "locator": "Conjecture 6.5, Section 6.4, PDF p. 53",
+  "title": "Limit law of the maximum of a log-correlated Gaussian field in dimension d",
+  "statement": "For a cutoff approximation X_n of a log-correlated Gaussian field on [0,1]^d, sup_x X_n(x) - sqrt(2d) c_n + (3/(2 sqrt(2d))) ln c_n converges in law to a random variable G_d whose Laplace transform is E[exp(-q G_d)] = c^{-q} Gamma(1 + q/sqrt(2d)) E[M'([0,1]^d)^{-q/sqrt(2d)}], where M' is the derivative chaos. The same is expected for the discrete Gaussian free field on a graph with mesh going to zero.",
+  "status_search": "WebSearch 2026-09-08 as for D0063 plus the log-correlated maximum literature. For the two-dimensional discrete GFF the convergence in law of the centred maximum is a theorem (Bramson-Ding-Zeitouni), and the identification of the limit law through the derivative martingale is due to Biskup-Louidor; for general log-correlated Gaussian fields in dimension d the corresponding statement has been proved in several settings (Ding-Roy-Zeitouni for a class of log-correlated fields). I did NOT verify that the exact Laplace-transform identity stated here, with the constant and the Gamma factor, has been established in the stated generality, so this is recorded as open with a strong partial-resolution lead rather than as resolved.",
+  "attempt": {
+   "method": "Check the internal consistency of the conjectured Laplace transform, which is cheap and is a real test of the statement.",
+   "result": "The formula has the structure forced by the Gumbel-times-derivative-martingale picture, and verifying that is the contribution. If the extremal process is a decorated Poisson point process with random intensity Z e^{-sqrt(2d) u} du, where Z is proportional to the derivative martingale M', then the maximum is G = (1/sqrt(2d)) log Z + Gumbel/sqrt(2d) in the appropriate normalisation, so E[e^{-qG}] = E[Z^{-q/sqrt(2d)}] * E[e^{-q * Gumbel/sqrt(2d)}] = E[Z^{-q/sqrt(2d)}] * Gamma(1 + q/sqrt(2d)), which is exactly the conjectured product with Z = c M'([0,1]^d). So the conjecture is precisely the statement that the limit is a randomly-shifted Gumbel with shift given by the derivative chaos -- and the Gamma factor is the Gumbel's Laplace transform, a consistency check that the stated formula passes. The constant 3/(2 sqrt(2d)) in the centring is the standard Bramson correction (3/2 times the log of the scale over the exponent), also consistent.",
+   "obstruction": "For general d and general log-correlated kernels the wall is the same as for the two-dimensional DGFF before Bramson-Ding-Zeitouni: one needs tightness of the centred maximum with the exact 3/2 log correction, which requires a barrier/entropic-repulsion argument for a field that is only approximately branching. In dimension d >= 3 the modified second moment method still works but the comparison with a branching random walk loses the constant in front of the log unless the kernel has a good multiscale decomposition, which is assumed rather than proved for general kernels of the form (2.12) in the source.",
+   "key_identity": "E[e^{-qG}] = E[Z^{-q/sqrt(2d)}] Gamma(1 + q/sqrt(2d)) is exactly the randomly-shifted-Gumbel form with shift log Z / sqrt(2d), Z proportional to M'."
+  }
+ }
+]

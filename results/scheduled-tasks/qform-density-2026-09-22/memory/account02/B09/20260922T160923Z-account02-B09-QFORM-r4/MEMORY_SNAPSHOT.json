@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B09",
+  "run_id": "20260922T160923Z-account02-B09-QFORM-r4",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_initial": "600258e87efadc68a54737feac8565a9e88b807e",
+  "source_control_commit_prepublication": "0c5fabaed5b2df5fc0db244166900d9500a96d77",
+  "owner_continuation_consumed": "QFORM-PROOF-FIRST-20260922T161801Z",
+  "status": "ESSENTIAL_STEP_APPLIED_CANDIDATE_REFUTED_FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "new_correction": {
+    "id": "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "event_commit": "22fafdaf8fdcd228ea6d99bab14529b813ccf08b",
+    "inbox_merge_commit": "4f29b1bd61e324bbef5de5b1647a5a66419e9ba3"
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "77d71ed8bbd7f8a3fd40958e54b5bf658163c27a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260922T160923Z-account02-B09-QFORM-r4/REPORT.md",
+    "blob": "bfa11548e58565382c2fc53231511f943e1bd10f"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "3d2227d7c4fcd4c77a0f42e370a8cce7a8bbb2b3",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B09/20260922T160923Z-account02-B09-QFORM-r4.md",
+    "blob": "fc74e5b4149fd2f737cfce0fbfd4b8c84869a500"
+  },
+  "partner_result_applied": {
+    "worker": "account03/B09",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "62bdcf30669c1037a3c7d87aee1fcb2bdcccd251",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/account03-B09-20260922T155042Z-qform12/REPORT.md",
+    "result": "QFORM-PIVOT-RIDGE-BILINEAR-v1",
+    "actual_application": "Random residual coordinate cut plus gamma=||S||op and q=2 forces theta>=3 when Schur off-diagonal stable rank is at least 24; on the rank-12 Walsh stress family the exact partner constants give density <=3.7554271113."
+  },
+  "other_dependency": {
+    "result": "QFORM-WINDOW39-HEAVYCOORD-DICHOTOMY-v1",
+    "commit": "9c497213db0174f64450be250a62c5a97deb1ddf",
+    "source_partner_commit": "093c15486c794a2e8b23978ca7b289feabf999a7",
+    "actual_application": "Either density <35.27 or a physical coordinate satisfies max(|Aii|,||A[i,i^c]||2)>=1/312; combined with diagonal dominance and the new stable-rank theorem to close a target branch at density <340."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-PIVOT-OFFDIAG-STABLERANK-v1",
+      "status": "PROVED_IN_STATED_SCOPE",
+      "statement": "For a physical pivot a!=0 with Schur complement S, if ||S-diag(S)||F^2 >=24||S||op^2, then ||p_Q||inf <=11.876/sqrt(|a| ||S||op)."
+    },
+    {
+      "id": "QFORM-WINDOW39-DIAGHEAVY-STABLERANK-v1",
+      "status": "PROVED_TARGET_BRANCH",
+      "statement": "Under the full three-large-eigenvalue hypothesis, outside the completed 1/39 spectral-window branch, if the heavy coordinate is diagonal-dominant and its Schur complement has off-diagonal stable rank at least 24, then ||p_Q||inf<340."
+    }
+  ],
+  "method_falsifier": {
+    "id": "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "status": "REFUTED_INTERMEDIATE_MECHANISM",
+    "construction": "Independent cap-one U,X uniform on [-1/2,1/2] give U^2+X^2+2UX=(U+X)^2 with density t^-1/2-1 on (0,1).",
+    "full_target_counterexample": false
+  },
+  "stress_family": {
+    "formula": "A_m=[1] direct_sum [[0,B_m],[B_m,0]] with B_m a rank-12 Walsh projection",
+    "large_spectrum": "one pivot + twelve +1 and twelve -1 values",
+    "physical_cross_entry_scale": "at most 12/m",
+    "new_general_bound": "<11.876",
+    "exact_partner_bound_on_natural_cut": "3.7554271113"
+  },
+  "first_unproved_step": "QFORM-HEAVYBANK-OR-LOWSTABLERANK-ROUTING-v1",
+  "next_step": "For the remaining 1/312-heavy branch, route off-diagonal-heavy coordinates or diagonal-heavy pivots with Schur off-diagonal stable rank <24 into a product-preserving grouped square/hyperbolic/bilinear mechanism before any reciprocal tiny-minor payment; preserve a genuinely independent third smoother in view of the new falsifier.",
+  "numerical_evidence_used": false,
+  "full_solution": false,
+  "independent_end_to_end_reviews": 0
+}

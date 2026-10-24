@@ -1,0 +1,57 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w425",
+  "bundle_slug": "critical-bond-percolation-formal-status-20261010",
+  "entries": [
+    {
+      "key": "critical-bond-percolation-formal-status",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-bond-percolation-zd-formal-status-2026",
+      "kind": "concept",
+      "title": "Critical bond percolation on Z^d: 2026 formal claim",
+      "statement": "For nearest-neighbour independent Bernoulli bond percolation on Z^d, define theta_d(p)=P_p(the open cluster of the origin is infinite) and p_c(d)=inf{p in [0,1]:theta_d(p)>0}. The pinned 2026 Anthropic formal artifact reports a comparator-checked proof of theta_d(p_c(d))=0 for every integer d>=2, covering the historical open cases 3<=d<=10. This entry records the reported formal claim and its exact target; independent rebuild and statement-fidelity review remain pending in w425's referee packet.",
+      "proof_text": null,
+      "assumptions": ["nearest-neighbour Z^d bond graph", "independent Bernoulli edge states", "integer d>=2", "reported formal proof not independently rebuilt by w425"],
+      "domain": "probability theory; percolation",
+      "source": {
+        "source_id": "anthropic-formal-math-percolation-795efb86-readme-challenge-audit",
+        "url": "https://github.com/anthropics/formal-math/tree/795efb86f191735c5481675763537cfb4ff37e55/percolation",
+        "revision": "795efb86f191735c5481675763537cfb4ff37e55; inspected 2026-10-10",
+        "license": "apache-2.0",
+        "excerpt": "The formal statement is the vanishing at p_c"
+      }
+    },
+    {
+      "key": "finite-graph-additive-gluing-formal-status",
+      "namespace": "probability.percolation",
+      "logical_name": "finite-graph-additive-gluing-formal-status-2026",
+      "kind": "concept",
+      "title": "Finite-graph additive gluing in the formal percolation route",
+      "statement": "For independent bond retention with arbitrary weights in [0,1] on a finite graph, the pinned 2026 formal artifact reports the additive gluing inequality: if P(a connected to b)>=1-t for every a in a fixed relay set A, then P(o connected to b)>=P(o connected to A)-t. The artifact uses this inequality to establish Kozma--Nitzan Conjecture 3 and then critical nonpercolation on Z^d. The proof was not independently rebuilt by w425; this is a source-status concept rather than a promoted theorem.",
+      "proof_text": null,
+      "assumptions": ["finite graph", "independent weighted Bernoulli bonds with weights in [0,1]", "fixed vertices o,b and deterministic relay set A", "t>=0", "reported formal proof not independently rebuilt by w425"],
+      "domain": "probability theory; percolation",
+      "source": {
+        "source_id": "anthropic-formal-math-percolation-795efb86-readme",
+        "url": "https://github.com/anthropics/formal-math/blob/795efb86f191735c5481675763537cfb4ff37e55/percolation/README.md",
+        "revision": "795efb86f191735c5481675763537cfb4ff37e55; inspected 2026-10-10",
+        "license": "apache-2.0",
+        "excerpt": "Hierarchy ⇒ additive gluing"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "critical-bond-percolation-formal-status",
+      "to_key": "finite-graph-additive-gluing-formal-status",
+      "kind": "depends_on",
+      "rationale": "The pinned README proof outline explicitly routes additive gluing through Kozma--Nitzan Conjecture 3 and its Theorem 6 to theta(p_c)=0; both endpoint concepts quote that same pinned source."
+    },
+    {
+      "from_key": "critical-bond-percolation-formal-status",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10",
+      "kind": "semantic_association",
+      "rationale": "The existing C0023 card, confirmed by w424's read-only CARD_EVIDENCE.json, retains its dated 2026-09-07 open-status text. This concept records the later pinned formal claim without treating that claim as independently audited."
+    }
+  ]
+}

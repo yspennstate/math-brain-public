@@ -1,0 +1,53 @@
+crosscheck_2x2=PASS
+=== 2x2 ===
+independent_sets=7
+exactly_two_peak_labelings=8
+E[rho_n/n | exactly two peaks]=1 ~= 1.000000000000000
+distance_distribution_counts:
+  d=2: 8 ; prob=1
+unordered_promotion_tilt_min=1 ~= 1.000000000000000 pair=(0, 0)--(1, 1)
+unordered_promotion_tilt_max=1 ~= 1.000000000000000 pair=(0, 1)--(1, 0)
+
+crosscheck_3x3=PASS
+=== 3x3 ===
+independent_sets=63
+exactly_two_peak_labelings=143808
+E[rho_n/n | exactly two peaks]=666/749 ~= 0.889185580774366
+distance_distribution_counts:
+  d=2: 63552 ; prob=331/749
+  d=3: 64512 ; prob=48/107
+  d=4: 15744 ; prob=82/749
+unordered_promotion_tilt_min=4/3 ~= 1.333333333333333 pair=(0, 1)--(1, 0)
+unordered_promotion_tilt_max=41/20 ~= 2.050000000000000 pair=(0, 2)--(2, 0)
+
+crosscheck_4x4=PASS
+=== 4x4 ===
+independent_sets=1234
+exactly_two_peak_labelings=779299174080
+E[rho_n/n | exactly two peaks]=377754599/463868556 ~= 0.814356985645735
+distance_distribution_counts:
+  d=2: 173341437440 ; prob=541691992/2435309919
+  d=3: 313977112960 ; prob=140168354/347901417
+  d=4: 217620337600 ; prob=680063555/2435309919
+  d=5: 66746375360 ; prob=29797489/347901417
+  d=6: 7613910720 ; prob=2643719/270589991
+unordered_promotion_tilt_min=199151/133512 ~= 1.491633710827491 pair=(1, 1)--(2, 2)
+unordered_promotion_tilt_max=51355/18772 ~= 2.735723417856382 pair=(2, 2)--(3, 0)
+
+5x5_independent_set_certificate=PASS
+=== 5x5 ===
+independent_sets=55447
+exactly_two_peak_labelings=7063261481362958280000
+E[rho_n/n | exactly two peaks]=5689414559220285956/7357564043086414875 ~= 0.773274214930740
+distance_distribution_counts:
+  d=2: 759127145926367076000 ; prob=63260595493863923/588605123446913190
+  d=3: 2034099833145681772800 ; prob=6141605776406044/21326272588656275
+  d=4: 2315729092924013995200 ; prob=482443561025836249/1471512808617282975
+  d=5: 1393059798442968360000 ; prob=504731811030061/2559152710638753
+  d=6: 473582366731277968800 ; prob=197325986138032487/2943025617234565950
+  d=7: 82379424872165332800 ; prob=746190442682657/63978817765968825
+  d=8: 5283819320483774400 ; prob=1100795691767453/1471512808617282975
+unordered_promotion_tilt_min=10015190708869/6016139663276 ~= 1.664720446901224 pair=(1, 2)--(2, 1)
+unordered_promotion_tilt_max=55946653552157/13713733608932 ~= 4.079607723728711 pair=(3, 3)--(4, 4)
+
+ALL_EXACT_CHECKS_PASS

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B17",
+  "run_id": "20260922T123638Z-account01-B17-qform-diffuse-edgeworth-v1",
+  "source_control_commit": "b65298ddfda6c93c0c5458e586868512c8cd9ea1",
+  "programme_revision": "2026-09-22.5",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B17",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4a3d4af77778f20a95855c6dfbf69540dcfa5fe4",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260922T114529Z-qform-sharp-witness/REPORT.md",
+    "scope": "Target-level lower bound C>=3sqrt(2) from diffuse uniform block averages."
+  },
+  "mathematical_change": {
+    "status": "AUXILIARY_ONLY",
+    "statement": "Every fixed spanning periodic rank-three cube frame with iid Uniform[-1/2,1/2] physical coordinates has p_Q(0)=3sqrt(2)[1-(1/(20m))sum_j E_J(v_j)+O(m^-2)], where E_J(v)=57s^2/32+15st/4+3t^2/4>0. Thus the Gaussian lower-bound ceiling is approached from below for every fixed periodic pattern.",
+    "universal_first_order_deficit": "sum_j E_J(v_j)>=27/(4r), hence relative deficit >=27/(80rm)=27/(80n) at first order.",
+    "canonical_examples": [
+      "three disjoint blocks: coefficient 69/(320m)",
+      "four-row Hadamard pattern: coefficient 123/(640m)=123/(160n)"
+    ]
+  },
+  "outputs": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "15e9504309108d37a6c5f8bcacebac07eb4fe1ff",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260922T123638Z-account01-B17-qform-diffuse-edgeworth-v1/REPORT.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "14ae908a30c0eb7913e5a3c6c6de7757e39bc52c",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260922T123638Z-account01-B17-qform-diffuse-edgeworth-v1/ADDENDUM_EDGEWORTH_JUSTIFICATION.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "db8998c4f9445d8cd290795138c0a323b3d37fe3",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260922T123638Z-account01-B17-qform-diffuse-edgeworth-v1/check_exact.py"
+    }
+  ],
+  "unresolved_implication": "No universal upper bound for arbitrary bounded-density product laws is proved. A witness above 3sqrt(2), if one exists, must leave the fixed-period diffuse uniform-cube Edgeworth regime.",
+  "next_step": "Attack nonperiodic/mesoscopic frames or non-uniform density-one supports, or obtain a target-level upper bound that exploits product provenance beyond Gaussian/periodic limits.",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

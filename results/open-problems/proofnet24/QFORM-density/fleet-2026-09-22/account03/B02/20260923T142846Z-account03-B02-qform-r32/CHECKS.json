@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T142846Z-account03-B02-qform-r32",
+  "seed": 20260923,
+  "matrix_shape": [6, 6],
+  "instances": 1000,
+  "checks": {
+    "anchored_identity_J_equals_a2_E2_S": {
+      "max_relative_error": 2.5838647435615973e-14,
+      "violations": 0
+    },
+    "exterior_survival_sqrtJ_le_a_sqrtE2N_plus_star": {
+      "minimum_numeric_slack": 0.01580908626104005,
+      "violations": 0
+    }
+  },
+  "constants": {
+    "mixed_q_9_8": 22.310649913362383,
+    "mixed_after_literal_E2_survival": 25.62820685439411,
+    "live_Z_specialization": 31.92585020538522,
+    "partner_hybrid_base": 23.17971824306825,
+    "partner_hybrid_after_literal_E2_survival": 26.293044664074927,
+    "partner_hybrid_live_Z_specialization": 32.10629547471191
+  },
+  "status": "PASS",
+  "note": "Finite computation is only an algebra/indexing regression; the proof is symbolic in REPORT.md."
+}

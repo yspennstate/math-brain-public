@@ -1,0 +1,13 @@
+{
+  "helper_version": "A016-inherited-full-reference-two-query-v1",
+  "family": "A020 h=chi_u*(1-A)+chi_q*A, A=1_(v=0); F=1 on x0,h*s on x1; s two-bit positive-mean point defect",
+  "domain": [3,4,5,6,7],
+  "pilot_domain": [3],
+  "case_count": 5,
+  "symmetry": "none; all q branches and all first-v branches retained",
+  "arithmetic": "integer Walsh and Fraction references, edges and identities; rational 36-term range-reduced logarithm intervals with geometric remainder",
+  "memory_estimate_MB": 90,
+  "max_runtime_seconds": 60,
+  "policy": "Fix complete root Q_F once; each q then first-v child inherits marginal Q of its immediate parent, identical for both branch outcomes. No new activation lift, reset or bank renewal.",
+  "checks": "normalization, true support, exact erased-law identity, full CE telescoping, each complete terminal CE<=4I, first and second query physical influence; source forced-row Lambda formula"
+}

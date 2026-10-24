@@ -1,0 +1,67 @@
+{
+  "problems.jsonl": [
+    {
+      "line": 52,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "C0052",
+        "historical_status": "source_says_open",
+        "intake": "claude_20260907",
+        "locator": "Conjecture 6, p. 94",
+        "problem_id": "C0052",
+        "recorded_at": "2026-09-07T06:38:45Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "duminil_copin_ising_potts_2017",
+        "statement": "Prove that the three-dimensional Ising model is non-trivial: its scaling limit is not a Gaussian field (the renormalised coupling constant does not vanish).",
+        "status_search": "The second half of the source's Conjecture 6 (triviality in d = 4) was proved by Aizenman and Duminil-Copin, 'Marginal triviality of the scaling limits of critical 4D Ising and phi^4 models', Ann. of Math. 194 (2021) 163-235 (arXiv 1912.07973); the d = 3 non-triviality half remains open per the bounded search of 2026-09-07.",
+        "title": "Non-triviality of the scaling limit of the three-dimensional Ising model",
+        "verification": "unreviewed"
+      }
+    }
+  ],
+  "attempts.jsonl": [
+    {
+      "line": 42,
+      "record": {
+        "attempt_id": "C0052-A001",
+        "author": "claude-probability-1000-continue-0907",
+        "independent_check": "",
+        "key_identity": "Non-triviality <=> inf_L P(two independent currents at scale L intersect) > 0; second moment reduces this to a two-point lower bound (C0051) plus a variance estimate.",
+        "method": "Use the random-current representation: non-triviality is equivalent to non-vanishing of the intersection probability of two random currents at large scales.",
+        "obstruction": "Variance of the intersection count needs six-point correlations beyond Lebowitz.",
+        "problem_id": "C0052",
+        "recorded_at": "2026-09-07T06:38:45Z",
+        "result": "By Aizenman's identity the four-point Ursell function U_4(x_1,...,x_4) is expressed through the probability that the currents from x_1 to x_2 and from x_3 to x_4 share a cluster; non-triviality means the renormalised coupling g = -U_4 summed appropriately does not vanish in the scaling limit, i.e. two independent random-current clusters at scale L intersect with probability bounded below. In d = 3 the clusters have a fractal dimension d_c and two independent such sets in a box of side L intersect with probability of order L^{2 d_c - 3} if they were independent random fractals, which is bounded below iff d_c >= 3/2. The random-current cluster dimension in d = 3 is related to the two-point exponent by d_c = (d + 2 - eta)/2 = (5 - eta)/2 = 2.48 > 3/2, so the heuristic strongly favours non-triviality, and the rigorous gap is that the currents are not independent fractals and the lower bound on the intersection probability must be proved from the model. A rigorous partial statement: if the two-point function satisfies the lower bound of C0051 with exponent 2 - eps, then a second-moment argument on the number of intersection points gives a positive lower bound on the intersection probability at scale L PROVIDED the four-point function is bounded by the product of two-point functions (Lebowitz inequality gives the upper bound in the right direction), so non-triviality would follow from C0051's lower bound plus a variance bound on the intersection count. I did not close the variance bound.",
+        "schema": "probability-attempt.v1",
+        "substantive": true
+      }
+    }
+  ],
+  "primary_source": {
+    "line": 9,
+    "record": {
+      "access_evidence": "arXiv 1707.00520",
+      "acquired_at": "2026-09-07T06:19:57Z",
+      "acquisition_status": "validated_and_extracted",
+      "bytes": 3683245,
+      "extracted_characters": 266291,
+      "extracted_sha256": "812dca165fdbed3446b34abd46f4007a1a802e58f9404bff080fcecaa3b14891",
+      "final_url": "https://arxiv.org/pdf/1707.00520",
+      "http_status": 200,
+      "intake": "claude_20260907",
+      "kind": "pdf",
+      "page_count": 102,
+      "raw_relative_to_downloads": "sources/duminil_copin_ising_potts_2017/source.pdf",
+      "reading_status": "unread",
+      "schema": "probability-source.v1",
+      "sha256": "cc442344d0cc21c5d57163719b06dfaf1d243dee8731716bf89d21c593f98a5b",
+      "source_id": "duminil_copin_ising_potts_2017",
+      "statement_validation": "not_started",
+      "text_relative_to_downloads": "sources/duminil_copin_ising_potts_2017/text.txt",
+      "title": "Duminil-Copin: Lectures on the Ising and Potts models on the hypercubic lattice, PIMS 2017",
+      "url": "https://arxiv.org/pdf/1707.00520"
+    }
+  }
+}

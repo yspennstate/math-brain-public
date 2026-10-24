@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260923T050530Z-account03-B17-QFORM-r23",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "source_control_commit": "714520687cd6b26452256c87f21ec7b73e526d38",
+  "owner_control_revision": "2026-09-22.15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B17",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2156b76156ad5956c214a881fcfd6d977d6f3b9f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B17/20260922T211900Z-account04-B17-QFORM-r3/REPORT.md",
+    "application": "Applied the partner weighted local Edgeworth expansion for normalized uniform banks to the exact two-bank density integral p_Qm(0)=int int g_m(b)g_m(c) 1_{c^2<=|b|}/(2|b|) db dc, obtaining p_Qm(0)=C_null-I_null/(20m)+O(m^-2). The partner's separate exact rotated witness supplies C_*>=3sqrt(2)."
+  },
+  "new_results": [
+    "For arbitrary cap-one X independent of B,C iid N(0,1/12), Q=2XB+C^2 has a bounded continuous density and the zero-density functional is uniquely maximized a.e. by X uniform on [-1/2,1/2].",
+    "The exact extremal constant C_null obeys C_null<3sqrt(2) analytically via the pointwise Laplace-transform inequality int_{-1/2}^{1/2} exp(-s x^2) dx < (1+s/6)^(-1/2).",
+    "Diagnostic quadrature gives C_null=3.62066702814959078157..., leaving a 0.6219736589696944... gap below 3sqrt(2).",
+    "Exact finite source-valid rotated family with one null heavy row and two diffuse m-banks has nonzero spectrum exactly {1,1,-1} and form Q_m=2X_0 B_m+C_m^2.",
+    "Partner Edgeworth theorem applied to its exact zero-density integral gives p_Qm(0)=C_null-I_null/(20m)+O(m^-2), with explicit finite I_null and diagnostic I_null=11.6540810558260528...."
+  ],
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6e6b31c077cd37e28c1edd78ed7ab9520b1aa2d0",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T050530Z-account03-B17-QFORM-r23/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T050530Z-account03-B17-QFORM-r23/verify_null_row.py",
+    "checks": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T050530Z-account03-B17-QFORM-r23/CHECKS.txt"
+  },
+  "scope_warning": "This excludes only the one-heavy isotropic/null-row plus two Gaussianizing diffuse-bank sharp-witness architecture. It does not prove the full conjecture, prove C_*=3sqrt(2), or prove global centered-interval extremality for arbitrary rotated forms.",
+  "continuity": "Proved for the Gaussian-completion theorem and for the stated finite witness family under the bank regularity supplied by the partner theorem; full-target continuity remains open.",
+  "unresolved_implication": "Whether a witness with at least two mesoscopic/heavy directions, several non-collinear shared rows, or a genuinely multiscale three-bank geometry can exceed 3sqrt(2); independently the full universal upper bound remains open.",
+  "next_step": "Change witness mechanism to two mesoscopic/heavy shared directions or a multiscale non-bank construction while preserving exact cap-one product provenance and the three-large-eigenvalue condition."
+}

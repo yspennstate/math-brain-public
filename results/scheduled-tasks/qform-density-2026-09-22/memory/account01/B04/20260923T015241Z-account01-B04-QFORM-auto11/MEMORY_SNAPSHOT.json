@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260923T015241Z-account01-B04-QFORM-auto11",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_initial": "3e47def55713ee7ef97f5916d0e00fc34a67356d",
+  "source_control_commit_prepublication": "fa5b6cb07eb8657bc99baaed2335a375bf15aceb",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "secondary_status": "SUPPORTING_THEOREM_PROVED",
+  "target_status": "QFORM-FULL_OPEN",
+  "continuity_full_target": false,
+  "continuity_supporting_branch": true,
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "native_brain_ingestion_verified": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B04",
+    "theorem": "QFORM-RANKR-TWOSIDED-CONTAMINATION-FOURIER-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8f8913581643a7e7bcbe7d8c178a2255194dfc3d",
+    "application": "For the physical cut produced by the new random-cut identity, exact cross rank three gives ||p_Q||_inf <= 3e E_3(B)^(-1/6), retaining both self-quadratic blocks; this yields 6e |det M|^(-1/3)d(U)^(-1/6)."
+  },
+  "latest_partner_state_read": {
+    "run_id": "20260923T010448Z-account02-B04-QFORM-auto11",
+    "report_commit": "2f2e25957d3a687bbe89e855661b4a55d477e0cf",
+    "status": "ESSENTIAL_STEP_APPLIED",
+    "first_unproved_step": "QFORM-ADMISSIBLE-VOLUME-OR-RIDGE-ROUTING-v1"
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-RANK3-DISJOINT-VOLUME-CUT-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For exact-rank-three A=UMU^T, define w_S=det(U_S)^2 and d(U)=sum_{S cap T empty}w_Sw_T. If d(U)>0, Q has a bounded continuous density with ||p_Q||_inf <=6e|det M|^(-1/3)d(U)^(-1/6)."
+    },
+    {
+      "id": "QFORM-RANK3-DIFFUSE-ONE-THIRD-v1",
+      "status": "PROVED_COROLLARY",
+      "statement": "If max row leverage h<1/3, then d(U)>=1-3h and ||p_Q||_inf <=6e(1-3h)^(-1/6) for the exact-rank-three target."
+    },
+    {
+      "id": "QFORM-PLUECKER-DISJOINT-COLLISION-IDENTITY-v1",
+      "status": "PROVED_IDENTITY",
+      "statement": "d(U)=1-sum alpha_i^2+sum beta_ij^2-sum w_S^2 for the rank-three projection-volume distribution."
+    }
+  ],
+  "report": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "52b8c615325748d6e60473bb5477f057cd52803d",
+    "bundle_tail_commit": "620e2e46e058a9aab018de7995fad7b885f1fad3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T015241Z-account01-B04-QFORM-auto11/REPORT.md",
+    "blob": "db92ef109411dd366d5a67681896cfb1ca4f666d"
+  },
+  "explicit_check": {
+    "matrix": "A=U diag(1,1,-1) U^T with U first three columns of normalized Sylvester H16",
+    "spectrum": [-1, 1, 1],
+    "all_physical_entries_nonzero": true,
+    "row_leverage": "3/16",
+    "disjoint_volume_mass": "135/256",
+    "explicit_cut_singular_values": ["1/2", "1/2", "1/2"],
+    "density_bound": "6e=16.30969097075427",
+    "checker_tail_commit": "620e2e46e058a9aab018de7995fad7b885f1fad3"
+  },
+  "first_unproved_step": "QFORM-HIGHER-RANK-DISJOINT-VOLUME-SMEARING-v1",
+  "next_step": "In a higher-rank unresolved matrix, convert third-compound disjoint physical-cut mass into an L1 product-Fourier estimate without spectral rank-three truncation or reciprocal local-minor payment; otherwise route concentrated collision/high-marginal structure into already-paid pivot, ridge, determinant-star, grouped-hub, or two-sided-contamination branches.",
+  "full_qform_proved": false,
+  "counterexample_to_full_target": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null
+}

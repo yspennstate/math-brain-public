@@ -1,0 +1,23 @@
+{
+  "schema": "fei-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2 with GU-LASER-20261014 overlay",
+  "run_id": "20261014T071400Z-account01-B17-a085-decimal-ln-repair",
+  "stream": "B17",
+  "packet_id": "A085",
+  "packet_ids": ["A085"],
+  "gap_id": "FEI-GAP-TWO-BIT-HALF-TAX",
+  "attempt_id": "A085-DECIMAL-LN-REPAIR-1",
+  "method": "Adversarially inspect rounding semantics, reproduce the transcendental enclosure failure, and replace it with guard-precision adjacent-value bracketing.",
+  "mathematical_delta": "Finds and repairs a material rigor defect while preserving the full two-bit continuum theorem at its exact scope.",
+  "deliverable_status": "COMPLETE_REPAIR_ARTIFACT_PENDING_FRESH_REVIEW",
+  "mathematical_status": "TWO_BIT_THEOREM_REPAIRED; UNIVERSAL_GU_OPEN; FEI_OPEN",
+  "claim_versions_used": ["B17-A084-TWO-BIT-COMPLETE-v2"],
+  "claims_created_or_changed": ["B17-A085-DECIMAL-LN-REPAIR-v1"],
+  "verification": {"command": "python3 repair_and_certify.py", "randomness": "none", "scope": "full p in [0.49,0.5], q in [0,0.01] rectangle with 114-digit guarded logarithms and 90-digit outward algebra", "result": "PASS; 45 boxes visited; 23 leaves; zero unresolved; largest upper endpoint -0.9002260317012236411683888873233463387246104808513"},
+  "next_consumers": ["A084", "A090", "A094", "A098"],
+  "next_action": "Fresh independent reproduction of the repaired certificate, then return to the higher-arity terminal-reserve bridge.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": ["Fresh independent review is required because this run materially repairs A084.", "No all-arity GU bridge follows from the two-bit theorem."],
+  "persistence": {"canonical_local": "SAVED", "brain_handoff_remote": "SAVED_BYTE_IDENTICAL", "canonical_remote": "SAVED_AND_READ_BACK_AT_9948155cb5388a23a1263ff6b089f3a5432a1071", "brain_remote": "SAVED_AND_READ_BACK_AT_dc7afbb77dbced7bbdd9ea46c82acf185e2e17ce", "independent_review": "PENDING_FRESH_REVIEW_AFTER_MATERIAL_REPAIR", "native_ingestion": "NOT_OBSERVED"},
+  "model_metadata": "GPT-6.1 Codex; exposed effort UNKNOWN"
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260924T015511Z-account03-B18-QFORM-auto16",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "startup_control_commit": "c707addbaea3568980d860c51e61275d155c1af7",
+  "publication_refresh_commit": "25b627dfcdb95d7ed972f9fc2ab781e733539c56",
+  "result_ids": ["QFORM-STABLERANK-CROSS-HS-NEGATIVE-MOMENT-v1"],
+  "premises": [
+    "Rudelson--Vershynin arXiv:1402.4492v2 Theorem 1.2: normalized scalar linear form density <= sqrt(2)K",
+    "Rudelson--Vershynin Corollary 8.5 / (8.12): Hilbert--Schmidt-scale stable-rank concentration",
+    "account04/B18 r5 bounded-window null-hub theorem, handoff 20260923T221534Z-account04-B18-QFORM-r5.md"
+  ],
+  "proved_scope": "For independent original-coordinate product banks X,Y with cap-one coordinate densities, r(M)>=2 implies ||p_(X^T M Y+alpha^T X+G(Y))||inf <=4sqrt(2)C_RV/||M||HS. For an ambient quadratic form with A_II=0 and B=A_IJ, the bound is 2sqrt(2)C_RV/||B||HS. Generic continuity not claimed.",
+  "partner_application": "For A_m=C4 direct_sum [[0,m^-1/2 I_m],[m^-1/2 I_m,0]], account04/B18 r5 gives 576^(1/3)=8.320335292207616 while the new theorem gives 2sqrt(2)C_RV; hence the min of the two on the same exact-target family.",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "scientific_repository": "yspennstate/math-open-problems",
+  "scientific_commit": "8fc3be74bf627f5a983341fb160e8149e0de3d06",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260924T015511Z-account03-B18-QFORM-auto16/",
+  "handoff_commit": "0ef9933bc498e0d2eca448f750d732f951ce068f",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B18/20260924T015511Z-account03-B18-QFORM-auto16.md",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_OUTSIDE_SCOPED_RESULTS",
+  "unresolved_implication": "Derive from bare s_3(A)>=1 either an original-coordinate zero-self cross bank with r(B)>=2 and ||B||HS bounded below, or route its absence into another already-paid product-preserving mechanism.",
+  "next_step": "Attempt an aggregate spectral-to-cut inequality for Hilbert--Schmidt cross energy that does not assert one uniformly good fixed minor; test against the known singleton-plus-two-banks obstruction.",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

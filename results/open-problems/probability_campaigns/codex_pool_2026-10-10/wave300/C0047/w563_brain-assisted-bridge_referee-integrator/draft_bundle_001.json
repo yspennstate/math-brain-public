@@ -1,0 +1,35 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w563",
+  "bundle_slug": "c0047-reviewed-bridge-and-spectral-correction-001",
+  "entries": [
+    {
+      "key": "conditional-operator-bridge",
+      "namespace": "probability.percolation.cayley",
+      "logical_name": "c0047-critical-two-point-operator-conditional-gap",
+      "kind": "lemma",
+      "title": "Finite critical two-point operator norm implies a nonuniqueness phase on a Cayley graph",
+      "statement": "Let G be an infinite countable vertex-transitive graph of bounded degree with Bernoulli bond percolation, adjacency operator A on l2(V), a=||A||>0, and critical threshold p_c<1. If the two-point kernel T_{p_c}(x,y)=P_{p_c}(x connected to y) defines a bounded l2 operator with norm M<infinity, then for p_c<=q<min(1,p_c+1/(aM)), ||T_q||<=M/[1-aM(q-p_c)]. Consequently p_c<p_{2->2}<=p_u.",
+      "proof_text": "In each finite induced subgraph, Russo's formula expresses the derivative of connection probability as the sum of pivotal-edge probabilities. Pivotality after deleting an edge forces disjoint paths in one of the two orientations. BK bounds the derivative entrywise by T_p A T_p. Thus f(p)=||T_p|| satisfies f'<=a f^2 almost everywhere and f(p_c)<=M; integration gives the displayed bound, uniformly in finite volume. Exhaustion gives the full-graph bound by monotone convergence of connection events and bounded bilinear forms. If a unique infinite cluster existed at a bounded-kernel parameter, transitivity gives theta>0 and FKG gives T_p(x,y)>=theta^2 for all vertices, so a kernel column could not be in l2. Hence p_{2->2}<=p_u.",
+      "assumptions": ["independent Bernoulli bond percolation", "G infinite and countable vertex-transitive", "G has bounded degree", "p_c(G)<1", "T_{p_c} is bounded on counting-measure l2(V) with norm M"],
+      "domain": "probability theory",
+      "source": {"source_id":"owner-own-work:w561-C0047-L02-L03-reviewed-by-w563", "url":"~/brain_workers/w563/REVIEW_PACKET.md", "revision":"reviewed-2026-10-10", "license":"owner-own-work", "excerpt":null}
+    },
+    {
+      "key": "spectral-normalization-correction",
+      "namespace": "probability.percolation.cayley",
+      "logical_name": "c0047-normalized-spectral-radius-degree-factor-correction",
+      "kind": "concept",
+      "title": "C0047 spectral criterion needs the degree factor",
+      "statement": "For a d-regular Cayley graph, if rho is the normalized simple-random-walk spectral radius, the Benjamini-Schramm sufficient criterion is d*rho*p_c<1. The earlier C0047 attempt's p_c<1/rho drops d; when 0<rho<1 this inequality is automatic because p_c<=1<1/rho, so it cannot certify p_c<p_u. The corrected criterion is only sufficient: on the four-regular tree p_c=1/3, rho=sqrt(3)/2 and d*rho*p_c=2sqrt(3)/3>1 although p_u=1.",
+      "proof_text": null,
+      "assumptions": ["infinite d-regular Cayley graph", "rho=||A||/d is the normalized simple-random-walk spectral radius", "Bernoulli bond percolation"],
+      "domain": "probability theory",
+      "source": {"source_id":"owner-own-work:w562-S1.w562.002-w561-L04-L05-reviewed-by-w563", "url":"~/brain_workers/w563/REVIEW_PACKET.md", "revision":"reviewed-2026-10-10", "license":"owner-own-work", "excerpt":null}
+    }
+  ],
+  "relations": [
+    {"from_key":"conditional-operator-bridge","to_existing_logical":"math:probability.statmech:open-problem-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a","kind":"semantic_association","rationale":"The existing problem card asks p_c<p_u for every nonamenable Cayley graph; this reviewed lemma gives that inequality only when the critical two-point operator is bounded, leaving that assumption explicit."},
+    {"from_key":"spectral-normalization-correction","to_existing_logical":"math:probability.statmech:attempt-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a","kind":"refutes","rationale":"The stored attempt says p_c<1/rho for normalized random-walk rho; this correction states the source criterion d*rho*p_c<1 and supplies the four-regular-tree counterexample to the missing-factor route."}
+  ]
+}

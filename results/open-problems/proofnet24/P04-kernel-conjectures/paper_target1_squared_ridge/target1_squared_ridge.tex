@@ -1,0 +1,315 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\tr}{\operatorname{Tr}}
+\title{Restricted two-view correlated Gaussian equivalence for squared-ridge random features}
+\author{ProofNet24 P04/P21 closure package}
+\date{16 September 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove the restricted two-augmentation theorem completed by the P04/P21 kernel programme.  The setting has fixed positive augmentation strength and ridge, a smooth bounded odd activation such as \(\tanh\), Gaussian random-feature entries of variance \(1/d\), proportional sample and feature dimensions, and a unit-norm linear teacher.  The two augmentations of an original sample are replaced jointly, preserving their shared latent.  The optimized squared-ridge objective differs from its matched correlated Gaussian surrogate by \(O(d^{-1/2})\).  A separate argument proves clean-test prediction-risk equivalence against a jointly matched clean surrogate.  Exact normalization and the total, rather than per-block, replacement scale are visible throughout.
+\end{abstract}
+
+\section{Model and theorem}
+Let \(a_i,z_{i1},z_{i2}\stackrel{\mathrm{iid}}{\sim}N(0,I_d)\), independently over \(i=1,\ldots,n\), and
+\[
+ F=(f_1,\ldots,f_m)\in\R^{d\times m},\qquad F_{kr}\stackrel{\mathrm{iid}}{\sim}N(0,1/d).
+\]
+Fix \(\Delta>0\), \(\lambda>0\), let \(n/d\to\alpha\in(0,\infty)\), \(m/d\to\beta\in(0,\infty)\), and let \(\|\xi\|=1\), \(t_i=\xi^Ta_i\).  The activation \(\sigma\) is smooth, bounded, odd, and has the bounded derivative norms used below (for example \(\tanh\); \(C_b^3\) suffices for the displayed estimates).  The actual features are
+\[
+ x_{ij}^{A}=\sigma\!\left(F^T(a_i+\Delta z_{ij})\right),\qquad j=1,2.
+\]
+Put \(N=2n\).  For either the actual or Gaussian model,
+\begin{equation}\label{eq:objective}
+ L_M(w)=\frac1{2N}\sum_{i=1}^n\sum_{j=1}^2
+ \bigl(t_i-(x_{ij}^{M})^Tw\bigr)^2+\frac\lambda2\|w\|^2.
+\end{equation}
+Thus the per-row coefficient is exactly \(1/(2N)=1/(4n)\), the \(\ell=2\) specialization of the source coefficient \(1/(2n\ell)\).
+
+For the matched training surrogate set
+\[
+ \tau=(1+\Delta^2)^{1/2},\qquad \rho=\tau^{-2},\qquad G\sim N(0,1),
+\]
+\[
+ \mu=\E\sigma'(\tau G),\qquad V=\E\sigma(\tau G)^2,
+\]
+and for standard jointly Gaussian \((G_1,G_2)\) with correlation \(\rho\),
+\[
+ C=\E\{\sigma(\tau G_1)\sigma(\tau G_2)\}.
+\]
+The odd Hermite decomposition below gives
+\[
+ \mu_2^2=C-\mu^2\ge0,
+ \qquad
+ \mu_3^2=V-C-\Delta^2\mu^2\ge0.
+\]
+With independent standard Gaussian \(b_i,p_{i1},p_{i2}\in\R^m\), define
+\begin{equation}\label{eq:surrogate}
+ x_{ij}^{G}=\mu F^Ta_i+\Delta\mu F^Tz_{ij}+\mu_2b_i+\mu_3p_{ij}.
+\end{equation}
+The variables \(a_i,b_i\) are shared across the two views; \(z_{ij},p_{ij}\) are view-private.  The replacement unit is the entire triple \((t_i,x_{i1},x_{i2})\).
+
+For a fresh clean point \(a^0\sim N(0,I_d)\), put \(t^0=\xi^Ta^0\), \(x_A^0=\sigma(F^Ta^0)\).  The clean test comparator is matched separately: with
+\[
+ \nu=\E\sigma'(G),\qquad V_0=\E\sigma(G)^2,
+\]
+let
+\begin{equation}\label{eq:cleansur}
+ x_G^0=\nu F^Ta^0+\sqrt{V_0-\nu^2}\,p^0,
+ \qquad p^0\sim N(0,I_m),
+\end{equation}
+with \(p^0\) independent of training data and \(a^0\).
+
+\begin{theorem}[Restricted two-view squared-ridge equivalence]\label{thm:main}
+Let \(L_M^*=\min_w L_M(w)\).  Under the assumptions above,
+\[
+ |\E L_A^*-\E L_G^*|=O(d^{-1/2}).
+\]
+For every \(\Phi\in C_b^2(\R)\),
+\[
+ |\E\Phi(L_A^*)-\E\Phi(L_G^*)|
+ \le C\|\Phi'\|_\infty d^{-1/2}+C\|\Phi''\|_\infty d^{-1}.
+\]
+The two rows belonging to each original sample are replaced jointly, so shared latent dependence is preserved throughout the hybrid chain.
+
+Separately, the clean population squared risks of the trained actual model and the jointly matched clean comparator \eqref{eq:cleansur} have the same leading \(O(d^{-1/2})\) transfer for bounded smooth scalar tests.  If clean risk is estimated on \(M\) iid test points, the additional sampling term is \(O(M^{-1/2})\).
+\end{theorem}
+
+No claim is made for ReLU, nonlinear teachers, vanishing ridge, arbitrary augmentation counts, viewwise replacement, or independence of the nonlinear plus/minus channels.
+
+\section{Exact rank-two leave-block completion}
+Fix a hybrid step and delete both rows of original sample \(i\), without renormalizing.  Let
+\[
+ H_-=\lambda I+\frac1N X_-^TX_-,\qquad B=H_-^{-1},
+\]
+let \(w_-\) be the leave-block minimizer, and set
+\[
+ e=t_i\mathbf1_2-X_iw_-,\qquad Q=\frac1N X_iBX_i^T,\qquad A=(I_2+Q)^{-1}.
+\]
+Then \(\|B\|_{\op}\le\lambda^{-1}\), \(Q\succeq0\), and \(0\preceq A\preceq I_2\).
+
+\begin{lemma}\label{lem:woodbury}
+The exact restored optimizer and optimized-value increment are
+\[
+ w_i-w_-=\frac1N BX_i^TAe,
+\qquad
+ \boxed{L_i^*-L_-^*=\frac1{2N}e^TAe.}
+\]
+\end{lemma}
+\begin{proof}
+For an increment \(\delta\), quadratic completion around \(w_-\) gives
+\[
+ L_i(w_-+\delta)=L_-^*+\frac12\delta^TH_-\delta
+ +\frac1{2N}\|e-X_i\delta\|^2.
+\]
+Stationarity yields
+\[
+ (H_-+N^{-1}X_i^TX_i)\delta=N^{-1}X_i^Te,
+\]
+and Woodbury gives \(\delta=N^{-1}BX_i^TAe\).  The exact identities
+\[
+ I_2-QA=A,
+ \qquad
+ AQA+A^2=A
+\]
+imply \(e-X_i\delta=Ae\) and then the displayed optimized-value formula.  The accompanying exact symbolic checker verifies these finite algebraic identities independently.
+\end{proof}
+
+Deleting one view at a time would be invalid: the other view retains the shared \(a_i\) and, in the surrogate, the shared \(b_i\).  Joint deletion makes the leave environment independent of the complete current original-sample latent.
+
+\section{Finite-feature Hermite--Schur structure}
+Write \(f_r=R_r\theta_r\), where \(R_r^2\sim\chi_d^2/d\), \(\theta_r\) is uniform on \(S^{d-1}\), and radius and direction are independent.  Put \(\Theta_{rs}=\theta_r^T\theta_s\).  Conditional on \(F\),
+\[
+ G_{jr}=\frac{f_r^T(a+\Delta z_j)}{\tau R_r}
+\]
+is standard normal and
+\[
+ \operatorname{Corr}(G_{jr},G_{js}\mid F)=\Theta_{rs},
+ \qquad
+ \operatorname{Corr}(G_{1r},G_{2s}\mid F)=\rho\Theta_{rs}.
+\]
+For each radius \(r>0\), expand
+\[
+ \sigma(\tau rG)=\sum_{k\ge0}c_k(r)h_k(G)
+\]
+in the orthonormal probabilists' Hermite basis.  Oddness gives \(c_k(r)=0\) for even \(k\).  With \(D_k=\operatorname{diag}(c_k(R_1),\ldots,c_k(R_m))\), Mehler's identity gives exactly
+\begin{align}
+ \Sigma_A^{\mathrm{same}}&=\sum_{k\ \mathrm{odd}}D_k\Theta^{\circ k}D_k,\\
+ \Sigma_A^{\mathrm{cross}}&=\sum_{k\ \mathrm{odd}}\rho^kD_k\Theta^{\circ k}D_k.
+\end{align}
+Every sector is positive semidefinite by the Schur product theorem.  The parity covariances
+\[
+ \Sigma_\pm=\sum_{k\ \mathrm{odd}}(1\pm\rho^k)D_k\Theta^{\circ k}D_k
+\]
+are therefore positive semidefinite; this is a covariance statement, not a claim of nonlinear parity independence.
+
+Gaussian integration by parts yields
+\[
+ c_1(r)=\tau r\kappa(r),\qquad \kappa(r)=\E\sigma'(\tau rG),
+\]
+and for the teacher
+\begin{equation}\label{eq:teacher}
+ \E[t\,x_{jr}\mid F]=(\xi^Tf_r)\kappa(R_r).
+\end{equation}
+Thus teacher--feature dependence is part of the matched endpoint.
+
+\section{Dimension bookkeeping}
+The mismatch between actual and surrogate covariances splits into higher odd chaos and radius variation.  For the higher-chaos off-diagonal matrix \(H\), Parseval and boundedness of \(\sigma\) give
+\[
+ |H_{rs}|\le\|\sigma\|_\infty^2|\Theta_{rs}|^3\qquad(r\ne s).
+\]
+For independent spherical directions,
+\[
+ \E\Theta_{rs}^6=\frac{15}{d(d+2)(d+4)}.
+\]
+Because \(m=\Theta(d)\), the full \(m^2\) pair count gives
+\begin{equation}\label{eq:highchaos}
+ \E\|H\|_F^2=O(d^{-1}),\qquad \|H\|_F=O_{L^2}(d^{-1/2}).
+\end{equation}
+The crucial cancellation is that oddness removes quadratic chaos, so the first unmatched off-diagonal sector is cubic.
+
+Radius fluctuations are larger globally.  If \(\mu=\kappa(1)\) and \(\delta_r=\kappa(R_r)-\mu\), Gaussian radius concentration and bounded \(\sigma''\) give \(\E|\delta_r|^q=O(d^{-q/2})\) for fixed \(q\).  The radial covariance debt has only \(O_{L^2}(1)\) Frobenius norm, so global \(d^{-1/2}\) Frobenius matching is neither true nor needed.
+
+The ridge solution supplies the needed probe gain.  A leave-feature-coordinate Schur complement, conditioning on all columns except coordinate \(r\), makes the \(r\)-specific Gaussian feature source fresh.  Fixed \(\lambda>0\) bounds the scalar Schur inverse, and Gaussian fourth-moment estimates of the fresh-column linear forms give, uniformly along the hybrid chain,
+\begin{equation}\label{eq:coord4}
+ \sup_{r\le m}\E|w_{-,r}|^4\le Cd^{-2}.
+\end{equation}
+The same bound holds for the clean sensitivity direction used below.  Therefore, without assuming independence,
+\[
+ \E\|\operatorname{diag}(\delta)w_-\|^2
+ \le\sum_r(\E\delta_r^4)^{1/2}(\E|w_{-,r}|^4)^{1/2}=O(d^{-1}).
+\]
+All radial debts probed by \(w_-\) or the clean sensitivity direction are consequently \(O(d^{-1/2})\).  Equation \eqref{eq:teacher} similarly gives
+\[
+ \E\sum_r|\delta_r\,\xi^Tf_r|^2=O(d^{-1}).
+\]
+For a leverage mean, normalized trace gives the same gain directly: if \(R_{\mathrm{rad}}\) has \(O_{L^2}(1)\) Frobenius norm,
+\begin{equation}\label{eq:normtrace}
+ \left|\frac1N\tr(BR_{\mathrm{rad}})\right|
+ \le\frac{\sqrt m}{\lambda N}\|R_{\mathrm{rad}}\|_F
+ =O_{L^1}(d^{-1/2}).
+\end{equation}
+The higher-chaos debt in \eqref{eq:highchaos} is smaller still after the normalized trace.
+
+\section{Dependence-aware leverage freezing}
+Conditional on the leave-block environment, differentiate
+\[
+ Q_{ab}=N^{-1}x_a^TBx_b
+\]
+with respect to the entire shared Gaussian current block \((a_i,z_{i1},z_{i2})\).  The bounded derivative of \(\sigma\), \(\|B\|_{\op}\le\lambda^{-1}\), and \(\|x_j\|=O(\sqrt m)\) give
+\[
+ \|\nabla Q_{ab}\|\le C\frac{\sqrt m}{N}\|F\|_{\op}.
+\]
+Fixed moments of \(\|F\|_{\op}\) are bounded, so Gaussian Poincar\'e gives
+\begin{equation}\label{eq:qfluct}
+ \E\|Q-\bar Q\|_F^2=O(d^{-1}),\qquad \bar Q=\E[Q\mid\mathcal F_-],
+\end{equation}
+for both actual and surrogate blocks.  Ridge coercivity and Gaussian concentration give \(\E\|e\|^4=O(1)\).
+
+No independence between \(e\) and \(Q\) is asserted.  The resolvent identity yields
+\[
+ \|(I+Q)^{-1}-(I+\bar Q)^{-1}\|_{\op}\le\|Q-\bar Q\|_{\op},
+\]
+whence Cauchy--Schwarz and \eqref{eq:qfluct} give
+\begin{equation}\label{eq:freeze}
+ \left|\E e^T(I+Q)^{-1}e-
+ \tr\left((I+\bar Q)^{-1}\E[ee^T]\right)\right|=O(d^{-1/2}).
+\end{equation}
+View-exchange symmetry makes \(\bar Q\) and \(C_e=\E[ee^T]\) commute with the swap matrix.  In the common plus/minus basis they have eigenvalues \(q_\pm,c_\pm\ge0\), so the frozen bracket is exactly
+\[
+ \frac{c_+}{1+q_+}+\frac{c_-}{1+q_-}.
+\]
+The finite-feature estimates above match \(q_\pm,c_\pm\) between actual and Gaussian laws at \(O(d^{-1/2})\).  Therefore
+\begin{equation}\label{eq:blockcmp}
+ \left|\E[e_A^T(I+Q_A)^{-1}e_A]
+ -\E[e_G^T(I+Q_G)^{-1}e_G]\right|=O(d^{-1/2}).
+\end{equation}
+
+\section{Total training telescope}
+Insert the exact factor \(1/(2N)\) from Lemma~\ref{lem:woodbury} before summing.  If the unscaled bound in \eqref{eq:blockcmp} is \(K/\sqrt d\), one original-sample replacement costs
+\[
+ \frac{K}{2N\sqrt d}.
+\]
+There are exactly \(n=N/2\) blocks, so the total first-order error is
+\begin{equation}\label{eq:total}
+ \boxed{\frac{nK}{2N\sqrt d}=\frac{K}{4\sqrt d}=O(d^{-1/2}).}
+\end{equation}
+This is the total replacement error, not a per-block estimate.
+
+Moreover \(0\preceq(I+Q)^{-1}\preceq I\) and \(\E\|e\|^4=O(1)\) imply
+\[
+ \E(L_i^*-L_-^*)^2\le C/N^2.
+\]
+For \(\Phi\in C_b^2\), summing the one-block Taylor remainders gives
+\[
+ n\,O(N^{-2})=O(N^{-1})=O(d^{-1}),
+\]
+proving the training assertions of Theorem~\ref{thm:main}.
+
+\section{Separate clean-risk telescope}
+Training-objective equivalence does not imply prediction-risk equivalence.  Let an independent clean quadratic functional be
+\[
+ \widehat R_0(w)=c_0-2r_0^Tw+w^TS_0w.
+\]
+Set
+\[
+ v_-=B(S_0w_--r_0),\qquad h=X_iv_-,
+\]
+\[
+ R=N^{-1}X_iBS_0BX_i^T,\qquad A=(I+Q)^{-1}.
+\]
+Direct substitution of the optimizer update gives the exact clean increment
+\begin{equation}\label{eq:cleaninc}
+ \boxed{\Gamma_i=\frac1N\{2e^TAh+e^TARAe\}.}
+\end{equation}
+The factor is \(1/N\), because this is a separate test quadratic.
+
+Conditioning on the leave-training environment and clean summary, let
+\[
+ \bar Q=\E Q,\quad \bar R=\E R,\quad C=\E[ee^T],\quad M=\E[he^T],\quad A_0=(I+\bar Q)^{-1}.
+\]
+The resolvent identity gives the deterministic bound
+\begin{align*}
+&\left|\E\{2e^TAh+e^TARAe\}-\{2\tr(A_0M)+\tr(A_0\bar RA_0C)\}\right|\\
+&\quad\le2\E[\|Q-\bar Q\|\|e\|\|h\|]
+ +2\E[\|Q-\bar Q\|\|R\|\|e\|^2]
+ +\E[\|R-\bar R\|\|e\|^2].
+\end{align*}
+Since \(R_{ab}=N^{-1}x_a^T(BS_0B)x_b\), the same Poincar\'e derivative calculation gives \(\E\|R-\bar R\|_F^2=O(d^{-1})\).  Equation \eqref{eq:coord4} for \(w_-\) and \(v_-\), together with the same Hermite--Schur decomposition, matches \(\bar Q,\bar R,C,M\) at \(O(d^{-1/2})\) in the fixed \(2\times2\) functional.  Thus the unscaled clean numerator mismatch is \(O(d^{-1/2})\).  The exact \(1/N\) in \eqref{eq:cleaninc} and \(n=N/2\) replacements yield total \(O(d^{-1/2})\), with the same \(O(d^{-1})\) second-order debt.
+
+Finally, a fresh clean latent \(a^0\) is independent of training.  Gaussian Stein matches \(\E[t^0x^0]\), and the odd-Hermite decomposition matches the feature second moments with the comparator \eqref{eq:cleansur}, with the same \(O(d^{-1/2})\) probed radius/higher-chaos remainder.  This is a separate clean endpoint argument.  Averaging \(M\) fresh test points adds the standard \(O(M^{-1/2})\) sampling term.
+
+\section{Prior art and independent audits}
+The motivating source is O.~Dhifallah and Y.~M.~Lu, \emph{On the Inherent Regularization Effects of Noise Injection During Training}, PMLR 139 (2021).  Its equation (3) has coefficient \(1/(2n\ell)\), and its correlated Gaussian surrogate shares original-sample latent terms across augmentation index \(j\).  The paper explicitly describes correlated Gaussian equivalence as a conjectural ingredient.  The theorem above proves only the restricted regime stated here.
+
+H.~Hu and Y.~M.~Lu, \emph{Universality Laws for High-Dimensional Learning with Random Features}, arXiv:2009.07669, is the rigorous architectural precedent for leave-one-out/Lindeberg/Stein random-feature universality, but does not justify splitting two noisy views with a common original latent.
+
+A bounded literature check dated 16 September 2026 also found L.~Morisset, A.~Durmus and A.~Hardy, \emph{Characterizing the Generalization Error of Random Feature Regression with Arbitrary Data-Augmentation}, arXiv:2605.10290 (submitted 11 May 2026).  It studies proportional random-feature regression with arbitrary augmentation via population augmentation statistics.  The bounded check did not locate an exact theorem subsuming the finite empirical two-draw, shared-latent replacement statement above; accordingly the package is labelled PROVED rather than KNOWN.
+
+The two required independent OTHER-task audits are both complete:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Auditor & Claim & Verdict\\
+\midrule
+P26 & \texttt{P26-AUDIT-P04-T1-ENDTOEND-17} & PASS\\
+P03 & \texttt{P03-AUDIT-P04-T1-ENDTOEND-193} & PASS\\
+\bottomrule
+\end{tabular}
+\end{center}
+P26 independently rederived the source normalization, rank-two Woodbury identity, shared-latent replacement unit, dimension-sensitive moment estimates, full telescope, and separate clean-test transfer.  P03 independently checked the frozen P04/P21 proof and primary source, including dependence-aware leverage freezing, the Hermite/Stein dimension count, coordinate fourth moments, the exact \(K/(4\sqrt d)\) total normalization, and the separate clean-risk theorem.  Neither reported a repair debt.
+
+\section{Exact finite certificate and scope}
+The accompanying \texttt{target1\_symbolic\_checker.py} uses exact SymPy algebra to verify the two matrix completion identities and the exact \(n/(2N)=1/4\) normalization at \(N=2n\).  Its archived output records \texttt{EXACT\_SYMBOLIC\_CHECK=PASS}.  There is no finite enumeration core requiring a Lean file; the theorem-sized asymptotic argument is written above.
+
+This package proves exactly: two augmentations; fixed \(\Delta,\lambda>0\); smooth bounded odd activation; feature variance \(1/d\); proportional \(n,m,d\); unit linear teacher; joint two-view block replacement; optimized squared-ridge equivalence; and a separate jointly matched clean-test equivalence.  Under the repository closure rule the package is \textbf{PROVED / AUDIT-COMPLETE}.  Targets 2--4 and broader kernel conjectures are not part of this package.
+
+\end{document}

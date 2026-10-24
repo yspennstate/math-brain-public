@@ -1,0 +1,13 @@
+{
+ "helper_version":"A043-rational-grid-certificate-v2",
+ "family_domain_count":"same 458356 prime/bias representatives and 4639338 full-grid cases as FROZEN_SPEC.json",
+ "arithmetic":"exact integer moments and Parseval; atanh powers enclosed by outward integer rounding at scale 2^80, 32 terms and exact geometric-tail ceiling; divide by ln(2) interval then round log2 intervals to scale 2^24",
+ "maximum_log_argument":1296,
+ "symmetry":"same input-flip and output-negation exact quotient as discovery",
+ "memory_estimate_mb":80,
+ "max_runtime_seconds":60,
+ "stop_policy":"50 seconds checked at every bias vector, save partial coverage",
+ "prior_attempt":"v1 exhausted 50-second computation budget before completing cases; its partial output is not an all-grid certificate",
+ "overflow_policy":"signed 64-bit only for moments and entropy sums; arbitrary Python integers via object arrays for ratio cross-products",
+ "command":"python -X utf8 code/certify_grid.py"
+}

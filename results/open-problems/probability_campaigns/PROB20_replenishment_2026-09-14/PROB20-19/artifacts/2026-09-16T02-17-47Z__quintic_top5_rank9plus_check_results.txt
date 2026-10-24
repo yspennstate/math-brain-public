@@ -1,0 +1,38 @@
+PROB20-19 quintic top-five rank>=9 checker results
+Executed 2026-09-16 UTC in the task run environment.
+This is reproducible self-review evidence, not independent verification.
+
+symbolic checks: PASS
+coordinate numerator: r*(r - 3)*(r - 2)*(r - 1)*(r + 26)
+r=9 endpoint lower bound: 9717/121
+
+capped-simplex cases: 5760
+minimum sampled cumulant slack K+W^2: 5.418197925076551e-06
+
+projection cases: 4320
+minimum exact K5>=4 numerator gap by rank:
+  r=4: 493.561050473636
+  r=5: 1142.170177928515
+  r=6: 2349.422192489619
+  r=7: 6222.13403092049
+  r=8: 8061.658680101013
+  r=9: 12646.30708604303
+  r=10: 18707.308920366864
+  r=11: 19331.85628384963
+  r=12: 14332.008487022831
+
+minimum diagonal relaxation G_r by rank:
+  r=4: -711.5992595237799
+  r=5: -680.6700496695391
+  r=6: -541.5489221994271
+  r=7: -322.2449121407933
+  r=8: -118.22047734736884
+  r=9: 224.0144585843375
+  r=10: 574.7154243298123
+  r=11: 829.4579237423424
+  r=12: 691.601510692966
+
+Interpretation:
+- The symbolic identities used by the analytic proof passed.
+- The deterministic randomized bank supports the proved r>=9 theorem.
+- In the same bank, the actual facet gap stayed positive at r=4,...,8 even though the diagonal-only relaxation G_r became negative there. This is numerical guidance only; it does not prove the remaining finite ranks.

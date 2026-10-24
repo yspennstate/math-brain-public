@@ -1,0 +1,719 @@
+\section{The first two levels without a coordinate pivot}
+\label{sec:lower-levels}
+
+Let $X=(X_1,\ldots,X_n)$ have independent coordinates with densities
+bounded by one, and write
+\[
+ Q=X^{\mathsf T}MX+b^{\mathsf T}X+c_0,
+ \qquad \varphi_Q(t)=\mathbb E e^{itQ}.
+\]
+Here $M$ is real symmetric, and all estimates are uniform in $b,c_0$.
+The definition of a $c$-pivot is given in
+Section~\ref{sec:structure}.  In particular, absence of a $c$-pivot,
+with $0<c\leq1$, implies
+\begin{equation}\label{lower:entry-cap}
+ |m_{ii}|<c,\qquad m_{ij}^2<c+c^2\leq2c\quad(i\ne j).
+\end{equation}
+Set
+\[
+ O=M-\operatorname{diag}M,\qquad
+ r_i^2=\sum_{j\ne i}m_{ij}^2,\qquad
+ L_Q(u)=\sup_s\mathbb P(|Q-s|\leq u).
+\]
+The truncated half-power potential is
+\[
+ \mathcal H(Q)=\sup_s
+ \mathbb E\bigl[|Q-s|^{-1/2};\ |Q-s|\leq1\bigr].
+\]
+
+\begin{theorem}[One large eigenvalue]\label{lower:one}
+Suppose that $M$ has no $c$-pivot, where $c\leq2\cdot10^{-6}$,
+and $\|M\|\geq1$.  Then
+\[
+ L_Q(u)\leq25\sqrt u\qquad(u>0).
+\]
+In particular,
+\[
+ \sup_s\mathbb E\log_+\frac1{|Q-s|}
+ \leq2+2\log25<8.44.
+\]
+\end{theorem}
+
+\begin{theorem}[Two large eigenvalues]\label{lower:two}
+Put $c_*=10^{-15}$.  If $M$ has no $c_*$-pivot and has at least
+two eigenvalues of modulus at least one, then
+\[
+ \mathcal H(Q)\leq10^6.
+\]
+\end{theorem}
+
+The second theorem is a negative-moment estimate.  Its statement does
+not require an estimate of order $u(1+\log(1/u))$ for $L_Q(u)$.
+The small pivot threshold is used to make the separate cases below
+quantitative.
+
+\subsection{Fourier concentration and volume marginals}
+
+Put $\kappa_0=4\sin^2(1/2)>0.91939$.
+The Fej\'er kernel identity
+\[
+ \left(\frac{\sin(x/2)}{x/2}\right)^2
+ =\int_{-1}^1(1-|\tau|)e^{i\tau x}\,d\tau
+\]
+gives, for any real random variable $Z$,
+\begin{equation}\label{lower:fejer}
+ L_Z(u)\leq\kappa_0^{-1}u
+             \int_{|t|\leq1/u}|\varphi_Z(t)|\,dt.
+\end{equation}
+Indeed, the kernel is at least $\kappa_0$ on $[-1,1]$;
+take its expectation at $(Z-s)/u$, use Fubini, and then take absolute
+values.  In particular,
+\begin{equation}\label{lower:power-concentration}
+ |\varphi_Z(t)|\leq B|t|^{-\beta},\quad 0<\beta<1
+ \quad\Longrightarrow\quad
+ L_Z(u)\leq\frac{2B}{\kappa_0(1-\beta)}u^\beta.
+\end{equation}
+
+For disjoint coordinate sets $I,J$, let $A=M_{I,J}$.  Write
+\[
+ Z_k(A)=\sum_{\substack{|S|=|T|=k}}
+                   \det(A_{S,T})^2=e_k(A^{\mathsf T}A),
+ \qquad
+ \alpha_i^{(k)}=
+ \frac{\sum_{S\ni i,T}\det(A_{S,T})^2}{Z_k(A)}.
+\]
+The sums are over row and column subsets of $A$ of the indicated
+cardinalities.  Lemma~\ref{four:volume}, with $1\leq q\leq2$,
+gives
+\begin{equation}\label{lower:volume-q}
+ |\varphi_Q(t)|\leq
+ \left[e^{k/2}(2\pi)^kq^{-k/2}Z_k(A)^{-1/2}\right]^{1/(2q)}
+ |t|^{-k/(2q)},
+ \qquad \max_i\alpha_i^{(k)}\leq q/2.
+\end{equation}
+This estimate allows arbitrary quadratic terms within $I$ and $J$.
+Other coordinates may be conditioned on, and the orientation of $A$
+may be reversed.  These facts follow from the decoupling step in
+that lemma; the resulting bounds are uniform in the conditioned
+affine terms.
+
+\begin{lemma}[First-volume estimate]\label{lower:first-volume}
+Suppose $A=M_{I,J}\ne0$, and let $1/2\leq h\leq1$.
+If every row satisfies $|A_{i,\cdot}|^2\leq h\|A\|_F^2$, then
+\begin{equation}\label{lower:first-volume-bound}
+ |\varphi_Q(t)|\leq
+ \left[2\pi e^{1/2}(2h)^{-1/2}\|A\|_F^{-1}\right]^{1/(4h)}
+ |t|^{-1/(4h)}.
+\end{equation}
+The same assertion holds with columns in place of rows.  When $h=1$
+there is no additional marginal hypothesis.
+\end{lemma}
+\begin{proof}
+For $k=1$, the minors are the entries of $A$, so that
+$Z_1(A)=\|A\|_F^2$ and
+$\alpha_i^{(1)}=|A_{i,\cdot}|^2/\|A\|_F^2$.
+Apply \eqref{lower:volume-q} with $q=2h$.
+\end{proof}
+
+\begin{lemma}[Choice of orientation]\label{lower:orientation}
+Let $Z=\|A\|_F^2>0$ and $1/2<h<1$.  If
+$A_{ij}^2\leq(2h-1)Z$ for every entry, then either every row share
+is at most $h$, or every column share is at most $h$.
+\end{lemma}
+\begin{proof}
+If a row $i$ and a column $j$ both had shares greater than $h$, then
+\[
+ Z\geq |A_{i,\cdot}|^2+|A_{\cdot,j}|^2-A_{ij}^2
+   >2hZ-A_{ij}^2,
+\]
+contrary to the entry hypothesis.
+\end{proof}
+
+Combining these two lemmas with \eqref{lower:power-concentration}
+at $h=3/4$ gives the following useful consequence:
+\begin{equation}\label{lower:third-power}
+ \begin{split}
+ \|M_{I,J}\|_F\geq\rho,\qquad
+ m_{ij}^2\leq\tfrac12\|M_{I,J}\|_F^2
+ \quad\Longrightarrow\quad
+ L_Q(u)\leq K(\rho)u^{1/3},\\
+ K(\rho)=\frac3{\kappa_0}
+       \left(\frac{2\pi\sqrt{2e/3}}{\rho}\right)^{1/3}
+ <3.264\left(\frac{8.46}{\rho}\right)^{1/3}.
+ \end{split}
+\end{equation}
+
+\subsection{Proof at the first level}
+
+\begin{proof}[Proof of Theorem~\ref{lower:one}]
+Let $F^2=\|O\|_F^2$.  The triangle inequality gives
+$F\geq\|O\|\geq1-c$.  Put $\varepsilon=1/100$ and call an
+index heavy if $r_i^2>\varepsilon F^2$.  There are fewer than
+$1/\varepsilon$ heavy indices.  Place all of them in $J$, and place
+each remaining index independently in $I$ or $J$, with equal
+probabilities.  Set $Z=\|M_{I,J}\|_F^2$.
+
+The squared entries between heavy indices have total at most
+$2c/\varepsilon^2$, by \eqref{lower:entry-cap}.  Every other
+off-diagonal squared entry contributes to $\mathbb EZ$ with
+probability at least $1/4$, with the two orientations counted in
+$F^2$.  Consequently,
+\[
+ \mathbb EZ\geq\frac14(F^2-2c/\varepsilon^2)
+          \geq\frac{19}{80}F^2.
+\]
+The last step uses $c\leq\varepsilon^2F^2/40$, which follows from
+$c\leq2\cdot10^{-6}$ and $F\geq1-c$.
+
+Changing the coin at a light index $i$ changes $Z$ by at most
+$r_i^2$.  Conditional variance for one fair coin, followed by
+variance tensorization, gives
+\[
+ \operatorname{Var}Z
+ \leq\frac14\sum_{i\ {m light}}r_i^4
+ \leq\frac\varepsilon4F^4.
+\]
+Chebyshev's inequality therefore gives
+\[
+ \mathbb P\{Z<\tfrac12\mathbb EZ\}
+ \leq\frac{\varepsilon F^4}{(\mathbb EZ)^2}
+ \leq\frac{6400\varepsilon}{361}<0.18.
+\]
+Choose a realization with $Z\geq\mathbb EZ/2>F^2/9$.
+All its rows are light, so
+\[
+ \frac{|M_{i,J}|^2}{Z}\leq9\varepsilon=0.09<1/2.
+\]
+Lemma~\ref{lower:first-volume}, with $h=1/2$, now yields
+\[
+ |\varphi_Q(t)|
+ \leq\left(\frac{6\pi\sqrt e}{F}\right)^{1/2}|t|^{-1/2}
+ <5.6|t|^{-1/2}.
+\]
+Equation~\eqref{lower:power-concentration} gives
+$L_Q(u)\leq(22.4/\kappa_0)\sqrt u<25\sqrt u$.
+Finally, layer cake gives
+\[
+ \mathbb E\log_+\frac1{|Q-s|}
+ =\int_0^\infty\mathbb P(|Q-s|<e^{-v})\,dv
+ \leq\int_0^\infty\min(1,25e^{-v/2})\,dv
+ =2+2\log25.
+\]
+\end{proof}
+
+With only $\max_i|m_{ii}|\leq1/2$ and $\|M\|\geq1$, a fair
+partition satisfies $\mathbb E\|M_{I,J}\|_F^2=\|O\|_F^2/4\geq1/16$.
+The unrestricted $h=1$ case gives a fourth-root estimate;
+Lemma~\ref{four:quarter} provides such an estimate for every nonzero
+quadratic matrix.  In particular it already gives a
+uniform logarithmic potential.  The argument above upgrades the
+concentration exponent when the principal pivots are small.
+
+\subsection{A discriminant estimate}
+
+Fix a coordinate $h$, and write $X'=X_{-h}$ and
+\[
+ a=m_{hh},\qquad w=M_{-h,h},\qquad
+ L=w^{\mathsf T}X'+b_h/2,\qquad
+ Q=aX_h^2+2LX_h+R'(X').
+\]
+For a target level $s$, set
+\begin{equation}\label{lower:delta}
+ \Delta_s=L^2+a(s-R').
+\end{equation}
+Its quadratic matrix is
+\begin{equation}\label{lower:minor-matrix}
+ N^{(h)}=ww^{\mathsf T}-aM_{-h,-h},
+ \qquad
+ N^{(h)}_{ij}=m_{hi}m_{hj}-m_{hh}m_{ij}.
+\end{equation}
+The diagonal entries are negatives of the principal two-coordinate
+minors through $h$.
+
+\begin{lemma}[Conditional sublevel bound]\label{lower:conditional}
+For every $u>0$,
+\begin{equation}\label{lower:conditional-bound}
+ \mathbb P(|Q-s|\leq u\mid X')
+ \leq\min\left\{1,\frac{2\sqrt2\sqrt u}{\sqrt{|a|}},
+                     \frac{4u}{\sqrt{|\Delta_s|}}\right\}.
+\end{equation}
+When $a=0$, omit the middle expression.
+\end{lemma}
+\begin{proof}
+If $a\ne0$, complete the square:
+\[
+ Q=a(X_h+L/a)^2+\xi,
+ \qquad \xi=R'-L^2/a,
+ \qquad |a|\,|s-\xi|=|\Delta_s|.
+\]
+Apply the one-dimensional quadratic sublevel estimate in
+Lemma~\ref{geom:square}.  If $a=0$, the conditional polynomial is
+affine with slope $2L$ and has sublevel probability at most
+$\min(1,u/|L|)$.  Since $\Delta_s=L^2$, this implies the stated
+weaker bound, including the case $L=0$.
+\end{proof}
+
+\begin{lemma}[Integrated discriminant bound]\label{lower:integrated}
+With the middle term omitted for $a=0$, define
+\[
+ I(d,a)=\int_1^\infty
+ \min\left\{1,\frac{2\sqrt2}{v\sqrt{|a|}},
+                  \frac4{v^2\sqrt{|d|}}\right\}\,dv.
+\]
+Then
+\begin{align}
+ I(d,a)&\leq4|d|^{-1/4},\label{lower:quarter-discriminant}\\
+ \mathbb E[|Q-s|^{-1/2};\ |Q-s|\leq1]
+       &\leq1+\mathbb E I(\Delta_s,a).
+       \label{lower:riesz-discriminant}
+\end{align}
+If $0<|a|\leq1$, one also has
+\begin{equation}\label{lower:log-discriminant}
+ I(d,a)\leq\frac{2\sqrt2}{\sqrt{|a|}}
+       \left(2+\frac12\log_+\frac{a^2}{4|d|}\right).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Put $D=4|d|^{-1/2}$.  Dropping the middle term, the integral is at
+most $D$ if $D\leq1$, and at most $2\sqrt D$ if $D>1$, by splitting
+at $\sqrt D$.  Both bounds imply \eqref{lower:quarter-discriminant}.
+For \eqref{lower:log-discriminant}, put
+$A_0=2\sqrt2|a|^{-1/2}\geq1$ and $V_0=D/A_0$.
+If $V_0\leq A_0$, integrate $1$ to $A_0$ and $D/v^2$ afterwards;
+the result is at most $2A_0$.  If $V_0>A_0$, integrate $1$ to
+$A_0$, $A_0/v$ to $V_0$, and $D/v^2$ afterwards.  The result is at
+most $A_0(2+\log(V_0/A_0))$.
+Since $V_0/A_0=|a|/(2\sqrt{|d|})$, this proves the claim.
+Finally, layer cake and Lemma~\ref{lower:conditional} give
+\[
+ \mathbb E[|Q-s|^{-1/2};\ |Q-s|\leq1]
+ \leq1+\int_1^\infty\mathbb P(|Q-s|<v^{-2})\,dv
+ \leq1+\mathbb E I(\Delta_s,a).
+\]
+\end{proof}
+
+\begin{theorem}[A coordinate discriminant]\label{lower:discriminant}
+Let $0<\nu\leq1$.  Suppose $M$ has no $c$-pivot, where
+$c\leq\nu/9$, and some coordinate $h$ satisfies
+$\|N^{(h)}_{\rm off}\|_F\geq\nu$.  Then
+\begin{equation}\label{lower:discriminant-result}
+ \mathcal H(Q)\leq5+40\left(\frac{16.92}{\nu}\right)^{1/3}.
+\end{equation}
+No spectral hypothesis is needed for this assertion.
+\end{theorem}
+\begin{proof}
+By \eqref{lower:entry-cap} and $c\leq1/9$,
+\[
+ |N^{(h)}_{ii}|<c,
+ \qquad |N^{(h)}_{ij}|
+ \leq2c+c\sqrt{2c}\leq3c.
+\]
+A random partition of the coordinates other than $h$ yields a
+realization satisfying
+\[
+ \|N^{(h)}_{I,J}\|_F^2\geq\nu^2/4,
+ \qquad |N^{(h)}_{ij}|^2\leq9c^2\leq\nu^2/9
+                          \leq\tfrac12\|N^{(h)}_{I,J}\|_F^2.
+\]
+Apply \eqref{lower:third-power} to $\Delta_s$, whose affine terms
+are arbitrary.  Uniformly in $s$ and in a second target $z$,
+\[
+ \mathbb P(|\Delta_s-z|\leq r)\leq K_\Delta r^{1/3},
+ \qquad
+ K_\Delta=K(\nu/2)
+ <3.264(16.92/\nu)^{1/3}.
+\]
+In particular $\Delta_s$ has no atom at zero, and layer cake gives
+\[
+ \mathbb E|\Delta_s|^{-1/4}
+ \leq1+\int_1^\infty K_\Delta v^{-4/3}\,dv
+ =1+3K_\Delta.
+\]
+Equations~\eqref{lower:quarter-discriminant} and
+\eqref{lower:riesz-discriminant} now give
+$\mathcal H(Q)\leq5+12K_\Delta$, which implies
+\eqref{lower:discriminant-result}.
+\end{proof}
+
+\begin{lemma}[Two tests for a discriminant]\label{lower:tests}
+If $M$ has no $c$-pivot, then every unit eigenpair $(\mu,v)$ and
+every coordinate $h$ satisfy
+\begin{align}
+ \|N^{(h)}_{\rm off}\|_F
+ &\geq |\mu|\bigl(|\mu|v(h)^2-|m_{hh}|\bigr)-c,
+       \label{lower:eigen-test}\\
+ \|N^{(h)}_{\rm off}\|_F
+ &\geq r_h^2-|m_{hh}|\,\|M\|-c.
+       \label{lower:row-test}
+\end{align}
+\end{lemma}
+\begin{proof}
+Extend $N^{(h)}$ by a zero $h$th row and column.  Then
+$N^{(h)}=m_hm_h^{\mathsf T}-m_{hh}M$, where $m_h=Me_h$.
+Its diagonal norm is at most $c$, so
+\[
+ \|N^{(h)}_{\rm off}\|_F\geq\|N^{(h)}\|-c.
+\]
+The Rayleigh quotient on $v$ is
+$\mu^2v(h)^2-m_{hh}\mu$, proving \eqref{lower:eigen-test}.
+Also $\|N^{(h)}\|\geq|m_h|^2-|m_{hh}|\|M\|$, and
+$|m_h|^2\geq r_h^2$, proving \eqref{lower:row-test}.
+\end{proof}
+
+\subsection{Two-volume marginals and random partitions}
+
+\begin{lemma}[Second-volume marginals]\label{lower:two-marginals}
+Let $A$ have rank at least two, with singular values
+$s_1\geq s_2\geq\cdots$ and left singular vectors $u_m$.
+Put $G=AA^{\mathsf T}$, $\lambda_m=s_m^2$ and $Z_2=e_2(G)$.
+Then
+\begin{equation}\label{lower:marginal-formula}
+ \alpha_i^{(2)}
+ =\frac{G_{ii}\operatorname{tr}G-(G^2)_{ii}}{e_2(G)}
+ =\sum_m p_m u_m(i)^2,
+ \quad
+ p_m=\frac{\lambda_m\sum_{\ell\ne m}\lambda_\ell}{e_2(\lambda)}
+ \leq1.
+\end{equation}
+Consequently,
+\begin{align}
+ \alpha_i^{(2)}&\leq2|A_{i,\cdot}|^2/s_2^2,
+                          \label{lower:row-marginal}\\
+ \alpha_i^{(2)}&\leq u_1(i)^2+
+ |(A-s_1u_1v_1^{\mathsf T})_{i,\cdot}|^2
+ \left(\frac1T+\frac1S\right),
+                          \label{lower:residual-marginal}\\
+ \qquad S&=s_1^2,\qquad T=\sum_{m\geq2}s_m^2.
+ \nonumber
+\end{align}
+There are identical formulas for the column marginals.
+\end{lemma}
+\begin{proof}
+Cauchy--Binet gives
+$\sum_T\det(A_{S,T})^2=\det G_{S,S}$.
+Summing the two-coordinate minors that contain $i$ gives
+\[
+ \sum_{j\ne i}(G_{ii}G_{jj}-G_{ij}^2)
+ =G_{ii}\operatorname{tr}G-(G^2)_{ii}.
+\]
+Spectral decomposition gives \eqref{lower:marginal-formula}.
+The bound $p_m\leq1$ follows because its numerator is the sum of
+the terms of $e_2(\lambda)$ that contain $\lambda_m$.
+Moreover,
+\[
+ e_2(\lambda)=\tfrac12\sum_m\lambda_m
+                         \sum_{\ell\ne m}\lambda_\ell
+ \geq\tfrac12\lambda_2\sum_m\lambda_m,
+\]
+which proves \eqref{lower:row-marginal}.  Since $e_2\geq ST$,
+for $m\geq2$ one has $p_m\leq\lambda_m(S+T)/(ST)$.
+Separating the term $m=1$ proves \eqref{lower:residual-marginal}.
+\end{proof}
+
+Let $(\mu_1,v_1),(\mu_2,v_2)$ be orthonormal eigenpairs of $M$,
+write $V=[v_1\ v_2]$, and put $\Lambda=\operatorname{diag}(\mu_1,\mu_2)$.
+For independent fair signs $\epsilon_i$, put
+\[
+ E=\operatorname{diag}(\epsilon_i),\quad
+ I=\{i:\epsilon_i=1\},\quad J=I^c,\quad
+ \Sigma=V^{\mathsf T}EV,\quad B=V_I^{\mathsf T}M_{I,J}V_J.
+\]
+Writing $D=\operatorname{diag}M$, direct expansion gives
+\begin{equation}\label{lower:partition-expansion}
+ 4B=\Lambda+[\Sigma,\Lambda]-V^{\mathsf T}DV-C,
+ \qquad C_{kl}=\sum_{i\ne j}\epsilon_i\epsilon_j
+                         v_k(i)m_{ij}v_l(j).
+\end{equation}
+Indeed $4B=V^{\mathsf T}(I+E)M(I-E)V$, and $MV=V\Lambda$.
+If $M_3=M-V\Lambda V^{\mathsf T}$, the alternative expansion is
+\begin{equation}\label{lower:remainder-expansion}
+ 4B=\Lambda+[\Sigma,\Lambda]-\Sigma\Lambda\Sigma
+       -V^{\mathsf T}\operatorname{diag}(M_3)V-C^{(3)},
+\end{equation}
+where $C^{(3)}$ is defined as $C$ with $M_3$ in place of $M$.
+This follows from $M_3V=0$.
+
+The elementary second-moment identities used below are
+\begin{align}
+ \mathbb E\Sigma_{kl}^2
+ &=\sum_i v_k(i)^2v_l(i)^2,\label{lower:sigma-variance}\\
+ \mathbb E(C^{(H)}_{kl})^2
+ &\leq2\sum_{i\ne j}v_k(i)^2H_{ij}^2v_l(j)^2
+ \leq2\max_i v_k(i)^2\|H\|^2.
+ \label{lower:chaos-variance}
+\end{align}
+For the second identity only equal or reversed index pairs survive
+the sign average; bound each cross product by half the sum of its
+two squares.  Finally,
+\[
+ [\Sigma,\Lambda]=\begin{pmatrix}0&s\\-s&0\end{pmatrix},
+ \qquad s=(\mu_2-\mu_1)\Sigma_{12},
+\]
+Thus the matrix
+$P=\left(\begin{smallmatrix}\mu_1&s\\-s&\mu_2\end{smallmatrix}\right)$
+has determinant $\mu_1\mu_2+s^2$.  Since $\|V_I\|,\|V_J\|\leq1$,
+the singular values satisfy $s_k(M_{I,J})\geq s_k(B)$ for $k=1,2$.
+
+\begin{lemma}[Comparable eigenvalues and light rows]\label{lower:balanced}
+Suppose
+\[
+ |m_{ii}|\leq c,\quad
+ 1\leq|\mu_2|\leq|\mu_1|\leq K,\quad
+ r_i\leq\rho,\quad
+ c\leq\frac1{8(K+2)},\quad
+ \rho\leq\frac3{64(K+2)}.
+\]
+With probability at least $11/16$, a fair partition has
+\[
+ s_2(M_{I,J})\geq\sigma_A:=\frac3{32(K+2)},
+ \qquad \max_i\alpha_i^{(2)}\leq1/2.
+\]
+Consequently,
+\begin{equation}\label{lower:balanced-decay}
+ |\varphi_Q(t)|\leq2\pi\sqrt e\,\sigma_A^{-1}|t|^{-1}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The eigenvector equation gives
+\[
+ |v_k(i)|\leq\frac{r_i}{|\mu_k-m_{ii}|}
+            \leq\frac\rho{1-c}\qquad(k=1,2).
+\]
+Equation~\eqref{lower:chaos-variance}, using the off-diagonal row
+bound before the last inequality, gives
+\[
+ \mathbb E\|C\|_F^2\leq\frac{8\rho^4}{(1-c)^2}\leq16\rho^4.
+\]
+Also $\mathbb E\Sigma_{12}^2\leq\rho^2/(1-c)^2$.
+Except on a set of probability at most $1/16+1/4=5/16$, both
+\[
+ |\Sigma_{12}|\leq4\rho/(1-c),\qquad \|C\|_F\leq8\rho^2
+\]
+hold.  On this event,
+\[
+ |s|\leq8K\rho/(1-c)\leq1/2,
+ \quad |\det P|\geq3/4,\quad \|P\|\leq K+1/2.
+\]
+Thus $s_2(P)\geq3/[4(K+2)]$.  Using
+\eqref{lower:partition-expansion},
+\[
+ s_2(4B)\geq\frac3{4(K+2)}-c-8\rho^2
+             \geq\frac3{8(K+2)}.
+\]
+Division by four gives the claimed singular-value lower bound.
+Every row of $M_{I,J}$ has norm at most $\rho$, and hence
+\eqref{lower:row-marginal} gives
+$\alpha_i^{(2)}\leq2\rho^2/\sigma_A^2\leq1/2$.
+Finally $Z_2\geq s_2^4\geq\sigma_A^4$, so
+\eqref{lower:volume-q} with $k=2,q=1$ proves
+\eqref{lower:balanced-decay}.
+\end{proof}
+
+\begin{lemma}[A dominant eigenvalue]\label{lower:dominant}
+Order the eigenvalues of $M$ by decreasing modulus, and suppose
+\[
+ |\mu_2|=1,\quad K=|\mu_1|\geq10^4,\quad
+ |m_{ii}|\leq c,\quad |m_{ij}|\leq\sqrt{2c},\quad c\leq10^{-6}.
+\]
+Assume, for all $i$, that
+$K v_1(i)^2\leq\eta$ and $v_2(i)^2\leq\eta$, where
+$\eta\leq6\cdot10^{-5}$.  Some partition and orientation satisfy
+\[
+ Z_2(M_{I,J})\geq1,
+ \qquad \max_i\alpha_i^{(2)}\leq0.6.
+\]
+In particular,
+\[
+ |\varphi_Q(t)|\leq6.51|t|^{-5/6},\qquad
+ L_Q(u)\leq85u^{5/6},\qquad \mathcal H(Q)<129.
+\]
+\end{lemma}
+\begin{proof}
+We first find a partition with two singular directions.
+Since $\|M_3\|\leq1$, equations
+\eqref{lower:sigma-variance}--\eqref{lower:chaos-variance} show
+that, with probability at least $53/64$, all four bounds
+\begin{equation}\label{lower:dominant-event}
+ \begin{gathered}
+ |\Sigma_{11}|,|\Sigma_{12}|\leq8\sqrt{\eta/K},
+ \qquad |\Sigma_{22}|\leq8\sqrt\eta,\\
+ \|C^{(3)}\|_F\leq8\sqrt\eta
+ \end{gathered}
+\end{equation}
+hold.  The failure probabilities for the three entries of $\Sigma$
+are at most $1/64$ each.  The bound
+$\mathbb E\|C^{(3)}\|_F^2\leq4\eta/K+4\eta\leq8\eta$
+gives an additional failure probability at most $8/64$.
+
+On this event,
+\[
+ \|\Sigma\Lambda\Sigma\|_F
+ \leq K(\Sigma_{11}^2+\Sigma_{12}^2)
+               +\Sigma_{12}^2+\Sigma_{22}^2\leq256\eta.
+\]
+Moreover,
+\[
+ \|V^{\mathsf T}\operatorname{diag}(M_3)V\|
+ \leq c+2\eta,
+ \qquad
+ s^2\leq64\eta K(1+1/K)^2\leq65\eta K.
+\]
+It follows that $|\det P|\geq0.996K$, $\|P\|\leq1.001K$,
+and $s_2(P)\geq0.995$.  The remaining terms in
+\eqref{lower:remainder-expansion} have norm at most
+\[
+ 256\eta+c+2\eta+8\sqrt\eta<0.078.
+\]
+Hence, with $A=M_{I,J}$,
+\begin{equation}\label{lower:dominant-singular}
+ s_2(A)\geq0.229,
+ \qquad s_1(A)\geq0.249K.
+\end{equation}
+
+Next write
+\[
+ A=\mu_1xy^{\mathsf T}+F,
+ \qquad x=(v_1)_I,\quad y=(v_1)_J,\quad \|F\|\leq1.
+\]
+Equation~\eqref{lower:dominant-event} implies
+$|x|^2,|y|^2\geq0.4996$.  Put
+$\sigma_0=K|x||y|$, so that
+$0.4996K\leq\sigma_0\leq K/2$.
+Absorbing the sign of $\mu_1$ into one normalized vector, write
+$\widehat x=x/|x|$, $\widehat y=\pm y/|y|$.
+Then
+\[
+ AA^{\mathsf T}=\sigma_0^2\widehat x\widehat x^{\mathsf T}+P',
+ \qquad \|P'\|\leq2\sigma_0+1.
+\]
+If $u$ is a top left singular vector of $A$, projecting its
+eigenvector equation perpendicular to $\widehat x$ gives
+\[
+ \sin\angle(u,\widehat x)
+ \leq\frac{2\sigma_0+1}{(\sigma_0-1)^2}
+ \leq\frac{2.01}{\sigma_0}.
+\]
+Here $s_1(A)\geq\sigma_0-1$, and $\sigma_0\geq4996$.
+The identical bound holds for the top right singular vector $v$
+relative to $\widehat y$.
+
+Let $A_0=A-s_1uv^{\mathsf T}$.  For each applicable coordinate,
+\[
+ |u_i|,|v_j|\leq R_K:=
+      \sqrt{\frac\eta{0.4996K}}+\frac{2.01}{0.4996K},
+ \qquad R_K^2<3\cdot10^{-7}.
+\]
+Using $A_0=A(I-vv^{\mathsf T})$ and its transposed version gives
+\[
+ |(A_0)_{i,\cdot}|,|(A_0)_{\cdot,j}|
+ \leq1+2.01\sqrt{\frac\eta{0.4996K}}<1.001.
+\]
+For the entries, $s_1\leq\sigma_0+1\leq K/2+1$ yields
+\[
+ |(A_0)_{ij}|\leq\sqrt{2c}+(K/2+1)R_K^2<0.003.
+\]
+The last bound follows by substituting $c\leq10^{-6}$,
+$\eta\leq6\cdot10^{-5}$ and $K\geq10^4$; after expansion,
+$(K/2+1)R_K^2$ is decreasing in $K$.
+By \eqref{lower:dominant-singular},
+$T=\|A_0\|_F^2\geq0.229^2$.
+Since $0.003^2<0.02\cdot0.229^2$, Lemma~\ref{lower:orientation}
+with $h=0.51$ gives an orientation in which every residual row
+has squared norm at most $0.51T$.
+
+Equation~\eqref{lower:residual-marginal} therefore gives
+\[
+ \alpha_i^{(2)}
+ \leq3\cdot10^{-7}+0.51+
+            \frac{1.001^2}{(0.249K)^2}<0.6.
+\]
+Also $Z_2\geq s_1^2s_2^2\geq(0.249K)^2\,0.229^2>1$.
+Apply \eqref{lower:volume-q} with $k=2,q=6/5$:
+\[
+ |\varphi_Q(t)|\leq
+ \left[\frac{5e(2\pi)^2}{6}\right]^{5/12}|t|^{-5/6}
+ <6.51|t|^{-5/6}.
+\]
+Equation~\eqref{lower:power-concentration} gives $L_Q(u)\leq85u^{5/6}$.
+Finally,
+\[
+ \mathcal H(Q)\leq1+\int_1^\infty85v^{-5/3}\,dv
+ =128.5<129.
+\]
+\end{proof}
+
+\subsection{Completion of the second-level estimate}
+
+\begin{proof}[Proof of Theorem~\ref{lower:two}]
+Order the eigenvalues by modulus and let $r=|\mu_2|\geq1$.
+Scaling by $r$ preserves the absence of a $c_*$-pivot.  More
+precisely,
+\[
+ \mathcal H(Q)\leq r^{-1/2}\mathcal H(Q/r),
+\]
+because the event $|Q-s|\leq1$ becomes
+$|Q/r-s/r|\leq1/r\leq1$.
+It is therefore enough to assume $|\mu_2|=1$ and put
+$K=|\mu_1|=\|M\|$.
+
+Suppose first that $K\leq10^4$, and put
+\[
+ \rho_A=\frac3{64\cdot10002},
+ \qquad \nu_A=\rho_A^2/2.
+\]
+If some $r_h>\rho_A$, equation~\eqref{lower:row-test} gives
+\[
+ \|N^{(h)}_{\rm off}\|_F
+ \geq\rho_A^2-10^{-15}(10^4+1)\geq\nu_A.
+\]
+Here $\nu_A>1.098\cdot10^{-11}$ and $10^{-15}<\nu_A/9$.
+Theorem~\ref{lower:discriminant} consequently gives
+\[
+ \mathcal H(Q)\leq5+40(16.92/\nu_A)^{1/3}<4.7\cdot10^5.
+\]
+
+If all $r_i\leq\rho_A$, apply Lemma~\ref{lower:balanced} with
+$K=10^4$.  It gives $|\varphi_Q(t)|\leq\min(1,B_0/|t|)$, where
+\[
+ B_0=2\pi\sqrt e\,\frac{32\cdot10002}{3}<1.106\cdot10^6.
+\]
+For $u\leq1/B_0$, equation~\eqref{lower:fejer} implies
+\[
+ L_Q(u)\leq\frac{2B_0u}{\kappa_0}
+                   \left(1+\log\frac1{B_0u}\right).
+\]
+For larger $u$ use $L_Q(u)\leq1$.  Splitting the half-power
+integral at $v=\sqrt{B_0}$ yields
+\begin{align*}
+ \mathcal H(Q)
+ &\leq\sqrt{B_0}+
+ \frac{2B_0}{\kappa_0}\int_{\sqrt{B_0}}^\infty
+ v^{-2}\left(1+2\log\frac v{\sqrt{B_0}}\right)dv\\
+ &=\left(1+\frac6{\kappa_0}\right)\sqrt{B_0}<8000.
+\end{align*}
+
+Now suppose $K>10^4$ and put $\nu_B=5\cdot10^{-5}$.
+If some $h$ and $k\in\{1,2\}$ satisfy
+\[
+ |\mu_k|\bigl(|\mu_k|v_k(h)^2-c_*\bigr)
+                      \geq\nu_B+2c_*,
+\]
+equation~\eqref{lower:eigen-test} gives
+$\|N^{(h)}_{\rm off}\|_F\geq\nu_B$.
+Theorem~\ref{lower:discriminant} gives $\mathcal H(Q)<3000$.
+Otherwise, for every $i$,
+\[
+ K v_1(i)^2<c_*+\frac{\nu_B+2c_*}{K}\leq6\cdot10^{-5},
+ \qquad v_2(i)^2<\nu_B+3c_*\leq6\cdot10^{-5}.
+\]
+The entry bounds \eqref{lower:entry-cap} permit an application of
+Lemma~\ref{lower:dominant}, which gives $\mathcal H(Q)<129$.
+Every case is bounded by $10^6$, as asserted.
+\end{proof}
+
+Theorems~\ref{lower:one} and \ref{lower:two} provide the first two
+integrability estimates used in the coordinate-pivot reduction.
+Lemma~\ref{lem:schur-count} preserves the required number of large
+eigenvalues at each pivot.  The reduction still requires a third-level
+estimate for matrices without a fixed small pivot.  The estimates above
+allow all affine terms produced by conditioning.

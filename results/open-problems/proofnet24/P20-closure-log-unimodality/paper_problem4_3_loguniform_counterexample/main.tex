@@ -1,0 +1,307 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\boxt}{\mathbin{\boxtimes}}
+
+\title{A log-uniform counterexample to free multiplicative log-unimodality}
+\author{ProofNet24 closure note for Hasebe--Ueda--Wang Problem 4.3}
+\date{16 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Hasebe, Ueda and Wang asked whether the free positive multiplicative convolution
+of two multiplicatively symmetric log-unimodal probability measures must again
+be log-unimodal.  We give an explicit negative answer.  Let
+\[
+ d\mu(x)=\frac{1}{12x}{\bf 1}_{[e^{-6},e^6]}(x)\,dx.
+\]
+Then $\log_*\mu$ is uniform on $[-6,6]$, but if $\rho=\mu\boxt\mu$ and $g$
+is the density of $\log_*\rho$, then $g''(0)>0$.  Thus the symmetry point is a
+strict local minimum and $\rho$ is not log-unimodal.  The proof is an explicit
+$\eta$/$\Sigma$-transform calculation with a certified rational curvature bound.
+\end{abstract}
+
+\section{Source question and the example}
+
+For a probability measure $\lambda$ on $\R_+=(0,\infty)$, Hasebe--Ueda--Wang
+call $\lambda$ log-unimodal when $\log_*\lambda$ is unimodal on $\R$.
+Multiplicative symmetry means invariance under $x\mapsto x^{-1}$.
+Their Problem 4.3 asks whether
+\[
+ \mu,\nu \text{ multiplicatively symmetric and log-unimodal}
+ \quad\Longrightarrow\quad
+ \mu\boxt\nu \text{ log-unimodal}.
+\]
+This is different from their theorem for convolution with the free positive
+multiplicative Brownian law $\sigma_t$.
+
+Set $L=6$, $a=e^{-L}$, and
+\begin{equation}\label{eq:mu}
+ d\mu_L(x)=\frac{1}{2Lx}{\bf 1}_{[e^{-L},e^L]}(x)\,dx.
+\end{equation}
+Under $x=e^u$, the measure in \eqref{eq:mu} becomes $du/(2L)$ on $[-L,L]$.
+Hence $\mu_L$ is multiplicatively symmetric and log-unimodal.  We prove that
+$\rho_L:=\mu_L\boxt\mu_L$ is not log-unimodal.
+
+\section{Exact inverse transform}
+
+For a probability measure $\lambda$ on $\R_+$ write
+\[
+ \psi_\lambda(z)=\int_{\R_+}\frac{zx}{1-zx}\,d\lambda(x),
+ \qquad
+ \eta_\lambda(z)=\frac{\psi_\lambda(z)}{1+\psi_\lambda(z)}.
+\]
+For \eqref{eq:mu}, direct integration gives
+\begin{equation}\label{eq:psi}
+ \psi_L(z)=\frac{1}{2L}\log\!\left(\frac{1-az}{1-a^{-1}z}\right).
+\end{equation}
+If $w=\eta_L(z)$, then $\psi_L(z)=w/(1-w)$.  Put
+\[
+ E(w)=\exp\!\left(\frac{2Lw}{1-w}\right).
+\]
+Exponentiating \eqref{eq:psi} and solving for $z$ yields the exact inverse
+\begin{equation}\label{eq:q}
+ q_L(w):=\eta_L^{-1}(w)
+   =\frac{1-E(w)}{a-a^{-1}E(w)}.
+\end{equation}
+Since $\Sigma_\lambda(w)=\eta_\lambda^{-1}(w)/w$ and $\Sigma$-transforms
+multiply under free positive multiplicative convolution,
+\begin{equation}\label{eq:Q}
+ Q_L(w):=\eta_{\rho_L}^{-1}(w)=\frac{q_L(w)^2}{w}.
+\end{equation}
+
+The inverse branch in \eqref{eq:q} is the physical one.  Indeed, on the
+negative real axis
+\[
+ \psi_\lambda'(z)=\int_{\R_+}\frac{x}{(1-zx)^2}\,d\lambda(x)>0,
+ \qquad z<0,
+\]
+so $\eta_\lambda$ is strictly increasing there and its inverse is unique.
+At $w=-1$ one has $E(-1)=a$, hence $q_L(-1)=-1$ and $Q_L(-1)=-1$.
+This anchors the physical inverse branch at $w=-1$.
+
+\section{A noncritical unit-circle continuation}
+
+Write
+\[
+ w=e^{i\theta}=e^{2it},\qquad 0<t<\frac\pi2.
+\]
+Then
+\[
+ \frac{w}{1-w}=-\frac12+\frac{i}{2}\cot t,
+ \qquad
+ E(w)=a e^{i\phi},
+ \qquad
+ \phi=L\cot t.
+\]
+Let
+\[
+ B_a(v)=\frac{v-a}{1-av}.
+\]
+Formula \eqref{eq:q} becomes
+\[
+ q_L(w)=-\frac{1}{B_a(e^{i\phi})}.
+\]
+Thus $|q_L(w)|=|Q_L(w)|=1$.  Choose the continuous argument
+$B_a(e^{i\phi})=e^{i\beta_a(\phi)}$ for $0\leq\phi\leq\pi$.
+The derivative is the Poisson kernel
+\[
+ \beta_a'(\phi)=P_a(\phi)
+ =\frac{1-a^2}{1-2a\cos\phi+a^2}.
+\]
+Consequently, along the unit-circle arc,
+\begin{equation}\label{eq:phase}
+ Q_L(e^{i\theta})=e^{i\varphi_L(\theta)},
+ \qquad
+ \varphi_L(\theta)=2\pi-\theta-2\beta_a\!\left(L\cot\frac\theta2\right),
+\end{equation}
+and
+\begin{equation}\label{eq:phaseprime}
+ \varphi_L'(\theta)
+ =L\csc^2 t\,P_a(\phi)-1.
+\end{equation}
+
+We need only elementary explicit bounds.  Since
+\[
+ e>\sum_{k=0}^5\frac1{k!}=\frac{163}{60}
+ \quad\text{and}\quad
+ \left(\frac{163}{60}\right)^6>400,
+\]
+we have $a=e^{-6}<1/400$.  Therefore
+\[
+ P_a(\phi)\geq\frac{1-a}{1+a}>\frac{399}{401},
+\]
+and \eqref{eq:phaseprime} gives the uniform lower bound
+\begin{equation}\label{eq:Apositive}
+ \varphi_L'(\theta)>
+ 6\frac{399}{401}-1=\frac{1993}{401}>0.
+\end{equation}
+
+Let $t_0=\arctan(L/\pi)$, so that $L\cot t_0=\pi$.  At
+$\theta_0=2t_0$ we have $B_a(-1)=-1$ and the continuous phase in
+\eqref{eq:phase} equals $-2t_0<0$.  At $\theta=\pi$ it equals $\pi$.
+By \eqref{eq:Apositive}, there is a unique
+\[
+ \theta_*=2t_*\in(2t_0,\pi)
+\]
+for which $\varphi_L(\theta_*)=0$, hence
+\begin{equation}\label{eq:centerroot}
+ Q_L(w_*)=1,\qquad w_*=e^{2it_*}.
+\end{equation}
+Moreover $Q_L'$ never vanishes along the arc from $-1$ to $w_*$.  Analytic
+continuation from the negative-axis inverse therefore identifies this entire
+arc, in particular $w_*$, with the physical inverse branch.  No algebraic
+spurious branch enters the calculation below.
+
+\section{The center curvature}
+
+Let $g_L$ denote the density of the logarithmic push-forward
+$\log_*\rho_L$.  Near $y=0$, write the physical boundary inverse as $w=w(y)$,
+so that
+\begin{equation}\label{eq:boundaryeq}
+ Q_L(w(y))=e^{-y},\qquad w(0)=w_*.
+\end{equation}
+The elementary relation between the Cauchy transform and $\eta$ is
+\[
+ G_\rho(\zeta)=\frac{\zeta^{-1}}{1-\eta_\rho(\zeta^{-1})}.
+\]
+Taking the Stieltjes boundary value and using the upper-half-plane conjugate
+branch gives
+\begin{equation}\label{eq:density}
+ g_L(y)=\frac1\pi\Im\frac{1}{1-w(y)}.
+\end{equation}
+
+Set
+\[
+ A=\varphi_L'(2t_*)>0,
+ \qquad
+ B=\varphi_L''(2t_*).
+\]
+Differentiating \eqref{eq:boundaryeq}, equivalently differentiating the phase
+relation first and then inverting it, gives
+\[
+ w'(0)=-\frac{w_*}{A},
+ \qquad
+ w''(0)=\frac{w_*(A+iB)}{A^3}.
+\]
+Using
+\[
+ \frac{w_*}{(1-w_*)^2}=-\frac14\csc^2t_*,
+\]
+\[
+ \frac{w_*^2}{(1-w_*)^3}
+ =\frac18\csc^2t_*
+  -\frac{i}{8}\csc^2t_*\cot t_*,
+\]
+in the second derivative of \eqref{eq:density} yields
+\begin{equation}\label{eq:gsecond}
+ g_L''(0)
+ =-\frac{\csc^2t_*}{4\pi A^3}
+   \bigl[B+A\cot t_*\bigr].
+\end{equation}
+
+It remains to determine the sign of the bracket.  Write
+\[
+ D=1-2a\cos\phi+a^2,
+ \qquad \phi=L\cot t_*,
+\]
+where here and below $\phi$ is evaluated at $t_*$.  Differentiating
+\eqref{eq:phaseprime} and simplifying gives the exact cancellation
+\begin{equation}\label{eq:cancellation}
+ B+A\cot t_*
+ =-\cot t_*
+ +\frac{L^2a(1-a^2)\sin\phi}{D^2\sin^4t_*}.
+\end{equation}
+Because $t_*>t_0$, we have $0<\phi<\pi$.  Hence
+$\sin\phi<\phi=L\cot t_*$.  Also
+\[
+ D\geq(1-a)^2,
+ \qquad
+ \sin t_*>\frac{L}{\sqrt{L^2+\pi^2}}.
+\]
+Substitution into \eqref{eq:cancellation} gives
+\begin{equation}\label{eq:CL}
+ B+A\cot t_*<\cot t_*\,[-1+C_L],
+ \qquad
+ C_L=\frac{a(1-a^2)(L^2+\pi^2)^2}{L(1-a)^4}.
+\end{equation}
+
+Now use $\pi^2<(22/7)^2<10$ and define
+\[
+ F(L)=\frac{e^{-L}(L^2+10)^2}{L(1-e^{-L})^4}.
+\]
+Then $C_L<F(L)$ and, for $L\geq6$,
+\[
+ \frac{d}{dL}\log F(L)
+ =-1+\frac{4L}{L^2+10}-\frac1L
+   -\frac{4e^{-L}}{1-e^{-L}}
+ <-1+\frac3L\leq-\frac12.
+\]
+Thus $F$ is decreasing on $[6,\infty)$.  At $L=6$, using $e^{-6}<1/400$,
+\begin{equation}\label{eq:rational}
+ F(6)
+ <\frac1{400}\frac{46^2}{6}\left(\frac{400}{399}\right)^4
+ =\frac{67712000000}{76034875203}<1.
+\end{equation}
+Therefore $C_6<1$, and \eqref{eq:CL} shows
+\[
+ B+A\cot t_*<0.
+\]
+By \eqref{eq:gsecond},
+\begin{equation}\label{eq:strictmin}
+ \boxed{g_6''(0)>0.}
+\end{equation}
+
+\section{Conclusion}
+
+The input $\mu_6$ is invariant under $x\mapsto x^{-1}$.  Inversion commutes
+with free positive multiplicative convolution at the level of distributions,
+so $\rho_6=\mu_6\boxt\mu_6$ is also multiplicatively symmetric and $g_6$ is
+even.  Equation \eqref{eq:strictmin} says that its symmetry point is a strict
+local minimum.  An even unimodal density cannot have a strict local minimum at
+its center.  We have proved the following.
+
+\begin{theorem}
+Let
+\[
+ d\mu(x)=\frac{1}{12x}{\bf 1}_{[e^{-6},e^6]}(x)\,dx.
+\]
+Then $\mu$ is multiplicatively symmetric and log-unimodal, but
+$\mu\boxt\mu$ is not log-unimodal.  Hence Hasebe--Ueda--Wang Problem 4.3 has a
+negative answer.
+\end{theorem}
+
+\begin{remark}
+The same estimates prove the stronger family statement for every $L\geq6$.
+The fixed value $L=6$ is presented here because one counterexample completely
+answers the source question and is the common scope of the two independent
+end-to-end audits in the accompanying closure package.
+\end{remark}
+
+\begin{remark}[Finite certificate and novelty scope]
+The exact rational inequalities used above were executed in the canonical
+ProofNet24 artifact `log\_uniform\_L6\_family\_exact\_check\_v2.py`; the archived
+output is `PASS`.  Two independent OTHER-track audits rederived the source-level
+argument.  A bounded literature search through 16 September 2026 did not locate
+a published resolution matching this counterexample, but this note makes no
+publication-grade novelty claim on the strength of a negative search.
+\end{remark}
+
+\begin{thebibliography}{9}
+\bibitem{HUW}
+T. Hasebe, Y. Ueda and J.-C. Wang,
+\emph{Log-unimodality for free positive multiplicative Brownian motion},
+arXiv:2009.13848 (2020); Colloq. Math. 169 (2022), 209--226.
+\end{thebibliography}
+
+\end{document}

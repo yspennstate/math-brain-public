@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B14",
+  "run_id": "20260924T111014Z-account01-B14-auto11",
+  "source_control_commit_at_start": "1433c603bbba4a7f93be4e2606ce049dcb6bd2bf",
+  "fresh_control_recheck_commit": "9a94dc10b612d7f5f5a4a4f5aace294106411298",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "status": "ENVIRONMENT_ADAPTIVE_ONE_COPY_DIFFERENCE_LOCALIZATION_PROVED_FULL_QFORM_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "false_start_preserved": "Initial countable-rational-skeleton direction was dropped after search showed prior B14 theorem QFORM-COUNTABLE-RATIONAL-SKELETON-LOCALIZATION-v1 already covered it.",
+  "partner_result_applied": {
+    "worker": "account02/B14",
+    "run_id": "20260924T110401Z-account02-B14-QFORM-auto11",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "388f936ef5954b951203df7bab568a64e0afe985",
+    "result": "QFORM-ONE-COPY-DIFFERENCE-LOCALIZATION-v1",
+    "scope_used": "A positive subdensity of one duplicated cap-one coordinate, after differencing against the undecomposed copy and dividing by true mass, has density cap at most one; coordinatewise product localizations remain product cap-one."
+  },
+  "fixed_source_receiver": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "result": "Theorem D volume-sampling decoupling/Brascamp-Lieb",
+    "scope_used": "Order-three cross block with Z=e3(M^TM), volume row marginals <=1/2, arbitrary active affine terms; density <=6 sqrt(e) Z^(-1/6)."
+  },
+  "new_result": {
+    "id": "QFORM-ENVIRONMENT-ADAPTIVE-ONE-COPY-DIFFERENCE-LOCALIZATION-v1",
+    "statement": "If copied-side coordinatewise finite/countable/soft partitions are allowed to depend measurably on an arbitrary independent outside environment, then fiberwise convolution with the undecomposed copy still turns every nonzero normalized difference fragment into a cap-one probability density; product cell masses sum to one for every environment value. Any decoupled receiver uniform over product cap-one difference laws and the induced affine environment therefore keeps exactly its unsplit constant.",
+    "restrictions": "The label system must remain coordinatewise product on the duplicated side. No joint multi-coordinate label or localization of the undecomposed active copy is covered."
+  },
+  "actual_target_inequality": {
+    "matrix_chamber": "A=[[0,M,C],[M^T,0,E],[C^T,E^T,D]], M=(1/sqrt2)[e1;e1;e2;e2;e3;e3], arbitrary C,E,D",
+    "principal_spectrum": [1,1,1,0,0,0,-1,-1,-1],
+    "volume_Z": 1,
+    "volume_row_marginal": 0.5,
+    "bound": "||p_Q||_infinity <= 6 sqrt(e) = 9.89232762420077...",
+    "localization_scope": "arbitrary outside-dependent moving copied-side fragments, arbitrary outside support/couplings, no moments"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5016c1ed1cb6794a0ccf4a6b7bf9e9279e4683c2",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260924T111014Z-account01-B14-auto11/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260924T111014Z-account01-B14-auto11/CHECKS.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B14/20260924T111014Z-account01-B14-auto11.md",
+  "unresolved_implication": "QFORM-ROUTE-ROUGH-LOCALIZATION-TO-DIFFERENCE-SIDE-OR-WHOLELAW-EXIT-v1: bare s3(A)>=1 must structurally route necessary rough localization onto a one-copy difference side of an already exposed product receiver, or into another whole-law receiver.",
+  "full_qform_status": "OPEN",
+  "full_brain_connected": false
+}

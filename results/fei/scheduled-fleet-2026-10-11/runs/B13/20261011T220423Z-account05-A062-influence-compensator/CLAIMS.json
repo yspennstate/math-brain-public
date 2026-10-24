@@ -1,0 +1,84 @@
+[
+  {
+    "claim_id": "A062-INFLUENCE-STOPPING-INTERFACE",
+    "version": 1,
+    "exact_statement": "For every finite uniform-cube Boolean f and every fair adaptive fresh-coordinate/block restriction tree, including independently randomized policies and stopping, I(f)=E sum_{t<tau} I_{A_t}(g_t)+E I(g_tau), and the same physical tree obeys H(f)=E sum_{t<tau} delta_{A_t}(g_t)+E H(g_tau). Each original coordinate separately conserves its expected queried cost plus terminal influence. These identities hold for arbitrary waiting/stopping at fixed dimension by bounded convergence. For a genuinely unbounded nonnegative process with the stated drift and integrable initial budget, cumulative costs are integrable, Fatou gives only the terminal inequality, and uniform integrability of residual influence (separately entropy) suffices for equality.",
+    "hypotheses": [
+      "Boolean signs on the uniform finite cube for the concrete tree theorem",
+      "decisions measurable in independent auxiliary randomness and revealed physical history",
+      "selected input coordinates are fresh and unrevealed signs stay fair",
+      "entropy in bits; ordinary influence",
+      "infinite-time terminal restriction at fixed n is the eventual stabilized restriction",
+      "abstract unbounded extension assumes its one-step drift and finite initial expected budget; limit identification is not asserted"
+    ],
+    "statement_sha256": "4cfb77e62376329a2db301ed1f10a611e4f6ffeae1af17e2f0e0297cd8be515c",
+    "contributors": [
+      "A062"
+    ],
+    "proof_source": [
+      "FAIR_TREE_INFLUENCE_PROCESS.tex",
+      "STOPPING_JUSTIFICATION.md",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A026",
+      "A027",
+      "A028",
+      "A029",
+      "A037",
+      "A064",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A062-BOOLEAN-DIMENSION-LIMIT-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "There is an actual Boolean activation family F_k=1+A_k(g_k-1), with k fair controls, p_k=2^{-k}, and balanced g_k=y_0 times 2^{k-1} quadratic bent two-bit factors, for which I(F_k)=1/2+(k+1)2^{-k}<=3/2. Stopping after control revelation gives terminal influence (2^{k-1}+1)1_{A_k} and terminal entropy 2^k 1_{A_k}; on coupled infinite fair controls they converge to zero almost surely but their expectations tend to 1/2 and equal 1. Thus bounded root influence does not imply dimension-uniform terminal uniform integrability or allow exchanging these terminal expectations with almost-sure limits. Also an activated two-bit parity has root influence 3/2 and a child of influence 2, so residual influence need not decrease pathwise.",
+    "hypotheses": [
+      "k is a positive integer",
+      "all control/data inputs are independent uniform signs",
+      "controls are revealed in order and the tree stops at the first inactive control or after all k controls",
+      "entropy is in bits",
+      "dimension-limit comparison is across F_k, not unbounded stopping for one fixed finite-dimensional function"
+    ],
+    "statement_sha256": "775a5fd1f27ee272565549b847aecd647c564726a33ca20729235d40db104908",
+    "contributors": [
+      "A062"
+    ],
+    "proof_source": [
+      "STOPPING_JUSTIFICATION.md",
+      "out/LIMIT_CHECK.json",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "bounded root budgets alone justify terminal expectation exchange across dimension limits",
+      "residual physical influence always decreases on each restriction branch"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A026",
+      "A027",
+      "A028",
+      "A029",
+      "A037",
+      "A064",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  }
+]

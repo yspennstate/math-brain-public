@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "20260924T011014Z-account01-B07-qform-auto11-r38",
+  "control_commit_final_refresh_observed": "a96babeffdacd3e0ac62fa657fce9dbc72e887b2",
+  "control_readme_blob_sha": "14046b5138615be52bb1c49a998122a7c84e200e",
+  "correction_inbox_blob_sha": "a884b835aba929c5376e6417ae5cfcd44c0f7a76",
+  "control_revision": "2026-09-22.15",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "small coefficient/operator tails cannot be deleted without moment/support assumptions"
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-C3-OVERLAP-OPERATOR-STAR-FUNNEL-v1",
+      "status": "SUPPORTING_THEOREM_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For C=C3(A), ||C||op>=1. Splitting C by row/column triple overlap h gives some overlap operator norm >=1/4. The h=3 branch selects a principal triple |det|>=1/4; h=0 physicalizes to a disjoint cross block e3>=1/1024; h=1 selects one actual physical singleton star with fixed-s disjoint residual packet >=1/2304; h=2 selects one actual physical pair H with W_H^(2)>=1/144. The star selections are dimension-free because each triple belongs to exactly three singleton or pair stars."
+    },
+    {
+      "id": "QFORM-H2-OPERATORSTAR-FIXEDPAIR-EXIT-v1",
+      "status": "SUPPORTING_COROLLARY_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "On the h=2 operator branch, W_H^(2)>=1/144 for an actual physical pair. If m_H=max(|A_ii|,|A_jj|,|A_ij|)>=1/64, the completed r37 fixed-pair receiver gives ||p_Q||inf<482.184. The only h=2 survivor is m_H<1/64 with W_H^(2)>=1/144. Essential boundedness only; continuity not claimed."
+    },
+    {
+      "id": "QFORM-H1-OPERATORSTAR-SCHUR-v1",
+      "status": "SUPPORTING_COROLLARY_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "On the h=1 operator branch one actual physical coordinate s supports a disjoint residual packet >=1/2304. If a=A_ss!=0, exactly a^2 e2(SS^T)>=1/2304 for the true scalar Schur cross S; if a=0, exactly ||u||^2||w||^2||P_u M P_w||F^2>=1/2304. If |a|>=1/64 and one Schur-E2 determinant-law side has inclusion marginals <=3/4, the r25 half-Riesz receiver plus scalar peel gives ||p_Q||inf<=125.483."
+    },
+    {
+      "id": "QFORM-R37-FLAT-W2-OBSTRUCTION-ROUTED-BY-OPERATOR-v1",
+      "status": "EXACT_STRUCTURAL_CHECK",
+      "statement": "For the normalized three-flat-bank rank-three family, ||C^[h]||op=binom(3,h)(m-1)^(3-h)/m^3, so h=0 operator norm tends to one while h=2 tends to zero. Thus the r37 family that defeats W2-only pair selection is automatically routed to the disjoint paid branch by the operator-overlap funnel."
+    }
+  ],
+  "partner_result_applied": {
+    "account_slot": "account02/B07",
+    "source_repository": "yspennstate/math-open-problems",
+    "source_commit": "81d6956476fa400f61d266effb4123a42fe3185c",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260924T003945Z-account02-B07-qform-auto11/REPORT.md",
+    "actual_inequality": "Partner gives ||C3(P)||F^2=e3(P^2)>1/6250. If third-compound stable rank sr3(P)<=R, then ||C3(P)||op>1/sqrt(6250R); the scaled operator-star funnel forces principal |det|>1/(4sqrt(6250R)), disjoint cross e3>1/(6400000R), an h=1 hub packet>1/(14400000R), or h=2 W_H^(2)>1/(900000R). Partner tau2 E2<=3E3 also gives ||K-K2||F<sqrt(3)2^-9 on E3<2^-30,E2>=2^-12."
+  },
+  "later_relevant_source_read": {
+    "account_slot": "account03/B14",
+    "source_commit": "389a363c688ac948d056ed4c3cb6615603852b21",
+    "result": "QFORM-OVERLAP-HUB-SLOPE-TWO-PLANCHEREL-v1",
+    "scope_note": "Potential receiver for the selected h=1 hub after extraction of a quantitatively controlled source-disjoint slope bank; that extraction is not proved in r38 and the theorem is not silently applied."
+  },
+  "canonical_outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "a6688b11032f2e29ad10a8ab2c8356811bae926e",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/20260924T011014Z-account01-B07-qform-auto11-r38/REPORT.md",
+    "checks_addition_commit": "172cb92b56e022e173a2f619423d2fd86e33fccd",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/20260924T011014Z-account01-B07-qform-auto11-r38/CHECKS.txt",
+    "source_refresh_addition_commit": "9c8f0acd56c4ce8438f0545380578ab940cacacd",
+    "source_refresh_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/20260924T011014Z-account01-B07-qform-auto11-r38/FINAL_SOURCE_REFRESH.md",
+    "handoff_commit": "04ffbadd3b18fadfb64d4fc35137a3887a2c12a5",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B07/20260924T011014Z-account01-B07-qform-auto11-r38.md"
+  },
+  "unresolved_implication": "QFORM-LOWPIVOT-OPERATOR-STAR-OR-HIGH-COMPOUND-STABLERANK-RECEIVER-v1",
+  "next_step": "Pay the h=2 tiny-pair/large-star state m_H<1/64,W_H^(2)>=1/144; pay the h=1 low/zero-pivot or double-near-coloop star using a dependence-safe cross/hyperbolic or two-Plancherel receiver; and spend the partner's high-third-compound-stable-rank diffuse branch without selecting a reciprocal tiny pivot.",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY; h=0 cross-E3 branch continuous; h=3, h=2 fixed-pair, and h=1 scalar-half-Riesz paid branches establish essential boundedness only"
+}

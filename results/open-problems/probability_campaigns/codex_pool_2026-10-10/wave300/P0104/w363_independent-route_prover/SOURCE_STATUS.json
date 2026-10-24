@@ -1,0 +1,122 @@
+{
+  "target_id": "P0104",
+  "as_of": "2026-10-10",
+  "current_global_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "complete_solution_claim": false,
+  "primary_source": {
+    "authors": [
+      "Antonio Auffinger",
+      "Michael Damron",
+      "Jack Hanson"
+    ],
+    "title": "50 years of first passage percolation",
+    "url": "https://arxiv.org/abs/1511.03262v2",
+    "revision": "v2, 2016-09-23",
+    "locator": "Section 3.1; Questions 13 and 15; PDF printed p.37, zero-based page 36",
+    "exact_scope": "Question 13: chi<1/2 for d>=2 under suitable conditions on F, and chi=1/3 for d=2. Question 15: chi>0 in a suitable dimension.",
+    "exponent_convention": "Variance exponent is 2chi; logarithmic directional definition log Var(T(0,n e1))/(2 log n).",
+    "assumptions_not_specified_by_question": "Suitable conditions on F are not completely enumerated. The universality discussion also mentions moment conditions and a limit shape without flat edges. This packet does not assert those unspecified requirements are proved for its chosen law."
+  },
+  "precise_special_law": {
+    "graph": "nearest-neighbor Z^2",
+    "endpoint": "n e1, integer n>=1",
+    "weights": "tau_e=1+eta_e, independent Bernoulli(99/100) eta_e",
+    "target": "Var T(0,n e1)=n^(2/3+o(1))",
+    "status": "conjecture",
+    "hardest_gap": "G1: E_nu_n[1/K]=n^(-1/3+o(1)) for the size-biased product spectral law."
+  },
+  "local_records_checked": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "locator": "row P0104, line 550",
+      "finding": "Tier 5; attempted_un; not an openness certificate or mathematical proof."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json",
+      "locator": "entry op-p0104, line 2170",
+      "finding": "Campaign record includes Questions 13 and 15; source_says_open, current status unverified."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006a04.json",
+      "locator": "entry at-p0104, line 2149",
+      "finding": "Prior structural attempt separated n/log n variance from a strict power exponent. No proof of a power saving; no independent review. C001 is a restatement of this known obstruction, not a new result."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md",
+      "locator": "P0104, line 600",
+      "finding": "attempted_un; no actual formal theorem receipt recovered. No formal verification is claimed."
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "locator": "P0104, line 555",
+      "finding": "Open checkbox without a named holder in the retrieved row; not a global solved/retired audit."
+    }
+  ],
+  "new_primary_literature": [
+    {
+      "url": "https://arxiv.org/abs/2302.11367v2",
+      "authors": [
+        "Daniel Ahlberg",
+        "Maria Deijfen",
+        "Matteo Sfragara"
+      ],
+      "title": "Chaos, concentration and multiple valleys in first-passage percolation",
+      "revision": "v2, 2024-10-04",
+      "locator": "Proposition 6, pp.10-11; definitions (16)-(19); discussion of variance-dependent transition scale",
+      "reused_scope": "Finite m, iid coordinates of law F, f in L^2(F^m), independent-coordinate resampling. The draft's Bernoulli formula is a rederivation of this established covariance identity.",
+      "tie_convention": "For atomic weights the paper uses the intersection of all geodesics for its overlap results. This packet uses selected minimizers only in its own forced-edge variational sandwich; it does not identify those conventions."
+    },
+    {
+      "url": "https://arxiv.org/abs/2604.01214v1",
+      "authors": [
+        "Riddhipratim Basu",
+        "Vladas Sidoravicius",
+        "Allan Sly"
+      ],
+      "title": "Rotationally invariant first passage percolation: Breaking the n/log n variance barrier",
+      "revision": "v1, 2026-04-01",
+      "locator": "Abstract",
+      "verified_scope": "Claims a polynomial variance upper saving for a class of planar rotationally invariant Riemannian FPP. Abstract inspected, full technical hypotheses not audited.",
+      "limitation": "This different-model result is not applied to nearest-neighbor Bernoulli lattice FPP, and does not certify lattice chi=1/3."
+    }
+  ],
+  "recall": {
+    "result": "60-second owner-specified timeout; see recall.txt",
+    "fallback_index": "MEMORY.md targeted terms gave no matching lines",
+    "scars_read": [
+      "perceptron_proof_open_gaps_fleet_2026_07_12",
+      "proof_steps_need_derived_joint_structure_2026_09_09"
+    ],
+    "consequence": "Keep G1 explicit; derive coordinate coupling before taking products; a passing finite test is not an asymptotic proof."
+  },
+  "provenance_limits": {
+    "original_20260906_worktree_records": "Targeted historical paths yielded no P0104 row. The available C006 draft records supply the prior-attempt digest; original path availability is recorded separately in PRIOR_RECORDS.json.",
+    "H_I_attempts": "Targeted ID/title searches only; no matching P0104 attempt recovered in the searched artifacts. No whole-corpus completeness claim.",
+    "owner_solved_retired_work": "Limited named-record, board and targeted percolation checks only. No exhaustive retirement certificate.",
+    "core_lane": "Approach recorded before reading any core proposed proof; boundary notice to w360. Distinct from the recorded structural n/log n attempt; no agreement from other triads claimed."
+  },
+  "states": {
+    "prepared": true,
+    "submitted_for_review": true,
+    "independently_reviewed": false,
+    "ingested": false,
+    "retrievable": false
+  },
+  "referee_submission_receipt": {
+    "message_id": "msg-ac9020973b",
+    "message_ids": [
+      "msg-ac9020973b"
+    ],
+    "to": "w365",
+    "recipient_active": true,
+    "fanout": 1,
+    "topic": "P0104-referee-packet",
+    "kind": "message",
+    "requires_ack": false,
+    "idempotency_key": null,
+    "inserted": 1,
+    "reused": 0,
+    "idempotent_replay": false
+  }
+}

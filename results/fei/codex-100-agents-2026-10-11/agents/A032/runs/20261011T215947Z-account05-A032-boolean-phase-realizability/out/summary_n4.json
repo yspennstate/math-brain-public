@@ -1,0 +1,856 @@
+{
+  "n": 4,
+  "helper_version": "A032-phase-exact-v1",
+  "truth_tables_mod_global_sign": 32768,
+  "distinct_spectral_laws": 2261,
+  "integer_magnitude_candidate_laws": 975621,
+  "pattern_ledger": [
+    {
+      "pattern": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "realizable_laws": 1,
+      "impossible_laws": 0
+    },
+    {
+      "pattern": [
+        8,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0
+      ],
+      "realizable_laws": 0,
+      "impossible_laws": 7280
+    },
+    {
+      "pattern": [
+        8,
+        8,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "realizable_laws": 840,
+      "impossible_laws": 359520
+    },
+    {
+      "pattern": [
+        8,
+        8,
+        8,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "realizable_laws": 0,
+      "impossible_laws": 400400
+    },
+    {
+      "pattern": [
+        8,
+        8,
+        8,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "realizable_laws": 140,
+      "impossible_laws": 1680
+    },
+    {
+      "pattern": [
+        12,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "realizable_laws": 240,
+      "impossible_laws": 102720
+    },
+    {
+      "pattern": [
+        12,
+        8,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "realizable_laws": 0,
+      "impossible_laws": 87360
+    },
+    {
+      "pattern": [
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "realizable_laws": 16,
+      "impossible_laws": 0
+    },
+    {
+      "pattern": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "realizable_laws": 448,
+      "impossible_laws": 7560
+    },
+    {
+      "pattern": [
+        10,
+        6,
+        6,
+        6,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "realizable_laws": 560,
+      "impossible_laws": 6720
+    },
+    {
+      "pattern": [
+        10,
+        10,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "realizable_laws": 0,
+      "impossible_laws": 120
+    },
+    {
+      "pattern": [
+        14,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "realizable_laws": 16,
+      "impossible_laws": 0
+    }
+  ],
+  "flat_support_checks": {
+    "1": {
+      "realizable": 16,
+      "impossible": 0
+    },
+    "2": {
+      "realizable": 0,
+      "impossible": 120
+    },
+    "3": {
+      "realizable": 0,
+      "impossible": 560
+    },
+    "4": {
+      "realizable": 140,
+      "impossible": 1680
+    }
+  },
+  "impossibility_examples": [
+    {
+      "magnitudes": [
+        8,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0
+      ],
+      "probability_denominator": 256,
+      "certificate": {
+        "status": "IMPOSSIBLE",
+        "certificate": "XOR_PARTITION",
+        "xor": 1,
+        "terms": [
+          [
+            0,
+            1,
+            32
+          ],
+          [
+            2,
+            3,
+            16
+          ],
+          [
+            4,
+            5,
+            16
+          ],
+          [
+            6,
+            7,
+            16
+          ],
+          [
+            8,
+            9,
+            16
+          ],
+          [
+            10,
+            11,
+            16
+          ]
+        ],
+        "total": 112,
+        "subset_sums": [
+          0,
+          16,
+          32,
+          48,
+          64,
+          80,
+          96,
+          112
+        ]
+      }
+    },
+    {
+      "magnitudes": [
+        8,
+        8,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "probability_denominator": 256,
+      "certificate": {
+        "status": "IMPOSSIBLE",
+        "certificate": "COMPLETE_PHASE_ENUMERATION",
+        "phases_checked": 512,
+        "phase_domain": 512
+      }
+    },
+    {
+      "magnitudes": [
+        8,
+        8,
+        8,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "probability_denominator": 256,
+      "certificate": {
+        "status": "IMPOSSIBLE",
+        "certificate": "XOR_PARTITION",
+        "xor": 1,
+        "terms": [
+          [
+            0,
+            1,
+            64
+          ],
+          [
+            2,
+            3,
+            32
+          ],
+          [
+            4,
+            5,
+            16
+          ]
+        ],
+        "total": 112,
+        "subset_sums": [
+          0,
+          16,
+          32,
+          48,
+          64,
+          80,
+          96,
+          112
+        ]
+      }
+    },
+    {
+      "magnitudes": [
+        8,
+        8,
+        8,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "probability_denominator": 256,
+      "certificate": {
+        "status": "IMPOSSIBLE",
+        "certificate": "XOR_PARTITION",
+        "xor": 1,
+        "terms": [
+          [
+            0,
+            1,
+            64
+          ]
+        ],
+        "total": 64,
+        "subset_sums": [
+          0,
+          64
+        ]
+      }
+    },
+    {
+      "magnitudes": [
+        12,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "probability_denominator": 256,
+      "certificate": {
+        "status": "IMPOSSIBLE",
+        "certificate": "XOR_PARTITION",
+        "xor": 1,
+        "terms": [
+          [
+            0,
+            1,
+            48
+          ],
+          [
+            2,
+            3,
+            16
+          ],
+          [
+            4,
+            5,
+            16
+          ]
+        ],
+        "total": 80,
+        "subset_sums": [
+          0,
+          16,
+          32,
+          48,
+          64,
+          80
+        ]
+      }
+    },
+    {
+      "magnitudes": [
+        12,
+        8,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "probability_denominator": 256,
+      "certificate": {
+        "status": "IMPOSSIBLE",
+        "certificate": "XOR_PARTITION",
+        "xor": 1,
+        "terms": [
+          [
+            0,
+            1,
+            96
+          ],
+          [
+            2,
+            3,
+            16
+          ]
+        ],
+        "total": 112,
+        "subset_sums": [
+          0,
+          16,
+          96,
+          112
+        ]
+      }
+    },
+    {
+      "magnitudes": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "probability_denominator": 256,
+      "certificate": {
+        "status": "IMPOSSIBLE",
+        "certificate": "XOR_PARTITION",
+        "xor": 1,
+        "terms": [
+          [
+            0,
+            1,
+            36
+          ],
+          [
+            2,
+            3,
+            36
+          ],
+          [
+            4,
+            5,
+            36
+          ],
+          [
+            6,
+            7,
+            4
+          ],
+          [
+            8,
+            9,
+            4
+          ],
+          [
+            10,
+            11,
+            4
+          ],
+          [
+            12,
+            13,
+            4
+          ],
+          [
+            14,
+            15,
+            4
+          ]
+        ],
+        "total": 128,
+        "subset_sums": [
+          0,
+          4,
+          8,
+          12,
+          16,
+          20,
+          36,
+          40,
+          44,
+          48,
+          52,
+          56,
+          72,
+          76,
+          80,
+          84,
+          88,
+          92,
+          108,
+          112,
+          116,
+          120,
+          124,
+          128
+        ]
+      }
+    },
+    {
+      "magnitudes": [
+        10,
+        6,
+        6,
+        2,
+        6,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "probability_denominator": 256,
+      "certificate": {
+        "status": "IMPOSSIBLE",
+        "certificate": "XOR_PARTITION",
+        "xor": 1,
+        "terms": [
+          [
+            0,
+            1,
+            60
+          ],
+          [
+            2,
+            3,
+            12
+          ],
+          [
+            4,
+            5,
+            12
+          ],
+          [
+            6,
+            7,
+            4
+          ],
+          [
+            8,
+            9,
+            4
+          ],
+          [
+            10,
+            11,
+            4
+          ],
+          [
+            12,
+            13,
+            4
+          ],
+          [
+            14,
+            15,
+            4
+          ]
+        ],
+        "total": 104,
+        "subset_sums": [
+          0,
+          4,
+          8,
+          12,
+          16,
+          20,
+          24,
+          28,
+          32,
+          36,
+          40,
+          44,
+          60,
+          64,
+          68,
+          72,
+          76,
+          80,
+          84,
+          88,
+          92,
+          96,
+          100,
+          104
+        ]
+      }
+    },
+    {
+      "magnitudes": [
+        10,
+        10,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "probability_denominator": 256,
+      "certificate": {
+        "status": "IMPOSSIBLE",
+        "certificate": "XOR_PARTITION",
+        "xor": 1,
+        "terms": [
+          [
+            0,
+            1,
+            100
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            4,
+            5,
+            4
+          ],
+          [
+            6,
+            7,
+            4
+          ],
+          [
+            8,
+            9,
+            4
+          ],
+          [
+            10,
+            11,
+            4
+          ],
+          [
+            12,
+            13,
+            4
+          ],
+          [
+            14,
+            15,
+            4
+          ]
+        ],
+        "total": 128,
+        "subset_sums": [
+          0,
+          4,
+          8,
+          12,
+          16,
+          20,
+          24,
+          28,
+          100,
+          104,
+          108,
+          112,
+          116,
+          120,
+          124,
+          128
+        ]
+      }
+    }
+  ],
+  "seconds": 51.01788290007971
+}

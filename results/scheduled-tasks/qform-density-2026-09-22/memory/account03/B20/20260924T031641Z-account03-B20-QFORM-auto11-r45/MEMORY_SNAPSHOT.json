@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B20",
+  "run_id": "20260924T031641Z-account03-B20-QFORM-auto11-r45",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_start_commit": "594d2dc6c6cb7c2254b731b06f1dd5da55fd730f",
+  "control_final_refresh_commit": "010ec152d1267a122d3156ff9ce2a1c5d67da978",
+  "control_revision": "2026-09-22.15",
+  "corrections_consumed": [
+    "law-uniform pointwise quadratic-phase decay false",
+    "bounded projection density alone does not control the curved quadratic pushforward",
+    "post-rotation independence false",
+    "small nonzero coefficient tails cannot be discarded on unbounded inputs",
+    "naive fiber-sup integration can grow with dimension",
+    "one-good-minor extraction is not generally valid"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@2d483191e9a6edbc28549de90441cbeb631eca71",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260924T030130Z-account03-B19-QFORM-r48/REPORT.md",
+      "scope": "strong physical rank-two carrier with Frobenius rank-two tail <2^-16, s2>=1/64, product lower bound gamma0, and adaptive deleted-plane row alignment on unpaid light coordinates"
+    },
+    {
+      "source": "yspennstate/math-open-problems@9d07c5d5c69c885509db66cb1093acdeff8bcb64",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B20/20260923T181642Z-account04-B20-QFORM-r11/REPORT.md",
+      "scope": "three-bank partition for a unit vector: W1W2W3>=(1-3 eta)/27, with genuine disjoint original-source-bank provenance"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-AGGREGATE-PROMOTED-E3-v1",
+      "statement": "For K=[M;D] and P the top-two right singular projector of M, E3(K)>=[s1(M)s2(M)]^2 ||D(I-P)||_F^2."
+    },
+    {
+      "id": "QFORM-R48-HUB4-OR-NESTED-R2-v1",
+      "statement": "For the r48 rank-two carrier, each side either has a literal physical hub arm >=1/128 (at most four candidates) or a source-valid physical split whose complete same-bank crossing has Frobenius rank-two defect <2^-12; any aggregate defect >=2^-12 is paid continuously with ||p_Q||inf<968. Applying both sides yields a two-sided nested rank-two packet in the fully diffuse survivor."
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B20",
+    "run": "r11",
+    "actual_inequality": "eta=max_j v2(j)^2<1/4 implies a physical three-bank partition with W1W2W3>1/108; combined with the 2x2 Gram complement identity gives a selected U whose complement preserves det>=1/3 while U retains v2 mass >1/108"
+  },
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9e25c4e61cfe9aa9700419517b5d73b72a3e1fb1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B20/20260924T031641Z-account03-B20-QFORM-auto11-r45/REPORT.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B20/20260924T031641Z-account03-B20-QFORM-auto11-r45.md",
+  "keeper": {
+    "inventory": "20/20 account03 managed QFORM tasks present, enabled, hourly-valid and quiet; email and notifications off; title/prompt rollout already matched at native readback",
+    "lease": "existing 2026-09-24T03Z lease owned by 20260924T031128Z-account03-B20-QFORM-auto11; respected; zero scheduler mutations"
+  },
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity": "OPEN",
+  "next_implication": "QFORM-R48-HUB4-OR-TWOSIDED-NESTED-R2-PAYMENT-v1"
+}

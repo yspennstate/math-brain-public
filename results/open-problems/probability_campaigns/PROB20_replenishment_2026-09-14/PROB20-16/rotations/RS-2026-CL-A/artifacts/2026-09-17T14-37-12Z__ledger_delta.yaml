@@ -1,0 +1,50 @@
+ledger_delta:
+  native_task_id: "6aa7b4b639a08191b893e2b7dd6cdf59"
+  target_id: "RS-2026-CL-A"
+  report_kind: "RESEARCH_STRENGTHENING_AFTER_METRIC_MOVEMENT"
+  input_snapshot_sha: "e9293c6870fc992abbef286b09488e767ab20d7f"
+  previous_report_path: "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T13-38-50Z__report.md"
+  previous_report_commit: "489c5ddc9db4ff20d036a3eaf974b58cb58deb21"
+  current_report_path: "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T14-37-12Z__report.md"
+  current_report_commit: "872a84a7d510301a93aa8386c239da00d55574f0"
+  current_report_blob: "07fd8d5ac7685a7704eeeb15c72c136a5807c583"
+  source: "Anastasia Kireeva, Randomstrasse 101, Low-degree hardness of finding the largest clique in Erdos-Renyi graph (problems 36-38), posted 2026-06-05, first displayed open box"
+  metric_name: "E_framework"
+  metric_before: 1
+  metric_after: 1
+  unchanged_count_before: 0
+  unchanged_count_after: 1
+  methods:
+    B3:
+      name: "PROVE SOMETHING STRONGER"
+      outcome: "Proved exact two-copy invariant-kernel identity and a no-spectral-cliff sufficient theorem. Did not prove strict containment of Chen-Li treewidth regime."
+    B22:
+      name: "READ THE FAILURES"
+      outcome: "Showed diagonal leverage can be crude even at P=Q; identified Mao/Buhai mechanism as a long low-degree void followed by a high-degree spectral cliff, which any finite consecutive-growth condition excludes."
+    B10:
+      name: "DERANDOMIZE"
+      outcome: "Proved forced-support overlap identities, a local extension-ratio formula, deterministic orbit overlap enumerator certificate, and exact planted-subgraph specialization matching Chen-Li weighted subgraph masses."
+  new_results:
+    - "chi^2(TP||Q) equals the sum over exact degrees of the P x P average of the two-copy noise kernel K_j^T."
+    - "If b_{j+1} <= R b_j above cutoff D with rho^2 R <= 1-eta, bounded low-degree advantage implies a uniformly bounded noisy chi-square divergence and hence a total-variation gap from perfect distinguishability."
+    - "For forced-support Bernoulli plants, b_j=lambda^j E[binom(Z,j)] and chi^2 after rho-noise equals E[(1+rho^2 lambda)^Z]-1."
+    - "The local ratio b_{j+1}/b_j equals lambda/(j+1) times the expected additional overlap under the j-overlap size-biased law."
+    - "For deterministic orbit plants, the complete degree profile is the Taylor profile of a finite overlap enumerator; for deterministic planted subgraphs this recovers the weighted subgraph masses used in Chen-Li."
+  failed_routes:
+    - "No proof that the aggregate no-cliff/interface criterion strictly contains Chen-Li's bounded-treewidth theorem; the two mechanisms are presently incomparable."
+  mathematical_status: "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING"
+  prior_art_status: "Overlap/second-moment/Franz-Parisi machinery is established prior art; exact no-cliff phrasing not located in bounded search; novelty UNVERIFIED."
+  source_current_status: "Live source remained open in dated 2026-09-17 check; bounded later-literature search found Hsieh et al., Mao, and Chen-Li but no source-complete general characterization."
+  audit_refs: []
+  artifact_refs:
+    - "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-17T14-37-12Z__ledger_delta.yaml"
+  next_methods: [5, 12, 28]
+  next_obligations:
+    - "Derive a natural local/interface hypothesis implying the spectral-tail bound."
+    - "Obtain actual P26 full source/theorem audit."
+    - "Obtain a second distinct OTHER-track full source/theorem audit."
+    - "Perform deeper prior-art search before novelty/publication claim."
+  model_reported: "GPT-5.6 Sol"
+  reasoning_reported: "UNVERIFIED"
+  scheduler_model_selector_exposed: false
+  scheduler_reasoning_selector_exposed: false

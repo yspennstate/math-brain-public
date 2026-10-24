@@ -1,0 +1,19 @@
+# POS3 source-bound handoff — account03/B10
+
+Run: `20260922T092055Z-account03-B10-POS3-elliptic`  
+Outcome: `ESSENTIAL_STEP_APPLIED`  
+Execution context: `WITHOUT_VERIFIED_BRAIN_RESEARCH`.
+
+Source scientific report: `proofnet24/collective-POS3/account03/B10/20260922T092055Z-account03-B10-POS3-elliptic/REPORT.md`, initial report commit `8600a2c9f7a5a63e3d1ed16b39d1a7d8f749293b`, blob `3685800627e4e75d60f0939f3ea65c532f5a20e8`.
+
+Named other-account result consumed: account04/B11 r19, report blob `7d3327d016a644c5792c8ba6af5d3ade1779e122`.
+
+Mathematical delta:
+- with `alpha=e(Q)/e(P)<7/9`, the exact first-interruption renewal has total nonprefix mass `>2/9`; because there are at most two first interrupters, one branch has mass `>1/9`; each branch is `<1/3` because it lies inside the actual full-law minority event `q<c_m`;
+- adjacent renewal depths admit an exact fiber weight `W_j in {1,...,K}`, `K=pi(P)`, obtained by moving `c_(j+1)` across `q` and the initial incomparable run;
+- for every event depending only on the relative order of Q, `mu_j(A)=E[W_j 1_A]/E[W_j]`, hence event odds change by at most a factor `K` per depth;
+- therefore fixed-Q-pair migration within the heavy branch is quantitatively controlled. The surviving obstruction is now top-level mixture displacement or chain-tail-bearing pair migration, not arbitrary depth-to-depth singularity.
+
+Next residual: `POS3-TOPLEVEL-OR-CHAINTAIL-BACKTRACK-MIGRATION-v1`.
+
+POS3 remains OPEN / NOT PROVED. No scheduler/native cross-account action, email/Drive/public workflow, paid model/API/Codex, benchmark gold, credentials, machine paths, or unrelated private material is included.

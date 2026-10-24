@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "account01-B07-20260923T130435Z-r25",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "startup_control_commit": "9040a5d2c47b33348769a91e8cff388817ee244a",
+  "prepublication_control_commit": "c90bd5cd5bb247315da726ad09cf034e6c578fc6",
+  "execution_context": "scheduled_automation",
+  "full_brain_connected": false,
+  "brain_state": "WITHOUT_VERIFIED_BRAIN",
+  "target_status": "FULL_QFORM_OPEN",
+  "continuity_status": "FULL_TARGET_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "dependencies": [
+    {
+      "kind": "own_previous",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "6360df8421f192175027c1e5334028e2f047533b",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T120512Z-r24/REPORT.md",
+      "used_for": "fixed-double-pair E3 bank, physical-edge/principal-pair split"
+    },
+    {
+      "kind": "own_previous",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "7bf5a0bd8a8d2fa12a5c2370811ecfe5d2cf7444",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T090322Z-r20/REPORT.md",
+      "used_for": "mixed E3/E2 fractional-compound Brascamp-Lieb receiver"
+    },
+    {
+      "kind": "designated_partner",
+      "account_slot": "account02/B07",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "646c1395596ed9c4b1f77cecdc9e9506cf793c22",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/account02-B07-20260923T123606Z-fa88b2df/REPORT.md",
+      "used_for": "exact Gamma=Z2 residual-energy identity, beta=ell+c marginals, mixed E3/E2 disjoint-volume density receiver"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-FIXEDROW-E3-TO-E2-SHADOW-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "For the complete third-volume packet Gamma containing a fixed physical row pair, with F=||M||F and Z2 the complete E2 mass of that row pair, Z2 >= Gamma/F^2; hence for every fixed-double-pair subpacket H, Z2 >= H/F^2."
+    },
+    {
+      "id": "QFORM-MIXED32-LEVERAGE-2/5-v1",
+      "status": "PROVED_SUPPORTING_BRANCH",
+      "statement": "Using beta=ell+c and the prior mixed E3/E2 theorem at w=1/10,q=1, ell_*<=2/5 implies a continuous density bound <=52.8322463052 F^(3/7) H^(-5/21)."
+    },
+    {
+      "id": "QFORM-E2-FRACTIONAL-TRACE-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For a physical E2 packet of mass Z2 and inclusion marginals max alpha<=q/2 with 1<=q<2, the full residual quadratic-plus-affine form R satisfies sup_s E|R-s|^-1/2 <= [8 sqrt(e/2)/(2-q)] q^-1/4 Z2^-1/8."
+    },
+    {
+      "id": "QFORM-SCALAR-SCHUR-E3-TO-E2-SHADOW-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "After exact completion of a nonzero physical scalar pivot a, the Schur cross rows preserve u wedge v wedge w_i and therefore the incident Schur E2 packet Z2^S obeys Z2^S >= Gamma/F^2 >= H/F^2."
+    },
+    {
+      "id": "QFORM-LARGEDIAGONAL-E2-NONCOLOOP-PAYMENT-v1",
+      "status": "PROVED_SCOPED_DENSITY_BRANCH",
+      "statement": "If |a|>=sqrt(H)/(2F^2) and the Schur E2 packet has max column marginal<=3/4, then ||p_Q||inf <=23.8366054976 F^(5/4)H^-3/8; essential boundedness only, continuity not claimed."
+    }
+  ],
+  "partner_result_applied": {
+    "id": "QFORM-MIXED32-DISJOINT-VOLUME-v1",
+    "actual_inequality": "Gamma>=H and Z2>=Gamma/F^2 imply ||p_Q||inf<16.488 F^(1/5)H^-1/5 whenever ell_*<=1/4.",
+    "continuity": true
+  },
+  "unresolved_implication": "QFORM-DOUBLEHUB-OR-E2-NEARCOLOOP-RECEIVER-v1",
+  "next_step": "Exploit the bounded hub geometry forced after all current exits fail: anchor-plane leverage >2/5 on at most four columns, anchored-E3 marginal >2/3 when diffuse payment fails, and scalar-Schur E2 marginal >3/4 on at most two columns. Build a grouped-coordinate/product-preserving receiver before reciprocal pivot inversion and retain all nonzero low-rank tails.",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fa0ddeb784bad52ae142e49e7c9448d4772decf8",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T130435Z-r25/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "c514cad4b6ef8d6a638018a799638fe1227d91c8",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B07/account01-B07-20260923T130435Z-r25.md"
+  }
+}

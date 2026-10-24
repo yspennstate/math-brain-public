@@ -1,0 +1,6 @@
+STATE: WORKING
+NEXT: Verify Bourgade's primary statement; check the independently saved strip counterexample and audit w603's key step with w605.
+
+2026-10-10: Read PRIMARY_DIRECTIVE.md. Targeted ranking lookup recovered C0054, tier 4, attempted_un; this dated label does not certify current openness. Independent method reserved: exact one-site fractional-moment decoupling, its contraction coefficient, and boundary-entropy obstruction. No paired proof read. Primary-source and reviewer gates pending.
+2026-10-10: Required brain recall completed within its 60-second subprocess deadline. Read the supplied conditional-joint-structure and perceptron-open-gaps scars; recall reported C0054 absent. No hook-audit assignment matched w604. Read Team O board; no C0054 row there. Current primary arXiv:2609.24426v2, 6 October, improves v1; model and Theorem 1.2 inspected. Initial team claims returned "not in a team" and were not delivered; repairing explicit team flag.
+2026-10-10: Recovered problems.jsonl line 54 and C0054-A001. Prior method was fractional moments, so saved a distinct finite-strip spectral-limit counterexample in ATTEMPT.md and INDEPENDENT_PRECOMMIT.json before paired-proof access. Found a source-note error: 2503.07606 assumes W>=N^c, not the intake note's near-logarithmic range. No localization theorem claimed.

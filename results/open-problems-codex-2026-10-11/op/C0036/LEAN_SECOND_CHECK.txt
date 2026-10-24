@@ -1,0 +1,26 @@
+Date: 2026-10-12 local
+Working directory: ~/lean_verify
+Command: lake env lean ~/brain_workers/TRIO_1011/op/C0036/PivotalIdentity.lean
+Final exit code: 0
+Final compiler output: empty (success)
+
+Checked declarations:
+- pivotal_identity_scaled
+- pivotal_numerator_nonneg
+- symmetric_pivotal_numerator
+
+Scope: scalar algebra converting the quadratic gap numerator into pivotal
+probabilities. This does not formalize the determinant expansion, minimal-set
+classification, Hessian continuity, derivative bounds, or the full local theorem.
+
+The initial run failed because nlinarith did not multiply/substitute a defining
+equality automatically. The correction explicitly rewrites the definitions,
+uses ring normalization, and derives the symmetric identity from the two
+single-coordinate identities. Only the final corrected file is called checked.
+
+Imports are Mathlib.Tactic.Linarith, Mathlib.Tactic.Ring and Mathlib.Data.Real.Basic.
+No sorry, native_decide, axiom declaration or full Mathlib import occurs.
+The final command respected the shared slot and ran alone; the slot opened
+after 723 seconds of waiting. No process was killed.
+
+Checked-file SHA256: 6e2880c2bda40f5195389f32f73c08cbf2c4cf35b251ce6697635a5d9e4f0770

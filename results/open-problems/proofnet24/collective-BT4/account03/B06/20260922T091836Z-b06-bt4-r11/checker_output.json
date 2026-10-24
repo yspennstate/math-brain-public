@@ -1,0 +1,42 @@
+{
+  "candidate": "BT4-F3-R3-TRI-ALT5-v1",
+  "mirror_remainder_choice_agrees": true,
+  "history": [
+    {"step": 1, "support": "A", "candidates": 4, "three_pack": 0, "survivors": 4},
+    {"step": 2, "support": "B", "candidates": 48, "three_pack": 0, "survivors": 48},
+    {"step": 3, "support": "A", "candidates": 384, "three_pack": 0, "survivors": 384},
+    {"step": 4, "support": "B", "candidates": 768, "three_pack": 576, "survivors": 192},
+    {"step": 5, "support": "A", "candidates": 216, "three_pack": 213, "survivors": 3}
+  ],
+  "fifth_step_nonpack_exceptions": [
+    {
+      "A": ["a2", "b2", "r2"],
+      "B": ["b1", "a1", "b0"],
+      "R": ["a0", "r0", "r1"],
+      "sink": "r0",
+      "fan_profile": [3, 1, 3],
+      "fan_profile_is_322": false,
+      "sink_local_targets": ["a1", "a2", "b0", "b1"]
+    },
+    {
+      "A": ["a2", "b1", "r2"],
+      "B": ["b0", "a1", "b2"],
+      "R": ["a0", "r0", "r1"],
+      "sink": "r0",
+      "fan_profile": [3, 1, 3],
+      "fan_profile_is_322": false,
+      "sink_local_targets": ["a1", "a2", "b0", "b2"]
+    },
+    {
+      "A": ["a2", "b0", "r2"],
+      "B": ["b2", "a1", "b1"],
+      "R": ["a0", "r0", "r1"],
+      "sink": "r0",
+      "fan_profile": [3, 1, 3],
+      "fan_profile_is_322": false,
+      "sink_local_targets": ["a1", "a2", "b1", "b2"]
+    }
+  ],
+  "valid_surviving_five_alternation_states": 0,
+  "interpretation": "213 of 216 fifth-step candidates already force three disjoint local directed triangles. The remaining three have next-sink fan profile (H,A,B)=(3,1,3), not a permutation of (3,2,2), so none is a surviving F3 defect-one state. The mirror choice of the other initial remainder sink gives identical counts."
+}

@@ -1,0 +1,13 @@
+{
+  "helper_version": "A069-shared-control-v1",
+  "family": "compatible two-subcube XOR masks, source independent of private U,V; one-coordinate shared source with arbitrary ordered pair of Boolean Y cores",
+  "parameter_domain": "(r,s,t,k)=(1,1,1,2),(2,1,1,2),(1,2,1,2),(1,1,2,2); all 16x16 ordered core truth-table pairs; all common/private event assignments; x first C coordinate. Additional arbitrary g(C,Y) cases at r=2,k=1: all 256 sources and all 16 assignments. One A070 cancellation witness and one unequal-core 3-bit illustration.",
+  "case_count": 18434,
+  "case_count_detail": "(8+16+16+16)*256=14336 one-coordinate fixtures; 16*256=4096 arbitrary shared-source fixtures; 2 explicit witnesses; total 18434",
+  "symmetry": "none; all assignments and ordered core pairs in stated domains",
+  "arithmetic": "integer Walsh transform, Fraction squared masses and directed pivotal counts, rational comparisons; no logarithmic entropy computation needed for analytic Kraft bound",
+  "memory_estimate_mb": 32,
+  "maximum_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "job_type": "bounded exact pilot"
+}

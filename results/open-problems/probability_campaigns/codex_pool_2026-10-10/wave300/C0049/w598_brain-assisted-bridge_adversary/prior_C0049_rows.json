@@ -1,0 +1,38 @@
+[
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "row": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "fk_interfaces_sle_q_not_2",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Conjecture 3 (Schramm), p. 93",
+      "problem_id": "C0049",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "duminil_copin_ising_potts_2017",
+      "statement": "For the critical random-cluster model with cluster weight q <= 4 on Dobrushin domains, the exploration path converges to SLE(kappa) with kappa = 4 pi / (pi - arccos(sqrt q / 2)); known for q = 2 (Smirnov, Chelkak et al.) and, for q = 1 site percolation, on the triangular lattice only.",
+      "status_search": "",
+      "title": "Convergence of random-cluster interfaces to SLE(kappa) for q in (0,4], q not 2",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "row": {
+      "attempt_id": "C0049-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Check which ingredients of the q = 2 proof are available for other q.",
+      "obstruction": "Discrete holomorphicity is only half-satisfied for q not 2.",
+      "problem_id": "C0049",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "The q = 2 proof uses (i) the parafermionic observable being discretely holomorphic (full Cauchy-Riemann), (ii) RSW-type crossing estimates for tightness, (iii) identification of the limit via the martingale observable. For q in (1,4) not 2: (ii) is available (Duminil-Copin-Sidoravicius-Tassion 2017 for q in [1,4]); (iii) would follow from (i); (i) fails: for general q the observable satisfies only the contour relations (half of the Cauchy-Riemann equations), the same obstruction as in C0017. So the conjecture is reduced, for q in [1,4], exactly to finding an additional discrete relation for the parafermionic observable; the count of unknowns versus equations (one complex relation per face versus two needed) is the precise deficit. For q < 1 even RSW is unavailable. No new relation found.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  }
+]

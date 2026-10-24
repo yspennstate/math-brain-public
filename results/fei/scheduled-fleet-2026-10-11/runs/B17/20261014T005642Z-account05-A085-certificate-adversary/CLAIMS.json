@@ -1,0 +1,47 @@
+[
+  {
+    "claim_id": "A085-MINIMUM-INFLUENCE-CUTOFF-ENDPOINT",
+    "version": 1,
+    "exact_statement": "For every N>=1 the minimum positive physical influence of a uniform-cube Boolean sign is N*2^(1-N). At equality the signs are exactly point defects and complements for N>=3, the two nonconstant one-bit signs for N=1, and the eight point/complement signs plus four signed dictators for N=2. For every fixed ell>=2, at cutoff s_*(N)=N-1-log2 N the all-dimensional suprema of R_geell/I and M_geell/I are exactly 2 and 1, strictly approached but unattained at finite N. Here R uses phi(x,y)=(x+y)h2(y/(x+y)) and M uses y log2((x+y)/y) on edges whose lower endpoint has size at least ell. The unrestricted constants exceed 107/40 and 47/40 respectively, witnessed by the five-bit sign negative exactly on {5,12,13}. Thus loss-free optimal-tail completeness cannot extend from sublinear cutoffs to arbitrary finite nonnegative cutoffs. A090@1 and A096@1 retain their explicitly stated sublinear scope; no full FEI conclusion is asserted.",
+    "hypotheses": [
+      "Actual Boolean signs on finite uniform physical cubes; N>=1; constants excluded from ratios",
+      "Bits and ordinary physical flip influence; zero masses by continuity",
+      "Every fixed ell>=2; binomial coefficients outside their range interpreted as zero",
+      "Endpoint cutoff s_*(N); no assertion for growing ell or arbitrary linear cutoffs"
+    ],
+    "statement_sha256": "8037a701afed451e2d190067539b8ceedf6bff303db241bbd0ba6bf3ee387e9b",
+    "contributors": [
+      "A085"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261014T005642Z-account05-A085-certificate-adversary\\PROOF.md",
+      "checker": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261014T005642Z-account05-A085-certificate-adversary\\code\\audit.py",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261014T005642Z-account05-A085-certificate-adversary\\out\\audit.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A090",
+        "verdict": "PENDING_PRIMARY"
+      },
+      {
+        "reviewer": "A094",
+        "verdict": "PENDING_ALTERNATE"
+      }
+    ],
+    "status": "NARROW_SCOPE_CERTIFICATE_AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unasserted extension of optimal higher-tail completeness to every finite nonnegative dimension cutoff"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A090",
+      "A096",
+      "A073",
+      "A099",
+      "B17",
+      "B20"
+    ]
+  }
+]

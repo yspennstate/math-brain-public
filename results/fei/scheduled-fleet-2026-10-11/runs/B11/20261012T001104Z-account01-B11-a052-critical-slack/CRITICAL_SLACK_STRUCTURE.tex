@@ -1,0 +1,73 @@
+\section*{Critical slack as an influence-weighted child deficit}
+
+Let $f:\{-1,1\}^n\to\{-1,1\}$ be nonconstant and write
+$R=\mathsf H(f)/\mathsf I(f)$.  For a relevant coordinate $i$, let
+$f_i^\sigma$ be the two physical children, and put
+\[
+ H_\sigma=\mathsf H(f_i^\sigma),\quad
+ I_\sigma=\mathsf I(f_i^\sigma),\quad
+ r_\sigma=H_\sigma/I_\sigma
+\]
+when $I_\sigma>0$.  Set
+\[
+ \overline H_i={H_++H_-\over2},\qquad
+ \overline I_i={I_++I_-\over2},\qquad
+ \Delta_iH=\mathsf H(f)-\overline H_i.
+\]
+
+\begin{theorem}[critical-slack decomposition]
+For every relevant coordinate,
+\[
+ \boxed{
+ \Delta_iH-RI_i(f)
+ ={1\over2}\sum_{\sigma:I_\sigma>0}
+ I_\sigma\bigl(R-r_\sigma\bigr).}                 \tag{1}
+\]
+If $f$ is descendant-critical, then the left side is nonnegative.  Moreover,
+for every $t>0$,
+\[
+ {1\over2}\sum_{\sigma:r_\sigma\le R-t}I_\sigma
+ \le {\Delta_iH-RI_i(f)\over t}.                 \tag{2}
+\]
+Consequently zero slack at coordinate $i$ forces every nonconstant child to
+have ratio exactly $R$.  More generally, if
+$\Delta_iH-RI_i(f)\le\varepsilon\overline I_i$, then under the child law
+weighted by child influence, the expected ratio loss is at most
+$\varepsilon$ and the probability of loss at least $t$ is at most
+$\varepsilon/t$.
+\end{theorem}
+
+\begin{proof}
+Physical edge counting gives
+\[
+ \overline I_i=\mathsf I(f)-I_i(f).
+\]
+Using $\mathsf H(f)=R\mathsf I(f)$,
+\begin{align*}
+ \Delta_iH-RI_i(f)
+ &=\mathsf H(f)-\overline H_i-RI_i(f)\\
+ &=R\overline I_i-\overline H_i\\
+ &={1\over2}\sum_\sigma(RI_\sigma-H_\sigma),
+\end{align*}
+which is (1), with constant children contributing zero.  Descendant
+criticality gives $r_\sigma\le R$ for each nonconstant child, so all terms
+are nonnegative.  On the subset with $R-r_\sigma\ge t$, each summand is at
+least $tI_\sigma$; this proves (2).  The remaining statements are the
+equality case and Markov's inequality under normalization by
+$2\overline I_i=I_++I_-$.
+\end{proof}
+
+\paragraph{Tensor compatibility.}
+If $F=fg$ on disjoint blocks and $i$ belongs to the $f$ block, then
+$I_i(F)=I_i(f)$ and $\Delta_iH(F)=\Delta_iH(f)$.  If $f,g$ are critical
+with common ratio $R$, the entire slack identity for $F$ at $i$ equals that
+for $f$.  Hence the theorem descends exactly to the equal-ratio factors from
+the tensor-purity theorem; it does not pretend that tensor replication makes
+the gap easier.
+
+\paragraph{Scope.}
+Abstract Fourier-support components are not physical children and cannot be
+inserted into (1).  A one-point-surgery lift need not be critical; after
+passing to a maximum-ratio physical descendant, (1) applies to the selected
+descendant, not automatically to the unreduced surgery.  No universal upper
+bound on the slack is asserted.

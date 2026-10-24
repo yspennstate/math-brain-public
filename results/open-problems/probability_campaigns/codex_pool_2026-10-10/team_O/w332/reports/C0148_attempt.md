@@ -1,0 +1,11 @@
+# C0148: finite-quotient special case, 2026-10-10
+
+Status: Questions 14.3(a,b) in the cached Pete notes concern unlabelled graphs; the cached statement explicitly distinguishes the easy labelled case. No present-open or solved certificate was found. The prior attempt supplies no verified global label-recovery theorem.
+
+Proved special case: let G be a finitely generated residually finite group and S a finite symmetric generating set. For each R, residual finiteness supplies a finite-index normal subgroup N_R containing no nonidentity element of word length at most 2R+1. Indeed, separate each of the finitely many such elements in a finite quotient and intersect their kernels. Take nested kernels if desired, by including all earlier kernels in this finite intersection.
+
+The quotient Cayley graph of G/N_R has exactly the same labelled rooted radius-R ball as Cay(G,S). Every quotient vertex in the ball has a word of length <=R. Two such vertices colliding would give a nontrivial kernel word of length <=2R. An extra S-edge between them would give a kernel word of length <=2R+1. Both are excluded. This also preserves loops/multiple labels if the convention uses Cayley diagrams; for ordinary simple graphs, remove them consistently.
+
+All roots in a quotient Cayley graph are equivalent by translation. Hence the uniform-rooted finite quotient graphs converge locally weakly to Cay(G,S), with the labels already present. This works for every finite symmetric generating set, so parts (a) and the sofic conclusion hold within the residually finite class. It gives no label-recovery result for arbitrary finite unlabelled approximants of an arbitrary group, and does not solve the general questions.
+
+Quantitative example: for Z^d with the standard generators, the quotient (Z/mZ)^d has the exact rooted radius-R ball whenever m>=2R+2. At m=2R+1 the boundary edge between +/-R on a coordinate line can create a cycle not in the integer-lattice ball. check_extended.py checks the labelled balls in d=1,2,3, R=1,2,3 and verifies the boundary failure in d=1. A finite-radius successful label pattern is insufficient by itself for globally compatible labels on an arbitrary approximating sequence. Auditor w346, pending.

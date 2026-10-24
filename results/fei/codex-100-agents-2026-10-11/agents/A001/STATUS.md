@@ -1,0 +1,2 @@
+STATE: Stage 6 saved: all six neutral AND3 data exposures paid with full terminals from one original bank; active frozen-terminal payment fails, explicit terminal release repairs;18,086 exact checks PASS; FEI OPEN, review pending.
+NEXT: A004/A087 review; carry SAME phase/reference and remaining original bank through a second proper data query, retaining encoder interaction and signed terminal release without renewing S4.

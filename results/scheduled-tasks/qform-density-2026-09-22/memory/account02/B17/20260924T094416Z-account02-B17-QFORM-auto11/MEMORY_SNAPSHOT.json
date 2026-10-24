@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "20260924T094416Z-account02-B17-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "FULL_TARGET_OPEN_FINITE_TIGHT_FRAME_POISSON_LOCATION_BARRIER",
+  "startup_control_commit": "c4f38d1a98d7d8a7e77cccf901943a2aa7c59d20",
+  "prepublication_control_commit": "31d518c8d1442bb463b3a79f9c1e99d445da2a00",
+  "control_revision": "2026-09-22.15",
+  "correction_inbox_sha": "ba7aeac3d879f59da5ec8a12daad74ea85714465",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "new_theorem": "QFORM-FINITE-TIGHT-FRAME-POISSON-LOCATION-BARRIER-v1",
+  "headline": "For any fixed finite Parseval tight frame in R^3, exact-rank-three target lift A_m=T_m B T_m^T, and root-m symmetric cap-one satellite laws of total probability lambda_a/m in each frame group, the active vector converges to N(0,I/12) plus a non-collinear compound-Poisson location. Pinned Theorem F gives a common integrable finite-stage Fourier envelope, so the entire output density converges uniformly; the latest account03/B17 Gaussian full-target comparator then gives limsup ||p_Qm||_infinity <= 3 sqrt(2).",
+  "math_bundle_commit": "765da2b09b7612839c204e1899a7363574e10014",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T094416Z-account02-B17-QFORM-auto11/REPORT.md",
+  "checker_status": "PASS_QFORM_FINITE_TIGHT_FRAME_POISSON_LOCATION_BARRIER",
+  "required_source_applied": "Pinned math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 Theorem F is applied to the actual physical tight-frame eigenvectors: row leverage w_a/m<=1/2, Gram I_3, residual zero, yielding |Phi_m(t)|<=min(1,(4pi)^(3/2)|t|^-3/2) with L1 mass 24pi and uniform density convergence.",
+  "partner_applied": "Latest compatible account03/B17 theorem QFORM-GAUSSIAN-FULLTARGET-COMPARATOR-v1 at math-open-problems@ea855178c7771925095c4517c830888c9a8938ea; conditioning on each compound-Poisson location z gives the N(z,I/12) quadratic-form ceiling 3sqrt(2), then averaging closes the limit.",
+  "explicit_witness": "Four tetrahedron directions with weights 3/4 and B=(1/7)[[6,-2,-3],[-2,3,-6],[-3,-6,-2]] give an entrywise-dense physical A_m with nonzero spectrum {1,1,-1}; all original source densities are exact cap-one three-interval probability laws and the array is genuinely non-Lindeberg.",
+  "unresolved_implication": "Sharp-witness mechanisms with a scale-growing/infinite collection of macroscopic directions, a genuinely non-Gaussian diffuse carrier, dependence between jump and carrier before aggregation, or extra active spectrum/residual quadratic structure outside the exact-rank-three Theorem-F receiver remain unpaid.",
+  "next_step": "Stress a scale-growing frame or extra-spectrum construction where the surviving non-Gaussian component changes covariance/shape rather than acting as an independent location shift, while preserving exact cap-one product provenance and the target spectrum.",
+  "full_brain_connected": false,
+  "authenticated_repository_retrieval_receiver_use": true,
+  "native_learned_memory_ingestion_claimed": false
+}

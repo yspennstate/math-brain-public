@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checker": "verify_overlap2_spike.py",
+  "scope": "exact symbolic verification of spectrum, pair signatures, principal-triple characteristic polynomial/determinant, overlap-two and principal exterior-cube masses",
+  "spectrum": ["1", "1", "-1/2", "-M"],
+  "same_pair_eigenvalues": ["1", "-(2*M+1)/4"],
+  "opposite_pair_eigenvalues": ["1/4", "(1-M)/2"],
+  "triple_charpoly": "(lambda - 1)*(6*M*lambda + 8*lambda**2 - lambda - 1)/8",
+  "triple_det": "-1/8",
+  "rho": "2/(6*M + sqrt((6*M - 1)**2 + 32) - 1)",
+  "M3": "1/16",
+  "M2": "3*(8*M**2 + 1)/16",
+  "e3_A2": "(6*M**2 + 1)/4",
+  "identity_M2_plus_M3_minus_e3": "0"
+}

@@ -1,0 +1,67 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "control_revision": "2026-10-12.1",
+  "run_id": "20261012T110000Z-account03-B16-sparse-negative-sets",
+  "stream": "B16",
+  "logical_account": "account03",
+  "native_binding": "UNVERIFIED",
+  "packet_id": "A077",
+  "packet_ids": [
+    "A077"
+  ],
+  "gap_id": "G-A080-UNIVERSAL-COUNTEREXAMPLE",
+  "attempt_id": "ACC03-B16-A077-SPARSE-NEGATIVE-SETS-1",
+  "method": "uniform-size sparse-negative-set Walsh and edge-isoperimetric argument",
+  "mathematical_delta": "Restricted FEI: H/I<=4d(1-alpha)/(d-log2 a). For log2 a=o(d), H/I->4 and U/I->1, uniformly over negative-set geometries, covering arbitrarily overlapping sparse clusters.",
+  "deliverable_status": "COMPLETE_CANDIDATE_BUNDLE_PENDING_READBACK",
+  "mathematical_status": "AUTHOR_DERIVED_UNVERIFIED; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "B16-A077-COMPENSATED-TOWER-v1 (context)",
+    "B16-A079-TWO-POINT-OVERLAP-v1 (context)"
+  ],
+  "claims_created_or_changed": [
+    "ACC03-B16-A077-SPARSE-NEGATIVE-SETS-v1"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "THEOREM.md",
+    "CLAIM_STATEMENT.txt",
+    "CLAIMS.json",
+    "SOURCES.json",
+    "verify_sparse_negative_sets.py",
+    "CHECK.out",
+    "CASE_EXTENSION.json"
+  ],
+  "next_consumers": [
+    "A080",
+    "A092",
+    "A088",
+    "B20"
+  ],
+  "next_action": "Independent reconstruction of fiber Parseval and edge isoperimetry; test dense negative-set mechanisms beyond log2 a=o(d).",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "NATIVE_BINDING_UNVERIFIED",
+    "INDEPENDENT_REVIEW_PENDING",
+    "EXTERNAL_LITERATURE_NOVELTY_NOT_CHECKED"
+  ],
+  "test_evidence": {
+    "command": "python3 verify_sparse_negative_sets.py > sparse_negative_sets_check.json",
+    "python": "3.13.5",
+    "exit_code": 0,
+    "cases": 30,
+    "exact_identity_checks": "PASS",
+    "analytic_proof_in": "THEOREM.md",
+    "native_tests": "NOT_RUN"
+  },
+  "config": "UNKNOWN_NATIVE_CURRENT",
+  "run": "OBSERVED_THIS_INVOCATION",
+  "work": "AUTHOR_DERIVED",
+  "save": "PENDING_VERIFIED_COMMIT",
+  "post": "PENDING",
+  "receipt": "UNKNOWN",
+  "review": "UNVERIFIED",
+  "ingestion": "NOT_RUN",
+  "use": "UNKNOWN",
+  "outcome": "RESTRICTED_CLASS_THEOREM_ONLY"
+}

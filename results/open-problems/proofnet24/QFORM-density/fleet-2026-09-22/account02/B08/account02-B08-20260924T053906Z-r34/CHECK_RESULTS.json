@@ -1,0 +1,40 @@
+{
+  "status": "QFORM_B08_R34_CHECK_PASS",
+  "scope": "deterministic constants and m=1024 Walsh stress-family linear algebra",
+  "constants": {
+    "C3": 10.902723556992836,
+    "CR": 63.26405187778285,
+    "Cstar": 197.7780678260685,
+    "theta_star": 0.05512604949999305,
+    "eta_star": 0.31987395050000694,
+    "eta_star_over_64": 0.0049980304765626085,
+    "eta_star_over_512": 0.0006247538095703261,
+    "partner_r51_theta_zeta_quarter": 0.017775950827372714,
+    "partner_r51_large_child_constant": 3600.3699954799663,
+    "fixed_source_rank4_fresnel_density_constant": 8.0
+  },
+  "walsh_m1024": {
+    "orthonormal_frame_error": 0.0,
+    "top3_max_row_leverage": 0.0029296875,
+    "rank4_max_row_leverage": 0.00390625,
+    "B0_singular_values_leading": [0.5, 0.5, 0.5],
+    "B_singular_values_leading": [0.5, 0.5, 0.0],
+    "complement_cross_operator_norm": 0.5,
+    "cancellation_Bx_norm": 0.0,
+    "cancellation_yCx": -0.5000000000000007,
+    "cancellation_yB0x": 0.5000000000000002,
+    "physical_pair_operator_upper_bound": 0.0078125,
+    "L_over_64": 0.015625,
+    "numeric_E3_B": 2.3817936903720687e-30,
+    "numeric_E3_note": "roundoff; exact E3(B)=0 by the Walsh identities"
+  },
+  "checks": [
+    "theta_star = C3/Cstar",
+    "eta_star = 3/8 - theta_star",
+    "restricted Walsh top-three crossing has exact singular values 1/2,1/2,1/2",
+    "fourth Walsh character cancels exactly the u3 cut crossing",
+    "literal crossing has exact rank two",
+    "all physical 2x2 principal blocks have sigma_min < L/64 for m=1024",
+    "rank-four fixed-source Fresnel envelope integrates to density constant 8/L"
+  ]
+}

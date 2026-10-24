@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "scope": {
+    "exhaustive_boolean_functions_n_le_4": {
+      "1": 4,
+      "2": 16,
+      "3": 256,
+      "4": 65536
+    },
+    "total_exhaustive_functions": 65812,
+    "central_binomial_lower_bound_m_le_1000": "PASS",
+    "majority_dimensions": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13
+    ],
+    "one_point_dimensions": [
+      4,
+      5,
+      6,
+      8,
+      10,
+      12,
+      16,
+      20
+    ]
+  },
+  "exact_identities_checked": [
+    "sum_i r_i = tau",
+    "e_ik = e_ki",
+    "sum_{i!=k} e_ik = I - tau",
+    "ordinary mixed-depth sum = E[K(K-1)]",
+    "for odd majority: ordinary mixed-depth sum = ((n-1)/2) J"
+  ],
+  "finite_diagnostic_not_a_theorem": {
+    "max_R_inc_over_I_minus_tau_n_le_4": {
+      "value": 0.20022812010646596,
+      "n": 4,
+      "mask": 981
+    },
+    "majority": [
+      {
+        "n": 3,
+        "j": "1/2",
+        "I": "3/2",
+        "ordinary_depth_sum": "3/2",
+        "harmonic_mixed_curvature_sum": "1/2",
+        "ordinary_depth_over_J": 1.0,
+        "weighted_depth_defect_over_J": 0.5,
+        "harmonic_bank_over_J": 0.3333333333333333,
+        "R_inc_over_harmonic_bank": -0.7924812503605779
+      },
+      {
+        "n": 5,
+        "j": "3/8",
+        "I": "15/8",
+        "ordinary_depth_sum": "15/4",
+        "harmonic_mixed_curvature_sum": "7/8",
+        "ordinary_depth_over_J": 2.0,
+        "weighted_depth_defect_over_J": 1.292481250360578,
+        "harmonic_bank_over_J": 0.4666666666666667,
+        "R_inc_over_harmonic_bank": -0.194595586678326
+      },
+      {
+        "n": 7,
+        "j": "5/16",
+        "I": "35/16",
+        "ordinary_depth_sum": "105/16",
+        "harmonic_mixed_curvature_sum": "19/16",
+        "ordinary_depth_over_J": 3.0,
+        "weighted_depth_defect_over_J": 2.1609640474436813,
+        "harmonic_bank_over_J": 0.5428571428571428,
+        "R_inc_over_harmonic_bank": 0.14594678547619036
+      },
+      {
+        "n": 9,
+        "j": "35/128",
+        "I": "315/128",
+        "ordinary_depth_sum": "315/32",
+        "harmonic_mixed_curvature_sum": "187/128",
+        "ordinary_depth_over_J": 4.0,
+        "weighted_depth_defect_over_J": 3.064641508472483,
+        "harmonic_bank_over_J": 0.5936507936507937,
+        "R_inc_over_harmonic_bank": 0.3760614321379107
+      },
+      {
+        "n": 11,
+        "j": "63/256",
+        "I": "693/256",
+        "ordinary_depth_sum": "3465/256",
+        "harmonic_mixed_curvature_sum": "437/256",
+        "ordinary_depth_over_J": 5.0,
+        "weighted_depth_defect_over_J": 3.988639961749959,
+        "harmonic_bank_over_J": 0.6305916305916306,
+        "R_inc_over_harmonic_bank": 0.5462407349445462
+      },
+      {
+        "n": 13,
+        "j": "231/1024",
+        "I": "3003/1024",
+        "ordinary_depth_sum": "9009/512",
+        "harmonic_mixed_curvature_sum": "1979/1024",
+        "ordinary_depth_over_J": 6.0,
+        "weighted_depth_defect_over_J": 4.925874520708029,
+        "harmonic_bank_over_J": 0.659007659007659,
+        "R_inc_over_harmonic_bank": 0.6793648793031034
+      }
+    ],
+    "one_point_defect": [
+      {"n": 4, "I": 0.5, "tau": 0.234375, "R_inc_over_harmonic_bank": 0.08881029437217274},
+      {"n": 5, "I": 0.3125, "tau": 0.12109375, "R_inc_over_harmonic_bank": 0.36077697765536},
+      {"n": 6, "I": 0.1875, "tau": 0.0615234375, "R_inc_over_harmonic_bank": 0.5566836606916578},
+      {"n": 8, "I": 0.0625, "tau": 0.01556396484375, "R_inc_over_harmonic_bank": 0.8214375007696034},
+      {"n": 10, "I": 0.01953125, "tau": 0.003902435302734375, "R_inc_over_harmonic_bank": 0.9934792044387213},
+      {"n": 12, "I": 0.005859375, "tau": 0.0009763240814208984, "R_inc_over_harmonic_bank": 1.1154223341419942},
+      {"n": 16, "I": 0.00048828125, "tau": 6.1034224927425385e-05, "R_inc_over_harmonic_bank": 1.2790702798081846},
+      {"n": 20, "I": 3.814697265625e-05, "tau": 3.814693627646193e-06, "R_inc_over_harmonic_bank": 1.3855946720316692}
+    ]
+  },
+  "full_FEI_status": "OPEN; finite diagnostics do not establish the proposed harmonic-Riesz bridge"
+}

@@ -1,0 +1,42 @@
+{
+  "track": "NM13-10/progress-extrapolation",
+  "source": "Agresti--Veraar arXiv:2501.18561 / NoDEA 32 (2025), Problem 3",
+  "frozen_pair": {
+    "X0": "H^{-1}(Torus)",
+    "Xhalf": "L^2(Torus)",
+    "X1": "H^1(Torus)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "brownian_dimension": 1
+  },
+  "fixed_source_endpoint_before": "r_*=3, endpoint excluded",
+  "fixed_source_endpoint_after": "r_*=3, endpoint excluded",
+  "full_critical_bracket_before": "2/3 <= alpha_*(T) <= 1",
+  "full_critical_bracket_after": "2/3 <= alpha_*(T) <= 1",
+  "parent_status": "PARTIAL",
+  "new_claim_status": "CANDIDATE_FULL / SELF-CHECKED / PENDING INDEPENDENT REVIEW",
+  "new_gain": {
+    "name": "full-spectrum little logarithmic endpoint and spectral K-functional",
+    "statement": "For every progressive Y in L^3(Omega x (0,T);L^2(Torus)), F=||T_TY|| belongs to the strict little endpoint Z^o_{3,1}(T): lim_{s downarrow 0} s^(1/3)F^*(s)/(1+log(T/s))=0. Quantitatively, if e_N(Y) is the best L^3 approximation error by at most N dyadic spectral blocks and L=1+log(T/s), then s^(1/3)F^*(s)/L <= 947 N^(1/6)L^(-1/3)||Y||_3 + 5.2 e_N(Y), for every N>=1.",
+    "mechanism": "combine the predecessor finite-N critical Z_{3,2/3} theorem with the exact unrestricted Z_{3,1} bound through best spectral N-term approximation and the rearrangement inequality (f+g)^*(s)<=f^*(s/2)+g^*(s/2)",
+    "source_level_change": "strict full-spectrum endpoint-space refinement at the existing logarithmic exponent 1; the exponent bracket itself remains [2/3,1]",
+    "quantitative_improvement": "If e_N(Y)<=D N^{-theta}, then T_TY lies in Z_{3,alpha_theta} with alpha_theta=(4 theta+1)/(6 theta+1), and norm <=1063||Y||_3+5.2D. Any log-1 near-saturating family must have dyadic spectral complexity of order at least L^2 at quantile logarithm L, up to explicit constants."
+  },
+  "essential_dependencies": [
+    "P24 exact endpoint r_*=3 and endpoint failure",
+    "NM13-10 exact subcritical norm C_p^g(T)=1/(sqrt(2/(p-1))-1)",
+    "NM13-10 full critical bracket [2/3,1] and Z_{3,1} constant 1+sqrt(2)",
+    "NM13-10 finite multiband endpoint ||T_T P_S Y||_{Z_{3,2/3}} <529 N^(1/6)||P_S Y||_3 for |S|<=N"
+  ],
+  "failed_or_insufficient_route": "The preceding black-box multiband gluing cannot remove the N^(1/6) loss uniformly on the whole L^3 unit ball. This run instead extracts what is nevertheless uniform for every fixed input: finite-band approximants converge in the global endpoint norm, forcing a little-o logarithmic tail and yielding a best-N spectral K-functional.",
+  "residual_obstruction": "Upgrade the little Z_{3,1} conclusion to a uniform Z_{3,alpha} bound with alpha<1, ideally alpha=2/3. The quantitative obstruction now says any bad family must move substantial L^3 mass through more than order L^2 dyadic bands as L grows; common-Brownian covariance/Hellinger information must rule out or realize that spectral escape.",
+  "next_attack": "Apply the critical Hellinger/decoherence kernel to the best-N remainder and seek a uniform estimate on spectrally escaping families, rather than another fixed finite-band theorem.",
+  "checker": "2026-09-20T14-48-59+0300__little_endpoint_checker.py",
+  "checker_output": "2026-09-20T14-48-59+0300__little_endpoint_checker.out",
+  "checker_status": "CHECK_PASS",
+  "runtime": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "UNVERIFIED"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "query": "nearest neighbour Bernoulli percolation sharpness subcritical exponential decay critical continuity",
+  "command": "PYTHONPATH=~/math-brain-build/src; python -X utf8 -m math_brain.cli recall ~/math-brain-build/local/population/brain.sqlite3 <query> --limit 5",
+  "hit_count": 5,
+  "claim_hit_count": 4,
+  "before_claim_hits_with_statement_in_cli": 0,
+  "after_claim_bodies_resolved": 4,
+  "claims_with_empty_structured_assumptions": 4,
+  "claims_without_fidelity_review": 3,
+  "zero_warning_claim_hits": 4,
+  "exact_card_resolution_seconds": 0.045867,
+  "bounded_repair_command": "python -X utf8 ~/brain_workers/w430/read_brain_cards.py",
+  "bounded_repair": "Read only the returned IDs, inspect inline and structured assumptions and fidelity status, and verify missing symbol definitions against the primary source before checking applicability.",
+  "specific_failure": "Theorem 2 title/score exposed neither q=p(1-m_h(p)) nor definitions; the harvested body leaves m_h and psi_n undefined. Assuming q_h->p_c at positive critical density is circular.",
+  "limitation": "Local diagnostic repair, not deployed; 0->4 exposed bodies is transparency, not improved mathematical correctness or a global recall score."
+}

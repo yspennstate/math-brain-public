@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "seed": 20260920,
+  "exact": {
+    "raw_wiener_branch_drop_checks": 804,
+    "quadratic_normalized_branch_drop_checks": 804,
+    "quadratic_normalized_min_slack": "0",
+    "high_link_anticancellation_coordinate_checks": 2601,
+    "high_link_min_slack": "0"
+  },
+  "numerical": {
+    "qualified_cubic_transfer_instances": 54,
+    "min_cubic_transfer_entropy_slack": 9.033082813311301,
+    "entropy_perturbation_pair_checks": 65808,
+    "entropy_perturbation_min_slack": 0.0,
+    "entropy_perturbation_worst": [1,0,0,0.0,0.0,1.0]
+  },
+  "named": {
+    "one_point_6": {"n":6,"Lambda":"47/16","C_QW":21.540456301909575,"active":6,"qualifies_all_active":false,"H":5.03915618603617,"J":0.1875,"raw_Lambda":"47/16","raw_wiener_overlap":["1","1","1","1","1","1"],"raw_overlap_zero_count":0,"entropy":0.7012057533558846,"I":0.1875},
+    "majority_5": {"n":5,"Lambda":"7/2","C_QW":24.57364914646918,"active":5,"qualifies_all_active":false,"H":3.60845859334435,"J":1.875,"raw_Lambda":"7/2","raw_wiener_overlap":["0","0","0","0","0"],"raw_overlap_zero_count":5,"entropy":3.325375780033049,"I":1.875},
+    "majority_substitution_9": {"n":9,"Lambda":"7","C_QW":36.57364914646918,"active":9,"qualifies_all_active":true,"H":7.8606029408706215,"J":2.25,"raw_Lambda":"7","raw_wiener_overlap":["0","0","0","0","0","0","0","0","0"],"raw_overlap_zero_count":9,"entropy":5.0,"I":2.25},
+    "addressing_6": {"n":6,"Lambda":"4","C_QW":26.885390081777928,"active":6,"qualifies_all_active":true,"H":4.967855119422592,"J":2.0,"raw_Lambda":"4","raw_wiener_overlap":["2","2","0","0","0","0"],"raw_overlap_zero_count":4,"entropy":4.0,"I":2.0},
+    "bent_quadratic_4": {"n":4,"Lambda":"4","C_QW":26.885390081777928,"active":4,"qualifies_all_active":true,"H":3.0,"J":2.0,"raw_Lambda":"4","raw_wiener_overlap":["2","2","2","2"],"raw_overlap_zero_count":0,"entropy":4.0,"I":2.0},
+    "tensor_w3_w3": {"n":6,"Lambda":"25/4","C_QW":34.611664359074624,"active":6,"qualifies_all_active":false,"H":5.0,"J":1.5,"raw_Lambda":"25/4","raw_wiener_overlap":["5/2","5/2","5/2","5/2","5/2","5/2"],"raw_overlap_zero_count":0,"entropy":4.433834373377399,"I":1.5},
+    "fresh_control_gamma3_majority3": {"n":6,"Lambda":"15/4","C_QW":25.76807722908015,"active":6,"qualifies_all_active":false,"H":4.832281877742155,"J":0.5625,"raw_Lambda":"15/4","raw_wiener_overlap":["1/2","1/2","1/2","3/2","3/2","3/2"],"raw_overlap_zero_count":0,"entropy":1.9512377755992936,"I":0.5625}
+  },
+  "limitations": "Structural branch-drop and cubic anti-cancellation checks are exact rational/integer checks. The complete coordinate-level detail for all tested high-link cases is reproducible from the checker. Entropy comparisons use Python floating point only as deterministic stress tests; the report supplies the all-dimensional proofs. The archived coded F_8 obstruction has 2040 physical inputs and was not truth-table executed here. No independent audit or formal proof assistant run is claimed."
+}

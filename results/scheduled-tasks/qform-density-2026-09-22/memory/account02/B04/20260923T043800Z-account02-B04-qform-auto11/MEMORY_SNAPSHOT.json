@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B04",
+  "run_id": "20260923T043800Z-account02-B04-qform-auto11",
+  "control_revision": "2026-09-22.15",
+  "control_head_observed_before_snapshot": "83e977ff75220c79b29330fa7e6f128e5aecced4",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "secondary_status": "BALANCED_WEAK_DIRECTION_RANK2_EXCISION_SEPARATION",
+  "target_status": "QFORM_FULL_OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "canonical_math": {
+    "primary_report_commit": "36263ba314738468f934a5b3245130b6754e940f",
+    "primary_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T043800Z-account02-B04-qform-auto11/REPORT.md",
+    "fresh_partner_addendum_commit": "8a6269fae9183252b85ba2ee787aedd905deef2a",
+    "fresh_partner_addendum_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T043800Z-account02-B04-qform-auto11/ADDENDUM_RANK2_EXCISION.md",
+    "fresh_partner_addendum_blob": "6f98cc386a1e8d3d6283d04a509ce476d3f3310c",
+    "checks_commit": "603e6038d69755025a7540d4e5a87188904a87dd",
+    "checks_blob": "1ad12f7c327e04473143c904d4cdba86cb6c3db7",
+    "checkpoint_commit": "60792d5565ee947f7dfa4b7c4143f0a5a5a611f8"
+  },
+  "handoff_commit": "f58e5ee35523484a50f17aa97de3df719dfa915a",
+  "sources_applied": [
+    {
+      "name": "Claude/e5 volume-sampling Theorem D",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "use": "globally optimized admissible third-volume bound on M_eps: 6 sqrt(e) 2^(-2/3) eps^(-1/3)"
+    },
+    {
+      "name": "account03/B04 r24 ridge/spectral-window tradeoff",
+      "commit": "a11e719b61c4be07fae4e2dcfa4d88d31812d0d9",
+      "use": "direct ridge certificate on same M_eps; every valid simplified certificate >= sqrt(e)/eps; high-spectrum failure identifies physical hub"
+    },
+    {
+      "name": "QFORM-ONE-SIDED-SEPARABLE-CROSS-DIFFUSE-v1",
+      "commit": "36263ba314738468f934a5b3245130b6754e940f",
+      "use": "after conditioning one original right coordinate, rank-two physical cross block has D2>=8/3 and yields ||p||_inf<=sqrt(3e)"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-BALANCED-WEAK-DIRECTION-RANK2-EXCISION-v1",
+    "statement": "There is a full-rank genuinely rotated indefinite target-valid family whose globally optimal admissible third-volume certificate is Theta(eps^(-1/3)) and whose direct partner-ridge certificate is Theta(eps^(-1)), while conditioning one original physical hub coordinate exposes a rank-two product-Fourier certificate ||p||_inf<=sqrt(3e), independent of eps. This refutes exhaustiveness of paying the unreduced weak third cross direction, not QFORM."
+  },
+  "explicit_family": {
+    "cross_singular_values": [2, 2, "eps"],
+    "spectrum": ["5/2", "5/2", "-3/2", "-3/2", "1/2+eps", "1/2-eps", "1/2 multiplicity 2m-1"],
+    "e5_volume_Z": "16 eps^2",
+    "e5_best_coefficient": 6.231775903093545,
+    "ridge_certificate_lower_coefficient": 1.6487212707001282,
+    "rank2_uniform_density_bound": 2.8556690083721423
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "first_unproved_step": "QFORM-NEAR-COLOOP-PHYSICAL-RANK2-EXCISION-v1",
+  "next_action": "Prove a structural original-coordinate compiler: low-total-tail/high-leverage survivors either allow bounded hub conditioning with a target-scale rank-two cross packet in a paid branch, or enter a completed ridge/grouped-coordinate mechanism; isolate the genuinely nonseparable two-sided survivor.",
+  "telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_requested": "maximum actually supported",
+    "reasoning_effort_configured": "UNKNOWN",
+    "reasoning_effort_self_report": "UNKNOWN",
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "thinking_usage_source": "not_exposed"
+  }
+}

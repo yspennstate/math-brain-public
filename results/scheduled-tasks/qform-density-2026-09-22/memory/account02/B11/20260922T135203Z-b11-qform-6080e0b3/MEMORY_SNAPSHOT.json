@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B11",
+  "run_id": "20260922T135203Z-b11-qform-6080e0b3",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit_used_for_publication": "da63bbaba29461947597c208482f78df70fb4e59",
+  "later_partner_recheck_main": "7b971b78b97232e1ffb949208be27e5f5b433b7a",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account03/B11",
+    "run_id": "20260922T121353Z-account03-B11-QFORM-r11",
+    "canonical_report_commit": "860d849b7f2e0198bf7c3531a71b14e59f03e430",
+    "scope_used": "dependence-safe Abel smoothing and the retained opposite-sign rank-two half-potential/log-singularity mechanism"
+  },
+  "new_mathematics": {
+    "linear_projection_lemma": "For independent density-cap-one inputs and b_i in R^2 with sum b_i b_i^T=I_2, W=sum b_i X_i has density sup norm at most e.",
+    "heavy_minority_theorem": "For exact-rank-three indefinite A=R Lambda R^T with all three nonzero |lambda|>=1, if a physical row has leverage c>=1/2 and its spectral Rayleigh quotient a has the minority sign with |a|>=delta, then ||p_{X^TAX}||_infinity <= 2 sqrt(2*pi*e) delta^(-1/4).",
+    "delta_quarter_constant": 11.689129461289111,
+    "near_null_export": "If c>=1/2 and |a|<1/4, then ||h||^2>15/16 and the heavy physical cross row satisfies sum_{j!=0} A_0j^2>=31/64.",
+    "structural_falsifier": "Heavy leverage does not force minority Rayleigh quotient away from zero: H0=[[0,0,1],[0,1,0],[1,0,0]] with a heavy Parseval row gives Q=2(sqrt(c)X0+sqrt(1-c)X1)X3+X2^2 and a=0. This is not a QFORM counterexample."
+  },
+  "rank_two_control": "Deleting the third square from the null-cone family leaves the opposite-sign saddle/product law with logarithmically unbounded density for bounded-density uniforms; the third square removes the singularity in the banked example by the partner half-potential/Abel mechanism.",
+  "first_unpaid_implication": "Bound the canonical near-null geometry 2 Z1 Z3 + Z2^2 for an arbitrary three-dimensional Parseval projection of independent density-cap-one original coordinates when one original coordinate supplies leverage at least 1/2 to Z1, using the macroscopic one-row cross export without a false conjugate conditional cap or a forced rank-three cross cut. Extra nonzero spectrum remains a separate nonseparable debt.",
+  "primary_report": {
+    "repository": "yspennstate/math-open-problems",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md",
+    "commit": "245a4e2a4414294fbb20b9dd4f292f6b001e5aa2",
+    "blob": "d1c2b8df4fd1f73bcbbe351e59a3663202999cc0",
+    "terminal_math_commit": "3485fe1d6c6abc71e929f1517d5003b2093a5112",
+    "source_pin_addendum_commit": "63c68f2475e53cf42d890184ae2cf3ac83f4a400"
+  },
+  "source_pin_correction": "REPORT.md contains one mistyped account01/B08 commit string; immutable SOURCE_PIN_ADDENDUM.md supplies the correct commit ee1aca0375b477da40b427075657b02ab0e2096c. No mathematics changes.",
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B11/20260922T135203Z-b11-qform-6080e0b3.md",
+    "commit": "9be37c24678aa6e0f0f38ef71954b0264964c56e",
+    "blob": "4075468a0de798f9bc0d0e13ab19dfe38cc78694"
+  },
+  "verification": {
+    "terminal_marker": "QFORM_HEAVY_MINORITY_RAYLEIGH_CHECK_PASS",
+    "random_minority_cases": 577,
+    "near_null_cases": 71,
+    "checker_sha256": "9f03056ea6ae5aa5cedaeac835b0a58c1f0003e5d4a0a2f3bce5d21d68edf3c1",
+    "output_sha256": "0f4cb44c10663b5d6ba1514614d4b05e925ab85aa286eb004de0cc13f97a9646",
+    "scope": "algebraic regression only, not finite-census closure"
+  },
+  "next_step": "Attack the near-null canonical saddle-plus-square under arbitrary Parseval product projection, or derive a dimension-free bank inequality from the macroscopic heavy cross row; keep the heavy majority-sign branch and extra-spectrum debt explicit.",
+  "login_status": "write_attempt_blocked_by_platform_safety_check_no_bypass"
+}

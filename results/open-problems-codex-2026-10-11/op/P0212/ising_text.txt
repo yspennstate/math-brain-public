@@ -1,0 +1,636 @@
+PAGE 1
+Topic 1: a paper The asymmetric one-dimensional
+constrained Ising model by David Aldous and
+Persi Diaconis. J. Statistical Physics 2002.
+Topic 2: my speculation on use of “constrained
+Ising” as algorithm for storage in dynamic graphs
+(wireless sensor networks).
+1
+
+PAGE 2
+The East Process
+•
+• •
+•
+Parameter 0 < p < 1. Equivalent descriptions:
+•
+→
+• •
+rate p
+• •
+→
+•
+rate 1 −p.
+or: each particle, after exponential(1) random
+time, sends a “pulse” to site on its East; that
+site is reset via
+P(occupied) = p, P(unoccupied) = 1 −p.
+Process is time-reversible, stationary distribu-
+tion i.i.d. Bernoulli(p).
+Seek to quantify the heuristic observation
+♣for small p, the East process takes a long
+time to change substantially.
+2
+
+PAGE 3
+East process is simple prototype of family of
+constrained Ising-type processes which have been
+studied in physical chemistry: “supercooled
+liquid near the glass transition”.
+Mathematically, it’s a nice example of a simply-
+describable process which converges slowly to
+equilibrium.
+For small p, particles are typically isolated. Next
+slide shows (schematically) a realization of the
+East process from an isolated particle.
+3
+
+PAGE 4
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+more
+cycles
+?
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+012
+0123
+01234
+0123
+?
+time
+4
+
+PAGE 5
+Study relaxation time τ(p) = 1/(spectral gap)
+of the East process (X(t), 0 ≤t < ∞):
+max
+f,g cor(f(X(0)), g(X(t))) = exp(−t/τ(p)).
+A 3-line very rough argument suggests
+τ(p) ≈
+1
+p
+log2 1/p as p ↓0.
+1. τ(p) ≈time for inﬂuence from one particle
+to reach distance ≈1/p
+v
+v
+v
+ˆx
+x
+-
+m = 1/p
+2. Let h(m) be minimum, over all paths from
+conﬁguration x to ˆx, of the maximum number
+of particles in any intermediate conﬁguration.
+Then (next slide) h(m) ∼log2 m.
+3. Potential barrier between conﬁgurations x
+and ˆx: need to pass through conﬁgurations of
+chance q = ph(1/p). LD heuristics suggest time
+required ≈1/q.
+5
+
+PAGE 6
+A path of possible transitions
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+01234
+012345678
+012345678
+See Chung-Diaconis-Graham (2001) for more
+on the combinatorics.
+6
+
+PAGE 7
+Rephrase conclusion of heuristic as
+log τ(p) ∼
+1
+log 2 log2(1/p).
+Theorem. As p ↓0
+log τ(p)
+≤
+1 + o(1)
+log 2
+log2(1/p)
+≥
+1
+2 −o(1)
+log 2
+log2(1/p).
+Proofs are nice mixture of techniques.
+7
+
+PAGE 8
+Proof of upper bound will use Poincar´e
+comparison with a certain long-range “wave”
+process – cf. Holley (1985).
+1.
+Analyze relaxation time of the long-range
+process using coupling and exponential martin-
+gales.
+2. Make the comparison using minimum-energy
+paths.
+Proof of lower bound uses the variational
+characterization
+τ = sup
+g
+var g
+E(g, g).
+But (unusual) not easy to guess good g. We
+end up by
+3.
+deﬁning g implicitly in terms of a certain
+coalescing random jumps process.
+8
+
+PAGE 9
+The East process on sites Z+, site 0 always
+occupied.
+•
+• •
+•
+• •
+•
+Bottom conﬁguration is extension of top con-
+ﬁguration.
+Can couple to preserve that rela-
+tionship. In particular, can couple
+(*) the process X0(t) started with only site 0
+occupied
+(**) the stationary process.
+At t the two processes agree on sites 0 through
+R(t) = rightmost occupied site of X0(t). So,
+restricting to sites [0, m] for ﬁxed m,
+||P(X0(t) ∈·) −π(·)|| ≤P(R(t) < m)
+where π is (restricted) stationary dist. By the
+elementary relationship between asymptotic vari-
+ation distance and spectral gap,
+9
+
+PAGE 10
+R(t)
+for process X0
+•
+• •
+(*) If P(R(t) < m) = O(e−λt) as t →∞; ∀m
+then spectral gap ≥λ.
+But can’t analyze R(t) for East process; so
+invent long-range “wave” process for which (*)
+holds and R(t) can be analyzed.
+The wave process.
+Each particle, after ex-
+ponential(1) random time, sends a “wave” to
+cover the 10/p sites on its East; those sites are
+reset to i.i.d. Bernoulli (p).
+Can prove the wave process has spectral gap
+≥λ = 3/10 by showing
+exp(λt −θR(t)) is a supermartingale
+for some θ > 0.
+10
+
+PAGE 11
+Set 2m ≈1/p.
+Consider typical transition of
+wave process.
+sites
+0
+1/p
+x
+•
+•
+•
+y
+•
+•
+Can expand transition as path of transitions of
+East process, with path-length 2·3m and using
+conﬁgurations with at most max(x, y) + m + 1
+particles. Comparison argument of Diaconis &
+Saloﬀ-Coste (1993) gives
+τ(East)
+τ(Wave) ≤2 · 3m × max
+x,ˆx
+induced ﬂow x →ˆx
+East ﬂow x →ˆx
+≤poly(1/p) × (1/p)m ≈(1/p)log2 m.
+11
+
+PAGE 12
+The Lower Bound
+Need to choose g and apply
+τ = sup
+g
+var g
+E(g, g)
+E(g, g) := 1
+2t lim
+t↓0 E(g(X(t)) −g(X(0)))2.
+Idea: occupied site with large gap to left per-
+sists for long time.
+But hard to convert to deﬁnition of g.
+We
+use indirect approach. Take sites 0 thru 1/p,
+with site 0 always occupied. From some initial
+conﬁguration x deﬁne a coalescing process by:
+each particle (site j say) merges with nearest
+particle to its left (site i say) at rate pj−i.
+Ultimately only one particle away from site 0.
+Deﬁne
+g(x) = P(ﬁnal particle in left half of site-interval).
+12
+
+PAGE 13
+g(x) = P(ﬁnal particle in left half of site-interval).
+Immediate:
+var g(·) > δ > 0 ∀p.
+So want to show E(g, g) is very small, of order
+plog(1/p).
+Consider typical transition of East
+process:
+x
+•
+•
+•
+ˆx
+•
+• •
+•
+|g(ˆx) −g(x)| ≤chance ﬁrst move of coalescing
+process started at ˆx is not •• →•◦.
+For typical x this chance is p1/p; suﬃciently
+small.
+But we need bound for all conﬁgura-
+tions; technically hard.
+13
+
+PAGE 14
+Final Remarks
+1. Everyone knows that one-dimensional Ising-
+type models have non-zero spectral gap. But
+standard theory assumes non-zero ﬂip rates; in
+fact not previously known that τ(p) < ∞.
+2. East model is very special case of very gen-
+eral constructions. Take
+• any reversible spin system X
+• any family of neighborhoods Ni of sites i
+• any subset Si ⊆{−1, +1}Ni\{i} of spin conﬁg-
+urations in the neighborhood excluding i itself.
+Deﬁne the constrained process by: ﬂip rate at
+site i is
+same as for X if n’hood conﬁguration ∈Si;
+= 0 if not.
+14
+
+PAGE 15
+Topic 2 – my speculations . . . . . .
+Wireless sensor net: very small devices, spread over
+some real-world area, which measure properties of phys-
+ical environment, communicate with each other (radio)
+over short range, and with “base stations” which relay
+information to/from human users.
+• Cost (energy) of information storage/communication
+not negligible.
+• Individual devices may get destroyed/fail.
+Math picture. Graph: vertex = sensor, edge = com-
+munication link.
+Want to store information (informally, a book) in the
+network. Need more than one copy of each book. Cost
+of storage/communication of title of book is negligible.
+Set time unit so that cost of storage of book for one
+time unit = cost of communicating the book.
+Goal: a distributed algorithm which maintains a small
+number of copies of each book over times much longer
+than lifetimes of individual vertices.
+Conceptual insight: Constrained Ising is such an algo-
+rithm.
+15
+
+PAGE 16
+Constrained Ising model on a ﬁnite graph.
+For each edge (v, w) with v occupied, vertex w makes
+transitions
+occupied →unoccupied: rate 1 −p
+unoccupied →occupied: rate p.
+Stationary distribution is independent Bernoulli(p) con-
+ditioned on non-empty.
+Think how you would simulate this. For each occupied
+v, at rate deg(v) send token to random neighbor w:
+if w on, turn oﬀwith probability 1 −p
+if w oﬀ, turn on with probability p.
+This translates to storage algorithm.
+For each v and
+each book currently stored at v, at rate deg(v) send
+title to random neighbor w:
+if w has book, delete with probability 1 −p
+if w does not have book, with probability p send message
+to v requesting book be transmitted to w.
+So . . .
+How should constrained Ising [the algorithm] be-
+have on a ﬁnite graph with p small?
+16
+
+PAGE 17
+First-order eﬀect: Isolated particles do RW at
+rate p/2.
+Second-order eﬀect: A particle splits into two
+non-adjacent particles at rate O(p2). Two par-
+ticles which become adjacent have chance O(1)
+to merge.
+Math Insight: Could directly deﬁne a process
+of particles doing RW, splitting, coalescing –
+but wouldn’t know its stationary distribution.
+Constrained Ising has these qualitative proper-
+ties and a simple stationary distribution.
+17
+
+PAGE 18
+By analogy with exclusion process (Morris 2004)
+Conjecture: mixing time of constrained Ising
+= O(p−1 × mixing time of RW).
+Key point is that this should work on a dynamic
+(changing) graph. Suppose number of vertices
+stays between N/3 and 3N.
+Set p = 10/N.
+Expect: if
+p−1 × (mixing time of RW)
+≪(typical lifetime of vertex)
+then information is preserved for a long time.
+Challenge to prove anything like this!
+18

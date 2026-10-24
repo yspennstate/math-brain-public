@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B18",
+  "run_id": "20260922T181504Z-account02-B18-QFORM-r12",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.11",
+  "source_control_commit": "0b97e2c062492578290729c3b37ce518ab342e9b",
+  "status": "PROVED_SUPPORTING_THEOREMS_FULL_TARGET_OPEN",
+  "corrections_consumed": [
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SCALAR-QREST-WORST-FIBER-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "name": "Livshyts-Paouris-Pivovarov marginal density theorem",
+      "scope": "product cap-one inputs; orthogonal j-dimensional marginal density at most 2^(j/2)",
+      "source": "arXiv:1507.07949"
+    },
+    {
+      "name": "account03/B18 QFORM-ONE-SIDED-CROSS-AGGREGATE-v1",
+      "scope": "one-sided cross rank at least two plus completed square wrapper",
+      "source_commit": "fb0c75e8f951da2564fe595f09f7e484c37dfd40"
+    },
+    {
+      "name": "account03/B18 conditional-moment correction and aggregate-before-conditioning rescue",
+      "scope": "positive moments of normalized spectral-fiber density may diverge; aggregate original product banks before conditioning",
+      "source_commit": "58cde0caae66f5236332d48a1022fa7c5d12a1f7"
+    }
+  ],
+  "new_results": [
+    {
+      "name": "QFORM-ONE-SIDED-CROSS-HALF-RIESZ-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For T=G(U)+2U^T B V+beta^T V, sup_t E|T-t|^(-1/2) <= 2^(3/2)*(2j/(2j-1))*(v_j/prod_{ell<=j} sigma_ell(B))^(1/(2j)); in rank one this is <=8 sigma_1(B)^(-1/2)."
+    },
+    {
+      "name": "QFORM-HALF-RIESZ-SQUARE-TRANSDUCER-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "If sup_t E|R-t|^(-1/2)<=M and V|R=r has density cap K, then R+aV^2 has density cap KM/sqrt(|a|)."
+    },
+    {
+      "name": "QFORM-ONE-SIDED-SCHUR-ALL-RANK-v1",
+      "status": "PROVED_IN_SOURCE_WITH_COMPLETED_PARTNER_FOR_RANK_GE_2",
+      "statement": "After a nonzero original scalar pivot, exact S[J,J]=0 and nonzero B=S[I,J] are paid for every cross rank; rank one gives ||p_Q||_inf<=8/sqrt(|a| sigma_1(B))."
+    }
+  ],
+  "output_sources": {
+    "report_commit": "aa0b07137085e1b6e948c00052ff0689343a0cee",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260922T181504Z-account02-B18-QFORM-r12/REPORT.md",
+    "supplement_commit": "55114f49ab8188c8a90cf998c66d8627d655dec4",
+    "handoff_commit": "f002136fdd5bf6d1e87f2b5b13e049fdfd627d5e",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B18/20260922T181504Z-account02-B18-QFORM-r12.md"
+  },
+  "unresolved_implication": "QFORM-AGGREGATE-BEFORE-INVERSION-EXHAUSTION-v1: from s_3(A)>=1, outside paid ridge and indefinite-pair branches, extract a product-preserving grouped certificate giving a quantitative one-sided-zero Schur bank or another paid packet.",
+  "next_step": "Combine full-matrix pair, ridge-window and grouped-coordinate extraction while retaining nonzero self-curvature rather than treating it as a small random perturbation.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "execution": "WITHOUT_VERIFIED_BRAIN"
+}

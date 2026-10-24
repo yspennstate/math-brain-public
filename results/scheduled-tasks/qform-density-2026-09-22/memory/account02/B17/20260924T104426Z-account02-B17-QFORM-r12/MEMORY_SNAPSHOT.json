@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "20260924T104426Z-account02-B17-QFORM-r12",
+  "source_control_commit_start": "558b258a3b3adb17ebd7e4870f7c89f3f4579df7",
+  "programme_revision": "2026-09-22.15",
+  "status": "FULL_TARGET_OPEN_GROWING_DIRECTION_UNIFORM_CONVOLUTION_BARRIER",
+  "theorem": "QFORM-GROWING-DIRECTION-UNIFORM-CONVOLUTION-BARRIER-v1",
+  "headline": "For rotated tetrahedral tight-frame exact-rank-three target matrices, every source X_i=U_i+J_i with U_i an independent unit interval and J_i arbitrary independent rough noise satisfies ||p_{X^T A_K X}||_infinity <= 3sqrt(2)+delta_K with delta_K->0 uniformly over rotations, spectral-floor-one 3x3 active coefficients, and all noise laws. The number of possible macroscopic jump directions may grow like K and be dense on S^2; the noises need no moments or tightness.",
+  "premises": [
+    "Tetrahedral identity sum_a t_a t_a^T=(4/3)I and rows r_{k,a}=sqrt(3/(4K))R_k t_a, hence T_K^T T_K=I and leverage 3/(4K).",
+    "Source decomposition X_i=U_i+J_i with U_i iid unit intervals and independent arbitrary J_i; this is a witness-class assumption, not an assumption on full QFORM. Convolution gives physical density f_i<=1.",
+    "Uniform carrier local limit: S_K=T_K^T U has density g_K with epsilon_K=sup_R ||g_K-N(0,I/12)||_1 ->0. The proof uses the tetrahedral Fourier tail |phi_W(eta)|<=min(1,48|eta|^-2).",
+    "Pinned Theorem F at math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 is applied only in its completed low-leverage physical-frame scope; conditioning on J creates a linear term, explicitly allowed by that theorem.",
+    "Latest compatible account03/B17 theorem QFORM-GAUSSIAN-FULLTARGET-COMPARATOR-v1 at math-open-problems@ea855178c7771925095c4517c830888c9a8938ea is applied only to the Gaussian comparator N(z,I/12)."
+  ],
+  "required_source_applied": "For every deterministic rough-noise shift z, the actual physical frame has Gram I3, row leverage 3/(4K)<=1/2, residual zero, and spectral product >=1, so pinned Theorem F gives |Phi_{K,z}(t)|<=min(1,(4pi)^(3/2)|t|^-3/2), exact L1 majorant mass 24pi.",
+  "partner_applied": "The account03/B17 full Gaussian comparator gives ||p_{(G+z)^T B_K (G+z)}||_infinity<=3sqrt(2) uniformly in z for G~N(0,I/12) and three spectral magnitudes >=1.",
+  "quantitative_bridge": "With C_*=(4pi)^(3/2)+6^(3/2), sup_z ||h_{K,z}-h^G_{K,z}||_infinity <= (3/pi) C_*^(2/3) epsilon_K^(1/3)=delta_K->0. Conditioning on arbitrary J then gives the original product-law bound 3sqrt(2)+delta_K.",
+  "explicit_stress": "Choose rotations with {R_k t_a} dense on S2 and J_{k,a}=0 with probability 1-lambda/(4K), J=+-c sqrt(4K/3) with probabilities lambda/(8K). Each rare jump yields active displacement +-c R_k t_a; expected jump count is lambda and active Lindeberg tail tends to lambda c^2>0, yet limsup output-density norm <=3sqrt(2).",
+  "corrections_consumed": [
+    "QFORM-HUBSTAR-FIBERL2-MIXEDNORM-UNIVERSAL-FALSE-v1",
+    "Manifest safeguards: no law-uniform pointwise stationary-phase shortcut; no independence after spectral rotation; fiberwise sup bounds may carry dimension loss."
+  ],
+  "math_bundle_commit": "8ff6e7d56ebf33665f965a721771c8e58ae8cb50",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T104426Z-account02-B17-QFORM-r12/REPORT.md",
+  "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T104426Z-account02-B17-QFORM-r12/CHECKS.md",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B17/20260924T104426Z-account02-B17-QFORM-r12.md",
+  "handoff_commit": "15d442a0e6db81b5d79bbcd05493f40d967abf6f",
+  "correction_inbox_sha_at_start": "ba7aeac3d879f59da5ec8a12daad74ea85714465",
+  "full_brain_connected": false,
+  "authenticated_repository_retrieval_receiver_use": true,
+  "unresolved_implication": "The theorem still relies on an exact independent unit-uniform convolution carrier and rank-three vanishing-leverage tight-frame geometry. It does not cover general cap-one rough sources, jump/carrier dependence, or extra active spectrum/residual structure.",
+  "next_step": "Stress source-valid cap-one laws with no independent uniform convolution factor, or a construction where the non-Gaussian macroscopic component changes the diffuse carrier's shape/covariance rather than acting as a conditionable location shift, while preserving the exact target spectrum."
+}

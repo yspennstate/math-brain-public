@@ -1,0 +1,79 @@
+[
+  {
+    "claim_id": "A072-OTHER-CORE-STOPPING-CREDIT-HULL",
+    "version": 1,
+    "exact_statement": "On a finite uniform physical-query DAG, with full slack S=K I-H, stop allowed, conserved nonnegative inherited credit a, nonnegative total booked debit D=S+a and arbitrary signed debit labels, the exact minimum initial credit supporting every adaptive allowed-query/stopping policy with zero new transfer flow is R(v)=max((-S(v))_+,max_i mean R(child_i)). Redistributing credit as R(child)+(a-mean R(child)) and transporting debit labels by a mean-one kernel preserves all labels and zero residuals. For F_plus=J(-1,+1,g,g,g,g), g negative{0,1,2} in six bits, h negative{0,1,2,4,8,16,32,6,17,40}, J(x)=-h(x xor1), K=4, and all queries/stops within ANY ONE chosen remaining core, R(root)=-S(F_plus) exactly, in(2857328/100000000,2857329/100000000). Hence every actual source F_plus leaf with nonnegative booked debit and its existing a=D-S(F_plus) supports this continuation without a new donor draw. The two core orbits, all1458 labelled restrictions,2916 query rows,24 compressed profiles and six explicit financial policies are certified. This excludes interleaving queries between different remaining cores and proves no unrestricted FEI bound.",
+    "hypotheses": [
+      "full Fourier entropy in bits, uniform physical cube, original K=4 in the Boolean application",
+      "both complete physical children retained, even when the queried inner core becomes constant",
+      "credit is nonnegative and may be redistributed with conserved conditional mean; all outside donor balances/outgoing flows fixed",
+      "total booked debit nonnegative and zero residual S+a=D; individual ancestor/query debit labels may be signed",
+      "allowed queries in the Boolean application remain in one chosen core; other full cores unchanged",
+      "positive and zero denominator cases in label transport handled separately; stopping allowed at every state"
+    ],
+    "statement_sha256": "3232af6b6b8937dc62c1e50b57a212def54049aec44fe6ad145148fa912feb10",
+    "contributors": [
+      "A072"
+    ],
+    "proof_source": [
+      "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261023T015130Z-account03-A072-exact-walsh-engine\\PROOF.md",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261023T015130Z-account03-A072-exact-walsh-engine\\code\\credit_hull.py",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261023T015130Z-account03-A072-exact-walsh-engine\\out\\HULL_CASES.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261023T015130Z-account03-A072-exact-walsh-engine\\out\\VALIDATION.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261023T015130Z-account03-A072-exact-walsh-engine\\out\\SCALAR_VALIDATION.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261023T015130Z-account03-A072-exact-walsh-engine\\out\\INTEGER_SECTORS.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261023T015130Z-account03-A072-exact-walsh-engine\\out\\FLAT12_WALSH.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261023T034752Z-account03-A074-independent-reproducer\\INDEPENDENT_PROOF.md",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261023T034752Z-account03-A074-independent-reproducer\\code\\audit_hull.py",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261023T034752Z-account03-A074-independent-reproducer\\out\\VALIDATION.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261023T034752Z-account03-A074-independent-reproducer\\out\\FINANCIAL_VALIDATION.json"
+    ],
+    "proof_dependencies": [
+      "A071-INHERITED-SUBSIDY-NO-RENEWAL@1 independently accepted unchanged here, explicit inherited credit convention",
+      "integer character orthogonality, physical pivotal edge identity and occupied-block entropy chain rule, independently reconstructed",
+      "finite Bellman induction and finite conditional-mean conservation; no universal child-positivity assumption"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A072 separate constructions",
+        "decision": "INTERNAL_EXACT_CERTIFICATE_AND_PROOF_RECONSTRUCTION",
+        "independent": false
+      },
+      {
+        "reviewer": "A074/A092",
+        "decision": "PENDING",
+        "independent": true
+      },
+      {
+        "reviewer": "A074",
+        "independent": true,
+        "reviewed_at": "2026-10-23T04:07:54.560683+00:00",
+        "decision": "ACCEPT_UNCHANGED_CONDITIONAL_THEOREM_AND_FINITE_ONE_CORE_CERTIFICATE",
+        "statement_sha256": "3232af6b6b8937dc62c1e50b57a212def54049aec44fe6ad145148fa912feb10",
+        "reconstruction": "Own binary inclusion-exclusion/occupied-block conditional entropy; direct inner character sums/edges; all four labels and all raw restrictions without symmetry quotient. Independent Bellman proof and signed-label zero-denominator proof. Six source policy choices reconstructed with own spectra/hulls.",
+        "scope_limit": "Earlier donor-funding prefix is not independently re-audited: early positive debit and original labels are source inputs. The continuation theorem applies conditionally to every existing a=D-S,D>=0. No claim of second-core eligibility or unrestricted FEI.",
+        "checks": 68500,
+        "additional_financial_checks": 1905,
+        "artifacts": [
+          "INDEPENDENT_PROOF.md",
+          "out/VALIDATION.json",
+          "out/FINANCIAL_VALIDATION.json",
+          "out/ADVERSARIAL_WITNESSES.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_CONDITIONAL_THEOREM_AND_FINITE_ONE_CORE_CERTIFICATE",
+    "supersedes": [],
+    "refutes": [
+      "Replacing the conserved future credit by only current negative-part slack, on four actual intermediate Boolean profiles; no source theorem is attributed this proposed stronger rule."
+    ],
+    "first_unproved_line": "The full physical stopping-credit hull admits a dimension-independent R_4(f)<=L I(f), or a second remaining-core continuation fits the actual diminished inherited account; neither follows from the one-core certificate.",
+    "next_consumers": [
+      "A071",
+      "A074",
+      "A075",
+      "A089",
+      "A092"
+    ]
+  }
+]

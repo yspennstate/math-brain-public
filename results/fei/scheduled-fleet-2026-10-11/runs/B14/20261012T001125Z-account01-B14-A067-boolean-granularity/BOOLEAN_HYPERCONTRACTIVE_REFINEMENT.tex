@@ -1,0 +1,61 @@
+\section*{A Boolean granularity refinement in exact Fourier degree}
+
+All logarithms are base two.  Let
+\(f:\{-1,1\}^n\to\{-1,1\}\) have Fourier degree at most \(d\geq1\),
+write \(p_S=\widehat f(S)^2\), and put
+\[
+ v=\sum_{S\ne\varnothing}p_S=1-p_\varnothing.
+\]
+
+\paragraph{Theorem.}
+For every such Boolean function,
+\[
+ \boxed{\quad
+ H(f)\leq 2(d-1)v+p_\varnothing\log_2\frac1{p_\varnothing}
+ \leq \bigl(2(d-1)+\log_2 e\bigr)I(f).
+ \quad}
+\]
+The first inequality is sharp for the degree-\(d\) address function.
+
+\paragraph{Proof.}
+The Boolean granularity lemma says
+\[
+ \widehat f(S)\in 2^{1-d}\mathbb Z.
+\]
+For completeness, set
+\[
+ g(z)=\frac{1-f(1-2z_1,\ldots,1-2z_n)}2.
+\]
+The multilinear expansion
+\(g(z)=\sum_{|T|\leq d}c_T\prod_{i\in T}z_i\) has integer
+coefficients by Boolean M\"obius inversion.  Substituting
+\(z_i=(1-x_i)/2\) proves the displayed divisibility.
+Consequently every nonzero spectral atom satisfies
+\(p_S\geq2^{2-2d}\), and hence, for \(S\ne\varnothing\),
+\[
+ p_S\log_2\frac1{p_S}\leq 2(d-1)p_S.
+\]
+Summing and retaining the empty atom proves the first inequality.  Next,
+\[
+ p_\varnothing\log_2\frac1{p_\varnothing}
+ =(1-v)\log_2\frac1{1-v}\leq v\log_2e,
+\]
+while \(v\leq I(f)\), because each nonempty Fourier set has size at
+least one.  This proves the second inequality.  For the address function
+there are exactly \(2^{2(d-1)}\) nonzero coefficients, all of magnitude
+\(2^{1-d}\), and \(p_\varnothing=0\); equality holds in the first bound.
+\qed
+
+\paragraph{Analytic location of the loss.}
+For arbitrary real degree-\(d\) functions, the Bohnenblust--Hille route
+at exponent \(2d/(d+1)\) carries a factor
+\(C^{\sqrt{d\log d}}\).  After conversion to R\'enyi entropy of order
+\(d/(d+1)\), that factor produces an additional
+\(O(d^{3/2}\sqrt{\log d})\) entropy allowance.  Boolean granularity
+replaces it by the exact dimension-free support law
+\(|\operatorname{supp}\widehat f|\leq2^{2(d-1)}\), or entropy
+\(2(d-1)\).  Separating the empty atom then makes the allowance
+proportional to \(v\leq I(f)\).
+
+This is a degree-dependent restricted FEI theorem, not full FEI.  The
+constant still grows linearly with \(d\).

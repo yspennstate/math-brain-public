@@ -1,0 +1,174 @@
+{
+  "run_id": "20260924T213307Z-account01-B13-fixedmult-auto11",
+  "objective": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "current_source": {
+    "commit": "eeb752c8943536541b34b42b8bf48e924f4d3d2f",
+    "blob": "19fb119877426b640b2c0dae19ec2f78a399fe11",
+    "sha256": "bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3",
+    "lines": 955
+  },
+  "baseline": {
+    "commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+    "blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "sha256": "9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69",
+    "lines": 790
+  },
+  "verdict": "PASS_AFTER_LOCAL_REPAIR",
+  "current_ledger": [
+    [
+      "1-86",
+      "PASS"
+    ],
+    [
+      "87-160",
+      "PASS"
+    ],
+    [
+      "161-215",
+      "PASS"
+    ],
+    [
+      "216-297",
+      "PASS"
+    ],
+    [
+      "298-396",
+      "PASS"
+    ],
+    [
+      "397-527",
+      "PASS"
+    ],
+    [
+      "528-562",
+      "PASS"
+    ],
+    [
+      "563-597",
+      "PASS"
+    ],
+    [
+      "598-600",
+      "GAP_REPAIRABLE_LOCAL"
+    ],
+    [
+      "601-662",
+      "PASS_AFTER_REPAIR"
+    ],
+    [
+      "663-766",
+      "PASS"
+    ],
+    [
+      "767-860",
+      "PASS"
+    ],
+    [
+      "861-935",
+      "PASS"
+    ],
+    [
+      "936-955",
+      "PASS_MATH_BIBLIOGRAPHY_PRIORITY_UNCHECKED"
+    ]
+  ],
+  "baseline_ledger": [
+    [
+      "1-46",
+      "PASS"
+    ],
+    [
+      "47-90",
+      "PASS"
+    ],
+    [
+      "91-160",
+      "PASS"
+    ],
+    [
+      "161-217",
+      "PASS"
+    ],
+    [
+      "218-301",
+      "PASS"
+    ],
+    [
+      "302-400",
+      "PASS"
+    ],
+    [
+      "401-471",
+      "PASS"
+    ],
+    [
+      "472-474",
+      "GAP_REPAIRABLE_LOCAL"
+    ],
+    [
+      "475-525",
+      "PASS_AFTER_REPAIR"
+    ],
+    [
+      "526-580",
+      "PASS"
+    ],
+    [
+      "581-645",
+      "PASS"
+    ],
+    [
+      "646-714",
+      "PASS"
+    ],
+    [
+      "715-749",
+      "PASS"
+    ],
+    [
+      "750-790",
+      "PASS_MATH_BIBLIOGRAPHY_PRIORITY_UNCHECKED"
+    ]
+  ],
+  "local_repair": {
+    "issue": "The negative hyperbolic tail switches from u to w but cites the physical coordinate selected from u.",
+    "fix": "Choose a separate original coordinate i_minus with abs(w_i_minus)>=abs(w)/sqrt(2).",
+    "zero_loss_reason": "abs(u)=abs(w)=sqrt(delta*Lambda)/2, so the same cutoff and constants follow.",
+    "sharpened_envelope": "p_q(z)<=D^(-1/2)*((15/2)log(2)+log_+(16 sqrt(D)/abs(z-v)))",
+    "sharpened_full_half_potential": "sup_a E abs(q-a)^(-1/2) <= (9+(35/4)log(2))*D^(-1/4)"
+  },
+  "package_check": {
+    "root_support_read": [
+      "README.md",
+      "DELIVERY_STATUS.md",
+      "AUDIT.md",
+      "proof_map.csv",
+      "SOURCE_MANIFEST.json",
+      "verify.py",
+      "checks.json"
+    ],
+    "nine400_present": [
+      "paper.tex",
+      "NINE_400_AND_OVERLAP.md"
+    ],
+    "named_but_absent_at_pin": [
+      "AUDIT_NEW.md",
+      "MANIFEST.json",
+      "proof_map.csv",
+      "verify_new.py",
+      "checks_new.json"
+    ],
+    "classification": "REPRODUCIBILITY_PACKAGE_DISCREPANCY_NOT_PROOF_GAP"
+  },
+  "multiplicity_status": {
+    "s17": "PASS_AFTER_LOCAL_REPAIR",
+    "s9": "PASS_AFTER_LOCAL_REPAIR",
+    "s8_291": "TWO_INDEPENDENT_RECORDED_END_TO_END_PASSES_PRESENT",
+    "s7": "OPEN",
+    "s3": "OPEN"
+  },
+  "unchecked": [
+    "exhaustive bibliography/priority completeness",
+    "fresh formal-assistant rerun"
+  ]
+}

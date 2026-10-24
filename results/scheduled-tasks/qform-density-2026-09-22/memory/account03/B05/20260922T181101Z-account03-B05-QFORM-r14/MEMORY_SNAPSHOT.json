@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B05",
+  "run_id": "20260922T181101Z-account03-B05-QFORM-r14",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "control_revision": "2026-09-22.11",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "30ed85cae72f1ddc2d7f3d20de47f82369ec60dd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260922T181101Z-account03-B05-QFORM-r14/REPORT.md"
+  },
+  "new_result": {
+    "id": "QFORM-SCALAR-CONDITIONED-CORE-SUP-FALSE-v1",
+    "status": "REFUTED_INTERMEDIATE_CLAIM",
+    "statement": "For an explicit n=4 cap-one product family with Q=Q3+Q' and full matrix spectrum {1,1,1,-1}, the scalar-conditioned core satisfies ||p_{Q3|Q'=b}||_infinity >= (4/(3sqrt(3))) log(m/720) on a positive-measure interval of b; hence the owner-proposed universal worst-fiber supremum is false.",
+    "scope": "Refutes only the scalar worst-conditioned-core bridge, not QFORM."
+  },
+  "construction": {
+    "f1": "indicator of union_{k=0}^{m-1}[10k,10k+1/m]",
+    "f2_f3_f4": "indicator of [0,1]",
+    "v": "(1,1,1,1)/2",
+    "t": "(3,-1,-1,-1)/sqrt(12)",
+    "u": "(0,1,-1,0)/sqrt(2)",
+    "w": "(0,1,1,-2)/sqrt(6)",
+    "Q3": "(t.X)^2+(u.X)^2-(w.X)^2",
+    "Qprime": "(v.X)^2",
+    "A": "I-2ww^T",
+    "spectrum": [1,1,1,-1]
+  },
+  "key_coarea_fact": "Conditioning on a scalar remainder packet normalizes the selected physical fiber by order m. A fixed square in the (u,w) plane contributes K(h)>=log(r^2/|h|) for the hyperbolic map u^2-w^2, leaving a conditional density lower bound of order log m.",
+  "compatible_partner_math_applied": {
+    "worker": "account04/B16",
+    "source_commit": "58c23c624db350cf44f0c836daa3582eb7e2d266",
+    "result": "fixed-pair determinant mass identity",
+    "actual_application": "on the stress frame each row leverage is 3/4 and residual second-row leverage is 2/3, so G_ij=1/2 and the fixed-pair determinant bank has total mass 1/2"
+  },
+  "assigned_partner_status": "No completed current-QFORM artifact was visible for account04/B05 at its canonical math or handoff root; do not fabricate one.",
+  "failed_route": "M=sup_b ||p_{Q3|Q'=b}||_infinity cannot be the universal full-rank bridge. Normalizing scalar fibers loses the compensating packet mass.",
+  "first_unpaid_implication": "QFORM-WEIGHTED-SCALAR-FIBER-COAREA-v1: retain p_{Q'}(b) or the equivalent unnormalized scalar coarea weight through the rank-three curved trace and prove a dimension-free bound for the weighted mixture, or find a target-valid obstruction.",
+  "full_qform_status": "OPEN",
+  "continuity_status": "OPEN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN"
+}

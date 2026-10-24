@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260922T192514Z-account03-B11-QFORM-r14",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.14",
+  "control_refresh_commit": "77ef7779346f740eb46543f5ab088ec1694a18e7",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "Indefinite signatures",
+  "partner": "account04/B11",
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "correction_inbox_blob_at_final_refresh": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "premises": [
+    {
+      "name": "QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1",
+      "source": "yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md",
+      "scope": "exact-rank-three original-coordinate principal block with nonzero scalar pivot; arbitrary induced affine terms and outside couplings"
+    },
+    {
+      "name": "full-matrix indefinite-pair theorem",
+      "source": "yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md",
+      "scope": "s_3(A)>=s and an invertible indefinite original-coordinate physical pair; arbitrary affine terms"
+    },
+    {
+      "name": "QFORM-PARABOLIC-CONDITIONAL-CAP-INSUFFICIENT-v1 plus exact null-graph identity",
+      "source": "yspennstate/math-open-problems@797dcde430e982a020d7642b54cadc281cbc9bc1:proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260922T191727Z-account04-B11-nullgraph-obstruction-r2/REPORT.md",
+      "scope": "exact trace identity for 2ZW+V^2 and obstruction to replacing product provenance by marginal/conditional caps"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-LOCALIZED-3BLOCK-REPAIR-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "statement": "If one three-original-coordinate principal block C has sigma_min(C)>=s>0, then the full ambient quadratic form has an essentially bounded density with norm at most 128*2^(1/4)/s <153/s, for arbitrary cap-one independent inputs and arbitrary outside coefficients/couplings.",
+    "mechanism": "Condition outside the physical triple. If a diagonal pivot is >=s/2 use rank-three half-Riesz consequence; otherwise singular-value nonsingularity forces an off-diagonal >=sqrt(3/8)s, producing an indefinite pair with |det|>s^2/8 and sigma_min>((sqrt(6)-2)/4)s, then use the full-matrix pair theorem.",
+    "continuity": "NOT_PROVED",
+    "full_target": "OPEN_NOT_PROVED"
+  },
+  "partner_application": "For canonical T=2ZW+V^2 with independent cap-one Z,V,W, partner identity N(h)=2||p_T||_infinity and the new localized theorem give N(h)<=256; partner obstruction proves these caps do not extend to arbitrary non-product h.",
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a9f23a3a387c9be219fcaf08ef66079f8c124e0c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260922T192514Z-account03-B11-QFORM-r14/REPORT.md",
+    "verifier": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260922T192514Z-account03-B11-QFORM-r14/VERIFY.py",
+    "verification_result": "QFORM_LOCALIZED_3BLOCK_REPAIR_CHECK_PASS"
+  },
+  "unresolved_implication": "QFORM-INDEFINITE-AGGREGATE-BEFORE-INVERSION-v1: under only three large spectral eigenvalues, aggregate original-coordinate packets before reciprocal-minor payment and force either a universally paid localized grouped block or a diffuse/ridge/many-small-pair branch, preserving product provenance.",
+  "next_step": "Attack the no-good-triple branch by a determinant/compound-matrix mass decomposition coupled to the existing ridge/diffuse and many-small-pair mechanisms; do not use marginal or conditional caps alone."
+}

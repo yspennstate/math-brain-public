@@ -1,0 +1,74 @@
+\section{A sparse activated shared-addressing tower}
+\label{sec:sparse-shared-addressing}
+
+For integers $t,k,r\ge1$, set $N=2^t$.  Let $a\in\{0,1\}^t$,
+let $y_{j,u}\in\{-1,1\}$ for $1\le j\le k$ and
+$u\in\{0,1\}^t$, and let $z\in\{-1,1\}^r$.  Put
+\[
+ g_{t,k}(a,y)=\prod_{j=1}^k y_{j,a},\qquad
+ A_r(z)=\prod_{\ell=1}^r\frac{1+z_\ell}{2},
+\]
+and
+\[
+ f_{t,k,r}=1+A_r(g_{t,k}-1),\qquad p=2^{-r}.
+\]
+This is a genuine Boolean sign on disjoint uniform physical coordinates.
+
+\begin{proposition}
+For every $t,k,r\ge1$,
+\[
+ H(f_{t,k,r})=-(1-p)^2\log_2(1-p)^2+2pt+2rp(2-p)
+\]
+and
+\[
+ I(f_{t,k,r})=p\left(\frac t2+k+r\right).
+\]
+Moreover, if
+$\mathcal M(f)=\sum_i h_2(\operatorname{Inf}_i(f))$, then
+\[
+ \mathcal M(f_{t,k,r})
+ =t h_2(p/2)+k2^t h_2(p/2^t)+r h_2(p).
+\]
+\end{proposition}
+
+\begin{proof}
+The shared-addressing core has exactly $N^2$ nonzero Walsh coefficients,
+\[
+ \widehat g_{t,k}\!\left(T\cup\{y_{1,u},\ldots,y_{k,u}\}\right)
+ =N^{-1}(-1)^{T\cdot u}.
+\]
+Since every Walsh coefficient of $A_r$ equals $p$, the nonzero coefficients
+of $f_{t,k,r}$ are $1-p$ at the empty set, $-p$ at every nonempty
+trigger-only set, and $pN^{-1}(-1)^{T\cdot u}$ after adjoining any trigger
+mask to a core support.  Summing $q\log_2(1/q)$ over these three classes gives
+the entropy formula.
+
+An address bit is pivotal with probability $p/2$, a data bit is pivotal with
+probability $p/N$, and a trigger bit is pivotal with probability $p$.
+This proves the influence formula and, by applying $h_2$ coordinatewise, the
+formula for $\mathcal M$.
+\end{proof}
+
+\begin{corollary}
+Let $k=r=t$, $p=2^{-t}$, and $f_t=f_{t,t,t}$.  For $t\ge2$,
+\[
+ \frac{H(f_t)}{I(f_t)}\le3,
+ \qquad
+ \frac{\mathcal M(f_t)}{I(f_t)}\ge\frac{4t}{5}.
+\]
+Furthermore,
+\[
+ \lim_{t\to\infty}\frac{H(f_t)}{I(f_t)}=\frac{12}{5}.
+\]
+\end{corollary}
+
+\begin{proof}
+Use $-(1-p)^2\log_2(1-p)^2\le2p/\ln2<3p$ and
+$h_2(x)\ge x\log_2(1/x)$.  The data coordinates alone contribute at least
+$2t^2p$ to $\mathcal M$, while $I(f_t)=5tp/2$.
+\end{proof}
+
+This corollary is an obstruction only to coordinatewise marginal-entropy
+payment.  It is not a counterexample to the Fourier Entropy--Influence
+conjecture.
+

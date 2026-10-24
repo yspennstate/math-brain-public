@@ -1,0 +1,36 @@
+{
+  "rank2_triangular_shear_n4": {
+    "interior_counterexample": {
+      "H_after": 2.0,
+      "H_before": 3.0,
+      "I_after": "2",
+      "I_before": "2",
+      "fourier_square_integer_hist_after_den256": {
+        "64": 4
+      },
+      "fourier_square_integer_hist_before_den256": {
+        "16": 8,
+        "64": 2
+      },
+      "pivot_influence": "1/2",
+      "truth_table_lex": [
+        1, 1, 1, -1, 1, -1, -1, 1,
+        -1, 1, 1, 1, 1, 1, 1, 1
+      ]
+    },
+    "max_rank2_entropy_tax_ratio": 1.0,
+    "max_tax_mask": 30,
+    "normalized_boolean_functions_checked": 32768
+  },
+  "selector_phase_composition": {
+    "max_entropy_identity_abs_error": 8.881784197001252e-16,
+    "phase": "(-1)^(x0*x1)",
+    "phase_H": 2,
+    "phase_I": 1,
+    "selector_events_checked": 256
+  },
+  "checker_sha256": "2df9453dffd447468d547a329daa8f636dd747a587cb62974ab9789248b5f441",
+  "stdout_sha256": "326b7a342e94433211e17196afef8a4c57ae5426cf4af05b024f57cef659e1c1",
+  "execution": "PASS",
+  "notes": "Walsh transforms and influence identities use exact integer/rational arithmetic. Floating point is used only for Shannon entropy from exact Fourier-square masses."
+}

@@ -1,0 +1,254 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{question}[theorem]{Question}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Kbar}{\overline{K}}
+\DeclareMathOperator{\Aut}{Aut}
+
+\title[Arc-transitive graphs that mimic the cycle]{Arc-transitive graphs that mimic the cycle}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{\today}
+
+\begin{document}
+
+\begin{abstract}
+Aldous and Fill ask (Open Problem 7.27 of \emph{Reversible Markov Chains and Random Walks on Graphs}) whether, over arc-transitive graphs other than the cycles, the maximal mean commute time of simple random walk is $O(n\log n)$, the relaxation time is $O(n)$, and the ratio of the maximal mean commute time to twice the average hitting time tends to one. The answer to all three questions is no. Replacing every vertex of the $m$-cycle by $r\ge2$ pairwise non-adjacent copies gives a connected arc-transitive graph of degree $2r$ on $n=rm$ vertices whose mean hitting times are $j(m-j)+(r-1)m$ at cycle-distance $j\ge1$ and $rm$ between copies of the same vertex; its maximal mean commute time and its relaxation time are of order $n^2$, and the ratio tends to $3/2$. More generally, for any connected regular graph $H$ on $N$ vertices and $r\ge2$ the blow-up $H[\Kbar_r]$ has mean hitting times $\E_uT_v+(r-1)N$, average hitting time $\tau_0(H)+(r-1)N$ and relaxation time $\max(\tau_2(H),1)$, and every arc-transitive graph is such a blow-up of a twin-free arc-transitive graph. For bounded $r$ the three properties therefore pass between a graph and its twin-free quotient, so the question of Aldous and Fill, with the blow-ups of cycles excluded, is equivalent to its restriction to twin-free arc-transitive graphs, where it remains open. The arithmetic identities behind the formulas are checked in Lean~4.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+All graphs are finite and simple. Let $G$ be a connected regular graph on $n$ vertices and let $(X_t)$ be simple random walk on $G$, in discrete time or in its continuous-time version with unit rate; the quantities below do not depend on the choice. Write $T_w=\inf\{t\ge0:X_t=w\}$ for the hitting time of $w$, $\E_vT_w$ for its mean when the walk starts at $v$, and $\pi$ for the stationary distribution, which is uniform. Aldous and Fill \cite{AF} study, among others, the parameters
+\begin{equation}\label{eq:params}
+\tau^*=\max_{v,w}\big(\E_vT_w+\E_wT_v\big),\qquad
+\tau_0=\sum_{v,w}\pi_v\pi_w\,\E_vT_w,\qquad
+\tau_2=\frac1{1-\lambda_2},
+\end{equation}
+the maximal mean commute time, the average hitting time, and the relaxation time, $\lambda_2$ being the second largest eigenvalue of the transition matrix $P$. As in \cite{AF}, $\tau_2$ is defined through $\lambda_2$ alone; it is the relaxation time of the continuous-time chain and is unaffected by periodicity of the discrete-time walk.
+
+A graph is \emph{vertex-transitive} if its automorphism group acts transitively on vertices, and \emph{arc-transitive} if it acts transitively on arcs, that is, for any two ordered pairs of adjacent vertices $(v_1,w_1)$ and $(v_2,w_2)$ there is an automorphism $\gamma$ with $\gamma(v_1)=v_2$ and $\gamma(w_1)=w_2$ \cite{Biggs,GodsilRoyle}. Chapter 7 of \cite{AF} is devoted to walks on such graphs. On a vertex-transitive graph $\E_vT_w=\E_wT_v$ \cite{Aldous89}, so $\tau^*=2\max_{v,w}\E_vT_w$; in particular $\tau^*\ge2\tau_0$, a maximum being at least an average, and $\tau^*\le4\tau_0$ by Lemma 7.2 of \cite{AF}. On an arc-transitive graph on $n$ vertices, $\E_vT_w=n-1$ for every edge $(v,w)$ and $\E_vT_w\ge n-2+d(v,w)$ in general (Lemma 7.19 of \cite{AF}).
+
+For the $n$-cycle (Example 5.7 of \cite{AF}), $\tau^*=2\lfloor n^2/4\rfloor$, $\tau_0=(n^2-1)/6$, $\tau_2=1/(1-\cos(2\pi/n))\sim n^2/(2\pi^2)$, and $\tau^*/(2\tau_0)\to3/2$. Example 7.14 of \cite{AF} is the Cayley graph of $\Z_m\times\Z_2$ with generators $(\pm1,0)$ and $(0,1)$, a ladder closed into a ring. It is vertex-transitive, its parameters $\tau^*$ and $\tau_2$ are of order $n^2$ like those of the cycle (its transition matrix has the eigenvalues $(2\cos(2\pi k/m)\pm1)/3$), but the mean hitting time of a neighbour along a rung differs from that along the ring, so it is not arc-transitive. Aldous and Fill ask:
+
+\begin{quote}
+\textbf{Open Problem 7.27} \cite{AF}. Is it true that, over arc-transitive graphs excluding the $n$-cycles, $\tau^*=O(n\log n)$, $\tau_2=O(n)$ and $\tau^*/(2\tau_0)=1+o(1)$?
+\end{quote}
+
+The answer to each of the three questions is no. For a graph $H$ and $r\ge1$ let $H[\Kbar_r]$ be the lexicographic product of $H$ with the edgeless graph on $r$ vertices: its vertex set is $V(H)\times\{1,\dots,r\}$, and $(u,a)$ is adjacent to $(v,b)$ if and only if $u$ is adjacent to $v$ in $H$. We call $H[\Kbar_r]$ the $r$-fold blow-up of $H$; it replaces every vertex of $H$ by $r$ pairwise non-adjacent copies, which we call \emph{twins}. When $H=C_m$ is the $m$-cycle and $r=2$, the graph $C_m[\Kbar_2]$ is the ladder of Example 7.14 with its rungs removed and the two diagonals of every square added.
+
+\begin{theorem}\label{thm:cycle}
+Let $m\ge4$ and $r\ge2$, and let $G=C_m[\Kbar_r]$, a connected graph of degree $2r$ on $n=rm$ vertices. Then $G$ is arc-transitive, and for vertices $v,w$ of $G$ whose cycle coordinates are at distance $j$,
+\[
+\E_vT_w=\begin{cases} j(m-j)+(r-1)m, & 1\le j\le m-1,\\ rm, & j=0,\ v\ne w.\end{cases}
+\]
+Consequently
+\[
+\tau^*=2\Big\lfloor\frac{m^2}{4}\Big\rfloor+2(r-1)m,\qquad
+\tau_0=\frac{m^2-1}{6}+(r-1)m,\qquad
+\tau_2=\frac1{1-\cos(2\pi/m)},
+\]
+so that for fixed $r$, as $m\to\infty$, $\tau^*\sim n^2/(2r^2)$, $\tau_2\sim n^2/(2\pi^2r^2)$ and $\tau^*/(2\tau_0)\to3/2$.
+\end{theorem}
+
+The graph $C_m[\Kbar_r]$ is the lexicographic product of a cycle with an empty graph \cite{Sabidussi,HIK}; it is the wreath graph $W(m,r)$ of \cite{PW} and the graph $C(r,m,1)$ of Praeger and Xu \cite{PX}, and its arc-transitivity is classical. For $m=4$ it is the complete bipartite graph $K_{2r,2r}$. The content of \Cref{thm:cycle} is what simple random walk does on it. The mechanism is not special to cycles.
+
+\begin{theorem}\label{thm:blowup}
+Let $H$ be a connected regular graph on $N\ge2$ vertices, $r\ge1$, and $G=H[\Kbar_r]$.
+\begin{enumerate}
+\item[(i)] For $u\ne v$ in $H$ and any $a,b$, $\E_{(u,a)}T_{(v,b)}=\E_uT_v+(r-1)N$; for $a\ne b$, $\E_{(u,a)}T_{(u,b)}=rN$.
+\item[(ii)] If $r\ge2$, then $\tau^*(G)=\max\big(\tau^*(H)+2(r-1)N,\ 2rN\big)$, $\ \tau_0(G)=\tau_0(H)+(r-1)N$, and $\tau_2(G)=\max(\tau_2(H),1)$.
+\item[(iii)] If $H$ is arc-transitive, so is $G$. Conversely, every connected arc-transitive graph $G$ is isomorphic to $H[\Kbar_r]$ for a unique $r\ge1$ and a twin-free arc-transitive graph $H$, unique up to isomorphism, namely the quotient of $G$ by the relation ``same neighbourhood''.
+\end{enumerate}
+\end{theorem}
+
+Two vertices of a graph are twins if they have the same neighbourhood; a graph is twin-free if no two distinct vertices are twins. Twin-free graphs are also called point-determining \cite{Sumner}, $R$-thin \cite{HIK}, irreducible \cite{Sabidussi64} and worthy \cite{PW}. The quotient by the twin relation is a classical device: Sabidussi \cite{Sabidussi64} used it for vertex-transitive graphs, and the fact that a vertex-transitive graph is arc-transitive if and only if its twin quotient is appears as Corollary 7 of \cite{CHS}. Part (iii) records this in the form needed here, with a proof for completeness; the spectral part of (ii) is the classical spectrum of a lexicographic product \cite[Section 2.5]{CDS}. Part (iii) says that the arc-transitive graphs with twins are exactly the blow-ups of twin-free arc-transitive graphs, and part (ii) says how the three parameters of \eqref{eq:params} change under a blow-up. Combining the two:
+
+\begin{corollary}\label{cor:reduction}
+Let $(G_k)$ be a sequence of connected arc-transitive graphs on $n_k\to\infty$ vertices with twin classes of bounded size, and let $H_k$ be the twin-free quotient of $G_k$. If only finitely many $H_k$ are cycles, then $(G_k)$ satisfies the three statements of Open Problem 7.27 if and only if $(H_k)$ does. If $H_k$ is a cycle for infinitely many $k$, then $(G_k)$ satisfies none of them along that subsequence.
+\end{corollary}
+
+So, for bounded twin classes, the cycle is the only obstruction that twins can introduce, and Open Problem 7.27 with the blow-ups of cycles excluded is equivalent to its restriction to twin-free graphs:
+
+\begin{question}\label{q:twinfree}
+Is it true that, over twin-free arc-transitive graphs excluding the $n$-cycles, $\tau^*=O(n\log n)$, $\tau_2=O(n)$ and $\tau^*/(2\tau_0)=1+o(1)$?
+\end{question}
+
+\Cref{q:twinfree} is open. The ladder of Example 7.14 is twin-free but not arc-transitive; the complete graphs and the hypercubes are twin-free and arc-transitive and satisfy the three statements. For Cayley graphs of moderate growth in the sense of \cite{DSC} the relaxation time is bounded above and below by constant multiples of the square of the diameter, the constants depending on the growth parameters, so an affirmative answer would bound the diameter of every twin-free arc-transitive Cayley graph of moderate growth, other than a cycle, by a constant multiple of $\sqrt n$. Unbounded twin classes behave differently: if $r/m\to\infty$ the graph $C_m[\Kbar_r]$ satisfies all three statements, since the term $2(r-1)m$ then dominates both $\tau^*$ and $2\tau_0$ while $\tau_2\le m^2\le n$, so the family $C_m[\Kbar_r]$ interpolates between the cycle and the complete bipartite graph $K_{r,r}=K_2[\Kbar_r]$.
+
+\Cref{sec:blowup} proves \Cref{thm:blowup}, \Cref{sec:cycle} proves \Cref{thm:cycle} and \Cref{cor:reduction}, and \Cref{sec:checks} describes the exact numerical checks and the Lean verification of the arithmetic.
+
+\section{Random walk on a blow-up}\label{sec:blowup}
+
+Throughout, $H$ is a connected $d$-regular graph on $N$ vertices, $r\ge1$, and $G=H[\Kbar_r]$, which is connected and $rd$-regular on $n=rN$ vertices. Write a vertex of $G$ as $(u,a)$ with $u\in V(H)$ and $a\in[r]=\{1,\dots,r\}$, and call $\{u\}\times[r]$ the fibre over $u$.
+
+\begin{lemma}[the walk on a blow-up]\label{lem:projection}
+Let $X_t=(Y_t,\xi_t)$ be simple random walk on $G$. Then $(Y_t)$ is simple random walk on $H$, and conditionally on $(Y_t)_{t\ge0}$ the coordinates $\xi_1,\xi_2,\dots$ are independent and uniform on $[r]$.
+\end{lemma}
+
+\begin{proof}
+From $(u,a)$ the walk moves to a uniform element of $N_H(u)\times[r]$, so $Y_{t+1}$ is uniform on $N_H(Y_t)$ and $\xi_{t+1}$ is uniform on $[r]$, independently of each other and of the past.
+\end{proof}
+
+\begin{proof}[Proof of \Cref{thm:blowup}(i)]
+Fix the target $(v,b)$ and a starting vertex $(u,a)\ne(v,b)$. Let $\sigma_1<\sigma_2<\cdots$ be the successive times $t\ge1$ at which $Y_t=v$, and let $K=\min\{k:\xi_{\sigma_k}=b\}$, so that $T_{(v,b)}=\sigma_K$. By \Cref{lem:projection}, $K$ is geometric with success probability $1/r$ and independent of the sequence $(\sigma_k)$; in particular $\E K=r$. By the strong Markov property of $Y$ at the times $\sigma_k$, the increments $\sigma_{k+1}-\sigma_k$ are independent copies of the return time of $Y$ to $v$, whose mean is $1/\pi_H(v)=N$. Hence
+\[
+\E T_{(v,b)}=\E\sigma_1+(\E K-1)\,N=\E\sigma_1+(r-1)N .
+\]
+If $u\ne v$ then $\sigma_1$ is the hitting time of $v$ by $Y$ started at $u$, with mean $\E_uT_v$; if $u=v$ then $\sigma_1$ is the return time to $v$, with mean $N$, and the formula gives $rN$.
+\end{proof}
+
+\begin{proof}[Proof of \Cref{thm:blowup}(ii)]
+Let $r\ge2$. The stationary distribution of $G$ is uniform. By (i) the commute time between $(u,a)$ and $(v,b)$ is $\E_uT_v+\E_vT_u+2(r-1)N$ when $u\ne v$ and $2rN$ when $u=v$, $a\ne b$, which gives $\tau^*(G)$. For $\tau_0$,
+\begin{align*}
+\tau_0(G)&=\frac1{r^2N^2}\Big[\sum_u r(r-1)\,rN+\sum_{u\ne v}r^2\big(\E_uT_v+(r-1)N\big)\Big]\\
+&=(r-1)+\tau_0(H)+(r-1)(N-1)=\tau_0(H)+(r-1)N .
+\end{align*}
+For $\tau_2$, identify functions on $V(G)$ with functions $f(u,a)$; then
+\[
+(P_Gf)(u,a)=\frac1{d}\sum_{v\sim u}\frac1r\sum_{b=1}^rf(v,b),
+\]
+that is, $P_G=P_H\otimes\frac1rJ_r$ with $J_r$ the all-ones $r\times r$ matrix. Since $\frac1rJ_r$ has eigenvalues $1$ (once) and $0$ ($r-1$ times), the spectrum of $P_G$ is the spectrum of $P_H$ together with $0$ with multiplicity $(r-1)N\ge1$. Hence the second largest eigenvalue of $P_G$ is $\max(\lambda_2(H),0)$ and $\tau_2(G)=\max(\tau_2(H),1)$.
+\end{proof}
+
+\begin{proof}[Proof of \Cref{thm:blowup}(iii)]
+Suppose $H$ is arc-transitive. The maps $(u,a)\mapsto(\gamma u,a)$ for $\gamma\in\Aut(H)$ and $(u,a)\mapsto(u,\sigma_u(a))$ for any family of permutations $\sigma_u$ of $[r]$ are automorphisms of $G$. Given arcs $((u,a),(v,b))$ and $((u',a'),(v',b'))$ of $G$, choose $\gamma$ with $\gamma u=u'$, $\gamma v=v'$, and then permutations in the fibres over $u'$ and $v'$ (distinct fibres, since $u'\ne v'$) sending $a\mapsto a'$ and $b\mapsto b'$. So $G$ is arc-transitive.
+
+Conversely let $G$ be arc-transitive, and call $x,y\in V(G)$ twins if $N_G(x)=N_G(y)$. This is an equivalence relation, twins are never adjacent (as $x\notin N_G(x)$), and if $x,y$ are twins then every neighbour of $x$ is a neighbour of $y$, so adjacency is a well-defined relation between twin classes. Automorphisms preserve the twin relation and hence permute the classes; as $G$ is vertex-transitive, all classes have the same size $r$. Let $H$ be the graph on the classes, with $[x]\sim[y]$ when $x\sim y$. Then $G\cong H[\Kbar_r]$: choosing a bijection of each class with $[r]$, $(u,a)\sim(v,b)$ in $G$ exactly when $u\sim v$ in $H$. The graph $H$ is twin-free, since two classes with the same neighbourhood in $H$ would form a single twin class of $G$, and it is arc-transitive, since an automorphism of $G$ carrying the arc $(x,y)$ to $(x',y')$ induces an automorphism of $H$ carrying $([x],[y])$ to $([x'],[y'])$. Uniqueness holds because in $H[\Kbar_r]$ with $H$ twin-free the twin classes are exactly the fibres, so $r$ and $H$ are determined by $G$ up to isomorphism.
+\end{proof}
+
+\begin{remark}
+The formula in (i) has a check built in. If $H$ is arc-transitive on $N$ vertices, Lemma 7.19 of \cite{AF} gives $\E_uT_v=N-1$ for every edge of $H$, and then (i) gives $\E_{(u,a)}T_{(v,b)}=N-1+(r-1)N=rN-1=n-1$ for every edge of $G$, as Lemma 7.19 applied to the arc-transitive graph $G$ requires.
+\end{remark}
+
+\section{The cycle}\label{sec:cycle}
+
+\begin{proof}[Proof of \Cref{thm:cycle}]
+Apply \Cref{thm:blowup} with $H=C_m$, $N=m$, $d=2$. The cycle is arc-transitive (its automorphism group is the dihedral group, which is transitive on arcs), so $G=C_m[\Kbar_r]$ is arc-transitive by (iii); it is connected, $2r$-regular, and not a cycle since $2r\ge4$.
+
+For the cycle, $\E_uT_v=j(m-j)$ when $u$ and $v$ are at distance $j$: the function $h(j)=j(m-j)$ satisfies $h(0)=h(m)=0$ and $h(j)=1+\frac12(h(j-1)+h(j+1))$ for $1\le j\le m-1$, and the mean hitting times are the unique solution of this system. Part (i) of \Cref{thm:blowup} gives the two hitting-time formulas of the theorem. Part (ii) gives
+\[
+\tau^*=\max\Big(2\max_j j(m-j)+2(r-1)m,\ 2rm\Big)=2\Big\lfloor\frac{m^2}4\Big\rfloor+2(r-1)m,
+\]
+since $\max_jj(m-j)=\lfloor m^2/4\rfloor\ge m$ for $m\ge4$. The cycle has $\tau_0(C_m)=\frac1m\sum_{j=0}^{m-1}j(m-j)=\frac{m^2-1}6$, so $\tau_0=\frac{m^2-1}6+(r-1)m$. The transition matrix of the cycle has eigenvalues $\cos(2\pi k/m)$, $0\le k<m$, with $\lambda_2=\cos(2\pi/m)\ge0$ for $m\ge4$, so $\tau_2=\max(\tau_2(C_m),1)=1/(1-\cos(2\pi/m))$.
+
+With $n=rm$ and $r$ fixed, $\tau^*\sim m^2/2=n^2/(2r^2)$, $\tau_2\sim m^2/(2\pi^2)=n^2/(2\pi^2r^2)$, and
+\[
+\frac{\tau^*}{2\tau_0}=\frac{\lfloor m^2/4\rfloor+(r-1)m}{(m^2-1)/6+(r-1)m}\longrightarrow\frac{1/4}{1/6}=\frac32 .\qedhere
+\]
+\end{proof}
+
+For $r=2$ and $m$ odd the formulas read $\tau^*=(m^2-1)/2+2m\sim n^2/8$, $\tau_0=(m^2-1)/6+m$, $\tau_2\sim n^2/(8\pi^2)$; \Cref{tab:values} lists the first values, and \Cref{fig:ratio} the ratio.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrr}
+\toprule
+$m$ & $n$ & $\tau^*$ & $\tau_0$ & $\tau^*/(2\tau_0)$ & $\tau_2$\\
+\midrule
+5 & 10 & 22 & 9 & 1.2222 & 1.4472\\
+7 & 14 & 38 & 15 & 1.2667 & 2.6560\\
+9 & 18 & 58 & 67/3 & 1.2985 & 4.2743\\
+11 & 22 & 82 & 31 & 1.3226 & 6.2994\\
+15 & 30 & 142 & 157/3 & 1.3567 & 11.5668\\
+21 & 42 & 262 & 283/3 & 1.3887 & 22.5087\\
+31 & 62 & 542 & 191 & 1.4188 & 48.8518\\
+\bottomrule
+\end{tabular}
+\caption{The parameters of $C_m[\Kbar_2]$; $\tau^*$ and $\tau_0$ are exact, $\tau_2=1/(1-\cos(2\pi/m))$.}
+\label{tab:values}
+\end{table}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.55\textwidth]{ratio.pdf}
+\caption{$\tau^*/(2\tau_0)$ for $C_m[\Kbar_2]$, $m$ odd, $5\le m\le61$. The limit is $3/2$, the value for the cycle itself.}
+\label{fig:ratio}
+\end{figure}
+
+\begin{proof}[Proof of \Cref{cor:reduction}]
+Let $G_k$ have $n_k$ vertices, twin classes of size $r_k\le R$, and twin-free quotient $H_k$ on $N_k=n_k/r_k$ vertices; by \Cref{thm:blowup}(iii) $H_k$ is arc-transitive, and by (ii)
+\begin{gather*}
+\tau^*(G_k)=\max\big(\tau^*(H_k)+2(r_k-1)N_k,\,2r_kN_k\big),\\
+\tau_0(G_k)=\tau_0(H_k)+(r_k-1)N_k,\qquad
+\tau_2(G_k)=\max(\tau_2(H_k),1).
+\end{gather*}
+Since $N_k\le n_k\le RN_k$, the terms $2(r_k-1)N_k$ and $2r_kN_k$ are $O(n_k)$, and $O(N_k\log N_k)$ and $O(n_k\log n_k)$ are the same condition; so $\tau^*(G_k)=O(n_k\log n_k)$ if and only if $\tau^*(H_k)=O(N_k\log N_k)$, and likewise $\tau_2(G_k)=O(n_k)$ if and only if $\tau_2(H_k)=O(N_k)$. For the ratio, write $a_k=\tau^*(H_k)$, $b_k=2\tau_0(H_k)$ and $c_k=2(r_k-1)N_k$. On a vertex-transitive graph $\tau^*\ge2\tau_0$, so $a_k\ge b_k$, and $b_k\ge2(N_k-1)^2/N_k$ by Lemma 7.19 of \cite{AF}, so $c_k=O(b_k)$. When $a_k+c_k\ge2r_kN_k$,
+\[
+\frac{\tau^*(G_k)}{2\tau_0(G_k)}-1=\frac{a_k-b_k}{b_k+c_k},
+\]
+which tends to $0$ if and only if $(a_k-b_k)/b_k$ does. The other case, $a_k+c_k<2r_kN_k$, means $\tau^*(H_k)<2N_k$, which by Lemma 7.19(ii) of \cite{AF} forces $H_k$ to be complete; then $G_k$ is the complete multipartite graph with $N_k$ parts of size $r_k$, for which $\tau^*\le2n_k$, $\tau_2\le1$, and $\tau^*/(2\tau_0)-1=(2N_k-1)/\big((N_k-1)^2+(r_k-1)N_k^2\big)$ for $r_k\ge2$ and $1/(N_k-1)$ for $r_k=1$; since $n_k=r_kN_k\to\infty$ these tend to $0$, so all three statements hold for both $G_k$ and $H_k$ along such $k$. If $H_k$ is a cycle for infinitely many $k$, then, since $C_3$ is complete and $C_4$ has twins, $H_k=C_{m_k}$ with $m_k\ge5$, and $m_k=n_k/r_k\to\infty$; the cycle itself has $\tau^*\sim m_k^2/2$, $\tau_2\sim m_k^2/(2\pi^2)$ and $\tau^*/(2\tau_0)\to3/2$, and \Cref{thm:cycle} gives the same for $G_k=C_{m_k}[\Kbar_{r_k}]$ when $r_k\ge2$, so $G_k$ fails all three statements along that subsequence.
+\end{proof}
+
+\section{Numerical checks and formal verification}\label{sec:checks}
+
+Exact rational computation of the mean hitting times of simple random walk on $C_m[\Kbar_r]$, by solving the linear system $(I-P)h=\mathbf 1$ off the target, confirms the formulas of \Cref{thm:cycle}, including $\E_vT_w=n-1$ on edges, for $r=2$ and $m\in\{5,6,7,9,11,15,21,31\}$ and for $(m,r)\in\{(5,3),(7,3),(7,4),(9,2),(9,3),(11,4)\}$. Arc-transitivity of $C_m[\Kbar_2]$ for $m\in\{5,6,7,9,11,15\}$ is confirmed by computing the orbit of one arc under the group generated by a rotation, a reflection and the transpositions of the two vertices of each fibre, which is the whole set of $8m$ arcs. The identities of \Cref{thm:blowup}(i) and (ii) hold, exactly for the hitting times and to $10^{-9}$ for the relaxation times, on the blow-ups $H[\Kbar_2]$ and $H[\Kbar_3]$ of $K_2$, $K_4$, $K_{3,3}$, the $3$-cube, the Petersen graph and $C_6$. \Cref{tab:values} and \Cref{fig:ratio} come from the same computation.
+
+The arithmetic behind \Cref{thm:cycle} is checked in Lean~4 (version 4.33.1) against Mathlib. For all integers $m$, $r$ and $j$ the files prove that $g(j)=j(m-j)+(r-1)m$ satisfies the harmonic equation $2g(j)=2+g(j-1)+g(j+1)$, that $1+g(1)=rm$ (the twin value) and $g(1)=rm-1$ (Lemma 7.19), that $4j(m-j)\le m^2$ and that the value at $j=\lfloor m/2\rfloor$ is $\lfloor m^2/4\rfloor$, the closed form $\sum_{j=0}^{m-1}j(m-j)=m(m^2-1)/6$ by induction, the resulting formula $\tau_0=(m^2-1)/6+(r-1)m$, and the identity $2\cdot3\tau^*-3\cdot6\tau_0=-6(r-1)m$ for odd $m$, which shows that $\tau^*/(2\tau_0)\to3/2$. Every theorem depends only on the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}. The probabilistic inputs, the uniqueness of the solution of the hitting-time system and the tensor decomposition of $P_G$, are not formalised.
+
+\section*{Funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+This paper is a product of an ongoing project on the use of AI systems for research mathematics, provisionally called Math Brain, which studies how to make such systems better at solving open problems; the project and its tooling will be released publicly in due course. The mathematics, the literature search, the computations, the Lean formalisation and the text were produced by AI systems (Codex with GPT-6 Astra, OpenAI; Claude Opus 5 and Claude Fable 5.1, Anthropic), working from the list of open problems in \cite{AF}; three independent adversarial reviews by Claude Fable 5.1 re-derived every claim. The arguments have not been refereed by a human mathematician. The author set the goals of the project, commissioned and directed the work and approved the release; the author did not carry out the mathematics, the verification, the computations or the writing, and takes responsibility for the decision to publish.
+
+\section*{Data and code availability}
+The numerical code, the Lean files with their build logs and axiom reports, and the \LaTeX{} source are available at
+\begin{center}
+\url{https://github.com/yspennstate/arc-transitive-graphs-that-mimic-the-cycle}
+\end{center}
+
+\begin{thebibliography}{9}
+
+\bibitem{AF} D. Aldous and J. A. Fill, Reversible Markov Chains and Random Walks on Graphs, unfinished monograph, 2002 (recompiled 2014; the numbering is that of the online edition), \url{https://www.stat.berkeley.edu/~aldous/RWG/book.html}.
+
+\bibitem{Aldous89} D. Aldous, Hitting times for random walks on vertex-transitive graphs, \emph{Math. Proc. Cambridge Philos. Soc.} 106 (1989), 179--191.
+
+\bibitem{Biggs} N. Biggs, Algebraic Graph Theory, 2nd ed., Cambridge University Press, 1993.
+
+\bibitem{CHS} S. Cockburn, K. Hatavets and E. Swartz, Twins and co-twins in circulant graphs, arXiv:2605.14903 (2026).
+
+\bibitem{CDS} D. Cvetkovi\'c, M. Doob and H. Sachs, Spectra of Graphs: Theory and Applications, 3rd ed., Johann Ambrosius Barth, 1995.
+
+\bibitem{DSC} P. Diaconis and L. Saloff-Coste, Moderate growth and random walk on finite groups, \emph{Geom. Funct. Anal.} 4 (1994), 1--36.
+
+\bibitem{GodsilRoyle} C. Godsil and G. Royle, Algebraic Graph Theory, Graduate Texts in Mathematics 207, Springer, 2001.
+
+\bibitem{HIK} R. Hammack, W. Imrich and S. Klav\v{z}ar, Handbook of Product Graphs, 2nd ed., CRC Press, 2011.
+
+\bibitem{PW} P. Poto\v{c}nik and S. Wilson, Recipes for edge-transitive tetravalent graphs, \emph{Art Discrete Appl. Math.} 3 (2020), P1.08.
+
+\bibitem{PX} C. E. Praeger and M.-Y. Xu, A characterization of a class of symmetric graphs of twice prime valency, \emph{European J. Combin.} 10 (1989), 91--102.
+
+\bibitem{Sabidussi} G. Sabidussi, The composition of graphs, \emph{Duke Math. J.} 26 (1959), 693--696.
+
+\bibitem{Sabidussi64} G. Sabidussi, Vertex-transitive graphs, \emph{Monatsh. Math.} 68 (1964), 426--438.
+
+\bibitem{Sumner} D. P. Sumner, Point determination in graphs, \emph{Discrete Math.} 5 (1973), 179--187.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,74 @@
+\section{Trained and semi-random networks}\label{sec:trained}
+
+The theorems so far assume Gaussian weights. Trained networks are not Gaussian, but empirically their
+weight matrices are a Gaussian bulk plus a small number of outlier directions, and the balance route to
+the small output does not need Gaussianity at all. This section records what survives training: a
+perturbation-stability statement that degrades the Gaussian bounds gracefully under a bounded deviation
+of the weights, the balance version of the fragility theorem for trained classifiers, and a discussion
+of the numerical evidence.
+
+\subsection{Perturbation stability}
+\begin{theorem}[Stability under weight deviation]\label{thm:trained}
+Let $W_\ell=W_\ell^0+E_\ell$ with $W_\ell^0$ Gaussian (satisfying the hypotheses of \Cref{thm:master})
+and $E_\ell$ arbitrary with $\|E_\ell\|_\op\le\eps_\ell$. Then:
+\begin{enumerate}
+\item the Lipschitz certificate of \Cref{thm:certificate} holds with $L_{\mathrm{net}}$ replaced by
+$\|w\|\prod_\ell(2\sqrt{\kappa(c_1)}+\eps_\ell)$;
+\item the gradient lower bound of \Cref{prop:gradlb} survives, $\|\nabla F(x)\|\ge c_g\|w\|-\sum_\ell\eps_\ell G_\ell$,
+where $G_\ell$ is the product of the operator-norm bounds of the other layers, provided the deviation
+is small, $\sum_\ell\eps_\ell G_\ell<\tfrac12 c_g\|w\|$;
+\item consequently the fragility conclusion of \Cref{thm:master} holds for the perturbed network under
+this smallness condition, with the constants shifted accordingly.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) Operator norms are subadditive, $\|D_\ell(W_\ell^0+E_\ell)P\|_\op\le\|D_\ell W_\ell^0P\|_\op+\eps_\ell$,
+so each factor's bound increases by $\eps_\ell$ and the product bound is
+$\prod_\ell(2\sqrt{\kappa(c_1)}+\eps_\ell)$. (2) Write the Jacobian of the perturbed network as the
+Gaussian Jacobian plus a sum of $L$ terms, each replacing one $W_\ell^0$ by $E_\ell$ and bounding the
+other factors by their operator norms; the correction is at most $\sum_\ell\eps_\ell G_\ell$ in norm,
+which is subtracted from the Gaussian lower bound $c_g\|w\|$. (3) Under the smallness condition the
+perturbed gradient is still $\ge\tfrac12c_g\|w\|$, and the small output and stability are perturbed by
+the same $O(\sum\eps_\ell)$ amounts, so \Cref{prop:engine} applies with the shifted constants.
+\end{proof}
+
+The smallness condition is a low-rank/small-norm deviation from the Gaussian bulk, which is what the
+Marchenko--Pastur analysis of trained weights \cite{shmaloRMT,shmaloAccuracy} identifies: the bulk of
+the singular spectrum stays at the random edge while a few directions carry the learned signal, so
+$\|E_\ell\|_\op$ is the top learned singular value, typically $O(1)$ and not growing with width, while
+$c_g\|w\|$ and the certificate scale are $\Theta(1)$. The theorem then says training moves the
+constants but not the $1/\sqrt n$ scale.
+
+\subsection{The balance route for trained classifiers}
+For a trained classifier the readout is not random, so the small output must come from balance. If the
+trained classifier is accurate and its ground-truth labels are balanced, then its sign is balanced under
+the input measure (pushed to the sphere), and \Cref{prop:balance} gives the small output for all but a
+$\delta$-fraction of inputs. The gradient facts, however, need the weights to be near-Gaussian, which is
+\Cref{thm:trained}. Combining:
+
+\begin{corollary}[Trained-network fragility, informal]\label{cor:trained-frag}
+Let $F$ be a trained classifier on the sphere whose weights are a Gaussian bulk plus a bounded deviation
+(\Cref{thm:trained}) and whose sign is $p$-balanced. Then for all but a $\delta$-fraction of inputs a
+single gradient step of length $O(\eps_{\mathrm{adv}}(p,\delta)\cdot L_{\mathrm{net}}/c_g)$ crosses the
+boundary.
+\end{corollary}
+
+This is the trained-regime statement of \Cref{thm:master}: the small output is measure-theoretic (from
+balance) rather than pointwise (from a random readout), and the gradient facts hold up to the weight
+deviation. It is the theorem that the CIFAR experiments of \cite{advExt} were designed to probe.
+
+\subsection{Numerical evidence from trained networks}
+The experiments of \cite{advExt} train small CNNs, ResNets, and ViTs on CIFAR-10 and CIFAR-100 and
+measure, along training, the one-step attack success, the predicted radius $2m/\|\nabla m\|$ against the
+empirical attack radius, and the compatibility ratio. Three of their findings are exactly what the
+present theory predicts and are worth restating in its language. First, the empirical attack radius is
+monotone in the predicted radius $2m/\|\nabla m\|$ and stays below it, on both datasets --- the
+conservative direction, since the prediction is an upper bound from the small-output estimate. Second,
+the one-step vulnerability signatures appear early and persist after the networks become accurate, so
+fragility is not a symptom of poor accuracy but a structural property of the map, as the balance-plus-%
+gradient mechanism requires. Third, the transformer shows the strongest signatures despite the lowest
+accuracy, consistent with the near-identity residual structure making its gradient lower bound most
+robust. The experiments are diagnostics, not certified radii, and the frozen artifacts are catalogued in
+\cite{advExt}; we use them as the trained-regime evidence for the scale that \Cref{thm:master} and
+\Cref{cor:sharp} predict, and add the new numerical verification of the product rate in the next section.

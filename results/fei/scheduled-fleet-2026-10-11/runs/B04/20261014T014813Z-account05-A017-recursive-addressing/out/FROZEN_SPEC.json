@@ -1,0 +1,21 @@
+{
+  "helper_version": "A017-three-edit-v1",
+  "helper_sha256": "1f876c0a1c58febe9db1481ea32cebbe89340419ca4f39660fd504c5e4867138",
+  "family": "Actual four-control quadratic Boolean phase with three point flips; one independent retained data sign.",
+  "domain": {
+    "pilot": "matching/path/star/complete polar graph, all 16 linear phases, edits {0,u,v}, 1<=u<v<=15",
+    "full": "all 1024 quadratic/linear codes, edits {0,u,v}, 1<=u<v<=15"
+  },
+  "case_count": {
+    "pilot": 6720,
+    "full": 107520
+  },
+  "symmetry": "Translate any one edited point to zero; quadratic linear part and constant transform. Global sign removes constant; data labels can be permuted. No additional quotient.",
+  "arithmetic": "Signed integer Walsh transforms, direct physical edge counts, rational prime-log forms, 32-term atanh intervals with proved tail; positive signs never use floats.",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": {
+    "pilot": 60,
+    "full": 300
+  },
+  "automatic_dimension_escalation": false
+}

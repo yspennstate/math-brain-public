@@ -1,0 +1,25 @@
+{
+  "primary": {
+    "helper_version": "B09-TAXFREE-BIASED-UNCERTAINTY@1; debt D=J_X-M_X",
+    "actual_Boolean_family": "f(X,Y)=g(Y) for X=0 and h(Y) for X=1; g,h actual sign truth tables",
+    "parameter_domain": "all ordered g,h on uniform n=0,1,2,3; endpoint p down to zero; finite p=1/8,1/64,1/1024 for selected boundary pairs",
+    "case_count": "4+16+256+65536=65812 exact endpoint cases; selected finite interval cases separately listed in output",
+    "symmetry": "none for exhaustive pairs; optional characterization of character multiplication only, no omitted cases",
+    "arithmetic": "integer Walsh and rational endpoint coefficients; exact Fraction spectra and rational range-reduced atanh log intervals for selected finite p; floats only for printed approximations",
+    "memory_estimate": "under 100 MB; no full list of pair outputs retained",
+    "maximum_runtime": "pilot 60 seconds; each subsequent command 120 seconds maximum enforced inside script",
+    "search_goal": "prove sharp fixed-child endpoint coefficient upper bound and distinguish zero-slope boundary cases; no unbounded FEI ratio claim",
+    "code_version": "boundary.py v1"
+  },
+  "unequal": {
+    "helper_version": "B09 actual debt J_X-M_X; endpoint sharpening candidate",
+    "actual_Boolean_family": "(-1)^(XY), P(X=1)=p, P(Y=1)=q",
+    "parameter_domain": "p in {1/8,1/1024}, q in {1/64,1/65536}; plus p=3/4,q=1/65536",
+    "case_count": 5,
+    "symmetry": "none",
+    "arithmetic": "Fraction squared biased spectrum, v1 rational log interval engine",
+    "memory_estimate": "under 100 MB",
+    "maximum_runtime": "60 seconds internal cap",
+    "code_version": "unequal.py v1"
+  }
+}

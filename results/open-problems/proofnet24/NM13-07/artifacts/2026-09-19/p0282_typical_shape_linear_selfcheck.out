@@ -1,0 +1,14 @@
+P0282 typical-shape Kerov linear-window exact self-check
+claim_condition=221*n>=576*j ; equivalent k/n>=355/576
+tail_base_cases=25 s=66..90 PASS
+tail_base_max_at_s=66 r=24 scaled_p_times_splus1=23219802647071/344349207311155200
+tail_25step_ratio_upper_at_s66=3206233170677579458228554688085710973109395254094933637271924720124616214889101684093475341796875/202664975635311053574290424201616355550571094488146319723575968632615765971276899637037265055645696 < 1/25 PASS
+tail_residue_class_induction_algebra=PASS
+tilt_normalization_rho0_gt_134_over_355_and_inverse_square_lt_8=PASS
+good_factor_exact_polynomial_identity=PASS
+good_factor_H_coefficients_low_to_high=2912685882183025000,9813510895355115000,43092371337748869799,91960723425527755942,143293102107220385619,55386399948596945540,437092402143100
+good_factor_conclusion=B(j,K0)>1+1/(1000j) for all j>=1
+good_factor_direct_rational_spotchecks=7 PASS
+final_product=(1+1/(1000j))*(1-1/(1750j))>1 for j>=1 PASS
+theorem_selfcheck_scope=j>=67_and_221n>=576j_plus_retained_j<=66
+ALL_EXACT_CHECKS_PASS

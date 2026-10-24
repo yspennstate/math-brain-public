@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "assignment_id": "FEI-20260922-account01-B07",
+  "run_id": "20260922T104911Z-b07-fei-zero-kl-5455bd0c",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "B-ZEROKL-ARITY2-SATURATION-v1",
+      "status": "PROVED_IN_RUN",
+      "scope": "Every probability law on nonempty subsets of [2], hence every nonconstant two-input Boolean gate at every interior product bias.",
+      "statement": "The occurrence marginals uniquely determine the nonempty law, so P=Q_r and K_occ=0.",
+      "dependencies": [
+        "IPROJ-definition-and-uniqueness"
+      ],
+      "verification": "analytic_proof_in_REPORT"
+    },
+    {
+      "id": "B-ZEROKL-POINT-DEFECT-EXACT-v1",
+      "status": "PROVED_IN_RUN",
+      "scope": "Every arity n>=1, every interior product bias, every distinguished cube atom, either output sign.",
+      "statement": "For f=s(1-2*1_{x=xi}), the normalized nonempty squared biased-Fourier law is independent Bernoulli(t_i=1-q_i) conditioned nonempty; hence w^+=Q_r and K_occ=0.",
+      "dependencies": [
+        "IPROJ"
+      ],
+      "verification": "analytic_proof_in_REPORT"
+    },
+    {
+      "id": "B-ZEROKL-CHARACTER-EXACT-v1",
+      "status": "PROVED_IN_RUN",
+      "scope": "Every nonconstant product of literals at every interior product bias.",
+      "statement": "The full squared biased-Fourier law is product Bernoulli; conditioning on nonempty gives Q_r, so K_occ=0.",
+      "dependencies": [
+        "IPROJ"
+      ],
+      "verification": "analytic_proof_in_REPORT"
+    },
+    {
+      "id": "B-ZEROKL-UNRESTRICTED-CHARACTER-BENT-EXTENSION",
+      "status": "REFUTED",
+      "scope": "The verbatim extension from the balanced-uniform EQUALITY theorem to all biased Boolean gates.",
+      "statement": "K_occ=0 does not imply the balanced-uniform character-times-bent structure at arbitrary bias; arbitrary-arity one-point-defect gates are exact counterexamples.",
+      "dependencies": [
+        "B-PRODUCT-EQUALITY-RIGIDITY-v1",
+        "B-ZEROKL-POINT-DEFECT-EXACT-v1"
+      ],
+      "verification": "analytic_counterfamily_in_REPORT",
+      "does_not_refute": [
+        "B-PRODUCT-EQUALITY-RIGIDITY-v1 at balanced uniform scope",
+        "FEI"
+      ]
+    },
+    {
+      "id": "B-ZEROKL-PRIME-RIGIDITY-v1",
+      "status": "OPEN",
+      "scope": "Essential composition-prime arity>=3 Boolean gates at interior product bias.",
+      "statement": "Classify w^+=Q_r after removing arity-two saturation and decomposable equality families; determine generic-bias nonexistence or exceptional loci.",
+      "dependencies": [
+        "IPROJ",
+        "EQUALITY",
+        "B-ZEROKL-POINT-DEFECT-EXACT-v1"
+      ]
+    }
+  ],
+  "consumed_sources": [
+    {
+      "id": "IPROJ",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md"
+    },
+    {
+      "id": "EQUALITY",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "84c69136ca6b008badb76f15bf1071d029c927aa",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/account03/B15/20260922T085625Z-product-equality-rigidity/REPORT.md"
+    }
+  ],
+  "partner_status": {
+    "designated_partner": "account02/B07",
+    "completed_current_run_found": false,
+    "snapshot_checked": "122ef2d992480b2a08f1c3bb7e1e95d07b4ee10f"
+  },
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "scientific_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "75da9eb7c51c6680182d7c78f51262b7f4c72912",
+    "path": "proofnet24/P03-fei/fleet-2026-09-22/account01/B07/20260922T104911Z-b07-fei-zero-kl-5455bd0c/REPORT.md",
+    "sha256": "6ac0952a5e473cf701edb177281aa13fb15df7972b7a89b8feaa3ceb3997745d"
+  }
+}

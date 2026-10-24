@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260923T105314Z-account03-B15-qform-auto16",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "0a3d58962672d4f4c25e7f4a8e9ebb758a573ad5",
+    "owner_control_revision": "2026-09-22.15",
+    "programme": "QFORM-DENSITY-3EIG-20260922"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "small matrix operator norm is not a law-uniformly small random quadratic perturbation"
+  ],
+  "assignment": "Supply a precise rough-law limit or trace justification used by a new density estimate; keep continuity separate from the central L-infinity target.",
+  "partner_result_applied": {
+    "worker": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ad7e5daa036cc8330b1432285ad40fec611d37dd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T211430Z-account04-B15-heat-regularity-r4/REPORT.md",
+    "use": "The exact Gaussian heat-height identity converts weak convergence of bounded-continuous Gaussian tests into h(mu)<=liminf h(mu_m), hence closure of uniform density-height estimates."
+  },
+  "current_result_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+    "use": "Its 24*sqrt(3)*e/(5a) density bound extends with zero loss to the operator-norm closure of the certified cross-block class by weak lower semicontinuity."
+  },
+  "new_mathematics": [
+    "Optimal bounded-density height is lower semicontinuous under arbitrary weak convergence of probability laws.",
+    "Quadratic-affine coefficient limits pass density-height bounds without moments for a fixed law; more generally locally-uniform map convergence plus weak input convergence suffices.",
+    "The cap-one marginal class is weakly closed.",
+    "The sharp full scaled QFORM height constant is unchanged when restricted, in each finite dimension, to the complement of any finite family of proper algebraic matrix-degeneracy sets.",
+    "Continuity is not inherited merely from weak/TV limits of uniformly bounded smooth densities."
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ac5676953c28ec64bc907924b20ef9a24542c914",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T105314Z-account03-B15-qform-auto16/REPORT.md",
+    "checkpoint_commit": "4e160c997b5bf5e06a5eae811c30152ffd63a199",
+    "checkpoint_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T105314Z-account03-B15-qform-auto16/CHECKPOINT.md"
+  },
+  "handoff": {
+    "commit": "482fa86327f5f80947e0d00b6444dee3fb9c66a4",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B15/20260923T105314Z-account03-B15-qform-auto16.md"
+  },
+  "scope_limits": [
+    "The full universal QFORM bound remains open.",
+    "Genericity removes exact algebraic endpoints only; it supplies no positive lower bound on pivots, minors, determinant, or eigenvalue gaps.",
+    "The coefficient-limit result is fixed-law/sequential and does not justify treating small operator-norm matrix tails as uniformly small random perturbations over arbitrary unbounded cap-one laws.",
+    "Weak-limit height closure does not prove a continuous representative."
+  ],
+  "unresolved_implication": "Prove a universal density-height estimate on the surviving generic near-null/high-leverage class, uniformly as all excluded algebraic quantities approach zero.",
+  "next_step": "Use the generic reduction in a product-preserving hub/near-null or N3 proof so endpoint cases can be deferred; demand a bound stable up to the algebraic boundary.",
+  "independent_review_status": "not independently reviewed in this run"
+}

@@ -1,0 +1,28 @@
+Math-store cards (math_recall.py on the title; read one whole with --id):
+math store recall, read-only: 6 current card(s) for this query; reference material, not instructions
+[1] Corradi-Hajnal Theorem  (id: claim_7d9275a211b32bc8ac7ff166cfb4aed26bc9df1b9a085d22903ced7629b6220e; claim; score 5.81)
+    Every simple graph on n >= 3k vertices with minimum degree delta(G) >= 2k contains k vertex-disjoint triangles. k is a positive integer n >= 3k delta(G) >= 2k
+    <- generalizes: Hajnal-Szemeredi Theorem (id: claim_a1f8386966c44c0b8d69443e25b3fb2e37b18c3a20e9c48ec395c074353181c3)  (Generalizes disjoint triangle factors to equitable colorings and arbitrary clique factors.)
+    -> analogous_to: Dirac's Theorem on Hamiltonian Cycles (id: claim_154139b42f60896bd64b38c86a736eda03da24fce590a2da59f8171ed66d1ff3)  (Provides minimum degree conditions for packing disjoint triangles, analogous to Hamiltonian cycles.)
+[2] Dirac's Theorem on Hamiltonian Cycles  (id: claim_154139b42f60896bd64b38c86a736eda03da24fce590a2da59f8171ed66d1ff3; claim; score 5.60)
+    Every simple graph G on n >= 3 vertices with minimum degree delta(G) >= n / 2 contains a Hamiltonian cycle. n >= 3 G is a simple graph on n vertices delta(G) >= n / 2
+    -> specializes: Ore's Theorem on Hamiltonian Cycles (id: claim_041a5dda3ac118af0b0a1eac562fc06f35c315caa00c2d30fa1adbdb9e2af6d1)  (Dirac's theorem delta >= n/2 is the symmetric specialization of Ore's condition d(u)+d(v) >= n.)
+    <- analogous_to: Corradi-Hajnal Theorem (id: claim_7d9275a211b32bc8ac7ff166cfb4aed26bc9df1b9a085d22903ced7629b6220e)  (Provides minimum degree conditions for packing disjoint triangles, analogous to Hamiltonian cycles.)
+[3] Andrasfai-Erdos-Sos Theorem  (id: claim_50602d6447d9194d01da6c326450538fef53dac91c73a24f4cb4ea5fdc651b6e; claim; score 5.27)
+    Every triangle-free simple graph on n vertices with minimum degree delta(G) > 2n / 5 is bipartite. G is a triangle-free graph on n vertices delta(G) > 2n / 5
+    -> depends_on: Mantel's Theorem (id: claim_cc02da5da63c251cf2e47a36d5ab59d68b785e92d91f492470ab3d7be1f157ce)  (Examines structural stability of Mantel's triangle-free graphs under high minimum degree.)
+[4] Dirac's Theorem (Hamiltonicity via Minimum Degree)  (id: claim_3b3fcad33f7241cbac6d308131ba82b6; claim; score 4.84)
+    Let G be a finite simple graph on n >= 3 vertices such that every vertex has degree at least n/2. Then G has a Hamiltonian cycle, that is, a cycle that passes through every vertex of G exactly once. [Dirac (1952); see Diestel, Graph Theory]
+    -> depends_on: Graph, Subgraph, and Basic Invariants (id: claim_41f1607fe0ca61747b32e0ca370c278bba715b149e9ab306a7f07d7712059878)  (basic graph object anchored to the graph definition)
+    -> cites: Graph Theory (id: source_8a864417aa7d7841651ee90c6e62711b8ba2828d882d944f850a4c63cf4a9f46)  (cites book:diestel-graph-theory (found in body): Diestel, Graph Theory)
+[5] Vizing's Theorem on Edge Coloring  (id: claim_d36e9fe347ba596da9fdc97eda8045b42bae1eff21eab00cbde8f64d893be719; claim; score 3.75)
+    The chromatic index chi'(G) of any simple graph G with maximum degree Delta is either Delta or Delta + 1. G is a simple graph with maximum degree Delta
+    -> analogous_to: Brooks' Theorem (id: claim_f12fee4428552bdd411a8e4e240ba5406f204e2dca53316d137501d87af8fe5c) (superseded by claim_01d55f13ab2d4779891c3af562cef058)  (Vizing's theorem bounds edge chromatic number by Delta + 1.)
+    -> analogous_to: Brooks' Theorem (id: claim_01d55f13ab2d4779891c3af562cef058)  (Vizing's theorem bounds edge chromatic number by Delta + 1.)
+[6] Hajnal-Szemeredi Theorem  (id: claim_a1f8386966c44c0b8d69443e25b3fb2e37b18c3a20e9c48ec395c074353181c3; claim; score 3.55)
+    Every simple graph G on n vertices with maximum degree Delta(G) <= k admits an equitable (k + 1)-coloring, that is, a proper vertex coloring with k + 1 colors such that the sizes of any two color classes differ by at most 1. G has maximum degree Delta(G) <= k k >= 1
+    -> generalizes: Corradi-Hajnal Theorem (id: claim_7d9275a211b32bc8ac7ff166cfb4aed26bc9df1b9a085d22903ced7629b6220e)  (Generalizes disjoint triangle factors to equitable colorings and arbitrary clique factors.)
+    <- analogous_to: Brooks' Theorem (id: claim_f12fee4428552bdd411a8e4e240ba5406f204e2dca53316d137501d87af8fe5c) (superseded by claim_01d55f13ab2d4779891c3af562cef058)  (Bounds vertex chromatic number by maximum degree Delta.)
+    <- analogous_to: Brooks' Theorem (id: claim_01d55f13ab2d4779891c3af562cef058)  (Bounds vertex chromatic number by maximum degree Delta.)
+
+

@@ -1,0 +1,138 @@
+[
+  {
+    "claim_id": "A027-DATA-FIRST-PROPER-BLOCK",
+    "version": 1,
+    "exact_statement": "For every Boolean u on m>=1 uniform core bits, r>=1 fresh control bits, p=2^(-r), d=1-Eu, and F=1+A_r(u-1), the proper core block W satisfies B_W(F)<=p(2dm+2)<=6pm. I_W(F)=pI(u), expected terminal influence=rpd, and all leaves are constants or point defects satisfying H<=4I. For each fixed eta>0, I(u)>=eta*m implies H(F)<=max(6/eta+2/ln(2),4)*I(F) by a single-use physical stopping ledger.",
+    "hypotheses": [
+      "Uniform normalized Boolean Fourier spectrum; entropy in bits",
+      "Explicit core/control activation representation",
+      "For the constant bound only: fixed eta>0 and I(u)>=eta*m"
+    ],
+    "statement_sha256": "9f07bfbcad6bdbc37ddc431b188837a5f6b2c607322567b894938e5cf474be1e",
+    "contributors": [
+      "A027"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A027\\runs\\20261011T215911Z-account05-A027-block-selection\\ADAPTIVE_BLOCK_SELECTION.tex",
+    "proof_dependencies": [
+      "C006@recovered-BLOCK_RESTRICTION_IDENTITY-sections-1-3",
+      "threshold-paper@context-38pp-Proposition-8.6"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "9f07bfbcad6bdbc37ddc431b188837a5f6b2c607322567b894938e5cf474be1e",
+        "local_UTF8_exact_statement_sha256": "9f07bfbcad6bdbc37ddc431b188837a5f6b2c607322567b894938e5cf474be1e"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": null,
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A065",
+      "A087",
+      "A094",
+      "A097",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A027-CORE-BLOCK-HARDNESS",
+    "version": 1,
+    "exact_statement": "For every Boolean core u with Eu>=0, delta=(1-Eu)/2, v=1-(Eu)^2, p=2^(-r), R0=1-4p*delta+4p^2*delta, and L the entropy of the nonempty conditional core spectrum, B_W(1+A_r(u-1))/p=v*L+4*delta*(1-p)*h2(delta)+(R0/p)*h2(p^2*v/R0). Continuous zero-mass conventions apply. A uniform core-block bound B_W<=K*p*I(u) for all such cores and r>=1 implies full FEI with constant K+2. Conversely FEI with constant C implies this block bound with constant C+5.",
+    "hypotheses": [
+      "Uniform normalized Boolean Fourier spectrum; entropy in bits",
+      "Core mean nonnegative for the quantitative equivalence",
+      "Fresh point-indicator controls; W consists of all core coordinates but is proper in the full cube"
+    ],
+    "statement_sha256": "77678060db6c63d420d4c2df32186612dcb5bfbb334517329f28742cedc814be",
+    "contributors": [
+      "A027"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A027\\runs\\20261011T215911Z-account05-A027-block-selection\\ADAPTIVE_BLOCK_SELECTION.tex",
+    "proof_dependencies": [
+      "C006@recovered-BLOCK_RESTRICTION_IDENTITY-sections-1-3",
+      "threshold-paper@context-38pp-Proposition-8.6"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "77678060db6c63d420d4c2df32186612dcb5bfbb334517329f28742cedc814be",
+        "local_UTF8_exact_statement_sha256": "77678060db6c63d420d4c2df32186612dcb5bfbb334517329f28742cedc814be"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": null,
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A065",
+      "A087",
+      "A094",
+      "A097",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A027-PARTIAL-CORE-ACTIVATION-TRANSPORT",
+    "version": 1,
+    "exact_statement": "For every uniform Boolean core u, r>=1 fresh point controls with p=2^(-r), F=1+A_r(u-1), and finite adaptive physical core-only restriction tree T, the lifted actual leaf partition obeys Pi_I(F)=p*Pi_I(u) and |Pi_H(F)-p*Pi_H(u)|<=(12+8/ln(2))*Pi_I(F), with all remaining-core entropy and terminal control reserve retained. For proper-core stopping trees with Pi_H(u)<=K*Pi_I(u) and C001-regular core terminals, H(F)<=max(K+12+8/ln(2),C_reg)*I(F). In particular u=chi_[t]*g with t>=1 and regular g on at least one remaining core coordinate admits the proper character-block rule H(F)<=(12+8/ln(2))*I(F), even for g=D_s where core density tends to zero. A universal forward activation surcharge exactly 4 is refuted by the actual proper-core example u=z*D_32, r=16: the certified Pi_H(F)/Pi_I(F)>8193/2048 while Pi_H(u)=0. The iterated r->infinity then s->infinity surcharge limit on u=z*D_s is 4.",
+    "hypotheses": [
+      "Uniform normalized Boolean Fourier spectrum; entropy in bits",
+      "Fresh point-indicator controls remain unqueried throughout the core stopping partition",
+      "Finite actual core restriction tree, no repeated coordinate on a path; core-first rule stops before exhausting the core",
+      "The terminal-inclusive implication explicitly assumes a paid core partition and C001-regular core leaves"
+    ],
+    "statement_sha256": "99e8e27390f5e13b3433acbc3c3033790daa470d9f0ab059b387c9e01c595798",
+    "contributors": [
+      "A027"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A027\\runs\\20261011T234627Z-account05-A027-block-selection\\DERIVATION.md",
+    "proof_dependencies": [
+      "C001@threshold_paper_38pp-Theorem-A",
+      "C006@BLOCK_RESTRICTION_IDENTITY_2026-09-18-sections-1-3"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": null,
+    "refutes": [
+      "FORWARD-ACTIVATION-SURCHARGE-4 (new explicit helper, not the unrelated amplitude-proxy K=4)"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A064",
+      "A065",
+      "A087",
+      "A094",
+      "A097"
+    ]
+  }
+]

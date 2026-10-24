@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/yv+7/Kmbsyb++KjH54U6ADsBVNk</id>
+  <title>arXiv Query: search_query=(ti:"random switching" OR ti:"randomly switched" OR ti:"piecewise deterministic") AND (all:"smoothness" OR all:"regularity")&amp;id_list=&amp;start=0&amp;max_results=60</title>
+  <updated>2026-10-11T23:05:10Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(ti:%22random+switching%22+OR+(ti:%22randomly+switched%22+OR+ti:%22piecewise+deterministic%22))+AND+(all:%22smoothness%22+OR+all:%22regularity%22)&amp;start=0&amp;max_results=60&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>60</opensearch:itemsPerPage>
+  <opensearch:totalResults>16</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2509.16062v1</id>
+    <title>Transient regime of piecewise deterministic Monte Carlo algorithms</title>
+    <updated>2025-09-19T15:12:10Z</updated>
+    <link href="https://arxiv.org/abs/2509.16062v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.16062v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Piecewise Deterministic Markov Processes (PDMPs) such as the Bouncy Particle Sampler and the Zig-Zag Sampler, have gained attention as continuous-time counterparts of classical Markov chain Monte Carlo. We study their transient regime under convex potentials, namely how trajectories that start in low-probability regions move toward higher-probability sets. Using fluid-limit arguments with a decomposition of the generator into fast and slow parts, we obtain deterministic ordinary differential equation descriptions of early-stage behaviour. The fast dynamics alone are non-ergodic because once the event rate reaches zero it does not restart. The slow component reactivates the dynamics, so averaging remains valid when taken over short micro-cycles rather than with respect to an invariant law.
+  Using the expected number of jump events as a cost proxy for gradient evaluations, we find that for Gaussian targets the transient cost of PDMP methods is comparable to that of random-walk Metropolis. For convex heavy-tailed families with subquadratic growth, PDMP methods can be more efficient when event simulation is implemented well. Forward Event-Chain and Coordinate Samplers can, under the same assumptions, reach the typical set with an order-one expected number of jumps. For the Zig-Zag Sampler we show that, under a diagonal-dominance condition, the transient choice of direction coincides with the solution of a box-constrained quadratic program; outside that regime we give a formal derivation and a piecewise-smooth update rule that clarifies the roles of the gradient and the Hessian. These results provide theoretical insight and practical guidance for the use of PDMP samplers in large-scale inference.</summary>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-19T15:12:10Z</published>
+    <arxiv:comment>39 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.CO"/>
+    <author>
+      <name>Sanket Agrawal</name>
+    </author>
+    <author>
+      <name>Joris Bierkens</name>
+    </author>
+    <author>
+      <name>Kengo Kamatani</name>
+    </author>
+    <author>
+      <name>Gareth O. Roberts</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.03682v1</id>
+    <title>Automated Techniques for Efficient Sampling of Piecewise-Deterministic Markov Processes</title>
+    <updated>2024-08-07T10:50:59Z</updated>
+    <link href="https://arxiv.org/abs/2408.03682v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.03682v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Piecewise deterministic Markov processes (PDMPs) are a class of continuous-time Markov processes that were recently used to develop a new class of Markov chain Monte Carlo algorithms. However, the implementation of the processes is challenging due to the continuous-time aspect and the necessity of integrating the rate function. Recently, Corbella, Spencer, and Roberts (2022) proposed a new algorithm to automate the implementation of the Zig-Zag sampler. However, the efficiency of the algorithm highly depends on a hyperparameter ($t_{\text{max}}$) that is fixed all along the run of the algorithm and needs preliminary runs to tune. In this work, we relax this assumption and propose a new variant of their algorithm that let this parameter change over time and automatically adapt to the target distribution. We also replace the Brent optimization algorithm by a grid-based method to compute the upper bound of the rate function. This method is more robust to the regularity of the function and gives a tighter upper bound while being quicker to compute. We also extend the algorithm to other PDMPs and provide a Python implementation of the algorithm based on JAX.</summary>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-07T10:50:59Z</published>
+    <arxiv:primary_category term="stat.CO"/>
+    <author>
+      <name>Charly Andral</name>
+    </author>
+    <author>
+      <name>Kengo Kamatani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.17891v2</id>
+    <title>Regularity of invariant densities for random switching between two linear odes in Rd</title>
+    <updated>2024-07-18T06:53:21Z</updated>
+    <link href="https://arxiv.org/abs/2406.17891v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.17891v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a paper entitled singularities of invariant densities for random switching between two linear odes in 2D, Bakhtin et al [5], consider a Markov process obtained by random switching between two stable linear vector fields in the plane and characterize the singularities of the invariant density in terms of the switching and contraction rates. This paper considers a generalization of this model obtained by random switching between two stable linear vector fields in Rd and provides sufficient conditions ensuring that the invariant distribution is absolutely continuous and has a Cr density. In dimension greater than 3 it provides, to the best of our knowledge, the first fully non-elliptic example of random switching for which quantitative conditions guaranteeing smoothness of the invariant density can be proved.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-25T19:01:20Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Michel Benaim</name>
+    </author>
+    <author>
+      <name>Améthyste Bichard</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.17543v7</id>
+    <title>On invariant distributions of Feller Markov chains with applications to dynamical systems with random switching</title>
+    <updated>2024-10-24T13:53:18Z</updated>
+    <link href="https://arxiv.org/abs/2310.17543v7" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.17543v7" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce simple conditions ensuring that invariant distributions of a Feller Markov chain on a compact Riemannian manifold are absolutely continuous with a lower semi-continuous, continuous or smooth density with respect to the Riemannian measure. This is applied to Markov chains obtained by random composition of maps and to piecewise deterministic Markov processes obtained by random switching between flows.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-26T16:39:02Z</published>
+    <arxiv:comment>An error in the statement of Theorem 2.11 has been corrected</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Probability Theory and Related Fields, 2024</arxiv:journal_ref>
+    <author>
+      <name>Michel Benaïm</name>
+    </author>
+    <author>
+      <name>Oliver Tough</name>
+    </author>
+    <arxiv:doi>10.1007/s00440-024-01307-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00440-024-01307-y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.03632v2</id>
+    <title>Regularity of the stationary density for systems with fast random switching</title>
+    <updated>2023-02-12T12:14:16Z</updated>
+    <link href="https://arxiv.org/abs/2212.03632v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.03632v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the piecewise-deterministic Markov process obtained by randomly switching between the flows generated by a finite set of smooth vector fields on a compact set. We obtain Hörmander-type conditions on the vector fields guaranteeing that the stationary density is: $C^k$ whenever the jump rates are sufficiently fast, for any $k&lt;\infty$; unbounded whenever the jump rates are sufficiently slow and lower semi-continuous regardless of the jump rates. Our proofs are probabilistic, relying on a novel application of stopping times.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-07T13:41:53Z</published>
+    <arxiv:comment>23 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Michel Benaïm</name>
+    </author>
+    <author>
+      <name>Oliver Tough</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.06577v2</id>
+    <title>Push-forward method for piecewise deterministic biochemical simulations</title>
+    <updated>2021-02-12T18:22:30Z</updated>
+    <link href="https://arxiv.org/abs/2009.06577v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.06577v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A biochemical network can be simulated by a set of ordinary differential equations (ODE) under well stirred reactor conditions, for large numbers of molecules, and frequent reactions. This is no longer a robust representation when some molecular species are in small numbers and reactions changing them are infrequent. In this case, discrete stochastic events trigger changes of the smooth deterministic dynamics of the biochemical network. Piecewise-deterministic Markov processes (PDMP) are well adapted for describing such situations. Although PDMP models are now well established in biology, these models remain computationally challenging. Previously we have introduced the push-forward method to compute how the probability measure is spread by the deterministic ODE flow of PDMPs, through the use of analytic expressions of the corresponding semigroup. In this paper we provide a more general simulation algorithm that works also for non-integrable systems. The method can be used for biochemical simulations with applications in fundamental biology, biotechnology and biocomputing.This work is an extended version of the work presented at the conference CMSB2019.</summary>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.MN" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-14T17:38:15Z</published>
+    <arxiv:comment>arXiv admin note: text overlap with arXiv:1905.00235</arxiv:comment>
+    <arxiv:primary_category term="q-bio.QM"/>
+    <arxiv:journal_ref>Theoretical Computer Science Volume 893, 21 November 2021, Pages 17-40</arxiv:journal_ref>
+    <author>
+      <name>Guilherme C. P. Innocentini</name>
+    </author>
+    <author>
+      <name>Arran Hodgkinson</name>
+    </author>
+    <author>
+      <name>Fernando Antoneli</name>
+    </author>
+    <author>
+      <name>Arnaud Debussche</name>
+    </author>
+    <author>
+      <name>Ovidiu Radulescu</name>
+    </author>
+    <arxiv:doi>10.1016/j.tcs.2021.05.025</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.tcs.2021.05.025" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1901.00124v1</id>
+    <title>Random Switching near Bifurcations</title>
+    <updated>2019-01-01T09:32:01Z</updated>
+    <link href="https://arxiv.org/abs/1901.00124v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1901.00124v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The interplay between bifurcations and random switching processes of vector fields is studied. More precisely, we provide a classification of piecewise deterministic Markov processes arising from stochastic switching dynamics near fold, Hopf, transcritical and pitchfork bifurcations. We prove the existence of invariant measures for different switching rates. We also study, when the invariant measures are unique, when multiple measures occur, when measures have smooth densities, and under which conditions finite-time blow-up occurs. We demonstrate the applicability of our results for three nonlinear models arising in applications.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.PS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-01-01T09:32:01Z</published>
+    <arxiv:comment>24 pages; preprint</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Tobias Hurth</name>
+    </author>
+    <author>
+      <name>Christian Kuehn</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1712.09201v2</id>
+    <title>Approximation methods for piecewise deterministic Markov processes and their costs</title>
+    <updated>2019-01-22T14:28:07Z</updated>
+    <link href="https://arxiv.org/abs/1712.09201v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1712.09201v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we analyse piecewise deterministic Markov processes, as introduced in Davis (1984). Many models in insurance mathematics can be formulated in terms of the general concept of piecewise deterministic Markov processes. In this context, one is interested in computing certain quantities of interest such as the probability of ruin of an insurance company, or the insurance company's value, defined as the expected discounted future dividend payments until the time of ruin. Instead of explicitly solving the integro-(partial) differential equation related to the quantity of interest considered (an approach which can only be used in few special cases), we adapt the problem in a manner that allows us to apply deterministic numerical integration algorithms such as quasi-Monte Carlo rules; this is in contrast to applying random integration algorithms such as Monte Carlo. To this end, we reformulate a general cost functional as a fixed point of a particular integral operator, which allows for iterative approximation of the functional. Furthermore, we introduce a smoothing technique which is applied to the integrands involved, in order to use error bounds for deterministic cubature rules. On the analytical side, we prove a convergence result for our PDMP approximation, which is of independent interest as it justifies phase-type approximations on the process level. We illustrate the smoothing technique for a risk-theoretic example, and provide a comparative study of deterministic and Monte Carlo integration.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-fin.CP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-12-26T07:50:37Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Scandinavian Actuarial Journal 2019</arxiv:journal_ref>
+    <author>
+      <name>Peter Kritzer</name>
+    </author>
+    <author>
+      <name>Gunther Leobacher</name>
+    </author>
+    <author>
+      <name>Michaela Szölgyenyi</name>
+    </author>
+    <author>
+      <name>Stefan Thonhauser</name>
+    </author>
+    <arxiv:doi>10.1080/03461238.2018.1560357</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1080/03461238.2018.1560357" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1712.04909v1</id>
+    <title>Reasoning in Systems with Elements that Randomly Switch Characteristics</title>
+    <updated>2017-12-13T18:25:20Z</updated>
+    <link href="https://arxiv.org/abs/1712.04909v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1712.04909v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We examine the issue of stability of probability in reasoning about complex systems with uncertainty in structure. Normally, propositions are viewed as probability functions on an abstract random graph where it is implicitly assumed that the nodes of the graph have stable properties. But what if some of the nodes change their characteristics? This is a situation that cannot be covered by abstractions of either static or dynamic sets when these changes take place at regular intervals. We propose the use of sets with elements that change, and modular forms are proposed to account for one type of such change. An expression for the dependence of the mean on the probability of the switching elements has been determined. The system is also analyzed from the perspective of decision between different hypotheses. Such sets are likely to be of use in complex system queries and in analysis of surveys.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-12-13T18:25:20Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Subhash Kak</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1708.01390v2</id>
+    <title>Smooth invariant densities for random switching on the torus</title>
+    <updated>2018-03-21T15:54:15Z</updated>
+    <link href="https://arxiv.org/abs/1708.01390v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1708.01390v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider a random dynamical system obtained by switching between the flows generated by two smooth vector fields on the 2d-torus, with the random switchings happening according to a Poisson process. Assuming that the driving vector fields are transversal to each other at all points of the torus and that each of them allows for a smooth invariant density and no periodic orbits, we prove that the switched system also has a smooth invariant density, for every switching rate. Our approach is based on an integration by parts formula inspired by techniques from Malliavin calculus.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-08-04T06:23:58Z</published>
+    <arxiv:comment>19 pages</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Yuri Bakhtin</name>
+    </author>
+    <author>
+      <name>Tobias Hurth</name>
+    </author>
+    <author>
+      <name>Sean D. Lawley</name>
+    </author>
+    <author>
+      <name>Jonathan C. Mattingly</name>
+    </author>
+    <arxiv:doi>10.1088/1361-6544/aaa04f</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1361-6544/aaa04f" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1601.07123v1</id>
+    <title>Absolute continuity of the invariant measure in Piecewise Deterministic Markov Processes having degenerate jumps</title>
+    <updated>2016-01-26T18:17:58Z</updated>
+    <link href="https://arxiv.org/abs/1601.07123v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1601.07123v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider piecewise deterministic Markov processes with degenerate transition kernels of the "house-of-cards"-type. We use a splitting scheme based on jump times to prove the absolute continuity, as well as some regularity, of the invariant measure of the process. Finally, we obtain finer results on the regularity of the one-dimensional marginals of the invariant measure, using integration by parts with respect to the jump times.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-01-26T18:17:58Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Eva Löcherbach</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1510.01114v1</id>
+    <title>A Piecewise Deterministic Markov Toy Model for Traffic/Maintenance and Associated Hamilton-Jacobi Integrodifferential Systems on Networks</title>
+    <updated>2015-10-05T11:59:25Z</updated>
+    <link href="https://arxiv.org/abs/1510.01114v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1510.01114v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study optimal control problems in infinite horizon when the dynamics belong to a specific class of piecewise deterministic Markov processes constrained to star-shaped networks (inspired by traffic models). We adapt the results in [H. M. Soner. Optimal control with state-space constraint. II. SIAM J. Control Optim., 24(6):1110.1122, 1986] to prove the regularity of the value function and the dynamic programming principle. Extending the networks and Krylov's ''shaking the coefficients'' method, we prove that the value function can be seen as the solution to a linearized optimization problem set on a convenient set of probability measures. The approach relies entirely on viscosity arguments. As a by-product, the dual formulation guarantees that the value function is the pointwise supremum over regular subsolutions of the associated Hamilton-Jacobi integrodifferential system. This ensures that the value function satisfies Perron's preconization for the (unique) candidate to viscosity solution. Finally, we prove that the same kind of linearization can be obtained by combining linearization for classical (unconstrained) problems and cost penalization. The latter method works for very general near-viable systems (possibly without further controllability) and discontinuous costs.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-10-05T11:59:25Z</published>
+    <arxiv:comment>accepted to Applied Mathematics and Optimization (01/10/2015)</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Dan Goreac</name>
+      <arxiv:affiliation>LAMA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Magdalena Kobylanski</name>
+      <arxiv:affiliation>LAMA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Miguel Martinez</name>
+      <arxiv:affiliation>LAMA</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1406.5425v1</id>
+    <title>Regularity of invariant densities for 1D-systems with random switching</title>
+    <updated>2014-06-20T15:24:40Z</updated>
+    <link href="https://arxiv.org/abs/1406.5425v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1406.5425v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is a detailed analysis of invariant measures for one-dimensional dynamical systems with random switching. In particular, we prove smoothness of the invariant densities away from critical points and describe the asymptotics of the invariant densities at critical points.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-06-20T15:24:40Z</published>
+    <arxiv:comment>32 pages</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Yuri Bakhtin</name>
+    </author>
+    <author>
+      <name>Tobias Hurth</name>
+    </author>
+    <author>
+      <name>Jonathan C. Mattingly</name>
+    </author>
+    <arxiv:doi>10.1088/0951-7715/28/11/3755</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0951-7715/28/11/3755" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1303.6999v2</id>
+    <title>Exponential ergodicity for Markov processes with random switching</title>
+    <updated>2015-04-13T12:33:30Z</updated>
+    <link href="https://arxiv.org/abs/1303.6999v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1303.6999v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study a Markov process with two components: the first component evolves according to one of finitely many underlying Markovian dynamics, with a choice of dynamics that changes at the jump times of the second component. The second component is discrete and its jump rates may depend on the position of the whole process. Under regularity assumptions on the jump rates and Wasserstein contraction conditions for the underlying dynamics, we provide a concrete criterion for the convergence to equilibrium in terms of Wasserstein distance. The proof is based on a coupling argument and a weak form of the Harris theorem. In particular, we obtain exponential ergodicity in situations which do not verify any hypoellipticity assumption, but are not uniformly contracting either. We also obtain a bound in total variation distance under a suitable regularising assumption. Some examples are given to illustrate our result, including a class of piecewise deterministic Markov processes.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-03-27T22:52:35Z</published>
+    <arxiv:comment>Published at http://dx.doi.org/10.3150/13-BEJ577 in the Bernoulli (http://isi.cbs.nl/bernoulli/) by the International Statistical Institute/Bernoulli Society (http://isi.cbs.nl/BS/bshome.htm)</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Bernoulli 2015, Vol. 21, No. 1, 505-536</arxiv:journal_ref>
+    <author>
+      <name>Bertrand Cloez</name>
+    </author>
+    <author>
+      <name>Martin Hairer</name>
+    </author>
+    <arxiv:doi>10.3150/13-BEJ577</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3150/13-BEJ577" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1204.4143v4</id>
+    <title>Qualitative properties of certain piecewise deterministic Markov processes</title>
+    <updated>2014-04-07T10:45:12Z</updated>
+    <link href="https://arxiv.org/abs/1204.4143v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1204.4143v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study a class of Piecewise Deterministic Markov Processes with state space Rd x E where E is a finite set. The continuous component evolves according to a smooth vector field that is switched at the jump times of the discrete coordinate. The jump rates may depend on the whole position of the process. Working under the general assumption that the process stays in a compact set, we detail a possible construction of the process and characterize its support, in terms of the solutions set of a differential inclusion. We establish results on the long time behaviour of the process, in relation to a certain set of accessible points, which is shown to be strongly linked to the support of invariant measures. Under Hörmander-type bracket conditions, we prove that there exists a unique invariant measure and that the processes converges to equilibrium in total variation. Finally we give examples where the bracket condition does not hold, and where there may be one or many invariant measures, depending on the jump rates between the flows.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-04-18T17:13:19Z</published>
+    <arxiv:comment>v4: more details and a fix for the constructive proof of the bracket condition</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Michel Benaïm</name>
+      <arxiv:affiliation>UNINE</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Stéphane Le Borgne</name>
+      <arxiv:affiliation>IRMAR</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Florent Malrieu</name>
+      <arxiv:affiliation>IRMAR, LMPT</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pierre-André Zitt</name>
+      <arxiv:affiliation>IMB, LAMA</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1203.5744v2</id>
+    <title>Invariant densities for dynamical systems with random switching</title>
+    <updated>2018-11-22T08:49:46Z</updated>
+    <link href="https://arxiv.org/abs/1203.5744v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1203.5744v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider a non-autonomous ordinary differential equation on a smooth manifold, with right-hand side that randomly switches between the elements of a finite family of smooth vector fields. For the resulting random dynamical system, we show that Hörmander type hypoellipticity conditions are sufficient for uniqueness and absolute continuity of an invariant measure.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-03-26T17:48:46Z</published>
+    <arxiv:comment>16 pages; we replaced our original article to point out and close a gap in the discussion of the Lorenz system in Section 7 (see Remark 2); this gap is only present in the journal version of this article --- it wasn't present in the previous arxiv version</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <arxiv:journal_ref>Nonlinearity, 2012, volume 25, number 10, pages 2937--2952</arxiv:journal_ref>
+    <author>
+      <name>Yuri Bakhtin</name>
+    </author>
+    <author>
+      <name>Tobias Hurth</name>
+    </author>
+    <arxiv:doi>10.1088/0951-7715/25/10/2937</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0951-7715/25/10/2937" title="doi"/>
+  </entry>
+</feed>

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T144518Z-account03-B14-fixedmult-r12",
+  "theorem": "s_9(A)>=s>0 implies canonical C_0 density with ||p||_infinity < 2506 K^2/s",
+  "status": "NEW_CONSTANT_SHARPENING_PENDING_INDEPENDENT_REVIEW",
+  "exact_certificates": {
+    "sin_3_over_5_lower": {
+      "fraction": "24703107/43750000",
+      "decimal": 0.5646424457142857,
+      "method": "alternating sine series through -x^7/7!"
+    },
+    "e_upper_intermediate": {
+      "fraction": "31967/11760",
+      "decimal": 2.71828231292517,
+      "tail_method": "sum k=0..6 plus geometric tail 1/4410"
+    },
+    "e_upper_used": {
+      "fraction": "27183/10000",
+      "decimal": 2.7183,
+      "positive_margin_over_intermediate": "13/735000"
+    },
+    "cross_fejer_C4_upper": {
+      "fraction": "2988387500000000000000000000000000000000000000000000000000/11972685640355754882277405939298717746123001311953679647",
+      "decimal": 249.6004313290567
+    },
+    "log_C_upper_q": {
+      "fraction": "69/50",
+      "decimal": 1.38,
+      "four_q": "138/25"
+    },
+    "exp_partial_order": 16,
+    "exp_partial_minus_C4_upper": {
+      "numerator": "30951330058632967673939943392233252441494687854076356483943361899355379716648637",
+      "denominator": "1707409963644552013230256535536717767710876256127755340139265172183513641357421875",
+      "decimal": 0.018127649901120292,
+      "positive": true
+    },
+    "uniform_log_potential_upper": {
+      "fraction": "238/25",
+      "decimal": 9.52
+    },
+    "scalar_truncated_half_potential": {
+      "fraction": "218362/875",
+      "decimal": 249.55657142857143
+    },
+    "scalar_full_half_potential": {
+      "fraction": "219237/875",
+      "decimal": 250.55657142857143
+    },
+    "outer_scalar_density": {
+      "fraction": "438474/175",
+      "decimal": 2505.5657142857144
+    },
+    "margin_to_2506": {
+      "fraction": "76/175",
+      "decimal": 0.4342857142857143
+    }
+  },
+  "branch_ledger_normalized": {
+    "no_pivot": "<2400",
+    "outer_scalar_pivot": "<438474/175 <2506",
+    "definite_pair": "<32",
+    "indefinite_pair": "<251",
+    "controlling_branch": "outer_scalar_pivot"
+  },
+  "diagonal_quarter_power_interpolation": "min(1,4*sqrt(u)) <= 2*u^(1/4) for all u>0",
+  "localization": {
+    "partner": "account04/B14 cap-preserving compact completion",
+    "loss": 0,
+    "translation_identity": "(X+t)^T A (X+t)=X^TAX+2(At)^TX+t^TAt",
+    "uniform_translation_bound": "<2506 K^2/s"
+  },
+  "regularity": {
+    "same_constant_C0": true,
+    "source_scope": "fixed rank(A)>=3 affine theorem; s_9>0 implies rank>=9",
+    "uniform_modulus_claimed": false,
+    "full_three_eigenvalue_continuity": "OPEN"
+  },
+  "scope": {
+    "multiplicity_9": "PROVED_BY_EXISTING_THRESHOLD_ARGUMENT_WITH_NEW_CONSTANT_SHARPENING",
+    "multiplicity_8": "OPEN",
+    "full_three_eigenvalue_conjecture": "OPEN"
+  }
+}

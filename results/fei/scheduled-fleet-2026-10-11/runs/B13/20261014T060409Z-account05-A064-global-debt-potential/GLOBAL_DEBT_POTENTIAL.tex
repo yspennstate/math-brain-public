@@ -1,0 +1,50 @@
+\documentclass{article}\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{An expected terminal reference reserve after non-flat data exposure}
+\author{A064, B13}\maketitle
+\begin{theorem}[Finite certified reference continuation]
+Let $v$ be any Boolean function on three uniform data bits and let
+$F=-1$ on $x=0,a=1$, $F=v$ on $x=1,b=1$, and $F=+1$ otherwise.
+All original control and data blocks are independent. Query $a$, followed
+by the same chosen physical data coordinate in both actual children.
+Let $M$ be the completed original matched-marginal nonempty occupancy
+reference, $A=D(P_F\Vert M)$, and $R_b,R_{bt}$ the actual child and
+grandchild product projections. Use the full physical coherent channel,
+extended fairly on source-zero fibers, for every inherited reference.
+Write $T_b=D(P_b\Vert R_b)$, $T_{bt}=D(P_{bt}\Vert R_{bt})$ and $O$
+for reference-outcome divergence from physical fairness. Define
+\[
+D_a=O_a+\mathbb E_b T_b-A,\quad
+D_b=O_b+\mathbb E_t T_{bt}-T_b,\quad
+W=[D_a]_++\mathbb E_b[D_b]_+.
+\]
+The exhaustive rational interval certificate for all $256\cdot3$ cases
+proves $W<\overline S/2$, where
+$S_b=4I(F_b)-H(F_b)\ge0$ and $\overline S=\mathbb E_bS_b>0$.
+Assume this particular child surplus has not already been spent.
+The nonnegative potential
+\[
+P_0=A+W,\qquad P_b=T_b+[D_b]_+,\qquad P_{bt}=T_{bt}
+\]
+satisfies $P-\mathbb E P_{\rm child}\ge O$ and
+\[
+\mathbb E P_\tau+\mathbb E\sum_{q<\tau}O_q\le P_0<A+\overline S/2
+\]
+on every stopping cut of the declared finite tree. Terminal KL is
+retained. In particular
+\[
+O_a+\mathbb E_bO_b+\mathbb E_{b,t}{\rm CE}(P_{bt},R_{bt})
+\le A+W+\mathbb E_{b,t}H(F_{bt})
+< A+4\mathbb E_b I(F_b).
+\]
+All intermediate and terminal entropy and reference laws are actual
+physical restrictions. No conditional reference KL, reference-only row,
+or second copy of the original bank is discarded. No arbitrary-dimensional
+core certificate or universal FEI claim is made.
+\end{theorem}
+\paragraph{Proof.} The exact normalized chain rule, signed conversion
+identity, expected-terminal induction, complete terminal bill and finite
+coverage/error certificate are in PROOF.md Sections 1--5 and code/check.py.
+The root certificate and all margin intervals are in out/VALIDATION.json.
+\end{document}

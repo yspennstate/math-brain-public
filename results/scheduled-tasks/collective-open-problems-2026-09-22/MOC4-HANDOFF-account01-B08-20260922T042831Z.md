@@ -1,0 +1,33 @@
+# MOC4 handoff — account01/B08
+
+Outcome: **ESSENTIAL_STEP_APPLIED**. Parent MOC4 remains open. Execution: `WITHOUT_VERIFIED_BRAIN`.
+
+Scientific root: `proofnet24/collective-MOC4/account01/B08/20260922T040837Z-b08-moc4-r11/` in private `yspennstate/math-open-problems`.
+
+## New result
+
+`MOC4-CHAIN-CUBE-FACE-PROPAGATION-v1`.
+
+For the one-cycle chain of account03/B08, an exact nonnegative deficit in the full low-frequency compound-event span `[4]+[31]+[22]` violates the formal payment inequality:
+
+`delta0 delta1-C^2 = -114709561344/95367431640625 < 0`, with `C^2/(delta0 delta1)=390625/388224`.
+
+So low-frequency / compound-event compatibility alone cannot prove the one-cycle payment. This is a relaxation counterexample, not a MOC4 counterexample.
+
+The same bad deficit has eleven exact support ties. For genuine spectral vertices `v_sigma=prod_i(b_{sigma(i)}-x_i)`, `x_i=-a_i`, on the generic simple/nonzero-cross-sum branch, those eleven ties force five exact real cross ratios. They successively place `x1,x2,y1,y2`, then `x3`, `x4`, `y4`, `y3` on one generalized circle. Hence all signed spectral points lie on one generalized circle, and account02/B08 `MOC-COMMON-CIRCLE-v1` closes the full normal-pair inclusion on that locus.
+
+A quantitative addendum proves for any two spectral edge differences `E,F`
+
+`|sin arg(E/F)| <= |L(E)|/|E| + |L(F)|/|F|`.
+
+Therefore, if the eleven face deficits are <= epsilon and the ten relevant edge magnitudes are >= m, each of the five cross-ratio phase defects is <= `4 epsilon/m` in sine distance from the real axis.
+
+## Named partner result consumed
+
+Assigned partner account02/B09 run `20260922T034112Z-account02-B09-MOC4-r14`, `MOC4-ZERO-FIBER-HAAR-LIFT-v1`: the true zero-entry residual `U(2)` fiber has an exact Haar-averaged common permutation lift for every compound minor and an exact quaternion Hessian payment. The present result is kept on the generic spectral-face branch and does not replace that zero-face theorem by arbitrary bistochastic data.
+
+## Next implication
+
+`MOC4-CHAIN-CUBE-TRANSVERSE-COLLAR-v1`: convert the five quantitative cross-ratio phase controls into a lower bound for the genuine spectral ellipse payment `delta0 delta1-C^2`, or produce actual spectra/support data with strict reverse inequality. By `MOC4-ONE-CYCLE-SU2-ELLIPSE-v1`, a source-valid reverse inequality would be a genuine true-unitary MOC4 counterexample.
+
+Lead account03/B07 should merge this with `MOC4-V4-PAIR-GAP-CEILING-v1`: the exact low-frequency no-go confirms that its residual reserve must use nonlinear same-spectra/common-unitary compatibility, while the face-propagation theorem identifies one such compatibility mechanism.

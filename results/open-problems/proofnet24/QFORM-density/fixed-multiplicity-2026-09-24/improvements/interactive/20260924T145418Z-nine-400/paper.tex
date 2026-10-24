@@ -1,0 +1,955 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,enumitem}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Nine Large Eigenvalues and a Uniform Quadratic Density Bound},pdfauthor={Yitzchak Shmalo}}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}\fancyhead[L]{\small Fixed-multiplicity density bounds}\fancyhead[R]{\small Y. Shmalo}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}\newcommand{\E}{\mathbb E}\newcommand{\PP}{\mathbb P}
+\newcommand{\1}{\mathbf 1}\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\rank}{\operatorname{rank}}\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\off}{\operatorname{offdiag}}\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\esssup}{\operatorname*{ess\,sup}}\newcommand{\logp}{\log_+}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\etaone}{\eta}\newcommand{\kap}{\kappa}
+\title{Nine Large Eigenvalues and a Uniform\newline Quadratic Density Bound}
+\author{Yitzchak Shmalo\\\small Einstein Institute of Mathematics\\\small The Hebrew University of Jerusalem}
+\date{September 24, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $X$ have independent real coordinates with probability densities bounded by $K$. We prove that every real symmetric matrix $A$ with ninth singular value at least $s>0$ gives a quadratic polynomial $X^TAX+b^TX+c$ with density bounded by $400K^2/s$, uniformly in dimension, signature, the remaining spectrum, affine terms, and coordinate laws. Retaining influential original coordinates as hubs yields a marginal-free estimate from third crossing volume. A disjoint-minor interpolation argument converts nine large spectral directions into that volume unless a scalar or two-coordinate pivot is available. Separate pivot scales and a full negative-half-moment bound for indefinite pairs yield the explicit constant. We also prove a spectral-tail inequality for overlapping minors, strengthening the algebraic information in the eight-eigenvalue case. All specialized analytic and algebraic ingredients are proved in this manuscript.
+\end{abstract}
+\setcounter{tocdepth}{1}
+\tableofcontents
+\clearpage
+
+\section{Statement and proof architecture}
+For a real matrix $T$, write $s_1(T)\ge s_2(T)\ge\cdots\ge0$ for its singular values, with zeros appended when necessary. For symmetric $A$, these are the eigenvalue moduli in decreasing order. The norm $\norm{p}_\infty$ of a density is its essential supremum. All densities and measures below are Lebesgue densities and measures unless specified otherwise. We choose Borel representatives of coordinate densities bounded pointwise by their stated cap; modification on a null set does not change any coordinate law.
+
+\begin{theorem}\label{thm:main}
+Let $X=(X_1,\ldots,X_n)$ have independent real coordinates with probability densities $0\le f_i\le K$ almost everywhere, $0<K<\infty$. Let $A=A^T\in\R^{n\times n}$, $b\in\R^n$, and $c\in\R$. If $s_9(A)\ge s>0$, then
+\[
+ Q=X^TAX+b^TX+c
+\]
+has a density satisfying
+\begin{equation}\label{eq:main}
+ \norm{p_Q}_\infty\le\frac{400K^2}{s}.
+\end{equation}
+Equivalently, $\PP\{Q\in J\}\le400K^2|J|/s$ for every interval $J\subset\R$.
+\end{theorem}
+
+\begin{corollary}\label{cor:33}
+The same conclusion holds under either stronger assumption $s_{17}(A)\ge s$ or $s_{33}(A)\ge s$.
+\end{corollary}
+
+No smoothness, moments, identical distribution, support, log-concavity, sign, or exact-rank restriction is imposed. All conditioning is on original independent coordinates. Rotations in deterministic integrals do not assert independence of the rotated random variables. Nonsymmetric auxiliary matrices are used only in rank and norm estimates; they never replace the original symmetric quadratic form.
+
+After normalization to $K=s=1$, use the parameters
+\begin{equation}\label{eq:parameters}
+ d=\frac3{40},\qquad p=\frac1{400},\qquad h=\frac2{25},\qquad\kappa=h^2=\frac4{625}.
+\end{equation}
+A scalar pivot is a diagonal entry of modulus at least $d$; a pair pivot is a principal two-coordinate determinant of modulus at least $p$. In their absence, $4k-3$ large eigenvalues force the disjoint-minor volume of order $k$ to be bounded below, for $k\le3$. A random coordinate cut then gives a large crossing volume. A product-Fourier argument, retaining influential original coordinates as hubs, turns order three into a bounded density and order two into a full negative-half-moment bound. The two spectral thresholds used are therefore $9=4\cdot3-3$ and $5=4\cdot2-3$. Scalar and pair conditioning close the remaining cases.
+
+The geometric Brascamp--Lieb and product-projection methods have classical antecedents in \cite{BCCT,RV}; the versions needed here are proved below. Neither the multiplicity nine nor the constant $400$ is asserted to be optimal. The full theorem asserts essential boundedness. A separate overlap-volume inequality is proved in Section~\ref{sec:overlap}; it supplies supporting information for eight eigenvalues, not a proof that eight suffice.
+
+\section{Elementary analytic and spectral preliminaries}
+\subsection{Conventions, Gaussian regularization, and inversion}
+We use
+\[
+ \widehat f(t)=\int_\R e^{itx}f(x)\,dx,\qquad
+ \phi_Z(t)=\E e^{itZ},\qquad
+ \logp u=\max(0,\log u)\quad(u>0).
+\]
+We use $\Gamma(a)=\int_0^\infty x^{a-1}e^{-x}\,dx$ for $a>0$. Define
+\[
+ g_\varepsilon(x)=(4\pi\varepsilon)^{-1/2}e^{-x^2/(4\varepsilon)}.
+\]
+The Gaussian integral gives $\widehat g_\varepsilon(t)=e^{-\varepsilon t^2}$. This identity follows, for example, by differentiating the Gaussian Fourier integral in $t$, integrating by parts in $x$, and using its value at $t=0$.
+
+\begin{lemma}[Fourier identities]\label{lem:fourier}
+If $f\in L^1(\R)\cap L^2(\R)$, then
+\begin{equation}\label{eq:plancherel}
+ \int_\R|\widehat f(t)|^2\,dt=2\pi\int_\R|f(x)|^2\,dx.
+\end{equation}
+If $\phi_Z\in L^1(\R)$, then $Z$ has a bounded continuous density
+\begin{equation}\label{eq:inversion}
+ p_Z(x)=\frac1{2\pi}\int_\R e^{-itx}\phi_Z(t)\,dt,
+ \qquad \norm{p_Z}_\infty\le\frac1{2\pi}\norm{\phi_Z}_1.
+\end{equation}
+More generally, for every $v>0$,
+\begin{equation}\label{eq:gaussian-inversion}
+ \E e^{-v(Z-a)^2}
+ =\frac1{2\sqrt{\pi v}}\int_\R e^{-t^2/(4v)}e^{-ita}\phi_Z(t)\,dt.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Gaussian inversion and Fubini, first with the integrable factor $e^{-\varepsilon t^2}$, give
+\[
+ \int e^{-\varepsilon t^2}|\widehat f(t)|^2\,dt
+ =2\pi\int \overline{f(x)}(f*g_\varepsilon)(x)\,dx.
+\]
+The right side tends to $2\pi\norm f_2^2$, since $f*g_\varepsilon\to f$ in $L^2$. To recall the approximate-identity justification, translations are continuous in $L^2$, first for continuous compactly supported functions and then by their density in $L^2$; integrating this translation continuity against $g_\varepsilon$ proves the assertion. Monotone convergence on the nonnegative left side proves \eqref{eq:plancherel}.
+
+Let $\mu$ be the law of $Z$. The convolution $\mu*g_\varepsilon$ has nonnegative density
+\[
+ p_\varepsilon(x)=\frac1{2\pi}\int e^{-itx-\varepsilon t^2}\phi_Z(t)\,dt,
+\]
+again by Gaussian inversion and Fubini. If $\phi_Z\in L^1$, dominated convergence yields uniform convergence of $p_\varepsilon$ to the function in \eqref{eq:inversion}; the latter is continuous by dominated convergence and nonnegative by the uniform limit. For any continuous compactly supported test function, $\mu*g_\varepsilon\to\mu$ weakly while the integrals against $p_\varepsilon$ converge to the integral against $p_Z$. Hence $p_Z\,dx=\mu$, proving the density assertion and bound. Finally \eqref{eq:gaussian-inversion} follows directly from the Gaussian identity and Fubini; its Fourier integrand is bounded in modulus by an integrable Gaussian.
+\end{proof}
+
+\begin{lemma}[Power envelope]\label{lem:envelope}
+If $a>0$, $p>1$, and $|\phi_Z(t)|\le\min(1,(a/|t|)^p)$ for $t\ne0$, then
+\begin{equation}\label{eq:envelope}
+ \norm{p_Z}_\infty\le\frac{ap}{\pi(p-1)}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The integral of the envelope is $2a+2a^p\int_a^\infty t^{-p}\,dt=2ap/(p-1)$. Apply Lemma~\ref{lem:fourier}.
+\end{proof}
+
+\begin{lemma}[Negative half moments]\label{lem:riesz}
+For every real random variable $Z$ and $a\in\R$,
+\begin{equation}\label{eq:riesz}
+ \E|Z-a|^{-1/2}\le\frac1{\sqrt{2\pi}}
+ \int_\R |t|^{-1/2}|\phi_Z(t)|\,dt,
+\end{equation}
+with extended nonnegative values allowed. If
+$|\phi_Z(t)|\le\min(1,(u/|t|)^{3/4})$, then
+\begin{equation}\label{eq:riesz-power}
+ \sup_a\E|Z-a|^{-1/2}\le12\sqrt{u/(2\pi)}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The gamma integral gives
+\[
+ |z|^{-1/2}=\frac1{\Gamma(1/4)}\int_0^\infty v^{-3/4}e^{-vz^2}\,dv,
+\]
+including $z=0$ as an infinite value. Use Tonelli on this nonnegative representation and then \eqref{eq:gaussian-inversion}, taking absolute values at each $v$. A second application of Tonelli is legitimate on the resulting nonnegative Fourier majorant. For $t\ne0$, substitution $w=t^2/(4v)$ shows
+\[
+ \int_0^\infty v^{-5/4}e^{-t^2/(4v)}\,dv
+ =\sqrt2\,\Gamma(1/4)|t|^{-1/2}.
+\]
+This proves \eqref{eq:riesz}. For the stated envelope, the weighted integral equals
+\[
+ 2\int_0^u t^{-1/2}\,dt+
+ 2u^{3/4}\int_u^\infty t^{-5/4}\,dt=12\sqrt u,
+\]
+which proves \eqref{eq:riesz-power}.
+\end{proof}
+
+\subsection{Singular values, Schur complements, and diagonal dominance}
+The norms $\norm T$ and $\norm T_F$ are the operator and Frobenius norms. In particular $\norm T\le\norm T_F$ and $|T_{ij}|\le\norm T_F$. Put
+\[
+ N_A(t)=\#\{j:|\lambda_j(A)|\ge t\}
+\]
+for symmetric $A$ and $t>0$.
+
+\begin{lemma}[Perturbation and rank]\label{lem:rank}
+For real matrices of compatible sizes,
+\begin{equation}\label{eq:rank-perturb}
+ |s_j(T)-s_j(U)|\le\norm{T-U},\qquad
+ s_{j+q}(D+R)\le s_j(D)\quad\text{if }\rank R\le q.
+\end{equation}
+These conclusions do not require symmetry.
+\end{lemma}
+\begin{proof}
+Singular-value decomposition gives the approximation formula
+\[s_j(T)=\inf_{\rank B<j}\norm{T-B}.\]
+Truncating the first $j-1$ singular directions gives the upper bound, while the kernel of any rank-less-than-$j$ matrix meets the span of the first $j$ right singular vectors nontrivially, giving the lower bound. The triangle inequality in this formula proves the first assertion. Adding $R$ to a rank-less-than-$j$ approximation to $D$ gives rank less than $j+q$, proving the second.
+\end{proof}
+
+\begin{lemma}[Spectral count under a principal pivot]\label{lem:schur}
+Write a real symmetric matrix as
+\[
+ A=\begin{pmatrix}B&C\\C^T&D\end{pmatrix},\qquad B\in\R^{k\times k},\quad\det B\ne0,
+ \qquad S=D-C^TB^{-1}C.
+\]
+Then $N_S(t)\ge N_A(t)-k$ for every $t>0$.
+\end{lemma}
+\begin{proof}
+Block Gaussian elimination is the congruence identity
+\[
+ \begin{pmatrix}I&0\\-C^TB^{-1}&I\end{pmatrix}
+ A\begin{pmatrix}I&-B^{-1}C\\0&I\end{pmatrix}
+ =\begin{pmatrix}B&0\\0&S\end{pmatrix}.
+\]
+If $A$ is invertible, this identity shows that $S$ is invertible and that the complementary principal block of $A^{-1}$ is $S^{-1}$. The variational characterization of eigenvalues implies that a principal compression cannot have more eigenvalues above a threshold than the full matrix. Applying this to $A^{-1}$ and $-A^{-1}$ shows
+\[
+ \#\{j:|\lambda_j(S^{-1})|>t^{-1}\}
+ \le\#\{j:|\lambda_j(A^{-1})|>t^{-1}\}=n-N_A(t).
+\]
+The left side is $(n-k)-N_S(t)$, which proves the claim. The compression assertion follows directly by viewing any subspace with Rayleigh quotients above the threshold as a subspace of the full coordinate space; the negative assertion is identical after a sign change.
+
+For singular $A$, fix $0<\delta<t$ and choose $\varepsilon_m\to0$ with $A+\varepsilon_m I$ invertible and $|\varepsilon_m|<\delta/2$. The pivot remains invertible for all large $m$, and the corresponding Schur complements $S_m$ converge to $S$. Each eigenvalue of $A$ moves by $\varepsilon_m$, so $N_{A+\varepsilon_m I}(t-\delta)\ge N_A(t)$. Applying the invertible case at the fixed threshold $t-\delta$ gives $N_{S_m}(t-\delta)\ge N_A(t)-k$. Continuity of ordered eigenvalue moduli yields $N_S(t-\delta)\ge N_A(t)-k$. Letting $\delta\downarrow0$ proves the assertion, since in finite dimension $N_S(t-\delta)\downarrow N_S(t)$.
+\end{proof}
+
+\begin{lemma}[Strict diagonal dominance]\label{lem:dd}
+If a square matrix $T$, not necessarily symmetric, satisfies
+$|T_{ii}|>\sum_{j\ne i}|T_{ij}|$ for every row, then $T$ is invertible.
+\end{lemma}
+\begin{proof}
+If $Tx=0$ for $x\ne0$, choose $i$ maximizing $|x_i|>0$. Then
+$|T_{ii}||x_i|\le\sum_{j\ne i}|T_{ij}||x_j|\le(\sum_{j\ne i}|T_{ij}|)|x_i|$,
+a contradiction.
+\end{proof}
+
+\section{A geometric integral inequality and Fourier powers}
+\subsection{Geometric Brascamp--Lieb, with proof}
+\begin{theorem}[Geometric rank-one inequality]\label{thm:bl}
+Let $u_1,\ldots,u_N$ be unit vectors in $\R^d$ and $c_i>0$ satisfy
+\begin{equation}\label{eq:frame}
+ \sum_i c_i u_i u_i^T=I_d.
+\end{equation}
+For nonnegative integrable functions $h_i$ on $\R$,
+\begin{equation}\label{eq:bl}
+ \int_{\R^d}\prod_i h_i(u_i\cdot x)^{c_i}\,dx
+ \le\prod_i\left(\int_\R h_i\right)^{c_i}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+First take bounded compactly supported $h_i$ of positive mass, and let
+$f_i(t,\cdot)=g_t*h_i$ for $t>0$. Write
+$F(t,x)=\prod_i f_i(t,u_i\cdot x)^{c_i}$ and
+$v_i(t,s)=\partial_s\log f_i(t,s)$. Since $\partial_t f_i=\partial_s^2 f_i$, direct differentiation gives
+\[
+ \partial_t F-\Delta_x F
+ =F\left(\sum_i c_i v_i^2-
+ \left|\sum_i c_i u_i v_i\right|^2\right)\ge0.
+\]
+For the inequality, the map $W:\R^N\to\R^d$ with columns $\sqrt{c_i}u_i$ satisfies $WW^T=I_d$, hence has norm one; apply it to $(\sqrt{c_i}v_i)_i$. The Gaussian tail bounds for the heat convolutions and their derivatives justify differentiation under the integral and integration by parts for any compact time interval inside $(0,\infty)$. More explicitly, compact support gives $f_i(t,s)\le C e^{-c s^2}$ and logarithmic derivatives growing at most polynomially in $s$ on such time intervals; \eqref{eq:frame} then gives an integrable Gaussian bound for the product and its derivatives. Thus $\int F(t,x)\,dx$ is nondecreasing in $t$.
+
+Taking traces in \eqref{eq:frame} gives $\sum_i c_i=d$. With $M_i=\int h_i$, for fixed $z$,
+\[
+ \sqrt t\, f_i(t,\sqrt t\,u_i\cdot z)
+ \longrightarrow (4\pi)^{-1/2}M_i e^{-(u_i\cdot z)^2/4}.
+\]
+After $x=\sqrt t\,z$, the product therefore converges to
+$(4\pi)^{-d/2}(\prod_i M_i^{c_i})e^{-|z|^2/4}$.
+Compact support also bounds this product by $C e^{-|z|^2/8}$ for $t\ge1$, so dominated convergence gives
+$\lim_{t\to\infty}\int F(t,x)\,dx=\prod_i M_i^{c_i}$.
+
+At almost every $x$, each $u_i\cdot x$ is a Lebesgue point of $h_i$: the inverse image of a one-dimensional null set under a nonzero linear functional is a null set, as follows by rotation and Fubini. Fatou's lemma as $t\downarrow0$ now proves \eqref{eq:bl} in this case. Zero-mass factors give zero almost everywhere and cause no difficulty. Finally replace each general $h_i$ by $\min(h_i,m)\1_{[-m,m]}$ and use monotone convergence on both sides.
+\end{proof}
+
+\subsection{Projection densities without rotational independence}
+\begin{lemma}[Product projections]\label{lem:projection}
+Let $X$ have independent coordinate densities bounded by one and let $U\in\R^{n\times d}$ satisfy $U^TU=I_d$. Then $U^TX$ has a density satisfying
+\begin{equation}\label{eq:projection}
+ \norm{p_{U^TX}}_\infty\le e^{d/2}.
+\end{equation}
+Consequently a scalar linear form $a\cdot X$, $a\ne0$, has density at most $\sqrt e/|a|$.
+\end{lemma}
+\begin{proof}
+Choose versions of the densities bounded by one everywhere. Complete $U$ to an orthogonal matrix $(U,W)$, where $W$ has $n-d$ columns. For $d<n$, the change of variables $(y,z)\mapsto Uy+Wz$ and Fubini give the marginal density
+\[
+ p(y)=\int_{\R^{n-d}}\prod_i f_i((Uy)_i+w_i\cdot z)\,dz,
+\]
+where $w_i^T$ is row $i$ of $W$. Set $b_i=|w_i|^2=1-|U^Te_i|^2$. Factors with $b_i=0$ are at most one and can be dropped. The remaining unit vectors $v_i=w_i/\sqrt{b_i}$ satisfy
+$\sum_i b_i v_i v_i^T=I_{n-d}$. Apply Theorem~\ref{thm:bl} with
+\[
+ h_i(t)=f_i((Uy)_i+\sqrt{b_i}t)^{1/b_i}.
+\]
+Since $0<b_i\le1$, $f_i^{1/b_i}\le f_i$, so $\int h_i\le b_i^{-1/2}$. Hence
+$p(y)\le\prod_{b_i>0} b_i^{-b_i/2}$.
+The elementary inequality $-b\log b\le1-b$ for $0<b\le1$ gives
+\[
+ \log p(y)\le\frac12\sum_{i:b_i>0}(1-b_i)\le\frac12\sum_i(1-b_i)=\frac d2,
+\]
+where $b=0$ has zero contribution to $-b\log b$. The inequality $-b\log b\le1-b$ follows by integrating $-\log b\le b^{-1}-1$ or by differentiation. If $d=n$, the orthogonal image of the original product density is bounded by one. The scalar conclusion follows by scaling the unit-vector case.
+\end{proof}
+
+\begin{lemma}[Integrated scalar Fourier powers]\label{lem:scalar-fourier}
+For a probability density $0\le f\le1$ and every real $p\ge2$,
+\begin{equation}\label{eq:scalar-fourier}
+ \int_\R|\widehat f(t)|^p\,dt\le\frac{2\pi\sqrt{2e}}{\sqrt p}.
+\end{equation}
+If $X,X'$ are independent with density $f$, their difference has a probability density $g=f*\widetilde f\le1$, where $\widetilde f(x)=f(-x)$.
+\end{lemma}
+\begin{proof}
+The last assertion follows from $g(x)\le\norm f_\infty\int\widetilde f\le1$. Since $\norm f_2\le1$, Lemma~\ref{lem:fourier} gives $\int|\widehat f|^2\le2\pi$. Put $m=\lfloor p/2\rfloor\ge p/4$. Since $|\widehat f|\le1$,
+\[
+ \int|\widehat f|^p\le\int|\widehat f|^{2m}.
+\]
+The last integrand is the characteristic function of a sum of $m$ independent differences $X_j-X'_j$. It is integrable, so Fourier inversion evaluates its density at zero as $(2\pi)^{-1}\int|\widehat f|^{2m}$. Lemma~\ref{lem:projection}, applied to the $2m$ independent signed coordinates and coefficient vector of norm $\sqrt{2m}$, bounds this density by $\sqrt e/\sqrt{2m}$. This essential density bound applies at zero because Fourier inversion gives a continuous version. Thus
+\[
+ \int|\widehat f|^{2m}\le\frac{2\pi\sqrt e}{\sqrt{2m}}
+ \le\frac{2\pi\sqrt{2e}}{\sqrt p}.
+\]
+\end{proof}
+
+\section{Cross-block decoupling and a determinant bound}\label{sec:fourier}
+Throughout this section $X_I,X_J$ are disjoint subvectors of independent coordinates with densities bounded by one. The functions $F,G$ are real measurable and finite almost surely, and
+\begin{equation}\label{eq:cross-form}
+ Z=F(X_I)+2X_I^TMX_J+G(X_J),\qquad M\in\R^{|I|\times|J|}.
+\end{equation}
+In particular, every quadratic polynomial splits in this way across a coordinate partition, with all affine terms included.
+
+\begin{lemma}[Decoupling]\label{lem:decoupling}
+Let $D=X_J-X'_J$, where $X'_J$ is an independent copy. Then
+\begin{align}
+ |\phi_Z(t)|^2&\le\E_D\prod_{i\in I}|\widehat f_i(2t(MD)_i)|,\label{eq:decouple2}\\
+ |\phi_Z(t)|^4&\le\E_D\prod_{i\in I}|\widehat f_i(2t(MD)_i)|^2.\label{eq:decouple4}
+\end{align}
+The coordinates of $D$ are independent and each has a density bounded by one.
+\end{lemma}
+\begin{proof}
+Integrate first in $X_J$ and apply Cauchy--Schwarz in the probability law of $X_I$, discarding the modulus-one factor $e^{itF(X_I)}$:
+\[
+ |\phi_Z(t)|^2\le\E_{X_I}\left|\E_{X_J}e^{itG(X_J)+2itX_I^TMX_J}\right|^2.
+\]
+Expand the square using $X'_J$. Integration over the independent $X_i$, $i\in I$, gives the product of their Fourier transforms at $2t(MD)_i$, multiplied by $e^{it(G(X_J)-G(X'_J))}$. Taking absolute values proves \eqref{eq:decouple2}. Jensen's inequality applied to its nonnegative right side proves \eqref{eq:decouple4}. The independent coordinate pairs defining $D$ and Lemma~\ref{lem:scalar-fourier} prove its last property. All integrands before taking the Fourier estimates have modulus at most one, so these uses of Fubini require no moments.
+\end{proof}
+
+\begin{theorem}[Regularized crossing determinant]\label{thm:determinant}
+Every $Z$ in \eqref{eq:cross-form} satisfies
+\begin{equation}\label{eq:determinant}
+ |\phi_Z(t)|\le\det\left(I+\frac{t^2}{\pi^2e^2}M^TM\right)^{-1/8}.
+\end{equation}
+There is no rank, signature, or coordinate-leverage assumption.
+\end{theorem}
+\begin{proof}
+For $t=0$ the assertion is immediate. Set $a=2t$, $\alpha=(2\pi e)^2$, $d=|J|$, and
+\[
+ H=\alpha I_d+a^2M^TM.
+\]
+Let $m_i\in\R^d$ be the transpose of row $i$ of $M$, and define
+\[
+ c_j=\alpha e_j^TH^{-1}e_j,\qquad
+ d_i=a^2m_i^TH^{-1}m_i,\qquad
+ \theta=\sum_i d_i=\sum_j(1-c_j).
+\]
+The vectors $\sqrt\alpha H^{-1/2}e_j$ and $aH^{-1/2}m_i$ have outer products summing to $I_d$. Thus $0<c_j\le1$, $0\le d_i\le1$, and the trace gives the formula for $\theta$. Omit rows with $d_i=0$, for which the Fourier factor is one.
+
+Let $g_j$ be the density of $D_j$ and $h_i(u)=|\widehat f_i(u)|^2$. By \eqref{eq:decouple4}, it suffices to bound
+\[
+ \int_{\R^d}\prod_j g_j(x_j)\prod_i h_i(a m_i\cdot x)\,dx.
+\]
+Make the substitution $x=H^{-1/2}z$, normalize each nonzero vector in the preceding frame to a unit vector, and apply Theorem~\ref{thm:bl} with exponents $c_j,d_i$. The resulting bound is
+\begin{equation}\label{eq:graph-bl}
+ \det(H)^{-1/2}
+ \prod_j\left[\alpha^{c_j/2}c_j^{-c_j/2}\norm{g_j}_{1/c_j}\right]
+ \prod_i\left[d_i^{-d_i/2}\norm{h_i}_{1/d_i}\right].
+\end{equation}
+For example, $x_j=\sqrt{c_j/\alpha}\,u_j\cdot z$, so the one-dimensional change of variables in the corresponding integral produces $\alpha^{c_j/2}c_j^{-c_j/2}$. The other factors are identical with scale $\sqrt{d_i}$.
+
+Since $g_j\le1$ and $\int g_j=1$, $\norm{g_j}_{1/c_j}\le1$. Applying \eqref{eq:scalar-fourier} with $p=2/d_i\ge2$ gives
+\[
+ \norm{h_i}_{1/d_i}
+ =\left(\int|\widehat f_i|^{2/d_i}\right)^{d_i}
+ \le(2\pi\sqrt{e d_i})^{d_i}.
+\]
+The powers of $d_i$ cancel in \eqref{eq:graph-bl}. Also
+$\prod_j c_j^{-c_j/2}\le e^{\theta/2}$ by $-c\log c\le1-c$.
+Factoring $\alpha^d$ from $\det H$ reduces \eqref{eq:graph-bl} to
+\[
+ \det(I+a^2M^TM/\alpha)^{-1/2}
+ \left(\frac{2\pi e}{\sqrt\alpha}\right)^\theta
+ =\det(I+a^2M^TM/\alpha)^{-1/2}.
+\]
+Taking fourth roots in \eqref{eq:decouple4} proves \eqref{eq:determinant}.
+\end{proof}
+
+For $k\ge1$ define the crossing volume
+\begin{equation}\label{eq:Zk}
+ Z_k(M)=\sum_{\substack{S\subset I,\ T\subset J\\|S|=|T|=k}}\det(M_{S,T})^2.
+\end{equation}
+If $\sigma_j=s_j(M)$, Cauchy--Binet gives
+\begin{equation}\label{eq:det-expand}
+ \det(I+zM^TM)=\sum_{k\ge0}z^k Z_k(M),\qquad
+ Z_k(M)=\sum_{j_1<\cdots<j_k}\sigma_{j_1}^2\cdots\sigma_{j_k}^2,
+\end{equation}
+where $Z_0=1$. To see the first identity directly, expand the determinant by choosing either the identity or $zM^TM$ on each column; the coefficient is the sum of principal $k$-minors of $M^TM$. Cauchy--Binet expands each such minor into the squared minors in \eqref{eq:Zk}. Orthogonal diagonalization of $M^TM$ gives the second expression.
+
+\begin{corollary}[Volume envelopes]\label{cor:vol-fourier}
+If $Z_k(M)>0$ and $u_k=\pi e Z_k(M)^{-1/(2k)}$, then
+\begin{equation}\label{eq:vol-envelope}
+ |\phi_Z(t)|\le\min\{1,(u_k/|t|)^{k/4}\}.
+\end{equation}
+In particular,
+\begin{align}
+ Z_5(M)>0&\implies \norm{p_Z}_\infty\le5e Z_5(M)^{-1/10},\label{eq:five-volume}\\
+ Z_3(M)>0&\implies \sup_a\E|Z-a|^{-1/2}
+ \le12\sqrt{\frac e2 Z_3(M)^{-1/6}}.\label{eq:three-volume}
+\end{align}
+\end{corollary}
+\begin{proof}
+Retain just the order-$k$ term in \eqref{eq:det-expand} and combine with \eqref{eq:determinant} and $|\phi_Z|\le1$. For $k=5$, use Lemma~\ref{lem:envelope} with exponent $5/4$. For $k=3$, use Lemma~\ref{lem:riesz} with exponent $3/4$.
+\end{proof}
+
+\section{Grouped projections and marginal-free crossing volumes}\label{sec:grouped}
+The determinant estimate above controls a general physical crossing block but has exponent $k/4$ at volume order $k$. For a quadratic polynomial, retaining a group of original coordinates as variables permits a stronger estimate. The argument in this section gives exponent $q/2$ at order $q$, without a coordinate-leverage restriction.
+
+\begin{lemma}[Grouped product-Fourier bound]\label{lem:grouped}
+Let $H,I,J$ be disjoint original coordinate sets, $|H|=k$, and write
+\begin{equation}\label{eq:grouped-form}
+ Q=F(X_H)+2X_H^T(M_I X_I+M_J X_J+\beta)+R(X_I,X_J),
+\end{equation}
+where $F$ is real measurable and $R$ is a real quadratic polynomial. Assume $M_J$ has row rank $k$ and put $S=\sqrt{\det(M_JM_J^T)}$. For $k=0$, omit the hub variables and set $S=1$. Let $a_i$ be row $i$ of the $I$--$J$ quadratic cross block of $R$, and decompose
+\[
+ a_i=c_i+\lambda_iM_J,\qquad c_i\perp\operatorname{row}(M_J).
+\]
+Collect the $c_i$ in $C$. Given $\ell\ge1$, suppose
+\[
+ Z=\sum_{|T|=\ell}\det(C_TC_T^T)>0,\quad
+ w_T=\frac{\det(C_TC_T^T)}Z,\quad
+ \alpha_i=\sum_{T\ni i}w_T\le\frac12.
+\]
+Zero weights and zero marginals are omitted. Put $q=k+\ell$. Then
+\begin{equation}\label{eq:grouped-envelope}
+ |\phi_Q(t)|\le\min\{1,B_{k,\ell}|t|^{-q/2}\},
+\end{equation}
+where
+\begin{equation}\label{eq:grouped-constant}
+ B_{k,\ell}=\pi^{q/2}2^{\ell/4}e^{(k+2\ell)/4}
+ \left(\frac{\ell^\ell}{\ell!}\right)^{1/4}S^{-1/2}Z^{-1/4}.
+\end{equation}
+All original coordinate densities are bounded by one, and no independence of projected coordinates is required.
+\end{lemma}
+\begin{proof}
+First assume $k>0$. Push the complex measure $e^{itF}\,dP_H$ to $X_H$, obtaining a complex density $a_t$. Its modulus is dominated by the ordinary product density, so $\norm{a_t}_2^2\le1$. Push $e^{itR}\,dP_{I,J}$ through $M_I X_I+M_J X_J$, obtaining a complex density $\mu_t$. This exists and is in $L^1\cap L^2$: the ordinary image law is a convolution of the law of $M_I X_I$ with the law of $M_J X_J$, whose density is bounded by $e^{k/2}/S$ by Lemma~\ref{lem:projection} and linear scaling. The total variation of the complex image is dominated by that ordinary law. Fubini, Cauchy--Schwarz and $k$-dimensional Plancherel give
+\begin{equation}\label{eq:hub-cs}
+ |\phi_Q(t)|^2\le\left(\frac\pi{|t|}\right)^k\norm{\mu_t}_2^2.
+\end{equation}
+The multidimensional Fourier identities follow from the proof of Lemma~\ref{lem:fourier} with the product Gaussian, giving the factor $(2\pi)^k$ in Plancherel and hence $(\pi/|t|)^k$ at the scale $2t$.
+
+Choose a nonnegative smooth compactly supported probability mollifier $\rho_\delta$ on $\R^k$, and put $K_\delta=\rho_\delta*\widetilde\rho_\delta$, where $\widetilde\rho_\delta(z)=\rho_\delta(-z)$. This is a nonnegative probability density. Conditional on $X_I=x$, let $\nu_{t,x}$ be the complex pushforward of $e^{itR(x,X_J)}\,dP_J$ through $M_JX_J$. The complex measure $\mu_t$ is the average of its translations by $M_Ix$. Jensen in the Hilbert space $L^2$, and invariance of that norm under translation, imply
+\[
+ \norm{\mu_t*\rho_\delta}_2^2
+ \le\E_{X_I}\norm{\nu_{t,X_I}*\rho_\delta}_2^2.
+\]
+Expand the right side using independent copies $X_J,X'_J$. With $D=X_J-X'_J$, the mollifier kernel is $K_\delta(M_JD)$. The pure $I$ phase cancels. Integrating in $X_I$ first gives a product of scalar characteristic functions; the remaining pure $J$ phase is then bounded in modulus by one. Thus
+\begin{equation}\label{eq:mollified-light}
+ \norm{\mu_t*\rho_\delta}_2^2
+ \le\E_D K_\delta(M_JD)\prod_{i\in I}|\widehat f_i(2t a_iD)|.
+\end{equation}
+The $D_j$ are independent with densities at most one. The kernel is bounded for fixed $\delta$, so the expansions are absolutely integrable. Notice that \eqref{eq:mollified-light} is an estimate for the mollified norm; the limit will be taken only after a bound uniform in $\delta$ is established.
+
+Apply weighted H\"older to the finite measure $K_\delta(M_JD)\,dP_D$ with weights $w_T$. This measure need not be a probability measure. Since $\sum_{T\ni i}w_T/\alpha_i=1$, it suffices to estimate the $T$-integrals with scalar exponents $1/\alpha_i\ge2$. The full-row-rank map
+\[
+ D\longmapsto (M_JD,(c_iD)_{i\in T})
+\]
+has row Gram determinant $S^2\det(C_TC_T^T)$. Its joint density is therefore at most $e^{q/2}/(S\sqrt{\det(C_TC_T^T)})$: factor the map as the positive square root of its row Gram matrix times an orthogonal projection, and use Lemma~\ref{lem:projection}. For a fixed first component $z$, the other arguments have shifts $a_iD=c_iD+\lambda_i z$. Lemma~\ref{lem:scalar-fourier} gives
+\[
+ \int_\R |\widehat f_i(2t(y+u))|^{1/\alpha_i}\,dy
+ \le\frac{\pi\sqrt{2e\alpha_i}}{|t|},
+\]
+uniformly in $u$. Integration in the residual components and then in $z$, using $\int K_\delta=1$, bounds the $T$-integral by
+\begin{equation}\label{eq:subset-bound}
+ \frac{e^{q/2}}{S\sqrt{\det(C_TC_T^T)}}
+ \left(\frac{\pi\sqrt{2e}}{|t|}\right)^\ell
+ \prod_{i\in T}\sqrt{\alpha_i}.
+\end{equation}
+
+Let $\mathcal H(w)=-\sum_Tw_T\log w_T$. Randomly order the $\ell$ elements of a subset sampled from $w$. The ordered tuple has entropy $\mathcal H(w)+\log(\ell!)$, and each of its positions has marginal law $\alpha_i/\ell$. Entropy subadditivity yields
+\begin{equation}\label{eq:subset-entropy}
+ \mathcal H(w)+\sum_i\alpha_i\log\alpha_i
+ \le\ell\log\ell-\log(\ell!).
+\end{equation}
+For completeness, subadditivity follows by applying $\log u\le u-1$ to the relative entropy of the joint law with respect to the product of its marginals; the latter is nonnegative. All sets here are finite. Because $\det(C_TC_T^T)=Zw_T$, taking the weighted geometric mean of \eqref{eq:subset-bound} and using \eqref{eq:subset-entropy} gives
+\[
+ \norm{\mu_t*\rho_\delta}_2^2
+ \le\frac{e^{q/2}}{S\sqrt Z}
+ \left(\frac{\pi\sqrt{2e}}{|t|}\right)^\ell
+ \left(\frac{\ell^\ell}{\ell!}\right)^{1/2}.
+\]
+As $\delta\downarrow0$, convergence in $L^2$ gives the same bound for $\mu_t$. Combine it with \eqref{eq:hub-cs} and take square roots to obtain \eqref{eq:grouped-envelope}--\eqref{eq:grouped-constant}.
+
+When $k=0$, start instead with the direct one-bank decoupling inequality \eqref{eq:decouple2} applied to $R$. There is no kernel, no image measure, and no hub Plancherel factor. The same weighted H\"older argument and subset calculation prove the assertion with $S=1$ and $q=\ell$.
+\end{proof}
+
+\begin{lemma}[Terminal physical hub block]\label{lem:terminal}
+Suppose $q$ literal original coordinates cross an independent product bank through a row-rank-$q$ block $P$. If $G=\det(PP^T)>0$, then arbitrary internal quadratic and affine terms satisfy
+\begin{equation}\label{eq:terminal}
+ |\phi_Q(t)|\le\min\{1,\pi^{q/2}e^{q/4}G^{-1/4}|t|^{-q/2}\}.
+\end{equation}
+Additional original coordinates may be conditioned on.
+\end{lemma}
+\begin{proof}
+The phase-weighted density of the $q$ literal coordinates has squared $L^2$ norm at most one. Push the phase-weighted law of the other bank through $PX$; its modulus is dominated by a probability density bounded by $e^{q/2}/\sqrt G$, so its squared $L^2$ norm has the same bound. Plancherel and Cauchy--Schwarz give \eqref{eq:terminal}. Conditioning on any remaining original coordinates changes only the internal and affine terms, for which the envelope is uniform; average the conditional characteristic functions.
+\end{proof}
+
+\begin{theorem}[Marginal-free crossing estimates]\label{thm:free-volume}
+Let $M=A_{I,J}$ be a literal crossing block of a real quadratic polynomial with independent cap-one coordinate laws. Then
+\begin{align}
+ Z_3(M)>0&\implies \norm{p_Q}_\infty\le C_3 Z_3(M)^{-1/6},
+ &C_3&=3\sqrt2 e(9/2)^{1/6}<15,\label{eq:free-three}\\
+ Z_2(M)>0&\implies \sup_a\E|Q-a|^{-1/2}\le C_2 Z_2(M)^{-1/8},
+ &C_2&=8\sqrt e\,2^{-1/8}<14.\label{eq:free-two}
+\end{align}
+No row-marginal or exact-rank assumption is imposed. The first conclusion has a continuous density; the second is only a fractional-potential assertion.
+\end{theorem}
+\begin{proof}
+Condition on coordinates outside $I\cup J$ if necessary. For $q=2$ or $3$, let $Z=Z_q(M)$ and use its representation as the sum of the $q$-row Gram determinants. If all incident row-volume marginals are at most $1/2$, apply Lemma~\ref{lem:grouped} with $k=0,\ell=q$. Otherwise choose a physical row carrying incident mass greater than $Z/2$ and retain its original coordinate as a hub. Project the remaining row vectors orthogonally off the chosen row. The Gram determinant formula gives
+\[
+ \text{incident volume}=|\text{chosen row}|^2\,
+     \text{residual volume of order }q-1.
+\]
+If a residual row still carries more than half the residual volume, retain it too. Iterating, after $k$ retained rows the product of the squared hub-row volume and the residual order-$(q-k)$ volume is greater than $Z/2^k$. This identity follows at each step by applying Gram--Schmidt to every row subset containing the chosen row and then summing. Retained rows are linearly independent because their conditional incident volume is positive.
+
+Stop at a diffuse residual stage and use Lemma~\ref{lem:grouped}, or after $q$ hubs and use Lemma~\ref{lem:terminal}. Couplings between hubs and remaining original left-bank coordinates are retained in $M_I$; they are not discarded. The hub law has cap one, because the hubs are literal original coordinates rather than a rotated vector.
+
+For $q=3$, Fourier inversion of the resulting exponent-$3/2$ envelopes yields, after the possible factor-$2^k$ volume loss, the coefficients
+\[
+ 3\sqrt2\,e^{1-k/6}
+ \left(\frac{(3-k)^{3-k}}{(3-k)!}\right)^{1/6},
+ \qquad k=0,1,2,
+\]
+and terminal coefficient $3\sqrt{2e}$. They are all at most the $k=0$ value $C_3$. Also $e<11/4$ and
+\[
+ 15^6-26244(11/4)^6=\frac{40788279}{1024}>0,
+\]
+so $C_3<15$.
+
+For $q=2$, all envelopes have exponent one. Lemma~\ref{lem:riesz} and
+\[
+ \int_\R\min(1,B/|t|)|t|^{-1/2}\,dt=8\sqrt B
+\]
+give coefficient $C_2$ in the initial diffuse case. The one-hub and terminal coefficients are, respectively, $8\,2^{-1/4}e^{3/8}$ and $8\,2^{-1/4}e^{1/4}$, both smaller. Finally $C_2<8\sqrt3<14$. The elementary estimate $e<11/4$ follows by summing its series through degree four and bounding the remaining tail by $1/100$.
+\end{proof}
+
+\section{Coordinate changes of variables and weak concentration}\label{sec:pivots}
+\subsection{Scalar and definite two-coordinate estimates}
+\begin{lemma}[Scalar square profile]\label{lem:square}
+If $Y$ has density $f\le1$, $a\ne0$, and $T=a(Y-m)^2+v$, then on the side $(z-v)/a>0$ its density is
+\[
+ p_T(z)=\frac{f(m+r)+f(m-r)}{2\sqrt{|a||z-v|}}
+ \le\frac1{\sqrt{|a||z-v|}},\qquad r=\sqrt{|z-v|/|a|},
+\]
+and it vanishes on the other side. Every interval of length $2\rho$ has inverse image under $y\mapsto ay^2+dy+e$ of length at most $2\sqrt{2\rho/|a|}$.
+\end{lemma}
+\begin{proof}
+Split at the vertex and change variables on the two monotone half-lines. For the length bound complete the square. On the nonnegative half-axis an interval of squared values of length $\delta$ has radial length at most $\sqrt\delta$, because $\sqrt{u+\delta}-\sqrt u\le\sqrt\delta$. Account for the two half-lines and take $\delta=2\rho/|a|$.
+\end{proof}
+
+Conditioning on $X_{-i}$ at a scalar pivot $a=A_{ii}\ne0$ gives
+\begin{equation}\label{eq:profile}
+ Q=a(X_i-m(X_{-i}))^2+R(X_{-i}),\qquad
+ p_Q(z)\le |a|^{-1/2}\E|z-R|^{-1/2}
+\end{equation}
+for almost every $z$. The quadratic matrix of $R$ is the Schur complement of $a$; its affine term is unrestricted. This is a domination formula, not a claim that the square and $R$ are independent. It follows rigorously by applying Lemma~\ref{lem:square} conditionally against any nonnegative output test function, then using Tonelli.
+
+\begin{lemma}[Definite pair]\label{lem:definite}
+If $W\in\R^2$ has a joint density bounded by $M$ and $B$ is real symmetric positive or negative definite, then every quadratic polynomial in $W$ with quadratic part $B$ has a density bounded by $\pi M/\sqrt{|\det B|}$.
+\end{lemma}
+\begin{proof}
+Change sign if necessary, complete the square, and orthogonally diagonalize the deterministic two-dimensional integral. For eigenvalues $\mu_1,\mu_2>0$, use
+\[
+ w=w_0+\sqrt{\delta/\mu_1}\cos\theta\,e_1+
+ \sqrt{\delta/\mu_2}\sin\theta\,e_2,
+ \qquad \delta>0,\quad0\le\theta<2\pi.
+\]
+The Jacobian in $(\delta,\theta)$ is $1/(2\sqrt{\det B})$. Integrating the joint density over $\theta$ proves the result. No independence after rotation is used.
+\end{proof}
+
+\subsection{A uniform logarithmic envelope for an indefinite pair}
+\begin{lemma}[Hyperbolic pair]\label{lem:hyperbola}
+Let $W_1,W_2$ be independent with densities bounded by one, and let
+$q(w)=(w-w_0)^TB(w-w_0)+v$, where $B$ is a real symmetric indefinite $2\times2$ matrix. Put $D=|\det B|>0$. For almost every $z\ne v$,
+\begin{equation}\label{eq:hyperbola}
+ p_{q(W)}(z)\le D^{-1/2}
+ \left(6+\logp\frac{16\sqrt D}{|z-v|}\right).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Translate $w_0$ to zero; separate translations preserve independence and the density caps. Write the eigenvalues as $\mu_+>0>\mu_-$, take orthonormal eigenvectors $e_+,e_-$, and set $\Lambda=\mu_+^{-1}+|\mu_-|^{-1}$. For $\delta=z-v>0$, the two branches of the level set are
+\[
+ w_\epsilon(t)=\epsilon\sqrt{\delta/\mu_+}\cosh t\,e_+
+ +\sqrt{\delta/|\mu_-|}\sinh t\,e_-,
+ \qquad \epsilon=\pm1,\quad t\in\R.
+\]
+Direct differentiation shows that the absolute Jacobian in $(\delta,t)$ is $1/(2\sqrt D)$. Thus, by change of variables against nonnegative test functions,
+\begin{equation}\label{eq:hyper-coarea}
+ p_{q(W)}(v+\delta)=\frac1{2\sqrt D}
+ \sum_{\epsilon=\pm1}\int_\R f_1(w_{\epsilon,1}(t))f_2(w_{\epsilon,2}(t))\,dt
+\end{equation}
+for almost every $\delta>0$.
+
+Fix a branch and write it as $ue^t+we^{-t}$. Orthogonality gives $|u|=|w|=\rho_0=\sqrt{\delta\Lambda}/2$. Choose an original coordinate $i$ with $|u_i|\ge\rho_0/\sqrt2$. If $t\ge T_1=(3/4)\log2$, then $|w_i|e^{-t}\le|u_i|e^t/2$. Therefore the coordinate function is monotone, stays on one side of zero, and satisfies
+\[
+ \tfrac12|u_i|e^t\le|w_{\epsilon,i}(t)|\le\tfrac32|u_i|e^t,
+ \qquad |w'_{\epsilon,i}(t)|\ge\tfrac12|u_i|e^t\ge |w_{\epsilon,i}(t)|/3.
+\]
+Put $T=\max\{T_1,\log(2/|u_i|)\}$ and $m=|u_i|e^T/2\ge1$. On this tail $f_1f_2\le f_i$, so change of variables gives
+\[
+ \int_T^\infty f_1(w_{\epsilon,1}(t))f_2(w_{\epsilon,2}(t))\,dt
+ \le3\int_{\substack{|y|\ge m\\\text{one sign}}}\frac{f_i(y)}{|y|}\,dy
+ \le3\log(1+1/m)\le3\log2.
+\]
+For the middle inequality, among nonnegative functions bounded by one with mass at most one on a half-line, the integral against the decreasing function $1/|y|$ is maximized by filling the length-one interval nearest to $m$. This assertion also follows by writing the decreasing weight as the integral of its interval superlevel indicators and bounding each overlap by the smaller of one and the interval length.
+
+The negative tail is treated in the same way using $w$ instead of $u$, with cutoff $T'$. Since $|u_i|\ge\sqrt{\delta\Lambda}/(2\sqrt2)$, both cutoffs satisfy
+\[
+ T,T'\le\frac34\log2+\frac12\logp\frac{32}{\delta\Lambda}.
+\]
+The middle integrand is bounded by one. Hence each branch integral is at most
+\[
+ \frac{15}{2}\log2+\logp\frac{32}{\delta\Lambda}
+ <6+\logp\frac{32}{\delta\Lambda}.
+\]
+Insert this in \eqref{eq:hyper-coarea}. Finally $\Lambda\ge2/\sqrt D$ by arithmetic--geometric mean. If $\delta<0$, interchange the positive and negative eigenvalues after negating the form. The same bound follows. The exceptional critical level is a Lebesgue null set; all formulas can be used after conditioning through the nonnegative test-function formulation, without selecting pointwise values of rough densities on exceptional slices.
+\end{proof}
+
+\subsection{One nonzero spectral direction controls logarithms}
+\begin{lemma}[Quarter-power concentration]\label{lem:quarter}
+Let $S=S^T\ne0$, let $R=X^TSX+b^TX+c$, and put $L=\norm S>0$. Then, for all $a\in\R$ and $\rho>0$,
+\begin{equation}\label{eq:quarter}
+ \PP\{|R-a|<\rho\}\le\min\{1,5(\rho/L)^{1/4}\}.
+\end{equation}
+In particular $R$ has no atoms. If $L\ge1$, then
+\begin{equation}\label{eq:log-bound}
+ \sup_a\E\logp\frac1{|R-a|}\le L_0:=4+4\log5.
+\end{equation}
+\end{lemma}
+\begin{proof}
+If some $|S_{ii}|\ge L/2$, conditioning on the other coordinates and Lemma~\ref{lem:square} give probability at most $4\sqrt{\rho/L}$. Since $\min(1,4\sqrt x)\le2x^{1/4}$ for $x>0$, this is stronger than the claimed bound.
+
+Otherwise set $O=S-\diag S$, so $\norm O\ge L/2$. Let $E_\epsilon$ be a diagonal matrix of independent fair signs, and put $C_\epsilon=(O-E_\epsilon O E_\epsilon)/2$. The zero diagonal of $O$ gives $\E C_\epsilon=O/2$. Convexity of the operator norm implies that some choice has $\norm C_\epsilon\ge\norm O/2\ge L/4$. After partitioning the coordinates according to their signs,
+\[
+ C_\epsilon=\begin{pmatrix}0&M\\M^T&0\end{pmatrix},\qquad
+ M=S_{I,J},\qquad \norm M=\norm C_\epsilon\ge L/4.
+\]
+The last norm equality follows by squaring the block matrix. Retaining the largest singular-value factor in Theorem~\ref{thm:determinant} gives
+\[
+ |\phi_R(t)|\le\left(\frac{4\pi e}{L|t|}\right)^{1/4}\quad(t\ne0).
+\]
+For $v>0$, the inequality $\1_{\{|x|<\rho\}}\le e^v e^{-vx^2/\rho^2}$ and Lemma~\ref{lem:fourier} imply
+\[
+ \PP\{|R-a|<\rho\}\le\frac{e^v\rho}{2\sqrt{\pi v}}
+ \int_\R e^{-\rho^2t^2/(4v)}|\phi_R(t)|\,dt.
+\]
+Use $\int_\R e^{-ut^2}|t|^{-1/4}\,dt=u^{-3/8}\Gamma(3/8)$, obtained by substituting $w=ut^2$, and take $v=1/8$. The coefficient of $(\rho/L)^{1/4}$ is
+\[
+ 2^{5/8}\pi^{-1/4}e^{3/8}\Gamma(3/8)<5.
+\]
+Here is an elementary bound with room to spare. On $[0,1]$, $e^{-x}\le1-x+x^2/2$, and for $x\ge1$, $x^{-5/8}\le1$. Thus
+\[
+ \Gamma(3/8)\le\frac83-\frac8{11}+\frac4{19}+e^{-1}
+ <\frac83-\frac8{11}+\frac4{19}+\frac38.
+\]
+Using $2^{5/8}<8/5$, $\pi^{-1/4}<10/13$, and $e^{3/8}<8/5$, the preceding coefficient is at most
+\[
+ \frac85\frac{10}{13}\frac85
+ \left(\frac83-\frac8{11}+\frac4{19}+\frac38\right)<5.
+\]
+The elementary bounds $3<\pi<4$ and $8/3<e<3$, followed by raising to integer powers, verify the three comparisons. This proves \eqref{eq:quarter}; decreasing $\rho$ to zero excludes atoms.
+
+For $L\ge1$, layer cake and \eqref{eq:quarter} give
+\[
+ \E\logp\frac1{|R-a|}
+ =\int_0^\infty\PP\{|R-a|<e^{-u}\}\,du
+ \le\int_0^\infty\min(1,5e^{-u/4})\,du
+ =4+4\log5.
+\]
+\end{proof}
+
+\section{Disjoint minors and a sharper interpolation argument}\label{sec:skeleton}
+\begin{definition}\label{def:pivot-volume}
+With $d,p,h,\kappa$ from \eqref{eq:parameters}, a pivot of a real symmetric $A$ is either a scalar entry $|A_{ii}|\ge d$, or a principal $2\times2$ determinant of modulus at least $p$. For any real square matrix $A$ and $r\ge1$, define
+\begin{equation}\label{eq:Vr}
+ V_r(A)=\sum_{\substack{S,T\subset[n],\ |S|=|T|=r\\S\cap T=\varnothing}}\det(A_{S,T})^2,
+ \qquad V_0(A)=1.
+\end{equation}
+The sum is over ordered pairs of subsets, each listed in increasing order. An empty sum equals zero.
+\end{definition}
+In the absence of a pivot, symmetry gives
+\begin{equation}\label{eq:small-entry}
+ |A_{ii}|<d,\qquad |A_{ij}|^2<p+d^2=\frac{13}{1600}<\frac1{121},
+ \qquad |A_{ij}|<\frac1{11}\quad(i\ne j).
+\end{equation}
+Indeed $A_{ij}^2\le |A_{ii}A_{jj}|+|A_{ii}A_{jj}-A_{ij}^2|$.
+
+\begin{lemma}[Volume-sampled interpolation]\label{lem:sampling}
+Suppose $V_r(A)>0$, $r\ge1$. There exist disjoint $r$-sets $S,T$ with $B=A_{S,T}$ invertible such that, with $L=[n]\setminus(S\cup T)$ and
+\begin{equation}\label{eq:P}
+ P=A_{\cdot,T}B^{-1}A_{S,\cdot},\qquad
+ F=\off(A_{L,L}-P_{L,L}),
+\end{equation}
+we have
+\begin{equation}\label{eq:sampling}
+ \norm F_F^2\le(r+1)^2\frac{V_{r+1}(A)}{V_r(A)}.
+\end{equation}
+The matrix $P$ need not be symmetric. Its rank is at most $r$, and it agrees exactly with $A$ on rows $S$ and columns $T$.
+\end{lemma}
+\begin{proof}
+Sample each nonsingular pair with weight $\det(B)^2/V_r(A)$. For $\ell,m\in L$, $\ell\ne m$, the bordered determinant formula, obtained by subtracting $A_{\ell,T}B^{-1}$ times the first $r$ rows from the last row, gives
+\[
+ \det(A_{S\cup\{\ell\},\,T\cup\{m\}})^2
+ =\det(B)^2(A_{\ell m}-P_{\ell m})^2.
+\]
+Squaring removes the signs caused by sorting the row and column index sets. On summing, any ordered pair of disjoint $(r+1)$-sets is counted at most $(r+1)^2$ times, according to the removed row and column. Singular seeds contribute no term and may have nonsingular extensions, so this count gives an inequality, not an asserted equality. Dividing by $V_r$ proves the expected bound and therefore the existence of one seed satisfying \eqref{eq:sampling}. The rank bound is immediate from the factorization. Finally $P_{S,\cdot}=BB^{-1}A_{S,\cdot}$ and $P_{\cdot,T}=A_{\cdot,T}B^{-1}B$ prove the interpolation properties.
+\end{proof}
+
+\begin{lemma}[Diagonal plus interpolation, with restricted rank]\label{lem:completion}
+For a seed as in Lemma~\ref{lem:sampling}, there is a decomposition
+\begin{equation}\label{eq:completion}
+ A=D+R+E
+\end{equation}
+with $D$ diagonal, $D_{ii}=0$ on $S\cup T$, $E_{ii}=0$ everywhere, and
+\begin{equation}\label{eq:completion-bounds}
+ \norm E_F\le(r+1)\sqrt{V_{r+1}/V_r},\qquad
+ \rank R\le3r,\qquad R_{L,L}=P_{L,L},\quad\rank R_{L,L}\le r.
+\end{equation}
+Neither $R$ nor $E$ is required to be symmetric.
+\end{lemma}
+\begin{proof}
+Set $E_{L,L}=F$ and set all other entries of $E$ to zero. Define $D_{ii}=A_{ii}-P_{ii}$ on $L$ and $D_{ii}=0$ on $S\cup T$. Then $R=A-D-E$ has $R_{L,L}=P_{L,L}$ and the displayed norm bound. By interpolation, $R-P$ vanishes on every row in $S$, every column in $T$, and the entire $L\times L$ block. Every remaining possible nonzero entry has its row in $T$ or its column in $S$. Decompose $R-P$ as its rows in $T$ plus the remaining entries in columns $S$. These two matrices have ranks at most $r$ each. Consequently $\rank R\le\rank P+2r\le3r$. The restricted rank assertion follows directly from $R_{L,L}=P_{L,L}$.
+\end{proof}
+
+\begin{proposition}[No-pivot spectral-to-volume bound]\label{prop:volume}
+Let $1\le k\le3$. If $A=A^T$ has no pivot and $s_{4k-3}(A)\ge1$, then
+\begin{equation}\label{eq:volume-lower}
+ V_k(A)\ge\kappa^k.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Suppose $V_k<\kappa^k$. Telescoping the successive positive volume ratios, or choosing the first zero volume and its positive predecessor, produces $0\le r\le k-1$ with $V_r>0$ and $V_{r+1}<\kappa V_r$. If $r=0$, then $V_1=\norm{\off A}_F^2<\kappa$ and $\norm A<d+h<1$, a contradiction.
+
+Otherwise $1\le r\le2$. Lemma~\ref{lem:completion} gives $A=D+R+E$ with $\rank R\le3r$, $\rank R_{L,L}\le r$, $D$ zero on the seed, $E$ zero diagonal, and $\varepsilon=\norm E_F\le(r+1)h$. Put $m=4k-3\ge4r+1$. Lemma~\ref{lem:rank} implies
+\[
+ s_m(D+R)=s_m(A-E)\ge1-\varepsilon,\qquad
+ s_{m-3r}(D)\ge s_m(D+R)\ge1-\varepsilon.
+\]
+Thus at least $r+1$ entries of $D$ have modulus at least $1-\varepsilon$, and all lie in $L$. On a set $H\subset L$ of $r+1$ such coordinates, \eqref{eq:small-entry} gives
+\[
+ |R_{ii}|\ge1-\varepsilon-d,\qquad
+ \sum_{j\in H\setminus\{i\}}|R_{ij}|<r(1/11+\varepsilon).
+\]
+The diagonal-dominance margin is at least
+\[
+ 1-d-r/11-(r+1)^2h=
+ \begin{cases}1131/2200,&r=1,\\51/2200,&r=2.\end{cases}
+\]
+Both are positive. Lemma~\ref{lem:dd} therefore makes $R_{H,H}$ invertible, contradicting $\rank R_{L,L}\le r$. The perturbation estimates concern singular values of nonsymmetric auxiliaries, not eigenvalues of those matrices.
+\end{proof}
+
+\begin{lemma}[Random coordinate cut]\label{lem:cut}
+For a fair independent partition $[n]=I\sqcup J$,
+\begin{equation}\label{eq:cut}
+ \E_{I,J}Z_k(A_{I,J})=4^{-k}V_k(A).
+\end{equation}
+Consequently the hypotheses of Proposition~\ref{prop:volume} give a partition with $Z_k(A_{I,J})\ge4^{-k}\kappa^k$.
+\end{lemma}
+\begin{proof}
+Expand $Z_k$ as in \eqref{eq:Zk}. Each ordered disjoint pair $(S,T)$ contributes exactly when $S\subset I$ and $T\subset J$, an event of probability $2^{-2k}=4^{-k}$. Linearity of expectation gives \eqref{eq:cut}, and at least one realization is no smaller than its mean.
+\end{proof}
+
+\begin{corollary}[No-pivot analytic consequences]\label{cor:no-pivot}
+For arbitrary affine terms and independent cap-one coordinate laws,
+\begin{align}
+ A\text{ has no pivot},\ s_5(A)\ge1
+ &\implies\sup_a\E|Q-a|^{-1/2}<70,\label{eq:no-pivot-five}\\
+ A\text{ has no pivot},\ s_9(A)\ge1
+ &\implies\norm{p_Q}_\infty<375.\label{eq:no-pivot-nine}
+\end{align}
+\end{corollary}
+\begin{proof}
+Use Proposition~\ref{prop:volume} and Lemma~\ref{lem:cut} with $k=2$ or $3$. Some literal crossing block has $Z_k\ge4^{-k}\kappa^k$, so $Z_k^{-1/(2k)}\le2/h=25$. Theorem~\ref{thm:free-volume} gives the bounds $C_2\sqrt{25}<70$ and $25C_3<375$.
+\end{proof}
+
+\section{Full half potentials and completion of the proof}\label{sec:finish}
+A full negative half moment can be substantially smaller than the bound obtained by integrating a density envelope on a fixed interval and then adding one. This distinction is useful at a two-coordinate pivot.
+
+\begin{lemma}[A sharper scalar convolution kernel]\label{lem:kernels}
+For $u\ne0$,
+\begin{equation}\label{eq:J}
+ J(u)=\int_{-1}^1|x|^{-1/2}|x-u|^{-1/2}\,dx
+ \le J_0+2\logp(1/|u|),\qquad J_0=\pi+4\log2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Reflect to assume $u>0$. For $0<u\le1$, substitutions on $[-1,0]$, $[0,u]$, and $[u,1]$ give
+\[
+ J(u)=\pi+2\operatorname{arsinh}(1/\sqrt u)
+          +2\operatorname{arcosh}(1/\sqrt u).
+\]
+The product $(1+\sqrt{1+u})(1+\sqrt{1-u})$ is at most four: the two roots sum to at most two and their product is at most one. Use the logarithmic formulas for the inverse hyperbolic functions to obtain \eqref{eq:J}. For $u\ge1$,
+\[
+ J(u)=2\operatorname{arsinh}(1/\sqrt u)+2\arcsin(1/\sqrt u),
+\]
+which decreases in $u$. Its value at one is less than $J_0$.
+\end{proof}
+
+\begin{lemma}[Full half potential of a pair]\label{lem:pair-full}
+A quadratic polynomial in two independent cap-one original coordinates, with real symmetric quadratic matrix of determinant modulus $D>0$, satisfies
+\begin{equation}\label{eq:pair-full}
+ \sup_a\E|Q-a|^{-1/2}<16D^{-1/4}.
+\end{equation}
+The estimate is uniform in its affine terms.
+\end{lemma}
+\begin{proof}
+For a definite pair the density bound $\pi/\sqrt D$ from Lemma~\ref{lem:definite} suffices. Indeed, a probability density bounded by $M$ has full half potential at most
+\[
+ \int_0^\infty\min(1,2Mt^{-2})\,dt=2\sqrt{2M},
+\]
+which is stronger than \eqref{eq:pair-full}.
+
+For an indefinite pair, let $v$ be its critical value and put $Z=(Q-v)/\sqrt D$. Lemma~\ref{lem:hyperbola} gives a unit-mass density $h(z)\le6+\logp(16/|z|)$. Split $\E|Z-a|^{-1/2}$ at $|Z-a|=\delta$, $0<\delta\le16$. The far part costs at most $\delta^{-1/2}$. In the near part, the integral of the translated logarithmic envelope against $|z-a|^{-1/2}\1_{\{|z-a|\le\delta\}}$ is maximal at $a=0$. To justify this for rough densities, write the two nonnegative majorizing factors as integrals of their superlevel-set indicators and use Tonelli. Their superlevel sets are intervals centered at $a$ and zero; their overlap is maximal when their centers agree. It follows that the near part is at most
+\[
+ \int_{-\delta}^{\delta}|z|^{-1/2}\bigl(6+\log(16/|z|)\bigr)\,dz
+ =4\sqrt\delta\bigl(8+\log(16/\delta)\bigr).
+\]
+At $\delta=1/64$ the sum of near and far bounds is $12+5\log2<16$. Undo the output scaling. This is a full half-potential bound, so no additional tail term is required. The same argument applies after conditioning on complementary original coordinates, uniformly in the conditional critical value and affine coefficients.
+\end{proof}
+
+\begin{proposition}[Five-eigenvalue half potential]\label{prop:five}
+Suppose $s_5(A)\ge1$. With $d,p$ from \eqref{eq:parameters}, every quadratic polynomial in independent cap-one coordinates with this quadratic part satisfies
+\begin{equation}\label{eq:five-half}
+ \sup_a\E|Q-a|^{-1/2}
+ \le \max\{70,\ 16p^{-1/4},\ 1+d^{-1/2}(J_0+2L_0)\},
+ \qquad L_0=4+4\log5.
+\end{equation}
+\end{proposition}
+\begin{proof}
+If no pivot exists, use \eqref{eq:no-pivot-five}. If a scalar pivot has $|A_{ii}|\ge d$, apply the conditional profile \eqref{eq:profile}. Its Schur remainder $R$ has a quadratic matrix with at least one large eigenvalue by Lemma~\ref{lem:schur}. For any center $a$, Tonelli gives
+\[
+ \E\bigl[|Q-a|^{-1/2}\1_{\{|Q-a|\le1\}}\bigr]
+ \le d^{-1/2}\E J(R-a)
+ \le d^{-1/2}(J_0+2L_0),
+\]
+by Lemmas~\ref{lem:kernels} and \ref{lem:quarter}. The remainder has no atom at $a$, so the singular kernel value at zero causes no exception. The complementary part of the full half potential is at most one. Finally, if a two-coordinate determinant has modulus at least $p$, condition on its complement and use Lemma~\ref{lem:pair-full}. These alternatives exhaust all cases.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+First let $K=s=1$. In the absence of a pivot, \eqref{eq:no-pivot-nine} gives density less than $375$.
+
+At a scalar pivot, completing the square costs at most $d^{-1/2}$ in \eqref{eq:profile}; the Schur complement has at least eight large eigenvalues, hence at least five. Proposition~\ref{prop:five} applies. Its three alternatives give density bounds
+\begin{equation}\label{eq:scalar-branches}
+ 70d^{-1/2},\qquad 16p^{-1/4}d^{-1/2},\qquad
+ d^{-1/2}+\frac{J_0+2L_0}{d}.
+\end{equation}
+Since $d=3/40$, $p=1/400$, we have $d^{-1/2}<4$ and $p^{-1/4}<5$, so the first two bounds are less than $280$ and $320$. For the third, use $\pi<4$, $\log2<7/10$, and $\log5<17/10$. Then $J_0+2L_0<142/5$ and
+\[
+ d^{-1/2}+(J_0+2L_0)/d<4+\frac{142}{5}\frac{40}{3}
+ =\frac{1148}{3}<383.
+\]
+The logarithm inequalities follow from positive exponential Taylor partial sums: degree three at $7/10$ exceeds two, and degree four at $17/10$ exceeds five.
+
+A definite two-coordinate pivot directly gives density at most $\pi/\sqrt p<80$. An indefinite pair has determinant $-D$, $D\ge p$. Its Schur remainder retains at least seven large eigenvalues, so Lemma~\ref{lem:quarter} bounds the logarithmic potential of its critical value. Averaging the conditional envelope \eqref{eq:hyperbola} yields
+\[
+ \norm{p_Q}_\infty
+ \le p^{-1/2}(6+\log16+L_0)+1/e
+ =200+80\log10+1/e<392.5<400.
+\]
+Here we used $\logp(16\sqrt D)\le\log16+\tfrac12\logp D$ and
+$\sup_{D>0}D^{-1/2}\logp D=2/e$, obtained by differentiation. Also $\log10<12/5$ and $e>2$. All conditional estimates are domination statements against nonnegative test functions; Tonelli therefore justifies averaging despite rough densities and dependent critical values. They also prove absolute continuity. This completes the normalized case.
+
+For general $K,s$, put $Y=KX$, whose coordinate densities are bounded by one, and define
+\[
+ \widetilde Q=Y^T(A/s)Y+(K/s)b^TY+(K^2/s)c.
+\]
+Then $s_9(A/s)\ge1$ and $Q=(s/K^2)\widetilde Q$. Scalar density scaling gives \eqref{eq:main}. Integrating the density gives the interval formulation. Conversely, interval domination extends to open sets by countable disjoint interval decomposition and then to Borel sets by outer regularity, establishing its equivalence with the essential density bound. Corollary~\ref{cor:33} follows because $s_9(A)\ge s_{17}(A)\ge s_{33}(A)$.
+\end{proof}
+
+\section{A spectral-tail inequality for overlapping minors}\label{sec:overlap}
+The preceding proof establishes a sufficient multiplicity of nine. The next inequality strengthens the algebraic information available when one tries to use only eight large eigenvalues. It is not by itself a bounded-density theorem at that multiplicity.
+
+For a real square matrix $A$ and $r\ge1$, define
+\begin{equation}\label{eq:W}
+ W_{r,1}^{\times}(A)=
+ \sum_{\substack{|S|=|T|=r,\ S\cap T=\varnothing\\\det A_{S,T}\ne0}}
+ \ \sum_{h\notin S\cup T}\det(A_{S\cup\{h\},\,T\cup\{h\}})^2.
+\end{equation}
+The added row and column share the same original index. Only nonsingular seeds are included; singular seeds may have nonsingular borders and must not be silently added to a volume-sampling identity. Put
+\[
+ \mathcal T_j(A)=\sum_{i>j}s_i(A)^2.
+\]
+
+\begin{theorem}[Spectral-tail/overlap inequality]\label{thm:overlap}
+For every real square matrix $A$, not necessarily symmetric, and $r\ge1$ with $V_r(A)>0$,
+\begin{equation}\label{eq:overlap-tail}
+ W_{r,1}^{\times}(A)+(r+1)^2V_{r+1}(A)
+ \ge V_r(A)\,\mathcal T_{3r}(A).
+\end{equation}
+No entry, conditioning, or dimension bound is assumed.
+\end{theorem}
+\begin{proof}
+The sampling and nonsymmetric completion arguments of Lemmas~\ref{lem:sampling} and \ref{lem:completion} use only the exact interpolation on rows $S$ and columns $T$; symmetry is not needed for those arguments. For each nonsingular disjoint seed sampled with probability $\det(A_{S,T})^2/V_r$, write its decomposition as $A=D+R+E$. We have $\rank R\le3r$, $D$ diagonal, and $E$ zero diagonal. Thus
+\begin{equation}\label{eq:orthogonal-error}
+ \norm{A-R}_F^2=\norm{D+E}_F^2=\norm D_F^2+\norm E_F^2.
+\end{equation}
+The rank-$3r$ Frobenius approximation inequality gives $\mathcal T_{3r}(A)\le\norm{A-R}_F^2$. Here is a direct proof: project orthogonally onto the range of $R$, obtaining a projection $P$ of rank at most $3r$. Since $(I-P)R=0$,
+\[
+ \norm{A-R}_F^2\ge\norm{(I-P)A}_F^2
+ =\norm A_F^2-\tr(PAA^T).
+\]
+Expand the trace in an orthonormal eigenbasis of $AA^T$. The coefficients lie in $[0,1]$ and sum to at most $3r$, so the trace is at most the sum of its largest $3r$ eigenvalues. This proves the approximation inequality.
+
+For an exterior index $h$, the bordered determinant formula with that same index as added row and column gives
+\[
+ \det(A_{S\cup\{h\},\,T\cup\{h\}})^2
+ =\det(A_{S,T})^2D_{hh}^2.
+\]
+Consequently, with expectation over the sampled seeds,
+\[
+ \E\norm D_F^2=\frac{W_{r,1}^{\times}(A)}{V_r(A)},\qquad
+ \E\norm E_F^2\le(r+1)^2\frac{V_{r+1}(A)}{V_r(A)}.
+\]
+The second relation is exactly the distinct-row/distinct-column count in Lemma~\ref{lem:sampling}, prior to choosing a favorable seed. Average \eqref{eq:orthogonal-error} and combine these relations to obtain \eqref{eq:overlap-tail}.
+\end{proof}
+
+\begin{corollary}[Eight large eigenvalues]\label{cor:eight-overlap}
+If $A=A^T$ and $s_8(A)\ge1$, then, whenever $V_2(A)>0$,
+\begin{equation}\label{eq:eight-overlap}
+ W_{2,1}^{\times}(A)\ge2V_2(A)-9V_3(A).
+\end{equation}
+In particular, in the no-pivot case with $V_3(A)<\kappa^3$,
+\begin{equation}\label{eq:eight-explicit}
+ W_{2,1}^{\times}(A)>(2-9\kappa)V_2(A)
+ \ge(2-9\kappa)\kappa^2=\frac{19424}{244140625}.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Since $\mathcal T_6(A)\ge s_7(A)^2+s_8(A)^2\ge2$, apply Theorem~\ref{thm:overlap} at $r=2$. In the no-pivot case, Proposition~\ref{prop:volume} at $k=2$ gives $V_2\ge\kappa^2$. Then $V_3<\kappa^3\le\kappa V_2$ and $\kappa=4/625$ give \eqref{eq:eight-explicit}.
+\end{proof}
+
+\section{Threshold accounting and remaining questions}
+Two ingredients reduce the required multiplicity. First, the original-coordinate row-promotion argument removes the marginal restriction from order-three crossing volume; its characteristic-function exponent is $3/2$, not the exponent $3/4$ obtained by a fourth-power decoupling alone. Second, the nonsymmetric auxiliary interpolation has global rank at most $3r$ but rank at most $r$ outside its seed. The large diagonal entries forced by $4r+1$ large singular values lie outside that seed. Combining these ingredients at $r\le2$ gives the threshold $4\cdot2+1=9$.
+
+The constant $400$ uses separate scalar and determinant pivot thresholds, and a full pair half-potential with the correct output scaling $D^{-1/4}$. For the normalized theorem the branch bounds are
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Case & Upper bound\\
+\midrule
+No physical pivot & $375$\\
+Scalar pivot; no-pivot Schur remainder & $280$\\
+Scalar pivot; scalar-pivot Schur remainder & $383$\\
+Scalar pivot; pair-pivot Schur remainder & $320$\\
+Definite pair pivot & $80$\\
+Indefinite pair pivot & $392.5$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For eight eigenvalues, the order-three volume conclusion is not established by the present interpolation argument. Theorem~\ref{thm:overlap} gives the alternative of quantitatively large overlap-one volume, with no square-root loss in the interpolation error. A bounded-density estimate consuming those overlapping minors would have to handle the shared original coordinate without inventing independence. No such general estimate is proved here. In particular, neither the eight-eigenvalue nor the three-eigenvalue bounded-density assertion follows from the present work, and nine is not asserted to be optimal.
+
+\section*{Acknowledgment}
+AI tools assisted with mathematical exploration, proof development, computational checks, and preparation of the manuscript.
+
+\begin{thebibliography}{9}
+\bibitem{BCCT} J.~Bennett, A.~Carbery, M.~Christ, and T.~Tao,
+\emph{The Brascamp--Lieb inequalities: finiteness, structure, and extremals},
+arXiv:math/0505065 (2005).
+\bibitem{RV} M.~Rudelson and R.~Vershynin,
+\emph{Small ball probabilities for linear images of high dimensional distributions},
+arXiv:1402.4492 (2014).
+\end{thebibliography}
+\end{document}

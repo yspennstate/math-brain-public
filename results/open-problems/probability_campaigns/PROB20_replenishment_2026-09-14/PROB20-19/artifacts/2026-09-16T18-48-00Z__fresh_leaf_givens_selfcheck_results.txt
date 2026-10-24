@@ -1,0 +1,34 @@
+EXECUTION_EXIT_CODE=0
+SELF_CHECK_ONLY=TRUE
+CONDITIONAL_VARIANCE_IDENTITY=PASS
+FOLDED_KERNEL_DERIVATIVE_IDENTITY=PASS
+EXACT_HARMONIC_CASES=40
+EXACT_HARMONIC_BOUNDS=PASS
+NUMERICAL_SCREEN_CERTIFICATE=FALSE
+SOBOL_SAMPLES=65536
+CONDITION_VIOLATING_CANDIDATES=6760
+SAMPLED_POSITIVE_COUNT=0
+BEST_SAMPLED_NORMALIZED_EXCESS=-0.001457639105048072
+BEST_SPECTRUM=(5, 4, 9, 1)
+BEST_FIRST_GIVENS_C_S=(7, 24, 25)
+BEST_SECOND_GIVENS_C_S=(7, 24, 25)
+BEST_RESIDUAL_VARIANCE=4.903883876029815
+BEST_F_KL_SAMPLE=17.24307193962731
+BEST_F_ROT_SAMPLE=17.2153767966314
+SCREEN_SECONDS=14.162
+SCREEN_INTERNAL_ASSERTIONS=PASS
+THEOREM_STATUS=ANALYTIC_PROOF_IN_REPORT_NOT_NUMERICAL
+
+STDERR_PROVENANCE_NOTE:
+The host Python process emitted an unrelated spreadsheet-runtime warmup warning on stderr before/around the self-check. The self-check process itself exited 0 and all explicit assertions above passed. The warning was:
+
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260924T103426Z-account03-B13-qform-r49",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_at_start": "7188b3a6c4674d2bca33e5d77c6438a43efb869c",
+  "control_commit_prepublication_observed": "f0413109f08870437a659a0fc807f6ac9ea8c17a",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_requested": "maximum actually supported",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "mathematical_dependencies": [
+    {
+      "result": "account03/B13 r48 uniform physical indefinite pair",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "ba4c0f14cf9ca505e346b284a530662c6522b514",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260924T095803Z-account03-B13-qform-r48/REPORT.md"
+    },
+    {
+      "result": "account04/B13 near-null pivot physical star",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c30866924d918185e908ae4b3e22e31169366296",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260924T061740Z-account04-B13-nearnull-star-r3/REPORT.md"
+    },
+    {
+      "result": "physical-pair logarithmic smoothing",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f7f0fedb2d93b46824f96cac1164af6f8a55626f",
+      "path": "proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md"
+    },
+    {
+      "result": "diffuse separable-phase Fourier estimate",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "773b7fb6f0e6a8142066f0bac08d228dfc164fdb",
+      "path": "proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md"
+    }
+  ],
+  "new_results": [
+    "QFORM-INDEFPAIR-DIFFUSE-SCHUR-HALFRIESZ-v1",
+    "QFORM-NONULTRACOLLAPSE-FORCES-HEAVY-SCHUR-ROW-v1"
+  ],
+  "summary": "After the r48 uniformly conditioned physical indefinite pair, exact two-coordinate Schur/Woodbury transport gives S=D_R+W L W^T with W^TW=I_2 and |det L|>=(49/576)|det Lambda|/|det B|. If all normalized Schur row leverages are <=1/2, the rank-two diffuse separable-phase half-Riesz estimate retains the entire diagonal tail and pair-log smoothing yields ||p_Q||_infinity<=55.243772|det Lambda|^-1/8. In the non-ultracollapse packet |det Lambda|>=6144 e^2 rho^-4 this forces rho<=209.077161. Thus every larger-ratio non-ultracollapse survivor has a normalized Schur row leverage >1/2; since the total leverage is 2 there are at most three such heavy original rows. The designated account04/B13 result simultaneously supplies ||A_{-k,k}||_2>=2^-1/2 and its 1/2 core/outside star split.",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "ac6e24e64237a6e6f3be4ca826106b1bf6d39b70",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260924T103426Z-account03-B13-qform-r49/REPORT.md",
+  "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260924T103426Z-account03-B13-qform-r49/CHECK.py",
+  "checker_terminal": "QFORM_B13_R49_DIFFUSE_SCHUR_CHECK_PASS",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B13/20260924T103426Z-account03-B13-qform-r49.md",
+  "handoff_commit": "0d2001045e95d7e46502c1b8d9fe2e93f624e3c2",
+  "full_qform_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY; ESSENTIAL_BOUNDEDNESS_ONLY_FOR_NEW_BRANCH",
+  "unresolved_implication": "QFORM-INDEFPAIR-HEAVY-SCHUR-ROW-RECEIVER-v1",
+  "next": "Use the at-most-three heavy normalized Schur rows together with the fixed physical star and the exact diagonal-plus-rank-two Schur structure, without deleting same-bank curvature, or force ultracollapse."
+}

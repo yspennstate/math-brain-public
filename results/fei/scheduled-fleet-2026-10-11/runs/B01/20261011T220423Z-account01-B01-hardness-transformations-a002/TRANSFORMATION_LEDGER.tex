@@ -1,0 +1,79 @@
+\section*{A002 hardness-preserving transformation ledger}
+All logarithms are base two, $\phi(t)=t\log_2(1/t)$, and every new physical
+input is fresh and uniform.
+
+\paragraph{Disjoint tensor.}
+For $T(x,y)=f(x)g(y)$,
+\[
+ H(T)=H(f)+H(g),\quad I(T)=I(f)+I(g),\quad \mathbb ET=(\mathbb Ef)(\mathbb Eg).
+\]
+For $i$ in the $f$ block,
+\[
+ I_i(T)=I_i(f),\qquad \Delta_iH(T)=\Delta_iH(f).
+\]
+Thus tensor powers preserve $H/I$ and every local step ratio exactly.
+
+\paragraph{Dictator balance.}
+For $B_g(x,y)=yg(x)$,
+\[
+ \mathbb EB_g=0,\qquad H(B_g)=H(g),\qquad I(B_g)=I(g)+1.
+\]
+The fresh coordinate has $I_y=1$ and $\Delta_yH=0$.
+
+\paragraph{Two-cell selector.}
+For balanced $h$,
+\[
+ M_h=\frac{1+h}{2}y_1+\frac{1-h}{2}y_2,qquad
+ H(M_h)=2+\frac12H(h),\quad I(M_h)=1+\frac12I(h).
+\]
+Taking $h_m=y_0g^{\otimes m}$ gives
+\[
+ \frac{H(M_{h_m})}{I(M_{h_m})}
+ =\frac{2+mH(g)/2}{3/2+mI(g)/2}\to\frac{H(g)}{I(g)}.
+\]
+
+\paragraph{Sparse activation, arbitrary mean.}
+Let $A_r(z)=\prod_{j=1}^r(1+z_j)/2$, $p=2^{-r}$, $\mu=\mathbb Eg$, and
+$F=1+A_r(g-1)$. Then
+\[
+ \mathbb EF=1-p+p\mu,\quad \Pr(F=-1)=\frac p2(1-\mu),
+\]
+\[
+ I(F)=p\{I(g)+r(1-\mu)\},\quad I_i(F)=pI_i(g),\quad I_{z_j}(F)=p(1-\mu),
+\]
+and
+\[
+\begin{aligned}
+H(F)={}&p\{H(g)-\phi(\mu^2)\}+2rp(1-\mu^2)\\
+&+(2^r-1)\phi(p^2(1-\mu)^2)+\phi((1-p+p\mu)^2).
+\end{aligned}
+\]
+If $g$ is nonconstant and has full Walsh support, so does $F$.
+
+\paragraph{Parity lift.}
+For $P_g(x,z)=g(x_1z,\ldots,x_nz)$,
+\[
+ H(P_g)=H(g),\quad \mathbb EP_g=\mathbb Eg,
+\quad I(P_g)=I(g)+\Pr_{S\sim\widehat g^2}(|S|\text{ odd})\le2I(g),
+\]
+and $B(P_g)=\sum_iH(S_i\mid S_{-i})=0$. The restriction $z=+1$ is $g$.
+
+\paragraph{One-point full-support surgery.}
+In dimension $N\ge2$, an odd number of negative truth values makes every
+unnormalized Walsh sum nonzero. Flipping at most one value of $g^{\otimes m}$
+therefore produces full-support $u_m$ with
+\[
+ H(u_m)=mH(g)+o(1),\quad I(u_m)=mI(g)+o(1),
+\quad \mathbb Eu_m=(\mathbb Eg)^m+O(2^{1-mn}).
+\]
+
+\paragraph{Joint embedding.}
+With $r_m=\lceil\sqrt m\rceil$, $p_m=2^{-r_m}$, and
+$F_m=1+A_{r_m}(u_m-1)$, every $F_m$ has full Walsh support and
+\[
+ I(F_m)\to0,\quad \Pr(F_m=-1)\to0,\quad
+ \frac{\max_iI_i(F_m)}{I(F_m)}\to0,
+\quad \frac{H(F_m)}{I(F_m)}\to\frac{H(g)}{I(g)}.
+\]
+This preserves global FEI hardness but not all-coordinate restriction
+criticality, because the added physical controls may be cheap.

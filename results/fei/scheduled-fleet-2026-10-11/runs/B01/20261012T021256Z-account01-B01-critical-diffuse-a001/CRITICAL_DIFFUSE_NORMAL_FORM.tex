@@ -1,0 +1,108 @@
+\section*{Critical--diffuse normal form for high FEI ratio}
+
+All logarithms are base two except \(\ln\).  Let \(f:\{-1,1\}^n\to
+\{-1,1\}\) be nonconstant, let \(S\) have the spectral law
+\(\Pr[S=A]=\widehat f(A)^2\), and put
+\[
+ H=H(S),\qquad I=\mathbb E|S|,\qquad R=H/I,
+ \qquad \alpha_i=\Pr[i\in S]=I_i(f).
+\]
+For a relevant coordinate \(i\), write
+\[
+ \Delta_iH=H(f)-\tfrac12\bigl(H(f_{i=1})+H(f_{i=-1})\bigr).
+\]
+Call \(f\) restriction-critical when
+\(\Delta_iH\ge R I_i(f)\) for every relevant \(i\).
+
+The exact A003 restriction split is
+\[
+ \Delta_iH=E_i+J_i,
+ \quad E_i=H(\mathbf1_{\{i\in S\}}\mid S\setminus\{i\}),
+ \quad J_i=\operatorname{JS}(r_+,r_-),
+\]
+where \(r_+,r_-\) are the two conditional restriction spectra.  Its two
+pointwise bounds are
+\[
+ E_i\le h_2(\alpha_i),\qquad
+ J_i\le {2\over\ln2}\min\{\alpha_i,1-\alpha_i\}.
+\]
+Consequently every restriction-critical \(f\) obeys, coordinate by
+coordinate,
+\[
+ R\le G(\alpha_i):={h_2(\alpha_i)\over\alpha_i}
+   +{2\over\ln2}{\min\{\alpha_i,1-\alpha_i\}\over\alpha_i}. \tag{1}
+\]
+
+Set
+\[
+ R_0=G(1/2)=2+{2\over\ln2}.
+\]
+On \((0,1/2]\),
+\[
+ G(\alpha)={h_2(\alpha)\over\alpha}+{2\over\ln2},
+ \qquad {d\over d\alpha}{h_2(\alpha)\over\alpha}
+ ={\log_2(1-\alpha)\over\alpha^2}<0. \tag{2}
+\]
+Thus this branch is continuous and strictly decreasing from infinity to
+\(R_0\).  Let \(\kappa:(R_0,\infty)\to(0,1/2)\) be its inverse.  If
+\(\alpha\ge1/2\), then
+\[
+ G(\alpha)\le {1\over\alpha}+{2\over\ln2}\le R_0. \tag{3}
+\]
+Equations (1)--(3) prove that a restriction-critical \(f\) with \(R>R_0\)
+has, for every relevant \(i\),
+\[
+ I_i(f)=\alpha_i\le\kappa(R)<1/2. \tag{4}
+\]
+Moreover, for \(0<\alpha\le1/2\),
+\[
+ {h_2(\alpha)\over\alpha}
+ =\log_2{1\over\alpha}
+  +{1-\alpha\over\alpha}\log_2{1\over1-\alpha}
+ \le\log_2{1\over\alpha}+{1\over\ln2},
+\]
+because \(-\ln(1-\alpha)\le\alpha/(1-\alpha)\).  Hence
+\[
+ G(\alpha)\le\log_2{1\over\alpha}+{3\over\ln2}.
+\]
+Together with (1), this yields the explicit inversion
+\[
+ \boxed{\ I_i(f)\le e^3,2^{-R}\quad\hbox{for every relevant }i\ }.
+ \tag{5}
+\]
+
+Combining (4)--(5) with the A001 critical-prime descent gives the following
+normal form.  For every nonconstant genuine Boolean \(f\) with
+\(R(f)>R_0\), there is a restriction descendant \(h\), tensor-prime after
+dummy variables and constant factors are deleted, such that
+\[
+ R(h)\ge R(f),\qquad
+ \max_i I_i(h)\le\kappa(R(h))\le e^3 2^{-R(h)}\le e^3 2^{-R(f)}. \tag{6}
+\]
+Therefore failure of FEI would force a genuine Boolean sequence \(h_k\)
+that is simultaneously restriction-critical, tensor-prime,
+\(R(h_k)\to\infty\), and exponentially diffuse in every coordinate.
+
+Two immediate restricted consequences are:
+
+\begin{enumerate}
+\item For every fixed \(0<\delta\le1/2\), every restriction-critical
+Boolean \(h\) with \(\max_i I_i(h)\ge\delta\) satisfies
+\[
+ {H(h)\over I(h)}\le G(\delta).
+\]
+Indeed, if the witnessing influence is at most \(1/2\), use monotonicity in
+(2); if it exceeds \(1/2\), use (3) and \(G(\delta)\ge G(1/2)=R_0\).
+
+\item If \(h\) in (6) has \(m\) relevant variables, then every positive
+influence is a multiple of \(2^{1-m}\), and therefore
+\[
+ m\ge R(h)+1-{3\over\ln2}.
+\]
+\end{enumerate}
+
+These statements do not prove FEI: the remaining class permits every
+coordinate influence to vanish with dimension.  They sharpen the first
+unsupported universal line from an unrestricted good-coordinate estimate to
+an estimate on an explicit critical, tensor-prime, exponentially diffuse
+Boolean class.

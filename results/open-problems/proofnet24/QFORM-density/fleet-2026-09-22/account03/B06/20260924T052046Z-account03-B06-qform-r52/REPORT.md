@@ -1,0 +1,554 @@
+SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account account03, slot B06, 2026-09-24T05:20:46Z.
+attacking: the r51 low-Pluecker-disjoint three-hub survivor by deleting one localized physical hub, normalizing the entire surviving product frame, and paying diffuse Schur curvature before any fiber maximum or reciprocal minor.
+
+# account03/B06 r52 — localized-hub Schur deletion and two-heavy compiler
+
+Programme: `QFORM-DENSITY-3EIG-20260922`  
+Assignment: curved fiber integration / quantitative inequalities and rigorous computations  
+Startup control: `yspennstate/math-research-brain@8fd1deb8137828261d2e21c2f22d7d8f644b5310`  
+OWNER CONTROL revision: `2026-09-22.15`; programme revision: `2026-09-22.5`  
+Execution: `WITHOUT_VERIFIED_BRAIN`  
+Status: `NEW PRODUCT-WEIGHTED SCHUR-DELETION RECEIVERS + TWO-HEAVY CERTIFICATE + DESIGNATED PARTNER APPLIED / FULL QFORM OPEN`
+
+The unrestricted conjecture remains OPEN. Nothing below assumes Gaussianity, moments, log-concavity, compact or connected support, iid inputs, independence after rotation, or a diagonal basis. All probabilistic conditioning is on literal original-coordinate banks. No unrestricted curved-fiber supremum is taken. The live corrections excluding arbitrary-joint coarea, law-uniform pointwise quadratic-phase decay, conditional projection-height bounds, and the critical same-bank rank-one half-Riesz shortcut are retained.
+
+## 1. Immediate predecessor and fresh concurrent input
+
+The immediate B06 predecessor is
+
+`yspennstate/math-open-problems@9383edfaa2404770902b844e7ebcddfb7a067136`
+
+`proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T032240Z-account03-B06-qform-r51/REPORT.md`.
+
+It treats a rank-three carrier plus a diagonal original-coordinate phase,
+
+\[
+A=D+U\Lambda U^T,\qquad U^TU=I_3,\qquad \Delta:=|\det\Lambda|>0,
+\tag{1.1}
+\]
+
+and proves the complete Pluecker-disjoint crossing receiver. In its low-disjointness branch there is a literal physical triple `H`, `|H|=3`, and a unit carrier direction `y` such that
+
+\[
+\sum_{h\in H}(u_h\cdot y)^2>\frac{15}{16},
+\tag{1.2}
+\]
+
+where `u_i^T` denotes row `i` of `U`. Therefore
+
+\[
+\sum_{h\in H}\|u_h\|^2>\frac{15}{16},
+\]
+
+so some literal hub `h` obeys
+
+\[
+\boxed{c_h:=\|u_h\|^2>\frac5{16}.}
+\tag{1.3}
+\]
+
+A concurrent account01/B06 result landed after r51:
+
+`yspennstate/math-open-problems@f9c285a20c529904887122c7def9ca3a2afb484b`,
+
+`proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260924T043511Z-account01-B06-QFORM-r47/REPORT.md`.
+
+It proves an anchored Pluecker-tensor receiver and, in the zero-diagonal-twist endpoint, introduces the conditional pair law `nu_h`. The first theorem below identifies its one-point marginals exactly with the normalized Schur-frame leverages and extends the diffuse payment from the r47 `3/8` gate through the natural Hausdorff--Young gate `1/2`.
+
+Two completed analytic inputs are used within their stated scopes:
+
+1. `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, source `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`. In rank three, a Parseval product frame with every leverage at most `1/2`, invertible coefficient matrix `C`, and arbitrary coordinate-separable phases has a continuous density bounded by `3e |det C|^(-1/3)`.
+2. `QFORM-DIFFUSE-RANK2-L3-SEPARABLE-v1`, source `yspennstate/math-open-problems@d094743ca1c1429601fe7fdc4a4f548103a62bb0`, path `proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260922T125240Z-account03-B16-qform-r11/REPORT.md`. In rank two under the same `1/2` leverage gate, the density has `L^3` norm at most `(3e)^(2/3)|det C|^(-1/3)`, again with arbitrary coordinate-separable phases.
+
+For the final scalar square we use the completed dependent square-smoothing lemma at `yspennstate/math-open-problems@4ea84670b15b538f2163d53bf31f81cd1f1eabfa`: if a base density is bounded by `M` and the conditionally translated physical scalar has density cap one, adding `aV^2` gives density cap `2 sqrt(M/|a|)`. A short `L^3 -> L^infinity` analogue is proved below, so no extra premise is needed for that step.
+
+## 2. One physical deletion: exact determinant currency
+
+Work in the general carrier (1.1), allowing arbitrary linear terms. Fix a literal coordinate `h`. Put
+
+\[
+u=u_h,\qquad c=\|u\|^2<1,
+\qquad b=u^T\Lambda u,
+\qquad d=D_{hh},
+\qquad q=b+d=A_{hh}.
+\tag{2.1}
+\]
+
+Let `U_0` be `U` with row `h` deleted, so
+
+\[
+G:=U_0^TU_0=I_3-uu^T,\qquad \det G=1-c.
+\tag{2.2}
+\]
+
+Assume first `q != 0`. Completing the square only in the original independent coordinate `X_h` gives
+
+\[
+Q=q\bigl(X_h+m(X_{-h})\bigr)^2+R_h(X_{-h}),
+\tag{2.3}
+\]
+
+where the quadratic carrier inside `R_h` is
+
+\[
+S=\Lambda-\frac{(\Lambda u)(\Lambda u)^T}{q}.
+\tag{2.4}
+\]
+
+All remaining diagonal terms from `D`, and all linear terms generated by the completion, stay inside `R_h` as coordinate-separable phases or affine terms.
+
+Normalize the complete surviving product frame by
+
+\[
+V=U_0G^{-1/2},\qquad V^TV=I_3,
+\tag{2.5}
+\]
+
+and put
+
+\[
+C=G^{1/2}SG^{1/2}.
+\tag{2.6}
+\]
+
+The matrix determinant lemma gives the exact identities
+
+\[
+\det S
+=\det\Lambda\left(1-\frac{u^T\Lambda u}{q}\right)
+=\det\Lambda\frac d q,
+\tag{2.7}
+\]
+
+and therefore
+
+\[
+\boxed{\det C=(1-c)\det\Lambda\frac d q.}
+\tag{2.8}
+\]
+
+This is the first weighted replacement: the entire surviving frame is normalized before its determinant is paid. No largest minor is selected.
+
+### Theorem 2.1 — `QFORM-DIAGONALTWIST-HEAVYPIVOT-DIFFUSE-SCHUR-v1`
+
+Assume `d q != 0` and every surviving normalized leverage satisfies
+
+\[
+\eta_j:=u_j^TG^{-1}u_j\le\frac12,
+\qquad j\ne h.
+\tag{2.9}
+\]
+
+Then the complete scalar form has an essentially bounded density and
+
+\[
+\boxed{
+\|p_Q\|_\infty
+\le
+2\sqrt{3e}\,
+[(1-c)\Delta |d|]^{-1/6}|q|^{-1/3}.
+}
+\tag{2.10}
+\]
+
+#### Proof
+
+By (2.5), (2.9), and the rank-three separable-phase theorem, `R_h` has a continuous density with
+
+\[
+M_h:=\|p_{R_h}\|_\infty
+\le3e\,|\det C|^{-1/3}.
+\tag{2.11}
+\]
+
+Conditioning on `R_h=r` does not destroy the cap-one law of the translated variable `X_h+m(X_{-h})`: `X_h` is independent of all remaining original coordinates, so the conditional law is a mixture of translations of its original density. The dependent square-smoothing lemma applied to (2.3) gives
+
+\[
+\|p_Q\|_\infty\le2\sqrt{M_h/|q|}.
+\tag{2.12}
+\]
+
+Substitute (2.8) into (2.11)-(2.12) to obtain (2.10). QED.
+
+The theorem proves absolute continuity and essential boundedness in this branch. Continuity of the final one-dimensional density is not claimed: the base `R_h` is continuous, but the dependent translated-square smoothing lemma only supplies an `L^infinity` representative.
+
+If (2.9) fails, there is a second literal heavy coordinate `j` with `eta_j>1/2`. The exact volume deletion identity
+
+\[
+\det(I_3-uu^T-u_ju_j^T)
+=(1-c)(1-\eta_j)<\frac{1-c}{2}
+\tag{2.13}
+\]
+
+records the resulting two-hub concentration without dropping the remaining frame.
+
+## 3. Zero diagonal twist: conditional Pluecker marginals are Schur leverages
+
+Now take the important endpoint
+
+\[
+d=0,\qquad b=q\ne0,\qquad c>0.
+\tag{3.1}
+\]
+
+Let `E` be any `3 x 2` matrix with orthonormal columns spanning `u^perp`. Since the rank-two Schur matrix
+
+\[
+S_0=\Lambda-\frac{(\Lambda u)(\Lambda u)^T}{b}
+\tag{3.2}
+\]
+
+annihilates `u`, it has the representation
+
+\[
+S_0=E B E^T,
+\tag{3.3}
+\]
+
+with invertible symmetric `2 x 2` matrix `B`. The surviving original-product frame
+
+\[
+w_j=E^Tu_j,\qquad j\ne h,
+\tag{3.4}
+\]
+
+is exactly Parseval:
+
+\[
+\sum_{j\ne h}w_jw_j^T=I_2.
+\tag{3.5}
+\]
+
+In the orthogonal basis `(u/sqrt(c),E)`, Schur determinant factorization gives
+
+\[
+\boxed{\det B=\frac{c\det\Lambda}{b}.}
+\tag{3.6}
+\]
+
+Define
+
+\[
+\beta_j:=\|w_j\|^2.
+\tag{3.7}
+\]
+
+Then
+
+\[
+\boxed{
+\beta_j
+=\|u_j\|^2-\frac{(u\cdot u_j)^2}{c}
+=\frac{\|u\wedge u_j\|^2}{c}.
+}
+\tag{3.8}
+\]
+
+There is also an exact probabilistic interpretation. In account01/B06 r47's conditional Pluecker pair law `nu_h`,
+
+\[
+\beta_j=\Pr_{P\sim\nu_h}\{j\in P\}.
+\tag{3.9}
+\]
+
+Indeed Parseval gives
+
+\[
+\sum_{k\ne h,j}\det(u,u_j,u_k)^2=\|u\wedge u_j\|^2,
+\]
+
+while the conditional normalization is `c`. Thus the collision parameter in the anchored Pluecker theorem is literally the physical leverage of the rank-two Schur frame.
+
+### Lemma 3.1 — dependent `L^3` square smoothing
+
+Let `R` have density `p` with `||p||_3<=M`. Conditionally on `R=r`, let `V_r` have density cap one, with no independence assumption. For `a!=0`,
+
+\[
+T=R+aV_R^2
+\]
+
+has a density satisfying
+
+\[
+\boxed{\|p_T\|_\infty\le4|a|^{-1/2}M^{3/4}.}
+\tag{3.10}
+\]
+
+For `a>0`, the square density domination gives
+
+\[
+p_T(t)\le a^{-1/2}\int_0^\infty p(t-s)s^{-1/2}\,ds.
+\]
+
+Split at `L>0`. Holder gives
+
+\[
+\int_0^L p(t-s)s^{-1/2}ds
+\le M\left(\int_0^L s^{-3/4}ds\right)^{2/3}
+=2^{4/3}ML^{1/6},
+\]
+
+while the tail is at most `L^(-1/2)` because `p` has mass one. Taking `L=M^{-3/2}` yields
+
+\[
+(1+2^{4/3})M^{3/4}<4M^{3/4}.
+\]
+
+Reflection handles `a<0`. This proves (3.10).
+
+### Theorem 3.2 — `QFORM-ZEROTWIST-PAIRLEVERAGE-DIFFUSE-v1`
+
+If
+
+\[
+\max_{j\ne h}\beta_j\le\frac12,
+\tag{3.11}
+\]
+
+then the complete scalar quadratic form has an essentially bounded density satisfying
+
+\[
+\boxed{
+\|p_Q\|_\infty
+\le4\sqrt{3e}\,(c\Delta |b|)^{-1/4}.
+}
+\tag{3.12}
+\]
+
+#### Proof
+
+After the completion (2.3) with `d=0`, the residual is a rank-two projected quadratic with coefficient `B`, plus the complete remaining diagonal phase and affine terms. By (3.5), (3.11), and `QFORM-DIFFUSE-RANK2-L3-SEPARABLE-v1`, its density obeys
+
+\[
+\|p_{R_h}\|_3
+\le(3e)^{2/3}|\det B|^{-1/3}.
+\tag{3.13}
+\]
+
+Apply Lemma 3.1 to the outer physical square of coefficient `b`, and use (3.6). This gives (3.12). QED.
+
+This extends the concurrent anchored-Pluecker zero-twist payment from the collision gate `max beta_j<=3/8` through the natural product-Fourier gate `1/2`.
+
+In the r51 low-disjoint branch, (1.3) gives `c>5/16`, so (3.12) sharpens to
+
+\[
+\boxed{
+\|p_Q\|_\infty
+<15.278\,(\Delta |b|)^{-1/4}.
+}
+\tag{3.14}
+\]
+
+whenever the zero-twist pivot is nonzero and the residual pair frame is diffuse.
+
+If (3.11) fails, some literal second hub `j` satisfies `beta_j>1/2`, and therefore the carrier-plane area obeys
+
+\[
+\boxed{
+\|u\wedge u_j\|^2=c\beta_j>\frac c2.
+}
+\tag{3.15}
+\]
+
+For the r51 hub `c>5/16`, this is the quantitative two-hub certificate
+
+\[
+\boxed{\|u\wedge u_j\|^2>\frac5{32}.}
+\tag{3.16}
+\]
+
+This is stronger than selecting a single physical `3 x 3` minor and remains meaningful even when the literal two-hub quadratic block is nearly singular because of the indefinite carrier metric.
+
+## 4. A second physical deletion pays a large part of the heavy-pair branch
+
+Continue in the zero-twist setting of Section 3 and choose a second hub `j` with
+
+\[
+\frac12<\beta:=\|w_j\|^2<1.
+\tag{4.1}
+\]
+
+Write `w=w_j`, let `d_j=D_{jj}`, and define the actual scalar Schur coefficient inside `R_h`
+
+\[
+q_j=d_j+w^TBw
+=A_{jj}-\frac{A_{hj}^2}{A_{hh}}.
+\tag{4.2}
+\]
+
+Assume `d_j q_j != 0`. Delete `j` from the rank-two Parseval frame and put
+
+\[
+G_2=I_2-ww^T,
+\qquad \det G_2=1-\beta,
+\tag{4.3}
+\]
+
+\[
+S_2=B-\frac{(Bw)(Bw)^T}{q_j},
+\qquad
+C_2=G_2^{1/2}S_2G_2^{1/2}.
+\tag{4.4}
+\]
+
+Exactly as before,
+
+\[
+\boxed{
+\det C_2
+=(1-\beta)\det B\frac{d_j}{q_j}.
+}
+\tag{4.5}
+\]
+
+Normalize the remaining product frame by `G_2^{-1/2}`. If all resulting row leverages
+
+\[
+\gamma_k=w_k^TG_2^{-1}w_k\le\frac12,
+\qquad k\ne h,j,
+\tag{4.6}
+\]
+
+then the terminal residual has an `L^3` density by the rank-two separable-phase theorem. Apply Lemma 3.1 to reinsert the physical square `q_j(X_j+...)^2`; the resulting `R_h` has a bounded density. Then apply the completed bounded-base dependent-square lemma to reinsert the outer square `b(X_h+...)^2`.
+
+### Theorem 4.1 — `QFORM-TWOHEAVY-SEQUENTIAL-DIFFUSE-v1`
+
+Under (3.1), (4.1), `d_jq_j!=0`, and (4.6),
+
+\[
+\boxed{
+\|p_Q\|_\infty
+\le
+4(3e)^{1/4}
+\bigl[
+ c\Delta(1-\beta)|d_jq_j|\,|b|^3
+\bigr]^{-1/8}.
+}
+\tag{4.7}
+\]
+
+The front constant is
+
+\[
+4(3e)^{1/4}=6.75948993149\ldots .
+\tag{4.8}
+\]
+
+#### Proof of the constant
+
+The terminal residual has
+
+\[
+\|p_0\|_3\le(3e)^{2/3}|\det C_2|^{-1/3}.
+\]
+
+Lemma 3.1 gives after reinserting `j`
+
+\[
+\|p_{R_h}\|_\infty
+\le4\sqrt{3e}|q_j|^{-1/2}|\det C_2|^{-1/4}.
+\]
+
+The bounded-base dependent square lemma then yields
+
+\[
+\|p_Q\|_\infty
+\le4(3e)^{1/4}|b|^{-1/2}|q_j|^{-1/4}|\det C_2|^{-1/8}.
+\]
+
+Use (4.5) and `|det B|=c Delta/|b|` from (3.6) to obtain (4.7). QED.
+
+If (4.6) fails, choose `k` with `gamma_k>1/2`. The complete surviving rank-two frame then satisfies the exact two-step area deletion identity
+
+\[
+\boxed{
+\det(I_2-ww^T-w_kw_k^T)
+=(1-\beta)(1-\gamma_k)<\frac14.
+}
+\tag{4.9}
+\]
+
+Thus failure after two heavy deletions produces a literal third hub and removes more than three quarters of the normalized residual two-frame area. If `beta=1`, the second hub is an exact coloop of the residual frame and the undeleted residual rows already lie in a one-dimensional line. These are finite-dimensional endpoint certificates, not dimension-growing fiber maxima.
+
+## 5. Required application of the designated account04/B06 result
+
+The freshest completed designated partner result is
+
+`yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`,
+
+`proofnet24/QFORM-density/fleet-2026-09-22/account04/B06/20260924T001014Z-account04-B06-QFORM-r3/REPORT.md`,
+
+`QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`.
+
+On the actual diffuse zero-twist branch (3.11), diagonalize the real symmetric `2 x 2` residual coefficient
+
+\[
+B=O\operatorname{diag}(\mu_1,\mu_2)O^T.
+\]
+
+The physical coefficient frame `WO` still has orthonormal columns and, for every original residual coordinate,
+
+\[
+(w'_j)^2+(v'_j)^2=\beta_j\le\frac12.
+\tag{5.1}
+\]
+
+Choose `mu_*` with maximal magnitude. Then
+
+\[
+|\mu_*|\ge\sqrt{|\det B|}
+=\sqrt{\frac{c\Delta}{|b|}}.
+\tag{5.2}
+\]
+
+The partner theorem applies to the corresponding actual curved two-output slice, including arbitrary tangential shared linear leakage and any fresh disjoint-bank remainder. At the concrete off-fold scale `r=1/64`,
+
+\[
+\|g_{1/64}\|_\infty
+\le\frac{256}{|\mu_*|}
+\le
+\boxed{256\sqrt{\frac{|b|}{c\Delta}}}.
+\tag{5.3}
+\]
+
+This is a continuous `C_0` two-output off-fold estimate. Equation (5.3) is deliberately not promoted through the same-bank diagonal phase `D`: that would exceed the partner theorem's scope. The full scalar payment on this branch is Theorem 3.2.
+
+## 6. Application to r51 and exact remaining debt
+
+Return to the r51 low-Pluecker-disjoint branch. Orthonormalizing its rank-three carrier does not change the physical row space and makes `Delta` equal to the absolute product `P` of the three nonzero carrier eigenvalues. The `>15/16` three-hub certificate gives a literal `h` with `c_h>5/16` by (1.3).
+
+For that hub, the new compiler gives the following exhaustive *receiver/certificate* split:
+
+- if the physical diagonal twist `d_h` and pivot `q_h` are nonzero and the normalized three-frame after deleting `h` is diffuse, Theorem 2.1 applies with the exact cost (2.10);
+- if `d_h=0`, `b_h!=0`, and the conditional pair marginals satisfy `max beta_j<=1/2`, Theorem 3.2 gives the full scalar bound (3.14);
+- if `d_h=0` and `max beta_j>1/2`, a second literal hub has carrier-plane area `>5/32`; if its diagonal twist and Schur pivot are nonzero and the twice-deleted normalized frame is diffuse, Theorem 4.1 applies;
+- otherwise the survivor is now confined to a zero/near-zero scalar pivot, a near-coloop, a zero/near-zero second diagonal twist or Schur pivot, or a genuine three-heavy-hub chain satisfying the area-collapse certificate (4.9).
+
+The bounds retain the complete coordinate-separable phase and all original-product coordinates. No nonzero tail term is set to zero. The remaining universal-constant implication is to prove that the target spectral hypothesis forces one of the displayed currencies to have a dimension-free floor, or to construct a dependence-safe curved receiver that remains uniform as those currencies jointly approach zero.
+
+A particularly sharp next object is
+
+`QFORM-THREEHEAVY-ZEROPIVOT-CURVED-RECEIVER-v1`:
+
+consume the finite `h,j,k` chain from (3.16)/(4.9), including exact coloop and zero-Schur-pivot faces, by integrating the two literal hub hyperbolic/elliptic geometry jointly against the remaining one-dimensional carrier law, without deleting the diagonal phase or taking a fiber supremum.
+
+## 7. Deterministic checks
+
+A fixed-seed checker tested 3,996 random Parseval rank-three frames and symmetric invertible carrier matrices. The largest normalized discrepancies were
+
+- one-deletion determinant identity (2.8): `7.35e-13`;
+- zero-twist determinant identity (3.6): `3.08e-13`;
+- residual Parseval identity (3.5): `1.81e-15`;
+- second-deletion determinant identity (4.5): `3.21e-13`;
+- conditional pair leverage / wedge identity (3.8): `5.72e-16`.
+
+These are sanity checks only. The proofs above are exact determinant, Parseval, and dependent-smoothing arguments.
+
+## 8. Status
+
+`QFORM-DIAGONALTWIST-HEAVYPIVOT-DIFFUSE-SCHUR-v1`: proved as a supporting receiver.  
+`QFORM-ZEROTWIST-PAIRLEVERAGE-DIFFUSE-v1`: proved.  
+`QFORM-TWOHEAVY-SEQUENTIAL-DIFFUSE-v1`: proved.  
+`QFORM-THREEHUB-9375-LOCALIZED-CURVED-RECEIVER-v1`: advanced but not fully closed; its diffuse-deletion and twice-diffuse branches are paid, with exact finite-heavy certificates otherwise.  
+Full QFORM conjecture: **OPEN / NOT PROVED / NOT DISPROVED**.  
+Global continuity: **OPEN**. Continuity is established only for the source diffuse residual and designated-partner two-output branches; the final dependent square-smoothing steps above assert absolute continuity plus essential boundedness, not a continuous representative.

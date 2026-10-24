@@ -1,0 +1,223 @@
+[
+  {
+    "claim_id": "A051-PROPER-BLOCK-DESCENT-SQUEEZE",
+    "version": 1,
+    "exact_statement": "For every actual nonconstant Boolean sign f on the n-bit uniform cube, n>=2, with H in bits and phi=min over nonempty proper physical blocks A with I_A>0 of (H(f)-E H(f_a))/I_A, phi(f)<=H(f)/(I(f)-min_i Inf_i(f))<=n(H(f)/I(f))/(n-1). If M_n=max H/I over all nonconstant n-bit functions and K_desc(n)=max phi over the same finite domain, then M_n<=K_desc(n)<=n M_n/(n-1). Therefore lim_n K_desc(n)=sup_n M_n=C_* in the extended real sense, and bounded universal proper-block descent is equivalent in finiteness to FEI. No all-dimensional optimizer, independent uniform bound, or paid entropy estimate is asserted.",
+    "hypotheses": [
+      "Actual Boolean signs; uniform physical cube; entropy in bits",
+      "n>=2 for universal squeeze; fixed frozen6..9 domain for census",
+      "phi uses only nonempty proper blocks with I_A>0; constants never divided by I"
+    ],
+    "statement_sha256": "73d58531120ba7f205daeba0377b80be5e77770475f92a06c0ad0eb5702dfd5e",
+    "contributors": [
+      "account05/A051"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A051\\runs\\20261011T233123Z-account05-A051-near-extremizer-definition\\UNIVERSAL_DESCENT_SQUEEZE.md",
+      "sha256": "424c08830e4dd0b7898f9bc832515ab47e818dbc0e60036b5c26dbab66482d56",
+      "certificate": null
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A100/account05",
+        "timestamp": "2026-10-13T21:56:42.464537+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "scope": "Entire universal analytic squeeze; no acceptance of NAND-family census.",
+        "independent_method": "Independent analytic reconstruction and source-version audit; A097 and A021 additionally use a fresh integer-Walsh/Fraction/rational-log implementation. No upstream code imported.",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261013T213917Z-account05-A100-release-and-continuation-ledger\\REVIEW.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261013T213917Z-account05-A100-release-and-continuation-ledger\\out\\INDEPENDENT_CERTIFICATE.json",
+        "source_recorded_statement_sha256": "73d58531120ba7f205daeba0377b80be5e77770475f92a06c0ad0eb5702dfd5e",
+        "statement_only_sha256": "73d58531120ba7f205daeba0377b80be5e77770475f92a06c0ad0eb5702dfd5e",
+        "material_repair_to_reviewed_version": false
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A100",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A052",
+      "A053",
+      "A055",
+      "A090",
+      "A094",
+      "B11 lead",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A097-B05-COMPATIBLE-REFERENCE-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For every even k>=2 set delta=2^(-k), e=2^(-k/2), r=2k, p=2^(-r), and let F be the point-control activation of the actual physical selector between the quadratic bent sign b on k data bits and b-2*1_zero. On the control-first stopping tree ending at the bent/point-flipped seeds, equip constant leaves with delta_empty and seed leaves either with their exact Fourier laws or both with the uniform data-subset reference. The A097 compatible lift has I_removed=p(2k c+delta), I_terminal=p(k/2+k delta), c=1-e+delta; exact B_tree and K_tree are the rational-logarithmic node expressions in DERIVATION.md. B_tree<=3 I_removed for every even k>=2, and complete root CE<=(3+2/ln2)I_removed+2I_terminal. Exact leaf laws give K_tree=0; uniform leaf laws give 0<=K_tree/I_removed<=8delta(1-delta)/[(2k c+delta)ln2], so the credit is O(2^(-k)/k), and both corrected and uncorrected erasure rates tend to 2. At k=2,4,6,8 the uniform-reference residual rates have certified rational intervals around 2.352431205059,2.320544689093,2.217959018446,2.159650515335. This is a scoped application on a known FEI family; no universal arbitrary-seed/overlapping-control payment is claimed.",
+    "hypotheses": [
+      "Uniform Boolean signs, ordinary physical influence, entropy/KL in bits",
+      "Even k>=2; r=2k point controls; explicit quadratic bent seed and its actual point flip at zero",
+      "Fixed control-first physical tree stops inactive on first mismatch, otherwise queries selector and stops at actual seed",
+      "Complete leaf references fixed before spectral sample: exact seed law or uniform bent-spectrum law; constants delta_empty",
+      "All interior references use the existing compatible lift; terminal entropy/reference cost retained"
+    ],
+    "statement_sha256": "f8f13619251d53d65152b031a706c2c34b35210f329adf7706ba95f971cf5a81",
+    "contributors": [
+      "A097"
+    ],
+    "proof_source": {
+      "run_id": "20261012T005449Z-account05-A097-cross-route-transfer",
+      "files": [
+        "REPORT.md",
+        "DERIVATION.md",
+        "CROSS_ROUTE_SUBSTITUTION.tex",
+        "TRANSFER_HYPOTHESIS_CHECK.json",
+        "FROZEN_SPEC.json",
+        "code/check_bent.py",
+        "out/RESULTS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A097-COMPATIBLE-LEAF-REFERENCE-TRANSFER",
+        "version": 1,
+        "statement_sha256": "408ea90dea600f4f8f1b9ffa66c29e34cc87a87a518ec3f87273d2905bef9246",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A097\\runs\\20261011T221240Z-account05-A097-cross-route-transfer\\REPORT.md",
+        "status": "AUTHOR_PROVED; full review pending; A098 locally reconstructed KL subclaim"
+      },
+      {
+        "claim_id": "B20-ACTIVATION-ERASURE-FORMULA",
+        "version": 1,
+        "statement_sha256": "474250ee4cc99312d8b12f207a9bd79517c2012e48a2dec41f1602e29666384b",
+        "source": "~\\brain_workers\\FEI100_20261011\\claude\\B20\\runs\\20261011T225100Z-claude-B20-erasure-activation-transfer\\REPORT.md",
+        "status": "AUTHOR_PROVED; specific control-coordinate substitution reconstructed here"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A100/account05",
+        "timestamp": "2026-10-13T21:56:42.464537+00:00",
+        "verdict": "ACCEPT_ERASURE_AND_TERMINAL_SLACK_SUBCLAIMS_ONLY",
+        "scope": "All-even-k B_tree<=3 I_removed, separated physical budgets, complete seed costs, chi-square and posterior-credit ceiling; full compatible-transfer chain/corollary not independently accepted.",
+        "independent_method": "Independent analytic reconstruction and source-version audit; A097 and A021 additionally use a fresh integer-Walsh/Fraction/rational-log implementation. No upstream code imported.",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261013T213917Z-account05-A100-release-and-continuation-ledger\\REVIEW.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261013T213917Z-account05-A100-release-and-continuation-ledger\\out\\INDEPENDENT_CERTIFICATE.json",
+        "source_recorded_statement_sha256": "f8f13619251d53d65152b031a706c2c34b35210f329adf7706ba95f971cf5a81",
+        "statement_only_sha256": "f8f13619251d53d65152b031a706c2c34b35210f329adf7706ba95f971cf5a81",
+        "material_repair_to_reviewed_version": false
+      }
+    ],
+    "status": "PARTIAL_INDEPENDENT_REVIEW_FULL_TRANSFER_COROLLARY_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A039",
+      "A064",
+      "A099",
+      "A100",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+    "version": 1,
+    "exact_statement": "For every balanced Boolean b, integers t,k>=1, q=2^-k and c=1/ln2, F=1+A_k(product_{j=1}^t b_j-1) has H(F)=q[tH(b)+4k+2c]-q^2(2k+3c)+R(q), I(F)=q[tI(b)+k], and -2cq^3/[3(1-q)]<=R(q)<=0. The exact entropy is q t H(b)+(4q-2q^2)k-2(1-q)^2 log2(1-q); variance is 2q-q^2 and minority probability q/2. If k=o(t) and 2^-k t->0 for a fixed seed, H(F)/I(F)->H(b)/I(b) with influence tending to zero.",
+    "hypotheses": [
+      "uniform physical cube",
+      "Boolean sign seed with mean zero",
+      "disjoint independent seed copies and fresh point controls",
+      "bit entropy"
+    ],
+    "statement_sha256": "96d6b579feecbca75e161d36eb77236421b420d88429aad9656ba288a64055de",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T214020Z-account05-A021-rare-core-asymptotics\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A100/account05",
+        "timestamp": "2026-10-13T21:56:42.464537+00:00",
+        "verdict": "ERROR_V1_REMAINDER_COMPONENT",
+        "scope": "R<=0 and G>=0 are false; exact spectra/influence and separate KL ledger survive. Use v2 and A087 repaired-version acceptance.",
+        "independent_method": "Independent analytic reconstruction and source-version audit; A097 and A021 additionally use a fresh integer-Walsh/Fraction/rational-log implementation. No upstream code imported.",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261013T213917Z-account05-A100-release-and-continuation-ledger\\REVIEW.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261013T213917Z-account05-A100-release-and-continuation-ledger\\out\\INDEPENDENT_CERTIFICATE.json",
+        "source_recorded_statement_sha256": "cf143df5920601dcec3c3e11e0a14be3e6e217e964f3acd2250215079116d382",
+        "statement_only_sha256": "96d6b579feecbca75e161d36eb77236421b420d88429aad9656ba288a64055de",
+        "material_repair_to_reviewed_version": false
+      }
+    ],
+    "status": "REFUTED_REMAINDER_COMPONENT_OLD_ACCEPTANCES_RETRACTED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "The exact v1 inequality R(q)<=0 is false, already at q=1/2 on the two-bit activated dictator.",
+    "next_consumers": [
+      "A002",
+      "A007",
+      "A012",
+      "A015",
+      "A023",
+      "A025",
+      "A026",
+      "A036",
+      "A040",
+      "A047",
+      "A048",
+      "A077",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f on a finite uniform cube and physical block B, K(f)=integral J_f=(H_nat(f)-p_empty ln(1/p_empty))/2 obeys 2[K(f)-E_y K(f_y)]=M_B^+ + C_B^+ + ell_B, where q_T=sum_{U subset B}p_{U union T}=E_y p_y(T), M_T=sum_U p_{U union T}ln(q_T/p_{U union T}), C_T=E_y p_y(T)ln(p_y(T)/q_T), plus omits T=empty, and ell_B=sum_{nonempty U subset B}p_U ln(1/p_U). All three terms are nonnegative. For B={i}, C_i^+<=2 Inf_i and ell_i<=(2/e)Inf_i. The identity telescopes in every finite physical stopping tree, with retained terminal K and cumulative channel-plus-level cost <=(2+2/e)[I(f)-E I(leaf)]. If R_nat=sum_i M_i^+ and B_nat=sum_i H_nat(S_i|S_without_i), then 0<=B_nat-R_nat<=(1+2/e)I. Moreover R_nat(y product_{j=1}^m g(x^(j)))=m B_nat(g) and I=m I(g)+1, so the optimal universal constants for R_nat/I and B_nat/I are equal. A universal R_nat<=A I implies FEI in bits with constant (A+2)/ln2 via C018; no such A is proved here.",
+    "hypotheses": [
+      "Finite uniform cube; Boolean outputs in {-1,1}",
+      "Natural logarithms; entropy bits = nats/ln2",
+      "Zero-mass log terms vanish",
+      "Physical restrictions and actual coherent child Fourier coefficients"
+    ],
+    "statement_sha256": "91cb0a1f21648d5372e658f92219b45f224f832a7e835cebff58f0143f5fc5bb",
+    "contributors": [
+      "account05/A066"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T233317Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+        "version": 1,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+        "acceptance_scope": "Source-bound independent A067 and A088 acceptance at stated scope; central adoption not asserted"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A100/account05",
+        "timestamp": "2026-10-13T21:56:42.464537+00:00",
+        "verdict": "GAP_UNQUALIFIED_BLOCK_TREE_BUDGET_REFUTED",
+        "scope": "A088 scope objection confirmed analytically and by a fresh rational n=128 point-defect certificate. The block identity and singleton-tree budget survive; the serialized unrestricted stopping-tree budget cannot receive full acceptance.",
+        "independent_method": "Independent analytic reconstruction and source-version audit; A097 and A021 additionally use a fresh integer-Walsh/Fraction/rational-log implementation. No upstream code imported.",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261013T213917Z-account05-A100-release-and-continuation-ledger\\REVIEW.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261013T213917Z-account05-A100-release-and-continuation-ledger\\out\\A066_BLOCK_SCOPE_INDEPENDENT.json",
+        "source_recorded_statement_sha256": "91cb0a1f21648d5372e658f92219b45f224f832a7e835cebff58f0143f5fc5bb",
+        "statement_only_sha256": "91cb0a1f21648d5372e658f92219b45f224f832a7e835cebff58f0143f5fc5bb",
+        "material_repair_to_reviewed_version": false
+      }
+    ],
+    "status": "PARTIAL_SCOPE_SINGLETON_TREE_ONLY_BLOCK_SCOPE_REFUTED",
+    "supersedes": [],
+    "refutes": [
+      "Channel-only restriction heat payment; refuted by majority calibration in second claim"
+    ],
+    "first_unproved_line": "The cumulative channel-plus-level budget requires singleton-query trees. Its unqualified block-tree reading fails for one full-block query on the 128-bit point defect.",
+    "next_consumers": [
+      "A067",
+      "A070",
+      "A064",
+      "A088",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  }
+]

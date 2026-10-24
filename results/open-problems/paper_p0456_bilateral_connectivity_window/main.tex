@@ -1,0 +1,609 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\Ee}{\mathbb E}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\TV}{\mathrm{TV}}
+\newcommand{\Poi}{\operatorname{Poisson}}
+\newcommand{\Bin}{\operatorname{Bin}}
+\newcommand{\Beta}{\operatorname{Beta}}
+\newcommand{\LK}{LK}
+\newcommand{\fall}[2]{(#1)_{#2}}
+
+\title{The exact connectivity window for bilateral-preference random graphs}
+\author{Proof package for the P0456 source question}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let independent continuous weights be assigned to the edges of the complete graph $K_n$.
+At every vertex keep its $k$ incident edges of smallest weight, and retain an edge in
+$\LK(n,k)$ only when both of its endpoints keep it.  Dabirian and Subramanian proved
+connectivity and disconnection outside a window of width
+$\log\log n\sqrt{\log n}$ around $\log n$ and asked for sharper sufficient conditions
+inside that window.  We identify the additive-$O(1)$ transition.  If $Z_n$ is the number
+of isolated vertices and $\lambda_n=ne^{-k}$, then, uniformly for every fixed $C<\infty$
+and all integers $|k-\log n|\le C$,
+\[
+ d_{\TV}(\mathcal L(Z_n),\Poi(\lambda_n))\longrightarrow0,
+ \qquad
+ \Pp(\LK(n,k)\text{ is connected})=e^{-\lambda_n}+o_C(1).
+\]
+The proof uses an exact marked order-statistic integral for one-root rejection, a canonical
+finite interaction/deletion scheme for several roots, a finite Brun--Bonferroni inversion,
+and literal elimination of nontrivial components.  No mean-degree heuristic is used.
+\end{abstract}
+
+\section{Model and main theorem}
+
+Give every unordered edge $e$ of $K_n$ an independent $U[0,1]$ weight $W_e$.
+For a vertex $v$, let $P_v(k)$ be its $k$ incident edges of smallest weight.
+The bilateral-preference graph is
+\[
+ E(\LK(n,k))=\{\{u,v\}:\{u,v\}\in P_u(k)\cap P_v(k)\}.
+\]
+The continuity of the edge-weight law makes all incident ranks almost surely distinct.
+Let $I_v$ be the indicator that $v$ is isolated in $\LK(n,k)$ and put
+$Z_n=\sum_v I_v$.
+
+\begin{theorem}[Fixed-window Poisson law and connectivity]\label{thm:main}
+For every fixed $C<\infty$, uniformly over integers $k$ satisfying
+$|k-\log n|\le C$, with $\lambda_n=ne^{-k}$,
+\[
+ d_{\TV}(\mathcal L(Z_n),\Poi(\lambda_n))\to0
+\]
+and
+\[
+ \Pp(\LK(n,k)\text{ is connected})=e^{-\lambda_n}+o_C(1).
+\]
+In particular, if $k-\log n\to c$ along an integer-compatible subsequence, then
+$Z_n\Rightarrow\Poi(e^{-c})$ and the connectivity probability tends to
+$\exp(-e^{-c})$.
+\end{theorem}
+
+\begin{corollary}[Sharp source-band threshold]\label{cor:band}
+If $k-\log n\to+\infty$, then $\LK(n,k)$ is connected with probability tending to one.
+If $k-\log n\to-\infty$, then it is disconnected with probability tending to one.
+\end{corollary}
+
+The rest of the paper proves Theorem~\ref{thm:main}.  The key point is that the
+rare obstruction at the transition is isolation, whose probability is of order $e^{-k}$;
+mean degree alone does not resolve this tail event.
+
+\section{The one-root marked saddle}
+
+We first isolate the analytic input.  For integers $N\ge h$ set
+\[
+ q_h(x)=\Pp(\Bin(N,x)\ge h),\qquad
+ Q_h(x)=\int_0^x q_h(t)\,dt.
+\]
+If $B_h$ is the $h$th order statistic of $N$ independent uniforms, then
+\[
+ B_h\sim\Beta(h,N-h+1),\qquad
+ q_h(x)=\Pp(B_h\le x),\qquad
+ Q_h(x)=\Ee[(x-B_h)_+].
+\]
+For $m>k$ define
+\begin{equation}\label{eq:M}
+ M(m,N;k,h)=\frac{\fall m{k+1}}{k!}
+ \int_0^1 Q_h(x)^k(1-x)^{m-k-1}\,dx .
+\end{equation}
+This functional is exactly the probability contribution obtained by exposing the first
+$k$ ordered proposals of one root and requiring the selected outside endpoint at deadline
+$x$ to have at least $h$ lighter competitors in an independent pool of size $N$.
+Indeed, the joint density of the first $k$ order statistics of $m$ uniforms is
+$\fall m k(1-x_k)^{m-k}$ on $0<x_1<\cdots<x_k<1$; integrating the first $k-1$
+coordinates and integrating by parts gives \eqref{eq:M}.
+
+\begin{lemma}[Uniform clean saddle]\label{lem:saddle}
+Fix $C,A,M_0<\infty$.  Suppose
+\[
+ |k-\log n|\le C,\qquad |m-n|+|N-n|\le Ak,
+ \qquad |h-k|\le M_0.
+\]
+Then, uniformly in these parameters,
+\begin{equation}\label{eq:saddle}
+ M(m,N;k,h)=e^{-h}\bigl(1+O_{C,A,M_0}(e^{-k/20})\bigr).
+\end{equation}
+In particular $M(m,N;k,k)=e^{-k}(1+O_C(e^{-k/20}))$.
+\end{lemma}
+
+\begin{proof}
+Write $\mu=h/(N+1)$ and replace $B_h$ by its mean.  The corresponding transform is
+$Q_0(x)=(x-\mu)_+$, and beta integration gives the exact identity
+\begin{equation}\label{eq:M0}
+ M_0:=\frac{\fall m{k+1}}{k!}
+ \int_\mu^1(x-\mu)^k(1-x)^{m-k-1}\,dx=(1-\mu)^m.
+\end{equation}
+Since $m=n+O(k)$, $N=n+O(k)$ and $h=k+O(1)$,
+\[
+ M_0=e^{-h}\bigl(1+O(k^2/n)\bigr).
+\]
+It remains to control the dispersion of $B_h$.
+
+Set $\Delta(x)=Q_h(x)-(x-\mu)_+$.  Convexity of $b\mapsto(x-b)_+$ gives
+$\Delta(x)\ge0$.  Interpolate
+\[
+ Q_\theta(x)=(x-\mu)_++\theta\Delta(x),\qquad0\le\theta\le1,
+\]
+and let $M_\theta$ be \eqref{eq:M} with $Q_h$ replaced by $Q_\theta$.
+Differentiation under the integral yields $M_\theta'\ge0$ and $M_\theta''\ge0$;
+hence
+\begin{equation}\label{eq:interp}
+ 0\le M_1-M_0\le M_1'.
+\end{equation}
+For $x\ge\mu$ write $a=x-\mu$ and
+$R(x)=\Ee[(B_h-x)_+]$, so $Q_h(x)=a+R(x)$.
+Under the probability measure proportional to
+$(x-\mu)^k(1-x)^{m-k-1}\,dx$ on $(\mu,1)$,
+\[
+ Z:=\frac{x-\mu}{1-\mu}\sim\Beta(k+1,m-k).
+\]
+Let $\sigma^2=\operatorname{Var}(B_h)$; then
+$\sigma=O(\sqrt{k}/n)$ and $\sigma^2/\mu^2\le1/h$.
+The normalized version of \eqref{eq:interp} reduces to one lower-boundary term and
+one expectation of
+$r(x)(1+r(x))^{k-1}$, where $r=R/a$.
+Split at
+$a_1=\mu k^{-1/3}$ and $a_0=\mu/2$.
+For $x\le\mu$ and $0<a\le a_1$, the bounds
+$Q_h(x)\le\sigma$ and $R(x)\le\sigma$ give respectively
+$\exp[-\tfrac12k\log k+O(k)]$ and
+$\exp[-\tfrac13k\log k+O(k)]$.
+For $a_1<a\le a_0$, the elementary inequality
+$(Y-a)_+\le Y^2/(4a)$ for centered $Y$ gives
+$r(x)\le k^{-1/3}$, while the beta/binomial identity and a Chernoff bound give
+\[
+ \Pp_{\Beta(k+1,m-k)}(a\le a_0)\le e^{-(k+1)/10}.
+\]
+For $a\ge a_0$, size-biasing the beta density gives
+\[
+ R(x)\le\mu\Pp(B_h^+>x),\qquad B_h^+\sim\Beta(h+1,N-h+1),
+\]
+and the order-statistic/binomial identity plus a lower-tail Chernoff bound yields
+$r(x)\le2e^{-2(h+1)/35}$.
+Substituting these four estimates into \eqref{eq:interp} gives
+\[
+ 0\le M_1/M_0-1=O(e^{-k/20}).
+\]
+Together with \eqref{eq:M0}, this proves \eqref{eq:saddle}.
+\end{proof}
+
+We shall also use the following robust consequence.  It is important that the omitted
+ranks may be arbitrary rather than only terminal.
+
+\begin{lemma}[Bounded arbitrary omissions]\label{lem:omit}
+Fix $r,C,D<\infty$.  In $r$ one-root marked integrals at $|k-\log n|\le C$, delete at
+most $D$ proposal deadlines in each finite collection and change every rejection quota by
+at most $D$.  Uniformly over the locations of the deleted ranks, the resulting joint
+rejection probability is at most
+\begin{equation}\label{eq:omit}
+ C_{r,D}k^{O_{r,D}(1)}e^{-rk+C_{r,C,D}k^{2/3}}.
+\end{equation}
+If the precise total number of deleted deadlines is $d$, the polynomial factor can be
+taken to be $C_{r,D}k^d$ after enlarging the $k^{2/3}$ constant.
+\end{lemma}
+
+\begin{proof}
+Expose the ordered proposal values but not their outside competitor stars.  For a fixed
+omission pattern, integrate the retained marked factors in increasing-rank order.
+Every missing factor replaces one marked factor by $1$ and contributes at most one choice
+among $k$ rank locations.  The remaining terminal integral is bounded by the same
+beta/order-statistic saddle with quota shifted by $O(D)$.  Applying the four-sector proof
+of Lemma~\ref{lem:saddle} with the shifted quota and summing the finitely many interlacings
+of the omitted ranks gives $C_Dk^d$ times an $e^{-k+O(k^{2/3})}$ one-root bound.
+Multiplying the $r$ root bounds proves \eqref{eq:omit}.  No favorable-rank assumption is
+used.
+\end{proof}
+
+\section{Several roots: a canonical finite interaction skeleton}
+
+Fix distinct deterministic roots $R=\{v_1,\ldots,v_r\}$, with $r$ fixed.  Temporarily
+delete all root--root edges.  The remaining incident edge families at the roots are
+disjoint, so their outside order-statistic arrays are independent.  Write
+\[
+ X_{a,1}<\cdots<X_{a,k},\qquad U_{a,1},\ldots,U_{a,k}
+\]
+for their first $k$ outside weights and labels, and $T_a=X_{a,k}$.
+Let $S$ be the set of distinct labels among the $rk$ occurrences and
+$E=V\setminus(R\cup S)$.
+
+Three kinds of finite defects matter.
+\begin{enumerate}[label=(\roman*)]
+\item The equality partition of the $rk$ label occurrences has \emph{collision excess}
+$c=rk-|S|$.
+\item A root--root edge is called endpoint-active if its weight is at most $T_a$ at at
+least one endpoint $v_a$; let $p$ be the number of distinct endpoint-active root--root
+edges.
+\item After the deterministic collision/root preprocessing below, a \emph{support edge}
+is a distinct raw edge $\{u,y\}$, with $u\in S$ and
+$y\in(R\cup S)\setminus\{u\}$, that is lighter than at least one retained deadline for
+label $u$.  Let $q$ be the number of distinct such edges.
+\end{enumerate}
+Set $K=c+p+q$.
+
+\subsection{Root reinsertion and the two safeguards}
+
+At root $a$, reinsert the deleted root--root edges one at a time.  If currently $q_a(t)$
+root edges occupy top-$k$ positions, the selected outside set is exactly
+$X_{a,1},\ldots,X_{a,k-q_a(t)}$.  Each successful root-edge insertion expels the current
+terminal outside edge.  The $k$th threshold therefore only decreases.  Consequently a
+root--root edge heavier than the original $T_a$ can never enter later.
+If $d_a$ is the number of endpoint-active root--root edges incident to $a$, the final
+root occupancy satisfies $q_a^*\le d_a$, and every outside rank
+$1,\ldots,k-d_a$ is certainly retained.  We therefore safely omit the terminal suffix
+$k-d_a+1,\ldots,k$.
+
+Two tempting stronger statements are false and are not used.  First, for $r\ge3$, a
+root--root edge below both original deleted-array thresholds need not remain in both final
+top-$k$ lists after all root edges are reinserted: other root edges may enter first and
+lower one endpoint's threshold.  Second, $q_a^*$ need not equal $d_a$.  For example with
+$k=2$, outside weights $0.1,0.4$ and two endpoint-active root weights $0.2,0.3$, only one
+root edge need occupy the final top two.  The safe suffix rule uses only $q_a^*\le d_a$.
+
+\subsection{Collision canonicalization and support deletion}
+
+Partition proposal occurrences by equal selected label.  In each collision block retain
+only the occurrence with the globally smallest deadline, provided it survives the safe
+root suffix.  If that global minimum is itself omitted, omit the entire block; never
+promote a later occurrence.  Call the resulting retained deadline set $L_0$.
+
+Construct a finite bipartite incidence graph $\Gamma_0$.  Its left vertices are $L_0$.
+Its right vertices are the distinct nonexternal support edges just defined, and a right
+vertex is adjacent to every retained deadline that it is lighter than.  Let $H$ be the
+set of positive-degree right vertices and delete all deadlines in $N(H)$ simultaneously.
+The number of right vertices in $H$ is $q$.
+
+\begin{lemma}[Canonical support deletion]\label{lem:canonical}
+The construction above is deterministic and order-independent outside the null event of
+raw-weight ties.  After the simultaneous deletion, every lighter competitor of every
+surviving retained deadline has its other endpoint in $E$.  Consequently the residual
+raw-edge stars
+\[
+ B_u=\{\{u,x\}:x\in E\}
+\]
+for distinct surviving selected labels $u$ are pairwise disjoint and are disjoint from all
+root proposal arrays, root--root edges and charged support edges.  Conditional on the
+finite exposed skeleton, these residual stars are independent iid-uniform raw-edge
+families.
+\end{lemma}
+
+\begin{proof}
+The complete incidence graph is determined before any support deadline is deleted.
+Deleting left vertices cannot create a new inequality $W_e<D$ and therefore cannot create
+new incidences.  Thus simultaneous deletion and any sequential deletion order have the
+same surviving left set.  By definition, if a surviving retained deadline had a lighter
+competitor with other endpoint in $R\cup S$, that raw edge would be a positive-degree
+right vertex and the deadline would have been deleted.  Hence every surviving lighter
+competitor goes to $E$.  Distinct selected labels yield distinct unordered edges into $E$;
+those edges are also disjoint from the finitely exposed nonexternal family.  Independence
+now follows from independence of the original raw weights.
+\end{proof}
+
+This is an upper-support device, not an equivalence for joint isolation.  If a root--root
+edge enters a root's top $k$, true isolation may impose an additional bilateral-failure
+condition.  Dropping such a condition is legitimate only in an upper bound.
+
+\subsection{Defect codimension}
+
+Let $G_L=\{T_a\le L_r k/n\text{ for all }a\}$, with $L_r=8(r+1)$.
+For a fixed equality partition with $m=rk-c$ blocks, outside-label permutation symmetry
+gives the exact probability
+\begin{equation}\label{eq:partition}
+ \frac{(n-r)_m}{(n-r)_k^r}=n^{-c+o(1)}.
+\end{equation}
+There are at most $(rk)^{2c}$ such partitions of collision excess $c$.
+On $G_L$, every prescribed endpoint-active root--root edge costs $O_r(k/n)$.
+A prescribed selected--selected support edge also costs $O_r(k/n)$.
+If a selected label $u$ is absent from a nonowner root's exposed prefix, its edge to that
+root has, conditional on the prefix threshold $T$, the exact law $U[T,1]$; therefore its
+support activity again costs $O_r(k/n)$.  Distinct charged edges are distinct raw variables.
+
+Split $q=q_{SS}+q_{RT}$ into selected--selected and selected--nonowner-root charges.
+The canonical number $d$ of omitted retained deadlines satisfies
+\begin{equation}\label{eq:omissions}
+ d\le c+2p+2q_{SS}+q_{RT}.
+\end{equation}
+The selected--selected support graph has at most $2q_{SS}$ incident retained labels; hence
+its endpoint choices and omission relief together cost at most $k^{4q_{SS}}$, while its
+raw-edge activity contributes $(C_rk/n)^{q_{SS}}$.  The remaining one-unit defect types
+cost at most $C_rk^3/n$ after their rank choices and bounded omission relief are included.
+Using Lemma~\ref{lem:omit}, for $1\le K\le r$ we obtain
+\begin{equation}\label{eq:lowK}
+ \Pp(I_{v_1}=\cdots=I_{v_r}=1,\,K,\,G_L)
+ \le e^{-rk+C_{C,r}k^{2/3}}
+ \left(\frac{C_rk^3}{n}\right)^{c+p+q_{RT}}
+ \left(\frac{C_rk^5}{n}\right)^{q_{SS}}.
+\end{equation}
+For $K\ge r+1$, the same pattern count before using residual rejection gives
+\begin{equation}\label{eq:highK}
+ \Pp(K\ge r+1,G_L)\le n^{-r-1+o(1)}.
+\end{equation}
+Finally a binomial Chernoff bound for the $k$th outside order statistic gives
+\begin{equation}\label{eq:guard}
+ \Pp(G_L^c)\le r\exp[-49(r+1)k/32]=o(e^{-rk}).
+\end{equation}
+Since $n=e^{k+O_C(1)}$, \eqref{eq:lowK}--\eqref{eq:guard} imply
+\begin{equation}\label{eq:positiveK}
+ \Pp(I_{v_1}=\cdots=I_{v_r}=1,\,K\ge1)=o_C(e^{-rk}).
+\end{equation}
+
+\section{The clean branch and fixed factorial moments}
+
+We next identify the $K=0$ contribution and a matching lower event.
+Put $N_0=n-r$.  On global distinctness of all $rk$ outside proposal labels,
+$|E|=N_1=n-r-rk$.
+
+\begin{proposition}[Clean upper bound]\label{prop:clean-upper}
+Uniformly for fixed $r,C$,
+\[
+ \Pp(I_{v_1}=\cdots=I_{v_r}=1,K=0)
+ \le e^{-rk}\left(1+O_{C,r}(e^{-k/20}+k^2/n)\right).
+\]
+\end{proposition}
+
+\begin{proof}
+On $K=0$, $p=0$ implies that every root's actual top-$k$ list equals its deleted-array
+outside list, $c=0$ makes all selected labels distinct, and $q=0$ rules out any lighter
+nonexternal support edge.  If a proposal $\{v_a,u\}$ is rejected at $u$, then $u$ has at
+least $k$ lighter incident competitors; all of them must therefore lie in $E$.
+Conditional on a fixed distinct ordered label array, the stars from selected labels into
+$E$ are disjoint and independent.  Hence
+\[
+ \Pp(I_R=1,K=0)
+ \le \frac{(N_0)_{rk}}{(N_0)_k^r}
+       M(N_0,N_1;k,k)^r.
+\]
+The label factor is $1+O_r(k^2/n)$ and Lemma~\ref{lem:saddle} gives the claim.
+\end{proof}
+
+For the lower bound let $t_n=8k/N_0$.  Require: (i) all $rk$ outside proposal labels are
+distinct; (ii) every root $k$th outside threshold is at most $t_n$; (iii) every root--root
+edge has weight greater than $t_n$; and (iv) every selected outside label $u$ has at least
+$k$ edges into $E$ lighter than its proposal deadline.  Call this event $L_R$.  It is a
+deterministic sufficient event for joint root isolation.
+
+For
+\[
+ M_t=\Ee\left[\1_{\{X_k\le t\}}\prod_{j=1}^kq_k(X_j)\right],
+\]
+the same order-statistic integration gives
+\begin{align}
+ M_t&=\frac{(N_0)_k}{(k-1)!}\int_0^t
+ q_k(x)Q_k(x)^{k-1}(1-x)^{N_0-k}\,dx,\label{eq:Mt1}\\
+ &=\frac{(N_0)_k}{k!}Q_k(t)^k(1-t)^{N_0-k}
+ +\frac{(N_0)_{k+1}}{k!}\int_0^tQ_k(x)^k(1-x)^{N_0-k-1}\,dx.\label{eq:Mt2}
+\end{align}
+At $t=1$, this is the functional in Lemma~\ref{lem:saddle} with $N=N_1$.
+Because all relevant raw-edge blocks are disjoint on distinctness,
+\begin{equation}\label{eq:lowerexact}
+ \Pp(L_R)=\frac{(N_0)_{rk}}{(N_0)_k^r}
+ (1-t_n)^{\binom r2}M_{t_n}^r.
+\end{equation}
+Moreover
+\[
+ 0\le M_1-M_{t_n}\le\Pp(\Bin(N_0,t_n)\le k-1)\le e^{-49k/16}.
+\]
+Thus \eqref{eq:lowerexact} and Lemma~\ref{lem:saddle} yield
+\begin{equation}\label{eq:lower}
+ \Pp(I_{v_1}=\cdots=I_{v_r}=1)
+ \ge e^{-rk}\left(1-O_{C,r}(e^{-k/20}+k^2/n)\right).
+\end{equation}
+
+Combining \eqref{eq:positiveK}, Proposition~\ref{prop:clean-upper} and
+\eqref{eq:lower} proves the central fixed-root estimate
+\begin{equation}\label{eq:joint}
+ \boxed{\Pp(I_{v_1}=\cdots=I_{v_r}=1)=e^{-rk}(1+o_C(1))}
+\end{equation}
+uniformly for every fixed $r$ and every deterministic distinct root tuple.
+
+By vertex exchangeability,
+\begin{equation}\label{eq:factmom}
+ \Ee[(Z_n)_r]=(n)_r\Pp(I_1=\cdots=I_r=1)
+ =\lambda_n^r(1+o_C(1))
+\end{equation}
+for every fixed $r$.
+
+\section{Finite Brun inversion to total variation}
+
+For completeness we record a finite form of the Brun--Bonferroni argument, so no
+infinite-moment theorem is hidden in the Poisson step.
+
+\begin{lemma}[Finite Brun bound]\label{lem:brun}
+Let $X$ be nonnegative integer-valued, $0\le\lambda\le\Lambda$, and
+$\delta_m=|\Ee[(X)_m]-\lambda^m|$, with $\delta_0=0$.  For integers $J\ge0$ and even
+$T\ge0$, assuming factorial moments through $J+T+1$ are finite,
+\begin{align}
+ d_{\TV}(\mathcal L(X),\Poi(\lambda))
+ &\le \frac{2\Lambda+\delta_1}{2(J+1)}\\
+ &\quad+\frac12\sum_{j=0}^J\frac1{j!}
+ \left[\sum_{t=0}^T\frac{\delta_{j+t}}{t!}
+ +\frac{\Lambda^{j+T+1}+\delta_{j+T+1}}{(T+1)!}\right].
+ \label{eq:brun}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+Set
+\[
+ B_T^X(j)=\sum_{t=0}^T(-1)^t\frac{\Ee[(X)_{j+t}]}{j!t!}.
+\]
+The alternating-binomial identity gives, for even $T$,
+$B_{T+1}^X(j)\le\Pp(X=j)\le B_T^X(j)$, with bracket width
+$\Ee[(X)_{j+T+1}]/[j!(T+1)!]$.  Apply the same brackets to a Poisson variable, whose
+factorial moments are $\lambda^m$, compare the brackets, and sum for $0\le j\le J$.
+For $j>J$, Markov's inequality bounds the two tails by their first moments.  This gives
+\eqref{eq:brun}.
+\end{proof}
+
+In the fixed window, $\lambda_n\le e^C$.  Given $\varepsilon>0$, first choose $J$ large
+enough to make the first term of \eqref{eq:brun} small, then choose even $T$ large enough
+to control the finite Poisson bracket widths, and finally use \eqref{eq:factmom} for the
+finitely many required orders.  Hence
+\begin{equation}\label{eq:TV}
+ d_{\TV}(\mathcal L(Z_n),\Poi(\lambda_n))\to0
+\end{equation}
+uniformly for $|k-\log n|\le C$.
+
+\section{Literal elimination of nontrivial components}
+
+It remains to prove that isolated vertices are the only asymptotically relevant obstruction
+to connectivity.  Let $\tau_v$ be the $k$th incident order statistic at $v$, and set
+\[
+ a=\frac5{32},\qquad b=\frac{32}{5}.
+\]
+Let $G$ be the global envelope
+\begin{equation}\label{eq:envelope}
+ a\frac{k}{n-1}\le\tau_v\le b\frac{k}{n-1}\qquad\text{for every }v.
+\end{equation}
+The Chernoff rate constants satisfy
+\[
+ a-1-\log a>1,\qquad b-1-\log b>1.
+\]
+Since $k=\log n+O(1)$, a union bound over vertices yields
+\begin{equation}\label{eq:Gfail}
+ \Pp(G^c)=o(1).
+\end{equation}
+
+\subsection{Components of size at least seven}
+
+If $S$ is a connected component of size $s$ on $G$, every cut edge from $S$ to $S^c$
+has weight at least $ak/(n-1)$: a lighter cut edge would lie below both endpoint kth
+thresholds and therefore be retained bilaterally.  Also the retained connected graph on
+$S$ contains a spanning tree whose edges all have weight at most $bk/(n-1)$.  Therefore,
+for a fixed $S$,
+\begin{equation}\label{eq:componentS}
+ \Pp(S\text{ is a component},G)
+ \le s^{s-2}\left(\frac{bk}{n-1}\right)^{s-1}
+ \left(1-\frac{ak}{n-1}\right)^{s(n-s)}.
+\end{equation}
+For each fixed $7\le s\le12$, summing \eqref{eq:componentS} over $\binom ns$ sets gives
+$n^{1-as+o(1)}\operatorname{poly}_s(k)=o(1)$, since $7a=35/32>1$.
+For $13\le s\le n/2$, use $n-s\ge n/2$ and $\binom ns\le(en/s)^s$; the resulting
+series is bounded by a constant times
+\[
+ \sum_{s\ge13}n\,[Ck n^{-a/2}]^{s-1},
+\]
+whose first term tends to zero because $1-13a/2=-1/64<0$ and whose ratio tends to zero.
+Thus no component of size between $7$ and $n/2$ survives with high probability on $G$.
+
+\subsection{Components of sizes two through six}
+
+Fix a deterministic set $S$, $2\le s\le6$.  To rank external proposals at $v\in S$,
+temporarily delete the $s-1$ internal incident edges.  If
+\[
+ X_{v,1}<X_{v,2}<\cdots
+\]
+are the external order statistics and
+\[
+ H_v(x)=\#\{w\in S\setminus\{v\}:W_{vw}<x\},
+\]
+then the actual incident rank of the external edge of external rank $j$ is exactly
+\begin{equation}\label{eq:rankprofile}
+ j+H_v(X_{v,j}).
+\end{equation}
+Hence the first
+\[
+ p_0=k-(s-1)
+\]
+external edges are certainly among the true top $k$, for every realization of the internal
+weights.  If $S$ is a component, every one of these forced external proposals must be
+rejected at its outside endpoint.
+
+The internal raw sigma-field
+$\mathcal F_{\mathrm{int}}(S)=\sigma(W_e:e\subset S)$ is independent of every raw edge
+used by the external proposal/rejection/support machinery.  Thus conditioning on the
+complete internal rank profile leaves all external laws unchanged.  In particular, if an
+outside label $u$ is absent from another component vertex's first $p_0$ external labels
+and $T$ is that prefix threshold, then exactly
+\[
+ W_{bu}\mid\text{ordered prefix}\sim U[T,1].
+\]
+If this coordinate itself creates a support omission, its $O(k/n)$ activity charge is paid
+before revealing and deleting the contaminated deadlines; one never conditions its tail
+law on an event that already sees the coordinate.
+
+Applying the same canonical collision/support deletion and Lemma~\ref{lem:omit} to this
+fixed-prefix witness, with complexity cutoff $3$, gives uniformly in deterministic $S$
+\begin{equation}\label{eq:smallreject}
+ \Pp(A_S)\le e^{-sk+o_C(k)}+n^{-3+o(1)},
+\end{equation}
+where $A_S$ is the event that all forced external proposals are rejected.  The internal
+profile removes at most $s(s-1)$ deadlines relative to the full $sk$ proposal array, so
+this is precisely a bounded-omission application.
+
+On $G$, a component $S$ has a spanning tree with every internal edge at most $bk/(n-1)$.
+For a fixed labelled tree $T$, the light-tree event depends only on internal edges and has
+probability at most $(bk/(n-1))^{s-1}$, while $A_S$ depends only on noninternal edges.
+They are exactly independent without conditioning on $G$.  Summing over $\binom ns$ sets
+and $s^{s-2}$ Cayley trees, \eqref{eq:smallreject} gives, for every $2\le s\le6$,
+\[
+ \Pp(\exists\ s\text{-component},G)
+ \le n^{1-s+o(1)}k^{s-1}+n^{-2+o(1)}k^{s-1}=o(1).
+\]
+Together with \eqref{eq:Gfail} and the large-component estimate,
+\begin{equation}\label{eq:no-components}
+ \Pp(\exists\text{ component of size }2,\ldots,\lfloor n/2\rfloor)=o(1).
+\end{equation}
+The guard failure in \eqref{eq:Gfail} is paid once, after the entire component union.
+
+By \eqref{eq:TV},
+\[
+ \Pp(Z_n=0)=e^{-\lambda_n}+o_C(1).
+\]
+A disconnected graph with no isolated vertices has a component of size between $2$ and
+$n/2$, so \eqref{eq:no-components} proves Theorem~\ref{thm:main}.
+
+\section{Monotone closure of the source window}
+
+Couple all quotas using the same weight array.  If an edge is retained at quota $k$, it
+remains in both endpoints' preferred lists for every larger quota, hence
+\[
+ \LK(n,k)\subseteq\LK(n,k+1).
+\]
+Connectivity is therefore increasing in $k$.
+If $k_n-\log n\to+\infty$, fix $M>0$ and choose an integer $q_n\le k_n$ eventually with
+$M\le q_n-\log n\le M+1$.  Theorem~\ref{thm:main} gives
+\[
+ \liminf_n\Pp(\LK(n,k_n)\text{ connected})\ge e^{-e^{-M}}.
+\]
+Letting $M\to\infty$ gives one.  The lower side is analogous: if
+$k_n-\log n\to-\infty$, choose $q_n\ge k_n$ with
+$-M-1\le q_n-\log n\le-M$; then monotonicity and Theorem~\ref{thm:main} give a limsup at
+most $e^{-e^M}$, which tends to zero.  This proves Corollary~\ref{cor:band}.
+
+\section{Scope and source relation}
+
+The theorem answers the connectivity-window question in Section~1.1 of Dabirian and
+Subramanian by replacing the source's coarse pairwise no-interaction conditioning with a
+canonical finite support-deletion construction.  The source obtains exact conditional
+independence after excluding its bad event; here positive interactions are charged once,
+every contaminated deadline is deleted, and the remaining external stars are literally
+disjoint.  The fixed-window theorem is stronger than the outer-band source bounds and,
+by monotonicity, closes the entire source connectivity band.
+
+A bounded literature search through 20 September 2026 did not locate a later primary
+publication proving this fixed-width Poisson/connectivity law.  This statement is only a
+bounded prior-art record, not a claim of worldwide publication priority.
+
+\begin{thebibliography}{9}
+\bibitem{DS}
+H. Dabirian and V. Subramanian,
+\emph{Connectivity of a family of bilateral preference random graphs},
+Journal of Applied Probability \textbf{63} (2026), no.~2, 552--579.
+DOI: 10.1017/jpr.2025.10051.
+\end{thebibliography}
+
+\end{document}

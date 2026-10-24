@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260923T121750Z-account03-B06-qform-r35",
+  "utc_start": "2026-09-23T12:17:50Z",
+  "startup_control_commit": "8134da4cfd589d62b295282a0e48a6d394bea819",
+  "final_control_commit": "0a90db43ed530c08d7ee92b268cd5c2b11e9634c",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "result_id": "QFORM-CONDITIONAL-SQUARE-HALF-RIESZ-v1",
+  "result_status": "PROVED_SUPPORTING_ANALYTIC_THEOREM_AND_COUPLED_TARGET_VALID_FAMILY",
+  "full_conjecture_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "FULL_OPEN; scoped branches have absolute continuity and essential density bounds only",
+  "mathematical_premises": [
+    {
+      "source": "yspennstate/math-open-problems@f13d13f2dd1d240c98505a03afebe80f64d4bf10",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260923T082859Z-account02-B16-QFORM-r11/REPORT.md",
+      "scope": "same-sign/nonnegative-pivot and exact-null scalar/dependent-pair half-Riesz transducer with genuine independent original scalar"
+    },
+    {
+      "source": "yspennstate/math-open-problems@cbcf1a98b7e64f0bd053155a36ec557d1985e12a",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T111729Z-account03-B06-qform-r34/REPORT.md",
+      "scope": "opposite-sign two-sheet curved-shell half-Riesz estimate"
+    },
+    {
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md",
+      "scope": "Theorem C ruled one-sheet bound pi*sqrt(2) for an exact rank-three product projection with actual large eigenvalues"
+    },
+    {
+      "source": "yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T113729Z-account04-B18-qform-r1/REPORT.md",
+      "scope": "dependence-safe translated-square smoothing applied after the new coupled base density bound"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "new_result": {
+    "statement": "If R and Psi are measurable with respect to a sigma-field F and Z conditional on F has density cap L_Z, then Q=R+a(Z+Psi)^2 satisfies p_Q(t)<=L_Z |a|^{-1/2} E[1_{a(t-R)>0}|t-R|^{-1/2}]. Applying the existing scalar/dependent-pair half-Riesz estimates permits an arbitrary base-dependent translation of the final fresh scalar square without requiring an L-infinity density for the hyperbolic base.",
+    "coupled_family": "For the orthonormal near-coloop coordinates (Y,U,V), the square (V+theta Y+zeta U)^2 is paid for both pivot signs. If rho=sqrt(theta^2+zeta^2)<1/sqrt(2), the exact coupling perturbation has norm epsilon=(rho^2+rho sqrt(rho^2+4))/2<1. Scaling by (1-epsilon)^{-1} restores all three eigenvalue moduli >=1. In c>63/64 the resulting exact target families have density caps <13.508 for the nonnegative-pivot family, <6.754 at the null endpoint, and <9.552 for the opposite-sign family after combining the two-sheet estimate with Claude's ruled one-sheet theorem."
+  },
+  "partner_result": "The exact designated account04/B06 current-QFORM handoff directory was absent on startup and final checks. No result was fabricated. The completed account04/B18 dependence-safe square theorem was applied to Q_*=R+a[W+Phi]^2, yielding <7.351/sqrt(|a|) and <6.181/sqrt(|a|) in the two new coupled base branches.",
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f270357a7f47b2edf76995c7fa04bd196184c8a9",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T121750Z-account03-B06-qform-r35/REPORT.md",
+    "report_blob": "d0a45210924045a65789b79e5b6724d7bfa68c98",
+    "checkpoint_first_commit": "9025a7258858921095f9a029c9523942518077f1"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "8adc26a80668daf9aa53dd26e33755d75cba0c36",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B06/20260923T121750Z-account03-B06-qform-r35.md"
+  },
+  "unresolved_implication": "QFORM-NO-FRESH-SCALAR-SHARED-BANK-v1",
+  "next_step": "Remove the final genuinely fresh capped scalar reserve: handle a smoothing direction made entirely from the same original-coordinate bank carrying the dependent pair, aggregating product structure before any conditional-density supremum or curved fiber maximum.",
+  "independent_review_status": "NOT_A_FULL_CANDIDATE; no end-to-end full-solution review requested by this scoped result",
+  "quiet_delivery": true,
+  "scheduler_mutation": false,
+  "notifications_changed": false,
+  "email_changed": false
+}

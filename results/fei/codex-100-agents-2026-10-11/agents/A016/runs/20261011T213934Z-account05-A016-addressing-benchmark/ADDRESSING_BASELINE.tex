@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A016: Addressing baseline and explicit cost definitions}
+\author{A016, stream B04}\date{12 October 2026}\maketitle
+All costs are in bits. This is a baseline reproduction; unrestricted FEI remains open.
+Let $a\geq0$, $N=2^a$, and $f(x,y)=y_x$, where $x$ is a fresh uniform selector block and the $y_u$ are distinct fair coordinates.
+\[
+f=N^{-1}\sum_{u\in\{-1,1\}^a}\sum_{T\subseteq[a]}\chi_T(u)\chi_T(x)y_u.
+\]
+The $N^2$ Fourier sets are distinct, so the spectrum is uniform on $T\cup\{y_u\}$ and
+\[
+H=2a,\quad I=1+a/2,\quad H=4(I-1).
+\]
+This includes $a=0$, when $f=y_0$ and $(H,I)=(0,1)$.
+
+An actual repeated-label code first transmits the $a$-bit mask $T$, then the $a$-bit address once for each of the $s=1+|T|$ selected coordinates. Its expectation is $a(1+I)$, with ratio $a+2a/(a+2)$. Transmitting the address once followed by the mask costs $2a$, with ratio $4a/(a+2)\to4$. Its latent witness $(u,T)$ is determined by the output set; posterior entropy is zero.
+
+Under the recovered forest source's coordinatewise fractional definitions, selector witnesses have $q_{j,u}=1/N$, whereas data witnesses are deterministic. Convexity minimizes the pressure at $\lambda_u=1/N$, giving
+\[
+P_{\min}=\frac72a^2+\frac{11}{5}a,\qquad
+P_{\min}/I=7a-\frac{48}{5}+\frac{96}{5(a+2)}.
+\]
+Pressure is a component of the source's upper bound, not a complete literal code.
+
+For a literal single-run queue set $d=a+1$, $\gamma=6/5$,
+\[
+\theta_s(r)=\min\{1,(s/r)^\gamma\},\quad
+E_{d,s}=e_s(\theta_s(1),\ldots,\theta_s(d)),\quad
+W_s(B)=\prod_{r\in B}\theta_s(r),
+\]
+where $B=T\cup\{d\}$. Write
+\[
+L_a=\mathbb E_T\left[\log_2(s(s+1))+\log_2 E_{d,s}-\log_2 W_s(B)\right].
+\]
+The original scalar-root generator with parameter one has complete cost
+\[
+C_0=\Lambda_0+a+2+L_a,\qquad
+\Lambda_0=N\log_2(1+1/(2N)).
+\]
+The incidence-weighted generator with $\lambda_u=1/N$, conditioned on nonempty roots, has
+\[
+C_* =\Lambda_f+\log_2 Z_f+2a+2+L_a,
+\quad \Lambda_f=N\log_2(1+1/(2N^2)),\quad Z_f=1-2^{-\Lambda_f}.
+\]
+Exactly one single-root partition run produces each set. Optimizing its posterior subtracts zero entropy. This assertion is restricted to single-root runs; multiple-gate partition runs can exist. At $a=0$, $C_0=\log_2 12$ and $C_*=2$.
+
+Let $w(t)=1$ for $t\leq1/2$ and $w(t)=(2t)^{-\gamma}$ otherwise. There is a unique $z>0$ with
+\[
+\int_0^1\frac{zw(t)}{1+zw(t)}\,dt=\frac12.
+\]
+Define
+\[
+G=\int_0^1\log_2(1+zw(t))\,dt-\frac12\log_2z
+-\frac12\int_0^1\log_2w(t)\,dt.
+\]
+Then
+\[
+C_0/I,C_*/I\longrightarrow2+2G,\qquad
+4\leq2+2G\leq4+\gamma\left(1-\frac1{2\ln2}\right).
+\]
+The coefficient proof uses a Bernoulli generating function with mean $s$: its atom at $s$ has negative logarithm $o(d)$ by Chebyshev and bounded adjacent atom ratios in an $O(\sqrt d)$ central window. Riemann sums give the displayed integral, and binomial concentration transfers it to $\mathbb E_T$. The complete argument, including error control, appears in REPORT.md, Section 5.
+
+Finally set
+\[
+R_a=\frac12\sum_{r=1}^{a}\mathbb E\log_2\frac r{1+\operatorname{Bin}(r-1,1/2)}
++\mathbb E\log_2\frac{a+1}{1+\operatorname{Bin}(a,1/2)}.
+\]
+The source's coarsened forest residual is
+\[
+D_a=\Lambda_f+\log_2 Z_f+2a+1+\gamma R_a.
+\]
+The reciprocal-binomial identity and Jensen give $R_a\leq I$; concentration and Cesaro averaging give $R_a/I\to1$. Thus $D_a/I\to16/5$, while the complete forest theorem cost has limit
+\[
+K_{\rm ref}+16/5,\qquad K_{\rm ref}=3+2\log_2 3+\log_2(6e).
+\]
+The source's separate scalar-queue upper envelope has limit $\log_2(6e)+16/5$. Neither coarsened expression is the literal queue cost.
+
+Sources: threshold paper (38 pages), Sections 5.6--5.7; recovered reductions manuscript, forests.tex, equations forestcost, posteriorforest, outerfractional and Proposition addressforest. REPORT.md contains source receipts, full definitions, derivations and validation boundaries. Exact integer/Fraction and rational-log checks passed 18,734 assertions. Independent review is pending.
+\end{document}

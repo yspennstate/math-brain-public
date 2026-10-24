@@ -1,0 +1,13 @@
+The adaptive base-coordinate lemma is independently checked: w506 kept C001-C004 after separate algebra and truth-table checks. C003 proves Delta_j(F_m)<=4 Inf_j(F_m) for every base coordinate of the explicit bent rare-flip family. C004 gives H(F_m)<=2I(F_m). C001 is an exact entropy identity; C002 is a conditional reduction. The full P0162 conjecture is not proved, current openness remains UNKNOWN, and no novelty is claimed.
+
+Before/after is the splitting choice on the same function. Command: python -X utf8 verify_adaptive.py --gate adaptive-n13-cpu20-signed. At m=12 the selector ratio is 16.326969582937, while every base-coordinate ratio is 3.994063439137. Thirty base-coordinate checks, 64 entropy/influence identity checks, and 44,838 exact signed auxiliary-coefficient checks passed. Maximum floating residual 7.46e-14; CPU 0.64062s; wall 40.91111s. Original measurements and gate are preserved in measurements_initial.json and COMPUTE_GATE_INITIAL.json.
+
+A final proof pass corrected the signs of the three auxiliary control blocks: U has coefficient -2t*(-1)^1_{z in U}, with magnitude 2t. The entropy calculation uses those magnitudes. The fresh integer checks verify the corrected signed formula. Written proofs and independent algebra support the special cases; the numerical runs are not formal theorem receipts.
+
+The single hardest remaining input is a uniform suitable-coordinate inequality for all Boolean functions with all influences below 1/16. C005 remains conjectural. C006's elementary conditional localization still awaits a narrow independent check; it does not prove this input.
+
+The current four-entry DRAFT is ~\math-brain-inbox\w504\bundle_003.json: three independently checked special-case lemmas with full proof text and one conjectural concept, with three supported relations. Prior versions are preserved and supersedes_existing marks the reviewed revisions. BRAIN_SUBMISSION.json records publication and review separately from ingestion (not observed) and retrieval (not tested). The validating coordinator integrates. The hook proposal is staged locally in proposals/math-w504.jsonl under the worker write restriction.
+
+After review, apply the new research note from ~/<private-repo>/06_math_research/math-open-problems with git apply --check ~/brain_workers/w504/patches/01_adaptive_coordinate_note.diff, then git apply with the same path. The worker checked the patch in its own fixture; no original repository was modified.
+
+NEXT: Independently check C006's Delta<=2 localization and validate the reviewed draft, while keeping C005 conjectural.

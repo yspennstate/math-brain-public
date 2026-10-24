@@ -1,0 +1,39 @@
+account01/B08 r43 deterministic arithmetic and algebra checks
+Run: 20260924T051232Z-account01-B08-qform-r43
+Status: CHECKS ONLY; analytic proof is REPORT.md
+
+Definitions:
+rho = 0.0006247538095703261
+gamma = rho/16 = 3.904711309814538e-05
+y0 = gamma/2 = 1.952355654907269e-05
+C_sp = 1 + 44*10^(15/2) = 1391402171.4740868
+threshold = 1/2500 = 0.0004
+
+All-scale pair layer-cake:
+For r=sqrt(2)*kappa,
+a=2*r^2/kappa=4*kappa,
+c=5*(a/L)^(1/4)=5*sqrt(2)*(kappa/L)^(1/4).
+c=1 iff kappa/L=(5*sqrt(2))^(-4)=1/2500.
+J(c)=int_0^infty min(1,c*exp(-u/4))du equals 4c for c<=1 and 4(1+log c) for c>=1.
+Hence
+G(y)=2/y+20*sqrt(2)*y^(-3/4) for y<=1/2500,
+G(y)=[6+4*log(5*sqrt(2)*y^(1/4))]/y for y>=1/2500.
+At y0: c=0.4700290885717877 < 1,
+G(y0)=198740.24205243716.
+
+Scalar pivot constants:
+C_sp*sqrt(2/rho)=78725099484.59871 < 7.873e10.
+C_sp*sqrt(2/gamma)=314900397938.39484 < 3.150e11.
+Thus the fixed-edge branch at gamma=rho/16 is safely paid by 3.150e11/L.
+
+Physical-pair algebra in the no-large-diagonal edge branch:
+If |a|,|c|<|b|/2, then det([[a,b],[b,c]])=ac-b^2<0,
+|det|>3|b|^2/4,
+s_max<=max{|a|+|b|,|c|+|b|}<3|b|/2,
+so s_min=|det|/s_max>|b|/2.
+
+Distributed-star bank split:
+S=sum_j b_j^2 > rho^2 L^2 and max_j b_j^2 < (rho L/16)^2 < S/256.
+Choose a subset whose squared-weight sum first reaches S/2. Its weight is in [128S/256,129S/256), so the complement is >127S/256. Therefore both sides have l2 norm >sqrt(127/256)||b|| = 0.7043392293490403... ||b||.
+
+QFORM_B08_R43_CHECK_PASS

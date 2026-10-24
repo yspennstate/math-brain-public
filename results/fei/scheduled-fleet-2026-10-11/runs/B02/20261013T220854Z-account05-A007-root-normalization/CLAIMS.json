@@ -1,0 +1,122 @@
+[
+  {
+    "claim_id": "A006-ACTUAL-FOREST-DETERMINANT-MOMENT-BOUNDS",
+    "version": 1,
+    "exact_statement": "For every fixed finite nonconstant gate table and ordered support covers satisfying the forests.tex interface, positive feasible lambda, nonempty covered set A and eligible assignment tau, let V be the used gates and c its number of source SCCs in the directed ownership-incidence graph, e=|V|-c, and b_tau=2^(-B_nonroot). Put w_uv(x)=sum_{j in A_u intersect R_v}x_(u,j) for u!=v and use incoming Laplacian L_vv=sum_u w_uv, L_vu=-w_uv. Let T_tau(x)=sum_{R selecting one root in each source SCC} product_{r in R}pi_r det L_(V\\R,V\\R)(x). For the monomial map M(product x^h)=product h!, the exact sum over distinct actual once-per-gate partition-forest queue runs with this assignment is sum_r 2^(-B(A;r))=b_tau M(T_tau). Different assignments are disjoint. With T_can=T_tau(1), D_(u,j)=number of eligible child gates at attachment group (u,j), a_D=(D+1)/2 for D>=1 and a_0=1, T_can<=M(T_tau)<=min(e!T_can,T_tau(a_D)). These determinant bounds are rational for rational pi, and can be summed with the separately algebraic b_tau to bound the full optimized residual cost -log2 sum_tau b_tau M(T_tau). T_tau factors into grounded non-source SCC determinants and rarity-weighted source-SCC cofactor sums, but its factorial-moment expectation need not factor across SCCs. The e! bound is sharp on positive-mass sunflower prime-table assignments. This computes the surrogate B mass, not exact queue probabilities, and asserts no universal O(I) or FEI bound.",
+    "hypotheses": [
+      "finite original forests.tex table with nonempty relevant supports, ordered covers, and strictly positive feasible fractional lambda",
+      "A nonempty and covered; tau assigns each selected coordinate to an eligible gate; each used gate visited exactly once with selected subsets partitioning A",
+      "exactly one root in every source SCC of the ORIGINAL directed ownership graph; no other roots",
+      "initial roots and attachment-coordinate occurrences ordered deterministically by the fixed original generator; child labels at repeated attachment slots distinguish actual events",
+      "B is eq:forestcost, gamma=6/5, entropy and costs in bits, F in natural logs; failed and infinite runs contribute no output mass",
+      "rational determinant assertion conditional on rational rarity pi; algebraic b_tau is kept separate; no free output-dependent reference selection"
+    ],
+    "statement_sha256": "cb901e12f7b1550d21db4d086a3b1502d57e2595a3a331550515b5687914803c",
+    "contributors": [
+      "A006"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261013T214427Z-account05-A006-posterior-forest-optimization\\FOREST_MOMENTS.md",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261013T214427Z-account05-A006-posterior-forest-optimization\\out\\FOREST_CHECK_3.json",
+      "sharpness": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261013T214427Z-account05-A006-posterior-forest-optimization\\out\\STAR_CERTIFICATES.json"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locators": [
+          "eq:forestpacking",
+          "eq:forestcost",
+          "thm:posteriorforest",
+          "actual queue definition and source-SCC partition forests"
+        ],
+        "status": "SOURCE_COMPLETE_BASELINE_READ"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A007",
+        "verdict": "HOLDS_AT_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261013T220854Z-account05-A007-root-normalization\\REVIEW_A006.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261013T220854Z-account05-A007-root-normalization\\out\\REVIEW_CHECK.json",
+        "method": "Independent multilinear determinant reconstruction and explicit queue-event enumeration; original source and all sharpness/boundary clauses reconstructed; no author code imported",
+        "reviewer_supplied_substantive_repair": false,
+        "timestamp_utc": "2026-10-13T22:27:09.433430+00:00"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_STATED_SCOPE_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "factoring factorial-moment expectation into expectations of source-SCC determinant factors, even for actual Boolean prime tables"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B02",
+      "A008",
+      "A009",
+      "A010",
+      "A014",
+      "B03",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A007-ACTUAL-DATA-WITNESS-ROOT-LIFT",
+    "version": 1,
+    "exact_statement": "For every nonconstant Boolean g=2B-1 with the full finite signed prime-conjunction table, positive feasible fixed lambda and one fixed full support order per gate, every r>=1 and every fixed 0<beta<=1 with beta sum lambda<=1, common-core activation F=2A_r B-1 has a fixed feasible prime-table reference lambda'=beta lambda, pi'=2^-r pi, core-first orders. Keeping all base data witnesses and linking old roots through selected core coordinates injects distinct actual base partition-forest events into actual activated events, with multiplicity (c-1)! binom(u+c-2,c-1). For nonempty data T its selected mass is p S(T)G_U(T), with G_U, G_0 defined in LIFT.md and empty-core equality for the full partition-forest mass. The conditioned residual retains the exact signed normalizer log2[D'/(pD)]<=log2 beta. Core-only one-gate mass is p beta a 2^(-C_U), canceling root/name rarity. With the same base posterior, let J_U and L_0 be the rank-stripped joint masses in LIFT.md, and Psi=p Var(g)log2[D'/(pD)]-p sum_T P_g(T)[p log2 L_0(T)+2^-r sum_(U nonempty)log2 J_U(T)]. The full optimized activated surrogate residual satisfies R_F<=p R_g+(7/2)p I(g)+(6/5+log2(e)/4)I_core(F)+Psi. No bound Psi<=K I(F), arbitrary-seed FEI closure or universal PI-J payment is asserted.",
+    "hypotheses": [
+      "finite uniform cube; nonconstant g; fresh positive r>=1 conjunction core",
+      "g represented by all nonempty signed prime conjunctions; rarity pi_l=2^(-width_l)",
+      "positive fixed feasible lambda; fixed beta in (0,1] with beta sum lambda<=1",
+      "one globally fixed full support order per gate; activated order core first",
+      "original forests.tex actual once-per-gate partition forests and conditioned nonempty-root law; no output-dependent reference choice",
+      "entropy and costs in bits; gamma=6/5; structural cost exponents handled exactly",
+      "R is the complete surrogate residual; h2(variance) and K_ref I remain outside it"
+    ],
+    "statement_sha256": "12bcabc5fbb12d830a419c811143e107c5e40390bc903ebcc841b36a6d5f39cd",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261013T220854Z-account05-A007-root-normalization\\LIFT.md",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261013T220854Z-account05-A007-root-normalization\\out\\EXACT_CHECK.json"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locators": [
+          "eq:forestcost",
+          "eq:forestconditioning",
+          "thm:posteriorforest"
+        ],
+        "status": "SOURCE_COMPLETE_BASELINE"
+      },
+      {
+        "claim_id": "A006-ACTUAL-FOREST-DETERMINANT-MOMENT-BOUNDS",
+        "version": 1,
+        "status": "A007_INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE",
+        "use": "computation of base posterior masses only; lift injection and payment independently proved"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A009",
+      "A014",
+      "A015",
+      "A086",
+      "A094",
+      "B02",
+      "B03",
+      "B20"
+    ]
+  }
+]

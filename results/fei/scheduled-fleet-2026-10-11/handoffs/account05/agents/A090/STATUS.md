@@ -1,0 +1,2 @@
+STATE: Stage 5 complete: A001 full four-cell root ownership independently HOLDS; retained quotient plus all remainders paid once at <=7/2 I; 24082 exact checks PASS; A096 acceptance of signed partition consumed; FEI OPEN.
+NEXT: A001/A096 expose one actual core-data query with SAME incoming reference and old root debit; certify genuinely unused child surplus and both terminal debts; A086/A094 review.

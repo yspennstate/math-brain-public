@@ -1,0 +1,135 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prb}{\mathbb P}
+\begin{document}
+\title{A015: exact minterm label barriers}
+\author{A015, stream B03}\date{12 October 2026}\maketitle
+All logarithms are base two. Write $P(A)=\widehat f(A)^2$, $v=1-P(\varnothing)$,
+and $I=\sum_A |A|P(A)$. For a specified DNF with supports $R_l$ and read $k$,
+an assignment $\tau$ sends each $j\in A$ to a containing term and uses
+$\mathcal F=\{l:\tau^{-1}(l)\ne\varnothing\}$. At the fixed queue scale $\lambda=1/k$ define
+\[
+ C_{\rm lab}=\sum_{A\ne\varnothing}P(A)\min_\tau|\mathcal F|\log k,
+ \qquad L(A,\tau)=\sum_{l\in\mathcal F}s_l\log\frac{|A\cap R_l|}{s_l}.
+\]
+These are charged components of the Section 5 witness estimate, not lower bounds
+on an optimized output reference or on entropy. Every assignment has a valid source-component forest.
+
+\paragraph{Majority.} For $n=2a+1$, $t=a+1$, the prime DNF has all $t$-subsets and
+$k=\binom{n-1}{t-1}$. A spectral set of size $d$ uses exactly $\lceil d/t\rceil$ terms:
+support size gives the lower bound; partitioning and extending each part to size $t$ gives the upper bound.
+Thus, with $T_n=\Prb(|S|>t)$,
+\[
+ C_{\rm lab}=(1+T_n)\log\binom{n-1}{t-1},\qquad
+ I=n\binom{n-1}{t-1}2^{1-n}.
+\]
+Every exact DNF has read at least this $k$: at the input with exactly a given $t$-set positive,
+any satisfied implicant must require every one of those positives, or it also accepts a false input.
+Distinct $t$-sets require distinct terms. Additional literals cannot invalidate the lower bound.
+Put $c_j=\binom{2j}{j}/4^j$. The majority derivative is the middle-slice indicator on $2a$ bits;
+its coefficient at $2j$ selected bits is
+$(-1)^j c_a\binom aj/\binom{2a}{2j}$, by extracting the coefficient of $x^a$ in
+$(1-x)^{2j}(1+x)^{2a-2j}$. Hence
+\[
+ W_{2j+1}=\frac{n}{2j+1}c_a c_jc_{a-j},\qquad W_{2j}=0,
+ \quad \sum_j c_jc_{a-j}=1.
+\]
+Markov gives $T_n\le I/t=O(n^{-1/2})$; Wallis gives $I\sim\sqrt{2n/\pi}$ and
+$\log k=n-1-\tfrac12\log n+O(1)$. Therefore
+$C_{\rm lab}/I\sim\sqrt{\pi n/2}\to\infty$.
+Actual entropy is $H(W)+\sum_d W_d\log\binom nd=\Theta(\sqrt n)$: the upper bound is
+the regular-gate theorem. For a direct lower bound, $c_l\ge1/(2\sqrt l)$ follows by induction;
+for $a\ge8$, at least $a/8$ integers satisfy $a/4\le j\le(a-1)/2$.
+Their masses are at least $1/(8a^{3/2})$ and $\log\binom n{2j+1}\ge a/2$, giving
+$H\ge\sqrt a/128$.
+
+Minimum-count assignments can have $L=0$ whenever $d<n$: if $d\le t$ use one term;
+otherwise partition into two parts of sizes between $d-t+1$ and $t$ and fill both terms outside $A$.
+Such a partition exists because $d\le2t-2$.
+For $d=n$, concavity of $s\log(t/s)$ gives the endpoint partition $t,t-1$ as the minimum.
+Thus for $n\ge3$,
+\[
+ \E\min L=W_n(t-1)\log\frac{t}{t-1}\le W_n\log e=O(n^{-1}).
+\]
+For $n=1$ it is zero. The full-cell DNF instead has $k=2^{n-1}$, one used gate,
+zero allocation pressure and $C_{\rm lab}=n-1$.
+
+\paragraph{Tribes.} Let $T_{w,s}$ be the union of $s$ disjoint width-$w$ conjunctions,
+$z=2^{-w}$, $q=1-(1-z)^s$, and $g=1-2T_{w,s}$.
+The prime DNF has $k=1$, and the count of used terms is the number $J$ of hit tribes.
+All owned subsets are their entire intersections, so
+\[
+ C_{\rm lab}=0,\quad L=0,\quad
+ \E J=4sz(1-z)^s,\quad I=2swz(1-z)^{s-1}.
+\]
+Indeed $g=2\prod_l(1-A_l)-1$ has nonempty coefficients
+$2(-z)^j(1-z)^{s-j}$ for sets hitting $j$ tribes, with multiplicity
+$\binom sj(2^w-1)^j$. Its constant is $1-2q$ and $v=4q(1-q)$.
+These identities also give
+\[
+ H=(1-2q)^2\log\frac1{(1-2q)^2}-2v+2w\E J
+       +2\log\frac1{1-z}(sv-\E J).
+\]
+Full satisfying cells have $k=N=2^{ws}q$, one used gate and
+$C_{\rm lab}=v\log N$. If $sz\to\lambda\in(0,\infty)$ as $w\to\infty$,
+then $I\sim2\lambda e^{-\lambda}w$, $H/I\to4$, but
+$C_{\rm lab}/I\sim2(1-e^{-\lambda})s/\lambda\to\infty$.
+
+\paragraph{Activation.} For any Boolean core on $m$ declared bits, put $q=\Prb(g=-1)>0$,
+$p=2^{-r}$, $r\ge1$, and $F=1+A_r(g-1)$ with fresh controls.
+For data $B\ne\varnothing$ the coefficients are $p\epsilon_U\widehat g(B)$;
+for $B=\varnothing,U\ne\varnothing$ they are $-2pq\epsilon_U$; the constant is $1-2pq$.
+Thus
+\[
+ v_F=4pq(1-pq),\quad I(F)=p(I(g)+2rq).
+\]
+Nonempty-data mass is $p\operatorname{Var}(g)$ and control-only mass is
+$4pq^2(1-p)$. The full-cell DNF has $N_-=2^mq$ full-width terms and
+\[
+ \frac{C_{\rm lab}}{I(F)}=
+ \frac{4q(1-pq)\log(2^mq)}{I(g)+2rq}.
+\]
+For balanced cores this is $(2-p)(m-1)/(I(g)+r)$, while actual entropy is
+\[
+ H(F)=pH(g)+2rp(2-p)+(1-p)^2\log\frac1{(1-p)^2}.
+\]
+For general cores the exact entropy is
+\[
+ pH^+(g)+2rp\operatorname{Var}(g)+4pq^2(1-p)\log\frac1{4p^2q^2}
+ +(1-2pq)^2\log\frac1{(1-2pq)^2}.
+\]
+Prime activated majority has all controls in every term, $k=\binom mt$,
+and count $\max\{1,\lceil |B|/t\rceil\}$. Hence
+\[
+ \frac{C_{\rm lab}}{I(F)}=
+ \frac{(2-p+T_m)\log\binom mt}{I(\mathrm{Maj}_m)+r}.
+\]
+For $r=\lceil2\log(m+1)\rceil$, both activated majority conventions have
+ratio $\Theta(\sqrt m)$, although influence and minority probability tend to zero.
+Assign controls to the first used term; the preceding data partition then gives
+$\E L\le pT_m(r+1)\log e$.
+For activated prime tribes, $k=s$ and
+\[
+ \E|\mathcal F|=4pq^2(1-p)+4psz(1-z)^s,\qquad
+ C_{\rm lab}=\E|\mathcal F|\log s.
+\]
+The count is $J(B)$ if positive and one in the nonempty control-only sector.
+Assigning controls to one hit tribe gives $\E L\le pr\log(e)\E_gJ$.
+
+\paragraph{What is missing.} Majority and activated majority are single regular gates:
+orient increasingly and order controls before data; shifting a positive bit from data to a control
+cannot destroy the conjunction event. Coordinates within each group are interchangeable.
+Consequently $k=M=1$ and the regular-gate bound pays actual entropy uniformly.
+Raw minterm names must be grouped into such a structural gate or refunded within a complete posterior law.
+Paying a name once per whole set alone leaves the divergent majority bill.
+For equal full cells with identical rank choices, the $N$ distinct one-root witnesses have summed
+root probability $N2^{-\Lambda_\lambda}\lambda\pi$, where $\pi=2^{-d}$ and
+$\Lambda_\lambda=\sum_l\log(1+\lambda\pi_l)$.
+At $\lambda=1/N$ the label refunds, but the selected-run rarity bill $d$ remains.
+Other witnesses or scales may improve this; no optimized-reference lower bound is claimed.
+The universal unpaid line is existence of a complete normalized reference with all labels,
+subset ranks, root rarity, $v\Lambda$, attachment and posterior charges bounded by $KI$.
+Full FEI remains open. Full source locators and exact validation receipts are in REPORT.md.
+\end{document}

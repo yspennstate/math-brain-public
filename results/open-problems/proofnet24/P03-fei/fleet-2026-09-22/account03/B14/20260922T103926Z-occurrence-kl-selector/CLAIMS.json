@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "run_id": "account03-B14-20260922T103926Z-r11",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "B14-SELECTOR-KOCC-SPLIT-20260922",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For a physical selector coordinate i, the canonical occurrence KL admits the exact four-term split into singleton-reference mismatch, residual-shape KL, mean-occurrence reference mismatch, and conditional selector-occurrence mutual information, as equation (3.3) of REPORT.md.",
+      "dependencies": ["IPROJ", "SELECTOR_DEBIT"],
+      "scope": "Every nonconstant Boolean gate at interior product bias with nonzero residual packet mass M=v-b; boundary/singleton cases by the stated limit."
+    },
+    {
+      "id": "B14-FRACTIONAL-OCCURRENCE-CROSSING-LOG-20260922",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "If rho<=1/2 and the selector-occurrence posterior crossing c_occ is at least gamma rho, then v K_occ is at least gamma(p-b) log2((1-rho)/rho) plus the explicit singleton and mean-reference mismatch KL terms.",
+      "dependencies": ["B14-SELECTOR-KOCC-SPLIT-20260922", "PEER-account04-B14-information-priced-crossing"],
+      "scope": "Exact actual residual packet source; no arbitrary-row relaxation."
+    },
+    {
+      "id": "B14-DISAGREEMENT-ONLY-KOCC-LOWER-BOUND-NOGO-20260922",
+      "status": "REFUTED",
+      "rejected_statement": "A universal positive lower bound K_occ >= F(d) depending only on physical selector disagreement d for all interior Boolean selector splits.",
+      "counterexample": "Any nonconstant binary Boolean gate such as AND_2 has K_occ=0 while a selector disagreement probability is strictly between 0 and 1 at interior bias.",
+      "dependencies": ["HIERARCHY-binary-Kocc-zero"]
+    },
+    {
+      "id": "B14-SELECTOR-PAYMENT-DICHOTOMY-20260922",
+      "status": "OPEN",
+      "statement": "For every dangerous rare-disagreement selector step, either fractional selector-occurrence crossing supplies logarithmic K_occ, or the explicit mismatch/hierarchy/child-potential terms pay the remaining scalar mean packet entropy with one dimension-independent bound.",
+      "dependencies": ["B14-SELECTOR-KOCC-SPLIT-20260922", "B14-FRACTIONAL-OCCURRENCE-CROSSING-LOG-20260922"]
+    }
+  ]
+}

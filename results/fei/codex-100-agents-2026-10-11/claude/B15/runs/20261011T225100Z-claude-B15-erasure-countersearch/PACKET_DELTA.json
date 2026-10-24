@@ -1,0 +1,51 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T225100Z-claude-B15-erasure-countersearch",
+ "stream": "B15",
+ "packet_id": "A071",
+ "gap_id": "O-FINITE-BOOL",
+ "attempt_id": "B15-claude-01",
+ "method": "exact exhaustive n<=4 census; frozen bounded families (symmetric n<=14, cyclic-invariant n<=7, iterated local search n=5,6); two exact certification paths",
+ "mathematical_delta": "L(K*) refuted beyond four variables by exact witnesses f_5 (every B_i/Inf_i > 539/200) and f_6 (every B_i/Inf_i > 368/125); A082 n<=4 constant independently reproduced; selection lemma proved FEI-equivalent (window C_FEI - c <= E* <= C_FEI); composition preserves per-coordinate erasure ratios",
+ "deliverable_status": "COMPLETE",
+ "mathematical_status": "two claims pending review; full FEI OPEN",
+ "claim_versions_used": [
+  "A082-FINITE-TRUE-ERASURE@1",
+  "C005",
+  "C018"
+ ],
+ "claims_created_or_changed": [
+  "B15-LKSTAR-FAILS-N5-N6@1",
+  "B15-SELECTION-EQUIVALENCE-COMPOSITION-INVARIANCE@1"
+ ],
+ "source_artifacts": [
+  "runs/20261011T225100Z-claude-B15-erasure-countersearch/code/b15_engine.py",
+  "runs/20261011T225100Z-claude-B15-erasure-countersearch/code/exact_prime.py",
+  "runs/20261011T225100Z-claude-B15-erasure-countersearch/code/n4_census.py",
+  "runs/20261011T225100Z-claude-B15-erasure-countersearch/code/search.py",
+  "runs/20261011T225100Z-claude-B15-erasure-countersearch/code/certify_witnesses.py",
+  "runs/20261011T225100Z-claude-B15-erasure-countersearch/code/recheck_bigint.py",
+  "runs/20261011T225100Z-claude-B15-erasure-countersearch/out/n4_census.json",
+  "runs/20261011T225100Z-claude-B15-erasure-countersearch/out/search_run1_stdout.txt",
+  "runs/20261011T225100Z-claude-B15-erasure-countersearch/out/witnesses_input.json",
+  "runs/20261011T225100Z-claude-B15-erasure-countersearch/out/witness_certificates.json",
+  "runs/20261011T225100Z-claude-B15-erasure-countersearch/out/witness_bigint_recheck.json"
+ ],
+ "next_consumers": [
+  "A075",
+  "A092",
+  "A090",
+  "A074",
+  "A082",
+  "A026",
+  "A028"
+ ],
+ "next_action": "Decide E*(5) on a proved-complete domain (2^32 tables modulo hyperoctahedral group and negation, or support branch-and-bound) and extract the violating pattern (path / ball-plus-matching) into an analytic family f_n.",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "REPORT.md not written: the subagent harness refuses report .md files; the full report is in this run's StructuredOutput to coordinator claude-2d8060eb"
+ ],
+ "packet_ids": [
+  "A071"
+ ]
+}

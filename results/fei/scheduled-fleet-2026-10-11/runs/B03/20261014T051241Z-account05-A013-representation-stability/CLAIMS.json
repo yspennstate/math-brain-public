@@ -1,0 +1,176 @@
+[
+  {
+    "claim_id": "A013-TWO-ROW-ARBITRARY-EVENT-TRANSPORT",
+    "version": 1,
+    "exact_statement": "For every Boolean phase c on a uniform three-bit shared cube, every distinct pair of shared points w0,w1, arbitrary Boolean events E0,E1 on the same independent finite private cube V, and a fresh selector z, define G=c, H=c(1-2[1_(s=w0)1_E0+1_(s=w1)1_E1]) and F=mux_z(G,H). The events may be correlated. With p=Pr(E0),q=Pr(E1), d=(p+q)/8 and delta=(p^2+q^2)/8, exact selector erasure is B_z=2(d-delta)+sum_T Phi((chat(T)-k_T)^2,k_T^2), k_T=[p c(w0)chi_T(w0)+q c(w1)chi_T(w1)]/8. For every p,q in [0,1], B_z<4d when d>0, and B_z=0 at d=0. The complete proof uses eight canonical two-parity-group profiles, explicit character/affine invariance, all256 phases checked, analytic rare/moderate regimes,4093 positive rational continuum rectangles and independent fixed-point interval/coverage reconstruction. Shared-atom calibration of supplied normalized positive-support finite-cost child references yields one fixed full normalized reference with D_F=D_Hcal/2 and CE_F=average calibrated child CE+Delta, Delta<= (4+2/ln2)d, while I(F)=average original physical child I+d. Full private joint event cost and every sector label are retained. An independent common terminal factor q0 tensors its prescribed reference and adds exactly its full c_q0 and D_q0, with no terminal influence bound assumed. Physical private restrictions replace both events by actual cofactors; shared restrictions reduce to at most two shared bits; selector restrictions choose actual children. Explicit positive-cell gate counts, one additional selector literal per gate, restricted root probabilities pi/(N_child+pi) and complete at-most17-sector label chain are in DERIVATION.md Sections5-6. No original ordered-cover L,S,R contraction or universal FEI conclusion is asserted. Arbitrary three-bit middle-band conditional means not reducible to these two edited rows remain open.",
+    "hypotheses": [
+      "Finite uniform Boolean signs; all entropy/CE/KL in bits",
+      "G a pure three-bit phase; H differs only at two distinct shared rows via actual private events; private cube independent from shared bits and selector",
+      "E0,E1 arbitrary and possibly correlated; selector physically fresh",
+      "References normalized, positive on true support, fixed before sampling; shared-atom calibration retains conditional private law and off-target private mass",
+      "Common terminal on independent cube with prescribed factorized reference; its CE/KL retained",
+      "Ideal probability costs; cover root metadata is distinct from paid spectral reference and implies no original L,S,R bound"
+    ],
+    "statement_sha256": "2f27a2c7493236cf2c1df4bb6d7c88b21a454b5003dd4d69c4120b8f9d9489ba",
+    "contributors": [
+      "A013/account05; A012@3 one-row arbitrary-event continuum mechanism acknowledged"
+    ],
+    "proof_source": {
+      "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261014T051241Z-account05-A013-representation-stability\\DERIVATION.md",
+      "proof_sha256": "f9a42080d1767c64c1e016291c26559633ed58ea1f1ade6f3fa146931727f3ce",
+      "complete_continuum": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261014T051241Z-account05-A013-representation-stability\\out\\CONTINUUM_0.json through CONTINUUM_7.json",
+      "independent_arithmetic": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261014T051241Z-account05-A013-representation-stability\\out\\VERIFY_RESULTS.json",
+      "actual_Boolean_and_reference_fixtures": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261014T051241Z-account05-A013-representation-stability\\out\\EXACT_RESULTS.json",
+      "frozen_specs": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261014T051241Z-account05-A013-representation-stability\\out\\FROZEN_CONTINUUM.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261014T051241Z-account05-A013-representation-stability\\out\\FROZEN_VERIFY.json"
+      ]
+    },
+    "proof_dependencies": [
+      "A013-THREE-BIT-EXTREMES-POINT-PHASE-TRANSPORT@1 rare/moderate inequality, reconstructed in new proof; scoped A012 reconstruction consumed",
+      "A013-ONE-SHARED-BIT-MUX-TRANSPORT@1 JS scalar and full reference calculus; existing A086 Sections1-5,7 scoped reconstruction; no old Section6 acceptance inferred",
+      "A012-DISJOINT-PRIVATE-MUX-ADMISSION@2 conserved influence ownership and <=2-overlap interface reconstructed earlier; restricted <=2 transport is scoped, not full-grammar acceptance"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_NARROW_PACKET_REPAIR_PENDING_INDEPENDENT_AGENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A012",
+      "A058",
+      "A086",
+      "A094",
+      "A095",
+      "B03",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A012-DISJOINT-PRIVATE-MUX-ADMISSION",
+    "version": 3,
+    "exact_statement": "For every Boolean phase c on three shared uniform bits, every shared point w, every Boolean event E on an arbitrary independent finite private cube, fresh selector z, G=c, H=c(1-2 1{s=w}1_E) and F=mux_z(G,H), let theta=Pr(E) and d=theta/8. For d>0 the exact selector erasure B_z is <4d, and the entropy increment Delta is <=K d with K=4+2/ln2<7; zero d has zero increment. The exact formula B_z=2(d-8d^2)+sum_T Phi((chat(T)c(w)chi_T(w)-d)^2,d^2) reduces to four proved relative Walsh profiles. The proof covers every real theta via an analytic rare regime and 1024 checked rational interval boxes, independently verified by positive direct-log arithmetic. Shared-atom calibration of any normalized finite-cost positive-support child references yields a single complete normalized coherent output reference with D_F=(D_Gcal+D_Hcal)/2 and CE_F=average calibrated child CE+Delta; physical I(F)=average original child I+d. With an arbitrary prescribed empty-calibrated reference for kappa=1-2 1_E, the explicit private reference has exact D_H=D_kappa/8 and D_F=D_kappa/16, retaining the whole calibrated controller bill: CE_F=H(F)+(c_kappa-H(kappa))/16. Independent common factors retain their whole prescribed reference cost and KL additively. Extending the v2 literal/constant grammar by this point-phase mux rule, requiring both actual children already certified, preserves CE<=K I, physical-restriction heredity, tensor/balancing/fresh-activation closure and hidden-seed membership reflection. The four-bit at-least2 sign remains an exactly certified nonmember because every cofactor pair uses three bits and differs on three rows, and all seven disjoint-product bipartitions have a nonzero minor. All v2 conclusions remain valid at their original scope. Arbitrary three-bit middle-band conditional means, opaque terminal CE bounds, general selector substitution, growing-overlap absolute payment and full FEI remain unproved.",
+    "hypotheses": [
+      "Finite uniform Boolean cubes; all entropy, CE and KL in bits",
+      "Three-bit shared phase and a single shared edited point; arbitrary private event physically independent of shared bits; fresh selector",
+      "Complete references normalized and positive on target support, fixed before sampling; calibration retains private conditional law and off-target reference mass",
+      "Ideal probability costs; integer prefix rounding remains separate",
+      "New recursive rule requires both actual children already have structural certificates; literals/constants are terminal leaves; supplied opaque controller costs are not admitted as free",
+      "Any common terminal factor uses a disjoint physical cube and its prescribed reference is retained"
+    ],
+    "statement_sha256": "1754492604cf7370c7cc5a2a2e5a36c420e800a7cbddb58c8807457a9a5ed81a",
+    "contributors": [
+      "A012/account05; A013 relative-point profile classification and discrete-controller prior theorem acknowledged"
+    ],
+    "proof_source": {
+      "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261014T043333Z-account05-A012-sparse-activation-accounting\\DERIVATION.md",
+      "interval_certificates": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261014T043333Z-account05-A012-sparse-activation-accounting\\out\\CONTINUUM_CERTIFICATES.json",
+      "independent_arithmetic_verification": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261014T043333Z-account05-A012-sparse-activation-accounting\\out\\VERIFY_RESULTS.json",
+      "actual_functions_and_debt": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261014T043333Z-account05-A012-sparse-activation-accounting\\out\\FIXTURE_RESULTS.json",
+      "nonmember": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261014T043333Z-account05-A012-sparse-activation-accounting\\out\\NONMEMBER_CERTIFICATE.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A012-DISJOINT-PRIVATE-MUX-ADMISSION",
+        "version": 2,
+        "scope": "owned collision budget, coherent reference and existing hereditary grammar; partial reconstruction by A013, full independent review still pending"
+      },
+      {
+        "claim_id": "A013-THREE-BIT-EXTREMES-POINT-PHASE-TRANSPORT",
+        "version": 1,
+        "scope": "four relative profiles and rare bound; reconstructed directly here, with only new discrete certificates reviewed at limited scope; own-input full-chain conflict explicit"
+      },
+      "New all-probability monotone interval bridge and arbitrary event/controller debt proof in current DERIVATION"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A013/account05",
+        "verdict": "CONSUMED_AND_RECONSTRUCTED_AT_NEW_APPLICATION_SCOPE; NOT_FULL_CHAIN_INDEPENDENT_ACCEPTANCE",
+        "scope": "Sections2-4 arbitrary-private-event point profile, all-probability erasure bound and explicit controller KL coefficient1/16; broader grammar/nonmember and retained v2 claims not reviewed here. q=0 slice of new two-row continuum proof independently rebuilds all-probability erasure.",
+        "contributor_conflict": "Source credits A013 prior classification. This record does not count as independent acceptance of that credited dependency chain. No substantive repair to A012@3 supplied.",
+        "source_statement_sha256": "1754492604cf7370c7cc5a2a2e5a36c420e800a7cbddb58c8807457a9a5ed81a",
+        "source_claims_sha256": "f35b9bdb35aa735632ec3dbb810f8959983c9ecdd84cb40c14f15981cd091637",
+        "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261014T051241Z-account05-A013-representation-stability\\DERIVATION.md",
+        "proof_sha256": "f9a42080d1767c64c1e016291c26559633ed58ea1f1ade6f3fa146931727f3ce",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261014T051241Z-account05-A013-representation-stability\\out\\VERIFY_RESULTS.json",
+        "substantive_repair_supplied": false,
+        "timestamp_utc": "2026-10-14T05:28:09.322055+00:00"
+      }
+    ],
+    "status": "AUTHOR_PROVED_NARROW_CONTINUUM_ADMISSION_REFINEMENT_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A012-DISJOINT-PRIVATE-MUX-ADMISSION",
+        "version": 2,
+        "scope": "preserves earlier conclusions and adds arbitrary-private-event three-bit point rule"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A013",
+      "A058",
+      "A095",
+      "A086",
+      "A094",
+      "B03",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A013-THREE-BIT-EXTREMES-POINT-PHASE-TRANSPORT",
+    "version": 1,
+    "exact_statement": "Let F=mux_z(G,H) with fresh physical selector z, uniform shared data s of at most three bits and disjoint arbitrary private cubes. Write d*=min(Inf_z(F),1-Inf_z(F)). The exact selector erasure identity is B_z=2(d*-delta)+B_C, where delta is folded shared-only minority Fourier mass. If d*<=1/32 then B_z<=(29/8)d* (strict for positive d*); if d*>=1/6 then B_z<4d*. In either regime the coherent normalized reference built by shared-atom calibration retains exactly half the calibrated terminal KL debts and has full CE at most half the calibrated child CE plus (4+2/ln2)d*. Additionally, for every Boolean phase c on three shared bits, every point w, and every integer r>=0, G=c, H=c(1-2 1_(s=w) A_r(V)) with a private r-bit point controller satisfies B_z<4d, d=2^(-r)/8, and the same complete-reference surcharge. The proof is complete for all r via four exact relative-point Walsh profiles, eight rational sign certificates for r=0,1, and the uniform rare bound for r>=2. An arbitrary independent common Boolean factor q with a prescribed fixed positive-support normalized terminal reference R_q retains its entire cost c_q and KL debt D_q under the product construction; no arbitrary-terminal influence bound is assumed. Physical restrictions of the phase/controller variables collapse the edit or reduce to the existing <=2-shared-bit transport or shorten the controller. Explicit positive-cell cover counts, literal incidences, exact restricted root probabilities and full sector labels are as in DERIVATION.md Section 5; no contraction of the original L,S,R ledger is asserted. Arbitrary three-bit children with 1/32<d*<1/6 and a universal nonreused shared-core reserve remain open.",
+    "hypotheses": [
+      "Uniform finite Boolean signs; entropy, CE and KL in bits",
+      "Fresh selector; disjoint private cubes; arbitrary branches only in the two explicitly stated disagreement regimes",
+      "Middle-band theorem only for the stated actual one-point shared edit with a private all-zero controller; r=0 included",
+      "Supplied references normalized, positive on actual support, fixed before sampling; shared calibration retains private conditional laws",
+      "Common terminal q physically independent from profile; supplied factorized child references and prescribed R_q retained",
+      "Positive-cell covers are explicit representations; root metadata does not imply an original-queue witness-cost bound"
+    ],
+    "statement_sha256": "4e24ed85e8a0728406bf8e5eca2e255dc46c733571fa7fe3005d0fb826b4cc66",
+    "contributors": [
+      "A013/account05; A012@2 conserved collision-budget input acknowledged"
+    ],
+    "proof_source": {
+      "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261014T021710Z-account05-A013-representation-stability\\DERIVATION.md",
+      "sha256": "9bc64bdd80910926a23bc42c2c61370f0038e2092009ab9df64dac269e5e82ce",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261014T021710Z-account05-A013-representation-stability\\out\\EXACT_RESULTS.json",
+      "rational_certificates": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261014T021710Z-account05-A013-representation-stability\\out\\PROFILE_CERTIFICATES.json",
+      "frozen_spec": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261014T021710Z-account05-A013-representation-stability\\out\\FROZEN_SPEC.json"
+    },
+    "proof_dependencies": [
+      "A012-DISJOINT-PRIVATE-MUX-ADMISSION@2 Sections 1-3 scoped reconstruction; Section 4 new nonmember certificate reviewed but not a theorem premise",
+      "A013-ONE-SHARED-BIT-MUX-TRANSPORT@1 coefficientwise JS proof and reference calculus, A086 independently reconstructed Sections 1-5,7; no Section 6 review claimed"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A012/account05",
+        "verdict": "NEW_CLASSIFICATION_AND_EIGHT_DISCRETE_CERTIFICATES_RECONSTRUCTED_ONLY",
+        "scope": "DERIVATION Section3 classification and exact r=0,1 profile sign certificates; original source prime-log vectors and outward interval containments checked; no full source statement or cover/root metadata acceptance",
+        "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261014T043333Z-account05-A012-sparse-activation-accounting\\DERIVATION.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261014T043333Z-account05-A012-sparse-activation-accounting\\out\\SOURCE_REVIEW_RESULTS.json",
+        "method": "independent Walsh phase/point enumeration, analytic divisibility/Parseval/inversion classification, exact original vectors and stricter32-term interval reconstruction",
+        "source_claims_sha256": "66cad5395c09e0b57e0d943083143daf8a90472a2963acc55ab3d38181f6a006",
+        "source_certificates_sha256": "8012157a39d770577949211e61c8cbed7a076ffa0d5aca7654bfcd49a4e119ae",
+        "substantive_repair_supplied": false,
+        "contributor_conflict": "A012 authored the ownership input used by source; this is not counted as independent full-chain acceptance",
+        "stage": "20261014T043333Z-account05-A012-sparse-activation-accounting"
+      }
+    ],
+    "status": "SCOPED_NEW_PROFILE_RECONSTRUCTION_ONLY_FULL_CHAIN_NOT_INDEPENDENTLY_ACCEPTED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A012",
+      "A058",
+      "A086",
+      "A094",
+      "A095",
+      "B03",
+      "B20"
+    ]
+  }
+]

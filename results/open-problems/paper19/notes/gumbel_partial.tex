@@ -1,0 +1,116 @@
+% Partial result on the Gumbel / Poisson hard-edge conjecture (conj:gumbel), Gaussian case.
+% Historical sketch, superseded by R32. The compiled integration is in parts/open_problems.tex after
+% Conjecture conj:gumbel. Provable now: exact centering identities, the
+% first-moment intensity using finite-m Gaussian hard-edge regular variation, and
+% a one-sided Markov bound. The explicit limit law remains conjectural and needs
+% critical-scale Poisson overlap-cluster conditions stronger than prob:pc.
+% The body below is retained only as scratch work and should not be input verbatim.
+
+\subsection*{Toward the hard-edge Gumbel law: intensity, one-sided bound, and the reduction}
+
+Let $A_m\in\F^{N_m\times m}$ be iid standard Gaussian, $N_m/m\to\gamma>1$,
+$\F\in\{\R,\C\}$, $d_\F=\dim_\R\F$.  We make Conjecture~\ref{conj:gumbel} quantitative
+and prove its first-moment half.
+
+\begin{lemma}[Power-law hard edge]\label{gum:power}
+For a single $m\times m$ Gaussian matrix $G$ there is $\kappa_m>0$ with
+\[
+  \PP\{\smin(G)\le t\}=(1+o(1))\,\kappa_m\,t^{d_\F}\qquad(t\to0,\ m\ \text{fixed}),
+\]
+and the relative error is $O(t^{d_\F})$.  (Edelman's hard-edge density; the leading
+coefficient $\kappa_m$ is the value at $0$ of the density of $\smin(G)$, finite and
+positive.)
+\end{lemma}
+
+Define the \emph{centering} $b_m$ by
+\begin{equation}\label{gum:bm}
+  \binom{N_m}{m}\,\PP\{\smin(G_m)\le e^{-b_m}\}=1 .
+\end{equation}
+By Lemma~\ref{gum:power} and Stirling, $\binom{N_m}{m}\kappa_m e^{-d_\F b_m}=1+o(1)$, so
+\begin{equation}\label{gum:bm-asymp}
+  b_m=\frac{h(\gamma)}{d_\F}\,m+c_\F\,\log m+O(1),
+\end{equation}
+where the logarithmic correction requires an assumption such as
+$N_m=\gamma m+O(1)$ and the finite-$m$ Gaussian hard-edge coefficient.
+
+For $x\in\R$ put $Z_x=\#\{T:|T|=m,\ \log\smin(A_{m,T})+b_m\le x\}$, so that
+$\{\log M_m+b_m\le x\}=\{Z_x\ge1\}$.
+
+\begin{proposition}[Intensity]\label{gum:intensity}
+For every fixed $x\in\R$, $\ \EE Z_x\to e^{d_\F x}$ as $m\to\infty$.
+\end{proposition}
+
+\begin{proof}
+$\EE Z_x=\binom{N_m}{m}\PP\{\smin(G_m)\le e^{x-b_m}\}$.  Since $e^{x-b_m}\to0$,
+Lemma~\ref{gum:power} gives
+$\PP\{\smin(G_m)\le e^{x-b_m}\}=(1+o(1))\kappa_m e^{d_\F(x-b_m)}$, and the relative
+error $O(e^{d_\F(x-b_m)})\to0$.  Hence
+$\EE Z_x=(1+o(1))\big[\binom{N_m}{m}\kappa_m e^{-d_\F b_m}\big]e^{d_\F x}
+=(1+o(1))e^{d_\F x}$ by \eqref{gum:bm}.
+\end{proof}
+
+\begin{corollary}[One-sided Gumbel bound]\label{gum:onesided}
+For every fixed $x$,
+\[
+  \PP\{\log M_m+b_m\le x\}\le(1+o(1))\,e^{d_\F x},
+\]
+so $\PP\{\log M_m+b_m\le x\}\to0$ as $x\to-\infty$ uniformly in large $m$.  In
+particular the centered minimum is tight from below at the Gumbel scale.
+\end{corollary}
+
+\begin{proof}
+Markov: $\PP\{Z_x\ge1\}\le\EE Z_x=(1+o(1))e^{d_\F x}$.
+\end{proof}
+
+\begin{conjecture}[Explicit hard-edge Gumbel law; sharpening of \ref{conj:gumbel}]\label{gum:law}
+With $b_m$ as in \eqref{gum:bm},
+\[
+  \PP\{\log M_m+b_m\le x\}\longrightarrow 1-\exp\!\big(-e^{d_\F x}\big),\qquad x\in\R,
+\]
+Equivalently,
+\[
+  \PP\{-(\log M_m+b_m)\le x\}\longrightarrow \exp(-e^{-d_\F x}),
+\]
+the standard Gumbel form with rate $d_\F$.
+\end{conjecture}
+
+\begin{proposition}[Reduction to a factorial-moment / overlap condition]\label{gum:reduction}
+Conjecture~\ref{gum:law} holds if, for every fixed $x$ and every fixed $k\ge2$, the
+descending factorial moments satisfy
+\[
+  \EE\big[(Z_x)_k\big]=\EE\big[Z_x(Z_x-1)\cdots(Z_x-k+1)\big]\longrightarrow e^{k d_\F x},
+\]
+equivalently if $\EE[Z_x(Z_x-1)]\to e^{2d_\F x}=(\lim\EE Z_x)^2$ together with the
+analogous higher-order factorials (Poisson convergence by the method of moments).
+The pair term is
+\[
+  \EE[Z_x(Z_x-1)]=\sum_{S\ne T}\PP\{\smin(A_{m,S})\le e^{x-b_m},\ \smin(A_{m,T})\le e^{x-b_m}\},
+\]
+whose control is a critical-scale Poisson overlap problem.  It involves the
+same normal-overlap geometry as Section~\ref{sec:universality}, but the existing
+bulk two-point Problem~\ref{prob:pc} alone does not remove centered-scale
+small-overlap clusters.
+\end{proposition}
+
+\begin{proof}
+The first display is the standard moment criterion for convergence of the integer
+random variable $Z_x$ to a Poisson law of mean $\lambda(x)=e^{d_\F x}$
+(Proposition~\ref{gum:intensity} gives the first moment), and a Poisson count gives
+$\PP\{Z_x=0\}\to e^{-\lambda(x)}=e^{-e^{d_\F x}}$, i.e.\ Conjecture~\ref{gum:law}.
+For the pair term, $\PP\{\smin(A_{m,S})\le\tau,\ \smin(A_{m,T})\le\tau\}$ with
+$\tau=e^{x-b_m}$ is the joint small-ball of two square submatrices; reducing each
+$\{\smin\le\tau\}$ to the slab event $\{|\langle x_\ast,u_\ast\rangle|\le\tau\}$ as in
+the upper-bound proof, the pair probability is governed by the same overlap
+quantity $q_{D(S,T)}(\tau)$, but at the centered scale the
+small/intermediate-overlap contribution needs a separate cluster estimate.
+\end{proof}
+
+\begin{remark}
+Thus the hard-edge \emph{fluctuation} problem (the Gumbel law) requires a
+critical-scale factorial-moment analysis.  The first-moment intensity
+$e^{d_\F x}$ and the one-sided Markov bound follow from finite-$m$ Gaussian
+hard-edge regular variation; the matching Poisson lower-tail half needs
+critical cluster negligibility and higher-order bulk normal-overlap
+independence.  The leading centering term $h(\gamma)m/d_\F$ follows from the
+polynomial hard-edge bounds.
+\end{remark}

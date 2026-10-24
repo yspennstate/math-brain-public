@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B01",
+  "run_id": "20260923T010350Z-account02-B01-qform-r32",
+  "status": "ESSENTIAL_STEP_APPLIED / MIXED_HUB_AVERAGED_FREQUENCY / PARTNER_APPLIED",
+  "full_target_status": "OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "initial_fresh_main": "5b68d532faa0a8a28d75bec7ff2945593cac92b0",
+    "prepublication_refresh_main": "0da7ea6e2937acfda046079667a2939026c41a8e",
+    "owner_control_revision": "2026-09-22.15",
+    "later_stop_observed": false
+  },
+  "assignment": "Oscillatory replacement",
+  "phase_aligned_pointwise_refutation_preserved": true,
+  "newest_source_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+    "premise": "Theorem H mixed hub/Fresnel-Brascamp-Lieb"
+  },
+  "mathematics": {
+    "theorem": "If A_BB=M^T H M+D with rank M=2, H invertible symmetric, D diagonal, c=A_B0, c_perp=(I-P_range(M^T))c nonzero, and max_i[(P_range)_ii+u_i^2]<=1/2 for u=c_perp/||c_perp||, then ||p_Q||_infinity <=4 sqrt(2)[|det H|det(MM^T)||c_perp||^2]^(-1/4), with all other blocks arbitrary.",
+    "frequency_envelope": "|phi_Q(t)|<=8 pi^2 |t|^-2 [|det H|det(MM^T)||c_perp||^2]^-1/2.",
+    "transverse_family": "Q_perp=(a.X)^2+(b.X)^2+2sqrt(2)X0(w.X), Walsh a,b,w; spectrum {-sqrt(2),1,1,sqrt(2)}; bound <4.757.",
+    "aligned_family": "Q_parallel=(a.X)^2+(b.X)^2+2sqrt(2)X0(a.X); spectrum {-1,1,2}; every coordinate cross cut rank<=2; partner gives pi e.",
+    "near_parallel_family": "Q_eta=(a.X)^2+(b.X)^2+2sqrt(2)X0((a+eta w).X); mixed-hub certificate costs eta^-1/2 but four disjoint Walsh sign-pattern groups give uniform ||p||<=4pi for m divisible by 8."
+  },
+  "partner_result_applied": {
+    "partner": "account03/B01",
+    "handoff_commit": "8b3939cff4def148fd1a005b506c99e684176053",
+    "canonical_bundle": "6a63d945b3e2409e5ff5799d2d13c3654bdd27e6",
+    "application": "Completing Q_parallel=(a.X+sqrt(2)X0)^2+(b.X)^2-2X0^2 gives the partner overlapping-definite-pair theorem with M=(a;b), H=I, so ||p||<=pi e and the signed-Fejer averaged kernels obey the same bound."
+  },
+  "volume_stability_consumed": {
+    "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "application": "Aligned family has rank<=2 on every cross cut, so E3=E5=0 and lies in the explicitly unpaid low-cross-rank/hub complement of those volume exits."
+  },
+  "immutable_outputs": {
+    "checkpoint_commit": "439b9f6ca89dd8d44cf5939a17667934f84eb4d8",
+    "report_commit": "20f1cf7934fe91f7f8c9b39fbef117069a12ec6c",
+    "checker_source_commit": "1afbdb06103e24cec5de82ead3c7c1eb4189b953",
+    "checker_output_commit": "21f0f3959fc955fd8024a59546899491e54e913c",
+    "handoff_commit": "d5ee5b557141cb61636a410cef1396c0ddfc164a"
+  },
+  "unresolved_implication": "QFORM-NEAR-PARALLEL-THREE-WAY-OVERLAP-ROUTING-v1: in arbitrary strict N3 states escaping volume/tail exits, extract a product-preserving grouping or joint inequality that spends aligned definite-pair and transverse hub currencies before reciprocal smallness.",
+  "next_step": "Generalize Walsh regroup-before-inversion from finitely repeated bank row directions to arbitrary varying row directions, or route them quantitatively to an existing paid packet.",
+  "full_brain_connected": false
+}

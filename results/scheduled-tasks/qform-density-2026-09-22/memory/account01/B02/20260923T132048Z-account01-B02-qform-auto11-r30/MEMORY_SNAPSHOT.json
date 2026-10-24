@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260923T132048Z-account01-B02-qform-auto11-r30",
+  "control_revision": "2026-09-22.15",
+  "control_observation_commit": "a91bed2334f1cab1c82dcc9cf792a89852d3f53d",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "global_unweighted_L1_status": "OPEN_NOT_REFUTED",
+  "continuity_status": "PROVED_ON_NEW_L1_BRANCH_ONLY",
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY",
+    "FIBER-SUP-DIMENSION-FREE",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "actual_premises": [
+    "P is a genuine invertible physical 2x2 cross pivot between disjoint original-coordinate banks",
+    "S=M-CP^{-1}R is its deterministic cross-Schur residual",
+    "G=|det P|^2 ||S||_F^2>0",
+    "h_r,h_c are normalized Schur row/column energy maxima"
+  ],
+  "new_result": {
+    "id": "QFORM-DOUBLEHEAVY-SCHUR-THREEPIVOT-L1-v1",
+    "statement": "If theta=h_r+h_c-1>0 then int|phi_Q| <= 6*pi*theta^(-1/6)*G^(-1/6) and ||p_Q||_inf <=3*theta^(-1/6)*G^(-1/6).",
+    "proof_core": "For maximizing i,j, |S_ij|^2 >= theta||S||_F^2. The literal physical 3x3 extension satisfies det P3(i,j)=det(P)S_ij, so |detP3|^2>=theta G. Apply the completed account02/B02 k=3,r=0 grouped L1 theorem; an independent direct Plancherel derivation of exactly this endpoint is saved in the run directory.",
+    "near_rank_one_reduction": "With rho=sr(S) and top singular-vector max physical leverages L,R, h_r>=L/rho and h_c>=R/rho. Thus L+R>rho is paid; failure forces L+R<=rho. If rho<=9/8, either L+R>=rho+1/8 and the live G>Z3/24 packet is paid by ||p_Q||_inf<3sqrt(6) Z3^-1/6, or one leading singular vector has leverage <=5/8."
+  },
+  "partner_result_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b84e108c872878d108d736c123482d15b252b5df",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T110948Z-account02-B02-QFORM-r11/REPORT.md",
+    "theorem": "QFORM-CROSS-SCHUR-SHEAR-GROUPED-L1-v1",
+    "specialization": "k=3,r=0"
+  },
+  "fresh_partner_refresh": {
+    "commit": "84514c1852b64664a28c58a3dde78a5a93d055aa",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T130936Z-account02-B02-QFORM-r11/REPORT.md",
+    "relation": "adjacent high-leverage compound/incident-transport progress; no contradiction"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "5811b52f63675cc17934afc0654a2fbedc8e70c3",
+    "directory": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T132048Z-account01-B02-qform-auto11-r30/",
+    "report_commit": "8923639c8b1715f3f3b278e469ef5a1df273827a",
+    "report_blob": "b1ae5a0f99cc5f7e374305a78efef5ba3053ce70",
+    "direct_check_commit": "bdd5cb061db921ba14aa34d15384c178db9d5a3d",
+    "direct_check_blob": "855785c0c7b574915ea9c8617738842d88aed44b"
+  },
+  "handoff_commit": "d8a5d8a71792d97cd5a1c26c579b0e62cae04afe",
+  "unresolved": "QFORM-SCHUR-NEARRANK1-ONE-SIDED-DIFFUSE-L1-v1",
+  "next_step": "Use the forced one-sided leading-vector diffusion to build a fractional grouped/Hausdorff-Young receiver inside the bankwise shear representation while retaining the nonzero transverse Schur tail exactly."
+}

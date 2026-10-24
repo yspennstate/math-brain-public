@@ -1,0 +1,24 @@
+{
+  "helper_version": "A002-correlated-tag-v2",
+  "helper_sha256": "7b6ce1c5c195d71f1a4800e13b8f4eca07332f4487fc133e93e7709dfcdd9d5d",
+  "family": "actual Boolean character-tagged bent lift; all seed signs n=1,2,3 basis map; all two-tag maps n=1,2; balanced and canonical two-bit seed tensors",
+  "domain": {
+    "basis": "n=1,2,3 all truth tables, m=ceil(log2(n+1))",
+    "all_small_maps": "n=1,2 all truth tables and all (2^n)^2 maps for m=1",
+    "tensors": "all16 two-bit seeds, t=1,2, balanced parity and canonical seed versions"
+  },
+  "case_count": {
+    "pilot": 292,
+    "full": 612,
+    "basis": 276,
+    "all_small_maps": 272,
+    "tensors": 64
+  },
+  "symmetry": "none; fixture executions may overlap",
+  "arithmetic": "Integer FWHT, Fraction, formal rational prime-log expressions; exact physical edges",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds": 60,
+  "max_dimension": 11,
+  "no_auto_escalation": true,
+  "revision_note": "v1 interrupted for runtime. Smaller fixed tensor domain; enforce60-second guard. Frozen before v2 execution."
+}

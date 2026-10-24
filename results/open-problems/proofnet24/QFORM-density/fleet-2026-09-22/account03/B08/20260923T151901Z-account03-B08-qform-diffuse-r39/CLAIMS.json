@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260923T151901Z-account03-B08-qform-diffuse-r39",
+  "full_target_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-PLUCKER-HALFCUT-RANK2-SCHUR-v1",
+      "status": "proved_supporting_theorem_pending_independent_review",
+      "statement": "For an ORIGINAL scalar pivot a!=0 whose exact rank-two Schur residual S has s2(S)>=L and maximum leverage mu of its two-dimensional spectral frame below 1/2, there is an ORIGINAL-coordinate cut with E2(S[I,J]) >= (1-2mu)L^4/16. Hence ||p_Q||inf < C_E2[16/(1-2mu)]^(1/8)|a|^(-1/2)L^(-1/2); if |a|>=tau L and mu<=1/4, the bound is <56.204 tau^(-1/2)L^(-1).",
+      "continuity": "not proved"
+    },
+    {
+      "id": "QFORM-NEARRANK2-DIFFUSE-SCHUR-v1",
+      "status": "proved_supporting_theorem_pending_independent_review",
+      "statement": "If s3(A)>=L, an ORIGINAL scalar pivot obeys |a|>=tau L, the exact Schur residual has top-two spectral-frame leverage <=1/8 and s3(S)<=eta L< L/4, then ||p_Q||inf < C_E2 tau^(-1/2)(1/4-eta)^(-1/2)L^(-1). At eta=1/15 the constant is <85.114 tau^(-1/2).",
+      "continuity": "not proved"
+    },
+    {
+      "id": "QFORM-DIFFUSE-NEARRANK3-SCHUR-VOLUME-v1",
+      "status": "proved_supporting_theorem_pending_independent_review",
+      "statement": "Let the exact Schur residual have top-three leverage <=1/16. Put g3=(4-sqrt(3))/8. If s3(S)>=beta L and s4(S)<=g3 s3(S)/16, while |a|>=tau L, then applying c2414 volume stability to a literal ORIGINAL-coordinate half-cut and reinserting the scalar square yields ||p_Q||inf <2sqrt(46/g3) tau^(-1/2) beta^(-1/2)L^(-1)<25.477 tau^(-1/2)beta^(-1/2)L^(-1).",
+      "continuity": "residual density continuous C0; continuity of final Q not proved"
+    }
+  ],
+  "partner_application": {
+    "source": "yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74",
+    "statement": "For Q_(R,L)=LX0^2+2LRU1V1+2L/R U2V2, R>=3, ||p||inf<7.251/L. Its top-two residual frame has leverage one, so it is a complementary localized endpoint to the diffuse theorems above."
+  },
+  "chronology_note": "A chronologically prior B08 run labeled r40 was discovered at prepublication refresh and is integrated in ADDENDUM_PREPUBLICATION.md; no claim from it is overwritten or duplicated."
+}

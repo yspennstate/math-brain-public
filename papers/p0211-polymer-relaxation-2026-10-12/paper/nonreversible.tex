@@ -1,0 +1,199 @@
+\section{Nonreversible conservative motion of cuts}
+\label{sec:nonreversible}
+
+The reduction in Theorem~\ref{thm:spatial-gap} extends to conservative
+jumps that permute the sites, without requiring inverse jumps to have
+the same rate.  The state in this section is the full nonempty cut set.
+As in the spatial model, unordered interval lengths need not form a
+Markov process.
+
+For $\sigma\in S_n$ put $(T_\sigma F)(S)=F(\sigma S)$, and let
+\begin{equation}\label{eq:permutation-motion}
+ H=\sum_{\sigma\in S_n}r_\sigma(T_\sigma-I),
+ \qquad r_\sigma\ge0,\qquad
+ L=L_B+DH,\quad D\ge0.
+\end{equation}
+Terms with $r_\sigma=0$ may be omitted.  No relation between
+$r_\sigma$ and $r_{\sigma^{-1}}$ is imposed.
+The induced one-coordinate generator is
+\begin{equation}\label{eq:one-coordinate-motion}
+ (H_1a)(x)=\sum_\sigma r_\sigma\bigl(a(\sigma x)-a(x)\bigr).
+\end{equation}
+It preserves the subspace
+$\mathbb C^n_0=\{a:\sum_xa(x)=0\}$.
+Adjoints below are with respect to the uniform measure on coordinates
+or $\pi_B$ on cut sets, as appropriate.  Define
+\begin{align}
+ \kappa(H_1)
+ &=\min\{\operatorname{Re}z:
+             z\in\operatorname{Spec}(-H_1|_{\mathbb C^n_0})\},\label{eq:kappa-real}\\
+ \kappa_{\mathrm{s}}(H_1)
+ &=\lambda_{\min}\!\left(
+       -\tfrac12(H_1+H_1^*)|_{\mathbb C^n_0}\right).\label{eq:kappa-symmetric}
+\end{align}
+Zeros are included in these minima.  Thus the definitions also apply
+when the coordinate motion alone has several communicating classes.
+
+\begin{theorem}\label{thm:nonreversible}
+For every $n\ge2$, $\beta>0$, $D\ge0$, and choice of the rates in
+\eqref{eq:permutation-motion}, the law $\pi_B$ in
+\eqref{proof:eq:piB} is invariant for $L$.  On the mean-zero subspace,
+the asymptotic spectral rate is exactly
+\begin{equation}\label{eq:nonreversible-real-gap}
+ g_{\mathrm{as}}
+ :=\min\{\operatorname{Re}z:
+            z\in\operatorname{Spec}(-L),\ z\ne0\}
+ =\min\{\gamma_Q,\ \eta_1+D\kappa(H_1)\}.
+\end{equation}
+The largest constant $g_{\mathrm{s}}$ for which
+\begin{equation}\label{eq:nonreversible-contraction}
+ \|e^{tL}F\|_{L^2(\pi_B)}
+ \le e^{-g_{\mathrm{s}}t}\|F\|_{L^2(\pi_B)}
+ \qquad(t\ge0,\ \mathbb E_{\pi_B}F=0)
+\end{equation}
+is
+\begin{equation}\label{eq:nonreversible-symmetric-gap}
+ g_{\mathrm{s}}=\min\{\gamma_Q,\ \eta_1+D\kappa_{\mathrm{s}}(H_1)\}.
+\end{equation}
+Here $\eta_1$ is the smallest eigenvalue of $-\mathcal L_1$, as
+in Theorem~\ref{thm:spatial-gap}.
+\end{theorem}
+
+\begin{proof}
+Every coordinate permutation preserves $\pi_B$, which is constant on
+each cardinality layer.  Hence $H$ preserves $\pi_B$, and
+$T_\sigma^*=T_{\sigma^{-1}}$.  The reaction generator is irreducible,
+so adding the nonnegative jump rates $DH$ preserves irreducibility.
+In particular, zero is the simple stationary eigenvalue of $L$.
+
+The Boolean harmonic decomposition is equivariant under every
+coordinate permutation.  On degree $\ell$, the reaction generator
+acts on the radial factor, and $H$ acts on the harmonic factor.
+Thus, with $H_\ell$ denoting the latter action,
+\begin{equation}\label{eq:nonreversible-tensor}
+ L|_\ell=\mathcal L_\ell\otimes I+I\otimes DH_\ell.
+\end{equation}
+The inner product factors into the radial reversible inner product
+and the harmonic inner product.  Each permutation is unitary on the
+harmonic factor, so for every complex vector $v$ in that factor,
+\[
+ \operatorname{Re}\langle v,-H_\ell v\rangle
+ =\frac12\sum_\sigma r_\sigma
+       \|T_\sigma v-v\|^2\ge0.
+\]
+Consequently every eigenvalue of $-H_\ell$ has nonnegative real part.
+
+Diagonalizing the self-adjoint radial factor in
+\eqref{eq:nonreversible-tensor} expresses its spectrum as the sums of
+radial eigenvalues and $D$ times eigenvalues of $-H_\ell$.
+This statement does not require diagonalizability of $H_\ell$.
+In degree zero, $H_0=0$, and the first positive eigenvalue is
+$\gamma_Q$.  By Proposition~\ref{prop:higher-exact}, all reaction
+eigenvalues in degrees $\ell\ge2$ are at least $\gamma_Q$.
+These sectors therefore cannot lower the minimum real part.
+
+In degree one, $H_\ell$ is precisely the coordinate operator
+\eqref{eq:one-coordinate-motion} on $\mathbb C^n_0$:
+if $F_a(S)=\sum_{x\in S}a(x)$, then $HF_a=F_{H_1a}$.
+The smallest radial eigenvalue is $\eta_1$.
+Both terms on the right of \eqref{eq:nonreversible-real-gap} are
+attained by eigenvalues, proving that formula.
+
+For the contraction statement, the symmetric part is
+$L_{\mathrm{s}}=L_B+D(H+H^*)/2$.
+It is a reversible permutation-jump generator plus $L_B$.
+The same sector argument gives its spectral gap as
+\eqref{eq:nonreversible-symmetric-gap}.  For
+$F_t=e^{tL}F$,
+\[
+ \frac{d}{dt}\|F_t\|_2^2
+ =2\operatorname{Re}\langle F_t,LF_t\rangle
+ =2\langle F_t,L_{\mathrm{s}}F_t\rangle
+ \le-2g_{\mathrm{s}}\|F_t\|_2^2.
+\]
+Integration proves \eqref{eq:nonreversible-contraction}.
+Conversely, differentiating any proposed prefactor-one bound at
+$t=0$ gives the Poincar\'e inequality for $-L_{\mathrm{s}}$.
+Its gap is therefore the largest possible such constant.
+\end{proof}
+
+\begin{remark}[Asymptotic rate and finite-time norm bounds]
+In finite dimension,
+\[
+ \lim_{t\to\infty}-\frac1t
+       \log\|e^{tL}|_{L^2_0(\pi_B)}\|=g_{\mathrm{as}}.
+\]
+For every $\varepsilon>0$ there is a finite $C_\varepsilon$ such that
+the norm is at most
+$C_\varepsilon e^{-(g_{\mathrm{as}}-\varepsilon)t}$.
+If a defective eigenvalue lies on the line with real part
+$-g_{\mathrm{as}}$, a polynomial factor in $t$ can occur.
+Thus \eqref{eq:nonreversible-real-gap} alone does not assert a
+prefactor-one estimate at that exponent.  Formula
+\eqref{eq:nonreversible-symmetric-gap} identifies the exact exponent
+for that stronger type of estimate.
+\end{remark}
+
+\subsection{An explicit strict increase of the asymptotic rate}
+
+On three coordinates, take
+\[
+ H=\tfrac12(T_{(12)}-I)+\tfrac12(T_{(23)}-I)
+       +(T_{(123)}-I).
+\]
+The convention $(123):1\mapsto2\mapsto3\mapsto1$ gives
+\begin{equation}\label{eq:three-site-matrix}
+ H_1=
+ \begin{pmatrix}
+  -3/2&3/2&0\\
+  1/2&-2&3/2\\
+  1&1/2&-3/2
+ \end{pmatrix}.
+\end{equation}
+Its rows and columns sum to zero, but it is not symmetric.
+The characteristic polynomials of $-H_1$ and its symmetric part are
+\[
+ z\bigl(z^2-5z+27/4\bigr),
+ \qquad z(z-2)(z-3),
+\]
+respectively.  Hence
+\[
+ \kappa(H_1)=\frac52,\qquad
+ \kappa_{\mathrm{s}}(H_1)=2,
+ \qquad
+ \operatorname{Spec}(-H_1)
+   =\{0,\,5/2+i/\sqrt2,\,5/2-i/\sqrt2\}.
+\]
+The two rates in Theorem~\ref{thm:nonreversible} become
+\[
+ g_{\mathrm{as}}=\min\{\gamma_Q,\eta_1+5D/2\},
+ \qquad
+ g_{\mathrm{s}}=\min\{\gamma_Q,\eta_1+2D\}.
+\]
+For $0<D<2(\gamma_Q-\eta_1)/5$, the asymptotic rate is strictly
+larger than the reversible symmetric-part rate.
+
+The same example extends to arbitrarily many sites.
+Let $V=\{1,2,3\}\times W$, where $W$ carries a connected symmetric
+random-walk generator $G$ with gap at least $5/2$.
+At each $w\in W$, apply the three permutations above inside
+$\{1,2,3\}\times\{w\}$ with the displayed rates.
+For every graph edge $wz$ and every $i\in\{1,2,3\}$, also transpose
+$(i,w)$ and $(i,z)$ at that edge's rate.
+The one-coordinate generator is then
+\[
+ H_1^{V}=H_1\otimes I+I\otimes G.
+\]
+Its eigenvalues add, so its two relevant rates remain $5/2$ and $2$.
+The preceding exact formulas therefore hold for every
+$n=3|W|$, with $\gamma_Q$ and $\eta_1$ evaluated at that $n$.
+All conservative moves in this construction affect two or three sites.
+
+\begin{remark}[Scope of the conservative extension]
+The rates in \eqref{eq:permutation-motion} specify unconditional
+permutation jumps; an unchanged occupancy configuration simply
+contributes zero.  Occupancy-dependent directed exclusion rates are
+not covered by this argument.  In that model, the action on a
+linear coordinate observable generally contains quadratic occupancy
+terms, and the degree-one tensor reduction used here need not hold.
+\end{remark}

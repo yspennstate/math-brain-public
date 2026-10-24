@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B12",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "run_id": "20260924T115229Z-qform-eigenvalue-r56",
+  "control_commit_at_start": "3fa601a012b3d04e48c961efe603513ab8ee3bed",
+  "prepublication_control_commit": "a1552c2f2966c1ff5e3a514fcbb2548857358e99",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7ef8482d158e56e2e7300a4bc3d132654927ee5b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260924T115229Z-qform-eigenvalue-r56/REPORT.md"
+  },
+  "result_ids": [
+    "QFORM-141-LARGE-EIGENVALUE-CLOSURE-v1"
+  ],
+  "proved_summary": "If A has at least 141 eigenvalues of absolute value at least one, then every independent cap-one product input has an essentially bounded quadratic-form density with universal bound <1588901662443. The remaining spectrum is unrestricted in sign, multiplicity, magnitude and orientation. The proof uses a 35-heavy-row four-mode square-energy endpoint and, in the light case, an MSS partition plus signed spectral compression leaving five actual cross singular directions. The unresolved sector is 3<=r1<=140.",
+  "continuity_status": "The light ridge branch is directly continuous C0. The heavy and partner branches obtain C0 from completed fixed-matrix rank>=3 regularity at math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056. Universal height for the full target remains open.",
+  "premises": [
+    {
+      "id": "QFORM-FOUR-MODE-SPECTRAL-SQUARE-CARRIER-v1",
+      "source": "yspennstate/math-open-problems@fdcb2e5ac7ce86f617c79cbeaae2d33aafd25a7a",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T194742Z-qform-eigenvalue-r40/REPORT.md"
+    },
+    {
+      "id": "one-scale ridge theorem + two-part MSS frame application",
+      "source": "yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7",
+      "path": "proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md"
+    },
+    {
+      "id": "fixed-matrix rank>=3 C0 regularity",
+      "source": "yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T200544Z-account02-B15-qform-r11/REPORT.md"
+    }
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B12",
+    "run": "20260924T021341Z-account04-B12-resonance-repair-r9",
+    "source": "yspennstate/math-open-problems@71b7db02d3bd2f5cb6bf07e800caa6bd13a1a3e5",
+    "application": "partner exact-resonance s6=2; arbitrary signed local-rank<=2 packet leaves s4>=2; dense local tail <=1/4 leaves s4>=7/4; four-mode compiler gives density <4361"
+  },
+  "corrections_consumed": [
+    "bounded density does not imply uniform pointwise quadratic-phase decay",
+    "arbitrary-joint coarea/fiber-sup shortcuts are invalid",
+    "post-rotation eigen-coordinates are not independent",
+    "conditional density caps after product-destroying transforms are invalid",
+    "Monte Carlo histograms do not prove universal bounds"
+  ],
+  "unresolved_implication": "Close the finite-large-spectrum sector 3<=r1<=140. Within the present architecture 141 is the exact threshold because m=35 is minimal for trace-forced fourth projector mode under MSS positivity and the light branch still consumes five ridge directions with total 4h spectral/rank loss.",
+  "next_mechanism": "Reduce the five-direction light endpoint to four or three resources, or convert its systematic failure into a paid grouped-hub/projected-crossing/rank-two-common-plane/Schur/pair/Pluecker receiver.",
+  "full_target_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_tokens": null,
+  "provider_thinking_time": null
+}

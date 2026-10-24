@@ -1,0 +1,19 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B11-A052-CRITICAL-SLACK",
+      "version": 1,
+      "packet_id": "A052",
+      "attempt_id": "A052-CRITICAL-SLACK-2",
+      "gap_id": "G-CRITICAL-STEP",
+      "status": "PROVED_STRUCTURAL_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every nonconstant Boolean f with R=H(f)/I(f) and every relevant coordinate i, Delta_iH-RI_i(f) equals one half the sum over nonconstant physical children of I(child)(R-R(child)). If f is descendant-critical, the terms are nonnegative; child influence with ratio loss at least t is at most 2(Delta_iH-RI_i)/t. Zero slack forces every nonconstant child to have ratio exactly R.",
+      "quantifiers": "All finite uniform Boolean cubes; every nonconstant genuine Boolean f; every relevant physical coordinate; every t>0. Nonnegativity/stability clauses assume descendant-criticality relative to all physical descendants.",
+      "units": "bits for entropy; dimensionless ratio",
+      "hypotheses": ["Uniform physical cube", "Genuine {-1,1}-valued function", "Actual coordinate restrictions", "Descendant-criticality only for nonnegativity and plateau consequences"],
+      "scope_exclusions": ["Not full FEI", "No universal upper bound on critical slack", "No abstract support-component pruning", "No claim descendants are critical relative to themselves", "Independent review pending"],
+      "next_consumers": ["A054", "A055", "A090", "A094", "A096", "B20"]
+    }
+  ]
+}

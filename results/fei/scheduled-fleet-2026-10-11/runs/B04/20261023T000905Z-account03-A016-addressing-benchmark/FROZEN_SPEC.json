@@ -1,0 +1,30 @@
+{
+  "helper_version": "A016 stage8 v1 independent histogram/Walsh",
+  "family": "A020 tensor g3^m with A=point_k*(1-G)/2 and original Q; q then first actual tensor bit; padding unqueried",
+  "domain": {
+    "histogram_k": 5,
+    "histogram_m": [
+      4,
+      8,
+      16,
+      64,
+      256
+    ],
+    "truth_tables": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "case_count": "5 histogram cases and2 actual truth-table cases; no symmetry quotient beyond exact binomial tensor multiplicities",
+  "arithmetic": "integer Walsh; Fraction spectra; outward dyadic80 rational log intervals",
+  "memory_estimate_MB": 110,
+  "max_runtime_seconds": 60,
+  "pilot_domain": "histogram k5,m4 and actual table k1,m1",
+  "frozen_utc": "2026-10-23T00:16:38.226410+00:00"
+}

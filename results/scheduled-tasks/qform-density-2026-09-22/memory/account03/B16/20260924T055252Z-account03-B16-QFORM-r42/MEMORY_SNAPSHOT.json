@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260924T055252Z-account03-B16-QFORM-r42",
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "startup_control_head": "adf09b4e5ea8e288045a852de2daab2b6557de5d",
+  "publication_refresh_head": "63c47f7c35f6eb53079746d8862c41a64b32357d",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a7172687ed5ae3bc9154a1cf792c9afa21f2119f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260924T055252Z-account03-B16-QFORM-r42/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260924T055252Z-account03-B16-QFORM-r42/check_r42.py",
+    "verification_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260924T055252Z-account03-B16-QFORM-r42/CHECK_OUTPUT.txt"
+  },
+  "handoff": {
+    "commit": "dd80358bd7f8fd9a436c1e87e19fe54d9d84bc79",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B16/20260924T055252Z-account03-B16-QFORM-r42.md"
+  },
+  "premises": [
+    "literal original hub H remains independent of the residual original-coordinate product bank",
+    "one-dimensional product projection theorem: every normalized linear projection of cap-one independent coordinates has density cap <=sqrt(2)",
+    "r41 exact-rank-three hard collar gives ||b||>=rho>=s sqrt(62/63)",
+    "Plancherel with Fourier convention hat g(xi)=integral g(h)exp(i xi h)dh"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE / phase-aligned fragmented supports",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "arbitrary-joint 3D coarea and conditional projection positive-moment gates are false"
+  ],
+  "new_results": [
+    "QFORM-HUB-STAR-PLANCHEREL-AVERAGE-v1: for F_t(z)=int f_H(h)e^{it(ah^2+2zh)}dh, integral |F_t|^2 dz=(pi/|t|)int f_H^2<=pi/|t|",
+    "if B=b dot X has density cap M_B then |phi_Q(t)|<=sqrt(pi M_B/|t|)",
+    "for a cap-one product residual bank, M_B<=sqrt(2)/||b||, so |phi_Q(t)|<=sqrt(pi)2^(1/4)||b||^(-1/2)|t|^(-1/2)",
+    "r41 hard collar gives pivot-uniform |phi_Q(t)|<=sqrt(pi)(63/31)^(1/4)(s|t|)^(-1/2)=2.116263055051265...(s|t|)^(-1/2)",
+    "exact complex fiber identity: ||G_t||_2^2=(1/(2pi))int |E exp(i[tR(X)+xi B])|^2 dxi and |phi_Q(t)|<=sqrt(pi/|t|)||G_t||_2",
+    "correction-safe sufficient closure is the integrated mixed norm int_{|t|>=1}|t|^(-1/2)||G_t||_2 dt<infinity, not a uniform pointwise residual quadratic-phase decay claim"
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B16",
+    "source": "yspennstate/math-open-problems@7f2bb2d330022b09a6af6e39ab09d054caeaa346",
+    "application": "For Q_eta=-H^2+2eta H U+2U^2+2V^2 plus arbitrary outside W-quadratic terms and affine translations of U,V from a disjoint product bank, the projected plane is diag(2,2), so ||p_Qeta||_infinity<=pi. The 3D orthogonal compression has eigenvalues 2,(1+sqrt(9+4eta^2))/2,(1-sqrt(9+4eta^2))/2, hence the full matrix remains a strict owner-target instance by compression interlacing."
+  },
+  "compatible_peer_result": {
+    "source": "yspennstate/math-open-problems@4cc097c9bc5e49f71cbb75a85a5a8b54b96ca4d5",
+    "result": "account01/B16 density-preserving shear mixed-Fresnel theorem supplies |t|^-3/2 in its exact positive-discriminant/source-separated subbranch; not extended perturbatively across the remaining same-bank leakage"
+  },
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "GLOBAL_OPEN",
+  "remaining_implication": "QFORM-RANK2-SCHUR-INTEGRATED-FIBER-L2-v1: uniformly control int_{|t|>=1}|t|^(-1/2)||G_t||_2 dt in the r41 hard collar using rank-two Schur curvature and original-product provenance, while preserving phase-aligned-support corrections"
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260923T222129Z-account01-B02-qform-auto11-r39",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit": "95ae57f0de96b06652f9e13d253acac0cfbd3670",
+  "control_revision": "2026-09-22.15",
+  "correction_inbox_sha": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ef24e914cbfef9e9ad39457494caa09ba65ab6dc",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T222129Z-account01-B02-qform-auto11-r39/REPORT.md",
+    "readback_blob": "72520e4eabbc2b62dc722f630f19b99031c93d34"
+  },
+  "handoff": {
+    "commit": "40cf2b4b881150154873c593aaeeb41b601c60d6",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B02/20260923T222129Z-account01-B02-qform-auto11-r39.md"
+  },
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "new_result": "QFORM-ZEROPIVOT-CHIRP-STRICHARTZ-L1-v1",
+  "main_implication": "For the exact zero-hub-quadratic three-bank chirp kernel from account02/B02, every nonzero delta has a genuine L1_t characteristic-function bound via the 1D endpoint Strichartz estimate: int|phi| <= C_ch (M_Y M_Z)^(2/5)|alpha beta delta sigma^2|^(-1/5). The partner's pointwise-critical |t|^-1 envelope is therefore not an integrated-Fourier obstruction.",
+  "partner_applied": "account02/B02@612be1591c1aa5edaeb29bb6eceec7963ddbef55 exact nonzero-tail chirp operator and transverse bilinear factor",
+  "partner_heavy_hub_application": "Using D_h >= (8/3125)V1, any realized core fraction (alpha beta sigma)^2>=theta D_h gives int|phi| <= C theta^(-1/10)V1^(-1/10)|delta sigma|^(-1/5); if |delta sigma|>=kappa V1^(1/3), this is a scale-correct V1^(-1/6) Fourier-L1 exit.",
+  "continuity": "PROVED_C0_ON_THE_NEW_NONZERO-TAIL_KERNEL_BRANCH",
+  "global_unweighted_L1_status": "OPEN_NOT_REFUTED",
+  "unresolved": "QFORM-ZEROPIVOT-CHIRP-UNIFORM-ENDPOINT-GLUE-v1: glue delta=0 rank-one t^-3/2 to delta!=0 Strichartz-integrated bound uniformly as delta->0, or pay the very-small |delta sigma| branch by a separate quantitative rank-one receiver.",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  }
+}

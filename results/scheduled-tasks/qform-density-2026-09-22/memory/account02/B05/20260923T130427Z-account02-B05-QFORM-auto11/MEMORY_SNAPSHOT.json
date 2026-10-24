@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B05",
+  "run_id": "20260923T130427Z-account02-B05-QFORM-auto11",
+  "control_commit_at_start": "396b922ecaa9a85d3a95b610560a90c798c28fa9",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "result_status": "PROVED_SUPPORTING_THEOREM_HEAVY_NULL_EXACT_RANK3_BRANCH_CLOSED",
+  "result_ids": [
+    "QFORM-SLICE-FRESNEL-BL-v1",
+    "QFORM-HEAVY-NULL-EXACT-RANK3-CLOSURE-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "75df8a812c96735205ee8370363808fd734e2d12",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T130427Z-account02-B05-QFORM-auto11/",
+    "report_initial_commit": "c3b4b7a16269706cd53d6950a9b13a7f27d08dd2",
+    "report_blob": "a7652b101684a9070b1077e75a1873cb33467e87",
+    "rigor_addendum_blob": "a4bf4862b38d3294051171d63c73755ee208399f",
+    "check_result_blob": "badc26e8613e1bedab79edc4feccfb358bc733dd"
+  },
+  "theorem_summary": "In the exact-rank-three heavy physical null-pivot residual-diffuse branch, deterministic shear Z=W+(delta/gamma)V preserves normalized transverse leverages. On each V=l slice, Fresnel linearisation of gamma Z^2 and hyperplane Fourier inversion produce a translated two-dimensional original-coordinate product Fourier integral. Translation-invariant geometric Brascamp-Lieb plus the pinned Lp Fourier lemma bounds it by (4pi)^2, giving |muhat_l(t)|<=4sqrt(pi)|gamma t|^-1/2 and mu_l(I)<=C_*|gamma|^-1/2|I|^1/2 with C_*=13.818801475690845. The account03/B05 single-hub receiver then yields essential density <55.776. Combined with the completed nested-heavy pivot/pair exit, every exact-rank-three heavy physical null-pivot branch is paid.",
+  "quantitative_results": {
+    "slice_fourier_constant": "4*sqrt(pi)",
+    "slice_interval_constant": 13.818801475690845,
+    "residual_diffuse_density_bound": 55.77520590276338
+  },
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION"
+  ],
+  "required_claude_source": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "application": "Lp Fourier lemma and translation-invariant geometric Brascamp-Lieb give the exact (4pi)^2 translated two-dimensional slice-frequency integral bound."
+  },
+  "partner_results": [
+    {
+      "worker": "account03/B05",
+      "run": "r25",
+      "commit": "02e8b920f91cd9489773d6d895d2117920b2b75a",
+      "application": "Its arbitrary-joint parabolic/spherical-shell obstruction rules out ambient-gradient or projection-cap replacement; the new proof retains original product Fourier factorization."
+    },
+    {
+      "worker": "account03/B05",
+      "run": "r24",
+      "commit": "b0e14a08fe8abb97f7aeb518cfa8cf4cef568d36",
+      "application": "Single-hub square-root-slice receiver converts the new slice estimate into ||p_Q||_ess<55.776."
+    }
+  ],
+  "complementary_dependency": {
+    "result": "QFORM-NULL-ROW-NESTED-HEAVY-CLOSURE-v1",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B10/20260922T193653Z-account02-B10-QFORM-r15/REPORT.md",
+    "application": "Pays the branch where a residual transverse physical row has leverage >1/2; new theorem pays the complementary <=1/2 branch."
+  },
+  "stress_family": "The predecessor Walsh-Hadamard exact-target family with spectrum {-1,1,1} and maximally diffuse Pluecker pencil is now uniformly paid on the full output law by <55.776.",
+  "first_unpaid_implication": "QFORM-HEAVY-NEARNULL-NONZERO-PIVOT-BRIDGE-v1",
+  "next_step": "Keep the same V=l product slice when A_ii is small nonzero and jointly spend the additional longitudinal T^2 curvature; do not treat the small coefficient as a uniformly small random perturbation.",
+  "continuity_status": "essential L-infinity only for new theorem; full target continuity open",
+  "independent_review": "PENDING"
+}

@@ -1,0 +1,1 @@
+The active draft is bundle_002.json, shown by 02_p0321_cumulant_transfer_corrected.diff. Patch 01 and bundle_001 are superseded historical artifacts. The active draft is already submitted; these new-file diffs are for review and are not duplicate ingestion requests.

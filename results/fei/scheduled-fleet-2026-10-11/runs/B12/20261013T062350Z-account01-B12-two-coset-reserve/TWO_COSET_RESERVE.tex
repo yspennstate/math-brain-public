@@ -1,0 +1,121 @@
+\section*{A one-budget theorem for two spectrally overlapping affine defects}
+
+All logarithms are natural.  Put
+\[
+ \mathcal E(u)=\sum_S\Phi(\widehat u(S)^2),\qquad
+ \Phi(t)=t\log(1/t),\quad\Phi(0)=0.
+\]
+
+\subsection*{Theorem}
+Let $x\in\{-1,1\}$ be a physical selector coordinate and let
+$E_1,E_2\subseteq\{-1,1\}^m$ be nonempty disjoint affine cosets whose
+physical Hamming distance is at least two.  Write
+\[
+ s_j=\mathbf1_{E_j},\quad s=s_1+s_2,quad
+ d(x,z)={1-x\over2}s(z).
+\]
+Take the genuine Boolean branches
+\[
+ g_-=x,\qquad g_+=x+2d,
+\]
+and hence
+\[
+ a={g_++g_-\over2}=x+d,qquad b={g_+-g_-\over2}=d,qquad h=-x.
+\]
+The composed function is $F=a+hb=a+d$.  Its signed full-block associator
+\[
+ \Omega=\mathcal E(F)-\mathcal E(a)-\mathcal E(d)
+\]
+satisfies
+\[
+ \boxed{\ \Omega\leq16\log2\,I(d).\ }                       \tag{1}
+\]
+No Fourier-orthogonality assumption is imposed on the two pieces; their flat
+annihilator spectra may overlap arbitrarily.
+
+For an adaptive nonreusing physical hierarchy whose reached local sources
+have this two-coset form and are restrictions of one source $b$, with actual
+reach weights $w_v$, one has
+\[
+ \sum_vw_v\Omega_v\leq16\log2\sum_vw_vI_{B_v}(b_v)
+ \leq16\log2\,I(b).                                         \tag{2}
+\]
+
+\subsection*{A scalar superposition lemma}
+For $0\leq u\leq1$ and $0\leq z\leq\min(2u,1)$,
+\[
+ \Phi(z)\leq2\Phi(u)+{u\over e}.                            \tag{3}
+\]
+Indeed, if $u\leq1/(2e)$, monotonicity of $\Phi$ on $[0,1/e]$ gives
+$\Phi(z)\leq\Phi(2u)=2\Phi(u)-2u\log2$.  If $u\geq1/(2e)$,
+$\Phi(z)\leq1/e$, while the concave function
+$2\Phi(u)+u/e$ is at least $1/e$ at both endpoints of
+$[1/(2e),1]$.
+
+For real $r,t$ with $r^2+t^2=u\leq1$, concavity of $\Phi$ also gives
+\[
+ \Phi(r^2)+\Phi(t^2)\geq\Phi(u).
+\]
+Applying (3) with $z=(r+t)^2$ therefore yields
+\[
+ \Phi((r+t)^2)
+ \leq2\Phi(r^2)+2\Phi(t^2)+{r^2+t^2\over e}.                \tag{4}
+\]
+Summing (4) over Fourier coordinates, using $s=s_1+s_2$ and physical
+disjointness, gives
+\[
+ \mathcal E(s)\leq2\mathcal E(s_1)+2\mathcal E(s_2)+{p\over e},
+ \qquad p=\mathbb E s.                                      \tag{5}
+\]
+
+\subsection*{Affine and physical payments}
+If $E_j$ has codimension $k_j$, density $p_j$, and annihilator using $m_j$
+physical coordinates, its Fourier spectrum is flat and
+\[
+ \mathcal E(s_j)=2p_jk_j\log2,qquad
+ I(s_j)={p_jm_j\over2}\geq{p_jk_j\over2}.
+\]
+Thus $\mathcal E(s_j)\leq4\log2\,I(s_j)$.  The distance-two hypothesis
+means that no physical edge joins $E_1$ to $E_2$, so the derivative cross
+term vanishes exactly:
+\[
+ I(s)=I(s_1)+I(s_2).                                        \tag{6}
+\]
+Equations (5)--(6) imply
+\[
+ \mathcal E(s)\leq8\log2\,I(s)+{p\over e}.                 \tag{7}
+\]
+
+It remains to relate the composition associator to $\mathcal E(s)$.  Pair
+Fourier coefficients according to the selector bit.  If $T\ne\varnothing$
+and $c_T=\widehat s(T)$, the $T$-pair contributes
+\[
+ 2\Phi(c_T^2)-4\Phi(c_T^2/4)
+ =\Phi(c_T^2)-c_T^2\log4.
+\]
+The empty pair yields the exact identity
+\[
+ \Omega=\mathcal E(s)+C(p),                                 \tag{8}
+\]
+where
+\[
+ C(p)=\Phi((1-p)^2)-3\Phi(p^2/4)-\Phi((1-p/2)^2)
+       -p(1-p)\log4.
+\]
+For $f(t)=\Phi((1-t)^2)$, $f'(t)\leq2$, so
+$f(p)-f(p/2)\leq p$.  Also
+\[
+ 3\Phi(p^2/4)+p(1-p)\log4
+ \geq p\log4(1-p/4)\geq {3\over4}p\log4>p.
+\]
+Hence $C(p)\leq0$.  Finally
+\[
+ I(d)={1\over2}I(s)+{p\over4}.                              \tag{9}
+\]
+Combining (7)--(9), and using $1/e<4\log2$, proves (1).  Equation (2)
+then follows from the exact nonreuse derivative-energy ledger.
+
+This is a proper-class theorem, not full FEI.  The distance-two assumption
+removes the negative derivative cross term created by adjacent source pieces;
+paying that collision without recharging the source is the next open step.
+

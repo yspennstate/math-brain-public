@@ -1,0 +1,73 @@
+{
+  "problem_id": "C0017",
+  "checked_on": "2026-10-10",
+  "worker": "w412",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "exact_intake_statement": "Prove that critical bond percolation on Z^2 at p = 1/2 is conformally invariant in the scaling limit (Cardy's formula and convergence of interfaces to SLE(6)), as is known on the triangular lattice by Smirnov.",
+  "intake_source": {
+    "problem_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:17",
+    "attempt_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl:17",
+    "source_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/sources.jsonl:2",
+    "source_id": "garban_steif_noise_2012",
+    "original_locator": "Chapter II Section 4, p. 26",
+    "record_trust": "unreviewed historical intake; not a mathematical certificate"
+  },
+  "primary_source_recovered": {
+    "title": "Noise sensitivity of Boolean functions and percolation",
+    "authors": "Christophe Garban and Jeffrey E. Steif",
+    "url": "https://arxiv.org/pdf/1102.5761v3",
+    "version_date": "2012-05-29",
+    "correct_locator": "Chapter II Section 4, printed pp. 23-24; explicit square-lattice open-problem sentence on printed p. 24 (PDF page 26, zero-based page 25)",
+    "quote": "proving the conformal invariance is still a challenging open problem.",
+    "context": "The preceding words specify Z^2 at p_c=1/2. Theorem II.2 on this page is for triangular-lattice site/hexagonal-face percolation. The square-lattice target is a conjectural extension, not Theorem II.2 itself.",
+    "statement_fidelity": "Exact historical target verified. The intake's unqualified p.26 matches PDF page numbering; record printed p.24 and PDF page 26 explicitly to remove pagination ambiguity. This source supports historical, not current, openness."
+  },
+  "working_formulation": {
+    "model": "Independent Bernoulli(1/2) nearest-neighbour bonds on canonical square-lattice approximations of a bounded Jordan domain, with no extra boundary identifications for the crossing formulation.",
+    "crossings": "For four distinct counterclockwise boundary marks a,b,c,d and a conformal map to H sending them to 0,eta,1,infinity with 0<eta<1, the conjectured limit of the open ab-to-cd crossing probability is C(eta), the normalized integral from 0 to eta of [s(1-s)]^(-2/3).",
+    "interfaces": "For two distinct boundary marks and explicitly induced primal/dual Dobrushin boundary conditions, conjectured convergence of the medial exploration interface to chordal SLE(6), in a specified curve topology. The independent reduction proves neither the observable limits nor the trace-convergence premise."
+  },
+  "bounded_primary_literature_check": [
+    {
+      "url": "https://arxiv.org/abs/0909.4499",
+      "finding": "Smirnov's established conformal-invariance result concerns critical triangular-lattice site percolation; it is not a square-bond theorem."
+    },
+    {
+      "url": "https://arxiv.org/abs/1112.2017",
+      "version": "v5, 2013-01-10",
+      "finding": "Abstract claims square-bond SLE(6) convergence, but the authors' comments call this a preliminary version and report critical comments and a planned clean proof. v4 is listed as withdrawn. No soundness judgment of v5 is made here."
+    },
+    {
+      "url": "https://arxiv.org/abs/2409.03235",
+      "version": "v6, 2024-12-17",
+      "finding": "A 115-page Wang Zhou preprint claims square-bond SLE(6) convergence via decomposition of the parafermionic observable. The bounded search recovered the claim, not independent verification or a journal acceptance. Full HTML fetch of v1 exceeded the web tool's size limit; the paper has not been mathematically audited here."
+    },
+    {
+      "url": "https://arxiv.org/html/2012.11672",
+      "version": "v2, 2026-06-30",
+      "finding": "Duminil-Copin et al. prove large-scale rotational invariance for square-lattice random-cluster q in [1,4], including Bernoulli percolation. Their introduction presents this as a step towards full conformal invariance; it does not identify square-bond interfaces as SLE(6)."
+    }
+  ],
+  "local_work_check": {
+    "recorded_method": "C0017-A001: seek a discrete holomorphic observable; missing strong regularity remains the recorded obstruction.",
+    "H_I_attempts": "Targeted C0017 searches in the named H and I attempt folders found no exact-ID record; this is not a proof that no differently named work exists.",
+    "lean": "The named Lean intake has the ranked-list entry, but no C0017 proof receipt was recovered. No Lean proof is claimed.",
+    "owner_folder": "The named owner's percolation project README concerns the Benjamini-Schramm nonuniqueness conjecture, not square-lattice conformal invariance. Its cited Open problem project/solved_register.md had no target match in the bounded C0017/conformal-square-percolation search. This is not an exhaustive global solved-work certificate.",
+    "team_O": "The named Team O board has no C0017 assignment in the inspected rows; C0018 is held by w337 and C0050 by w339.",
+    "exported_target_card": "claim_91f295e6d2a67634c0b90a5ee4130c1feed72dc0fe16086a679021c90c8917cb",
+    "existing_logical_id": "math:probability.percolation:open-problem-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+    "exported_attempt_card": "claim_07a861a72ebeb008dc23e9db32147327c062427adee7a530bab01f0de67bd002",
+    "canonical_store_check": "The named math-research-brain repository's local directories contain audits/evaluation/tooling; only audit-snapshot SQLite filenames were located by the bounded store lookup. They were not opened, and evaluation material was not read. A current canonical runtime store for that repository was not recovered.",
+    "live_population_check": {
+      "receipt": "LIVE_TARGET_RECEIPT.json",
+      "matched_ids": [
+        "claim_07a861a72ebeb008dc23e9db32147327c062427adee7a530bab01f0de67bd002",
+        "claim_91f295e6d2a67634c0b90a5ee4130c1feed72dc0fe16086a679021c90c8917cb"
+      ],
+      "error": null,
+      "scope": "Read-only, exact-ID lookup of the target and attempt cards; no global store export or proof certification."
+    }
+  },
+  "disposition": "Exact historical target recovered; present openness UNKNOWN; no novelty claim. w413 kept the local conditional derivation and deterministic counterexample. Brain entries remain concept/draft material pending the served-model/different-model integration gate."
+}

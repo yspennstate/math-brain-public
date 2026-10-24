@@ -1,0 +1,12 @@
+{
+  "helper_version": "profiles.py/v1",
+  "actual_Boolean_family": ["lex f=1-2*1(index<t)", "raw recursively composed five-bit t=3 sign with +1 encoded as input bit 0"],
+  "parameter_domain": {"lex_n": [5,24], "lex_t": "floor(2^n/10), one value per n", "composition_depth": [1,4]},
+  "case_count": "20 lex functions and 4 recursive functions, with all coordinate-type paths (2+4+8+16)",
+  "symmetry": "lex all relevant coordinates; recursive two outer coordinate orbits B={0,1}, T={2,3,4}, covering all leaf paths",
+  "arithmetic": "Fraction coefficients, rigorous outward integer log intervals (192 bits, 80 atanh terms); display decimals not proof",
+  "memory_estimate_MB": 40,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "tensor_block_independence": "all copies use disjoint physical uniform inputs; inner outputs may be biased"
+}

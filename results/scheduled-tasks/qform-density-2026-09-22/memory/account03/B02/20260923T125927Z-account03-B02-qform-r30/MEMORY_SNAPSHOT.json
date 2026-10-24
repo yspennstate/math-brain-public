@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260923T125927Z-account03-B02-qform-r30",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_final_refresh": "178f58be7851340924df600c97d194fb040572b6",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "status": "E3_MARGINAL_OVERLOAD_COMPILER_AND_EXACT_RANK2_PAYMENT_PROVED",
+  "full_target_status": "OPEN",
+  "target_wide_unweighted_L1_fourier_status": "OPEN_NOT_REFUTED",
+  "continuity_status": "CONTINUOUS_ON_DIFFUSE_E3_AND_EXACT_RANK2_HEAVY_BRANCHES; FULL_CONTINUITY_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "premises": [
+    {
+      "id": "fractional-three-volume-Fourier",
+      "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "scope": "original-coordinate physical cross block; q<3/2; one-bank third-volume marginal gate; arbitrary same-bank curvature/outside couplings retained"
+    },
+    {
+      "id": "joint-star-block-compiler",
+      "source": "yspennstate/math-open-problems@e8d024801adae701d47d58d85c41acb5b8ec4454:proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T020523Z-account02-B02-QFORM-auto11-c1a7e2f4/REPORT.md",
+      "scope": "joint incident third-volume to edge-E2 or two-star transverse packet"
+    },
+    {
+      "id": "bankwise-Schur-grouped-L1",
+      "source": "yspennstate/math-open-problems@e28bdce394cdb3d096de191390ea5cca0b3cdef9:proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T110948Z-account02-B02-QFORM-r11/REPORT.md",
+      "scope": "invertible physical cross pivot plus exact-rank Schur residual; grouped bank density caps; continuous L1 Fourier conclusion"
+    },
+    {
+      "id": "designated-partner-zero-diagonal-triple-L2",
+      "source": "yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7:proofnet24/QFORM-density/fleet-2026-09-22/account04/B02/20260922T193108Z-account04-B02-QFORM-r2/REPORT.md",
+      "scope": "nonsingular physical principal 3x3 block with a zero diagonal; continuous density and L2 characteristic-function estimate"
+    }
+  ],
+  "new_results": [
+    "For any physical cross block with Z=E3(B)>0 and 1<q<3/2: either one side satisfies the fractional Fourier marginal gate or a physical row/column pair has J_ij>(q-1)Z.",
+    "For the heavy pair: a!=0 gives exact a^2 E2(N-cr^T/a)=J_ij; a=0 gives two-star transverse packet >=J_ij.",
+    "At q=4/3 the heavy packet has J_ij>Z/3, with no compound-hub/disjointness pigeonhole loss.",
+    "If a!=0 and the cross-Schur residual has exact rank two, then ||p_Q||inf<7.017317367 Z^(-1/6), with a continuous C0 density.",
+    "With the designated partner zero-diagonal triple H0 on that branch, ||p_Q||inf<7.902861501 |det H0|^(-1/12) Z^(-1/8)."
+  ],
+  "partner_result_applied": "account04/B02 zero-diagonal physical-triple L2 Fourier estimate applied through optimized low/high-frequency interpolation on the heavy exact-rank-two anchored branch",
+  "math_repository": "yspennstate/math-open-problems",
+  "math_commit": "cb55a355bc5c623eb5a98c1db8a0ebaa58ff1027",
+  "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T125927Z-account03-B02-qform-r30/REPORT.md",
+  "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T125927Z-account03-B02-qform-r30/CHECKS.txt",
+  "unresolved": [
+    "a!=0, rank(S)>=3, a^2 E2(S)>Z/3",
+    "a=0, ||c||^2||r||^2 F_perp^2>Z/3",
+    "bare three-large-eigenvalue hypothesis still must be compiled into a uniformly useful physical E3 block or another already-paid endpoint",
+    "target-wide unweighted characteristic-function L1 remains open"
+  ],
+  "next": "QFORM-E3-HEAVY-ANCHOR-HIGHRANK-OR-ZEROEDGE-v1: use higher-rank Schur third-volume/ridge content or fresh two-star curvature/grouped-hub receivers without deleting small cross directions"
+}

@@ -1,0 +1,43 @@
+{
+  "claim_id": "A100-BINARY-REMAINDER-JENSEN-BOUND",
+  "version": 1,
+  "exact_statement": "For every even d>=2 let delta=2^-d, b(y)=(-1)^(sum_j y_(2j-1)y_(2j)), q(u,v)=-1 only at (1,1), and F_d=b(y)+1_(y=0)(q(u,v)-1). For either i in {u,v}, with complete normalized laws mu_i(T)=p_(T+i)/e_i and r_i(T)=p_T+p_(T+i), retaining only the other pair coordinate gives influence-weighted lost conditional KL L_i=e_i[D(mu_i||r_i)-D(Cmu_i||Cr_i)], where e_i=delta/2. Put R(delta)=(1+delta-3delta^2/4)/(1+delta^2/4). Then 0<L_i/e_i<=log2(R(delta))/2<=log2(77/65)/2<1/8. Their combined loss satisfies L_u+L_v<=delta log2(R(delta))/2<delta^2/(2ln2), and also L_u+L_v<delta/8<=Inf_(y1)/20. The same row divergences and remainders hold after tensoring with any common Boolean spectator on independent fresh coordinates. These allowances pay only the two discarded conditional KL remainders; retained M_i/e_i>d/2+3/4 remains unpaid, and no globally available or repeatedly reusable terminal reserve is asserted.",
+  "hypotheses": [
+    "Actual finite uniform Boolean signs in the displayed family; d even and >=2; bits and ordinary physical influence",
+    "Complete residual reference is marginalized, not conditioned on derivative support; KL zero terms continuous",
+    "Common spectator is independent on fresh physical coordinates; both row laws share its same normalized spectrum",
+    "Dedicated physical reserve, if used, is exclusive to these two remainder bills; no universal core payment assumed"
+  ],
+  "statement_sha256": "80502ef87dba2f2e9ee6cb86e5774884a7c0cbfd2cf3cc6fce0bbdf5da23f474",
+  "contributors": [
+    "A100/account05; explicit boundary family credited to A073"
+  ],
+  "proof_source": {
+    "path": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\REVIEW.md",
+    "locator": "New quantitative refinement: Jensen bound",
+    "checker": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\code\\check_binary.py",
+    "output": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\out\\INDEPENDENT_CHECK.json"
+  },
+  "proof_dependencies": [
+    {
+      "claim_id": "A073-NONZERO-ERASURE-BINARY-REMAINDER",
+      "version": 1,
+      "usage": "Unchanged family/signed row identities independently reconstructed above; original lemma accepted by A098 and separately A100"
+    }
+  ],
+  "review_records": [],
+  "status": "SCOPED_ANALYTIC_JENSEN_REFINEMENT_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+    "A073",
+    "A096",
+    "A001",
+    "A098",
+    "A099",
+    "A085",
+    "A094",
+    "B20"
+  ]
+}

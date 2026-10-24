@@ -1,0 +1,28 @@
+{
+  "id": "claim_1564c803ed1f4f740d9c5f603549c04916aaed26f09262fdb378ee739b59ba18",
+  "title": "Gaussian Integration by Parts, Stein's Characterisation, and Isserlis-Wick",
+  "body": "(a) Let Z be standard Gaussian on R and f absolutely continuous with E|f'(Z)| < infinity. Then E[ Z f(Z) ] = E[ f'(Z) ]. (b) Multivariate: if X is centred Gaussian on R^n with covariance Sigma and f is differentiable with the appropriate integrability, then E[ X_i f(X) ] = sum_j Sigma_{ij} E[ d f / d x_j (X) ]. (c) STEIN'S CHARACTERISATION: a real random variable Z is standard Gaussian IF AND ONLY IF E[ Z f(Z) ] = E[ f'(Z) ] for every bounded, continuously differentiable f with bounded derivative. This is the identity that makes Stein's method work: to show a law is close to Gaussian, one bounds E[ Z f(Z) - f'(Z) ] over a class of test functions f solving Stein's equation. (d) ISSERLIS-WICK FORMULA: for a centred Gaussian vector, E[ X_1 X_2 ... X_{2m} ] = sum over all PERFECT MATCHINGS of {1, ..., 2m} of the product of the covariances of the matched pairs, and any odd moment vanishes. For 2m = 4 this reads E[X_1X_2X_3X_4] = Sigma_{12}Sigma_{34} + Sigma_{13}Sigma_{24} + Sigma_{14}Sigma_{23}, and in particular E[Z^4] = 3 for a standard Gaussian, which is the '3' that the fourth moment theorem tests against. Centring is essential in (d); for a non-centred Gaussian one must first subtract the means. [standard; Isserlis (1918), Stein (1972); see Nourdin and Peccati, Normal Approximations with Malliavin Calculus, Chapter 3]\n(a) f absolutely continuous with E|f'(Z)| finite\n(c) the characterisation quantifies over a rich enough class of test functions\n(d) the Gaussian vector must be CENTRED",
+  "metadata_json": {
+    "artifact_digest": "sha256:efee4882cf38f72f4f0455926566792cc876b52c6cb6a527e4223aa325d34232",
+    "artifact_path": "objects/sha256/ef/efee4882cf38f72f4f0455926566792cc876b52c6cb6a527e4223aa325d34232.md",
+    "bundle_digest": "sha256:2eb00ffb3a0e3f633485db6a705fae7517d9527b59055f15979f0a68468428c5",
+    "bundle_entry_key": "thm-gaussian-integration-by-parts",
+    "bundle_id": "population.percolation-subadditivity-and-gaussian-chaos-001",
+    "claim_kind": "theorem",
+    "conditions": [],
+    "domain": "probability theory",
+    "draft": "claude-8e06e1f7-M9/bundle_ap03.json",
+    "evidence_ids": [],
+    "logical_id": "math:probability.gaussian:gaussian-integration-by-parts-and-steins-characterisation",
+    "overlay_schema_version": 1,
+    "proof_text": "(a) Write the expectation as an integral against the density phi(x) = (2 pi)^{-1/2} e^{-x^2/2} and use the identity phi'(x) = -x phi(x). Then E[Z f(Z)] = integral x f(x) phi(x) dx = - integral f(x) phi'(x) dx = integral f'(x) phi(x) dx = E[f'(Z)], the middle step being integration by parts, whose boundary terms vanish because phi decays faster than any polynomial and f grows at most in a way controlled by the integrability hypothesis. (b) Diagonalise: write X = A Y with Y standard Gaussian and A A^T = Sigma; apply (a) coordinatewise to Y and change variables back, the chain rule producing the matrix Sigma. (c) Necessity is (a). For sufficiency, given the identity, fix a real number z and solve STEIN'S EQUATION f'(x) - x f(x) = 1{x <= z} - Phi(z) for f, which has the explicit bounded solution f(x) = e^{x^2/2} integral_{-infinity}^{x} (1{y <= z} - Phi(z)) e^{-y^2/2} dy with bounded derivative. Taking expectations of both sides at X = Z and using the hypothesis kills the left-hand side, giving P(Z <= z) = Phi(z) for every z. (d) Induct on m using (b): apply (b) to f(X) = X_2 ... X_{2m} with i = 1, which expresses E[X_1 ... X_{2m}] as sum_j Sigma_{1j} E[ product over the remaining indices ], and each term is by induction a sum over perfect matchings of the remaining 2m - 2 indices; matching index 1 with index j accounts for exactly the matchings in which 1 is paired with j. Odd moments vanish because the law is symmetric under X -> -X.",
+    "release_manifest_digest": "sha256:0a10dca57c02792c802de68a722e918c5119beec63f791aa1a02a4d2b2b22ace",
+    "revision_digest": "sha256:1564c803ed1f4f740d9c5f603549c04916aaed26f09262fdb378ee739b59ba18",
+    "source_id": "rederived:claude-8e06e1f7-M9",
+    "source_revision": "re-derived-2026-08-22; all four parts and their proofs were written and checked by the author, including the explicit fourth-moment expansion and the value E[Z^4] = 3; textbook cross-reference in the statement, source not fetched this session",
+    "statement_fidelity_reviewed": false,
+    "supersedes": [],
+    "trust_class": "curated_secondary",
+    "truth_status": "unverified"
+  }
+}

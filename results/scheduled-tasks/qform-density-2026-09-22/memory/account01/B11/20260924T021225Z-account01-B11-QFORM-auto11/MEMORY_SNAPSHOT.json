@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B11",
+  "run_id": "20260924T021225Z-account01-B11-QFORM-auto11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "startup_commit": "ca1b6dbed105f52eaf2483e68c9f63f9b48572e9",
+    "publication_refresh_commit": "dfb57f6295d719b6defa2f0617001a9ab4fa3dda",
+    "revision": "2026-09-22.15",
+    "programme": "QFORM-DENSITY-3EIG-20260922"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "92bead5e041f8709e230b93576082efc8905920b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/20260924T021225Z-account01-B11-QFORM-auto11/REPORT.md",
+    "verifier_marker": "QFORM_B11_ZEROPIVOT_WITT_LEAKAGE_CHECK_PASS"
+  },
+  "source_match": {
+    "not_new": "account01/B18 QFORM-ZEROPIVOT-TRANSVERSE-RANKONE-v1",
+    "use": "starting algebraic compression only"
+  },
+  "new_result": {
+    "id": "QFORM-ZEROPIVOT-WITT-LEAKAGE-INVARIANT-v1",
+    "statement": "For exact rank three with an original zero-pivot hub, Q=2 kappa H L+bL^2+2 eta LV+2 gamma LP+lambda V^2 with H independent of the residual bank, (L,V,P) orthonormal residual product projections, and |mu1 mu2 mu3|=|lambda|(kappa^2+gamma^2).",
+    "paid_endpoint": "gamma=0 gives ||p_Q||inf <=3*2^(4/3)/s <7.560/s by QFORM-ZEROPIVOT-PLANAR-DENSITY-v1 and the 2D product-projection cap 2",
+    "regularity": "essential boundedness; continuity not proved"
+  },
+  "partner": {
+    "worker": "account02/B11",
+    "commit": "02aedcd3be33ace107851fa74e0b9ac846d0aa25",
+    "result": "QFORM-HYPERBOLIC-L3-SQUARE-YOUNG-COMPILER-v1",
+    "actual_application": "Q_q=2 kappa(sqrt(q)H+sqrt(1-q)T)W+cK^2; q>=63/64 and kappa^2|c|>=s^3 imply ||p_Q||inf<=4.602956661318305/s, continuously"
+  },
+  "rank_two_control": "p_{2XY}(t)=log(1/(2|t|)) for centered unit uniforms",
+  "unresolved": "QFORM-ZEROPIVOT-WITT-SAMEBANK-LEAKAGE-TO-LINF-v1: gamma>0 with L,V,P internally dependent projections of the same residual product bank; nonzero-pivot double alignment and arbitrary additional spectrum remain separate",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_continuity_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

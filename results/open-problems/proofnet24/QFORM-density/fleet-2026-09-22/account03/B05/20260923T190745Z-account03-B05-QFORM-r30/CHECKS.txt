@@ -1,0 +1,13 @@
+Exact algebra check for QFORM-TRANSVERSE-U-IS-PARTNER-PLANE-CURVATURE-v1
+
+Symbols: alpha,beta,r,s,c11,c12,c22.
+P=[[alpha,beta],[r,s]], C=[[c11,c12],[c12,c22]], tau=det(P).
+u=(-r,alpha)^T, v=(-s,beta)^T.
+TY=u^T C u, TZ=v^T C v, U=u^T C v.
+
+SymPy exact simplification checked:
+
+P^{-1} C P^{-T} - tau^{-2} [[TZ,-U],[-U,TY]] == zero matrix.
+TY*TZ-U^2 - tau^2*det(C) == 0.
+
+These are symbolic polynomial/rational identities; no floating-point or Monte Carlo inference is used in the proof.

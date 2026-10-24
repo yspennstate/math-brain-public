@@ -1,0 +1,155 @@
+{
+  "Psi_tau_over_tau": 5.826796887175451,
+  "R": 1.0,
+  "aggregate_hybrid_evidence_only": {
+    "2": {
+      "max_sum_B_plus_E_over_I": 3.6568542494923806,
+      "witness_mask_fixed_f0": 1
+    },
+    "3": {
+      "max_sum_B_plus_E_over_I": 4.778826567326777,
+      "witness_mask_fixed_f0": 1
+    },
+    "4": {
+      "max_sum_B_plus_E_over_I": 4.743171103248151,
+      "witness_mask_fixed_f0": 32764
+    }
+  },
+  "balanced_R_at_tau_quarter": 1.019413917020565,
+  "coded_F8": {
+    "hard_core_tau_quarter_R1": true,
+    "limitation": "Classification uses the archived exact influence formula only; no 2^2040 truth table or new FEI certificate was attempted.",
+    "per_coordinate_influence": 0.0087738037109375,
+    "per_coordinate_influence_exact_formula": "a*(1+(1-2a)/m), a=2^(1-m), m=8",
+    "physical_inputs": 2040,
+    "profile_entropy_uniform": 10.994353436858859,
+    "truth_table_executed": false
+  },
+  "exhaustive_census": {
+    "1": {
+      "cases_checked": 2,
+      "full_class_size_up_to_global_sign": 2,
+      "hard_core_count": 0,
+      "mode": "exhaustive"
+    },
+    "2": {
+      "cases_checked": 8,
+      "full_class_size_up_to_global_sign": 8,
+      "hard_core_count": 0,
+      "mode": "exhaustive"
+    },
+    "3": {
+      "cases_checked": 128,
+      "full_class_size_up_to_global_sign": 128,
+      "hard_core_count": 0,
+      "mode": "exhaustive"
+    },
+    "4": {
+      "cases_checked": 4096,
+      "full_class_size_up_to_global_sign": 32768,
+      "hard_core_count": 48,
+      "mode": "deterministic_stride_sample"
+    }
+  },
+  "full_FEI_proved": false,
+  "limitations": [
+    "Finite exhaustive checks cover all Boolean functions through dimension three up to global sign; dimension four uses a deterministic 4096-function stride sample.",
+    "Aggregate hybrid ratios are numerical evidence only and no all-dimensional aggregate payment is claimed.",
+    "The hard-core localization theorem is proved analytically in the report from inherited all-dimensional inequalities; this checker only stress-tests its ingredients.",
+    "The coded F8 classification uses its archived exact per-coordinate influence formula and uniformity, not truth-table enumeration."
+  ],
+  "localization_threshold_C0": 5.826796887175451,
+  "max_character_fold_influence_error": 0.0,
+  "max_pruning_entropy_telescope_error": 0.0,
+  "max_pruning_influence_budget_error": 0.0,
+  "max_restriction_cap_violation": 0.0,
+  "named_stress": {
+    "addressing6": {
+      "H": 4.0,
+      "H_over_I": 2.0,
+      "I": 2.0,
+      "J": 2.0,
+      "folded_influences": [0.5,0.5,0.25,0.25,0.25,0.25],
+      "hard_core_tau_quarter_R1": false,
+      "influences": [0.5,0.5,0.25,0.25,0.25,0.25],
+      "max_j": 0.5,
+      "n": 6,
+      "profile_entropy_after_fold": 2.5
+    },
+    "bent_quadratic4": {
+      "H": 4.0,
+      "H_over_I": 2.0,
+      "I": 2.0,
+      "J": 2.0,
+      "folded_influences": [0.5,0.5,0.5,0.5],
+      "hard_core_tau_quarter_R1": false,
+      "influences": [0.5,0.5,0.5,0.5],
+      "max_j": 0.5,
+      "n": 4,
+      "profile_entropy_after_fold": 2.0
+    },
+    "fresh_control_Gamma3_Maj3": {
+      "H": 1.9512377755992936,
+      "H_over_I": 3.4688671566209663,
+      "I": 0.5625,
+      "J": 0.5625,
+      "folded_influences": [0.0625,0.0625,0.0625,0.125,0.125,0.125],
+      "hard_core_tau_quarter_R1": true,
+      "influences": [0.0625,0.0625,0.0625,0.125,0.125,0.125],
+      "max_j": 0.125,
+      "n": 6,
+      "profile_entropy_after_fold": 2.503258334775646
+    },
+    "maj3_of_maj3": {
+      "H": 5.0,
+      "H_over_I": 2.2222222222222223,
+      "I": 2.25,
+      "J": 2.25,
+      "folded_influences": [0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25],
+      "hard_core_tau_quarter_R1": false,
+      "influences": [0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25],
+      "max_j": 0.25,
+      "n": 9,
+      "profile_entropy_after_fold": 3.169925001442312
+    },
+    "majority5": {
+      "H": 3.325375780033049,
+      "H_over_I": 1.7735337493509595,
+      "I": 1.875,
+      "J": 1.875,
+      "folded_influences": [0.375,0.375,0.375,0.375,0.375],
+      "hard_core_tau_quarter_R1": false,
+      "influences": [0.375,0.375,0.375,0.375,0.375],
+      "max_j": 0.375,
+      "n": 5,
+      "profile_entropy_after_fold": 2.321928094887362
+    },
+    "one_point_n6": {
+      "H": 0.7012057533558846,
+      "H_over_I": 3.7397640178980516,
+      "I": 0.1875,
+      "J": 0.1875,
+      "folded_influences": [0.03125,0.03125,0.03125,0.03125,0.03125,0.03125],
+      "hard_core_tau_quarter_R1": true,
+      "influences": [0.03125,0.03125,0.03125,0.03125,0.03125,0.03125],
+      "max_j": 0.03125,
+      "n": 6,
+      "profile_entropy_after_fold": 2.584962500721156
+    },
+    "tensor_w3_w3": {
+      "H": 4.433834373377399,
+      "H_over_I": 2.9558895822515994,
+      "I": 1.5,
+      "J": 1.5,
+      "folded_influences": [0.25,0.25,0.25,0.25,0.25,0.25],
+      "hard_core_tau_quarter_R1": false,
+      "influences": [0.25,0.25,0.25,0.25,0.25,0.25],
+      "max_j": 0.25,
+      "n": 6,
+      "profile_entropy_after_fold": 2.584962500721156
+    }
+  },
+  "profile_coefficient_2_over_ln2_times_Rplus1": 5.7707801635558535,
+  "status": "PASS",
+  "tau": 0.25
+}

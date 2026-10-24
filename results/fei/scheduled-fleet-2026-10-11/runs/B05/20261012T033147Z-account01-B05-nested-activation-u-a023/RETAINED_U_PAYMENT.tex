@@ -1,0 +1,51 @@
+\section*{Fresh nested activation with arbitrary terminal core}
+
+For a Boolean $g$ put $r=\Pr[g=-1]$ and $M(t)=(1-2t)^2
+\log_2(1/(1-2t)^2)$, continuously at $t=1/2$.  Let $a$ be the indicator of
+one point of a fresh $d$-cube, $p=2^{-d}$, and
+\[
+ F(z,x)=1-2a(z)\frac{1-g(x)}2.
+\]
+Then
+\[
+\begin{aligned}
+U(F)={}&M(pr)+2rpd+p[U(g)-M(r)]
+ +4pr^2\log_2(1/r)-4p^2r^2\log_2(1/(pr)),\\
+I(F)={}&pI(g)+2rpd.
+\end{aligned}
+\]
+Consequently the control-first physical tree has
+\[
+ \sum_vw_v\Delta_{i_v}U(F_v)=U(F)-pU(g)
+ \le \left(1+\frac{2(1+e^{-1})}{\ln2}\right)I_{\rm ctl}(F).
+\]
+The terminal core is arbitrary and its $U$ packet is retained exactly once.
+
+Indeed, with $q=(1-g)/2$, $\alpha_R=\widehat a(R)$ and
+$\beta_T=\widehat q(T)$, every nonempty pair obeys
+\[
+ \widehat F(R,T)=-2\alpha_R\beta_T,\qquad
+ \pi_F(R,T)=4A_RQ_T,
+\]
+where $A_R=\sum_{R'\supseteq R}\alpha_{R'}^2$ and similarly for $Q_T$.
+The exceptional empty coefficient contributes $M(pr)$.  Thus
+\[
+ U(F)=M(pr)+4\{rU_*(a)+pU_*(q)-p^2r^2\log_2(1/(pr))\}.
+\]
+For the point indicator, $U_*(a)=I(a)=pd/2$, while
+\[
+ U_*(q)=\tfrac14[U(g)-M(r)]+r^2\log_2(1/r),
+\]
+which proves the identity.
+
+At a node with $m$ remaining controls and $p_m=2^{-m}$, the complete signed
+charge (equivalently the specialization of
+$\Delta_iU=B_i-\Gamma_i+\mathrm{KL}_i$) is
+\[
+ \delta_m=M(p_mr)-\tfrac12M(2p_mr)+2p_mr
+ +4p_m^2r^2\left(\log_2\frac1{p_mr}-2\right).
+\]
+Hence $\sum_{m=1}^d2^{m-d}\delta_m=U(F)-2^{-d}U(g)$.
+Finally $M(x)\le4x/\ln2$ on $[0,1/2]$ and
+$r\log_2(1/r)\le1/(e\ln2)$, which gives the asserted constant.
+

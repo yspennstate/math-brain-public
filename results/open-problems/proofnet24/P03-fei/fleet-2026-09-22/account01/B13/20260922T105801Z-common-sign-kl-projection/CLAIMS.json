@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T105801Z-common-sign-kl-projection",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "claims": [
+    {
+      "id": "COMMON-SIGN-ENTROPIC-BOOLEANITY-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For every nonconstant Boolean gate at every interior product bias, the common-sign entropic Booleanity projection K_com, defined by minimizing D_2(R||Q_r) over spectral magnitude laws with the same occurrence marginals that admit one common Fourier sign assignment satisfying all biased Boolean multiplication equations simultaneously, satisfies K_occ >= K_com and K_com >= max_{U!=empty} g_U^2/(4 v L_U^2 ln 2).",
+      "dependencies": [
+        "yspennstate/math-open-problems@603b35e74227d1c2d8ee34c0c527c439c686e30b:proofnet24/P03-fei/fleet-2026-09-21/account04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md",
+        "yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04:proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md"
+      ]
+    },
+    {
+      "id": "SPARSE-SUSPENSION-COMMON-SIGN-EXACT-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For F_m(y,x)=y(1-2 1_{x=0}) with p=2^{1-m}, the common-sign feasible spectral magnitude law is unique; hence K_com=K_occ=m h_2(p)-H(P_m). For m>=5, K_com >= (m-1)(m-5)p, while the equation-by-equation max-gap certificate is <= p/ln 2. Therefore K_com/(I(F_m)-1) grows at least linearly whereas the max-gap certificate divided by I(F_m)-1 tends to zero.",
+      "dependencies": [
+        "COMMON-SIGN-ENTROPIC-BOOLEANITY-v1",
+        "yspennstate/math-open-problems@7ec649dfb3d1ab2f92855f2069590fca2ac956dd:proofnet24/P03-fei/fleet-2026-09-21/account04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md"
+      ],
+      "verification": "Analytic proof; deterministic numerical sanity check in CHECK.py/CHECK_OUTPUT.txt."
+    },
+    {
+      "id": "SELECTOR-COMMON-SIGN-UPGRADE-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "In the exact selector notation of account02/B13, (1-t)v_0 K_0+t v_1 K_1 is bounded below by the corresponding weighted child common-sign certificates, which in turn dominate the partner paired max-gap bank without introducing the selector condition-number factor.",
+      "dependencies": [
+        "COMMON-SIGN-ENTROPIC-BOOLEANITY-v1",
+        "yspennstate/math-open-problems@a1b98a69cf168e8005c06190b71e76b456ad2cc9:proofnet24/P03-fei/fleet-2026-09-22/account02/B13/20260922T105348Z-selector-conditional-booleanity/REPORT.md"
+      ]
+    }
+  ],
+  "next_unpaid_implication": "Lower-bound K_com by the actual negative first-moment Bellman residual for every gate/bias of a surviving candidate potential, or prove the selector recursion plus child K_com banks necessarily supplies that payment, with at most O(I) loss on sparse suspensions.",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN"
+}

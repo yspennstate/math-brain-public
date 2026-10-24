@@ -1,0 +1,37 @@
+{
+  "run_id": "20260922T221019Z-account02-B19-qform-r20",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "classification": "ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREM_PROVED / FULL_TARGET_OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "claims": [
+    {
+      "id": "QFORM-NEARSPAN-NORMALIZED-COMPLEMENT-MSS-v1",
+      "status": "PROVED",
+      "statement": "In the compressed exact-rank-three heavy-null state A=RMR^T with D=|det M|, heavy row u0=sqrt(c)r, H=I-u0u0^T, and max normalized complement leverage max_j u_j^T H^{-1}u_j<=epsilon<epsilon_*=(1-1/sqrt(2))^2, there is an original-coordinate complement bipartition P,Q whose cross block has Pi_3>=D(1-c)delta(epsilon)^3, delta=1/2-epsilon-sqrt(2epsilon). Hence ||p_Q||_inf<=3e[D(1-c)]^{-1/3}delta^{-1}, continuously.",
+      "continuity": true
+    },
+    {
+      "id": "QFORM-NEARSPAN-DIFFUSE-1OVER16-v1",
+      "status": "PROVED_COROLLARY",
+      "statement": "Under D>=1/2, c<=61/64 and normalized complement leverage<=1/16, ||p_Q||_inf<339.450 uniformly, independent of the leakage residuals tau_J,tau_K.",
+      "continuity": true
+    }
+  ],
+  "named_partner_applied": {
+    "worker": "account03/B19",
+    "run": "20260922T210216Z-account03-B19-QFORM-r18",
+    "math_commit": "4caa949abfce263bcfdcdf7fe175a4a999ae35b5",
+    "result": "QFORM-SEQUENTIAL-TWO-PIVOT-THIRD-SOURCE-v1",
+    "application": "removes quantitative nonnull two-Schur-pivot states before the exact-null near-span chamber in the conditional end-to-end synthesis"
+  },
+  "compatible_result_applied": {
+    "worker": "account03/B10",
+    "run": "20260922T214631Z-account03-B10-QFORM-r19",
+    "result": "QFORM-NEARSPAN-TO-O3-AGGREGATE-v1",
+    "application": "converts tau_J+tau_K<=1/32 into a constant O3 determinant bank without inverse tau loss; this run pays its c<=61/64 normalized-diffuse subbranch"
+  },
+  "first_unpaid_implication": "QFORM-NEARSPAN-HIGH-NORMALIZED-LEVERAGE-OR-NEARUNIT-v1",
+  "full_target_proved": false,
+  "full_target_counterexample": false
+}

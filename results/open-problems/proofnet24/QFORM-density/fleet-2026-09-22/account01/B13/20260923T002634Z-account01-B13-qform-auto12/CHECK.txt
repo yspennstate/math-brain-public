@@ -1,0 +1,28 @@
+QFORM B13 auto12 deterministic arithmetic / identity audit
+
+Theorem 2.1 audit:
+- maximal-volume row replacement => ||A[k,Q] B^{-1}||_infinity <= 1.
+- maximal-volume column replacement => ||B^{-1} A[P,k]||_infinity <= 1.
+- H=[[0,2B],[2B^T,0]], H^{-1}=1/2[[0,B^{-T}],[B^{-1},0]].
+- Therefore R1_kk=A[k,Q]B^{-1}A[P,k], so |R1_kk|<=r epsilon.
+- Exact disjoint cross rank <=r makes every (r+1)x(r+1) disjoint Schur residual zero.
+- R2 is supported on 2r core coordinates, so rank R2<=2r; rank R1=2r; rank R<=4r.
+- Hence ||D||_op<=delta+r epsilon and s_{4r+1}(A)<=delta+r epsilon.
+
+Proposition 3.1 audit:
+For T of size (r+1)x(r+1), every r-minor has abs(det)<=abs(det B).
+There are (r+1)^2 such minors, so by Cauchy-Binet
+  prod_{j=1}^r s_j(T) <= (r+1)|det B|.
+Thus |det T|<=s_{r+1}(T)(r+1)|det B| and the Schur residual is <=(r+1)s_{r+1}(T).
+The coefficient bound also gives residual <=(r+1)epsilon.
+
+Partner-normal-form arithmetic for r=4:
+eta_m=m^-4+4*sqrt(m^-4+m^-8).
+eta_22 = 0.008268749283804876 > 1/128.
+eta_23 = 0.007565023640978123 < 1/128 = 0.0078125.
+Thus m>=23 is sufficient for s_17(A)<1/128 in the exact-crossrank-four endpoint.
+The |lambda|>=1/64 spectral window then has rank<=16.
+If all its physical leverages were <=1/32, the completed spectral-window theorem gives density <64, while the partner r15 counterexample-normal-form witness has slab ratio > 9*sqrt(3e)*m > 64 for every m>=23.
+Therefore a bad exact-crossrank-four endpoint must have a leverage >1/32; since the projection rank<=16, fewer than 512 coordinates can have leverage >1/32.
+
+STATUS=PASS (algebraic theorem exact; full QFORM remains open).

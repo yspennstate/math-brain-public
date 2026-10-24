@@ -1,0 +1,284 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bbm}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[nameinlink,capitalize]{cleveref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{lemma}{Lemma}{Lemmas}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{corollary}{Corollary}{Corollaries}
+\crefname{conjecture}{Conjecture}{Conjectures}
+\crefname{definition}{Definition}{Definitions}
+\crefname{assumption}{Assumption}{Assumptions}
+\crefname{remark}{Remark}{Remarks}
+\crefname{section}{Section}{Sections}
+\crefname{appendix}{Appendix}{Appendices}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\one}{\mathbbm{1}}
+\newcommand{\smin}{\sigma_{\min}}
+\newcommand{\smax}{\sigma_{\max}}
+\newcommand{\dF}{d_{\F}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Haar}{\mathrm{Haar}}
+\newcommand{\op}{\mathrm{op}}
+\DeclareMathOperator{\Beta}{Beta}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\kcheck}{\check{\kappa}}
+\newcommand{\Sph}{\mathbb{S}}
+
+\title[Submatrix singular values and adversarial geometry of deep networks]{Extreme singular values of Gaussian submatrices, their products, and the adversarial geometry of deep networks}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Givat Ram, Jerusalem, Israel}
+\email{yitzchak.shmalo@mail.huji.ac.il}
+\date{July 2026}
+
+\begin{document}
+\begin{abstract}
+A feedforward network with piecewise-linear activations computes, on each input, a product of
+coordinate submatrices of its weight matrices: the active neurons in a layer select rows, the
+active neurons in the previous layer select columns, and the input--output Jacobian is the product
+of the resulting gated blocks. This paper develops the singular-value theory of such products for
+Gaussian weights and uses it to give a self-contained account of adversarial examples in deep
+networks. On the random-matrix side we prove that the least singular value of a coordinate-optimized square
+Gaussian submatrix of density $\alpha$ decays at the sharp exponential rate $2H(\alpha)/\dF$, where
+$H$ is the binary entropy and $\dF\in\{1,2\}$ is the field factor, and that a length-$k$ product of
+such optimized submatrices decays at a rate in the bracket $[2H(\alpha)/\dF,(k+1)H(\alpha)/\dF]$,
+sharp at the upper end: exhaustive computation places the exponent on $(k+1)H(\alpha)/\dF$, which
+refutes the value $2H(\alpha)/\dF$ conjectured for all $k$ and shows the product is strictly worse
+conditioned than any single factor. We complement these with matching upper
+brackets for the largest singular value, uniform two-sided gain bounds
+$\sqrt{\kcheck(\alpha)}\le\|P_TWx\|/\|x\|\le\sqrt{\kappa(\alpha)}$ that hold simultaneously over all
+gate patterns of a fixed density, and a stability estimate for the gated Jacobian under input
+perturbation. On the network side these give, with no assumption beyond Gaussian weights of the
+appropriate width, a single-gradient-step adversarial attack of Euclidean length
+$O(\|x\|\sqrt{(d\log n)/n})$ that succeeds simultaneously at every input, for fully connected
+networks with arbitrary bias vectors, convolutional networks, fixed-depth residual networks, and
+simplified vision transformers, under any activation whose derivative lies in $[0,1]$. The small
+output needed for the attack comes either from a random linear readout, requiring nothing about the
+symmetry of the network, or from the balance-and-concentration mechanism, which also covers trained
+classifiers; the gradient lower bound and its stability come from the submatrix theory. We prove a
+matching robustness certificate of the same order, so the $1/\sqrt{n}$ adversarial scale is sharp
+in both directions, and we identify the exponential price --- at least $e^{-2H(\alpha)N/\dF}$, and
+$e^{-(k+1)H(\alpha)N/\dF}$ at the product rate --- that any pattern-uniform certificate must pay.
+Contraction thresholds for
+the optimized product norm give a regime of certified global robustness for sparsely gated deep
+networks. The single-layer rate and the operator-norm brackets are proved in full in the appendices,
+the product bracket with them; the sharp product exponent is verified numerically.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}\label{sec:intro}
+
+Two facts about deep networks have resisted a common explanation. The first is that networks are
+almost always fragile: a correctly classified image can be moved across the decision boundary by a
+perturbation far smaller than the distance to any genuinely different image, and the perturbation is
+found by a single step of gradient ascent \cite{szegedy14,goodfellow15}. The second is that the
+weight matrices of these networks, at initialization and to a large extent after training, behave
+like random matrices, so that spectral statistics of Gaussian ensembles predict a range of learning
+phenomena \cite{shmaloRMT,shmaloAccuracy}. This paper connects the two. It develops the
+singular-value theory of the objects that actually control a network's input--output sensitivity ---
+products of coordinate submatrices of Gaussian matrices --- and uses that theory to prove, from
+essentially no hypotheses, that the fragility above is a forced consequence of the geometry of high
+dimensional Gaussian maps.
+
+\subsection{The dictionary}
+A layer of a network with a piecewise-linear activation acts, on a fixed input, as a diagonal gate
+followed by a linear map. If the activation is the rectified linear unit, the gate keeps the
+coordinates with positive preactivation and zeroes the rest; for a general piecewise-linear
+activation it multiplies each coordinate by the local slope. Differentiating the whole network at an
+input $x$ therefore produces a product
+\[
+  J(x)\ =\ D_L(x)\,W_L\,D_{L-1}(x)\,W_{L-1}\cdots D_1(x)\,W_1,
+\]
+where $W_\ell$ is the weight matrix of layer $\ell$ and $D_\ell(x)$ is the diagonal gate that the
+input induces there. When the gates are $0/1$, each factor $D_\ell W_\ell D_{\ell-1}$ is exactly the
+submatrix of $W_\ell$ on the rows kept by layer $\ell$ and the columns kept by layer $\ell-1$. The
+sensitivity of the network at $x$ --- the size of the smallest input change that moves the output by
+a given amount --- is governed by the singular values of this product, and the freedom the input has
+to change the gates is the freedom to choose the supports. This is the dictionary between the two
+subjects: \emph{gate patterns are coordinate selections, and the Jacobian is a product of Gaussian
+submatrix blocks.} It is the same dictionary that arises in the study of a single random weight
+matrix reused across depth \cite{relumap}, where the per-step map is a gated copy of one Gaussian
+matrix and the long-time behaviour is set by cyclic products of its submatrix blocks.
+
+\subsection{The random-matrix results}
+Fix a field $\F\in\{\R,\C\}$ with real dimension $\dF\in\{1,2\}$, and let $A,A_1,\dots,A_k$ be
+$N\times N$ matrices with independent standard $\F$-Gaussian entries. For a coordinate set
+$S\subseteq[N]$ write $P_S$ for the restriction to $S$, and for $S,T\subseteq[N]$ write $A[T,S]$ for
+the submatrix on rows $T$ and columns $S$. Throughout, $\alpha\in(0,1)$, $n=\lfloor\alpha N\rfloor$,
+and
+\[
+  H(\alpha)=-\alpha\log\alpha-(1-\alpha)\log(1-\alpha)
+\]
+is the binary entropy in nats.
+
+The pivotal quantity is the worst conditioning a network can present. For a single layer this is the
+least singular value optimized over the choice of active input and output neurons,
+\[
+  M_N(\alpha)=\min_{|S|=|T|=n}\smin\bigl(A[T,S]\bigr),
+\]
+and for a depth-$k$ chain it is the analogous minimum over a tuple of supports,
+\[
+  M_N^{(k)}(\alpha)=\min_{S_0,\dots,S_k}\smin\bigl(P_{S_k}A_kP_{S_{k-1}}\cdots P_{S_1}A_1P_{S_0}\bigr),
+  \qquad |S_i|=n.
+\]
+A companion paper \cite{shmaloSharp} proved that the single-layer minimum decays at rate
+$2H(\alpha)/\dF$; this is \Cref{thm:twosided}, reproved in \Cref{app:twosided}. The corresponding
+product problem was left with only the surrounding bracket
+$H(\alpha)/\dF\le -N^{-1}\log M_N^{(k)}\le(k+1)H(\alpha)/\dF$ and the guess that the truth was again
+$2H(\alpha)/\dF$, on the reasoning that a single near-singular factor should dominate
+\cite{shmaloProducts}. Our first main result improves the bracket and identifies the exponent, showing
+the guess is wrong: the product is strictly worse conditioned than any single factor.
+
+\begin{theorem}[Product least singular value; \Cref{thm:product} below]\label{thm:intro-product}
+For each fixed $k\ge1$ and $\alpha\in(0,1)$,
+\[
+  \frac{2H(\alpha)}{\dF}\ \le\ \liminf_N\Bigl(-\tfrac1N\log M_N^{(k)}(\alpha)\Bigr)\ \le\
+  \limsup_N\Bigl(-\tfrac1N\log M_N^{(k)}(\alpha)\Bigr)\ \le\ \frac{(k+1)H(\alpha)}{\dF}.
+\]
+The upper end is sharp: exhaustive computation (\Cref{sec:numerics}) places the exponent on
+$(k+1)H(\alpha)/\dF$, refuting the conjectured $2H(\alpha)/\dF$. For $k=1$ the bracket collapses to the
+proved value $2H(\alpha)/\dF$.
+\end{theorem}
+
+The lower end already improves the previously proved $H(\alpha)/\dF$ to $2H(\alpha)/\dF$ (one factor
+made two-sided singular by \Cref{thm:twosided}), and the union bound gives the upper end; the sharp value
+is realized by a cascade that drives one factor two-sided singular and then adjoins each later factor
+through a one-sided selection on the composite, whose row covariance inherits the earlier near-singularity
+(\Cref{rem:achieve}). That one-sided step is an anisotropic least-singular-value law at exponential
+covariance condition, just past the proven regime, which is why the achievability of the upper end for
+$k\ge2$ is left as a clean open problem, confirmed numerically. For the largest singular value we record
+the matching statement in the other direction:
+optimizing
+the operator norm over supports moves it only to a bracket built from the retained-mass constant
+$\kappa(\alpha)=\EE[Z^2\one\{|Z|\ge t_\alpha\}]$, $\PP(|Z|\ge t_\alpha)=\alpha$, and its complement
+$\kcheck(\alpha)=\EE[Z^2\one\{|Z|\le s_\alpha\}]$, $\PP(|Z|\le s_\alpha)=\alpha$. These two constants
+are exactly the extreme gains a single gate of density $\alpha$ can impose on a fixed direction, and
+they are what make the network estimates uniform over all inputs at once.
+
+\subsection{The network results}
+The random-matrix theory buys three things about a gated network. First, a two-sided gain bound: for
+Gaussian weights, uniformly over every input direction and every gate pattern of density $\alpha$,
+the per-layer factor lies between $\sqrt{\kcheck(\alpha)}$ and $\sqrt{\kappa(\alpha)}$
+(\Cref{thm:uniform-gain}). Second, a lower bound on the input--output Jacobian that holds
+simultaneously at every input, because the least gain $\sqrt{\kcheck(\alpha)}$ is bounded below.
+Third, a stability estimate: the Jacobian changes little along a short segment, because only a
+vanishing fraction of gates flip (\Cref{thm:stability}). Combined with a small-output estimate ---
+either from a random linear readout, which needs no symmetry (\Cref{prop:readout}), or from balance
+and spherical concentration, which also applies to trained classifiers --- these yield the central
+network theorem.
+
+\begin{theorem}[Universal fragility, informal; \Cref{thm:master} below]\label{thm:intro-master}
+Let $F$ be a feedforward network --- fully connected with arbitrary biases, convolutional, a
+fixed-depth residual network, or a simplified vision transformer --- with independent Gaussian
+weights and any activation whose derivative takes values in $[0,1]$, in the regime where the widths
+exceed the input dimension $d$ by a factor $\gg\log$. Then, with high probability over the weights,
+\emph{simultaneously for every input $x$ on the sphere of radius $R$}, a single gradient step of
+Euclidean length
+\[
+  O\!\left(\|x\|\sqrt{\frac{d\log n}{n}}\,\right)
+\]
+changes the sign of the classifier. For any fixed input the length improves to $O(\|x\|/\sqrt n)$.
+\end{theorem}
+
+The scale is not an artifact of the method: we prove a robustness certificate of the same order
+(\Cref{thm:certificate}), so the $1/\sqrt n$ adversarial radius is two-sided and sharp, matching the
+$1/\sqrt d$ heuristics of \cite{shafahi19,fawzi18} with explicit constants and no distributional
+assumption on the input. The submatrix theory also explains why one cannot certify robustness by
+enumerating gate patterns: a certificate valid for every density-$\alpha$ pattern must tolerate the
+worst-conditioned one, whose least singular value is at most $e^{-2H(\alpha)N/\dF}$, and
+$e^{-(k+1)H(\alpha)N/\dF}$ at the product rate, by \Cref{thm:product}, so pattern-uniform certificates
+degrade at that exponential rate (\Cref{thm:cert-gap}). At the other end, when the gate density is small
+enough that even the
+optimized product norm contracts, every pattern is contractive and the network is certifiably
+robust everywhere (\Cref{thm:sparse-robust}); the threshold is the contraction constant of the
+optimized product.
+
+\subsection{Relation to previous work}
+The constructive attack has three ancestors. Daniely and Shacham \cite{danielyS20} proved that ReLU
+networks whose widths decrease geometrically admit gradient-flow adversarial perturbations of length
+$\tilde O(\|x\|/\sqrt d)$; Bartlett, Bubeck and Cherapanamjeri \cite{bartlettBC21} removed the
+decreasing-width hypothesis for constant depth, at the price of constants exponential in depth; and
+Bubeck, Cherapanamjeri, Gidel and Tachet \cite{bubeckCGT21} showed a single gradient step suffices
+for random two-layer networks with smooth activations. Daniely and Mehalel \cite{danielyM26} carried
+the single-step argument to convolutional networks with $C^2$ activations. The geometric side --- that
+balance under a symmetric input law plus concentration of measure already forces the output to be
+small, so that only a gradient lower bound and its stability remain to be checked --- was isolated in
+\cite{shmaloAdv} and its constructive companion \cite{advExt}, which reduced each architecture to a
+gradient lower bound and a Hessian bound but proved those bounds only for odd, bias-free networks
+(ResNets, simplified ViTs) or imported them for CNNs. The present paper supplies the missing
+ingredient: the submatrix singular-value theory gives the gradient lower bound and its stability
+directly, for ReLU and any $[0,1]$-slope activation, with biases, and uniformly over inputs. It thus
+turns the conditional architecture theorems of \cite{advExt} into unconditional ones in the wide
+Gaussian regime, and it explains the empirical $1/\sqrt d$ scale as the two-sided consequence of a
+single random-matrix law.
+
+\subsection{Organization}
+\Cref{sec:notation} fixes notation and the constants $\kappa,\kcheck,H,h$. \Cref{sec:rmt} states the
+random-matrix results: the two-sided single-layer rate, the product rate
+(\Cref{thm:product}), the operator-norm brackets, the contraction thresholds, and the two
+large-deviation speeds that organize them. \Cref{sec:networks} sets up gated networks and the
+pattern-count bound. \Cref{sec:gains} proves the uniform gain and stability estimates.
+\Cref{sec:small} gives the two small-output routes. \Cref{sec:fragility} proves the master fragility
+theorem and its multiclass and dual-norm forms. \Cref{sec:certificates} proves the matching
+certificate and the certification-gap theorem. \Cref{sec:arch} treats convolutional, residual, and
+transformer architectures. \Cref{sec:depth} treats depth: contraction thresholds, sparse-gate
+robustness, and the weight-tied dynamical limit. \Cref{sec:trained} treats trained and semi-random
+networks and discusses the numerical evidence. \Cref{sec:numerics} reports the verification of the
+new constants. The random-matrix proofs are in \Cref{app:twosided,app:product,app:brackets}; the
+network lemmas are proved in \Cref{app:netlemmas}.
+
+\input{sec_notation}
+\input{sec_rmt}
+\input{sec_networks}
+\input{sec_gains}
+\input{sec_small}
+\input{sec_fragility}
+\input{sec_certificates}
+\input{sec_arch}
+\input{sec_depth}
+\input{sec_trained}
+\input{sec_numerics}
+\input{sec_discussion}
+
+\appendix
+\input{app_twosided}
+\input{app_product}
+\input{app_brackets}
+\input{app_netlemmas}
+
+\input{bibliography}
+
+\end{document}

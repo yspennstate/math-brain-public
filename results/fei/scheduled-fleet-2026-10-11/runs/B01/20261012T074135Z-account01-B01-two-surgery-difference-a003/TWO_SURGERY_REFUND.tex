@@ -1,0 +1,122 @@
+% B01/A003: exact two-surgery difference-spectrum refund.
+\section*{A displacement-owned refund for two coherent surgeries}
+
+All logarithms are base two.  Let $g:\{0,1\}^k\to\{-1,1\}$ be bent,
+put $\delta=2^{-k}$, and let $x\ne y$.  Write
+$R=\operatorname{supp}(x\oplus y)$, $r=|R|\ge1$, and
+$\tau=g(x)g(y)$.  Flipping $g$ at $x$ and then at $y$ changes the Walsh
+coefficient indexed by $T$ by
+\[
+ e_x(T)=-2g(x)\delta\chi_T(x),\qquad
+ e_y(T)=-2g(y)\delta\chi_T(y).
+\tag{1}
+\]
+For an arbitrary real spectral vector $e$, define
+\[
+ D_e(S)=\sum_{T\supseteq S}e(T)^2,
+ \qquad
+ \mathcal U(e)=\sum_T e(T)^2\log\frac{D_e(T)}{e(T)^2},
+\tag{2}
+\]
+with the continuous zero convention.  This is precisely the
+difference-spectrum packet in the exact shared-selector identity.
+
+\subsection*{1. Exact cross-cap localization}
+
+Since
+\[
+ \sum_{T\supseteq S}\chi_T(x\oplus y)
+ =\begin{cases}
+  2^{k-|S|}(-1)^r,&R\subseteq S,\\
+  0,&R\not\subseteq S,
+ \end{cases}
+\tag{3}
+\]
+direct expansion of $(e_x+e_y)^2$ gives, with
+$\sigma=\tau(-1)^r$,
+\[
+ \boxed{D_{e_x+e_y}(S)
+ =8\delta,2^{-|S|}\bigl(1+\sigma\mathbf1_{R\subseteq S}\bigr).}
+\tag{4}
+\]
+For either individual surgery,
+$D_{e_x}(S)=D_{e_y}(S)=4\delta2^{-|S|}$.  Therefore the entire quadratic
+cross-cap is
+\[
+ \boxed{C_R(S)=D_{e_x+e_y}(S)-D_{e_x}(S)-D_{e_y}(S)
+ =8\sigma\delta2^{-|S|}\mathbf1_{R\subseteq S}.}
+\tag{5}
+\]
+It has one canonical owner: the minimal filter generator $R$.  It is zero
+off the principal upper filter of the physical displacement.
+
+Under the flat bent atom law $p(S)=\delta$, its complete relative first
+variation is exactly
+\[
+ \sum_Sp(S)\frac{|C_R(S)|}{2^{-|S|}}
+ =8\delta2^{-r}\le4\delta.
+\tag{6}
+\]
+
+\subsection*{2. Exact entropy refund}
+
+The atom law is
+\[
+ (e_x(T)+e_y(T))^2
+ =8\delta^2\bigl(1+\tau\chi_T(x\oplus y)\bigr).
+\tag{7}
+\]
+Thus exactly half the atoms are nonzero, each with mass $16\delta^2$.
+If $R\not\subseteq T$, (4) divided by (7) is
+$2^{k-|T|-1}$.  If $R\subseteq T$, a nonzero atom exists exactly when
+$\sigma=1$, and its ratio is $2^{k-|T|}$.
+
+For $r\ge2$, conditioning on the parity of $|T\cap R|$ leaves every
+coordinate marginal equal to $1/2$.  For $r=1$, the unique coordinate in
+$R$ is fixed.  Summing the integer logarithms gives
+\[
+ \mathcal U(e_x)=\mathcal U(e_y)=2\delta k,
+\tag{8}
+\]
+and
+\[
+ \boxed{
+ \mathcal U(e_x+e_y)=\mathcal U(e_x)+\mathcal U(e_y)-\rho_{r,\sigma},}
+\tag{9}
+\]
+where
+\[
+ \rho_{r,\sigma}=
+ \begin{cases}
+ 4\delta,&r=1,\\
+ 8\delta-2^{4-r}\delta\,\mathbf1_{\sigma=1},&r\ge2.
+ \end{cases}
+\tag{10}
+\]
+Consequently
+\[
+ 4\delta\le\rho_{r,\sigma}\le8\delta
+ \quad\text{and}\quad
+ \sum_Sp(S)\frac{|C_R(S)|}{2^{-|S|}}
+ \le\rho_{r,\sigma}.
+\tag{11}
+\]
+The two-surgery interaction therefore creates no unpaid logarithmic term
+inside the difference-spectrum packet.  It creates a dimension-free refund
+that already dominates the entire flat-law first variation of the
+cross-cap.
+
+\subsection*{3. Scope}
+
+Equations (4)--(11) are all-parameter and require only the flat atom law
+when (6) is invoked.  They cover every even $k$, every bent phase pattern,
+and every distinct pair $x,y$.  They identify a single physical owner for
+the cross term and remove the difference-spectrum packet from the list of
+possible positive two-surgery debts.
+
+This does not prove the complete two-selector node estimate.  The coherent
+empty-control packet and the retained child packets also contain the
+one-surgery linear cap perturbations; a nonlinear comparison must show that
+their residual is absorbed by (10) plus physical selector influence.  Nor
+does the two-point formula control an arbitrary number of coherent core
+changes.  Universal GU$'$ and full FEI remain open.

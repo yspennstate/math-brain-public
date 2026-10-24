@@ -1,0 +1,48 @@
+[
+  {
+    "service": "arxiv_recent",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3AASEP+AND+%28all%3Acorrelation+OR+all%3Astationary%29+AND+submittedDate%3A%5B20250319+TO+20261012%5D&max_results=50",
+    "date": "2026-10-12",
+    "status": 200,
+    "file": "arxiv_recent.txt"
+  },
+  {
+    "service": "arxiv_queue",
+    "url": "http://export.arxiv.org/api/query?search_query=all%3AASEP+AND+all%3Aqueue&max_results=30",
+    "date": "2026-10-12",
+    "status": 200,
+    "file": "arxiv_queue.txt"
+  },
+  {
+    "service": "openalex",
+    "url": "https://api.openalex.org/works?search=two+species+ASEP+stationary+correlations&per-page=25",
+    "date": "2026-10-12",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "openalex_source",
+    "url": "https://api.openalex.org/works?search=All+roads+to+KPZ+Universality+Open+Problems&per-page=5",
+    "date": "2026-10-12",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "crossref",
+    "url": "https://api.crossref.org/works?query=two+species+ASEP+stationary+correlations&rows=25",
+    "date": "2026-10-12",
+    "status": 200,
+    "file": "crossref.txt"
+  },
+  {
+    "service": "semantic",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=two+species+ASEP+stationary+correlations&limit=20&fields=title%2Cauthors%2Cyear%2CexternalIds%2Curl%2Cabstract",
+    "date": "2026-10-12",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "service": "github",
+    "url": "https://api.github.com/search/repositories?q=ASEP+stationary+correlations&per_page=20",
+    "date": "2026-10-12",
+    "status": 200,
+    "file": "github.txt"
+  }
+]

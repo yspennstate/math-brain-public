@@ -1,0 +1,21 @@
+R17 exact checker
+metric_lower=99083249/125000000 = 0.792665992
+metric_upper=20657/25000 = 0.826280
+metric_width=4201751/125000000 = 0.033614008
+R17-C001 rectangle parity: PASS
+  support_size=8; each pattern multiplicity=2 among 16 underlying bit assignments
+  every 3 corners are iid Bernoulli(1/2)
+  P(all four match)=1/8; iid-cell model would give 1/16
+R17-C002 all-k k-local boundary non-closure: PASS for k=1..64
+  analytic witness family U=0^k, YA=010^k, YB=10^(k+1), append X=1
+  bit-complemented witness family also PASS
+R17-C003 deterministic next-state prediction error floor:
+  k=1: floor=1/16
+  k=2: floor=1/64
+  k=4: floor=1/1024
+  k=8: floor=1/262144
+  k=16: floor=1/17179869184
+  k=32: floor=1/73786976294838206464
+  k=64: floor=1/1361129467683753853853498429727072845824
+  general exact floor >= 2^(-2k-2) under iid finite dimensions used by the witness
+ALL PASS

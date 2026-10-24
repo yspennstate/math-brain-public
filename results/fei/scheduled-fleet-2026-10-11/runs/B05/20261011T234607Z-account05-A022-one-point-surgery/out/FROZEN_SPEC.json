@@ -1,0 +1,15 @@
+{
+  "helper_version":"A022-oddface-surgery-v2",
+  "family":"Quadratic bent seed b(x)=(-1)^(x0*x1+x2*x3) on four data bits, with arbitrary flip subset D of cardinality 1,2,3,4; selector chooses b or b(1-2*1_D); r fresh controls activate at z=0, constant +1 otherwise.",
+  "pilot_domain":{"data_bits":4,"flip_cardinalities":[1,2],"control_bits":[0,2],"patterns":272,"order_ledgers":1088},
+  "full_domain":{"data_bits":4,"flip_cardinalities":[1,2,3,4],"control_bits":[0,2,4],"patterns":7548,"order_ledgers":30192},
+  "orders":{"selector_first":"selector, controls ascending, data ascending","control_first":"controls ascending, selector, data ascending","data_first":"data ascending, controls ascending, selector","control_data_selector":"controls ascending, data ascending, selector"},
+  "bad_threshold":"B_v > 4*d_v, strict; exact equality good",
+  "symmetry":"None: every subset in the domain is enumerated; repeated ledger computations may be memoized by full actual ordered truth table.",
+  "arithmetic":"Integer Walsh sums, edge/face counts, rational influence and credit. B-4d reduced to integer linear combination of log2 primes; outward 80-bit fixed-denominator intervals derived from 50-term rational atanh series. All-zero prime expression gives exact equality; any unresolved sign uses exact integer products, never float.",
+  "memory_estimate_MB":180,
+  "maximum_runtime_seconds":{"pilot":60,"full":1800},
+  "memory_control":"Bounded LRU caches, n<=9, no automatic dimension changes. No job expected over 300 MB.",
+  "randomness":"none",
+  "maximizer_scope":"Exact max over declared subsets/cardinalities/r and four fixed orders; also max of min over four orders. No universal or all-adaptive-tree optimum asserted."
+}

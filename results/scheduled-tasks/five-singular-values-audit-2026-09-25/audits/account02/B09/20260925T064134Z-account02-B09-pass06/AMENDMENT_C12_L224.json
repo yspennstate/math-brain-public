@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "account02",
+  "slot": "B09",
+  "run_id": "20260925T064134Z-account02-B09-pass06",
+  "pass_id": "B09-pass06",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "tex_line": 224,
+  "pdf_page": 5,
+  "status": "GAP",
+  "repair_reference": "C12",
+  "finding": "After the proof obtains p(y) <= product_i h_i(v_i^T z)^{beta_i}, it immediately takes log p(y). A legitimate density value p(y)=0 makes ordinary real log p(y) undefined.",
+  "independent_counterexample": {
+    "n": 2,
+    "d": 1,
+    "U": "e1",
+    "W": "e2",
+    "coordinate_laws": "X1,X2 independent uniform[0,1], density caps 1",
+    "projection": "U^T X = X1, choose the standard density p(y)=1_[0,1](y)",
+    "witness_y": 2,
+    "result": "p(2)=0, so the printed expression log p(2) is undefined although the desired bound p(2)<=e^{1/2} is trivial."
+  },
+  "repair": "Insert: 'If p(y)=0 there is nothing to prove. Otherwise take logarithms.' Then proceed with the entropy estimate.",
+  "impact": "No theorem, constant, integrability or independence change.",
+  "independence_note": "The counterexample itself satisfies the full original-coordinate product-law hypotheses; no rotated independence issue.",
+  "chronology": "This issue was noticed independently during B09 pass06 before peer comparison. Afterward account02/B08 pass7 was read and found to label the same local domain defect C12.",
+  "supersedes_in_this_run": "The earlier immutable COVERAGE_171-340.jsonl L224 PASS record; do not mutate that file. This amendment is the authoritative pass06 status for L224."
+}

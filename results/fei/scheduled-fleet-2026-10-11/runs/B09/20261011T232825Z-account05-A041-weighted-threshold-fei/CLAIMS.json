@@ -1,0 +1,46 @@
+[
+  {
+    "claim_id": "A041-COHERENT-TWO-WEIGHT-SLICE-APPLICATION",
+    "version": 1,
+    "exact_statement": "Let X~Ber(p) be independent of arbitrary product-biased bits Y_1,...,Y_n and F=2*1{w X+sum_j Y_j>=t}-1, with arbitrary n>=0, real w>0,t, and all interior biases. With v_i=4q_i(1-q_i), P(S)=fhat_mu(S)^2 in the orthonormal product basis, Delta=I_mu-Var_mu and c=460+80 ln 2, the higher-degree corrected entropy in nats E_ge2=sum_{|S|>=2}P(S)ln(v_S/P(S)) satisfies E_ge2(F)<=(4c+12+4/e)Delta(F); corrected FEI+ in bits satisfies Hplus_mu(F)<=[(4c+16+4/e)/ln 2]Delta(F), with that constant strictly below 3000. Endpoints are contracted. This includes the essential disjoint-composition-prime family 2*1{2X+sum_{j=1}^n Y_j>=3}-1 for every n>=3. For arbitrary two-weight groups, merge identical B slices f_s into probabilities pi_s. Their deficit Gram matrix has diagonal Delta(f_s) and off-diagonal -Cov(f_s,f_u), is PSD, and yields 2 sum_{s<u}pi_s pi_u Cov(f_s,f_u)<=sum_s pi_s^2 Delta(f_s). Mixed spectral B-energy is exactly sum_s pi_s(1-pi_s)I(f_s)<=Delta(F), and Delta(F)=sum_s pi_s Delta(f_s)+[I_A(F)-Var_A(E_B F)] with a nonnegative bracket. Those overlapping energy ledgers do not assert entropy control for arbitrary |A|. The full two-weight, all-prime and full FEI targets remain open.",
+    "hypotheses": [
+      "actual Boolean thresholds on independent product inputs",
+      "one exceptional physical input for the entropy theorem; arbitrary finite groups for the Gram/energy interface",
+      "arbitrary real positive weight and threshold; zero/signed/deterministic inputs reduced by contraction/orientation",
+      "orthonormal product Fourier basis; natural logarithms for E and bits for Hplus",
+      "source-complete symmetric-threshold baseline E<=c Delta at bias:strong"
+    ],
+    "statement_sha256": "1c782faa5ae334ab2ada6ba6b34e447240ec0d8a015932dd95a372bbf546a13f",
+    "contributors": [
+      "account05/A041"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A041\\runs\\20261011T232825Z-account05-A041-weighted-threshold-fei\\SLICE_DEFICIT_PAYMENT.tex",
+      "sha256": "d85bcbf6886cde00399b7781a91c9c4f04989f83aa19ef65665dc57dffd8e958"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\baseline\\current-threshold-paper.tex",
+        "sha256": "5d87f625fbadad4aa9841416712b8193a869fa9dffcb4e9c200d2f39a62e6a10",
+        "locator": "bias:strong",
+        "exact_statement": "E(g)<=(460+80 ln 2)Delta(g) for every symmetric threshold at every product bias",
+        "status": "PROVED_BASELINE; source theorem application"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPED_APPLICATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A042",
+      "A044",
+      "A045",
+      "A084",
+      "A090",
+      "A091",
+      "B09",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit_consumed": "9bb93c358fe585abc0f6c296b25bf9ed05903921",
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260924T021116Z-account01-B18-QFORM-auto11-r43",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "mathematical_status": "PROVED_SUPPORTING_TARGET_LEVEL_BRANCH",
+  "corrections_consumed": [
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-CROSSMINOR-ALONE-FALSE"
+  ],
+  "primary_premises": [
+    {
+      "name": "Livshyts-Paouris-Pivovarov Theorem 1.1",
+      "source": "arXiv:1507.07949",
+      "scope": "genuine product densities; k-dimensional orthogonal marginal cap <= 2^(k/2) for cap-one factors; marginal cap only, not projected independence"
+    },
+    {
+      "name": "QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1",
+      "source_commit": "ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1",
+      "scope": "scalar of density cap K genuinely independent of a possibly dependent pair of joint cap M; zero scalar quadratic pivot; gives 3(2MK)^(2/3)|beta^2 gamma|^(-1/3)"
+    },
+    {
+      "name": "QFORM-ZEROSELF-HS-D5-RANK4-FUNNEL-v1",
+      "source_commit": "54408b41c02166dbb98ac96c14635fd1ba353f27",
+      "scope": "newest designated partner zero-self-bank funnel; low complement paid; stable-rank/fifth-volume or retained rank-four carrier classification"
+    }
+  ],
+  "new_result": {
+    "name": "QFORM-ZEROSELF-RANK1-ACTIVEPLANE-CLOSURE-v1",
+    "statement": "For a full original-coordinate split A=[[0,B],[B^T,C]], rank(B)=1 with B=sigma u v^T, dim(span{v}+ran C)<=2, and s=s_3(A)>0, arbitrary independent cap-one original-coordinate inputs satisfy ||p_(X^T A X)||_infinity <= 3*2^(5/3)/s.",
+    "proof_currency": "The entire nonzero carrier is H=[[0,sigma,0],[sigma,alpha,delta],[0,delta,gamma]], det H=-sigma^2 gamma and |det H|>=s^3. Genuine disjoint source banks yield scalar cap <=sqrt(2) and dependent-pair joint cap <=2 by LPP; apply the completed account02/B18 scalar/dependent-pair receiver.",
+    "affine_scope": "Only affine terms in span{u} direct_sum (span{v}+ran C) are covered; no arbitrary ambient principal-block lift is claimed.",
+    "continuity": "Not claimed for the full branch. For A_*=[[0,1,0],[1,0,0],[0,0,1]], Q=2X1X2+X3^2 has a C0 density by L1 convolution and ||p||infinity<=3*2^(2/3)."
+  },
+  "partner_application": {
+    "partner": "account02/B18",
+    "source_commit": "54408b41c02166dbb98ac96c14635fd1ba353f27",
+    "actual_inequality": "If ||C||op<=s/2, newest partner gives ||p_Q||infinity<=2 sqrt(2pi)/s. Its exact-rank-one survivor is then paid by the new active-plane theorem when dim(span{v}+ran C)<=2."
+  },
+  "canonical_outputs": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "b1d09b4c6914935add2727f8d4a705654576c188",
+    "report_blob": "978a987c6322150b046a50fa5f80221e972935c7",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260924T021116Z-account01-B18-QFORM-auto11-r43/REPORT.md",
+    "checks_commit": "a80a2c17b9cf5c3b0f75b1acbc31d0bcc27d7339",
+    "early_calculation_commit": "7c46f1e95ecf1861dce14936aa119cf15de24f13",
+    "handoff_commit": "944fb126e177373f0ef17ee24a0ff9a16474fb42",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B18/20260924T021116Z-account01-B18-QFORM-auto11-r43.md"
+  },
+  "unresolved_implication": "Pay the genuinely nonzero near-rank-one crossing tail and/or complement-active dimension >=3 without deleting the small tail or conditioning away source directions with an assumed retained cap.",
+  "next_step": "Develop a dependence-safe 1+k source-bank receiver or a product-preserving bank decomposition that jointly retains same-bank curvature and the nonzero crossing tail."
+}

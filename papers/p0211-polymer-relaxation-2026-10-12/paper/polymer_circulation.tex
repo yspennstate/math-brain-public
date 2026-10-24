@@ -1,0 +1,145 @@
+\subsection{A stationary circulation in the polymer reaction graph}
+\label{sec:polymer-circulation}
+
+There is also a nonreversible extension on the original unlabelled
+polymer state space.  It uses only the existing merge and split edges.
+The modification is state dependent; it is not a kernel depending
+only on the sizes of the reacting clusters.
+Antisymmetric perturbations preserving equilibrium are an established
+mechanism for accelerating the asymptotic convergence rate; see, for
+example, Hwang, Hwang-Ma and Sheu~\cite{HwangHwangMaSheu2005} for the
+diffusion setting.  The construction below verifies that mechanism on
+an explicit cycle of the present polymer reaction graph.
+
+\begin{lemma}\label{lem:simple-polymer-gap}
+For every $n\ge2$ and $\beta>0$, the eigenvalue $\gamma_M=\gamma_Q$
+of $-L_M$ is simple.  Its real eigenfunction can be written $g(K(m))$,
+with $g(k+1)-g(k)>0$ for $1\le k<n$ after a choice of sign.
+\end{lemma}
+
+\begin{proof}
+The positive ground state $h$ of the count-derivative operator is
+the discrete derivative of a first nonconstant count eigenfunction,
+so the latter is strictly monotone.  That count eigenvalue is simple.
+We check that no higher sector can tie it.
+
+The minimum-ratio argument in Lemma~\ref{lem:ground-ratio} gives the strict inequality
+$h(i+1)/h(i)>1/2$.
+Indeed, if a minimum ratio $r\le1/2$ occurred at $i$, the two adjacent
+eigenvalue equations would give
+\[
+ 0\ge\beta(1-r)+\frac{2i}{n}(r^{-1}-1)-\frac2n>0.
+\]
+At $r=1/2$ the last expression is
+$\beta/2+2(i-1)/n>0$; smaller $r$ only increases it.
+The endpoint conventions are the same as in that proposition.
+In its higher-sector comparison the extra term
+$(\ell-1)\beta[2h(r+1)/h(r)-1]$ is consequently strictly positive
+for every retained degree $\ell\ge2$.
+Thus all these sectors have bottom eigenvalue strictly above
+$\gamma_Q$.  A polymer observable has no degree-one component.
+Equality in its Poincar\'e inequality therefore forces its lift
+to lie in the one-dimensional first nonconstant count eigenspace.
+For $n=2,3$ there are no retained higher sectors to check.
+\end{proof}
+
+For $n\ge4$, consider the four distinct polymer configurations
+\[
+ x=(2,1^{n-2}),\qquad
+ u=(2,2,1^{n-4}),\qquad
+ v=(4,1^{n-4}),\qquad
+ w=(3,1^{n-3}),
+\]
+written as multisets of cluster sizes.
+Every edge of the directed cycle $x\to u\to v\to w\to x$ is an
+allowed reaction.  Let $J(a,b)$ be $1$ on its forward edges,
+$-1$ on its reverse edges, and $0$ elsewhere.
+For an oriented edge $a,b$, write
+$C(a,b)=\pi_M(a)q(a,b)=\pi_M(b)q(b,a)$.
+Choose
+\begin{equation}\label{eq:circulation-size}
+ 0<|\varepsilon|<
+       \min\{C(x,u),C(u,v),C(v,w),C(w,x)\}
+\end{equation}
+and define
+\begin{equation}\label{eq:circulation-rates}
+ q_\varepsilon(a,b)
+   =q(a,b)+\varepsilon\frac{J(a,b)}{\pi_M(a)}
+ \quad(a\ne b).
+\end{equation}
+Since $\sum_bJ(a,b)=0$, the diagonal generator entries are unchanged.
+
+\begin{proposition}\label{prop:polymer-circulation}
+The rates \eqref{eq:circulation-rates} define an irreducible
+nonreversible polymer chain with invariant law $\pi_M$.
+Its symmetric part is exactly $L_M$.
+Its asymptotic spectral rate is strictly greater than $\gamma_M$,
+whereas its best prefactor-one $L^2(\pi_M)$ contraction exponent
+is exactly $\gamma_M$.
+\end{proposition}
+
+\begin{proof}
+Condition \eqref{eq:circulation-size} keeps every original reaction
+rate positive.  The antisymmetry and zero divergence of $J$ show that
+$\pi_M$ is stationary.  The stationary forward and backward fluxes
+on each cycle edge differ by $2\varepsilon$, so detailed balance fails.
+Write $L_\varepsilon=L_M+\varepsilon A$, where
+$A(a,b)=J(a,b)/\pi_M(a)$ for $a\ne b$ and $A(a,a)=0$.
+Then $A1=0$ and $A^*=-A$, proving the symmetric-part claim.
+
+Let $g(K)$ be the eigenfunction in Lemma~\ref{lem:simple-polymer-gap},
+normalized in $L^2(\pi_M)$.  The two states $u,w$ have cardinality
+$n-2$, while $x,v$ have cardinalities $n-1,n-3$.
+Consequently
+\[
+ (Ag)(u)=
+   \frac{g(n-3)-g(n-1)}{\pi_M(u)}\ne0.
+\]
+Also $\langle g,Ag\rangle_{\pi_M}=0$ by skew-adjointness.
+
+For a nonzero eigenvalue $\lambda$ of $-L_\varepsilon$ with complex
+eigenvector $F$, stationarity implies $\mathbb E_{\pi_M}F=0$.
+Therefore
+\[
+ \operatorname{Re}\lambda
+ =\frac{\langle F,-L_MF\rangle_{\pi_M}}{\|F\|_2^2}
+ \ge\gamma_M.
+\]
+Equality would put $F$ in the complex span of $g$, by simplicity of
+the bottom eigenspace.  But
+$-L_\varepsilon g=\gamma_Mg-\varepsilon Ag$ is not in that span.
+Equality is impossible.  Since the spectrum is finite, its least
+nonzero real part is strictly larger than $\gamma_M$.
+
+The symmetric part remains $L_M$, so differentiation of the squared
+$L^2$ norm gives contraction at exponent $\gamma_M$.
+Differentiating at $t=0$ with $F=g$ rules out any larger exponent
+with prefactor one.
+\end{proof}
+
+The small-circulation improvement has a positive explicit
+second-order coefficient.  Put $B=-L_M$, let $g$ have norm one, and
+let $R$ be the inverse of $B-\gamma_M I$ on
+$\{1,g\}^{\perp}$.
+The lowest nonzero eigenvalue branch satisfies
+\begin{equation}\label{eq:circulation-perturbation}
+ \lambda(\varepsilon)
+ =\gamma_M+\varepsilon^2\langle Ag,R\,Ag\rangle_{\pi_M}
+     +O(\varepsilon^4),
+ \qquad \langle Ag,R\,Ag\rangle_{\pi_M}>0.
+\end{equation}
+Indeed, simple-eigenvalue perturbation gives first correction
+$R\,Ag$ to the eigenvector and the displayed quadratic coefficient.
+The branch is real near zero.  Since
+$L_{-\varepsilon}=L_\varepsilon^*$, that real branch is even in
+$\varepsilon$, giving the stated remainder.
+The coefficient is positive because $Ag\ne0$ and $R$ is positive
+definite on $\{1,g\}^{\perp}$.
+The separated spectrum at $\varepsilon=0$ ensures that this branch
+is the asymptotic rate for sufficiently small $\varepsilon$.
+
+This construction proves strict acceleration for each fixed
+$n,\beta$.  It does not provide an improvement bounded away from
+zero uniformly in $n$: the admissible stationary current in
+\eqref{eq:circulation-size} and the coefficient in
+\eqref{eq:circulation-perturbation} depend on the chosen cycle.

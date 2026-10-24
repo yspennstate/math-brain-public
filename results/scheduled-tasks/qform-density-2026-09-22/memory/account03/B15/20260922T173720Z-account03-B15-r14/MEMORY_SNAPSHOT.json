@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260922T173720Z-account03-B15-r14",
+  "control_commit_initial": "e94ef1e63c1ae9f377eec4c7149fb04fa4967f2a",
+  "control_commit_refresh": "788a6b54583f07500d6130f1debec9bb3020266c",
+  "control_revision": "2026-09-22.8",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "absolute continuity and regularity",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "partner_result": {
+    "worker": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "07672b7beb8f867c7a7b973aa3157a42ae506460",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md",
+    "statement_applied": "C_all=C_C0=C_sm including +infinity"
+  },
+  "new_result": {
+    "name": "QFORM-ALGEBRAIC-GENERICIZATION-NO-LOSS-v1",
+    "status": "PROVED_WORKER_SCOPE",
+    "statement": "For any finite family of nonzero polynomial nondegeneracy conditions on Sym_n, the optimal full QFORM height constant equals the optimal constant restricted to compactly supported smooth cap-one product inputs and target matrices on the simultaneous nonvanishing locus.",
+    "decisive_inequality": "P(X^T A X in I) <= P(X^T B_k X in I^(delta_k R_X)) <= C_gen (|I|+2 delta_k R_X), with B_k generic target and delta_k->0.",
+    "consequence": "Exact algebraic degeneracies may be removed at no loss of the universal constant; quantitative near-degeneracy remains essential."
+  },
+  "regularity_control": {
+    "status": "PROVED",
+    "statement": "Rank two can have bounded density without any continuous representative: for iid Uniform[-1/2,1/2], X_1^2+X_2^2 has density pi on (0,1/4) and zero on (-infinity,0)."
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "065b515da52986860a862ed50261bfc35b9caa0b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T173720Z-account03-B15-r14/REPORT.md"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B15/20260922T173720Z-account03-B15-r14.md",
+  "unresolved_implication": "Prove one matrix- and dimension-independent height estimate on the generic smooth-input locus, uniform as every pivot/minor/transversality quantity approaches zero; grouped-coordinate or ridge aggregation must eliminate reciprocal near-degeneracy costs before closure.",
+  "next_step": "Apply the closure lemma in proof assembly so exact zero pivots are not treated as a separate branch; attack the near-zero uniform estimate on the generic locus.",
+  "privacy_review": "Manual changed-file allowlist review only; mathematical text contains no credentials, scheduler IDs, machine paths, private transcripts, or unrelated data. No executable repository scanner was exposed through this connector."
+}

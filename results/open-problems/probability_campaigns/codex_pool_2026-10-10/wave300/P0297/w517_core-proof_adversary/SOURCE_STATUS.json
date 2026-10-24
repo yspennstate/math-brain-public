@@ -1,0 +1,108 @@
+{
+  "worker": "w517",
+  "target": "P0297",
+  "checked_date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "public_literature_status": "The primary ICM 2026 survey, published online 2026-07-13, still states that the dimension is not known for general gamma.",
+  "reason_for_unknown": "The bounded owner solved/retired check is incomplete; neither an identifier search nor the July publication rules out a later or privately retired result. No novelty or exact-dimension claim is made.",
+  "ranking": {
+    "date": "2026-09-07",
+    "tier": 5,
+    "prior_status": "unsolved",
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 554
+  },
+  "exact_statement": "For each fixed gamma in (0,2), explicitly determine d_gamma=dim_H(C,D_h), the deterministic almost-sure Hausdorff dimension of the canonical gamma-LQG metric of a unit-circle-normalized whole-plane GFF. A deterministic metric rescaling does not change this dimension. No simultaneous almost-sure claim over all gamma is asserted.",
+  "known_anchor": "d_sqrt(8/3)=4; xi=1/sqrt(6); Q(xi)=5/sqrt(6); LFPP median exponent is 1/6 at this anchor.",
+  "scope": "Subcritical real gamma in (0,2). The gamma=2 critical endpoint and complex/supercritical parameters are excluded.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2109.01252v2",
+      "authors": "Jian Ding, Julien Dubedat, Ewain Gwynne",
+      "title": "Introduction to the Liouville quantum gravity metric",
+      "revision": "v2, 2023-02-23",
+      "locator": "equations (2.1)-(2.5), Theorem 3.1, Problem 5.1",
+      "checked": "opened primary author survey and targeted sections",
+      "quote": "the exact relationship between Q and xi is not known"
+    },
+    {
+      "url": "https://arxiv.org/html/1905.11790v3",
+      "authors": "Ewain Gwynne, Joshua Pfeffer",
+      "title": "KPZ formulas for the Liouville quantum gravity metric",
+      "revision": "v3, 2019-12-28",
+      "locator": "Definition 1.2, Theorem 1.4, Corollary 1.7",
+      "checked": "opened original theorem paper and its metric-dimension corollary",
+      "scope_note": "KPZ for random sets requires independence from h; the target C itself is deterministic."
+    },
+    {
+      "url": "https://arxiv.org/html/1807.01072v3",
+      "authors": "Jian Ding, Ewain Gwynne",
+      "title": "The fractal dimension of Liouville quantum gravity: universality, monotonicity, and bounds",
+      "revision": "v3, 2019-04-22",
+      "locator": "Proposition 1.7 and proof",
+      "checked": "strict increase of gamma/d_gamma checked in original source; this justifies branch inversion in w516's qualified reduction"
+    },
+    {
+      "url": "https://arxiv.org/html/1610.09998",
+      "authors": "Jian Ding, Subhajit Goswami",
+      "title": "Upper bounds on Liouville first passage percolation and Watabiki's prediction",
+      "locator": "Theorems 1.1-1.3, Section 1.1",
+      "checked": "small-parameter contradiction to Watabiki checked; the paper's distance parameter named gamma is not blindly equated to LQG gamma"
+    },
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/25M181012X",
+      "authors": "Nina Holden, Xin Sun",
+      "title": "Liouville Quantum Gravity: From Random Planar Maps to Conformal Field Theory",
+      "published_online": "2026-07-13",
+      "locator": "Section 2 paragraph on Hausdorff dimension; page text line 132",
+      "license": "cc-by-4.0",
+      "checked": "opened primary 2026 publication; general value still stated unknown",
+      "quote": "not known for general gamma"
+    }
+  ],
+  "prior_work_check": {
+    "exact_id": "Ranking row and intake_F/raw/dedup_index.json lines 8383-8384 agree on P0297 and its title; no full exact-ID proof record recovered in the searched intake files.",
+    "named_attempts": "Exact P0297 and relevant D0049 searches in probability_1000_attempts_H_20260912 and probability_1000_attempts_I_20260914 found no matched proof; the Lean annotated list repeats the dated unsolved label. This is not an exhaustive absence certificate.",
+    "team_O": "Targeted P0297 search found no P0297 row in the inspected board; other LQG-dimension rows are different targets.",
+    "build_store": "Opened only with mode=ro. STORE_PROBE.json records table/column inspection and the bounded query; the initial title query is incomplete because statements are serialized in payload_json/body.",
+    "canonical_store": "Canonical repository found at ~/math-research-brain; two guessed database locations were absent and logged STUCK. No claim of a completed canonical-store solved/retired search.",
+    "percolation_directory": "Not consulted: no cited P0297 connection made it relevant."
+  },
+  "brain_scars": [
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "proof_steps_need_derived_joint_structure_2026_09_09"
+  ],
+  "recall_measurement": {
+    "command": "python -X utf8 recall_once.py",
+    "receipt": "recall.txt",
+    "relevant_top3": 0,
+    "returned_top3": 3,
+    "result": "Homonym drift into quantum-immortality film/writing memories; named mathematical scars were read directly."
+  },
+  "independence": {
+    "independent_derivation_saved": true,
+    "paired_prover_read_after_checkpoint": true,
+    "checkpoint_file": "INDEPENDENT.md",
+    "checkpoint_sha256": "DDB59C8F513D22C690AB40C3A7A675D3B4E1BFFBF806C131ED5894672733D360",
+    "hash_purpose": "chronology only; not a mathematical or bundle-integrity proof"
+  },
+  "proof_status": "Author proofs of elementary/conditional finite-model results; w518 independent review pending. Exact LFPP exponent and w516 input H remain unproved.",
+  "formal_check": {
+    "performed": false,
+    "receipt": null,
+    "theorem": null,
+    "trusted_axioms": null,
+    "note": "Structural validation and deterministic controls are not formal proof receipts."
+  },
+  "brain_bundle": {
+    "prepared": true,
+    "submitted": true,
+    "reviewed": false,
+    "ingested": false,
+    "retrievable": false,
+    "local_path": "bundle_001.json",
+    "pending_submission_receipt": "SUBMISSION.json",
+    "path": "~\\math-brain-inbox\\w517\\bundle_001.json",
+    "state_meaning": "Booleans record confirmed receipts. Independent review, ingestion and retrieval have no confirming receipt; their false values are not an absence proof."
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "excited random walks": [
+    {
+      "id": "claim_03c638bf2569680f13b01dc1c522517f0f0ce2e7266ed7446f17b963e06af837",
+      "title": "Open problem: Zero velocity on the non-transient event for excited random walks",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For excited random walks on Z^d with i.i.d. elliptic environments and a direction l, does X_n . l / n converge to 0 almost surely on the complement of the event {|X_n| -> infinity}? Source: Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012, Problem 4.7, p. 19.\nPosed in Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.randomenvironment:open-problem-c0133-zero-velocity-on-the-non-transient-event-for-excited-random-walks",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0133",
+      "source_url": null
+    },
+    {
+      "id": "claim_1729ab088c7ab50ad56a48278f85386fdb37900fa82f6b69d262f028078d39c6",
+      "title": "Open problem: One-sided zero-one laws for one-dimensional excited random walks",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For excited random walks on Z, find conditions on the cookie environment under which P_0(sup X_n = +infinity), P_0(inf X_n = -infinity) and the events {X_n -> +infinity}, {X_n -> -infinity} have probability 0 or 1 (beyond the two sufficient sets of conditions in Theorem 3.10). Source: Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012, Problem 3.5, p. 11.\nPosed in Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.randomenvironment:open-problem-c0128-one-sided-zero-one-laws-for-one-dimensional-excited-random-walks",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0128",
+      "source_url": null
+    },
+    {
+      "id": "claim_18b51d563b33442048caef8f837a65f74c2acc739eb470c2108ba851e09604de",
+      "title": "Open problem: Recurrence-transience criterion for excited random walks under stationary ergodic environments",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Can the assumption (IID) in the recurrence/transience criterion (3.10) of Theorem 3.10 (recurrent iff |delta| <= 1 for bounded cookie stacks) be replaced by stationarity and ergodicity (SE)? Source: Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012, Problem 3.11, p. 13.\nPosed in Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.randomenvironment:open-problem-c0129-recurrence-transience-criterion-for-excited-random-walks-under-station",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0129",
+      "source_url": null
+    },
+    {
+      "id": "claim_208debbcb289058a060f2aa5a11cef5d2449d485bf9fca1b1db74ee0c4cd0edf",
+      "title": "Attempt on Zero velocity on the non-transient event for excited random walks",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Try to derive it from the law of large numbers structure of Theorem 4.8. Result: Theorem 4.8 gives lim X_n/n in {v, -cv} a.s. under a 0-1 law assumption for the directional events; on the non-transient event the walk returns to a bounded region infinitely often, so liminf |X_n|/n = 0 trivially along the return times, and the question is whether limsup X_n . l / n can be positive: the walk would have to make excursions of linear size and return. For Markovian RWRE the analogous statement (Zerner 2002) uses a regeneration argument; for excited walks the excursions of linear size would, on the non-transient event, be repeated infinitely often through the same (partially eaten) environment, and each long excursion in direction l has probability decaying exponentially in its length by a large deviation bound for the walk in a fixed (already modified) environment, IF the environment modification is bounded (bounded stacks) - so under (BD) the expected number of linear excursions from a bounded region is finite by Borel-Cantelli, giving the answer YES under (BD) plus a uniform large-deviation bound for excursions. Without (BD) (unbounded stacks under (EL) only) the modification of the environment can be unbounded and the large deviation bound is not uniform. Recorded: under (IID), (EL) and (BD) the answer is yes provided the uniform excursion large-deviation estimate holds (plausible from the elliptic Markov comparison since eaten cookies only change transition probabilities within [eps, 1-eps]); the general (EL) case without (BD) is the open part. Key identity: Linear excursions from a bounded region have exponentially small probability uniformly under (BD)+(UEL); Borel-Cantelli gives zero velocity on the recurrent event. Obstruction: Uniformity fails without bounded stacks.\nRefers to the open problem node open-problem-c0133-zero-velocity-on-the-non-transient-event-for-excited-random-walks\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.randomenvironment:attempt-c0133-zero-velocity-on-the-non-transient-event-for-excited-random-walks",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0133",
+      "source_url": null
+    },
+    {
+      "id": "claim_20d91e1f2f967bd5c7191a2142a497f6f5c041cbfb86f3a0ac001391879cb602",
+      "title": "Attempt on Recurrence-transience criterion for excited random walks under stationary ergodic environments",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Examine the branching-process-with-migration proof and where i.i.d. is used. Result: The proof of Theorem 3.10 under (3.10) translates the walk into a branching process with migration whose offspring law at site k is determined by the cookie stack at k; under (IID) the branching process is homogeneous in space and the criterion delta > 1 is the criterion for the branching process to die out... under (SE) the process is a branching process in a stationary ergodic environment (BPRE with migration), whose survival criterion is governed by the Lyapunov exponent of the environment, i.e. by an ergodic average of log-means, not by the mean delta of the drift. So the natural (SE) analogue is NOT 'delta in [-1,1]' with delta = E sum_i (2 omega(0,i) - 1) but a criterion involving the annealed versus quenched growth rate of the associated BPRE; for i.i.d. environments the two coincide because the migration term is affine. I tested this on the simplest non-i.i.d. case: an environment alternating deterministically between two cookie stacks a and b (period 2, hence SE after a random shift): the branching process with migration is then periodic and its two-step transition is again a branching process with migration with delta_2 = delta_a + delta_b; the criterion becomes delta_a + delta_b > 2 for transience, i.e. the average delta > 1, consistent with the naive extension. For genuinely random ergodic environments a similar averaging holds if the migration is additive, which it is (the number of cookies eaten per visit adds). So the expected answer is YES for (SE) with the same delta, and the obstruction to a proof is that the branching-process comparison uses independence between the offspring at different sites when computing the extinction probability of the process with migration; with dependence one needs an ergodic theorem for the total progeny, available via the Kesten-Kozlov-Spitzer approach only for i.i.d.. Recorded: periodic environments satisfy the naive extension; the general (SE) case reduces to an ergodic total-progeny theorem for branching with migration in stationary environments. Key identity: Periodic two-stack environment: transient iff delta_a + delta_b > 2, i.e. the averaged delta criterion holds. Obstruction: Ergodic total-progeny theorem for branching processes with migration in stationary environments.\nRefers to the open problem node open-problem-c0129-recurrence-transience-criterion-for-excited-random-walks-under-station\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.randomenvironment:attempt-c0129-recurrence-transience-criterion-for-excited-random-walks-under-station",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0129",
+      "source_url": null
+    },
+    {
+      "id": "claim_62f7daffd02f47742d67425bb0f044f4de0bce26728eefcb0ed952dc5fde1c94",
+      "title": "Open problem: Ballisticity criterion under the positivity assumption instead of bounded stacks",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Can the assumption (BD) (bounded cookie stacks) in the one-dimensional ballisticity criterion of Theorem 5.2 (positive speed iff delta > 2) be replaced by (POS1) (all cookies push to the right) with unbounded stacks? Source: Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012, Problem 5.3, p. 20.\nPosed in Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.randomenvironment:open-problem-c0134-ballisticity-criterion-under-the-positivity-assumption-instead-of-boun",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0134",
+      "source_url": null
+    },
+    {
+      "id": "claim_6376c89258a3d18de7daff797c30bb389297bb0a3ce42e42159606703400cf4f",
+      "title": "Open problem: Escape probability of a transient one-dimensional excited random walk",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Compute, for a transient excited random walk on Z, the probability P_0(X_n not 0 for all n >= 1) of never returning to the starting point. Source: Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012, Problem 3.12, p. 13.\nPosed in Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.randomenvironment:open-problem-c0130-escape-probability-of-a-transient-one-dimensional-excited-random-walk",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0130",
+      "source_url": null
+    },
+    {
+      "id": "claim_66e9c287aeea9ab533923ef1aeb7129f49ee8e4ec9972f1095d5024674d0b1af",
+      "title": "Attempt on Transience and recurrence of the M(d1,d2) balanced excited random walks",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Analyse M(1,1) on Z^2 through the range of the first-coordinate walk. Result: In M(1,1) the first coordinate moves only at first visits and the second at later visits; the set of visited vertices is the range, and the first-coordinate process is a simple random walk on Z run at the rate of new visits. Recurrence of M(1,1) would follow if the walk returns to the origin infinitely often; since the second coordinate performs a simple random walk on the column above the current first coordinate whenever the vertex was visited before, the walk behaves in each column like a 1D random walk (recurrent) until it hits an unvisited vertex, at which time the first coordinate steps. The number of new visits up to time n is the range R_n; the first coordinate after n steps is a simple random walk at time R_n, so |X^1_n| is of order sqrt(R_n), and the range of a planar walk-like process is at most n, giving |X^1_n| <= sqrt n; a return to the origin requires both coordinates to vanish. A heuristic: if R_n \u224d n/log n as for planar simple random walk then the first coordinate is diffusive at the slower clock, and the walk is 'more recurrent' than planar simple random walk, supporting the conjecture; but the range of M(1,1) is not that of simple random walk because the exploration is column-wise. A rigorous partial fact: M(1,1) is recurrent if and only if the first coordinate returns to 0 infinitely often at times when the second coordinate is 0; since within a column the second coordinate is a recurrent 1D walk that keeps returning to 0 until it finds a new vertex, and new vertices in a column are found at the ends of the visited interval, the question is whether the first-coordinate walk (which is a simple random walk in the clock of new visits) visits 0 infinitely often, which it does a.s. (1D recurrence), and whether at those visits the second coordinate is 0 - not automatic. So recurrence of M(1,1) reduces to: at the (infinitely many) times the first coordinate is 0, the second coordinate, which then performs a 1D walk in the column of 0 with the visited interval of that column, returns to height 0 before finding a new vertex - which has probability bounded below by a constant each time if the visited interval around height 0 in column 0 has length bounded... the visited interval in column 0 grows, and the probability of returning to 0 from the boundary of an interval of length L before exiting is of order 1/L... summing over the visits to column 0 gives a divergent series only if the interval lengths grow slowly enough. This is the crux and I did not settle it; the reduction is recorded. Key identity: M(1,1) recurrent iff, at the infinitely many returns of the first coordinate to 0, the second coordinate returns to 0 in column 0 before finding a new vertex; the return probability is of order 1/(visited interval length). Obstruction: Growth rate of the visited interval in column 0 not controlled.\nRefers to the open problem node open-problem-c0132-transience-and-recurrence-of-the-m-d1-d2-balanced-excited-random-walks\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.randomenvironment:attempt-c0132-transience-and-recurrence-of-the-m-d1-d2-balanced-excited-random-walks",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0132",
+      "source_url": null
+    },
+    {
+      "id": "claim_8159aec16d2c23812e755681113e2ee0db4ad687f4ff2bd4c70ab971a68f652a",
+      "title": "Open problem: Running-maximum limit theorem at the critical parameter delta = 1 under weaker assumptions",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Does the convergence of the excited random walk with delta = 1, rescaled by b sqrt(n) log n, to the running maximum of Brownian motion (Theorem 6.3) remain true when (IID), (BD), (WEL) are replaced by the assumptions (6.2), and can (POS1) then be removed? Source: Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012, Problem 6.4, p. 26.\nPosed in Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.randomenvironment:open-problem-c0135-running-maximum-limit-theorem-at-the-critical-parameter-delta-1-under",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0135",
+      "source_url": null
+    },
+    {
+      "id": "claim_c15705f091dcc8ca8846f1c8a6a16c52b8a9f6f1fd0bf49f64232c4312f0e7d0",
+      "title": "Attempt on One-sided zero-one laws for one-dimensional excited random walks",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Check whether the ergodic-environment argument for the two-sided statement (Theorem 2.3/3.2) localises to one side. Result: The two-sided 0-1 law (range infinite or not) follows from stationarity of the environment plus a Borel-Cantelli over the sites visited; the one-sided event {sup X_n = infinity} is not invariant under the natural shifts because the walk started at 0 and the environment to the left matter. Under (SE) and (EL) the source notes (3.4) and (3.5) are equivalent, so the question is the 0-1 property itself. A sufficient condition beyond Theorem 3.10: if the environment is i.i.d. and the walk is 'monotone' in the environment (Proposition 4.2 style coupling, which needs (POS1) or its mirror), then P_0(sup X_n = infinity) is a monotone function of a product measure, and the event {sup X_n = infinity} is a tail event with respect to the environment on the right half-line only if the walk's right excursions are determined by the right environment, which fails because the walk can be pushed back by the left environment. I tried the following route: under (SE) and (WEL), the event {sup X_n = infinity} is invariant under the environment shift restricted to trajectories that reach every site to the right, so conditionally on reaching site k the probability of eventually reaching k+1 is the same functional of the shifted environment; if the walk reaches every site to the right a.s. on the event, an ergodicity argument along the sequence of first-hitting times gives 0-1. The gap is exactly that 'reaching k' depends on the environment left of k through the returns. No general 0-1 law obtained; the reduction to a renewal-type ergodicity along right-hitting times is recorded. Obstruction: Left environment influences right excursions; no shift invariance of the one-sided event.\nRefers to the open problem node open-problem-c0128-one-sided-zero-one-laws-for-one-dimensional-excited-random-walks\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.randomenvironment:attempt-c0128-one-sided-zero-one-laws-for-one-dimensional-excited-random-walks",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0128",
+      "source_url": null
+    },
+    {
+      "id": "claim_c27dc797615a0d6f5ed514ff6ab1335a2f7ca7d80ad4d563f20e012caa4e2912",
+      "title": "Open problem: Recurrence-transience dichotomy for excited random walks in dimension d >= 2",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For excited random walks on Z^d, d >= 2, with i.i.d. uniformly elliptic cookie environments, is the walk either recurrent (visits every site infinitely often... in the source's Definition 3.1 sense) or transient? Source: Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012, Problem 3.21, p. 16.\nPosed in Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.randomenvironment:open-problem-c0131-recurrence-transience-dichotomy-for-excited-random-walks-in-dimension",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0131",
+      "source_url": null
+    },
+    {
+      "id": "claim_f164ea7f4db255393d84f04962214f5f9ccfba55e53467d2535060894835bd75",
+      "title": "Open problem: Transience and recurrence of the M(d1,d2) balanced excited random walks",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For the M(d1,d2) walk on Z^{d1+d2} (simple random walk step in the first d1 coordinates on the first visit to a vertex, in the last d2 coordinates on later visits), prove that M(1,2) and M(2,1) are transient and that M(1,1) is recurrent (M(2,2) is known transient). Source: Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012, Remark and Problem 3.22, p. 16-17. Status notes: Peres, Popov and Sousi (2013) and Peres, Schapira and Sousi (2016) proved transience results for several balanced excited walks in three dimensions; whether M(1,2), M(2,1) and the recurrence of M(1,1) were fully settled was not confirmed in this session.\nPosed in Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.randomenvironment:open-problem-c0132-transience-and-recurrence-of-the-m-d1-d2-balanced-excited-random-walks",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0132",
+      "source_url": null
+    },
+    {
+      "id": "claim_ffe45b11bea72f88b0f33db0ab1140dd2a354730db9d40293fa198c173753b6c",
+      "title": "Attempt on Recurrence-transience dichotomy for excited random walks in dimension d >= 2",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Compare with the RWRE 0-1 law in d >= 3 (C0044) and locate the extra difficulty from self-interaction. Result: For Markovian RWRE the dichotomy question is the directional 0-1 law (C0044, open in d >= 3). For excited random walks the process is not Markov, and even the statement 'either recurrent or transient' (return to the origin infinitely often a.s. or finitely often a.s.) is not implied by any Markov-chain dichotomy; the source's Definition 3.1 asks for a 0-1 law for the number of returns. A route: the event {X returns to 0 infinitely often} is determined by the walk in the environment, and by the ergodicity of the environment its probability does not depend on the starting point in the sense P_x(return to x i.o.) is constant in x; but P_0(return to 0 i.o.) in (0,1) is not excluded by that. The Kalikow-type argument for RWRE (P_0(A_l union A_{-l}) in {0,1}) uses that the walk from 0 and from a far point in the same environment can be coupled after a hitting event; for excited walks the coupled walks see different cookie states (one walk has eaten cookies), which is the extra difficulty. Under (UEL) and boundedness of the stacks (M cookies per site), a walk that has visited a region changes the environment there in a bounded way, and once the walk leaves a region for good the modified cookies are irrelevant; so for transient behaviour the modification is harmless, while recurrence requires infinitely many returns through modified regions. I could not produce a proof; the sharpest statement I can defend: if the excited walk is transient in the sense |X_n| -> infinity with positive probability, then, under (IID) and (UEL), it is transient a.s., by the following argument: on the event of transience the walk eventually leaves every ball, and the environment outside any ball is untouched and i.i.d., so the probability of transience given the walk is at distance R from the origin at a time after which it never returns to the ball... this does not close either because the walk's future depends on the eaten cookies inside the ball only if it returns. Recorded as attempted without result. Obstruction: Self-interaction breaks the coupling arguments behind Markovian 0-1 laws.\nRefers to the open problem node open-problem-c0131-recurrence-transience-dichotomy-for-excited-random-walks-in-dimension\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.randomenvironment:attempt-c0131-recurrence-transience-dichotomy-for-excited-random-walks-in-dimension",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0131",
+      "source_url": null
+    }
+  ],
+  "heavy-tailed circular": [
+    {
+      "id": "claim_28a3ed03c1ff63337e02b940b8c851c56e71951dc586718ad704ece36f2be560",
+      "title": "Open problem: Explicit form of the heavy-tailed circular law density",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Identify explicitly the isotropic density g_alpha(|z|) of the limiting spectral law mu_alpha of n^{-1/alpha}X for alpha-stable-type entries; only g_alpha(0) and the tail (r^{2(alpha-1)} e^{-alpha r^alpha/2} up to constants) are known. Source: Bordenave and Chafai: Around the circular law, survey with open problems, Section 6.6, p. 39.\nPosed in Bordenave and Chafai: Around the circular law, survey with open problems\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.random-matrices:open-problem-c0032-explicit-form-of-the-heavy-tailed-circular-law-density",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0032",
+      "source_url": null
+    },
+    {
+      "id": "claim_2baefc2c0406d6c3a48185f5ac0c2336fe99679e75e852b557161bfbf121d0d6",
+      "title": "Attempt on Almost-sure convergence in the heavy-tailed circular law",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Borel-Cantelli over the Hermitisation: identify which estimate is only in probability. Result: The proof of Theorem 6.2 has three inputs: (i) convergence of the singular-value distributions of n^{-1/alpha}X - z for each z, which is almost sure by the objective method (the local weak convergence to the PWIT holds a.s.); (ii) uniform integrability of log at infinity, a.s. from moment bounds; (iii) uniform integrability of log near zero, i.e. a lower bound on the small singular values, which is where only an in-probability bound s_n(n^{-1/alpha}X - z) >= n^{-c} with probability 1 - o(1) is available. To make (iii) almost sure one needs the failure probability summable in n, i.e. a bound like P(s_n <= n^{-c}) <= n^{-1-eps}. For heavy tails the row norms are not concentrated and the Rudelson-Vershynin small-ball argument gives only polynomial failure probabilities with exponent that is not obviously above 1. If the failure probability were shown to be O(n^{-1-eps}) (for instance via an Esseen-type anti-concentration in the alpha-stable domain, which gives exponent depending on alpha), Borel-Cantelli finishes the a.s. statement. So the problem reduces to a quantitative smallest-singular-value bound for heavy-tailed matrices with summable failure probability; the bound is plausible but I did not prove it. Obstruction: Need P(s_n(n^{-1/alpha}X - z) <= n^{-c}) summable in n for heavy-tailed entries.\nRefers to the open problem node open-problem-c0031-almost-sure-convergence-in-the-heavy-tailed-circular-law\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.random-matrices:attempt-c0031-almost-sure-convergence-in-the-heavy-tailed-circular-law",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0031",
+      "source_url": null
+    },
+    {
+      "id": "claim_900d1dab6b9272f614953f6aceec4b41a430dcef056e9abbfd5198b860e63b9b",
+      "title": "Open problem: Almost-sure convergence in the heavy-tailed circular law",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Upgrade the convergence in probability of the empirical spectral distribution of n^{-1/alpha} X (i.i.d. entries in the domain of attraction of an alpha-stable law, alpha in (0,2)) to almost-sure weak convergence to mu_alpha. Source: Bordenave and Chafai: Around the circular law, survey with open problems, Section 6.6 remark, p. 39.\nPosed in Bordenave and Chafai: Around the circular law, survey with open problems\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.random-matrices:open-problem-c0031-almost-sure-convergence-in-the-heavy-tailed-circular-law",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0031",
+      "source_url": null
+    },
+    {
+      "id": "claim_bf639a60ad13be2e9168547ee867c1f01d121bd98006894bb23a5382bd25d1cd",
+      "title": "Attempt on Explicit form of the heavy-tailed circular law density",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Attempt to derive g_alpha from the PWIT recursive distributional equation for the resolvent at z, then differentiate in z. Result: The density is g_alpha(r) = (1/2pi) Delta_z of the log-potential U(z) = -integral log|z-w| dmu_alpha(w), and U is expressed through the limit of the singular-value law of the shifted operator on the PWIT, whose Stieltjes transform satisfies a fixed-point equation in a 2x2 matrix-valued function with alpha-stable-type nonlinearity (as in Bordenave-Caputo-Chafai). The z-dependence enters only through the off-diagonal entries; at z = 0 the equation closes on a single positive stable random variable, which is why g_alpha(0) is explicit. For z not 0 the fixed point involves a two-parameter family of stable laws (radial and angular parts), and I could not reduce it to a scalar equation; the isotropy only removes the angular variable of z, not of the recursion. Tail check: the stated tail r^{2(alpha-1)} e^{-alpha r^alpha/2} is consistent with the expected behaviour that eigenvalues of modulus r come from rows with an exceptionally large entry of size r^alpha, whose density in the stable domain is r^{-alpha-1} ... the exponential factor indicates instead a large-deviation of a sum of alpha-stable variables of the Poisson-Dirichlet type. No closed form. Obstruction: The matrix-valued PWIT fixed point does not reduce to a scalar equation away from z = 0.\nRefers to the open problem node open-problem-c0032-explicit-form-of-the-heavy-tailed-circular-law-density\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.random-matrices:attempt-c0032-explicit-form-of-the-heavy-tailed-circular-law-density",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0032",
+      "source_url": null
+    }
+  ],
+  "directed polymers": [
+    {
+      "id": "claim_2b6b7c1da300a8ed1c28367cabd584f2c02769a03a64ed519cf081b1af04693d",
+      "title": "Open problem: Fluctuation exponent of directed polymers beyond the logarithmic improvement",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Improve the bound Var(log Z_n) = O(n/log n) for directed polymers in random environment in general dimension to a power improvement n^{1-eps}. Source: Chatterjee: Chaos, concentration and multiple valleys, 2008, with open questions, Section 12, problem (3), p. 59. Status notes: In d = 1+1 with exactly solvable weights (log-gamma, exponential last-passage) the exponent 2/3 (variance n^{2/3}) is a theorem; for general weights in any dimension the BKS-type n/log n remains the best general bound to this session's knowledge; cf. the FPP variance problem in the Codex campaign (P-a/ chi = 1/3 target).\nPosed in Chatterjee: Chaos, concentration and multiple valleys, 2008, with open questions\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.gaussian:open-problem-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0120",
+      "source_url": null
+    },
+    {
+      "id": "claim_62f54f1db77f59eabce07f56d2dc78bf",
+      "title": "KPZ universality",
+      "body": "The universality class of one-dimensional random growth (TASEP, last passage percolation, directed polymers in $1+1$ dimensions): fluctuations of order $t^{1/3}$, spatial correlation length $t^{2/3}$, and Tracy-Widom limit laws.",
+      "logical_id": "vocab.probability.kpz-universality",
+      "proof_text": null,
+      "source_id": null,
+      "source_url": null
+    },
+    {
+      "id": "claim_6bf57d55eaca1ac19f6edac2880a3bd55bf3cf2ea319b6f0e4f9427a9e096b8d",
+      "title": "Open problem: Chaos in directed polymers in dimensions d >= 3",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove chaos (sensitivity of the polymer measure to a small perturbation of the environment) for directed polymers in random environment in dimensions d >= 3, at low temperature. Source: Chatterjee: Chaos, concentration and multiple valleys, 2008, with open questions, Section 12, problem (2), p. 59.\nPosed in Chatterjee: Chaos, concentration and multiple valleys, 2008, with open questions\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.gaussian:open-problem-c0119-chaos-in-directed-polymers-in-dimensions-d-3",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0119",
+      "source_url": null
+    },
+    {
+      "id": "claim_7891e285a213a1ead9b1e54b02b29177a06d86c6f3df76b6447ca94dbe6add7f",
+      "title": "Attempt on Fluctuation exponent of directed polymers beyond the logarithmic improvement",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Same block as the first-passage percolation sublinear variance problem; record the exact reduction. Result: The n/log n bound is the BKS entropy method; a power improvement n^{1-eps} would follow from a chaos exponent: if the polymer measure decorrelates under a noise of size n^{-eps'} on the environment (superconcentration with a rate), Talagrand's/Chatterjee's equivalence gives Var(log Z_n) <= n^{1-eps}. Conversely, the variance exponent is tied to the transversal fluctuation exponent by the KPZ scaling relation chi = 2 xi - 1 (Chatterjee 2013 proved the relation rigorously for FPP under existence of the exponents), so a power improvement needs a quantitative transversal-fluctuation bound xi < 1 with an explicit gap, which is known only in the exactly solvable models. The obstruction is the same wall the campaign records for FPP; no new input. Obstruction: Quantitative chaos rate or transversal fluctuation bound unavailable outside integrable models.\nRefers to the open problem node open-problem-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.gaussian:attempt-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0120",
+      "source_url": null
+    },
+    {
+      "id": "claim_d6482caf2a89870dd211b46bdfbffdf2f3b0e5124bf83645b39a0be761eb5611",
+      "title": "Attempt on Chaos in directed polymers in dimensions d >= 3",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Check which steps of the d = 2 proof are dimension-dependent. Result: The source's d = 1+1 proof establishes superconcentration of the free energy (variance o(n)) via hypercontractivity and then chaos from superconcentration through the general equivalence theorem; the dimension-dependent step is the variance bound Var(log Z_n) = O(n/log n), obtained from the Benjamini-Kalai-Schramm influence inequality applied to the free energy with the influence of a single site bounded by the expected overlap of two polymers at that site, whose sum over sites is the expected overlap, of order n in the strong disorder regime. The BKS argument is dimension-free provided the polymer is in the strong disorder phase (positive overlap); in d >= 3 the strong disorder phase exists at low temperature (Comets-Yoshida), so the variance bound O(n/log n) transfers and superconcentration follows; the equivalence theorem then gives chaos at the level of the overlap between the polymers at slightly perturbed environments. So the obstruction the source mentions ('certain parts do not work in higher dimensions') must be in the identification that the overlap in the strong-disorder phase is of order n (needed for the influence sum to be order n and the BKS gain to be meaningful): in d >= 3 at low temperature the overlap is positive but the known lower bounds are only qualitative (positive limit of the overlap along the endpoint), not quantitative along the whole path. Rigorous partial: superconcentration (Var log Z_n = o(n)) in d >= 3 at low temperature follows from BKS if the expected path overlap is of order n, which is a consequence of the strong disorder characterisation via the endpoint overlap only if the overlap is positive at a positive fraction of times; this last step is plausible but I found no reference proving it in d >= 3. Reduction recorded. Obstruction: Quantitative (order n) path overlap in the strong disorder phase for d >= 3.\nRefers to the open problem node open-problem-c0119-chaos-in-directed-polymers-in-dimensions-d-3\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.gaussian:attempt-c0119-chaos-in-directed-polymers-in-dimensions-d-3",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0119",
+      "source_url": null
+    }
+  ],
+  "geodesic spanning": [
+    {
+      "id": "claim_34bd9ecab9291168e3d6f76d6571490803e2f013a8880a24d09df0cfc909fc69",
+      "title": "Open problem: Percolation threshold on arbitrary geodesic Cayley spanning trees",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). If T is any geodesic spanning tree rooted at the identity of a Cayley graph of growth rate b, must br(T)=b, equivalently must its Bernoulli bond percolation threshold be 1/b? Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 3.12, printed p.91.\nPosed in Probability on Trees and Networks, paperback electronic version 19 August 2026\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "logical_id": "math:probability.core:open-problem-p0036-percolation-threshold-on-arbitrary-geodesic-cayley-spanning-trees",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0036",
+      "source_url": null
+    },
+    {
+      "id": "claim_db66496bf1f0835bb2c35a53fd5d69f5ff4f885e73c8554f0b333335a332984d",
+      "title": "Attempt on Percolation threshold on arbitrary geodesic Cayley spanning trees",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Equal level growth does not determine branching number Result: A geodesic spanning tree has exactly the Cayley graph sphere sizes at each level. But growth can exceed branching number for a bounded-degree tree: take a single infinite spine and at its nth vertex attach a finite b-ary tree of height n. Its level sizes have exponential rate sqrt(b)>1, while its only infinite ray is the spine and arbitrarily deep singleton cutsets give branching number one. Check: At level m the largest attached contribution starts around n=m/2 and has order b^(m/2), up to constant factors and a geometric sum. Every attachment is finite, so no additional infinite ray appears. Obstruction: This is not a geodesic Cayley spanning-tree counterexample. It proves that matching sphere counts alone cannot establish the conjectured branching number.\nRefers to the open problem node open-problem-p0036-percolation-threshold-on-arbitrary-geodesic-cayley-spanning-trees\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0036-percolation-threshold-on-arbitrary-geodesic-cayley-spanning-trees",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0036",
+      "source_url": null
+    }
+  ],
+  "incipient infinite": [
+    {
+      "id": "claim_40eeee0cfd56bd2fd7f176a75859e6ffe14e351c1dd66ebeb6ad0b868cdbaa87",
+      "title": "Open problem: Incipient-infinite super-Brownian-motion limit of the high-dimensional IIC",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Show that for d > 6 the rescaled measure-valued process built from the incipient infinite cluster (vertices at intrinsic distance nt, rescaled) converges to incipient infinite super-Brownian motion (SBM with an immortal particle). Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 15.3, p. 221.\nPosed in Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.percolation:open-problem-c0077-incipient-infinite-super-brownian-motion-limit-of-the-high-dimensional",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0077",
+      "source_url": null
+    },
+    {
+      "id": "claim_49130968f69d04518594feadc86c7254295245afe5504bce42258268d1cce6aa",
+      "title": "Attempt on Scaling limit of random walk on the high-dimensional incipient infinite cluster",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Reduce to the scaling limit of the IIC itself (C0077) plus a homogenisation of the walk on the limit tree. Result: If the IIC converges (as a measure-valued process indexed by intrinsic distance) to incipient infinite super-Brownian motion, then the walk on the IIC should converge to the Brownian motion on the associated continuum random tree embedded in R^d, time-changed by the IIC volume measure, i.e. to the 'Brownian motion on the ISE-type tree' with spatial displacement given by the embedding (the Ben Arous-Cabezas-Fribergh limit). The walk on the discrete tree structure of the IIC is a random walk on a graph that is tree-like at all scales in d > 6 (the number of cycles at scale r is bounded), so the spatial position is a Brownian motion time-changed by the intrinsic clock; the intrinsic clock converges by the tree scaling limit; the embedding of the tree in R^d is a branching random walk-type embedding whose limit is the ISE embedding. Each step is known for the branching random walk trace (BCF 2016) and the difficulty for the IIC is the dependence between the tree structure and the embedding (loops, self-intersections). The rigorous reduction: the walk's scaling limit follows from (i) the IIC tree scaling limit with its embedding, (ii) a resistance estimate showing the effective resistance across the IIC at intrinsic distance r is of order r (tree-like), which is known up to constants from Kozma-Nachmias-type estimates. So the problem is subsumed by C0077 plus a resistance-form convergence theorem (Croydon's framework), which needs the convergence of the IIC as a resistance metric space, a stronger statement than the measure-valued convergence in the source. Obstruction: Resistance-metric convergence of the IIC in d > 6 is not established.\nRefers to the open problem node open-problem-c0074-scaling-limit-of-random-walk-on-the-high-dimensional-incipient-infinit\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.percolation:attempt-c0074-scaling-limit-of-random-walk-on-the-high-dimensional-incipient-infinit",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0074",
+      "source_url": null
+    },
+    {
+      "id": "claim_6f33033cc6c015e74e17ecf03f84254fb9e59f13180becd49ac22b25d7db440b",
+      "title": "Technique: Nash Inequality and Heat-Kernel Bounds via Resistance",
+      "body": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). A Nash inequality on a graph with Dirichlet form E and reference measure mu has the form ||f||_2^{2+4/d} <= C E(f,f) ||f||_1^{4/d} for all f in the domain of the form, where d is an effective dimension parameter. Such an inequality is classically equivalent, by results of Nash and later Carlen-Kusuoka-Stroock, to an on-diagonal heat-kernel upper bound p_t(x,x) <= C' t^{-d/2} for the associated Markov semigroup, and combining it with matching volume-growth and effective-resistance-growth estimates, within the general framework relating resistance growth to heat-kernel decay used for fractal-like and random graphs, yields two-sided sub-Gaussian or Gaussian heat-kernel bounds. On graphs where effective resistance to the complement of a ball of radius n grows like n^zeta and volume grows like n^alpha, this gives sub-Gaussian heat-kernel estimates with off-diagonal decay governed by the exponent alpha+zeta, a technique central to analysis on fractals and on random graphs such as critical percolation clusters or random walk among random conductances. The technique does not give the resistance or volume exponents themselves, which are separate geometric inputs, and a full two-sided heat-kernel estimate typically requires both the Nash-type inequality, giving the upper bound, and a separate lower-bound argument, often via a chaining construction or an elliptic Harnack inequality. Typical failure: Assuming ordinary Euclidean Gaussian heat-kernel scaling, of the t^{-d/2} exp(-|x-y|^2/4t) form, transfers automatically to a random or fractal-like graph without re-deriving the resistance exponent zeta; on structures such as the incipient infinite cluster of critical percolation, or random conductance models with heavy-tailed conductances, the correct scaling is sub-Gaussian with zeta != 1, and using the Euclidean exponent silently mis-states both the walk dimension and the tail behavior of the heat kernel. Canonical reference: Nash, 1958, American Journal of Mathematics; Carlen, Kusuoka and Stroock, 1987, Annales de l'Institut Henri Poincare; Barlow, 2004, Annals of Probability; Kumagai, Random Walks on Disordered Media and their Scaling Limits, 2014, Springer.\na well-defined Dirichlet form and reversible Markov chain with a reference measure mu\na valid Nash-type functional inequality with a specified effective dimension d\nfor two-sided estimates: matching volume-growth and effective-resistance-growth bounds on balls\ntypically also an elliptic Harnack inequality, or comparable regularity, to establish the matching lower heat-kernel bound",
+      "logical_id": "math:probability.core:nash-inequality-heat-kernel-technique",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:technique:nash-inequality-heat-kernel",
+      "source_url": null
+    },
+    {
+      "id": "claim_9a5892a41f35990756b9f6ed81e69df11b4ddabbb1a183b61634cd5de0e31815",
+      "title": "Open problem: Spectral dimension of random walk on the incipient infinite cluster below the critical dimension",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For critical percolation on Z^d with 2 <= d < 6, determine the spectral dimension d_s of random walk on the incipient infinite cluster; the Alexander-Orbach value 4/3 is believed to fail (numerics: d_s = 1.318 in d = 2), and for 3 <= d < 6 even the existence of the IIC is unproved. Source: Kumagai: Random walks on disordered media and their scaling limits, Saint-Flour XL 2010, author version, Section 4.2 and 6.4, p. 42 and 58-59.\nPosed in Kumagai: Random walks on disordered media and their scaling limits, Saint-Flour XL 2010, author version\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.percolation:open-problem-c0125-spectral-dimension-of-random-walk-on-the-incipient-infinite-cluster-be",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0125",
+      "source_url": null
+    },
+    {
+      "id": "claim_a994680a88fd0019a81f212145341256ef75f985f9082a978376da0aa01f2b3b",
+      "title": "Open problem: Scaling limit of random walk on the high-dimensional incipient infinite cluster",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove that random walk on the incipient infinite cluster of high-dimensional (d > 6) percolation has a non-degenerate scaling limit. Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 14.2, p. 212. Status notes: Ben Arous, Cabezas and Fribergh ('Scaling limit for the ant in high-dimensional labyrinths', CPAM 2019) proved a scaling limit for random walk on high-dimensional critical clusters in the oriented and branching-random-walk settings; whether the unoriented IIC case d > 6 is covered was not confirmed in this session.\nPosed in Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.percolation:open-problem-c0074-scaling-limit-of-random-walk-on-the-high-dimensional-incipient-infinit",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0074",
+      "source_url": null
+    },
+    {
+      "id": "claim_af49ba706cb02a58203aa7beddb46d862b0e6447760a55b3570d351ab8c2249f",
+      "title": "Open problem: Random walk on the incipient infinite cluster of oriented percolation in dimensions 5 and 6",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). The critical dimension of oriented percolation is 4; describe the behaviour of simple random walk on the IIC of oriented percolation (Z^d x Z_+) for d = 5 and 6, where the mean-field heat-kernel proof (which needs d > 6) does not apply. Source: Kumagai: Random walks on disordered media and their scaling limits, Saint-Flour XL 2010, author version, Section 6.3 open problem, p. 58.\nPosed in Kumagai: Random walks on disordered media and their scaling limits, Saint-Flour XL 2010, author version\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.percolation:open-problem-c0126-random-walk-on-the-incipient-infinite-cluster-of-oriented-percolation",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0126",
+      "source_url": null
+    },
+    {
+      "id": "claim_b5e3fa35e1a6d931ebdc3e155642b0dc3bd61f17553d02dc415ed8ee523ff71e",
+      "title": "Technique: Kesten's Subdiffusivity Argument",
+      "body": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For simple random walk on the incipient infinite cluster of critical percolation, or more generally on critical random media with anomalous volume growth, Kesten's argument establishes subdiffusive behavior, that the walk's typical displacement after n steps scales as n^{1/(2+theta)} for some theta>0 rather than the diffusive n^{1/2}, by combining a volume-growth estimate showing balls of radius r typically contain of order r^{d_f} points, with d_f the fractal (volume) dimension of the cluster, and an effective-resistance estimate showing R_eff(0, B(0,r)^c) grows faster than linearly, of order r^{1+theta}, reflecting the long dangling ends and low-conductance bottlenecks characteristic of the critical cluster. Combining volume growth and resistance growth via the Nash/heat-kernel machinery, or a direct expected-exit-time computation, gives the subdiffusive exponent. The argument does not give the exact value of the subdiffusivity exponent in most dimensions, only bounds, with the precise exponent known rigorously only in specific settings such as sufficiently high dimension or tree-like/hierarchical models, and it is specific to critical (not subcritical or supercritical) percolation geometry, where the fractal, tree-like structure with many bottlenecks is essential to the argument. Typical failure: Assuming the subdiffusivity exponent established for one setting, such as high-dimensional or tree-based incipient infinite clusters where exact computation is possible, transfers to two-dimensional critical percolation, where the exact random-walk dimension remains a major open problem; volume-growth and resistance-growth exponents are model- and dimension-specific quantities that must be independently estimated rather than imported across models with superficially similar critical geometry. Canonical reference: Kesten, 1986, Annales de l'Institut Henri Poincare, Probabilites et Statistiques; Barlow, Jarai, Kumagai and Slade, 2008, Communications in Mathematical Physics.\nthe walk is on the incipient infinite cluster or a similarly statistically self-similar critical random graph\na known or boundable volume-growth exponent d_f for balls in the cluster\na known or boundable effective-resistance-growth exponent reflecting the bottleneck/dangling-end structure\ntypically also requires the cluster's law to have appropriate scale-invariance, or at least comparable behavior across scales",
+      "logical_id": "math:probability.percolation:kesten-subdiffusivity-technique",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:technique:kesten-subdiffusivity",
+      "source_url": null
+    },
+    {
+      "id": "claim_cb07d1072501831c094aaa8d74db5cbb23513f9a452c91562d6fe5fec13b3d04",
+      "title": "Attempt on Random walk on the incipient infinite cluster of oriented percolation in dimensions 5 and 6",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Identify which estimate needs d > 6 and whether it is an artefact. Result: The source's proof of the Alexander-Orbach behaviour for the oriented IIC uses a zigzag-path count converging like sum_m m^{(4-d)/2}, which needs d > 6, while the oriented IIC's mean-field structure (Hofstad-den Hollander-Slade) holds for d > 4. The zigzag count controls the resistance between the origin and level n via the number of paths that go up, come back down and go up again; in d = 5, 6 these counts diverge, meaning the crude flow bound fails, but the true resistance may still be of order n (mean-field, tree-like) because the divergent terms are overcounting: paths in the oriented IIC cannot return to earlier times, so a zigzag in the bound corresponds to two disjoint upward paths connected through the IIC's backbone, whose number is controlled by the two-point function squared, giving a convergent sum for d > 4 if the backbone is used correctly. So I expect the Alexander-Orbach value d_s = 4/3 to hold for the oriented IIC in d = 5, 6 as well, and the obstruction to be technical (the resistance lower bound of Kumagai-Misumi type needs a better flow construction using the backbone). This is a prediction with a proposed route (flow along the oriented backbone with branching at the pivotal levels), not a proof. Key identity: Oriented paths cannot return to earlier times, so the zigzag overcount should be replaceable by a backbone-branching flow with convergence for d > 4. Obstruction: The improved flow construction is not carried out.\nRefers to the open problem node open-problem-c0126-random-walk-on-the-incipient-infinite-cluster-of-oriented-percolation\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.percolation:attempt-c0126-random-walk-on-the-incipient-infinite-cluster-of-oriented-percolation",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0126",
+      "source_url": null
+    },
+    {
+      "id": "claim_e4a31ad0b76f954484bd05cd4acd3d7c573656dca0171170271e12f568408f7e",
+      "title": "Attempt on Spectral dimension of random walk on the incipient infinite cluster below the critical dimension",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Derive d_s in d = 2 from known exponents via the Einstein relation and locate what is rigorous. Result: On the IIC of two-dimensional critical percolation (which exists, Kesten) the walk is subdiffusive with d_s = 2 d_f/d_w where d_f = 91/48 is the fractal dimension of the IIC and d_w is the walk dimension; the Einstein relation d_w = d_f + zeta with zeta the resistance exponent gives d_s = 2 d_f/(d_f + zeta), and the conjectured resistance exponent of the 2D IIC is zeta ~ 0.98 (numerically the backbone resistance exponent), giving d_s = 2 x 1.896/(1.896 + 0.98) = 1.318, matching the numerics quoted by the source; the rigorous status: Kesten proved subdiffusivity with d_w > 2, and the resistance exponent is only known to lie in an interval (zeta > 0 from Kesten; zeta <= something from the one-arm/backbone dimension). A rigorous upper bound: d_s <= 2 d_f/(d_f + zeta_min) where zeta_min is any rigorous lower bound on the resistance exponent; with zeta >= (d_f - d_backbone)?? no, the rigorous lower bound of Kesten for the resistance across an annulus of the IIC uses the number of disjoint crossings (the backbone), giving resistance >= (log n)^c at least... Kesten's bound is R(0, B(n)^c) >= n^{epsilon} for some small unexplicit epsilon. So no explicit rigorous bound on d_s beyond d_s < 4/3?? not even that. Recorded: d_s in 2D is determined by the resistance exponent through d_s = 2 d_f/(d_f + zeta) (rigorous given that the Einstein relation holds, which is a theorem for strongly recurrent graphs with the volume and resistance exponents, Barlow-Coulhon-Kumagai), so the open content is the value of zeta; for 3 <= d < 6 the existence of the IIC is the first obstacle. Key identity: d_s = 2 d_f/(d_f + zeta) on the 2D IIC (Einstein relation); d_f = 91/48 known, zeta unknown (numerically about 0.98). Obstruction: Resistance exponent of the 2D IIC unknown; IIC existence unproved for 3 <= d < 6.\nRefers to the open problem node open-problem-c0125-spectral-dimension-of-random-walk-on-the-incipient-infinite-cluster-be\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.percolation:attempt-c0125-spectral-dimension-of-random-walk-on-the-incipient-infinite-cluster-be",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0125",
+      "source_url": null
+    }
+  ],
+  "pivot tree": [
+    {
+      "id": "claim_4b5570c164bb7083035ef007164ba3f488f267885fe13be34f7c616d4464fdc2",
+      "title": "Attempt on Randomized tree automata and endogeny",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Randomized tree automata and endogeny structural argument Result: Let each vertex state be its own independent Bernoulli(p) innovation, ignoring its children. The pivot tree is empty and the state is measurable from the marked tree, but for 0<p<1 it is independent of the unmarked tree and cannot be a measurable function of that tree. Check: Conditional variance given the bare tree is p(1-p)>0; conditional variance given innovations is0. Obstruction: A literal extension retaining only the unmarked-tree sigma-field is false. A useful theorem must specify the innovation sigma-field and then handle nontrivial child dependence.\nRefers to the open problem node open-problem-p0092-randomized-tree-automata-and-endogeny\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0092-randomized-tree-automata-and-endogeny",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0092",
+      "source_url": null
+    },
+    {
+      "id": "claim_7dda47a9f6df5c498d87572224dbdb77a93bbb5fe8737f5f803d118b97855d25",
+      "title": "Open problem: Multistate pivot-tree criterion for interpretation",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Extend the two-state interpretation criterion of Theorem1.7 to finite color sets of size at least3, covering critical and supercritical pivot trees even without positive regularity. Source: Random tree recursions: which fixed points correspond to tangible sets of trees?, Section6, PDF p.39, first paragraph.\nPosed in Random tree recursions: which fixed points correspond to tangible sets of trees?\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "logical_id": "math:probability.core:open-problem-p0090-multistate-pivot-tree-criterion-for-interpretation",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0090",
+      "source_url": null
+    }
+  ],
+  "parallelism": [
+    {
+      "id": "claim_76954f3788fa815f07dad88a8e380ebed06d7e6685e323ff3f09f47ec15d89cf",
+      "title": "Open problem: Optimal allocation between two exponential parallelism classes",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status unsolved). Characterize optimal allocation when two classes have different ordered concave speedup curves and unknown exponential inherent sizes. Source: Harchol-Balter: Open problems in queueing theory inspired by datacenter computing, Section3.4; PDF10-11. Status notes: Focused later-primary-source checks on 2026-09-07; offline concave scheduling, general FCFS threshold representation, SEK-SMOD and fork-join asymptotics credited. No present-openness certification.\nPosed in Harchol-Balter: Open problems in queueing theory inspired by datacenter computing\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "logical_id": "math:probability.core:open-problem-p0427-optimal-allocation-between-two-exponential-parallelism-classes",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0427",
+      "source_url": null
+    },
+    {
+      "id": "claim_e7f310c773111de6c135acf20f5d2bb077e530169fc9372b1396af1b8fa5b971",
+      "title": "Attempt on Optimal allocation between two exponential parallelism classes",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: Even with two jobs and no arrivals, continuation values change the allocation. Take four divisible servers and independent Exp(1) inherent job sizes. Use normalized concave speedups s1(b)=min(b,sqrt(b)) and s2(b)=min(b,b^(3/4)), including linear fractional-server behavior below one server. Allocate b to class one and 4-b to class two until the first completion, then all four to the survivor. Expected sum of completion times is V(b)=[2+s1(b)/(2*sqrt(2))+s2(4-b)/2]/[s1(b)+s2(4-b)]. The throughput maximizer is b=1: total rate increases below one and decreases above it. Yet V(81/64)<V(1). The slower departure rate improves the continuation state. Check: The first-completion time has mean 1/(r1+r2) and incurs holding cost two; survivor means are 1/(2*sqrt(2)) and 1/2. Independently, the sign of the right derivative V_prime(1) is the sign of 3^(3/4)*(3/(2*sqrt(2))+1/2)-4, which is negative by the rational bounds 3^(3/4)<23/10 and 1/(2*sqrt(2))<9/25. Obstruction: The no-arrival diagnostic does not determine a stationary optimal policy with Poisson arrivals, nor prove a universal allocation formula.\nRefers to the open problem node open-problem-p0427-optimal-allocation-between-two-exponential-parallelism-classes\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0427-optimal-allocation-between-two-exponential-parallelism-classes",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0427",
+      "source_url": null
+    }
+  ],
+  "iterated 3-majority": [
+    {
+      "id": "claim_b1e9ea5389562a86c918dde5f185f5c409aac1a1d44a85c65f367f5a5de84d0e",
+      "title": "Open problem: Revealment exponent of the iterated 3-majority function",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). The revealments of the iterated 3-majority function on 3^k bits decay like n^{-sigma}; determine sigma. Source: Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems, Exercise VIII.5 note, p. 97.\nPosed in Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.percolation:open-problem-c0021-revealment-exponent-of-the-iterated-3-majority-function",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0021",
+      "source_url": null
+    },
+    {
+      "id": "claim_d872789453c08f9a8db15d0be9e0cd2ea9565fcb9844d0e27604816a854697bd",
+      "title": "The optimal revealment of iterated 3-majority on 3^k bits decays like n^{-sigma} with sigma in [log(6/5)/log 3, 1 - log 2/log 3]",
+      "body": "PRIVATE AUTHOR-CHECKED DRAFT, no independent review. Let f_k be the iterated majority-of-three function on n = 3^k bits. The greedy recursive algorithm (evaluate two random children, the third only if they disagree) has revealment (5/6)^k = n^{-log(6/5)/log 3} = n^{-0.1660}, so the optimal revealment delta(f_k) is at most that. Every leaf has influence 2^{-k} = n^{-log 2/log 3}, and the inequality delta(f) >= Var(f)/(n max_i I_i) (Garban-Steif notes, Theorem VIII.7) gives delta(f_k) >= (2/3)^k = n^{-(1 - log 2/log 3)} = n^{-0.3691}. So the exponent sigma asked for in Exercise VIII.5 of the Garban-Steif notes lies in [0.1660, 0.3691]; the exact value is open.\nIndependent uniform bits\nRevealment is the maximum over leaves of the probability the algorithm reads that leaf\nGarban-Steif Theorem VIII.7",
+      "logical_id": "math:probability.boolean:iterated-three-majority-revealment-exponent-between-0166-and-0369",
+      "proof_text": "Greedy revealment: at each level a given child is one of the two evaluated first with probability 2/3, or is the third child with probability 1/3 and is then evaluated only if the first two disagree, which for independent uniform bits happens with probability 1/2; so the probability that a fixed leaf is read is (2/3 + 1/6)^k = (5/6)^k. Influence: flipping a leaf flips the output iff at every level above it the two sibling subtrees disagree, each with probability 1/2 independently across levels, giving 2^{-k}. Theorem VIII.7 of the source for the {-1,1}-valued balanced function (Var f = 1) with n max_i I_i = 3^k 2^{-k} gives delta >= (2/3)^k. Exponents follow from n = 3^k.",
+      "source_id": "owner-probability-intake-claude-20260907:maj",
+      "source_url": null
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+--- a/math-brain-inbox/w402/bundle_001.json
++++ b/math-brain-inbox/w402/bundle_001.json
+@@ -0,0 +1,167 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w402",
++  "bundle_slug": "p0003-local-observable-boundary-obstruction-20261010",
++  "entries": [
++    {
++      "key": "assigned",
++      "namespace": "probability.self_avoiding_walk",
++      "logical_name": "p0003-fixed-length-source-scope",
++      "kind": "concept",
++      "title": "P0003: fixed-length source scope and unverified current status",
++      "statement": "Historical conjecture, current openness UNKNOWN: Grimmett Question 2.2 asks whether the uniform n-step self-avoiding walk on the honeycomb lattice, starting at the origin with free endpoint, converges weakly after a suitable rescaling to an SLE(8/3) random curve. The source does not specify rescaling, SLE geometry or stopping, parametrization, or topology. The critical-fugacity boundary-to-boundary chordal conjecture is a related formulation; equivalence to this fixed-length question is not established here.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability; self-avoiding walk; discrete complex analysis",
++      "source": {
++        "source_id": "arxiv:2205.07318v1:question-2-2",
++        "url": "https://arxiv.org/pdf/2205.07318",
++        "revision": "as-read-2026-10-10",
++        "license": "arxiv-nonexclusive (mathematical statement paraphrased)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "bridge",
++      "namespace": "probability.self_avoiding_walk",
++      "logical_name": "honeycomb-local-identity-compactness-bridge",
++      "kind": "concept",
++      "title": "Proposed honeycomb observable compactness bridge",
++      "statement": "Proposed observable compactness bridge (false for arbitrary complex midpoint fields): on honeycomb domains with mesh tending to zero, the vertex relation sum_{p adjacent to v}(p-v)F(p)=0, a uniform sup bound, and a fixed full boundary trace would force a locally uniform continuous holomorphic subsequential limit. This proposed implication needs extra hypotheses excluding lattice cycle modes. Its failure does not refute SAW-to-SLE convergence.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability; self-avoiding walk; discrete complex analysis",
++      "source": {
++        "source_id": "owner-probability-campaign-w402-20261010:bridge",
++        "url": "file:///~/brain_workers/w402/ATTEMPT.md",
++        "revision": "author-proof-20261010-review-pending",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "kernel",
++      "namespace": "probability.self_avoiding_walk",
++      "logical_name": "honeycomb-midpoint-identity-boundary-kernel",
++      "kind": "lemma",
++      "title": "Exact boundary solvability and cycle freedom of the honeycomb vertex relation",
++      "statement": "Let V be a finite honeycomb vertex set, E the edges with both endpoints in V, H the boundary mid-edges with exactly one endpoint in V, and c the number of components of (V,E). Prescribe complex g on H and b_v=sum_{h in H incident to v}(h-v)g(h). Arbitrary complex interior midpoint values F satisfying sum_{p adjacent to v}(p-v)F(p)=0 exist iff sum_{v in C}b_v=0 on every component C. If solvable, their complex affine dimension is |E|-|V|+c. For a connected plane graph this equals the number of bounded faces. This is an author-proved auxiliary result, pending full independent review.",
++      "proof_text": "Orient internal edges e=(u,v), put d_e=v-u and J_e=d_e F(p_e)/2. The vertex equations become B J=-b, where B has +1 at the tail and -1 at the head and b is the prescribed boundary contribution. Each component has one row dependency. A spanning-tree incidence minor with a root row removed has determinant +/-1 by leaf elimination, so rank B=|V|-c. Its image consists precisely of vectors with zero sum on each component. This proves the compatibility condition and affine dimension |E|-|V|+c. Euler gives the bounded-face count in the connected plane case.",
++      "assumptions": [
++        "Finite honeycomb graph; arbitrary complex midpoint fields"
++      ],
++      "domain": "probability; self-avoiding walk; discrete complex analysis",
++      "source": {
++        "source_id": "owner-probability-campaign-w402-20261010:kernel",
++        "url": "file:///~/brain_workers/w402/ATTEMPT.md",
++        "revision": "author-proof-20261010-review-pending",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "mode",
++      "namespace": "probability.self_avoiding_walk",
++      "logical_name": "honeycomb-midpoint-six-edge-mode",
++      "kind": "lemma",
++      "title": "Six-edge boundary-preserving mode of the honeycomb vertex relation",
++      "statement": "On a honeycomb mesh of side length delta, choose a complete interior hexagonal face with counterclockwise vertices v_0,...,v_5. The complex midpoint field H((v_j+v_{j+1})/2)=delta/(v_{j+1}-v_j), with indices modulo 6 and H=0 elsewhere, satisfies every vertex relation sum_p(p-v)H(p)=0, has six support points of modulus 1, and vanishes at every boundary midpoint. Adding H to a solution preserves every boundary value. This is an author-proved auxiliary result, pending full independent review.",
++      "proof_text": "On a complete interior hexagon v_0,...,v_5, define H at side midpoints by delta/(v_{j+1}-v_j) and zero at all other midpoints. At v_j the outgoing contribution is delta/2 and the incoming contribution is -delta/2; the third is zero. Other vertices see zero. Since side lengths are delta, the six nonzero values have modulus one. Every prescribed boundary value is unchanged by adding H.",
++      "assumptions": [
++        "Finite honeycomb graph; arbitrary complex midpoint fields"
++      ],
++      "domain": "probability; self-avoiding walk; discrete complex analysis",
++      "source": {
++        "source_id": "owner-probability-campaign-w402-20261010:mode",
++        "url": "file:///~/brain_workers/w402/ATTEMPT.md",
++        "revision": "author-proof-20261010-review-pending",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "obstruction",
++      "namespace": "probability.self_avoiding_walk",
++      "logical_name": "honeycomb-midpoint-bounded-boundary-compactness-obstruction",
++      "kind": "lemma",
++      "title": "Bounded fixed-boundary honeycomb midpoint fields can fail compactness",
++      "statement": "There exist simply connected honeycomb patches tending to a fixed hexagonal domain, with mesh delta_n tending to zero, and arbitrary complex midpoint fields F_n with full boundary trace identically 1, sup norm at most 2, and sum_{p adjacent to v}(p-v)F_n(p)=0 at every vertex, but no subsequence converges locally uniformly to a continuous function near a fixed interior point. One may take F_n=1+H_delta_n on a central face; two midpoints at distance sqrt(3)delta_n/2 have value difference of modulus 1. These fields are not asserted to be SAW observables. This is an author-proved auxiliary result, pending full independent review.",
++      "proof_text": "The constant field 1 satisfies the vertex identity because the three displacement vectors sum to zero. Add the six-edge field H from the preceding lemma. Then F=1+H has full boundary trace 1 and sup norm at most 2. A face-side midpoint p and the midpoint q of the third edge at the same vertex have separation sqrt(3)delta/2 and value difference of modulus 1. Center the chosen face near a fixed interior point while delta tends to zero. Locally uniform convergence to any continuous f would make the difference at p,q tend to zero, a contradiction. This argument uses arbitrary complex fields; it does not say the actual SAW observable has these modes.",
++      "assumptions": [
++        "Finite honeycomb graph; arbitrary complex midpoint fields"
++      ],
++      "domain": "probability; self-avoiding walk; discrete complex analysis",
++      "source": {
++        "source_id": "owner-probability-campaign-w402-20261010:obstruction",
++        "url": "file:///~/brain_workers/w402/ATTEMPT.md",
++        "revision": "author-proof-20261010-review-pending",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "minimal",
++      "namespace": "probability.self_avoiding_walk",
++      "logical_name": "honeycomb-midpoint-kernel-minimal-linear-constraints",
++      "kind": "lemma",
++      "title": "Minimal linear constraints for the honeycomb midpoint boundary kernel",
++      "statement": "For a connected finite plane honeycomb graph with f bounded faces and compatible prescribed boundary midpoint values, the homogeneous vertex-relation kernel has complex dimension f. Fewer than f additional complex linear conditions cannot determine interior midpoint values uniquely. Exactly f suffice: orient each internal edge, put J_e=(v-u)F(p_e)/2, and impose c_i^T J=0 on the real signed cycle vectors of the bounded faces. These constraints give a unique solution to the algebraic boundary problem; they are not claimed to hold for the actual SAW observable or to prove a scaling limit. This is an author-proved auxiliary result, pending full independent review.",
++      "proof_text": "The oriented boundaries of the f bounded faces give real cycle vectors c_i. They are independent: zero edge coefficients force neighboring face coefficients to agree, and exterior coefficient zero propagates through the connected dual. Their number f=|E|-|V|+1 equals dim ker B, so C=[c_i] spans the homogeneous kernel. If J=C a and C^T J=0 then C^T C a=0; positive definiteness gives a=0, including complex a. For an inhomogeneous solution J_0, use a=-(C^T C)^(-1)C^T J_0 to satisfy the extra conditions. Fewer than f linear constraints leave a nonzero kernel by rank-nullity. These are algebraic constraints, not conditions proved for the SAW path sum.",
++      "assumptions": [
++        "Finite honeycomb graph; arbitrary complex midpoint fields"
++      ],
++      "domain": "probability; self-avoiding walk; discrete complex analysis",
++      "source": {
++        "source_id": "owner-probability-campaign-w402-20261010:minimal",
++        "url": "file:///~/brain_workers/w402/ATTEMPT.md",
++        "revision": "author-proof-20261010-review-pending",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "mode",
++      "to_key": "kernel",
++      "kind": "specializes",
++      "rationale": "The six-edge face circulation is a nonzero element of the classified homogeneous boundary kernel."
++    },
++    {
++      "from_key": "obstruction",
++      "to_key": "mode",
++      "kind": "depends_on",
++      "rationale": "Adding the explicitly proved six-edge field to the constant field gives the persistent unit oscillation."
++    },
++    {
++      "from_key": "obstruction",
++      "to_key": "bridge",
++      "kind": "refutes",
++      "rationale": "The fields meet the proposed local equation, bound and full boundary trace, but have no continuous locally uniform subsequential limit."
++    },
++    {
++      "from_key": "minimal",
++      "to_key": "kernel",
++      "kind": "depends_on",
++      "rationale": "Rank-nullity and the exact face count prove the necessary number of extra independent linear conditions."
++    },
++    {
++      "from_key": "kernel",
++      "to_key": "bridge",
++      "kind": "semantic_association",
++      "rationale": "A face-dimensional kernel explains why the boundary trace plus vertex relation leaves interior ambiguity."
++    },
++    {
++      "from_key": "bridge",
++      "to_key": "assigned",
++      "kind": "semantic_association",
++      "rationale": "The observable bridge is a related SAW-to-SLE route; no equivalence to the fixed-length free-endpoint target is asserted."
++    },
++    {
++      "from_key": "assigned",
++      "to_existing_logical": "math:probability.core:open-problem-p0003-hexagonal-self-avoiding-walk-scaling-limit",
++      "kind": "cites",
++      "rationale": "The new source-scope note identifies the original source of this exact existing P0003 concept; it does not certify present openness."
++    }
++  ]
++}

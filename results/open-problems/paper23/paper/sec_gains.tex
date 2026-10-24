@@ -1,0 +1,143 @@
+\section{Uniform gains, gradient bounds, and stability}\label{sec:gains}
+
+This section proves the three network estimates that the submatrix theory supplies: a two-sided
+per-layer gain bound uniform over all inputs and all gate patterns of a fixed density
+(\Cref{thm:uniform-gain}); a lower bound on the gradient that holds simultaneously at every input
+(\Cref{prop:gradlb}); and a stability estimate showing the gradient varies slowly, so that a bound at
+a net point extends to a neighborhood (\Cref{thm:stability}). Throughout, the network is as in
+\Cref{sec:networks} under \Cref{ass:nondeg}, weights are Gaussian with the entry-variance
+normalization stated, and the wide regime $dL\log\bar n=o(\min_\ell n_\ell)$ is in force. Proofs of the
+lemmas are completed in \Cref{app:netlemmas}.
+
+\subsection{Two-sided per-layer gain}
+The forward map of one layer, restricted to a gate of density $\alpha$, gains between
+$\sqrt{\kcheck(\alpha)}$ and $\sqrt{\kappa(\alpha)}$ on any direction --- and the extremes are attained
+by an adversary choosing which coordinates to keep. This is the network reading of the operator-norm
+brackets of \Cref{prop:A2}, made uniform in the direction.
+
+\begin{theorem}[Uniform two-sided gain]\label{thm:uniform-gain}
+Let $W$ be a $p\times q$ Gaussian matrix with entry variance $1/q$, and let $V\subseteq\R^q$ be a fixed
+subspace with $\dim V=d$. If $d\log p=o(p)$, then w.h.p.\ simultaneously for every $x\in V$ and every
+$T\subseteq[p]$ with $|T|=\alpha p$,
+\[
+  \bigl(\sqrt{\tfrac pq\,\kcheck(\alpha)}-o(1)\bigr)\|x\|\ \le\ \|P_TWx\|\ \le\
+  \bigl(\sqrt{\tfrac pq\,\kappa(\alpha)}+o(1)\bigr)\|x\|,
+\]
+and the extremes are sharp: for each $x$ there are choices of $T$ approaching each end. With the
+signal-preserving normalization $p=q$ the factors are $\sqrt{\kcheck(\alpha)}$ and
+$\sqrt{\kappa(\alpha)}$.
+\end{theorem}
+
+\begin{proof}[Proof sketch; details in \Cref{app:netlemmas}]
+For a fixed unit $x\in V$, $Wx$ is a standard Gaussian vector in $\R^p$ scaled by $1/\sqrt q$, so its
+coordinates are i.i.d.\ $N(0,1/q)$. The largest $\alpha p$ squared coordinates sum to
+$\tfrac pq\kappa(\alpha)(1+o(1))$ and the smallest to $\tfrac pq\kcheck(\alpha)(1+o(1))$ by the
+order-statistic law \Cref{lem:order}, with Gaussian concentration giving the deviation probability
+$e^{-cp}$ for any fixed threshold. A choice of $T$ selects some $\alpha p$ of the coordinates, so
+$\|P_TWx\|^2$ lies between these two extremes for that $x$; taking $T$ to be the top or bottom
+coordinates attains them. To make the statement uniform over $x\in V$, take an $\eps$-net of the unit
+sphere of $V$, of size $(3/\eps)^d$, apply the bound at each net point with a union bound (the total
+failure probability is $(3/\eps)^d e^{-cp}\to0$ since $d\log(1/\eps)=o(p)$), and extend to all $x$ by
+the $1$-Lipschitz dependence of $x\mapsto\|P_TWx\|$ on $x$ together with $\|W\|_\op=O(\sqrt{p/q})$; the
+supremum over $T$ is handled at the same time because the top/bottom-$\alpha$ selections are themselves
+Lipschitz in $x$.
+\end{proof}
+
+Applied layer by layer along a network, \Cref{thm:uniform-gain} gives a deterministic two-sided
+sandwich for the forward norm and, transposed, for the backward one: uniformly over inputs, every
+realized pattern, and the worst adversarial pattern,
+\begin{equation}\label{eq:layerbracket}
+  \prod_{\ell=1}^L\sqrt{\kcheck(\alpha_\ell)}\ \le\ \frac{\|J(x)v\|}{\|v\|}\ \le\
+  \prod_{\ell=1}^L\sqrt{\kappa(\alpha_\ell)}\qquad(v\ \text{worst direction}),
+\end{equation}
+up to $o(1)$, where $\alpha_\ell$ are the pattern densities. The upper product is the network Lipschitz
+constant that the certificate of \Cref{sec:certificates} uses; the lower product is the worst-case
+gain, exponentially small in $L$ at the adversarial pattern (each $\kcheck(1/2)=0.071$), which is the
+source of the certification gap.
+
+\subsection{Gradient lower bound}
+The gradient at a realized input is a specific product at the realized pattern, whose density is
+$\Theta(1)$ rather than adversarial, so it does not suffer the $\kcheck$ decay of
+\eqref{eq:layerbracket}. With the signal-preserving normalization the backward pass is $\Theta(1)$ at
+every input.
+
+\begin{proposition}[Uniform gradient lower bound]\label{prop:gradlb}
+Assume the entry variances are chosen signal-preserving, so that $\EE\|h_\ell(x)\|^2=\|h_{\ell-1}(x)\|^2$
+(e.g.\ variance $2/n_{\ell-1}$ for ReLU), and $\sigma_\ell$ satisfies the pointwise nondegeneracy
+$\sigma_\ell'(r)^2+\sigma_\ell'(-r)^2\ge 2c^2$ for a constant $c>0$ and all $r$. Then there is
+$c_g=c_g(c,L)>0$ such that w.h.p.\ over the weights,
+\[
+  \|\nabla F(x)\|\ \ge\ c_g\,\|w\|\qquad\text{simultaneously for all }x\ \text{on the sphere of radius }R.
+\]
+For ReLU, $c^2=1/2$ and $c_g$ is bounded below by an absolute constant to the power $L$.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+For a fixed $x$, the symmetric-weight decoupling of \cite{bubeckCGT21} replaces each gate $D_\ell(x)$
+in distribution by an independent diagonal $\Sigma_\ell$ with entries i.i.d.\ as $\sigma_\ell'(Z)$,
+$Z\sim N(0,\cdot)$, so that $\nabla F(x)^\top$ has the law of $w^\top\Sigma_LW_L\cdots\Sigma_1W_1$ with
+the $\Sigma$'s independent of the $W$'s. The Frobenius norm of this product obeys the per-layer
+recursion $\EE\|\,\cdot\,\|_F^2\ge (2c^2\cdot\tfrac{\text{var factor}}{1})\,\EE\|\,\cdot\,\|_F^2$ of
+the previous layer (the pointwise nondegeneracy lower-bounds each layer's contribution and the
+signal-preserving variance cancels the mean gate mass), giving
+$\EE\|\nabla F(x)\|^2\ge c_g^2\|w\|^2$ with $c_g^2=(2c^2\cdot\tfrac12)^{L}\cdot(1-o(1))=1$ for ReLU up
+to lower-order corrections; concentration over the $\Theta(n_L\cdots n_1)$ Gaussian entries gives the
+bound whp for that $x$, with failure probability $e^{-c'\min_\ell n_\ell}$. Uniformity over $x$ comes
+from an $\eps$-net of the sphere of radius $R$ (size $(CR/\eps)^d$), a union bound (which needs
+$d\log(R/\eps)=o(\min_\ell n_\ell)$), and the stability estimate \Cref{thm:stability}, which controls
+$\|\nabla F(x')-\nabla F(x)\|$ for $\|x'-x\|\le\eps$. The nondegeneracy hypothesis holds for every
+$[0,1]$-slope activation with $\EE[\sigma'(Z)^2]>0$, in particular for ReLU ($c^2=\tfrac12$), leaky
+ReLU, and any odd $C^1$ activation with $\sigma'(0)>0$; biases only shift the gate density and are
+absorbed into $c$ through \Cref{ass:nondeg}.
+\end{proof}
+
+We isolate what is imported and what is new. The fixed-$x$ lower bound is the recursion of
+\cite{danielyM26,advExt} together with the decoupling of \cite{bubeckCGT21}; the point here is that it
+holds under \Cref{ass:nondeg} with biases and for any $[0,1]$-slope activation, and that its
+uniformity over inputs follows from the net plus \Cref{thm:stability}. The stability estimate itself is
+where the submatrix operator-norm bracket enters, and it is new in the two-sided form we need.
+
+\subsection{Stability: few gates flip}
+Along a short segment the gate pattern changes only at the neurons whose preactivation is near zero,
+and there are few of these because Gaussian preactivations anticoncentrate. The Jacobian change is
+then an operator-norm perturbation supported on a thin gate, bounded by the max-over-thin-patterns
+statistic of \Cref{prop:A2} at the small density of flipped neurons.
+
+\begin{theorem}[Gradient stability]\label{thm:stability}
+Under the hypotheses of \Cref{prop:gradlb}, there is a constant $C=C(L)$ such that w.h.p.\ over the
+weights, for all inputs $x$ on the sphere and all $x'$ with $\|x'-x\|\le r$,
+\[
+  \|\nabla F(x')-\nabla F(x)\|\ \le\ C\,\|w\|\,\Bigl(\tfrac{r\sqrt{\bar n}}{\|x\|}\log\tfrac{\|x\|}{r\sqrt{\bar n}}\Bigr)^{1/2}.
+\]
+In particular, for $r\le \|x\|/\sqrt{\bar n}\cdot\eta$ the right side is $C\|w\|(\eta\log(1/\eta))^{1/2}$,
+which is $o(\|w\|)$ as $\eta\to0$; the stability radius needed for the attack, $r\asymp\|x\|/\sqrt{n_L}$
+up to logarithms, gives a change small compared with the lower bound $c_g\|w\|$ of \Cref{prop:gradlb}.
+\end{theorem}
+
+\begin{proof}[Proof sketch; details in \Cref{app:netlemmas}]
+Write the Jacobian difference by the telescoping identity
+\[
+  \nabla F(x')^\top-\nabla F(x)^\top=\sum_{\ell=1}^L
+  w^\top D_L(x')W_L\cdots\bigl(D_\ell(x')-D_\ell(x)\bigr)W_\ell\cdots D_1(x)W_1,
+\]
+so it suffices to bound each $\|(D_\ell(x')-D_\ell(x))W_\ell(\cdots)\|$. The gate difference
+$D_\ell(x')-D_\ell(x)$ is supported on the neurons whose slope changed between $x$ and $x'$, i.e.\ those
+with a preactivation sign change; a neuron flips only if its preactivation at $x$ is within
+$O(\|z_\ell(x')-z_\ell(x)\|_\infty)$ of zero. Since the preactivations are Gaussian of scale
+$\varsigma_\ell\asymp\|h_{\ell-1}\|/\sqrt{n_{\ell-1}}\asymp\|x\|/\sqrt{n_{\ell-1}}$ and the layer map is
+$O(1)$-Lipschitz, the number of flipped neurons at layer $\ell$ is, by the anticoncentration bound
+$\PP(|N(0,\varsigma^2)|\le\tau)\le\tau/\varsigma$, at most $n_\ell\cdot O(r\sqrt{n_{\ell-1}}/\|x\|)=:%
+\delta_\ell n_\ell$ w.h.p., with $\delta_\ell=O(r\sqrt{\bar n}/\|x\|)$. The factor
+$(D_\ell(x')-D_\ell(x))W_\ell$ is then a Gaussian block on a pattern of density $\delta_\ell$, whose
+operator norm is at most $2\sqrt{\kappa(\delta_\ell)}+o(1)$ by \Cref{prop:A2}, and
+$\kappa(\delta)\le C\delta\log(1/\delta)$ for small $\delta$ (the top-$\delta$ mass of a Gaussian).
+The remaining factors are $O(1)$ in operator norm by \Cref{thm:uniform-gain}, and $\|w^\top D_L\cdots\|$
+contributes $\|w\|$; multiplying and summing over $\ell$ gives the stated bound, with the logarithm
+from $\kappa(\delta_\ell)\le C\delta_\ell\log(1/\delta_\ell)$. Uniformity over $x,x'$ is again by a net
+plus the $O(1)$-Lipschitz dependence of every factor.
+\end{proof}
+
+The three estimates combine into the input of the constructive attack: a small output (next section),
+a gradient bounded below by $c_g\|w\|$ (\Cref{prop:gradlb}), and a gradient stable to within
+$o(\|w\|)$ over the attack segment (\Cref{thm:stability}). The compatibility of these three is what
+\Cref{sec:fragility} verifies.

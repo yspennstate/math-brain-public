@@ -1,0 +1,98 @@
+\section*{Parity lifts do not repair semigroup monotonicity}
+
+Let $g:\{-1,1\}^n\to\{-1,1\}$ and define
+\[
+ F(x,z)=g(x_1z,\ldots,x_nz).
+\]
+If $g=\sum_S\widehat g(S)\chi_S$, then
+\[
+ F=\sum_{|S|\text{ even}}\widehat g(S)\chi_S(x)
+ +\sum_{|S|\text{ odd}}\widehat g(S)\chi_S(x)z.
+\]
+Thus the map
+\[
+ \lambda(S)=\begin{cases}S,&|S|\text{ even},\\
+ S\cup\{z\},&|S|\text{ odd}
+ \end{cases}
+\]
+is injective and $\widehat F(\lambda(S))=\widehat g(S)$.  In
+particular every occupied Fourier set of $F$ has even cardinality and
+\[
+ H(F)=H(g),\qquad
+ I(F)=I(g)+\Pr_{S\sim\widehat g^2}(|S|\text{ odd})\le 2I(g).
+\tag{1}
+\]
+
+For a squared Fourier law $p_S$ and energy $e_S$, put
+\[
+ p_t(S)=\frac{p_Se^{-2te_S}}{\sum_Tp_Te^{-2te_T}},\qquad
+ \mathcal V_-(p,e)=H(p_\infty)+\int_0^\infty[-H'(p_t)]_+\,dt.
+\]
+For the lift, $e_S=|S|+\mathbf1_{\{|S|\text{ odd}\}}$.  Since
+$\mathcal V_-(F)\ge H(F)$, a universal inequality
+$\mathcal V_-(F)\le C I(F)$ even only on this parity-lift class implies
+full FEI with constant $2C$ by (1).  Hence the even-support restriction is
+not a simpler terminal class for the semigroup target.
+
+It also does not restore pointwise entropy dissipation.  Let $N=2^r$,
+\[
+ g_r(x)=1-2\mathbf1_{\{x=\mathbf1\}},\qquad
+ h_r(x)=\chi_{[r]}(x)g_r(x),
+\]
+where the displayed point may equivalently be moved to the origin in
+$\mathbb F_2^r$.  The squared spectrum of $h_r$ consists of one mass
+\[
+ a=(1-2/N)^2
+\]
+at $A=[r]$ and $N-1$ masses $b=4/N^2$.  Under the parity lift the heavy
+atom has energy
+\[
+ e_A=r+\mathbf1_{\{r\text{ odd}\}}.
+\]
+The mean lifted energy of the other atoms is $\bar e$, and direct counting
+gives
+\[
+ e_A-\bar e=
+ \begin{cases}
+ \dfrac{N(r-1)}{2(N-1)},&r\text{ even},\\[6pt]
+ \dfrac{N(r+1)}{2(N-1)},&r\text{ odd}.
+ \end{cases}
+\tag{2}
+\]
+Writing $c=1-a=(N-1)b$, the two-mass covariance identity gives, in nats,
+\[
+ H_F'(0)=2ac(e_A-\bar e)\log(a/b)>0\qquad(r\ge3).
+\tag{3}
+\]
+Thus normalized Fourier-degree damping can initially create entropy even
+for genuine Boolean functions whose occupied Fourier sets all have even
+size.
+
+Two exact positive controls remain useful.  If the source squared spectrum
+is uniform on its support, then $\log p$ is constant and
+\[
+ H'(t)=-4t\operatorname{Var}_t(e)\le0.
+\tag{4}
+\]
+Consequently the parity lift of ordinary addressing has
+\[
+ \mathcal V_-=2a,\qquad I=\frac{a+3}{2},\qquad
+ \frac{\mathcal V_-}{I}=\frac{4a}{a+3}<4.
+\tag{5}
+\]
+For the unshifted point defect, the unique heavy atom is at energy zero
+and all excited atoms have equal mass $b$.  At every time,
+$\operatorname{Cov}_t(e,\log p)\le0$, so again $H'(t)\le0$.  Its parity
+lift satisfies
+\[
+ \mathcal V_-=H(g_r),\qquad I=\frac{2(r+1)}{2^r},\qquad
+ \frac{\mathcal V_-}{I}<4.
+\tag{6}
+\]
+For (6), put $\delta=2^{1-r}$.  The excited contribution to entropy is at
+most $4\delta(r-1)$ and the heavy-atom contribution is at most
+$2\delta/\ln2$, while $4I=4\delta(r+1)$.
+
+Equations (1)--(6) do not prove the universal variation inequality.  They
+show that parity erasure is simultaneously a full-FEI-hard restriction and
+a counterexample to restoring monotonicity.

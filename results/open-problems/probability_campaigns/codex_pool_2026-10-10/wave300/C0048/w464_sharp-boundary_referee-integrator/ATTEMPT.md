@@ -1,0 +1,11 @@
+# C0048 referee attempt, 2026-10-10
+
+Exact source: Duminil-Copin, *Lectures on the Ising and Potts models on the hypercubic lattice* (2017), Conjecture 2, printed p. 93, https://www.unige.ch/~duminil/publi/2017PIMS.pdf. For each integer d,q>=3, the target is positive critical spontaneous magnetization for the nearest-neighbor zero-field ferromagnetic q-state Potts model on Z^d. In the delta-spin convention, m(beta)=[q mu^1_beta(sigma_0=1)-1]/(q-1)=phi^wired_{p,q}(0<->infinity), p=1-exp(-beta). Its value at beta_c must be positive. The source uses a rescaled beta; positivity is invariant under that rescaling. Current openness is UNKNOWN; this is no novelty claim.
+
+My lane tested the boundary of two proposed bridges. First, a finite-energy inequality for each edge may be multiplied across cuts only after conditioning on all previous cut-crossing events. The exact q=3 triangle at p=1/2 has Z=66 after omitting the common 1/8 factor. Its single-edge event has numerator 18 and two-edge event numerator 6. Therefore P(A)=3/11, P(A and B)=1/11, and 1/11>9/121=P(A)P(B). The stronger marginal-product bridge fails even though the edge sets {e1},{e2} are disjoint. Conditional exposure survives: P(A and B)=1/11<=p^2=1/4. This counterexample is finite and makes no claim about C0048's truth.
+
+Second, the exact q=3 mean-field coexistence barrier is Delta=log3-(19/12)log2=0.001129252781529618... . The unmodified Biskup-Chayes (1.12) allowance for q=3 is (2J/3)I_d and I_d>=1/(2d), so at J0=4log2 it is at least 4log2/(3d). At d=3 this lower bound alone is 0.30806541358..., over 272 times Delta. This establishes only that the coarse allowance cannot certify a below-barrier argument at d=3. It is not a lower bound on the real Gibbs error. My independent rederivation and peer verdicts are in REVIEW_PACKET.md; the exact arithmetic reproducer is referee_repro.py.
+
+Single hardest open piece: a lattice-specific proof that phi^wired_{p_c(3,3),3}(0<->infinity)>0 on ordinary Z^3. Neither a six-regular strip obstruction nor a mean-field barrier handles this lower bound.
+
+NEXT: Submit a scoped draft bundle with the finite-energy rule, triangle warning and the exact mean-field barrier; request an independent referee for the triangle example before promotion beyond draft.

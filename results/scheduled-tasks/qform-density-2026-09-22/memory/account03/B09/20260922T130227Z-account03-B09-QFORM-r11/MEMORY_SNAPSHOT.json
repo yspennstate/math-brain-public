@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260922T130227Z-account03-B09-QFORM-r11",
+  "source_control_commit_initial": "8cad491c361359887f9550ad718c10cd10d14f5d",
+  "source_control_commit_refresh": "5d3e5ab5f885d791a3b995109c8710e49688ccec",
+  "control_revision": "2026-09-22.5",
+  "corrections_consumed": ["QFORM-CROSSMINOR-ALONE-FALSE","QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH","QFORM-TWOSHEET-XRAY-ONLY-FALSE","QFORM-UV-CONDITIONAL-CAP-FALSE","QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"],
+  "partner": {
+    "assigned": "account04/B09",
+    "completed_current_handoff_observed": false,
+    "compatible_result_applied": {
+      "worker": "account02/B09",
+      "run_id": "20260922T115241Z-account02-B09-QFORM-r1",
+      "canonical_commit": "fa592b592c61bd1597aa8cf3270c3c9f58f410bf",
+      "claim": "QFORM-MULTIPIVOT-BILINEAR-SMALLBALL-v1 plus exact curved-2x2 logarithmic counterexample"
+    }
+  },
+  "new_result": {
+    "id": "QFORM-FULL-BLOCK-BILINEAR-ABSORPTION-v1",
+    "status": "PROVED_SUPPORTING_LEMMA_PENDING_INDEPENDENT_REVIEW",
+    "statement": "If disjoint original-coordinate I,J have equal size m>=3 and B=A[I,J] is invertible, then arbitrary within-block curvature, signs, outside couplings and independent coordinate densities <=1 satisfy ||p_{X^TAX}||_infinity <= m/(m-2)|det B|^{-1/m}; the density is continuous and vanishes at infinity.",
+    "proof_core": "Condition outside I union J; absorb same-side terms into unit-modulus L2 amplitudes; Plancherel on 2u^TBv gives |phi(t)| <= min(1,pi^(m/2)|t|^(-m/2)|det B|^(-1/2)); integrate exactly.",
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_commit": "446d0a33ef626b11ed5da529f2cec821732e97e9",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260922T130227Z-account03-B09-QFORM-r11/REPORT.md"
+  },
+  "full_target_status": "OPEN",
+  "unresolved_implication": "QFORM-MIXED-HESSIAN-AGGREGATION-v1: aggregate mixed-coordinate curvature from the three-large-eigenvalue hypothesis before reciprocal-minor payment, or route the complementary localized branch to a source-valid product-preserving smoother; fixed-minor and single-Schur extraction are insufficient.",
+  "next_step": "Attack determinant-mass aggregation at the oscillatory-operator level, with diagonal/localized and high-cardinality hyperbolic-square branches retained explicitly.",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "native_receiver_use": false
+}

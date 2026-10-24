@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-20T16:44:25Z",
+  "claim_id": "RS-2026-CL-A",
+  "native_role": "C02 / 6aa7b4b639a08191b893e2b7dd6cdf59",
+  "status": "PROVED PARTIAL / FACTORIAL-AWARE LINEAR-DEGREE GRAPHON AMPLIFICATION / AUDIT-PENDING",
+  "E_framework": {
+    "old": 1,
+    "new": 1,
+    "reason": "The unrestricted source framework remains unproved; the bounded-graphon sufficient theorem strengthened from an n^(1/3-o(1)) degree window to a positive linear-degree window."
+  },
+  "old_claim": "For arbitrary fixed bounded symmetric row-centered graphons with iid latent vertices and conditionally independent edges, bounded source-scale LDA plus fixed positive product noise implies bounded noisy LDA through every degree L_n with L_n^3/n -> 0.",
+  "new_claim": "For the same arbitrary fixed bounded symmetric row-centered graphon class, bounded source-scale LDA plus fixed positive product noise implies bounded noisy LDA through every degree L_n <= c(W,rho)n for some c(W,rho)>0. For every L_n=o(n), the entire positive-excess connected contribution tends to zero.",
+  "new_lemmas": [
+    "Factorial-aware embedded excess count: after degree-two suppression and counting embeddings before forgetting branch/path labels, S_{e,r} <= C^r e^(3r-1) r^(1-2r).",
+    "Edge-count-first summation: the strict noisy propagation factor beta<1 converts the fixed-(e,r) bound into total excess-r activity A_r <= r(Kr/n)^r.",
+    "Linear-degree polymer consequence: choosing c<1/(2K) makes the full connected positive-excess activity uniformly summable for all degrees <=cn; cycles are already geometrically summable."
+  ],
+  "failed_or_superseded_route": "The planned Schatten/branch-cancellation attack was not needed to beat the apparent n^(1/3) barrier. That barrier came from discarding s! and m! factors and summing excess before using the beta^e noise decay.",
+  "exact_gap": "General S_n-invariant planted laws need not factor through iid latent vertices with conditionally independent edges. Mao's Reed-Muller/rank construction lies outside this graphon diagram factorization. The next important problem is to identify an excess/width invariant for non-edgewise-factorized computations or dependencies.",
+  "next_attack": "Move toward Mao: formulate a diagram/excess expansion for finite-rank matrix computations, low-rank message-passing iterates, or bounded-width branching programs; identify the analogue of positive excess and test whether fixed noise makes it subcritical. Secondary graphon work may optimize the linear constant under normalized kernel assumptions.",
+  "source_boundary": "Randomstrasse101, Anastasia Kireeva, 2026-06-05, post title problems 36-38 but first broad box displayed as Open Problem 35. Hopkins setup: fixed k, Omega finite or R, uniform Q_n on Omega^{binom(n,k)}, S_n-invariant P_n, D=(log n)^{1+Omega(1)}, fixed positive noise. Mao arXiv:2607.20318, submitted 2026-07-22, gives zero LDA through Theta((log n)^{r-1}) with a polynomial-time noisy rank distinguisher, so the unrestricted conjecture is false.",
+  "report": {
+    "path": "runs/2026-09-20/2026-09-20T16-44-25Z__report.md",
+    "commit": "4d570341655f0af175ab82a3d625d0155660b121",
+    "blob": "e5850549e9d0437a4bdd365feaaad8edfc0c02c2"
+  },
+  "handoff": {
+    "path": "artifacts/2026-09-20T16-44-25Z__P08_P09_factorial_diagram_handoff.md",
+    "commit": "c8f6392d5f72324e2b5c377d89660853f81abc79",
+    "blob": "969c78346cd421afb987dd29924778245f61b204"
+  },
+  "delivery": "GitHub only; no email, Drive, public posting, permission changes, force-push, peer overwrite, or historical overwrite."
+}

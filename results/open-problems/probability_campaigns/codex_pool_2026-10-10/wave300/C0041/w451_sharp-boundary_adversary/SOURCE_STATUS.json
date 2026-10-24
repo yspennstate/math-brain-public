@@ -1,0 +1,90 @@
+{
+  "candidate_id": "C0041",
+  "worker": "w451",
+  "checked_at": "2026-10-10T06:53:02.779417+00:00",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "exact_statement": "For every d>=2, every iid law of nearest-neighbor site kernels on Z^d with some deterministic kappa>0 bounding all transitions below, and every fixed real unit vector ell: if P0(X_n.ell -> +infinity)=1, is P0(liminf X_n.ell/n>0)=1? Under the directional law of large numbers this is equivalent to a deterministic positive limiting projection.",
+  "primary_source": {
+    "url": "https://arxiv.org/pdf/1309.2589",
+    "locator": "Open question 2.20, PDF page 24; Definitions 2.13-2.14, PDF page 20",
+    "read": true,
+    "transience_quantifier": "annealed probability one",
+    "ballisticity_quantifier": "annealed almost sure positive liminf of the same directional projection"
+  },
+  "historical_ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 540,
+    "tier": 5,
+    "status": "attempted_un"
+  },
+  "prior_attempt": {
+    "id": "C0041-A001",
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 32,
+    "retained_gap": "Finite regeneration duration almost surely does not give finite conditional expectation."
+  },
+  "bounded_owner_checks": {
+    "attempts_H_I": "Targeted C0041 searches found no additional matching proof record",
+    "lean_campaign": "Historical ranked-list nomination only",
+    "team_O": "No C0041 row in the targeted board search",
+    "population_export": "Dated unverified open-problem concept and prior attempt; no target resolution certificate read",
+    "canonical_math_research_store": "No direct query performed; not certified exhaustive"
+  },
+  "recent_claim": {
+    "claimed_date": "2026-09-23",
+    "scope_url": "https://raw.githubusercontent.com/openai/math/main/lean/docs/220.md",
+    "paper_url": "https://github.com/openai/math/blob/main/preprints/Directional-transience-implies-ballisticity-September-23-2026/paper.pdf",
+    "scope_matches_target": true,
+    "pdf_downloaded": true,
+    "pdf_bytes": 709037,
+    "pdf_pages": 58,
+    "read_scope": "Theorem 1.1, proof strategy, Lemma 2.4's conditional expectation step, and Proposition 2.5's quantitative input; not the whole 58-page proof",
+    "critical_unchecked_step": "For some fixed 0<beta<1, the environment probability P(a_N<N^(-beta)), a_N=P_{0,omega}(T_N<T_{-1}), decays faster than every power of N. The paper's later two-copy and profile/entropy arguments for this estimate remain unaudited here.",
+    "verdict": "CLAIM_FOUND_UNVERIFIED; do not infer current openness from the old ranking, or validity from a scope note"
+  },
+  "formal_receipt": {
+    "checked_source": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalBallisticity.lean",
+    "theorem": "OAI.DirectionalTransience.directional_transience_implies_ballisticity",
+    "statement": "MainStatement",
+    "assumptions": [
+      "d>=2",
+      "nu is a probability row measure",
+      "iid product site environment",
+      "uniform ellipticity",
+      "dot ell ell=1",
+      "annealed almost-sure directional transience"
+    ],
+    "source_lines": [
+      81,
+      82,
+      83,
+      84,
+      86,
+      87
+    ],
+    "body": "by sorry",
+    "lean_build_run": false,
+    "trusted_axioms_receipt": null,
+    "accepted_as_proof": false,
+    "scope_limit": "An admitted comparator is not a proof receipt; it does not refute a separate manuscript or formalization."
+  },
+  "recall": {
+    "result": "TIMEOUT_60S",
+    "fallback_slug": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "rule_applied": "Verify the hardest mathematical piece rather than equating source hashes, statements, or a completed pipeline with proof."
+  },
+  "independent_derivation_saved_before_paired_read": true,
+  "served_model_evidence": {
+    "author": null,
+    "referee": null,
+    "note": "No response-side identity receipt available. Requested settings are not evidence."
+  },
+  "independent_reviewer": {
+    "id": "w452",
+    "request_delivered": true,
+    "message_id": "msg-b4476721b0",
+    "receipt_received": false
+  },
+  "small_inverse_moment_scope": "Lemma 2.4's endpoint-indicator Markov comparison does not require independent endpoint values. B4 proves a sharp boundary showing that a small positive inverse moment alone cannot imply finite mean crossing duration outside the target's site-iid d>=2 class. No verdict on the later public proof's estimate (5)."
+}

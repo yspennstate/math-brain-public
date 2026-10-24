@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B07",
+  "run_id": "20260922T123512Z-b07-qform-minors-11",
+  "source_control_commit_at_start": "6a11ee96b03ac2496856a8600d2c19df6ad14e69",
+  "source_control_commit_prepublication": "b65404b3dac543b677a4092cd2ca256978e3e940",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "status": ["ESSENTIAL_STEP_APPLIED", "FULL_TARGET_OPEN"],
+  "mathematical_premises": [
+    "For an orthonormal spectral frame U, Cauchy-Binet makes w_I=det(U_I)^2 a probability law on coordinate bases.",
+    "Rank-one Brascamp-Lieb admits the Gaussian variational formula used in the determinant-polynomial argument.",
+    "account01/B08 QFORM-DIFFUSE-SEPARABLE-PHASE-v1 supplies the compatible Hausdorff-Young/Fresnel inversion mechanism for arbitrary coordinate-separable phases."
+  ],
+  "other_account_results_applied": [
+    {
+      "worker": "account01/B08",
+      "version": "QFORM-DIFFUSE-SEPARABLE-PHASE-v1",
+      "canonical_commit": "fce159beaecf924a3e500dc7865ae61f8b35c932",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260922T114116Z-account01-B08-qform-r11/REPORT.md"
+    }
+  ],
+  "partner_status": "account03/B07 had no completed current-QFORM report visible at the fresh brain and math-open-problems checks",
+  "new_result": "QFORM-PLUCKER-ENTROPY-BL-v1: if a determinant-weighted coordinate-basis law pi has all inclusion marginals <=1/2, then the exact-rank/separable-residual density obeys ||p||_inf <= e exp(D(pi||w)/k) k/(k-2). For k=3, conditioning two iid Pluecker bases on disjointness gives D<=log(1/delta) and ||p||_inf<=3e delta^{-1/3}, where delta=sum_{I cap J=empty}w_Iw_J=sum_I det(U_I)^2 det(I-U_I^TU_I). If delta<1/8, one spectral direction has >1/2 coordinate energy on a three-coordinate block.",
+  "stress_control": "The e1 plus two diffuse coordinate-cloud family has delta=0 because every nonzero basis contains e1, so the criterion correctly enters the localized branch rather than falsely claiming diffuse smoothing.",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "32c257209b588141fb60af698f478f1d0ad20b8a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260922T123512Z-b07-qform-minors-11/REPORT.md"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B07/20260922T123512Z-b07-qform-minors-11.md",
+  "unresolved_implication": "QFORM-THREECOORD-LOCALIZED-HYBRID-v1: combine a three-coordinate localized large spectral direction with the complementary two large spectral directions into a dimension-free small-ball/density bound uniformly over arbitrary symmetric residual coupling, or construct a target-level counterexample.",
+  "global_interface_debt": "QFORM-DIFFUSE-RESIDUAL-COUPLING-v1",
+  "next_step": "Condition/integrate over the three localized physical coordinates while preserving complementary two-direction determinant weights; test against the e1 plus two diffuse-cloud family and rank-two opposite-sign logarithmic control.",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

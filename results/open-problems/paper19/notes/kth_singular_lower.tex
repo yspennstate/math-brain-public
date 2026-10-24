@@ -1,0 +1,80 @@
+% k-th smallest singular value of square submatrices: the extremal LOWER side, PROVED.
+% Upgrades III.B from CONJECTURE to PARTIAL (lower side proven; matching upper side still needs a
+% k-dimensional overlap second moment, like II.B). Self-contained (fresh labels kth:*).
+
+\subsection*{The extremal lower side for the $k$-th singular value}
+
+Fix an integer $k\ge1$ and let $M_m[k]=\min_{|T|=m}\sigma_{m-k+1}(A_{m,T})$ be the
+smallest, over all square row submatrices, of the $k$-th smallest singular value
+($\sigma_1\ge\cdots\ge\sigma_m$, so $\sigma_{m-k+1}$ is the $k$-th smallest).  For
+$k=1$ this is $M_m$.
+
+\begin{lemma}[One-matrix $k$-th-singular hard edge]\label{kth:one-matrix}
+Let $G\in\F^{m\times m}$ have i.i.d.\ standard Gaussian entries, $\F\in\{\R,\C\}$,
+$\beta=d_\F$.  There is $C_{m,k}=m^{O_k(1)}$ such that for $0<t\le1$,
+\[
+  \PP\{\sigma_{m-k+1}(G)\le t\}\le C_{m,k}\,t^{\,d_\F k^2}.
+\]
+The exponent $d_\F k^2$ is sharp.
+\end{lemma}
+
+\begin{proof}[Proof of the exponent]
+$\{\sigma_{m-k+1}(G)\le t\}$ is the event that the $k$ smallest singular values are
+all $\le t$, i.e.\ the $k$ smallest eigenvalues $\lambda_{(1)}\le\cdots\le\lambda_{(k)}$
+of the Laguerre matrix $W=G^*G$ satisfy $\lambda_{(j)}\le t^2$.  The Laguerre joint
+density is proportional to $\prod_{i<j}|\lambda_i-\lambda_j|^{\beta}\prod_i
+\lambda_i^{\beta(\nu+1)/2-1}e^{-\beta\lambda_i/2}$ with $\nu=0$ for the square case
+\cite{Forrester2010}.  Integrating out $\lambda_{(k+1)},\dots,\lambda_{(m)}$ leaves a
+density for the $k$ smallest eigenvalues that, near the origin, is bounded by a
+constant times $\prod_{1\le i<j\le k}|\lambda_i-\lambda_j|^{\beta}\prod_{i\le k}
+\lambda_i^{\beta/2-1}$ (the interaction with the $O(m)$ bulk eigenvalues and the
+exponential weights are bounded on $[0,1]^k$, contributing only the constant
+$C_{m,k}=m^{O_k(1)}$).  Rescaling $\lambda_i=t^2\mu_i$ on $0<\mu_1<\cdots<\mu_k<1$,
+\[
+  \PP\{\lambda_{(1)},\dots,\lambda_{(k)}\le t^2\}
+  \le C_{m,k}\,(t^2)^{\,\beta\binom{k}{2}+k(\beta/2-1)+k}
+  = C_{m,k}\,(t^2)^{\beta k^2/2}=C_{m,k}\,t^{\,d_\F k^2},
+\]
+since $\beta\binom k2+k(\beta/2-1)+k=\beta k(k-1)/2+\beta k/2=\beta k^2/2$.  The same
+scaling gives a matching lower bound, so the exponent is sharp.  ($k=1$ recovers the
+hard-edge exponent $d_\F$.)
+\end{proof}
+
+\begin{theorem}[Extremal $k$-th-singular lower side]\label{kth:lower}
+Let $A_m\in\F^{N_m\times m}$ have i.i.d.\ standard Gaussian entries, $N_m/m\to\gamma>1$.
+Then for every fixed $k\ge1$ and every $\varepsilon>0$,
+\[
+  \PP\left\{M_m[k]\le \exp\!\left[-\left(\frac{h(\gamma)}{d_\F k^2}+\varepsilon\right)m\right]\right\}
+  \longrightarrow 0,
+  \qquad\text{equivalently}\qquad
+  \liminf_{m\to\infty}\frac1m\log M_m[k]\ge-\frac{h(\gamma)}{d_\F k^2}\ \ \text{whp.}
+\]
+The same holds with the bounded-density one-matrix tail in place of the Gaussian one,
+for any ensemble for which Lemma~\ref{kth:one-matrix} holds with exponent $d_\F k^2$
+up to subexponential factors.
+\end{theorem}
+
+\begin{proof}
+By the union bound and Lemma~\ref{kth:one-matrix},
+\[
+  \PP\{M_m[k]\le t\}\le \binom{N_m}{m}\,C_{m,k}\,t^{\,d_\F k^2}.
+\]
+With $t=\exp[-(h(\gamma)/(d_\F k^2)+\varepsilon)m]$ and
+$\tfrac1m\log\binom{N_m}{m}\to h(\gamma)$, the right side is
+$\exp[(h(\gamma)-d_\F k^2\cdot(h(\gamma)/(d_\F k^2)+\varepsilon)+o(1))m]
+=\exp[(-d_\F k^2\varepsilon+o(1))m]\to0$.  This is the abstract principle
+(Corollary~\ref{cor:poly-smallball}) with entropy $h(\gamma)$ and exponent
+$a=d_\F k^2$.  Summability of the bound over $m$ gives the a.s.\ liminf envelope via
+first Borel--Cantelli.
+\end{proof}
+
+\begin{remark}[Status]
+Theorem~\ref{kth:lower} is the lower (union-bound) side; it upgrades the $k$-th
+singular-value row of the ledger from a pure conjecture to a proved one-sided bound.
+The matching upper side $\tfrac1m\log M_m[k]\to-h(\gamma)/(d_\F k^2)$ requires a
+second-moment argument over the family of bottom-$k$ singular subspaces, the
+$k$-dimensional analogue of the overlap problem of Section~\ref{sec:universality}; it
+remains open (Conjecture in the geometric section).  The conjectured base
+$h(\gamma)/(d_\F k^2)$ decreases like $k^{-2}$: demanding $k$ small singular values
+costs the entropy divided by the Laguerre repulsion exponent $d_\F k^2$.
+\end{remark}

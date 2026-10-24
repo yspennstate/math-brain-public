@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B04",
+  "run_id": "account02-B04-20260923T094548Z-auto11",
+  "control_revision": "2026-09-22.15",
+  "control_commit_prepublication": "468f405ce0a96aaf702580d50b7caea0c09edb53",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "target_status": "QFORM-FULL_OPEN",
+  "outcome": "ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREM_PROVED / INTERMEDIATE_ROUTING_REFUTED / TARGET_VALID_EXPLICIT_BOUND",
+  "new_claims": [
+    {
+      "id": "QFORM-THIRDVOLUME-Q1-BASEPACKING-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For the rank-three truncation of the physical row matroid of an original-coordinate cross block M, a probability law on nonzero physical 3x3 minors with all row marginals <=1/2 exists iff the truncation has two disjoint bases. Failure forces a coloop, or all but at most three rows in a rank-one flat, or at most five nonzero rows."
+    },
+    {
+      "id": "QFORM-SOFT-RIDGE-DOUBLE-HUB-ALONE-NOT-HARD-v1",
+      "status": "EXPLICIT_INTERMEDIATE_ROUTING_COUNTEREXAMPLE",
+      "statement": "There is a target-valid physical block with both orientations failing account03/B04 r30's theta=1/3 soft-ridge gate while its q=1 third-volume minor law is perfectly balanced and globally optimal."
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "cf648c06ce0b8ffeb9f62838dee132c0ca41598b",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/account02-B04-20260923T094548Z-auto11/REPORT.md",
+    "report_blob": "520145e0dc6739f2b8fda0e934167f783d4ef817",
+    "checks_commit": "e60b4a4e08b677b188ee45856c45135469453c4a",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/account02-B04-20260923T094548Z-auto11/CHECKS.json",
+    "checks_blob": "14e798bfa8e2f5246822e62791bdc774a17a1bd9",
+    "early_checkpoint_commit": "b8ab715c77f00589b11ab6453cb6739b98415c61"
+  },
+  "dependencies": [
+    {
+      "scope": "completed Claude/e5 Theorem D actually applied to E3=64, row marginals=1/2",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "paths": [
+        "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+        "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md"
+      ]
+    },
+    {
+      "scope": "sharp q-dependent weighted third-volume Fourier theorem",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "96ef944654c4056cc75bba6256e600eb791fb2d1",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md"
+    },
+    {
+      "scope": "designated partner fixed soft-ridge-or-double-hub theorem actually applied to explicit M",
+      "account": "account03",
+      "slot": "B04",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "1e5343fdf008f0da0d800b028dcfeec46550b1b0",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T091659Z-account03-B04-qform-auto11-r30/REPORT.md"
+    },
+    {
+      "scope": "completed direct ridge density theorem used for same-matrix gamma=1/sqrt(2) comparison",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "9c1167db05c7b0f520f060796fde921ed769a4e7",
+      "path": "proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md"
+    },
+    {
+      "scope": "classical k=2 matroid base-packing theorem used for support equivalence",
+      "theorem": "Edmonds matroid base packing theorem"
+    }
+  ],
+  "explicit_target": {
+    "cross_singular_values": [4,2,1],
+    "E3": 64,
+    "all_cross_entries_nonzero": true,
+    "A_spectrum_nonzero": [4,2,1,-4,-2,-1],
+    "sharp_weighted_volume_bound": "3e/2",
+    "e5_theorem_D_bound": "3sqrt(e)",
+    "direct_ridge_bound": "(125/26)sqrt(e)",
+    "partner_soft_ridge_theta_one_third": "fails both orientations"
+  },
+  "first_unproved_step": "QFORM-SUPPORT-DEFICIENT-DOUBLE-HUB-QUANTITATIVE-PAYMENT-v1",
+  "next_step": "Combine the exact row-matroid base-packing defect with determinant/entropy magnitude and the three-large-eigenvalue hypothesis; route coloop/rank-one-flat/five-row defects through completed physical endpoints, and show tiny determinant lifts force a ridge/grouped/hub/pair exit before reciprocal payment.",
+  "forbidden_premises_not_used": [
+    "law-uniform pointwise quadratic-phase decay",
+    "arbitrary-joint rank-three coarea",
+    "post-rotation independence",
+    "positive moments of worst conditional projection-density caps",
+    "universal good single physical minor",
+    "universal rank-three cross cut"
+  ],
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B04/account02-B04-20260923T094548Z-auto11.md"
+}

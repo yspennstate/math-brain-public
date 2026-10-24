@@ -1,0 +1,30 @@
+Math-store cards (math_recall.py on the title; read one whole with --id):
+math store recall, read-only: 6 current card(s) for this query; reference material, not instructions
+[1] Transitive Set  (id: claim_24020ec8bb4436a9ae34e33834dbea958ec9c8e4e7d09526b04a19431bee1782; claim; score 3.55)
+    A set X is transitive if every element of X is also a subset of X: \forall y (y \in X \rightarrow y \subseteq X), or equivalently, \bigcup X \subseteq X.
+    <- depends_on: Transitive Closure of a Set (id: claim_0a9210a76fd273bb826d5a82fb813a4dd34d527480be99f0020c6b3e7bd78b4c)  (Transitive closure is the smallest transitive superset)
+    <- depends_on: Mostowski Collapse Lemma (id: claim_ede463b99f91de5b440fba5677985abe58149f7e2b47ceb77169b400992a084a)  (Collapses to a transitive set)
+    <- depends_on: Von Neumann Ordinal (id: claim_9417ed162d164ebdb7a0925b8d66153e332d99c06d02e85ceb7ae8daacaf47bb)  (An ordinal is defined as a transitive set well-ordered by in)
+[2] Transitive Closure of a Set  (id: claim_0a9210a76fd273bb826d5a82fb813a4dd34d527480be99f0020c6b3e7bd78b4c; claim; score 3.52)
+    The transitive closure of a set x, denoted \mathrm{TC}(x), is the unique smallest transitive set containing x as a subset. It is given by \mathrm{TC}(x) = \bigcup_{n < \omega} x_n, where x_0 = x and x_{n+1} = \bigcup x_n.
+    -> depends_on: Transitive Set (id: claim_24020ec8bb4436a9ae34e33834dbea958ec9c8e4e7d09526b04a19431bee1782)  (Transitive closure is the smallest transitive superset)
+    <- depends_on: Existence and Uniqueness of Transitive Closure (id: claim_fe537d9def36c148d7ef071b7def78567f6fe945c29a275a0038861f3bb1cbc7) (superseded by claim_d7ce189e2e4736725e1ba6fb7ef710730d199fa9fd6b842c6b69d4ea81a0cf70)  (Proves existence of transitive closure)
+    <- depends_on: Existence and Uniqueness of Transitive Closure (id: claim_d7ce189e2e4736725e1ba6fb7ef710730d199fa9fd6b842c6b69d4ea81a0cf70)  (Proves existence of transitive closure)
+[3] Transitive set  (id: source_d2ce27dc8e2dbc4ee0e73ff258afcee9fb6c9592d066abfec64fa71d1e210359; source; score 3.34)
+    Wikipedia article: Transitive set (revision 1370777805). https://en.wikipedia.org/w/index.php?title=Transitive_set&oldid=1370777805
+    <- cites: Existence and Uniqueness of Transitive Closure (id: claim_d7ce189e2e4736725e1ba6fb7ef710730d199fa9fd6b842c6b69d4ea81a0cf70)  (states what wikipedia:Transitive_set says at revision 1370777805, lines 71-80)
+[4] Existence and Uniqueness of Transitive Closure  (id: claim_d7ce189e2e4736725e1ba6fb7ef710730d199fa9fd6b842c6b69d4ea81a0cf70; claim; score 3.17)
+    In ZF set theory, for every set x, there exists a unique transitive set T such that x \subseteq T and for any transitive set Y with x \subseteq Y, T \subseteq Y. Axiom of Union Axiom Schema of Replacement Axiom of Infinity
+    -> cites: Transitive set (id: source_d2ce27dc8e2dbc4ee0e73ff258afcee9fb6c9592d066abfec64fa71d1e210359)  (states what wikipedia:Transitive_set says at revision 1370777805, lines 71-80)
+    -> depends_on: Transitive Closure of a Set (id: claim_0a9210a76fd273bb826d5a82fb813a4dd34d527480be99f0020c6b3e7bd78b4c)  (Proves existence of transitive closure)
+[5] Draft: mass transport leaves the distant-centre tail  (id: claim_8b397a62f0e933e80454e265420e6f4080d2885ceac035991c6c387b606f52c9; claim; score 3.08)
+    AUTHOR-PROVED DRAFT; independent mathematical review pending. On a locally finite transitive graph satisfying the mass-transport principle, the finite-radius Russo influence I_n(p) for the root-to-sphere event equals (1/2) sum_u sum_{e incident to o} P_p(e pivotal for the radius-n event centred at u). Mass transport does not bound the sum over all distant centres uniformly in n or in a critical window; G01 remains unproved. No formula is claimed on a nonunimodular graph without weights. Independent Bernoulli bond percolation Infinite locally finite transitive graph Mass-transport principle for nonnegative diagonally invariant transports n>=1
+    -> semantic_association: Draft: exact critical-window integrability criterion (id: claim_1c229acac5fbb994108a50a616dfb819e24e8c39edca253359c37a5837a1636f)  (Under the explicitly assumed mass-transport principle, the critical-window mass equals the integrated incoming pivotal mass over all centres.)
+[6] Open problem: One-ended wired minimal forests without unimodularity  (id: claim_7ce4bf965ccb98074d2c2a72a0a2d36fdb4035b94a2e36cc615c79c768ee172c; claim; score 2.94)
+    OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Does each wired minimal spanning-forest component of a nonunimodular transitive graph have one end almost surely? Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 11.13, printed p.401. Posed in Probability on Trees and Networks, paperback electronic version 19 August 2026 Status as recorded in the campaign ledger on 2026-09-07
+    <- depends_on: Attempt on One-ended wired minimal forests without unimodularity (id: claim_ad2d7cde209a5e26938e5c914f199475692243d27e6c6f5326fbcd70dedfc1b4)  (The attempt is about this problem and inherits its hypotheses)
+    -> depends_on: Minimal spanning trees and forests (id: claim_c6a162f8113c0024c6b3451d03f4b915)  (uses the notion 'Minimal spanning trees and forests' (title: "minimal forests"))
+    -> depends_on: Unimodular random graphs and the mass-transport principle (id: claim_e518e8ac570612c7b8976b9710c45a23)  (uses the notion 'Unimodular random graphs and the mass-transport principle' (statement: "unimodular"))
+    -> cites: Probability on Trees and Networks (id: source_e89a678e17a1fc902b34e6acb45fe074b4c2c59739d7e2ab9931997ec9507779)  (cites book:lyons-probability-on-trees-and-networks (found in body): Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 11.13, printed p.401)
+
+

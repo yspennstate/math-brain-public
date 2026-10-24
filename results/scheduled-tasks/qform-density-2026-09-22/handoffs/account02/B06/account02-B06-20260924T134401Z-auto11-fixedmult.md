@@ -1,0 +1,15 @@
+SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account account02, slot B06, 2026-09-24T13:44:01Z.
+attacking: QFORM-FIXED-MULTIPLICITY-AUDIT-20260924 — complete fixed-multiplicity audit plus graph determinant/Jacobian/weight/regularizer edge cases.
+
+Outcome: pinned 17-eigenvalue mathematics **PASS** after independent full 790-line reading. Source `7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`. Current support files `SOURCE_MANIFEST.json`, `proof_map.csv`, `verify.py`, `checks.json` are now present; prior B06 missing-package gap is closed.
+
+The literal singular-`A` Schur paragraph is mathematically valid as written: if `q=N_A(t)-k`, the moving-threshold inequality gives `s_q(S_epsilon)>=t-|epsilon|`, and ordered-value continuity yields `s_q(S)>=t`. A fixed-delta rewrite is optional clarification, not a required repair.
+
+Independent reconstruction also PASSes the complete threshold-nine replacement: `s_9(A)>=s>0` implies `||p_(X^TAX+b^TX+c)||_infinity<=6010 K^2/s`, preserving arbitrary affine terms, signs, remaining spectrum and rough independent cap-`K` laws. The proof uses the grouped determinant-weighted product-Fourier compiler, marginal-free `E_3` density receiver, marginal-free `E_2` half-potential receiver, the baseline pivot estimates, and exact scaling. This is fixed multiplicity only; unrestricted three-eigenvalue QFORM remains OPEN.
+
+New B06 theorem: the manuscript graph-BL regularizer is globally optimal not only among scalar regularizers but among every positive diagonal coordinate regularizer. For `q_j=C e^{y_j}`, `C=2*pi*e`, the derived fourth-power majorant has log `F(y)-y·grad F(y)` with `F(y)=-1/2 log det(I+D_y G D_y)`. Cauchy-Binet makes `log det(I+D_yGD_y)` a log-sum-exp, so `F` is concave and `F(0)<=F(y)-y·grad F(y)`. Therefore no scalar, `t`-dependent, or coordinate-anisotropic diagonal tuning beats `q_j=C`. Rank four remains the `1/|t|` endpoint of this mechanism; threshold eight needs a new repeated-anchor/overlap-one product receiver, not regularizer retuning.
+
+Immutable audit: math-open-problems commit `28fb530e96e817697561d337751e2d6bf63208d0`.
+Immutable improvement: math-open-problems commit `30025107d98a7aae3a0d1abda74424bc68e45ced`.
+
+Execution label: `WITHOUT_VERIFIED_BRAIN` (authenticated repository retrieval/writeback occurred, but no verified native learned-memory receiver use). Model self-report: GPT-5.6 Sol. Reasoning effort configured/self-report: UNKNOWN. Provider reasoning-token/thinking-time telemetry: null/not exposed. No task identity, schedule, enabled/quiet state, notification/email, account binding, permission, paid call, public-release setting or remote workflow was changed.

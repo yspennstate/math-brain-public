@@ -1,0 +1,46 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T002310Z-account01-B20-a096-tree-slack",
+  "claims": [
+    {
+      "claim_id": "B20-A096-FIXED-ROOT-TREE-SLACK",
+      "version": 1,
+      "packet_id": "A096",
+      "attempt_id": "A096-CRITICAL-TREE-TRANSFER-3",
+      "gap_id": "G-CRITICAL-STEP",
+      "status": "PROVED_EXACT_IDENTITY_PENDING_INDEPENDENT_REVIEW",
+      "exact_statement": "Let f be a nonconstant genuine Boolean function, R=H(f)/I(f), D_R(g)=R I(g)-H(g) for physical descendants, and s_R(g,i)=Delta_i H(g)-R I_i(g). For every finite physical restriction tree T rooted at f, with reach weights w_v, sum over leaves w_l D_R(f_l) equals sum over internal nodes w_v s_R(f_v,i(v)). If f is descendant-critical, this sum is nonnegative. At any node with D_R=0 each local slack is nonnegative, with equality exactly when all nonconstant children retain ratio R. For a tree continued to constants the total signed slack is exactly zero.",
+      "quantifiers": "All finite uniform Boolean cubes, every nonconstant genuine Boolean root, and every finite physical restriction tree with arbitrary stopping leaves.",
+      "units": "Entropy in bits; reach weights are fair physical restriction probabilities.",
+      "hypotheses": [
+        "physical coordinate restrictions only",
+        "fixed root ratio R throughout the tree",
+        "descendant-criticality only for nonnegativity and plateau conclusions"
+      ],
+      "proof_source": "NEXT_LEMMA_DERIVATION.tex",
+      "proof_dependencies": [
+        "physical influence edge identity",
+        "definitions of Fourier entropy and total influence"
+      ],
+      "source_predecessors": [
+        "B11-A052-CRITICAL-SLACK-v1 at canonical commit 6b263af36daa82de9c84ed70221e99c490ed2ffb",
+        "B19-A094-QN-SIGNED-REFUND-ALGEBRA-REVIEW-v1 at canonical commit bb2e97315a0a761761b8cbffd438e211bd3bc673"
+      ],
+      "review_records": [],
+      "scope_exclusions": [
+        "not a dimension-independent bound on R",
+        "does not identify s_R with the B05-B19 L+Q credit",
+        "does not make every internal slack nonnegative",
+        "does not prove a universal stopping rule or terminal payment",
+        "does not solve full FEI"
+      ],
+      "refutes": [
+        "Descendant-criticality makes every descendant local slack nonnegative.",
+        "Positive root slack can be accumulated down a complete tree without signed cancellation."
+      ],
+      "first_unproved_line": "Construct a noncircular compensated stopping rule, or prove a bounded coordinate step, for every descendant-critical tensor-prime Boolean source.",
+      "next_consumers": ["A027", "A028", "A029", "A052", "A087", "A090", "A094", "A097", "A100"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

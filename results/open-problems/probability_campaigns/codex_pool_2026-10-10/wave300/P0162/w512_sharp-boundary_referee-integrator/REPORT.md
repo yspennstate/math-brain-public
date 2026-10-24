@@ -1,0 +1,17 @@
+# P0162 referee handoff — w512, 10 October 2026
+
+I recovered the exact uniform Boolean FEI statement and checked the dated owner intake. The old `attempted_un` row and a 2026-09-24 memory do not certify present openness, so current status remains UNKNOWN. The 2025 Li–Han arXiv item is withdrawn and credits Keller–Mossel–Schlank for its claimed inequality; it is not a new FEI solution.
+
+I independently rederived w510 C001-C004 and w511 C001-C004. Eight KEEP verdicts with reproduction and limits are in `VERDICTS.jsonl`. The strongest checked boundary is w511's Boolean bent-plus-one-point-flip family: a prescribed-coordinate restriction entropy charge grows at least as n-4/ln 2, yet the global entropy/influence ratio tends to 2. The hardest remaining parent gap is a dimension-free argument for arbitrary Boolean spectra that chooses or controls a suitable coordinate, or equivalently controls the mass-weighted nonempty spectral entropy. Neither peer bundle solves FEI or establishes novelty.
+
+Measurement and limit: ungated exploratory runs of `python -X utf8 check_proxy.py` gave exact rational squared-spectrum ratios 3/2, 15/4, 63/8 and 255/16 at even dimensions 2, 4, 6 and 8; `python -X utf8 audit_split.py` gave a sharp profile residue 2.885331378 at dimension 16 versus the analytically proved limit 2/ln 2 = 2.885390082. Those local runs preceded a fresh resource gate and are not certified experiment receipts. `python -X utf8 gated_verify.py` then denied further experiments: CPU 85.9%, physical available 4.31 GB, commit 91.28%, commit headroom 9.54 GB. No experiment ran after that denial. The KEEP verdicts rest on analytic rederivations. `python -X utf8 validate_bundles.py` checks draft structure and relation endpoints; it is not a mathematical proof or recall-quality measurement.
+
+The six-entry w510 bundle_001 and seven-entry w511 bundle_002 are submitted drafts, mathematically reviewed at the scopes recorded here, and not verified ingested or retrievable. w511 bundle_002 supersedes its initial bundle_001; ingest only the second. The two-entry w512 scope bundle is prepared in this folder only. Account separation and the requested final-review served model are not verified by this worker; the coordinator must check them before final promotion. The w512 hook proposal is likewise prepared locally. I did not write to the inbox, hook proposals directory, progress page or live store because this worker's explicit write rule permits only its own folder.
+
+The integration contact is codex-01a12190. `HANDOFF.json` records exact peer and referee artifact paths and SHA-256 hashes, scoped KEEP claims, the hardest gap, and the absence of response-side served-model evidence. Hashes identify bytes only; they do not prove mathematics.
+
+Apply: after accepting and ingesting w510 bundle_001 and w511 bundle_002, copy `DRAFT_BUNDLE.json` to `~/math-brain-inbox/w512/bundle_001.json`, then run the normal draft integrator for w512 and record submission, ingestion and retrieval separately; `patches/01_bundle.diff` and `patches/02_hook.diff` show the exact proposed external additions.
+
+Risk: peer bundles contain concept nodes still labeled DRAFT, and the cross-bundle links in w512's bundle resolve only after their target peer nodes are ingested. No public priority or full theorem claim follows from the special cases.
+
+NEXT: codex-01a12190 verifies account/model review requirements and ingests accepted bundles; the next proof step is a variance-weighted block exposure budget beyond affine spectra.

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B09",
+  "run_id": "20260925T094431Z-account02-B09-repaired-r01",
+  "objective_id": "QFORM-FIVE-270-REPAIRED-AUDIT-20260925",
+  "source": {
+    "commit": "4e530247ec0ef4101a6e5ecf621bd35a969c42aa",
+    "blob": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+    "sha256": "90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb"
+  },
+  "completed": "new-source pass01; all 683 source lines read; primary B09 lens and whole theorem dependency chain reconstructed",
+  "verdict": "literal source GAP_LOCAL at L511 only newly found by B09; no theorem-level counterexample",
+  "next": "Repeat full repaired-source audit in a different order. Rechallenge L511 repair and primary lens; rendered PDF remains UNCHECKED unless the owner attachment becomes available.",
+  "durable": [
+    "FINDINGS.json",
+    "COVERAGE_MANIFEST.json",
+    "coverage_401_500.jsonl",
+    "coverage_601_683.jsonl"
+  ],
+  "blocked": [
+    "new-source acknowledgement write",
+    "REPORT.md",
+    "five detailed coverage chunks"
+  ],
+  "note": "Do not count old ec211ba short-paper passes as audits of this repaired hash."
+}

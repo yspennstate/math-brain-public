@@ -1,0 +1,3 @@
+The initial checker reached interval serialization and hit Python's 4300-digit integer-to-string limit. No failed sign assertion or theorem correction was observed. Repaired output by rounding lower interval margins outward to multiples of 10^-12; aggregate equal probabilities and cache identical logarithms to avoid redundant rational computations. Parameter domains unchanged. Initial partial output is not counted as successful validation.
+
+The supplemental checker passed its identity assertions, but initially serialized the formal-log residual after reusing its variance variable in the point-defect loop. Saved residual before that loop and reran; final serialized coefficients are all exactly zero. The mathematical test itself used the correct original variance.

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260923T020906Z-account03-B03-QFORM-r24",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit_before_publication": "618ab66f5561589cb61db7e49c8debdc465d7b97",
+  "owner_control_revision": "2026-09-22.15",
+  "target_status": "OPEN",
+  "continuity_status": "PROVED_ONLY_FOR_DIRECT_CLOSING_AUGMENTED_SCREEN_BRANCHES",
+  "assignment": "Decoupled time integral; preserve independent-copy sum/difference dependence and prove an integrated estimate recovering linear small-ball scaling.",
+  "new_claim": {
+    "id": "QFORM-HUB-SCREEN-FRACTIONAL-BL-v1",
+    "status": "SUPPORTING_THEOREM_PROVED",
+    "summary": "For an original-coordinate hub plus rank-r physical screen A[I,J_L]=UV^T, the exact ambiguity identity combined with a q-dependent translated sharp-Hausdorff-Young/Brascamp-Lieb bound gives |phi_Q(t)|^2 <= D |t|^{-[1/2+(r+1)/q]} for 1<=q<=2 and q>=2 max leverage. Direct L1 closes for q<2(r+1)/3. Rank one therefore closes below leverage 2/3, rank two below leverage 1, and all r>=3 close at q=2 with no leverage gate."
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "caea32ab85b3153d038b7311cc905fae0f2e76c6",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T020906Z-account03-B03-QFORM-r24/REPORT.md",
+    "blob": "4eeca23830590ce292f38e7d4061f6a242059cd0"
+  },
+  "checkpoint_commit": "212567e25a320ce8780d67b59f53be30719836ab",
+  "checker_output_commit": "feb0826c432125f09ec1ae9843b5d87931db3fcc",
+  "checker_status": "QFORM_B03_R24_CHECK_PASS",
+  "handoff_commit": "9826d1111e1a6eddbf84658cc11174ca7374c045",
+  "dependencies": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "actual_use": "Applied the q-dependent sharp-Hausdorff-Young/Brascamp-Lieb scalar exponent mechanism to the translated augmented screen frame; q/ell_i>=2 replaces the predecessor's q=1 leverage gate."
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f68817886312b904e2cf86ccbfb14f4f130229f3",
+      "path": "proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md",
+      "actual_use": "Exact hub ambiguity identity, ambiguity L2 estimate, physical projection density bounds and frame normalization."
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "9655d21c63995f50f815155ccb013c9224f83910",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T005518Z-account03-B03-QFORM-r23/LOWRANK_SUPPLEMENT.md",
+      "actual_use": "Immediate predecessor screen theorem; retained its exact dependence-safe reduction and generalized the translated BL payment from q=1 to q in [1,2]."
+    }
+  ],
+  "partner_result": {
+    "worker": "account04/B03",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "28681f9af7c2307f80968df86010084019599e38",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B03/20260922T193150Z-account04-B03-collision-l2-r1/REPORT.md",
+    "applied_result": "P(|Y-Y'|<=epsilon)<=2 epsilon ||p_Y||_2^2",
+    "actual_new_inequality": "P(|Q-Q'|<=epsilon)<=2 L_(r,q) Omega_(r,q)^(-1/N) epsilon; at r=3,q=2 the prefactor is 4.972748992137568...",
+    "excluded_result": "The partner's weighted-L2 compiler is not used because its time-weight/homogeneity step is refuted."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-N3-LOCAL-COLLISION-BEFORE-AGGREGATION-FALSE-v1",
+    "QFORM-MIXED-SKELETON-DETERMINANT-ONLY-L1-FALSE-v1"
+  ],
+  "key_constants": {
+    "rank1_q1_density_prefactor": 9.183258210955094,
+    "rank2_q1_density_prefactor": 4.587897478510473,
+    "rank3_q2_density_prefactor": 7.459123488206351,
+    "rank3_q2_collision_prefactor": 4.972748992137568,
+    "rank2_q2_half_riesz_endpoint_prefactor": 6.823468712303328
+  },
+  "first_unresolved_implication": "From the bare three-large-eigenvalue hypothesis, prove an exhaustive product-preserving structural OR that yields a paid diffuse/volume/ridge packet, a quantitative augmented hub-screen Omega certificate, a paid exact-coloop/mixed-hub/grouped-square packet, or a new grouped packet for the genuinely entangled small-total-tail remainder.",
+  "independent_review_status": "NOT_AN_END_TO_END_FULL_TARGET_CANDIDATE; no new independent review requested for this supporting theorem in this run",
+  "quiet_delivery": true,
+  "task_or_schedule_mutation": false,
+  "email_or_push_mutation": false,
+  "public_release": false
+}

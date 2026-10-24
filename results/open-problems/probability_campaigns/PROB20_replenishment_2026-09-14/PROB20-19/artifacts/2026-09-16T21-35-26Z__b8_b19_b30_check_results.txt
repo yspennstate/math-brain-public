@@ -1,0 +1,25 @@
+PROB20-19 B8/B19/B30 exact+interval self-check
+metric_Q_c = 99999999/100000001
+metric_Q_s = 20000/100000001
+metric_Q_orthogonality = PASS
+metric_strictness_hypotheses = PASS (positive diagonal covariance, unequal mixed eigenvalues, nontrivial angle)
+normalized_abs_excess_bound_strict < 1/2500 = 0.0004
+previous_best_interval_upper = -0.00127030552985088
+metric_movement_comparison = PASS
+new_exact_example_signed_enclosure = (-1/2500, 0)  # strict two-sided bound from continuity + archived one-Givens theorem
+
+threshold_failure_parameters:
+alpha_cos = 225/353 alpha_sin = 272/353
+beta_cos = 399/401 beta_sin = 40/401
+threshold = 19/20
+Q_orthogonality_exact = PASS
+rot_prob_lower = 590449/33554432 ~ 0.01759675145149231
+rot_prob_upper = 623215/33554432 ~ 0.018573254346847534
+rot_uncertain_mass <= 16383/16777216 ~ 0.0009765028953552246
+kl_prob_lower = 44523/1048576 ~ 0.04246044158935547
+kl_prob_upper = 364375/8388608 ~ 0.04343688488006592
+kl_uncertain_mass <= 8191/8388608 ~ 0.0009764432907104492
+strict_tail_reversal = PASS: P_rot(b_(2)>19/20) < P_KL(b_(2)>19/20)
+gap_lower_bound = 801521/33554432 ~ 0.023887187242507935
+cells_rot = 67260 cells_kl = 27792
+ALL_CHECKS_PASS

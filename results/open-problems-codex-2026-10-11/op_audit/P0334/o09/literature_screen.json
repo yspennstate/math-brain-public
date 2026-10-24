@@ -1,0 +1,542 @@
+{
+  "arxiv": [
+    {
+      "title": "Estimating quantile treatments without strict overlap",
+      "id": "http://arxiv.org/abs/2506.18215v3",
+      "summary": "We consider the problem of estimating quantile treatment effects without assuming strict overlap, i.e., we do not assume that the propensity score is bounded away from zero. More specifically, we consider an inverse probability weighting (IPW) approach for estimating quantiles in the potential outcomes framework and pay special attention to scenarios where the propensity scores can tend to zero as a regularly varying function. Our approach effectively considers a heavy-tailed objective function for estimating the quantile process. We introduce a truncated IPW estimator that is shown to outperform the standard quantile IPW estimator when strict overlap does not hold. We show that the limiting distribution of the estimated quantile process follows an infinitely divisible law and converges at the rate $n^{1-1/γ}$, where $γ>1$ is the tail index of the propensity scores when they tend to zero. We propose a practical, data-driven procedure for selecting the truncation parameter, grounded in our asymptotic theory. The performance of our estimators is illustrated in numerical experiments and in a dataset that exhibits the presence of extreme propensity scores.",
+      "updated": "2026-08-27T16:12:22Z"
+    },
+    {
+      "title": "Bayesian Quantile-Based Correction and Synthesis of Hydrologic Products",
+      "id": "http://arxiv.org/abs/2608.11222v2",
+      "summary": "River-flow forecasting requires predictive distributions that remain informative in both routine and extreme conditions. We develop a Bayesian quantile-based correction-and-synthesis framework built on Dynamic Quantile Linear Models (DQLMs). The framework links U.S. Geological Survey (USGS) observations, retrospective products, and ensemble forecast products through a shared latent quantile process, learns dynamic discrepancies for each external source, and combines quantile-specific posterior predictions into a single predictive distribution. We also adapt variational Bayes inference to the extended dynamic quantile linear model using Laplace--Delta approximations for non-conjugate parameters. The methodology is illustrated using daily flow for the San Lorenzo River together with products from the European Centre for Medium-Range Weather Forecasts (ECMWF) Global Flood Awareness System (GloFAS) and the National Oceanic and Atmospheric Administration (NOAA) National Weather Service (NWS), with emphasis on medium-range forecasting and uncertainty quantification across multiple quantile levels.",
+      "updated": "2026-08-15T04:31:31Z"
+    },
+    {
+      "title": "Nonparametric quantile inference using Dirichlet processes",
+      "id": "http://arxiv.org/abs/2608.08355v1",
+      "summary": "This chapter deals with nonparametric inference for quantiles from a Bayesian perspective, using the Dirichlet process. The posterior distribution for quantiles is characterised, enabling also explicit formulae for posterior mean and variance. Unlike the Bayes estimator for the distribution function, our Bayes estimator for the quantile function is a smooth curve. A Bernstein--von Mises type theorem is given, exhibiting the limiting posterior distribution of the quantile process. Links to kernel-smoothed quantile estimators are provided. As a side product we develop an automatic nonparametric density estimator, free of smoothing parameters, with support exactly matching that of the data range. Nonparametric Bayes estimators are also provided for other quantile-related quantities, including the Lorenz curve and the Gini index, for Doksum's shift curve and for Parzen's comparison distribution in two-sample situations, and finally for the quantile regression function in situations with covariates.",
+      "updated": "2026-08-08T22:48:06Z"
+    },
+    {
+      "title": "Weighted Gaussian Approximations for Increments of the Uniform Empirical and Quantile Processes: Fixed-Endpoint Extensions to the Finite-Count Scale",
+      "id": "http://arxiv.org/abs/2606.28222v2",
+      "summary": "We establish weighted Gaussian approximations for the uniform empirical and quantile processes and for their increments ending at a fixed point t in (0,1). We first place the classical weighted approximations for the ordinary processes in a common framework and then show that the corresponding increment approximations remain valid uniformly down to the finite-count scale lambda/n, for every fixed lambda > 0. For the empirical increments, the proof splits the sample at t, couples the two resulting conditional empirical processes with independent Brownian bridges, and approximates the binomial fluctuation at t by a Gaussian variable. The three Gaussian components are then combined into a single standard Brownian bridge. For the quantile increments, the Renyi representation and a reversal of the relevant exponential spacings reduce the problem to the weighted approximation of an ordinary uniform quantile process. The resulting bounds hold for 0 <= nu < 1/4 in the empirical case and for 0 <= eta < 1/2 in the quantile case. As an application of the empirical increment approximation, we derive simultaneous weighted Gaussian approximations for the censored and uncensored empirical subdistribution-tail processes arising under random right censoring.",
+      "updated": "2026-07-03T21:31:52Z"
+    },
+    {
+      "title": "Distributional Off-Policy Evaluation with Deep Quantile Process Regression",
+      "id": "http://arxiv.org/abs/2604.18143v2",
+      "summary": "This paper investigates the off-policy evaluation (OPE) problem from a distributional perspective. Rather than focusing solely on the expectation of the total return, as in most existing OPE methods, we aim to estimate the entire return distribution. To this end, we introduce a quantile-based approach for OPE using deep quantile process regression, presenting a novel algorithm called Deep Quantile Process regression-based Off-Policy Evaluation (DQPOPE). We provide new theoretical insights into the deep quantile process regression technique, extending existing approaches that estimate discrete quantiles to estimate a continuous quantile function. A key contribution of our work is the rigorous sample complexity analysis for distributional OPE with deep neural networks, bridging theoretical analysis with practical algorithmic implementations. We show that DQPOPE achieves statistical advantages by estimating the full return distribution using the same sample size required to estimate a single policy value using conventional methods. Empirical studies further show that DQPOPE provides significantly more precise and robust policy value estimates than standard methods, thereby enhancing the practical applicability and effectiveness of distributional reinforcement learning approaches.",
+      "updated": "2026-04-24T06:58:50Z"
+    },
+    {
+      "title": "A necessary and sufficient condition for convergence in distribution of the quantile process in $L^1(0,1)$",
+      "id": "http://arxiv.org/abs/2502.01254v4",
+      "summary": "We establish a necessary and sufficient condition for the quantile process based on iid sampling to converge in distribution in $L^1(0,1)$. The condition is that the quantile function is locally absolutely continuous and satisfies a slight strengthening of square integrability. If the quantile process converges in distribution then it may be approximated using the bootstrap.",
+      "updated": "2026-04-16T04:24:09Z"
+    },
+    {
+      "title": "Tolerance Intervals Using Dirichlet Processes",
+      "id": "http://arxiv.org/abs/2512.02178v1",
+      "summary": "In nonclinical pharmaceutical development, tolerance intervals are critical in ensuring product and process quality. They are statistical intervals designed to contain a specified proportion of the population with a given confidence level. Parametric and non-parametric methods have been developed to obtain tolerance intervals. The former work with small samples but can be affected by distribution misspecification. The latter offer larger flexibility but require large sample sizes. As an alternative, we propose Dirichlet process-based Bayesian nonparametric tolerance intervals to overcome the limitations. We develop a computationally efficient tolerance interval construction algorithm based on the analytically tractable quantile process of the Dirichlet process. Simulation studies show that our new approach is very robust to distributional assumptions and performs as efficiently as existing tolerance interval methods. To illustrate how the model works in practice, we apply our method to the tolerance interval estimation for potency data.",
+      "updated": "2025-12-01T20:18:59Z"
+    },
+    {
+      "title": "Distribution-Free Prediction Sets for Regression under Target Shift",
+      "id": "http://arxiv.org/abs/2510.10985v1",
+      "summary": "In real-world applications, the limited availability of labeled outcomes presents significant challenges for statistical inference due to high collection costs, technical barriers, and other constraints. In this work, we propose a method to construct efficient conformal prediction sets for new target outcomes by leveraging a source distribution that is distinct from the target but related through a distributional shift assumption and provides abundant labeled data. When the target data are fully unlabeled, our predictions rely solely on the source distribution, whereas partial target labels, when available, are integrated to improve efficiency. To address the challenges of data non-exchangeability and distribution non-identifiability, we identify the likelihood ratio by matching the covariate distributions of the source and target domains within a finite B-spline space. To accommodate complex error structures such as asymmetry and multimodality, our method constructs highest predictive density sets using a novel weight-adjusted conditional density estimator. This estimator models the source conditional density along a quantile process and transforms it, through appropriate weighting adjustments, to approximate the target conditional density. We establish the theoretical properties of the proposed method and evaluate its finite-sample performance through simulation studies and a real-data application to the MIMIC-III clinical database.",
+      "updated": "2025-10-13T03:50:29Z"
+    },
+    {
+      "title": "On absolutely continuous curves in the Wasserstein space over R and their representation by an optimal Markov process",
+      "id": "http://arxiv.org/abs/2105.02495v2",
+      "summary": "Let $μ$ = ($μ$t)t$\\in$R be a 1-parameter family of probability measures on R. In [11] we introduced its ``Markov-quantile''process: a process X= (Xt)t$\\in$R that resembles as much as possible the quantile process attached to $μ$, among the Markov processesattached to $μ$, i.e. whose family of marginal laws is $μ$.In this article we look at the case where $μ$ is absolutely continuous in the Wasserstein space P2(R). Then X is solution of adynamical transport problem with marginals ($μ$t)t. It provides a Markov minimal Lagrangian probabilistic representative of $μ$, whichis moreover unique among the processes obtained as certain types of limits: limits for the finite dimensional topology of quantileprocesses where the past is made independent of the future conditionally on the present at finitely many times, or limits of processeslinearly interpolating $μ$.This raises new questions about ways to obtain Markov Lagrangian representatives, and to seek uniqueness properties in thisframework.",
+      "updated": "2025-02-28T08:49:22Z"
+    },
+    {
+      "title": "Quantile processes and their applications in finite populations",
+      "id": "http://arxiv.org/abs/2407.21238v2",
+      "summary": "The weak convergence of the quantile processes, which are constructed based on different estimators of the finite population quantiles, is shown under various well-known sampling designs based on a superpopulation model. The results related to the weak convergence of these quantile processes are applied to find asymptotic distributions of the smooth $L$-estimators and the estimators of smooth functions of finite population quantiles. Based on these asymptotic distributions, confidence intervals are constructed for several finite population parameters like the median, the $α$-trimmed means, the interquartile range and the quantile based measure of skewness. Comparisons of various estimators are carried out based on their asymptotic distributions. We show that the use of the auxiliary information in the construction of the estimators sometimes has an adverse effect on the performances of the smooth $L$-estimators and the estimators of smooth functions of finite population quantiles under several sampling designs. Further, the performance of each of the above-mentioned estimators sometimes becomes worse under sampling designs, which use the auxiliary information, than their performances under simple random sampling without replacement (SRSWOR).",
+      "updated": "2024-11-29T03:19:38Z"
+    },
+    {
+      "title": "Global Censored Quantile Random Forest",
+      "id": "http://arxiv.org/abs/2410.12209v1",
+      "summary": "In recent years, censored quantile regression has enjoyed an increasing popularity for survival analysis while many existing works rely on linearity assumptions. In this work, we propose a Global Censored Quantile Random Forest (GCQRF) for predicting a conditional quantile process on data subject to right censoring, a forest-based flexible, competitive method able to capture complex nonlinear relationships. Taking into account the randomness in trees and connecting the proposed method to a randomized incomplete infinite degree U-process (IDUP), we quantify the prediction process' variation without assuming an infinite forest and establish its weak convergence. Moreover, feature importance ranking measures based on out-of-sample predictive accuracy are proposed. We demonstrate the superior predictive accuracy of the proposed method over a number of existing alternatives and illustrate the use of the proposed importance ranking measures on both simulated and real data.",
+      "updated": "2024-10-16T04:05:01Z"
+    },
+    {
+      "title": "An Empirical Quantile Estimation Approach to Nonlinear Optimization Problems with Chance Constraints",
+      "id": "http://arxiv.org/abs/2211.00675v5",
+      "summary": "We investigate an empirical quantile estimation approach to solve chance-constrained nonlinear optimization problems. Our approach is based on the reformulation of the chance constraint as an equivalent quantile constraint to provide stronger signals on the gradient. In this approach, the value of the quantile function is estimated empirically from samples drawn from the random parameters, and the gradient of the quantile function is estimated via a finite-difference approximation on top of the quantile-function-value estimation. We establish a convergence theory of this approach within the framework of an augmented Lagrangian method for solving general nonlinear constrained optimization problems. The foundation of the convergence analysis is a concentration property of the empirical quantile process, and the analysis is divided based on whether or not the quantile function is differentiable. In contrast to the sampling-and-smoothing approach used in the literature, the method developed in this paper does not involve any smoothing function and hence the quantile-function gradient approximation is easier to implement and there are less accuracy-control parameters to tune. We demonstrate the effectiveness of this approach and compare it with a smoothing method for the quantile-gradient estimation. Numerical investigation shows that the two approaches are competitive for certain problem instances.",
+      "updated": "2024-10-14T14:53:50Z"
+    },
+    {
+      "title": "A Change-Point Approach to Estimating the Proportion of False Null Hypotheses in Multiple Testing",
+      "id": "http://arxiv.org/abs/2309.10017v2",
+      "summary": "For estimating the proportion of false null hypotheses in multiple testing, a family of estimators by Storey (2002) is widely used in the applied and statistical literature, with many methods suggested for selecting the parameter $λ$. Inspired by change-point concepts, our new approach to the latter problem first approximates the $p$-value plot with a piecewise linear function with a single change-point and then selects the $p$-value at the change-point location as $λ$. Simulations show that our method has among the smallest RMSE across various settings, and we extend it to address the estimation in cases of superuniform $p$-values. We provide asymptotic theory for our estimator, relying on the theory of quantile processes. Additionally, we propose an application in the change-point literature and illustrate it using high-dimensional CNV data.",
+      "updated": "2024-05-05T22:41:13Z"
+    },
+    {
+      "title": "Estimation of Quantile Functionals in Linear Model",
+      "id": "http://arxiv.org/abs/2404.02764v1",
+      "summary": "Various indicators and measures of the real life procedures rise up as functionals of the quantile process of a parent random variable Z. However, Z can be observed only through a response in a linear model whose covariates are not under our control and the probability distribution of error terms is generally unknown. The problem is that of nonparametric estimation or other inference for such functionals. We propose an estimation procedure based on the averaged two-step regression quantile, recently developed by the authors, combined with an R-estimator of slopes of the linear model.",
+      "updated": "2024-04-03T14:16:17Z"
+    },
+    {
+      "title": "Large parameter asymptotic analysis for homogeneous normalized random measures with independent increments",
+      "id": "http://arxiv.org/abs/2403.14032v1",
+      "summary": "Homogeneous normalized random measures with independent increments (hNRMIs) represent a broad class of Bayesian nonparametric priors and thus are widely used. In this paper, we obtain the strong law of large numbers, the central limit theorem and the functional central limit theorem of hNRMIs when the concentration parameter $a$ approaches infinity. To quantify the convergence rate of the obtained central limit theorem, we further study the Berry-Esseen bound, which turns out to be of the form $O \\left( \\frac{1}{\\sqrt{a}}\\right)$. As an application of the central limit theorem, we present the functional delta method, which can be employed to obtain the limit of the quantile process of hNRMIs. As an illustration of the central limit theorems, we demonstrate the convergence numerically for the Dirichlet processes and the normalized inverse Gaussian processes with various choices of the concentration parameters.",
+      "updated": "2024-03-20T23:10:28Z"
+    },
+    {
+      "title": "Fast Algorithms for Quantile Regression with Selection",
+      "id": "http://arxiv.org/abs/2402.16693v1",
+      "summary": "This paper addresses computational challenges in estimating Quantile Regression with Selection (QRS). The estimation of the parameters that model self-selection requires the estimation of the entire quantile process several times. Moreover, closed-form expressions of the asymptotic variance are too cumbersome, making the bootstrap more convenient to perform inference. Taking advantage of recent advancements in the estimation of quantile regression, along with some specific characteristics of the QRS estimation problem, I propose streamlined algorithms for the QRS estimator. These algorithms significantly reduce computation time through preprocessing techniques and quantile grid reduction for the estimation of the copula and slope parameters. I show the optimization enhancements with some simulations. Lastly, I show how preprocessing methods can improve the precision of the estimates without sacrificing computational efficiency. Hence, they constitute a practical solutions for estimators with non-differentiable and non-convex criterion functions such as those based on copulas.",
+      "updated": "2024-02-26T16:07:46Z"
+    },
+    {
+      "title": "Distributed Inference for Tail Risk",
+      "id": "http://arxiv.org/abs/2108.01327v2",
+      "summary": "For measuring tail risk with scarce extreme events, extreme value analysis is often invoked as the statistical tool to extrapolate to the tail of a distribution. The presence of large datasets benefits tail risk analysis by providing more observations for conducting extreme value analysis. However, large datasets can be stored distributedly preventing the possibility of directly analyzing them. In this paper, we introduce a comprehensive set of tools for examining the asymptotic behavior of tail empirical and quantile processes in the setting where data is distributed across multiple sources, for instance, when data are stored on multiple machines. Utilizing these tools, one can establish the oracle property for most distributed estimators in extreme value statistics in a straightforward way. The main theoretical challenge arises when the number of machines diverges to infinity. The number of machines resembles the role of dimensionality in high dimensional statistics. We provide various examples to demonstrate the practicality and value of our proposed toolkit.",
+      "updated": "2023-12-15T05:52:09Z"
+    },
+    {
+      "title": "Combining Stochastic Tendency and Distribution Overlap Towards Improved Nonparametric Effect Measures and Inference",
+      "id": "http://arxiv.org/abs/2311.17564v1",
+      "summary": "A fundamental functional in nonparametric statistics is the Mann-Whitney functional $θ = P (X < Y )$ , which constitutes the basis for the most popular nonparametric procedures. The functional $θ$ measures a location or stochastic tendency effect between two distributions. A limitation of $θ$ is its inability to capture scale differences. If differences of this nature are to be detected, specific tests for scale or omnibus tests need to be employed. However, the latter often suffer from low power, and they do not yield interpretable effect measures. In this manuscript, we extend $θ$ by additionally incorporating the recently introduced distribution overlap index (nonparametric dispersion measure) $I_2$ that can be expressed in terms of the quantile process. We derive the joint asymptotic distribution of the respective estimators of $θ$ and $I_2$ and construct confidence regions. Extending the Wilcoxon- Mann-Whitney test, we introduce a new test based on the joint use of these functionals. It results in much larger consistency regions while maintaining competitive power to the rank sum test for situations in which θ alone would suffice. Compared with classical omnibus tests, the simulated power is much improved. Additionally, the newly proposed inference method yields effect measures whose interpretation is surprisingly straightforward.",
+      "updated": "2023-11-29T11:58:08Z"
+    },
+    {
+      "title": "Inference on quantile processes with a finite number of clusters",
+      "id": "http://arxiv.org/abs/2301.04687v2",
+      "summary": "I introduce a generic method for inference on entire quantile and regression quantile processes in the presence of a finite number of large and arbitrarily heterogeneous clusters. The method asymptotically controls size by generating statistics that exhibit enough distributional symmetry such that randomization tests can be applied. The randomization test does not require ex-ante matching of clusters, is free of user-chosen parameters, and performs well at conventional significance levels with as few as five clusters. The method tests standard (non-sharp) hypotheses and can even be asymptotically similar in empirically relevant situations. The main focus of the paper is inference on quantile treatment effects but the method applies more broadly. Numerical and empirical examples are provided.",
+      "updated": "2023-06-15T16:47:13Z"
+    },
+    {
+      "title": "SPQR: An R Package for Semi-Parametric Density and Quantile Regression",
+      "id": "http://arxiv.org/abs/2210.14482v1",
+      "summary": "We develop an R package SPQR that implements the semi-parametric quantile regression (SPQR) method in Xu and Reich (2021). The method begins by fitting a flexible density regression model using monotonic splines whose weights are modeled as data-dependent functions using artificial neural networks. Subsequently, estimates of conditional density and quantile process can all be obtained. Unlike many approaches to quantile regression that assume a linear model, SPQR allows for virtually any relationship between the covariates and the response distribution including non-linear effects and different effects on different quantile levels. To increase the interpretability and transparency of SPQR, model-agnostic statistics developed by Apley and Zhu (2020) are used to estimate and visualize the covariate effects and their relative importance on the quantile function. In this article, we detail how this framework is implemented in SPQR and illustrate how this package should be used in practice through simulated and real data examples.",
+      "updated": "2022-10-26T05:10:15Z"
+    },
+    {
+      "title": "Stochastic measure distortions induced by quantile processes for risk quantification and valuation",
+      "id": "http://arxiv.org/abs/2201.02045v1",
+      "summary": "We develop a novel stochastic valuation and premium calculation principle based on probability measure distortions that are induced by quantile processes in continuous time. Necessary and sufficient conditions are derived under which the quantile processes satisfy first- and second-order stochastic dominance. The introduced valuation principle relies on stochastic ordering so that the valuation risk-loading, and thus risk premiums, generated by the measure distortion is an ordered parametric family. The quantile processes are generated by a composite map consisting of a distribution and a quantile function. The distribution function accounts for model risk in relation to the empirical distribution of the risk process, while the quantile function models the response to the risk source as perceived by, e.g., a market agent. This gives rise to a system of subjective probability measures that indexes a stochastic valuation principle susceptible to probability measure distortions. We use the Tukey-$gh$ family of quantile processes driven by Brownian motion in an example that demonstrates stochastic ordering. We consider the conditional expectation under the distorted measure as a member of the time-consistent class of dynamic valuation principles, and extend it to the setting where the driving risk process is multivariate. This requires the introduction of a copula function in the composite map for the construction of quantile processes, which presents another new element in the risk quantification and modelling framework based on probability measure distortions induced by quantile processes.",
+      "updated": "2021-12-10T23:02:38Z"
+    },
+    {
+      "title": "Distributed Learning of Finite Gaussian Mixtures",
+      "id": "http://arxiv.org/abs/2010.10412v3",
+      "summary": "Advances in information technology have led to extremely large datasets that are often kept in different storage centers. Existing statistical methods must be adapted to overcome the resulting computational obstacles while retaining statistical validity and efficiency. Split-and-conquer approaches have been applied in many areas, including quantile processes, regression analysis, principal eigenspaces, and exponential families. We study split-and-conquer approaches for the distributed learning of finite Gaussian mixtures. We recommend a reduction strategy and develop an effective MM algorithm. The new estimator is shown to be consistent and retains root-n consistency under some general conditions. Experiments based on simulated and real-world data show that the proposed split-and-conquer approach has comparable statistical performance with the global estimator based on the full dataset, if the latter is feasible. It can even slightly outperform the global estimator if the model assumption does not match the real-world data. It also has better statistical and computational performance than some existing methods.",
+      "updated": "2021-11-10T20:55:42Z"
+    },
+    {
+      "title": "Quantile Diffusions for Risk Analysis",
+      "id": "http://arxiv.org/abs/1912.10866v3",
+      "summary": "We develop a novel approach for the construction of quantile processes governing the stochastic dynamics of quantiles in continuous time. Two classes of quantile diffusions are identified: the first, which we largely focus on, features a dynamic random quantile level and allows for direct interpretation of the resulting quantile process characteristics such as location, scale, skewness and kurtosis, in terms of the model parameters. The second type are function-valued quantile diffusions and are driven by stochastic parameter processes, which determine the entire quantile function at each point in time. By the proposed innovative and simple -- yet powerful -- construction method, quantile processes are obtained by transforming the marginals of a diffusion process under a composite map consisting of a distribution and a quantile function. Such maps, analogous to rank transmutation maps, produce the marginals of the resulting quantile process. We discuss the relationship and differences between our approach and existing methods and characterisations of quantile processes in discrete and continuous time. As an example of an application of quantile diffusions, we show how probability measure distortions, a form of dynamic tilting, can be induced. Though particularly useful in financial mathematics and actuarial science, examples of which are given in this work, measure distortions feature prominently across multiple research areas. For instance, dynamic distributional approximations (statistics), non-parametric and asymptotic analysis (mathematical statistics), dynamic risk measures (econometrics), behavioural economics, decision making (operations research), signal processing (information theory), and not least in general risk theory including applications thereof, for example in the context of climate change.",
+      "updated": "2021-09-11T11:50:53Z"
+    },
+    {
+      "title": "Bayesian Non-parametric Quantile Process Regression and Estimation of Marginal Quantile Effects",
+      "id": "http://arxiv.org/abs/2102.11309v3",
+      "summary": "Flexible estimation of multiple conditional quantiles is of interest in numerous applications, such as studying the effect of pregnancy-related factors on low and high birth weight. We propose a Bayesian non-parametric method to simultaneously estimate non-crossing, non-linear quantile curves. We expand the conditional distribution function of the response in I-spline basis functions where the covariate-dependent coefficients are modeled using neural networks. By leveraging the approximation power of splines and neural networks, our model can approximate any continuous quantile function. Compared to existing models, our model estimates all rather than a finite subset of quantiles, scales well to high dimensions, and accounts for estimation uncertainty. While the model is arbitrarily flexible, interpretable marginal quantile effects are estimated using accumulative local effect plots and variable importance measures. A simulation study shows that our model can better recover quantiles of the response distribution when the data is sparse, and an analysis of birth weight data is presented.",
+      "updated": "2021-08-29T04:13:46Z"
+    },
+    {
+      "title": "Dilation bootstrap",
+      "id": "http://arxiv.org/abs/2102.04457v1",
+      "summary": "We propose a methodology for constructing confidence regions with partially identified models of general form. The region is obtained by inverting a test of internal consistency of the econometric structure. We develop a dilation bootstrap methodology to deal with sampling uncertainty without reference to the hypothesized economic structure. It requires bootstrapping the quantile process for univariate data and a novel generalization of the latter to higher dimensions. Once the dilation is chosen to control the confidence level, the unknown true distribution of the observed data can be replaced by the known empirical distribution and confidence regions can then be obtained as in Galichon and Henry (2011) and Beresteanu, Molchanov and Molinari (2011).",
+      "updated": "2021-02-08T14:13:37Z"
+    },
+    {
+      "title": "Bi-$s^*$-Concave Distributions",
+      "id": "http://arxiv.org/abs/2006.03989v2",
+      "summary": "We introduce new shape-constrained classes of distribution functions on R, the bi-$s^*$-concave classes. In parallel to results of Dümbgen, Kolesnyk, and Wilke (2017) for what they called the class of bi-log-concave distribution functions, we show that every $s$-concave density $f$ has a bi-$s^*$-concave distribution function $F$ for $s^*\\leq s/(s+1)$. Confidence bands building on existing nonparametric bands, but accounting for the shape constraint of bi-$s^*$-concavity, are also considered. The new bands extend those developed by Dümbgen et al. (2017) for the constraint of bi-log-concavity. We also make connections between bi-$s^*$-concavity and finiteness of the Csörgő - Révész constant of $F$ which plays an important role in the theory of quantile processes.",
+      "updated": "2020-10-09T16:03:23Z"
+    },
+    {
+      "title": "On the strong approximation and functional limit laws for the increments of the non-overlapping k-spacings processes",
+      "id": "http://arxiv.org/abs/0807.3868v2",
+      "summary": "The first aim of the present paper, is to establish strong approximations of the uniform non-overlapping k-spacings process extending the results of Aly et al. (1984). Our methods rely on the invariance principle in Mason and van Zwet (1987). The second goal, is to generalize the Dindar (1997) results for the increments of the spacings quantile process to the uniforme non-overlapping k-spacings quantile process. We apply the last result to characterize the limit laws of functionals of the increments k-spacings quantile process.",
+      "updated": "2020-05-15T13:14:29Z"
+    },
+    {
+      "title": "Spatial dependence and space-time trend in extreme events",
+      "id": "http://arxiv.org/abs/2003.04265v1",
+      "summary": "The statistical theory of extremes is extended to observations that are non-stationary and not independent. The non-stationarity over time and space is controlled via the scedasis (tail scale) in the marginal distributions. Spatial dependence stems from multivariate extreme value theory. We establish asymptotic theory for both the weighted sequential tail empirical process and the weighted tail quantile process based on all observations, taken over time and space. The results yield two statistical tests for homoscedasticity in the tail, one in space and one in time. Further, we show that the common extreme value index can be estimated via a pseudo-maximum likelihood procedure based on pooling all (non-stationary and dependent) observations. Our leading example and application is rainfall in Northern Germany.",
+      "updated": "2020-03-09T17:16:08Z"
+    },
+    {
+      "title": "Gaussian process approximations for multicolor Pólya urn models",
+      "id": "http://arxiv.org/abs/1912.09665v1",
+      "summary": "Motivated by mathematical tissue growth modelling, we consider the problem of approximating the dynamics of multicolor Pólya urn processes that start with large numbers of balls of different colors and run for a long time. Using strong approximation theorems for empirical and quantile processes, we establish Gaussian process approximations for the Pólya urn processes. The approximating processes are sums of a multivariate Brownian motion process and an independent linear drift with a random Gaussian coefficient. Which of the two terms dominates depends on the ratio of the number of time steps $n$ to the initial number of balls $N$ in the urn. We also establish an upper bound of the form $c(n^{-1/2}+N^{-1/2})$ for the maximum deviation over the class of convex Borel sets of the step $n$ urn composition distribution from the approximating normal law.",
+      "updated": "2019-12-20T07:03:17Z"
+    },
+    {
+      "title": "The coupling method in extreme value theory",
+      "id": "http://arxiv.org/abs/1912.03155v1",
+      "summary": "A coupling method is developed for univariate extreme value theory , providing an alternative to the use of the tail empirical/quantile processes. Emphasizing the Peak-over-Threshold approach that approximates the distribution above high threshold by the Generalized Pareto distribution, we compare the empirical distribution of exceedances and the empirical distribution associated to the limit Generalized Pareto model and provide sharp bounds for their Wasser-stein distance in the second order Wasserstein space. As an application , we recover standard results on the asymptotic behavior of the Hill estimator, the Weissman extreme quantile estimator or the probability weighted moment estimators, shedding some new light on the theory.",
+      "updated": "2019-12-06T14:39:09Z"
+    },
+    {
+      "title": "Pro-Cyclicality of Traditional Risk Measurements: Quantifying and Highlighting Factors at its Source",
+      "id": "http://arxiv.org/abs/1903.03969v2",
+      "summary": "Since the introduction of risk-based solvency regulation, pro-cyclicality has been a subject of concerns from all market participants. Here, we lay down a methodology to evaluate the amount of pro-cyclicality in the way finnancial institutions measure risk, and identify factors explaining this pro-cyclical behavior. We introduce a new indicator based on the Sample Quantile Process (SQP, a dynamic generalization of Value-at-Risk), conditioned on realized volatility to quantify the pro-cyclicality, and evaluate its amount in the markets, considering 11 stock indices as realizations of the SQP. Then we determine two main factors explaining the pro-cyclicality: the clustering and return-to-the-mean of volatility, as it could have been anticipated but not quantified before, and, more surprisingly, the very way risk is measured, independently of this return-to-the-mean effect.",
+      "updated": "2019-12-04T17:13:28Z"
+    },
+    {
+      "title": "A Robust Method for Shift Detection in Time Series",
+      "id": "http://arxiv.org/abs/1506.03345v2",
+      "summary": "We present a robust test for change-points in time series which is based on the two-sample Hodges-Lehmann estimator. We develop new limit theory for a class of statistics based on the two-sample U-quantile processes, in the case of short range dependent observations. Using this theory we can derive the asymptotic distribution of our test statistic under the null hypothesis. We study the finite sample properties of our test via a simulation study and compare the test with the classical CUSUM test and a test based on the Wilcoxon-Mann-Whitney statistic.",
+      "updated": "2019-05-16T14:15:23Z"
+    },
+    {
+      "title": "Smoothed quantile regression processes for binary response models",
+      "id": "http://arxiv.org/abs/1302.5644v2",
+      "summary": "In this paper, we consider binary response models with linear quantile restrictions. Considerably generalizing previous research on this topic, our analysis focuses on an infinite collection of quantile estimators. We derive a uniform linearisation for the properly standardized empirical quantile process and discover some surprising differences with the setting of continuously observed responses. Moreover, we show that considering quantile processes provides an effective way of estimating binary choice probabilities without restrictive assumptions on the form of the link function, heteroskedasticity or the need for high dimensional non-parametric smoothing necessary for approaches available so far. A uniform linear representation and results on asymptotic normality are provided, and the connection to rearrangements is discussed.",
+      "updated": "2019-04-04T02:23:05Z"
+    },
+    {
+      "title": "Robust Uniform Inference for Quantile Treatment Effects in Regression Discontinuity Designs",
+      "id": "http://arxiv.org/abs/1702.04430v5",
+      "summary": "The practical importance of inference with robustness against large bandwidths for causal effects in regression discontinuity and kink designs is widely recognized. Existing robust methods cover many cases, but do not handle uniform inference for CDF and quantile processes in fuzzy designs, despite its use in the recent literature in empirical microeconomics. In this light, this paper extends the literature by developing a unified framework of inference with robustness against large bandwidths that applies to uniform inference for quantile treatment effects in fuzzy designs, as well as all the other cases of sharp/fuzzy mean/quantile regression discontinuity/kink designs. We present Monte Carlo simulation studies and an empirical application for evaluations of the Oklahoma pre-K program.",
+      "updated": "2019-02-23T16:05:32Z"
+    },
+    {
+      "title": "Conditional Quantile Processes based on Series or Many Regressors",
+      "id": "http://arxiv.org/abs/1105.6154v4",
+      "summary": "Quantile regression (QR) is a principal regression method for analyzing the impact of covariates on outcomes. The impact is described by the conditional quantile function and its functionals. In this paper we develop the nonparametric QR-series framework, covering many regressors as a special case, for performing inference on the entire conditional quantile function and its linear functionals. In this framework, we approximate the entire conditional quantile function by a linear combination of series terms with quantile-specific coefficients and estimate the function-valued coefficients from the data. We develop large sample theory for the QR-series coefficient process, namely we obtain uniform strong approximations to the QR-series coefficient process by conditionally pivotal and Gaussian processes. Based on these strong approximations, or couplings, we develop four resampling methods (pivotal, gradient bootstrap, Gaussian, and weighted bootstrap) that can be used for inference on the entire QR-series coefficient function. We apply these results to obtain estimation and inference methods for linear functionals of the conditional quantile function, such as the conditional quantile function itself, its partial derivatives, average partial derivatives, and conditional average partial derivatives. Specifically, we obtain uniform rates of convergence and show how to use the four resampling methods mentioned above for inference on the functionals. All of the above results are for function-valued parameters, holding uniformly in both the quantile index and the covariate value, and covering the pointwise case as a by-product. We demonstrate the practical utility of these results with an example, where we estimate the price elasticity function and test the Slutsky condition of the individual demand for gasoline, as indexed by the individual unobserved propensity for gasoline consumption.",
+      "updated": "2018-08-09T18:26:55Z"
+    },
+    {
+      "title": "The Markov-quantile process attached to a family of Marginals",
+      "id": "http://arxiv.org/abs/1804.10514v1",
+      "summary": "Let $μ$ = ($μ$t)t$\\in$R be any 1-parameter family of probability measures on R. Its quantile process (Gt)t$\\in$R : ]0, 1[ $\\rightarrow$ RR, given by Gt($α$) = inf{x $\\in$ R : $μ$t(]--$\\infty$, x]) > $α$}, is not Markov in general. We modify it to build the Markov process we call \"Markov-quantile\".We first describe the discrete analogue: if ($μ$n)n$\\in$Z is a family of probability measures on R, a Markov process Y = (Yn)n$\\in$Z such that Law(Yn) = $μ$n is given by the data of its couplings from n to n + 1, i.e. Law((Yn, Yn+1)), and the process Y is the inhomogeneous Markov chain having those couplings as transitions. Therefore, there is a canonical Markov process with marginals $μ$n and as similar as possible to the quantile process: the chain whose transitions are the quantile couplings. We show that an analogous process exists for a continuous parameter t: there is a unique Markov process X with the measures $μ$t as marginals, and being a limit for the finite dimensional topology of quantile processes where the past is made independent of the future at finitely many times (many non-Markovian limits exist in general). The striking fact is that the construction requires no regularity for the family $μ$. We rely on order arguments, which seems to be completely new for the purpose.We also prove new results the Markov-quantile process yields in two contemporary frameworks:-- In case $μ$ is increasing for the stochastic order, X has increasing trajectories. This is an analogue of a result of Kellerer dealing with the convex order, peacocks and martingales. Modifiying Kellerer's proof, we also prove simultaneously his result and ours in this case.-- If $μ$ is absolutely continuous in Wasserstein space P2(R) then X is solution of a Benamou--Brenier transport problem with marginals $μ$t. Itprovides a Markov probabilistic representation of the continuity equation, unique in a certain sense.",
+      "updated": "2018-04-27T13:59:21Z"
+    },
+    {
+      "title": "Causal Inference by Quantile Regression Kink Designs",
+      "id": "http://arxiv.org/abs/1605.09773v3",
+      "summary": "The quantile regression kink design (QRKD) is proposed by empirical researchers as a potential method to assess heterogeneous treatment effects under suitable research designs, but its causal interpretation remains unknown. We propose a causal interpretation of the QRKD estimand. Under flexible heterogeneity and endogeneity, the QRKD estimand measures a weighted average of heterogeneous marginal effects at respective conditional quantiles of outcome given a designed kink point. In addition, we develop weak convergence results for the QRKD estimator as a local quantile process for the purpose of conducting statistical inference on heterogeneous treatment effects using the QRKD. Applying our methods to the Continuous Wage and Benefit History Project (CWBH) data, we find significantly heterogeneous positive causal effects of unemployment insurance benefits on unemployment durations in Louisiana between 1981 and 1983. These effects are larger for individuals with longer unemployment durations.",
+      "updated": "2017-12-14T20:05:36Z"
+    },
+    {
+      "title": "Komlós-Major-Tusnády approximations to increments of uniform empirical processes",
+      "id": "http://arxiv.org/abs/1709.00747v4",
+      "summary": "The well-known Komlós-Major-Tusnády inequalities [Z. Wahrsch. Verw. Gebiete 32 (1975) 111-131; Z. Wahrsch. Verw. Gebiete 34 (1976) 33-58] provide sharp inequalities to partial sums of iid standard exponential random variables by a sequence of standard Brownian motions. In this paper, we employ these results to establish Gaussian approximations to weighted increments of uniform empirical and quantile processes. This approach provides rates to the approximations which, among others, have direct applications to statistics of extreme values for randomly censored data.",
+      "updated": "2017-12-08T18:38:19Z"
+    },
+    {
+      "title": "Empirical regression quantile process with possible application to risk analysis",
+      "id": "http://arxiv.org/abs/1710.06638v1",
+      "summary": "The processes of the averaged regression quantiles and of their modifications provide useful tools in the regression models when the covariates are not fully under our control. As an application we mention the probabilistic risk assessment in the situation when the return depends on some exogenous variables. The processes enable to evaluate the expected $α$-shortfall ($0\\leqα\\leq 1$) and other measures of the risk, recently generally accepted in the financial literature, but also help to measure the risk in environment analysis and elsewhere.",
+      "updated": "2017-10-18T09:27:49Z"
+    },
+    {
+      "title": "Quantile-based Mean-Field Games with Common Noise",
+      "id": "http://arxiv.org/abs/1708.06035v1",
+      "summary": "In this paper we explore the impact of quantiles on optimal strategies under state dynamics driven by both individual noise, common noise and Poisson jumps. We first establish an optimality system satisfied the quantile process under jump terms. We then turn to investigate a new class of finite horizon mean-field games with common noise in which the payoff functional and the state dynamics are dependent not only on the state-action pair but also on conditional quantiles. Based on the best-response of the decision-makers, it is shown that the equilibrium conditional quantile process satisfies a stochastic partial differential equation in the non-degenerate case. A closed-form expression of the quantile process is provided in a basic Ornstein-Uhlenbeck process with common noise.",
+      "updated": "2017-08-20T23:47:08Z"
+    },
+    {
+      "title": "Quantile Processes for Semi and Nonparametric Regression",
+      "id": "http://arxiv.org/abs/1604.02130v2",
+      "summary": "A collection of quantile curves provides a complete picture of conditional distributions. Properly centered and scaled versions of estimated curves at various quantile levels give rise to the so-called quantile regression process (QRP). In this paper, we establish weak convergence of QRP in a general series approximation framework, which includes linear models with increasing dimension, nonparametric models and partial linear models. An interesting consequence is obtained in the last class of models, where parametric and non-parametric estimators are shown to be asymptotically independent. Applications of our general process convergence results include the construction of non-crossing quantile curves and the estimation of conditional distribution functions. As a result of independent interest, we obtain a series of Bahadur representations with exponential bounds for tail probabilities of all remainder terms. Bounds of this kind are potentially useful in analyzing statistical inference procedures under divide-and-conquer setup.",
+      "updated": "2017-07-21T18:18:37Z"
+    },
+    {
+      "title": "Bi-$s^*$-concave distributions",
+      "id": "http://arxiv.org/abs/1705.00252v2",
+      "summary": "We introduce a new shape-constrained class of distribution functions on R, the bi-$s^*$-concave class. In parallel to results of Dümbgen, Kolesnyk, and Wilke (2017) for what they called the class of bi-log-concave distribution functions, we show that every s-concave density f has a bi-$s^*$-concave distribution function $F$ and that every bi-$s^*$-concave distribution function satisfies $γ(F) \\le 1/(1+s)$ where finiteness of $$ γ(F) \\equiv \\sup_{x} F(x) (1-F(x)) \\frac{| f' (x)|}{f^2 (x)}, $$ the Csörgő - Révész constant of F, plays an important role in the theory of quantile processes on $R$.",
+      "updated": "2017-05-10T22:47:31Z"
+    },
+    {
+      "title": "Maximum likelihood estimators based on the block maxima method",
+      "id": "http://arxiv.org/abs/1705.00465v1",
+      "summary": "The extreme value index is a fundamental parameter in univariate Extreme Value Theory (EVT). It captures the tail behavior of a distribution and is central in the extrapolation beyond observed data. Among other semi-parametric methods (such as the popular Hill's estimator), the Block Maxima (BM) and Peaks-Over-Threshold (POT) methods are widely used for assessing the extreme value index and related normalizing constants. We provide asymptotic theory for the maximum likelihood estimators (MLE) based on the BM method. Our main result is the asymptotic normality of the MLE with a non-trivial bias depending on the extreme value index and on the so-called second order parameter. Our approach combines asymptotic expansions of the likelihood process and of the empirical quantile process of block maxima. The results permit to complete the comparison of most common semi-parametric estimators in EVT (MLE and probability weighted moment estimators based on the POT or BM methods) through their asymptotic variances, biases and optimal mean square errors.",
+      "updated": "2017-05-01T10:43:41Z"
+    },
+    {
+      "title": "Approximating welfare in large efficient markets",
+      "id": "http://arxiv.org/abs/1601.03812v2",
+      "summary": "We consider the efficient outcome of a canonical economic market model involving buyers and sellers with independent and identically distributed random valuations and costs, respectively. When the number of buyers and sellers is large, we show that the joint distribution of the equilibrium quantity traded and welfare is asymptotically normal. Moreover, we bound the approximation rate. The proof proceeds by constructing, on a common probability space, a representation consisting of two independent empirical quantile processes, which in large markets can be approximated by independent Brownian bridges. The distribution of interest can then be approximated by that of a functional of a Gaussian process. This methodology applies to a variety of mechanism design problems.",
+      "updated": "2017-03-01T07:13:23Z"
+    },
+    {
+      "title": "Uniform Inference for High-dimensional Quantile Regression: Linear Functionals and Regression Rank Scores",
+      "id": "http://arxiv.org/abs/1702.06209v1",
+      "summary": "Hypothesis tests in models whose dimension far exceeds the sample size can be formulated much like the classical studentized tests only after the initial bias of estimation is removed successfully. The theory of debiased estimators can be developed in the context of quantile regression models for a fixed quantile value. However, it is frequently desirable to formulate tests based on the quantile regression process, as this leads to more robust tests and more stable confidence sets. Additionally, inference in quantile regression requires estimation of the so called sparsity function, which depends on the unknown density of the error. In this paper we consider a debiasing approach for the uniform testing problem. We develop high-dimensional regression rank scores and show how to use them to estimate the sparsity function, as well as how to adapt them for inference involving the quantile regression process. Furthermore, we develop a Kolmogorov-Smirnov test in a location-shift high-dimensional models and confidence sets that are uniformly valid for many quantile values. The main technical result are the development of a Bahadur representation of the debiasing estimator that is uniform over a range of quantiles and uniform convergence of the quantile process to the Brownian bridge process, which are of independent interest. Simulation studies illustrate finite sample properties of our procedure.",
+      "updated": "2017-02-20T23:38:40Z"
+    },
+    {
+      "title": "Weak decreasing stochastic order",
+      "id": "http://arxiv.org/abs/1610.02190v2",
+      "summary": "We introduce the notion of weak decreasing stochastic (WDS) ordering for real-valued processes with negative means, which, to our knowledge, has not been studied before. Thanks to Madan-Yor's argument, it follows that the WDS ordering is a necessary and sufficient condition for a process with negative mean to be embeddable in a standard Brownian motion by the Cox and Hobson extension of the Azéma-Yor algorithm. Since the decreasing stochastic order is stronger than the WDS order, then, for every stochastically non-decreasing family of probability measures with densities, the Cox-Hobson stopping times provide an associated Markov process. The quantile process associated to a stochastically non-decreasing process is not necessarily Markovian.",
+      "updated": "2017-02-11T12:46:41Z"
+    },
+    {
+      "title": "Bahadur--Kiefer Representations for Time Dependent Quantile Processes",
+      "id": "http://arxiv.org/abs/1606.06045v1",
+      "summary": "We define a time dependent empirical process based on $n$ independent fractional Brownian motions and describe strong approximations to it by Gaussian processes. They lead to strong approximations and functional laws of the iterated logarithm for the quantile or inverse of this empirical process. They are obtained via time dependent Bahadur--Kiefer representations.",
+      "updated": "2016-06-20T10:02:42Z"
+    },
+    {
+      "title": "Real time change-point detection in a nonlinear quantile model",
+      "id": "http://arxiv.org/abs/1605.00533v1",
+      "summary": "Most studies in real time change-point detection either focus on the linear model or use the CUSUM method under classical assumptions on model errors. This paper considers the sequential change-point detection in a nonlinear quantile model. A test statistic based on the CUSUM of the quantile process subgradient is proposed and studied. Under null hypothesis that the model does not change, the asymptotic distribution of the test statistic is determined. Under alternative hypothesis that at some unknown observation there is a change in model, the proposed test statistic converges in probability to $\\infty$. These results allow to build the critical regions on open-end and on closed-end procedures. Simulation results, using Monte Carlo technique, investigate the performance of the test statistic, specially for heavy-tailed error distributions. We also compare it with the classical CUSUM test statistic.",
+      "updated": "2016-05-02T15:40:25Z"
+    },
+    {
+      "title": "Studentized U-quantile processes under dependence with applications to change-point analysis",
+      "id": "http://arxiv.org/abs/1503.04161v2",
+      "summary": "Many popular robust estimators are $U$-quantiles, most notably the Hodges-Lehmann location estimator and the $Q_n$ scale estimator. We prove a functional central limit theorem for the sequential $U$-quantile process without any moment assumptions and under weak short-range dependence conditions. We further devise an estimator for the long-run variance and show its consistency, from which the convergence of the studentized version of the sequential $U$-quantile process to a standard Brownian motion follows. This result can be used to construct CUSUM-type change-point tests based on $U$-quantiles, which do not rely on bootstrapping procedures. We demonstrate this approach in detail at the example of the Hodges-Lehmann estimator for robustly detecting changes in the central location. A simulation study confirms the very good robustness and efficiency properties of the test. Two real-life data sets are analyzed.",
+      "updated": "2016-03-18T14:21:25Z"
+    },
+    {
+      "title": "Value-at-Risk: The Effect of Autoregression in a Quantile Process",
+      "id": "http://arxiv.org/abs/1605.04940v1",
+      "summary": "Value-at-Risk (VaR) is an institutional measure of risk favored by financial regulators. VaR may be interpreted as a quantile of future portfolio values conditional on the information available, where the most common quantile used is 95%. Here we demonstrate Conditional Autoregressive Value at Risk, first introduced by Engle, Manganelli (2001). CAViaR suggests that negative/positive returns are not i.i.d., and that there is significant autocorrelation. The model is tested using data from 1986- 1999 and 1999-2009 for GM, IBM, XOM, SPX, and then validated via the dynamic quantile test. Results suggest that the tails (upper/lower quantile) of a distribution of returns behave differently than the core.",
+      "updated": "2016-03-05T22:33:01Z"
+    },
+    {
+      "title": "Analysis of the Forward Search using some new results for martingales and empirical processes",
+      "id": "http://arxiv.org/abs/1602.00886v1",
+      "summary": "The Forward Search is an iterative algorithm for avoiding outliers in a regression analysis suggested by Hadi and Simonoff (J. Amer. Statist. Assoc. 88 (1993) 1264-1272), see also Atkinson and Riani (Robust Diagnostic Regression Analysis (2000) Springer). The algorithm constructs subsets of \"good\" observations so that the size of the subsets increases as the algorithm progresses. It results in a sequence of regression estimators and forward residuals. Outliers are detected by monitoring the sequence of forward residuals. We show that the sequences of regression estimators and forward residuals converge to Gaussian processes. The proof involves a new iterated martingale inequality, a theory for a new class of weighted and marked empirical processes, the corresponding quantile process theory, and a fixed point argument to describe the iterative aspect of the procedure.",
+      "updated": "2016-02-02T11:27:26Z"
+    },
+    {
+      "title": "Multivariate Generalized Linear-statistics of short range dependent data",
+      "id": "http://arxiv.org/abs/1412.0379v1",
+      "summary": "Generalized linear (GL-) statistics are defined as functionals of an U-quantile process and unify different classes of statistics such as U-statistics and L-statistics. We derive a central limit theorem for GL-statistics of strongly mixing sequences and arbitrary dimension of the underlying kernel. For this purpose we establish a limit theorem for U-statistics and an invariance principle for U-processes together with a convergence rate for the remaining term of the Bahadur representation. An application is given by the generalized median estimator for the tail-parameter of the Pareto distribution, which is commonly used to model exceedances of high thresholds. We use subsampling to calculate confidence intervals and investigate its behaviour under independence and strong mixing in simulations.",
+      "updated": "2014-12-01T09:05:19Z"
+    },
+    {
+      "title": "A moderate deviation principle for empirical bootstrap measure",
+      "id": "http://arxiv.org/abs/1206.1459v2",
+      "summary": "We prove two Large deviations principles (LDP) in the zone of moderate deviation probabilities. First we establish LDP for the conditional distributions of moderate deviations of empirical bootstrap measures given empirical probability measures. Second we establish LDP for the joint distributions of empirical measure and bootstrap empirical measures. Using these LDPs, similar LDPs for statistical differentiable functionals can be established. The LDPs for moderate deviations of empirical quantile processes and empirical bootstrap copula function are provided as illustration of these results.",
+      "updated": "2014-05-21T06:29:26Z"
+    },
+    {
+      "title": "Nearly root-n approximation for regression quantile processes",
+      "id": "http://arxiv.org/abs/1210.1092v1",
+      "summary": "Traditionally, assessing the accuracy of inference based on regression quantiles has relied on the Bahadur representation. This provides an error of order $n^{-1/4}$ in normal approximations, and suggests that inference based on regression quantiles may not be as reliable as that based on other (smoother) approaches, whose errors are generally of order $n^{-1/2}$ (or better in special symmetric cases). Fortunately, extensive simulations and empirical applications show that inference for regression quantiles shares the smaller error rates of other procedures. In fact, the \"Hungarian\" construction of Komlós, Major and Tusnády [Z. Wahrsch. Verw. Gebiete 32 (1975) 111-131, Z. Wahrsch. Verw. Gebiete 34 (1976) 33-58] provides an alternative expansion for the one-sample quantile process with nearly the root-$n$ error rate (specifically, to within a factor of $\\log n$). Such an expansion is developed here to provide a theoretical foundation for more accurate approximations for inference in regression quantile models. One specific application of independent interest is a result establishing that for conditional inference, the error rate for coverage probabilities using the Hall and Sheather [J. R. Stat. Soc. Ser. B Stat. Methodol. 50 (1988) 381-391] method of sparsity estimation matches their one-sample rate.",
+      "updated": "2012-10-03T12:43:33Z"
+    },
+    {
+      "title": "On Some Asymptotic Properties and an Almost Sure Approximation of the Normalized Inverse-Gaussian Process",
+      "id": "http://arxiv.org/abs/1206.6658v1",
+      "summary": "In this paper, we present some asymptotic properties of the normalized inverse-Gaussian process. In particular, when the concentration parameter is large, we establish an analogue of the empirical functional central limit theorem, the strong law of large numbers and the Glivenko-Cantelli theorem for the normalized inverse-Gaussian process and its corresponding quantile process. We also derive a finite sum-representation that converges almost surely to the Ferguson and Klass representation of the normalized inverse-Gaussian process. This almost sure approximation can be used to simulate efficiently the normalized inverse-Gaussian process.",
+      "updated": "2012-06-28T12:30:38Z"
+    },
+    {
+      "title": "Clustering rates and Chung type functional laws of the iterated logarithm for empirical and quantile processes",
+      "id": "http://arxiv.org/abs/1201.5521v1",
+      "summary": "Following the works of Berthet (1997), we first obtain exact clustering rates in the functional law of the iterated logarithm for the uniform empirical and quantile processes and for their increments. In a second time, we obtain functional Chung-type limit laws for the local empirical process for a class of target functions on the border of the Strassen set.",
+      "updated": "2012-01-26T14:08:52Z"
+    },
+    {
+      "title": "Some uniform in bandwidth functional results for the tail uniform empirical and quantile processes",
+      "id": "http://arxiv.org/abs/1201.5517v1",
+      "summary": "For fixed $t\\in [0,1)$ and $h>0$, consider the local uniform empirical process $$\\DD_{n,h,t}(s):=n^{-1/2}\\coo\\sliin 1_{[t,t+hs]}(U_i)-hs\\cff,\\;s\\in [0,1],$$ where the $U_i$ are independent and uniformly distributed on $[0,1]$. We investigate the functional limit behaviour of $\\DD_{n,h,t}$ uniformly in $\\wth_n\\le h\\le h_n$ when $n\\wth_n/\\log\\log n\\rar \\infty$ and $h_n\\rar 0$.",
+      "updated": "2012-01-26T13:59:10Z"
+    },
+    {
+      "title": "The Dirichlet Process with Large Concentration Parameter",
+      "id": "http://arxiv.org/abs/1109.5261v3",
+      "summary": "Ferguson's Dirichlet process plays an important role in nonparametric Bayesian inference. Let $P_a$ be the Dirichlet process in $\\mathbb{R}$ with a base probability measure $H$ and a concentration parameter $a>0.$ In this paper, we show that $\\sqrt {a} \\big(P_a((-\\infty,t]) -H((-\\infty,t])\\big)$ converges to a certain Brownian bridge as $a \\to \\infty.$ We also derive a certain Glivenko-Cantelli theorem for the Dirichlet process. Using the functional delta method, the weak convergence of the quantile process is also obtained. A large concentration parameter occurs when a statistician puts too much emphasize on his/her prior guess. This scenario also happens when the sample size is large and the posterior is used to make inference.",
+      "updated": "2011-12-13T22:17:47Z"
+    },
+    {
+      "title": "Empirical Quantile CLTs for Time Dependent Data",
+      "id": "http://arxiv.org/abs/1111.4591v1",
+      "summary": "We establish empirical quantile process CLTs based on $n$ independent copies of a stochastic process $\\{X_t: t \\in E\\}$ that are uniform in $t \\in E$ and quantile levels $α\\in I$, where $I$ is a closed sub-interval of $(0,1)$. Typically $E=[0,T]$, or a finite product of such intervals. Also included are CLT's for the empirical process based on $\\{I_{X_t \\le y} - \\rm {Pr}(X_t \\le y): t \\in E, y \\in R \\}$ that are uniform in $t \\in E, y \\in R$. The process $\\{X_t: t \\in E\\}$ may be chosen from a broad collection of Gaussian processes, compound Poisson processes, stationary independent increment stable processes, and martingales.",
+      "updated": "2011-11-19T22:29:05Z"
+    },
+    {
+      "title": "On the Pickands stochastic process",
+      "id": "http://arxiv.org/abs/1111.4469v1",
+      "summary": "We consider the Pickands process {equation*} P_{n}(s)=\\log (1/s)^{-1}\\log \\frac{X_{n-k+1,n}-X_{n-[k/s]+1,n}}{% X_{n-[k/s]+1,n}-X_{n-[k/s^{2}]+1,n}}, {equation*} {equation*} (\\frac{k}{n}\\leq s^2 \\leq 1), {equation*} which is a generalization of the classical Pickands estimate $P_{n}(1/2)$ of the extremal index. We undertake here a purely stochastic process view for the asymptotic theory of that process by using the Csörgő-Csörgő-Horváth-Mason (1986) \\cite{cchm} weighted approximation of the empirical and quantile processes to suitable Brownian bridges. This leads to the uniform convergence of the margins of this process to the extremal index and a complete theory of weak convergence of $P_n$ in $\\ell^{\\infty}([a,b])$ to some Gaussian process $$\\{\\mathbb{G},a\\leq s \\leq b\\} $$ for all $[a,b] \\subset]0,1[$. This frame greatly simplifies the former results and enable applications based on stochastic processes methods.",
+      "updated": "2011-11-18T20:23:12Z"
+    },
+    {
+      "title": "U-Processes, U-Quantile Processes and Generalized Linear Statistics of Dependent Data",
+      "id": "http://arxiv.org/abs/1009.5337v4",
+      "summary": "Generalized linear statistics are an unifying class that contains U-statistics, U-quantiles, L-statistics as well as trimmed and winsorized U-statistics. For example, many commonly used estimators of scale fall into this class. GL-statistics only have been studied under independence; in this paper, we develop an asymptotic theory for GL-statistics of sequences which are strongly mixing or L^1 near epoch dependent on an absolutely regular process. For this purpose, we prove an almost sure approximation of the empirical U-process by a Gaussian process. With the help of a generalized Bahadur representation, it follows that such a strong invariance principle also holds for the empirical U-quantile process and consequently for GL-statistics. We obtain central limit theorems and laws of the iterated logarithm for U-processes, U-quantile processes and GL-statistics as straightforward corollaries.",
+      "updated": "2011-08-18T11:35:47Z"
+    },
+    {
+      "title": "Delta method in large deviations and moderate deviations for estimators",
+      "id": "http://arxiv.org/abs/1105.3552v1",
+      "summary": "The delta method is a popular and elementary tool for deriving limiting distributions of transformed statistics, while applications of asymptotic distributions do not allow one to obtain desirable accuracy of approximation for tail probabilities. The large and moderate deviation theory can achieve this goal. Motivated by the delta method in weak convergence, a general delta method in large deviations is proposed. The new method can be widely applied to driving the moderate deviations of estimators and is illustrated by examples including the Wilcoxon statistic, the Kaplan--Meier estimator, the empirical quantile processes and the empirical copula function. We also improve the existing moderate deviations results for $M$-estimators and $L$-statistics by the new method. Some applications of moderate deviations to statistical hypothesis testing are provided.",
+      "updated": "2011-05-18T07:39:58Z"
+    },
+    {
+      "title": "Quantile pyramids for Bayesian nonparametrics",
+      "id": "http://arxiv.org/abs/0902.4410v1",
+      "summary": "Pólya trees fix partitions and use random probabilities in order to construct random probability measures. With quantile pyramids we instead fix probabilities and use random partitions. For nonparametric Bayesian inference we use a prior which supports piecewise linear quantile functions, based on the need to work with a finite set of partitions, yet we show that the limiting version of the prior exists. We also discuss and investigate an alternative model based on the so-called substitute likelihood. Both approaches factorize in a convenient way leading to relatively straightforward analysis via MCMC, since analytic summaries of posterior distributions are too complicated. We give conditions securing the existence of an absolute continuous quantile process, and discuss consistency and approximate normality for the sequence of posterior distributions. Illustrations are included.",
+      "updated": "2009-02-25T16:16:17Z"
+    },
+    {
+      "title": "Strong Gaussian approximations of product-limit and Quantile Processes for Strong mixing and censored data",
+      "id": "http://arxiv.org/abs/0812.3038v1",
+      "summary": "In this paper, we consider the product-limit quantile estimator of an unknown quantile function under a censored dependent model. This is a parallel problem to the estimation of the unknown distribution function by the product-limit estimator under the same model. Simultaneous strong Gaussian approximations of the product-limit process and product-limit quantile process are constructed with rate $O((\\log n)^{-λ})$ for some $λ>0,$. The strong Gaussian approximation of the product-limit process is then applied to derive the laws of the iterated logarithm for product-limit process.",
+      "updated": "2008-12-16T12:04:40Z"
+    },
+    {
+      "title": "Reduction principles for quantile and Bahadur-Kiefer processes of long-range dependent linear sequences",
+      "id": "http://arxiv.org/abs/0802.1025v1",
+      "summary": "In this paper we consider quantile and Bahadur-Kiefer processes for long range dependent linear sequences. These processes, unlike in previous studies, are considered on the whole interval $(0,1)$. As it is well-known, quantile processes can have very erratic behavior on the tails. We overcome this problem by considering these processes with appropriate weight functions. In this way we conclude strong approximations that yield some remarkable phenomena that are not shared with i.i.d. sequences, including weak convergence of the Bahadur-Kiefer processes, a different pointwise behavior of the general and uniform Bahadur-Kiefer processes, and a somewhat \"strange\" behavior of the general quantile process.",
+      "updated": "2008-02-07T17:31:58Z"
+    },
+    {
+      "title": "Functional limit laws for the increments of the quantile process; with applications",
+      "id": "http://arxiv.org/abs/math/0612260v3",
+      "summary": "We establish a functional limit law of the logarithm for the increments of the normed quantile process based upon a random sample of size $n\\to\\infty$. We extend a limit law obtained by Deheuvels and Mason (12), showing that their results hold uniformly over the bandwidth $h$, restricted to vary in $[h'_n,h''_n]$, where $\\{h'_n\\}_{n\\geq1}$ and $\\{h''_n\\}_{n\\geq 1}$ are appropriate non-random sequences. We treat the case where the sample observations follow possibly non-uniform distributions. As a consequence of our theorems, we provide uniform limit laws for nearest-neighbor density estimators, in the spirit of those given by Deheuvels and Mason (13) for kernel-type estimators.",
+      "updated": "2007-11-13T13:27:54Z"
+    }
+  ],
+  "openalex": [
+    {
+      "title": "Convergence of integrals of uniform empirical and quantile processes",
+      "id": "https://openalex.org/W2061274866",
+      "year": 1993,
+      "doi": "https://doi.org/10.1016/0304-4149(93)90075-f",
+      "abstract": ""
+    },
+    {
+      "title": "Energy-Utility Quantiles",
+      "id": "https://openalex.org/W1852236200",
+      "year": 2014,
+      "doi": "https://doi.org/10.1007/978-3-319-06200-6_24",
+      "abstract": ""
+    },
+    {
+      "title": "Spline Quantile Regression",
+      "id": "https://openalex.org/W4406192926",
+      "year": 2026,
+      "doi": "https://doi.org/10.1007/s42519-026-00545-8",
+      "abstract": ""
+    },
+    {
+      "title": "Composite bias‐reduced Lp‐quantile‐based estimators of extreme quantiles and expectiles",
+      "id": "https://openalex.org/W3180697678",
+      "year": 2022,
+      "doi": "https://doi.org/10.1002/cjs.11703",
+      "abstract": "Abstract Quantiles are a fundamental concept in extreme value theory. They can be obtained from a minimization framework using an asymmetric absolute error loss criterion. The companion notion of expectiles, based on asymmetric squared rather than asymmetric absolute error loss minimization, has received substantial attention from the fields of actuarial science, finance, and econometrics over the last decade. Quantiles and expectiles can be embedded in a common framework of ‐quantiles, whose extreme value properties have been explored very recently. Although this generalized notion of quantiles has shown potential for the estimation of extreme quantiles and expectiles, available estimators remain quite difficult to use: they suffer from substantial bias, and the question of the choice of the tuning parameter remains open. In this article, we work in a context of heavy tails and construct composite bias‐reduced estimators of extreme quantiles and expectiles based on ‐quantiles. We provide a discussion of the data‐driven choice of and of the anchor ‐quantile level in practice. The proposed methodology is compared with existing approaches on simulated data and real data."
+    },
+    {
+      "title": "Composite Lp-quantile regression, near quantile regression and the oracle model selection theory",
+      "id": "https://openalex.org/W4415963511",
+      "year": 2025,
+      "doi": "https://doi.org/10.48550/arxiv.2510.17325",
+      "abstract": "In this paper, we consider high-dimensional Lp-quantile regression which only requires a low order moment of the error and is also a natural generalization of the above methods and Lp-regression as well. The loss function of Lp-quantile regression circumvents the non-differentiability of the absolute loss function and the difficulty of the squares loss function requiring the finiteness of error's variance and thus promises excellent properties of Lp-quantile regression. Specifically, we first develop a new method called composite Lp-quantile regression(CLpQR). We study the oracle model selection theory based on CLpQR (call the estimator CLpQR-oracle) and show in some cases of p CLpQR-oracle behaves better than CQR-oracle (based on composite quantile regression) when error's variance is infinite. Moreover, CLpQR has high efficiency and can be sometimes arbitrarily more efficient than both CQR and the least squares regression. Second, we propose another new regression method,i.e. near quantile regression and prove the asymptotic normality of the estimator when p converges to 1 and the sample size infinity simultaneously. As its applications, a new thought of smoothing quantile objective functions and a new estimation are provided for the asymptotic covariance matrix of quantile regression. Third, we develop a unified efficient algorithm for fitting high-dimensional Lp-quantile regression by combining the cyclic coordinate descent and an augmented proximal gradient algorithm. Remarkably, the algorithm turns out to be a favourable alternative of the commonly used liner programming and interior point algorithm when fitting quantile regression."
+    },
+    {
+      "title": "Conditional quantile processes based on series or many regressors",
+      "id": "https://openalex.org/W3125699207",
+      "year": 2019,
+      "doi": "https://doi.org/10.1016/j.jeconom.2019.04.003",
+      "abstract": ""
+    },
+    {
+      "title": "Distributed inference for quantile regression processes",
+      "id": "https://openalex.org/W2580614843",
+      "year": 2017,
+      "doi": "https://doi.org/10.48550/arxiv.1701.06088",
+      "abstract": "The increased availability of massive data sets provides a unique opportunity to discover subtle patterns in their distributions, but also imposes overwhelming computational challenges. To fully utilize the information contained in big data, we propose a two-step procedure: (i) estimate conditional quantile functions at different levels in a parallel computing environment; (ii) construct a conditional quantile regression process through projection based on these estimated quantile curves. Our general quantile regression framework covers both linear models with fixed or growing dimension and series approximation models. We prove that the proposed procedure does not sacrifice any statistical inferential accuracy provided that the number of distributed computing units and quantile levels are chosen properly. In particular, a sharp upper bound for the former and a sharp lower bound for the latter are derived to capture the minimal computational cost from a statistical perspective. As an important application, the statistical inference on conditional distribution functions is considered. Moreover, we propose computationally efficient approaches to conducting inference in the distributed estimation setting described above. Those approaches directly utilize the availability of estimators from sub-samples and can be carried out at almost no additional computational cost. Simulations confirm our statistical inferential theory."
+    },
+    {
+      "title": "Evaluating Fund Performance Based on Lp Quantile Nonlinear Regression Model",
+      "id": "https://openalex.org/W4404704551",
+      "year": 2024,
+      "doi": "https://doi.org/10.4236/ojapps.2024.1411211",
+      "abstract": "There is a substantial body of empirical research that has found the fund return distributions to exhibit pronounced peakiness, heavy tails, and skewness, deviating from a normal distribution. Addressing the limitations of the traditional Sharpe ratio, which assumes a normal distribution of returns and uses standard deviation to measure investment risk, this paper primarily employs the Value at Risk (VaR) based on Lp quantile to adjust excess returns of funds. This method offers superior robustness, is capable of capturing asymmetry and heavy-tailed characteristics, and is more flexible, providing a better description of the tail risk in fund returns. Empirical studies have shown that using the Sharpe ratio corrected with the Lp quantile is feasible for evaluating and ranking the performance of open-end funds."
+    },
+    {
+      "title": "The central limit theorem for empirical and quantile processes in some Banach spaces",
+      "id": "https://openalex.org/W2093379349",
+      "year": 1993,
+      "doi": "https://doi.org/10.1016/0304-4149(93)90083-g",
+      "abstract": ""
+    },
+    {
+      "title": "Quantile Processes for Semi and Nonparametric Regression",
+      "id": "https://openalex.org/W2340083259",
+      "year": 2016,
+      "doi": "https://doi.org/10.48550/arxiv.1604.02130",
+      "abstract": "A collection of quantile curves provides a complete picture of conditional distributions. Properly centered and scaled versions of estimated curves at various quantile levels give rise to the so-called quantile regression process (QRP). In this paper, we establish weak convergence of QRP in a general series approximation framework, which includes linear models with increasing dimension, nonparametric models and partial linear models. An interesting consequence is obtained in the last class of models, where parametric and non-parametric estimators are shown to be asymptotically independent. Applications of our general process convergence results include the construction of non-crossing quantile curves and the estimation of conditional distribution functions. As a result of independent interest, we obtain a series of Bahadur representations with exponential bounds for tail probabilities of all remainder terms. Bounds of this kind are potentially useful in analyzing statistical inference procedures under divide-and-conquer setup."
+    },
+    {
+      "title": "Extremal point processes and intermediate quantile functions",
+      "id": "https://openalex.org/W2089785476",
+      "year": 1990,
+      "doi": "https://doi.org/10.1007/bf01193943",
+      "abstract": ""
+    },
+    {
+      "title": "Nonparametric quantile regression for spatio-temporal processes",
+      "id": "https://openalex.org/W4398796140",
+      "year": 2024,
+      "doi": "https://doi.org/10.48550/arxiv.2405.13783",
+      "abstract": "In this paper, we develop a new and effective approach to nonparametric quantile regression that accommodates ultrahigh-dimensional data arising from spatio-temporal processes. This approach proves advantageous in staving off computational challenges that constitute known hindrances to existing nonparametric quantile regression methods when the number of predictors is much larger than the available sample size. We investigate conditions under which estimation is feasible and of good overall quality and obtain sharp approximations that we employ to devising statistical inference methodology. These include simultaneous confidence intervals and tests of hypotheses, whose asymptotics is borne by a non-trivial functional central limit theorem tailored to martingale differences. Additionally, we provide finite-sample results through various simulations which, accompanied by an illustrative application to real-worldesque data (on electricity demand), offer guarantees on the performance of the proposed methodology."
+    },
+    {
+      "title": "Smoothed instrumental variables quantile regression",
+      "id": "https://openalex.org/W4283765669",
+      "year": 2022,
+      "doi": "https://doi.org/10.1177/1536867x221106404",
+      "abstract": "In this article, I introduce the sivqr command, which estimates the coefficients of the instrumental variables quantile regression model introduced by Chernozhukov and Hansen (2005, Econometrica 73: 245–261). The sivqr command offers several advantages over the existing ivqreg and ivqreg2 commands for estimating this instrumental variables quantile regression model, which complements the alternative “triangular model” behind cqiv and the “local quantile treatment effect” model of ivqte. Computationally, sivqr implements the smoothed estimator of Kaplan and Sun (2017, Econometric Theory 33: 105–157), who show that smoothing improves both computation time and statistical accuracy. Standard errors are computed analytically or by Bayesian bootstrap; for nonindependent and identically distributed sampling, sivqr is compatible with bootstrap. I discuss syntax and the underlying methodology, and I compare sivqr with other commands in an example."
+    },
+    {
+      "title": "Smoothed quantile regression with large-scale inference",
+      "id": "https://openalex.org/W3193583132",
+      "year": 2021,
+      "doi": "https://doi.org/10.1016/j.jeconom.2021.07.010",
+      "abstract": ""
+    },
+    {
+      "title": "Conditional Quantile Processes based on Series or Many Regressors",
+      "id": "https://openalex.org/W4298128615",
+      "year": 2011,
+      "doi": "https://doi.org/10.48550/arxiv.1105.6154",
+      "abstract": "Quantile regression (QR) is a principal regression method for analyzing the impact of covariates on outcomes. The impact is described by the conditional quantile function and its functionals. In this paper we develop the nonparametric QR-series framework, covering many regressors as a special case, for performing inference on the entire conditional quantile function and its linear functionals. In this framework, we approximate the entire conditional quantile function by a linear combination of series terms with quantile-specific coefficients and estimate the function-valued coefficients from the data. We develop large sample theory for the QR-series coefficient process, namely we obtain uniform strong approximations to the QR-series coefficient process by conditionally pivotal and Gaussian processes. Based on these strong approximations, or couplings, we develop four resampling methods (pivotal, gradient bootstrap, Gaussian, and weighted bootstrap) that can be used for inference on the entire QR-series coefficient function. We apply these results to obtain estimation and inference methods for linear functionals of the conditional quantile function, such as the conditional quantile function itself, its partial derivatives, average partial derivatives, and conditional average partial derivatives. Specifically, we obtain uniform rates of convergence and show how to use the four resampling methods mentioned above for inference on the functionals. All of the above results are for function-valued parameters, holding uniformly in both the quantile index and the covariate value, and covering the pointwise case as a by-product. We demonstrate the practical utility of these results with an example, where we estimate the price elasticity function and test the Slutsky condition of the individual demand for gasoline, as indexed by the individual unobserved propensity for gasoline consumption."
+    },
+    {
+      "title": "An Lp-view of the Bahadur-Kiefer Theorem",
+      "id": "https://openalex.org/W2093980678",
+      "year": 2005,
+      "doi": "https://doi.org/10.1007/s10998-005-0004-x",
+      "abstract": ""
+    },
+    {
+      "title": "Spline Quantile Regression with Cubic and Linear Smoothing Splines",
+      "id": "https://openalex.org/W7140302654",
+      "year": 2026,
+      "doi": "https://doi.org/10.48550/arxiv.2603.22408",
+      "abstract": "Spline quantile regression (SQR) is a method introduced recently by Li and Megiddo (2026) for linear quantile regression where the regression coefficients are treated as smooth functions of the quantile level. With the coefficients represented by cubic splines with fixed knots on a given set of quantiles, the SQR method produces an estimate for the functional coefficients by solving a penalized quantile regression problem. The $\\ell_1$-norm of the second derivatives of the coefficients is employed as the penalty for regulating the roughness of the functional coefficients. This extends the SQR method by introducing additional pairings of the functional representation for the regression coefficients and the penalty for their roughness. The resulting cubic and linear SQR solutions are shown to be smoothing splines which are optimal in a functional space larger than the respective spline space with fixed knots. It is shown that the cubic SQR can be reformulated and solved as a quadratic program and the linear SQR as a linear program. A simulation study demonstrates that the SQR solutions not only offer a concise functional representation of the regression coefficients with distinct smoothness characteristics, but also provide a capability of producing more accurate estimates of the regression coefficients when the underlying functions are suitably smooth. Application of the SQR solutions is demonstrated by real-data examples, including a Granger causality analysis of stock market indices."
+    },
+    {
+      "title": "Knight's Identity, Quantile Regression, and the Polson-Scott Algorithm",
+      "id": "https://openalex.org/W7170701892",
+      "year": 2026,
+      "doi": "https://doi.org/10.2139/ssrn.7061119",
+      "abstract": ""
+    },
+    {
+      "title": "Vector quantile regression: An optimal transport approach",
+      "id": "https://openalex.org/W2401440373",
+      "year": 2016,
+      "doi": "https://doi.org/10.1214/15-aos1401",
+      "abstract": "We propose a notion of conditional vector quantile function and a vector quantile regression. A conditional vector quantile function (CVQF) of a random vector $Y$, taking values in $\\mathbb{R}^{d}$ given covariates $Z=z$, taking values in $\\mathbb{R}^{k}$, is a map $u\\longmapsto Q_{Y|Z}(u,z)$, which is monotone, in the sense of being a gradient of a convex function, and such that given that vector $U$ follows a reference non-atomic distribution $F_{U}$, for instance uniform distribution on a unit cube in $\\mathbb{R}^{d}$, the random vector $Q_{Y|Z}(U,z)$ has the distribution of $Y$ conditional on $Z=z$. Moreover, we have a strong representation, $Y=Q_{Y|Z}(U,Z)$ almost surely, for some version of $U$. The vector quantile regression (VQR) is a linear model for CVQF of $Y$ given $Z$. Under correct specification, the notion produces strong representation, $Y=\\beta (U)^{\\top}f(Z)$, for $f(Z)$ denoting a known set of transformations of $Z$, where $u\\longmapsto\\beta(u)^{\\top}f(Z)$ is a monotone map, the gradient of a convex function and the quantile regression coefficients $u\\longmapsto\\beta(u)$ have the interpretations analogous to that of the standard scalar quantile regression. As $f(Z)$ becomes a richer class of transformations of $Z$, the model becomes nonparametric, as in series modelling. A key property of VQR is the embedding of the classical Monge–Kantorovich’s optimal transportation problem at its core as a special case. In the classical case, where $Y$ is scalar, VQR reduces to a version of the classical QR, and CVQF reduces to the scalar conditional quantile function. An application to multiple Engel curve estimation is considered."
+    },
+    {
+      "title": "Lp-approximations of weighted partial sum processes",
+      "id": "https://openalex.org/W1998655704",
+      "year": 1993,
+      "doi": "https://doi.org/10.1016/0304-4149(93)90076-g",
+      "abstract": ""
+    }
+  ]
+}

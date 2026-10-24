@@ -1,0 +1,76 @@
+\begin{lemma}[Depth-integral slab-volume bound]\label{lem:rolling}
+Let $K$ have the interior rolling ball property at radius $\rho_K$, and let
+$n\ge2$.  Then for every $x\in K$, every unit vector $u$, and every
+$0<L\le\rho_K$,
+\[
+\vol\Bigl(K\cap\bigl\{y:\ |\langle y-x,u\rangle|\le L\bigr\}\Bigr)
+\;\ge\;
+a_n\,\rho_K^{(n-1)/2}\,L^{(n+1)/2},
+\qquad
+a_n:=\frac{\omega_{n-1}}{2^{\,n}},
+\]
+where $\omega_{n-1}$ is the volume of the unit ball of $\R^{n-1}$.  (For $n=1$
+the left-hand side is at least $L$, and the statement holds trivially with
+$a_1=1$.)
+\end{lemma}
+
+\begin{proof}
+Write $\rho:=\rho_K$, $\tau(y):=\langle y,u\rangle$,
+$\tau_{\max}:=\max_K\tau$, $\tau_{\min}:=\min_K\tau$, and let
+$A(\tau):=\vol_{n-1}\bigl(K\cap\{\tau(y)=\tau\}\bigr)$, so that the slab volume
+equals $\int_{\tau(x)-L}^{\tau(x)+L}A(\tau)\,d\tau$.  Note that $K$ contains a
+ball of radius $\rho$, so $\tau_{\max}-\tau_{\min}\ge2\rho\ge2L$.  By the
+Brunn--Minkowski inequality, $A^{1/(n-1)}$ is concave on
+$[\tau_{\min},\tau_{\max}]$; in particular $A$ is \emph{unimodal}, so on any
+subinterval $A$ is bounded below by the smaller of its endpoint values.
+
+\emph{Step 1: an anchor level near each extreme.}  Let $p\in\partial K$ attain
+$\tau_{\max}$ and let $B=B(c,\rho)\subseteq K$ be a rolling ball with
+$p\in\partial B$; set $g:=\tau(p)-\tau(c)\in[0,\rho]$ (nonnegative since
+$\tau(c)\le\tau_{\max}$, and at most $|p-c|=\rho$).  The section of $B$ at the
+level $\tau_{\max}-h$ is an $(n-1)$-ball of radius $r(h)$ with
+$r(h)^2=\rho^2-(g-h)^2$.  For $0\le h\le g$,
+\[
+r(h)^2=(\rho-g+h)(\rho+g-h)\;\ge\;h\cdot\rho,
+\]
+since $\rho-g+h\ge h$ and $\rho+g-h\ge\rho$.  Hence
+\begin{equation}\label{eq:section}
+A(\tau_{\max}-h)\;\ge\;\omega_{n-1}(\rho h)^{(n-1)/2}
+\qquad(0\le h\le g),
+\end{equation}
+and at $h=g$ the section of $B$ is its full equator:
+$A(\tau_{\max}-g)\ge\omega_{n-1}\rho^{\,n-1}$.
+
+Define the \emph{anchor depth} $a:=\min(g,\,L/4)$ and the value
+$A^*:=\omega_{n-1}(\rho L/4)^{(n-1)/2}$.  Then
+\begin{equation}\label{eq:anchor}
+A(\tau_{\max}-a)\;\ge\;A^* :
+\end{equation}
+if $g\ge L/4$ then $a=L/4\le g$ and \eqref{eq:section} gives
+$A(\tau_{\max}-a)\ge\omega_{n-1}(\rho L/4)^{(n-1)/2}=A^*$; if $g<L/4$ then
+$a=g$ and the equator bound gives
+$A(\tau_{\max}-a)\ge\omega_{n-1}\rho^{n-1}\ge A^*$, using $\rho\ge L/4$.
+Symmetrically, with $g'$ the offset of a rolling ball at a minimizer of
+$\tau$, the anchor depth $a':=\min(g',L/4)$ satisfies
+$A(\tau_{\min}+a')\ge A^*$.  Note $a,a'\le L/4$.
+
+\emph{Step 2: the integral.}  By \eqref{eq:anchor} and unimodality,
+\[
+A(\tau)\;\ge\;A^*
+\qquad\text{for all }
+\tau\in M:=[\tau_{\min}+a',\ \tau_{\max}-a].
+\]
+The complement of $M$ in $[\tau_{\min},\tau_{\max}]$ has total length
+$a+a'\le L/2$.  The slab's level interval
+$[\tau(x)-L,\tau(x)+L]$ intersects $[\tau_{\min},\tau_{\max}]$ in an interval
+of length at least $L$: indeed $\tau(x)$ lies in the range, and the range has
+length at least $2\rho\ge2L$, so at least one of the two sides of $\tau(x)$
+contains a full segment of length $L$ inside the range.  Consequently the slab
+meets $M$ in a set of length at least $L-\frac L2=\frac L2$, and
+\[
+\int_{\tau(x)-L}^{\tau(x)+L}A
+\;\ge\;\frac L2\,A^*
+\;=\;\frac{\omega_{n-1}}{2\cdot4^{(n-1)/2}}\,\rho^{(n-1)/2}L^{(n+1)/2}
+\;=\;\frac{\omega_{n-1}}{2^{\,n}}\,\rho^{(n-1)/2}L^{(n+1)/2}.
+\]
+\end{proof}

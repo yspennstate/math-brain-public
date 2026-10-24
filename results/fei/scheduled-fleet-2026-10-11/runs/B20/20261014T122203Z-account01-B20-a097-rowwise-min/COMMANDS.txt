@@ -1,0 +1,2 @@
+python3 verify_rowwise_min_cut.py > CHECK.out
+sha256sum $(find . -maxdepth 1 -type f ! -name MANIFEST.sha256 ! -name DELIVERY_READBACK.json | sort) > MANIFEST.sha256

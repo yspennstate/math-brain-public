@@ -1,0 +1,46 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T224700Z-claude-B19-paper-audit-rankcode",
+ "stream": "B19",
+ "packet_id": "A091",
+ "gap_id": "B19-threshold-paper-creg-and-shared-data-audit",
+ "attempt_id": "20261011T224700Z-claude-B19-paper-audit-rankcode-1",
+ "method": "line-by-line hand audit of main.tex Theorem A and Section 8 shared data; exact rational and interval certificates; exhaustive/random exact checks; Jensen lower bound for the rank code",
+ "mathematical_delta": "Theorem A's proof and constants independently confirmed (C_reg in (8.9364, 8.9366)); shared-data proposition shown to be the general block-restriction identity, corollaries hold; new proved boundary: the single-order rank code costs >= 2(L-1) I on XOR of AND_L blocks while H < 4 I, so universal FEI needs a block-adaptive reference.",
+ "deliverable_status": "COMPLETE_LOCAL",
+ "mathematical_status": "AUDIT_HOLDS_PLUS_METHOD_NOGO; full FEI OPEN",
+ "claim_versions_used": [
+  "C018 v1",
+  "C035 v1",
+  "A056 v1",
+  "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO v1"
+ ],
+ "claims_created_or_changed": [
+  "B19-THRESHOLD-PAPER-CREG-AUDIT v1",
+  "B19-THRESHOLD-PAPER-CONSTANTS-CERTIFIED v1",
+  "B19-SHARED-DATA-MULTIPLEXER-REVIEW v1",
+  "B19-RANKCODE-REDUCTION v1",
+  "B19-RANKCODE-GLOBAL-ORDER-NOGO v1",
+  "B19-A056-COMPOSITION-RECHECK v1"
+ ],
+ "source_artifacts": [
+  "~/fourier-entropy-threshold-functions/paper/main.tex sha256 de36fcdab064333565b2f311db861df57b50955245d747ae7c03653d5e9bf28e",
+  "agents/A091/runs/20261011T214848Z-account05-A091-composition-referee/REPORT.md, out/constants.json"
+ ],
+ "next_consumers": [
+  "A094",
+  "A095",
+  "A091",
+  "B20"
+ ],
+ "next_action": "A094 to referee B19-RANKCODE-GLOBAL-ORDER-NOGO; A095 to state the largest class with R_pi <= K I and a block-adaptive reference that removes the 2(L-1) cost on XOR-of-AND blocks; A091 to review the B09 core uncertainty lemma (unchanged stream next_action).",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "REPORT.md could not be saved: the harness refused the write ('Subagents should return findings as text, not write report files'); its full content is in the lead's StructuredOutput (fields mathematical_delta, claims, codex_checks) and PAPER_AUDIT_38pp.md",
+  "B09 core lemma review (stream next_action) not started by the lead in this run; delegated to A091",
+  "no external persistence: write scope is local only"
+ ],
+ "packet_ids": [
+  "A091"
+ ]
+}

@@ -1,0 +1,31 @@
+account03/B07 QFORM r52 deterministic regression record
+run_id=20260924T104017Z-account03-B07-qform-r52
+
+Portable checker: check_r52.py
+seed=5207
+ladder_tests=900
+ladder_violations=0
+minimum_slack_k0=0.0
+minimum_slack_k1=0.0
+minimum_slack_k2=0.0633770123027261
+E2_identity_tests=500
+max_sum_alpha_error=3.1086244689504383e-15
+max_relative_deletion_error=2.266258248671684e-15
+
+Additional in-run synthetic packet regressions:
+mixed_1plus2_tests=500; violations=0
+mixed_2plus1_tests=500; violations=0
+largest observed E2 marginal-sum error in those packet tests <2e-14
+
+Recomputed constants:
+C3=10.550168831164775
+d=1/sqrt(8)=0.35355339059327373
+C3*sqrt(8)=29.840383692718262
+sqrt(1023)/64=0.49975579974123363
+1/(2048*895)=5.455656424581005e-07
+1/(2048*895^2)=6.095705502325145e-10
+1023/(1048576*895)=1.0900657270207752e-06
+1023/8192=0.1248779296875
+
+These finite computations are regression evidence only.  They do not replace the deterministic A^2/Weyl/Cauchy--Binet proof in REPORT.md.
+STATUS=PASS

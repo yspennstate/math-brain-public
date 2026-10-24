@@ -1,0 +1,37 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261013T172331Z-account01-B12-gu-terminal-reserve-falsifier",
+  "claims": [
+    {
+      "claim_id": "B12-A056-GU-THETA-SEMICONCAVITY-v1",
+      "status": "REFUTED_BY_EXACT_GENUINE_BOOLEAN_WITNESS_PENDING_INDEPENDENT_REVIEW",
+      "killed_claim": "For all Boolean outer gates g, coordinates y, and biases mu, endpoint-centered Theta_{g,y}(mu) <= 3 Inf_y(g)(1-mu^2).",
+      "witness": "outer truth-table index 10439 on four bits, distinguished bit 0; eight-bit one-point defect child with mu=-127/128",
+      "exact_normalized_value": "formal expression (1) in REPORT.md",
+      "strict_certificate": "integer inequality (2) in REPORT.md; exact bit lengths 16553282 > 16550830",
+      "artifact": "REPORT.md"
+    },
+    {
+      "claim_id": "B12-A056-GU-TERMINAL-RESERVE-LOWER-BOUND-v1",
+      "status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+      "scope": "Any universal C in endpoint-centered Theta<=C beta(1-mu^2) must satisfy C >= R, where R=-1/24-(1/4)log_2(3)+(1/2)log_2(5)+(15/8)log_2(e)=3.428109957...",
+      "family": "fixed four-input outer gate 10439 with n-bit point-defect children, n tending to infinity",
+      "artifact": "REPORT.md"
+    },
+    {
+      "claim_id": "B12-A056-GU-THETA-SEMICONCAVITY-C4-v1",
+      "status": "OPEN_NUMERICALLY_SUPPORTED_AT_OUTER_ARITY_4_GRID_SCOPE",
+      "candidate": "endpoint-centered Theta_{g,y}(mu) <= 4 beta(1-mu^2)",
+      "finite_evidence": "66585600 float64 normalized values over all four-input outer gates, coordinates, and mu=k/128; maximum 3.400685758...",
+      "scope_limit": "Not a continuum proof and not evidence at unbounded outer arity."
+    },
+    {
+      "claim_id": "B12-A056-GU-COMPOSITION-v1",
+      "status": "OPEN_ADVANCED_WITH_SHARPENED_OBSTRUCTION",
+      "unpaid_step": "Prove a corrected terminal-reserve payment with constant at least 3.428109957..., then extend beyond one biased child."
+    }
+  ],
+  "universal_gu_status": "OPEN",
+  "full_fei_status": "OPEN"
+}
+

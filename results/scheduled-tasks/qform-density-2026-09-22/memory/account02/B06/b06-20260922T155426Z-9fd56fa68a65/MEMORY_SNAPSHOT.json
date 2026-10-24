@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B06",
+  "run_id": "b06-20260922T155426Z-9fd56fa68a65",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_initial": "f18013218feca9ecaf9d62b4c462aa9f490d1bf7",
+  "source_control_prepublication": "3675656d1533e3b20ac84be5b7cc71e38c99a0da",
+  "assignment": "Curved fiber integration",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account03/B06",
+    "run_id": "20260922T151714Z-account03-B06-qform-r12",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8624700dc9342807bbdf427e271fffcc518a0315",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260922T151714Z-account03-B06-qform-r12/REPORT.md",
+    "scope_used": "original-coordinate physical square-completion and one-sided square-kernel mechanism; two-pivot endpoint retained as complementary certificate"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+      "status": "PROVED_IN_STATED_SCOPE",
+      "statement": "For orthonormal-column R and independent cap-one X, Y=R^T X has density bounded by product_i (1-ell_i)^(-(1-ell_i)/2) <= exp(k/2), with ell_i the row leverages."
+    },
+    {
+      "id": "QFORM-ROTATED-DEFINITE-RANK2-v1",
+      "status": "PROVED_IN_STATED_SCOPE",
+      "statement": "Every exact rank-two same-sign quadratic form has density <= pi e / sqrt(abs(beta1 beta2)) for arbitrary independent cap-one inputs."
+    },
+    {
+      "id": "QFORM-MINORITY-PIVOT-CURVED-FIBER-v1",
+      "status": "PROVED_IN_STATED_SCOPE",
+      "statement": "For exact rank three, a physical diagonal pivot of the minority inertia sign gives density <= 2 sqrt(2 pi e) [abs(a) abs(det Lambda) ell_i]^(-1/4)."
+    },
+    {
+      "id": "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+      "status": "REFUTED_INTERMEDIATE_MECHANISM",
+      "statement": "Same-sign Pluecker determinant mass cannot be used directly as weights for the full two-pivot endpoint certificate: in the Hadamard target family its support is contained in the zero-full-determinant pairs."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md",
+    "blob": "dfdbbc3b74ad0cf0d56eae0f75e0cab8c742f38e",
+    "checker_commit": "1a824aa6c32adc2a1d9ba385bbafacc3eecbc9d4",
+    "checker_blob": "4364d4f43cef2825061197c0cef819a0c56b22f2",
+    "output_commit": "9e4e6a8ff24f5a53cc834f8e088e771eead64ac2",
+    "output_blob": "9425e599fb4d1dc57f543fd2ddf09b9d63925618",
+    "checker_status": "PASS"
+  },
+  "correction_event_commit": "6c6d349a73a716e0fc0c894e6baf824b4c6f7367",
+  "correction_inbox_merge_commit": "37f27308e0b44fd83a8a10bf1715d25a8036d160",
+  "handoff_commit": "81d94e2835af7be4b34e8463c27ad5459d8fed86",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "first_unproved_step": "QFORM-MAJORITY-HEAVY-OR-ISOTROPIC-AGGREGATE-v1: in exact rank three outside diffuse and minority-pivot branches, pay a majority-sign two-pivot certificate or aggregate the finite high-leverage/light-cone structure before reciprocal inversion; then separately bridge arbitrary extra spectral components.",
+  "next_mathematical_attempt": "Exploit the affine-fiber BL density cap jointly with the finite set of leverage>1/2 rows to derive a majority-pivot/light-cone dichotomy, stress-testing against the Hadamard and singleton-plus-two-banks families."
+}

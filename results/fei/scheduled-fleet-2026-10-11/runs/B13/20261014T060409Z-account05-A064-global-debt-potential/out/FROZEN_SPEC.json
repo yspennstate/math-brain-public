@@ -1,0 +1,36 @@
+{
+  "helper_version": "A064-paid-two-conversion-nonflat-v3",
+  "helper_sha256": "c7010722635f3365e3afda812bb680c8ebd1d5abdbab7c0867ee8b77bdeba7ed",
+  "actual_family": "Source-owned exposed priority F=-1 on x=0,a=1, core v on x=1,b=1, +1 otherwise. v ranges over ALL three-bit Boolean truth tables. Initial private-a query then the SAME selected physical core coordinate in BOTH a children.",
+  "pilot_masks": [
+    0,
+    255,
+    1,
+    254,
+    7,
+    248,
+    15,
+    240
+  ],
+  "full_masks": "all integers0..255, no symmetry reduction",
+  "case_count": {
+    "pilot": 24,
+    "full": 768
+  },
+  "target": "Positive initial occupancy-to-child-product conversion plus mean positive next-data Bayes-to-product conversion < half SAME actual mean S4(a children). Complete four grandchild entropy bills, S4, conditional KL and reference-only rows retained.",
+  "arithmetic": "Integer FWHT and independent direct-edge influence; Fraction interval arithmetic;36 exact positive-root bisections;44-bit outward dyadic log-input rounding;24-term atanh with explicit remainder2z^49/[49(1-z^2)], normalized z<=1/3; no floating sign",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": {
+    "pilot": 58,
+    "full": 595
+  },
+  "symmetry": "None",
+  "maximum_dimension": 6,
+  "policy": "a then data_i in both actual branches, i=0,1,2; no conditional policy search",
+  "resource_trigger": "Below300MB; no memok-triggered job; one job at a time",
+  "commands": [
+    "python -X utf8 code/check.py --pilot",
+    "python -X utf8 code/check.py"
+  ],
+  "repair": "v1 exact rational root boundary; v2 constant child has exactly zero S4, so v3 requires nonnegative individual slack and positive mean slack. Budget target/domain unchanged; old helpers/specs preserved."
+}

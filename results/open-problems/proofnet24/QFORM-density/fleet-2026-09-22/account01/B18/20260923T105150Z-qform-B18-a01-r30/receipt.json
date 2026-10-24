@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260923T105150Z-qform-B18-a01-r30",
+  "observed_utc_start": "2026-09-23T10:51:50Z",
+  "observed_utc_end": "2026-09-23T11:11:51Z",
+  "control_commit_at_start": "3cc27b38b563c913e04210dea574a5511e2f6cfe",
+  "control_commit_before_handoff": "3d727e91d7ffae1e672660ef70d19b7f374bac20",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "owner_directives": {
+    "qform_only": "implemented",
+    "literature_to_proof_transfer": "implemented",
+    "completed_partner_account02_B18_applied": "implemented",
+    "preserve_corrections": "implemented",
+    "immutable_math_report": "implemented",
+    "source_pinned_handoff": "implemented",
+    "memory_snapshot": "implemented",
+    "login": "implemented_via_existing_create_only_same_hour_record",
+    "start": "implemented",
+    "finish": "implemented",
+    "no_email_push_new_tasks_cross_account_auth_paid_remote_public_permission_expansion": "implemented",
+    "preserve_scheduler_state": "implemented"
+  },
+  "same_hour_login_note": "The create-only account01/B18 2026-09-23T10Z login file already existed when this invocation attempted its login write; protocol forbids overwrite, so no duplicate login was created.",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_effort_configured_source": "account01 inventory; scheduler selector not exposed",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  },
+  "thinking_proxy": {
+    "observed_utc_start": "2026-09-23T10:51:50Z",
+    "observed_utc_end": "2026-09-23T11:11:51Z",
+    "elapsed_seconds": 1201.55,
+    "scope": "elapsed_execution_not_pure_thinking",
+    "tool_call_count": null,
+    "tool_call_count_reason": "provider-level invocation counter not exposed",
+    "output_characters": null
+  },
+  "model_evidence": {
+    "model_self_report": "self_report",
+    "reasoning_effort_configured": "scheduled_tasks/status/account01/inventory.json",
+    "thinking_usage": "not_exposed"
+  },
+  "scheduler_state": {
+    "enabled": true,
+    "hourly_valid": true,
+    "email_enabled": false,
+    "notifications_enabled": false,
+    "source": "account01 inventory plus automation runtime",
+    "mutations_this_run": 0
+  },
+  "canonical_math_commit": "71628e3f8b8580b8639d6c9407d6db64b0641482",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260923T105150Z-qform-B18-a01-r30/REPORT.md",
+  "finish_commit": "fd53c26d49b525589d97d66f45de7ff4af9caa60",
+  "handoff_commit": "7e13ab8b45c8b79c8101e4ed52291a5a0357312f",
+  "memory_snapshot_commit": "9e6ddc16e97081292fbf01c64d6a0bfe9e6d25fb",
+  "latest_pointer_commit": "26ae548cda42b5910bdd2bb8cc3ab960ebce54d6",
+  "partner_source": {
+    "account": "account02",
+    "slot": "B18",
+    "commit": "b0fe7c60d4fb400917fb53d2435d5262fdcfea97",
+    "claim": "QFORM-SHEAR-CROSSVOLUME-MSS-BARRIER-v1"
+  },
+  "new_claim": "QFORM-MSS-BALANCED-HUB-DETERMINANT-v1",
+  "metric_before": "partner diffuse branch: delta<=1/18 and certificate 54 sqrt(e) s^-1 (1+r^2)^(1/6)",
+  "metric_after": "delta<(39-6sqrt(30))/98; at delta=1/18 certificate 27 sqrt(e/2) s^-1 [((1+r^2)^2)/(1+2r^2)]^(1/6), ratio <=0.353553 of prior certificate; continuous density on this branch",
+  "unresolved_blocker": "r^(1/3) large-shear growth remains; need QFORM-NONPLANAR-ONEPLUS2-AGGREGATE-v1 or a different paid routing",
+  "next_action": "seek a product-preserving asymmetric 1+2 estimate that spends the full residual Pluecker mass at scale r^2|det D| without conditioning away original-coordinate provenance",
+  "delivery_status": "report_handoff_snapshot_latest_finish_written_and_readback_partially_verified"
+}

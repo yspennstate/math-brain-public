@@ -1,0 +1,47 @@
+# exact target, quantifiers, hypotheses and units
+
+Extend the independently reconstructed recentered outer bank from data-only prefixes to arbitrary adaptive physical controller/data interleaving, keeping the rarity logarithm and a single owned reserve. Scope: any finite exclusive controller selecting arbitrary independent Boolean cores on disjoint uniform data cubes, optional constant signs, any stopping frontier. Entropy bits; influence original probability of output change. Shared-data cores are excluded. Full FEI OPEN.
+
+Locally proved: R=sum_j q_j log2(1/q_j)Var(u_j) is a supermartingale on every physical query; control release is in [0,2 Inf_query], sharp. The identical data-node cap price c_data=(1+2/e)/ln2 and coherent addition c_rem=(3+2/e)/ln2 survive arbitrary controller/data interleaving. These remain data-node outer prices, not full-tree FEI bounds. Independent review of this extension is pending.
+
+# sources actually read, revisions and theorem locators
+
+Read BOARD supervisor 2026-10-14 01:51UTC, B12 STREAM_NOTES v2 (2026-10-11 23:30), own STATUS/LEARNED/prior proof, full EXECUTION_PROTOCOL revision2026-10-11-execution-v2. Read A087 run20261013T222530Z complete PROOF/CLAIMS and REPORT: independent arbitrary-controller cap reconstruction, homogeneous projected-sector mass, exact stopped signed ledger. Read A030 STATUS, stage2 REPORT20261013T212321Z and newer stage3 REPORT20261014T003426Z, especially its inherited controller entropy and rarity-release obstruction. Prior canonical/campaign/paper readings remain attributed to earlier stages; no new external theorem invoked.
+
+A087's review predates the author claim export but its exact scope matches stage3 sections1,3,4; its byte-pinned review is mapped to the unchanged author statement/hash. It does not review the bundled fresh5 price. A087 correctly flagged the prior final paragraph denying arbitrary-controller payment: that sentence is stale scope prose contradicted by its own Section3. The correction is recorded here, archived run untouched. The signed inner/terminal gap was always retained. Sources are hashed in SOURCE_RECEIPTS.
+
+# complete derivation or exact first unsupported line
+
+PROOF Sections1-3 give a complete all-dimensional derivation. At data queries R drops by q_j log2(1/q_j)beta^2. At controller queries q_j averages over physical fair children; concavity gives release L_ctrl>=0, with exact bracket q_j[1-h2(q_j,+/(2q_j))]. This bracket is <=|q_j,+-q_j,-|/2<=Inf_query(C_j)/2. Counting the two changing selector variances on one actual control edge proves L_ctrl<=2Inf_query(F), and a fair selector between two independent dictators attains equality.
+
+The reserve telescopes across all alternating phases. Summing the retained local cap bound gives bank<=c_data Pi_I,data+R_root-E R_leaf-sum_control w L_ctrl. Root isoperimetry/variance funding gives R_root<=2I_ctrl(root). The block influence telescope retains actual leaves and yields Pi_I,data<=I_data(root). No child reserve is newly charged at a reset. The same proof adds N using its already accepted physical singleton price.
+
+Independently reconstructed A087's data-only signed ledger and unequal-sector mass formula without repair, with exact fixture checks. Its extension to all physical queries uses U=sum q_j E_ne(u_j): U has zero expected decrement at controller steps, so the full stopped identity adds only the actual sum_control w Delta H. Both leaf H and leaf U use actual reached cylinders. For A030's two-dictator wrapper with a mux controller, an exact five-bit fixture has R release0, controller decrement1, erasure1/2, queried influence1/4; inherited controller entropy cannot be funded by release alone. This is a source-fixture application, not a new FEI counterfamily.
+
+First unsupported universal line: pay actual terminal H plus U_root-E U_leaf minus the singleton entropy bank plus actual controller-node decrements from nonreused influence. R settles outer-bank history compatibility but pays no such complete expression. Arbitrary constant-core controllers already leave the whole controller entropy in that expression.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+Specs were frozen before searches; fixed dimensions, no symmetry quotient or random sampling. Final v4 uses all81 two-bit 3-label controllers (constant +1,u,v) and all16 ordered one-bit core pairs, split into three disjoint432-root jobs. Each root uses complete controls-first, data-first and maximum-current-influence policies, plus an actual data-then-controller depth-two stop. A separate32-root stress uses same/opposite three-bit priority controllers and named two-bit cores masks0,1,3,15, without treating those masks as an entropy symmetry reduction. Total1328 roots/5312 trees, 80720 counted exact assertions including repeated sharp-fixture checks, PASS. Chunk Python runtimes: 11.113894, 12.938192, 9.460893, 2.076078 seconds. Outputs persist per chunk plus aggregate CHECK.
+
+Commands: python -X utf8 code/check.py --pilot; python -X utf8 code/check.py --chunk=0; --chunk=1; --chunk=2; --stress; python -X utf8 code/review.py; python -X utf8 code/residual.py. The review checker reproduces two A087 fixtures with8 exact assertions; residual checker certifies one five-bit source fixture with7. Main verifies direct physical parent/child spectra, signed erasure/decrement, controller U equality, every local/data/control reserve drop, block influence telescope, full stopped signed entropy identity and both global bank prices. Fractions and exact rational prime-log vectors supply identities; 48-term rational atanh with proved tail and factorial e intervals supply signs. No floating sign.
+
+Preserved v2 implementation failure: controller decrement placed in both data-outer and controller accumulators; corrected before successful main. Preserved v3 watchdog stop at170s on the larger1808-root requested domain, after small-controller domain and during priority stress; no full certificate is claimed from that attempt. Final domain was explicitly narrowed/split by a new frozen spec, not silently escalated or extrapolated. v4 estimates100MB; original v3 estimate180MB; actual peak unmeasured. All jobs sequential and below30 minutes; none expected above300MB, so no memok-triggered job was started. An attempted no-op documentation patch did not match; no source changed in that failed patch.
+
+# proof dependencies and changed downstream conclusions
+
+Consume A087's independent acceptance at cap/coherent scope and independently accept its exact stopped signed ledger at stated data-only scope. The new interleaved extension is one narrow candidate depending on that local algebra, root selector reserve and a newly proved supermartingale; it is not independently reviewed merely because its data-only parent is accepted. Source contributors and statement hashes are preserved. A030's wrapper is credited as a fixture; its full reserve theorem is not accepted through one application.
+
+For A027/A028/A030/A038/A064/A091: outer selector reserve no longer needs replenishment under arbitrary controller/data interleaving in this independent-core model. Its control releases are subtractive in the bank price. The retained controller/inner/terminal entropy remains a separate cost and cannot be replaced by different-frontier selected-core entropy. No universal FEI constant changes; no publication/adoption inferred.
+
+# one next mathematical action and independent reviewer
+
+At one nonconstant data-conditioned controller query, derive a signed transfer of the actual controller decrement/reference cost into the U/terminal ledger, treating R release as already owned and subtractive. Use A030's inherited-controller decomposition to separate seed difficulty from the conditional mean/collision term. A087/A091 should independently reconstruct the interleaved reserve and entropy identity; A064/A038 should challenge ownership. Paying this remaining conditional controller term addresses the exact open bridge rather than optimizing another fresh activation.
+
+# actual persistence receipts or precise save blocker
+
+Four protocol files, PROOF, independent review, code, frozen specs, per-job certificates and preserved failure/watchdog records are local. STATUS is two lines; WORKLOG/LEARNED updated. SOURCE_RECEIPTS and RECEIPTS pin actual bytes, schemas, statement hashes, sizes and byte-identical progress copies. All writes stayed inside A057. Supervisor copy, registry adoption, remote mirror and downstream use pending; new extension review pending. No local save blocker.
+
+# Universal bridge
+
+This stage moves C019 stopping-tree payment and C024 history compatibility by replacing the data-only restriction with arbitrary adaptive controller/data interleaving at the same c_data and c_rem outer-bank prices; a single R reserve telescopes through every query, with a sharp control release<=2Inf and no reset recharge. It independently reviews A087's actual stopped signed ledger and records its controller-inclusive extension. Full FEI/C018 still require payment of actual controller entropy, signed inner terms and terminal functions, and shared-data outputs remain outside scope. NEXT prices one conditional controller/reference transfer on the same paid reserve, the shortest step to a complete physical-policy ledger rather than another isolated selector class.

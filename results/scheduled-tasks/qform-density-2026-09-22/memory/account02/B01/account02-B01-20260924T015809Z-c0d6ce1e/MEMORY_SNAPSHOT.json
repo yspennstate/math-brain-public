@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B01",
+  "title": "Oscillatory replacement",
+  "run_id": "account02-B01-20260924T015809Z-c0d6ce1e",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_start": "10e610e0adacf63c9223e7c2a9d0170810b60e5b",
+  "control_commit_prepublication": "ac49f2a75d0fd715862f920eb6e87344241382ab",
+  "full_target_status": "OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "no arbitrary-joint coarea replacement for product provenance",
+    "no conditional density-cap inheritance as independence",
+    "no deletion of small quadratic coefficient tails under arbitrary rough inputs"
+  ],
+  "required_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "paths": [
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+    ],
+    "premises_used": [
+      "one-hub mixed Fresnel/Theorem MF with diagonal leaves and leverage <=1/2 gives |phi(t)| <= 2*pi*||b||^-1*|t|^-1",
+      "H_1/2(Z) <= (2*pi)^-1/2 integral |t|^-1/2 |phi_Z(t)| dt",
+      "literal square peel D(Q) <= |a|^-1/2 H_1/2(Schur remainder)"
+    ]
+  },
+  "new_results": [
+    {
+      "id": "QFORM-ZETA0-FINITELEAK-NORMALFORM-v1",
+      "status": "PROVED_SUPPORTING_STRUCTURAL_LEMMA",
+      "statement": "In the exact zero-triple-currency finite-leak latent normal form H=D+UCU^T with U_I=[u,0], U_J=[v,w], det C!=0 and |supp(w)|<=2: if alpha=C_11 is nonzero, H is diagonal plus global rank one plus at most one literal physical edge; if alpha=0, support one is diagonal plus one physical star and support two is a two-hub arrowhead with diagonal leaves and rank-one slope."
+    },
+    {
+      "id": "QFORM-ISOTROPIC-SUPPORT1-STAR-HALFRIESZ-v1",
+      "status": "PROVED_SUPPORTING_ANALYTIC_LEMMA",
+      "statement": "After a literal outer square Q=a(X0+h)^2+R, if R has diagonal-plus-star quadratic coefficient with slope b and max b_i^2/||b||^2<=1/2, then H_1/2(R)<=8||b||^-1/2 and ||p_Q||_infinity<=8|a|^-1/2||b||^-1/2."
+    }
+  ],
+  "concrete_required_source_application": {
+    "family": "Q_*=X_0^2+sqrt(2)H(Y_1+Y_2)",
+    "spectrum": [-1, 0, 1, 1],
+    "cross_volume_obstruction": "Every original-coordinate cross block has rank <=1, hence Z3=Z5=0 on every cut; D/D'/D5 cannot pay it.",
+    "proved_bound": "||p_Q*||_infinity<=8 by mixed Fresnel + half-Riesz + square peel"
+  },
+  "partner_result_applied": {
+    "partner": "account03/B01",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/20260924T012854Z-account03-B01-qform-auto11-r40/REPORT.md",
+    "theorem": "QFORM-TWO-HUB-CONDITIONAL-LR-RESIDUAL-v1 / r=2 hyperbolic-edge corollary",
+    "application": "For Q_k=2k(H1Y1+H2Y2)+2k^-2 UV, k>=1, D=k^4 and c=k^-2, so ||p_Qk||_infinity<=3. The spectrum is {+k,+k,-k,-k,+k^-2,-k^-2}."
+  },
+  "immutable_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4bbf6ae78f714d5ceaed7b9c63ee6ddd0b3b8e9f",
+    "report": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/account02-B01-20260924T015809Z-c0d6ce1e/REPORT.md",
+    "checks": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/account02-B01-20260924T015809Z-c0d6ce1e/CHECKS.txt"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B01/account02-B01-20260924T015809Z-c0d6ce1e.md",
+  "first_unpaid_implication": "QFORM-FINITELEAK-SINGLEEDGE-OR-HEAVYSTAR-ROUTING-v1",
+  "next_step": "Route the single-edge perturbation of diagonal-plus-rank-one, the support-one heavy/tiny star, and the support-two rank-one-slope two-hub arrowhead to a literal pair/three-square or dependence-safe two-hub receiver without reciprocal tiny-coefficient payment.",
+  "receiver_memory_use": "No QFORM-specific receiver-memory state entered the proof; repository retrieval was authenticated but native/receiver memory use was not established.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

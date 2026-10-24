@@ -1,0 +1,19 @@
+{
+  "units": "entropy in bits; ordinary influence",
+  "filtration": "independent policy seed and physically revealed coordinates only; action and stopping measurable in past",
+  "physical_branch_kernel": "fair independent sign conditional on past",
+  "spectral_child_kernel": "p_sigma(T)=(a_T+sigma*b_T)^2; node-local auxiliary experiment",
+  "entropy_conditional_increment": "-D_t, D_t=B_t+J_t",
+  "influence_conditional_increment": "-d_t",
+  "entropy_martingale": "H(g_t)+sum_{s<t}D_s",
+  "influence_martingale": "I(g_t)+sum_{s<t}d_s",
+  "unconditional_supermartingale": "(3/ln(2))*I(g_t)-H(g_t)-sum_{s<t}lambda_s",
+  "lambda": "sum_{T:b_T^2>0}b_T^2*log2((a_T^2+b_T^2)/b_T^2)",
+  "density_hypothesis": "every positive b_T^2/(a_T^2+b_T^2)>=epsilon at every live node",
+  "density_supermartingale": "(log2(1/epsilon)+3/ln(2))*I(g_t)-H(g_t)",
+  "terminal_entropy": "must retain E H(g_tau)",
+  "general_debt_condition": "D_t<=C*d_t+Q_t-E[Q_{t+1}|F_t]",
+  "unpaid_universal_target": "nonreusing cumulative logarithmic charge and terminal deficit payment",
+  "reviewers": ["A087", "A094"],
+  "full_fei_status": "OPEN"
+}

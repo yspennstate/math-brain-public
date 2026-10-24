@@ -1,0 +1,119 @@
+{
+  "run_id": "20261014T074729Z-account05-A080-universal-counterexample-standard",
+  "stream": "B16",
+  "claims": [
+    {
+      "claim_id": "A080-REPEATED-ESCAPE-RETURN-NOGROWTH",
+      "version": 1,
+      "exact_statement": "Let h:{-1,1}^6->{-1,1} be negative at binary indices {0,1,2,4,8,16,32,6,17,40}, with zero encoding sign +1, and let J(x)=-h(x xor1). For every nonconstant actual uniform-cube Boolean seed g, consider any finite strategy consisting of common-policy h substitutions and optional complete J rare-escape episodes, always using six identical cores with disjoint physical supports. A common step chooses minority-negative inputs when minority s<=7/32 and complements all six inputs otherwise; output signs may be reoriented to minority. A J episode is allowed only at 0<s<=1/16 and repeatedly substitutes J on minority-oriented copies until the first minority bias above1/16; a final output may stop inside an episode. Then every resulting actual finite Boolean F satisfies H(F)/I(F)<=H(g)/I(g)+(1731/44)*Var(g)/I(g)<H(g)/I(g)+40, in entropy bits. The proof uses mu=Var/I, which contracts by at least2/3 at each common h step and never increases at J steps; a common step costs at most8mu in normalized entropy and an entire escape episode costs at most(225/44)mu_start. Thus arbitrarily many eligible escape/return cycles from a fixed finite seed cannot yield an unbounded-H/I disproof.",
+      "hypotheses": [
+        "Actual nonconstant finite-dimensional Boolean functions on uniform physical cubes; entropy in bits",
+        "Six identical disjoint copies per composition, with all physical influences and full terminal entropy retained",
+        "Specified common orientation policy and rare-triggered J episodes completed before another common step; terminal prefixes permitted",
+        "No arbitrary mixed block signs, shared-data substitution, additional gate or starting-family absolute entropy bound"
+      ],
+      "statement_sha256": "13a3c4dcd4f264f3fe158f0fbccbccf8e5004e202f7329aa62af47c0bbfc4e5b",
+      "contributors": [
+        "A080"
+      ],
+      "proof_source": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T034416Z-account05-A080-universal-counterexample-standard\\PROOF.md",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T034416Z-account05-A080-universal-counterexample-standard\\out\\BERNSTEIN.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T034416Z-account05-A080-universal-counterexample-standard\\out\\VALIDATION.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T034416Z-account05-A080-universal-counterexample-standard\\out\\SYMBOLIC.json"
+      ],
+      "proof_dependencies": [
+        "Exact disjoint-block entropy/influence composition identity and biased degree moment (reconstructed here)",
+        "Scalar binary entropy inequality and endpoint rare C envelope (reconstructed here)",
+        "Strict degree-six Bernstein certificate on16 adjacent rational intervals",
+        "Geometric growth of actual J output bias and one-event-per-common-count accounting"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A080 (self)",
+          "kind": "All-dimensional analytic proof, exact polynomial certificate and direct Boolean Fourier/physical-edge verification",
+          "result": "PASS; external independent review pending"
+        },
+        {
+          "reviewer": "A072",
+          "reviewed_at": "2026-10-14T05:07:32.671055+00:00",
+          "verdict": "HOLDS",
+          "scope": "Exact unchanged source theorem, common-policy steps plus complete rare one-flip episodes and terminal prefixes only",
+          "kind": "Independent direct centered interpolation, Hamming-weight edge polynomial reconstruction, two-interval rational Bernstein certificate and analytic episode/event ownership proof",
+          "contributor_conflict": "No substantive repair supplied; source proof is valid unchanged. A072 prior one-flip work is acknowledged source context, not an independent acceptance of its own erasure theorem.",
+          "artifacts": [
+            "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261014T044904Z-account05-A072-exact-walsh-engine\\INDEPENDENT_PROOF.md",
+            "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261014T044904Z-account05-A072-exact-walsh-engine\\out\\continuum_certificate.json",
+            "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261014T044904Z-account05-A072-exact-walsh-engine\\out\\validation.json"
+          ],
+          "not_accepted": [
+            "All arbitrary mixed sign words or shared-data substitutions",
+            "Absolute starting-core H/I or C018/C019 bound",
+            "Later A075/A071 absolute-variation claims"
+          ]
+        }
+      ],
+      "status": "INDEPENDENTLY_ACCEPTED",
+      "supersedes": [],
+      "refutes": [
+        "Candidate amplification of H/I to infinity from a fixed finite seed by the named common-policy plus arbitrarily repeated one-flip escape strategy"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A072",
+        "A075",
+        "A084",
+        "A089",
+        "A074",
+        "A092",
+        "B16 lead",
+        "B20"
+      ]
+    },
+    {
+      "claim_id": "A080-EXACT-RARE-ENTROPY-LOCALIZATION",
+      "version": 1,
+      "exact_statement": "For every delta,eta>0, the supremum of H(f)/I(f) over actual nonconstant finite uniform-cube Boolean functions with minority probability<=delta and total influence<=eta equals the unrestricted supremum, in entropy bits and including infinity. For any actual seed g and integer k>=max(1,I(g)), form G as the sign tensor of t=ceil(k^2/I(g)) disjoint copies and F=1+A(G-1), where A activates one vertex of k fresh selector bits. Then p_min(F)<=2^-k, I(F)<=2^-k(k^2+3k), and H(F)/I(F)>=R(g)/(1+2/k)-1/k^2. On every actual core with 0<p_min<=1/16, (5/16)I<=I-h2(p_min)<I and H/I<=H/(I-h2(p_min))<=(16/5)H/I. Hence a finite rare small-influence H/(I-h2(p_min)) bound K implies full FEI with constant K; FEI(C) gives such a bound (16/5)C. Any hypothetical actual unbounded-ratio seed sequence has an explicit finite tensor/activation sequence with p_min and I tending to zero and unbounded ratios under ordinary, output-gap and consistently conditioned-nonempty normalizations. No unbounded seed sequence or finite universal bound is supplied.",
+      "hypotheses": [
+        "Finite actual uniform-cube Boolean sign functions; entropy in bits; nonconstant seeds",
+        "Disjoint physical tensor copies and fresh private selector bits",
+        "Rare output-gap sector p_min<=1/16; delta,eta strictly positive",
+        "Counterfamily transfer is conditional on actual unbounded-ratio seeds, not an asserted disproof"
+      ],
+      "statement_sha256": "0f337d236aa3b748e7ddf1a1eefb3777f2919b9db3cfab4bd7d5164e0369cbcb",
+      "contributors": [
+        "A080"
+      ],
+      "proof_source": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T074729Z-account05-A080-universal-counterexample-standard\\PROOF.md",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T074729Z-account05-A080-universal-counterexample-standard\\code\\check.py",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T074729Z-account05-A080-universal-counterexample-standard\\out\\VALIDATION.json"
+      ],
+      "proof_dependencies": [
+        "Elementary tensor Fourier product identity",
+        "Direct point-activation Fourier coefficients and physical edge counts",
+        "Indicator entropy tensorization from log-sum inequality; rational ln2>2/3 bound"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A080 (self)",
+          "result": "PASS: all-dimensional derivation and126 direct finite Boolean fixtures,2503 assertions; external independent review pending"
+        }
+      ],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A075",
+        "A072",
+        "A074",
+        "A084",
+        "A089",
+        "A092",
+        "B16 lead",
+        "B20"
+      ]
+    }
+  ]
+}

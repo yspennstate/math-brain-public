@@ -1,0 +1,46 @@
+{
+  "candidate": "C0017",
+  "title": "Conformal invariance of critical bond percolation on the square lattice",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "current_status_reason": "Dated sources say open; primary preprints claim proofs. Their correctness and an accepted resolution were not established in this bounded check.",
+  "exact_statement_recovered": true,
+  "intake_path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+  "intake_line": 17,
+  "intake_statement": "Prove that critical bond percolation on Z^2 at p = 1/2 is conformally invariant in the scaling limit (Cardy's formula and convergence of interfaces to SLE(6)), as is known on the triangular lattice by Smirnov.",
+  "working_quantifiers": {
+    "domain": "A fixed bounded Jordan domain with four distinct cyclic boundary marks, canonically approximated with the correct marked prime ends.",
+    "crossings": "Independent Bernoulli(1/2) square-lattice bonds, free crossing boundary conditions; mesh tends to zero; opposite marked boundary arcs connect.",
+    "interfaces": "Separate Dobrushin primal/dual exploration clause, convergence to chordal SLE(6) modulo increasing reparametrization.",
+    "clause_equivalence_assumed": false,
+    "uniform_over_arbitrary_mesh_dependent_domains_assumed": false
+  },
+  "primary_sources_checked": [
+    {"source_id":"garban_steif_noise_2012","url":"https://arxiv.org/pdf/1102.5761v3","scope":"Chapter II section 4; Theorem II.2, dated square-lattice open-status passage and triangular SLE(6) description; Theorem II.1 RSW.","locator_correction":"Inspected v3: printed pp. 23-24 / PDF pages 24-25, rather than intake p. 26.","current_status_certificate":false},
+    {"source_id":"schramm_2006","url":"https://arxiv.org/pdf/math/0602151v2","scope":"Problem 2.11, printed p. 18: extension of Smirnov's theorem to critical square-bond percolation.","current_status_certificate":false},
+    {"source_id":"smirnov_2001_uploaded_2009","url":"https://arxiv.org/html/0909.4499v1","scope":"Theorem 1, Corollary 2; triangular-site crossing convergence, not square-bond convergence."},
+    {"source_id":"cardy_1991","url":"https://arxiv.org/pdf/hep-th/9111026v1","scope":"Equation (8) comparison function; rectangle convention fixed by the independent Schwarz-Christoffel derivation."},
+    {"source_id":"nist_dlmf_19_8","url":"https://dlmf.nist.gov/19.8#ii","scope":"Landen equations 19.8.11-19.8.12; modulus distinguished from elliptic parameter."},
+    {"source_id":"tsai_yam_zhou_2013","url":"https://arxiv.org/abs/1112.2017v5","scope":"Claimed proof metadata and author comment describing a preliminary version and critical comments; proof not audited."},
+    {"source_id":"zhou_2024","url":"https://arxiv.org/abs/2409.03235v6","scope":"Claimed proof metadata; revised 17 December 2024; 115-page proof not audited."}
+  ],
+  "owner_prior_work_checked": "BOUNDED, NOT EXHAUSTIVE",
+  "prior_work": [
+    {"path":"probability_1000_intake_claude_20260907/attempts.jsonl:17","id":"C0017-A001","status":"author-only attempted_unsolved; no independent proof check supplied"},
+    {"path":"probability_1000_attempts_H_20260912 and probability_1000_attempts_I_20260914","scope":"Exact C0017 search in named math text/JSON/Lean records; no exact-ID result surfaced."},
+    {"path":"prob1000_lean_20260908","scope":"Exact C0017 hit was the annotated ranking, not a formal proof receipt."},
+    {"path":"~/Big Open problem in probability theory","scope":"Bounded percolation filename/keyword search; no audited parent solution recovered. This is not a whole-owner-work certificate."},
+    {"path":"~/math-brain-build/export/population/nodes.jsonl","scope":"ID-filtered export hit refers to C0017 inside an author-only C0049 attempt. No exact C0017 target card established in this export check."},
+    {"path":"~/math-brain-build/local/population/brain.sqlite3","scope":"Opened mode=ro; schema inspected. Title lookup interrupted by the 5-second bound, so canonical target-card lookup is incomplete."}
+  ],
+  "brain_receipt": "LOCAL_SOURCE_RECEIPT.json",
+  "recall": {"status":"TIMEOUT_60S","fallback_slug":"perceptron_proof_open_gaps_fleet_2026_07_12","receipt":"RECALL_RECEIPT.txt"},
+  "paired_proof_read": true,
+  "independent_derivation_saved_before_paired_proof_read": true,
+  "paired_proof_verdict": "Scoped adversary KEEP for w414 Lemmas 1-3; assigned referee w416 still separate.",
+  "own_new_result_status": "sketch; author derivation complete, independent w416 check pending",
+  "novelty_claim": false,
+  "parent_problem_solved": false,
+  "formal_proof_receipt": false,
+  "hardest_remaining_gap": "Identify correctly marked square-bond crossing/interface subsequential limits as Cardy's/SLE(6) and establish full-sequence convergence."
+}

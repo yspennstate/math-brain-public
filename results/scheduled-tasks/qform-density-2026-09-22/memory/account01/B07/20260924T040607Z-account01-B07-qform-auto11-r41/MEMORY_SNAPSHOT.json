@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "20260924T040607Z-account01-B07-qform-auto11-r41",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "full_brain_connected": false,
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8e689226d5ab4fd56e1e86add5f17f2d98f53087",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/20260924T040607Z-account01-B07-qform-auto11-r41/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "30f602c6e100cb38613959fc85d45ddfc203445a",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B07/20260924T040607Z-account01-B07-qform-auto11-r41.md"
+  },
+  "supporting_theorem": "QFORM-EXACTSINGULAR-TAU-CANCELLED-SAMECUT-E2-v1",
+  "incoming_state": {
+    "pair": "B=tau ell ell^T on literal H, kernel k",
+    "bordered_star": "D_H=-tau q q^T with q=Uk",
+    "lower_bound": "|tau| ||q||^2 >= 7/96",
+    "leverage": "max q_r^2/||q||^2 < 1/7",
+    "third_resource_branch": "s2(U)>31/64"
+  },
+  "new_invariants": {
+    "tau_E2_total": "|tau| E2(U) > 6727/393216",
+    "same_cut_balance": "1/10 < ||q_R||^2/||q||^2 < 9/10",
+    "same_cut_cross_E2": "E_RS > (31/112)E2(U)",
+    "tau_cross_E2": "|tau| E_RS > 29791/6291456",
+    "same_cut_bordered_star": "||D_H[R,S]||op > 7/320",
+    "physical_pivot_product": "some h in H has |A_hh| E_RS > 29791/12582912"
+  },
+  "partner_application": {
+    "source": "yspennstate/math-open-problems@ec29bb4321feffe020e5cb0185d148f2f6de847e",
+    "theorem": "QFORM-E2-BOUNDED-SUPPORT-BALANCE-v1",
+    "actual_inequality": "sqrt(|tau|) s2(U)||U||F > sqrt(6727/393216)=0.130796198991304...",
+    "bounded_core_corollary": "if an m-row core carries >=half E2(U) and entries <=L0, s2(core)>0.0653980994956522/(sqrt(m|tau|)L0)"
+  },
+  "next_debt": "QFORM-SAMECUT-STAR-PLUS-TAU-E2-DEPENDENCE-SAFE-RECEIVER-v1",
+  "warnings": [
+    "The theorem is structural and does not itself prove a density bound.",
+    "Do not use post-rotation independence.",
+    "Do not invert a tiny physical minor.",
+    "Do not condition away the third resource before the half-Riesz step.",
+    "Do not infer bounded support or a balanced second singular direction from aggregate E2 alone."
+  ],
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN"
+}

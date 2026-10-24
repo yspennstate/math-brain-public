@@ -1,0 +1,139 @@
+\section*{Positive $U$ tax absorbs the growing-rank OR boundary layer}
+
+All logarithms are base two.  For integers $r\ge2$ and
+$k\ge1$, split the cube into $k$ disjoint $r$-bit blocks.  Let $D_j$
+be the event that block $j$ equals a fixed point and put
+\[
+ f_{k,r}=1-2\mathbf 1_{D_1\vee\cdots\vee D_k}.
+ \tag{1}
+\]
+This is a genuine Boolean family, not a tensor power.  Fix
+$\lambda>0$, write $\epsilon=2^{-r}$, and take
+$k_r=\lfloor\lambda/\epsilon\rfloor$.  The frozen GU pair in this
+packet is
+\[
+ (a,b)=\left({3\over4},{1\over4}\right).
+ \tag{2}
+\]
+
+\paragraph{Theorem.}
+For every fixed $\lambda>0$,
+\[
+ \begin{aligned}
+ I(f_{k_r,r})&=2\lambda e^{-\lambda}r+O_\lambda(r2^{-r}),\\
+ H(f_{k_r,r})&=8\lambda e^{-\lambda}r+O_\lambda(1),\\
+ U(f_{k_r,r})&=2\lambda e^{-\lambda}r+O_\lambda(1),\\
+ G(f_{k_r,r})&=2\lambda e^{-\lambda}r+O_\lambda(r^2 2^{-r}).
+ \end{aligned}                                                   \tag{3}
+\]
+More precisely,
+\[
+ U-I\longrightarrow
+ \Psi(\lambda):=
+ c\bigl((2e^{-\lambda}-1)^2\bigr)
+ +{4\lambda e^{-\lambda}(1-e^{-\lambda})\over\ln2}>0,           \tag{4}
+\]
+where $c(x)=x\log_2(1/x)$ and $c(0)=0$, while
+\[
+ G-I\longrightarrow0.                                            \tag{5}
+\]
+Consequently, for every fixed $b\in(0,1)$,
+\[
+ \boxed{
+ G-(1-b)I-bU\longrightarrow-b\Psi(\lambda)<0.}                  \tag{6}
+\]
+In particular, the frozen residual satisfies
+\[
+ \boxed{
+ G-{3\over4}I-{1\over4}U
+ \longrightarrow-{1\over4}\Psi(\lambda)<0.}                    \tag{7}
+\]
+Thus for each fixed $\lambda>0$ there exists
+$r_0(\lambda,b)$ such that the boundary pair $(1-b,b)$ holds on this
+family for all $r\ge r_0$.  The threshold is not asserted uniform as
+$b\downarrow0$ or as $\lambda$ approaches $0$ or infinity.
+
+\paragraph{Exact formulas.}
+Put $P=(1-\epsilon)^k$, $p_0=(2P-1)^2$, and
+$L=-\log_2(1-\epsilon)$.  Exact Fourier and upper-set summation gives
+\[
+ I={2Pkr\epsilon\over1-\epsilon},                                 \tag{8}
+\]
+\[
+ \begin{aligned}
+ H={}&c(p_0)-2(1-p_0)+8Pkr\epsilon
+       +8PkL\bigl((1-\epsilon)-P\bigr),\\
+ U={}&c(p_0)+4Pk\epsilon
+       \left(r-{r\over2(1-\epsilon)}\right)
+       +4PkL\bigl((1-\epsilon)-P\bigr).
+ \end{aligned}                                                    \tag{9}
+\]
+Restriction of one physical bit has unequal children: one deletes its
+block, while the other replaces it by an $(r-1)$-bit defect.  If
+$U_{k,r}$ denotes (9), then exactly
+\[
+ G=kr\left(U_{k,r}
+ -{U_{k-1,r}+U_{(r-1,r,\ldots,r)}\over2}\right).                 \tag{10}
+\]
+Thus every normalization and terminal term, and both restriction
+children, remain in the calculation.
+
+\paragraph{First-order and terminal limits.}
+Since $P=e^{-\lambda}(1+O_\lambda(\epsilon))$, (8)--(9) yield (3).
+Subtracting (8) from the expression for $U$ and taking the limit gives
+exactly (4).  Its second summand is strictly positive for every
+$\lambda>0$, including the balanced value $\lambda=\ln2$ at which
+$p_0\to0$.
+
+It remains to justify (5), since the ratio statement $G/I\to1$ alone
+would not suffice.  Away from $\lambda=\ln2$, the constant-atom entropy
+is smooth in a fixed neighbourhood of $P=e^{-\lambda}$.  Expanding the
+two child products
+\[
+ P_-={P\over1-\epsilon},\qquad
+ P_+={P(1-2\epsilon)\over1-\epsilon},\qquad
+ {P_-+P_+\over2}=P                                      \tag{11}
+\]
+in (9)--(10) gives
+\[
+ {G\over I}=1+2r\epsilon+O_\lambda(\epsilon),
+ \qquad
+ G-I=4\lambda e^{-\lambda}r^2\epsilon+O_\lambda(r\epsilon).
+ \tag{12}
+\]
+Both terms in the last display tend to zero.
+
+At $\lambda=\ln2$, $c((2P-1)^2)$ is not smooth and must not be put into
+the error in (12).  Write
+$k=\lambda/\epsilon+\alpha_r$, $-1<\alpha_r\le0$, and
+$q_r=\lambda/2+\alpha_r$.  Then the parent, deleted-child, and
+shortened-child constant Fourier amplitudes are respectively
+\[
+ -q_r\epsilon+O(\epsilon^2),\quad
+ -(q_r-1)\epsilon+O(\epsilon^2),\quad
+ -(q_r+1)\epsilon+O(\epsilon^2).
+\]
+Their central entropy difference equals
+\[
+ c(q_r^2\epsilon^2)
+ -{c((q_r-1)^2\epsilon^2)+c((q_r+1)^2\epsilon^2)\over2}
+ =-2r\epsilon^2+O(\epsilon^2),                         \tag{13}
+\]
+uniformly in the bounded $q_r$.  After multiplication by $kr$, this
+cancels the $+2r\epsilon$ normalized correction from the nonconstant
+rows.  Hence
+\[
+ {G\over I}=1+O(\epsilon),\qquad G-I=O(r\epsilon)\to0,             \tag{14}
+\]
+which proves (5) at the exceptional intensity as well.
+
+\paragraph{GU implication and limitation.}
+The same expansion shows $G>I$ eventually whenever
+$\lambda\ne\ln2$, so the endpoint $(a,b)=(1,0)$ is false on this
+family.  Equations (4)--(7) show that this endpoint failure is only a
+vanishing boundary layer and cannot refute any fixed boundary pair with
+$b>0$.  No ratio diverges: $G/I\to1$, $U/I\to1$, and $H/I\to4$.
+Therefore this packet removes a proposed uniformity obstruction but does
+not prove universal GU or FEI.  What remains is to obtain one fixed
+positive fraction of the terminal reserve for arbitrary Boolean
+functions without paying the same influence more than once.

@@ -1,0 +1,93 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "control_revision": "2026-10-12.1",
+  "run_id": "20261012T034859Z-account01-B19-b12-envelope-review-a094",
+  "stream": "B19",
+  "packet_id": "A094",
+  "packet_ids": ["A094"],
+  "reviewed_stream": "B12",
+  "reviewed_packet_id": "A057",
+  "gap_id": "WEIGHTED_LOCAL_TC",
+  "attempt_id": "A094-B12-UNIFORM-ENVELOPE-REVIEW-1",
+  "bounded_objective": "Independently reconstruct B12's newest uniform coherent-kernel envelope, including exact normalization and physical-input accounting, and locate the first unsupported step toward changing coherent witnesses.",
+  "prior_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "new_status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_FIXED_SOURCE_SCOPE",
+  "packet_status": "IN_PROGRESS",
+  "mathematical_delta": "Accepted an all-depth, all-bias fixed-source hierarchy theorem with explicit constant M(a,b)+(4+2 ln 2+2/e)q. Isolated the changing-witness ledger sum_v w_v alpha_v^2 M(a_v,b_v) as the first unpaid universal step.",
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "80054872e190524ffdea413d8f96e07919c35c62",
+      "path": "reports/fei-2026-10-11/runs/B12/20261012T032618Z-account01-B12-uniform-kernel-envelope/"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "4fa89c32748c17c91aeca56c55c7a054b760ba6e",
+      "path": "reports/fei-2026-10-11/runs/B12/20261012T022322Z-account01-B12-biased-coherent-hierarchy/"
+    },
+    {
+      "repository": "yspennstate/math-research-brain",
+      "commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+      "path": "scheduled_tasks/work/shared/full-fei-only-2026-10-12/ORDER.md"
+    }
+  ],
+  "literature_checks": [
+    "O'Donnell--Tan, arXiv:1304.1347: disjoint FEI+ composition/read-once closure, not changing coherent witnesses",
+    "Wan--Wright--Wu, arXiv:1312.3003: read-k and expected-depth decision-tree bounds plus FEI+ composition, not a universal varying-source payment",
+    "Potapov, arXiv:2609.21563: plateaued and partially bent proper classes, not arbitrary coherent hierarchy closure"
+  ],
+  "validation": {
+    "command": "python3 INDEPENDENT_AUDIT.py",
+    "direct_truth_table_split_cases": 205824,
+    "adaptive_tree_root_instances": 70656,
+    "adaptive_scope": "all branch-dependent nonreusing trees with optional stopping for every Boolean child through three bits and all ordered pairs of two-bit Boolean outer branches",
+    "scalar_grid_points": 329,
+    "scalar_ordered_pairs": 108241,
+    "random_seed": null,
+    "arithmetic": "independent double-precision Walsh reconstruction plus analytic all-parameter proof",
+    "failures": 0
+  },
+  "acceptance_evidence": [
+    "REPORT.md",
+    "CLAIMS.json",
+    "REVIEW_VERDICT.json",
+    "INDEPENDENT_AUDIT.py",
+    "CHECK.out"
+  ],
+  "next_consumers": ["A057", "A058", "A059", "A087", "A090", "A095", "A099", "B20"],
+  "next_action": "Freeze the parent-child coherence law for node-dependent (a_v,b_v), then seek a terminal-entropy or physical-event injection paying sum_v w_v alpha_v^2 M(a_v,b_v) once; test addressing, sparse defects, near tensors, and shared-variable gates before claiming universality.",
+  "blockers": [
+    "No dimension-independent single-use bound for the changing-witness M ledger is proved.",
+    "Known disjoint composition and proper-class theorems do not supply this payment.",
+    "Full FEI remains open."
+  ],
+  "delivery_status": {
+    "canonical": {
+      "status": "SEVEN_FILE_CORE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-open-problems",
+      "core_complete_commit": "702e7ff2a134351ec7a56887e0652cecccfc0b35",
+      "readback_commit": "b12d444d5c5668d2fac90d056d4b6aac24f538f7",
+      "path": "reports/fei-2026-10-11/runs/B19/20261012T034859Z-account01-B19-b12-envelope-review-a094/",
+      "verified_files": 7,
+      "report_sha256": "7eb2f16a6d86e5654cb7f74e6a7e2b29f19c0269f004c5e41d938b12524b4a51"
+    },
+    "brain_mirror": {
+      "status": "SEVEN_FILE_CORE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-research-brain",
+      "core_complete_commit": "22c06a80f7bdc3d9e19e853dc764066140644d49",
+      "readback_commit": "ef54ff7bd6e0b52a25ba57415d8e3986a2a5f1a4",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B19/20261012T034859Z-account01-B19-b12-envelope-review-a094/",
+      "verified_files": 7,
+      "report_sha256": "7eb2f16a6d86e5654cb7f74e6a7e2b29f19c0269f004c5e41d938b12524b4a51"
+    },
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {
+    "model": "Codex; exact runtime version not exposed",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  }
+}
+

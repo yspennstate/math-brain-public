@@ -1,0 +1,13 @@
+{
+  "helper_version": "A084-physical-curvature-v1",
+  "actual_Boolean_family": "h negative on {0,1,2,4,8,16,32,6,17,40} and J=-h(x xor1), six disjoint identical arbitrary cores with minority p<=1/16; actual six-bit non-flat source core negative on {0,1,2}",
+  "parameter_domain": "Continuum 0<p<=1/16, all physical singleton beta with |beta|<=min(Inf_i,2p); selected mean varies over [1-4p,1], including constant-child endpoint",
+  "case_count": "12 fixed directional pivotal polynomials and witness assignments; 108 scalar diagnostics (2 gates,6 directions,3 biases,3 singleton shifts); eight source-bound actual36-bit physical-query cases,16 children; no large truth-table enumeration",
+  "symmetry": "All six directions checked; no transitivity assumed for J",
+  "arithmetic": "Integer Walsh, Fraction polynomial coefficients, rational atanh entropy intervals with proved tail and64-bit outward rounding; analytic Jensen/Green-kernel continuum bound",
+  "memory_estimate_MB": 100,
+  "pilot_max_runtime_seconds": 55,
+  "max_runtime_seconds": 120,
+  "automatic_dimension_or_depth_escalation": false,
+  "scope": "Exact fixed-case implementation checks; all-real parameter conclusion is analytic, including beta=0, constant child, coefficient zeros and p->0. No sampled inference."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T233435Z-account01-B05-QFORM-auto17",
+  "checks": [
+    {
+      "name": "rank2_core_characteristic_polynomial",
+      "method": "symbolic algebra",
+      "matrix_basis": "(H,L,p_perp)",
+      "matrix": "[[0,t,0],[t,alpha+2*b*theta,b*q],[0,b*q,0]]",
+      "charpoly": "-z*(alpha*z + b^2*q^2 + 2*b*theta*z - z^2 + t^2)",
+      "conclusion": "the two nonzero eigenvalues have product -(t^2+b^2*q^2), hence D=t^2+b^2||p_perp||^2>=t^2"
+    },
+    {
+      "name": "exact_target_family_spectrum",
+      "matrix_basis": "(H,L,P,V)",
+      "matrix": "[[0,t,0,0],[t,0,b,0],[0,b,0,0],[0,0,0,lambda]]",
+      "spectrum": "{+sqrt(t^2+b^2),-sqrt(t^2+b^2),0,lambda}",
+      "target_gate": "|t|>=1 and |lambda|>=1 imply three eigenvalues of absolute value at least one"
+    },
+    {
+      "name": "constants",
+      "values": {
+        "128_sqrt2": 181.01933598375618,
+        "16_sqrt60": 123.93546707863734,
+        "partner_endpoint_7.761982175235_times_2_pow_2_over_3": 12.321378670326451
+      }
+    },
+    {
+      "name": "square_density_envelope",
+      "identity": "p_{lambda(W+s)^2}(y)=[p_W(-s+r)+p_W(-s-r)]/(2|lambda|r), r=sqrt(|y/lambda|)",
+      "bound": "<=K_W |lambda|^{-1/2}|y|^{-1/2} on the appropriate half-line"
+    },
+    {
+      "name": "scope_guard",
+      "result": "FULL_QFORM_OPEN; theorem requires a genuine disjoint source bank for the final square; no moment/support assumptions added"
+    }
+  ]
+}

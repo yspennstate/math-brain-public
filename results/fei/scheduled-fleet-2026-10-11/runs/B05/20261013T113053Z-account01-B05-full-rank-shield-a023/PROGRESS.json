@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "run_id": "20261013T113053Z-account01-B05-full-rank-shield-a023",
+  "stream_id": "B05",
+  "account": "account01",
+  "primary_packet_id": "A023",
+  "packet_ids": ["A023"],
+  "attempt_id": "B05-A023-FULL-RANK-SHIELD-07",
+  "stable_gap_id": "B05_RARE_REFUNDS",
+  "claim_version": "B05_A023_FULL_RANK_SHIELD_v1",
+  "objective": "Resolve the interaction of two defect cylinders by deriving a nonreused complete-tree payment, then remove defect-count dependence where the mechanism permits.",
+  "source_plan": {
+    "control_revision": "2026-10-12.1",
+    "control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "assignment_path": "reports/fei-2026-10-11/assignments/B05.json",
+    "predecessor_run": "20261013T093559Z-account01-B05-bilinear-defect-a023",
+    "predecessor_canonical_package": "6139b841df3fec46660a1e7fb29ac41d19dbf1a2",
+    "predecessor_brain_package": "1e8f151613fbc7d6a52d579cfd8b48dc8971f232"
+  },
+  "prior_status": "One point-defect cylinder was covered for arbitrary bilinear rank with constant 25/4; multiple cylinders had intersecting exceptional upper filters.",
+  "new_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "mathematical_delta": "Proved that full-column-rank bilinear control shields an arbitrary Boolean coherent core, hence any number and overlap pattern of defect cylinders, with complete-tree retained-U constant 4; square invertible controls have exact constant 2.",
+  "previous_bound": "One defect cylinder; arbitrary rank; constant 25/4.",
+  "new_bound": "Arbitrary Boolean shared core D and hence arbitrary defect count/overlap; full-column-rank constant 4, square invertible constant 2.",
+  "constant_ledger": {
+    "dimension_dependence": 0,
+    "activation_probability_dependence": 0,
+    "defect_count_dependence": 0,
+    "cylinder_overlap_dependence": 0,
+    "core_bias_dependence": 0,
+    "depth_dependence": 0,
+    "restriction_order_dependence": 0,
+    "terminal_core_dependence": 0,
+    "square_constant": 2,
+    "rectangular_full_column_rank_constant": 4,
+    "remaining_correlation_gap": "positive-dimensional fibers, rank(M)<m, or no fixed full-rank shield"
+  },
+  "verification": {
+    "method": "exact integer Walsh arithmetic; exhaustive all Boolean D and all invertible M through m=3; exhaustive small rectangular cases; seeded larger full-column-rank cases; explicit two/three-defect cores",
+    "script": "CHECK_FULL_RANK_SHIELD.py",
+    "output": "CHECK_FULL_RANK_SHIELD.out",
+    "instances": 44774,
+    "truth_table_points": 2874192,
+    "nonzero_spectral_atoms": 2810960,
+    "result": "PASS"
+  },
+  "independent_review": {
+    "status": "PENDING",
+    "targets": ["A087", "A094"]
+  },
+  "remaining_obstacle": "For rank(M)<m, Fourier coefficients are signed sums over positive-dimensional fibers of D; coherent interference is not controlled by this root reservoir argument with a dimension-independent selector-only constant.",
+  "next_action": "Freeze the codimension-one fiber functional and test whether its upper-set mismatch is paid by data-core influence plus retained terminal U, uniformly over D.",
+  "delivery": {
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_path": "reports/fei-2026-10-11/runs/B05/20261013T113053Z-account01-B05-full-rank-shield-a023/",
+    "brain_repository": "yspennstate/math-research-brain",
+    "brain_path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B05/20261013T113053Z-account01-B05-full-rank-shield-a023/",
+    "canonical_package_commit": "68f07f0e029cbfbc90f4ebc384f75083be4fb2d8",
+    "brain_package_commit": "3b455f71c5ac1de54cbdf3e4f44889f3d1ad52eb",
+    "readback": "VERIFIED_EXACT_FOR_ALL_EIGHT_PACKAGE_FILES_AT_BOTH_COMMITS",
+    "status": "DELIVERED_AND_VERIFIED"
+  },
+  "full_fei_status": "OPEN"
+}

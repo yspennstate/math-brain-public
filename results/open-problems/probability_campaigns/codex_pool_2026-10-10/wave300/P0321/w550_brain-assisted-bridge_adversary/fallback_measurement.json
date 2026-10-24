@@ -1,0 +1,22 @@
+{
+  "gate": "compute_gate.json",
+  "commands": [
+    "python -X utf8 recall_probe.py",
+    "python -X utf8 check_fallback.py"
+  ],
+  "baseline": {
+    "timeout": true,
+    "seconds": 62.99310369999148,
+    "output_bytes": 0,
+    "located_target_cards": 0
+  },
+  "exact_source_fallback": {
+    "seconds": 1.2912370999110863,
+    "located_target_cards": 1,
+    "source_line": 2338,
+    "card_kind": "concept",
+    "proved_phase_witnesses": 0
+  },
+  "checks_passed": 3,
+  "limitations": "One known-source exact locator case. Not a benchmark of ranked math recall, not a proof, and not an improvement deployed in the live brain."
+}

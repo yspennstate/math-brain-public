@@ -1,0 +1,99 @@
+\section{Reproducible finite computations}\label{app:computations}
+
+The accompanying program \texttt{code/check\_certificates.py} checks the finite constructions appearing in the proof. Its exact part uses rational arithmetic from the Python standard library. A separate numerical part, using NumPy, constructs the full cut-set and polymer generators directly and compares them with the independently constructed radial operators. The analytical arguments in the preceding sections establish the theorem for all parameters; the computations check formulas, boundary conventions, and concrete instances.
+
+The program first verifies five polynomial cancellation identities, including the reciprocal certificates and the coefficient in the up--down tower induction. It then enumerates cut sets and integer partitions, calculates averaged transition rates on every partition fiber, checks detailed balance, and verifies the count derivative identity as a matrix equation. The two coupling stages are checked by comparing every constructed marginal rate with the defining cut-set generator. Table~\ref{tab:checks} records the coverage of the computation supplied with this paper.
+
+\begin{table}[ht]
+\centering
+\caption{Finite verification coverage. A parameter case fixes both $n$ and $\beta$; the exact checks also enumerate the relevant states or matrix entries.}
+\label{tab:checks}
+\small
+\begin{tabular}{@{}p{0.42\textwidth}p{0.49\textwidth}@{}}
+\toprule
+Construction & Coverage \\
+\midrule
+Polynomial cancellations & Five exact identities \\
+Stationary projection & $2\le n\le8$, 21 parameter cases; 654 averaged-rate and 654 detailed-balance identities \\
+Count derivative & $2\le n\le12$; 1,716 exact matrix-entry identities \\
+Reciprocal inequalities & 770 upper, 210 count-lower, 1,152 sector-lower, and 212 coupling-lower parameter points \\
+Final parameter cases & 93 combinations, including the regime boundaries \\
+Coupling marginals & $2\le n\le7$; 1,482 Stage-I and 2,046 Stage-II state/parameter cases \\
+Full cut-set spectrum & $2\le n\le8$, five fragmentation parameters for each $n$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The numerical parameters are $\beta\in\{10^{-8},n^{-2},n^{-1},1,100\}$. The largest full cut-set generator has dimension $2^8-1=255$. Across the 35 spectral comparisons, the maximum absolute discrepancy between the direct cut-set spectrum and the combined sector spectra was $1.48\times10^{-12}$. After division by the larger of one and the spectral radius, the maximum discrepancy was $2.11\times10^{-15}$. The directly enumerated polymer gaps also satisfied the theorem's inequalities throughout this grid.
+
+The supplied result file was produced with Python~3.12.14 and NumPy~2.3.5. Python~3.10 or later suffices for the exact checks. From the package root, run
+\begin{verbatim}
+python code/check_certificates.py
+\end{verbatim}
+to write \texttt{results/verification\_results.json}. The option \texttt{--skip-numerical} runs only the exact part. Floating-point results may differ in their last digits across numerical libraries.
+
+
+\subsection{Checks for the extensions}
+
+The program \texttt{code/check\_extensions.py} checks the additional
+spectral formulas against generators constructed directly from the
+reaction rules. Its output is
+\texttt{results/extension\_checks.json}. Seven polynomial identities
+are checked exactly, including the sharp count and degree-one
+reciprocal formulas and the two critical finite-size corrections.
+Table~\ref{tab:extension-checks} gives the additional coverage.
+
+\begin{table}[htbp]
+\centering
+\caption{Finite checks of the extended results. The matrix comparisons
+use floating-point eigenvalues; the algebraic, flux, and drift
+identities specified as exact use rational arithmetic.}
+\label{tab:extension-checks}
+\small
+\begin{tabular}{@{}p{0.42\textwidth}p{0.49\textwidth}@{}}
+\toprule
+Construction & Coverage \\
+\midrule
+Polymer/count gap equality & 45 parameter cases, $2\le n\le10$ \\
+Sharp count and degree-one bounds & 46 distinct cases through $n=1000$; 8,544 degree-one quotient evaluations \\
+Critical scaling functions & 50 finite-error checks at 25 parameter pairs; 30 truncation consistency checks \\
+Reversible graph diffusion & 68 direct matrices on weighted paths, cycles, and complete graphs, $2\le n\le7$ \\
+Nonreversible permutation motion & 24 direct matrices for $n=3,6$, checking real-part and symmetric gaps \\
+Polymer circulation & 20 cases for $4\le n\le8$; 240 stationarity and 848 symmetric-flux identities checked exactly \\
+Growing kernels & 48 generators for $2\le n\le9$; 570 monomer-drift identities, 2,184 detailed-balance identities, and 24 covariance inequalities checked exactly \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The maximum scaled discrepancy was $5.38\times10^{-15}$ for the
+polymer/count equality, $7.47\times10^{-15}$ for the reversible spatial
+formula, and $5.06\times10^{-15}$ for the nonreversible spectral and
+symmetric-rate formulas. Every tested sharp bound and growing-kernel
+bound was satisfied. Every tested nonzero circulation gave a strict
+asymptotic spectral improvement. These finite checks do not establish
+a uniform lower bound on the size of that improvement.
+
+The critical comparisons retain the analytic errors
+$2b/(R+3)$ and $b/(R+2)$ from the truncations of $\rho$ and $\sigma$.
+The finite eigenvalues themselves are ordinary floating-point
+computations, not certified interval eigenvalues.
+The largest Jacobi matrix in the consistency checks has dimension
+$513$.
+
+The plotting program \texttt{code/plot\_scaling.py} produces
+Figure~\ref{fig:scaling-limits}. Its data are written to
+\texttt{results/scaling\_data.json}.
+It computes 37 finite count gaps
+for $8\le n\le32768$ and 121 critical-parameter values for
+$10^{-3}\le b\le10^4$.
+The truncation choice in the caption makes the analytic tail widths
+at most $0.166\%$ and $0.323\%$ of the computed finite eigenvalues
+for $\rho$ and $\sigma$, respectively.
+All three programs can be run from the repository root:
+\begin{verbatim}
+python code/check_certificates.py
+python code/check_extensions.py
+python code/plot_scaling.py
+\end{verbatim}
+The source, PDF, programs, and data are available at
+\url{https://github.com/yspennstate/linear-polymer-relaxation}.

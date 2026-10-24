@@ -1,0 +1,89 @@
+{
+  "agent": "w399",
+  "problem_id": "P0003",
+  "checked_date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "full_target_proved": false,
+  "novelty_claim": false,
+  "original_target": {
+    "author": "Geoffrey R. Grimmett",
+    "title": "Selected problems in probability theory",
+    "url": "https://arxiv.org/pdf/2205.07318",
+    "arxiv": "2205.07318",
+    "locator": "Question 2.2, PDF page 3",
+    "verification": "Primary question read through web PDF extraction",
+    "statement": "For a uniformly sampled n-step vertex-self-avoiding walk starting at the origin of the honeycomb lattice, determine whether suitable rescaling yields a weak SLE(8/3) curve limit.",
+    "source_quote": "Does a uniformly distributed n-step SAW from the origin of H converge weakly, when suitably rescaled, to the Schramm–Loewner random curve SLE8/3?",
+    "underspecified_by_source": [
+      "suitable scaling sequence",
+      "precise SLE variant and domain",
+      "curve topology and time convention"
+    ],
+    "no_automatic_chordal_ensemble_equivalence": true
+  },
+  "working_target": {
+    "source": "https://arxiv.org/pdf/1007.0575",
+    "revision": "1007.0575v2",
+    "locator": "Section 4, Conjecture 1",
+    "ensemble": "All-length critical fugacity boundary-to-boundary honeycomb paths in a bounded Jordan domain analytic near marked boundary points",
+    "critical_fugacity": "1/sqrt(2+sqrt(2))",
+    "topology": "Uniform curve metric modulo increasing reparametrization",
+    "status": "conjecture",
+    "exact_statement": "STATEMENT_FOR_ADVERSARY.md",
+    "transfer_to_original_fixed_n_target": "UNPROVED",
+    "length_convention": "Source vertex count versus edge count changes a fixed-endpoint vertex path weight by the common factor x_c."
+  },
+  "established_primary_inputs": [
+    {
+      "source": "https://arxiv.org/pdf/1007.0575",
+      "revision": "v2",
+      "locator": "Theorem 1",
+      "fact": "Honeycomb connective constant sqrt(2+sqrt(2)); reciprocal is x_c",
+      "scope": "No scaling-limit proof"
+    },
+    {
+      "source": "https://arxiv.org/pdf/math/0209343",
+      "revision": "v2",
+      "locator": "Section 5, equations (5.2),(5.4), PDF pages 19–20, Proposition 5.2 page 21",
+      "fact": "Commuting conformal-map evolution and derivative-power Ito drift for a constant-variance semimartingale driver",
+      "scope": "The variable variance-rate extension is derived under explicit absolutely continuous characteristics in LEMMA_THREE_PROBE.md."
+    }
+  ],
+  "prior_checks": {
+    "ranking": {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "line": 547,
+      "recorded": "attempted_un; tier 5; 2026-09-07"
+    },
+    "population_store": {
+      "path": "~/math-brain-build/local/population/brain.sqlite3",
+      "read_only": true,
+      "query_limit": 6,
+      "rows": "PRIOR_STORE_TARGET_ROWS.json",
+      "original_attempt": "Finite-domain conditional law; author-checked only; no tightness or conformal invariance"
+    },
+    "claude_intake": {
+      "C0095": "attempts.jsonl row 83, observable/Morera reduction; unreviewed and not used as theorem",
+      "C0096": "Cross-reference identifying n=0 critical case with P0003; unreviewed"
+    },
+    "attempts_H_I": "Targeted exact-ID search found no P0003 entry; not an exhaustive corpus review",
+    "lean": "Annotated P0003 ranking only; no actual theorem/axiom receipt recovered",
+    "owner_solved_register": "Targeted SAW/honeycomb/SLE grep had no hit; does not certify exhaustive retired-work clearance",
+    "canonical_store": "Targeted local metadata located only archived audit DBs; current canonical store locator not established; archives not opened",
+    "control_head_read": "origin/main d49a9a821c, commit date 2026-10-10T08:55:32+04:00; no live git mutation or network fetch"
+  },
+  "recall": {
+    "receipt": "RECALL_RESULT.json",
+    "top_three_read": true,
+    "named_scars_read": [
+      "perceptron_proof_open_gaps_fleet_2026_07_12",
+      "proof_steps_need_derived_joint_structure_2026_09_09"
+    ],
+    "caveat": "P0003 token absent; 41 attachment bundles excluded. Recall result is not a complete solved-work status certificate."
+  },
+  "literature_status": "Primary historical sources recovered. Recent targeted search did not certify an October 2026 resolution. A 2010 Slade survey appeared with newer search metadata; its printed date was checked and it was not treated as recent status evidence.",
+  "formal_check": null,
+  "independent_reviewer": "w401; KEEP L1/L3/L4/L5 and background auxiliary scopes; full target unproved",
+  "next_proof_step": "Localized random-domain conditional partition ratio estimate, with no assumed exponent.",
+  "independent_review_receipt": "RECEIVED_W401_VERDICTS.jsonl"
+}

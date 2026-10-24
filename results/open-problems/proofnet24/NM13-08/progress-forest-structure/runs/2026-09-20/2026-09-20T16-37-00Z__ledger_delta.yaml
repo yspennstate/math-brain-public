@@ -1,0 +1,93 @@
+run:
+  root: proofnet24/NM13-08/progress-forest-structure
+  date: 2026-09-20
+  model: GPT-5.6 Sol
+  reasoning_effort: UNVERIFIED
+parent:
+  theorem: Grimmett-Winkler uniform-all-forests pairwise negative edge correlation
+  status_before: OPEN
+  status_after: OPEN
+  complete_all_simple_graph_order_before: 9
+  complete_all_simple_graph_order_after: 9
+  counterexample_order_lower_bound_before: 10
+  counterexample_order_lower_bound_after: 10
+p14_scope:
+  grimmett_winkler_published:
+    all_graphs_vertices_at_most: 8
+    nine_vertex_edges_at_most: 18
+  dense_nine_complement:
+    edge_range: "19..36"
+    unlabeled_graphs: 120314
+    present_edge_pairs: 25304635
+  all_unlabeled_simple_nine_vertex_graphs: 274668
+  structural_reduction: "vertex-minimal source counterexample may be taken 3-connected"
+claims:
+  - id: T07-ALL-LENGTH-ARM-TAIL-CLOSURE-28
+    status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+    statement: "For every arm length d>=1, the exact 15-state whole-arm operator L_d=s_d I+M_d lies in one fixed seven-dimensional commutative algebra QI+V, V=span(K,K^2,K^3,J,JK,J^2), with V^4=0; all M_d commute and M_d^4=0."
+    tail_annihilator: "(lambda^3-7 lambda^2+8 lambda-2)^3"
+    scalar_recurrence: "s_(d+2)=6*s_(d+1)-2*s_d; s_1=5,s_2=28"
+    proof_transfer: "L_d=A E^(d-1) F; first nine M_d lie in V; quotient obeys order-nine p^3 recurrence"
+  - id: T07-INDEPENDENT-DEPTH4-SPIDER-FOREST-PNC-28
+    status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+    novelty_priority: UNVERIFIED
+    statement: "For H=disjoint_union_j E4_{m_j}, where E4_m is one center with m length-four arms, every graph G=independent_K3 join H has Delta_G(e,f)>=0 for every distinct present edge pair; equality only for the single E4_0 case K_{3,1}."
+mechanism_gain:
+  before: "length-three arm closure and arbitrary finite pure depth-three-spider forests"
+  after: "all arm lengths in one fixed nilpotent tail algebra, plus arbitrary finite pure depth-four-spider forests"
+depth4_atom:
+  scalar: 892
+  nilpotent_rank_profile: [8,2,1,0]
+  normalized_transfer:
+    A: "4*(36*m+223)/223"
+    B: "(34560*m^2+223674*m+49729)/49729"
+    C: "m*(24883200*m^2+162422592*m+37717933)/66537402"
+  rho_interval:
+    lower: "43/360"
+    upper: "1/8"
+    lower_strict: true
+    upper_equality_only_m0: true
+sign_certificate:
+  same_component_orbits: 97
+  same_regular_bernstein: 82
+  same_discriminant: 15
+  same_failures: 0
+  boundary_equalities: 1
+  cross_component_schemes: 60
+  cross_failures: 0
+  cross_min_positive_numerator_coefficients:
+    k: 7672320
+    four_de_minus_3k: 23887872
+    linear_at_lower_strip: 687970713600
+    constant: 2751882854400
+finite_sanity:
+  graph: "independent_K3 join E4_2"
+  vertices: 12
+  edges: 35
+  forests: 111180256
+  edge_pair_checks: 595
+  min_rayleigh_numerator: 566808252288
+  minimizing_pair: "third internal edge on two distinct arms"
+companion_nm13_04:
+  current_claim: T07-TRIANGLE-MIXED-SPIDER-FOREST-PNC-26
+  scope: "triangle seed joined to an arbitrary finite forest of depth-two mixed spiders D_{p,q}"
+  complementarity: "current run uses independent terminals and genuine depth-four branching; all-length arm closure is new"
+literature_scope:
+  grimmett_winkler_math_0302185: "uniform all forests; verified <=8 vertices and 9 vertices with <=18 edges; UST case known separately"
+  erickson_1008_3660: "weighted SOS/Rayleigh for series-parallel spanning-forest polynomials"
+  huang_2311_00965: "general arboreal-gas negative correlation remains open; special parameters/graphs"
+  tang_zhang_2603_10738: "complete graph specified ensembles, including exactly k forest components for fixed k and large n; not arbitrary-graph all-forest law"
+  bado_wheels: "strict unit p-NC for wheel graphs; special 3-connected non-series-parallel family"
+execution:
+  arithmetic: exact_integer_rational
+  monolithic_replay: "exceeded local wall-time cap; not counted as successful"
+  staged_exact_execution: PASS
+artifacts:
+  report: 2026-09-20T16-37-00Z__all-length-arm-depth4-spider-report.md
+  ledger_delta: 2026-09-20T16-37-00Z__ledger_delta.yaml
+  checker: 2026-09-20T16-37-00Z__all-length-arm-depth4-checker.py
+  checker_output: 2026-09-20T16-37-00Z__all-length-arm-depth4-checker.out
+next_attack:
+  - "derive arm-length recurrences for one- and two-marked response increments"
+  - "prove a marked-position/arm-length-uniform Bernstein or discriminant sign cone"
+  - "if that fails, isolate the first exact arm-length/marked-position obstruction rather than increasing a blind cutoff"

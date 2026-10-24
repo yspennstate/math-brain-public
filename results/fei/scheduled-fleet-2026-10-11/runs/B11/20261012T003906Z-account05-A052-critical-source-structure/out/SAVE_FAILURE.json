@@ -1,0 +1,6 @@
+{
+  "status": "ASSERTION_COUNT_METADATA_MISMATCH",
+  "reason": "The direct channel replay recorded 1880 assertions before its output-size assertion, then printed 1881 afterward. The record writer correctly rejected the mismatch with the expected completed count.",
+  "repair": "Include the impending output-size assertion in the replay metadata; rerun the same frozen five-case replay and then regenerate final records. No theorem, family, precision or sign decision changes.",
+  "mathematical_failure": false
+}

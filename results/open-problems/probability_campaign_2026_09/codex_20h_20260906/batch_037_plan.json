@@ -1,0 +1,112 @@
+[
+  [
+    1,
+    "Problem16.1; PDF220",
+    "Joint intermediate level-set limits from one continuum field",
+    "Find a joint limit of normalized two-dimensional DGFF intermediate level-set measures for all lambda in (0,1), with the limiting chaos measures constructed from the same continuum GFF.",
+    "Marginal convergence, countable joint tightness and identification of one common-field coupling are different claims.",
+    "For any countable sequence lambda_j, marginal tightness already gives tightness in the countable product: choose compact K_j carrying probability at least 1-epsilon*2^(-j) uniformly in N, and apply a union bound and compactness of the product. A diagonal subsequence therefore yields a joint law at those levels. This does not identify that law as the chaos family of a common CGFF. For uncountably many levels a topology and stochastic continuity or another separability argument are still needed. The known marginal laws allow many couplings, just as (X,X) and (X,Y) with independent equal-law coordinates have identical individual marginals.",
+    "Finite unions of failure events cost at most epsilon; monotone convergence extends the bound to all j. The product compact set proves tightness, without invoking unavailable high moments.",
+    "No identification of cross-level dependencies or all-lambda convergence; no subcritical use of the critical Seneta-Heyde normalization."
+  ],
+  [
+    2,
+    "Problem16.2; PDF220",
+    "Fluctuations and deviation scales of intermediate DGFF counts",
+    "Determine rates, fluctuation laws and deviation estimates around the known random-measure limits of DGFF intermediate level sets.",
+    "The normalized count has a random chaos limit; it is not expected to concentrate around a deterministic mean.",
+    "For an interior bulk region A and a threshold 2*sqrt(g)*lambda*log(N), the diagonal variance expansion is g*log(N)+c0+g*log(r_D(x))+o(1). The Gaussian Mills ratio gives the exceedance probability asymptotic N^(-2*lambda^2)*exp(2*lambda^2*c0/g)*r_D(x)^(2*lambda^2)/(2*lambda*sqrt(2*pi*log(N))). Summing over a regular bulk region produces a mean proportional to N^(2-2*lambda^2)/sqrt(log(N)), with the displayed conformal-radius integral as its coefficient. This recovers the indispensable square-root logarithmic divisor. It only fixes the first-moment scale: correlated two-point events and the random limiting mass prevent an iid variance or deterministic-centered CLT inference.",
+    "Write z=threshold/sqrt(variance) in phi(z)/z. Expanding z^2/2 gives 2*lambda^2*log(N)-2*lambda^2*(c0/g+log(r_D(x)))+o(1), while 1/z contributes 1/(2*lambda*sqrt(log(N))). The same scale KN is explicitly recorded in the later near-maxima paper, equation1.6.",
+    "No fluctuation law, convergence rate or sharp deviation theorem. The incoming claim omitting sqrt(log(N)) is discarded."
+  ],
+  [
+    3,
+    "Conjecture16.3; PDF220-221; Theorem10.15 PDF134",
+    "Recovering the critical chaos tail from Gibbs-Markov axioms",
+    "Does every nontrivial family of random measures satisfying properties1-4 of Theorem10.15 also obey its logarithmic Laplace-tail property5, up to a positive normalization constant?",
+    "The four premises include null-set behavior, fourth-power scaling, independent additivity on disjoint domains and the Gaussian Gibbs-Markov multiplicative decomposition.",
+    "Partitioning a domain gives independent fine measures multiplied by an independent, spatially varying Gaussian binding field. On each compact subdomain, the weighted mass lies between exp(alpha*inf(Phi)) times its fine total mass and exp(alpha*sup(Phi)) times that mass. These inequalities explain a possible smoothing-transform route, but the weights are functions of position rather than single scalar multipliers of identically distributed masses. Replacing each field by one value creates an oscillation error that must be controlled on the critical tail scale. Multiplying the entire family by a deterministic c>0 preserves the four premises, so the best possible conclusion must allow its tail constant to change by c.",
+    "Apply the elementary integral bound inf(w)*mu(A)<=integral_A w dmu<=sup(w)*mu(A). Under deterministic scaling, E[c*Z(A)*exp(-s*c*Z(D))]/log(1/s) has c times the old limit because log(1/(sc))/log(1/s)->1.",
+    "No scalar smoothing-transform theorem has been applied without checking these errors. No finite-mean or moment-threshold consequence is asserted from the four axioms alone."
+  ],
+  [
+    4,
+    "Problem16.4; PDF221; equation12.86 PDF180",
+    "Explicit law of the position and height of the DGFF maximum",
+    "Find an explicit expression or a uniquely characterizing PDE for the limiting joint density rho_D(x,t) of the scaled location and centered height of the DGFF maximum.",
+    "rho_D is the joint density from the local limit theorem, not the normalized expectation of the critical chaos measure.",
+    "Conditional on Z, the extremal leaders form a Poisson process with intensity Z(dx)*exp(-alpha*h)dh. Thus the probability that all heights are at most t is exp(-Z(D)*exp(-alpha*t)/alpha), and the joint maximum density measure is exp(-alpha*t)*E[Z(dx)*exp(-Z(D)*exp(-alpha*t)/alpha)]dt, matching equation12.86. Integrating over t gives the position marginal E[Z(dx)/Z(D)]. This is well-defined although E[Z(D)] is infinite under the source critical-tail law. Consequently a ratio of expectations is unavailable. More generally, a random total mass alone does not forbid equality of such ratios: Z=W*nu for a fixed probability measure nu and integrable positive W is a counterexample to that proposed obstruction.",
+    "Substitute u=exp(-alpha*t)/alpha when integrating the conditional joint density: the height integral equals Z(dx)/Z(D). Taking A=D in the logarithmic Laplace-tail law and using monotone convergence proves E[Z(D)]=infinity.",
+    "The exact Cox-process representation is credited to the source. It is not an explicit solution for rho_D or a closed PDE."
+  ],
+  [
+    5,
+    "Conjecture16.5; PDF221",
+    "The size of deep DGFF extremal level sets",
+    "Prove the iterated N-then-t limit of the DGFF count above m_N-t, divided by t*exp(alpha*t), as a positive constant times the critical chaos mass, jointly for finitely many spatial regions.",
+    "An expectation asymptotic for a cluster is not equivalent by itself to this distributional statement.",
+    "In the limiting decorated Poisson process, restrict leader heights to [-t,H] and let F_s be the number of sites in one cluster within depth s. Conditional on Z, Campbell's formula gives expected truncated count Z(A)*exp(alpha*t)*integral_0^(t+H) exp(-alpha*s)*E[F_s] ds. If E[F_s] is asymptotic to c*exp(alpha*s), this is asymptotic to c*Z(A)*t*exp(alpha*t) when H=o(t), explaining the conjectured t factor. The conditional variance, when finite, is Z(A)*exp(alpha*t)*integral_0^(t+H) exp(-alpha*s)*E[F_s^2] ds. Its negligibility after division by t^2*exp(2*alpha*t), and control of high leaders and finite-N approximation, are additional requirements, not consequences of the first-moment formula.",
+    "The change of variables s=t+h transforms the leader intensity exp(-alpha*h)dh to exp(alpha*t)*exp(-alpha*s)ds. For bounded cluster truncations, both Poisson moment formulas follow directly from independent increments; monotone convergence gives the expectation identity with possibly infinite values.",
+    "No second-moment, Laplace remainder or uniform-integrability bound sufficient for the full target has been proved. The incoming claimed equivalence with Conjecture16.6 is discarded."
+  ],
+  [
+    6,
+    "Conjecture16.6; PDF222",
+    "The mean number of sites deep in an extremal DGFF cluster",
+    "Show that exp(-alpha*h)*E_nu[F_h] has a finite strictly positive limit, where F_h=sum_z 1{phi_z<=h} under the source extremal cluster law.",
+    "The source asks about a cumulative depth count. No unsupported identification of relevant spatial scales with log(h) is used.",
+    "Tonelli yields E[F_h]=sum_z P(phi_z<=h). For beta>alpha it also gives G(beta):=sum_z E[exp(-beta*phi_z)]=beta*integral_0^infinity exp(-beta*h)*E[F_h] dh, allowing infinite values. If the desired limit is c, the Abelian implication is (beta-alpha)*G(beta)->alpha*c as beta decreases to alpha. The converse needs more information: the increasing function f(h)=exp(alpha*h)*(1+epsilon*sin(h)), with 0<epsilon<alpha/sqrt(alpha^2+1), has the same leading Laplace pole but exp(-alpha*h)*f(h) has no limit. Thus proving a pole alone would not settle the pointwise cluster asymptotic.",
+    "Integrate exp(-beta*h)*1{phi_z<=h} from phi_z to infinity to obtain exp(-beta*phi_z)/beta. For the counterdiagnostic, fprime has bracket alpha+epsilon*(alpha*sin(h)+cos(h))>0, and the oscillatory Laplace term remains bounded at beta=alpha.",
+    "No asymptotic for the actual cluster transform or a valid Tauberian remainder is established. The oscillatory function diagnoses an implication, not the DGFF conjecture."
+  ],
+  [
+    8,
+    "Problem16.8; PDF222-223",
+    "Universality of two-dimensional log-correlated level-set processes",
+    "Under the source continuum Green-kernel limit and uniform microscopic covariance-increment limit, prove analogues of the DGFF intermediate and full extremal process limits.",
+    "The complete covariance hypotheses matter; a bounded covariance difference alone is weaker than the source premises.",
+    "To test a naive bounded-perturbation argument, add one independent Gaussian W to every DGFF site. The covariance changes by the bounded constant Var(W), yet the centered maximum changes exactly by W. Intermediate threshold counts are also shifted in height, giving a random multiplicative change of their limiting spatial intensity rather than an identical limit. This does not refute the stated conjecture: the added constant changes the macroscopic covariance and so violates its prescribed continuum Green limit. It does show why comparison inequalities using only a uniform covariance error cannot identify the same extremal law. Microscopic perturbations can likewise change cluster decorations even when macroscopic behavior agrees.",
+    "For every sample, max_x(h_x+W)=max_x h_x+W. Conditional on W, an exceedance at threshold a is exactly an original exceedance at a-W. These exact identities require no asymptotic covariance comparison.",
+    "No general comparison theorem proving the full source process convergence; the restricted rapidly decaying Gaussian perturbation case is already discussed in the source."
+  ],
+  [
+    9,
+    "Problem16.9; PDF223-224",
+    "Intermediate level-set limits for uniformly convex gradient fields",
+    "Prove the scaling limit of intermediate level-set measures for two-dimensional gradient models with even uniformly strictly convex potentials and zero boundary values.",
+    "The field convergence as a distribution and leading maximum asymptotics are not the desired rare-level measure theorem.",
+    "For a quadratic potential equal to kappa times the DGFF quadratic potential, the full field is exactly kappa^(-1/2) times the reference DGFF. Thus its logarithmic variance constant is g/kappa and the intermediate level 2*sqrt(g/kappa)*lambda*log(N) reduces exactly to the known DGFF level after multiplication by sqrt(kappa). This checks the necessary stiffness normalization. For general uniformly convex potentials, Gaussian exponential-moment comparison can give upper tails on the logarithmic scale, but does not automatically recover the Mills prefactor or the mixed high-point moments that determine the chaos limit. A field-level central limit statement cannot be inserted into an N-dependent indicator of a rare logarithmic-height event.",
+    "Changing variables h=kappa^(-1/2)*h0 in the finite-volume Gibbs density converts its quadratic Hamiltonian exactly to the reference one; the Jacobian is absorbed by normalization. This checks both covariance and threshold scaling independently.",
+    "No extension from quadratic to general uniformly convex potentials. No moment convergence at moving rare-event thresholds is assumed."
+  ],
+  [
+    12,
+    "Problem16.12; PDF225; exponent13.9 PDF183",
+    "A typical-displacement upper bound in a DGFF landscape",
+    "Prove the proposed quenched high-probability upper bound on displacement at time T, with exponent theta(beta) from equation13.9 and the stated subpolynomial correction.",
+    "The source writes psi in16.20 while13.9 calls the exponent theta; the intended exponent is theta. Expected exit-time bounds alone do not give this probability upper bound.",
+    "A commute-time identity controls the sum of opposite hitting times, not a lower bound of comparable size for each direction. A unit-conductance star with n vertices gives a concrete check: from a leaf a to its center b the hitting time is1, while the reverse mean is2*n-3; their sum is2*n-2=2*|E|*R(a,b). Thus a large commute time cannot be assigned to the outward hitting time. Even a genuine large expectation need not give a lower-tail bound: a nonnegative variable equal to n^2 with probability1/n and zero otherwise has mean n but is zero with probability tending to one. A displacement upper bound therefore needs a genuine lower-tail control on exit times or a suitable heat-kernel estimate, beyond these expectation identities.",
+    "First-step conditioning at the star center gives m=(1/(n-1))*1+((n-2)/(n-1))*(2+m), hence m=2*n-3. The one-way/commute discrepancy is exact.",
+    "No claim that exit-time concentration fails in the DGFF model. The examples invalidate proposed proof implications, not the requested estimate."
+  ],
+  [
+    13,
+    "Problem16.13; PDF226-227",
+    "A joint continuum limit for Liouville Langevin motion",
+    "Find suitable time scalings so that the regularized diffusion dX=beta*grad(h_epsilon)(X)dt+sqrt(2)dB converges jointly with its field to a nonconstant continuous process coupled to the CGFF.",
+    "This is the drifted diffusion in the source. Its Dirichlet energy differs from that of a pure time change of Brownian motion.",
+    "For smooth h, L=Delta+beta*grad(h) dot grad equals exp(-beta*h)*div(exp(beta*h)*grad). Integration by parts on compactly supported smooth functions gives E_h(f,g)=integral grad(f) dot grad(g)*exp(beta*h)dx on L2(exp(beta*h)dx). The random weight therefore enters both the speed measure and the energy. Weak convergence of the speed measures alone does not determine the limiting form. As a one-dimensional diagnostic, rapidly alternating conductivities1 and2 have arithmetic-mean speed density3/2 but harmonic-mean effective energy coefficient4/3; a constant conductivity3/2 has the same speed density and energy coefficient3/2. The two resulting effective generators differ. Thus a chaos-measure limit cannot by itself identify the Langevin path limit.",
+    "The integration-by-parts identity follows by expanding div(exp(beta*h)*grad(g)). For the one-dimensional comparison, the minimum energy between fixed endpoint values is their squared difference divided by integral(1/a); alternation makes that integral tend to3/4, giving coefficient4/3.",
+    "No joint tightness, form convergence or renormalized drift construction is proved. The incoming field-independent energy and consequent Brownian-time-change identification are discarded."
+  ],
+  [
+    14,
+    "Problem16.14; PDF227",
+    "Scaling law of effective resistance in DGFF conductances",
+    "Characterize the joint limiting distribution of (log(N))^(-1/2)*log(R_eff(floor(N*x),D_N complement)) for the source DGFF conductance network.",
+    "Keep the field pinning and boundary normalization fixed. Bounds involving only global field extrema are too coarse to identify this law.",
+    "For conductances c_xy=exp(beta*(h_x+h_y)), adding a constant a to the field multiplies every conductance by exp(2*beta*a) and every effective resistance by exp(-2*beta*a). This gives an exact normalization check. If m<=h_x<=M on the finite network, Rayleigh monotonicity gives exp(-2*beta*M)*R_unit<=R_h<=exp(-2*beta*m)*R_unit. Since the DGFF extrema are of logarithmic order, these elementary bounds leave a window of order log(N) in log resistance, far larger than the proposed sqrt(log(N)) scale. They cannot justify a Brownian maximum/minimum sandwich or a CGFF limit. The missing work is control of multiscale flows and cutsets that exploits cancellation and typical field structure.",
+    "Thomson's variational formula scales linearly with resistances, proving the constant-shift identity. Applying conductance monotonicity to the two constant networks gives the same bounds with the correct reversed signs.",
+    "No tightness or limiting resistance field is identified; the incoming asserted Brownian-functional bounds are not retained."
+  ]
+]

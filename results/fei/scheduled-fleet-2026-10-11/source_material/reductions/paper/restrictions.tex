@@ -1,0 +1,518 @@
+\section{Restriction increments and coordinate selection}\label{sec:restrictions}
+
+For a coordinate $i$, let $f_i^+$ and $f_i^-$ denote the two restrictions
+of $f$, and put
+\[
+ \Delta_i\HH(f)=\HH(f)-\frac{\HH(f_i^+)+\HH(f_i^-)}2.
+\]
+The restriction framework of Gonz\'alez, MacManus and
+Pereyra~\cite{GMP26} asks for a coordinate at which this entropy
+increment can be charged to the influence lost in the split.
+We first give an exact scalar description of the increment, then
+identify several limitations of possible coordinate rules.
+
+\subsection{The exact increment and its scalar profile}
+
+Write $h_2(u)=-u\log u-(1-u)\log(1-u)$, with its continuous endpoint
+values, and define
+\begin{equation}\label{eq:kappadef}
+ \kappa(u)=1+h_2(u)
+ -h_2\!\left(\frac12+\sqrt{u(1-u)}\right),
+ \qquad 0\le u\le1.
+\end{equation}
+For $S\subseteq[n]\setminus\{i\}$ set
+\[
+ c_S=\wh f(S),\qquad d_S=\wh f(S\cup\{i\}),\qquad
+ m_S=c_S^2+d_S^2,\qquad u_S=\frac{d_S^2}{m_S},
+\]
+omitting terms with $m_S=0$.
+
+\begin{proposition}[Exact restriction increment]\label{prop:splitexact}
+For every Boolean $f$ and every coordinate $i$,
+\begin{equation}\label{eq:splitexact}
+ \Delta_i\HH(f)=\sum_{S\not\ni i}m_S\kappa(u_S).
+\end{equation}
+In particular, $0\le\Delta_i\HH(f)\le2$.
+
+If $\mathcal S$ has law $P_f$, define
+\[
+ B_i(f)=H\bigl(\mathbf1_{\{i\in\mathcal S\}}\mid
+                         \mathcal S\setminus\{i\}\bigr).
+\]
+Then $\Delta_i\HH(f)=B_i(f)+M_i(f)$, where
+\begin{equation}\label{eq:mixingbound}
+ 0\le M_i(f)\le
+ \frac2{\ln2}\sum_{S\not\ni i}\min(c_S^2,d_S^2)
+ \le\frac2{\ln2}\I_i(f).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The two restricted coefficients indexed by $S$ are $c_S+d_S$ and
+$c_S-d_S$. Suppressing subscripts and putting
+$v=(c+d)^2/(2m)=1/2+cd/m$, the parent pair contributes
+$-m\log m+mh_2(u)$ to entropy, whereas the average contribution
+of the two branches is $-m\log(2m)+mh_2(v)$.
+Their difference is $m[1+h_2(u)-h_2(v)]$.
+Changing the sign of $cd$ does not affect $h_2(v)$, proving
+\eqref{eq:splitexact}. Both $h_2(u)$ and $1-h_2(v)$ lie in $[0,1]$,
+and $\sum_Sm_S=1$.
+
+The term $\sum_Sm_Sh_2(u_S)$ is exactly $B_i(f)$, leaving
+\[
+ M_i(f)=\sum_Sm_S
+ \left[1-h_2\!\left(\frac12+\frac{c_Sd_S}{m_S}\right)\right].
+\]
+To bound it, let
+\[
+ g(t)=\frac{(1+t)\ln(1+t)+(1-t)\ln(1-t)}2,
+ \qquad 0\le t\le1.
+\]
+For $0\le t<1$, the inequality
+$\atanh t\le t/\sqrt{1-t^2}$ follows by comparing derivatives
+from zero. Since $g'(t)=\atanh t$, integration gives
+$g(t)\le1-\sqrt{1-t^2}$. Apply this with
+$t=2\sqrt{u(1-u)}$, for which
+$1-\sqrt{1-t^2}=2\min(u,1-u)$, and divide by $\ln2$.
+Continuity handles the endpoints. Multiplication by $m_S$ and
+summation yield \eqref{eq:mixingbound}.
+\end{proof}
+
+\begin{lemma}[Concavity of the scalar profile]\label{lem:kappaconcavity}
+The function $\kappa$ is continuous on $[0,1]$, symmetric about
+$1/2$, and strictly concave on $(0,1)$. It satisfies
+$\kappa(0)=\kappa(1)=0$ and $\kappa(1/2)=2$.
+Consequently,
+\begin{equation}\label{eq:kappabound}
+ 0\le\Delta_i\HH(f)\le\kappa(\I_i(f)).
+\end{equation}
+As $u\downarrow0$,
+\begin{equation}\label{eq:kappasmall}
+ \kappa(u)=u\log(1/u)+\frac{3u}{\ln2}+O(u^2).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Put $t=2\sqrt{u(1-u)}$ and
+$G(t)=1-h_2((1+t)/2)$. Away from the midpoint,
+\[
+ h_2''(u)=-\frac4{(\ln2)t^2},\qquad
+ G'(t)=\frac{\atanh t}{\ln2},\qquad
+ G''(t)=\frac1{(\ln2)(1-t^2)},
+\]
+\[
+ t'=\frac{2(1-2u)}t,\qquad t''=-\frac4{t^3}.
+\]
+The contributions $h_2''(u)$ and $G''(t)(t')^2$ cancel, leaving
+\begin{equation}\label{eq:kappasecond}
+ \kappa''(u)=-
+ \frac{4\atanh(2\sqrt{u(1-u)})}
+ {(\ln2)(2\sqrt{u(1-u)})^3}<0.
+\end{equation}
+At the midpoint, with $u=1/2+x$, the expansion is
+\[
+ \kappa(1/2+x)
+ =2-x^2\log(1/x^2)-\frac{3x^2}{\ln2}
+       +O\bigl(x^4\log(1/|x|)\bigr).
+\]
+Thus the first derivative tends to zero on both sides; the
+concavity on the two half-intervals joins across $1/2$.
+Continuity and the endpoint values follow from
+\eqref{eq:kappadef}. Jensen's inequality, together with
+$\sum_Sm_S=1$ and $\sum_Sm_Su_S=\I_i(f)$, proves
+\eqref{eq:kappabound}. Finally,
+$h_2(u)=u\log(1/u)+u/\ln2+O(u^2)$ and
+$G(2\sqrt{u(1-u)})=2u/\ln2+O(u^2)$ give
+\eqref{eq:kappasmall}.
+\end{proof}
+
+Since a concave function vanishing at zero has a nonincreasing
+ratio to its argument, any coordinate with $\I_i(f)\ge\tau>0$
+satisfies
+\begin{equation}\label{eq:kappacutoff}
+ \Delta_i\HH(f)\le\frac{\kappa(\tau)}{\tau}\I_i(f).
+\end{equation}
+For example, $\kappa(1/16)/(1/16)=8.21872678758653\ldots$.
+The logarithm in \eqref{eq:kappasmall} cannot be replaced by a
+uniform constant for every coordinate, as
+Proposition~\ref{prop:bentsplice} below shows.
+
+\subsection{Valid induction and block exposure}
+
+The exact influence identity is
+\begin{equation}\label{eq:restrictionI}
+ \I(f)=\I_i(f)+\frac{\I(f_i^+)+\I(f_i^-)}2.
+\end{equation}
+Indeed, restriction averages preserve the influence of every
+other coordinate, while coordinate $i$ disappears.
+
+\begin{proposition}[A suitable-coordinate induction]\label{prop:restrictioninduction}
+Suppose a class of Boolean functions is closed under restrictions
+and each nonconstant member has a relevant coordinate $i$ with
+$\Delta_i\HH(f)\le C\I_i(f)$. Then every member satisfies
+$\HH(f)\le C\I(f)$.
+
+Existence of a finite global FEI constant is also equivalent to
+existence of a finite $K$ such that every nonconstant Boolean
+function has a relevant coordinate satisfying $B_i(f)\le K\I_i(f)$.
+A global FEI constant $C$ permits $K=C$; the latter erasure
+inequality implies FEI with constant $K+2/\ln2$.
+\end{proposition}
+
+\begin{proof}
+The first assertion follows by induction on the number of
+coordinates, using \eqref{eq:restrictionI}.
+For the second, the entropy chain rule gives
+\begin{equation}\label{eq:hanerasure}
+ \sum_i B_i(f)\le\HH(f),
+\end{equation}
+because conditioning on all other coordinates can only decrease
+each summand of a fixed chain rule. Under $\HH(f)\le C\I(f)$,
+some positive-influence coordinate must have $B_i(f)\le C\I_i(f)$.
+Conversely, \eqref{eq:mixingbound} turns the proposed erasure
+charge into a suitable-coordinate entropy charge, to which the
+first assertion applies.
+\end{proof}
+
+The quantifier is existential at every restricted function.
+Neither an arbitrary coordinate nor a preferred coordinate rule
+is justified by Proposition~\ref{prop:restrictioninduction}.
+The implication is hereditary: it is not the pointwise
+inequality
+\[
+ \HH(f)\le\sum_iB_i(f)+\frac2{\ln2}\I(f),
+\]
+which is false for the coded examples in~\cite{BrainErasure}.
+Theorem~\ref{thm:simultaneous} and Lemma~\ref{lem:plateau}
+also show how finite depths of restrictions can preserve entropy
+while revealing no local entropy cost.
+
+More generally, consider a finite adaptive restriction tree, and
+choose its branches by the uniform input. If $f_v$ is the function
+at a visited internal node and $i(v)$ its split coordinate, then
+\begin{align}
+ \HH(f)&=\E\sum_{v\ {\rm internal\ on\ the\ path}}
+               \Delta_{i(v)}\HH(f_v)
+              +\E\HH(f_{\rm leaf}),\label{eq:treetelescopeH}\\
+ \I(f)&=\E\sum_{v\ {\rm internal\ on\ the\ path}}
+               \I_{i(v)}(f_v)
+              +\E\I(f_{\rm leaf}).\label{eq:treetelescopeI}
+\end{align}
+These identities permit amortized charges and stopping at classes
+with established FEI bounds, as in~\cite{GMP26}. They require the
+cost along the whole path to be controlled.
+
+\begin{proposition}[Exact block increment]\label{prop:blockincrement}
+Fix a block $W\subseteq[n]$. For $T\subseteq W^c$ put
+\[
+ q_T=\sum_{U\subseteq W}\wh f(T\cup U)^2,\qquad
+ \phi_T(y)=q_T^{-1/2}
+       \sum_{U\subseteq W}\wh f(T\cup U)\chi_U(y),
+\]
+omitting $q_T=0$. Then
+\begin{equation}\label{eq:blockincrement}
+ \HH(f)-\E_y\HH(f|_{W=y})
+ =H(\mathcal S\cap W\mid\mathcal S\cap W^c)
+   +\sum_Tq_T\operatorname{Ent}_2(\phi_T^2),
+\end{equation}
+where
+$\operatorname{Ent}_2 Z=\E[Z\log(Z/\E Z)]$. Moreover,
+\begin{equation}\label{eq:blockmixing}
+ 0\le\sum_Tq_T\operatorname{Ent}_2(\phi_T^2)
+ \le\frac2{\ln2}\sum_{i\in W}\I_i(f).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Let $p_T(U)=\wh f(T\cup U)^2/q_T$. Then
+$\E\phi_T^2=1$, and the original entropy is
+$H(q)+\sum_Tq_TH(p_T)$. The restricted coefficient indexed by
+$T$ is $\sqrt{q_T}\phi_T(y)$, so its entropy averaged over $y$
+is
+\[
+ H(q)-\sum_Tq_T\operatorname{Ent}_2(\phi_T^2).
+\]
+Subtracting proves \eqref{eq:blockincrement}. The uniform-cube
+logarithmic Sobolev inequality~\cite{OD14}, in the normalization
+$D_jg=(g|_{x_j=1}-g|_{x_j=-1})/2$, states
+\[
+ \operatorname{Ent}_2(g^2)
+ \le\frac2{\ln2}\sum_j\E(D_jg)^2.
+\]
+Applying it to each $\phi_T$ and using Parseval gives
+\[
+ \sum_Tq_T\sum_{i\in W}\E(D_i\phi_T)^2
+ =\sum_{T,U}|U|\wh f(T\cup U)^2
+ =\sum_{i\in W}\I_i(f),
+\]
+which proves \eqref{eq:blockmixing}.
+\end{proof}
+
+Block exposure therefore retains a conditional erasure charge.
+Taking $W=[n]$ makes that charge $\HH(f)$ itself. Small erasure
+for bounded blocks at the initial function does not replace the
+hereditary requirement, because the separated supports in
+Lemma~\ref{lem:plateau} have zero entropy increment under all
+sufficiently shallow restrictions.
+
+\subsection{Character-centered budgets}
+
+Define
+\[
+ \D(f)=\sum_j t(\I_j(f)),\qquad t(u)=\min(u,1-u).
+\]
+Character multiplication preserves entropy and complements the
+influences on its selected coordinates. Hence
+$\D(f)=\min_U\I(\chi_Uf)$ and $\D$ is character invariant.
+For a split define
+\[
+ d_i^{\D}(f)=\D(f)
+            -\frac{\D(f_i^+)+\D(f_i^-)}2.
+\]
+
+\begin{proposition}[Centered budget and its collapse]\label{prop:centerbudget}
+For every $f,i$,
+\begin{align}
+ d_i^{\D}(f)
+ ={}&t(\I_i(f))\notag\\
+ &+\sum_{j\ne i}
+ \left[t(\I_j(f))
+       -\frac{t(\I_j(f_i^+))+t(\I_j(f_i^-))}2\right]
+ \ge t(\I_i(f)).\label{eq:centerbudget}
+\end{align}
+Both $d_i^{\D}$ and $\Delta_i\HH$ are character invariant.
+If $\max_j\I_j(f)\le1/4$, then
+\begin{equation}\label{eq:centerbudgetcollapse}
+ d_i^{\D}(f)=\I_i(f)\qquad\text{for every }i.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For $j\ne i$, the two child influences average to $\I_j(f)$.
+Concavity of $t$ proves \eqref{eq:centerbudget}.
+Restriction commutes with character multiplication up to a
+character and an output sign, proving the invariances.
+Each child influence is at most twice its parent's influence.
+Under the stated upper bound, all parent and child influences
+are at most $1/2$, so $\D=\I$ at these three nodes.
+Equation~\eqref{eq:restrictionI} now gives
+\eqref{eq:centerbudgetcollapse}.
+\end{proof}
+
+A suitable-coordinate inequality
+$\Delta_i\HH\le C d_i^{\D}$ would telescope to
+$\HH\le C\D$, stopping at characters, whose entropy is zero.
+The centered budget is sometimes larger than the original
+budget: for a two-input conjunction it reduces the local ratio
+from four to two. It supplies no improvement in
+\eqref{eq:centerbudgetcollapse}. More generally, if
+$\max_j\I_j(f)\le2^{-(r+1)}$, every restriction fixing at most
+$r$ coordinates has influences at most $1/2$, so the first
+$r$ levels have no centering gain. This follows by iterating
+the factor-two bound. The low-influence reductions
+in~\cite{BrainCritical} and Theorem~\ref{thm:simultaneous}
+therefore remain applicable.
+
+\subsection{Bad coordinates with arbitrarily small influences}
+
+The following bent-splice mechanism also underlies the local
+allocation obstruction in~\cite{BrainAllocation}.
+
+\begin{proposition}[Bent splice]\label{prop:bentsplice}
+For each even $m\ge4$, there is a Boolean function $F$ on $m+1$
+coordinates, with distinguished coordinate $z$, such that
+\[
+ \I_z(F)=2^{-m},\qquad
+ \I_j(F)=\frac12+2^{-m}\quad(1\le j\le m),
+\]
+and
+\begin{equation}\label{eq:bentspliceratio}
+ \frac{\Delta_z\HH(F)}{\I_z(F)}
+ \ge\log\!\left(2^m-2\cdot2^{m/2}+2\right)\ge m-1.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Use binary coordinates for the $m$ base variables, with characters
+$(-1)^{S\cdot x}$, and put
+\[
+ g(x)=(-1)^{x_1x_2+x_3x_4+\cdots+x_{m-1}x_m},\qquad
+ h(x)=g(x)-2\mathbf1_{\{x=0\}}.
+\]
+Both are Boolean. Define $F(x,1)=g(x)$ and $F(x,-1)=h(x)$.
+Set $N=2^m$, $\alpha=N^{-1}$ and $R=\sqrt N$.
+The two-bit quadratic factor has four Fourier coefficients of
+magnitude $1/2$; tensorization gives
+$\wh g(S)\in\{-1/R,1/R\}$ for every $S$.
+Each base influence of $g$ is $1/2$.
+Since $g(0)=g(e_j)=1$, flipping the value at zero changes the
+edge $\{0,e_j\}$ from agreeing to disagreeing, increasing
+$\I_j(h)$ by $2/N$. Averaging the branches proves the displayed
+influence identities.
+
+For the $z$-split, the coefficient pairs are
+$c_S=\wh g(S)-\alpha$ and $d_S=\alpha$. Thus
+\[
+ \frac{m_S}{d_S^2}=(\pm R-1)^2+1
+                   \ge N-2\sqrt N+2.
+\]
+The $d_S^2\log(m_S/d_S^2)$ term alone gives
+\[
+ \Delta_z\HH(F)\ge B_z(F)
+ \ge N\alpha^2\log(N-2\sqrt N+2).
+\]
+Since $\I_z(F)=\alpha$, the first inequality in
+\eqref{eq:bentspliceratio} follows. The second follows from
+$N-2\sqrt N+2-N/2=(\sqrt N-2)^2/2\ge0$.
+\end{proof}
+
+\begin{corollary}[Failure of two maximum-budget rules]\label{cor:badmaximum}
+There are Boolean functions $\widetilde F_m$ with
+$\max_i\I_i(\widetilde F_m)\le2^{-m}$ for which the unique
+maximum-influence coordinate has local ratio at least $m-1$.
+It is also the unique coordinate maximizing $d_i^{\D}$, with
+the same ratio $\Delta_i\HH/d_i^{\D}$.
+\end{corollary}
+
+\begin{proof}
+In Proposition~\ref{prop:bentsplice}, replace each base coordinate
+by a majority on a disjoint block of
+$K=2N^2+1$ bits, keeping $z$ unchanged. Its leaf influence is
+\[
+ \beta_K=\binom{K-1}{(K-1)/2}2^{-(K-1)}
+ \le\frac1{\sqrt{(K+1)/2}}<\alpha.
+\]
+For completeness, the bound
+$\binom{2t}{t}/4^t\le1/\sqrt{t+1}$ follows by induction:
+the consecutive ratio is $(2t+1)/(2t+2)$, and the squared
+comparison reduces to $3t+2\ge0$.
+
+Lemma~\ref{lem:balanced} gives each new leaf influence
+$(1/2+\alpha)\beta_K<\alpha$ and preserves $\I_z=\alpha$.
+It also preserves $\Delta_z\HH$: the additional entropy
+in the parent is $\sum_j\I_j(F)\HH(\Maj_K)$, and the
+additional branch entropies average to the same quantity
+by \eqref{eq:restrictionI} applied to the other coordinates.
+Thus $z$ is the unique maximum-influence coordinate, and
+\eqref{eq:bentspliceratio} persists.
+All influences are at most $\alpha\le1/16$, so
+Proposition~\ref{prop:centerbudget} gives
+$d_i^{\D}=\I_i$ at every coordinate, proving the second assertion.
+\end{proof}
+
+These examples reject the two specified rules, not the
+existential hypothesis of Proposition~\ref{prop:restrictioninduction}.
+The cost may still be paid by choosing a different coordinate
+or by an amortized argument.
+
+\subsection{Separable influence potentials}
+
+\begin{proposition}[An obstruction to charging every split]\label{prop:separablepotential}
+Let $\phi:[0,1]\to\mathbb R$ satisfy $\phi(0)=0$,
+$\phi(t)=O(t)$ as $t\downarrow0$, and have a finite left derivative
+at $1/2$. Put $P_\phi(f)=\sum_j\phi(\I_j(f))$.
+There is no finite $C>0$ such that
+\begin{equation}\label{eq:falsepotentialcharge}
+ \Delta_i\HH(f)\le C\left[
+ P_\phi(f)-\frac{P_\phi(f_i^+)+P_\phi(f_i^-)}2\right]
+\end{equation}
+for every Boolean $f$ and every coordinate $i$.
+The assertion remains false after adding to $P_\phi(f)$ any
+real-valued function of $\E f$.
+\end{proposition}
+
+\begin{proof}
+Before flipping zero in Proposition~\ref{prop:bentsplice},
+multiply $g$ by the character on all its base coordinates.
+Its spectrum remains flat, and its base influences remain
+$1/2$. Now the edges from zero to $e_j$ disagree, so flipping
+zero makes the other branch's influences $1/2-2\alpha$ and
+the parent influences $1/2-\alpha$.
+The selector still has influence $\alpha$, and the lower bound
+$\Delta_z\HH\ge(m-1)\alpha$ is unchanged.
+The potential drop is exactly
+\[
+ \phi(\alpha)+m\left[
+ \phi(1/2-\alpha)
+ -\frac{\phi(1/2)+\phi(1/2-2\alpha)}2\right].
+\]
+The bracket is $o(\alpha)$ by the one-sided derivative
+assumption. Dividing the displayed expression by $m\alpha$
+therefore gives a quantity tending to zero, whereas
+$\Delta_z\HH/(m\alpha)\ge1-1/m$.
+This contradicts \eqref{eq:falsepotentialcharge}.
+
+Finally multiply the entire splice by a fresh independent sign.
+Parent and both selector branches then have mean zero, so any
+mean-only correction cancels. The new coordinate has influence
+one at all three nodes, and its contribution to the potential
+drop also cancels. Entropy and the selector increment are
+unchanged.
+\end{proof}
+
+The assumptions include $\phi(t)=t$ and
+$\phi(t)=\min(t,1-t)$. The proposition concerns a charge at
+every coordinate; it does not rule out a suitable-coordinate
+inequality, a nonseparable potential, or a global tree budget.
+
+\subsection{Finite checks and exact witnesses}\label{subsec:restrictionchecks}
+
+Enumeration of all $2^{16}=65,536$ Boolean truth tables on four
+labelled coordinates, including functions with unused inputs,
+gives the values in Table~\ref{tab:restrictionchecks}.
+Walsh numerators, influences and centered budgets are calculated
+with exact integer or dyadic arithmetic. The ordering of
+entropy ratios in the enumeration uses floating-point
+logarithms; the exact witness formulas below were also evaluated
+with 80-digit arithmetic. Thus the table reports numerical
+finite maxima, not interval-certified comparisons or
+dimension-independent bounds.
+
+\begin{table}[ht]
+\centering
+\caption{Observed maxima among four-variable Boolean functions.
+Ratios with zero denominator are omitted.}\label{tab:restrictionchecks}
+\begin{tabular}{lc}
+\toprule
+Quantity & Observed maximum\\
+\midrule
+$\HH(f)/\I(f)$ & $3.402475551198587$\\
+$\min_{i:\I_i>0}\Delta_i\HH(f)/\I_i(f)$ & $4.867668746754797$\\
+$\min_{i:d_i^{\D}>0}\Delta_i\HH(f)/d_i^{\D}(f)$
+ & $4.867668746754797$\\
+$\max_{i:\I_i>0}\Delta_i\HH(f)/\I_i(f)$
+ & $5.921783780331384$\\
+$\max_{i:d_i^{\D}>0}\Delta_i\HH(f)/d_i^{\D}(f)$
+ & $5.921783780331384$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The entropy-to-influence witness is a four-input conjunction,
+up to output sign, with exact ratio
+\[
+ 12-\frac{49}{16}\log 7.
+\]
+The suitable-coordinate witness is a three-input conjunction
+and one unused variable. Its squared coefficients are $9/16$
+at the empty set and $1/16$ at each of seven nonempty sets;
+each relevant influence and centered budget is $1/4$.
+Its local ratio is exactly
+\[
+ 12-\frac92\log 3
+ =4.86766874675479718345817475223482571058\ldots .
+\]
+For an arbitrary-coordinate witness, take the function on
+$\{0,1\}^4$ equal to $-1$ precisely at
+$0000,0001,0010$. Its squared coefficients are $25/64$ once,
+$9/64$ three times, and $1/64$ twelve times. At either of its
+coordinates of influence $1/8$, the local ratio is
+\[
+ 24-\frac{25}{4}\log 5-\frac94\log 3
+ =5.92178378033138391753959094180872425614\ldots .
+\]
+The exact formulas establish these witness values independently
+of the numerical ordering. Larger self-composition examples
+in~\cite{BrainCritical} require larger suitable-coordinate
+constants, so the finite table cannot be used as a uniform
+restriction bound.

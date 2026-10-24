@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261013T203102Z-account01-B05-positive-defect-retained-credit-a023",
+  "stream": "B05",
+  "packet_ids": ["A023"],
+  "packet_id": "A023",
+  "gap_id": "B05_RARE_REFUNDS",
+  "attempt_id": "B05-A023-POSITIVE-DEFECT-RETAINED-12",
+  "method": "Sharpen the exact positive half-activation scalar by locating the unique derivative minimum, then combine it with an improved point-defect block bound and a signed restriction-tree telescope.",
+  "mathematical_delta": "Improved the variable-rank positive point-defect endpoint from U<=5I to U<=8I/3 and proved the corresponding complete adaptive/pruned-tree retained-credit bound with common disjoint terminal cores.",
+  "deliverable_status": "COMPLETE_PENDING_DELIVERY",
+  "mathematical_status": "AUTHOR_PROVED_ALL_RANK_PROPER_CLASS_THEOREM_PENDING_INDEPENDENT_REVIEW",
+  "claim_versions_used": [
+    "B05_A023_BIASED_TOWER_RETAINED_CREDIT_v1",
+    "B01_A003_POINT_DEFECT_BALANCER_ENDPOINT_v1"
+  ],
+  "claims_created_or_changed": [
+    "B05_A023_POSITIVE_SCALAR_SLOPE_v1",
+    "B05_A023_POSITIVE_DEFECT_ENDPOINT_v1",
+    "B05_A023_POSITIVE_DEFECT_RETAINED_v1"
+  ],
+  "source_artifacts": [
+    "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "748f7eb102bb43b98f8b184729594601beb22c7c",
+    "aba1124116091e2ed86071528197a8bf5c3540c8",
+    "3da104b41a42deee0b62498ec811fba835bcb72a"
+  ],
+  "case_extension": {
+    "starting_class": "Fixed mean -1/2 balancer towers (retained credit) and variable-rank positive point-defect towers with endpoint constant 5.",
+    "new_class": "Arbitrary-depth fresh point-defect towers with independently varying ranks r_k>=2, vanishing activation probabilities, and complete finite adaptive/pruned restriction trees.",
+    "prior_constant": "5 for the positive point-defect endpoint; no retained-tree statement recorded for that family",
+    "new_constant": "8/3 for both endpoint and retained tree loss; H/I constant 22/3",
+    "uniform_parameters": [
+      "base dimension", "rank sequence", "positive bias", "activation probability", "tower depth", "tree policy", "reveal order", "pruning", "common terminal-core complexity"
+    ],
+    "nonuniform_or_uncovered": [
+      "biased outer selectors", "negative near-constant balancers", "variable reuse", "changing overlapping coherent cores"
+    ]
+  },
+  "acceptance_evidence": {
+    "analytic": "PROOF.md Sections 3-6",
+    "finite_reproduction": "CHECK.py and CHECK.out",
+    "independent_review": "PENDING"
+  },
+  "remaining_obstacle": "The positive restriction-mean floor and fresh-disjoint tensorization do not survive biased selectors, sign-flipped point defects, or changing overlapping cores.",
+  "next_action": "Test one biased-selector or sign-flipped point-defect recurrence and identify a replacement for the lost positive mean floor; do not optimize the present scalar constant again.",
+  "next_consumers": ["A024", "A027", "A028", "A064", "A087", "A094"],
+  "delivery": {
+    "canonical": "DELIVERED_AND_READ_BACK_AT_592935561210cef46460ceef3f518c5eaa157392",
+    "brain_handoff": "DELIVERED_AND_READ_BACK_AT_2d2e254e1e176b92c9990491b280f459e7dd4fd5",
+    "native_ingestion": "NOT_CLAIMED"
+  },
+  "packet_complete": false,
+  "full_fei_status": "OPEN"
+}

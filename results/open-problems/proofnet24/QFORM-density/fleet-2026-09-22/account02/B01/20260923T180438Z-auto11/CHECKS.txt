@@ -1,0 +1,39 @@
+account02/B01 deterministic algebra checks for QFORM-ONEHUB-Z1-NOMARGINAL-HALFRIESZ-v1
+run_id=20260923T180438Z-auto11
+
+FOURIER CONSTANTS
+For K>0:
+  int_R |t|^(-1/2) min(1,K/|t|) dt = 8 sqrt(K).
+With c_{1/2}=(2*pi)^(-1/2) and K1=2*pi*(||m||F)^(-1/2):
+  H_{1/2} <= 8 (||m||F)^(-1/4).
+Heavy-row exact-rank-two constant:
+  8/sqrt(2*pi) * sqrt(pi*sqrt(2)) = 2^(11/4) = 6.727171322029716.
+After ||c_i||>F/sqrt(2):
+  2^(23/8) = 7.33603234563737 < 8.
+
+STRICT-N3 FAMILY
+Active matrix in basis (x,y,u,e,q):
+  [epsilon] direct_sum [[epsilon*nu,epsilon^(-1)],[epsilon^(-1),0]] direct_sum [[0,epsilon^(-1)],[epsilon^(-1),0]].
+Spectrum:
+  epsilon,
+  (epsilon*nu +/- sqrt(epsilon^2*nu^2+4*epsilon^(-2)))/2,
+  +/-epsilon^(-1).
+For epsilon<=1/2 there are at least four eigenvalues of modulus >1.
+All physical diagonals have magnitude <=epsilon.
+Every nonzero physical 2x2 principal determinant has magnitude <=epsilon^(-2)/m.
+Thus epsilon<tau and m>1/(tau*epsilon^2) imply strict N3 at threshold tau.
+
+PROJECTED CURRENCIES
+m_J=epsilon^(-1)e, C=epsilon^(-1)q^T with e perpendicular q.
+||m_J||=epsilon^(-1), ||C||_F=epsilon^(-1).
+The sole Z1 row marginal is 1.
+Z2=e_2(CC^T)=0 because rank(C)=1.
+New theorem gives 8; heavy branch gives 2^(11/4)=6.727171322029716.
+Newest account03/B01 positive-Z2 theorem is therefore unavailable on this exact target family.
+
+SCALING
+Under A -> lambda A, a,m,C scale by lambda.
+|a|^(-1/2)(||m|| ||C||_F)^(-1/4) scales by |lambda|^(-1).
+
+STATUS=PASS
+These are deterministic consistency checks; the analytic proof is REPORT.md.

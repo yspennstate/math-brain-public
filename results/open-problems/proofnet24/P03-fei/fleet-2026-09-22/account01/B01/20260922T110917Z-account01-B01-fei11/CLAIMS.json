@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T110917Z-account01-B01-fei11",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "claim_id": "FEI-A-FIXED-CREDIT-RESERVE-NOGO-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For every symmetric finite-cap potential Gamma with C0=Gamma(1/2)<infinity and every fixed lambda>0, there exists a balanced uniform Boolean function f_n such that D_Gamma(f_n)-lambda K_occ(f_n)<0. Hence no universal Bellman supersolution can reserve one fixed positive fraction of total K_occ at every node.",
+      "scope": "Uniform-cube Boolean functions; obstruction to the stronger credit-reserve invariant only, not FEI.",
+      "construction": "Antipodal two-point flip of the dictator x_1 in dimension n.",
+      "dependencies": [
+        "account02/B15 I-projection formula for H_max and K_occ"
+      ],
+      "proof_location": "REPORT.md Sections 3-7",
+      "verification": "analytic proof; CHECK.py sanity-checks exact Fourier/influence identities and numerical I-projection values"
+    },
+    {
+      "claim_id": "FEI-A-LAMBDA1-ENTROPY-CANCELLATION-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For lambda=1, the signed credit transfer cancels the exact conditional spectral-entropy increment in the augmented local recursion; equivalently A_{Gamma,1}=v B_inf^Gamma.",
+      "scope": "Exact algebraic identity for every Boolean gate and physical restriction under the source definitions.",
+      "dependencies": [
+        "account01/B01 signed-transfer identity",
+        "account02/B15 definition C=v(H_max-H(P))"
+      ],
+      "proof_location": "REPORT.md Section 2"
+    },
+    {
+      "claim_id": "FEI-A-CURRENT-SHAPED-LAMBDA1-REFUTED-v1",
+      "status": "REFUTED",
+      "rejected_statement": "The current shaped finite-center candidate can satisfy the lambda=1 global dependence-credit reserve invariant.",
+      "counterexample_result": "Using the partner center C*=6.5584452830718243825...<7, the explicit n=15 antipodal two-flip dictator satisfies A_{Gamma*,1}<0 by the analytic K_occ lower bound.",
+      "dependencies": [
+        "FEI-A-FIXED-CREDIT-RESERVE-NOGO-v1",
+        "account02/B01 current shaped candidate center"
+      ],
+      "proof_location": "REPORT.md Section 8"
+    }
+  ]
+}

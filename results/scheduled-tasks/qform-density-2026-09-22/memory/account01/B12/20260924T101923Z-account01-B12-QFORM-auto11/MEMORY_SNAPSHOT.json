@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260924T101923Z-account01-B12-QFORM-auto11",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "mathematical_status": "PROVED_SUPPORTING_ORTHOGONAL_SPECTRAL_BAND_CERTIFICATE_ADDITION_FULL_TARGET_OPEN",
+  "new_claim": {
+    "id": "QFORM-ORTHOGONAL-SPECTRAL-BAND-CERTIFICATE-ADDITION-v1",
+    "statement": "For pairwise disjoint spectral bands A_j=A 1_{Omega_j}(A) of one symmetric matrix, A_i A_j=0 for i!=j and (sum A_j P)^T(sum A_j P)=sum P^T A_j^2 P for every deterministic/original-coordinate isometry P. Thus any PSD certificates 0<=G_j<=A_j^2 add, and restoring all omitted spectral bands cannot decrease the combined square certificate."
+  },
+  "new_correction": {
+    "id": "QFORM-A2-EQUALITY-NOT-DENSITY-MONOTONIC-v1",
+    "statement": "A^2 order is not density order. For iid cap-one uniforms on [-1/2,1/2], diag(1,1)^2=diag(1,-1)^2=I_2; X^2+Y^2 has bounded density <=pi, while X^2-Y^2 has p(t)>=log(1/(8t)) near zero and infinite essential supremum. This is an intermediate-claim correction only, not a three-large-eigenvalue counterexample."
+  },
+  "partner_dependencies": [
+    {
+      "claim": "QFORM-ORTHOGONAL-TWO-CHANNEL-MODE-STABILITY-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "4cc6fbf96ef099a1492e043882219496509e94ba",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260924T085711Z-account02-B12-r13/REPORT.md",
+      "actual_application": "For selected six-mode spectral band M and arbitrary spectator S on its spectral orthogonal complement, M^T(SP_H)=0 so K=0; partner inequality gives s6(AP_H)^2>=1/8+s6(Z)^2>=1/8."
+    },
+    {
+      "claim": "QFORM-SIX-MODE-SPECTRAL-SQUARE-CARRIER-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260923T145451Z-account02-B12-QFORM-r36/REPORT.md",
+      "actual_application": "m=6,s=1,g=1/(2sqrt2), b=99/(200sqrt2), a=11/(500sqrt2), kappa=11/(1000sqrt2) gives essential density bound <1368."
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b1051a92a94a7274647323ebdd7fbaad581dcf6a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260924T101923Z-account01-B12-QFORM-auto11/REPORT.md",
+    "read_back": true
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B12/20260924T101923Z-account01-B12-QFORM-auto11.md",
+    "commit": "0dd03de5ef88960be0ad1ddf9491c98c262003e0"
+  },
+  "remaining_gap": "Bare s3(A)>=1 may have exactly three nonzero modes; no sixth square-carrier mode follows. Need orientation-aware structural extraction routing the rank-three spectral subspace, with any usable subthreshold square mass, into a completed original-coordinate receiver. Additional spectral magnitude itself is no longer a destructive issue for A^2-monotone certificate receivers.",
+  "continuity": "NOT_PROVED_UNRESTRICTED; concrete six-mode application records essential boundedness only",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_requested": "maximum actually supported"
+}

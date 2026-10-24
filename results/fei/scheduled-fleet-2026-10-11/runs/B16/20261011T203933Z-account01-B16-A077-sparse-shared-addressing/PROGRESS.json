@@ -1,0 +1,40 @@
+{
+  "schema": "fei-run-progress/2",
+  "stream": "B16",
+  "primary_packet_id": "A077",
+  "packet_ids": ["A077"],
+  "attempt_id": "A077-ATTEMPT-01",
+  "design_target_id": "FEI-B16-A077-INITIAL",
+  "gap_id": "G-SPARSE-JOINT-CODING",
+  "prior_status": "UNPROVED_TARGET",
+  "new_mathematical_status": "RESTRICTED_COUNTERFAMILY_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "deliverable_status": "COMPLETE_AUTHOR_ARTIFACT_PENDING_REVIEW_AND_ADOPTION",
+  "claim_id": "B16-SPARSE-SHARED-ADDRESSING-MARGINAL-OVERCOUNT",
+  "claim_version": 1,
+  "mathematical_delta": "Sparse activation preserves the unbounded coordinatewise marginal-entropy overcount after all trigger influence and cross-scale interference are included, while the actual FEI ratio remains <=3 and tends to 12/5.",
+  "acceptance_items": {
+    "actual_boolean_circuit_with_physical_coordinates": "MET",
+    "cross_scale_interference_and_probability_weighted_cost": "MET",
+    "credit_reuse_and_local_vs_FEI_divergence": "MET",
+    "independent_review": "PENDING"
+  },
+  "verification": {
+    "command": "python3 verify_sparse_shared_addressing.py",
+    "randomness": "NONE",
+    "result": "PASS",
+    "finite_scope": "five full truth tables up to 13 variables; all-parameter result is analytic"
+  },
+  "next_consumers": ["A022", "A075", "A080"],
+  "review_requests": ["A092", "A088"],
+  "unchanged_obstruction_count": 0,
+  "next_action": "Analyze a two-level nested activation with distinct trigger blocks and determine whether a proposed joint packet credit is reused across levels.",
+  "full_FEI": "OPEN",
+  "delivery": {
+    "local_artifact": "SAVED",
+    "open_problems": "SAVED_AND_BYTE_VERIFIED_AT_4b9b57b59384006fe389f5d78b97e75e547fea73",
+    "brain_mirror": "SAVED_AND_BYTE_VERIFIED_AT_30b63a56d0991256b4b4b2a1a2a9de892d0456dd",
+    "independent_review": "NOT_OBSERVED",
+    "native_brain_ingestion": "NOT_RUN"
+  }
+}
+

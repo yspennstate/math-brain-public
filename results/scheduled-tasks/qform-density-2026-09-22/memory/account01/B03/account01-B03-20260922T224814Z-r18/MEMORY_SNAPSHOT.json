@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B03",
+  "run_id": "account01-B03-20260922T224814Z-r18",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuous_density_status": "NOT_PROVED_BY_THIS_BRANCH",
+  "brain_state": "WITHOUT_VERIFIED_BRAIN",
+  "control_start_commit": "1a8c2a1c4c817529b96723313bd235ae65beac4c",
+  "control_finish_commit": "a860c4f8144d07ccdea42c3bae1dace6c384987a",
+  "control_revision": "2026-09-22.15",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "report_creation_commit": "1bfde974ca926c89555f2aaf9b959930e400ca4f",
+    "bundle_tip_commit": "87760163d8de8d29f2736bd23fe880766cdcddba",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/account01-B03-20260922T224814Z-r18/REPORT.md"
+  },
+  "partner_dependency": {
+    "worker": "account02/B03",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c2bc78fc4f8e642f5d8c85fcc7d53956730b5cb1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260922T211507Z-account02-B03-QFORM-r12/REPORT.md",
+    "applied_result": "For the same physical pair R with dominant diagonal magnitude m, E|R-R'|^-1/2 <= (16sqrt(2)/3^(3/4))m^-1/2, hence the exact independent-copy weighted time integral is <24.882m^-1/2."
+  },
+  "mathematical_change": "Proved a sign-uniform logarithmic half-Riesz bridge for every invertible non-pure-saddle physical 2x2 pair: H_1/2(R)<=8m^-1/2[3+2log_+(2sqrt(2)m/sqrt(D))], D=|det P|, m=max diagonal magnitude. This closes the analytic indefinite near-square pair endpoint left by r17. After a genuine outer original-coordinate square d it yields a linear-small-ball density cap by multiplying by |d|^-1/2.",
+  "mechanism_refutation": "For iid uniform inputs R_eta^-=[(X+Y)^2-eta(X-Y)^2]/(2eta) has eigenvalues {1/eta,-1} and H_eta^-(0)sqrt(m)>=sqrt(1-eta)/8 log(1/(8sqrt(eta))) -> infinity; thus no universal H<=Cm^-1/2 even in the indefinite signature, while the partner collision scale remains O(m^-1/2).",
+  "corrections_consumed": [
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-ARBITRARY-SELF-CROSS-FROBENIUS-SCALE-FALSE-v1",
+    "fresh CORRECTION_INBOX at a860c4f8144d07ccdea42c3bae1dace6c384987a"
+  ],
+  "first_unpaid_implication": "Aggregate logarithmic-pair compiler: convert diffuse determinant/exterior pair mass into a target density bound before selecting one local pair or paying reciprocal determinant factors.",
+  "next_recipient": "QFORM synthesis / aggregate-structure workers",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {"reasoning_tokens": null, "provider_thinking_seconds": null, "source": "not_exposed"}
+}

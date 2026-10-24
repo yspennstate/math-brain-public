@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "helper_version": "A002-growing-block-compressed-v1",
+  "exact_assertions": 21,
+  "failures": 0,
+  "seconds": 0.0017462000000705302,
+  "arithmetic": "exact integer powers/binomials and Fraction bounds; no floating logarithm",
+  "A005_N200_review": {
+    "dimension": 200,
+    "data_dimension": 192,
+    "tag_dimension": 8,
+    "tensor_copies": 64,
+    "seed": "three-bit one-point defect",
+    "K": "8/3",
+    "tag_block_touches": [
+      64,
+      64,
+      50,
+      39,
+      36,
+      33,
+      24,
+      24
+    ],
+    "coded_influence": {
+      "numerator": "959230690732160311295",
+      "denominator": "18446744073709551616"
+    },
+    "seed_deficit_lower": "137/640",
+    "seed_log_certificate": {
+      "left": "3^80",
+      "right": "2^127",
+      "strict": true
+    },
+    "unedited_gap_lower": {
+      "numerator": "104915862422904938501",
+      "denominator": "34587645138205409280"
+    },
+    "uniform_parent_singleton_pair_edit_error_upper": {
+      "numerator": "8898313002383313415974904922137",
+      "denominator": "9415652603080021145753684134811499624153533166696051769344"
+    },
+    "all_individual_child_gap_lower": {
+      "numerator": "47601357323756850931852866635568734210643101762023750019713",
+      "denominator": "15692754338466701909589473558019166040255888611160086282240"
+    },
+    "gap_gt3": true,
+    "total_pair_collision_and_refund_upper": {
+      "numerator": 318400,
+      "power_of_two_denominator_exponent": 200
+    }
+  },
+  "new_N12470_actual_recipe": {
+    "dimension": 12470,
+    "physical_data_dimension": 12353,
+    "tag_dimension": 117,
+    "tensor_copies": 4096,
+    "controls": 64,
+    "maximum_block_size": 4,
+    "maximum_block_floor_exact_integer_test": true,
+    "greedy_code_verified_by_counting_bound_not_materialized": true,
+    "coded_root_gap_divided_by_activation_probability_lower": "328/15",
+    "uniform_exceptional_child_error_lt_half_activation_probability": true,
+    "all_individual_child_gap_gt_activation_probability_times": "641/30",
+    "all_blocks_count": 1007360559127020,
+    "all_blocks_total_collision_upper": {
+      "numerator": 64460732693067360,
+      "power_of_two_denominator_exponent": 12470
+    },
+    "total_collision_and_pair_refunds_lt": "2^-12000",
+    "total_influence_lt": "2^-52",
+    "max_influence_upper": "2*2^-64+2*2^-12470",
+    "mean_lower": "1-2^-64-2*2^-12470",
+    "full_support_and_physical_primitivity": "proved odd-negative-count parity; no huge spectrum enumerated"
+  }
+}

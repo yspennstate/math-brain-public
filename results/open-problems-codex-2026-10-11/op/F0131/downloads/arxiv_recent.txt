@@ -1,0 +1,1411 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/zKaMFqox6k7bQdIYja/KCD872MY</id>
+  <title>arXiv Query: search_query=all:sandpile AND (all:convergence OR all:holes OR all:polygon)&amp;id_list=&amp;start=0&amp;max_results=80</title>
+  <updated>2026-10-11T16:21:54Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:sandpile+AND+(all:convergence+OR+(all:holes+OR+all:polygon))&amp;start=0&amp;max_results=80&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>80</opensearch:itemsPerPage>
+  <opensearch:totalResults>65</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.10352v1</id>
+    <title>Universal correlations in the Abelian sandpile model</title>
+    <updated>2026-09-09T15:47:54Z</updated>
+    <link href="https://arxiv.org/abs/2609.10352v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.10352v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We numerically study the bulk correlation functions in the two-dimensional Abelian sandpile model, aiming both to compare with the predictions of logarithmic conformal field theory and to extend the analysis to lattices where analytical methods are difficult to apply. Wilson's algorithm efficiently generates large-scale uniform spanning trees in parallel, which can be mapped to independent recurrent configurations via the Majumdar--Dhar burning bijection, eliminating sample autocorrelations and yielding fast convergence. On the square (single-sublattice) and honeycomb (two-sublattice) lattices our results agree well with the analytical predictions. For the kagome lattice we provide the first systematic numerical study of the bulk correlation functions, and cross-check the bulk height-1 probability against a closed-form analytical expression that we also derive here via the lattice Green function.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-09T15:47:54Z</published>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Qiyu Liu</name>
+    </author>
+    <author>
+      <name>Jan-Niklas Herre</name>
+    </author>
+    <author>
+      <name>Prajit Baruah</name>
+    </author>
+    <author>
+      <name>Sebastian Dreizler</name>
+    </author>
+    <author>
+      <name>Christoph Karrasch</name>
+    </author>
+    <author>
+      <name>Wioletta Ruszel</name>
+    </author>
+    <author>
+      <name>Dirk Schuricht</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.02829v1</id>
+    <title>Quantitative explosion and percolation of the divisible sandpile</title>
+    <updated>2026-09-02T17:14:34Z</updated>
+    <link href="https://arxiv.org/abs/2609.02829v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.02829v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The divisible sandpile on $\mathbb{Z}^d$ starts from i.i.d. masses at each site, and, in each discrete time step, a site with mass above one keeps one unit and sends the excess equally to its neighbors. Levine, Murugan, Peres and Ugurcan (2016) showed that at mean one this process explodes, with every site emitting infinite mass. We show that the mass emitted from a site by time $t$ is of order $t^{(4-d)/4}$ for $d\leq3$, of order $\log t$ for $d=4$, and a tail-dependent, divergent rate for $d\geq5$. We further show that the mass emitted, after diffusive rescaling, converges to a Brownian optimal-stopping value for $d\leq3$ and to tail-dependent, weighted membrane fields for $d\geq5$, while at the critical dimension $d=4$, after superdiffusive rescaling, it converges to the membrane model.
+  Using these estimates, we prove that, for every $d\geq2$, the set of sites that topple contains an infinite component at some mean below one, hence it has a non-trivial percolation phase transition. This answers a variant of a question of Fey, Meester and Redig (2009). The proof adapts ideas from the theory of level-set percolation of strongly correlated Gaussian fields.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-02T17:14:34Z</published>
+    <arxiv:comment>82 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Ahmed Bou-Rabee</name>
+    </author>
+    <author>
+      <name>Christoforos Panagiotis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.14914v1</id>
+    <title>Random blob methods for diffusion</title>
+    <updated>2026-08-14T21:55:21Z</updated>
+    <link href="https://arxiv.org/abs/2608.14914v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.14914v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Linear and nonlinear diffusion equations arise in a range of phenomena of mathematical interest, including slow and fast diffusion, sandpile dynamics, height-constrained transport, the two-dimensional Navier-Stokes equation, and dynamics for sampling probability measures. In recent years, blob methods have attracted significant interest as an approach for numerically simulating these types of PDEs. To address the $O(N^2)$ computational bottleneck of blob methods, we consider stochastic discretizations of space and time. We compare the random batch method with a new approach, which we call the random multirate method. Both of these methods build on classical stochastic methods in the optimization literature, with many similarities to stochastic gradient descent and random coordinate descent. We find that, for linear and nonlinear diffusion equations, in the tradeoff between computational complexity and accuracy, the random multirate method has the best performance. On one hand, we prove that the random multirate method converges to the underlying ODE system at a rate of $O(k Δt)$, matching forward Euler, and show by example that this rate is theoretically sharp. On the other hand, we observe even better rates of convergence for the random multirate method when applied to ODEs arising from blob methods for diffusive PDEs. Finally, due to its ability to simulate a wide range of nonlinear diffusion equations, including height-constrained transport and sandpile dynamics, our method succeeds in capturing key features of PDEs for which few numerical approaches exist.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-14T21:55:21Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Katy Craig</name>
+    </author>
+    <author>
+      <name>Claire Murphy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.25878v3</id>
+    <title>Many-point tropical relaxation and the Monge--Ampère equation</title>
+    <updated>2026-10-05T20:11:13Z</updated>
+    <link href="https://arxiv.org/abs/2607.25878v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.25878v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we prove that a process we call tropical relaxation gives a convergent method for numerically approximating the Monge--Ampère Dirichlet problem on bounded convex planar domains. We approximate the prescribed probability measure by point clouds and construct the least concave tropical roof with zero boundary values and a corner at each point, using repeated updates of affine planes with integral gradients. For universally generic clouds of $N$ points in a fixed compact subset of the interior, convergence of the empirical measures implies uniform convergence of the roofs, divided by $\sqrt{N}$, to the Aleksandrov solution. The limiting measure may be singular. Euler's and Pick's formulas relate curvature to point counts, with an $O(N^{-1/2})$ discrepancy against compactly supported $C^1$ tests. A removal estimate gives almost-sure uniform convergence for independent samples from any absolutely continuous probability law on the whole domain. For generic clouds in a fixed interior compact set of a rational-slope polygon, suitably rescaled sandpile odometers converge to the same solution along meshes chosen sufficiently fine for each cloud. Their deficit measures converge to its negative Laplacian.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-28T15:40:19Z</published>
+    <arxiv:comment>81 pages, 9 figures. Expanded exposition and proofs; includes a removal estimate, sampling throughout the domain, and numerical examples</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Nikita Kalinin</name>
+    </author>
+    <author>
+      <name>Ernesto Lupercio</name>
+    </author>
+    <author>
+      <name>Higinio Serrano</name>
+    </author>
+    <author>
+      <name>Mikhail Shkolnikov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.10056v1</id>
+    <title>Distribution of Sandpile groups of random bipartite graphs</title>
+    <updated>2026-07-11T00:54:17Z</updated>
+    <link href="https://arxiv.org/abs/2607.10056v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.10056v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fix a prime $p$ and a constant $\frac{1}{p}&lt;α\leq 1$. Consider the random Erdős--Rényi bipartite graph $G_α(n,u)$ with bipartition $(V_1,V_2)$ of sizes $|V_1|=n$ and $|V_2|=\lceilαn\rceil$, and edge probability $0&lt;u&lt;1$. The authors of [1] and [8] conjectured a limiting distribution for the $p$-Sylow subgroup of the sandpile group of $G_α(n,u)$ as $n\to\infty$. We prove this conjecture for odd primes $p$.
+  Similar results have previously been proved by computing the expected number of surjections from the random abelian $p$-group to $H$, for each finite abelian $p$-group $H$. However, in our setting, these surjective moments often diverge to infinity, despite the conjectured limiting distribution having finite moments. We resolve this issue by discarding the graphs for which too many vertices have degrees divisible by $p$. Once we remove the contribution of this rare set of graphs, then the surjective moments converge to the expected values. When $p$ is odd, applying Wood's universality theorem yields the desired convergence in distribution.
+  For $p=2$, our computed moments (after excluding the rare set of graphs) match those of the conjectured distribution. However, these moments do not uniquely determine a distribution.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-11T00:54:17Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Deepesh Singhal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.10214v1</id>
+    <title>Distribution of Sandpile groups of random directed bipartite graphs</title>
+    <updated>2026-06-08T22:08:54Z</updated>
+    <link href="https://arxiv.org/abs/2606.10214v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.10214v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fix a prime $p$ and a constant $\frac{1}{p}&lt;α\leq 1$. Consider the random directed Erdős--Rényi bipartite graph $\vec G(n,\lceilαn\rceil ,v)$ with bipartition $(V_1,V_2)$ of sizes $|V_1|=n$ and $|V_2|=\lceilαn\rceil$, and edge probability $0&lt;v&lt;1$. Bhargava, DePascale and Koenig conjectured a limiting distribution for the $p$-Sylow subgroup of the sandpile group of $\vec G(n,\lceilαn\rceil,v)$ as $n\to\infty$. We prove this conjecture.
+  Similar results have previously been proved by computing the expected number of surjections from the random abelian $p$-group onto $H$, for each finite abelian $p$-group $H$. However, in the case of $p$-Sylow subgroups of sandpile groups of random directed bipartite graphs, these surjective moments often diverge to infinity, despite the conjectured limiting distribution having finite moments. We resolve this by restricting to a high-probability subset of graphs on which the surjective moments are well-behaved, and discarding a rare exceptional set of graphs whose contribution to the distribution vanishes but whose contribution to the surjective moments often diverges. Computing the conditional surjective moments on the good set and applying Wood's universality theorem yields the desired convergence in distribution.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-08T22:08:54Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Deepesh Singhal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.10361v1</id>
+    <title>Limit shape of single-source stochastic sandpiles with $p$-topplings on $\mathbb{Z}$</title>
+    <updated>2026-05-11T11:05:52Z</updated>
+    <link href="https://arxiv.org/abs/2605.10361v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.10361v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the limit shape of the single-source model for stochastic sandpiles on the integer line subject to $p$--topplings. In this model, an initial configuration of $n\in\mathbb{N}$ particles is placed at the origin and stabilized according to a random toppling rule depending on $p\in (0,1)$: an unstable vertex sends exactly one particle to its left neighbor with probability $p$, and independently sends exactly one particle to its right neighbor with probability $p$. We prove that as $n \to \infty$, the macroscopic limit shape of the final stable configuration is a symmetric interval around the origin. Furthermore, by analyzing the center of mass martingale, we establish a central limit theorem for the boundary fluctuations, showing that after proper rescaling, they converge to a Gaussian distribution.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-11T11:05:52Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>David Beck-Tiefenbach</name>
+    </author>
+    <author>
+      <name>Robin Kaiser</name>
+    </author>
+    <author>
+      <name>Julia Überbacher</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.12006v2</id>
+    <title>On the structure of the sandpile identity element on Sierpinski gasket graphs</title>
+    <updated>2026-06-10T12:34:50Z</updated>
+    <link href="https://arxiv.org/abs/2603.12006v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12006v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the identity of the abelian sandpile group of finite approximation graphs of the Sierpinski gasket, and we show that the second-order term in the scaling limit converges to the path distance to the nearest corner on the Sierpinski gasket. The proof relies on a decomposition of the identity of the sandpile group into the sum of a constant function and the Laplacian of the graph distance on the approximating graphs.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T14:50:17Z</published>
+    <arxiv:comment>14 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robin Kaiser</name>
+    </author>
+    <author>
+      <name>Ecaterina Sava-Huss</name>
+    </author>
+    <author>
+      <name>Julia Überbacher</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.24618v1</id>
+    <title>On a Differential Model for Sandpiles Growing in a Silo</title>
+    <updated>2025-09-29T11:23:45Z</updated>
+    <link href="https://arxiv.org/abs/2509.24618v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.24618v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We discuss some features of a boundary value problem for a system of PDEs that describes the growth of a sandpile in a container under the action of a vertical source. In particular, we characterize the long-term behavior of the profiles, and we provide a sufficient condition on the vertical source that guarantees the convergence to the equilibrium in a finite time. We show by counterexamples that a stable configuration may not be reached in a finite time, in general, even if the source is time-independent. Finally, we provide a complete characterization of the equilibrium profiles.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-29T11:23:45Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <arxiv:journal_ref>Contemporary Mathematics, Fundamental Directions,71 (2025), Pages 626-641</arxiv:journal_ref>
+    <author>
+      <name>Graziano Crasta</name>
+    </author>
+    <author>
+      <name>Annalisa Malusa</name>
+    </author>
+    <arxiv:doi>10.22363/2413-3639-2025-71-4-626-641</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.22363/2413-3639-2025-71-4-626-641" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.03972v2</id>
+    <title>The fermionic DGFF and its scaling limit logCFT</title>
+    <updated>2025-11-25T15:07:40Z</updated>
+    <link href="https://arxiv.org/abs/2508.03972v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.03972v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we identify the scaling limit of the fermionic discrete Gaussian free field (fDGFF) as a logarithmic conformal field theory (CFT) in two dimensions. We first establish a one-to-one correspondence between the space of local observables of the fDGFF and the space of local fields of the symplectic fermions CFT, a logarithmic CFT with central charge $c = - 2$. This correspondence is meaningful in the sense that, when appropriately renormalised, the fDGFF correlation functions converge to corresponding CFT correlation functions in the scaling limit. As an application to these results, we interpret (the scaling limit of) certain local observables in the uniform spanning tree and the Abelian sandpile model as local fields of the symplectic fermions.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-05T23:28:40Z</published>
+    <arxiv:comment>55 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>David Adame-Carrillo</name>
+    </author>
+    <author>
+      <name>Wioletta M. Ruszel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.12664v1</id>
+    <title>Limit shape of the leaky Abelian sandpile model with multiple layers</title>
+    <updated>2025-01-22T05:54:04Z</updated>
+    <link href="https://arxiv.org/abs/2501.12664v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.12664v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we study a triple generalization of the Leaky Abelian Sandpile Model (LASM) of Alevy and Mkrtchyan, originally analyzed in the case of the square lattice in dimension two. First, we work in any dimension. Second, each site can hold several different stacks of sand, one for each of a certain given number of different layers or colors. Third, when a stack of one color at a site topples, it can send sand not only to its nearest neighbors in equal amounts, but to all possible locations and colors, according to a fixed but arbitrary mass distribution. Stacks of different colors can topple according to different distributions and different leakiness parameters, however the toppling rule should be site-independent. We obtain three main results. First, in this generality, when the LASM is started with $N$ grains of sand in one color at the origin, the final stable configuration, after scaling down by $\log N$, converges to a limit shape as $N$ goes to infinity. Second, when the leakiness parameter converges to infinity and the toppling distribution has finite range, the limit shape converges to a polytope. Third, when the leakiness parameters converge to one, which means the leakiness disappears, the limit shape of the sandpile converges to an ellipsoid. From a technical point of view, we rely on a strong relation between the Green function for random walk and the shape of the sandpile. Finally, the limit shape exhibits interesting duality properties, which we also investigate.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-22T05:54:04Z</published>
+    <arxiv:comment>40 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Théo Ballu</name>
+    </author>
+    <author>
+      <name>Cédric Boutillier</name>
+    </author>
+    <author>
+      <name>Sevak Mkrtchyan</name>
+    </author>
+    <author>
+      <name>Kilian Raschel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.12290v1</id>
+    <title>Topology of the Visibility Graph of Sandpiles</title>
+    <updated>2024-12-16T19:03:01Z</updated>
+    <link href="https://arxiv.org/abs/2412.12290v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.12290v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we explore the higher- and lower-order connectivity aspects of the visibility graph representation of sandpile models, focusing on the Bak-Tang-Wiesenfeld (BTW) model. By converting the time series of avalanche events into visibility graphs, we investigate the structural properties that emerge at different scales of connectivity. Specifically, we utilize persistent homology and simplicial complex theory to identify higher-order topological features. Analyzing the statistics of degree and betweenness centralities reveal that the resulting graph is a scale-free network with the degree exponent of $γ_k=2.50\pm 0.02$ and betweenness exponent of $γ_b=1.585\pm 0.008$. The analysis of the simplexes show that the distribution function of one, two and three dimensional simplexes are power-law with the exponents of $γ_{σ_1}=0.795\pm 0.006$, $γ_{σ_2}=0.602\pm 0.009$ and $γ_{σ_3}=0.422\pm 0.008$ respectively. This power-law behavior is also seen in the homology group analysis, for the Betti numbers, the exponents of which are reported in the paper. The persistent entropy of life time of $d$ dimensional holes is analyzed indicating that it increases logarithmically in terms of the network size $N$ for $d=0,1$ and $2$.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-16T19:03:01Z</published>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Vadood Adami</name>
+    </author>
+    <author>
+      <name>Hosseing Masoomy</name>
+    </author>
+    <author>
+      <name>Morteza Nattagh-Najafi</name>
+    </author>
+    <arxiv:doi>10.1088/1751-8121/add4d4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1751-8121/add4d4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.05705v1</id>
+    <title>Scaling of Extreme Events in 2d BTW Sandpile</title>
+    <updated>2024-10-08T05:54:02Z</updated>
+    <link href="https://arxiv.org/abs/2410.05705v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.05705v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study extreme events in a finite-size 2D Abelian sandpile model, specifically focusing on avalanche area and size. Employing the approach of Block Maxima, the study numerically reveals that the rescaled distributions for the largest avalanche size and area converge into the Gumbel and Weibull family of Generalized Extreme Value (GEV) distributions respectively. Numerically, we propose scaling functions for extreme avalanche activities that connect the activities on different length scales. With the help of data collapse, we estimate the precise values of these scaling exponents. The scaling function provides an understanding of the intricate dynamics within the sandpile model, shedding light on the relationship between system size and extreme event characteristics. The findings presented in this paper give valuable insights into the extreme behaviour of the Abelian sandpile model and offer a framework to understand the statistical properties of extreme events in complex systems.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-08T05:54:02Z</published>
+    <arxiv:comment>7 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Abdul Quadir</name>
+    </author>
+    <author>
+      <name>Haider Hasan Jafri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.01731v2</id>
+    <title>The density conjecture for activated random walk</title>
+    <updated>2024-07-10T14:09:45Z</updated>
+    <link href="https://arxiv.org/abs/2406.01731v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.01731v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Bak, Tang, and Wiesenfeld developed their theory of self-organized criticality in the late 1980s to explain why many real-life processes exhibit signs of critical behavior despite the absence of a tuning parameter. A decade later, Dickman, Muñoz, Vespignani, and Zapperi explained self-organized criticality as an external force pushing a hidden parameter toward the critical value of a traditional absorbing-state phase transition. As evidence, they observed empirically that for various sandpile models, the particle density in a finite box under driven-dissipative dynamics converges to the critical density of an infinite-volume version of the model. We give the first proof of this well-known density conjecture in any setting by establishing it for activated random walk in one dimension. We prove that two other natural versions of the model have the same critical value, further establishing activated random walk as a universal model of self-organized criticality.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-03T18:45:34Z</published>
+    <arxiv:comment>77 pages; split Section 3 into two sections, improved the presentation in various ways, and added new expository figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Christopher Hoffman</name>
+    </author>
+    <author>
+      <name>Tobias Johnson</name>
+    </author>
+    <author>
+      <name>Matthew Junge</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.12183v2</id>
+    <title>Scaling limit of the sandpile identity element on the Sierpinski gasket</title>
+    <updated>2023-09-19T08:24:24Z</updated>
+    <link href="https://arxiv.org/abs/2308.12183v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.12183v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the identity element of the sandpile group on finite approximations of the Sierpinski gasket with normal boundary conditions and show that the sequence of piecewise constant continuations of the identity elements on SG_n converges in the weak* sense to the constant function with value 4 on the Sierpinski gasket SG. We then generalize the proof to a wider range of functions and obtain the scaling limit for the identity elements with different choices of sink vertices.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-23T15:14:31Z</published>
+    <arxiv:comment>13 pages, 10 figures; to appear in the proceedings Volume</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>From classical analysis to analysis on fractals: a tribute to Robert Strichartz, Volume 2, Applied and Numerical Harmonic Analysis, Birkhäuser. 2023</arxiv:journal_ref>
+    <author>
+      <name>Robin Kaiser</name>
+    </author>
+    <author>
+      <name>Ecaterina Sava-Huss</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.09125v3</id>
+    <title>The distribution of the cokernel of a polynomial evaluated at a random integral matrix</title>
+    <updated>2023-10-21T07:35:11Z</updated>
+    <link href="https://arxiv.org/abs/2303.09125v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.09125v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a prime $p$, let $P(t)$ be a non-constant monic polynomial in $t$ over the ring $\mathbb{Z}_{p}$ of $p$-adic integers. Let $X_{n}$ be an $n \times n$ random matrix over $\mathbb{Z}_{p}$ with independent entries that lie in any residue class modulo $p$ with probability at most $1 - ε$ for a fixed real number $0 &lt; ε&lt; 1$. We prove that as $n \rightarrow \infty$, the distribution of the cokernel $\mathrm{cok}(P(X_{n}))$ of $P(X_{n})$ converges to the distribution given by a finite product of some explicit measures that resemble Cohen--Lenstra measures. For example, the random matrix $X_{n}$ can be taken as a Haar-random matrix or a uniformly random $(0,1)$-matrix. We consider the distribution of $\mathrm{cok}(P(X_{n}))$ as a distribution of modules over $\mathbb{Z}_{p}[t]/(P(t))$, which gives us a clearer formulation in comparison to considering the distribution as that of abelian groups. For the proof, we first reduce our problem into a problem over $\mathbb{Z}/p^{k}\mathbb{Z}$, for large enough positive integer $k$, in place of $\mathbb{Z}_{p}$. Then we use a result of Sawin and Wood to reduce our problem into another problem of computing the limit of the expected number of surjective $(\mathbb{Z}/p^{k}\mathbb{Z})[t]/(P(t))$-linear maps from $\mathrm{cok}(P(X_{n}))$ modulo $p^{k}$ to a fixed finite size $(\mathbb{Z}/p^{k}\mathbb{Z})[t]/(P(t))$-module $G$. To estimate the expected number and compute the desired limit, we carefully adopt subtle techniques developed by Wood, which were originally used to compute the asymptotic distribution of the $p$-part of the sandpile group of a random graph.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-16T07:40:59Z</published>
+    <arxiv:comment>22 pages. Proof of Lemma 5.5 had a subtle error, so we had to make various changes to correct the proof. We made changes to Sections 3.2, 5.3, and 6.2 for definitions of codes and depth; 3.2 has new technique: it explains how to throw away F's that do not contribute to the moment computation. Proof of Lemmas 6.6 and 6.8 have been changed</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Gilyoung Cheong</name>
+    </author>
+    <author>
+      <name>Myungjun Yu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.03795v3</id>
+    <title>Sandpile Universality in Social Inequality: Gini and Kolkata Measures</title>
+    <updated>2023-05-02T10:37:41Z</updated>
+    <link href="https://arxiv.org/abs/2303.03795v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.03795v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Social inequalities are ubiquitous and evolve towards a universal limit. Herein, we extensively review the values of inequality measures, namely the Gini ($g$) index and the Kolkata ($k$) index, two standard measures of inequality used in the analysis of various social sectors through data analysis. The Kolkata index, denoted as $k$, indicates the proportion of the `wealth' owned by $(1-k)$ fraction of the `people'. Our findings suggest that both the Gini index and the Kolkata index tend to converge to similar values (around $g=k \approx 0.87$, starting from the point of perfect equality, where $g=0$ and $k=0.5$) as competition increases in different social institutions, such as markets, movies, elections, universities, prize winning, battle fields, sports (Olympics), etc., under conditions of unrestricted competition (no social welfare or support mechanism). In this review, we present the concept of a generalized form of Pareto's 80/20 law ($k=0.80$), where the coincidence of inequality indices is observed. The observation of this coincidence is consistent with the precursor values of the $g$ and $k$ indices for the self-organized critical (SOC) state in self-tuned physical systems such as sand piles. These results provide quantitative support for the view that interacting socioeconomic systems can be understood within the framework of SOC, which has been hypothesized for many years. These findings suggest that the SOC model can be extended to capture the dynamics of complex socioeconomic systems and help us better understand their behavior.</summary>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-07T11:01:38Z</published>
+    <arxiv:comment>30 pages, 15 figures and 13 tables, Invited Review</arxiv:comment>
+    <arxiv:primary_category term="physics.soc-ph"/>
+    <arxiv:journal_ref>Entropy 2023, 25(5), 735 (Special Issue-Entropy-Based Applications in Sociophysics)</arxiv:journal_ref>
+    <author>
+      <name>Suchismita Banerjee</name>
+    </author>
+    <author>
+      <name>Soumyajyoti Biswas</name>
+    </author>
+    <author>
+      <name>Bikas K. Chakrabarti</name>
+    </author>
+    <author>
+      <name>Asim Ghosh</name>
+    </author>
+    <author>
+      <name>Manipushpak Mitra</name>
+    </author>
+    <arxiv:doi>10.3390/e25050735</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3390/e25050735" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.13749v1</id>
+    <title>Anchored advected interfaces, Oslo model, and roughness at depinning</title>
+    <updated>2023-02-27T13:24:19Z</updated>
+    <link href="https://arxiv.org/abs/2302.13749v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.13749v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There is a plethora of 1-dimensional advected systems with an absorbing boundary: the Toom model of anchored interfaces, the directed exclusion process where in addition to diffusion particles and holes can jump over their right neighbor, simple diffusion with advection, and Oslo sandpiles. All these models share a roughness exponent of $ζ=1/4$, while the dynamic exponent $z$ varies, depending on the observable. We show that for the first three models $z=1$, $z=2$, and $z=1/2$ are realized, depending on the observable. The Oslo model is apart with a conjectured dynamic exponent of $z=10/7$. Since the height in the latter is the gradient of the position of a disordered elastic string, this shows that $ζ=5/4$ for a driven elastic string at depinning.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-27T13:24:19Z</published>
+    <arxiv:comment>20 pages, 17 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <arxiv:journal_ref>J. Stat. Mech. 2023 (2023) 063202</arxiv:journal_ref>
+    <author>
+      <name>Assaf Shapira</name>
+    </author>
+    <author>
+      <name>Kay Joerg Wiese</name>
+    </author>
+    <arxiv:doi>10.1088/1742-5468/acd2bb</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1742-5468/acd2bb" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.11647v2</id>
+    <title>Internal aggregation models with multiple sources and obstacle problems on Sierpinski gaskets</title>
+    <updated>2023-08-07T08:42:34Z</updated>
+    <link href="https://arxiv.org/abs/2212.11647v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.11647v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the doubly infinite Sierpinski gasket graph $SG_0$, rescale it by factor $2^{-n}$, and on the rescaled graphs $SG_n=2^{-n}SG_0$, for every $n\in \mathbb{N}$, we investigate the limit shape of three aggregation models with initial configuration $σ_n$ of particles supported on multiple vertices. The models under consideration are: divisible sandpile in which the excess mass is distributed among the vertices until each vertex is stable and has mass less or equal to one, internal DLA in which particles do random walks until finding an empty site, and rotor aggregation in which particles perform deterministic counterparts of random walks until finding an empty site. We denote by $SG=cl(\cup_{n=0}^{\infty} SG_n)$ the infinite Sierpinski gasket, which is a closed subset of $\mathbb{R}^2$, for which $SG_n$ represents the level-n approximating graph, and we consider a continuous function $σ:SG\to\mathbb{N}$. For $σ$ we solve the obstacle problem and we describe the noncoincidence set $D\subset SG$ as the solution of a free boundary problem on the fractal $SG$. If the discrete particle configurations $σ_n$ on the approximating graphs $SG_n$ converge pointwise to the continuous function $σ$ on the limit set $SG$, we prove that, as $n\to\infty$, the scaling limits of the three aforementioned models on $SG_n$ starting with initial particle configuration $σ_n$ converge to the deterministic solution $D$ of the free boundary problem on the limit set $SG\subset\mathbb{R}^2$. For $D$ we also investigate boundary regularity properties.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-22T12:31:56Z</published>
+    <arxiv:comment>to appear in Journal of Fractal Geometry (2023)</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Uta Freiberg</name>
+    </author>
+    <author>
+      <name>Nico Heizmann</name>
+    </author>
+    <author>
+      <name>Robin Kaiser</name>
+    </author>
+    <author>
+      <name>Ecaterina Sava-Huss</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.03169v1</id>
+    <title>Abelian sandpiles on Sierpinski gasket graphs</title>
+    <updated>2022-09-07T14:03:38Z</updated>
+    <link href="https://arxiv.org/abs/2209.03169v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.03169v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The aim of the current work is to investigate structural properties of the sandpile group of a special class of self-similar graphs. More precisely, we consider Abelian sandpiles on Sierpinski gasket graphs and for the choice of normal boundary conditions, we give a characterization of the identity element and a recursive description of the sandpile group. Finally, we consider Abelian sandpile Markov chains on the aforementioned graphs and we improve the existing bounds on the speed of convergence to stationarity.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-07T14:03:38Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robin Kaiser</name>
+    </author>
+    <author>
+      <name>Ecaterina Sava-Huss</name>
+    </author>
+    <author>
+      <name>Yuwen Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.09401v2</id>
+    <title>Properties of the gradient squared of the discrete Gaussian free field</title>
+    <updated>2023-11-07T12:36:45Z</updated>
+    <link href="https://arxiv.org/abs/2207.09401v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.09401v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we study the properties of the centered (norm of the) gradient squared of the discrete Gaussian free field in $U_ε=U/ε\cap \mathbb{Z}^d$, $U\subset \mathbb{R}^d$ and $d\geq 2$. The covariance structure of the field is a function of the transfer current matrix and this relates the model to a class of systems (e.g. height-one field of the Abelian sandpile model or pattern fields in dimer models) that have a Gaussian limit due to the rapid decay of the transfer current. Indeed, we prove that the properly rescaled field converges to white noise in an appropriate local Besov-Hölder space. Moreover, under a different rescaling, we determine the $k$-point correlation function and cumulants on $U_ε$ and in the continuum limit as $ε\to 0$. This result is related to the analogue limit for the height-one field of the Abelian sandpile (\citet{durre}), with the same conformally covariant property in $d=2$.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-19T16:51:31Z</published>
+    <arxiv:comment>32 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>J Stat Phys 190, 171 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Alessandra Cipriani</name>
+    </author>
+    <author>
+      <name>Rajat S. Hazra</name>
+    </author>
+    <author>
+      <name>Alan Rapoport</name>
+    </author>
+    <author>
+      <name>Wioletta M. Ruszel</name>
+    </author>
+    <arxiv:doi>10.1007/s10955-023-03187-3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10955-023-03187-3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.02158v4</id>
+    <title>A physical study of the LLL algorithm</title>
+    <updated>2022-10-12T19:15:52Z</updated>
+    <link href="https://arxiv.org/abs/2106.02158v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.02158v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents a study of the LLL algorithm from the perspective of statistical physics. Based on our experimental and theoretical results, we suggest that interpreting LLL as a sandpile model may help understand much of its mysterious behavior. In the language of physics, our work presents evidence that LLL and certain 1-d sandpile models with simpler toppling rules belong to the same universality class.
+  This paper consists of three parts. First, we introduce sandpile models whose statistics imitate those of LLL with compelling accuracy, which leads to the idea that there must exist a meaningful connection between the two. Indeed, on those sandpile models, we are able to prove the analogues of some of the most desired statements for LLL, such as the existence of the gap between the theoretical and the experimental RHF bounds. Furthermore, we test the formulas from the finite-size scaling theory (FSS) against the LLL algorithm itself, and find that they are in excellent agreement. This in particular explains and refines the geometric series assumption (GSA), and allows one to extrapolate various quantities of interest to the dimension limit. In particular, we predict the empirical average RHF converges to $\approx 1.02265$ as dimension goes to infinity.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-03T22:25:55Z</published>
+    <arxiv:comment>Augmented version of 1804.03285; expect some overlaps</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Jintai Ding</name>
+    </author>
+    <author>
+      <name>Seungki Kim</name>
+    </author>
+    <author>
+      <name>Tsuyoshi Takagi</name>
+    </author>
+    <author>
+      <name>Yuntao Wang</name>
+    </author>
+    <author>
+      <name>Bo-Yin Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.04312v2</id>
+    <title>On the Regularity of Optimal Transports between Degenerate Densities</title>
+    <updated>2022-07-11T13:44:59Z</updated>
+    <link href="https://arxiv.org/abs/2105.04312v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.04312v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the most common image and informal description of the optimal transport problem for quadratic cost, also known as the second boundary value problem for the Monge--Ampère equation -- What is the most efficient way to fill a hole with a given pile of sand? -- by proving regularity results for optimal transports between degenerate densities. In particular, our work contains an analysis of the setting in which holes and sandpiles are represented by absolutely continuous measures concentrated on bounded convex domains whose densities behave like nonnegative powers of the distance functions to the boundaries of these domains.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-10T12:46:58Z</published>
+    <arxiv:comment>Published version</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Yash Jhaveri</name>
+    </author>
+    <author>
+      <name>Ovidiu Savin</name>
+    </author>
+    <arxiv:doi>10.1007/s00205-022-01796-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00205-022-01796-y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2102.04422v2</id>
+    <title>A shape theorem for exploding sandpiles</title>
+    <updated>2023-05-02T01:51:40Z</updated>
+    <link href="https://arxiv.org/abs/2102.04422v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2102.04422v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study scaling limits of exploding Abelian sandpiles using ideas from percolation and front propagation in random media. We establish sufficient conditions under which a limit shape exists and show via a family of counterexamples that convergence may not occur in general. A corollary of our proof is a simple criteria for determining if a sandpile is explosive; this strengthens a result of Fey, Levine, and Peres (2010).</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-02-08T18:34:45Z</published>
+    <arxiv:comment>31 pages, 5 figures, 1 table; some minor revisions</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Annals of Applied Probability 34(1A): 714-742 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Ahmed Bou-Rabee</name>
+    </author>
+    <arxiv:doi>10.1214/23-AAP1976</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/23-AAP1976" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2011.08702v1</id>
+    <title>The sandpile group of polygon rings and twisted polygon rings</title>
+    <updated>2020-11-16T15:52:36Z</updated>
+    <link href="https://arxiv.org/abs/2011.08702v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2011.08702v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $C_{k_1}, \ldots, C_{k_n}$ be cycles with $k_i\geq 2$ vertices ($1\le i\le n$). By attaching these $n$ cycles together in a linear order, we obtain a graph called a polygon chain. By attaching these $n$ cycles together in a cyclic order, we obtain a graph, which is called a polygon ring if it can be embedded on the plane; and called a twisted polygon ring if it can be embedded on the Möbius band. It is known that the sandpile group of a polygon chain is always cyclic. Furthermore, there exist edge generators. In this paper, we not only show that the sandpile group of any (twisted) polygon ring can be generated by at most three edges, but also give an explicit relation matrix among these edges. So we obtain a uniform method to compute the sandpile group of arbitrary (twisted) polygon rings, as well as the number of spanning trees of (twisted) polygon rings. As an application, we compute the sandpile groups of several infinite families of polygon rings, including some that have been done before by ad hoc methods, such as, generalized wheel graphs, ladders and Möbius ladders.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-11-16T15:52:36Z</published>
+    <arxiv:comment>arXiv admin note: text overlap with arXiv:1907.08450</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Haiyan Chen</name>
+    </author>
+    <author>
+      <name>Bojan Mohar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2010.08166v2</id>
+    <title>Scaling Limits of Fluctuations of Extended-Source Internal DLA</title>
+    <updated>2022-01-20T22:13:19Z</updated>
+    <link href="https://arxiv.org/abs/2010.08166v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.08166v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a previous work, we showed that the 2D, extended-source internal DLA (IDLA) of Levine and Peres is $δ^{3/5}$-close to its scaling limit, if $δ$ is the lattice size. In this paper, we investigate the scaling limits of the fluctuations themselves. Namely, we show that two naturally defined error functions, which measure the "lateness" of lattice points at one time and at all times, respectively, converge to geometry-dependent Gaussian random fields. We use these results to calculate point-correlation functions associated with the fluctuations of the flow. Along the way, we demonstrate similar $δ^{3/5}$ bounds on the fluctuations of the related divisible sandpile model of Levine and Peres.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-16T04:48:52Z</published>
+    <arxiv:comment>21 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>David Darrow</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2010.01946v2</id>
+    <title>The Limit Shape of the Leaky Abelian Sandpile Model</title>
+    <updated>2021-04-17T10:39:27Z</updated>
+    <link href="https://arxiv.org/abs/2010.01946v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.01946v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The leaky abelian sandpile model (Leaky-ASM) is a growth model in which $n$ grains of sand start at the origin in $\mathbb{Z}^2$ and diffuse along the vertices according to a toppling rule. A site can topple if its amount of sand is above a threshold. In each topple a site sends some sand to each neighbor and leaks a portion $1-1/d$ of its sand. We compute the limit shape as a function of $d$ in the symmetric case where each topple sends an equal amount of sand to each neighbor. The limit shape converges to a circle as $d\to 1$ and a diamond as $d\to\infty$. We compute the limit shape by comparing the odometer function at a site to the probability that a killed random walk dies at that site. When $d\to 1$ the Leaky-ASM converges to the abelian sandpile model (ASM) with a modified initial configuration. We also prove the limit shape is a circle when simultaneously with $n\to\infty$ we have that $d=d_n$ converges to $1$ slower than any power of $n$. To gain information about the ASM faster convergence is necessary.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-05T12:18:55Z</published>
+    <arxiv:comment>30 pages, 10 figures. To be published in International Mathematics Research Notices. The proof of Lemma 3.3 has been simplified and we have corrected several typos</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Ian Alevy</name>
+    </author>
+    <author>
+      <name>Sevak Mkrtchyan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2001.09379v1</id>
+    <title>Sandpile modelling of dual location fuelling in fusion plasmas</title>
+    <updated>2020-01-26T00:48:06Z</updated>
+    <link href="https://arxiv.org/abs/2001.09379v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2001.09379v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We modify the Chapman sandpile model (Chapman \textit{et al} \textit{Physical Review Letters} 86, 2814 (2001)) to form comparisons with pellet pacing, which is used to reduce or eliminate ELMs in a fusion plasma. We employ a variation of that model in which a pedestal with feedback is introduced (Bowie and Hole \textit{Phys. Plasmas} 25, 012511 (2018)), which we further modify to provide for dual fuelling - sand is added both at the centre of the sandpile, and near the edge. We observe that when the additional sand is added at the top of the pedestal, MLEs are largely suppressed. While this suppression comes at a cost by way of reduction in total energy confinement, that reduction is lower than the reduction in MLE size. The trade-off between MLE suppression and reduction in energy confinement depends not only on the amount of extra sand, but also on its precise location relative to the top of the pedestal. We suggest that the approach of constant dual fuelling may be equally applicable to plasmas, and may suggest a strategy for ELM suppression in fusion plasmas. We observe that when the proposed amount of extra sand is added in 'pellets', using frequencies and amounts based on those proposed for ELM suppression for ITER, MLEs are similarly suppressed, although MLEs are not significantly suppressed when the pellet rate does not substantially exceed the MLE frequency. This suggests that pellet injection at the top of the pedestal at small pellet size and high frequency may represent a reasonable physical proxy for our proposed scheme. However, our results suggest that it is not the synchronisation of pellets to ELM frequencies which is the key factor for ELM suppression in this regime, but rather the introduction of additional fuelling at the top of the pedestal.</summary>
+    <category term="physics.plasm-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-01-26T00:48:06Z</published>
+    <arxiv:comment>Submitted to Plasma Physics and Controlled Fusion</arxiv:comment>
+    <arxiv:primary_category term="physics.plasm-ph"/>
+    <author>
+      <name>C. A. Bowie</name>
+    </author>
+    <author>
+      <name>M. J. Hole</name>
+    </author>
+    <arxiv:doi>10.1088/1361-6587/ab7c4e</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1361-6587/ab7c4e" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1909.07849v2</id>
+    <title>Convergence of the random Abelian sandpile</title>
+    <updated>2020-09-18T08:59:00Z</updated>
+    <link href="https://arxiv.org/abs/1909.07849v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1909.07849v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that Abelian sandpiles with random initial states converge almost surely to unique scaling limits. The proof follows the Armstrong-Smart program for stochastic homogenization of uniformly elliptic equations.
+  Using simple random walk estimates, we prove an analogous result for the divisible sandpile and identify its scaling limit as exactly that of the averaged divisible sandpile. As a corollary, this gives a new quantitative proof of known results on the stabilizability of Abelian sandpiles.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-09-17T14:39:01Z</published>
+    <arxiv:comment>31 pages, 5 figures; minor revisions addressing comments from anonymous referees</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Annals of Probability 2021, Vol. 49, No. 6, 3168-3196</arxiv:journal_ref>
+    <author>
+      <name>Ahmed Bou-Rabee</name>
+    </author>
+    <arxiv:doi>10.1214/21-AOP1528</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/21-AOP1528" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.08450v1</id>
+    <title>The sandpile group of a polygon flower</title>
+    <updated>2019-07-19T10:32:33Z</updated>
+    <link href="https://arxiv.org/abs/1907.08450v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.08450v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $C_t$ be a cycle of length $t$, and let $P_1,\ldots,P_t$ be $t$ polygon chains. A polygon flower $F=(C_t; P_1,\ldots,P_t)$ is a graph obtained by identifying the $i$th edge of $C_t$ with an edge $e_i$ that belongs to an end-polygon of $P_i$ for $i=1,\ldots,t$. In this paper, we first give an explicit formula for the sandpile group $S(F)$ of $F$, which shows that the structure of $S(F)$ only depends on the numbers of spanning trees of $P_i$ and $P_i/ e_i$, $i=1,\ldots,t$. By analyzing the arithmetic properties of those numbers, we give a simple formula for the minimum number of generators of $S(F)$, by which a sufficient and necessary condition for $S(F)$ being cyclic is obtained. Finally, we obtain a classification of edges that generate the sandpile group.
+  Although the main results concern only a class of outerplanar graphs, the proof methods used in the paper may be of much more general interest. We make use of the graph structure to find a set of generators and a relation matrix $R$, which has the same form for any $F$ and has much smaller size than that of the (reduced) Laplacian matrix, which is the most popular relation matrix used to study the sandpile group of a graph.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-19T10:32:33Z</published>
+    <arxiv:comment>to appear in Discrete Appl. Math</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Haiyan Chen</name>
+    </author>
+    <author>
+      <name>Bojan Mohar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1904.12209v2</id>
+    <title>Sandpile monomorphisms and limits</title>
+    <updated>2019-09-13T11:20:28Z</updated>
+    <link href="https://arxiv.org/abs/1904.12209v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.12209v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a tiling problem between bounded open convex polyforms $\hat{P}\subset\mathbb{R}^2$ with directed and uniquely colored edges. If there exists a tiling of the polyform $\hat{P}_2$ by $\hat{P}_1$, we show that one can construct a monomorphism from the sandpile group $G_{Γ_1}=\mathbb{Z}^{Γ_1}/Δ(\mathbb{Z}^{Γ_1})$ on the domain (graph) $Γ_1=\hat{P}_1\cap\mathbb{Z}^2$ to the respective group on $Γ_2=\hat{P}_2\cap\mathbb{Z}^2$. We provide several examples of infinite series of such tilings with polyforms converging to $\mathbb{R}^2$, and thus the first definition of scaling-limits for the sandpile group on the plane. Additional results include an exact sequence relating sandpile configurations to harmonic functions, an alternative formula for the order of the sandpile group based on a basis for the module of integer-valued harmonic functions, and three examples of how to prove the existence of (cyclic) subgroups for infinite families of sandpile groups by constructing appropriate integer-valued harmonic functions. The main open question concerns if the scaling-limits of the sandpile group for different sequences of polyforms converging to $\mathbb{R}^2$ are isomorphic.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-27T20:34:16Z</published>
+    <arxiv:comment>Significantly extended and generalized version, now considering monomorphisms induced by solutions to a tiling problem as well as limits of the sandpile group on the plane. Completely rewritten for a mathematical audience. 25 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Moritz Lang</name>
+    </author>
+    <author>
+      <name>Mikhail Shkolnikov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1901.08425v1</id>
+    <title>Abelian oil and water dynamics does not have an absorbing-state phase transition</title>
+    <updated>2019-01-24T14:21:23Z</updated>
+    <link href="https://arxiv.org/abs/1901.08425v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1901.08425v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The oil and water model is an interacting particle system with two types of particles and a dynamics that conserves the number of particles, which belongs to the so-called class of Abelian networks. Widely studied processes in this class are sandpiles models and activated random walks, which are known (at least for some choice of the underlying graph) to undergo an absorbing-state phase transition. This phase transition characterizes the existence of two regimes, depending on the particle density: a regime of fixation at low densities, where the dynamics converges towards an absorbing state and each particle jumps only finitely many times, and a regime of activity at large densities, where particles jump infinitely often and activity is sustained indefinitely. In this work we show that the oil and water model is substantially different than sandpiles models and activated random walks, in the sense that it does not undergo an absorbing-state phase transition and is in the regime of fixation at all densities. Our result works in great generality: for any graph that is vertex transitive and for a large class of initial configurations.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-01-24T14:21:23Z</published>
+    <arxiv:comment>21 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Elisabetta Candellero</name>
+    </author>
+    <author>
+      <name>Alexandre Stauffer</name>
+    </author>
+    <author>
+      <name>Lorenzo Taggi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1808.06078v3</id>
+    <title>Constructing fractional Gaussian fields from long-range divisible sandpiles on the torus</title>
+    <updated>2021-06-16T09:53:39Z</updated>
+    <link href="https://arxiv.org/abs/1808.06078v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1808.06078v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In \cite{Cipriani2016}, the authors proved that, with the appropriate rescaling, the odometer of the (nearest neighbours) divisible sandpile on the unit torus converges to a bi-Laplacian field. Here, we study $α$-long-range divisible sandpiles, similar to those introduced in \cite{Frometa2018}. We show that, for $α\in (0,2)$, the limiting field is a fractional Gaussian field on the torus with parameter $α/2$. However, for $α\in [2,\infty)$, we recover the bi-Laplacian field. This provides an alternative construction of fractional Gaussian fields such as the Gaussian Free Field or membrane model using a diffusion based on the generator of Lévy walks. The central tool for obtaining our results is a careful study of the spectrum of the fractional Laplacian on the discrete torus. More specifically, we need the rate of divergence of the eigenvalues as we let the side length of the discrete torus go to infinity. As a side result, we obtain precise asymptotics for the eigenvalues of discrete fractional Laplacians. Furthermore, we determine the order of the expected maximum of the discrete fractional Gaussian field with parameter $γ=\min \{α,2\}$ and $α\in \mathbb{R}_+\backslash\{2\}$ on a finite grid.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-08-18T12:13:38Z</published>
+    <arxiv:comment>34 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Leandro Chiarini</name>
+    </author>
+    <author>
+      <name>Milton Jara</name>
+    </author>
+    <author>
+      <name>Wioletta Ruszel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1708.09432v2</id>
+    <title>Stability of patterns in the Abelian sandpile</title>
+    <updated>2020-01-26T20:32:04Z</updated>
+    <link href="https://arxiv.org/abs/1708.09432v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1708.09432v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the patterns in the Abelian sandpile are stable. The proof combines the structure theory for the patterns with the regularity machinery for non-divergence form elliptic equations. The stability results allows one to improve weak-* convergence of the Abelian sandpile to pattern convergence for certain classes of solutions.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-08-30T19:10:27Z</published>
+    <arxiv:comment>16 pages, 4 figures Corrected rate of growth in Theorem 1 item (1); other minor corrections</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Wesley Pegden</name>
+    </author>
+    <author>
+      <name>Charles K Smart</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1703.07568v1</id>
+    <title>Perturbed divisible sandpiles and quadrature surfaces</title>
+    <updated>2017-03-22T08:50:30Z</updated>
+    <link href="https://arxiv.org/abs/1703.07568v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1703.07568v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The main purpose of the present paper is to establish a link between quadrature surfaces (potential theoretic concept) and sandpile dynamics (Laplacian growth models). For this aim, we introduce a new model of Laplacian growth on the lattice $\mathbb{Z}^d$ $(d\geq 2)$ which continuously deforms occupied regions of the \emph{divisible sandpile} model of Levine and Peres, by redistributing the total mass of the system onto $\frac 1m$-sub-level sets of the odometer which is a function counting total emissions of mass from lattice vertices. In free boundary terminology this goes in parallel with singular perturbation, which is known to converge to a Bernoulli type free boundary.
+  We prove that models, generated from a single source, have a scaling limit, if the threshold $m$ is fixed. Moreover, this limit is a ball, and the entire mass of the system is being redistributed onto an annular ring of thickness $\frac 1m$. By compactness argument we show that, when $m$ tends to infinity sufficiently slowly with respect to the scale of the model, then in this case also there is scaling limit which is a ball, with the mass of the system being uniformly distributed onto the boundary of that ball, and hence we recover a quadrature surface in this case.
+  Depending on the speed of decay of $m$, the visited set of the sandpile interpolates between spherical and polygonal shapes. Finding a precise characterisation of this shape-transition phenomenon seems to be a considerable challenge, which we cannot address at this moment.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-03-22T08:50:30Z</published>
+    <arxiv:comment>29 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Hayk Aleksanyan</name>
+    </author>
+    <author>
+      <name>Henrik Shahgholian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1607.01525v3</id>
+    <title>Discrete Balayage and Boundary Sandpile</title>
+    <updated>2017-07-25T06:58:29Z</updated>
+    <link href="https://arxiv.org/abs/1607.01525v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1607.01525v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a new lattice growth model, which we call boundary sandpile. The model amounts to potential-theoretic redistribution of a given initial mass on $\mathbb{Z}^d$ ($d\geq 2$) onto the boundary of an (a priori) unknown domain. The latter evolves through sandpile dynamics, and has the property that the mass on the boundary is forced to stay below a prescribed threshold. Since finding the domain is part of the problem, the redistribution process is a discrete model of a free boundary problem, whose continuum limit is yet to be understood.
+  We prove general results concerning our model. These include canonical representation of the model in terms of the smallest super-solution among a certain class of functions, uniform Lipschitz regularity of the scaled odometer function, and hence the convergence of a subsequence of the odometer and the visited sites, discrete symmetry properties, as well as directional monotonicity of the odometer function. The latter (in part) implies the Lipschitz regularity of the free boundary of the sandpile.
+  As a direct application of some of the methods developed in this paper, combined with earlier results on classical Abelian sandpile, we show that the boundary of the scaling limit of Abelian sandpile is locally a Lipschitz graph.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-07-06T09:03:14Z</published>
+    <arxiv:comment>34 pages, 3 figures. Version to appear in Journal d'Analyse Mathematique</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Hayk Aleksanyan</name>
+    </author>
+    <author>
+      <name>Henrik Shahgholian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1604.03754v4</id>
+    <title>Scaling limit of the odometer in divisible sandpiles</title>
+    <updated>2017-11-28T10:17:22Z</updated>
+    <link href="https://arxiv.org/abs/1604.03754v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1604.03754v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a recent work Levine et al. (2015) prove that the odometer function of a divisible sandpile model on a finite graph can be expressed as a shifted discrete bilaplacian Gaussian field. For the discrete torus, they suggest the possibility that the scaling limit of the odometer may be related to the continuum bilaplacian field. In this work we show that in any dimension the rescaled odometer converges to the continuum bilaplacian field on the unit torus.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-04-13T13:14:33Z</published>
+    <arxiv:comment>29 pages. Minor corrections in the proof of the scaling limit for general weights made</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alessandra Cipriani</name>
+    </author>
+    <author>
+      <name>Rajat Subhra Hazra</name>
+    </author>
+    <author>
+      <name>Wioletta M. Ruszel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1511.06088v2</id>
+    <title>Directed Abelian sandpile with multiple downward neighbors</title>
+    <updated>2016-02-11T09:58:48Z</updated>
+    <link href="https://arxiv.org/abs/1511.06088v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1511.06088v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the directed Abelian sandpile model on a square lattice, with $K$ downward neighbors per site, $K &gt; 2$. The $K=3$ case is solved exactly, which extends the earlier known solution for the $K=2$ case. For $K&gt;2$, the avalanche clusters can have holes and side-branches and are thus qualitatively different from the $K=2$ case where avalance clusters are compact. However, we find that the critical exponents for $K&gt;2$ are identical with those for the $K=2$ case, and the large scale structure of the avalanches for $K&gt;2$ tends to the $K=2$ case.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-11-19T08:28:29Z</published>
+    <arxiv:comment>Accepted for publication in PRE</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Phys. Rev. E 93, 042107 (2016)</arxiv:journal_ref>
+    <author>
+      <name>Deepak Dhar</name>
+    </author>
+    <author>
+      <name>Gunnar Pruessner</name>
+    </author>
+    <author>
+      <name>Paul Expert</name>
+    </author>
+    <author>
+      <name>Kim Christensen</name>
+    </author>
+    <author>
+      <name>Nicky Zachariou</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.93.042107</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.93.042107" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.02303v2</id>
+    <title>Tropical curves in sandpiles</title>
+    <updated>2015-10-26T14:35:42Z</updated>
+    <link href="https://arxiv.org/abs/1509.02303v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.02303v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study a sandpile model on the set of the lattice points in a large lattice polygon. A small perturbation $ψ$ of the maximal stable state $μ\equiv 3$ is obtained by adding extra grains at several points. It appears, that the result $ψ^\circ$ of the relaxation of $ψ$ coincides with $μ$ almost everywhere; the set where $ψ^\circ\ne μ$ is called the deviation locus. The scaling limit of the deviation locus turns out to be a distinguished tropical curve passing through the perturbation points.
+  Nous considérons le modèle du tas de sable sur l'ensemble des points entiers d'un polygone entier. En ajoutant des grains de sable en certains points, on obtient une perturbation mineure de la configuration stable maximale $μ\equiv 3$. Le résultat $ψ^\circ$ de la relaxation est presque partout égal à $μ$. On appelle lieu de déviation l'ensemble des points où $ψ^\circ\ne μ$. La limite au sens de la distance de Hausdorff du lieu de déviation est une courbe tropicale spéciale, qui passe par les points de perturbation.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-08T09:49:29Z</published>
+    <arxiv:comment>small corrections</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Comptes Rendus Mathematique, Volume 354, Issue 2, 1 February 2016, Pages 125-130</arxiv:journal_ref>
+    <author>
+      <name>Nikita Kalinin</name>
+    </author>
+    <author>
+      <name>Mikhail Shkolnikov</name>
+    </author>
+    <arxiv:doi>10.1016/j.crma.2015.11.003</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.crma.2015.11.003" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.03624v2</id>
+    <title>Scaling limit for a long-range divisible sandpile</title>
+    <updated>2018-06-08T13:57:12Z</updated>
+    <link href="https://arxiv.org/abs/1507.03624v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.03624v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the scaling limit of a divisible sandpile model associated to a truncated $α$-stable random walk. We prove that the limiting distribution is related to an obstacle problem for a truncated fractional Laplacian. We also provide, as a fundamental tool, precise asymptotic expansions for the corresponding rescaled discrete Green's functions. In particular, the convergence rate of these Green's functions to its continuous counterpart is derived.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-13T21:32:56Z</published>
+    <arxiv:comment>45 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <arxiv:journal_ref>SIAM Journal on Mathematical Analysis. Vol. 50, Issue 3 (2018)</arxiv:journal_ref>
+    <author>
+      <name>Susana Frómeta</name>
+    </author>
+    <author>
+      <name>Milton Jara</name>
+    </author>
+    <arxiv:doi>10.1137/16M1068062</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1137/16M1068062" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1506.08881v2</id>
+    <title>Sandpiles and unicycles on random planar maps</title>
+    <updated>2015-08-13T01:40:52Z</updated>
+    <link href="https://arxiv.org/abs/1506.08881v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1506.08881v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the abelian sandpile model and the uniform spanning unicycle on random planar maps. We show that the sandpile density converges to 5/2 as the maps get large. For the spanning unicycle, we show that the length and area of the cycle converges to the hitting time and location of a simple random walk in the first quadrant. The calculations use the "hamburger-cheeseburger" construction of Fortuin--Kasteleyn random cluster configurations on random planar maps.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-06-29T22:12:33Z</published>
+    <arxiv:comment>12 pages. Section 3 is shorten</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Xin Sun</name>
+    </author>
+    <author>
+      <name>David B. Wilson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1501.06514v2</id>
+    <title>Coherent-state path integral versus coarse-grained effective stochastic equation of motion: From reaction diffusion to stochastic sandpiles</title>
+    <updated>2016-03-25T16:13:12Z</updated>
+    <link href="https://arxiv.org/abs/1501.06514v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1501.06514v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We derive and study two different formalisms used for non-equilibrium processes: The coherent-state path integral, and an effective, coarse-grained stochastic equation of motion. We first study the coherent-state path integral and the corresponding field theory, using the annihilation process $A+A\to A$ as an example. The field theory contains counter-intuitive quartic vertices. We show how they can be interpreted in terms of a first-passage problem. Reformulating the coherent-state path integral as a stochastic equation of motion, the noise generically becomes imaginary. This renders it not only difficult to interpret, but leads to convergence problems at finite times. We then show how alternatively an effective coarse-grained stochastic equation of motion with real noise can be constructed. The procedure is similar in spirit to the derivation of the mean-field approximation for the Ising model, and the ensuing construction of its effective field theory. We finally apply our findings to stochastic Manna sandpiles. We show that the coherent-state path integral is inappropriate, or at least inconvenient. As an alternative, we derive and solve its mean-field approximation, which we then use to construct a coarse-grained stochastic equation of motion with real noise.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-01-26T18:37:15Z</published>
+    <arxiv:comment>29 pages, 33 figures. This is a pedagogic introduction to stochastic processes, their modeling, and effective field theory. Version 2: writing improved + a new appendix</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Phys. Rev. E 93, 042117 (2016)</arxiv:journal_ref>
+    <author>
+      <name>Kay Jörg Wiese</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.93.042117</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.93.042117" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1405.5397v2</id>
+    <title>Anchored burning bijections on finite and infinite graphs</title>
+    <updated>2014-08-07T14:38:57Z</updated>
+    <link href="https://arxiv.org/abs/1405.5397v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1405.5397v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $G$ be an infinite graph such that each tree in the wired uniform spanning forest on $G$ has one end almost surely. On such graphs $G$, we give a family of continuous, measure preserving, almost one-to-one mappings from the wired spanning forest on $G$ to recurrent sandpiles on $G$, that we call anchored burning bijections. In the special case of $\mathbb{Z}^d$, $d \ge 2$, we show how the anchored bijection, combined with Wilson's stacks of arrows construction, as well as other known results on spanning trees, yields a power law upper bound on the rate of convergence to the sandpile measure along any exhaustion of $\mathbb{Z}^d$. We discuss some open problems related to these findings.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-05-21T12:42:11Z</published>
+    <arxiv:comment>26 pages; 1 EPS figure. Minor alterations made after comments from referee</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Electron. J. Probab. vol.19, no. 117 (2014)</arxiv:journal_ref>
+    <author>
+      <name>Samuel L. Gamlin</name>
+    </author>
+    <author>
+      <name>Antal A. Járai</name>
+    </author>
+    <arxiv:doi>10.1214/EJP.v19-3542</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/EJP.v19-3542" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.5149v2</id>
+    <title>The distribution of sandpile groups of random graphs</title>
+    <updated>2014-06-02T15:09:01Z</updated>
+    <link href="https://arxiv.org/abs/1402.5149v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1402.5149v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We determine the distribution of the sandpile group (a.k.a. Jacobian) of the Erdős-Rényi random graph G(n,q) as n goes to infinity. Since any particular group appears with asymptotic probability 0 (as we show), it is natural ask for the asymptotic distribution of Sylow p-subgroups of sandpile groups. We prove the distributions of Sylow p-subgroups converge to specific distributions conjectured by Clancy, Leake, and Payne. These distributions are related to, but different from, the Cohen-Lenstra distribution. Our proof involves first finding the expected number of surjections from the sandpile group to any finite abelian group (the "moments" of a random variable valued in finite abelian groups). To achieve this, we show a universality result for the moments of cokernels of random symmetric integral matrices that is strong enough to handle dependence in the diagonal entries. We then show these moments determine a unique distribution despite their p^{k^2}-size growth.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-02-20T21:21:11Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Melanie Matchett Wood</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.3283v2</id>
+    <title>Threshold state and a conjecture of Poghosyan, Poghosyan, Priezzhev and Ruelle</title>
+    <updated>2014-05-29T19:37:03Z</updated>
+    <link href="https://arxiv.org/abs/1402.3283v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1402.3283v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove a precise relationship between the threshold state of the fixed-energy sandpile and the stationary state of Dhar's abelian sandpile: In the limit as the initial condition tends to negative infinity, the former is obtained by size-biasing the latter according to burst size, an avalanche statistic. The question of whether and how these two states are related has been a subject of some controversy since 2000.
+  The size-biasing in our result arises as an instance of a Markov renewal theorem, and implies that the threshold and stationary distributions are not equal even in the negative infinity limit. We prove that nevertheless in this limit the total amount of sand in the threshold state converges in distribution to the total amount of sand in the stationary state, confirming a conjecture of Poghosyan, Poghosyan, Priezzhev and Ruelle.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-02-13T20:52:45Z</published>
+    <arxiv:comment>17 pages, to appear in Comm. Math. Phys</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Lionel Levine</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-014-2216-5</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-014-2216-5" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1401.0354v3</id>
+    <title>Sandpile models</title>
+    <updated>2018-09-12T07:44:05Z</updated>
+    <link href="https://arxiv.org/abs/1401.0354v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1401.0354v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This survey is an extended version of lectures given at the Cornell Probability Summer School 2013. The fundamental facts about the Abelian sandpile model on a finite graph and its connections to related models are presented. We discuss exactly computable results via Majumdar and Dhar's method. The main ideas of Priezzhev's computation of the height probabilities in 2D are also presented, including explicit error estimates involved in passing to the limit of the infinite lattice. We also discuss various questions arising on infinite graphs, such as convergence to a sandpile measure, and stabilizability of infinite configurations.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-01-02T01:35:18Z</published>
+    <arxiv:comment>72 pages - v3 incorporates referee's comments. References closely related to the lectures were added/updated</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Antal A. Járai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1312.2946v2</id>
+    <title>Transfer current and pattern fields in spanning trees</title>
+    <updated>2015-06-03T19:49:55Z</updated>
+    <link href="https://arxiv.org/abs/1312.2946v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1312.2946v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>When a simply connected domain $D\subset{\mathbb{R}}^d$ ($d\ge 2$) is approximated in a "good" way by embedded connected weighted graphs, we prove that the transfer current matrix (defined on the edges of the graph viewed as an electrical network) converges, up to a local weight factor, to the differential of Green's function on $D$.
+  This observation implies that properly rescaled correlations of the spanning tree model and correlations of minimal subconfigurations in the abelian sandpile model have a universal and conformally covariant limit.
+  We further show that, on a periodic approximation of the domain, all pattern fields of the spanning tree model, as well as the minimal-pattern (e.g. zero-height) fields of the sandpile, converge weakly in distribution to Gaussian white noise.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-12-10T20:54:44Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Probab. Theory Relat. Fields (2015) 163: 89-121</arxiv:journal_ref>
+    <author>
+      <name>Adrien Kassel</name>
+    </author>
+    <author>
+      <name>Wei Wu</name>
+    </author>
+    <arxiv:doi>10.1007/s00440-014-0588-2</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00440-014-0588-2" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1306.4455v1</id>
+    <title>Sandpiles and Superconductors: Nonconforming Linear Finite Element Approximations for Mixed Formulations of Quasi-Variational Inequalities</title>
+    <updated>2013-06-19T08:44:12Z</updated>
+    <link href="https://arxiv.org/abs/1306.4455v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1306.4455v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Similar evolutionary variational and quasi-variational inequalities with gradient constraints arise in the modeling of growing sandpiles and type-II superconductors. Recently, mixed formulations of these inequalities were used for establishing existence results in the quasi-variational inequality case. Such formulations, and this is an additional advantage, made it possible to determine numerically not only the primal variables, e.g. the evolving sand surface and the magnetic field for sandpiles and superconductors, respectively, but also the dual variables, the sand flux and the electric field.
+  Numerical approximations of these mixed formulations in previous works employed the Raviart--Thomas element of the lowest order. Here we introduce simpler numerical approximations of these mixed formulations based on the nonconforming linear finite element. We prove (subsequence) convergence of these approximations, and illustrate their effectiveness by numerical experiments.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-06-19T08:44:12Z</published>
+    <arxiv:comment>32 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>John W. Barrett</name>
+    </author>
+    <author>
+      <name>Leonid Prigozhin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1305.1697v3</id>
+    <title>Directed nonabelian sandpile models on trees</title>
+    <updated>2015-02-28T05:52:38Z</updated>
+    <link href="https://arxiv.org/abs/1305.1697v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1305.1697v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define two general classes of nonabelian sandpile models on directed trees (or arborescences) as models of nonequilibrium statistical phenomena. These models have the property that sand grains can enter only through specified reservoirs, unlike the well-known abelian sandpile model.
+  In the Trickle-down sandpile model, sand grains are allowed to move one at a time. For this model, we show that the stationary distribution is of product form. In the Landslide sandpile model, all the grains at a vertex topple at once, and here we prove formulas for all eigenvalues, their multiplicities, and the rate of convergence to stationarity. The proofs use wreath products and the representation theory of monoids.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-05-08T02:42:45Z</published>
+    <arxiv:comment>43 pages, 5 figures; introduction improved</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Communications in Mathematical Physics, 2015, Volume 335, Issue 3, pp 1065-1098</arxiv:journal_ref>
+    <author>
+      <name>Arvind Ayyer</name>
+    </author>
+    <author>
+      <name>Anne Schilling</name>
+    </author>
+    <author>
+      <name>Benjamin Steinberg</name>
+    </author>
+    <author>
+      <name>Nicolas M. Thiery</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-015-2343-7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-015-2343-7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1206.3121v1</id>
+    <title>Fixed-Energy Sandpiles Belong Generically to Directed Percolation</title>
+    <updated>2012-06-14T14:30:35Z</updated>
+    <link href="https://arxiv.org/abs/1206.3121v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1206.3121v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fixed-energy sandpiles with stochastic update rules are known to exhibit a nonequilibrium phase transition from an active phase into infinitely many absorbing states. Examples include the conserved Manna model, the conserved lattice gas, and the conserved threshold transfer process. It is believed that the transitions in these models belong to an autonomous universality class of nonequilibrium phase transitions, the so-called Manna class. Contrarily, the present numerical study of selected (1+1)-dimensional models in this class suggests that their critical behavior converges to directed percolation after very long time, questioning the existence of an independent Manna class.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-06-14T14:30:35Z</published>
+    <arxiv:comment>article (4 pages, 9 eps figures) + Supplement (8 pages, 9 eps figures); Phys. Rev. Lett. 2012</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 109, 015702 (2012)</arxiv:journal_ref>
+    <author>
+      <name>Mahashweta Basu</name>
+    </author>
+    <author>
+      <name>Urna Basu</name>
+    </author>
+    <author>
+      <name>Sourish Bondyopadhyay</name>
+    </author>
+    <author>
+      <name>P. K. Mohanty</name>
+    </author>
+    <author>
+      <name>Haye Hinrichsen</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.109.015702</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.109.015702" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1203.1611v1</id>
+    <title>A Quasi-Variational Inequality Problem Arising in the Modeling of Growing Sandpiles</title>
+    <updated>2012-03-07T09:20:03Z</updated>
+    <link href="https://arxiv.org/abs/1203.1611v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1203.1611v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Existence of a solution to the quasi-variational inequality problem arising in a model for sand surface evolution has been an open problem for a long time. Another long-standing open problem concerns determining the dual variable, the flux of sand pouring down the evolving sand surface, which is also of practical interest in a variety of applications of this model. Previously, these problems were solved for the special case in which the inequality is simply variational. Here, we introduce a regularized mixed formulation involving both the primal (sand surface) and dual (sand flux) variables. We derive, analyse and compare two methods for the approximation, and numerical solution, of this mixed problem. We prove subsequence convergence of both approximations, as the mesh discretization parameters tend to zero; and hence prove existence of a solution to this mixed model and the associated regularized quasi-variational inequality problem. One of these numerical approximations, in which the flux is approximated by the divergence-conforming lowest order Raviart-Thomas element, leads to an efficient algorithm to compute not only the evolving pile surface, but also the flux of pouring sand. Results of our numerical experiments confirm the validity of the regularization employed.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-03-07T09:20:03Z</published>
+    <arxiv:comment>51 p., low resolution figs</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>John W. Barrett</name>
+    </author>
+    <author>
+      <name>Leonid Prigozhin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1202.2032v2</id>
+    <title>The Limiting Shape for Drifted Internal Diffusion Limited Aggregation is a True Heat Ball</title>
+    <updated>2013-02-17T16:16:09Z</updated>
+    <link href="https://arxiv.org/abs/1202.2032v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1202.2032v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We build the iDLA cluster using drifted random walks, and study the limiting shapes they exhibit, with the help of sandpile models. For constant drift, the normalised cluster converges to a canonical shape S, which can be termed a true heat ball, in that it gives rise to a mean value property for caloric functions. The existence and boundedness of such a shape answers a natural yet open question in PDE theory.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-02-09T16:14:57Z</published>
+    <arxiv:comment>Corrected a number a typos and cleared up a few points in the proofs</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Cyrille Lucas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1109.2541v2</id>
+    <title>Phase transitions in crowd dynamics of resource allocation</title>
+    <updated>2012-02-27T13:18:33Z</updated>
+    <link href="https://arxiv.org/abs/1109.2541v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1109.2541v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define and study a class of resources allocation processes where $gN$ agents, by repeatedly visiting $N$ resources, try to converge to optimal configuration where each resource is occupied by at most one agent. The process exhibits a phase transition, as the density $g$ of agents grows, from an absorbing to an active phase. In the latter, even if the number of resources is in principle enough for all agents ($g&lt;1$), the system never settles to a frozen configuration. We recast these processes in terms of zero-range interacting particles, studying analytically the mean field dynamics and investigating numerically the phase transition in finite dimensions. We find a good agreement with the critical exponents of the stochastic fixed-energy sandpile. The lack of coordination in the active phase also leads to a non-trivial faster-is-slower effect.</summary>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-09-12T17:27:00Z</published>
+    <arxiv:comment>7 pages, 7 figs</arxiv:comment>
+    <arxiv:primary_category term="physics.soc-ph"/>
+    <arxiv:journal_ref>Phys. Rev. E 85 (2012) 021116</arxiv:journal_ref>
+    <author>
+      <name>Asim Ghosh</name>
+    </author>
+    <author>
+      <name>Daniele De Martino</name>
+    </author>
+    <author>
+      <name>Arnab Chatterjee</name>
+    </author>
+    <author>
+      <name>Matteo Marsili</name>
+    </author>
+    <author>
+      <name>Bikas K. Chakrabarti</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.85.021116</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.85.021116" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1105.4036v4</id>
+    <title>Abelian Sandpile Model on Randomly Rooted Graphs and Self-Similar Groups</title>
+    <updated>2012-10-31T10:51:31Z</updated>
+    <link href="https://arxiv.org/abs/1105.4036v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1105.4036v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The main result of this paper is a rigorous proof of criticality and an explicit computation of critical exponents for the decay of avalanches in the Abelian sandpile model (ASM) on a large family of infinite graphs. We begin by introducing the notion of criticality of the ASM for limits of finite graphs in local convergence, which naturally leads to the question about criticality of the ASM in the random weak limit. Our main technical ingredient is a sufficient condition for almost sure criticality of the ASM on sequences of finite cacti (i.e., separable graphs whose blocks are cycles or single edges) under the assumption that the random weak limit is almost surely 1-ended. Examples that allow explicit computations of the critical exponents come from actions of finitely generated groups on regular rooted trees, by automorphisms. Restricting the action to the consecutive levels of the tree defines a sequence of finite graphs whose limits in the local convergence are orbital Schreier graphs for the action of the group on the boundary of the tree. In the case of iterated monodromy groups of complex polynomials, these graphs are cacti, and we show that for 1-ended ones, the critical exponent for the decay of the mass of avalanches depends on the growth of the graph. The well-known Basilica group related to $z^2-1$ gives rise to uncountably many 4-regular one-ended graphs of quadratic growth with the critical exponent for the mass of avalanches equal to 1; as well as uncountably many new non-critical examples of quadratic growth (thus not quasi-isometric to $\mathbb{Z}$). Another iterated monodromy group that we consider provides uncountably many graphs with the critical exponent equal to $2\log 2/\log 3 &gt;1$. Finally, we also exhibit graphs of polynomial growth with arbitrarily small critical exponent.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-05-20T09:02:43Z</published>
+    <arxiv:comment>to appear in Israel J. Math</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Michel Matter</name>
+    </author>
+    <author>
+      <name>Tatiana Nagnibeda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1105.0111v2</id>
+    <title>Convergence of the Abelian sandpile</title>
+    <updated>2012-03-07T18:45:47Z</updated>
+    <link href="https://arxiv.org/abs/1105.0111v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1105.0111v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Abelian sandpile growth model is a diffusion process for configurations of chips placed on vertices of the integer lattice $\mathbb{Z}^d$, in which sites with at least 2d chips {\em topple}, distributing 1 chip to each of their neighbors in the lattice, until no more topplings are possible. From an initial configuration consisting of $n$ chips placed at a single vertex, the rescaled stable configuration seems to converge to a particular fractal pattern as $n\to \infty$. However, little has been proved about the appearance of the stable configurations. We use PDE techniques to prove that the rescaled stable configurations do indeed converge to a unique limit as $n \to \infty$. We characterize the limit as the Laplacian of the solution to an elliptic obstacle problem.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-04-30T18:42:38Z</published>
+    <arxiv:comment>12 pages, 2 figures, acroread recommended for figure display</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <arxiv:journal_ref>Duke Math. J. 162, no. 4 (2013), 627-642</arxiv:journal_ref>
+    <author>
+      <name>Wesley Pegden</name>
+    </author>
+    <author>
+      <name>Charles K. Smart</name>
+    </author>
+    <arxiv:doi>10.1215/00127094-2079677</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1215/00127094-2079677" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1101.1437v2</id>
+    <title>Rate of convergence estimates for the zero dissipation limit in Abelian sandpiles</title>
+    <updated>2011-05-10T12:40:58Z</updated>
+    <link href="https://arxiv.org/abs/1101.1437v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1101.1437v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider a continuous height version of the Abelian sandpile model with small amount of bulk dissipation gamma &gt; 0 on each toppling, in dimensions d = 2, 3. In the limit gamma -&gt; 0, we give a power law upper bound, based on coupling, on the rate at which the stationary measure converges to the discrete critical sandpile measure. The proofs are based on a coding of the stationary measure by weighted spanning trees, and an analysis of the latter via Wilson's algorithm. In the course of the proof, we prove an estimate on coupling a geometrically killed loop-erased random walk to an unkilled loop-erased random walk.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-01-07T14:11:35Z</published>
+    <arxiv:comment>28 pages; Section 2 has been substantially expanded, giving more background</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Antal A. Járai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1003.0122v1</id>
+    <title>Self-Organized Criticality in Solar Physics and Astrophysics</title>
+    <updated>2010-02-27T18:24:41Z</updated>
+    <link href="https://arxiv.org/abs/1003.0122v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1003.0122v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The concept of "self-organized criticality" (SOC) has been introduced by Bak, Tang, and Wiesenfeld (1987) to describe the statistics of avalanches on the surface of a sandpile with a critical slope, which produces a scale-free powerlaw size distribution of avalanches. In the meantime, SOC behavior has been identified in many nonlinear dissipative systems that are driven to a critical state. On a most general level, SOC is the statistics of coherent nonlinear processes, in contrast to the Poisson statistics of incoherent random processes. The SOC concept has been applied to laboratory experiments (of rice or sand piles), to human activities (population growth, language, economy, traffic jams, wars), to biophysics, geophysics (earthquakes, landslides, forest fires), magnetospheric physics, solar physics (flares), stellar physics (flares, cataclysmic variables, accretion disks, black holes, pulsar glitches, gamma ray bursts), and to galactic physics and cosmology.</summary>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-02-27T18:24:41Z</published>
+    <arxiv:comment>12 pages, 9 Figs, submitted to .Journal of Applied Functional Analysis, Proc. of 3rd Internat. Interdisciplinary Symposium on Chaos and Complex Systems (CCS2010), Istanbul, Turkey, 21-24 May, 2010</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.SR"/>
+    <author>
+      <name>Markus J. Aschwanden</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0911.3782v1</id>
+    <title>Existence and uniqueness of the stationary measure in the continuous Abelian sandpile</title>
+    <updated>2009-11-19T12:37:32Z</updated>
+    <link href="https://arxiv.org/abs/0911.3782v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0911.3782v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Let Λbe a finite subset of Z^d. We study the following sandpile model on Λ. The height at any given vertex x of Λis a positive real number, and additions are uniformly distributed on some interval [a,b], which is a subset of [0,1]. The threshold value is 1; when the height at a given vertex exceeds 1, it topples, that is, its height is reduced by 1, and the heights of all its neighbours in Λincrease by 1/2d. We first establish that the uniform measure μon the so called "allowed configurations" is invariant under the dynamics. When a &lt; b, we show with coupling ideas that starting from any initial configuration of heights, the process converges in distribution to μ, which therefore is the unique invariant measure for the process. When a = b, that is, when the addition amount is non-random, and a is rational, it is still the case that μis the unique invariant probability measure, but in this case we use random ergodic theory to prove this; this proof proceeds in a very different way. Indeed, the coupling approach cannot work in this case since we also show the somewhat surprising fact that when a = b is rational, the process does not converge in distribution at all starting from any initial configuration.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-11-19T12:37:32Z</published>
+    <arxiv:comment>22 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Markov Proc. Rel. Fields 16(1) 185-204 (2010)</arxiv:journal_ref>
+    <author>
+      <name>Wouter Kager</name>
+    </author>
+    <author>
+      <name>Haiyan Liu</name>
+    </author>
+    <author>
+      <name>Ronald Meester</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0712.4358v1</id>
+    <title>Limit Theorems for Internal Aggregation Models</title>
+    <updated>2007-12-28T15:24:58Z</updated>
+    <link href="https://arxiv.org/abs/0712.4358v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0712.4358v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We study the scaling limits of three different aggregation models on the integer lattice Z^d: internal DLA, in which particles perform random walks until reaching an unoccupied site; the rotor-router model, in which particles perform deterministic analogues of random walks; and the divisible sandpile, in which each site distributes its excess mass equally among its neighbors. As the lattice spacing tends to zero, all three models are found to have the same scaling limit, which we describe as the solution to a certain PDE free boundary problem in R^d. In particular, internal DLA has a deterministic scaling limit. We find that the scaling limits are quadrature domains, which have arisen independently in many fields such as potential theory and fluid dynamics. Our results apply both to the case of multiple point sources and to the Diaconis-Fulton smash sum of domains. In the special case when all particles start at a single site, we show that the scaling limit is a Euclidean ball in R^d, and give quantitative bounds on the rate of convergence to a ball. We also improve on the previously best known bounds of Le Borgne and Rossin in Z^2 and Fey and Redig in higher dimensions for the shape of the classical abelian sandpile model. Lastly, we study the sandpile group of a regular tree whose leaves are collapsed to a single sink vertex, and determine the decomposition of the full sandpile group as a product of cyclic groups. For the regular ternary tree of height n, for example, the sandpile group is isomorphic to (Z_3)^{2^{n-3}} x (Z_7)^{2^{n-4}} x ... x Z_{2^{n-1}-1} x Z_{2^n-1}. We use this result to prove that rotor-router aggregation on the regular tree yields a perfect ball.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-12-28T15:24:58Z</published>
+    <arxiv:comment>Berkeley Ph.D. thesis</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Lionel Levine</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0606652v1</id>
+    <title>Sticky grains do not change the universality class of isotropic sandpiles</title>
+    <updated>2006-06-26T09:09:10Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0606652v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0606652v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We revisit the sandpile model with ``sticky'' grains introduced by Mohanty and Dhar [Phys. Rev. Lett. {\bf 89}, 104303 (2002)] whose scaling properties were claimed to be in the universality class of directed percolation for both isotropic and directed models. Simulations in the so-called fixed-energy ensemble show that this conclusion is not valid for isotropic sandpiles and that this model shares the same critical properties of other stochastic sandpiles, such as the Manna model. %as expected from the existence of an extra %conservation-law, absent in directed percolation. These results are strengthened by the analysis of the Langevin equations proposed by the same authors to account for this problem which we show to converge, upon coarse-graining, to the well-established set of Langevin equations for the Manna class. Therefore, the presence of a conservation law keeps isotropic sandpiles, with or without stickiness, away from the directed percolation class.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-06-26T09:09:10Z</published>
+    <arxiv:comment>4 pages. 3 Figures. Subm. to PRE</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Physical Review E 74, 050102(R) (2006).</arxiv:journal_ref>
+    <author>
+      <name>Juan A. Bonachela</name>
+    </author>
+    <author>
+      <name>Jose J. Ramasco</name>
+    </author>
+    <author>
+      <name>Hugues Chate</name>
+    </author>
+    <author>
+      <name>Ivan Dornic</name>
+    </author>
+    <author>
+      <name>Miguel A. Munoz</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.74.050102</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.74.050102" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0501540v1</id>
+    <title>Particle-hole symmetry in a sandpile model</title>
+    <updated>2005-01-22T08:59:18Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0501540v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0501540v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In a sandpile model addition of a hole is defined as the removal of a grain from the sandpile. We show that hole avalanches can be defined very similar to particle avalanches. A combined particle-hole sandpile model is then defined where particle avalanches are created with probability $p$ and hole avalanches are created with the probability $1-p$. It is observed that the system is critical with respect to either particle or hole avalanches for all values of $p$ except at the symmetric point of $p_c=1/2$. However at $p_c$ the fluctuating mass density is having non-trivial correlations characterized by $1/f$ type of power spectrum.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-01-22T08:59:18Z</published>
+    <arxiv:comment>Four pages, our figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>J. Stat. Mech. (2005) L01002</arxiv:journal_ref>
+    <author>
+      <name>R. Karmakar</name>
+    </author>
+    <author>
+      <name>S. S. Manna</name>
+    </author>
+    <arxiv:doi>10.1088/1742-5468/2005/01/L01002</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1742-5468/2005/01/L01002" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0409407v1</id>
+    <title>The Rotor-Router Model</title>
+    <updated>2004-09-21T16:38:20Z</updated>
+    <link href="https://arxiv.org/abs/math/0409407v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0409407v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Building on earlier work of Diaconis and Fulton (1991) and Lawler, Bramson, and Griffeath (1992), Propp in 2001 defined a deterministic analogue of internal diffusion-limited aggregation. This growth model is a "convergent game" of the sort studied by Eriksson (1996). In one dimension, we show that the model is equivalent to a simple dynamical system with three integer-valued parameters; an invariant of this dynamical system yields links between the behavior of the system and diophantine approximation of quadratic irrationals. In two dimensions, we give constraints on the shape of the occupied region, as well as evidence for the proposition that the asymptotic shape of the boundary, suitably rescaled as time goes to infinity, is a circle. While the rotor-router model displays many of the same intriguing features as the Bak-Tang-Weisenfeld abelian sandpile model, we suggest that the new model is likely to be easier to analyze rigorously.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-09-21T16:38:20Z</published>
+    <arxiv:comment>Harvard University undergraduate thesis. 30 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Lionel Levine</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0106015v3</id>
+    <title>Extremum statistics: A framework for data analysis</title>
+    <updated>2002-01-22T18:03:18Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0106015v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0106015v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Recent work has suggested that in highly correlated systems, such as sandpiles, turbulent fluids, ignited trees in forest fires and magnetization in a ferromagnet close to a critical point, the probability distribution of a global quantity (i.e. total energy dissipation, magnetization and so forth) that has been normalized to the first two moments follows a specific non Gaussian curve. This curve follows a form suggested by extremum statistics, which is specified by a single parameter a (a=1 corresponds to the Fisher-Tippett Type I ("Gumbel") distribution.) Here, we present a framework for testing for extremal statistics in a global observable. In any given system, we wish to obtain a in order to distinguish between the different Fisher-Tippett asymptotes, and to compare with the above work. The normalizations of the extremal curves are obtained as a function of a. We find that for realistic ranges of data, the various extremal distributions when normalized to the first two moments are difficult to distinguish. In addition, the convergence to the limiting extremal distributions for finite datasets is both slow and varies with the asymptote. However, when the third moment is expressed as a function of a this is found to be a more sensitive method.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2001-06-01T13:37:34Z</published>
+    <arxiv:comment>25 pages, 6 Postscript figures, submitted to PRE 1st June, 2001. Rejected. Revised and retitled version submitted to Nonlinear Processes in Gephysics, October 22nd, 2001. Latest version includes responses to referees</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Nonlinear Processes in Geophysics, 9 (2002), 409-418</arxiv:journal_ref>
+    <author>
+      <name>Sandra Chapman</name>
+    </author>
+    <author>
+      <name>George Rowlands</name>
+    </author>
+    <author>
+      <name>Nicholas Watkins</name>
+    </author>
+    <arxiv:doi>10.5194/npg-9-409-2002</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.5194/npg-9-409-2002" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0005239v1</id>
+    <title>On two continuous models for the dynamics of sandpile surfaces</title>
+    <updated>2000-05-15T07:35:43Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0005239v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0005239v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We consider a modified BCRE model for pile surface dynamics (Bouchaud, Cates, Ravi Prakash, and Edwards, J. Phys. I France, v. 4, p. 1383, 1994) and show that in the long-scale limit this model converges to a quasistationary model of pile growth in the form of an evolutionary variational inequality (Prigozhin, Phys. Rev. E, v. 49, p. 1161, 1994).</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2000-05-15T07:35:43Z</published>
+    <arxiv:comment>6 pages</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <author>
+      <name>Leonid Prigozhin</name>
+    </author>
+    <author>
+      <name>Boris Zaltzman</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.63.041505</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.63.041505" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/9810093v1</id>
+    <title>On the thermodynamic limit for a one-dimensional sandpile process</title>
+    <updated>1998-10-15T09:04:17Z</updated>
+    <link href="https://arxiv.org/abs/math/9810093v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/9810093v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Considering the standard abelian sandpile model in one dimension, we construct an infinite volume Markov process corresponding to its thermodynamic (infinite volume) limit. The main difficulty we overcome is the strong non-locality of the dynamics. However, using similar ideas as in recent extensions of the standard Gibbs formalism for lattice spin systems, we can identify a set of `good' configurations on which the dynamics is effectively local. We prove that every configuration converges in a finite time to the unique invariant measure.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1998-10-15T09:04:17Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>C. Maes</name>
+    </author>
+    <author>
+      <name>F. Redig</name>
+    </author>
+    <author>
+      <name>E. Saada</name>
+    </author>
+    <author>
+      <name>A. Van Moffaert</name>
+    </author>
+  </entry>
+</feed>

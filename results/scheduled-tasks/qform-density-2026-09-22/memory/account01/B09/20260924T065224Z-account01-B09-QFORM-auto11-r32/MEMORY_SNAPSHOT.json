@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B09",
+  "run_id": "20260924T065224Z-account01-B09-QFORM-auto11-r32",
+  "control_commit_prepublication": "0bbe1e281e39d4e8e39d9121d1418674bb0a92b0",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_FOR_FULL_TARGET; PROVED_IN_NEW_PROMOTED_LEAF_BRANCHES",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "premises": [
+    {
+      "claim": "QFORM-RETAINED-HUB-BRASCAMP-LIEB-v1",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "e03ae6cafb3cca423b4a2fab5c6aa0106cc319f4",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260924T055153Z-account02-B09-QFORM-r18/REPORT.md"
+    },
+    {
+      "claim": "QFORM-FIXEDHUB-RANK1-OMEGA1-PLUCKER-v1",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "14ef2c833e502312b3e86d503933fa930a7f6f9e",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260924T054443Z-account01-B09-QFORM-auto11-r31/REPORT.md"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-PROMOTED-LEAF-RETAINED-HUB-BL-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For one literal hub and leaf block D+V Lambda V^T, promote any literal leaf set S to physical hubs and retain all promoted densities. If the residual base Gram G_R=sum(V_j,c_j)(V_j,c_j)^T is positive and every residual leverage is <=1/2, then the full ambient quadratic form has a continuous density with ||p_Q||inf <= C_r[det(G_R)prod|lambda_q|]^(-1/(r+2)), C_r=4(r+2)/r*2^(-2/(r+2)), and the same linear interval coefficient. The enlarged Gram factors exactly as N diag(G_R,I_|S|)N^T, every retained promoted-hub weight equals one, and the Fourier exponent stays 1+r/2 independently of |S|."
+    },
+    {
+      "id": "QFORM-LEVERAGE-PEELING-IDENTITY-v1",
+      "status": "PROVED_STRUCTURAL_IDENTITY",
+      "statement": "For residual Gram G and literal row x_i of leverage ell_i, det(G-x_ix_i^T)=det(G)(1-ell_i). Repeated literal promotion therefore spends only residual determinant currency; ell_i=1 is an exact mixed-frame coloop certificate."
+    },
+    {
+      "id": "QFORM-FIXEDHUB-RANKr-PLUCKER-DECOMPOSITION-v1",
+      "status": "PROVED_STRUCTURAL_IDENTITY",
+      "statement": "For disjoint leaf pairs I,J and leaf non-diagonal block V Lambda V^T, the fixed-hub third minor equals a sum over curvature 2-mode Pluecker products minus a sum over hub-curvature wedge products: a sum_{p<q}lambda_p lambda_q Delta_I^(pq)Delta_J^(pq)-sum_p lambda_p W_I^pW_J^p. For r<=4 the pair-feature rank is at most 10."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "account": "account02",
+    "slot": "B09",
+    "run": "20260924T055153Z-account02-B09-QFORM-r18",
+    "source_commit": "e03ae6cafb3cca423b4a2fab5c6aa0106cc319f4",
+    "application": "For Q=(v1^T X)^2+(v2^T X)^2+2U(z^T X), with one literal heavy row of leverage 3/5 and an 8-coordinate Walsh residual bank, promoting that literal row gives G_R=diag(2/5,1,1), residual leverages 3/8, target spectrum {-1,1,1,1}, and ||p_Q||inf<=4sqrt(2)(2/5)^(-1/4)=7.113117640155692 with continuous density and the same linear interval bound."
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "dd2f429f6135ce79e5801d58eca341a82d736527",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260924T065224Z-account01-B09-QFORM-auto11-r32/REPORT.md",
+    "blob": "cae8aef0d3d6ade7df86d1c9e96a64712ff44bc5"
+  },
+  "checks_commit": "28cacf2428a08868ee5a18bd45b5c1a4e4df5759",
+  "prepublication_refresh_commit": "dd2f429f6135ce79e5801d58eca341a82d736527",
+  "handoff_commit": "3412f105d373ad71877dad51384532dae7930df7",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B09/20260924T065224Z-account01-B09-QFORM-auto11-r32.md",
+  "unresolved_implication": "QFORM-PROMOTION-DETERMINANT-OR-COLOOP-EXIT-v1",
+  "next_step": "Use aggregate nonprincipal third-compound currency to force a promoted set with universal residual determinant currency, or route determinant collapse to an exact/near mixed-frame coloop/localized packet or an already-paid grouped/disjoint crossing exit. In rank one this is an avoidance-mass preservation problem for the physical two-frame Pluecker law.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  }
+}

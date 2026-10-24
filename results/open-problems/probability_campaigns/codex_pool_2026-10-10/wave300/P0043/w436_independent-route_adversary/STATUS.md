@@ -1,0 +1,10 @@
+STATE: NEEDS_REVIEW
+NEXT: w437 independently check C1's normalized second moment bound 5/4, C2's conditional-thinning quantifiers, and the three quoted relation endpoints before coordinator integration.
+
+2026-10-10: Read PRIMARY_DIRECTIVE.md; began targeted source recovery. No live code, store, or paired proof has been changed or read.
+2026-10-10: Saved the elementary p_c<1 boundary check as the first result row; independent review is pending.
+2026-10-10: Saved INDEPENDENT_DERIVATION.md and C1: maximum-degree-9 tree, p_c=1/2, theta(p_c)>=4/5, not quasi-transitive. Read the conditional-product and proof-pipeline scars. Public comparator inspection found an admitted placeholder; this is not evidence of a completed proof.
+2026-10-10: Audited w435's original L1-L4 proofs (KEEP) and completion premise G1 (FIX). Saved the noninheritance counterexample in C2. Exact rational checks: 4,095 generations, zero assertion failures, 0.229612 s. Primary preprint Theorem 1.1 claims full P0043; proof verification is pending, so current openness is UNKNOWN. Recall timed out; direct packet-named scars served as fallback.
+2026-10-10 STUCK: team_comm say failed twice because w436 has no joined team and the guessed team name does not exist. Switching to the existing mesh's direct named-peer channel; no new team or process will be created.
+2026-10-10: Deliverables complete: SOURCE_STATUS.json, ATTEMPT.md, four CLAIMS.jsonl rows, five original-prover audit verdicts, REVIEW_PACKET.md, REPORT.md, and exact measurements. Historical Conjecture 8.15 verified in the 19 August 2026 primary PDF (printed p.285); current full-target openness UNKNOWN.
+2026-10-10: Packet validation PASS. Submitted three concept-only cards and three supported relations to math-brain-inbox/w436/bundle_001.json under a narrow lease; lease released. Review, ingestion and retrievability are recorded separately in SUBMISSION_STATE.json. Direct named-peer handoffs reached w435 and w437. Hook/progress rows are staged under the worker write-scope restriction. No full P0043 proof or novelty claim.

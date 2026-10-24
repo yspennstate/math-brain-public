@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B08",
+  "run_id": "20260923T222118Z-account03-B08-qform-diffuse-r44",
+  "source_control_commit": "49901dcc9030ec296df489a19fd7be41e21c09a7",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "bounded-density does not imply uniform pointwise quadratic-phase decay",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "bounded projection density alone does not control an indefinite quadratic pushforward",
+    "naive fiber-sup integration can lose dimension"
+  ],
+  "mathematical_premises": [
+    {
+      "id": "GROUPED-PROJECTED-CROSSING-GC-k2-l1",
+      "source": "yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+      "scope": "two original hubs; physical light split; projected crossing first-volume row marginals <=1/2; arbitrary same-side curvature retained; gives L1 characteristic function and C0 density"
+    },
+    {
+      "id": "EXACTMATCH-STRESS-FAMILY",
+      "source": "yspennstate/math-open-problems@fc3b9a4f04112672734f037b19358256b50c0a08:proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/20260923T214909Z-account02-B08-qform-diffuse-r28/REPORT.md",
+      "scope": "target-valid Hadamard family with exact Schur match, zero post-pair crossing, arm areas one, diffuse third square"
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B08",
+    "source": "yspennstate/math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76:proofnet24/QFORM-density/fleet-2026-09-22/account04/B08/20260923T212412Z-account04-B08-QFORM-r2/REPORT.md",
+    "application": "child scale m=L/64 and high-window threshold L/4096 give ||p_Q||_inf<4096/L when max child-window leverage<=1/32; C0 continuity"
+  },
+  "proved_claims": [
+    "QFORM-COMMONPLANE-SAMEBANK-PROJECTED-RECEIVER-v1",
+    "QFORM-DIFFUSE-RANK1-THIRDCURVATURE-v1",
+    "QFORM-R45-RANK1-DIFFUSE-123-v1",
+    "QFORM-EXACTMATCH-HADAMARD-8P486-v1"
+  ],
+  "key_formula": "||p_Q||_inf <= 2^(13/6)*sqrt(3)*(|lambda|*S_M*tau)^(-1/3)*(1-3mu)^(-1/6) for mu<=27/593",
+  "exact_family_bound": "||p_Q||_inf<=6sqrt(2)/L on the account02/B08 exact-match Hadamard stress family",
+  "output_source": "yspennstate/math-open-problems@cdaa423de269642936b3def8e36814cf8c0794d3:proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260923T222118Z-account03-B08-qform-diffuse-r44/",
+  "handoff_source": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B08/20260923T222118Z-account03-B08-qform-diffuse-r44.md",
+  "full_target_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "unresolved_implication": "QFORM-EXACTMATCH-HIGHRANK-SIMULTANEOUS-CUT-OR-ALIGNMENT-COMPILER-v1",
+  "next_step": "For arbitrary high-rank same-bank Schur curvature at exact common-plane match, force one cut with simultaneous arm area and transverse projected volume, or route failure to a localized row/eigenvector or an aligned low-dimensional carrier without deleting any nonzero tail.",
+  "model_self_report": "GPT-5.6 Sol",
+  "configured_reasoning": "UNKNOWN",
+  "provider_thinking_counters": null
+}

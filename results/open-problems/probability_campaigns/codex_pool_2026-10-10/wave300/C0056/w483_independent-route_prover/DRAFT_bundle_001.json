@@ -1,0 +1,190 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w483",
+  "bundle_slug": "probability-c0056-independent-spectral-pair-route-w483-001",
+  "entries": [
+    {
+      "key": "pair-calculus",
+      "namespace": "probability.random-operators",
+      "logical_name": "local-spectral-measure-poisson-pair-calculus",
+      "kind": "concept",
+      "title": "DRAFT: Local spectral-measure Poisson pair calculus",
+      "statement": "UNREVIEWED DRAFT, not a solution of C0056. For any finite positive Borel measure nu on R and eta>0, ||P_eta*nu||_2^2 equals the nu-by-nu integral of P_(2eta)(s-t), and equals (2pi)^-1 integral exp(-2eta|u|)|nu_hat(u)|^2 du; finite atomic measures give the full nonnegative weighted eigenvalue-pair sum. The annealed uniform L2 criterion in L2 is stronger than mere absolute continuity.",
+      "proof_text": null,
+      "assumptions": [
+        "nu finite positive Borel",
+        "P_eta(t)=eta/[pi(t^2+eta^2)]",
+        "Fourier transform nu_hat(u)=integral exp(-iuE)nu(dE)"
+      ],
+      "domain": "spectral theory and probability",
+      "source": {
+        "source_id": "owner-probability300-w483-c0056-20261010",
+        "url": "file:///~/brain_workers/w483/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign mathematics; unreviewed DRAFT concepts)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "pair-route",
+      "namespace": "probability.random-operators",
+      "logical_name": "anderson-cutoff-weighted-pair-concentration-route",
+      "kind": "concept",
+      "title": "DRAFT: Conditional weighted-pair route to absolute continuity",
+      "statement": "UNREVIEWED DRAFT, not a solution of C0056. If finite-volume positive local measures of mass at most one obey E C_nuL(r)<=A r+B/N_L for every r>0 with volume-independent A,B, then E||P_eta*nu_L||_2^2 <= A/2+B/(2pi eta N_L). Here C_nu(r) is the same-measure pair mass at energy separation at most r. For bounded lattice Dirichlet approximations, take volume to infinity at each fixed eta before sending eta to zero; the result gives pure ac on covered cutoff windows if the displayed unproved bound holds.",
+      "proof_text": null,
+      "assumptions": [
+        "A,B finite and independent of volume,r",
+        "N_L->infinity",
+        "all r>0 covered",
+        "nu_L mass at most one",
+        "H=A+gV, fixed g>=0",
+        "bounded potential |V|<=1",
+        "fixed site inside expanding Dirichlet cubes",
+        "continuous compactly supported real cutoff"
+      ],
+      "domain": "spectral theory and probability",
+      "source": {
+        "source_id": "owner-probability300-w483-c0056-20261010",
+        "url": "file:///~/brain_workers/w483/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign mathematics; unreviewed DRAFT concepts)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "mark-gap",
+      "namespace": "probability.random-operators",
+      "logical_name": "anderson-conditional-eigenvector-mark-moment-gap",
+      "kind": "concept",
+      "title": "DRAFT: Missing conditional eigenvector mark estimate",
+      "statement": "UNREVIEWED DRAFT, not a solution of C0056. For finite-volume Anderson matrices with site-density bound R and cutoff support length W>0, if E sum_j a_j^2<=D/N and E[a_j a_k | all ordered eigenvalues]<=K/N^2 for j!=k uniformly in volume, then E C_nuL(r)<=max(18KR^2W,1/W)r+D/N for every r>0. The conditional mark hypothesis is explicitly UNPROVED for the target. Minami-type unweighted eigenvalue counts do not supply the mark assumption.",
+      "proof_text": null,
+      "assumptions": [
+        "independent bounded-density diagonal site laws; deterministic self-adjoint hopping",
+        "simple ordered eigenvalues",
+        "a_j=chi(E_j)^2|phi_j(x)|^2, 0<=chi<=1",
+        "D,K independent of volume",
+        "conditional mark hypothesis, not mere unconditional moments or IPR"
+      ],
+      "domain": "spectral theory and probability",
+      "source": {
+        "source_id": "owner-probability300-w483-c0056-20261010",
+        "url": "file:///~/brain_workers/w483/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign mathematics; unreviewed DRAFT concepts)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "cantor-obstruction",
+      "namespace": "probability.random-operators",
+      "logical_name": "flat-walsh-eigenvectors-cantor-spectral-obstruction",
+      "kind": "concept",
+      "title": "DRAFT: Flat eigenvectors with singular continuous spectral limit",
+      "statement": "UNREVIEWED DRAFT, not a solution of C0056. Real symmetric finite matrices with all eigenvector squared components and IPR equal to 1/N can have local measures converging to singular-continuous Cantor measure. With N=2^k and eta=N^-1/2, the diagonal smoothing contribution is 1/(2pi sqrt(N))->0, while the full second moment is at least N^((1-log(2)/log(3))/2)/(5pi)->infinity. The abstract counterexample refutes an IPR-only inference, not the Anderson conjecture.",
+      "proof_text": null,
+      "assumptions": [
+        "Walsh-basis matrix of multiplication by truncated fair ternary digit sum",
+        "abstract nonlocal matrices; not iid Anderson operators",
+        "countable infinite Walsh basis for the multiplication-operator limit"
+      ],
+      "domain": "spectral theory and probability",
+      "source": {
+        "source_id": "owner-probability300-w483-c0056-20261010",
+        "url": "file:///~/brain_workers/w483/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign mathematics; unreviewed DRAFT concepts)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "free-calibration",
+      "namespace": "probability.random-operators",
+      "logical_name": "free-three-dimensional-adjacency-l2-density-calibration",
+      "kind": "concept",
+      "title": "DRAFT: Zero-disorder spectral-density calibration",
+      "statement": "UNREVIEWED DRAFT, not a solution of C0056. The free adjacency operator on Z3 has local density f1*f1*f1, f1(s)=1/[pi sqrt(4-s^2)] on(-2,2); its squared L2 norm is bounded by B(1/2,1/4)^2/(2pi^3). This calibrates the cutoff smoothing criterion at zero disorder only.",
+      "proof_text": null,
+      "assumptions": [
+        "g=0",
+        "normalized Haar Fourier measure on torus",
+        "0<=chi<=1 for cutoff consequence"
+      ],
+      "domain": "spectral theory and probability",
+      "source": {
+        "source_id": "owner-probability300-w483-c0056-20261010",
+        "url": "file:///~/brain_workers/w483/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign mathematics; unreviewed DRAFT concepts)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "scope-guard",
+      "namespace": "probability.random-operators",
+      "logical_name": "c0056-ac-goe-separate-obligations-current-status-guard",
+      "kind": "concept",
+      "title": "DRAFT: Separate C0056 spectral and GOE obligations",
+      "statement": "UNREVIEWED DRAFT, not a solution of C0056. The recovered Bourgade 2018 section 2.1 target combines weak-disorder ac spectrum on Z3 with a separate periodic-box GOE microscopic-statistics goal. The explicit uniform[-1,1] slice here has fixed-coupling quantifiers. A September 23, 2026 primary preprint claims the spectral part, but it is not independently certified in this packet. Current openness is UNKNOWN. This route proves neither parent goal; existence of an ac component, purity, nonzero spectral weight, and GOE statistics are distinct assertions.",
+      "proof_text": null,
+      "assumptions": [
+        "primary statement recovery in STATEMENT_TO_ADVERSARY.md",
+        "public preprint statement is a claim, not an accepted input",
+        "no GOE limit proved"
+      ],
+      "domain": "spectral theory and probability",
+      "source": {
+        "source_id": "owner-probability300-w483-c0056-20261010",
+        "url": "file:///~/brain_workers/w483/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign mathematics; unreviewed DRAFT concepts)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "pair-route",
+      "to_key": "pair-calculus",
+      "kind": "depends_on",
+      "rationale": "The conditional concentration bound is integrated against the exact Poisson pair kernel before the fixed-eta volume limit."
+    },
+    {
+      "from_key": "mark-gap",
+      "to_key": "pair-route",
+      "kind": "depends_on",
+      "rationale": "The explicitly unproved conditional mark bounds plus the established count inequality would yield the weighted pair estimate."
+    },
+    {
+      "from_key": "cantor-obstruction",
+      "to_key": "pair-calculus",
+      "kind": "semantic_association",
+      "rationale": "The exact kernel sum has diverging cross terms despite a vanishing diagonal in the flat Walsh example."
+    },
+    {
+      "from_key": "cantor-obstruction",
+      "to_key": "mark-gap",
+      "kind": "semantic_association",
+      "rationale": "An IPR bound alone cannot replace the required marked-pair control; the example makes no statement about iid lattice geometry."
+    },
+    {
+      "from_key": "free-calibration",
+      "to_key": "pair-calculus",
+      "kind": "specializes",
+      "rationale": "At g=0 the free Z3 local density satisfies the smoothing criterion with an explicit finite constant."
+    },
+    {
+      "from_key": "scope-guard",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor",
+      "kind": "cites",
+      "rationale": "The read-only source node and Bourgade p7 both retain AC and a separate GOE obligation."
+    },
+    {
+      "from_key": "pair-route",
+      "to_key": "scope-guard",
+      "kind": "semantic_association",
+      "rationale": "Even proving this sufficient pure-ac criterion would leave GOE statistics and the independent review gates unresolved."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+# BT4 shared handoff — account01/B04
+
+Run: `20260922T0744Z-b04-bt4-r11`  
+Candidate: `BT4-DOMINATION-TORUS-CYCLE-v1`  
+Outcome: `ESSENTIAL_STEP_APPLIED`  
+Target status: `OPEN_NOT_PROVED`  
+Brain status: `WITHOUT_VERIFIED_BRAIN`
+
+Canonical scientific report:
+`proofnet24/collective-BT4/account01/B04/20260922T0744Z-b04-bt4-r11/report.md`
+in private archive `yspennstate/math-open-problems`, creation commit `786dc016fa5043dba63904d4f7498b45061bed19`, report Git blob `07238cad84acf5aa33c02472bbb570e6d67a93a7`.
+
+Consumed named OTHER-account result: account02/B05 `BT4-R4-ALIGNED-TRIPLE-ABSORPTION-v1`, report blob `bf6b94983890a99c3c8d2e902bfc94fa3f57e22c`. It removes the aligned consecutive-triple lock, so the new theorem attacks only the genuine long CROSS/BYPASS/order wall.
+
+## New exact reduction
+
+In the inherited oriented exact-seven, arc-dominated, 3-vertex-strong, globally minimum three-packing normal form, let `A=(a_i)` and `B=(b_j)` be the two light chordless packed cycles. In the pure long-support residual (no third-support mediation, no distinct-port same-support remainder bypass, and `|A|,|B|>|R|+1`), repeated domination directizes every remainder-internal `A<->B` connector. Hence the rank-two inputs imply direct crosses in both orientations.
+
+Encode `a_i->b_j` by `+(i,j)` and `b_j->a_i` by `-(i,j)`. Domination of any occupied cell, plus chordlessness and the exclusion of remainder/self-return exits, forces an occupied predecessor
+
+`+(i-1,j)` or `-(i,j-1)`.
+
+Choose one such predecessor at each occupied cell. Since both signs occur, the finite predecessor functional graph contains a mixed signed cycle: a pure plus cycle would be a full plus row, a pure minus cycle a full minus column, and both cannot coexist because their intersection would be a digon in the oriented normal form; moreover an outside trajectory cannot first enter either full pure cycle.
+
+If the mixed cycle has `N_+` plus states and `N_-` minus states, then
+
+`N_+ = u|A|`, `N_- = v|B|` for positive integers `u,v`.
+
+Thus it contains at least `|A|+|B|` direct cross states. Every sign switch has a concrete two-edge support-detour meaning:
+
+- `+(i,j)` with predecessor `-(i,j-1)` gives `b_{j-1}->a_i->b_j`;
+- `-(i,j)` with predecessor `+(i-1,j)` gives `a_{i-1}->b_j->a_i`.
+
+A mixed cycle contains at least one detour of each type. These are packed detours, **not** remainder bypasses and not by themselves a fourth cycle.
+
+## First unpaid implication
+
+`BT4-TORUS-BLOCK-SPLICE-v1`: decompose the forced mixed predecessor cycle into maximal plus/minus blocks. Use the exact R4 cage, the x-deleted connector tax, exact outdegree seven and global packing minimality to show that two block-boundary detours splice into two vertex-disjoint mixed cycles, or else force a strict smaller packing, cyclic exchanged remainder, SIX, bounded support, third-support mediation, or a compatible genuine remainder-bypass family.
+
+This replaces the former arbitrary cyclic port-order/parity wall by one predecessor-closed monotone winding staircase.
+
+Deletion/contraction accounting retained: for `a_C(v)=|N^+(v)∩C|`, `d^+_{D-C}(v)=7-a_C(v)` and `d^+_{D/C}(v)=7-a_C(v)+1_{a_C(v)>0}` after quotient parallel arcs are coalesced; the contracted cycle vertex has outdegree equal only to its number of distinct external heads. Therefore contraction does not preserve the degree-seven induction hypothesis.

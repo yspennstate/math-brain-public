@@ -1,0 +1,62 @@
+account03/B01 deterministic checks
+run_id=account03-B01-20260923T203127Z-auto11
+
+1. Psi comparison constant
+c_Psi = 4 exp(-3/4) = 1.8894662109640588
+For |s|<=1, with u=log(1/|s|), ratio Psi(s)|s|^(1/4)=(1+u)e^(-u/4).
+Derivative is e^(-u/4)(3-u)/4, so the unique maximum is u=3 and equals 4e^(-3/4).
+For |s|>=1 the ratio is exactly 1 < c_Psi.
+PASS
+
+2. Quarter-Riesz compiler constant
+C_off = 5.095453495355205
+K_R = 8*c_Psi*C_off = 77.02149767209895
+PASS
+
+3. Homogeneity
+Under A -> s A:
+a -> s a,
+W2 -> s^6 W2,
+|a|^(-1/4) W2^(-1/8) -> |s|^(-1/4-6/8)=|s|^(-1).
+PASS
+
+4. Exact delta cancellation
+W2 = a^2 delta^2 F(S).
+Thus |delta|^(-1/4)F(S)^(-1/8)
+= |delta|^(-1/4)*(a^2 delta^2/W2)^(1/8)
+= |a|^(1/4)W2^(-1/8).
+PASS
+
+5. Stress-family algebra
+Parameters delta=1e-2, epsilon=1e-8.
+Matrix:
+[[1,0,0,0,0],
+ [0,delta,1,1,0],
+ [0,1,0,0,epsilon],
+ [0,1,0,0,0],
+ [0,0,epsilon,0,0]]
+Scalar-completion data:
+a=1, b=0, ell=(1,1,0),
+M_13=M_31=epsilon and all other off-diagonal M entries zero.
+Gamma1=epsilon=1e-8.
+W2=2*(1+delta^2 epsilon^2)=2 to displayed double precision.
+Old positive-Gamma1 receiver: 8*Gamma1^(-1/4)=800.
+New W2 receiver: K_R*W2^(-1/8)=70.62902477899391.
+Numerical eigenvalues:
+-1.40922240,
+-7.07106781e-09,
++7.07106781e-09,
+1.00000000,
+1.41922240.
+Hence at least three eigenvalues have |lambda|>=1 to numerical precision (one is exactly 1 by the isolated first coordinate, and the two large roots are separated from 1).
+The eigensolve is diagnostic only; the theorem proof does not depend on numerics.
+PASS
+
+6. Correction boundary
+No pointwise law-uniform Fresnel decay is used.
+No spectral rotation of the random variables is used.
+No moment/support/log-concavity/Gaussian hypothesis is used.
+The corrected-away account04/B01 individual-bank lower-bound claim is not used; only its exact W2 scalar-pivot identity is used.
+PASS
+
+STATUS=PASS

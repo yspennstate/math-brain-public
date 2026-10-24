@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260923T103046Z-account03-B13-qform-r24",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "317f3f9f57ccaf91d0806998c9aee04a9d0eb313",
+  "control_commit_prepublication": "b97015da7b6cc5d00c515d8c508de5693c67db9c",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "native_brain_retrieval_verified": false,
+  "result_ids": [
+    "QFORM-LOCAL-3X3-PRINCIPAL-COMPILER-v1",
+    "QFORM-LOCAL-3X3-BAD-SEQUENCE-REDUCTION-v1"
+  ],
+  "mathematical_result": {
+    "hypothesis": "There is an ORIGINAL-coordinate 3x3 principal block B with sigma_min(B)>=s>0.",
+    "conclusion": "The full ambient quadratic form has an essentially bounded density with norm at most 128*2^(1/4)/s < 152.219/s.",
+    "continuity": "NOT_PROVED_BY_THIS_COMPILATION",
+    "full_qform": "OPEN"
+  },
+  "premises": [
+    {
+      "id": "QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1",
+      "source": "yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md",
+      "scope_used": "rank-three original principal block with nonzero physical diagonal, arbitrary affine terms and outside couplings"
+    },
+    {
+      "id": "QFORM-RANK3-INDEFINITE-PAIR-PIVOT-v1",
+      "source": "yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md",
+      "scope_used": "rank-three original principal block plus invertible indefinite physical pair, arbitrary affine terms and outside couplings"
+    },
+    {
+      "id": "QFORM-UNIT-INDICATOR-CLOSURE-NO-ATTAINMENT",
+      "source": "yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1:proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260922T231352Z-account04-B13-rough-geometric-transfer-r5/REPORT.md",
+      "scope_used": "zero-loss transfer of the new product-set slab inequality to arbitrary cap-one product densities"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b097dc81bae17477b60c3af1a56dc6e434f9998f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T103046Z-account03-B13-qform-r24/REPORT.md",
+    "blob": "9b00e1d6ccf804f51831be0b0251bc1de9d80c47"
+  },
+  "partner_result_applied": {
+    "partner": "account04/B13",
+    "source_commit": "e1a56859520ae79b7a1f049a9eedf41972ddf1e1",
+    "application": "The localized 3x3 theorem gives a product-indicator slab bound; no-attainment purification transfers it to all cap-one marginals with zero constant loss."
+  },
+  "unresolved_implication": "If all ORIGINAL-coordinate 3x3 principal blocks are quantitatively near-singular while A has three eigenvalues of modulus at least one, extract a product-preserving grouped-bank/ridge certificate yielding a linear slab bound without reciprocal tiny-minor loss or perturbative deletion of near-null curvature.",
+  "login_record_status": "BLOCKED_BY_CONNECTOR_SAFETY_CHECK_AFTER_TWO_CREATE_ATTEMPTS",
+  "notifications_changed": false,
+  "email_changed": false,
+  "tasks_or_schedule_changed": false
+}

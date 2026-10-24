@@ -1,0 +1,229 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w385",
+  "bundle_slug": "p0117-adaptive-geodesic-obstructions-w385-001",
+  "entries": [
+    {
+      "key": "bigeodesic",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "injective-bigeodesic-weighted-graph-definition",
+      "kind": "definition",
+      "title": "Injective bigeodesic in a weighted graph",
+      "statement": "For a graph with finite nonnegative edge weights, let T(x,y) be the infimum of the total weights of finite walks from x to y. An injective bigeodesic is a sequence (v_i) indexed by all integers, with distinct vertices and adjacent consecutive vertices, such that the weight of the segment from v_i to v_j equals T(v_i,v_j) for every i<j.",
+      "proof_text": null,
+      "assumptions": [
+        "Graph with finite nonnegative edge weights"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w385:P0117:bigeodesic",
+        "url": "file:///~/brain_workers/w385/INDEPENDENT.md",
+        "revision": "w385-2026-10-10-draft-v1",
+        "license": "owner-own-work (campaign draft; new reductions await independent referee)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "shell-reduction",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "draft-bigeodesic-finite-shell-witness-reduction",
+      "kind": "concept",
+      "title": "Draft reduction of bigeodesics to finite shell witnesses",
+      "statement": "DRAFT: independent verification pending. On nearest-neighbor Z^2 with finite nonnegative edge weights, define S_n={x:||x||_infinity=n}. Let E_n be the existence of a simple geodesic in the full lattice, containing 0, between distinct vertices of S_n. The E_n are decreasing and their intersection is exactly the existence of an injective bigeodesic through 0. Under a translation-invariant law, absence of bigeodesics everywhere is equivalent to P(E_n)->0. This compactness reduction provides no probability decay.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite nonnegative edge weights on Z^2",
+        "Simple geodesics minimize the full-lattice passage metric",
+        "Translation invariance only for the everywhere assertion"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w385:P0117:shell-reduction",
+        "url": "file:///~/brain_workers/w385/INDEPENDENT.md",
+        "revision": "w385-2026-10-10-draft-v1",
+        "license": "owner-own-work (campaign draft; new reductions await independent referee)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "selector",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "draft-adaptive-selector-probability-obstruction",
+      "kind": "concept",
+      "title": "Draft obstruction to applying deterministic bounds to selected endpoints",
+      "statement": "DRAFT: independent verification pending. Let U be uniform on [0,1), J_n=floor(2^n U), and A_(n,k)={J_n=k}, 0<=k<2^n. Every fixed indexed event has probability 2^(-n), while the union over k and the selected event A_(n,J_n) both have probability 1. The selectors are measurable and their partitions refine coherently. Thus a uniform bound for each deterministic endpoint or label cannot be substituted into an environment-selected endpoint or label without a justified conditional estimate or a bound on the union. This is an inference counterexample, not a FPP bigeodesic construction.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform U on [0,1)",
+        "Environment-selected index J_n"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w385:P0117:selector",
+        "url": "file:///~/brain_workers/w385/INDEPENDENT.md",
+        "revision": "w385-2026-10-10-draft-v1",
+        "license": "owner-own-work (campaign draft; new reductions await independent referee)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "max-pair",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "draft-fpp-shell-midpoint-maximum-crossing-lower-bound",
+      "kind": "concept",
+      "title": "Draft crossing lower bound blocks the maximum-pair union route",
+      "statement": "DRAFT: independent verification pending. Under iid finite nonnegative atomless weights on nearest-neighbor Z^2 with E[min(t1,t2,t3,t4)^2]<infinity, define S_n={x:||x||_infinity=n} and q_n=max_{distinct u,v in S_n} P(0 lies on the unique full-lattice geodesic from u to v). There is an integer C>=2 such that (2n+1)q_n+2 sum_{r=n+1}^{Cn}q_r>=1-o(1). Consequently q_n is not o(1/n). The raw shell union bound min(1,binomial(8n,2)q_n) stays equal to 1 along an unbounded sequence. Seeking an o(n^-2) maximum-pair rate cannot rescue that argument. This gives no lower bound on the union event and no existence of bigeodesics.",
+      "proof_text": null,
+      "assumptions": [
+        "Nearest-neighbor undirected Z^2",
+        "Iid finite nonnegative atomless edge weights",
+        "E[min(t1,t2,t3,t4)^2]<infinity for four independent samples"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w385:P0117:max-pair",
+        "url": "file:///~/brain_workers/w385/INDEPENDENT.md",
+        "revision": "w385-2026-10-10-draft-v1",
+        "license": "owner-own-work (campaign draft; new reductions await independent referee)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "box-filtration",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "draft-bigeodesic-adapted-box-witness-reduction",
+      "kind": "concept",
+      "title": "Draft adapted reduction using box minimizers",
+      "statement": "DRAFT: independent verification pending. On nearest-neighbor Z^2 with finite nonnegative weights, let B_n={x:||x||_infinity<=n} and S_n its boundary. Let G_n be the existence of a simple path through 0 between distinct S_n vertices that minimizes passage time among walks restricted to B_n. G_n is measurable from edges inside B_n, is decreasing, and its intersection equals the injective bigeodesic-through-0 event. In the compactness proof every fixed competing finite path eventually lies inside each sufficiently large witnessing box. A conditional annulus survival estimate would still be a separate unproved input; raw independence of annular weights does not supply it.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite nonnegative weights on Z^2",
+        "Box-restricted passage metric"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w385:P0117:box-filtration",
+        "url": "file:///~/brain_workers/w385/ATTEMPT.md",
+        "revision": "w385-2026-10-10-draft-v1",
+        "license": "owner-own-work (campaign draft; new reductions await independent referee)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "box-substitution",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "draft-iid-fpp-box-versus-global-geodesic-counterexample",
+      "kind": "concept",
+      "title": "Draft iid control against substituting box geodesics for global geodesics",
+      "statement": "DRAFT: independent verification pending. For endpoints (-1,0),(1,0), require the two horizontal origin edges to have weights in [0.95,1.05], the ten other edges inside B_1=[-1,1]^2 to have weights in [9,10], and each of the ten exterior edges along (-1,0),(-2,0),(-2,1),(-2,2),(-1,2),(0,2),(1,2),(2,2),(2,1),(2,0),(1,0) to have weights in [0.05,0.1]. Under iid Uniform[0.05,10], this 22-edge cylinder has positive probability. The unique box geodesic passes through 0 with cost at most 2.1, whereas every full-lattice simple path through 0 costs at least 1.9 and an exterior competitor costs at most 1. Therefore no full-lattice geodesic for these endpoints passes through 0. The control refutes a metric substitution, not the no-bigeodesics conjecture.",
+      "proof_text": null,
+      "assumptions": [
+        "Iid Uniform[0.05,10] on nearest-neighbor Z^2",
+        "The specified finite cylinder; all other weights unrestricted"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w385:P0117:box-substitution",
+        "url": "file:///~/brain_workers/w385/ATTEMPT.md",
+        "revision": "w385-2026-10-10-draft-v1",
+        "license": "owner-own-work (campaign draft; new reductions await independent referee)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "direction-limit",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "draft-potential-bigeodesic-arm-direction-limits",
+      "kind": "concept",
+      "title": "Draft direction limits for potential bigeodesic arms",
+      "statement": "DRAFT: independent verification pending. Under iid finite nonnegative atomless weights on nearest-neighbor Z^2 with E[min(t1,t2,t3,t4)^2]<infinity, Ahlberg-Hoffman's fixed differentiability-direction exclusion implies that, on one probability-one event, both arms of every potential injective bigeodesic have direction limits. Intersect exclusions over a deterministic countable dense set of differentiability directions. Each ray escapes finite balls, so angular step sizes vanish and its direction cluster set is compact, nonempty, and connected. A nonsingleton connected cluster set would contain an arc hitting that dense set. Singleton directions may still be environment-selected; neither their simultaneous exclusion nor their antipodality follows here.",
+      "proof_text": null,
+      "assumptions": [
+        "Nearest-neighbor undirected Z^2",
+        "Iid finite nonnegative atomless edge weights",
+        "E[min(t1,t2,t3,t4)^2]<infinity for four independent samples",
+        "Ahlberg-Hoffman Theorem 2.2(b)"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w385:P0117:direction-limit",
+        "url": "file:///~/brain_workers/w385/INDEPENDENT.md",
+        "revision": "w385-2026-10-10-draft-v1",
+        "license": "owner-own-work (campaign draft; new reductions await independent referee)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "ladder-control",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "draft-atomless-iid-ladder-bigeodesic-control",
+      "kind": "concept",
+      "title": "Draft ladder control isolates the full-plane support-collapse input",
+      "statement": "DRAFT: independent verification pending. On the nearest-neighbor ladder Z x {0,1} with iid Uniform[1,2] edge weights, almost surely a bigeodesic uses one of the two edges across the cut between columns 0 and 1. Every geodesic from (-n,0) to (n,0) crosses that finite cut; an infinite subsequence shares one cut edge, and anchored diagonal compactness yields a bigeodesic. By row symmetry each cut edge has bigeodesic probability at least 1/2. Deleting either cut edge leaves the graph connected. Its conditional deleted-edge capacity therefore exceeds the weight support infimum a=1 with positive probability. This is a control outside Z^2, showing that planarity, atomless iid weights, and properness alone cannot establish support collapse; it does not refute P0117.",
+      "proof_text": null,
+      "assumptions": [
+        "Ladder graph Z x {0,1}, not the full Z^2 target",
+        "Iid Uniform[1,2] weights",
+        "Deleted-edge conditional capacity formula"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w385:P0117:ladder-control",
+        "url": "file:///~/brain_workers/w385/ATTEMPT.md",
+        "revision": "w385-2026-10-10-draft-v1",
+        "license": "owner-own-work (campaign draft; new reductions await independent referee)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "shell-reduction",
+      "to_key": "bigeodesic",
+      "kind": "depends_on",
+      "rationale": "The shell compactness statement uses injective bigeodesics and finite-segment minimization."
+    },
+    {
+      "from_key": "max-pair",
+      "to_key": "shell-reduction",
+      "kind": "semantic_association",
+      "rationale": "The crossing lower bound identifies why a raw maximum-pair union estimate cannot close the shell-witness probability decay."
+    },
+    {
+      "from_key": "selector",
+      "to_key": "shell-reduction",
+      "kind": "semantic_association",
+      "rationale": "Shell witnesses may select endpoints from the environment; the selector example explains why fixed-pair bounds do not control their union."
+    },
+    {
+      "from_key": "box-filtration",
+      "to_key": "bigeodesic",
+      "kind": "depends_on",
+      "rationale": "The adapted box-witness intersection is identified with the injective bigeodesic event by global finite-segment minimization."
+    },
+    {
+      "from_key": "box-substitution",
+      "to_key": "box-filtration",
+      "kind": "semantic_association",
+      "rationale": "The local adapted reduction uses a restricted metric; the explicit iid cylinder prevents silently importing a full-lattice midpoint estimate for its minimizers."
+    },
+    {
+      "from_key": "direction-limit",
+      "to_key": "bigeodesic",
+      "kind": "depends_on",
+      "rationale": "The direction-limit reduction concerns both escaping arms of injective bigeodesics."
+    },
+    {
+      "from_key": "ladder-control",
+      "to_key": "bigeodesic",
+      "kind": "depends_on",
+      "rationale": "The graph-general definition makes the ladder control precise while keeping its graph scope separate from Z^2."
+    },
+    {
+      "from_key": "max-pair",
+      "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+      "kind": "semantic_association",
+      "rationale": "The proposed crossing lower bound prunes a fixed-pair union argument for the existing P0117 all-bigeodesics question, in the explicit moment-restricted subcase; it does not resolve or retire the broad question."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "service": "workshop_page",
+    "url": "https://lpetrov.cc/kpz2025/index.html",
+    "date": "2026-10-12",
+    "status": 200,
+    "file": "workshop_page.txt",
+    "bytes": 39197
+  },
+  {
+    "service": "arxiv_removal",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3ATASEP%20AND%20%28all%3Akilling%20OR%20all%3Aremoval%20OR%20all%3Asink%29&max_results=100&sortBy=submittedDate&sortOrder=descending",
+    "date": "2026-10-12",
+    "status": 200,
+    "file": "arxiv_removal.txt",
+    "bytes": 13768
+  },
+  {
+    "service": "arxiv_halfline",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3AASEP%20AND%20%28all%3Asemi-infinite%20OR%20all%3Ahalf-line%29%20AND%20all%3Astationary&max_results=30",
+    "date": "2026-10-12",
+    "status": 200,
+    "file": "arxiv_halfline.txt",
+    "bytes": 8109
+  },
+  {
+    "service": "openalex_retry",
+    "url": "https://api.openalex.org/works?search=TASEP%20killing%20at%20one%20site&per_page=5",
+    "date": "2026-10-12",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "openalex_report_retry",
+    "url": "https://api.openalex.org/works?search=roadtokpzrep&per_page=5",
+    "date": "2026-10-12",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "semantic_retry",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=TASEP%20particle%20removal%20invariant&limit=5&fields=title,year,authors,url",
+    "date": "2026-10-12",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "service": "crossref_target",
+    "url": "https://api.crossref.org/works?query.bibliographic=TASEP%20particle%20removal%20single%20site&rows=20",
+    "date": "2026-10-12",
+    "status": 200,
+    "file": "crossref_target.json",
+    "bytes": 82611
+  },
+  {
+    "service": "github_target",
+    "url": "https://api.github.com/search/repositories?q=TASEP%20stationary&per_page=20",
+    "date": "2026-10-12",
+    "status": 200,
+    "file": "github_target.json",
+    "bytes": 12922
+  }
+]

@@ -1,0 +1,42 @@
+POS3_B19_IDEAL_DP_CERTIFICATE_PASS
+extensions 420
+width 3 inc_connected True mins [0, 1] maxs [7, 8]
+best_balance 1/2 extremal_endpoint_best 43/140
+balanced_pairs [(2, 3, '1/2'), (5, 6, '1/2')]
+min_relevant_max_flux_fraction 11/30 threshold 1/3
+pair_table
+(0, 1, 300, 120, Fraction(5, 7), Fraction(2, 7))
+(1, 2, 291, 129, Fraction(97, 140), Fraction(43, 140))
+(1, 3, 291, 129, Fraction(97, 140), Fraction(43, 140))
+(1, 5, 384, 36, Fraction(32, 35), Fraction(3, 35))
+(1, 6, 384, 36, Fraction(32, 35), Fraction(3, 35))
+(2, 3, 210, 210, Fraction(1, 2), Fraction(1, 2))
+(2, 4, 287, 133, Fraction(41, 60), Fraction(19, 60))
+(2, 6, 350, 70, Fraction(5, 6), Fraction(1, 6))
+(2, 7, 384, 36, Fraction(32, 35), Fraction(3, 35))
+(3, 4, 287, 133, Fraction(41, 60), Fraction(19, 60))
+(3, 5, 350, 70, Fraction(5, 6), Fraction(1, 6))
+(3, 7, 384, 36, Fraction(32, 35), Fraction(3, 35))
+(4, 5, 287, 133, Fraction(41, 60), Fraction(19, 60))
+(4, 6, 287, 133, Fraction(41, 60), Fraction(19, 60))
+(5, 6, 210, 210, Fraction(1, 2), Fraction(1, 2))
+(5, 7, 291, 129, Fraction(97, 140), Fraction(43, 140))
+(6, 7, 291, 129, Fraction(97, 140), Fraction(43, 140))
+(7, 8, 300, 120, Fraction(5, 7), Fraction(2, 7))
+flux_table
+(0, 1, (300, 120, 0, 0), 300, Fraction(5, 7), (1,))
+(1, 0, (120, 171, 93, 36), 171, Fraction(57, 140), (0, 3, 6))
+(1, 2, (291, 93, 36, 0), 291, Fraction(97, 140), (2, 5))
+(2, 0, (0, 210, 140, 70), 210, Fraction(1, 2), (3, 6))
+(2, 1, (129, 158, 97, 36), 158, Fraction(79, 210), (1, 4, 7))
+(3, 1, (129, 158, 97, 36), 158, Fraction(79, 210), (1, 4, 7))
+(3, 2, (210, 140, 70, 0), 210, Fraction(1, 2), (2, 5))
+(4, 0, (0, 133, 154, 133), 154, Fraction(11, 30), (3, 6))
+(4, 2, (133, 154, 133, 0), 154, Fraction(11, 30), (2, 5))
+(5, 0, (0, 70, 140, 210), 210, Fraction(1, 2), (3, 6))
+(5, 1, (36, 97, 158, 129), 158, Fraction(79, 210), (1, 4, 7))
+(6, 1, (36, 97, 158, 129), 158, Fraction(79, 210), (1, 4, 7))
+(6, 2, (70, 140, 210, 0), 210, Fraction(1, 2), (2, 5))
+(7, 0, (0, 36, 93, 291), 291, Fraction(97, 140), (3, 6))
+(7, 2, (36, 93, 171, 120), 171, Fraction(57, 140), (2, 5, 8))
+(8, 1, (0, 0, 120, 300), 300, Fraction(5, 7), (7,))

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account03",
+  "slot": "B05",
+  "run_id": "20260922T140459Z-qform-B05-a03-r11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "source_control_commit_at_start": "c930e7c7079b307fbe1783b30bf3c76c408cfd98",
+  "source_control_commit_prepublication": "fee0c3089f9b2384d0cecd6ded32457c7470d698",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "branch": "master",
+    "commit": "eb233d640e2843d0ab7a9adfbd71a31323757bf2",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260922T140459Z-qform-B05-a03-r11/REPORT.md",
+    "blob": "75291a7708830cc48f9436d861142afa3e4c98de"
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-HIDDEN-BANK-HYPERBOLIC-SQUARE-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "If U,Z are independent and jointly independent of arbitrary (V,S), with scalar marginal density caps M_U,M_V,M_Z, then 2aUV+H(V,S)+b(Z+theta(V,S))^2 has density cap 3*2^(2/3)(M_U M_V M_Z)^(2/3)|a|^(-2/3)|b|^(-1/3)."
+    },
+    {
+      "id": "QFORM-PURE-TRANSVERSE-SUBBANK-COAREA-v1",
+      "status": "PROVED_SUPPORTING_BRANCH",
+      "statement": "In the exact-rank-three heavy-isotropic branch, pure transverse square-bank coefficient norm rho gives density cap 3*2^(4/3)c^(-1/3)rho^(-2/3)|det Lambda|^(-1/3), hence <9.524406312 rho^(-2/3) under c>1/2 and target normalization."
+    }
+  ],
+  "peer_result_applied": {
+    "worker": "account04/B20",
+    "id": "QFORM-AGGREGATE-HYPERBOLIC-SQUARE-v1",
+    "source": "yspennstate/math-open-problems@c233995d6abf7574b8b1a876cac244b1b91e3c38:proofnet24/QFORM-density/fleet-2026-09-22/account04/B20/20260922T132134Z-account04-B20-QFORM-r1/REPORT.md",
+    "actual_application": "Applied to the fully separated heavy-isotropic bank to obtain 4*2^(3/4)c^(-1/4)rho^(-1)/sqrt(B|tau|), exposing the anisotropy tax repaired by the new near/far split."
+  },
+  "other_dependencies": [
+    "account02/B04 QFORM-LINEAR-FORM-L2-CAP-v1 @ f1c1b2dd3a0b2ca4c821505d6ae9100f30383906",
+    "account02/B10 QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1 @ 11c9ae19edfd07e3a0bd4053a910667c20e721ab",
+    "prior account03/B05 universal rank-two half-Riesz theorem @ bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409"
+  ],
+  "assigned_partner": {
+    "worker": "account04/B05",
+    "completed_current_qform_artifact_observed": false,
+    "note": "Canonical proof and shared handoff roots were absent at the prepublication check; no result was fabricated."
+  },
+  "unresolved_implication": "QFORM-ISOTROPIC-MIXED-TRANSVERSE-BANK-v1: control the heavy-isotropic state when pure transverse mass rho_pure is arbitrarily small or zero, so square/leakage/hyperbolic coefficient directions overlap on the same original coordinates.",
+  "separate_later_debt": "Arbitrary extra nonseparable spectral directions beyond exact rank three.",
+  "continuity_status": "NOT_PROVED_BY_THIS_RESULT",
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "next_step": "Seek a product-origin two-bank coarea inequality using the Parseval orthogonality of the overlapping coefficient triples, without conditional-cap substitution or inverse local-minor averaging."
+}

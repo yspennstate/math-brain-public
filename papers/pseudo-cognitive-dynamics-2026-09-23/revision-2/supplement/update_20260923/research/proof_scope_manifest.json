@@ -1,0 +1,110 @@
+{
+  "review_date": "2026-09-23",
+  "primary_snapshot": "yspennstate/math-open-problems@24597f0dcc3cc32d81fd8f22b13903f636460396",
+  "previous_snapshot": "yspennstate/math-open-problems@b4745ece98fa3839cf7afe35d829d08384c815b4",
+  "broad_memory_snapshot": "<private-repo>@9c754d786b3a0ea4943da0585d1490c13cd9ef99",
+  "review_kind": "Focused source and analytic-step review; no independent certification of the entire research programme; no formal build replay",
+  "claims": [
+    {
+      "id": "qform_fixed_dimension",
+      "result": "||p_Q||infinity <= 2 sqrt(6 pi n)/s3(sym(B))",
+      "hypotheses": [
+        "Independent coordinate laws with densities <=1",
+        "s3(sym(B))>0",
+        "Arbitrary real B and arbitrary affine terms"
+      ],
+      "source": "sources/manuscript/structure.tex",
+      "source_labels": [
+        "thm:projected-gradient-slicing",
+        "thm:finite-dimension"
+      ],
+      "review_status": "Analytic proof interface and quantifiers checked",
+      "new_since_previous_snapshot": false,
+      "scope_limit": "Dimension dependent; distinct from fixed-matrix continuity and dimension-independent conjecture"
+    },
+    {
+      "id": "qform_shift_l2",
+      "result": "||k_(L[H+u(L,P)],V)||_2^2 <= 4M",
+      "hypotheses": [
+        "H independent of (L,V,P)",
+        "H has cap-one probability density",
+        "(L,V) has joint probability density <=M",
+        "u real-valued measurable"
+      ],
+      "source": "sources/20260923T200500Z-shift-stable-product-l2.md",
+      "review_status": "Full short Tonelli/collision/layer-cake argument checked",
+      "new_since_previous_snapshot": true,
+      "scope_limit": "Does not control restriction of k to parabola; does not establish bounded density of Q=2Z+V^2"
+    },
+    {
+      "id": "qform_independent_hub",
+      "result": "||p_(2tHL+beta L^2+lambda V^2)||infinity <= 1/2 +4 sqrt(2)M/(|t|sqrt(|lambda|))",
+      "hypotheses": [
+        "t lambda !=0",
+        "H independent of (L,V)",
+        "H density <=1",
+        "(L,V) joint density <=M"
+      ],
+      "source": "sources/20260923T203100Z-beta-uniform-one-hub-square.md",
+      "review_status": "Full short two-region analytic argument checked",
+      "new_since_previous_snapshot": true,
+      "scope_limit": "Arbitrary beta and deterministic affine terms allowed; dependent third projection 2epsilon LP excluded"
+    },
+    {
+      "id": "qform_hub_window",
+      "result": "13.9 bound for specified single-hub window-law class when |lambda|>=1",
+      "source": "sources/qform_hub_report.md",
+      "source_labels": [
+        "Proposition 5.5"
+      ],
+      "review_status": "Statement and direct min-kernel integration checked; separate tilt input treated as source theorem",
+      "scope_limit": "Unit-window mixture/support assumptions on specified original coordinates retained; not arbitrary rough cap-one product laws"
+    },
+    {
+      "id": "fei_threshold760",
+      "result": "Biased FEI+ <=526(I_mu-Var_mu) nats; <=760 bits for unweighted threshold gates; read-once formula composition",
+      "source": "sources/fei_paper.tex",
+      "source_labels": [
+        "prop:thr-general",
+        "thm:thr-strong",
+        "cor:thr-formula"
+      ],
+      "hypotheses": [
+        "Unweighted thresholds T_t,r",
+        "Product measure with q_j in (0,1)",
+        "Squared Fourier coefficients of the +/-1 coding in orthonormal biased basis",
+        "Composition uses disjoint variable sets/read-once formulas"
+      ],
+      "review_status": "Exact statement, central case split and composition interface inspected; complete 30-page analytic proof and novelty not independently certified",
+      "new_since_previous_snapshot": false,
+      "scope_limit": "Does not establish biased FEI+ for general weighted LTFs or full FEI"
+    },
+    {
+      "id": "fei_scalar_lean",
+      "result": "phi_s((a+b)^2) <=2phi_s(a^2)+2phi_s(b^2)+2a^2+2b^2",
+      "source": "sources/fei_lean.lean",
+      "hypotheses": [
+        "s>0",
+        "a^2<=s",
+        "b^2<=s"
+      ],
+      "review_status": "Source inspected, explicit assumptions and no sorry/admit; reported compile success not replayed",
+      "scope_limit": "Scalar helper only, no full FEI formalization"
+    },
+    {
+      "id": "fei_card_section29",
+      "result": "Further slice constants 7.04,7.35 and candidate15.6 bits",
+      "source": "sources/broad/fei_readk_dnf_theorem_2026_09_23.md",
+      "review_status": "Memory-only claim not promoted",
+      "scope_limit": "Pinned underlying REPORT ends at Section28 and paper lacks these later statements"
+    },
+    {
+      "id": "planar_l2_counterexample",
+      "result": "Probability density k_epsilon with L2^2<=2 but density of 2Z+V^2 >=1/(2sqrt(epsilon))",
+      "source": "update_research.tex",
+      "review_status": "Direct independent Jacobian/mass/norm/pushforward calculation verified",
+      "provenance": "Constructed in this paper update, proposed by parent and independently checked",
+      "scope_limit": "General planar law; not shown to arise from independent-hub construction; not a counterexample to product-law QFORM"
+    }
+  ]
+}

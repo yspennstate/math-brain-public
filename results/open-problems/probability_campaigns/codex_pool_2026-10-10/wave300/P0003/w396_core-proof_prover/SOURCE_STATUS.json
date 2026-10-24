@@ -1,0 +1,136 @@
+{
+  "target": "P0003",
+  "title": "Hexagonal self-avoiding-walk scaling limit",
+  "dated_ranking": "2026-09-07",
+  "checked_at": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "proof_status": "full_target_not_proved; finite_lemmas_written_and_unreviewed",
+  "target_source": "Grimmett, arXiv:2205.07318v1, Question 2.2, printed p.3",
+  "target_conventions": {
+    "source": "uniform n-step walks from honeycomb origin, free endpoint; suitable rescaling; source does not fully specify continuum normalization/stopping/topology",
+    "related_route": "critical all-length boundary-to-boundary ensemble; no transfer theorem proved",
+    "working_scale": "n^(-3/4) for H_disk, expressly conjectural"
+  },
+  "sources": [
+    {
+      "id": "grimmett-original-target",
+      "url": "https://arxiv.org/abs/2205.07318",
+      "revision": "v1, 2022-05-15",
+      "locator": "Question 2.2, printed p.3",
+      "quote": "when suitably rescaled",
+      "supports": "Original uniform fixed-length origin/free-endpoint catalog target",
+      "source_verified": true,
+      "mathematical_proof_of_target": false
+    },
+    {
+      "id": "bdgs-saw-lectures",
+      "url": "https://arxiv.org/abs/1206.2092",
+      "locator": "Conjecture 1.5, printed p.9; Section 3.3, printed p.23",
+      "supports": "Original critical boundary-to-boundary conjecture and explicit honeycomb restatement",
+      "quote": "the random curve",
+      "authority": "primary paper",
+      "source_verified": true,
+      "mathematical_proof_of_target": false
+    },
+    {
+      "id": "dcs-honeycomb-constant",
+      "url": "https://arxiv.org/abs/1007.0575",
+      "revision": "v2, 2011-06-27",
+      "locator": "Theorem 1; Sections 2 and 4",
+      "supports": "Critical fugacity (2+sqrt(2))^{-1/2}; local observable relation; scaling-limit question remains separate",
+      "quote": "half of the discrete Cauchy-Riemann relations",
+      "authority": "primary paper",
+      "source_verified": true,
+      "mathematical_proof_of_target": false
+    },
+    {
+      "id": "lsw-planar-saw",
+      "url": "https://arxiv.org/abs/math/0204277",
+      "revision": "v2, 2002-04-26",
+      "locator": "Sections 3.4.1, 3.4.2, 3.4.5, and 4.1",
+      "supports": "All-length ensemble, reparametrization topology, and conditional scaling-limit route",
+      "quote": "curves modulo parametrization",
+      "authority": "primary paper",
+      "source_verified": true,
+      "mathematical_proof_of_target": false
+    },
+    {
+      "id": "lsw-chordal-restriction",
+      "url": "https://arxiv.org/abs/math/0209343",
+      "locator": "Lemma 3.2 (uniqueness); Theorem 6.1 (SLE avoidance formula)",
+      "supports": "Identification of the 5/8 restriction measure with SLE(8/3), conditional on correct restriction-class hypotheses",
+      "quote": "The law of",
+      "authority": "primary paper",
+      "source_verified": true,
+      "mathematical_proof_of_target": false
+    }
+  ],
+  "local_prior_evidence": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "locator": "row containing P0003",
+      "finding": "tier 5, attempted_un; historical metadata only"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/batch_C002.py",
+      "locator": "C0095 attempt and C0096 dedup note, lines 280-294",
+      "finding": "C0096 n=0 critical case is P0003; C0095 a priori bounds are not proved; these are unreviewed attempt prose"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_attempts_H_20260912",
+      "finding": "No exact P0003 match in targeted ID search; not evidence of absence from all owner work"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_attempts_I_20260914",
+      "finding": "No exact P0003 match in targeted ID search; not evidence of absence from all owner work"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md",
+      "locator": "P0003 ranking row",
+      "finding": "No actual P0003 formal theorem or axiom receipt recovered"
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "locator": "C0095 and C0096 rows",
+      "finding": "Observable lane already assigned; this packet narrows to collar-error control"
+    },
+    {
+      "path": "~/brain_workers/w399/STATUS.md",
+      "finding": "Basic obstacle partition identity lane is separate peer work; used as background here"
+    }
+  ],
+  "memory_scars": [
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "the_math_brain_cannot_serve_a_number_it_cannot_tokenize_2026_09_05",
+    "the_saw_family_is_the_generator_10_of_10_admitted_2026_08_30",
+    "two_served_math_statements_are_false_and_nobody_had_ever_read_one_2026_09_15"
+  ],
+  "recent_literature_check": "Targeted public searches found older primary formulations and recent pointers to exponent claims, but no inspected primary proof certifying the full chordal target. No present-openness or novelty claim follows.",
+  "owner_solved_retired_check": "Named local prior locations and percolation-project SAW filenames were checked narrowly; the complete solved/retired owner registry was not recovered. Verification remains incomplete.",
+  "hardest_gap": "H_disk: the explicitly stated fixed-length positive disk-collar count estimate",
+  "additional_unproved_prerequisites": [
+    "length-resolved conformal identification H_len",
+    "ordered-curve tightness",
+    "scale/continuum stopping convention",
+    "interior simplicity/Loewner regularity",
+    "all-length/fixed-length transfer if the chordal route is used",
+    "H_5/8 for the related chordal route"
+  ],
+  "formal_check": {
+    "performed": false,
+    "theorem": null,
+    "assumptions": null,
+    "trusted_axioms": null,
+    "admits_count": null
+  },
+  "submitted": true,
+  "reviewed": true,
+  "ingested": false,
+  "retrievable": false,
+  "review_requested": true,
+  "review_request_message_id": "msg-13de88a071",
+  "peer_review_received": true,
+  "peer_review_source": "~/brain_workers/w397/REVIEW_w396_proof.md",
+  "review_status": "One peer KEEP on finite lemmas; assigned referee and cross-login admission pending",
+  "assigned_referee_review_received": false
+}

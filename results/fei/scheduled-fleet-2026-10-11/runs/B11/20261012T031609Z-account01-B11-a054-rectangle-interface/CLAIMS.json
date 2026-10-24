@@ -1,0 +1,48 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B11-A054-RECTANGLE-INTERFACE",
+      "version": 1,
+      "packet_id": "A054",
+      "attempt_id": "A054-RECTANGLE-INTERFACE-1",
+      "gap_id": "G-CRITICAL-INTERFACE",
+      "exact_statement": "For every descendant-critical Boolean f on N uniform physical bits, every nontrivial physical cut A|B with a=|A| and multiplicative rectangle defect rho_A(f)<=1/16 admits Boolean factors u on A and v on B with epsilon=Pr[f!=uv]<=rho such that R(f)I(u)-H(u)<=2h_2(2sqrt(rho))+(2N-a)2sqrt(rho)+6aN rho; symmetrically for v. If J=I_A(f)>0, 0<kappa<=1 and t=2sqrt(rho)<=min{kappa^2J^2/144,kappa J/(6N),sqrt(2kappa J/(9aN))}, then I(u)>=(1-kappa/(9N))J>=8J/9 and R(u)>=R(f)-9kappa/8.",
+      "hypotheses": [
+        "Finite uniform product cube",
+        "Genuine {-1,1}-valued Boolean function",
+        "Descendant-criticality under every nonconstant physical restriction",
+        "Nontrivial disjoint physical cut A|B",
+        "Base-two Fourier entropy",
+        "rho<=1/16 for the controlled-excess statement",
+        "The three displayed small-interface inequalities for the influence-paid corollary"
+      ],
+      "statement_sha256": "96740f9d07f19486326f701efd6f0a358b63ebe6289e443469a36da3748a1132",
+      "contributors": ["ACCOUNT01/B11"],
+      "proof_source": "COMPONENT_EXCESS.tex",
+      "proof_dependencies": [
+        "B11-A053-HI-NEARTENSOR-SEPARATION-v1 (pending independent review)",
+        "B11-A052-CRITICAL-SLACK-v1 for the admitted criticality notion",
+        "Elementary rectangle anchoring identity proved in COMPONENT_EXCESS.tex",
+        "Elementary spectral bound H/I<=3N proved in COMPONENT_EXCESS.tex"
+      ],
+      "review_records": [],
+      "status": "PROVED_CONTROLLED_EXCESS_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "A low multiplicative rectangle interface need not expose a genuine Boolean product approximation",
+        "Only qualitative tensor primitivity can be extracted from rectangle tests"
+      ],
+      "first_unproved_line": "Every descendant-critical high-ratio Boolean source admits a nontrivial physical cut satisfying the paid-interface smallness criterion.",
+      "scope_exclusions": [
+        "Not full FEI",
+        "Does not prove universal admission of a paid cut",
+        "Does not assert raw support-component entropy subadditivity",
+        "Does not assert maximum support-component ratio pruning",
+        "Does not bound a prime source with every rectangle interface large",
+        "Independent review pending; the A053 dependency is also pending review"
+      ],
+      "next_consumers": ["A052", "A055", "A090", "A094", "A096", "B20"]
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w451",
+  "bundle_slug": "rwre-c0041-sharp-boundary-audit-20261010",
+  "entries": [
+    {
+      "key": "homogeneous",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "rwre-fixed-ellipticity-no-uniform-speed-bound",
+      "kind": "concept",
+      "title": "Fixed ellipticity permits arbitrarily small positive speeds",
+      "statement": "DRAFT audit material; independent review pending. Fix d>=2, b=1/(2d), kappa=1/(4d), and 0<epsilon<=kappa. At every site take probabilities b+epsilon for +e1, b-epsilon for -e1 and b in every other direction. This deterministic product environment is site iid and UE with the fixed bound kappa. Its walk has velocity 2epsilon e1 and E T_1=1/(2epsilon), where T_1 is first arrival at projected height one. Thus a law-independent positive speed lower bound or finite crossing-mean upper bound depending only on d,kappa is impossible.",
+      "proof_text": null,
+      "assumptions": [
+        "Author derivation at w451/INDEPENDENT_BOUNDARY.md",
+        "Not a proof or refutation of C0041",
+        "Different-model promotion gate not verified"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w451:C0041-boundary:homogeneous",
+        "url": "file:///~/brain_workers/w451/INDEPENDENT_BOUNDARY.md",
+        "revision": "campaign-2026-10-10-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "uniform-bridge",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "rwre-law-independent-speed-bridge-is-false",
+      "kind": "concept",
+      "title": "Invalid uniform speed bridge",
+      "statement": "DRAFT audit material; independent review pending. The auxiliary assertion that there exists c(d,kappa)>0 such that every directionally transient site-iid UE nearest-neighbor law on Z^d has directional speed at least c(d,kappa) is false. The homogeneous epsilon family at fixed kappa=1/(4d) has speed 2epsilon decreasing to zero. The qualitative C0041 implication for each individual law is a distinct assertion.",
+      "proof_text": null,
+      "assumptions": [
+        "Author derivation at w451/INDEPENDENT_BOUNDARY.md",
+        "Not a proof or refutation of C0041",
+        "Different-model promotion gate not verified"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w451:C0041-boundary:uniform-bridge",
+        "url": "file:///~/brain_workers/w451/INDEPENDENT_BOUNDARY.md",
+        "revision": "campaign-2026-10-10-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "critical",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "rwre-critical-two-point-infinite-crossing-mean",
+      "kind": "concept",
+      "title": "Critical two-point crossing mean",
+      "statement": "DRAFT audit material; independent review pending. In dimension one let site right-jump probabilities be iid, equal to 3/4 with probability 3/4 and 1/4 otherwise. The walk is UE, transient to the right, and has zero speed. For rho=(1-p)/p, E log rho=-(log3)/2 and E rho=1. The first crossing expectation has lower bound E T_1>=2L+1 for every integer L>=1, hence is infinite. A geometric-excursion recursion yields the bound; a stationary ergodic argument with truncated, generally dependent crossing durations gives zero speed. Dimension one is outside C0041.",
+      "proof_text": null,
+      "assumptions": [
+        "Author derivation at w451/INDEPENDENT_BOUNDARY.md",
+        "Not a proof or refutation of C0041",
+        "Different-model promotion gate not verified"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w451:C0041-boundary:critical",
+        "url": "file:///~/brain_workers/w451/INDEPENDENT_BOUNDARY.md",
+        "revision": "campaign-2026-10-10-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "layered",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "rwre-layered-zero-speed-counterexample-needs-site-iid",
+      "kind": "concept",
+      "title": "Layered lift loses site independence",
+      "statement": "DRAFT audit material; independent review pending. For d>=2 let p_i be the critical iid sequence from the preceding construction and define omega(x,+e1)=p_x1/2, omega(x,-e1)=(1-p_x1)/2, and omega(x,+/-ej)=1/[4(d-1)] for j>=2. This nearest-neighbor environment is stationary and ergodic under the full translation group and UE with lower bound min(1/8,1/[4(d-1)]). The walk is directionally transient in e1 and has zero vector speed despite raw mean local e1 drift 1/8. It is not site iid: two different sites sharing x1 have favorable-type indicator covariance 3/16. An independent Bernoulli axial clock reduces the first coordinate to the one-dimensional example.",
+      "proof_text": null,
+      "assumptions": [
+        "Author derivation at w451/INDEPENDENT_BOUNDARY.md",
+        "Not a proof or refutation of C0041",
+        "Different-model promotion gate not verified"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w451:C0041-boundary:layered",
+        "url": "file:///~/brain_workers/w451/INDEPENDENT_BOUNDARY.md",
+        "revision": "campaign-2026-10-10-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "ergodic-bridge",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "rwre-ergodic-transience-ballisticity-bridge-is-false",
+      "kind": "concept",
+      "title": "Stationary ergodicity does not replace site iid",
+      "statement": "DRAFT audit material; independent review pending. The stronger auxiliary statement that UE and stationary ergodicity under the full translation group suffice to turn directional transience into positive speed in d>=2 is false. The critical layered law above is transient with zero speed. Shared layer variables violate site independence, so this is not a counterexample to C0041's iid-site statement.",
+      "proof_text": null,
+      "assumptions": [
+        "Author derivation at w451/INDEPENDENT_BOUNDARY.md",
+        "Not a proof or refutation of C0041",
+        "Different-model promotion gate not verified"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w451:C0041-boundary:ergodic-bridge",
+        "url": "file:///~/brain_workers/w451/INDEPENDENT_BOUNDARY.md",
+        "revision": "campaign-2026-10-10-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "rwre-directional-regeneration-integrability-audit-gap",
+      "kind": "concept",
+      "title": "Directional regeneration integrability audit boundary",
+      "statement": "DRAFT audit material; independent review pending. A directional-transience proof must distinguish finite regeneration times almost surely from finite conditional mean duration E0[tau_1|D=infinity], where D is first backtracking below the starting height. The classical renewal formula gives positive directional speed when that mean is finite. C0041's precise site-iid UE d>=2 implication has a September-23-2026 public resolution claim, not independently validated in this packet; its decisive small-quenched-crossing-probability estimate is the next mathematical proof gate. Source status is UNKNOWN, not certified open.",
+      "proof_text": null,
+      "assumptions": [
+        "Author derivation at w451/INDEPENDENT_BOUNDARY.md",
+        "Not a proof or refutation of C0041",
+        "Different-model promotion gate not verified"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w451:C0041-boundary:gap",
+        "url": "file:///~/brain_workers/w451/INDEPENDENT_BOUNDARY.md",
+        "revision": "campaign-2026-10-10-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "homogeneous",
+      "to_key": "uniform-bridge",
+      "kind": "refutes",
+      "rationale": "The explicit product point-mass laws keep d,kappa fixed while their speed tends to zero."
+    },
+    {
+      "from_key": "layered",
+      "to_key": "critical",
+      "kind": "depends_on",
+      "rationale": "The axial coordinate at Bernoulli clock times is the critical one-dimensional walk."
+    },
+    {
+      "from_key": "layered",
+      "to_key": "ergodic-bridge",
+      "kind": "refutes",
+      "rationale": "The full-group ergodic UE construction escapes directionally with zero speed and has covariance 3/16 across same-layer sites."
+    },
+    {
+      "from_key": "homogeneous",
+      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0041-transience-in-a-direction-implies-ballisticity-for-uniformly-elliptic",
+      "kind": "semantic_association",
+      "rationale": "The family satisfies the target's exact hypotheses and restricts any attempted quantitative speed constant."
+    },
+    {
+      "from_key": "layered",
+      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0041-transience-in-a-direction-implies-ballisticity-for-uniformly-elliptic",
+      "kind": "analogous_to",
+      "rationale": "The target conclusion fails after site iid is replaced by full-group stationary ergodicity; the missing premise is explicit."
+    },
+    {
+      "from_key": "gap",
+      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0041-transience-in-a-direction-implies-ballisticity-for-uniformly-elliptic",
+      "kind": "semantic_association",
+      "rationale": "The original target and the new public claim share the regeneration-duration proof gate."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B16",
+  "run_id": "account02-B16-20260923T153432Z-auto11",
+  "title": "Projection-product interaction",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "control_commit_initial": "729f80e44d0c5caa2d6b83817238e860da953335",
+  "control_commit_prepublication_refresh": "63e67e5b28987d238d1760d0a604d1b622643180",
+  "pinned_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "paths": [
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+    ],
+    "completed_result_actually_used": "two-dimensional orthonormal product projection has joint density cap <=2; pinned twisted Lp Fourier estimate; ruled theorem C applied on one-sheet Walsh levels"
+  },
+  "partner_applied": {
+    "worker": "account03/B16",
+    "run_id": "20260923T132339Z-account03-B16-QFORM-r29",
+    "report_commit": "4da4d30d980b1eafd4074401ff0e4727abefc524",
+    "result_ids": [
+      "QFORM-TRUE-NEARCOLOOP-PAIR-OR-SUPERDIFFUSE-STAR-v1",
+      "QFORM-SUPERDIFFUSE-STAR-80-BANKS-v1"
+    ],
+    "actual_use": "new cross2 and transverse-curvature compilers are stated against r29's true-near-coloop 80-bank same-side-curvature survivor"
+  },
+  "correction_boundaries_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "new_result_ids": [
+    "QFORM-CROSS2-ARBITRARY-SELFBLOCK-L32-v1",
+    "QFORM-CROSS2-PLUS-FRESH-SQUARE-v1",
+    "QFORM-PROJECTED-2HUB-TRANSVERSE-LOWRANK-SIDE-v1",
+    "QFORM-WALSH-EVERY-BANK-NONDIAGONAL-v1"
+  ],
+  "main_inequalities": [
+    "rank2 cross arbitrary self blocks: |phi(t)| <= min(1,2pi/(|t|sqrt(s1s2))) and int|phi|^(3/2)<=12pi/sqrt(s1s2)",
+    "fresh source square cap L: ||p_Q||inf <= 900^(1/3)L^(2/3)(|lambda|s1s2)^(-1/3)",
+    "diagonal+rank-r transverse side: ||p_Q||inf <= 4(r+4)/(r+2) 2^(-2/(r+4)) [(prod|lambda_l|)det G]^(-1/(r+4))",
+    "Walsh r29-sized banks: ||A_BB-diag(A_BB)||op >1/320 for m>=512 and |B|/m>=1/120"
+  ],
+  "target_valid_application": "diffuse rank2 cross with s1=s2=2, arbitrary same-side blocks of operator norm <=1/2, and one fresh unit square has >=3 eigenvalues of modulus >=1 and density <6.083 for all cap-one product inputs",
+  "stress_family_status": "fully shared Walsh exact-rank-three family has spectrum {1,-1,1}, lies inside r29 superdiffuse gates, admits no diagonal-side rank2 physical cut and no lone physical fresh square, yet prior source-bank grouping bounds its full density by <27.015; therefore this is a mechanism obstruction, not a counterexample",
+  "continuity_status": "PROVED_ON_FRESH_SQUARE_AND_TRANSVERSE_LOWRANK_BRANCHES; NOT_CLAIMED_FROM_BARE_L32; FULL_TARGET_OPEN",
+  "first_unpaid_implication": "QFORM-SUPERDIFFUSE-OVERLAP-HALFPOWER-TRANSDUCER-v1",
+  "next_step": "Use the r29 80 genuine source banks to extract an aggregate L3 quadratic factor, or retain the relative phase of cross-rank2 oscillation and coefficient-wise overlapping same-bank curvature long enough to upgrade the L^(3/2) estimate to L1 without projected independence or conditional caps.",
+  "math_repository": "yspennstate/math-open-problems",
+  "math_report_commit": "44bff195ea0a90c3fe24628eb2cf3b405368c37c",
+  "math_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/account02-B16-20260923T153432Z-auto11/REPORT.md",
+  "partial_commit": "1aa7d8dbd15178829c68cd8b8e652e641c0654c9",
+  "handoff_commit": "08458757b134d3a971c08d152fffe96fdedc6ca2",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B16/account02-B16-20260923T153432Z-auto11.md",
+  "execution_memory": "AUTHENTICATED_REPOSITORY_BRAIN_READ_WRITE_VERIFIED",
+  "native_learned_memory_connected": "UNKNOWN_NOT_ASSERTED",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

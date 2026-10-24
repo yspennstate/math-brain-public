@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "run_id": "20260925T113040Z-account02-B16-repaired-audit",
+  "verdict": "NO_FATAL_DEFECT_FOUND",
+  "source": {
+    "commit": "4e530247ec0ef4101a6e5ecf621bd35a969c42aa",
+    "blob": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+    "sha256_recomputed": "90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb",
+    "bytes": 61567,
+    "physical_lines": 683,
+    "proofs": 26
+  },
+  "pass1": "complete forward/source-order reconstruction, starting with required s3 and random-sign lenses",
+  "pass2": "complete reverse-dependency/structural pass from main theorem back through half-potential, pivots, random signs, decay compiler, projections and preliminaries; all 50 labels/89 refs and 11 bib keys/12 cites checked for dangling/duplicate references",
+  "structural": {
+    "duplicate_labels": [],
+    "missing_refs": [],
+    "missing_citations": [],
+    "environment_errors": [],
+    "unused_labels": [
+      "sec:intro",
+      "eq:decay",
+      "eq:logmoment",
+      "lem:kernels",
+      "eq:boundedhalf",
+      "def:pivot"
+    ]
+  },
+  "math": {
+    "gamma1": 0.3846763769597346,
+    "gamma2": 0.23736246421253723,
+    "gamma3": 0.09004855146533981,
+    "C3": 14.818337662843,
+    "C2": 12.095072570796486,
+    "C3_over_gamma3": 164.55942290805933,
+    "C2_over_sqrt_gamma2": 24.82575456311178,
+    "diagonal_half_inside": 75.14307501039998,
+    "diagonal_half_total": 76.14307501039998,
+    "diagonal_density": 266.7358243656071,
+    "definite_pair_density": 50.26548245743669,
+    "indefinite_pair_density": 266.95134633033405,
+    "exact_margins": {
+      "C3_power": "40788279/1024",
+      "C2_power": "4302512997281/390625",
+      "concentration_19": "39009533/78125",
+      "sqrt2": "24449/100000000",
+      "half_inside": "59/1250",
+      "diag_267": "39/200",
+      "indef_269": "4469/16875"
+    }
+  },
+  "key_results": {
+    "projection_product": "PASS: literal original-coordinate copies only; total-variation domination before Plancherel; one JOINT projected-density bound in Step 4; no projected-coordinate independence.",
+    "random_signs": "PASS: exactly two ordered fourth-moment pairings; Frobenius factor 2; exact C block singular-value duplication incl. zero padding; compression direction correct.",
+    "s3_halfpotential": "PASS: no-pivot <26; pair pivot 64; diagonal pivot inside <76 plus outside <=1, hence <77.",
+    "main": "PASS: no pivot <167; diagonal <267; definite pair <51; indefinite pair <269; scaling gives K^2/s and K/sqrt(s)."
+  },
+  "repairs_blob": "1c4abce8bc35da16c438f197439ba3eb4f71d59b",
+  "proof_spans_blob": "b99410428e03f227b9dfe35a9eedd2f8c23e2f23",
+  "coverage_blobs": [
+    "f953e3d6d5f31597fdc725f8494c4f879afa746e",
+    "a522e7b83c15b908bb142a194b53ac8828a11126",
+    "07e07b3e5ddb346cfd0713bc07cef86f93409c79",
+    "afcaf9c1f0fa28b3b323e3b6d80dc8d3f4a27662"
+  ],
+  "unchecked": {
+    "pdf_page_map": "Reference 15-page PDF was not found in current conversation or Library after exact-title/hash search; page numbers intentionally null, not guessed.",
+    "fresh_lean_build": "Not run and not used as premise.",
+    "external_attributions": "Line 74 and bibliography received fresh primary/publisher spot checks, but the full attribution bundle was not exhaustively source-verified."
+  },
+  "provenance_note": "REPAIRS.md/MANIFEST.json/build.sh are absent at exact mathematical source commit 4e530247; later default-branch metadata was read while keeping paper.tex pinned."
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "fei-case-extension/1",
+  "run_id": "20261013T170839Z-account01-B01-balanced-activation-credit-a003",
+  "primary_packet_id": "A003",
+  "starting_class": "Fresh half-activations of balanced odd-majority cores, with an asymptotic logarithmic surcharge.",
+  "new_class": "Fresh half-activations of arbitrary balanced Boolean cores in every finite dimension.",
+  "exact_quantifiers": "For every n>=1 and every balanced Boolean g:{-1,1}^n->{-1,1}.",
+  "prior_bound": "G(F)-G(g)/2=(1/pi)log2(n)+O(1) for odd majority.",
+  "new_bound": "G(F)-G(g)/2<=1+c1 I(g), c1=9/(8 ln2)-1/2+1/(e ln2).",
+  "parameter_dependence": {
+    "dimension": "none",
+    "bias": "core bias fixed at zero; selector probability fixed at one half",
+    "depth": "one activation only",
+    "address_count": "one fresh selector",
+    "overlap": "fresh selector disjoint from core inputs",
+    "core_fourier_pattern": "arbitrary genuine Boolean spectrum"
+  },
+  "proof_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "universal_gap": "Prevent reuse of the same physical child influence when the logarithmic credit is transported through multiple coherent activation ancestors.",
+  "next_action": "Prove or falsify first-activating-ancestor ownership for L1+c0 W1 on a two-level balanced activation.",
+  "consumers": ["B05", "B18", "B20", "A005", "A087"],
+  "reviewers": ["A086", "A094"]
+}

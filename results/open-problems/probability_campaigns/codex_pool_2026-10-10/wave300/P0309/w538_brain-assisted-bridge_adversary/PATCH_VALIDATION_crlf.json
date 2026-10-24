@@ -1,0 +1,17 @@
+{
+  "check_command": [
+    "git",
+    "apply",
+    "--no-index",
+    "--check",
+    "--directory=validation/patch_target",
+    "~\\brain_workers\\w538\\patches\\01_riesz_scope_warning.diff"
+  ],
+  "check_returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "apply_returncode": 0,
+  "apply_stdout": "",
+  "apply_stderr": "~/brain_workers/w538/patches/01_riesz_scope_warning.diff:6: trailing whitespace.\n\"\"\"Proposed warning only; no live recall wiring or score changes.\"\"\"\n~/brain_workers/w538/patches/01_riesz_scope_warning.diff:7: trailing whitespace.\nimport re\n~/brain_workers/w538/patches/01_riesz_scope_warning.diff:8: trailing whitespace.\n\n~/brain_workers/w538/patches/01_riesz_scope_warning.diff:9: trailing whitespace.\ndef _plain(text):\n~/brain_workers/w538/patches/01_riesz_scope_warning.diff:10: trailing whitespace.\n    return re.sub(r'[_-]+', ' ', text.casefold())\nwarning: squelched 16 whitespace errors\nwarning: 21 lines add whitespace errors.\n",
+  "content_matches": true
+}

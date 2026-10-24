@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260923T215543Z-account01-B18-qform-auto11-r40",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_observed_at_start": "e4ed831a6d0f47cc7670880ff52104db9a92cf31",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-NEARZERO-ARBITRARY-REMAINDER-EXTENSION-FALSE-v1"
+  ],
+  "primary_sources": [
+    {
+      "citation": "Livshyts--Paouris--Pivovarov, On sharp bounds for marginal densities of product measures, Israel J. Math. 216 (2016), Theorem 1.1, arXiv:1507.07949",
+      "scope_used": "genuine cap-one product inputs; k-dimensional orthogonal marginal density <=2^(k/2); scalar consequence ||p_(g dot X)||_inf<=sqrt(2)/||g||",
+      "not_inferred": "no independence of projected coordinates"
+    },
+    {
+      "citation": "Banks--Garza-Vargas--Kulkarni--Srivastava, Overlaps, Eigenvalue Gaps, and Pseudospectrum under real Ginibre and Absolutely Continuous Perturbations, arXiv:2005.08930, Section 2 / Corollary 2.4",
+      "scope_checked": "two genuinely independent bounded-entry-density banks in bilinear-plus-affine maps; does not absorb arbitrary same-bank quadratic curvature"
+    },
+    {
+      "citation": "Herry--Malicet--Poly, Regularity of laws via Dirichlet forms -- Application to quadratic forms in independent and identically distributed random variables, arXiv:2303.09488",
+      "scope_checked": "iid smoother Gaussian-functional input class; does not match arbitrary non-iid cap-one rough inputs"
+    }
+  ],
+  "pinned_fourier_source": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+    "theorem": "D'",
+    "scope": "literal original-coordinate cross block, I-side natural volume marginals <=h<3/4; arbitrary same-side blocks and affine terms; continuous C0 density"
+  },
+  "partner_result_applied": {
+    "account_slot": "account02/B18",
+    "theorem": "QFORM-NULLHUB-DIFFUSE-PRIVATE-BANK-v1",
+    "source_commit": "5bb8c5faaf65393ba42f440dce575d8ffdaf1f52",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260923T203819Z-account02-B18-QFORM-auto11/REPORT.md",
+    "source_valid_transfer": "LPP gives M_G<=sqrt(2)/gamma, hence ||p_Q||_inf<=3*2^(5/3)[|d|gamma^2 rho^2 eta^2]^(-1/3)",
+    "actual_threshold_inequality": "if |d|gamma^2>=1 and rho*eta>=1/4 then ||p_Q||_inf<=24, with continuous C0 density"
+  },
+  "new_result": {
+    "id": "QFORM-ASYMMETRIC-CUT-3OVER16-v1",
+    "statement": "for an exact-rank-three ORIGINAL-coordinate principal block B=U Lambda U^T with |lambda_j|>=s and max physical range leverage <=3/16, arbitrary cap-one product inputs give a continuous C0 output density with ||p_Q||_inf<1086/s; same after conditioning arbitrary ambient outside coordinates",
+    "cut": "Bernoulli p=5/8 original-coordinate cut",
+    "gram_lower_bounds": "a0=(20-3sqrt(15))/32 on I and b0=(12-3sqrt(15))/32 on J",
+    "Dprime_gate": "h0=6/(20-3sqrt(15))=0.71590075559...<3/4",
+    "exact_constant": "32(20-3sqrt(15))sqrt(e)/[9(4-sqrt(15))^(3/2)]=1085.33082699594...",
+    "method_limit": "every fixed kappa<(sqrt(313)-13)/24=0.195491917206... can be paid by a suitable asymmetric cut; endpoint itself not used"
+  },
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "48b8859300d1d896bdf9fb8ddcb554daf7c68ffc",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260923T215543Z-account01-B18-qform-auto11-r40/REPORT.md",
+  "verification_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260923T215543Z-account01-B18-qform-auto11-r40/VERIFY.py",
+  "handoff_commit": "056ba781b9e67f59b9a6f344ec42e9585f53e389",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B18/20260923T215543Z-account01-B18-qform-auto11-r40.md",
+  "unresolved_implication": "bare global three-large-eigenvalue hypothesis does not yet force a unit-scale exact-rank-three principal core with leverage <=3/16; heavy states and extra-spectrum descent remain",
+  "next_step": "route kappa>3/16 into already-paid physical-pivot/private-bank/grouped-cross packets while retaining all extra spectrum, or find a stronger original-coordinate volume compiler beyond the asymmetric D' ceiling"
+}

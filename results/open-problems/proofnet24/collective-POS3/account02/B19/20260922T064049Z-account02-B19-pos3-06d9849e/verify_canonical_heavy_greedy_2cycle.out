@@ -1,0 +1,29 @@
+POS3_CANONICAL_HEAVY_GREEDY_2CYCLE_PASS
+extensions 515
+width 3 antichain (0, 4, 9) chain_cover ((0, 1, 2, 3), (4, 5, 6, 7), (8, 9, 10))
+comparability_connected True incomparability_connected True
+proper_autonomous_modules 0
+incomparable_pairs 15
+pair 0 4 P(first<second) 188/515 balanced True
+pair 0 9 P(first<second) 319/515 balanced True
+pair 1 5 P(first<second) 387/515 balanced False
+pair 1 9 P(first<second) 123/515 balanced False
+pair 2 5 P(first<second) 29/103 balanced False
+pair 2 6 P(first<second) 66/103 balanced True
+pair 2 7 P(first<second) 466/515 balanced False
+pair 2 9 P(first<second) 24/515 balanced False
+pair 2 10 P(first<second) 49/103 balanced True
+pair 3 6 P(first<second) 88/515 balanced False
+pair 3 7 P(first<second) 277/515 balanced True
+pair 4 8 P(first<second) 139/515 balanced False
+pair 4 9 P(first<second) 368/515 balanced False
+pair 5 10 P(first<second) 374/515 balanced False
+pair 6 10 P(first<second) 161/515 balanced False
+balanced_pairs [(0, 4, '188/515'), (0, 9, '319/515'), (2, 6, '66/103'), (2, 10, '49/103'), (3, 7, '277/515')]
+S0 triple (5, 6, 10) p 374/515 q 161/515 H 213/515 TL [1] UL [6] UR [3] TR [5] CL [1] CR [3] left_weights {1: 72} right_weights {3: 52}
+S1 triple (1, 10, 5) p 387/515 q 141/515 H 246/515 TL [9] UL [2, 10] UR [6] TR [1] CL [2, 9] CR [6] left_weights {9: 63, 2: 55} right_weights {6: 105}
+S0_no_strong_interior () ()
+S1_no_strong_interior () ()
+greedy_transition_S0_left_t1_to_S1 (5, 6, 10) -> (1, 10, 5) active_weight 72
+greedy_transition_S1_right_u6_to_S0 (1, 10, 5) -> (5, 6, 10) active_weight 105
+ordinal_family Q(k,s,t)=C_s ordinal-sum P^k ordinal-sum C_t; width=3; e(Q)=515^k; all incomparable pairs are internal to one P block and retain the 15 probabilities above.

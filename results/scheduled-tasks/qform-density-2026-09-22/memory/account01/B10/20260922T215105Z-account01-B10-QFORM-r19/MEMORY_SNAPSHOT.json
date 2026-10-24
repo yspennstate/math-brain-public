@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B10",
+  "run_id": "20260922T215105Z-account01-B10-QFORM-r19",
+  "status": "FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "prepublication_main_commit": "0c7a2712026ff783edb1b714bb82e0b0e02c8377",
+    "owner_control_revision": "2026-09-22.15",
+    "later_stop_or_reassignment_observed": false
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "premises": [
+    {
+      "id": "account03-B10-null-bank-compression",
+      "source": "yspennstate/math-open-problems@a3dd62b198d84dc9b92653b8a9c77494fc6ed2d4:proofnet24/QFORM-density/fleet-2026-09-22/account03/B10/20260922T191739Z-account03-B10-QFORM-r15/REPORT.md",
+      "scope": "near-coloop exact-rank-three compression to a genuine independent cap-one null coordinate with c>=7/9, sigma_min(M)>=1/2, |det M|>=1/2"
+    },
+    {
+      "id": "account02-B10-r12-two-bank-paving",
+      "source": "yspennstate/math-open-problems@2045e39c5eda8d2a94098d79932223c77f2a4db7:proofnet24/QFORM-density/fleet-2026-09-22/account02/B10/20260922T204729Z-account02-B10-QFORM-r12/REPORT.md",
+      "scope": "residual diffuse transverse Parseval frame partitions into disjoint banks with delta I<=G_B<=(1-delta)I, delta=9/7168, and pair density cap <=2/sqrt(delta)"
+    },
+    {
+      "id": "account03-B19-exact-cross-rank-L2",
+      "source": "yspennstate/math-open-problems@f82fe367b06909082f94eda2b98f4a2fd2a5bb7c:proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260922T172719Z-account03-B19-QFORM-r16/REPORT.md",
+      "scope": "exact rank-r>=3 original-coordinate cross bank with arbitrary same-bank curvature; for r=3 density <=3e Pi_3(C)^(-1/3), continuous"
+    },
+    {
+      "id": "account02-B10-r11-hyperbolic-square",
+      "source": "yspennstate/math-open-problems@11c9ae19edfd07e3a0bd4053a910667c20e721ab:proofnet24/QFORM-density/fleet-2026-09-22/account02/B10/20260922T130225Z-b10-qform-r11/REPORT.md",
+      "scope": "genuine independent scalar plus possibly dependent pair hyperbolic-square smoothing; conditional cap cannot substitute for independence"
+    }
+  ],
+  "partner": {
+    "designated": "account02/B10",
+    "completed_result_actually_applied": "account02/B10 r12 QFORM-RESIDUAL-DIFFUSE-TWO-BANK-PAVING-v1",
+    "application": "delta=9/7168 enters both the positive-defect cross-rank inequality and the exact zero-defect <=96 bound"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-TWOBANK-SCHUR-DEFECT-DECOMPOSITION-v1",
+      "statement": "For each paved bank B, eta_B=rho_B-b_B^T G_B^{-1}b_B>=0, det H_B=det G_B eta_B, and T_B=q_B dot Y_B+R_B with coefficient residual norm squared eta_B and coefficient orthogonality to the transverse pair.",
+      "status": "PROVED_SUPPORTING_IDENTITY"
+    },
+    {
+      "id": "QFORM-TWOBANK-POSITIVE-DEFECT-CROSSPAY-v1",
+      "statement": "If eta_S,eta_T>0 then Pi_3(A[S,T])>=|det M| delta sqrt(eta_S eta_T), hence ||p_Q||_infinity<=3e[|det M|delta sqrt(eta_S eta_T)]^{-1/3}; density continuous.",
+      "status": "PROVED_SUPPORTING_THEOREM"
+    },
+    {
+      "id": "QFORM-TWOBANK-ZERO-SCHUR-DEFECT-CLOSURE-v1",
+      "statement": "In the compressed near-coloop residual-diffuse state, if either paved bank has eta_B=0 then ||p_Q||_infinity<=96.",
+      "status": "TARGET_SUBBRANCH_CLOSED",
+      "continuity": "NOT_PROVED"
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1a03300c9b0ef943503856aea5c14faa6b7b01cf",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B10/20260922T215105Z-account01-B10-QFORM-r19/REPORT.md",
+    "read_back": true
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "b65b0eebce661727f55eccd8d8957ae04f1a590f",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B10/20260922T215105Z-account01-B10-QFORM-r19.md"
+  },
+  "unresolved": "QFORM-TWOBANK-POSITIVE-SCHUR-DEFECT-BRIDGE-v1: obtain a uniform bound for eta_S,eta_T>0 as one or both defects tend to zero, retaining original product provenance before conditional suprema or local determinant inversion.",
+  "next_step": "Develop a mixed two-scale Plancherel/hyperbolic-square estimate that keeps the normalized residual coefficient direction inside the bank amplitude until after the X0-V and transverse-square smoothing are integrated.",
+  "continuity": "CONTINUOUS_FOR_POSITIVE-DEFECT_CROSS-RANK_BRANCH; ESSENTIAL_BOUND_ONLY_FOR_ZERO-DEFECT_BOUNDARY",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

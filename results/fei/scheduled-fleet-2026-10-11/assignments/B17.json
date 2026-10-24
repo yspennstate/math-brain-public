@@ -1,0 +1,396 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B17",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A081",
+      "stream": "B17",
+      "topic": "Dependency certificates",
+      "target_statement": "Encode the accepted proof dependency graph with exact statement versions, hypotheses, units, source pins, and unresolved leaves. Reject any cycle passing through the final FEI claim.",
+      "work_type": "baseline_interface",
+      "priority": "P0",
+      "mathematical_design_status": "RECOVERED_BASELINE",
+      "deliverables": [
+        {
+          "deliverable_id": "A081-D1",
+          "description": "PROOF_DEPENDENCIES.json: versioned mathematical statements and unresolved leaves",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A081-D2",
+          "description": "DEPENDENCY_VALIDATOR.md: source/hypothesis/unit and cycle checks",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Treat mathematical implication edges separately from advisory packet reuse and reviewer routing.",
+        "Every accepted lemma has a complete source, immutable revision, hypotheses, and evidence state; an OPEN target cannot be silently treated as proved.",
+        "Reject a proof cycle containing the desired FEI theorem, and preserve any genuinely conditional theorem with its unproved premise visible."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A001",
+          "interface": "exact theorem and gap map"
+        },
+        {
+          "agent_id": "A004",
+          "interface": "normalization ledger"
+        },
+        {
+          "agent_id": "A096",
+          "interface": "complete accepted-result records"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A001",
+          "interface_use": "statement-version schema"
+        },
+        {
+          "agent_id": "A083",
+          "interface_use": "exact accepted statement/version"
+        },
+        {
+          "agent_id": "A090",
+          "interface_use": "exact statement graph and original sources"
+        },
+        {
+          "agent_id": "A096",
+          "interface_use": "versioned mathematical dependency graph"
+        },
+        {
+          "agent_id": "A098",
+          "interface_use": "proof-status evidence"
+        },
+        {
+          "agent_id": "A099",
+          "interface_use": "accepted versioned proof graph"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 1,
+      "renewal_milestone": "One usable dependency schema and baseline graph are accepted; update only when a source statement/version changes.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_main",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F02",
+        "F06",
+        "F16",
+        "F18",
+        "F19"
+      ]
+    },
+    {
+      "agent_id": "A082",
+      "stream": "B17",
+      "topic": "Finite inequalities",
+      "target_statement": "Produce rational or symbolic certificates for finite extremal estimates needed by an analytic argument. State separately the theorem that makes this finite domain exhaustive for the intended application.",
+      "work_type": "numerical_certificate",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A082-D1",
+          "description": "FINITE_INEQUALITY_CERTIFICATE.json: exact finite domain and algebraic witnesses",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A082-D2",
+          "description": "EXHAUSTIVENESS_LEMMA.tex: separate theorem connecting the finite domain to the application",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "State the finite parameter/case domain exactly and certify every extremal reduction used to shrink it.",
+        "Provide rational/symbolic certificates with a checker or a complete hand-verifiable argument.",
+        "If the finite domain exhausts an all-dimensional application, prove that reduction separately; without it the result remains a finite statement."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A072",
+          "interface": "exact rational quantities"
+        },
+        {
+          "agent_id": "A073",
+          "interface": "certified log interface"
+        },
+        {
+          "agent_id": "A075",
+          "interface": "proposed finite-to-family proof"
+        },
+        {
+          "agent_id": "A085",
+          "interface": "scope adversary"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A073",
+          "interface_use": "symbolic finite inequality interface"
+        },
+        {
+          "agent_id": "A075",
+          "interface_use": "finite algebraic certificates"
+        },
+        {
+          "agent_id": "A083",
+          "interface_use": "small finite/combinatorial core"
+        },
+        {
+          "agent_id": "A084",
+          "interface_use": "finite reduction certificate"
+        },
+        {
+          "agent_id": "A085",
+          "interface_use": "finite-domain theorem"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "Only a finite estimate required by a named analytic argument receives continuation; unused certificate infrastructure is not a goal.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_main",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F02",
+        "F06",
+        "F16",
+        "F18",
+        "F19"
+      ]
+    },
+    {
+      "agent_id": "A083",
+      "stream": "B17",
+      "topic": "Formal core",
+      "target_statement": "Formalize one small, decisive identity or combinatorial lemma using an available proof assistant only if it reduces a concrete risk. Do not spend the campaign building unrelated formalization infrastructure.",
+      "work_type": "formal_verification",
+      "priority": "P2",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A083-D1",
+          "description": "FORMAL_CORE: minimal proof-assistant source for one decisive lemma",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A083-D2",
+          "description": "FORMAL_SCOPE.md: exact theorem, trusted dependencies, and executable verification receipt",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Choose an available proof assistant and an existing small lemma whose formalization resolves a concrete identified risk.",
+        "Check the exact theorem with no admitted proof holes or extra axioms asserting the target; record the trusted foundational/library assumptions.",
+        "State which surrounding analytic lemmas remain outside the certificate; no global formal-verification claim follows from one formal identity."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A081",
+          "interface": "exact accepted statement/version"
+        },
+        {
+          "agent_id": "A085",
+          "interface": "concrete proof risk"
+        },
+        {
+          "agent_id": "A082",
+          "interface": "small finite/combinatorial core"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A085",
+          "interface_use": "formal core scope"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 1,
+      "renewal_milestone": "Continue only after a small accepted formal target and an available environment are confirmed; otherwise reuse analytic review without building unrelated infrastructure.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_main",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F02",
+        "F06",
+        "F16",
+        "F18",
+        "F19"
+      ]
+    },
+    {
+      "agent_id": "A084",
+      "stream": "B17",
+      "topic": "Continuum parameters",
+      "target_statement": "Certify a compact bias or weight region by interval bounds together with analytic boundary reductions. A grid alone does not cover all real parameter values.",
+      "work_type": "numerical_certificate",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A084-D1",
+          "description": "CONTINUUM_REGION_CERTIFICATE.json: compact boxes, outward bounds, and coverage",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A084-D2",
+          "description": "BOUNDARY_REDUCTION.tex: proof covering omitted zero/one or unbounded limits",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Cover the entire declared compact region with certified bounds; point samples do not certify intervals between them.",
+        "Prove the analytic reductions at deterministic biases, vanishing deficits, unbounded weights, or large arity when those lie outside the compact region.",
+        "State the exact dimension/arity range and do not infer all-arity validity from one finite-dimensional box."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A042",
+          "interface": "analytic bias endpoint reductions"
+        },
+        {
+          "agent_id": "A041",
+          "interface": "weighted replacement parameter domain"
+        },
+        {
+          "agent_id": "A082",
+          "interface": "finite reduction certificate"
+        },
+        {
+          "agent_id": "A085",
+          "interface": "interval-coverage adversary"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A085",
+          "interface_use": "continuum coverage"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "A complete continuum certificate for a region genuinely needed by a live theorem, with every excluded boundary paid analytically.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_main",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F02",
+        "F06",
+        "F16",
+        "F18",
+        "F19"
+      ]
+    },
+    {
+      "agent_id": "A085",
+      "stream": "B17",
+      "topic": "Certificate adversary",
+      "target_statement": "Try to invalidate every numerical-to-universal bridge through a missed endpoint, underflow, insufficient precision, or hidden dimension cutoff. Supply the smallest explicit failure or a completed scope check.",
+      "work_type": "independent_certificate_review",
+      "priority": "P0",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A085-D1",
+          "description": "CERTIFICATE_ADVERSARY.md: endpoint, precision, coverage, and exhaustiveness review",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A085-D2",
+          "description": "CERTIFICATE_FAILURE.json: smallest explicit failure or completed scope verdict",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Reconstruct the exact target and domain from original inputs, including zero atoms, deterministic biases, and the largest claimed dimension.",
+        "Try underflow, incorrect rounding direction, empty intervals, unsupported library-error assumptions, and unproved symmetry reductions.",
+        "Distinguish a valid finite certificate from the separate all-real or all-dimensional bridge; report the first unsupported implication."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A073",
+          "interface": "sign certificate"
+        },
+        {
+          "agent_id": "A082",
+          "interface": "finite-domain theorem"
+        },
+        {
+          "agent_id": "A084",
+          "interface": "continuum coverage"
+        },
+        {
+          "agent_id": "A083",
+          "interface": "formal core scope"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A082",
+          "interface_use": "scope adversary"
+        },
+        {
+          "agent_id": "A083",
+          "interface_use": "concrete proof risk"
+        },
+        {
+          "agent_id": "A084",
+          "interface_use": "interval-coverage adversary"
+        },
+        {
+          "agent_id": "A098",
+          "interface_use": "verification bottlenecks"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One decisive certificate receives an independent scope verdict with a concrete defect or a complete accepted domain.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_main",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F02",
+        "F06",
+        "F16",
+        "F18",
+        "F19"
+      ]
+    }
+  ]
+}

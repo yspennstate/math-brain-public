@@ -1,0 +1,62 @@
+{
+  "problem_id": "P0003",
+  "worker": "w402",
+  "as_of": "2026-10-10",
+  "historical_ranking": {
+    "date": "2026-09-07",
+    "tier": 5,
+    "status": "attempted_un",
+    "line": 547
+  },
+  "current_openness": "UNKNOWN",
+  "target_proved": false,
+  "novelty_claimed": false,
+  "primary_source": {
+    "url": "https://arxiv.org/pdf/2205.07318",
+    "version": "2205.07318v1, 2022-05-15",
+    "target": "Question 2.2, printed/PDF page 3",
+    "source_quote": "Does a uniformly distributed n-step SAW from the origin of H converge weakly, when suitably rescaled, to the Schramm-Loewner random curve SLE8/3?",
+    "statement_validation": "PRIMARY_SOURCE_READ",
+    "ensemble": "uniform fixed n, origin start, free endpoint",
+    "unspecified": [
+      "rescaling",
+      "SLE geometry and stopping",
+      "parametrization",
+      "topology"
+    ]
+  },
+  "second_primary_source": {
+    "url": "https://arxiv.org/pdf/math/0204277",
+    "version": "math/0204277v2, 2002-04-26",
+    "target": "Section 4.1, Prediction 1"
+  },
+  "status_check_limits": "Assigned primary question read and matched to the secondary record. Historical and bounded recent primary-literature searches do not establish current openness or a solution. No repeated status search is needed to continue the precise auxiliary mathematics.",
+  "strongest_result_so_far": "Independently checked abstract fixed-boundary noncompactness counterexample (w404 KEEP), plus exact kernel and minimal linear-constraint argument. No P0003 proof.",
+  "hardest_target_gap": "Prove mesh-independent regularity and orientation consistency for the actual normalized observable; justify all curve-limit steps and any passage to the assigned fixed-length, free-endpoint ensemble separately.",
+  "related_observable_source": {
+    "url": "https://arxiv.org/pdf/1007.0575",
+    "version": "1007.0575v2, 2011-06-27",
+    "target": "Section 4, Conjecture 1",
+    "local_identity": "Lemma 1, equation (1)",
+    "warning": "Section 4, pages 9-10: the local identity alone does not give compactness",
+    "ensemble": "critical fugacity; two distinct boundary marks",
+    "equivalence_to_assigned_target": "NOT_PROVED"
+  },
+  "prior_attempt_check": {
+    "exact_intake_record": "Older original P0003 ledger not recovered from the named intake problems.jsonl files.",
+    "secondary_record": "export/population/nodes.jsonl:1176, math:probability.core:open-problem-p0003-hexagonal-self-avoiding-walk-scaling-limit",
+    "H_I_direct_P0003_hits": 0,
+    "lean_direct_P0003_hits": "Annotated historical ranking only; no actual theorem or formal receipt recovered.",
+    "related_attempt": "C0096-A001, intake_claude_20260907/attempts.jsonl:84; historical and unreviewed, not imported as proof.",
+    "owner_solved_retired_check": "Targeted named records and SAW memory hints contain no closure certificate. Complete authoritative retirement/status register not recovered; current openness stays UNKNOWN."
+  },
+  "canonical_store_check": {
+    "default_runtime_path": "~/math-brain-build/local/population/brain.sqlite3",
+    "default_path_evidence": "~/.claude/dreaming/math_sense.py:67-69",
+    "mode": "sqlite3 URI mode=ro; PRAGMA query_only=ON",
+    "exact_target_rows": 1,
+    "truth_status": "unverified",
+    "statement_fidelity_reviewed": false,
+    "source_or_retirement_closure_certified": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260923T085705Z-account03-B02-qform-r25",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_head_before_publication": "ee75af59d089aff3dc6701a291b615558b7ba9e5",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "target_wide_unweighted_L1_fourier_status": "OPEN_NOT_REFUTED",
+  "continuity_status": "PROVED_ON_WEIGHTED_MIXED_VOLUME_BRANCH_ONLY; FULL_TARGET_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "use": "original-coordinate Weyl differencing, BL determinant method, sharp HY fractional-volume calculation"
+    },
+    {
+      "source": "yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B02/20260922T193108Z-account04-B02-QFORM-r2/REPORT.md",
+      "use": "designated partner L2 Fourier estimate for zero-diagonal physical triple"
+    },
+    {
+      "source": "yspennstate/math-open-problems@0e842117ca7ec8472538faa120677507f16b5c17",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260923T084007Z-account03-B07-qform-r29/REPORT.md",
+      "use": "fresh double-anchor third-volume receiver application"
+    }
+  ],
+  "new_claims": [
+    "QFORM-WEIGHTED-MIXED32-FOURIER-L1-v1",
+    "QFORM-MIXED32-HEAVY-MARGINAL-COMPILER-v1",
+    "exact anchored E2 Schur/star identity",
+    "exact double-anchored E3 Schur/star identity"
+  ],
+  "partner_result_applied": "account04/B02 QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1; combined L2 with theta=1/2,q=6/5 weighted tail to obtain density <=54.893293345 |det H0|^-1/78 (J3E2)^-5/52",
+  "math_repository": "yspennstate/math-open-problems",
+  "math_commit": "ff8ec2ee90d4846f39e728e1ca20d50c717cc894",
+  "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T085705Z-account03-B02-qform-r25/REPORT.md",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B02/20260923T085705Z-account03-B02-qform-r25.md",
+  "unresolved_implication": "QFORM-WEIGHTED32-SCHURSTAR-RECEIVER-v1: spend the exact heavy common-anchor Schur-Frobenius/two-star packets under arbitrary same-bank curvature and singular cross-pair cases, joined with account02/B02 four-anchor cross-disjointness",
+  "next_step": "Develop grouped Fresnel/Brascamp-Lieb receiver for the exact packets rather than selecting a tiny local minor",
+  "review_status": "SUPPORTING_PROOF_SUPPLIED; NO_NEW_INDEPENDENT_END_TO_END_REVIEW"
+}

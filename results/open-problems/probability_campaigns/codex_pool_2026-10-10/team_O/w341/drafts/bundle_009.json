@@ -1,0 +1,163 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w341",
+  "bundle_slug": "w341-p0014-checked-results-20261010",
+  "entries": [
+    {
+      "key": "circulant-theta-frequency-lp",
+      "namespace": "combinatorics.spectral",
+      "logical_name": "p0014-circulant-theta-frequency-lp",
+      "kind": "lemma",
+      "title": "Known Fourier LP for the Lovasz theta number, with even frequencies explicit [audit pending w347]",
+      "statement": "For a simple undirected circulant graph on Z/nZ, let S contain one representative of each included unordered nonzero generator pair and m=floor(n/2). Its Lovasz theta number is n times the maximum z_0 subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j*cos(2*pi*j*s/n)=0 for every s in S. Paired Fourier frequencies are aggregated; the zero and even-n self-inverse frequency remain unpaired. This is a rederivation of the LP already described in the cached 2025 source.",
+      "proof_text": "# P0014: Fourier calibration and exact small expectations\n\nStatus: a rederivation of a known computational reduction, exact small cases and numerical evidence, pending w347. The cached *Randomstrasse101: Open Problems of 2025*, Entry 9, Conjecture 18, lines 749-810, poses E theta=(1+o(1))sqrt(n). It already describes the Fourier LP and cites the partial-bound paper Bandeira, Blasiok, Dmitriev, Faure, Kireeva and Kunisky, *The Lovasz number of random circulant graphs*, arXiv:2502.16227 (2025), at lines 1393-1397. Its quoted upper bound is O(sqrt(n) log log n), not a solution of the asymptotic conjecture. This packet does not claim the LP reduction as new.\n\nFor a simple undirected circulant graph on Z/nZ with nonzero generator set S=-S, theta is the SDP maximum <J,X> over real symmetric positive semidefinite X with trace one and X_ij=0 at graph edges. Average X over cyclic shifts; this preserves feasibility and objective and makes X circulant. Fourier diagonalization gives nonnegative eigenvalues y_j summing to one, with y_j=y_{n-j}. Its edge constraint is sum_j y_j cos(2*pi*j*s/n)=0 for each s in S, and its objective is n*y_0.\n\nEquivalently let m=floor(n/2) and aggregate z_j=y_j+y_{n-j} for paired frequencies, leaving z_0=y_0 and the self-inverse frequency unpaired when n is even. Then\n\ntheta(G)=n*max z_0, subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j cos(2*pi*j*s/n)=0 for each unordered generator representative s.\n\nConversely any such z, split equally over paired frequencies, reconstructs a real positive semidefinite circulant X, proving equality of the LP and SDP. The even self-inverse generator and frequency require no extra factor of two after aggregation.\n\nFor independent fair inclusion of each unordered nonzero generator pair, exact small expectations are 3/2 at n=2, 2 at n=3, 9/4 at n=4, and (3+sqrt(5))/2 at n=5. At n=4 the four graphs are empty, a four-cycle, a perfect matching, and complete, with theta 4,2,2,1. At n=5 they are empty, two five-cycles and complete. The five-cycle LP has cosines (sqrt(5)-1)/4 and -(sqrt(5)+1)/4, maximized by putting nonconstant mass on the latter; z_0=1/sqrt(5), so theta=sqrt(5).\n\nThe earlier complement-identity reduction is still necessary: theta(G)theta(complement G)=n for vertex-transitive G, and the fair model is complement invariant. With Z=log(theta(G)/sqrt(n)), E theta/sqrt(n)=E cosh Z. Hence the desired result implies E Z^2->0, because cosh Z>=1+Z^2/2. Convergence in probability alone is insufficient without exponential-tail control. A sufficient stronger route would be an MGF bound E exp(tZ)<=exp(t^2*sigma_n^2/2) at t=1 with sigma_n->0; it would sandwich the expectation ratio between one and exp(sigma_n^2/2). That bound is not established here.\n\nThe implemented LP enumerated all 60 graphs for n=2,...,9 in double precision. Maximum constraint residual was 1.12e-15 and maximum complement-product discrepancy 8.89e-15. These are numerical checks, not exact certificates or evidence of a large-n limit. Audit the theta convention, cyclic averaging, normalization, pairing at even n, exact small cases and tail gap.\n",
+      "assumptions": [
+        "simple undirected circulant graph",
+        "trace-one PSD primal theta convention",
+        "nonzero generator pairs"
+      ],
+      "domain": "graph theory and probability",
+      "source": {
+        "source_id": "owner-work:w341:p0014-circulant-theta-frequency-lp",
+        "url": "file:///~/brain_workers/w341/proofs/P0014_fourier.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "fair-circulant-theta-exact-small-expectations",
+      "namespace": "combinatorics.spectral",
+      "logical_name": "p0014-fair-circulant-theta-exact-small-expectations",
+      "kind": "lemma",
+      "title": "Exact small expected theta values for fair random circulants [audit pending w347]",
+      "statement": "Include every unordered nonzero generator pair of Z/nZ independently with probability 1/2. Expected Lovasz theta is 3/2 for n=2, 2 for n=3, 9/4 for n=4, and (3+sqrt(5))/2 for n=5. At n=4 the four theta values are 4,2,2,1; at n=5 they are 5,sqrt(5),sqrt(5),1. These finite values do not establish the conjectured large-n asymptotic.",
+      "proof_text": "# P0014: Fourier calibration and exact small expectations\n\nStatus: a rederivation of a known computational reduction, exact small cases and numerical evidence, pending w347. The cached *Randomstrasse101: Open Problems of 2025*, Entry 9, Conjecture 18, lines 749-810, poses E theta=(1+o(1))sqrt(n). It already describes the Fourier LP and cites the partial-bound paper Bandeira, Blasiok, Dmitriev, Faure, Kireeva and Kunisky, *The Lovasz number of random circulant graphs*, arXiv:2502.16227 (2025), at lines 1393-1397. Its quoted upper bound is O(sqrt(n) log log n), not a solution of the asymptotic conjecture. This packet does not claim the LP reduction as new.\n\nFor a simple undirected circulant graph on Z/nZ with nonzero generator set S=-S, theta is the SDP maximum <J,X> over real symmetric positive semidefinite X with trace one and X_ij=0 at graph edges. Average X over cyclic shifts; this preserves feasibility and objective and makes X circulant. Fourier diagonalization gives nonnegative eigenvalues y_j summing to one, with y_j=y_{n-j}. Its edge constraint is sum_j y_j cos(2*pi*j*s/n)=0 for each s in S, and its objective is n*y_0.\n\nEquivalently let m=floor(n/2) and aggregate z_j=y_j+y_{n-j} for paired frequencies, leaving z_0=y_0 and the self-inverse frequency unpaired when n is even. Then\n\ntheta(G)=n*max z_0, subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j cos(2*pi*j*s/n)=0 for each unordered generator representative s.\n\nConversely any such z, split equally over paired frequencies, reconstructs a real positive semidefinite circulant X, proving equality of the LP and SDP. The even self-inverse generator and frequency require no extra factor of two after aggregation.\n\nFor independent fair inclusion of each unordered nonzero generator pair, exact small expectations are 3/2 at n=2, 2 at n=3, 9/4 at n=4, and (3+sqrt(5))/2 at n=5. At n=4 the four graphs are empty, a four-cycle, a perfect matching, and complete, with theta 4,2,2,1. At n=5 they are empty, two five-cycles and complete. The five-cycle LP has cosines (sqrt(5)-1)/4 and -(sqrt(5)+1)/4, maximized by putting nonconstant mass on the latter; z_0=1/sqrt(5), so theta=sqrt(5).\n\nThe earlier complement-identity reduction is still necessary: theta(G)theta(complement G)=n for vertex-transitive G, and the fair model is complement invariant. With Z=log(theta(G)/sqrt(n)), E theta/sqrt(n)=E cosh Z. Hence the desired result implies E Z^2->0, because cosh Z>=1+Z^2/2. Convergence in probability alone is insufficient without exponential-tail control. A sufficient stronger route would be an MGF bound E exp(tZ)<=exp(t^2*sigma_n^2/2) at t=1 with sigma_n->0; it would sandwich the expectation ratio between one and exp(sigma_n^2/2). That bound is not established here.\n\nThe implemented LP enumerated all 60 graphs for n=2,...,9 in double precision. Maximum constraint residual was 1.12e-15 and maximum complement-product discrepancy 8.89e-15. These are numerical checks, not exact certificates or evidence of a large-n limit. Audit the theta convention, cyclic averaging, normalization, pairing at even n, exact small cases and tail gap.\n",
+      "assumptions": [
+        "fair independent inclusion of unordered nonzero generator pairs",
+        "n in {2,3,4,5}"
+      ],
+      "domain": "graph theory and probability",
+      "source": {
+        "source_id": "owner-work:w341:p0014-fair-circulant-theta-exact-small-expectations",
+        "url": "file:///~/brain_workers/w341/proofs/P0014_fourier.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "log-theta-tail-reduction",
+      "namespace": "combinatorics.spectral",
+      "logical_name": "p0014-log-theta-tail-reduction",
+      "kind": "lemma",
+      "title": "A necessary log-variance condition and a sufficient MGF route [audit pending w347]",
+      "statement": "For fair random circulants on n vertices set Z=log(theta(G)/sqrt(n)). Vertex transitivity and complement symmetry give E theta(G)/sqrt(n)=E cosh(Z)>=1+E[Z^2]/2. Hence asymptotic expectation ratio one requires E[Z^2]->0. If also E exp(Z)<=exp(sigma_n^2/2) with sigma_n->0, that expectation ratio tends to one. The latter MGF bound is a sufficient hypothesis, not a bound proved for the random graph here.",
+      "proof_text": "# P0014: Fourier calibration and exact small expectations\n\nStatus: a rederivation of a known computational reduction, exact small cases and numerical evidence, pending w347. The cached *Randomstrasse101: Open Problems of 2025*, Entry 9, Conjecture 18, lines 749-810, poses E theta=(1+o(1))sqrt(n). It already describes the Fourier LP and cites the partial-bound paper Bandeira, Blasiok, Dmitriev, Faure, Kireeva and Kunisky, *The Lovasz number of random circulant graphs*, arXiv:2502.16227 (2025), at lines 1393-1397. Its quoted upper bound is O(sqrt(n) log log n), not a solution of the asymptotic conjecture. This packet does not claim the LP reduction as new.\n\nFor a simple undirected circulant graph on Z/nZ with nonzero generator set S=-S, theta is the SDP maximum <J,X> over real symmetric positive semidefinite X with trace one and X_ij=0 at graph edges. Average X over cyclic shifts; this preserves feasibility and objective and makes X circulant. Fourier diagonalization gives nonnegative eigenvalues y_j summing to one, with y_j=y_{n-j}. Its edge constraint is sum_j y_j cos(2*pi*j*s/n)=0 for each s in S, and its objective is n*y_0.\n\nEquivalently let m=floor(n/2) and aggregate z_j=y_j+y_{n-j} for paired frequencies, leaving z_0=y_0 and the self-inverse frequency unpaired when n is even. Then\n\ntheta(G)=n*max z_0, subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j cos(2*pi*j*s/n)=0 for each unordered generator representative s.\n\nConversely any such z, split equally over paired frequencies, reconstructs a real positive semidefinite circulant X, proving equality of the LP and SDP. The even self-inverse generator and frequency require no extra factor of two after aggregation.\n\nFor independent fair inclusion of each unordered nonzero generator pair, exact small expectations are 3/2 at n=2, 2 at n=3, 9/4 at n=4, and (3+sqrt(5))/2 at n=5. At n=4 the four graphs are empty, a four-cycle, a perfect matching, and complete, with theta 4,2,2,1. At n=5 they are empty, two five-cycles and complete. The five-cycle LP has cosines (sqrt(5)-1)/4 and -(sqrt(5)+1)/4, maximized by putting nonconstant mass on the latter; z_0=1/sqrt(5), so theta=sqrt(5).\n\nThe earlier complement-identity reduction is still necessary: theta(G)theta(complement G)=n for vertex-transitive G, and the fair model is complement invariant. With Z=log(theta(G)/sqrt(n)), E theta/sqrt(n)=E cosh Z. Hence the desired result implies E Z^2->0, because cosh Z>=1+Z^2/2. Convergence in probability alone is insufficient without exponential-tail control. A sufficient stronger route would be an MGF bound E exp(tZ)<=exp(t^2*sigma_n^2/2) at t=1 with sigma_n->0; it would sandwich the expectation ratio between one and exp(sigma_n^2/2). That bound is not established here.\n\nThe implemented LP enumerated all 60 graphs for n=2,...,9 in double precision. Maximum constraint residual was 1.12e-15 and maximum complement-product discrepancy 8.89e-15. These are numerical checks, not exact certificates or evidence of a large-n limit. Audit the theta convention, cyclic averaging, normalization, pairing at even n, exact small cases and tail gap.\n",
+      "assumptions": [
+        "vertex-transitive complement theta identity",
+        "complement-invariant fair model",
+        "MGF hypothesis for the sufficient direction only"
+      ],
+      "domain": "graph theory and probability",
+      "source": {
+        "source_id": "owner-work:w341:p0014-log-theta-tail-reduction",
+        "url": "file:///~/brain_workers/w341/proofs/P0014_fourier.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "small-circulant-numerical-lp-evidence",
+      "namespace": "combinatorics.spectral",
+      "logical_name": "p0014-small-circulant-numerical-lp-evidence",
+      "kind": "concept",
+      "title": "Sixty numerical circulant-theta LP checks [audit pending w347]",
+      "statement": "Double-precision Fourier LP enumeration for all 60 fair-generator configurations on n=2,...,9 agrees with the exact n=2,...,5 expectations. Maximum equality residual was 1.1102230246251565e-15 and maximum theta-complement product discrepancy was 8.881784197001252e-15. These are numerical solver checks, not rational feasibility certificates and not proof of a large-n limit.",
+      "proof_text": null,
+      "assumptions": [
+        "the saved n=2,...,9 floating-point LP outputs"
+      ],
+      "domain": "graph theory and probability",
+      "source": {
+        "source_id": "owner-work:w341:p0014-small-circulant-numerical-lp-evidence",
+        "url": "file:///~/brain_workers/w341/proofs/P0014_fourier.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-limited-status-20261010",
+      "namespace": "combinatorics.spectral",
+      "logical_name": "p0014-source-limited-status-20261010",
+      "kind": "concept",
+      "title": "Source-limited status and scope for P0014 [audit pending w347]",
+      "statement": "Randomstrasse101 (2025), Conjecture 18, asks whether fair random circulants have expected theta asymptotic to sqrt(n). Its cached source already knows the Fourier LP and cites Bandeira et al., arXiv:2502.16227, for a partial bound. This packet rederives that reduction, proves small expectations and states a tail criterion; it does not resolve the asymptotic conjecture.",
+      "proof_text": null,
+      "assumptions": [
+        "only the supplied local caches and prior records were consulted",
+        "independent review pending"
+      ],
+      "domain": "graph theory and probability",
+      "source": {
+        "source_id": "owner-work:w341:p0014-source-limited-status-20261010",
+        "url": "file:///~/brain_workers/w341/proofs/P0014_fourier.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "fair-circulant-theta-exact-small-expectations",
+      "to_key": "circulant-theta-frequency-lp",
+      "kind": "depends_on",
+      "rationale": "From: \"Include every unordered nonzero generator pair of Z/nZ independently with probability 1/2. Expected Lovasz theta is 3/2 for n=2, 2 for n=3, 9/4 for n=4, and (3+sqrt(5))/2 for n=5. At n=4 the four theta values are 4,2,2,1; at n=5 they are 5,sqrt(5),sqrt(5),1. These finite values do not establish the conjectured large-n asymptotic.\" To: \"For a simple undirected circulant graph on Z/nZ, let S contain one representative of each included unordered nonzero generator pair and m=floor(n/2). Its Lovasz theta number is n times the maximum z_0 subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j*cos(2*pi*j*s/n)=0 for every s in S. Paired Fourier frequencies are aggregated; the zero and even-n self-inverse frequency remain unpaired. This is a rederivation of the LP already described in the cached 2025 source.\"."
+    },
+    {
+      "from_key": "small-circulant-numerical-lp-evidence",
+      "to_key": "circulant-theta-frequency-lp",
+      "kind": "cites",
+      "rationale": "From: \"Double-precision Fourier LP enumeration for all 60 fair-generator configurations on n=2,...,9 agrees with the exact n=2,...,5 expectations. Maximum equality residual was 1.1102230246251565e-15 and maximum theta-complement product discrepancy was 8.881784197001252e-15. These are numerical solver checks, not rational feasibility certificates and not proof of a large-n limit.\" To: \"For a simple undirected circulant graph on Z/nZ, let S contain one representative of each included unordered nonzero generator pair and m=floor(n/2). Its Lovasz theta number is n times the maximum z_0 subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j*cos(2*pi*j*s/n)=0 for every s in S. Paired Fourier frequencies are aggregated; the zero and even-n self-inverse frequency remain unpaired. This is a rederivation of the LP already described in the cached 2025 source.\"."
+    },
+    {
+      "from_key": "log-theta-tail-reduction",
+      "to_key": "fair-circulant-theta-exact-small-expectations",
+      "kind": "analogous_to",
+      "rationale": "From: \"For fair random circulants on n vertices set Z=log(theta(G)/sqrt(n)). Vertex transitivity and complement symmetry give E theta(G)/sqrt(n)=E cosh(Z)>=1+E[Z^2]/2. Hence asymptotic expectation ratio one requires E[Z^2]->0. If also E exp(Z)<=exp(sigma_n^2/2) with sigma_n->0, that expectation ratio tends to one. The latter MGF bound is a sufficient hypothesis, not a bound proved for the random graph here.\" To: \"Include every unordered nonzero generator pair of Z/nZ independently with probability 1/2. Expected Lovasz theta is 3/2 for n=2, 2 for n=3, 9/4 for n=4, and (3+sqrt(5))/2 for n=5. At n=4 the four theta values are 4,2,2,1; at n=5 they are 5,sqrt(5),sqrt(5),1. These finite values do not establish the conjectured large-n asymptotic.\"."
+    },
+    {
+      "from_key": "circulant-theta-frequency-lp",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"For a simple undirected circulant graph on Z/nZ, let S contain one representative of each included unordered nonzero generator pair and m=floor(n/2). Its Lovasz theta number is n times the maximum z_0 subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j*cos(2*pi*j*s/n)=0 for every s in S. Paired Fourier frequencies are aggregated; the zero and even-n self-inverse frequency remain unpaired. This is a rederivation of the LP already described in the cached 2025 source.\" To: \"Randomstrasse101 (2025), Conjecture 18, asks whether fair random circulants have expected theta asymptotic to sqrt(n). Its cached source already knows the Fourier LP and cites Bandeira et al., arXiv:2502.16227, for a partial bound. This packet rederives that reduction, proves small expectations and states a tail criterion; it does not resolve the asymptotic conjecture.\"."
+    },
+    {
+      "from_key": "fair-circulant-theta-exact-small-expectations",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"Include every unordered nonzero generator pair of Z/nZ independently with probability 1/2. Expected Lovasz theta is 3/2 for n=2, 2 for n=3, 9/4 for n=4, and (3+sqrt(5))/2 for n=5. At n=4 the four theta values are 4,2,2,1; at n=5 they are 5,sqrt(5),sqrt(5),1. These finite values do not establish the conjectured large-n asymptotic.\" To: \"Randomstrasse101 (2025), Conjecture 18, asks whether fair random circulants have expected theta asymptotic to sqrt(n). Its cached source already knows the Fourier LP and cites Bandeira et al., arXiv:2502.16227, for a partial bound. This packet rederives that reduction, proves small expectations and states a tail criterion; it does not resolve the asymptotic conjecture.\"."
+    },
+    {
+      "from_key": "log-theta-tail-reduction",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"For fair random circulants on n vertices set Z=log(theta(G)/sqrt(n)). Vertex transitivity and complement symmetry give E theta(G)/sqrt(n)=E cosh(Z)>=1+E[Z^2]/2. Hence asymptotic expectation ratio one requires E[Z^2]->0. If also E exp(Z)<=exp(sigma_n^2/2) with sigma_n->0, that expectation ratio tends to one. The latter MGF bound is a sufficient hypothesis, not a bound proved for the random graph here.\" To: \"Randomstrasse101 (2025), Conjecture 18, asks whether fair random circulants have expected theta asymptotic to sqrt(n). Its cached source already knows the Fourier LP and cites Bandeira et al., arXiv:2502.16227, for a partial bound. This packet rederives that reduction, proves small expectations and states a tail criterion; it does not resolve the asymptotic conjecture.\"."
+    },
+    {
+      "from_key": "small-circulant-numerical-lp-evidence",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"Double-precision Fourier LP enumeration for all 60 fair-generator configurations on n=2,...,9 agrees with the exact n=2,...,5 expectations. Maximum equality residual was 1.1102230246251565e-15 and maximum theta-complement product discrepancy was 8.881784197001252e-15. These are numerical solver checks, not rational feasibility certificates and not proof of a large-n limit.\" To: \"Randomstrasse101 (2025), Conjecture 18, asks whether fair random circulants have expected theta asymptotic to sqrt(n). Its cached source already knows the Fourier LP and cites Bandeira et al., arXiv:2502.16227, for a partial bound. This packet rederives that reduction, proves small expectations and states a tail criterion; it does not resolve the asymptotic conjecture.\"."
+    },
+    {
+      "from_key": "source-limited-status-20261010",
+      "to_existing_logical": "math:probability.core:open-problem-p0014-expected-lovasz-theta-of-a-random-circulant-graph",
+      "kind": "cites",
+      "rationale": "From: \"Randomstrasse101 (2025), Conjecture 18, asks whether fair random circulants have expected theta asymptotic to sqrt(n). Its cached source already knows the Fourier LP and cites Bandeira et al., arXiv:2502.16227, for a partial bound. This packet rederives that reduction, proves small expectations and states a tail criterion; it does not resolve the asymptotic conjecture.\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For the graph on Z/nZ formed by independently including each unordered nonzero generator pair {k,-k} with probability 1/2, is E theta(G)=(1+o(1)) sqrt(n)? Source: Randomstrasse101: Open Problems of 2025, Conjecture 18, Entry 9.\". "
+    }
+  ]
+}

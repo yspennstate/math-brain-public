@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260924T091631Z-account03-B04-QFORM-auto11-r54",
+  "source_control": {
+    "startup_commit": "f85b683585831275d8562208d886a51e98b176df",
+    "prepublication_refresh_commit": "a47d492ba3fdd33af89ce0c2fdf0616079f193f9",
+    "owner_control_revision": "2026-09-22.15",
+    "programme_revision": "2026-09-22.5",
+    "required_corrections_consumed": [
+      "QFORM-POINTWISE-DECAY-FALSE",
+      "QFORM-FIBER-SUP-DIMENSION-LOSS",
+      "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+      "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+      "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+      "QFORM-CROSSMINOR-ALONE-FALSE",
+      "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+    ]
+  },
+  "new_results": [
+    {
+      "id": "QFORM-CROSS-E2-MARGINALFREE-HALF-RIESZ-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every literal disjoint original-coordinate cross block M with Z=e2(MM^T)>0, the complete ambient quadratic-plus-affine polynomial R satisfies sup_s E|R-s|^(-1/2) <= 8 sqrt(e/2) Z^(-1/8).",
+      "constant": 9.326575926388497,
+      "density_conclusion": "NONE_BY_ITSELF_FRACTIONAL_POTENTIAL_ONLY"
+    },
+    {
+      "id": "QFORM-ONEANCHOR-E3-PIVOT-E2-RIESZ-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "If a=A_hh!=0 and a separated fixed-anchor third-volume packet F_h>0, then the full ambient law has an essentially bounded density with ||p_Q||inf <= 8 sqrt(e/2)|a|^(-1/4)F_h^(-1/8).",
+      "continuity": "NOT_PROVED_BY_THIS_THEOREM",
+      "global_application": "On J1(h)>=1/144, a physical coloring gives F_h>=1/2304. Thus |A_hh|>=2^-16 is paid by ||p_Q||inf<=392.782854609543, leaving only |A_hh|<2^-16 in this overlap-one branch."
+    }
+  ],
+  "premises": [
+    {
+      "id": "QFORM-E2-FRACTIONAL-TRACE-v1",
+      "source": "yspennstate/math-open-problems@3f8fe4c0920f41353374c50693ccdc741e245008:proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T130435Z-r25/REPORT.md",
+      "scope": "physical E2 packet, q<2, row marginal gate; full ambient half-Riesz estimate"
+    },
+    {
+      "id": "GROUPED-PROJECTION-k1-ell1-and-EXACT-RANK2-PLANCHEREL",
+      "source": "yspennstate/math-open-problems@3f8fe4c0920f41353374c50693ccdc741e245008:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+      "scope": "original-coordinate product Fourier characteristic envelopes; re-integrated at half-Riesz order in this run"
+    },
+    {
+      "id": "QFORM-C3-LOCAL-OVERLAP-OPERATOR-v1",
+      "source": "yspennstate/math-open-problems@3f8fe4c0920f41353374c50693ccdc741e245008:proofnet24/QFORM-density/fleet-2026-09-22/account03/B20/20260923T234606Z-account03-B20-QFORM-r42/REPORT.md",
+      "scope": "target-level four-way third-compound overlap funnel; J1*>=1/144 is the remaining localized one-anchor branch after other payments"
+    }
+  ],
+  "designated_partner": {
+    "worker": "account04/B04",
+    "newest_completed": "20260924T001353Z-account04-B04-QFORM-r2",
+    "source": "yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57:proofnet24/QFORM-density/fleet-2026-09-22/account04/B04/20260924T001353Z-account04-B04-QFORM-r2/REPORT.md",
+    "actual_application": "eta_ab>2/75 combined with completed QFORM-PAIR-ANCHORED-E4-PROMOTION-v1 gives ||p_Q||inf <6.861872579851902 E4(M)^(-1/8), continuous C0."
+  },
+  "stress_test": {
+    "description": "fully dense genuinely rotated indefinite 5x5 Schur construction",
+    "anchored_packet": 144,
+    "rigorous_min_abs_eigenvalue_lower_bound": 1.9437277442494834,
+    "density_bound": 4.213756346951995,
+    "monte_carlo_used": false
+  },
+  "outputs": {
+    "canonical_math_commit": "7321520c5803837aa09af68ef8ecce57dfab79f1",
+    "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260924T091631Z-account03-B04-QFORM-auto11-r54/",
+    "handoff_commit": "488b9120add41fb12414204689a2e146ac111791",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B04/20260924T091631Z-account03-B04-QFORM-auto11-r54.md"
+  },
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "unresolved_implication": "QFORM-OVERLAP1-NEARZERO-BISTAR-OR-E2-ENDPOINT-v1",
+  "next_step": "Within J1(h)>=1/144 and |A_hh|<2^-16, spend the inverse-free two-star/projected-cross packet while retaining the small nonzero pivot and covering the exact zero face.",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "quiet_delivery": true,
+  "scheduler_changed": false,
+  "notifications_changed": false,
+  "email_sent": false
+}

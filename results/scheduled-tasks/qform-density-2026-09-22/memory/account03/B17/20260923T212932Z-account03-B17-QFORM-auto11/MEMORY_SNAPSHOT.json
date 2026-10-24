@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260923T212932Z-account03-B17-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_prepublication": "0d9de6f826eb226fb44d5c52fbefcc51c594ca55",
+  "correction_inbox_blob": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1"
+  ],
+  "partner_result": {
+    "worker": "account04/B17",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2156b76156ad5956c214a881fcfd6d977d6f3b9f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B17/20260922T211900Z-account04-B17-QFORM-r3/REPORT.md",
+    "applied_statement": "C_* >= 3 sqrt(2) from the exact rotated three-bank cap-one witness"
+  },
+  "new_result": {
+    "id": "QFORM-TWOHEAVY-ZEROPIVOT-GLOBAL-v1",
+    "status": "PROVED_SUPPORTING_GLOBAL_WITNESS_EXCLUSION",
+    "statement": "For X,Y iid Uniform[-1/2,1/2], arbitrary independent Z with density <=1, and A=[[1/2,-1/2,-1/sqrt2],[-1/2,1/2,-1/sqrt2],[-1/sqrt2,-1/sqrt2,0]], spec(A)={1,1,-1} and ||p_(X^TAX)||_infinity <= 2^(9/4)-1 < 3sqrt(2). The density is continuous. At s=0 the maximizing admissible Z law is centered uniform and the exact tip value is 2.5524125937767022553... .",
+    "key_mechanism": "orthogonal physical diamond coordinates give Q=b^2-2aZ; an exact one-dimensional overlap lemma bounds every conditional density by a decreasing t-envelope H(t), then a legitimate cap-one bathtub argument controls arbitrary fragmented Z"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "03b5948d1695cd5370bb965a37c9e10a936c7e28",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T212932Z-account03-B17-QFORM-auto11/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T212932Z-account03-B17-QFORM-auto11/verify_twoheavy.py"
+  },
+  "handoff": {
+    "commit": "b37ed64c4db5edd4d1da14e40441563ebc3a9ed5",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B17/20260923T212932Z-account03-B17-QFORM-auto11.md"
+  },
+  "full_target_status": "OPEN",
+  "full_target_continuity": "OPEN",
+  "unresolved": [
+    "adversarial cap-one laws simultaneously on the first two heavy coordinates",
+    "multiple arbitrary macroscopic shared rows",
+    "arbitrary dimension and arbitrary additional spectrum",
+    "full-target continuity"
+  ],
+  "next_action": "test a two-arbitrary-heavy exact zero-pivot reflection, seeking a product-preserving overlap or layer-cake inequality that replaces the diamond-uniform geometry without assuming moments or connected support"
+}

@@ -1,0 +1,8 @@
+AUTOMATON: 01->1, 02->2, all other two-child multisets ->0
+CHILD_LAW: delta_2
+MAP: F0= 2*x**2 - 2*x + 1 F1= 2*x*y F2= -2*x*(x + y - 1)
+FIXED_RESIDUAL_FACTORS: (x - 1)*(2*x - 1) ; y*(2*x - 1) ; -(2*x - 1)*(x + y - 1)
+FIXED_SEGMENT: (1/2, t, 1/2-t), 0<=t<=1/2
+TANGENT: [0, 1, -1]
+D_fix_lower_bound: 1
+ALL_EXACT_CHECKS_PASS

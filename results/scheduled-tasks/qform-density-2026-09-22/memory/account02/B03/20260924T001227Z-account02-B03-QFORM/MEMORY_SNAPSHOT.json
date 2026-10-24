@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B03",
+  "run_id": "20260924T001227Z-account02-B03-QFORM",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "initial_brain_commit": "fc8a0ffee8e83cd5dfe81a5c9aedad551c1699ff",
+    "prepublication_brain_commit": "3b2d9e8ed3fd8c66218974ac08a180e8752a3d50",
+    "pinned_math_commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "latest_partner_account03_B03_commit": "f3198cfe9b2f5f88659958c714b1ea0f7dfa29c9",
+    "four_coordinate_receiver_commit": "769800c0ab0851828772adabfb6874aa813e423d"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-RANK1-SAMEBANK-HALFRIESZ-FALSE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "new_result": {
+    "id": "QFORM-PHYSICAL-PAIR-COLLISION-DET-v1",
+    "scope": "For any quadratic-plus-affine form in independent cap-one original coordinates, any invertible literal physical 2x2 principal block B with Delta=|det B| gives a bounded density for the whole independent-copy difference, plus L2 and fractional-potential consequences.",
+    "claims": [
+      "||p_(Q-Q')||_infinity < 93 Delta^(-1/2)",
+      "P(|Q-Q'|<=epsilon) < 186 Delta^(-1/2) epsilon",
+      "||p_Q||_2^2 <= 93 Delta^(-1/2)",
+      "H_(1/4)(Q) <= 2 sqrt(2) 93^(1/4) Delta^(-1/8)",
+      "int |t|^(-1/2)|phi_Q(t)|^2 dt <= 4 sqrt(93 pi) Delta^(-1/4)"
+    ],
+    "proof_interface": "Condition outside a literal physical pair in both whole copies. The remaining four independent cap-one scalars have quadratic matrix diag(B,-B), determinant Delta^2; apply the completed physical-four-determinant receiver. Gaussian mollification turns the bounded collision density into an L2 density for Q."
+  },
+  "pinned_result_applied": {
+    "source": "math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 FOURIER_ROUTE_REPORT.md Lemma 4.3",
+    "inequality": "If A_ii=A_jj=0, A_ij=mu and the physical Schur residual contains a pair of determinant magnitude Delta_S, then ||p_Q||_infinity <=2^(9/4) kappa 93^(1/4)|mu|^(-3/4)Delta_S^(-1/8)<11.887|mu|^(-3/4)Delta_S^(-1/8)."
+  },
+  "partner_result_applied": {
+    "source": "account03/B03 r43 @ f3198cfe9b2f5f88659958c714b1ea0f7dfa29c9",
+    "target_family": "T=2Y1W1+2Z(Y2+W2), spectrum {1,-1,sqrt(2),-sqrt(2),0}",
+    "inequalities": [
+      "||p_T||_infinity <= 3",
+      "int |t|^(-1/2)|phi_T|^2 <= (24/5)sqrt(pi)",
+      "E|T-T'|^(-1/2) <= 24/(5sqrt(2))"
+    ],
+    "scope_note": "The r43 supplement leaves its triangle theorem unchanged and only narrows an unrelated account04/B03 collision citation."
+  },
+  "obstruction": {
+    "family": "n=4m Sylvester-Hadamard rank-three frame A_n=R_n diag(1,1,-1)R_n^T",
+    "facts": [
+      "spectrum {1,1,-1,0,...}",
+      "every physical 2x2 principal determinant is 0 or -8/n^2",
+      "the local pair weighted-time certificate deteriorates like 40.6541 sqrt(n)",
+      "pinned Theorem F gives ||p_Q||_infinity<=12 and weighted-time integral <= (48/5)sqrt(pi) uniformly"
+    ],
+    "meaning": "A single physical pair determinant cannot be the exhaustive structural bridge; aggregate frame receivers remain necessary."
+  },
+  "unresolved_implication": "For every remaining rough no-pivot/hub survivor under s3(A)>=1, extract product-preservingly either a zero-diagonal hyperbolic pair with residual currency |mu|^6 Delta_S bounded below, an exact/near triangle packet of the current account03/B03 type, or an already-paid aggregate receiver. Do not demand a single physical pair determinant or universal rank-three cross cut.",
+  "outputs": {
+    "early_math_commit": "8963ece3ef3792134a7e2355ac9c0c5b189038e7",
+    "report_commit": "6a6ca9290262487a819c08741444458880f19fc2",
+    "handoff_commit": "b2865fdfb4ef3ed52052a42a6c3bb29c29cc9dae"
+  },
+  "telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort": "UNKNOWN",
+    "provider_reasoning_tokens": null,
+    "provider_reasoning_time": null
+  }
+}

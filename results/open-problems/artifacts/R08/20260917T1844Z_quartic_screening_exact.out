@@ -1,0 +1,13 @@
+PASS exact symbolic checks
+corner_loss = a**4/24
+layer_gain_G(a,b) = (a - b)**2*(7*a**2 + 10*a*b + 7*b**2)/192
+layer_rho_polynomial = 7*r**4 - 4*r**3 - 6*r**2 - 4*r - 1
+layer_rho_bracket = (1466/1000, 1467/1000)
+rho_layer ~= 1.46672120218064335
+face_gain_k=1 = (a - b)**2*(7*a**2 + 10*a*b + 7*b**2)/192
+face_gain_k=2 = -(a - b)**3*(3*a + 5*b)/96
+face_gain_k=3 = (a - b)**4/32
+face_gain_total = (a - b)**2*(a**2 - 2*a*b + 7*b**2)/12
+face_rho_polynomial = 14*r**4 - 32*r**3 + 24*r**2 - 8*r + 1
+face_rho_bracket = (1233/1000, 1234/1000)
+rho_face ~= 1.23336060109032168

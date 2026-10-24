@@ -1,0 +1,87 @@
+ok   1^T (R^T - lam I) 1 = 0 for a general balanced 2x2 matrix
+ok   1^T (R^T - lam I) 1 = 0 for a general balanced 3x3 matrix
+ok   1^T (R^T - lam I) 1 = 0 for a general balanced 4x4 matrix
+ok   1^T (R^T - lam I) 1 = 0 for a general balanced 5x5 matrix
+ok   1^T (R^T - lam I) 1 = 0 for a general balanced 6x6 matrix
+ok   d = 2, p = d on mean zero: Q = -(r+s)|w|^2
+ok   d = 2, colour 1 omitted: Q = -(r+s) w_0^2
+ok   d = 2, colour 0 omitted: Q = -(r+s) w_1^2
+ok   d = 4: Q = f(a,b) + f(e,c) + 2 bc
+ok   d = 4: colour 0 omitted, Q = b(a - 6b) + f(e,c) + 2 bc
+ok   d = 4: colour 1 omitted, Q = a(5b - a) + f(e,c) + 1 bc
+ok   d = 5: Q = f(a,b) + f(e,c) + 0 bc
+ok   d = 5: colour 0 omitted, Q = b(a - 6b) + f(e,c) + 0 bc
+ok   d = 5: colour 1 omitted, Q = a(5b - a) + f(e,c) + 0 bc
+ok   d = 5: middle colour 2 omitted, same form
+ok   d = 6: Q = f(a,b) + f(e,c) + 0 bc
+ok   d = 6: colour 0 omitted, Q = b(a - 6b) + f(e,c) + 0 bc
+ok   d = 6: colour 1 omitted, Q = a(5b - a) + f(e,c) + 0 bc
+ok   d = 6: middle colour 2 omitted, same form
+ok   d = 6: middle colour 3 omitted, same form
+ok   d = 7: Q = f(a,b) + f(e,c) + 0 bc
+ok   d = 7: colour 0 omitted, Q = b(a - 6b) + f(e,c) + 0 bc
+ok   d = 7: colour 1 omitted, Q = a(5b - a) + f(e,c) + 0 bc
+ok   d = 7: middle colour 2 omitted, same form
+ok   d = 7: middle colour 3 omitted, same form
+ok   d = 7: middle colour 4 omitted, same form
+ok   d = 8: Q = f(a,b) + f(e,c) + 0 bc
+ok   d = 8: colour 0 omitted, Q = b(a - 6b) + f(e,c) + 0 bc
+ok   d = 8: colour 1 omitted, Q = a(5b - a) + f(e,c) + 0 bc
+ok   d = 8: middle colour 2 omitted, same form
+ok   d = 8: middle colour 3 omitted, same form
+ok   d = 8: middle colour 4 omitted, same form
+ok   d = 8: middle colour 5 omitted, same form
+ok   d = 9: Q = f(a,b) + f(e,c) + 0 bc
+ok   d = 9: colour 0 omitted, Q = b(a - 6b) + f(e,c) + 0 bc
+ok   d = 9: colour 1 omitted, Q = a(5b - a) + f(e,c) + 0 bc
+ok   d = 9: middle colour 2 omitted, same form
+ok   d = 9: middle colour 3 omitted, same form
+ok   d = 9: middle colour 4 omitted, same form
+ok   d = 9: middle colour 5 omitted, same form
+ok   d = 9: middle colour 6 omitted, same form
+ok   family d = 4..60: rows sum to 6, entries >= 0, irreducible; every reading has a positive integer witness
+     d = 4 values (full, omit 0..3): [2, 2, 2, 2, 2]
+ok   T3: rows sum to 100, entries >= 0, irreducible
+ok   T3 reading None: w = [-1, 3, -2], Q = 11
+ok   T3 reading 0: w = [-1, 2, -1], Q = 57
+ok   T3 reading 1: w = [-1, 3, -2], Q = 23
+ok   T3 reading 2: w = [-1, 5, -4], Q = 9
+ok   S6: rows sum to 6, entries >= 0, irreducible
+ok   S6 reading None: w = [0, -1, 2, -2, 0, 1], Q = 4
+ok   S6 reading 0: w = [-1, 0, 1, -1, 0, 1], Q = 3
+ok   S6 reading 1: w = [0, -1, 1, -1, 0, 1], Q = 4
+ok   S6 reading 2: w = [0, -1, 3, -2, 0, 0], Q = 2
+ok   S6 reading 3: w = [0, 0, -2, 3, 0, -1], Q = 2
+ok   S6 reading 4: w = [-1, 0, 1, -1, 1, 0], Q = 1
+ok   S6 reading 5: w = [-1, 0, 1, -1, 0, 1], Q = 2
+ok   S6: char. polynomial (x-6)(x^2+x+1)(x^3-5x^2+5x+6)
+ok   S6: cubic at x = y + 3 is y^3 + 4y^2 + 2y + 3 (Hurwitz: 4*2 > 3)
+ok   relabelling invariance of the readings (200 random permutations, d = 6)
+     d, lambda_max over R^d, mean-zero p = d, min over omitted colour of p = d - 1, max over omitted colour
+      4    0.60555    0.24264    0.41300    1.50759
+      5    0.65168    0.40512    0.40512    2.10165
+      6    0.62859    0.48448    0.61071    2.52419
+      7    0.61189    0.52292    0.64153    2.96979
+      8    0.60012    0.54383    0.66069    3.42249
+      9    0.59199    0.55596    0.67415    3.86364
+     10    0.58646    0.56326    0.68468    4.28622
+     T3    6.73803    1.15630  [14.70006  5.96644  1.10783]
+ok   d = 4: mean-zero p = d value is 3 sqrt(2) - 4 (numerically)
+ok   fam4: Lyapunov P positive definite on H
+ok   fam4: adapted contractivity with A = 0.999 (lam - gamma) = 0.2581; lam = 6, gamma = 5.7417, gamma/lam = 0.9569
+     spectrum of R: [-1.7417+0.j  0.    +0.j  5.7417+0.j  6.    +0.j]
+ok   fam5: Lyapunov P positive definite on H
+ok   fam5: adapted contractivity with A = 0.999 (lam - gamma) = 0.1458; lam = 6, gamma = 5.8541, gamma/lam = 0.9757
+     spectrum of R: [-2.7913+0.j -0.8541+0.j  1.7913+0.j  5.8541+0.j  6.    +0.j]
+ok   fam8: Lyapunov P positive definite on H
+ok   fam8: adapted contractivity with A = 0.999 (lam - gamma) = 0.0618; lam = 6, gamma = 5.9381, gamma/lam = 0.9897
+     spectrum of R: [-5.0498+0.j -2.873 +0.j -1.2636+0.j -0.    +0.j  2.3752+0.j  4.873 +0.j
+  5.9381+0.j  6.    +0.j]
+ok   T3: Lyapunov P positive definite on H
+ok   T3: adapted contractivity with A = 0.999 (lam - gamma) = 1.2585; lam = 100, gamma = 98.7402, gamma/lam = 0.9874
+     spectrum of R: [-35.7402+0.j  98.7402+0.j 100.    +0.j]
+ok   S6: Lyapunov P positive definite on H
+ok   S6: adapted contractivity with A = 0.999 (lam - gamma) = 3.1578; lam = 6, gamma = 2.8390, gamma/lam = 0.4732
+     spectrum of R: [-0.678+0.j     -0.5  -0.866j  -0.5  +0.866j   2.839-0.8887j
+  2.839+0.8887j  6.   +0.j    ]
+ALL PASS

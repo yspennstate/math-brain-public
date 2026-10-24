@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B09",
+  "run_id": "20260924T094640Z-account01-B09-QFORM-auto11-r34",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start_observed": "5062ce785348b5f7e2d26cf0f9c0a6d80052b777",
+  "control_commit_prepublication_observed": "6cc2c1e69462fed0b91f79c7edfb36b531cd5d4d",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity": "OPEN",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE"
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-ADJUGATE-STAR-EXTERIOR-IDENTITY-v1",
+      "status": "PROVED_SUPPORTING_STRUCTURAL_IDENTITY",
+      "scope": "literal original-coordinate physical pair B and arbitrary physical pair-to-remainder cross matrix M; H=adj(B)M; each two-column minor scales by det(B), yielding max star norm squared >= |det B| sqrt(det(MM^T))"
+    },
+    {
+      "id": "QFORM-DEFINITEPAIR-CROSSVOLUME-STAR-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_DENSITY_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "scope": "definite literal physical pair, nonzero aggregate rank-two cross volume, arbitrary remaining curvature and affine terms; essential density bound 2^(5/4) pi sqrt(3) (|det B| Delta)^(-1/4); continuity not claimed"
+    }
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@fd800c8358502f8e947f77f47e06ac3e5fae1742",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260924T091232Z-account03-B09-QFORM-r47/REPORT.md",
+      "result": "QFORM-DEFINITEPAIR-POLYNOMIAL-STAR-UNIFORM-v1",
+      "use": "convert the larger adjugate-star row into a full-ambient L-infinity and O(|I|) bound"
+    },
+    {
+      "source": "yspennstate/math-open-problems@174f2ac95a7e63dc88172bc6fcf5b319e8613d44",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260924T081556Z-account01-B09-QFORM-auto11-r33/REPORT.md",
+      "result": "QFORM-TRIANGLE-CYCLIC-CROSSING-v1",
+      "use": "supply a literal physical 2x2 crossing to the new cross-volume compiler"
+    }
+  ],
+  "designated_partner_applied": {
+    "partner": "account02/B09",
+    "result": "QFORM-JOINT-HUB-CAP-MIXEDFRAME-v1",
+    "source": "yspennstate/math-open-problems@2cce202879f9b0fa629f4fd1b464e271b11895c0",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260924T081042Z-account02-B09-QFORM/REPORT.md",
+    "actual_inequality": "For Q0=(X1+X2)^2+4X1<c,Y>+4X2<c+d,Y>+<w,Y>^2 with flat orthonormal Walsh c,d,w in R^8, ||p_Q0||_infinity <= (5/3)2^(2/5)=2.1991798513..., continuous, and P(Q0 in I)<=2.199180|I|."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c7abe2a399720fabc2b96d991add009b7475c298",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260924T094640Z-account01-B09-QFORM-auto11-r34/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260924T094640Z-account01-B09-QFORM-auto11-r34/CHECKS.md",
+    "prepublication_refresh_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260924T094640Z-account01-B09-QFORM-auto11-r34/PREPUBLICATION_REFRESH.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B09/20260924T094640Z-account01-B09-QFORM-auto11-r34.md",
+  "unresolved_implication": "QFORM-INDEFINITE-CROSSING-THIRD-RESOURCE-COMPILER-v1",
+  "next_step": "retain a genuine third original-coordinate smoothing resource jointly with a macroscopic crossing and an indefinite/near-singular physical pair, or force an already-paid mixed-frame/singular-star/grouped-crossing/finite-core/principal-triple exit",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "schedule_mutations": 0,
+  "emails_sent": 0,
+  "notifications_enabled_by_worker": false
+}

@@ -1,0 +1,131 @@
+{
+  "target": "P0162",
+  "title": "Fourier entropy versus total influence",
+  "checked_at": "2026-10-10",
+  "historical_status": "attempted_un",
+  "historical_tier": 5,
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "exact_target": "There is one finite C, independent of n and f, such that every Boolean f:{-1,1}^n->{-1,1} under uniform measure satisfies sum_S fhat(S)^2 log_2(1/fhat(S)^2)<=C sum_S |S| fhat(S)^2. Zero summands are zero; fhat(S)=E[f chi_S]. No balance or monotonicity is assumed.",
+  "primary_statement_verified": true,
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1204.6447",
+      "title": "Open Problems in Analysis of Boolean Functions",
+      "author": "Ryan O'Donnell",
+      "revision": "v1, 29 April 2012",
+      "locator": "Printed page 5 (PDF page index 4), Fourier Entropy-Influence Conjecture",
+      "statement_status": "verified exact target; matches the intake citation"
+    },
+    {
+      "url": "https://arxiv.org/html/2606.00246v1",
+      "title": "Further evidence towards the Fourier Entropy-Influence conjecture",
+      "authors": [
+        "Maria Jose Gonzalez",
+        "Paul MacManus",
+        "Maria Cristina Pereyra"
+      ],
+      "revision": "v1, 29 May 2026",
+      "locator": "Introduction: FEI Conjecture and Ansatz 1.1",
+      "result_scope": "Restricted classes and conditional induction; not a full FEI proof"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.21563",
+      "title": "On the Fourier Entropy-Influence Conjecture for Boolean Plateaued Functions",
+      "author": "Vladimir N. Potapov",
+      "revision": "18 September 2026",
+      "locator": "Abstract checked",
+      "result_scope": "Plateaued and partially bent functions; not the full target"
+    },
+    {
+      "url": "https://arxiv.org/abs/1312.3003",
+      "title": "Decision Trees, Protocols, and the Fourier Entropy-Influence Conjecture",
+      "locator": "Abstract checked",
+      "result_scope": "Read-k and decision-tree results; exact target independently matches"
+    }
+  ],
+  "origin_reference": {
+    "citation": "Friedgut and Kalai, Every monotone graph property has a sharp threshold, Proc. AMS 124(10), 2993-3002 (1996)",
+    "original_paper_retrieved": false,
+    "attribution_sources": [
+      "O'Donnell 2012 page 5",
+      "Gonzalez--MacManus--Pereyra 2026 references"
+    ]
+  },
+  "owner_work_checks": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "locator": "row 553",
+      "finding": "Historical tier 5 attempted_un"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json",
+      "locator": "op-p0162",
+      "finding": "Target and O'Donnell PDF page 5; current status explicitly unverified"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006a04.json",
+      "locator": "at-p0162",
+      "finding": "Singleton distribution is not a Boolean spectrum; nonlinear convolution identities remain necessary"
+    },
+    {
+      "paths": [
+        "probability_1000_attempts_H_20260912",
+        "probability_1000_attempts_I_20260914"
+      ],
+      "finding": "No P0162 exact-ID record located in the targeted text search; not a global absence claim"
+    },
+    {
+      "path": "prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md",
+      "locator": "row containing P0162",
+      "finding": "Historical status only; no actual P0162 formal theorem located"
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "finding": "No exact P0162 row in targeted board lookup; intentional new triads checked for lane overlap"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/fei_step_numerics_2026_09_20/README.md",
+      "finding": "Existing min-step/total-step experiments; finite lower bounds and no universal conclusion"
+    }
+  ],
+  "recall": {
+    "command": "python -X utf8 ~/.claude/dreaming/brain.py recall P0162 Fourier entropy influence proof mistakes",
+    "timeout_seconds": 60,
+    "result": "timed out",
+    "fallback": "MEMORY.md grep returned no terms; read only the relevant filename matches",
+    "memory_slugs": [
+      "fei_package_checked_induction_step_needs_a_growing_constant_2026_09_20",
+      "fei_most_influential_coordinate_fails_by_composition_2026_09_24",
+      "fei_opus_wave1_reduction_small_influences_gates_and_ltf_2026_09_23",
+      "perceptron_proof_open_gaps_fleet_2026_07_12"
+    ]
+  },
+  "current_openness_reason": "Recent primary papers and relevant owner work establish partial results and failed routes. The full solved/retired registry has not been certified comprehensively, so current global openness stays UNKNOWN. No novelty is asserted.",
+  "formal_receipt": {
+    "performed": false,
+    "actual_theorem": null,
+    "trusted_axioms": null,
+    "admitted_placeholders_used": false,
+    "reason": "Proof arguments are written and checked numerically; no Lean theorem was compiled."
+  },
+  "canonical_store_lookup": {
+    "path": "~/math-brain-build/local/population/brain.sqlite3",
+    "mode": "ro; PRAGMA query_only=ON",
+    "receipt": "canonical_lookup.json",
+    "matched_records": 2,
+    "finding": "The historical P0162 target and singleton-spectrum attempt are both present. Their recorded statuses remain unverified; this does not certify global current openness."
+  },
+  "independent_math_review": {
+    "reviewer": "w506",
+    "kept": [
+      "C001",
+      "C002 (conditional)",
+      "C003 (family only)",
+      "C004 (family only)"
+    ],
+    "receipt": "~\\brain_workers\\w506\\REVIEW_PACKET.md",
+    "C005": "unproved",
+    "C006": "review pending"
+  }
+}

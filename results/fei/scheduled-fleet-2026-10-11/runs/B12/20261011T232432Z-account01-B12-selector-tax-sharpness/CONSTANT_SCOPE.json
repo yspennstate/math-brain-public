@@ -1,0 +1,61 @@
+{
+  "schema": "fei-composition-constant-scope/1",
+  "packet_id": "A060",
+  "claim_id": "B12-A060-SELECTOR-TAX-SHARPNESS",
+  "version": 1,
+  "example": {
+    "D": "1-2*1_{z1=z2=-1}",
+    "K": "1-2*1_{x=z1=z2=-1}",
+    "splice": "K(+1,z)=1; K(-1,z)=D(z)",
+    "boolean": true,
+    "selector": "fresh",
+    "branch_inner_product": "1/2",
+    "neighboring_orthogonality": false
+  },
+  "exact_values": {
+    "H_D": "2",
+    "I_D": "1",
+    "mean_D": "1/2",
+    "H_K": "(9/16) log_2(16/9)+7/4",
+    "I_K": "3/4",
+    "I_selector_K": "1/4",
+    "selector_tax_ratio": "12-(9/4)log_2(9)",
+    "fei_ratio_K": "16/3-(3/4)log_2(9)"
+  },
+  "rigorous_intervals": {
+    "selector_tax_ratio": [
+      "4.867668746754797183458174752234825705904",
+      "4.867668746754797183458174752234825710597"
+    ],
+    "fei_ratio_K": [
+      "2.955889582251599061152724917411608568635",
+      "2.955889582251599061152724917411608570199"
+    ]
+  },
+  "killed_helper": {
+    "statement": "For every Boolean D, the fresh-selector splice K(+1,z)=1, K(-1,z)=D(z) satisfies H(K)<=H(D)/2+4 I_x(K).",
+    "status": "REFUTED",
+    "witness": "the explicit D and K above",
+    "necessary_coefficient_lower_bound": "12-(9/4)log_2(9)>4.867"
+  },
+  "tensor_scope": {
+    "operation": "disjoint tensor product",
+    "H": "H(K^{tensor m})=m H(K)",
+    "I": "I(K^{tensor m})=m I(K)",
+    "ratio": "H/I=16/3-(3/4)log_2(9)",
+    "conclusion": "The local selector-tax coefficient does not become an FEI lower bound under tensorization."
+  },
+  "does_not_claim": [
+    "a lower bound 4.867 on the universal FEI constant",
+    "a counterexample to FEI",
+    "a shared-variable product law",
+    "a theorem for arbitrary overlapping compositions"
+  ],
+  "verification": {
+    "script": "check_selector_tax_sharpness.py",
+    "output": "check_selector_tax_sharpness.out",
+    "arithmetic": "integer Walsh transforms and rational logarithm intervals",
+    "randomness": "NONE"
+  },
+  "full_fei_status": "OPEN"
+}

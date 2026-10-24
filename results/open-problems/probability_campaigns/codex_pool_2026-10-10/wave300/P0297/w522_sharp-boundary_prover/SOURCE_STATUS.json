@@ -1,0 +1,154 @@
+{
+  "worker": "w522",
+  "target": "P0297",
+  "title": "Exact Hausdorff dimension of Liouville quantum gravity",
+  "date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "openness_evidence": "The checked 2026-06-09 primary paper says the general value is unknown except gamma=sqrt(8/3). Targeted records contain unsolved, author-checked attempts; no exhaustive owner-retirement or post-June status certification was available.",
+  "exact_statement_recovered": true,
+  "exact_statement": "For each fixed gamma in (0,2), compute the deterministic almost-sure Hausdorff dimension d_gamma of the plane with its gamma-LQG metric D_h, associated with a whole-plane GFF with fixed additive constant.",
+  "assumptions": [
+    "gamma is fixed in (0,2)",
+    "whole-plane GFF h with h_1(0)=0 is a valid normalization",
+    "metric unique up to deterministic positive multiplicative scale",
+    "no simultaneous-in-gamma probability-one assertion",
+    "gamma=0 and gamma=2 excluded from this subcritical target"
+  ],
+  "known_anchor": {
+    "gamma_squared": "8/3",
+    "dimension": 4
+  },
+  "sources": [
+    {
+      "source_id": "arxiv:2509.21053",
+      "authors": "Remi Rhodes; Vincent Vargas",
+      "title": "Two Decades of Probabilistic Approach to Liouville Conformal Field Theory",
+      "url": "https://arxiv.org/abs/2509.21053",
+      "locator": "Section 3, PDF page 4",
+      "checked": "Target paragraph and preceding gamma range",
+      "role": "Original primary survey cited by canonical P0297; formulates surface distance dimension with formal e^(gamma X_g)g notation"
+    },
+    {
+      "source_id": "arxiv:1905.00383",
+      "authors": "Ewain Gwynne; Jason Miller",
+      "title": "Existence and uniqueness of the Liouville quantum gravity metric for gamma in (0,2)",
+      "url": "https://arxiv.org/abs/1905.00383",
+      "locator": "Problem 7.1, PDF page 80",
+      "checked": "Exact whole-plane target, xi=gamma/d_gamma, Q=2/gamma+gamma/2, Brownian anchor, rejection of Watabiki at small gamma",
+      "role": "Precise target and normalization source"
+    },
+    {
+      "source_id": "arxiv:1905.11790v3",
+      "authors": "Ewain Gwynne; Joshua Pfeffer",
+      "title": "KPZ formulas for the Liouville quantum gravity metric",
+      "url": "https://arxiv.org/abs/1905.11790",
+      "locator": "Equation (1.5), Theorems 1.4-1.5, Corollaries 1.6-1.7, PDF pages 5-7",
+      "checked": "Independent ambient Borel set, alpha in [-2,2], positive-part numerator, full-dimension gamma-thick set",
+      "role": "Exact formula context; L1-L4 are author algebraic derivations"
+    },
+    {
+      "source_id": "arxiv:2606.10496v1",
+      "authors": "Manan Bhatia; Ewain Gwynne; Brin Harper",
+      "title": "Dimension lower bounds in random geometry via Lipschitz functions",
+      "url": "https://arxiv.org/abs/2606.10496",
+      "locator": "Section 2.3, PDF page 11; posted 2026-06-09",
+      "checked": "Precise numerical value described as unknown except Brownian case",
+      "role": "Recent primary status evidence, not a 2026-10-10 completeness certificate"
+    }
+  ],
+  "prior_records": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "line": 554,
+      "result": "tier 5, unsolved in dated ranking"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_D_20260908/problems.jsonl",
+      "lines": [
+        49,
+        52
+      ],
+      "ids": [
+        "D0049",
+        "D0052"
+      ],
+      "dedup_key": "lqg_hausdorff_dimension_d_gamma",
+      "result": "same mathematical question; no new database alias certified"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_D_20260908/attempts.jsonl",
+      "lines": [
+        43,
+        46
+      ],
+      "ids": [
+        "D0049-A001",
+        "D0052-A001"
+      ],
+      "result": "unreviewed attempts; C1 corrects former's wrong d_gamma=2Q/xi"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_attempts_H_20260912",
+      "search": "P0297 / Exact Hausdorff dimension / Watabiki in named markdown and JSON records",
+      "result": "no target proof artifact found by scoped searches"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_attempts_I_20260914",
+      "search": "same scoped ID/title search",
+      "result": "no target proof artifact found"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md",
+      "line": 604,
+      "result": "unsolved ranking entry; no target formal proof receipt"
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "line": 559,
+      "result": "open P0297 row without claimant or kept artifact"
+    }
+  ],
+  "population_store": {
+    "path": "~/math-brain-build/local/population/brain.sqlite3",
+    "access": "file: URI mode=ro",
+    "receipt": "EXISTING_P0297_CARDS.json",
+    "exact_node_ids": [
+      "claim_75af14e7ac074f83e6e184d7d70cc4ec4d65e92c7b55d0e037bd1065492535b1",
+      "claim_925925851463c9410d37f9321ba6e1a5992a179bf08cc21a852f4cda7d9f03a1"
+    ],
+    "result": "Target and prior-attempt nodes exist; prior constant-shift attempt correctly records xi*d=gamma and does not determine xi; truth status unverified"
+  },
+  "canonical_research_store": {
+    "repository": "~/math-research-brain",
+    "status": "Not verified: no current P0297 card or primary live-store database located by the narrow discovery searches.",
+    "scope": "Exact P0297 logical-id search in named JSON/markdown formats; test, bank, blind, harness and audit paths excluded. Store-database discovery found only audit snapshots, which were not opened.",
+    "limitation": "Current owner-retirement status remains unconfirmed. No exhaustive corpus, benchmark artifact, or audit-snapshot inspection is used as mathematical evidence."
+  },
+  "scar": {
+    "slug": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "checked": "Named memory file and MISTAKES.md line 187",
+    "recall_receipt": "SCAR_RECALL.json",
+    "relevance": "Checks cannot clear the hardest proof gap; no conditional-probability multiplication without the required argument"
+  },
+  "source_or_hash_check_is_a_proof": false,
+  "formal_checker_receipt": null,
+  "novelty_claim": false,
+  "original_target_solved": false,
+  "independent_review": {
+    "reviewer": "w524",
+    "status": "five scoped independent KEEP receipts received",
+    "claims": [
+      "P0297.w522.C1",
+      "P0297.w522.L1",
+      "P0297.w522.L2",
+      "P0297.w522.L3",
+      "P0297.w522.L4"
+    ],
+    "receipt": "~\\brain_workers\\w522\\referee\\w524_verdicts.jsonl",
+    "source_receipt": "~\\brain_workers\\w524\\VERDICTS.jsonl",
+    "received_at_utc": "2026-10-10T05:56:32.710295+00:00",
+    "scope": "C1 and L1-L4 only; not the original target, relations, or hook implementation",
+    "formal_proof_receipt": null,
+    "reviewer_account_verified": false
+  }
+}

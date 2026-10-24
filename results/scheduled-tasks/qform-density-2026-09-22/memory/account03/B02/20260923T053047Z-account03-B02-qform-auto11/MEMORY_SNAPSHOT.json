@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260923T053047Z-account03-B02-qform-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "source_control_start_commit": "ededfb097f10d8ddcb0fe7555908ec9a8e00e5fa",
+  "source_control_prepublication_commit": "bf8484488e0e489ec5a921ff4cf9dcfe2f87b2d3",
+  "owner_control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSS-SCHUR/TRUE-PAIR mismatch from account03/B06 as repaired in account03/B02 r21",
+    "QFORM-ONE-GOOD-MINOR / fiber-sup reductions not used"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-PAIRVOLUME-HALF-RIESZ-UNCONDITIONAL-v1",
+      "source": "yspennstate/math-open-problems@1f3af9dc58afb9e902b972466d6da01cece89734:proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T030821Z-account01-B01-qform-auto11/REPORT.md",
+      "scope": "independent cap-one original coordinates; arbitrary quadratic-plus-affine residual; any physical cross block with E2>0; no minor-marginal gate",
+      "inequality": "H_1/2(R)<=C_E2 E2^(-1/8), C_E2<=26.334046180759735"
+    },
+    {
+      "id": "QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1",
+      "source": "yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md",
+      "scope": "invertible indefinite original-coordinate physical pair; arbitrary dependent pair shifts from remaining original coordinates"
+    },
+    {
+      "id": "QFORM-CROSS-E2-TO-TRUE-SCHUR-OR-CORRECTION-v1",
+      "source": "yspennstate/math-open-problems@61ec1e9c84c7bd41323e0b87bfa84e45a828d81c:proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T050329Z-account03-B02-qform-r21/REPORT.md",
+      "scope": "correction-safe q=4/3 third-volume gate-failure compiler"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-PAIRLOG-HALFRIESZ-DIRECT-v1",
+      "statement": "If the completed indefinite pair has D=|det P|, kappa=sigma_min(P), and H=sup_t E|R-t|^-1/2, then ||p_Q||inf<=4 sqrt(2/e) H^(1/2)(D kappa)^(-1/4).",
+      "status": "supporting theorem proved"
+    },
+    {
+      "id": "QFORM-PAIR-TRUE-SCHUR-E2-UNCONDITIONAL-v1",
+      "statement": "If the true Schur residual contains a physical cross block T with Delta=E2(T)>0, then ||p_Q||inf<=17.607048(D kappa)^(-1/4)Delta^(-1/16), with no E2 minor-marginal gate.",
+      "status": "supporting theorem proved"
+    },
+    {
+      "id": "QFORM-R21-TRUE-SCHUR-CONCENTRATION-PAID-v1",
+      "statement": "On r21 q=4/3 branch a^2 Delta>Z/12 and invertible-indefinite anchor pair, ||p_Q||inf<20.565316 |a|^(1/8)(D kappa)^(-1/4) Z^(-1/16).",
+      "status": "previous r21 residual E2 concentration obstruction removed on stated branch"
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B02",
+    "id": "QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1",
+    "source": "yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7:proofnet24/QFORM-density/fleet-2026-09-22/account04/B02/20260922T193108Z-account04-B02-QFORM-r2/REPORT.md",
+    "actual_derived_inequality": "||p_Q||inf<=8.524173(D kappa)^(-1/4)|det H0|^(-1/12) when the true Schur residual contains the partner zero-diagonal nonsingular physical triple H0"
+  },
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "40bf94187444ad5a6008bcf4b06931689b0e7383",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T053047Z-account03-B02-qform-auto11/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "f74820707702bdb2719d82f2eb9f9d80efdec307",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B02/20260923T053047Z-account03-B02-qform-auto11.md"
+  },
+  "full_target_status": "OPEN",
+  "target_wide_unweighted_L1_fourier_status": "OPEN_NOT_REFUTED",
+  "continuity_status": "NEW_PAIR_RECEIVER_ESSENTIAL_BOUNDEDNESS_ONLY; PARTNER_RESIDUAL_CONTINUOUS; FULL_CONTINUITY_OPEN",
+  "unresolved_implication": "spend the r21 same-side correction packet by a product-preserving mixed-slope/fractional-Fourier estimate; separately handle singular physical pair and aggregate overlap closure",
+  "next_step": "QFORM-SAMESIDE-CORRECTION-PACKET-TO-FRACTIONAL-v1"
+}

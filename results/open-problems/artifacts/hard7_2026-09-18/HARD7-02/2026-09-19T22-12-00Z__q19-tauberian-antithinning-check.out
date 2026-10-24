@@ -1,0 +1,12 @@
+HARD7-02 Tauberian anti-thinning exact algebra self-check
+p_delta = alpha*(delta + 2)/(2*delta + 2)
+alpha - p_delta = alpha*delta/(2*(delta + 1))
+p_delta - alpha/(1+delta) = alpha*delta/(2*(delta + 1))
+(1+delta)*p_delta - alpha = alpha*delta/2
+remote_tail_ratio_to_r^-alpha = 2*M*(delta + 1)/(alpha*r**(alpha*delta/2)*(delta + 2))
+annulus_log = delta*log(r)
+threshold for r^(alpha*delta/2) >= 4*M*(delta + 1)/(A*alpha*(delta + 2))
+pointwise coefficient after half-signal localization = A/(2*delta)
+with delta=A/(4L), coefficient = 2*L
+critical truncated-moment antiderivative = L*alpha*log(log(t))
+ALL_EXACT_CHECKS_PASS = True

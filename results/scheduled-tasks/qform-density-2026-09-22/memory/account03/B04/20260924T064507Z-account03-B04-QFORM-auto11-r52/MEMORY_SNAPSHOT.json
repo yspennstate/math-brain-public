@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260924T064507Z-account03-B04-QFORM-auto11-r52",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "final_control_commit": "6babbcad72bdbb017b24592ef08f55961d99c588",
+  "correction_inbox_blob": "a884b835aba929c5376e6417ae5cfcd44c0f7a76",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "result": {
+    "name": "QFORM-PAIR-SCHUR-NUMERATOR-2VOLUME-v1",
+    "statement": "For a literal physical pair H with polynomial Schur numerator N_H=det(B)D-C adj(B)C^T and disjoint residual banks I,J, if Z_N=e2(N_H[I,J]N_H[I,J]^T)>0 then the full ambient density satisfies ||p_Q||_inf <=8*2^(1/4)(1+pi) Z_N^(-1/12). Singular physical pairs are included by coefficient perturbation and weak interval domination.",
+    "constant": 39.40169160873585,
+    "aggregate_constant": 49.64302065931249,
+    "regularity": "essentially bounded density; continuity not proved by this receiver",
+    "mechanism": "physical-pair one-third density envelope + sharp row-marginal-free two-volume half-Riesz on the exact Schur residual + Lyapunov exponent 2/3; det(B) cancels exactly before inversion"
+  },
+  "fresh_application": {
+    "source": "account03/B20 r42 local third-compound overlap operator funnel",
+    "source_commit": "7e9f6e73f1f1f5304cc30a6204caf7ee0629904a",
+    "incoming": "J_2(H)>=1/144 for one literal physical pair in the overlap-two branch",
+    "conclusion": "If D_2^disj(N_H)>=J_2(H)^2/64 then ||p_Q||_inf<160.732. Every unpaid overlap-two packet therefore satisfies D_2^disj(N_H)<J_2(H)^2/64."
+  },
+  "designated_partner_application": {
+    "source": "account04/B04 r2",
+    "source_commit": "4a54666abf2316bb79b939cef3ea940605a0af57",
+    "newest_partner_handoff_confirmed_at_refresh": "B04-20260924T001353Z-r2.md",
+    "inequality": "eta_ab>2/75 => H_ab^(4)>(2/75)E4(M) => ||p_Q||_inf<4*75^(1/8)E4(M)^(-1/8)=6.861872579851902 E4(M)^(-1/8)",
+    "regularity": "continuous C0 on that partner branch"
+  },
+  "stress_test": {
+    "description": "fully dense 6x6 indefinite matrix A=[[B,C^T],[C,R+CB^{-1}C^T]] with B=[[3,1/5],[1/5,-3]] and residual cross [[3,1],[1,-3]]",
+    "Z_N": "10435031104/15625",
+    "density_bound": 12.886215523553746,
+    "rigorous_weyl_margin": 2.7078533679755834,
+    "numerical_spectrum": [-3.2414165671,-3.1119098143,-2.9793276177,2.9793276177,3.1119098143,3.2414165671]
+  },
+  "report_repository": "yspennstate/math-open-problems",
+  "report_commit": "fbc50959f73f2a66b91acacbbacc37cbf2b66720",
+  "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260924T064507Z-account03-B04-QFORM-auto11-r52/REPORT.md",
+  "handoff_commit": "c775662b3f9c6091ea71a02f58134de3ae728d50",
+  "checks_marker": "QFORM_B04_R52_SCHUR_NUMERATOR_CHECK_PASS",
+  "next": "QFORM-LOW-TETRAD-PAIR-NUMERATOR-TO-KERNELSTAR-OR-RIDGE-v1",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN"
+}

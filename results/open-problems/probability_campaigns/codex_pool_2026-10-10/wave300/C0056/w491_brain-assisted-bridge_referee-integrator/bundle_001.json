@@ -1,0 +1,73 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w491",
+  "bundle_slug": "c0056-spectral-bridge-reviewed-001",
+  "entries": [
+    {
+      "key": "annealed-first-moment-insufficient",
+      "namespace": "probability.spectral.anderson",
+      "logical_name": "annealed-first-resolvent-moment-insufficient-for-quenched-ac",
+      "kind": "concept",
+      "title": "Averaged resolvent density cannot certify sample spectral continuity",
+      "statement": "A bound uniform in energy E and height eta>0 on the expectation of the normalized Poisson transform of random spectral measures does not by itself imply that almost every sample measure is absolutely continuous. Additional control of the sample measures is required to exclude random atoms.",
+      "proof_text": null,
+      "assumptions": ["Random finite positive spectral measures; no special spatial structure assumed"],
+      "domain": "random operator spectral theory",
+      "source": {"source_id": "owner-own-work:w490:C0056:2026-10-10", "url": "~/brain_workers/w490/INDEPENDENT.md", "revision": "reviewed by w491 on 2026-10-10", "license": "owner-own-work", "excerpt": "Every realization has pure point spectrum."}
+    },
+    {
+      "key": "random-atom-counterexample",
+      "namespace": "probability.spectral.anderson",
+      "logical_name": "random-atom-counterexample-to-annealed-spectral-continuity",
+      "kind": "lemma",
+      "title": "Random atom with bounded averaged Poisson density",
+      "statement": "Let X be uniform on [-1,1] and let the scalar operator H_X on C multiply by X. Its unit-vector spectral measure is delta_X and is purely atomic in every realization. Nevertheless, for f_eta(X,E)=eta/[pi((X-E)^2+eta^2)], one has sup over E in R and eta>0 of E f_eta(X,E) <=1/2. For J=[-2,2] and every finite M>=1, sup over 0<eta<1 of E integral_J f_eta 1_{f_eta>M} dE=1.",
+      "proof_text": "The disorder average is convolution of the uniform density (1/2)1_[-1,1] with the normalized Poisson kernel, so it is at most 1/2. The event f_eta>M is |E-X|<sqrt(eta/(pi M)-eta^2) when eta<1/(pi M); it lies in J. Integrating over E gives (2/pi) arctan sqrt(1/(pi eta M)-1), which tends to 1 as eta decreases to zero. Each sample measure is delta_X.",
+      "assumptions": ["X uniform on [-1,1]", "eta>0", "M>=1", "J=[-2,2]"],
+      "domain": "random operator spectral theory",
+      "source": {"source_id": "owner-own-work:w490:C0056:2026-10-10", "url": "~/brain_workers/w490/INDEPENDENT.md", "revision": "independently recalculated by w491 on 2026-10-10", "license": "owner-own-work", "excerpt": "The averaged spectral measure is the uniform probability measure."}
+    },
+    {
+      "key": "uniform-integrability-without-higher-moment",
+      "namespace": "probability.spectral.anderson",
+      "logical_name": "absolutely-continuous-measure-without-higher-poisson-moment",
+      "kind": "lemma",
+      "title": "An a.c. spectral measure can have no higher Poisson moment",
+      "statement": "Define g(E)=1/[E(log(1/E))^2] on 0<E<exp(-1) and zero elsewhere. It is a probability density, and the multiplication operator Hf(E)=Ef(E) on L2(g(E)dE), with unit vector 1, has absolutely continuous scalar spectral measure g(E)dE. Its normalized Poisson transforms P_eta*g converge to g in L1(R) and are uniformly integrable. For every p>1 and every bounded interval J whose interior contains [0,exp(-1)], sup_{0<eta<1} integral_J (P_eta*g)^p dE=infinity. Thus an Lp Poisson-moment criterion is sufficient but not necessary for a.c. spectral measure.",
+      "proof_text": "With u=log(1/E), integral g dE=integral_1^infinity u^(-2)du=1, but integral g^p dE=integral_1^infinity exp((p-1)u)u^(-2p)du=infinity for every p>1. The normalized Poisson kernels are an L1 approximate identity, so P_eta*g ->g in L1 and the family at small eta is uniformly integrable; heights bounded away from zero have uniformly bounded densities. Fatou and almost-everywhere Poisson convergence imply liminf_eta integral_J (P_eta*g)^p=infinity. The multiplication operator is bounded because g is supported in [0,exp(-1)].",
+      "assumptions": ["Deterministic scalar spectral measure", "g as explicitly defined", "p>1", "J contains the support interval in its interior"],
+      "domain": "random operator spectral theory",
+      "source": {"source_id": "owner-own-work:w490:C0056:2026-10-10:ui-separation", "url": "~/brain_workers/w490/UI_SEPARATION.md", "revision": "independently recalculated by w491 on 2026-10-10", "license": "owner-own-work", "excerpt": "The higher-moment criterion is sufficient, not necessary."}
+    },
+    {
+      "key": "poisson-lp-criterion",
+      "namespace": "probability.spectral.anderson",
+      "logical_name": "random-poisson-lp-bound-implies-sample-ac",
+      "kind": "lemma",
+      "title": "A genuine random Poisson Lp moment implies samplewise absolute continuity",
+      "statement": "Let omega -> mu_omega be a measurable kernel of positive Borel measures on R with mass at most 1, let I be a bounded open interval, p>1, and eta_n>0 decrease to zero. Put Q_n(omega,E)=integral_R eta_n/((t-E)^2+eta_n^2) dmu_omega(t). If sup_n E integral_I Q_n(omega,E)^p dE <= C<infinity, then almost surely mu_omega restricted to I has an Lp density h_omega and E integral_I |h_omega(E)|^p dE <= C/pi^p.",
+      "proof_text": "Fatou makes liminf_n integral_I Q_n^p finite almost surely. On each such sample choose a norm-bounded subsequence, then a weakly convergent Lp subsequence because p>1. For phi in C_c(I), Poisson approximate identity and finite measure mass show integral_I phi Q_n -> pi integral phi dmu_omega; weak convergence identifies the limit with pi mu_omega|I. Weak lower semicontinuity bounds pi^p integral_I |h_omega|^p by the sample liminf. Fatou yields the expected bound. Countable continuous tests yield a measurable density version.",
+      "assumptions": ["Measurable finite positive measure kernel", "Each mass <=1", "I bounded open", "p>1", "A fixed sequence eta_n decreases to zero", "The displayed bound is on the pth random moment"],
+      "domain": "random operator spectral theory",
+      "source": {"source_id": "owner-own-work:w489:C0056:2026-10-10", "url": "~/brain_workers/w489/ATTEMPT.md", "revision": "ATTEMPT L3 independently checked by w491 on 2026-10-10", "license": "owner-own-work", "excerpt": "The hypothesis is on a genuine pth moment."}
+    },
+    {
+      "key": "cavity-negative-moment-bridge",
+      "namespace": "probability.spectral.anderson",
+      "logical_name": "conditional-cavity-negative-moment-sufficient-for-local-ac",
+      "kind": "lemma",
+      "title": "Conditional cavity negative moments suffice for local pure a.c. spectrum",
+      "statement": "Let H be a bounded self-adjoint lattice operator on l2(Z^3) with bounded deterministic finite-range hopping and iid bounded-support site potentials lambda V_x, lambda>0, whose common density rho is bounded. For each x let H^x be H compressed away from x, b_x its hopping vector, M_x(z)=z+<b_x,(H^x-z)^(-1)b_x>, and Gamma_x(E,eta)=Im M_x(E+i eta)>0. Fix a bounded open I and q in (0,1). If for every x and every closed interval J compactly contained in I, sup_{0<eta<1} E integral_J Gamma_x(E,eta)^(-q)dE is finite, then almost surely the spectral restriction of H to I is purely absolutely continuous. This sufficient condition alone does not assert nonzero spectral weight or GOE statistics.",
+      "proof_text": "Set p=1+q. Schur complement gives G_xx(z)=1/(lambda V_x-M_x(z)). Condition on all site variables except V_x. With M_x=a+i gamma and gamma>0, integrate [gamma/((lambda v-a)^2+gamma^2)]^p rho(v)dv, bound rho by ||rho||_infinity, extend to R and substitute u=(lambda v-a)/gamma. The result is E[(Im G_xx)^p | complement] <= ||rho||_infinity c_p gamma^(-q)/lambda, where c_p=integral_R(1+u^2)^(-p)du. Apply the preceding Poisson Lp lemma on rational compact subintervals of I and countably many sites. A null Borel set in I then has zero spectral projection against every basis vector, so its spectral projection vanishes.",
+      "assumptions": ["Bounded deterministic finite-range hopping", "IID bounded-support potentials with bounded common density rho", "lambda>0 fixed", "q in (0,1)", "Negative-moment bound uniform down to eta=0 at this fixed lambda for every x and compact J inside I"],
+      "domain": "random operator spectral theory",
+      "source": {"source_id": "owner-own-work:w489:C0056:2026-10-10", "url": "~/brain_workers/w489/ATTEMPT.md", "revision": "ATTEMPT L4 independently checked by w491 on 2026-10-10", "license": "owner-own-work", "excerpt": "The hypothesis is an unproved sufficient condition."}
+    }
+  ],
+  "relations": [
+    {"from_key": "random-atom-counterexample", "to_key": "annealed-first-moment-insufficient", "kind": "proves", "rationale": "The random-atom card states 'delta_X and ... purely atomic' while its averaged Poisson density is <=1/2; this proves the concept card's 'bound ... does not by itself imply ... absolutely continuous'."},
+    {"from_key": "random-atom-counterexample", "to_key": "poisson-lp-criterion", "kind": "semantic_association", "rationale": "The counterexample's 'joint tail ... =1' pinpoints the condition absent from the Lp criterion's 'bound ... on the pth random moment'; these statements explain the first-versus-higher-moment distinction."},
+    {"from_key": "uniform-integrability-without-higher-moment", "to_key": "poisson-lp-criterion", "kind": "semantic_association", "rationale": "The example has 'Poisson transforms ... uniformly integrable' yet every 'p>1' moment diverges, showing that the Lp card's sufficient hypothesis is not necessary."},
+    {"from_key": "cavity-negative-moment-bridge", "to_key": "poisson-lp-criterion", "kind": "depends_on", "rationale": "The cavity lemma assumes a uniform 'Gamma_x ... ^(-q)' moment and derives the Poisson 'pth random moment' required by the Lp lemma for each site."}
+  ]
+}

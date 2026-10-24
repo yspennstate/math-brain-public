@@ -1,0 +1,165 @@
+{
+  "criterion_rational_checks": 39600,
+  "direct_full_tensor_n": 4,
+  "direct_source_n": [
+    4,
+    10
+  ],
+  "formula_records": [
+    {
+      "P_Psi": 0.21383499403385664,
+      "Psi": 0.7202862956929907,
+      "Z": "7/19",
+      "k": 3,
+      "midpoint_bound": 0.2265625,
+      "n": 4,
+      "raw_collision": "1/4",
+      "refund_fraction": 0.14466002386457344,
+      "residual_over_raw": 0.8553399761354266,
+      "rho": "3/19"
+    },
+    {
+      "P_Psi": 0.22829999586237665,
+      "Psi": 0.8349256991538346,
+      "Z": "11/35",
+      "k": 4,
+      "midpoint_bound": 0.23828125,
+      "n": 5,
+      "raw_collision": "1/4",
+      "refund_fraction": 0.08680001655049341,
+      "residual_over_raw": 0.9131999834495066,
+      "rho": "3/35"
+    },
+    {
+      "P_Psi": 0.2379235007030284,
+      "Psi": 0.9090808385070935,
+      "Z": "19/67",
+      "k": 5,
+      "midpoint_bound": 0.244140625,
+      "n": 6,
+      "raw_collision": "1/4",
+      "refund_fraction": 0.04830599718788642,
+      "residual_over_raw": 0.9516940028121136,
+      "rho": "3/67"
+    },
+    {
+      "P_Psi": 0.24669738583117892,
+      "Psi": 0.9753595486143908,
+      "Z": "67/259",
+      "k": 7,
+      "midpoint_bound": 0.24853515625,
+      "n": 8,
+      "raw_collision": "1/4",
+      "refund_fraction": 0.01321045667528431,
+      "residual_over_raw": 0.9867895433247157,
+      "rho": "3/259"
+    },
+    {
+      "P_Psi": 0.24978729181792225,
+      "Psi": 0.9984179041582918,
+      "Z": "1027/4099",
+      "k": 11,
+      "midpoint_bound": 0.249908447265625,
+      "n": 12,
+      "raw_collision": "1/4",
+      "refund_fraction": 0.0008508327283109907,
+      "residual_over_raw": 0.999149167271689,
+      "rho": "3/4099"
+    },
+    {
+      "P_Psi": 0.24998668029035118,
+      "Psi": 0.9999009493283971,
+      "Z": "16387/65539",
+      "k": 15,
+      "midpoint_bound": 0.24999427795410156,
+      "n": 16,
+      "raw_collision": "1/4",
+      "refund_fraction": 5.327883859529425e-05,
+      "residual_over_raw": 0.9999467211614047,
+      "rho": "3/65539"
+    },
+    {
+      "P_Psi": 0.24999994796326844,
+      "Psi": 0.9999996130392086,
+      "Z": "4194307/16777219",
+      "k": 23,
+      "midpoint_bound": 0.2499999776482582,
+      "n": 24,
+      "raw_collision": "1/4",
+      "refund_fraction": 2.0814692625048536e-07,
+      "residual_over_raw": 0.9999997918530737,
+      "rho": "3/16777219"
+    },
+    {
+      "P_Psi": 0.2499999997967314,
+      "Psi": 0.9999999984884337,
+      "Z": "1073741827/4294967299",
+      "k": 31,
+      "midpoint_bound": 0.2499999999126885,
+      "n": 32,
+      "raw_collision": "1/4",
+      "refund_fraction": 8.1307438559719e-10,
+      "residual_over_raw": 0.9999999991869256,
+      "rho": "3/4294967299"
+    }
+  ],
+  "full_FEI": "OPEN",
+  "proved": {
+    "B_n_q1_packets": "(e,d,p)=(1,0,1/2) and (n,1,3*2^-(n+1))",
+    "F_n_q1_packet": "e=n-1, r=n-2, d=1, p=3*2^-n",
+    "Psi": "1 + (1/2) log2((2^n+3)/(2^n+12)) -> 1",
+    "catalyst": "A_(n-1): q=1 packets (e,d,p)=(1,0,1/2),(n,0,1/2)",
+    "half_gap_criterion": "Psi_g(rho)<=g/2 iff rho>=1/(2^g+1)",
+    "post_KL_residual": "((2^n+3)/2^(n+2))*Psi -> 1/4",
+    "refund_fraction": "1 - (post_KL_residual)/(1/4) -> 0",
+    "replacement": "P Psi <= P g/2 + g/2*(u-2^g v)_+ for a two-origin fibre",
+    "rho": "3/(2^n+3)",
+    "tensor_raw_D_increment": "1/4"
+  },
+  "scope": "exact Boolean adversary to fibrewise half-gap/fixed-refund post-KL remainder, plus midpoint-excess replacement",
+  "source_records": [
+    {
+      "B_high_packet": {"d": 1, "e": 4, "p": "3/32", "r": 3},
+      "B_low_packet": {"d": 0, "e": 1, "p": "1/2", "r": 1},
+      "F_q1_packet": {"d": 1, "e": 3, "p": "3/16", "r": 2},
+      "I_B": "3/2", "I_F": "1/1", "n": 4
+    },
+    {
+      "B_high_packet": {"d": 1, "e": 5, "p": "3/64", "r": 4},
+      "B_low_packet": {"d": 0, "e": 1, "p": "1/2", "r": 1},
+      "F_q1_packet": {"d": 1, "e": 4, "p": "3/32", "r": 3},
+      "I_B": "43/32", "I_F": "11/16", "n": 5
+    },
+    {
+      "B_high_packet": {"d": 1, "e": 6, "p": "3/128", "r": 5},
+      "B_low_packet": {"d": 0, "e": 1, "p": "1/2", "r": 1},
+      "F_q1_packet": {"d": 1, "e": 5, "p": "3/64", "r": 4},
+      "I_B": "39/32", "I_F": "7/16", "n": 6
+    },
+    {
+      "B_high_packet": {"d": 1, "e": 7, "p": "3/256", "r": 6},
+      "B_low_packet": {"d": 0, "e": 1, "p": "1/2", "r": 1},
+      "F_q1_packet": {"d": 1, "e": 6, "p": "3/128", "r": 5},
+      "I_B": "145/128", "I_F": "17/64", "n": 7
+    },
+    {
+      "B_high_packet": {"d": 1, "e": 8, "p": "3/512", "r": 7},
+      "B_low_packet": {"d": 0, "e": 1, "p": "1/2", "r": 1},
+      "F_q1_packet": {"d": 1, "e": 7, "p": "3/256", "r": 6},
+      "I_B": "77/64", "I_F": "13/64", "n": 8
+    },
+    {
+      "B_high_packet": {"d": 1, "e": 9, "p": "3/1024", "r": 8},
+      "B_low_packet": {"d": 0, "e": 1, "p": "1/2", "r": 1},
+      "F_q1_packet": {"d": 1, "e": 8, "p": "3/512", "r": 7},
+      "I_B": "307/256", "I_F": "23/256", "n": 9
+    },
+    {
+      "B_high_packet": {"d": 1, "e": 10, "p": "3/2048", "r": 9},
+      "B_low_packet": {"d": 0, "e": 1, "p": "1/2", "r": 1},
+      "F_q1_packet": {"d": 1, "e": 9, "p": "3/1024", "r": 8},
+      "I_B": "611/512", "I_F": "13/256", "n": 10
+    }
+  ],
+  "status": "PASS"
+}

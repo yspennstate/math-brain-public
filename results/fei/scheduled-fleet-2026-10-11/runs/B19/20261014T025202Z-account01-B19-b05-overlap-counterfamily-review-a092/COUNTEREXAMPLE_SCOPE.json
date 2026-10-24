@@ -1,0 +1,35 @@
+{
+  "schema": "fei-counterexample-review/1",
+  "primary_packet_id": "A092",
+  "target_packet_id": "A025",
+  "target_claim_id": "B05-OVERLAP-SINGLETON-PAYMENT-v1",
+  "verdict": "ACCEPTED_AT_LOCAL_PAYMENT_SCOPE_WITH_WORDING_AND_TYPESETTING_CORRECTIONS",
+  "accepted_refutation": "No finite absolute C makes Phi(fg)<=Phi(f)+Phi(g)+C(Inf_x(f)+Inf_x(g)) valid for all Boolean factors sharing only x.",
+  "accepted_one_sided_refutation": "Phi(Bf)<=Phi(f)+M I(B) cannot be extended from disjoint factors to factors sharing x, for any fixed finite M.",
+  "quantifiers": "For every r>=1 and finite C, every sufficiently large m in the explicit n=2m+1 majority/one-point-gate family violates the first inequality.",
+  "exact_formulas": {
+    "epsilon": "2^-r",
+    "c_m": "binom(2m,m)/4^m",
+    "Phi_f": "0",
+    "Phi_g": "(r+1)phi(epsilon)",
+    "Phi_h": "(2m+1)phi(epsilon c_m)",
+    "Inf_x_f": "1",
+    "Inf_x_g": "epsilon",
+    "Inf_x_h": "1-epsilon",
+    "I_g": "(r+1)epsilon"
+  },
+  "analytic_sign_certificate": "Phi(h)>=(epsilon^2/2)log2(m+1), which diverges for fixed r while every proposed shared-edge or new-factor-only right side is independent of m.",
+  "scope_corrections": [
+    "Call epsilon the rare new-factor pivotal mass, not the rarity of the complete shared edge; Inf_x(f)=1.",
+    "Repair missing TeX backslashes before qquad/quad commands."
+  ],
+  "not_refuted": [
+    "The exact mismatch/KL restriction identity.",
+    "A signed degree-shift-aware restriction-tree potential.",
+    "Existential coordinate selection or an optimized global tree.",
+    "Disjoint product additivity.",
+    "The Fourier Entropy-Influence conjecture."
+  ],
+  "ordinary_fei_safeguard": "h=K_n(u)s(x,v) is a disjoint product, so its ordinary H and I are additive.",
+  "review_evidence": ["COUNTEREXAMPLE_REVIEW.md", "CHECK_REVIEW.py", "CHECK_REVIEW.out"]
+}

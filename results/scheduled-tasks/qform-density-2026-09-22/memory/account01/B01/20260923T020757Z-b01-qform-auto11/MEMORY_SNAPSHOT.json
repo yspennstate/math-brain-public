@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260923T020757Z-b01-qform-auto11",
+  "control_initial_commit": "9711619545936d0960891db689d5ed6e5d191ee6",
+  "control_prepublication_commit": "b93d8761b325130119a03e3804f456680e46e711",
+  "control_revision": "2026-09-22.15",
+  "target_status": "OPEN",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": ["QFORM-POINTWISE-DECAY-FALSE","QFORM-FIBER-SUP-DIMENSION-LOSS","QFORM-NO-INDEPENDENCE-AFTER-ROTATION","QFORM-CROSSMINOR-ALONE-FALSE","QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1","QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"],
+  "premises": [
+    {"name":"mixed-order determinant/Brascamp-Lieb Fourier envelope","source_repository":"yspennstate/math-open-problems","commit":"86f318f0826325e6df3504e1e8ec15f4316cc861","path":"proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T001242Z-b01-qform-auto11/REPORT.md","scope":"physical cross-block minor laws with I-side row marginals <=1/2; pointwise envelope derivation valid at mean order 2, with strict mean order >2 previously used only for L1 inversion"},
+    {"name":"partner heavy-row complementary e2 inequality","source_repository":"yspennstate/math-open-problems","commit":"3280d9fab56fe4878189ae89176887e3da29f569","path":"proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260922T233020Z-account02-B01-qform-r31/REPORT.md","statement":"e2(N^T N) >= alpha Z/||r_h||^2"}
+  ],
+  "result": {
+    "status":"ESSENTIAL_STEP_APPLIED",
+    "pair_volume_fourier":"For a law Omega on nonzero physical 2x2 minors with I-side row marginals <=1/2, |phi_R(t)|<=min(1,2pi sqrt(e)K_2(Omega)^(-1/4)|t|^-1), integral |phi_R|^(3/2)<=12pi sqrt(e)K_2(Omega)^(-1/4), and ||p_R||_3<=6^(2/3)e^(1/3)K_2(Omega)^(-1/6).",
+    "natural_pair_volume":"For natural pair-volume E2=e2(M^TM), K_2=E2 and q_i=sum_{k!=i}||r_i wedge r_k||^2/E2. If max q_i<=1/2, the full E2 is spent without selecting one physical pair.",
+    "square_lift":"With physical pivot a!=0, ||p_Q||inf<=16(e/3)^(1/4)|a|^-1/2 E2^-1/8 under the diffuse natural-pair hypothesis; essential boundedness only, continuity not proved by this dependent-shift lift.",
+    "partner_application":"Using account02/B01 r31, E2>=alpha Z/||r_h||^2 gives ||p_Q||inf<=15.610374 |a|^-1/2 (||r_h||^2/(alpha Z))^(1/8) whenever the complementary natural pair-volume is diffuse.",
+    "stress_family":"A_r=[1] direct_sum [[0,M_r],[M_r^T,0]] has nonzero spectrum {1,1,1,-1,-1}, E2=1, pair row marginals 1/r, and individual nonzero 2x2 minors r^-2; nevertheless the theorem gives a uniform <15.611 density bound for all admissible product laws."
+  },
+  "canonical_output": {"repository":"yspennstate/math-open-problems","commit":"bb63456a9b637afac921dbd8ec1b7e8811a44d13","path":"proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T020757Z-b01-qform-auto11/REPORT.md"},
+  "unresolved_implication":"QFORM-HEAVY-WEDGE-HUB-ROUTING-v1",
+  "next_step":"If complementary natural e2 is heavy, use the aggregate wedge-hub identity to route to account02/B01 r32 mixed-hub, a two-dimensional random-slope packet, grouped squares/two slopes, or a mean-order>2 mixed-minor law before reciprocal coordinate selection.",
+  "continuity_status":"OPEN for this general lifted scope",
+  "phase_aligned_counterexample_preserved":true
+}

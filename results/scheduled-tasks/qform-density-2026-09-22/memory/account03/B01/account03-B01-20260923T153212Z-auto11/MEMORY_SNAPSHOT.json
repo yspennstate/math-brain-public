@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260923T153212Z-auto11",
+  "control_commit_prepublication": "f90b2f9015eb476136499b2f55833c1bb82145c2",
+  "control_revision": "2026-09-22.15",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "target_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_applied": {
+    "worker": "account04/B01",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8410ab9d8238baa40c033f83dbae6af44b0b2582",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260923T131003Z-account04-B01-singular-star-routing-r2/REPORT.md",
+    "equation_used": "at det B=0, W2=a^2 sum_{k!=l} ell_k^2 ell_l^2"
+  },
+  "additional_dependency": {
+    "id": "QFORM-RANKONE-HUBPAIR-RANDOM-SLOPE-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "195447da931f086720afaa12ac902ed7d33dd32e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T061516Z-account03-B09-QFORM-r25/REPORT.md"
+  },
+  "result": {
+    "id": "QFORM-SINGULAR-OVERLAP2-RANDOM-SLOPE-v1",
+    "scope": "nonzero exact-rank-one physical pair, W2>0, arbitrary complementary symmetric curvature, arbitrary affine terms, original independent cap-one inputs",
+    "bound": "||p_Q||_infinity <= 4 sqrt(2)e^(1/4) |a|^(-1/4) W2^(-1/8)",
+    "signed_fejer": "same bound for sup_{T>0,y} D_T law(Q)(y)",
+    "regularity": "essentially bounded density proved; continuity not proved"
+  },
+  "new_failed_mechanism": {
+    "statement": "uniform half-Riesz continuation after adding nonzero delta Y^2",
+    "counterexample": "Y,Z iid Uniform[-1/2,1/2], T(Z)=Z, K(Z)=Z^2/delta gives delta(Y+Z/delta)^2 and infinite half-Riesz expectation",
+    "scope": "refutes intermediate mechanism only; not a QFORM counterexample"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "36e709d6c87af9899fc21003d12c9917d3554a04",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260923T153212Z-auto11/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260923T153212Z-auto11/CHECKS.txt"
+  },
+  "unresolved_implication": "near-singular but nonzero pair determinant: combine the partner dichotomy with a nonperturbative signed-Fejer/small-ball interpolation or aggregate-curvature exit",
+  "full_brain_connected": false
+}

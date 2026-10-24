@@ -1,0 +1,13 @@
+# Scoped prior work and source status
+
+The original intake's problems.jsonl row 44 names C0044, source drewitz_ramirez_rwre_2014, Open question 3.2, page 42. The actual primary arXiv source is 1309.2589. Its question assumes (E), not (UE), and (IID). Therefore strict ellipticity is the full target; uniform ellipticity is a narrower case.
+
+The original intake's attempts.jsonl rows 35 and 121 contain C0044-A001 and its superseding correction C0044-A002. A001's sentence that Zerner-Merkl proved P(A_l intersection A_-l)=0 was erroneous as a characterization of their result: disjointness is true by the event definitions in every environment. A002 repairs that sentence and retains the actual higher-dimensional obstruction, absence of the planar intersection argument. This packet uses A002 and does not revive the false inference.
+
+Targeted C0044 searches in probability_1000_attempts_H_20260912 and probability_1000_attempts_I_20260914 produced no target-specific matches. In prob1000_lean_20260908 the targeted match was the annotated ranking row, not a theorem proving C0044. The named Team O board has no C0044 assignment; the new Probability300 board assigns this target to w576-w587. The lane held by w576 is invariant-law/incoming-mass energy, so no peer's crossing computations or artifacts are reused.
+
+Read-only query of ~/math-brain-build/local/population/brain.sqlite3 returned three exact title matches: the dated open-status concept, A001, and corrected A002. This is not a complete global solved/retired certification. It confirms that the named target cards retain an unverified historical status and both versions of the prior attempt.
+
+Recent primary evidence: OpenAI's September 23, 2026 manuscript, Theorem 1.1, claims the strict-elliptic iid target for d>=3. The local source is sources/strict_zero_one_2026.pdf. Only its target and proof-strategy passages were read, not the full proof. The linked public comparator DirectionalWalk.lean gives the correct frozen-environment model but its displayed target theorem ends in `by sorry`; it cannot serve as a formal-check receipt. A comparator can intentionally contain a challenge placeholder, so this observation does not refute the manuscript or any separate implementation. CURRENT OPENNESS: UNKNOWN; recent primary proof claim not adjudicated here.
+
+Recall returned no result within the required 60-second cap. The named scar perceptron_proof_open_gaps_fleet_2026_07_12 was read directly and used as the reminder to distinguish a completed input from completion of the whole proof. No private memory text is included in the math-brain draft.

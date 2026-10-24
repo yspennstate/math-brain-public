@@ -1,0 +1,233 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact rational Walsh coefficients, probabilities and influences; 160-bit outward rational logarithm intervals",
+  "examples": [
+    {
+      "name": "diagonal_collision_equal_cells",
+      "selector_bits": 4,
+      "data_bits": 2,
+      "cells": 4,
+      "collision_multiplicity": 2,
+      "interference_exact": "1",
+      "H_cell_exact": "2",
+      "H_coarse_label": {
+        "lower": "3/2",
+        "upper": "3/2"
+      },
+      "H_fourier": {
+        "lower": "4",
+        "upper": "4"
+      },
+      "selector_influence_exact": "2",
+      "cell_boundary_sum_exact": "2",
+      "minimum_cross_boundary_disagreement_exact": "1/2",
+      "groups": [
+        {
+          "data_mask": 0,
+          "cells": [
+            0,
+            3
+          ],
+          "multiplicity": 2,
+          "mass_exact": "1/2",
+          "interference_exact": "1",
+          "H_actual_conditional": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "H_incoherent_mixture": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "pointwise_domination_exact": true
+        },
+        {
+          "data_mask": 1,
+          "cells": [
+            1
+          ],
+          "multiplicity": 1,
+          "mass_exact": "1/4",
+          "interference_exact": "1",
+          "H_actual_conditional": {
+            "lower": "2",
+            "upper": "2"
+          },
+          "H_incoherent_mixture": {
+            "lower": "2",
+            "upper": "2"
+          },
+          "pointwise_domination_exact": true
+        },
+        {
+          "data_mask": 2,
+          "cells": [
+            2
+          ],
+          "multiplicity": 1,
+          "mass_exact": "1/4",
+          "interference_exact": "1",
+          "H_actual_conditional": {
+            "lower": "2",
+            "upper": "2"
+          },
+          "H_incoherent_mixture": {
+            "lower": "2",
+            "upper": "2"
+          },
+          "pointwise_domination_exact": true
+        }
+      ]
+    },
+    {
+      "name": "antipodal_collision_point_cells",
+      "selector_bits": 3,
+      "data_bits": 3,
+      "cells": 8,
+      "collision_multiplicity": 2,
+      "interference_exact": "2",
+      "H_cell_exact": "3",
+      "H_coarse_label": {
+        "lower": "11/4",
+        "upper": "11/4"
+      },
+      "H_fourier": {
+        "lower": "11/2",
+        "upper": "11/2"
+      },
+      "selector_influence_exact": "3/2",
+      "cell_boundary_sum_exact": "3",
+      "minimum_cross_boundary_disagreement_exact": "1/2",
+      "groups": [
+        {
+          "data_mask": 0,
+          "cells": [
+            0,
+            7
+          ],
+          "multiplicity": 2,
+          "mass_exact": "1/4",
+          "interference_exact": "2",
+          "H_actual_conditional": {
+            "lower": "2",
+            "upper": "2"
+          },
+          "H_incoherent_mixture": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "pointwise_domination_exact": true
+        },
+        {
+          "data_mask": 1,
+          "cells": [
+            1
+          ],
+          "multiplicity": 1,
+          "mass_exact": "1/8",
+          "interference_exact": "1",
+          "H_actual_conditional": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "H_incoherent_mixture": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "pointwise_domination_exact": true
+        },
+        {
+          "data_mask": 2,
+          "cells": [
+            2
+          ],
+          "multiplicity": 1,
+          "mass_exact": "1/8",
+          "interference_exact": "1",
+          "H_actual_conditional": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "H_incoherent_mixture": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "pointwise_domination_exact": true
+        },
+        {
+          "data_mask": 3,
+          "cells": [
+            3
+          ],
+          "multiplicity": 1,
+          "mass_exact": "1/8",
+          "interference_exact": "1",
+          "H_actual_conditional": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "H_incoherent_mixture": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "pointwise_domination_exact": true
+        },
+        {
+          "data_mask": 4,
+          "cells": [
+            4
+          ],
+          "multiplicity": 1,
+          "mass_exact": "1/8",
+          "interference_exact": "1",
+          "H_actual_conditional": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "H_incoherent_mixture": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "pointwise_domination_exact": true
+        },
+        {
+          "data_mask": 5,
+          "cells": [
+            5
+          ],
+          "multiplicity": 1,
+          "mass_exact": "1/8",
+          "interference_exact": "1",
+          "H_actual_conditional": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "H_incoherent_mixture": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "pointwise_domination_exact": true
+        },
+        {
+          "data_mask": 6,
+          "cells": [
+            6
+          ],
+          "multiplicity": 1,
+          "mass_exact": "1/8",
+          "interference_exact": "1",
+          "H_actual_conditional": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "H_incoherent_mixture": {
+            "lower": "3",
+            "upper": "3"
+          },
+          "pointwise_domination_exact": true
+        }
+      ]
+    }
+  ],
+  "scope": "Finite self-checks only. The universal bounded-collision theorem is proved algebraically in the note; no independent audit."
+}

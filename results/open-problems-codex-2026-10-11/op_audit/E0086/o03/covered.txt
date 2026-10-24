@@ -1,0 +1,1567 @@
+PAGE 1
+arXiv:math/0503139v3  [math.PR]  25 Jul 2007
+The Annals of Probability
+2007, Vol. 35, No. 2, 577–601
+DOI:
+10.1214/009117906000000854
+c⃝ Institute of Mathematical Statistics , 2007
+HOW LARGE A DISC IS COVERED BY
+A RANDOM W ALK IN N STEPS?
+By Amir Dembo, 1 Yuval Peres 2 and Jay Rosen 3
+Stanford University, University of California at Berkeley
+and College of Staten Island, CUNY
+We show that the largest disc covered by a simple random walk
+(SR W) on Z2 after n steps has radius n1/ 4+o(1), thus resolving an
+open problem of R´ ev´ esz [Random Walk in Random and Non-Random
+Environments (1990) World Scientiﬁc, Teaneck, NJ]. For any ﬁxed ℓ,
+the largest disc completely covered at least ℓ times by the SR W also
+has radius n1/ 4+o(1). However, the largest disc completely covered by
+each of ℓ independent simple random walks on Z2 after n steps is only
+of radius n1/ (2+2
+√
+ℓ)+o(1). We complement this by showing that the
+radius of the largest disc completely covered at least a ﬁxed fraction
+α of the maximum number of visits to any site during the ﬁrst n
+steps of the SR W on Z2, is n(1− √ α )/ 4+o(1). We also show that almost
+surely, for inﬁnitely many values of n it takes about n1/ 2+o(1) steps
+after step n for the SR W to reach the ﬁrst previously unvisited site
+(and the exponent 1 / 2 is sharp). This resolves a problem raised by
+R´ ev´ esz [Ann. Probab. 21 (1993) 318–328].
+1. Introduction. Consider the simple random walk (SR W) on Z2 starting
+at the origin and run for n steps. Let Rn denote the radius of the largest disc
+centered at the origin that is completely covered by the walk (throughout
+this paper, “disc” refers to the intersection of Z2 with a Euclidean disc, but
+all our results apply if one takes a square instead). In [ 3], Theorem 1.4 we
+showed that for all y> 0,
+limn→∞ P
+( (log Rn)2
+logn ≥ y
+)
+=e− 4y,(1.1)
+Received March 2005; revised April 2006.
+1Supported in part by NSF Grants DMS-04-06042 and DMS-FRG-02 -44323.
+2Supported in part by NSF Grants DMS-01-04073 and DMS-02-444 79.
+3Supported in part by grants from the NSF and from PSC-CUNY.
+AMS 2000 subject classiﬁcations. Primary 60G50; secondary 60G17, 82C41.
+Key words and phrases. Planar random walk, favorite points, covered discs.
+This is an electronic reprint of the original article published by the
+Institute of Mathematical Statistics in The Annals of Probability ,
+2007, Vol. 35, No. 2, 577–601 . This reprint diﬀers from the original in pagination
+and typographic detail.
+1
+PAGE 2
+2 A. DEMBO, Y. PERES AND J. ROSEN
+as conjectured by Kesten and R´ ev´ esz.
+If we ask for the largest disc covered after n steps of the SR W without
+specifying the center of the disc, then the answer changes dr amatically.
+Theorem 1.1. If ˜R(n) denotes the radius of the largest disc completely
+covered by a SR W on Z2 after n steps, then almost surely ˜R(n) =n1/ 4+o(1),
+that is,
+limn→∞
+log ˜R(n)
+logn = 1
+4 a.s.(1.2)
+Alternatively, with R(r) denoting the radius of the largest disc completely
+covered by a SR W on Z2 before its ﬁrst exit of D(0,r ) = {x ∈ Z2 : |x|<r },
+limr→∞
+log R(r)
+logr = 1
+2 a.s.(1.3)
+The problem of ﬁnding the radius of the largest disc complete ly covered
+by a SR W on Z2 after n steps was ﬁrst raised by R´ ev´ esz [8], page 247, who
+later found upper and lower bounds for the ratio log ˜R(n)/ logn (see [ 9]).
+We thank Zhan Shi for informing us of simulations by Arvind Si ngh which
+indicated that this ratio tends to 1 / 4.
+If we require that our disc be multiply covered we obtain the f ollowing.
+Theorem 1.2. If ˜R(n;k) denotes the radius of the largest disc com-
+pletely covered at least k times by a SR W on Z2 after n steps, then for any
+0<α< 1,
+limn→∞
+log ˜R(n;α (logn)2/π )
+logn = 1 − √α
+4 a.s.(1.4)
+Consequently, for any ﬁxed k ≥ 1,
+limn→∞
+log ˜R(n;k)
+logn = 1
+4 a.s.(1.5)
+Alternatively, with R(r;k) denoting the radius of the largest disc completely
+covered at least k times by a SR W in Z2 before its ﬁrst exit of D(0,r ), we
+have that for any 0<α< 1
+limr→∞
+log R(r; 4α (logr)2/π )
+logr = 1 − √ α
+2 a.s.(1.6)
+We note in passing that ( 1.4) deals with the largest disc of α -favorite
+sites for the SR W on Z2 by time n, whereas [ 2], Section 5 provides infor-
+mation about the number of such sites. Further, since ˜R(n) ≥ ˜R(n;k) ≥
+PAGE 3
+LARGE COVERED DISCS FOR RANDOM W ALKS 3
+˜R(n;α (logn)2/π ) for all n suﬃciently large, the statement ( 1.5) is an im-
+mediate consequence of ( 1.4) and ( 1.2).
+We can generalize Theorem 1.1 by considering ℓ independent simple ran-
+dom walks on Z2.
+Theorem 1.3. If ˜Rℓ(n) denotes the radius of the largest disc completely
+covered by each of ℓ independent simple random walks on Z2 after n steps,
+then
+limn→∞
+log ˜Rℓ(n)
+logn = 1
+2 + 2
+√
+ℓ
+a.s.(1.7)
+Alternatively, with Rℓ(r) denoting the radius of the largest disc completely
+covered by each of ℓ independent SR Ws on Z2, each of whom is run until it
+ﬁrst exits D(0,r ),
+limr→∞
+log Rℓ(r)
+logr = 1
+1 +
+√
+ℓ
+a.s.(1.8)
+The SR W needs aboutr2 steps to exit a disc of radius r. Thus, considering
+the random times n in which the SR W is suﬃciently inside a completely
+covered disc of radius roughly n1/ 4, with Theorem 1.1 we can also solve a
+related problem raised by R´ ev´ esz in [9].
+Theorem 1.4. IfV (n) is the number of steps after step n until the SR W
+on Z2 ﬁrst visits any of the previously unvisited sites, then
+lim sup
+n→∞
+logV (n)
+logn = 1
+2 a.s.(1.9)
+Of course lim inf n→∞ V (n) = 1.
+We note in passing that the situation is quite diﬀerent for the SR W on
+Zd for d ≥ 3, where due to the transience of the process, one has that
+limn→∞
+log ˜R(n)
+log logn = 1
+d − 2 a.s.(1.10)
+as shown in [
+5], and for d = 1, where 2 ˜R(n) is the diﬀerence between the
+maximum and the minimum of the SR W, which upon scaling by n− 1/ 2 con-
+verges in law to an explicit nondegenerate limit (for ﬁner in formation on the
+favorite sites in one dimension, cf. [ 11] and the references therein).
+We now explain the intuitive picture behind our results, sta rting with
+Theorem 1.1. To this end, let τ(r) denote the number of steps until the
+SR W ﬁrst exits D(0,r ). Clearly, R(r) = ˜R(τ(r)) and ( 1.2) is equivalent to
+(1.3) since
+limr→∞
+logτ(r)
+logr = 2 a.s.(1.11)
+PAGE 4
+4 A. DEMBO, Y. PERES AND J. ROSEN
+Similarly, (1.11) implies the equivalence between ( 1.4) and ( 1.6), as well as
+the equivalence between ( 1.7) and ( 1.8).
+Turning to (1.3), let rk =ek and for any x ∈ Z2 consider the family of Eu-
+clidean discs centered at x, {D(x,r k);k = 0, 1,...,m }. Fixing 0 <γ< 1 such
+thatγm is an integer, let β = 1 − γ. Starting from the sphere ∂D (x,r γm ), the
+probability of a planar Brownian motion reaching ∂D (x,r γm− 1) before exit-
+ing D(x,r m) is 1 − 1/ (βm ), so that the probability of it making aβ 2m2 ex-
+cursions from ∂D (x,r γm ) to ∂D (x,r γm− 1) before exiting D(x,r m) (referred
+to as γ-excursions) is about e−aβm . Since there are about e2βm disjoint discs
+of radius rγm inD(0,r m), ignoring the fact that they have diﬀerent centers,
+we expect that the maximal number of such γ-excursions among all discs of
+radiusrγm is about 2β 2m2. Further, the probability of the Brownian motion
+not hitting the disc D(x,r 0) during one γ-excursion is 1 − 1/ (γm), so that
+the probability of not hitting it during aγ2m2 consecutive γ-excursions is
+about e−aγm .
+Suppose for the moment that the same applies for the SR W, name ly, the
+maximal number of γ-excursions that the SR W makes is 2 β 2m2 and the
+probability of it not hitting the center of a disc during aγ2m2 consecutive
+γ-excursions is about e−aγm . Then, since there are about e2γm points in
+each D(x,r γm ), ignoring the fact that they are not centered, the expected
+number of points not visited during aγ2m2 consecutiveγ-excursions is about
+e(2−a)γm . Hence about 2γ2m2 of the γ-excursions are needed for the SR W to
+visit all sites in a given disc D(x,r γm ). To ﬁnd the maximal possible value
+ofγ for which some disc of radius rγm is covered by the SR W, equate 2β 2m2
+and 2γ2m2 (for β = 1 − γ), to get γ =β = 1/ 2, as stated.
+Also, by the preceding reasoning the probability of each of ℓ independent
+random walks having aβ 2m2 or more γ-excursions for a given disc D(x,r γm )
+ise−aℓβm . Considering all possible discs, the maximal value of the pr eceding
+parametera is 2/ℓ . As about 2 γ2m2 of the γ-excursions are needed for each
+SR W to visit all sites in such a disc, one equates (2 /ℓ )β 2m2 and 2γ2m2 to
+get in the context of Theorem 1.3 that γ = 1/ (1 +
+√
+ℓ), as stated.
+To predict the result of Theorem 1.2 one uses the same reasoning, except
+for replacing the probability of about exp( −aγm) of the SR W not hitting the
+center of a disc during aγ2m2 consecutiveγ-excursions with the probability
+of about exp( − (√ a −
+√
+2α/γ )2γm) that it makes less than (4 α/π )m2 visits
+to the center of the disc during aγ2m2 γ-excursions (cf. Lemma 5.1 for the
+argument leading to this tail probability). Indeed, using t he latter probabil-
+ity we ﬁnd that about 2(γ + √ α )2m2 of theγ-excursions are needed to assure
+that all lattice sites in a given disc D(x,r γm ) are α -favorites. Equating this
+with 2β 2m2 yields the value of γ = (1 − √α )/ 2 as stated.
+To prove these three theorems one needs nontrivial modiﬁcat ions of the
+classical second moment method. Fortunately, adapting the “multiscale re-
+ﬁnement” machinery of [2, 3, 4] to the present context, provides the necessary
+PAGE 5
+LARGE COVERED DISCS FOR RANDOM W ALKS 5
+ingredients for proving these results. Indeed, in Sections 2 and 3 we prove the
+bounds on R(r) for Theorem 1.1 (lower bounds and upper bounds, resp.),
+and in Sections 5 and 6, extend these bounds to the setting of Theorem 1.2,
+whereas in Section 4 we extend both bounds to the setting of Theorem 1.3.
+Finally, Section 7 is devoted to the derivation of Theorem 1.4.
+When actually proving these theorems one uses potential the ory estimates
+for the SR W (e.g., from [ 7]), in order to justify that its hitting probabilities
+are suﬃciently close to those of the planar Brownian motion. This, as well
+as the control of the eﬀect of noncentering and the control of t he inﬂuence
+of terminal points of each excursion (when considering the r elevant second
+moment), require a better separation of scales. Thus, the pr oof is carried
+along the preceding reasoning, but for a sequence rk which grows at rate
+eck logk for some c> 0 large enough ( c = 3 suﬃces here). Speciﬁcally, taking
+throughout rk = (k!)3 allows us to best reuse proofs from [ 2, 3, 4], focusing
+in this manuscript on those ingredients that are not already present there.
+For the same reason, when proving the lower bounds we also con siderrm,k =
+rm/r k, so, for example, rm, [βm ] is roughly of same size as r[γm] forγ = 1 − β
+(both being about ecγm logm).
+Though we deal here exclusively with the SR W on Z2, similar results
+apply for the whole class of random walks considered in [ 2], Theorem 5.1
+upon appropriately modifying the relevant proofs.
+The results of this manuscript also inspired the analogous t reatment of
+extremal points of the discrete Gaussian free ﬁeld in the box [−n,n ]2 subject
+to zero boundary conditions, where, for example, the size of the largest sub-
+box ofα -high points of the ﬁeld corresponds to ( 1.4) here (see [ 1] for details).
+Throughout this paper we use o(1m) to denote a function f (m) which
+converges to zero as m → ∞ and use the notation am ∼ bm to indicate that
+am/b m → 1 as m → ∞ .
+2. The lower bound for Theorem 1.1. Let (Si,i ≥ 0) denote the SR W on
+Z2 withD(x,r ) = {y ∈ Z2 : |y − x|<r } denoting the disc of radius r centered
+at x. For any set A ⊆ Z2 we let
+∂A =
+{
+y ∈ Z2 :y /∈ A, and inf
+x∈A
+|y − x|= 1
+}
+denote the boundary of A in Z2 and TA = inf {i ≥ 0 :Si ∈ A} the hitting
+time of A, so in particular τ(r) =T∂D (0,r ). As in the Introduction, we let
+r0 = 1 and rk = (k!)3 fork ≥ 1. Using the monotonicity of r ↦→ R (r) and the
+fact that lim m→∞ logrm/ logrm− 1 = 1, it follows by a simple interpolation
+argument that ( 1.3) is an immediate consequence of
+limm→∞
+log R(rm)
+logrm
+= 1
+2 a.s.(2.1)
+PAGE 6
+6 A. DEMBO, Y. PERES AND J. ROSEN
+We proceed to provide here the relevant lower bound
+lim infm→∞
+log R(rm)
+logrm
+≥ 1
+2 a.s.(2.2)
+deferring the corresponding upper bound to Section
+3. It actually suﬃces
+to prove that for any η> 0 there exists pη> 0 such that for all suﬃciently
+large m,
+P
+( log R(8rm)
+logrm
+≥ 1
+2 − 2η
+)
+≥ pη> 0.(2.3)
+Indeed, then for all m large enough,
+P
+( log R(rm)
+logrm+1
+≤ 1
+2 − 3η
+)
+≤ 1 − pη< 1.
+Further, with ˜R([s,t ]) denoting the radius of the largest disc completely
+covered by {Si :i =s,...,t }, we have that
+R(rm+1) ≥ max{ ˜R([τ((k − 1)rm),τ (krm)]) :k = 1,..., (m + 1)3}.
+So, by the strong Markov property of the SR W at the successive stopping
+times τ(krm), k = 1, 2,..., (m + 1)3 and the fact that D(Sτ((k− 1)rm),r m) ⊆
+D(0,kr m) ⊆ D(0,r m+1), we get that
+P
+( log R(rm+1)
+logrm+1
+≤ 1
+2 − 3η
+)
+≤ (1 − pη)(m+1)3
+.
+Consequently, an application of the Borel–Cantelli lemma, followed by tak-
+ing η ↓ 0 yields the bound of ( 2.2).
+Turning to the proof of ( 2.3), we next construct a subset of the event
+appearing in ( 2.3), the probability of which is easier to bound below. To
+this end, let rm,k =rm/r k for k = 1,...,m [so that rm, 1 =rm = (m!)3 and
+rm,m = 1]. Then, ﬁxing a> 0 we set nk =nk(a) = 3ak2 logk for 3 ≤ k ≤ m − 1
+and for any x ∈ Z2, let Nx
+m,k denote the number of excursions of {Si} from
+∂D (x,r m,k ) to ∂D (x,r m,k − 1) until time T∂D (x,r m). Fixing 0 <β< 1, with
+some abuse of notation we let βm denote hereafter the integer part of βm .
+LetHx
+βm denotes the event that the SR W visits each point in D(x,r m,βm +1)
+during the ﬁrst Nx
+m,βm excursions from ∂D (x,r m,βm ) to ∂D (x,r m,βm − 1).
+We say that a point x ∈ Z2 is m,β -successful if
+Hx
+βm occurs and nk(a)− k ≤ Nx
+m,k ≤ nk(a)+k for k = 3,...,βm.
+(2.4)
+Let Am ⊆ Z2 be a maximal collection of points in [3 rm, 4rm]2 such that the
+distance between any two points in Am is at least 4 rm,βm .
+PAGE 7
+LARGE COVERED DISCS FOR RANDOM W ALKS 7
+The existence of an m,β -successful point in Am implies that R(8rm) ≥
+rm,βm +1. Noting that log rm,βm +1 ∼ (1 − β ) logrm, we thus establish ( 2.3)
+by showing that for all β = 1 − γ> 1/ 2, upon taking a =a(β )< 2 such that
+aβ 2> 2γ2,(2.5)
+the probability that there is at least one m,β -successful point in Am is
+bounded away from zero as m → ∞ .
+As we will show, the fact that a< 2 guarantees that, with a probability
+that is bounded away from zero as m → ∞ , there exists at least one x ∈ Am
+for whichnk(a) − k ≤ Nx
+m,k ≤ nk(a) +k,k = 3,...,βm , and the relation (
+2.5)
+guarantees that with very high probability Hx
+βm then holds as well.
+Let Vm = ∑
+x∈A mY (m,x ), where Y (m,x ) denotes the indicator random
+variable for the event {x is m,β -successful}. Then, we have ( 2.3) as soon as
+we show that for any δ> 0 and all m suﬃciently large,
+P(Vm ≥ r2−a−δ
+βm ) ≥ cδ> 0(2.6)
+Note that |Am|=r2
+m/ (16r2
+m,βm ) =r2
+βm/ 16 so that by (
+2.9) of Lemma 2.1,
+for some δ′
+m → 0,
+E(Vm) ≥ |Am|¯qm ≥ r2−a−δ′
+m
+βm .(2.7)
+Applying the Paley–Zygmund inequality (see [
+6], page 8), it thus suﬃces to
+show that E(V 2
+m) ≤ C(EVm)2 for some C< ∞ and all m suﬃciently large.
+Furthermore, EVm → ∞ when m → ∞ [see ( 2.7)], so it suﬃces to show that
+E
+( ∑
+x,y ∈A m
+x̸=y
+Y (m,x )Y (m,y )
+)
+≤ C(EVm)2.(2.8)
+The next lemma is proven at the end of this section.
+Lemma 2.1. If a and β = 1 − γ satisfy (
+2.5) then there exists δm → 0
+such that
+¯qm := inf
+x∈A m
+P(x is m,β -successful) ≥ r− (a+δm)
+βm .(2.9)
+Further, for some c< ∞ , all m and x ̸=y ∈ Am,
+P(x,y arem,β -successful) ≤ c¯q2
+mr
+a+δk(x,y )
+k(x,y ) ,(2.10)
+where k(x,y ) = min {j ≥ 1 :D(x,r m,j + 1) ∩ D(y,r m,j + 1) = ∅} and
+k(x,y ) ≤ βm when x ̸=y ∈ Am.
+We return to the proof of (
+2.3). In the sequel, we let Ci denote ﬁnite con-
+stants that are independent of m. The deﬁnition of k(x,y ) ≥ 1 implies that
+|x − y|< 2(rm,k (x,y )− 1 + 1). Note that there are at most C0r2
+m,k − 1/r 2
+m,βm =
+C0r2
+βm/r 2
+k− 1 =C ′
+0|Am|r− 2
+k− 1 pointsy ∈ Am in the ball of radius 2( rm,k − 1 + 1)
+centered at x. Thus, it follows from Lemma 2.1 that for any ﬁxed η> 0 such
+PAGE 8
+8 A. DEMBO, Y. PERES AND J. ROSEN
+that 2 − (a + 2η)> 0,
+∑
+x,y ∈A m
+1≤k(x,y )≤βm
+E(Y (m,x )Y (m,y ))
+≤ C1
+∑
+x,y ∈A m
+1≤k(x,y )≤βm
+¯q2
+mra+η
+k(x,y )
+(2.11)
+≤ C2 ¯q2
+m|Am|2
+βm∑
+k=1
+r− 2
+k− 1ra+η
+k ≤ C3(|Am|¯qm)2
+βm∑
+k=1
+r− (2−a− 2η)
+k
+≤ C3(|Am|¯qm)2
+∞∑
+k=1
+r− (2−a− 2η)
+k ≤ C4(EVm)2,
+which completes the proof of ( 2.3).
+Proof of Lemma 2.1. We say that a point x ∈ Am ⊆ Z2 is m,β -pre-
+successful if
+nk(a) − k ≤ Nx
+m,k ≤ nk(a) +k for k = 3,...,βm.
+The proof of Lemma 3.2 of [ 10] establishes the analog of the statements
+(2.9) and ( 2.10) with m,β -successful replaced by m,β -presuccessful, β = 1
+and where instead of rm,k we have m3(m−k)em. This proof works just as
+well for our choice of β andrm,k . Since an m,β -successful point is also m,β -
+presuccessful this establishes the upper bound of ( 2.10). It thus remains only
+to show that uniformly in x ∈ Am
+P(x is m,β -successful) ≥ (1 +o(1m))P(x is m,β -presuccessful).(2.12)
+To this end, let Lz,m,β denote the event that z is not visited during the
+ﬁrstnβm (a) − βm excursions from ∂D (x,r m,βm ) to ∂D (x,r m,βm − 1). We ﬁrst
+show that
+ξm = sup
+x∈A m
+P
+( ⋃
+z∈D(x,r m,βm +1)
+Lz,m,β
+)
+→ 0 as m → ∞ .(2.13)
+To see this, note that for x ∈ Am
+P
+( ⋃
+z∈D(x,r m,βm +1)
+Lz,m,β
+)
+≤ 4r2
+m,βm +1 sup
+z∈D(x,r m,βm +1)
+P(Lz,m,β ),(2.14)
+and by the strong Markov property of the SR W,
+P(Lz,m,β ) ≤
+(
+sup
+y∈∂D (x,r m,βm )
+Py(Tz>T∂D (x,r m,βm − 1))
+) nβm (a)−βm
+.(2.15)
+PAGE 9
+LARGE COVERED DISCS FOR RANDOM W ALKS 9
+Now for any δ′> 0 and m large enough,
+inf
+y∈∂D (x,r m,βm )
+Py(Tz<T∂D (x,r m,βm − 1))
+≥ inf
+y∈∂D (z,r m,βm +|z−x|)
+Py(Tz<T∂D (z,r m,βm − 1−|z−x|))
+= log((rm,βm − 1 − |z − x|)/ (rm,βm + |z − x|)) +O((m logm)− 1)
+log(rm,βm − 1 − |z − x|) ≥ 1 − δ′
+γm
+where we have used Proposition 1.6.7 of [ 7] in the latter equality. Hence, by
+(2.15),
+P(Lz,m,β ) ≤
+(
+1 − 1 − δ′
+γm
+) nβm (a)−βm
+≤ e− (1− 2δ′)3aβ 2m(logm)/γ .(2.16)
+Since r2
+m,βm +1 ≤ e2(1+δ′)3γm logm, taking δ′ suﬃciently small we get (
+2.13)
+from ( 2.14), ( 2.16) and ( 2.5).
+Hereafter we write N k∼ nk when |N − nk(a)| ≤k and for any x ∈ Z2 and
+ρ<R let Gx(R;ρ) denote the σ -algebra generated by the excursions of the
+SR W from∂D (x,R ) to ∂D (x,ρ ), including the part of the path till ﬁrst hit-
+ting∂D (x,R ). Conditioning onNx
+m,βm =ℓ and on Gx
+βm := Gx(rm,βm − 1;rm,βm ),
+for each x ∈ Am the event Hx
+βm holds if and only if the SR W visits each
+site in D(x,r m,βm +1) during its ﬁrst ℓ excursions from ∂D (x,r m,βm ) to
+∂D (x,r m,βm − 1). Since both rm,βm +1/r m,βm andrm,βm /r m,βm − 1 are ofO(m− 3)
+while m− 3(logm)nβm (a) → 0, it follows from Lemma 2.4 of [ 4] that uni-
+formly with respect to ℓ
+βm
+∼ nβm and x ∈ Am
+P(Hx
+βm | Gx
+βm,N x
+m,βm =ℓ) ≥ (1 +o(1m))(1 − ξm)/BD
+{N x
+m,βm =ℓ}.(2.17)
+Since {Nx
+m,k
+k∼ nk} ∈ Gx
+βm for any 3 ≤ k ≤ βm , we deduce by (
+2.17) that
+P(x is m,β -successful)
+= P(Nx
+m,k
+k∼ nk ∀k ∈ [3,βm ];Hx
+βm )
+(2.18)
+=
+∑
+ℓ
+βm
+∼ nβm
+P(Nx
+m,k
+k∼ nk ∀k ∈ [3,βm − 1];Nx
+m,βm =ℓ;Hx
+βm )
+≥ (1 +o(1m))(1 − ξm)P(Nx
+m,k
+k∼ nk ∀k ∈ [3,βm ]).
+Recall that ξm → 0 by the estimate of ( 2.13), hence
+P(x is m,β -successful) ≥ (1 +o(1m))P(Nx
+m,k
+k∼ nk ∀k ∈ [3,βm ]),
+which amounts to ( 2.12). □
+PAGE 10
+10 A. DEMBO, Y. PERES AND J. ROSEN
+3. The upper bound for Theorem 1.1. In this section we establish the
+upper bound for ( 2.1):
+lim sup
+m→∞
+log R(rm)
+logrm
+≤ 1
+2 a.s.(3.1)
+Fix 0 <γ< 1. We begin by describing a two-tiered collection of discs in
+D(0,r m). Let Bm, 2 be a maximal collection of points in D(0,r m− 1) such
+that the discs {D(xi,r γm+2) ;xi ∈ Bm, 2} are disjoint and do not intersect
+D(0,r γm+2) (hereafter we use γm also for the integer part of γm). For each
+x ∈ Bm, 2, let Bm, 1(x) be a maximal collection of points such that the discs
+{D(yi,r γm ) ;yi ∈ Bm, 1(x)} are disjoint and contained in D(x,r γm+2). Let
+Bm, 1 = ⋃
+x∈B m, 2 Bm, 1(x).
+For anyy ∈ Bm, 1, we let Ny
+m denote the number of excursions from ∂D (y,
+rγm− 1) to∂D (y,r γm ) until timeτ(rm). Recall the notationnk(a) = 3ak2 logk
+for a> 0, k ≥ 3, and taking β = 1 − γ, consider the events
+Γm(a) =
+⋂
+y∈B m, 1
+{Ny
+m ≤ nβm (a)},(3.2)
+about which the following lemma is proved at the end of the sec tion.
+Lemma 3.1. For any a> 2 we can ﬁnd ζ =ζ(a,γ )> 0 such that for all
+m suﬃciently large,
+P(Γm(a)) ≥ 1 − e−ζm logm.(3.3)
+For any D(x,r ) ⊆ Z2, let C(x,r ) denote the number of steps it takes the
+SR W to cover D(x,r ). Note that if the SR W covers a disc of radius rγm+3
+with center in D(0,r m− 1), then it must also cover D(x,r γm+2) for some
+x ∈ Bm, 2. Therefore, one can easily check that the upper bound (
+3.1) follows
+once we show that for any 1 / 2<γ< 1
+∞∑
+m=5
+P
+( ⋃
+x∈B m, 2
+{C(x,r γm+2) ≤ τ(rm)}
+)
+< ∞ .(3.4)
+Further, by Lemma
+3.1 it suﬃces to show that for some a> 2,
+∞∑
+m=5
+P
+( ⋃
+x∈B m, 2
+{C(x,r γm+2) ≤ τ(rm)} |Γm(a)
+)
+< ∞ .(3.5)
+We have
+P
+( ⋃
+x∈B m, 2
+{C(x,r γm+2) ≤ τ(rm)} |Γm(a)
+)
+(3.6)
+≤
+∑
+x∈B m, 2
+P(C(x,r γm+2) ≤ τ(rm) |Γm(a)),
+PAGE 11
+LARGE COVERED DISCS FOR RANDOM W ALKS 11
+and since |Bm, 2| ≤Cem2
+, for γ> 1/ 2, choosing a(γ)> 2 suﬃciently close to
+2, the summability of ( 3.5) is a consequence of the next lemma.
+Lemma 3.2. If 0<γ = 1 − β< 1 and a> 0 are such that
+aβ 2< 2γ2,(3.7)
+then for all m large enough,
+sup
+x∈B m, 2
+P(C(x,r γm+2) ≤ τ(rm) |Γm(a)) ≤ e−m3
+.(3.8)
+Proof of Lemma
+3.2. Clearly,
+{C(x,r γm+2) ≤ τ(rm)} ⊆
+⋂
+y∈B m, 1(x)
+{C(y,r γm− 2) ≤ τ(rm)}.(3.9)
+Let ˜C(y,r γm− 2;k) denote the event that D(y,r γm− 2) is covered in the ﬁrst k
+excursions from ∂D (y,r γm− 1) to ∂D (y,r γm ). Note that for any y ∈ Bm, 1, the
+events Γm(a) and {C(y,r γm− 2) ≤ τ(rm)} imply that also ˜C(y,r γm− 2;nβm (a))
+holds. Our construction of Bm, 1 guarantees that for each m, k and y′,y ∈
+Bm, 1 such that y′ ̸=y, the events Γ m(a) and ˜C(y′,r γm− 2;k) are in the σ -
+algebra Gy(rγm ;rγm− 1) generated by the excursions of the SR W from∂D (y,r γm )
+to ∂D (y,r γm− 1). Further, by Lemma 2.4 of [
+4] we know that uniformly in
+y ∈ Bm, 1
+P( ˜C(y,r γm− 2;nβm (a)) | Gy(rγm ;rγm− 1)) = (1+o(1m))P( ˜C(y,r γm− 2;nβm (a))).
+Consequently, by ( 3.9),
+P(C(x,r γm+2) ≤ τ(rm) |Γm(a)) ≤ P
+( ⋂
+y∈B m, 1(x)
+˜C(y,r γm− 2;nβm (a)) |Γm(a)
+)
+=
+∏
+y∈B m, 1(x)
+(1 +o(1m))P( ˜C(y,r γm− 2;nβm (a))).
+We will show that if a, γ and β = 1 − γ satisfy ( 3.7), then
+sup
+y∈B m, 1
+P( ˜C(y,r γm− 2;nβm (a))) =o(1m).(3.10)
+Since |Bm, 1(x)| ≥ m4, this in turn results with the statement (
+3.8) of the
+lemma.
+To prove ( 3.10) we ﬁx γ′>γ and applying (3.19) of [ 4] with K =rγ ′m,
+R =rγm , r =rγm− 1 and N =nβm (a), we deduce that for any δ> 0, uni-
+formly in y ∈ Bm, 1 with probability 1 − o(1m) it takes the SR W on the two
+dimensional torus Z2
+K of side length K less than T := 2
+π (1 +δ)K 2N log(R/r )
+PAGE 12
+12 A. DEMBO, Y. PERES AND J. ROSEN
+steps to complete N excursions from ∂D (y,r γm− 1) to ∂D (y,r γm ) [since
+N log(R/r )/ log(K/r ) → ∞ as m → ∞ ]. It is not hard to verify that ( 3.7)
+implies that T ≤ 4
+π (1 − δ)(K logK)2 forδ =δ(a,γ )> 0 suﬃciently small and
+all m large enough. It then follows from (1.2) of [ 4] that when γ′ is such
+that (γ/γ ′)2> (1 − δ), the probability that the SR W on the torus Z2
+K covers
+D(y,r γm− 2) within that many steps is o(1m), again uniformly in y. Thus,
+the probability that the SR W on the torus Z2
+K coversD(y,r γm− 2) during its
+ﬁrst N excursions from ∂D (y,r γm− 1) to ∂D (y,r γm ) is o(1m). We are inter-
+ested in the same probability, but for the SR W on Z2. However, note that
+conditioned on their beginning and end points the N excursions in question
+are mutually independent and each has the same (conditioned ) law for Z2
+and for the torus Z2
+K . Further, from Lemma 2.4 of [
+4] we know that the
+probability we are considering is, up to a factor 1 + o(1m), independent of
+the beginning and end points of these excursions. This compl etes the proof
+of ( 3.10) and hence of the lemma. □
+Proof of Lemma 3.1. The proof is similar to that of ( 2.13). Indeed,
+ﬁxing a> 2 it suﬃces to show that for some ζ =ζ(a,γ )> 0 and all m large
+enough
+P
+( ⋃
+y∈B m, 1
+{Ny
+m>nβm (a)}
+)
+≤ e−ζm logm.(3.11)
+To see this, note that
+P
+( ⋃
+y∈B m, 1
+{Ny
+m>nβm (a)}
+)
+≤ |Bm, 1| sup
+y∈B m, 1
+P(Ny
+m>nβm (a))(3.12)
+and by the strong Markov property of the SR W,
+P(Ny
+m>nβm (a)) ≤
+(
+sup
+x∈∂D (y,r γm )
+Px(T∂D (0,r m)>T∂D (y,r γm − 1))
+) nβm (a)
+.
+(3.13)
+Now for any δ′> 0 and m large enough,
+inf
+x∈∂D (y,r γm )
+Px(T∂D (0,r m)<T∂D (y,r γm − 1))
+≥ inf
+x∈∂D (y,r γm )
+Px(T∂D (y,r m+|y|)<T∂D (y,r γm − 1))
+= log(rγm/r γm− 1) +O(r− 1
+γm− 1)
+log((rm + |y|)/r γm− 1) ≥ 1 − δ′
+βm
+where we have used Exercise 1.6.8 of [ 7] in the latter equality. Hence, by
+(3.13),
+P(Ny
+m>nβm (a)) ≤
+(
+1 − 1 − δ′
+βm
+) nβm (a)
+≤ e−a(1− 2δ′)3βm logm.(3.14)
+PAGE 13
+LARGE COVERED DISCS FOR RANDOM W ALKS 13
+Since |Bm, 1| ≤ e2(1+δ′)3βm logm, for a> 2 the estimate ( 3.11) follows from
+(3.12) and ( 3.14) upon taking δ′> 0 suﬃciently small. □
+4. Proof of Theorem 1.3. By the same argument as in the proof of the
+lower bound for ( 1.3), the lower bound for ( 1.8) follows once we show that
+for any η> 0 there exists pη> 0 such that for all suﬃciently large m,
+P
+( log Rℓ(8rm)
+logrm
+≥ 1
+1 +
+√
+ℓ
+− 2η
+)
+≥ pη> 0.(4.1)
+To this end, for x ∈ Z2, 3 ≤ k ≤ m − 1 and 1 ≤ j ≤ ℓ let Nx,j
+m,k denote the
+number of excursions of the j’th SR W from ∂D (x,r m,k ) to ∂D (x,r m,k − 1)
+until its hitting time of ∂D (x,r m). Fixing a> 0 and 0 <β = 1 − γ< 1, we
+set nk(a) = 3ak2 logk. We say that x ∈ Z2 is m,β,ℓ -presuccessful if
+nk(a) − k ≤ Nx,j
+m,k ≤ nk(a) +k for k = 3,...,βm,j = 1,...,ℓ,
+and say that x ∈ Z2 is m,β,ℓ -successful if in addition for j = 1,...,ℓ , each
+point in D(x,r m,βm +1) is visited during the ﬁrst Nx,j
+m,βm excursions of the
+j’th SR W from∂D (x,r m,βm ) to ∂D (x,r m,βm − 1).
+As before, Am ⊆ Z2 is a maximal collection of points in [3 rm, 4rm]2 such
+that the distance between any two points in Am is at least 4 rm,βm . With
+logrm,βm +1 ∼ γ logrm we establish (
+4.1) by showing that for some a(β ) and
+anyγ = 1 − β< 1/ (1 +
+√
+ℓ) the probability that there is at least one m,β,ℓ -
+successful point in Am is bounded away from zero as m → ∞ . Speciﬁcally,
+as before we show that if a and β = 1 − γ satisfy ( 2.5) then uniformly in
+Am each m,β,ℓ -presuccessful point is with high probability also m,β,ℓ -
+successful. Then we show that a< 2/ℓ guarantees that with a probability
+that is bounded away from zero as m → ∞ , there exists at least one m,β,ℓ -
+presuccessful point in Am. This establishes ( 4.1) because for γ = 1 − β<
+1/ (1 +
+√
+ℓ) we can satisfy ( 2.5) with some a< 2/ℓ . Indeed, arguing as in
+Section 2, for a< 2/ℓ the existence of at least one m,β,ℓ -successful point in
+Am, is a consequence of our next lemma [simply take η> 0 so that 2 − ℓ(a +
+2η)> 0 when adapting ( 2.11) to the present context], which thus completes
+the proof of the lower bound for ( 1.8).
+Lemma 4.1. If a and β = 1 − γ satisfy ( 2.5) then there exists δm → 0
+such that
+¯qm,ℓ := inf
+x∈A m
+P(x is m,β,ℓ -successful) ≥ r−ℓ(a+δm)
+βm .(4.2)
+Further, for some c< ∞ , all m and x ̸=y ∈ Am
+P(x,y arem,β,ℓ -successful) ≤ c¯q2
+m,ℓr
+ℓ(a+δk(x,y ))
+k(x,y )(4.3)
+[where as before k(x,y ) = min{j ≥ 1 :D(x,r m,j + 1) ∩ D(y,r m,j + 1) = ∅} ≤
+βm ].
+PAGE 14
+14 A. DEMBO, Y. PERES AND J. ROSEN
+Proof. This is an easy adaptation of the proof of Lemma 2.1. In-
+deed, as shown there, ( 2.5) guarantees that uniformly in Am each m,β,ℓ -
+presuccessful point is with high probability also m,β,ℓ -successful [raising
+the factor (1 + o(1m))(1 − ζm) in ( 2.18) to the ℓth power], while since the
+presuccessful condition now involves ℓ independent walks, the probabilities
+in the statement of Lemma 2.1 are now raised to the ℓth power. □
+We turn next to the upper bound for ( 1.8), which amounts to showing
+that
+lim sup
+m→∞
+log Rℓ(rm)
+logrm
+≤ 1
+1 +
+√
+ℓ
+a.s.(4.4)
+To this end, ﬁxing 0<γ = 1− β< 1 we adapt the argument of Section
+3 using
+the same two-tiered collection of discs in D(0,r m). For any y ∈ Bm, 1 here
+Ny,j
+m denotes the number of excursions of the jth SR W from∂D (y,r γm− 1) to
+∂D (y,r γm ) until the time τj(rm) in which the jth SR W ﬁrst exits D(0,r m).
+Fixinga> 0 and setting again nk(a) = 3ak2 logk we now consider the events
+Γm,ℓ (a) :=
+⋂
+y∈B m, 1
+ℓ⋃
+j=1
+{Ny,j
+m ≤ nβm (a)},(4.5)
+about which we show the following.
+Lemma 4.2. For any a> 2/ℓ we can ﬁnd ζ =ζ(a,γ )> 0 such that for
+all m suﬃciently large,
+P(Γm,ℓ (a)) ≥ 1 − e−ζm logm.(4.6)
+Proof. It suﬃces to show that when a> 2/ℓ we can ﬁnd ζ =ζ(a,γ )> 0
+such that for all m suﬃciently large,
+P
+( ⋃
+y∈B m, 1
+ℓ⋂
+j=1
+{Ny,j
+m >nβm (a)}
+)
+≤ e−ζm logm.(4.7)
+Since the ℓ walks are independent, we have that
+P
+( ⋃
+y∈B m, 1
+ℓ⋂
+j=1
+{Ny,j
+m >nβm (a)}
+)
+≤ |Bm, 1|
+(
+sup
+y∈B m, 1
+P(Ny
+m>nβm (a))
+) ℓ
+(4.8)
+and using the upper bound of (
+3.14) with δ′ suﬃciently small, we verify that
+(4.7) holds for some ζ> 0 as soon as ℓa> 2. □
+Forj = 1,...,ℓ , let Cj(x,r ) denote the number of steps required until the
+jth SR W covers D(x,r ). Note that if all ℓ walks cover some disc of radius
+PAGE 15
+LARGE COVERED DISCS FOR RANDOM W ALKS 15
+rγm+3 with center in D(0,r m− 1), then necessarily for some x ∈ Bm, 2 they
+all cover D(x,r γm+2). It is therefore easy to check that the upper bound of
+(4.4) follows once we show that for each 1 / (1 +
+√
+ℓ)<γ< 1,
+∞∑
+m=5
+P
+( ⋃
+x∈B m, 2
+ℓ⋂
+j=1
+{Cj(x,r γm+2) ≤ τj(rm)}
+)
+< ∞ .(4.9)
+Further, considering a ↓ 2/ℓ , in view of Lemma
+4.2 this is a direct conse-
+quence of our next lemma.
+Lemma 4.3. If 0<γ = 1 − β< 1 and a> 0 satisfy ( 3.7), then for all m
+large enough,
+sup
+x∈B m, 2
+P
+( ℓ⋂
+j=1
+{Cj(x,r γm+2) ≤ τj(rm)} |Γm,ℓ (a)
+)
+≤ e−m3
+.(4.10)
+Proof. Let ˜Cj(y,r γm− 2;k) denote the event that the jth SR W covers
+D(y,r γm− 2) during its ﬁrst k excursions from ∂D (y,r γm− 1) to ∂D (y,r γm ).
+Note that for any y ∈ Bm, 1, the events Γ m,ℓ (a) and {Cj(y,r γm− 2) ≤ τ(rm)}
+for j = 1,...,ℓ , imply that at least one of the events ˜Cj(y,r γm− 2;nβm (a))
+holds as well. Thus, by the independence of the ℓ walks, as in the proof of
+Lemma 3.2 we have that for all x ∈ Bm, 2,
+P
+( ℓ⋂
+j=1
+{Cj(x,r γm+2) ≤ τj(rm)} |Γm,ℓ (a)
+)
+≤ P
+( ⋂
+y∈B m, 1(x)
+ℓ⋃
+j=1
+˜Cj(y,r γm− 2;nβm (a)) |Γm,ℓ (a)
+)
+≤
+∏
+y∈B m, 1(x)
+[
+(1 +o(1m))
+ℓ∑
+j=1
+P( ˜Cj(y,r γm− 2;nβm (a)))
+]
+.
+Since a and γ = 1 − β satisfy ( 3.7), we next apply the bound ( 3.10) to
+the preceding inequality, and with |Bm, 1(x)| ≥m4, thus establish the bound
+(4.10) of the lemma. □
+5. The lower bound for Theorem 1.2. As seen before, it suﬃces to con-
+sider the lower bound for ( 1.6) and the sequence rm. Further, by the same
+argument as in the proof of the lower bound for Theorem 1.1, it suﬃces to
+prove the analog of ( 2.3), namely, to show that
+lim infm→∞ P(log R(8rm; 4α (logrm)2/π ) ≥ γ logrm)> 0,(5.1)
+PAGE 16
+16 A. DEMBO, Y. PERES AND J. ROSEN
+whenever γ = 1 − β <(1 − √ α )/ 2 or equivalently, 0 < γ < β− √ α . To
+prove (5.1), rerun the arguments of Section 2 while replacing the event Hx
+βm
+in the deﬁnition ( 2.4) of an m,β -successful point x with the event Hx
+βm (α )
+that the SR W visits each point in D(x,r m,βm +1) at least α (logrm)2/π times
+during its ﬁrst Nx
+m,βm excursions from ∂D (x,r m,βm ) to ∂D (x,r m,βm − 1).
+It is not hard to check that this strategy works as soon as ( 2.12) applies
+for this deﬁnition of m,β -successful points and some a =a(β )< 2, when-
+ever 0 <γ<β − √ α . As for the latter, let Lz,m,β (α ) denote the event that
+z ∈ D(x,r m,βm +1) is visited less than 4 α (logrm)2/π times during the ﬁrst
+nβm (a) − βm excursions of the SR W from ∂D (x,r m,βm ) to ∂D (x,r m,βm − 1).
+Then, following the proof of Lemma 2.1, we have ( 5.1) as soon as we show
+that for 0 <γ<β − √ α and a< 2 suﬃciently close to 2,
+ξm(α ) = sup
+x∈A m
+P
+( ⋃
+z∈D(x,r m,βm +1)
+Lz,m,β (α )
+)
+→ 0 as m → ∞(5.2)
+[compare with (
+2.13)]. Turning to the derivation of ( 5.2), set R =rm,βm − 1 −
+rm,βm +1 andρ =rm,βm +rm,βm +1 and let L′
+z,m,β (α ) denote the event that z
+is visited less than 4 α (logrm)2/π times during the ﬁrst nβm (a) − βm excur-
+sions of the SR W from ∂D (z,ρ ) to ∂D (z,R ). Note that if z ∈ D(x,r m,βm +1)
+then
+D(x,r m,βm ) ⊆ D(z,ρ ) ⊆ D(z,R ) ⊆ D(x,r m,βm − 1),
+implying that the SR W makes at leastk excursions from∂D (z,ρ ) to∂D (z,R )
+during its ﬁrst k excursions from ∂D (x,r m,βm ) to ∂D (x,r m,βm − 1), so in par-
+ticular, Lz,m,β (α ) ⊆ L ′
+z,m,β (α ). Consequently, with R>r m,βm +1, for some
+constantc< ∞
+ξm(α ) ≤ cr2
+m,βm +1 sup
+z∈D(x,r m,βm +1)
+x∈A m
+P(Lz,m,β (α ))
+(5.3)
+≤ cR2 sup
+z/∈D(0,ρ )
+P(L′
+z,m,β (α )).
+When 0 <γ = 1 − β<β − √
+α , if both δ> 0 and 2 − a> 0 are suﬃciently
+small, then our next lemma shows that P(L′z,m,β (α )) ≤ R− 2−η for some
+η =η(β,α,δ,a )> 0 and all z /∈ D(0,ρ ). Combining this bound with ( 5.3)
+yields that ( 5.2) holds, thus completing the proof of the lower bound for
+Theorem 1.2.
+Lemma 5.1. If a,δ,β> 0 are such that
+(1 − δ)2aβ 2> 2α,(5.4)
+PAGE 17
+LARGE COVERED DISCS FOR RANDOM W ALKS 17
+then for all m suﬃciently large,
+sup
+z/∈D(0,ρ )
+P(L′z,m,β (α )) ≤ R− ((1−δ)β √ a−
+√
+2α )2/γ 2
+.(5.5)
+Proof. Let L(j,z ) denote the number of visits to z during the jth
+excursion of the SR W from ∂D (z,ρ ) to ∂D (z,R ). Setting k =k(a,βm ) :=
+nβm (a) − βm and s =s(α,m ) := 4α (logrm)2/π , by Chebyshev’s inequality
+and the strong Markov property of the SR W, for any λ> 0
+P(L′
+z,m,β (α )) = P
+( k∑
+j=1
+L(j,z )<s
+)
+(5.6)
+≤ eλs E(e−λ
+∑k
+j=1L(j,z )) ≤ eλs
+[
+sup
+y∈∂D (z,ρ )
+Ey(e−λL (z))
+] k
+,
+where L(z) denotes the number of visits to z of a SR W that starts at y ∈
+∂D (z,ρ ) and is killed upon reaching ∂D (z,R ). Since the preceding bound is
+independent of z, we take hereafter z = 0 and let
+GR(v,u ) := Ev
+( τ(R)∑
+i=0
+/BD
+{Si=u}
+)
+denote the Green function for the SR W on D(0,R ). Clearly, GR(y, 0) =
+EyL(0) and conditional on hitting the origin, L(0) is a geometric random
+variable. Consequently, Py(L(0) =j + 1) = pqj(1 − q) for j = 0, 1,... with
+p =GR(y, 0)/G R(0, 0) and q = 1 − 1/G R(0, 0). Hence for any λ> 0,
+Ey(e−λL (0)) = 1 − (eλ − 1)GR(y, 0)
+1 + (eλ − 1)GR(0, 0).(5.7)
+By Proposition 1.6.6 of [
+7], GR(0, 0) ∼ 2
+π logR when R → ∞ , so taking
+λ = π
+2ϕ/ logR we have that ( eλ − 1)GR(0, 0) ∼ ϕ as m → ∞ (i.e., R → ∞ ).
+Further, by Proposition 1.6.7 of [ 7] we have that
+inf
+y∈∂D (0,ρ )
+GR(y, 0) = 2
+π log
+( R
+ρ
+)
++O(ρ− 1).
+Recall that our choices of R =rm,βm − 1 − rm,βm +1 and ρ =rm,βm +rm,βm +1
+are such that log( R/ρ )/ logR ∼ 1/ (γm), so we get from ( 5.7) that for λ =
+π
+2ϕ/ logR, any ϕ,δ> 0 and all m large enough,
+sup
+y∈∂D (0,ρ )
+Ey(e−λL (0)) ≤ 1 − (1 − δ)
+γm
+ϕ
+1 +ϕ ≤ e− (1−δ)ϕ/ (γm(1+ϕ )).(5.8)
+Hence, by (
+5.6), for any ϕ> 0,
+P(L′
+z,m,β (α )) ≤ RAϕ −Bϕ/ (1+ϕ ),(5.9)
+PAGE 18
+18 A. DEMBO, Y. PERES AND J. ROSEN
+where by ( 5.4), for all m large enough,
+A := π
+2
+s(α,m )
+(logR)2 = 2α
+( logrm
+logR
+) 2
+∼ 2α
+γ2,(5.10)
+B := (1 − δ)k(a,βm )
+γm logR = (1 − δ)nβm (a) − βm
+γm logR ∼ (1 − δ)aβ 2
+γ2(5.11)
+are such that B>A> 0, in which case a straightforward computation shows
+that
+inf
+ϕ> 0
+(
+Aϕ − B ϕ
+1 +ϕ
+)
+= − (
+√
+B −
+√
+A)2.(5.12)
+Combining (
+5.9)–(5.12) we get that ( 5.5) holds for all m large enough. □
+6. The upper bound for Theorem 1.2. As explained before, it suﬃces to
+prove the upper bound in ( 1.6) for the sequence rm. That is, ﬁxing 1 / 2>
+γ> (1 − √ α )/ 2, to show that
+lim sup
+m→∞
+log R(rm; 4α (logrm)2/π )
+logrm
+<γ a.s.(6.1)
+More precisely, adapting the proof of the upper bound for The orem
+1.1, we
+show that for such γ any disc of radius rγm+3 with center in D(0,r m− 1)
+contains at time τ(rm) sites which the SR W visited less than 4 α (logrm)2/π
+times. To this end, let ˜Cα (y,r γm− 2;k) denote the event that every point
+in D(y,r γm− 2) is visited at least 4 α (logrm)2/π times during the ﬁrst k
+excursions from ∂D (y,r γm− 1) to ∂D (y,r γm ). Using the two-tiered collection
+of discs as in Section 3, upon applying Lemma 3.1 and adapting to the
+present context the reasoning which precedes ( 3.10), we ﬁnd that it suﬃces
+to prove the following lemma.
+Lemma 6.1. If β = 1 − γ, 1/ 2>γ>β − √α and a> 2 is suﬃciently
+close to 2 for
+√ aβ −
+√
+2√ α<
+√
+2γ,(6.2)
+then
+sup
+y∈B m, 1
+P( ˜Cα (y,r γm− 2;nβm (a))) =o(1m).(6.3)
+Proof. In view of (
+6.2) we ﬁx 0 <η<γ and 1 <h< 2 such that
+√aβ −
+√
+2√ α<
+√
+h(γ − 2η).
+SettingA =
+√
+a/hβ − γ> 0 let ˆnk(h) = 3h(k +Am)2 logm fork = 1,...,γm ,
+noting that
+ˆnγm (h) = 3aβ 2m2 logm ≥ nβm (a),(6.4)
+PAGE 19
+LARGE COVERED DISCS FOR RANDOM W ALKS 19
+and further, for some a′< 2α and all m large enough,
+ˆnηm(h) +ηm ≤ 3a′m2 logm(6.5)
+[e.g., a′ =h(2η +A)2 will do].
+Next, let Nz
+γm,k fork = 1,...,γm − 2, denote the number of excursions of
+the SR W from ∂D (z,r k− 1) to ∂D (z,r k) during its ﬁrst ˆnγm (h) excursions
+from∂D (z, ˆρ) to ∂D (z, ˆR), where ˆR =rγm +rγm− 2 and ˆρ =rγm− 1 − rγm− 2.
+We say that z /∈ D(0, ˆρ) is m,γ -presluggish if
+ˆnk(h) − k ≤ Nz
+γm,k ≤ ˆnk(h) +k, for k =ηm,...,γm − b,
+for some ﬁxed b ≥ 4 to be determined in the sequel. An m,γ -presluggish
+point z is called m,γ -sluggish if during the ﬁrst 3 a′m2 logm excursions of
+the SR W from∂D (z,r ηm− 1) to∂D (z,r ηm ), it visitsz less than 4α (logrm)2/π
+times, an event we denote hereafter by ˆLz,m,η (α ).
+Note that if z ∈ D(y,r γm− 2) then
+D(z, ˆρ) ⊆ D(y,r γm− 1) ⊆ D(y,r γm ) ⊆ D(z, ˆR),
+so prior to completing its ﬁrst ˆnγm (h) excursions from ∂D (z, ˆρ) to ∂D (z, ˆR),
+the SR W completes that many excursions from ∂D (y,r γm− 1) to ∂D (y,r γm ).
+Consequently, in view of (
+6.4) and (6.5), anym,γ -sluggish point inD(y,r γm− 2)
+is visited by the SR W less than 4 α (logrm)2/π times during its ﬁrst nβm (a)
+excursions from ∂D (y,r γm− 1) to ∂D (y,r γm ).
+We thus complete the proof of Lemma 6.1 by showing that uniformly in
+y ∈ Bm, 1, with probability 1 − o(1m) there exists an m,γ -sluggish point in
+any maximal set Zηm (y) of 4rηm -separated points in D(y,r γm− 2). The key
+for this is our next lemma (whose proof is deferred to the end o f the section).
+Lemma 6.2. There exists δm → 0 such that
+ˆqm := inf
+z/∈D(0, ˆρ)
+P(z is m,γ -sluggish) ≥ r− (γ −η)h−δm
+m(6.6)
+and
+sup
+z/∈D(0, ˆρ)
+P(z is m,γ -sluggish) = (1 +o(1m))ˆqm.(6.7)
+Further, let k(z,z ′) = max{j :D(z,r j + 1)∩D(z′,r j + 1) = ∅}. Then, for any
+ε> 0 there exist C,κ< ∞ which are both independent of b, such that for all
+m, and z,z ′/∈ D(0, ˆρ) with ηm ≤ k(z,z ′) ≤ γm − b
+P(z,z ′ arem,γ -sluggish) ≤ ˆq2
+mmκCγm−k(z,z ′)
+( rγm−b
+rk(z,z ′)
+) h+ε
+.(6.8)
+Furthermore, if γm − b<k (z,z ′) and |z − z′| ≤ 2rγm− 2 then
+P(z,z ′ arem,γ -sluggish) ≤ ˆq2
+m(1 +o(1m)).(6.9)
+PAGE 20
+20 A. DEMBO, Y. PERES AND J. ROSEN
+Since there are r2(γ −η)+o(1m)
+m sites in Zηm(y) and h< 2 it follows from
+(6.6) that the mean number of m,γ -sluggish points in Zηm(y) diverges as
+m → ∞ . In view of ( 6.7) and Chebyshev’s inequality, we complete the proof
+of Lemma 6.1 by showing that the second moment of this random variable
+is (1 +o(1m))|Zηm (y)|2 ˆq2
+m, hence in any disc D(y,r γm− 2) the probability of
+ﬁnding at least one m,γ -sluggish point is 1 − o(1m). To this end, by the
+bound ( 6.9) it suﬃces to consider the contribution to the second moment
+byz,z ′ ∈ Zηm(y) with k =k(z,z ′) ≤ γm − b. There are at most
+c2|Zηm(y)|
+( rk+1
+rηm
+) 2
+≤ c3|Zηm(y)|2
+( rk
+rγm− 3
+) 2
+such pairs per given k. Hence, by ( 6.8), for 0 <ε< 2 − h andb> 3 +κ/ 6, the
+contribution of all such pairs to the second moment is at most |Zηm (y)|2 ˆq2
+m
+times
+( rγm−b
+rγm− 3
+) 2
+c3mκ
+γm−b∑
+k=ηm
+Cγm−k
+( rγm−b
+rk
+) h+ε− 2
+≤ c4mκ − 6(b− 3)
+∞∑
+j=0
+Cjm− 3j(2−h−ε) =o(1m),
+as required for completing the proof. □
+Proof of Lemma 6.2. We ﬁrst show that an m,γ -presluggish point is
+with very high probability also m,γ -sluggish. More precisely, adapting the
+proof of Lemma 5.1, we shall show that for any a′< 2α and η> 0 there
+exists ε =ε(α,a ′,η )> 0 such that for all large m,
+inf
+z/∈D(0,ρ )
+P( ˆLz,m,η (α )) ≥ 1 − R−ε,(6.10)
+where now ρ :=rηm− 1 andR :=rηm . Indeed, with L(j,z ) denoting the num-
+ber of visits to z during the jth excursion of the SR W from ∂D (z,ρ ) to
+∂D (z,R ), andL(0) denoting the number of visits to 0 of a SR W that starts at
+y ∈ D(0,ρ ) and is killed upon reaching ∂D (0,R ), taking now s =s(α,m ) :=
+4α (logrm)2/π , and k =k(a′,m ) := 3a′m2 logm, we have by Chebyshev’s in-
+equality and the strong Markov property of the SR W, that for a ny λ> 0
+1 − P( ˆLz,m,η (α )) = P
+( k∑
+j=1
+L(j,z ) ≥ s
+)
+≤ e−λs
+[
+sup
+y∈∂D (0,ρ )
+Ey(eλL (0))
+] k
+.
+(6.11)
+Here log(R/ρ )/ logR ∼ 1/ (ηm), so for λ = π
+2ϕ/ logR the computation lead-
+ing to ( 5.8), yields now that for any 1 >ϕ,δ> 0 and all m large enough,
+sup
+y∈∂D (0,ρ )
+Ey(eλL (0)) ≤ 1 + (1 +δ)
+ηm
+ϕ
+1 − ϕ ≤ e(1+δ)ϕ/ (ηm(1−ϕ )).(6.12)
+PAGE 21
+LARGE COVERED DISCS FOR RANDOM W ALKS 21
+In view of ( 6.11), taking δ >0 small enough so (1 + δ)a′< 2α , for ϕ =
+1 −
+√
+B/A> 0 we ﬁnd that
+1 − P( ˆLz,m,η (α )) ≤ R−Aϕ +Bϕ/ (1−ϕ ) =R− (
+√
+A−
+√
+B)2
+,(6.13)
+where we get (
+6.10) upon checking that
+A :=π
+2
+s(α,m )
+(logR)2 ∼ 2α
+η2 and B := (1 +δ)k(a′,m )
+ηm logR ∼ (1 +δ)a′
+η2 ,(6.14)
+so a′ and δ are such that A>B> 0 for all m large enough, as needed for
+(
+6.13) and ( 6.10) to hold.
+Following the same outline as of the proof of Lemma 2.1, we employ here-
+after arguments that are very similar to those in the proof of Lemma 10.1 of
+[4]. That is, ﬁrst note that the probability that z ism,γ -sluggish depends on
+z /∈ D(0, ˆρ) only via the distribution of the SR W upon ﬁrst hitting ∂D (z, ˆρ).
+Since the deﬁnition of such points involves only O(m2 logm) excursions of
+the walk, whereas ˆR/ ˆρ =O(m3) and ˆρ/r γm−b ≥ O(m3), an application of
+Lemma 2.4 of [ 4] shows that the dependence of this probability on z is neg-
+ligible, as stated in ( 6.7). Similarly, by ( 6.10) and the fact that ˆLz,m,η (α ) is
+in the σ -algebra of all excursions from ∂D (z,r ηm− 2) to ∂D (z,r ηm− 1) com-
+pleted by the walk during its ﬁrst 3 a′m2 logm excursions from ∂D (z,r ηm− 1)
+to ∂D (z,r ηm ), yet another application of Lemma 2.4 of [ 4] shows that
+ˆqm = (1 +o(1m)) inf
+z/∈D(0, ˆρ)
+P(Nz
+γm,k
+k∼ ˆnk,k =ηm,...,γm − b)
+(compare with the derivation leading to (10.10) of [ 4]). Due to the depen-
+dence of the relevant excursions on their terminal points, {Nz
+γm,k } is not a
+Markov chain. Nevertheless, applying (5.9) of [ 4], we ﬁnd that
+ˆqm = (1 +o(1m))
+∑
+ℓk
+k
+∼ ˆnk
+P(Nz
+γm,γm −b =ℓγm−b)
+(6.15)
+× 0
+γm−b− 1∏
+k=ηm
+(
+ℓk+1 +ℓk − 1
+ℓk
+)
+pℓk
+k (1 − pk)ℓk+1,
+for pk = log(k + 1)/ (logk + log(k + 1)). Further, it is not hard to check that
+for some c0< ∞ and all ηm ≤ k ≤ γm, if ℓk
+2k∼ ˆnk(h) then
+⏐
+⏐
+⏐
+⏐
+ℓk
+ℓk+1
+− 1 + 2
+k +Am
+⏐
+⏐
+⏐
+⏐ ≤ c0
+m logm,
+and hence for some c1< ∞ and any such ℓk,
+k− 3h− 1
+c1
+√ logk ≤
+(
+ℓk+1 +ℓk − 1
+ℓk
+)
+pℓk
+k (1 − pk)ℓk+1 ≤ c1k− 3h− 1
+√ logk(6.16)
+PAGE 22
+22 A. DEMBO, Y. PERES AND J. ROSEN
+(cf. (10.11) of [ 4] or Lemma 7.2 of [ 2]). A similar polynomial bound applies
+for P(Nz
+γm,k
+k∼ ˆnk(h)), for example, when k =γm − b, so putting ( 6.15) and
+(6.16) together we arrive at the bound ( 6.6).
+Since an m,γ -sluggish point is also m,γ -presluggish, it suﬃces to prove
+the upper bounds of ( 6.8) and ( 6.9) for P(z,z ′ are m,γ -presluggish). To
+this end, with b ≥ 4, if |z − z′| ≤ 2rγm− 2 then D(z,r γm−b+1) ⊆ D(z′, ˆρ).
+Thus, when γm − b<k (z,z ′) it is easy to verify that the event {z′ is m,γ -
+presluggish} is in the σ -algebra Gz(rγm−b+1;rγm−b). Further, as usual, con-
+ditioned on Nz
+γm,γm −b+1 =ℓ the event {z is m,γ -presluggish} is in the σ -
+algebra of all excursions from ∂D (z,r γm−b− 1) to ∂D (z,r γm−b) completed by
+the walk during its ﬁrst ℓ excursions from ∂D (z,r γm−b) to ∂D (z,r γm−b+1).
+Thus, if ℓ of the preceding is not too large, then the dependence of {z is
+m,γ -presluggish} on Gz(rγm−b+1;rγm−b) is negligible. More precisely, it is
+not hard to verify that for large enough m,
+P(Nz
+γm,γm −b+1 ≥ m2(logm)2) ≤ e−m2 logm =o(1m)ˆq2
+m,
+and we get ( 6.9) by an application of Lemma 2.4 of [ 4]. Finally, the proof
+of ( 6.8) for presluggish points is a simple adaptation of the argume nts used
+when proving (10.5) of [ 4]. □
+7. Proof of Theorem 1.4. Recall that V (n) is the number of steps after
+step n until the SR W (Si,i ≥ 0) in Z2 visits a previously unvisited site. We
+ﬁrst prove the upper bound, that is, ﬁxing 1 / 20>ε> 0, we show that
+lim sup
+n→∞
+logV (n)
+logn ≤ 1
+2 + 10ε a.s.(7.1)
+To this end, considering the events Jn = {V (n) > n1/ 2+10ε} and Kn =⋂
+m>n{ ˜R(m)<m 1/ 4+ε}, we shall show that
+∑
+n
+P(Jn ∩ Kn)< ∞ .(7.2)
+Then, by the Borel–Cantelli lemma, almost surely, Jn ∩ Kn occurs for only
+ﬁnitely many values of n. From Theorem
+1.1 we know that almost surely Kn
+occurs for all n large enough, thus implying that Jn occurs for only ﬁnitely
+many values of n, and ( 7.1) ensues.
+Turning to prove ( 7.2), take ρ =ρ(n) = n1/ 4+2ε and R =R(n) = ρ1+ε,
+and let H(m) denote the event that there exists a site x ∈ D(Sm,ρ ) which
+is not visited by the SR W up to time m +R2+ε. With Fn =σ (Sk,k ≤ n),
+considering a uniformly chosen site among those in D(Sm,ρ ) that are not
+visited by the SR W up to time m, we have by its Markov property that
+P(H(m)|Fm) ≤ 1 − inf
+y∈D(0,ρ )
+Py(T0<R 2+ε).(7.3)
+PAGE 23
+LARGE COVERED DISCS FOR RANDOM W ALKS 23
+By Propositions 1.6.6 and 1.6.7 of [ 7], for 0 <ε< 1 and ρ =ρ(n) large
+enough,
+inf
+y∈D(0,ρ )
+Py(T0<τ (R)) = inf
+y∈D(0,ρ )
+GR(y, 0)
+GR(0, 0) ≥ ε
+2.(7.4)
+Further,
+Py(T0<R 2+ε) ≥ Py(T0<τ (R)) − Py(τ(R)>R 2+ε)
+and Py(τ(R)>R 2+ε) ≤ R−ε/ 2 for all R large enough and y ∈ D(0,R ) (e.g.,
+see inequality (1.2.1) of [
+7]). Thus, by (7.3) and (7.4) we deduce that P(H(m)|Fm) ≤
+1 − ε/ 3 for all n large enough. Now, let m(i) =n + 1 + (i − 1)n1/ 2+8ε for
+i = 1,...,n 2ε, and take n large enough for ρ ≥ (n +n1/ 2+10ε)1/ 4+ε. Since
+m(i) +R2+ε ≤ m(i + 1), it follows that H(m(i)) ∈ Fm(i+1), and further
+Jn ∩ Kn ⊆
+n2ε
+⋂
+i=1
+{ ˜R(m(i))<ρ,V (m(i))>R 2+ε} ⊆
+n2ε
+⋂
+i=1
+H(m(i)).
+Consequently, the bound P(H(m)|Fm) ≤ 1 − ε/ 3 implies that
+P(Jn ∩ Kn) ≤ P
+( ⋂
+i≤n2ε
+H(m(i))
+)
+≤ (1 − ε/ 3)n2ε
+,
+for all n large enough, which results with ( 7.2).
+Fixing 0<ε< 1/ 20 we conclude the proof by establishing the lower bound
+lim sup
+n→∞
+logV (n)
+logn ≥ 1
+2 − 10ε a.s.(7.5)
+To this end, consider the stopping times
+τk = inf{n ≥ k :Sn ∈ D(x,n 1/ 4−ε) ⊆ (Si,i ≤ n) for some x ∈ Z2},(7.6)
+for the ﬁltration Fn. That is, τk is the ﬁrst time n ≥ k for which the SR W is
+in a disc of radius n1/ 4−ε having no previously unvisited sites. By Theorem
+1.1, almost surely {R(n)> R(n − 1)>n 1/ 4−ε} for inﬁnitely many n values,
+each of which satisﬁes the conditions of ( 7.6). Consequently, almost surely
+τk< ∞ for all k. Completely ordering Z2 in agreement with the Euclidean
+distance from the origin, let Xk denote the site closest to Sτk among those
+x ∈ Z2 such that every site in D(x,τ 1/ 4−ε
+k ) is visited by the SR W by time
+τk. Then, Sτk ∈ D(Xk,τ 1/ 4−ε
+k ) and Xk is measurable with respect to Fτk .
+We next show that the events
+Mk = {V (n) ≥ n1/ 2− 6ε for some τk ≤ n ≤ 2τk},(7.7)
+are such that for some ﬁnite k0,
+P(Mk) ≥ 1
+6 ∀k ≥ k0.(7.8)
+PAGE 24
+24 A. DEMBO, Y. PERES AND J. ROSEN
+To this end, let θ(i) denote the shift of the SR W by i, that is, consider-
+ing {Sn+i} instead of {Sn}, and let T (k)(A) denote the ﬁrst hitting time of
+a set A ∈ Z2 by the shifted random walk S(k)
+n :=Sn ◦θ(τk). Consider the
+stopping times σk :=T (k)(D(Xk,τ 1/ 4− 2ε
+k )) with respect to the canonical ﬁl-
+tration of the shifted walk ( S(k)
+i ,i ≥ 0). Note that S(k)
+0 =Sτk ∈ D(Xk,ρ 1− 4ε
+k )
+forρk =τ1/ 4
+k , whereas σk = inf{i ≥ 0 :S(k)
+i ∈ D(Xk,ρ 1− 8ε
+k )} andρk ≥ k1/ 4 by
+the deﬁnition of τk. Therefore, by the strong Markov property of the SR W
+at the stopping time τk and considering the worst possible choice of ρk, Xk
+and Sτk , we have that for all k suﬃciently large,
+P(σk ≤ τk|Fτk ) ≥ inf
+R≥k1/ 4
+infx inf
+y∈D(x,R 1− 4ε )
+Py(TD(x,R 1− 8ε ) ≤ R4) ≥ 1
+3(7.9)
+(using Exercise 1.6.8 of [
+7] in the rightmost inequality). Similarly, for all k
+suﬃciently large, the events
+Vk := {T (k)(∂D (S(k)
+0 ,τ 1/ 4− 2ε
+k )) ≥ τ1/ 2− 5ε
+k },
+are such that
+P(Vk ◦θ(σk)|Fτk ) ≥ inf
+R≥k1/ 4
+P(τ(R1− 8ε) ≥ R2(1− 8ε)− 4ε) ≥ 5
+6.
+The lower bound ( 7.8) then follows from the inclusion
+{σk ≤ τk} ∩ {Vk ◦θ(σk)} ⊆ M k.(7.10)
+To see this inclusion, note that Sτk+σ k ∈ D(Xk,τ 1/ 4− 2ε
+k ) and the event Vk ◦
+θ(σk) guarantees that it takes S(k)
+σ k+i =Sσ k+τk+i at least τ1/ 2− 5ε
+k steps to
+travel a distance of τ1/ 4− 2ε
+k from its position at i = 0, a fortiori before exiting
+the disc D(Xk,τ 1/ 4−ε
+k ), all the sites of which have been previously visited
+by the SR W. Consequently, if also σk ≤ τk, then
+V (τk +σk) ≥ τ1/ 2− 5ε
+k ≥ (τk +σk)1/ 2− 6ε,
+hence Mk holds as well.
+Since τk are a.s. ﬁnite we can ﬁnd a deterministic function ψ (k) such
+that P(τk>ψ (k)) ≤ 1/ 18 for all k. Then, by (
+7.8) the events Ik := Mk ∩
+{k ≤ τk ≤ ψ (k)} are such that P(Ik) ≥ 1/ 9 for all k ≥ k0. With Px(Ik)
+independent of x, we see by the Markov property of the SR W that for any
+m,
+P(Ik ◦θ(m) | Fm) = PSm(Ik) = P(Ik) ≥ 1
+9 a.s. ∀k ≥ k0.(7.11)
+Deﬁne inductively the nonrandom t1 =k0 andtj =tj− 1 + 3ψ (tj− 1) for j ≥ 2.
+Then, by (
+7.11)
+∞∑
+j=2
+P(Itj ◦θ(tj)) = ∞ .(7.12)
+PAGE 25
+LARGE COVERED DISCS FOR RANDOM W ALKS 25
+With Ik ∈ F 3ψ (k), it follows that Itj ◦θ(tj) ∈ F tj +3ψ (tj ) = Ftj+1 . Conse-
+quently, by the Markov property and the fact, mentioned abov e, that Px(Ik)
+is independent of x, the events {Itj ◦θ(tj);j ≥ 2} are mutually independent.
+Therefore, by ( 7.12) and the second Borel–Cantelli lemma, with probability
+one, inﬁnitely many of them occur. It follows from ( 7.7) that Ik ◦θ(k) readily
+implies that V (n +k) ≥ n1/ 2− 6ε for some n ≥ k. Thus, with tj ↑ ∞ , clearly
+(7.5) follows.
+Acknowledgments. We are grateful to Zhan Shi and Ofer Zeitouni for
+useful discussions, and to Olivier Daviaud, J. Ben Hough and the associate
+editor for suggestions that led to improvement of this manus cript.
+REFERENCES
+[1] Daviaud, O. (2006). Extremes of the discrete two-dimensional Gaussian free ﬁeld.
+Ann. Probab. 34 962–982. MR2243875
+[2] Dembo, A., Peres, Y., Rosen, J. and Zeitouni, O. (2001). Thick points for planar
+Brownian motion and the Erd˝ os–Taylor conjecture on randomwalk. Acta Math.
+186 239–270. MR1846031
+[3] Dembo, A., Peres, Y., Rosen, J. and Zeitouni, O. (2004). Cover time for Brown-
+ian motion and random walks in two dimensions. Ann. of Math. (2) 160 433–464.
+MR2123929
+[4] Dembo, A., Peres, Y., Rosen, J. and Zeitouni, O. (2006). Late points for random
+walks in two dimensions. Ann. Probab. 34 219–263. MR2206347
+[5] Erd˝os, P. and R´ev´esz, P. (1991). Three problems on the random walk in Zd. Studia
+Sci. Math. Hungar. 26 309–320.
+MR1180496
+[6] Kahane, J.-P. (1985). Some Random Series of Functions , 2nd ed. Cambridge Univ.
+Press. MR0833073
+[7] Lawler, G. (1991). Intersections of Random Walks . Birkh¨ auser, Boston, MA.
+MR1117680
+[8] R´ev´esz, P. (1990). Random Walk in Random and Non-Random Environments .
+World Scientiﬁc, Teaneck, NJ.
+MR1082348
+[9] R´ev´esz, P. (1993). Clusters of a random walk in the plane. Ann. Probab. 21 318–328.MR1207228
+[10] Rosen, J. (2005). A random walk proof of the Erd˝ os–Taylor conjecture . Period.
+Math. Hungar. 50 223–245. MR2162811
+[11] Shi, Z. and Toth, B. (2000). Favourite sites of SR W. Period. Math. Hungar. 41
+237–249. MR1812809
+A. Dembo
+Departments of Mathematics
+and of Statistics
+Stanford University
+Stanford, California 94305
+USA
+E-mail:
+amir@math.stanford.edu
+Y. Peres
+Departments of Statistics
+and of Mathematics
+University of California at Berkeley
+Berkeley, California 94720
+USA
+E-mail:
+peres@stat.berkeley.edu
+PAGE 26
+26 A. DEMBO, Y. PERES AND J. ROSEN
+J. Rosen
+Department of Mathematics
+College of Staten Island, CUNY
+Staten Island, New York 10314
+USA
+E-mail:
+jrosen3@earthlink.net

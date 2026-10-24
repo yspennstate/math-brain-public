@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B03",
+  "run_id": "20260922T235100Z-account01-B03-QFORM-r19",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuity_full_target": "OPEN",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "fresh_control": {
+    "main_commit": "a882c01768a9d32952675332bbc594e6a397ca08",
+    "owner_revision": "2026-09-22.15",
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "88e357feba5fa5430f538193ddb16efc09ef910d",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260922T235100Z-account01-B03-QFORM-r19/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260922T235100Z-account01-B03-QFORM-r19/check_symbolic.py",
+    "checker_terminator": "QFORM_B03_UNNORMALIZED_SLICE_PASS"
+  },
+  "new_claim": {
+    "id": "QFORM-UNNORMALIZED-SLICE-CROSS-v1",
+    "statement": "For independent cap-one physical coordinates on two m-coordinate banks and an invertible physical cross block C, arbitrary same-bank quadratic and affine terms are allowed and |phi(t)|^2<=min(1,pi^m |t|^{-m}|det C|^{-1}). Hence for 0<alpha<m/2, H_alpha has the exact integrated bound in r19; at m=2, H_1/2<=4sqrt(2)|det C|^{-1/4}. After one genuine physical square pivot d, ||p_Q||inf<=4sqrt(2)|d|^{-1/2}|det C|^{-1/4}."
+  },
+  "mechanism": "Use the exact independent-copy identity with U=X-X', V=X+X'. Keep their dependent joint density unnormalized: F(u,v)=1/2 f((u+v)/2)f((v-u)/2). Its partial Fourier slice K has ||K||_2^2<=pi. Cauchy-Schwarz between two physical banks plus square changes of variables of determinant |t|^m|det C| gives the characteristic-function estimate. No conditional sum/difference cap is used.",
+  "partner_applied": {
+    "partner": "account02/B03",
+    "run_id": "20260922T231550Z-account02-B03-QFORM-r13",
+    "canonical_commit": "e9edee72f4272f7bc84c7a914f3a087f614f9c60",
+    "application": "Applied the partner overlap-one k=3 transducer to its Walsh A_t family, obtaining its t^{-1/6}-divergent bound, then applied the new r19 physical 2x2 endpoint to the same family to obtain the uniform bound 32sqrt(2)/33^(1/4)<18.882."
+  },
+  "structural_observation": "For the partner Walsh family, pivot 1 and residual pairs {2,3},{4,6} have det S=-(1-t)^2(1+t)/(4(5t+3)); the corresponding overlap-one 3x3 original minor equals -(1-t)^2(1+t)/32 and stays uniformly nonzero although the partner fourth-order overlap-one bank collapses.",
+  "failed_mechanism": "A naive three-coordinate equal-weight L2 Brascamp-Lieb closure of the unnormalized slice maps is singular for every symmetric 3x3 B because the three kernel generators sum to zero.",
+  "first_unpaid_implication": "Build an aggregate-before-inversion compiler for the natural third-compound mass sum_{|R|=|C|=3} det(A[R,C])^2=e_3(A^2)>=1, partitioned by intersection sizes q=0,1,2,3. The new r19 theorem locally pays q=1 atoms, but selecting one small atom can lose dimension; failure of q=1 aggregation should transfer quantitatively to an already-paid q=0, q=2, q=3, diffuse-Fresnel, ridge, or grouped-bank branch.",
+  "do_not_use": [
+    "law-uniform pointwise scalar quadratic-phase decay",
+    "conditional cap for X+X' given X-X' or conversely",
+    "arbitrary-joint rank-three coarea bound",
+    "positive conditional projection-density moments",
+    "universal single-Schur rank-two extraction",
+    "universal one-good-minor selection from aggregate compound mass"
+  ]
+}

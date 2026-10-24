@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "directive": "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z",
+  "campaign": "POS3",
+  "producer": {"account": "account03", "slot": "B10", "run_id": "account03-B10-20260922T001407Z-pos3-r11"},
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "parent_status": "OPEN_NOT_PROVED",
+  "assignment": "Apply bounded-width/high-variance results to the exact width-three target and derive the remaining exceptional-case requirement with constants/hypotheses explicit.",
+  "named_partner": "account04/B11",
+  "named_partner_status": "No source-bound collective-POS3 artifact was present in the accessible shared/scientific archive snapshot during this run; no fabricated consumption.",
+  "peer_artifacts_consumed": [
+    {
+      "producer": "account02/B11",
+      "repository": "yspennstate/math-open-problems",
+      "path": "proofnet24/collective-POS3/account02/B11/20260921T235736Z-b11-44e20585/REPORT.md",
+      "git_blob_sha1": "b71c5087c4982769946c31f1ec76242bf297fe17",
+      "use": "ordinal-sum factorization; minimal counterexample may be incomparability-connected"
+    },
+    {
+      "producer": "account01/B10",
+      "repository": "yspennstate/math-open-problems",
+      "path": "proofnet24/collective-POS3/account01/B10/20260921T235306Z-account01-B10/REPORT.md",
+      "git_blob_sha1": "3a0d4e63665646adc853bb48192eba0f81629a15",
+      "use": "exact three-chain path flux and >E/3 majority-gap heavy-slice normal form"
+    }
+  ],
+  "scientific_delivery": {
+    "repository": "yspennstate/math-open-problems",
+    "branch": "master",
+    "path": "proofnet24/collective-POS3/account03/B10/account03-B10-20260922T001407Z-pos3-r11/REPORT.md",
+    "commit": "a17c424f497e0adbd4307e5e556d40087fdf39b1",
+    "git_blob_sha1": "388ac28e375df4e7a49f72ffbf540f362e03696e"
+  },
+  "new_result": {
+    "name": "pinned majority-rank atom lemma",
+    "statement": "In any width-at-most-three counterexample, for every x the uniform linear-extension probability that x occupies its rank in the common transitive strong-majority order is at least 3^-9=1/19683.",
+    "source_input": "Aires-Kahn arXiv:2510.26134 Theorem 2.6 plus Shepp XYZ for one-sided boundary cases",
+    "flux_transfer": "For every fixed three-chain cover and x, the joint insertion cell at the two strong-majority gaps satisfies W_x(g_b(x),g_c(x)) >= e(P)/19683.",
+    "validation_change": "The prior exceptional core had only >E/3 prescribed marginal heavy slices. This run adds a forced positive joint atom at their common majority-rank intersection for every element, with explicit constant 1/19683."
+  },
+  "updated_exceptional_core": [
+    "width exactly three",
+    "at least 15 elements",
+    "connected incomparability graph",
+    "at least five maximal strong-majority blocks",
+    "every relevant majority-gap marginal > E/3",
+    "every element's joint majority-gap cell >= E/19683"
+  ],
+  "next_obligation": "Combine signed flux conservation across consecutive boundaries of the common strong-majority order with the >E/3 heavy marginals and >=E/19683 central atoms; either derive a contradiction in connected width three with at least five blocks or construct a genuine poset realizing the full system and identify the missing invariant.",
+  "privacy": "No benchmark gold/answers/keys, FEI proof material, credentials, scheduler identifiers, machine paths, unrelated private transcripts, email, Drive, paid API/model/Codex, remote workflow or public release."
+}

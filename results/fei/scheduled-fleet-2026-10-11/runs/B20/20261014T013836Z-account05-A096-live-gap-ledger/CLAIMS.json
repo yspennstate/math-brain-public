@@ -1,0 +1,96 @@
+[
+  {
+    "claim_id": "A096-TERMINAL-KL-REFUND-AUDIT",
+    "version": 1,
+    "exact_statement": "For every finite Boolean seed f, every m,k>=1 and ell>=2 on disjoint uniform blocks, let h=chi_Z product_b f_b, J=mI(f)+ell, F=1+A_k(h-1), q=2^-k, d=(1-q)^2+q^2. For each relevant coordinate use mu_i(T)=p_(T+i)/Inf_i and r_i(T)=p_T+p_(T+i); both normalize to one. Let M=sum_i Inf_i[log2(1/Inf_i)-D(mu_i||r_i)] and D_f be the KL divergence of the normalized joint derivative/reference laws, with I(f)D_f=0 for constants. Original core-coordinate divergences obey D_i(F)=D_i(h)+k, D_i(h)=D_i(f) on seed blocks and D_i(h)=0 on parity bits. Every control divergence is D_c=(1-q)(k-1)+q log2(q/d). Consequently I(F)=q(J+k), I(F)D_F=q[mI(f)D_f+kJ+kD_c], M(F)=qmM(f)+k[q(1-q)+q^2 log2(d/q^2)], and M_ge2(F)=qmM(f)+kq(1-kq). For every fixed ell>=2 and finite nonnegative s(N)=o(N), the supremum of M_geell/I over 0<I<=2^-s(N) equals the unrestricted supremum K_M in the extended reals. No finiteness of K_M, universal refund payment or full FEI conclusion is asserted.",
+    "hypotheses": [
+      "Actual Boolean signs, normalized Fourier spectrum and ordinary physical influence",
+      "Uniform finite disjoint blocks; m,k>=1 and ell>=2; entropy/KL in bits",
+      "Zero terms by continuity; irrelevant coordinates omitted; constants treated by I D=0 convention",
+      "Sublinear cutoff finite nonnegative, not required monotone"
+    ],
+    "statement_sha256": "cb4a8a64144952a20f8810bc491b7a4202ec07d7381b7f8e361484fd3dfcbfce",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261013T220343Z-account05-A096-live-gap-ledger\\DERIVATION.md",
+      "locator": "Equations (2)-(6) and low-influence refund completeness"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A073",
+        "timestamp": "2026-10-13T23:51:48.476724+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent complete probability-channel/likelihood-ratio reconstruction and cutoff proof; direct normalized joint Q construction, truth-table Walsh and physical edge verification, prime-log cancellation; support-conditioning mutation",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261013T234148Z-account05-A073-certified-logarithms\\REFUND_REVIEW.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261013T234148Z-account05-A073-certified-logarithms\\out\\REFUND_SUMMARY.json",
+        "scope": "All stated finite transport formulas and sublinear-cutoff equality in extended reals; no finite K_M or universal payment",
+        "reviewer_contributed_repair": false
+      },
+      {
+        "reviewer": "A001/account05",
+        "verdict": "ACCEPT_AT_FULL_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "scope": "Every finite Boolean seed including constants; finite tensor/parity/point activation, complete row and joint KL, all listed finite formulas, every fixed ell>=2 and finite nonnegative sublinear cutoff including nonmonotone cutoffs. No universal payment theorem accepted.",
+        "method": "Independent complete-row likelihood-ratio and KL chain reconstruction; separately implemented direct physical flips/integer Walsh and exact prime-log identity checker; explicit cutoff-tail quantifier proof",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261014T011101Z-account05-A001-quantifier-audit\\REPORT.md",
+        "locator": "complete derivation section 1",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261014T011101Z-account05-A001-quantifier-audit\\out\\REVIEW.json",
+        "source_statement_sha256": "cb4a8a64144952a20f8810bc491b7a4202ec07d7381b7f8e361484fd3dfcbfce",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_FULL_STATED_SCOPE_BY_A073_AND_A001_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Activation rarity cancellation alone supplies a universal terminal-core retained-KL payment"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A001",
+      "A073",
+      "A090",
+      "A098",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-SINGLE-SPECTATOR-REFUND-OWNERSHIP",
+    "version": 1,
+    "exact_statement": "For every finite uniform-cube Boolean sign f with masses p_S and influences e_i, let F_J replace each physical coordinate i in J by a disjoint pair parity u_i v_i. Then H(F_J)=H(f), I(F_J)=I(f)+sum_J e_i and M(F_J)=M(f)-sum_J M_i(f), where M_i=e_i[log2(1/e_i)-D(mu_i||r_i)] with complete normalized row laws mu_i(T)=p_(T+i)/e_i,r_i(T)=p_T+p_(T+i). Each duplicated row u_i or v_i has zero M and zero erasure. Marginalizing only its partner occupancy loses exactly M_i(f) of influence-weighted KL. In contrast retaining only that partner gives laws mu=(0,1),r=(1-e_i,e_i), preserves the complete KL log2(1/e_i) and loses zero refund. Independent common spectator factors can be discarded with zero loss in this binary quotient. All-pair deletion loss divided by total physical influence equals M(f)/I(f) if J is all coordinates. For every even d>=2 an actual witness G(u,v,y)=g(uv,y), g(s,y)=b(y)-1_{y=0}+s 1_{y=0}, b(y)=(-1)^(sum_j y_(2j-1)y_(2j)), has Inf_u=Inf_v=delta=2^-d, I(G)=d/2+(d+2)delta, H(G)/I(G)<=3, and each partner-deletion loss lies in [delta(d-1),delta d]. The reference partner and core are genuinely correlated. Thus no fixed local influence allowance using only the queried/erased pair pays this loss, even though the opposite binary quotient retains it exactly. No universal terminal-core payment or FEI disproof is asserted.",
+    "hypotheses": [
+      "Actual finite Boolean signs on the uniform physical cube; bits and ordinary flip influence",
+      "Disjoint two-bit parity substitutions, with no assertion of influence invariance under general linear changes",
+      "Complete reference probabilities retained, including derivative-free mass; irrelevant rows omitted",
+      "Bent witness even d>=2; y uses 0/1 labels of the uniform cube"
+    ],
+    "statement_sha256": "b1fdd3c722b48b9315633eaf31719222d0612f0a5fb4be763df2879c1a455fc9",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261014T013836Z-account05-A096-live-gap-ledger\\DERIVATION.md",
+      "locator": "Sections 2-4, equations (2)-(7) and binary repair",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261014T013836Z-account05-A096-live-gap-ledger\\out\\CHECK.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SCOPED_CONDITIONAL_REFERENCE_AUDIT_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "For all actual Boolean rows, deleting a single physical spectator has KL refund loss <=K(Inf_query+Inf_spectator) for one finite absolute K"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A001",
+      "A073",
+      "A090",
+      "A085",
+      "A099",
+      "A097",
+      "B20"
+    ]
+  }
+]

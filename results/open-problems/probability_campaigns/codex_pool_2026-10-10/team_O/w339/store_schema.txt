@@ -1,0 +1,151 @@
+schema_meta
+CREATE TABLE schema_meta (
+    version INTEGER PRIMARY KEY,
+    applied_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+
+bundle_manifests
+CREATE TABLE bundle_manifests (
+    id TEXT PRIMARY KEY,
+    digest TEXT NOT NULL UNIQUE,
+    release_digest TEXT NOT NULL,
+    payload_json TEXT NOT NULL,
+    created_at TEXT NOT NULL
+)
+
+nodes
+CREATE TABLE nodes (
+    id TEXT PRIMARY KEY,
+    kind TEXT NOT NULL,
+    title TEXT NOT NULL,
+    body TEXT NOT NULL,
+    metadata_json TEXT NOT NULL,
+    digest TEXT NOT NULL UNIQUE,
+    created_at TEXT NOT NULL
+)
+
+claims
+CREATE TABLE claims (
+    id TEXT PRIMARY KEY REFERENCES nodes(id),
+    payload_json TEXT NOT NULL,
+    digest TEXT NOT NULL UNIQUE,
+    created_at TEXT NOT NULL
+)
+
+evidence
+CREATE TABLE evidence (
+    id TEXT PRIMARY KEY REFERENCES nodes(id),
+    claim_id TEXT NOT NULL REFERENCES claims(id),
+    payload_json TEXT NOT NULL,
+    digest TEXT NOT NULL UNIQUE,
+    created_at TEXT NOT NULL
+)
+
+evidence_attestations
+CREATE TABLE evidence_attestations (
+    evidence_id TEXT PRIMARY KEY REFERENCES evidence(id),
+    claim_id TEXT NOT NULL REFERENCES claims(id),
+    nonce TEXT NOT NULL UNIQUE,
+    payload_json TEXT NOT NULL,
+    digest TEXT NOT NULL UNIQUE,
+    created_at TEXT NOT NULL
+)
+
+evidence_receipts
+CREATE TABLE evidence_receipts (
+    evidence_id TEXT PRIMARY KEY REFERENCES evidence(id),
+    claim_id TEXT NOT NULL REFERENCES claims(id),
+    nonce TEXT NOT NULL UNIQUE,
+    payload_json TEXT NOT NULL,
+    digest TEXT NOT NULL UNIQUE,
+    created_at TEXT NOT NULL
+)
+
+mistakes
+CREATE TABLE mistakes (
+    id TEXT PRIMARY KEY REFERENCES nodes(id),
+    claim_id TEXT NOT NULL REFERENCES claims(id),
+    payload_json TEXT NOT NULL,
+    digest TEXT NOT NULL UNIQUE,
+    created_at TEXT NOT NULL
+)
+
+reflexes
+CREATE TABLE reflexes (
+    id TEXT PRIMARY KEY REFERENCES nodes(id),
+    payload_json TEXT NOT NULL,
+    digest TEXT NOT NULL UNIQUE,
+    created_at TEXT NOT NULL
+)
+
+reflex_sources
+CREATE TABLE reflex_sources (
+    reflex_id TEXT NOT NULL REFERENCES reflexes(id),
+    mistake_id TEXT NOT NULL REFERENCES mistakes(id),
+    PRIMARY KEY(reflex_id, mistake_id)
+)
+
+verification_events
+CREATE TABLE verification_events (
+    id TEXT PRIMARY KEY,
+    claim_id TEXT NOT NULL REFERENCES claims(id),
+    payload_json TEXT NOT NULL,
+    digest TEXT NOT NULL UNIQUE,
+    created_at TEXT NOT NULL
+)
+
+verification_event_evidence
+CREATE TABLE verification_event_evidence (
+    event_id TEXT NOT NULL REFERENCES verification_events(id),
+    evidence_id TEXT NOT NULL REFERENCES evidence_receipts(evidence_id),
+    ordinal INTEGER NOT NULL CHECK(ordinal >= 0),
+    PRIMARY KEY(event_id, evidence_id),
+    UNIQUE(event_id, ordinal)
+)
+
+edges
+CREATE TABLE edges (
+    id TEXT PRIMARY KEY,
+    source_id TEXT NOT NULL REFERENCES nodes(id),
+    target_id TEXT NOT NULL REFERENCES nodes(id),
+    kind TEXT NOT NULL,
+    rationale TEXT NOT NULL,
+    weight REAL NOT NULL CHECK(weight > 0 AND weight <= 1),
+    metadata_json TEXT NOT NULL,
+    digest TEXT NOT NULL UNIQUE,
+    created_at TEXT NOT NULL,
+    UNIQUE(source_id, target_id, kind)
+)
+
+bundle_members
+CREATE TABLE bundle_members (
+    bundle_id TEXT NOT NULL REFERENCES bundle_manifests(id),
+    entry_key TEXT NOT NULL,
+    node_id TEXT NOT NULL REFERENCES nodes(id),
+    PRIMARY KEY(bundle_id, entry_key),
+    UNIQUE(bundle_id, node_id)
+)
+
+claim_provenance
+CREATE TABLE claim_provenance (
+    claim_id       TEXT PRIMARY KEY,
+    evidence_class TEXT NOT NULL,
+    source_kind    TEXT NOT NULL DEFAULT '',
+    source_ref     TEXT NOT NULL DEFAULT '',
+    artifact_path  TEXT NOT NULL DEFAULT '',
+    bundle_id      TEXT NOT NULL DEFAULT '',
+    fire_id        TEXT NOT NULL DEFAULT '',
+    measurement    TEXT NOT NULL DEFAULT '',
+    status         TEXT NOT NULL DEFAULT '',
+    read_from      TEXT NOT NULL DEFAULT '[]',
+    recorded_at    TEXT NOT NULL
+)
+
+edge_retractions
+CREATE TABLE edge_retractions (
+    edge_id TEXT PRIMARY KEY REFERENCES edges(id),
+    reason TEXT NOT NULL,
+    metadata_json TEXT NOT NULL,
+    digest TEXT NOT NULL UNIQUE,
+    created_at TEXT NOT NULL
+)

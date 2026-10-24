@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "account": "account04",
+  "slot": "B16",
+  "run_id": "20260921T201329Z-account04-B16-fei-signed-transport-r13",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "scientific_base_commit": "b14ac1bc289df3f1e72ef8e0c2ce14d5bde313a9",
+  "joint_order": "FEI-JOINT-FOUR-ACCOUNTS-2026-09-21-192650Z",
+  "cross_account_dependencies": [
+    "account01/B16/20260921T190712Z-clone-pair-resolvent-transfer",
+    "account02/B16/20260921T193735Z-codimension-normalization-parent-bridge",
+    "account03/B16/20260921T185632Z-integrated-phase-switch-logarithmic-bridge",
+    "account03/B18/20260921T185340Z-signed-flag-curvature"
+  ],
+  "proved": [
+    "P03-B16-TRIPLE-FRUSTRATION-SELECTOR: Delta_f Delta_h0 Delta_h1 P_H = -(1/2) E[Q_H(1-Q_h0)(1-Q_h1)(1-Q_f)]",
+    "P03-B16-TRIPLE-PHASE-DOUBLE-RESOLVENT: for authentic codim>=2 parent, E|triple current| <= 8 st(1-st) J(g) and integrated inverse-noise cost <= 15/8 J(g)",
+    "Affine-character phases annihilate the triple physical current exactly"
+  ],
+  "conditional_only": [
+    "If the live signed/PSD source interpolation maps each authentic precompression triple dual-code atom to the matching physical triple-frustration operator without terminal ledger reuse, then the plaquette component costs at most (15/8) sum_j mu_j J(g_j) <= (15/8) E_cen"
+  ],
+  "preserved_unpaid": [
+    "terminal mixed difference Delta_uv R_d",
+    "finite live-Borel signed/PSD source-to-physical interpolation",
+    "R16 moment refunds",
+    "negative R32 entropy credits",
+    "terminal-band payment"
+  ],
+  "killed_or_not_retried": [
+    "scalar-parent positive/TV plaquette inversion after compression",
+    "unsigned support-only replacement",
+    "termwise absolute value before quadratic/distance-four cancellation",
+    "full-line endpoint as a substitute for finite live-window control"
+  ],
+  "counterexample_scope": "For arbitrary dummy-dependent phase at parent codimension one, triple current can have magnitude 4 while parent J=0. This is not an FEI counterexample and authentic noncharacter ordered-min parents used here have codimension at least two.",
+  "canonical_checker": {
+    "path": "check_b16_triple_frustration_v3.py",
+    "git_blob_sha1": "1322df5ae2dd97aee1428365f7bab8106850cb8b",
+    "local_sha256": "bca909f9368a3a51cd4028be49a51690b412a06debac4f09e0c9d71ead01cbb5",
+    "py_compile": "PASS",
+    "execution": "PASS",
+    "identity_checks": 2500,
+    "support_checks": 2500,
+    "noise_checks": 1024,
+    "affine_zero_checks": 2048,
+    "worst_noise_ratio": "313/384",
+    "integrated_envelope_constant": "15/8"
+  },
+  "verification": {
+    "path": "verification_v3.txt",
+    "git_blob_sha1": "e41f7e4bda24cf109bd3f7e7d2b5629d5626f3ff",
+    "local_sha256": "b7a44cfa59f04be0b95321206eaa02a395a14256ba427450f176057c8bed238a"
+  },
+  "report": {
+    "path": "REPORT.md",
+    "git_blob_sha1": "06cbd565fde5aa8bf445b5c4fc93cd434b6641f6",
+    "local_sha256": "79e836875aed5ccaed538daa5e646633def1f37afc262145d997ddef0efa4d6f"
+  },
+  "delivery_note": "Two earlier remote checker drafts in this directory contain a delivery-time variable-name typo in only their final codimension-one diagnostic. They are preserved. The analytically proved theorem is unchanged; check_b16_triple_frustration_v3.py is the canonical executed/read-back checker.",
+  "next": "Apply the account03 exact finite-window cosine-integral kernel after the local triple phase difference and test conditional positivity/PSD contraction on the ordered physical flag while keeping C0-Dd terminal subtraction signed."
+}

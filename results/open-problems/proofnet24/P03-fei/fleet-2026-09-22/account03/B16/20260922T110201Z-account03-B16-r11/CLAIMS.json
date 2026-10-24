@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T110201Z-account03-B16-r11",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "P03-B16-LOG-WALSH-FLOW-v1",
+      "status": "PROVED_IN_THIS_RUN",
+      "scope": "finite probability laws P<<Q; exact support handled by epsilon regularization and limit",
+      "statement": "The exponential bridge rho_t proportional to P^(1-t)Q^t with current J_t(s,u)=ln(2) rho_t(s)rho_t(u)(L(s)-L(u)) satisfies atomwise continuity and has weighted Dirichlet action exactly D_KL,2(P||Q).",
+      "report_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "ac5309bce84a10c100653bad87edbf6e6d64046d",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B16/20260922T110201Z-account03-B16-r11/REPORT.md",
+        "section": "1. PROVED — canonical logarithmic cancellation flow"
+      },
+      "verification": "analytic proof plus executed CHECK.py"
+    },
+    {
+      "claim_id": "P03-B16-WALSH-LATERAL-COMMON-SIGN-v1",
+      "status": "PROVED_IN_THIS_RUN",
+      "scope": "uniform Walsh lattice for convolution identity; entropy flow itself remains valid for arbitrary finite spectral laws",
+      "statement": "The complete-graph action partitions without reuse over unique XOR translations U=S triangle T; common source signs define an antisymmetric signed current with gauge-covariant atomwise conservation, and the t=0 signed amplitudes obey the full Boolean convolution identity C_0(U)=1_{U=empty}. No unweighted convolution L2 payment is used.",
+      "report_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "ac5309bce84a10c100653bad87edbf6e6d64046d",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B16/20260922T110201Z-account03-B16-r11/REPORT.md",
+        "section": "2. PROVED — full Walsh-lattice decomposition and common-source signs"
+      },
+      "verification": "analytic proof; exhaustive n=3 Boolean convolution checker"
+    },
+    {
+      "claim_id": "P03-B16-IPROJ-ONE-USE-FLOW-LEDGER-v1",
+      "status": "PROVED_IN_THIS_RUN_USING_SOURCE_PREMISES",
+      "scope": "actual Boolean spectral law and its exact influence I-projection Q_r",
+      "statement": "For the full spectral laws with the same constant atom, the flow action equals v K_occ exactly. Under the source Pythagorean split, this is disjoint from v D(Q_r||nu_Gamma). Account04/B16's all-constraint Boolean projection applies to the same endpoint and gives A_log >= -2 log2 E|B_Qr|, which is a sink of the same credit rather than an additional credit.",
+      "dependencies": [
+        {
+          "mode": "premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "3b546dc77811cf4c9a5f3fbac36e834b0f236bd6",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "result": "exact conditional-product I-projection and KL Pythagorean split"
+        },
+        {
+          "mode": "premise_and_application",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "3b546dc77811cf4c9a5f3fbac36e834b0f236bd6",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account04/B16/20260922T094238Z-all-constraint-boolean-projection/REPORT.md",
+          "result": "B16-ALL-CONSTRAINT-BOOLEAN-PROJECTION"
+        }
+      ],
+      "report_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "ac5309bce84a10c100653bad87edbf6e6d64046d",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B16/20260922T110201Z-account03-B16-r11/REPORT.md",
+        "section": "3-4"
+      }
+    },
+    {
+      "claim_id": "P03-B16-REMAINING-PRIME-PAYMENT-v1",
+      "status": "OPEN",
+      "scope": "full FEI prime gate/bias region for any genuinely live candidate",
+      "statement": "Prove A_log(G,p)+v B_inf^Gamma(G,p)>=0, equivalently pay the remaining negative influence-Bellman term from the exact log-weighted all-level action without double-counting K_occ or its physical Boolean-projection lower bound.",
+      "next_recipient": "account01/B15"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account03",
+  "slot": "B20",
+  "run_id": "20260922T154341Z-account03-B20-QFORM-r12",
+  "brain_source_commit_at_final_refresh": "fc1ce39df9220d4c90d43d68cf668e7f3f28f4f5",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "eb7976d14c75a2a5945e03c6b947774e26fdebcb",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B20/20260922T154341Z-account03-B20-QFORM-r12/",
+  "result_id": "QFORM-CONDITIONED-SPECTRAL-WINDOW-LOCALIZATION-v1",
+  "result_status": "PROVED_IN_STATED_SCOPE",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "PROVED_IN_THIS_BRANCH_ONLY",
+  "new_math": [
+    "If the |A|>=1/64 high-window frame retains Gram floor delta>=1/2 after conditioning original-coordinate set H and the whitened residual leverage is <=1/32, then Q has a continuous density with norm <=96*sqrt(3e/2)<194.",
+    "For H_*={i:P_ii>1/64}, any unresolved counterexample must have ||U_H*^T U_H*||op>1/2."
+  ],
+  "assigned_partner": {
+    "slot": "account04/B20",
+    "result_commit": "94bf446b8547b1124a37033e940ef594c460b64f",
+    "application": "Used the proved conditioning/whitening identity V=U_R S^{-1/2} and exact residual leverage u_i^T S^{-1}u_i at the heavy-window inequality; then spliced to the one-scale ridge theorem to retain arbitrary low spectral tails."
+  },
+  "source_inputs": [
+    "yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7: QFORM ridge/spectral-window theorem",
+    "yspennstate/math-open-problems@94bf446b8547b1124a37033e940ef594c460b64f: account04/B20 conditioned-whitened theorem",
+    "yspennstate/math-open-problems@143e97c42cdbccb14fe847efb6abd3f6c3d349dc: account03/B19 low-offdiagonal-rank residual"
+  ],
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "first_unproved_step": "QFORM-HEAVY-WINDOW-AGGREGATE-SPLICE-v1: exploit >1/2 spectral mass on coordinates with high-window leverage >1/64 together with the low-stable-rank residual to extract a product-preserving aggregate/hyperbolic-square branch or force an already controlled physical branch.",
+  "brain_ingestion": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

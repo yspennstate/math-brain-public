@@ -1,0 +1,113 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T223500Z-claude-B13-logcharge-sandwich",
+ "stream": "B13",
+ "packet_id": "A061",
+ "gap_id": "G-R-MISMATCH",
+ "attempt_id": "B13-lead-logcharge-sandwich-1",
+ "method": "Exact ledger algebra for one fair query (D=B+J, lambda KL form), Maassen-Uffink per Fourier pair, telescoping and influence conservation on adaptive trees; exhaustive float64 n<=4 sweep with closed-form maxima under mpmath intervals; B05 k=4 complete trees with the minimal nonnegative potential per rule",
+ "mathematical_delta": "Log charge lambda_i=d_i[log2(1/d_i)-KL(nu_i||q_i)]; J_i<=B_i (so D_i<=2B_i, half-entropy barrier in ledger form); sandwich H-(3/ln2)I<=E sum lambda<=H on every complete tree; K* in [C*, C*+min(2/ln2,C*)] so FEI is a one-coordinate certificate; whole-path expected debt is rule-independent, so falsifiers must target the minimal potential Q*; B05 k=4: Q*_root/I<=0.0126 at C=6.5218 for every rule tested, 0 for five of seven.",
+ "deliverable_status": "MATHEMATICS_COMPLETE_REPORT_MD_SAVE_BLOCKED",
+ "mathematical_status": "FIVE_LEMMAS_AUTHOR_PROVED; N4_CONSTANTS_EXHAUSTIVE_FLOAT64; B05_POTENTIAL_EVIDENCE; FULL_FEI_OPEN; G-R-MISMATCH_OPEN",
+ "claim_versions_used": [
+  {
+   "claim_id": "A061-FAIR-TREE-PROCESS",
+   "version": 1,
+   "use": "re-derived; holds"
+  },
+  {
+   "claim_id": "A061-LOG-COMPENSATION",
+   "version": 1,
+   "use": "re-derived; holds; J<=2d/ln2 used in the sandwich"
+  },
+  {
+   "claim_id": "A062-INFLUENCE-STOPPING-INTERFACE",
+   "version": 1,
+   "use": "re-derived; holds; conservation used in the sandwich"
+  },
+  {
+   "claim_id": "A062-BOOLEAN-DIMENSION-LIMIT-OBSTRUCTION",
+   "version": 1,
+   "use": "recomputed I(F_k) and terminal expectations; holds; not a dependency"
+  },
+  {
+   "claim_id": "A063-QUERY-COARSENING-REFUND-AND-HALF-ENTROPY-BARRIER",
+   "version": 1,
+   "use": "singleton consequence J<=B and the ledger half-entropy barrier proved independently; block refund and order witness not checked"
+  },
+  {
+   "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+   "version": 1,
+   "use": "family definition for the potential test; scope obstruction only"
+  }
+ ],
+ "claims_created_or_changed": [
+  {
+   "claim_id": "B13-LOGCHARGE-KL-FORM",
+   "version": 1
+  },
+  {
+   "claim_id": "B13-J-LE-B-UNCERTAINTY",
+   "version": 1
+  },
+  {
+   "claim_id": "B13-LOGCHARGE-SANDWICH",
+   "version": 1
+  },
+  {
+   "claim_id": "B13-ONE-COORDINATE-CERTIFICATE",
+   "version": 1
+  },
+  {
+   "claim_id": "B13-DEBT-FALSIFICATION-PRINCIPLE",
+   "version": 1
+  },
+  {
+   "claim_id": "B13-N4-CONSTANTS",
+   "version": 1
+  },
+  {
+   "claim_id": "B13-B05-LOCAL-POTENTIAL",
+   "version": 1
+  }
+ ],
+ "source_artifacts": [
+  "CLAIMS.json",
+  "FROZEN_SPEC.json",
+  "code/sandwich_all.py",
+  "code/certify_n4.py",
+  "code/check_JB.py",
+  "code/b05_trees.py",
+  "code/write_records.py",
+  "out/sandwich_all_results.json",
+  "out/sandwich_all_stdout.txt",
+  "out/certify_n4.json",
+  "out/check_JB.json",
+  "out/b05_trees_results.json",
+  "out/b05_trees_stdout.txt",
+  "code/break_JB.py",
+  "out/break_JB.json",
+  "RECEIPTS.json"
+ ],
+ "next_consumers": [
+  "A064",
+  "A065",
+  "A063",
+  "A087",
+  "A094",
+  "B05",
+  "B20"
+ ],
+ "next_action": "Compute min_i D_i/d_i in closed form for point functions, AND-of-bent splices and the B05 family as k grows, and either prove min_i D_i/d_i <= 5 on all of them or exhibit growth; reviewer A087 (A094 second).",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "REPORT.md, LEARNED.md entry and .final not written: the Claude subagent harness refused report-file writes (Subagents should return findings as text). The complete report (seven protocol fields and the Universal bridge paragraph) is in this run's StructuredOutput to the coordinator claude-2d8060eb; .final is withheld so no consumer treats the run as having a REPORT.md.",
+  "One-coordinate certificate (FEI up to 2/ln 2) unproved beyond n=4."
+ ],
+ "packet_ids": [
+  "A061",
+  "A063",
+  "A064",
+  "A065"
+ ]
+}

@@ -1,0 +1,114 @@
+\section{Architectures}\label{sec:arch}
+
+The master theorem was stated for a generic feedforward network; here we verify the two structural
+hypotheses it uses --- the uniform gain bracket and the gradient lower bound with stability --- for
+convolutional, residual, and transformer networks. In each case the point is that the input--output
+Jacobian is again a product of gated Gaussian blocks, possibly structured, to which the estimates of
+\Cref{sec:gains} apply, and that the biases and the choice of $[0,1]$-slope activation change only the
+gate densities.
+
+\subsection{Convolutional networks}
+A convolutional layer applies a Gaussian filter bank followed by a gate. With $c$ channels and spatial
+size $s$ the layer acts on $\R^{cs}$ by a block matrix whose blocks are (multichannel) circulant or
+Toeplitz Gaussian matrices; the gate keeps the active pixel-channels. The Jacobian is therefore a
+product of gated structured-Gaussian blocks.
+
+\begin{theorem}[Convolutional fragility]\label{thm:cnn}
+Let $F$ be a convolutional network with independent Gaussian filters, arbitrary biases, and any
+$[0,1]$-slope activation, in the wide regime $d\log(cs)=o(cs)$ (effective width $cs$). Then the
+conclusions of \Cref{thm:master} and \Cref{thm:certificate} hold: w.h.p.\ simultaneously for every
+input a single gradient step of length $O(\|x\|\sqrt{(d\log cs)/(cs)})$ crosses the boundary, and every
+input has a certified radius of the same order.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Two ingredients change relative to the fully connected case. First, the operator-norm bracket of
+\Cref{prop:A2} must be applied to structured Gaussian blocks; the upper bound survives because the
+circulant/Toeplitz structure only decreases the operator norm relative to a full Gaussian of the same
+variance (the filter has $O(1)$ taps), and the lower bound survives because a fixed input direction is
+mapped to a Gaussian vector whose top/bottom pixel-channels carry $\kappa,\kcheck$ of its mass as
+before. Second, the gradient lower bound uses the nondegeneracy recursion of \Cref{prop:gradlb}
+channelwise; this is exactly the content of \cite{danielyM26} for $C^2$ activations, and the
+$[0,1]$-slope extension is by the convex-hull reduction of \Cref{lem:hull}. We do not use any Fourier
+diagonalization of the nonlinear network --- only operator-norm bounds, which the frequency structure of
+convolutions makes no worse --- so the barrier of \cite[Rem 10.2]{advExt} does not obstruct the argument.
+The stability lemma \Cref{thm:stability} applies verbatim, with the anticoncentration of the
+pixel-channel preactivations replacing that of the fully connected preactivations.
+\end{proof}
+
+\subsection{Residual networks}
+A fixed-depth residual network has blocks $h_\ell=h_{\ell-1}+t^{-1/2}\sigma(\Lambda_\ell h_{\ell-1})$
+with Gaussian $\Lambda_\ell$ and the standard residual scaling. Its block Jacobian is
+$A_\ell=I+t^{-1/2}D_\ell\Lambda_\ell$, a gated near-identity, and the product $\prod_\ell A_\ell$ has
+least and largest singular values pinched around $1$.
+
+\begin{theorem}[Residual fragility, ReLU and general slopes]\label{thm:resnet}
+Let $F$ be a fixed-depth residual network with $t$ blocks, Gaussian $\Lambda_\ell$ with $\|\Lambda_\ell\|_\op\le M$,
+any $[0,1]$-slope activation, and arbitrary biases, with $t>S_1^2M^2$ (so the near-identity is
+invertible), where $S_1=\|\sigma'\|_\infty\le1$. Set $\nu=1-S_1M/\sqrt t$, $\alpha=1+S_1M/\sqrt t$. Then
+w.h.p.\ $\smin(J_h)\ge\nu^t$ and $\|J_h\|_\op\le\alpha^t$ uniformly over inputs, and the conclusions of
+\Cref{thm:master,thm:certificate} hold with $C_g=\nu^t\|w\|$ and $L_{\mathrm{net}}=\alpha^t\|w\|$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The deterministic block bounds $\smin(A_\ell)\ge\nu$, $\|A_\ell\|_\op\le\alpha$ are \cite[Prop 5.6]{advExt};
+they hold for any $[0,1]$-slope $\sigma$ because they use only $\|D_\ell\|_\op\le S_1\le1$ and the gate
+support, not the sign structure. What \cite{advExt} could not do for ReLU was the gradient lower bound,
+which it obtained only in expectation and only for odd $\sigma$ via a cross-term cancellation. Here the
+lower bound $\smin(J_h)\ge\nu^t$ is deterministic given the weights, so it holds for ReLU and every
+$[0,1]$-slope activation with no oddness: the near-identity structure makes each block invertible with
+$\smin\ge\nu>0$ regardless of the gate. The stability bound uses the same telescoping as
+\Cref{thm:stability}, with the residual scaling $t^{-1/2}$ making the per-block Hessian
+$H_{\mathrm{res}}=S_2M^2\sqrt t\,\alpha^{2t-2}$ (\cite[Prop 5.6(c)]{advExt}), and the compatibility
+$a\le\nu^{2t}/(6H_{\mathrm{res}}\alpha^t)$ holds in the wide regime because $a=O(\|x\|/\sqrt{n_L})\to0$.
+\end{proof}
+
+The residual case is the one where the paper most directly strengthens \cite{advExt}: it removes the
+oddness and bias-free restrictions and covers ReLU, precisely because the gradient lower bound is now
+deterministic (near-identity invertibility) rather than an odd-activation expectation.
+
+\subsection{Vision transformers}
+A simplified vision transformer, in the sense of \cite[\S5.3]{advExt} (bias-free linear maps, no
+positional embedding, affine-free normalization, odd MLP activation), has a Jacobian that is a product
+of near-identity residual blocks whose linear part is a gated value-path plus a low-rank attention
+correction. The attention weights are a softmax of a bilinear form in the input, and the difficulty
+that \cite{advExt} left open (Remark 5.20 there) was that at standard temperature the softmax logits are
+order one, so the attention Jacobian does not concentrate near a fixed linear map. In the wide regime
+the value-path constants do concentrate, which lets us discharge the compact-set hypotheses of their
+conditional theorem at random initialization.
+
+\begin{theorem}[Simplified-ViT fragility at random init, wide regime]\label{thm:vit}
+Let $F$ be a simplified vision transformer with $L$ layers, $h$ heads, key dimension $d_k$, token count
+$n_{\mathrm{tok}}$, and Gaussian (Xavier) weights, in the wide regime $hd_k\to\infty$ with
+$d\log(hd_k)=o(hd_k)$. Then w.h.p.\ the value-path operator norms $q_\ell,k_\ell,m_\ell$ of
+\cite[Thm 5.16]{advExt} are $O(1)$, the standard-temperature Jacobian and Hessian bounds
+$\Gamma_\ell,\Xi_\ell$ there are finite and $O(1)$ uniformly over the Frobenius ball of radius
+$R\asymp\sqrt{n_{\mathrm{tok}}d}$, and on the local tube of \cite[Rem 5.17]{advExt} generated by the
+attack neighborhoods the conclusions of \Cref{thm:master,thm:certificate} hold: a single gradient step of
+Frobenius length $O(R/\sqrt{hd_k})$ crosses the boundary.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The constants $q_\ell=\|W_{Q,\ell}\|_\op$, $k_\ell=\|W_{K,\ell}\|_\op$, $m_\ell=\|W_{V,\ell}W_{O,\ell}\|_\op$
+of \cite[Thm 5.16]{advExt} are operator norms of Gaussian matrices, hence $O(1)$ w.h.p.\ by the
+Bai--Yin edge; substituting into their $\Gamma_\ell=m_\ell(\sqrt{n_{\mathrm{tok}}}+RL_{P,\ell})$,
+$\Xi_\ell=m_\ell(RH_{P,\ell}+2L_{P,\ell})$ gives finite $O(1)$ values on $R\asymp\sqrt{n_{\mathrm{tok}}d}$
+because $L_{P,\ell},H_{P,\ell}=O(R/\sqrt{d_k})$ times the universal softmax constants. The
+near-identity structure ($\nu_{\mathrm{std}}=1-\beta\Gamma>0$ with $\beta=L^{-1/2}$) then gives the
+gradient lower bound $\|\nabla F\|\ge\nu_{\mathrm{std}}^L\|w\|$ as in the residual case, deterministically
+given the weights. What remains is the forward invariance of a set containing the attack trajectories;
+we replace the global compact-set hypothesis of \cite[Thm 5.16]{advExt} by the local tube of their
+Remark 5.17, whose existence follows from the stability estimate \Cref{thm:stability} applied to the
+value-path (the attention correction is $O(\beta)$ and does not move the trajectory out of an
+$O(R/\sqrt{hd_k})$ tube). This resolves the wide-regime, simplified, standard-temperature case of their
+open problem; the fully standard transformer (biases, positional embeddings, affine normalization,
+GELU) remains open, as those break the balance that supplies the small output.
+\end{proof}
+
+\begin{remark}
+\Cref{thm:vit} is a partial resolution of \cite[Rem 5.20]{advExt}: it shows the standard-temperature
+constants are $O(1)$ w.h.p.\ at random init and that forward invariance can be localized to a tube, so
+the conditional theorem becomes an unconditional wide-regime one for the simplified architecture. The
+random readout route of \Cref{prop:readout} additionally removes the oddness hypothesis on the MLP that
+their balance argument needed for the small output, at the cost of the readout being random.
+\end{remark}

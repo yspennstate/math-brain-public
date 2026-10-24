@@ -1,0 +1,65 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w536",
+  "bundle_slug": "p0309-refereed-boundaries-001",
+  "entries": [
+    {
+      "key": "p0309-campaign-question",
+      "namespace": "probability.riesz-gases",
+      "logical_name": "p0309-positive-temperature-crystalline-gibbs-question",
+      "kind": "concept",
+      "title": "P0309: positive-temperature crystalline Riesz Gibbs phase question",
+      "statement": "Historical 2026-09-07 campaign question: prove existence of a crystalline Gibbs phase at sufficiently low positive temperature for a three-dimensional Coulomb or Riesz gas in a regime predicted by Lewin's 2022 review. For s>3 the ordinary repulsive continuum gas is a possible specialization; for Coulomb s=1 a neutralizing background and long-range Gibbs specification must be stated. A crystalline phase means a symmetry-breaking periodic probability law, not particles fixed on lattice sites. Current openness is UNKNOWN; this is a research question, not a theorem.",
+      "proof_text": null,
+      "assumptions": ["Historical campaign question, not a single quantified theorem", "Lewin, arXiv:2202.09240v2, Section VI"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-codex-20260906:op-p0309",
+        "url": "urn:probability-research:20260906:codex-campaign:op-p0309",
+        "revision": "author-checked-private-20260907-v1; primary-source-scoped-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "repulsive-dlr-uniform-void-bound",
+      "namespace": "probability.gibbs-point-processes",
+      "logical_name": "repulsive-grand-canonical-dlr-uniform-void-bound",
+      "kind": "lemma",
+      "title": "Uniform conditional void bound for repulsive grand-canonical Gibbs laws",
+      "statement": "Let P be an existing ordinary grand-canonical DLR law on locally finite point configurations in R^d, with finite activity z>0, finite inverse temperature beta>0, nonnegative pair potential, no background or external field, and empty local energy zero. For every bounded Borel B, P(N_B=0 | exterior)>=exp(-z|B|) almost surely. For any m pairwise disjoint B_i of common volume V, P(N_{B_i}>0 for every i)<=(1-exp(-zV))^m. Consequently there are almost surely arbitrarily large empty balls and no globally bounded-displacement bijection from any full-rank lattice to the configuration. The conditional constant is sharp over nonnegative potentials, with equality for the zero potential.",
+      "proof_text": "The n=0 term of the conditional partition function is 1 and each n-particle Boltzmann factor is at most 1, so 1<=Xi_B<=sum_n(z|B|)^n/n!=exp(z|B|). This gives the conditional void bound. For disjoint B_i, occupancy of all earlier sets is measurable in the exterior sigma-field of B_m; condition on that field and induct to obtain the product bound, without independence. Apply it to countably many disjoint balls of each integer radius to obtain infinitely many empty balls almost surely. Any bounded displacement of a full-rank lattice would occupy every ball larger than its covering radius plus the displacement bound, contradiction. For v=0 the conditional law is Poisson and equality holds.",
+      "assumptions": ["Existing ordinary grand-canonical DLR law", "z and beta finite positive", "Pair potential nonnegative", "No background or negative external energy", "No fixed local particle count"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w535:P0309:2026-10-10;audited-w536",
+        "url": "urn:owner-work:brain_workers:w535:INDEPENDENT.md",
+        "revision": "independent-audit-w536-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "simple-cubic-finite-support-riesz-instability",
+      "namespace": "probability.riesz-gases",
+      "logical_name": "simple-cubic-force-balance-does-not-imply-riesz-stability",
+      "kind": "lemma",
+      "title": "Force-balanced simple cubic Riesz lattice has a negative finite-support mode",
+      "statement": "For every s>3, the repulsive three-dimensional Riesz lattice Z^3 is stationary under finitely supported displacements but has a finitely supported displacement with strictly negative second variation of its absolutely defined relative pair energy. In fact, for the density-one alternating-plane configuration X_a={(m+a(n mod 2),l,n):m,l,n in Z}, its mean unordered-pair energy E_s(a) satisfies E_s(a)<E_s(0) exactly when a is nonintegral, and E_s''(0)<0. This refutes force balance implying local stability; it does not rule out another crystalline Gibbs phase.",
+      "proof_text": "Only cross-parity plane pairs vary; their unordered mean energy difference is one half the sum over odd vertical offsets of |(m+a,l,n)|^{-s}-|(m,l,n)|^{-s}. Use the gamma integral for r^{-s} and factor the Gaussian sums. The periodic Gaussian theta sum has positive Fourier coefficients sqrt(pi/t)exp(-pi^2 k^2/t), so theta(t,a)-theta(t,0)=2sqrt(pi/t)sum_{k>=1}exp(-pi^2 k^2/t)(cos(2pi k a)-1), strictly negative for nonintegral a and with negative curvature at zero. For a finite cube Q_L displace only odd-height points inside it. The second variation is one half sum_{r!=0} partial_1^2|r|^{-s} times sum_x(p_{x+r}-p_x)^2. Divide by |Q_L| and use dominated convergence; the limit is the negative alternating-plane curvature. Hence it is negative for large finite L. Inversion symmetry cancels the first variation.",
+      "assumptions": ["s>3", "Repulsive v_s(r)=|r|^{-s}", "Unordered pair energy with factor one half", "Finite-support relative energy fixes all exterior particles"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w534:P0309:2026-10-10;audited-w536",
+        "url": "urn:owner-work:brain_workers:w534:ATTEMPT.md",
+        "revision": "independent-audit-w536-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {"from_key": "repulsive-dlr-uniform-void-bound", "to_key": "p0309-campaign-question", "kind": "semantic_association", "rationale": "The void lemma rules out bounded displacement from a lattice as an auxiliary crystalline-phase definition in the ordinary short-range DLR ensemble; it does not resolve P0309."},
+    {"from_key": "simple-cubic-finite-support-riesz-instability", "to_key": "p0309-campaign-question", "kind": "semantic_association", "rationale": "The instability removes simple cubic force balance as a sufficient route to the short-range crystalline Gibbs question; other stable lattices remain possible."}
+  ]
+}

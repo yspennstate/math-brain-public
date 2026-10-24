@@ -1,0 +1,93 @@
+{
+  "command": "python -X utf8 verify_obstruction.py",
+  "scope": "Finite controls only; not a proof of 3D Ising non-triviality.",
+  "independent_snapshot": "~\\brain_workers\\w469\\INDEPENDENT.md",
+  "independent_sha256": "c28a0a0d674bd07c1c212dfafe0e5ed3e9271c3af64c71a284c38b2a06e04072",
+  "corridor": [
+    {
+      "N": 2,
+      "L": 4,
+      "label_pairs": 4,
+      "p_intersection": "1/2",
+      "E_I": "2",
+      "E_I_squared": "8",
+      "paley_zygmund_ratio": "1/2"
+    },
+    {
+      "N": 4,
+      "L": 16,
+      "label_pairs": 16,
+      "p_intersection": "1/4",
+      "E_I": "4",
+      "E_I_squared": "64",
+      "paley_zygmund_ratio": "1/4"
+    },
+    {
+      "N": 8,
+      "L": 64,
+      "label_pairs": 64,
+      "p_intersection": "1/8",
+      "E_I": "8",
+      "E_I_squared": "512",
+      "paley_zygmund_ratio": "1/8"
+    },
+    {
+      "N": 16,
+      "L": 256,
+      "label_pairs": 256,
+      "p_intersection": "1/16",
+      "E_I": "16",
+      "E_I_squared": "4096",
+      "paley_zygmund_ratio": "1/16"
+    },
+    {
+      "N": 32,
+      "L": 1024,
+      "label_pairs": 1024,
+      "p_intersection": "1/32",
+      "E_I": "32",
+      "E_I_squared": "32768",
+      "paley_zygmund_ratio": "1/32"
+    }
+  ],
+  "chain_current_controls": [
+    {
+      "beta": 0.1,
+      "original_two_current_connection": 0.009933709152560033,
+      "bare_sourced_hit": 0.004979251046773414,
+      "sourced_plus_sourceless_hit": 0.009933709152560035,
+      "four_current_connection": 0.01976873972759252,
+      "switching_identity_cases": 256,
+      "maximum_identity_error": 3.7470027081099033e-16,
+      "normalized_fourth_moment": 1.6632113841343408,
+      "weighted_connection_r": 0.6683943079328294,
+      "weighted_identity_error": 4.440892098500626e-16
+    },
+    {
+      "beta": 0.3,
+      "original_two_current_connection": 0.08486303817337076,
+      "bare_sourced_hit": 0.043372088099751696,
+      "sourced_plus_sourceless_hit": 0.08486303817337076,
+      "four_current_connection": 0.1625243410987265,
+      "switching_identity_cases": 256,
+      "maximum_identity_error": 1.1102230246251565e-16,
+      "normalized_fourth_moment": 1.4896280061967073,
+      "weighted_connection_r": 0.7551859969016469,
+      "weighted_identity_error": 1.1102230246251565e-15
+    },
+    {
+      "beta": 1.0,
+      "original_two_current_connection": 0.5800256583859739,
+      "bare_sourced_hit": 0.35194572633611454,
+      "sourced_plus_sourceless_hit": 0.5800256583859739,
+      "four_current_connection": 0.8236215523858652,
+      "switching_identity_cases": 256,
+      "maximum_identity_error": 2.220446049250313e-16,
+      "normalized_fourth_moment": 1.144415986350125,
+      "weighted_connection_r": 0.927792006824938,
+      "weighted_identity_error": 1.1102230246251565e-15
+    }
+  ],
+  "active_seconds": 0.02699640009086579,
+  "passed": true
+}

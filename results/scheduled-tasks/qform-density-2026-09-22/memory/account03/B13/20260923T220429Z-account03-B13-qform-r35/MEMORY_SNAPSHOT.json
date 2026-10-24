@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260923T220429Z-account03-B13-qform-r35",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit_at_start": "45d3f241942b819b875ad1dc7ac293eb6bbb9cc9",
+  "source_control_commit_refreshed_before_publication": "54d55c02a04ce3dd1d52b3efcb680c8adbae7b12",
+  "owner_control_revision": "2026-09-22.15",
+  "target_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY_PROVED_IN_NEW_FIVE_COORDINATE_SUFFICIENT_BRANCH",
+  "corrections_consumed": [
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "owner correction: no uniform pointwise quadratic-phase van-der-Corput decay under only density cap",
+    "owner correction: no post-rotation independence"
+  ],
+  "premises": [
+    {
+      "id": "TWO-HUBS-ARBITRARY-SELF-TRANSVERSE-SQUARE",
+      "scope": "two physical hubs independent of a joint capped three-statistic light vector; arbitrary hub self and light F(Y)+2VG(Y); continuous C0 density",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "237654c8819536e335afb91380290f5d833e2716",
+      "path": "proofnet24/QFORM-density/interactive/20260923T190527Z-two-hubs-arbitrary-self/REPORT.md"
+    },
+    {
+      "id": "ACCOUNT04-B13-DIFFUSE-EXACT-RANK2-SLAB-DICHOTOMY",
+      "scope": "A=D+U Lambda U^T, rank-two carrier, max row leverage <=1/3, s3(A)>=1; selected |d_k|>=1; pivot-or-rank-one inequality",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "d1764f29884bf14ce505d36668105edfcaf8315e",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260923T201653Z-account04-B13-extremal-slab-dichotomy-r1/REPORT.md"
+    },
+    {
+      "id": "EXACT-WITNESSWISE-BATHTUB-PURIFICATION",
+      "scope": "bounded nonnegative product kernel; successive one-coordinate replacements by unit-measure indicators do not decrease objective; no interval/diameter/fragment claim",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "faabe6543fe023941b6965c2d9808c5d9186d8e5",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260923T213043Z-account01-B13-qform-auto11/REPORT.md"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-PHYSICAL-2HUB-3LEAF-TRANSVERSE-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For physical hubs H of size2 and leaves L of size3, W=A[H,L] rank2, B=A[L,L], unit nu in ker W, Gamma=det(WW^T)|nu^TBnu|>0 implies a continuous C0 density with ||p_Q||inf<16 Gamma^(-1/5), retaining arbitrary outside curvature and affine terms."
+    },
+    {
+      "id": "QFORM-EXACT-RANK2-WEIGHTED-TRANSVERSE-v1",
+      "status": "PROVED_ALGEBRAIC_SPECIALIZATION",
+      "statement": "For A=D+U Lambda U^T, U^TU=I2, q_ab=det(u_a,u_b)^2, any disjoint hub pair ij and leaf triple rst with q_ij>0 and q_rs+q_rt+q_st>0 obey q_ij(det Lambda)^2|d_r q_st+d_s q_rt+d_t q_rs| < 16^5 rho^-5 for every slab ratio rho."
+    },
+    {
+      "id": "QFORM-DIFFUSE-RANK2-NEARNULL-LARGE-PHYSICAL-STAR-v1",
+      "status": "PROVED_USING_ACCOUNT04_B13",
+      "statement": "In the partner diffuse exact-rank2 near-null branch, ||A[k,k^c]||2 >= sqrt((1-c_k)/c_k)(|d_k|-sqrt(1536e^2)rho^-2)_+ >= sqrt2(1-sqrt(1536e^2)rho^-2)_+."
+    },
+    {
+      "id": "QFORM-NONCANCELLING-FIVE-COORDINATE-RANK1-RATE-v1",
+      "status": "PROVED_CONDITIONAL_SUBBRANCH",
+      "statement": "If q_ij>=eta, q_rs>=zeta and the weighted transverse diagonal sum has relative magnitude at least theta at a leaf triple containing the selected k, then min(|lambda1|,|lambda2|)<32(eta theta zeta)^(-1/4)rho^-5/4."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "account": "account04",
+    "slot": "B13",
+    "commit": "d1764f29884bf14ce505d36668105edfcaf8315e",
+    "application": "Used |A_kk det Lambda|<=1536e^2 rho^-4 and its near-null/rank-one split to derive the new physical-star lower bound and combine the noncancelling chamber with the new transverse slab inequality."
+  },
+  "outputs": {
+    "canonical_math_repository": "yspennstate/math-open-problems",
+    "canonical_math_commit": "a3e44951cffae7a291563ff43838bc3b1ae5393e",
+    "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T220429Z-account03-B13-qform-r35/REPORT.md",
+    "report_first_commit": "82b3961c2463734d93c19f5328ae98e7475b78e2",
+    "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T220429Z-account03-B13-qform-r35/CHECK_OUTPUT.txt",
+    "check_status": "QFORM_B13_R35_TRANSVERSE_CHECK_PASS",
+    "handoff_commit": "fd5e649667f99b19dbbb2daed0cbe8dd68e100a6",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B13/20260923T220429Z-account03-B13-qform-r35.md"
+  },
+  "unresolved_implication": "Diffuse high-dimensional pair volumes may make every individual q_ij and q_rs tiny, and the signed weighted transverse currency may cancel. Need a grouped-bank aggregate version of the new five-coordinate invariant without a dimension factor.",
+  "next": "QFORM-GROUPED-WEIGHTED-TRANSVERSE-CANCELLATION-v1",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

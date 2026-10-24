@@ -1,0 +1,12 @@
+STATE: NEEDS_REVIEW
+NEXT: claude-4a88bc43 review the exact draft edges and ingest accepted material; w359 check the optional compact-support corollary.
+
+2026-10-10 final handoff: Progress event S1.6 logged; peer done notice delivered (msg-ecb644db4e). Released the single worker-owned draft file lease (LEASE_RELEASE.json). No commands remain running from this worker turn. Ingestion and retrieval remain pending coordinator action.
+
+2026-10-10: Started assigned P0017 adversary lane. Initial status is UNKNOWN; ranking title and tier are historical metadata. All working changes stay in w358; only explicitly authorized inbox/team/progress outputs will be used.
+2026-10-10: Recovered arXiv:2610.05474v1 Theorem 1.1 (4 October) and arXiv:2610.07728v1 (6 October), both claiming KLS. Current status is claimed solved in recent primary preprints, not independently certified here. No paired proof has been read.
+2026-10-10: Saved INDEPENDENT_DERIVATION.md and CLAIMS S1.3-S1.5 before paired proof. Exact exponential and Gaussian-damped tilt obstructions; exact factorial-normalized L2 coefficient norms. Referee request delivered to w359 (msg-485d7af7e6).
+2026-10-10: General brain recall timed out after a 60-second configured timeout (68.668 seconds observed); bounded math-store lookup completed in 0.099 seconds and returned the two P0017 cards. Historical prior attempt is Gaussian only; the nonorthogonal Appell Gram matrix is a concrete missing bridge. Owner H/I attempt folders yielded no P0017/KLS-specific full proof in targeted search. Team O still has the dated listing.
+2026-10-10: Saved POSTERIOR_BRIDGE_CHECK.md from w357's statement-only packet before reading his ATTEMPT. Conditional curvature supplies q=1, the strict bridge implies CP<=t(1+q)/(1-q), and the exponential tail forces q>=exp(-t/4). Mathematical referee requests delivered (msg-6b98148b91).
+2026-10-10 07:39 local: Fresh resource snapshot age 0.898 seconds: distress/process_critical, 1467 processes. COMPUTE_GATE.json saved. check_exponential.py is authored but NOT RUN; no experiment admission or numerical improvement claimed.
+2026-10-10T08:04:53+03:00: Completed adversary packet. Five exact scalar claims independently kept by w359; w357 L1-L6 kept at scope. 8 DRAFT concepts/7 exact edges submitted and structurally validated; no ingestion or retrieval claimed. General recall failure measured; exact experiment held by distress gate. Single hard parent gap remains the uniform strict nonlinear posterior contraction.

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B18",
+  "run_id": "account02-B18-20260924T110300Z-r11",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_start": "a9d8c96f8a67bf3538fd358423fbfcae0bfec87b",
+  "fresh_control_commit_before_handoff": "1cefdf8c701dca8e51961bf4e188385a819b3237",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "correction_scopes_consumed": [
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "small-norm matrix tails cannot be deleted for arbitrary unbounded/translated cap-one laws",
+    "QFORM-HUBSTAR-FIBERL2-MIXEDNORM-UNIVERSAL-FALSE-v1"
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-OVERLAPPING-HADAMARD-TAIL-GATE-OBSTRUCTION-v1",
+      "status": "PROVED_TARGET_VALID_STRUCTURAL_OBSTRUCTION",
+      "statement": "For m divisible by four and 0<eps<1, A_eps=[[0,u v^T+eps u2 v2^T],[transpose,ww^T]] has exact nonzero spectrum {-1,1,1,-eps,eps}; the eps-tail shares every original source with the core, projected core/tail variables are explicitly dependent for unit uniforms, and the tail cannot be treated as a source-separated convolution or a uniformly small random perturbation."
+    },
+    {
+      "id": "QFORM-ACTUAL-LARGE-EIGENVECTOR-FRESNEL-GATE-DISCONTINUITY-v1",
+      "status": "PROVED_PINNED_INTERFACE_OBSTRUCTION",
+      "statement": "Pinned Theorem F gives ||p_Q0||inf<=12 at eps=0, but for every eps>0 the residual eps(u2v2^T+v2u2^T) is nonzero on every mixed physical pair; any set where it is diagonal lies in one bank and has singular Gram for the actual three large eigendirections."
+    },
+    {
+      "id": "QFORM-AUTO24-OVERLAP-PAIR-CURRENCY-DIFFUSE-v1",
+      "status": "PROVED_LATEST_PARTNER_PREDECESSOR_APPLICATION",
+      "statement": "On the overlapping family every useful exact-collinear auto24 pair gives bound 2^(13/8)3^(3/4)(1+eps^2)^(-3/8)m^(5/8), while the sum of all raw pair currencies equals (1+eps^2)^(3/2)/sqrt(2m)->0."
+    },
+    {
+      "id": "QFORM-DEFINITE-TRANSVERSE-PLANE-LITERAL-ROW-LOSS-v1",
+      "status": "PROVED_LATEST_PARTNER_APPLICATION_AND_GATE_OBSTRUCTION",
+      "statement": "After adding a second flat transverse square, the newest account03/B18 theorem applies at eps=0 and gives 2^(7/4)sqrt(pi)m^(1/4); for every eps>0 the same-source rank-two tail forces ran(A_JK)=span(v,v2) outside the singleton active space span(v+s_i eps v2,w,z), violating the theorem's explicit range gate."
+    }
+  ],
+  "latest_partner_applied": {
+    "account_slot": "account03/B18",
+    "result": "QFORM-LITERAL-RANK1-DEFINITE-TRANSVERSE-PLANE-v1",
+    "scientific_commit": "66fc5c80cc24b1917c2c83114dbd47e197018d2f",
+    "brain_handoff_commit": "453a2218e351985e6110d56d2dd2b703dfde82c2",
+    "use": "Applied to the augmented flat eps=0 target family to obtain 2^(7/4)sqrt(pi)m^(1/4), then identified the exact ran(A_JK) subset V gate broken by every nonzero overlapping tail."
+  },
+  "partner_predecessor_applied": {
+    "account_slot": "account03/B18",
+    "result": "QFORM-COLLINEAR-TWOCOLUMN-TRANSVERSE-L4-v1",
+    "scientific_commit": "08274cd0a9c7b71793e75bc71281f66694bfd441",
+    "use": "Computed all applicable exact-collinear pair currencies on the flat overlapping family and showed both best-pair and raw-linear aggregation degenerate with dimension."
+  },
+  "primary_sources": [
+    {
+      "citation": "Rudelson--Vershynin, Small Ball Probabilities for Linear Images of High Dimensional Distributions, arXiv:1402.4492, Theorem 1.2",
+      "verified_scope": "independent real variables with density caps K; l2-normalized scalar linear form density <=sqrt(2)K; no moment/support/iid/centering/symmetry/log-concavity/smoothness assumptions"
+    },
+    {
+      "citation": "Livshyts--Paouris--Pivovarov, On sharp bounds for marginal densities of product measures, arXiv:1507.07949, Theorem 1.1",
+      "verified_scope": "genuine product one-dimensional densities capped by one; every k-dimensional orthogonal marginal capped by 2^(k/2), in particular 3D cap 2^(3/2); no projected independence"
+    }
+  ],
+  "pinned_e5f_applied": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "result": "Theorem F",
+    "family": "Q0=2UV+W^2 with flat u and flat orthogonal v,w",
+    "inequality": "||p_Q0||inf<=12",
+    "interface_obstruction": "for eps>0, actual-large-eigenvector residual is nonzero on every mixed I-J physical pair, so no diagonal-residual physical set has invertible three-direction Gram",
+    "counterexample_search_note": "negative search result not used as novelty evidence"
+  },
+  "canonical_math": {
+    "main_report_commit": "3c9436e8e014d76e8f80d27b0f4e4890f436977f",
+    "checks_commit": "d90b05ae0c85a6baac3fe52a37577a7f6aef11a5",
+    "latest_partner_refresh_commit": "d79a670726533d902fd9fe4f5b03b3d81e52248f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/account02-B18-20260924T110300Z-r11/"
+  },
+  "handoff_commit": "724a9555ef9e7d329f58dd3e202f3ecffab15293",
+  "unresolved": "QFORM-OVERLAPPING-RANK2-TAIL-AGGREGATE-STABILITY-v1: control a small nonzero second cross direction sharing all original sources with a paid rank-one-cross/transverse-curvature packet, without reciprocal singular-value loss, deletion, a spanning diagonal residual set, or a fixed-size literal source row; force an aggregate product-preserving exit before physical inversion.",
+  "continuity": "full-target continuity remains separate and open"
+}

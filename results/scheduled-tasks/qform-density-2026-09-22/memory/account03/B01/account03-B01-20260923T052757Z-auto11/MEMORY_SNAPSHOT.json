@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260923T052757Z-auto11",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "source_control": {
+    "startup_commit": "512aad991bacb4d1dd5103dde22b2ba27ecfc83f",
+    "latest_refresh_observed_commit": "f8871e55408c3d5e5ab29f5b32f3de59bf70a9fd",
+    "owner_control_revision": "2026-09-22.15",
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "account02/B01 r37: single Delta^2 d cross-kernel currency is not a universal strict-N3 resource"
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-RANK2-CROSS-TRANSVERSE-LP-v2",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For the source-valid 3-original-coordinate center with a rank-two disjoint physical cross bank, Delta=sigma1 sigma2, d=|v^T Bv|>0, every p>=4 gives a continuous C0 density with ||p_Q||inf <= K_p Delta^{-p/[2(p+1)]} d^{-1/(p+1)}, with explicit K_p in REPORT.md."
+    },
+    {
+      "id": "QFORM-RANK2-CROSS-TRANSVERSE-LOG-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "Under the same scope, ||p_Q||inf <= (135e/32) Delta^{-1/2}[4+log_+(sqrt(Delta)/d)], and the density is continuous."
+    },
+    {
+      "id": "QFORM-RANK2-NEARNULL-LOG-LOWER-WITNESS-v1",
+      "status": "PROVED_LOCAL_OBSTRUCTION",
+      "statement": "For Q_eps=(x1+y1)^2-(x2-y2)^2+eps z^2 with iid uniforms, p_Qeps(0)>=[log(1/(2eps))+2]/(4sqrt2), so logarithmic near-null growth is real at the rank-two curved-bicore scope; this is not a full-target counterexample because only two eigenvalues are large for small eps."
+    }
+  ],
+  "partner_applied": {
+    "partner": "account04/B01",
+    "source_commit": "a3693ed6d50e8e4143b2f33bf997c5de2cb52d79",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md",
+    "application": "sup_{T>0,y} D_T law(Q)(y) <= (135e/32) Delta^{-1/2}[4+log_+(sqrt(Delta)/d)]"
+  },
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "c65e53a795f4f47c223a21698549857342bd1b5f",
+    "report_commit": "4d6e2777d36200928fb485e4ffa69bf544e8c71a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260923T052757Z-auto11/REPORT.md",
+    "checker_status": "PASS"
+  },
+  "unresolved_implication": "Use the logarithmic d>0 receiver together with the exact d=0,g>0 receiver in a routing theorem. The intrinsic remaining rank-two center state is d=g=0 (equivalently Bv=0) unless a third product-preserving packet is exposed. Small single-packet currency cannot itself be excluded by N3, per account02/B01 r37.",
+  "next_step": "Route d=g=0 and globally small rank-two packet currencies into diffuse/grouped/hub/null/ridge exits without selecting a tiny physical minor; preserve arbitrary extra spectrum.",
+  "continuity": "proved on the new rank-two d>0 branch only; full-target continuity remains open"
+}

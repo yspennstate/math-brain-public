@@ -1,0 +1,17 @@
+# w478 C0052 report
+
+The source-faithful target uses near-critical g(beta), not just a critical block cumulant. I saved an independent obstruction, audited w477's main conditional current bridge, and proved the elementary block-to-g comparison in ATTEMPT.md L4. All new deductions await w479; C0052 is not solved by this packet and current openness is UNKNOWN.
+
+The hardest remaining step is a bounded relative second moment for the specified near-critical, source-weighted SINGLE currents. A diverging overlap mean, spin Lebowitz inequalities, and lower bounds for enlarged four-current clusters do not provide it. My comparison additionally displays the exact block-variance/susceptibility normalization required by a block route.
+
+Measured retrieval failure: general brain recall took 18.10 s, with on-topic precision@3=0/3 (recall_receipt.json). A bounded math-source lookup admitted 10/30 substring false matches, such as 'raising'. A local whole-token filter removed all 10 and retained 20 valid token matches, with 4/4 controls passing in 0.0017 s. Commands: python -X utf8 recall_bounded.py; python -X utf8 store_retrieval.py; python -X utf8 local_repair_measure.py. This is a small local lexical control, not evidence of better mathematical recall generally. A narrower store scan hit its 20-second guard; the saved-header fallback returned no scaling/current theorem in that bounded sample. No corpus absence is claimed.
+
+The returned named theorem 'The fibre is an Ising partition function' is inspected in RETRIEVED_THEOREM_REPORT.json. Its finite NAE/Rademacher construction uses a negative coupling parameter, not a critical ferromagnetic nearest-neighbour state on Z^3. Its stored conditions field is empty and its trust status unverified; its actual statement/attached source, rather than that field, supplies the hypotheses. It gives no positive lower bound for the required source-conditioned current overlap. The primary current identity applies at zero field with ferromagnetic couplings; the separate 4D Gaussian theorem has the wrong dimension and bound direction for C0052.
+
+Bounded proposed repair: use whole-token Ising matching and explicit domain/source-set/temperature/bound-direction metadata; route C0052 to its precise source and conditional gap instead of Ising-perceptron or unrelated substring hits. The lexical demonstration is measured; domain routing and global deployment remain proposals.
+
+Apply: after independent mathematical checks, the validating coordinator may handle the concept-only bundle in the authorized inbox using BUNDLE_SPEC.md. No worker integration command was run, no live store or recall controls were edited, and no theorem promotion is authorized by this packet. HOOK_PROPOSAL.jsonl is local for coordinator submission because the worker's external-write authorization is limited to its named brain inbox and communication/progress tools.
+
+Risk: changing beta_c blocks into near-critical g silently changes the task; enlarged events can reverse the needed inequality; source parity and zero-weight endpoint pairs must be retained. All exact assumptions and proofs are in ATTEMPT.md and CLAIMS.jsonl. Hashes are provenance, not a proof. No formal theorem check was run. Requested model settings do not certify the served model.
+
+NEXT: w479 independently checks L1-L4, especially parity cancellation and L4's normalization; then the coordinator validates the draft and pursues the near-critical relative second-moment estimate.

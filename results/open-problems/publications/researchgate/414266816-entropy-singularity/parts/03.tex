@@ -1,0 +1,134 @@
+\end{equation}
+\end{proof}
+
+For triangular-lattice site percolation and square-lattice bond percolation, each guard uses at most six coordinates. In the bond model the coordinate adjacency graph is the line graph of the square lattice, of maximum degree six. A graph of maximum degree six has at most $1+6+6\cdot5=37$ vertices within distance two, so $D=6$ and $K=37$ are valid. In the geometric bond convention of \cite{GPS}, the isolated white component consists of the variable edge tile and the two deterministic white endpoint squares. Its $\ell^\infty$ diameter is $3/2$ in the unit embedding, so horizontal side length at least $2$ is a sufficient separation cutoff, including at boundary tiles. At $p=1/2$, for a square larger than the fixed tile cutoff,
+\[
+ H(\cS_R)\ge\frac{2}{37}\log_2\frac{64}{63}\,I(f_R).
+\]
+For triangular sites the constant improves to
+\begin{equation}\label{eq:triangular_guard_constant}
+ H(\cS_R)\ge\frac{2}{7}\log_2\frac{64}{63}\,I(f_R).
+\end{equation}
+Indeed, color axial lattice coordinates $(i,j)$ by $i+3j\pmod7$. The seven vertices of a closed neighborhood have different colors, since the neighbor increments are $\pm1,\pm2,\pm3$ modulo seven. Two centers whose neighborhoods intersect lie in a common closed neighborhood, so they have different colors. The coloring alternative in Theorem~\ref{thm:guards} therefore applies with $K=7$. The cancellation in \eqref{eq:guardcancel} is related to the restricted Fourier-coefficient argument in \cite[Lemma~4.3]{GPS}. Here bounded overlap permits guards to be selected from an arbitrary Fourier support. Chang's lower bound for the common-bias product measure $\mu_p^{\otimes n}$~\cite{Chang} uses a different influence transform and degenerates at the unbiased parameter; the local guard hypothesis supplies a positive bound there.
+
+\section{Arm estimates and occupied cells}\label{sec:upper}
+
+Let $Q$ be a translate of $[0,a]\times[0,b]$ in Euclidean coordinates, with $R=\max(a,b)$ and $\min(a,b)\ge R/\kappa$. The constants in this section may depend on the fixed aspect bound $\kappa$. Let $f$ be its left--right crossing function. For a coordinate block $B$, write $\Lambda_B$ for the event that the outside configuration leaves $f$ nonconstant as the coordinates in $B$ vary.
+
+\begin{lemma}[Block variance]\label{lem:blockvariance}
+Under any product measure and for any Boolean function,
+\begin{equation}\label{eq:blockvariance}
+ \Prob(\cS_f\cap B\ne\varnothing)
+ =\E\Var(f\mid X_{B^c})\le\Prob(\Lambda_B),
+ \qquad
+ \Prob(\cP_f\cap B\ne\varnothing)\le\Prob(\Lambda_B).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Conditional expectation onto the outside coordinates removes exactly the orthonormal product characters whose supports meet $B$. Parseval identifies the lost squared norm with the spectral probability in \eqref{eq:blockvariance}. Conditional variance is zero off $\Lambda_B$ and at most one everywhere. A pivotal coordinate in $B$ supplies two choices of its contents with different function values.
+\end{proof}
+
+Write $\alpha_4(r,t)$ for the critical alternating four-arm probability of the model, and set $\alpha_4(t)=\alpha_4(r_0,t)$ for a fixed microscopic radius $r_0$, with $\alpha_4(t)=1$ for $t<r_0$. Put
+\[
+ m(t)=t^2\alpha_4(t).
+\]
+The critical estimates used below are fixed-factor regularity, quasi-multiplicativity, and
+\begin{equation}\label{eq:armgap}
+ \alpha_4(u,t)\ge c(u/t)^{2-\eta},\qquad t\ge u\ge r_0,
+\end{equation}
+for some $\eta>0$. They imply \eqref{eq:massgrowth} for $m$. These facts hold in both critical models considered here; see \cite[Section~2.2]{GPS}.
+
+Assume that the given product measure satisfies the following estimates, uniformly in location at the scales under consideration:
+\begin{align}
+ \Prob(A_4(r,t))&\le C\alpha_4(r,t),\label{eq:armactual}\\
+ \Prob(A_3^H(r,t))&\le C(r/t)^\beta,\qquad\beta>1.\label{eq:halfarm}
+\end{align}
+Here $A_3^H$ is the alternating three-arm event in any half-plane parallel to a side of $Q$, with both color orders allowed. Fixed microscopic changes of the boundary and fixed-factor changes of radii are permitted.
+
+\subsection{The boundary contribution}
+
+Choose $D_0$ larger than the maximum distance from a tile point to its center. Let $V$ consist exactly of the random tiles meeting $Q$. Project each center coordinatewise onto $Q$, and bisect both sides of $Q$ repeatedly. Use lower-left-inclusive cells, with the outer top and right sides included. At depth $k$, write $s=R2^{-k}$; cell side lengths lie in $[s/\kappa,s]$. Let $J_C\subseteq V$ be the coordinates assigned to cell $C$, and put
+\[
+ Z_s(A)=\{C:A\cap J_C\ne\varnothing\},\qquad N_s(A)=|Z_s(A)|.
+\]
+The sets $J_C$ partition all relevant coordinates, including those whose centers lie outside $Q$. Terminate the partition at scale $s_L\in[s_*,2s_*)$, for a fixed sufficiently large $s_*$; every terminal cell then has at most a fixed number $M$ of coordinates.
+
+For the center $z$ of a cell $C$, define $B_C=V\cap\{x:\|x-z\|_\infty\le2s\}$, identifying a coordinate with its tile center. At retained scales $s\ge s_*$, $J_C\subseteq B_C$. Assign $z$ to a nearest side $e$ of $Q$, with deterministic ties, and let $y$ be its perpendicular projection onto $e$. Set
+\[
+ h=\operatorname{dist}(z,e),\qquad
+ t=\min\{|y-v_1|,|y-v_2|,w_e\},
+\]
+where $v_1,v_2$ are the endpoints of $e$ and $w_e$ is its distance to the opposite side.
+Then $h\le t\le R$. Fix a large constant $C_0$ and define
+\[
+ d=\min\{R,\max(C_0s,h)\},\qquad
+ D=\min\{R,\max(d,t)\}.
+\]
+
+\begin{lemma}[Side-distance bound]\label{lem:sidebound}
+Under \eqref{eq:armactual}--\eqref{eq:halfarm},
+\begin{equation}\label{eq:sidebound}
+ \Prob(\Lambda_{B_C})\le C\alpha_4(s,d)(d/D)^\beta.
+\end{equation}
+\end{lemma}
+\begin{proof}
+First suppose $s\le R/C_0$. Fill the block closed, and let $W_0$ be the union of the closures of the open tiles, including the deterministic white vertex tiles in the bond model. On $\Lambda_{B_C}$ this set has no left--right crossing of $Q$. Planar separation for the finite polygonal set $W_0\cap Q$ gives a simple top--bottom curve in $Q\setminus W_0$. Use this curve as the closed top--bottom crossing. Fill the block open and choose a simple open left--right crossing in the resulting union $W_1$. These curves must intersect in the rectangle, and can intersect only in changed tiles, since outside those tiles $W_0=W_1$. Every changed tile lies inside a square about $z$ of radius $K_0s$, for a fixed $K_0>2$.
+
+Convert each complete crossing to its tile walk and loop-erase that walk before extracting its tails. Each open tile clipped by $Q$ is convex. In an initially closed tile, $W_0$ removes only whole boundary faces or vertices, so the remaining portion clipped by $Q$ is also convex. The retained walks therefore have realizations in their original colored sets, with the closed realization contained in $Q\setminus W_0$. On the triangular lattice they give simple site paths. In the bond model, use incidence walks through random edge tiles and deterministic vertex squares for the open crossing, and through random edge tiles and deterministic face squares for the closed crossing; their loop erasures give simple primal and dual paths. These coordinate paths remain within a fixed tile distance of their geometric realizations. The retained realizations still join opposite sides, so they still intersect in the changed-tile square.
+
+Enlarge the changed-tile square by that fixed distance. Follow the resulting paths from each of their distinguished sides to their first encounter with the square. Same-color exterior tails use disjoint coordinates by simplicity, and opposite colors cannot share a coordinate outside the changed block. In the interior, their outer endpoints have the order left, top, right, bottom. Disjoint planar arcs preserve this order on the inner boundary, so the four colors alternate.
+
+When $h$ is a sufficiently large multiple of $s$, these arms cross an annulus about $z$ from radius $Gs$ to $h/G$, for fixed large $G$. For the boundary range, a square of radius $Gd$ about $y$ contains the changed tiles and, when $t/d$ is sufficiently large, meets only the side $e$. Follow the crossings from the other three sides until their first encounter with this boundary notch, omitting the tail to $e$. The three disjoint tails have the order of those three sides on the notch, hence alternate. Each reaches radius $t/G$, since the other sides are at distance at least $t$ from $y$. They give the required half-annulus event. Shift its boundary outward by a fixed tile distance to include the coordinate paths. Increasing $G$ and $s_*$ absorbs the shift and all tile-to-center errors.
+
+The full annular support lies within distance $h+h/G+O(1)$ of $y$, while the half-annular support begins at distance $Gd-O(1)$, with $d\ge h$. The supports are therefore disjoint. Independence, \eqref{eq:armactual}, and \eqref{eq:halfarm} bound their intersection by $C\alpha_4(s,d)(d/D)^\beta$. If either annulus has bounded ratio, omit it and absorb its factor by fixed-factor regularity. For near-critical measures, first extract smaller annuli in the lattice norm of the arm estimates, with outer radii strictly less than $R$. Apply the estimates for the given measure at these radii, then use critical fixed-factor regularity to compare with the displayed radii. Finally, if $s>R/C_0$, then $d=D=R$ and $R/s<C_0$; the trivial probability bound suffices.
+\end{proof}
+
+\begin{proposition}[Occupancy estimate]\label{prop:occupancy}
+For $A=\cS_f$ or $\cP_f$,
+\begin{equation}\label{eq:occupancyupper}
+ \E N_s(A)\le C(R/s)^2\alpha_4(s,R)
+ \asymp\frac{m(R)}{m(s)}.
+\end{equation}
+The same bound holds for the sum of the block-oscillation probabilities $\sum_C\Prob(\Lambda_{J_C})$.
+\end{proposition}
+\begin{proof}
+Group cells by their assigned side and by dyadic classes $d\asymp u$, $D\asymp v$, where $s\lesssim u\le v\lesssim R$. For a fixed side, their centers lie in a strip of perpendicular thickness $O(u)$. Its available tangential length is $O_\kappa(v)$: either an endpoint of the side is within $O(v)$, or the opposite-side distance is $O(v)$, in which case the entire side has length $O_\kappa(v)$. Since centers have spacing at least $s/\kappa$ in both coordinates, the class contains at most
+\[
+ C_\kappa(u/s+1)(v/s+1)\le C_\kappa uv/s^2
+\]
+cells. The count includes corner cells, and the opposite-side term $w_e$ in $t$ accounts for the case in which the whole side contributes.
+
+Block enlargement, Lemmas~\ref{lem:blockvariance} and \ref{lem:sidebound}, and the count give
+\begin{align*}
+ \E N_s(A)
+ &\le C\sum_u\sum_{v\ge u}\frac{uv}{s^2}\alpha_4(s,u)(u/v)^\beta\\
+ &\le C\sum_u(u/s)^2\alpha_4(s,u),
+\end{align*}
+because $\sum_{v\ge u}(u/v)^{\beta-1}$ is a bounded geometric series. Quasi-multiplicativity and \eqref{eq:armgap} imply
+\[
+ (u/s)^2\alpha_4(s,u)
+ \le C(u/R)^\eta (R/s)^2\alpha_4(s,R).
+\]
+Summing over $u$ proves \eqref{eq:occupancyupper}. The same estimates directly bound $\sum_C\Prob(\Lambda_{J_C})$. The final scale comparison follows from quasi-multiplicativity.
+\end{proof}
+
+\subsection{Entropy upper bounds}
+
+\begin{theorem}[Arm criterion for entropy]\label{thm:armcriterion}
+Assume the preceding arm estimates. Then
+\begin{equation}\label{eq:armcriterion}
+ H(\cS_f),\ H(\cP_f)\le C m(R),\qquad
+ H(Z_s(A))\le C m(R)/m(s)
+\end{equation}
+at every retained dyadic scale, provided $R$ exceeds a fixed microscopic cutoff. If $I(f)\ge c m(R)$, then $H(\cS_f),H(\cP_f)\le CI(f)$. If this lower bound holds and all coordinate parameters lie in $[p_0,1-p_0]$, then $H(\cS_f)\le C\E|\cS_f|$.
+\end{theorem}
+\begin{proof}
+Apply Lemma~\ref{cor:forestcost} with $b=4$ and terminal capacity $M$. Proposition~\ref{prop:occupancy} bounds each occupied-cell expectation by $Cm(R)/m(s)$. The reciprocal sum \eqref{eq:dyadicsum} is bounded above the fixed terminal scale; the terminal term has the same bound. This gives $H(A)\le1+Cm(R)$. For the pattern at scale $s$, stop the tree at that level and obtain $H(Z_s)\le1+Cm(R)/m(s)$. The growth estimate gives $m(R)/m(s)\ge c$, and also $m(R)\ge c$ above the cutoff, so both root terms are absorbed. The influence formulations follow from the extra lower bound and \eqref{eq:biasedinfluence}.
+\end{proof}
+
+\begin{corollary}[Other resolution grids]\label{cor:grids}
+The entropy upper bound holds for any deterministic offset of an axis-parallel square grid of side $r$, $s_*\le r\le R$, using the same projected centers:
+\[
+ H(Z_r^{\mathrm{grid}}(A))\le C m(R)/m(r).
+\]
+\end{corollary}

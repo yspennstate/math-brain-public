@@ -1,0 +1,51 @@
+=== C281: gauge identity, exhaustive direct sign triples for d<=3 ===
+d=1: invertible_sign=2, direct_plus=0, direct_minus=0, pred_branch=0, pred_total=0
+d=2: invertible_sign=8, direct_plus=0, direct_minus=0, pred_branch=0, pred_total=0
+d=3: invertible_sign=192, direct_plus=0, direct_minus=0, pred_branch=0, pred_total=0
+d=4 retained-run29 cross-check: 2^(2d+1)*H_4=589824
+
+=== C282: rank-one sign-lift/cofactor identity, exhaustive binary d<=4 ===
+d=1: all 1 singular binary matrices satisfy det(J-2X)=(-1)^(d+1)2^(d-1)*sum(cofactors)
+d=2: all 10 singular binary matrices satisfy det(J-2X)=(-1)^(d+1)2^(d-1)*sum(cofactors)
+d=3: all 338 singular binary matrices satisfy det(J-2X)=(-1)^(d+1)2^(d-1)*sum(cofactors)
+d=4: all 42976 singular binary matrices satisfy det(J-2X)=(-1)^(d+1)2^(d-1)*sum(cofactors)
+
+=== Exact collision-free finite sequence ===
+d=1: row_orbits=1, G_d=1, R_d=0, H_d=0
+d=2: row_orbits=3, G_d=6, R_d=0, H_d=0
+d=3: row_orbits=29, G_d=174, R_d=0, H_d=0
+d=4: row_orbits=1015, G_d=24360, R_d=1800, H_d=1152
+d=5: row_orbits=126651, G_d=15198120, R_d=2683800, H_d=1342800
+
+=== Strong-nonsingular one-step hazards from exact external counts ===
+d=1: h_d=1/2 = 0.500000000000000
+d=2: h_d=15/32 = 0.468750000000000
+d=3: h_d=231/544 = 0.424632352941176
+d=4: h_d=30027/80128 = 0.374737919329073
+d=5: h_d=16549789/51303424 = 0.322586441793826
+d=6: h_d=19266769243/71175444480 = 0.270694048822047
+d=7: h_d=94036638809501/425235867541504 = 0.221139950759969
+d=8: h_d=60990263160752731781/347287562466888777728 = 0.175618909953240
+
+=== Dense sign pivot-chain multiplicity: C283 finite audit ===
+d=2: dephased invertibles=1, min m(A)=4, C283 floor=2^(d-1)d!=4, max=4
+d=3: dephased invertibles=6, min m(A)=24, C283 floor=2^(d-1)d!=24, max=24
+d=4: dephased invertibles=174, min m(A)=192, C283 floor=2^(d-1)d!=192, max=384
+
+=== Sign-SNS / binary-SNS dephasing identity ===
+sign size d=2: dephased_SNS=1=binary a_1; full sign SNS=8
+sign size d=3: dephased_SNS=4=binary a_2; full sign SNS=128
+sign size d=4: dephased_SNS=68=binary a_3; full sign SNS=8704
+sign size d=5: dephased_SNS=5008=binary a_4; full sign SNS=2564096
+
+=== Exact aggregate Schur hazard under a strongly-nonsingular sign core ===
+sign core d=2: aggregate Schur ±1 probability=1 = 1.000000000000000
+sign core d=3: aggregate Schur ±1 probability=15/16 = 0.937500000000000
+sign core d=4: aggregate Schur ±1 probability=231/272 = 0.849264705882353
+sign core d=5: aggregate Schur ±1 probability=30027/40064 = 0.749475838658147
+sign core d=6: aggregate Schur ±1 probability=16549789/25651712 = 0.645172883587653
+sign core d=7: aggregate Schur ±1 probability=19266769243/35587722240 = 0.541388097644094
+sign core d=8: aggregate Schur ±1 probability=94036638809501/212617933770752 = 0.442279901519939
+sign core d=9: aggregate Schur ±1 probability=60990263160752731781/173643781233444388864 = 0.351237819906480
+
+SELF-CHECK PASS

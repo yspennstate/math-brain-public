@@ -1,0 +1,29 @@
+P0282 exact stronger binomial-normalized ULC fixed-defect certificate
+JMAX=20 finite_boundary_rows_through=41
+finite_shape_total=259890
+all_small_row_ULC_cells=780 all_strictly_positive=True
+small_row_min_normalized_ratio_at=(41, 40) exact=1248000/1215241 approx=1.02695679293243058
+j=1 shifted_degree=4 shifted_coeff_count=5 all_shifted_coeffs_positive=True constant=84 leading=1 boundary_n=3..3
+j=2 shifted_degree=8 shifted_coeff_count=9 all_shifted_coeffs_positive=True constant=82266 leading=1/2 boundary_n=4..5
+j=3 shifted_degree=12 shifted_coeff_count=13 all_shifted_coeffs_positive=True constant=151943560 leading=1/12 boundary_n=5..7
+j=4 shifted_degree=16 shifted_coeff_count=17 all_shifted_coeffs_positive=True constant=491873081660 leading=1/144 boundary_n=6..9
+j=5 shifted_degree=20 shifted_coeff_count=21 all_shifted_coeffs_positive=True constant=2529773146962588 leading=1/2880 boundary_n=7..11
+j=6 shifted_degree=24 shifted_coeff_count=25 all_shifted_coeffs_positive=True constant=19151309035671066240 leading=1/86400 boundary_n=8..13
+j=7 shifted_degree=28 shifted_coeff_count=29 all_shifted_coeffs_positive=True constant=201503834990620844259600 leading=1/3628800 boundary_n=9..15
+j=8 shifted_degree=32 shifted_coeff_count=33 all_shifted_coeffs_positive=True constant=2820567028147226183307178152 leading=1/203212800 boundary_n=10..17
+j=9 shifted_degree=36 shifted_coeff_count=37 all_shifted_coeffs_positive=True constant=50763000077529819700145988994880 leading=1/14631321600 boundary_n=11..19
+j=10 shifted_degree=40 shifted_coeff_count=41 all_shifted_coeffs_positive=True constant=1143188724554736048384868834583576682 leading=1/1316818944000 boundary_n=12..21
+j=11 shifted_degree=44 shifted_coeff_count=45 all_shifted_coeffs_positive=True constant=31511242147980743850203744172959663177496 leading=1/144850083840000 boundary_n=13..23
+j=12 shifted_degree=48 shifted_coeff_count=49 all_shifted_coeffs_positive=True constant=1043932578165183940603344716298619302415774144 leading=1/19120211066880000 boundary_n=14..25
+j=13 shifted_degree=52 shifted_coeff_count=53 all_shifted_coeffs_positive=True constant=40935389623978551638021923191510357104424689371952 leading=1/2982752926433280000 boundary_n=15..27
+j=14 shifted_degree=56 shifted_coeff_count=57 all_shifted_coeffs_positive=True constant=1875443389347922267372792259364092834376961051112400000 leading=1/542861032610856960000 boundary_n=16..29
+j=15 shifted_degree=60 shifted_coeff_count=61 all_shifted_coeffs_positive=True constant=99275077380218279090334910962821815787405209170884497428000 leading=1/114000816848279961600000 boundary_n=17..31
+j=16 shifted_degree=64 shifted_coeff_count=65 all_shifted_coeffs_positive=True constant=6013128721981620813683919739688355362161079643488285049292538184 leading=1/27360196043587190784000000 boundary_n=18..33
+j=17 shifted_degree=68 shifted_coeff_count=69 all_shifted_coeffs_positive=True constant=413238248213192533057412810739563347102992568642629320024001591085632 leading=1/7441973323855715893248000000 boundary_n=19..35
+j=18 shifted_degree=72 shifted_coeff_count=73 all_shifted_coeffs_positive=True constant=31980735624363307878275940049295381524231148974303325757599299081827440288 leading=1/2277243837099849063333888000000 boundary_n=20..37
+j=19 shifted_degree=76 shifted_coeff_count=77 all_shifted_coeffs_positive=True constant=2768686907515317170939063768705845254690406808210116405358080926777704781456000 leading=1/778817392288148379660189696000000 boundary_n=21..39
+j=20 shifted_degree=80 shifted_coeff_count=81 all_shifted_coeffs_positive=True constant=266545344295711868557133564323287255673283224474973110339370649962889802332516637200 leading=1/295950609069496384270872084480000000 boundary_n=22..41
+THEOREM_CERTIFIED: natural binomial-normalized ULC holds for every source-valid n at defects 1<=j<=20
+ULC inequality: ell[n,k]^2 * C(n-1,k-2) * C(n-1,k) > ell[n,k-1]*ell[n,k+1]*C(n-1,k-1)^2
+This strictly implies Chen on this defect range.
+ALL_EXACT_CHECKS_PASS

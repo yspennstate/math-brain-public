@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "a01-b07-20260922T170700Z-qform-r13",
+  "status": "ESSENTIAL_STEP_APPLIED_FULL_TARGET_OPEN",
+  "execution_context": "scheduled_automation",
+  "memory_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_revision": "2026-09-22.8",
+  "fresh_control_commit_before_publication": "d27f8d5afe05034af263ef327d137857bf86d0b2",
+  "correction_ids_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-CONDITIONAL-3D-PROJECTION-CAP-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B07",
+    "result": "QFORM-Q0-RIDGE-FOUR-HEAVY-DPP-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "059c2aefcc283898976e9e207fcc01049b85fb97",
+    "application": "On the calibrated O0 high-leverage branch tr K=3 and H={i:K_ii>3/5} has at most four rows. The new fixed-pattern theorem proves that some T subset H retains at least D/16 of the full regularized determinant and factors it into a physical finite-core Gram determinant times a projected residual regularized determinant."
+  },
+  "additional_partner_result_applied": {
+    "worker": "account02/B07",
+    "result": "QFORM-PLUCKER-STRATUM-COLLAR-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "55751ad6d9915a2600d42385d41388c900d29a26",
+    "application": "On its localized selected-three-eigenspace branch, m_T(J)>=1/8 is transferred through A^2-P>=0 and column-core pigeonholing to a full-A fixed row/column core third-compound slice of mass >=1/64."
+  },
+  "new_results": [
+    "QFORM-RIDGE-HEAVY-CORE-SCHUR-FACTOR-v1",
+    "QFORM-RIDGE-SET-DELETION-v1",
+    "QFORM-RIDGE-THIRD-PACKET-v1",
+    "QFORM-FIXED-CORE-COMPOUND-SLICE-v1",
+    "division-free h=2 bordered-minor identity"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0b704e4e040938a4707d92de6931d449dda725d6",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/a01-b07-20260922T170700Z-qform-r13/REPORT.md"
+  },
+  "exact_check": {
+    "repository": "yspennstate/math-open-problems",
+    "output_commit": "65ba5e03eaa854777e477ecefdfea79f675cd460",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/a01-b07-20260922T170700Z-qform-r13/CHECK_OUTPUT.txt",
+    "terminal_marker": "QFORM_B07_R13_EXACT_CHECK_PASS"
+  },
+  "unresolved_implication": "QFORM-FINITE-CORE-DETERMINANT-PAYMENT-v1: convert the <=4-row calibrated ridge core/residual determinant factor, or the <=3-coordinate full-A fixed-core compound slice, into a universal product-law density/small-ball payment without reciprocal tiny pivots or post-rotation independence; then combine with O1/O2/O3 packet payments.",
+  "continuity_status": "Not proved by this run's new structural lemmas; continuity remains proved only on previously closed ridge/diffuse subbranches.",
+  "next_step": "Develop a product-preserving analytic payment for the finite core. For h=2 start from C_S=det(A_SS)A_CC-A_CS adj(A_SS)A_SC rather than a Schur quotient, and test whether grouped heavy-coordinate smoothing plus the orientation-free rank-two half-Riesz theorem controls the two terms uniformly."
+}

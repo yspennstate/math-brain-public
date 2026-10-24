@@ -1,0 +1,114 @@
+[
+  {
+    "claim_id": "A003-ONCE-SLICED-MAJORITY-ERASURE",
+    "version": 1,
+    "exact_statement": "For every r>=1, either first-bit slice h of Majority_(2r+1), and every remaining coordinate i, mu=E h=+/-rho, hat h({i})=Inf_i(h)=rho=binom(2r,r)/4^r and B_i(h)<=2rho; equality holds at r=1. For any actual Boolean split A+D z on disjoint rest, delta=E D^2>0, the composed slice satisfies B_i(A+hD)/(delta rho)<=2-2rho+rho log2(e/(rho^2 delta)), retaining the coherent empty-row correction. This is not a uniform arbitrary-outer price as delta tends to zero.",
+    "hypotheses": [
+      "uniform actual Boolean physical cubes",
+      "bits; fresh encoder support disjoint from the arbitrary outer rest"
+    ],
+    "statement_sha256": "4c5518b43c13eabc5828606942a620d4257f6e51e2fdfe28607e62c4f84489f3",
+    "contributors": [
+      "A003"
+    ],
+    "proof_source": {
+      "run_id": "20261013T222630Z-account05-A003-minimal-target-formulation",
+      "path": "DERIVATION.md",
+      "locator": "sections 1-2",
+      "validation": "out/VALIDATION.json"
+    },
+    "proof_dependencies": [
+      {
+        "source": "A026 stage3 PROOF.md",
+        "version": 1,
+        "locator": "section 2 coherent biased interface; directly reconstructed from coefficient packets"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A004",
+        "at_utc": "2026-10-14T00:00:35.227345+00:00",
+        "run_id": "20261013T235034Z-account05-A004-constant-and-unit-ledger",
+        "decision": "ACCEPT_AT_EXACT_STATED_ABSTRACT_SCOPE",
+        "scope": "Complete all-r sliced-majority and arbitrary disjoint Boolean-rest interface; complete all-k conditional two-query prefix. The B05 instantiated construction and universal FEI/payment are outside acceptance.",
+        "independent_method": "Direct binomial/Krawtchouk coefficient counts, separate hyperbolic Phi proof, independent physical composition and adaptive trees; reconstructed density/cutoff/eligibility proof.",
+        "substantive_repair": false,
+        "proof_path": "REVIEW.md",
+        "proof_sha256": "46f00acfc60a8d8a7c7f16c77489e52097b2ec8ba38b4ec6bf64f120024ae2f0",
+        "validation_path": "out/VALIDATION.json"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_LOCAL_ONE_REVIEW_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A026",
+      "A057",
+      "A087",
+      "A094",
+      "B01",
+      "B06",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A003-TWO-QUERY-ELIGIBLE-PREFIX",
+    "version": 1,
+    "exact_statement": "For every even k>=4 and actual outer Boolean sign with the influence types in A026-INTACT-ENCODER-BIASED-PREFIX v1, use disjoint Majority_M encoders on all 3k backgrounds, retaining selector y, with M=2k^2 2^(2k+4)+1 and rho=binom(M-1,(M-1)/2)/2^(M-1). At every actual history querying at most two bits per background block and never y, every available first/second-query bit i satisfies Inf_i>I/(2d) for the relevant residual dimension d. First queries have B_i/Inf_i<59/512; second queries have B_i/Inf_i<2+59/512-2rho. For any adaptive such prefix, let S1,S2 be expected spent influence at first/second queries. Then S1+S2=I(root)-E I(leaf), and H(root)<=E H(leaf)+(59/512+2/ln2)(S1+S2)+(2-2rho)S2. Full terminal entropy is retained. No third-query, arbitrary-outer or universal FEI payment follows.",
+    "hypotheses": [
+      "bits; all actual uniform physical restrictions",
+      "delta0=2^-k,p=delta0^2; k backgrounds alpha=p(1/2+delta0),2k backgrounds alpha=p(1-sqrt(delta0)+delta0), selector alpha=pdelta0",
+      "fresh disjoint blocks; at most two queries per block; no selector query; candidates exist only before all blocks are queried twice"
+    ],
+    "statement_sha256": "b95bc46e28f201fe75376df07dbde98584cc26b50ba192c171d582ae9e7033e9",
+    "contributors": [
+      "A003"
+    ],
+    "proof_source": {
+      "run_id": "20261013T222630Z-account05-A003-minimal-target-formulation",
+      "path": "DERIVATION.md",
+      "locator": "sections 3-5",
+      "validation": "out/VALIDATION.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A003-ONCE-SLICED-MAJORITY-ERASURE",
+        "version": 1,
+        "status": "author proof pending independent review"
+      },
+      {
+        "claim_id": "A026-INTACT-ENCODER-BIASED-PREFIX",
+        "version": 1,
+        "scope": "abstract outer influence hypotheses and binomial/density framework; own scoped reconstruction in A026_REVIEW.md; complete instantiated chain not independently accepted"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A004",
+        "at_utc": "2026-10-14T00:00:35.227345+00:00",
+        "run_id": "20261013T235034Z-account05-A004-constant-and-unit-ledger",
+        "decision": "ACCEPT_AT_EXACT_STATED_ABSTRACT_SCOPE",
+        "scope": "Complete all-r sliced-majority and arbitrary disjoint Boolean-rest interface; complete all-k conditional two-query prefix. The B05 instantiated construction and universal FEI/payment are outside acceptance.",
+        "independent_method": "Direct binomial/Krawtchouk coefficient counts, separate hyperbolic Phi proof, independent physical composition and adaptive trees; reconstructed density/cutoff/eligibility proof.",
+        "substantive_repair": false,
+        "proof_path": "REVIEW.md",
+        "proof_sha256": "46f00acfc60a8d8a7c7f16c77489e52097b2ec8ba38b4ec6bf64f120024ae2f0",
+        "validation_path": "out/VALIDATION.json"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_LOCAL_ONE_REVIEW_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A026",
+      "A057",
+      "A087",
+      "A094",
+      "B01",
+      "B06",
+      "B20"
+    ]
+  }
+]

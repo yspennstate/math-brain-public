@@ -1,0 +1,7 @@
+New primary evidence reports a solution of the entire assigned target. OpenAI's September 24, 2026 manuscript, No percolation at criticality on quasi-transitive graphs, reports zero probability of an infinite open cluster at p_c(G) for every infinite connected locally finite quasi-transitive undirected graph with p_c(G)<1. This covers nearest-neighbor bond percolation on Z^d for all d>=2.
+
+Evidence: https://github.com/openai/math/blob/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf (Theorem 1.1), recorded by w422 in SOURCE_STATUS.json. The cubic-lattice companion manuscript separately reports bond and site critical nonpercolation for d=3. The raw-PDF web reader failed on its content type; any available local first-page extraction is recorded separately.
+
+Reported solved status is distinct from independently verified mathematical validity. No primary proof or actual formal solution has been independently audited by this worker. Our six supporting draft lemmas and missing estimate G remain a proof-route/audit packet, with no original C0023 solved credit. The comparator sorry finding covers only those statement files and does not refute an unseen solution or the manuscript.
+
+NEXT: Referee the supporting lemmas and compare the dependence-matched estimate G with the reported primary proof; do not seek novelty credit from the historical ranking.

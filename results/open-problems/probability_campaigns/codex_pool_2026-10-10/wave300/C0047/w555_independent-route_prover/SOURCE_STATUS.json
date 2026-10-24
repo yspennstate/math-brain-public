@@ -1,0 +1,75 @@
+{
+  "candidate_id": "C0047",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "parent_problem_solved": false,
+  "novelty_claim": false,
+  "exact_target": "For every infinite finitely generated group Gamma and every finite symmetric generating set S excluding the identity, independent Bernoulli bond percolation on the simple undirected Cayley graph Cay(Gamma,S) satisfies pc<pu iff Gamma is nonamenable.",
+  "definitions": {
+    "pc": "inf{p in [0,1]: there is an infinite cluster almost surely}",
+    "pu": "inf{p in [0,1]: there is exactly one infinite cluster almost surely}",
+    "h_E": "inf{|boundary_E A|/|A|: A finite nonempty}",
+    "rho": "ell2 norm of the NORMALIZED operator A/d on a d-regular graph"
+  },
+  "primary_statement": {
+    "title": "Hugo Duminil-Copin, Sixty years of percolation (ICM 2018)",
+    "url": "https://www.ihes.fr/~duminil/publi/2018ICM.pdf",
+    "locator": "Conjecture 2, printed page 4 (PDF page index 3)",
+    "quote": "Consider a Cayley graph G of a finitely generated (infinite) group G.",
+    "display_in_own_notation": "pc(G)<pu(G) iff Gamma is nonamenable",
+    "verification": "Primary PDF directly viewed via web; exact statement and quantifiers recovered, not a proof."
+  },
+  "definitions_primary": {
+    "url": "https://arxiv.org/html/1804.10191v3",
+    "locator": "Introduction and Conjecture 1.1",
+    "quote": "Let G be a connected, locally finite, quasi-transitive graph."
+  },
+  "recent_primary_checks": [
+    {
+      "url": "https://arxiv.org/abs/2601.09958",
+      "scope": "Planar SITE conjecture, distinct from universal Cayley BOND nonuniqueness."
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.07768",
+      "scope": "Weighted-isoperimetry existence threshold; abstract's recent Benjamini-Schramm resolution concerns a different threshold question."
+    },
+    {
+      "url": "https://arxiv.org/abs/2502.02560",
+      "scope": "Weighted-amenability / relaxed ph<pu, not a proof of this exact target."
+    }
+  ],
+  "openness_limit": "Bounded recent search and local unsolved records do not certify absence of a 2026 proof; no current-open or novelty assertion.",
+  "owner_work_check": {
+    "solved_register": "~/Open problem project/solved_register.md",
+    "relevant_workspace": "~/Big Open problem in probability theory",
+    "observed": "README says project incomplete; round_339 lines66-69 says no general proof located. Prior core routes are L2/SAW, tensor-product and confined-bridge estimates; distinct from this route.",
+    "no_retired_problem_claim": true
+  },
+  "named_attempts_H_I": "Scoped C0047/Benjamini-Schramm search found no relevant exact attempt in the H_20260912 or I_20260914 directories.",
+  "peer_boundary": {
+    "adversary": "w556",
+    "message": "2026-10-10 received precommit to operator/row-square-norm obstruction; block lane kept disjoint.",
+    "core_prover": "w552",
+    "method_boundary_request_message": "msg-9046120cd8",
+    "core_proof_read": false
+  },
+  "brain_scars": [
+    "proof_steps_need_derived_joint_structure_2026_09_09",
+    "perceptron_proof_open_gaps_fleet_2026_07_12"
+  ],
+  "recall": "brain.py recall terminated its query at timeout=60 seconds; targeted index/slug files used instead.",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "max",
+  "requested_service_tier": "Fast",
+  "served_model_evidence": "UNAVAILABLE: no response-side identity record accessible in this task; requested settings are not served evidence.",
+  "formal_verification": {
+    "performed": false,
+    "theorem": null,
+    "trusted_axioms": null,
+    "admitted_placeholders": null
+  },
+  "submission_state": "local packet prepared; inbox submission recorded separately",
+  "review_state": "pending w557; w556 adversarial check pending",
+  "ingestion_state": "NOT_INGESTED",
+  "retrieval_state": "NOT_TESTED"
+}

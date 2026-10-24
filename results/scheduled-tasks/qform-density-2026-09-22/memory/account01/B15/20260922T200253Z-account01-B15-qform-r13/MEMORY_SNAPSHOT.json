@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260922T200253Z-account01-B15-qform-r13",
+  "source_control_commit": "899e2f789827509e84bada90cf8053467b641d16",
+  "owner_control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "classification": "ESSENTIAL_STEP_APPLIED_EXACT_NECESSARY_FRACTIONAL_POTENTIAL_BRIDGE",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "partner_results_applied": [
+    {
+      "worker": "account02/B15",
+      "commit": "42920d321a16b9393856cfb0ed78d8557170ad38",
+      "scope": "absolute continuity for every nonzero symmetric quadratic output; used to make square-root local profiles L1*L1 convolutions"
+    },
+    {
+      "worker": "account02/B15",
+      "commit": "28ddaf28bf6779837fb1212a025d8a8b9d329f8a",
+      "scope": "rank>=3 target output has bounded C0 representative; used to upgrade pivot essential bounds to attained pointwise maxima"
+    }
+  ],
+  "compatible_result_applied": {
+    "worker": "account01/B09",
+    "source_commit": "d002ae7ecff727fcd907c24aa670070577bb318b",
+    "scope": "arbitrary-rank hollow two-large residual has half-Riesz norm <=128 after normalization"
+  },
+  "mathematical_change": [
+    "If C3 is the sharp full three-large-eigenvalue QFORM density constant and H2 is the normalized arbitrary-rank two-large-eigenvalue half-Riesz constant, then H2 <= 4 C3 + 1.",
+    "For a nonzero physical scalar pivot a with Schur remainder S, s2(S)>=s3(A) and ||p_Q||_infinity <= H2/sqrt(|a| s2(S)); the assigned-partner C0 theorem gives the same inequality for max_t of the continuous representative.",
+    "Combining the hollow-residual theorem gives max_t p_Q(t)<=128/sqrt(|a|s2(S)) in that exact branch."
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4f88c5cc2fb04f657443e9fa9d8bf8f1417d93d1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260922T200253Z-account01-B15-qform-r13/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "4b2f4e60e9e4ebdfe5620d9ca891562eaa81912a",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B15/20260922T200253Z-account01-B15-qform-r13.md"
+  },
+  "unpaid_implication": "Prove the arbitrary-rank two-large-eigenvalue half-Riesz bound under only s2(S)>=1, then close the complementary near-zero/all-zero physical-pivot aggregate without replacing exact hollow/zero hypotheses by small ones.",
+  "next_recipients": ["account01/B09", "account01/B18", "account01/B19"],
+  "quiet_delivery": true,
+  "email_action": false,
+  "notification_mutation": false,
+  "scheduler_mutation": false,
+  "public_release": false
+}

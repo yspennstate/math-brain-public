@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260923T083627Z-account03-B14-QFORM-r31",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "65fb446cab1d892af943943efad3599d8701ccdc",
+  "control_commit_prepublication": "e7b802de703f2677a93de5d9c3ab6f14fd4f828c",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "Translations and localization: preserve arbitrary shifts, distant fragments, unbounded supports and the full constant.",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "result": {
+    "id": "QFORM-RANK2-SEMIDEFINITE-SCHUR-BANK-v1",
+    "status": "PROVED_SUPPORTING_THEOREM_FULL_QFORM_OPEN",
+    "summary": "For an invertible indefinite original-coordinate physical pair B, a disjoint rank-two semidefinite Schur bank S0 with every induced affine bank term in Range(S0) yields an explicit dimension-free density bound depending only on D=|det B|, kappa=sigma_min(B), and P=pdet_abs(S0). Range translations are exact and free; aggregate 2D product projection gives a remainder density cap pi*e/sqrt(P); the physical-pair logarithmic envelope then yields the optimized piecewise bound. Finite-mixture localization transfers it with no support, tail, moment or fragment tax.",
+    "bound": "Let tau=pi*e*D/(kappa*sqrt(P)). If tau<=1/8, ||p||inf<=6[pi e/(kappa sqrt(D) sqrt(P))]^(1/3). If tau>=1/8, ||p||inf<=D^(-1/2)[3+log(8 pi e D/(kappa sqrt(P)))].",
+    "continuity": "not_claimed",
+    "independent_review": "pending"
+  },
+  "premises": [
+    {
+      "source": "account02/B05 QFORM-2D-PARSEVAL-PROJECTION-CAP-v1",
+      "scope": "two-dimensional Parseval projection of independent cap-one coordinates has density cap <=e",
+      "application": "after whitening L(V+h), gives ||p_W||inf<=e/sqrt(P)"
+    },
+    {
+      "source": "account04/B14 r7 physical-pair logarithmic envelope",
+      "scope": "invertible indefinite physical pair; completed-pair translation may depend on the same residual variables",
+      "application": "inserted the exact remainder density cap through a layer-cake logarithmic expectation bound"
+    },
+    {
+      "source": "account04/B14 r5 affine-family finite-mixture compiler",
+      "scope": "uniform active affine interval estimate transfers from compact finite-fragment product laws to arbitrary cap-one product laws without constant loss",
+      "application": "transfers the conditional pair+rank-two-bank inequality to arbitrary unbounded fragmented laws while leaving outside coordinates untouched"
+    }
+  ],
+  "outputs": {
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_commit": "1d80c85a03f6d442c7771e0df3313ec80aab8446",
+    "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T083627Z-account03-B14-QFORM-r31/REPORT.md",
+    "checks_commit": "bfcea375a8a64bfa4e792ef0d1ef9e4e2a45cbd6",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T083627Z-account03-B14-QFORM-r31/CHECKS.md",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B14/20260923T083627Z-account03-B14-QFORM-r31.md"
+  },
+  "unresolved_implication": "The bare spectral hypothesis s3(A)>=1 does not force a controlled indefinite physical pair together with a controlled rank-two semidefinite Schur bank. Kernel-affine leakage, indefinite rank-two bank curvature, higher-rank/mixed-sign bank curvature and the global N3 structural closure remain unpaid.",
+  "next_step": "Attack kernel-affine leakage or indefinite rank-two Schur curvature using aggregate product provenance before any normalized thin-fiber or reciprocal-minor payment."
+}

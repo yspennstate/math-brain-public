@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "run_id": "20261013T203102Z-account01-B05-positive-defect-retained-credit-a023",
+  "stream": "B05",
+  "packet_id": "A023",
+  "gap_id": "B05_RARE_REFUNDS",
+  "claims": [
+    {
+      "claim_id": "B05_A023_POSITIVE_SCALAR_SLOPE_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For the exact half-activation scalar R, R'(t)>-4/3 on (0,1), hence R(t)<=4(1-t)/3 on [0,1].",
+      "quantifiers": "all real t in the stated intervals",
+      "evidence": "PROOF.md Section 4; CHECK.py is diagnostic only"
+    },
+    {
+      "claim_id": "B05_A023_POSITIVE_DEFECT_ENDPOINT_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "If U(P)<=8I(P)/3, every fresh fair-selector tower with arbitrary positive point-defect ranks r_k>=2 satisfies U(F_d)<=8I(F_d)/3 for all depths.",
+      "quantifiers": "all base dimensions, Boolean P, finite depths, and arbitrary rank sequences r_k>=2",
+      "evidence": "PROOF.md Sections 1-5"
+    },
+    {
+      "claim_id": "B05_A023_POSITIVE_DEFECT_RETAINED_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "Every finite adaptive/pruned restriction tree on such a tower, with any common disjoint Boolean terminal core, has retained U loss at most 8I(F_d)/3.",
+      "quantifiers": "all permitted finite trees, reveal orders, pruning policies, depths, rank sequences, and common disjoint terminal cores",
+      "evidence": "PROOF.md Section 6; CHECK.py supplies finite corroboration"
+    }
+  ],
+  "unaffected_open_claim": "No dimension-independent retained-credit theorem is proved for biased outer selectors, negative near-constant balancers, variable reuse, or changing overlapping coherent cores.",
+  "full_fei_status": "OPEN"
+}

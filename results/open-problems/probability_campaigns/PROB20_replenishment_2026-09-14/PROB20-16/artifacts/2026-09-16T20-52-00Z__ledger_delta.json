@@ -1,0 +1,78 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "LYONS-CONJ2.6-X095",
+  "category": "HARD_OUTSIDE",
+  "report_kind": "NEW_METHOD_RESEARCH",
+  "input_snapshot_sha": "8d599a5aac72262426491219939567898406b1ae",
+  "pre_delivery_master_sha": "58b71ffddd06a3603494e6b71efefc47164a8227",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/runs/2026-09-16/2026-09-16T19-59-00Z__report.md",
+    "creation_commit": "ddbb6d3e915ee5c3aa58c957154c11bf130f36a6",
+    "blob": "707f414c99caa47edbbbebefb872673f2a984112",
+    "receipt_commit": "9303552ff5073a91b244771dc358e5481392b387"
+  },
+  "neighbor": {
+    "task": "P11",
+    "path": "proofnet24/P11-lyons-entropy/runs/2026-09-16/2026-09-16T19-11-51Z__run-report.md",
+    "commit": "24019c1f103fcfdb4d3478bbe3c1de98d7fb668b",
+    "coordination": "P11 remains on rare-site/external-field and perfect-correlation architecture; this run used endpoint matrix monotonicity and did not duplicate P11 box work"
+  },
+  "source": {
+    "author": "Russell Lyons",
+    "year": 2014,
+    "locator": "arXiv:1406.2707, Conjecture 2.6",
+    "checked_date": "2026-09-16",
+    "original_current_version_check": "arXiv entry remains the 2014-06-10 submission; source statement is the full-subset Shannon entropy midpoint inequality for all positive contractions",
+    "later_author_check": "Andras Meszaros arXiv:1905.11459 / Annals of Probability 2020 treats limiting/invariant determinantal entropy, not the universal finite-kernel conjecture",
+    "citing_literature_check": "bounded fresh exact-title/Conjecture-2.6/determinantal-entropy/positive-contraction search found no universal finite-kernel proof or refutation; search miss is not a novelty proof"
+  },
+  "frozen_metric": {
+    "name": "B_Phi",
+    "before": "UNMEASURED",
+    "after": "UNMEASURED",
+    "movement": "no global movement",
+    "unchanged_count": "UNKNOWN"
+  },
+  "methods_tried": [4, 13, 20],
+  "outcomes": {
+    "B4": "proved the prior run's global two-site secant inequality and strengthened it to two endpoint Loewner inequalities for the full gradient difference",
+    "B13": "found monotone log-odds A,B decreasing and E increasing; their endpoint decrements produce an atom-positive determinant certificate",
+    "B20": "used endpoint matrix domination plus the exact worker-036 parallel-sum formula to settle every imaginary transverse cross direction; isolated the remaining real transverse 2x2 parallel-sum inequality"
+  },
+  "new_claims": [
+    "G <= rho L0 e22 and G <= rho L1 e22 for every strict two-site ordered pair C(x0)-C(x1)=rho e11 with fixed y and edge",
+    "the previous scalar secant target is valid globally on the strict physical two-site domain",
+    "complete imaginary-transverse compensation for the coordinate-aligned conditional three-site geometry"
+  ],
+  "mathematical_status": "PARTIAL",
+  "closure": false,
+  "audit_refs": {
+    "new_claims": "NONE",
+    "required_for_closure": "P26 plus a distinct qualified OTHER-task audit; not requested because the source target is not closed"
+  },
+  "interval_repair": {
+    "status": "already adopted; not rerun",
+    "corrected_source_sha256": "c7041ccc556e6bee8e64afb43f506693f8fc6962e7cedc4ad12fd3d3c6bc9e7c"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/runs/2026-09-16/2026-09-16T20-52-00Z__report.md",
+    "creation_commit": "d9f9a65e1634fd35097f8b585f8e53d5b3b2bf1a",
+    "readback": "VERIFIED"
+  },
+  "artifacts": [
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/artifacts/2026-09-16T20-52-00Z__endpoint_matrix_check.py",
+      "creation_commit": "7cbfc3054f76f143d53a1965800adb264f331318",
+      "readback": "VERIFIED"
+    },
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/artifacts/2026-09-16T20-52-00Z__endpoint_matrix_output.txt",
+      "creation_commit": "088331ffa9342cb3ebe1d13978f284700fd8a69e",
+      "readback": "VERIFIED"
+    }
+  ],
+  "model": "GPT-5.6 Sol",
+  "reasoning": "UNVERIFIED",
+  "requested_model": "GPT-6",
+  "requested_reasoning": "maximum"
+}

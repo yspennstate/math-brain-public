@@ -1,0 +1,126 @@
+\section*{A product-potential telescope for coherently changing witnesses}
+
+All logarithms are natural.  Put
+\[
+ \psi(t)=t^2\log(1/t^2),\qquad
+ \mathcal E_{\rm raw}(c)=\sum_S\psi(\widehat c(S)),
+\]
+with \(\psi(0)=0\), and let
+\[
+ C_* = 4+2\log 2+\frac2e.
+\]
+
+Let \(W\) and \(X\) be disjoint physical coordinate blocks.  Let
+\(g_+,g_-:\{-1,1\}^W\to\{-1,1\}\), set
+\[
+ a=(g_++g_-)/2,\qquad b=(g_+-g_-)/2,
+\]
+and let \(h:\{-1,1\}^X\to\{-1,1\}\).  Thus
+\(F=a+hb\) is Boolean.  Consider any finite adaptive physical restriction
+tree on \(W\cup X\), with no coordinate repeated on a root--leaf path.
+At a node \(v\), let \(a_v,b_v,h_v\) be the corresponding restrictions,
+and put
+\[
+ q_v=\|b_v\|_2^2,\quad Z_v=\mathcal E_{\rm raw}(b_v),\quad
+ V_v=1-(\mathbb E h_v)^2,
+\quad J_v=\mathbf I(h_v).
+\]
+If an \(X\)-coordinate \(i\) is queried at \(v\), put
+\(\alpha_v=\widehat h_v(\{i\})\), and let \(R_v\) be the exact biased
+coherent remainder from the B12 kernel identity.
+
+\paragraph{Theorem (proved).}
+For every such tree, with reach weights \(w_v\),
+\[
+ \boxed{
+ \sum_{v:\,i(v)\in X}w_v R_v
+ +\sum_{\ell\ {m leaf}}w_\ell
+   \bigl(C_*q_\ell J_\ell+V_\ell Z_\ell\bigr)
+ \le C_*q_\varnothing J_\varnothing+V_\varnothing Z_\varnothing.}
+ \tag{1}
+\]
+In particular,
+\[
+ \sum_{v:\,i(v)\in X}w_v R_v
+ \le C_*q\,\mathbf I(h)+\operatorname{Var}(h)\mathcal E_{\rm raw}(b).
+ \tag{2}
+\]
+This allows the outer witness \((a_v,b_v)\), its energy \(q_v\), and its
+reverse-collision reserve to change and correlate arbitrarily through the
+adaptive interleaving.  The change must be the actual coherent restriction
+of one root Boolean pair; arbitrary unrelated node witnesses are not covered.
+
+\paragraph{Proof.}
+Define the node potential
+\[
+ P_v=C_*q_vJ_v+V_vZ_v.                                           \tag{3}
+\]
+First suppose that the queried coordinate lies in \(X\).  The source pair is
+unchanged.  The elementary Fourier restriction identities give
+\[
+ J_v-\frac{J_{v+}+J_{v-}}2=\operatorname{Inf}_i(h_v),\qquad
+ V_v-\frac{V_{v+}+V_{v-}}2=\alpha_v^2.                            \tag{4}
+\]
+The independently reviewed B12 one-node envelope is
+\[
+ R_v\le q_v\psi(\alpha_v)+(4+2\log2)q_v\alpha_v^2
+             +M(a_v,b_v)\alpha_v^2,                              \tag{5}
+\]
+where
+\[
+ M(a_v,b_v)=2\sum_{T:\widehat b_v(T)\ne0}
+ \widehat b_v(T)^2\log_+\frac{|\widehat a_v(T)|}{|\widehat b_v(T)|}.
+\]
+Because \(a_v\pm b_v\) remain Boolean,
+\[
+ M(a_v,b_v)\le Z_v.                                               \tag{6}
+\]
+Moreover \(|\alpha_v|\le\operatorname{Inf}_i(h_v)\),
+\(\alpha_v^2\le|\alpha_v|\), and
+\(\psi(\alpha_v)\le(2/e)|\alpha_v|\).  Combining (4)--(6) yields the
+local Bellman inequality
+\[
+ R_v\le P_v-\frac{P_{v+}+P_{v-}}2.                                \tag{7}
+\]
+
+Now suppose the queried coordinate \(j\) lies in \(W\).  The child function
+is unchanged.  Write the Fourier pairs of \(b_v\) across \(j\) as
+\((u_T,t_T)\).  Parseval and the nonnegative scalar kernel give
+\[
+ \frac{q_{v+}+q_{v-}}2=q_v,
+\]
+\[
+ Z_v-\frac{Z_{v+}+Z_{v-}}2
+ =\sum_TK(u_T,t_T)\ge0.                                          \tag{8}
+\]
+Hence
+\[
+ 0\le P_v-\frac{P_{v+}+P_{v-}}2.                                 \tag{9}
+\]
+Multiply (7) or (9) by \(w_v\) and sum over internal nodes.  All child
+potentials cancel, leaving precisely (1).  Dropping the nonnegative leaf
+potential proves (2). \(\square\)
+
+\paragraph{Exact reserve ledger.}
+The proof contains the stronger single-use identity
+\[
+ \sum_{v:\,i(v)\in X}w_v\alpha_v^2Z_v
+ +\sum_{v:\,i(v)\in W}w_vV_v
+   \left(Z_v-\frac{Z_{v+}+Z_{v-}}2\right)
+ +\sum_{\ell}w_\ell V_\ell Z_\ell
+ =V_\varnothing Z_\varnothing.                                  \tag{10}
+\]
+Since \(M(a_v,b_v)\le Z_v\), (10) pays the entire changing reserve ledger
+\(\sum w_v\alpha_v^2M(a_v,b_v)\) once.  The middle term is the source
+restriction dissipation and the final term is the unspent terminal reserve.
+
+\paragraph{Scope boundary.}
+The theorem removes the fixed-source hypothesis for every adaptive
+interleaving of restrictions on the two disjoint physical blocks.  It is not
+an overlapping-input theorem: if one physical coordinate changes both
+\(b_v\) and \(h_v\) at the same step, (7) and (9) no longer separate and a
+covariance term remains.  Nor does (2) alone prove FEI, because
+\(\mathcal E_{\rm raw}(b)\) is not universally bounded by the displayed
+argument.  The next gap is to pay that terminal derivative entropy by source
+influence, or to control the simultaneous-change covariance in a genuine
+shared-input hierarchy.

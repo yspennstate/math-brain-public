@@ -1,0 +1,14 @@
+{
+  "helper_version":"check.py v1; source-bound extension of A024 stage4 exact helpers",
+  "actual_boolean_family":"F=1-(1-w)(1-h)/2, all 3-bit controllers w and five fixed 5-bit cores h (c,-c,constants,parity); plus F_LM with w=-G_L,h=G_M",
+  "domain":{"pilot_controller_bits":2,"pilot_controller_masks":"0..15","pilot_cores":["c","constant+"],"full_controller_bits":3,"full_controller_masks":"0..255","full_cores":["c","-c","constant+","constant-","parity"],"explicit_tensor_pairs":[[1,1],[1,2],[2,1]],"symbolic_diagonal":"L=M=1..64, formulas only"},
+  "case_count":{"pilot_roots":32,"full_roots":1280,"full_controller_root_queries":3840,"explicit_prefixes":6,"symbolic_rows":64},
+  "symmetry":"no gate/controller masks removed; exact identical restriction states memoized",
+  "arithmetic":"integer Walsh transforms, Fraction edge/odd-face/prefix counts, prime-log entropy expressions and rational atanh interval signs; no floating proof",
+  "memory_estimate_MB":180,
+  "max_runtime_seconds":{"pilot":60,"full":300},
+  "max_truth_table_bits":15,
+  "explicit_prefix_orders":["selectors-data","data-selectors"],
+  "automatic_dimension_escalation":false,
+  "purpose":"Check exact arbitrary-controller lift and retained terminals; test transfer of an individually paid tree, not full FEI or an optimal-tree claim"
+}

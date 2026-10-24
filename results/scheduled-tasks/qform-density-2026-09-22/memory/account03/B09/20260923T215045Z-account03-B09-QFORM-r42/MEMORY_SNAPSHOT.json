@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260923T215045Z-account03-B09-QFORM-r42",
+  "control_revision": "2026-09-22.15",
+  "initial_control_commit": "01b3e58cf23727fcf47870d2cddcd1403f3969b5",
+  "prepublication_control_commit": "946ca1f4c663f45772a094cbce05726214f49c03",
+  "correction_inbox_blob_consumed": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "new_results": [
+    "QFORM-GROUPED-RANK2-LP-FAMILY-v1",
+    "QFORM-GROUPED-RANK2-LOG-ANISOTROPY-v1",
+    "QFORM-RANK2-ANISOTROPY-RATIO-BOUNDED-FALSE-v1"
+  ],
+  "premises": [
+    "r41 grouped rank-two kernel-derivative theorem and exact overlap identity V=Delta^2||Pn||^2",
+    "reviewed cap 2^(r/2) for an r-dimensional orthonormal projection of a cap-one product law, used only for r=1,2",
+    "original-coordinate conditioning preserves product provenance; analytic rotations are used only as changes of integration variables"
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B09",
+    "source_repository": "yspennstate/math-open-problems",
+    "source_commit": "c0d3f34e557a374f41b2639994c43af4f950b682",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B09/20260923T101659Z-account04-B09-dense-self-cross-fourier-r1/REPORT.md",
+    "application": "K=diag(2,1,1) in [[0,K],[K,0]] gives spectrum {-2,-1,-1,1,1,2} and ||p_Q||_infinity<=3*2^(-1/3)=2.381101577952299"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6642b95f1b9f447bdb961c5cbebe5b7d003faa20",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T215045Z-account03-B09-QFORM-r42/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T215045Z-account03-B09-QFORM-r42/CHECK.py",
+    "check_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T215045Z-account03-B09-QFORM-r42/CHECK_OUTPUT.txt"
+  },
+  "main_quantitative_result": "For every p>2, ||p_Q||_infinity <= C_p Delta^{-p/[2(p+1)]}||Pn||^{-1/(p+1)}; equivalently <=C_p V^{-1/6}R^{(p-2)/[6(p+1)]}; optimizing yields <=8.824 V^{-1/6}(1+log_+ R)^(1/3).",
+  "continuity_scope": "proved for this grouped rank-two branch via an L1 characteristic-function bound; full-target continuity remains open",
+  "full_target_status": "OPEN",
+  "unresolved_implication": "QFORM-GROUPED-RANK2-ENDPOINT-LOG-REMOVAL-OR-PAID-ROUTING-v1",
+  "next_step": "Prove an endpoint Lorentz/dyadic p=2 replacement eliminating the logarithm, or route high anisotropy into an already-paid physical pivot/ridge/third-volume/finite-core receiver while retaining all residual phase terms.",
+  "new_correction_event": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account03/B09/20260923T215045Z-account03-B09-QFORM-r42/QFORM-RANK2-ANISOTROPY-RATIO-BOUNDED-FALSE-v1.json",
+  "correction_inbox_merge_status": "DEFERRED_DUE_CONCURRENT_MAIN_WRITES_AND_NO_SAFE_APPEND_PRIMITIVE; immutable event preserved",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

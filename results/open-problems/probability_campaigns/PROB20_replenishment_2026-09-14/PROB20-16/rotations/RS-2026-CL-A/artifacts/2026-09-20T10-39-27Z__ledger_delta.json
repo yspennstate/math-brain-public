@@ -1,0 +1,32 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "claim_id": "RS-2026-CL-A",
+  "date_utc": "2026-09-20",
+  "status": "PROVED PARTIAL / SIGNED-LOCAL-FRAME-TRANSFER / AUDIT-PENDING",
+  "E_framework_before": 1,
+  "E_framework_after": 1,
+  "captured_master_before_report": "31ae73588eb0baa49e07975fbbe393e06f7d04a1",
+  "newest_prior_report": "runs/2026-09-20/2026-09-20T09-45-26Z__report.md",
+  "old_claim": "The 09:45 theorem transfers bounded source LDA to positive read-k local-union tests using aggregate spectral dimension, but still needs union positivity/read-k structure for its strong-test conclusion.",
+  "new_claim": "For any signed local score F=sum_j a_j h_j under a uniform product reference, bounded source LDA through D implies noisy normalized advantage at most A+sqrt(s_F/kappa_F), where kappa_F is the actual coefficient-direction Rayleigh quotient of the local correlation Gram matrix and s_F is the effective normalized local high-degree spectral tail. This removes read-k, positivity, rarity, monotonicity and disjointness for the signed polynomial class.",
+  "proof_mechanism": "Project T_rho F once at source degree D. LDA controls the low projection. Unit-modulus Walsh characters control each local high-degree residual in sup norm. The variance identity Var(F)=b^T Gamma b converts the result into an explicit forward frame/correlation Rayleigh quotient, avoiding signed inverse-Gram geometry.",
+  "strictness_example": "Distinct overlapping parity characters have Gamma=I regardless of arbitrarily large coordinate read number; with width w>D and log m=o(w), their residual term sqrt(m) rho^w vanishes.",
+  "mao_boundary": "Since Mao has A=0 through D_n, any successful signed-local representation must satisfy s_F/kappa_F >= Delta_F^2. Thus a Mao-type escape must exhibit frame collapse or persistent local source-high-degree spectral mass (or fail to admit the representation).",
+  "exact_gap": "Arbitrary S_n-invariant graph polynomials and general polynomial-time tests need not admit a polynomial-size local decomposition with a noncollapsing correlation frame and small local residual. Orbit-size amplification remains uncontrolled.",
+  "next_attack": "Compress S_n-invariant graph polynomials into graph-shape orbit pieces and seek an orbit-normalized residual bound that avoids paying labeled orbit size. If that fails, pivot to noisy branching-program Fourier concentration robustified from exact bounded independence to bounded LDA.",
+  "report": {
+    "path": "runs/2026-09-20/2026-09-20T10-39-27Z__report.md",
+    "commit": "78daedba6b217a1bb2953a30b3912d62039f7dec",
+    "blob": "b43a1eab8bb31d51264ecfcfad397d97028f9dfb"
+  },
+  "handoff": {
+    "path": "artifacts/2026-09-20T10-39-27Z__P08_P09_frame_correlation_handoff.md",
+    "commit": "0b8d884500815eca7ea16e7729f58fa9f3e16e38",
+    "blob": "2089d1057d263034de03fa6aa35ff272beeefa51"
+  },
+  "source_ownership_preserved": true,
+  "full_source_claim": false,
+  "email": false,
+  "drive": false,
+  "public_posting": false
+}

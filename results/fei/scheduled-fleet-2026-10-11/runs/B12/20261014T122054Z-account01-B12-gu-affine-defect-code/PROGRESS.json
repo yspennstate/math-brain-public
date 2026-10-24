@@ -1,0 +1,88 @@
+{
+  "schema": "fei-progress/2",
+  "run_id": "20261014T122054Z-account01-B12-gu-affine-defect-code",
+  "stream": "B12",
+  "account": "account01",
+  "primary_packet_id": "A058",
+  "packet_ids": ["A058"],
+  "attempt_id": "A058-GU-AFFINE-DEFECT-CODE-16",
+  "attempt_counter": 16,
+  "gap_id": "B12-A058-SHARED-COORDINATE-OVERLAP",
+  "candidate": "Freeze (a,b)=(kappa_pd,0) for every affine-subspace defect, arbitrary binary-code embedding, and the restriction-closed composition class generated with disjoint products and shared character cores.",
+  "prior_status": "The preceding theorem covered at most three exceptional points with pair (64,0); simply iterating its entropy bound would grow with defect count.",
+  "new_status": "UNBOUNDED_AFFINE_DEFECT_COUNT_GU_PROVED_PENDING_REVIEW; MULTI_FIBER_UNION_OPEN",
+  "mathematical_delta": "Replaced fixed defect-count enumeration by an all-rank binary-matroid argument. Non-coloop deletion gives nonpositive signed GU drift; at a coloop the entire orientation-dependent posterior cancels and leaves exactly the sharp point-defect decrement. This proves G<=kappa_pd I for arbitrary affine fibers, including exponentially large defect sets, and transfers to the stated restriction-closed composition class.",
+  "claim_versions": [
+    "B12-A058-AFFINE-DEFECT-CODE-GU-v1",
+    "B12-A058-BINARY-MATROID-SIGNED-DELETION-v1",
+    "B12-A058-AFFINE-DEFECT-COMPOSITION-CLASS-v1",
+    "B12-A058-SHARED-COORDINATE-OVERLAP-v17"
+  ],
+  "source_pins": {
+    "gu_focus_blob": "9448198701fbfe0cceb72bda7a6837ebd59704f9",
+    "assignment_blob": "40935ac651643a17815d0addf664ec4c1c0313cc",
+    "protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "point_defect_canonical_final": "6f9ff6ef21f2da84c6cf7e71953b8278d12fdb57",
+    "character_overlap_canonical_final": "3053a99e9dc9152aab8b14f2238f55920cdaac6f",
+    "preceding_b12_canonical_final": "9fa6492f9fbad29c8f6dba06caa10f83a2bac3bf",
+    "preceding_b12_brain_final": "93958f3008f1f5c73f57a48f7caef46c951567ac",
+    "open_problems_head_inspected": "c1b3d066bddd6a01f9e8eec732695ac95d1f5401",
+    "brain_head_inspected": "d2a90136a4507d21ec61272f32a835a6193efd87"
+  },
+  "gu_implication": {
+    "proved_pair": "a=kappa_pd=1/4+(9/4)log2(16/9), b=0 on the stated restriction-closed class",
+    "class_consequence": "U<=kappa_pd I and H<=(41/2-9log2 3)I=6.2353374935... I",
+    "universal_consequence_if_extended": "The same binary-matroid deletion payment for arbitrary spectral light masses would prove universal GU and the displayed FEI constant.",
+    "status": "PROVED only for a proper class; universal extension OPEN"
+  },
+  "case_extension": {
+    "previous_class": "same-variable parity-masked factors with at most three exceptional points",
+    "new_class": "arbitrary affine-subspace defect factors with exponentially many defects, arbitrary binary-code orientation, disjoint products, and shared character cores",
+    "removed_hypotheses": [
+      "bounded defect count",
+      "bounded affine rank or codimension",
+      "coordinate-aligned defect subcube",
+      "injective or nonrepeated physical columns",
+      "fixed rank along the physical hierarchy",
+      "bounded factor count or depth"
+    ],
+    "remaining_hypothesis": "each residual negative set is one affine fiber; arbitrary unions/nonlinear sets remain open",
+    "parameter_dependence": "the sharp constant is independent of defect cardinality, rank, orientation, reuse, dimension, factor count and depth"
+  },
+  "verification": {
+    "status": "PASS",
+    "command": "python3 CHECK.py",
+    "seed": null,
+    "nonconstant_subspaces": 3283,
+    "coloop_coordinate_cases": 2663,
+    "noncoloop_coordinate_cases": 13822,
+    "maximum_noncoloop_ratio": 0.0,
+    "maximum_coloop_identity_error": 2.7755575615628914e-17,
+    "maximum_G_over_I": 2.1176687467547968,
+    "output_artifacts": ["OUTPUT.txt"]
+  },
+  "normalization_and_terminal_terms": [
+    "The affine target changes only Fourier phases; the squared law is normalized as p_m+(2^m-1)q_m=1.",
+    "Non-coloops retain both nonconstant affine children and have nonpositive signed decrement.",
+    "At a coloop exactly one child is an affine defect and the companion is an exact constant terminal.",
+    "The full orientation-dependent cone sum R is retained and cancels between root and active child.",
+    "Zero columns are exact dummy coordinates; repeated nonzero columns add influence and cannot hide positive drift."
+  ],
+  "obstruction_controls": [
+    "No fixed-sign projection or unsigned indicator coefficient is used.",
+    "The proof uses physical deletion/contraction and does not replace the input cube by an abstract quotient cube.",
+    "The finite subspace scan reconstructs the identities but does not supply the all-rank inference.",
+    "The proper-class theorem is not labeled universal GU or full FEI."
+  ],
+  "remaining_obstacle": "Control a union of multiple affine fibers with unequal light spectral masses using a single-use fiber-label posterior reserve and a constant independent of the number of fibers.",
+  "next_action": "Derive the exact two-affine-fiber spectral cone law and deletion recurrence, retaining the fiber-label posterior rather than summing separate indicator payments.",
+  "consumer_targets": ["A057", "A059", "A060", "B01", "B03", "B08", "B09", "B18", "B19", "B20"],
+  "reviewer_targets": ["A091", "A090", "A094"],
+  "independent_review": "NONE_OBSERVED",
+  "canonical_delivery": "26efee6d52ac37430e318ad2f976ca807a8ae187; 9_OF_9_INITIAL_FILES_CREATED",
+  "brain_handoff_delivery": "da954a4c349db49a1043a24c9d9206923ab6ce46; 9_OF_9_INITIAL_FILES_CREATED",
+  "native_ingestion": "NOT_OBSERVED",
+  "packet_completion_status": "IN_PROGRESS",
+  "universal_gu_status": "OPEN",
+  "full_fei_status": "OPEN"
+}

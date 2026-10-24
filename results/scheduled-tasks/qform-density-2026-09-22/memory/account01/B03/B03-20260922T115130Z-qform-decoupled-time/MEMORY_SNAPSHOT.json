@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit": "544c895602a41304c19ebc10cec6572bc5f58351",
+  "account": "account01",
+  "slot": "B03",
+  "run_id": "B03-20260922T115130Z-qform-decoupled-time",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE(account02/B09; m=2 scope)"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B03",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b4736d3226c5ffb46bda90b98c1a7b0ac28454b3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260922T114427Z-b03-qform-a11/REPORT.md",
+    "blob": "363519157d63781d00966b0ff1dd1733d3681a49",
+    "application": "Retained exact dependence of independent-copy sum/difference variables and rejected scalar one-difference small-ball symmetrization; replaced it by a block L2/Plancherel decoupling."
+  },
+  "new_claim": {
+    "id": "QFORM-MIXED-MINOR-L2-v1",
+    "status": "PROVED_SUPPORTING_LEMMA",
+    "statement": "If disjoint coordinate sets I,J have equal size m>=3 and C=A[I,J] is invertible, then ||p_Q||_infinity <= [m/(m-2)] |det C|^(-1/m).",
+    "special_case_m3": "||p_Q||_infinity <= 3 |det A[I,J]|^(-1/3)"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f2f04d1933c12fd58c9abf12dcb8bcf2877b172c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/B03-20260922T115130Z-qform-decoupled-time/REPORT.md",
+    "blob": "e7242beb6f35026b45b970af870a02eca3010cbe"
+  },
+  "unresolved_implication": "QFORM-AGGREGATED-MIXED-MINOR-L1: aggregate many small mixed triples via determinant-weighted/Brascamp-Lieb structure to avoid dimension loss in flat rank-three frames, while preserving product structure and handling extra spectral directions.",
+  "full_brain_connected": false
+}

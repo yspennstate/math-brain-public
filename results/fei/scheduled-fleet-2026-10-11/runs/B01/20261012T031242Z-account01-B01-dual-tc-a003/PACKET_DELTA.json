@@ -1,0 +1,116 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261012T031242Z-account01-B01-dual-tc-a003",
+  "stream": "B01",
+  "packet_id": "A003",
+  "packet_ids": ["A003"],
+  "gap_id": "G-CRITICAL-STEP",
+  "related_gap_ids": ["G-R-SELECT", "G-BOOLEANITY"],
+  "attempt_id": "A003-DUAL-TC-2",
+  "bounded_objective": "Starting from the exact A003 restriction split and the A001 critical-prime normal form, derive one nonlocal information constraint forced by restriction-criticality and state the resulting dimension-independent restricted endpoint without treating it as full FEI.",
+  "method": "Sum the exact coordinate restriction inequalities, identify the chain-rule deficit as spectral dual total correlation, retain the Jensen-Shannon minority-mass terms, and combine with the source-pinned critical/diffuse descent.",
+  "prior_status": "The residual counterfamily class was restriction-critical, tensor-prime, and exponentially diffuse in every coordinate, but no global dependence statistic was controlled.",
+  "new_status": "DUAL_TC_PAYMENT_AND_RESTRICTED_ENDPOINT_AUTHOR_PROVED_PENDING_REVIEW; FULL_FEI_OPEN",
+  "mathematical_delta": "Proved Ddual(S)<=sum_i J_i<=(2/ln2)I for every restriction-critical Boolean function. Hence the subclass with Ddual>=epsilon H satisfies H<=(2/(epsilon ln2))I, while any unbounded-ratio critical counterfamily must have Ddual/H->0. Combined with prior B01 reductions, a putative counterfamily can be chosen critical, tensor-prime, exponentially diffuse, and asymptotically dual-correlation-free.",
+  "deliverable_status": {
+    "A003-D1": "ADVANCED_PENDING_INDEPENDENT_REVIEW: new nonlocal endpoint and constants added",
+    "A003-D2": "ADVANCED_PENDING_INDEPENDENT_REVIEW: low-dual-correlation residual lemma recorded",
+    "packet_target": "SUBSTANTIVE_INTERFACE_DERIVATION_PENDING_REVIEW"
+  },
+  "claim_versions_used": [
+    "B01-A003 exact restriction split",
+    "B01-A001-CRITICAL-PRIME-NORMAL-FORM-v1",
+    "B01-A001-CRITICAL-DIFFUSE-NORMAL-FORM-v1"
+  ],
+  "claims_created_or_changed": [
+    "B01-A003-DUAL-TC-PAYMENT-v1",
+    "B01-A003-DUAL-TC-RESTRICTED-FEI-v1",
+    "B01-A003-FOUR-PROPERTY-COUNTERFAMILY-NORMAL-FORM-v1"
+  ],
+  "source_plan": {
+    "source_head": "dbcba3ebb3cde77de7a4210348f6b6efabd5bc69",
+    "assignment_path": "reports/fei-2026-10-11/assignments/B01.json",
+    "assignment_blob": "ac038a028831d59ad053dd56b2b527e2a71ffdee",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "current_status_blob": "85007f41958664832e8642df23ce73e89305188e"
+  },
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "87f7c6267e56e7a0eb5b8dfd572a6eaaecae6907",
+      "path": "reports/fei-2026-10-11/runs/B01/20261011T210729Z-account01-B01-minimal-target-a003/",
+      "report_blob": "85308728bbfffe5cd3afd554cae783110fc57035",
+      "proof_blob": "3fd599db6c06961773ba9e89e9a8bd508240c689"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c8c6b995401f238e67317ab4d5b44aea6173a845",
+      "path": "reports/fei-2026-10-11/runs/B01/20261012T011119Z-account01-B01-quantifier-audit-a001/",
+      "report_blob": "662411dfae5b8d91d0b07e449c59274537492500"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "61fc36fc9f34fbc6ae8d2405fe02988d3c1d59d2",
+      "path": "reports/fei-2026-10-11/runs/B01/20261012T021256Z-account01-B01-critical-diffuse-a001/",
+      "proof_blob": "c266c0a5456b32a110e8d0b20cea7c54433c6c92"
+    }
+  ],
+  "next_consumers": ["A001", "A005", "A026", "A081", "A086", "A094", "B20"],
+  "independent_reviewers": ["A086", "A094"],
+  "next_action": "Test complete signed Boolean autocorrelations against the simultaneous low-Ddual, exponentially diffuse critical-prime regime; near tensors and sparse activations are mandatory falsifiers for any proposed positive dependence gap.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "No lower bound on Ddual/H is available in the residual class.",
+    "Tensor-primality alone is qualitative and supplies no quantitative dependence gap.",
+    "Near tensors and rare activation can approach product-like spectral laws.",
+    "Full FEI remains open."
+  ],
+  "validation": {
+    "command": "python3 verify_dual_tc_endpoint.py",
+    "observed_runtime_seconds": 3.1,
+    "random_seed": null,
+    "randomness": "NONE",
+    "arithmetic": "exact integer Walsh transforms and Fraction marginals; Decimal 80-digit entropy",
+    "function_checks": 4165,
+    "critical_functions": 1681,
+    "tensor_additivity_checks": 256,
+    "truth_tables": "exhaustive n<=3; 4096 deterministically generated n=4 masks giving 3872 unique nonconstant tables; 23 explicit mandatory controls through n=10",
+    "status": "PASS",
+    "scope_note": "The all-dimensional result is analytic; computation checks normalization, signs, endpoints, physical restrictions, and tensor additivity."
+  },
+  "literature": {
+    "primary_sources_checked": [
+      "source-pinned A003 exact restriction proof",
+      "source-pinned A001 critical-prime and diffuse proofs"
+    ],
+    "novelty_claim": "NONE; this is a campaign-internal source-bound deduction."
+  },
+  "delivery_status": {
+    "canonical": {
+      "status": "EIGHT_FILE_SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-open-problems",
+      "core_complete_commit": "7fcff9d19dd1fc6e31a3741560e31ae478b520ad",
+      "path": "reports/fei-2026-10-11/runs/B01/20261012T031242Z-account01-B01-dual-tc-a003/",
+      "verified_files": 8,
+      "report_sha256": "cafa105382281f56100ea89c17e521f807d201b1a57450f8e265616ce892eb8f"
+    },
+    "brain_mirror": {
+      "status": "EIGHT_FILE_SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-research-brain",
+      "core_complete_commit": "955b587acc9891d2024779c6e4c39636eb8fab7e",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B01/20261012T031242Z-account01-B01-dual-tc-a003/",
+      "verified_files": 8,
+      "report_sha256": "cafa105382281f56100ea89c17e521f807d201b1a57450f8e265616ce892eb8f"
+    },
+    "independent_review": "NOT YET; A086/A094 requested",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {
+    "model": "Codex as exposed by this run",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  }
+}

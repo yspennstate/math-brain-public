@@ -1,0 +1,49 @@
+== A: deterministic identities, every recursive tree with n <= 9 vertices
+   trees 46234, vertices 409113
+PASS A layer = second largest branch height; max layer = floor(diam/2) <= height
+== B: the recursion
+PASS B lbar_1 = 1/2 (got 0.49999967)
+PASS B lbar_2 = 3 - e (got 0.28171808, exact 0.28171817)
+   k=   1 lbar=4.999997e-01 l_k=2.182816e-01 median M_k=   0.6931  median - k/e - 3/(2e) log k = +0.3253  b_k=0.72233
+   k=   2 lbar=2.817181e-01 l_k=1.140940e-01 median M_k=   1.4612  median - k/e - 3/(2e) log k = +0.3429  b_k=0.86192
+   k=   5 lbar=6.457948e-02 l_k=2.346749e-02 median M_k=   3.1821  median - k/e - 3/(2e) log k = +0.4545  b_k=0.98773
+   k=  10 lbar=7.382482e-03 l_k=2.507399e-03 median M_k=   5.4826  median - k/e - 3/(2e) log k = +0.5332  b_k=1.04160
+   k=  20 lbar=1.318451e-04 l_k=4.279565e-05 median M_k=   9.5872  median - k/e - 3/(2e) log k = +0.5765  b_k=1.07984
+   k=  50 lbar=1.340871e-09 l_k=4.218470e-10 median M_k=  21.1339  median - k/e - 3/(2e) log k = +0.5812  b_k=1.13061
+   k= 100 lbar=9.751460e-18 l_k=3.034840e-18 median M_k=  39.8898  median - k/e - 3/(2e) log k = +0.5606  b_k=1.17357
+   k= 200 lbar=7.278114e-34 l_k=2.252779e-34 median M_k=  77.0320  median - k/e - 3/(2e) log k = +0.5324  b_k=1.21723
+   k= 300 lbar=6.260828e-50 l_k=1.934356e-50 median M_k= 114.0267  median - k/e - 3/(2e) log k = +0.5154  b_k=1.24153
+   min b_k = 0.7223, max b_k = 1.2415 over 1 <= k <= 300
+PASS B b_k stays in [0.5, 2] for 1 <= k <= 300
+   l_k / lbar_k at k=100,200,300: ['0.31122', '0.30953', '0.30896']  1 - e^(-1/e) = 0.30780
+PASS B l_k/lbar_k within 0.01 of 1 - e^{-1/e} at k = 300
+   step control: lbar_100 at h=0.004 vs h=0.002, relative difference 2.51e-04
+PASS B step-size control at k = 100 (relative difference < 1e-3)
+== C: direct simulation of the Poisson-weighted infinite tree (no recursion)
+   k=1: P(M_k<=3) sim 0.9493+-0.0040 vs s_k(3) 0.9502 (z=-0.22); E e^-M_k sim 0.49904+-0.00526 vs lbar_k 0.50000 (z=-0.18)
+   k=2: P(M_k<=3) sim 0.8690+-0.0062 vs s_k(3) 0.8712 (z=-0.36); E e^-M_k sim 0.28045+-0.00392 vs lbar_k 0.28172 (z=-0.32)
+   k=4: P(M_k<=3) sim 0.6113+-0.0089 vs s_k(3) 0.6079 (z=+0.39); E e^-M_k sim 0.10242+-0.00184 vs lbar_k 0.10296 (z=-0.29)
+   k=6: P(M_k<=3) sim 0.2720+-0.0081 vs s_k(3) 0.2767 (z=-0.58); E e^-M_k sim 0.04115+-0.00087 vs lbar_k 0.04111 (z=+0.05)
+   k=8: P(M_k<=3) sim 0.0717+-0.0047 vs s_k(3) 0.0682 (z=+0.73); E e^-M_k sim 0.01715+-0.00040 vs lbar_k 0.01718 (z=-0.09)
+PASS C simulation agrees with the recursion within 4 standard errors
+== D: random recursive trees
+   tree 0: n=200000 max layer 26, floor(diam/2) 26, height 29, e log n - 1.5 log log n = 29.43
+   tree 1: n=200000 max layer 27, floor(diam/2) 27, height 29, e log n - 1.5 log log n = 29.43
+   tree 2: n=200000 max layer 26, floor(diam/2) 26, height 28, e log n - 1.5 log log n = 29.43
+   tree 3: n=200000 max layer 24, floor(diam/2) 24, height 27, e log n - 1.5 log log n = 29.43
+   tree 4: n=200000 max layer 25, floor(diam/2) 25, height 25, e log n - 1.5 log log n = 29.43
+   tree 5: n=200000 max layer 26, floor(diam/2) 26, height 30, e log n - 1.5 log log n = 29.43
+   tree 6: n=200000 max layer 25, floor(diam/2) 25, height 27, e log n - 1.5 log log n = 29.43
+   tree 7: n=200000 max layer 25, floor(diam/2) 25, height 29, e log n - 1.5 log log n = 29.43
+   tree 8: n=200000 max layer 27, floor(diam/2) 27, height 27, e log n - 1.5 log log n = 29.43
+   tree 9: n=200000 max layer 25, floor(diam/2) 25, height 26, e log n - 1.5 log log n = 29.43
+PASS D max layer = floor(diam/2) <= height in every simulated tree
+   k=1: fraction at layer >= k 0.49985 vs lbar_k 0.50000  (difference -0.00015)
+   k=2: fraction at layer >= k 0.28166 vs lbar_k 0.28172  (difference -0.00006)
+   k=3: fraction at layer >= k 0.16774 vs lbar_k 0.16762  (difference +0.00012)
+   k=4: fraction at layer >= k 0.10297 vs lbar_k 0.10296  (difference +0.00000)
+   k=5: fraction at layer >= k 0.06448 vs lbar_k 0.06458  (difference -0.00010)
+   k=6: fraction at layer >= k 0.04091 vs lbar_k 0.04111  (difference -0.00020)
+   k=7: fraction at layer >= k 0.02627 vs lbar_k 0.02646  (difference -0.00019)
+PASS D layer fractions of 10 trees of size 200000 within 0.002 of lbar_k (k = 1..7)
+ALL CHECKS PASS

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T032156Z-account03-B18-QFORM-r22",
+  "theorem": "QFORM-ISOTROPIC-SHEAR-SOURCE-SEPARATED-v1",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "pseudodeterminant",
+      "identity": "abs(pdet(A))=(1+r^2)*abs(det(D))",
+      "reason": "nonzero eigenvalues of L^T D L equal those of D L L^T, with L L^T=I+u u^T"
+    },
+    {
+      "id": "scaled_zero_pivot_determinant",
+      "identity": "abs(det(K))=r^2*abs(det(D))>=r^2/(1+r^2)",
+      "reason": "K=diag(r,1,1) D' diag(r,1,1), D'11=0, and target normalization gives abs(pdet(A))>=1"
+    },
+    {
+      "id": "partner_bound",
+      "identity": "6*2^(2/3)*((1+r^2)/r^2)^(1/3)<=12 for r>=1",
+      "numeric_at_r1": 12.0
+    },
+    {
+      "id": "stress_spectrum",
+      "matrix": "[[0,0,r/s,0],[0,0,1/s,0],[r/s,1/s,0,0],[0,0,0,1]], s=sqrt(1+r^2)",
+      "spectrum": [-1,0,1,1],
+      "reason": "the hyperbolic 3x3 block has eigenvalues 0 and +/-sqrt((r/s)^2+(1/s)^2)=0,+/-1"
+    },
+    {
+      "id": "stress_bound",
+      "identity": "6*((1+r^2)/r^2)^(1/3)<=6*2^(1/3) for r>=1",
+      "numeric_upper": 7.559526299369239
+    },
+    {
+      "id": "partner_r3_gate_failure_on_stress",
+      "values": {"p":[1,1,1],"q":[0,1,1],"p_plus_q":[1,2,2]},
+      "conclusion": "latest account04/B18 r3 condition p_j+q_j<=1 fails on two residual rows"
+    },
+    {
+      "id": "continuity_scope",
+      "status": "PROVED_ONLY_FOR_NEW_BRANCH",
+      "source": "account04/B18 zero-pivot 1+2 theorem"
+    }
+  ],
+  "full_target_status": "OPEN_NOT_PROVED"
+}

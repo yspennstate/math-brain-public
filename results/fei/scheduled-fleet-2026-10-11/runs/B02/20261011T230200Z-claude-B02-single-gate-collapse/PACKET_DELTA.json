@@ -1,0 +1,45 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T230200Z-claude-B02-single-gate-collapse",
+ "stream": "B02",
+ "packet_id": "A006",
+ "gap_id": "C020-whole-set-witness-cost",
+ "attempt_id": "claude-B02-1",
+ "method": "specialize thm:posteriorforest to one gate; exact spectra by integer FWHT; closed forms for tribes; partial independent review of A006/A007",
+ "mathematical_delta": "Single-gate collapse (root costs cancel exactly) and its one-order closed form; proof that every single-gate table fails on tribes by log m while the block forest stays bounded (13.40 limit).",
+ "deliverable_status": "complete",
+ "mathematical_status": "PROVED (L1, L2, O1); partial reviews CERTIFIED; PI-J OPEN",
+ "claim_versions_used": [
+  "C020",
+  "C018"
+ ],
+ "claims_created_or_changed": [
+  "B02-L1-single-gate-collapse",
+  "B02-L2-one-order-closed-form",
+  "B02-O1-tribes-single-gate-obstruction",
+  "B02-R-A006-partial",
+  "B02-R-A007-partial",
+  "B02-T-PIJ"
+ ],
+ "source_artifacts": [
+  "forests.tex lines 1-135",
+  "agents/A006,A007,A008 run reports"
+ ],
+ "next_consumers": [
+  "A006",
+  "A007",
+  "A008",
+  "A009",
+  "A010",
+  "A086",
+  "A094"
+ ],
+ "next_action": "Independent review of L1/L2/O1 by A086 or A094; PI-J on Majority_n (A006); block-forest positive side for read-once DNF (A008).",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "review cap exceeded in B02 (A006, A007, A008 unreviewed as wholes)"
+ ],
+ "packet_ids": [
+  "A006"
+ ]
+}

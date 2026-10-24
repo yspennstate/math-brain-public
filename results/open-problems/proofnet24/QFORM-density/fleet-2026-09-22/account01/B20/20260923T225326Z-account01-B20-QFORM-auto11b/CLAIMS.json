@@ -1,0 +1,52 @@
+{
+  "run_id": "20260923T225326Z-account01-B20-QFORM-auto11b",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "full_target_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "completed_partner": {
+    "account": "account02",
+    "slot": "B20",
+    "run_id": "20260923T200300Z-account02-B20-QFORM-auto11",
+    "canonical_commit": "edefefbd4d25c1c870330eb976e47a9356f7f4a0",
+    "claim": "QFORM-R37-EXACT-COMMONGRAM-THIRDMODE-ESCAPE-v1",
+    "applied_at_equation": "s3(A')>3/4 implies max(||PAQ||,max_i||Delta_i||,||QAQ||)>3/8"
+  },
+  "new_claims": [
+    {
+      "claim_id": "QFORM-R37-FINITE-COLLAR-ABSOLUTE-BRIDGE-v1",
+      "status": "PROVED_SUPPORTING_IMPLICATION",
+      "hypotheses": [
+        "canonical r37 diffuse common-frame packet",
+        "s2(A_b),s2(B_b)>a_D",
+        "D_ba=D_ab^T",
+        "s2(C)>=c",
+        "max_b ||A_b||<=M",
+        "||C||<=M"
+      ],
+      "conclusion": "either a Schur defect >=delta_* is paid by physical E3, or an exact common-Gram comparison A' within operator distance <1/4 forces a self/PQ/QQ escape >3/8",
+      "delta_star": "c/[8(21M^2/a_D+2M)]"
+    },
+    {
+      "claim_id": "QFORM-R37-COLLECTIVE-TAIL-NONARM-LOCALIZATION-v1",
+      "status": "PROVED_STRENGTHENING",
+      "conclusion": "after the robust 3/8 escape, the retained source Frobenius tail localizes a non-self escape to a non-arm physical P-Q block >0.0876018373961 or Q-Q block >0.0758654166033"
+    },
+    {
+      "claim_id": "QFORM-R37-MODERATE-NONDEGENERATE-SCHUR-PAYMENT-v1",
+      "status": "PROVED_SUBBRANCH_PAYMENT",
+      "hypotheses": ["c=a_D", "M=1", "some Schur defect >=3.4519198584090405e-8"],
+      "conclusion": "full ambient density <180337 with continuous C0 representative"
+    }
+  ],
+  "next_implication": "QFORM-R37-C-SMALL-OR-HIGHSCALE-OR-NONARM-THIRDMODE-PAYMENT-v1",
+  "corrections_preserved": [
+    "no uniform pointwise quadratic oscillatory decay",
+    "no dimension-free worst-fibre supremum",
+    "no arbitrary-joint coarea substitution",
+    "no conditional-cap-as-independence",
+    "no independence after spectral rotation",
+    "no deletion of a nonzero small random quadratic tail",
+    "no one-good-minor inference from aggregate volume"
+  ]
+}

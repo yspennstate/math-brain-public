@@ -1,0 +1,42 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w336",
+  "bundle_slug": "w336-c0020-checked-attempt-20261010",
+  "audit_status": "PENDING_W346_KEEP; do not promote to audited or solved",
+  "entries": [
+    {
+      "key": "query-cost-does-not-bound-revealment-uniformly",
+      "namespace": "probability.boolean-functions",
+      "logical_name": "query-cost-does-not-bound-revealment-uniformly",
+      "kind": "lemma",
+      "title": "Expected query cost does not bound each revealment by its average",
+      "statement": "For exact algorithms on N bits, expected distinct query cost equals the sum of coordinate revealments, but no universal K bounds every revealment by K times cost/N. Fixed-order OR on fair bits has first revealment 1 and cost 2*(1-2^(-N)). Also any exact algorithm of cost o(N) can be padded by querying a fixed bit first, retaining cost at most the original cost plus one and revealment 1 at that bit. Thus a sublinear crossing query budget alone does not justify a uniform average-revealment premise.",
+      "proof_text": "# C0020: query budget does not give uniform revealment\n\nStatus: proof written; w346 KEEP pending. No improvement of the source's percolation complexity exponent interval is claimed.\n\nFor an exact decision algorithm on N bits, let delta_i be the probability that bit i is queried and C the expected number of distinct bits queried. Then C=sum delta_i, but there is no universal constant K such that delta_i<=K*C/N for all algorithms and all coordinates.\n\nProof: for the OR of N independent fair bits, scan in a fixed order and stop at the first 1 or after all N reads. This is exact, delta_1=1, and C=sum_{j=0}^{N-1}2^(-j)=2*(1-2^(-N)). Thus delta_1/(C/N) grows like N/2. The function itself is symmetric; an algorithm need not preserve that symmetry.\n\nMore directly for the crossing problem, take any exact algorithm A_N with C(A_N)=o(N) and first query a chosen fixed bit, then execute A_N, caching that observation if it is requested again. The modified algorithm is still exact, has expected distinct query cost at most C(A_N)+1=o(N), and that bit's revealment is 1. Therefore a uniform O(C/N) bound does not follow from a sublinear query budget even for that function. The crossing upper bound recorded in the source gives such a sublinear budget relative to N=Theta(n^2).\n\nThe previous attempt's calculation was conditional on such a uniform bound; its algebra is not refuted. The missing uniformity premise requires an actual symmetrization argument with a transitive action on all input coordinates. A rectangular crossing has no supplied action that mixes every bulk and boundary bit in this way.\n\nChecks: exhaustive fair-bit inputs for OR on N<=12, exact expected query counts, and revealment ratios. This rules out a shortcut; it supplies no new crossing lower bound.\n",
+      "assumptions": [
+        "All hypotheses and scope restrictions in the statement apply."
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:campaign:w336:C0020:query-cost-does-not-bound-revealment-uniformly",
+        "url": "~\\brain_workers\\w336\\proofs\\C0020.md",
+        "revision": "author-proof-2026-10-10; independent audit w346 pending",
+        "license": "owner-own-work; campaign proof, no novelty claim",
+        "excerpt": "For exact algorithms on N bits, expected distinct query cost equals the sum of coordinate revealments, but no "
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "query-cost-does-not-bound-revealment-uniformly",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0020-optimal-exponent-for-the-computational-complexity-of-randomised-algori",
+      "kind": "cites",
+      "rationale": "New: \"For exact algorithms on N bits, expected distinct query cost equals the sum of coordinate revealments, but no universal K bounds every revealment by K times cost/N. Fixed-order OR \"; existing: \"Find the smallest sigma such that there are randomised algorithms A_n deciding the left-right crossing f_n of an n x n box in critical percolation with computational complexity C(A_n) <= n^sigma; known sigma in [6/4, 7/4].\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
+    },
+    {
+      "from_key": "query-cost-does-not-bound-revealment-uniformly",
+      "to_existing_logical": "math:probability.percolation:attempt-c0020-optimal-exponent-for-the-computational-complexity-of-randomised-algori",
+      "kind": "cites",
+      "rationale": "New: \"For exact algorithms on N bits, expected distinct query cost equals the sum of coordinate revealments, but no universal K bounds every revealment by K times cost/N. Fixed-order OR \"; existing: \"The exploration algorithm reveals the pivotal-rich interface, of expected size n^{7/4+o(1)}, giving sigma <= 7/4. The lower bound 6/4 in the notes comes from Theorem VIII.6 (revealment times complexity). A better lower bound would follow fr\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
+    }
+  ]
+}

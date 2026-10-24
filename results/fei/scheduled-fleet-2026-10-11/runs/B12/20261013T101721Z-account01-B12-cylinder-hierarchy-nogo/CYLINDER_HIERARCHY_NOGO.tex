@@ -1,0 +1,70 @@
+\section*{An unbounded-depth cylinder obstruction to the full-influence telescope}
+
+All logarithms are natural.  Let $s_0$ be the indicator of
+$\{000,001,010\}\subset\mathbb F_2^3$.  These are three distinct parallel
+affine cosets of the zero subspace.  With an independent selector
+$x\in\{-1,1\}$ put
+\[
+ d_0(x,z)=\mathbf1_{\{x=-1\}}s_0(z),\quad
+ a_0=x+d_0,\quad F_0=x+2d_0,
+\]
+and
+\[
+ \Omega_0=\mathcal E_{\rm raw}(F_0)
+ -\mathcal E_{\rm raw}(a_0)-\mathcal E_{\rm raw}(d_0).
+\]
+
+The exact parallel-triple spectrum and selector identity give
+\[
+ \Omega_0=
+ \frac{169}{128}\log13-\frac{45}{128}\log3
+ -\frac{25}{32}\log5-2\log2
+ =0.356636085579521\ldots>0.                         \tag{1}
+\]
+Positivity has the integer certificate
+\[
+ 13^{169}>3^{45}5^{100}2^{256}.                        \tag{2}
+\]
+The exact physical influence is
+\[
+ I(d_0)=\frac14.                                       \tag{3}
+\]
+
+For $L\ge1$, adjoin free physical variables $t_1,\dots,t_L$ and define
+$d_L(x,z,t)=d_0(x,z)$.  Query the free variables successively, at every node
+of the complete binary restriction tree.  This hierarchy is pathwise
+coordinate-nonreusing.  Every reached restriction is the same local source
+$d_0$ tensored with the remaining free coordinates, so every internal node
+has associator $\Omega_0$.  The activation weights on every depth sum to one.
+Consequently
+\[
+ \sum_{v\text{ internal}}w_v\Omega_v=L\Omega_0,
+ \qquad I(d_L)=I(d_0)=\frac14.                        \tag{4}
+\]
+It follows that
+\[
+ \frac{\sum_vw_v\Omega_v}{I(d_L)}=4L\Omega_0
+ \longrightarrow\infty.                              \tag{5}
+\]
+
+\paragraph{No-go theorem.}
+There is no finite constant $C$ such that
+\[
+ \sum_vw_v\Omega_v\le C I(d)
+\]
+for every adaptive pathwise-coordinate-nonreusing hierarchy of restrictions
+of one source, even when every nonempty local source is a union of exactly
+three parallel affine cosets.
+
+The same family also refutes a directional repair that charges the newly
+queried/owned coordinate block: every queried dummy direction has zero
+influence, while $\Omega_v=\Omega_0>0$.  A valid hierarchy statement must
+therefore change the event accounting.  It may charge only structural
+composition/activation events, require disjoint ownership of the full active
+derivative support, or retain a terminal reserve whose value is not charged
+again at unchanged cylinder nodes.
+
+This is an obstruction to a helper telescope, not to FEI.  The composed
+outputs are genuine Boolean functions, and adjoining dummy variables changes
+neither their Fourier entropy nor their influence.
+

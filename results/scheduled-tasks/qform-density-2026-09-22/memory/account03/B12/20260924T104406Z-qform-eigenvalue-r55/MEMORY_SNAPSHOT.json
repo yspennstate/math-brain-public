@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260924T104406Z-qform-eigenvalue-r55",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_commit_prepublication": "4b9131a2ec2f3cfd000c460f4bd748f3ee5c0a9d",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "correction_inbox_blob": "ba7aeac3d879f59da5ec8a12daad74ea85714465",
+  "math_repository": "yspennstate/math-open-problems",
+  "math_commit": "218924cfadf3a45d0f5455c2f0320ed094e5318b",
+  "math_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260924T104406Z-qform-eigenvalue-r55/REPORT.md",
+  "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260924T104406Z-qform-eigenvalue-r55/CHECK_RESULTS.json",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B12/20260924T104406Z-qform-eigenvalue-r55.md",
+  "handoff_commit": "f37b6eadf83d08ff3bfaa9a6d5da6af7381194b4",
+  "status": "PROVED_189_LARGE_EIGENVALUE_CLOSURE_FULL_TARGET_OPEN",
+  "result_ids": [
+    "QFORM-189-LARGE-EIGENVALUE-CLOSURE-v1"
+  ],
+  "proved": [
+    "If A has at least 189 eigenvalues with absolute value at least one, then every independent cap-one product input gives X^T A X a continuous C0 density with universal bound <3060011.",
+    "At spectral threshold 1/512 and leverage threshold 213/2500, 47 heavy physical coordinates force a five-mode square-energy carrier; otherwise at most46 heavy coordinates can be projected out and MSS plus two rank-2h losses leaves five cross singular directions when r1>=189.",
+    "The remaining spectrum is unrestricted in number, sign, multiplicity and orientation; the low spectral tail is charged only through deterministic operator norm, never independent convolution.",
+    "The full conjecture therefore reduces to matrices with at most188 eigenvalues of absolute value at least one."
+  ],
+  "partner_result_applied": "account04/B12 r8 @bcb9fd2641440a89d6e4967781d755618e163001: for m=10,p=2,ell=8,s2(Lambda)>=4,s8(R)>=2,slope<=1/2, s10>=(sqrt17-1)/2; a rank<=5 local carrier addition and tail <=1/20 leave s5>=1.5115528128 and continuous density <19.461.",
+  "source_dependencies": [
+    "account03/B12 r47 five-square-mode compiler @7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1",
+    "interactive one-scale ridge/MSS theorem @9c1167db05c7b0f520f060796fde921ed769a4e7",
+    "account03/B12 r54 square-order physical monotonicity @de50ec1784dcc262198255b7628fb87d02b8f2e2",
+    "account04/B12 r8 multihub shear @bcb9fd2641440a89d6e4967781d755618e163001"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "checks": "Two seeded 10000-instance sanity suites; zero violations; analytic proof is primary.",
+  "unresolved_implication": "The owner target assumes only three large eigenvalues. The finite-large-spectrum sector is closed only for r1>=189; the sector 3<=r1<=188 remains and can still carry arbitrarily many smaller signed eigenvalues.",
+  "next": "Lower the 189 threshold by replacing one or both five-mode endpoints with a three-resource receiver, or prove that the remaining finite-large-spectrum no-five-mode configurations force an already-paid grouped-hub/projected-crossing/ridge/Schur/pair/common-plane/Pluecker exit.",
+  "full_target_status": "OPEN",
+  "continuity_status": "PROVED_FOR_R1_GE_189_SUBTHEOREM; OPEN_FOR_UNRESTRICTED_TARGET",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "privacy_review": "Manual changed-file allowlist review only; no credentials, account secrets, unrelated data, or private personal material included. No installation or remote workflow used."
+}

@@ -1,0 +1,122 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T225000Z-claude-B08-tc-restriction-ledger",
+ "stream": "B08",
+ "written_utc": "2026-10-11T23:33:40Z",
+ "claims": [
+  {
+   "claim_id": "B08-TC-RESTRICTION-LEDGER",
+   "version": 1,
+   "exact_statement": "For every n>=1 and every f:{0,1}^n->{-1,1} with spectral law P=fhat^2 (base-2 logs), every coordinate i and children g_s=f restricted to x_i=s (s=0,1): TC(f) = I_P(S_i;S_-i) - JS(P_{g_0},P_{g_1}) + Gamma_i + (TC(g_0)+TC(g_1))/2, where TC(g)=D(P_g||prod_j Ber(Inf_j(g)))=sum_j h2(Inf_j(g))-H(P_g) and Gamma_i=sum_{j!=i} JS(Ber(Inf_j(g_0)),Ber(Inf_j(g_1)))>=0. Consequently, for every adaptive restriction tree with internal nodes h (weight p_h=2^-depth, restricting coordinate i_h of node function g_h) and leaves l: sum_h p_h I_h + sum_h p_h Gamma_h + sum_l p_l TC(g_l) = TC(f) + sum_h p_h JS_h, and the posterior credit satisfies sum_h p_h I_h <= TC(f) + (2/ln2) I(f); the erasure paid is sum_h p_h B_h = sum_h p_h h2(Inf_{i_h}(g_h)) - sum_h p_h I_h.",
+   "hypotheses": [
+    "uniform measure on {0,1}^n",
+    "f takes values in {-1,1}",
+    "logs base 2 with 0 log 0 = 0",
+    "C005 bound JS_i <= (2/ln2) min(Inf_i, 1-Inf_i) (used only for the credit cap)"
+   ],
+   "statement_sha256": "4c9e0eca26470e72e31dfcc40ef10de30b227270e52205cd0cbb60ea285799a4",
+   "contributors": [
+    "claude-B08-lead"
+   ],
+   "proof_source": "runs/20261011T225000Z-claude-B08-tc-restriction-ledger/REPORT.md sections 3.1-3.2; exact census code/b08_checks.py Part A (all 65,536 4-bit f, each coordinate, 0 failures)",
+   "proof_dependencies": [
+    "C005 (JS bound, for the credit cap only)"
+   ],
+   "review_records": [
+    {
+     "reviewer": "A039",
+     "kind": "independent reconstruction of the one-step identity (statement seen in B08 notes v1; derivation its own)",
+     "result": "agrees",
+     "source": "agents/A039/runs/20261011T223903Z-account05-A039-projection-under-restrictions/DERIVATION.md"
+    },
+    {
+     "reviewer": "A088/A094",
+     "kind": "designated review",
+     "result": "pending"
+    }
+   ],
+   "status": "AUTHOR_PROVED_EXACT_N4_CENSUS_PENDING_INDEPENDENT_REVIEW",
+   "supersedes": [],
+   "refutes": [],
+   "first_unproved_line": null,
+   "first_unproved_line_for_FEI_use": "there is a restriction tree with sum_h p_h h2(Inf_{i_h}(g_h)) - sum_h p_h I_h + E H(g_l) <= C I(f)",
+   "next_consumers": [
+    "A040",
+    "A037",
+    "A039",
+    "A088",
+    "A094",
+    "C023",
+    "C024"
+   ]
+  },
+  {
+   "claim_id": "B08-EDGE-RATIO-FEI-EQUIVALENCE",
+   "version": 1,
+   "exact_statement": "For every n>=1 and every f:{0,1}^n->{-1,1} with spectral law P=fhat^2, let M_edge(f)=sum_S P(S) sum_{i in S} log2(1+P(S\\{i})/P(S)) (terms with P(S)=0 omitted) and B(f)=sum_i H(S_i|S_-i). Then M_edge(f) <= B(f) <= M_edge(f) + log2(e) I(f). Hence FEI holds with an absolute constant if and only if there is an absolute K with M_edge(f) <= K I(f) for all Boolean f; FEI with constant C gives K<=C, and K gives FEI with C <= K + log2(e) + 2/ln2.",
+   "hypotheses": [
+    "uniform measure on {0,1}^n",
+    "f takes values in {-1,1}",
+    "logs base 2",
+    "B <= H (dual total correlation is nonnegative)",
+    "C018: B(g) <= K' I(g) for all Boolean g implies FEI with C <= K' + 2/ln2 (reverse direction only)"
+   ],
+   "statement_sha256": "b8d0048409223440413dd1e252812bb2ece93e45c642bc936662e6c0d407bd23",
+   "contributors": [
+    "claude-B08-lead"
+   ],
+   "proof_source": "runs/20261011T225000Z-claude-B08-tc-restriction-ledger/REPORT.md section 3.3; n=4 exhaustive check Part B (0 violations of either inequality)",
+   "proof_dependencies": [
+    "C018 (reverse direction)"
+   ],
+   "review_records": [
+    {
+     "reviewer": "A088/A094",
+     "kind": "designated review",
+     "result": "pending"
+    }
+   ],
+   "status": "AUTHOR_PROVED_REFORMULATION_PENDING_INDEPENDENT_REVIEW",
+   "supersedes": [],
+   "refutes": [],
+   "first_unproved_line": "M_edge(f) <= K I(f) for all Boolean f, with K absolute (equivalent to FEI; open)",
+   "next_consumers": [
+    "A036",
+    "A040",
+    "A088",
+    "A094",
+    "G-R-MISMATCH"
+   ]
+  }
+ ],
+ "reviews": [
+  {
+   "target": "A036-POINT-DEFECT-TENSOR-NORMALIZED-PAYMENT-RECOVERY v1 (sha ca9f2080...)",
+   "reviewer": "claude-B08-lead",
+   "verdict": "ACCEPT_AT_SCOPE_AFTER_RENAME",
+   "notes": "Profile v_U = 4^k (d(1-d))^k [1-2^(2-k)(1-d)^(m-k)]^2 re-derived (R_U = 2^k - 4(1-d)^(m-k)) and exact for m=2..7; Z(3)=319/256; K, M, T, I additive over disjoint tensors so per-factor inequalities suffice; per factor they hold for m=2..40 at 80 digits (evidence only for the all-m part). A036's 'B' is sum_i h2(d_i)=M, not C018's B: rename before any C018 use. Calibration on a class with H<=4I already known.",
+   "evidence": "runs/20261011T225000Z-claude-B08-tc-restriction-ledger/out/checks.json partC_A036"
+  },
+  {
+   "target": "A037-CONDITIONAL-CREDIT-CONSERVATION v1 and A037-PHYSICAL-SPECTRAL-COMMON-LIFT v1",
+   "reviewer": "claude-B08-lead",
+   "verdict": "ACCEPT_AS_BOOKKEEPING",
+   "notes": "Lift identity reduces to C005 telescoping (Y_h independent of S_0 given path and S_h minus i_h, so I(S_0;L)=sum p_h JS_h). Exact on all 256 3-bit functions x 12 depth-2 trees (3,072 cases), fair branches. Pays no new term.",
+   "evidence": "runs/20261011T225000Z-claude-B08-tc-restriction-ledger/out/checks.json partD_A037_lift"
+  },
+  {
+   "target": "A038-OCCUPANCY-CROSSLAW-AUDIT v1",
+   "reviewer": "claude-B08-lead",
+   "verdict": "CONSISTENT_NOT_REPROVED",
+   "notes": "Cross-check: T/(4I)-(m-7) >= 2.55 for m=8..40 and tends to 4, consistent with T/(4I) > m-7.",
+   "evidence": "runs/20261011T225000Z-claude-B08-tc-restriction-ledger/out/checks.json partC_A036.inequalities_mpmath80_evidence"
+  },
+  {
+   "target": "A039 compensated TC identity and Gamma-price refutation (claims file not yet present at 23:13Z)",
+   "reviewer": "claude-B08-lead",
+   "verdict": "AGREES",
+   "notes": "Identity equals (L1); exact 4-bit census agrees. Refutation matches the AND_n bound Gamma_i >= (n-1) Inf_i (phi(d)>=d).",
+   "evidence": "runs/20261011T225000Z-claude-B08-tc-restriction-ledger/out/checks.json partA, partE"
+  }
+ ]
+}

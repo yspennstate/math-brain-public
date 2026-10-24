@@ -1,0 +1,42 @@
+[
+  {
+    "claim_id": "A093-GMP26-CONSTANT-CORRECTION",
+    "version": "v1",
+    "exact_statement": "For uniform Boolean f, GMP26 v2 Corollary 4.2 cannot replace Delta_i H<=K I_i by E_i<=K I_i with the same K: two-variable AND at K=2 has Delta_i H=2, E_i=1, I_i=1/2. Its printed (20) binary-entropy bound fails at t=1/2. Retaining R_i gives Delta_i H=E_i+R_i, 0<=R_i<=4I_i, hence E_i<=K I_i implies Delta_i H<=(K+4)I_i.",
+    "hypotheses": [
+      "f:{-1,1}^n->{-1,1}, uniform measure",
+      "Entropy in bits; influence I_i=sum_{S containing i} fhat(S)^2",
+      "E_i=sum_T (a_T^2+b_T^2)/2 * h2((a_T-b_T)^2/(2(a_T^2+b_T^2))); zero fibers omitted",
+      "a_T and b_T are Fourier coefficients of the plus/minus restrictions"
+    ],
+    "statement_sha256": "ff544ec38d02670df91150cfd8dfa450a18f833e453cc7aa57f10cf3ca6cb5f7",
+    "contributors": [
+      "A093"
+    ],
+    "proof_source": [
+      "REPORT.md, complete derivation",
+      "code/check_witness.py",
+      "out/EXACT_WITNESS.json",
+      "out/gmp26.pdf, (20), Corollary 4.2, Appendix (32)"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "GMP26 arXiv:2606.00246v2 equation (20) as printed",
+      "GMP26 arXiv:2606.00246v2 Corollary 4.2 same-K replacement"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B19 lead",
+      "A090",
+      "A085",
+      "A041",
+      "A069",
+      "A095",
+      "A099",
+      "A100"
+    ]
+  }
+]

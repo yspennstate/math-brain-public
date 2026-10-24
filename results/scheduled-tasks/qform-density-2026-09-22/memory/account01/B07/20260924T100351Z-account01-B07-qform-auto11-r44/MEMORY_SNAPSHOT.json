@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "20260924T100351Z-account01-B07-qform-auto11-r44",
+  "control_start_commit": "f3d703b285a07de11c66e93928eaa54b9fa5321f",
+  "control_prepublication_commit": "c6a65cec1540b9f0a0bf422fc620e53838f0e2a0",
+  "control_revision": "2026-09-22.15",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "premises": [
+    {
+      "name": "QFORM-EXACTSINGULAR-ANCHORED-C4-SCHUR-SHADOW-v1",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "0d782a4c89b6e45e7e38a4aedd3eeb38cda538a7",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/20260924T070328Z-account01-B07-qform-auto11-r43/REPORT.md",
+      "scope": "exact-singular physical-pair branch; anchored 4-minor matrix equals scaled transverse Schur compression"
+    },
+    {
+      "name": "QFORM-BALANCED-RANKR-CUT-v1 plus r51 source-refresh crossing upgrade",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "0489be649867dd226d4b6cea9ded74c973f19d46",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260924T093902Z-account02-B07-qform-r51/REPORT.md",
+      "scope": "finite-rank symmetric physical approximant; literal physical cut; applied here with rank 3 and leverage <=1/12"
+    },
+    {
+      "name": "QFORM-Z3-CROSSING-MARGINAL-FREE-v1",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "df738b7f0821d9af56dfd992cab10ecc6704e3fb",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260923T184716Z-account02-B03-QFORM-auto11/REPORT.md",
+      "scope": "actual original-coordinate physical crossing with positive third volume; arbitrary same-side curvature and affine/outside terms"
+    },
+    {
+      "name": "Theorem D volume-sampling crossing",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "source_path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "scope": "physical crossing with row third-volume marginals <=1/2"
+    }
+  ],
+  "new_results": [
+    {
+      "name": "QFORM-Z3-HEAVYDELETE-OR-PIVOTSTAR-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "summary": "Any physical E3 determinant law either admits row/column heavy deletion retaining >=Z/3 with all retained row marginals <=1/2, or one literal row-column pivot carries complete fixed-pivot third-minor packet >Z/972. The packet equals m^2 e2(SS^T) for nonzero scalar pivot and equals ||c||^2||r||^2||P_cperp N P_rperp||_F^2 on the zero-pivot face."
+    },
+    {
+      "name": "QFORM-EXACTSINGULAR-C4-PHYSICAL-RANK3-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "summary": "The r43 exact-singular anchored-C4 state gives the unchanged original residual principal block C=R_C+T with rank R_C<=3 and ||T||op=||F_H^(4)||op/gamma, gamma>=7/96."
+    },
+    {
+      "name": "r51 physical-cut payment on diffuse small-C4 rank-three state",
+      "status": "PROVED_CONDITIONAL_RECEIVER",
+      "summary": "If rank R_C=3, sigma=s3(R_C), range leverage <=1/12, and ||F_H^(4)||op <=(7/768)sigma, partner r51 yields an actual residual crossing with s3>=sigma/8; the marginal-free crossing theorem gives a continuous full-ambient density bound <=84.4013506493182/sigma."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e192b40cf28c79aeb0dd3c7abcbf96f69a8f764f",
+    "directory": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/20260924T100351Z-account01-B07-qform-auto11-r44/",
+    "report": "REPORT.md",
+    "prepublication_addendum": "PREPUBLICATION_ADDENDUM.md",
+    "checks": ["CHECKS.py", "CHECKS.txt"]
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B07/20260924T100351Z-account01-B07-qform-auto11-r44.md",
+    "commit": "dd1a957bb191ce722c8101191a1f58767075d0bf"
+  },
+  "unresolved_implication": "Spend the relatively large anchored-C4 packet, the <=35-coordinate heavy rank-three range, or the physical rank<=2 residual together with the exact-singular pair; and route overlap-one/two third-compound mass through the complete pivot-star interface without losing determinant weights.",
+  "next_step": "QFORM-C4-LARGE-OR-HEAVY-R3-OR-R2-RESIDUAL-RECEIVER-v1 / QFORM-PIVOTSTAR-COMPOUND-OVERLAP-ROUTER-v1",
+  "full_target_status": "OPEN",
+  "continuity_full_target_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "thinking_level": null,
+  "reasoning_tokens": null,
+  "provider_thinking_time": null
+}

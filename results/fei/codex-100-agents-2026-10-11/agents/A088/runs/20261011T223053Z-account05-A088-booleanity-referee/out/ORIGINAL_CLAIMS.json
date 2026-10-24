@@ -1,0 +1,549 @@
+[
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261011T214115Z-account05-A031-convolution-identity\\CLAIMS.json",
+    "source_sha256": "8df5421874d7353170b581440363e8bb7c96333b77c3b70ffb35b21ce861a584",
+    "claim": {
+      "claim_id": "A031-SIGNED-ENTROPY-ANCHOR",
+      "version": 1,
+      "exact_statement": "For every finite uniform-cube Boolean sign f, let a_S=fhat(S), p_S=a_S^2, ell_S=log2(1/p_S) on positive atoms and a_S ell_S=0 otherwise, c_U=sum_S a_S a_(S xor U) ell_S, E_log=sum_(U nonempty)|U|c_U^2, and J_R=sum_(U nonempty)p_(R xor U)/|U|. Every occupied R obeys p_R[H(f)-ell_R]^2<=J_R E_log; also sum_(U nonempty)c_U^2=Var_p(ell). For a largest atom, H(f)<=ell_R+sqrt(J_R E_log/p_R).",
+      "hypotheses": [
+        "Finite uniform cube",
+        "Genuine Boolean sign",
+        "Entropy in bits",
+        "Definitions and zero conventions in DERIVATION.md"
+      ],
+      "statement_sha256": "e9a7f192c2df83c229a7cfd2c6f88992f84e39cf2da61142a8e013c4e9030c95",
+      "contributors": [
+        "account05/A031"
+      ],
+      "proof_source": {
+        "path": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261011T214115Z-account05-A031-convolution-identity\\DERIVATION.md",
+        "sha256": "1d6bc376f6b158b32fa6046519470f65e7d6f8558d090a5ca1e3fcc7defddbb8"
+      },
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A088",
+        "A094",
+        "A034",
+        "A035",
+        "B14",
+        "B20"
+      ]
+    }
+  },
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261011T214115Z-account05-A031-convolution-identity\\CLAIMS.json",
+    "source_sha256": "8df5421874d7353170b581440363e8bb7c96333b77c3b70ffb35b21ce861a584",
+    "claim": {
+      "claim_id": "A031-ANCHOR-POSITIVE-PAYMENT-NOGO",
+      "version": 1,
+      "exact_statement": "There is no finite universal K with E_log(f)<=K I(f), nor any finite universal K with sqrt(J_R E_log(f)/p_R)<=K I(f) for the largest-atom anchor R of every Boolean f. The first is refuted by n-bit one-point defects with E_log/I~4n^2; the second by disjoint tensor powers of the three-bit point defect, whose anchor cost is exponentially large while influence is linear.",
+      "hypotheses": [
+        "Finite uniform cube",
+        "Genuine Boolean sign",
+        "Entropy in bits",
+        "Definitions and zero conventions in DERIVATION.md"
+      ],
+      "statement_sha256": "9bd6c083fcc52f8c5620dd69e770a89e45a9128eebf7c0860abeb8c228edd605",
+      "contributors": [
+        "account05/A031"
+      ],
+      "proof_source": {
+        "path": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261011T214115Z-account05-A031-convolution-identity\\DERIVATION.md",
+        "sha256": "1d6bc376f6b158b32fa6046519470f65e7d6f8558d090a5ca1e3fcc7defddbb8"
+      },
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "universal E_log<=K I",
+        "universal largest-atom positive anchor cost<=K I"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A088",
+        "A094",
+        "A034",
+        "A035",
+        "B14",
+        "B20"
+      ]
+    }
+  },
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A032\\runs\\20261011T215947Z-account05-A032-boolean-phase-realizability\\CLAIMS.json",
+    "source_sha256": "fae352a692555eed28bddba848bd50c42110b24f2d0ca04d685f63469388f485",
+    "claim": {
+      "claim_id": "A032-EXACT-PHASE-ADMISSION",
+      "version": 1,
+      "exact_statement": "For every uniform Boolean cube, a spectral probability law supported on at most four labels is realizable iff it is a singleton of mass1 or the uniform law on an affine plane. A uniform affine-subspace law of dimension r is realizable iff r is even, and then H=r<=2D<=2I. For arbitrary supported laws, phase realizability is equivalent to phase realizability on the support affine-span quotient. The labelled four-variable law with Walsh magnitudes (8,8,4,4,4,4,4,4,4,4,0,0,0,0,0,0) and denominator256 passes all15 separate XOR pair partitions but has no realizing phase (all512 phases certified). Complete exact enumeration on n=4 yields2261 distinct Boolean spectral laws among975621 magnitude laws satisfying square norm and necessary even/common-mod4 arithmetic.",
+      "hypotheses": [
+        "Finite uniform cube; real Boolean outputs +/-1",
+        "Labelled full spectral law, not an unlabelled mass histogram",
+        "D=sum_i min(Inf_i,1-Inf_i); H in bits",
+        "Finite enumeration fixes n<=4; all-dimensional claims proved analytically"
+      ],
+      "statement_sha256": "de3e9399aa5e54bb287cc8ee93cf44cb8dd9039a611c0dda64ea62ffe7ffdb3e",
+      "contributors": [
+        "A032"
+      ],
+      "proof_source": [
+        "REALIZABILITY_METHOD.md",
+        "out/coupled_phase_certificate.json",
+        "code/enumerate_exact.py",
+        "out/summary_n4.json",
+        "code/verify_direct.py"
+      ],
+      "proof_dependencies": [],
+      "review_records": [
+        {
+          "reviewer": "A032 author",
+          "method": "separate direct character-sum reconstruction of all2299 law witnesses and direct signed-convolution rejection of all512 candidate phases",
+          "verdict": "PASS; NOT INDEPENDENT REVIEW"
+        }
+      ],
+      "status": "PROVED_WITH_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "Separate exact XOR pair partitions are sufficient for one common Boolean phase"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A031",
+        "A033",
+        "A034",
+        "A045",
+        "A078",
+        "A079",
+        "A088",
+        "A094"
+      ]
+    }
+  },
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A033\\runs\\20261011T221704Z-account05-A033-derivative-hierarchy\\CLAIMS.json",
+    "source_sha256": "1f406554ba3920f21994c142a2c74ac9337cdc934c8f7e6054d50bcac014a969",
+    "claim": {
+      "claim_id": "A033-DIRECTIONAL-PHASE-BLOCK-PAYMENT",
+      "version": 1,
+      "exact_statement": "For every finite uniform-cube Boolean sign f=(-1)^P, partition X,Y, and integer d>=0, if every nonconstant GF(2) directional phase derivative partial_i P for i in X has degree at most d on all remaining physical variables, then H(S_X|S_Y)<=kappa(d) sum_{i in X} min(Inf_i,1-Inf_i), where kappa(0)=0 and kappa(d)=h2(2^-d)/2^-d for d>=1. More sharply H(S_X|S_Y)<=sum_{i in X,d_i>=1} kappa(d_i)J_i-TC(S_X)-I(S_X;S_Y). Using the separately imported physical block-channel bound, H(f)-E_t H(f_t)<=[kappa(d)+2/ln2] I_X(f). Terminal Y entropy is retained; no universal bounded d is asserted.",
+      "hypotheses": [
+        "Exact Booleanity, not norm or approximate square constraints",
+        "Uniform independent physical inputs",
+        "GF(2) degree of exact pivotal indicators on all residual variables",
+        "Entropy in bits; constants and deterministic spectral bits included"
+      ],
+      "statement_sha256": "f6d2b60ea98e3c7ceeb81eada5af53ef65d3bb37bae94ed9b27f55b98c8a55c4",
+      "contributors": [
+        "account05/A033"
+      ],
+      "proof_source": {
+        "path": "~\\brain_workers\\FEI100_20261011\\agents\\A033\\runs\\20261011T221704Z-account05-A033-derivative-hierarchy\\NEW_FULL_BOOLEANITY_CONSEQUENCE.md",
+        "sha256": "71c0a7cc9cdf5fd114a3816cd027c70e72a09a8dca4662fc9c28a41390762aff"
+      },
+      "proof_dependencies": [
+        {
+          "claim": "C006 baseline physical block identity and channel bound",
+          "source": "~/mop_fei100/research_pushes/2026-10-11-full-fei-100-agents/sources/BLOCK_RESTRICTION_IDENTITY_2026-09-18.md",
+          "scope": "Only the final physical entropy-drop inequality; spectral result is proved directly"
+        }
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_SCOPED_CONSEQUENCE_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A034",
+        "A035",
+        "A067",
+        "A070",
+        "A078",
+        "A088",
+        "A094",
+        "B20"
+      ]
+    }
+  },
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A036\\runs\\20261011T214139Z-account05-A036-reference-law-divergence\\CLAIMS.json",
+    "source_sha256": "a9caf2b40554cb08a476b9958dff770b8feca1b0ed9f9bfb0d24fa3388f83489",
+    "claim": {
+      "claim_id": "A036-POINT-DEFECT-TENSOR-NORMALIZED-PAYMENT-RECOVERY",
+      "version": 1,
+      "exact_statement": "For every finite disjoint tensor product of Boolean one-point defects f_m=1-2*1_point, m>=2, including physical translations, global sign, character multiplication, fresh character coordinates and irrelevant coordinates, let P=fhat^2, Q be the product of its actual spectral coordinate marginals, B=sum_i h2(P(i in S)), K=D2(P||Q), b=sign(fhat)*sqrt(Q) on the common support and zero off it, v_U=(sum_S b_S b_{S xor U})^2, Z=sum_U v_U, T=H(v/Z)-log2 Z, I=sum_i P(i in S). Then K>=max(0,B-4I), K>=T/4-8I, and B<=T/4+8I. In particular the latter two separately proved inequalities imply H(P)<=16I, while the direct factor entropy bound gives H(P)<=4I. All entropy and divergence quantities are in bits.",
+      "hypotheses": [
+        "Genuine Boolean sign on uniform finite cube",
+        "Disjoint point-defect tensor factorization as stated",
+        "Actual product-marginal reference Q, same-sign amplitude b",
+        "Product-compatible actual phases; support terms retained",
+        "All logarithms base two"
+      ],
+      "statement_sha256": "ca9f2080e0aeb78801b76d6e631ec2dd47cf1d2b3fd1a0f5f048723e36c7cdd4",
+      "contributors": [
+        "A036"
+      ],
+      "proof_source": "REPORT.md, Sections 1-7; code/check.py; out/verification.json",
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "ANALYTICALLY_PROVED_LOCALLY_EXACTLY_CHECKED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A037",
+        "A038",
+        "A039",
+        "A040",
+        "A048",
+        "A066",
+        "A088",
+        "A094",
+        "B20"
+      ]
+    }
+  },
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A037\\runs\\20261011T220010Z-account05-A037-conditional-credit-ledger\\CLAIMS.json",
+    "source_sha256": "509e49849a63c3b51b4bd01fe601fe7ac4ce5224c954f9a500d55a2f81a638bd",
+    "claim": {
+      "claim_id": "A037-CONDITIONAL-CREDIT-CONSERVATION",
+      "version": 1,
+      "exact_statement": "For every finite adaptive transcript tree on a common finite joint law P(W,A,L), sum_h P(h) I(W;Y_h|A,h) + sum_l P(l) H(W|A,l) = H(W|A); every cut and subtree obey the same identity. For finite common-law divergences, K_h+j_h=d_h+E_P K_hy, hence sum_h P(h)d_h+sum_l P(l)K_l=K_root+sum_h P(h)j_h. Shared channels give zero injection; replacing a predicted child reference q by r adds E_p log2(q/r) on the resource side. All terminal terms are retained.",
+      "hypotheses": [
+        "Finite probability/tree spaces; bits; omit zero-probability histories",
+        "KL formulas require finite supported divergences"
+      ],
+      "statement_sha256": "d23c07e7435aeb8fe2904c4b74d672f0efe7e779185c72d177f00c606ee553c4",
+      "contributors": [
+        "A037"
+      ],
+      "proof_source": {
+        "run_id": "20261011T220010Z-account05-A037-conditional-credit-ledger",
+        "files": [
+          "REPORT.md",
+          "POSTERIOR_CREDIT_CHAIN.tex",
+          "NO_REUSE_CERTIFICATE.md",
+          "code/ledger_check.py",
+          "out/VALIDATION.json"
+        ]
+      },
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_EXACTLY_VALIDATED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A023",
+        "A029",
+        "A039",
+        "A057",
+        "A063",
+        "A064",
+        "A097"
+      ]
+    }
+  },
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A037\\runs\\20261011T220010Z-account05-A037-conditional-credit-ledger\\CLAIMS.json",
+    "source_sha256": "509e49849a63c3b51b4bd01fe601fe7ac4ce5224c954f9a500d55a2f81a638bd",
+    "claim": {
+      "claim_id": "A037-PHYSICAL-SPECTRAL-COMMON-LIFT",
+      "version": 1,
+      "exact_statement": "For every Boolean function on a finite uniform cube and every finite adaptive physical block restriction tree, the function-specific kernel k_h(y|S_0)=2^(-|B_h|) (f_h|B_h=y)hat(S_0 intersect C_h)^2 / sum_U f_hhat(U union (S_0 intersect C_h))^2, on positive fibers, constructs a common root spectral/physical-transcript law with actual fair physical branches and actual child spectra. It satisfies sum_h P(h) J_h=I(S_0;L) and H(S_0|L)=sum_h P(h) H(S_h intersect B_h|S_h intersect C_h,h)+sum_l P(l)H(f_l). No universal phase-blind channel on parent squared spectra exists, as witnessed by f=[1,1,1,-1], g=[1,1,-1,1].",
+      "hypotheses": [
+        "Finite probability/tree spaces; bits; omit zero-probability histories",
+        "Boolean signs, uniform inputs, adaptive block choices measurable from physical history; no rerevealed coordinates"
+      ],
+      "statement_sha256": "aa45c0dacad4b1897e4c2f62511ccd331caf0eb6dc7ecc88cddf5189e8cf2cdb",
+      "contributors": [
+        "A037"
+      ],
+      "proof_source": {
+        "run_id": "20261011T220010Z-account05-A037-conditional-credit-ledger",
+        "files": [
+          "REPORT.md",
+          "POSTERIOR_CREDIT_CHAIN.tex",
+          "NO_REUSE_CERTIFICATE.md",
+          "code/ledger_check.py",
+          "out/VALIDATION.json"
+        ]
+      },
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_EXACTLY_VALIDATED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "Universal physical-child spectral channel determined solely by squared parent Fourier masses"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A023",
+        "A029",
+        "A039",
+        "A057",
+        "A063",
+        "A064",
+        "A097"
+      ]
+    }
+  },
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A038\\runs\\20261011T221733Z-account05-A038-occupancy-term-audit\\CLAIMS.json",
+    "source_sha256": "46a5d4bdfc403cfc038e1385620de4bf91c2194e5b5ba7af892f1700ec56578e",
+    "claim": {
+      "claim_id": "A038-OCCUPANCY-CROSSLAW-AUDIT",
+      "version": 1,
+      "exact_statement": "For every finite subset law P with v=P(nonempty)>0, r_i=P(i in S|nonempty), d_i=v r_i and nonempty maximum-entropy law Q_r, K_full=D_2(P||prod Bern(d_i))=v K_occ+Delta with Delta=D_2((1-v)delta_empty+v Q_r||prod Bern(d_i))=sum_i h_2(d_i)-h_2(v)-v Hmax(r)>=0. For the actual Boolean point defect f_m, K_occ=0 and Delta>=(m-5)I; for A036's unconditioned signed collision T, T/(4I)>m-7 for every m>=8. Consequently no fixed finite kappa makes either K_occ>=T/4-kappa I or v K_occ>=T/4-kappa I universal.",
+      "hypotheses": [
+        "finite subset probability law with v=P(nonempty)>0; logarithms in bits; forced marginal coordinates restricted to their support",
+        "counterfamily f_m=1-2*1_{x=0}, m>=2, on the uniform physical cube",
+        "collision reference Q_d is the unconditioned product of full-spectrum marginals with the actual full-support Fourier signs",
+        "fixed finite kappa>=0; no assertion about the original all-gate Gamma debt"
+      ],
+      "statement_sha256": "6bd1e56307dd43ad31cb17e032ab8ef238d549a843cf8ab0a6720b4813d29076",
+      "contributors": [
+        "A038"
+      ],
+      "proof_source": {
+        "path": "~/brain_workers/FEI100_20261011/agents/A038/runs/20261011T221733Z-account05-A038-occupancy-term-audit/REPORT.md",
+        "sections": "complete derivation, Sections 1-4"
+      },
+      "proof_dependencies": [
+        {
+          "source": "out/sources/K_OCC_DEFINITION.md",
+          "blob": "5ce14eaaec34f0d91f2d430dba576e19dddc6894",
+          "use": "exact definition only; proof independently reconstructed"
+        }
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_SCOPED_AUDIT_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "A038 frozen proposed substitution K_occ>=T/4-kappa I with A036 unconditioned T, for any finite fixed kappa",
+        "same substitution with v K_occ"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A036",
+        "A039",
+        "A040",
+        "A057",
+        "A088",
+        "A094",
+        "B20"
+      ]
+    }
+  },
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\CLAIMS.json",
+    "source_sha256": "9173cedf911c017ad65f5c400cbc37cd86d2c6177951fc74f0ec1c99ffd69a3f",
+    "claim": {
+      "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+      "version": 1,
+      "exact_statement": "For every Boolean sign f on every finite uniform cube, with p_S=hat(f)(S)^2, I=sum |S|p_S, H_nat=sum p_S ln(1/p_S), T_t=exp(-tL), L chi_S=|S|chi_S, q_t(S)=p_S exp(-2t|S|), G_f(t)=sum q_t(S)ln(1/p_S) and J_f(t)=sum |S|q_t(S)ln(1/p_S), G_f prime=-2J_f and H_nat=p_empty ln(1/p_empty)+2 integral_0^infinity J_f. The boundary term is between zero and I; J_f(t)<=J_f(0) and J_f(t)<=exp(-2t)J_f(0), giving integrability at both endpoints for every fixed f. For n>=1, J_f(0)<=2(n-1)ln(2)I. A universal integral bound integral J_f<=KI implies FEI in bits with constant (1+2K)/ln(2), and FEI with bit constant C implies that integral bound with K=C ln(2)/2.",
+      "hypotheses": [
+        "Finite uniform cube",
+        "Boolean outputs in {-1,1}",
+        "Natural logarithms; zero mass contributes zero",
+        "J_f as defined in DERIVATION.md"
+      ],
+      "statement_sha256": "6a0f129e7897d58cbfdf3d7fd67b3f9b32ce920aa72238c9b17984ac379365e6",
+      "contributors": [
+        "account05/A066"
+      ],
+      "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A067",
+        "A070",
+        "A088",
+        "A094",
+        "B20"
+      ]
+    }
+  },
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\CLAIMS.json",
+    "source_sha256": "9173cedf911c017ad65f5c400cbc37cd86d2c6177951fc74f0ec1c99ffd69a3f",
+    "claim": {
+      "claim_id": "A066-NO-INTEGRABLE-HEAT-ENVELOPE",
+      "version": 1,
+      "exact_statement": "There is no nonnegative measurable k with finite integral on (0,infinity) such that J_f(t)<=I(f)k(t) for every finite-dimensional Boolean sign f and almost every t. For f_n(x)=1-2 indicator{x=(1,...,1)}, n>=2, J_f_n(t)/I(f_n)=(2n-2)ln(2)exp(-2t)((1+exp(-2t))/2)^(n-1). Any such pointwise envelope must be at least ln(2)exp(-3/2)/t almost everywhere on (0,1/4]. Nevertheless integral J_f_n/I(f_n)=2(1-1/n)(1-2^(-n))ln(2)<=2ln(2). This refutes the integrable pointwise-envelope helper, not the integrated target or FEI.",
+      "hypotheses": [
+        "Finite uniform cube",
+        "Boolean outputs in {-1,1}",
+        "Natural logarithms; zero mass contributes zero",
+        "J_f as defined in DERIVATION.md"
+      ],
+      "statement_sha256": "e46b8cb695767e6dd284aaa8889d87e61c3f05c4da3ba0c531a8f3d4918edcfe",
+      "contributors": [
+        "account05/A066"
+      ],
+      "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+      "proof_dependencies": [
+        {
+          "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+          "version": 1
+        }
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "Universal integrable pointwise influence envelope for J_f"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A067",
+        "A070",
+        "A088",
+        "A094",
+        "B20"
+      ]
+    }
+  },
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-account05-A067-hypercontractive-refinement\\CLAIMS.json",
+    "source_sha256": "251a76035e107390dc991075e496cdc4476f82642c0fb32af0ba91598c8186c4",
+    "claim": {
+      "claim_id": "A067-LOCAL-BOOLEAN-GRANULARITY",
+      "version": 1,
+      "exact_statement": "For every Boolean sign f on a finite uniform cube, write q_S=hat f(S)^2, v=1-q_empty and I=sum_S |S|q_S. For each nonzero nonempty coefficient define d_f(S)=max{|T|:T contains S and q_T>0}, and U=sum_nonempty q_S(d_f(S)-|S|). Then hat f(S) is a multiple of 2^(1-d_f(S)) and H(f)<=2I+2U-(2-log2(e))v. Thus U<=KI implies H<=(2+2K)I, and d_f(S)<=L|S| implies H<=2LI-(2-log2(e))v. Balanced support antichains give H<=2I-2. On ordinary addressing with a address variables, d_f(S)=a+1, U=a/2, and the bound gives exactly H<=2a, while generic full-cube level counting costs Theta(a^2). These are structural-regime results, not a universal payment of U or a novelty claim.",
+      "hypotheses": [
+        "Every finite-dimensional uniform cube",
+        "Boolean outputs in {-1,1}",
+        "Entropy and logarithmic constants in bits",
+        "Zero Fourier masses omitted; constants handled explicitly"
+      ],
+      "statement_sha256": "f8ea9c1fe43d80907fd273e35e3fc141527789dd383a79b68595b04d86afa4a5",
+      "contributors": [
+        "account05/A067"
+      ],
+      "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-account05-A067-hypercontractive-refinement\\DERIVATION.md",
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A070",
+        "A088",
+        "A094",
+        "B06",
+        "B13",
+        "B20"
+      ]
+    }
+  },
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-account05-A067-hypercontractive-refinement\\CLAIMS.json",
+    "source_sha256": "251a76035e107390dc991075e496cdc4476f82642c0fb32af0ba91598c8186c4",
+    "claim": {
+      "claim_id": "A067-MAXIMAL-SUPPORT-ENVELOPE-NOGO",
+      "version": 1,
+      "exact_statement": "No universal finite K can bound the preceding U(f) by K I(f). For p=2^(-n), n>=2, the actual Boolean dictator surgery g_n=x_1-2 indicator{x=all +} has I=1+(2n-4)p and U=n-1-(2n-4)p-4np^2, so U/I diverges. Further define the valid entropy envelope E_A=(log2(e))(1-hat f(A)^2)+2 sum_nonempty_R hat(f chi_A)(R)^2(d_(f chi_A)(R)-1) for every character anchor A. On F_n=Maj_3(z)*(1-2 indicator{y=all +}), with disjoint three-variable z and n-variable y, every E_A>=3n/2, although I(F_n)=3/2+2n2^(-n)<=5/2 and H(F_n)=2+o(1). Hence min_A E_A<=K I is false universally, including anchors outside the Fourier support. These are helper refutations, not FEI counterexamples.",
+      "hypotheses": [
+        "Every finite-dimensional uniform cube",
+        "Boolean outputs in {-1,1}",
+        "Entropy and logarithmic constants in bits",
+        "Zero Fourier masses omitted; constants handled explicitly"
+      ],
+      "statement_sha256": "a632877752249e22535f8f8a56d3c76914639c49764a6146b48dc96d4d6aa7bc",
+      "contributors": [
+        "account05/A067"
+      ],
+      "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-account05-A067-hypercontractive-refinement\\DERIVATION.md",
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "Universal U(f)<=K I(f) for a dimension-independent finite K",
+        "Universal min_A E_A(f)<=K I(f) for a dimension-independent finite K"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A070",
+        "A088",
+        "A094",
+        "B06",
+        "B13",
+        "B20"
+      ]
+    }
+  },
+  {
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261011T222313Z-account05-A068-antichain-beyond-one-order\\CLAIMS.json",
+    "source_sha256": "3dd42f231797a6d265adc3e86f85803a7b0bc1da060e11c2f0c768240b5986b9",
+    "claim": {
+      "claim_id": "A068-QUADRATIC-CONTEXT-RANK-REFERENCE",
+      "version": 1,
+      "exact_statement": "For every regular Boolean h on q distinct private data bits and every finite list of arbitrary degree-at-most-two F2 control polynomials Q_i on m independent uniform bits, F(x,z)=h(x_i*(-1)^Q_i(z)) satisfies H(F)<=C_reg*I_x(F)+2*I_z(F)<=C_reg*I(F), C_reg=log2(4+e)+2log2(e*pi)<8.937; moreover H(F)<=C_reg*D_x(F)+2*I_z(F). Its data-indexed spectral packets have exact probabilities hhat(S)^2*2^(-rank B_S) on the affine Fourier support of the quadratic phase sum_i_in_S Q_i, and a normalized rank reference pays all packet ranks. For every odd q>=5, the nonlinear cyclic controlled-majority family has I_x=q*c_q, I_z=3*q*c_q/4 and H/I<=(4*C_reg+6)/7, while it is non-unate and selector influence per control tends to zero.",
+      "hypotheses": [
+        "uniform independent physical data/control coordinates",
+        "h regular in oriented total-desirability sense",
+        "each data coordinate private and distinct",
+        "each Q_i has F2 degree at most two; controls may overlap arbitrarily",
+        "entropy in bits; D_x=sum min(data influences,1-data influences)",
+        "cyclic separation formula uses odd q>=5"
+      ],
+      "statement_sha256": "23b8038c7a0da79a4d10c3dd9f897646ea2f5b155814c6c112b2a4efa208f181",
+      "contributors": [
+        "A068/account05"
+      ],
+      "proof_source": {
+        "run_id": "20261011T222313Z-account05-A068-antichain-beyond-one-order",
+        "path": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261011T222313Z-account05-A068-antichain-beyond-one-order\\REPORT.md",
+        "supplement": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261011T222313Z-account05-A068-antichain-beyond-one-order\\NEW_RANK_GEOMETRY.tex",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261011T222313Z-account05-A068-antichain-beyond-one-order\\out\\validation.json",
+        "separate_core_check": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261011T222313Z-account05-A068-antichain-beyond-one-order\\out\\quadratic_core.json"
+      },
+      "proof_dependencies": [
+        {
+          "claim_id": "C001",
+          "version": "supplement 2026-10-11 / baseline current source",
+          "source_sha256": "5d87f625fbadad4aa9841416712b8193a869fa9dffcb4e9c200d2f39a62e6a10",
+          "locators": [
+            "lem:pivotal-antichain",
+            "lem:antichain-noise",
+            "lem:ranktail",
+            "lem:levelentropy",
+            "eq:euler-reference",
+            "eq:euler-cost",
+            "thm:A"
+          ],
+          "acceptance": "recovered baseline; local dependency reconstruction recorded; no new external acceptance claimed"
+        }
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_EXACT_CHECKS_PASSED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A070",
+        "A088",
+        "A094",
+        "B02",
+        "B04",
+        "B08",
+        "B12",
+        "B20"
+      ]
+    }
+  }
+]

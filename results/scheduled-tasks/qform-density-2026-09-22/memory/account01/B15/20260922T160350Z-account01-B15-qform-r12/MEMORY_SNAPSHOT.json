@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260922T160350Z-account01-B15-qform-r12",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_initial": "1f2dc7684a305ea574bb81d6f0d991cc0dbf085c",
+  "control_commit_prepublication": "9f6b5b5888a78296b602605434a363864cf6f5ac",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "dependencies": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "5e161df12dcfebf0d13eb7efeaef5c478bf09455",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260922T150652Z-account01-B15-qform-r11/REPORT.md",
+      "scope": "cap-preserving C_c_infinity approximation and exact equality of full and smooth-input interval constants"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T150242Z-account02-B15-qform-r3/REPORT.md",
+      "scope": "every rank-at-least-three cap-one product quadratic has a bounded continuous density for each fixed matrix"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-GENERIC-CLASS-EXACT-v1",
+    "status": "PROVED_IN_STATED_SCOPE",
+    "statement": "The optimal full target density constant equals the optimal constant restricted simultaneously to compactly supported smooth cap-one marginals and fully generic symmetric matrices with simple spectrum, all nonempty principal minors nonzero, and three protected eigenvalues strictly outside [-1,1].",
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_commit": "47fe1ce92881fa4b6df0fa8a12b706d6a4eb14c5",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260922T160350Z-account01-B15-qform-r12/REPORT.md"
+  },
+  "partner_result_applied": {
+    "worker": "account02/B15",
+    "commit": "4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e",
+    "application": "After interval domination is transferred to the original rough target law, continuity gives p(t)=lim_{h->0} mu((t-h,t+h))/(2h)<=C pointwise."
+  },
+  "unresolved_implication": "Prove one matrix-, dimension-, support-, smoothness-, and reciprocal-minor-independent density height bound on the smooth fully-generic subclass; this would now imply the full theorem with exactly the same constant.",
+  "next_step": "Combine the new regular-class reduction with the ridge-window/diffuse theorem and attack only the complementary high-leverage heavy-coordinate regime, without paying one reciprocal principal minor.",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

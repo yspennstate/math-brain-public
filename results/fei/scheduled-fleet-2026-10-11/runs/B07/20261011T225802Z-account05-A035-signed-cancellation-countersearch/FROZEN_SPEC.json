@@ -1,0 +1,16 @@
+{
+  "helper_version": "A035-payment-v1",
+  "targets": ["H(f)-Hinf(f)<=4 I(f)", "Hinf(f)<=2 I(f)"],
+  "units": "base-2 entropy; uniform cube; +-1 Boolean functions",
+  "families": ["point defects on n=1..16", "disjoint tensor powers of each point defect, copies=2..16", "majority n=1..16 with positive ties", "tribes w,m positive integers, wm<=16", "quadratic bent core k even 2..16, n=k..16 with dummy bits, one-point flip at core weight r=0..k", "unmodified quadratic bent n=2,4,6"],
+  "pilot_domain": "same rules with maximum base dimension 8; tensor-copy domain unchanged",
+  "case_count_formula": "16*16 + 16 + sum(w=1..16) floor(16/w) + sum(k=2,4,..16) (17-k)(k+1) + 3",
+  "symmetry": "bent surgery spectrum histogram independent of flip location, influence depends exactly on core Hamming weight r; proof in REPORT.md. Tribes and majority are single specified tables, not class exhaustions.",
+  "arithmetic": "integer Walsh and boundary counts; Fraction rational influence; rational atanh-series logarithm intervals with 24 terms and exact tail bound; no floats used for signs",
+  "memory_estimate_MB": 100,
+  "pilot_max_seconds": 60,
+  "full_max_seconds": 1800,
+  "dimensions_frozen": true,
+  "independent_checks": ["physical edge influence versus spectral influence", "inverse Walsh autocorrelation", "direct signed versus absolute convolution for bent n=2,4,6", "analytic spectrum of each point defect", "analytic tribes influence", "analytic bent-surgery spectrum and influence against integer Walsh tables through n=8 and selected n=16 endpoints"],
+  "non_Boolean_control": "psi_n=n^(-1/2) sum_i x_i: H=Hinf=log2(n), I=1; FMEI target fails for n>4. Dyadic coefficients available at n=4^t."
+}

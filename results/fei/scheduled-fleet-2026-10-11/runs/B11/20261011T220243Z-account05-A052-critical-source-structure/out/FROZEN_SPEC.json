@@ -1,0 +1,14 @@
+{
+  "helper_version": "A052-affine-disorder-v1",
+  "actual_Boolean_family": "All labelled Boolean signs n=0,1,2,3; two fixed connected-component indicators at n=7 and n=9; six balanced-core activations of the two-bit point defect",
+  "parameter_domain": "Small signs: every nonempty pivot A, systematic full-rank V with V_A=identity and arbitrary V_C, every y0. Components: (data,control)=(4,3),(5,4). Activations: tensor-copy count 1,2 and fresh control count 1,2,3.",
+  "case_count": "278 small truth tables; 20680 syndrome/pivot/y0 cases: 256*80+16*12+4*2; 2 component witnesses and their specified restrictions; 6 activations",
+  "symmetry": "No truth-table symmetry reduction. V_A=identity represents all row-equivalent matrices, relabelling Y and y0 without changing b or entropy; all y0 retained.",
+  "arithmetic": "Integer FWHT plus independent direct Walsh on small cubes and witnesses; Fraction spectra, edge energies and prime-log entropy vectors; rational atanh-series ln bounds with range reduction and 24 terms; exact integer sign comparisons for seven-bit pruning witness",
+  "memory_estimate_MB": 45,
+  "pilot_max_runtime_seconds": 60,
+  "max_runtime_seconds": 180,
+  "automatic_dimension_escalation": false,
+  "pilot": "Same helper with --pilot: n<=2 signs, both fixed component witnesses; no activation cases.",
+  "notes": "Frozen before any search. Proof is analytic; finite checking is supporting validation. No optimizer search or floating-point entropy certificate."
+}

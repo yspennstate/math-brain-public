@@ -1,0 +1,17 @@
+# Root analytic audit of the universal split-deficit conversion
+
+Date: 2026-10-02 UTC. Verdict: **PASS**, conditional on the explicitly retained local low-influence premise. This is an internal mathematical audit; general Boolean FEI and external priority are not certified.
+
+I read the entire candidate. The Boolean split f=A+zB has A²+B²=1 and AB=0, giving E|B|=alpha=EB² and |EA|<=delta=1-alpha. Signed derivatives cause no change to |EB|<=alpha. Thus nu=alpha-(EB)²>=alpha(1-alpha).
+
+For alpha<=1/2, the hypothesized Delta H<=C alpha converts to Delta H<=2C nu. For alpha>1/2 and delta>0, let a=EA and beta=EB. Nonempty conditional split entropy is bounded by its mass <=1-beta²=nu+delta. The empty conditional entropy is <=a² log2(1/a²)+a² log2(e), including beta=0 by continuity. Since a²<=delta²<1/4, monotonicity of x log(1/x), sup delta ln(1/delta)=1/e, and delta<1/2 bound it by <2delta. The total is therefore <=nu+3delta<=7nu. The universal interference estimate Delta H<=2 conditional_entropy supplies Delta H<=14nu.
+
+At alpha=1, A=0 and f=zB with B Boolean, so both restrictions have the same entropy as f and Delta H=0, even if B changes sign and beta=0. At alpha=0 the restrictions coincide and nu=Delta H=0. These cases cannot be handled by dividing by delta or alpha and are correctly treated separately. With K=max(2C,14), every selected split satisfies Delta H<=K nu.
+
+The exact influence decrement is alpha. Writing restricted means EA+/-EB gives the exact variance decrement beta², with no monotonicity. Thus the I-Var decrement is precisely nu. Restriction induction from zero-dimensional constants is valid for a restriction-closed class admitting the local bound at every nonconstant restriction; it does not follow from ordinary class-wide FEI alone.
+
+Parallel slabs have that selected largest-weight local bound from the now-archived full proof. Strictly separated m-crossing classes are also restriction-closed with their C_m. The conversion therefore gives their full uniform-input entropy bounds with K_slab=max(2C_slab,14) and K_m=max(2C_m,14).
+
+For balanced disjoint child blocks, the spectral law of a composition is obtained by choosing a gate spectral subset, then independently choosing each selected child's spectral subset. Balanced child spectra have no empty atom, so the disjoint union identifies the selected blocks and there is no entropy collision. Hence H(F)=H(g)+sum_i I_i(g)H(f_i) and I(F)=sum_i I_i(g)I(f_i). Since V(f_i)=1, I(F)-V(F)=[I(g)-V(g)]+sum_i I_i(g)[I(f_i)-1], exactly the sum of the gate and child budgets. This proves preservation of one constant for arbitrary-depth/fan-in/size read-once formulas with balanced nonroot outputs and disjoint leaf blocks. Generic composition and this budget framework are prior work of O'Donnell--Tan2013; the new gate estimate is the application. A biased root is permitted; biased nonroot children and shared inputs are not covered by this composition step.
+
+The independent adversarial audit reconstructs all endpoint cases and exact budget identities. Its exhaustive checker supplements the proof and does not establish the unknown general low-influence premise. Root also read the entire final proof after completion: the explicit binary-entropy series, restriction induction and spectral composition derivation preserve the audited candidate algebra and all stated hypotheses. Final continuity verdict: PASS.

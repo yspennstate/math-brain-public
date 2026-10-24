@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "account01-B07-20260923T060153Z-r18",
+  "control_revision": "2026-09-22.15",
+  "final_control_head_observed_before_snapshot": "5af9b35eb7b783532f4e31699678f9c4b9cbce24",
+  "corrections_refreshed": true,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a76fb7746b1bbc4d819ad584144b401081413b37",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T060153Z-r18/REPORT.md",
+    "report_blob_readback": "219648c06df18ad0db321e0a9b359f8233b8a7be",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T060153Z-r18/CHECKS.py",
+    "checks_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T060153Z-r18/CHECKS.txt"
+  },
+  "sources": [
+    {
+      "role": "preceding_own_bianchor_reduction",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "abbd51dd7e691844aa6bfa3d34410af4b23f1cda",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T053559Z-r17/REPORT.md",
+      "used": "H3^(i,j)>E3(M)/2, E3(M)>=(theta^2/6)F^6, D5-small E5 resource and inherited F>kappa/Lambda scale relation"
+    },
+    {
+      "role": "designated_partner_exact_rank_receiver",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "5266d24ea98d9bb5902c51a92eca0e3e38112e39",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260922T193347Z-b07-639234ec/REPORT.md",
+      "used": "QFORM-CROSS-FIBER-PLANCHEREL-v1; exact-rank-r physical cross block gives continuous density <= e r/(r-2) D^(-1/r); applied at r=3"
+    },
+    {
+      "role": "latest_designated_partner_compound_tail_context",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "67a5863d5e97c6b27499ccf7690d6008965f62c3",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T033624Z-account02-B07-fd9b69f8f3ff/REPORT.md",
+      "used": "global compound-tail/D5 context; not promoted to a full receiver"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-ANCHORED-VOLUME-RANKTAIL-RATIO-v1",
+      "status": "analytic_proof_supplied",
+      "statement": "For fixed physical row/column anchors and H_q=sum anchored q-minor squares, T_q=dist_F(M,rank<=q)^2 satisfies T_q H_q <= q^2 H_(q+1). Under determinant-square pivot weights, E||Schur||_F^2 <= q^2 H_(q+1)/H_q."
+    },
+    {
+      "id": "QFORM-ANCHORED-EXACT-RANK-ENDPOINT-v1",
+      "status": "analytic_proof_plus_partner_payment",
+      "statement": "H_q>0 and H_(q+1)=0 force rank(M)=q. At q=3, designated partner cross-fiber Plancherel gives continuous full-form density <=3e E3(M)^(-1/6)."
+    },
+    {
+      "id": "QFORM-SAME-ANCHOR-RANK34-TUBE-DICHOTOMY-v1",
+      "status": "analytic_proof_supplied",
+      "statement": "On the live bi-anchor+D5-small branch, either dist_F(M,rank<=3) or dist_F(M,rank<=4) is < theta F/(16*10^(1/4)); the same physical anchors and H4/H3 select the order."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "account_slot": "account02/B07",
+    "result": "QFORM-CROSS-FIBER-PLANCHEREL-v1",
+    "inequality": "If H3^(i,j)>0 and H4^(i,j)=0 then rank(M)=3 and ||p_Q||inf<=3e E3(M)^(-1/6); continuity holds.",
+    "continuity": true
+  },
+  "unresolved_implication": "QFORM-SAME-ANCHOR-RANK34-TUBE-RECEIVER-v1: absorb a small nonzero rank-three/rank-four tail using the determinant-weighted Schur family before reciprocal inversion, retaining arbitrary same-bank curvature and original-coordinate product provenance.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_GLOBALLY; proved on the exact-rank endpoint and previously paid branches only",
+  "full_brain_connected": false,
+  "execution_context": "WITHOUT_VERIFIED_BRAIN"
+}

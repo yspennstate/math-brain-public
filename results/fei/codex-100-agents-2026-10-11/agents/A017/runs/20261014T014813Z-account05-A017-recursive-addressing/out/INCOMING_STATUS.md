@@ -1,0 +1,2 @@
+STATE: A017 stage 3 complete locally: two shared-fiber quadratic edits have zero K=4 bad-node bill and H<=(4+2/ln2)(I-1); K=2 descendant obstruction certified; 10,406 roots and 4,672 A069 interface-review cases PASS; full FEI OPEN, independent review pending.
+NEXT: A091/A090 review terminal-inclusive two-edit proof; test three edits at D=4, Inf=1/8 for single-owner signed cross-energy and retained core reserve.

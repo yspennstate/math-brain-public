@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.14",
+  "source_control_commit": "f97f84b5c223d49ddf977658653802767b72d1c3",
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260922T193035Z-account01-B13-qform-r18",
+  "status": "ESSENTIAL_STEP_APPLIED_PROVED_SUPPORTING_ENDPOINT_FULL_QFORM_OPEN",
+  "brain_ingestion": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B13",
+    "run_id": "20260922T182158Z-account02-B13-qform-4ebdd821",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d511859edaa636cdc00fcd64155ab07506875c3d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260922T182158Z-account02-B13-qform-4ebdd821/REPORT.md",
+    "use": "heavy/light trichotomy and exact-rank-three mixed branch"
+  },
+  "additional_dependencies": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "604a08009638981da254a72f09a24dd50e3a3c94",
+      "scope": "exact bang-bang cap-one-to-product-indicator reduction"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "01c524aa389abf1b9b58c852bfa11fc747ec5b59",
+      "scope": "heavy coordinate with det transverse Gram >=1/25"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+      "scope": "weighted affine-fiber Brascamp-Lieb projection cap"
+    }
+  ],
+  "mathematical_change": {
+    "claim_id": "QFORM-NULLPIVOT-1PLUS2-PRODUCT-SMOOTHING-v1",
+    "statement": "If X is independent of joint pair (V,W), ||p_X||inf<=K, ||p_(V,W)||inf<=M, and Q=2bXV+kappa V^2+2dVW+eW^2+affine with be nonzero, then ||p_Q||inf<=6 K^(2/3)M^(2/3)|b|^(-2/3)|e|^(-1/3).",
+    "application": "In the exact-rank-three mixed branch, if the chosen heavy pivot A_ii=0 and the light longitudinal regression residual tau=0, then ||p_Q||inf<51.0451 for all cap-one product laws."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bd4e5558753b55439a697fc20eb9eed39d467ab1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260922T193035Z-account01-B13-qform-r18/REPORT.md",
+    "blob": "f3fc7cff0bb6b68c10386aa73b95b26c234b0197"
+  },
+  "unpaid_implication": "QFORM-RANK3-ONEHEAVY-LONGITUDINAL-RESIDUAL-v1: treat tau>0 while retaining original-product provenance; merely small nonzero heavy pivot cannot be obtained by continuity from the exact-zero mechanism.",
+  "next_recipient": "QFORM synthesis/integration workers; preserve FULL-QFORM-OPEN"
+}

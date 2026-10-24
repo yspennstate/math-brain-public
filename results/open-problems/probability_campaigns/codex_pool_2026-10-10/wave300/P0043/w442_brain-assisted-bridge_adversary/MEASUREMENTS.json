@@ -1,0 +1,89 @@
+{
+  "baseline": {
+    "command": [
+      "C:\\Python314\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "math_brain.cli",
+      "recall",
+      "~/math-brain-build/local/population/brain.sqlite3",
+      "critical percolation quasi-transitive exponential growth absence infinite cluster",
+      "--limit",
+      "5"
+    ],
+    "query": "critical percolation quasi-transitive exponential growth absence infinite cluster",
+    "seconds": 64.91397679992951,
+    "returncode": null,
+    "timed_out": true,
+    "store_access": "read-only"
+  },
+  "fallback": [
+    {
+      "diagnostic": "bounded-title-source-lookup",
+      "ranked_recall": false,
+      "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+      "title_terms": [
+        "percolation",
+        "exponential"
+      ],
+      "limit": 5,
+      "sql_budget_seconds": 2.0,
+      "seconds": 0.08011320000514388,
+      "hit_count": 5,
+      "warning": "Unranked candidate rows; inspect source, current revision and full assumptions before use."
+    },
+    {
+      "diagnostic": "bounded-title-source-lookup",
+      "ranked_recall": false,
+      "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+      "title_terms": [
+        "anchored",
+        "expansion"
+      ],
+      "limit": 5,
+      "sql_budget_seconds": 2.0,
+      "seconds": 0.05175660003442317,
+      "hit_count": 0,
+      "warning": "Unranked candidate rows; inspect source, current revision and full assumptions before use."
+    },
+    {
+      "diagnostic": "bounded-title-source-lookup",
+      "ranked_recall": false,
+      "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+      "title_terms": [
+        "percolation",
+        "sharpness"
+      ],
+      "limit": 5,
+      "sql_budget_seconds": 2.0,
+      "seconds": 0.04777289996854961,
+      "hit_count": 1,
+      "warning": "Unranked candidate rows; inspect source, current revision and full assumptions before use."
+    }
+  ],
+  "interpretation": "Measures bounded source recovery after a ranked-recall timeout; not a ranking-quality or mathematical-proof score.",
+  "narrow_title_abstention": {
+    "title_terms": [
+      "critical percolation",
+      "quasi-transitive"
+    ],
+    "sql_budget_seconds": 2.0,
+    "error": "sqlite3.OperationalError: interrupted",
+    "exact_wall_seconds": null,
+    "hit_count": 0
+  },
+  "exact_bridge_card": {
+    "diagnostic": "bounded-title-source-lookup",
+    "ranked_recall": false,
+    "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+    "title_terms": [],
+    "node_id": "claim_5df2b62b583a156268141fc66e8bdf6bca069daa8e9dcd6daf40af92ed7320a5",
+    "limit": 5,
+    "sql_budget_seconds": 2.0,
+    "seconds": 0.08036829996854067,
+    "hit_count": 1,
+    "warning": "Unranked candidate rows; inspect source, current revision and full assumptions before use."
+  },
+  "broad_query_limitation": "Broad title lookup is unranked and returns FPP and generic decay candidates too; only the complete finite exploration-domination concept card is used for the bridge-hypothesis comparison."
+}

@@ -1,0 +1,13 @@
+QFORM-SINGULAR-OVERLAP2-RANDOM-SLOPE-v1 deterministic checks
+
+C0=4*sqrt(2)*exp(1/4)=7.263544634846275
+coordinate_free_constant=4*2^(3/4)*exp(1/4)=8.637858959899031
+m=64
+L_ell=16*(1-1/m)=15.75
+W2=(1/16)*(1-1/m)=0.0615234375
+m64_partner_fed_bound=20.58488908088622
+Omega5_upper=36*m^(-8)=1.2789769243681803e-13
+D5_certificate_using_Omega_upper=453.9164980459484
+scaling: |a|^(-1/4) contributes s^(-1/4); W2^(-1/8), with W2->s^6 W2, contributes s^(-3/4); total=s^(-1)
+near_null_test: R_delta=delta*(Y+Z/delta)^2; if the density of S=Y+Z/delta is positive at zero then E|R_delta|^(-1/2)=delta^(-1/2)E|S|^(-1)=infinity
+STATUS=PASS

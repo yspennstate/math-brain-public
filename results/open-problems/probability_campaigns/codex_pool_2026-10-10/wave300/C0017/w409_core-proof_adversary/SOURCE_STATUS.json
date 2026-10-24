@@ -1,0 +1,100 @@
+{
+  "target_id": "C0017",
+  "title_from_brief": "Conformal invariance of critical bond percolation on the square lattice",
+  "checked_date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "exact_statement_status": "historical primary statement verified; working Jordan interface and crossing formulations explicit",
+  "paired_proof_read": true,
+  "read_records": [
+    {
+      "path": "~/brain_workers/PRIMARY_DIRECTIVE.md",
+      "status": "read"
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "status": "read named board; C0017 not listed in returned board"
+    }
+  ],
+  "pending": [
+    "Independent mathematical review of w409 results by w410",
+    "Full proof audit of Zhou claim before current openness/resolution can be certified",
+    "Actual square-bond summed-defect estimate or stopped Cardy approximation"
+  ],
+  "claims_are_not_target_proof": true,
+  "checked_at_utc": "2026-10-10T06:14:54.350562+00:00",
+  "intake_exact_statement": "Prove that critical bond percolation on Z^2 at p = 1/2 is conformally invariant in the scaling limit (Cardy formula and convergence of interfaces to SLE(6)).",
+  "intake_locator": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 17,
+    "verification": "unreviewed intake; primary source independently read"
+  },
+  "primary_source": {
+    "source_id": "garban_steif_noise_2012",
+    "url": "https://arxiv.org/pdf/1102.5761v3",
+    "revision": "v3, 2012-05-29",
+    "locator": "Chapter II Section 4, Theorem II.2 and following paragraph; printed pp.23-24, PDF pp.25-26",
+    "source_quote": "proving the conformal invariance is still a challenging open problem",
+    "scope": "Historical source: triangular site theorem and square-bond open statement. Not a current-status certificate."
+  },
+  "working_scope": {
+    "crossings": "Jordan quads with consistent lattice/boundary arc approximations; crossing AB to CD tends to normalized Cardy C(u) for marks sent to (0,u,1,infinity).",
+    "interfaces": "Bounded Jordan D with marked a,b, consistent square-lattice approximations and primal/dual Dobrushin exploration boundary conditions. Medial exploration should converge in law to chordal SLE_6 in the uniform curve metric modulo increasing reparametrization.",
+    "full_configuration": "A full joint/CLE scaling limit needs an additional justified interface-to-configuration argument."
+  },
+  "paired_proof_read_after_independent_rows": [
+    "w409-C0017-001",
+    "w409-C0017-002",
+    "w409-C0017-003"
+  ],
+  "recent_primary_records": [
+    {
+      "url": "https://arxiv.org/abs/2409.03235v6",
+      "author": "Wang Zhou",
+      "revision": "2024-12-17",
+      "checked": "metadata and abstract claim checked; proof NOT audited",
+      "scope": "Claims square-bond exploration convergence to SLE_6; does not itself certify proof correctness."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2502.08394v2",
+      "author": "Ioan Manolescu",
+      "revision": "2025-03-02",
+      "locator": "Conjecture 5.1, printed p.51, PDF p.54; Chapter 5 rotational-invariance discussion",
+      "checked": "Primary full-plane CLE conjecture and scope distinction read",
+      "scope": "Nested full-plane CLE limit is stronger than a single-interface claim; its conjectural status is not a refutation of Zhou."
+    },
+    {
+      "url": "https://arxiv.org/abs/1112.2017v5",
+      "revision": "2013-01-10",
+      "checked": "Primary preliminary-version and critical-comments notice read; no proof audit"
+    },
+    {
+      "url": "https://arxiv.org/pdf/0708.3908v1",
+      "locator": "equations (3.2)-(3.4), printed pp.18-19 and square-bond/mixed-model section",
+      "checked": "Model-specific cancellation route read; not asserted to transfer to square bonds."
+    }
+  ],
+  "prior_checks": [
+    {
+      "path": "probability_1000_intake_claude_20260907/attempts.jsonl:17",
+      "result": "C0017-A001 is unreviewed and reports no new observable. Its numerical spin convention has not been adopted here."
+    },
+    {
+      "path": "probability_1000_attempts_H_20260912 and probability_1000_attempts_I_20260914",
+      "result": "Targeted textual lookup found no C0017 record; no whole-corpus read."
+    },
+    {
+      "path": "prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md:588",
+      "result": "attempted_un ranking only; no target formal proof receipt found by exact-ID lookup."
+    },
+    {
+      "path": "~/Big Open problem in probability theory/README.md",
+      "result": "This project targets Benjamini-Schramm on nonamenable graphs, a different percolation problem."
+    },
+    {
+      "path": "~/math-brain-build/export/population/nodes.jsonl:272,5279",
+      "result": "Exact attempt/target cards exist as unverified concepts; no mathematical certification."
+    }
+  ],
+  "live_store_readonly_check": "STORE_READ_CHECK.json; exact known node IDs only",
+  "owner_solved_register_check": "Targeted C0017/conformal-percolation lookup in the named solved register returned no match; no global solved-work inference."
+}

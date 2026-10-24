@@ -1,0 +1,23 @@
+{
+  "query": "metadata_json LIKE %c0151%",
+  "top_hits": 3,
+  "incorrect_logical_targets": 3,
+  "false_hits": [
+    {
+      "node_id": "claim_7458be591829d325c49279b6b1b6e1fa18221addefb2c1a5eca50e8fcb66fde1",
+      "title": "Mean Curvature of Spacelike Hypersurface",
+      "logical_id": "math:harvest.arxiv.mathematics:spacelike-mean-curvature-definition"
+    },
+    {
+      "node_id": "claim_a515a33c0dbcbd781ef0b4f8549ccfa12554d05127eb04ca71dc43617d701520",
+      "title": "Law of large numbers",
+      "logical_id": "math:harvest.wikipedia:wiki-law-of-large-numbers"
+    },
+    {
+      "node_id": "claim_4bd8ba8c414773454401f5d88b0e54528c2f71d94e94677e44d15c9c00f9cdb5",
+      "title": "Infinitude of Primes",
+      "logical_id": "math:number-theory.elementary:infinitude-of-primes"
+    }
+  ],
+  "correct_query": "json_extract(metadata_json,'$.logical_id') LIKE %open-problem-c0151-%"
+}

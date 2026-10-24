@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260923T100810Z-account01-B01-qform-auto11",
+  "control_commit_at_prepublication_refresh": "eed69ba8219b1d1c66243216630fa0e17081e311",
+  "owner_control_revision": "2026-09-22.15",
+  "assignment_revision": "QFORM-DENSITY-3EIG-20260922",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "full_continuity_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS"
+  ],
+  "premises": [
+    {
+      "name": "physical-pair logarithmic envelope",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f7f0fedb2d93b46824f96cac1164af6f8a55626f",
+      "path": "proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md",
+      "scope": "invertible indefinite original-coordinate physical pair; arbitrary dependent pair shifts induced by remaining original coordinates"
+    },
+    {
+      "name": "global off-diagonal weighted-Fourier theorem",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c795e2b4b67e77e819a52c888295ae5def408c55",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260923T081654Z-account02-B01-qform-auto14/REPORT.md",
+      "scope": "every symmetric residual quadratic-plus-affine form with independent cap-one original coordinates and positive ordered off-diagonal energy; 0<beta<1/2"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-WEIGHTED-FOURIER-LOG-KERNEL-v1",
+      "statement": "For k_a(x)=log_+(a/|x|), if W_beta(R)=integral |t|^(beta-1)|phi_R(t)|dt<infinity, then sup_s E k_a(s-R) <= 2^(1-beta) pi^(-1) a^beta W_beta(R)."
+    },
+    {
+      "id": "QFORM-INDEFINITE-PAIR-WEIGHTED-LOG-v1",
+      "statement": "For an invertible indefinite original-coordinate pair P with D=|det B|, kappa=sigma_min(B), ordered overlap-two star W2(P)>0, every 0<beta<1/2 gives ||p_Q||inf <= M_beta D^((beta-1/2)/(2beta+1)) kappa^(-beta/(2beta+1)) W2^(-beta/[2(2beta+1)]). At beta=1/4 the constant is 20.81337504449044."
+    },
+    {
+      "id": "QFORM-INDEFINITE-PAIR-DETERMINANT-LIGHT-v1",
+      "statement": "With R_*=kappa^(1/4) W2^(1/8)/D^(1/2), ||p_Q||inf <=100 sqrt(log(e+R_*)) kappa^(-1/4) W2^(-1/8). Essential boundedness only."
+    }
+  ],
+  "exact_structural_identity": "For the exact Schur complement S of an invertible physical pair P, W2(P)=|det B|^2 sum_{k!=l} S_kl^2.",
+  "designated_partner_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "main_newer_commit": "8a1e6a8429cc6895c7f06c885bd372a29bb341e0",
+    "correction_commit": "22510e9146745c10374a66be90e59c7c3207a9b8",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260923T100534Z-account02-B01-qform/REPORT.md",
+    "application": "For Delta=epsilon^(-1), a=epsilon, c=-epsilon, QFORM-RANK2-CROSS-COORD-SEPARABLE-KERNEL-L2-v1 gives ||p_Q||inf<=9/2 and a continuous C_0 density. The main report also equation-applies r39 to obtain the exact bound 16 on its pair-Schur stress family."
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "ea257fcac917f7d01f9814afd26ef5d500a81d86",
+    "directory": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T100810Z-account01-B01-qform-auto11/",
+    "main_report_commit": "c95a5aee337e96a1089d8f4c580723bb6354d423",
+    "main_report": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T100810Z-account01-B01-qform-auto11/REPORT.md",
+    "partner_refresh": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T100810Z-account01-B01-qform-auto11/PARTNER_REFRESH.md",
+    "checker_status": "PASS"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B01/20260923T100810Z-account01-B01-qform-auto11.md",
+  "unresolved_implication": "QFORM-N3-PAIRSTAR-OR-CURVED-THIRD-SOURCE-v1",
+  "next_step": "In the strict no-pivot class, route global exterior-three/amplified-core currency to an aggregate pair-star, exact singular pair, rank-two Schur/kernel receiver, or already-paid diffuse/grouped/ridge/hub branch before selecting any tiny physical 3x3 minor."
+}

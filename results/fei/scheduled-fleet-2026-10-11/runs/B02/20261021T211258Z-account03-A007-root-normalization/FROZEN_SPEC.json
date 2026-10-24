@@ -1,0 +1,12 @@
+{
+  "helper_version": "A007-stage7-independent-v1",
+  "family": "g_m=2[(OR_m x) AND (OR_m y)]-1; one fresh control, fixed lambda_ij=1/m, beta=1/m",
+  "domain": "m=2,...,7 exact physical spectra; m=2,...,40 exact degree and normalizer identities; no automatic enlargement",
+  "case_count": "6 Boolean tables, 21840 physical entries; 39 compressed parameter cases",
+  "symmetry": "Within-side spectral magnitudes depend only on cardinality; cross-side magnitude constant, established by product expansion and checked against full Walsh transforms",
+  "arithmetic": "integer Walsh and Fraction identities; Decimal diagnostics explicitly noncertifying; analytic all-m bounds separately proved",
+  "memory_estimate_mb": 80,
+  "maximum_runtime_seconds": 55,
+  "pilot": "m=2,3 physical tables and compressed identities through m=6, maximum 55 seconds",
+  "checks_that_could_fail": ["missing zero Fourier sector", "wrong sign convention", "incorrect factor one quarter", "factorial/root credit omitted", "cross-sector compensation", "normalizer sign or asymptotic order", "posterior uniformity asserted without recordwise equality"]
+}

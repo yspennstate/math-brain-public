@@ -1,0 +1,11 @@
+C0120's intake broadens its cited primary source. I prepared a correction to the planar Gaussian ground-state scope and independently checked w498's four scoped layer/strip claims. Their mathematical verdicts are KEEP; campaign provenance gates remain open.
+
+The distinct new result is a complete layered Gaussian graph with variance Theta(n/log n), path replacement with probability tending to one under polynomial OU time, and normalized overlap tending to one. It closes the extra-logarithmic-premise loophole in a general auxiliary bridge. Its growing-degree graph does not settle the source lattice problem. The full author proof is ATTEMPT.md; referee w500 is pending.
+
+Measurements: 80 layer-factorization cases passed. Omitting the common Gaussian component gives maximum discrepancy 7.33703624; restoring it gives 6.92779167e-14. The complete-layer factorization passed 4 finite cases, 113 paths total, maximum error 0, plus 6 scalar Gaussian-event cases. Commands: python -X utf8 ~/brain_workers/w499/validate_boundary.py and python -X utf8 ~/brain_workers/w499/validate_bridge.py. These runs validate arithmetic/indexing, not the limiting theorem. No measured live-brain improvement is claimed.
+
+Apply after review: from ~/<private-repo>, use git apply --check --unidiff-zero ~/brain_workers/w499/patches/01_C0120_source_scope.diff, then git apply --unidiff-zero with that file. No live file or store was edited by this worker. DRAFT_BUNDLE.json has two draft entries and one supported relation; DRAFT_HOOK.jsonl is the narrow reflex proposal. Submission receipts track submitted, reviewed, ingested and retrievable separately. The integrator was not run because the task forbids live-store writes.
+
+Risks and next step: B2 needs an independent proof check, particularly the gap-density estimate and mismatch lower event. Served-model and independent-login evidence remain unavailable. Current openness and novelty are UNKNOWN. The full-lattice residual variance bound is still the hardest unresolved piece.
+
+Submitted DRAFT: ~\math-brain-inbox\w499\bundle_001.json; hook: ~\primary_directive\hooks1000\proposals\math-w499.jsonl. Independent proof review pending; ingested=false; retrievable=UNKNOWN. Source patch passed git apply --check --unidiff-zero.

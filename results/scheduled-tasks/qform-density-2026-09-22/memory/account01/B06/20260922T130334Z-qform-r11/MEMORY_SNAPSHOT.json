@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B06",
+  "run_id": "20260922T130334Z-qform-r11",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "startup_control_commit": "e80bd21eb379d2eab889dcd85133614ba71f4a53",
+  "publication_control_commit": "e4b09e40802c2eef7ea1d13e4334d4a16dce4e29",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B06",
+    "run_id": "b06-20260922T113045Z-d47192d10a82",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6902eb62f21a7c833ca27dcca69f34d50e711a7d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md",
+    "result": "QFORM-SAMESIGN-DETERMINANT-MASS-v1"
+  },
+  "new_results": [
+    "QFORM-PLUCKER-MARGINAL-v1",
+    "QFORM-1D-PROJECTION-SQRT-E-v1",
+    "QFORM-WEIGHTED-2D-PROJECTION-v1",
+    "QFORM-WEIGHTED-ELLIPSE-AGGREGATION-v1"
+  ],
+  "mathematical_summary": "For a same-sign orthonormal spectral pair, the partner Pluecker determinant weights have exact incidence marginals equal to row leverage. Geometric Brascamp--Lieb with those leverage exponents and sharp Hausdorff--Young yields a universal e bound for the two-dimensional spectral projection, including a separate heavy-coordinate branch. Exact ellipse-shell area then gives density <= pi e/sqrt(|lambda1 lambda2|) for the pure rotated same-sign rank-two spectral quadratic component.",
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0b523077616e4d1a2c959ddca036cfd895067460",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260922T130334Z-qform-r11/REPORT.md",
+    "blob": "034356ed20bb841b2f475f30f5f8248bfc807295"
+  },
+  "unresolved_implication": "QFORM-ORTHOGONAL-CORRELATED-ADDITION-v1",
+  "next_step": "Retain the Pluecker weights inside the full small-ball/coarea trace and prove that a spectrally orthogonal remainder carrying the third large eigenvalue cannot correlate with the ellipse shell strongly enough to destroy the universal bound.",
+  "full_target_status": "OPEN",
+  "continuous_density_status": "NOT_PROVED"
+}

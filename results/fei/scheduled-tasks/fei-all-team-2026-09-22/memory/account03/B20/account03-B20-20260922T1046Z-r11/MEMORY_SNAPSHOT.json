@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B20",
+  "run_id": "account03-B20-20260922T1046Z-r11",
+  "control_commit": "130c4250b1d03a1ee4fe895f509679479d7dbed7",
+  "control_revision": "2026-09-22.3",
+  "manifest_commit": "130c4250b1d03a1ee4fe895f509679479d7dbed7",
+  "manifest_revision": "FEI-20260922T1000Z-v1",
+  "state_revision": "FEI-20260922T1000Z-v1",
+  "write_parent_commit": "130c4250b1d03a1ee4fe895f509679479d7dbed7",
+  "consumed_correction_ids": [
+    "FEI-DELTA-20260922-01-FIXED-POTENTIAL-AND-EXTREMALITY",
+    "FEI-DELTA-20260922-02-QUADRATIC-0337",
+    "FEI-DELTA-20260922-03-QUADRATIC-034",
+    "FEI-DELTA-20260922-04-SHAPED-WITNESS-REPAIR",
+    "FEI-DELTA-20260922-05-KL-HIERARCHY-TERM",
+    "FEI-DELTA-20260922-06-UNWEIGHTED-L2-NOGO",
+    "FEI-DELTA-20260922-07-RAW-U4-TERMINAL-NOGO",
+    "FEI-DELTA-20260922-08-BALANCED-SLICE-NOT-CLOSURE",
+    "FEI-DELTA-20260922-09-SAFE-DIRECTION-NOT-POTENTIAL-PROOF",
+    "FEI-DELTA-20260922-10-COPAIR-JOINT-CONSTRAINTS",
+    "FEI-DELTA-20260922-11-QUARTIC-WITNESS-REPAIR",
+    "FEI-DELTA-20260922-12-LATEST-SHAPED-FRONTIER",
+    "FEI-DELTA-20260922-13-LOWLEVEL-KL-PROJECTION-NOGO",
+    "FEI-DELTA-20260922-14-SAFE-CONE-SELECTOR-GAP"
+  ],
+  "remembered_claims": [
+    {
+      "claim_id": "FEI-FULL-UNIFORM-CUBE",
+      "status": "OPEN",
+      "candidate_id": null,
+      "use": "historical_context"
+    },
+    {
+      "claim_id": "ALL-BLOCK-TERMINAL-CRITICAL-CORE",
+      "status": "PROVED_IN_SOURCE",
+      "candidate_id": null,
+      "use": "positive_premise",
+      "source": "yspennstate/math-open-problems@85ffa60db26997421d980b1f86c03d82259504ca:proofnet24/P03-fei/fleet-2026-09-21/account02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md"
+    },
+    {
+      "claim_id": "TERMINAL-TRIGGER-SURPLUS",
+      "status": "PROVED_IN_SOURCE",
+      "candidate_id": null,
+      "use": "positive_premise",
+      "source": "yspennstate/math-open-problems@fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113:proofnet24/P03-fei/fleet-2026-09-21/account04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md"
+    },
+    {
+      "claim_id": "FEI-TERMINAL-LOWJ-DIFFUSION-v1",
+      "status": "PROVED_IN_SOURCE",
+      "candidate_id": null,
+      "use": "positive_premise",
+      "source": "yspennstate/math-open-problems@7d31b66c5517b7b491693642c503d29352d8ffb4:proofnet24/P03-fei/fleet-2026-09-22/account03/B20/20260922T104610Z-terminal-lowJ-diffusion/REPORT.md"
+    },
+    {
+      "claim_id": "LOWLEVEL-KL-PROJECTION-NOGO",
+      "status": "REFUTED",
+      "candidate_id": null,
+      "use": "negative_result"
+    }
+  ],
+  "repository_memory": "loaded",
+  "native_memory": {
+    "status": "unverified"
+  },
+  "full_brain_connected": false,
+  "next_mathematical_step": "LOWJ-DIFFUSE-TERMINAL-TO-KL: use all-block criticality, max_i q_i/J <= (2/ln2)/log2(1/J), near-character Hamming defect, co-pair identities and multiscale occurrence information to bound F/J without any ambient-support Fannes term; fixed-depth KL projection is unavailable.",
+  "consumed_inbox_event_ids": [],
+  "pending_challenges": [],
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7d31b66c5517b7b491693642c503d29352d8ffb4",
+    "path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B20/20260922T104610Z-terminal-lowJ-diffusion/REPORT.md"
+  },
+  "partner": {
+    "slot": "account04/B20",
+    "compatible_completed_run_found": false,
+    "note": "Only pre-order POS3 completion was visible at the compatibility sweep; it was not used as an FEI premise."
+  }
+}

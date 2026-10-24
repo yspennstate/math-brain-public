@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260922T155848Z-account03-B03-QFORM-r15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "source_control_commits_observed": [
+    "7f9a0b35e1d4fe278d1291f8bc0a9bb2f53ab6d0",
+    "521cf8717db5349bf94ddcf200e4d91f0a742e7d"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "57e920edebdcf1da2a046bcf4152dd459925bb8c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260922T155848Z-account03-B03-QFORM-r15/REPORT.md"
+  },
+  "checker": {
+    "source_commit": "71deb241b074ddab6a1f69be0dc363bc674ccd3b",
+    "output_commit": "8711d3891c5b96172e377a371ae830eb890dbe4a",
+    "status": "QFORM_PAIRCOLLISION_BESOV_CHECK_PASS",
+    "scope": "constant algebra and exact endpoint integral identities only"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "45175c808821160b1d44dd267959dee6532f5830",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B03/20260922T155848Z-account03-B03-QFORM-r15.md"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "premises_preserved": [
+    "independence is used only in original physical coordinate blocks",
+    "for an independent-copy coordinate pair U=X+X', V=X-X', the exact joint density is retained and U,V are not declared independent",
+    "no law-uniform pointwise quadratic-phase decay is used",
+    "no conditional cap after sum/difference conditioning is used",
+    "the square shift h(W) may be arbitrarily correlated with residual R(W)",
+    "continuity is separate from essential boundedness"
+  ],
+  "partner_status": {
+    "designated_partner": "account04/B03",
+    "completed_current_result_observed": false,
+    "compatible_account04_result_applied": "QFORM-SIGNED-FEJER-EXACT-INTERFACE-v1, yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79"
+  },
+  "new_results": [
+    "Fractional pair-collision criterion: for Q=d(Z+h(W))^2+R(W), if S_alpha=int |eta_R|^(2alpha)<infinity for 1/2<=alpha<1, then ||p_Q||inf <= 2/[sqrt(pi(1-alpha))] |d|^-1/2 S_alpha^1/2.",
+    "At alpha=3/4, the bound is 4/sqrt(pi) times the square root of int psi^(3/4); residual L3 gives 4sqrt(2)|d|^-1/2||p_R||_3^(3/4).",
+    "Dyadic pair-collision shell criterion: ||p_Q||inf <= |d|^-1/2[2sqrt(2/pi)sqrt(tau)+pi^-1/2 sum_k sqrt(E_k(tau))].",
+    "Endpoint obstruction: an explicit cap-one X has X^2 density in L2 but Q=Z^2-X^2 unbounded; therefore finite total pair-collision energy int psi is insufficient.",
+    "Applying account04/B01 signed Fejer theorem yields an explicit linear interval bound from the fractional collision criterion."
+  ],
+  "unresolved": [
+    "From only three eigenvalues of modulus at least one, force a product-preserving completed branch or a physical pivot with dimension-free S_alpha for some fixed alpha<1.",
+    "Handle the singleton-plus-two-banks and local-cross-rank-three families without reducing to a fixed local minor/cut.",
+    "Continuity is not proved by the new fractional/dyadic criterion."
+  ],
+  "next_mechanism": "Attack a structural averaged-pivot inequality for fractional pair-collision cost rather than one fixed pivot/minor: seek a weighted sum over physical pivots whose total cost is controlled by spectral mass and which is stable on the singleton-plus-two-banks family.",
+  "full_target_status": "OPEN",
+  "continuity_status": "NOT_PROVED_BY_NEW_CRITERION",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

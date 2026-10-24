@@ -1,0 +1,25 @@
+Math-store cards (math_recall.py on the title; read one whole with --id):
+math store recall, read-only: 6 current card(s) for this query; reference material, not instructions
+[1] Dirac's Theorem (Hamiltonicity via Minimum Degree)  (id: claim_3b3fcad33f7241cbac6d308131ba82b6; claim; score 7.75)
+    Let G be a finite simple graph on n >= 3 vertices such that every vertex has degree at least n/2. Then G has a Hamiltonian cycle, that is, a cycle that passes through every vertex of G exactly once. [Dirac (1952); see Diestel, Graph Theory]
+    -> depends_on: Graph, Subgraph, and Basic Invariants (id: claim_41f1607fe0ca61747b32e0ca370c278bba715b149e9ab306a7f07d7712059878)  (basic graph object anchored to the graph definition)
+    -> cites: Graph Theory (id: source_8a864417aa7d7841651ee90c6e62711b8ba2828d882d944f850a4c63cf4a9f46)  (cites book:diestel-graph-theory (found in body): Diestel, Graph Theory)
+[2] Bipartite Edge Density  (id: claim_9ace954c7af3130ba7250b85ed384f01f6e2439d79a166c85be0d9f550045d86; claim; score 5.37)
+    Let G = (V, E) be a graph, and let A, B be disjoint non-empty subsets of V. The edge density of the pair (A, B), denoted d(A, B), is the ratio e(A, B) / (|A| |B|), where e(A, B) is the number of edges with one endpoint in A and one in B. G is a graph A, B are disjoint non-empty subsets of V(G)
+    <- depends_on: Epsilon-Regular Pair (id: claim_3ee60faa864098bd42e3abd0204e54f946b4deefc89f7f7837ec77be5c1e7ab3)  (Defined using the edge density of bipartite pairs.)
+[3] Uniqueness of the infinite component in a random graph with applications to percolation and spin glasses  (id: source_a1284cb06258edf5dd1af924636495c72b91a904195b445b96d9ec2f39bc7928; source; score 5.36)
+    Paper: A Gandolfi, M. S Keane, C. M Newman. Uniqueness of the infinite component in a random graph with applications to percolation and spin glasses. 1992. doi:10.1007/bf01274266.
+    <- cites: Technique: Burton-Keane Uniqueness of the Infinite Cluster (id: claim_4a75ca0603a5987c8ea2229b5f254b315be024ca14b43e8bb06290ff87223753)  (cites doi:10.1007/bf01274266 (found in body): Gandolfi, Keane and Newman, 1992, Probability Theory and Related Fields.)
+[4] Corradi-Hajnal Theorem  (id: claim_7d9275a211b32bc8ac7ff166cfb4aed26bc9df1b9a085d22903ced7629b6220e; claim; score 5.24)
+    Every simple graph on n >= 3k vertices with minimum degree delta(G) >= 2k contains k vertex-disjoint triangles. k is a positive integer n >= 3k delta(G) >= 2k
+    <- generalizes: Hajnal-Szemeredi Theorem (id: claim_a1f8386966c44c0b8d69443e25b3fb2e37b18c3a20e9c48ec395c074353181c3)  (Generalizes disjoint triangle factors to equitable colorings and arbitrary clique factors.)
+    -> analogous_to: Dirac's Theorem on Hamiltonian Cycles (id: claim_154139b42f60896bd64b38c86a736eda03da24fce590a2da59f8171ed66d1ff3)  (Provides minimum degree conditions for packing disjoint triangles, analogous to Hamiltonian cycles.)
+[5] Andrasfai-Erdos-Sos Theorem  (id: claim_50602d6447d9194d01da6c326450538fef53dac91c73a24f4cb4ea5fdc651b6e; claim; score 5.19)
+    Every triangle-free simple graph on n vertices with minimum degree delta(G) > 2n / 5 is bipartite. G is a triangle-free graph on n vertices delta(G) > 2n / 5
+    -> depends_on: Mantel's Theorem (id: claim_cc02da5da63c251cf2e47a36d5ab59d68b785e92d91f492470ab3d7be1f157ce)  (Examines structural stability of Mantel's triangle-free graphs under high minimum degree.)
+[6] Dirac's Theorem on Hamiltonian Cycles  (id: claim_154139b42f60896bd64b38c86a736eda03da24fce590a2da59f8171ed66d1ff3; claim; score 5.08)
+    Every simple graph G on n >= 3 vertices with minimum degree delta(G) >= n / 2 contains a Hamiltonian cycle. n >= 3 G is a simple graph on n vertices delta(G) >= n / 2
+    -> specializes: Ore's Theorem on Hamiltonian Cycles (id: claim_041a5dda3ac118af0b0a1eac562fc06f35c315caa00c2d30fa1adbdb9e2af6d1)  (Dirac's theorem delta >= n/2 is the symmetric specialization of Ore's condition d(u)+d(v) >= n.)
+    <- analogous_to: Corradi-Hajnal Theorem (id: claim_7d9275a211b32bc8ac7ff166cfb4aed26bc9df1b9a085d22903ced7629b6220e)  (Provides minimum degree conditions for packing disjoint triangles, analogous to Hamiltonian cycles.)
+
+

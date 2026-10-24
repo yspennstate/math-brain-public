@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260922T130502Z-account03-B17-QFORM-r12",
+  "control_revision": "2026-09-22.5",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "classification": "AUXILIARY_ONLY_SHARP_WITNESS_RIGIDITY",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "df083451ccabff29169c050d58f70826f62809e5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T130502Z-account03-B17-QFORM-r12/REPORT.md",
+    "blob": "ed67455dbca338b6bc557a342887638b78e84786"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-DENSITYCAP-VARIANCE-RIGIDITY-v1",
+      "statement": "For any probability density f<=1 with finite variance and mean mu, if delta is the f-mass outside [mu-1/2,mu+1/2], then Var(X)>=1/12+delta^2/2. The coefficient 1/2 is sharp for every delta in [0,1], and Var=1/12 forces the translated unit-interval density."
+    },
+    {
+      "id": "QFORM-FRAME-FRAGMENTATION-COVARIANCE-PENALTY-v1",
+      "statement": "For an n x 3 orthonormal-column frame R with rows r_i and independent finite-variance density-one coordinates, Cov(R^T(X-EX)) >= (1/12)I_3 + (1/2) sum_i delta_i^2 r_i r_i^T."
+    },
+    {
+      "id": "QFORM-GAUSSIAN-FRAGMENTATION-GAP-v1",
+      "statement": "Combining the frame penalty with the completed account01/B17 Gaussian theorem gives ||p_{G^T A G}||_infinity <= 3sqrt(2)/(1+6 eta), eta=lambda_min(sum_i delta_i^2 r_i r_i^T). On the account04/B14 extreme class f_i=1_{E_i}, the denominator is 1+(3/2)eta_E with eta_E=lambda_min(sum_i |E_i triangle I_i|^2 r_i r_i^T)."
+    }
+  ],
+  "peer_results_applied": [
+    {
+      "source": "account04/B14",
+      "artifact": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md",
+      "blob": "30ebe93170ba26fb57dc128ee0116762de1d9f26",
+      "use": "Reduced the exact target extremal class to measure-one indicator marginals and converted delta_i to one-half the symmetric-difference distance from the mean-centered unit interval."
+    },
+    {
+      "source": "account01/B17",
+      "artifact": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260922T120821Z-account01-B17-qform-sharp-constant-v1/ADDENDUM_NONCENTRAL_GAUSSIAN.md",
+      "blob": "115c16bdd941b1e171330b533884e95a03f4b166",
+      "use": "Converted the covariance-floor stability into an explicit strict Gaussian density gap below 3sqrt(2)."
+    }
+  ],
+  "partner_status": "No completed account04/B17 QFORM artifact visible at prepublication read; no partner result fabricated.",
+  "fresh_correction_applied": "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE: the result keeps arbitrary fragmented sets and does not impose bounded diameter or connectedness.",
+  "first_unresolved_implication": "Determine whether an extreme fragmented product sequence with rank-deficient fragmentation energy eta_E->0 can use genuinely non-Gaussian or mesoscopic local structure to exceed 3sqrt(2) while retaining three large eigenvalues.",
+  "next_attack": "Construct or exclude rank-deficient fragmentation witnesses directly, avoiding another fixed-periodic Gaussian/Edgeworth or single-minor route."
+}

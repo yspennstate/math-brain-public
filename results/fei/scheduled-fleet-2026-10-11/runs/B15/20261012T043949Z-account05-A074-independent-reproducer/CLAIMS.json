@@ -1,0 +1,87 @@
+[
+  {
+    "claim_id": "B15-LKSTAR-FAILS-N5-N6",
+    "version": 1,
+    "exact_statement": "L(K*) is false: with K* = 4 + (5/2)log2 5 - (9/2)log2 3, the Boolean functions f_5 = -1 exactly on {e_1, e_1+e_2, e_1+e_2+e_4} in {0,1}^5 and f_6 = -1 exactly on {0, e_0,...,e_5, e_1+e_2, e_0+e_4, e_3+e_5} in {0,1}^6 (uniform measure, +1 elsewhere) have every coordinate relevant and B_i = H(S_i|S_-i) > (539/200) Inf_i for every i of f_5 and B_i > (368/125) Inf_i for every i of f_6 (bits). Hence E*(5) > 539/200 > K* and E*(6) > 368/125.",
+    "hypotheses": "uniform product measure; Boolean +-1 functions; P(S)=fhat(S)^2; entropy in bits; Inf_i = P(i in S)",
+    "statement_sha256": "8992e6792392c26e89418dd03986df26c41239ecfc9d49d23b4df7ad6e4e3a9b",
+    "contributors": [
+      "claude-B15-lead"
+    ],
+    "proof_source": "runs/20261011T225100Z-claude-B15-erasure-countersearch/code/certify_witnesses.py (prime-exponent linear forms, 400-bit intervals) and code/recheck_bigint.py (direct big-integer powers); outputs out/witness_certificates.json, out/witness_bigint_recheck.json",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A074",
+        "at": "2026-10-12T04:45:16.792733+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "scope": "Original finite statement only; no universal FEI or affine bridge acceptance",
+        "method": "Direct character-sign bitset sums, exact joint conditional law, Fraction positive-series logarithms and exhaustive unreduced n<=4 mask census with exact symbolic ties",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261012T043949Z-account05-A074-independent-reproducer\\REPORT.md",
+        "exact_assertions": 329427
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "extension of A082-FINITE-TRUE-ERASURE@1 constant beyond n<=4 / affine-dim-4 (not A082's stated claim)"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A075 (its stated next action: consume a certified seed strictly above K*; f_5, f_6 are such seeds)",
+      "A082",
+      "A026",
+      "A028",
+      "A027",
+      "A083",
+      "A092",
+      "A074"
+    ]
+  },
+  {
+    "claim_id": "A082-FINITE-TRUE-ERASURE",
+    "version": 1,
+    "exact_statement": "For every nonconstant Boolean sign f on at most four uniform physical variables there exists a relevant i with H(S_i|S_-i)<=Kstar Inf_i(f), where Kstar=4+(5/2)log2(5)-(9/2)log2(3)<107/40. Kstar is optimal over this domain.",
+    "hypotheses": [
+      "Boolean sign truth table",
+      "uniform cube",
+      "at most four physical variables",
+      "entropy in bits"
+    ],
+    "statement_sha256": "b7c26774325a8310ff52af2d16afa9f442d576f2af2f9cd8d0c9335d9242ee6e",
+    "contributors": [
+      "A082"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-account05-A082-finite-inequalities\\EXHAUSTIVENESS_LEMMA.tex, Theorem 1; ~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-account05-A082-finite-inequalities\\FINITE_INEQUALITY_CERTIFICATE.json",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A074",
+        "at": "2026-10-12T04:45:16.792733+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "scope": "Original finite statement only; no universal FEI or affine bridge acceptance",
+        "method": "Direct character-sign bitset sums, exact joint conditional law, Fraction positive-series logarithms and exhaustive unreduced n<=4 mask census with exact symbolic ties",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261012T043949Z-account05-A074-independent-reproducer\\REPORT.md",
+        "exact_assertions": 329427
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A026",
+      "A027",
+      "A028",
+      "A061",
+      "A073",
+      "A075",
+      "A083",
+      "A084",
+      "A085",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

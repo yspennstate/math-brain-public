@@ -1,0 +1,83 @@
+{
+ "run_id": "20261011T225600Z-claude-B16-retained-kl-sandwich",
+ "stream": "B16",
+ "claims": [
+  {
+   "claim_id": "B16-RETAINED-KL-SANDWICH",
+   "version": 1,
+   "exact_statement": "For every Boolean f:{-1,1}^n->{-1,1} and every stopping restriction tree T for f (adaptive single-coordinate queries, arbitrary leaves, node weight w_v=2^-depth), with u_T=fhat_v(T), v_T=fhat_v(T+i_v) for T not containing i_v, q_T=u_T^2+v_T^2, m_T=min(u_T^2,v_T^2), M_v=sum_T m_T, Q_v=sum_{T:m_T>0} m_T log2(q_T/m_T): sum_v w_v Q_v + E[H(leaf)] <= H(f) <= sum_v w_v Q_v + E[H(leaf)] + (3/ln2) sum_v w_v M_v, and sum_v w_v M_v <= I(f) - E[I(leaf)]. Consequently for complete trees H(f)-(3/ln2)I(f) <= sum_v w_v Q_v <= H(f): the retained-KL tree target sum_v w_v M_v[log2(1/M_v)-D_2(nu_v||q_v)]=O(I) (ISOSPECTRAL (8.1)) holds for one complete tree iff it holds for every tree iff FEI holds, with constants shifted by at most 3/ln2.",
+   "hypotheses": "uniform measure on {-1,1}^n; entropy in bits; H(f)=-sum fhat(S)^2 log2 fhat(S)^2; I(f)=sum |S| fhat(S)^2; Q_v=M_v=0 at nodes with M_v=0; E is over the uniform random leaf; no independence or symmetry assumption",
+   "statement_sha256": "b9ef125bdee0997c1abc02c492680a260a2d1789fd2f1a4ff8e7570c4a51f8ae",
+   "contributors": [
+    "claude-B16-lead"
+   ],
+   "proof_source": "Node: for theta=m_T/q_T in [0,1/2], q_T h2(theta)=m_T log2(q_T/m_T)+(q_T-m_T)log2(q_T/(q_T-m_T)); the second term lies in [0,m_T/ln2] since -(1-r)ln(1-r)<=r. Summing, Q_v<=B_v<=Q_v+M_v/ln2. With Delta_v=B_v+JS_v (ISOSPECTRAL 2.8), 0<=JS_v<=2M_v/ln2 (ISOSPECTRAL 3.3): Q_v<=Delta_v<=Q_v+3M_v/ln2; M_v<=j_v<=Inf_v (ISOSPECTRAL 3.1). Tree: H(f_v)=Delta_v+mean H(children) and I(f_v)=Inf_v+mean I(children) (C005) telescope to H(f)=sum w_v Delta_v+E H(leaf), I(f)=sum w_v Inf_v+E I(leaf). Insert node bounds. QED. Validation: code/b16_sandwich.py Part 1, all 65,536+256+16+4 Boolean functions on n<=4, every node of every complete tree (covers every node of every adaptive tree on n<=4): exact integer identities true, all inequality violations 0.0 in float64.",
+   "proof_dependencies": [
+    "ISOSPECTRAL_SPLICING_CURATED eq.2.8",
+    "ISOSPECTRAL_SPLICING_CURATED Thm 3.1",
+    "ISOSPECTRAL_SPLICING_CURATED Thm 3.3",
+    "C005"
+   ],
+   "review_records": [
+    {
+     "reviewer": "claude-B16-lead (self)",
+     "kind": "exhaustive exact/float validation n<=4",
+     "result": "PASS"
+    },
+    {
+     "reviewer": "A092 (requested)",
+     "kind": "independent proof review",
+     "result": "PENDING"
+    }
+   ],
+   "status": "PROVED",
+   "supersedes": [],
+   "refutes": [],
+   "first_unproved_line": null,
+   "next_consumers": [
+    "A077",
+    "A080",
+    "A092",
+    "ISOSPECTRAL route (8.1)/section 9",
+    "C019"
+   ]
+  },
+  {
+   "claim_id": "B16-MAJORITY-LAMBDA-DIVERGENCE",
+   "version": 1,
+   "exact_statement": "For odd n in {5,9,17,33,65,129,257,513}, every complete coordinate tree of Maj_n (all orders give the same node multiset) has Lambda_T/I(Maj_n) >= 0.385, 0.655, 0.981, 1.355, 1.766, 2.199, 2.651, 3.115 respectively, where Lambda_T=sum_internal w_v j_v log2(1+kappa_min,v/(2 j_v)) (LOG_ALLOCATION section 5); with the exact isospectral splits (partial sum s=0, the only isospectral nodes) skipped the values are 0.133, 0.364, 0.678, 1.063, 1.499, 1.965, 2.451, 2.949; on the same range H(Maj_n)/I(Maj_n) <= 2.826. Conjecture: Lambda_T/I=(1/2)log2 n - c + o(1) with or without the skip, while H/I stays bounded.",
+   "hypotheses": "kappa lower bound per child c: kappa(c) >= 1-max(chat(empty)^2, max_j Inf_j(c)) (rigorous: chat(S)^2<=Inf_j(c) for j in S); node data exact rationals; logarithms float64 (evidence, not a certificate); exact kappa checked by Krawtchouk for n<=33 (808 child checks, maximum always at level<=1); Lambda_v=0 when j_v=0",
+   "statement_sha256": "a61cb917a5dbbdf2d9ff2b0e91075bf170c6b4f5ff70bf10e0c5fd12abe5857f",
+   "contributors": [
+    "claude-B16-lead"
+   ],
+   "proof_source": "code/b16_sandwich.py Part 4; out/b16_sandwich_results.json part4_majority_Lambda. Asymptotic proof sketch: on good nodes d<=n/2, |s|<=sqrt(n-d), j_v<=(1+o(1))sqrt(2/(pi m)) and kappa_min>=c'>0, so each good node pays >= w_v j_v((1/2)log2 n - O(1)).",
+   "proof_dependencies": [
+    "LOG_ALLOCATION_CURATED section 5 (Lambda_T definition)",
+    "monotone threshold Fourier facts"
+   ],
+   "review_records": [
+    {
+     "reviewer": "claude-B16-lead (self)",
+     "kind": "exact rational node data + Krawtchouk kappa check n<=33",
+     "result": "PASS"
+    },
+    {
+     "reviewer": "A076 (requested)",
+     "kind": "independent threshold code",
+     "result": "PENDING"
+    }
+   ],
+   "status": "EVIDENCE",
+   "supersedes": [],
+   "refutes": [],
+   "first_unproved_line": "explicit-constant local limit bound: sum over good nodes {d<=n/2,|s|<=sqrt(n-d)} of w_v j_v >= c I(Maj_n) with kappa_min>=c'>0 there",
+   "next_consumers": [
+    "A076",
+    "A077",
+    "LOG_ALLOCATION route (8)",
+    "C019"
+   ]
+  }
+ ]
+}

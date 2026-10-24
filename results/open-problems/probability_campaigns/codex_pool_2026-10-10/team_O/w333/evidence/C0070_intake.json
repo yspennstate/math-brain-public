@@ -1,0 +1,40 @@
+[
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 70,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0070",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Open Problem 13.4, p. 190",
+      "problem_id": "C0070",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "heydenreich_hofstad_highd_2017",
+      "statement": "Show that for the hypercube the second largest cluster at p = p_c(1 + eps) (eps >> 2^{-d/3}) has, to leading order, the size of the largest cluster at p_c(1 - eps).",
+      "status_search": "",
+      "title": "Discrete duality principle for hypercube percolation",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 58,
+    "record": {
+      "attempt_id": "C0070-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Identify the subcritical largest cluster size, which the source flags as unknown, via the cluster tail.",
+      "obstruction": "Sharp exponential rate of the subcritical cluster tail on the hypercube and the post-giant tail are both unproved.",
+      "problem_id": "C0070",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result": "In G(n,p) the duality principle comes from the exact exchangeability of the graph after removing the giant; on the hypercube there is no such exact symmetry, and the principle must be proved from the cluster-size tail: at p_c(1 - eps) the largest cluster has size Theta(eps^{-2} log(eps^3 2^d)) (the source's Theorem 13.8 gives the upper bound and the matching lower bound is the missing half), and at p_c(1+eps) the second largest is expected to be of the same form. The lower bound for the subcritical largest cluster follows from a second-moment count of vertices in clusters of size k = c eps^{-2} log(eps^3 V) if the cluster-size tail P(|C| >= k) is >= c k^{-1/2} e^{-c' eps^2 k} uniformly in the hypercube, i.e. a mean-field tail with the correct exponential rate; the upper bound on the tail is known, the lower bound with the sharp rate eps^2 is the gap. The supercritical second-largest cluster then needs the same tail for the non-giant clusters after conditioning away the giant, which on the hypercube is the same geometric depletion problem as C0069. So Open Problem 13.4 reduces to two tail statements, one subcritical (sharp exponential rate) and one supercritical (after removal of the giant).",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  }
+]

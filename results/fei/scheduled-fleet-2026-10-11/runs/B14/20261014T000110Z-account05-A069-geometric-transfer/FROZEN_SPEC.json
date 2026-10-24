@@ -1,0 +1,12 @@
+{
+ "helper_version":"A069-stage3-resampling-v1",
+ "family":"all three-bit Boolean product triples; compatible overlapping two-subcube masks times fixed Boolean seeds",
+ "parameter_domain":"all 256^3 triples of three-bit signs are NOT enumerated: exhaust every ordered Boolean pair (65536) and use 4096 explicitly indexed triples (indices 0..4095); mask blocks (r,s,t,kY)=(1,1,1,1),(2,1,1,1),(1,2,1,1),(1,1,2,1),(1,1,1,2); all event assignments and four fixed seeds per assignment",
+ "case_count": "65536 Boolean pairs +4096 triples +256 compatible-mask/source cases +2 boundary fixtures =69890",
+ "symmetry":"none; triple index j maps to (j mod256, floor(j/256), (17j+3) mod256), a stated subset, not all triples",
+ "arithmetic":"integer FWHT, rational Fraction, direct resampling pair counts, direct physical pivotal edges",
+ "memory_estimate_mb":32,
+ "maximum_runtime_seconds":60,
+ "runtime_guard_seconds":55,
+ "command":"python -X utf8 code/check.py"
+}

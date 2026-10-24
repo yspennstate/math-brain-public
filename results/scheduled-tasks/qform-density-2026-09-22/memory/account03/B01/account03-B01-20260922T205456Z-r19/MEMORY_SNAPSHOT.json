@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260922T205456Z-r19",
+  "control_commit_start": "68052f93f7e5f0fe53f2f644b2d41a66d4001c05",
+  "control_commit_final_refresh": "e5d7fab1f7b9aebad0b5142de97a6682ade5af0c",
+  "control_revision": "2026-09-22.15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "assignment": "Oscillatory replacement",
+  "mechanism": "aggregate exterior-mass regularized determinant -> fractional Riesz potential -> scalar-Schur density transducer -> signed Fejer",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "premises": [
+    {
+      "id": "regularized determinant cross-block characteristic-function theorem",
+      "source": "yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md",
+      "scope": "arbitrary symmetric quadratic form, original-coordinate cross block, cap-one product inputs, arbitrary self blocks and extra spectrum"
+    },
+    {
+      "id": "signed Fejer density equivalence",
+      "source": "yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79:proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md",
+      "scope": "exact equivalence between bounded density norm and uniform signed Fejer averages"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-EXTERIOR-EK-FRACTIONAL-RIESZ-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For E_k=e_k(BB^T)>0 and 0<alpha<min(1,k/4), H_alpha(R)<=C_(alpha,k)E_k^(-alpha/(2k)) with explicit beta-function constant, retaining arbitrary self blocks and extra spectrum."
+    },
+    {
+      "id": "QFORM-EXTERIOR-E3-HALFRIESZ-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "H_1/2(R)<=9.841 e_3(BB^T)^(-1/12)."
+    },
+    {
+      "id": "QFORM-PIVOT-PLUS-E3-CROSS-DENSITY-v1",
+      "status": "PROVED_TARGET_LEVEL_BRANCH",
+      "statement": "For nonzero physical pivot a and Schur residual cross block B with E3>0, ||p_Q||infinity<=9.841 |a|^(-1/2)E3^(-1/12); essential boundedness only, continuity separate."
+    },
+    {
+      "id": "QFORM-EXTERIOR-E5-CONTINUOUS-DENSITY-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "If E5=e5(BB^T)>0, ||p_R||infinity<=6.771 E5^(-1/10), with continuous density vanishing at infinity."
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B01",
+    "source": "yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79",
+    "application": "sup_{T,y} D_T law(Q)(y)<=9.841 |a|^(-1/2)E3^(-1/12) on the pivot-plus-E3 branch"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7df1461e33f7ea4e6026a650391822a16e56e987",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260922T205456Z-r19/REPORT.md",
+    "blob": "9cb96b24ad0e118a42bb74ca9e167b48f1028d79",
+    "checks_commit": "2b6c643b7e580f7ef4ab05217dcac1f5fe477faa"
+  },
+  "handoff_commit": "eddf6e534345f560d6c197bab923c4d01735aaa8",
+  "unresolved_implication": "QFORM-SCHUR-THIRD-DIRECTION-AGGREGATION-v1: force a dimension-free lower bound on |a|^6 e3(BB^T) in every unpaid scalar-Schur state or descend to a previously paid branch; alternatively combine guaranteed E2 currency with one additional smoother before the half-Riesz endpoint logarithm.",
+  "next_step": "Attack product-preserving third-direction aggregation in the scalar-Schur residual, using aggregate exterior mass rather than any fixed coordinate minor.",
+  "continuity_status": "proved for the E5 direct Fourier branch; not proved for pivot-plus-E3 half-Riesz branch"
+}

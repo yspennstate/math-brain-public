@@ -1,0 +1,12 @@
+{
+ "helper_version":"A026-gray-independent-v1",
+ "actual_Boolean_family":"all sign truth tables through four variables, fixing f(0)=1",
+ "parameter_domain":[1,2,3,4],
+ "case_count":32906,
+ "symmetry":"global output sign only",
+ "arithmetic":"Gray-code integer Walsh updates; cross-multiplied integer inequalities",
+ "memory_estimate_MB":20,
+ "maximum_runtime_seconds":60,
+ "acceptance_test":"At each nonconstant function, find i with denominator>0 and 2 sum|W_T W_(T+i)| <= (7/2) sum W_(T+i)^2, equivalently 4 sum|products| <=7 sum squares. Compare dimension-specific maxima with independent butterfly implementation.",
+ "clarification":"FROZEN_SPEC.json's original count 33034 was an addition error; executed domain was unchanged and actual total is 32906."
+}

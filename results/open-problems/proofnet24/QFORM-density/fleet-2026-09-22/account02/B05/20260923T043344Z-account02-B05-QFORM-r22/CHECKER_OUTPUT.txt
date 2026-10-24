@@ -1,0 +1,33 @@
+QFORM B05 r22 symbolic/algebraic regression
+
+Matrix:
+B = [[a,beta,0],[beta,alpha,delta],[0,delta,gamma]].
+
+Verified symbolically:
+ det(B) = a*alpha*gamma - a*delta^2 - beta^2*gamma.
+ (B^{-1})_{31} = beta*delta/det(B).
+
+For scalar pivot a != 0, Schur residual
+S = [[alpha-beta^2/a, delta],[delta,gamma]]
+obeys
+ det(S) = det(B)/a.
+
+Inverse-certificate logic under ||B^{-1}||_op <= 1:
+ x=B^{-1}e3 => ||x||_2<=1,
+ a*x1+beta*x2=0,
+ delta*x2+gamma*x3=1,
+ so |a*delta|/|beta| >= 1-|gamma|.
+Also |(B^{-1})_{31}|<=1 gives |det(B)|>=|beta*delta|.
+Hence if |gamma|<1/2,
+ |a det(B)| >= beta^2/2.
+If additionally |a|<=1/16 and sigma_min(B)>=1,
+ beta^2 >= 1-a^2 >= 255/256,
+ so |a det(B)| >= 255/512.
+
+Numerical constants:
+ 31*2^(2/3) = 49.20943261101418
+ 31*2^(2/3)*(512/255)^(1/6) = 55.27176345396668
+ 16*sqrt(30)*(512/255)^(1/4) = 104.31891349854394
+ 128*(1/16)^(-1/4) = 256.0
+
+CHECK_PASS

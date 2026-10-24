@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260923T202254Z-account01-B02-qform-auto11-r36",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "control_commit_prepublication": "c57d8daa2176602dd3536baee859724b9159b432",
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "8a41226468b3a1236efa704c7442d95a997b13a0",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T202254Z-account01-B02-qform-auto11-r36/REPORT.md",
+  "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T202254Z-account01-B02-qform-auto11-r36/CHECKS.md",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B02/20260923T202254Z-account01-B02-qform-auto11-r36.md",
+  "handoff_commit": "260a441a8b849f7194335662cbb52ed3ccd589e0",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "global_unweighted_L1_status": "OPEN_NOT_REFUTED",
+  "full_target_continuity": "OPEN",
+  "new_results": [
+    "QFORM-D5UNPAID-PARAMETRIC-E3-SQUEEZE-v1",
+    "QFORM-RANKONE-CROSS-SUBTRACTION-v1",
+    "QFORM-N3-THIRDCURVATURE-PHYSICALIZATION-v1"
+  ],
+  "main_bound": "For any 0<delta<=1/8, S4>(1-delta)E and T2>=delta E imply E3(M)>((1-delta)delta^2/2)E^3. With delta=2^-19 on E>11907/16384, either D5 pays, account02/B02 E3 pays, or T2<E/524288.",
+  "designated_partner": {
+    "worker": "account02/B02",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3fccd9b82b456e198758e5839be364b4b0ec5024",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T170839Z-account02-B02-qform-auto11/REPORT.md",
+    "result_applied": "marginal-free physical-E3 Fourier theorem ||p||inf<=10.345084 E3^-1/6 and integral|phi|<=2pi*10.345084 E3^-1/6",
+    "actual_inequalities": [
+      "E3(M)>((1-delta)delta^2/2)E0^3 on the parametric tail branch",
+      "E3(M)>(1-1/64-delta)tau/4 with tau=1/4096 in the absolute-second-scale subbranch"
+    ]
+  },
+  "secondary_source": {
+    "worker": "account01/B07",
+    "commit": "4a0d5ffbeb2cd078b6f33a4b3a678ae3dd94763f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T170819Z-r29/REPORT.md",
+    "use": "Pluecker-TV macro-minor or half-Riesz routing only; no density conclusion inferred from either alone"
+  },
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY refuted",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "no post-rotation independence",
+    "no deletion of small nonzero cross tails"
+  ],
+  "unresolved": "QFORM-THREEBANK-INTERNALCROSS-OR-E2-HALFRIESZ-TO-L1-v1",
+  "next_step": "Build a dependence-safe third-curvature receiver for either outer near-rank-one plus an internal physical cross block of Frobenius energy >961/16384, or target-scale E2 plus the universal half-Riesz/macro-minor alternatives, retaining all leakage exactly.",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

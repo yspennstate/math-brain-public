@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "account": "account01",
+  "slot": "B17",
+  "run_id": "20260924T074031Z-account01-B17-QFORM-auto11",
+  "control_commit_at_refresh": "2337b4fdc70e2454303227e8b23d97e564cb2521",
+  "later_control_observed": "cb806fbd7f4b070d20da6825b81826fc372fef98",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_FOR_FULL_TARGET",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "6c7c4cc8360ae3175c6402fc6ba9895e85b2fac5",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260924T074031Z-account01-B17-QFORM-auto11/REPORT.md",
+  "checker_status": "QFORM_B17_MAJORITY_POISSON_SHARP_CHECK_PASS",
+  "new_results": [
+    "Global majority-plane Gaussian-location theorem: for J=diag(1,1,-1), isotropic G~N(0,sI3), and arbitrary independent M supported in the positive eigenspace, the complete density of (G+M)^TJ(G+M) is at most 1/(2sqrt(2)s). Positive sheet is the completed account02/B17 one-sheet theorem; negative sheet follows from Q=U-V and monotonicity of the Gaussian-square density.",
+    "Exact entrywise-dense 4m-variable rank-three family A_m=R_m B R_m^T has nonzero spectrum {1,1,-1}; two positive-eigenspace physical row types carry source-valid root-m Poisson satellites.",
+    "Pinned Theorem F applies in the actual physical frame with leverage 3/(4m), Gram I3 and zero residual, giving |Phi_m(t)|<=min(1,(4pi)^(3/2)|t|^(-3/2)), finite-stage ||p_m||_infinity<=12, and uniform convergence of complete output densities to the Gaussian-plus-Poisson limit.",
+    "Sharp witness bracket: 3sqrt(2)e^(-2lambda)I_0(lambda)^2 <= lim ||p_m||_infinity <=3sqrt(2).",
+    "For fixed D>0 and a=sqrt(D/lambda), the special marginal variance tends to 1/12+D and vector Lindeberg defect tends to (3/2)D while the lower witness tends to 3sqrt(2) as lambda->0. At lambda=10^-3,D=1 the bracket is [4.234166002454733,4.242640687119286].",
+    "Diagonal vanishing-intensity variant lambda_m=m^(-1/4), a_m=m^(1/4) has Var(X_special) and Lindeberg defect diverging like m^(1/4) while ||p_Qm||_infinity->3sqrt(2). Thus moment/Lindeberg rigidity is false outside the previous explicitly Lindeberg chamber."
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B17",
+    "source_commit": "5b85a3d5f95ea478f2534589aaf8729a4e1a29d6",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T064827Z-account02-B17-QFORM-auto11/REPORT.md",
+    "application": "its Gaussian-location one-sheet inequality is the positive-sheet half of the new global majority-plane theorem, which then yields limsup ||p_m||_infinity<=3sqrt(2) for the explicit dense Poisson-satellite target family"
+  },
+  "other_premises": [
+    {
+      "source_commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "result": "Theorem F Fresnel-Brascamp-Lieb physical-frame envelope"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "unresolved_implication": "The full arbitrary-product theorem remains open. The next sharp-witness regimes are simultaneous majority/minority macroscopic shifts, shared non-collinear macroscopic rows not reducible to a positive-plane location mixture, and extra active spectrum surviving aggregation.",
+  "next_step": "Stress two-sided compound-Poisson shifts and shared macroscopic directions while retaining original-coordinate product provenance; do not infer variance rigidity outside Lindeberg."
+}

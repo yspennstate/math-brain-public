@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "activation_revision": "2026-09-22.5",
+  "control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260923T230800Z-account01-B15-QFORM-auto11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "source_control_commit_initial": "6697c3e83e38ca01add3fd1b51b7f1e3b6be20ba",
+  "source_control_commit_refresh": "837d087b3ace6e49093415e7f0baea30048e16b4",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B15",
+    "canonical_commit": "58b7dd57dc1282bcf84fd0ceb0c314baca3a5abe",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260923T220140Z-account02-B15-QFORM-auto11/REPORT.md",
+    "application": "For Q0=2XY+Z^2+2ZU with pivots (X,Z), leaves (Y,U), C=diag(0,1), M=I2, the completed grouped determinant receiver gives P(Q0 in I)<=2|I| and essential density height <=2."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-DOMINATED-CONDITIONAL-C0-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "A measurable mixture of conditional C0 densities dominated in L-infinity by an integrable H is C0 and has height at most EH; continuity is a no-loss upgrade after height is paid."
+    },
+    {
+      "id": "QFORM-SQUARE-LINEAR-LEAF-C0-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "If after original-coordinate conditioning Q=R(P)+dU^2+a(P)U+(2m.P+beta)V with d!=0, m!=0, no UV and no V^2 term, then ||p_Q||_infinity <=6|d|^(-1/3)max_j|m_j|^(-2/3) and p_Q is in C0."
+    },
+    {
+      "id": "QFORM-FOURVAR-CURVED-LEAF-EXAMPLE-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "For Q=-X^2-Z^2+Y^2+2XY+2ZU, eigenvalues are +-sqrt(2),(-1+-sqrt(5))/2; three magnitudes are >=1 and the new receiver gives ||p_Q||_infinity<=6 with p_Q in C0. Only one physical diagonal is zero, so no two-leaf zero internal block exists in this 4x4 matrix."
+    }
+  ],
+  "canonical_scientific_commit": "0b451fb08a83f7d58a1f2bfc0eb4ed4cdc9f487c",
+  "canonical_scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T230800Z-account01-B15-QFORM-auto11/REPORT.md",
+  "handoff_commit": "a6a21fbadc4d2555fad9e27477e3be7a70a71126",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B15/20260923T230800Z-account01-B15-QFORM-auto11.md",
+  "unresolved_implication": "Handle a genuinely nonzero 2x2 leaf quadratic block, especially indefinite, by averaging its logarithmic critical singularity against the pivot-generated affine coefficient before fiber supremum, or structurally route remaining matrices to paid original-product receivers.",
+  "next_step": "Attempt the rank-two indefinite leaf block using the pair-log envelope and a distributional estimate for the moving critical value that retains original product provenance.",
+  "operational_state_changed": false
+}

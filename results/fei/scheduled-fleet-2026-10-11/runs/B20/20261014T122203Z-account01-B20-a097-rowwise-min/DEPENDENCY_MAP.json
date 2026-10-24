@@ -1,0 +1,16 @@
+{
+  "candidate": "G<=4I+3U/4",
+  "nodes": [
+    {"id":"exact_signed_GU","status":"PROVED","statement":"G=D_ge2+K^(0)+K^(1)"},
+    {"id":"root_payment","status":"PROVED","statement":"K^(0)<=2M1/ln2"},
+    {"id":"child_singleton","status":"PROVED","statement":"row_j<=V_j/2+r_j/ln2"},
+    {"id":"ternary_singleton","status":"PROVED_IN_THIS_RUN","statement":"row_j<=(9/ln2)(2r_j+s_j)"},
+    {"id":"rowwise_min_cut","status":"PROVED_IN_THIS_RUN","depends_on":["exact_signed_GU","root_payment","child_singleton","ternary_singleton"]},
+    {"id":"signed_higher_rows","status":"OPEN","statement":"the displayed residual-qualified D_ge2 inequality"},
+    {"id":"universal_GU","status":"OPEN","depends_on":["rowwise_min_cut","signed_higher_rows"]},
+    {"id":"GU_to_FEI","status":"PROVED_CONDITIONAL","statement":"GU(a,b), b<1 implies H<=(2+2a/(1-b))I"}
+  ],
+  "invalidations": [
+    {"claim":"V1/2<=C Q_ge3 for an absolute C","status":"REFUTED","effect":"No longer needed by the rowwise-minimum cut."}
+  ]
+}

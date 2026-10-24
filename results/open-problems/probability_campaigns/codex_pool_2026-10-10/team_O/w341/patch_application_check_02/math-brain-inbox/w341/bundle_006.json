@@ -1,0 +1,105 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w341",
+  "bundle_slug": "w341-c0058-checked-results-20261010",
+  "entries": [
+    {
+      "key": "nonsimple-boundary-colour-word-obstruction",
+      "namespace": "probability.planarmaps",
+      "logical_name": "c0058-nonsimple-boundary-colour-word-obstruction",
+      "kind": "lemma",
+      "title": "A site-colour word does not retain boundary vertex identity [audit pending w347]",
+      "statement": "For independent Bernoulli(p) site colours, 0<p<1, boundary incidence patterns [a,b,a,c] and [a,b,c,d] both initially have colour word UUUU but induce different occurrence-colour laws. After exposing occurrence zero as black, occurrence two is black with probability 1 in the first pattern and p in the second. The full-law total variation is 2p(1-p). Thus the word alone cannot determine transitions uniformly conditional on each full boundary configuration. Retain incidence identities or supply a valid averaging/lumping theorem; no impossibility of weak lumping for a particular process is asserted.",
+      "proof_text": "# C0058: colours alone lose vertex identity\n\nStatus: proved necessary-state correction, pending w347. Curien's cached *Peeling random planar maps* notes pose the site-percolation exploration question at text lines 4180-4181. The same notes explicitly allow nonsimple boundaries (lines 1458-1459 and 2112). The original attempt's assertion that Markov peeling exists exactly for bounded face degrees is unsupported; it also treats a colour word as sufficient without a simplicity hypothesis. No site threshold is computed here.\n\nSite labels attach to vertices, not to boundary occurrences. Compare two boundary incidence patterns of length four: [a,b,a,c] and [a,b,c,d]. The first can arise as the boundary walk around a two-edge tree; the second around a square. Both may be bipartite planar-map boundaries and both have colour word UUUU before labels are exposed. Give distinct vertices independent Bernoulli(p) colours. In the first pattern, exposing occurrence zero also fixes occurrence two. In the second, occurrence two is still Bernoulli(p), independent of occurrence zero. After a black first exposure, its conditional black probability is respectively 1 and p. Thus a state recording only the word UUUU and its length cannot determine the next colour transition across these boundary configurations.\n\nFor p=1/2 the full four-occurrence colour laws have total variation 1/2; in general it is 2p(1-p). The shared-vertex law is supported on equality of bits zero and two; the distinct-vertex law puts probability 2p(1-p) on disagreement, and on the equality outcomes the shared law exceeds the distinct one. The exact checks at p=1/3,1/2,2/3 gave 4/9,1/2,4/9.\n\nA state meant to give the conditional transition law for every full boundary configuration must therefore retain vertex identities or their incidence partition, or justify an averaging/lumping theorem that removes that information. The example rules out configurationwise lumping by the colour word alone; it does not rule out weak lumping under the special law of a particular exploration. This correction does not prove that a partition-and-colour state suffices for every geometry transition or threshold calculation. Adaptive revelation of independent labels preserves independence of distinct unseen vertices provided the reveal choice does not inspect hidden labels. Unbounded but finite face degrees permit finitely many new labels per step; they do not, by themselves, rule out a Markov description with a larger state. Conversely, bounded face degrees do not automatically bound the accumulated boundary length.\n\nAudit the nonsimple-boundary convention, repeated-vertex correlations, the two conditional laws and the limited scope of the proposed state. This result refutes a compression assumption, not the existence of useful peeling algorithms.\n",
+      "assumptions": [
+        "independent colours on distinct vertices",
+        "0<p<1",
+        "general boundaries may repeat vertices",
+        "same unexposed word and length",
+        "configurationwise transition rule, without a proved averaging theorem"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:c0058-nonsimple-boundary-colour-word-obstruction",
+        "url": "file:///~/brain_workers/w341/proofs/C0058_boundary_identity.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bounded-faces-markov-iff-not-established",
+      "namespace": "probability.planarmaps",
+      "logical_name": "c0058-bounded-faces-markov-iff-not-established",
+      "kind": "concept",
+      "title": "Bounded face degree is not a demonstrated criterion for Markov peeling [audit pending w347]",
+      "statement": "The prior claim that a Markov description of site-percolation peeling exists exactly for bounded face degrees is unsupported. Unbounded finite faces expose finitely many labels per step and allow larger states; bounded face degrees alone do not bound the accumulated boundary length. The proven correction here is only that nonsimple boundaries require vertex-identity information in addition to a colour word. No threshold or sufficient compressed state is established.",
+      "proof_text": null,
+      "assumptions": [
+        "finite degrees at each exposed face",
+        "general-boundary site-percolation exploration"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:c0058-bounded-faces-markov-iff-not-established",
+        "url": "file:///~/brain_workers/w341/proofs/C0058_boundary_identity.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-limited-status-20261010",
+      "namespace": "probability.planarmaps",
+      "logical_name": "c0058-source-limited-status-20261010",
+      "kind": "concept",
+      "title": "Source-limited status and scope for C0058 [audit pending w347]",
+      "statement": "Curien, Peeling random planar maps (cached 2019 notes), asks for useful site-percolation peeling leading to threshold computation. This packet proves a necessary vertex-identity correction for nonsimple boundaries. It supplies neither that threshold nor a sufficient compressed exploration process; later literature status is unverified.",
+      "proof_text": null,
+      "assumptions": [
+        "only the supplied local caches and prior records were consulted",
+        "independent review pending"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:c0058-source-limited-status-20261010",
+        "url": "file:///~/brain_workers/w341/proofs/C0058_boundary_identity.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "bounded-faces-markov-iff-not-established",
+      "to_key": "nonsimple-boundary-colour-word-obstruction",
+      "kind": "cites",
+      "rationale": "From: \"The prior claim that a Markov description of site-percolation peeling exists exactly for bounded face degrees is unsupported. Unbounded finite faces expose finitely many labels per step and allow larger states; bounded face degrees alone do not bound the accumulated boundary length. The proven correction here is only that nonsimple boundaries require vertex-identity information in addition to a colour word. No threshold or sufficient compressed state is established.\" To: \"For independent Bernoulli(p) site colours, 0<p<1, boundary incidence patterns [a,b,a,c] and [a,b,c,d] both initially have colour word UUUU but induce different occurrence-colour laws. After exposing occurrence zero as black, occurrence two is black with probability 1 in the first pattern and p in the second. The full-law total variation is 2p(1-p). Thus the word alone cannot determine transitions uniformly conditional on each full boundary configuration. Retain incidence identities or supply a valid averaging/lumping theorem; no impossibility of weak lumping for a particular process is asserted.\"."
+    },
+    {
+      "from_key": "nonsimple-boundary-colour-word-obstruction",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"For independent Bernoulli(p) site colours, 0<p<1, boundary incidence patterns [a,b,a,c] and [a,b,c,d] both initially have colour word UUUU but induce different occurrence-colour laws. After exposing occurrence zero as black, occurrence two is black with probability 1 in the first pattern and p in the second. The full-law total variation is 2p(1-p). Thus the word alone cannot determine transitions uniformly conditional on each full boundary configuration. Retain incidence identities or supply a valid averaging/lumping theorem; no impossibility of weak lumping for a particular process is asserted.\" To: \"Curien, Peeling random planar maps (cached 2019 notes), asks for useful site-percolation peeling leading to threshold computation. This packet proves a necessary vertex-identity correction for nonsimple boundaries. It supplies neither that threshold nor a sufficient compressed exploration process; later literature status is unverified.\"."
+    },
+    {
+      "from_key": "bounded-faces-markov-iff-not-established",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"The prior claim that a Markov description of site-percolation peeling exists exactly for bounded face degrees is unsupported. Unbounded finite faces expose finitely many labels per step and allow larger states; bounded face degrees alone do not bound the accumulated boundary length. The proven correction here is only that nonsimple boundaries require vertex-identity information in addition to a colour word. No threshold or sufficient compressed state is established.\" To: \"Curien, Peeling random planar maps (cached 2019 notes), asks for useful site-percolation peeling leading to threshold computation. This packet proves a necessary vertex-identity correction for nonsimple boundaries. It supplies neither that threshold nor a sufficient compressed exploration process; later literature status is unverified.\"."
+    },
+    {
+      "from_key": "source-limited-status-20261010",
+      "to_existing_logical": "math:probability.planarmaps:open-problem-c0058-a-peeling-algorithm-exploring-site-percolation-on-boltzmann-maps",
+      "kind": "cites",
+      "rationale": "From: \"Curien, Peeling random planar maps (cached 2019 notes), asks for useful site-percolation peeling leading to threshold computation. This packet proves a necessary vertex-identity correction for nonsimple boundaries. It supplies neither that threshold nor a sufficient compressed exploration process; later literature status is unverified.\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Can one find a peeling algorithm exploring site percolation on Boltzmann planar maps in the same spirit as the algorithm for bond percolation, so as to compute the site percolation threshold? Source: Curien: Peeling random planar maps, Saint-Flour XLIX 2019 lecture notes, author preliminary version, Open question, p. 79.\". "
+    },
+    {
+      "from_key": "nonsimple-boundary-colour-word-obstruction",
+      "to_existing_logical": "math:probability.planarmaps:attempt-c0058-a-peeling-algorithm-exploring-site-percolation-on-boltzmann-maps",
+      "kind": "refutes",
+      "rationale": "From: \"For independent Bernoulli(p) site colours, 0<p<1, boundary incidence patterns [a,b,a,c] and [a,b,c,d] both initially have colour word UUUU but induce different occurrence-colour laws. After exposing occurrence zero as black, occurrence two is black with probability 1 in the first pattern and p in the second. The full-law total variation is 2p(1-p). Thus the word alone cannot determine transitions uniformly conditional on each full boundary configuration. Retain incidence identities or supply a valid averaging/lumping theorem; no impossibility of weak lumping for a particular process is asserted.\" To: \"The frontier becomes Markov if one records the boundary word\". This refutes that compression when boundary occurrences may repeat a vertex; it makes no threshold claim."
+    }
+  ]
+}

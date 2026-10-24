@@ -1,0 +1,97 @@
+--- a/~/math-brain-inbox/w364/bundle_001.json
++++ b/~/math-brain-inbox/w364/bundle_001.json
+@@ -0,0 +1,94 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w364",
++  "bundle_slug": "probability-fpp-boundary-profile-audit-001",
++  "entries": [
++    {
++      "key": "boundary-matching",
++      "namespace": "probability.firstpassage",
++      "logical_name": "fpp-scalar-block-minima-matching-obstruction",
++      "kind": "concept",
++      "title": "Boundary matching for optimized block passage costs",
++      "statement": "Draft audit concept; independent review pending. In unrestricted iid FPP on Z^2 with edge weights uniform on {1,2}, T((0,0),(1,1))=min(A1+B1,A2+B2), where A1=w((0,0),(1,0)), A2=w((0,0),(0,1)), B1=w((1,0),(1,1)) and B2=w((0,1),(1,1)). For L=min(A1,A2)+min(B1,B2), P(T>L)=1/8, E(T-L)=1/8, Var(T)=23/64, Var(L)=3/8 and Cov(L,T-L)=-1/16. Independence of the two edge collections does not justify scalar block composition or independence of the matching penalty.",
++      "proof_text": null,
++      "assumptions": [
++        "Nearest-neighbor undirected FPP on the full Z^2 lattice",
++        "iid edge weights uniform on {1,2}",
++        "Endpoints s=(0,0), t=(1,1)"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:fpp-boundary-profile-audit",
++        "url": "urn:math:fpp:boundary-profile-audit:2026-10-10",
++        "revision": "draft-2026-10-10",
++        "license": "owner-own-work (campaign derivation; independent review pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "forced-low-pivotality",
++      "namespace": "probability.firstpassage",
++      "logical_name": "fpp-integer-forcing-all-geodesics-criterion",
++      "kind": "concept",
++      "title": "Single-edge forcing and tied minimizing paths",
++      "statement": "Draft audit concept; independent review pending. For nearest-neighbor FPP on Z^d with every edge weight in {1,2}, let T_e(1) and T_e(2) be the passage times between fixed distinct vertices after forcing edge e to weight 1 or 2, with all other weights held fixed. Then T_e(2)-T_e(1)=1 if and only if every minimizing path in the forced-low environment uses e; otherwise the difference is zero. Membership in one arbitrarily selected geodesic is insufficient.",
++      "proof_text": null,
++      "assumptions": [
++        "Fixed distinct lattice endpoints; d>=2",
++        "All weights take integer values 1 or 2",
++        "All other edge weights held fixed under the two forcings",
++        "A minimizing path means any path attaining passage time, not a selected tie representative"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:fpp-boundary-profile-audit",
++        "url": "urn:math:fpp:boundary-profile-audit:2026-10-10",
++        "revision": "draft-2026-10-10",
++        "license": "owner-own-work (campaign derivation; independent review pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "centered-error-transfer",
++      "namespace": "probability.firstpassage",
++      "logical_name": "fpp-centered-matching-error-variance-transfer",
++      "kind": "concept",
++      "title": "Variance transfer through a centered matching error",
++      "statement": "Draft audit concept; independent review pending. For square-integrable T_n=L_n+G_n, if ||G_n-EG_n||_2=o(n^(1/3)) and c*n^(2/3)<=Var(L_n)<=C*n^(2/3) for fixed 0<c<=C and all sufficiently large n, then Var(T_n)/Var(L_n)->1; in particular log Var(T_n)/(2 log n)->1/3.",
++      "proof_text": null,
++      "assumptions": [
++        "Square-integrable real random variables T_n,L_n,G_n on a common probability space for each n",
++        "T_n=L_n+G_n almost surely",
++        "The two stated asymptotic bounds"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:fpp-boundary-profile-audit",
++        "url": "urn:math:fpp:boundary-profile-audit:2026-10-10",
++        "revision": "draft-2026-10-10",
++        "license": "owner-own-work (campaign derivation; independent review pending)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "centered-error-transfer",
++      "to_key": "boundary-matching",
++      "kind": "semantic_association",
++      "rationale": "The finite counterexample exhibits an endpoint-matching penalty; the conditional L2 statement specifies sufficient centered-error control to transfer a variance exponent in a sequence of such decompositions."
++    },
++    {
++      "from_key": "forced-low-pivotality",
++      "to_key": "boundary-matching",
++      "kind": "semantic_association",
++      "rationale": "The same positive integer-weight square has tied optimal routes, so preserving the common boundary endpoint and distinguishing all minimizers from a selected minimizer are both necessary audit checks on optimized passage costs."
++    },
++    {
++      "from_key": "boundary-matching",
++      "to_existing_logical": "math:probability.core:open-problem-p0104-subdiffusive-and-kpz-passage-time-fluctuation-exponents",
++      "kind": "semantic_association",
++      "rationale": "The explicit failure of scalar block composition obstructs a candidate method for controlling point-to-point variance exponents; it does not refute the exponent conjecture."
++    }
++  ]
++}

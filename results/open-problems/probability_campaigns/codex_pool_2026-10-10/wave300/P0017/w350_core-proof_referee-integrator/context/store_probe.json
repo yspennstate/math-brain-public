@@ -1,0 +1,76 @@
+{
+  "path": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "mode": "ro",
+  "tables": [
+    "schema_meta",
+    "bundle_manifests",
+    "nodes",
+    "claims",
+    "evidence",
+    "evidence_attestations",
+    "evidence_receipts",
+    "mistakes",
+    "reflexes",
+    "reflex_sources",
+    "verification_events",
+    "verification_event_evidence"
+  ],
+  "nodes_columns": [
+    "id",
+    "kind",
+    "title",
+    "body",
+    "metadata_json",
+    "digest",
+    "created_at"
+  ],
+  "distinctive_word_probes": [
+    {
+      "probe": "%P0017%",
+      "fields": [
+        "id",
+        "title"
+      ],
+      "matches": [
+        [
+          "claim_d2e9e3d859a16e515c09803220b9b26608e8a6b5a6ce584d2e99cf6613f89694",
+          "Open problem: Dimension-free log-concave Poincare or Cheeger constant"
+        ],
+        [
+          "claim_fbc7554cdcce8efc8484f98a5982f7add13464aa5d5d53dfb9ca2710fc43e19f",
+          "Attempt on Dimension-free log-concave Poincare or Cheeger constant"
+        ]
+      ]
+    },
+    {
+      "probe": "%posterior%variance%",
+      "fields": [
+        "id",
+        "title"
+      ],
+      "matches": []
+    },
+    {
+      "probe": "%gaussian%retention%",
+      "fields": [
+        "id",
+        "title"
+      ],
+      "matches": []
+    },
+    {
+      "probe": "%block%symmetr%recovery%",
+      "fields": [
+        "id",
+        "title"
+      ],
+      "matches": []
+    }
+  ],
+  "claims_columns": [
+    "id",
+    "payload_json",
+    "digest",
+    "created_at"
+  ]
+}

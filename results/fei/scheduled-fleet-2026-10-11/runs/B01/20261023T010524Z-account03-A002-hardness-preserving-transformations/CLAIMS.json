@@ -1,0 +1,46 @@
+[
+  {
+    "claim_id": "A002-ACTIVATED-FULL-AFFINE-RESET-LEDGER",
+    "version": 1,
+    "exact_statement": "For every finite uniform Boolean sign h and integer k>=2, let p=2^-k and F=1+1[z=0^k](h-1). Let ell be minimum influence under invertible linear input changes and a minimum under those changes plus character multiplication. Then a(F)=ell(F)=p[ell(h)+k(1-Eh)]. For every original physical DATA block A, with every child h_b retained, rho_A(F)=p rho_A(h)-p E[ell(h_b)-a(h_b)], where rho is expected full-affine child influence release. Writing R_k(mu)=H(F)-pH(h), the complete original bank satisfies D_K(F)+S_Astar(F)=p[D_K(h)+S_Astar(h)]+R_k(mu)-E R_k(mu_b)+Kp E[ell(h_b)-a(h_b)]. After branchwise linear data minimization, querying all SAME activation controls redeems exactly p E[ell(h_b)-a(h_b)] once; queried influence, both reset releases and full final leaf influence telescope to I(F). For bent2 source and any k>=2, source singleton rho=1/2 but activated rho=0; at k2 source K2 query/reset bill0 lifts to positive (120+18log2(3)-49log2(7))/32, certified by 2^120*3^18>7^49. Neither this root nor the tensor-bent examples is claimed genuinely high-K critical.",
+    "hypotheses": [
+      "finite uniform Boolean signs; normalized real Walsh spectrum; entropy in bits",
+      "integer k>=2; all activation controls remain unresolved at the DATA frontier",
+      "A is a block of ORIGINAL data coordinates, with every physical branch included",
+      "K arbitrary real for bank algebra; K>=0 for the payment interpretation",
+      "linear data-only minimum is chosen for the delayed-credit continuation; this achieves full affine activated-child optimum"
+    ],
+    "statement_sha256": "02a10ef9002e98adc7f4fffc8108555d767d8436de07c4467bb311c32905b9d6",
+    "contributors": [
+      "A002"
+    ],
+    "proof_source": "RESET_LEDGER.md Sections1--5",
+    "proof_dependencies": [
+      "A002-AFFINE-MINIMAL-RARE-ADMISSION@1 activation directional ledger, rederived here",
+      "A051 affine parity-basis characterization, elementary finite rank-count proof repeated here",
+      "SCOPED A051-FULL-AFFINE-CHILD-RELEASE-BUDGET@1: only original-bank/telescope identities, independently rederived"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A002",
+        "scope": "author analytic proof; exact integer/Fraction full finite checker; independent physical/exhaustive-basis implementation by same author",
+        "result": "PASS; independent-agent acceptance pending; Lean held before compiler by failed memok"
+      }
+    ],
+    "status": "PROVED_LOCAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered transfer rho_A(activation(h))=p rho_A(h) with controls unresolved",
+      "Unregistered source-paid-query transport by rarity scaling alone"
+    ],
+    "first_unproved_line": "At a genuine critical witness, select an original proper pair funded by SAME unused S_Astar with mixed refund and every terminal; no lower funding bound follows from this ledger.",
+    "next_consumers": [
+      "A005",
+      "A051",
+      "A052",
+      "A055",
+      "A090",
+      "A094"
+    ]
+  }
+]

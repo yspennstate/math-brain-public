@@ -1,0 +1,47 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T223500Z-claude-B03-pp-congestion",
+ "stream": "B03",
+ "packet_id": "A014",
+ "gap_id": "G-B03-CONGESTION-UNBOUNDED-READ",
+ "attempt_id": "20261011T223500Z-claude-B03-pp-congestion-a1",
+ "method": "refine the Thm 5.1 witness ledger; spectral interference lemma for pivotal pieces; exact WHT at q<=4",
+ "mathematical_delta": "Theorem R isolates the three log k sources of C003; on PP_q (read q+1 in every DNF) the pivotal pieces of d_j f have disjoint Fourier supports up to an exponentially small remainder, so all three are O(I): H(PP_q) <= C(q) I with C(q) -> 26.95, against 41+7log2(q+1) from Theorem 5.1.",
+ "deliverable_status": "partial: CLAIMS/PROGRESS/PACKET_DELTA/code/out saved; REPORT.md write refused by the harness for subagents, full text returned to the coordinator in the structured output",
+ "mathematical_status": "PROVED (author) for Theorem R, Lemma I and the bounded ratio on PP_q; explicit constant table EVIDENCE; universal bridge CONDITIONAL; FEI OPEN",
+ "claim_versions_used": [
+  "C003 (current-threshold-paper.tex)",
+  "A012-HEREDITARY-ACTIVATION-ADMISSION v1",
+  "A011-BOUNDARY-RETAINING-SELECTOR-TRANSCRIPT v1"
+ ],
+ "claims_created_or_changed": [
+  "B03-R-REFINED-WITNESS-BOUND@1",
+  "B03-PPQ-INTERFERENCE-LEMMA@1",
+  "B03-PPQ-BOUNDED-FEI-RATIO@1",
+  "B03-PPQ-EXPLICIT-CONSTANT-TABLE@1",
+  "B03-PPQ-EXACT-SMALL-Q@1",
+  "B03-A012-LEDGER-REVIEW@1",
+  "B03-UNIVERSAL-LOW-CONGESTION-COVER@1"
+ ],
+ "source_artifacts": [
+  "code/pp_exact.py",
+  "code/pp_refined_constant.py",
+  "code/check_A012_activation.py",
+  "code/write_run_records.py",
+  "out/pp_exact.json",
+  "out/pp_exact_stdout.txt",
+  "out/pp_refined_constant.txt",
+  "out/check_A012_activation.txt"
+ ],
+ "next_consumers": [
+  "A014",
+  "A015",
+  "A086",
+  "A094"
+ ],
+ "next_action": "State Lemma I for arbitrary unions with the cross term sum_{l!=l'}<P_E u_l,P_E u_l'> and prove an absolute constant for read-k unions on linear hypergraphs (gate intersections of size <= 1).",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "REPORT.md and .final not written: the subagent harness refuses report files; the coordinator saves the REPORT text from the structured output"
+ ]
+}

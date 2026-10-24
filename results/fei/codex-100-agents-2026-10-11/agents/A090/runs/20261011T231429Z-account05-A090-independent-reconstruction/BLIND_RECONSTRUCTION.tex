@@ -1,0 +1,7 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+Independent statement-only reconstruction, saved before comparison.
+For the singleton packet rotation $O$ and $D=\operatorname{diag}(1,-1)$, put $D'=O^tDO$. Direct multiplication gives $(D+D')^2=4pI$ and $(D-D')^2=4(1-p)I$. Thus the sum of minor probabilities is at least $\delta=1-\sqrt{1-\min(p,1-p)}$. Binary entropy subadditivity and concavity give $H(X\mid T)+M\ge h_2(\delta)$ and $J-M\le h_2(p)-h_2(\delta)$.
+At the active control node $u=2^{-s}$, the empty packet is $(1-u,-u)$; other packets have equal coefficient magnitudes. Therefore $\lambda_s=u-u^2+u^2\log_2((1-2u+2u^2)/u^2)$. Reach weight is $2^{-k}/u$. Summation gives $2^{-k}(k+A_k)\le4k2^{-k}$ and preserves terminal entropy $2^{-k}H(g)$. Complete definitions and proofs are in REPORT.md.
+\end{document}

@@ -1,0 +1,38 @@
+{
+  "run_id": "20260923T113043Z-account03-B13-qform-r25",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "full_qform_status": "OPEN",
+  "full_continuity_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-EXTREME-NEARDIAG-LEAF-TRANSFER-v1",
+      "status": "PROVED_SUPPORTING_GEOMETRIC_INEQUALITY",
+      "scope": "bounded unit-measure product-indicator witnesses; two original-coordinate hubs; rank-two hub-to-leaf bank with leverage h<1; arbitrary remaining coefficients retained",
+      "statement": "slab mass <= M(B,h) [|J|+4 sum_{j<k}|A_jk| rad(E_j) rad(E_k)]"
+    },
+    {
+      "id": "QFORM-EXTREME-THREELEAF-CURVATURE-TRANSFER-v1",
+      "status": "PROVED_SUPPORTING_GEOMETRIC_INEQUALITY",
+      "scope": "bounded unit-measure product-indicator witnesses; two original-coordinate hubs and any selected three leaves; arbitrary remaining coefficients retained",
+      "statement": "slab mass <= 3*2^(1/6) (|det(b_j,b_k)| ||b_l||)^(-1/3) [|J|+4 Omega_jkl]"
+    },
+    {
+      "id": "QFORM-SLAB-SCALE-ROBUST-CURVATURE-GRAPH-v1",
+      "status": "PROVED_STRUCTURAL_CONSEQUENCE",
+      "scope": "same extreme witnesses; graph edge uv iff |A_uv| rad(E_u) rad(E_v)>|J|/12",
+      "statement": "every pairwise nonadjacent triple satisfies |det(b_j,b_k)| ||b_l|| <=216 sqrt(2)/R^3; transverse active nonedge pairs dominate all active leaves through slab-scale edges"
+    }
+  ],
+  "partner_applied": {
+    "worker": "account04/B13",
+    "source_commit": "e1a56859520ae79b7a1f049a9eedf41972ddf1e1",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260922T231352Z-account04-B13-rough-geometric-transfer-r5/REPORT.md",
+    "use": "no-attainment purification transfers any arbitrary-law strict slab witness to bounded finite-union unit-product witnesses, to which the new inequalities apply"
+  },
+  "supporting_source": {
+    "worker": "account02/B13",
+    "source_commit": "04973c0d13c8cbe814f1303b7de8aeffd40791df",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260923T110032Z-account02-B13-extremal-r25/REPORT.md"
+  },
+  "unresolved": "QFORM-ROBUST-DETSTAR-CURVATURE-GLUE-v1"
+}

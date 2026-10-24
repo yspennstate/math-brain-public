@@ -1,0 +1,49 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261014T045438Z-account01-B19-activation-smr-review-a092",
+  "stream": "B19",
+  "primary_packet_id": "A092",
+  "packet_ids": ["A092"],
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "gap_ids": ["GU-ASYMMETRY-MISMATCH", "B05_RARE_REFUNDS"],
+  "attempt_id": "B19-A092-ACTIVATION-SMR-REVIEW-01",
+  "method": "Independent raw-Walsh reconstruction and prime-factor exact logarithmic certificate",
+  "claim_version": "B19-A092-ACTIVATION-SMR-REVIEW-v1",
+  "mathematical_delta": "Independently accepted B05's all-core fair-activation residual identity and exact five-bit falsifier. Derived the compact certificate 256L=log2(2^1944 3^711/(5^410 13^416 17^136))>0 and separately confirmed the witness satisfies GU(4,3/4) with positive slack.",
+  "deliverable_status": "COMPLETE_REVIEW_ARTIFACT_DELIVERED_AND_VERIFIED",
+  "mathematical_status": "SMR_2_1OVER4_INDEPENDENTLY_REFUTED; GENERAL_GU_OPEN",
+  "claim_versions_used": [
+    "B05-A023-ACTIVATION-SMR-v1",
+    "B01-A003-SIGNED-MISMATCH-REFUND-v1",
+    "B01 tensor-activation GU-to-U proof blob 980120689bdef11652e6e002c47651e08fc1a9e2"
+  ],
+  "claims_created_or_changed": [
+    "B19-A092-ACTIVATION-SMR-REVIEW-v1 accepted",
+    "B01-A003-SMR-2-ONE-QUARTER-v1 refuted",
+    "GU-ASYMMETRY-MISMATCH v4.1 remains open"
+  ],
+  "source_artifacts": [
+    "B05 canonical commit c7effb2ca2a05e8135c2ddbfac397c345d38f0c5",
+    "B01 canonical commit 2432393841959b4f8b72d959b001d6aed4536a71",
+    "GU focus blob 9448198701fbfe0cceb72bda7a6837ebd59704f9",
+    "B19 assignment current default branch",
+    "Latest own report: 20261014T035115Z-account01-B19-fixed-block-review-a094"
+  ],
+  "next_consumers": ["A003", "A005", "A023", "A043", "A064", "A086", "A094", "A096", "B01", "B05", "B08", "B20"],
+  "next_action": "Use the accepted activation recurrence to test a frozen replacement reserve on mask 56242 and tensor equality cores before attempting changing-overlap propagation.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": ["No universal c,eta or alternative GU payment is proved."],
+  "delivery_status": {
+    "state": "DELIVERED_AND_EXACT_READBACK_VERIFIED",
+    "canonical_full_bundle_commit": "ed1658f35d011d23d8b29977146c9248a7486540",
+    "brain_full_bundle_commit": "8a329071cd45829ff979167ff8d39805d78ecc23",
+    "verified_files": 10,
+    "canonical_native_ingestion": "NOT_CLAIMED",
+    "brain_native_ingestion": "NOT_CLAIMED"
+  },
+  "model": "Codex",
+  "reasoning_effort": "UNKNOWN",
+  "full_fei_status": "OPEN"
+}
+

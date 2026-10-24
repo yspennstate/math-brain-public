@@ -1,0 +1,80 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w336",
+  "bundle_slug": "w336-p0208-checked-attempt-20261010",
+  "audit_status": "PENDING_W346_KEEP; do not promote to audited or solved",
+  "entries": [
+    {
+      "key": "q-fold-cycle-hitting-times-and-relaxation",
+      "namespace": "probability.markov-chains",
+      "logical_name": "q-fold-cycle-hitting-times-and-relaxation",
+      "kind": "lemma",
+      "title": "Exact walk parameters of q-fold cycles",
+      "statement": "For m>=5 and q>=2, the arc-transitive graph C_m[empty_q] has mq vertices and degree 2q. Its mean hitting time from a target twin is mq, and from fiber j!=0 is j(m-j)+m(q-1). Its maximal commute time is 2 floor(m^2/4)+2m(q-1), its stationary mean hitting time is (m^2-1)/6+m(q-1), and its rate-one continuous-time relaxation time is 1/(1-cos(2*pi/m)). For fixed q their maximal-commute to twice stationary-hitting ratio tends to 3/2.",
+      "proof_text": "# P0208: exact q-fold cycle calculation\n\nStatus: proof written by w336, independent KEEP pending. This extends the recorded q=2 campaign counterexample; it is not a new literature priority claim. The source's tau_star is a maximal commute time, not a maximal one-way hitting time. Relaxation here uses the rate-one continuous-time generator P-I.\n\nLet m>=5, q>=2 and G=C_m[empty_q]. Its vertices are (i,a), with i modulo m and 1<=a<=q; two vertices are adjacent precisely when their first coordinates differ by one modulo m. G is simple, connected, 2q-regular, has n=mq vertices, and is not a cycle. Rotations, reflection of C_m and independent permutations inside each fiber act transitively on directed edges, so G is arc-transitive.\n\nFix target (0,1). Let a be the mean hitting time from a different vertex in fiber 0. Every visit to fiber 0 from elsewhere chooses a uniformly distributed vertex. If h_j is the mean from fiber j!=0, the quotient cycle's hitting-time equation gives\n\n    h_j = j(m-j) + ((q-1)/q)a.\n\nThe identity j(m-j)=1+[(j-1)(m-j+1)+(j+1)(m-j-1)]/2 verifies that equation away from 0. From a twin of the target, a=1+h_1=m+((q-1)/q)a, so a=mq and h_j=j(m-j)+m(q-1). These values solve all first-step equations. A finite connected chain hits the target with finite mean, so uniqueness of the killed-chain linear system identifies them with the actual hitting times.\n\nThe graph automorphisms exchange any two vertices of a specified fiber separation, so hitting times are symmetric. For m>=5, floor(m^2/4)>m, hence the largest one-way hitting time is floor(m^2/4)+m(q-1), larger than the twin value mq. Consequently\n\n    tau_star = 2 floor(m^2/4) + 2m(q-1),\n    tau_0 = (m^2-1)/6 + m(q-1).\n\nThe second formula is the stationary mean hitting time of the fixed target, including its zero self-hitting time: sum_{j=1}^{m-1}j(m-j)=m(m^2-1)/6, and the remaining constant terms sum to m(q-1). A neighbor has mean hitting time m-1+m(q-1)=n-1.\n\nP equals (A(C_m)/2) tensor (J_q/q). The fiber-constant subspace has eigenvalues cos(2*pi*k/m), 0<=k<m; its orthogonal complement has m(q-1) zero eigenvalues. Since cos(2*pi/m)>0 for m>=5, tau_2=1/(1-cos(2*pi/m)). This is the continuous-time relaxation time; for even m the non-lazy discrete-time absolute spectral gap vanishes, which is a different parameter.\n\nFor each fixed q>=2 and m tending to infinity,\n\n    tau_star/n^2 -> 1/(2q^2),\n    tau_2/n^2 -> 1/(2*pi^2*q^2),\n    tau_star/(2*tau_0) -> 3/2.\n\nThus the same family refutes the three bounds recorded for Aldous-Fill Problem 7.27: O(n log n), O(n), and ratio 1+o(1). This statement relies on the cached problem's parameter definitions and does not establish whether the refutation was previously published.\n\nChecks: scripts/check_p0208.py solves the full hitting-time systems, compares the full transition spectrum, checks the directed-edge orbit, and tests the stationary sum and neighbor identity. The proof covers all m>=5 and q>=2; finite checks supply validation, not the universal argument.\n",
+      "assumptions": [
+        "All hypotheses and scope restrictions in the statement apply."
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:campaign:w336:P0208:q-fold-cycle-hitting-times-and-relaxation",
+        "url": "~\\brain_workers\\w336\\proofs\\P0208.md",
+        "revision": "author-proof-2026-10-10; independent audit w346 pending",
+        "license": "owner-own-work; campaign proof, no novelty claim",
+        "excerpt": "For m>=5 and q>=2, the arc-transitive graph C_m[empty_q] has mq vertices and degree 2q. Its mean hitting time "
+      }
+    },
+    {
+      "key": "q-fold-cycle-commute-and-relaxation-conventions",
+      "namespace": "probability.markov-chains",
+      "logical_name": "q-fold-cycle-commute-and-relaxation-conventions",
+      "kind": "concept",
+      "title": "Conventions for the q-fold cycle calculation",
+      "statement": "In the q-fold cycle calculation, tau_star denotes the maximum of E_x T_y+E_y T_x; it is twice the maximum one-way hitting time because the hitting times are symmetric. Tau_2 denotes the relaxation time of the rate-one continuous-time generator P-I. For even m the discrete-time absolute spectral gap is zero and is a different quantity.",
+      "proof_text": null,
+      "assumptions": [
+        "All hypotheses and scope restrictions in the statement apply."
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:campaign:w336:P0208:q-fold-cycle-commute-and-relaxation-conventions",
+        "url": "~\\brain_workers\\w336\\proofs\\P0208.md",
+        "revision": "author-proof-2026-10-10; independent audit w346 pending",
+        "license": "owner-own-work; campaign proof, no novelty claim",
+        "excerpt": "In the q-fold cycle calculation, tau_star denotes the maximum of E_x T_y+E_y T_x; it is twice the maximum one-"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "q-fold-cycle-hitting-times-and-relaxation",
+      "to_existing_logical": "math:probability.core:open-problem-p0208-extremal-arc-transitive-walk-parameters-away-from-cycles",
+      "kind": "cites",
+      "rationale": "New: \"For m>=5 and q>=2, the arc-transitive graph C_m[empty_q] has mq vertices and degree 2q. Its mean hitting time from a target twin is mq, and from fiber j!=0 is j(m-j)+m(q-1). Its ma\"; existing: \"On arc-transitive n-vertex graphs other than n-cycles, are maximal commute time O(n log n), relaxation time O(n), and the maximal-commute to twice stationary-average-hitting ratio asymptotic to1?\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
+    },
+    {
+      "from_key": "q-fold-cycle-hitting-times-and-relaxation",
+      "to_existing_logical": "math:probability.core:attempt-p0208-extremal-arc-transitive-walk-parameters-away-from-cycles",
+      "kind": "generalizes",
+      "rationale": "New: \"For m>=5 and q>=2, the arc-transitive graph C_m[empty_q] has mq vertices and degree 2q. Its mean hitting time from a target twin is mq, and from fiber j!=0 is j(m-j)+m(q-1). Its ma\"; existing: \"For odd m>=5 the established wreath graph C_m[edgeless K2] is simple, connected,4-regular and arc-transitive on n=2m vertices. Its base projection is cycle walk. Exact hitting means are j*(m-j)+m between different fibers and2m between twins\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
+    },
+    {
+      "from_key": "q-fold-cycle-commute-and-relaxation-conventions",
+      "to_existing_logical": "math:probability.core:open-problem-p0208-extremal-arc-transitive-walk-parameters-away-from-cycles",
+      "kind": "cites",
+      "rationale": "New: \"In the q-fold cycle calculation, tau_star denotes the maximum of E_x T_y+E_y T_x; it is twice the maximum one-way hitting time because the hitting times are symmetric. Tau_2 denote\"; existing: \"On arc-transitive n-vertex graphs other than n-cycles, are maximal commute time O(n log n), relaxation time O(n), and the maximal-commute to twice stationary-average-hitting ratio asymptotic to1?\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
+    },
+    {
+      "from_key": "q-fold-cycle-commute-and-relaxation-conventions",
+      "to_existing_logical": "math:probability.core:attempt-p0208-extremal-arc-transitive-walk-parameters-away-from-cycles",
+      "kind": "generalizes",
+      "rationale": "New: \"In the q-fold cycle calculation, tau_star denotes the maximum of E_x T_y+E_y T_x; it is twice the maximum one-way hitting time because the hitting times are symmetric. Tau_2 denote\"; existing: \"For odd m>=5 the established wreath graph C_m[edgeless K2] is simple, connected,4-regular and arc-transitive on n=2m vertices. Its base projection is cycle walk. Exact hitting means are j*(m-j)+m between different fibers and2m between twins\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
+    },
+    {
+      "from_key": "q-fold-cycle-hitting-times-and-relaxation",
+      "to_key": "q-fold-cycle-commute-and-relaxation-conventions",
+      "kind": "depends_on",
+      "rationale": "New: \"For m>=5 and q>=2, the arc-transitive graph C_m[empty_q] has mq vertices and degree 2q. Its mean hitting time from a target twin is mq, and from fiber\"; convention: \"In the q-fold cycle calculation, tau_star denotes the maximum of E_x T_y+E_y T_x; it is twice the maximum one-way hitting time because the hitting tim\". The displayed parameters use these definitions."
+    }
+  ]
+}

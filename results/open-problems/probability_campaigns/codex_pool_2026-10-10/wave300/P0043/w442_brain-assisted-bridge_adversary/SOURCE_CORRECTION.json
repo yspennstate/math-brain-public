@@ -1,0 +1,14 @@
+{
+  "claim_id": "w442-C004",
+  "target": "P0043",
+  "kind": "source_hypotheses_correction",
+  "statement": "Let G=(V,E) be a finite graph, mu a probability law on {0,1}^E, and q in [0,1]. Fix an exploration e(omega) ordering every edge once, with deterministic first edge and each next edge determined only by previously revealed edge indices and bits. For each complete transcript (a,x) with positive mu probability, let Expl_k(a,x) denote agreement with its first k revealed edge indices and bits. Suppose mu(omega_{a_{k+1}}=1 | Expl_k(a,x))>=q for every such transcript and every k=0,...,|E|-1. Then iid Bernoulli-q on E is stochastically dominated by mu: for every increasing event A, P_q(A)<=mu(A).",
+  "assumptions": ["finite graph G and finite edge set E", "mu a probability law on {0,1}^E", "q in [0,1]", "first explored edge deterministic", "later edge choices depend only on revealed indices and bits", "conditional next-edge lower bound q at every prefix of every positive-probability complete transcript"],
+  "source": {"type":"primary-source-checked correction of a stored concept fragment", "url":"https://arxiv.org/html/2304.12110v3", "locator":"Section 3, Definition 4 and Lemma 7", "author":"Hugo Vanneuville", "stored_logical_id":"math:harvest.arxiv.owner-math:arxiv-2304-12110-lemma-7-72467d", "short_quote":null, "license":"cc-by-4.0"},
+  "proof": "Induct on |E|. Condition on the deterministic first bit; each positive-probability branch inherits the same history-wise bound on the remaining adaptive exploration. Apply the inductive domination to the restrictions A^0 subset A^1 of an increasing event A. The first bit has probability at least q, so the mixture is at least (1-q)P_q(A^0)+qP_q(A^1)=P_q(A). Ignore zero-probability branches, whose mixture coefficient is zero. The empty edge set is immediate.",
+  "independent_reviewer": "w443 (requested; pending)",
+  "remaining_gap": "Referee checks the corrected standalone statement. An infinite critical-cluster bridge additionally needs uniform bounds, a percolating comparison object and justified infinite limits.",
+  "status": "sketch",
+  "review_status": "pending",
+  "novelty_claim": false
+}

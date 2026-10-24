@@ -1,0 +1,107 @@
+\section*{Independent reconstruction of the retained high-degree GU reserve}
+
+All logarithms are base two.  This review audits the exact claim
+\texttt{B20-A097-HIGH-DEGREE-RESERVE-v1}, whose frozen candidate is
+\[
+ G(f)\le4I(f)+{3\over4}U(f)                           \tag{1}
+\]
+for every genuine Boolean function on every finite uniform cube.
+
+\paragraph{Audited source line.}
+The complete original row-cut proof, before its final relaxation, gives
+\[
+ G\le D_{\ge2}+{1\over2}V_1+{2\over\ln2}(M_1+W_2),    \tag{2}
+\]
+where
+\[
+ M_1=\sum_i\min\{p(\varnothing),p(\{i\})\},\qquad
+ W_d=\sum_{|S|=d}p(S),\qquad I=\sum_{d\ge1}dW_d.
+\]
+Equation (2), rather than its weaker version with $I$ replacing
+$M_1+W_2$, is the necessary original for this audit.
+
+\paragraph{Reserve identity and sign.}
+Define
+\[
+ Q_{\ge3}=I-M_1-W_2.
+\]
+Because $M_1\le W_1$,
+\[
+ \begin{aligned}
+ Q_{\ge3}
+ &=W_1+2W_2+\sum_{d\ge3}dW_d-M_1-W_2\\
+ &=(W_1-M_1)+W_2+\sum_{d\ge3}dW_d\\
+ &\ge W_2+3W_{\ge3}.                                  \tag{3}
+ \end{aligned}
+\]
+Thus $Q_{\ge3}\ge0$ always and is strictly positive whenever the
+Fourier degree is at least three.  Substitution in (2) has the sign
+\[
+ \boxed{
+ G\le D_{\ge2}+{1\over2}V_1
+       +{2\over\ln2}(I-Q_{\ge3}).}                    \tag{4}
+\]
+No KL row, signed correlation, normalization term, or influence payment
+is altered by this algebraic substitution.
+
+\paragraph{Exact implication of the new leaf.}
+Suppose, only on tensor-prime positive-residual Boolean functions of
+degree at least three, that
+\[
+ D_{\ge2}+{1\over2}V_1
+ \le\left(4-{2\over\ln2}\right)I+{3\over4}U
+       +{2\over\ln2}Q_{\ge3}.                         \tag{5}
+\]
+Adding the remaining term from (4) cancels $Q_{\ge3}$ exactly and gives
+(1).  The source-pinned tensor additivity localizes a positive residual
+to a tensor-prime factor.  The independently proved degree-two theorem
+$G\le2I$ makes the frozen residual strictly negative for every
+nonconstant degree-at-most-two function.  Therefore (5) is sufficient
+for universal (1).  Replacing $Q_{\ge3}$ in (5) by the smaller
+$W_2+3W_{\ge3}$ gives a stronger, hence still sufficient, hypothesis.
+
+This is a strict quantitative reduction on the remaining domain because
+$Q_{\ge3}>0$ there.  It is not a proof of (5): high-degree mass can be
+arbitrarily small, and no audited source bounds the remaining signed
+higher-order KL excess by this reserve.
+
+\paragraph{Independent GU-to-FEI recurrence.}
+For completeness, assume a universal pair
+\[
+ G(f)\le aI(f)+bU(f),\qquad 0\le b<1.                 \tag{6}
+\]
+Set $C=a/(1-b)$.  For an $n$-variable function, exact restriction
+identities give
+\[
+ \sum_{i=1}^n {U(f_{i,+})+U(f_{i,-})\over2}=nU(f)-G(f),
+\]
+\[
+ \sum_{i=1}^n {I(f_{i,+})+I(f_{i,-})\over2}=(n-1)I(f). \tag{7}
+\]
+Using the induction hypothesis $U(f_{i,\pm})\le CI(f_{i,\pm})$ and
+(6),
+\[
+ (n-b)U-aI\le nU-G\le C(n-1)I.
+\]
+Since
+\[
+ a+C(n-1)=C(n-b),
+\]
+one obtains $U\le CI$.  Constants give the zero base case separately.
+The source reduction
+\[
+ H\le2(I-\operatorname{Var}f)+2U\le2I+2U
+\]
+then yields
+\[
+ H\le\left(2+{2a\over1-b}\right)I.                  \tag{8}
+\]
+For $(a,b)=(4,3/4)$ this is $U\le16I$ and $H\le34I$.
+
+\paragraph{Verdict and first unsupported line.}
+The claim \texttt{B20-A097-HIGH-DEGREE-RESERVE-v1} passes at its exact
+reduction scope.  No material repair was made, so this review remains
+independent of the proof's authorship.  Universal GU and FEI remain open.
+The first unsupported line is exactly (5), with all its quantifiers:
+it must hold for every tensor-prime, positive-residual genuine Boolean
+function of arbitrary finite dimension and Fourier degree at least three.

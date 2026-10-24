@@ -1,0 +1,21 @@
+{
+ "helper_version":"A026-transitive-true-erasure-v1",
+ "family_definitions":{
+  "tribes":"f=1-2 product_j(1-AND_w(block_j)) on m disjoint equal blocks",
+  "recursive_majority":"depth d complete ternary tree of Maj3, d=1,2",
+  "cyclic_window_threshold":"f=+1 iff at least t of the n cyclic length-w windows are all +1",
+  "odd_cyclic_threshold":"f=sign(sum_j x_j x_(j+1) x_(j+2)), indices modulo odd n"
+ },
+ "parameter_domain":{
+  "tribes":"w,m in {1,2,3,4}, wm<=12 (15 functions)",
+  "recursive_majority":"d=1,2 (2 functions)",
+  "cyclic_window_threshold":"n in {6,8,10}, w in {2,3}, t=1,...,n (48 functions)",
+  "odd_cyclic_threshold":"n in {5,7,9,11} (4 functions)"
+ },
+ "case_count":69,
+ "symmetry":"No function-identification reduction; cyclic or tree/block transitivity proves all coordinates equivalent and is checked via identical exact coordinate expressions",
+ "arithmetic":"integer Walsh, exact physical edges, rational prime-log expressions for H and B; outward rational logarithm intervals via 48-term atanh series with explicit remainder and exact dyadic rounding",
+ "memory_estimate_MB":40,
+ "maximum_runtime_seconds":60,
+ "predicate":"Exact spectra and influences; exact coordinate-erasure equality; closed tribes B_i identity; recursive-majority input identity from A075; rigorous B/H,H/I,B/I intervals. No amplitude proxy or global K search."
+}

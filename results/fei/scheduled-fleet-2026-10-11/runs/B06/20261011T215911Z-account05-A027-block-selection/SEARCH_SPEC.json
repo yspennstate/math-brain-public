@@ -1,0 +1,12 @@
+{
+  "helper_version": "A027-data-first-v1",
+  "family": "All actual Boolean cores in m=1,2,3; one-point activations with r=1,2,3 fresh control bits",
+  "domain": {"m": [1,2,3], "r": [1,2,3]},
+  "case_count": 828,
+  "symmetry": "None; all truth tables including constants and both output signs",
+  "arithmetic": "Integer Walsh transforms; Fraction spectra and pivotal-edge counts; rational atanh-series log2 enclosures with explicit remainder; no floating sign claims",
+  "memory_estimate_mb": 50,
+  "maximum_runtime_seconds": 60,
+  "dimension_escalation": false,
+  "checks": ["direct spectrum versus activation coefficients", "exact influence telescope", "conditional fiber laws", "B_W <= p(2dm+2)", "terminal H <= 4I", "exact entropy decomposition enclosures"]
+}

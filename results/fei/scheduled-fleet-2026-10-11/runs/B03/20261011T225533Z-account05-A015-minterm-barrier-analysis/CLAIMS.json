@@ -1,0 +1,52 @@
+[
+  {
+    "claim_id": "A015-FIXED-SCALE-MINTERM-BARRIER",
+    "version": 1,
+    "exact_statement": "For the fixed-scale formal queue label component C_lab=sum_{A nonempty} fhat(A)^2 min_tau |F_tau(A)| log2 k at lambda=1/k: odd majority n=2a+1,t=a+1 in its prime DNF has E min|F|=1+T_n, k=binom(n-1,t-1), I=n*binom(n-1,t-1)/2^(n-1), T_n=P(|S|>t), so C_lab/I~sqrt(pi*n/2); every exact DNF of majority has read at least this k and formal C_lab>=log2 k. Its minimum allocation pressure among minimum-count assignments is zero except |A|=n, with mean W_n*(t-1)*log2(t/(t-1)) (zero for n=1). Disjoint tribes w,s with z=2^-w,q=1-(1-z)^s has prime k=1,C_lab=0,allocation=0,E|F|=4*s*z*(1-z)^s,I=2*s*w*z*(1-z)^(s-1); full-cell C_lab=4*q*(1-q)*log2(2^(ws)*q). For any Boolean core g on m declared bits with q=P(g=-1)>0 and r>=1 fresh point controls p=2^-r, F=1+A_r(g-1) has v=4*p*q*(1-p*q),I(F)=p*(I(g)+2*r*q), and full-cell C_lab=v*log2(2^m*q). For an odd majority core its prime activated DNF has E|F|=2*p-p^2+p*T_m,k=binom(m,(m+1)/2); for activated prime tribes it has E|F|=4*p*q^2*(1-p)+4*p*s*z*(1-z)^s,k=s. At r=ceil(2*log2(m+1)) activated majority label/I diverges as Theta(sqrt(m)) despite I and minority probability tending to zero. Majority and activated majority are single regular gates, removing these formal label and allocation charges. These statements refute uniform payment of this fixed-scale DNF label expression, not FEI or payment by an optimized complete reference. Equal full-cell single-root witnesses with identical rank laws sum to N*2^(-Lambda)*lambda*pi, refunding log2 N at lambda=1/N while retaining selected-run root rarity -log2 pi.",
+    "hypotheses": [
+      "Uniform finite Boolean cube",
+      "Entropy and logarithms in bits",
+      "Specified full-cell or canonical prime DNF as stated",
+      "Formal charged label component at lambda=1/k; not actual optimized output cost",
+      "Point controls fresh and independent",
+      "Asymptotics use odd majority m->infinity and stated r; tribes comparisons use w->infinity,s*2^-w->lambda in (0,infinity)"
+    ],
+    "statement_sha256": "bec2e2e0922cf30ddc3b3e616d95fc89ce71711fcce9536430ea30ec46920643",
+    "contributors": [
+      "A015/account05"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A015\\runs\\20261011T225533Z-account05-A015-minterm-barrier-analysis\\REPORT.md",
+      "supporting_derivation": "~\\brain_workers\\FEI100_20261011\\agents\\A015\\runs\\20261011T225533Z-account05-A015-minterm-barrier-analysis\\MINTERM_BARRIERS.tex",
+      "validation": [
+        "out/validation.json",
+        "out/symbolic_validation.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A015",
+        "method": "Author analytic derivation plus integer FWHT/Fraction and direct-Walsh formal-log reconstruction",
+        "verdict": "AUTHOR_CHECKED_NOT_INDEPENDENT_REVIEW",
+        "exact_assertions": 46747
+      }
+    ],
+    "status": "AUTHOR_PROVED_SCOPED_DIAGNOSTIC_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Dimension-independent C_lab<=K I for all exact DNFs at fixed global scale lambda=1/k",
+      "A bounded used-gate count by itself pays the fixed-scale minterm label cost",
+      "Sparse activation alone pays the fixed-scale full-cell dimension charge"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A011",
+      "A012",
+      "B03",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  }
+]

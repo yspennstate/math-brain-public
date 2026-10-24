@@ -1,0 +1,41 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261012T090930Z-account01-B01-kl-js-falsifier-a003",
+  "stream": "B01",
+  "packet_id": "A003",
+  "gap_id": "G-UPPER-SET-ASYMMETRY",
+  "claims": [
+    {
+      "claim_id": "B01-A003-KL-BY-JS-v1",
+      "status": "REFUTED_EXACT",
+      "label": "REFUTED",
+      "statement": "For every genuine Boolean f, the aggregate upper-set mismatch satisfies sum_i KL_i^U <= sum_i JS_i^H.",
+      "falsifier": "The four-bit mask-6038 Boolean function in KL_JS_FALSIFIER.tex has exact defect (1/8)log2(3^3*5^5/2^16)>0.",
+      "scope": "Only coefficient-one payment by restriction JS is refuted; larger multipliers, bU corrections, GU', U<=KI and FEI are not refuted."
+    },
+    {
+      "claim_id": "B01-A003-KL-JS-FOURBIT-FALSIFIER-v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "label": "PROVED_AT_STATED_SCOPE",
+      "statement": "A specified genuine four-bit Boolean function has I=5/2, aggregate KL=(3/8)log2(3), aggregate JS=2-(5/8)log2(5), and positive difference because 84375>65536.",
+      "proof_artifact": "KL_JS_FALSIFIER.tex",
+      "verification": ["CHECK.py", "CHECK.out"]
+    },
+    {
+      "claim_id": "B01-A003-KL-JS-TENSOR-FAMILY-v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "label": "PROVED_AT_STATED_SCOPE",
+      "statement": "Aggregate upper-set KL and restriction JS are each additive under disjoint Boolean tensor product; tensor powers of the four-bit witness preserve normalized defect 0.018226398830014... for every tensor depth.",
+      "proof_artifact": "KL_JS_FALSIFIER.tex",
+      "verification": "CHECK.py directly checks the tensor square; the all-depth statement is analytic."
+    },
+    {
+      "claim_id": "B01-A003-KL-JS-DIFFERENCE-IDENTITY-v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "label": "PROVED_AT_STATED_SCOPE",
+      "statement": "For each fibre, KL(eta||x)-KL(eta||0)=-0.5log2(1-x^2)-0.5eta log2((1+x)/(1-x)), with continuous endpoint interpretation.",
+      "proof_artifact": "KL_JS_FALSIFIER.tex"
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

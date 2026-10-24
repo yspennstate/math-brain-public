@@ -1,0 +1,34 @@
+account02/B05 r23 finite algebra/constant check
+
+Matrix normal form:
+B = [[a,beta,0],[beta,alpha,delta],[0,delta,gamma]].
+Assume sigma_min(B)>=1, hence ||B^{-1}||op<=1 and |det B|>=1.
+Also ||B e1||^2=a^2+beta^2>=1.
+
+Small-a certificate for 0<|a|<=1/16, |gamma|<1/2:
+x=B^{-1}e3, ||x||<=1.
+a x1+beta x2=0 => |x2|<=|a|/|beta|.
+delta x2+gamma x3=1 => |a delta|/|beta| >=1-|gamma|>1/2.
+(B^{-1})31=beta delta/det B => |det B|>=|beta delta|.
+Thus |a det B|>|a beta delta|>beta^2/2>=255/512.
+
+Density-cap normalization for scalar S with ||p_S||inf=L:
+S'=L S has density cap <=1.
+Under B'=diag(1/L,1,1) B diag(1/L,1,1),
+beta'=beta/L and det B'=det B/L^2.
+Therefore |beta'^2 gamma det B'|^{-1/6}
+= L^(2/3)|beta^2 gamma det B|^{-1/6}.
+
+Numerical constants (L<=sqrt(2), pair cap M<=2):
+Case |a|>1/16:
+16*sqrt(30)*sqrt(2)*(1/16)^(-1/4) = 247.8709341572747.
+Case |a|<=1/16, |gamma|>=1/2:
+31*2^(2/3)*(sqrt(2))^(2/3)*((255/256)*(1/2))^(-1/6)
+= 69.63805824046278.
+Case 0<|a|<=1/16, |gamma|<1/2:
+16*sqrt(30)*sqrt(2)*(255/512)^(-1/4)
+= 147.52922228166656.
+Case a=0:
+31*2^(2/3)*(sqrt(2))^(2/3) = 55.234... < 56.
+
+Hence the uniform displayed branch constant 248 is valid.

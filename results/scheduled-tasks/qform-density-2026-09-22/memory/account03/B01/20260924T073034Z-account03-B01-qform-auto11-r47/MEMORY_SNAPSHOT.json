@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "20260924T073034Z-account03-B01-qform-auto11-r47",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "ddc553a0a93c3c676b70e251830f24544a7527b9",
+  "control_commit_prepublication_observed": "27f2bf73653e285eb2972f8e9ab69b3e667b8e07",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_qform_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY",
+  "math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "09afa70e7f48e02777c304d97b66f0480f8f8b63",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/20260924T073034Z-account03-B01-qform-auto11-r47/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/20260924T073034Z-account03-B01-qform-auto11-r47/CHECKS.txt",
+    "status": "NEW_UNIVERSAL_SIGNED_FREQUENCY_ESTIMATE_AND_RIESZ_TO_FEJER_COMPILER"
+  },
+  "source_match": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0d074396abdd021a817f0b8dc104b826f2d7154d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260924T072033Z-account01-B01-qform-auto11-r15/REPORT.md",
+    "theorem": "QFORM-DISJOINT-TETRAD-AGGREGATE-HALFRIESZ-v1",
+    "action": "duplicate proof abandoned; theorem consumed as input"
+  },
+  "partner_result_applied": {
+    "account": "account04",
+    "slot": "B01",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f7e82d169badc671968036252d351b8533cdd425",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260924T012155Z-account04-B01-lr-residual-r1/REPORT.md",
+    "equation": "||p_Z||_2 <= sqrt(2)|c|^(-1/2) for Z=2cUV+affine; combined with ||K_T||_2^2=T/(3pi) to get D_T <= sqrt(2T/(3pi|c|)) for a source-disjoint full sum"
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-RIESZ-TO-FEJER-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "For 0<beta<2, sup_y D_T mu(y) <= (2^(beta-1)/pi) T^(1-beta) H_beta(mu)."
+    },
+    {
+      "id": "QFORM-UNIVERSAL-QUADRATIC-FEJER-SQRTLOG-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For nonzero symmetric S and arbitrary affine term under cap-one product inputs, sup_y D_T law(R)(y) <= 7.603 sqrt(T/||S||op) sqrt(1+log_+(T||S||op/24))."
+    }
+  ],
+  "corrections_preserved": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "phase_aligned_counterexample_preserved": true,
+  "unresolved_implication": "QFORM-PIVOTFREE-OVERLAP1-FEJER-SATURATION-v1",
+  "next_step": "Use the localized overlap-one third-compound packet in the all-small/possibly-zero diagonal chamber to upgrade sqrt(T log T) signed-Fejer growth to O(1), without a scalar pivot or one-good-minor inversion.",
+  "handoff_commit": "eca75d407502a9969e0c69cd5c08eaa13cb3e83c",
+  "full_brain_connected": false
+}

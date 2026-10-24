@@ -1,0 +1,68 @@
+{
+  "gate": "compute_gate.json",
+  "command": "python -X utf8 check_math_examples.py",
+  "seconds": 0.00012019998393952847,
+  "fixed_additive_counterexample": {
+    "a": 0.25,
+    "cutoff_R": 100000000.0,
+    "distance_r": 1000000000.0,
+    "A": 0.005623413251903491,
+    "B": 2.0919524541643384e-46,
+    "uniform_additive_bound": 0.01,
+    "relative_ratio_B_over_A": 3.720075976020836e-44,
+    "algebraic_lower_transfer_fails": true
+  },
+  "cox_example": {
+    "analytic_uniform_void_gap_lower_bound": 2.2697973647911563e-06,
+    "analytic_alpha_lower_bound": 1.2879950193032194e-12,
+    "finite_phase_checks": [
+      {
+        "grid_phase": [
+          0,
+          0
+        ],
+        "conditional_void_probability_0": 0.4148304099305316,
+        "conditional_void_probability_1": 0.4158126307681005,
+        "conditional_regime_variance": 2.4118944343862865e-07
+      },
+      {
+        "grid_phase": [
+          0.1,
+          0.2
+        ],
+        "conditional_void_probability_0": 0.3938997658780127,
+        "conditional_void_probability_1": 0.39416297320703686,
+        "conditional_regime_variance": 1.7319524513011304e-08
+      },
+      {
+        "grid_phase": [
+          0.5,
+          0.5
+        ],
+        "conditional_void_probability_0": 0.3795264290809085,
+        "conditional_void_probability_1": 0.37954177637381475,
+        "conditional_regime_variance": 5.888484988758625e-11
+      },
+      {
+        "grid_phase": [
+          0.3333333333333333,
+          0.6666666666666666
+        ],
+        "conditional_void_probability_0": 0.38226299068671105,
+        "conditional_void_probability_1": 0.38230606391164634,
+        "conditional_regime_variance": 4.63825676581677e-10
+      },
+      {
+        "grid_phase": [
+          0.9,
+          0.9
+        ],
+        "conditional_void_probability_0": 0.3992772381151315,
+        "conditional_void_probability_1": 0.3996974359803908,
+        "conditional_regime_variance": 4.4141561492122345e-08
+      }
+    ]
+  },
+  "checks_passed": 6,
+  "proof_status": "finite sanity checks only; independent mathematical referee pending"
+}

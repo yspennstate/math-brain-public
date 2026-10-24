@@ -1,0 +1,14 @@
+{
+ "helper_version":"A061 priority referee v1; own stage4 physical Walsh and prime-log helper reused without source-agent code",
+ "family":"Point override of an exclusive fallback choosing v,+1,-1 on two control bits; independent two-bit u,v. Separate actual shared-X ordered priority trees.",
+ "domain":"Local pilot: point width1, first9 ternary maps, four named u and v cores. Local full: widths1,2, all81 labelled ternary maps, same cores. Trees pilot: two named cores, both orientations,C=0,4. Trees full: four named cores, both orientations,C=0,4; policy X,A0,u0,A1,B,v0,u1,v1.",
+ "case_count":"Local pilot144/full2592; priority pilot16/full64; full trees depth8, all physical branches retained",
+ "symmetry":"No quotient; named cores are constant+1, AND2 sign (-1 only at zero), XOR2, first dictator",
+ "arithmetic":"Integer Walsh, physical edge influence, Fraction prime-log equalities, range-reduced 48-term atanh enclosure with geometric tail, outward dyadic160 rounding",
+ "memory_estimate_mb":120,
+ "pilot_max_seconds":60,
+ "full_max_seconds":600,
+ "tree_max_seconds":600,
+ "no_dimension_escalation":true,
+ "commands":["python -X utf8 code/check_priority.py pilot","python -X utf8 code/check_priority.py local","python -X utf8 code/check_priority.py trees"]
+}

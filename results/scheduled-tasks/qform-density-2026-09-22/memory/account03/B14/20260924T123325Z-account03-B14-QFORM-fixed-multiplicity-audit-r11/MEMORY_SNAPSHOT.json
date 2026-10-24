@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260924T123325Z-account03-B14-QFORM-fixed-multiplicity-audit-r11",
+  "objective": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "control_commit_at_final_refresh": "865191aead61195e7891543468bddd1efd17284e",
+  "manuscript": {
+    "repository": "yspennstate/math-open-problems",
+    "initial_source_commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+    "blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "sha256_owner_pinned": "9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69"
+  },
+  "mathematical_status": {
+    "s17_candidate": "PASS_IN_THIS_INDEPENDENT_REVIEW",
+    "s16": "GAP_NOT_PROVED",
+    "full_s3": "OPEN",
+    "continuity_full_s17": "NOT_CLAIMED"
+  },
+  "b14_result": {
+    "id": "GLOBAL_BOUNDED_BOREL_REPRESENTATIVES_AND_CONDITIONAL_TONELLI",
+    "status": "PROVED_SUPPORTING_COMPILER",
+    "summary": "Choose globally bounded Borel representatives of a.e.-capped marginals. Conditional pushforward domination by jointly Borel nonnegative kernels averages by Tonelli, so scalar, definite-pair and hyperbolic-pair branches are rigorous for arbitrary rough, translated, fragmented and unbounded inputs without moments or common exceptional output slices."
+  },
+  "issues": [
+    {
+      "id": "ROUGH_DENSITY_POINTWISE_REPRESENTATIVE",
+      "status": "GAP_PRESENTATION_REPAIRED",
+      "impact": "No theorem or constant change."
+    },
+    {
+      "id": "ADVERTISED_SUPPLEMENTARY_FILES_MISSING",
+      "status": "GAP_PACKAGING_ONLY",
+      "impact": "Finite checks advertised by README/AUDIT were not independently rerun; manuscript proof is self-contained."
+    }
+  ],
+  "confirmed_constant": "2010+1200*log(16)=5337.106466687737... for the same s17 proof; independently confirmed but not new",
+  "fresh_threshold_input": "account03/B08 QFORM-S16-TERMINAL-R4-SATURATION-v1 was read; it does not prove s16 and leaves a selected-seed determinant loss.",
+  "deliverable": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0822f7541df7d2229d591c4212b049b8e44923e5",
+    "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/audits/account03/B14/20260924T123325Z-account03-B14-QFORM-fixed-multiplicity-audit-r11/AUDIT.md",
+    "checks_path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/audits/account03/B14/20260924T123325Z-account03-B14-QFORM-fixed-multiplicity-audit-r11/CHECKS.json",
+    "read_back": true
+  },
+  "next_action": "Try to aggregate the terminal s16 selected-seed determinant before inversion or build an endpoint order-four receiver; rough-law localization is no longer the blocking interface.",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "native_brain_ingestion_verified": false
+}

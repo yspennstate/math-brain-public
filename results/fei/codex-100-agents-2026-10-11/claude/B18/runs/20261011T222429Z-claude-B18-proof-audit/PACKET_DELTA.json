@@ -1,0 +1,68 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T222429Z-claude-B18-proof-audit",
+ "stream": "B18",
+ "packet_id": "A087",
+ "gap_id": "G-R-MISMATCH",
+ "attempt_id": "B18-lead-proof-audit-1",
+ "method": "Independent analytic re-derivation of claimed proofs; exhaustive exact n=4 certificate; exact rational-log recheck; float falsification searches reported as evidence only",
+ "mathematical_delta": "C018 holds with the exact optimal constant Kstar=2.6725 (FEI constant 5.558) on Boolean functions with affine Fourier support of dimension <=4 per factor; the constant is exceeded at n=5 by the lexicographic threshold t=3 (2.6958875, exact), so the good-coordinate route needs a larger constant beyond dimension 4.",
+ "deliverable_status": "COMPLETE_EXCEPT_REPORT_MD: harness refused the REPORT.md write from this subagent; full report text returned in StructuredOutput",
+ "mathematical_status": "AUDIT_VERDICTS_ISSUED; NO_ERROR_FOUND; FULL_FEI_OPEN",
+ "claim_versions_used": [
+  "A082-FINITE-TRUE-ERASURE v1",
+  "A082-AFFINE4-ERASURE-BRIDGE v1",
+  "A026-AFFINE4-GOOD-COORDINATE v1",
+  "A061-LOG-COMPENSATION v1",
+  "A061-FAIR-TREE-PROCESS v1",
+  "A031-SIGNED-ENTROPY-ANCHOR v1",
+  "A067-LOCAL-BOOLEAN-GRANULARITY v1",
+  "A032-EXACT-PHASE-ADMISSION v1",
+  "A057-COHERENT-ERASURE-SPLIT v1",
+  "A087-CONTROL-TREE-LAMBDA-KL-IDENTITY v1",
+  "A021-UNIFORM-RARE-CORE-EXPANSION v1",
+  "A096-UNIFORM-SINGLETON-HALF-TAX v1",
+  "A092-AND-EXPLICIT-ENDPOINT-LOWER-BOUND v1",
+  "A041-BOOLEAN-ONE-BIT-ENDPOINT-TAX-LOWER-BOUND v1",
+  "A036-POINT-DEFECT-TENSOR-NORMALIZED-PAYMENT-RECOVERY v1"
+ ],
+ "claims_created_or_changed": [
+  "B18-AFFINE-SUPPORT-JUNTA-REDUCTION v1 PROVED",
+  "B18-N4-GOOD-COORDINATE-CERTIFICATE v1 CERTIFIED",
+  "B18-N5-LEX-EXCEEDS-KSTAR v1 CERTIFIED",
+  "B18-A057-B-PART-RECONSTRUCTION v1 PROVED",
+  "B18-A087-LAMBDA-RECONSTRUCTION v1 PROVED",
+  "B18-A096-FALSIFICATION-SEARCH v1 EVIDENCE",
+  "B18-LEX-FAMILY-PLATEAU v1 EVIDENCE",
+  "B18-GOOD-COORDINATE-CONSTANT-LOWER-BOUND-FROM-FEI-LOWER-BOUND v1 CONDITIONAL"
+ ],
+ "source_artifacts": [
+  "agents/*/runs/*/CLAIMS.json (80 claims; out/all_agent_claims.txt)",
+  "agents/A086/runs/20261011T214823Z-account05-A086-joint-code-referee/REPORT.md",
+  "agents/A087/runs/20261011T221055Z-account05-A087-restriction-referee/REPORT.md",
+  "agents/A088/runs/20261011T223053Z-account05-A088-booleanity-referee/REPORT.md",
+  "code/exhaust_n4.py",
+  "code/checks2.py",
+  "code/check_a057.py",
+  "code/lex_check.py",
+  "code/exact_lex5.py"
+ ],
+ "next_consumers": [
+  "A090",
+  "A087",
+  "A089",
+  "C018 consumers",
+  "B05",
+  "B19"
+ ],
+ "next_action": "Exact K*(5): max over nonconstant 5-variable Boolean f of min over relevant i of B_i/Inf_i over the 616,126 NPN classes with exact rational-log recheck of the top values (reviewer A090; A087 checks the symmetry reduction).",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "REPORT.md could not be written: the harness refuses report .md files from subagents; the report text is in this run's StructuredOutput return",
+  "Literature FEI lower bound 6.278944 used in a CONDITIONAL claim was not verified (no source read)",
+  "Supervisor adoption and mirroring outside this folder are not B18's to perform (no git/mesh/brain by instruction)"
+ ],
+ "packet_ids": [
+  "A087"
+ ]
+}

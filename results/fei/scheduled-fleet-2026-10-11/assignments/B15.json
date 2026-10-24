@@ -1,0 +1,393 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B15",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A071",
+      "stream": "B15",
+      "topic": "Search-space design",
+      "target_statement": "Define a bounded Boolean circuit or truth-table family that can falsify one current lemma. Record symmetries, completeness claims, resource limits, and the reason this family targets the hypothesis.",
+      "work_type": "baseline_interface",
+      "priority": "P0",
+      "mathematical_design_status": "RECOVERED_BASELINE",
+      "deliverables": [
+        {
+          "deliverable_id": "A071-D1",
+          "description": "SEARCH_DOMAIN.json: exact Boolean family, symmetries, parameters, and completeness",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A071-D2",
+          "description": "SEARCH_BUDGET.md: case count, measured pilot rate, and hard resource caps",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Tie one search to a fixed lemma/version and state whether the family is complete modulo a proved symmetry reduction.",
+        "Compute the actual case count before dispatch; all Boolean truth tables number 2^(2^n), so increasing n is never an automatic next step.",
+        "Measure a short pilot only when an experiment is justified and set explicit CPU/RAM/runtime/case caps; prefer structured families and exact multiplicity formulas when exhaustive growth is prohibitive."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A046",
+          "interface": "current frozen helper"
+        },
+        {
+          "agent_id": "A010",
+          "interface": "residual representation domain"
+        },
+        {
+          "agent_id": "A047",
+          "interface": "dangerous boundary regime"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A010",
+          "interface_use": "bounded search design"
+        },
+        {
+          "agent_id": "A032",
+          "interface_use": "bounded phase-search domain"
+        },
+        {
+          "agent_id": "A047",
+          "interface_use": "bounded search budget"
+        },
+        {
+          "agent_id": "A072",
+          "interface_use": "finite family and exact domain"
+        }
+      ],
+      "independent_reviewers": [
+        "A085",
+        "A092"
+      ],
+      "initial_pilot_cap_cycles": 1,
+      "renewal_milestone": "One bounded, candidate-specific search design is handed to the reusable engine; redesign only after a substantive target or family change.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_main",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F12",
+        "F16",
+        "F18"
+      ]
+    },
+    {
+      "agent_id": "A072",
+      "stream": "B15",
+      "topic": "Exact Walsh engine",
+      "target_statement": "Compute integer Walsh spectra and exact influences for the chosen family. Verify Parseval, sign-valued inverse transforms, and independent edge counts before any entropy comparison.",
+      "work_type": "baseline_engine",
+      "priority": "P0",
+      "mathematical_design_status": "RECOVERED_BASELINE",
+      "deliverables": [
+        {
+          "deliverable_id": "A072-D1",
+          "description": "EXACT_WALSH_INTERFACE.py: reusable integer-spectrum and edge-influence implementation",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A072-D2",
+          "description": "ENGINE_CERTIFICATE.json: independent algebraic and edge-count checks",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Reuse an existing checked Walsh engine where possible; document any changed normalization instead of creating another independent copy by default.",
+        "For each accepted witness verify Parseval, the exact sign-valued inverse, and influence by independent edge counts.",
+        "Specify n, truth-table ordering, bit/sign convention, and integer denominator; floating entropy evaluation does not replace algebraic verification."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A071",
+          "interface": "finite family and exact domain"
+        },
+        {
+          "agent_id": "A004",
+          "interface": "Walsh normalization"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A010",
+          "interface_use": "exact Boolean spectra"
+        },
+        {
+          "agent_id": "A022",
+          "interface_use": "integer Walsh representation"
+        },
+        {
+          "agent_id": "A032",
+          "interface_use": "exact inverse Walsh validation"
+        },
+        {
+          "agent_id": "A035",
+          "interface_use": "exact Boolean spectra"
+        },
+        {
+          "agent_id": "A049",
+          "interface_use": "exact Walsh/influence engine"
+        },
+        {
+          "agent_id": "A073",
+          "interface_use": "exact rational spectral masses and influences"
+        },
+        {
+          "agent_id": "A074",
+          "interface_use": "conventions only, not implementation reuse"
+        },
+        {
+          "agent_id": "A082",
+          "interface_use": "exact rational quantities"
+        }
+      ],
+      "independent_reviewers": [
+        "A085",
+        "A092"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One tested exact interface becomes a shared baseline; new work is allocated to target-specific families, not repeated engine infrastructure.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_main",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F12",
+        "F16",
+        "F18"
+      ]
+    },
+    {
+      "agent_id": "A073",
+      "stream": "B15",
+      "topic": "Certified logarithms",
+      "target_statement": "Turn a promising entropy inequality into rational interval bounds or an exact integer-product comparison. State the margin and stop precision refinement when its sign is rigorously determined.",
+      "work_type": "numerical_certificate",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A073-D1",
+          "description": "LOG_SIGN_CERTIFICATE.json: rational/interval bounds and strict violation margin",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A073-D2",
+          "description": "CERTIFIED_COMPARISON.md: exact inequality transformation and assumptions",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Start from exact algebraic masses; use outward logarithm enclosures or an exact integer-product comparison with a proved equivalence.",
+        "State the certified margin and stop precision refinement once its sign is determined.",
+        "Report unresolved zero/near-zero margins honestly and avoid using a grid or floating tolerance as an all-real-parameter certificate."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A072",
+          "interface": "exact rational spectral masses and influences"
+        },
+        {
+          "agent_id": "A049",
+          "interface": "reduced candidate witness"
+        },
+        {
+          "agent_id": "A082",
+          "interface": "symbolic finite inequality interface"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A020",
+          "interface_use": "certified entropy comparison"
+        },
+        {
+          "agent_id": "A025",
+          "interface_use": "logarithmic sign certificate"
+        },
+        {
+          "agent_id": "A035",
+          "interface_use": "certified logarithms"
+        },
+        {
+          "agent_id": "A049",
+          "interface_use": "certified logarithmic sign"
+        },
+        {
+          "agent_id": "A074",
+          "interface_use": "target inequality and claimed margin"
+        },
+        {
+          "agent_id": "A082",
+          "interface_use": "certified log interface"
+        },
+        {
+          "agent_id": "A085",
+          "interface_use": "sign certificate"
+        }
+      ],
+      "independent_reviewers": [
+        "A085",
+        "A092"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "A rigorous sign certificate for one selected witness or a proof that the proposed equality requires a different symbolic treatment.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_main",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F12",
+        "F16",
+        "F18"
+      ]
+    },
+    {
+      "agent_id": "A074",
+      "stream": "B15",
+      "topic": "Independent reproducer",
+      "target_statement": "Implement a second calculation for selected witnesses, using a different derivation or representation. Distinguish an independent implementation from rerunning the original script.",
+      "work_type": "independent_reproduction",
+      "priority": "P0",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A074-D1",
+          "description": "INDEPENDENT_REPRODUCTION.py: distinct derivation or representation",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A074-D2",
+          "description": "REPRODUCTION_REPORT.json: independent spectra/influences and comparison result",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Implement from the original truth table/circuit with a different computational path, such as direct edge counts versus Fourier identities.",
+        "Do not count rerunning the original checker or importing its computed spectrum as independent reproduction.",
+        "Reconcile the exact rational quantities before comparing certified logarithmic margins, and record any remaining discrepancy at its first differing quantity."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A049",
+          "interface": "original Boolean witness definition"
+        },
+        {
+          "agent_id": "A073",
+          "interface": "target inequality and claimed margin"
+        },
+        {
+          "agent_id": "A072",
+          "interface": "conventions only, not implementation reuse"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A092",
+          "interface_use": "independent calculation"
+        }
+      ],
+      "independent_reviewers": [
+        "A085",
+        "A092"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One important witness or finite certificate is independently reproduced, with a clear limit on what that finite verification proves.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_main",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F12",
+        "F16",
+        "F18"
+      ]
+    },
+    {
+      "agent_id": "A075",
+      "stream": "B15",
+      "topic": "Search-to-theorem bridge",
+      "target_statement": "Convert a recurring finite pattern into a parameterized construction and an analytic proof. If no bridge is found, archive the bounded search domain and do not present its absence of failures as a theorem.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A075-D1",
+          "description": "FINITE_PATTERN_TO_FAMILY.tex: explicit construction for every parameter",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A075-D2",
+          "description": "ASYMPTOTIC_PROOF.md: exact formulas, uniform remainder, and theorem scope",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Specify an actual Boolean family for every admissible parameter, rather than extrapolating a table of finite ratios.",
+        "Prove the coefficient/multiplicity formula and the relevant entropy/influence asymptotics analytically.",
+        "If a bridge is not obtained, preserve the exact searched domain and failed derivation without promoting absence of counterexamples to a theorem."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A049",
+          "interface": "minimal finite witness"
+        },
+        {
+          "agent_id": "A025",
+          "interface": "known rare-event parameter family"
+        },
+        {
+          "agent_id": "A077",
+          "interface": "sparse-defect tower construction"
+        },
+        {
+          "agent_id": "A082",
+          "interface": "finite algebraic certificates"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A025",
+          "interface_use": "finite-to-family construction"
+        },
+        {
+          "agent_id": "A080",
+          "interface_use": "finite-to-family proof"
+        },
+        {
+          "agent_id": "A082",
+          "interface_use": "proposed finite-to-family proof"
+        }
+      ],
+      "independent_reviewers": [
+        "A085",
+        "A092"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A parameterized theorem or counterfamily with a complete proof is the renewal criterion.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_main",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F12",
+        "F16",
+        "F18"
+      ]
+    }
+  ]
+}

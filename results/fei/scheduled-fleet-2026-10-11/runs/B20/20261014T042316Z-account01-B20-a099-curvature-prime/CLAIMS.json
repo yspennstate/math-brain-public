@@ -1,0 +1,34 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B20",
+  "run_id": "20261014T042316Z-account01-B20-a099-curvature-prime",
+  "claims": [
+    {
+      "claim_id": "B20-A099-GU-CURVATURE-PRIME",
+      "version": 1,
+      "status": "PROVED_REDUCTION_PENDING_INDEPENDENT_REVIEW",
+      "statement": "A minimal relevant-coordinate counterexample to G<=aI+bU is tensor-prime and satisfies (1-b)Delta_i U + sum_{j!=i} Delta_i Delta_j U > a Inf_i at every coordinate. Therefore the reverse inequality at one coordinate of every tensor-prime Boolean function is sufficient for universal GU.",
+      "quantifiers": "Every finite n, every genuine Boolean f, every fixed a>=0 and 0<=b<1.",
+      "dependencies": [
+        "B07-A031-GU-TENSOR-PRIME-v1: exact U/I/G tensor additivity",
+        "U-universal Theorem G and GU' restriction induction"
+      ],
+      "open_leaf": "Prove GC14 in all dimensions on tensor-prime Boolean functions."
+    },
+    {
+      "claim_id": "B20-A099-GU-CURVATURE-GATE",
+      "version": 1,
+      "status": "PROVED",
+      "statement": "The symmetric four-bit weight-{1,2} gate is tensor-prime and forces 4a+11b>=53 for the second-order good-coordinate criterion; its tensor powers preserve the local obstruction.",
+      "scope": "Obstruction to this induction criterion only; not a GU or FEI counterexample."
+    },
+    {
+      "claim_id": "B20-A099-GC14-FINITE",
+      "version": 1,
+      "status": "FINITE_CERTIFIED",
+      "statement": "GC14 holds for all 65,812 Boolean truth tables through four variables; the worst ratio is exactly 53/4.",
+      "limitation": "No all-dimensional coverage argument."
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B10",
+  "run_id": "20260924T035022Z-account03-B10-QFORM-r27",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_start": "2319c19e669b40ad4e2734d16fab739abea92d04",
+  "control_commit_prepublication": "09c764e74095f6305fa8606a11a53a56431fa0b8",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "CONTINUITY_PROVED_ONLY_FOR_SCOPED_PUNCTURED_BRANCH; GLOBAL_OPEN",
+  "correction_inbox_blob": "a884b835aba929c5376e6417ae5cfcd44c0f7a76",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1",
+    "QFORM-TWO-HUB-PLUCKER-ESCAPE-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "claim": "QFORM-REGRESSION-THREEBANK-CURVATURE-SPLIT-v1",
+      "scope": "For residual energy rho and transverse Gram G, an ORIGINAL-coordinate partition S,Y,Z satisfies rho_S M(G_Y,G_Z)>=(2/81)rho det G.",
+      "source": "yspennstate/math-open-problems@afdea9634d9e3f5fb09659da436292cf7dbe5b20:proofnet24/QFORM-density/fleet-2026-09-22/account04/B10/20260923T061725Z-account04-B10-QFORM-r4/REPORT.md"
+    },
+    {
+      "claim": "grouped projected-crossing theorem, one original hub plus ell=2",
+      "scope": "If the projected light crossing has Z_2>0 and every ell=2 volume row marginal is <=1/2, arbitrary internal hub/light quadratic terms are allowed and ||p_Q||infinity <=3*2^(7/6)*exp(1/3)(||w_J||^2 Z_2)^(-1/6), with C_0 density.",
+      "source": "yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-PARTNER-CONDITIONED-STAR-NONCOLLAPSE-v1",
+      "status": "PROVED_SUPPORTING_REDUCTION",
+      "statement": "In the live near-coloop state, the account04/B10 partition can be chosen so that after conditioning S, lambda_min(G_Y+G_Z)>=2/81, remaining longitudinal energy <=79rho/81, and the actual physical hub-star energy sum_{Y union Z}A_0i^2>1/47."
+    },
+    {
+      "id": "QFORM-HUB-PROJECTED-CROSSING-PLUCKER-IDENTITY-v1",
+      "status": "PROVED_EXACT_IDENTITY",
+      "statement": "For an ORIGINAL leaf partition I,J, w_J=A_0J and C=A_IJ(I-Pi_w), ||w_J||^2 e_2(CC^T)=D^2 c det(G_I^perp)V_3(J); the ell=2 row marginal equals the normalized transverse pair-volume marginal."
+    },
+    {
+      "id": "QFORM-NEARCOLOOP-PROJECTED-CROSSING-COMPILER-v1",
+      "status": "PROVED_SCOPED_DENSITY_THEOREM",
+      "statement": "If rho=1-c>0 and max leaf transverse row norm squared <1/61, there is an ORIGINAL partition satisfying the checked projected-crossing gates and ||p_Q||infinity<16.652 D^(-1/3)rho^(-1/6), with a continuous C_0 density, for arbitrary hub Rayleigh coefficient and all signatures."
+    },
+    {
+      "id": "QFORM-DISJOINT-PROJECTED-CROSSING-RHO-BARRIER-v1",
+      "status": "PROVED_MECHANISM_BARRIER",
+      "statement": "Every certificate of the same disjoint one-hub/two-projected-crossing form satisfies ||w_J||^2 Z_2<=D^2 c rho because V_3(J)<=rho; this mechanism alone cannot yield a rho-uniform endpoint."
+    },
+    {
+      "id": "QFORM-HUB-CHIRP-L2-IDENTITY-v1",
+      "status": "PROVED_SUPPORTING_IDENTITY",
+      "statement": "For cap-one f, F_{t,a}(beta)=int f(h)e^{it(ah^2+2beta h)}dh satisfies int|F_{t,a}(beta)|^2 dbeta=(pi/|t|)int f^2<=pi/|t| uniformly in a."
+    }
+  ],
+  "partner_requested": "account04/B10",
+  "partner_applied": "QFORM-REGRESSION-THREEBANK-CURVATURE-SPLIT-v1",
+  "partner_application": "rho_S M(G_Y,G_Z)>=(2/81)rho gives G_{Y union Z}>=2I/81 in the eigenvalue sense; combining this with sigma_min(M)>=1, |alpha|<1/16 and rho<1/64 gives ||A_{0,Y union Z}||_2^2>1/47.",
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7806acf3878cb15e910906483425a5eda993cceb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B10/20260924T035022Z-account03-B10-QFORM-r27/REPORT.md",
+    "blob": "90778e50d4fdd4de3d4c839cbd0b21cc142e56e5"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B10/20260924T035022Z-account03-B10-QFORM-r27.md",
+  "unresolved_implication": "QFORM-OVERLAP-AWARE-STAR-PLUS-TRANSVERSE-RECEIVER-v1",
+  "next_step": "Build a product-preserving joint receiver that uses the noncollapsing physical star and transverse curvature on overlapping original-coordinate banks, avoiding any disjoint leaf three-volume; exploit the hub chirp L2 identity jointly rather than taking a fiber supremum.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null,
+  "reasoning_effort_status": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed"
+  }
+}

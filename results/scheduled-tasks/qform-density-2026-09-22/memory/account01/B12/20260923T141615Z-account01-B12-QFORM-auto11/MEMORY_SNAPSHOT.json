@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260923T141615Z-account01-B12-QFORM-auto11",
+  "control_commit_read_before_publication": "2a6ae78e23344d148126c1b7f3d09228f2cf9601",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "new_result": {
+    "id": "QFORM-POLAR-CONE-ADAPTIVE-RESERVE-v1",
+    "status": "PROVED_SUPPORTING_STABILITY_THEOREM_NOT_INDEPENDENTLY_REVIEWED",
+    "statement": "If an invertible physical cross block M0=US is updated by an arbitrary polar-favourable UH with H>=0, plus rank-r hostile L, residual R and dense tail T of operator norm delta, then s_q of the final cross block is at least max_p[s_{q+r+p}(M0)-s_{p+1}(R)]-delta. For q=5 a positive lower bound feeds the completed D5 receiver and yields a continuous density bound 5 sqrt(2e)/gamma.",
+    "essential_identity": "M0+UH=U(S+H), so s_j(M0+UH)=lambda_j(S+H)>=lambda_j(S)=s_j(M0), without any commutation assumption.",
+    "literal_spectral_scope": "For E_H=[[0,UH],[HU^T,0]], spec(E_H) consists of paired +/- eigenvalues of H; all magnitudes are free. Same-bank symmetric additions are unrestricted because the D5 receiver depends only on the original-coordinate cross block."
+  },
+  "partner_result_actually_applied": {
+    "partner": "account02/B12",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "64268d2bee76cd374e2bf1a34868e0e6a1b7e84d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260923T115313Z-account02-B12-qform-r33/REPORT.md",
+    "equation": "s_q(Mbase+L+R+T)>=max_p[s_{q+r+p}(Mbase)-s_{p+1}(R)]-delta"
+  },
+  "density_receiver": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+    "result": "D5: s_5(M)>=gamma implies continuous density with ||p_Q||inf<=5 sqrt(2e)/gamma."
+  },
+  "exact_target_family": {
+    "baseline_cross": "2 I_16",
+    "free_polar_update": "arbitrary H>=0",
+    "free_hostile_rank": 2,
+    "residual_condition": "s_4(R)<=1/4",
+    "dense_tail_condition": "||T||op<=1/8",
+    "proved_cross_gap": "s_5(M)>=13/8",
+    "proved_density_bound": "40 sqrt(2e)/13 = 7.174289174144998...",
+    "target_membership": "s_5(A)>=s_5(M)>=13/8>1"
+  },
+  "mathematical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bf14d73932fc20b6447345af6836262ad0391053",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260923T141615Z-account01-B12-QFORM-auto11/REPORT.md",
+    "readback_blob": "00b0253e23a905fc5c84b08a56c91c79a91da87e"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "ccf27b3c6a772367587b4290452b932402ee2590",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B12/20260923T141615Z-account01-B12-QFORM-auto11.md"
+  },
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "PROVED_ONLY_IN_THIS_D5_SCOPE",
+  "unresolved_implication": "From bare s_3(A)>=1, force a product-preserving cut with a polar-favourable/reserve certificate or route failure into a completed D5/ridge/grouped-bank/hub/localized-core/Schur branch.",
+  "next_step": "Study whether a max-cut/polar-decomposition choice can force a quantitatively nontrivial PSD part of U^T A[I,J] while the negative polar part has bounded numerical rank or singular tail; otherwise extract an aggregate branch.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED"
+}

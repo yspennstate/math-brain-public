@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260924T030004Z-account03-B02-qform-r45",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_commit_prepublication": "d4cafbed053632a68688fe5290fcc583b1c2158e",
+  "control_revision": "2026-09-22.15",
+  "math_repository": "yspennstate/math-open-problems",
+  "math_commit": "969923934518c728e4611e670ab6244ceea30215",
+  "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260924T030004Z-account03-B02-qform-r45/REPORT.md",
+  "result_id": "QFORM-BALANCED-FULLCUT-R2-TO-E3-OR-V1-OR-RIDGE-OR-HUB-v1",
+  "new_results": [
+    "For a literal full physical cut N=A[L,R] and same-side block D=A[L,L], the mixed two-cross-plus-one-internal minor sum T obeys T >= x1*x2*||(I-P2)D||_F^2, where P2 is the top-two left singular projection of N.",
+    "Splitting T by whether the internal column index belongs to the row triple gives a dimension-free fork: either a literal original-coordinate physical cut B has E3(B)>=T/32, or the global overlap-one third-compound mass V1 is at least T/2.",
+    "For full cut N with top-two projections P2,R2, the rank-at-most-four carrier A0 satisfies ||A-A0||_F^2 <=2(delta_L^2+delta_R^2+tau^2); this is coefficient classification only and no random quadratic perturbation is discarded.",
+    "Applied to account02/B02 r11: if either same-side transverse energy is >=2^-15, then either E3>247/603979776 or V1>247/37748736. The E3 branch has ||p_Q||inf<120.075636215 and int|phi|<754.457473215 with continuous C0 density.",
+    "If both transverse energies are <2^-15, then s5(A)<0.012556016944<1/64. Thus the final high spectral window has rank<=4. Diffuse leverage gives the completed continuous <64 theorem; heavy leverage forces an original coordinate with |A_ii|>1/512 or ||A[i,i^c]||_2>1/512.",
+    "Combining account04/B02 zero-diagonal-triple L2 with the new physicalized E3 tail gives ||p_Q||inf<67.474747757|det H0|^(-1/12) on the exact overlap."
+  ],
+  "partner_used": {
+    "account": "account04",
+    "slot": "B02",
+    "theorem": "QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1",
+    "commit": "0b11995430ce407a8852ac3bc5651491f2ee64f7",
+    "application": "optimized the partner L2 Fourier credit against the newly physicalized E3 t^-3/2 tail"
+  },
+  "source_packet_used": {
+    "account02_B02_r11_commit": "b34c3df7995a27f90540057d7dc1fcc33d6e7e39",
+    "account02_B02_r11_packet": "full physical cut with x1*x2>247/576 and tail<18/1011712",
+    "ridge_window_commit": "9c1167db05c7b0f520f060796fde921ed769a4e7"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-UNIFORM-MATRIX-PERTURBATION-CONTINUITY-FALSE-v1"
+  ],
+  "checks": {
+    "seed": 2026092403,
+    "trials": 120,
+    "violations_mixed_lower_bound": 0,
+    "violations_physicalization": 0,
+    "violations_near_rank4_frobenius": 0,
+    "status": "corroborative_only"
+  },
+  "full_target_status": "OPEN",
+  "full_target_continuity": "OPEN",
+  "target_wide_unweighted_L1_status": "OPEN_NOT_REFUTED",
+  "new_branch_continuity": "CONTINUOUS_C0_ON_PHYSICAL_E3_AND_DIFFUSE_SPECTRAL_WINDOW_EXITS",
+  "unresolved": "fixed overlap-one V1 grouped-pivot branch and the final physical-hub branch",
+  "next": "QFORM-FIXEDSCALE-V1-PIVOT-OR-HUB-L1-v1"
+}

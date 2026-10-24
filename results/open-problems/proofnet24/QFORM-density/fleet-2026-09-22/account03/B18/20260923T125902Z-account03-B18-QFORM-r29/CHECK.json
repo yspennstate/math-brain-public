@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T125902Z-account03-B18-QFORM-r29",
+  "status": "PASS",
+  "scope": "deterministic algebra/constants for REPORT.md; proof itself is analytic",
+  "runtime": {
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "checks": {
+    "main_constant": {
+      "expression": "3*2^(5/6)",
+      "value": 5.345392308842036
+    },
+    "partner_constant_unit_parameters": {
+      "expression": "2*sqrt(3*2^(5/6))",
+      "value": 4.624020894780661
+    },
+    "diffuse_core": {
+      "matrix_order": ["Z", "p1", "p2", "r1", "r2"],
+      "characteristic_polynomial": "lambda*(lambda-1)*(lambda+1)*(lambda^2-2)",
+      "eigenvalues_exact": ["-sqrt(2)", "-1", "0", "1", "sqrt(2)"],
+      "count_abs_eigenvalue_ge_1": 4
+    },
+    "partner_example": {
+      "matrix_order": ["W", "Z", "X1", "X2", "Y1", "Y2"],
+      "characteristic_polynomial": "(lambda-1)^2*(lambda+1)*(lambda^3-3*lambda-1)",
+      "eigenvalues_numeric": [-1.532088886237956, -1.0, -0.3472963553338607, 1.0, 1.0, 1.8793852415718169],
+      "count_abs_eigenvalue_ge_1": 5
+    },
+    "fourier_constant_audit": {
+      "scalar_plancherel_integral": "int |A_t(s)|^2 ds <= pi/|t|",
+      "rank2_plancherel_second_moment": "E_X |Y_t(X)|^2 <= 4*pi^2/(t^2*Delta)",
+      "combined_envelope_prefactor": "2^(5/4)*pi^(3/2)*||c||^(-1/2)*Delta^(-1/2)",
+      "envelope_integral": "int_R min(1,K|t|^(-3/2)) dt = 6 K^(2/3)",
+      "inversion_constant": "(6/(2*pi))*[2^(5/4)*pi^(3/2)]^(2/3)=3*2^(5/6)"
+    }
+  },
+  "interpretation": "These computations are regression evidence only. They do not replace the proof or establish the unrestricted conjecture."
+}

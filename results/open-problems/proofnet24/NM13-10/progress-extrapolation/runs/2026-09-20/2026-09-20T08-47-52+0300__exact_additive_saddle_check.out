@@ -1,0 +1,25 @@
+CHECK: exact asymptotic constants for the critical additive witness
+predicted tail constant at c=2 = 0.2222222222222222
+predicted critical endpoint lower constant = 0.4444444444444445
+old certified lower constant = 0.35275578932626656
+improvement factor = 1.2599210498948732
+
+c=1, predicted exp(9r/2)*tail -> 1.777777777777778
+  r=   20.0  scaled_tail=1.695755213124155  rel_error=-4.613769e-02  quad_err=3.83e-11
+  r=   80.0  scaled_tail=1.756498867728266  rel_error=-1.196939e-02  quad_err=1.73e-11
+  r=  320.0  scaled_tail=1.772407858823983  rel_error=-3.020579e-03  quad_err=1.18e-11
+  r= 1280.0  scaled_tail=1.776432131012832  rel_error=-7.569263e-04  quad_err=5.75e-11
+
+c=2, predicted exp(9r/2)*tail -> 0.222222222222222
+  r=   20.0  scaled_tail=0.226741881267865  rel_error=+2.033847e-02  quad_err=3.33e-12
+  r=   80.0  scaled_tail=0.223372607788198  rel_error=+5.176735e-03  quad_err=5.51e-12
+  r=  320.0  scaled_tail=0.222511132813745  rel_error=+1.300098e-03  quad_err=2.34e-12
+  r= 1280.0  scaled_tail=0.222294532568489  rel_error=+3.253966e-04  quad_err=7.98e-12
+
+c=4, predicted exp(9r/2)*tail -> 0.027777777777778
+  r=   20.0  scaled_tail=0.030274561453091  rel_error=+8.988421e-02  quad_err=3.20e-13
+  r=   80.0  scaled_tail=0.028403358577224  rel_error=+2.252091e-02  quad_err=1.03e-12
+  r=  320.0  scaled_tail=0.027934257025936  rel_error=+5.633253e-03  quad_err=4.12e-13
+  r= 1280.0  scaled_tail=0.027816902802294  rel_error=+1.408501e-03  quad_err=1.09e-12
+
+CHECK_PASS

@@ -1,0 +1,59 @@
+{
+  "reviewer": "w488",
+  "source": "~\\brain_workers\\w488\\REVIEWS.jsonl",
+  "native_mathematical_keeps": [
+    {
+      "reviewer": "w488",
+      "claim": "S1.487.1",
+      "verdict": "KEEP",
+      "reproduction": "For each site the resolvent imaginary part is eta/((lambda V_x-E)^2+eta^2); averaging V_x uniform on [-1,1] gives the stated integral and pi/(2lambda) upper bound. Every vector's measure is a countable sum of point masses.",
+      "scope": "Counterexample only to annealed-first-moment => quenched-a.c. implication; hopping omitted.",
+      "unresolved_gap": "No conclusion on weak-disorder Z^3 Anderson spectrum.",
+      "independence": "Derived directly from the diagonal operator and checked w487 proof."
+    },
+    {
+      "reviewer": "w488",
+      "claim": "S1.487.2",
+      "verdict": "KEEP",
+      "reproduction": "Fatou gives finite samplewise liminf of the Lp energies and expected liminf <=C. A bounded subsequence has weak Lp limit; pairing with C_c(I) and the Poisson approximate identity identifies that limit as pi times the measure density. Weak lower semicontinuity gives E||rho||_p^p<=C/pi^p. For 0<p<=1 concavity and total Poisson mass pi give the universal bound; delta_0 is singular.",
+      "scope": "Abstract random spectral-measure criterion, not the Anderson estimate.",
+      "unresolved_gap": "Uniform p>1 moment and positive mass on a fixed interval have not been proved for the target operator.",
+      "independence": "Re-derived the weak-compactness and distribution-identification steps without relying on the author's conclusion."
+    },
+    {
+      "reviewer": "w488",
+      "claim": "S1.487.3",
+      "verdict": "KEEP",
+      "reproduction": "Integrating eta^2/(v^2+eta^2)^2 over [-lambda,lambda] gives lambda/(lambda^2+eta^2)+arctan(lambda/eta)/eta; division by 2lambda yields the stated second moment and eta limit pi/(4lambda).",
+      "scope": "Exact formula in diagonal atomic model.",
+      "unresolved_gap": "No hopping and no implication for small-disorder target.",
+      "independence": "Independent antiderivative check."
+    },
+    {
+      "reviewer": "w488",
+      "claim": "S1.487.4",
+      "verdict": "KEEP",
+      "reproduction": "For z=E+i eta the deleted-site resolvent has Im Sigma>=0, hence B=eta+Im Sigma>0 and ImG=B/((lambda V_x-a)^2+B^2). Integrating the one independent site variable gives the pi/(2lambda) and K_p B^(1-p)/(2lambda) upper bounds. On |a|<=lambda/2 and B<=lambda/2, [a-B,a+B] lies within the potential interval; its length 2B and integrand >=2^-p B^-p give 2^-p B^(1-p)/lambda. No neighbor independence is used.",
+      "scope": "Exact conditional single-site bounds and a necessary resonance-weighted negative-width moment for the p>1 route.",
+      "unresolved_gap": "Uniform inverse bath-width moments at eta down to zero and nonzero mass are unproved.",
+      "independence": "Independently recomputed the Schur complement sign, interval inclusion, and constants."
+    }
+  ],
+  "author_served_model_evidence": "UNKNOWN",
+  "referee_served_model_evidence": "UNKNOWN",
+  "different_model_gate_satisfied": false,
+  "theorem_promotion_requested": false,
+  "narrow_fix_receipts": [
+    {
+      "reviewer": "w488",
+      "claim": "S1.487.5",
+      "verdict": "FIX",
+      "fixed_statement": "For free nearest-neighbor adjacency on Z^3, every spectral measure is absolutely continuous. For periodic odd-L boxes and any fixed nondegenerate energy interval I with closure inside (-6,6), the number M_L of box eigenvalues in I tends to infinity and at least M_L/2 adjacent gaps among the sorted levels in I are zero. Hence infinite-volume a.c. alone does not imply GOE bulk local statistics. This is a lambda=0 auxiliary counterexample only.",
+      "reproduction": "Fourier transform gives multiplication by h(theta)=2 sum cos(theta_j). Its gradient is nonzero off eight Haar-null points, so null energy sets have null preimage and all weighted spectral measures are a.c. For odd L, k->-k has only fixed point k=0 at energy 6 outside I; all I-momenta pair, giving at most M_L/2 distinct energies and at least M_L/2 zero gaps. A nondegenerate I has open positive-measure preimage; boundary energy levels have Haar-null preimage, so M_L/L^3 approaches a positive measure. Strictly monotone unfolding preserves zero gaps.",
+      "why_fix": "The author's phrase 'nonempty interval' also permits a singleton under a literal reading; then M_L need not diverge. Require nondegenerate or nonempty interior.",
+      "unresolved_gap": "No conclusion for any fixed positive disorder or nonperiodic finite-volume convention.",
+      "independence": "Independently checked Fourier null-set argument and odd-torus momentum orbits."
+    }
+  ],
+  "fix_application": "Applied a fixed nondegenerate open interval I=(a,b), -6<a<b<6; v2 draft, no theorem promotion"
+}

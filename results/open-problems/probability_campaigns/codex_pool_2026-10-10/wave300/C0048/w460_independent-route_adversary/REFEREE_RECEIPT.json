@@ -1,0 +1,93 @@
+{
+  "recorded_at_utc": "2026-10-10T07:21:52.935204+00:00",
+  "reviewer": "w461",
+  "source": "~\\brain_workers\\w461\\REVIEW_VERDICTS.jsonl",
+  "snapshot": "~\\brain_workers\\w460\\w461_REVIEW_VERDICTS.jsonl",
+  "source_sha256": "058c7c4bff4fbb6f78e8e4d385a3ebac7286402c40cc48b921e2b1f40c21900a",
+  "mathematical_claim_groups": [
+    {
+      "author": "w460",
+      "claims": "L1-L3",
+      "verdict": "KEEP_PARTIAL",
+      "artifact": "~/brain_workers/w460/ATTEMPT.md",
+      "sha256": "B678E9AB2C1A1D486952243EFCDDDB384E5077FB1372C505EC2DE3CB37BDEC20",
+      "reproduction": "In ordered coupling event discrepancy implies some edge in finite support F differs, giving delta<=sum edge-marginal gaps. For B_R, |E(B_R)|=d(2R)(2R+1)^(d-1). Under theta_w>=eta, theta_f=0 choose R so free A_R<=eta/2; symmetry gives edge gap>=eta/(2m_R). Edwards-Sokal opens a same-spin edge with probability p, hence agreement gap=edge gap/p.",
+      "remaining_gap": "The uniform-in-volume critical hypothesis theta_w>=eta with theta_f=0 is unproved for the missing C0048 pairs; the free condition is an additional premise.",
+      "status": "independently checked proof"
+    },
+    {
+      "author": "w460",
+      "claims": "L4",
+      "verdict": "KEEP_PARTIAL",
+      "artifact": "~/brain_workers/w460/ATTEMPT.md",
+      "sha256": "B678E9AB2C1A1D486952243EFCDDDB384E5077FB1372C505EC2DE3CB37BDEC20",
+      "reproduction": "Boundary recoloring gives 0<=log Z_free-log Z_fixed<=b log q+2d K b=o(|B_N|). For either boundary condition, convex tangent inequality survives volume limit. Bulk edge averages converge by free/wired domain monotonicity and an interior-R sandwich; limits a_f,a_w are subgradients of the common pressure P. Therefore P'_+-P'_->=a_w-a_f>=d delta/(p m).",
+      "remaining_gap": "No positive critical finite-event gap is supplied; a pressure jump is only a conditional consequence and needs a magnetization bridge to solve the primary conjecture.",
+      "status": "independently checked proof"
+    },
+    {
+      "author": "w460",
+      "claims": "CEX1",
+      "verdict": "KEEP_ROUTE_COUNTEREXAMPLE",
+      "artifact": "~/brain_workers/w460/COUNTEREXAMPLES.md",
+      "sha256": "AF315FE3817C1A6E7A1862B234597663049ECFA08492C2E0187C42CF4B0D9543",
+      "reproduction": "For a path of L edges free edges are iid with alpha=p/[p+q(1-p)]. Endpoint identification multiplies free configuration weight by q iff all edges open and by 1 otherwise, up to a common factor. Thus the edge gap is (q-1)(1-alpha)alpha^L/[1+(q-1)alpha^L]. At q=3,p=1/2, gaps L=1:1/4 and L=4:1/172, tending to zero.",
+      "remaining_gap": "The path lies outside d>=3; it refutes the general finite-gap-to-limit inference, not C0048.",
+      "status": "independently checked proof"
+    },
+    {
+      "author": "w460",
+      "claims": "CEX2",
+      "verdict": "KEEP_ROUTE_COUNTEREXAMPLE",
+      "artifact": "~/brain_workers/w460/COUNTEREXAMPLES.md",
+      "sha256": "AF315FE3817C1A6E7A1862B234597663049ECFA08492C2E0187C42CF4B0D9543",
+      "reproduction": "With x=exp(2nt), (2x+1)/(x+2) is in [1/2,2], so sup|g_n-f_n|<=log2/n. At t=0, derivatives are 4/3 and 2/3; both limits are 2 max(t,0).",
+      "remaining_gap": "Abstract finite-state counterexample; no assertion about Potts realization.",
+      "status": "independently checked proof"
+    }
+  ],
+  "artifact_version_checks": [
+    {
+      "claims": "L1-L3",
+      "artifact": "~\\brain_workers\\w460\\ATTEMPT.md",
+      "expected_sha256": "B678E9AB2C1A1D486952243EFCDDDB384E5077FB1372C505EC2DE3CB37BDEC20",
+      "actual_sha256": "b678e9ab2c1a1d486952243efcdddb384e5077fb1372c505ec2de3cb37bdec20",
+      "matches_reviewed_version": true,
+      "verdict": "KEEP_PARTIAL"
+    },
+    {
+      "claims": "L4",
+      "artifact": "~\\brain_workers\\w460\\ATTEMPT.md",
+      "expected_sha256": "B678E9AB2C1A1D486952243EFCDDDB384E5077FB1372C505EC2DE3CB37BDEC20",
+      "actual_sha256": "b678e9ab2c1a1d486952243efcdddb384e5077fb1372c505ec2de3cb37bdec20",
+      "matches_reviewed_version": true,
+      "verdict": "KEEP_PARTIAL"
+    },
+    {
+      "claims": "CEX1",
+      "artifact": "~\\brain_workers\\w460\\COUNTEREXAMPLES.md",
+      "expected_sha256": "AF315FE3817C1A6E7A1862B234597663049ECFA08492C2E0187C42CF4B0D9543",
+      "actual_sha256": "af315fe3817c1a6e7a1862b234597663049ecfa08492c2e0187c42cf4b0d9543",
+      "matches_reviewed_version": true,
+      "verdict": "KEEP_ROUTE_COUNTEREXAMPLE"
+    },
+    {
+      "claims": "CEX2",
+      "artifact": "~\\brain_workers\\w460\\COUNTEREXAMPLES.md",
+      "expected_sha256": "AF315FE3817C1A6E7A1862B234597663049ECFA08492C2E0187C42CF4B0D9543",
+      "actual_sha256": "af315fe3817c1a6e7a1862b234597663049ecfa08492c2e0187c42cf4b0d9543",
+      "matches_reviewed_version": true,
+      "verdict": "KEEP_ROUTE_COUNTEREXAMPLE"
+    }
+  ],
+  "result": "SCOPED_KEEP_FOUR_GROUPS",
+  "scope": "Finite/conditional reductions and route counterexamples only.",
+  "current_openness": "UNKNOWN",
+  "parent_problem_proved": false,
+  "served_model_evidence": {
+    "author": "UNAVAILABLE",
+    "referee": "UNAVAILABLE"
+  },
+  "different_model_review_gate": "NOT_VERIFIED",
+  "version_check_is_mathematical_proof": false
+}

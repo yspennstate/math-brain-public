@@ -1,0 +1,17 @@
+{
+  "family": "F_t(x,y)=(-1)^q_t(x) y_(M_t x)",
+  "control_coordinates": "x_1,...,x_n: independent fair physical bits, allowed in every state update and every phase increment",
+  "data_coordinates": "One independent fair sign y_z for each a-bit state z; the same y_z is shared by all paths and all stages reaching that state",
+  "selector_freshness": "Not assumed across levels. The whole x block is independent of the y block.",
+  "branch_dependence": "Branches may share all controls and all terminal data. Baseline disjoint or fresh composition identities are not multiplied through the program.",
+  "state_update": "M_0=0; M_t=A_t M_(t-1)+B_t over F2; fixed arbitrary a-by-a A_t and a-by-n B_t",
+  "phase_update": "q_0=0; q_t=q_(t-1)+p_t over F2; each p_t has degree at most two",
+  "exact_required_statistics": ["r_t=rank(M_t)", "k_t=rank(polar(q_t) restricted to ker(M_t))", "c_t=number nonzero M_t columns", "b_t=number zero M_t columns with nonzero polar row", "d_t=number zero M_t columns with zero polar row and linear coefficient one"],
+  "entropy_ledger": "H_t=2r_t+k_t; differences may be negative",
+  "influence_ledger": "I_t=1+(c_t+b_t)/2+d_t; differences may be negative",
+  "collision_certificate": "For each reachable z, signed indicator of M_t x=z has 2^(r_t+k_t) nonzero control coefficients, all squared magnitude 2^(-2r_t-k_t). Different terminal labels have different data singleton frequencies. Coherent history collisions are resolved in the signed indicator before squaring.",
+  "label_sharing": "Pay terminal state label r_t bits once per whole Fourier set. Pay r_t+k_t conditional control-frequency bits separately. Do not pay independent labels at each level or coordinate.",
+  "guard": "Arbitrary nonquadratic phases or identification of distinct y_z bits are outside the proved ledger; both can introduce unpaid Fourier entropy/cross-label collisions.",
+  "proof": "RECURSIVE_ADDRESSING.tex, Rank and fiber-phase ledger theorem",
+  "review_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW"
+}

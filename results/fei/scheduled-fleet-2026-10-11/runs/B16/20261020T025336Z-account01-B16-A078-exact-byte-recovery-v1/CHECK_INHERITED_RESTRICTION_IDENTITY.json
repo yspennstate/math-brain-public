@@ -1,0 +1,140 @@
+{
+  "schema": "b16-two-sided-central-band-check/1",
+  "run_id": "20261019T204506Z-account01-B16-A078-two-sided-central-band-repair",
+  "status": "PASS",
+  "command": "python3 -S verify_two_sided_central_band.py",
+  "seed": null,
+  "python": "3.13.5",
+  "flat_spectrum_exact_checks": [
+    {
+      "n": 1,
+      "physical_dimension": 2,
+      "exact_R_checks": 2,
+      "min_Delta_y": 1.0,
+      "status": "PASS"
+    },
+    {
+      "n": 2,
+      "physical_dimension": 4,
+      "exact_R_checks": 16,
+      "min_Delta_y": 1.0,
+      "status": "PASS"
+    },
+    {
+      "n": 3,
+      "physical_dimension": 6,
+      "exact_R_checks": 96,
+      "min_Delta_y": 1.0,
+      "status": "PASS"
+    },
+    {
+      "n": 4,
+      "physical_dimension": 8,
+      "exact_R_checks": 512,
+      "min_Delta_y": 1.0,
+      "status": "PASS"
+    },
+    {
+      "n": 5,
+      "physical_dimension": 10,
+      "exact_R_checks": 2560,
+      "min_Delta_y": 1.0,
+      "status": "PASS"
+    },
+    {
+      "n": 6,
+      "physical_dimension": 12,
+      "exact_R_checks": 12288,
+      "min_Delta_y": 1.0,
+      "status": "PASS"
+    }
+  ],
+  "analytic_constant_sanity": {
+    "D_natural": 0.0566330122651324,
+    "D_bits": 0.08170416594551067,
+    "C50": 72.635907286049,
+    "log2_C50": 6.182611010285117,
+    "two_tail_bad_event_bound_at_m1024": 2.382290077515182e-21,
+    "two_tail_bound_below_1_over_6144": true
+  },
+  "old_one_sided_event_counterexample": {
+    "s": 12,
+    "K_s": 12,
+    "N_s": 0,
+    "K_ge_s_over_3": true,
+    "N_ge_s_over_3": false
+  },
+  "exact_small_random_walk_checks": [
+    {
+      "m": 6,
+      "L": 2,
+      "P_central_band_and_hit_exact": "55/128",
+      "decimal": 0.4296875,
+      "P_initial_nonnegative_window_exact": "5/16",
+      "initial_decimal": 0.3125
+    },
+    {
+      "m": 8,
+      "L": 3,
+      "P_central_band_and_hit_exact": "49/128",
+      "decimal": 0.3828125,
+      "P_initial_nonnegative_window_exact": "35/128",
+      "initial_decimal": 0.2734375
+    },
+    {
+      "m": 12,
+      "L": 4,
+      "P_central_band_and_hit_exact": "12639/32768",
+      "decimal": 0.385711669921875,
+      "P_initial_nonnegative_window_exact": "231/1024",
+      "initial_decimal": 0.2255859375
+    },
+    {
+      "m": 16,
+      "L": 6,
+      "P_central_band_and_hit_exact": "50479/131072",
+      "decimal": 0.38512420654296875,
+      "P_initial_nonnegative_window_exact": "6435/32768",
+      "initial_decimal": 0.196380615234375
+    },
+    {
+      "m": 18,
+      "L": 6,
+      "P_central_band_and_hit_exact": "1548989/4194304",
+      "decimal": 0.3693077564239502,
+      "P_initial_nonnegative_window_exact": "12155/65536",
+      "initial_decimal": 0.1854705810546875
+    }
+  ],
+  "all_parameter_witness_sanity": [
+    {
+      "a": "0",
+      "b": "0",
+      "n": 68812801,
+      "residual_lower_bound": "103219201/34406400",
+      "exceeds_3": true
+    },
+    {
+      "a": "4",
+      "b": "3/4",
+      "n": 232243201,
+      "residual_lower_bound": "103219201/34406400",
+      "exceeds_3": true
+    },
+    {
+      "a": "17/3",
+      "b": "9/10",
+      "n": 294748161,
+      "residual_lower_bound": "103219201/34406400",
+      "exceeds_3": true
+    },
+    {
+      "a": "100",
+      "b": "0",
+      "n": 3509452801,
+      "residual_lower_bound": "103219201/34406400",
+      "exceeds_3": true
+    }
+  ],
+  "interpretation": "PASS validates finite identities/constants and catches the prior logical gap. It does not prove the all-dimensional probability estimates or replace independent review."
+}

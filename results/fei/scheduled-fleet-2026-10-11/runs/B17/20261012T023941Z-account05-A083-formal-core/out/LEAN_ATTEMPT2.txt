@@ -1,0 +1,26 @@
+'FEIJS.coefficient_cross_comparison' depends on axioms: [propext, Quot.sound]
+'FEIJS.rational_normalized_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FEIJS.scalar_series_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FEIJS.factorial_split' depends on axioms: [propext, Quot.sound]
+'FEIJS.even_factorial' depends on axioms: [propext, Quot.sound]
+~\brain_workers\FEI100_20261011\agents\A083\runs\20261012T023941Z-account05-A083-formal-core\code\JSCoefficients.lean:116:18: error: don't know how to synthesize implicit argument `c`
+  @Rat.mul_le_mul_of_nonneg_right (1 / ↑(2 * (n + 1)) / ↑(2 * (n + 1) - 1))
+    (↑(oddProduct (n + 1)) / ↑(evenProduct (n + 1)) / ↑(2 * (n + 1) - 1)) (t ^ ?m.31)
+    (scalar_series_coefficient (n + 1) (Decidable.byContradiction fun a => all_partial_sums._proof_1_1 n a))
+    (Rat.pow_nonneg ht)
+context:
+t : Rat
+ht : 0 ≤ t
+n : Nat
+ih : entropyPartial t n ≤ sqrtPartial t n
+⊢ Rat
+~\brain_workers\FEI100_20261011\agents\A083\runs\20261012T023941Z-account05-A083-formal-core\code\JSCoefficients.lean:117:52: error: don't know how to synthesize implicit argument `n`
+  @Rat.pow_nonneg t ?m.31 ht
+context:
+t : Rat
+ht : 0 ≤ t
+n : Nat
+ih : entropyPartial t n ≤ sqrtPartial t n
+⊢ Nat
+~\brain_workers\FEI100_20261011\agents\A083\runs\20261012T023941Z-account05-A083-formal-core\code\JSCoefficients.lean:116:9: error: failed to infer `have` declaration type
+'FEIJS.all_partial_sums' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

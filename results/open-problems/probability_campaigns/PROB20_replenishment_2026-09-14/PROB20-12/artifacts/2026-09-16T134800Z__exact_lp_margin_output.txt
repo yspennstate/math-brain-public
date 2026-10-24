@@ -1,0 +1,20 @@
+PROCESS_RETURN_CODE: 0
+ELAPSED_SECONDS_APPROX: 18.291
+
+=== STDOUT ===
+PASS {'id': 'R1', 'field': 'Q', 'n': 6, 'ranks': [2, 2], 'support': 38, 'min_q': '25/833569', 'max_q': '220887/833569', 'delta': '0'}
+PASS {'id': 'R3', 'field': 'Q', 'n': 8, 'ranks': [3, 3], 'support': 131, 'min_q': '196/226773481', 'max_q': '14379264/226773481', 'delta': '0'}
+PASS {'id': 'C2', 'field': 'Q(i)', 'n': 7, 'ranks': [2, 3], 'support': 69, 'min_q': '105796/620344657', 'max_q': '38570557/620344657', 'delta': '0'}
+SUITE_CANDIDATES 3
+FIXED_NORMALIZATION delta(P1,P2)=max{-b^T y : M^T y >= 0, -1 <= y_j <= 1 for every row j}
+MAX_CERTIFIED_NORMALIZED_INFEASIBILITY_MARGIN 0
+ALL EXACT CHECKS PASSED
+
+=== STDERR ===
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 772, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py", line 37, in get_or_create_client
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py", line 124, in start_daemon
+TimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.

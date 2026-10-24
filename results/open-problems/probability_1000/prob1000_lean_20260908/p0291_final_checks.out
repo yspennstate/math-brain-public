@@ -1,0 +1,17 @@
+== (2) direct (C1),(C2) checks (must be >= 0)
+   a=1.0 b=1.0 prefix gaps [0.4] suffix gaps []: C1 min=+0.000e+00, C2 min=+0.000e+00
+   a=1.0 b=1.0 prefix gaps [] suffix gaps [0.7]: C1 min=+0.000e+00, C2 min=-7.772e-16
+   a=1.0 b=1.0 prefix gaps [0.3] suffix gaps [1.5]: C1 min=+4.996e-16, C2 min=+5.551e-16
+   a=1.0 b=1.0 prefix gaps [2.0, 0.5] suffix gaps [0.2]: C1 min=-5.551e-17, C2 min=+2.776e-16
+   a=3.0 b=1.0 prefix gaps [0.4] suffix gaps []: C1 min=-2.220e-16, C2 min=+2.220e-16
+   a=3.0 b=1.0 prefix gaps [] suffix gaps [0.7]: C1 min=+4.441e-16, C2 min=+5.551e-16
+   a=3.0 b=1.0 prefix gaps [0.3] suffix gaps [1.5]: C1 min=-5.551e-17, C2 min=+2.776e-16
+   a=3.0 b=1.0 prefix gaps [2.0, 0.5] suffix gaps [0.2]: C1 min=+5.551e-17, C2 min=+1.110e-16
+   a=1.0 b=4.0 prefix gaps [0.4] suffix gaps []: C1 min=+0.000e+00, C2 min=+0.000e+00
+   a=1.0 b=4.0 prefix gaps [] suffix gaps [0.7]: C1 min=-2.220e-16, C2 min=-4.996e-16
+   a=1.0 b=4.0 prefix gaps [0.3] suffix gaps [1.5]: C1 min=+0.000e+00, C2 min=+4.441e-16
+   a=1.0 b=4.0 prefix gaps [2.0, 0.5] suffix gaps [0.2]: C1 min=+9.368e-17, C2 min=+8.708e-16
+== (1) n=5 LP test
+   star a=1.0 b=1.0: worst max(E2-E1) = +2.415e-15 ok
+   star a=3.0 b=1.0: worst max(E2-E1) = +5.690e-16 ok
+   star a=1.0 b=4.0: worst max(E2-E1) = +3.983e-15 ok

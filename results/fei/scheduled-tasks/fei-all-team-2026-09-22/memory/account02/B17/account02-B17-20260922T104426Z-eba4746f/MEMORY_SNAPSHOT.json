@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "account02-B17-20260922T104426Z-eba4746f",
+  "control_revision": "2026-09-22.3",
+  "state_revision": "FEI-20260922T1000Z-v1",
+  "starting_control_head": "1ac99b0cc7040e1cc0fdca301a09ccf3af6edb05",
+  "latest_control_head_before_snapshot": "0f4cf17b656013aada6c316ad6dda026476c8232",
+  "repository_memory": "loaded",
+  "native_memory": "unverified",
+  "full_brain_connected": false,
+  "correction_watermark": [
+    "FEI-DELTA-20260922-01-FIXED-POTENTIAL-AND-EXTREMALITY",
+    "FEI-DELTA-20260922-02-QUADRATIC-0337",
+    "FEI-DELTA-20260922-03-QUADRATIC-034",
+    "FEI-DELTA-20260922-04-SHAPED-WITNESS-REPAIR",
+    "FEI-DELTA-20260922-05-KL-HIERARCHY-TERM",
+    "FEI-DELTA-20260922-06-UNWEIGHTED-L2-NOGO",
+    "FEI-DELTA-20260922-07-RAW-U4-TERMINAL-NOGO",
+    "FEI-DELTA-20260922-08-BALANCED-SLICE-NOT-CLOSURE",
+    "FEI-DELTA-20260922-09-SAFE-DIRECTION-NOT-POTENTIAL-PROOF",
+    "FEI-DELTA-20260922-10-COPAIR-JOINT-CONSTRAINTS",
+    "FEI-DELTA-20260922-11-QUARTIC-WITNESS-REPAIR",
+    "FEI-DELTA-20260922-12-LATEST-SHAPED-FRONTIER",
+    "FEI-DELTA-20260922-13-LOWLEVEL-KL-PROJECTION-NOGO",
+    "FEI-DELTA-20260922-14-SAFE-CONE-SELECTOR-GAP"
+  ],
+  "pending_inbox_events": [],
+  "assignment": "Credit-preserving potential repair",
+  "partner_account03_B17": {
+    "source_retrieved": true,
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9b4814e50b1215342abb6de666809948169e8a9b",
+    "path": "proofnet24/P03-fei/fleet-2026-09-21/account03/B17/20260922T100239Z-quarterhalf-dyadic-output/REPORT.md",
+    "applied_result": "Exact quarter/half q=1/4 non-subcube Walsh formulas; derived r=(1/4,1/6,1/6,5/12,2/3), K_occ=0.286039323730481..., B_inf^Gamma0=0.070127342936185...>0."
+  },
+  "consumed_source_pins": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+      "role": "exact I-projection and R=B_inf+K_occ"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "2bf247373576eb406ca91bb3ea5f3ce5e5ab8588",
+      "role": "binary K_occ=0 and disjoint hierarchy KL"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "3a5fccff414043be05a0c7f2f219dabd9b44708b",
+      "role": "exact physical restriction Kcal chain"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "bff0d7b6c21485f386841c42582eb04f32705046",
+      "role": "recursive-majority fixed-depth KL barrier and Hmax lower bound"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "9b4814e50b1215342abb6de666809948169e8a9b",
+      "role": "required partner actual Boolean quarter/half source"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f5946fb64d336ed7369de279159643944efc47af",
+      "role": "strong prime witness and shaped witness-repair scope"
+    }
+  ],
+  "new_claims": [
+    {
+      "claim_id": "B17-RESTRICTION-CREDIT-EXCHANGE-v1",
+      "status": "PROVED_IN_THIS_REPORT"
+    },
+    {
+      "claim_id": "B17-KL-INSURED-CENTER-NEUTRAL-NOGO-v1",
+      "status": "PROVED_IN_THIS_REPORT"
+    },
+    {
+      "claim_id": "B17-RM3-FULL-KL-PREFLIGHT-v1",
+      "status": "COROLLARY_OF_SOURCES"
+    },
+    {
+      "claim_id": "B17-PARTNER-QUARTERHALF-LEDGER-v1",
+      "status": "FINITE_EXACT_SOURCE_APPLICATION"
+    }
+  ],
+  "mathematical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "final_run_commit": "45ba4962c7a5c62561c1e8dbaeaf700b009983b7",
+    "path": "proofnet24/P03-fei/fleet-2026-09-22/account02/B17/account02-B17-20260922T104426Z-eba4746f/",
+    "report_sha256": "afd2ad42b98a458f505f2e860d41817af7a59fb2479862d9a96be37fc1ad6619",
+    "checker_sha256": "3c6b75bfd3c6c9c2f5c31c9608b1dc7fe2de3776f815a58109b8b1ff8a3a877d",
+    "output_sha256": "e690c80a42c95db6bcb200faa2457d88fc37857b901279d8a8f490ab771c1ae7",
+    "claims_sha256": "ef1161d6ce2d595f21cc6284cf747b49e922487e13fdc4fe75a5034423dc29f0"
+  },
+  "handoff_commit": "0f4cf17b656013aada6c316ad6dda026476c8232",
+  "recipient": "account04/B01",
+  "unresolved_implication": "Prove an adaptive genuine-restriction-tree amortization of L_{Gamma,j}=It_j a_s+J_Gamma-JS_s-H_layer while retaining coefficient-one full K_occ and the exact two-ledger exchange, or produce an actual Boolean counterexample to a proposed joint node inequality.",
+  "scheduler_state": {
+    "mutations_by_B17": 0,
+    "new_tasks_created": 0,
+    "notifications_or_email_changed": false,
+    "live_scheduler_ids_recorded": false
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "requested_reasoning_effort": "maximum actually supported",
+  "configured_reasoning_effort": "UNKNOWN_NOT_EXPOSED",
+  "provider_reasoning_usage": null,
+  "privacy_review": "narrow mathematics/operations allowlist; no credentials, scheduler identifiers, machine paths, raw transcripts, benchmark gold, unrelated private data, email, Drive, public posting, paid API/model, or remote workflow"
+}

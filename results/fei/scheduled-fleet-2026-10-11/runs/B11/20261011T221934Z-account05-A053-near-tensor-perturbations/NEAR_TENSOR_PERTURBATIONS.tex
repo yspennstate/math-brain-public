@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A053: near-tensor point surgery}
+The complete proof and conventions are in \texttt{HIDDEN\_TENSOR\_DIAGNOSTIC.md}; entropy units are bits. Let $p=2^{-n}$ and $g=f-2f(a)\mathbf1_a$ for a Boolean sign $f$. Put $r_i=f(a)f(a^i)$ and $r_{ij}=f(a)f(a^{ij})$. Then
+\[
+\widehat g(S)=\widehat f(S)-2pf(a)\chi_S(a),\qquad
+\operatorname{Inf}_i(g)-\operatorname{Inf}_i(f)=2pr_i.
+\]
+For $D_i f=(f-f(\cdot^i))/2$ and $K_{ij}=\|D_iD_jf\|_2^2$,
+\[
+K_{ij}(g)-K_{ij}(f)=p(r_i+r_j-r_{ij}).
+\]
+For the multiplicative curvature $c_{ij}(f)=\Pr[f(X)f(X^i)f(X^j)f(X^{ij})=-1]$,
+\[
+c_{ij}(g)-c_{ij}(f)=4p f(a)f(a^i)f(a^j)f(a^{ij}).
+\]
+Across a product cut $c_{ij}(f)=0$ and $c_{ij}(g)=4p$. In contrast, $K_{ij}(f)=\operatorname{Inf}_i(f)\operatorname{Inf}_j(f)$ across such a cut. For $M_{ij}=K_{ij}-\operatorname{Inf}_i\operatorname{Inf}_j$, $u_i=\operatorname{Inf}_i(f)$, the exact cross-cut covariance is
+\[
+M_{ij}(g)=p(r_i+r_j-r_ir_j)-2p(r_iu_j+r_ju_i)-4p^2r_ir_j,
+\quad |M_{ij}(g)|\le7p+4p^2.
+\]
+Vanishing cross-cut plaquettes are equivalent to coordinate tensor factorization. A single flip of any nontrivial product has an odd number of negative values; every nontrivial product has an even number. It is therefore tensor-prime. For $n\ge2$, its integer Walsh sums are all $2\bmod4$, hence it has full Fourier support.
+
+For $n\ge4$ let $u_n=2^{1-\lfloor n/2\rfloor}$ and $E_n=h_2(u_n)+nu_n$. Parseval, Cauchy--Schwarz and maximal coupling give
+\[
+\operatorname{TV}(P_f,P_g)\le2\sqrt{p(1-p)},\qquad
+|H(g)-H(f)|\le E_n=O(n2^{-n/2}),\qquad
+|I(g)-I(f)|\le2np.
+\]
+Fix a nonconstant $d$-bit sign $h$ and set $F_t=z\prod_{r=1}^t h(x^{(r)})$, $n_t=td+1$. Its one-point surgery $G_t$ satisfies
+\[
+H(F_t)=tH(h),\quad I(F_t)=tI(h)+1,\quad
+|H(G_t)-tH(h)|\le E_{n_t},\quad
+|I(G_t)-tI(h)-1|\le2n_t2^{-n_t}.
+\]
+Thus $H(G_t)/I(G_t)\to H(h)/I(h)$ while $G_t$ is tensor-prime, all-essential and full-support, with connected plaquette graph, and cut-plaquette sum $4(n_t-1)2^{-n_t}\to0$ across the fresh sign cut. Uniform FEI on this simultaneous qualitative class has exactly the unrestricted optimal constant. These embeddings fail dimension-criticality: fixing a second copy away from the surgery point removes the defect and exposes the original violating core as a proper physical descendant.
+\end{document}

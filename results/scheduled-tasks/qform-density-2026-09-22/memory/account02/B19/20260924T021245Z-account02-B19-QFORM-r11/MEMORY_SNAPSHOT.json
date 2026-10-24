@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B19",
+  "run_id": "20260924T021245Z-account02-B19-QFORM-r11",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_start_commit": "7cf1634e4f95be0030b1485d77ef830f410b17de",
+  "control_final_refresh_commit": "4c6e986b3eda5771468b2398e50226d5afd076d7",
+  "control_revision": "2026-09-22.15",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_math_commit": "373f70551921d40dc74ac9ada67cfce1e491e432",
+  "math_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B19/20260924T021245Z-account02-B19-QFORM-r11/REPORT.md",
+  "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B19/20260924T021245Z-account02-B19-QFORM-r11/CHECKS.md",
+  "partner_applied": {
+    "account": "account03",
+    "slot": "B19",
+    "run_id": "20260924T010216Z-account03-B19-QFORM-r46",
+    "canonical_math_commit": "628222e360badf19079bf4e36c2122d894669e57",
+    "theorem": "QFORM-TWOSTAR-TO-ALIGNED-R2-OR-E3-v1"
+  },
+  "owner_pinned_source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+  "owner_pinned_result_applied": "marginal-free D5 physical-cross receiver at E5>=2^-20, yielding ||p_Q||_inf<=20sqrt(2e)=46.63287963194249",
+  "new_results": [
+    {
+      "id": "QFORM-TWOSTAR-BILATERAL-R1-DEFECT-PRODUCT-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For the live two-star packet, (eta_L eta_R)^4 <= 4 Z_L Z_R/delta^2. After both physical E3 exits fail at Z_L,Z_R<2^-18 and delta>=2/9, eta_L eta_R<3/512; opposite off-plane leakage product is also <3/512."
+    },
+    {
+      "id": "QFORM-TWOSTAR-BORDERED-E3-TRANSVERSE-TRADEOFF-v1",
+      "status": "PROVED_STRUCTURAL_IDENTITY",
+      "statement": "For distinct anchors, with B=[[N,u],[v^T,b]], delta=||u||||v|| and F=||P_u^perp N P_v^perp||_F, the aggregate bordered 3-minor packet obeys |delta F-|b|sqrt(E2(N))| <= sqrt(D_pq) <= delta F+|b|sqrt(E2(N)). Thus after E3(B)<2^-18, either |b|sqrt(E2(N))>=2^-9 or F<9/512; at b=0, F<9/1024."
+    }
+  ],
+  "corrections_consumed": [
+    "no post-rotation independence",
+    "no arbitrary-joint coarea cap",
+    "no conditional projection-density cap shortcut",
+    "no law-uniform scalar pointwise quadratic-phase decay",
+    "no deletion of a small nonzero coefficient tail",
+    "finite E2 half-Riesz alone does not imply L-infinity",
+    "raw pre-completion E2 need not survive pair Schur completion"
+  ],
+  "unresolved_first_implication": "QFORM-TWOSTAR-ONESIDED-OR-WEAKEDGE-E2-PAYMENT-v1",
+  "unresolved_scope": "Pay the same-hub one-sided moving-ridge collar with eta_L eta_R<3/512 while retaining arbitrary same-bank curvature and full tails, or for distinct anchors pay |A_pq|sqrt(E2(A[R,C]))>=2^-9 without assuming Schur preservation; arbitrary-extra-spectrum and continuity remain separate debts.",
+  "review_status": "NO_TWO_INDEPENDENT_END_TO_END_REVIEWS",
+  "keeper_mutations": 0,
+  "notifications": false,
+  "email": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

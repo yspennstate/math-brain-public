@@ -1,0 +1,13 @@
+{
+  "helper_version": "A053-check-near-tensor-v2",
+  "actual_Boolean_family": "All signs on n=1,2,3 at point zero; all products of two arbitrary two-bit signs at point zero; balanced tensor powers of all one- and two-bit signs for t=1,2,3 at point zero",
+  "parameter_domain": "n<=7; fixed dimensions; no automatic escalation",
+  "case_count": "276 general seed cases + 256 product cases + 60 balanced tensor cases = 592",
+  "symmetry": "For exhaustive general and two-factor product families, every input translation maps the seed family bijectively to itself and sends an arbitrary surgery point to zero. Walsh sign changes preserve all checked squared-spectrum statistics. Balanced tensor fixtures are only declared at zero; their all-point conclusions are analytic.",
+  "arithmetic": "integer Walsh transforms; Fraction edge, plaquette, rank and covariance identities; exact range-reduced rational atanh logarithm intervals with 40 terms and cached values",
+  "memory_estimate_MB": 25,
+  "maximum_runtime_seconds": 60,
+  "internal_stop_seconds": 55,
+  "previous_pilot": "Original unreduced pilot manually interrupted after slow progress; no proof result or completed runtime claimed from it. Original spec retained.",
+  "scope": "Finite identity checks and selected certified entropy bounds; analytic proofs supply all-dimensional conclusions"
+}

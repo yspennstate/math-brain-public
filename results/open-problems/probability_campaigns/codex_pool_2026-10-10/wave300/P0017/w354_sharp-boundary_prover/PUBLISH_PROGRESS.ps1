@@ -1,0 +1,2 @@
+# Prepared for the reviewer; not executed by w354 because progress outputs are outside the worker's write scope.
+python -X utf8 ~/primary_directive/pd_progress.py --event "w354 P0017: four referee KEEP proofs, exact simplex directional coefficient and full-energy polynomial family; deduplicated draft concepts submitted for admission" --agent w354 --row S1.1 --evidence ~/brain_workers/w354/REPORT.md

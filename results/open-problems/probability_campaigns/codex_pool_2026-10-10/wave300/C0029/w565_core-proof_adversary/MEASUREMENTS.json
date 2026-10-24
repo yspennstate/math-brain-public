@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "command": "python -X utf8 ~/brain_workers/w565/verify_exact.py",
+  "gate": {
+    "checked_at_utc": "2026-10-10T07:24:02.092018+00:00",
+    "source": "~\\.claude\\compute\\compute_state.json",
+    "age_seconds": 11.418420553207397,
+    "mode": "owner_present_polite",
+    "scope": "one CPU, standard-library exact arithmetic, n<=8, <=256 sign vectors; no experiments or training",
+    "governor_status": "warn",
+    "cpu_pct": 86.3,
+    "hung_windows": 0,
+    "reason_for_polite_scope": "COMPUTE_DOCTRINE.md lines 8-13 permits local testing; only the bounded scalar proof controls run in owner_present_polite mode.",
+    "status": "ALLOW_BOUNDED_PROOF_CHECK"
+  },
+  "elapsed_seconds": 0.044788199942559004,
+  "cpu_seconds": 0.046875,
+  "hadamard_controls": [
+    {
+      "n": 2,
+      "zero_atom": "1/2",
+      "count": 2
+    },
+    {
+      "n": 4,
+      "zero_atom": "3/8",
+      "count": 6
+    },
+    {
+      "n": 8,
+      "zero_atom": "35/128",
+      "count": 70
+    }
+  ],
+  "threshold_controls_exact": 160,
+  "boundary_and_rank_controls_exact": 10,
+  "dependent_radius_probability": "7/8",
+  "independent_radius_probability": "13/16",
+  "underestimate": "1/16",
+  "n6_nontrivial_scale": {
+    "epsilon_squared": "27/32",
+    "true_probability": "15/32",
+    "independent_radius_probability": "95/256",
+    "underestimate": "25/256",
+    "joint_classes": [
+      {
+        "y": "2/7",
+        "b": "40/7",
+        "count": 2
+      },
+      {
+        "y": "32/7",
+        "b": "10/7",
+        "count": 2
+      },
+      {
+        "y": "0",
+        "b": "14/5",
+        "count": 10
+      },
+      {
+        "y": "18/7",
+        "b": "8/35",
+        "count": 10
+      },
+      {
+        "y": "2/7",
+        "b": "32/35",
+        "count": 20
+      },
+      {
+        "y": "8/7",
+        "b": "2/35",
+        "count": 20
+      }
+    ]
+  },
+  "gaussian_n1_t1": {
+    "true_cdf": 0.682689492137086,
+    "old_claim_value": 0.7768698398515702,
+    "before_absolute_error": 0.09418034771448425,
+    "corrected_finite_n_expression": "erf(t/sqrt(2)) at n=1; fixed-t limit as n->infinity in general",
+    "after_absolute_error_at_control": 2.220446049250313e-16
+  },
+  "gaussian_series_truncation_bound": 1.2848646929168161e-23,
+  "limits": "Finite controls are not a proof of the parent conjecture or of all-n statements; proofs and external review are separate."
+}

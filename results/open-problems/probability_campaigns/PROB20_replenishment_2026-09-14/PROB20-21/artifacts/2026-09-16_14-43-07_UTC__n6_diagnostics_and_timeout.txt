@@ -1,0 +1,64 @@
+PROB20-21 n=6 DIAGNOSTICS — NO COVERAGE CREDIT
+
+Executed probe 1 output:
+PROB20-21 N<=6 FULL-NOISE-INTERVAL CERTIFICATE
+model_runtime_metadata=UNVERIFIED
+source_defined_compressed_candidates=1173
+constant_candidates=2
+dictator_candidates=1
+nontrivial_candidates=1170
+balanced_nondictator_candidates=40
+biased_nontrivial_candidates=1130
+min_balanced_nondictator_avg_sensitivity=5/4 mask=1537228672809129303
+min_Delta_var_minus_W1=57/1024 mask=1
+
+Executed high-noise probe output:
+PROB20-21 N<=6 FULL-NOISE-INTERVAL CERTIFICATE
+model_runtime_metadata=UNVERIFIED
+source_defined_compressed_candidates=1173
+constant_candidates=2
+dictator_candidates=1
+nontrivial_candidates=1170
+balanced_nondictator_candidates=40
+biased_nontrivial_candidates=1130
+min_balanced_nondictator_avg_sensitivity=5/4 mask=1537228672809129303
+min_Delta_var_minus_W1=57/1024 mask=1
+rho=1/64 high_exact_condition=FAIL min_sq_margin=-2461633335/4398046511104 mask=1
+rho=1/96 high_exact_condition=PASS min_sq_margin=3642558145/2473901162496 mask=1
+rho=1/128 high_exact_condition=PASS min_sq_margin=153668834505/70368744177664 mask=1
+rho=1/80 high_exact_condition=PASS min_sq_margin=8128532169/10737418240000 mask=1
+
+Executed reciprocal-threshold probe output:
+PROB20-21 N<=6 FULL-NOISE-INTERVAL CERTIFICATE
+model_runtime_metadata=UNVERIFIED
+source_defined_compressed_candidates=1173
+constant_candidates=2
+dictator_candidates=1
+nontrivial_candidates=1170
+balanced_nondictator_candidates=40
+biased_nontrivial_candidates=1130
+min_balanced_nondictator_avg_sensitivity=5/4 mask=1537228672809129303
+min_Delta_var_minus_W1=57/1024 mask=1
+first_pass_q=70 margin=254319669/6294077440000 mask=1
+
+Executed full n=6 attempt status:
+Command failed because it timed out.
+Timeout requested: 300000 ms.
+Redirected stdout file size after kill: 0 bytes.
+A timeout is not coverage, so n=6 receives no metric credit.
+
+IMPORTANT SELF-AUDIT DEFECT FOUND AFTER THE TIMEOUT:
+The archived full-attempt source contains a mechanical-substitution bug in the biased low-noise check:
+its comment and variable names say h(31/64), but the executed source line calls entropy_bounds(Q(15,32),...).
+The process timed out before producing any result, so no n=6 claim depended on this line. The next n=6 attempt must fix it to Q(31,64) before execution. Do not reuse the timed-out source as a valid certificate.
+
+Local SHA-256 identifiers for executed diagnostic variants:
+n6_probe.cpp 889fb14961ed7fe634d50e1c443332644fef6112886eebd550ba093fd28a0775
+n6_probe_output.txt 969886605f320b248a547263e555ed7f4ee60f9cc0062e3da109c8df6b59090b
+n6_high_probe.cpp bcadfc810a1d17f5fa0dc6295a59a45d81f332983feb348cf6c10ce175ab215e
+n6_high_probe_output.txt f03d320cf68c89d7aaf418b56f77d91b61449705bbac6cd6f3349bd5087e8ada
+n6_threshold_probe.cpp c4f59709427cdcf213e15e3574c422d2bae5f7e9736615a0fde4e46c2c902887
+n6_threshold_probe_output.txt 4fe36472dad3d0c0fbe24b25c2ba3d42215ffcc5df66ce2e372b64c905623f75
+n6_full_attempt.cpp 74c53161b0837f94dc9e62dc00ef6e636a66e3684d06c90e5c0cb1d3f479b260
+
+These n=6 probes are exploratory diagnostics only. The full source-target metric remains 5 after this run.

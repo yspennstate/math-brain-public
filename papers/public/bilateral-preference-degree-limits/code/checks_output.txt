@@ -1,0 +1,72 @@
+Checks for the root degree of LK(n,k). Exact arithmetic in Fractions unless stated.
+
+A. Section 2: exact E H and Var H against every order of the scores
+PASS  n=4 k=1: E H and Var H from the variance identity equal the enumeration (720 orders)  [E D=3/5, Var D=6/25]
+PASS  n=4 k=1: E_W p_X(W) = q(X) identically (Lemma 2.2 kernel)
+PASS  n=4: law of H at budget k=1 equals law of I-D at budget r=2 (complement duality)  [counts 432,288,0,0]
+PASS  n=4 k=2: E H and Var H from the variance identity equal the enumeration (720 orders)  [E D=8/5, Var D=28/75]
+PASS  n=4 k=2: E_W p_X(W) = q(X) identically (Lemma 2.2 kernel)
+PASS  n=4: law of H at budget k=2 equals law of I-D at budget r=1 (complement duality)  [counts 480,192,48,0]
+PASS  n=5 k=1: E H and Var H from the variance identity equal the enumeration (3628800 orders)  [E D=4/7, Var D=12/49]
+PASS  n=5 k=1: E_W p_X(W) = q(X) identically (Lemma 2.2 kernel)
+PASS  n=5: law of H at budget k=1 equals law of I-D at budget r=3 (complement duality)  [counts 2073600,1555200,0,0,0]
+PASS  n=5 k=2: E H and Var H from the variance identity equal the enumeration (3628800 orders)  [E D=52/35, Var D=4889/11025]
+PASS  n=5 k=2: E_W p_X(W) = q(X) identically (Lemma 2.2 kernel)
+PASS  n=5: law of H at budget k=2 equals law of I-D at budget r=2 (complement duality)  [counts 2113920,1163520,351360,0,0]
+PASS  n=5 k=3: E H and Var H from the variance identity equal the enumeration (3628800 orders)  [E D=18/7, Var D=64/147]
+PASS  n=5 k=3: E_W p_X(W) = q(X) identically (Lemma 2.2 kernel)
+PASS  n=5: law of H at budget k=3 equals law of I-D at budget r=1 (complement duality)  [counts 2384640,967680,241920,34560,0]
+PASS  n=4 k=2: E D = 8/5, Var = 28/75 (reference value)
+PASS  n=10 k=8: E H = 8/17, Var = 454/867 (reference value)
+PASS  n=7: Var D for k=1..5 equals the reference values
+PASS  E H at r=1,2,3 and n=5,10,20 equals the reference values
+PASS  E H(n,1) = (n-2)/(2n-3) for n=3..30
+PASS  E H(n,k) = E H(n,n-1-k) for every 4 <= n <= 24 and 1 <= k <= n-2 (mean duality)
+PASS  E H(n,k) = (n-1) int_0^1 F_T (1 - F_T), T ~ Beta(k, n-1-k), for every 3 <= n <= 24 and 1 <= k <= n-2
+PASS  Lemma 2.2: Var_W [F_T(x) - F_T(W)]_+ <= F_T(x)^2/4 on a grid (Popoviciu)  [max excess 0.000e+00]
+
+B. Monte Carlo of LK(12,k), 200000 graphs each, root degree against the exact formula
+PASS  n=12 k=4: simulated E D and Var D agree with the exact values (|z| < 4)  [exact 3.133127, 0.914105; simulated 3.133195, 0.914654; z 0.03, 0.18]
+PASS  n=12 k=8: simulated E D and Var D agree with the exact values (|z| < 4)  [exact 7.203892, 0.987840; simulated 7.204245, 0.987289; z 0.16, -0.13]
+
+C. Section 4: constants of the fixed-r limit
+PASS  mu_r: (4.3) sum = r C(2r,r)/4^r = Dabirian-Subramanian c_r for r = 1..60
+PASS  mu_r = 1/B(1/2, r) in floating point for r = 1..60
+PASS  r=1: mu=1/2, M2=1/3, nu=7/12, endpoint^2 = mu^2/nu = 3/7
+PASS  r=2: mu=3/4, M2=22/27, nu=433/432, endpoint^2 = 243/433
+PASS  endpoints sqrt(3/7) = 0.654654 and sqrt(243/433) = 0.749133 differ  [0.6546537, 0.7491334]
+PASS  factorial moments E[Lambda_r(A_r)^j], j=1..4, r=1..3, equal the reference values
+PASS  factorial moment j=2 equals M2 from (4.4), r=1..12
+PASS  (4.1) Lambda_r(a) = int_a^inf p_r = e^{-a} sum (r-l) a^l/l!, and mu_r, M2 by quadrature, r=1..6  [max |Lambda diff| 1.4e-14]
+PASS  standardized Gamma(r) excess kurtosis = 6/r (fourth moment 3 + 6/r), r=1..50
+   fixed r, exact finite n: E H and Var H approach mu_r and nu_r
+   r=1 (mu=0.500000 nu=0.583333): n=10: E H=0.470588 Var=0.523645; n=20: E H=0.486486 Var=0.556124; n=40: E H=0.493506 Var=0.570304; n=80: E H=0.496815 Var=0.576954
+PASS  r=1: distances to (mu_r, nu_r) shrink along n = 10, 20, 40, 80  [at n=80: 3.18e-03, 6.38e-03]
+   r=2 (mu=0.750000 nu=1.002315): n=10: E H=0.658824 Var=0.771869; n=20: E H=0.708880 Var=0.897138; n=40: E H=0.730390 Var=0.951970; n=80: E H=0.740415 Var=0.977672
+PASS  r=2: distances to (mu_r, nu_r) shrink along n = 10, 20, 40, 80  [at n=80: 9.58e-03, 2.46e-02]
+   r=3 (mu=0.937500 nu=1.387812): n=10: E H=0.760181 Var=0.894075; n=20: E H=0.859249 Var=1.161002; n=40: E H=0.900480 Var=1.279044; n=80: E H=0.919470 Var=1.334536
+PASS  r=3: distances to (mu_r, nu_r) shrink along n = 10, 20, 40, 80  [at n=80: 1.80e-02, 5.33e-02]
+PASS  r=1, n=20000 (floating point): E H, Var H within 2e-3 of mu_r, nu_r  [0.499987, 0.583308]
+PASS  r=2, n=20000 (floating point): E H, Var H within 2e-3 of mu_r, nu_r  [0.749962, 1.002218]
+
+D. Theorem 2.1: E H / s_n -> 1/sqrt(pi), Var H / s_n^2 -> v
+PASS  E g(Z) = 1/sqrt(pi)  [0.564189583547756]
+PASS  E g(Z)^2 = 1/3 + sqrt(3)/(2 pi)  [0.608997781044230]
+PASS  v = 1/3 + (sqrt(3)-2)/(2 pi) = 0.290687...  [0.290687895]
+PASS  upper endpoint of L_inf: m/sqrt(v) = 1.04643  [1.046433]
+PASS  floating-point integrals agree with the exact rationals at n=40, k=20  [1.744237265021 vs 1.744237265021; 3.336055396311 vs 3.336055396311]
+PASS  floating-point integrals agree with the exact rationals at n=80, k=30  [2.421252065166 vs 2.421252065166; 5.910703456197 vs 5.910703456197]
+   k=n/2: E H/s_n, Var H/s_n^2 = n=1e3: 0.563695, 0.299598 (s_n*dist 0.008, 0.141); n=1e4: 0.564140, 0.293509 (s_n*dist 0.002, 0.141); n=1e5: 0.564185, 0.291580 (s_n*dist 0.001, 0.141); n=1e6: 0.564189, 0.290970 (s_n*dist 0.000, 0.141)
+PASS  k=n/2: both ratios move monotonically toward (0.564190, 0.290687), within 1e-2 at the largest n  [distances at the largest n: 4.9e-07, 2.8e-04]
+   k=n/10: E H/s_n, Var H/s_n^2 = n=1e3: 0.563446, 0.293487 (s_n*dist 0.007, 0.027); n=1e4: 0.564115, 0.291614 (s_n*dist 0.002, 0.028); n=1e5: 0.564182, 0.290984 (s_n*dist 0.001, 0.028); n=1e6: 0.564189, 0.290782 (s_n*dist 0.000, 0.028)
+PASS  k=n/10: both ratios move monotonically toward (0.564190, 0.290687), within 1e-2 at the largest n  [distances at the largest n: 7.4e-07, 9.4e-05]
+   k=sqrt(n): E H/s_n, Var H/s_n^2 = n=1e2: 0.556792, 0.297426 (s_n*dist 0.022, 0.020); n=1e4: 0.563484, 0.290570 (s_n*dist 0.007, 0.001); n=1e6: 0.564119, 0.290654 (s_n*dist 0.002, 0.001); n=1e8: 0.564183, 0.290684 (s_n*dist 0.001, 0.000)
+PASS  k=sqrt(n): both ratios move monotonically toward (0.564190, 0.290687), within 1e-2 at the largest n  [distances at the largest n: 7.1e-06, 4.0e-06]
+PASS  Lemma 2.4: P(X < k/(2n)) = P(Bin(n-1, k/(2n)) >= k+1) <= exp(-(log 2 - 1/2) k), all k, 7 values of n
+PASS  Beta excess kurtosis formula used for uniform integrability agrees with scipy  [0.0e+00]
+
+E. Section 3: distribution function and density of L_inf
+PASS  (3.2) density integrates to 1, mean 0, variance 1  [1.00000000, 1.35e-10, 1.00000000]
+PASS  (3.1) P(L_inf <= x) = 1 - Phi(y_x) against 2e6 normal draws  [max diff 1.5e-04]
+
+52 of 52 checks passed

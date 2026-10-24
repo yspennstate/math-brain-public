@@ -1,0 +1,43 @@
+[
+  {
+    "service": "source_v2",
+    "url": "https://arxiv.org/pdf/2505.19104v2",
+    "date": "2026-10-12",
+    "status": "ok",
+    "bytes": 537560
+  },
+  {
+    "service": "arxiv_selection",
+    "url": "http://export.arxiv.org/api/query?search_query=all%3A%22optimal%20transport%22%20AND%20%28all%3Aselection%20OR%20all%3Anonunique%20OR%20all%3Arectangles%29&start=0&max_results=40&sortBy=submittedDate&sortOrder=descending",
+    "date": "2026-10-12",
+    "status": "ok",
+    "bytes": 95103
+  },
+  {
+    "service": "openalex_retry",
+    "url": "https://api.openalex.org/works?search=%22Distributional%20Limit%20Theory%20for%20Optimal%20Transport%22&per_page=5",
+    "date": "2026-10-12",
+    "status": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "semantic_retry",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2505.19104/citations?fields=title,year,externalIds&limit=100",
+    "date": "2026-10-12",
+    "status": "ok",
+    "bytes": 1446
+  },
+  {
+    "service": "crossref_recent",
+    "url": "https://api.crossref.org/works?query=empirical%20optimal%20transport%20nonunique%20Euclidean&filter=from-pub-date:2026-07-13&rows=20",
+    "date": "2026-10-12",
+    "status": "ok",
+    "bytes": 221599
+  },
+  {
+    "service": "github_rectangles",
+    "url": "https://api.github.com/search/repositories?q=optimal%20transport%20rectangles",
+    "date": "2026-10-12",
+    "status": "ok",
+    "bytes": 5916
+  }
+]

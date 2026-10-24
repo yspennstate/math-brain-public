@@ -1,0 +1,56 @@
+# OpenAlex citation candidates screened — 2026-10-12
+
+Metadata screen only unless LITERATURE.md explicitly records a full-text check.
+
+- Guillaume Barraquand, Mark Rychnovsky. Large deviations for sticky Brownian motions. 2020. DOI: https://doi.org/10.1214/20-ejp515. OpenAlex: https://openalex.org/W2944928325.
+- Thimothée Thiery, Pierre Le Doussal. Exact solution for a random walk in a time-dependent 1D random environment: the point-to-point Beta polymer. 2016. DOI: https://doi.org/10.1088/1751-8121/50/4/045001. OpenAlex: https://openalex.org/W2396835453.
+- Andreas Greven, Rongfeng Sun, Anita Winter. Continuum space limit of the genealogies of interacting Fleming-Viot processes on $\mathbb{Z}$. 2016. DOI: https://doi.org/10.1214/16-ejp4514. OpenAlex: https://openalex.org/W2963339438.
+- Alison M. Etheridge, Nic Freeman, Daniel Straulino. The Brownian net and selection in the spatial $\Lambda $-Fleming-Viot process. 2017. DOI: https://doi.org/10.1214/17-ejp61. OpenAlex: https://openalex.org/W2230066993.
+- Ellen Baake, Anton Wakolbinger. Probabilistic Structures in Evolution. 2021. DOI: https://doi.org/10.4171/ecr/17. OpenAlex: https://openalex.org/W3167003324.
+- David Coupier, Kumarjit Saha, Anish Sarkar, Viet Chi Tran. The 2d-directed spanning forest converges to the Brownian web. 2021. DOI: https://doi.org/10.1214/20-aop1478. OpenAlex: https://openalex.org/W2803760053.
+- Vitalii Konarovskyi. Coalescing-fragmentating Wasserstein dynamics: Particle approach. 2023. DOI: https://doi.org/10.1214/22-aihp1271. OpenAlex: https://openalex.org/W2956122339.
+- Jacopo Borga, Mickaël Maazoun. Scaling and local limits of Baxter permutations and bipolar orientations through coalescent-walk processes. 2022. DOI: https://doi.org/10.1214/21-aop1559. OpenAlex: https://openalex.org/W3071841790.
+- Barnaby Garrod, Roger Tribe, Oleg V. Zaboronski. Examples of Interacting Particle Systems on $$\mathbb {Z}$$ as Pfaffian Point Processes: Coalescing–Branching Random Walks and Annihilating Random Walks with Immigration. 2019. DOI: https://doi.org/10.1007/s00023-019-00877-1. OpenAlex: https://openalex.org/W2994921968.
+- Subhroshekhar Ghosh, Kumarjit Saha. Transmission and Navigation on Disordered Lattice Networks, Directed Spanning Forests and Brownian Web. 2020. DOI: https://doi.org/10.1007/s10955-020-02604-1. OpenAlex: https://openalex.org/W3040719723.
+- Sayan Das, Hindy Drillick, Shalin Parekh. Multiplicative SHE limit of random walks in space–time random environments. 2024. DOI: https://doi.org/10.1007/s00440-024-01339-4. OpenAlex: https://openalex.org/W4405269942.
+- Simone Floreani, Sabine Jansen, Frank Redig, Stefan Wagner. Intertwining and duality for consistent Markov processes. 2024. DOI: https://doi.org/10.1214/24-ejp1124. OpenAlex: https://openalex.org/W4396628909.
+- David Coupier, Jean‐François Marckert, Viet Chi Tran. Directed, cylindric and radial Brownian webs. 2019. DOI: https://doi.org/10.1214/18-ejp255. OpenAlex: https://openalex.org/W2963394335.
+- Giuseppe Cannizzaro, Martin Hairer. The Brownian Castle. 2022. DOI: https://doi.org/10.1002/cpa.22085. OpenAlex: https://openalex.org/W3091928312.
+- Raphaël Forien. The stepping stone model in a random environment and the effect of local heterogneities on isolation by distance patterns. 2019. DOI: https://doi.org/10.1214/19-ejp314. OpenAlex: https://openalex.org/W2949293842.
+- Michael Damron, Jack Hanson, David Harper, Wai‐Kit Lam. Transitions for exceptional times in dynamical first-passage percolation. 2022. DOI: https://doi.org/10.1007/s00440-022-01178-1. OpenAlex: https://openalex.org/W3197314872.
+- Nic Freeman, Jan M. Swart. Weaves, webs and flows. 2024. DOI: https://doi.org/10.1214/24-ejp1161. OpenAlex: https://openalex.org/W4400542097.
+- Elena Kosygina, Jonathon Peterson. Convergence of rescaled “true” self-avoiding walks to the Tóth-Werner “true” self-repelling motion. 2026. DOI: https://doi.org/10.1214/26-ejp1489. OpenAlex: https://openalex.org/W7125893580.
+- David Aldous. Waves in a Spatial Queue. 2017. DOI: https://doi.org/10.1287/15-ssy208. OpenAlex: https://openalex.org/W2619715055.
+- Guillaume Barraquand, Mark Rychnovsky. Tracy-Widom Asymptotics for a River Delta Model. 2019. DOI: https://doi.org/10.1007/978-3-030-15096-9_17. OpenAlex: https://openalex.org/W2811402150.
+- Matthias Birkner, Nina Gantert, Sebastian Steiber. Coalescing directed random walks on the backbone of a 1+1-dimensional oriented percolation cluster converge to the Brownian web. 2019. DOI: https://doi.org/10.30757/alea.v16-37. OpenAlex: https://openalex.org/W2943793852.
+- Charles M. Newman, K. Ravishankar, Emmanuel Schertzer. Perturbations of Voter model in one-dimension. 2017. DOI: https://doi.org/10.1214/17-ejp37. OpenAlex: https://openalex.org/W2962727049.
+- Emmanuel Schertzer, Rongfeng Sun. Perturbations of Supercritical Oriented Percolation and Sticky Brownian Webs. 2019. DOI: https://doi.org/10.1007/978-981-15-0298-9_11. OpenAlex: https://openalex.org/W2899091985.
+- Rongfeng Sun, Jan M. Swart, Jinjiong Yu. Equilibrium interfaces of biased voter models. 2019. DOI: https://doi.org/10.1214/19-aap1461. OpenAlex: https://openalex.org/W2963323404.
+- Matthias Birkner, Nina Gantert. Ancestral lineages in spatial population models with local regulation. 2021. DOI: https://doi.org/10.4171/ecr/17-1/14. OpenAlex: https://openalex.org/W2993029886.
+- James Bell. Time-reversal of coalescing diffusive flows and weak convergence of localized disturbance flows. 2020. DOI: https://doi.org/10.1214/20-ejp500. OpenAlex: https://openalex.org/W2889171003.
+- Jochen Blath, Marcel Ortgiese. The symbiotic branching model: Duality and interfaces. 2021. DOI: https://doi.org/10.4171/ecr/17-1/15. OpenAlex: https://openalex.org/W3004512909.
+- Andreas Greven, Rongfeng Sun, Anita Winter. Continuum Space Limit of the Genealogies of Interacting Fleming-Viot Processes on $\Z$. 2015. DOI: https://doi.org/10.48550/arxiv.1508.07169. OpenAlex: https://openalex.org/W1957205579.
+- Barnaby Garrod, Roger Tribe, Oleg V. Zaboronski. Examples of interacting particle systems on $\mathbb{Z}$ as Pfaffian point processes II - coalescing branching random walks and annihilating random walks with immigration. 2016. DOI: None. OpenAlex: https://openalex.org/W2419545643.
+- Matthias Ludwig Alfons Hammer, Marcel Ortgiese, Florian Völlering. Entrance laws for annihilating Brownian motions. 2018. DOI: None. OpenAlex: https://openalex.org/W2784342039.
+- Pascal Maillard, Gaël Raoul, Julie Tourniaire. Spreading speed of locally regulated population models in macroscopically heterogeneous environments. 2021. DOI: https://doi.org/10.48550/arxiv.2105.06985. OpenAlex: https://openalex.org/W3162017854.
+- David Aldous. Waves in a Spatial Queue: Stop-and-Go at Airport Security. 2015. DOI: https://doi.org/10.48550/arxiv.1511.05140. OpenAlex: https://openalex.org/W2273006021.
+- Charles M. Newman, K. Ravishankar, Emmanuel Schertzer. Perturbations of the Voter Model in One-Dimension. 2016. DOI: https://doi.org/10.48550/arxiv.1607.06058. OpenAlex: https://openalex.org/W2476963883.
+- Kumarjit Saha. On a conjecture of David Aldous: river network and the continuum random tree. 2017. DOI: None. OpenAlex: https://openalex.org/W2626558614.
+- Rongfeng Sun, Jan M. Swart, Jinjiong Yu. Equilibrium interfaces of biased voter models. 2018. DOI: https://doi.org/10.48550/arxiv.1804.04342. OpenAlex: https://openalex.org/W2796523418.
+- Federico Camia, Daniel L. Stein. Probability Theory in Statistical Physics, Percolation, and Other Random Topics: The Work of C. Newman. 2019. DOI: https://doi.org/10.1007/978-981-15-0294-1_1. OpenAlex: https://openalex.org/W2980469806.
+- Federico Camia, Stein, Daniel L.. Probability Theory in Statistical Physics, Percolation, and Other Random Topics: The Work of C. Newman. 2020. DOI: https://doi.org/10.48550/arxiv.2002.00342. OpenAlex: https://openalex.org/W3003922646.
+- Subhroshekhar Ghosh, Kumarjit Saha. Transmission and navigation on disordered lattice networks, directed spanning forests and scaling limits. 2020. DOI: None. OpenAlex: https://openalex.org/W3005879356.
+- Kumarjit Saha. Continuum random tree as the scaling limit for a drainage network model: a Brownian web approach. 2017. DOI: https://doi.org/10.48550/arxiv.1704.00429. OpenAlex: https://openalex.org/W3048326387.
+- Azadeh Parvaneh, Afshin Parvardeh, Rahul Roy. A Drainage Network with Dependence and the Brownian Web. 2022. DOI: https://doi.org/10.1007/s10955-022-02978-4. OpenAlex: https://openalex.org/W3097589245.
+- Amaury Lambert. Modèles aléatoires pour l’inférence de l’évolution du vivant / Stochastic models for the inference of life evolution (SMILE). 2019. DOI: https://doi.org/10.4000/annuaire-cdf.14742. OpenAlex: https://openalex.org/W4234552007.
+- Lung-Chi Chen, Satoshi Handa, Yoshinori Kamijima. Mean-field behavior of Nearest-Neighbor Oriented Percolation on the BCC Lattice Above 8 + 1 Dimensions. 2023. DOI: https://doi.org/10.1007/s11040-022-09441-6. OpenAlex: https://openalex.org/W4320733771.
+- Giuseppe Cannizzaro, Martin Hairer. The Brownian Web as a random R-tree. 2023. DOI: https://doi.org/10.1214/23-ejp984. OpenAlex: https://openalex.org/W4385447354.
+- Konstantin Mikhailovich Khanin, Liying Li. On the rate of convergence to coalescing Brownian motions. 2024. DOI: https://doi.org/10.1214/22-aihp1348. OpenAlex: https://openalex.org/W4392392198.
+- R. Santos, Glauco Valle, Leonel Zuaznábar. On the Convergence of the Drainage Network with Branching. 2024. DOI: https://doi.org/10.61102/1024-2953-mprf.2024.30.2.001. OpenAlex: https://openalex.org/W4401897464.
+- Michael Damron, Jack Hanson, David A. T. Harper, Wai‐Kit Lam. Exceptional behavior in critical first-passage percolation and random sums. 2026. DOI: https://doi.org/10.1214/26-ejp1503. OpenAlex: https://openalex.org/W7130644618.
+- Thimothée Thiery. Analytical methods and field theory for disordered systems. 2016. DOI: https://doi.org/10.70675/46fefaddz179dz4666z8445z6f90cd74da5a. OpenAlex: https://openalex.org/W7147128754.
+- Mickaël Maazoun. Universal permuton limits of random pattern-avoiding permutations. 2020. DOI: https://doi.org/10.70675/5c97ca54ze592z4463zbff6ze6468e3bc148. OpenAlex: https://openalex.org/W7149330064.
+- Julie Tourniaire. Spatial dynamic of interfaces in ecology : deterministic and stochastic models. 2021. DOI: https://doi.org/10.70675/2039765cz5936z4589zbb59z81d5d07cbc4a. OpenAlex: https://openalex.org/W7151019190.
+- Lucas Flammant. Directed and Radial Random Spanning Forests in Hyperbolic Spaces. 2022. DOI: https://doi.org/10.70675/9adb2166z865dz4713za3e3z3282dae0ed78. OpenAlex: https://openalex.org/W7151534435.
+- Alice Contat. Parking on random trees. 2023. DOI: https://doi.org/10.70675/28598a09z935cz4b4bz8163z9244bbb8e7fe. OpenAlex: https://openalex.org/W7152049995.
+- Shalin Parekh. Hierarchy of KPZ limits arising from directed random walk models in random media. 2026. DOI: https://doi.org/10.1017/fms.2026.10220. OpenAlex: https://openalex.org/W7160661678.

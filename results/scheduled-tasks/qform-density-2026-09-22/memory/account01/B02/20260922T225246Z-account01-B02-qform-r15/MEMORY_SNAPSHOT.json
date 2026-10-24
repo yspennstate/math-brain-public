@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260922T225246Z-account01-B02-qform-r15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_observed_at_start": "2add339e27af7a12f5055c08a2cf42a52d687456",
+  "control_commit_refreshed_before_handoff": "13dced776ca417f69e33887491434509c9d4ee4a",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "new_claim": "QFORM-STABLERANK-L1-FOURIER-v1",
+  "claim_scope": "For any cap-one product-law quadratic-affine form R and physical cross block B satisfying the source-pinned regularized determinant estimate, if integer k>2q and stable rank(B)>=k, then int |phi_R| <= C_(k,q)/||B||_F and R has a bounded continuous density.",
+  "claim_formula": "C_(k,q)=(pi*e/sqrt(2*q*k))*Beta(1/(2*k),1/(4*q)-1/(2*k))",
+  "special_branches": [
+    "q=2,k=5: no leverage, sr>=5, int|phi|<=95.117693/F, density<=15.138451/F",
+    "q=3/2,k=4: leverage<=3/4, sr>=4, int|phi|<=78.285654/F, density<=12.459549/F",
+    "q=1,k=3: leverage<=1/2, sr>=3, int|phi|<=61.550525/F, density<=9.796071/F"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B02",
+    "report_commit": "c726a32fa4d8e1e8ab246d48560b89cf1d4c4857",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260922T221114Z-account02-B02-qform-r11-2ea3913a/REPORT.md",
+    "premise": "regularized determinant characteristic-function bound with exact q/leverage scopes"
+  },
+  "corrections_preserved": [
+    "no uniform scalar pointwise Fresnel decay",
+    "no post-rotation independence",
+    "no arbitrary-joint coarea bound",
+    "no positive conditional projection-density moment gate",
+    "no fixed-good-minor or universal rank-three-cut assumption",
+    "no Monte Carlo or finite Fourier window as proof"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a420690a9f4843eb5f46599a6883e5bcfca33270",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260922T225246Z-account01-B02-qform-r15/REPORT.md",
+    "blob": "39ae1b30e6278142a860bb93bf5be739c044dd61"
+  },
+  "handoff_commit": "16096a66cd52bf29198921cfe305c0f82c297ab6",
+  "unresolved_implication": "QFORM-L1-LOW-STABLERANK-HIGH-LEVERAGE-CLOSURE-v1",
+  "next_step": "Route O(1)-Frobenius packets in the remaining stable-rank/high-leverage collar into pair/ridge/one-sided-square/grouped-bank/hyperbolic mechanisms while preserving original-coordinate product structure."
+}

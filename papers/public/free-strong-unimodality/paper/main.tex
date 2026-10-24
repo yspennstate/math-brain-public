@@ -1,0 +1,392 @@
+\documentclass[11pt]{amsart}
+\usepackage[a4paper,margin=1.05in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Free strong unimodality and a conjecture of Hasebe and Ueda},pdfauthor={Yitzchak Shmalo}}
+\setlength{\emergencystretch}{1.5em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Cp}{\mathbb C^{+}}
+\newcommand{\Cm}{\mathbb C^{-}}
+\newcommand{\D}{\mathbb D}
+\newcommand{\Log}{\operatorname{Log}}
+\newcommand{\dist}{\operatorname{dist}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\title[Free strong unimodality]{Free strong unimodality and a conjecture of Hasebe and Ueda}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{10 October 2026}
+\subjclass[2020]{Primary 46L54, 60E05; Secondary 60G52}
+\keywords{unimodality, strong unimodality, free additive convolution, subordination, stable distributions}
+\begin{document}
+\begin{abstract}
+A probability measure $\mu$ on $\R$ is freely strongly unimodal if $\mu\boxplus\nu$ is unimodal for every unimodal probability measure $\nu$. We prove that only point masses have this property. This answers Problem~3.11 of Hasebe and Ueda, who proved it for measures of finite variance. The witnesses are explicit and do not depend on $\mu$: if $\mu$ is not a point mass, then $\mu\boxplus\bigl(\frac1{100}\delta_0+\frac{99}{100}U[0,L]\bigr)$ is not unimodal for all large $L$. We also show that the classical half of their Conjecture~5.5 fails for one-sided stable kernels. If $0<\alpha<1$ and $S_t$ is the law at time $t$ of a positive strictly $\alpha$-stable process, then for every nonnegative Borel function $f$ there is a probability measure $\mu$ with $\int f\,d\mu<\infty$ such that $\mu\ast S_t$ is unimodal for no $t>0$. In particular, a finite moment of order $2+\alpha$, or of every order, does not give unimodality in large time.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+Following \cite{HU}, a Borel measure $\mu$ on $\R$ is \emph{unimodal} if there exist $a\in\R$ and a function $h\colon\R\to[0,\infty)$ which is nondecreasing on $(-\infty,a)$ and nonincreasing on $(a,\infty)$ such that
+\begin{equation}\label{eq:unimodal}
+\mu(dx)=\mu(\{a\})\,\delta_a(dx)+h(x)\,dx .
+\end{equation}
+Any such $a$ is called a mode. Translations and dilations by positive factors preserve unimodality. A probability measure $\mu$ is strongly unimodal if $\mu\ast\nu$ is unimodal for every unimodal $\nu$. By Ibragimov's theorem \cite{Ib}, a probability measure that is not a point mass is strongly unimodal if and only if it is absolutely continuous with a log-concave density; see also \cite[Theorem~52.3]{Sato}. Normal and exponential distributions are therefore strongly unimodal.
+
+Hasebe and Ueda \cite[Definition~3.8]{HU} call a probability measure $\mu$ on $\R$ \emph{freely strongly unimodal} if $\mu\boxplus\nu$ is unimodal for every unimodal probability measure $\nu$ on $\R$, where $\boxplus$ is free additive convolution. Point masses have this property, since $\delta_a\boxplus\nu$ is the translate of $\nu$ by $a$. Hasebe and Ueda proved that the semicircle laws do not have it, and more generally that no probability measure with finite variance other than a point mass has it \cite[Theorem~3.10]{HU}. Their proof passes through the free central limit theorem and so requires a finite second moment. They asked \cite[Problem~3.11]{HU} whether a freely strongly unimodal probability measure that is not a point mass exists. The answer is negative.
+
+For $L>0$ let $U[0,L]$ denote the uniform distribution on $[0,L]$ and put
+\[
+\nu_L=\tfrac1{100}\,\delta_0+\tfrac{99}{100}\,U[0,L].
+\]
+Each $\nu_L$ is unimodal with mode $0$.
+
+\begin{theorem}\label{thm:free}
+Let $\mu$ be a Borel probability measure on $\R$ that is not a point mass. There exists $L_0=L_0(\mu)<\infty$ such that $\mu\boxplus\nu_L$ is not unimodal for every $L>L_0$. Consequently the freely strongly unimodal probability measures on $\R$ are exactly the point masses.
+\end{theorem}
+
+No moment condition is imposed on $\mu$. After a dilation by $\varepsilon=1/L$, the measure $\mu$ becomes close to $\delta_0$ while $\nu_L$ becomes the fixed measure $\nu_1$. The subordination function of the convolution then moves the Cauchy transform of $\nu_1$ by an analytic function with values in the lower half-plane. By the Schwarz--Pick lemma, this function and all its derivatives are controlled near two chosen points by a single small parameter $t_\varepsilon$. A first-order expansion in $t_\varepsilon$ gives the sign of the derivative of the density at two points, and the two signs are incompatible with unimodality. The tails of $\mu$ enter only through $t_\varepsilon$, and the estimates are relative to $t_\varepsilon$.
+
+The second result concerns large-time unimodality. In \cite[Section~5.2]{HU}, Hasebe and Ueda consider the positive stable process of index $1/2$, whose law at time $t$ is the L\'evy distribution
+\[
+L_t(dx)=\frac{t}{\sqrt{2\pi}}\,x^{-3/2}e^{-t^2/(2x)}\,\mathbf 1_{(0,\infty)}(x)\,dx .
+\]
+They prove that $\mu\ast L_t$ is unimodal for all large $t$ when $\mu$ has compact support \cite[Theorem~5.3]{HU}. They also construct a probability measure $\mu$ with $\int|x|^{5/2}\,d\mu=\infty$ for which $\mu\ast L_t$ is unimodal for no $t>0$, and conjecture that finiteness of $\int|x|^{5/2}\,d\mu$ gives unimodality in large time. More generally, they state the following.
+
+\medskip
+\noindent\textbf{Conjecture} (\cite[Conjecture~5.5]{HU}). \emph{Suppose that $S_t$ (resp.\ $T_t$) is the law at time $t\ge0$ of a classical (resp.\ free) strictly stable process of index $\alpha\in(0,2)$. If $\mu$ is a probability measure such that $\int_\R|x|^{2+\alpha}\,d\mu(x)<\infty$, then $\mu\ast S_t$ (resp.\ $\mu\boxplus T_t$) is unimodal for sufficiently large $t>0$.}
+\medskip
+
+A positive strictly $\alpha$-stable process, $0<\alpha<1$, is a strictly stable process whose law at time $t$ is the probability measure $S_t$ on $[0,\infty)$ with
+\begin{equation}\label{eq:laplace}
+\int_{[0,\infty)}e^{-\lambda x}\,S_t(dx)=\exp(-t\gamma\lambda^{\alpha}),\qquad \lambda\ge0,
+\end{equation}
+for some $\gamma>0$. For $\alpha=1/2$ and $\gamma=\sqrt2$ this is the process $L_t$ above.
+
+\begin{theorem}\label{thm:stable}
+Let $0<\alpha<1$, let $(S_t)_{t>0}$ be as in \eqref{eq:laplace}, and let $f\colon\R\to[0,\infty)$ be a Borel function. There is a Borel probability measure $\mu$ on $\R$ with $\int f\,d\mu<\infty$ such that $\mu\ast S_t$ is not unimodal for any $t>0$.
+\end{theorem}
+
+The measures in the proof are supported on $\{-2^n:n\ge1\}$, and the weights can be any positive numbers (Proposition~\ref{prop:atoms}). Very small weights give the following.
+
+\begin{corollary}\label{cor:moments}
+Let $Z=\sum_{n\ge1}2^{-n^2}$ and $\mu_*=Z^{-1}\sum_{n\ge1}2^{-n^2}\delta_{-2^n}$. Then $\int|x|^r\,d\mu_*<\infty$ for every $r>0$, and for every $\alpha\in(0,1)$ and every $t>0$ the measure $\mu_*\ast S_t$ is not unimodal. In particular the classical half of Conjecture~5.5 of \cite{HU} fails for every $\alpha\in(0,1)$, and $\mu_*\ast L_t$ is unimodal for no $t>0$ although $\int|x|^{5/2}\,d\mu_*<\infty$.
+\end{corollary}
+
+In the construction of \cite[Section~5.2]{HU} the atoms move to $+\infty$, in the direction of the support of the kernel. A point then receives mass from the atoms on its left through both the increasing and the decreasing part of the kernel, and the condition on positions and weights that makes the construction work forces $\int|x|^{5/2}\,d\mu=\infty$ \cite[(5.45)]{HU}. Here the atoms move to $-\infty$. Between two consecutive atoms, far from the origin, only the atoms on the left contribute, and each contributes through the decreasing part of the kernel. The weights play no role.
+
+Theorem~\ref{thm:stable} says nothing about symmetric kernels or about $\alpha\in[1,2)$, where every nondegenerate strictly stable law has support $\R$, and nothing about the free half of the conjecture. The proof uses that the classical convolution of a kernel with a discrete measure is a mixture of translates of the kernel; free convolution has no such description.
+
+\section{Preliminaries}
+Write $\Cp$ and $\Cm$ for the open upper and lower half-planes. For a Borel probability measure $\eta$ on $\R$ let
+\[
+G_\eta(z)=\int_\R\frac{\eta(ds)}{z-s},\qquad F_\eta(z)=\frac1{G_\eta(z)},\qquad z\in\Cp .
+\]
+Since $\Im G_\eta(z)=-\Im z\int|z-s|^{-2}\,\eta(ds)<0$, the function $F_\eta$ is analytic on $\Cp$. For $c>0$ let $D_c\eta$ be the image of $\eta$ under $x\mapsto cx$. Then $D_c(\eta\boxplus\kappa)=D_c\eta\boxplus D_c\kappa$, and translating $\eta$ by $a\in\R$ translates $\eta\boxplus\kappa$ by $a$. If $\eta'$ is the translate of $\eta$ by $-a$, then $F_{\eta'}(z)=F_\eta(z+a)$.
+
+\begin{lemma}\label{lem:imF}
+For every $z\in\Cp$, $\Im F_\eta(z)\ge\Im z$, and the inequality is strict for every $z\in\Cp$ when $\eta$ is not a point mass.
+\end{lemma}
+
+\begin{proof}
+We have $\Im F_\eta(z)=-\Im G_\eta(z)/|G_\eta(z)|^2=\Im z\int|z-s|^{-2}\,\eta(ds)\big/|G_\eta(z)|^2$. By the Cauchy--Schwarz inequality, $|G_\eta(z)|^2\le\int|z-s|^{-2}\,\eta(ds)$, with equality only if $s\mapsto(z-s)^{-1}$ is $\eta$-almost surely constant, that is, only if $\eta$ is a point mass.
+\end{proof}
+
+We use the analytic subordination of free additive convolution, proved for arbitrary Borel probability measures on $\R$ by Biane \cite{Biane}; see also Belinschi and Bercovici \cite{BB}. Free convolution of measures with unbounded support is defined in \cite{BV}.
+
+\begin{theorem}[\cite{Biane,BB}]\label{thm:sub}
+Let $\lambda,\kappa$ be Borel probability measures on $\R$ and $\sigma=\lambda\boxplus\kappa$. There are analytic maps $\omega_\lambda,\omega_\kappa\colon\Cp\to\Cp$ such that, for $z\in\Cp$,
+\[
+F_\lambda(\omega_\lambda(z))=F_\kappa(\omega_\kappa(z))=F_\sigma(z),\qquad \omega_\lambda(z)+\omega_\kappa(z)=z+F_\sigma(z).
+\]
+\end{theorem}
+
+The subordination equations determine $F_\sigma(z)$ at each point.
+
+\begin{lemma}\label{lem:unique}
+Let $\lambda,\kappa,\sigma$ be as in Theorem~\ref{thm:sub} and $z\in\Cp$. Suppose $\omega_1,\omega_2\in\Cp$ and $u\in\C$ satisfy $F_\lambda(\omega_1)=F_\kappa(\omega_2)=u$ and $\omega_1+\omega_2=z+u$. Then $u=F_\sigma(z)$.
+\end{lemma}
+
+\begin{proof}
+Put $h_\eta=F_\eta-\mathrm{id}$, so that $\Im h_\eta\ge0$ on $\Cp$ by Lemma~\ref{lem:imF}. The hypotheses give $\omega_1=z+u-\omega_2=z+h_\kappa(\omega_2)$ and $\omega_2=z+u-\omega_1=z+h_\lambda(\omega_1)$. Hence $\omega_2$ is a fixed point of
+\[
+T_z(v)=z+h_\lambda\bigl(z+h_\kappa(v)\bigr).
+\]
+The map $T_z$ is analytic on $\Cp$ and $\Im T_z(v)\ge\Im z$ for all $v\in\Cp$, so $T_z$ maps $\Cp$ into itself and is not the identity. After a conformal map of $\Cp$ onto the unit disk sending a fixed point to $0$, the Schwarz lemma shows that a holomorphic self-map of the disk with two distinct fixed points is the identity. So $T_z$ has at most one fixed point in $\Cp$. The pair $(\omega_\lambda(z),\omega_\kappa(z))$ satisfies the same equations with $u$ replaced by $F_\sigma(z)$, so $\omega_\kappa(z)$ is also a fixed point of $T_z$. Therefore $\omega_2=\omega_\kappa(z)$ and $u=F_\kappa(\omega_2)=F_\sigma(z)$.
+\end{proof}
+
+\begin{lemma}\label{lem:transfer}
+Let $I$ be an open interval, $h\colon I\to\R$ nondecreasing, and $f\colon I\to\R$ continuous with $h=f$ almost everywhere on $I$. Then $f$ is nondecreasing on $I$. The same holds with nonincreasing in place of nondecreasing.
+\end{lemma}
+
+\begin{proof}
+Let $u<v$ in $I$. Since the set where $h=f$ has full measure, it is dense, and we may choose $u_k\to u$ and $v_k\to v$ in this set with $u_k<v_k$. Then $f(u_k)=h(u_k)\le h(v_k)=f(v_k)$, and letting $k\to\infty$ gives $f(u)\le f(v)$.
+\end{proof}
+
+We also use the Stieltjes inversion formula in the following form. If $G_\sigma$ extends continuously from $\Cp$ to $\Cp\cup J$ for an open interval $J\subset\R$, then the restriction of $\sigma$ to $J$ is absolutely continuous with density $-\pi^{-1}\Im G_\sigma(x)$, $x\in J$.
+
+\section{Proof of Theorem~\ref{thm:free}}
+Throughout, $\mu$ is a Borel probability measure on $\R$ which is not a point mass, and $\lambda_\varepsilon=D_\varepsilon\mu$ for $\varepsilon>0$. None of the $\lambda_\varepsilon$ is a point mass.
+
+\subsection{\texorpdfstring{The measure $\kappa$}{The measure kappa}}
+Let $p=1/100$, $q=99/100$ and $\kappa=\nu_1=p\,\delta_0+q\,U[0,1]$. For $z\in\Cp$,
+\[
+G_\kappa(z)=\frac pz+q\int_0^1\frac{ds}{z-s}=\frac pz+q\bigl(\Log z-\Log(z-1)\bigr),
+\]
+where $\Log$ is the principal branch. Let $N$ be an open disk containing the segment $[1/200,1/2]$ and contained in $\{0<\Re z<1\}$. On $N$ define
+\[
+A(z)=\frac pz+q\bigl(\Log z-\Log(1-z)-i\pi\bigr).
+\]
+For $z\in N\cap\Cp$ we have $1-z\in\Cm$ and $\Log(z-1)=\Log(1-z)+i\pi$, so $A=G_\kappa$ on $N\cap\Cp$. For real $x\in N$,
+\begin{equation}\label{eq:Areal}
+A(x)=g(x)-ic,\qquad g(x)=\frac px+q\log\frac{x}{1-x},\qquad c=\pi q,
+\end{equation}
+and $A'(x)=g'(x)$ is real. A direct computation gives
+\begin{equation}\label{eq:gder}
+g'(x)=\frac{x-p}{x^2(1-x)},\qquad g''(x)=\frac{2p}{x^3}+q\Bigl(\frac1{(1-x)^2}-\frac1{x^2}\Bigr).
+\end{equation}
+Let $x_1=p$ and $x_2=1/4$. Then
+\begin{equation}\label{eq:gvalues}
+g'(x_1)=0,\qquad g''(x_1)=\frac{10^6}{99},\qquad g'(x_2)=\frac{128}{25},\qquad g''(x_2)=-\frac{64}{5}.
+\end{equation}
+
+\subsection{A disk in the lower half-plane}
+Put $w_j=A(x_j)=g(x_j)-ic$ for $j=1,2$, and let
+\[
+b=g(x_2)-10i,\qquad r=\frac{99}{10},\qquad D=\{w\in\C:|w-b|<r\}.
+\]
+The closed disk $\overline D$ lies in $\{\Im w\le-1/10\}$. From $3<\pi<4$ we get $2.97<c<3.96$, so $s:=10-c$ satisfies $6.04<s<7.03$. Next,
+\[
+d:=g(x_1)-g(x_2)=1-4p+q\log\frac{3p}{1-p}=\frac{24}{25}-\frac{99}{100}\log 33,
+\]
+and $3.49<\log33<3.50$ gives $|d|<3$. Since $w_2-b=is$ and $w_1-b=d+is$, we have $|w_2-b|<r$ and $|w_1-b|^2<9+49.43<r^2$, so $w_1,w_2\in D$. Put
+\[
+\Delta=r^2-s^2>98.01-49.4209=48.5891 .
+\]
+Then
+\begin{equation}\label{eq:disk}
+\frac{2r}{\Delta}<\frac{19.8}{48.5891}<\frac5{12},\qquad
+\rho:=\frac{r\,|w_1-w_2|}{\bigl|r^2-(w_1-b)\overline{(w_2-b)}\bigr|}=\frac{r|d|}{|\Delta+ids|}\le\frac{r|d|}{\Delta}<\frac{29.7}{48.5891}<\frac23 .
+\end{equation}
+The number $\rho$ is the pseudo-hyperbolic distance between $w_1$ and $w_2$ in $D$.
+
+\subsection{A local inverse}
+
+\begin{lemma}\label{lem:inverse}
+Let $U=\{1/w:w\in\overline D\}$, a compact subset of $\Cp$. There are $\delta>0$ and $\varepsilon_1>0$ such that for $0<\varepsilon<\varepsilon_1$ there is an analytic map $H_\varepsilon$ from the $\delta$-neighborhood $U_\delta$ of $U$ into $\Cp$ with $F_{\lambda_\varepsilon}(H_\varepsilon(u))=u$ for $u\in U_\delta$, and $\sup_{U_\delta}|H_\varepsilon(u)-u|\to0$ as $\varepsilon\to0$. The function
+\[
+R_\varepsilon(w)=H_\varepsilon(1/w)-1/w
+\]
+is analytic on a neighborhood of $\overline D$, satisfies $\Im R_\varepsilon<0$ on $\overline D$, and $\sup_{\overline D}|R_\varepsilon|\to0$ as $\varepsilon\to0$.
+\end{lemma}
+
+\begin{proof}
+For $z\in\Cp$, $G_{\lambda_\varepsilon}(z)=\int(z-\varepsilon s)^{-1}\,\mu(ds)\to1/z$ as $\varepsilon\to0$ by dominated convergence, since $|z-\varepsilon s|^{-1}\le(\Im z)^{-1}$. The functions $G_{\lambda_\varepsilon}$ are uniformly bounded on compact subsets of $\Cp$, so by Vitali's theorem the convergence is locally uniform together with all derivatives. Hence $F_{\lambda_\varepsilon}\to\mathrm{id}$ locally uniformly on $\Cp$ with all derivatives.
+
+The convex hull of $U$ is a compact subset of $\Cp$. Choose $\delta>0$ such that the open $4\delta$-neighborhood $V$ of this convex hull has compact closure in $\Cp$. The set $V$ is convex. Choose $\varepsilon_1$ such that $|F_{\lambda_\varepsilon}'-1|<1/2$ and $|F_{\lambda_\varepsilon}-\mathrm{id}|<\delta$ on $V$ for $\varepsilon<\varepsilon_1$. For $v_1\ne v_2$ in $V$,
+\[
+F_{\lambda_\varepsilon}(v_2)-F_{\lambda_\varepsilon}(v_1)=(v_2-v_1)\int_0^1F_{\lambda_\varepsilon}'\bigl(v_1+\theta(v_2-v_1)\bigr)\,d\theta,
+\]
+and the integral has real part greater than $1/2$, so $F_{\lambda_\varepsilon}$ is injective on $V$. Its inverse is analytic on the open set $F_{\lambda_\varepsilon}(V)$. If $u\in U_\delta$, the circle $|v-u|=2\delta$ lies in $V$, and on it $|(F_{\lambda_\varepsilon}(v)-u)-(v-u)|<\delta<|v-u|$. By Rouch\'e's theorem $F_{\lambda_\varepsilon}-u$ has a zero in $|v-u|<2\delta$, so $u\in F_{\lambda_\varepsilon}(V)$. Let $H_\varepsilon$ be the inverse restricted to $U_\delta$. Then $|H_\varepsilon(u)-u|=|H_\varepsilon(u)-F_{\lambda_\varepsilon}(H_\varepsilon(u))|\le\sup_V|\mathrm{id}-F_{\lambda_\varepsilon}|\to0$.
+
+The map $w\mapsto1/w$ sends a neighborhood of $\overline D$ into $U_\delta$, so $R_\varepsilon$ is analytic there and tends to $0$ uniformly on $\overline D$. For $w\in\overline D$ put $v=H_\varepsilon(1/w)\in\Cp$. Then $F_{\lambda_\varepsilon}(v)=1/w$, and Lemma~\ref{lem:imF} gives $\Im(1/w)>\Im v$, that is, $\Im R_\varepsilon(w)<0$.
+\end{proof}
+
+\subsection{Schwarz--Pick estimates}
+For $0<\varepsilon<\varepsilon_1$ let
+\[
+a_\varepsilon=\Re R_\varepsilon(w_2),\qquad t_\varepsilon=-\Im R_\varepsilon(w_2)>0,\qquad B_\varepsilon=R_\varepsilon-a_\varepsilon,\qquad K_\varepsilon=-\Im B_\varepsilon .
+\]
+Then $B_\varepsilon$ is analytic on a neighborhood of $\overline D$, maps $D$ into $\Cm$, $B_\varepsilon(w_2)=-it_\varepsilon$, and $t_\varepsilon\to0$ as $\varepsilon\to0$. We write $\partial_1K_\varepsilon$ for the derivative of $K_\varepsilon$ in the real direction; since $B_\varepsilon$ is analytic, $\partial_1K_\varepsilon=-\Im B_\varepsilon'$ and $|\partial_1K_\varepsilon|\le|B_\varepsilon'|$.
+
+\begin{lemma}\label{lem:SP}
+For every compact set $Q\subset D$ and every integer $k\ge0$ there is a constant $C(Q,k)$, independent of $\varepsilon$, such that $\sup_Q|B_\varepsilon^{(k)}|\le C(Q,k)\,t_\varepsilon$. Moreover
+\[
+K_\varepsilon(w_1)>\tfrac15\,t_\varepsilon,\qquad K_\varepsilon(w_2)=t_\varepsilon,\qquad |\partial_1K_\varepsilon(w_2)|\le|B_\varepsilon'(w_2)|<\tfrac5{12}\,t_\varepsilon .
+\]
+\end{lemma}
+
+\begin{proof}
+Write $t=t_\varepsilon$. The map $\zeta\mapsto(\zeta+it)/(\zeta-it)$ sends $\Cm$ into the unit disk, so $\phi=(B_\varepsilon+it)/(B_\varepsilon-it)$ maps $D$ into the unit disk and $\phi(w_2)=0$. By the Schwarz--Pick lemma, transported to $D$ by $w\mapsto(w-b)/r$,
+\begin{equation}\label{eq:SP}
+|\phi(w)|\le\frac{r\,|w-w_2|}{\bigl|r^2-(w-b)\overline{(w_2-b)}\bigr|},\qquad |\phi'(w_2)|\le\frac{r}{r^2-|w_2-b|^2}=\frac r\Delta .
+\end{equation}
+Solving for $B_\varepsilon$ gives $B_\varepsilon=-it(1+\phi)/(1-\phi)$. On a compact set $Q'\subset D$ the right side of the first inequality in \eqref{eq:SP} is at most some $\rho_{Q'}<1$, so $|B_\varepsilon|\le t(1+\rho_{Q'})/(1-\rho_{Q'})$ on $Q'$. Applying this to a compact neighborhood $Q'$ of $Q$ in $D$ and using Cauchy's estimates gives the bounds on the derivatives. Next,
+\[
+K_\varepsilon=t\,\Re\frac{1+\phi}{1-\phi}=t\,\frac{1-|\phi|^2}{|1-\phi|^2}\ge t\,\frac{1-|\phi|}{1+|\phi|}.
+\]
+At $w_1$ we have $|\phi(w_1)|\le\rho<2/3$ by \eqref{eq:disk}, hence $K_\varepsilon(w_1)>t\,(1/3)/(5/3)=t/5$. Finally $B_\varepsilon'=-2it\,\phi'/(1-\phi)^2$, so $|B_\varepsilon'(w_2)|=2t|\phi'(w_2)|\le2rt/\Delta<5t/12$ by \eqref{eq:SP} and \eqref{eq:disk}.
+\end{proof}
+
+\subsection{\texorpdfstring{The density of the convolution near $x_1$ and $x_2$}{The density of the convolution near x1 and x2}}
+Let $\tilde\lambda_\varepsilon$ be the translate of $\lambda_\varepsilon$ by $-a_\varepsilon$, and let $\sigma_\varepsilon=\tilde\lambda_\varepsilon\boxplus\kappa$. Then $F_{\tilde\lambda_\varepsilon}(v)=F_{\lambda_\varepsilon}(v+a_\varepsilon)$.
+
+Fix $j\in\{1,2\}$. Since $A(x_j)=w_j\in D$, we may choose $\eta>0$ such that $N_j=\{z:|z-x_j|\le2\eta\}\subset N$ and the compact set $Q=\{w:\dist(w,A(N_j))\le\eta\}$ lies in $D$. Let $C_0=\max_{N_j}(|A'|+|A''|)$ and $C_1=C(Q,0)+C(Q,1)$ from Lemma~\ref{lem:SP}. Let $N_j^0=\{|z-x_j|<\eta\}$.
+
+\begin{lemma}\label{lem:ident}
+There is $\varepsilon_2\in(0,\varepsilon_1)$ such that for $0<\varepsilon<\varepsilon_2$ the following hold.
+\begin{enumerate}
+\item For each $z\in N_j^0$ the equation $W=A\bigl(z-B_\varepsilon(W)\bigr)$ has a unique solution $W_\varepsilon(z)$ with $|W_\varepsilon(z)-A(z)|\le C_0C_1t_\varepsilon$, and $W_\varepsilon$ is analytic on $N_j^0$.
+\item $G_{\sigma_\varepsilon}=W_\varepsilon$ on $N_j^0\cap\Cp$. Consequently, on the interval $J_j=(x_j-\eta,x_j+\eta)$ the measure $\sigma_\varepsilon$ is absolutely continuous with the real-analytic density $f_\varepsilon(x)=-\pi^{-1}\Im W_\varepsilon(x)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Write $t=t_\varepsilon$ and choose $\varepsilon_2$ so small that $C_0C_1t\le\eta$, $C_1t\le\eta$ and $C_0C_1t<1/2$ for $\varepsilon<\varepsilon_2$. Fix $z\in N_j^0$ and let $\mathcal B$ be the closed disk of radius $C_0C_1t$ about $A(z)$; it is convex and contained in $Q$. For $W\in\mathcal B$, $|B_\varepsilon(W)|\le C_1t\le\eta$, so $z-B_\varepsilon(W)\in N_j$ and
+\[
+\bigl|A(z-B_\varepsilon(W))-A(z)\bigr|\le C_0C_1t .
+\]
+Thus $\Phi_z(W)=A(z-B_\varepsilon(W))$ maps $\mathcal B$ into itself, and $|\Phi_z(W)-\Phi_z(W')|\le C_0C_1t\,|W-W'|$ on $\mathcal B$. By the contraction principle $\Phi_z$ has a unique fixed point $W_\varepsilon(z)\in\mathcal B$. The iterates $\Phi_z^n(A(z))$ are analytic in $z$ and converge uniformly on $N_j^0$, so $W_\varepsilon$ is analytic. This proves (1).
+
+Let $z\in N_j^0\cap\Cp$, $W=W_\varepsilon(z)\in Q\subset D$ and $u=1/W\in U$. Put
+\[
+\omega_1=H_\varepsilon(u)-a_\varepsilon,\qquad \omega_2=z-B_\varepsilon(W).
+\]
+Then $\omega_1\in\Cp$ because $H_\varepsilon(u)\in\Cp$, and $\Im\omega_2=\Im z+K_\varepsilon(W)>0$. We have $F_{\tilde\lambda_\varepsilon}(\omega_1)=F_{\lambda_\varepsilon}(H_\varepsilon(u))=u$. Since $|\omega_2-z|\le\eta$, the point $\omega_2$ lies in $N_j\cap\Cp$, where $A=G_\kappa$; hence $F_\kappa(\omega_2)=1/A(z-B_\varepsilon(W))=1/W=u$. Finally $H_\varepsilon(u)=u+R_\varepsilon(W)$, so
+\[
+\omega_1+\omega_2=u+R_\varepsilon(W)-a_\varepsilon+z-B_\varepsilon(W)=z+u .
+\]
+By Lemma~\ref{lem:unique}, $u=F_{\sigma_\varepsilon}(z)$, that is, $G_{\sigma_\varepsilon}(z)=W_\varepsilon(z)$. Since $W_\varepsilon$ is analytic on $N_j^0$, the Stieltjes inversion formula gives the last assertion.
+\end{proof}
+
+\subsection{Two derivatives of opposite sign}
+Let $E_\varepsilon(z)=W_\varepsilon(z)-A(z)+A'(z)\,B_\varepsilon(A(z))$ for $z\in N_j^0$. With $t=t_\varepsilon$, Taylor's formula for $A$ on $N_j$ and Lemma~\ref{lem:SP} on the convex set $\mathcal B$ give
+\[
+W_\varepsilon(z)=A(z)-A'(z)B_\varepsilon(W_\varepsilon(z))+O(t^2)=A(z)-A'(z)B_\varepsilon(A(z))+O(t^2),
+\]
+because $|B_\varepsilon(W_\varepsilon(z))|\le C_1t$ and $|B_\varepsilon(W_\varepsilon(z))-B_\varepsilon(A(z))|\le C_1t\cdot C_0C_1t$. The implied constants depend only on $C_0$ and $C_1$. Hence $|E_\varepsilon|\le C_2t^2$ on $N_j^0$ with $C_2$ independent of $\varepsilon$, and Cauchy's estimate gives $|E_\varepsilon'(x_j)|\le C_2t^2/\eta$.
+
+For real $x\in J_j$, \eqref{eq:Areal} gives $\Im A(x)=-c$ and $\Im\bigl(A'(x)B_\varepsilon(A(x))\bigr)=-g'(x)K_\varepsilon(A(x))$. Therefore
+\[
+f_\varepsilon(x)=\frac1\pi\Bigl(c-g'(x)\,K_\varepsilon(g(x)-ic)-\Im E_\varepsilon(x)\Bigr),
+\]
+and since $\frac{d}{dx}K_\varepsilon(g(x)-ic)=g'(x)\,\partial_1K_\varepsilon(g(x)-ic)$,
+\begin{equation}\label{eq:fprime}
+f_\varepsilon'(x)=-\frac1\pi\Bigl(g''(x)\,K_\varepsilon(g(x)-ic)+g'(x)^2\,\partial_1K_\varepsilon(g(x)-ic)\Bigr)-\frac1\pi\Im E_\varepsilon'(x).
+\end{equation}
+At $x_1$, \eqref{eq:gvalues} and Lemma~\ref{lem:SP} give
+\[
+f_\varepsilon'(x_1)\le-\frac1\pi\cdot\frac{10^6}{99}\cdot\frac{t}{5}+\frac{C_2t^2}{\pi\eta}=-\frac{200000}{99\pi}\,t+O(t^2).
+\]
+At $x_2$ they give
+\[
+f_\varepsilon'(x_2)\ge\frac1\pi\Bigl(\frac{64}{5}-\Bigl(\frac{128}{25}\Bigr)^{2}\frac5{12}\Bigr)t-\frac{C_2t^2}{\pi\eta}=\frac{704}{375\pi}\,t+O(t^2).
+\]
+Since $t_\varepsilon\to0$, there is $\varepsilon_0>0$ such that $f_\varepsilon'(x_1)<0<f_\varepsilon'(x_2)$ for $0<\varepsilon<\varepsilon_0$.
+
+\subsection{Conclusion}
+Let $0<\varepsilon<\varepsilon_0$ and suppose that $\sigma_\varepsilon$ is unimodal, with a mode $m$ and a function $h$ as in \eqref{eq:unimodal}. Since $\sigma_\varepsilon$ has no atoms in $J_1\cup J_2$, we have $h=f_\varepsilon$ almost everywhere on $J_1\cup J_2$. If $m>x_1$, then $h$ is nondecreasing on an interval around $x_1$, and by Lemma~\ref{lem:transfer} so is $f_\varepsilon$, which contradicts $f_\varepsilon'(x_1)<0$. Hence $m\le x_1<x_2$, and $h$ is nonincreasing on an interval around $x_2$; by Lemma~\ref{lem:transfer} so is $f_\varepsilon$, which contradicts $f_\varepsilon'(x_2)>0$. So $\sigma_\varepsilon$ is not unimodal.
+
+Now let $L>1/\varepsilon_0$ and $\varepsilon=1/L$. Then $D_\varepsilon\nu_L=\kappa$, so $D_\varepsilon(\mu\boxplus\nu_L)=\lambda_\varepsilon\boxplus\kappa$, and $\sigma_\varepsilon$ is the translate of this measure by $-a_\varepsilon$. Since positive dilations and translations preserve unimodality, $\mu\boxplus\nu_L$ is not unimodal. This proves Theorem~\ref{thm:free} with $L_0=1/\varepsilon_0$. \qed
+
+\section{One-sided stable kernels}
+Let $0<\alpha<1$ and let $S_t$ be as in \eqref{eq:laplace}. Replacing $t$ by $t/\gamma$ we may assume $\gamma=1$.
+
+\begin{lemma}\label{lem:kernel}
+Let $t>0$.
+\begin{enumerate}
+\item $S_t$ has a bounded continuous density $g_t$ on $\R$, and $g_t=0$ on $(-\infty,0]$.
+\item There is $b_t\in\R$ such that $g_t$ is nonincreasing on $(b_t,\infty)$.
+\item For every $M\in\R$, $g_t$ does not vanish identically on $(M,\infty)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) The function $\lambda\mapsto\int e^{-\lambda x}S_t(dx)$ is continuous on $\{\Re\lambda\ge0\}$ and analytic on $\{\Re\lambda>0\}$, and it equals $\exp(-t\lambda^\alpha)$ on $(0,\infty)$, with the principal branch of $\lambda^\alpha$. Hence the two functions agree on $\{\Re\lambda\ge0\}$, and the characteristic function of $S_t$ is $\theta\mapsto\exp(-t(-i\theta)^\alpha)$. Its modulus is $\exp(-t|\theta|^\alpha\cos(\pi\alpha/2))$, which is integrable because $\cos(\pi\alpha/2)>0$. By Fourier inversion $S_t$ has a bounded continuous density $g_t$. It vanishes on $(-\infty,0)$ because $S_t$ is carried by $[0,\infty)$, and $g_t(0)=0$ by continuity.
+
+(2) Stable distributions are selfdecomposable, so $S_t$ is unimodal by Yamazato's theorem \cite{Yam}. Since $S_t$ has no atoms, \eqref{eq:unimodal} holds with a function $h$ that is nonincreasing on $(b_t,\infty)$, where $b_t$ is a mode, and $h=g_t$ almost everywhere. Lemma~\ref{lem:transfer} shows that $g_t$ is nonincreasing on $(b_t,\infty)$.
+
+(3) Suppose $g_t=0$ on $(M,\infty)$, where we may take $M>0$. Then $\Phi(\lambda)=\int_0^Me^{-\lambda x}g_t(x)\,dx$ is an entire function equal to $\exp(-t\lambda^\alpha)$ for $\lambda>0$, hence on $\C\setminus(-\infty,0]$. For $y>0$, the limits of $\exp(-t\lambda^\alpha)$ as $\lambda\to-y$ from $\Cp$ and from $\Cm$ are $\exp(-ty^\alpha e^{i\pi\alpha})$ and $\exp(-ty^\alpha e^{-i\pi\alpha})$. Their ratio is $\exp(-2ity^\alpha\sin\pi\alpha)$, which is not $1$ when $0<2ty^\alpha\sin\pi\alpha<2\pi$. This contradicts the continuity of $\Phi$ at $-y$ for small $y>0$.
+\end{proof}
+
+\begin{proposition}\label{prop:atoms}
+Let $(p_n)_{n\ge1}$ be positive numbers with $\sum_np_n=1$, and let $\mu=\sum_{n\ge1}p_n\delta_{-2^n}$. Then $\mu\ast S_t$ is not unimodal for any $t>0$.
+\end{proposition}
+
+\begin{proof}
+Fix $t>0$. Since $g_t$ is bounded, the series
+\[
+q_t(x)=\sum_{n\ge1}p_n\,g_t(x+2^n)
+\]
+converges uniformly on $\R$, so $q_t$ is continuous, and by Tonelli's theorem it is a density of $\mu\ast S_t$. In particular $\mu\ast S_t$ has no atoms.
+
+Let $n$ be such that $2^{n-1}>b_t$, and let $I_n=(-2^n+b_t,\,-2^{n-1})$, a nonempty interval. Let $x\in I_n$. If $k<n$, then $x+2^k\le x+2^{n-1}<0$ and $g_t(x+2^k)=0$. If $k\ge n$, then $x+2^k\ge x+2^n>b_t$. By Lemma~\ref{lem:kernel}(2), every term of $q_t$ is a nonincreasing function of $x$ on $I_n$, and so is $q_t$.
+
+Suppose that $\mu\ast S_t$ is unimodal with mode $m$. Then $q_t$ agrees almost everywhere on $(-\infty,m)$ with a nondecreasing function, and by Lemma~\ref{lem:transfer} it is nondecreasing on $(-\infty,m)$. Choose $n_0$ with $2^{n_0-1}>b_t$ and $-2^{n_0-1}\le m$. For $n\ge n_0$ we have $I_n\subset(-\infty,m)$, so $q_t$ is constant on $I_n$. For $u<v$ in $I_n$,
+\[
+0=q_t(u)-q_t(v)=\sum_{k\ge n}p_k\bigl(g_t(u+2^k)-g_t(v+2^k)\bigr),
+\]
+and every term is nonnegative, so every term vanishes. Taking $k=n$ shows that $g_t$ is constant on $(b_t,2^{n-1})$. As $n\ge n_0$ is arbitrary, $g_t$ is constant on $(b_t,\infty)$, and since $g_t$ is integrable the constant is $0$. This contradicts Lemma~\ref{lem:kernel}(3).
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:stable}]
+Let $c_n=2^{-n}/(1+f(-2^n))$, $Z=\sum_nc_n\in(0,1]$ and $p_n=c_n/Z$. Then $\int f\,d\mu=Z^{-1}\sum_n2^{-n}f(-2^n)/(1+f(-2^n))\le Z^{-1}$, and Proposition~\ref{prop:atoms} applies.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:moments}]
+For $r>0$, $\int|x|^r\,d\mu_*=Z^{-1}\sum_{n\ge1}2^{-n^2+rn}$. For $n\ge2r$ the $n$-th term is at most $2^{-n^2/2}$, so the series converges. Proposition~\ref{prop:atoms} applies for every $\alpha\in(0,1)$, and $L_t$ is the case $\alpha=1/2$, $\gamma=\sqrt2$ of \eqref{eq:laplace}.
+\end{proof}
+
+\begin{example}
+For the L\'evy kernel $L_t$ every step is explicit. The density $\ell_t(x)=t(2\pi)^{-1/2}x^{-3/2}e^{-t^2/(2x)}$, $x>0$, satisfies
+\[
+\ell_t'(x)=\frac{t}{\sqrt{2\pi}}\,x^{-7/2}e^{-t^2/(2x)}\Bigl(\frac{t^2}{2}-\frac{3x}{2}\Bigr),
+\]
+so $\ell_t$ is strictly decreasing on $(t^2/3,\infty)$ and positive on $(0,\infty)$. With $b_t=t^2/3$, the measure $\mu_*\ast L_t$ has a density that is strictly decreasing on each interval $(-2^n+t^2/3,\,-2^{n-1})$, and these intervals move to $-\infty$.
+\end{example}
+
+\begin{remark}
+For classical Brownian motion with initial distribution $\mu$, Hasebe and Ueda proved that $\int e^{\epsilon x^2}\,d\mu<\infty$ for some $\epsilon>0$ implies unimodality of $\mu\ast N(0,t)$ for large $t$ \cite[Theorem~1.3]{HU}. Theorem~\ref{thm:stable} shows that for one-sided stable kernels of index below $1$ no integrability condition, however strong, has this effect. The obstruction comes from the direction of the support of the kernel, not from the tails of $\mu$.
+\end{remark}
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The arguments of Section~3 and of Proposition~\ref{prop:atoms} in the case of the measure $\mu_*$ and the index $1/2$ were produced by OpenAI's GPT-6.1 model, run through the Codex agent. Anthropic's Claude Opus~5.5 checked both arguments independently. The same model then re-derived every step, extended the second result to all indices in $(0,1)$ and to arbitrary integrability conditions, and wrote the manuscript. These checks are not peer review. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used.
+
+\begin{thebibliography}{9}
+\bibitem{BB}
+S.~T.~Belinschi and H.~Bercovici, \emph{A new approach to subordination results in free probability}, J. Anal. Math. \textbf{101} (2007), 357--365. \href{https://doi.org/10.1007/s11854-007-0013-1}{doi:10.1007/s11854-007-0013-1}.
+\bibitem{BV}
+H.~Bercovici and D.~Voiculescu, \emph{Free convolution of measures with unbounded support}, Indiana Univ. Math. J. \textbf{42} (1993), 733--773. \href{https://doi.org/10.1512/iumj.1993.42.42033}{doi:10.1512/iumj.1993.42.42033}.
+\bibitem{Biane}
+P.~Biane, \emph{Processes with free increments}, Math. Z. \textbf{227} (1998), 143--174. \href{https://doi.org/10.1007/PL00004363}{doi:10.1007/PL00004363}.
+\bibitem{HU}
+T.~Hasebe and Y.~Ueda, \emph{Large time unimodality for classical and free Brownian motions with initial distributions}, ALEA Lat. Am. J. Probab. Math. Stat. \textbf{15} (2018), 353--374. \href{https://doi.org/10.30757/ALEA.v15-15}{doi:10.30757/ALEA.v15-15}.
+\bibitem{Ib}
+I.~A.~Ibragimov, \emph{On the composition of unimodal distributions}, Theory Probab. Appl. \textbf{1} (1956), 255--260. \href{https://doi.org/10.1137/1101021}{doi:10.1137/1101021}.
+\bibitem{Sato}
+K.~Sato, \emph{L\'evy Processes and Infinitely Divisible Distributions}, revised edition, Cambridge Studies in Advanced Mathematics \textbf{68}, Cambridge University Press, 2013.
+\bibitem{Yam}
+M.~Yamazato, \emph{Unimodality of infinitely divisible distribution functions of class $L$}, Ann. Probab. \textbf{6} (1978), 523--531. \href{https://doi.org/10.1214/aop/1176995474}{doi:10.1214/aop/1176995474}.
+\end{thebibliography}
+\end{document}

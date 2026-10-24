@@ -1,0 +1,73 @@
+{
+  "target_id": "C0017",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "parent_proved_by_this_worker": false,
+  "novelty_claim": false,
+  "historical_catalog": {
+    "source_id": "garban_steif_noise_2012",
+    "record": "probability_1000_intake_claude_20260907/problems.jsonl:17",
+    "statement": "Prove that critical bond percolation on Z^2 at p=1/2 is conformally invariant in the scaling limit, including Cardy's formula and interfaces converging to SLE(6).",
+    "catalog_locator": "Chapter II Section 4 p.26",
+    "verified_primary_locator": "arXiv:1102.5761v3, Chapter II section 4, printed p.24 / PDF page index25. The catalog page number does not point to the open-status sentence.",
+    "primary_url": "https://arxiv.org/pdf/1102.5761",
+    "quote": "proving the conformal invariance is still a challenging open problem",
+    "quote_scope": "Historical 2012 sentence about Z^2 at p_c=1/2."
+  },
+  "reference_theorem": {
+    "source_id": "smirnov_2001_preprint_2009_copy",
+    "primary_url": "https://arxiv.org/pdf/0909.4499",
+    "locator": "Theorem1 and Corollaries1-3; model fixed in opening paragraph",
+    "full_hypotheses_for_use": [
+      "Independent critical site percolation on the triangular lattice, represented as colored hexagonal faces",
+      "Probability 1/2 for each color",
+      "Simply connected marked planar domain, with the standard lattice approximation; this packet restricts to bounded Jordan domains",
+      "Crossing between the designated disjoint boundary arcs"
+    ],
+    "conclusion": "The reference crossing limit exists, is conformally invariant, and has Cardy's value.",
+    "missing_transfer": "The theorem's triangular-site model is not the square-bond model in C0017."
+  },
+  "parameter_source": {
+    "primary_url": "https://www.ihes.fr/~duminil/publi/divergenceFK.pdf",
+    "locator": "Conjecture1 Eq.(3.3), PDF page index9 (10th PDF page)",
+    "formula": "sigma=1-(2/pi)arccos(sqrt(q)/2)",
+    "q1_sigma": "1/3",
+    "prior_record_error": "C0017-A001 and its live math-brain concept card say 2/3, which corresponds to q=3 in this convention.",
+    "statement_status": "The parameter identity is distinct from the conjectural general-q scaling limit; the q=2 exceptional theorem does not prove q=1."
+  },
+  "recent_claim": {
+    "title": "Conformal Limits of Critical Square-Lattice Random-Cluster Interfaces",
+    "date_reported": "2026-10-05",
+    "pages_reported": 127,
+    "discovery_url": "https://ameskandari.github.io/ai4math/",
+    "primary_repository": "https://github.com/openai/math",
+    "claim_scope": "Critical square-lattice random-cluster interfaces for every fixed 1<=q<=4, under uniform marked Jordan boundary approximation; at q=1, Cardy's formula with free boundary edges.",
+    "proof_validated": false,
+    "notes": "The exact manuscript and q=1 claim were verified in the primary manuscript map, lines4545-4547. The index PDF link failed, and the raw PDF browser fetch rejected application/octet-stream. The mathematical proof has not been validated; current openness remains UNKNOWN.",
+    "primary_map_url": "https://raw.githubusercontent.com/openai/math/main/CONTENTS.md",
+    "primary_manuscript_url": "https://raw.githubusercontent.com/openai/math/main/preprints/Conformal-Limits-of-Critical-Square-Lattice-Random-Cluster-Interfaces-October-5-2026/paper.pdf"
+  },
+  "prior_work_search": {
+    "ranking_exact_hit": 538,
+    "intake_attempt_exact_hit": "C0017-A001",
+    "attempts_H_exact_ID_hits": 0,
+    "attempts_I_exact_ID_hits": 0,
+    "lean_exact_ID_hits": "Annotated ranking only; no formal theorem located",
+    "Team_O": "No C0017 row; C0018 and C0050 neighboring work reserved by other workers",
+    "owner_directory_search": "Five matching local note snippets concerned tree Cartesian-product percolation or squared kernels, not square-lattice conformal invariance; no exact C0017 resolution was located. This bounded search is not an exhaustive solved-work certification.",
+    "canonical_store": "Current population sqlite opened only with mode=ro and PRAGMA query_only; seven targeted cards saved in MATH_BRAIN_RETRIEVAL.json. A separate math-research-brain checkout was located, but no current population database was found in its local directory."
+  },
+  "formal_check": {
+    "performed": false,
+    "theorem": null,
+    "trusted_axioms": null,
+    "reason": "Written proofs and finite exact diagnostics only; no Lean placeholder or hash receipt is counted as proof."
+  },
+  "identity": {
+    "native_agent_id": "w417",
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "max",
+    "requested_service_tier": "Fast",
+    "served_model_evidence": "Unavailable in this thread; requested settings are not served-model evidence."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "helper": "A017-critical-integer-v1",
+  "Boolean_three_bit_seeds": 128,
+  "histogram_classes": 2,
+  "assertions": 513,
+  "elapsed_seconds": 0.0020923999982187524,
+  "max_B_exact": {
+    "seed": 1,
+    "formula": "log2(numerator/denominator)/64",
+    "numerator": "1692181265104319331519937521551548632169965420544",
+    "denominator": "5545591068557744950331704044342041015625"
+  },
+  "certificate": [
+    {
+      "squared_amplitude_histogram": {
+        "1": 4,
+        "9": 3,
+        "25": 1
+      },
+      "multiplicity": 112,
+      "example_seed": 1,
+      "positive_integer_slack": "20606397661697947529762867559537711895844000000000000000000000000000000"
+    },
+    {
+      "squared_amplitude_histogram": {
+        "1": 7,
+        "49": 1
+      },
+      "multiplicity": 16,
+      "example_seed": 0,
+      "positive_integer_slack": "283364089592993164231727741360710011206961336026978553472285067473763203780879796971612667904"
+    }
+  ],
+  "three_sixteenths_binary_entropy_integer_slack": "3674028250620335"
+}

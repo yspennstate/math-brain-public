@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260924T045848Z-account03-B02-qform-r47",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_commit_prepublication": "690b6d29167412c8ac4976dc01d02713057016ec",
+  "control_revision": "2026-09-22.15",
+  "correction_inbox_blob": "a884b835aba929c5376e6417ae5cfcd44c0f7a76",
+  "math_repository": "yspennstate/math-open-problems",
+  "math_commit": "859066cc3edee1bbeafe367e3bf2d630a4c425d9",
+  "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260924T045848Z-account03-B02-qform-r47/REPORT.md",
+  "result_id": "QFORM-1OVER19-SPECTRAL-WINDOW-AND-STRONGHUB-L1-v1",
+  "new_results": [
+    "Parametric spectral-window compiler: with P_eta=1_{|A|>=eta}, row leverage <=eps, delta=1/2-eps-sqrt(2eps), sigma=delta-eta, and (sqrt(eps/delta)+sqrt(6)eta/sigma)^2<1/2, the completed physical ridge theorem gives ||p_Q||inf<=9sqrt(3e)/(2sigma) and int|phi_Q|<=9pi sqrt(3e)/sigma with continuous C0 density.",
+    "At eta=1/19, eps=1/72: delta=23/72, sigma=365/1368, leverage upper 0.478450870770<1/2, hence ||p_Q||inf<48.163009358 and int|phi_Q|<302.617112746.",
+    "Failure of the 1/19 diffuse window forces an original physical coordinate with |A_ii|>1/228 or ||A[i,i^c]||_2>1/228; this uses exact identity 2*(1/228)^2=1/(19^2*72).",
+    "On the live r45 full cut x1*x2>247/576, the stronger off-diagonal hub with delta0=1/456 gives E3>247/119771136 or a physicalized E3>247/7665352704, or a carrier-aligned hub >1/(228sqrt(2)), or one of at most four near-coloops.",
+    "The two E3 exits give respectively ||p_Q||inf<91.69448, int|phi|<576.13341 and ||p_Q||inf<183.38896, int|phi|<1152.26682, with continuous C0 density.",
+    "On the exact overlap with account04/B02's zero-diagonal physical triple, its L2 Fourier theorem plus the E3 tail yields coefficients 55.119781993 and 92.700054174 multiplying |det H0|^(-1/12)."
+  ],
+  "partner_used": {
+    "account": "account04",
+    "slot": "B02",
+    "theorem": "QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1",
+    "commit": "0b11995430ce407a8852ac3bc5651491f2ee64f7",
+    "application": "combined its completed L2 Fourier credit with the newly strengthened literal E3 exits at actual thresholds"
+  },
+  "source_packet_used": {
+    "ridge_window_commit": "9c1167db05c7b0f520f060796fde921ed769a4e7",
+    "own_r45_commit": "969923934518c728e4611e670ab6244ceea30215",
+    "r45_full_cut": "x1*x2>247/576"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-UNIFORM-MATRIX-PERTURBATION-CONTINUITY-FALSE-v1"
+  ],
+  "checks": {
+    "status": "PASS_SYMBOLIC_CONSTANT_CHECKS",
+    "ridge_leverage_upper": 0.47845087077016857,
+    "rational_certificate": "(5061/7300)^2<1/2",
+    "details_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260924T045848Z-account03-B02-qform-r47/CHECKS.json"
+  },
+  "full_target_status": "OPEN",
+  "full_target_continuity": "OPEN",
+  "target_wide_unweighted_L1_status": "OPEN_NOT_REFUTED",
+  "new_branch_continuity": "CONTINUOUS_C0_ON_1OVER19_DIFFUSE_WINDOW_AND_LITERAL_E3_EXITS",
+  "unresolved": "fixed overlap-one V1 grouped-pivot packet; physical diagonal >1/228; carrier-aligned hub >1/(228sqrt(2)); at most four near-coloops",
+  "next": "QFORM-FIXEDSCALE-V1-PIVOT-OR-STRONGHUB-L1-v1"
+}

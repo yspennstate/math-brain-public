@@ -1,0 +1,9 @@
+(1) 200000 random inputs; float screen flagged 12134 cases (ratio > 1.99);
+    their exact 60-digit max Phi/R = 1.99999998493689 ; exact violations of Phi <= 2R: 0
+(2) closed forms match brute-force biased spectra: max abs diff 5.33e-15
+(3) float search: max biased FEI+ ratio of OR_m = 7.770797 at m=2, q=[1.1e-06, 2.72e-06]
+    same instance in 60-digit closed form: 7.77077465246; 2+4log2(e) = 7.77078016356
+    OR_2 at q=0.01: ratio 7.74183
+    OR_2 at q=0.0001: ratio 7.77049
+    OR_2 at q=1e-06: ratio 7.77074
+(4) negative control: at a=(1-1e-4)^2, Phi/R = 1.99990 > 1.9, so the constant 2 cannot be lowered

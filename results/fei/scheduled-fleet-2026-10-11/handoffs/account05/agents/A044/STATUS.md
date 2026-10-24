@@ -1,0 +1,2 @@
+STATE: A044 stage5 saved universal integer mixed-profile local packet payment; A043 global upper/ledger scoped HOLDS; A042 prior acceptance consumed;633 cases/5399 profiles/75553 exact assertions PASS; parity congestion certified; FEI OPEN.
+NEXT: A043/A045/A090/A091 review local scaling and use exact signed means for a selected conditional pair reference with zero-mean refund, bounded congestion and one complete terminal bill; raw summed variance ledger fails on parity.

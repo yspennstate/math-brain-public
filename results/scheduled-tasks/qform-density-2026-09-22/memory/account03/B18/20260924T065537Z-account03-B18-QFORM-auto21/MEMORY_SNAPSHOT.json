@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260924T065537Z-account03-B18-QFORM-auto21",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_start_commit": "72767b20a13be24d57e2856e3c7f6af62552e2c1",
+  "control_prepublication_commit": "e84a374f1a4a5c0e50a6f6d24443069b7f49b098",
+  "control_revision": "2026-09-22.15",
+  "execution_state": "WITHOUT_VERIFIED_BRAIN",
+  "mathematical_premises": [
+    {
+      "id": "RV-THM-1.2",
+      "scope": "independent real variables with one-dimensional density caps; normalized linear combination density <= sqrt(2) K"
+    },
+    {
+      "id": "HS-MOVING-SQUARE",
+      "scope": "disjoint original-coordinate banks X,Y,Z; moving square a(beta^T Z+H(Y))^2; density <= 8 K_beta/sqrt(|a| ||M||_HS) with C0 continuity",
+      "independent_existing_worker": "account01/B18 r48 and r49"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "race_resolution": {
+    "generic_compiler_status": "DUPLICATE_NO_NOVELTY_CLAIM",
+    "peer": "account01/B18 r49",
+    "peer_handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B18/20260924T065704Z-account01-B18-qform-auto11-r49.md",
+    "peer_visible_at_commit": "a2b43ab9b5dcce991f1f9d99b0fd6e44eb85b0cb"
+  },
+  "new_result": {
+    "id": "QFORM-LITERAL-CROSS-PIVOT-SHARPENING-v1",
+    "status": "PROVED_SUPPORTING_IMPLICATION",
+    "statement": "For a literal zero-self source coordinate i crossing only one literal coordinate j with A_ij=b!=0, a literal pivot w with A_ww=a!=0 and A_iw=0, while pivot-complement curvature/couplings are arbitrary and outside original coordinates may be conditioned, the full ambient form has a C0 density with ||p_Q||_inf <= 4/sqrt(|a b|).",
+    "continuity": "C0_PROVED_IN_SCOPE"
+  },
+  "partner_applied": {
+    "worker": "account04/B18 r6",
+    "result": "two-sided-anchor packet bound 2 sqrt(2 pi)/sqrt(c1 c2)",
+    "application": "Q_{64,1/2}=2X1Y1+X2Y2+2WX3+64W^2",
+    "partner_bound": 7.089815403622063,
+    "new_bound": 0.5,
+    "target_valid": true,
+    "large_eigenvalue_count": 3
+  },
+  "literature_scope": {
+    "exact_full_prior_solution_found": false,
+    "kwan_sauermann_note": "quadratic Littlewood-Offord result controls point probabilities under robust dependence; no direct interval-linear estimate establishing the owner's L-infinity density target"
+  },
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7f06b58a7844bca417008aa305fd0aea38ea8bd2",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260924T065537Z-account03-B18-QFORM-auto21/",
+    "files": ["REPORT.md", "CHECK.json", "REFRESH_ADDENDUM.md"]
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "285bd9fae2252439a82643ad4003cede402c490f",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B18/20260924T065537Z-account03-B18-QFORM-auto21.md"
+  },
+  "unresolved_implication": "Derive from bare s3(A)>=1 either a source bank physically decoupled from a nonzero pivot at useful scale or another already-paid product-preserving exit; the genuinely entangled near-rank-two carrier with nonzero anchors into every active source side remains unpaid.",
+  "next_step": "Keep nonzero pivot-to-source anchors exactly and seek a source-valid two-variable or rank-two carrier theorem rather than deleting the anchor or the small cross tail.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity_status": "OPEN"
+}

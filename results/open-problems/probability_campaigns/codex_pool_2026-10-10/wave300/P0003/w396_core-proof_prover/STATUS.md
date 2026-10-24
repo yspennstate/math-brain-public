@@ -1,0 +1,14 @@
+STATE: NEEDS_REVIEW
+NEXT: w398 audit L0', L1-L3 and (U); the next proof step is a mutually avoiding prefix/suffix estimate for H_disk.
+
+2026-10-10: Started the P0003 core-proof lane. Read PRIMARY_DIRECTIVE.md and Team O board. Worker folder had no prior status or feedback. No w396 match appeared in the named hook audit assignment search. All mathematical claims remain draft and independently unreviewed.
+2026-10-10: Recovered the honeycomb fugacity and the chordal conjecture's ensemble/topology from primary papers. Recall finished in 11.582 seconds; read required perceptron proof-gap scar. Saved statement packet before proof. Chosen lane: positive partition ratios and maximal collar-error control, distinct from Team O's parafermionic-observable convergence work.
+2026-10-10: Sent statement to w397 through direct mesh (msg-168e5faa4e) before saving proofs. Recovered the original honeycomb restatement of Conjecture 1.5 in arXiv:1206.2092 Section 3.3. Saved L1 maximal collar bound, L2 exact total variation cost, L3 conditional weak-limit bridge, and two explicit obstructions. H_5/8 and full P0003 remain unproved.
+2026-10-10: w397 identified the catalog source as Grimmett arXiv:2205.07318 Q2.2 (uniform fixed length, free endpoint). Verified primary text and corrected the ensemble mismatch. L0' preserves remaining length and extends L1/L2 directly to that model; H_len is unproved. Fresh compute state is distress/throttle, so numerical enumeration is deferred without changing gates.
+2026-10-10: Saved H_disk as the exact missing collar-count estimate and first-entrance counting upper bound (U). Correction delivered to w397 (msg-b1968de122) and narrow lane claim to w398 (msg-caa31bd4a1). Gated checker recorded DEFERRED_COMPUTE_GATE, age 27.799s, distress/throttle, zero mathematical assertions; no numerical PASS is claimed.
+
+2026-10-10 STUCK: two prepare runs found invalid mathematical backslash escapes in hand-written claim JSON. Switched to JSON-encoded rows with a character-preserving repair; all original rows retained in CLAIMS.before_escape_repair.jsonl. This is serialization validation, not mathematical review.
+
+2026-10-10: Completed packet: ten valid claim rows, seven draft cards, seven supported relations, AST checks and acyclic relation validation. Inbox draft submitted after exclusive mesh claim. w398 review request msg-13de88a071 delivered; w397 has the corrected packet. Latest numerical status DEFERRED_COMPUTE_GATE (0 assertions). Full P0003, H_disk and further identification/tightness inputs remain unproved. No live store integration or retrieval-effect claim.
+
+2026-10-10: Incorporated w397 full-snapshot KEEP on L0/L0prime, L1--L3 and (U). Verified and fixed LSW citation: Lemma 3.2 uniqueness, Theorem 6.1 avoidance values. Prepared clarification diff for the abstract E[D_0] proof; did not edit the submitted/live file. w398 and cross-login admission remain pending. STATE stays NEEDS_REVIEW.

@@ -1,0 +1,6 @@
+cert_vi_h96k40.npz       Phi(1/16,2/3) = -1.267075e-03   Phi/v = -3.801224e-03   Phi/((1-p)(1-q)) = -4.054639e-03
+cert_vi_h96k40_f4.npz    Phi(1/16,2/3) = -3.235594e-04   Phi/v = -9.706781e-04   Phi/((1-p)(1-q)) = -1.035390e-03
+
+the step report quotes Phi/v = -9.887e-04 (their own evaluation) and the certificate run's bound -9.949e-04;
+the margin c*p(1-p) raises Phi by exactly c*(1-p)(1-q), so the c a point needs is -Phi/((1-p)(1-q)), not -Phi/v.
+ratio v/((1-p)(1-q)) at this point = 1.0667

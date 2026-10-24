@@ -1,0 +1,159 @@
+\section*{Exact four-channel law for a shared physical query}
+
+All logarithms are natural.  For a real function $c$ on a finite cube put
+\[
+ \mathcal E(c)=\sum_U \widehat c(U)^2
+      \log\frac1{\widehat c(U)^2},
+\]
+with the zero terms omitted, and define the polarized entropy kernel
+\[
+ \mathfrak D(p,q)=\mathcal E(p)+\mathcal E(q)
+ -\frac{\mathcal E(p+q)+\mathcal E(p-q)}2.
+\tag{1}
+\]
+Equivalently, $\mathfrak D(p,q)=\sum_U K(\widehat p(U),\widehat
+q(U))$ for the scalar kernel used in the preceding B12 runs.
+
+Let $g_+,g_-,h$ be Boolean signs on the same cube, set
+\[
+ a=(g_++g_-)/2,\qquad b=(g_+-g_-)/2,\qquad F=a+hb,
+\]
+and query a physical coordinate $i$ shared by all three functions.  Write
+\[
+ a=a_0+x_i a_1,\qquad b=b_0+x_i b_1,\qquad h=r+x_i s.
+\]
+On the cube with coordinate $i$ removed define
+\[
+ A=a_0+r b_0,\quad B=a_1+r b_1,\quad
+ C=s b_1,\quad D=s b_0.                                      \tag{2}
+\]
+Then multiplication before restriction gives the exact split
+\[
+ F=(A+C)+x_i(B+D).                                           \tag{3}
+\]
+
+For a Boolean sign $f=u+x_i v$, its physical entropy decrement is
+\[
+ D_i(f)=\mathfrak D(u,v).
+\]
+Put $q=\|b\|_2^2$ and introduce the source channel, crossed channel and
+polarized interaction
+\[
+ S_i=\mathfrak D(A,B),\qquad X_i=\mathfrak D(C,D),             \tag{4}
+\]
+\[
+ \Omega_i=\mathfrak D(A+C,B+D)-S_i-X_i.                       \tag{5}
+\]
+Finally define the signed shared remainder
+\[
+ R_i^{\rm sh}=\Omega_i-qD_i(h)
+              =\Omega_i-q\mathfrak D(r,s).                    \tag{6}
+\]
+
+\subsection*{Theorem (proved)}
+
+For every dimension, every Boolean triple $(g_+,g_-,h)$, and every shared
+physical coordinate $i$,
+\[
+ \boxed{D_i(F)=S_i+X_i+qD_i(h)+R_i^{\rm sh}.}                 \tag{7}
+\]
+The statement includes all coherent Fourier collisions; no disjointness,
+orthogonality, bias floor, or collision separation is assumed.
+
+\paragraph{Proof.}
+Equation (3) gives $D_i(F)=\mathfrak D(A+C,B+D)$.  Substituting (5) and
+then (6) proves (7).  Although the algebra is short, the placement of the
+four channels is essential: products in (2) are taken in physical space, so
+their Fourier coefficients are the actual signed convolutions on the
+remaining shared coordinates.  No tensor identity has been used. \(\square\)
+
+\subsection*{Three exact boundary checks}
+
+If the query belongs only to a disjoint child block, then $a_1=b_1=0$.
+Thus $S_i=X_i=0$, and (6) becomes
+\[
+ R_i^{\rm sh}=D_i(F)-qD_i(h)=R_\mu(\alpha),                  \tag{8}
+\]
+the complete biased coherent remainder from the earlier B12 kernel theorem,
+including its $-qK(\mu,\alpha)$ correction.
+
+If the selector does not depend on $i$, then $s=0$, so $C=D=0$,
+$\Omega_i=0$, $D_i(h)=0$, and $R_i^{\rm sh}=0$.  The entire decrement is
+the source channel $S_i$.  Thus (7) does not incorrectly charge a child
+remainder at a source-only query.
+
+If the selected output and both restrictions are constant, then
+$D_i(F)=0$.  Equation (7) retains the exact signed cancellation
+\[
+ S_i+X_i+qD_i(h)+R_i^{\rm sh}=0.                              \tag{9}
+\]
+This is precisely the cancellation erased by the nonnegative two-term
+potential in the preceding constant-output obstruction.
+
+\subsection*{The signed remainder alone does not repair the old Bellman step}
+
+The tempting next claim would be
+\[
+ R_i^{\rm sh}\le
+ \Delta_i\{C_*q\mathbf I(h)+\operatorname{Var}(h)
+                    \mathcal E(b)\},
+ \qquad C_*=4+2\log2+2/e.                                    \tag{10}
+\]
+It is false even for a genuine activation-irreducible three-bit selector.
+In zero-based lexicographic order take
+\[
+\begin{split}
+g_+&=(-1,-1,1,1,-1,-1,1,-1),\\
+g_-&=(-1,-1,-1,1,-1,-1,-1,-1),\\
+h&=(-1,-1,1,-1,-1,1,-1,1),
+\end{split}                                                   \tag{11}
+\]
+and query coordinate $i=1$.  The branches disagree exactly at inputs
+$\{2,6\}$, where $h$ has signs $+1$ and $-1$ respectively.  Hence both
+branches are actually selected on disagreement points.
+
+Exact Walsh arithmetic yields
+\[
+\begin{aligned}
+S_i&=\frac{15}{4}\log2-\frac{25}{32}\log5-\frac9{32}\log3,\\
+X_i&=\frac14\log2,\\
+D_i(h)&=3\log2-\frac98\log3,\qquad q=\frac14,\\
+R_i^{\rm sh}&=-\frac{11}{4}\log2+\frac{25}{32}\log5
+                         +\frac9{16}\log3,\\
+D_i(F)&=2\log2.
+\end{aligned}                                                 \tag{12}
+\]
+The four lines in (12) satisfy (7) exactly.  For the old potential,
+\[
+ \Delta_i(q\mathbf I(h))=-\frac1{16},\qquad
+ \Delta_i(\operatorname{Var}(h)\mathcal E(b))=\frac7{16}\log2,
+\tag{13}
+\]
+and therefore
+\[
+ \Delta_iP_*=-\frac14-\frac1{8e}+\frac5{16}\log2.            \tag{14}
+\]
+
+The separation is rigorous.  Since
+\[
+ 163\,5^{25}3^{18}>60\,2^{88},\qquad
+ e>\sum_{k=0}^5\frac1{k!}=\frac{163}{60},
+\]
+we obtain $5^{25}3^{18}/2^{88}>1/e$, and hence (12) gives
+\[
+ R_i^{\rm sh}>-\frac1{32}.                                   \tag{15}
+\]
+Also $\log2<7/10$, because the first five terms of the exponential series
+at $7/10$ already exceed $2$.  Equation (14) therefore gives
+\[
+ \Delta_iP_*<-\frac14+\frac7{32}=-\frac1{32}.                 \tag{16}
+\]
+Combining (15)--(16) refutes (10).
+
+This is an obstruction to separating $R_i^{\rm sh}$ from $S_i$ and $X_i$;
+it is not a counterexample to FEI.  The exact local output decrement in this
+example is positive, and (7) holds.  A surviving overlap argument must bundle
+the source and crossed channels with the signed interaction across a block,
+or define a future-activation gauge on which those channels telescope
+together.  Enveloping the signed remainder alone by the old product-potential
+drop loses an exact $0.048564\ldots$ nats at this one physical step.

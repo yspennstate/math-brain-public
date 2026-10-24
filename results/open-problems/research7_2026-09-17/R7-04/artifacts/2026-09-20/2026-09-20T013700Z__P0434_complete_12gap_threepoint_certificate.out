@@ -1,0 +1,11 @@
+LOWER_WEDGE_IDENTITY_PASS
+D_lower = lambda*(t^2-(1-t)^2*(t-r)*r*d^2)/(2*t*(1-t)*(1-lambda))
+UPPER_WEDGE_IDENTITY_PASS
+D_upper = lambda*(t^2-(t-r)*r)/(2*t*(1-t)*(1-lambda))
+CONTACT_CONTINUITY_PASS
+TERMINAL_CELL_IDENTITY_PASS
+D_terminal = lambda*r*(1+t)^2/(2*(1-r)*(1-lambda*(1+t)))
+THRESHOLD_ORDER_IDENTITIES_PASS
+ALL_EXACT_CHECKS_PASS
+
+Execution note: these are exact symbolic identities. The corrected 013700Z checker was executed in the research runtime with SymPy; no floating-point or grid certificate is used.

@@ -1,0 +1,121 @@
+from pathlib import Path
+import json,hashlib,datetime,copy
+R=Path(__file__).resolve().parents[1];A=R.parents[1];S=Path('~/brain_workers/FEI100_20261011')
+def digest(data):return hashlib.sha256(data).hexdigest()
+def save(name,obj):(R/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+prior=R.parent/'20261014T025222Z-account05-A024-biased-child-stability'
+review_source=S/'agents/A046/runs/20261014T041928Z-account05-A046-current-candidate-intake'
+protocol_path=Path('~/mop_fei100/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+sources=[protocol_path,S/'BOARD.md',S/'claude/B05/STREAM_NOTES.md',A/'STATUS.md',prior/'CLAIMS.json',prior/'DERIVATION.md',prior/'out/VALIDATION.json',review_source/'REPORT.md',review_source/'CLAIMS.json',S/'agents/A062/runs/20261014T044820Z-account05-A062-influence-compensator/REPORT.md',Path('~/mop_fei100/reports/fei-2026-10-11/CLAIM_REGISTRY.json'),Path('~/mop_fei100/reports/fei-2026-10-11/PACKET_STATUS.json')]
+if not (R/'out/SOURCE_RECEIPTS.json').exists():
+    save('out/SOURCE_RECEIPTS.json',[{'path':str(p),'bytes':len(p.read_bytes()),'sha256':digest(p.read_bytes())} for p in sources])
+previous=json.loads((prior/'CLAIMS.json').read_text())[0]
+claim=copy.deepcopy(previous)
+extension=' Extension at version 2: for arbitrary disjoint Boolean controller w and untouched Boolean core h, F=1-(1-w)(1-h)/2, r=Pr(h=-1),t=Pr(w=-1),a=Ew and beta=(Ew_0-Ew_1)/2, a controller query has d_F=r d_w, q_F=r q_w+(I(h)/2)d_w and B_F=r B_w+R_r(a,beta), where R_r=L(1-r+r a,r beta)+r(1-r)L(1-a,beta)-r L(a,beta). For any complete controller tree and its LIFTED K4-bad set E, its bad prefix bill is r sum_E p_v q_w+(I(h)/2)sum_E p_v d_w. Its actual terminals retain t H(h),t I(h),t Q(h). Let w=-G_L,h=G_M with the fixed five-bit modules above. The controller selectors-first tree individually costs exactly (4/37)I(w), as does the core selectors-first tree. Nevertheless its lifted prefix bill is at least r L/4+(37/16)LM/32. For M=L, I(F)=37L/16 and the prefix ratio is at least L/32+4r/37, unbounded. Its total signed selector mean residual is between zero and L(2L+4)16^(-(L+1)). This refutes transferring arbitrary already-paid K4 controller trees solely from their own bad-face bill. H(F_LL)/I(F_LL)<=160/37. At K7, every complete controller-first tree in this fixed-module family has ZERO bad credit for all L,M>=1, certified by 13^13*499^499>2^4517 and physical influence granularity. No all-parameter K4 data-first assertion, universal policy or FEI proof is claimed.'
+claim.update({'version':2,'exact_statement':previous['exact_statement']+extension,'hypotheses':previous['hypotheses']+['Version-2 arbitrary-controller formulas require the core h to remain physically unqueried during the controller prefix','The tensor witness uses w=-G_L,h=G_M and positive L,M; terminal h is retained before continuation','The K7 repair is only for the declared fixed five-bit module family, not arbitrary controller module dimension'], 'proof_source':{'path':str(R/'DERIVATION.md'),'prior_unchanged_parts':str(prior/'DERIVATION.md'),'locators':'equations (1)-(7), proportional mean limits, Exact K7 repair; prior complete parity and seed derivation','certificates':['out/VALIDATION.json','out/DIRECT_VALIDATION.json','out/TENSOR_PREFIXES.json','out/SIGN_CERTIFICATES.json','out/INTEGER_CERTIFICATE.json','out/K7_INTEGER_CERTIFICATE.json']},'proof_dependencies':previous['proof_dependencies']+[{'claim_id':previous['claim_id'],'version':1,'statement_sha256':previous['statement_sha256'],'status':'PROVED_LOCALLY_PENDING_REVIEW; unchanged base theorem, source retained','scope':'Prior parity-family theorem and robust nonempty seed erasure certificate; reconstructed used seed clause here'}],'review_records':previous['review_records']+[{'reviewer':'A024','scope':'Version-2 distinct implementation: explicit physical F spectra and complete controller prefix edges, not independent agent acceptance','verdict':'PASS_LOCAL_REPRESENTATION_REPLAY','artifact':'out/DIRECT_VALIDATION.json'}],'supersedes':[{'claim_id':previous['claim_id'],'version':1,'scope':'Extension of existing candidate with arbitrary controller ledger, precise false transfer, retained terminals and K7 repair; no correction to v1 statement'}],'refutes':previous['refutes']+['Unregistered extension: an arbitrary controller tree with own K4 Q_bad<=K I(w) lifts over an untouched certified core to O(I(F)) prefix credit solely from that own bill'],'next_consumers':['B05','A021','A023','A025','A028','A039','A046','A057','A062','A087','A094','B20']})
+claim['statement_sha256']=digest(claim['exact_statement'].encode())
+reviewed=next(c for c in json.loads((review_source/'CLAIMS.json').read_text()) if c['version']==2)
+reviewed=copy.deepcopy(reviewed)
+reviewed['review_records'].append({'reviewer':'A024','verdict':'HOLDS_AT_NAMED_CLAUSE','scope':'Only full constant/nonconstant moment identities and B_i/Inf_i<1781/480 for e<=1/8, all compatible widths and independent balanced core dimensions','excluded':'Cutoff and reserve summation, descendants-good theorem, entire <=5I ledger, reference/witness conversion, general unbalanced cores and interleaved histories','repair_supplied':False,'proof_source':str(R/'REVIEW_NOTE.md'),'source_claims_sha256':digest((review_source/'CLAIMS.json').read_bytes()),'source_statement_identifier_preserved':reviewed['statement_sha256'],'raw_statement_utf8_sha256':digest(reviewed['exact_statement'].encode()),'rational_validation_assertions':3269})
+reviewed['status']='PARTIAL_INDEPENDENT_REVIEW_HOLDS; FULL_V2_REVIEW_PENDING'
+reviewed['review_records'][-1]['source_statement_hash_convention']='SHA256 of canonical JSON {statement,hypotheses}; verified separately; raw text digest is auxiliary, not a correction'
+save('CLAIMS.json',[claim,reviewed])
+progress={'protocol_revision':'2026-10-11-execution-v2','run_id':R.name,'stream':'B05','packet_id':'A024','gap_id':'B05-ODDFACE-LOCALIZED-BRIDGE','attempt_id':'A024-03-inherited-controller-tree-repair','method':'Repair and extend existing mixed-face candidate, not a new broad universal potential; derive exact controller prefix and terminals, exact Boolean witness, K7 analytic repair, independently review A046 rare-row clause','mathematical_delta':'Controller lifting adds I(h)/2 times lifted-bad pivot mass, not paid by the controller own bad-face credit. Two individually paid five-bit tensor trees lift to prefix ratio>=L/32+4r/37 despite exponentially small mean bank and full retained terminals. K7 fixed-module controller-first repair has zero bad bill. A046 all-width rare-row bound independently HOLDS at named scope.','deliverable_status':'COMPLETE_LOCAL_ARTIFACT; EXTERNAL_REVIEW_AND_MIRROR_PENDING','mathematical_status':'EXISTING_INTERFACE_EXTENDED_AND_INHERITED_K4_TREE_TRANSFER_REFUTED; UNIVERSAL_BRIDGE_AND_FULL_FEI_OPEN','claim_versions_used':['A024-MIXED-FACE-ORDER-OBSTRUCTION@1 unchanged/reconstructed','A024-BIASED-CHILD-TRANSPORT@1 erasure clause reconstructed','B05-ODDFACE-TELESCOPE@1 direct counting','A046-SEPARATOR-LAYER-CUTOFF-RESERVE@2 rare-row clause independently reviewed; not a premise for own theorem'],'claims_created_or_changed':['A024-MIXED-FACE-ORDER-OBSTRUCTION@2','A046-SEPARATOR-LAYER-CUTOFF-RESERVE@2 scoped review record only'],'source_artifacts':['DERIVATION.md','REVIEW_NOTE.md','FROZEN_SPEC.json','FROZEN_SPEC_REPLAY.json','FROZEN_SPEC_AUDIT.json','code/check.py','code/direct.py','code/audit_constants.py','out/VALIDATION.json','out/DIRECT_VALIDATION.json','out/AUDIT_CONSTANTS.json','out/TENSOR_PREFIXES.json','out/SIGN_CERTIFICATES.json','out/K7_INTEGER_CERTIFICATE.json','out/SOURCE_RECEIPTS.json'],'next_consumers':claim['next_consumers'],'next_action':'Use the exact paired account (inherited bad q, lifted-bad pivot mass) to test the first controller/core interleaving after a real core-coordinate query; retain actual child r,I(h), both terminal spectra and a single unused mixed-face account. A087/A094 review v2; A046 consume the scoped rare-row acceptance.','stagnant_substantive_attempts':0,'blockers':['No local access/compute blocker. No universal policy paying both accounts; K7 fixed-module granularity does not extend to growing local controller dimension. External candidate review and supervisor copies pending.'],'packet_ids':['A024']}
+save('PROGRESS.json',progress);save('PACKET_DELTA.json',progress)
+report='''# exact target, quantifiers, hypotheses and units
+
+Repair the next step left by the previous A024 stage: replace a parity controller by arbitrary Boolean w(z), leaving the independent Boolean core h(u) untouched during a fair physical controller prefix. F=1-(1-w)(1-h)/2, r=Pr[h=-1],t=Pr[w=-1]. Every physical input stays uniform. The outer gate sees induced means. Entropy is in bits; q_x(f)=I(f_0 f_1)/2. Bad means B_x>4 Inf_x except in the explicitly labeled K7 repair. The target is whether an already-paid controller tree transfers its localized odd-face bill without additional credit or lost terminal entropy.
+
+# sources actually read, revisions and theorem locators
+
+Read STATUS.md; full execution protocol 2026-10-11-execution-v2; BOARD.md snapshot 2026-10-14 05:41 UTC (including focused excerpts of the truncated middle); unchanged B05 STREAM_NOTES.md v2, its A024 target and SOME-tree bridge. Reused own prior 20261014T025222Z DERIVATION.md/CLAIMS.json/validation and earlier exact helper. Registry/packet metadata still do not census the current live pending queue; the board shows many pending interfaces. This stage repairs/extends the existing candidate and independently reviews a named clause, rather than opening another broad universal candidate under the review cap.
+
+Read A046 run 20261014T041928Z REPORT.md and CLAIMS.json v1/v2; independently reconstructed only the v2 rare-row assertion and constant/nonconstant moments. Read A062 run 20261014T044820Z REPORT.md: it identifies an inherited COMPLETE controller reserve for a different tagged, balanced two-core half-transfer. No general theorem is imported from its unproved unequal-core extension. A046's compatible-point balanced-core payment and A062's complete entropy reserve are distinct from this mixed-face lifting account. Both stated scopes remain intact. Source SHA256 and byte receipts are in out/SOURCE_RECEIPTS.json. Campaign and paper intake are inherited from the earlier source-complete stage; no new literature premise or external web claim is used.
+
+# complete derivation or exact first unsupported line
+
+DERIVATION.md proves, for every controller query with a=Ew_v,beta=(Ew_v0-Ew_v1)/2,d=Inf_x(w_v),
+
+    Inf_x(F_v)=r d,
+    q_x(F_v)=r q_x(w_v)+(I(h)/2)d,
+    B_x(F_v)=r B_x(w_v)+L(1-r+r a,r beta)
+               +r(1-r)L(1-a,beta)-r L(a,beta).
+
+The negative empty-fiber term is retained. L(a,b)=e(a^2)+e(b^2)-e(a^2+b^2), e(p)=p log2(1/p). Direct physical Fourier fibers and mixed-face counts prove all identities, including deterministic r=0,1 and constant controller endpoints, with no variance division.
+
+Let E be the LIFTED K4-bad set, not the controller's original bad set. The exact prefix bill is r sum_E p_v q_w+(I(h)/2)sum_E p_v d_w. The latter is a new mixed-face account. The complete controller prefix retains exactly t H(h),t I(h),t Q(h) at its actual terminal leaves. A subsequent core tree costs t times its own bill; no source influence or terminal entropy can be spent twice.
+
+For the five-bit seed c, let G_L be a product of L independent copies; w=-G_L,h=G_M. Both their selectors-first complete trees individually have bad-face/influence ratio exactly 4/37. Yet every lifted controller selector stays bad by the prior robust nonempty-erasure certificate. Its prefix bill is at least r L/4+(37/16)LM/32. For M=L, I(F_LL)=37L/16 and bill/I>=L/32+4r/37, unbounded. Thus even lifting an individually paid controller tree and an individually paid core tree cannot be justified solely by those two own localized bills. Terminal entropy remains t H(G_L). H(F_LL)/I(F_LL)<=160/37 by the support bound, so this is no FEI counterexample.
+
+The genuine log(1/mean) controller selector residual is R=r beta^2 log2(1/a^2)+O(beta^2) at beta=a/3,a->0. Its full expected signed bank is between zero and L(2L+4)16^(-(L+1)). This is exponentially small while the mixed-face ratio diverges. Fixed nonzero a and proportional shrinking a must not be conflated.
+
+The fixed-module obstruction is repaired at K7: every relevant controller query has lifted influence at least 13/512 while h is untouched; after the controller terminates every relevant core query has influence at least 1/16. The exact certificate 13^13*499^499>2^4517 proves h2(13/512)<7(13/512), and h2(d)/d decreases. Therefore every complete controller-first tree for all L,M>=1 has ZERO K7 bad bill. The finite K4 data-first prefixes also have zero bill in the three frozen pairs; no all-L,M K4 data-first theorem follows from that census.
+
+First unsupported universal line: choose a physical policy so that both inherited lifted-bad controller q and I(h) times lifted-bad pivot mass are paid from genuinely unused source influence, while preserving both actual terminal core spectra through data exposure. Merely assuming Q_bad(w)<=K I(w) is the false step. Neither an every-tree statement at a different K nor the lead's SOME-tree bridge is refuted.
+
+REVIEW_NOTE.md independently proves A046's rare-row constant/nonconstant moment identities and B_i/Inf_i<1781/480 for e<=1/8. It uses Boolean E GH=1-e, separates the FULL constant row, and derives eta<=8e^2/25 from the compatible point geometry. Exact rational inequalities (22/15)^3<4, (6/5)^2/8<(9/20)^2 and 704^2<2^19 close the three variable terms. Verdict HOLDS at that clause only, without repair. The complete reserve and general interleaving theorem are not reviewed or accepted here.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+Each specification was saved before its sequential job. Main commands from A024: `python -X utf8 runs/20261014T055140Z-account05-A024-biased-child-stability/code/check.py --pilot`, then the same without `--pilot`. Pilot PASS: 32 roots/64 controller splits/two tensor prefixes; 553 exact equalities and 44 sign calls in 0.1115 seconds. Full PASS: all 256 three-bit controllers over c,-c,constant+,constant-,five-bit parity (1,280 actual Boolean roots and 3,840 root controller queries); 20,635 exact equality checks, 1,432 rigorous sign calls/90 distinct log expressions, 9.7814 seconds. All these small-controller lifted prefixes are K4-good; this fact is finite, not a general-controller theorem.
+
+Explicit tensor pairs (L,M)=(1,1),(1,2),(2,1), two controller orders each, maximum physical truth-table dimension 15. Selectors-first prefix bad bills are 89/512,543/2048,89/256 respectively; data-first bills are zero. Exact actual active-terminal weights are 19/32,19/32,265/512, and terminal entropy log vectors/influences are retained in out/TENSOR_PREFIXES.json. Sixty-four symbolic diagonal rows are rational illustrations; the infinite obstruction and K7 repair are analytic, not extrapolated from them.
+
+`python -X utf8 .../code/direct.py` independently rebuilds explicit full physical F spectra and edge products without importing the transport helper. It replays eight small-controller and six tensor prefixes, 218 memoized actual controller nodes and 158 exact sign decisions, both integer certificates, PASS in 58.0748 seconds. This is a separate representation by the same author, not independent-agent acceptance. `python -X utf8 .../code/audit_constants.py` passes 3,269 rational assertions over 1,536 formal parameter rows and the rare-row constants in 0.0728 seconds. The review's all-width conclusion is supplied by its analytic proof.
+
+Integer spectra, Fraction edge/face/reach accounts, prime-log entropy identities and rational atanh tails certify the signs; no floating search is treated as proof. Main/replay/audit estimates were 180/160/10 MB, below the 300 MB memok threshold; no observed peak-RAM measurement is claimed. Runtime caps 300/180/60 seconds, pilot cap60. No GPU, background helper, dimension escalation or symmetry deletion. Outputs are saved after each group/prefix; all jobs returned exit0.
+
+# proof dependencies and changed downstream conclusions
+
+Existing A024-MIXED-FACE-ORDER-OBSTRUCTION@1 is extended to v2, preserving all original parity-family conclusions and sources; it is not reopened for a cosmetic notation change. The robust selector seed used is reconstructed from exact nonempty erasure, with its integer certificate retained. A024-BIASED-CHILD-TRANSPORT@1 is used only through the reconstructed erasure clause; B05 odd-face telescope is reconstructed by direct counting. A046@2's review is independent and not needed as a premise of this theorem. The original A046 statement/hash/contributor are preserved in CLAIMS.json, with an explicitly partial review record; no whole-claim acceptance is asserted.
+
+Changed downstream conclusion: controller-first is not automatically a paid repair for arbitrary controllers. Its lifted bad pivot exposure must be tracked as a separate account from controller bad q. The parity repair succeeded because its lifted bad pivot exposure was zero; two individually paid trees do not inherit that property. Raising K repairs this fixed five-bit family but does not address controllers with growing local dimension. Corrected FEI+ keeps no output-variance numerator, and physical H=Eplus+e(mean^2); inner KL/mismatch or small mean banks cannot be assigned the new mixed-face price without a proved debit.
+
+# one next mathematical action and independent reviewer
+
+At the first actual core-data query while a general controller remains unresolved, derive the child updates of r,I(h), the lifted bad set and both prefix accounts, using original physical reach probabilities. Test whether a signed child surplus can pay that actual mixed-face transfer once, rather than reinitializing the controller mean or consuming t H(h). This directly addresses history transfer toward C019/C024. A087/A094 should independently reconstruct v2, including the K4 obstruction and K7 scope; A046 can consume the scoped rare-row acceptance. No tools sent external messages.
+
+# actual persistence receipts or precise save blocker
+
+The assigned run contains the four protocol files, complete derivation, scoped review, three frozen specs, executable scripts, exact main/direct/review outputs, integer certificates and source hashes. PROGRESS.json and PACKET_DELTA.json are identical with packet_ids=[A024]. Rolling STATUS.md is two lines; WORKLOG.md and LEARNED.md append the outcome. out/PERSISTENCE_RECEIPTS.json records hashes and sizes after all writes, and schema validation checks the exact protocol keys. Every file is below 20 MB; no local save blocker. External candidate review, supervisor copying, remote mirrors and downstream use remain pending.
+
+# Universal bridge
+
+This stage moves B05-ODDFACE-LOCALIZED-BRIDGE/C019 and identifies the C024 history account: exact arbitrary-controller transport requires inherited bad q PLUS core influence times lifted-bad pivot mass, with full actual terminal entropy retained. The false inherited-tree shortcut is closed negatively by bill/I>=L/32+4r/37, while K7 closes every controller-first tree on the fixed-module witness; A046's compatible-point rare-row clause is independently accepted at its exact scope. Universal policy selection and paying the first core-exposure change of these two accounts remain open. NEXT is the shortest route because it tests the precise missing history-transfer debit using actual child costs, rather than enlarging an already-paid family census or reusing a tiny mean-log bank.
+'''
+(R/'REPORT.md').write_text(report,encoding='utf-8')
+now=datetime.datetime.now(datetime.timezone.utc).isoformat()
+(A/'STATUS.md').write_text('STATE: A024 v2 saved: paid K4 controller-tree lift fails with bill/I>=L/32; exact two-account transport/terminals, K7 fixed-module repair; 20635 main checks/direct replay PASS; A046 rare-row scoped HOLDS; FEI OPEN.\nNEXT: Track r,I(core) and both lifted bad-face/pivot accounts after the first actual core-data query, keeping original reaches and both terminal spectra; A087/A094 review v2.\n',encoding='utf-8')
+if 'Extended existing mixed-face candidate to v2.' not in (A/'WORKLOG.md').read_text(encoding='utf-8'):
+    with (A/'WORKLOG.md').open('a',encoding='utf-8') as f:f.write('\n'+now+' — Extended existing mixed-face candidate to v2. Exact arbitrary-controller prefix requires r*bad-q + I(core)/2*bad-pivot mass, retaining t H(core). Paid individual tensor trees do not lift at K4: diagonal prefix bill/I>=L/32+4r/37. Fixed five-bit controller-first family fully paid at K7 (integer certificate). Main1280 roots/3840 splits/20635 equalities PASS9.7814s; direct14 prefixes/218 states/158 signs PASS58.0748s; A046 rare-row reconstruction+3269 rational assertions PASS. No universal FEI theorem or external acceptance of own candidate claimed.\n')
+if '2026-10-14 arbitrary-controller lift:' not in (A/'LEARNED.md').read_text(encoding='utf-8'):
+  with (A/'LEARNED.md').open('a',encoding='utf-8') as f:f.write('''
+2026-10-14 arbitrary-controller lift: F=1-(1-w)(1-h)/2, r=Pr(h=-1),t=Pr(w=-1). Controller query q_F=r q_w+I(h)d_w/2, d_F=r d_w. Erasure remainder is L(1-r+r a,r beta)+r(1-r)L(1-a,beta)-r L(a,beta). No variance division; deterministic r=0,1 included. The lifted bad set must be recomputed.
+
+Complete controller prefix bad bill is r sum_liftedbad p q_w+I(h)/2 sum_liftedbad p d_w, with actual terminal t H(h),t I(h),t Q(h). A bound on controller own bad q does not bound its lifted bad pivot exposure. Two individual 4/37-paid tensor selector trees yield diagonal lifted prefix ratio>=L/32+4r/37, although their signed mean bank is exponentially small and H/I<=160/37. Some-tree FEI bridge is not refuted.
+
+K7 scope repair: fixed five-bit modules give every controller query influence>=13/512 and every terminal core query>=1/16. Integer 13^13*499^499>2^4517 implies h2(13/512)<7*13/512; all controller-first complete trees have zero K7 bad bill for all L,M. This granularity does not extend to growing local controller dimension. Finite K4 data-first zero-prefix result is not a proved all-parameter rule.
+
+A046@2 rare-row constant/nonconstant moments and B/d<1781/480 when e<=1/8 independently HOLDS without repair. eta<=8e^2/25 uses compatible point geometry; neither its whole reserve nor arbitrary-controller extension was accepted. Main/direct representations and analytical infinite bridge agree; direct replay is not independent agent review.
+''')
+protocol=json.loads(protocol_path.read_text(encoding='utf-8-sig'))
+keys=set(protocol['required_per_run']['progress_fields']);keys.remove('packet_ids (one primary ID, for compatibility)');keys.add('packet_ids')
+assert set(progress)==keys
+for c in [claim,reviewed]:
+    assert set(c)==set(protocol['required_per_run']['claim_fields'])
+assert claim['statement_sha256']==digest(claim['exact_statement'].encode())
+original_reviewed=next(c for c in json.loads((review_source/'CLAIMS.json').read_text()) if c['version']==2)
+assert reviewed['statement_sha256']==original_reviewed['statement_sha256']
+assert reviewed['exact_statement']==original_reviewed['exact_statement']
+assert reviewed['statement_sha256']==digest(json.dumps({'statement':reviewed['exact_statement'],'hypotheses':reviewed['hypotheses']},sort_keys=True,separators=(',',':')).encode())
+assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
+assert len((A/'STATUS.md').read_text().splitlines())==2
+assert all('# '+field in report for field in protocol['required_per_run']['report_fields'])
+assert '# Universal bridge' in report.splitlines()[-3]
+manifest=[]
+for p in sorted(R.rglob('*')):
+    if p.is_file() and p.name!='PERSISTENCE_RECEIPTS.json':
+        data=p.read_bytes();assert len(data)<20*1024*1024
+        manifest.append({'path':str(p.relative_to(R)),'bytes':len(data),'sha256':digest(data)})
+save('out/PERSISTENCE_RECEIPTS.json',manifest)
+print(json.dumps({'status':'SAVED_SCHEMA_AND_HASH_CHECKED','files':len(manifest)+1,'largest_bytes':max(z['bytes'] for z in manifest),'claim_versions':['A024 v2','A046 v2 partial review'],'full_fei':'OPEN'}))

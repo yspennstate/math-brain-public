@@ -1,0 +1,383 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B19",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A091",
+      "stream": "B19",
+      "topic": "Composition referee",
+      "target_statement": "Audit the prime-gate and shared-data closure results with all biases and overlaps explicit. Recompute constants independently and inspect the terminal cases.",
+      "work_type": "independent_proof_review",
+      "priority": "P0",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A091-D1",
+          "description": "COMPOSITION_REVIEW.md: independent coefficient, bias, and constant reconstruction",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A091-D2",
+          "description": "COMPOSITION_SCOPE.json: exact admitted gates, inputs, and closure operations",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Check fresh selectors, neighboring correlation/disagreement, repeated variables, and genuine disjointness at every composition node.",
+        "Recompute all constants and deterministic/near-dictator endpoints using the actual product normalization.",
+        "Treat max{2/c,C} as baseline, replay bent-splice and all three weighted payment failures, and keep conditional-input TC separate from spectral erasure."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A019",
+          "interface": "new shared-data class theorem"
+        },
+        {
+          "agent_id": "A041",
+          "interface": "weighted replacement"
+        },
+        {
+          "agent_id": "A043",
+          "interface": "prime decomposition"
+        },
+        {
+          "agent_id": "A057",
+          "interface": "coherent remainder"
+        },
+        {
+          "agent_id": "A058",
+          "interface": "overlapping composition"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A044",
+          "interface_use": "composition requirements"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A085"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One new composition/prime-gate theorem receives a complete independent verdict at its exact scope.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_biased",
+        "reductions_multiplexers",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F19",
+        "F20"
+      ]
+    },
+    {
+      "agent_id": "A092",
+      "stream": "B19",
+      "topic": "Counterexample referee",
+      "target_statement": "Verify new Boolean counterexamples from original truth tables or circuit definitions. Confirm the exact target they refute and the rigorous sign of the violation.",
+      "work_type": "independent_counterexample_review",
+      "priority": "P0",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A092-D1",
+          "description": "COUNTEREXAMPLE_REVIEW.md: independent Boolean and inequality verification",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A092-D2",
+          "description": "COUNTEREXAMPLE_SCOPE.json: exact refuted statement, coefficient, and quantifiers",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Reconstruct the function from its original truth table/circuit before accepting any supplied spectrum or ratio.",
+        "Check the sign with exact or certified arithmetic and verify the asymptotic range if an infinite family is claimed.",
+        "Name the precise claim refuted; local charge, fixed coefficient, normalized relaxation, and full FEI are distinct outcomes.",
+        "The existing B19 review of the B05 no-go may satisfy the first review instance when its immutable source receipt is adopted. This does not complete all future rolling reviews."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A049",
+          "interface": "original reduced witness"
+        },
+        {
+          "agent_id": "A025",
+          "interface": "parameterized rare family"
+        },
+        {
+          "agent_id": "A074",
+          "interface": "independent calculation"
+        },
+        {
+          "agent_id": "A080",
+          "interface": "disproof-scope standard"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A046",
+          "interface_use": "already certified counterexamples"
+        },
+        {
+          "agent_id": "A096",
+          "interface_use": "accepted counterexamples"
+        },
+        {
+          "agent_id": "A100",
+          "interface_use": "verified failure archive"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A085"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One counterexample becomes a reusable source-pinned control only after its actual scope and rigorous sign are independently verified.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_biased",
+        "reductions_multiplexers",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F19",
+        "F20"
+      ]
+    },
+    {
+      "agent_id": "A093",
+      "stream": "B19",
+      "topic": "Literature and priority",
+      "target_statement": "Check primary versions, corrections, and withdrawn claims relevant to each new theorem. Record theorem-level overlap and avoid a latest-best or first-result claim without sufficient evidence.",
+      "work_type": "literature_review",
+      "priority": "P1",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A093-D1",
+          "description": "PRIMARY_SOURCE_OVERLAP.md: theorem-level comparison and current version/correction pins",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A093-D2",
+          "description": "CITATION_STATUS.json: exact references, overlap, and unresolved priority claims",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Read primary papers/preprints and their current corrections relevant to the exact theorem, rather than relying on title matches or secondary summaries.",
+        "Compare assumptions, constants, normalization, and consequences theorem by theorem.",
+        "Leave priority/first/latest-best claims unasserted when coverage is insufficient; record actual retrieval dates and versions."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A001",
+          "interface": "proposed claim inventory"
+        },
+        {
+          "agent_id": "A095",
+          "interface": "candidate restricted theorem"
+        },
+        {
+          "agent_id": "A099",
+          "interface": "assembled theorem statements"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A041",
+          "interface_use": "primary theorem overlap"
+        },
+        {
+          "agent_id": "A069",
+          "interface_use": "primary percolation theorem and scope"
+        },
+        {
+          "agent_id": "A095",
+          "interface_use": "primary overlap check"
+        },
+        {
+          "agent_id": "A099",
+          "interface_use": "exact primary citations"
+        },
+        {
+          "agent_id": "A100",
+          "interface_use": "source and priority status"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A085"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "A candidate theorem has a complete citation/overlap check sufficient for its scoped presentation, with any remaining novelty uncertainty explicit.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_biased",
+        "reductions_multiplexers",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F19",
+        "F20"
+      ]
+    },
+    {
+      "agent_id": "A094",
+      "stream": "B19",
+      "topic": "Proof-chain challenger",
+      "target_statement": "Challenge the strongest complete-looking argument from A086-A090, independently selecting difficult regimes and embeddings. Agreement counts only after examining the full proof chain.",
+      "work_type": "independent_proof_review",
+      "priority": "P0",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A094-D1",
+          "description": "SECOND_CHAIN_CHALLENGE.md: independently selected hard regimes and embeddings",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A094-D2",
+          "description": "SECOND_REVIEW_VERDICT.json: accepted scope, unresolved leaf, or counterexample",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Read the complete candidate proof and original dependencies independently; the first referee's verdict is not evidence for a missing step.",
+        "Choose difficult limits and arbitrary-seed embeddings independently and test the exact highest-risk implications.",
+        "For full FEI, verify the entire chain and all known applicable controls; ensure neither this reviewer nor the first reviewer contributed the theorem being approved."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A086",
+          "interface": "first joint-code review"
+        },
+        {
+          "agent_id": "A087",
+          "interface": "first restriction review"
+        },
+        {
+          "agent_id": "A088",
+          "interface": "first Booleanity review"
+        },
+        {
+          "agent_id": "A090",
+          "interface": "independent reconstruction"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A095",
+          "interface_use": "failed universal implication"
+        },
+        {
+          "agent_id": "A099",
+          "interface_use": "second complete-chain verdict"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A085"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A second substantive independent complete-chain verdict is available for the strongest reviewable candidate.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_biased",
+        "reductions_multiplexers",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F19",
+        "F20"
+      ]
+    },
+    {
+      "agent_id": "A095",
+      "stream": "B19",
+      "topic": "Restricted-result extraction",
+      "target_statement": "When a universal proof fails, isolate a complete nontrivial class theorem, sharp obstruction, or useful equivalence suitable for a separate manuscript with honest scope.",
+      "work_type": "new_math_synthesis",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A095-D1",
+          "description": "RESTRICTED_RESULT.tex: complete nontrivial theorem, obstruction, or equivalence",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A095-D2",
+          "description": "SCOPE_AND_CONTINUATION.md: exact remaining universal gap",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Extract a statement whose entire proof is closed; do not hide the failed universal lemma in a weaker theorem's hypothesis unless that condition is explicit.",
+        "Demonstrate a useful nontrivial class, sharp obstruction, or exact equivalence and compare it with existing primary results.",
+        "If contributing new mathematics to the extraction, recuse from its approval and request an uninvolved full-source review."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A089",
+          "interface": "proved scoped repair"
+        },
+        {
+          "agent_id": "A050",
+          "interface": "repaired potential theorem"
+        },
+        {
+          "agent_id": "A094",
+          "interface": "failed universal implication"
+        },
+        {
+          "agent_id": "A093",
+          "interface": "primary overlap check"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A050",
+          "interface_use": "useful restricted-result scope"
+        },
+        {
+          "agent_id": "A093",
+          "interface_use": "candidate restricted theorem"
+        },
+        {
+          "agent_id": "A099",
+          "interface_use": "complete scoped result"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A085"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A self-contained publishable-scope partial result with a complete proof and an honest frontier.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_biased",
+        "reductions_multiplexers",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F19",
+        "F20"
+      ]
+    }
+  ]
+}

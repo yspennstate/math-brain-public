@@ -1,0 +1,844 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalise,nameinlink]{cleveref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\crefname{lemma}{Lemma}{Lemmas}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{corollary}{Corollary}{Corollaries}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{remark}{Remark}{Remarks}
+
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\Pr}{\mathbb{P}}
+\newcommand{\Inf}{\mathrm{Inf}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\bits}{\{0,1\}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\JS}{\mathrm{JS}}
+
+\title[Entropy--influence for monotone DNFs of bounded width]{The Fourier entropy--influence inequality for monotone DNF formulas of bounded width}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{24 September 2026}
+
+\begin{document}
+
+\begin{abstract}
+The Fourier entropy--influence conjecture of Friedgut and Kalai asserts that the spectral entropy of a Boolean
+function is at most a universal constant times its total influence. It is open even for monotone functions. We prove
+it with constant $w+8.1$ for every monotone DNF formula and every monotone CNF formula of width $w$, with no
+restriction on the number of terms or on the number of times a variable occurs; for width two, that is for the
+indicator that a random set of vertices of a graph contains an edge, the constant is $9.41$. More generally the
+bound holds for every class of monotone functions that is closed under restrictions and whose nonconstant members
+have a minterm or a maxterm of size at most $w$. The proof works with the uniform measure on the set of zeros of
+the function, on which every coordinate is a fair coin unless it is blocked. This gives a bound on the entropy lost
+when one coordinate is restricted, in terms of its influence relative to the variance. It also bounds the entropy by
+the influences measured relative to the variance, and it reduces the conjecture for monotone functions to monotone
+functions all of whose influences are small compared with the variance. Together with the influential-variable theorem of
+O'Donnell, Saks, Schramm and Servedio it gives the constant $\log_2\log_2s+7.85$ for monotone functions computed by
+decision trees with $s$ leaves, and $\log_2m+8.85$ for monotone DNF formulas with $m$ terms. The same classes satisfy the stronger inequality of
+O'Donnell and Tan, also under product measures with biases bounded away from $0$ and $1$. So the conjecture also holds
+for read-once formulas whose leaves are monotone DNFs or CNFs of bounded width and whose gates are AND, OR, XOR or
+threshold gates of any fan-in, or bounded-width monotone DNFs whose inputs have biases bounded away from $0$ and $1$.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+For $f\colon\bits^n\to\bits$ let $F=1-2f$, $\chi_T(x)=(-1)^{\sum_{i\in T}x_i}$, $\widehat F(T)=\E[F\chi_T]$ with
+$x$ uniform, and $P(T)=\widehat F(T)^2$. By Parseval $P$ is a probability distribution on the subsets of $[n]$; a
+random set $S$ with law $P$ is the \emph{spectral sample} of $f$. The \emph{spectral entropy} and the \emph{total
+influence} are
+\[
+H(f)=\sum_T P(T)\log_2\frac1{P(T)},\qquad I(f)=\sum_T|T|\,P(T)=\sum_{v}\Inf_v(f),
+\]
+where $\Inf_v(f)=\Pr[f(x^{v\leftarrow1})\neq f(x^{v\leftarrow0})]=\sum_{T\ni v}P(T)$. Friedgut and
+Kalai~\cite{FK96} conjectured that $H(f)\le C\,I(f)$ for a universal constant $C$. The conjecture is known for
+symmetric functions and read-once decision trees~\cite{OWZ11}, for read-once formulas~\cite{OT13}, for random
+linear threshold functions~\cite{CKKLS18}, for functions of very small influence or very large entropy~\cite{Sha19},
+for $\delta$-tribes and functions with separation properties~\cite{GMP26}, and for read-$k$ DNF formulas and
+regular functions with constants $O(\log k)$ and $15.1$~\cite{Shm26}. The best general bounds lose a factor:
+$H(f)=O(I(f)+\sum_AP(A)|A|\log|A|)$~\cite{KKLMS20}, and $H(f)\le\sum_vh(\Inf_v)=O(I(f)+\sum_v\Inf_v\log(1/\Inf_v))$,
+with $h$ the binary entropy, which follows from the subadditivity of entropy~\cite{KMS12} and is also proved
+in~\cite{Han25}.
+
+The conjecture is open for monotone functions. There it would give total influence $\Omega(\log^2 n)$ for every
+monotone graph property on $n$ vertices with constant variance~\cite{FK96}, where the best bound known is
+$\Omega(\log^2n/(\log\log n)^2)$~\cite{KKLMS20}. The monotone case of the proofs above rests on an order of the
+coordinates by importance (regular functions), on disjointness (read-once formulas) or on bounded overlap of terms
+(read-$k$ DNFs). The results here use none of these.
+
+For $f$ monotone write $q=\Pr[f=0]$ and $m=\min(q,1-q)$; then $\Var(F)=4q(1-q)$ lies between $2m$ and $4m$. A
+\emph{minterm} of $f$ is a minimal set $M$ with $f(\mathbf 1_M)=1$, a \emph{maxterm} a minimal set $M$ with
+$f(\mathbf 1_{[n]\setminus M})=0$. Let
+\[
+\Psi(r)=\log_2\!\bigl(e\,(r+2\sqrt r+2)\bigr)\quad(r\ge0),\qquad c_w=\frac2{\ln2}+\frac{2e^{-1/2}}{\ln 2}+\Psi(2^{w+1}-4).
+\]
+Numerically $2/\ln2+2e^{-1/2}/\ln2=4.6355$, $c_1=7.078$, $c_2=9.400$, $c_3=10.466$, $c_4=11.421$, and $c_w\le w+8.1$
+for every $w\ge1$.
+
+\begin{theorem}\label{thm:width}
+Let $\mathcal C$ be a class of monotone Boolean functions that is closed under restrictions of variables to
+constants and such that every nonconstant $f\in\mathcal C$ has a minterm or a maxterm with at most $w$ elements. Then
+$H(f)\le c_w\,I(f)$ for every $f\in\mathcal C$.
+\end{theorem}
+
+\begin{corollary}\label{cor:dnf}
+Every monotone DNF formula whose terms have at most $w$ variables, and every monotone CNF formula whose clauses have
+at most $w$ variables, satisfies $H(f)\le (w+8.1)\,I(f)$. For $w=2$ the constant is $9.41$: for every graph $G$ on the
+vertex set $[n]$ and every $U\subseteq[n]$, the function
+\[
+f(x)=\bigvee_{u\in U}x_u\ \vee\bigvee_{uw\in E(G)}(x_u\wedge x_w)
+\]
+satisfies $H(f)\le 9.41\,I(f)$, and so does the indicator that the set of ones of $x$ is a vertex cover of $G$.
+\end{corollary}
+
+The class of DNFs of width $w$ is closed under restrictions: setting $x_v=0$ deletes the terms containing $v$ and
+setting $x_v=1$ removes $v$ from them. Every term is an implicant, so a nonconstant such $f$ has a minterm of size at
+most $w$; the CNF case is the dual. For the graph formula, $1-f$ is the indicator that the set of ones is an
+independent set of $G$ avoiding $U$. For this class the read-$k$ theorem of~\cite{Shm26}, with $k$ the maximum
+degree of $G$, gives $(30+5.6\log_2k)\,I(f)$. Another member of the
+class of \cref{thm:width}: for a fixed graph $K$ with $e$ edges, the property that a graph on $n$ vertices contains a
+copy of $K$, as a function of the $\binom n2$ edge indicators, is a monotone DNF of width $e$, so its spectral entropy
+is at most $(e+8.1)$ times its total influence, uniformly in $n$.
+
+\Cref{thm:width} follows from a bound on the restriction step at a single coordinate. For a coordinate $v$ let
+$f_0,f_1$ be the restrictions $x_v=0,1$ and
+\[
+\Delta_v(f)=H(f)-\tfrac12\bigl(H(f_0)+H(f_1)\bigr).
+\]
+Since $I(f)=\Inf_v(f)+\frac12(I(f_0)+I(f_1))$, a class of functions closed under restrictions in which every
+nonconstant member has a coordinate with $\Delta_v\le K\Inf_v$ satisfies $H\le KI$, by induction on the number of
+variables; this is the induction used by Gonz\'alez, MacManus and Pereyra~\cite{GMP26}.
+
+\begin{theorem}\label{thm:step}
+Let $f$ be monotone and let $v$ be a coordinate with $\Inf_v(f)>0$. Then
+\[
+\Delta_v(f)\le \Inf_v(f)\Bigl(\frac2{\ln 2}+\frac{2e^{-1/2}}{\ln2}+\Psi\Bigl(\frac{4m}{\Inf_v(f)}-2\Bigr)\Bigr).
+\]
+\end{theorem}
+
+For an arbitrary Boolean function the step is at most $(2/\ln2+\log_2(e/\Inf_v))\Inf_v$ when $\Inf_v\le\frac12$;
+summed along a telescoping it gives the bound of~\cite{KMS12} up to the constant. For monotone functions the
+logarithm is of the influence relative to the variance. It cannot be removed altogether (\cref{rem:log}). Summing the
+step along the telescoping of~\cite{Han25} gives the following.
+
+\begin{corollary}\label{cor:han}
+For every monotone $f$,
+\[
+H(f)\le\sum_v\Inf_v(f)\Bigl(4.6355+\Psi\Bigl(\frac{4m}{\Inf_v(f)}-2\Bigr)\Bigr)\le 7.08\,I(f)+\sum_v\Inf_v(f)\log_2\frac{4m}{\Inf_v(f)}.
+\]
+\end{corollary}
+
+For balanced functions this is no better than the bound $H(f)\le\sum_vh(\Inf_v)$. For biased functions it is
+stronger: for the
+conjunction of $n$ variables every influence equals $2m$ and the right side is $8.08\,I$.
+
+\begin{corollary}\label{cor:reduce}
+Let $0<\tau\le2$ and $K>0$. Suppose every monotone $g$ with $\Inf_v(g)<\tau\,m(g)$ for all $v$ has a coordinate with
+$\Delta_v(g)\le K\Inf_v(g)$. Then every monotone $f$ satisfies $H(f)\le\max(K,4.6355+\Psi(4/\tau-2))\,I(f)$.
+\end{corollary}
+
+So the conjecture for monotone functions reduces to monotone functions whose influences are all small compared with
+their variance. Balanced tribes, majority and monotone graph properties with constant variance are of this kind;
+\cref{sec:remarks} explains why the argument gives nothing more there.
+
+In \cref{thm:width} the large influence comes from a short minterm. Decision trees supply another: by the theorem of
+O'Donnell, Saks, Schramm and Servedio~\cite{OSSS05}, a function computed by a decision tree has a coordinate whose
+influence is at least the variance divided by the expected depth of the tree. For a Boolean function $g$ let $\bar
+d(g)$ be the least expected depth, on a uniformly random input, of a decision tree computing $g$, and let $L(f)$ be the
+largest $\bar d(g)$ over the restrictions $g$ of $f$. A tree may be assumed to read no coordinate twice on a path;
+then a leaf at depth $k$ is reached with probability $2^{-k}$, and the expected depth is the entropy of the leaf
+reached. Restricting a tree does not add leaves, so $L(f)\le\log_2s$ if $f$ is computed by a tree with $s$ leaves. Also $L(f)$ is at most the
+depth of any tree for $f$ and, averaging over the random choices, at most the least worst-case expected number of
+queries of a randomized decision tree for $f$.
+
+\begin{theorem}\label{thm:dt}
+Every nonconstant monotone $f$ satisfies
+\[
+H(f)\le\bigl(4.6355+\Psi(2L(f)-2)\bigr)\,I(f)\le\bigl(\log_2L(f)+7.85\bigr)\,I(f).
+\]
+In particular, a monotone function computed by a decision tree with $s\ge2$ leaves satisfies
+$H(f)\le(\log_2\log_2s+7.85)\,I(f)$.
+\end{theorem}
+
+For Boolean functions with $I(f)\ge1$ computed by a decision tree of expected depth $d$, Wan, Wright and
+Wu~\cite{WWW14} proved $H(f)\le12d\,I(f)$. For monotone functions \cref{thm:dt} replaces the factor $d$ by its
+logarithm, at the price of a maximum over restrictions. Write $s(f)$ for the sensitivity of $f$.
+
+\begin{corollary}\label{cor:dtcases}
+Let $f$ be a nonconstant monotone function.
+\begin{enumerate}
+\item[(a)] If $f$ is a DNF formula with $m$ terms or a CNF formula with $m$ clauses, then
+$H(f)\le(\log_2m+8.85)\,I(f)$.
+\item[(b)] If the minterms of $f$ have at most $w_1$ elements and its maxterms at most $w_0$ elements, then
+$H(f)\le(\log_2(w_0w_1)+7.85)\,I(f)$.
+\item[(c)] $H(f)\le(2\log_2s(f)+7.85)\,I(f)$.
+\item[(d)] If $f$ has Fourier degree $k$, then $H(f)\le(4\log_2k+9.85)\,I(f)$.
+\end{enumerate}
+\end{corollary}
+
+For DNF formulas with $m$ terms, monotone or not, the read-$k$ theorem of~\cite{Shm26} gives
+$(30+5.6\log_2m)\,I(f)$. Part (b) is logarithmic in the widths, where \cref{thm:width} is linear in the smaller one.
+
+O'Donnell and Tan~\cite{OT13} introduced a stronger inequality that is preserved under disjoint composition. With
+$H^+(f)=\sum_{A\neq\emptyset}P(A)\log_2(1/P(A))$ and $\Var(f)=1-P(\emptyset)$ it reads
+\begin{equation}\label{eq:feiplus}
+H^+(f)\le C\,\bigl(I(f)-\Var(f)\bigr),
+\end{equation}
+and it implies $H(f)\le\max(C,1/\ln2)\,I(f)$~\cite[Proposition~2.1]{OT13}.
+
+\begin{theorem}\label{thm:plus}
+Every $f$ in a class $\mathcal C$ as in \cref{thm:width} satisfies \eqref{eq:feiplus} with
+\[
+C=C^+_w=\max\Bigl(8.80,\ 2\Bigl(1.0615+\frac2{\ln2}+\Psi(2^{w+1}-4)\Bigr)\Bigr).
+\]
+Numerically $C^+_1=12.78$, $C^+_2=17.43$, $C^+_3=19.56$, and $C^+_w\le2w+14.8$ for every $w\ge1$. Every nonconstant
+monotone $f$ satisfies \eqref{eq:feiplus} with
+$C=\max\bigl(8.80,\,2(1.0615+2/\ln2+\Psi(2L(f)-2))\bigr)\le2\log_2L(f)+14.33$.
+\end{theorem}
+
+By the composition theorem of~\cite{OT13}, functions satisfying \eqref{eq:feiplus} can be combined along a read-once
+formula whose gates satisfy the biased form of \eqref{eq:feiplus} at the means of their inputs. Under every product
+measure this holds for AND, OR and XOR gates of any fan-in with constant $2+4\log_2e<7.78$, for threshold gates
+$\mathbf 1[y_1+\cdots+y_r\ge t]$ of any fan-in with constant $760$~\cite{Shm26}, and for gates of arity at most $a$
+with a constant $2^{O(a)}$~\cite{OT13}.
+
+\begin{corollary}\label{cor:compose}
+Let $F$ be a read-once formula and $f=F(f_1,\dots,f_s)$, where $f_1,\dots,f_s$ are monotone DNF or CNF formulas of
+width at most $w$ on pairwise disjoint sets of variables. Suppose every gate of $F$ is an AND, OR, XOR or threshold gate
+of any fan-in, or a monotone DNF or CNF formula of width at most $w$ whose inputs are balanced, that is, equal to $1$
+with probability $\frac12$. Then $H(f)\le\max(C^+_w,760)\,I(f)$, and $H(f)\le C^+_w\,I(f)$ if there are no threshold
+gates.
+\end{corollary}
+
+For instance, the conjunction of any number of monotone $2$-DNFs on pairwise disjoint sets of variables is a monotone
+DNF of unbounded width, and it satisfies $H\le17.43\,I$; so does $G(\mathrm{Maj}_3(x^1),\dots,\mathrm{Maj}_3(x^m))$ for
+every monotone $2$-DNF $G$ and disjoint blocks $x^1,\dots,x^m$, since the majority of three unbiased bits is
+unbiased. By the last statement of \cref{thm:plus}, the leaves $f_j$ in \cref{cor:compose} may also be monotone
+functions with $L(f_j)\le L$, with $C^+_w$ replaced by $\max(C^+_w,2\log_2L+14.33)$.
+
+The argument also works under product measures whose biases stay away from $0$ and $1$. For a product measure $\mu$ let
+$P_\mu(A)$ be the squared coefficients of $F$ in the orthonormal basis of $L^2(\mu)$, $I_\mu$ and $\Var_\mu$ the
+corresponding total influence and variance, and $\sigma_A^2=\prod_{i\in A}4\mu(x_i=1)\mu(x_i=0)$ (\cref{sec:product}).
+
+\begin{theorem}\label{thm:product}
+Let $0<\eta\le\frac12$, let $\mu$ be a product measure with $\mu(x_i=1)\in[\eta,1-\eta]$ for every $i$, and let
+$\mathcal C$ be as in \cref{thm:width}. Then every $f\in\mathcal C$ satisfies
+\[
+\sum_{A\neq\emptyset}P_\mu(A)\log_2\frac{\sigma_A^2}{P_\mu(A)}\le\bigl(14.24+2w\log_2(1/\eta)\bigr)\bigl(I_\mu(f)-\Var_\mu(f)\bigr).
+\]
+\end{theorem}
+
+So in \cref{cor:compose} a gate that is a monotone DNF or CNF formula of width at most $w$ may have inputs whose biases
+lie in $[\eta,1-\eta]$, with $C^+_w$ replaced by $\max(C^+_w,14.24+2w\log_2(1/\eta))$.
+
+\section{The restriction step}
+
+\subsection{Erasure and Jensen--Shannon parts}
+Fix $v$. For $T\subseteq[n]\setminus\{v\}$ the sets $T$ and $T\cup\{v\}$ carry the weights $P(T)$ and $P(T\cup v)$,
+and the restrictions have $\widehat{F_b}(T)=\widehat F(T)\pm\widehat F(T\cup v)$. Let $\phi(t)=t\log_2(1/t)$ and
+$\mathcal E(X,Y)=\phi(X)+\phi(Y)-\phi(X+Y)=(X+Y)\,h\bigl(Y/(X+Y)\bigr)$, where $h$ is the binary entropy. The law of
+$S\setminus\{v\}$ is the average of the spectral distributions of $F_0$ and $F_1$, so
+\[
+\Delta_v=B_v+\JS_v,\qquad B_v=\sum_{T\not\ni v}\mathcal E\bigl(P(T),P(T\cup v)\bigr)=H(\mathbf 1[v\in S]\mid S\setminus\{v\}),
+\]
+and $\JS_v$ is the Jensen--Shannon divergence of the two spectral distributions.
+
+\begin{lemma}\label{lem:js}
+For every Boolean function, $\JS_v\le\frac{2}{\ln2}\sum_{T\not\ni v}\min\bigl(P(T),P(T\cup v)\bigr)\le\frac2{\ln2}\Inf_v$.
+\end{lemma}
+
+\begin{proof}
+Put $u=\widehat F(T)$ and $w=\widehat F(T\cup v)$. The pair contributes
+$J=\phi(u^2+w^2)-\frac12\phi((u+w)^2)-\frac12\phi((u-w)^2)$, which is $1/\ln2$ times the entropy
+$\mathrm{Ent}(g^2)=\E g^2\ln g^2-\E g^2\ln\E g^2$ of the function $g$ on the two-point space with the uniform measure
+and values $|u+w|$, $|u-w|$. By the logarithmic Sobolev inequality of the two-point space~\cite{Gro75},
+$\mathrm{Ent}(g^2)\le\frac12(|u+w|-|u-w|)^2=2\min(u^2,w^2)$.
+\end{proof}
+
+\subsection{The down-set identity}
+Let $f$ be monotone, $D=\{x:f(x)=0\}$, $q=|D|2^{-n}>0$, and let $\mu$ be the uniform measure on $D$, with
+$\tilde\mu(T)=\E_\mu\chi_T$. Since $F=2\cdot\mathbf 1_D-1$,
+\begin{equation}\label{eq:fmu}
+\widehat F(T)=2q\,\tilde\mu(T)\qquad(T\neq\emptyset).
+\end{equation}
+Fix $v$. For $y\in\bits^{[n]\setminus\{v\}}$ call $y$ \emph{blocked} if $y\in D$ and $y+v\notin D$, and \emph{free}
+if $y+v\in D$; here $y+v$ is $y$ with the $v$-th coordinate set to $1$. As $D$ is a down-set, the fibre of $D$ over a
+blocked $y$ is $\{y\}$ and over a free $y$ is $\{y,y+v\}$. For $T\subseteq[n]\setminus\{v\}$ put
+\[
+a(T)=\frac1{|D|}\sum_{y\ \mathrm{blocked}}\chi_T(y),\qquad b(T)=\frac2{|D|}\sum_{y\ \mathrm{free}}\chi_T(y).
+\]
+
+\begin{lemma}\label{lem:downset}
+For $T\subseteq[n]\setminus\{v\}$, $\tilde\mu(T\cup v)=a(T)$ and $\tilde\mu(T)=a(T)+b(T)$. With
+$\eps=\Inf_v(f)/(4q)$,
+\[
+q\sum_T a(T)^2=\eps,\qquad q\sum_T b(T)^2=1-2\eps,\qquad 0\le\eps\le\tfrac12 .
+\]
+\end{lemma}
+
+\begin{proof}
+On a free fibre $x_v$ takes both values with equal weight, so $\chi_{T\cup v}$ averages to $0$ there, while on a
+blocked fibre $x_v=0$; this gives both identities. Let $N_B,N_F$ be the numbers of blocked and free $y$. Then
+$|D|=N_B+2N_F$, and $\Inf_v=N_B/2^{n-1}$ because the edges of the cube in direction $v$ on which $f$ changes are
+exactly the pairs $\{y,y+v\}$ with $y$ blocked. Parseval on $\bits^{n-1}$ gives
+$\sum_Ta(T)^2=2^{n-1}N_B/|D|^2$ and $\sum_Tb(T)^2=2^{n-1}\cdot4N_F/|D|^2$; multiplying by $q=|D|/2^n$ gives
+$N_B/(2|D|)=\eps$ and $2N_F/|D|=1-2\eps$.
+\end{proof}
+
+Under $\mu$ a coordinate is a fair coin on free fibres and $0$ on blocked ones, and $2\eps$ is the $\mu$-probability
+that it is blocked. By \eqref{eq:fmu}, $P(T\cup v)=4q^2a(T)^2$ for every $T$ and $P(T)=4q^2(a(T)+b(T))^2$ for $T$
+nonempty. Also $\widehat F(\{v\})=\Inf_v$ for monotone $f$, so $P(\{v\})=\Inf_v^2$.
+
+\subsection{The erasure bound}
+The function $\Psi$ is increasing and concave, since $r+2\sqrt r+2$ is concave and positive. Let
+$c_0=\max_{0<x\le1}x\log_2(e/x^2)=2e^{-1/2}/\ln2=1.75008$.
+
+\begin{lemma}\label{lem:erasure}
+For monotone $f$ and $\Inf_v(f)>0$, $B_v\le\Inf_v\bigl(c_0+\Psi(4m/\Inf_v-2)\bigr)$.
+\end{lemma}
+
+\begin{proof}
+The dual $f^*(x)=1-f(\mathbf 1-x)$ is monotone, its coefficients are $-(-1)^{|T|}\widehat F(T)$, so it has the same
+$P$, and $\Pr[f^*=0]=1-q$. Hence it suffices to prove the bound with $q$ in place of $m$; note $\Inf_v\le2q$. We use
+$\mathcal E(X,Y)\le Y\log_2\bigl(e(X+Y)/Y\bigr)$, which follows from $X\log_2(1+Y/X)\le Y\log_2e$.
+
+For $T=\emptyset$, $P(\{v\})=\Inf_v^2$ and $P(\emptyset)+P(\{v\})\le1$, so this pair contributes at most
+$\Inf_v^2\log_2(e/\Inf_v^2)\le c_0\Inf_v$.
+
+Let $T\neq\emptyset$. If $a(T)=0$ the pair contributes $0$. Otherwise let $s=b(T)/a(T)$. Since $\mathcal E$ is
+homogeneous of degree one, the pair contributes $4q\cdot q\,a(T)^2\cdot\psi(s)$, where
+$\psi(s)=\mathcal E((1+s)^2,1)\le\log_2\bigl(e((1+s)^2+1)\bigr)\le\Psi(s^2)$. The weights $w_T=q\,a(T)^2$ have total
+$W\le\eps$, and $\sum_Tw_Ts_T^2\le q\sum_Tb(T)^2=1-2\eps$ by \cref{lem:downset}. By Jensen's inequality for the
+concave increasing $\Psi$,
+\[
+\sum_T w_T\Psi(s_T^2)\le W\,\Psi\Bigl(\frac{1-2\eps}W\Bigr)\le \eps\,\Psi\Bigl(\frac{1-2\eps}{\eps}\Bigr),
+\]
+where the last step holds because $W\mapsto W\Psi(c/W)$ is nondecreasing: its derivative is $\Psi(z)-z\Psi'(z)$ at
+$z=c/W$, which is at least $\Psi(0)>0$ by concavity. As $(1-2\eps)/\eps=4q/\Inf_v-2$ and $4q\eps=\Inf_v$, the pairs
+with $T\neq\emptyset$ contribute at most $\Inf_v\Psi(4q/\Inf_v-2)$.
+\end{proof}
+
+\Cref{thm:step} is \cref{lem:erasure} together with \cref{lem:js}.
+
+\section{Short certificates and decision trees}
+
+\begin{lemma}\label{lem:cert}
+Let $f$ be monotone with a minterm $M$ of size $k\ge1$. Then some $v\in M$ has
+$\Inf_v(f)\ge 4q/(2^{k+1}-2)$. If $f$ has a maxterm of size $k$, some $v$ in it has
+$\Inf_v(f)\ge4(1-q)/(2^{k+1}-2)$.
+\end{lemma}
+
+\begin{proof}
+The second statement is the first for $f^*$. If $k=1$, then $M=\{v\}$ and $f=x_v\vee g$ with $g$ not depending on
+$x_v$, so $\Inf_v=\Pr[g=0]=2q$. Let $k\ge2$, $M=\{v_1,\dots,v_k\}$, and let $\delta$ be the largest of the numbers
+$\eps_{v_j}=\Inf_{v_j}/(4q)$. Under $\mu$ the conditional probability that $x_{v_j}=1$ given the other coordinates is
+$\frac12$ on free fibres and $0$ on blocked ones, and the blocked fibres have probability $2\eps_{v_j}$. Hence
+$p_j=\mu(x_{v_2}=\dots=x_{v_j}=1)$ satisfies $p_1=1$ and $p_{j+1}\ge\frac12(p_j-2\delta)$, so that
+$p_k\ge2^{1-k}-\delta(2-2^{2-k})$. When $x_{v_2}=\dots=x_{v_k}=1$ the coordinate $v_1$ is blocked, since adding it
+completes $M$; hence $2\delta\ge2\eps_{v_1}\ge p_k$, and therefore $\delta\ge1/(2^{k+1}-2)$.
+\end{proof}
+
+For $k=2$ the bound reads $\eps\ge\frac16$ at one end of every edge; it is attained by a single edge, where both ends
+are occupied with probability $\frac13$ under the uniform measure on independent sets.
+
+\begin{proof}[Proof of \cref{thm:width}]
+Let $f\in\mathcal C$ be nonconstant. By \cref{lem:cert} it has a coordinate with $\Inf_v\ge4m/(2^{w+1}-2)$, so
+$4m/\Inf_v-2\le2^{w+1}-4$ and \cref{thm:step} gives $\Delta_v\le c_w\Inf_v$, as $\Psi$ is increasing. The restrictions
+are in $\mathcal C$ and have fewer variables, and constants have $H=I=0$; induction completes the proof. For the
+estimate $c_w\le w+8.1$ use $\Psi(r)\le\log_2e+\log_2(r+2\sqrt r+2)$ with $r=2^{w+1}-4$, which gives
+$c_w\le w+1+\log_2e+4.6355+\log_2(1+2^{(1-w)/2})$.
+\end{proof}
+
+\begin{remark}\label{rem:mixed}
+The induction needs the short minterm only where no other bound is available. Let $\mathcal B\subseteq\mathcal C$ be
+classes of monotone functions closed under restrictions, suppose $H\le C_{\mathcal B}I$ on $\mathcal B$, and suppose
+every nonconstant $f\in\mathcal C\setminus\mathcal B$ has a minterm or a maxterm with at most $w$ elements. Then
+$H\le\max(c_w,C_{\mathcal B})\,I$ on $\mathcal C$. For example, let $\mathcal B$ be the monotone regular functions,
+which include the monotone threshold functions and satisfy $H\le15.1\,I$~\cite{Shm26}, and let $\mathcal C$ consist
+of the functions $g\vee h$ with $g\in\mathcal B$ and $h$ a monotone DNF of width at most $w$, on the same variables or
+not. A restriction of $g\vee h$ is $g_\rho\vee h_\rho$; if $h_\rho=0$ it lies in $\mathcal B$, and otherwise it is
+constant or has a term of $h_\rho$, of size at most $w$, as an implicant. Hence, for instance,
+$\mathrm{Maj}_n(x)\vee\bigvee_{uw\in E(G)}(x_u\wedge x_w)$ satisfies $H\le15.1\,I$ for every graph $G$ on $[n]$.
+\end{remark}
+
+\begin{proof}[Proof of \cref{thm:dt}]
+Let $g$ be a nonconstant restriction of $f$, let $L=L(f)$, and let $T$ be a decision tree for $g$ whose expected
+depth on a uniformly random input is at most $L$. If $\delta_i$ is the probability that $T$ reads the coordinate $i$,
+then $\sum_i\delta_i$ is the expected depth, and the theorem of~\cite{OSSS05} gives
+\[
+\Var(G)\le\sum_i\delta_i\Inf_i(g)\le L\max_i\Inf_i(g),
+\]
+where $G=1-2g$. As $\Var(G)\ge2m(g)$, some coordinate has $4m(g)/\Inf_v(g)-2\le2L-2$, and \cref{thm:step} gives
+$\Delta_v(g)\le(4.6355+\Psi(2L-2))\Inf_v(g)$. The restrictions of $f$ form a class closed under restrictions, so the
+induction of the introduction applies. For the second bound, $\Psi(2L-2)=\log_2(2e)+\log_2L+\log_2(1+\sqrt{2L-2}/L)$
+and $\sqrt{2L-2}/L\le1/\sqrt2$ for $L\ge1$, so $4.6355+\Psi(2L-2)\le\log_2L+4.6355+2.4427+0.7716$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{cor:dtcases}]
+(a) Evaluate the terms one after another, reading the unread variables of the current term until one of them is $0$
+or all of them are $1$. For each term at most two new variables are read in expectation, so this tree has expected
+depth at most $2m$. A restriction of $f$ is a DNF formula with at most $m$ terms, so $L(f)\le2m$, and
+$\log_2(2m)+7.85=\log_2m+8.85$. CNF formulas are handled in the same way, reading variables until one is $1$.
+(b) The least depth of a decision tree for a Boolean function $g$ is at most $C_0(g)C_1(g)$~\cite{BdW02}, where $C_b(g)$
+is the largest, over the inputs $x$ with $g(x)=b$, of the least number of coordinates whose values at $x$ force the
+value $b$. For monotone $g$, $C_1(g)$ and $C_0(g)$ are the largest sizes of a minterm and of a maxterm, and neither
+increases under restriction. Hence $L(f)\le w_0w_1$.
+(c) For monotone $g$ the certificate complexity $\max(C_0(g),C_1(g))$ equals the sensitivity $s(g)$~\cite{BdW02}, and
+the sensitivity does not increase under restriction. Hence $L(f)\le s(f)^2$.
+(d) For monotone $g$ the sensitivity equals the block sensitivity, which is at most $2\deg(g)^2$~\cite{BdW02}, and the
+degree does not increase under restriction. Hence $L(f)\le4k^4$, and $\log_2(4k^4)+7.85=4\log_2k+9.85$.
+\end{proof}
+
+\section{Relative influences and the reduction}
+
+\begin{proof}[Proof of \cref{cor:han}]
+Han's telescoping~\cite[(3.4)]{Han25} writes $H(f)=\sum_{k=1}^n\E\,\Delta_k(f_{x})$, where $f_x$ is $f$ with the
+coordinates after $k$ fixed to $x$, uniformly random, and $\Delta_k$ is its restriction step at $k$. Each $f_x$ is
+monotone. By \cref{thm:step},
+$\Delta_k(f_x)\le 4.6355\Inf_k(f_x)+G\bigl(\Inf_k(f_x),m(f_x)\bigr)$ with $G(x,m)=x\,\Psi(4m/x-2)$. The function $G$ is
+the perspective of the concave $\Psi$ composed with the affine map $(x,m)\mapsto(x,4m-2x)$, hence jointly concave, and
+it is increasing in $m$. Jensen's inequality with $\E\Inf_k(f_x)=\Inf_k(f)$ and $\E\,m(f_x)\le m(f)$ gives the first
+bound. The second follows from $\Psi(r)\le\log_2\bigl(2e(r+2)\bigr)$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{cor:reduce}]
+Let $C=\max(K,4.6355+\Psi(4/\tau-2))$ and argue by induction on the number of variables. A nonconstant monotone $f$
+either has a coordinate with $\Inf_v\ge\tau m$, where \cref{thm:step} gives $\Delta_v\le C\Inf_v$, or satisfies the
+hypothesis; in both cases restricting $v$ and using the induction hypothesis on $f_0,f_1$ gives $H(f)\le C\,I(f)$.
+\end{proof}
+
+Running the same descent on a hypothetical counterexample shows where it would have to live: if $H(f)>C\,I(f)$ with
+$C>7.08$, then, keeping at each step the restriction with the larger excess $H-CI$, one reaches a restriction $g$ of
+$f$ with $H(g)-CI(g)\ge H(f)-CI(f)$ and $\Inf_v(g)<2^{9.08-C}m(g)$ for every coordinate $v$.
+
+\section{The strengthened inequality}\label{sec:plus}
+
+For a coordinate $v$ put $a_T=\widehat F(T)$ and $d_T=\widehat F(T\cup v)$ for $T\subseteq[n]\setminus\{v\}$, let
+$D_vF=\frac12\bigl(F(x^{v\leftarrow0})-F(x^{v\leftarrow1})\bigr)$, and let
+\[
+\Delta^+_v=H^+(f)-\tfrac12\bigl(H^+(f_0)+H^+(f_1)\bigr),\qquad
+J(a,d)=\phi(a^2+d^2)-\tfrac12\bigl(\phi((a+d)^2)+\phi((a-d)^2)\bigr)\ge0 .
+\]
+
+\begin{lemma}\label{lem:plusstep}
+For every Boolean function and every coordinate $v$,
+\begin{gather*}
+\Delta^+_v=\phi(d_\emptyset^2)+\sum_{T\neq\emptyset}\bigl(\mathcal E(a_T^2,d_T^2)+J(a_T,d_T)\bigr),\\
+\bigl(I-\Var\bigr)(f)=\Var(D_vF)+\tfrac12\bigl((I-\Var)(f_0)+(I-\Var)(f_1)\bigr).
+\end{gather*}
+\end{lemma}
+
+\begin{proof}
+The nonempty sets are the $T\neq\emptyset$ with $v\notin T$ and the sets $T\cup v$, including $\{v\}$; the restriction
+$F_b$ has the coefficients $a_T\pm d_T$, and $\mathcal E(a^2,d^2)+J(a,d)=\phi(a^2)+\phi(d^2)-\frac12(\phi((a+d)^2)+
+\phi((a-d)^2))$. For the second identity, $I(f)=\Inf_v+\frac12(I(f_0)+I(f_1))$, the means of $F_0,F_1$ are
+$a_\emptyset\pm d_\emptyset$, so that $\Var(f)=\frac12(\Var(f_0)+\Var(f_1))+d_\emptyset^2$, and
+$\Inf_v-d_\emptyset^2=\E(D_vF)^2-(\E D_vF)^2$.
+\end{proof}
+
+Consequently, a class closed under restrictions in which every nonconstant member has a coordinate with
+$\Delta^+_v\le C\Var(D_vF)$ satisfies \eqref{eq:feiplus}, by induction on the number of variables.
+
+\begin{lemma}\label{lem:neardict}
+For monotone $f$ and every $v$ with $\Inf_v>0$,
+$\Delta^+_v\le\Var(D_vF)\bigl(4/\ln2+\log_2(e(1+1/\Inf_v))\bigr)$. In particular $\Delta^+_v\le8.80\Var(D_vF)$
+when $\Inf_v\ge\frac12$.
+\end{lemma}
+
+\begin{proof}
+For monotone $f$, $D_vF$ takes the values $0$ and $1$, so $d_\emptyset=\Inf_v$ and
+$\sum_{T\neq\emptyset}d_T^2=\Var(D_vF)=\Inf_v(1-\Inf_v)$. The function $A=\frac12(F_0+F_1)$ has
+$\widehat A(T)=a_T$ and vanishes exactly where $v$ is pivotal, so $\sum_{T\neq\emptyset}a_T^2\le\E A^2=1-\Inf_v$. First,
+$\phi(\Inf_v^2)=\frac2{\ln2}\Inf_v^2\ln\frac1{\Inf_v}\le\frac2{\ln2}\Var(D_vF)$. Next let
+$M=\sum_{T\neq\emptyset}\min(a_T^2,d_T^2)\le\Var(D_vF)$ and $S=\sum_{T\neq\emptyset}(a_T^2+d_T^2)$. By the pointwise
+bound in the proof of \cref{lem:js}, $\sum_{T\neq\emptyset}J(a_T,d_T)\le\frac2{\ln2}M$. Since
+$\mathcal E(X,Y)\le\min(X,Y)\log_2\bigl(e(X+Y)/\min(X,Y)\bigr)$, the log-sum inequality gives
+\[
+\sum_{T\neq\emptyset}\mathcal E(a_T^2,d_T^2)\le M\log_2(eS/M),
+\]
+and as $x\log_2(eS/x)$ increases for $x\le S$,
+this is at most $\Var(D_vF)\log_2(eS/\Var(D_vF))$, where $S/\Var(D_vF)\le1+(1-\Inf_v)/\Var(D_vF)=1+1/\Inf_v$. For
+$\Inf_v\ge\frac12$ the constant is $4/\ln2+\log_2(3e)<8.80$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:plus}]
+Let $f\in\mathcal C$ be nonconstant and let $v$ be the coordinate of \cref{lem:cert}, so that
+$4m/\Inf_v-2\le2^{w+1}-4$; for the last statement, let $f$ be a nonconstant restriction of the given function and $v$ the
+coordinate found in the proof of \cref{thm:dt}, with $4m/\Inf_v-2\le2L-2$, and replace $2^{w+1}-4$ by $2L-2$ below. If
+$\Inf_v\ge\frac12$, \cref{lem:neardict} gives $\Delta^+_v\le8.80\Var(D_vF)$. Otherwise
+\cref{lem:plusstep} gives $\Delta^+_v\le\phi(\Inf_v^2)+\sum_{T\neq\emptyset}\mathcal E(a_T^2,d_T^2)+\JS_v$. The middle
+sum is the part of $B_v$ bounded in the proof of \cref{lem:erasure} by $\Inf_v\Psi(4m/\Inf_v-2)$, and
+$\JS_v\le\frac2{\ln2}\Inf_v$ by \cref{lem:js}. As $\phi(x^2)\le\frac2{e\ln2}\,x<1.0615\,x$ and
+$\Var(D_vF)=\Inf_v(1-\Inf_v)\ge\frac12\Inf_v$, we get $\Delta^+_v\le C^+_w\Var(D_vF)$, and \cref{lem:plusstep}
+completes the induction. The estimate $C^+_w\le2w+14.8$ follows as in the proof of \cref{thm:width}, and the estimate
+$2\log_2L+14.33$ as in the proof of \cref{thm:dt}, since $2(1.0615+2/\ln2+2.4427+0.7716)<14.33$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{cor:compose}]
+By~\cite[Theorem~1]{OT13}, if $g_1,\dots,g_k$ on disjoint sets of variables satisfy \eqref{eq:feiplus} with constant $C$
+and $G$ satisfies the biased form of \eqref{eq:feiplus} with constant $C$ under the product measure with the means of
+the $g_j$, then $G(g_1,\dots,g_k)$ satisfies \eqref{eq:feiplus} with constant $C$. The leaves satisfy it with $C^+_w$ by
+\cref{thm:plus}, AND, OR, XOR and threshold gates with $2+4\log_2e<C^+_w$ or $760$~\cite{Shm26}, and a monotone DNF or
+CNF gate of width at most $w$ with balanced inputs needs the inequality only under the uniform measure, where
+\cref{thm:plus} gives $C^+_w$. Induction on the depth of $F$ and \cite[Proposition~2.1]{OT13} give the claim.
+\end{proof}
+
+\section{Product measures}\label{sec:product}
+
+Let $\mu$ be a product measure on $\bits^n$ with $q_i=\mu(x_i=1)\in(0,1)$, put $\sigma_i^2=4q_i(1-q_i)$ and
+$\sigma_A^2=\prod_{i\in A}\sigma_i^2$, and let $\chi^\mu_A=\prod_{i\in A}(x_i-q_i)/\sqrt{q_i(1-q_i)}$ be the orthonormal
+basis of $L^2(\mu)$. For $F=1-2f=\sum_A\widetilde F(A)\chi^\mu_A$ put $P_\mu(A)=\widetilde F(A)^2$,
+$I_\mu(f)=\sum_A|A|P_\mu(A)$, $\Var_\mu(f)=1-P_\mu(\emptyset)$, and
+\[
+L_\mu(f)=\sum_{A\neq\emptyset}P_\mu(A)\log_2\frac{\sigma_A^2}{P_\mu(A)},\qquad R_\mu(f)=I_\mu(f)-\Var_\mu(f),
+\]
+so that the biased form of \eqref{eq:feiplus} reads $L_\mu(f)\le C\,R_\mu(f)$. Fix a coordinate $v$ and write $q=q_v$,
+$\sigma^2=\sigma_v^2$, $\tau=\sqrt{q/(1-q)}$, and $a_T=\widetilde F(T)$, $d_T=\widetilde F(T\cup v)$ for $T\not\ni v$. The
+restrictions $f_0,f_1$ to $x_v=0,1$, with $\mu$ on the other coordinates, have the coefficients $a_T-\tau d_T$ and
+$a_T+d_T/\tau$; they are weighted with $1-q$ and $q$, and the mixture of their spectra is $a_T^2+d_T^2$ because the
+cross terms cancel. Put $\Inf^\mu_v=\sum_Td_T^2$ and
+\[
+J_q(a,d)=\phi(a^2+d^2)-(1-q)\,\phi\bigl((a-\tau d)^2\bigr)-q\,\phi\bigl((a+d/\tau)^2\bigr)\ge0 .
+\]
+
+\begin{lemma}\label{lem:biasedstep}
+For every Boolean function and every coordinate $v$,
+\begin{gather*}
+L_\mu(f)-(1-q)L_\mu(f_0)-q\,L_\mu(f_1)=d_\emptyset^2\log_2\frac{\sigma^2}{d_\emptyset^2}
++\sum_{T\neq\emptyset}\bigl(\mathcal E(a_T^2,d_T^2)+J_q(a_T,d_T)\bigr)-\log_2\frac1{\sigma^2}\sum_{T\neq\emptyset}d_T^2,\\
+R_\mu(f)-(1-q)R_\mu(f_0)-q\,R_\mu(f_1)=\sum_{T\neq\emptyset}d_T^2 .
+\end{gather*}
+\end{lemma}
+
+\begin{proof}
+The factors $\sigma_A^2$ with $A\not\ni v$ are the same in $f$ and in its restrictions, and each set $T\cup v$ carries the
+extra factor $\sigma^2$; with the mixture $a_T^2+d_T^2$ this gives the first identity, as in \cref{lem:plusstep}. For the
+second, $I_\mu$ drops by $\Inf^\mu_v$ and $\Var_\mu$ by $d_\emptyset^2$.
+\end{proof}
+
+The Jensen--Shannon part is bounded by the logarithmic Sobolev constant of the biased two-point space, and the factor
+$\sigma^2$ pays for it.
+
+\begin{lemma}\label{lem:biasedjs}
+In this notation $J_q(a,d)\le\frac{c(q)}{\ln2}\,d^2$ for all real $a,d$, where $c(q)=\ln((1-q)/q)/(1-2q)$ and
+$c(\frac12)=2$. The constant $c(q)$ is best possible, and $c(q)\le2+\ln(1/\sigma^2)$.
+\end{lemma}
+
+\begin{proof}
+Put $u=a-\tau d$ and $w=a+d/\tau$. Then $(1-q)u^2+qw^2=a^2+d^2$, so $J_q(a,d)$ is $1/\ln2$ times $\mathrm{Ent}_\nu(g^2)$
+for the function $g$ with values $|u|,|w|$ on the two-point space with measure $\nu=(1-q,q)$, and
+$d^2=q(1-q)(w-u)^2\ge\Var_\nu(g)$. The logarithmic Sobolev inequality of this space with the optimal constant of
+Diaconis and Saloff-Coste~\cite[Theorem~A.1]{DSC96} gives $\mathrm{Ent}_\nu(g^2)\le c(q)\Var_\nu(g)$. When $u$ and $w$
+have the same sign, $d^2=\Var_\nu(g)$, so the optimality of $c(q)$ in that inequality shows that it cannot be lowered
+here. For the last claim put $x=|1-2q|<1$. Then $c(q)=\frac1x\ln\frac{1+x}{1-x}=2\sum_{k\ge0}\frac{x^{2k}}{2k+1}$ and
+$2+\ln\frac1{\sigma^2}=2+\ln\frac1{1-x^2}=2+\sum_{k\ge1}\frac{x^{2k}}k$, and $\frac2{2k+1}\le\frac1k$ for $k\ge1$.
+\end{proof}
+
+For monotone $f$ let $D=\{f=0\}$, let $\mu_D$ be $\mu$ conditioned on $D$, and let $\mu'$ be the marginal of $\mu$ on
+the coordinates other than $v$. Call $y$ blocked or free as in \cref{lem:downset}; the blocked $y$ are the points at which
+$v$ is pivotal. Let $\pi=\mu'(v\text{ pivotal})$ and $\theta=\mu_D(y\text{ blocked})$.
+
+\begin{lemma}\label{lem:biasederasure}
+For monotone $f$ and $\pi>0$, $d_\emptyset^2=\sigma^2\pi^2$, $\Inf^\mu_v=\sigma^2\pi$, and
+\[
+\sum_{T\neq\emptyset}\mathcal E(a_T^2,d_T^2)\le\Inf^\mu_v\log_2\Bigl(e\Bigl(1+\frac{2(1-q)}q+\frac{2(1-\theta)}{q\theta}\Bigr)\Bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+Let $\mathrm B$ and $\mathrm{Fr}$ be the sets of blocked and free $y$. Under $\mu_D$ the coordinate $x_v$ is $0$ over a
+blocked $y$ and has the law $(1-q,q)$ over a free one, so with $\alpha(T)=\E_{\mu_D}[\chi^\mu_T\mathbf 1_{\mathrm B}]$ and
+$\gamma(T)=\E_{\mu_D}[\chi^\mu_T\mathbf 1_{\mathrm{Fr}}]$ we get $\E_{\mu_D}\chi^\mu_{T\cup v}=-\tau\alpha(T)$ and
+$\E_{\mu_D}\chi^\mu_T=\alpha(T)+\gamma(T)$. As $F=2\cdot\mathbf 1_D-1$, $d_T=-2\mu(D)\tau\alpha(T)$ for every $T$ and
+$a_T=2\mu(D)(\alpha(T)+\gamma(T))$ for $T\neq\emptyset$. The marginal of $\mu_D$ on $y$ has density $(1-q)/\mu(D)$ on
+$\mathrm B$ and $1/\mu(D)$ on $\mathrm{Fr}$ with respect to $\mu'$, so Parseval for $\mu'$ gives
+$\sum_T\alpha(T)^2=(1-q)^2\pi/\mu(D)^2$ and $\sum_T\gamma(T)^2=\mu'(\mathrm{Fr})/\mu(D)^2$. Hence
+$\Inf^\mu_v=4q(1-q)\pi$, and $\alpha(\emptyset)=(1-q)\pi/\mu(D)$ gives $d_\emptyset^2=\sigma^2\pi^2$. For $T\neq\emptyset$
+with $\alpha(T)\neq0$ put $s_T=\gamma(T)/\alpha(T)$. By $\mathcal E(X,Y)\le Y\log_2(e(X+Y)/Y)$ and $(1+s)^2\le2+2s^2$, the
+pair contributes at most $w_Tg(s_T^2)$, where $w_T=4\mu(D)^2\tau^2\alpha(T)^2$ and
+$g(z)=\log_2\bigl(e(1+2/\tau^2+2z/\tau^2)\bigr)$ is concave and increasing. The weights have total $W\le\Inf^\mu_v$ and
+$\sum_Tw_Ts_T^2\le4\tau^2\mu'(\mathrm{Fr})$, so Jensen's inequality and the monotonicity of $W\mapsto Wg(c/W)$, as in the
+proof of \cref{lem:erasure}, bound the sum by $\Inf^\mu_v\,g(4\tau^2\mu'(\mathrm{Fr})/\Inf^\mu_v)$. Finally
+$\mu(D)=(1-q)\pi+\mu'(\mathrm{Fr})$ and $\theta=(1-q)\pi/\mu(D)$ give $8\mu'(\mathrm{Fr})/\Inf^\mu_v=2(1-\theta)/(q\theta)$.
+\end{proof}
+
+\begin{lemma}\label{lem:biasedcert}
+Let $f$ be monotone with a minterm $M$ of size $k$, and suppose $q_i\ge\eta$ for $i\in M$, where $0<\eta<1$. Then some
+$v\in M$ has $\theta\ge\eta^{k-1}(1-\eta)$.
+\end{lemma}
+
+\begin{proof}
+For $k=1$ every $y$ with $(y,0)\in D$ is blocked, so $\theta=1$. Let $k\ge2$, $M=\{v_1,\dots,v_k\}$, and let $\delta$ be
+the largest of the values of $\theta$ at $v_1,\dots,v_k$. Under $\mu_D$ the conditional probability that $x_{v_j}=1$
+given the other coordinates is $q_{v_j}\ge\eta$ over a free point and $0$ over a blocked one, so
+$p_j=\mu_D(x_{v_2}=\dots=x_{v_j}=1)$ satisfies $p_1=1$ and $p_{j+1}\ge\eta(p_j-\delta)$, whence
+$p_k\ge\eta^{k-1}-\delta\eta/(1-\eta)$. When $x_{v_2}=\dots=x_{v_k}=1$ the coordinate $v_1$ is blocked, so $\delta\ge p_k$,
+and therefore $\delta\ge\eta^{k-1}(1-\eta)$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:product}]
+The dual $f^*(x)=1-f(\mathbf 1-x)$, under the measure with the biases $1-q_i$, has the same $P_\mu$, $\sigma_A^2$, $I_\mu$
+and $\Var_\mu$, and its restrictions correspond to those of $f$; so we may assume that the nonconstant $f\in\mathcal C$
+has a minterm of size $k\le w$, and we restrict the coordinate $v$ of \cref{lem:biasedcert}, for which
+$\theta\ge\eta^{k-1}(1-\eta)\ge\eta^{k-1}/2$. Write $\rho=\sum_{T\neq\emptyset}d_T^2=\sigma^2\pi(1-\pi)$. By
+\cref{lem:biasedjs}, $\sum_{T\neq\emptyset}J_q(a_T,d_T)-\log_2(1/\sigma^2)\rho\le\frac2{\ln2}\rho$, and
+$d_\emptyset^2\log_2(\sigma^2/d_\emptyset^2)=2\Inf^\mu_v\,\pi\log_2(1/\pi)$ by \cref{lem:biasederasure}.
+
+If $\pi\le\frac12$, then $\Inf^\mu_v\le2\rho$ and $2\pi\log_2(1/\pi)\le\frac2{e\ln2}<1.0615$. In \cref{lem:biasederasure},
+$\frac{2(1-q)}q+\frac{2(1-\theta)}{q\theta}\le\frac4{\eta\theta}\le8\eta^{-k}$, so the erasure part is at most
+$\Inf^\mu_v(\log_2(9e)+k\log_2(1/\eta))$. With \cref{lem:biasedstep} the step of $L_\mu$ is at most
+$\rho\bigl(2\cdot1.0615+2\log_2(9e)+2/\ln2+2k\log_2(1/\eta)\bigr)<(14.24+2k\log_2(1/\eta))\,\rho$.
+
+If $\pi>\frac12$, then $2\Inf^\mu_v\pi\log_2(1/\pi)\le\frac2{\ln2}\Inf^\mu_v(1-\pi)=\frac2{\ln2}\rho$. For the erasure part
+argue as in \cref{lem:neardict}: $\sum_{T\neq\emptyset}\mathcal E(a_T^2,d_T^2)\le\rho\log_2(eS/\rho)$ with
+$S=\sum_{T\neq\emptyset}(a_T^2+d_T^2)$. The function $(1-q)F_0+qF_1$ has the coefficients $a_T$, equals $1-2q$ where $v$ is
+pivotal and $\pm1$ elsewhere, so its variance is at most $4(1-\pi)$; hence $S/\rho\le1+4/(\sigma^2\pi)\le9/\sigma^2$, and
+$\sigma^2\ge4\eta(1-\eta)\ge2\eta$. The step of $L_\mu$ is then at most
+$\rho\bigl(4/\ln2+\log_2(9e/2)+\log_2(1/\eta)\bigr)<(9.39+\log_2(1/\eta))\,\rho$.
+
+In both cases \cref{lem:biasedstep} bounds the step of $L_\mu$ by $(14.24+2w\log_2(1/\eta))$ times the step of $R_\mu$,
+the restrictions of $f$ lie in $\mathcal C$, and the measure on their coordinates has biases in $[\eta,1-\eta]$; induction
+on the number of variables completes the proof.
+\end{proof}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}\label{rem:log}
+The logarithm in \cref{thm:step} is needed. For odd $n=2m'+1$ and $y^*$ with $m'$ ones, the monotone function
+$g_n(y,z)=\mathrm{Maj}_n(y)\vee(z\wedge[y=y^*])$ has $\Pr[g_n=0]=\frac12-2^{-n-1}$ and $\Inf_z=2^{-n}$, so
+$\log_2(4m/\Inf_z)<n+1$. For $T\subseteq[n]$ the pair $(T,T\cup z)$ has weights $u_T^2$ and $v_T^2$ with
+$v_T=\pm2^{-n}\chi_T(y^*)$ and $u_T=\widehat{M}(T)-2^{-n}\chi_T(y^*)$, where $M=1-2\,\mathrm{Maj}_n$. For $|T|=2j+1$,
+$|\widehat M(T)|=2^{1-n}\binom{2m'}{m'}\binom{m'}{j}/\binom{2m'}{2j}$, and log-concavity gives
+$\binom{2m'}{2j}\le(m'+1)\binom{m'}{j}^2$; hence $|\widehat M(T)|\ge2^{-n}2^{m'}/(\sqrt{m'}(m'+1))$, which for
+$n\ge11$ is at least $2^{1-n}$, so that $|u_T|\ge\frac12|\widehat M(T)|$ and $4^nu_T^2\ge2^n/((n-1)(n+1)^2)$. Using
+$\mathcal E(X,Y)\ge Y\log_2(1+X/Y)$ on the $2^{n-1}$ sets of odd size gives
+$B_z\ge2^{n-1}4^{-n}\log_2\bigl(2^n/((n-1)(n+1)^2)\bigr)\ge\frac12(n-3\log_2(n+1))\Inf_z$. The exact ratios
+$B_z/\Inf_z$ for $n=3,5,\dots,17$ are $3.52,4.24,4.99,5.78,6.62,7.48,8.37,9.27$.
+
+Numerically the coefficient $1$ of the logarithm is attained as well. Majority loses a factor $2$ because
+$\widehat M$ vanishes on the sets of even size, where the pairs cost nothing. Replace $\mathrm{Maj}_n$ by the threshold
+function $[\,|y|\ge k\,]$, so that $M=1-2[\,|y|\ge k\,]$, and $y^*$ by a point with $k-1$ ones. Then
+$2^n\widehat M(T)=2K_{k-1}(|T|-1;n-1)$ for $T\neq\emptyset$,
+where $K_j(x;N)=\sum_i(-1)^i\binom xi\binom{N-x}{j-i}$ is the Krawtchouk polynomial, and the pairs can be summed exactly
+in terms of $|T|$ and $|T\cap\operatorname{supp}y^*|$. For the best $k$ and $n=21,31,41,61,81$ the ratio $\Delta_z/\Inf_z$ is
+$20.64,29.85,39.39,58.79,78.41$, against $\log_2(4m/\Inf_z)=20.62,30.17,41.09,60.29,80.58$; the bound of
+\cref{thm:step} exceeds it by $6.1$ to $8.3$.
+\end{remark}
+
+\begin{proposition}\label{prop:maxinf}
+For every $K$ there is a monotone function $f$ with a unique coordinate $z$ of largest influence and
+$\Delta_z(f)>K\,\Inf_z(f)$. For instance, if every $y_j$ in the function $g_5$ of \cref{rem:log} is replaced by the majority
+of $109$ new variables, the resulting monotone function has $546$ variables, $z$ is its unique coordinate of largest
+influence, and $\Delta_z/\Inf_z=6.6596$.
+\end{proposition}
+
+\begin{proof}
+Let $g$ be a Boolean function of $y_1,\dots,y_r$ and $z$, let $h_1,\dots,h_r$ be balanced Boolean functions on pairwise
+disjoint sets of new variables, and let $f=g(h_1,\dots,h_r,z)$. With $G=1-2g$ and $H_j=1-2h_j$, the function $F=1-2f$
+is obtained from the Fourier expansion of $G$ by substituting $H_j$ for the character of $y_j$, and
+$\widehat{H_j}(\emptyset)=0$. Hence $\widehat F\bigl(Z\cup\bigcup_{j\in A}U_j\bigr)=\widehat G(A\cup Z)\prod_{j\in A}\widehat{H_j}(U_j)$
+for $A\subseteq[r]$, $Z\subseteq\{z\}$ and nonempty sets $U_j$ of variables of $h_j$, and all other coefficients vanish:
+the spectral sample of $f$ is that of $g$ with each $y_j$ in it replaced by an independent spectral sample of $h_j$.
+Therefore $\Inf_z(f)=\Inf_z(g)$, a variable $u$ of $h_j$ has influence $\Inf_{y_j}(g)\Inf_u(h_j)$, and
+$H(f)=H(g)+\sum_j\Inf_{y_j}(g)H(h_j)$. The restrictions of $f$ at $z$ are $g_b(h_1,\dots,h_r)$, so the same formula holds
+for them, and since $\Inf_{y_j}(g)=\frac12(\Inf_{y_j}(g_0)+\Inf_{y_j}(g_1))$ the terms with $H(h_j)$ cancel in
+$\Delta_z$: $\Delta_z(f)=\Delta_z(g)$.
+
+Take $g=g_n$ from \cref{rem:log} and $h_j=\mathrm{Maj}_k$ with $k$ odd; then $f$ is monotone. As $k\to\infty$ the
+influences of $\mathrm{Maj}_k$ tend to $0$, while $\Inf_z(f)=2^{-n}$, so for large $k$ the coordinate $z$ is the unique
+coordinate of largest influence, and $\Delta_z(f)/\Inf_z(f)=\Delta_z(g_n)/\Inf_z(g_n)\ge B_z(g_n)/\Inf_z(g_n)
+\ge\frac12(n-3\log_2(n+1))$ for $n\ge11$. For the instance, the influences of $g_5$ at the $y_j$ are at most $13/32$,
+those of $\mathrm{Maj}_{109}$ equal $\binom{108}{54}2^{-108}<0.0766$, and $\frac{13}{32}\cdot0.0766<2^{-5}=\Inf_z$; the
+ratio is that of $g_5$, computed exactly.
+\end{proof}
+
+With the threshold functions of \cref{rem:log} in place of $g_n$ the same construction gives monotone functions whose
+unique coordinate $v$ of largest influence has $\Delta_v/\Inf_v$ within a few units of $\log_2(4m/\Inf_v)$ in the
+computed range, so numerically the logarithm in \cref{thm:step} is attained with its coefficient even at such a
+coordinate.
+
+\begin{remark}
+When every influence is small compared with $m$, $\eps$ is small at every coordinate, the free fibres carry almost
+all of $\mu$, and \cref{lem:erasure} is no better than the bound $H(f)\le\sum_vh(\Inf_v)$. The argument used only the second moments of
+$a$ and $b$. What can happen beyond them is shown by majority on an odd number of variables: $\widehat F$ vanishes on
+sets of even size, so $a(T)=0$ when $|T|$ is odd and $a(T)+b(T)=0$ when $|T|$ is even and nonempty. Every pair then
+has one weight equal to zero and $B_v=0$, although $\eps\sim n^{-1/2}$. A proof of the conjecture for monotone
+functions along these lines would need an estimate of this alignment between the blocked and the free parts of the
+down-set.
+
+Numerically the step bound holds at every coordinate of largest influence: for every monotone function of at most six
+variables, and for perfect matchings, tribes, majority and the property of containing a triangle, every coordinate $v$
+of largest influence has $\Delta_v\le6.01\,\Inf_v$, the largest ratio being that of a perfect matching of eight
+edges; over each of these classes the largest ratio at such coordinates equals the largest value of
+$\min_v\Delta_v/\Inf_v$. For a perfect matching of $k$ edges the spectrum is a product over the edges, and the ratio,
+computed exactly, increases to $6.0037$ at $k=8$ and then decreases to $5.735$ as $k\to\infty$. Among disjunctions of
+$k\le40$ disjoint copies of any monotone function of at most four variables, which have the same product structure, the
+largest ratio is again this one, and a search by simulated annealing over monotone functions of eight to twelve
+variables found nothing above $5.72$. These searches do not reach the functions of \cref{prop:maxinf}, which need
+hundreds of variables: in general the coordinate of largest influence does not work, and a proof has to choose the
+coordinate by more than the size of its influence. The averaged form in \cref{prop:local} below needs no choice. On
+every function computed $\sum_vB_v\le3.61\,I$; the largest value over the monotone functions of six variables is
+$3.03$, and $3.61$ is again the perfect matching of eight edges.
+\end{remark}
+
+The erasure terms carry the whole conjecture, and in a form that involves one step of the spectral sample at a time.
+Write $\log_2^+t=\max(\log_2t,0)$ and
+\[
+R(f)=\sum_{S:\,P(S)>0}P(S)\sum_{v\in S}\log_2^+\frac{P(S\setminus\{v\})}{P(S)} .
+\]
+
+\begin{proposition}\label{prop:local}
+For every Boolean function $f$,
+\[
+R(f)\le\sum_vB_v\le\min\bigl(H(f),\,R(f)+\log_2(2e)\,I(f)\bigr).
+\]
+Consequently, if $\mathcal C$ is a class of Boolean functions closed under restrictions, then $H\le CI$ on $\mathcal C$
+implies $R\le\sum_vB_v\le CI$ on $\mathcal C$, and $R\le KI$ on $\mathcal C$ implies
+$H\le(K+\log_2(2e)+2/\ln2)\,I$ on $\mathcal C$.
+\end{proposition}
+
+\begin{proof}
+By the chain rule, $H(f)=\sum_vH(\mathbf 1[v\in S]\mid\mathbf 1[u\in S],\,u<v)$, and each term is at least
+$H(\mathbf 1[v\in S]\mid S\setminus\{v\})=B_v$. For $X\ge0$ and $Y>0$,
+\[
+Y\log_2^+(X/Y)\le Y\log_2\frac{X+Y}Y\le\mathcal E(X,Y)\le Y\log_2\frac{e(X+Y)}Y\le Y\bigl(\log_2(2e)+\log_2^+(X/Y)\bigr),
+\]
+and $\mathcal E(X,0)=0$. Applying this to $X=P(T)$, $Y=P(T\cup v)$ and summing over $v$ and $T\not\ni v$, that is over
+the pairs $(S,v)$ with $v\in S=T\cup v$, gives the two bounds on $\sum_vB_v$. If $R\le KI$ on $\mathcal C$, then every
+nonconstant $f\in\mathcal C$ has $\sum_vB_v\le(K+\log_2(2e))\sum_v\Inf_v$, and $B_v=0$ when $\Inf_v=0$, so some $v$
+with $\Inf_v>0$ has $B_v\le(K+\log_2(2e))\Inf_v$; with \cref{lem:js} this gives
+$\Delta_v\le(K+\log_2(2e)+2/\ln2)\Inf_v$, and the induction of the introduction applies.
+\end{proof}
+
+With $\mathcal C$ the class of all Boolean functions, the conjecture is thus equivalent to $R\le KI$: removing one
+element of the spectral sample should increase its weight by at most a bounded factor, on average in the logarithm.
+For monotone $f$ and $S=T\cup\{v\}$ with $T\neq\emptyset$ the ratio is $P(T)/P(S)=\bigl(1+b(T)/a(T)\bigr)^2$, and
+\cref{lem:erasure} bounds its logarithmic average using only the second moments of $a$ and $b$.
+
+\begin{remark}
+The constant of \cref{thm:product} grows like $w\log_2(1/\eta)$, and the argument gives nothing as the biases tend to
+$0$ or $1$: \cref{lem:biasederasure} uses only second moments, and under a product measure with small biases every
+coordinate of a large matching has small relative influence. The restriction step is not what fails there. For the disjunction of $k$
+disjoint conjunctions of two inputs, all of bias $q$, with $k\approx\ln2/q^2$ so that the output is balanced, the
+biased spectral sample is a product over the pairs and can be computed exactly: at every input $v$ the conditional
+entropy $H(\mathbf 1[v\in S]\mid S\setminus\{v\})$ is $o(\Inf^\mu_v)$ as $q\to0$, where
+$\Inf^\mu_v=\sum_{A\ni v}P_\mu(A)$. The loss is in the second-moment estimate of \cref{lem:biasederasure}, which does not
+see that each pair of weights $(P_\mu(T),P_\mu(T\cup v))$ is lopsided. Numerically the induction on coordinates itself
+goes through: with $L_\mu$ and $R_\mu$ as in \cref{sec:product}, every
+monotone $2$-DNF gate tested (fourteen graphs on up to six inputs, $261$ bias vectors each) has a coordinate at which
+$L_\mu(G)-\E_bL_\mu(G_b)\le(2+4\log_2e)\bigl(R_\mu(G)-\E_bR_\mu(G_b)\bigr)$, the restriction $G_b$ being taken with probability $\mu(y_v=b)$;
+the extreme case is a single edge with both biases near $1$, and on random $2$- and $3$-DNF gates with up to eight inputs,
+with a local search on the biases, the largest ratio is $6.87$. By \cref{lem:biasedstep,lem:biasedjs}, what is missing
+for a constant independent of the biases is a bound on the erasure part $\sum_T\mathcal E(a_T^2,d_T^2)$ that sees the
+lopsided pairs. For a monotone $2$-DNF the uniform measure on the zeros, taken under a product
+measure with biases $q_v$, is the hard-core model with activities $q_v/(1-q_v)$. Numerically the biased form holds
+with the constant $2+4\log_2e$ of AND and OR. Over all monotone functions of at most five variables, and over random
+monotone $2$- and $3$-DNFs with up to ten variables, with the biases chosen by local search, no ratio of the two sides
+exceeds it; values above it computed in floating point at biases near $10^{-7}$ fall below it in $60$-digit
+arithmetic.
+\end{remark}
+
+\begin{remark}\label{rem:numerics}
+The statements were checked numerically. \Cref{lem:downset} holds to within $10^{-15}$, and
+\cref{thm:step,cor:han} hold, for all $7{,}828{,}354$ monotone functions of six variables. On monotone DNF and CNF
+formulas of widths two to four with up to $20$ variables and $120$ terms (paths, cycles, grids, hypercubes, complete,
+complete bipartite, crown, Paley, random regular and multipartite graphs, and random formulas), the largest ratio of
+$\Delta_v$ to the bound of \cref{thm:step} was $0.68$, and the lower bound of \cref{lem:cert} held in every case; a
+perfect matching attains $\eps=\frac16$. The largest value of $H/I$ found for graph formulas was $4.52$, for a
+perfect matching of ten edges. For the strengthened inequality, the identity of \cref{lem:plusstep} holds to within
+$10^{-14}$ for all monotone functions of six variables, the two bounds used in the proof of \cref{thm:plus} are
+attained to at most $0.75$ and $0.79$ of their values, and $H^+/(I-\Var)$ stays below $0.47\,C^+_w$ for DNFs of width
+$w$. On the formula families above $H^+/(I-\Var)\le6.3$, and on conjunctions, disjunctions and majorities of two to
+four monotone $2$-DNFs with up to $20$ variables $H/I\le4.27$. For \cref{thm:dt}, the least expected depth of a
+decision tree was computed by dynamic programming over subcubes for all monotone functions of at most five variables and
+for random monotone DNFs with eight to ten variables: the influence bound of~\cite{OSSS05} used in the proof held in
+every case, with equality for $87$ of the $7{,}579$ nonconstant functions of five variables, and $H/I$ stayed below
+$0.44$ times the bound of \cref{thm:dt}. On $400$ random monotone DNF formulas with up to $10$ variables and $29$
+terms, $L(f)\le2m$ held with largest ratio $0.992$. The quantity $R$ of \cref{prop:local} is small in every case computed: over
+all monotone functions of six variables the largest value of $R/I$ is $1.34$, against $3.74$ for $H/I$; majority has
+$R=0$; and over the families above the largest value is $1.85$, for a perfect matching of eight edges. The scalar
+inequalities in the proof of \cref{lem:erasure} (concavity and monotonicity of $\Psi$, monotonicity of
+$W\mapsto W\Psi(c/W)$, and the resulting Jensen bound) and the arithmetic in the proof of \cref{lem:cert} were checked
+in Lean~4 with Mathlib.
+\end{remark}
+
+\section*{Funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the European
+Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation
+as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by
+Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation
+(ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus
+Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The theorems, proofs and numerical computations in this paper were produced by the AI system Claude (Anthropic),
+working within the author's math-brain project. The example in \cref{rem:log} was found earlier in the same project
+by another group of Claude agents. The author takes full responsibility for the content of the paper.
+
+\begin{thebibliography}{99}
+
+\bibitem{BdW02} H.~Buhrman and R.~de~Wolf, Complexity measures and decision tree complexity: a survey,
+\emph{Theoret. Comput. Sci.} 288 (2002), 21--43.
+
+\bibitem{CKKLS18} S.~Chakraborty, S.~Karmalkar, S.~Kundu, S.~V.~Lokam and N.~Saurabh, Fourier entropy-influence
+conjecture for random linear threshold functions, \emph{LATIN 2018}, Lecture Notes in Comput. Sci. 10807,
+Springer, 2018, 275--289.
+
+\bibitem{DSC96} P.~Diaconis and L.~Saloff-Coste, Logarithmic Sobolev inequalities for finite Markov chains,
+\emph{Ann. Appl. Probab.} 6 (1996), 695--750.
+
+\bibitem{FK96} E.~Friedgut and G.~Kalai, Every monotone graph property has a sharp threshold, \emph{Proc. Amer.
+Math. Soc.} 124 (1996), 2993--3002.
+
+\bibitem{GMP26} M.~J.~Gonz\'alez, P.~MacManus and M.~C.~Pereyra, Further evidence towards the Fourier
+entropy-influence conjecture, arXiv:2606.00246 (2026).
+
+\bibitem{Gro75} L.~Gross, Logarithmic Sobolev inequalities, \emph{Amer. J. Math.} 97 (1975), 1061--1083.
+
+\bibitem{Han25} X.~Han, A new bound for the Fourier-entropy-influence conjecture, \emph{Combinatorica} 45 (2025).
+
+\bibitem{KKLMS20} E.~Kelman, G.~Kindler, N.~Lifshitz, D.~Minzer and M.~Safra, Towards a proof of the
+Fourier-entropy conjecture?, \emph{Geom. Funct. Anal.} 30 (2020), 1097--1138.
+
+\bibitem{KMS12} N.~Keller, E.~Mossel and T.~Schlank, A note on the entropy/influence conjecture, \emph{Discrete
+Math.} 312 (2012), 3364--3372.
+
+\bibitem{OSSS05} R.~O'Donnell, M.~Saks, O.~Schramm and R.~A.~Servedio, Every decision tree has an influential
+variable, \emph{46th Annual IEEE Symposium on Foundations of Computer Science (FOCS 2005)}, 31--39.
+
+\bibitem{OT13} R.~O'Donnell and L.-Y.~Tan, A composition theorem for the Fourier entropy-influence conjecture,
+\emph{ICALP 2013}, Lecture Notes in Comput. Sci. 7965, Springer, 2013, 780--791.
+
+\bibitem{OWZ11} R.~O'Donnell, J.~Wright and Y.~Zhou, The Fourier entropy-influence conjecture for certain classes of
+Boolean functions, \emph{ICALP 2011}, Lecture Notes in Comput. Sci. 6755, Springer, 2011, 330--341.
+
+\bibitem{Sha19} G.~Shalev, On the Fourier entropy influence conjecture for extremal classes, arXiv:1806.03646 (2018).
+
+\bibitem{Shm26} Y.~Shmalo, The Fourier entropy--influence inequality for read-$k$ DNF formulas and regular Boolean
+functions, preprint (2026).
+
+\bibitem{WWW14} A.~Wan, J.~Wright and C.~Wu, Decision trees, protocols and the entropy-influence conjecture,
+\emph{Proceedings of the 5th Conference on Innovations in Theoretical Computer Science (ITCS 2014)}, 67--80.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B14",
+  "run_id": "20260924T055741Z-account02-B14-QFORM-auto11",
+  "status": "SUPPORTING_LEMMA_PROVED_ACTIVE_FRAGMENT_BARRIER_PROVED_FULL_QFORM_OPEN_CONTINUITY_OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "owner_control": {
+    "initial_fresh_main": "d62d140eb28f4060f1901bae51cf7eadf76e13e6",
+    "prepublication_fresh_main": "183b7118493af3c88518aecbeb2f06a2a99e2746",
+    "revision": "2026-09-22.15",
+    "paused": false
+  },
+  "assignment": "Translations and localization; complementary constructions/source-valid counterexamples; partner account03/B14",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1",
+    "QFORM-TWO-HUB-PLUCKER-ESCAPE-FALSE-v1"
+  ],
+  "partner": {
+    "account_slot": "account03/B14",
+    "run_id": "20260924T043626Z-account03-B14-QFORM-auto11",
+    "source_commit": "7c982b2537be11bbe3f63123e2870171bfb27717",
+    "authoritative_file": "ADDENDUM_SOURCE_MATCH.md",
+    "applied_result": "QFORM-OVERLAP-SAME-SIGN-SQUARE-COMPILER-v1"
+  },
+  "fixed_required_source": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "completed_result_applied": "Theorem A (3D all-eigenvalue physical block); Theorem B used as independent check"
+  },
+  "source_match": {
+    "uncoupled_mass_sensitive_hyperbolic_square": "already present in account01/B14 snapshot 9c7d5029a308cb0f4903065baab48638203c4206, 20260924T001138Z-account01-B14-QFORM-auto11",
+    "new_scope_here": "arbitrary UY/VY overlap extension, determinant-only whole-law corollary, exact translated active-third-curvature m log(1/m) lower barrier"
+  },
+  "claims": [
+    {
+      "id": "QFORM-OVERLAP-HYPERBOLIC-MASS-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "For subdensities u,v,w<=1 of masses m,n,r, Q=2aUV+2bUY+2cVY+lambda Y^2+affine, delta=lambda-2bc/a!=0, theta=2 sqrt(|a|mn/|delta|)/r, one has ||p_Q^(sub)||inf <= (2r/|a|) Phi(theta), Phi=2sqrt(theta) for theta<=1 and Phi=2+log theta for theta>=1."
+    },
+    {
+      "id": "QFORM-OVERLAP-HYPERBOLIC-DETERMINANT-EXIT-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "For B=[[0,a,b],[a,0,c],[b,c,lambda]], cap-one probability inputs, |a|>=1 and |det B|>=1 imply ||p_Q||inf <= 4+2log2, uniformly in arbitrary affine terms and arbitrary outside conditioning."
+    },
+    {
+      "id": "QFORM-THIRD-CURVATURE-LINEAR-MASS-FALSE-v1",
+      "status": "PROVED_INTERFACE_BARRIER",
+      "statement": "For U,V uniform [-1/2,1/2] and Y subdensity 1[-m/2,m/2], the unnormalised density of 2UV+Y^2 satisfies p(0)=m[2log(1/m)+2+log2], so no translation-uniform C m active-third-curvature bound exists."
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0b9ffba8bc766e021ec0f0b6729b43ad9a7ad51d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260924T055741Z-account02-B14-QFORM-auto11/REPORT.md"
+  },
+  "handoff": {
+    "commit": "c6ad8dc27e393234b90f0da08337849f390147b9",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B14/20260924T055741Z-account02-B14-QFORM-auto11.md"
+  },
+  "unresolved_implication": "QFORM-ACTIVE-CURVATURE-AGGREGATE-BEFORE-ENTROPY-v1: route bare s3(A)>=1 into a whole-active same-sign overlap core, hyperbolic determinant core, or an existing aggregate exit before active fragmentation.",
+  "next_step": "Seek a matrix-structural dichotomy that prevents the third smoothing curvature from being localized before aggregation; test diffuse-bank cases where every candidate physical overlap determinant is small against D'/D5/grouped-bank exits.",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

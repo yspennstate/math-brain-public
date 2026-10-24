@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260924T001713Z-account03-B06-qform-r48",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "a02dcafaff6d9238f7d8fe093c2f4903f79f1b1a",
+  "control_commit_final_refresh": "72f28f79d37cb71ee07b04bd25e637f6a7d6497b",
+  "correction_inbox_blob_final": "a884b835aba929c5376e6417ae5cfcd44c0f7a76",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "result_ids": [
+    "QFORM-SHEARFLAT-HEAVYHUB-THREEPIVOT-v1",
+    "QFORM-SHEARFLAT-RANK1-RESONANCE-FRESNEL-v1",
+    "QFORM-SHEARFLAT-TWOHEAVY-AREA-COLLAPSE-v1"
+  ],
+  "result_status": "PROVED_SUPPORTING_TARGET_LEVEL_CONDITIONAL_COMPILER_AND_EXACT_RESONANCE_RECEIVER_FULL_QFORM_OPEN",
+  "full_conjecture_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "GLOBAL_OPEN; THREEPIVOT_BRANCH ESSENTIALLY_BOUNDED_ONLY; EXACT_RANK1_RESONANCE_FRESNEL_BRANCH CONTINUOUS_C0; DESIGNATED_PARTNER_TWOOUTPUT_BRANCH CONTINUOUS_C0",
+  "math_repository": "yspennstate/math-open-problems",
+  "math_commit": "a4090a876e18635918b87f87a7af42726b29337a",
+  "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T001713Z-account03-B06-qform-r48/",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B06/20260924T001713Z-account03-B06-qform-r48.md",
+  "handoff_commit": "6c9b84f18aeb6982cb1fd08b20ac06bba30f3eef",
+  "premises": [
+    {
+      "id": "R47-SHEARFLAT-NORMAL-FORM",
+      "source": "yspennstate/math-open-problems@fcd44d39858e562272e44a586a458f38776fea2e:proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T232257Z-account03-B06-qform-r47/REPORT.md",
+      "scope": "exact original-coordinate Schur residual S=D+E^T T E and pair-area disjointness/heavy-hub reduction"
+    },
+    {
+      "id": "CROSSBLOCK-RANK2-HALFRIESZ-SCALAR-PIVOT",
+      "source": "yspennstate/math-open-problems@6ebf53c668ed9b7e25ce8fc3e0ac617e94adf661:proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T102742Z-account03-B18-QFORM-r26/REPORT.md",
+      "scope": "rank-two physical cross block with arbitrary same-side curvature; scalar physical pivot and dependence-safe square compiler"
+    },
+    {
+      "id": "W1-HUB-RANK1-LEAF-FRESNEL",
+      "source": "yspennstate/math-open-problems@6ebf53c668ed9b7e25ce8fc3e0ac617e94adf661:proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T122922Z-account01-B01-qform-auto11/REPORT.md",
+      "scope": "one physical hub plus diagonal-and-rank-one leaf with augmented leverage <=1/2; continuous C0 density"
+    }
+  ],
+  "partner_result_actually_applied": {
+    "account": "account04",
+    "slot": "B06",
+    "theorem": "QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1",
+    "source": "yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b:proofnet24/QFORM-density/fleet-2026-09-22/account04/B06/20260924T001014Z-account04-B06-QFORM-r3/REPORT.md",
+    "actual_inequality": "||g_off||_infinity <= 256 [|det T0| det G0]^(-1/2) = 256 [|det T| det G |d0/s| (1-alpha_h)]^(-1/2) at r=1/64 under deleted-frame leverage <=1/2",
+    "scope_note": "continuous two-output off-fold density; does not absorb same-bank diagonal D0 into a scalar terminal density"
+  },
+  "new_exact_identities": [
+    "det G0 = det G (1-alpha)",
+    "det T0 = det T d0/s",
+    "|det T0|det G0 = |det T|det G |d0/s|(1-alpha)",
+    "beta_k = e_k^T G^-1 e_k + (e_k^T G^-1 e)^2/(1-alpha)",
+    "det(H^-1+lambda vv^T) = [1+lambda v^T H v]/det H"
+  ],
+  "main_density_bound": "||p_Q||_infinity <= 4*2^(5/8)|a det(H)|^(-1/4)[|det T|det G |d0| |s| (1-alpha)]^(-1/16) on the stated nondegenerate Omega0>=1/256 branch",
+  "rank1_resonance_bound": "||p_Q||_infinity <= 3*2^(5/3)(|rho|det G)^(-1/3) under exact resonance and max shear leverage <=1/2",
+  "finite_checks": {
+    "samples": 10000,
+    "combined_currency_max_normalized_error": 1.733830093386679e-12,
+    "resonance_identity_max_normalized_error": 8.469319889769999e-13,
+    "status": "SANITY_ONLY_PROOF_IS_ANALYTIC"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-RANK1-SAMEBANK-HALFRIESZ-FALSE-v1"
+  ],
+  "unresolved_implication": "QFORM-SHEARFLAT-NONRESONANT-RANK1T-OR-TWOFOLD-HEAVYHUB-v1: pay det T=0 but nonresonant original environment rank-two curvature, or repeated low-disjointness/two-heavy-hub area collapse, while retaining the complete product law and without fiber-supremum loss.",
+  "next_action": "Spend the nonresonance scalar together with retained frame area, or compile the two-heavy-hub near-coloop certificate into an existing physical-pivot/grouped-source/triple-curvature receiver; tangential shared leakage is already removed by the newest account04/B06 theorem.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_requested": "maximum actually supported",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  }
+}

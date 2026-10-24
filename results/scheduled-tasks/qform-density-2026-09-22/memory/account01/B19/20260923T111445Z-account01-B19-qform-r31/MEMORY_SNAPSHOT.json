@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit": "dd316d19fde1d24308143bcc59abd7be9d5ebac6",
+  "final_control_refresh_commit": "7856ae764d80f57bfff2108ba2d77ced78a84cb5",
+  "account": "account01",
+  "slot": "B19",
+  "run_id": "20260923T111445Z-account01-B19-qform-r31",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_SEPARATELY",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0add399f3a15e6c846c8fdef7ea85d620788379c",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B19/20260923T111445Z-account01-B19-qform-r31/REPORT.md",
+    "report_blob": "298da39ed8dba8610854b3ff030474aeaf7cbf33",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B19/20260923T111445Z-account01-B19-qform-r31/CHECK.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B19/20260923T111445Z-account01-B19-qform-r31/CHECK_OUTPUT.txt"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B19/20260923T111445Z-account01-B19-qform-r31.md",
+    "commit": "a16fb9664d3cc142aa1c4234a2e424587b2f9bc3"
+  },
+  "partner_result_applied": {
+    "partner": "account02/B19",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4d1f394498f795b72de7694748aab2b3bd3030f1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B19/20260923T103645Z-account02-B19-QFORM-r32/REPORT.md",
+    "result": "QFORM-N3-SMALLPIVOT-STAR-TWOCHANNEL-COMPILER-v1"
+  },
+  "peer_theorem_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+    "theorem": "D5 unrestricted fifth-volume decoupling",
+    "inequality": "||p_Q||_inf <= 5 sqrt(2e) e_5(N^T N)^(-1/10)"
+  },
+  "premises": [
+    "A is real symmetric with at least three eigenvalues of modulus at least one",
+    "input coordinates are independent and have densities bounded by one",
+    "strict N3 scale tau0=1/256: every physical diagonal and every physical principal 2x2 determinant has magnitude <tau0",
+    "a STAR row h has sum_{j!=h} A_hj^2 >123/4096",
+    "partner interlacing gives one leaf eigenvalue of modulus at least one"
+  ],
+  "new_results": [
+    "QFORM-N3-STAR-BALANCED-LEAFCROSS-COMPILER-v1: choose one original-coordinate leaf partition with both star energies >1711/131072 and ||B[J,K]||_F^2 >65025/262144",
+    "Elementary symmetric diffuse-mass lemma: if the top four singular-square mass is <=(1-eta) of Frobenius-square mass then e5>=eta^4 E1^5/120",
+    "At eta=1/64 the diffuse STAR alternative has ||p_Q||_inf<199.413 by D5",
+    "Every unpaid STAR state can be assumed to have >63/64 of the chosen leaf cross Frobenius energy in its first four singular directions while both star channels remain quantitative"
+  ],
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ARBITRARY-JOINT-INDEFINITE-PLANAR-L2-FALSE-v1",
+    "no post-rotation independence",
+    "no law-uniform deletion of a small matrix perturbation"
+  ],
+  "unresolved_implication": "QFORM-STAR-FOURDIR-TAIL-COUPLED-LINFINITY-v1",
+  "next_step": "Exploit the quantitative four-singular-direction leaf cross core jointly with the two disjoint original-coordinate star channels. Either build a product-preserving hub/cross receiver in dimension at most four plus the exact tail, or force a completed D/D5/ridge/physical-core exit. The tail may not be discarded perturbatively. Parallel TRIANGLE third-source coupling and arbitrary-extra-spectrum/global N3 descent remain separate debts."
+}

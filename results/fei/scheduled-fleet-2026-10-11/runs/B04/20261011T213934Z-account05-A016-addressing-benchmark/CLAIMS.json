@@ -1,0 +1,60 @@
+[
+  {
+    "claim_id": "A016-ADDRESSING-BASELINE-COST-LEDGER",
+    "version": 1,
+    "exact_statement": "For every integer a>=0, ordinary fresh addressing with 2^a distinct data bits has H=2a and I=1+a/2. Under the explicit fixed code and queue definitions in REPORT.md, the repeated-label complete code has expected cost a(2+a/2), the optimal whole-set code and its singleton posterior cost 2a, and the source fractional pressure equals (7/2)a^2+(11/5)a. Their cost/I asymptotics are a+2+o(1), 4, and 7a+O(1), respectively. The literal one-root original queue and the conditioned singleton-posterior queue have common limiting cost/I=2+2G, with G defined by the integral in REPORT.md section 5 and 4<=2+2G<=4+(6/5)(1-1/(2 ln 2)). The coarse forest residual/I tends to 16/5; the complete coarse forest RHS/I tends to K_ref+16/5. All partition-posterior optima and unrestricted FEI are outside this claim.",
+    "hypotheses": [
+      "uniform cube",
+      "fresh selectors",
+      "distinct disjoint data coordinates",
+      "entropy and code costs in bits",
+      "fixed references and codebooks as specified in REPORT.md",
+      "singleton one-root posterior family; not all partition forests"
+    ],
+    "statement_sha256": "13789e6d21e55d96a819257bb75ddcc00b60b38c2bf6692c0ff9a6b0c6bb3a6b",
+    "contributors": [
+      "A016/account05 baseline reproduction; no novelty claim"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261011T213934Z-account05-A016-addressing-benchmark\\REPORT.md",
+      "locators": [
+        "sections 1-7"
+      ],
+      "exact_checks": "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261011T213934Z-account05-A016-addressing-benchmark\\out\\CHECK.json"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "locators": [
+          "eq:forestcost",
+          "eq:posteriorforest",
+          "eq:outerfractional",
+          "prop:addressforest"
+        ],
+        "use": "Definitions of named pressure and coarse upper bound; algebra and asymptotic evaluation reproduced locally"
+      },
+      {
+        "source": "~\\brain_workers\\FEI100_20261011\\context\\threshold_paper_38pp.txt",
+        "locators": [
+          "Sections 5.2,5.6,5.7"
+        ],
+        "use": "Definition of original scalar queue"
+      }
+    ],
+    "review_records": [],
+    "status": "BASELINE_REPRODUCED_AUTHOR_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A015",
+      "A076",
+      "A090",
+      "A091",
+      "B04",
+      "B20"
+    ]
+  }
+]

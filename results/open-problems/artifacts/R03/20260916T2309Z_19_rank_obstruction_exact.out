@@ -1,0 +1,19 @@
+p=7 m=9 max_nonzero_binary_valued_forms=6 witness_U_indices=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+p=11 m=9 max_nonzero_binary_valued_forms=6 witness_U_indices=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+p=11 m=10 max_nonzero_binary_valued_forms=5 witness_U_indices=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+dim4_characteristic_stability bases 940 detset [-3, -2, -1, 1, 2, 3] max_abs_num 5 max_abs_num_minus_det 5 PASS
+C256a universal conclusion: for every prime p>=7 and m>=9, rank_Fp(A)>=5 for A in G_m
+construction m=9 p=7 rank=5
+construction m=10 p=11 rank=5
+p7_rank5_m12_exhaustive exists False nodes 1714334 terminal_rank_checks 6825 PASS
+C256b conclusion: for p=7 and every m>=12, rank_F7(A)>=6 for A in G_m
+p7_rank5_m11_explicit_witness PASS
+max_abs_det_5x5_boolean_distinct_nonzero 5 PASS
+C256c conclusion: for every prime p>=31 and m>=12, rank_Fp(A)>=6 for A in G_m
+m=9 p=7 dmax=4 c=7/50
+new_r= 159002423250871502925/576460752303423488 decimal= 275.82523635048733
+strict_improvement= 1931575344884877889575/12917332537615113519104 decimal= 0.1495336083715546
+m=10 p=11 dmax=5 c=132/16105
+new_r= 4089622106045106025499398988925/7787900129957441143457185792 decimal= 525.1251348632093
+strict_improvement= 53206510715970888073557219075/5474893791360081123850401611776 decimal= 0.009718272672236305
+SELF-CHECK PASS

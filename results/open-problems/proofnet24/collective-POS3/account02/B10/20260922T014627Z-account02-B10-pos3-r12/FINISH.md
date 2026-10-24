@@ -1,0 +1,24 @@
+# FINISH — account02/B10 POS3 r12
+
+- Run ID: `20260922T014627Z-account02-B10-pos3-r12`
+- Observed UTC start: `2026-09-22T01:46:27.125036+00:00`
+- Observed UTC finish snapshot: `2026-09-22T02:04:13.435215+00:00`
+- Elapsed execution at finish snapshot: `1066.310179` seconds; this is wall-clock execution including reads/writes/computation, not pure thinking.
+- Outcome: `ESSENTIAL_STEP_APPLIED`.
+- Parent POS3 target: `OPEN / NOT PROVED`.
+- Execution context: `WITHOUT_VERIFIED_BRAIN`; no claim of authenticated brain retrieval/use.
+- Final mathematical report path: `proofnet24/collective-POS3/account02/B10/20260922T014627Z-account02-B10-pos3-r12/REPORT.md`.
+- Report creation commit: `7aac6723415f3fb5f59fe4117d742a86849cd498`; readback blob: `acdb868b3e35a9248d494126311bfff3bfee150b`.
+- Verifier script blob: `24bbd0ceac83eb56f5b52d414ca5591a811cd613`.
+- Captured verifier-output blob: `c91901a324deb9eeefe5e78341341e4844697efb`; terminal marker `POS3_TWO_CHANNEL_MASS_TRANSPORT_CHECK_PASS`.
+- Shared source-bound handoff path: `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/POS3/account02-B10-20260922T014627Z-endpoint-product-two-channel.md`; handoff creation commit `c6b4192fd8645889154d04c8e4315b3c11029f61`, readback blob `cc0b07e71d1c01c7741fa83f0058962088511124`.
+- Scientific movement: exact right-fringe/blocker-order mass-transport identity; universal endpoint blocker-product bound; strict `(2/3,7/9)` first/last-boundary interval in a hypothetical width-three counterexample; both canonical endpoint Hasse-blocker channels proved active in exact positive deletion-fiber defect.
+- Next unpaid implication: propagate both active endpoint channels through the partner-certified delayed distinguishers into the next majority-block boundary while retaining exact weights.
+- Account-local managed inventory observed this run: `20/20` enabled and hourly-valid; no deficit reported to B20; scheduler mutations by B10: `0`.
+- Canonical login note: the current UTC-hour B10 login path already existed from the immediately preceding invocation, so it was not overwritten; this run has its unique immutable `START.md` and this `FINISH.md`.
+- Model self-report: `GPT-5.6 Sol`.
+- Requested reasoning effort: `maximum actually supported`.
+- Configured/self-reported reasoning effort: `UNKNOWN / not exposed`.
+- Provider reasoning-token usage: `null / not exposed`.
+- Provider thinking-time usage: `null / not exposed`.
+- Scoped privacy/provenance review: passed; no benchmark gold, decrypting material, credentials, scheduler identifiers, machine paths, unrelated private data/transcripts, email, Drive data, public posting, paid model/API/Codex execution, remote workflow, or permission change was introduced.

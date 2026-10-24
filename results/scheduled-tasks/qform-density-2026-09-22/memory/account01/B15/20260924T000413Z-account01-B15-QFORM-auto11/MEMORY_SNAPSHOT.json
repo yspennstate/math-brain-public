@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "activation_revision": "2026-09-22.5",
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260924T000413Z-account01-B15-QFORM-auto11",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "assignment": "Absolute continuity and regularity; separate essential height from continuity and apply account02/B15 to an actual inequality.",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "partner_source": {
+    "account_slot": "account02/B15",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260923T230534Z-account02-B15-qform-auto11/REPORT.md",
+    "report_creation_commit": "7a0ffb7d9c4c6074cc6e13375db70828740e1bd4",
+    "branch_snapshot_read": "81b639f85e91328176f0dcdd52b5f3c95ce71ab9",
+    "result_applied": "collective rank-one Schur repair: ||p_Q||inf <= 8sqrt(2)(Delta*kappa*|sigma|)^(-1/4)"
+  },
+  "other_sources": [
+    {
+      "commit": "f7f0fedb2d93b46824f96cac1164af6f8a55626f",
+      "path": "proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md",
+      "use": "physical indefinite pair logarithmic envelope"
+    },
+    {
+      "commit": "9b8bb7e84811978a2c46c7bb5ec50f2570dbc056",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T200544Z-account02-B15-qform-r11/REPORT.md",
+      "use": "fixed rank>=3 rough-product C0 representative, matrix-dependent height"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-B15-LP-SQUARE-C0-COMPILER-v1",
+      "statement": "If K(r,.) is C0 and K(r,v)<=g(r) for a probability density g in Lp, p>2, then T=R+bV^2 has p_T in C0 and ||p_T||inf <= 2sqrt(2(p-1)/(p-2)) |b|^-1/2 ||g||p^[p/(2(p-1))]."
+    },
+    {
+      "id": "QFORM-B15-INDEFINITE-PAIR-LP-v1",
+      "statement": "The completed logarithmic envelope implies an explicit Lp ladder for every invertible indefinite physical pair; at p=3, ||p_pair||3 <=4*3^(1/6)|det S|^-1/4 sigma_min(S)^-1/6."
+    },
+    {
+      "id": "QFORM-B15-COUPLED-PIVOT-INDEFINITE-SCHUR-C0-v1",
+      "statement": "For B=[[C,a],[a^T,b]] with b!=0, a!=0 and indefinite S=C-aa^T/b, the affine three-coordinate output has a C0 density bounded by 8sqrt(2)3^(1/8)|b|^-1/2|det S|^-3/16 sigma_min(S)^-1/8, uniformly over cap-one product laws and affine terms; same under outside conditioning."
+    },
+    {
+      "id": "QFORM-B15-INDEFINITE-PHYSICAL-TRIPLE-DICHOTOMY-v1",
+      "statement": "Every invertible indefinite physical 3x3 block is paid locally either by account02/B15's collective indefinite-pair/rank-one-Schur theorem or, if no physical pair is indefinite, by the new coupled-pivot/indefinite-Schur theorem."
+    },
+    {
+      "id": "QFORM-HALFRIESZ-PLUS-BARE-SQUARE-NOT-SUFFICIENT-v1",
+      "statement": "A generic sup_t P(|R-t|<rho)<=H sqrt(rho) certificate, even with p_R in L1 intersect L2, does not imply bounded density after adding one independent cap-one square."
+    }
+  ],
+  "actual_partner_application": "On Q_m=(P1+L1)^2-(P2-L2)^2+m^-1(sum W_j)^2, partner theorem has Delta=kappa=sigma=1 and gives ||p_Qm||inf<=8sqrt(2) uniformly in m. Therefore input L1 distance delta gives output Lr distance <=(16sqrt(2))^(1-1/r)delta^(1/r) for every finite r.",
+  "exact_target_example": "B_* with diagonal 5/4 and off-diagonal -9/8 has spectrum {19/8,19/8,-1}, every physical 2x2 pair positive definite, and the new coupled-pivot theorem yields C0 plus ||p||inf<8.077.",
+  "canonical_math": {
+    "report_commit": "b880389386357d6e56c79b8bcd91b71236dd47a4",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260924T000413Z-account01-B15-QFORM-auto11/REPORT.md",
+    "checks_commit": "986d8b137a8095af04e586ce4adedce6fa8b0855",
+    "addendum_commit": "a2e3c99bd7c6715ec4260fa3a7918499c4ae8b3d",
+    "addendum_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260924T000413Z-account01-B15-QFORM-auto11/ADDENDUM_HALFRIESZ_ENDPOINT.md"
+  },
+  "handoff_commit": "57c016243e48684a2b0ab931994d25aea20f9c89",
+  "correction_event_commit": "7ef665d280c0c96b3bd7fd058d281dea4123df6c",
+  "unresolved_implication": "The three-large-eigenvalue hypothesis does not force one physical triple with uniformly nondegenerate local parameters. Aggregate original-product geometry is still needed. Fresh B04 half-Riesz currency cannot be spliced to a bare square by a black-box endpoint argument; one needs p>2, an exponent gain, or additional retained product/cancellation structure.",
+  "next_step": "Seek a product-provenance upgrade of the diffuse half-Riesz residual from the critical 1/2 small-ball exponent to an Lp density with some p>2, or splice the third curvature jointly before taking the residual marginal."
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260923T144943Z-account03-B11-QFORM-r34",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_refresh": "fb7c8c34f51258351df85c556086681c75b89ca3",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "new_result": {
+    "id": "QFORM-EXACT-RANK3-DIFFUSE-LEVERAGE-CROSS-CUT-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "scope": "Exact-rank-three A=RMR^T with R^TR=I3 and q=max row leverage <1/3; arbitrary independent cap-one input densities; any invertible M, in particular signatures (2,1) and (1,2).",
+    "inequality": "||p_Q||_inf <= 6e/[s(1-3q)^(1/6)], where s=min |lambda(M)|. For q<=1/4: <=6e*2^(1/3)/s <20.549/s.",
+    "continuity": "PROVED_IN_SCOPE",
+    "mechanism": "Determinantal triple disjointness -> literal original-coordinate cut -> quantitative rank-three physical cross singular volume -> grouped cross-rank-three Plancherel compiler."
+  },
+  "partner_applied": {
+    "worker": "account04/B11",
+    "result": "QFORM-EXTENSION-MASS-SECOND-MOMENT-v1",
+    "source": "yspennstate/math-open-problems@30555c1ca97752e10f5089ccd95f8514c704be5a:proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260923T131400Z-account04-B11-extension-mass-r6/REPORT.md",
+    "application": "Tetrahedral rotated frame, pair {1,4}: g_S=1/2, d_2=d_3=1/4, W_2=1/8, partner area compiler yields ||p_Q||_inf<=256."
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "074f85e342c4e78fcbab7a43ba01f00252035d5a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T144943Z-account03-B11-QFORM-r34/REPORT.md",
+    "verifier": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T144943Z-account03-B11-QFORM-r34/VERIFY.py",
+    "verification_output": "QFORM_B11_R34_DPP_CROSSCUT_CHECK_PASS"
+  },
+  "remaining_gap": "Heavy-leverage near-null physical coordinate for exact rank three; separately, arbitrary additional nonseparable spectrum for the full target.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "global_continuity_status": "OPEN"
+}

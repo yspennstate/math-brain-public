@@ -1,0 +1,10 @@
+{
+ "helper_version":"A071 signed f6 reserve identity (1), independently reconstructed as A072-composition/3",
+ "family":"All feasible six-bit core signatures (M,d); independently realized half-count masks. Sparse cores with one, two or three negative points up to physical cube isometry.",
+ "parameter_domain":{"M":[1,63],"d":"0<=d<=min(M,64-M), d congruent M mod 2","sparse_representatives":"one singleton, six pair distances, sixteen sorted triple column-count signatures"},
+ "case_count":{"signatures":559,"biases":63,"sparse_representatives":23,"pilot_signatures":30},
+ "symmetry":"Only input translations, coordinate permutations, and unordered negative-point relabeling for sparse support. Output orientation is tested explicitly, never quotiented before composition.",
+ "arithmetic":"Reused integer Walsh/sign inverse/edge engine; Fraction conditional-section moments; exact prime-log sparse erasure comparisons; outward 48-term atanh integer log enclosures at 2^128 and final scale 2^96.",
+ "memory_estimate_mb":100,"pilot_max_runtime_seconds":55,"max_runtime_seconds":120,
+ "max_integer_product_bits":8000000,"no_dimension_escalation":true,"frozen_before_execution":true
+}

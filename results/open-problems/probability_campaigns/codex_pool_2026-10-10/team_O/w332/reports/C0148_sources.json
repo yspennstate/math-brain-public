@@ -1,0 +1,44 @@
+{
+  "id": "C0148",
+  "ledger_rows": [
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+      "line": 148,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "C0148",
+        "historical_status": "source_says_open",
+        "intake": "claude_20260907",
+        "locator": "Question 14.3, p. 200",
+        "problem_id": "C0148",
+        "recorded_at": "2026-09-07T09:31:51Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "pete_pgg_notes",
+        "statement": "(a) Does local weak approximability of one Cayley graph of a group imply it for all its Cayley graphs? (b) If all finitely generated Cayley graphs of a group are local-weak approximable by finite graphs, is the group sofic?",
+        "status_search": "",
+        "title": "Local weak approximability of Cayley graphs and soficity",
+        "verification": "unreviewed"
+      }
+    },
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+      "line": 131,
+      "record": {
+        "attempt_id": "C0148-A001",
+        "author": "claude-probability-1000-continue-0907",
+        "independent_check": "",
+        "key_identity": "",
+        "method": "Compare unlabelled local weak limits with the labelled (Cayley diagram) version where the answer is yes.",
+        "obstruction": "Recovering labels from unlabelled approximants when the Cayley graph has many automorphisms.",
+        "problem_id": "C0148",
+        "recorded_at": "2026-09-07T09:31:51Z",
+        "result": "For labelled Cayley diagrams, approximability by finite labelled digraphs is soficity, and changing the generating set preserves it (relabel words). For unlabelled graphs, a finite graph sequence converging locally to the Cayley graph of one generating set need not carry labels; the question is whether one can recover a compatible labelling on most of the finite graphs. For Cayley graphs with trivial local automorphism structure (the ball of radius r has no non-trivial automorphisms fixing the centre for r large) the labelling is determined locally and (a) follows; for graphs with rich local symmetry (e.g. Cayley graphs of Z^d with standard generators have local automorphisms, but those come from the group itself and the labelling can be chosen consistently on most vertices) the recovery is a rigidity question. Rigorous partial: if the Cayley graph is 'locally rigid' in the sense that the group is the full automorphism group and the ball of radius r determines the label pattern, then unlabelled local approximability of that Cayley graph gives labelled approximability, hence soficity, hence (b) for that group and (a) for all its generating sets. The gap is Cayley graphs with large automorphism groups, e.g. free groups (the tree has a huge automorphism group and unlabelled approximants of the tree, large-girth graphs, are all fine, yet soficity of free groups is trivial), so the question is subtle exactly for non-rigid Cayley graphs of non-obviously-sofic groups. No result.",
+        "schema": "probability-attempt.v1",
+        "substantive": true
+      }
+    }
+  ],
+  "store_cards": []
+}

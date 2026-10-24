@@ -1,0 +1,129 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w562",
+  "bundle_slug": "c0047-w562-bridge-adversary-001",
+  "entries": [
+    {
+      "key": "spectral-normalization",
+      "namespace": "probability.percolation",
+      "logical_name": "benjamini-schramm-spectral-normalization-warning",
+      "kind": "concept",
+      "title": "DRAFT: degree factor in the C0047 spectral criterion",
+      "statement": "DRAFT source-backed correction, pending referee check. In an infinite connected d-regular Cayley graph let rho be the normalized simple-random-walk spectral radius, so the adjacency norm is d*rho. The classical sufficient condition for bond nonuniqueness is p_c*d*rho<1: choose a supercritical p with p*d*rho<1, bound the connection kernel by the all-walk Neumann series, and exclude uniqueness by FKG. The degree-free p_c<1/rho condition in C0047-A001 is automatic when 0<rho<1 and p_c<=1, and is not that sufficient theorem. The correct condition is not necessary: on T4, p_c=1/3, rho=sqrt(3)/2 and p_u=1, while p_c*d*rho>1. This correction does not solve C0047.",
+      "proof_text": null,
+      "assumptions": [
+        "Normalized random-walk rho",
+        "Infinite connected d-regular Cayley graph",
+        "Sufficient criterion, not equivalence"
+      ],
+      "domain": "Bernoulli bond percolation on graphs",
+      "source": {
+        "source_id": "owner-campaign:C0047:w562:spectral-normalization",
+        "url": "file:///~/brain_workers/w562/ATTEMPT.md",
+        "revision": "candidate-2026-10-10; pending independent referee w563",
+        "license": "owner-own-work (campaign derivation or refuted route; unreviewed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "overlap-obstruction",
+      "namespace": "probability.percolation",
+      "logical_name": "cayley-generator-path-indicators-overlap-obstruction",
+      "kind": "concept",
+      "title": "DRAFT: overlapping generator paths are not iid",
+      "statement": "DRAFT refuted-route record, pending referee check. Under iid Bernoulli(p) bond percolation on Cay(F(a,b),{a,a^-1,b,b^-1}), let A and B indicate all-open routes (e,a,a^2) and (e,a,ab). For 0<p<1, P(A)=P(B)=p^2 and P(A and B)=p^3. Compared with iid Bernoulli(p^2) indicators the intersection probability is larger, while the union probability 2p^2-p^3 is smaller than 2p^2-p^4. Thus neither stochastic domination direction holds with that iid law. Replacing added-generator edges by overlapping paths cannot retain iid p^2 solely from its marginals.",
+      "proof_text": null,
+      "assumptions": [
+        "iid Bernoulli base edges",
+        "0<p<1",
+        "Specified F(a,b) routes"
+      ],
+      "domain": "Bernoulli bond percolation on graphs",
+      "source": {
+        "source_id": "owner-campaign:C0047:w562:overlap-obstruction",
+        "url": "file:///~/brain_workers/w562/independent_obstruction.md",
+        "revision": "candidate-2026-10-10; pending independent referee w563",
+        "license": "owner-own-work (campaign derivation or refuted route; unreviewed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "slot-coupling",
+      "namespace": "probability.percolation",
+      "logical_name": "bounded-congestion-path-slot-coupling-candidate",
+      "kind": "concept",
+      "title": "DRAFT: independent slots repair path routing with a probability penalty",
+      "statement": "DRAFT candidate bridge, not a certified theorem. Let G,H be countable connected locally finite simple undirected graphs on the same vertex set. Fix for every H-edge h a simple G-path P_h joining its endpoints, with length <=L, and suppose each G-edge lies in <=M routes, for integers L,M>=1. For p in [0,1], set t=1-(1-p)^(1/M), q=t^L. Assign distinct independent Bernoulli(t) slots to routes at every base edge; OR M slots to realize iid G-percolation at p, and independently thin shorter route indicators to obtain iid H-percolation at q. This couples every H-open route inside a G-open path, hence p_c^bond(G)<=1-(1-(p_c^bond(H))^(1/L))^M. The written countable-product proof in bridge_derivation.md awaits w563. This transfers existence only; different H-clusters may merge in G.",
+      "proof_text": null,
+      "assumptions": [
+        "Same countable vertex set",
+        "Connected locally finite simple undirected graphs",
+        "Fixed simple routes",
+        "Uniform length L>=1",
+        "Uniform congestion M>=1"
+      ],
+      "domain": "Bernoulli bond percolation on graphs",
+      "source": {
+        "source_id": "owner-campaign:C0047:w562:slot-coupling",
+        "url": "file:///~/brain_workers/w562/bridge_derivation.md",
+        "revision": "candidate-2026-10-10; pending independent referee w563",
+        "license": "owner-own-work (campaign derivation or refuted route; unreviewed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "remaining-gap",
+      "namespace": "probability.percolation",
+      "logical_name": "c0047-critical-operator-and-routing-merger-gap",
+      "kind": "concept",
+      "title": "DRAFT: exact remaining C0047 bridge premises",
+      "statement": "DRAFT missing-premise record. For the prescribed Cayley graph, bounded critical connection operator T_{p_c} on counting-measure l2 would yield a strict operator interval above p_c via Russo/BK continuation; uniqueness is excluded there by FKG. The w561 packet proves this conditional implication but does not establish the critical bound. A September 24, 2026 public manuscript states the critical bound in Theorem 1.1 and every fixed finite symmetric generating set in Corollary 1.2; its 53-page proof is not certified by this packet. In the distinct bounded-congestion routing approach, the missing step is prevention of extra base-open edges merging the infinite routed clusters. Current openness is UNKNOWN here; no parent-solved or novelty claim.",
+      "proof_text": null,
+      "assumptions": [
+        "No novelty or global proof status certification",
+        "Fixed prescribed generating set",
+        "Bond model"
+      ],
+      "domain": "Bernoulli bond percolation on graphs",
+      "source": {
+        "source_id": "owner-campaign:C0047:w562:remaining-gap",
+        "url": "file:///~/brain_workers/w562/AUDIT_W561.md",
+        "revision": "candidate-2026-10-10; pending independent referee w563",
+        "license": "owner-own-work (campaign derivation or refuted route; unreviewed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "spectral-normalization",
+      "to_existing_logical": "math:probability.statmech:attempt-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+      "kind": "refutes",
+      "rationale": "Refutes only the quoted degree-free sufficient-criterion route in the unreviewed attempt, not the entire record or parent conjecture. Primary Theorem 4 uses rho*k*p<1."
+    },
+    {
+      "from_key": "overlap-obstruction",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+      "kind": "semantic_association",
+      "rationale": "Records an obstruction to changing-generating-set transfer in the fixed-Cayley-graph target; it refutes no parent statement."
+    },
+    {
+      "from_key": "slot-coupling",
+      "to_key": "overlap-obstruction",
+      "kind": "semantic_association",
+      "rationale": "The candidate slot construction repairs the dependence exposed by the two specified overlapping paths, at a parameter penalty; it does not preserve their infinite-cluster separation."
+    },
+    {
+      "from_key": "remaining-gap",
+      "to_key": "slot-coupling",
+      "kind": "semantic_association",
+      "rationale": "States the precise lack of a merger bound after existence is coupled; no implication to a nonuniqueness theorem is asserted."
+    },
+    {
+      "from_key": "remaining-gap",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+      "kind": "semantic_association",
+      "rationale": "Separates the conditional operator route and recent unrefereed primary claim from a certified resolution of C0047."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260923T211945Z-account03-B04-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_final_refresh": "c2a0020be8b6e7af98652b97e51dbc0b458ec04f",
+  "correction_inbox_blob": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "mathematical_result": {
+    "id": "QFORM-ZERO-PIVOT-3COORD-LINEAR-SQUARE-v1",
+    "status": "supporting_theorem_proved_in_worker_report",
+    "statement": "If an original-coordinate principal 3x3 block B has one diagonal entry equal to zero and D=abs(det B)>0, then the full ambient quadratic form, after arbitrary outside conditioning, has a continuous C0 density bounded by 3*2^(2/3)*D^(-1/3).",
+    "continuity": true,
+    "full_target": false
+  },
+  "premises": [
+    "original inputs independent with one-dimensional densities <=1",
+    "orthogonal rotation of only the other two coordinates is used as a joint-density change of variables, not as an independence claim",
+    "outside original coordinates may be conditioned arbitrarily, producing only affine terms",
+    "live corrections forbidding arbitrary-joint coarea and pointwise oscillatory decay were respected"
+  ],
+  "peer_result_applied": {
+    "id": "QFORM-RANK2-AFFINE-HALF-RIESZ-v1",
+    "application": "on B_*=2(J3-I3), conditioning X0=x0 leaves Lambda=[[0,2],[2,0]], so sup_t E|4X1X2+4x0(X1+X2)-t|^-1/2 <=64sqrt(2)"
+  },
+  "designated_partner": {
+    "worker": "account04/B04",
+    "completed_result_found": false,
+    "note": "No current-QFORM canonical report or shared handoff was present in the authorized repositories at final lookup; no result was fabricated."
+  },
+  "outputs": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "da3d95c04dbc08ad07627eebb1e347ad1d88bb64",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T211945Z-account03-B04-QFORM-auto11/REPORT.md",
+    "checks": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T211945Z-account03-B04-QFORM-auto11/CHECKS.json",
+    "handoff_commit": "f5679659ef847b6d7b8adf6c01f54de530fc7505"
+  },
+  "unresolved_implication": "The bare three-large-eigenvalue hypothesis does not force one principal triple with determinant bounded below. Need an aggregate-before-inversion zero/near-zero-pivot volume-sampling route into grouped-bank/ridge/star receivers.",
+  "next_step": "QFORM-ZEROPIVOT-AGGREGATE-VOLUME-SAMPLING-v1"
+}

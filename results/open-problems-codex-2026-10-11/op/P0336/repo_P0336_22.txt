@@ -1,0 +1,219 @@
+Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is **not GPT-6 at maximum**; no authenticated runtime reasoning-effort telemetry or binding model/effort selector is exposed.
+
+# P0336 — adaptive block homogenization obstructs the naive translation-selection route
+
+## Scope and continuity
+
+Target: `P0336`, del Barrio–González-Sanz–Loubes–Rodríguez-Vítores, *Distributional Limit Theory for Optimal Transport*, arXiv:2505.19104v2, Problem 4: determine the limiting empirical Euclidean optimal-transport plan between independent samples from `U([0,1]^2)` and `U([2,3]×[0,1])`.
+
+This is the sixth ordinary R7-05 research run on P0336. It builds on the exact tangent degeneracy, the marked tangent theorem, the two-bin Gaussian microcell calculation, the scalar constrained-value reduction, and the Brownian-innovation comparison. The frozen source metric remains `SEL_ID=0` unless the literal limiting plan is completely identified.
+
+Captured start-of-run master: `266149e02e270206fbfbd5795b2d14332552d1aa`. Fresh pre-delivery master recheck: `79029c57d55860a80a5d130c69875ac62d5d7b9d`.
+
+## Mathematical idea before code
+
+The previous run showed that after coarse vertical information is frozen, a *fixed* pure monotone horizontal orientation has a negative mean Brownian innovation cost relative to the pure crossed orientation. That does **not** imply translation selection, because the empirical optimizer sees the realized local innovations and can adapt its horizontal orientation from block to block. The correct object is therefore not the mean of one fixed orientation, but the lower envelope of the random block costs subject to whatever global gluing constraints survive.
+
+This run solves that adaptive independent-block model exactly, embeds it in a source-faithful conditioned two-bin surrogate, and isolates the missing gluing penalty in the genuine empirical problem.
+
+## B4 — exact solution of the adaptive Brownian block model
+
+From the preceding P0336 run, the pure monotone-minus-crossed endpoint residual in one balanced two-bin Brownian block converges to
+
+\[
+\Delta=\frac12 I_+-\frac56 I_-,
+\qquad
+I_+,I_-\stackrel{\rm iid}{\sim}I:=\int_0^1 B(t)^2\,dt,
+\]
+
+where `B` is a standard Brownian bridge. Also
+
+\[
+E\Delta=-\frac1{18},\qquad \operatorname{Var}(\Delta)=\frac{17}{810}.
+\]
+
+### Lemma 1: the Brownian bridge energy is nonatomic and has full positive support
+
+The Karhunen–Loève expansion gives
+
+\[
+I=\sum_{r\ge1}\frac{Z_r^2}{\pi^2r^2},
+\]
+
+with independent standard normals `Z_r`.
+
+For nonatomicity, condition on `(Z_r)_{r≥2}`. Then `I=c+Z_1^2/π^2`; for any fixed level there are at most two values of `Z_1`, hence conditional probability zero, and therefore `P(I=x)=0` for every `x`.
+
+For full support on `(0,∞)`, fix `0<a<b`. Choose finitely many coordinates so that their weighted square sum lies strictly in `(a,b)` on an open set of positive Gaussian probability, and simultaneously require the nonnegative tail to be smaller than the remaining margin; the latter event has positive probability by Markov's inequality after taking the truncation far enough. Hence `P(a<I<b)>0`.
+
+Consequently `Delta` is nonatomic and takes both signs with positive probability.
+
+Define
+
+\[
+q_*:=P(\Delta<0)=P\!\left(I_+<\frac53 I_-\right).
+\]
+
+By exchangeability, `P(I_+<I_-)=1/2`. Full support gives positive probability to `I_-<I_+<(5/3)I_-`, so
+
+\[
+q_*>\frac12.
+\]
+
+Full support also gives positive probability to `I_+>(5/3)I_-`, so
+
+\[
+\boxed{\frac12<q_*<1.}
+\]
+
+A non-certifying Monte Carlo sanity check using 200,000 independent KL truncations (300 modes) gave `q_*≈0.678`; this number is evidence only and is not used below.
+
+### Theorem 2: unconstrained adaptive blocks select a strict interior mixture
+
+Let `Delta_1,...,Delta_K` be iid copies of `Delta`. In block `j`, write `x_j=1` for pure monotone and `x_j=0` for pure crossed. Relative to all-crossed, the innovation cost is
+
+\[
+\sum_{j=1}^K x_j\Delta_j.
+\]
+
+With no global constraint on the orientations, the unique optimizer almost surely is
+
+\[
+x_j=\mathbf 1\{\Delta_j<0\}.
+\]
+
+Thus by the strong law,
+
+\[
+\boxed{\frac1K\sum_{j=1}^Kx_j\to q_*\quad\text{a.s.}}
+\]
+
+In the two-bin coupling parameterization
+
+\[
+K_p=\begin{pmatrix}p&\frac12-p\\[2mm]\frac12-p&p\end{pmatrix},
+\qquad 0\le p\le\frac12,
+\]
+
+this block mixture has limiting diagonal mass
+
+\[
+\boxed{p_*=\frac{q_*}{2}\in\left(\frac14,\frac12\right).}
+\]
+
+Therefore the independently adaptive homogenized model selects a **strictly interior** horizontal coupling, not the translation endpoint `p=1/2`.
+
+### Theorem 3: the full constrained homogenized value is an integrated quantile
+
+Let `Delta_(1)≤...≤Delta_(K)` be the order statistics and constrain exactly `r` of the `K` blocks to use the monotone orientation. Then
+
+\[
+V_K(r):=\min_{x_j\in\{0,1\},\,\sum x_j=r}\sum_jx_j\Delta_j
+=\sum_{j=1}^r\Delta_{(j)}.
+\]
+
+Let `F_Delta` be the distribution function and `Q(u)=F_Delta^{-1}(u)` its quantile. If `r_K/K→alpha∈[0,1]`, then the empirical quantile law (equivalently the strong law for trimmed/L-statistic sums, with truncation justified by `E|Delta|<∞`) gives
+
+\[
+\boxed{
+\frac1K V_K(r_K)\to
+G(\alpha):=\int_0^\alpha Q(u)\,du
+\quad\text{a.s.}
+}
+\]
+
+Because `Delta` has no atom at zero and has mass on both sides of zero, `G` decreases while its quantiles are negative and increases once they are positive. Hence its unique minimizer is
+
+\[
+\boxed{\alpha_*=F_\Delta(0)=q_*.}
+\]
+
+At the minimizer,
+
+\[
+G(q_*)=E[\min(\Delta,0)].
+\]
+
+At the pure-translation endpoint,
+
+\[
+G(1)=E\Delta=-\frac1{18}.
+\]
+
+Therefore the adaptive interior mixture beats pure translation by the strictly positive amount
+
+\[
+\boxed{
+G(1)-G(q_*)=E[\Delta_+]>0.
+}
+\]
+
+This is an exact mathematical obstruction to the earlier inference “negative mean local monotone bias implies global translation.” Minimization and expectation do not commute.
+
+## B9 — source-faithful conditioned two-bin surrogate
+
+Consider the balanced two-horizontal-bin model with source lines `a=0,1` and target lines `b=2,3`. Partition the vertical interval into `K` deterministic equal slabs. Condition each of the four horizontal lines to contain exactly `q` iid uniform sample points in every slab, and restrict admissible matchings to remain inside each slab.
+
+For fixed `K`, after affine rescaling of a slab to `[0,1]`, its four point clouds are independent copies of the balanced `q`-sample model. Vertical differences acquire an additional factor `1/K`. The Euclidean expansion
+
+\[
+\sqrt{D^2+H^2}-D=\frac{H^2}{2D}+O(H^4)
+\]
+
+is uniform because `1≤D≤3`. The order-statistic differences are `O_P(q^{-1/2})` after rescaling, so the sum of the fourth-order remainders is `O_P((K^4q)^{-1})`, while the quadratic block residual is of order `K^{-2}`. Consequently, for fixed `K` and `q→∞`, the vector of pure monotone-minus-crossed slab residuals, multiplied by `K^2`, converges jointly to iid copies `Delta_1,...,Delta_K`.
+
+Hence in the iterated limit `q→∞` first and then `K→∞`, the conditioned/restricted empirical surrogate has exactly the adaptive effective functional `G(alpha)` above and selects the strict interior block fraction `q_*`, not pure translation.
+
+This is source-faithful as an empirical Euclidean assignment model with the same four horizontal marks and genuine vertical order statistics, but it is **not** the original P0336 model: the exact per-slab count conditioning and the prohibition on cross-slab edges remove the global marked-prefix/gluing problem.
+
+Randomizing the slab origin independently of the samples does not repair the issue. Conditional on the partition, the optimizer still observes the realized innovation signs and can choose the favorable local orientation. Random partitioning can create independence; it cannot justify replacing `E[min]` by `min E`.
+
+## B20 — the exact remaining gluing defect
+
+The genuine two-bin empirical problem differs from the solvable surrogate in two coupled ways.
+
+1. Slab counts on the four horizontal lines fluctuate by order `sqrt(q)`, so pure local contingency choices generally do not balance exactly.
+2. A globally feasible permutation may send edges across slab boundaries; the exact marked-prefix conservation law couples neighboring blocks.
+
+The leading cost of repairing these count imbalances is largely part of the already-known universal coarse-prefix/common-slope energy, which is flat in the horizontal kernel. Therefore merely counting `Theta_P(sqrt(q))` rerouted edges does **not** give the needed selector. One must subtract the universal coarse term and identify the first **kernel-dependent renormalized gluing defect**.
+
+The new theorem above fixes the scale and sign that such a defect must beat. In the Brownian innovation normalization, pure translation loses to adaptive block choice by
+
+\[
+E[\Delta_+]>0
+\]
+
+per homogenized block before the common physical factor. With `K` slabs, the Euclidean block factor is `K^{-2}`, so the cumulative adaptive advantage is
+
+\[
+\boxed{
+\frac{E[\Delta_+]}{K}+o(K^{-1}).
+}
+\]
+
+Thus any proof of translation selection must establish a global compatibility/gluing penalty of at least this order for a sign-adaptive orientation field, or prove that the genuine prefix constraints force the orientation to be essentially constant. Conversely, if the renormalized gluing penalty is `o(K^{-1})`, the independent-block surrogate predicts that translation cannot be the selector.
+
+This is the exact blocking formula left by the sixth run:
+
+\[
+\boxed{
+\text{identify }\Gamma_{\rm glue}
+:=\lim \ K\,[\text{global residual}-\text{universal coarse residual}-\text{sum local innovation minima}],
+}
+\]
+
+with the limit interpreted at a valid joint mesoscopic scale, and compare it to the adaptive gain `E[Delta_+]`.
+
+## Outcome and source-level status
+
+Methods attempted this run: **B4 / B9 / B20**.
+
+- B4: solved the independently adaptive Brownian block problem exactly; it selects a strict interior mixture `p_*=q_*/2`.
+- B9: proved the same mechanism in an iterated-limit conditioned/restricted empirical two-bin surrogate.
+- B20: isolated the genuine source-level missing ingredient as the renormalized marked-prefix/gluing defect at order `1/K`.
+
+This is substantial progress on the mechanism, but it does not identify the actual P0336 limiting plan. The source-level metric therefore remains
+
+`SEL_ID: 0 -> 0`.
+
+This is the sixth unchanged ordinary P0336 run. Under the owner protocol the target must now be retired from this native worker with an immutable handoff. The mathematics remains `OPEN / PARTIAL`; no source-level proof, refutation, closure audit, or paper claim is made.

@@ -1,0 +1,6 @@
+STATE: NEEDS_REVIEW
+NEXT: Try to prove a uniform annulus comparison for Var T(0,x) on n<=|x|<=2n under Uniform[1,2], recording the first missing estimate.
+2026-10-10: Recovered Question 22 and equation (4.19) from the primary survey; compared Chatterjee Theorem 1.1 and Auffinger-Damron Theorem 2.2 assumptions. Current openness remains UNKNOWN.
+2026-10-10: Independently checked w381 L0-L9 in stated scopes and w382's scalar, directional, exponential-upgrade and adjacent-vertex arguments. Eight KEEP review rows are in CLAIMS.jsonl; one own conditional corollary remains a sketch pending w386.
+2026-10-10: Read the top three task recall memories and the named perceptron proof scar. Read-only math-brain probe found the conditional theorem card at ranks 9 and 6 for two P0110 queries. Two in-memory links moved rank 9 to 7 on one query; no live retrieval claim.
+2026-10-10: Saved a source-backed FIX row for the misleading nearly-Gamma math-brain card. Local DRAFT bundle has 3 entries and 3 supported relations; validator reported 0 failures. Review packet, hook proposal and application diff saved. No live store, memory or recall code changed; P0110 is not solved.

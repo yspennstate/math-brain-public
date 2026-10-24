@@ -1,0 +1,101 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w387",
+  "bundle_slug": "p0117-prescribed-path-shortcuts-w387-001",
+  "entries": [
+    {
+      "key": "fixed-path-bound",
+      "namespace": "probability.fpp",
+      "logical_name": "prescribed-fpp-path-exponential-shortcut-bound",
+      "kind": "concept",
+      "title": "Prescribed FPP path exponential shortcut bound (draft)",
+      "statement": "DRAFT; independent mathematical review pending. For iid finite nonnegative nondegenerate edge weights on nearest-neighbor Z^2, choose finite 0<=a<b with q=P(t<=a)>0 and p=P(t>=b)>0. Let integer L>=2 satisfy L(b-a)>2a, R=2(L+1), D=1+2R(R+1), eta=p^L q^(L+2). Every deterministic simple N-edge path gamma has P(gamma is a full-lattice geodesic) <= (1-eta)^ceil(floor(N/L)/D).",
+      "proof_text": null,
+      "assumptions": [
+        "Not a proof of the unrestricted no-bigeodesics conjecture; see the exact hypotheses in the statement."
+      ],
+      "domain": "probability theory; first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:w387:P0117:L4",
+        "url": "urn:owner-own-work:probability:P0117:w387:L4",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign lemma; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "dictionary-bound",
+      "namespace": "probability.fpp",
+      "logical_name": "fpp-geodesic-exclusion-from-small-deterministic-dictionaries",
+      "kind": "concept",
+      "title": "FPP geodesic exclusion from small deterministic dictionaries (draft)",
+      "statement": "DRAFT; independent mathematical review pending. For iid finite nonnegative nondegenerate weights on nearest-neighbor Z^2, choose finite 0<=a<b with q=P(t<=a)>0 and p=P(t>=b)>0, integer L>=2 with L(b-a)>2a, R=2(L+1), D=1+2R(R+1), and eta=p^L q^(L+2). For any deterministic finite dictionary P_N of simple N-edge paths, P(some member is a geodesic) <= |P_N|(1-eta)^ceil(floor(N/L)/D). Thus if these products tend to zero, almost surely there is no geodesic ray starting at a specified vertex whose N-edge prefix belongs to P_N for every N. In particular subexponential dictionary cardinality suffices. The result excludes bigeodesics only when one of their tails is covered by such dictionaries.",
+      "proof_text": null,
+      "assumptions": [
+        "Not a proof of the unrestricted no-bigeodesics conjecture; see the exact hypotheses in the statement."
+      ],
+      "domain": "probability theory; first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:w387:P0117:L4-dictionary",
+        "url": "urn:owner-own-work:probability:P0117:w387:L4-dictionary",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign lemma; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "selected-square",
+      "namespace": "probability.fpp",
+      "logical_name": "fpp-square-selection-annihilates-iid-shortcut-pattern",
+      "kind": "concept",
+      "title": "FPP square selection annihilates an iid shortcut pattern (draft)",
+      "statement": "DRAFT; independent mathematical review pending. For iid Uniform[1,2] weights on nearest-neighbor Z^2, the full-lattice geodesic between (0,0) and (1,1) is almost surely the cheaper of the two two-edge square routes A,B. For fixed A, the event both A edges >=7/4 and both B edges <=5/4 has probability 1/256. For the minimizing route R, the event both R edges >=7/4 and both other square-route edges <=5/4 is impossible, also conditional on R=A or R=B. A fixed-route iid shortcut probability therefore need not survive weight-dependent route selection.",
+      "proof_text": null,
+      "assumptions": [
+        "Not a proof of the unrestricted no-bigeodesics conjecture; see the exact hypotheses in the statement."
+      ],
+      "domain": "probability theory; first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:w387:P0117:L3",
+        "url": "urn:owner-own-work:probability:P0117:w387:L3",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign lemma; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "invalid-transfer",
+      "namespace": "probability.fpp",
+      "logical_name": "invalid-iid-shortcut-probability-transfer-after-path-selection",
+      "kind": "concept",
+      "title": "Invalid iid shortcut transfer after path selection (draft)",
+      "statement": "DRAFT; independent mathematical review pending. REFUTED INFERENCE: a shortcut event with positive iid probability for each prescribed path retains that probability after selecting a minimizing path from the same edge weights. The Uniform[1,2] square example gives a fixed-route pattern probability 1/256 and selected-route probability zero. A derived conditional law, independent selection, or valid deterministic dictionary bound is required.",
+      "proof_text": null,
+      "assumptions": [
+        "Not a proof of the unrestricted no-bigeodesics conjecture; see the exact hypotheses in the statement."
+      ],
+      "domain": "probability theory; first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:w387:P0117:L3-obstruction",
+        "url": "urn:owner-own-work:probability:P0117:w387:L3-obstruction",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign lemma; independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "dictionary-bound",
+      "to_key": "fixed-path-bound",
+      "kind": "depends_on",
+      "rationale": "The dictionary statement applies the exact C05 bound to each prescribed member and uses a union bound; no cross-path independence is assumed."
+    },
+    {
+      "from_key": "selected-square",
+      "to_key": "invalid-transfer",
+      "kind": "refutes",
+      "rationale": "The endpoints are exact: the inference demands retaining a positive shortcut-pattern probability; the actual selected-square pattern probability is zero."
+    }
+  ]
+}

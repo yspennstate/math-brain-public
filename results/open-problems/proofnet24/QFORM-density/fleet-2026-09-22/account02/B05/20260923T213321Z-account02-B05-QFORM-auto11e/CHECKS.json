@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T213321Z-account02-B05-QFORM-auto11e",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "active_core_determinant",
+      "input": "M=[[0,c,0],[c,a+lambda*s^2,lambda*s],[0,lambda*s,lambda]]",
+      "result": "det(M)=-c^2*lambda",
+      "application": "with c^2=1+b^2, |det M|=(1+b^2)|lambda|"
+    },
+    {
+      "id": "dyadic_series_bound",
+      "claim": "sum_{k>=0} min(1,sqrt(x*2^(-k-1))) <= 2+sqrt(2)+log_2^+(x)",
+      "analytic_check": "x<=1 gives (1+sqrt(2))*sqrt(x); x>1 has at most floor(log_2 x) plateau terms and geometric tail <=2+sqrt(2)",
+      "numeric_scan": "5000 log-spaced x in [1e-8,1e8], maximum lhs-rhs < -1.00003"
+    },
+    {
+      "id": "partner_r32_constant",
+      "expression": "51.6*(8/(3/20))^(1/3)",
+      "value": 194.22983636104428,
+      "rounded_bound_used": 194.229836362
+    },
+    {
+      "id": "one_dimensional_shell_mass",
+      "claim": "if ||p_L||_inf<=M_L, then P(r<=|L|<=2r)<=2 M_L r",
+      "reason": "the positive and negative shell components have total Lebesgue length 2r"
+    },
+    {
+      "id": "source_range_guard",
+      "claim": "basic curved-tube estimate is used only on r<=1",
+      "result": "PASS: theorem fixes 0<R<=1 and all small-shell radii are R*2^(-k-1)"
+    }
+  ],
+  "continuity_claimed": false,
+  "full_qform_claimed": false,
+  "independent_review": "PENDING"
+}

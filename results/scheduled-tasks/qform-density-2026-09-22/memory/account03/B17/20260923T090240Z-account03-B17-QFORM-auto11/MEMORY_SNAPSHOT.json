@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260923T090240Z-account03-B17-QFORM-auto11",
+  "status": "SUPPORTING_GLOBAL_3D_ROTATED_CUBE_ENVELOPE_FULL_TARGET_OPEN",
+  "control_commit_start": "159fb252961b2a5d9e773682c45be3ff88742367",
+  "control_commit_refresh": "e969f642c87f768095c4b1fb661f5fee1ede4fdd",
+  "owner_control_revision": "2026-09-22.15",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE"
+  ],
+  "mathematical_result": {
+    "statement": "For J=diag(1,1,-1), arbitrary O in O(3), A=OJO^T, and independent Xi~Unif[-1/2,1/2], the density of X^TAX satisfies ||p||_infinity <= pi*sqrt(3/2) < 3sqrt(2). More generally any rho<=1 supported in B_R has Lorentz-quadratic density envelope with global sup <=sqrt(2)pi R.",
+    "scope": "exact three-variable centered-unit-interval laws; equal-magnitude signature {1,1,-1} or its sign reverse; essential boundedness only",
+    "scientific_repository": "yspennstate/math-open-problems",
+    "scientific_commit": "1b3d9b19b0407950ccc19bc3c596b6715242a3d7",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T090240Z-account03-B17-QFORM-auto11/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T090240Z-account03-B17-QFORM-auto11/check_ball_envelope.py",
+    "check_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T090240Z-account03-B17-QFORM-auto11/CHECK_OUTPUT.txt",
+    "check_status": "QFORM_B17_BALL_ENVELOPE_CHECK_PASS"
+  },
+  "partner_result_applied": {
+    "partner": "account04/B17",
+    "run": "20260923T081528Z-account04-B17-QFORM-r4",
+    "application": "The partner's exact dense Householder cube matrix and law are inserted into the new level-uniform ball envelope, proving its global off-tip/two-sheet density is <3sqrt(2), not merely its cone-tip value.",
+    "partner_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B17/20260923T081528Z-account04-B17-QFORM-r4/REPORT.md"
+  },
+  "sharp_lower_bound_dependency": {
+    "partner": "account04/B17",
+    "commit": "2156b76156ad5956c214a881fcfd6d977d6f3b9f",
+    "statement": "source-valid diffuse rotated banks imply every universal constant C_* >= 3sqrt(2)"
+  },
+  "unresolved": "Full arbitrary-law, arbitrary-dimension, arbitrary-spectrum QFORM and full continuity remain open. The new bound depends essentially on compact support in a fixed ball and equal-magnitude rank-three spectrum.",
+  "next_step": "Test multiscale fragmented three-bank product laws, unequal spectral scales, or shared-coordinate mesoscopic constructions; do not return to Gaussian or fixed 3D centered-cube mechanisms.",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

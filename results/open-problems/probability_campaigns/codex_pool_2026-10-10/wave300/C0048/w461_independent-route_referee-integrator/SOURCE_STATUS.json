@@ -1,0 +1,36 @@
+{
+  "id": "C0048",
+  "checked_at_local": "2026-10-10",
+  "rows": [
+    {
+      "kind": "source_status_verdict",
+      "verdict": "INSUFFICIENT_FOR_EXACT_STATEMENT",
+      "source_path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:541",
+      "source_quote": "5,C0048,\"Discontinuity of the Potts phase transition on Z^d for q >= 3, d >= 3\",attempted_un,\"Potts discontinuity d>=3, q>=3\"",
+      "current_openness": "UNKNOWN",
+      "reason": "This ranked title does not specify the interaction, boundary conditions, order parameter, or exact parameter quantifiers; attempted_un is a local historical label."
+    },
+    {
+      "kind": "corrected_statement",
+      "verdict": "SOURCE_CONFIRMED_HISTORICAL_CONJECTURE",
+      "primary_source": "Hugo Duminil-Copin, Lectures on the Ising and Potts models on the hypercubic lattice, arXiv:1707.00520, Conjecture 2, printed p.93 (PDF p.92), https://arxiv.org/pdf/1707.00520",
+      "source_quote": "Prove that the phase transition of the nearest-neighbor Potts model on Z^d (with d >= 3) is discontinuous for any q >= 3.",
+      "definition_source": "same PDF printed pp.3-4, Hamiltonian and MAG_beta / beta_c definitions",
+      "exact_interpretation": "For every integer d>=3 and integer q>=3, on the ferromagnetic nearest-neighbor Z^d q-state Potts model, let beta_c=inf{beta>0: mu^b_beta[sigma_0 dot b]>0}, using the source's simplex-spin normalization and monochromatic b boundary state. The conjectured discontinuity is mu^b_{beta_c}[sigma_0 dot b]>0. In conventional exp(K sum 1_{sigma_x=sigma_y}) normalization, K=q*beta/(q-1).",
+      "assumptions": ["nearest-neighbor ferromagnetic coupling", "integer q>=3", "integer d>=3", "thermodynamic monochromatic boundary state"],
+      "known_special_cases_in_source": ["fixed d and sufficiently large q", "fixed q>=3 and sufficiently large d", "sufficiently spread-out interactions, a different model"],
+      "current_openness": "UNKNOWN",
+      "reason": "2017 primary conjecture checked. Bounded 2026 literature search found no full proof, but absence from search is not a proof of current open status."
+    },
+    {
+      "kind": "population_source_scope_audit",
+      "verdict": "FIX_UNQUALIFIED_EQUIVALENCES",
+      "population_claims": ["claim_38c945c83e6d9f9dc77b20f936b660e811e528c284f76bd513990e6ed06ecc6a", "claim_9830d2b5c32b82afa88de780611e6b0fe5e81b7d425ff5fabff71dad19cc6930"],
+      "population_path_lines": ["~/math-brain-build/export/population/claims.jsonl:2053", "~/math-brain-build/export/population/claims.jsonl:5500"],
+      "issue": "The first appends an undefined q_c(d)=2 equivalence to the integer-q Potts conjecture; the second appends free critical nonpercolation to the wired critical magnetization criterion. Neither appendage occurs in the cited 2017 Conjecture 2 or its MAG definition.",
+      "primary_source": "https://arxiv.org/pdf/1707.00520 printed pp.3-4,93",
+      "replacement_scope": "For each integer q>=3,d>=3, positive monochromatic Potts magnetization at beta_c; current 2026 status UNKNOWN. Free critical nonpercolation is an extra premise for one sufficient route.",
+      "store_mutated": false
+    }
+  ]
+}

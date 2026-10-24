@@ -1,0 +1,13 @@
+{
+  "helper_version": "A077-v1 code/check.py",
+  "family": "point-defect selector towers with fresh disjoint control blocks; independent products of point defects",
+  "domain": "compressed n=1..32; full Walsh n=1..12; all ordered block partitions n=1..8; tensor blocks (2,3),(3,3),(1,2,3),(2,3,4),(4,4)",
+  "case_count": "32 compressed towers, 12 Walsh towers, 255 block partitions, 5 tensor controls; pilot n=1..6 with 63 partitions",
+  "symmetry": "fix defect at all-zero vertex by input translation; no further quotient",
+  "arithmetic": "integer Walsh and exact Fraction; log2 enclosed by positive 32-term atanh series after dyadic range reduction, with endpoints rounded outwards to denominator 2^120",
+  "memory_estimate_mb": 60,
+  "pilot_max_runtime_seconds": 60,
+  "max_runtime_seconds": 180,
+  "candidate": "blind cumulative sum history_weight*M*log2(1/M) <= K I, with exact Hellinger minority M; compare retained KL rebate",
+  "stop_rule": "frozen dimensions only; stop on failed assertion; no automatic dimension escalation"
+}

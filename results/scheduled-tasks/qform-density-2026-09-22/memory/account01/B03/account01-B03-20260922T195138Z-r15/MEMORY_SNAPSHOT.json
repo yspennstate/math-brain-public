@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B03",
+  "run_id": "account01-B03-20260922T195138Z-r15",
+  "source_control_commit_start": "8f9972e6ec79da0ddbbadcfa4a8cb32edafa301c",
+  "source_control_commit_prepublication": "ff58bafea563e4df61b6df2bd07e5f7cfc58042b",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "continuous_density_full_target": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B03",
+    "claim": "QFORM-AFFINE-PHYSICAL-N3-CLAMP-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "cdd5c5a373f3e5a9d4a38fbde390141d1d2c81d5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260922T183916Z-account02-B03-QFORM-r13/REPORT.md",
+    "applied_inequality": "If a physical triple has sigma_min>=s, the full residual has density cap <=128*2^(1/4)/s; this was fed into the half-Riesz bathtub bound after an original scalar pivot."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-PIVOT-SCHUR-TRIPLE-FRACTIONAL-TRACE-v1",
+      "statement": "If a=A_ii is nonzero and the physical Schur complement has an original-coordinate principal triple with sigma_min>=s, then ||p_Q||_infinity <=32*2^(1/8)(|a|s)^(-1/2)<34.897(|a|s)^(-1/2).",
+      "status": "PROVED_SUPPORTING_THEOREM"
+    },
+    {
+      "id": "QFORM-SQUARE-COLLISION-RIESZ-ALL-ALPHA-v1",
+      "statement": "For iid cap-M X,X', any shift h and every 0<alpha<1, E|(X-h)^2-(X'-h)^2|^(-alpha)<=C_alpha M^(2alpha), with an explicit C_alpha; equivalently a uniform weighted L2 time-integral estimate holds.",
+      "status": "PROVED_SUPPORTING_THEOREM"
+    },
+    {
+      "id": "QFORM-SQUARE-COLLISION-ALPHA1-ENDPOINT-FALSE-v1",
+      "statement": "The alpha=1 endpoint fails already for cap-one uniform input; this refutes only the one-square collision endpoint mechanism.",
+      "status": "REFUTED_INTERMEDIATE_ENDPOINT_MECHANISM"
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "18b94109c0ecb0ecfac1004f2bd38123f9931a62",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/account01-B03-20260922T195138Z-r15/REPORT.md"
+  },
+  "first_unpaid_implication": "From only s_3(A)>=1, force an exhaustive product-preserving alternative yielding either a direct ridge/cross-bank certificate, a physical pivot whose Schur residual contains a good physical triple, or a grouped rank-one/star/hyperbolic packet before reciprocal local-minor payment.",
+  "next_recipient": "QFORM proof-assembly workers, especially B19/B20; use the pivot+Schur-triple certificate as a branch and use alpha<1 collision energy only below its proven endpoint.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

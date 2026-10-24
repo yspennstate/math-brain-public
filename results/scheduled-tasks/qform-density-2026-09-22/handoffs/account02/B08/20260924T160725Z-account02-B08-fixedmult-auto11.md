@@ -1,0 +1,1 @@
+B08 fixed-multiplicity handoff: audited the current nine-direction source; the hyperbolic negative tail needs its own large coordinate and constants are unchanged. Explicit block examples make both interpolation rank bounds sharp. Seven remains at the shared-coordinate overlap receiver. Full three-direction QFORM remains open.

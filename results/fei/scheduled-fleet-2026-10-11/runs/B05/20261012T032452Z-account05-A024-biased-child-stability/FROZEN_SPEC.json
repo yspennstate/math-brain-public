@@ -1,0 +1,12 @@
+{
+ "helper_version":"A024 stage2 exact mixed-face transport and parity-order comparison v1",
+ "actual_boolean_family":"F_{L,N}=1-(1+P_N)(1-G_L)/2; G_L product of L five-bit bent/one-point-flip selector modules; plus all 16 two-input outer gates composed with a one-module core and all 16 two-bit second children",
+ "parameter_domain":"module fixed k=4. General root grid: 16 gates times 16 masks=256 roots, 7 physical inputs each. Explicit complete trees: (L,N)=(1,1),(1,2),(1,4),(2,1),(2,2),(2,4). Symbolic influence/credit records: L=1..32,N=L^2. No truth table for the symbolic large dimensions.",
+ "case_count":{"root_compositions":256,"root_splits":1792,"complete_trees":12,"symbolic_parameter_rows":32,"pilot_root_compositions":16,"pilot_complete_trees":2},
+ "symmetry_reduction":"none; only exact repeated restricted truth tables are memoized",
+ "arithmetic":"integer Walsh and Hamming edge/face counts, Fraction normalization/influence/credit, exact rational prime-log forms and proved atanh-series log2 intervals with 24 terms (48 only for unresolved signs); Boolean spectra explicit",
+ "memory_estimate_mb":100,
+ "maximum_runtime_seconds":{"pilot":60,"full":180},
+ "dimension_escalation":false,
+ "purpose":"Certify exact K=4 bad-node status and mixed odd-face ownership on actual Boolean compositions; all-parameter claims require the analytic proof in DERIVATION.md, not extrapolation of symbolic rows"
+}

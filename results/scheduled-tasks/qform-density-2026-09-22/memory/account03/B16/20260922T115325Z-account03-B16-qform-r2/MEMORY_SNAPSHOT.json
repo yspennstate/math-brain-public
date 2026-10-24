@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260922T115325Z-account03-B16-qform-r2",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_at_prewrite_refresh": "5534adbfe7b0ffa686e51d450962e7e1e51d90e9",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE"
+  ],
+  "peer_results_applied": [
+    {
+      "worker": "account01/B05",
+      "result": "definite original-coordinate 2x2 shell bound and Walsh/fiber-sup no-go",
+      "source_commit": "9d217e93968b43ca68bd4e6ba21b7324e6094955",
+      "path": "qform/fleet-2026-09-22/account01/B05/20260922T1136Z-qform-principal2d-B05-r1/REPORT.md"
+    },
+    {
+      "worker": "account02/B07",
+      "result": "flat Walsh rank-three projection refutes fixed-size principal-block extraction",
+      "source_commit": "9d217e93968b43ca68bd4e6ba21b7324e6094955",
+      "path": "proofnet24/quadratic-form-bounded-density/account02/B07/account02-B07-20260922T113436Z-qform/PEER_APPLIED.md"
+    }
+  ],
+  "designated_partner": "account04/B16",
+  "designated_partner_result_status": "NO_COMPLETED_QFORM_HANDOFF_VISIBLE_AT_FRESH_SNAPSHOT",
+  "proved_claims": [
+    "QFORM-INVERTIBLE-PRINCIPAL-BLOCK-v1",
+    "QFORM-FIXED-MATRIX-QUALITATIVE-LINF-v1"
+  ],
+  "key_bound": "P(q(X) in I) <= |I| [pi v_{k-2} R^(k-2)/sqrt(P(B)) + k^(3/2)/(sigma(B) R)] for all R>0",
+  "three_dimensional_bound": "||p||_inf <= 2 sqrt(6 pi sqrt(3)/(sigma sqrt(P))); if all three block eigenvalues have modulus >=delta, <11.428/delta",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "unresolved_implication": "dimension-free delocalized aggregation under s_3(A)>=1; remove the fixed-principal-block conditioning loss and survive the flat Walsh rank-three projection family",
+  "next_mechanism": "combine near/far decomposition with rank-two bilinear/Pluecker aggregation so many weak original-coordinate derivatives pay collectively rather than through a maximum-coordinate partition",
+  "math_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b9896b02dee05580d878624d05523ad4c969f753",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260922T115325Z-account03-B16-qform-r2/REPORT.md",
+    "blob": "5566d40a57277a036e08d65d3b603da637ea4e4a"
+  },
+  "handoff_commit": "7331372073569a535cb15cbe1949b08333494d1d"
+}

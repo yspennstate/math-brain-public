@@ -1,0 +1,164 @@
+diff --git a/math-brain-inbox/w452/bundle_001.json b/math-brain-inbox/w452/bundle_001.json
+new file mode 100644
+--- /dev/null
++++ b/math-brain-inbox/w452/bundle_001.json
+@@ -0,0 +1,159 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w452",
++  "bundle_slug": "probability-rwre-c0041-reviewed-boundaries-001",
++  "entries": [
++    {
++      "key": "c0041-public-resolution-status",
++      "namespace": "probability.rwre",
++      "logical_name": "directional-transience-ballisticity-public-resolution-status-2026",
++      "kind": "concept",
++      "title": "Directional transience and ballisticity: 2026 public resolution claim",
++      "statement": "For nearest-neighbor random walks in iid uniformly elliptic site environments on Z^d, d>=2, a 2026-10-06 public manuscript claims that annealed almost-sure transience in a fixed direction ell (X_n dot ell -> +infinity) implies an almost-sure deterministic velocity X_n/n -> v with v dot ell>0. This is source-status information; this bundle does not independently certify the paper or its Lean dependency tree.",
++      "proof_text": null,
++      "assumptions": ["d>=2", "iid site transition rows", "uniform ellipticity", "nearest-neighbor walk", "annealed almost-sure directional transience"],
++      "domain": "probability theory, random walks in random environments",
++      "source": {
++        "source_id": "openai-math:family-220:directional-transience-implies-ballisticity",
++        "url": "https://github.com/openai/math/blob/main/CONTENTS.md#L4419-L4443",
++        "revision": "public release 2026-10-06; checked 2026-10-10",
++        "license": "apache-2.0",
++        "excerpt": "almost-sure transience in a fixed direction implies a deterministic limiting velocity with positive projection"
++      }
++    },
++    {
++      "key": "finite-domain-kalikow-drift",
++      "namespace": "probability.rwre",
++      "logical_name": "finite-domain-kalikow-drift-definition",
++      "kind": "definition",
++      "title": "Finite-domain Kalikow drift",
++      "statement": "Let U be a finite connected subset of Z^d containing 0 and x, and let T_U be the first exit time. Write G_U^omega(0,x)=E_{0,omega}[sum_{n<T_U} 1_{X_n=x}] and d_ell(omega(x))=sum_e omega(x,e)(e dot ell). When E[G_U^omega(0,x)]>0, the finite-domain Kalikow drift at x in direction ell is D_U(x,ell)=E[G_U^omega(0,x)d_ell(omega(x))]/E[G_U^omega(0,x)]. Here E averages the environment law.",
++      "proof_text": null,
++      "assumptions": ["finite connected U contains 0 and x", "nearest-neighbor random environment", "finite positive annealed Green denominator"],
++      "domain": "probability theory, random walks in random environments",
++      "source": {
++        "source_id": "owner-own-work:w450:C0041:L1",
++        "url": "~/brain_workers/w450/ATTEMPT.md",
++        "revision": "2026-10-10; independently reviewed by w452",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "one-site-green-reweighting",
++      "namespace": "probability.rwre",
++      "logical_name": "one-site-green-reweighting-finite-domain",
++      "kind": "lemma",
++      "title": "One-site Green reweighting in a finite domain",
++      "statement": "Let U be finite and connected with 0,x in U, and assume nearest-neighbor uniformly elliptic iid site transition rows with common law pi. Condition on all rows except p=omega(x). Let h=P_omega^0(H_x<T_U), with h=1 if x=0, and q_e=P_omega^{x+e}(T_U<H_x), with q_e=1 when x+e is outside U. Then h and q do not depend on p, and G_U^omega(0,x)=h/(p dot q). Consequently the conditional finite-domain Kalikow drift at x is E_pi[d_ell(p)/(p dot q)]/E_pi[1/(p dot q)].",
++      "proof_text": "Before first hitting x, the row at x is unused, so h is independent of p. After a departure from x along e, the probability of exit before returning to x is q_e, again without using p. First-return decomposition makes the expected number of visits from x equal 1/(sum_e p_e q_e), hence G=h/(p dot q). Under site independence p retains law pi conditional on all other rows; h cancels from the ratio defining the Kalikow drift.",
++      "assumptions": ["finite connected U contains 0 and x", "uniform ellipticity", "iid site transition rows", "nearest-neighbor walk"],
++      "domain": "probability theory, random walks in random environments",
++      "source": {
++        "source_id": "owner-own-work:w450:C0041:L1",
++        "url": "~/brain_workers/w450/ATTEMPT.md",
++        "revision": "2026-10-10; independently reviewed by w452",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "two-site-drift-inversion",
++      "namespace": "probability.rwre",
++      "logical_name": "positive-raw-drift-negative-kalikow-two-site-example",
++      "kind": "lemma",
++      "title": "Positive raw drift can have negative finite-domain Kalikow drift",
++      "statement": "In Z^2 let iid site rows be p+=(9/20,1/20,1/4,1/4) with probability 51/100 and p-=(1/20,9/20,1/4,1/4) with probability 49/100, ordered +e1,-e1,+e2,-e2. The law is uniformly elliptic with kappa=1/20 and has mean local e1 drift 1/125>0. For U={0,-e1}, started at 0, its finite-domain Kalikow e1 drift at 0 equals -62753/3982809<0. No directional-transience claim is made for this law; this refutes only the auxiliary positive-raw-drift to positive-Kalikow-drift bridge.",
++      "proof_text": "The sole return path before exit is 0 -> -e1 -> 0, so G_U(0,0)=1/[1-p_s(-e1)p_t(+e1)] for site types s,t. The (++),(+-),(-+),(--) Green values are 400/391,400/399,400/319,400/391. Exact averaging with probabilities (51/100,49/100) gives E[G d]=-1004048/59246275 and E[G]=63724944/59246275. Their ratio is -62753/3982809; the unweighted mean drift is (51/100-49/100)*(2/5)=1/125.",
++      "assumptions": ["Z^2 nearest-neighbor walk", "iid two-type site rows", "finite domain U={0,-e1}", "uniform ellipticity kappa=1/20"],
++      "domain": "probability theory, random walks in random environments",
++      "source": {
++        "source_id": "owner-own-work:w450:C0041:L4-reviewed-w452",
++        "url": "~/brain_workers/w450/ATTEMPT.md",
++        "revision": "2026-10-10; exact Fraction reproduction in ~/brain_workers/w452/review_checks.py",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "critical-inverse-escape-moment-boundary",
++      "namespace": "probability.rwre",
++      "logical_name": "critical-one-dimensional-inverse-escape-moment-threshold",
++      "kind": "lemma",
++      "title": "Positive inverse escape moments can coexist with zero speed",
++      "statement": "For the one-dimensional iid nearest-neighbor environment with P(p_i=3/4)=3/4 and P(p_i=1/4)=1/4, let q(omega)=P_{0,omega}(T_{-1}=infinity). Then E[q(omega)^(-lambda)] is finite exactly for 0<=lambda<1, while the walk is transient to the right with zero speed and infinite annealed first crossing mean. The same inverse-moment law holds for its uniformly elliptic d>=2 hyperplane-layer lift, but that lift is not iid across sites.",
++      "proof_text": "With rho_i=(1-p_i)/p_i, the one-dimensional scale identity gives q^-1=1+sum_{k>=0}prod_{j=0}^k rho_j. For 0<lambda<1, subadditivity of t^lambda and site independence give E[q^-lambda]<=1/(1-E[rho^lambda]); E[rho^lambda]=(3/4)3^-lambda+(1/4)3^lambda<1 because (3^lambda-1)(3^lambda-3)<0. At lambda=1, E[rho]=1 and Tonelli gives E[q^-1]=infinity; larger lambda follow by monotonicity. Separately, the crossing recursion gives E T_1>=2L+1 for every L, and stationary ergodic crossing times yield zero speed. In the layered lift an independent axial clock preserves the event of never reaching negative height, but same-layer sites share a parameter.",
++      "assumptions": ["one-dimensional iid two-type site law", "or d>=2 hyperplane-layer lift lacking site iid", "lambda>=0"],
++      "domain": "probability theory, random walks in random environments",
++      "source": {
++        "source_id": "owner-own-work:w451:C0041:B4-reviewed-w452",
++        "url": "~/brain_workers/w451/INVERSE_MOMENT_BOUNDARY.md",
++        "revision": "2026-10-10; independently reviewed by w452",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "discounted-occupation-speed-bound",
++      "namespace": "probability.rwre",
++      "logical_name": "discounted-occupation-to-speed-bound-restricted-laws",
++      "kind": "lemma",
++      "title": "Discounted occupation drift transfers to speed when velocity exists",
++      "statement": "For either the iid uniformly elliptic nonnegative-local-drift law of w450 L2 or its balanced/positive two-type law of L3, let c>0 be the corresponding uniform finite-domain Kalikow directional drift lower bound. If X_n/n converges almost surely to a deterministic velocity v, then v dot ell>=c. Velocity existence is an explicit premise of this lemma; the standard Kalikow criterion supplies it for these restricted laws as an external theorem.",
++      "proof_text": "For 0<lambda<1 the discounted Green function has G_lambda(0,x)=h_lambda/[sum_e p_e q_lambda,e], where h_lambda=E_0[lambda^{H_x};H_x<infinity] and q_lambda,e=1-lambda E_{x+e}[lambda^{H_x};H_x<infinity]>=1-lambda. These factors stop before using the row at x, so the L2 or L3 sitewise lower drift algebra applies. Summing over x gives sum_n lambda^n E[d_ell(omega(X_n))]>=c/(1-lambda), since sum_x G_lambda=1/(1-lambda). For a_n=E[X_n dot ell], Abel summation yields ((1-lambda)^2/lambda)sum_n lambda^n a_n>=c. Bounded convergence gives a_n/n->v dot ell; the weights ((1-lambda)^2/lambda)n lambda^n sum to one and vanish on every fixed prefix as lambda increases to one. Hence v dot ell>=c.",
++      "assumptions": ["site iid uniformly elliptic L2 or L3 law", "corresponding local drift bound c>0", "almost-sure deterministic limiting velocity exists"],
++      "domain": "probability theory, random walks in random environments",
++      "source": {
++        "source_id": "owner-own-work:w450:C0041:L5-reviewed-w452",
++        "url": "~/brain_workers/w450/ATTEMPT.md",
++        "revision": "2026-10-10; independently reviewed by w452",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "one-site-green-reweighting",
++      "to_key": "finite-domain-kalikow-drift",
++      "kind": "depends_on",
++      "rationale": "The one-site ratio calculates the finite-domain Kalikow drift defined by occupation-weighted local drift."
++    },
++    {
++      "from_key": "two-site-drift-inversion",
++      "to_key": "finite-domain-kalikow-drift",
++      "kind": "depends_on",
++      "rationale": "The exact negative value uses the finite-domain occupation-weighted drift definition."
++    },
++    {
++      "from_key": "two-site-drift-inversion",
++      "to_key": "c0041-public-resolution-status",
++      "kind": "semantic_association",
++      "rationale": "The example invalidates one signed-drift proof bridge for C0041 but lacks a transience proof and therefore does not refute the target."
++    },
++    {
++      "from_key": "critical-inverse-escape-moment-boundary",
++      "to_key": "c0041-public-resolution-status",
++      "kind": "semantic_association",
++      "rationale": "A positive inverse survival moment alone is too weak in d=1 or layer-dependent d>=2 examples; the site-iid d>=2 hypothesis of C0041 remains essential."
++    },
++    {
++      "from_key": "discounted-occupation-speed-bound",
++      "to_key": "finite-domain-kalikow-drift",
++      "kind": "depends_on",
++      "rationale": "The speed lower bound uses the same occupation-weighted local drift ratio with a discounted Green kernel."
++    },
++    {
++      "from_key": "discounted-occupation-speed-bound",
++      "to_key": "one-site-green-reweighting",
++      "kind": "analogous_to",
++      "rationale": "The discounted first-return denominator generalizes the killed-domain single-site Green decomposition while retaining outside-row independence."
++    },
++    {
++      "from_key": "discounted-occupation-speed-bound",
++      "to_key": "c0041-public-resolution-status",
++      "kind": "semantic_association",
++      "rationale": "It proves a speed lower bound only for restricted L2/L3 laws and assumes velocity existence, so it is partial context for the general target."
++    }
++  ]
++}

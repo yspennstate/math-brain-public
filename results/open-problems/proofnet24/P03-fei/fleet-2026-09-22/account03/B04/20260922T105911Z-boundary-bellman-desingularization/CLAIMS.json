@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "control_revision": "2026-09-22.3",
+  "state_revision": "FEI-20260922T1000Z-v1",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260922T105911Z-account03-B04-fei-r11",
+  "candidate_id": "FEI-B04-BOUNDARY-BELLMAN-DESINGULARIZATION-v1",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "claims": [
+    {
+      "id": "B04-DIRECTIONAL-CURRENCY",
+      "status": "PROVED_IN_REPORT",
+      "statement": "For directional disagreement masses a=P(G0=0,G1=1), b=P(G0=1,G1=0), d=a+b and Delta=a-b, the singleton Poincare currency satisfies E=d-Delta^2=d(1-d)+4ab."
+    },
+    {
+      "id": "B04-FACE-FIRST-ORDER",
+      "status": "PROVED_IN_REPORT",
+      "statement": "If the s=0 child is a Poincare equality state, W0=0, then W_G(s)=s[W1+(1-s)E]=s(W1+E)-s^2E. If W1+E=0 the parent is itself an equality gate and no quotient is formed."
+    },
+    {
+      "id": "B04-BOUNDARY-DESINGULARIZATION",
+      "status": "PROVED_IN_REPORT",
+      "statement": "In the positive-denominator face-contraction branch, the global margin equals [W1*c1+(1-s)E*ell_s]/[W1+(1-s)E], where ell_s=-J_s/[s(1-s)E]. Thus the vanishing selector factor cancels exactly before taking a limit and child slack is retained."
+    },
+    {
+      "id": "B04-BOUNDARY-CONTROL-CRITERION",
+      "status": "PROVED_IN_REPORT",
+      "statement": "Any common finite cap C on the fixed child margin and the local gluing margin propagates to the full gate all the way to the boundary; boundary blow-up is equivalent to blow-up of the local gluing ratio, not to selector probability shrinkage itself."
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "account04/B13",
+      "path": "proofnet24/P03-fei/fleet-2026-09-22/account04/B13/20260922T1023Z-poincare-bellman-exception-tree/REPORT.md",
+      "use": "Exact Poincare singleton recurrence and child-slack-preserving defect cocycle / convex-margin normalization."
+    },
+    {
+      "source": "account02/B12",
+      "commit": "4ccd51ad517f425a529daa52c3352905b86ea69d",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md",
+      "use": "Exact actual-Boolean selector disagreement and child-defect identities from Sections 2-4 only; obsolete scalar candidate excluded."
+    },
+    {
+      "source": "account03/B04 prior run",
+      "path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B04/20260922T103904Z-nearzero-poincare-trichotomy/REPORT.md",
+      "use": "Poincare equality classification and prior identification of the boundary-contraction branch."
+    }
+  ],
+  "assigned_partner": "account04/B04",
+  "partner_result_status": "NO_COMPLETED_COMPATIBLE_FEI_ARTIFACT_FOUND_AT_FRESH_SNAPSHOT",
+  "recipient": "account01/B01",
+  "next_unpaid_implication": "FEI-B04-LOCAL-GLUING-BOUND-v1: bound ell_s=-J_s/K_s uniformly for actual Boolean splits under the surviving shaped candidate or another finite-cap potential, retaining Boolean information credit and child defects, or give an exact split escaping any proposed cap.",
+  "retired_routes_not_used": [
+    "quadratic_0.337_or_0.34_as_universal_candidate",
+    "raw_U4_terminal_payment",
+    "unweighted_L2_convolution_payment",
+    "fixed_depth_KL_projection"
+  ]
+}

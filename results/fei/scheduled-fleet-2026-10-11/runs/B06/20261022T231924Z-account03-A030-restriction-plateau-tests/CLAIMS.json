@@ -1,0 +1,57 @@
+[
+  {
+    "claim_id": "A030-THREE-STATE-BOOLEAN-CUT-RESERVE",
+    "version": 3,
+    "exact_statement": "For the actual Boolean family F_r in PROOF.md, for all even r>=4, with epsilon=2^-r, means (1/2,0,-1/2), three-cut weights (5/16,3/16,5/16), R=sum_j(1-m_j^2)phi(q_j), queried influence d=epsilon/2, and E=Delta_s H(F_r)-sum_j w_j Delta_s H(1-2C_j)-Delta_s R, E/d=r/4+3/(4 ln 2)-7/4+o(1), while the actual source-spectrum JS release Delta_s J/d=3/4+O(epsilon). Under the one original cut policy s then the r controller bits, every least nonnegative C=1 cut reserve has zero unused root slack. Hence no fixed finite K,A>=0 bounds E by Kd+A Delta_s J plus that unused weighted cut slack. The node is reached with probability 1/4 by two actual DATA tag exposures from an equal-mean predecessor, with the same harmonic cut bank and both children retained. This refutes only that local unequal-mean payment upgrade: H(F_r)/I(F_r)<=16.",
+    "hypotheses": [
+      "Uniform cube; normalized Walsh spectrum; base-2 entropy.",
+      "Canonical even-dimensional bent controller and disjoint private point-defect, majority, negative point-defect cores as defined in PROOF.md.",
+      "All three original cuts, their actual physical children, fixed-policy Bellman continuations, rarity and complete source/structural terminal costs retained.",
+      "Unused slack is for C=1, not an assertion for arbitrary cut-bank coefficient."
+    ],
+    "statement_sha256": "124af10c885db9da10514022868710ee124ab21719935e28621e43c83e98126c",
+    "contributors": [
+      "A030"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/check.py",
+      "code/history.py",
+      "out/VALIDATION.json",
+      "out/HISTORY.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim": "A030-THREE-STATE-BOOLEAN-CUT-RESERVE@2",
+        "use": "Definitions and equal-mean boundary only; no unequal-mean payment assumed."
+      },
+      {
+        "claim": "A029-FINITE-LABEL-SIGNED-CHILD-ACCOUNT@1",
+        "use": "Exact T+J+Lstr decomposition reconstructed here; its universal spending claim is not enlarged."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A030",
+        "kind": "Author analytic proof and two exact Fourier implementations; not independent external acceptance.",
+        "results": "Pilot 62 checks; main 86 checks; seven-node history 55 checks. All PASS."
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_CHECKED_INDEPENDENT_REVIEW_PENDING_NOT_LEAN_CERTIFIED",
+    "supersedes": [
+      "A030-THREE-STATE-BOOLEAN-CUT-RESERVE@2 (cumulative refinement; its equal-mean theorem remains valid at its original scope)"
+    ],
+    "refutes": [
+      "Proposed fixed-local-price unequal-mean extension: E<=K Inf_s(F)+A Delta_s J+original unused C=1 cut slack, uniformly in controller dimension."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B06 Claude lead",
+      "A028",
+      "A029",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  }
+]

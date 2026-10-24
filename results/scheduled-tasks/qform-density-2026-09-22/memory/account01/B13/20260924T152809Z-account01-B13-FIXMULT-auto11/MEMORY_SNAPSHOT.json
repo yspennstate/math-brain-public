@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260924T152809Z-account01-B13-FIXMULT-auto11",
+  "objective_id": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "repository": "yspennstate/math-open-problems",
+    "source_commit": "eeb752c8943536541b34b42b8bf48e924f4d3d2f",
+    "source_path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex",
+    "source_blob": "19fb119877426b640b2c0dae19ec2f78a399fe11",
+    "source_sha256": "bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3"
+  },
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "results": [
+    {
+      "id": "QFORM-FIXED-MULTIPLICITY-9-CONSTANT400-B13-AUDIT-v1",
+      "status": "PASS_IN_COMPLETE_MATHEMATICAL_RECONSTRUCTION",
+      "scope": "arbitrary independent coordinate densities bounded by K; arbitrary real symmetric A; s_9(A)>=s>0; arbitrary affine terms; essential density <=400 K^2/s",
+      "audit_commit": "79d0e46728f4d3d1f9baff32baaeccc43e1a8d32"
+    },
+    {
+      "id": "QFORM-FIXED-MULTIPLICITY-8-B13-v1",
+      "status": "COMPLETE_CANDIDATE_PASS_IN_THIS_RECONSTRUCTION_PENDING_ANOTHER_SEPARATE_END_TO_END_REVIEW",
+      "scope": "same arbitrary-law/sign/dimension/affine scope with s_8(A)>=s>0; conservative essential-density bound 6010 K^2/s",
+      "proof_commit": "1907b7376b09471eed16efc535433d1d7119136f"
+    }
+  ],
+  "partner_results_actually_applied": [
+    {
+      "source": "account03/B17 robust two-anchor extraction",
+      "commit": "0408c579bcda638e72c010ff99892a22b9049796",
+      "application": "extract literal anchor H with det(CC^T)>=0.364944265882702"
+    },
+    {
+      "source": "account01/B19 disjoint incident-volume receiver",
+      "commit": "d44d368cd18a2590fc62d0aadd2cf2b7e9d0e83f",
+      "application": "pay W_dis>g/48 by a product-safe original-coordinate Fourier receiver"
+    },
+    {
+      "source": "account03/B20 one-high leverage closure",
+      "commit": "74542593cca87e76d83b07f98e2c895f76b90796",
+      "application": "force W_dis>g/48 whenever at most one q_i exceeds 2/3"
+    }
+  ],
+  "mathematical_premises": [
+    "all probabilistic operations remain in literal original coordinates",
+    "nonsymmetric interpolation auxiliaries are handled only by singular-value/rank inequalities",
+    "definite-pair and hyperbolic coarea bounds are domination statements valid for arbitrary cap-one product laws",
+    "shared physical coordinates are never treated as independent copies",
+    "the no-pivot entry cap is combined with determinantal leverage identities to exclude the two-high robust-anchor endpoint"
+  ],
+  "exact_output_sources": {
+    "audit": "yspennstate/math-open-problems@79d0e46728f4d3d1f9baff32baaeccc43e1a8d32:proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/audits/account01/B13/20260924T152809Z-account01-B13-FIXMULT-auto11/AUDIT.md",
+    "improvement": "yspennstate/math-open-problems@1907b7376b09471eed16efc535433d1d7119136f:proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/account01/B13/20260924T152809Z-account01-B13-FIXMULT-auto11/EIGHT_EIGENVALUE_REPLACEMENT.md",
+    "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B13/20260924T152809Z-account01-B13-FIXMULT-auto11.md"
+  },
+  "unresolved_implication": "QFORM-S7-OVERLAP-SHARED-ANCHOR-TO-PRODUCT-LINFINITY-RECEIVER-v1",
+  "next_step": "obtain a dependence-safe analytic receiver for the fixed positive invertible-seed overlap-one packet at s_7 while retaining the shared physical anchor and nested original-coordinate stars; otherwise find a counterexample to that receiver",
+  "full_three_eigenvalue_target_status": "OPEN",
+  "global_continuity_status": "OPEN_NOT_CLAIMED",
+  "model": "GPT-5.6 Sol",
+  "configured_effort": "UNKNOWN",
+  "provider_reasoning_counters": null
+}

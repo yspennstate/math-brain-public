@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B05",
+  "run_id": "20260922T062559Z-b05-bt4-r11",
+  "utc_start": "2026-09-22T06:25:59Z",
+  "utc_end_snapshot": "2026-09-22T06:42:42Z",
+  "control": {
+    "initial_commit": "b13194a9dccab6e2420071c4fdd27d0fc33f3a3a",
+    "final_same_commit_read": "bc11a50216e5634672a6b75a48831c2eeb2761c8",
+    "revision": "2026-09-22.2",
+    "active_programme": "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z",
+    "control_readme_sha256": null,
+    "control_readme_sha256_status": "UNVERIFIED_NOT_EXPOSED_BY_CONNECTOR",
+    "owner_message_sha256": null,
+    "owner_message_sha256_status": "UNVERIFIED_NOT_EXPOSED_BY_CONNECTOR"
+  },
+  "directive_acknowledgments": {
+    "fresh_main_controls": {
+      "status": "implemented",
+      "evidence": "AGENTS.md, scheduled_tasks/README.md, fleet.json, roles.json and PROTOCOL.md read at the final same commit; OWNER MESSAGE read."
+    },
+    "collective_open_problems": {
+      "status": "implemented",
+      "evidence": "ORDER.md, TARGETS.md and ASSIGNMENTS.json consumed; substantive work stayed on BT4."
+    },
+    "stop_new_brain_installation_and_benchmark": {
+      "status": "implemented",
+      "evidence": "No installation or benchmark work performed."
+    },
+    "preserve_B12_B18_FEI": {
+      "status": "not_applicable",
+      "evidence": "No FEI artifacts or assignments changed."
+    },
+    "BT4_B05_exchange_assignment": {
+      "status": "implemented",
+      "evidence": "Derived and saved BT4-F3-RETURN-RESTART-v1 with explicit packing exchanges and vertex accounting."
+    },
+    "consume_other_account_result": {
+      "status": "implemented",
+      "evidence": "Applied account04/B04 BT4-R4-F3-RETURN-CUT-v1 and its exact residual identity."
+    },
+    "quiet_delivery": {
+      "status": "implemented",
+      "evidence": "No email, Drive, public posting, scheduler mutation, paid/remote compute, workflow dispatch or permission change performed."
+    },
+    "brain_context": {
+      "status": "implemented",
+      "evidence": "No authenticated brain retrieval/context use occurred; run remains WITHOUT_VERIFIED_BRAIN."
+    }
+  },
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "this invocation",
+    "coverage": "unavailable"
+  },
+  "thinking_proxy": {
+    "kind": "elapsed_execution_not_pure_thinking",
+    "start_utc": "2026-09-22T06:25:59Z",
+    "end_utc": "2026-09-22T06:42:42Z",
+    "elapsed_seconds": 1003,
+    "source": "utc_clock",
+    "tool_calls_made": null,
+    "tool_call_count_status": "UNVERIFIED_NOT_RELIABLY_COUNTED_ACROSS_CONTEXT_COMPACTION",
+    "saved_report_characters": null
+  },
+  "model_evidence": {
+    "model_self_report": "self_report",
+    "reasoning_effort_requested": "owner_control",
+    "reasoning_effort_configured": "not_exposed",
+    "thinking_usage": "not_exposed"
+  },
+  "source_coverage": {
+    "named_other_account_result": {
+      "account_slot": "account04/B04",
+      "candidate": "BT4-R4-F3-RETURN-CUT-v1",
+      "handoff_path": "scheduled_tasks/work/shared/collective-open-problems-2026-09-22/BT4-HANDOFF-account04-B04-20260922T060947Z.md",
+      "blob": "2cdc66c284aeedc80337e22cacd22f340edeb476"
+    },
+    "essential_peer_dependency": {
+      "account_slot": "account03/B06",
+      "candidate": "BT4-R4-F3-MAJORITY-CROSS-v1",
+      "handoff_path": "scheduled_tasks/work/shared/collective-open-problems-2026-09-22/BT4-HANDOFF-account03-B06-20260922T052316Z.md",
+      "blob": "dad56a7b89ccd82a4393c147e26985485305378d"
+    }
+  },
+  "mathematics": {
+    "outcome": "ESSENTIAL_STEP_APPLIED",
+    "target_status": "OPEN_NOT_PROVED",
+    "candidate": "BT4-F3-RETURN-RESTART-v1",
+    "new_implications": [
+      "In the F3 BOTH return state, global minimum of the original exact-R4 packing forces the broken light cycle U to have order at most four.",
+      "If the exact return complement is acyclic, a canonical residual sink yields either a campaign SIX output or exact fan profile (3,2,2).",
+      "When |U|=4, the return packing is itself globally minimum with exact four-vertex remainder, so exact-R4 machinery restarts.",
+      "When |U|=3 and the regenerated three-fan lies on a short packed cycle, either that cycle has no return to the sink or a four-cycle return gives the explicit triangle exchange b->t->b^-->b and a globally minimum exact-R4 restart; a cyclic exchanged remainder closes with four cycles."
+    ],
+    "first_unpaid_implication": "BT4-F3-R3-HEAVY-SPLICE-v1: close the |U|=3 non-SIX case with the three-fan on the potentially long heavy cycle H, together with the short-heavy no-return leaf."
+  },
+  "artifacts": {
+    "scientific_report": {
+      "path": "proofnet24/collective-BT4/account01/B05/20260922T062559Z-b05-bt4-r11/report.md",
+      "commit": "3b137447928686fe98defa478cd772168e7edd12",
+      "blob": "3168133fc59a3f9b5740f54d397e7a4962f15f47",
+      "readback": "PASS"
+    },
+    "shared_handoff": {
+      "path": "scheduled_tasks/work/shared/collective-open-problems-2026-09-22/BT4-HANDOFF-account01-B05-20260922T0640Z.md",
+      "commit": "939570f6a01a7d485b7d7f18197b8eb39325c9ce",
+      "blob": "e64141785ae39022a617177f4ceb2b65066aa255",
+      "readback": "PASS"
+    }
+  },
+  "privacy_review": {
+    "method": "manual_scoped_fallback_review",
+    "automated_precommit_scan": "NOT_AVAILABLE_THROUGH_CURRENT_CONNECTOR_PATH",
+    "scope": "this run's report, handoff, receipt and finish metadata only",
+    "result": "SANITIZED_NO_CREDENTIALS_NO_SCHEDULER_IDS_NO_MACHINE_PATHS_NO_UNRELATED_PRIVATE_DATA"
+  },
+  "tool_results_summary": [
+    "Fresh GitHub control and shared-candidate reads: PASS",
+    "Actual-hour login write and readback: PASS",
+    "Unique run start write and readback: PASS",
+    "Immutable scientific report write and readback: PASS",
+    "Shared source-bound handoff write and readback: PASS",
+    "UTC end snapshot: PASS"
+  ],
+  "unresolved_blockers": [
+    "BT4 is not proved.",
+    "The remaining local F3 debt is the residual-three heavy-fan splice/no-return closure described by BT4-F3-R3-HEAVY-SPLICE-v1.",
+    "Separate campaign SIX, F2, heavy-triangle and larger-remainder branches remain governed by team state."
+  ],
+  "next_action": "Attack BT4-F3-R3-HEAVY-SPLICE-v1 using a materially explicit two-cycle replacement or derive a source-valid counterexample; feed any exact result to the lead and partner through the shared handoff channel.",
+  "delivery_status": "SCIENTIFIC_REPORT_AND_SHARED_HANDOFF_READ_BACK; RECEIPT_PENDING_READBACK_AT_WRITE_TIME"
+}

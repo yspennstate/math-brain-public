@@ -1,0 +1,137 @@
+--- a/~/math-brain-inbox/w342/bundle_007.json
++++ b/~/math-brain-inbox/w342/bundle_007.json
+@@ -0,0 +1,134 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w342",
++  "bundle_slug": "w342-c0083-partial-results",
++  "entries": [
++    {
++      "key": "c0083-w342-result-scope",
++      "namespace": "probability.research.attempts",
++      "logical_name": "c0083-w342-result-scope",
++      "kind": "concept",
++      "title": "Result scope and audit status for C0083",
++      "statement": "The cached Hamming-graph problem asks for the asymptotic critical-value expansion. Exact local cycle counts and the susceptibility Taylor series at p=0 do not establish a new critical-value coefficient. Critical control through exploration or a lace expansion is still required. Proofs await w346 KEEP.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0083:c0083-w342-result-scope",
++        "url": "file:///~/brain_workers/w342/proofs/C0083.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "hamming-graph-local-triangle-and-four-cycle-counts",
++      "namespace": "probability.percolation",
++      "logical_name": "hamming-graph-local-triangle-and-four-cycle-counts",
++      "kind": "lemma",
++      "title": "Triangles and four-cycles through a Hamming-graph vertex",
++      "statement": "For integers n>=2,d>=1 in the Hamming graph K_n^d, each vertex has degree D=d(n-1), lies in d binom(n-1,2) triangles and in 3d binom(n-1,3)+binom(d,2)(n-1)^2 simple four-cycles. The two four-cycle terms count coordinate-clique cycles and two-coordinate rectangles, respectively.",
++      "proof_text": "# C0083: exact cycle counts and the first susceptibility correction\n\nStatus: proofs of finite combinatorial identities, awaiting w346. No coefficient of the critical-value expansion beyond the cited literature is claimed.\n\nFor the Hamming graph K_n^d with d>=1,n>=2, the degree is D=d(n-1). The numbers of triangles and simple four-cycles through a fixed vertex are\n\n    T=d binom(n-1,2),\n    C4=3d binom(n-1,3)+binom(d,2)(n-1)^2.\n\nA triangle changes only one coordinate, giving the first formula. A four-cycle either lies in one coordinate clique (choose three other coordinate values, with three cyclic orders), or alternates two coordinates around a rectangle (choose the coordinates and one alternative value in each). These are exhaustive: a changed coordinate must occur at least twice in a closed walk; four steps therefore use either one coordinate or two coordinates twice each.\n\nFor ANY finite simple D-regular graph, let T_v be its triangle count at a vertex v and let chi_v(p)=E_p|C(v)| for independent bond percolation. As p tends to zero,\n\n    chi_v(p)=1+Dp+D(D-1)p^2+[D(D-1)^2-4T_v]p^3+O(p^4).\n\nProof: sum the connection probabilities over other vertices and use inclusion-exclusion over their simple paths from v. The first coefficient counts length-one paths, the second counts length-two paths. Nonbacktracking length-three walks number D(D-1)^2; the 2T_v walks returning to v must be excluded, leaving the simple length-three paths. The only intersections of distinct connecting paths with a three-edge union are a direct edge and a two-edge alternative around a triangle. There are 2T_v such pairs. Hence another 2T_v is subtracted. All other path terms or intersections contain at least four edges.\n\nIn particular triangle contributions first enter this susceptibility Taylor series at p^3, not as a change to the coefficient of p. At p of order 1/[d(n-1)], 4T p^3 is O(1/n) for fixed d. This corrects the earlier heuristic that inferred an order-one change to the leading branching term from counting triangles. Low-order finite susceptibility coefficients do not themselves determine the requested critical-point expansion: criticality needs control of the resummed exploration or lace expansion.\n\nSource: C0083-A001, whose in-line triangle correction was tentative, and the cached Heydenreich-van der Hofstad Open Problem 15.10. These identities are independently derived campaign work.\n",
++      "assumptions": [
++        "n>=2 and d>=1 integers"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0083:hamming-graph-local-triangle-and-four-cycle-counts",
++        "url": "file:///~/brain_workers/w342/proofs/C0083.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "regular-graph-percolation-susceptibility-cubic-coefficient",
++      "namespace": "probability.percolation",
++      "logical_name": "regular-graph-percolation-susceptibility-cubic-coefficient",
++      "kind": "lemma",
++      "title": "Cubic susceptibility coefficient in a regular graph",
++      "statement": "For independent bond percolation with parameter p on a finite simple D-regular graph, let T_v be the number of triangles through v and chi_v(p)=E_p|C(v)|. Then chi_v(p)=1+Dp+D(D-1)p^2+[D(D-1)^2-4T_v]p^3+O(p^4) as p->0. A finite Taylor series at zero does not determine a critical-value expansion.",
++      "proof_text": "# C0083: exact cycle counts and the first susceptibility correction\n\nStatus: proofs of finite combinatorial identities, awaiting w346. No coefficient of the critical-value expansion beyond the cited literature is claimed.\n\nFor the Hamming graph K_n^d with d>=1,n>=2, the degree is D=d(n-1). The numbers of triangles and simple four-cycles through a fixed vertex are\n\n    T=d binom(n-1,2),\n    C4=3d binom(n-1,3)+binom(d,2)(n-1)^2.\n\nA triangle changes only one coordinate, giving the first formula. A four-cycle either lies in one coordinate clique (choose three other coordinate values, with three cyclic orders), or alternates two coordinates around a rectangle (choose the coordinates and one alternative value in each). These are exhaustive: a changed coordinate must occur at least twice in a closed walk; four steps therefore use either one coordinate or two coordinates twice each.\n\nFor ANY finite simple D-regular graph, let T_v be its triangle count at a vertex v and let chi_v(p)=E_p|C(v)| for independent bond percolation. As p tends to zero,\n\n    chi_v(p)=1+Dp+D(D-1)p^2+[D(D-1)^2-4T_v]p^3+O(p^4).\n\nProof: sum the connection probabilities over other vertices and use inclusion-exclusion over their simple paths from v. The first coefficient counts length-one paths, the second counts length-two paths. Nonbacktracking length-three walks number D(D-1)^2; the 2T_v walks returning to v must be excluded, leaving the simple length-three paths. The only intersections of distinct connecting paths with a three-edge union are a direct edge and a two-edge alternative around a triangle. There are 2T_v such pairs. Hence another 2T_v is subtracted. All other path terms or intersections contain at least four edges.\n\nIn particular triangle contributions first enter this susceptibility Taylor series at p^3, not as a change to the coefficient of p. At p of order 1/[d(n-1)], 4T p^3 is O(1/n) for fixed d. This corrects the earlier heuristic that inferred an order-one change to the leading branching term from counting triangles. Low-order finite susceptibility coefficients do not themselves determine the requested critical-point expansion: criticality needs control of the resummed exploration or lace expansion.\n\nSource: C0083-A001, whose in-line triangle correction was tentative, and the cached Heydenreich-van der Hofstad Open Problem 15.10. These identities are independently derived campaign work.\n",
++      "assumptions": [
++        "Finite simple D-regular graph",
++        "Independent bond percolation"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0083:regular-graph-percolation-susceptibility-cubic-coefficient",
++        "url": "file:///~/brain_workers/w342/proofs/C0083.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0083-w342-validation-evidence",
++      "namespace": "probability.research.attempts",
++      "logical_name": "c0083-w342-validation-evidence",
++      "kind": "concept",
++      "title": "Finite validation evidence for C0083",
++      "statement": "Measured validation evidence for C0083: {\"cases\": [{\"d\": 1, \"four_cycles\": 0, \"n\": 3, \"subsets\": 8, \"susceptibility_coefficients\": [1, 2, 2, -2], \"triangles\": 1}, {\"d\": 1, \"four_cycles\": 3, \"n\": 4, \"subsets\": 42, \"susceptibility_coefficients\": [1, 3, 6, 0], \"triangles\": 3}, {\"d\": 2, \"four_cycles\": 1, \"n\": 2, \"subsets\": 15, \"susceptibility_coefficients\": [1, 2, 2, 2], \"triangles\": 0}, {\"d\": 2, \"four_cycles\": 4, \"n\": 3, \"subsets\": 988, \"susceptibility_coefficients\": [1, 4, 12, 28], \"triangles\": 2}, {\"d\": 2, \"four_cycles\": 15, \"n\": 4, \"subsets\": 18473, \"susceptibility_coefficients\": [1, 6, 30, 126], \"triangles\": 6}, {\"d\": 3, \"four_cycles\": 3, \"n\": 2, \"subsets\": 299, \"susceptibility_coefficients\": [1, 3, 6, 12], \"triangles\": 0}], \"command\": \"python -X utf8 verify_remaining.py\", \"graph_cases\": 6, \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"seconds\": 0.19, \"violations\": 0}. These finite checks support the written proof and do not replace its independent audit or establish the full open problem.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0083:c0083-w342-validation-evidence",
++        "url": "file:///~/brain_workers/w342/c0083_measurements.json",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "regular-graph-percolation-susceptibility-cubic-coefficient",
++      "kind": "analogous_to",
++      "rationale": "FROM \"For independent bond percolation with parameter p on a finite simple D-regular graph, let T_v be the number of triangles through v and chi_v(p)=E_p|C(v)|. Then chi_v(p)=1+Dp+D(D-1)p^2+[D(D-1)^2-4T_v]p^3+O(p^4) as p->0. A finite Taylor series at zero does not\"; TO \"For integers n>=2,d>=1 in the Hamming graph K_n^d, each vertex has degree D=d(n-1), lies in d binom(n-1,2) triangles and in 3d binom(n-1,3)+binom(d,2)(n-1)^2 simple four-cycles. The two four-cycle terms count coordinate-clique cycles and two-coordinate\"; The general cubic coefficient specializes to Hamming graphs using their triangle count; four-cycles enter later.",
++      "to_key": "hamming-graph-local-triangle-and-four-cycle-counts"
++    },
++    {
++      "from_key": "c0083-w342-result-scope",
++      "kind": "cites",
++      "rationale": "FROM \"The cached Hamming-graph problem asks for the asymptotic critical-value expansion. Exact local cycle counts and the susceptibility Taylor series at p=0 do not establish a new critical-value coefficient. Critical control through exploration or a lace expansion\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Show that the critical value of percolation on the Hamming graph K_n^d satisfies p_c(K_n^d; lambda) = sum_{i=1}^{d/3} a_i(d) n^{-i} + O(n^{-1-d/3}), with a_1(d) =\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0083-asymptotic-expansion-of-the-critical-value-of-the-hamming-graph"
++    },
++    {
++      "from_key": "hamming-graph-local-triangle-and-four-cycle-counts",
++      "kind": "cites",
++      "rationale": "FROM \"For integers n>=2,d>=1 in the Hamming graph K_n^d, each vertex has degree D=d(n-1), lies in d binom(n-1,2) triangles and in 3d binom(n-1,3)+binom(d,2)(n-1)^2 simple four-cycles. The two four-cycle terms count coordinate-clique cycles and two-coordinate\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Show that the critical value of percolation on the Hamming graph K_n^d satisfies p_c(K_n^d; lambda) = sum_{i=1}^{d/3} a_i(d) n^{-i} + O(n^{-1-d/3}), with a_1(d) =\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0083-asymptotic-expansion-of-the-critical-value-of-the-hamming-graph"
++    },
++    {
++      "from_key": "hamming-graph-local-triangle-and-four-cycle-counts",
++      "kind": "cites",
++      "rationale": "FROM \"For integers n>=2,d>=1 in the Hamming graph K_n^d, each vertex has degree D=d(n-1), lies in d binom(n-1,2) triangles and in 3d binom(n-1,3)+binom(d,2)(n-1)^2 simple four-cycles. The two four-cycle terms count coordinate-clique cycles and two-coordinate\"; TO \"The cached Hamming-graph problem asks for the asymptotic critical-value expansion. Exact local cycle counts and the susceptibility Taylor series at p=0 do not establish a new critical-value coefficient. Critical control through exploration or a lace expansion\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "c0083-w342-result-scope"
++    },
++    {
++      "from_key": "regular-graph-percolation-susceptibility-cubic-coefficient",
++      "kind": "cites",
++      "rationale": "FROM \"For independent bond percolation with parameter p on a finite simple D-regular graph, let T_v be the number of triangles through v and chi_v(p)=E_p|C(v)|. Then chi_v(p)=1+Dp+D(D-1)p^2+[D(D-1)^2-4T_v]p^3+O(p^4) as p->0. A finite Taylor series at zero does not\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Show that the critical value of percolation on the Hamming graph K_n^d satisfies p_c(K_n^d; lambda) = sum_{i=1}^{d/3} a_i(d) n^{-i} + O(n^{-1-d/3}), with a_1(d) =\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0083-asymptotic-expansion-of-the-critical-value-of-the-hamming-graph"
++    },
++    {
++      "from_key": "regular-graph-percolation-susceptibility-cubic-coefficient",
++      "kind": "cites",
++      "rationale": "FROM \"For independent bond percolation with parameter p on a finite simple D-regular graph, let T_v be the number of triangles through v and chi_v(p)=E_p|C(v)|. Then chi_v(p)=1+Dp+D(D-1)p^2+[D(D-1)^2-4T_v]p^3+O(p^4) as p->0. A finite Taylor series at zero does not\"; TO \"The cached Hamming-graph problem asks for the asymptotic critical-value expansion. Exact local cycle counts and the susceptibility Taylor series at p=0 do not establish a new critical-value coefficient. Critical control through exploration or a lace expansion\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "c0083-w342-result-scope"
++    },
++    {
++      "from_key": "c0083-w342-validation-evidence",
++      "kind": "cites",
++      "rationale": "FROM \"Measured validation evidence for C0083: {\"cases\": [{\"d\": 1, \"four_cycles\": 0, \"n\": 3, \"subsets\": 8, \"susceptibility_coefficients\": [1, 2, 2, -2], \"triangles\": 1}, {\"d\": 1, \"four_cycles\": 3, \"n\": 4, \"subsets\": 42, \"susceptibility_coefficients\": [1, 3, 6, 0],\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Show that the critical value of percolation on the Hamming graph K_n^d satisfies p_c(K_n^d; lambda) = sum_{i=1}^{d/3} a_i(d) n^{-i} + O(n^{-1-d/3}), with a_1(d) =\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0083-asymptotic-expansion-of-the-critical-value-of-the-hamming-graph"
++    },
++    {
++      "from_key": "c0083-w342-validation-evidence",
++      "kind": "cites",
++      "rationale": "FROM \"Measured validation evidence for C0083: {\"cases\": [{\"d\": 1, \"four_cycles\": 0, \"n\": 3, \"subsets\": 8, \"susceptibility_coefficients\": [1, 2, 2, -2], \"triangles\": 1}, {\"d\": 1, \"four_cycles\": 3, \"n\": 4, \"subsets\": 42, \"susceptibility_coefficients\": [1, 3, 6, 0],\"; TO \"The cached Hamming-graph problem asks for the asymptotic critical-value expansion. Exact local cycle counts and the susceptibility Taylor series at p=0 do not establish a new critical-value coefficient. Critical control through exploration or a lace expansion\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "c0083-w342-result-scope"
++    }
++  ]
++}

@@ -1,0 +1,34 @@
+{
+  "term": "gaussian integration",
+  "rows": [
+    {
+      "id": "claim_1564c803ed1f4f740d9c5f603549c04916aaed26f09262fdb378ee739b59ba18",
+      "kind": "claim",
+      "title": "Gaussian Integration by Parts, Stein's Characterisation, and Isserlis-Wick",
+      "metadata_json": {
+        "artifact_digest": "sha256:efee4882cf38f72f4f0455926566792cc876b52c6cb6a527e4223aa325d34232",
+        "artifact_path": "objects/sha256/ef/efee4882cf38f72f4f0455926566792cc876b52c6cb6a527e4223aa325d34232.md",
+        "bundle_digest": "sha256:2eb00ffb3a0e3f633485db6a705fae7517d9527b59055f15979f0a68468428c5",
+        "bundle_entry_key": "thm-gaussian-integration-by-parts",
+        "bundle_id": "population.percolation-subadditivity-and-gaussian-chaos-001",
+        "claim_kind": "theorem",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-8e06e1f7-M9/bundle_ap03.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.gaussian:gaussian-integration-by-parts-and-steins-characterisation",
+        "overlay_schema_version": 1,
+        "proof_text": "(a) Write the expectation as an integral against the density phi(x) = (2 pi)^{-1/2} e^{-x^2/2} and use the identity phi'(x) = -x phi(x). Then E[Z f(Z)] = integral x f(x) phi(x) dx = - integral f(x) phi'(x) dx = integral f'(x) phi(x) dx = E[f'(Z)], the middle step being integration by parts, whose boundary terms vanish because phi decays faster than any polynomial and f grows at most in a way controlled by the integrability hypothesis. (b) Diagonalise: write X = A Y with Y standard Gaussian and A A^T = Sigma; apply (a) coordinatewise to Y and change variables back, the chain rule producing the matrix Sigma. (c) Necessity is (a). For sufficiency, given the identity, fix a real number z and solve STEIN'S EQUATION f'(x) - x f(x) = 1{x <= z} - Phi(z) for f, which has the explicit bounded solution f(x) = e^{x^2/2} integral_{-infinity}^{x} (1{y <= z} - Phi(z)) e^{-y^2/2} dy with bounded derivative. Taking expectations of both sides at X = Z and using the hypothesis kills the left-hand side, giving P(Z <= z) = Phi(z) for every z. (d) Induct on m using (b): apply (b) to f(X) = X_2 ... X_{2m} with i = 1, which expresses E[X_1 ... X_{2m}] as sum_j Sigma_{1j} E[ product over the remaining indices ], and each term is by induction a sum over perfect matchings of the remaining 2m - 2 indices; matching index 1 with index j accounts for exactly the matchings in which 1 is paired with j. Odd moments vanish because the law is symmetric under X -> -X.",
+        "release_manifest_digest": "sha256:0a10dca57c02792c802de68a722e918c5119beec63f791aa1a02a4d2b2b22ace",
+        "revision_digest": "sha256:1564c803ed1f4f740d9c5f603549c04916aaed26f09262fdb378ee739b59ba18",
+        "source_id": "rederived:claude-8e06e1f7-M9",
+        "source_revision": "re-derived-2026-08-22; all four parts and their proofs were written and checked by the author, including the explicit fourth-moment expansion and the value E[Z^4] = 3; textbook cross-reference in the statement, source not fetched this session",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    }
+  ],
+  "elapsed_seconds": 0.08347469998989254
+}

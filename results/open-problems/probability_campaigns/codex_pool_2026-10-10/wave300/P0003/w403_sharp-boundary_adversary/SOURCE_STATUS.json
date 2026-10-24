@@ -1,0 +1,104 @@
+{
+  "target_id": "P0003",
+  "checked_at": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 547,
+    "dated_status": "attempted_un",
+    "title": "Hexagonal self-avoiding-walk scaling limit"
+  },
+  "primary_candidates": [
+    {
+      "url": "https://arxiv.org/abs/math/0204277",
+      "authors": "Lawler, Schramm, Werner",
+      "title": "On the scaling limit of planar self-avoiding walk",
+      "checked": "Targeted primary sections 2.2 and 3.4.5"
+    },
+    {
+      "url": "https://arxiv.org/abs/1007.0575",
+      "authors": "Duminil-Copin, Smirnov",
+      "title": "The connective constant of the honeycomb lattice equals sqrt(2+sqrt(2))",
+      "checked": "Targeted primary section 4"
+    }
+  ],
+  "mathematical_proof_of_target": false,
+  "submitted": true,
+  "reviewed": false,
+  "ingested": false,
+  "retrievable": false,
+  "novelty_claim": false,
+  "assigned_primary_source": {
+    "author": "Geoffrey R. Grimmett",
+    "title": "Selected problems in probability theory",
+    "url": "https://arxiv.org/pdf/2205.07318",
+    "version": "v1, 2022-05-15",
+    "locator": "Question 2.2, PDF/printed p.3, extracted lines 88-89",
+    "short_quote": "Does a uniformly distributed n-step SAW from the origin of H converge weakly, when suitably rescaled",
+    "own_words_statement": "Does an appropriately rescaled uniform n-step self-avoiding walk from the honeycomb origin converge weakly as n tends to infinity to an SLE(8/3) random curve?",
+    "specified": [
+      "fixed-length uniform law",
+      "origin start",
+      "free endpoint",
+      "honeycomb lattice",
+      "SLE parameter 8/3"
+    ],
+    "unspecified": [
+      "rescaling",
+      "SLE variant and stopping convention",
+      "parametrization",
+      "curve topology"
+    ],
+    "statement_complete_to_source": true,
+    "fully_formal_convergence_theorem_statement": false
+  },
+  "related_primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1206.2092",
+      "locator": "Conjecture 1.5 and section 3.3, PDF pp.9 and 23",
+      "scope": "Variable-length critical a-to-b chordal ensemble; no equivalence to P0003 is proved here"
+    },
+    {
+      "url": "https://arxiv.org/pdf/math/0204277",
+      "locator": "Sections 2.2 and 3.4.5, PDF pp.5-7 and 24",
+      "scope": "Conformal-restriction classification requires simple-path support; simplicity discussion uses additional continuity and conditioning input"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1007.0575",
+      "locator": "Section 4, PDF pp.9-10",
+      "scope": "Exact connective constant and local relation do not prove observable or SLE convergence"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2310.17299",
+      "scope": "Quantitative sub-ballisticity; does not certify SLE convergence or current openness"
+    }
+  ],
+  "local_prior_checks": {
+    "read_only_store": "file:~/math-brain-build/local/population/brain.sqlite3?mode=ro",
+    "query_scope": "Only title matches for P0003 or hexagonal self-avoiding; two nodes returned",
+    "problem_node_id": "claim_1f7a2a12ab2a649bf165699aa2efee71c08bca2100b4609c325b8f2d99b4f0dd",
+    "attempt_node_id": "claim_7d17eca1121391c711c3f35ad1dfd9fec7313bf8f51990c4a397f115c4d88f69",
+    "prior_attempt": "Finite-graph fugacity DMP; explicitly lacks tightness, conformal invariance and SLE identification",
+    "no_exact_hits": [
+      "H_20260912 and I_20260914 targeted exact record searches",
+      "additional intake D/E/F/G/H/I P0003 exact record searches"
+    ],
+    "lean_check": "Named annotated ranking only; no P0003 formal proof receipt identified",
+    "team_o": "Targeted board search returned no P0003 row",
+    "solved_retired_status": "No independently verified solution/retirement in these bounded checks; no exhaustive absence claim"
+  },
+  "brain_hints": {
+    "recall_query": "P0003 hexagonal self-avoiding walk SLE scaling limit adversary proof mistakes",
+    "result": "Completed under 60-second gate; absent P0003/hexagonal memories, weak separation; top three read as hints",
+    "top_three": [
+      "the_math_brain_cannot_serve_a_number_it_cannot_tokenize_2026_09_05",
+      "uniform_relu_global_lipschitz_audit_2026_07_10",
+      "recall_symbol_channel_matched_notation_glue_2026_10_06"
+    ],
+    "proof_scar": "perceptron_proof_open_gaps_fleet_2026_07_12"
+  },
+  "formal_check_receipt": null,
+  "submitted_path": "~\\math-brain-inbox\\w403\\bundle_001.json",
+  "reviewer": "w404",
+  "source_hash_check_is_mathematical_proof": false
+}

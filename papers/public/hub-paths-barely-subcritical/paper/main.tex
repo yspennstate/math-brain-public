@@ -1,0 +1,353 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\PP}{\mathbb P}
+\newcommand{\E}{\mathbb E}
+\newcommand{\CM}{\mathrm{CM}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\dmax}{d_{\max}}
+
+\hypersetup{pdftitle={Hub paths and the largest component of the barely subcritical configuration model},pdfauthor={Yitzchak Shmalo}}
+
+\title[Hub paths in the barely subcritical configuration model]{Hub paths and the largest component\\ of the barely subcritical configuration model}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{18 October 2026}
+\subjclass[2020]{05C80, 60C05}
+\keywords{configuration model, random graph with given degrees, barely subcritical, largest component, high-degree vertices}
+
+\begin{document}
+\begin{abstract}
+For the configuration model with a degree sequence whose third moment converges, write $\eps_n=1-\nu_n$, where $\nu_n\to1$ from below is the size-biased mean minus one. Van der Hofstad asked to show that in the barely subcritical regime the largest component has order $\max\{\dmax/\eps_n,\ \eps_n^{-2}\log(n\eps_n^3)\}$, and predicted that it has size $(\dmax/\eps_n)(1+o_\PP(1))$ when $\eps_n$ tends to zero sufficiently slowly. We show that neither holds in this generality. We use degree sequences with vertices of degree one and three and a polynomial number of vertices of a large common degree $d$. Paths of $K$ such hubs joined by direct edges then appear, and the component of such a path is a tree with about $Kd/\eps_n$ vertices. Taking $K=2$ gives $L_1\ge(2-\eta)\dmax/\eps_n$ with high probability, for $\eps_n$ tending to zero as slowly as we like; letting $K\to\infty$ gives $L_1/\max\{\dmax/\eps_n,\eps_n^{-2}\log(n\eps_n^3)\}\to\infty$ in probability. In all examples the degree of a uniform vertex converges in law to a variable on $\{1,3\}$ with all three moments, and $n\eps_n^3\to\infty$.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+Let $\mathbf d=(d_1,\dots,d_n)$ be a sequence of positive integers with even sum $\ell=\sum_i d_i$. The configuration model $\CM_n(\mathbf d)$ attaches $d_i$ half-edges to vertex $i$ and pairs the $\ell$ half-edges by a uniformly random perfect matching. Let $D_n$ be the degree of a uniformly chosen vertex and
+\[
+\nu_n=\frac{\E[D_n(D_n-1)]}{\E[D_n]}=\frac1\ell\sum_{i}d_i(d_i-1),\qquad \eps_n=1-\nu_n=-\frac1\ell\sum_i d_i(d_i-2).
+\]
+We write $L_1$ for the number of vertices of the largest component of $\CM_n(\mathbf d)$ and $\dmax=\max_i d_i$. The barely subcritical regime is $\eps_n\to0$ with $n\eps_n^3\to\infty$, that is, $\nu_n$ tends to one from below but stays outside the critical window.
+
+In his Saint-Flour lecture notes~\cite{vdH17}, van der Hofstad recalls Janson's theorem~\cite{Jan08} that for power-law degrees in the strictly subcritical regime the largest component has size $\dmax/(1-\nu)(1+o_\PP(1))$, and writes that one could expect this behaviour to persist when $\nu_n\to1$ sufficiently slowly and $\dmax$ is sufficiently large; ``we predict that the maximal cluster has size $\dmax/\eps_n(1+o_\PP(1))$'' when $\eps_n$ tends to zero sufficiently slowly. Close to the critical window one expects instead the Erd\H{o}s--R\'enyi order $\eps_n^{-2}\log(n\eps_n^3)$ (see \cite{Luc90} for the random graph). This led to~\cite[Open Problem~4.13]{vdH17}: under convergence in distribution of $D_n$ to a limit $D$ and convergence of the first two moments \cite[Condition~1.6(a)--(c)]{vdH17}, and $\E[D_n^3]\to\E[D^3]$, identify the size of the largest component in the barely subcritical regime and
+\begin{quote}
+show that the largest connected component has a size of order
+\[
+\max\{\dmax/\eps_n,\ \eps_n^{-2}\log(n\eps_n^3)\},
+\]
+thus confirming that this setting has a phase transition.
+\end{quote}
+The notes use $\eps_n=\nu_n-1<0$; we use the positive quantity $1-\nu_n$, which is what the displayed order requires. The notes to the corresponding chapter of the book draft~\cite{vdH26} contain the same prediction $L_1=(\dmax/\eps_n)(1+o_\PP(1))$ but not the open problem.
+
+We show that both statements fail. Write
+\[
+H_n=\frac{\dmax}{\eps_n},\qquad E_n=\eps_n^{-2}\log(n\eps_n^3).
+\]
+
+\begin{theorem}\label{thm:examples}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item Let $\varphi$ be any function with $\varphi(n)\to0$. There are degree sequences $\mathbf d$, along a sequence $n\to\infty$, such that $D_n$ converges in distribution to $D$ with $\PP(D=1)=3/4$ and $\PP(D=3)=1/4$, $\E[D_n^j]\to\E[D^j]$ for $j=1,2,3$, $\eps_n\to0$, $\eps_n\ge\varphi(n)$, $n\eps_n^3\to\infty$, $H_n/E_n\to\infty$, and for every $\eta>0$
+\[
+\PP\bigl(L_1\ge(2-\eta)\,\dmax/\eps_n\bigr)\to1 .
+\]
+In particular $L_1\ne(\dmax/\eps_n)(1+o_\PP(1))$.
+\item There are degree sequences with the same limit law and the same three convergent moments, $\eps_n\to0$ and $n\eps_n^3\to\infty$, such that
+\[
+\frac{L_1}{\max\{H_n,E_n\}}\to\infty\quad\text{in probability};
+\]
+in fact $L_1\ge c\sqrt{\log n}\,\max\{H_n,E_n\}$ with probability tending to one, for an absolute constant $c>0$.
+\end{enumerate}
+\end{theorem}
+
+Both parts are instances of Theorem~\ref{thm:main} below, which applies to degree sequences with vertices of degree $1$ and $3$ and $M$ vertices of a common degree $d$, the hubs. Its mechanism is simple. When $Md^2/\ell$ is small compared with $\eps_n$, a hub sees another hub through a direct edge with probability about $Md^2/\ell$, while the component it would have on its own is a subcritical tree of size about $d/\eps_n$. Paths of $K$ hubs joined by direct edges exist as soon as $M(Md^2/\ell)^{K-1}\to\infty$, and the component of such a path is, with high probability, a tree that contains no further hub and has at least $(1-\eta)Kd/\eps_n$ vertices. A second-moment argument over these paths finishes the proof. The size estimate needs some care, since the exploration of the component starts with $Kd$ active half-edges and runs for about $Kd/\eps_n$ steps; we use a compensated process whose increments stay bounded at hub discoveries. The hubs contribute $Md^3/n\to0$ to the third moment, so they are invisible in the limit law.
+
+The same mechanism appears in the work of Coulson and Perarnau~\cite{CP23}. For a strictly subcritical sequence with about $n/\Delta^2$ vertices of degree $\Delta$ and the rest of degree one, they compare the graph induced on the high-degree vertices with an Erd\H{o}s--R\'enyi graph and obtain a lower bound for $L_1$ that matches their upper bounds \cite[Proposition~1.12 and Remark~1.13]{CP23}. In their examples $R=\frac1\ell\sum_i d_i(d_i-2)^2\sim\Delta\to\infty$, so the third moment is unbounded and Open Problem~4.13 does not apply. Here the third moment converges, the graph induced on the hubs is much sparser, and we use paths of a bounded or slowly growing number of hubs joined by direct edges. We do not determine the order of $L_1$ in our examples, and we do not propose a replacement for the order in Open Problem~4.13; Theorem~\ref{thm:main} only shows that the number of hubs a component can collect enters the answer.
+
+\section{The degree sequences and the main theorem}
+
+All asymptotic statements refer to $n\to\infty$ along the sequences considered. For integers $n,M,d,y\ge1$ with $4\mid n$ and $4\mid(d-1)^2M$ put
+\begin{equation}\label{eq:counts}
+N_3=\frac n4-\frac{(d-1)^2M}{4}-y,\qquad N_1=n-N_3-M,
+\end{equation}
+and assume $N_1,N_3\ge0$ and $d\ge4$. Let $\mathbf d=\mathbf d(n,M,d,y)$ have $N_1$ vertices of degree one, $N_3$ vertices of degree three, and $M$ vertices of degree $d$, called hubs.
+
+\begin{lemma}\label{lem:counts}
+The total degree $\ell=N_1+3N_3+dM$ is even, and
+\[
+\ell\eps_n=4y,\qquad \ell=\frac{3n}{2}-\frac{(d-1)^2M}{2}+(d-1)M-2y .
+\]
+\end{lemma}
+
+\begin{proof}
+We have $\ell=n+2N_3+(d-1)M$ and $(d-1)M$ is even, since $4\mid(d-1)^2M$. Next, $\sum_i d_i(d_i-2)=-N_1+3N_3+d(d-2)M=-n+4N_3+(d-1)^2M=-4y$, which is $-\ell\eps_n$. The formula for $\ell$ follows by substituting~\eqref{eq:counts}.
+\end{proof}
+
+Let $K\ge2$ be an integer, possibly depending on $n$, put $q=K-1$, and define
+\begin{equation}\label{eq:mu}
+P_r=\prod_{j=0}^{r-1}(\ell-2j-1),\qquad w=d^2\bigl(d(d-1)\bigr)^{K-2},\qquad \mu=\frac{(M)_K\,w}{P_q},
+\end{equation}
+where $(M)_K=M(M-1)\cdots(M-K+1)$. We write $\eps=\eps_n$ from now on.
+
+\begin{theorem}\label{thm:main}
+Let $\mathbf d=\mathbf d(n,M,d,y)$ and $K\ge2$ be as above, all depending on $n$, and assume
+\begin{enumerate}[label=\textup{(C\arabic*)}]
+\item\label{C1} $y=o(n)$ and $Md^3=o(n)$;
+\item\label{C2} $n\eps^3\to\infty$ and $d\eps/\log(n\eps^3)\to\infty$;
+\item\label{C3} $K^2d^2+KMd^2=o(n\eps)$;
+\item\label{C4} $\mu\to\infty$.
+\end{enumerate}
+Then $D_n$ converges in distribution to $D$ with $\PP(D=1)=3/4$, $\PP(D=3)=1/4$, and $\E[D_n^j]\to\E[D^j]$ for $j=1,2,3$; moreover $\eps\to0$, $\dmax=d$ and $H_n/E_n\to\infty$. For every fixed $\eta\in(0,1)$,
+\[
+\PP\Bigl(L_1\ge(1-\eta)\,\frac{K\dmax}{\eps}\Bigr)\to1 .
+\]
+\end{theorem}
+
+The limit law has $\E[D]=3/2$, $\E[D^2]=3$, $\E[D^3]=15/2$ and $\E[D(D-1)]/\E[D]=1$, and $\PP(D=2)=0$, so it is a critical law with finite third moment and no vertices of degree two.
+
+\begin{proof}[Proof of the first assertions]
+By~\ref{C1}, $(d-1)^2M\le Md^3=o(n)$ and $y=o(n)$, so $N_3/n\to1/4$, $M/n\to0$ and $N_1/n\to3/4$. For $j\le3$, $\E[D_n^j]=(N_1+3^jN_3+d^jM)/n$ and $d^jM\le d^3M=o(n)$, which gives the convergence of the law and of the three moments. By Lemma~\ref{lem:counts}, $\ell=(3/2+o(1))n$ and $\eps=4y/\ell\to0$. Finally $H_n/E_n=d\eps/\log(n\eps^3)\to\infty$ by~\ref{C2}.
+\end{proof}
+
+We collect the consequences of the hypotheses used below. Since $\ell\sim3n/2$, \ref{C3} holds with $\ell$ in place of $n$. By~\ref{C2}, $d\eps\to\infty$; in particular $d\to\infty$. Hence
+\begin{equation}\label{eq:cons}
+\frac{Kd}{\ell\eps^2}=\frac{K^2d^2}{\ell\eps}\cdot\frac1{Kd\eps}\to0,\qquad \frac{Md^2}{\ell\eps}\to0,\qquad \frac{K^2}{\ell}\to0,\qquad \ell\eps\to\infty,
+\end{equation}
+the third because $K^2\le K^2d^2=o(\ell\eps)$ and $\eps<1$, the last because $\ell\eps\ge n\eps^3$ (note $\ell\ge n$ and $\eps<1$).
+
+\section{Hub paths and their moments}
+
+\begin{definition}
+A \emph{witness} is a sequence $(v_1,\dots,v_K)$ of distinct hubs together with half-edges $a_i$ at $v_i$ and $b_{i+1}$ at $v_{i+1}$ for $1\le i<K$, such that $a_i\ne b_i$ for $1<i<K$. It is \emph{present} if $a_i$ is paired with $b_{i+1}$ for every $i<K$. Let $Z$ be the number of present witnesses and let $D_0$ be the number of ordered pairs of present witnesses whose hub sets are disjoint.
+\end{definition}
+
+For a given sequence of hubs there are $d$ choices for $a_1$, $d$ for $b_K$ and $d(d-1)$ for each interior pair $(b_i,a_i)$, that is, $w$ choices in all.
+
+\begin{lemma}\label{lem:moments}
+$\E Z=\mu$ and $\E D_0\le(1+o(1))\mu^2$.
+\end{lemma}
+
+\begin{proof}
+A prescribed set of $r$ disjoint pairs of half-edges is contained in the uniform matching with probability $1/P_r$: given the first $j$ prescribed pairs, the next one occurs with probability $1/(\ell-2j-1)$. A witness prescribes $q$ disjoint pairs, and there are $(M)_Kw$ witnesses, so $\E Z=\mu$. Two witnesses with disjoint hub sets use disjoint half-edges and prescribe $2q$ disjoint pairs, and there are $(M)_{2K}w^2$ ordered pairs of them. Hence
+\[
+\frac{\E D_0}{\mu^2}=\frac{(M)_{2K}}{(M)_K^2}\cdot\frac{P_q^2}{P_{2q}}\le\prod_{j=0}^{q-1}\frac{\ell-2j-1}{\ell-2q-2j-1}\le\Bigl(1+\frac{2q}{\ell-4q}\Bigr)^{q}\le\exp\Bigl(\frac{2q^2}{\ell-4q}\Bigr),
+\]
+using $(M)_{2K}=(M)_K(M-K)_K\le(M)_K^2$. The right side tends to one by~\eqref{eq:cons}.
+\end{proof}
+
+\section{The component of a present witness}
+
+Fix a witness $W$ and condition on the event that it is present. The remaining $\ell-2q$ half-edges are then matched uniformly at random. Let $\cC(W)$ be the component containing the hubs of $W$. All bounds below are uniform in $W$.
+
+\smallskip\noindent\emph{The exploration.} At time $0$ the $K$ hubs of $W$ are discovered, their $A_0=Kd-2q$ unpaired half-edges are active, and every other half-edge is sleeping. At time $t$, if $A_t\ge1$, we take the active half-edge with the smallest label and reveal its partner, which is uniform among the
+\[
+B_t=\ell-2q-2t-1
+\]
+other unpaired half-edges. If the partner is active, the two are paired and $A_{t+1}=A_t-2$; we call this a \emph{surplus} step. If the partner belongs to a sleeping vertex $v$, then $v$ is discovered, the pair is formed, the other $d_v-1$ half-edges of $v$ become active, and $A_{t+1}=A_t+d_v-2$. Let $\tau=\min\{t:A_t=0\}$. The vertices discovered by time $\tau$ form $\cC(W)$. Let $\cF_t$ be the $\sigma$-field of the first $t$ steps, let $R_t$ be the set of vertices discovered during the first $t$ steps (not including the hubs of $W$), and let $\Delta A_t=A_{t+1}-A_t$.
+
+\begin{lemma}\label{lem:drift}
+On $\{A_t\ge1\}$,
+\begin{align}
+\E[\Delta A_t\mid\cF_t]&=\frac{-\ell\eps-Kd(d-2)-\sum_{v\in R_t}d_v(d_v-2)-2(A_t-1)}{B_t},\label{eq:driftA}\\
+\E[(\Delta A_t)^2\mid\cF_t]&=\frac{\sum_{v\ \mathrm{sleeping}}d_v(d_v-2)^2+4(A_t-1)}{B_t}.\label{eq:varA}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+A sleeping vertex $v$ offers $d_v$ half-edges, each giving $\Delta A_t=d_v-2$, and the other $A_t-1$ active half-edges each give $-2$. The sum of $d_v(d_v-2)$ over sleeping vertices equals $\sum_id_i(d_i-2)=-\ell\eps$ minus the contributions of the $K$ hubs of $W$ and of $R_t$.
+\end{proof}
+
+Let $T_0=\lfloor\ell\eps/4\rfloor$, let $\sigma$ be the first time $t$ at which $R_t$ contains a hub ($\sigma=\infty$ if there is none), and let $S=\min\{\tau,\sigma,T_0\}$. Since $\eps\to0$ and $q=o(\ell)$, we have $B_t\ge\ell/2$ for $t\le T_0$ and $n$ large.
+
+For $t<S$ the set $R_t$ consists of at most $t$ vertices of degree one or three, so $-\sum_{v\in R_t}d_v(d_v-2)\le t$ (as $k(k-2)\ge-1$), and $A_t\ge1$. The numerator in~\eqref{eq:driftA} is then at most $-\ell\eps+T_0\le-\tfrac34\ell\eps$, and as $B_t\le\ell$,
+\begin{equation}\label{eq:betaneg}
+\beta_t:=\E[\Delta A_t\mid\cF_t]\le-\eps/2\qquad(t<S).
+\end{equation}
+In~\eqref{eq:varA}, $k(k-2)^2\le k^3$ gives $\sum_{v}d_v(d_v-2)^2\le N_1+27N_3+Md^3\le28n$ for large $n$ by~\ref{C1}, and $A_t\le\ell$, $n\le\ell$, $B_t\ge\ell/2$; hence
+\begin{equation}\label{eq:varbound}
+\E[(\Delta A_t)^2\mid\cF_t]\le64\qquad(t<S).
+\end{equation}
+This holds also when the step at time $t$ discovers a hub, since the bound only uses the state at time $t$.
+
+\begin{lemma}\label{lem:good}
+Let $G(W)$ be the event that $\tau<T_0$ and that the exploration discovers no hub and makes no surplus step before $\tau$. Then $\PP(G(W)\mid W\text{ present})\to1$. On $G(W)$ the component $\cC(W)$ is a tree containing exactly $K$ hubs and $|\cC(W)|=K+\tau$.
+\end{lemma}
+
+\begin{proof}
+All probabilities are conditional on $W$ being present. The time $S$ is bounded by $T_0$, so $A_{t\wedge S}-\sum_{s<t\wedge S}\beta_s$ is a martingale and optional stopping at $T_0$ is elementary. Since $A_S\ge0$, \eqref{eq:betaneg} gives
+\begin{equation}\label{eq:ES}
+\E S\le\frac{2A_0}{\eps}\le\frac{2Kd}{\eps}.
+\end{equation}
+For $t<S$, $\E[A_{t+1}^2-A_t^2\mid\cF_t]=2A_t\beta_t+\E[(\Delta A_t)^2\mid\cF_t]\le-\eps A_t+64$; summing up to $S$ and using $A_S^2\ge0$,
+\begin{equation}\label{eq:area}
+\eps\,\E\sum_{t<S}A_t\le A_0^2+64\,\E S\le K^2d^2+\frac{128Kd}{\eps}.
+\end{equation}
+At a time $t<S$ the partner is a hub half-edge with conditional probability at most $Md/B_t\le2Md/\ell$, and it is active with conditional probability $(A_t-1)/B_t\le2A_t/\ell$. Since $\{t<S\}\in\cF_t$, summing these conditional probabilities over $t<S$ bounds the probability that some step before $S$ discovers a hub by
+\[
+\frac{2Md}{\ell}\,\E S\le\frac{4KMd^2}{\ell\eps}\to0,
+\]
+and the probability of a surplus step before $S$ by
+\[
+\frac2\ell\,\E\sum_{t<S}A_t\le\frac{2K^2d^2}{\ell\eps}+\frac{256Kd}{\ell\eps^2}\to0,
+\]
+both by~\ref{C3} and~\eqref{eq:cons}. Finally $\PP(S=T_0)\le\E S/T_0\le(2Kd/\eps)/(\ell\eps/4-1)\to0$ by~\eqref{eq:cons}. Outside these three events no hub is discovered before $S$, so $S\ne\sigma$; also $S\ne T_0$; hence $S=\tau<T_0$, and no step before $\tau$ discovers a hub or is a surplus step. Then each of the $\tau$ steps adds one new vertex and one edge to the path of $W$, which has $K$ vertices and $K-1$ edges, so $\cC(W)$ is a tree with $K+\tau$ vertices whose hubs are those of $W$.
+\end{proof}
+
+\begin{lemma}\label{lem:size}
+For every fixed $\eta\in(0,1)$,
+\[
+\PP\Bigl(G(W)\ \text{and}\ |\cC(W)|<(1-\eta)\frac{Kd}{\eps}\Bigm| W\text{ present}\Bigr)\to0 .
+\]
+\end{lemma}
+
+\begin{proof}
+Let $H_t$ be the number of hubs discovered by time $t$, including the $K$ hubs of $W$, and $C_t=A_t-dH_t$, so $C_0=-2q$. A step that discovers a vertex of degree one, a vertex of degree three, or a hub changes $C$ by $-1$, $+1$, $-2$ respectively, and a surplus step changes it by $-2$. Let $r_1(t)$ and $r_3(t)$ count the vertices of degree one and three in $R_t$. The sleeping half-edges are $N_1-r_1(t)$ at vertices of degree one, $3(N_3-r_3(t))$ at vertices of degree three and $d(M-H_t)$ at hubs, so on $\{A_t\ge1\}$
+\begin{equation}\label{eq:driftC}
+\begin{split}
+\gamma_t:=\E[\Delta C_t\mid\cF_t]&=\frac{-(N_1-r_1)+3(N_3-r_3)-2d(M-H_t)-2(A_t-1)}{B_t}\\
+&=\frac{-\ell\eps-Md^2+r_1-3r_3-2C_t+2}{B_t},
+\end{split}
+\end{equation}
+where we used $A_t=C_t+dH_t$ and $-N_1+3N_3+d(d-2)M=-\ell\eps$; the terms in $H_t$ cancel.
+
+Put $T=\lfloor(1-\eta/2)Kd/\eps\rfloor$ and $U=\tau\wedge T$. For $t<U$ we have $r_3(t)\le t$ and $C_t\le C_0+t\le t$, since $C$ increases only by one at a time. The numerator in~\eqref{eq:driftC} is therefore at least $-\ell\eps-Md^2-5T$, and $B_t\ge\ell-2q-2T-1$. Hence, whether the numerator is negative or not,
+\[
+\gamma_t\ge-(1+\rho)\eps\quad(t<U),\qquad 1+\rho=\frac{1+(Md^2+5T)/(\ell\eps)}{1-(2q+2T+1)/\ell},
+\]
+and $\rho\to0$ by~\eqref{eq:cons}, since $T\le Kd/\eps$. The process $J_t=C_{t\wedge U}-C_0-\sum_{s<t\wedge U}\gamma_s$ is a martingale with $J_0=0$ and increments bounded by $4$ in absolute value. On $\{\tau\le T\}$ we have $C_\tau=-dH_\tau\le-Kd$, so
+\[
+J_T\le-Kd+2q+(1+\rho)\eps\tau\le-Kd+2K+(1+\rho)(1-\eta/2)Kd\le-\frac{\eta Kd}{4}
+\]
+for $n$ large, because $\rho\to0$ and $d\to\infty$. By the Azuma--Hoeffding inequality~\cite{Azu67},
+\[
+\PP(\tau\le T)\le\PP\Bigl(J_T\le-\frac{\eta Kd}4\Bigr)\le\exp\Bigl(-\frac{(\eta Kd/4)^2}{32\,T}\Bigr)\le\exp\Bigl(-\frac{\eta^2}{512}Kd\eps\Bigr)\to0 .
+\]
+On $G(W)$, $|\cC(W)|=K+\tau$ by Lemma~\ref{lem:good}, and $|\cC(W)|<(1-\eta)Kd/\eps$ forces $\tau<(1-\eta)Kd/\eps\le T$ for $n$ large, since $Kd/\eps\to\infty$.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}
+
+Fix $\eta\in(0,1)$. Call a witness \emph{excellent} if it is present, $G(W)$ holds and $|\cC(W)|\ge(1-\eta)Kd/\eps$, and let $Y$ be the number of excellent witnesses. By Lemmas~\ref{lem:moments}, \ref{lem:good} and~\ref{lem:size}, uniformly in $W$,
+\[
+\E Y=\sum_W\PP(W\text{ present})\,\PP(W\text{ excellent}\mid W\text{ present})=(1-o(1))\mu .
+\]
+
+\begin{lemma}\label{lem:pairs}
+Pointwise, $Y^2\le2Y+D_0$.
+\end{lemma}
+
+\begin{proof}
+$Y^2$ counts ordered pairs $(W,W')$ of excellent witnesses. If $W$ and $W'$ lie in different components their hub sets are disjoint, and the pair is counted in $D_0$. Suppose they lie in the same component $\cC$. Then $\cC$ is a tree with exactly $K$ hubs, and $W'$ visits $K$ distinct hubs of $\cC$, so its hub set is the hub set of $W$. The path of $W$ is a connected subgraph of $\cC$ whose vertices are these $K$ hubs, and in a tree the smallest connected subgraph containing a given vertex set is unique; so the paths of $W$ and $W'$ have the same vertices and, being contained in a tree, the same edges. A tree has no multiple edges, so the half-edges of $W'$ are determined by its order of the hubs along that path, which is one of the two orientations. Hence for each excellent $W$ at most two excellent $W'$ share its component, and $Y^2\le2Y+D_0$.
+\end{proof}
+
+By Lemmas~\ref{lem:pairs} and~\ref{lem:moments} and~\ref{C4},
+\[
+\frac{\E Y^2}{(\E Y)^2}\le\frac{2\E Y+\E D_0}{(\E Y)^2}\le\frac{2}{(1-o(1))\mu}+\frac{(1+o(1))\mu^2}{(1-o(1))^2\mu^2}\to1,
+\]
+so $\PP(Y>0)\ge(\E Y)^2/\E Y^2\to1$ by the Cauchy--Schwarz inequality. On $\{Y>0\}$ there is a component with at least $(1-\eta)Kd/\eps$ vertices. This proves Theorem~\ref{thm:main}. \qed
+
+\begin{remark}
+The argument uses only first and second moments of witness counts and an exploration started from a prescribed path; no independence between components or between hubs is assumed. The lower bound counts only components with exactly $K$ hubs. Components that collect more hubs, or hubs connected through vertices of degree three, can only make $L_1$ larger.
+\end{remark}
+
+\section{The two families}
+
+\begin{corollary}\label{cor:paths}
+Let $m$ run through the even integers and let $K=K_m\ge2$ be integers with $12^{K_m}/m\to0$. Put
+\[
+d=m^2,\qquad M=m^{3K-2},\qquad n=8m^{3K+5},\qquad y=\frac{3n}{8m}.
+\]
+Then the hypotheses of Theorem~\ref{thm:main} hold, $\eps=(1+o(1))/m$, $\mu=(1+o(1))\,m/12^{K-1}$, and $\PP(L_1\ge(1-\eta)KH_n)\to1$ for every $\eta\in(0,1)$.
+\end{corollary}
+
+\begin{proof}
+Here $4\mid n$, and $16\mid M$ since $m$ is even and $3K-2\ge4$. We have $y/n=3/(8m)$, $(d-1)^2M/n\le1/(8m^3)$ and $(d-1)M/n\le1/(8m^5)$, so $N_3,N_1>0$ for large $m$, and by Lemma~\ref{lem:counts} $\ell=\tfrac{3n}{2}(1+O(1/m))$ and $\ell\eps=4y=3n/(2m)$, so $\eps=(1+O(1/m))/m$.
+
+\ref{C1}: $y/n\to0$ and $Md^3/n=1/(8m)\to0$. \ref{C2}: $n\eps^3=(8+o(1))m^{3K+2}\to\infty$; since $K\le\log m/\log12$, $\log(n\eps^3)=O(\log^2m)$, while $d\eps=(1+o(1))m$. \ref{C3}: $K^2d^2/(n\eps)=(1+o(1))K^2/(8m^{3K})\to0$ and $KMd^2/(n\eps)=(1+o(1))K/(8m^2)\to0$. \ref{C4}: we have $(M)_K=M^K(1+O(K^2/M))$, $w=d^{2K-2}(1-1/d)^{K-2}=d^{2K-2}(1+O(K/m^2))$ and $P_q=\ell^q(1+O(K^2/\ell))$; also $\ell=12m^{3K+5}(1+O(1/m))$, so $\ell^q=(12m^{3K+5})^{K-1}(1+O(K/m))$. As $K=O(\log m)$, all error factors tend to one and
+\[
+\mu=(1+o(1))\frac{m^{K(3K-2)}\,m^{4(K-1)}}{12^{K-1}m^{(3K+5)(K-1)}}=(1+o(1))\frac{m}{12^{K-1}}\to\infty.
+\]
+Theorem~\ref{thm:main} gives the last claim, as $\dmax=d$.
+\end{proof}
+
+With $K=2$, $n=8m^{11}$ and $\eps\sim(n/8)^{-1/11}$, Corollary~\ref{cor:paths} already gives $L_1\ge(2-\eta)\dmax/\eps$. With $K_m=\lfloor\log m/(2\log12)\rfloor$ we have $12^{K}\le\sqrt m$, $\log n=(3K+5)\log m+\log 8$, and so $K\ge c\sqrt{\log n}$ for an absolute $c>0$ and large $m$. Since $H_n/E_n\to\infty$, this proves part~(b) of Theorem~\ref{thm:examples}; in this family $\eps=\exp(-(c'+o(1))\sqrt{\log n})$ with $c'=\sqrt{2\log 12/3}$.
+
+The next family shows that the factor two persists however slowly $\eps$ tends to zero.
+
+\begin{corollary}\label{cor:slow}
+Let $s$ run through the odd integers and let $e_s\in(0,1)$ satisfy $e_s\to0$ and $e_s\ge s^{-10}$. Put $K=2$ and
+\[
+d=s^{20},\qquad M=s^{31},\qquad n=4s^{100},\qquad y=\lceil e_sn\rceil .
+\]
+Then the hypotheses of Theorem~\ref{thm:main} hold, $\eps=(8/3+o(1))\,e_s$, and $\PP(L_1\ge(2-\eta)\dmax/\eps)\to1$ for every $\eta\in(0,1)$.
+\end{corollary}
+
+\begin{proof}
+Here $4\mid n$ and $4\mid(d-1)^2$ since $d$ is odd. As $e_sn\ge4s^{90}$, $y=(1+o(1))e_sn=o(n)$, and $(d-1)^2M\le s^{71}=o(n)$, so $N_1,N_3>0$ for large $s$, $\ell=(3/2+o(1))n$ and $\eps=4y/\ell=(8/3+o(1))e_s$.
+
+\ref{C1}: $y=o(n)$ and $Md^3/n=s^{-9}/4\to0$. \ref{C2}: $n\eps^3\ge s^{70}\to\infty$ for large $s$, and $d\eps\ge s^{10}$ while $\log(n\eps^3)\le\log n=O(\log s)$. \ref{C3}: $n\eps\ge s^{90}$ for large $s$, while $K^2d^2=4s^{40}$ and $KMd^2=2s^{71}$. \ref{C4}: $\mu=M(M-1)d^2/(\ell-1)=(1+o(1))s^{102}/(6s^{100})\to\infty$. Apply Theorem~\ref{thm:main} with $K=2$ and $\eta/2$ in place of $\eta$.
+\end{proof}
+
+Part~(a) of Theorem~\ref{thm:examples} follows: given $\varphi$, apply Corollary~\ref{cor:slow} with $e_s=\max\{\varphi(4s^{100}),s^{-10}\}$ for large $s$. Then $e_s\to0$, and $\eps=(8/3+o(1))e_s\ge\varphi(n)$ for large $s$. Corollary~\ref{cor:slow} also allows $\eps$ to tend to zero as fast as a constant times $n^{-1/10}$.
+
+\begin{remark}\label{rem:alln}
+The families are defined along subsequences of $n$, which suffices to refute a statement about all degree sequences satisfying the hypotheses. If a sequence defined for every $n$ is wanted, one can use, at the remaining $n$, $N_3=\lfloor n/4\rfloor-\lceil e n\rceil$ vertices of degree three for a target $e=e(n)\to0$ with $en^{1/3}\to\infty$, and degree one otherwise, changing one vertex of degree one into degree two if the total degree is odd. Then $|\ell\eps-4\lceil en\rceil|\le4$, so $\eps\sim 8e/3$ and $n\eps^3\to\infty$, and the limit law and the three moments are as before.
+\end{remark}
+
+The exact identities of Lemma~\ref{lem:counts} and~\eqref{eq:driftC}, the integrality and the size of the error terms of both families at concrete parameters, and Lemma~\ref{lem:pairs} together with the formulas of Lemma~\ref{lem:moments} on all $945$ perfect matchings of a sequence of ten half-edges are checked by the script in~\cite{code}. These finite computations are not used in the proofs.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. On 11 October 2026 an agent running in OpenAI's Codex (GPT-6.1 Sol) obtained the counterexample of Corollary~\ref{cor:paths} with $K_m=\max\{2,\lfloor\sqrt{\log m}\rfloor\}$ and its proof; a further Codex agent and a Claude agent (Anthropic) checked the proof. On 17 and 18 October 2026 Claude Opus~5.5, working in Claude Code, checked the proof line by line, stated it as Theorem~\ref{thm:main} for general parameters, added the family of Corollary~\ref{cor:slow}, and wrote the computer checks and the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/hub-paths-barely-subcritical}.
+
+\begin{thebibliography}{99}
+
+\bibitem{Azu67} K.~Azuma, Weighted sums of certain dependent random variables, \emph{T\^ohoku Math. J.} \textbf{19} (1967), 357--367.
+
+\bibitem{CP23} M.~Coulson and G.~Perarnau, Largest component of subcritical random graphs with given degree sequence, \emph{Electron. J. Probab.} \textbf{28} (2023), 1--28, doi:10.1214/23-EJP921.
+
+\bibitem{Jan08} S.~Janson, The largest component in a subcritical random graph with a power law degree distribution, \emph{Ann. Appl. Probab.} \textbf{18} (2008), 1651--1668.
+
+\bibitem{Luc90} T.~{\L}uczak, Component behavior near the critical point of the random graph process, \emph{Random Structures Algorithms} \textbf{1} (1990), 287--310.
+
+\bibitem{vdH17} R.~van der Hofstad, \emph{Stochastic Processes on Random Graphs}, lecture notes for the 47th Summer School in Probability, Saint-Flour, 2017, version of 12 July 2017, \url{https://www.win.tue.nl/~rhofstad/SaintFlour_SPoRG.pdf}.
+
+\bibitem{vdH26} R.~van der Hofstad, \emph{Stochastic Processes on Random Graphs}, book draft of 4 August 2026, Section~8.8, \url{https://rhofstad.win.tue.nl/Saint_Flour_SPoRG_Grundlehre.pdf}.
+
+\bibitem{code} Y.~Shmalo, \texttt{checks.py} and its output, \url{https://github.com/yspennstate/hub-paths-barely-subcritical}.
+
+\end{thebibliography}
+\end{document}

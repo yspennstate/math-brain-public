@@ -1,0 +1,226 @@
+[
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 6,
+    "data": {
+      "attempt_id": "C0006-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Renewal-type argument on the cluster process viewed from the local maximum: depth-h count as a branching-like functional of the concentric decomposition.",
+      "obstruction": "Scale inhomogeneity of the concentric-decomposition walk defeats the standard renewal theorem.",
+      "problem_id": "C0006",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "Writing the cluster as the field pinned at a local maximum, e^{-alpha h} E nu(f_h) is the expected number of points at depth h weighted by e^{-alpha h}; the concentric decomposition expresses the cluster as a random walk with a Bessel-like entropic repulsion plus independent fine fields, so f_h is a sum over scales k <= log(h) of contributions, each of order e^{alpha h} times the probability that the walk is at height h at scale k. A renewal theorem for the walk under entropic repulsion would give the limit; the walk is not a true random walk (steps depend on scale through the binding fields), which is where the existing tools stop. Existence of the limit is therefore reduced to a scale-inhomogeneous renewal theorem.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 50,
+    "data": {
+      "attempt_id": "C0062-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "Conjugation preserves the multiset of hook lengths; the enumeration used exact integer arithmetic over all p(n) partitions (p(40) = 37338).",
+      "key_identity": "dim(lambda) = dim(lambda') for all lambda, so uniqueness can only hold up to conjugation; verified unique up to conjugation for all n <= 40.",
+      "method": "Exact computation of maximal-dimension shapes for small n by the hook-length formula, checking uniqueness.",
+      "obstruction": "No structure theorem for the discrete maximiser; enumeration is exponential in sqrt n.",
+      "problem_id": "C0062",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "By the hook-length formula the dimension is n!/prod hooks. Exact enumeration of all partitions of n for every n <= 40 (raw/C_romik_maxdim_n_le_40.json): for every n <= 40 the maximiser is unique up to conjugation, i.e. either a single self-conjugate shape (n = 1, 3, 5, 6, 8, 10, 12, 15, 17, 21, 23, 27, 30, 34, 36, 38) or exactly one conjugate pair (all other n <= 40); no tie between non-conjugate shapes occurred. Rigorous observation: dim(lambda) = dim(lambda') always, so 'the maximal shape is unique' can only mean unique up to conjugation, and the source's question needs that qualifier; with it the question is confirmed for n <= 40 and open beyond. Asymptotically the maximiser approaches the Vershik-Kerov-Logan-Shepp limit shape; no efficient algorithm is known because the dimension is not unimodal along natural paths in the partition lattice.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 54,
+    "data": {
+      "attempt_id": "C0066-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Reduce the intrinsic limit to a renewal-type statement for the branching-process comparison.",
+      "obstruction": "Exact constants for the intrinsic branching structure require second-order lace expansion information.",
+      "problem_id": "C0066",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result": "The intrinsic one-arm probability is bounded above and below by constants over n (Kozma-Nachmias), and the comparison object is the survival probability of a critical branching process with finite variance, for which n P(survive n generations) -> 2/sigma^2 (Kolmogorov). For the intrinsic arm event the analogous statement would be n P(intrinsic radius >= n) -> a_in where a_in should be 2/V with V the variance of the offspring distribution of the effective branching structure (the cluster explored by intrinsic distance is a branching process with dependent offspring). Existence of the limit therefore reduces to a Kolmogorov-type limit theorem for the intrinsic exploration, which needs the mean-field two-point asymptotics at the level of an exact constant (the lace expansion gives tau_{p_c}(x) ~ A/|x|^{d-2} with an exact constant A, Hara 2008), plus an exact constant for the 'variance' of the exploration, which is the sum of the three-point function's connected part, computable from the lace expansion in principle. The extrinsic limit is harder because the extrinsic arm event mixes intrinsic distance and Euclidean displacement; its bounded-ratio form comes from a second-moment argument that does not give constants. I could not complete either constant.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 60,
+    "data": {
+      "attempt_id": "C0072-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "Wired: |C_max^{(w)}| = n^{d-1}(1 + sum_r P(one-arm to distance r)) = Theta(n^{d-1}) by the extrinsic one-arm exponent 2; the limit constant requires C0066.",
+      "method": "Heuristic derivation of the three scalings and identification of the rigorous gaps.",
+      "obstruction": "Boundary-sensitive cluster-size tails for bulk/zero conditions; sharp one-arm constant for the wired constant.",
+      "problem_id": "C0072",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result": "Free/zero boundary: the largest cluster among about n^d / n^4 ... the box contains clusters whose sizes have tail P(|C| >= k) ~ k^{-1/2} in mean field, cut off at the box scale where the cluster diameter ~ k^{1/4} reaches n, i.e. k ~ n^4; the number of clusters of size about n^4 in the box is n^d P(|C(0)| ~ n^4)/n^4 ~ n^{d-6} which is large for d > 6, and the maximum of n^{d-6} clusters with tail k^{-1/2} cut off at n^4 gives the log n factor through the extreme-value count, hence n^4 log n. Rigorous status: the upper bound n^4 log n follows from the cluster-size tail and a union bound; the matching lower bound needs the tail near the cutoff to be exactly of the mean-field form k^{-1/2} up to constants for k up to c n^4 inside a box with boundary, which is a boundary-condition-sensitive statement (the two-point function near the boundary decays faster). Wired boundary: the boundary is one cluster of size n^{d-1} plus the vertices connected to it, the latter of order n^{d-1} times the expected number of vertices connected to the boundary per boundary vertex (~ sum over distance r of r^{d-1} r^{-(d-2)} ... the two-point function summed over a half-space gives order n^2, so the wired giant should be n^{d-1} times a constant only if the connection density to the boundary is summable, which it is in d > 6 only after the one-arm exponent: P(0 <-> boundary at distance r) ~ r^{-2}, and the sum over the box of r^{-2} is n^{d-2}, dominated by the boundary itself... so the constant a_w exists iff the total number of vertices connected to the boundary from distance >= 1 is O(n^{d-1}), which follows from the extrinsic one-arm exponent 2 (Kozma-Nachmias) by summing r^{-2} over the layers r <= n: sum_r n^{d-1} r^{-2} = O(n^{d-1}). So the wired scaling n^{d-1} up to constants is rigorous from the known one-arm exponent; the existence of the limit constant a_w needs the sharp one-arm asymptotics (C0066). Bulk and zero cases remain open at the level of the lower bound.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 65,
+    "data": {
+      "attempt_id": "C0077-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Derive the IIC statement from the critical-cluster statement via the h-transform structure.",
+      "obstruction": "Same as C0076 plus the sharp one-arm constant.",
+      "problem_id": "C0077",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result": "The IIC is the limit of the critical cluster conditioned on reaching intrinsic distance n (or on |C| large), which at the level of the branching-process comparison is the Doob h-transform of the critical branching process with h = survival, giving the Kesten tree (a spine plus critical trees); at the continuum level the canonical measure of SBM conditioned on survival to time t and then t -> infinity gives SBM with an immortal particle. So C0077 follows from C0076 plus the commutation of the conditioning with the scaling limit, which requires the convergence in C0076 to hold under conditioning on the intrinsic radius exceeding n, i.e. a statement about the conditioned law, which is obtained from the unconditioned one by dividing by the one-arm probability (order 1/n) and thus needs the one-arm asymptotics at the level of the exact constant (C0066). Reduction chain: C0077 <= C0076 + C0066.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 85,
+    "data": {
+      "attempt_id": "C0097-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Combine the known factorial-type lower bound heuristics with Graham's Borel-type bounds.",
+      "obstruction": "Alternating-sign lace contributions may cancel; no asymptotic diagram count with sign control.",
+      "problem_id": "C0097",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result": "The source cites Graham's Borel-type bounds on the remainder; if the coefficients a_i satisfy |a_i| >= c K^i i! for infinitely many i then the radius is zero, and the computed a_i (Clisby-Liang-Slade) grow consistently with factorial growth. A rigorous proof of divergence would follow from a lower bound on the number of lace diagrams contributing with the same sign at order i, i.e. a non-cancellation statement; the lace expansion for SAW has alternating-sign contributions (pi^{(N)} with sign (-1)^N) so cancellation cannot be excluded without an explicit asymptotic analysis of the diagram sums. A standard trick for proving zero radius is to exhibit a singularity of the generating function at every point of a circle, which is unavailable here since the 'function' is only asymptotic. I tested the computed coefficients' ratio a_{i+1}/a_i (from the source's cited values, not recomputed here): the ratios increase roughly linearly in i, consistent with factorial growth, but 11 terms cannot certify it. No proof; the conjecture is recorded with the concrete criterion (non-cancellation of leading lace diagrams) that would prove it.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 127,
+    "data": {
+      "attempt_id": "C0144-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Try the natural Folner sequence of balls and see what fails; then a subsequence argument.",
+      "obstruction": "Interior coarse connectivity of Folner sets on amenable exponential-growth graphs.",
+      "problem_id": "C0144",
+      "recorded_at": "2026-09-07T09:31:51Z",
+      "result": "For balls in Z^d the statement is a theorem (uniqueness of the giant in boxes, Grimmett-Marstrand plus the finite-box uniqueness results of Pisztora); the difficulty on a general amenable transitive graph is that a Folner set can have a thin boundary but a disconnected interior structure in which C_infinity intersect F_n splits into several macroscopic pieces linked only outside F_n. A sufficient condition is a 'coarse connectivity' of F_n: every two macroscopic sub-blocks of F_n are joined inside F_n by a path of blocks each of which contains the giant with high probability; on Z^d this is the block renormalisation, and on a general amenable graph the existence of such a Folner sequence would follow from a renormalisation as in C0143, which is available for polynomial growth. So Question 12.34 is implied, for polynomial growth, by the CMT-type supercritical sharpness plus the standard finite-box uniqueness argument (not verified in detail), and is open for amenable graphs of exponential growth, where the Folner sets are exponentially large relative to their boundary and the interior connectivity of the cluster restricted to them is uncontrolled. Reduction recorded; no proof.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 6,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0006",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Conjecture 16.6, p. 222",
+      "problem_id": "C0006",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "biskup_dgff_extrema_2020",
+      "statement": "For the cluster law nu and the functionals f_h counting points at depth h in the cluster, the limit lim_{h -> infinity} e^{-alpha h} E_nu(f_h) exists in (0,infinity).",
+      "status_search": "",
+      "title": "Existence of the limit of e^{-alpha h} E nu(f_h) for the DGFF cluster law",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 62,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0062",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Section 1.18 discussion, p. 74",
+      "problem_id": "C0062",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result_status": "partial_result",
+      "schema": "probability-problem.v1",
+      "source_id": "romik_lis_2015",
+      "statement": "For finite n, describe the shape of maximal dimension (the partition of n maximising the number of standard Young tableaux) explicitly or by an efficient algorithm, prove it is unique, and improve the asymptotic bounds on the maximal dimension.",
+      "status_search": "",
+      "title": "Uniqueness and description of the maximal-dimension Young diagram for finite n",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 66,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0066",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Open Problem 11.2, p. 152",
+      "problem_id": "C0066",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "heydenreich_hofstad_highd_2017",
+      "statement": "Prove that the limits a_in = lim n P_{p_c}(exists x with intrinsic distance d_{C(0)}(0,x) >= n) and a_ex = lim n^2 P_{p_c}(0 <-> boundary of the box of side n) exist for percolation on Z^d, d > 6.",
+      "status_search": "",
+      "title": "Sharp intrinsic and extrinsic one-arm exponents in high dimensions",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 97,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0097",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Section 1.5, p. 4-5",
+      "problem_id": "C0097",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "bdgs_saw_lectures_2012",
+      "statement": "Prove that the asymptotic expansion of the connective constant mu(d) of Z^d in powers of 1/(2d) has radius of convergence zero (expected but unproved; coefficients known to order 11 grow rapidly).",
+      "status_search": "",
+      "title": "Divergence of the 1/d expansion of the connective constant",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 144,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0144",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Question 12.34 (Nekrashevych-Pete), p. 170",
+      "problem_id": "C0144",
+      "recorded_at": "2026-09-07T09:31:51Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "pete_pgg_notes",
+      "statement": "For an amenable transitive graph and p > p_c, is there a connected Folner sequence F_n such that almost surely the second largest component of F_n intersect C_infinity is o(the largest) and the largest has density theta(p) in F_n?",
+      "status_search": "",
+      "title": "Folner sequences along which the infinite cluster has a single giant piece",
+      "verification": "unreviewed"
+    }
+  }
+]

@@ -1,0 +1,113 @@
+{
+  "task": "P0104",
+  "worker": "w370",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "primary_target": {
+    "title": "50 years of first-passage percolation",
+    "authors": [
+      "Auffinger",
+      "Damron",
+      "Hanson"
+    ],
+    "url": "https://arxiv.org/pdf/1511.03262",
+    "section": "3.1; equation (3.1); Questions 13 and 15",
+    "locations_as_read": "Equation: printed pages 33-34; both questions: printed page 36 (zero-based PDF page 36).",
+    "exact_mathematical_content": "For iid nonnegative nearest-neighbor lattice FPP, establish a variance fluctuation exponent chi<1/2 for d>=2 under suitable distributional conditions; obtain chi=1/3 for d=2, and chi>0 in suitable dimensions. The source does not specify all suitable conditions or one meaning of its asymptotic symbol.",
+    "short_quotes": [
+      "under suitable conditions on F",
+      "For suitable d, show that χ > 0."
+    ],
+    "scope_notes": "The surrounding discussion allows ratio convergence, two-sided comparability, or exponent-only n^(2chi+o(1)); it expects mild moment conditions and no flat edges. None is silently asserted for every continuous law."
+  },
+  "precise_specialization": {
+    "graph": "undirected nearest-neighbor Z^2",
+    "edge_weights": "iid Exp(1)",
+    "passage_time": "T_n = inf over finite paths from (0,0) to (n,0) of the sum of edge weights",
+    "target": "lim_n log Var(T_n)/(2 log n) = 1/3",
+    "quantifiers": "one fixed law and direction; limit along all integers n -> infinity",
+    "not_automatic": "positive limiting Var(T_n)/n^(2/3), weak limit law, curvature, or universality over all laws"
+  },
+  "known_inputs": [
+    {
+      "url": "https://arxiv.org/pdf/1306.1197",
+      "version": "v2",
+      "theorem": "1.1",
+      "hypotheses": [
+        "d>=2",
+        "iid nonnegative edge weights with Borel law mu",
+        "mu({0})<p_c(d)",
+        "E t_e^2 (log t_e)_+<infinity"
+      ],
+      "conclusion": "For lattice x with ||x||_1>1, Var T(0,x)<=C(mu,d)||x||_1/log||x||_1.",
+      "gap_to_target": "Only chi_var<=1/2; no fixed polynomial saving or matching KPZ lower bound."
+    },
+    {
+      "url": "https://arxiv.org/html/1401.0917v2",
+      "theorem": "1.1, two-sided assertion (1.5)",
+      "hypotheses": [
+        "d>=2",
+        "iid nonnegative edge weights",
+        "mu({0})<p_c(d)",
+        "E exp(2 alpha t_e)<infinity for some alpha>0"
+      ],
+      "conclusion": "P(|T(0,x)-ET(0,x)|>=lambda sqrt(||x||_1/log||x||_1))<=c1 exp(-c2 lambda), all lambda>=0 and ||x||_1>1.",
+      "gap_to_target": "This is a larger deterministic scale, not the unknown actual standard deviation. Our rare-event sequence satisfies such a tail bound but has variance exponent 3/8."
+    },
+    {
+      "url": "https://arxiv.org/html/2604.01214v1",
+      "theorem": "Section 2.1.1, Theorem 2.1",
+      "scope": "Rotationally invariant Riemannian FPP model under the paper-specific framework; Q_n comparable to standard deviation.",
+      "full_lattice_hypotheses_verified": false,
+      "gap_to_target": "Canonical iid lattice Exp(1) FPP has no established transfer to these model assumptions. No application made."
+    }
+  ],
+  "history_checked": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "line": 550,
+      "result": "Historical tier 5 / attempted_un only."
+    },
+    {
+      "artifact": "canonical_target_card.json",
+      "node_id": "claim_32684d2ece2943d218971312722a87f42333b030b9c7a29f034d6c11f31f8f1d",
+      "result": "Current store marks the original problem as unverified, historical attempted_unsolved."
+    },
+    {
+      "artifact": "exact_target_cards.json",
+      "node_id": "claim_9ffe9930e9d9ed5c9d98ff4d61a32155d942cd754628487fc173a2d2c6493b2f",
+      "result": "The old attempt already contains the n/log n exponent gap; the initial independent obstruction is not new."
+    },
+    {
+      "artifact": "target_nodes.json",
+      "result": "Owner FPP campaign correction retains an unavailable uniform engine/transport implication and explicitly leaves chi=1/3 unmoved; no owner solution inferred."
+    },
+    {
+      "paths": [
+        "probability_1000_attempts_H_20260912",
+        "probability_1000_attempts_I_20260914",
+        "prob1000_lean_20260908"
+      ],
+      "result": "Targeted P0104 scans found no new matched proof in H/I; Lean annotated ranking repeats attempted_un. This is a limited search, not a complete retirement audit."
+    },
+    {
+      "path": "~/math-research-brain/local/population",
+      "result": "Expected canonical store location absent; used the explicitly named live population store read-only instead."
+    }
+  ],
+  "literature_check": "Targeted public primary searches and the 2026 Riemannian paper establish no solution for the fixed lattice target. Current global openness remains UNKNOWN.",
+  "formal_check": {
+    "executed": false,
+    "theorem": null,
+    "assumptions": null,
+    "trusted_axioms": null,
+    "admitted_placeholders_counted": false
+  },
+  "brain_scar": "perceptron_proof_open_gaps_fleet_2026_07_12",
+  "source_checks_are_mathematical_proofs": false,
+  "owner_register_scan": {
+    "path": "~/Open problem project/solved_register.md",
+    "method": "targeted FPP/first-passage/KPZ/fluctuation/percolation grep",
+    "result": "No matching FPP/first-passage/KPZ/fluctuation/percolation row in the targeted register grep; this is not an exhaustive owner retirement audit."
+  }
+}

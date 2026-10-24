@@ -1,0 +1,113 @@
+{
+  "problem_id": "P0441",
+  "command": "python -X utf8 check_remaining.py",
+  "label": "finite checks; independent audit pending",
+  "elapsed_seconds": 1.7970189000479877,
+  "seed": 3400441,
+  "lambda": 0.8,
+  "mu": 1.4,
+  "setup": 1.1,
+  "simulation": [
+    {
+      "grace": 0.0,
+      "cycles": 20000,
+      "predicted_wait": 1.7949341438703144,
+      "measured_wait": 1.8076842498377943,
+      "wait_standard_error": 0.019852562086609533,
+      "wait_z_score": 0.6422398233465207,
+      "predicted_power": 145.51671732522797,
+      "measured_power": 145.87958441550526,
+      "power_standard_error": 0.3968116312261415,
+      "power_z_score": 0.9144567893739345,
+      "model_fractions": [
+        0.5714285714285715,
+        0.0,
+        0.2279635258358662,
+        0.20060790273556228
+      ],
+      "observed_fractions": [
+        0.5748320280630157,
+        0.0,
+        0.22663459991479654,
+        0.19853337202218763
+      ],
+      "observed_arrival_rate": 0.8016055622721312
+    },
+    {
+      "grace": 0.5,
+      "cycles": 20000,
+      "predicted_wait": 1.620221202790376,
+      "measured_wait": 1.6310758340836677,
+      "wait_standard_error": 0.020584509713998465,
+      "wait_z_score": 0.5273203707110938,
+      "predicted_power": 149.70491174613775,
+      "measured_power": 149.83881428583032,
+      "power_standard_error": 0.4061857111506682,
+      "power_z_score": 0.32965841982290106,
+      "model_fractions": [
+        0.5714285714285715,
+        0.08886913669650558,
+        0.1806927084441079,
+        0.159009583430815
+      ],
+      "observed_fractions": [
+        0.5723418866350007,
+        0.08852337973845957,
+        0.18015571485355808,
+        0.15897901877298168
+      ],
+      "observed_arrival_rate": 0.7979686447526981
+    },
+    {
+      "grace": 2.0,
+      "cycles": 20000,
+      "predicted_wait": 1.2239378176188929,
+      "measured_wait": 1.216825769901329,
+      "wait_standard_error": 0.022767294180154413,
+      "wait_z_score": -0.3123800158809944,
+      "predicted_power": 159.20456215906887,
+      "measured_power": 158.59095667327767,
+      "power_standard_error": 0.3800565522703969,
+      "power_z_score": -1.6145110040219446,
+      "model_fractions": [
+        0.5714285714285715,
+        0.29044185426208663,
+        0.07347317782411801,
+        0.06465639648522385
+      ],
+      "observed_fractions": [
+        0.566986942755526,
+        0.2915488706340025,
+        0.07594430583088671,
+        0.06551988077958495
+      ],
+      "observed_arrival_rate": 0.7905084499427729
+    },
+    {
+      "grace": "infinity",
+      "cycles": 20000,
+      "predicted_wait": 0.9523809523809528,
+      "measured_wait": 0.9989423525510238,
+      "wait_standard_error": 0.029653778193198012,
+      "wait_z_score": 1.5701675471745218,
+      "predicted_power": 165.71428571428572,
+      "measured_power": 166.06393487006346,
+      "power_standard_error": 0.30376087628160897,
+      "power_z_score": 1.1510671158769952,
+      "model_fractions": [
+        0.5714285714285715,
+        0.4285714285714285,
+        0.0,
+        0.0
+      ],
+      "observed_fractions": [
+        0.5757991858757933,
+        0.42420081412420685,
+        0.0,
+        0.0
+      ],
+      "observed_arrival_rate": 0.8025112295844758
+    }
+  ],
+  "scope": "M/M/1, deterministic grace/setup, no setup cancellation; Monte Carlo checks complement the proof."
+}

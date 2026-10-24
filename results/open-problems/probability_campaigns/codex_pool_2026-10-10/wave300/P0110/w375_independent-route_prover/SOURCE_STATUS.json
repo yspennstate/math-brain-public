@@ -1,0 +1,125 @@
+{
+  "problem_id": "P0110",
+  "worker": "w375",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "exact_target": "Exhibit a nondegenerate iid undirected nearest-neighbor FPP law on Z^d, d>=2, with well-defined fluctuation and wandering exponents satisfying chi=2*xi-1.",
+  "interpretation": "The survey asks for a distribution with the relation. Matching Chatterjee's uniform upper/lower exponent pairs is a sufficient precise route; continuity and bounded positive support are additional restrictions chosen for this attempt.",
+  "ranking": {
+    "date": "2026-09-07",
+    "tier": 5,
+    "recorded_status": "attempted_un",
+    "file": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 551
+  },
+  "primary_sources": [
+    {
+      "title": "50 years of first passage percolation",
+      "authors": [
+        "Antonio Auffinger",
+        "Michael Damron",
+        "Jack Hanson"
+      ],
+      "url": "https://arxiv.org/pdf/1511.03262",
+      "locator": "Section 4.3, equation (4.19), Question 22, current PDF pp.87-88",
+      "quote": "Find a distribution of passage times where (4.19) holds.",
+      "verified": "Read the question and surrounding explanation via authorized public-page tools on 2026-10-10.",
+      "scope": "Ordinary iid undirected FPP; the old statement of openness is historical, not a current certificate."
+    },
+    {
+      "title": "The universal relation between scaling exponents in first-passage percolation",
+      "author": "Sourav Chatterjee",
+      "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v177-n2-p07-p.pdf",
+      "locator": "Theorem 1.1, pp.665-666",
+      "quote": "assuming that the exponents exist in a certain sense",
+      "verified": "Read model and all four exponent hypotheses directly on 2026-10-10.",
+      "scope": "iid nearly-gamma law, finite moment generating function near zero, d>=2; relation conditional on matching strong exponent pairs."
+    },
+    {
+      "title": "A simplified proof of the relation between scaling exponents in first-passage percolation",
+      "authors": [
+        "Antonio Auffinger",
+        "Michael Damron"
+      ],
+      "url": "https://arxiv.org/abs/1109.0523",
+      "verified": "Abstract only; not used as a theorem in this attempt.",
+      "scope": "Removes nearly-gamma assumption while retaining exponent-existence conditions."
+    },
+    {
+      "title": "Rotationally invariant first passage percolation: Concentration and scaling relations",
+      "authors": [
+        "Riddhipratim Basu",
+        "Vladas Sidoravicius",
+        "Allan Sly"
+      ],
+      "url": "https://arxiv.org/abs/2312.14143",
+      "verified": "Abstract read on 2026-10-10; no theorem imported.",
+      "scope": "Specific rotationally invariant planar models, including Riemannian/Voronoi/Howard-Newman models; not a construction of the task's iid lattice law."
+    },
+    {
+      "title": "Rotationally invariant first passage percolation: Breaking the n/log n variance barrier",
+      "authors": [
+        "Riddhipratim Basu",
+        "Vladas Sidoravicius",
+        "Allan Sly"
+      ],
+      "url": "https://arxiv.org/abs/2604.01214",
+      "date": "2026-04-01",
+      "verified": "Abstract read on 2026-10-10; no theorem imported.",
+      "scope": "Polynomial variance improvement for rotationally invariant Riemannian planar FPP; does not supply the required ordinary iid lattice example."
+    }
+  ],
+  "canonical_target_record": {
+    "export": "~/math-brain-build/export/population/nodes.jsonl",
+    "line": 286,
+    "node_id": "claim_081071dcf812e1c0843a53fe1da486f97876afe30678a091de36c26017e679f0",
+    "logical_id": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
+    "recorded_truth_status": "unverified",
+    "source_status": "source_says_open; current status unverified",
+    "locator_discrepancy": "The cached card says PDF p.89; the currently opened public PDF places Question 22 on printed p.88. The question number and equation match. No hash match is asserted."
+  },
+  "prior_attempt": {
+    "export_line": 6022,
+    "node_id": "claim_a60b9dcbea1c3b4133831211a8107b42fbce24f2c59d8b4b21ede96b3cab07f1",
+    "logical_id": "math:probability.core:attempt-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
+    "method": "Quadratic norm-curvature balance, n*(n^(xi-1))^2=n^(2xi-1)",
+    "quote": "Both the required exponent existence and error control when replacing random passage times by the norm remain unproved for a concrete iid law here.",
+    "audit_state": "author-checked only; no independent review",
+    "difference_from_this_lane": "Our detour and support-threshold proofs use finite path geometry and disjoint-edge independence, not norm curvature or balance assumptions."
+  },
+  "scoped_prior_work_checks": [
+    "Targeted P0110 searches in the named intake, H, I and Lean directories found dated ranking/dedup records; no separate P0110 proof was returned there.",
+    "The intake README's dated Codex worktree path no longer exists. Recovery used the two target-matching canonical export rows, not a whole-export load.",
+    "Team O has adjacent FPP rows, but its read board has no P0110 assignment.",
+    "The probability300 board assigns this target to w372-w383. No peer proof was read before APPROACH_PRECOMMIT.md was saved."
+  ],
+  "brain_scars_read": [
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "proof_steps_need_derived_joint_structure_2026_09_09",
+    "fpp_base_case_is_doubling_transfer_principle_2026_08_15",
+    "fpp_width3_strip_time_constant_solved_2026_07_12",
+    "openproblem_recon_fpp_chi_target_2026_08_09"
+  ],
+  "source_hash_check": "Not performed; source identification and exact statement alignment are not mathematical proof.",
+  "hardest_remaining_gap": "For an explicit full-plane iid lattice law, establish compatible matching fluctuation and wandering exponent pairs; no comparison at a fluctuation scale is proved here.",
+  "workflow_states": {
+    "submitted": true,
+    "reviewed": true,
+    "ingested": false,
+    "retrievable": false
+  },
+  "draft_bundle_path": "~\\math-brain-inbox\\w375\\bundle_001.json",
+  "peer_review": {
+    "agent": "w376",
+    "verdict": "scoped KEEP L1-L4",
+    "receipt": "~/brain_workers/w376/PEER_AUDIT.md",
+    "designated_referee": "w377",
+    "designated_referee_status": "scoped KEEP L1-L4 and C008"
+  },
+  "shared_boundary_note": "w378 independently has the support-threshold result; it is retained as a local supporting proof and omitted from this bundle to avoid duplicate promotion.",
+  "review_receipt": "~\\brain_workers\\w375\\REVIEW_OUTCOMES.json",
+  "mathematical_review_scope": "L1-L4 plus the L2 raw-coupling corollary; parent P0110 GAP",
+  "two_account_admission_verified": false,
+  "conditional_theorem_quantifier_note": "This attempt uses Chatterjee A3-A4 with a large-endpoint cutoff. The later Auffinger-Damron all-nonzero-endpoint lower wandering condition is not silently substituted; see the referee source-quantifier note."
+}

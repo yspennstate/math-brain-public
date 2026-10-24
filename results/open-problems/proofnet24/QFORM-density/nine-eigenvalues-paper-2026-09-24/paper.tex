@@ -1,0 +1,710 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Quadratic forms with nine large eigenvalues have bounded densities},pdfauthor={Yitzchak Shmalo}}
+
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\off}{off}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\newcommand{\logp}{\log_+}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+
+\title{Quadratic forms with nine large eigenvalues have bounded densities}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{24 September 2026}
+
+\begin{document}
+
+\begin{abstract}
+Let $X_1,\dots,X_n$ be independent real random variables whose densities are bounded by $K$, and let $Q=X^{T}AX+b^{T}X+c$, where $A$ is a real symmetric matrix. We show that if $A$ has at least nine eigenvalues of modulus at least $s>0$, then $Q$ has a density bounded by $400\,K^2/s$. The bound does not depend on $n$, on the other eigenvalues, on $b$ and $c$, or on the laws of the $X_i$, and no moment, smoothness or support assumptions are made. The analytic ingredient is a decay estimate for the characteristic function of a quadratic polynomial in terms of the $\ell$-th elementary symmetric function of the squared singular values of an off-diagonal block; for $\ell=3$ the estimate is integrable. It is combined with a sampling argument for disjoint minors, which converts nine large eigenvalues into a lower bound for the third such function when all diagonal entries and principal $2\times2$ minors are small, and with conditioning on one or two coordinates otherwise. At least three large eigenvalues are necessary.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $X=(X_1,\dots,X_n)$ be a random vector with independent coordinates, where $X_i$ has a density $f_i$ with $f_i\le K$ almost everywhere. For a real symmetric matrix $A$, a vector $b\in\R^n$ and $c\in\R$ we consider the quadratic polynomial
+\[
+Q=X^{T}AX+b^{T}X+c .
+\]
+For linear forms the density question has a complete answer: if $\abs{a}=1$ then $a\cdot X$ has density at most $\sqrt2\,K$, by Rogozin's convolution inequality \cite{Rogozin} combined with Ball's bound for sections of the cube \cite{Ball}; see \cite{RV,LPP} for projections of higher rank. For quadratic polynomials a bound on the eigenvalues of $A$ from below does not by itself bound the density. When $X_1,X_2$ are uniform on $[0,1]$, the variable $X_1^2$ has density $(2\sqrt y)^{-1}$ on $(0,1)$, and $X_1^2-X_2^2=(X_1-X_2)(X_1+X_2)$ has a density with a logarithmic singularity at $0$. So one or two large eigenvalues are not enough. With three, two of them have the same sign, and for diagonal forms this already suffices: if $\lambda_1,\lambda_2\ge1$ then $\lambda_1X_1^2+\lambda_2X_2^2$ has density at most $\int_0^1u^{-1/2}(1-u)^{-1/2}\dd u=\pi$ (each summand has density at most $y^{-1/2}$ on $(0,\infty)$), and adding independent terms cannot increase the supremum of a density. In general the eigenvectors of $A$ are not aligned with the coordinates, and the coordinates of $X$ in an eigenbasis are not independent; this is where the difficulty lies. It is natural to ask whether three eigenvalues of modulus at least one always give a bounded density, with a constant depending on nothing else. The main result of this paper shows that nine do.
+
+For a real matrix $T$ we write $s_1(T)\ge s_2(T)\ge\cdots\ge0$ for its singular values, padded with zeros. For symmetric $A$ these are the moduli of the eigenvalues, so the hypothesis below says that $A$ has at least nine eigenvalues $\lambda$ with $\abs\lambda\ge s$.
+
+\begin{theorem}\label{thm:main}
+Let $X_1,\dots,X_n$ be independent real random variables with densities bounded by $K$. Let $A\in\R^{n\times n}$ be symmetric, $b\in\R^n$ and $c\in\R$. If $s_9(A)\ge s>0$, then $Q=X^TAX+b^TX+c$ has a density $p_Q$ with
+\begin{equation}\label{eq:main}
+\norm{p_Q}_\infty\le \frac{400\,K^2}{s}.
+\end{equation}
+Equivalently, $\PP(Q\in J)\le 400\,K^2\abs J/s$ for every interval $J\subset\R$.
+\end{theorem}
+
+The dimension $n$, the remaining eigenvalues, the signature of $A$, the vector $b$ and the scalar $c$ are arbitrary, and the laws of the $X_i$ need not be identical, smooth, compactly supported or have moments. Since $s_m(A)\ge s$ implies $s_9(A)\ge s$ for $m\ge9$, the same bound holds under any larger multiplicity. The factor $K^2/s$ is forced by scaling (Section~\ref{sec:proof}), and the numerical constant has not been optimized.
+
+\subsection*{Outline}
+After scaling we may take $K=s=1$. Fix $\eta=3/40$ and $\zeta=1/400$, and call a diagonal entry of modulus at least $\eta$, or a principal $2\times2$ minor of modulus at least $\zeta$, a pivot.
+
+If $A$ has a pivot, we condition on all coordinates outside it. What remains is a quadratic polynomial in one or two variables whose density has a square-root or logarithmic singularity, located at a random point. That random point is again a quadratic polynomial, in the other coordinates, and its matrix is the Schur complement of the pivot, which still has at least seven eigenvalues of modulus at least one. We therefore need anti-concentration of a quadratic polynomial at the scale of the singularity: a negative half moment $\E\abs{R-a}^{-1/2}$ for the square root, and a logarithmic moment for the logarithm. These are proved by the same method one level down.
+
+If $A$ has no pivot, all its entries are small, and the spectral hypothesis has to be converted into a combinatorial one. For $r\ge1$ let
+\[
+V_r(A)=\sum_{\substack{S,T\subset[n],\ \abs S=\abs T=r\\ S\cap T=\varnothing}}\det(A_{S,T})^2,
+\]
+summed over ordered pairs. Proposition~\ref{prop:volume} shows, by sampling a minor with probability proportional to its squared determinant, that $s_{4k-3}(A)\ge1$ forces $V_k(A)\ge\kappa^k$ for an absolute $\kappa>0$ and $k\le3$. A random partition $[n]=I\sqcup J$ then produces an off-diagonal block $M=A_{I,J}$ whose crossing volume
+\[
+E_\ell(M)=\sum_{\substack{S\subset I,\ T\subset J\\ \abs S=\abs T=\ell}}\det(M_{S,T})^2=e_\ell(MM^T)
+\]
+is bounded below for $\ell=k$. The analytic core of the paper is Theorem~\ref{thm:decay}: for every $\ell\ge1$ and every real $t\ne0$,
+\[
+\abs{\E e^{itQ}}^2\le(\sqrt2\,\pi e)^\ell\Bigl(\frac{\ell^\ell}{\ell!}\Bigr)^{1/2}\frac{1}{E_\ell(A_{I,J})^{1/2}\,\abs t^{\ell}},
+\]
+uniformly in the other entries of $A$, in $b$, $c$, and in the laws of the $X_i$ subject to $f_i\le1$. For $\ell=3$ the right side decays like $\abs t^{-3/2}$ and Fourier inversion gives the density bound; $\ell=2$ gives the negative half moment and $\ell=1$ the logarithmic moment. The count $9=4\cdot3-3$ comes from Proposition~\ref{prop:volume} at order three, and that proposition is the only place where more than six large eigenvalues are used (Remark~\ref{rem:nine}).
+
+Theorem~\ref{thm:decay} is proved by decoupling the two blocks with the Cauchy--Schwarz inequality, followed by a H\"older inequality over $\ell$-sets of rows weighted by their Gram determinants and a bound for densities of projections of product measures, which we derive from the geometric Brascamp--Lieb inequality. The H\"older step needs every row to carry at most half of the weight; a row carrying more is split off and integrated by Plancherel's theorem instead, and an entropy inequality (Lemma~\ref{lem:entropy}) controls the weights that remain.
+
+\subsection*{Related work}
+Banks, Garza Vargas, Kulkarni and Srivastava \cite[Theorem~2.1]{BGKS} bound the density of $\mathbf X^T Z\mathbf Y+\mathbf X^TU+V^T\mathbf Y+W$ for independent random matrices $\mathbf X,\mathbf Y$ whose entries are independent with bounded densities, in terms of the singular values of $Z$. There the two blocks enter bilinearly. For a general symmetric $A$ the blocks $A_{I,I}$ and $A_{J,J}$ contribute quadratic terms within each block, and these are the terms that the argument of Section~\ref{sec:decay} has to tolerate. The geometric Brascamp--Lieb inequality is due to Ball \cite{Ball} and Barthe \cite{Barthe}; the heat-flow proof we give follows Carlen, Lieb and Loss \cite{CLL} and Bennett, Carbery, Christ and Tao \cite{BCCT}. Projection bounds for product densities appear in Rudelson and Vershynin \cite{RV}, with sharp constants in Livshyts, Paouris and Pivovarov \cite{LPP}. Small-ball estimates for polynomials go back to Carbery and Wright \cite{CW} for log-concave measures, and Costello, Tao and Vu \cite{CTV} proved Littlewood--Offord type bounds for quadratic forms in discrete variables.
+
+\subsection*{Organization}
+Section~\ref{sec:prelim} collects Fourier-analytic and linear-algebraic preliminaries. Section~\ref{sec:proj} proves the geometric Brascamp--Lieb inequality and the projection and Fourier-power bounds derived from it. Section~\ref{sec:decay} proves Theorem~\ref{thm:decay}. Section~\ref{sec:pivots} contains the estimates for one and two coordinates, Section~\ref{sec:minors} the sampling argument, and Section~\ref{sec:proof} the proof of Theorem~\ref{thm:main}. Section~\ref{sec:remarks} discusses the threshold.
+
+\section{Preliminaries}\label{sec:prelim}
+
+\subsection{Fourier analysis}
+For $f\in L^1(\R^d)$ we write $\widehat f(\xi)=\int_{\R^d}e^{i\xi\cdot x}f(x)\dd x$, and for a real random variable $Z$ we write $\phi_Z(t)=\E e^{itZ}$. If $X_i$ has density $f_i$ we put $\psi_i=\widehat{f_i}=\phi_{X_i}$. We write $\logp u=\max(0,\log u)$ for $u>0$.
+
+\begin{lemma}\label{lem:fourier}
+\begin{enumerate}
+\item[(a)] If $f\in L^1(\R^d)\cap L^2(\R^d)$, then $\int_{\R^d}\abs{\widehat f}^2=(2\pi)^d\int_{\R^d}\abs f^2$.
+\item[(b)] If $\phi_Z\in L^1(\R)$, then $Z$ has a continuous density $p_Z(x)=(2\pi)^{-1}\int e^{-itx}\phi_Z(t)\dd t$, and $\norm{p_Z}_\infty\le(2\pi)^{-1}\norm{\phi_Z}_1$.
+\item[(c)] For every real random variable $Z$, every $a\in\R$ and every $v>0$,
+\[
+\E e^{-v(Z-a)^2}=\frac1{2\sqrt{\pi v}}\int_\R e^{-t^2/(4v)}e^{-ita}\phi_Z(t)\dd t.
+\]
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Parts (a) and (b) are Plancherel's theorem and the Fourier inversion theorem in the present normalization. For (c), the Gaussian integral $\int_\R e^{itx}e^{-t^2/(4v)}\dd t=2\sqrt{\pi v}\,e^{-vx^2}$ gives $e^{-v(z-a)^2}=(2\sqrt{\pi v})^{-1}\int e^{-t^2/(4v)}e^{it(z-a)}\dd t$ for every real $z$; take $z=Z$, take expectations and apply Fubini's theorem, which is justified because the integrand is bounded by the integrable function $e^{-t^2/(4v)}$.
+\end{proof}
+
+\begin{lemma}\label{lem:envelope}
+If $a>0$, $p>1$ and $\abs{\phi_Z(t)}\le\min\{1,(a/\abs t)^p\}$ for all $t\ne0$, then $Z$ has a continuous density with $\norm{p_Z}_\infty\le ap/(\pi(p-1))$.
+\end{lemma}
+
+\begin{proof}
+The envelope has integral $2a+2a^p\int_a^\infty t^{-p}\dd t=2ap/(p-1)$; apply Lemma~\ref{lem:fourier}(b).
+\end{proof}
+
+\begin{lemma}\label{lem:halfmoment}
+For every real random variable $Z$ and every $a\in\R$,
+\begin{equation}\label{eq:halfmoment}
+\E\abs{Z-a}^{-1/2}\le\frac1{\sqrt{2\pi}}\int_\R\abs t^{-1/2}\abs{\phi_Z(t)}\dd t,
+\end{equation}
+where both sides may be infinite and $\abs0^{-1/2}=\infty$. In particular, if $\abs{\phi_Z(t)}\le\min\{1,u/\abs t\}$ for all $t\ne0$, then $\sup_a\E\abs{Z-a}^{-1/2}\le8\sqrt{u/(2\pi)}$.
+\end{lemma}
+
+\begin{proof}
+For real $z$ we have $\abs z^{-1/2}=\Gamma(1/4)^{-1}\int_0^\infty v^{-3/4}e^{-vz^2}\dd v$, including $z=0$ with value $+\infty$. By Tonelli's theorem and Lemma~\ref{lem:fourier}(c),
+\[
+\E\abs{Z-a}^{-1/2}\le\frac{1}{\Gamma(1/4)}\int_0^\infty\frac{v^{-3/4}}{2\sqrt{\pi v}}\int_\R e^{-t^2/(4v)}\abs{\phi_Z(t)}\dd t\dd v .
+\]
+Exchanging the integrals (Tonelli again) and substituting $w=t^2/(4v)$ gives
+\[
+\int_0^\infty v^{-5/4}e^{-t^2/(4v)}\dd v=4^{1/4}\,\Gamma(1/4)\,\abs t^{-1/2}\qquad(t\ne0),
+\]
+and \eqref{eq:halfmoment} follows since $4^{1/4}/(2\sqrt\pi)=1/\sqrt{2\pi}$. Under the stated envelope,
+\[
+\int_\R\abs t^{-1/2}\min\{1,u/\abs t\}\dd t=4\sqrt u+4\sqrt u=8\sqrt u .
+\]
+\end{proof}
+
+\subsection{Conditioning}
+All conditioning in this paper is on original coordinates, and it enters through the following domination principle.
+
+\begin{lemma}\label{lem:condition}
+Let $U$ and $V$ be independent random elements of measurable spaces $\mathcal U$ and $\mathcal V$, let $h:\mathcal U\times\mathcal V\to\R$ be measurable, and let $g:\R\times\mathcal V\to[0,\infty]$ be measurable. Suppose that for almost every $v$ with respect to the law of $V$, $\PP(h(U,v)\in B)\le\int_Bg(z,v)\dd z$ for every Borel set $B$. Then $Q=h(U,V)$ has a density $p_Q$ with $p_Q(z)\le\E g(z,V)$ for almost every $z$, and $\E k(Q)\le\int_\R k(z)\,\E g(z,V)\dd z$ for every Borel $k\ge0$.
+\end{lemma}
+
+\begin{proof}
+By independence and Tonelli's theorem, $\PP(Q\in B)=\int\PP(h(U,v)\in B)\dd\PP_V(v)\le\int_B\E g(z,V)\dd z$. The right side vanishes when $B$ is Lebesgue null, so $Q$ has a density, and the inequality for all $B$ gives $p_Q\le\E g(\cdot,V)$ almost everywhere. The last assertion follows by integrating $k$ against $p_Q$.
+\end{proof}
+
+\subsection{Linear algebra}
+For a matrix $T$, $\norm T$ is the operator norm and $\norm T_F$ the Frobenius norm. For symmetric $A$ and $t>0$ let $N_A(t)=\#\{j:\abs{\lambda_j(A)}\ge t\}$, so that $N_A(t)\ge m$ if and only if $s_m(A)\ge t$. For index sets $S,T$ we write $A_{S,T}$ for the submatrix with rows in $S$ and columns in $T$, in increasing order, and $M_T$ for the rows of $M$ indexed by $T$.
+
+\begin{lemma}\label{lem:weyl}
+For real matrices of the same size, $\abs{s_j(T)-s_j(U)}\le\norm{T-U}$, and $s_{j+q}(T+R)\le s_j(T)$ whenever $\rank R\le q$. No symmetry is required.
+\end{lemma}
+
+\begin{proof}
+Both follow from $s_j(T)=\min\{\norm{T-B}:\rank B<j\}$. The minimum is attained by truncating the singular value decomposition after $j-1$ terms; conversely, if $\rank B<j$, the kernel of $B$ meets the span of the first $j$ right singular vectors of $T$ in a unit vector $x$, and $\norm{(T-B)x}=\norm{Tx}\ge s_j(T)$. If $\rank B<j$ then $\norm{T-B}\le\norm{U-B}+\norm{T-U}$, which gives the first assertion. If $\rank B<j$ and $\rank R\le q$ then $\rank(B+R)<j+q$ and $\norm{T+R-(B+R)}=\norm{T-B}$, which gives the second.
+\end{proof}
+
+\begin{lemma}\label{lem:schur}
+Let $A=\begin{pmatrix}B&C\\C^T&D\end{pmatrix}$ be real symmetric with $B\in\R^{k\times k}$ invertible, and let $S=D-C^TB^{-1}C$. Then $N_S(t)\ge N_A(t)-k$ for every $t>0$.
+\end{lemma}
+
+\begin{proof}
+Let $n$ be the size of $A$. Suppose first that $A$ is invertible. Then $\det A=\det B\det S$, so $S$ is invertible, and the block inversion formula shows that the lower right block of $A^{-1}$ is $S^{-1}$. By Cauchy's interlacing theorem, the $j$-th largest eigenvalue of this principal submatrix is at most the $j$-th largest eigenvalue of $A^{-1}$; hence $S^{-1}$ has at most as many eigenvalues larger than $1/t$ as $A^{-1}$, and, applying the same to $-A^{-1}$, at most as many smaller than $-1/t$. Since the eigenvalues of $S^{-1}$ and $A^{-1}$ are the reciprocals of those of $S$ and $A$,
+\[
+(n-k)-N_S(t)=\#\{j:\abs{\lambda_j(S)}<t\}\le\#\{j:\abs{\lambda_j(A)}<t\}=n-N_A(t).
+\]
+In general, for all but finitely many $\varepsilon\in(-t,t)$ both $A+\varepsilon I$ and $B+\varepsilon I$ are invertible. The Schur complement $S_\varepsilon=D+\varepsilon I-C^T(B+\varepsilon I)^{-1}C$ tends to $S$ as $\varepsilon\to0$, and $N_{A+\varepsilon I}(t-\abs\varepsilon)\ge N_A(t)$. With $m=N_A(t)-k\ge1$ (otherwise there is nothing to prove), the invertible case gives $s_m(S_\varepsilon)\ge t-\abs\varepsilon$, and Lemma~\ref{lem:weyl} gives $s_m(S)\ge t$ in the limit.
+\end{proof}
+
+\begin{lemma}\label{lem:dd}
+If a real square matrix $T$, not necessarily symmetric, satisfies $\abs{T_{ii}}>\sum_{j\ne i}\abs{T_{ij}}$ for every $i$, then $T$ is invertible.
+\end{lemma}
+
+\begin{proof}
+If $Tx=0$ with $x\ne0$, choose $i$ with $\abs{x_i}=\max_j\abs{x_j}$; then $\abs{T_{ii}}\abs{x_i}=\abs{\sum_{j\ne i}T_{ij}x_j}\le\sum_{j\ne i}\abs{T_{ij}}\abs{x_i}$, a contradiction.
+\end{proof}
+
+\begin{lemma}\label{lem:gram}
+Let $M\in\R^{I\times J}$ have rows $m_i\in\R^J$, and write $\Theta(T)=\det(M_TM_T^T)$ for $T\subset I$, with $\Theta(\varnothing)=1$.
+\begin{enumerate}
+\item[(a)] For $\ell\ge1$, $e_\ell(MM^T)=\sum_{T\subset I,\ \abs T=\ell}\Theta(T)=\sum_{S\subset I,\ T\subset J,\ \abs S=\abs T=\ell}\det(M_{S,T})^2$, where $e_\ell$ denotes the $\ell$-th elementary symmetric function of the eigenvalues.
+\item[(b)] Let $H\subset I$ with $\Theta(H)>0$, let $\Pi$ be the orthogonal projection of $\R^J$ onto the span of $\{m_h:h\in H\}$, and let $c_i=(I-\Pi)m_i$. For $T\subset I\setminus H$ let $C_T$ have rows $c_i$, $i\in T$. Then $\Theta(H\cup T)=\Theta(H)\det(C_TC_T^T)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) The coefficient of $z^\ell$ in $\det(I+zMM^T)$ is both $e_\ell(MM^T)$ and the sum of the principal $\ell\times\ell$ minors of $MM^T$, which are the $\Theta(T)$; by the Cauchy--Binet formula $\Theta(T)=\sum_{S'\subset J,\ \abs{S'}=\ell}\det(M_{T,S'})^2$. (b) The Gram matrix of the rows in $H\cup T$ is $\begin{pmatrix}G_{HH}&G_{HT}\\G_{TH}&G_{TT}\end{pmatrix}$ with $G_{HH}=M_HM_H^T$ invertible. Its determinant is $\det G_{HH}\det(G_{TT}-G_{TH}G_{HH}^{-1}G_{HT})$. Since $\Pi=M_H^TG_{HH}^{-1}M_H$, the Schur complement equals $M_T(I-\Pi)M_T^T=C_TC_T^T$.
+\end{proof}
+
+\section{Projections of product densities}\label{sec:proj}
+
+\begin{theorem}[geometric Brascamp--Lieb inequality]\label{thm:bl}
+Let $u_1,\dots,u_N$ be unit vectors in $\R^d$ and $c_1,\dots,c_N>0$ with $\sum_ic_iu_iu_i^T=I_d$. For nonnegative integrable functions $h_1,\dots,h_N$ on $\R$,
+\[
+\int_{\R^d}\prod_{i=1}^Nh_i(u_i\cdot x)^{c_i}\dd x\le\prod_{i=1}^N\Bigl(\int_\R h_i\Bigr)^{c_i}.
+\]
+\end{theorem}
+
+\begin{proof}
+Taking traces in the frame identity gives $\sum_ic_i=d$. Suppose first that each $h_i$ is bounded, vanishes outside $[-m,m]$ and has $\mu_i=\int h_i>0$. For $\tau>0$ let $g_\tau(y)=(4\pi\tau)^{-1/2}e^{-y^2/(4\tau)}$, let $f_i(\tau,\cdot)=g_\tau*h_i$, and put
+\[
+F(\tau,x)=\prod_i f_i(\tau,u_i\cdot x)^{c_i}.
+\]
+Each $f_i$ is smooth and positive, and $\partial_\tau f_i=\partial_y^2f_i$. Writing $v_i=\partial_y\log f_i(\tau,u_i\cdot x)$ and using $\abs{u_i}=1$, a direct computation gives
+\[
+\frac{\partial_\tau F-\Delta_xF}{F}=\sum_ic_iv_i^2-\Bigl\lvert\sum_ic_iv_iu_i\Bigr\rvert^2\ge0 .
+\]
+The inequality holds because the linear map $W:\R^N\to\R^d$ with columns $\sqrt{c_i}\,u_i$ satisfies $WW^T=I_d$, so $\norm W=1$, and $\sum_ic_iv_iu_i=W(\sqrt{c_i}\,v_i)_i$.
+
+We justify $\frac{\dd}{\dd\tau}\int F\dd x=\int\partial_\tau F\dd x\ge\int\Delta_xF\dd x=0$ on a compact interval $\tau\in[\tau_0,\tau_1]\subset(0,\infty)$. There $f_i(\tau,y)\le2m\norm{h_i}_\infty\sup_{\abs z\le m}g_\tau(y-z)\le Ce^{-y^2/(16\tau_1)}$ (for $\abs y\ge2m$ use $\abs{y-z}\ge\abs y/2$), and $\partial_y\log f_i$ is the average of $-(y-z)/(2\tau)$ over $z\in[-m,m]$ against a probability measure, so $\abs{\partial_y\log f_i(\tau,y)}\le(\abs y+m)/(2\tau_0)$; similar bounds hold for the second derivative. Using $\sum_ic_i(u_i\cdot x)^2=\abs x^2$, the functions $F$, $\partial_\tau F$ and the first two $x$-derivatives of $F$ are bounded by $C(1+\abs x^4)e^{-\abs x^2/(16\tau_1)}$ uniformly in $\tau\in[\tau_0,\tau_1]$. This justifies differentiating under the integral sign and shows $\int\Delta_xF\dd x=0$. Thus $\int F(\tau,x)\dd x$ is nondecreasing in $\tau$.
+
+As $\tau\to\infty$, for fixed $z\in\R^d$ we have $\sqrt\tau\,f_i(\tau,\sqrt\tau\,u_i\cdot z)\to(4\pi)^{-1/2}\mu_ie^{-(u_i\cdot z)^2/4}$. Substituting $x=\sqrt\tau z$ and using $\sum c_i=d$,
+\[
+\int F(\tau,x)\dd x=\int\prod_i\bigl(\sqrt\tau f_i(\tau,\sqrt\tau u_i\cdot z)\bigr)^{c_i}\dd z\longrightarrow(4\pi)^{-d/2}\prod_i\mu_i^{c_i}\int e^{-\abs z^2/4}\dd z=\prod_i\mu_i^{c_i},
+\]
+by dominated convergence, since for $\tau\ge1$ the integrand is at most $Ce^{-\abs z^2/16}$.
+
+As $\tau\downarrow0$, $f_i(\tau,y)\to h_i(y)$ at every Lebesgue point $y$ of $h_i$. The preimage of a Lebesgue null set of $\R$ under $x\mapsto u_i\cdot x$ is null in $\R^d$, so for almost every $x$ each $u_i\cdot x$ is a Lebesgue point of $h_i$, and $F(\tau,x)\to\prod_ih_i(u_i\cdot x)^{c_i}$. Fatou's lemma and the monotonicity give the inequality in this case.
+
+If some $h_i$ vanishes almost everywhere, the left side is zero for the same reason. For general $h_i$ apply the case just proved to $\min(h_i,m)\1_{[-m,m]}$ and let $m\to\infty$, using monotone convergence on both sides.
+\end{proof}
+
+\begin{lemma}\label{lem:projection}
+Let $X\in\R^n$ have independent coordinates with densities bounded by $1$.
+\begin{enumerate}
+\item[(a)] If $U\in\R^{n\times d}$ satisfies $U^TU=I_d$, then $U^TX$ has a density bounded by $e^{d/2}$.
+\item[(b)] If $B\in\R^{d\times n}$ has rank $d$, then $BX$ has a density bounded by $e^{d/2}\det(BB^T)^{-1/2}$.
+\end{enumerate}
+In particular $a\cdot X$ has density at most $\sqrt e/\abs a$ for every $a\ne0$.
+\end{lemma}
+
+\begin{proof}
+(a) Choose versions of the densities $f_i$ with $0\le f_i\le1$ everywhere. If $d=n$, the density of $U^TX$ is $\prod_if_i((Uy)_i)\le1$. If $d<n$, complete $U$ to an orthogonal matrix $(U,W)$ and let $w_i^T$ be the $i$-th row of $W$. Since $(y,z)\mapsto Uy+Wz$ is orthogonal, $U^TX$ has density
+\[
+p(y)=\int_{\R^{n-d}}\prod_{i=1}^nf_i\bigl((Uy)_i+w_i\cdot z\bigr)\dd z .
+\]
+Let $\beta_i=\abs{w_i}^2$. Then $\sum_iw_iw_i^T=W^TW=I_{n-d}$ and $\sum_i\beta_i=n-d$. Factors with $\beta_i=0$ are at most one and are dropped. For the others put $v_i=w_i/\sqrt{\beta_i}$, so that $\sum\beta_iv_iv_i^T=I_{n-d}$, and $h_i(\tau)=f_i((Uy)_i+\sqrt{\beta_i}\tau)^{1/\beta_i}$. Theorem~\ref{thm:bl} with exponents $\beta_i$ gives $p(y)\le\prod_i(\int h_i)^{\beta_i}$. Since $0<\beta_i\le1$ and $f_i\le1$ we have $f_i^{1/\beta_i}\le f_i$, so $\int h_i\le\beta_i^{-1/2}$ and
+\[
+\log p(y)\le\frac12\sum_{i=1}^n\beta_i\log\frac1{\beta_i}\le\frac12\sum_{i=1}^n(1-\beta_i)=\frac d2,
+\]
+where the terms with $\beta_i=0$ are read as $0$ in the first sum, and we used $\beta\log(1/\beta)\le1-\beta$ for $0<\beta\le1$, which follows from $\log x\le x-1$ with $x=1/\beta$ (for $\beta_i=0$ the second inequality is $0\le1$).
+
+(b) Write $B=P\Sigma U^T$ with $P\in\R^{d\times d}$ orthogonal, $\Sigma$ diagonal with positive entries and $U^TU=I_d$. Then $BX=P\Sigma(U^TX)$, and a linear change of variables with Jacobian $\det\Sigma=\det(BB^T)^{1/2}$ transfers the bound of (a). The last assertion is (b) with $d=1$.
+\end{proof}
+
+\begin{lemma}\label{lem:fpower}
+Let $f$ be a probability density with $f\le1$. Then for every real $p\ge2$,
+\[
+\int_\R\abs{\widehat f(t)}^p\dd t\le\frac{2\pi\sqrt{2e}}{\sqrt p}.
+\]
+If $Y,Y'$ are independent with density $f$, then $Y-Y'$ has a density bounded by $1$.
+\end{lemma}
+
+\begin{proof}
+The density of $Y-Y'$ is $\int f(x+y)f(y)\dd y\le\norm f_\infty\norm f_1\le1$. Let $m=\lfloor p/2\rfloor$; then $m\ge1$ and $m\ge p/4$. Since $\abs{\widehat f}\le1$, $\int\abs{\widehat f}^p\le\int\abs{\widehat f}^{2m}$. The function $\abs{\widehat f}^{2m}$ is the characteristic function of $Z=\sum_{j=1}^m(Y_j-Y_j')$ for independent copies, and it is integrable because $\int\abs{\widehat f}^{2m}\le\int\abs{\widehat f}^2=2\pi\norm f_2^2\le2\pi$. By Lemma~\ref{lem:fourier}(b), $Z$ has a continuous density whose value at $0$ is $(2\pi)^{-1}\int\abs{\widehat f}^{2m}$. On the other hand $Z=\mathbf 1\cdot(Y_1,\dots,Y_m,-Y_1',\dots,-Y_m')$ is a linear form with coefficient vector of length $\sqrt{2m}$ in $2m$ independent variables with densities bounded by one, so by Lemma~\ref{lem:projection} its density is at most $\sqrt e/\sqrt{2m}$ almost everywhere, hence everywhere for the continuous version. Therefore $\int\abs{\widehat f}^{p}\le2\pi\sqrt e/\sqrt{2m}\le2\pi\sqrt{2e}/\sqrt p$.
+\end{proof}
+
+\section{Fourier decay from crossing volumes}\label{sec:decay}
+
+Throughout this section $X=(X_1,\dots,X_n)$ has independent coordinates with densities $f_i\le1$, $A$ is real symmetric, $b\in\R^n$, $c\in\R$, and $Q=X^TAX+b^TX+c$. We fix a partition $[n]=I\sqcup J$ and put $M=A_{I,J}\in\R^{I\times J}$, with rows $m_i\in\R^J$ for $i\in I$. As in Lemma~\ref{lem:gram}, $\Theta(T)=\det(M_TM_T^T)$ for $T\subset I$, and for $\ell\ge1$ we define the crossing volume
+\[
+E_\ell(M)=\sum_{T\subset I,\ \abs T=\ell}\Theta(T)=e_\ell(MM^T)=\sum_{\substack{S\subset I,\ T\subset J\\\abs S=\abs T=\ell}}\det(M_{S,T})^2 .
+\]
+For $H\subset I$ with $\abs H\le\ell$ we also put $\Theta_\ell(H)=\sum\{\Theta(T):H\subset T\subset I,\ \abs T=\ell\}$, so that $\Theta_\ell(\varnothing)=E_\ell(M)$. Finally $\omega(m)=m^m/m!$ for integers $m\ge1$ and $\omega(0)=1$.
+
+\begin{theorem}\label{thm:decay}
+If $\ell\ge1$ and $E_\ell(M)>0$, then for every real $t\ne0$
+\begin{equation}\label{eq:decay}
+\abs{\phi_Q(t)}^2\le\bigl(\sqrt2\,\pi e\bigr)^{\ell}\,\omega(\ell)^{1/2}\,E_\ell(M)^{-1/2}\,\abs t^{-\ell}.
+\end{equation}
+\end{theorem}
+
+The bound is uniform in the blocks $A_{I,I}$ and $A_{J,J}$, in $b$ and $c$, and in the laws of the $X_i$. It rests on two lemmas.
+
+\begin{lemma}\label{lem:entropy}
+Let $m\ge1$, let $w$ be a probability distribution on the $m$-element subsets of a finite set, let $\alpha_i=\sum_{T\ni i}w_T$, and let $\mathrm H(w)=-\sum_Tw_T\log w_T$. Then, with $0\log0=0$,
+\[
+\mathrm H(w)+\sum_i\alpha_i\log\alpha_i\le\log\omega(m).
+\]
+\end{lemma}
+
+\begin{proof}
+If $w_T>0$ then $\alpha_i\ge w_T>0$ for every $i\in T$, and $\sum_i\alpha_i\log\alpha_i=\sum_Tw_T\sum_{i\in T}\log\alpha_i$, the sums running over sets with $w_T>0$. Hence the left side equals $\sum_{w_T>0}w_T\log\bigl(\prod_{i\in T}\alpha_i/w_T\bigr)$, which by concavity of the logarithm is at most $\log\sum_T\prod_{i\in T}\alpha_i$. In the expansion of $(\sum_i\alpha_i)^m$ each product $\prod_{i\in T}\alpha_i$ with $\abs T=m$ occurs $m!$ times and all other terms are nonnegative, so $\sum_T\prod_{i\in T}\alpha_i\le(\sum_i\alpha_i)^m/m!=m^m/m!$, because $\sum_i\alpha_i=m$.
+\end{proof}
+
+\begin{lemma}\label{lem:hub}
+Let $\ell\ge1$ and let $H\subset I$ with $k=\abs H\le\ell$ and $\Theta_\ell(H)>0$. If $k<\ell$, assume in addition that
+\begin{equation}\label{eq:diffuse}
+\Theta_\ell(H\cup\{j\})\le\tfrac12\Theta_\ell(H)\qquad\text{for every }j\in I\setminus H.
+\end{equation}
+Then for every real $t\ne0$
+\begin{equation}\label{eq:hub}
+\abs{\phi_Q(t)}^2\le\pi^\ell e^{\ell/2}(2e)^{(\ell-k)/2}\omega(\ell-k)^{1/2}\,\Theta_\ell(H)^{-1/2}\abs t^{-\ell}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Write $I'=I\setminus H$ and $\ell'=\ell-k$. Since $\Theta_\ell(H)>0$, some $T\supset H$ has $\Theta(T)>0$; hence the rows $m_h$, $h\in H$, are linearly independent and $\Theta(H)>0$. Let $\Pi$ be the orthogonal projection of $\R^J$ onto their span ($\Pi=0$ if $k=0$), and for $i\in I'$ write $m_i=c_i+M_H^T\lambda_i$ with $c_i=(I-\Pi)m_i$ and $\lambda_i\in\R^H$. For $T'\subset I'$ let $C_{T'}$ have rows $c_i$, $i\in T'$, and $\theta(T')=\det(C_{T'}C_{T'}^T)$. By Lemma~\ref{lem:gram}(b), $\Theta(H\cup T')=\Theta(H)\theta(T')$, so
+\[
+Z_H:=\sum_{T'\subset I',\ \abs{T'}=\ell'}\theta(T')=\frac{\Theta_\ell(H)}{\Theta(H)}>0 .
+\]
+When $\ell'\ge1$ we let $w_{T'}=\theta(T')/Z_H$, a probability distribution on the $\ell'$-subsets of $I'$, whose marginals satisfy
+\[
+\alpha_i=\sum_{T'\ni i}w_{T'}=\frac{\Theta_\ell(H\cup\{i\})}{\Theta_\ell(H)}\le\frac12\qquad(i\in I')
+\]
+by \eqref{eq:diffuse}. Let $X_J'$ be an independent copy of $X_J$, independent of $X$, and $D=X_J-X_J'$; by Lemma~\ref{lem:fpower}, $D$ has independent coordinates with densities bounded by one. Split
+\[
+Q=F(X_H)+2X_H^T\bigl(A_{H,I'}X_{I'}+M_HX_J\bigr)+R(X_{I'},X_J),
+\]
+where $F(x_H)=x_H^TA_{H,H}x_H+b_H^Tx_H$ and
+\[
+R(x',y)=x'^TA_{I',I'}x'+2x'^TA_{I',J}\,y+G(y)+b_{I'}^Tx'+c,\qquad G(y)=y^TA_{J,J}y+b_J^Ty .
+\]
+The rows of $A_{I',J}$ are the $m_i$, $i\in I'$, and $R(x',y)-R(x',y')=2x'^TA_{I',J}(y-y')+G(y)-G(y')$.
+
+\emph{Step 1: the case $k=0$.} Here $H=\varnothing$, $I'=I$ and $Q=F_0(X_I)+2X_I^TMX_J+G(X_J)$ with $F_0(x)=x^TA_{I,I}x+b_I^Tx+c$. Integrating first over $X_J$ and applying the Cauchy--Schwarz inequality in $X_I$,
+\[
+\abs{\phi_Q(t)}^2\le\E_{X_I}\Bigl\lvert\E_{X_J}e^{it(2X_I^TMX_J+G(X_J))}\Bigr\rvert^2
+=\E\Bigl[e^{it(G(X_J)-G(X_J'))}\prod_{i\in I}\psi_i\bigl(2t\langle m_i,D\rangle\bigr)\Bigr],
+\]
+where we expanded the square with the copy $X_J'$ and then integrated over the independent coordinates $X_i$, $i\in I$. All integrands are bounded, so Fubini's theorem applies. Hence
+\begin{equation}\label{eq:step1}
+\abs{\phi_Q(t)}^2\le\E\prod_{i\in I}\bigl\lvert\psi_i\bigl(2t\langle m_i,D\rangle\bigr)\bigr\rvert .
+\end{equation}
+
+\emph{Step 2: the case $k\ge1$.} Let $p_H(x_H)=\prod_{h\in H}f_h(x_h)\le1$ and $a(x_H)=e^{itF(x_H)}p_H(x_H)$; then $\norm a_2^2\le\norm{p_H}_1=1$. By independence,
+\[
+\E\bigl[e^{itQ}\bigm|X_{I'},X_J\bigr]=e^{itR(X_{I'},X_J)}\,\widehat a\bigl(2t(A_{H,I'}X_{I'}+Y)\bigr),\qquad Y=M_HX_J\in\R^H.
+\]
+By Lemma~\ref{lem:projection}(b), $Y$ has a density $p_Y\le e^{k/2}\Theta(H)^{-1/2}$. For $x\in\R^{I'}$ let $\nu_x$ be the complex measure $\nu_x(B)=\E[e^{itR(x,X_J)}\1_B(Y)]$. Since $\abs{\nu_x(B)}\le\PP(Y\in B)$, it has a density, still written $\nu_x$, with $\abs{\nu_x}\le p_Y$; in particular $\norm{\nu_x}_2^2\le\norm{p_Y}_\infty$. Conditionally on $X_{I'}=x$, the Cauchy--Schwarz inequality and Lemma~\ref{lem:fourier}(a) in $\R^H$ give
+\[
+\Bigl\lvert\int\widehat a\bigl(2t(A_{H,I'}x+y)\bigr)\nu_x(y)\dd y\Bigr\rvert^2\le\frac{(2\pi)^k\norm a_2^2}{(2\abs t)^k}\norm{\nu_x}_2^2\le\Bigl(\frac\pi{\abs t}\Bigr)^k\norm{\nu_x}_2^2 ,
+\]
+and averaging over $X_{I'}$,
+\begin{equation}\label{eq:plancherel-step}
+\abs{\phi_Q(t)}^2\le\Bigl(\frac\pi{\abs t}\Bigr)^k\E\norm{\nu_{X_{I'}}}_2^2 .
+\end{equation}
+If $\ell'=0$ then $\Theta_\ell(H)=\Theta(H)$, and \eqref{eq:plancherel-step} with $\norm{\nu_x}_2^2\le e^{\ell/2}\Theta(H)^{-1/2}$ is \eqref{eq:hub}. Assume $\ell'\ge1$. Fix a continuous probability density $\rho$ on $\R^H$ with compact support, let $\rho_\varepsilon(y)=\varepsilon^{-k}\rho(y/\varepsilon)$ and $\kappa_\varepsilon(z)=\int\rho_\varepsilon(y)\rho_\varepsilon(y+z)\dd y$, a probability density. Since $(\nu_x*\rho_\varepsilon)(y)=\E[e^{itR(x,X_J)}\rho_\varepsilon(y-Y)]$, Fubini's theorem gives
+\[
+\norm{\nu_x*\rho_\varepsilon}_2^2=\E\Bigl[e^{it(R(x,X_J)-R(x,X_J'))}\kappa_\varepsilon(M_HD)\Bigr],
+\]
+which is a measurable function of $x$. As $\varepsilon\to0$, $\norm{\nu_x*\rho_\varepsilon}_2\to\norm{\nu_x}_2$ for every $x$ because $\nu_x\in L^2$, and $\norm{\nu_x*\rho_\varepsilon}_2^2\le\norm{p_Y}_\infty$; so by dominated convergence $\E\norm{\nu_{X_{I'}}}_2^2=\lim_{\varepsilon\to0}\E\norm{\nu_{X_{I'}}*\rho_\varepsilon}_2^2$. Replacing $x$ by $X_{I'}$ and integrating over $X_{I'}$ first,
+\[
+\E\norm{\nu_{X_{I'}}*\rho_\varepsilon}_2^2=\E\Bigl[e^{it(G(X_J)-G(X_J'))}\kappa_\varepsilon(M_HD)\prod_{i\in I'}\psi_i\bigl(2t\langle m_i,D\rangle\bigr)\Bigr].
+\]
+Therefore
+\begin{equation}\label{eq:step2}
+\abs{\phi_Q(t)}^2\le\Bigl(\frac\pi{\abs t}\Bigr)^k\sup_{\varepsilon>0}\E\Bigl[\kappa_\varepsilon(M_HD)\prod_{i\in I'}\bigl\lvert\psi_i\bigl(2t\langle m_i,D\rangle\bigr)\bigr\rvert\Bigr].
+\end{equation}
+Inequality \eqref{eq:step1} is \eqref{eq:step2} with $k=0$ and $\kappa_\varepsilon\equiv1$, and we treat both cases together from now on.
+
+\emph{Step 3: H\"older.} Let $I'_+=\{i\in I':\alpha_i>0\}$. If $w_{T'}>0$ then $\alpha_i\ge w_{T'}>0$ for all $i\in T'$. Since $\abs{\psi_i}\le1$, and since $\sum_{T'\ni i}w_{T'}/\alpha_i=1$ for $i\in I'_+$,
+\[
+\prod_{i\in I'}\abs{\psi_i}\le\prod_{i\in I'_+}\abs{\psi_i}=\prod_{T'}\Bigl(\prod_{i\in T'}\abs{\psi_i}^{1/\alpha_i}\Bigr)^{w_{T'}},
+\]
+the products over $T'$ running over sets with $w_{T'}>0$. As $\kappa_\varepsilon=\prod_{T'}\kappa_\varepsilon^{w_{T'}}$, H\"older's inequality with exponents $1/w_{T'}$ gives
+\[
+\E\Bigl[\kappa_\varepsilon(M_HD)\prod_{i\in I'}\abs{\psi_i(2t\langle m_i,D\rangle)}\Bigr]\le\prod_{T'}\Bigl(\E\Bigl[\kappa_\varepsilon(M_HD)\prod_{i\in T'}\abs{\psi_i(2t\langle m_i,D\rangle)}^{1/\alpha_i}\Bigr]\Bigr)^{w_{T'}}.
+\]
+
+\emph{Step 4: one set $T'$.} Fix $T'$ with $w_{T'}>0$ and let $B$ be the matrix with rows $m_h$ ($h\in H$) and $c_i$ ($i\in T'$). Its two groups of rows are orthogonal, so $\det(BB^T)=\Theta(H)\theta(T')>0$, and by Lemma~\ref{lem:projection}(b) the vector $(M_HD,(\langle c_i,D\rangle)_{i\in T'})\in\R^H\times\R^{T'}$ has a density bounded by $e^{\ell/2}(\Theta(H)\theta(T'))^{-1/2}$. Since $\langle m_i,D\rangle=\langle c_i,D\rangle+\lambda_i\cdot M_HD$,
+\begin{multline*}
+\E\Bigl[\kappa_\varepsilon(M_HD)\prod_{i\in T'}\abs{\psi_i(2t\langle m_i,D\rangle)}^{1/\alpha_i}\Bigr]\\
+\le\frac{e^{\ell/2}}{(\Theta(H)\theta(T'))^{1/2}}\int_{\R^H}\kappa_\varepsilon(y)\prod_{i\in T'}\int_\R\abs{\psi_i(2t(z+\lambda_i\cdot y))}^{1/\alpha_i}\dd z\dd y .
+\end{multline*}
+Each inner integral equals $(2\abs t)^{-1}\int\abs{\psi_i}^{1/\alpha_i}$, which by Lemma~\ref{lem:fpower} with $p=1/\alpha_i\ge2$ is at most $\pi\sqrt{2e\alpha_i}/\abs t$. Since $\int\kappa_\varepsilon=1$, the right side is at most
+\[
+e^{\ell/2}\bigl(\Theta(H)\theta(T')\bigr)^{-1/2}\Bigl(\frac{\pi\sqrt{2e}}{\abs t}\Bigr)^{\ell'}\prod_{i\in T'}\alpha_i^{1/2}.
+\]
+(When $k=0$ the same computation applies without the variable $y$, with $\Theta(\varnothing)=1$.)
+
+\emph{Step 5: entropy.} Taking the product over $T'$ with weights $w_{T'}$ and writing $\theta(T')=Z_Hw_{T'}$,
+\[
+\prod_{T'}\bigl(\Theta(H)\theta(T')\bigr)^{-w_{T'}/2}=\bigl(\Theta(H)Z_H\bigr)^{-1/2}e^{\mathrm H(w)/2}=\Theta_\ell(H)^{-1/2}e^{\mathrm H(w)/2}
+\]
+and
+\[
+\prod_{T'}\prod_{i\in T'}\alpha_i^{w_{T'}/2}=e^{\frac12\sum_i\alpha_i\log\alpha_i}.
+\]
+By Lemma~\ref{lem:entropy}, $e^{(\mathrm H(w)+\sum_i\alpha_i\log\alpha_i)/2}\le \omega(\ell')^{1/2}$. Combining Steps 3 and 4 with \eqref{eq:step2},
+\[
+\abs{\phi_Q(t)}^2\le\Bigl(\frac\pi{\abs t}\Bigr)^ke^{\ell/2}\Bigl(\frac{\pi\sqrt{2e}}{\abs t}\Bigr)^{\ell'}\omega(\ell')^{1/2}\,\Theta_\ell(H)^{-1/2},
+\]
+which is \eqref{eq:hub}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:decay}]
+Put $H_0=\varnothing$. Given $H_r$ with $\abs{H_r}=r<\ell$, if some $j\in I\setminus H_r$ has $\Theta_\ell(H_r\cup\{j\})>\frac12\Theta_\ell(H_r)$, let $H_{r+1}=H_r\cup\{j\}$; otherwise stop. The procedure stops at some $H=H_k$ with $k\le\ell$, and by construction $\Theta_\ell(H)\ge2^{-k}E_\ell(M)>0$ and \eqref{eq:diffuse} holds if $k<\ell$. Lemma~\ref{lem:hub} gives
+\[
+\abs{\phi_Q(t)}^2\le\pi^\ell e^{\ell/2}\,a_k\,E_\ell(M)^{-1/2}\abs t^{-\ell},\qquad a_k=(2e)^{(\ell-k)/2}\omega(\ell-k)^{1/2}2^{k/2}.
+\]
+For $1\le m\le\ell$ we have $\omega(m)/\omega(m-1)=(m/(m-1))^{m-1}\ge1$ (read as $1$ for $m=1$), hence $a_{k+1}/a_k=e^{-1/2}(\omega(\ell-k-1)/\omega(\ell-k))^{1/2}\le e^{-1/2}$. Thus $a_k\le a_0=(2e)^{\ell/2}\omega(\ell)^{1/2}$, and $\pi^\ell e^{\ell/2}(2e)^{\ell/2}=(\sqrt2\,\pi e)^\ell$.
+\end{proof}
+
+\begin{corollary}\label{cor:decay}
+Let $E_\ell=E_\ell(M)$.
+\begin{enumerate}
+\item[(a)] If $E_3>0$, then $Q$ has a continuous density with $\norm{p_Q}_\infty\le C_3E_3^{-1/6}$, where $C_3=3\sqrt2\,e\,(9/2)^{1/6}<15$.
+\item[(b)] If $E_2>0$, then $\sup_{a\in\R}\E\abs{Q-a}^{-1/2}\le C_2E_2^{-1/8}$, where $C_2=8e^{1/2}2^{-1/8}<12.2$.
+\item[(c)] If $E_1=\norm M_F^2>0$, then $\abs{\phi_Q(t)}\le\bigl(\sqrt2\pi e/(\norm M_F\abs t)\bigr)^{1/2}$ for all $t\ne0$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Write $\beta_\ell=((\sqrt2\pi e)^\ell \omega(\ell)^{1/2})^{1/2}$, so that $\abs{\phi_Q(t)}\le\min\{1,\beta_\ell E_\ell^{-1/4}\abs t^{-\ell/2}\}$. (c) is the case $\ell=1$. For (a), Lemma~\ref{lem:envelope} with $p=3/2$ and $a=\beta_3^{2/3}E_3^{-1/6}$ gives $\norm{p_Q}_\infty\le3a/\pi$, and $3\beta_3^{2/3}/\pi=3\sqrt2e(9/2)^{1/6}$. For (b), Lemma~\ref{lem:halfmoment} with $u=\beta_2E_2^{-1/4}$ gives $8\sqrt{u/(2\pi)}$, and $8(\beta_2/(2\pi))^{1/2}=8e^{1/2}2^{-1/8}$ because $\beta_2=2^{3/4}\pi e$.
+\end{proof}
+
+\section{One and two coordinates}\label{sec:pivots}
+
+\begin{lemma}\label{lem:square}
+Let $Y$ have density $f\le1$, let $a\ne0$, and let $T=a(Y-m)^2+v$. Then $T$ has density
+\[
+p_T(z)=\frac{f(m+r)+f(m-r)}{2\sqrt{\abs a\abs{z-v}}}\,\1\Bigl\{\frac{z-v}{a}>0\Bigr\}\le\frac1{\sqrt{\abs a\abs{z-v}}},\qquad r=\sqrt{\abs{z-v}/\abs a}.
+\]
+Moreover, for every interval $U$ of length $2\rho$ and all real $\beta,\gamma$, the set $\{y:ay^2+\beta y+\gamma\in U\}$ has Lebesgue measure at most $2\sqrt{2\rho/\abs a}$.
+\end{lemma}
+
+\begin{proof}
+The formula follows from the change of variables $y=m\pm r$ on the two half-lines on which $y\mapsto a(y-m)^2$ is monotone. For the second statement complete the square: the set in question is $\{y:(y-y_0)^2\in U'\}$ for an interval $U'$ of length $\delta=2\rho/\abs a$, and on each half-line $\{\pm(y-y_0)\ge0\}$ it is an interval of length at most $\sqrt{u+\delta}-\sqrt u\le\sqrt\delta$ for some $u\ge0$.
+\end{proof}
+
+\begin{lemma}\label{lem:definite}
+Let $W\in\R^2$ have a density bounded by $L$, and let $q$ be a quadratic polynomial on $\R^2$ whose quadratic part has a definite symmetric matrix $B$. Then $q(W)$ has a density bounded by $\pi L/\sqrt{\det B}$.
+\end{lemma}
+
+\begin{proof}
+Replacing $q$ by $-q$ we may assume $B$ is positive definite, and completing the square $q(w)=(w-w_0)^TB(w-w_0)+v$. Let $\mu_1,\mu_2>0$ be the eigenvalues of $B$ with orthonormal eigenvectors $e_1,e_2$. The map $(\delta,\theta)\mapsto w_0+\sqrt{\delta/\mu_1}\cos\theta\,e_1+\sqrt{\delta/\mu_2}\sin\theta\,e_2$ is a diffeomorphism of $(0,\infty)\times[0,2\pi)$ onto $\R^2\setminus\{w_0\}$ with $q=v+\delta$ and Jacobian $1/(2\sqrt{\det B})$. Hence $q(W)$ has density $(2\sqrt{\det B})^{-1}\int_0^{2\pi}p_W(w(\delta,\theta))\dd\theta\le\pi L/\sqrt{\det B}$ at $v+\delta$, and density zero below $v$. This is a change of variables in a deterministic integral; no independence after rotation is used.
+\end{proof}
+
+\begin{lemma}\label{lem:hyperbola}
+Let $W_1,W_2$ be independent with densities $f_1,f_2\le1$, and let $q(w)=(w-w_0)^TB(w-w_0)+v$ with $B$ real symmetric and indefinite, $D=\abs{\det B}>0$. Then $q(W)$ has a density satisfying, for almost every $z$,
+\begin{equation}\label{eq:hyperbola}
+p_{q(W)}(z)\le D^{-1/2}\Bigl(6+\logp\frac{16\sqrt D}{\abs{z-v}}\Bigr).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Translating each coordinate separately preserves independence and the bounds on the densities, so we may assume $w_0=0$. Let $\mu_+>0>\mu_-$ be the eigenvalues of $B$, with orthonormal eigenvectors $e_+,e_-$, and $\Lambda=\mu_+^{-1}+\abs{\mu_-}^{-1}$. For $\delta>0$ the level set $\{q=v+\delta\}$ is a hyperbola whose two branches are
+\[
+w_\epsilon(\delta,\tau)=\epsilon\sqrt{\delta/\mu_+}\cosh\tau\,e_++\sqrt{\delta/\abs{\mu_-}}\sinh\tau\,e_-,\qquad\epsilon\in\{1,-1\},\ \tau\in\R .
+\]
+The map $(\epsilon,\delta,\tau)\mapsto w_\epsilon(\delta,\tau)$ is a bijection onto $\{w:q(w)>v\}$, and a direct computation gives Jacobian $1/(2\sqrt D)$ in $(\delta,\tau)$. Hence, for almost every $\delta>0$,
+\[
+p_{q(W)}(v+\delta)=\frac1{2\sqrt D}\sum_{\epsilon=\pm1}\int_\R f_1\bigl(w_{\epsilon,1}(\delta,\tau)\bigr)f_2\bigl(w_{\epsilon,2}(\delta,\tau)\bigr)\dd\tau,
+\]
+where $w_{\epsilon,1},w_{\epsilon,2}$ are the coordinates in the original basis. Fix $\epsilon$ and write the branch as $\tau\mapsto ue^\tau+u'e^{-\tau}$ with $u=\frac12(\epsilon\sqrt{\delta/\mu_+}e_++\sqrt{\delta/\abs{\mu_-}}e_-)$ and $u'=\frac12(\epsilon\sqrt{\delta/\mu_+}e_+-\sqrt{\delta/\abs{\mu_-}}e_-)$. By orthogonality $\abs u=\abs{u'}=\rho_0:=\frac12\sqrt{\delta\Lambda}$. Choose a coordinate $i$ with $\abs{u_i}\ge\rho_0/\sqrt2$.
+
+For $\tau\ge T_1=\frac34\log2$ we have $\abs{u'_i}e^{-\tau}\le\sqrt2\abs{u_i}e^{-\tau}\le\frac12\abs{u_i}e^\tau$, so the coordinate $y(\tau)=u_ie^\tau+u'_ie^{-\tau}$ keeps the sign of $u_i$, satisfies $\frac12\abs{u_i}e^\tau\le\abs{y(\tau)}\le\frac32\abs{u_i}e^\tau$, and $\abs{y'(\tau)}\ge\frac12\abs{u_i}e^\tau\ge\abs{y(\tau)}/3$. Let $T=\max\{T_1,\log(2/\abs{u_i})\}$ and $m=\frac12\abs{u_i}e^T\ge1$. On $[T,\infty)$ we bound the other factor by one, so $f_1f_2\le f_i(y(\tau))$, and the change of variables $y=y(\tau)$ gives
+\[
+\int_T^\infty f_1f_2\dd\tau\le3\int_{\abs y\ge m,\ \mathrm{one\ sign}}\frac{f_i(y)}{\abs y}\dd y\le3\log\Bigl(1+\frac1m\Bigr)\le3\log2 .
+\]
+The middle inequality holds because, among functions with values in $[0,1]$ and integral at most one on the half-line $[m,\infty)$ (or $(-\infty,-m]$), the integral against the decreasing weight $1/\abs y$ is largest for the indicator of the unit interval next to $m$. The same argument with $u'$ in place of $u$ and $\tau\to-\tau$ handles $(-\infty,-T']$ for a cutoff $T'$ of the same form. Since $\abs{u_i}\ge\sqrt{\delta\Lambda}/(2\sqrt2)$, both cutoffs satisfy $T,T'\le\frac34\log2+\frac12\logp(32/(\delta\Lambda))$, and on $[-T',T]$ the integrand is at most one. Each branch therefore contributes at most
+\[
+6\log2+\tfrac32\log2+\logp\frac{32}{\delta\Lambda}<6+\logp\frac{32}{\delta\Lambda}.
+\]
+Finally $\Lambda\ge2(\mu_+\abs{\mu_-})^{-1/2}=2D^{-1/2}$ by the arithmetic--geometric mean inequality, so $32/(\delta\Lambda)\le16\sqrt D/\delta$, and summing the two branches gives \eqref{eq:hyperbola} for $z=v+\delta>v$. For $z<v$ apply the same argument to $-q$, whose matrix $-B$ has the same $D$.
+\end{proof}
+
+\begin{lemma}\label{lem:concentration}
+Let $S\ne0$ be real symmetric, $L=\norm S$, and $R=X^TSX+b^TX+c$, where $X$ has independent coordinates with densities bounded by one. Then for all $a\in\R$ and $\rho>0$,
+\begin{equation}\label{eq:concentration}
+\PP(\abs{R-a}<\rho)\le\min\Bigl\{1,19\sqrt{\rho/L}\Bigr\}.
+\end{equation}
+In particular $R$ has no atoms, and if $L\ge1$ then
+\begin{equation}\label{eq:logmoment}
+\sup_{a\in\R}\E\logp\frac1{\abs{R-a}}\le L_0:=2+2\log19<8 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+If $\abs{S_{ii}}\ge L/2$ for some $i$, condition on the other coordinates: $R$ becomes a quadratic polynomial in $X_i$ with leading coefficient $S_{ii}$, and by Lemma~\ref{lem:square} the conditional probability of $\{\abs{R-a}<\rho\}$ is at most $2\sqrt{2\rho/\abs{S_{ii}}}\le4\sqrt{\rho/L}$.
+
+Otherwise let $O$ be the off-diagonal part of $S$. Then $\norm O\ge\norm S-\max_i\abs{S_{ii}}\ge L/2$. For a uniformly random partition $[n]=I\sqcup J$, each ordered pair $i\ne j$ has $i\in I$, $j\in J$ with probability $1/4$, so $\E\norm{S_{I,J}}_F^2=\norm O_F^2/4\ge L^2/16$, and we fix a partition with $\norm{S_{I,J}}_F\ge L/4$. Corollary~\ref{cor:decay}(c) gives $\abs{\phi_R(t)}\le(4\sqrt2\pi e/(L\abs t))^{1/2}$. For $v>0$ we have $\1\{\abs x<\rho\}\le e^{v}e^{-vx^2/\rho^2}$, so by Lemma~\ref{lem:fourier}(c)
+\begin{multline*}
+\PP(\abs{R-a}<\rho)\le\frac{e^v\rho}{2\sqrt{\pi v}}\int_\R e^{-\rho^2t^2/(4v)}\abs{\phi_R(t)}\dd t\\
+\le\frac{e^v\rho}{2\sqrt{\pi v}}\Bigl(\frac{4\sqrt2\pi e}{L}\Bigr)^{1/2}\Gamma(\tfrac14)\Bigl(\frac{4v}{\rho^2}\Bigr)^{1/4},
+\end{multline*}
+using $\int_\R e^{-wt^2}\abs t^{-1/2}\dd t=\Gamma(1/4)w^{-1/4}$. At $v=1/4$ this equals
+\[
+2e^{1/4}(\sqrt2\pi e)^{1/2}\,\Gamma(1/4)\,\pi^{-1/2}\sqrt{\rho/L}<19\sqrt{\rho/L}.
+\]
+This proves \eqref{eq:concentration}; letting $\rho\to0$ excludes atoms. If $L\ge1$, then by the layer-cake formula
+\[
+\E\logp\frac1{\abs{R-a}}=\int_0^\infty\PP\bigl(\abs{R-a}<e^{-u}\bigr)\dd u\le\int_0^\infty\min\{1,19e^{-u/2}\}\dd u=2\log19+2 .\qedhere
+\]
+\end{proof}
+
+\begin{lemma}\label{lem:kernels}
+For $d\ne0$,
+\begin{equation}\label{eq:J}
+\mathcal J(d):=\int_{-1}^1\abs x^{-1/2}\abs{x-d}^{-1/2}\dd x\le\pi+4\log2+2\logp\frac1{\abs d},
+\end{equation}
+and for every $a\in\R$,
+\begin{equation}\label{eq:logkernel}
+\int_{-1}^1\abs x^{-1/2}\logp\frac1{\abs{x-a}}\dd x\le8 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Since $\mathcal J(-d)=\mathcal J(d)$ we may take $d>0$. Let first $d\le1$. The functions $2\log(\sqrt y+\sqrt{y+d})$, $2\arcsin\sqrt{x/d}$ and $2\log(\sqrt x+\sqrt{x-d})$ are antiderivatives of $y^{-1/2}(y+d)^{-1/2}$ on $(0,1)$, of $x^{-1/2}(d-x)^{-1/2}$ on $(0,d)$ and of $x^{-1/2}(x-d)^{-1/2}$ on $(d,1)$. Splitting the integral at $0$ and $d$, and putting $x=-y$ on $[-1,0]$, we get
+\begin{align*}
+\mathcal J(d)&=2\log\frac{1+\sqrt{1+d}}{\sqrt d}+\pi+2\log\frac{1+\sqrt{1-d}}{\sqrt d}\\
+&=\pi+2\log\bigl((1+\sqrt{1+d})(1+\sqrt{1-d})\bigr)+2\log\frac1d .
+\end{align*}
+The product equals $1+\sqrt{1+d}+\sqrt{1-d}+\sqrt{1-d^2}\le4$, because $\sqrt{1+d}+\sqrt{1-d}\le2$ by concavity of the square root. If $d>1$, then $\abs{x-d}=d-x\ge1-x=\abs{x-1}$ for $x\in[-1,1]$, so $\mathcal J(d)\le\mathcal J(1)=\pi+2\log(1+\sqrt2)<\pi+4\log2$. For \eqref{eq:logkernel}, write both nonnegative factors as integrals of the indicators of their superlevel sets, which are intervals centred at $0$ and at $a$ respectively. The length of the intersection of two intervals is at most the length of the shorter one, with equality when they have the same centre, so by Tonelli's theorem the integral is largest at $a=0$, where it equals $2\int_0^1x^{-1/2}\log(1/x)\dd x=8$.
+\end{proof}
+
+\begin{lemma}\label{lem:pairhalf}
+Let $W_1,W_2$ be independent with densities bounded by one, and let $q$ be a quadratic polynomial on $\R^2$ whose quadratic part has a symmetric matrix $B$ with $D=\abs{\det B}>0$. Then
+\[
+\sup_{a\in\R}\E\abs{q(W)-a}^{-1/2}\le16D^{-1/4}.
+\]
+\end{lemma}
+
+\begin{proof}
+If a random variable $Z$ has a density bounded by $M$, then for every $a\in\R$
+\begin{equation}\label{eq:boundedhalf}
+\E\abs{Z-a}^{-1/2}=\int_0^\infty\PP\bigl(\abs{Z-a}<s^{-2}\bigr)\dd s\le\int_0^\infty\min\{1,2Ms^{-2}\}\dd s=2\sqrt{2M}.
+\end{equation}
+If $B$ is definite, Lemma~\ref{lem:definite} gives $M=\pi D^{-1/2}$ and the bound $2\sqrt{2\pi}\,D^{-1/4}<6D^{-1/4}$. Let $B$ be indefinite, write $q(w)=(w-w_0)^TB(w-w_0)+v$, and let $Y=(q(W)-v)/\sqrt D$. By Lemma~\ref{lem:hyperbola}, $Y$ has a density bounded by $h(y)=6+\logp(16/\abs y)$. Fix $b\in\R$ and let $\delta=1/64$. The contribution of the event $\{\abs{Y-b}>\delta\}$ to $\E\abs{Y-b}^{-1/2}$ is at most $\delta^{-1/2}=8$, and the rest is at most
+\[
+\int_{\abs{y-b}\le\delta}h(y)\abs{y-b}^{-1/2}\dd y\le\int_{-\delta}^\delta h(y)\abs y^{-1/2}\dd y=4\sqrt\delta\Bigl(8+\log\frac{16}\delta\Bigr)=4+5\log2 .
+\]
+The inequality is the rearrangement argument from the proof of Lemma~\ref{lem:kernels}: the superlevel sets of $h$ and of $\abs{y-b}^{-1/2}\1\{\abs{y-b}\le\delta\}$ are intervals centred at $0$ and at $b$, or the whole line. Hence $\E\abs{Y-b}^{-1/2}\le12+5\log2<16$ for every $b$, and $\E\abs{q(W)-a}^{-1/2}=D^{-1/4}\,\E\abs{Y-(a-v)/\sqrt D}^{-1/2}$.
+\end{proof}
+
+\section{Disjoint minors}\label{sec:minors}
+
+Throughout this section $A$ is a real symmetric $n\times n$ matrix and
+\begin{equation}\label{eq:parameters}
+\eta=\frac3{40},\qquad\zeta=\frac1{400},\qquad\kappa=\frac4{625}.
+\end{equation}
+
+\begin{definition}\label{def:pivot}
+A pivot of $A$ is either an index $i$ with $\abs{a_{ii}}\ge\eta$ or a pair $i\ne j$ with $\abs{a_{ii}a_{jj}-a_{ij}^2}\ge\zeta$. For $r\ge1$ let
+\[
+V_r(A)=\sum_{\substack{S,T\subset[n],\ \abs S=\abs T=r\\ S\cap T=\varnothing}}\det(A_{S,T})^2,
+\]
+the sum over ordered pairs $(S,T)$, and $V_0(A)=1$.
+\end{definition}
+
+If $A$ has no pivot, then for $i\ne j$ we have $a_{ij}^2=a_{ii}a_{jj}-(a_{ii}a_{jj}-a_{ij}^2)<\eta^2+\zeta=\frac{13}{1600}$, so
+\begin{equation}\label{eq:small}
+\abs{a_{ii}}<\frac3{40},\qquad\abs{a_{ij}}<\sqrt{\frac{13}{1600}}<\frac1{11}\quad(i\ne j).
+\end{equation}
+
+\begin{lemma}\label{lem:sampling}
+Let $r\ge1$ and $V_r(A)>0$. There are disjoint $r$-sets $S,T\subset[n]$ with $B=A_{S,T}$ invertible such that, with $L=[n]\setminus(S\cup T)$ and
+\[
+P=A_{[n],T}\,B^{-1}A_{S,[n]}\in\R^{n\times n},
+\]
+we have
+\begin{equation}\label{eq:sampling}
+\sum_{\substack{i,j\in L\\ i\ne j}}(a_{ij}-P_{ij})^2\le(r+1)^2\frac{V_{r+1}(A)}{V_r(A)}.
+\end{equation}
+The matrix $P$ need not be symmetric; it has rank at most $r$, and $P_{S,[n]}=A_{S,[n]}$, $P_{[n],T}=A_{[n],T}$.
+\end{lemma}
+
+\begin{proof}
+Choose the ordered pair $(S,T)$ at random with probability $\det(A_{S,T})^2/V_r(A)$. For distinct $i,j\in L$, subtracting $A_{i,T}B^{-1}$ times the rows indexed by $S$ from row $i$ in the bordered matrix $A_{S\cup\{i\},T\cup\{j\}}$ gives
+\[
+\det(A_{S\cup\{i\},T\cup\{j\}})^2=\det(B)^2(a_{ij}-P_{ij})^2,
+\]
+the sign changes caused by sorting the indices disappearing on squaring. Hence the expectation of the left side of \eqref{eq:sampling} is $V_r(A)^{-1}\sum\det(A_{S\cup\{i\},T\cup\{j\}})^2$ over all $(S,T,i,j)$ as above. Every ordered pair $(S',T')$ of disjoint $(r+1)$-sets arises from at most $(r+1)^2$ such quadruples, one for each choice of $i\in S'$ and $j\in T'$, so the expectation is at most $(r+1)^2V_{r+1}(A)/V_r(A)$, and some pair $(S,T)$ achieves at most the expectation. The rank bound is clear from the factorization, and $P_{S,[n]}=BB^{-1}A_{S,[n]}$, $P_{[n],T}=A_{[n],T}B^{-1}B$.
+\end{proof}
+
+\begin{lemma}\label{lem:completion}
+For $(S,T)$, $L$ and $P$ as in Lemma~\ref{lem:sampling} there is a decomposition $A=D+R+E$ with $D$ diagonal and $D_{ii}=0$ for $i\in S\cup T$, $E_{ii}=0$ for all $i$, $E$ supported in $L\times L$,
+\[
+\norm E_F^2\le(r+1)^2\frac{V_{r+1}(A)}{V_r(A)},\qquad\rank R\le3r,\qquad R_{L,L}=P_{L,L}.
+\]
+In particular $\rank R_{L,L}\le r$. The matrices $R$ and $E$ need not be symmetric.
+\end{lemma}
+
+\begin{proof}
+Let $E_{ij}=a_{ij}-P_{ij}$ for distinct $i,j\in L$ and $E_{ij}=0$ otherwise. Let $D_{ii}=a_{ii}-P_{ii}$ for $i\in L$ and $D_{ii}=0$ for $i\in S\cup T$, and $R=A-D-E$. On $L\times L$ the diagonal of $R$ is $a_{ii}-(a_{ii}-P_{ii})=P_{ii}$ and the off-diagonal entries are $a_{ij}-(a_{ij}-P_{ij})=P_{ij}$, so $R_{L,L}=P_{L,L}$. In rows $S$ and in columns $T$ both $D$ and $E$ vanish, so there $R=A=P$. Consequently $R-P$ vanishes on the rows $S$, on the columns $T$ and on $L\times L$, and every entry where it may be nonzero lies in a row of $T$ or in a column of $S$. Thus $R-P$ is the sum of a matrix supported on the rows $T$ and one supported on the columns $S$, each of rank at most $r$, and $\rank R\le\rank P+2r\le3r$. The bound on $\norm E_F$ is \eqref{eq:sampling}.
+\end{proof}
+
+\begin{proposition}\label{prop:volume}
+Let $k\in\{1,2,3\}$. If $A$ has no pivot and $s_{4k-3}(A)\ge1$, then $V_k(A)\ge\kappa^k$.
+\end{proposition}
+
+\begin{proof}
+Suppose $V_k(A)<\kappa^k$. If $V_1,\dots,V_k$ are all positive, then $V_k=\prod_{r=0}^{k-1}V_{r+1}/V_r$ and some factor is less than $\kappa$; otherwise let $j\le k$ be the first index with $V_j=0$. In either case there is $0\le r\le k-1$ with $V_r>0$ and $V_{r+1}<\kappa V_r$.
+
+If $r=0$, then $\norm{\off A}_F^2=V_1(A)<\kappa$, where $\off A$ is the off-diagonal part, and by \eqref{eq:small} $\norm A\le\max_i\abs{a_{ii}}+\norm{\off A}_F<\frac3{40}+\frac2{25}<1$, contradicting $s_1(A)\ge1$.
+
+Let $1\le r\le k-1\le2$ and take the decomposition $A=D+R+E$ of Lemma~\ref{lem:completion}. Then $\varepsilon:=\norm E_F<(r+1)\sqrt\kappa\le\frac6{25}$. Put $m=4k-3\ge4r+1$. By Lemma~\ref{lem:weyl}, $s_m(D+R)=s_m(A-E)\ge1-\varepsilon$ and, since $\rank R\le3r$, $s_{m-3r}(D)\ge s_m(D+R)\ge1-\varepsilon$. As $D$ is diagonal and $m-3r\ge r+1$, at least $r+1$ diagonal entries of $D$ have modulus at least $1-\varepsilon$, and they lie in $L$ because $D$ vanishes on $S\cup T$. Let $H\subset L$ be a set of $r+1$ such indices. For $i\in H$, using $E_{ii}=0$ and \eqref{eq:small},
+\[
+\abs{R_{ii}}=\abs{a_{ii}-D_{ii}}\ge1-\varepsilon-\eta>1-\tfrac6{25}-\tfrac3{40}=\tfrac{137}{200},
+\]
+and for distinct $i,j\in H$, $\abs{R_{ij}}=\abs{a_{ij}-E_{ij}}<\frac1{11}+\frac6{25}<\frac13$. Since $\abs H-1=r\le2$, each row of $R_{H,H}$ satisfies $\sum_{j\ne i}\abs{R_{ij}}<\frac23<\frac{137}{200}<\abs{R_{ii}}$, and $R_{H,H}$ is invertible by Lemma~\ref{lem:dd}. So $\rank R_{H,H}=r+1$, contradicting $\rank R_{H,H}\le\rank R_{L,L}\le r$. Only singular values of the possibly nonsymmetric matrices $A-E$ and $D$ are used; symmetry of $A$ enters only through \eqref{eq:small}.
+\end{proof}
+
+\begin{lemma}\label{lem:cut}
+For a uniformly random partition $[n]=I\sqcup J$ and $k\ge1$, $\E\,E_k(A_{I,J})=4^{-k}V_k(A)$. In particular some partition satisfies $E_k(A_{I,J})\ge4^{-k}V_k(A)$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:gram}(a), $E_k(A_{I,J})$ is the sum of $\det(A_{S,T})^2$ over $S\subset I$, $T\subset J$ with $\abs S=\abs T=k$. An ordered pair $(S,T)$ of disjoint $k$-sets contributes exactly when $S\subset I$ and $T\subset J$, which has probability $2^{-2k}$.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+In this section $X$ has independent coordinates with densities bounded by one, and $\eta,\zeta,\kappa$ are as in \eqref{eq:parameters}.
+
+\begin{proposition}\label{prop:nopivot}
+Suppose that $A$ has no pivot, and let $Q=X^TAX+b^TX+c$.
+\begin{enumerate}
+\item[(a)] If $s_9(A)\ge1$, then $Q$ has a continuous density bounded by $25\,C_3<375$.
+\item[(b)] If $s_5(A)\ge1$, then $\sup_a\E\abs{Q-a}^{-1/2}\le5\,C_2<61$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) By Proposition~\ref{prop:volume} with $k=3$, $V_3(A)\ge\kappa^3$, and by Lemma~\ref{lem:cut} some partition has $E_3(A_{I,J})\ge\kappa^3/64$, so $E_3^{-1/6}\le2\kappa^{-1/2}=25$. Apply Corollary~\ref{cor:decay}(a). (b) By Proposition~\ref{prop:volume} with $k=2$ and Lemma~\ref{lem:cut}, some partition has $E_2(A_{I,J})\ge\kappa^2/16$, so $E_2^{-1/8}\le\sqrt2\,\kappa^{-1/4}=5$. Apply Corollary~\ref{cor:decay}(b).
+\end{proof}
+
+\begin{proposition}\label{prop:halfpotential}
+If $s_5(A)\ge1$, then $\sup_{a\in\R}\E\abs{Q-a}^{-1/2}\le82$ for $Q=X^TAX+b^TX+c$ and all $b,c$.
+\end{proposition}
+
+\begin{proof}
+If $A$ has no pivot, Proposition~\ref{prop:nopivot}(b) gives the bound $61$.
+
+\emph{A pair.} Suppose that $\abs{a_{ii}a_{jj}-a_{ij}^2}\ge\zeta$ for some $i\ne j$. Conditionally on the coordinates other than $X_i$ and $X_j$, $Q$ is a quadratic polynomial in $(X_i,X_j)$ whose quadratic part has the matrix $A_{\{i,j\},\{i,j\}}$, so by Lemma~\ref{lem:pairhalf} its conditional negative half moment about any $a$ is at most $16\zeta^{-1/4}=16\sqrt{20}<72$. Averaging over the other coordinates gives the same bound for $Q$.
+
+\emph{A diagonal pivot.} Suppose that $\abs{a_{ii}}\ge\eta$. Completing the square in $X_i$,
+\begin{equation}\label{eq:profile}
+Q=a_{ii}\bigl(X_i-\mu(X_{-i})\bigr)^2+R(X_{-i}),
+\end{equation}
+where $\mu$ is affine and $R$ is a quadratic polynomial in $X_{-i}$ whose matrix is the Schur complement $A_{-i,-i}-A_{-i,i}A_{i,-i}/a_{ii}$. By Lemma~\ref{lem:square}, conditionally on $X_{-i}$ the density of $Q$ is at most $\abs{a_{ii}}^{-1/2}\abs{z-R(X_{-i})}^{-1/2}$. By Lemma~\ref{lem:condition}, for every $a$,
+\[
+\E\bigl[\abs{Q-a}^{-1/2}\1\{\abs{Q-a}\le1\}\bigr]\le\abs{a_{ii}}^{-1/2}\,\E\,\mathcal J\bigl(R(X_{-i})-a\bigr).
+\]
+By Lemma~\ref{lem:schur} the Schur complement has an eigenvalue of modulus at least one, so its norm is at least one. By Lemma~\ref{lem:concentration}, $R$ has no atoms and $\E\logp(1/\abs{R-a})\le L_0$, and \eqref{eq:J} bounds the right side by $\eta^{-1/2}(\pi+4\log2+2L_0)<81$. Since $\abs{Q-a}^{-1/2}\le1$ when $\abs{Q-a}>1$, it follows that $\E\abs{Q-a}^{-1/2}\le82$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+First let $K=s=1$, so that $A$ has at least nine eigenvalues of modulus at least one.
+
+If $A$ has no pivot, Proposition~\ref{prop:nopivot}(a) bounds the density by $375$.
+
+If $\abs{a_{ii}}\ge\eta$ for some $i$, write $Q$ as in \eqref{eq:profile}. By Lemma~\ref{lem:schur}, the matrix of $R$ has at least eight eigenvalues of modulus at least one, and in particular $s_5\ge1$. Lemmas~\ref{lem:square} and \ref{lem:condition} and Proposition~\ref{prop:halfpotential}, applied to $R$ as a quadratic polynomial in the independent coordinates $X_{-i}$, give for almost every $z$
+\[
+p_Q(z)\le\abs{a_{ii}}^{-1/2}\,\E\abs{z-R(X_{-i})}^{-1/2}\le\eta^{-1/2}\cdot82=\sqrt{40/3}\cdot82<300 .
+\]
+
+Suppose finally that all diagonal entries have modulus less than $\eta$ and that some pair $\{i,j\}$ has $\abs{a_{ii}a_{jj}-a_{ij}^2}\ge\zeta$. Conditionally on the other coordinates, $Q$ is a quadratic polynomial in $(X_i,X_j)$ with quadratic part $A_{\{i,j\},\{i,j\}}$. If this matrix is definite, Lemmas~\ref{lem:definite} and \ref{lem:condition} bound the density of $Q$ by $\pi\zeta^{-1/2}=20\pi<63$. If it is indefinite, with $D=a_{ij}^2-a_{ii}a_{jj}\ge\zeta$, the conditional critical value $v$ is a quadratic polynomial in the other coordinates whose matrix is the Schur complement of the pair; by Lemma~\ref{lem:schur} it has at least seven eigenvalues of modulus at least one, so Lemma~\ref{lem:concentration} gives $\E\logp(1/\abs{z-v})\le L_0$ for every $z$. By \eqref{eq:hyperbola}, the inequality $\logp(xy)\le\logp x+\logp y$ and Lemma~\ref{lem:condition}, for almost every $z$
+\[
+p_Q(z)\le D^{-1/2}\bigl(6+\logp(16\sqrt D)+L_0\bigr)\le20\bigl(6+\log16+L_0\bigr)+\frac1e<337,
+\]
+where we used $\logp(16\sqrt D)\le\log16+\frac12\logp D$, $D\ge\zeta$ and $\sup_{D>0}D^{-1/2}\logp D=2/e$. In every case $\norm{p_Q}_\infty<375$.
+
+For general $K$ and $s$, the vector $Y=KX$ has independent coordinates with densities bounded by one, and
+\[
+Q=\frac s{K^2}\,\widetilde Q,\qquad\widetilde Q=Y^T\frac As\,Y+\frac Ks\,b^TY+\frac{K^2}s\,c .
+\]
+Since $s_9(A/s)\ge1$, $\widetilde Q$ has a density less than $375$, and $p_Q(z)=(K^2/s)\,p_{\widetilde Q}(K^2z/s)<375\,K^2/s$. The interval form follows by integrating the density, and conversely a bound $\PP(Q\in J)\le C\abs J$ for all intervals extends to open sets and then, by outer regularity, to all Borel sets.
+\end{proof}
+
+\section{Remarks on the threshold}\label{sec:remarks}
+
+\begin{remark}\label{rem:three}
+Three is the least number of large eigenvalues for which a bound of the form \eqref{eq:main} can hold. With $X_1,X_2$ uniform on $[0,1]$ the forms $X_1^2$ and $X_1^2-X_2^2$ have unbounded densities, and $A=\diag(\lambda,0,\dots)$ or $\diag(\lambda,-\lambda,0,\dots)$ may be scaled to make $\lambda$ as large as we like without improving the density near the singular value. Whether three eigenvalues of modulus at least $s$ always suffice, with a bound $CK^2/s$ for an absolute $C$, is open. For diagonal matrices the answer is yes with $C=\pi$, by the argument in the introduction.
+\end{remark}
+
+\begin{remark}\label{rem:nine}
+The number nine is used only in the case without pivots, through Proposition~\ref{prop:volume} at order three. The case of a diagonal pivot uses six large eigenvalues of $A$ (five survive in the Schur complement, as Proposition~\ref{prop:halfpotential} requires), and the pair cases use three. Proposition~\ref{prop:volume} loses because the interpolating matrix of Lemma~\ref{lem:completion} can have rank $3r$ although its restriction to the complement of the sampled minor has rank at most $r$. Any argument giving $V_3(A)\ge c$ for matrices without pivots and with $s_m(A)\ge1$ would give Theorem~\ref{thm:main} with nine replaced by $\max(m,6)$ and a constant depending on $c$.
+\end{remark}
+
+\begin{remark}
+Order three is the smallest order at which Theorem~\ref{thm:decay} gives an integrable envelope, and the second crossing volume alone does not bound the density. Let $X_1,X_2,Y_1,Y_2$ be independent and uniform on $[-\frac12,\frac12]$, and $Q=(X_1+Y_1)^2-(X_2+Y_2)^2$. For the partition $I=\{X_1,X_2\}$, $J=\{Y_1,Y_2\}$ the cross block is $\diag(1,-1)$, so $E_2=1$. But $U=X_1+Y_1$ and $V=X_2+Y_2$ are independent with the triangular density on $[-1,1]$, and $U^2$ and $V^2$ have densities $(1-\sqrt y)/\sqrt y$ on $(0,1)$, so the density of $Q=U^2-V^2$ at $0$ is $\int_0^1(1-\sqrt y)^2y^{-1}\dd y=\infty$; near $0$ it grows like $\log(1/\abs z)$. By Theorem~\ref{thm:decay} at order two the negative half moment of this $Q$ is nevertheless bounded.
+\end{remark}
+
+\begin{thebibliography}{99}
+
+\bibitem{Ball} K.~Ball, \emph{Volumes of sections of cubes and related problems}, in Geometric Aspects of Functional Analysis (1987--88), Lecture Notes in Math.~1376, Springer, Berlin, 1989, 251--260.
+
+\bibitem{BGKS} J.~Banks, J.~Garza Vargas, A.~Kulkarni and N.~Srivastava, \emph{Overlaps, eigenvalue gaps, and pseudospectrum under real Ginibre and absolutely continuous perturbations}, arXiv:2005.08930.
+
+\bibitem{Barthe} F.~Barthe, \emph{On a reverse form of the Brascamp--Lieb inequality}, Invent. Math. 134 (1998), 335--361.
+
+\bibitem{BCCT} J.~Bennett, A.~Carbery, M.~Christ and T.~Tao, \emph{The Brascamp--Lieb inequalities: finiteness, structure and extremals}, Geom. Funct. Anal. 17 (2008), 1343--1415.
+
+\bibitem{CW} A.~Carbery and J.~Wright, \emph{Distributional and $L^q$ norm inequalities for polynomials over convex bodies in $\R^n$}, Math. Res. Lett. 8 (2001), 233--248.
+
+\bibitem{CLL} E.~A.~Carlen, E.~H.~Lieb and M.~Loss, \emph{A sharp analog of Young's inequality on $S^N$ and related entropy inequalities}, J. Geom. Anal. 14 (2004), 487--520.
+
+\bibitem{CTV} K.~P.~Costello, T.~Tao and V.~Vu, \emph{Random symmetric matrices are almost surely nonsingular}, Duke Math. J. 135 (2006), 395--413.
+
+\bibitem{LPP} G.~Livshyts, G.~Paouris and P.~Pivovarov, \emph{On sharp bounds for marginal densities of product measures}, Israel J. Math. 216 (2016), 877--889.
+
+\bibitem{Rogozin} B.~A.~Rogozin, \emph{An estimate for the maximum of the convolution of bounded densities}, Theory Probab. Appl. 32 (1987), 48--56.
+
+\bibitem{RV} M.~Rudelson and R.~Vershynin, \emph{Small ball probabilities for linear images of high-dimensional distributions}, Int. Math. Res. Not. IMRN 2015, no.~19, 9594--9617.
+
+\end{thebibliography}
+
+\end{document}

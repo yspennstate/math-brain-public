@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "B04-20260922T225115Z-r20",
+  "source_control_commit_at_start": "62e8d4691d792a9557c698e25cc59cad4abbe677",
+  "owner_revision_final_refresh": "2026-09-22.15",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY-REFUTED_BY_PHASE_ALIGNED_DENSITIES",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-HYPERBOLIC-TWOSIDED-HALFRIESZ-UNIFORM-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "name": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+      "scope": "orthogonal r-dimensional projection of an original cap-one product law has density at most exp(r/2)",
+      "source": "yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md"
+    },
+    {
+      "name": "original-coordinate scalar bank density cap",
+      "scope": "||p_(c^T Y)||_infinity <= sqrt(2)/||c||_2",
+      "source": "yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7:proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/B04-20260922T181702Z-dac07509/REPORT.md"
+    }
+  ],
+  "partner_result": {
+    "designated_partner": "account04/B04",
+    "designated_partner_completed_artifact_seen": false,
+    "actual_completed_peer_results_applied": ["account02/B06 QFORM-WEIGHTED-AFFINE-FIBER-BL-v1", "account02/B04 scalar bank density cap"]
+  },
+  "new_results": [
+    {
+      "id": "QFORM-RANKR-BILINEAR-BANK-LINF-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For a one-clean-side cross bank retaining r>=2 singular values sigma_j, ||p_H||_infinity <= Gamma_r (prod sigma_j)^(-1/r), Gamma_r=sqrt(e/2)[r/(r-1)]v_r^(1/r)."
+    },
+    {
+      "id": "QFORM-SQUARE-RANKR-CLEANBANK-LINF-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "After one independent original-coordinate scalar square with arbitrary overlap shift, ||p_Q||_infinity <=2sqrt(2Gamma_r)|a|^-1/2(prod sigma_j)^(-1/(2r)); at r=2 coefficient is 5.749943550416816."
+    }
+  ],
+  "explicit_target_example": {
+    "status": "PROVED_TARGET_INSTANCE",
+    "spectral_certificate": "s_min(A_*) >= (31-sqrt(65))/16 = 1.4336088907313407 > 1",
+    "density_bound": "||p_Q||_infinity <= 2.3474046247213805",
+    "continuity": "NOT_PROVED"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "52dbe47e8a0ed76734162216e4446595bba201d9",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/B04-20260922T225115Z-r20/REPORT.md",
+    "report_blob": "e7ff79c6781c56b4e83a05a1a34b7250554b3bb8",
+    "check_blob": "4ec1498d71c0562f99246baf9970e55a4812a9ad",
+    "handoff_commit": "9e56eeef725d4b43972faf69169049e4a51f0575"
+  },
+  "full_target_status": "OPEN",
+  "unresolved_implication": "QFORM-RANK2-TWOSIDED-CLEANING-OR-JOINT-REARRANGEMENT-v1",
+  "next_step": "Use aggregate rank-two cross currency without paying a local entry; either route one bank's self-quadratic leakage into a completed square/ridge/rank-two/4D-Schur packet to expose the clean-side theorem, or prove a genuinely joint two-sided product-space estimate."
+}

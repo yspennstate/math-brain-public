@@ -1,0 +1,319 @@
+{
+  "worker": 107,
+  "runtime": "Plain JavaScript in functions; BigInt rational arithmetic; no external solver",
+  "verdict": "All exact finite checks passed; universal claims are proved analytically in the report",
+  "structural_checks": [
+    {
+      "n": 2,
+      "diamonds": 1,
+      "barrier_checks": 1
+    },
+    {
+      "n": 3,
+      "diamonds": 6,
+      "barrier_checks": 12
+    },
+    {
+      "n": 4,
+      "diamonds": 24,
+      "barrier_checks": 72
+    },
+    {
+      "n": 5,
+      "diamonds": 80,
+      "barrier_checks": 320
+    },
+    {
+      "n": 6,
+      "diamonds": 240,
+      "barrier_checks": 1200
+    },
+    {
+      "n": 7,
+      "diamonds": 672,
+      "barrier_checks": 4032
+    },
+    {
+      "n": 8,
+      "diamonds": 1792,
+      "barrier_checks": 12544
+    }
+  ],
+  "arbitrary_law_example_A": {
+    "n": 4,
+    "r": 0,
+    "modular_moments_balanced": true,
+    "primal_atoms": [
+      {
+        "bottom": "",
+        "added": [
+          1,
+          2
+        ],
+        "weight": "1/2"
+      },
+      {
+        "bottom": "",
+        "added": [
+          3,
+          4
+        ],
+        "weight": "1/2"
+      }
+    ],
+    "prescribed_mu_u_mass_in_12": "1",
+    "maximum_possible_labeled_mass_in_12": "1/2",
+    "labeled_coupling": "IMPOSSIBLE",
+    "compatible_dpp_frame": "NOT CLAIMED"
+  },
+  "arbitrary_law_example_B": {
+    "n": 4,
+    "r": 1,
+    "modular_moments_balanced": true,
+    "laws": {
+      "bottom": "1",
+      "middle_u": "1,2",
+      "middle_v": "3,4",
+      "top": "2,3,4"
+    },
+    "witness": "1 when {1,2} is contained in S, otherwise 0",
+    "global_diamond_inequalities_checked": 24,
+    "local_diamond_inequalities_checked": 12,
+    "contrast": "-1",
+    "extended_local_certificate_contrast": "-1",
+    "extension_table": [
+      {
+        "set": "",
+        "value": "4"
+      },
+      {
+        "set": "1",
+        "value": "0"
+      },
+      {
+        "set": "2",
+        "value": "0"
+      },
+      {
+        "set": "1,2",
+        "value": "1"
+      },
+      {
+        "set": "3",
+        "value": "0"
+      },
+      {
+        "set": "1,3",
+        "value": "0"
+      },
+      {
+        "set": "2,3",
+        "value": "0"
+      },
+      {
+        "set": "1,2,3",
+        "value": "1"
+      },
+      {
+        "set": "4",
+        "value": "0"
+      },
+      {
+        "set": "1,4",
+        "value": "0"
+      },
+      {
+        "set": "2,4",
+        "value": "0"
+      },
+      {
+        "set": "1,2,4",
+        "value": "1"
+      },
+      {
+        "set": "3,4",
+        "value": "0"
+      },
+      {
+        "set": "1,3,4",
+        "value": "0"
+      },
+      {
+        "set": "2,3,4",
+        "value": "0"
+      },
+      {
+        "set": "1,2,3,4",
+        "value": "4"
+      }
+    ],
+    "compatible_dpp_frame": "NO"
+  },
+  "real_rotation_example_C": {
+    "n": 5,
+    "r": 2,
+    "frame": "H_ij=delta_ij-2*i*j/55 for 1<=i,j<=5",
+    "W_columns": [
+      1,
+      2
+    ],
+    "u_column": 3,
+    "v_column": 4,
+    "exact_orthogonality": true,
+    "bottom_law": [
+      {
+        "set": "1,2",
+        "probability": "81/121"
+      },
+      {
+        "set": "1,3",
+        "probability": "144/3025"
+      },
+      {
+        "set": "2,3",
+        "probability": "36/3025"
+      },
+      {
+        "set": "1,4",
+        "probability": "256/3025"
+      },
+      {
+        "set": "2,4",
+        "probability": "64/3025"
+      },
+      {
+        "set": "3,4",
+        "probability": "0"
+      },
+      {
+        "set": "1,5",
+        "probability": "16/121"
+      },
+      {
+        "set": "2,5",
+        "probability": "4/121"
+      },
+      {
+        "set": "3,5",
+        "probability": "0"
+      },
+      {
+        "set": "4,5",
+        "probability": "0"
+      }
+    ],
+    "top_law": [
+      {
+        "set": "1,2,3,4",
+        "probability": "1/121"
+      },
+      {
+        "set": "1,2,3,5",
+        "probability": "64/121"
+      },
+      {
+        "set": "1,2,4,5",
+        "probability": "36/121"
+      },
+      {
+        "set": "1,3,4,5",
+        "probability": "16/121"
+      },
+      {
+        "set": "2,3,4,5",
+        "probability": "4/121"
+      }
+    ],
+    "middle_atoms": [
+      {
+        "set": "1,2,3",
+        "a": "27/55",
+        "b": "-24/55",
+        "mu_u": "729/3025",
+        "mu_v": "576/3025",
+        "each_rotated": "261/1210"
+      },
+      {
+        "set": "1,2,4",
+        "a": "-24/55",
+        "b": "13/55",
+        "mu_u": "576/3025",
+        "mu_v": "169/3025",
+        "each_rotated": "149/1210"
+      },
+      {
+        "set": "1,3,4",
+        "a": "16/55",
+        "b": "-12/55",
+        "mu_u": "256/3025",
+        "mu_v": "144/3025",
+        "each_rotated": "8/121"
+      },
+      {
+        "set": "2,3,4",
+        "a": "-8/55",
+        "b": "6/55",
+        "mu_u": "64/3025",
+        "mu_v": "36/3025",
+        "each_rotated": "2/121"
+      },
+      {
+        "set": "1,2,5",
+        "a": "-6/11",
+        "b": "-8/11",
+        "mu_u": "36/121",
+        "mu_v": "64/121",
+        "each_rotated": "50/121"
+      },
+      {
+        "set": "1,3,5",
+        "a": "4/11",
+        "b": "0",
+        "mu_u": "16/121",
+        "mu_v": "0",
+        "each_rotated": "8/121"
+      },
+      {
+        "set": "2,3,5",
+        "a": "-2/11",
+        "b": "0",
+        "mu_u": "4/121",
+        "mu_v": "0",
+        "each_rotated": "2/121"
+      },
+      {
+        "set": "1,4,5",
+        "a": "0",
+        "b": "4/11",
+        "mu_u": "0",
+        "mu_v": "16/121",
+        "each_rotated": "8/121"
+      },
+      {
+        "set": "2,4,5",
+        "a": "0",
+        "b": "-2/11",
+        "mu_u": "0",
+        "mu_v": "4/121",
+        "each_rotated": "2/121"
+      },
+      {
+        "set": "3,4,5",
+        "a": "0",
+        "b": "0",
+        "mu_u": "0",
+        "mu_v": "0",
+        "each_rotated": "0"
+      }
+    ],
+    "differing_original_middle_atoms": 9,
+    "each_rotated_middle_mass": "1",
+    "exact_contrast_invariance": true,
+    "proof_of_universal_positivity": "NOT CLAIMED BY THIS EXAMPLE"
+  },
+  "unrecovered_074": {
+    "original_matrix": "NOT RECOVERED",
+    "dual_minus_one_fiftieth": "NOT VERIFIED",
+    "nineteen_atom_coupling": "NOT VERIFIED"
+  }
+}

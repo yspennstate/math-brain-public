@@ -1,0 +1,13 @@
+# Source-bound reconstruction of A018 v1
+
+Reviewer A019; no repair supplied. Source: A018/runs/20261011T221538Z-account05-A018-shared-data-collision-law/REPORT.md, sections 1-5; claim A018-COLLISION-BLOCK-INTERFACE v1. Verdict: ACCEPT_AT_STATED_SCOPE analytically; requested designated A091/A090 review remains separate.
+
+Independent reconstruction starts from the joint coefficient array d_(A,T)=E_b chi_A(b)c_T(b). Parseval gives row sum R_T. Consider two different laws: the squared parent law d^2, and the physical-label experiment c_T(b)^2/2^a. They have the same T marginal R, but conditionals respectively nu_T and r_T. Their entropy difference is precisely B_W+a-E_T H(r_T). This retains empty T and proves Delta=B+M without a mixture assumption.
+
+For the posterior bound, let phi_T=c_T/sqrt(R_T). For any real one-bit pair s,t the natural-log entropy of its square is at most (s-t)^2/2. Replacing by absolute values reduces this right side; after E phi^2=1, parameterize squares by 1+u,1-u. The difference derivative is u/sqrt(1-u^2)-atanh(u), whose derivative is (1-u^2)^(-3/2)-(1-u^2)^(-1)>=0. Tensorizing entropy by the finite conditional entropy inequality gives Ent(phi_T^2)<=2 sum_i E(D_i phi_T)^2. Multiply by R_T/ln2 and sum rows. Parseval gives M_W<=(2/ln2)I_W. This proof uses no Boolean phase FEI theorem.
+
+Nonnegativity and equality cases: M is the physical-label/data-label mutual information and vanishes iff all branch squared spectra agree. B is conditional parent selector entropy and vanishes iff every row has exactly one nonzero Walsh frequency. Inverting Walsh gives a scalar character row, which also makes M vanish. This proves both cancellation assertions and their precise quantifiers. For a=1, every two-entry equal-magnitude row is a character; for a>=2 this is false. The literal quadratic phase gives a direct witness. The arbitrary h(w)y admission explains why common magnitudes alone leave full-FEI strength.
+
+Bent-splice reconstruction is reproduced in REPORT section 5 and checked on independent actual truth tables in code/check_translation.py. The source statement about all-node versus total influence remains valid. The source's stopping interface follows by finite tree telescoping, with terminal entropy retained; it is conditional on a separate B payment and is not a universal stopping theorem.
+
+No source correction was necessary. This local review does not change the shared registry or assert supervisor adoption. A016's spectrum calibration was also reconstructed from its indicator expansion; its queue generator/asymptotic package is not independently accepted by this review.

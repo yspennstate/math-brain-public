@@ -1,0 +1,30 @@
+P26 independent reexecution of P11 canonical exact checker logic
+Target: P11-I0062-Q36-SOURCE-REFUTATION-02P
+Date: 2026-09-17
+
+P11-I0062-HEAVYTAIL-VERTICAL-COLUMNS-02 exact checker: PASS
+distribution normalization/tail identities: PASS for R=1..24 with exact geometric remainder
+column-probability, mean-count, Chebyshev and normalized-flow algebra: PASS for r=1..12
+rows are (r, log2 N_r, log2 benchmark lower bound):
+(1, 1, -1)
+(2, 4, 3)
+(3, 9, 17)
+(4, 16, 47)
+(5, 25, 99)
+(6, 36, 179)
+(7, 49, 293)
+(8, 64, 447)
+(9, 81, 647)
+(10, 100, 899)
+(11, 121, 1209)
+(12, 144, 1583)
+
+Analytic obligations retained in the written audit, not inferred from finite testing:
+- m(k,l) -> infinity and corrected intended height condition;
+- summability of 4*2^(-r^2);
+- absence of every positive exponential moment;
+- admissibility of the edge-disjoint vertical-column flow;
+- max-flow/min-cut dual lower bound;
+- first Borel-Cantelli conclusion.
+
+P26-I0062-Q36-EXACT-RECHECK: PASS

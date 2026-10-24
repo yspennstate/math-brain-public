@@ -1,0 +1,106 @@
+\section*{Rank-two Boolean compatibility and a fully colliding overlap family}
+
+All Fourier entropies are in bits.  Let $U$ be a finite uniform address
+cube, and let $g_u:\{-1,1\}^m\to\{-1,1\}$ be balanced Boolean branches.
+Write
+\[
+ B(u,R)=|U|^{-1/2}\widehat g_u(R),\qquad R\ne\varnothing.
+\]
+
+\paragraph{Rank-two compatibility lemma.}
+If $\operatorname{rank}B=2$, then there are linearly independent balanced
+Boolean functions $g,h$ such that every branch belongs to
+\[
+ \{g,-g,h,-h\}.
+\]
+Indeed, choose two independent rows, corresponding after Fourier inversion
+to $g,h$.  Every branch has the form $f=ag+bh$.  Since $g,h$ are
+independent, $r=gh$ is a nonconstant sign, and therefore assumes both signs.
+The Booleanity of $f$ says
+\[
+ |a+b|=|a-b|=1.
+\]
+Squaring and subtracting gives $ab=0$, while adding gives
+$a^2+b^2=1$.  Hence $(a,b)$ is one of $(\pm1,0),(0,\pm1)$.
+
+Equivalently, there are Boolean address functions $\sigma,\tau$ such that
+\[
+ F(a,x)=\sigma(a)\left(\frac{1+\tau(a)}2g(x)
+                         +\frac{1-\tau(a)}2h(x)\right).
+\]
+This is an exact Boolean restriction absent from a free rank-two matrix.
+It does not by itself pay arbitrary $\sigma,\tau$; doing so would reintroduce
+the full-FEI controller obstruction.
+
+\paragraph{Separable two-controller corollary.}
+If the address is $(c,b)$, $\tau(c,b)=b$ and $\sigma(c,b)=s(c)$, define
+\[
+ M_{g,h}(b,x)=\frac{g(x)+h(x)}2
+             +b\frac{g(x)-h(x)}2.
+\]
+Then $M_{g,h}$ is Boolean and
+\[
+ F(c,b,x)=s(c)M_{g,h}(b,x).
+\]
+The two factors use disjoint physical blocks, so
+\[
+ H(F)=H(s)+H(M_{g,h}),\qquad
+ I(F)=I(s)+I(M_{g,h}).
+\]
+Moreover
+\[
+ I(M_{g,h})=\frac{I(g)+I(h)}2+rac{1-\langle g,h\rangle}{2}.
+\]
+Consequently independent estimates $H(s)\le C_sI(s)$ and
+$H(M_{g,h})\le C_MI(M_{g,h})$ imply
+\[
+ H(F)\le\max\{C_s,C_M\}I(F).
+\]
+
+\paragraph{A fully colliding all-parameter family.}
+On three data signs put
+\[
+ g=\frac{x_1+x_2+x_3-x_1x_2x_3}{2},\qquad
+ h=\frac{x_1+x_2-x_3+x_1x_2x_3}{2}.
+\]
+These are balanced Boolean functions, $\langle g,h\rangle=0$, and their
+Fourier supports coincide exactly:
+\[
+ \operatorname{supp}\widehat g=\operatorname{supp}\widehat h
+ =\{\{1\},\{2\},\{3\},\{1,2,3\}\}.
+\]
+Thus this is maximally non-disjoint spectral overlap.  Nevertheless
+\[
+ M(b,x)=\frac{x_1+x_2+bx_3-bx_1x_2x_3}{2}
+\]
+has four Fourier atoms of squared mass $1/4$, whence
+\[
+ H(M)=2,\qquad I(M)=2.
+\]
+
+Let $s_t$ be $-1$ only at the all-minus point of the $t$-cube, and $+1$
+elsewhere, and define $F_t(c,b,x)=s_t(c)M(b,x)$.  With
+$\delta_t=2^{1-t}$,
+\[
+ I(s_t)=t\delta_t,
+\]
+and the standard point-defect calculation gives $H(s_t)<4I(s_t)$.
+Therefore, for every $t\ge1$,
+\[
+ H(F_t)=H(s_t)+2<4I(s_t)+8=4I(F_t),
+ \qquad I(F_t)=t2^{1-t}+2.
+\]
+
+In the literal $2^{t+1}$-branch selector representation, all three data
+coordinates occur in every branch.  Hence worst-case read is $2^{t+1}$,
+while activation-weighted congestion is exactly one.  The branch Fourier
+matrix has rank two, the rank-name cost is one bit, the type controller costs
+one physical root, and $s_t$ has an ordered evaluation tree with expected
+root count $2-2^{1-t}<2$.  Thus the total expected controller-root cost is
+less than three.  The complete spectral label payment is $H(s_t)+H(M)$;
+no $k$-fold Cauchy--Schwarz or disjoint-support assumption is used.
+
+The remaining unpaid step is nonseparable rank-two control: arbitrary
+correlated $(\sigma,\tau)$ may carry a hard joint address spectrum.  A valid
+extension must bound that joint posterior charge or impose a stable
+hypothesis excluding arbitrary FEI-hard controllers.

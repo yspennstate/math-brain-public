@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260922T130524Z-account03-B13-QFORM-r11",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit_at_start": "d3d1525b9d2761bda45335eb5e35c278bf81d87c",
+  "control_commit_prepublication": "f0b2fea46b3c171e01ab859f125cacf17cb7c6b5",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "partner_result_applied": {
+    "account": "account04",
+    "slot": "B14",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8fcc9ba5db68dfd4cd5daeb181a39666ceeda322",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md",
+    "scope_used": "Exact bang-bang reduction from arbitrary marginal densities bounded by one to product indicators of measure one, plus zero-loss approximation by compact finite unions of intervals."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-AFFINE-COMPLETION-ZERO-LOSS-v1",
+      "status": "PROVED_TARGET_LEVEL_REDUCTION",
+      "statement": "The optimal target small-ball constant for pure quadratic forms equals the optimal constant after allowing arbitrary deterministic linear and constant terms. The proof regularizes only ker(A), completes the square, and passes epsilon to zero without moment assumptions."
+    },
+    {
+      "id": "QFORM-MEDIAN-ZERO-EXTREME-PRODUCT-v1",
+      "status": "PROVED_TARGET_LEVEL_REDUCTION",
+      "statement": "After bang-bang finite-fragment reduction, every marginal set may be translated to exact median zero at no loss if affine terms are retained; full target constant is unchanged."
+    },
+    {
+      "id": "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE-v1",
+      "status": "REFUTED_INTERMEDIATE_REDUCTION",
+      "statement": "For every finite diameter cap D, the exact target A=I_3 has a separated-shell instance where a finite-fragment unit set captures twice the one-coordinate small-ball mass available to every unit set of diameter at most D. Single-interval/centered-uniform localization is therefore invalid even inside the full target."
+    }
+  ],
+  "numerical_sanity": {
+    "R": 2,
+    "support_total_length": 0.381448238843719,
+    "band_gap": 3.741657386773941,
+    "positive_branch_mass_midpoint_N700": 0.062852841593233,
+    "two_branch_mass_midpoint_N700": 0.125705683186466,
+    "proof_dependency": "none; factor-two theorem is analytic"
+  },
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7fa8fffc603f29e26a5a012f8a1c6e0c7ec9d01f",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260922T130524Z-account03-B13-QFORM-r11/REPORT.md",
+    "report_blob": "aa88090bab63df6ac9dce7ad110e594c9a5d68fd",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260922T130524Z-account03-B13-QFORM-r11/CHECKER.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260922T130524Z-account03-B13-QFORM-r11/CHECKER_OUTPUT.txt"
+  },
+  "full_target_status": "OPEN_NOT_PROVED",
+  "unresolved_implication": "Prove a universal fragment-blind slab estimate, or a matrix structural dichotomy that invokes already-paid local principal-block/diffuse branches without any support-diameter charge.",
+  "next_step": "Combine median-zero affine product sets with completed principal pair/triple and diffuse/separable-phase estimates; isolate the remaining high-cardinality aggregation matrix class and derive a dimension-free estimate there."
+}

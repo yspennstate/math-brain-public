@@ -1,0 +1,96 @@
+{
+  "schema": "fei-packet-delta/1",
+  "run_id": "20261011T201744Z-97f1225a",
+  "native_stream": "B20",
+  "packet_ids": ["A096", "A097"],
+  "primary_packet_id": "A097",
+  "registry_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "034ae6a0fe7388b61bcb5530513fbff1b02ef153",
+    "agent_assignments_blob": "e7c102daaf5dccdeb75c3440d2e5ab92b608e5f1",
+    "stream_next_actions_blob": "2ec748b1ac9e30aae0d649016fe5fb3ed095059e",
+    "packet_progress_blob": "5c669dc00deeed81f04d75495add7dc3a8a8c4cc"
+  },
+  "input_handoffs_used": [
+    {
+      "stream": "B05",
+      "report_blob": "1b7e3cb572354cac4e506d7de0a3ed8af720472b",
+      "status": "PROVED_AND_INDEPENDENTLY_ACCEPTED"
+    },
+    {
+      "stream": "B19",
+      "report_blob": "dcec4cb77233a7b233b4798b25aab5f2dd5c82b6",
+      "status": "INDEPENDENT_ACCEPT_AT_STATED_SCOPE"
+    },
+    {
+      "stream": "B09",
+      "report_blob": "71b68e4decf9658a42fef6bb2668e19f25bd214a",
+      "status": "SOURCE_PROOF_PRESENT; FULL_REVIEW_PENDING"
+    },
+    {
+      "stream": "B09_REPAIR",
+      "report_blob": "c3adb486c8ca9f7a35f384ee82942eef66bd64be",
+      "status": "RIGOROUS_SIGNED_INTERVAL_REPAIR"
+    }
+  ],
+  "previous_values": {
+    "A096_deliverable_status": "UNASSESSED",
+    "A096_mathematical_status": "OPEN_TARGET",
+    "A097_deliverable_status": "UNASSESSED",
+    "A097_mathematical_status": "OPEN_TARGET",
+    "tracked_B05_debt": "d log_2(1/delta)+O(d)",
+    "known_local_credit": "Kd+AV+BM with V=o(d), M=o(d), refuted for every fixed K,A,B"
+  },
+  "new_values": {
+    "A096_deliverable_status": "LOCAL_COMPLETE_NOT_DURABLY_SAVED",
+    "A096_mathematical_status": "PARTIAL_PROGRESS",
+    "A097_deliverable_status": "LOCAL_COMPLETE_NOT_DURABLY_SAVED",
+    "A097_mathematical_status": "PROVED_RESTRICTED_THEOREM_REVIEW_PENDING",
+    "paid_family_specific_debt": "L < p Delta(delta)+3d",
+    "remaining_universal_debt": "Overlap-safe, single-use lift of p Delta(delta) when defect and source share variables"
+  },
+  "claim_versions": [
+    "B20-A097-ACTIVATION-WEIGHTED-ENDPOINT-TAX-v1",
+    "B20-A097-OVERLAP-SAFE-TAX-LIFT-v1"
+  ],
+  "acceptance_items": {
+    "algebraic_substitution_written": true,
+    "variables_and_constants_matched": true,
+    "source_lemma_proved_or_rederived": true,
+    "amount_of_debt_paid_quantified": true,
+    "unmatched_assumption_identified": true,
+    "mandatory_counterexamples_addressed": true,
+    "independent_review_completed": false,
+    "canonical_private_save_completed": false,
+    "brain_mirror_completed": false
+  },
+  "failed_or_retired_routes": [
+    {
+      "route": "Tax-free biased J_A<=M_A",
+      "status": "REFUTED",
+      "witness": "biased two-bit AND sign gate",
+      "margin": ">0.1195 bits"
+    },
+    {
+      "route": "Fixed-price local L<=Kd+AV+BM",
+      "status": "REFUTED",
+      "witness": "B05 sparse activated bent-defect family"
+    },
+    {
+      "route": "Treat shared defect indicator as a fresh independent biased coordinate",
+      "status": "INVALID_TRANSFER",
+      "reason": "Changes the joint law and erases shared-variable interference"
+    }
+  ],
+  "unchanged_obstruction_count": 0,
+  "next_concrete_action": "Prove or refute an overlap-safe lift that creates p*Delta(delta) once for a rare conditional defect and transports it to selector entropy without requiring a fresh coordinate; first test the exact B05 family and whole-set addressing.",
+  "suggested_review_packets": ["A090", "A094"],
+  "review_evidence": [],
+  "delivery": {
+    "local_files_complete": true,
+    "canonical_private_repository": "NOT_SAVED_STANDING_WRITE_RESTRICTION",
+    "brain_mirror": "NOT_SAVED_STANDING_WRITE_RESTRICTION",
+    "readback": "NOT_AVAILABLE",
+    "native_brain_ingestion": "NOT_RUN"
+  }
+}

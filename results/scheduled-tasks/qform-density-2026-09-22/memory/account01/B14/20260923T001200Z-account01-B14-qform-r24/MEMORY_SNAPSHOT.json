@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B14",
+  "run_id": "20260923T001200Z-account01-B14-qform-r24",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit_at_login": "14e0a02fc717a1cf47e14990495cb70100131118",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "669e7bbee5590584b1132781993548834bec1ac1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260923T001200Z-account01-B14-qform-r24/REPORT.md"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B14/20260923T001200Z-account01-B14-qform-r24.md",
+  "new_claim": {
+    "id": "QFORM-SCHUR-CROSS-PAIRLOG-v1",
+    "status": "SUPPORTING_TARGET_LEVEL_THEOREM_FULL_QFORM_OPEN",
+    "statement": "For an invertible indefinite original-coordinate physical pair B, if the exact Schur complement admits an original-coordinate partition I,J,K with zero I-self block and at least two nonzero cross singular values between I and J, then the pair-log singularity is paid by the partner top-d cross density cap. With D=|det B|, kappa=sigma_min(B), H_*=min_d c_d(prod_{j<=d}s_j)^(-1/d), eta=8DH_*/kappa, the density cap is 6[H_*/(kappa sqrt(D))]^(1/3) for eta<=1 and D^(-1/2)[3+log eta] for eta>=1."
+  },
+  "localization_lemma": "If conditional interval caps are H(W), then the unconditional density cap is at most E H(W); fragment decompositions therefore pay only the mass-weighted sum of normalized caps, with no support-radius or fragment-count tax.",
+  "partner_results_applied": [
+    {
+      "source": "yspennstate/math-open-problems@2ca523ac73b814a97e846de8d37a932c127eecfb",
+      "claim": "QFORM-TOP-d-CROSS-AVERAGING-v1",
+      "application": "applied to the exact Schur remainder after conditioning on K to produce H_*"
+    },
+    {
+      "source": "yspennstate/math-open-problems@84093fddd5e3d3c692449d49c8b01537b28eb8d8",
+      "claim": "QFORM-PAIRLOG-RANK1-LEAKAGE-v1",
+      "application": "applied to the physical pair using the Schur-remainder density cap H_*"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-NO-UNIFORM-COEFFICIENT-PERTURBATION-CONTINUITY-v1"
+  ],
+  "explicit_example": {
+    "description": "Six-coordinate nonseparable target matrix with physical pair B=[[0,2],[2,0]], nonzero pair-outside F, and Schur complement [[0,2I],[2I,0]]. All six eigenvalue magnitudes are >=11/8 by a Weyl norm bound.",
+    "density_bound": "0.5*(3+log(8*e*sqrt(pi))) < 3.326"
+  },
+  "unresolved_implication": "From only s_3(A)>=1, obtain either an indefinite-pair exact-Schur top-two cross certificate or route to an already-paid diffuse/ridge/grouped-bank branch without tiny-minor inversion or coefficient perturbation continuity.",
+  "next_step": "Seek a product-preserving structural dichotomy on exact Schur complements, using aggregate bank mass rather than fixed physical minors."
+}

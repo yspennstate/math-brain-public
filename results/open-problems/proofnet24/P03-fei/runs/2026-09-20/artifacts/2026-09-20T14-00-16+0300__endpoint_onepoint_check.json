@@ -1,0 +1,94 @@
+{
+  "analytic_constant_sanity": {
+    "middle_endpoint_F17": 0.08248520915160995,
+    "small_region_B3_n73": 2.3120296449317497,
+    "small_region_derivative_margin_n73": 0.0005977601650626885
+  },
+  "boolean_sanity": {
+    "exhaustive_onepoint_pairs": 2120,
+    "max_case": [
+      4,
+      "sample",
+      2
+    ],
+    "max_charge_over_delta": 3.000056331105771,
+    "max_violation_of_A_le_4delta": -0.03532269545139388,
+    "sampled_onepoint_pairs": 2500
+  },
+  "finite_scalar_certificate": {
+    "count": 33499,
+    "min_arg": [
+      7,
+      3
+    ],
+    "min_margin": 0.5076986152768692,
+    "per_n_selected": {
+      "16": {
+        "arg": 3,
+        "count": 16384,
+        "min_margin": 0.9722766797318292
+      },
+      "17": {
+        "arg": 1,
+        "count": 8,
+        "min_margin": 1.0034657760899082
+      },
+      "2": {
+        "arg": 1,
+        "count": 1,
+        "min_margin": 2.3431457505062396
+      },
+      "3": {
+        "arg": 1,
+        "count": 2,
+        "min_margin": 1.6324479376729628
+      },
+      "32": {
+        "arg": 1,
+        "count": 11,
+        "min_margin": 1.0009545591983136
+      },
+      "4": {
+        "arg": 3,
+        "count": 4,
+        "min_margin": 1.281436681496086
+      },
+      "5": {
+        "arg": 3,
+        "count": 8,
+        "min_margin": 0.7342303175514914
+      },
+      "6": {
+        "arg": 3,
+        "count": 16,
+        "min_margin": 0.543060744851344
+      },
+      "7": {
+        "arg": 3,
+        "count": 32,
+        "min_margin": 0.5076986152768692
+      },
+      "72": {
+        "arg": 1,
+        "count": 17,
+        "min_margin": 1.0001867598378422
+      },
+      "8": {
+        "arg": 3,
+        "count": 64,
+        "min_margin": 0.5390427017485713
+      }
+    }
+  },
+  "notes": [
+    "Finite scalar certificate is rigorous rational arithmetic: all irrational nth roots are enclosed by integer-power inequalities at denominator 10^12.",
+    "Boolean Walsh checks are floating-point sanity checks only; theorem proof uses the scalar certificate plus analytic regions."
+  ],
+  "status": "PASS",
+  "translation_average_sanity": {
+    "coordinate_cases": 131474,
+    "max_formula_error": 0.0,
+    "max_min_cost_minus_2Jrest": 0.0,
+    "min_exists_slack": 0.0
+  }
+}

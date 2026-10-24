@@ -1,0 +1,3 @@
+The first full v1 run stopped at its nonnegativity-enclosure assertion after 2.63 tool seconds. The pilot passed. At large fixed rarity, independently enclosing ln(2^r-1) and r ln2 before subtracting loses their common ln2 contribution and amplifies the interval width by 2^r. This is an enclosure representation failure, not a counterexample to nonnegative entropy drop. No full v1 certificate was emitted.
+
+Helper v2 collects powers of two exactly before enclosing the remaining rational log argument near one. Family, dimensions, case counts, runtime and memory bounds are unchanged. Frozen specification v2 is the original domain with this versioned range-reduction repair. No higher precision or dimension is silently introduced.

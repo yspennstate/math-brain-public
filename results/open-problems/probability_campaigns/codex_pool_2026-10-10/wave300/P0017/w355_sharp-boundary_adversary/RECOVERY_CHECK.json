@@ -1,0 +1,144 @@
+{
+  "checked_at": "2026-10-10T05:40:52.257135+00:00",
+  "state": "STATE: NEEDS_REVIEW",
+  "next": "NEXT: Reviewer: merge C002's independently checked cutoff proof with the triad's sharp directional constant, then validate the source-status card before coordinator ingestion.",
+  "feedback_present": false,
+  "changes_to_math_or_submitted_bundle": false,
+  "tests_rerun": false,
+  "artifacts": {
+    "SOURCE_STATUS.json": {
+      "exists": true,
+      "sha256": "f51dc9dde14e6c59705fac94645874fbc6b3819cd779744a65e5dfedac3402f1"
+    },
+    "ATTEMPT.md": {
+      "exists": true,
+      "sha256": "afc47e5bc0cfb3c56de3674a77225205bc29b09911331b9f3abd744d2d44339e"
+    },
+    "CLAIMS.jsonl": {
+      "exists": true,
+      "sha256": "116ebd606ed64fa5677a3f70f5cca3d4e91e1b4dddb0284733514472e27aa527"
+    },
+    "REVIEW_PACKET.md": {
+      "exists": true,
+      "sha256": "0c79e94ad9968f97bb5d767194a4b2a554a58b73845650bc4b31670296d20df9"
+    },
+    "REPORT.md": {
+      "exists": true,
+      "sha256": "be56757aa0eac6ca5e0767ecac858a79c59525456a82855efc5e967aff22da49"
+    },
+    "REFEREE_VERDICTS.jsonl": {
+      "exists": true,
+      "sha256": "e2218eab13df0e856204cfe4abc9cd6378188bc391c89ac2482b17d3ef170dea"
+    },
+    "VERIFICATION.json": {
+      "exists": true,
+      "sha256": "2ec1e89b9eb85c495d45f50d9707723194f11ba580715367a07f952dd373be9f"
+    },
+    "BUNDLE_STATES.json": {
+      "exists": true,
+      "sha256": "6fbe51ed266c85f151147c7601d08102348c67ccf98a7d20c837da7dfe51fe4e"
+    },
+    "FINAL_VERIFICATION.json": {
+      "exists": true,
+      "sha256": "d278f6f1b7525f87461558e99e524eba183444febc0cb2c6ab9f04aef4502f32"
+    },
+    "RELATION_EVIDENCE.jsonl": {
+      "exists": true,
+      "sha256": "a379ecc08416556f1b9c97f812771902345aae2cbb6e6b4397272c721269f1fa"
+    },
+    "HOOK_PROPOSAL.jsonl": {
+      "exists": true,
+      "sha256": "920e93aceb19c5923d4b0f61f42baa11731058d1e59a0bed98b9ffe52bc853d9"
+    },
+    "patches/01_probability_slice_hook.diff": {
+      "exists": true,
+      "sha256": "16b392fe1ec9652f7b5d4ed732d65fbcaf637259bfd15f80ffdd62fc27a8110f"
+    }
+  },
+  "claim_rows": 7,
+  "referee_receipt_rows": 2,
+  "referee_receipts": [
+    {
+      "claim_id": "w355-P0017-C001",
+      "reviewer": "w356",
+      "verdict": "KEEP",
+      "status": "independently checked proof"
+    },
+    {
+      "claim_id": "w355-P0017-C002",
+      "reviewer": "w356",
+      "verdict": "KEEP",
+      "status": "independently checked proof"
+    }
+  ],
+  "referee_receipt_keys": [
+    [
+      "claim_id",
+      "reviewer",
+      "verdict",
+      "scope",
+      "reviewed_artifacts",
+      "reproduction",
+      "hardest_claim_rederived",
+      "remaining_gap",
+      "measurement",
+      "status",
+      "parent_problem_solved",
+      "login_independence"
+    ],
+    [
+      "claim_id",
+      "reviewer",
+      "verdict",
+      "scope",
+      "reviewed_artifacts",
+      "reproduction",
+      "hardest_claim_rederived",
+      "remaining_gap",
+      "status",
+      "parent_problem_solved",
+      "login_independence"
+    ]
+  ],
+  "saved_final_verification": {
+    "package": "PASS",
+    "claim_rows": 7,
+    "independent_mathematical_keeps": 2,
+    "reviewer": "w356",
+    "draft_entries_submitted": 3,
+    "concept_bundle_source_coordinator_review_pending": true,
+    "live_store_nodes_observed": 0,
+    "formal_proof_receipt": false,
+    "relations_have_exact_end_quotes": 3,
+    "tests": "5898 exact arithmetic checks already passed; not rerun for report-only edits"
+  },
+  "saved_test_receipt": {
+    "command": "python -X utf8 -B ~/brain_workers/w355/verify_simplex.py",
+    "checks_passed": 5898,
+    "elapsed_seconds": 0.38943250000011176,
+    "baseline": "Unweighted mean fiber Poincare constant 12/pi^2 in every dimension",
+    "corrected_comparison": "Energy-weighted test ratio grows quadratically; exact covariance and positive tail probability verified",
+    "result": "PASS",
+    "formal_proof_receipt": false,
+    "independent_referee_check": "pending w356"
+  },
+  "draft_entry_count": 3,
+  "submitted_file_present": true,
+  "local_draft_sha256": "7c8797c219fc6116792515d36e7b62b7ffc8d8170a04059ac1b3bec20a7a2902",
+  "submitted_draft_sha256": "7c8797c219fc6116792515d36e7b62b7ffc8d8170a04059ac1b3bec20a7a2902",
+  "submitted_equals_local": true,
+  "ingestion_observation": {
+    "checked_at": "2026-10-10T05:40:52.257135+00:00",
+    "read_only": true,
+    "logical_ids": [
+      "math:probability.concentration:p0017-kls-primary-resolution-claims-october-2026",
+      "math:probability.concentration:isotropic-regular-simplex-conditional-poincare-extremes",
+      "math:probability.concentration:conditional-poincare-constant-average-cannot-separate-from-energy"
+    ],
+    "nodes": [],
+    "exact_id_nodes_observed": 0,
+    "query_completed": true,
+    "scope": "Exact submitted logical IDs only; this is not a deduplication receipt or recall test."
+  },
+  "package_integrity": "PASS"
+}

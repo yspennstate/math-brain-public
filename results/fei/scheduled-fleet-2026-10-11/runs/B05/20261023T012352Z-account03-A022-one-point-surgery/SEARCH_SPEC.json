@@ -1,0 +1,15 @@
+{
+  "helper_version": "code/check.py v1 and code/exact.py v1, SHA256 recorded with results",
+  "family": "g tensor t, g three-bit point defect; one controlled point edit; original R and old U=t/64 retained through block-first physical data queries",
+  "domain": "Main t=2, all64 vertices, six declared two-bit controllers, two fixed block-first orders; targeted t=3, vertices0 and511, same six controllers, one order",
+  "case_count": {"pilot": 24, "main": 768, "targeted_t3": 12},
+  "symmetry": "No quotient of declared main cases. Analytic proof uses coordinate/block symmetry; no automatic t escalation.",
+  "arithmetic": "Integer FWHT, Fraction, canonical rational prime-log identities and40-term rational atanh intervals with explicit tail",
+  "memory_estimate_mb": 100,
+  "maximum_runtime_seconds_per_job": {"pilot":60,"main":120,"targeted_t3":60},
+  "pre_main_amendment": "Pilot24cases passed in1.774709s; 768-case linear projection56.8s leaves little contention margin. Before main starts, cap amended to120s; no family, dimension, arithmetic or case increase.",
+  "prefix_domain": "All depths through5 for t2 andt3; t2 also depth6 to check final-bank obstruction",
+  "controllers": [[0,0,0,0],[1,1,1,1],[0,1,0,1],[0,0,1,1],[0,0,0,1],[0,1,1,1]],
+  "scalar_domain": "t=2..64, r=0..floor(t/2), j=0,1,2; integer log certificates",
+  "failure_checks": ["R remains ORIGINAL at every child", "both child KLs retained", "old U not renewed", "physical reach cancels active-leaf density to original delta", "completion differs from entropy reset", "final full-data CE bank negative for character controller"]
+}

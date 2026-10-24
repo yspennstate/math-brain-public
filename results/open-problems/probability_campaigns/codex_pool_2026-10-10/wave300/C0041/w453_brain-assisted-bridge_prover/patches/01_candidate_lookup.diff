@@ -1,0 +1,18 @@
+--- a/~/math-brain-build/src/math_brain/candidate_lookup.py
++++ b/~/math-brain-build/src/math_brain/candidate_lookup.py
+@@ -0,0 +1,15 @@
++"""Read-only exact lookup for C/P intake candidate cards; no substring fallback."""
++import re
++import sqlite3
++from pathlib import Path
++
++def lookup_candidate(database, candidate_id):
++    if not re.fullmatch(r"[CP][0-9]{4}",candidate_id):
++        raise ValueError("candidate ID must be Cdddd or Pdddd")
++    con=sqlite3.connect(f"file:{Path(database).as_posix()}?mode=ro",uri=True,timeout=5)
++    con.execute("PRAGMA query_only=ON")
++    try:
++        return con.execute("SELECT id,title FROM nodes WHERE lower(json_extract(metadata_json,'$.bundle_entry_key'))=? LIMIT 8",("op-"+candidate_id.casefold(),)).fetchall()
++    finally:
++        con.close()
++

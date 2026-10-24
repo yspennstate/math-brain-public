@@ -1,0 +1,1 @@
+Helper v2 adds exact B0, T12 and R_ge2 formulas to the unchanged 312-case frozen domain. No dimension or family increase. Same Fraction/log-dictionary arithmetic, memory <80 MB and 60-second guard. Rerun is required because the new universal formula was derived after the first validation.

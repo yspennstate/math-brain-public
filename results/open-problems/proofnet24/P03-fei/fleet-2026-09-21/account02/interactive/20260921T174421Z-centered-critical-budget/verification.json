@@ -1,0 +1,202 @@
+{
+  "checks": {
+    "drift": {
+      "exact_block_drift_instances": 984884,
+      "exact_low_folded_influence_zero_refund_instances": 228304,
+      "exact_single_coordinate_instances": 262948,
+      "status": "PASS"
+    },
+    "dust": {
+      "exact_coordinate_cylinder_types": 8384,
+      "examples": [
+        {
+          "dimension": 128,
+          "entropy_over_mean_analytic_lower_bound_float": 2.1914218876335823,
+          "m": 7,
+          "maximum_atom_denominator_exponent": 652,
+          "maximum_atom_odd_numerator_mod4": 3,
+          "mean_size": "28681/1024",
+          "uniform_dust_domination_exact": true
+        },
+        {
+          "dimension": 512,
+          "entropy_over_mean_analytic_lower_bound_float": 3.829659447571964,
+          "m": 9,
+          "maximum_atom_denominator_exponent": 3600,
+          "maximum_atom_odd_numerator_mod4": 3,
+          "mean_size": "589879/16384",
+          "uniform_dust_domination_exact": true
+        },
+        {
+          "dimension": 2048,
+          "entropy_over_mean_analytic_lower_bound_float": 5.54044541326307,
+          "m": 11,
+          "maximum_atom_denominator_exponent": 18452,
+          "maximum_atom_odd_numerator_mod4": 3,
+          "mean_size": "11534581/262144",
+          "uniform_dust_domination_exact": true
+        }
+      ],
+      "scope": "Uniform-dust domination proves all affine cylinders analytically. These laws are not Boolean spectra.",
+      "status": "PASS"
+    },
+    "examples": {
+      "addressing": [
+        {
+          "J": "2",
+          "data_coordinate_drift": "1/4",
+          "m": 2,
+          "nonzero_coefficients": 40,
+          "status": "PASS",
+          "tested_data_coordinates": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "truth_table_size": 128
+        },
+        {
+          "J": "3",
+          "data_coordinate_drift": "1/16",
+          "m": 4,
+          "nonzero_coefficients": 544,
+          "status": "PASS",
+          "tested_data_coordinates": [
+            0
+          ],
+          "truth_table_size": 2097152
+        }
+      ],
+      "and2": {
+        "J": "1",
+        "centered_drift": "1",
+        "original_coordinate_influence": "1/2"
+      },
+      "status": "PASS"
+    },
+    "majority": {
+      "exact_majority_coefficients": 43690,
+      "finite_moment_examples": [
+        {
+          "degree": 3,
+          "exact_fourth_power_exceeds_one": false,
+          "log2_ratio_diagnostic": -4.08142603954656,
+          "n": 101,
+          "p": "3/2",
+          "rho": "1/2"
+        },
+        {
+          "degree": 3,
+          "exact_fourth_power_exceeds_one": false,
+          "log2_ratio_diagnostic": -3.2558490903388524,
+          "n": 1001,
+          "p": "3/2",
+          "rho": "1/2"
+        },
+        {
+          "degree": 3,
+          "exact_fourth_power_exceeds_one": false,
+          "log2_ratio_diagnostic": -2.425854333532037,
+          "n": 10001,
+          "p": "3/2",
+          "rho": "1/2"
+        }
+      ],
+      "note": "Infinite divergence for every fixed p<2 and positive rho is analytic, not extrapolated from these cases.",
+      "status": "PASS",
+      "tables": [
+        {
+          "first_coefficient": "1",
+          "influence": "1",
+          "n": 1
+        },
+        {
+          "first_coefficient": "1/2",
+          "influence": "3/2",
+          "n": 3
+        },
+        {
+          "first_coefficient": "3/8",
+          "influence": "15/8",
+          "n": 5
+        },
+        {
+          "first_coefficient": "5/16",
+          "influence": "35/16",
+          "n": 7
+        },
+        {
+          "first_coefficient": "35/128",
+          "influence": "315/128",
+          "n": 9
+        },
+        {
+          "first_coefficient": "63/256",
+          "influence": "693/256",
+          "n": 11
+        },
+        {
+          "first_coefficient": "231/1024",
+          "influence": "3003/1024",
+          "n": 13
+        },
+        {
+          "first_coefficient": "429/2048",
+          "influence": "6435/2048",
+          "n": 15
+        }
+      ]
+    },
+    "tensor": {
+      "proof_scope": "Weak centered restriction criticality follows analytically by factorization of every face, not by enumerating all faces here.",
+      "rows": [
+        {
+          "H_exact": 2,
+          "J": "1",
+          "centered_shell_fraction": "1/2",
+          "factors": 1,
+          "ratio_exact": 2
+        },
+        {
+          "H_exact": 4,
+          "J": "2",
+          "centered_shell_fraction": "1/8",
+          "factors": 2,
+          "ratio_exact": 2
+        },
+        {
+          "H_exact": 6,
+          "J": "3",
+          "centered_shell_fraction": "1/32",
+          "factors": 3,
+          "ratio_exact": 2
+        },
+        {
+          "H_exact": 8,
+          "J": "4",
+          "centered_shell_fraction": "1/128",
+          "factors": 4,
+          "ratio_exact": 2
+        },
+        {
+          "H_exact": 10,
+          "J": "5",
+          "centered_shell_fraction": "1/512",
+          "factors": 5,
+          "ratio_exact": 2
+        },
+        {
+          "H_exact": 12,
+          "J": "6",
+          "centered_shell_fraction": "1/2048",
+          "factors": 6,
+          "ratio_exact": 2
+        }
+      ],
+      "status": "PASS"
+    }
+  },
+  "full_FEI": "OPEN_NOT_PROVED",
+  "schema_version": 1
+}

@@ -1,0 +1,52 @@
+EXACT FEI FINITE-CONSTANT CERTIFICATE n<=5
+All optimum decisions below are exact integer comparisons; decimals are display only.
+
+n=1: translated/output-folded representatives exhaustively checked = 1
+  C_1 = 0
+  decimal = 0.000000000000000
+  extremizers = both nonconstant 1-bit Boolean functions (2 functions)
+  equality state after folding/translation: k=1, Q=1; all other exact states strict
+n=2: translated/output-folded representatives exhaustively checked = 4
+  C_2 = 2
+  decimal = 2.000000000000000
+  extremizers = one-point defects and complements, exactly 8 functions
+  equality state after folding/translation: k=1, Q=4; all other exact states strict
+n=3: translated/output-folded representatives exhaustively checked = 64
+  C_3 = 16/3 - (3/2)*log2(3)
+  decimal = 2.955889582251599
+  extremizers = one-point defects and complements, exactly 16 functions
+  equality state after folding/translation: k=1, Q=12; all other exact states strict
+n=4: translated/output-folded representatives exhaustively checked = 16384
+  C_4 = 12 - (49/16)*log2(7)
+  decimal = 3.402475551198588
+  extremizers = one-point defects and complements, exactly 32 functions
+  equality state after folding/translation: k=1, Q=32; all other exact states strict
+
+n=5: exact translated enumeration for k=1..6 checked = 206368 subsets
+  actual k=1: Q-states=1, display max ratio=3.623740399702084, at Q=80
+  actual k=2: Q-states=2, display max ratio=3.402475551198588, at Q=128
+  actual k=3: Q-states=3, display max ratio=3.395148296462757, at Q=176
+  actual k=4: Q-states=5, display max ratio=3.105048213358514, at Q=224
+  actual k=5: Q-states=6, display max ratio=3.118379308353110, at Q=240
+  actual k=6: Q-states=8, display max ratio=2.880198197814598, at Q=288
+  k=7..16: exact arithmetic relaxation (superset of realizable Walsh profiles)
+    k=7: final Q-states=31, display relaxed max=3.548954234050124, Q=224, P_bits=627, EXACTLY below C_5
+    k=8: final Q-states=41, display relaxed max=3.533619641929942, Q=224, P_bits=629, EXACTLY below C_5
+    k=9: final Q-states=39, display relaxed max=3.191859431414284, Q=288, P_bits=565, EXACTLY below C_5
+    k=10: final Q-states=48, display relaxed max=3.129907985209666, Q=288, P_bits=574, EXACTLY below C_5
+    k=11: final Q-states=45, display relaxed max=2.954440234600145, Q=336, P_bits=528, EXACTLY below C_5
+    k=12: final Q-states=55, display relaxed max=2.916917186688699, Q=320, P_bits=558, EXACTLY below C_5
+    k=13: final Q-states=51, display relaxed max=2.780435729704006, Q=368, P_bits=513, EXACTLY below C_5
+    k=14: final Q-states=60, display relaxed max=2.708982894053642, Q=304, P_bits=613, EXACTLY below C_5
+    k=15: final Q-states=54, display relaxed max=2.664584240966339, Q=384, P_bits=513, EXACTLY below C_5
+    k=16: final Q-states=62, display relaxed max=2.623406249294521, Q=368, P_bits=542, EXACTLY below C_5
+  C_5 = 128/5 - (45/8)*log2(15)
+  decimal = 3.623740399702084
+  extremizers = one-point defects and complements, exactly 64 functions
+  equality after output-folding/translation occurs only at k=1
+
+COVERAGE COUNTS
+  n<=4 exhaustive folded/translated counts: {1: 1, 2: 4, 3: 64, 4: 16384}
+  n=5 actual k<=6 count: 206368
+  n=5 k>=7 covered by exact DP relaxation, not sampling
+CERTIFICATE STATUS: PASS

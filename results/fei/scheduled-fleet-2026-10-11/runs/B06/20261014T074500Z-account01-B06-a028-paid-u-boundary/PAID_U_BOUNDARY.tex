@@ -1,0 +1,109 @@
+\section*{A paid-$U$ stopping theorem with branchwise coordinate reuse}
+
+Let $f:\{-1,1\}^n\to\{-1,1\}$ be Boolean and let $\mathcal T$ be a
+finite physical restriction tree.  At an internal node $v$, reached on the
+cylinder $E_v$ with probability $p_v$, query a coordinate $i_v$ which is
+still unfixed there and write $f_v$ for the restricted Boolean function.
+The same physical coordinate may be queried at different incomparable
+nodes.  It cannot be queried twice on a single path because it is then
+already fixed.
+
+For a Boolean function $g$ and a live coordinate $i$, put
+\[
+ \delta_iU(g)=U(g)-\frac{U(g_{i=1})+U(g_{i=-1})}{2},\qquad
+ q_i(g)=\operatorname{Inf}_i(g),
+\]
+and let $K_i^{(0)}(g)$ be the empty-upper-set row in the exact identity
+\[
+ \delta_iU(g)=B_i(g)-\Gamma_i(g)+K_i(g).
+\]
+Define the non-root residual
+\[
+ \rho_i(g):=\delta_iU(g)-K_i^{(0)}(g)
+ =B_i(g)-\Gamma_i(g)+K_i^{(+)}(g).                 \tag{1}
+\]
+All terms are evaluated on the genuine Boolean child $g$; no arbitrary
+spectral law is introduced.
+
+\paragraph{Exact tree ledgers.}
+For the leaf distribution induced by the fair restrictions,
+\[
+ \sum_{v\in\mathcal T^\circ}p_v\delta_{i_v}U(f_v)
+   =U(f)-\sum_{\ell\in\partial\mathcal T}p_\ell U(f_\ell),               \tag{2}
+\]
+and
+\[
+ \Pi_I(\mathcal T):=\sum_{v\in\mathcal T^\circ}p_v q_{i_v}(f_v)
+   =I(f)-\sum_{\ell\in\partial\mathcal T}p_\ell I(f_\ell).             \tag{3}
+\]
+The second identity is the real influence decrement; in particular no
+queried influence can be charged again at a terminal.
+
+The adaptive Boolean root-row theorem gives, with $c_0=2/\ln2$,
+\[
+ \sum_{v\in\mathcal T^\circ}p_vK_{i_v}^{(0)}(f_v)
+ \le c_0\operatorname{Var}(f).                                         \tag{4}
+\]
+It already permits reuse of a physical coordinate on incomparable
+branches.  Orthogonality of the node wavelets, rather than a bounded
+congestion assumption, is what makes the payment single-use.
+
+\paragraph{Theorem (paid boundary and terminal closure).}
+Fix absolute $A,\kappa\ge0$ and $0\le b<1$.  Suppose that for every
+nonconstant Boolean $f$ there is a finite physical restriction tree such
+that
+\[
+ U(f_\ell)\le\kappa I(f_\ell)\quad\hbox{for every leaf }\ell             \tag{5}
+\]
+and the one aggregate residual estimate
+\[
+ \mathcal R(\mathcal T):=
+ \sum_{v\in\mathcal T^\circ}p_v\rho_{i_v}(f_v)
+ \le A\Pi_I(\mathcal T)+bU(f).                                         \tag{6}
+\]
+Then, for every Boolean $f$,
+\[
+ \boxed{U(f)\le
+ {\max\{A,\kappa\}I(f)+c_0\operatorname{Var}(f)\over1-b}
+ \le {\max\{A,\kappa\}+c_0\over1-b}I(f).}                            \tag{7}
+\]
+Consequently the reviewed reduction $H\le2I+2U$ gives the uniform FEI
+constant
+\[
+ \boxed{H(f)\le
+ \left(2+{2(\max\{A,\kappa\}+2/\ln2)\over1-b}\right)I(f).}            \tag{8}
+\]
+
+\paragraph{Proof.}
+Add (1) over the internal nodes and use (2), (4), and (6):
+\[
+ U(f)-\sum_\ell p_\ell U(f_\ell)
+ \le c_0\operatorname{Var}(f)+A\Pi_I(\mathcal T)+bU(f).
+\]
+Now apply (3) and (5):
+\[
+ (1-b)U(f)
+ \le c_0\operatorname{Var}(f)+A I(f)
+       +(\kappa-A)\sum_\ell p_\ell I(f_\ell).
+\]
+Because (3) implies $0\le\sum_\ell p_\ell I(f_\ell)\le I(f)$, the last
+two terms are at most $\max\{A,\kappa\}I(f)$.  This proves (7), and (8)
+follows from the source reduction.  Constants have $I=U=0$ and are
+separate harmless endpoints.
+
+\paragraph{Relation to GU and the exact unpaid line.}
+At one node, $G(g)=\sum_i\delta_iU(g)$, while (1) removes only the already
+paid root row from the chosen coordinate.  Thus (6) is not a restatement
+of GU and does not assume a GU estimate at every intermediate node.  It is
+an explicitly sufficient global $U$-drift certificate.  Conversely, a GU
+pair $G\le aI+bU$ yields the usual influence-weighted good-coordinate rule
+and the source restriction induction $U\le aI/(1-b)$; the present theorem
+shows exactly what a stopping proof may replace that local rule by.
+
+The remaining universal obligation is therefore precise: find, for every
+Boolean $f$, a finite physical tree satisfying (5)--(6) with one fixed
+triple $(A,\kappa,b)$, $b<1$.  Known LTF-terminal modulation trees certify
+(5) on a proper family, but do not prove (6) for an arbitrary first
+non-flat data collision.  The unresolved summand is the signed residual
+$B_i-\Gamma_i+K_i^{(+)}$; no cancellation, terminal term, normalization,
+or coordinate-reuse cost has been discarded.

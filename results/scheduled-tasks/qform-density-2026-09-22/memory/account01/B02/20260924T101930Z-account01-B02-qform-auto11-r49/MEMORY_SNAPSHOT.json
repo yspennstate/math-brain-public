@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260924T101930Z-account01-B02-qform-auto11-r49",
+  "control_revision": "2026-09-22.15",
+  "control_commit_observed_before_publication": "22adb052955d8920c13c09555c776a9e4ae8e2e1",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FULL_TARGET",
+  "global_unweighted_fourier_l1_status": "OPEN_NOT_REFUTED",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b42e9ca9698f05ad6428f927cea36d8d267cecc2",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260924T101930Z-account01-B02-qform-auto11-r49/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260924T101930Z-account01-B02-qform-auto11-r49/CHECKS.md"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B02/20260924T101930Z-account01-B02-qform-auto11-r49.md",
+    "commit": "93e475bcfbc050f020e05c2952fa93ff25f01adf"
+  },
+  "actual_premises": [
+    "Exact original-coordinate scalar completion and square peel: ||p_Q||inf <= |a|^-1/2 H_1/2(S).",
+    "Translated quadratic kernel from rank-two-fusion: conditional square potential <=8|d|^-1/2 Psi((w-T)/d).",
+    "Completed account02/B01 generic physical-edge theorem: H_1/4(T)<=3.179662567631707 |mu|^-1/4 with arbitrary remaining curvature and affine terms.",
+    "Immediate predecessor r48 live branch has |a|>1/228 and residual certificate |S_jj|>1/912 or row-hub >1/912."
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-PSI-QUARTER-DOMINATION-v1",
+      "statement": "Psi(y)<=4e^-3/4 |y|^-1/4 for y!=0."
+    },
+    {
+      "id": "QFORM-QUARTER-TO-HALF-SQUARE-FUSION-v1",
+      "statement": "For R=d(X+h(Z))^2+T(Z), X an independent original cap-one coordinate, H_1/2(R)<=32e^-3/4 |d|^-1/4 H_1/4(T)."
+    },
+    {
+      "id": "QFORM-TWOPIVOT-EDGE-DENSITY-v1",
+      "statement": "After two successive exact physical scalar pivots a,d, if the second Schur remainder has a literal edge mu!=0, then ||p_Q||inf<=48.06291987045865 |a|^-1/2 |d mu|^-1/4; continuity not claimed."
+    }
+  ],
+  "live_application": "On r48 residual-diagonal branch, if |a|>1/228, |d|>1/912 and the exact second Schur remainder has an edge |mu|>=1/912, then ||p_Q||inf<21916.692. Surviving residual-diagonal branch has every individual second-Schur edge <1/912; no operator-norm conclusion is inferred.",
+  "partner_applied": "account02/B02@6b5539d7c55c495c8b0f410b90dbf704c70c3a50. On its exact target A_* with spectrum {0,0,1,2,2}, pivot W leaves a 2x2 physical crossing I2, so partner QFORM-SCALARPIVOT-FULL2X2-TWOSIDED-DENSITY-v1 gives ||p||inf<201. The new nested theorem further gives <48.063 after an inner pivot with d=1 and residual edge mu=1.",
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY refuted by phase-aligned fragmented densities",
+    "arbitrary-joint rank-three coarea gate is false",
+    "conditional projection positive-moment gate is false",
+    "one physical edge does not automatically supply half-Riesz: (X+Y)^2 obstruction",
+    "local two-sided 2x2 unweighted Fourier-L1 receiver is false"
+  ],
+  "unresolved": "QFORM-R48-SECOND-SCHUR-SMALLEDGE-AGGREGATE-v1: after strong second pivot, control a second Schur remainder whose every individual edge is <1/912 but aggregate ridge/E2 mass can still be large; residual-row-hub branch remains parallel.",
+  "next_step": "Split the small-individual-edge second Schur remainder by aggregate ridge/E2 currency versus truly diagonal-dominated structure, preserving both scalar pivots exactly.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

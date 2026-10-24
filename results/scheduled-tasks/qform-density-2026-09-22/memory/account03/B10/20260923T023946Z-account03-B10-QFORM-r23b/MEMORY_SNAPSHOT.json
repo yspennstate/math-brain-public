@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B10",
+  "run_id": "20260923T023946Z-account03-B10-QFORM-r23b",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "control_revision": "2026-09-22.15",
+  "source_control_refresh_commit": "059a01b4d00d3f5cfa8550b3db4544da14e85454",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "PROVED_ON_DISJOINT_CROSS_CUT_BRANCH_ONLY_IN_THIS RUN; UNRESTRICTED_CONTINUITY_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-NO-UNIFORM-COEFFICIENT-PERTURBATION-CONTINUITY-v1"
+  ],
+  "source_matched_scope": {
+    "id": "QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1",
+    "source": "yspennstate/math-open-problems@80f95e245b7f3418e8da36173ac4eb9d81fb58a7:proofnet24/QFORM-density/fleet-2026-09-22/account01/B16/20260923T003846Z/REPORT.md",
+    "application": "Every exact spectral coloop is uniformly paid: <83.707 for |A_ii|<=1/2 via P>=D/2 and <152.219 for |A_ii|>1/2; hence <153 overall. This closes the active near-null nonzero exact-coloop interpolation, so duplicate work was stopped."
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-PLUECKER-DISJOINT-GRAM-IDENTITY-v1",
+      "status": "PROVED_SUPPORTING_IDENTITY",
+      "statement": "For exact rank three with Parseval row frame R, Pluecker law w_S=det(R_S)^2, and d=P(S cap T=emptyset) for independent S,T~w, one has d=sum_S w_S det(I-R_S^T R_S)."
+    },
+    {
+      "id": "QFORM-SMALL-DISJOINT-MASS-NEARNULL-HUB-STAR-v1",
+      "status": "PROVED_STRUCTURAL_REDUCTION",
+      "statement": "If 0<d<1/64, some original physical coordinate has leverage c_i>1/4. If |A_ii|>=1/64 the scalar-pivot theorem gives ||p_Q||inf<512. Otherwise its normalized spectral row u_i has |u_i^T Lambda u_i|<1/16 and the aggregate physical star satisfies sum_{j!=i} A_ij^2>1023/4096, so ||A_(i,-i)||_2>sqrt(1023)/64>0.499; the signature is indefinite."
+    },
+    {
+      "id": "QFORM-PLUECKER-ENDPOINT-SPLICE-v1",
+      "status": "PROVED_SYNTHESIS",
+      "statement": "For exact rank three, account04/B16 pays d>=1/64 by ||p_Q||inf<=24 with continuity; the d=0 base-packing endpoint is now fully paid by <331 after consuming the exact-coloop interpolation theorem. The only Pluecker collar left is 0<d<1/64, further reduced by the near-null hub/star theorem above."
+    }
+  ],
+  "premises": [
+    {
+      "id": "QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1",
+      "source": "yspennstate/math-open-problems@80f95e245b7f3418e8da36173ac4eb9d81fb58a7:proofnet24/QFORM-density/fleet-2026-09-22/account01/B16/20260923T003846Z/REPORT.md",
+      "scope_used": "exact spectral coloop, scalar independent of two-dimensional product projection, receiver cap M<=2"
+    },
+    {
+      "id": "QFORM-RULED-PLUECKER-ENDPOINT-v1",
+      "source": "yspennstate/math-open-problems@b111363ff02b67015d14db35482e0150591744cd:proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260922T231542Z-account04-B16-QFORM-r1/REPORT.md",
+      "scope_used": "exact rank three: two-sided d>0 cross-cut bound and one-sheet majority-sign bound"
+    },
+    {
+      "id": "QFORM-RANK2-AFFINE-HALF-RIESZ-v1 / exact-rank-three scalar-pivot consequence",
+      "source": "yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md",
+      "scope_used": "orientation-free exact-rank-three scalar pivot: 128[c_i |A_ii| |det Lambda|]^(-1/4)"
+    }
+  ],
+  "designated_partner_status": "Fresh closing lookup still found no completed current-QFORM account04/B10 artifact; no theorem fabricated or awaited.",
+  "partner_result_actually_applied": "Compatible account04/B16 QFORM-RULED-PLUECKER-ENDPOINT-v1: d>=1/64 gives ||p_Q||inf<=24, and the indefinite residual majority-sign side is <=pi sqrt(2).",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "fb89cf89dfe7a8264e2ec613b83f40afb2251957",
+    "report_commit": "91759f77fcdf696a75d8e6c6ef398c03654b025a",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B10/20260923T023946Z-account03-B10-QFORM-r23b/REPORT.md",
+    "checkpoint_commit": "9893ba56a9c9e5262bf04ba73f8119f0d63677ca",
+    "verify_script_commit": "fec39b09e91073e72abc82379b485d6320f22052",
+    "verify_output_commit": "fb89cf89dfe7a8264e2ec613b83f40afb2251957",
+    "verify_result": "PASS; max identity discrepancy 1.4988010832439613e-15 on the deterministic random-frame regression suite"
+  },
+  "handoff_commit": "49d60ec3d4b46b84f9162e4fbde431182621dc8c",
+  "unresolved_implication": "QFORM-SMALL-PLUECKER-MASS-NEARNULL-HUB-STAR-PAYMENT-v1",
+  "next_step": "In exact rank three, pay the minority-sign/two-sheet branch for 0<d<1/64 using the forced original physical hub c>1/4, normalized Rayleigh <1/16 and aggregate star norm >sqrt(1023)/64 while retaining arbitrary within-leaf curvature and product provenance. Aggregate the star before reciprocal local-minor payment; do not use worst conditional projection-density bounds.",
+  "telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_configured": "UNKNOWN",
+    "thinking_tokens": null
+  }
+}

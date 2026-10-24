@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260923T175610Z-account03-B09-QFORM-r38",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit_initial": "2f5398718a7631c33ed52225c90879500bb6575f",
+  "control_commit_prepublication_refresh": "bb101be0183ca3428aa0dfe1a7b380f5efae6d7e",
+  "mathematical_status": "SUPPORTING_DETERMINISTIC_THEOREM_PROVED_PENDING_INDEPENDENT_REVIEW_AND_INTERMEDIATE_FORCE_REFUTED",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "new_theorem": {
+    "id": "QFORM-RANK2-DUAL-AGGREGATE-COLLAPSE-v1",
+    "statement": "For a complete physical rank-two cut A[H,I]=P C^T with P^T P=I2, G=C^TC, Delta=sqrt(det G), opposite singleton third-volume aggregates G_I,G_H and no-coloop gates q_I,q_H<1, there exist a physical diagonal D0, a rank-at-most-four carrier S=U K U^T and retained block-diagonal residual E such that A=D0+S+E and ||E||F <= (sqrt(2)/Delta)[G_I/(1-q_I)+G_H/(1-q_H)]^(1/2). At G_I=G_H=0 the representation is exact.",
+    "spectral_corollary": "If the cut is the whole target matrix, s3(A)>=1, ||D0||op<=tau and the residual bound is eps, then s3(S)>=1-tau-eps; hence tau+eps<1 forces rank S>=3.",
+    "continuity": "NOT_APPLICABLE_DETERMINISTIC_STRUCTURE_ONLY"
+  },
+  "correction": {
+    "id": "QFORM-GSTAR-SCALE-FORCING-FALSE-v1",
+    "status": "REFUTED_INTERMEDIATE_STRUCTURAL_IMPLICATION",
+    "summary": "The target spectral hypothesis cannot force a universal positive lower bound on the rank-two hub/star singleton aggregate G_*. The diffuse Walsh two-frame family has spectrum {-1,-1,1,1}, G_I=G_H=0 exactly, maximum physical cross coefficient 2/N and maximum cross-bank 2x2 principal determinant 4/N^2.",
+    "event_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account03/B09/20260923T175610Z-account03-B09-QFORM-r38/QFORM-GSTAR-SCALE-FORCING-FALSE-v1.json"
+  },
+  "paid_control": {
+    "family": "diffuse Walsh exact-zero-aggregate family",
+    "pluecker_disjointness": "rho_N=(1-2/N)^2",
+    "actual_inequality": "||p_Q||inf <= 2e(1-2/N)^(-1/2), with continuous density and the same coefficient times |L|; at N=512 the constant is 5.447213155188511."
+  },
+  "partner_application": {
+    "partner": "account04/B09",
+    "source_repository": "yspennstate/math-open-problems",
+    "source_commit": "c0d3f34e557a374f41b2639994c43af4f950b682",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B09/20260923T101659Z-account04-B09-dense-self-cross-fourier-r1/REPORT.md",
+    "actual_inequality": "For A=[[0,I3],[I3,0]], ||p_Q||inf<=3 and P{Q in L}<=3|L|, with continuous density."
+  },
+  "late_source_consumed": {
+    "source": "account01/B09 QFORM-FIXEDPAIR-AGGREGATE-FOURVOLUME-v1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T174734Z-account01-B09-QFORM-auto11/REPORT.md",
+    "scope_applied": "Positive fixed-pair anchored fourth-volume U_H is already paid by ||p_Q||inf<8.279 U_H^(-1/8); use as a receiver in the rank-four-carrier pathway."
+  },
+  "source_dependencies": [
+    {
+      "id": "QFORM-RANK2-NOAUGMENT-AGGREGATE-STABILITY-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e8b97d9dcd8dd85cacc8fc73c2be4e86fde4b27a",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T114612Z-account03-B09-QFORM-r31/REPORT.md"
+    },
+    {
+      "id": "QFORM-GROUPED-HUB-PLUCKER-SMOOTHING-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "ba035d3e65b7687b9ec8c05320f6340caabc34bb",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T101630Z-account03-B09-QFORM-r29/REPORT.md"
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b2a0ccad9d4f4d654e0fc84dd0323ce84230ebc4",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T175610Z-account03-B09-QFORM-r38/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T175610Z-account03-B09-QFORM-r38/CHECK.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T175610Z-account03-B09-QFORM-r38/CHECK_OUTPUT.txt",
+    "late_source_note": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T175610Z-account03-B09-QFORM-r38/LATE_SOURCE_NOTE.md"
+  },
+  "handoff": {
+    "commit": "3f55d8396011f7d17b6aacf46998f08a6cfa5107",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B09/20260923T175610Z-account03-B09-QFORM-r38.md"
+  },
+  "next_action": "QFORM-DUAL-SMALL-AGGREGATE-R4-CARRIER-PAYMENT-v1: retain the explicit residual exactly; first solve the exact diagonal-plus-rank<=4 carrier endpoint, routing positive fixed-pair anchored fourth volume through the newly consumed account01/B09 theorem; handle coloop gates via physical localization.",
+  "correction_inbox_refresh": "Consumed fresh live CORRECTION_INBOX at control refresh before publication; the new immutable correction event is written without overwriting peers. Shared projection consolidation may be performed by the authorized B20/owner consolidator if not already merged.",
+  "native_brain_ingestion": "NOT_VERIFIED",
+  "model": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null,
+  "reasoning_effort_status": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

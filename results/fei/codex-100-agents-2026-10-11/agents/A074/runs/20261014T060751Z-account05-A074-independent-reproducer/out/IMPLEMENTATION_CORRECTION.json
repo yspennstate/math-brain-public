@@ -1,0 +1,11 @@
+{
+  "helper_version": "A074-oneflip-direct-character-v5.1",
+  "amended_at": "2026-10-14T06:13:08.718957+00:00",
+  "domain_change": null,
+  "precision_change": null,
+  "reason": "First full run reached dummy coordinate and failed overly strict interval equality test: generic interval subtraction enclosed Phi(x,0)=0 rather than returning exact zero. Added exact symbolic Phi zero-argument and log2 power-of-two branches; no counterexample to mathematical target. Preserve original frozen spec and initial completed checkpoints.",
+  "failed_check": 16861,
+  "failed_command": "python -X utf8 code/verify.py",
+  "helper_sha256": "57776eccc1cd604fe84dcf6cea7ce78be263bc19298f992d85115b120f9357a4",
+  "action": "Rerun pilot then unchanged full domain; do not raise dimension or precision."
+}

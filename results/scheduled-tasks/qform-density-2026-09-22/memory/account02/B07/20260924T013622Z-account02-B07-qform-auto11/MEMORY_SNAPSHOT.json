@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B07",
+  "run_id": "20260924T013622Z-account02-B07-qform-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "initial_control_commit": "255b11f4cb621638cbfe7bb7470dcfe3ed2338df",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "required_corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION"
+  ],
+  "additional_live_scope_restrictions_consumed": [
+    "no arbitrary-joint rank-three coarea cap",
+    "no universally well-conditioned single physical minor",
+    "no deletion of a small nonzero quadratic tail",
+    "continuity separate from essential boundedness"
+  ],
+  "pinned_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "directory": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "completed_result_applied": "general-rank Fresnel--Brascamp--Lieb Theorem F"
+  },
+  "partner_result_applied": {
+    "account": "account03",
+    "slot": "B07",
+    "run": "20260924T004021Z-account03-B07-qform-r42",
+    "math_commit": "e91150711e87a3e9040e3b93333e55ab574d7c01",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260924T004021Z-account03-B07-qform-r42/REPORT.md",
+    "used_equation_scope": "after internal weighted-edge E3 exit fails, sum_{G0} Z_h>0.32768 on low-diagonal anchors with diagonal, J-star and H-internal-star l2 scales all below 1/64"
+  },
+  "premises": [
+    "Previous compatible account02/B07 router at math commit 81d6956476fa400f61d266effb4123a42fe3185c: low-diagonal one-overlap packet W_lo>1/6250, paid physical E3 or E2>=2^-12 with ||K-K2||_F<sqrt(3)2^-9, or diagonal cloud.",
+    "All coordinate banks are original-coordinate banks; no spectral rotation is used for independence.",
+    "Pinned Theorem F permits an arbitrary diagonal twist and arbitrary linear terms, but its rank-r physical leverage gate <=1/2 is checked explicitly."
+  ],
+  "new_results": [
+    {
+      "name": "QFORM-E2-BOUNDED-SUPPORT-BALANCE-v1",
+      "statement": "For rank-r K, e2(KK^T)<= (r-1)s2(K)^2||K||_F^2. Thus for a physical p x q support with |K_ij|<=L, s2(K)>=sqrt(E2/((r-1)pqL^2)); no individual minor is selected."
+    },
+    {
+      "name": "QFORM-R42-R2-BALANCE-AND-BOUNDED-CORE-FALSE-v1",
+      "statement": "There is an exact full-target family satisfying the r42 low-diagonal/low-internal survivor with W=1, E2(K)=1, E3(K)=0 and exact rank-two K, but s2(K)->0 and every fixed-cardinality physical principal block has s3->0."
+    },
+    {
+      "name": "PINNED-E5-FRESNEL-STRESS-BOUND",
+      "statement": "For that exact family the complete non-diagonal rank-five part has leverage <=1/2 and eigenvalue-product one, hence pinned Theorem F gives |phi(t)|<=(4pi)^(5/2)|t|^-5/2 and ||p_Q||_infinity<=20/3, with continuity for the stress family."
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ec29bb4321feffe020e5cb0185d148f2f6de847e",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260924T013622Z-account02-B07-qform-auto11/REPORT.md",
+    "early_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260924T013622Z-account02-B07-qform-auto11/EARLY.md"
+  },
+  "handoff": {
+    "brain_commit": "5ed0820a980189220b968e0e4cbe4b33ef553cd8",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B07/20260924T013622Z-account02-B07-qform-auto11.md"
+  },
+  "first_unpaid_implication": "QFORM-R42-UNBALANCED-R2-PLUS-DIFFUSE-THIRD-RECEIVER-v1: pay the actual arbitrary-curvature survivor uniformly even when the rank-two approximation has s1->infinity and s2->0 at fixed E2, the third large eigenvalue is on a separate diffuse physical direction, and all nonzero tails/outside couplings are retained.",
+  "status": "BOUNDED_SUPPORT_E2_BALANCE / R42_UNBALANCED_R2_CORE_OBSTRUCTION / PINNED_E5_F_APPLIED / FULL_QFORM_OPEN",
+  "full_qform_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

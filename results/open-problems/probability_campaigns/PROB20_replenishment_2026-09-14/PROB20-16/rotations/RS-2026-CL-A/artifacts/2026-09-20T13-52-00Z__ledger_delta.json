@@ -1,0 +1,32 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "claim_id": "RS-2026-CL-A",
+  "date_utc": "2026-09-20",
+  "status": "PROVED PARTIAL / FINITE-STATE-OVERLAP-ENTROPY-TRANSFER + POTTS ALL-TEST OBSTRUCTION / AUDIT-PENDING",
+  "E_framework_before": 1,
+  "E_framework_after": 1,
+  "captured_master_before_report": "4e1a3f89ea04344ca345c9713c10fbecdc4ec9ed",
+  "newest_prior_report": "runs/2026-09-20/2026-09-20T12-45-30Z__report.md",
+  "old_claim": "The 12:45 theorem handled one balanced rank-one vertex-spin graphon: bounded growing-degree LDA forced n theta^2<=1+o(1) through cycle pressure, and every fixed retention rho<1 made the one-dimensional replica overlap L2-subcritical, ruling out all strong tests.",
+  "new_claim": "For every fixed finite-state row-centered graphon kernel W, cycle pressure still forces n theta^2 ||T_W||_op^2<=1+o(1). If the global replica energy obeys the entropy domination ratio R=E_ent(W,mu)/||T_W||_op^2 and rho^2 R<1, the entire noisy likelihood ratio is uniformly bounded in L2, so no test can strongly distinguish. The rank-one model has R=1 exactly. Conversely, the q-state Potts kernel has R>1 for q>=4, and for q>=11 there are alpha<1 and fixed rho<1 for which pre-noise LDA is bounded through every D with D^10/n->0 while an exhaustive balanced-label score strongly distinguishes after noise. Thus finite-state exchangeability plus bounded LDA cannot support the previous all-test conclusion without a nonlinear overlap condition.",
+  "proof_mechanism": "The positive theorem uses even-cycle moments to control the local operator norm, then represents noisy chi-square as a finite-state replica partition function. A new finite-type lemma proves sup_n E exp(gamma n D(hat_nu||nu))<infinity for every gamma<1, so the global inequality Q_K(pi)<=2 E_ent D(pi||nu) closes the second moment whenever rho^2 E_ent/||T_W||_op^2<1. For the Potts obstruction, graph moments are nowhere-zero Z_q-flow counts. Suppressing degree-2 paths in connected bridgeless graphs shows all positive-excess contributions through degree D total O_q(D^10/n), while cycle contributions sum geometrically for alpha<1; hence LDA stays bounded. After noise, a union bound over near-balanced labelings controls the null maximum score, whereas the true latent labeling has mean sqrt(c)(q-1)n^{3/2}/2, giving strong exhaustive distinction when c=alpha rho^2>4 log q/(q-1).",
+  "strictness_example": "For W_q(a,b)=q 1_{a=b}-1 with uniform q-state labels, the one-replica operator has spectral radius one, but the diagonal replica type has energy q-1 and entropy log q, so E_ent>=(q-1)/(2 log q)>1 for q>=4. This explicitly separates the local cycle/Hessian threshold from the global overlap-pressure threshold.",
+  "mao_boundary": "Mao remains a stronger polynomial-time counterexample: his LDA is exactly zero through Theta((log n)^{r-1}) and a polynomial-time rank test survives every fixed positive noise rate. The Potts obstruction here only gives bounded (not zero) polylog-degree LDA and an exponential-time strong test for sufficiently weak fixed noise. Its role is to prove that an unrestricted all-test strengthening is the wrong target for general finite-state graphons, not to weaken Mao's boundary or solve the source problem.",
+  "exact_gap": "The source asks for conditions under which bounded polylog-degree LDA controls higher-degree polynomial distinguishers. The present finite-state theorem controls all tests only under global entropy-overlap domination, while the Potts example shows that natural finite-state models can have a nonlocal overlap state outside that regime. What remains is a degree-sensitive theorem proving that low-degree or moderately higher-degree polynomials cannot exploit such nonlocal overlap states even when exhaustive search can.",
+  "next_attack": "Develop a degree-sensitive expansion of the Potts/balanced-label partition function. Prove that degree-L polynomial tests only access replica types in an O(L/n) neighborhood of the null type, so the nonlocal diagonal overlap responsible for exhaustive detection is invisible until much larger degree. In parallel, try a bounded-LDA robustification of noisy branching-program/product-test Fourier concentration. After two failed pivots, preserve a handoff and take another registered probability bottleneck per owner directive.",
+  "report": {
+    "path": "runs/2026-09-20/2026-09-20T13-52-00Z__report.md",
+    "commit": "1adb9972f03d393d75ae61816dea231b2c9a7dc1",
+    "blob": "8a8c928723b3ba83dbd7811116752703f9992845"
+  },
+  "handoff": {
+    "path": "artifacts/2026-09-20T13-52-00Z__P08_P09_entropy_overlap_handoff.md",
+    "commit": "d4795b27f1043df8a615019b6d8a2e44571f102c",
+    "blob": "17a05f37ec879ac219c510129b0ce68848223346"
+  },
+  "source_ownership_preserved": true,
+  "full_source_claim": false,
+  "email": false,
+  "drive": false,
+  "public_posting": false
+}

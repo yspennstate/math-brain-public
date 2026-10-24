@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260923T111925Z-account03-B04-auto11",
+  "control": {
+    "initial_main_commit": "02e2134e540b7268895d2ffb346725d8f58d8b42",
+    "prepublication_main_commit": "e9da9e142dc86da409d1a46f50044af52f0838c1",
+    "owner_control_revision": "2026-09-22.15",
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "result": {
+    "claim": "QFORM-FOURTHVOLUME-DISJOINT-PAIR-v1",
+    "status": "proved_supporting_theorem_full_target_open",
+    "statement": "For an original-coordinate cross block M with Z4=E4(M)>0, let delta be the maximum of the row- and column-four-set disjointness probabilities for two iid canonical squared-4-minor-volume samples. If delta>0, then the full ambient conditional quadratic form has a continuous C0 density with norm at most 4 sqrt(e) Z4^(-1/8) delta^(-1/16).",
+    "failure_side": "If both disjointness probabilities are below tau, at least 1-2tau of canonical fourth-volume is carried by minors simultaneously meeting one fixed four-row set and one fixed four-column set.",
+    "continuity": "proved in this theorem",
+    "full_qform": "OPEN"
+  },
+  "sources_applied": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "use": "general k-volume product Brascamp-Lieb/Hausdorff-Young Fourier estimate"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "04297a630381fcfcf429b4c5ec560886bebacb39",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T052139Z-account02-B04-qform-auto11/REPORT.md",
+      "use": "arbitrary minor-weight determinant/entropy currency at the weighted AM-GM step"
+    }
+  ],
+  "designated_partner": {
+    "partner": "account04/B04",
+    "completed_current_qform_result_found": false,
+    "note": "fresh canonical brain handoff and math-open-problems subtree lookups returned no current completed artifact; no result fabricated"
+  },
+  "outputs": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f530b239eb7c2cc7d76266532760b7447d2b94ae",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T111925Z-account03-B04-auto11/REPORT.md",
+    "report_blob": "ae1318f1ddac7d15e34d18eb332d0f040efd0bd7",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T111925Z-account03-B04-auto11/CHECKS.json",
+    "handoff_commit": "1dde19a5e2c3bde3ae7f7a5adfbe1587149d3653",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B04/20260923T111925Z-account03-B04-auto11.md"
+  },
+  "next_implication": "QFORM-E4-HUB-OR-RANK3-ROUTING-v1: pay the finite four-row/four-column compound-hub residue using existing third-volume/ridge/star endpoints, or quantitatively force a rank-three tube when E4 is small.",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "notifications_changed": false,
+  "email_changed": false,
+  "scheduler_changed": false
+}

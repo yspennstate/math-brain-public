@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B05",
+  "run_id": "20260923T212921Z-account01-B05-QFORM-auto17",
+  "status": "SUPPORTING_COAREA_THEOREM_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity_status": "OPEN",
+  "branch_continuity_status": "NOT_PROVED_BY_THIS_ROUTE",
+  "primary_result": {
+    "id": "QFORM-PUNCTURED-SHELL-PLATEAU-INTEGRAL-v1",
+    "statement": "With completed curved-shell coefficient A=(C_T/4)K, independent hub density cap m, and L-marginal cap M_L, Q=2HL+2bLP+V^2+alpha L^2+beta L+gamma_0 satisfies ||p_Q||_essinf <= m M_L[2+sqrt(2)+log_+(C_T^2 K^2/(32|b|m^2 M_L^3))], provided the curved shell estimate is available below r_+=1/(2M_L).",
+    "mechanism": "geometric small-shell sum + exact middle-annulus integral of the hub slope against p_L(l)/|l| + large-L hub slope"
+  },
+  "target_valid_corollary": {
+    "family": "Q_b=2HL+2bLP+V^2, with H an independent cap-one original coordinate and (L,P,V) simultaneous orthonormal projections of one cap-one product bank",
+    "spectrum": ["1", "+sqrt(1+b^2)", "-sqrt(1+b^2)"],
+    "diffuse_gate": "max row leverage <=1/64",
+    "nonzero_b_bound": "sqrt(2)[2+sqrt(2)+log_+(C_T^2 K_a^2/(64sqrt(2)|b|))], K_a=23.0813970153476",
+    "endpoint_b0_bound": 12.321378670326451,
+    "near_coloop_interpretation": "O(1+log(1/rho)) where rho=b^2/(1+b^2), improving the previous rho^(-1/6) interface loss on this canonical branch"
+  },
+  "partner_applied": "account02/B05 auto11d completed curved-shell theorem applied to the actual shell event P(Q in I, r<=|L|<=2r)<=A|I|sqrt(r/|b|)",
+  "concurrency_reconciliation": "account02/B05 auto11e independently found a qualitative logarithmic bridge; this run sharpens the plateau step by direct annulus integration and does not claim priority for the qualitative logarithmic observation",
+  "unresolved_implication": "QFORM-SHARED-PUNCTURE-MIDDLE-ANNULUS-GAIN-v1",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B01",
+  "run_id": "20260922T200159Z-account02-B01-qform-r27",
+  "source_control": {
+    "startup_main": "8efb061f07e415755e0fd571d9c085629f585a9c",
+    "prepublication_main": "f290f392bf5ecb8eb7a24fb6ced21b3e4353e7d0",
+    "owner_revision": "2026-09-22.15"
+  },
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "status": "ESSENTIAL_STEP_APPLIED / CORRECTION_APPLIED",
+  "full_target_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "uniform pointwise scalar quadratic-phase decay is false",
+    "unrestricted arbitrary-joint rank-three coarea bound is false",
+    "positive conditional projection-density moment shortcut is false",
+    "worst-level scalar-remainder conditional-density supremum is false",
+    "post-rotation independence is unavailable"
+  ],
+  "new_correction_event": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account02/B01/20260922T200159Z-account02-B01-qform-r27/QFORM-R26-ARBITRARY-JOINT-COAREA-PREMISE-RETRACTED-v1.json",
+  "mathematical_premises": [
+    {
+      "source": "account03/B01 r17",
+      "commit": "b6c3fd34d5c608023be5149189c1e88e66f3baeb",
+      "scope": "translation-uniform scalar Fresnel L^p theorem and unnormalized overlap kernel programme"
+    },
+    {
+      "source": "account03/B01 r17 decoupling addendum",
+      "commit": "e3ea72181ebd1934c889703821a7a9396c5fb853",
+      "scope": "exact overlap kernel K_f and normalized critical logarithmic-loss family f_R"
+    },
+    {
+      "source": "account02/B05 general three-bank scalar core",
+      "commit": "a31006ef311ca9e937f37c62d602d21ada3b1139",
+      "scope": "three independent scalar aggregates with density-normalized 3x3 core sigma_min>=s have density <36/s; residual within-bank dependence remains unpaid"
+    }
+  ],
+  "new_results": [
+    "QFORM-OVERLAP-SHEAR-MIXED-NORM-v1: for cap-L envelope and complex amplitude |a|<=f, every p>=2, q=p/(p-1), affine shear obeys integral_beta (integral_u |K_a(u,alpha u+beta)|^q du)^(p/q) <= pi L^2.",
+    "Scaled cross-intercept form: integral_v (integral_u |K_a(u,t(a0u+bv+r))|^q du)^(p/q) <= pi L^2/(|tb|).",
+    "Leakage-preserving bank identity: arbitrary within-bank phases enter t-dependent complex aggregate amplitudes dominated by the aggregate marginal; their overlap kernels retain the same shear budgets.",
+    "QFORM-CROSS-EDGE-POINTWISE-v1: every actual physical off-diagonal b=A_ik!=0 gives |phi_Q(t)|<=min(1,sqrt(pi/(|tb|))) with all other couplings retained.",
+    "B01 r26 correction: unrestricted arbitrary-joint coarea premise is retracted; its concrete Hadamard weighted trace is independently salvaged by cube domination with E||p_(Q3|Q')||_infinity<=4*pi.",
+    "Exact weighted scalar-trace Fourier interface uses the unnormalized complex measure mu_t(db)=E[e^{itQ3};Q' in db], not division by p_Q'(b)."
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b3f18a11f29e878b69278f6487fe50b4e3380d99",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260922T200159Z-account02-B01-qform-r27/REPORT.md"
+  },
+  "handoff": {
+    "commit": "8ea2261ad6f4fd406fef1e6fee280178525f6bde",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B01/20260922T200159Z-account02-B01-qform-r27.md"
+  },
+  "unresolved_implication": "QFORM-LEAKAGE-SAFE-THREE-BANK-OVERLAP-SYNTHESIS-v1",
+  "next_step": "Use the exact bank-level overlap identity to derive a multi-bank Brascamp-Lieb or signed-Fejer estimate whose currency is cross-bank structure of the total quadratic form, so cancelable compressed diagonal curvature is never counted as independent credit.",
+  "computation_status": "No numerical computation used as mathematical evidence."
+}

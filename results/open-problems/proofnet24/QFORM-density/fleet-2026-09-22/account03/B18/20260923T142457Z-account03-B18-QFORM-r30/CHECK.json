@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T142457Z-account03-B18-QFORM-r30",
+  "theorem": "QFORM-ALIGNED-RANK2-SCHUR-OFFCOLLISION-v1",
+  "status": "PASS",
+  "symbolic_checks": {
+    "schur_cross_update": "B_a = B - c d^T/a",
+    "aligned_parameter": "theta = d^T B^+ c = delta^T Sigma^{-1} gamma",
+    "determinant_identity": "det(Sigma-gamma delta^T/a)=Delta*(a-theta)/a",
+    "postpivot_singular_product": "Delta_a=Delta*|a-theta|/|a|",
+    "density_bound": "8*Delta^(-1/4)*(|a|*|a-theta|)^(-1/4)",
+    "partner_bound": "4*sqrt(2)*|r|^(-1/2)*Delta^(-1/8)*(|a|*|a-theta|)^(-1/8)"
+  },
+  "example_Q0": {
+    "Delta": 1,
+    "theta": 1,
+    "a": 2,
+    "characteristic_polynomial": "lambda*(lambda-3)*(lambda-1)*(lambda+1)^2",
+    "spectrum": [3, 1, -1, -1, 0],
+    "large_eigenvalue_count": 4,
+    "bound": 6.727171322029716
+  },
+  "example_Q1": {
+    "characteristic_polynomial": "lambda*(lambda-4)*(lambda-1)^2*(lambda+1)^2",
+    "spectrum": [4, 1, 1, -1, -1, 0],
+    "large_eigenvalue_count": 5,
+    "partner_bound": 5.187358218604039
+  },
+  "source_match": {
+    "primary": "Livshyts-Paouris-Pivovarov, arXiv:1507.07949, k=2 orthogonal marginal density <=2 for cap-one product laws",
+    "internal_half_riesz": "yspennstate/math-open-problems@d01d9d8a4d7664bfb2ae9c6da3f4d41867ddac16",
+    "designated_partner": "yspennstate/math-open-problems@4ea84670b15b538f2163d53bf31f81cd1f1eabfa"
+  },
+  "correction_guards": [
+    "NO_POST_ROTATION_INDEPENDENCE",
+    "NO_POINTWISE_LAW_UNIFORM_QUADRATIC_VDC",
+    "NO_ARBITRARY_JOINT_COAREA",
+    "NO_CONDITIONAL_CAP_AS_INDEPENDENCE",
+    "NO_FIXED_GOOD_MINOR_EXTRACTION",
+    "NO_SMALL_NONZERO_TO_ZERO_PERTURBATION"
+  ],
+  "continuity": "NOT_CLAIMED",
+  "full_target": "OPEN"
+}

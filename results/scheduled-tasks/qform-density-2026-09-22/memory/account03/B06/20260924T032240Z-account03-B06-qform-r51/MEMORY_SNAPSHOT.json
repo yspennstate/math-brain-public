@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260924T032240Z-account03-B06-qform-r51",
+  "control": {
+    "startup_commit": "d5fea91584899bb4ce292dfcc49410064c552ac9",
+    "publication_refresh_commit": "5eae7feafe693618083d0e2342554d2c4af06ee4",
+    "owner_control_revision": "2026-09-22.15",
+    "programme_revision": "2026-09-22.5",
+    "sole_target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES"
+  },
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "source_corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "critical rank-one same-bank half-Riesz endpoint refuted in live correction ledger"
+  ],
+  "premises": [
+    {
+      "id": "R50-SINGULART-CORE",
+      "source": "yspennstate/math-open-problems@8bef4dcb05d0c755e9c8df8f01e72c225dee2614:proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T021836Z-account03-B06-qform-auto11-r50/REPORT.md",
+      "scope": "exact shear-flat singular-T normal form; rank-three core A0=R^T M3 R; exact pseudodeterminant split P=P_tan+P_sh"
+    },
+    {
+      "id": "EXACT-RANK-CROSSING",
+      "source": "yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+      "scope": "exact rank-r original-bank crossing with arbitrary within-bank measurable functions; r=3 gives continuous density <=6 Delta^-1/3 under product projection caps"
+    },
+    {
+      "id": "DESIGNATED-PARTNER-R3",
+      "source": "yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b:proofnet24/QFORM-density/fleet-2026-09-22/account04/B06/20260924T001014Z-account04-B06-QFORM-r3/REPORT.md",
+      "scope": "tangential shared leakage absorption; diffuse two-frame off-fold joint density <=4/(|lambda| r)"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-RANK3-PLUCKER-DISJOINT-CROSS-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For A=R^T M R + D with rank(R)=3, M invertible symmetric, D diagonal, P=|det M|det(RR^T), and Omega3 the disjointness probability of two iid determinant-squared physical triples, the full scalar form has a continuous C0 density with ||p_Q||_infinity <= 12 P^(-1/3) Omega3^(-1/6) whenever Omega3>0. At Omega3>=2^-12 this is <=48 P^(-1/3)."
+    },
+    {
+      "id": "QFORM-RANK3-LOWDISJOINT-THREEHUB-CERT-v1",
+      "status": "PROVED_STRUCTURAL_CERTIFICATE",
+      "statement": "If Omega3<2^-12, some positive-Pluecker-weight literal physical triple H supports more than 15/16 of the squared coefficient mass of a unit direction in range(A0)."
+    },
+    {
+      "id": "R51-SINGULART-SHEAR-PAYMENT",
+      "status": "PROVED_SCOPED_TARGET_LEVEL_CONTINUOUS_BRANCH",
+      "statement": "For the r50 singular-T core, Omega3>=2^-12 gives the full scalar continuous-density bound <=48 P^-1/3 while retaining the complete diagonal same-bank phase D; in particular <=48[(|lambda| det(EE^T)/|det H|)||Hv||^2]^-1/3."
+    }
+  ],
+  "partner_result_applied": {
+    "source": "yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b",
+    "actual_inequality": "On max_j alpha_j<=1/2 and r=1/64, ||g_off||_infinity<=256/|rho|; if |det H||rho|>=P/2 then <=512|det H|/P.",
+    "scope_guard": "two-output off-fold C0 density only; not promoted through same-bank diagonal D"
+  },
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "9383edfaa2404770902b844e7ebcddfb7a067136",
+    "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T032240Z-account03-B06-qform-r51/",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B06/20260924T032240Z-account03-B06-qform-r51.md",
+    "handoff_commit": "319ccc16167e5ef792d3edaeab21cf89c19a5d87"
+  },
+  "finite_checks": {
+    "status": "SANITY_CHECK_ONLY",
+    "tested_n": [6, 7, 9],
+    "max_normalized_cross_volume_error": 1.3e-15,
+    "terminal_marker": "QFORM_B06_R51_CHECK_PASS"
+  },
+  "unresolved": {
+    "full_conjecture": "OPEN_NOT_PROVED_NOT_DISPROVED",
+    "global_continuity": "OPEN",
+    "next": "QFORM-THREEHUB-9375-LOCALIZED-CURVED-RECEIVER-v1: consume the low-disjointness 15/16 three-hub certificate with a dependence-safe scalar curved receiver retaining D and all residual/tail curvature."
+  },
+  "model": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+    "reasoning_effort_requested": "maximum actually supported",
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null
+  }
+}

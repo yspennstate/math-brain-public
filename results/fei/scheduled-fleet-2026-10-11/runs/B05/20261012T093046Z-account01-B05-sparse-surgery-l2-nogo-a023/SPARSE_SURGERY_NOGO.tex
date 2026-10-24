@@ -1,0 +1,167 @@
+\section*{A sparse odd-surgery obstruction to a selector-only averaged payment}
+
+All logarithms in $U$ are base two.  Natural logarithms are used inside the
+local scalar $\Phi$.  This note continues the independently accepted
+odd-surgery identity and proves that its edit-count dependence cannot be
+removed by bounding the retained charge solely by fresh selector influence.
+
+\subsection*{Setup and the frozen proposed improvement}
+
+Let $k=2r$ and take the standard quadratic bent function
+\[
+ g(x,y)=(-1)^{x\cdot y},\qquad x,y\in\mathbb F_2^r.
+\]
+Put $\delta=2^{-2r}$ and $\alpha=\sqrt\delta=2^{-r}$.  If $h$ is obtained
+from $g$ by flipping an odd set $E$ of $m$ inputs, write
+\[
+ a_T=\widehat g(T),\quad e_T=\widehat h(T)-\widehat g(T),
+ \quad \rho_T={e_T\over a_T}.
+\]
+Bentness gives $|a_T|=\alpha$ and
+\[
+ \mathbb E_T\rho_T^2=\sum_Te_T^2=4m\delta.               \tag{1}
+\]
+Here and below $T$ is uniform on the $2^{2r}$ Fourier sets.
+
+The previous odd-surgery proof bounded its coherent scalar pointwise and got
+a constant $O(m)$.  The proposed next step was an averaged replacement
+proportional to (1), with an absolute constant.  We show that no such bound
+exists.  More strongly, for a one-bit fresh selector, the complete retained
+child charge divided by physical selector influence is unbounded.
+
+\subsection*{The upper-cap averaging operator}
+
+Define
+\[
+ (Pz)(T)=2^{|T|-2r}\sum_{Q\supseteq T}z(Q).              \tag{2}
+\]
+Thus $P$ is positive, $P1=1$, and it contracts the sup norm.  In the notation
+of the accepted scalar identity,
+\[
+ v=2\rho+\rho^2,\qquad w=2p\rho+p^2\rho^2,\qquad u=Pv.  \tag{3}
+\]
+
+For a single coordinate pair, let the truth-input state be
+$0=(0,0),1=(1,0),2=(0,1),3=(1,1)$.  In the orthonormal bent-modulated
+character basis $\varphi_z(Q)=\sigma_Q\chi_Q(z)$, the Gram matrix of $P$ is
+\[
+ G={1\over16}\begin{pmatrix}
+ 5&-3&-3&3\\
+ -3&9&5&-9\\
+ -3&5&9&-9\\
+ 3&-9&-9&13
+ \end{pmatrix}.                                         \tag{4}
+\]
+Consequently a fixed state $3$ has amplification $13/16$, whereas the
+signed free pair supported on states $\{1,3\}$ with coefficients $(1,-1)$
+has amplification
+\[
+ {(0,1,0,-1)G(0,1,0,-1)^t\over2}={5\over4}.             \tag{5}
+\]
+
+\subsection*{The growing sparse edit family}
+
+Let $s=\lceil r/3\rceil$.  Form the product edit set $E_r^0$ by fixing the
+first $s$ input pairs to state $3$ and allowing each remaining pair to be
+state $1$ or state $3$.  Remove the all-state-$3$ point and call the result
+$E_r$.  Then
+\[
+ M:=|E_r^0|=2^{r-s},\qquad m:=|E_r|=M-1
+\]
+is odd, and
+\[
+ m\alpha<2^{-s}\longrightarrow0.                        \tag{6}
+\]
+Thus the family lies eventually far inside the accepted sparse regime
+$m2^{-k/2}\le1/32$, and every relative coefficient perturbation tends
+uniformly to zero:
+\[
+ \|\rho\|_\infty\le2m\alpha<2^{1-s}.                    \tag{7}
+\]
+
+Before removing the point, tensorization of (4)--(5) gives the exact
+amplification
+\[
+ A_r=\left({13\over16}\right)^s
+     \left({5\over4}\right)^{r-s}.                      \tag{8}
+\]
+The removed point has amplification $(13/16)^r$.  The reverse triangle
+inequality therefore gives, for the actual odd edit set,
+\[
+ {\|P\rho\|_2^2\over\|\rho\|_2^2}
+ \ge L_r:=
+ {\left(\sqrt{MA_r}-\sqrt{(13/16)^r}\right)^2\over M-1}.\tag{9}
+\]
+Since $s/r\to1/3$,
+\[
+ {1\over r}\log A_r\longrightarrow
+ {1\over3}\log{13\over16}+{2\over3}\log{5\over4}>0.  \tag{10}
+\]
+Hence $L_r\to\infty$.  In particular
+\[
+ D_r:={\|P\rho-\rho\|_2^2\over\|\rho\|_2^2}
+ \ge(\sqrt{L_r}-1)^2\longrightarrow\infty.              \tag{11}
+\]
+
+\subsection*{From amplification to the complete retained charge}
+
+Use a one-bit selector, so $p=1/2$, and let $J_r$ be the complete charge
+\[
+ J_r=U(F)-\tfrac12U(g)-\tfrac12U(h).
+\]
+The accepted exact decomposition is
+\[
+ J_r={1\over\ln2}\mathbb E_T\Phi_{1/2}(u_T,v_T,w_T)
+       +\tfrac14K_r,                                    \tag{12}
+\]
+because the $(1-2p)I_{\rm ctl}$ term vanishes.  The selector influence is
+\[
+ I_{\rm ctl}=m\delta.                                   \tag{13}
+\]
+
+The exact Taylor expansion at the origin has linear term
+$pv-w=p(1-p)\rho^2$ and quadratic term
+\[
+ {p(1-p)\over2}(u-2\rho)^2.
+\]
+Equations (3), (7), and sup-norm contraction of $P$ make all arguments tend
+uniformly to zero.  More explicitly, on a fixed neighbourhood
+$|u|,|v|,|w|\leq\eta<1$ all third derivatives of the logarithmic summands
+in $\Phi_p$ are bounded.  Hence the pointwise remainder is at most
+$C\varepsilon_r(u^2+v^2+w^2)$, where
+$\varepsilon_r=\max_T|\rho_T|\to0$.  Since
+$u=2P\rho+O(\varepsilon_r^2)$, $v=2\rho+O(\varepsilon_r^2)$ and
+$w=\rho+O(\varepsilon_r^2)$, averaging the remainder is
+$o(\|\rho\|_2^2+\|P\rho-\rho\|_2^2)$.  Taylor's theorem therefore yields
+\[
+ \mathbb E\Phi_{1/2}(u,v,w)
+ ={1\over4}\left[\|\rho\|_2^2
+          +2\|P\rho-\rho\|_2^2\right]
+ +o\!\left(\|\rho\|_2^2+\|P\rho-\rho\|_2^2\right).     \tag{14}
+\]
+By (1), one quarter of $\|\rho\|_2^2$ equals $m\delta=I_{\rm ctl}$.
+
+Finally, $U(e)\ge0$ and $0\le2r-|T|\le2r$ imply
+\[
+ K_r=U(e)-\sum_Te_T^2(2r-|T|)\ge-2r\sum_Te_T^2.
+\]
+Thus $(1/4)K_r\ge-2rI_{\rm ctl}$.  Combining this with
+(11)--(14) proves
+\[
+ {J_r\over I_{\rm ctl}}
+ \ge {1+2D_r+o(1+D_r)\over\ln2}-2r\longrightarrow\infty.\tag{15}
+\]
+
+\paragraph{Conclusion.}
+There is no absolute $C$ such that every odd sparse bent-core point surgery
+activated by a fresh selector satisfies $J\le C I_{\rm ctl}$.  Equivalently,
+the proposed $L_2$ scalar payment by $p\sum_Te_T^2$ is false even while
+$m2^{-k/2}\to0$.  The earlier $O(m)$ theorem remains correct; this result
+shows that some edit-count or data-core currency is genuinely necessary for
+this mechanism.
+
+This is not a counterexample to FEI or GU'.  The edited bent cores carry
+physical data-coordinate influence that (15) deliberately does not charge.
+The next viable route must debit a single-use data-edit/terminal packet, or
+prove a global cancellation across descendants; selector influence alone
+cannot pay arbitrary changing coherent cores.

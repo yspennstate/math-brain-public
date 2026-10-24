@@ -1,0 +1,168 @@
+% A041, 2026-10-12. Natural logarithms unless explicitly stated.
+\section{Biased pivotal intervals: a multiscale spectral rank payment}
+\label{a041:replacement}
+Let $X_j$ be independent Bernoulli variables with $0<q_j<1$,
+$v_j=4q_j(1-q_j)$, and let
+$f=2\mathbf1_{\{\sum_j w_jX_j\ge t\}}-1$, with arbitrary positive real
+weights. Zero weights are deleted; negative weights can be oriented by
+replacing $X_j$ with $1-X_j$, and replacing $q_j$ accordingly.
+Write $P(S)=\widehat f_\mu(S)^2$, $I_i=\sum_{S\ni i}P(S)$,
+$I=\sum_iI_i$, and $\Delta=I-\operatorname{Var}_\mu(f)$.
+All Fourier transforms below use the orthonormal product basis.
+
+For each $i$ with pivotal probability $\rho_i>0$, put
+\[
+ d_i=\mathbf1_{\{t-w_i\le\sum_{j\ne i}w_jX_j<t\}},\qquad
+ \nu_i(B)=\widehat d_i(B)^2/\rho_i.
+\]
+Then $\nu_i$ is a probability law and
+$P(B\cup\{i\})=v_i\widehat d_i(B)^2$, $I_i=v_i\rho_i$.
+For integer $r\ge1$, define
+\[
+ U_{i,r}=\{j\ne i:w_j\ge w_i/r\},\quad
+ L_{i,r}=2\sum_{j\in U_{i,r}}\min(q_j,1-q_j),\quad
+ K_{i,r}(B)=|B\cap U_{i,r}|.
+\]
+Terms with $L_{i,r}=0$ have rank score zero.
+
+\paragraph{The replacement estimate.}
+For every arity, all real weights, all thresholds, all interior biases,
+every $i,r$, and $0<\varepsilon\le1$,
+\begin{equation}\label{a041:noise}
+ \mathbb E_{\nu_i}(1-\varepsilon)^{K_{i,r}}
+ \le \min\{1,r/\sqrt{\varepsilon L_{i,r}}\}.
+\end{equation}
+Here $0^0=1$. Consequently, with $C_0=3+\ln2$,
+\begin{equation}\label{a041:fixedrank}
+ \mathbb E_{\nu_i}\ln^+
+ \frac{L_{i,r}}{r^2(K_{i,r}+1)}\le C_0.
+\end{equation}
+There is also a simultaneous, sample-dependent choice of scale with a
+fixed normalized prior: let $r_k=2^k$ and
+$\pi_k=1/[(k+1)(k+2)]$, $k\ge0$, so $\sum_k\pi_k=1$. Define
+\[
+ R_i(B)=\sup_{k\ge0}
+ \frac{\pi_k^2L_{i,r_k}}{r_k^2(K_{i,r_k}(B)+1)}.
+\]
+Then
+\begin{equation}\label{a041:multiscale}
+ \nu_i(\ln^+R_i>u)\le
+ \min\{1,\sqrt{2e}\,e^{-u/2}\},\quad u\ge0,
+ \qquad \mathbb E_{\nu_i}\ln^+R_i\le C_0.
+\end{equation}
+In particular,
+\begin{equation}\label{a041:global}
+ \sum_i\sum_{S\ni i}P(S)\ln^+R_i(S\setminus\{i\})
+ \le (3+\ln2)I.
+\end{equation}
+The estimate is in nats; division by $\ln2$ gives bits.
+The scale cost has not been discarded: it is $2\ln(1/\pi_k)$ inside
+the logarithmic score. No claim is made that this score pays the whole
+corrected entropy.
+
+\paragraph{Proof of the geometric step.}
+On each fiber outside $U_{i,r}$, a strict chain in the support of $d_i$
+contains at most $r$ points. Indeed, $r$ strict inclusions change at
+least $r$ distinct bits and increase the sum by at least $w_i$, whereas
+two points in the half-open pivotal interval differ in score by strictly
+less than $w_i$. Any finite poset of height at most $r$ is the disjoint
+union of at most $r$ antichains: label an element by the length of a
+longest chain ending there. This remains true on every subcube.
+An antichain in a fair cube of dimension $a$ has density at most
+$c_a=2^{-a}\binom{a}{\lfloor a/2\rfloor}\le(a+1)^{-1/2}$.
+For completeness, at even $a=2b$ the central densities have ratio
+$(2b+1)/(2b+2)$; induction uses
+$(2b+1)(2b+3)\le(2b+2)^2$. The odd case follows by the same ratio.
+The combinatorial antichain bound is Sperner's theorem.
+
+\paragraph{Proof of the refresh step.}
+Refresh only coordinates of $U_{i,r}$, independently at rate
+$\varepsilon$, from their original Bernoulli laws. Conditional on the
+original input, represent a refreshed coordinate as a fair bit with
+probability $2\min(q_j,1-q_j)$ and otherwise its more likely fixed
+value. Thus the independent fair-activation count $F$ has mean
+$\varepsilon L_{i,r}$. Conditional on all activations and all fixed
+values, the pivotal support is the union of at most $r$ antichains on
+the $F$ fair bits. Uniformly in the original input,
+\[
+ \mathbb P(d_i(X')=1\mid X)\le r\mathbb E(F+1)^{-1/2}
+ \le r[\mathbb E(F+1)^{-1}]^{1/2}
+ \le r/\sqrt{\varepsilon L_{i,r}}.
+\]
+The last inequality follows from the exact integral
+\[
+ \mathbb E(F+1)^{-1}=\int_0^1\prod_j(1-s_j+s_jz)\,dz
+ \le\int_0^1e^{-\varepsilon L_{i,r}(1-z)}\,dz
+ \le(\varepsilon L_{i,r})^{-1}.
+\]
+Multiply by $d_i(X)$ and average. Biased orthonormal noise gives
+\[
+ \mathbb E[d_i(X)d_i(X')]
+ =\sum_B\widehat d_i(B)^2(1-\varepsilon)^{K_{i,r}(B)}.
+\]
+Divide by $\rho_i$ and also use the trivial bound one. This proves
+\eqref{a041:noise} without using event-conditioned input correlation.
+
+\paragraph{Tail and scale mixture.}
+Put $a=L_{i,r}/r^2$. For $T>0$, the event $a/(K+1)>T$ is empty
+if $b=a/T\le1$. Otherwise take $\varepsilon=1/(2b)$.
+On $K+1<b$, the multiplier $(1-\varepsilon)^K$ is at least
+$(1-1/(2b))^{b-1}$, whose reciprocal is at most $\sqrt e$:
+\[
+ -(b-1)\ln(1-1/(2b))\le(b-1)/(2b-1)\le1/2.
+\]
+Equation \eqref{a041:noise} therefore gives
+\[
+ \nu_i(a/(K+1)>T)\le\sqrt{2e/T}.
+\]
+For the multiscale supremum, substitute $T=e^u/\pi_k^2$ and
+use countable subadditivity. The bounds sum to
+$\sqrt{2e}\,e^{-u/2}\sum_k\pi_k$. Integrating the bound capped at
+one gives
+$\ln(2e)+2=3+\ln2$. Fixed-scale integration gives the same constant.
+Finally multiply by $I_i$ and sum to obtain \eqref{a041:global}.
+
+\paragraph{Deterministic endpoints and zero energy.}
+Freeze all inputs with $q_j\in\{0,1\}$, adjust the threshold, and
+delete these coordinates before applying the theorem. Discard $i$ with
+$\rho_i=0$. If the contracted gate is constant there are no terms.
+This convention proves the endpoint statement directly, rather than
+dividing by a vanishing variance. The finite inequalities also extend
+continuously wherever their displayed ratios are defined.
+
+\paragraph{The precise remaining entropy obligation.}
+The singleton part is already paid, for every monotone Boolean gate:
+\[
+ \sum_iP(\{i\})\ln\frac{v_i}{P(\{i\})}
+ =2\sum_iv_i\rho_i^2\ln(1/\rho_i)
+ \le2\sum_iv_i\rho_i(1-\rho_i)\le4\Delta.
+\]
+Here $-\rho\ln\rho\le1-\rho$ and
+$\sum_i v_i\rho_i(1-\rho_i)=\sum_{|S|\ge2}|S|P(S)\le2\Delta$.
+Thus the full target is precisely a constant times $\Delta$ payment of
+\[
+ E_{\ge2}=\sum_{|S|\ge2}P(S)\ln(v_S/P(S)).
+\]
+The first unsupported line of the proposed extension is any assertion
+that the paid rank scores in \eqref{a041:global}, together with
+singleton control, bound $E_{\ge2}$ by $O(\Delta)$ uniformly. A
+normalized reference or another entropy argument supplying that
+implication is still required. An $O(I)$ rank bound cannot silently
+be changed to $O(\Delta)$ near dictators.
+
+\paragraph{Relation to recovered controls and composition.}
+For the two-branch control $w_0=m,w_j=1,q=m^{-2}$, every
+$L_{i,r}\le2[mq+\min(q_0,1-q_0)]<2$; since $\pi_0^2=1/4$,
+the multiscale scores are all at most $1/2$, and their positive
+logarithms vanish. At fixed $m$ as $q\downarrow0$, the same conclusion
+holds eventually for $q_0=q^m/(1+q^m)$. The bounds therefore survive
+both weighted regimes directly, but do not claim to pay their physical
+TC. The failure of the recovered pivotal normalization remains exactly
+coefficient one; this theorem asserts nothing about larger multipliers.
+If the remaining bound $E_{\ge2}\le K\Delta$ were proved for all
+weighted gates and biases, it would give corrected FEI+ in bits with
+constant $(K+4)/\ln2$. The exact disjoint composition identities in
+\texttt{biased.tex}, Lemma \texttt{biasfull:composition}, would then
+give the same constant for read-once formulas over those gates (and
+other gates satisfying that constant), independent of depth. That
+consequence is conditional, not an established extension here.

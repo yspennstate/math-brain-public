@@ -1,0 +1,17 @@
+Deterministic/numerical verification for account03-B01-20260923T042838Z-auto11
+
+5000 seeded random rank-two 3xm cross matrices K and symmetric 3x3 center blocks B were checked for the algebraic identity
+  det([[B,KV],[(KV)^T,0_2]]) = (v^T B v) * (sigma_1(K)sigma_2(K))^2,
+where v spans ker(K^T) and V spans range(K^T).
+
+maximum relative discrepancy = 2.9074007255066436e-13
+
+Constant checks:
+  C4 = (81*pi/2)^(1/4) = 3.358545404760743
+  Cmain = (15/4)*6^(2/5) = 7.678771916547072 < 7.679
+  p=5/2 general-form constant = 6.075814030397521
+  simplified p=5/2 constant = 7*3^(8/7)/(2^(5/14)*5^(5/7)) = 6.075814030397519 < 6.076
+  difference between the two p=5/2 evaluations = 1.7763568394002505e-15
+
+The random calculation is a regression check only; the proof in REPORT.md is analytic.
+STATUS=PASS

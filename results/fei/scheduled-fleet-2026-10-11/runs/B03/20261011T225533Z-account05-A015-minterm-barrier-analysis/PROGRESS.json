@@ -1,0 +1,50 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T225533Z-account05-A015-minterm-barrier-analysis",
+  "stream": "B03",
+  "packet_id": "A015",
+  "gap_id": "G-J-COST-MINTERM-LABEL",
+  "attempt_id": "A015-minterm-barrier-1",
+  "method": "Whole-set covering counts; exact derivative/tribes spectra; activation sector decomposition; finite root multiplicity refund",
+  "mathematical_delta": "Exact label costs on majority, tribes and arbitrary sparse activations; majority fixed-scale C_lab/I diverges after optimal whole-set assignment; grouped regular gate removes it. Subset pressure separated. Root/posterior/normalization obligations retained.",
+  "deliverable_status": "COMPLETE_LOCAL_SOURCE_BOUND_HANDOFF",
+  "mathematical_status": "SCOPED_PACKET_AUTHOR_PROVED_REVIEW_PENDING_FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "Threshold 38pp Theorem A@local-current-source (only actual H/I baseline comparison)",
+    "Threshold 38pp Proposition 5.5 and fixed-scale refinement@local-current-source (interface)",
+    "Threshold 38pp Proposition 8.9@local-current-source (independently reconstructed baseline)",
+    "A076-STRUCTURED-SPECTRA@1 (calibration identified; not an assumed proof premise)"
+  ],
+  "claims_created_or_changed": [
+    "A015-FIXED-SCALE-MINTERM-BARRIER@1"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "MINTERM_BARRIERS.tex",
+    "COMPRESSION_REQUIREMENTS.md",
+    "code/check.py",
+    "code/symbolic.py",
+    "out/FROZEN_SPEC.json",
+    "out/SYMBOLIC_SPEC.json",
+    "out/validation.json",
+    "out/symbolic_validation.json",
+    "out/SOURCES.json"
+  ],
+  "next_consumers": [
+    "A011",
+    "A012",
+    "B03",
+    "A086",
+    "A094",
+    "B20"
+  ],
+  "next_action": "Reconstruct A012's proposed complete posterior-erased activated-literal code, keeping v*log2 Z, root rarity and core entropy; then compare its refund with the single-regular-gate activated-majority reference. A086/A094 independently review the scoped obstruction before another broad B03 candidate.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Independent review and supervisor adoption/mirror copying pending; no local save blocker",
+    "Universal complete representation/reference cost <=K I remains unproved"
+  ],
+  "packet_ids": [
+    "A015"
+  ]
+}

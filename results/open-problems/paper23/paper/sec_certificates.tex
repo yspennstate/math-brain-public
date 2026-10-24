@@ -1,0 +1,131 @@
+\section{Certificates and the certification gap}\label{sec:certificates}
+
+Fragility has a robustness companion. The same operator-norm bracket that upper-bounds the network
+Lipschitz constant gives, at every input, a radius inside which no perturbation can change the
+output; this is a genuine certificate, valid for all inputs with no exceptional set. Comparing it with
+the fragility radius of \Cref{thm:master} shows that the $1/\sqrt n$ scale is sharp in both
+directions. We then prove the theorem that explains why one cannot do better by enumerating gate
+patterns: any certificate required to hold over all patterns of a fixed density inherits the
+worst-case conditioning, which is exponentially small by the product rate of \Cref{thm:product}.
+
+\subsection{The Lipschitz certificate}
+\begin{theorem}[Uniform robustness certificate]\label{thm:certificate}
+Under the hypotheses of \Cref{thm:master} (fragility not required; only the Gaussian weights and the
+wide regime), let
+\[
+  L_{\mathrm{net}}=\|w\|\prod_{\ell=1}^L\bigl(2\sqrt{\kappa(c_1)}\bigr)
+\]
+with $c_1$ the gate-density upper bound of \Cref{ass:nondeg}. Then w.h.p.\ $F$ is
+$L_{\mathrm{net}}$-Lipschitz on the sphere, and consequently, for every input $x$, no perturbation of
+Euclidean norm less than $|F(x)|/L_{\mathrm{net}}$ changes the sign of $F$. This certified radius holds
+for \emph{all} inputs with no exceptional set.
+\end{theorem}
+
+\begin{proof}
+For any $x,x'$ the difference $F(x')-F(x)$ is bounded by the operator norm of the Jacobian integrated
+along the segment; on each cell of the arrangement (\Cref{lem:arrangement}) the Jacobian is a fixed
+product of gated blocks, whose operator norm is at most
+$\|w\|\prod_\ell\max_{|T_\ell|,|S_\ell|\le c_1 n_\ell}\|P_{T_\ell}W_\ell P_{S_\ell}\|_\op\le
+\|w\|\prod_\ell(2\sqrt{\kappa(c_1)}+o(1))$ by \Cref{prop:A2}, uniformly over cells by the union bound
+(the count is $(C\bar n)^{dL}$ and each operator-norm bound fails with probability $e^{-cn}$). Since
+the gate densities are at most $c_1$ everywhere by \Cref{ass:nondeg}, this bounds the Lipschitz
+constant on every cell, hence on the sphere. A perturbation smaller than $|F(x)|/L_{\mathrm{net}}$
+changes $F$ by less than $|F(x)|$, so cannot change its sign.
+\end{proof}
+
+The subgaussian version, with an absolute constant $C(K)$ in place of $2\sqrt{\kappa(c_1)}$, holds for
+any i.i.d.\ subgaussian weights of parameter $K$, by the subgaussian operator-norm bracket of
+\Cref{app:brackets}; this is what makes the certificate meaningful for non-Gaussian and lightly-trained
+weights.
+
+\begin{corollary}[Sharpness of the $1/\sqrt n$ scale]\label{cor:sharp}
+Under the hypotheses of \Cref{thm:master} with a random readout, for a fixed input $x$ (equivalently, for
+all but a vanishing fraction of the sphere, excluding a neighborhood of the decision boundary where
+$|F(x)|$ is atypically small), w.h.p.\ the certified radius and the fragility radius bracket each other:
+\[
+  \frac{c\,\|x\|}{\sqrt{n_L}\,L_{\mathrm{net}}}\ \le\ \bigl(\text{largest certified radius at }x\bigr)\ \le\
+  \bigl(\text{attack radius at }x\bigr)\ \le\ \frac{C\,\|x\|\,\sqrt{d\log\bar n}}{\sqrt{n_L}} .
+\]
+Both scale as $\|x\|/\sqrt{n_L}$ up to the constants $L_{\mathrm{net}}=(2\sqrt{\kappa})^L$ and
+$\prod\sqrt{\kcheck}$; the gap between them is $L_{\mathrm{net}}\big/\prod_\ell\sqrt{\kcheck(\alpha_\ell)}$,
+a product of the two-sided gate constants and no power of $n$.
+\end{corollary}
+
+\begin{proof}
+The lower bound is \Cref{thm:certificate} with $|F(x)|\ge c\|x\|/\sqrt{n_L}$, which holds w.h.p.\ at a
+fixed $x$ because $F(x)\sim N(0,\|h_L\|^2/n_L)$ is not atypically small (anticoncentration of a
+Gaussian); the upper bound is \Cref{thm:master}. The ratio of the two radii is
+$L_{\mathrm{net}}\cdot(\text{attack constant})=(2\sqrt\kappa)^L\prod\sqrt{\kcheck}^{-1}$ up to
+logarithms, independent of $n$.
+\end{proof}
+
+\subsection{The certification gap}
+The certificate of \Cref{thm:certificate} is loose by the factor
+$L_{\mathrm{net}}/\prod\sqrt{\kcheck}$ because it uses the worst-case operator norm at every step. One
+might hope to sharpen it by certifying each gate pattern separately, using the actual conditioning of
+the realized Jacobian rather than the worst pattern's. The product rate shows this cannot help beyond a
+point: a certificate valid over all density-$\alpha$ patterns must survive the worst-conditioned one,
+and that one is exponentially singular.
+
+\begin{theorem}[Certification gap]\label{thm:cert-gap}
+Consider certifying a depth-$k$ gated linear network $x\mapsto D_kW_k\cdots D_1W_1x$ with Gaussian
+weights, by any method whose guarantee must hold uniformly over all gate tuples
+$(D_1,\dots,D_k)$ of density $\alpha$. The smallest conditioning such a method must tolerate is the
+least singular value of the worst pattern, $M_N^{(k)}(\alpha)$, which by \Cref{thm:product} is at most
+$e^{-2H(\alpha)N/\dF+o(N)}$ w.h.p., and equal to $e^{-(k+1)H(\alpha)N/\dF+o(N)}$ at the sharp
+(numerically determined) product rate. Consequently any pattern-uniform margin- or inversion-based
+certificate degrades relative to the typical-pattern conditioning $N^{-(k+1)/2}$ by a factor at least
+$e^{2H(\alpha)N/\dF+o(N)}$, and by $e^{(k+1)H(\alpha)N/\dF+o(N)}$ at the sharp rate: the union that a
+uniform certificate performs is dominated by the single worst pattern, whose conditioning sets the rate.
+\end{theorem}
+
+\begin{proof}
+A certificate uniform over the $\binom N{\alpha N}^{k+1}=e^{(k+1)H(\alpha)N+o(N)}$ patterns must in
+particular be valid for the pattern minimizing $\smin$, whose value is $M_N^{(k)}(\alpha)$; by
+\Cref{thm:product} this is $\le e^{-2H(\alpha)N/\dF+o(N)}$ w.h.p.\ (the proved achievability of
+\Cref{prop:prod-lower}), and $=e^{-(k+1)H(\alpha)N/\dF+o(N)}$ at the sharp rate. A margin certificate
+scales the certified radius by the least singular value of the map it inverts, so its worst-case radius
+is smaller than the typical-pattern radius (governed by the fixed-support hard edge $N^{-(k+1)/2}$,
+\Cref{prop:A4} and its least-sv companion) by the ratio $N^{-(k+1)/2}/M_N^{(k)}$, which is at least
+$e^{2H(\alpha)N/\dF+o(N)}$ and equals $e^{(k+1)H(\alpha)N/\dF+o(N)}$ at the sharp rate. Either way it is
+exponential in $N$.
+\end{proof}
+
+\begin{remark}[Interpretation]\label{rem:cert-interp}
+\Cref{thm:cert-gap} is the precise sense in which the adversarial and robust pictures are two sides of
+one random-matrix law. Fragility is the statement that the \emph{realized} pattern already conditions
+the network badly enough for a gradient step to work; the certification gap is the statement that no
+pattern-agnostic certificate can be sharp, because the \emph{worst} pattern is exponentially worse than
+the realized one, at a rate that is at least $2H(\alpha)/\dF$ unconditionally and $(k+1)H(\alpha)/\dF$ at
+the sharp product rate of \Cref{thm:product}. The only way
+to beat the gap is to certify at the realized pattern --- i.e.\ to use the actual input, which is what a
+per-input Lipschitz-of-the-realized-Jacobian certificate does; that recovers the $1/\sqrt n$ scale of
+\Cref{cor:sharp} but is not uniform over patterns, and hence not robust to a gate flip, which is
+exactly what an adversary induces.
+\end{remark}
+
+\subsection{Certified global robustness of sparse gates}
+When the gate density is small enough that even the optimized product norm contracts, the network is
+robust everywhere, with no small-perturbation attack possible.
+
+\begin{theorem}[Sparse-gate robustness]\label{thm:sparse-robust}
+Suppose \Cref{ass:nondeg} holds with $c_1<\alpha^*=0.042672$ (the root of $\kappa(\alpha^*)=1/4$). Then
+w.h.p.\ the network Lipschitz constant $L_{\mathrm{net}}=(2\sqrt{\kappa(c_1)})^L\|w\|$ tends to $0$ as
+$L\to\infty$, and for $L\ge L_0(c_1)$ the network computes a function whose oscillation on the sphere is
+$o(1)$: no input has a certified radius smaller than $\Omega(1)$ relative to the output scale, so the
+$1/\sqrt n$ fragility of \Cref{thm:master} is absent. Concretely, every perturbation of norm below
+$|F(x)|/(2\sqrt{\kappa(c_1)})^L$ is harmless, and this radius grows with depth.
+\end{theorem}
+
+\begin{proof}
+By \Cref{prop:contract}, $\kappa(c_1)<1/4$ makes $(2\sqrt{\kappa(c_1)})^L\to0$, so
+$L_{\mathrm{net}}\to0$ and \Cref{thm:certificate} gives a certified radius $|F(x)|/L_{\mathrm{net}}$
+that grows geometrically in $L$. The oscillation bound is the same operator-norm estimate applied to
+$F(x)-F(x')$ over the whole sphere.
+\end{proof}
+
+This is the positive counterpart of the fragility theorems: sparsity of activation, quantified by the
+gate density falling below $\alpha^*$, certifies global robustness, and the threshold is exactly the
+contraction threshold of the optimized submatrix product. It is consistent with the converse of
+\cite{bartlettBC21}, that networks deep enough to be near-constant are not fragile, and sharpens it to a
+density condition with an explicit constant.

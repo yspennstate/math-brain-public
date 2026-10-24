@@ -1,0 +1,12 @@
+{
+ "helper_version":"A013-lead-ledger-v1",
+ "family":"OR(AND(z,y1),AND(z,y2)) and its r=10 fresh point activation; four levels of F_d=MUX_x(F_(d-1),z_d), F_0=y, with the same reused x",
+ "domain":{"core_bits":3,"analytic_activation_r":10,"shared_selector_depths":[1,2,3,4]},
+ "case_count":{"core_truth_tables":1,"shared_mux_truth_tables":4,"analytic_rational_bounds":3},
+ "symmetry":"none",
+ "arithmetic":"integer Walsh/Fraction; analytic upper log2(13)<4 certified by 13<16; activation formula proved rather than enumerated",
+ "memory_estimate_MB":30,
+ "max_runtime_seconds":60,
+ "internal_cutoff_seconds":55,
+ "automatic_dimension_escalation":false
+}

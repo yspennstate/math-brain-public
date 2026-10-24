@@ -1,0 +1,40 @@
+{
+  "kind": "local targeted lookup diagnostic; not ranked production recall",
+  "baseline": {
+    "query": "broad title Potts OR mean-field OR C0048, first 12 file-order matches",
+    "cards": 12,
+    "spin_glass_cards": 8,
+    "C0048_cards": 0
+  },
+  "bounded_repair": {
+    "query_argv": [
+      "rg",
+      "-i",
+      "-m",
+      "6",
+      "C0048",
+      "~/math-brain-build/export/population/nodes.jsonl"
+    ],
+    "grep_seconds": 6.897411600104533,
+    "raw_grep_candidates": 3,
+    "rejected_false_ID_matches": [
+      {
+        "id": "claim_c9e98fb77a7361fa261e07b59794e0a18203226f4dd50c0048a57b8b3dd24ddd",
+        "logical_id": "math:probability.core:attempt-p0049-infinitely-many-ends-in-all-free-forest-components-without-unimodulari",
+        "reason": "C0048 occurred in unrelated bytes such as a digest; not the candidate logical ID."
+      }
+    ],
+    "grep_cards": 2,
+    "live_id_fetch_seconds": 0.0022365000331774354,
+    "live_cards": 2,
+    "spin_glass_cards": 0
+  },
+  "initial_failure": {
+    "query": "SELECT id,kind,title,body,metadata_json FROM nodes WHERE title LIKE '%Potts%' OR body LIKE '%C0048%' OR title LIKE '%Biskup%' LIMIT 30",
+    "budget_seconds": 8,
+    "returned_cards": 0,
+    "observed_error": "sqlite3.OperationalError: interrupted",
+    "evidence": "inspect_store.py, first target lookup tool run"
+  },
+  "limitation": "Broad file-order grep deliberately has low specificity; this comparison is not a benchmark of brain ranking. The ID fetch establishes live presence, not source accuracy or theorem applicability. No global recall control was changed."
+}

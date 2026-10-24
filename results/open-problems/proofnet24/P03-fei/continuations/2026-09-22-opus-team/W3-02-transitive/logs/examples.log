@@ -1,0 +1,14 @@
+tribes T_{w,s} (s = round(ln2 * 2^w)): n, mean, H/I, level-bound/I, E_sb log2(n/|S|), window bound, E log2 C(s,J)/I
+  w= 2 s=      3 n=       6 mean=+0.156 H/I=2.7383 level/I=2.950 Esb=1.630 window=3.516 X/I=0.892
+  w= 3 s=      6 n=      18 mean=+0.102 H/I=3.4388 level/I=4.260 Esb=2.740 window=3.849 X/I=1.288
+  w= 4 s=     11 n=      44 mean=+0.017 H/I=3.6806 level/I=5.286 Esb=3.714 window=3.969 X/I=1.465
+  w= 6 s=     44 n=     264 mean=-0.000 H/I=3.9224 level/I=7.381 Esb=5.765 window=4.083 X/I=1.687
+  w= 8 s=    177 n=    1416 mean=-0.000 H/I=3.9814 level/I=9.400 Esb=7.794 window=4.094 X/I=1.781
+  w=10 s=    710 n=    7100 mean=+0.001 H/I=3.9958 level/I=11.400 Esb=9.811 window=4.085 X/I=1.829
+Traceback (most recent call last):
+  File "~\mop-fei-opus\proofnet24\P03-fei\continuations\2026-09-22-opus-team\W3-02-transitive\code\examples.py", line 85, in <module>
+    r = tribes(w, s)
+  File "~\mop-fei-opus\proofnet24\P03-fei\continuations\2026-09-22-opus-team\W3-02-transitive\code\examples.py", line 23, in tribes
+    PJ = [c0 * c0] + [comb(s, t) * 4 * (1 - p) ** (2 * s - t) * p ** t for t in range(1, s + 1)]
+                      ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+OverflowError: int too large to convert to float

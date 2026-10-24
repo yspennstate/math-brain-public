@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B20",
+  "run_id": "20260922T210111Z-account02-B20-QFORM-r19",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "NOT_PROVED_BY_THIS_RUN",
+  "outcome": "ESSENTIAL_STEP_APPLIED_THIRD_SPECTRAL_RESOURCE_QUANTIZED",
+  "designated_partner": {
+    "account_slot": "account03/B20",
+    "run_id": "20260922T204947Z-account03-B20-QFORM-r17",
+    "canonical_commit": "56f7a951d545e6639d4b89fbfa18b0a1158ffe44",
+    "exact_input": "ad<0, |a|>=3501/8000, |d|>1/8 for successive physical pivots, with exact second Schur complement T."
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-SCHUR-TAIL-SINGULAR-PRESERVATION-v1",
+      "statement": "After k successive nonzero physical scalar Schur pivots leaving T_k on untouched original coordinates, s_{k+1}(A)<=||T_k||op."
+    },
+    {
+      "id": "QFORM-TWO-PIVOT-THIRD-RESOURCE-DICHOTOMY-v1",
+      "statement": "In the partner opposite-sign two-pivot state with s3(A)>=1, either some untouched j has |T_jj|>=1/2 and the full density is <386.981 by the physical-triple determinant theorem, or some original-coordinate residual cut L|K has s1(T[L,K])>1/4. In the latter branch the bordered-minor matrix Delta_jk=det A[{i,p,j},{i,p,k}] satisfies Delta=ad T[L,K] and s1(Delta)>3501/256000."
+    }
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e004778aef69cbf704ab9ccfb216a6f9bbba327b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B20/20260922T210111Z-account02-B20-QFORM-r19/REPORT.md"
+  },
+  "handoff_commit": "db937540617dd940b92a1307922a5672538a9f8b",
+  "unresolved_implication": "QFORM-OPPOSITE-PAIR-STRONG-SCHUR-CROSS-PAYMENT-v1: with ad<0, |a|>=3501/8000, |d|>1/8 and an untouched-original-coordinate second-Schur cut with s1>1/4, prove a universal density bound for the full ambient form or reduce source-preservingly to a paid packet.",
+  "next_method": "Exploit the exact aggregate bordered-minor identity Delta=ad T[L,K] before any reciprocal-minor selection; combine the indefinite physical pair logarithmic envelope with an aggregate original-bank smoother. Avoid post-Schur independence assumptions.",
+  "corrections_preserved": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "native_brain_ingestion_verified": false
+}

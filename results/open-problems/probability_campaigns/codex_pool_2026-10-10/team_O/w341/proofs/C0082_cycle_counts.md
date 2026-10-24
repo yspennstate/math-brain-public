@@ -1,0 +1,13 @@
+# C0082: count at equal degree before inferring coefficients
+
+Status: proof of short-cycle counts and a route correction, pending w347. Heydenreich and van der Hofstad's cached high-dimensional percolation text, Open Problem 15.9, lines 14708-14713, says the critical-probability expansion coefficients a_1,a_2,a_3 agree and asks for the first difference. Neither that coefficient nor a later literature resolution is established here.
+
+Compare Z^d with Q_{2d}, so both have degree D=2d. Count unoriented simple cycles through a specified vertex (count each cycle once, not once per traversal direction). The square counts are 4*binomial(d,2)=D(D-2)/2 for the lattice and binomial(D,2)=D(D-1)/2 for the cube. A lattice square selects two axes and one sign in each; a cube square selects two coordinates. They already differ by D/2.
+
+The lattice six-cycle count is 12*binomial(d,2)+96*binomial(d,3). With two axes a simple six-cycle must be a 2-by-1 rectangle: two choices of long axis and six positions for the root give twelve per axis pair. With three axes every coordinate is traversed once each way, so the cycle lies in a unique unit three-cube. There are eight sign choices for that cube around the root and twelve six-cycles through its corner, giving ninety-six per axis triple.
+
+For Q_D every simple six-cycle uses exactly three coordinates; two coordinates have only four vertices. Its count is 12*binomial(D,3). To see the factor twelve, a three-cube has sixteen simple six-cycles, each missing one vertex of each parity. There is one such cycle for each of the sixteen missing opposite-parity pairs; those pairs have distance one or three, and either case has a unique six-cycle. By vertex symmetry, 16*6/8=12 cycles contain a given vertex.
+
+At equal degree the difference lattice-minus-cube in six-cycle counts is -(9/2)D(D-2). Thus the existence of lattice rectangles does not imply that the lattice has more total six-cycles after degree matching. Exhaustive simple-cycle traversal independently verified four degree-matched pairs D=2,4,6,8. At D=4 the square counts are 4 versus 6 and the six-cycle counts 12 versus 48; at D=8 the six-cycle counts are 456 versus 672.
+
+These combinatorial facts do not determine a coefficient of p_c. Lace diagrams have weights and cancellation, and the finite cube's critical parameter has its own definition. The original prediction a_4 based only on extra rectangles remains a heuristic; it must not be served as a proved coefficient or as an exhaustive diagram calculation. Audit the equal-degree convention, cycle rooting and orientation, classification of six-cycles and the final polynomial difference.

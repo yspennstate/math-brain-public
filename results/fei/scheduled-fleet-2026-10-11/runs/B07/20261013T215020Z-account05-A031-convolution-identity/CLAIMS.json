@@ -1,0 +1,143 @@
+[
+  {
+    "claim_id": "A031-SIGNED-CARRIER-CREDIT-AND-PAYMENT-SCOPE",
+    "version": 1,
+    "exact_statement": "For every actual Boolean coordinate split g,h on a finite uniform cube, let u=(ghat+hhat)/2, v=(ghat-hhat)/2, E={T:v_T!=0}, d=sum v_T^2 and rho=sum_E(u_T^2+v_T^2). Signed Parseval cancellation gives sum_E ghat(T)^2=sum_E hhat(T)^2=rho. For d>0 the normalized carrier sector law has mutual information mu>=0 and B_i=rho h2(d/rho)-rho mu<=rho h2(d/rho)<=d log2(e rho/d); for d=0 all quantities vanish. The child-measured bound fails for the normalized non-Boolean vector (12/13,-5/13), with d=25/169 and proposed child rho=49/169. Boolean tensors and dummy embeddings preserve local quantities. For f_n=1-2 indicator{x=0}, every complete tree has carrier rho=1 on each active node and its carrier-envelope excess C_K/I >= (1/n)sum_{j=1}^n(j-1-K)_+, unbounded for every fixed K, while the true D_4 excess is zero. The true joint-credit stopping-tree bill D_K obeys [H-H_leaf-(K+2/ln2)(I-I_leaf)]_+<=D_K<=H-H_leaf; hence complete-tree some-order and every-order finite linear bounds are both equivalent to FEI. No universal influence payment is proved.",
+    "hypotheses": [
+      "Actual Boolean children of one physical uniform-cube coordinate, all finite dimensions",
+      "Entropy in bits, zero-mass conventions by continuity, K>=0",
+      "The child carrier bound uses signed orthogonality; the generic q-based entropy chain rule alone is not a Booleanity discriminator",
+      "Complete trees have constant leaves; the stopping-tree inequality retains expected terminal H and I"
+    ],
+    "statement_sha256": "90a218c6a5a476903508c31feb0a2a1c73dad38fded668a15e7e20a95b531d5b",
+    "contributors": [
+      "account05/A031"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261013T215020Z-account05-A031-convolution-identity\\DERIVATION.md",
+      "sha256": "d5e216c7cf4a8d0471491325141d09efad255e0b82b3ec370a2d17fa8ed947e7"
+    },
+    "proof_dependencies": [
+      {
+        "source": "C005 singleton entropy/influence telescopes",
+        "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_REDUCTION.md",
+        "sha256": "eab8a37cae78930ad4c252be2297e024fc585a063969b6829433fe496a6008b1",
+        "scope": "Sections 1-2 and physical influence identity only; no conjectural C018/C019 payment"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_NARROW_ROUTE_REPAIR_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Universal linear complete-tree payment for the carrier-only envelope at a fixed threshold K",
+      "Treating some-tree true D_K payment as a weaker finiteness requirement than every-tree true D_K payment"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B07",
+      "B05",
+      "B20",
+      "A033",
+      "A035",
+      "A064",
+      "A088",
+      "A094",
+      "A096",
+      "A099"
+    ]
+  },
+  {
+    "claim_id": "A096-UNIVERSAL-LEVEL12-ERASURE",
+    "version": 1,
+    "exact_statement": "For every finite n>=0 and every Boolean sign f on the uniform {-1,1}^n cube, let a_S=hat f(S), epsilon_i=Inf_i(f), I=sum_i epsilon_i, H2=sum_{i<j}a_{ij}^2 log2(1/a_{ij}^2), and T12=sum_i sum_{j!=i}phi(a_i^2,a_{ij}^2), where phi(x,y)=(x+y)h2(y/(x+y)) with zero terms by continuity and entropy in bits. Then H2<=(155600/50301)I and T12<=(16700/2187)I<8I whenever I>0; all quantities vanish for constants. The self-contained Boolean derivative estimate sum_{j!=i}a_{ij}^2<=2 epsilon_i^2 ln(2/epsilon_i) and the subprobability pair reference Q({i,j})=2 epsilon_i epsilon_j/I^2 establish the bound. Normalized real spectral vectors without full Booleanity admit T12/I_spectral growing without bound; no claim on erasure edges starting at levels >=2 is made.",
+    "hypotheses": [
+      "Finite uniform cube, every dimension",
+      "Actual Boolean sign, equivalently full signed Boolean convolution identities",
+      "Ordinary physical flip influence",
+      "Entropy in bits; natural logarithms explicitly denoted ln",
+      "Zero masses contribute zero"
+    ],
+    "statement_sha256": "5083b93ed95b2ec27859e733a86e242b7b652ab71dbc48563c8653cdeb7b7bd8",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261011T234252Z-account05-A096-live-gap-ledger\\REPORT.md",
+      "locator": "complete derivation, equations (1)-(7)"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A031",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261013T215020Z-account05-A031-convolution-identity\\A096_INDEPENDENT_REVIEW.md",
+        "sha256": "0fd10c6f5af5c35a59482c1172ddc62f7315e04fcb7c42e54c96282d9c210bc8",
+        "method": "Independent physical derivatives, entropy variational event argument, direct characters and exact rational constants; no repair",
+        "contributor_conflict": false,
+        "shared_registry_adoption": "PENDING_B20"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_ACCEPT_AT_STATED_SCOPE_PENDING_INDEX_ADOPTION",
+    "supersedes": [],
+    "refutes": [
+      "Dimension-independent level-one-to-two payment claimed for all norm-one real spectral vectors without Booleanity"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B20",
+      "A031",
+      "A033",
+      "A057",
+      "A064",
+      "A088",
+      "A090",
+      "A094",
+      "A099"
+    ]
+  },
+  {
+    "claim_id": "A031-FOURTH-ROOT-ERASURE-CREDITS",
+    "version": 1,
+    "exact_statement": "Let A=(g+h)/2,V=(g-h)/2,F=A+iV for an actual Boolean split, u=Ahat,v=Vhat,d=Inf_i, and M_i be the mutual information of the spectral-sector law with masses u_T^2,v_T^2. Full Booleanity gives F^4=1 and I(F^2)/2=W_i=2 sum_(U nonempty)|U|(sum_T v_T v_(T xor U))^2. With R_i=W_i-d log2(1/d)>=0 and sigma(d)=log2(e)d-(1-d)log2(1/(1-d))>=0, B_i=W_i+log2(e)d-R_i-M_i-sigma(d). In particular B_i+M_i<=W_i+log2(e)d; this bound fails for the normalized non-Boolean coefficient vector (4/5,3/5). In any bound B_i<=alpha I(F^2)+C d valid for all Boolean splits with fixed finite C, necessarily alpha>=1/2, as witnessed by even-dimensional bent one-point phase surgery.",
+    "hypotheses": [
+      "Genuine Boolean sign on a finite uniform cube",
+      "One actual physical coordinate split",
+      "Entropy in bits; all zero and deterministic-sector conventions in PHASE_ERASURE.md"
+    ],
+    "statement_sha256": "774e592a8112afc1de5e4662e9fa14243edf68272324e179e236d81a9d387a72",
+    "contributors": [
+      "account05/A031"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261011T232738Z-account05-A031-convolution-identity\\PHASE_ERASURE.md",
+      "sha256": "d6c8611e8f2437bcb50d711a2c5f022079b6464b77836cf134e4d942b5b18930"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A035",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A035\\runs\\20261013T212341Z-account05-A035-signed-cancellation-countersearch\\A031_INDEPENDENT_REVIEW.md",
+        "sha256": "4260a56ba1d3fc73119bfe640852c13f28d2cfa29cb93f0bc09bbef5a3c748c5",
+        "scope": "Full v1 claim including phase identity, non-Boolean discriminator and coefficient sharpness; universal payment not accepted",
+        "shared_registry_adoption": "PENDING_B20"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_ACCEPT_AT_STATED_SCOPE_PENDING_INDEX_ADOPTION",
+    "supersedes": [],
+    "refutes": [
+      "universal coordinate bound B_i<=alpha I(F^2)+C d with alpha<1/2",
+      "admission of arbitrary normalized real vectors to the phase boundary inequality"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A088",
+      "A094",
+      "B07",
+      "B05",
+      "A025",
+      "A064",
+      "B20"
+    ]
+  }
+]

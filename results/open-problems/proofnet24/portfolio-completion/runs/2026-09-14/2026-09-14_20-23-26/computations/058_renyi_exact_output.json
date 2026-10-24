@@ -1,0 +1,159 @@
+{
+  "status": "all exact assertions passed",
+  "arithmetic": "fractions.Fraction; no numerical logarithms or random sampling",
+  "alpha_two_chord": {
+    "midpoint_kernel": [
+      [
+        "1/4",
+        "0"
+      ],
+      [
+        "0",
+        "1/3"
+      ]
+    ],
+    "plus_kernel": [
+      [
+        "1/4",
+        "1/6"
+      ],
+      [
+        "1/6",
+        "1/3"
+      ]
+    ],
+    "minus_kernel": [
+      [
+        "1/4",
+        "-1/6"
+      ],
+      [
+        "-1/6",
+        "1/3"
+      ]
+    ],
+    "det_K_plus": "1/18",
+    "det_I_minus_K_plus": "17/36",
+    "midpoint_atoms_bitmask_order": {
+      "0": "1/2",
+      "1": "1/6",
+      "2": "1/4",
+      "3": "1/12"
+    },
+    "endpoint_atoms_bitmask_order": {
+      "0": "17/36",
+      "1": "7/36",
+      "2": "5/18",
+      "3": "1/18"
+    },
+    "midpoint_collision": "25/72",
+    "endpoint_collision": "221/648",
+    "strict_chord_deficit": "log(225/221)",
+    "ratio_certifying_positive_deficit": "225/221",
+    "commutator_plus_minus": [
+      [
+        "0",
+        "1/36"
+      ],
+      [
+        "-1/36",
+        "0"
+      ]
+    ],
+    "collision_polynomial_offdiagonal_t": [
+      "25/72",
+      "0",
+      "-1/3",
+      "0",
+      "4"
+    ],
+    "H2_second_derivative_offdiagonal_t_at_zero": "48/25"
+  },
+  "alpha_one_half_local": {
+    "diagonal": [
+      "1/5",
+      "4/5"
+    ],
+    "atoms": {
+      "0": "4/25",
+      "1": "1/25",
+      "2": "16/25",
+      "3": "4/25"
+    },
+    "power_sum": "9/5",
+    "power_sum_second_derivative": "5/4",
+    "entropy_second_derivative": "25/18"
+  },
+  "weighted_pair": {
+    "chi_squared_full": "1/54",
+    "chi_squared_by_scale": {
+      "0": "0",
+      "1/3": "1/4374",
+      "2/3": "8/2187",
+      "1": "1/54"
+    }
+  },
+  "weighted_triangle": {
+    "diagonal": [
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "off_diagonal": [
+      [
+        "0",
+        "1/12",
+        "1/10"
+      ],
+      [
+        "1/12",
+        "0",
+        "1/15"
+      ],
+      [
+        "1/10",
+        "1/15",
+        "0"
+      ]
+    ],
+    "kernel": [
+      [
+        "1/3",
+        "1/12",
+        "1/10"
+      ],
+      [
+        "1/12",
+        "1/2",
+        "1/15"
+      ],
+      [
+        "1/10",
+        "1/15",
+        "2/3"
+      ]
+    ],
+    "chi_squared_coefficients_by_subset_bitmask": {
+      "1": "0",
+      "2": "0",
+      "3": "1/1152",
+      "4": "0",
+      "5": "81/40000",
+      "6": "2/5625",
+      "7": "1/10000"
+    },
+    "chi_squared_by_scale": {
+      "0": "0",
+      "1/3": "2347/58320000",
+      "2/3": "2371/3645000",
+      "1": "2411/720000"
+    },
+    "checks": [
+      "all atom density identities",
+      "all atom resampling identities",
+      "resampling semigroup",
+      "quartic contraction strict away from endpoints"
+    ]
+  },
+  "scope": "Finite certificates check identities on stated examples; universal proofs are in agents/058.md."
+}

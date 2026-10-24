@@ -1,0 +1,74 @@
+{
+  "schema": "fei-run-progress/2",
+  "run_id": "20261013T055053Z-account01-B19-retained-difference-review-a094",
+  "stream": "B19",
+  "account": "account01",
+  "primary_packet_id": "A094",
+  "packet_ids": ["A094"],
+  "target_packet_id": "A023",
+  "gap_id": "B05_RARE_REFUNDS",
+  "gap_version": "upper-set-retained-credit-2026-10-12.1",
+  "attempt_id": "B19-A094-RETAINED-DIFFERENCE-REVIEW-01",
+  "claim_version": "B19_A094_REVIEW_B05_RETAINED_DIFFERENCE_v1",
+  "bounded_objective": "Independently reconstruct B05's new one-node entropy inequality and all-depth tree telescope, verify physical selector accounting, and challenge its single-use scope on shared data and reused selectors.",
+  "method": "Re-derive the selector entropy identity, prove the scalar JS inequality by calculus, bound pair splitting atomwise, telescope U and H-U, and independently enumerate rational/high-precision Boolean and tree cases.",
+  "prior_status": "B05 claims author-proved pending A087/A094 review; raw difference ownership explicitly open.",
+  "new_status": "TARGET_CLAIMS_INDEPENDENTLY_ACCEPTED_AT_DECLARED_SCOPE; SINGLE_USE_PHYSICAL_OWNERSHIP_NOT_PROVED; FULL_FEI_OPEN",
+  "mathematical_delta": "Provided an independent complete proof and deterministic high-precision reconstruction. Confirmed constants and all-depth shared-data scope. Located the exact semantic boundary: nodewise single appearance is proved, underlying data-coordinate nonreuse is not; explicit reused-selector control gives physical influence 0 versus formal node sum 1/2.",
+  "class_extension_reviewed": {
+    "previous": "Separated hierarchy payments required disjoint sibling variables; sparse coherent surgery killed selector-only payment.",
+    "accepted_new_scope": "Retained-credit ledger for arbitrary shared-data terminal cores and arbitrary finite depth with fresh node-unique selectors.",
+    "not_accepted": "Any pure influence bound, reused-selector extension, disjoint physical ownership of raw packets, U<=KI, or full FEI."
+  },
+  "constants_verified": {
+    "raw_difference_entropy": 1,
+    "selector_influence": "3/ln(2)=4.328085122666890...",
+    "dimension_dependence": "none in proved coefficients",
+    "depth_dependence": "none in proved coefficients",
+    "activation_probability": "arbitrary dyadic reach probabilities"
+  },
+  "acceptance_evidence": [
+    "REVIEW_PROOF.tex",
+    "REVIEW_CHECK.py",
+    "REVIEW_CHECK.out",
+    "VERDICT.json"
+  ],
+  "verification": {
+    "decimal_precision_digits": 70,
+    "scalar_rational_pairs": 10200,
+    "boolean_node_pairs": 1300,
+    "shared_data_full_binary_trees": 256,
+    "maximum_entropy_identity_error": "1.2e-69",
+    "maximum_tree_telescope_error": "1e-69",
+    "reused_selector_control": "actual influence 0; formal node sum 1/2",
+    "status": "PASS",
+    "randomness": "none"
+  },
+  "exact_remaining_obstacle": "Prove a dimension-independent, genuinely nonreused payment for sum_v w_v L(d_v) by physical data influence and terminal entropy, while surviving sparse surgery and shared/reused addressing.",
+  "next_action": "Audit the proposed data-only Haar/martingale decomposition: verify whether path-indicator entropy and shared-core contributions can be assigned to disjoint physical packets, and construct a counterfamily if any coordinate is charged at multiple ancestors.",
+  "next_consumers": ["A023", "A095", "A099", "B20"],
+  "independent_reviewers": ["A090", "A085"],
+  "source_versions": {
+    "target_canonical_commit": "31e667c3af7f8441f14ab4615c13f21590cf7264",
+    "target_report_blob": "d484f022e09f80dbe41266b7b078d320511a0e2e",
+    "target_proof_blob": "fc6aea7e4bd63705a0f305932f4bc1e99eec1bf9",
+    "target_checker_blob": "47322317d7c8e1b65a3c71a8b46232948de96919",
+    "target_brain_commit": "6b69dd99a9c0a8afbb54ebeb51b1a902c72b62e4",
+    "sparse_surgery_commit": "0b84fdeb8b04511228e1cd7d1746317e883e8df6",
+    "B19_assignment_blob": "ee688080aba90acd2daed1b26e809e38285dcb85"
+  },
+  "stagnant_substantive_attempts": 0,
+  "delivery": {
+    "canonical": "DELIVERED_AND_EXACTLY_READ_BACK_AT_163b1f303aac57452d143f531e14f8aeb402597a",
+    "brain_mirror": "DELIVERED_AND_EXACTLY_READ_BACK_AT_657974275b36a31aaf9db5891fbc632ce919990c",
+    "independent_review": "COMPLETED_BY_B19_A094",
+    "native_ingestion": "NOT_CLAIMED"
+  },
+  "runtime": {
+    "model": "Codex as exposed by runtime instructions",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  },
+  "global_status": "FULL_FEI_OPEN"
+}

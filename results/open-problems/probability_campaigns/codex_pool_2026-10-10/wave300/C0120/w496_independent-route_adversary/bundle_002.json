@@ -1,0 +1,61 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w496",
+  "bundle_slug": "c0120-polynomial-noise-overlap-quantifiers-002",
+  "entries": [
+    {
+      "key": "rate-premise",
+      "namespace": "probability.polymers",
+      "logical_name": "gaussian-path-polynomial-noise-overlap-magnitude-premise-draft",
+      "kind": "concept",
+      "title": "Polynomial noise and overlap magnitude: draft sufficient premise",
+      "statement": "Draft conditional reduction awaiting independent review: for a finite maximum M_n of n-vertex directed path sums in iid standard Gaussian weights, with unique maximizing path and expected Ornstein-Uhlenbeck path overlap O_n(u), Var(M_n)<=n t+O_n(t). Therefore O_n(n^(-a))<=C n^(1-b), with fixed a,b>0 and uniform C, implies Var(M_n)<=(1+C)n^(1-min(a,b)). The polynomial overlap-magnitude premise is needed in addition to the noise scale, and neither is proved here for the fixed Z^2 model.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite distinct path vertex sets; n vertices each",
+        "iid standard Gaussian weights",
+        "Unique maximizing path almost surely",
+        "Fixed a,b>0 and uniform finite C"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w496:C0120:rate-premise",
+        "url": "~/brain_workers/w496/POLYNOMIAL_NOISE_QUANTIFIER.md",
+        "revision": "draft-as-written-2026-10-10",
+        "license": "owner-own-work (campaign draft; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "polynomial-noise-control",
+      "namespace": "probability.polymers",
+      "logical_name": "polynomial-scale-qualitative-gaussian-path-chaos-no-power-control-draft",
+      "kind": "concept",
+      "title": "Polynomial-scale qualitative chaos alone: draft path control",
+      "statement": "Draft counterexample awaiting independent review: a Gaussian n-vertex path maximum can have expected overlap O_n(n^(-1/4))=o(n) while Var(M_n)>=floor(n/log n). Use a compulsory prefix of floor(n/log n) vertices and ceil(exp(sqrt(n))) private branches of the remaining length. The independent prefix supplies the variance floor, and bivariate Gaussian tail bounds make branch selectors decorrelate at polynomially small noise. This convex sqrt(n)-Lipschitz example is a changing growing-degree graph, not the fixed Z^2 lattice.",
+      "proof_text": null,
+      "assumptions": [
+        "n sufficiently large",
+        "Changing finite graph with a long compulsory prefix and many branches",
+        "iid standard Gaussian weights",
+        "Not a bounded-degree or fixed-lattice counterexample"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w496:C0120:polynomial-noise-control",
+        "url": "~/brain_workers/w496/POLYNOMIAL_NOISE_QUANTIFIER.md",
+        "revision": "draft-as-written-2026-10-10",
+        "license": "owner-own-work (campaign draft; independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "polynomial-noise-control",
+      "to_key": "rate-premise",
+      "kind": "semantic_association",
+      "rationale": "The control has qualitative decay at a polynomial noise time but a logarithmic residual overlap, showing why the sufficient premise must also impose a power bound on overlap magnitude."
+    }
+  ]
+}

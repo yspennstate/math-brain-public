@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260923T203127Z-auto11",
+  "control_commit_start": "8ca01a0ea6ea232e103efaa2a3f371d6f67b227c",
+  "control_commit_prepublication": "55af9f525718423e59f182ca75c4a73a83413204",
+  "control_revision": "2026-09-22.15",
+  "owner_request_acknowledged": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "account04/B01 individual-bank coloring claim corrected; only exact W2 identity used"
+  ],
+  "partner_result_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8410ab9d8238baa40c033f83dbae6af44b0b2582",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260923T131003Z-account04-B01-singular-star-routing-r2/REPORT.md",
+    "equation": "W2=a^2 sum_{k!=l}(delta M_kl-ell_k ell_l)^2"
+  },
+  "partner_fejer_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a3693ed6d50e8e4143b2f33bf997c5de2cb52d79",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md",
+    "equation": "||p_mu||_infinity=sup_{T>0,y}D_T mu(y)"
+  },
+  "new_claim": {
+    "id": "QFORM-SCALARPIVOT-W2-QUARTERRIESZ-v1",
+    "status": "PROVED_SUPPORTING_TARGET_LEVEL_BRANCH_PENDING_INDEPENDENT_REVIEW",
+    "statement": "For a literal scalar-pivot pair with a!=0, delta!=0 and W2>0, arbitrary cap-one product inputs and arbitrary leaf curvature satisfy ||p_Q||_infinity <=77.022 |a|^(-1/4) W2^(-1/8); the same bound holds for signed Fejer averages. The delta dependence cancels exactly. At delta=0 a previous theorem gives the stronger constant <7.264 on the same scale.",
+    "continuity": "NOT_PROVED"
+  },
+  "phase_counterexample_preserved": "For prescribed s, fragmented phase-aligned cap-one supports can make Re E exp(isX^2)>=cos(eta); no law-uniform scalar pointwise power decay is used.",
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "26f7f13da915bad3b848ea49a91320c01c81cb1c",
+    "report": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260923T203127Z-auto11/REPORT.md",
+    "checks": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260923T203127Z-auto11/CHECKS.txt"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B01/account03-B01-20260923T203127Z-auto11.md",
+  "unresolved_implication": "QFORM-SCALARPIVOT-W2-OR-OTHER-EXIT-v1: from the bare three-large-eigenvalue hypothesis, force a quantitatively useful scalar-pivot W2 branch or another already-paid branch, or classify W2=0/zero-diagonal endpoints without assuming a uniformly good fixed minor.",
+  "next_step": "Study the W2=0/zero-diagonal structural endpoint and aggregate selection of a,W2 before reciprocal payment; do not revert to the now-paid Gamma1 interpolation gap."
+}

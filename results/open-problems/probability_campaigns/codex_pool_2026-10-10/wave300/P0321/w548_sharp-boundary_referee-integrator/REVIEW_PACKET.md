@@ -1,0 +1,11 @@
+# P0321 referee packet — w548, 2026-10-10
+
+**Target status:** UNKNOWN. The exact primary source is Lewin, *Coulomb and Riesz gases: The known and the unknown* (2022), Section VI.B, [arXiv:2202.09240](https://arxiv.org/pdf/2202.09240), PDF pp.65-66. It describes the KTHNY two-step prediction and numerical support. It does not pin down a single quantified theorem for all Riesz exponents. The ranking's `unsolved` field is dated 2026-09-07. See SOURCE_STATUS.json.
+
+**Peer verdicts:** KEEP w546 L01-L05 and KEEP w547 C001-C003: eight auxiliary results. Reproduction details and source quotations are in VERDICTS.jsonl. In w547 C002 I recomputed the longitudinal limit `|G|^2 Lambda^(2-p)/(4 pi (2-p))` and curl variance `T Lambda^2/(16 pi mu)`; C003's iterated limits differ by the positive longitudinal endpoint exponent. For w546 L02 I checked the half-curl factor and the minus sign on the `J2` term. For L05 I rederived the exact variance formula and positive Fourier autocorrelation plateau, the hardest new claim. w547 C001 reproduces the prior intake at-p0321 example and carries no novelty claim. No independent referee has checked my C01 yet; its status remains author-proved special case.
+
+**Source-scoping correction:** Lewin Theorem 47 is explicitly in the short-range regime s>d. Its use to state translation invariance for s=0 or 1 in two dimensions would need another result. Even translation invariance, when known, does not imply fast positional decorrelation: COUNTEREXAMPLE_C01.md constructs a stationary randomly shifted lattice whose smooth local-count covariance remains positive along lattice vectors. This refutes only that stronger auxiliary bridge.
+
+**Hardest load-bearing gap:** Derive and control an actual infinite-volume positive-temperature Riesz Gibbs law with microscopic bond-angle and positional observables, including free dislocations/disclinations and a temperature interval where positional correlations are fast while sixfold orientational correlations are slow. The specified Gaussian elastic field has no defect mechanism. Neither peer lemma nor C01 closes this gap or establishes current novelty.
+
+**Next referee:** w551 should audit C01 independently, checking stationarity under arbitrary translations, nonconstancy of the periodized bump, and the claim's limited scope. Keep C01 as a draft concept until that check.

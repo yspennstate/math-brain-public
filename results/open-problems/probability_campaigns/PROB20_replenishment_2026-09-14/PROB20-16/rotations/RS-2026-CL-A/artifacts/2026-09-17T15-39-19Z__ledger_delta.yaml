@@ -1,0 +1,53 @@
+ledger_delta:
+  native_task_id: 6aa7b4b639a08191b893e2b7dd6cdf59
+  target_id: RS-2026-CL-A
+  report_kind: RESEARCH_STRENGTHENING_AFTER_METRIC_MOVEMENT
+  input_snapshot_sha: 3ab19993b9ad87bec2d2889f40b2138bf865a3e5
+  report_path: probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T15-39-19Z__report.md
+  report_creation_commit: 7f3e684b0dffb5d92a2f48ef34cd32d0f65b1032
+  report_blob: 55b19b8a6ed4e02639c14403178af60c0921208c
+  previous_report_path: probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T14-37-12Z__report.md
+  previous_report_commit: 872a84a7d510301a93aa8386c239da00d55574f0
+  previous_report_blob: 07fd8d5ac7685a7704eeeb15c72c136a5807c583
+  exact_source: "Anastasia Kireeva, Randomstrasse 101, Low-degree hardness of finding the largest clique in Erdos-Renyi graph (problems 36-38), posted 2026-06-05, first displayed Open Problem 35"
+  source_url: https://randomstrasse101.math.ethz.ch/posts/clique-low-degree/
+  metric_name: E_framework
+  metric_before: 1
+  metric_after: 1
+  unchanged_count_before: 1
+  unchanged_count_after: 2
+  actual_model: GPT-5.6 Sol
+  actual_reasoning: UNVERIFIED
+  requested_model: GPT-6
+  requested_reasoning: maximum
+  methods:
+    B5: "spectral pressure identities; real-nonpositive-zero certificate F(q)<=exp(q b1); Poisson-binomial tilted spectrum"
+    B12: "exact conserved extension-flow identity a_j E_pi E=(j+1)a_{j+1} for forced-support models"
+    B28: "weighted-typical support extension bound plus averaged negative-log-growth theorem allowing compensated spectral spikes"
+  new_mathematics:
+    - "If spectral energy polynomial F(q)=sum b_j q^j has only real nonpositive zeros, bounded low-degree advantage A implies chi^2(T_rho P||Q)<=exp(rho^2 A^2)-1; at rho=1 this rules out strong unnoised distinguishing by any measurable test."
+    - "Under real-rootedness the q-tilted spectral degree is Poisson-binomial and satisfies Var(J)<=E(J), an explicit differential no-cliff condition."
+    - "For forced-support plants, weighted one-coordinate extension mass is exactly conserved between adjacent subset levels, yielding b_{j+1}/b_j=lambda/(j+1) E_pi[extension load]."
+    - "Pointwise support and pointwise degree contraction can both be relaxed: small weighted bad-support mass and negative cumulative average log growth of noisy ratios suffice for a geometric high-degree tail."
+  failures:
+    - "No theorem that deterministic planted-graph or Chen-Li treewidth-class spectral polynomials are real-rooted."
+    - "No rigorous implication from Chen-Li small-interface/treewidth decomposition to the new typical-interface prefix-product criterion."
+    - "No necessary-and-sufficient classification and no novelty certificate."
+  mathematical_status: PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING
+  source_status: OPEN_ON_LIVE_SOURCE_AS_OF_2026-09-17
+  later_literature_checked:
+    - "Buhai-Hsieh-Jain-Kothari, The Quasi-Polynomial Low-Degree Conjecture is False, arXiv:2505.17360"
+    - "Hsieh-Kane-Kothari-Li-Mohanty-Tiegel, Rigorous Implications of the Low-Degree Heuristic, arXiv:2601.05850"
+    - "Songtao Mao, The Polynomial-Time Low-Degree Conjecture is False, arXiv:2607.20318, submitted 2026-07-22"
+    - "Xuan Chen and Shuangping Li, Rigorous Low-Degree Implications for Planted Subgraph Detection: Noise and Treewidth, arXiv:2608.06279, submitted 2026-08-06"
+  prior_art_status: "real-rooted/negative-dependence and overlap/second-moment machinery are established; precise synthesis novelty UNVERIFIED; bounded search is not a novelty certificate"
+  audit_refs: []
+  artifact_refs:
+    - probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-17T15-39-19Z__ledger_delta.yaml
+  next_methods: [1, 13, 25]
+  next_obligations:
+    - "derive a natural model-level stable/negative-dependence or separator hypothesis implying the spectral-shape condition"
+    - "actual P26 full source/theorem audit"
+    - "second distinct OTHER-track full source/theorem audit"
+    - "deeper prior-art reconciliation before novelty/publication claims"
+    - "if next run is unchanged, execute Section-I thinking-only stuck recovery cycle 1"

@@ -1,0 +1,116 @@
+[
+  {
+    "claim_id": "A042-SHARP-MAJORITY3-BIASED-ENDPOINT",
+    "version": 1,
+    "exact_statement": "For the sign majority-three gate under every independent interior Bernoulli product law, natural corrected entropy E=(ln2)Hplus satisfies E <= (4+ln4)(I-Var) - (ln4-1)P({1,2,3}). Its exact all-bias supremum Hplus/(I-Var) is 2+4/ln2, not attained in the interior, and approached at probabilities (1-t^3,t,t). The result is invariant under input permutations/reflections with reflected biases and output negation. At a unanimous deterministic vertex with rare deviations e,u,v, the ratio is 2+O(delta ln(1/delta)); at a mixed vertex represented by probabilities (1-e,u,v), the ratio is 2+(2/ln2)(1+uv/[e(u+v)+uv])+O(delta ln(1/delta)), where delta=max(e,u,v) and each absolute error is at most 400 delta ln(1/delta) for delta<=1/8, with no restriction on relative rates. Codimension-two fixed-interior-r edge formulas are (12)-(13) of REPORT.md; their remainders are uniform only on compact r-subintervals. All deterministic boundary functions are contracted before zero-deficit division. No arbitrary-arity prime or universal FEI theorem is established.",
+    "hypotheses": [
+      "fixed genuine essential sign majority on three independent Bernoulli bits",
+      "interior probabilities 0<pi<1 for the global quotient",
+      "natural E and bit Hplus=E/ln2; spectral I, not unweighted physical pivotal expectation",
+      "T=P({1,2,3}) is the actual biased spectral triple mass",
+      "absolute corner error bound for 0<e,u,v<=1/8",
+      "fixed compact interior r domain for codimension-two edge remainders",
+      "input reflection changes its physical bias simultaneously",
+      "no extension of the special common-triple identity to higher arities assumed"
+    ],
+    "statement_sha256": "396cfaaabff2fa337f7a038ca4380cbede25d84a6ccd96032829a36dbecad11e",
+    "contributors": [
+      "A042/account05"
+    ],
+    "proof_source": {
+      "run_id": "20261013T221414Z-account05-A042-bias-endpoint-certificates",
+      "path": "REPORT.md",
+      "locators": [
+        "Theorem (T), sections 1-3",
+        "independent-rate boundary certificate (7)-(13)"
+      ],
+      "checker": "code/check_majority.py",
+      "output": "out/CHECK_OUTPUT.json"
+    },
+    "proof_dependencies": [
+      "actual majority Boolean truth table and finite-difference polynomial",
+      "Parseval for indicator-valued pivotal derivatives",
+      "elementary logarithm inequalities and explicit Taylor remainders"
+    ],
+    "review_records": [],
+    "status": "ANALYTIC_PROOF_EXACT_CHECKS; INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A041",
+      "A043",
+      "A044",
+      "A045",
+      "A084",
+      "A090",
+      "A091",
+      "B09",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A042-SHARP-BINARY-PRIME-ENDPOINT",
+    "version": 1,
+    "exact_statement": "For each of the eight essential binary Boolean sign gates with one exceptional truth-table corner, the supremum over all interior independent Bernoulli biases of corrected Hplus/(I-Var) is exactly 2+4/ln(2). For XOR and XNOR the supremum is exactly 2/ln(2). The suprema are not attained in the interior. Writing A(x)=x ln(1/x)/(1-x), corner ratios are 2+2[A(u)+A(v)]/ln(2), where u,v are probabilities of the exceptional corner coordinates; parity ratios are [A(1-4p(1-p))+A(1-4q(1-q))]/ln(2). These formulas extend as limits of interior ratios along arbitrary independent endpoint rates, while deterministic contracted functions have Hplus=I-Var=0. The common sharp corrected constant 2+4/ln(2) propagates through genuine read-once binary formulas under every product physical law by exact disjoint composition; on uniform physical inputs it implies ordinary H<= [2+4/ln(2)] I. No higher-arity prime or universal FEI estimate is established.",
+    "hypotheses": [
+      "genuine finite Boolean sign tables",
+      "essential arity-two gates for the supremum statements",
+      "independent input biases in (0,1)",
+      "corrected entropy in bits and spectral influence",
+      "contract deterministic inputs before forming a ratio or child variance divisor",
+      "genuine disjoint read-once supports for the composition corollary",
+      "A(0)=0 and A(1)=1 are limiting values"
+    ],
+    "statement_sha256": "e163ebefc916767a00214eea2d54e56e53c9666821565f612f15a7ef4f17d5e8",
+    "contributors": [
+      "A042/account05"
+    ],
+    "proof_source": {
+      "original": {
+        "run_id": "20261012T002547Z-account05-A042-bias-endpoint-certificates",
+        "path": "REPORT.md",
+        "checker": "code/binary_certificate.py",
+        "output": "out/CHECK_OUTPUT.json"
+      },
+      "original_run": "~\\brain_workers\\FEI100_20261011\\agents\\A042\\runs\\20261012T002547Z-account05-A042-bias-endpoint-certificates",
+      "independent_review": "~\\brain_workers\\FEI100_20261011\\agents\\A041\\runs\\20261013T215146Z-account05-A041-weighted-threshold-fei\\REVIEW_BINARY.md"
+    },
+    "proof_dependencies": [
+      "elementary two-bit Fourier computation",
+      "ln y <= y-1 and convergent logarithm series",
+      "disjoint centered-product Fourier composition, independently reconstructed in REPORT.md"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A041/account05",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "at_utc": "2026-10-13T22:03:10.099654+00:00",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A041\\runs\\20261013T215146Z-account05-A041-weighted-threshold-fei\\REVIEW_BINARY.md",
+        "sha256": "69161d68de02111642a61603061aa9bf3a73d699cf904cc66028c36e4efd759c",
+        "method": "Independent finite-difference Fourier computation, exact prime-log identities, continuum scalar monotonicity, and complete disjoint composition reconstruction",
+        "contributor_to_original": false,
+        "scope_exclusions": [
+          "higher-arity primes",
+          "A043 finite census",
+          "universal FEI or overlapping stopping-tree payment"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE_LOCAL_RECORD_PENDING_SUPERVISOR_ADOPTION",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A041",
+      "A043",
+      "A044",
+      "A045",
+      "A084",
+      "A090",
+      "A091",
+      "B09",
+      "B20"
+    ]
+  }
+]

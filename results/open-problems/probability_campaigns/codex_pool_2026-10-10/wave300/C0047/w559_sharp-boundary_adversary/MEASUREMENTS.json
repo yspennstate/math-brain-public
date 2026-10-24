@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "command": "python -X utf8 ~/brain_workers/w559/verify_boundary.py",
+  "compute_gate": {
+    "configurations": 32,
+    "rational_parameters": 7,
+    "decimal_bisections": 180,
+    "GPU": false
+  },
+  "mean_polynomial_coefficients": [
+    0,
+    0,
+    2,
+    2,
+    -2,
+    0
+  ],
+  "rational_bracket": [
+    "63/100",
+    "64/100"
+  ],
+  "pc_decimal_display_only": "0.63727761052126389660274184734123101512775181139698517110852",
+  "forward_survival_at_two_thirds": "21/80",
+  "isolated_branch_probability_at_two_thirds": "7/80",
+  "corrected_spectral_product_strict_lower_bound": "63/50 = 1.26",
+  "before_after": {
+    "old_unscaled_criterion_accepts_witness": true,
+    "corrected_criterion_accepts_witness": false,
+    "false_positive_on_this_witness_before": 1,
+    "false_positive_on_this_witness_after": 0
+  },
+  "samples": [
+    {
+      "p": "0",
+      "offspring_distribution": [
+        "1",
+        "0",
+        "0"
+      ],
+      "mean": "0",
+      "supercritical": false
+    },
+    {
+      "p": "1/2",
+      "offspring_distribution": [
+        "1/2",
+        "3/8",
+        "1/8"
+      ],
+      "mean": "5/8",
+      "supercritical": false
+    },
+    {
+      "p": "63/100",
+      "offspring_distribution": [
+        "1476333707/5000000000",
+        "1076579343/2500000000",
+        "1370507607/5000000000"
+      ],
+      "mean": "48941739/50000000",
+      "supercritical": false
+    },
+    {
+      "p": "16/25",
+      "offspring_distribution": [
+        "2740473/9765625",
+        "4207104/9765625",
+        "2818048/9765625"
+      ],
+      "mean": "393728/390625",
+      "supercritical": true
+    },
+    {
+      "p": "2/3",
+      "offspring_distribution": [
+        "59/243",
+        "104/243",
+        "80/243"
+      ],
+      "mean": "88/81",
+      "supercritical": true
+    },
+    {
+      "p": "9/10",
+      "offspring_distribution": [
+        "269/12500",
+        "4779/25000",
+        "19683/25000"
+      ],
+      "mean": "8829/5000",
+      "supercritical": true
+    },
+    {
+      "p": "1",
+      "offspring_distribution": [
+        "0",
+        "0",
+        "1"
+      ],
+      "mean": "2",
+      "supercritical": true
+    }
+  ],
+  "elapsed_seconds": 0.004845,
+  "limits": "Finite exact algebra check, not an independent proof of the infinite block-tree reduction, p_u, or the parent conjecture. Decimal root is display only."
+}

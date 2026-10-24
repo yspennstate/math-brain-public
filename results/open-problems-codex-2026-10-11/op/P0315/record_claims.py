@@ -1,0 +1,17 @@
+﻿import pathlib,json
+claims=[
+('Density dilation gives T_DM(r)=(2*pi)^(-2)*T_unit(r/(2*pi)); a harmonic of exponent p gains amplitude factor (2*pi)^(p-2).','proved','ATTEMPT.md section 1','None for the density lemma.','Change of variables in both factorial-moment coordinates.'),
+('The beta=2 pair correlation has the exact additive cosine and inverse-square decomposition.','proved_special_case','ATTEMPT.md section 2','General beta remains open.','Two-by-two determinantal formula and double-angle identity.'),
+('The exact Qu-Valko Fourier moments satisfy hierarchy (H); its nonoscillatory formal sector has unique coefficient array (R), finite support per order, and weighted inverse-square coefficient -2/beta.','proved','ATTEMPT.md section 3','Formal coefficients have not been shown to be actual asymptotic coefficients for non-even beta.','Ito expectation and scale invariance; symbolic recurrence; Coefficient.lean checked exit 0 in lean_check.txt.'),
+('Any nonzero homogeneous formal hierarchy mode with phase exp(i*m*r) and leading power r^(-p), m>=1, must have p=4*m^2/beta.','proved','ATTEMPT.md section 3, Formal mode exponents','No existence, completeness, amplitudes, phases or analytic remainder proved for actual modes.','Leading two coefficient equations.'),
+('The Fourier tail of the exact representation is at most C_beta*K^(-beta)/beta uniformly in distance.','proved','ATTEMPT.md section 3, tail bound','A moving-cutoff large-distance expansion requires uniform mode estimates not proved here.','Absolute moment bound and integral comparison.'),
+('For beta=4 an explicit expansion through r^(-4) has uniform error at most 26/(4*pi^2*r^5) for r>=1; the classical formula admits arbitrary-order tail expansions.','proved_special_case','ATTEMPT.md section 4','General beta remains open.','Exact published beta=4 formula; full integration-by-parts remainder proof; eight 80-digit checks in checks.json.'),
+('For beta=1 the unit-density expansion includes 2*sin(2*pi*x)/(pi^5*x^5), missing from Lewin (148); after including it the remainder is O(x^(-6)).','proved_special_case','ATTEMPT.md section 5','This corrects a survey truncation and does not refute the intended full asymptotic family.','Published classical formula; explicit remainder proof; seven 80-digit checks in checks.json.'),
+('A signed local-average O(1/r) bound for a smooth bounded even function does not imply pointwise decay.','proved','ATTEMPT.md section 7, signed averages','The example is not asserted to be a realizable point-process pair density.','Integration by parts for sin(r^2), and an explicit sequence of unit values.'),
+('The general-beta Sine_beta pair density has the full Forrester-Haldane oscillatory family with summable pointwise remainder control.','conjecture','ATTEMPT.md Exact target and Remaining gap','Missing SDE-selected mode decomposition, amplitudes/phases and weighted remainders for non-even beta.','Classical cases and formal algebra only; no general-beta proof.')]
+p=pathlib.Path('CLAIMS.jsonl');p.write_text(''.join(json.dumps(dict(problem_id='P0315',claim=c,status=s,proof_location=l,remaining_gap=g,checks=k),ensure_ascii=False)+'\n' for c,s,l,g,k in claims),encoding='utf8')
+log=json.loads(pathlib.Path('search_log.json').read_text())
+with pathlib.Path('LITERATURE.md').open('a',encoding='utf8') as f:
+ f.write('\n## Exact HTTP query log\n\n')
+ for row in log:f.write('- '+json.dumps(row,ensure_ascii=False)+'\n')
+print('Saved',len(claims),'claims and',len(log),'HTTP search records.')

@@ -1,0 +1,80 @@
+{
+  "statement_first": {
+    "w418": {
+      "message_id": "msg-b829752875",
+      "inserted": 1,
+      "recipient_active": true
+    },
+    "w419": {
+      "message_id": "msg-b71a7b7ae7",
+      "inserted": 1,
+      "recipient_active": true
+    },
+    "topic": "C0017/statement-first",
+    "artifact": "~/brain_workers/w417/STATEMENT_FOR_ADVERSARY.md"
+  },
+  "prior_failed_team_comm_attempts": 2,
+  "proof_packet": "delivered to w419; independent statement was sent first",
+  "complete_packet": {
+    "w419": {
+      "exit_code": 0,
+      "receipt": {
+        "fanout": 1,
+        "idempotency_key": null,
+        "idempotent_replay": false,
+        "inserted": 1,
+        "kind": "request",
+        "message_id": "msg-4d6567a5b3",
+        "message_ids": [
+          "msg-4d6567a5b3"
+        ],
+        "recipient_active": true,
+        "requires_ack": true,
+        "reused": 0,
+        "to": "w419",
+        "topic": "C0017/proof-packet"
+      },
+      "utc": "2026-10-10T06:46:04.600544+00:00"
+    },
+    "w418": {
+      "exit_code": 0,
+      "receipt": {
+        "fanout": 1,
+        "idempotency_key": null,
+        "idempotent_replay": false,
+        "inserted": 1,
+        "kind": "answer",
+        "message_id": "msg-3002c2f9b5",
+        "message_ids": [
+          "msg-3002c2f9b5"
+        ],
+        "recipient_active": true,
+        "requires_ack": false,
+        "reused": 0,
+        "to": "w418",
+        "topic": "C0017/bridge-boundary"
+      },
+      "utc": "2026-10-10T06:46:09.595553+00:00"
+    },
+    "codex-01a12190": {
+      "exit_code": 0,
+      "receipt": {
+        "fanout": 1,
+        "idempotency_key": null,
+        "idempotent_replay": false,
+        "inserted": 1,
+        "kind": "message",
+        "message_id": "msg-a74fda9b1f",
+        "message_ids": [
+          "msg-a74fda9b1f"
+        ],
+        "recipient_active": true,
+        "requires_ack": false,
+        "reused": 0,
+        "to": "codex-01a12190",
+        "topic": "probability300-integration/C0017/w417"
+      },
+      "utc": "2026-10-10T06:46:14.759771+00:00"
+    }
+  }
+}

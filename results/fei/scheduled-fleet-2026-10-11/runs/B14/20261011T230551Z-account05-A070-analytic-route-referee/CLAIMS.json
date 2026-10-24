@@ -1,0 +1,259 @@
+[
+  {
+    "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f on every finite uniform cube, with p_S=hat(f)(S)^2, I=sum |S|p_S, H_nat=sum p_S ln(1/p_S), T_t=exp(-tL), L chi_S=|S|chi_S, q_t(S)=p_S exp(-2t|S|), G_f(t)=sum q_t(S)ln(1/p_S) and J_f(t)=sum |S|q_t(S)ln(1/p_S), G_f prime=-2J_f and H_nat=p_empty ln(1/p_empty)+2 integral_0^infinity J_f. The boundary term is between zero and I; J_f(t)<=J_f(0) and J_f(t)<=exp(-2t)J_f(0), giving integrability at both endpoints for every fixed f. For n>=1, J_f(0)<=2(n-1)ln(2)I. A universal integral bound integral J_f<=KI implies FEI in bits with constant (1+2K)/ln(2), and FEI with bit constant C implies that integral bound with K=C ln(2)/2.",
+    "hypotheses": [
+      "Finite uniform cube",
+      "Boolean outputs in {-1,1}",
+      "Natural logarithms; zero mass contributes zero",
+      "J_f as defined in DERIVATION.md"
+    ],
+    "statement_sha256": "86e0a303dc68c3ef7644737401b69400ce7c1d8059b4096b9ce5a85fd4b4d5f2",
+    "contributors": [
+      "account05/A066"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A070",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent finite-sum/finite-difference/occupancy reconstruction, exact Walsh and edge validation of finite inputs; no mathematical repair or coauthorship",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261011T230551Z-account05-A070-analytic-route-referee\\DERIVATION.md",
+        "reviewer_conflict": false,
+        "shared_registry_adoption": "PENDING_B20",
+        "original_statement_sha256": "6a0f129e7897d58cbfdf3d7fd67b3f9b32ce920aa72238c9b17984ac379365e6",
+        "original_hash_convention": "legacy statement-only SHA256, verified exactly",
+        "local_hash_convention": "protocol statement+hypotheses canonical JSON; identical statement and hypotheses"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_LOCAL_RECEIPT_PENDING_B20",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A070",
+      "A088",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A066-NO-INTEGRABLE-HEAT-ENVELOPE",
+    "version": 1,
+    "exact_statement": "There is no nonnegative measurable k with finite integral on (0,infinity) such that J_f(t)<=I(f)k(t) for every finite-dimensional Boolean sign f and almost every t. For f_n(x)=1-2 indicator{x=(1,...,1)}, n>=2, J_f_n(t)/I(f_n)=(2n-2)ln(2)exp(-2t)((1+exp(-2t))/2)^(n-1). Any such pointwise envelope must be at least ln(2)exp(-3/2)/t almost everywhere on (0,1/4]. Nevertheless integral J_f_n/I(f_n)=2(1-1/n)(1-2^(-n))ln(2)<=2ln(2). This refutes the integrable pointwise-envelope helper, not the integrated target or FEI.",
+    "hypotheses": [
+      "Finite uniform cube",
+      "Boolean outputs in {-1,1}",
+      "Natural logarithms; zero mass contributes zero",
+      "J_f as defined in DERIVATION.md"
+    ],
+    "statement_sha256": "72d2501e36dd69ba43bab1e16cb0f181c10de99822e1ddd91b6ecdf316012d93",
+    "contributors": [
+      "account05/A066"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+        "version": 1
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "account05/A070",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent finite-sum/finite-difference/occupancy reconstruction, exact Walsh and edge validation of finite inputs; no mathematical repair or coauthorship",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261011T230551Z-account05-A070-analytic-route-referee\\DERIVATION.md",
+        "reviewer_conflict": false,
+        "shared_registry_adoption": "PENDING_B20",
+        "original_statement_sha256": "e46b8cb695767e6dd284aaa8889d87e61c3f05c4da3ba0c531a8f3d4918edcfe",
+        "original_hash_convention": "legacy statement-only SHA256, verified exactly",
+        "local_hash_convention": "protocol statement+hypotheses canonical JSON; identical statement and hypotheses"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_LOCAL_RECEIPT_PENDING_B20",
+    "supersedes": [],
+    "refutes": [
+      "Universal integrable pointwise influence envelope for J_f"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A070",
+      "A088",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A067-LOCAL-BOOLEAN-GRANULARITY",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f on a finite uniform cube, write q_S=hat f(S)^2, v=1-q_empty and I=sum_S |S|q_S. For each nonzero nonempty coefficient define d_f(S)=max{|T|:T contains S and q_T>0}, and U=sum_nonempty q_S(d_f(S)-|S|). Then hat f(S) is a multiple of 2^(1-d_f(S)) and H(f)<=2I+2U-(2-log2(e))v. Thus U<=KI implies H<=(2+2K)I, and d_f(S)<=L|S| implies H<=2LI-(2-log2(e))v. Balanced support antichains give H<=2I-2. On ordinary addressing with a address variables, d_f(S)=a+1, U=a/2, and the bound gives exactly H<=2a, while generic full-cube level counting costs Theta(a^2). These are structural-regime results, not a universal payment of U or a novelty claim.",
+    "hypotheses": [
+      "Every finite-dimensional uniform cube",
+      "Boolean outputs in {-1,1}",
+      "Entropy and logarithmic constants in bits",
+      "Zero Fourier masses omitted; constants handled explicitly"
+    ],
+    "statement_sha256": "f8ea9c1fe43d80907fd273e35e3fc141527789dd383a79b68595b04d86afa4a5",
+    "contributors": [
+      "account05/A067"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-account05-A067-hypercontractive-refinement\\DERIVATION.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A070",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent finite-sum/finite-difference/occupancy reconstruction, exact Walsh and edge validation of finite inputs; no mathematical repair or coauthorship",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261011T230551Z-account05-A070-analytic-route-referee\\DERIVATION.md",
+        "reviewer_conflict": false,
+        "shared_registry_adoption": "PENDING_B20",
+        "original_statement_sha256": "f8ea9c1fe43d80907fd273e35e3fc141527789dd383a79b68595b04d86afa4a5",
+        "original_hash_convention": "protocol statement+hypotheses canonical JSON",
+        "local_hash_convention": "protocol statement+hypotheses canonical JSON; identical statement and hypotheses"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_LOCAL_RECEIPT_PENDING_B20",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "B06",
+      "B13",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A067-MAXIMAL-SUPPORT-ENVELOPE-NOGO",
+    "version": 1,
+    "exact_statement": "No universal finite K can bound the preceding U(f) by K I(f). For p=2^(-n), n>=2, the actual Boolean dictator surgery g_n=x_1-2 indicator{x=all +} has I=1+(2n-4)p and U=n-1-(2n-4)p-4np^2, so U/I diverges. Further define the valid entropy envelope E_A=(log2(e))(1-hat f(A)^2)+2 sum_nonempty_R hat(f chi_A)(R)^2(d_(f chi_A)(R)-1) for every character anchor A. On F_n=Maj_3(z)*(1-2 indicator{y=all +}), with disjoint three-variable z and n-variable y, every E_A>=3n/2, although I(F_n)=3/2+2n2^(-n)<=5/2 and H(F_n)=2+o(1). Hence min_A E_A<=K I is false universally, including anchors outside the Fourier support. These are helper refutations, not FEI counterexamples.",
+    "hypotheses": [
+      "Every finite-dimensional uniform cube",
+      "Boolean outputs in {-1,1}",
+      "Entropy and logarithmic constants in bits",
+      "Zero Fourier masses omitted; constants handled explicitly"
+    ],
+    "statement_sha256": "a632877752249e22535f8f8a56d3c76914639c49764a6146b48dc96d4d6aa7bc",
+    "contributors": [
+      "account05/A067"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-account05-A067-hypercontractive-refinement\\DERIVATION.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A070",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent finite-sum/finite-difference/occupancy reconstruction, exact Walsh and edge validation of finite inputs; no mathematical repair or coauthorship",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261011T230551Z-account05-A070-analytic-route-referee\\DERIVATION.md",
+        "reviewer_conflict": false,
+        "shared_registry_adoption": "PENDING_B20",
+        "original_statement_sha256": "a632877752249e22535f8f8a56d3c76914639c49764a6146b48dc96d4d6aa7bc",
+        "original_hash_convention": "protocol statement+hypotheses canonical JSON",
+        "local_hash_convention": "protocol statement+hypotheses canonical JSON; identical statement and hypotheses"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_LOCAL_RECEIPT_PENDING_B20",
+    "supersedes": [],
+    "refutes": [
+      "Universal U(f)<=K I(f) for a dimension-independent finite K",
+      "Universal min_A E_A(f)<=K I(f) for a dimension-independent finite K"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "B06",
+      "B13",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A069-STABLE-HIERARCHY-EDIT-PAYMENT",
+    "version": 1,
+    "exact_statement": "For each rooted singleton-leaf partition tree T of [N] with 2 or 3 children per internal vertex, L_T(S)=1+sum_v b_v*1{S intersects C_v} is the length of an all-subset prefix code, max L_T<=3N-2, and H(f)<=Gamma_T(f)=sum_S fhat(S)^2 L_T(S). If Boolean f,g differ on input fraction rho, sqrt(Gamma_T(f))<=sqrt(Gamma_T(g))+2 sqrt(rho max L_T), and |I(f)-I(g)|<=2N rho. For complete depth-d ternary recursive majority g_d, d>=1, padded to N>=3^d bits, the explicit main/padding tree satisfies Gamma_T(g_d)<=6I(g_d)-3. Every truth-table edit f of this g_d satisfies Gamma_T(f)<=12I(f)-6+48N rho-16rho; in particular H(f)<=Gamma_T(f)<=12I(f) if N rho<=1/8. Every one-point edit satisfies H(f)<=Gamma_T(f)<=25I(f), and <=12I(f) for N>=6. For fixed d the code-cost difference under padding and one-point editing tends to zero.",
+    "hypotheses": [
+      "Uniform finite sign cube; actual Boolean f,g.",
+      "Entropy and code lengths in bits; I=sum_S |S| fhat(S)^2.",
+      "Tree and ordered child cells fixed for the source, not chosen after observing S.",
+      "Singleton leaves, no unary vertices, internal arity 2 or 3.",
+      "Family conclusions require d>=1, N>=3^d, complete ternary recursive majority base and Boolean flips on D.",
+      "No arbitrary unpaid Boolean terminal is included in the family."
+    ],
+    "statement_sha256": "cd5f76a5bb9b392b3cd098f53516f83f2ae8e02fa78de7950f280d64c7245d4a",
+    "contributors": [
+      "account05/A069"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A069\\runs\\20261011T224507Z-account05-A069-geometric-transfer\\REPORT.md",
+      "locators": "equations (1)-(12)",
+      "sha256": "8c9857f2e4ca408f873eb84f8d6b66272e8b403abf9d789d0622bffc4d85fb17"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A070",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent finite-sum/finite-difference/occupancy reconstruction, exact Walsh and edge validation of finite inputs; no mathematical repair or coauthorship",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261011T230551Z-account05-A070-analytic-route-referee\\DERIVATION.md",
+        "reviewer_conflict": false,
+        "shared_registry_adoption": "PENDING_B20",
+        "original_statement_sha256": "cd5f76a5bb9b392b3cd098f53516f83f2ae8e02fa78de7950f280d64c7245d4a",
+        "original_hash_convention": "protocol statement+hypotheses canonical JSON",
+        "local_hash_convention": "protocol statement+hypotheses canonical JSON; identical statement and hypotheses"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_LOCAL_RECEIPT_PENDING_B20",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A008",
+      "A011",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A070-HYBRID-SCOPE-AND-THREE-REFERENCE-NOGO",
+    "version": 1,
+    "exact_statement": "For any finite probability law p, atom costs a_s>=log2(1/p_s) and nonnegative Kraft lengths l_s, let m be the mass where l_s<a_s. Then H(p)<=sum_s p_s min(a_s,l_s)+m log2(1/m)<=sum_s p_s min(a_s,l_s)+h2(m). For every integer a>=8, pad the Boolean addressing function with a address and 2^a private data coordinates to N=a+2^a+2 bits and flip its all-plus input, obtaining F_a. Put c_arith(S)=2(N-1) on nonempty S and infinity on empty S, c_inf(S)=log2(e)+sum_i_in_S log2(I(F_a)/Inf_i(F_a)), and c_level(S)=-log2(r_|S|)+log2 binom(N,|S|) for any probability prior r on levels. Then E_{p_Fa} min(c_arith,c_inf,c_level)/I(F_a)>=log2(a/2)/40, while H(F_a)/I(F_a)->4. The same lower bound holds for min(c_arith,c_mix), where c_mix is the length of any fixed subprobability prior mixture of the influence and level code laws. Thus no universal O(I) expected-cost bound exists for these three references; no queue-code or FEI claim is refuted.",
+    "hypotheses": [
+      "Uniform finite sign cubes for F_a; abstract partition inequality requires only a probability law",
+      "Entropy and code lengths in bits; infinities allowed where code probability is zero",
+      "Addressing uses distinct private data variables and two dummy coordinates; edit at all plus",
+      "Level prior is normalized; code-mixture weights are fixed across atoms and sum at most one",
+      "Empty atom has an explicit code or separate charge; Boolean arithmetic not applied to empty"
+    ],
+    "statement_sha256": "427388c517d4260df96f495663b44f5b9a660d5987865715feadd58eae81cd0a",
+    "contributors": [
+      "account05/A070 independent reconstruction",
+      "Claude B14 lead: prior statement of hybrid and point-defected-addressing mechanism"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261011T230551Z-account05-A070-analytic-route-referee\\DERIVATION.md",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Universal expected-cost O(I) payment of granularity plus only level and influence code references"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A088",
+      "A094",
+      "B14",
+      "B20"
+    ]
+  }
+]

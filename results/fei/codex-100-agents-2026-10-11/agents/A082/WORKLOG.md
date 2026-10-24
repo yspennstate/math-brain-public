@@ -1,0 +1,6 @@
+
+2026-10-11T22:26:54.110434+00:00: Read protocol/board and current sources; B17 notes absent. Replaced A026 amplitude proxy by exact true-erasure extremum Kstar. Gray/integer products passed 32906 representatives in 2.669881s; independent butterfly/physical-boundary/rational-log replay passed in 1.383777s. Saved two claims and structural exhaustiveness theorem; full FEI remains open.
+
+2026-10-12T01:00:34.087790+00:00: Stage2 consumed the newer A071 completed census instead of repeating discovery. Independent parity-popcount/Fraction replay checked 2^31 masks, 5778648 retained representatives, one exact equality, 640 extremizers; elapsed 197.502076s. Created affine5 hereditary bridge and local A071 review. Guard returned 1 on two checks; all jobs estimated <=80 MB, below the 300 MB guarded-job threshold. Full FEI remains open.
+
+2026-10-14T05:02:10.122254+00:00: Stage 20261014T045125Z-account05-A082-finite-inequalities: reconstructed A096 arbitrary-core conditional loss and sharp child-bank threshold-five, including nonconstant tensor continuation; 2760 direct-character/Fraction fixtures PASS. Initial pilot caught missing e in our interval replay, fixed. Both unchanged claims independently accepted; full retained cost unpaid.

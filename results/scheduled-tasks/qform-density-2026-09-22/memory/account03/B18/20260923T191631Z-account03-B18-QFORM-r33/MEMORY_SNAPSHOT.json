@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260923T191631Z-account03-B18-QFORM-r33",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "control_commit_prepublication": "12cf271a0a54404d06f9cd54cc0630bc7a0fdc68",
+  "control_commit_prehandoff": "308c21094da6ae129acf5315354a1d5394ce09b9",
+  "correction_inbox_blob": "6bdbd9987a4eefeba79d53915cfe7e232263f8ec",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "new_result_ids": [
+    "QFORM-CODIM1-PRINCIPAL-COMPRESSION-v1",
+    "QFORM-4COORD-ZERODIAG-COMPRESSION-COFACTOR-v1"
+  ],
+  "main_result": {
+    "scope": "An ORIGINAL-coordinate 4x4 principal block B of exact rank three, B_00=0, three nonzero eigenvalue magnitudes >=s; arbitrary ambient matrix and arbitrary independent cap-one original-coordinate laws.",
+    "bound": "||p_Q||_infinity <= [148*50653/50644]/s <148.027/s",
+    "continuity": "not proved in general",
+    "ambient_lift": "condition on all outside ORIGINAL coordinates; cross couplings become arbitrary affine terms"
+  },
+  "deterministic_lemma": {
+    "statement": "For symmetric rank-(m-1) B with kernel unit z and nonzero singular values >=s, deleting coordinate 0 gives sigma_min(C)>=s*z_0^2.",
+    "sharpness": "B=s(I-zz^T)"
+  },
+  "splice": {
+    "h": "1-z_0^2",
+    "small_h_bound": "148/[s(1-h)]",
+    "large_h_bound": "576^(1/3)/(s*h^(1/3))",
+    "threshold": "h0=576/148^3=9/50653",
+    "uniform_constant": "148*50653/50644=148.02630124002843..."
+  },
+  "partner_application": {
+    "partner": "account04/B18",
+    "source": "yspennstate/math-open-problems@f852e87a4002c603ac47039f22a1921061b19f2d",
+    "endpoint": "h=1",
+    "literature_input": "Livshyts-Paouris-Pivovarov k=2 product marginal cap M<=2",
+    "actual_inequality": "||p_Q||_infinity <=6*2^(2/3)/s=9.524406311809197.../s",
+    "continuity": "proved at h=1 endpoint"
+  },
+  "dependencies": [
+    {
+      "id": "QFORM-THREE-DISJOINT-BANKS-ALLPIVOTS-v1",
+      "source": "yspennstate/math-open-problems@602d508c11f3bb5848b65581a750b4497708bd5f",
+      "use": "three ORIGINAL-coordinate cap-one quadratic density <=148/tau"
+    },
+    {
+      "id": "QFORM-4COORD-NULLHUB-COFACTOR-v1",
+      "source": "yspennstate/math-open-problems@8103579cff840cf3e09607ac05841bd156fa8744",
+      "use": "cofactor/range-leverage bound 576^(1/3)/(s*h^(1/3))"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "scientific_commit": "eb6eeeff3eef79404f499e2f75a7b4aa9437db3d",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T191631Z-account03-B18-QFORM-r33/",
+  "handoff_commit": "2bce667273e07b6e6f66dedf239fd15e95d63aa2",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B18/20260923T191631Z-account03-B18-QFORM-r33.md",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "unresolved_implication": "From bare s_3(A)>=1, produce a qualifying product-preserving principal/grouped/ridge/crossing/hub certificate with uniform parameters; fixed-good-minor extraction is not available.",
+  "next_step": "Apply the uniform four-core receiver inside the current high-leverage/low-cross-volume structural compiler and test whether every zero/small-diagonal survivor yields such a core or routes to an already-paid grouped/ridge branch."
+}

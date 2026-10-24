@@ -1,0 +1,89 @@
+{
+  "target_id": "P0017",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "current_status_detail": "Reported full resolution is verified as a primary-source claim. Complete mathematical proof validity has not been independently checked in this packet. Do not label the target currently open on the September ranking alone.",
+  "exact_poincare_target": "There is a universal C<infinity such that, for every n>=1 and every isotropic log-concave probability measure mu on R^n, Var_mu(f)<=C integral |grad f|^2 dmu for all locally Lipschitz f in L^2(mu) with finite Dirichlet energy. Isotropy means mean 0 and Cov=I_n; extended convex potentials and convex supports are included.",
+  "cheeger_normalization": "h_mu = inf_A mu^+(A)/min(mu(A),1-mu(A)), with Euclidean outer Minkowski boundary measure; require h_mu >= universal c > 0. In Klartag's notation h_mu = 1/psi_mu. Do not reverse the direction for psi_mu.",
+  "primary_formulation": {
+    "url": "https://arxiv.org/html/2303.14938v2",
+    "author": "Bo'az Klartag",
+    "locations": [
+      "Introduction (1.3)-(1.5)",
+      "Theorem 1.2",
+      "Theorem 1.3"
+    ],
+    "verified_content": "Definition C_P uses squared gradient. Relation 1/4 <= psi_mu^2/C_P <= pi makes the formulations equivalent. The 2023 theorem gives psi_n <= C sqrt(log n), hence a Poincare upper bound of order log n; it is not dimension-free."
+  },
+  "recent_primary_claim": {
+    "url": "https://arxiv.org/abs/2610.07728v2",
+    "authors": [
+      "Krishnakumar Balasubramanian",
+      "Shiva Kasiviswanathan"
+    ],
+    "initial_date": "2026-10-06",
+    "revision_date": "2026-10-08",
+    "claimed_bound": "C_P(mu) <= 25 for every isotropic log-concave probability measure",
+    "proof_review_status": "NOT_CHECKED",
+    "source_quote": "we establish a dimension-free Poincaré inequality",
+    "quote_origin": "search-index abstract; live v2 abstract paraphrased separately",
+    "novelty_claim_allowed": false
+  },
+  "prior_owner_solved_retired_status": {
+    "historical_status": "attempted_unsolved",
+    "verified_evidence": "Intake op-p0017 and at-p0017; the latter is a Gaussian special case and explicitly leaves general log-concavity unresolved.",
+    "later_owner_status": "UNKNOWN; no P0017 solved/retired result appeared in the named H/I attempt folders under targeted ID search. This is not an exhaustive absence claim."
+  },
+  "formal_check_receipt": null,
+  "submission_state": "local draft only",
+  "ingested": false,
+  "retrievable": false,
+  "original_primary_source": {
+    "title": "Randomstrasse101: Open Problems of 2025",
+    "url": "https://arxiv.org/html/2603.29571v1",
+    "location": "Conjecture 30, Entry 13 as named by the intake",
+    "statement_in_own_words": "The Euclidean Cheeger constant is bounded below by c/sqrt(||Cov(mu)||_op) for log-concave mu; in isotropic position this is a universal positive lower bound.",
+    "notation_warning": "This source uses psi_mu for the Cheeger constant itself. Klartag 2303.14938 uses psi_mu for its reciprocal. The direction must be translated before comparing bounds."
+  },
+  "recent_primary_claims": [
+    {
+      "authors": [
+        "Pierre Bizeul",
+        "Boaz Klartag",
+        "Joseph Lehec"
+      ],
+      "url": "https://arxiv.org/html/2610.05474v1",
+      "posted": "2026-10-04",
+      "location": "Theorem 1.1",
+      "claim": "Universal dimension-free C_P for every isotropic log-concave law",
+      "full_proof_independently_checked": false
+    },
+    {
+      "authors": [
+        "Z. Song",
+        "X. Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2610.01447v2",
+      "revision": "2026-10-04",
+      "claim": "An O(1) bound for the KLS constant",
+      "full_proof_independently_checked": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.07728v2",
+      "authors": [
+        "Krishnakumar Balasubramanian",
+        "Shiva Kasiviswanathan"
+      ],
+      "initial_date": "2026-10-06",
+      "revision_date": "2026-10-08",
+      "claimed_bound": "C_P(mu) <= 25 for every isotropic log-concave probability measure",
+      "proof_review_status": "NOT_CHECKED",
+      "source_quote": "we establish a dimension-free Poincaré inequality",
+      "quote_origin": "search-index abstract; live v2 abstract paraphrased separately",
+      "novelty_claim_allowed": false
+    }
+  ],
+  "reported_resolution": "YES: multiple October primary preprints claim the full target",
+  "read_only_store_probe": "context/store_probe.json: two historical P0017 nodes; no matches for the four recorded distinctive-word probes. This is a limited deduplication probe, not proof of global absence.",
+  "auxiliary_statement_correction": "w348 original L4 confused a fourth-moment covariance operator with a locally defined tilt derivative. Current repaired L4 separates U_2 from T_2 and requires exponential moments for their identification. This correction does not challenge the parent log-concave target."
+}

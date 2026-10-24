@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_initial": "fa8ea877cf4c8cc9759955e53a911fa9bd3f0fcd",
+  "run_id": "20260922T140817Z-account02-B02-qform-r11",
+  "account": "account02",
+  "slot": "B02",
+  "status": "ESSENTIAL_STEP_APPLIED_FULL_TARGET_OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e3fe4ce35f6aa4a90cca913051886c96c7febfc3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260922T140817Z-account02-B02-qform-r11/REPORT.md",
+    "blob": "b930dabd3ecd3b8bacfca68875dbbd7ace1ad298"
+  },
+  "reviewed_dependency": {
+    "name": "regularized determinant Sections 3-6",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a302aab3477c64757b511e80d3907f982e04873a",
+    "path": "proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md",
+    "verdict": "PASS_SECTIONS_3_TO_6_ONLY"
+  },
+  "new_result": {
+    "id": "QFORM-EK-INTEGRATED-DETERMINANT-v1",
+    "statement": "For a cross block B obeying the q-leverage hypothesis (none at q=2), every integer k>2q with E_k=e_k(s(B)^2)>0 gives ||p_Q||_infinity <= [e/(2k sqrt(2q))] Beta(1/(2k),1/(4q)-1/(2k)) E_k^(-1/(2k)).",
+    "key_identity": "E_k(B)=sum_{|S|=|T|=k} det(B[S,T])^2"
+  },
+  "partner_result_applied": {
+    "worker": "account03/B02",
+    "run_id": "20260922T130245Z-account03-B02-QFORM-r11",
+    "canonical_commit": "2e9ab3bfa05919cd9115fc5f6285ee0683adfb7c",
+    "application": "star-plus-square family Q=2X0(alpha.Y)+(beta.Z)^2 has target density bound <6.728 although every cross block has rank at most two and E_3=0"
+  },
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "unresolved_implication": "Derive from the three-large-eigenvalue hypothesis an aggregate determinant-or-bank dichotomy: leverage-compatible E3 or unconditional E5 at universal scale, or a product-preserving low-cross-rank aggregate/Schur branch.",
+  "next_step": "Attack the aggregate determinant-or-bank structural dichotomy without fixed-minor or universal single-pivot assumptions.",
+  "source_scope": "Private repository transport only; no native learned-memory receiver use verified."
+}

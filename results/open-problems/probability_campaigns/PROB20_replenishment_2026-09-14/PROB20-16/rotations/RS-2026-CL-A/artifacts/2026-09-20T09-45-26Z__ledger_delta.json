@@ -1,0 +1,33 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "claim_id": "RS-2026-CL-A",
+  "date_utc": "2026-09-20",
+  "status": "PROVED PARTIAL / AGGREGATE-SPECTRAL-DIMENSION-TRANSFER / AUDIT-PENDING",
+  "E_framework_before": 1,
+  "E_framework_after": 1,
+  "captured_master_before_report": "ac01d036a6578f43a4bc8f7e6b9d0497733210d3",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-20/2026-09-20T08-40-10Z__report.md",
+    "creation_commit": "5134637f37851e7a2b76a4d104bd8fa84fa96d6e",
+    "blob": "6c021beb3caed329eeb07c3397443e57c1dc3a81"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-20/2026-09-20T09-45-26Z__report.md",
+    "creation_commit": "b756f3c16ab293296db0d418d0ced45442f8ae21",
+    "readback_blob": "43f18fb716f2c4528ce3e91c87b2b7eae5281e8b"
+  },
+  "handoff": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-20T09-45-26Z__P08_P09_spectral_dimension_handoff.md",
+    "creation_commit": "bbec40e0d025ee8cae68bc92f70e787af0140655",
+    "readback_blob": "a1dd19e9e47da224b34d87fe272d06c19367a335"
+  },
+  "new_claim": "For Boolean uniform product null, fixed retention rho, and bounded degree-D LDA, a read-k union of arbitrary local Boolean predicates obeys E_{T_rho P} f <= k L_q + A k sqrt(L_q) + sqrt(k L_q B), where B is the aggregate noise-weighted high-degree spectral dimension sum_j sum_{s>D}^{w_j} binom(w_j,s) rho^(2s). Consequently no exponential-rarity hypothesis is needed when log m=o(D) and all widths are at most (D+1)/(theta_rho+eta), where theta_rho is the unique large root of H(theta)+2 theta log rho=0.",
+  "source_scope": "PROVED PARTIAL only; not a source-general characterization and not a proof of an unrestricted low-degree conjecture.",
+  "mao_boundary": "For Mao's exact-zero-LDA noisy rank test, any read-k local-union representation must satisfy 1-o(1) <= k L_q + sqrt(k L_q B). Thus if k L_q=o(1), B >= (1-o(1))^2/(k L_q), and Mao cannot simultaneously have constant read, log m=o(D), and all local widths below the near-source-width threshold. No local rarity assumption is used.",
+  "methods": ["B4", "B21", "B24"],
+  "independent_full_claim_audits": "0/2",
+  "hard_recovery_cycles_consumed": 1,
+  "next_attack": "Robustify Haramaty-Lee-Viola product-test noise bounds from exact bounded independence to bounded LDA, or import noisy Fourier-tail bounds for constant-width/read-once branching programs; in parallel test whether the theta_rho width threshold is close to a true width-only barrier.",
+  "scheduler_prompt_modified": false,
+  "shared_results_queue_posted_modified": false
+}

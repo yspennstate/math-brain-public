@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T142426Z-account03-B08-qform-diffuse-v3",
+  "account": "account03",
+  "slot": "B08",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "fresh_control_commit_initial": "fee0c3089f9b2384d0cecd6ded32457c7470d698",
+  "fresh_control_commit_prepublication": "279d55d7dc91b8298176567dae0825bc2150b928",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "dependency": {
+    "name": "regularized original-coordinate cross-block determinant theorem",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a302aab3477c64757b511e80d3907f982e04873a",
+    "path": "proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md",
+    "scope_used": "fractional exponent q, three cross singular values, actual cross-block range leverage <=q/2, arbitrary self blocks/outside couplings, continuous density"
+  },
+  "designated_partner": {
+    "worker": "account04/B08",
+    "completed_current_qform_handoff_found": false,
+    "evidence": "fresh account04 shared handoff directory contains B14/B15/B18/B19/B20 but no B08; no theorem attributed to missing partner"
+  },
+  "new_result": {
+    "id": "QFORM-FULLRANGE-DIFFUSE-OPTIMIZED-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "statement": "If U spans the entire range of A and max row leverage epsilon is below (39-6sqrt(30))/98, then a fractional-q MSS/cross-block argument gives a bounded continuous density; for epsilon<=1/16 one may take q=149/100 and obtain ||p||_infinity<2814.",
+    "continuity": "PROVED_IN_SCOPE",
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_commit": "f6bc73f719d1e9dbcaeb06df49913bb84dd274b6",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260922T142426Z-account03-B08-qform-diffuse-v3/REPORT.md"
+  },
+  "unresolved_implication": "Convert delocalization of only the three-large-eigenvalue subspace, in the presence of an arbitrary highly localized spectral remainder, into a controlled actual original-coordinate cross block or a complementary localized smoothing mechanism.",
+  "next_mechanism": "selected-large-subspace versus localized-remainder dichotomy using the full regularized cross-block theorem without rotating independence",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

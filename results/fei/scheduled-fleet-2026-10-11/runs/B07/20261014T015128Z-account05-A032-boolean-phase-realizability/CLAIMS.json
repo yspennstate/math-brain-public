@@ -1,0 +1,46 @@
+[
+  {
+    "claim_id": "A032-AFFINE-ADMISSION-QUADRATIC-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every actual two-address Boolean function in arbitrary data dimension with product conditional spectra and affine Fourier signs on each nonzero partial address row, every nontrivial mixed configuration has address masses(5,1,1,1)/8 up to permutation and exactly one nonfair marginal in exactly one row. Thus Q=sum w_J N_J <= [5/(28-5log2(5))](H(w)+I_A), sharply; Q=0 for pure and all-mixed configurations. In the mixed subclass H(F)<=[16/3-(3/2)log2(3)]I(F), sharply with full conditional entropy retained; the pure subclass has H(F)<=4I(F). Separately, in any dimension an integer partial row bounded in magnitude by2 with one primitive magnitude ratio4:1 and all other active ratios fair has no quadratic Fourier-sign realization. The previous64-sign Boolean witness realizes such a row with cubic Fourier-sign phase, so degree3 is necessary and attained for that labeled law. No unrestricted all-dimensional heavy-row or FEI bound is asserted.",
+    "hypotheses": [
+      "Uniform physical cube; actual +/-1 Boolean F and exactly two address bits",
+      "Positive conditional spectra are coordinate products; omit zero rows",
+      "Affine-phase classification assumes affine sign on each coordinate spectral face",
+      "Quadratic obstruction assumes integer row height<=2, one primitive ratio4:1, and otherwise fair active coordinates",
+      "Entropy in bits; physical influence, without arbitrary linear-coordinate changes"
+    ],
+    "statement_sha256": "1753eb2e446e42bf629ef52b8ab6ce1e059949810c6145d97b4d90f9ce086ffd",
+    "contributors": [
+      "A032"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "QUADRATIC_OBSTRUCTION.md",
+      "out/validation.json",
+      "out/quadratic_rejections.json",
+      "out/phase_anf.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A032 author",
+        "method": "Independent direct character sums on45088 existing rows;1536 affine rows; bounded all2048 quadratic sign choices with exact rejection; independent ANF evaluation and rational log interval",
+        "verdict": "PASS at scope; external independent review PENDING"
+      }
+    ],
+    "status": "NARROW_ADMISSION_AND_IMPOSSIBILITY_CERTIFIED_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A034",
+      "A033",
+      "A035",
+      "A079",
+      "A088",
+      "A094",
+      "B07-lead"
+    ]
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w380",
+  "bundle_slug": "p0110-reviewed-route-boundaries-001",
+  "entries": [
+    {
+      "key": "uniform-contraction-false",
+      "namespace": "probability.fpp",
+      "logical_name": "false-law-uniform-variance-contraction-bridge",
+      "kind": "concept",
+      "title": "False auxiliary bridge: law-uniform strict variance contraction",
+      "statement": "Refuted auxiliary assertion: for fixed integer M>=2 and rho<1, there is an onset N independent of the iid law F such that Var T_F(0,Mn e1)<=rho M Var T_F(0,n e1) for every n>=N and every nondegenerate continuous F supported in [1,2]. The onset may depend on F; this card makes no claim about that case.",
+      "proof_text": null,
+      "assumptions": ["d>=2", "ordinary undirected nearest-neighbor FPP", "M>=2 and rho<1 fixed"],
+      "domain": "probability; first-passage percolation",
+      "source": {"source_id": "owner-own-work:w378:P0110:L2", "url": "~/brain_workers/w378/BOUNDARY_LEMMA.md", "revision": "reviewed by w380 2026-10-10", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "uniform-contraction-obstruction",
+      "namespace": "probability.fpp",
+      "logical_name": "finite-scale-support-width-obstructs-uniform-fpp-contraction",
+      "kind": "lemma",
+      "title": "Narrow support obstructs a law-uniform FPP variance contraction",
+      "statement": "Let d>=2, M>=2 integer, n>=1, and 0<epsilon<2/(Mn). In undirected nearest-neighbor FPP on Z^d with iid Uniform[1,1+epsilon] edge weights, T(0,k e1) equals the sum of the k axial weights for k=n and k=Mn. Consequently Var T(0,Mn e1)/(M Var T(0,n e1))=1. Therefore no strict variance contraction of this form can have an onset uniform over all nondegenerate continuous iid laws in [1,2].",
+      "proof_text": "Any nonaxial path from 0 to k e1 uses at least k+2 edges and costs at least k+2; the axial path costs at most k(1+epsilon). For k<=Mn, k epsilon<2 makes the axial path uniquely optimal. Its independent uniform edge sum has variance k epsilon^2/12. The ratio is exactly 1. For any proposed law-independent N, choose n>=N then epsilon<2/(Mn).",
+      "assumptions": ["d>=2", "undirected nearest-neighbor FPP", "iid Uniform[1,1+epsilon] weights", "M>=2 integer", "0<epsilon<2/(Mn)"],
+      "domain": "probability; first-passage percolation",
+      "source": {"source_id": "owner-own-work:w378:P0110:L2", "url": "~/brain_workers/w378/BOUNDARY_LEMMA.md", "revision": "reviewed by w380 2026-10-10", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "raw-monotone-transfer-false",
+      "namespace": "probability.fpp",
+      "logical_name": "false-raw-axial-monotone-fpp-transfer",
+      "kind": "concept",
+      "title": "False auxiliary bridge: sublinear raw monotone axial error",
+      "statement": "Refuted auxiliary assertion: for a nonconstant iid finite nonnegative edge-weight law on Z^2, coordinatewise monotone passage D(0,N e1) and unrestricted passage T(0,N e1) differ by o(N) almost surely. This concerns raw passage times; separately centered fluctuations and interior directions are not addressed.",
+      "proof_text": null,
+      "assumptions": ["ordinary undirected nearest-neighbor FPP on Z^2", "iid finite nonnegative nonconstant law", "monotone means coordinatewise nondecreasing"],
+      "domain": "probability; first-passage percolation",
+      "source": {"source_id": "owner-own-work:w379:P0110:C2", "url": "~/brain_workers/w379/INDEPENDENT.md", "revision": "reviewed by w380 2026-10-10", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "linear-axial-gap",
+      "namespace": "probability.fpp",
+      "logical_name": "positive-linear-gap-between-monotone-and-undirected-axial-fpp",
+      "kind": "lemma",
+      "title": "A positive linear gap between monotone and unrestricted axial FPP",
+      "statement": "For any nonconstant iid finite nonnegative edge-weight law on undirected nearest-neighbor Z^2, let D_N be the passage time from 0 to N e1 over coordinatewise nondecreasing paths and T_N the unrestricted infimum. Choose 0<l<h with p_l=P(tau<=l)>0 and p_h=P(tau>=h)>0, then an integer n with delta=n(h-l)-2l>0. Put L=n+2 and q=p_h^n p_l^(n+2). Almost surely liminf_N (D_N-T_N)/N >= delta q/L>0. If E tau=m<infinity, also limsup_N T_N/N<=m-delta q/L.",
+      "proof_text": "D_N is exactly the sum of the N axial edge weights. At starts kL e1, the n direct edges and a disjoint n+2-edge upper detour use disjoint edge sets across k. The event that direct edges weigh at least h and detour edges at most l has iid Bernoulli(q) indicators. Replacing each favorable block in the axial path saves at least delta, so D_N-T_N >= delta sum_{k<floor(N/L)} 1_{E_k}. The Bernoulli strong law gives the positive limit lower bound. With finite mean, the axial edge strong law gives D_N/N->m and hence the last bound.",
+      "assumptions": ["iid finite nonnegative nonconstant edge weights", "undirected nearest-neighbor Z^2", "finite mean only for the final limsup bound"],
+      "domain": "probability; first-passage percolation",
+      "source": {"source_id": "owner-own-work:w379:P0110:C2", "url": "~/brain_workers/w379/INDEPENDENT.md", "revision": "reviewed by w380 2026-10-10", "license": "owner-own-work", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "uniform-contraction-obstruction", "to_key": "uniform-contraction-false", "kind": "refutes", "rationale": "The lemma constructs a continuous iid law with exact ratio 1 for any proposed law-independent onset; both card statements specify the same M, rho, n and law class."},
+    {"from_key": "linear-axial-gap", "to_key": "raw-monotone-transfer-false", "kind": "refutes", "rationale": "The lemma gives a strictly positive almost-sure linear lower bound for the raw difference D_N-T_N under the concept card's exact law and endpoint assumptions."}
+  ]
+}

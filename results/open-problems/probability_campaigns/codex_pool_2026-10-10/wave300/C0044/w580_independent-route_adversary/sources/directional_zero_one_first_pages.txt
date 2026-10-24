@@ -1,0 +1,144 @@
+PDF PAGE 1
+A directional zero–one law
+under strict ellipticity
+OpenAI
+September 23, 2026
+Abstract
+We prove the directional zero–one conjecture for nearest-neighbor random walks in
+independent and identically distributed strictly elliptic environments onZd, d≥3: the
+probability of escape in each fixed nonzero real direction is zero or one. Only strict
+positivity of the transition probabilities is required; no uniform lower bound or moment
+assumption is imposed.
+Contents
+1 Introduction 1
+1.1 The model and the theorem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.2 Prior work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.3 Proof strategy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2 Regeneration in a real direction 5
+2.1 Departure rows and path weights . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2.2 Fresh records and true cuts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+2.3 Mean width and the two signs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+3 Finite spatial radii under coexistence 10
+4 Rays and a common renewal arrangement 14
+4.1 Reduction to a coordinate direction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+4.2 Exact-cut bridges and renewal tails . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+4.3 Two tapes placed from a common top . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+5 An entropy upper bound for contacts 19
+5.1 A randomized comparison with independent bridges . . . . . . . . . . . . . . . . . . . 19
+5.2 The entropy cost of the comparison . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+5.3 Rare contacts under the reference law . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+5.4 Summing over scales . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+6 Contacts with a path anchored at a random endpoint 24
+6.1 The sum of posterior maxima . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+6.2 A first-contact estimate . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+7 Many contact scales and the contradiction 29
+1 Introduction
+A walk in a fixed environment is a Markov chain. Averaging over an independent environment
+at every lattice site creates a different process: revisiting a site also revisits information about
+1
+PDF PAGE 2
+its transition probabilities. The directional zero–one problem asks whether the annealed
+probability of escape in one prescribed direction can lie strictly between zero and one. We
+resolve this problem positively in every dimensiond≥3 for iid nearest-neighbor environments
+with strictly positive transition probabilities. No common positive lower bound on those
+probabilities is assumed.
+1.1 The model and the theorem
+Let d≥3 be an integer, lete1,...,ed be the coordinate basis, and set
+U ={±e1,...,±ed}, PU =
+{
+p∈[0, 1]U :
+∑
+e∈U
+p(e) = 1
+}
+, Ω =P Zd
+U .
+Equip Ω with its product Borelσ-field. An environmentω∈Ω assigns a transition vector
+ω(x,·) to each sitex. We call this vector therow at x. Letµbe a probability measure on
+PU, and letP =µ⊗Zd
+. Thus the rows are independent and identically distributed; entries
+within one row need not be independent. Assume only
+µ
+(
+{p∈PU :p(e)> 0 for everye∈U}
+)
+= 1. (1)
+We call thisstrict ellipticity. By countability, it givesω(x,e )> 0 simultaneously for all sites
+and steps, almost surely. Unlike uniform ellipticity, it permits the smallest row entry to be
+arbitrarily close to zero.
+The path space isX = (Zd)N0 with coordinate mapsXn and theσ-fieldσ(Xn :n≥0).
+Forx∈Zd and a fixed environment, thequenched lawPx,ωis the Markov-chain law specified
+by
+Px,ω(X0 =x) = 1, P x,ω(Xn+1 =Xn +e|X0,...,Xn) =ω(Xn,e ).
+The annealed lawand its expectation are
+Px(B) =
+∫
+Px,ω(B) P(dω), E x.
+When both environment and path are needed, we use the joint law Px(dω,dX) =
+P(dω)Px,ω(dX). The path filtration isFn = σ(X0,...,Xn); on the joint space the larger
+filtrationGn = σ(ω,X0,...,Xn) also reveals the entire environment. Quenched Markov
+arguments useGn. The endpoint-posterior martingales later in the proof useFn, with the
+environment integrated out. An unconditioned annealed path law will also be called theraw
+law.
+For a nonzero vectorℓ∈Rd, define
+Aℓ={Xn·ℓ−→+∞}.
+Theorem 1.1. Letd≥3, let P be an independent and identically distributed law of nearest-
+neighbor transition rows onZd satisfying (1), and letℓ∈Rd\{0}. Then
+P0(Aℓ)∈{0, 1}.
+The direction is any fixed real vector; no rationality assumption is made, and no assertion
+of one exceptional null set uniform over all directions is needed. No inverse-transition or
+logarithmic moment, drift, balance, reversibility, or speed condition supplements(1). In the
+proof, a finite first moment for aspatial radiusis derived under the hypothesis that both
+signs have positive probability. No first moment for a regeneration duration, positive speed
+or ballisticity assertion is used or obtained from that estimate.
+2
+PDF PAGE 3
+1.2 Prior work
+The directional question goes back to Kalikow [7]; see also the historical discussion in [18].
+The classical sign-union zero–one law concernsP0(Aℓ∪A−ℓ), notP0(Aℓ). It originates in the
+uniformly elliptic theory of Kalikow [7]; its strict-ellipticity extension is [19, Proposition 3],
+as recalled in [18, Equation (1)]. Zerner and Merkl proved the one-sign directional law in
+dimension two for iid strictly elliptic environments [19, Theorem 1], and Zerner gave a shorter
+proof [18]. Slonim extended the planar iid law to bounded jumps when almost surely there is a
+unique infinite communicating class reachable from every site [14, Theorem 2.1]. Theorem 1.1
+establishes the directional zero–one conjecture for nearest-neighbor walks in every higher
+dimension under strict ellipticity.
+The difficulty in higher dimensions is that the planar arguments force oppositely directed
+paths to meet by geometry; their quantitative counterpart must be supplied differently here.
+Berger proved that in dimensionsd≥5 an iid uniformly elliptic walk has at most one
+nonzero limiting velocity [2, Theorem 1.1]. This allows a second velocity equal to zero and
+leaves open the possibility of opposite directional escape at zero speed. Independence is also
+substantive: Bramson, Zeitouni, and Zerner constructed stationary, polynomially mixing,
+uniformly elliptic environments ind≥3 with positive probabilities of linear escape in opposite
+directions [4, Theorem 3]. Their Open Problem 3 formulates the higher-dimensional question
+for iid uniformly elliptic environments.
+A non-uniformly elliptic special case is provided by Dirichlet-distributed rows. Sabot
+and Tournier obtained positive-probability transience in coordinate directions with positive
+corresponding mean drift, using reversal identities specific to that distribution [11, Theorem 1].
+Bouchet proved the fixed-direction zero–one law in this class ford≥3 by studying an
+accelerated walk and an invariant law for the environment viewed from the particle [3,
+Corollary 4]. Tournier identified the asymptotic direction as that of the initial drift when
+this drift is nonzero [16, Corollary 1]. The argument below applies to arbitrary iid strictly
+positive rows and uses only translations of its path pieces.
+The regeneration structure of Sznitman and Zerner [15] is a central tool. We give the
+factorization and width arguments needed below, including the distinction between real
+projected heights and integer record indices. Simenhaus proved that distinct deterministic
+asymptotic directions occurring with positive probability must be opposite [13, Proposition 1].
+His existence theorem for an asymptotic direction assumes transience on a nonempty open
+set of directions. Drewitz and Ramírez obtained a corresponding two-ray description under
+sign-union transience on an open set, equivalently ind linearly independent directions [5,
+Theorem 1.8]. Those hypotheses do not follow here from the initial assumption in one
+direction. In our contradiction argument, the spatial radius estimate supplies the two rays
+first; a self-contained argument then proves their antipodality. The remaining estimates
+concern contacts between two arrangements of regeneration pieces.
+1.3 Proof strategy
+Two fresh-row arguments make the proof work without a common positive lower bound
+on the transition probabilities. First, finite-width slab escape (Lemma 2.2) is proved using
+recurrent-site trials and first visits to new columns, in the spirit of [19, Lemma 4]. Second,
+scripts launched from a tilted record use pairwise distinct, previously unused rows. Their
+annealed cost is a product of positive row averages, rather than a product of uniform quenched
+lower bounds.
+Suppose, toward a contradiction, that0<P 0(Aℓ)< 1. A slab-exit argument and fresh-
+half-space regeneration first show that the path escapes in one of the two signs almost surely.
+At a strict record from which the path never falls below its new height, the future factors
+3

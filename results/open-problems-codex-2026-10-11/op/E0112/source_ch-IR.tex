@@ -1,0 +1,450 @@
+\chapter{The Intermediate Regime ($d=1$)} \label{sec:IR}
+In this chapter, we focus on dimension $d=1$, where the polymer is in the strong disorder phase as soon as $\b \neq 0$ is kept fixed (Remark \ref{rk:criticd=12}).
+\section{Introduction}
+Although it is believed that the model satisfies the following non-standard critical exponents: 
+\begin{equation} \label{eq:expected_critical_exponents}
+\sup_{0\leq s \leq t} |B_s| \approx t^{2/3} \quad \text{and} \quad \ln Z_t - \IP[\ln Z_t] \approx t^{1/3} \quad \text{as} \  t\to\infty,
+\end{equation}
+proofs are missing at this moment. It is also expected that the fluctuations of the free energy around its mean are of Tracy-Widom type:
+\begin{conjecture} For all non-zero $\b,\nu$ and $r$, there exists some constant $\sigma(\beta,\nu)$ such that, as $t\to \infty$,
+\begin{equation}
+\frac{\ln Z_t-p(\b,\nu)t}{\sigma(\beta,\nu)t^{1/3}} \cvlaw F_{\mathrm{GOE}}
+\end{equation}
+where the $F_{\mathrm{GOE}}$ is the Tracy-Widom GOE distribution \textup{\cite{tracy1994level}}.
+\end{conjecture}
+These properties are characteristics of the KPZ universality class. They are in sharp contrast to the weak disorder regime, where one knows to a large extent that $B_t \approx t^{1/2}$ (Theorem \ref{prop:diff}), and where the free energy $\ln Z_t$ has order one fluctuations around its mean \eqref{eq:WD}, which are features of the Edward-Wilkinson universality class.
+
+The KPZ universality class is a family of models of random surfaces dynamics that share non-gaussian statistics, non-standard critical exponents and scaling relations (3-2-1 in time, space and fluctuations, as in \eqref{eq:expected_critical_exponents}). Members of this class include some interacting particles systems (asymmetric simple exclusion prosses (ASEP), interacting Brownian motions), paths in random environment (directed polymers, first and last passage percolation), stochastic PDEs (KPZ equation, stochastic Burgers equation, stochastic reaction-diffusion equations). The reader may refer to \cite{corwin2016kardar} for a non-technical review on the KPZ universality class.
+
+The Kardar-Parisi-Zhang (KPZ) equation is the non-linear stochastic partial differential equation:
+\begin{equation} \label{KPZ} \frac{\partial \mathcal{H}}{\partial T}(T,X) = \frac{1}{2} \frac{\partial^2 \mathcal{H}}{\partial X^2}(T,X) + \frac{1}{2} \left(\frac{\partial \mathcal{H}}{\partial X}(T,X) \right)^2 + \beta \eta(T,X),
+\end{equation}
+where $\b\in\mathbb{R}$ and $\eta$ is a random measure on $[0,1]\times\mathbb{R}$ called the space-time \emph{Gaussian white noise}, which verifies that:
+\begin{enumerate}[label=(\roman*)]
+\item For all measurable sets $A_1,\dots,A_k$ of $[0,1]\times\mathbb{R}$, $\big(\eta(A_1),\dots,\eta(A_k)\big)$ is a centered Gaussian vector.
+\item For all measurable sets $A,B$ of $\,[0,1]\times\mathbb{R}$, then $\mathbb P[\eta(A)\eta(B)] = |A\cap B|.$
+\end{enumerate}
+
+The KPZ equation models the behavior of a random interface growth and was introduced by Kardar, Parisi and Zhang \cite{kardar1986dynamic} in 1986. It is difficult to make sense of this equation and Bertini-Cancrini \cite{BertiniCancrini95} argued that a possible definition of $\mathcal{H}_\b$ could be given by the so-called \emph{Hopf-Cole transformation}:
+\begin{equation} \label{eq:Hopf-Cole}
+\mathcal{H}_\b(T,X) = \ln \mathcal{Z}_\b(T,X),\end{equation}
+where $\mathcal{Z}_\b$ is the solution of the stochastic heat equation (SHE):
+\begin{equation} \label{SHE}
+\frac{\partial \mathcal{Z}_\b}{\partial T}(T,X) = \frac{1}{2} \frac{\partial^2 \mathcal{Z}_\b}{\partial X^2}(T,X) + \beta \mathcal{Z}_\b(T,X) \eta(T,X).
+\end{equation}
+
+In a breakthrough paper \cite{ACQ11}, Amir, Corwin and Quastel were able to describe the pointwise distribution of $\mathcal{H}_\b(T,X)$ by exploiting the weak universality of the ASEP model. It results from this that the KPZ equation lies in the KPZ universality class.
+
+The \emph{weak KPZ universality conjecture} states that the KPZ equation is a universal object of the KPZ class. As a general idea, the KPZ equation should appear as a scaling limit at critical parameters for models that feature a phase transition between the Edward-Wilkinson class (4-2-1 scaling) and the KPZ class. This was first verified for the model of ASEP \cite{BertiniGiacomin97}, and more recently for the discrete and Brownian directed polymers \cite{AlbertsKhaninQuastelAP,CoscoIntermediate}. The proofs rely on the Hopf-Cole transformation, which enables one to switch between the KPZ equation and the stochastic heat equation. In this chapter, we essentially summarize the arguments of \cite{CoscoIntermediate} to explain why the Brownian polymer in Poisson environment model verifies the weak KPZ universality.
+
+%However, not all models behave well under the Hopf-Cole transmation and in the last few years, new approaches (the pathwise technique \cite{hairer} and the martingale technique \cite{GubinelliEnergysolutions,Gubinelli2013,
+%Goncalves2014}) have been developped and applied to prove weak universality of various models (see \cite{hairer2017,Gubinelli2017,
+%HOSHINO2017} for the pathwise approach, \cite{Goncalves2014,goncalves2015,
+%Goncalves2017,Franco2016,Diehl2017} for the martingale approach). 
+
+
+
+
+
+\section{Connections between stochastic heat equation(s) and directed polymers %in random environments
+}
+\subsection{The continuum case}
+\label{continuumPolymerSHE} 
+A special case of interest for the SHE, where $\mathcal{Z}_\b(T,X)$ can be seen as the point-to-point partition function of a directed polymer, placed at $X=0$ at time $T=0$, is when
+\begin{equation} \label{eq:ICofSHE}
+\mathcal{Z}_\b(0,X) = \delta_0(X).
+\end{equation}
+In this case, $\mathcal{Z}_\b(T,X)$ can be expressed through the following shortcut (cf. Section \ref{subsec:constructionofP2P}):
+\begin{equation} \label{eq:FeynmanKac0}
+ \mathcal{Z}_\b(T,X) = \rho(T,X) \  P_{0,0}^{T,X} \left[ :\mathrm{exp}:\left(\beta \int_0^T \eta(u,B_u)\mathrm{d}u\right) \right],
+\end{equation}
+where $\rho(t,x)=e^{-x^2/2t}/\sqrt{2\pi t}$.
+
+This equation is similar to the definition of the point-to-point partition function a polymer with Brownian path and white noise environment. Alberts, Khanin and Quastel \cite{AlbertsKhaninQuastelCRP} were in fact able to construct a polymer measure with P2P partition function given by $\mathcal{Z}_\b(T,X)$.
+As both the environment and the paths of the polymer are continuous, it was named \emph{the continuum directed random polymer}.
+
+Similarly to the Poisson polymer, the P2P free energy $\mathcal{F}_\b(T,X)$ can be defined as
+\begin{equation}
+\mathcal{F}_\b(T,X) = \ln \frac{\mathcal{Z}_\b(T,X)}{\rho(T,X)},
+\end{equation}
+so that the free energy of the polymer and the solution of the KPZ equation follow the relation:
+\begin{equation}
+\mathcal{F}_\b(T,X) = \mathcal{H}_\b(T,X) + X^2/2T + \ln \sqrt{2 \pi T}.
+\end{equation}
+
+\subsection{The Poisson case}
+Introduce the renormalized point-to-point partition function:
+\begin{equation} \label{eq:renormalizedP2Pdef}
+W(t,x;\om,\b,r) = \rho(t,x) P_{0,0}^{t,x}\left[ \exp \{ \b \om(V_t)-\lambda(\b) \nu r^d t\}\right].
+\end{equation}
+We will often shorten the notation $W(t,x;\om,\b,r) =W(t,x) $ when no confusion can arise. Compared to $Z_t(\om, \b; x)$ of \eqref{PtoPdefinition}, a major difference is that it encorporates the Gaussian kernel as a factor.
+In the next theorem, we state that the renormalized P2P partition function verifies a weak formulation of the following \emph{stochastic heat equation with multiplicative Poisson noise}:
+\begin{equation}
+\partial_t W(t,x) = \frac{1}{2} \Delta W(t,x) + \lambda W(t-,x) \bar{\om}(\rmd t \times U(x)).
+\end{equation}
+When $\b=0$, it reduces to the usual heat equation.
+\begin{theorem}[Weak solution]\label{th:she}
+ For all $\varphi\in \mathcal{D}(\mathbb R)$ and $t\geq 0$, we have $\IP$-almost surely
+\begin{multline} \label{eq:sheForPoisson}
+\int_\mathbb{R} W(t,x)\varphi(x) \rmd x = \varphi(0) + \frac{1}{2}\int_0^t \rmd s \int_\mathbb{R} W(s,x) \Delta \varphi (x) \rmd x \\
++ \lambda \int_{\mathbb{R}} \rmd x \varphi(x) \int_{(0,t]\times \mathbb R} \bar{\om}(\rmd s, \rmd y) W(s-,x) \mathbf{1}_{|y-x|\leq r/2} \,.
+\end{multline}
+\end{theorem}
+\begin{proof} Let $\xi_t = \exp(\b \om(V_t(B)) - \lambda(\b)\nu r^d t)$ and observe that 
+\begin{equation*}\int_\mathbb{R} W(t,x)\varphi(x)\rmd x = P[\xi_t \varphi(B_t)].
+\end{equation*} 
+Then, recalling that $\om(V_t(B)) = \int \chi_{s,x} \, \om_t(\rmd s \rmd x)$, we use It\^o's formula \cite[Section II.5]{IkedaWatanabe} for fixed $B$ to get that
+\begin{align} \label{eq:finalecoupedefrance}
+\nonumber \xi_t &= 1 -\lambda \nu r^d \int_0^t \xi_s \rmd s + \lambda \int_{(0,t]\times \mathbb{R}} \xi_{s-} \chi_{s,x} \, \om(\rmd s \rmd x)\\
+& = 1 + \lambda\int_{(0,t]\times \mathbb{R}} \xi_{s-} \chi_{s,x} \, \bar{\om}(\rmd s \rmd x),
+\end{align} as almost surely, $\IP$-a.s. $\xi_s = \xi_{s-}$ a.e.
+
+As a difference of two increasing processes, $\xi$ is of finite variation over all bounded time intervals. Also note that one can get an expression to the measure associated to $\xi$ from the last equation. By the integration by part formula \cite[p.52]{jacod2013limit},
+\[ \xi_t \varphi(B_t) = \xi_0 \varphi(B_0) + \int_0^t \xi_{s-} \rmd \varphi(B_s) + \int_0^t \varphi(B_s) \rmd \xi_s + [\xi,\varphi(B)]_t,\]
+where $[\xi,\varphi(B)]_t=0$ since $\varphi(B)$ is continuous. Applying It\^o 's formula on $\rmd \varphi(B)$ and then taking $P$-expectation (which cancels the martingale term in the It\^o formula), one obtains by \eqref{eq:finalecoupedefrance} that $\IP$-a.s.
+\begin{align*}
+&\int_\mathbb{R} W(t,x)\varphi(x)\rmd x\\
+&  = \varphi(0) + \frac{1}{2}\int_0^t P[\xi_{s-} \Delta \varphi(B_s)] \rmd s + \lambda \int_{(0,t]\times\mathbb R} P[\varphi(B_s) \xi_{s-} \chi_{s,y}]\bar{\om}(\rmd s \rmd y)\\
+& = \varphi(0) + \frac{1}{2}\int_0^t \int_\mathbb R \Delta \varphi(x) W(s-,x) \rmd x \rmd s + \lambda \int_{(0,t]\times\mathbb R} \left(\int_\mathbb R \varphi(x) \mathbf{1}_{|y-x|\leq r/2} W(s-,x) \rmd x\right) \bar{\om}(\rmd s \rmd y).
+\end{align*}
+To conclude the proof, observe that we can apply Fubini's theorem to the last integral since for all $t>0$,
+\begin{align*}
+\IP \int_{(0,t] \times \mathbb{R}} P[|\varphi(B_s)|\xi_{s-} \chi_{s,y}] \om(\rmd s \rmd y) &= \nu e^\beta \int_{(0,t] \times \mathbb{R}} \IP[\xi_{s-}] P[|\varphi(B_s)| \chi_{s,y}] \rmd s \rmd y\\
+& = \nu e^\beta r \int_0^t P[|\varphi(B_s)|] \rmd s < \infty,
+\end{align*}
+where we have used the Mecke equation, cf. \eqref{eq:IPP} or \cite[4.1]{LastPenrose} in the first equality.
+\end{proof}
+
+\section{Chaos expansions}
+Let us first introduce some notations.
+For any $k\geq 1$, $s_1,\dots,s_k \in \mathbb{R}_+$ and $x_1,\dots,x_k \in \mathbb{R}$, write $\mathbf{s}=(s_1,\dots,s_k)$ and $\mathbf{x}=(x_1,\dots,x_k)$. Let 
+\begin{equation}\Delta_k(0,t)=\{\mathbf{s}\in [u,t]^k \,|\, 0<s_1<\dots<s_k\leq t\},
+\end{equation}
+be the $k$-dimensional simplex and $\Delta_k=\Delta_k(0,1)$.
+
+\subsection{The continuum case}
+\label{subsec:constructionofP2P}
+We give here the definition of a \emph{mild} solution to the stochastic heat equation, and we will see how this leads to an expression of the solution as a Wiener chaos expansion.
+We first mention that it is possible (cf. \cite{janson_1997}) to extend the integral over the space time white noise to any square integrable function:
+\begin{proposition}
+There exists an isometry $I_1 : L^2\big([0,1]\times\mathbb{R}\big) \mapsto L^2(\Omega,\mathcal{G},\IP)$ verifying:
+\begin{enumerate}[label=(\roman*)]
+\item For all measurable set $A$ of $[0,1]\times\mathbb{R}$, we have $I_1(A) = \eta(A)$.
+\item For all $g\in L^2$, the variable $I_1(g)$ is a centered Gaussian variable of variance $\Vert g \Vert^2_{L^2([0,1]\times \mathbb{R})}$.
+\end{enumerate}
+\end{proposition}
+\noindent We call $I_1(g)$ the \emph{Wiener integral} which also writes $I_1(g) = \int_{[0,1]}\int_{\mathbb{R}} g(s,x) \, \eta(\rmd s,\rmd x).$
+
+It is said that $\mathcal Z$ is a \emph{mild} solution to the stochastic heat equation \eqref{SHE} if, for all $0 \leq S <T\leq 1$,
+\begin{equation} \label{eq:mildSHE}
+\begin{split}
+\mathcal{Z}(T,X) = & \int_{\mathbb{R}} \rho(T-S,X-Y)\mathcal{Z}(S,Y)\mathrm{d}Y \\
+&+\beta \int_S^T \int_{\mathbb{R}} \rho(T-U,X-Y) \mathcal{Z}(U,Y) \eta(U,Y) \mathrm{d}U \mathrm{d}Y,
+\end{split}
+\end{equation}
+and if for all $T\geq 0$, $\mathcal{Z}(T,X)$ is measurable with respect to the white noise on $[0,T]\times\mathbb{R}$.
+
+\begin{remark}
+As a motivation to look at this form of the equation, one can check that if $\mathcal{Z}(T,X)$ satisfies \eqref{eq:mildSHE} with a smooth deterministic function $\eta(U,Y)$, then $\mathcal{Z}(T,X)$ is a solution to the SHE \eqref{SHE} with smooth noise.
+\end{remark}
+
+\begin{remark}
+Under some integrability condition, it can be shown that there is a unique mild solution - up to indistinguishability - to the SHE with Dirac initial condition \textup{\cite{BertiniCancrini95}}. This solution is continuous in time and space for $(T,X)\in (0,1]\times \mathbb{R}$, and it is continuous in $T=0$ in the space of distributions. Furthermore, $\mathcal{Z}_\b(T,X)$ can be shown to be positive for all $T>0$ \textup{\cite{morenoflores2014,Mueller}}.
+\end{remark}
+
+Using the initial condition $\mathcal{Z}(0,X) = \delta_X$, we get by iterating equation \eqref{eq:mildSHE} that
+\begin{align*}
+&\mathcal{Z}(T,X) = \rho(T,X) + \beta \int_0^T \int \rho(T-U,X-Y) \rho(U,Y) \eta(U,Y) \mathrm{d}U \mathrm{d}Y \\
+&+ \beta^2 \iint_{0<R<U\leq T} \iint_{\mathbb{R}^2} \rho(T-U,X-Y) \rho(U-R,Y-Z) \mathcal{Z}(R,Z) \\
+& \qquad \qquad \qquad \qquad \qquad \times \eta(U,Y) \eta(R,Z) \mathrm{d}U \mathrm{d}Y  \mathrm{d}R \mathrm{d}Z.
+\end{align*}
+It is possible to give a proper definition of these iterated integrals, and one can find the details of such a procedure in \cite[Chapter 7]{janson_1997}. We give a few properties of these integrals:
+\begin{property}  For all $k>0$, there exists a map $I_k:L^2(\Delta_k \times \mathbb{R}^k)\mapsto L^2(\Omega,\mathcal{G},\IP)$, which has the following properties:
+\begin{enumerate}[label = (\roman*)]
+\item For all $g\in L^2(\Delta_k \times \mathbb{R}^k)$ and $h\in L^2(\Delta_j \times \mathbb{R}^j)$, the variable $I_k(g)$ is centered and
+\begin{equation} \label{eq:Wiener_cov_struct}
+\IP \left[{I}_k(g) {I}_j(h)\right] =\ \delta_{k,j} \, <g,h>_{L^2(\Delta_k \times \mathbb{R}^k)}.
+\end{equation}
+\item The map $I_k$ is linear, in the sense that for all square-integrable $f,g$ and reals $\lambda,\mu$,
+\begin{equation*}
+\IP \text{-a.s.} \quad I_k(\lambda f + \mu g) = \lambda \, I_k(f) + \mu \,I_k(g).
+\end{equation*}
+
+The operator $I_k$ is called the \textbf{multiple Wiener integral}, and for $g\in L^2(\Delta_k \times \mathbb{R}^k)$, we also write
+\[I_k(g) = \int_{\Delta_k} \int_{\mathbb{R}^k} g(\mathbf{t},\mathbf{x}) \eta^{\otimes k}(\mathrm{d}\mathbf{t},\mathrm{d}\mathbf{x}).\]
+\end{enumerate}
+\end{property}
+\begin{remark} As a justification of the "iterated integral" property, it can be shown that the map $I_k$ extends to $L^2([0,1]^k\times \mathbb{R}^k)$, where it verifies that for all orthogonal family $(g_1,\dots,g_k)$ of functions in $L^2([0,1] \times \mathbb{R})$:
+\begin{equation} \label{eq:IkOrthog} {I}_k\left(\bigotimes_{j=1}^k g_j \right) =  \prod_{j=1}^k I_1(g_j),
+\end{equation}
+where $\bigotimes$ denotes the tensor product: $(\bigotimes_{j=1}^k g_j)(\mathbf{s},\mathbf{x}) = \prod_{j=1}^k g_j(s_j,x_j)$.
+\end{remark}
+
+By repeating the above iteration procedure, one gets that:
+\begin{equation} \label{eq:ChaosExpantionSHE}
+\mathcal{Z}(T,X) = \rho(T,X) + \sum_{k=1}^\infty \b^k \int_{\Delta_k} \int_{\mathbb{R}^k} \rho^k(\mathbf{S},\mathbf{Y};T,X) \eta^{\otimes k}(\mathrm{d}\mathbf{S},\mathrm{d}\mathbf{Y}),
+\end{equation}
+where we have used the notation, for $\mathbf{s}\in \Delta_k(s,t)$ and $\mathbf{y}\in\mathbb{R}^d$,
+\begin{equation*}
+\rho^k(\mathbf{s},\mathbf{y} \, ; t,x)= \rho(s_1,y_1) \left( \prod_{j=1}^{k-1} \rho(s_{j+1}-s_j,y_{j+1}-y_j) \right) \rho(t-s_k,x-y_k).
+\end{equation*}
+
+The infinite sum \eqref{eq:ChaosExpantionSHE} is called a \emph{Wiener chaos expansion}. By the covariance structure of the Wiener integrals \eqref{eq:Wiener_cov_struct}, all the integrals in the sum are orthogonal and to prove that $\eqref{eq:ChaosExpantionSHE}$ converges in $L^2$, it suffices to check that (see \cite{AlbertsKhaninQuastelCRP}):
+\[\sum_{k=0}^{\infty} \Vert \rho^k(\cdot,\cdot;T,X) \Vert^2_{L^2(\Delta_k\times\mathbb{R}^k)} < \infty.\]
+
+
+The ratio $\frac{\rho^k(\mathbf{s},\mathbf{y} \, ; t,x)} {\rho(t,x)} $ is the $k$-steps transition function of a Brownian bridge,  starting from $(0,0)$ and ending at $(t,x)$. From this observation, it is possible to introduce an alternative expression of 
+the mild solution $\mathcal{Z}(T,X)$ of SHE equation, via a Feynman-Kac formula:
+\begin{equation} \label{eq:FeynmanKac}
+ \mathcal{Z}(T,X) = \rho(T,X) \  P_{0,0}^{T,X} \left[ :\mathrm{exp}:\left(\beta \int_0^T \eta(u,B_u)\mathrm{d}u\right) \right],
+\end{equation}
+The Wick exponential $:\mathrm{exp}:$ of a Gaussian random variable $\xi$ is defined by 
+\[:\mathrm{exp}(\xi): = \sum_{k=0}^\infty \frac{1}{k!} :\xi^k:
+ \]
+where the $:\xi^k:$ notation stands for the Wick power of a random variable (cf.\cite{janson_1997}).
+The integral $\int_0^T \eta(u,B_u)\mathrm{d}u$, on the other hand, is not well defined, and to understand how to go from \eqref{eq:FeynmanKac} to  \eqref{eq:ChaosExpantionSHE}, one should use the following identification:
+\[ P_{0,0}^{T,X} \left[ :\left( \b \int_0^T \eta(u,B_u)\mathrm{d}u \right)^k : \right]  \ = \beta^k k! \int_{\Delta_k} \int_{\mathbb{R}^k} \frac{\rho^k(\mathbf{S},\mathbf{Y}\, ; T,X)}{\rho(T,X)} \eta^{\otimes k}(\mathrm{d}\mathbf{S} \mathrm{d}\mathbf{Y}).\]
+
+From now on, we suppose that $\mathcal{Z}_\b(T,X)$ is defined through equation \eqref{eq:ChaosExpantionSHE}. Integrating over $X$ this equation leads to the definition of the partition function of the continuum polymer:
+\begin{equation} \label{eq:defOfP2LZBeta}
+\mathcal{Z}_\b = \sum_{k=0}^\infty \b^k I_k( \rho^k),
+\end{equation}
+where $\rho^k$ is the $k$-th dimensional Brownian transition function, defined for $(\mathbf{s},\mathbf{x}) \in \Delta_k\times\mathbb{R}^k$ by:
+\begin{equation}
+\begin{split}
+\rho^k(\mathbf{s},\mathbf{x}) &= \rho(s_1,x_1) \left( \prod_{j=1}^{k-1} \rho( s_{j+1}-s_j,x_{j+1}-x_j) \right)\\
+& =  P\left(B_{s_1} \in \rmd x_1,\dots, B_{s_k} \in \rmd x_k\right),
+\end{split}
+\end{equation}
+with the convention that $\rho^0 = 1$. The motivation for writing the partition function  as in  \eqref{eq:defOfP2LZBeta} is that \eqref{eq:ChaosExpantionSHE}
+writes
+$\mathcal{Z}_\b (T,X)= \sum_{k=0}^\infty \b^k I_k( \rho^k(\cdot; T,X))$.
+
+
+
+
+\subsection{The Poisson case}
+We want to express $W_t$ in a similar way as \eqref{eq:defOfP2LZBeta}, this time with Poisson iterated integrals. We give here the basic definitions of these integrals and one can refer to \cite{LastPenrose} for more details\footnote{Note that for simplicity, we choosed to define here the integrals for functions of the simplex, so that some normalizing $k!$ terms and symmetrisation of some objects should be added to match the definitions in \cite{LastPenrose}.}.
+\begin{definition}
+For any positive integer $k$, define the $\mathbf k$\textbf{-th factorial measure} $\,\om_t^{(k)}$ to be the point process on $\Delta_k(0,t)\times\mathbb{R}^k$, such that, for any measurable set $\mathbf{A}\subset \Delta_k(0,t)\times\mathbb{R}^k$,
+\begin{equation}
+\om_t^{(k)}(\mathbf{A}) = \sum_{\substack{
+(s_1,x_1),\dots,(s_k,x_k) \in\, \om_t\\
+s_1<\dots<s_k}} \mathbf{1}_{((s_1,x_1),\dots,(s_k,x_k)) \in \mathbf{A}}.
+\end{equation}
+Otherwise stated,
+\begin{equation}
+\om_t^{(k)} = \sum_{\substack{
+(s_1,x_1),\dots,(s_k,x_k) \in\, \om_t\\
+s_1<\dots<s_k}} \delta_{((s_1,x_1),\dots,(s_k,x_k))}\;.
+\end{equation}
+\end{definition}
+These factorial measures define naturaly a multiple integral for the point process $\om_t$. Contrary to the Wiener integrals, these integrals are not centered, so what we really want is to define a multiple integral for the compensated process $\bar{\om}_t$. This is done as follows:
+\begin{definition}
+For $k\geq1$ and $g\in L^1(\Delta_k(0,t)\times \mathbb{R}^k)$, denote
+the \textbf{multiple Wiener-It\^o integral} of $g$ as
+\begin{equation} \label{eq:def_omk}
+\bar{\om}^{(k)}_t(g)
+:=\sum_{J\subset [k]} (-1)^{k-|J|} \int_{\Delta_k\times \mathbb{R}^k} %g(x_1,\dots ,x_k) 
+g( \mathbf{s}, \mathbf{x})\, \om_t^{(|J|)}(\rmd \mathbf{s}_J,\rmd \mathbf{x}_J) \, \nu^{k-|J|} \,\rmd \mathbf{s}_{J^c} \, \rmd \mathbf{x}_{J^c}.
+\end{equation}
+When $k=0$, define $\bar{\om}^{(0)}_t$ to be the identity on $\mathbb{R}$.
+\end{definition}
+
+The two following results can be found in \cite{LastPenrose}:
+\begin{proposition}
+For $k\geq 1$, the map $\bar{\om_t}^{(k)}$ can be extended to a map \[\begin{array}{ccccc}
+\bar{\om}_t^{(k)} & : & L^2(\Delta_k(0,t)\times \mathbb{R}^k) & \to & L^2(\Omega,\mathcal{G},\IP)\\
+& & g &\mapsto & \bar{\om}_t^{(k)}(g),
+\end{array} \] which coincides with the above definition of $\,\bar{\om}_t^{(k)}$ on the functions of $L^1 \cap L^2(\Delta_k(0,t)\times \mathbb{R}^k)$.
+\end{proposition}
+\begin{property}
+\begin{enumerate}[label=(\roman*)]
+\item For any $k\geq 1$ and $g\in L^2(\Delta_k(0,t)\times \mathbb{R}^k)$, we have $\IP\big[\bar{\om}_t^{(k)} (g)\big] = 0$.
+\item For any $k\geq 1$ and $l\geq 1$, $g\in L^2(\Delta_k(0,t)\times \mathbb{R}^k)$ and $h\in L^2(\Delta_l(0,t)\times \mathbb{R}^l)$, the following covariance structure holds:
+\begin{equation} \label{eq:covariance_structure}
+\IP\left[\bar{\om}_t^{(k)}(g) \, \bar{\om}_t^{(l)}(h) \right] = \delta_{k,l} \ \nu^k < g ,h >_{L^2(\Delta_k(0,t)\times \mathbb{R}^k)}.
+\end{equation}
+\item The map $\bar{\om}_t^{(k)}$ is linear, in the sense that for all square-integrable $f,g$ and reals $\lambda,\mu$,
+\begin{equation*}
+\IP \text{-a.s.} \quad \bar{\om}_t^{(k)}(\lambda f + \mu g) = \lambda \, \bar{\om}_t^{(k)}(f) + \mu \,\bar{\om}_t^{(k)}(g).
+\end{equation*}
+\end{enumerate}
+\end{property} 
+\begin{proposition} \textup{\cite{CoscoIntermediate}} \label{prop:Poisson_chaos_decomposition}
+The renormalized partition function admits the following Wiener-It\^o chaos expansion:
+\begin{equation} \label{eq:wiener_ito_wt_expansion}
+W_t = \sum_{k=0}^\infty \, \bar{\om}^{(k)}_t (\Psi^k),
+\end{equation} where the sum converges in $L^2$ and where, for all $\mathbf{s}\in \Delta_k$, $\mathbf{x}\in\mathbb{R}^k$ and $k\geq 0$, we have set:
+\begin{equation} \label{eq:TkWtExpression}
+\Psi^k(\mathbf{s},\mathbf{x}) = \lambda(\b)^k\, P\left[\prod_{i=1}^k \chi_{s_i,x_i}(B) \right],
+\end{equation}
+with the convention that an empty product equals $1$.
+\end{proposition}
+
+\begin{proof}[Sketch of proof] We follow the proof of Lemma 18.9 in \cite{LastPenrose}. 
+By definition we have that $W_t = P\left[e^{\b\om(V_t(B)-t\lambda r\nu}\right]$. Hence, assuming that Fubini's theorem applies to the RHS of \eqref{eq:wiener_ito_wt_expansion}, it is enough to show that $\IP\times P$-almost surely:
+\begin{equation} \label{eq:exp_expansion}
+e^{\b\om(V_t(B))-t\lambda r\nu} = \sum_{k=0}^\infty \, \bar{\om}^{(k)}_t \left((\lambda\chi)^{\otimes k}\right),
+\end{equation}
+where, for all $\mathbf{s}\in \Delta_k(0,t)$, $\mathbf{x}\in\mathbb{R}^k$, we have defined $(\lambda\chi)^{\otimes k}(\mathbf{s},\mathbf{x}) = \prod_{j=1}^k \lambda(\b)\chi_{s_j,x_j}(B)$.
+Then, observe that:
+\begin{align*}
+&\sum_{k=0}^\infty \, \bar{\om}^{(k)}_t \left((\lambda\chi)^{\otimes k}\right)\\
+& = \sum_{k=0}^\infty \sum_{J\subset [k]} (-1)^{k-|J|} \int_{\Delta_k(0,t)\times \mathbb{R}^k} \prod_{i=1}^k \lambda\chi_{s_i,x_i}\, \om_t^{(|J|)}(\rmd \mathbf{s}_J,\rmd \mathbf{x}_J) \, \nu^{k-|J|} \,\rmd \mathbf{s}_{J^c} \, \rmd \mathbf{x}_{J^c}\\
+& = \sum_{k=0}^\infty \sum_{j=0}^k \binom{k}{j}(-1)^{k-j} \frac{1}{k!} \int_{[0,t]^k\times \mathbb{R}^k} \prod_{i=1}^k \lambda\chi_{s_i,x_i}\, \om_t^{(j)}(\rmd \mathbf{s}_{[j]},\rmd \mathbf{x}_{[j]}) \, \nu^{k-j} \,\rmd \mathbf{s}_{[j]^c} \, \rmd \mathbf{x}_{[j]^c}\\
+& = \sum_{j=0}^\infty \frac{1}{j!}\, j!\, \om^{(j)} \left((\lambda\chi)^{\otimes j}\right) \sum_{k=j}^\infty \frac{1}{(k-j)!} (-t\lambda \nu r)^{k-j}\\
+& = e^{-t\lambda r\nu} \sum_{j=0}^\infty \om^{(j)} \left((\lambda\chi)^{\otimes j}\right).
+\end{align*}
+Then, if we let $(s_1,x_1),\dots,(s_N,x_N)$ with $s_1<\dots<s_N$ be the points of $\om$ that lie in the tube $V_t(B)$, we get by definition of the $\om_t^{(j)}$'s that
+\begin{equation*}
+\sum_{j=0}^\infty \om_t^{(j)} \left((\lambda\chi)^{\otimes j}\right) = \sum_{J\subset [N]} \prod_{i\in J} \left(e^{\b \chi_{s_i,x_i}}-1 \right) = \prod_{i=1}^N e^{\b \chi_{s_i,x_i}} = e^{\b\om(V_t(B))},
+\end{equation*}
+where the last equality comes from a telescopic sum (and the convention that an empty product is $1$). This implies \eqref{eq:exp_expansion}. 
+
+To prove convergence in $L^2$ of the sum in the RHS of \eqref{eq:wiener_ito_wt_expansion}, notice that the terms are pairwise orthogonal and verify:
+\begin{align*}
+&\IP\left[ \bar{\om}^{(k)}_t \left(T_k \, W_t\right)^2\right] = \lambda^{2k}\int_{\Delta_k(0,t)\times \mathbb{R}^k} P\left[\prod_{i=1}^k \chi_{s_i,x_i}(B) \right]^2\rmd \mathbf{s} \rmd \mathbf{x} \\
+&\leq \frac{\lambda^{2k}}{k!} \int_{[0,t]^k\times \mathbb{R}^k} P\left[\prod_{i=1}^k \chi_{s_i,x_i}(B) \right]\rmd \mathbf{s} \rmd \mathbf{x}\\
+&= \frac{(\lambda^{2}t\nu r)^k}{k!},
+\end{align*}
+whose sum converges.
+\end{proof}
+
+\section{The intermediate regime} \label{sec:intermediate_regime}
+We now consider parameters $\beta_t\in\mathbb{R}$, $\nu_t > 0$ and $r_t > 0$ that depend on time $t$, and we fix a parameter $\b^*\in\mathbb{R}^*$. We assume that they verify the following asymptotic relations, as $t\to\infty$:
+\begin{equation} \label{eq:paramRI}
+\begin{gathered}
+\text{(a)} \  \nu_t r_t^2 \lambda(\b_t)^2 \sim (\b^*)^{2}t^{-1/2}, \quad \text{(b)} \  \nu_t r_t^3 \lambda(\b_t)^3 \to 0,\\
+\text{(c)} \  r_t/\sqrt{t} \to 0.
+\end{gathered}
+\end{equation}
+
+Suppose for example that $r_t = \nu_t = 1$. Then, the scaling conditions are equivalent to $\b_t = \b^* t^{-1/4}$, so that we can see the scaling as a limit from strong disorder ($\b>0$) to weak disorder ($\b=0$). For general parameters, one can observe that in dimension $d\geq 3$, Theorem \ref{th:LTwoRegion} implies that there exists a positive constant $c(d)$, such that the polymer lies in the $L^2$ region as soon as
+$\nu r^{d+2} \lambda(\b)^2 < c(d)$.  Since conditions (a) and (c) imply that $\nu_t r_t^3 \lambda(\b_t)^2 \to 0$, the scaling for $d=1$ should again be interpreted as a crossover between strong and weak disorder.
+
+\begin{remark}
+The asymptotics are in contrast to the regime of  complete localization \eqref{eq:completeloc}, where, for fixed $r$, one let $\nu \beta^2 \to \infty$.
+\end{remark}
+
+The following theorem states that under the above scaling, the P2L and P2P partition functions of the Poisson polymer converge to the one of the continuum polymer:
+\begin{theorem} \label{th:cv_Wt_interReg} Suppose conditions (a), (b) and (c) hold. Then, as $t\to\infty$:
+\begin{equation} \label{eq:P2PcvlawTh}
+W_t(\om^{\nu_t},\b_t,r_t) \cvlaw \mathcal{Z}_{\beta^*},
+\end{equation}
+where $\om^{\nu_t}$ is the Poisson point process with intensity measure $\nu_t \rmd s \rmd x$.
+Moreover, for all $S,Y,T,X \in [0,1]$, we have
+\begin{equation}
+\sqrt{t} W\left(tS,\sqrt{t} \hspace{0.3mm}Y;t\hspace{0.3mm}T,\sqrt{t}\hspace{0.3mm}X;\om^{\nu_t},\b_t,r_t\right) \cvlaw \mathcal{Z}_{\beta^*}\left(S,Y;T,X\right),
+\end{equation}
+where the renormalized P2P partition function from $(S,Y)$ to $(T,X)$ is defined by
+\begin{equation}
+W(s,y;t,x;\om,\b,r) = W(t-s,x-y;\om,\b,r)\circ \theta_{s,y},
+\end{equation}
+and similarly for $\mathcal{Z}_{\beta^*}\left(S,Y;T,X\right)$.
+\end{theorem}
+\begin{remark} \label{rk:sqrtt}
+The $\sqrt{t}$ term appears here as a renormalization in the scaling of the heat kernel: $\sqrt{t}\rho\left(tT,\sqrt{t}X\right) = \rho(T,X)$.
+\end{remark}
+\begin{proof}[Sketch of proof]
+We focus on showing \eqref{eq:P2PcvlawTh}, as the result for the P2P partition function follows from the same technique and remark \ref{rk:sqrtt}. Let $\gamma_t$ be proportional to the vanishing parameter appearing in scaling relation (b):
+\begin{equation}
+\gamma_t := (\b^*)^{-3} \nu_t r_t^3 \lambda(\b_t)^3 \to 0.
+\end{equation}
+and we now specify the radius for the indicator $\chi_{s,x}^{\delta}(B) = \mathbf{1}_{|B_s-y|\leq \delta/2}$.
+Introduce the following time-depending functions of $\Delta_k(0,t)\times\mathbb{R}^k$:
+\begin{equation}
+\phi_t^k(\mathbf{s},\mathbf{x}) = \gamma_t^{-k} \, \lambda(\b_t) ^k P\left[\prod_{i=1}^k \chi_{s_i,x_i}^{r_t/\sqrt{t}} (B)\right].
+\end{equation} 
+Note that for all $(s,x)$, the diffusive scaling property of the Brownian motion implies that
+\[\chi_{s/t,x/\sqrt{t}}^{r_t/\sqrt{t}} = \mathbf{1}_{|B_{s/t} - x/\sqrt{t}| \leq r_t/2\sqrt{t}} \eqlaw \chi^{r_t}_{s,x}.\]
+Therefore, using notation $\widetilde{\phi}_t^k = \phi_t^k(\cdot/t,\cdot/\sqrt{t})$, we see that after simple rescaling, equation \eqref{eq:TkWtExpression} becomes
+\begin{equation} \label{eq:phitktilde} \gamma_t^k \, \widetilde{\phi}_t^k(\mathbf{s},\mathbf{x}) = \lambda(\b)^k\, P\left[\prod_{i=1}^k \chi_{s_i,x_i}(B) \right].
+\end{equation}
+Hence, Proposition \eqref{prop:Poisson_chaos_decomposition} and equation \eqref{eq:phitktilde} lead to the following expression of $W_t$:\footnote{Note that from now on, we will always assume that $\om\eqlaw\om^{\nu_t}$, although we will drop the superscript notation.}
+\begin{equation} \label{eq:WtExpansionTwo}
+W_t = \sum_{k=0}^\infty \gamma_t^k \, \bar{\om}^{(k)}_t \left(\widetilde{\phi}_t^k\right).
+\end{equation}
+
+Now, we also define the rescaled functions $\tilde{\rho}^{\,k}_t = \rho^{k}(\cdot/t,\cdot/\sqrt{t})$ and we make two claims:
+\begin{itemize}
+\item \textbf{Claim 1:} For all $k\geq 0$ and as $t\to\infty$, $\phi^k_t \cvLdeux (\b^*)^k\rho^k$, 
+\item \textbf{Claim 2:} As $t\to\infty$, $\sum_{k=0}^\infty (\beta^*)^k \gamma_t^k\,\bar{\om}_t^{(k)}(\tilde{\rho}^{\,k}_t) \cvlaw \sum_{k=0}^\infty (\b^*)^k I_k( \rho^k) = \mathcal{Z}_{\beta^*}$.
+\end{itemize}
+Claim 1 follows from the scaling relations and the fact that $\varepsilon^{-k} P[\prod_{i=1}^k \chi_{s_i,x_i}^\varepsilon(B)] \to \rho^k(\mathbf{s},\mathbf{x})$ as $\varepsilon\to 0$. For claim 2, we only present the argument for the convergence in law of the $k=1$ term of the sum. The complete argument relies on this case to extend the convergence to all $k\geq 1$ terms (see \cite{CoscoIntermediate}).
+As $\tilde{\om}^{(1)}=\tilde{\om}$ and $\rho^1 = \rho$, we can apply the complex exponential formula (see equation \eqref{eq:PoissonExpMoment}) to compute the characteristic function of $\gamma_t \,\bar{\om}_t(\tilde{\rho}_t)$. For $u\in \mathbb{R}$, we obtain:
+\begin{align*}&\IP\left[e^{iu\gamma_t\bar{\om}_t(\tilde{\rho}_t)}\right]\\
+&=\exp\left(\int_{[0,t]} \int_\mathbb{R}  \big(e^{iu\gamma_t \rho(s/t,x/\sqrt{t})}-1 -iu\gamma_t \, \rho(s/t,x/\sqrt{t})\, \big) \nu_t \, \mathrm{d}s \mathrm{d}x \right)\\
+&=\exp\left(\int_{[0,1]} \int_\mathbb{R} \nu_t t^{3/2} \big(e^{iu\gamma_t \rho(s,x)}-1 -iu\gamma_t \, \rho(s,x)\big)\mathrm{d}s \mathrm{d}x \right).
+\end{align*}
+By Taylor-Lagrange formula, we get that
+\begin{equation*}
+\forall (s,x)\in [0,1]\times\mathbb{R}, \  \nu_t t^{3/2}\left|e^{iu\gamma_t \rho(s,x)}-1 -iu\gamma_t \, \rho(s,x)\right|\leq \nu_t t^{3/2} \gamma_t^2 \frac{u^2}{2} \rho(s,x)^2,
+\end{equation*}
+This gives $L^1$ domination since since $\rho\in L^2([0,1]\times\mathbb{R})$ and since relations (a) and (b) imply that $ \nu_t \gamma_t^2 \sim t^{-3/2}$. Moreover, as $\gamma_t \to 0$, the integrand of the above integral converges pointwise to the function $(s,x) \mapsto -\frac{u^2}{2}\rho^2(s,x)$. Therefore, by dominated convergence, we obtain that as $t\to\infty$,
+\[\IP\left[e^{iu\gamma_t\tilde{\om}_t(\tilde{\rho}_t)}\right] \to \exp\left(-\frac{u^2}{2} \Vert \rho\Vert^2_2\right).\] This is the Fourier transform of a centered Gaussian random variable of variance $\Vert \rho\Vert^2_2$, which has the same law as $I_1(\rho)$, so that indeed $\bar{\om}_t^{(1)}(\tilde{\rho}^{\,1}_t) \cvlaw I_1(\rho^1)$. 
+
+
+
+Now, if $X_n$ and $Y_n$ are random variables such that $Y_n \cvlaw Y$ and $\Vert Y_n-X_n\Vert_2 \longrightarrow 0$, then $X_n \cvlaw Y$.
+Therefore, to prove that $W_t \cvlaw \mathcal{Z}_{\beta^*}$, it is enough by claim 2 to show that
+\begin{equation}\left\Vert \sum_{k=0}^\infty \gamma_t^k \, \bar{\om}_t^{(k)}(\tilde{\phi}_t^k) - \sum_{k=0}^\infty (\b^*)^k \gamma_t^k\,\bar{\om}_t^{(k)}(\tilde{\rho}^{\,k}_t) \right\Vert_2^2 \underset{{t} \to {\infty}}{\longrightarrow} 0.
+\end{equation}
+By Pythagoras' identity and linearity of $\tilde{\om}_t^{(k)}$, we obtain that the above norm writes:
+\[\sum_{k=0}^\infty \gamma_t^{2k} \, \Vert\bar{\om}_t^{(k)}\big(\phi_t^k(\cdot/t,\cdot/\sqrt{t})- (\b^*)^k\rho^{k}(\cdot/t,\cdot/\sqrt{t})\big)\Vert_2^2.\]
+For all $g\in L^2(\Delta_k\times \mathbb{R}^k)$, we get from a substitution of variables that
+\begin{equation*}\Vert\bar{\om}_t^{(k)}\big(g(\cdot/t,\cdot/\sqrt{t})\Vert_2^2 = \nu_t^k\Vert g(\cdot/t,\cdot/\sqrt{t})\Vert^2_{L^2(\Delta_k(0,t)\times \mathbb{R}^k)}  =  \nu_t^k t^{3k/2} \Vert g\Vert^2_{L^2(\Delta_k\times \mathbb{R}^k)},
+\end{equation*}
+so that the above sum is given by
+\[\sum_{k=0}^\infty \gamma_t^{2k} \nu_t^k t^{3k/2} \, \Vert \phi_t^k-(\b^*)^k\rho^{k}\Vert_{L^2(\Delta_k\times \mathbb{R}^k)}^2.\]
+Conditions (a) and (b) imply that $\gamma_t^2 \nu_t^k t^{3/2} \sim 1$, so the proof can be concluded by claim 1 and by showing that $\Vert \phi_t^k\Vert_2^2$ is dominated by the summable sequence $C^{2k} \Vert\rho^k\Vert^2_2$, where $C=C(\b^*)$ is some positive constant, so that the dominated convergence theorem applies.
+\end{proof}
+
+
+\section{Convergence in terms of processes of the P2P partition function}
+\label{sec:proofCVProcesses}
+Let $\mathcal{D}'(\mathcal R)$ denote the space of distributions on $\mathbb{R}$, and $D\big([0,1],\mathcal{D}'(\mathcal R)\big)$ the space of c\`adl\`ag function with values in the space of distributions, equipped with the topology defined in \cite{mitoma1983tightness}.
+We also define the rescaling of the renormalized P2P partition function \eqref{eq:renormalizedP2Pdef}:
+\begin{equation}
+\mathcal{Y}_t\left(T,X\right) = \rho(T,X) W\left(tT,\sqrt{t}X;\om^{\nu_t},\b_t,r_t\right).
+\end{equation}
+The two variables function $\mathcal{Y}_t$ can be seen as an element of $D\big([0,1],\mathcal{D}'(\mathcal R)\big)$, through the mapping $\mathcal{Y}_t : T \mapsto \big(\varphi \mapsto \int \mathcal{Y}_t(T,X)\varphi(X)\rmd X\big)$. The next theorem states that the rescaled partition function $\mathcal{Y}_t$ converges, in terms of processes, to the solution of the stochastic heat equation:
+\begin{theorem} \label{th:cvlaw} \textup{\cite{CoscoIntermediate}}
+Suppose that $(\b_t)_{t\geq 0}$ is bounded by above. As $t\to\infty$, the following convergence of processes holds:
+\begin{equation}
+\mathcal{Y}_t \cvlaw \big(T\mapsto \mathcal{Z}_{\b^*}(T,\cdot)\big),
+\end{equation}
+where the convergence in distribution holds in $D\big([0,1],\mathcal{D}'(\mathcal R)\big)$.
+\end{theorem}
+For any function $F\in D\left([0,1],\mathcal{D}'(\mathbb{R})\right)$ and $\varphi\in \mathcal{D}(\mathbb{R})$, set
+\begin{equation}
+F(T,\varphi) := \int F(T,X)\varphi(X)\rmd X.
+\end{equation}
+In order to show tightness of $\mathcal{Y}_t$, the tool used in \cite{CoscoIntermediate} is Mitoma's criterion \cite{mitoma1983tightness,Walsh}:
+\begin{proposition} \label{th:Mitoma}
+Let $(F_t)_{t\geq 0}$ be a family of processes in $D\left([0,1],\mathcal{D}'(\mathbb{R})\right)$. If, for all $\varphi \in \mathcal{D}(\mathbb{R})$, the family $T\to F_t(T,\varphi),t\geq 0$ is tight in the real cadl\`ag functions space $D([0,1],\mathbb{R})$, then $(F_t)_{t\geq 0}$ is tight in $D\left([0,1],\mathcal{D}'(\mathbb{R})\right)$.
+\end{proposition}
+\noindent Then, to prove uniqueness of the limit, one can rely on the following proposition:
+\begin{proposition}[\textup{\cite{mitoma1983tightness}}] \label{prop:mitomaIdentification}
+Let $(F_t)_{t\geq 0}$ be a tight family of processes in the space $D\left([0,1],\mathcal{D}'(\mathbb{R})\right)$.  If there exists a process $F\in D\left([0,1],\mathcal{D}'(\mathbb{R})\right)$ such that, for all $n\geq 1$, $T_1,\dots,T_n\in [0,1]$ and $\varphi_1,\dots,\varphi_n \in \mathcal{D}(\mathbb R)$, we have as $t\to\infty$:
+\[\left(F_t(T_1,\varphi_1),\dots,F_t(T_n,\varphi_n)\right) \cvlaw \left(F_t(T_1,\varphi_1),\dots,F_t(T_n,\varphi_n)\right),
+\]
+then $F_t \cvlaw F$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

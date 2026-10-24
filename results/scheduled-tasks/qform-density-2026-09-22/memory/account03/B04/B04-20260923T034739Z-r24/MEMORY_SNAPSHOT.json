@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "B04-20260923T034739Z-r24",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_publication_refresh": "e15a8f6f8045151efd22694482e75d12bbe450d6",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "claim": {
+    "id": "QFORM-SPECTRAL-WINDOW-TRADEOFF-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "statement": "If P_tau is the spectral projector onto |lambda|>=tau, mu=max diag P_tau, L=1/2-mu-sqrt(2mu), L>tau, and sqrt(mu/L)+sqrt(6)tau/(L-tau)<=1/sqrt(2), then the QFORM output has a continuous C0 density bounded by 9 sqrt(3e)/(2(L-tau))."
+  },
+  "dependency": {
+    "id": "QFORM-RIDGE-DENSITY-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9c1167db05c7b0f520f060796fde921ed769a4e7",
+    "path": "proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md",
+    "application": "Checked perturbation lemma and MSS spectral-window passage, then applied q=1 ridge criterion to the generalized leverage/tail gate."
+  },
+  "explicit_corollary": {
+    "tau": "1/256",
+    "mu": "1/20",
+    "density_bound": "<99",
+    "continuity": true
+  },
+  "explicit_rotated_family": {
+    "description": "Three normalized Hadamard columns U in dimension 64, A=U diag(1,1,-1)U^T+(1/1024)(I-UU^T)",
+    "spectrum": "1,1,-1, and 1/1024 with multiplicity 61",
+    "high_projector_diagonal": "3/64",
+    "old_1_over_32_gate": "fails",
+    "new_density_bound": 89.84327092810767,
+    "continuity": true
+  },
+  "partner": {
+    "designated": "account04/B04",
+    "completed_result_visible": false,
+    "action": "did not fabricate; proceeded asynchronously"
+  },
+  "outputs": {
+    "report_repository": "yspennstate/math-open-problems",
+    "report_commit": "a11e719b61c4be07fae4e2dcfa4d88d31812d0d9",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/B04-20260923T034739Z-r24/REPORT.md",
+    "checks_commit": "494a6126bb93a7c32f61108f88f3be9d567f9273",
+    "handoff_commit": "3a834daacfcb0237c8d1b3c84edc27b3ad41b5d5",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B04/B04-20260923T034739Z-r24.md"
+  },
+  "unresolved_implication": "Use failure of the diffuse spectral-window gate to obtain and route a heavy physical row through aggregate scalar-square/rank-two/grouped-bank branches without paying a vanishing local minor.",
+  "full_target_status": "OPEN"
+}

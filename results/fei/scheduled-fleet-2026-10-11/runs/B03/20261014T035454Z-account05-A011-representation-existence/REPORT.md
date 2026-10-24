@@ -1,0 +1,45 @@
+# A011 stage 5: prescribed reference shock and a paid repair
+
+## exact target, quantifiers, hypotheses and units
+
+Continue the representation-existence gap G-J-COST, with full Fourier-reference costs in bits and physical uniform-cube influences. For every nonempty parity core chi_A on m>=1 data bits, every edited point, and r>=1 fresh point controls, test whether an inherited full positive reference can be retained without a new charge. Construct a complete replacement with its reference change, terminal debt and destroyed-edge charge explicitly paid. Arbitrary independent terminal tensors retain their entire supplied cost. This is a narrow repair of the existing point-edit interface, not a new broad class proposal; full FEI remains OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Read execution protocol 2026-10-11-execution-v2 in full, BOARD snapshot 2026-10-14 03:46 UTC, B03 STREAM_NOTES v2, own STATUS and the prior point-edit proof/checker/claim. The lead's posterior-erased comb direction is continued; its general C020 cover-existence statement remains open. Consumed A097 stage 4 REPORT (20261014T021008Z) and A094 stage 4 REPORT (20261014T031253Z), specifically the favorable-edge removal and full terminal-reserve scope. Their bent banks already close the invariant-magnitude stress family; this stage does not repeat them or independently review their chains. Source paths and byte digests are in out/SOURCE_RECEIPTS.json. Earlier campaign and paper intake remains recorded in prior immutable runs; no new external literature or priority claim is made. The new derivation is self-contained.
+
+## complete derivation or exact first unsupported line
+
+REFERENCE_REPAIR.md proves every parameter claim. Put p=2^-r,t=2^-m,rho=4pt. The actual data spectrum marginal for a parity point edit is exactly q=(1-rho)delta_A+rho U_m. For the same full inherited R, the neutral non-bent example m=4,|A|=2,r=1 has I=33/16, C=E=1/8 and zero net data increment. The normalized full-support references R_L(A)=1-15*2^(-L-4), R_L(T)=2^(-L-4) elsewhere have source cost c_L<1 but unchanged root cost >=15(L+4)/128. At L=256 this gives CE>=975/32>8I=33/2. No finite uniform price pays this fixed-reference lift from bounded source slack and bounded physical edge accounts. It is a reference-transfer obstruction, not a Boolean FEI counterfamily.
+
+The explicit repair R'=(1-rho)R+rho U_m, Q'=R'K_true has full mass (1-rho)sum R+rho. With actual analytical mixture-label posterior and measured reference posterior KL kappa, its exact cost is (1-rho)c+rho m+h2(rho)-H(J|T)-kappa+B. Its exact residual debt is (1-rho)c-kappa, with B the conditional selector entropy. The analytical label is not a physical fair-child kernel. The derived complete bound is CE<=c+6(C+E)+6I_sel. For source slack S_K=K|A|-c the one-use root certificate is K I(F)-CE>=S_K+(K-6)C-(K+6)E+(K-6)I_sel. All reference changes are charged and all erased edges retained. Independent Boolean terminal g with prescribed R_g has exact tensor cost c_g+CE, additive physical influence and additive debt; no terminal bank is spent twice.
+
+First unsupported universal line: for unequal-amplitude arbitrary cores, replace the parity-only positive marginal mixture by an influence-paid complete reference change, then fund both that change and erased edges from one unused source slack through actual restrictions. The signed cross term in the marginal is not a positive mixture. Neither the counterexample nor the repair closes this line. Ideal CE is used throughout; single-word integer rounding adds its own global +1.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+out/FROZEN_SPEC.json was written before the pilot: m=1..4, every k=1..m, every labelled edited point, r=1..3; six full references per actual root, scales 1 and 1/2, floor exponents 1,8,32. This is 294 actual Boolean cases and 1,764 reference cases with no point symmetry quotient. Integer Walsh coefficients, separately enumerated physical edges, Fraction probabilities, complete reference masses and exact likelihood-ratio identities are checked. Entropy and CE use rational logarithm intervals: binary range reduction to [1,2), 32 terms of 2 sum z^(2j+1)/(2j+1), tail at most 2z^65/[65(1-z^2)], and outward division by enclosed ln2. All inequality signs are certified; floating runtime is observational only.
+
+    python -X utf8 runs/20261014T035454Z-account05-A011-representation-existence/code/check.py
+
+PASS: 58,521 assertions, 294 actual roots, 1,764 reference cases, 30.896184 helper seconds in the final v1.1 check. The initial pilot took 17.458394 seconds; its identical assertion domain is not counted twice. VALIDATION_REFINEMENT.json freezes the strengthened auxiliary sign (upper left side <= lower right side) before rerunning; no dimension or domain changed. The infinite bad-reference sequence is proved analytically, with exact rational L=256 certificate saved in out/EXACT_RESULTS.json. This search does not exhaust arbitrary Boolean functions.
+
+out/TENSOR_FROZEN_SPEC.json preceded a separate exact check of all 16 labelled two-bit terminal signs, two full terminal references and two repaired parity-reference masses: 64 actual tensor/reference cases, maximum cube dimension five. Each physical Fourier coefficient and influence, full product-reference mass, CE log argument and KL likelihood ratio is checked in code/check_tensor.py; results are in out/TENSOR_RESULTS.json (PASS: 2,656 assertions in 1.432255 helper seconds; stage total 61,177 assertions). Its product likelihood identities certify the exact additive cost/debt algebra without using numerical logarithms. No test was imported from another agent.
+
+Both jobs have 55-second internal cutoffs; no job expected more than 80 MB, actual memory unmeasured. No >300 MB job, memok trigger, GPU, dimension escalation or background process. One shell intake command was slow under shared host load and was polled to completion; it did not launch research work that outlived its command. Completed helper times and totals are recorded in out/VALIDATION_TOTALS.json.
+
+## proof dependencies and changed downstream conclusions
+
+This stage repairs A011-POINT-EDIT-REFERENCE-OWNERSHIP@1, hash ac69f57ddf5a35a18603a5fb9d514ed50e02506cf33311f20b519fc2909c8064, but rederives its physical coefficients and B bound. No unreviewed external reserve theorem is a mathematical premise. A097/A094's reports inform dispatch only. The prior same-R terminal shock must not be silently bounded by source cost, even with full support, fixed dimension and neutral data influence. A source reserve can instead be tested against the repaired complete bill and explicit erased-edge account. This is a narrow continuation under the stream pending-candidate cap. New claim independent review, shared registry adoption, supervisor copying and mirrors remain unverified.
+
+## one next mathematical action and independent reviewer
+
+At one unequal-amplitude neutral point edit, use AND_3 on three active plus three dummy data bits, edited at the negative point (original pivotal degree three), with a prescribed full reference. Derive an amplitude-sensitive floor change and compare its complete cost and destroyed-edge debit with one unused source slack for all fresh control widths. This removes the positive parity-mixture hypothesis rather than expanding the already-paid bent families. A086 primary reviewer, A094 alternate; A097/A095 consume the fixed-reference guard. No messages were sent or review presumed.
+
+## actual persistence receipts or precise save blocker
+
+REPORT.md, CLAIMS.json, PROGRESS.json, byte-identical PACKET_DELTA.json, the complete derivation, two frozen specifications, exact checkers and completed outputs are saved in this unique A011 run. code/finalize.py verifies protocol field sets, canonical statement digest, report headings, progress-copy equality, claimed counts and file size limits, and records local SHA256 receipts. STATUS has exactly two lines; WORKLOG and LEARNED are updated inside A011 only. No read-only tree or another agent folder was modified. Local persistence is not independent mathematical acceptance or mirror adoption.
+
+## Universal bridge
+
+This stage advances C020 whole-set witness cost and C024 history/reference transfer by isolating an unbounded inherited-reference shock on a fixed neutral non-bent Boolean edit, then replacing it with a complete paid reference whose cost is at most c+6(C+E)+6I_sel and whose residual terminal debt is exactly (1-rho)c-kappa; an arbitrary independent terminal retains its entire cost. No universal FEI constant improves. Unequal-amplitude marginal interference, the erased-edge debit and one-use source slack through physical restrictions remain the exact gap. NEXT removes the positive-mixture hypothesis on a neutral unequal-amplitude core, the shortest identified route to a universal paid representation rather than another invariant-spectrum class result.

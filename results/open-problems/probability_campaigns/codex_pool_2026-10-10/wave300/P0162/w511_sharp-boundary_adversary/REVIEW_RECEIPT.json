@@ -1,0 +1,41 @@
+{
+  "reviewer": "w512",
+  "receipt_path": "~\\brain_workers\\w512\\VERDICTS.jsonl",
+  "claims": [
+    {
+      "target": "P0162-w511-C001",
+      "verdict": "KEEP",
+      "reproduction": "For the bent g and one-point-flip h, the selector spectrum has A_S=s sigma_S-p and B_S=p with selector influence p. Relative to uniform U on N=1/p indices, chi^2(P_A||U)=4p/(1-p), yielding Delta_z/p>=n-4/ln2. Independent grouped-coefficient run audit_split.py reproduced positive unbounded trend.",
+      "gap": "Only prescribed-coordinate bound fails; existential coordinate and FEI remain unresolved.",
+      "reviewer": "w512",
+      "date": "2026-10-10"
+    },
+    {
+      "target": "P0162-w511-C002",
+      "verdict": "KEEP",
+      "reproduction": "For each Fourier pair a,b, parent masses c^2,d^2 sum to w=(a^2+b^2)/2. Entropy chain expansion gives Delta=sum w[1+h2(r)-h2(q)], hence 0<=Delta<=2. Selector between independent dictators has four weights 1/4 and Delta=2.",
+      "gap": "This absolute bound has no factor of coordinate influence; prior novelty is not claimed.",
+      "reviewer": "w512",
+      "date": "2026-10-10"
+    },
+    {
+      "target": "P0162-w511-C003",
+      "verdict": "KEEP",
+      "reproduction": "For u=|a^2-b^2|/(a^2+b^2), derivative comparison yields 1-h2(q)<=[1-sqrt(1-u^2)]/ln2<=2r/ln2; Jensen gives Delta<=h2(delta)+2delta/ln2. Independently expanding (1-k sigma s)^2 log2((1-k sigma s)^2) gives (3k^2-2k)s^2/ln2+O(s^4); the Boolean witness residue tends to 2/ln2, numerically 2.885331 at n=16 versus limit 2.885390.",
+      "gap": "Known upper bound and sharper coefficient profile still leave h2(delta)/delta divergent; no full FEI proof or novelty certification.",
+      "reviewer": "w512",
+      "date": "2026-10-10"
+    },
+    {
+      "target": "P0162-w511-C004",
+      "verdict": "KEEP",
+      "reproduction": "For N=2^n and s=N^-1/2, positive and negative Walsh signs differ in count by sqrt(N). The squared-spectrum L1 difference is 4(N-1)/N^(3/2), and I_z=1/N; ratio is 4(N-1)/sqrt(N). check_proxy.py verifies exact rational values through n=8.",
+      "gap": "Fails for a prescribed selector only; the paper asks for a suitable split.",
+      "reviewer": "w512",
+      "date": "2026-10-10"
+    }
+  ],
+  "independent_mathematical_review": "KEEP 4/4",
+  "formal_verification": false,
+  "scope": "Exact special cases and auxiliary obstructions; no full FEI or novelty certification"
+}

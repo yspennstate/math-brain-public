@@ -1,0 +1,797 @@
+The first robust part of the Gaussian theorem is the lower bound on how small
+the extremal singular value can be.  It only uses a one-matrix lower-tail
+estimate.
+
+\begin{definition}[Exponential least-singular-value tail]\label{def:lsv-tail}
+Let \(A_m\in\F^{N_m\times m}\), \(N_m/m\to\gamma>1\).  We say that the square
+row submatrices have exponent \(a>0\) if, for every fixed \(s>0\),
+\[
+  \sup_{\substack{T\subset[N_m]\\ |T|=m}}
+  \PP\{\smin(A_{m,T})\le e^{-sm}\}
+  \le \exp\{-(as+o(1))m\}.
+\]
+\end{definition}
+
+\begin{theorem}[Universal lower side]\label{thm:univ-lower}
+Assume \(N_m/m\to\gamma>1\) and the exponent-\(a\) tail condition in
+Definition~\ref{def:lsv-tail}.  Then for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}\smin(A_{m,T})
+  \le \exp\left[-\left(\frac{h(\gamma)}{a}+\varepsilon\right)m\right]
+  \right\}\to0.
+\]
+\end{theorem}
+
+\begin{proof}
+Use Theorem~\ref{thm:principle} with
+\(\mathcal T_m=\{T\subset[N_m]: |T|=m\}\).  Stirling's formula gives
+\[
+  \frac{1}{m}\log \binom{N_m}{m}\to h(\gamma).
+\]
+\end{proof}
+
+\begin{proposition}[Real and complex bounded-density one-matrix tail]\label{prop:bd-tail}
+Let \(\F\in\{\R,\C\}\), let \(d_\F=\dim_\R\F\), and let
+\(G\in\F^{m\times m}\) have independent entries whose \(d_\F\)-dimensional
+Lebesgue densities are bounded by \(K\).  Then there is a constant
+\(C_{\F,K}\) such that, for \(0<t\le1\),
+\[
+  \PP\{\smin(G)\le t\}\le C_{\F,K}m^{d_\F+1}t^{d_\F}.
+\]
+\end{proposition}
+
+\begin{proof}
+Let \(R_i\) be the rows of \(G\), and let
+\[
+  d_i=\dist(R_i,\spn\{R_j:j\ne i\}).
+\]
+The negative second-moment identity, over \(\F\), gives
+\[
+  \sum_{k=1}^m \sigma_k(G)^{-2}=\sum_{i=1}^m d_i^{-2}.
+\]
+Thus \(\smin(G)\le t\) implies \(d_i\le \sqrt m\,t\) for some \(i\).
+Condition on all rows except \(R_i\).  If the other rows span a hyperplane with
+unit normal \(u\), then \(d_i=|\langle R_i,u\rangle|\).  Some coordinate of
+the unit normal has modulus at least \(m^{-1/2}\).  Conditioning on all other
+coordinates of \(R_i\), the remaining scalar is an affine image of one entry by
+the factor \(u_j\).  Its density on \(\F\simeq\R^{d_\F}\) is bounded by
+\(K|u_j|^{-d_\F}\le K m^{d_\F/2}\).  Therefore, with
+\(\tau=\sqrt m\,t\),
+\[
+  \PP\{d_i\le \sqrt m\,t\mid R_j,\ j\ne i\}
+  \le K m^{d_\F/2}\operatorname{vol}_{d_\F}(B_\F(0,\tau))
+  \le C_{\F,K}m^{d_\F}t^{d_\F}.
+\]
+Taking a union bound over \(i\) gives the claim.  This is Proposition 6.1 of
+\cite{ShmaloExtremal2026} in the real case; the complex case is the same
+argument with real codimension two.
+\end{proof}
+
+\begin{corollary}[Bounded-density entries: lower side]\label{cor:bd-lower}
+Let \(\F\in\{\R,\C\}\).  Let \(A_m\in\F^{N_m\times m}\), \(N_m/m\to\gamma>1\),
+have independent entries whose \(d_\F\)-dimensional Lebesgue densities are
+uniformly bounded by \(K\).  Then, for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin(A_{m,T})
+  \le \exp[-(h(\gamma)/d_\F+\varepsilon)m]
+  \right\}\to0.
+\]
+\end{corollary}
+
+\begin{proof}
+Combine Proposition~\ref{prop:bd-tail} with
+Corollary~\ref{cor:poly-smallball}.
+\end{proof}
+
+\begin{corollary}[Finite-entropy square lower side]\label{cor:finite-entropy-square}
+Let \(N_m\ge m\) be arbitrary.  Let \(A_m\in\F^{N_m\times m}\),
+\(\F\in\{\R,\C\}\), have independent entries whose \(d_\F\)-dimensional
+Lebesgue densities are bounded by \(K_m\ge1\), uniformly in their position.  Put
+\[
+  L_m=\log\binom{N_m}{m}.
+\]
+Then, for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin(A_{m,T})
+  \le
+  \exp\left[-\left(\frac{L_m+\log K_m}{d_\F m}+\varepsilon\right)m\right]
+  \right\}
+  \longrightarrow0.
+\]
+More quantitatively, for every \(u_m>0\),
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin(A_{m,T})
+  \le
+  \exp\left[-\frac{L_m+\log K_m+(d_\F+1)\log m+O_\F(1)+u_m}{d_\F}\right]
+  \right\}
+  \le e^{-u_m}.
+\]
+Moreover, on any common coupling, if \(\sum_m e^{-u_m}<\infty\), then the
+displayed bad event occurs only finitely often almost surely, with the
+\(O_\F(1)\) interpreted as one fixed constant from the one-matrix tail bound.
+\end{corollary}
+
+\begin{proof}
+The proof of Proposition~\ref{prop:bd-tail} gives the explicit estimate
+\[
+  \PP\{\smin(G)\le t\}\le C_\F K_m m^{d_\F+1}t^{d_\F},\qquad 0<t\le1,
+\]
+for each selected square row submatrix.  Apply
+Corollary~\ref{cor:finite-budget} with
+\[
+  |\mathcal T_m|=\binom{N_m}{m},\qquad
+  C_m=C_\F K_m m^{d_\F+1},\qquad
+  a_m=d_\F.
+\]
+The first displayed convergence follows by taking \(u_m=d_\F\varepsilon m\).
+\end{proof}
+
+\begin{corollary}[Row-wise heterogeneous-density square budget]\label{cor:rowwise-heterogeneous-square}
+Let \(N_m\ge m\) be arbitrary.  Let \(A_m\in\F^{N_m\times m}\),
+\(\F\in\{\R,\C\}\), have independent entries.  Assume that for each row
+\(i\in[N_m]\) there is a deterministic number \(K_{m,i}\ge1\) such that every
+entry in row \(i\) has \(d_\F\)-dimensional Lebesgue density bounded by
+\(K_{m,i}\).  Put
+\[
+  \Lambda_m^{\rm row}
+  =
+  \log\binom{N_m-1}{m-1}
+  +\log\left(\sum_{i=1}^{N_m}K_{m,i}\right).
+\]
+Then, for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin(A_{m,T})
+  \le
+  \exp\left[-\left(\frac{\Lambda_m^{\rm row}}{d_\F m}+\varepsilon\right)m\right]
+  \right\}
+  \longrightarrow0.
+\]
+More quantitatively, for every \(u_m>0\),
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin(A_{m,T})
+  \le
+  \exp\left[-\frac{\Lambda_m^{\rm row}+d_\F\log m+O_\F(1)+u_m}{d_\F}\right]
+  \right\}
+  \le e^{-u_m}.
+\]
+Moreover, on any common coupling, if \(\sum_m e^{-u_m}<\infty\), then the
+displayed bad event occurs only finitely often almost surely, with the
+\(O_\F(1)\) interpreted as one fixed constant.
+\end{corollary}
+
+\begin{proof}
+Fix a row set \(T\) with \(|T|=m\).  For \(i\in T\), let
+\[
+  d_i=\dist(R_i,\spn\{R_\ell:\ell\in T,\ \ell\ne i\}),
+\]
+where \(R_i\) is the \(i\)-th row of \(A_m\).  The negative second-moment
+identity gives that \(\smin(A_{m,T})\le t\) implies \(d_i\le\sqrt m\,t\) for
+some \(i\in T\).  Conditioning on all other rows and on all but one coordinate
+of \(R_i\), choose a coordinate of the resulting unit normal with modulus at
+least \(m^{-1/2}\).  The remaining scalar density is bounded by
+\(K_{m,i}m^{d_\F/2}\), so for \(0<t\le1\),
+\[
+  \PP\{\smin(A_{m,T})\le t\}
+  \le C_\F m^{d_\F}t^{d_\F}\sum_{i\in T}K_{m,i}.
+\]
+Hence the nonuniform budget over all square row sets is
+\[
+  C_\F m^{d_\F}\sum_{|T|=m}\sum_{i\in T}K_{m,i}
+  =
+  C_\F m^{d_\F}\binom{N_m-1}{m-1}\sum_{i=1}^{N_m}K_{m,i}.
+\]
+Apply Corollary~\ref{cor:nonuniform-finite-budget}.  The convergence-in-probability
+statement follows by taking \(u_m=d_\F\varepsilon m\), since the polynomial and
+constant terms are \(o(m)\).
+\end{proof}
+
+\begin{corollary}[Independent rows with directional anti-concentration]\label{cor:directional-row-lower}
+Let \(N_m\ge m\), let \(\F\in\{\R,\C\}\), let \(d_\F=\dim_\R\F\), and let
+\(A_m\in\F^{N_m\times m}\) have independent rows \(R_{m,i}\).  Assume that
+there are deterministic numbers \(L_{m,i}\ge1\) such that, for every unit vector
+\(u\in\F^m\), every \(z\in\F\), and every \(0<r\le1\),
+\[
+  \PP\{|\langle R_{m,i},u\rangle-z|\le r\}\le L_{m,i}r^{d_\F}.
+\]
+Put
+\[
+  \Lambda_m^{\rm dir}
+  =
+  \log\binom{N_m-1}{m-1}
+  +\log\left(\sum_{i=1}^{N_m}L_{m,i}\right).
+\]
+Then, for every \(u_m>0\),
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin(A_{m,T})
+  \le
+  \exp\left[-\frac{\Lambda_m^{\rm dir}
+    +\frac{d_\F}{2}\log m+u_m}{d_\F}\right]\right\}
+  \le e^{-u_m}.
+\]
+Moreover, on any common coupling, if \(\sum_m e^{-u_m}<\infty\), then the
+displayed bad event occurs only finitely often almost surely.  If
+\(N_m/m\to\gamma>1\) and
+\[
+  \kappa_{\rm dir}
+  =
+  \limsup_{m\to\infty}
+  \frac1m\log\left(\sum_{i=1}^{N_m}L_{m,i}\right)<\infty,
+\]
+then for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin(A_{m,T})
+  \le
+  \exp\left[-\left(\frac{h(\gamma)+\kappa_{\rm dir}}{d_\F}
+       +\varepsilon\right)m\right]\right\}\to0 .
+\]
+\end{corollary}
+
+\begin{proof}
+Fix \(T\subset[N_m]\) with \(|T|=m\).  For \(i\in T\), let
+\[
+  d_i=\dist(R_{m,i},\spn\{R_{m,\ell}:\ell\in T,\ \ell\ne i\}).
+\]
+The negative second-moment identity gives that \(\smin(A_{m,T})\le t\) implies
+\(d_i\le\sqrt m\,t\) for some \(i\in T\).  Condition on all rows except
+\(R_{m,i}\), and choose a measurable unit normal \(u\) to the span of the other
+selected rows.  Row independence makes this normal independent of \(R_{m,i}\).
+If \(r=\sqrt m\,t\le1\), the directional hypothesis gives
+\[
+  \PP\{d_i\le\sqrt m\,t\mid R_{m,\ell},\ \ell\ne i\}
+  \le L_{m,i}m^{d_\F/2}t^{d_\F}.
+\]
+If \(r>1\), the same bound is trivial because \(L_{m,i}\ge1\).  Thus, for
+\(0<t\le1\),
+\[
+  \PP\{\smin(A_{m,T})\le t\}
+  \le m^{d_\F/2}t^{d_\F}\sum_{i\in T}L_{m,i}.
+\]
+Summing this nonuniform budget over all row sets gives
+\[
+  m^{d_\F/2}
+  \binom{N_m-1}{m-1}\sum_{i=1}^{N_m}L_{m,i}.
+\]
+Apply Corollaries~\ref{cor:nonuniform-finite-budget} and
+\ref{cor:as-nonuniform-finite-budget}.  The fixed-aspect statement follows by
+taking \(u_m=d_\F\varepsilon m\) and absorbing the \(o(m)\) polynomial term.
+\end{proof}
+
+\begin{corollary}[Directional densities and real log-concave rows]\label{cor:logconcave-lower}
+If each projection \(\langle R_{m,i},u\rangle\), \(u\in\F^m\) unit, has
+\(d_\F\)-dimensional Lebesgue density bounded by \(K_{m,i}\), uniformly in
+\(u\), then Corollary~\ref{cor:directional-row-lower} applies
+with \(L_{m,i}=v_\F K_{m,i}\), where \(v_\R=2\) and \(v_\C=\pi\).  In
+particular, iid real isotropic log-concave rows satisfy
+\[
+  \PP\left\{\min_{|T|=m}\smin(A_{m,T})
+  \le e^{-(h(\gamma)+\varepsilon)m}\right\}\to0,
+  \qquad N_m/m\to\gamma>1,
+\]
+because their one-dimensional marginals have universally bounded densities
+\cite{BrazitikosGiannopoulosValettasVritsiou2014}.  The matching exact law for
+log-concave rows still requires a pair-correlation theorem and is not claimed.
+\end{corollary}
+
+\begin{corollary}[Entrywise density-profile square budget]\label{cor:entrywise-profile-square}
+Let \(N_m\ge m\), and let \(A_m\in\F^{N_m\times m}\),
+\(\F\in\{\R,\C\}\), have independent entries.  Assume that entry \((i,j)\)
+has \(d_\F\)-dimensional density bounded by a deterministic number
+\(K_{m,i,j}\ge1\), and put
+\[
+  K_{m,i}^*=\max_{1\le j\le m} K_{m,i,j},\qquad
+  \Lambda_m^{\rm ent}
+  =
+  \log\binom{N_m-1}{m-1}
+  +\log\left(\sum_{i=1}^{N_m}K_{m,i}^*\right).
+\]
+Then, for every \(u_m>0\),
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin(A_{m,T})
+  \le
+  \exp\left[-\frac{\Lambda_m^{\rm ent}+d_\F\log m+O_\F(1)+u_m}{d_\F}\right]
+  \right\}
+  \le e^{-u_m}.
+\]
+Moreover, on any common coupling, if \(\sum_m e^{-u_m}<\infty\), then the
+displayed bad event occurs only finitely often almost surely, with the
+\(O_\F(1)\) interpreted as one fixed constant.
+If \(N_m/m\to\gamma>1\) and
+\[
+  \kappa_*=\limsup_{m\to\infty}
+  \frac1m\log\left(\sum_{i=1}^{N_m}K_{m,i}^*\right)<\infty ,
+\]
+then for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin(A_{m,T})
+  \le
+  \exp\left[-\left(\frac{h(\gamma)+\kappa_*}{d_\F}
+       +\varepsilon\right)m\right]\right\}\to0 .
+\]
+\end{corollary}
+
+\begin{proof}
+For each row \(i\), every entry density is bounded by \(K_{m,i}^*\).  Apply
+Corollary~\ref{cor:rowwise-heterogeneous-square}.  The exponential-scale
+statement follows from
+\(m^{-1}\log\binom{N_m-1}{m-1}\to h(\gamma)\).
+\end{proof}
+
+\begin{theorem}[Density-rate lower side]\label{thm:density-rate-lower}
+Let \(\F\in\{\R,\C\}\), let \(d_\F=\dim_\R\F\), and let
+\(A_m\in\F^{N_m\times m}\), \(N_m/m\to\gamma>1\), have independent entries.  Assume
+that every entry has \(d_\F\)-dimensional Lebesgue density bounded by a
+deterministic number \(K_m\ge1\), uniformly in its position, and put
+\[
+  \kappa=\limsup_{m\to\infty}\frac1m\log K_m<\infty .
+\]
+Then, for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin(A_{m,T})
+  \le
+  \exp\!\left[-\left(\frac{h(\gamma)+\kappa}{d_\F}+\varepsilon\right)m\right]
+  \right\}\to0.
+\]
+In particular, subexponential density growth \(K_m=e^{o(m)}\) preserves the
+bounded-density lower-side base \(h(\gamma)/d_\F\).
+\end{theorem}
+
+\begin{proof}
+The proof of Proposition~\ref{prop:bd-tail} gives the explicit one-matrix bound
+\[
+  \PP\{\smin(G)\le t\}\le C_\F K_m m^{d_\F+1}t^{d_\F},\qquad 0<t\le1,
+\]
+for every \(m\times m\) matrix \(G\) whose entries are independent and have
+densities bounded by \(K_m\).  Indeed, after all rows except one are fixed, the
+selected scalar coordinate has density at most \(K_m|u_j|^{-d_\F}\le
+K_m m^{d_\F/2}\), and the \(d_\F\)-dimensional ball has volume
+\(C_\F(\sqrt m\,t)^{d_\F}\).
+
+Thus, with \(M_m=\min_{|T|=m}\smin(A_{m,T})\),
+\[
+  \PP\{M_m\le e^{-sm}\}
+  \le \binom{N_m}{m} C_\F K_m m^{d_\F+1}e^{-d_\F sm}.
+\]
+The logarithm divided by \(m\) has limsup at most \(h(\gamma)+\kappa-d_\F s\).
+This is negative when
+\(s>(h(\gamma)+\kappa)/d_\F\), which gives the claim.
+\end{proof}
+
+\begin{corollary}[Smoothed deterministic frames: lower side]\label{cor:smoothed-lower}
+Let \(\F\in\{\R,\C\}\), \(N_m/m\to\gamma>1\), and let
+\(F_m\in\F^{N_m\times m}\) be arbitrary deterministic matrices.  Let \(G_m\)
+have iid standard \(\F\)-Gaussian entries, let \(\sigma_m>0\), and put
+\[
+  \eta=\limsup_{m\to\infty}\frac1m\log\sigma_m^{-1}<\infty .
+\]
+For \(A_m=F_m+\sigma_m G_m\), every \(\varepsilon>0\) satisfies
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin((A_m)_T)
+  \le \exp\!\left[-\left(\frac{h(\gamma)}{d_\F}+\eta+\varepsilon\right)m\right]
+  \right\}\to0.
+\]
+If \(\sigma_m=e^{-o(m)}\), the Gaussian lower-side base \(h(\gamma)/d_\F\) is
+therefore recovered for every deterministic background frame \(F_m\).
+\end{corollary}
+
+\begin{proof}
+Translation by \(F_m\) does not change density suprema.  Scaling a standard
+\(\F\)-Gaussian scalar by \(\sigma_m\) gives a \(d_\F\)-dimensional density
+bounded by \(C_\F\sigma_m^{-d_\F}\).  Theorem~\ref{thm:density-rate-lower}
+applies with \(\kappa\le d_\F\eta\).
+\end{proof}
+
+\begin{corollary}[Row-dependent smoothing budget]\label{cor:rowwise-smoothed-lower}
+Let \(\F\in\{\R,\C\}\), \(N_m/m\to\gamma>1\), and let
+\(F_m\in\F^{N_m\times m}\) be deterministic.  Let \(G_m\) have iid standard
+\(\F\)-Gaussian entries, let \(\sigma_{m,i}>0\) be deterministic row noise
+levels, and put
+\[
+  A_m=F_m+D_mG_m,\qquad
+  D_m=\operatorname{diag}(\sigma_{m,1},\ldots,\sigma_{m,N_m}).
+\]
+Define the row smoothing rate
+\[
+  \eta_{\rm row}
+  =
+  \limsup_{m\to\infty}
+  \frac{1}{d_\F m}\log\left(\sum_{i=1}^{N_m}\sigma_{m,i}^{-d_\F}\right)
+  <\infty .
+\]
+Then, for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin((A_m)_T)
+  \le
+  \exp\!\left[-\left(\frac{h(\gamma)}{d_\F}
+       +\eta_{\rm row}+\varepsilon\right)m\right]\right\}\to0 .
+\]
+More quantitatively, for every \(u_m>0\),
+with
+\[
+  \Lambda_m^{\rm sm,row}
+  =
+  \log\binom{N_m-1}{m-1}
+  +\log\left(\sum_{i=1}^{N_m}\sigma_{m,i}^{-d_\F}\right),
+\]
+\[
+  \PP\left\{
+  \min_{|T|=m}\smin((A_m)_T)
+  \le
+  \exp\left[-\frac{\Lambda_m^{\rm sm,row}
+    +d_\F\log m+O_\F(1)+u_m}{d_\F}\right]\right\}
+  \le e^{-u_m}.
+\]
+Thus a small set of poorly smoothed rows is charged through the weighted row
+budget, not through the worst value of \(\sigma_{m,i}\) alone.  When
+\(\sigma_{m,i}=\sigma_m\) for all \(i\), this recovers
+Corollary~\ref{cor:smoothed-lower}.
+\end{corollary}
+
+\begin{proof}
+Translation by \(F_m\) does not change density suprema.  In row \(i\), each
+entry of \(\sigma_{m,i}G_m\) has \(d_\F\)-dimensional density bounded by
+\(C_\F\sigma_{m,i}^{-d_\F}\).  Corollary~\ref{cor:rowwise-heterogeneous-square}
+therefore applies with \(K_{m,i}=C_\F\sigma_{m,i}^{-d_\F}\).  The constant
+\(C_\F\) is absorbed into the \(O_\F(1)\) term.  Since
+\[
+  \frac1m\log\binom{N_m-1}{m-1}\to h(\gamma)
+\]
+and the polynomial term is \(o(m)\), the convergence-in-probability statement
+follows by taking \(u_m=d_\F\varepsilon m\) and then absorbing a fixed fraction
+of the slack.
+\end{proof}
+
+\begin{corollary}[Almost-sure square lower envelopes]\label{cor:as-square-lower-envelope}
+Assume the matrices for all \(m\) are realized on a common probability space.
+For the bounded-density ensemble of Corollary~\ref{cor:bd-lower},
+\[
+  \liminf_{m\to\infty}\frac1m
+  \log\min_{|T|=m}\smin(A_{m,T})
+  \ge -\frac{h(\gamma)}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+For the density-rate ensemble of Theorem~\ref{thm:density-rate-lower},
+\[
+  \liminf_{m\to\infty}\frac1m
+  \log\min_{|T|=m}\smin(A_{m,T})
+  \ge -\frac{h(\gamma)+\kappa}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+For the smoothed ensemble \(F_m+\sigma_mG_m\) of
+Corollary~\ref{cor:smoothed-lower},
+\[
+  \liminf_{m\to\infty}\frac1m
+  \log\min_{|T|=m}\smin((F_m+\sigma_mG_m)_T)
+  \ge -\frac{h(\gamma)}{d_\F}-\eta
+  \qquad\hbox{almost surely}.
+\]
+For the row-dependent smoothing ensemble of
+Corollary~\ref{cor:rowwise-smoothed-lower},
+\[
+  \liminf_{m\to\infty}\frac1m
+  \log\min_{|T|=m}\smin((F_m+D_mG_m)_T)
+  \ge -\frac{h(\gamma)}{d_\F}-\eta_{\rm row}
+  \qquad\hbox{almost surely}.
+\]
+\end{corollary}
+
+\begin{proof}
+In the bounded-density and density-rate cases, the union-bound estimates in
+the preceding proofs are exponentially summable at every threshold larger than
+the displayed constant.  Corollary~\ref{cor:as-lower-envelope} applies.
+
+For smoothing, write
+\[
+  F_m+\sigma_mG_m=\sigma_m(\sigma_m^{-1}F_m+G_m).
+\]
+The shifted matrix in parentheses has standard Gaussian density bounds
+independent of the shift, so the square bounded-density almost-sure envelope
+applies to it.  Since eventually
+\(\sigma_m^{-1}\le e^{(\eta+\delta)m}\) for every \(\delta>0\), multiplying by
+\(\sigma_m\) shifts the logarithmic lower envelope by at most \(-\eta\).
+
+For row-dependent smoothing, use the finite-budget estimate in
+Corollary~\ref{cor:rowwise-smoothed-lower} with
+\(u_m=d_\F\varepsilon m\).  The definition of \(\eta_{\rm row}\) makes the
+resulting bad-event probabilities summable at every threshold larger than
+\(h(\gamma)/d_\F+\eta_{\rm row}\), and Borel--Cantelli gives the claim.
+\end{proof}
+
+\begin{theorem}[Random number of Gaussian rows]\label{thm:random-row-count-gaussian}
+For each \(m\), let \((R_{im})_{i\ge1}\) be an infinite sequence of independent
+standard \(\F^m\)-Gaussian rows.  For an integer \(n\ge m\), put
+\[
+  M_m(n)=\min_{\substack{T\subset[n]\\ |T|=m}}\smin((R_{im})_{i\in T}).
+\]
+Let \(N_m\) be integer-valued random variables, possibly dependent on the row
+array, such that
+\[
+  \frac{N_m}{m}\xrightarrow{\PP}\gamma>1 .
+\]
+Extend \(M_m(N_m)\) by any fixed positive value on the event \(N_m<m\).  This
+event has probability tending to zero, and
+\[
+  \frac1m\log M_m(N_m)\xrightarrow{\PP}-\frac{h(\gamma)}{d_\F}.
+\]
+\end{theorem}
+
+\begin{proof}
+The map \(n\mapsto M_m(n)\) is nonincreasing, since increasing the number of
+available rows only enlarges the family of tested submatrices.  Fix
+\[
+  1<\gamma_-<\gamma<\gamma_+ .
+\]
+With probability tending to one,
+\[
+  \lfloor\gamma_-m\rfloor\le N_m\le\lceil\gamma_+m\rceil .
+\]
+On this event,
+\[
+  M_m(\lceil\gamma_+m\rceil)\le M_m(N_m)\le M_m(\lfloor\gamma_-m\rfloor).
+\]
+The deterministic Gaussian theorem applied to the two bracketed row counts
+gives
+\[
+  \frac1m\log M_m(\lceil\gamma_+m\rceil)\xrightarrow{\PP}
+  -\frac{h(\gamma_+)}{d_\F},
+  \qquad
+  \frac1m\log M_m(\lfloor\gamma_-m\rfloor)\xrightarrow{\PP}
+  -\frac{h(\gamma_-)}{d_\F}.
+\]
+Since \(h\) is continuous on \((1,\infty)\), letting
+\(\gamma_-\uparrow\gamma\) and \(\gamma_+\downarrow\gamma\) squeezes
+\(m^{-1}\log M_m(N_m)\) to \(-h(\gamma)/d_\F\).  No independence between
+\(N_m\) and the row array is used.
+\end{proof}
+
+\begin{corollary}[Random row count: bounded-density lower side]\label{cor:random-row-count-bd}
+Let \(\F\in\{\R,\C\}\).  For each \(m\), let \((R_{im})_{i\ge1}\) be independent
+\(\F^m\)-valued rows with independent scalar entries whose \(d_\F\)-dimensional
+Lebesgue densities are bounded by \(K_m\ge1\), uniformly in the row and column
+positions.  Let \(N_m/m\to\gamma>1\) in probability, possibly with \(N_m\)
+dependent on the row array, and put
+\[
+  \kappa=\limsup_{m\to\infty}\frac1m\log K_m<\infty .
+\]
+Let \(M_m(n)\) denote the minimum over \(m\)-row subsets of the first \(n\) rows,
+with any fixed positive convention when \(n<m\).  Then, for every
+\(\varepsilon>0\),
+\[
+  \PP\left\{M_m(N_m)\le
+  \exp\!\left[-\left(\frac{h(\gamma)+\kappa}{d_\F}+\varepsilon\right)m\right]\right\}
+  \to0 .
+\]
+If the row arrays are realized on a common probability space and
+\(N_m/m\to\gamma\) almost surely, then
+\[
+  \liminf_{m\to\infty}\frac1m\log M_m(N_m)
+  \ge-\frac{h(\gamma)+\kappa}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+\end{corollary}
+
+\begin{proof}
+Fix \(\gamma_+>\gamma\).  With probability tending to one,
+\(N_m\le\lceil\gamma_+m\rceil\).  By monotonicity,
+\[
+  M_m(N_m)\ge M_m(\lceil\gamma_+m\rceil)
+\]
+on this event.  Apply Theorem~\ref{thm:density-rate-lower} to the deterministic
+row count \(\lceil\gamma_+m\rceil\).  This gives the lower-side threshold
+\((h(\gamma_+)+\kappa)/d_\F\).  Let \(\gamma_+\downarrow\gamma\).
+
+For the almost-sure statement, \(N_m\le\lceil\gamma_+m\rceil\) eventually almost
+surely for every fixed \(\gamma_+>\gamma\).  The deterministic almost-sure
+lower envelope of Corollary~\ref{cor:as-square-lower-envelope}, applied at
+\(\gamma_+\), gives the same bound and then \(\gamma_+\downarrow\gamma\).
+\end{proof}
+
+\begin{corollary}[Poissonization and independent thinning]\label{cor:poisson-thinning}
+The conclusion of Theorem~\ref{thm:random-row-count-gaussian} applies when
+\(N_m\) is independent of the Gaussian row values and one of the following
+conditions holds:
+\begin{enumerate}
+\item \(N_m\) is Poisson with mean \(\nu_m\), and \(\nu_m/m\to\gamma>1\);
+\item \(N_m\) is binomial \(\operatorname{Bin}(n_m^{\rm pool},p_m)\), with
+      \(n_m^{\rm pool}p_m/m\to\gamma>1\);
+\item \(N_m=\sum_{i=1}^{n_m^{\rm pool}}\xi_{im}\), where the \(\xi_{im}\) are independent
+      Bernoulli retention indicators, independent of the row values, and
+      \(\nu_m=\sum_i\EE\xi_{im}\) satisfies \(\nu_m/m\to\gamma>1\).
+\end{enumerate}
+In the third case the retained rows, conditional on the retained count, are iid
+Gaussian.  Value-dependent thinning is excluded: it can bias the retained row
+law and change the extremal statistic.
+\end{corollary}
+
+\begin{proof}
+In each displayed case \(N_m/m\to\gamma\) in probability.  For Poisson and
+binomial variables this is Chebyshev's inequality.  In the final item,
+\(\Var N_m\le\nu_m=O(m)\), so Chebyshev again gives convergence in probability.
+Theorem~\ref{thm:random-row-count-gaussian} applies.  For independent thinning,
+conditional on the retained count, the retained row vectors are iid Gaussian
+and exchangeable; their order is irrelevant because the statistic minimizes
+over all \(m\)-row subsets.
+\end{proof}
+
+Apart from the Gaussian random-count squeeze, the distribution-free estimates
+above are lower-side statements only.  Matching non-Gaussian upper bounds, and
+hence exact extremal bases, still require the pair-correlation input below.
+
+The matching upper side is subtler.  For non-Gaussian entries it is not a
+formal consequence of one-matrix estimates, because the events indexed by
+different row sets are strongly dependent.
+
+\begin{definition}[Pair-correlation condition for row submatrices]
+For \(s<h(\gamma)/d_\F\), put
+\[
+  Z_m(s)=\sum_{|T|=m}\mathbf{1}_{\{\smin(A_{m,T})\le e^{-sm}\}}.
+\]
+The ensemble satisfies the extremal hard-edge pair-correlation condition if
+\[
+  \EE Z_m(s)\to\infty,
+  \qquad
+  \frac{\Var Z_m(s)}{(\EE Z_m(s))^2}\to0
+\]
+for every fixed \(s<h(\gamma)/d_\F\).
+\end{definition}
+
+\begin{theorem}[Conditional non-Gaussian universality]\label{thm:conditional-univ}
+Let \(A_m\) be a continuous entry ensemble over \(\F\).  Assume:
+\begin{enumerate}
+\item the square row submatrices have one-matrix exponent \(d_\F\);
+\item the corresponding lower small-ball first moment diverges for every
+      \(s<h(\gamma)/d_\F\);
+\item the pair-correlation condition above holds.
+\end{enumerate}
+Then
+\[
+  \frac{1}{m}\log\min_{|T|=m}\smin(A_{m,T})
+  \xrightarrow{\PP}-\frac{h(\gamma)}{d_\F}.
+\]
+\end{theorem}
+
+\begin{proof}
+The lower side is Theorem~\ref{thm:univ-lower}.  The upper side is the
+second-moment half of Theorem~\ref{thm:principle}.
+\end{proof}
+
+\begin{remark}
+The conditionality of Theorem~\ref{thm:conditional-univ} is removed in
+Appendix~\ref{sec:app-keystone}.  There the pair-correlation condition is reduced
+(Theorem~\ref{appB:reduction}) to a single decorrelation estimate for random
+normals --- proved exactly for disjoint row sets and established for overlapping
+sets (Proposition~\ref{appB:resolvent}, Corollary~\ref{appB:closure}) through an
+elementary off-support resolvent estimate --- proved self-contained by a
+leave-one-out argument (Remark~\ref{appB:selfcontained}), with the anisotropic local
+law \cite{KnowlesYin2017,BEKYY2014} an optional citation.  The route replaces the
+Gaussian normal-vector decorrelation of \cite{ShmaloExtremal2026} by unconditional
+ingredients --- a two-projection local central limit theorem
+(Lemma~\ref{lem:two-proj} below), a high-overlap negligibility estimate
+(Proposition~\ref{prop:small-D-negligible}), a resolvent-monotonicity bound, and the
+self-contained off-support estimate --- so the universality base holds for all iid
+bounded-density sub-Gaussian entries, with full error control.
+\end{remark}
+
+The pair-correlation condition is built from one estimate per pair of row sets.
+Conditioning on every row except the distinguished one, the two events
+$\{|\langle x,u_I\rangle|\le t\}$ and $\{|\langle x,u_J\rangle|\le t\}$ are slabs
+(resp.\ disks) against two fixed normals whose overlap is $\varrho=\langle
+u_I,u_J\rangle$.  The Gaussian argument controls their joint probability through
+the exact Gaussian density at the origin.  The following lemma reproduces that
+bound, with the same constants, for arbitrary bounded-density entries.
+
+\begin{lemma}[Two-projection anti-concentration without Gaussianity]\label{lem:two-proj}
+Let $\F\in\{\R,\C\}$ and let $x\in\F^m$ have iid entries with mean zero, unit
+variance (proper when $\F=\C$), and Lebesgue density bounded by $K$ on
+$\F\simeq\R^{d_\F}$.  Let $u,v\in\F^m$ be deterministic unit vectors with
+$\|u\|_\infty,\|v\|_\infty\le m^{-1/2+\delta}$ for a fixed $\delta\in(0,1/2)$, and
+put $\varrho=\langle u,v\rangle$.  Fix \(c_0\in(0,1)\).  Then for every sequence
+$t_m\to0$ there is a sequence $\theta_m\to0$, depending only on \(K,\delta,c_0\)
+and the rate of $t_m$, such that uniformly over all such $u,v$ with
+$|\varrho|\le1-c_0$,
+\[
+  \PP\{|\langle x,u\rangle|\le t_m,\ |\langle x,v\rangle|\le t_m\}
+  \le (1+\theta_m)\,
+      \frac{\PP\{|\langle x,u\rangle|\le t_m\}^2}{(1-|\varrho|^2)^{d_\F/2}} .
+\]
+The regime $t_m\to0$ is the only one used in the second moment, where
+$t_m=e^{-sm}$; at a fixed scale $t$ the constant degrades but the bound still holds
+with the Gaussian two-slab/two-disk constant of \cite{ShmaloExtremal2026}.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+Let $w=(\langle x,u\rangle,\langle x,v\rangle)\in\F^2$.  Its characteristic
+function factors over the coordinates of $x$, and a single mean-zero,
+unit-variance scalar with density at most $K$ satisfies
+$|\EE e^{i\Re(\theta\bar\xi)}|\le e^{-\eta\min(|\theta|^2,1)}$, where $\eta>0$
+depends only on $K$: the quadratic regime comes from the variance, and the bounded
+regime from the Riemann--Lebesgue decay of an absolutely continuous law, with
+$\|\widehat{f}\,\|_{L^2}^2\le 2\pi K$ available for the far field.  Delocalization
+forces the coefficients $\theta u_j,\theta v_j$ to be uniformly small, so on a
+fixed Fourier ball a Lindeberg expansion shows that the density of $w$ at the
+origin converges to that of the centered Gaussian on $\F^2$ with covariance
+$\left(\begin{smallmatrix}1&\varrho\\ \bar\varrho&1\end{smallmatrix}\right)$, namely
+$a_{d_\F}^2(1-|\varrho|^2)^{-d_\F/2}$; the moderate range is controlled by the
+Gaussian-type decay and the far range by a transverse-pair Cauchy--Schwarz bound
+that uses two coefficient pairs with $|\det|\gtrsim m^{-1}$ (Cauchy--Binet).
+Integrating the density bound over the two slabs (resp.\ disks) of radius $t$ and
+comparing with $\PP\{|\langle x,u\rangle|\le t\}=(1+o(1))a_{d_\F}t^{d_\F}$ gives the
+stated inequality, with constants matching the two-slab and two-disk estimate of
+\cite{ShmaloExtremal2026}.  The complete proof --- the one-variable
+characteristic-function bound, the transverse-pair integrability, the three-region
+Fourier inversion, and the conversion to the small-ball ratio --- is given in
+Appendix~\ref{sec:app-two-proj} (cf.\ \cite{Petrov1975}).
+\end{proof}
+
+\begin{proposition}[Small-overlap-codimension pairs are negligible]\label{prop:small-D-negligible}
+Let \(I,J\) be independent uniform \((m-1)\)-subsets of \([N_m-1]\), with
+\(N_m/m\to\gamma>1\), and put \(D(I,J)=m-|I\cap J|\).  Fix
+\(s<h(\gamma)/d_\F\).  If \(p_m\ge c e^{-d_\F s m}\) for some \(c>0\), then
+there are \(\varepsilon,\delta>0\), depending only on \(\gamma\) and \(s\), such
+that
+\[
+  \frac{\PP\{2\le D(I,J)\le \varepsilon m\}}{p_m}
+  \le C_{\gamma,c}m^2 e^{-\delta m}\to0 .
+\]
+Consequently, if \(q_D\le p_m\) is any joint small-ball probability indexed by
+the overlap codimension, then
+\[
+  \EE\left[\frac{q_D}{p_m^2};\,2\le D\le\varepsilon m\right]\to0 .
+\]
+\end{proposition}
+
+\begin{proof}
+Conditioning on \(I\), the variable \(D-1\) has the hypergeometric law
+\[
+  \PP\{D=d\}=
+  \frac{\binom{m-1}{d-1}\binom{N_m-m}{d-1}}{\binom{N_m-1}{m-1}} .
+\]
+Let \(H_2(x)=-x\log x-(1-x)\log(1-x)\).  Standard entropy bounds for binomial
+coefficients give, uniformly for \(d=\alpha m+O(1)\) below the mode,
+\[
+  \frac1m\log \PP\{D=d\}
+  \le H_2(\alpha)+(\gamma-1)H_2\!\left(\frac{\alpha}{\gamma-1}\right)
+       -h(\gamma)+o(1).
+\]
+The right side tends to \(-h(\gamma)\) as \(\alpha\downarrow0\).  Since
+\(d_\F s<h(\gamma)\), choose \(\varepsilon>0\) so small that the displayed
+exponent is at most \(-d_\F s-2\delta\) for \(0\le\alpha\le\varepsilon\).  The
+hypergeometric lower tail is increasing up to its mode, so summing
+\(O(m)\) terms gives
+\[
+  \PP\{2\le D\le\varepsilon m\}\le C_\gamma m^2 e^{-(d_\F s+\delta)m}.
+\]
+Dividing by \(p_m\ge c e^{-d_\F s m}\) proves the first claim.  The second
+follows from \(q_D\le p_m\).
+\end{proof}
+
+\begin{remark}[What remains of the pair-correlation condition]\label{rem:pc-reduction}
+Lemma~\ref{lem:two-proj} is the per-pair analytic input to the second moment,
+while Proposition~\ref{prop:small-D-negligible} removes the
+small/intermediate-codimension range by combinatorial rarity and the trivial
+bound \(q_D\le p_m\).  Thus the remaining non-Gaussian upper-side gap is only a
+bulk overlap estimate: for some fixed \(\varepsilon>0\),
+\[
+  \EE\!\left[(1-|\varrho_{I,J}|^2)^{-d_\F/2}\ ;\ D(I,J)\ge\varepsilon m\right]
+  \le 1+o(1),
+  \qquad \varrho_{I,J}=\langle u_I,u_J\rangle .
+\]
+For Gaussian entries the normals are Haar in the orthocomplement of the shared
+span and this is the overlap computation of \cite{ShmaloExtremal2026}.  For
+general isotropic non-Gaussian rows the elementary bounded-density bounds recover
+the correct tail exponent but only with constants growing in \(m\).  Closing the
+gap is a quantitative central limit theorem for overlaps of normals in the bulk,
+recorded as Problem~\ref{prob:pc}.
+\end{remark}

@@ -1,0 +1,12 @@
+{
+  "helper_version": "A017-check-v1",
+  "actual_boolean_family": "F(x,y)=(-1)^q(x) y_(M x), with binary physical x and sign data y indexed by all a-bit states; q has degree at most two over F2",
+  "parameter_domain": "Exhaust n=0..3, a=0..2, every binary a by n matrix and every quadratic q modulo global sign. For n=4, a=0..2, use eight explicitly listed address maps and all 1024 quadratic q modulo global sign. Validate one repeated-control cancellation tower n=a=3, t=0..12, and one quadratic modulation tower n=4,a=2,t=0..6.",
+  "case_count": "4857 exhaustive small-cube cases plus 8192 four-control cases plus 20 tower checkpoints: 13069 total.",
+  "symmetry": "Only global output sign omitted; it preserves squared spectrum and all physical influences. No equivalence reduction on matrices or quadratic forms.",
+  "arithmetic": "Integer Walsh transforms; exact dyadic spectrum masses and Fraction influence; GF2 row reduction; entropy certified exactly from a flat spectrum with power-of-two support, without numerical logarithms.",
+  "memory_estimate": "Under 20 MB: at most 256 truth-table entries and 256 Walsh integers per case, streamed summaries; no heavy job or memok gate needed.",
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "independent_implementation": "Truth-table evaluation and Walsh spectrum versus GF2 rank ledger; edge-count influence independently compared with spectral degree and coordinate derivative formula. Author self-check, not independent human review."
+}

@@ -1,0 +1,219 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w373/check_obstructions.py",
+  "checks_passed": 25,
+  "checks_total": 25,
+  "rare_event_rows": [
+    {
+      "n": 8,
+      "variance_over_n_2_3": "11/8",
+      "log_exponential_moment_at_n_1_3": 1.194567294548012,
+      "log_exponential_moment_at_n_2_3": 0.5779699383591601
+    },
+    {
+      "n": 27,
+      "variance_over_n_2_3": "35/27",
+      "log_exponential_moment_at_n_1_3": 1.2123913185768358,
+      "log_exponential_moment_at_n_2_3": 0.3678325917672122
+    },
+    {
+      "n": 1000,
+      "variance_over_n_2_3": "1099/1000",
+      "log_exponential_moment_at_n_1_3": 3.208503390335875,
+      "log_exponential_moment_at_n_2_3": 0.10145853892593551
+    },
+    {
+      "n": 1000000,
+      "variance_over_n_2_3": "1009999/1000000",
+      "log_exponential_moment_at_n_1_3": 86.18448944203573,
+      "log_exponential_moment_at_n_2_3": 0.010001691233042188
+    },
+    {
+      "n": 1000000000,
+      "variance_over_n_2_3": "1000999999/1000000000",
+      "log_exponential_moment_at_n_1_3": 979.2767341630536,
+      "log_exponential_moment_at_n_2_3": 0.0010000017155650466
+    }
+  ],
+  "checks": [
+    {
+      "check": "rare_variance_m_2",
+      "passed": true,
+      "n": 8,
+      "variance": "11/2"
+    },
+    {
+      "check": "upper_mgf_bounded_m_2",
+      "passed": true
+    },
+    {
+      "check": "rare_variance_m_3",
+      "passed": true,
+      "n": 27,
+      "variance": "35/3"
+    },
+    {
+      "check": "upper_mgf_bounded_m_3",
+      "passed": true
+    },
+    {
+      "check": "rare_variance_m_10",
+      "passed": true,
+      "n": 1000,
+      "variance": "1099/10"
+    },
+    {
+      "check": "upper_mgf_bounded_m_10",
+      "passed": true
+    },
+    {
+      "check": "rare_variance_m_100",
+      "passed": true,
+      "n": 1000000,
+      "variance": "1009999/100"
+    },
+    {
+      "check": "upper_mgf_bounded_m_100",
+      "passed": true
+    },
+    {
+      "check": "rare_variance_m_1000",
+      "passed": true,
+      "n": 1000000000,
+      "variance": "1000999999/1000"
+    },
+    {
+      "check": "upper_mgf_bounded_m_1000",
+      "passed": true
+    },
+    {
+      "check": "iid_disjoint_sums_unconditional_independence",
+      "passed": true
+    },
+    {
+      "check": "selection_destroys_conditional_independence",
+      "passed": true,
+      "selected_event": "A<=B (top path wins, ties assigned top)",
+      "probability_event": "11/16",
+      "conditional_A2": "4/11",
+      "conditional_B4": "4/11",
+      "conditional_joint": "1/11",
+      "conditional_product": "16/121"
+    },
+    {
+      "check": "selection_biases_other_path",
+      "passed": true,
+      "unconditional_B4": "1/4",
+      "conditional_B4": "4/11"
+    },
+    {
+      "check": "continuous_selection_dependence",
+      "passed": true,
+      "conditional_marginals": [
+        "3/4",
+        "3/4"
+      ],
+      "conditional_joint": "1/2",
+      "independence_prediction": "9/16",
+      "absolute_error_before": "1/16",
+      "absolute_error_after_exact_conditioning": "0",
+      "scope": "Four-edge square graph with iid Uniform[1,2] weights, conditioned on one route being the unique geodesic; not the full lattice model."
+    },
+    {
+      "check": "discrete_factorization_error_measured",
+      "passed": true,
+      "absolute_error_before": "5/121",
+      "absolute_error_after_exact_conditioning": "0"
+    },
+    {
+      "check": "bounded_law_adjacent_geodesic",
+      "passed": true,
+      "direct_path_upper": 2,
+      "any_other_simple_path_lower": 3,
+      "D_zero_at_v_e1": true,
+      "scope": "Refutes a positive lower wandering bound over EVERY nonzero endpoint for this law; does not refute a large-distance lower bound."
+    },
+    {
+      "check": "hp_agreement_variance_failure_n_2",
+      "passed": true,
+      "probability_agreement": "1/2",
+      "variance_T": "0",
+      "variance_Y": "1",
+      "L2_error_squared": "2"
+    },
+    {
+      "check": "hp_agreement_variance_failure_n_3",
+      "passed": true,
+      "probability_agreement": "2/3",
+      "variance_T": "0",
+      "variance_Y": "2",
+      "L2_error_squared": "3"
+    },
+    {
+      "check": "hp_agreement_variance_failure_n_10",
+      "passed": true,
+      "probability_agreement": "9/10",
+      "variance_T": "0",
+      "variance_Y": "9",
+      "L2_error_squared": "10"
+    },
+    {
+      "check": "hp_agreement_variance_failure_n_1000",
+      "passed": true,
+      "probability_agreement": "999/1000",
+      "variance_T": "0",
+      "variance_Y": "999",
+      "L2_error_squared": "1000"
+    },
+    {
+      "check": "symmetric_norm_zero_bend_n_16",
+      "passed": true,
+      "n": 16,
+      "w": 1,
+      "g_v": "24",
+      "g_z": "12",
+      "bend": "0",
+      "point_outside_width_w": true,
+      "scope": "Norm countermodel with the elementary FPP bounds and lattice symmetries; no FPP realization is claimed."
+    },
+    {
+      "check": "symmetric_norm_zero_bend_n_64",
+      "passed": true,
+      "n": 64,
+      "w": 7,
+      "g_v": "96",
+      "g_z": "48",
+      "bend": "0",
+      "point_outside_width_w": true,
+      "scope": "Norm countermodel with the elementary FPP bounds and lattice symmetries; no FPP realization is claimed."
+    },
+    {
+      "check": "symmetric_norm_zero_bend_n_100",
+      "passed": true,
+      "n": 100,
+      "w": 10,
+      "g_v": "150",
+      "g_z": "75",
+      "bend": "0",
+      "point_outside_width_w": true,
+      "scope": "Norm countermodel with the elementary FPP bounds and lattice symmetries; no FPP realization is claimed."
+    },
+    {
+      "check": "symmetric_norm_zero_bend_n_1000",
+      "passed": true,
+      "n": 1000,
+      "w": 100,
+      "g_v": "1500",
+      "g_z": "750",
+      "bend": "0",
+      "point_outside_width_w": true,
+      "scope": "Norm countermodel with the elementary FPP bounds and lattice symmetries; no FPP realization is claimed."
+    },
+    {
+      "check": "within_fresh_compute_gate",
+      "passed": true,
+      "cpu_seconds": 0.0,
+      "enumerated_states": 16
+    }
+  ],
+  "interpretation": "Finite exact checks corroborate the written proofs; no exponent estimate for actual FPP, no independent review, and no formal verification is claimed."
+}

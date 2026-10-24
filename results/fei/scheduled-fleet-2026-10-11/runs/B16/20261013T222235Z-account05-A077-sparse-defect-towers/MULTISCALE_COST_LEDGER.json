@@ -1,0 +1,54 @@
+{
+  "units": "bits",
+  "family": "fresh two-core selector, at most one common data bit",
+  "node_formulas": {
+    "private_row": "S(u,d;v)=[Phi((u+v)^2,d^2)+Phi((u-v)^2,d^2)]/4-Phi(u^2,d^2)/2",
+    "private_comparison": "-Phi(u^2,d^2)/2 <= S <= Phi(v^2,d^2)/2",
+    "inherited_row": "B_i(F)=half B_i(G)+half B_i(H)+D_i",
+    "actual_price": "|D_i|<=2Inf_i(F)",
+    "potential": "H(F)=half H(G)+half H(H)+R(common coefficients)",
+    "potential_price": "K=2+2/ln2<5"
+  },
+  "prefix_formulas": {
+    "reach_probabilities": "actual fair-coordinate physical tree probabilities",
+    "signed_correction": "sum w |D_i|<=2 consumed influence",
+    "outer_potential": "|R_root-E R_leaf|<=K consumed influence",
+    "terminal": "E H(F_leaf)=half E H(G_leaf)+half E H(H_leaf)+E R_leaf",
+    "reserve_split": "consumed data influence+expected remaining data influence=root data influence"
+  },
+  "sharp_fixture": {
+    "private_widths": [
+      0,
+      0
+    ],
+    "G_mask": 0,
+    "H_mask": 1,
+    "query": "s",
+    "D": {
+      "2": "1"
+    },
+    "Inf_F": "1/2"
+  },
+  "negative_fixture": {
+    "private_widths": [
+      1,
+      1
+    ],
+    "G_mask": 1,
+    "H_mask": 1,
+    "queried_kind": "X",
+    "D": {
+      "2": "-3/2",
+      "5": "5/8"
+    },
+    "D_interval": [
+      "-494839486884982457411727737057/10141204801825835211973625643008",
+      "-123709871721245614352931934263/2535301200456458802993406410752"
+    ],
+    "Inf_F": "1/4"
+  },
+  "checks": {
+    "main": 282333,
+    "scoped_review": 71988
+  }
+}

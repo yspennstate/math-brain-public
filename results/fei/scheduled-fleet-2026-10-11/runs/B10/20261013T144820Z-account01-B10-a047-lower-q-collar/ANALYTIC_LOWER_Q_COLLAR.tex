@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{Analytic lower-$q$ collar}
+Let $h=h_2$, $s=4q(1-q)$, $c=4q^2$, and
+$z=cp(1-p)/(1-sp)$.  For
+$p\in[1/64,49/100]$ and $q\in[0,1/100]$, set
+\[
+D=(1-sp)h(z)+sp h(p)+\frac p2\log_2\frac{1-p}{p}
+-h(sp)+p h(s).
+\]
+Then
+\[
+D>\frac{5\,027\,251}{19\,592\,160\,000}.
+\]
+Indeed, with $\Phi_p(t)=h(pt)-ph(t)$,
+\[
+\Phi_p'(t)=p\log_2\frac{1-pt}{p(1-t)}.
+\]
+The ratio $(1-pt)/(1-t)$ is increasing, so
+\[
+\Phi_p(s)\le ps\log_2\frac{1-ps}{p(1-s)}.
+\]
+Discarding only the nonnegative term $(1-sp)h(z)$ and writing
+$L_p=\log_2((1-p)/p)$ gives
+\[
+D\ge p\left[(1/2-s(1-p))L_p
+-s\log_2\frac{1-ps}{1-s}\right].
+\]
+Since $s\le99/2500$, $L_p\ge2/(51\ln2)$, and
+$\log_2(1+x)\le x/\ln2$,
+\[
+\frac Dp\ge\frac1{\ln2}
+\left[(1/2-s)\frac2{51}-\frac{s^2}{1-s}\right].
+\]
+The bracket decreases in $s$ and at $99/2500$ is
+$5\,027\,251/306\,127\,500$.  Finally $p\ge1/64$ and
+$1/\ln2>1$.  The endpoint $q=0$ follows with $h(0)=0$.
+\end{document}

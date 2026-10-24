@@ -1,0 +1,108 @@
+# Creative cross-field Lyons entropy campaign
+
+**99/100 launched; 93/100 completed; 6 running.** These are actual execution counts. The full conjecture remains open.
+
+The user requested 100 creative proof assignments and ongoing publication. No audit assignments are used. See [TARGET.md](TARGET.md) for the exact statement and name assumption, [FRONTIER.md](FRONTIER.md) for earlier results, and [execution_ledger.json](execution_ledger.json) for the execution record. Full derivations are saved in agents/ and supporting artifacts in computations/.
+
+## Assignments
+
+- [X001](agents/X001.md): Information geometry — completed
+- [X002](agents/X002.md): Discrete optimal transport — completed
+- [X003](agents/X003.md): Fermionic beam splitters — completed
+- [X004](agents/X004.md): Hodge-Riemann geometry — completed
+- [X005](agents/X005.md): Hyperbolic barriers — completed
+- [X006](agents/X006.md): Three-site Lorentzian geometry — completed
+- [X007](agents/X007.md): Quantum recovery maps — completed
+- [X008](agents/X008.md): Grassmann coherent states — completed
+- [X009](agents/X009.md): Schrodinger bridges — completed
+- [X010](agents/X010.md): Exterior martingales — completed
+- [X011](agents/X011.md): Stable polynomial polarization — completed
+- [X012](agents/X012.md): Mixed discriminants — completed
+- [X013](agents/X013.md): Supersymmetric localization — completed
+- [X014](agents/X014.md): Electrical networks — completed
+- [X015](agents/X015.md): Three-site conditional entropy — completed
+- [X016](agents/X016.md): Rank-three support geometry — completed
+- [X017](agents/X017.md): Projection entropy submodularity — completed
+- [X018](agents/X018.md): Six-site harmonic transport — completed
+- [X019](agents/X019.md): Complex Plucker phases — completed
+- [X020](agents/X020.md): Fractional matroid transport — completed
+- [X021](agents/X021.md): Matrix convex perspectives — completed
+- [X022](agents/X022.md): Five-vertex path induction — completed
+- [X023](agents/X023.md): Tree entropy recursion — completed
+- [X024](agents/X024.md): Bipartite particle-hole symmetry — completed
+- [X025](agents/X025.md): Gaussian phase diffusion — completed
+- [X026](agents/X026.md): Cycle-space gauge geometry — completed
+- [X027](agents/X027.md): Complex phase averaging — completed
+- [X028](agents/X028.md): Noncommutative Brascamp-Lieb — completed
+- [X029](agents/X029.md): Logarithmic Sobolev flow — completed
+- [X030](agents/X030.md): Exchangeable envelope refinement — completed
+- [X031](agents/X031.md): Variational entropy duality — completed
+- [X032](agents/X032.md): Fisher feature completion — completed
+- [X033](agents/X033.md): Stein identities — completed
+- [X034](agents/X034.md): Matrix score calculus — completed
+- [X035](agents/X035.md): Tropical asymptotics — completed
+- [X036](agents/X036.md): Resolution of singularities — completed
+- [X037](agents/X037.md): Cluster expansion resummation — completed
+- [X038](agents/X038.md): Loop-erased walk expansion — completed
+- [X039](agents/X039.md): Total positivity — completed
+- [X040](agents/X040.md): Free probability — completed
+- [X041](agents/X041.md): Tensorization with ancillas — completed
+- [X042](agents/X042.md): Naimark dilation — completed
+- [X043](agents/X043.md): Entropy power interpolation — completed
+- [X044](agents/X044.md): Quantum conditional independence — completed
+- [X045](agents/X045.md): Junction-tree elimination — completed
+- [X046](agents/X046.md): Optimal experimental design — completed
+- [X047](agents/X047.md): Determinantal sampling algorithms — completed
+- [X048](agents/X048.md): Stochastic localization — completed
+- [X049](agents/X049.md): Gaussian comparison — completed
+- [X050](agents/X050.md): Random matrix singular values — completed
+- [X051](agents/X051.md): Majorization beyond eigenvalues — completed
+- [X052](agents/X052.md): Minkowski mixed volumes — completed
+- [X053](agents/X053.md): Symplectic and spin geometry — completed
+- [X054](agents/X054.md): Three-site exact logarithms — completed
+- [X055](agents/X055.md): External-field transport — completed
+- [X056](agents/X056.md): Matrix scaling normal forms — completed
+- [X057](agents/X057.md): Diagonal threshold crossing — completed
+- [X058](agents/X058.md): Mixed-sign replacement — completed
+- [X059](agents/X059.md): Noncommuting heat baths — completed
+- [X060](agents/X060.md): Random permutation couplings — completed
+- [X061](agents/X061.md): Projection-background mixtures — completed
+- [X062](agents/X062.md): Higher active-rank diamonds — completed
+- [X063](agents/X063.md): Entropy orientation constants — completed
+- [X064](agents/X064.md): Matroid Hodge entropy — completed
+- [X065](agents/X065.md): Information bottleneck — completed
+- [X066](agents/X066.md): Channel less-noisy order — completed
+- [X067](agents/X067.md): Bayesian posterior geometry — completed
+- [X068](agents/X068.md): Entropic uncertainty relations — completed
+- [X069](agents/X069.md): Operator monotone kernels — completed
+- [X070](agents/X070.md): Complete monotonicity — completed
+- [X071](agents/X071.md): Nonlinear Schur complement flow — completed
+- [X072](agents/X072.md): Bellman functions — completed
+- [X073](agents/X073.md): PDE maximum principle — completed
+- [X074](agents/X074.md): Heat-flow convexification — completed
+- [X075](agents/X075.md): Rank-one path integration — completed
+- [X076](agents/X076.md): Convex integration obstruction — completed
+- [X077](agents/X077.md): Entropy and hyperdeterminants — completed
+- [X078](agents/X078.md): Walsh harmonic analysis — completed
+- [X079](agents/X079.md): Boolean Fourier hypercontractivity — completed
+- [X080](agents/X080.md): Nonlinear Poincare inequalities — completed
+- [X081](agents/X081.md): Graph curvature and exchange chains — completed
+- [X082](agents/X082.md): Network flow dual entropy — completed
+- [X083](agents/X083.md): Complex interpolation — completed
+- [X084](agents/X084.md): Replica continuation at one — completed
+- [X085](agents/X085.md): Categorical sampling identities — completed
+- [X086](agents/X086.md): Exterior volume Brunn-Minkowski — completed
+- [X087](agents/X087.md): Cauchy determinant extension — completed
+- [X088](agents/X088.md): Integrable Toeplitz kernels — completed
+- [X089](agents/X089.md): Transfer matrices in one dimension — completed
+- [X090](agents/X090.md): Tensor network positivity — completed
+- [X091](agents/X091.md): Reflection positivity — completed
+- [X092](agents/X092.md): Conditional mutual information — completed
+- X093: Multiscale Fisher gluing — running
+- [X094](agents/X094.md): Degenerate block bridges — completed
+- X095: Exact algebraic minimization — running
+- X096: Generalized Shepp-Olkin local inequality — running
+- X097: Martingale optimal coupling — running
+- X098: Log-sum geometric certificate — running
+- X099: Adaptive synthesis I — running
+- X100: Adaptive synthesis II — planned

@@ -1,0 +1,55 @@
+Command: ['lake', 'env', 'lean', '~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean']
+Exit: 1
+Seconds: 150.019
+~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean:5:44: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HPow ℝ ℕ ?m.14
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean:5:52: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HAdd ℕ ℝ ?m.14
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean:6:4: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub ℝ ℕ ℤ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean:6:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HDiv ℝ ℕ ℤ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean:6:23: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub ℝ ℕ ℤ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean:7:2: error: linarith failed to find a contradiction
+case h1
+ℝ : Type u_1
+z x : ℝ
+hz : z ^ 2 = 1 + x
+a✝ : z - 1 - x / 2 < -(z - 1) ^ 2 / 2
+⊢ False
+failed
+~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean:12:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℝ ℝ ?m.16
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean:13:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℝ ℝ ?m.34
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean:12:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HPow ℝ ℕ ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean:16:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℝ ℝ ?m.70
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean:18:18: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℝ ℝ ?m.93
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~/brain_workers/TRIO_1011/op/E0112/DeficitChecks.lean:18:4: error: invalid 'calc' step, left-hand side is
+  true : Bool
+but previous right-hand side is
+  Function.const Lean.Name () `_stdin.16.4.17.47.4.47._sorry._@._stdin.2250793322._hygCtx._hyg.212 : Unit

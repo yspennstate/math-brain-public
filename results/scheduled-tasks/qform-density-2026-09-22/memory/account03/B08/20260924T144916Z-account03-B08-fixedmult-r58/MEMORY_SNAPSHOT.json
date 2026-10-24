@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B08",
+  "run_id": "20260924T144916Z-account03-B08-fixedmult-r58",
+  "objective": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "initial_control_commit": "e57e6e282ff9a0b2807fc172d6e4e5dab64ce661",
+  "prepublication_control_commit": "04a57db6d918428ce18fdef9d72926d150305f99",
+  "baseline_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+    "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex",
+    "blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "sha256": "9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69",
+    "review_status": "PASS_ONE_WORKER_CURRENT_INVOCATION_END_TO_END"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "premises": [
+    "rank(A-P_I A P_I)<=2|I| for deletion of original coordinates I",
+    "singular-value rank perturbation s_{j+q}(D+R)<=s_j(D)",
+    "account03/B10 QFORM-S7-INVERTIBLE-OVERLAPONE-JENSEN-v1",
+    "baseline order-two spectral-to-volume and fair physical cut",
+    "reviewed marginal-free E3 crossing receiver"
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B08",
+    "theorem": "QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a5e66e2944c89857a41d5e18c283d53a4307be76",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B08/20260923T212412Z-account04-B08-QFORM-r2/REPORT.md",
+    "actual_application": "Under s_7(A)>=1, every one-deletion child has s_5>=1 and every two-deletion child has s_3>=1. The partner theorem therefore gives ||p_Q||_infinity<64 and C_0 whenever the corresponding 1/64 child window has max physical leverage <=1/32, directly at one deletion and iteratively at two deletions."
+  },
+  "new_claim": {
+    "id": "QFORM-S7-OVERLAP-PLUS-MULTIDELETE-RIDGE-RIGIDITY-v1",
+    "status": "PROVED_SUPPORTING_ROUTER_NOT_DENSITY_THEOREM",
+    "normalized_statement": "In the no-pivot s_7(A)>=1 chamber, either Q has a C_0 density with norm <2400, or W^times_{2,1}>5929/262144000000 and there exist three distinct original coordinates with nested remaining-row star norms each >9/(6400 sqrt(2)).",
+    "continuity_scope": "C_0 only on paid E3/diffuse-window branches; no continuity assertion on unpaid terminal structure"
+  },
+  "math_outputs": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e64de830ea3cf21eaa5c2c7b0650a4b0bb0de0e1",
+      "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/account03/B08/20260924T144916Z-account03-B08-fixedmult-r58/S7_MULTIDELETE_RIGIDITY.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "5aba146ecf7c4d924c4f62f1142d81bae348aef9",
+      "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/audits/account03/B08/20260924T144916Z-account03-B08-fixedmult-r58/AUDIT.md"
+    }
+  ],
+  "unresolved_implication": "Construct a dependence-safe overlap-one/shared-anchor receiver for aggregate invertible-seed W^times_{2,1} while preserving the common physical anchor and exploiting or retaining the three nested original-coordinate stars. The star chain is not a third-compound certificate and shear translations cannot be bounded by induced anchor curvature.",
+  "full_three_eigenvalue_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_thinking_counters": null
+}

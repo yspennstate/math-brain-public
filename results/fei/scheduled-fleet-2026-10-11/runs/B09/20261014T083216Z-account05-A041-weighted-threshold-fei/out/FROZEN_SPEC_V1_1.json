@@ -1,0 +1,73 @@
+{
+  "helper_version": "A041-stage5-v1.1",
+  "family": "actual two-weight thresholds; two-heavy majority control; exact count-compressed A045 band/parity selector ownership fixture",
+  "domain": {
+    "threshold_groups": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "weights": [
+      "1/2",
+      "2",
+      "3"
+    ],
+    "thresholds": "j/2, 1<=j<=2(wh+b)",
+    "bias_profiles": "all fair; periodic1/4,1/2,3/4 over actual coordinates",
+    "truth_table_controls": "r=1,2; h2 and b=4r+1, fair, w=b+1, t=w+(b+1)/2",
+    "majority_growth_formula_r": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "selector_formula_r": [
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "case_counts_main": {
+    "thresholds": 386,
+    "truth_table_controls": 2,
+    "growth": 6,
+    "selector": 4,
+    "recovered_guards": 12
+  },
+  "case_counts_pilot": {
+    "thresholds": 114,
+    "truth_table_controls": 1,
+    "growth": 2,
+    "selector": 2,
+    "recovered_guards": 3
+  },
+  "pilot_restriction": "threshold sizes1+2,2+2 only; first control; growth/selector r1,2",
+  "symmetry": "none in finite threshold domain; only proved count symmetry in formula cases",
+  "arithmetic": "Fraction finite-difference spectra; exact squared-tail references in both directions; pointwise rational log-factor identities;20-term rational atanh logs with proved tail and outward2^-80 export",
+  "memory_estimate_MB": 120,
+  "maximum_runtime_seconds": 60,
+  "dimension_escalation": false,
+  "largest_truth_table_dimension": 11,
+  "large_family_method": "exact binomial/count formulas, never129- or1025-bit truth tables",
+  "amendment": "Recovered weighted guards: m2..5 q=m^-2 eta=1/m; m2..5 eta1/2 q1/16,1/256. Pilot globalm2,3 and localm2q1/16. No automatic dimension increase."
+}

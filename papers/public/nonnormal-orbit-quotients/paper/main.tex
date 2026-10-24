@@ -1,0 +1,163 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Cay}{Cay}
+
+\hypersetup{pdftitle={Non-normal orbit quotients that are not normal quotients},pdfauthor={Yitzchak Shmalo}}
+
+\title[Non-normal orbit quotients]{Non-normal orbit quotients that are\\ not normal quotients}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+
+\subjclass[2020]{05C25, 20B25, 05C63, 82B41}
+\keywords{orbit quotient, transitive graph, graphical regular representation, free product, self-avoiding walk}
+
+\begin{document}
+
+\begin{abstract}
+Let $G$ be an infinite transitive graph, $\Gamma\le\Aut(G)$ a transitive group and $A\le\Gamma$ a subgroup. Grimmett and Li asked whether $A$ can be non-normal in $\Gamma$ with a transitive orbit quotient $G_A$ that is not isomorphic to $G_N$ for any normal subgroup $N$ of any transitive $\Gamma'\le\Aut(G)$, and whether a free action of $A$ matters. We show that for every $m\ge3$ there is an infinite, connected, locally finite, simple Cayley graph $X$ with a non-normal subgroup $B$ of $\Aut(X)$, acting freely, such that $X_B$ is the complete graph $K_m$, while no normal subgroup of any transitive subgroup of $\Aut(X)$ has $K_m$ as its orbit quotient. The graph is a graphical regular representation of the free product $F*F$, where $F$ is $S_3$ for $m=3$ and the alternating group $A_m$ for $m\ge4$, given by the theorem of Leemann and de la Salle, and $B$ is the preimage of a point stabiliser under the projection to the first factor. The quotient is finite; the question with an infinite quotient is left open.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $G=(V,E)$ be a connected, infinite, locally finite, simple graph that is transitive, and let $\Gamma\le\Aut(G)$ act transitively on $V$. For a subgroup $A\le\Gamma$, the \emph{simple quotient graph} $G_A$ has the $A$-orbits as vertices, two distinct orbits $Av$ and $Aw$ being adjacent when some $v'\in Av$ and $w'\in Aw$ are adjacent in $G$ \cite[Sect.~4.2]{GL}. When $A$ is normal in $\Gamma$, the group $\Gamma$ permutes the $A$-orbits and acts on $G_A$ by automorphisms, so $G_A$ is transitive; Grimmett and Li proved strict inequalities for connective constants of such quotients \cite[Thm.~4.2]{GL}, \cite{GL13}. The quotient $G_A$ is defined for non-normal $A$ as well, and Grimmett and Li ask for an example in which the non-normal case is essentially different from the normal one.
+
+\begin{question}[{\cite[Question~4.5]{GL}}]\label{q:GL}
+Let $\Gamma$ be a subgroup of $\Aut(G)$ acting transitively on $G$. Can there exist a non-normal subgroup $A$ of $\Gamma$ such that: (i) the quotient graph $G_A$ is transitive, and (ii) there exists no normal subgroup $N$ of some transitively acting $\Gamma'$ such that $G_A$ is isomorphic to $G_N$? Might it be relevant to assume that $A$ acts freely on $V$?
+\end{question}
+
+Here $\Gamma'$ ranges over the subgroups of $\Aut(G)$ acting transitively on $V$. We answer the question as stated, with a free action.
+
+\begin{theorem}\label{thm:main}
+For every integer $m\ge3$ there are a connected, infinite, locally finite, simple, transitive graph $X$ and a subgroup $B\le\Aut(X)$ with the following properties.
+\begin{enumerate}
+\item $\Aut(X)$ acts regularly on the vertices of $X$; $B$ is not normal in $\Aut(X)$, and $B$ acts freely.
+\item The quotient graph $X_B$ is isomorphic to the complete graph $K_m$; in particular it is transitive.
+\item If $\Gamma'\le\Aut(X)$ acts transitively and $N\trianglelefteq\Gamma'$, then $X_N$ is not isomorphic to $K_m$.
+\end{enumerate}
+\end{theorem}
+
+With $\Gamma=\Aut(X)$ and $A=B$, Theorem~\ref{thm:main} gives a positive answer to Question~\ref{q:GL} under the extra condition that $A$ acts freely. Part~(c) concerns every transitive $\Gamma'$, but since $\Aut(X)$ acts regularly, the only such $\Gamma'$ is $\Aut(X)$ itself (Lemma~\ref{lem:regular}).
+
+The quotient $X_B$ is finite. The question does not ask for an infinite quotient, but in the setting of connective constants, where a finite quotient has connective constant $0$, the interesting version asks for $G_A$ infinite as well. That version is not settled here, and neither is Question~4.6 of \cite{GL}, which asks whether $\mu(G_A)<\mu(G)$ whenever $A$ is a non-trivial subgroup of $\Gamma$ acting freely with $G_A$ transitive.
+
+The construction has two ingredients. The first is the theorem of Leemann and de la Salle \cite{LdS} that a finitely generated group which is not virtually abelian has a Cayley graph of finite degree whose only automorphisms are the left translations; their proof starts from an arbitrary finite generating set and enlarges it, so prescribed edges can be kept. Once the automorphism group is the group itself, acting regularly, normal quotients of $X$ are Cayley graphs of quotient groups, and their number of vertices is an index of a normal subgroup. The second ingredient is a choice of group in which normal subgroups of small index do not exist while non-normal subgroups of index $m$ do: the free product of two copies of a finite group $F$ with a faithful transitive action on $m$ points and no nontrivial homomorphism to a group of order $m$.
+
+\section{Preliminaries}
+
+All graphs are simple and undirected. For a group $\Lambda$ and a finite symmetric generating set $S\subseteq\Lambda\setminus\{1\}$, the Cayley graph $\Cay(\Lambda,S)$ has vertex set $\Lambda$ and an edge between $g$ and $h$ when $g^{-1}h\in S$. Left multiplication $\lambda_x\colon g\mapsto xg$ is an automorphism, and $\Lambda_L=\{\lambda_x:x\in\Lambda\}$ acts regularly on $\Lambda$. The graph is connected because $S$ generates, locally finite of degree $|S|$, and infinite when $\Lambda$ is.
+
+\begin{theorem}[Leemann--de la Salle {\cite[Thm.~1.1 and its proof, Sect.~5]{LdS}}]\label{thm:LdS}
+Let $\Lambda$ be a finitely generated group that is not virtually abelian, and let $S_0\subseteq\Lambda\setminus\{1\}$ be a finite symmetric generating set. Put $S_1=(S_0\cup S_0^2\cup S_0^3)\setminus\{1\}$. There is a finite symmetric generating set $S$ with $S_1\subseteq S\subseteq\Lambda\setminus\{1\}$ and $|S|\le2|S_1|(|S_1|+14)$ such that $\Aut(\Cay(\Lambda,S))=\Lambda_L$.
+\end{theorem}
+
+In \cite{LdS}, $S$ is the set $\widetilde S$ of their Proposition~3.2 applied to $S_1$, which gives $S_1\subseteq S$ and the bound on $|S|$; every automorphism of $\Cay(\Lambda,S)$ then preserves the $S_1$-colours of edges, and their Theorem~3.1 shows that it is a left translation. Theorem~3.1 needs $\Lambda$ to be neither abelian nor generalized dicyclic; a generalized dicyclic group has an abelian subgroup of index two, so both cases are virtually abelian.
+
+\begin{lemma}\label{lem:regular}
+Let $X=\Cay(\Lambda,S)$ with $\Aut(X)=\Lambda_L$.
+\begin{enumerate}
+\item The only subgroup of $\Aut(X)$ acting transitively on $\Lambda$ is $\Lambda_L$.
+\item If $N\trianglelefteq\Lambda_L$, then $N=\{\lambda_x:x\in N_0\}$ for a normal subgroup $N_0\trianglelefteq\Lambda$, and $X_N$ has exactly $[\Lambda:N_0]$ vertices.
+\item For a subgroup $B_0\le\Lambda$ and $B=\{\lambda_x:x\in B_0\}$, the $B$-orbits are the right cosets $B_0g$, and $B$ acts freely.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) If $\Gamma'\le\Lambda_L$ is transitive, then for every $g\in\Lambda$ some element of $\Gamma'$ sends $1$ to $g$; the only element of $\Lambda_L$ doing so is $\lambda_g$. Hence $\Gamma'=\Lambda_L$. (b) The map $x\mapsto\lambda_x$ is an isomorphism $\Lambda\to\Lambda_L$, so normal subgroups correspond. The $N$-orbit of $g$ is $N_0g=gN_0$, and the orbits are the cosets of $N_0$. (c) The $B$-orbit of $g$ is $\{xg:x\in B_0\}=B_0g$, and $xg=g$ forces $x=1$.
+\end{proof}
+
+\section{The construction}
+
+\begin{proposition}\label{prop:template}
+Let $m\ge3$. Suppose a finite group $F$ acts faithfully and transitively on a set of $m$ points with nontrivial point stabiliser $H$, and every homomorphism from $F$ to a group of order $m$ is trivial. Then the conclusions of Theorem~\ref{thm:main} hold for $m$.
+\end{proposition}
+
+\begin{proof}
+Let $\Lambda=F^{(1)}*F^{(2)}$ be the free product of two copies of $F$, and let $\pi\colon\Lambda\to F$ be the homomorphism that is the identity on $F^{(1)}$ and trivial on $F^{(2)}$. Put $B_0=\pi^{-1}(H)$. Since $\pi$ is onto, $[\Lambda:B_0]=[F:H]=m$.
+
+\emph{$\Lambda$ is not virtually abelian.} Let $a=|F|-1\ge2$. A reduced word in the free product alternates between nonidentity elements of the two factors, so there are exactly $2a^j$ reduced words of length $j\ge1$, and by the normal form theorem for free products they represent distinct elements. With respect to the generating set $S_0$ below, the ball of radius $r$ therefore has at least $2a^r$ elements, and $\Lambda$ has exponential growth. A finitely generated virtually abelian group has polynomial growth, so $\Lambda$ is not virtually abelian.
+
+\emph{The graph.} Let $S_0=(F^{(1)}\setminus\{1\})\cup(F^{(2)}\setminus\{1\})$, a finite symmetric generating set of $\Lambda$, and let $S\supseteq S_0$ be given by Theorem~\ref{thm:LdS}. Put $X=\Cay(\Lambda,S)$ and $B=\{\lambda_x:x\in B_0\}$. Then $X$ is connected, infinite, locally finite, simple and transitive, and $\Aut(X)=\Lambda_L$ acts regularly.
+
+\emph{(a)} If $H$ were normal in $F$, then, being the stabiliser of one point and conjugate to the stabiliser of every other point by transitivity, it would fix every point; by faithfulness $H=\{1\}$, a contradiction. So there are $f\in F$ and $h\in H$ with $fhf^{-1}\notin H$. Choose $y\in F^{(1)}$ and $x\in B_0$ with $\pi(y)=f$, $\pi(x)=h$; then $\pi(yxy^{-1})\notin H$, so $yxy^{-1}\notin B_0$ and $B_0$ is not normal in $\Lambda$. Hence $B$ is not normal in $\Lambda_L=\Aut(X)$. It acts freely by Lemma~\ref{lem:regular}(c).
+
+\emph{(b)} By Lemma~\ref{lem:regular}(c) the vertices of $X_B$ are the right cosets $B_0g$. The map $B_0g\mapsto H\pi(g)$ onto the right cosets of $H$ in $F$ is well defined and injective, because $H\pi(g)=H\pi(g')$ if and only if $\pi(g'g^{-1})\in H$, that is, $g'g^{-1}\in B_0$; it is onto because $\pi$ is. Hence $X_B$ has $m$ vertices, and every vertex contains an element of $F^{(1)}$: the coset $B_0g$ contains the element $r\in F^{(1)}$ with $\pi(r)=\pi(g)$. Given two distinct vertices, pick representatives $r\neq t$ in $F^{(1)}$. Then $r^{-1}t\in F^{(1)}\setminus\{1\}\subseteq S_0\subseteq S$, so $r$ and $t$ are adjacent in $X$, and the two vertices are adjacent in $X_B$. Thus $X_B\cong K_m$.
+
+\emph{(c)} Let $\Gamma'\le\Aut(X)$ be transitive and $N\trianglelefteq\Gamma'$ with $X_N\cong K_m$. By Lemma~\ref{lem:regular}(a), $\Gamma'=\Lambda_L$, and by Lemma~\ref{lem:regular}(b), $N$ corresponds to $N_0\trianglelefteq\Lambda$ of index $m$. The quotient map $q\colon\Lambda\to\Lambda/N_0$ is a homomorphism onto a group of order $m$. Its restrictions to $F^{(1)}$ and to $F^{(2)}$ are homomorphisms from $F$ to a group of order $m$, hence trivial, and since the two factors generate $\Lambda$, $q$ is trivial. This contradicts $|\Lambda/N_0|=m\ge3$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Let $F=S_3$ if $m=3$ and $F=A_m$ if $m\ge4$, acting naturally on $\{1,\dots,m\}$. The action is faithful. It is transitive: for $S_3$ clearly, and for $A_m$ the three-cycle $(i\ j\ k)$ sends $i$ to $j$. The stabiliser of a point has order $2$ for $m=3$ and $(m-1)!/2\ge3$ for $m\ge4$, so it is nontrivial.
+
+Let $Q$ be a group of order $m$ and $\varphi\colon F\to Q$ a homomorphism. If $m=3$, a transposition has order $2$, so its image has order dividing $\gcd(2,3)=1$; the transpositions generate $S_3$, so $\varphi$ is trivial. If $m=4$, a three-cycle has order $3$ and its image has order dividing $\gcd(3,4)=1$; the three-cycles generate $A_4$, so $\varphi$ is trivial. If $m\ge5$, then $A_m$ is simple, so a nontrivial $\varphi$ is injective, which is impossible since $|A_m|=m!/2>m$. Proposition~\ref{prop:template} applies.
+\end{proof}
+
+\section{Remarks}
+
+\begin{remark}[Degree]
+With $a=|F|-1$, the elements of $\Lambda$ of word length $1$, $2$ and $3$ in $S_0$ are the reduced words of those lengths, so $|S_1|=t:=2(a+a^2+a^3)$, and Theorem~\ref{thm:LdS} gives a graph of degree at most $2t(t+14)$. For $m=3$, $a=5$, $t=310$ and the bound is $200{,}880$. The construction is not explicit: the generating set $S$ comes from the probabilistic argument of \cite{LdS}.
+\end{remark}
+
+\begin{remark}[The choice of $F$]
+The symmetric group $S_m$ does not serve for even $m\ge4$. The sign maps of the two factors of $S_m*S_m$ give a homomorphism onto the infinite dihedral group $\langle s,t\mid s^2=t^2=1\rangle$, which maps onto the dihedral group of order $m$ (the Klein four-group when $m=4$). Its kernel is a normal subgroup of index $m$, and the abelianization of $F$ alone does not exclude such subgroups. Alternating groups avoid this.
+\end{remark}
+
+\begin{remark}[Small $m$]
+For $m\le2$ the construction cannot work with a graphical regular representation: a subgroup of $\Lambda$ of index at most $2$ is normal, so its orbit quotient is a normal quotient.
+\end{remark}
+
+\begin{remark}[Infinite quotients]
+The argument rests on the fact that $\Lambda$ has no normal subgroup of index $m$; for an infinite quotient one would need a non-normal $B_0$ of infinite index whose Schreier graph with respect to the large generating set $S$ is transitive and differs from every Cayley graph of a quotient of $\Lambda$ with respect to the image of $S$. Since $S$ is not explicit, the methods here say nothing about that version of Question~\ref{q:GL}.
+\end{remark}
+
+\section*{Computations}
+The file \texttt{code/check.py} in~\cite{code} (Python~3, standard library, exact permutation arithmetic; its output is \texttt{code/check\_output.txt}) checks, for $F=S_3$ and $F=A_m$ with $4\le m\le7$: the order of $F$, transitivity, that the point stabiliser has index $m$, is nontrivial and is not normal, that the right cosets of the stabiliser are $m$ in number, and, by listing all normal subgroups of $F$, that none of index greater than $1$ has index dividing $m$. It also checks the count $2a^j$ of reduced words for small $a$ and $j$ and the number $200{,}880$. The proofs above do not depend on this file, and the infinite graph $X$ is not computed.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. In September 2026 OpenAI GPT models, running as research tasks of that project, proposed the construction for $m=3$ and its extension to every $m\ge3$. In October 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, checked the proof against the sources, wrote the computer checks of the repository~\cite{code}, and wrote the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/nonnormal-orbit-quotients}.
+
+\begin{thebibliography}{9}
+\bibitem{GL} G.~R.~Grimmett and Z.~Li, \emph{Self-avoiding walks and connective constants}, in: Sojourns in Probability Theory and Statistical Physics -- III, Springer Proc.\ Math.\ Stat.\ \textbf{300}, Springer, Singapore, 2019, pp.~215--241; arXiv:1704.05884v2.
+\bibitem{GL13} G.~R.~Grimmett and Z.~Li, \emph{Strict inequalities for connective constants of transitive graphs}, SIAM J.\ Discrete Math.\ \textbf{28} (2014), 1306--1333; arXiv:1301.3091.
+\bibitem{LdS} P.-H.~Leemann and M.~de la Salle, \emph{Cayley graphs with few automorphisms: the case of infinite groups}, Ann.\ H.\ Lebesgue \textbf{5} (2022), 73--92; arXiv:2010.06020.
+\bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/nonnormal-orbit-quotients}.
+\end{thebibliography}
+
+\end{document}

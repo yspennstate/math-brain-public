@@ -1,0 +1,81 @@
+{
+  "candidate": "C0029",
+  "worker": "w570",
+  "date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "openness_scope": "No complete solution found in the bounded named-record and primary-literature check; absence of a search hit is not certification of openness.",
+  "exact_target": "For iid uniform {-1,1} real n by n B_n, there exists fixed c in (0,1) such that for every n>=1 and epsilon>=0, P(s_min(B_n)<=epsilon/sqrt(n))<=epsilon+c^n.",
+  "primary_statement_recovered": true,
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/math/0212413",
+      "revision": "v1, 2002-12-01",
+      "authors": "Daniel A. Spielman; Shang-Hua Teng",
+      "title": "Smoothed Analysis of Algorithms",
+      "locator": "Conjecture 2, printed p.605, PDF page 9",
+      "statement_checked": "Inverse operator norm tail; modern least-singular-value form recovered by substitution and epsilon+h continuity from above.",
+      "notation_note": "Extracted original text uses d for dimension and n in exponential remainder; the modern source consistently uses n.",
+      "byte_hash_verified": false
+    },
+    {
+      "url": "https://arxiv.org/html/2405.20308v2",
+      "revision": "v2, 2025-01-08",
+      "authors": "Ashwin Sah; Julian Sahasrabudhe; Mehtaab Sawhney",
+      "title": "On the Spielman-Teng Conjecture",
+      "locator": "Equation (2), Theorems 1.1 and 1.2",
+      "statement_checked": "Target coefficient is exactly one; proved upper bound has 1+O_xi((log n)^(-1/16)) factor for all epsilon>=0.",
+      "byte_hash_verified": false
+    },
+    {
+      "url": "https://websites.umich.edu/~rudelson/papers/rv-ICM2010.pdf",
+      "title": "Non-asymptotic theory of random matrices: extreme singular values",
+      "locator": "Gaussian least singular value discussion and equation (3.2)",
+      "statement_checked": "1-exp(-epsilon-epsilon^2/2) is under an n->infinity limit; the all-n Gaussian bound <=epsilon is separate.",
+      "access_scope": "Primary-source search extract checked; not a whole-paper read or byte-hash check."
+    },
+    {
+      "url": "https://arxiv.org/abs/1812.09016",
+      "authors": "Konstantin Tikhomirov",
+      "title": "Singularity of random Bernoulli matrices",
+      "statement_checked": "Singularity probability has exponential rate (1/2+o_n(1))^n; this does not establish a collision-dominance prefactor."
+    }
+  ],
+  "prior_records": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "line": 428
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+      "line": 29,
+      "source_id": "bordenave_chafai_circular_2012",
+      "source_url": "https://arxiv.org/pdf/1109.3343",
+      "primary_pdf_content_here": "Not read; statement instead independently recovered from original ST source.",
+      "scope": "All large n and all small t>=0; keep this historical wording distinct from the original all-epsilon statement."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "line": 23,
+      "attempt_id": "C0029-A001",
+      "finding": "Incorrect finite-n exact-Gaussian-law sentence; scoped correction proposed."
+    }
+  ],
+  "targeted_prior_searches": {
+    "attempts_H_20260912": "No C0029 or Spielman-Teng match in targeted text files.",
+    "attempts_I_20260914": "No C0029 or Spielman-Teng match in targeted text files.",
+    "prob1000_lean_20260908": "Ranked entry only; no matching proof file found.",
+    "Team_O": "No C0029 row on W0300_O/TEAM_BOARD.md.",
+    "owner_solved_retired": "Relevant recall concerns a different Gaussian-submatrix target; no solved/retired certificate for C0029 recovered."
+  },
+  "brain_scars": [
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "open_problem_least_sv_submatrix_2026_07_06"
+  ],
+  "served_model_evidence": {
+    "author": "UNKNOWN: no response-side served-model receipt available",
+    "referee": "UNKNOWN: no independent audit receipt yet",
+    "requested_settings_are_evidence": false,
+    "different_model_review_gate_met": false
+  },
+  "promotion": "DRAFT ONLY; no parent-problem solved claim; no live store write"
+}

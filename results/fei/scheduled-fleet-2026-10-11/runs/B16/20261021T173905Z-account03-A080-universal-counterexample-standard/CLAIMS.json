@@ -1,0 +1,56 @@
+{
+  "run_id": "20261021T173905Z-account03-A080-universal-counterexample-standard",
+  "stream": "B16",
+  "claims": [
+    {
+      "claim_id": "A080-TENSOR-ACTIVATION-NORMALIZATION-PHASES",
+      "version": 1,
+      "exact_statement": "For each fixed nonconstant uniform Boolean seed g with R=H(g)/I(g), let F_(t,k)=1+1_selector_vertex*(g^tensor(t)-1), t,k>=1. For any k->infinity and t=t(k) with t I(g)/k->lambda in [0,infinity], its ordinary, output-entropy-gap, and consistently nonempty-normalized entropy/influence ratios tend respectively to (lambda R+4)/(lambda+1), (lambda R+4)/(lambda+1/2), and (lambda R+2)/(lambda+1), with value R at lambda=infinity. Their maximal limiting values are max(R,4), max(R,8), max(R,2), attainable with minority and total influence tending to zero. Uniform numerator errors after division by activation mass are at most32,3,16 as specified in PROOF.md; denominator positivity is guaranteed eventually. Thus no fixed-seed tensor/point-activation schedule disproves FEI. The gap baseline8 already comes from a dictator seed and is not a universal ordinary FEI lower bound8.",
+      "hypotheses": [
+        "Actual finite Boolean signs; uniform input cube; all entropies in bits",
+        "Fixed nonconstant seed; disjoint tensor copies; fresh private selector coordinates",
+        "Limit k->infinity, arbitrary integer tensor schedule t>=1; gap denominator used only on its proved positive domain",
+        "Conditioned influence normalized as I/Var; no arbitrary variable-seed bound or general signed-bank admission asserted"
+      ],
+      "statement_sha256": "dcf46504eafaa33c11cd1ce24761d583be349a729a560576374292540588c278",
+      "contributors": [
+        "A080"
+      ],
+      "proof_source": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261021T173905Z-account03-A080-universal-counterexample-standard\\PROOF.md",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261021T173905Z-account03-A080-universal-counterexample-standard\\out\\VALIDATION.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261021T173905Z-account03-A080-universal-counterexample-standard\\out\\FIRST_FAILURE.md"
+      ],
+      "proof_dependencies": [
+        "Direct Fourier tensor products and full activation spectrum, rederived from A080 previous stage",
+        "Elementary entropy bounds and positive atanh remainder, proved in PROOF.md",
+        "No FEI premise or A089 finite owner-transfer premise"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A080 (self)",
+          "verdict": "PASS",
+          "scope": "Analytic proof with uniform error bounds, direct integer-Walsh/edge reconstruction and independent parity closed spectrum",
+          "external_independent_review": "PENDING",
+          "lean_scope": "Only integer scalar budget lemma; outcome RUNTIME_UNVERIFIED"
+        }
+      ],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "Any asserted unbounded FEI amplification from a fixed seed using only disjoint tensor powers and point activation",
+        "Treating an output-gap limiting value8 as an ordinary FEI lower bound8"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A075",
+        "A072",
+        "A074",
+        "A089",
+        "A092",
+        "B16",
+        "B20"
+      ]
+    }
+  ]
+}

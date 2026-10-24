@@ -1,0 +1,52 @@
+PROB20-20 fixed dyadic-log stress law exact checker
+w0=2, w1=1, wk=1/(k^2*j(k)^2), j(k)=ceil(log2(k+1)); conditioning m=n
+n=4
+  Emax/n exact = 1307/2390
+  Emax/n decimal = 0.546861924686
+  P(max<=n/2) exact = 747/1195
+  P(max<=n/2) decimal = 0.625104602510
+  max-weight mode = 2
+n=6
+  Emax/n exact = 188165/362559
+  Emax/n decimal = 0.518991391746
+  P(max<=n/2) exact = 254255/362559
+  P(max<=n/2) decimal = 0.701278964251
+  max-weight mode = 3
+n=8
+  Emax/n exact = 7748161085/15124227316
+  Emax/n decimal = 0.512301284761
+  P(max<=n/2) exact = 122987375/199002991
+  P(max<=n/2) decimal = 0.618017721151
+  max-weight mode = 3
+n=10
+  Emax/n exact = 5475348274473/10868433959821
+  Emax/n decimal = 0.503784472971
+  P(max<=n/2) exact = 6377746862221/10868433959821
+  P(max<=n/2) decimal = 0.586813784378
+  max-weight mode = 3
+n=12
+  Emax/n exact = 60928516785795505/123004218397580838
+  Emax/n decimal = 0.495336806977
+  P(max<=n/2) exact = 4099921886696251/6833567688754491
+  P(max<=n/2) decimal = 0.599967992333
+  max-weight mode = 7
+n=14
+  Emax/n exact = 13588417083870542444245/27552674012645107376731
+  Emax/n decimal = 0.493179612172
+  P(max<=n/2) exact = 17424784460106106986331/27552674012645107376731
+  P(max<=n/2) decimal = 0.632417182162
+  max-weight mode = 7
+n=16
+  Emax/n exact = 5327591598409420576137856955/10735494467530968977514343896
+  Emax/n decimal = 0.496259544870
+  P(max<=n/2) exact = 262499792607870788631818729/447312269480457040729764329
+  P(max<=n/2) decimal = 0.586837899423
+  max-weight mode = 7
+n=18
+  Emax/n exact = 69948204448724484707478728509435/139715550473974947745303098768723
+  Emax/n decimal = 0.500647237988
+  P(max<=n/2) exact = 8547977128114817998408689758587/15523950052663883082811455418747
+  P(max<=n/2) decimal = 0.550631578890
+  max-weight mode = 7
+dyadic block inequalities j=2..11: PASS
+finite exact DP: PASS

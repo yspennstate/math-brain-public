@@ -1,0 +1,85 @@
+{
+  "agent": "w378",
+  "target_id": "P0110",
+  "checked_date": "2026-10-10",
+  "ranking": {
+    "tier": 5,
+    "dated_status": "attempted_un",
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 551
+  },
+  "exact_target": {
+    "source": "Auffinger-Damron-Hanson, 50 years of first passage percolation",
+    "arxiv": "1511.03262v2",
+    "url": "https://arxiv.org/pdf/1511.03262v2",
+    "locator": "Question 22, Section 4.3, printed pp. 88-89, equation (4.19)",
+    "source_quote": "Find a distribution of passage times where (4.19) holds.",
+    "equation": "chi = 2 xi - 1",
+    "quantifier": "existence of a fixed iid passage-time law in ordinary nearest-neighbor lattice FPP",
+    "model_dimension": "d>=2",
+    "exponent_definition_caution": "The source explicitly makes correct definition/existence part of the problem; the packet separately specifies Chatterjee's sufficient strong-exponent route."
+  },
+  "current_openness": "UNKNOWN",
+  "novelty": "UNKNOWN; no novelty claim",
+  "primary_checks": [
+    {
+      "url": "https://arxiv.org/pdf/1105.4566",
+      "locator": "Theorem 1.1, printed pp. 3-4",
+      "finding": "Conditional identity with strong upper/lower exponent matching and nearly-Gamma exponential-moment assumptions."
+    },
+    {
+      "url": "https://arxiv.org/abs/1109.0523",
+      "finding": "Alternative inequality proof removes the nearly-Gamma restriction; no concrete exponent-existence example inferred."
+    },
+    {
+      "url": "https://arxiv.org/abs/2604.01214",
+      "finding": "2026 polynomial variance upper bound for rotationally invariant Riemannian planar FPP; not the target's iid nearest-neighbor law and not exact exponent matching."
+    }
+  ],
+  "local_prior_attempt": {
+    "path": "~/math-brain-build/export/population/claims.jsonl",
+    "line": 6022,
+    "claim_id": "claim_a60b9dcbea1c3b4133831211a8107b42fbce24f2c59d8b4b21ede96b3cab07f1",
+    "kind": "concept",
+    "status": "unverified",
+    "independent_review": false,
+    "gap": "Exponent existence and stochastic error control in substituting the deterministic norm.",
+    "raw_rank_sheet": "P0110 row is clipped; not treated as a complete proof.",
+    "confirmed_in_read_only_live_store": true
+  },
+  "additional_local_checks": {
+    "H_I_attempts": "No P0110 target match in scoped named attempt directories.",
+    "lean_campaign": "Only ranking metadata matched; no formal theorem receipt.",
+    "team_O": "Related FPP rows exist; no P0110 ownership row matched.",
+    "owner_solved_work": "Directed width-3 strip time constant is a different model; no target solution inferred.",
+    "limitations": "Targeted reads and bounded primary-literature search are not an exhaustive retirement/solved-status certificate."
+  },
+  "memory_scars": [
+    "fpp_base_case_is_doubling_transfer_principle_2026_08_15",
+    "perceptron_proof_open_gaps_fleet_2026_07_12"
+  ],
+  "proof_status": {
+    "target": "unsolved by this packet",
+    "new_results": "proved special case; author proof",
+    "independent_reviewer": "w380 pending",
+    "formal_check": null,
+    "source_checks_are_not_proof": true
+  },
+  "brain_states": {
+    "prepared": true,
+    "submitted": true,
+    "reviewed": false,
+    "ingested": "not claimed",
+    "retrievable": "not claimed"
+  },
+  "partial_independent_review": {
+    "auditor": "w379",
+    "claims": [
+      "w378-P0110-L1",
+      "w378-P0110-L2"
+    ],
+    "verdict": "KEEP",
+    "receipt": "~\\brain_workers\\w378\\PEER_REVIEW_RECEIPTS.json",
+    "w380_and_L3": "pending"
+  }
+}

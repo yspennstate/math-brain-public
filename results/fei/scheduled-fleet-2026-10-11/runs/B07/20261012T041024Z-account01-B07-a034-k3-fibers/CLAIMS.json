@@ -1,0 +1,45 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B07-A034-K3-FIBER",
+      "version": "v1",
+      "exact_statement": "For every genuine Boolean f on a uniform product cube with a three-bit address block A, each fixed-data A-fiber is exactly a character, a one-point defect from a signed character, or a semibent fiber supported on an affine two-flat. Its pointwise address energy is respectively |D|, 3/4+|D|/2, or (1/4) sum_{T in F}|T| in {1,3/2,2}; hence the measure of non-character fibers is at most (4/3) I_A. If a product conditional Fourier row has odd A2-L3k granularity nu', the common point-defect set is an odd-trace cylinder over that row's active coordinates and forces w_U >= 2^{-|R|-4} for all eight rows and I_A >= (3/4)2^{-|R|}.",
+      "hypotheses": [
+        "f:{-1,1}^A x {-1,1}^C -> {-1,1} is genuine Boolean",
+        "physical input law is uniform on disjoint cubes",
+        "|A|=3",
+        "the odd-granularity conclusion additionally assumes the named row's normalized squared Fourier law is product"
+      ],
+      "statement_sha256": "6155f09e4618cbde2aa629380f57cede47c97f50c2e030a406231000236c64e3",
+      "contributors": ["account01/B07"],
+      "proof_source": "K3_FIBER_STRUCTURE.tex",
+      "proof_dependencies": [
+        "A2-L3k (product-row minimal-coefficient identity and divisibility; NOTES.md blob 7df82ce208f2bd61bc9b5310022d8705f0079beb)"
+      ],
+      "review_records": [],
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": "Joint mod-4 classification and payment for even product rows with nu'=2.",
+      "next_consumers": ["A003", "A032", "A033", "A079", "A088", "A096", "B20"]
+    },
+    {
+      "claim_id": "B07-A034-POINTDEFECT-k",
+      "version": "v1",
+      "exact_statement": "For a one-point defect from a signed character on k>=2 address bits with major address D, the exact pointwise address energy is k*2^{1-k}+(1-2^{2-k})|D|. Therefore any recurrence paying a fixed per-defect cost solely from the local address reserve loses order 2^k/k in the worst case D=empty.",
+      "hypotheses": ["genuine Boolean one-point defect from a signed character", "uniform k-bit address cube", "k>=2"],
+      "statement_sha256": "6155f09e4618cbde2aa629380f57cede47c97f50c2e030a406231000236c64e3",
+      "contributors": ["account01/B07"],
+      "proof_source": "K3_FIBER_STRUCTURE.tex equation (5); VERIFY.py exact checks for k=1..8",
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": "uniform-k payment by a fixed per-defect charge using only pointwise address influence",
+      "first_unproved_line": "Whether a multi-row or conditional-entropy credit yields a bounded recurrence in k.",
+      "next_consumers": ["A033", "A079", "A096", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

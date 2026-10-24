@@ -1,0 +1,50 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261013T085029Z-account01-B19-a041-multislice-review-a091",
+  "claims": [
+    {
+      "claim_id": "A041-COHERENT-TWO-WEIGHT-SLICE-APPLICATION",
+      "version": 1,
+      "exact_statement": "For every one-exceptional-input threshold F=2*1{wX+sum_j Y_j>=t}-1 under an interior product law, E_ge2(F)<=(4(460+80 ln 2)+12+4/e)Delta(F) and corrected FEI+ has constant below 3000. For arbitrary two-weight groups, the merged-slice deficit Gram matrix is PSD, the mixed B-energy and root-deficit ledgers are exact, but no arbitrary-slice entropy bound follows. The family 2*1{2X+sum_j Y_j>=3}-1 is prime for every n>=3.",
+      "hypotheses": [
+        "genuine Boolean threshold on finitely many independent product inputs",
+        "one exceptional physical input for the entropy theorem",
+        "arbitrary finite heavy and light groups only for the Gram and energy identities",
+        "interior biases, with deterministic coordinates contracted",
+        "natural logarithms for E and bits for corrected FEI+",
+        "owner-approved symmetric-threshold baseline at public commit b38ba0ab49618ccbe6d1518a34c141dcec9f247c"
+      ],
+      "statement_sha256": "c8a5f1552c4c51e4a5e4eeb5e87f6062c9ef2c1a36bdb1d7533d204b2d83cdb3",
+      "contributors": ["account05/A041"],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "snapshot": "159f88b6f25301137bb73a7c78a75e2894969541",
+        "path": "reports/fei-2026-10-11/runs/B09/20261011T232825Z-account05-A041-weighted-threshold-fei/SLICE_DEFICIT_PAYMENT.tex",
+        "blob_sha": "d12d4588a848827d670df946a9eb86b6ab7bb62c"
+      },
+      "proof_dependencies": [
+        {
+          "repository": "yspennstate/fourier-entropy-threshold-functions",
+          "commit": "b38ba0ab49618ccbe6d1518a34c141dcec9f247c",
+          "path": "paper/main.tex",
+          "locators": ["bias:strong", "bias:eq-5-9"],
+          "role": "symmetric-threshold corrected FEI+ and coherent two-amplitude inequality"
+        }
+      ],
+      "review_records": [
+        {
+          "reviewer": "account01/B19",
+          "packet": "A091",
+          "verdict": "ACCEPT_AT_STATED_SPLIT_SCOPE",
+          "method": "Independent analytic reconstruction plus exact Fraction checker over 522 one-exceptional cases, 83 multi-slice cases, and 957 prime-family proper blocks.",
+          "source": "REPORT.md"
+        }
+      ],
+      "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED_AT_STATED_SPLIT_SCOPE",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": "A dimension-independent normalized reference pays the coherent mixed coefficients and pure-heavy sector from the one nonreused root deficit ledger for arbitrary heavy arity.",
+      "next_consumers": ["A042", "A044", "A045", "A084", "A090", "B09", "B20"]
+    }
+  ]
+}

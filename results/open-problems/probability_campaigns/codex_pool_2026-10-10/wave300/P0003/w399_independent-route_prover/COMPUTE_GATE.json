@@ -1,0 +1,16 @@
+{
+  "agent": "w399",
+  "created": "2026-10-10",
+  "purpose": "Synthetic finite-graph identities and deterministic topology counterexamples only",
+  "max_wall_seconds": 45,
+  "max_vertices": 6,
+  "graph_family": "All 64 labeled simple graphs on four vertices; one honeycomb hexagon",
+  "weights": ["1/2", "1", "2"],
+  "arithmetic": "Python standard-library Fraction",
+  "gpu": false,
+  "models_or_training": false,
+  "store_writes": false,
+  "blind_material_access": false,
+  "output": "MEASUREMENTS.json",
+  "stop_rule": "Check monotonic deadline per graph and fail the run on any failed identity; no scale increase"
+}

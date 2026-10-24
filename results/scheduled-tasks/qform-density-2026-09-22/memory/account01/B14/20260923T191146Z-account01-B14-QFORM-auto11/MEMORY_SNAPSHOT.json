@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T191146Z-account01-B14-QFORM-auto11",
+  "account": "account01",
+  "slot": "B14",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_qform_status": "OPEN",
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "9225d042aaa7ec8021a89a2c07447c3e61d9d03f",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260923T191146Z-account01-B14-QFORM-auto11/REPORT.md",
+  "partner": {
+    "account": "account02",
+    "slot": "B14",
+    "run_id": "20260923T183045Z-account02-B14-QFORM-auto11",
+    "commit": "a0ba2bed1c4d0e364c42e7c99103ad7c57d5ac19",
+    "result_used": "Gaussian-mixture BV/inverse-half-scale fragmentation barrier and smooth random-center family"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-WHOLE-LAW-SMOOTH-LOCALIZATION-v1",
+      "status": "PROVED",
+      "statement": "For every Borel map F:R^n->R, the optimal interval-density constant over arbitrary cap-one product laws equals exactly the optimal constant over C_c^infinity cap-one probability densities. In particular the full QFORM optimal constant is unchanged."
+    },
+    {
+      "id": "QFORM-SMOOTH-CAPONE-GAUSSIAN-BUDGET-SEPARATION-v1",
+      "status": "PROVED",
+      "statement": "There are smooth compact cap-one densities h_N whose L1 distance from every Gaussian location-scale mixture with E T^{-1/2}<=sqrt(2pi) is at least 1-2/N."
+    },
+    {
+      "id": "QFORM-TWO-HYPERBOLIC-RANDOM-CENTER-COMPARISON-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "For the partner random-center law and Q_N=2X1X2+2X3X4, spectrum {1,-1,1,-1}, the true whole-law density is <=4 uniformly, whereas the component-first Gaussian conditional certificate is (I3*2^(2/3)/pi)N^2 = 1.48678636... N^2."
+    }
+  ],
+  "safe_next_step": "Work entirely on smooth compact cap-one marginals, seeking a whole-marginal replacement for inverse Gaussian scale in the determinant/Cauchy-Binet proof. Do not normalize remote active fragments before the smoothing mechanism; partner BV barrier rules out latent-scale-only closure.",
+  "forbidden_shortcuts_reaffirmed": [
+    "uniform pointwise quadratic Fourier decay",
+    "post-rotation independence",
+    "arbitrary-joint coarea",
+    "positive conditional projection density moments",
+    "bounded-diameter localization",
+    "fixed-fragment-count localization"
+  ]
+}

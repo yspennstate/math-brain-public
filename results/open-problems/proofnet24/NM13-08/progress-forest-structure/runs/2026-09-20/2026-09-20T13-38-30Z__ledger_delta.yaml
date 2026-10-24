@@ -1,0 +1,103 @@
+run_id: NM13-08-T07-2026-09-20T13-38-30Z
+owner_slot: NM08
+source_target: T07_uniform_all_forests_pairwise_negative_edge_correlation
+repository: yspennstate/math-open-problems
+branch: master
+status:
+  parent: OPEN
+  restricted_theorem: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+  novelty_priority: UNVERIFIED
+parent_scope:
+  before_complete_all_graph_order: 9
+  after_complete_all_graph_order: 9
+  before_counterexample_order_lower_bound: 10
+  after_counterexample_order_lower_bound: 10
+mechanism_gain:
+  before: one 15-state nilpotent star-leaf operator plus finite path/cycle response-strip libraries
+  after: commuting direct-leg/subdivided-leg 15-state branching algebra of dimension seven plus all-parameter mixed-spider sign certificate
+new_claims:
+  - id: T07-MIXED-SPIDER-TWO-TAIL-ALGEBRA-25
+    statement: direct-leg L=5I+J and subdivided-leg B=28I+K satisfy J^4=K^4=0, JK=KJ, JK^2=(31/270)K^3, J^2K=(76/6075)K^3, J^3=(8/6075)K^3; generated algebra has dimension seven
+    proof_status: COMPUTER_ASSISTED_EXACT
+  - id: T07-MIXED-SPIDER-RESPONSE-STRIP-25
+    statement: every mixed spider D_{p,q} has response 43/360 < rho_{p,q} <= 1/8 with equality at upper endpoint only p=q=0
+    proof_status: PROVED_EXACT_SYMBOLIC
+  - id: T07-INDEPENDENT-MIXED-SPIDER-PNC-25
+    statement: for all p,q,r>=0, G=bar(K3) join (D_{p,q} disjoint_union r K1) has pairwise negative correlation under the uniform all-forests law; strict except G=K3,1
+    proof_status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+two_tail_algebra:
+  direct_scalar: 5
+  subdivided_scalar: 28
+  J_ranks: [8,2,1,0]
+  K_ranks: [8,2,1,0]
+  commute: true
+  dimension: 7
+  relations:
+    JK2: 31/270*K3
+    J2K: 76/6075*K3
+    J3: 8/6075*K3
+response_strip:
+  low: 43/360
+  high: 1/8
+  high_equality_only: p=q=0
+symbolic_certificate:
+  same_mixed_spider_schemes: 48
+  same_regular_bernstein: 41
+  same_discriminant: 7
+  mixed_spider_singleton_schemes: 11
+  mixed_spider_singleton_regular: 11
+  singleton_only_schemes: 3
+  singleton_only_regular: 3
+  total_regular: 55
+  total_discriminant: 7
+  failures: 0
+  terminal_marker: ALL_EXACT_CHECKS_PASS
+application:
+  graph_class: G_{p,q,r}=bar(K3) join (D_{p,q} disjoint_union r K1)
+  mixed_spider: center with p direct length-one legs and q subdivided length-two legs
+  vertices: 4+p+2q+r
+  edges: 3+4p+8q+3r
+  clean_branching_subfamily: G_q=bar(K3) join D_{0,q}, q>=3
+  first_beyond_complete_order_baseline:
+    q: 3
+    vertices: 10
+    edges: 27
+    forests: 2298452
+    min_rayleigh_numerator: 573003024
+p14_scope:
+  dense_nine_classes_19_36_edges: 120314
+  all_unlabeled_simple_nine_vertex_graphs: 274668
+  dense_pair_checks: 25304635
+  minimal_counterexample_reduction: 3-connected via block factorization plus two-separator transfer/fixed-graph weighted implication
+literature_scope:
+  grimmett_winkler: all graphs <=8 vertices and 9-vertex graphs <=18 edges under uniform all-forests law; spanning-tree theorem separate
+  erickson: all-positive-weight I-Rayleigh SOS for series-parallel graphs
+  huang: restricted arboreal-gas results; general negative-correlation question open
+  bado: strict uniform-all-forests p-NC for wheels
+  tang_zhang_2603_10738: specified complete-graph ensembles including fixed-component forests; not arbitrary-graph all-forest law
+execution:
+  arithmetic: exact_integer_rational
+  mode: staged_exact
+  monolithic_reproducer: preserved
+  monolithic_single_process_note: execution exceeded single-call cap; all claimed identities/sign certificates were executed incrementally in the staged exact session and archived in output
+artifacts:
+  report: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T13-38-30Z__mixed-spider-two-tail-report.md
+  checker: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T13-38-30Z__mixed-spider-two-tail-checker.py
+  output: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T13-38-30Z__mixed-spider-two-tail-checker.out
+  ledger_delta: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T13-38-30Z__ledger_delta.yaml
+residual_obstruction:
+  current: arbitrary finite multisets of mixed spiders are not yet proved; pairs of marked edges in two distinct mixed-spider components require a cross-component sign theorem
+  failed_route_this_run: direct four-parameter cross-component orbit expansion generated response polynomials but exceeded the single-process execution cap before a complete certificate; no claim is made
+next_attack: derive a cone/factorization for one-edge response vectors of mixed spiders so cross-component Rayleigh determinants are nonnegative abstractly, avoiding four-parameter expansion
+constraints_respected:
+  posted_registry_read: true
+  historical_or_peer_overwrite: false
+  email: false
+  drive: false
+  public_posting: false
+  paid_compute: false
+  access_change: false
+  schedule_change: false
+runtime:
+  model: GPT-5.6 Sol
+  reasoning_effort: UNVERIFIED

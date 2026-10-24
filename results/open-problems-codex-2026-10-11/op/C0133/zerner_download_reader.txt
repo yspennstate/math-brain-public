@@ -1,0 +1,683 @@
+Title: Download
+
+URL Source: https://projecteuclid.org/journalArticle/Download?urlid=10.1214/ECP.v7-1060
+
+Number of Pages: 7
+
+Markdown Content:
+Elect. Comm. in Probab. 7 (2002) 191–197 ELECTRONIC COMMUNICATIONS in PROBABILITY 
+
+## A NON-BALLISTIC LAW OF LARGE NUMBERS FOR RANDOM WALKS IN I.I.D. RANDOM ENVIRONMENT 
+
+MARTIN P. W. ZERNER 
+
+Department of Mathematics, Stanford University, Stanford, CA 94305 United States of America 
+
+email: zerner@stanford.edu 
+
+submitted August 23, 2002 Final version accepted September 30, 2002 AMS 2000 Subject classification: Primary 60K37, secondary 60F15 random walk in random environment, RWRE, law of large numbers 
+
+Abstract We prove that random walks in i.i.d. random environments which oscillate in a given direction have velocity zero with respect to that direction. This complements existing results thus giving a general law of large numbers under the only assumption of a certain zero-one law, which is known to hold if the dimension is two. 
+
+1. Notation, introduction, and results 
+
+An environment ω in Zd (d ≥ 1) is an element of Ω := PZd 
+
+> +
+
+where P+ ⊂ [0 , 1] 2d is the (2 d − 1) – dimensional simplex. The projections of ω on P+ are denoted as ( ω(z, z +e)) |e|=1 ,e ∈Zd (z ∈ Zd)and thus fulfill ω(z, z + e) ≥ 0 and ∑ 
+
+> e
+
+ω(z, z + e) = 1. Given such an environment ω and some x ∈ Zd, the so-called quenched probability measure Px,ω on the path space ( Zd)N is characterized by 
+
+Px,ω [X0 = x] = 1 and 
+
+Px,ω [Xn+1 = z + e | Xn = z] = ω(z, z + e) (z, e ∈ Zd, |e| = 1 , n ≥ 0) where Xn : ( Zd)N → Zd is the n-th canonical projection. Endowing Ω with its canonical product σ-algebra and some probability measure P (with cor-responding expectation operator E) turns ω into a random environment and ( Xn)n≥0 into a Random Walk in Random Environment (RWRE). The so-called annealed probability measure 
+
+Px, x ∈ Zd, is then defined as the semi-direct product Px := P × Px,ω on Ω × (Zd)N, that is 
+
+Px[·] := E[Px,ω [·]]. RWRE in d ≥ 2 is currently an active research area, see [1] and [3] for recent results, sur-veys, and references. Using a certain renewal structure, Sznitman and Zerner (see [2] and [3, Theorem 3.2.2]) proved the following law of large numbers. 
+
+Theorem A. Assume that 
+
+(ω(z, z + e)) |e|=1 , z ∈ Zd, are i.i.d. under P with 
+
+ω(z, z + e) > 0 P-a.s. for all z ∈ Zd, |e| = 1 .
+
+(1) 191 DOI: 10.1214/ECP.v7-1060 192 Electronic Communications in Probability 
+
+Moreover, let ` ∈ Rd\{ 0} and assume that P0[A` ∪ A−`] = 1 , where 
+
+A` := 
+
+{
+
+lim  
+
+> n→∞
+
+Xn` = ∞
+
+}
+
+.
+
+Then, there exist deterministic v`, v −` ∈ Rd (possibly zero) such that 
+
+lim 
+
+> n→∞
+
+Xn`n = v`1A` + v−`1A−` P0-a.s. 
+
+Remark: The version of this result which is quoted in [3, Theorem 3.2.2] assumes for some other purpose that the environment is uniformly elliptic, i.e. that P-a.s. ω(z, z + e) > ε for some uniform “ellipticity constant” ε > 0. However, an inspection of the proof of this theorem shows that it actually does not use this condition. So far there is no general law of large numbers under the assumption of (1) only which would state the existence of a deterministic v towards which Xn/n converges P0-a.s.. There are two problems to be solved in order to derive such a law from Theorem A: (i) Show that v` = 0 if 0 < P 0[A`] < 1. Or even show that 0 < P 0[A`] < 1 is impossible. The latter has been proven in [4] for d = 2 and is still unknown for d ≥ 3. (ii) Show that for the elements ` of some basis of Zd the assumption P0[A` ∪ A−`] = 1 in Theorem A can be omitted. Since (1) implies P0[A` ∪ A−`] ∈ { 0, 1} (see [4, Proposition 3] and also [2, Lemma 1.1], [3, Theorem 3.1.2]) this means that one needs to investigate the case P0[A` ∪ A−`] = 0 only. The purpose of the present note is to settle problem (ii) by the following result. 
+
+Theorem 1. Assume (1) and let e ∈ Zd with |e| = 1 and P0[Ae ∪ A−e] = 0 . Then 
+
+lim 
+
+> n→∞
+
+Xnen = 0 P0-a.s. (2) Of course, the main statement here is that the limit in (2) P0-a.s. exists. Once this has been established it follows from P0[Ae ∪ A−e] = 0 that the value of this limit has to be 0. Theorems A and 1 immediately imply: 
+
+Corollary 2. Assume (1) and P0[Ae] ∈ { 0, 1} for all e ∈ Zd with |e| = 1 . Then there is some deterministic v ∈ Rd such that 
+
+lim 
+
+> n→∞
+
+Xn
+
+n = v P0-a.s. 
+
+According to [4, Theorem 1] the assumption P0[Ae] ∈ { 0, 1} holds if d = 2 and (1) are fulfilled. 2. Proofs 
+
+We first introduce some more notation. Fix some standard basis vector e ∈ Zd, |e| = 1. The following quantities are functions of nearest neighbor paths X· = ( Xn)n. For any 0 ≤ u ∈ R,denote by Tu := inf {n ≥ 0 | Xne ≥ u} (≤ ∞ ) the first time the e-coordinate of X· reaches or exceeds the level u. The times spent by X· inside the hyperplane at distance m from the origin before X· enters the hyperplane at distance m + L constitute the set 
+
+Tm,L := {n ≥ 0 | Tm ≤ n < T m+L, X ne = m} (m, L ∈ N).
+
+Note that Tm ∈ T m,L if Tm,L 6 = ∅. The diameter of Tm,L is denoted by hm,L . Finally, some empirical cumulative distribution function related to hm,L is given by 
+
+FM,L (c) := #{0 ≤ m ≤ M | hm,L ≤ c}
+
+M + 1 ∈ [0 , 1] (M, L ∈ N; c ≥ 0) .Law of Large Numbers for RWRE 193 Notice that Tm,L and hm,L increase in L as sets and numbers, respectively, whereas FM,L (c)decreases in L and increases in c. The following lemma deals with properties of single paths. 
+
+Lemma 3. Let (Xn)n ∈ (Zd)N be a fixed nearest neighbor path with X0 = 0 and 
+
+lim sup n→∞ Xne/n > 0. Then 
+
+sup 
+
+> c≥0
+
+inf  
+
+> L≥1
+
+lim sup  
+
+> M→∞
+
+FM,L (c) > 0.(3) 
+
+Proof. By assumption there exist δ > 0 and a strictly increasing sequence ( nk)k of positive integers such that 
+
+Xnk enk
+
+> δ for all k.(4) Define Mk := d(1 − δ/ 2) nkδ/ 2e . We are going to show that for all L ∈ N,
+
+> Mk
+
+∑
+
+> m=0
+
+#Tm,L ≤ 3
+
+δ (Mk + 1) and (5) 
+
+> Mk
+
+∑
+
+> m=0
+
+hm,L ≤ 3Lδ (Mk + 1) (6) for all k large enough. To this end, fix L. Since X· is a nearest neighbor path it follows from (4) that for all α ∈ [1 − δ/ 2, 1] nk
+
+Xdαee ≥ Xnk e − nkδ/ 2 ≥ nkδ/ 2 ≥ αδ/ 2 and hence Tαδ/ 2 ≤ d αe.
+
+Applying this to α = (1 − δ/ 2) nk + 2 L/δ shows that 
+
+TMk +L ≤ d (1 − δ/ 2) nk + 2 L/δ e ≤ 2( Mk + L)/δ + 1 ≤ 3( Mk + 1) /δ (7) for k large enough. For the proof of (5) observe that the sets Tm,L (m = 0 , . . . , M k) are disjoint subsets of N and that all their elements are strictly less than TMk +L. Consequently, the left-hand side of (5) is at most TMk +L which along with (7) yields (5). For the proof of (6) note that hm,L ≤ Tm+L − Tm for all m. Hence the left-hand side of (6) is at most 
+
+> L−1
+
+∑
+
+> i=0
+> Mk
+
+∑  
+
+> m=0
+> mmod L=i
+
+Tm+L − Tm ≤
+
+> L−1
+
+∑
+
+> i=0
+
+TMk +L − Ti ≤ LT Mk +L
+
+from which (6) follows again by (7). Now assume that (3) is false. Then we define recursively a strictly increasing sequence ( Li)i≥0
+
+as follows. Set L0 := 0, suppose that Li has already been defined, and set ci := 9 Li/δ . By assumption we can choose Li+1 > L i such that lim sup 
+
+> k→∞
+
+FMk ,L i+1 (ci) < 1/3.(8) Then for any i,1 ≤ 1
+
+Mk + 1 
+
+> Mk
+
+∑
+
+> m=0
+
+1{hm,L i ≥ ci} + 1{hm,L i+1 ≤ ci} + 1{hm,L i < h m,L i+1 }.194 Electronic Communications in Probability We split the above sum canonically into three sums and get from (6) and the definition of ci
+
+that the first sum is less than 1 /3 for large k. Due to (8), the second sum is less than 1 /3 for large k as well. Hence for any i,13 ≤ 1
+
+Mk + 1 
+
+> Mk
+
+∑
+
+> m=0
+
+1{hm,L i < h m,L i+1 }(9) for large enough k. Now set i0 := d12 /δ e. Since ( Li)i is an increasing sequence, ( Tm,L i )i
+
+is an increasing sequence of sets for all m. Hence # Tm,L i < #Tm,L i+1 if hm,L i < h m,L i+1 .Therefore, (5) with L = Li0 yields 3
+
+δ ≥ 1
+
+Mk + 1 
+
+> Mk
+
+∑
+
+> m=0
+> i0−1
+
+∑
+
+> i=0
+
+1{hm,L i < h m,L i+1 } ≥ i0
+
+3 ≥ 4
+
+δ
+
+for large k due to (9), which is a contradiction. 
+
+Proof of Theorem 1. The proof is by contradiction. Assume that 
+
+P0
+
+[
+
+lim sup 
+
+> n→∞
+
+Xnen > 0
+
+]
+
+> 0.(10) Since lim sup M →∞ FM,L (c) is measurable, increasing in c, and decreasing in L it follows from (10) and Lemma 3 that 
+
+P0
+
+[
+
+lim  
+
+> L→∞
+
+lim sup  
+
+> M→∞
+
+FM,L (c) > 0
+
+]
+
+> 0(11) for some finite c, which will be kept fixed for the rest of the proof. Now we need some more notation. Let H1(x) := inf {n ≥ 0 | Xn = x} be the first-passage time of the walk time through 
+
+x (x ∈ Zd) and Hr (x) := inf {n > H r−1(x) | Xn = x} be the time of the r-th visit to x (r ≥ 2). Consider the last point visited by the walker in the hyperplane at distance m before the walker reaches the hyperplane at distance m + L. On the event {hm,L ≤ c}, this point lies within 
+
+| · | 1-distance c from XTm and has been visited at most c times before Tm+L. This means on 
+
+{hm,L ≤ c} there are z ∈ Zd with |z|1 ≤ c, ze = 0 and r ∈ N with 1 ≤ r ≤ c such that the event 
+
+B1
+
+> m,L
+
+(z, r ) := {σm(z, r ) < T m+L, D ∗ ◦ θσm(z,r ) + σm(z, r ) ≥ Tm+L
+
+}
+
+occurs, where 
+
+σm(z, r ) := Hr (XTm + z),D∗ := inf {n ≥ 1 | Xne ≤ X0e},
+
+and ( θn)n≥0 is the canonical shift on the path space ( Zd)N. Thus the event B1
+
+> m,L
+
+(z, r ) means that the last visit to the hyperplane at distance m before Tm+L is also the r-th visit to the point XTm + z. Consequently, lim  
+
+> L→∞
+
+lim sup  
+
+> M→∞
+
+FM,L (c) ≤ ∑
+
+> |z|1≤cze =0
+> c
+
+∑
+
+> r=1
+
+lim sup 
+
+> L→∞
+
+lim sup  
+
+> M→∞
+
+1
+
+M + 1 
+
+> M
+
+∑
+
+> m=0
+
+1B1
+
+> m,L (z,r )
+
+.
+
+Since there are only finitely many such z and r it follows from (11) that for some of them 
+
+P0
+
+[
+
+lim sup 
+
+> L→∞
+
+lim sup  
+
+> M→∞
+
+1
+
+M + 1 
+
+> M
+
+∑
+
+> m=0
+
+1B1 
+
+> m,L (z,r )
+
+> 0
+
+]
+
+> 0.(12) Law of Large Numbers for RWRE 195 
+
+# m m+L m m+L 0 0Y. x+z x+z 
+
+x+z 
+
+# x:=X x:=X Tm Tm
+
+# X. X. 
+
+Figure 1. Left figure: The second visit in x + z is the last visit in the hyperplane at distance m before reaching the hyperplane at distance m + L,that is B1
+
+> m,L
+
+(z, r = 2) occurs. Right figure: The hyperplane at distance m + L
+
+is reached before x + z has been visited twice. Hence B1
+
+> m,L
+
+(z, r = 2) does not occur. However, the auxiliary walk Y x+z 
+
+> ·
+
+lets B2 
+
+> m,L
+
+happen by entering the hyperplane at distance m + L before visiting the hyperplane at distance m for a second time. We keep a pair of z and r with property (12) fixed and drop z and r from the notation. For fixed L, the sequence ( 1B1 
+
+> m,L
+
+)m seems to have a complicated dependence structure under 
+
+P0. However, one can dominate this sequence by an auxiliary sequence ( 1Bm,L )m, which consists of L i.i.d. sequences. To this end, we create for given ω in addition to the RWRE X·,for each starting point y ∈ Zd an additional RWRE Y y 
+
+> ·
+
+such that X· and all Y y 
+
+> ·
+
+(y ∈ Zd) are independent of each other, given ω. More precisely, we consider the probability measure 
+
+˜P0,ω := P0,ω ⊗ ⊗
+
+> y∈Zd
+
+Py,ω on (Zd)N × ((Zd)N)Zd
+
+(13) endowed with its canonical σ-algebra and then realize X· and the Y y 
+
+> ·
+
+’s as projections. Again, 
+
+˜P0 := E × ˜P0,ω . We then define 
+
+B2 
+
+> m,L
+
+:= 
+
+{
+
+σm ≥ Tm+L, D ∗ (
+
+Y XTm +z
+
+> ·
+
+)
+
+≥ Tm+L
+
+(
+
+Y XTm +z
+
+> ·
+
+)} 
+
+and set 
+
+Bm,L := B1 
+
+> m,L
+
+∪ B2
+
+> m,L
+
+,
+
+see Figure 1. Here and in the following, if a stopping time is applied to a path other than X·,then this path is added in parentheses after the symbol for the stopping time. 196 Electronic Communications in Probability If we interpret B1 
+
+> m,L
+
+like B2 
+
+> m,L
+
+as an event in the big sample space given in (13), we have 
+
+B1 
+
+> m,L
+
+⊆ Bm,L and hence by (12), 0 < ˜P0
+
+[
+
+lim sup 
+
+> L→∞
+
+lim sup  
+
+> M→∞
+
+1
+
+M + 1 
+
+> M
+
+∑
+
+> m=0
+
+1Bm,L > 0
+
+]
+
+≤ ˜P0
+
+lim sup 
+
+> L→∞
+
+1
+
+L
+
+> L−1
+
+∑
+
+> i=0
+
+lim sup  
+
+> M→∞
+
+LM + 1 
+
+> M
+
+∑  
+
+> m=0
+> mmod L=i
+
+1Bm,L > 0
+
+ .(14) We shall show at the end of the proof that for any 0 ≤ i < L , the events 
+
+Bm,L (m mod L = i) are independent under ˜P0 with 
+
+˜P0[Bm,L ] = P0 [D∗ ≥ TL] .
+
+(15) Assuming this, we get from the ordinary strong law of large numbers and (14) that 0 < lim sup 
+
+> L→∞
+
+P0 [D∗ ≥ TL] ≤ lim sup 
+
+> L→∞
+
+P0 [D∗ ≥ L] = P0[D∗ = ∞] ≤ P0[Ae].
+
+Here the last inequality follows from [4, Lemma 4], which implies that it is P0-a.s. impossible for the walker to visit the strip {y ∈ Zd | 0 ≤ ye ≤ u} (u ≥ 0) infinitely often without ever visiting the half space {y | ye < 0} to the left of the strip. However, P0[Ae] > 0 contradicts the assumption P0[Ae ∪ A−e] = 0. Hence (10) is false. Repeating the argument with e in (10) replaced by −e proves (2). It remains to show (15). Let k ≥ 0 and 0 ≤ m0 < . . . < m k with mj mod L = i for all 
+
+j = 0 , . . . , k . As above it follows from [4, Lemma 4] and P0[A−e] = 0 that Tmk is P0-a.s. finite because otherwise the walker could visit a strip of finite width infinitely often without visiting the half space to the right of the strip. Therefore, since B1 
+
+> m,L
+
+and B2 
+
+> m,L
+
+are disjoint, 
+
+˜P0[Bm0,L ∩ . . . ∩ Bmk ,L ]= ∑ 
+
+> x:xe =mk
+
+E
+
+[ ˜P0,ω 
+
+[
+
+Bm0,L ∩ . . . ∩ Bmk−1,L ∩ B1 
+
+> mk,L
+
+, X Tmk = x
+
+]
+
++ ˜P0,ω 
+
+[
+
+Bm0,L ∩ . . . ∩ Bmk−1,L ∩ B2 
+
+> mk,L
+
+, X Tmk = x
+
+] ] 
+
+= ∑ 
+
+> x:xe =mk
+
+E
+
+[ ˜P0,ω 
+
+[
+
+Bm0,L ∩ . . . ∩ Bmk−1,L , X Tmk = x, σ mk < T mk +L
+
+]
+
+× Px+z,ω [D∗ ≥ Tmk +L](16) + ˜P0,ω 
+
+[
+
+Bm0,L ∩ . . . ∩ Bmk−1,L , X Tmk = x, σ mk ≥ Tmk +L
+
+]
+
+× ˜P0,ω 
+
+[D∗(Y x+z 
+
+> ·
+
+) ≥ Tmk +L(Y x+z 
+
+> ·
+
+)] ]
+
+.(17) Here we used in (16) the strong Markov property with respect to σmk and in (16) and (17) the fact that ˜P0,ω is a product measure, see (13). However, 
+
+Px+z,ω [D∗ ≥ Tmk +L] = ˜P0,ω 
+
+[D∗(Y x+z 
+
+> ·
+
+) ≥ Tmk +L(Y x+z 
+
+> ·
+
+)] .
+
+Consequently, the whole sum in (16) and (17) can be rewritten as 
+
+∑
+
+> x
+
+E
+
+[ ˜P0,ω 
+
+[
+
+Bm0,L ∩ . . . ∩ Bmk−1,L , X Tmk = x
+
+]
+
+Px+z,ω [D∗ ≥ Tmk +L]
+
+]
+
+.(18) Law of Large Numbers for RWRE 197 Here the reason for introducing the auxiliary RWREs Y y 
+
+> ·
+
+becomes clear: We got rid of the event {σmk < T mk +L}, which links the environment to the left of mk with the environment in the strip of width L to the right of mk. Now the ˜P0,ω term in (18) is σ(ω(y, ·) | ye < m k)-measurable since mj + L ≤ mk for all j < k whereas the Px+z,ω term is σ(ω(y, ·) | ye ≥ mk)-measurable. Hence by independence and translation invariance (18) equals 
+
+∑
+
+> x
+
+˜P0
+
+[
+
+Bm0,L ∩ . . . ∩ Bmk−1,L , X Tmk = x
+
+]
+
+Px+z [D∗ ≥ Tmk +L]= ˜P0
+
+[Bm0,L ∩ . . . ∩ Bmk−1,L 
+
+] P0 [D∗ ≥ TL] .
+
+From this (15) follows by induction over k.
+
+References 
+
+[1] A.-S. Sznitman (2002). Topics in Random Walks in Random Environments. Preprint. http://www.math.ethz.ch/˜sznitman/topics-paper.pdf [2] A.-S. Sznitman and M.P.W. Zerner (1999). A law of large numbers for random walks in random envi-ronment. Ann. Probab. 27 , No. 4, 1851–1869 [3] O. Zeitouni (2001). Notes on Saint Flour Lectures 2001. Preprint. http://www.ee.technion.ac.il/˜zeitouni/ps/notes1.ps [4] M.P.W. Zerner and F. Merkl (2001). A zero-one law for planar random walks in random environment. 
+
+Ann. Probab. 29 , No. 4, 1716–1732

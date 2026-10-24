@@ -1,0 +1,36 @@
+I0075_CONGRUENCE_STAR_LOCAL_OBSTRUCTION_EXACT
+family: selected unit squares satisfy a+k*b == 0 mod q, 1<=k<q
+edge-sharing: none in this family because k != 0 mod q
+q<8: every member has an exact all-pairs stretch violation
+FAIL q=2 k=1 phase=0 d=(-1,1) shortest=0+2*sqrt2 R2=2
+FAIL q=3 k=1 phase=0 d=(-1,-1) shortest=1+1*sqrt2 R2=2
+FAIL q=3 k=2 phase=0 d=(-1,1) shortest=1+1*sqrt2 R2=2
+FAIL q=4 k=1 phase=0 d=(-2,-1) shortest=2+1*sqrt2 R2=5
+FAIL q=4 k=2 phase=0 d=(1,-1) shortest=1+1*sqrt2 R2=2
+FAIL q=4 k=3 phase=0 d=(-1,1) shortest=1+1*sqrt2 R2=2
+FAIL q=5 k=1 phase=0 d=(-2,-2) shortest=3+1*sqrt2 R2=8
+FAIL q=5 k=2 phase=0 d=(-1,2) shortest=2+1*sqrt2 R2=5
+FAIL q=5 k=3 phase=0 d=(2,-1) shortest=2+1*sqrt2 R2=5
+FAIL q=5 k=4 phase=0 d=(-1,1) shortest=1+1*sqrt2 R2=2
+FAIL q=6 k=1 phase=0 d=(-3,-2) shortest=4+1*sqrt2 R2=13
+FAIL q=6 k=2 phase=0 d=(-1,2) shortest=2+1*sqrt2 R2=5
+FAIL q=6 k=3 phase=0 d=(1,-1) shortest=1+1*sqrt2 R2=2
+FAIL q=6 k=4 phase=1 d=(1,2) shortest=2+1*sqrt2 R2=5
+FAIL q=6 k=5 phase=0 d=(-1,1) shortest=1+1*sqrt2 R2=2
+FAIL q=7 k=1 phase=0 d=(-3,-3) shortest=5+1*sqrt2 R2=18
+FAIL q=7 k=2 phase=0 d=(-1,2) shortest=2+1*sqrt2 R2=5
+FAIL q=7 k=3 phase=1 d=(-2,-1) shortest=2+1*sqrt2 R2=5
+FAIL q=7 k=4 phase=0 d=(2,-1) shortest=2+1*sqrt2 R2=5
+FAIL q=7 k=5 phase=1 d=(1,2) shortest=2+1*sqrt2 R2=5
+FAIL q=7 k=6 phase=0 d=(-1,1) shortest=1+1*sqrt2 R2=2
+FAIL q=8 k=1 phase=0 d=(-4,-3) shortest=6+1*sqrt2 R2=25
+FAIL q=8 k=2 phase=0 d=(-1,2) shortest=2+1*sqrt2 R2=5
+SURVIVES_LOCAL q=8 k=3
+FAIL q=8 k=4 phase=0 d=(1,-1) shortest=1+1*sqrt2 R2=2
+SURVIVES_LOCAL q=8 k=5
+FAIL q=8 k=6 phase=1 d=(1,2) shortest=2+1*sqrt2 R2=5
+FAIL q=8 k=7 phase=0 d=(-1,1) shortest=1+1*sqrt2 R2=2
+local_survivors=[(8, 3), (8, 5)]
+global_note: q=8,k=3 is globally source-valid by the prior period-eight certificate; k=5 is its reflection
+restricted_optimality: among this congruence family, any source-valid member has q>=8; length density for k!=0 is 2-(4-2*sqrt2)/q
+ALL_ASSERTIONS_PASSED

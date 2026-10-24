@@ -1,0 +1,15 @@
+PROB20-21 n=6 diagnostic attempt
+timestamp_utc=2026-09-16_15-08-50_UTC
+status=TIMEOUT / INVALID FOR COVERAGE / NO METRIC CREDIT
+source_family=S6 pairwise-compressed functions
+source_expected_count=1173
+enumeration_started_and_stdout_reports_count=1173
+execution_limit_observed=120 seconds
+result=process did not reach certificate_status or interval-coverage completion before timeout
+metric_effect=NONE
+rule=timeout is not coverage and is not a counterexample
+original_local_checker_sha256=d58f69c4b849ff247953a2c7c25de2c9b17be826ae3025eeafc49a7bc9262f04
+partial_stdout_sha256=cb0d250cde4ae77e23d8e5c80092345bd82cac1836c7157f4219d90d07b432e8
+stderr_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+post_run_code_review=The naive n=6 adaptation contains at least two defects: (1) a uint32_t map key was left in the posterior-group cache while masks are uint64_t, causing key truncation/collision; (2) the biased low-noise entropy line retained 15/32 instead of the n=6 worst bias 31/64. Therefore the attempt would not qualify as a certificate even if it had completed. The archived human-readable reconstruction flags these defects explicitly. The n=5 checker is separate and unaffected.
+note=The n=6 route must be corrected, optimized/batched, and rerun from scratch before any dimension-6 metric credit.

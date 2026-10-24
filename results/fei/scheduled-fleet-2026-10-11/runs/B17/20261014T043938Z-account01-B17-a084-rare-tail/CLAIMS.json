@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "stream_id": "B17",
+  "primary_packet_id": "A084",
+  "claims": [
+    {
+      "claim_id": "B17-A084-RARE-TAIL-v1",
+      "gap_id": "FEI-GAP-TWO-BIT-HALF-TAX",
+      "status": "PROVED_RESTRICTED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For the exact two-bit Boolean AND half-tax margin D=M_A+Delta_A/2-J_A, D(p,q)>0 for every 0<p<=1/64 and every 0<=q<=1.",
+      "coverage": "Complete continuum rare-bias tail including q=0, q=1 and every simultaneous q approach; no dimension or parameter sample inference.",
+      "proof_interface": "Exact singular extraction D*ln(2)/p=A ln(1/p)+F, analytic A>=0, and directed interval proof of A ln(64)+F>0 on the compactified closed rectangle.",
+      "gu_implication": "Conditional on higher-arity half-tax, cancellation/telescoping of all M_A terms, and nonreuse sum Delta_A<=I, one obtains G<=I/2 and hence H<=3I.",
+      "not_claimed": [
+        "the remaining near-balanced endpoint strips",
+        "higher-arity half-tax",
+        "global nonreuse",
+        "universal GU",
+        "full FEI",
+        "independent review acceptance"
+      ],
+      "review_targets": ["A085", "A090", "A094"]
+    }
+  ]
+}
+

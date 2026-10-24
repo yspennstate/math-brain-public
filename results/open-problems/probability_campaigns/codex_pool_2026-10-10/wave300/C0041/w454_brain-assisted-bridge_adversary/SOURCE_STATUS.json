@@ -1,0 +1,78 @@
+{
+  "target": "C0041",
+  "checked_on": "2026-10-10",
+  "exact_statement": "For each d>=2 and unit direction l, a nearest-neighbor RWRE on Z^d in a site-iid environment with all 2d transition probabilities at least a deterministic kappa>0 is directionally ballistic (P_0(liminf_n X_n dot l/n>0)=1) whenever P_0(X_n dot l -> +infinity)=1.",
+  "law": "P_0 is annealed, sampling the environment once and retaining it along the entire path.",
+  "ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 540,
+    "tier": 5,
+    "historical_status": "attempted_un",
+    "title_truncated": true
+  },
+  "primary_historical_source": {
+    "title": "Ellipticity criteria for ballistic behavior of random walks in random environment",
+    "authors": [
+      "David Campos",
+      "Alejandro F. Ramirez"
+    ],
+    "url": "https://doi.org/10.1007/s00440-013-0527-7",
+    "locators": [
+      "Conjecture 1.1",
+      "Theorem 2.1"
+    ],
+    "checked": "Search tool returned source introduction and theorem; direct DOI open failed."
+  },
+  "new_claim": {
+    "date_in_path": "2026-09-23",
+    "title": "Directional transience implies ballisticity",
+    "url": "https://github.com/openai/math/blob/main/preprints/Directional-transience-implies-ballisticity-September-23-2026/paper.pdf",
+    "documentation": "https://github.com/openai/math/blob/main/lean/docs/220.md",
+    "status": "Claimed resolution found; actual paper proof and separate formal receipt not yet checked.",
+    "paper_recovered": true,
+    "pdf_bytes": 709037,
+    "pages": 58,
+    "statement_locator": "Theorem 1.1, printed page 3",
+    "scope": "Exact target assumptions, arbitrary fixed real unit direction, no regeneration-time moment added",
+    "proof_state": "CLAIMED_RESOLVED_NOT_CERTIFIED_HERE",
+    "referee_lane": "w455 owns independent new-paper review"
+  },
+  "comparator": {
+    "url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalBallisticity.lean",
+    "actual_theorem": "OAI.DirectionalTransience.directional_transience_implies_ballisticity",
+    "statement": "MainStatement: d>=2, probability row law, uniformly elliptic iid static environment, unit l, almost-sure directional transience imply deterministic v with v dot l>0 and X_n/n -> v almost surely.",
+    "body": "sorry",
+    "is_proof_receipt": false,
+    "note": "Comparator specifies the requested theorem; its admitted body does not audit the separate formalization."
+  },
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "owner_solved_or_retired_status": "Exact C0041 intake and attempt recovered; targeted H/I and Lean searches found no additional proof. No owner-retired receipt located in those assigned records.",
+  "next": "Referee the conditioned clock bound and test the unsupported quantitative radius-tail premise, then decide whether the separate source proof closes it.",
+  "primary_original_source": {
+    "title": "Selected Topics in Random Walk in Random Environment",
+    "authors": [
+      "Alexander Drewitz",
+      "Alejandro F. Ramirez"
+    ],
+    "url": "https://arxiv.org/abs/1309.2589",
+    "locator": "Open question 2.20, printed page 24",
+    "intake_problem_line": 41,
+    "intake_attempt_line": 32,
+    "exact_record_checked": true
+  },
+  "formal_check": {
+    "executed": false,
+    "actual_solution_module": "OAI.Probability.Ballisticity.Main",
+    "actual_theorem": "OAI.DirectionalTransience.directional_transience_implies_ballisticity",
+    "source_top_level": "Calls directional_transience_implies_ballisticity_unit; no admitted body in this 32-line main file",
+    "configured_permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "actual_dependency_axioms": "NOT_CHECKED",
+    "receipt": "NONE",
+    "note": "A comparator configuration is not a successful run receipt; no Lean proof is certified by this packet."
+  }
+}

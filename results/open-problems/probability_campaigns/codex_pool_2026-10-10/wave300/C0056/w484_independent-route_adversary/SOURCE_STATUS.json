@@ -1,0 +1,105 @@
+{
+  "target_id": "C0056",
+  "worker": "w484",
+  "date": "2026-10-10",
+  "title": "Extended states for the three-dimensional Anderson model at weak disorder",
+  "current_openness": "UNKNOWN",
+  "current_openness_reason": "2018 and 2026 survey statements describe the classical gap, but a September 23, 2026 public manuscript claims its resolution. That complete proof has not been independently audited here; no novelty claim is made.",
+  "exact_intake_statement": "Prove existence of absolutely continuous spectrum (delocalised states) for the random Schrodinger operator -Delta + lambda V on Z^3 at small disorder lambda, and GOE local statistics for its finite-volume restriction.",
+  "intake": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 56,
+    "result_status": "attempted_unsolved",
+    "verification": "unreviewed"
+  },
+  "primary_model": {
+    "operator": "Discrete unit nearest-neighbor hopping plus lambda V on l^2(Z^3); sign is unitarily equivalent on the bipartite lattice",
+    "law": "iid real centered variance-one potentials in Bourgade Section 2.1",
+    "volume": "periodic boxes in the GOE paragraph",
+    "unfixed_details": [
+      "choice of single-site law beyond moments",
+      "exact bulk interval",
+      "density unfolding and GOE convergence mode"
+    ]
+  },
+  "working_slice": {
+    "operator": "A+g U, unit adjacency A, iid U uniform[-1,1]",
+    "coupling": "g fixed positive; g=sqrt(3)*lambda for the variance-one uniform law",
+    "spectral_interval": "fixed bounded open I",
+    "parent_goal_proved": false,
+    "GOE_goal_proved": false
+  },
+  "primary_sources": [
+    {
+      "id": "bourgade_band_icm_2018",
+      "url": "https://arxiv.org/pdf/1807.03031",
+      "locator": "Section 2.1, printed p.7; PDF page index 6",
+      "indexed_pdf_sha256": "b8b15c02ac7b675471097e9c499a6d588cfd7b0c591c49b0135f2a42eaedddb0",
+      "hash_check": "hash reported in intake sources.jsonl:7; not recomputed locally",
+      "statement_check": "primary definition, periodic restrictions and distinct AC/GOE obligations inspected"
+    },
+    {
+      "id": "stolz-2011",
+      "url": "https://arxiv.org/pdf/1104.2317",
+      "locator": "Sections 2 and 9.2",
+      "use": "operator and spectral-type definitions; historical gap only"
+    },
+    {
+      "id": "yau-icm-2026",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1806028",
+      "locator": "Introduction and Section 3.4, Theorem 3.6",
+      "use": "current-year survey distinguishes ordinary lattice gap from GUE block Anderson results with growing block width; not a proof for scalar iid Z^3"
+    },
+    {
+      "id": "becker-oltman-2026",
+      "url": "https://arxiv.org/html/2609.20798v1",
+      "locator": "Introduction model definition",
+      "use": "hyperbolic product graph differs from Z^3; no transfer asserted"
+    },
+    {
+      "id": "public-claimed-anderson-proof-20260923",
+      "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/build/02-state.tex",
+      "locator": "Finite-volume certificate proposition",
+      "use": "primary manuscript claims a weak-disorder result with true iid uniform potentials; proof not adopted as established"
+    },
+    {
+      "id": "public-formalization-scope-261",
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/docs/261.md",
+      "locator": "Scope",
+      "use": "formalization scope identifies a two-dimensional spectral set, not the three-dimensional AC conclusion; no formal-check receipt issued"
+    }
+  ],
+  "prior_attempt": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 45,
+    "method": "tree transfer and finite kinetic-time route",
+    "result": "no result; tree geometry and infinite-time gap"
+  },
+  "additional_prior_checks": {
+    "attempts_H_I_and_lean": "targeted C0056/Anderson search found only the dated annotated ranking, no target proof",
+    "team_O": "board read; no C0056 row assigned there",
+    "owner_solved_registers": "no C0056/Anderson solution found in the two named registers; not a comprehensive retirement certificate"
+  },
+  "brain_recall": {
+    "result": "timeout at 60 seconds",
+    "fallback": "targeted memory index had no match; read explicitly named perceptron and derived-joint-structure scars"
+  },
+  "paired_proof_read": true,
+  "independent_derivation_saved_first": true,
+  "paired_proof_snapshot": "~/brain_workers/w484/review/w483_ATTEMPT_snapshot.md",
+  "paired_proof_sha256": "4f99ebdf4c964aacc446b9399db3eab0b6edcecf85ad00534470ccd9c9867338",
+  "served_model_evidence": {
+    "author": "unavailable; requested settings are not evidence",
+    "referee": "pending response-side evidence"
+  },
+  "formal_check": {
+    "run": false,
+    "parent_theorem_certified": false,
+    "trusted_axioms": "no receipt issued"
+  },
+  "submission_state": "submitted as DRAFT concepts; review pending",
+  "review_state": "w485 requested; mathematical review pending",
+  "ingestion_state": "not ingested",
+  "retrieval_state": "not verified",
+  "draft_path": "~\\math-brain-inbox\\w484\\bundle_001.json"
+}

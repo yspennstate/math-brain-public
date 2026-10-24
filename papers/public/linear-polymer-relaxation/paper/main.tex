@@ -1,0 +1,57 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools,booktabs,graphicx}
+\usepackage[expansion=false]{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\1}{\mathbf 1}
+\numberwithin{equation}{section}
+\title[Relaxation and cutoff of linear polymers]{Sharp relaxation, cutoff, and graph diffusion for a linear-polymer chain}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\thanks{The manuscript, source code, and computational data are available at
+\url{https://github.com/yspennstate/linear-polymer-relaxation}.}
+\date{12 October 2026}
+\subjclass[2020]{60J27, 60J80, 60K35}
+\keywords{Coagulation--fragmentation, spectral gap, cutoff, birth--death chain, Boolean lattice, exclusion process}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+\hypersetup{pdftitle={Sharp relaxation, cutoff, and graph diffusion for a linear-polymer chain},pdfauthor={Yitzchak Shmalo}}
+\begin{document}
+\input{frontmatter}
+\maketitle
+\input{introduction}
+\input{proof}
+\input{exact_spectrum}
+\input{critical_scaling}
+\input{count_cutoff}
+\input{full_polymer_tv_upper}
+\input{spatial_diffusion}
+\input{nonreversible}
+\input{polymer_circulation}
+\input{kernel_comparison}
+\input{growing_kernels}
+\input{discussion}
+\appendix
+\input{appendix_coupling}
+\input{appendix_computations}
+\input{acknowledgments}
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,12 @@
+STATE: DONE
+NEXT: Obtain a nu-specific compact integer-barrier existence theorem or a uniform stationary avalanche-radius bound; the bootstrap and real-barrier reductions have not supplied one.
+VERDICT: PARTIAL
+
+2026-10-12: Reopened at user request for a second serious attempt; recalling the exact tightness/finite-wave-count gap.
+2026-10-12: Second attempt completed. Recorded two new approaches and pursued hole geometry/bootstrap activation. Proved the first-wave closure and integer-barrier criteria, an allowed translation-ergodic periodic counterexample to coarse-density/saturated-cluster hypotheses, identical-marginal finite/infinite laws, and a general real-barrier existence lemma with an explicit obstruction to integer rounding. These are not counterexamples to the stationary law nu.
+2026-10-12: All 96 phase checks passed for both periodic laws; finite-box ladder checks passed through radius 32. Fresh Wilson/burning stationary samples and Green-function moment comparisons recorded. BootstrapStep.lean passed kernel checking. No uniform stationary-tail bound or nu-a.s. integer barrier obtained. Final VERDICT remains PARTIAL; complete second-attempt proofs and remaining gap in SECOND_ATTEMPT.md.
+
+2026-10-12: Started source verification, literature search, and read-only brain recall.
+2026-10-12: Verified Question 6.7 on source PDF p. 61 and the one-ended-WSF plus transience hypotheses of Theorem 6.6. September 2026 comb paper explicitly still calls the Z2 assertion open. Searched all requested services; OpenAlex exact source resolved but verified citation requests rate-limited; Semantic Scholar returned 57 source citations. No exact solution verified.
+2026-10-12: Proved finite cylinder certificate and stationary uniform-tail equivalences, explicit finite-box toppling bounds, and impossibility of the prior uniformly positive wave stopping route given known infinite mean. Found exact finite wave-expansion example and deterministic all-three counterexample, neither a counterexample to the nu-a.s. assertion.
+2026-10-12: Exhaustively checked 100352 recurrent 3x3 states and 10000 finite certificate comparisons. Three local algebraic lemmas passed Lean 4 kernel checking. Full proofs, audit, data, literature and seven claims recorded. Research stopped with the stationary-tail gap unresolved; DONE denotes completion of this bounded attempt, not solution of the open problem.

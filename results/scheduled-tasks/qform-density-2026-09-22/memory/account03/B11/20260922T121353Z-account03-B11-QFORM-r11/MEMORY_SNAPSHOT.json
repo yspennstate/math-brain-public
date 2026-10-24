@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_initial": "6408e8af440496e576f84b42dd8e3d7faca3bc6d",
+  "source_control_commit_refresh": "832a7623eb09316435f4f0bae52c0768cd25a235",
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260922T121353Z-account03-B11-QFORM-r11",
+  "assignment": "Indefinite signatures",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T113729Z-account04-B18-qform-r1/REPORT.md",
+      "scope": "Completed dependence-safe square completion: conditional translations of an original coordinate retain density cap one; minority-sign pivot with definite Schur complement has determinant-sensitive density bound."
+    },
+    {
+      "source": "yspennstate/math-open-problems@87e1ab186dd03a3f8ba3aafcf4a9f23028e3bd6f",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260922T114319Z-account03-B11-qform-r1/REPORT.md",
+      "scope": "Previous B11 saddle-axis half-potential theorem and opposite-sign rank-two logarithmic control."
+    }
+  ],
+  "partner_status": {
+    "designated_partner": "account04/B11",
+    "completed_qform_handoff_found": false,
+    "compatible_completed_peer_applied": "account04/B18"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-INDEFINITE-BINARY-HALF-POTENTIAL-v1",
+      "status": "proved_in_worker_report",
+      "scope": "For independent X,Y with marginal densities <=1 and binary discriminant Delta=b^2-ad>0, both one-sided half-potentials of aX^2+2bXY+dY^2 plus arbitrary affine terms are <=8 Delta^(-1/4)."
+    },
+    {
+      "id": "QFORM-CONDITIONAL-ABEL-SMOOTHING-v1",
+      "status": "proved_in_worker_report",
+      "scope": "If V conditioned on R has density <=1, R+cV^2 has density bounded pointwise by the corresponding one-sided half-potential divided by sqrt(|c|), without requiring R itself to have bounded density."
+    },
+    {
+      "id": "QFORM-MAJORITY-PIVOT-3X3-v1",
+      "status": "proved_in_worker_report",
+      "scope": "For an indefinite physical 3x3 block with nonzero majority-sign pivot c and indefinite Schur complement, conditioning outside gives ||p_Q||_inf <=8/|c det B|^(1/4)."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "860d849b7f2e0198bf7c3531a71b14e59f03e430",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260922T121353Z-account03-B11-QFORM-r11/REPORT.md",
+    "blob": "e599912a5c6590c469080967f0b706d4d02a9afe"
+  },
+  "handoff_commit": "c07107fb5797dde08fef20841e5261da01425ed5",
+  "unresolved_implication": "Convert determinant-scale local 3x3 estimates into a universal dimension-free estimate from only three large spectral eigenvalues; fixed coordinate-triple selection loses dimension in flat rank-three examples.",
+  "next_step": "Attempt determinant/minor-weighted aggregation (Cauchy-Binet/coarea/small-ball averaging) while keeping original-coordinate product structure; after three genuinely unchanged substantive runs change mechanism on the same target.",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

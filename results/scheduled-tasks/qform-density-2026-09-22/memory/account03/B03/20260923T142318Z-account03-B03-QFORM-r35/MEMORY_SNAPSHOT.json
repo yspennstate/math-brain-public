@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260923T142318Z-account03-B03-QFORM-r35",
+  "source_control_commit_initial": "6fb7f32c62bb6fc911d88296c5098c3c528dda4c",
+  "source_control_commit_prepublication": "18965d8c4302c3edf76f6af7f3ca7de0af253885",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FULL_TARGET",
+  "corrections_consumed": [
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "premises": [
+    {
+      "name": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+      "source": "yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5",
+      "scope_used": "unit scalar product projection density <= sqrt(e)"
+    },
+    {
+      "name": "damped Fresnel linearization package",
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "scope_used": "rigorous linearization of the physical square before Plancherel"
+    },
+    {
+      "name": "account03/B03 r27 exact one-sided packet",
+      "source": "yspennstate/math-open-problems@b580b09027d8c20c3d3bbea0bea6cf8caa04d541",
+      "scope_used": "Q=a^{-1}H^2+2 sigma U V and angular-cancellation endpoint"
+    },
+    {
+      "name": "account03/B03 r34 near-coloop collar",
+      "source": "yspennstate/math-open-problems@926549e6ace81816d0533164f35f548a4f84d508",
+      "scope_used": "remaining row leverage c>2/3 after non-coloop closure"
+    }
+  ],
+  "partner_result_applied": {
+    "account": "account04",
+    "slot": "B03",
+    "source": "yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38",
+    "result": "P(|Y-Y'|<=eps) <= 2 eps ||p_Y||_2^2",
+    "actual_new_inequality": "P(|Q-Q'|<=eps) <= 4 sqrt(e) (|sigma| m sqrt(c))^{-1/2} eps",
+    "excluded": "challenged weighted-L2 compiler"
+  },
+  "new_results": [
+    {
+      "name": "QFORM-HEAVY-ROW-PAIR-CAP-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For orthonormal v,q, V=v.X, H=(beta v+m q).X and physical row leverage c=v_r^2+q_r^2>0, ||p_(V,H)||_infinity <= sqrt(e)/(m sqrt(c)), stable at c=1 and independent of h_r=beta v_r+m q_r."
+    },
+    {
+      "name": "QFORM-PAIRCAP-FRESNEL-L2-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For Q=a^{-1}H^2+2 sigma U V with true scalar cap L and right-pair joint cap M, |phi_Q(t)| <= min(1, pi sqrt(LM/|sigma|)/|t|), ||p_Q||_2^2 <=2 sqrt(LM/|sigma|), and int |t|^{-1/2}|phi_Q|^2 <=(16/3)sqrt(pi)(LM/|sigma|)^{1/4}."
+    },
+    {
+      "name": "QFORM-PAIRCAP-FINITE-LP-HALFRIESZ-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For p>=2, ||p_Q||_p <= [p sqrt(LM/|sigma|)]^{1-1/p}; hence sup_z E|Q-z|^{-1/2} <= [6sqrt(6)/2^{2/3}](LM/|sigma|)^{1/4}. A further genuine disjoint square d[Z+h]^2 gives an L-infinity bound with the same half-Riesz factor times |d|^{-1/2}."
+    }
+  ],
+  "near_coloop_application": {
+    "hypothesis": "c=v_r^2+q_r^2>2/3, h_R=beta v+m q",
+    "right_pair_cap": "M<=sqrt(e)/(m sqrt(c))",
+    "left_scalar_cap": "L<=sqrt(e)",
+    "characteristic_envelope": "|phi_Q(t)|<=min(1, pi sqrt(e)(|sigma|m sqrt(c))^{-1/2}|t|^{-1})",
+    "L2_density": "||p_Q||_2^2<=2sqrt(e)(|sigma|m sqrt(c))^{-1/2}",
+    "weighted_time": "int |t|^{-1/2}|phi_Q|^2 <=(16/3)sqrt(pi)e^{1/4}(|sigma|m sqrt(c))^{-1/4}",
+    "half_riesz_potential": "sup_z E|Q-z|^{-1/2} <= [6sqrt(6)/2^{2/3}]e^{1/4}(|sigma|m sqrt(c))^{-1/4}",
+    "scope_note": "stable as h_r->0 but not yet one-copy L-infinity for the exact three-direction packet"
+  },
+  "canonical_outputs": {
+    "report": "yspennstate/math-open-problems@47f5fd760f92c306e2105c2de46bf1859d47f56d:proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T142318Z-account03-B03-QFORM-r35/REPORT.md",
+    "checks": "yspennstate/math-open-problems@d0eb950522db8e46344607ff5200483e15ff620d:proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T142318Z-account03-B03-QFORM-r35/CHECKS.md",
+    "handoff": "yspennstate/math-research-brain@81df79cdadc2c2109f971ab1113bac1d1e5bcffd:scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B03/20260923T142318Z-account03-B03-QFORM-r35.md"
+  },
+  "unresolved_implication": "QFORM-NEARCOLOOP-BORDERLINE-LP-TO-LINF-v1",
+  "next_step": "Exploit the original-product source structure behind the pair-cap proof to gain the missing endpoint half power; abstract bounded pair density alone is insufficient. Preserve the narrow complement direction and aggregate before any reciprocal local-minor payment."
+}

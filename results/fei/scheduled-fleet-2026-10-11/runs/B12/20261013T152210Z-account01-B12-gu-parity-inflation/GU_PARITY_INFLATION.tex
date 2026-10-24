@@ -1,0 +1,157 @@
+\section*{Balanced upper-mass composition and exact parity inflation}
+
+For a Boolean function $f$ write
+\[
+ p_f(S)=\widehat f(S)^2,\qquad
+ \pi_f(S)=\sum_{T\supseteq S}p_f(T),\qquad
+ U(f)=\sum_{S:p_f(S)>0}p_f(S)\log_2\frac{\pi_f(S)}{p_f(S)}.
+\]
+For a physical coordinate $i$ let
+\[
+ \Delta_iU(f)=U(f)-\frac{U(f_{i,-})+U(f_{i,+})}{2},
+ \qquad G(f)=\sum_i\Delta_iU(f).
+\]
+
+\subsection*{Theorem 1 (balanced disjoint substitution)}
+
+Let $g:\{-1,1\}^m\to\{-1,1\}$ and let
+$h_j:\{-1,1\}^{B_j}\to\{-1,1\}$ be Boolean functions on pairwise
+disjoint physical blocks.  Suppose $\mathbb E h_j=0$ for every $j$, and set
+\[
+ F(x)=g(h_1(x_{B_1}),\ldots,h_m(x_{B_m})).
+\]
+Then
+\[
+ \boxed{\ U(F)=U(g)+\sum_{j=1}^m\operatorname{Inf}_j(g)U(h_j)\ },
+ \qquad
+ \boxed{\ I(F)=\sum_{j=1}^m\operatorname{Inf}_j(g)I(h_j)\ }.
+\]
+
+\paragraph{Proof.}
+For a physical Fourier set $S$, let $S_j=S\cap B_j$ and
+$A=\{j:S_j\ne\varnothing\}$.  Balancedness gives
+\[
+ \widehat F(S)=\widehat g(A)\prod_{j\in A}\widehat h_j(S_j),
+ \qquad
+ p_F(S)=p_g(A)\prod_{j\in A}p_{h_j}(S_j).
+\]
+In the upper-set sum, every newly active block $j\in C\setminus A$ is
+summed over all nonempty Fourier sets.  Its total mass is one because
+$h_j$ is balanced.  Consequently
+\[
+ \pi_F(S)=\pi_g(A)\prod_{j\in A}\pi_{h_j}(S_j).
+\]
+The logarithm of $\pi_F(S)/p_F(S)$ is therefore the outer logarithm plus
+the inner logarithms.  Averaging the outer term gives $U(g)$, while the
+$j$th inner term has weight
+$\sum_{A\ni j}p_g(A)=\operatorname{Inf}_j(g)$.  This proves the first
+identity.  The second follows by weighting the same factorized law by
+$|S|=\sum_{j\in A}|S_j|$. \qed
+
+This calculation also locates the general obstruction: after restricting
+a coordinate of a generic balanced child, the two child functions need not
+remain balanced, so this identity cannot simply be subtracted at the two
+restricted nodes.
+
+\subsection*{Theorem 2 (exact parity-inflation law)}
+
+Let $B_1,\ldots,B_m$ be disjoint nonempty blocks of sizes
+$d_1,\ldots,d_m$, put $P_j(x)=\prod_{r\in B_j}x_r$, and define
+\[
+ F(x)=g(P_1(x),\ldots,P_m(x)).
+\]
+For arbitrary Boolean $g$ and arbitrary positive integers $d_j$,
+\[
+ \boxed{\ U(F)=U(g)\ },\qquad
+ \boxed{\ I(F)=\sum_{j=1}^m d_j\operatorname{Inf}_j(g)\ },
+\]
+and, more sharply, every $r\in B_j$ satisfies
+\[
+ \boxed{
+ \Delta_rU(F)=
+ \begin{cases}
+ \Delta_jU(g),&d_j=1,\\
+ 0,&d_j\ge2.
+ \end{cases}}
+\]
+Thus
+\[
+ \boxed{\ G(F)=\sum_{j:d_j=1}\Delta_jU(g)\ }.                 \tag{1}
+\]
+
+\paragraph{Proof.}
+Each $P_j$ is balanced and has $U(P_j)=0$, so Theorem 1 gives $U(F)=U(g)$.
+Equivalently, the Fourier coefficient $\widehat g(A)$ is merely moved to
+the physical set $\bigcup_{j\in A}B_j$; the upper-set ratios on these
+occupied atoms are unchanged.  Their physical degrees are
+$\sum_{j\in A}d_j$, proving the influence formula.
+
+Fix $r\in B_j$.  If $d_j\ge2$, restriction of $r$ replaces $P_j$ by a
+possibly signed nonempty parity on $B_j\setminus\{r\}$.  The sign is an
+input flip of $g$, which changes Fourier signs but not squared coefficients.
+All parity blocks are still nonempty, so each restricted child has upper
+mass exactly $U(g)$.  Hence $\Delta_rU(F)=0$.  If $d_j=1$, restriction of
+$r$ sets the $j$th outer input.  The remaining nonempty parity substitution
+preserves upper mass, so its two values are $U(g_{j,-})$ and $U(g_{j,+})$.
+This gives $\Delta_rU(F)=\Delta_jU(g)$ and proves (1). \qed
+
+\paragraph{Dimension-free covered class.}
+If every $d_j\ge2$, then
+\[
+ G(F)=0\le 0\cdot I(F).
+\]
+This holds for every outer Boolean gate, every arity, every block size, and
+every nested parity realization after flattening.  The constant is exactly
+zero and has no dependence on dimension, arity, block size, or depth.  It is
+a proper class result for the GU target; it does not settle universal GU or
+FEI.
+
+\subsection*{Proposition 3 (signed-decrement obstruction)}
+
+Coordinate decrements $\Delta_jU(g)$ need not be nonnegative.  In truth-table
+order
+\[
+ (-,-,-),(+,-,-),(-,+,-),(+,+,-),(-,-,+),(+,-,+),(-,+,+),(+,+,+),
+\]
+take
+\[
+ g=(+,+,-,+,+,-,-,-).
+\]
+Its Walsh coefficients, in subset-mask order, are
+\[
+ (0,0,\tfrac12,\tfrac12,\tfrac12,-\tfrac12,0,0).
+\]
+The two restrictions in coordinate $1$ are characters and have $U=0$.
+The two restrictions in each of coordinates $2,3$ have four spectral atoms
+of mass $1/4$ and have $U=1$.  Directly, $U(g)=1/2$, whence
+\[
+ (\Delta_1U,\Delta_2U,\Delta_3U)
+   =(\tfrac12,-\tfrac12,-\tfrac12),
+ \qquad G(g)=-\tfrac12,
+ \qquad I(g)=\tfrac32.
+\]
+Inflating only the last two coordinates to parity blocks of any sizes at
+least two deletes the two negative summands in (1).  In particular widths
+$(1,2,2)$ give
+\[
+ U(F)=\tfrac12,\qquad G(F)=\tfrac12,\qquad I(F)=\tfrac52.
+\]
+Therefore neither coordinatewise nonnegativity of $\Delta_iU$ nor monotonicity
+of $G$ under parity inflation is available.  Any GU composition proof that
+drops or widens blocks must retain the signed coordinate ledger.  This is an
+exact genuine-Boolean obstruction, not a counterexample to GU or FEI.
+
+\subsection*{Verification scope and remaining gap}
+
+The companion checker uses exact rational Walsh coefficients and 100-digit
+decimal logarithms.  It verified Theorem 1 on all $16$ outer two-bit Boolean
+gates and all $8^2$ ordered pairs of balanced one- or two-bit children
+($1024$ checks).  It verified Theorem 2 for every Boolean outer gate of arity
+at most three and every width vector in $\{1,2\}^m$ ($2120$ checks), including
+$276$ all-nonterminal cases with $G=0$.
+
+The unpaid universal step is the generic biased-child defect: for a balanced
+child $h_j$ whose physical restriction is not another balanced character,
+one must compare the two biased upper-mass laws and pay their signed coherent
+remainder by a common influence or terminal-reserve budget.  The exact
+balanced root chain rule alone does not perform this payment.

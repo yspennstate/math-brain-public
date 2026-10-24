@@ -1,0 +1,21 @@
+{
+  "state": "UNRECOVERED",
+  "started_utc": "2026-10-12T01:56:57.255274+00:00",
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-NonInteractive",
+    "-Command",
+    "lake env lean '~/brain_workers/TRIO_1011/op/E0062/Prefix.lean'"
+  ],
+  "cwd": "~/lean_verify",
+  "timeout_seconds": 3600,
+  "source_sha256": "1501c43d279e8613945cfb46a43a9ead5a7772610efd33c1b4ac96a9cc58e954",
+  "prior_session": "82004 unavailable; no matching live Lean/lake/python process found",
+  "exit_code": null,
+  "assessment_utc": "2026-10-12T03:09:17.043330+00:00",
+  "observed_elapsed_seconds": 4339.788056,
+  "assessment": "The tool session is unavailable. A read-only Win32_Process query found no matching live run_lean_check.py or E0062/Prefix.lean process among python, Lean, lake, PowerShell, pwsh and cmd. The original result marker is stale RUNNING beyond the nominal one-hour limit, and the log records only a slot wait. The compiler outcome is unknown, not a confirmed timeout or error.",
+  "original_marker": "lean_check_result.before_assessment.json",
+  "source_sha256_observed": "1501c43d279e8613945cfb46a43a9ead5a7772610efd33c1b4ac96a9cc58e954"
+}

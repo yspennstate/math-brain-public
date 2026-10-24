@@ -1,0 +1,14 @@
+charpoly_Qstar = lam**3 + 12*lam**2 + 21*lam
+mu1 = 6 - sqrt(15)
+mu2 = sqrt(15) + 6
+pi = (1/21, 10/21, 10/21)
+mean_h = 20/21
+C(0) = 20/441
+C'(0) = -10/21
+A_slow = 10/441 - sqrt(15)/147
+B_fast = 10/441 + sqrt(15)/147
+turning_ratio = 8*sqrt(15) + 31
+general_C0 = a*b*c*(b + c)/(a*b + a*c + b*c)**2 a*b**2*c/(a*b + a*c + b*c)**2 a*b**2*c/(a*b + a*c + b*c)**2 a*b*c*(a + b)/(a*b + a*c + b*c)**2
+general_Cprime0 = -a*b*c/(a*b + a*c + b*c) 0 -a*b*c/(a*b + a*c + b*c) -a*b*c/(a*b + a*c + b*c)
+general_slow_numerators = -a*b*c*(a*b + a*c + b*c - b*m2 - c*m2)/(a*b + a*c + b*c)**2 a*b**2*c*m2/(a*b + a*c + b*c)**2 -a*b*c*(a*b + a*c + b*c - b*m2)/(a*b + a*c + b*c)**2 -a*b*c*(a*b + a*c - a*m2 + b*c - b*m2)/(a*b + a*c + b*c)**2
+ALL_EXACT_CHECKS_PASS

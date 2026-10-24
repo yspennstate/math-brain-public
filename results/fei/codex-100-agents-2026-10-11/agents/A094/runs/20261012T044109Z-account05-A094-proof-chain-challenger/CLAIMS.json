@@ -1,0 +1,332 @@
+[
+  {
+    "claim_id": "B19-RANKCODE-REDUCTION",
+    "version": 1,
+    "exact_statement": "For every Boolean f on n coordinates and every order pi of [n]: H(f) <= [log2(4+e) + log2(pi^2/4)] I(f) + (2/ln 2) R_pi(f), where R_pi(f) = E_{S ~ fhat^2} sum_{j=1}^{|S|} ln(i_j/j) and i_1 < ... < i_|S| are the pi-positions of the elements of S.",
+    "hypotheses": [
+      "uniform measure",
+      "entropy in bits",
+      "I = total influence"
+    ],
+    "statement_sha256": "d623f7311eb45cabe7f6f4a3e804c5ec99447d46cce751cb74fb933d2e40a868",
+    "contributors": [
+      "claude-B19-lead"
+    ],
+    "proof_source": "Gibbs on the level law with reference P(0)=1-v, P(k)=v(1-rho)rho^(k-1), rho=4/(4+e), plus Lemma levelentropy (valid for every Boolean f by edge-isoperimetry); Gibbs on each level with Q_k of main.tex l.524 and (2k+1)! >= 4^k (k!)^2. Validated on 3,240 (f, order) pairs, n=3,4, proved intervals.",
+    "proof_dependencies": [
+      "main.tex Lemma levelentropy l.252-291",
+      "main.tex l.507-541"
+    ],
+    "review_records": [
+      "claude-B19-lead",
+      {
+        "reviewer": "account05/A094, B19",
+        "at": "2026-10-12T04:54:34.381174+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "scope": "Full universal reduction only; no blanket acceptance of other threshold-paper results.",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261012T044109Z-account05-A094-proof-chain-challenger\\AUDIT.md",
+        "source_claims_path": "~\\brain_workers\\FEI100_20261011\\claude\\B19\\runs\\20261011T224700Z-claude-B19-paper-audit-rankcode\\CLAIMS.json",
+        "source_claims_sha256": "18217a6714c038d8c7f70c1b265e5112bf8c09bfdca5c163593535f11384d307",
+        "method": "independent all-parameter source-complete proof reconstruction and distinct integer-FWHT/Fraction/log-prime implementation",
+        "substantive_repair_supplied": false,
+        "declared_statement_sha256": "d623f7311eb45cabe7f6f4a3e804c5ec99447d46cce751cb74fb933d2e40a868",
+        "computed_plain_statement_sha256": "dda3018055e391a24121ea18f117176ea1e0cccf47a753bffc4e9eb297eac0ad",
+        "computed_canonical_statement_hypotheses_sha256": "d623f7311eb45cabe7f6f4a3e804c5ec99447d46cce751cb74fb933d2e40a868",
+        "declared_hash_matches_known_forms": true,
+        "hash_binding": "Original declared hash preserved; acceptance binds exact stored text, hypotheses, and source-file SHA256."
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE_LOCALLY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A095",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "B19-RANKCODE-GLOBAL-ORDER-NOGO",
+    "version": 1,
+    "exact_statement": "For integers L >= 2, m >= 1 let f = prod_{b=1}^m AND_L(x_b) on disjoint blocks (+-1 valued). For every order pi of the mL coordinates, R_pi(f) >= 2^(1-L) sum_{p=1}^{mL} max{0, ln p - ln((L+1)/2 + (p-1) 2^(1-L))}; I(f) = mL 2^(1-L); H(f)/I(f) = H(AND_L)/I(AND_L) < 4; and liminf_{m -> infinity} min_pi R_pi(f)/I(f) >= (L-1) ln 2. Hence the right side of B19-RANKCODE-REDUCTION is at least (2(L-1) - o(1)) I(f) for every order while H(f) < 4 I(f): no single-order rank code proves FEI with a constant uniform over all Boolean functions.",
+    "hypotheses": [
+      "uniform measure",
+      "R_pi as in B19-RANKCODE-REDUCTION"
+    ],
+    "statement_sha256": "4ccb87d61478d7b55b6335d702b55603ef14f67586ee892cd7e8be93c756d4ca",
+    "contributors": [
+      "claude-B19-lead"
+    ],
+    "proof_source": "Per coordinate c at position p: ln(p/N_p) >= 0 with N_p = |S intersect pi^{-1}[1,p]|; Jensen gives E[1{c in S} ln(p/N_p)] >= P(c in S) max{0, ln p - ln E[N_p | c in S]}; P(c in S) = 2^(1-L); given c in S its block's other members are in S independently with prob 1/2 and other blocks are independent, so E[N_p | c in S] <= (L+1)/2 + (p-1) 2^(1-L). H(AND_L)/I(AND_L) <= 4 - [4 + 2(L-1)eps - 2(1-eps)/ln2]/L < 4 with eps = 2^(1-L). The liminf follows from the increasing integrand phi(t) = ln t - ln(c - q + q t). Checks: exhaustive over all orders for (m,L) = (2,2),(3,2),(2,3); certified rows L=4..32 (e.g. L=8, mL=1e9: rank term >= 13.99997 I vs H <= 3.8428 I).",
+    "proof_dependencies": [
+      "B19-RANKCODE-REDUCTION (only for the consequence)"
+    ],
+    "review_records": [
+      "claude-B19-lead; independent reviewer requested: A094",
+      {
+        "reviewer": "account05/A094, B19",
+        "at": "2026-10-12T04:54:34.381300+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "scope": "Full exact statement, every L>=2,m>=1, every order; quantitative illustration separately strengthened in A094 certificate.",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261012T044109Z-account05-A094-proof-chain-challenger\\AUDIT.md",
+        "source_claims_path": "~\\brain_workers\\FEI100_20261011\\claude\\B19\\runs\\20261011T224700Z-claude-B19-paper-audit-rankcode\\CLAIMS.json",
+        "source_claims_sha256": "18217a6714c038d8c7f70c1b265e5112bf8c09bfdca5c163593535f11384d307",
+        "method": "independent all-parameter source-complete proof reconstruction and distinct integer-FWHT/Fraction/log-prime implementation",
+        "substantive_repair_supplied": false,
+        "declared_statement_sha256": "4ccb87d61478d7b55b6335d702b55603ef14f67586ee892cd7e8be93c756d4ca",
+        "computed_plain_statement_sha256": "ef393f5228797d6b2ad7e16dd016845c1b0677c267c970f24af83b05c50972a3",
+        "computed_canonical_statement_hypotheses_sha256": "4ccb87d61478d7b55b6335d702b55603ef14f67586ee892cd7e8be93c756d4ca",
+        "declared_hash_matches_known_forms": true,
+        "hash_binding": "Original declared hash preserved; acceptance binds exact stored text, hypotheses, and source-file SHA256."
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE_LOCALLY",
+    "supersedes": [],
+    "refutes": [
+      "any universal-FEI route that uses Theorem A's single-order rank code unchanged"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A094",
+      "A095",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A086-ACTIVATION-REFERENCE-DEBT-PROJECTION",
+    "version": 1,
+    "exact_statement": "For every balanced finite uniform Boolean core g and every r>=1, put p=2^-r,F=1+A_r(g-1),v=p(2-p),Pplus=P_F conditioned on nonempty output. For every subprobability reference Q positive on the support of Pplus, let M=sum Q,q=Q/M,beta=1/(2-p),gamma=q(data spectral set nonempty),and q_g=q(data set | nonempty data). Then vD(Pplus||Q)=-v log2 M+vD_Ber(beta||gamma)+pD(P_g||q_g)+v(1-beta)D(Unif(nonempty control subsets)||q(control | empty data))+p sum_T P_g(T)D(Unif(all control subsets)||q(control | data T)). Consequently vD(Pplus||Q)>=pD(P_g||q_g). Infinite missing-support debt is interpreted in the extended sense. This localizes complete reference debt, without asserting cheap universal references or a lower bound by seed entropy.",
+    "hypotheses": [
+      "balanced actual Boolean core on a finite uniform data cube",
+      "fresh independent r>=1 point controls",
+      "base-two entropy and divergence",
+      "Q is a complete nonempty-output subprobability positive on target support",
+      "conditionals defined in finite-debt case; data reference may have additional support"
+    ],
+    "statement_sha256": "71189c4475892bc8e788be5c988c27e9d0347361a9d5974f4e29bb011b9ac34f",
+    "contributors": [
+      "A086/account05"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\ACTIVATION_DEBT_PROJECTION.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\out\\BRIDGE_RESULTS.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A094, B19",
+        "at": "2026-10-12T04:54:34.381452+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "scope": "Full identity/lower bound and extended missing-support interpretation; no universal cost payment asserted.",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261012T044109Z-account05-A094-proof-chain-challenger\\AUDIT.md",
+        "source_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\CLAIMS.json",
+        "source_claims_sha256": "deb008a13f7586d62b4e3f7ae7ea7e4bbdcbf15c9f2c7f0ccb561649517629bb",
+        "method": "independent all-parameter source-complete proof reconstruction and distinct integer-FWHT/Fraction/log-prime implementation",
+        "substantive_repair_supplied": false,
+        "declared_statement_sha256": "71189c4475892bc8e788be5c988c27e9d0347361a9d5974f4e29bb011b9ac34f",
+        "computed_plain_statement_sha256": "4ab4a26527dfd482138bccf23a35fe14d416d818c080648b94c51d5a0d0d7178",
+        "computed_canonical_statement_hypotheses_sha256": "71189c4475892bc8e788be5c988c27e9d0347361a9d5974f4e29bb011b9ac34f",
+        "declared_hash_matches_known_forms": true,
+        "hash_binding": "Original declared hash preserved; acceptance binds exact stored text, hypotheses, and source-file SHA256."
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE_LOCALLY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A003",
+      "A005",
+      "A007",
+      "A008",
+      "A011",
+      "A012",
+      "A089",
+      "A094",
+      "A096",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A003-OPTIMIZED-FOREST-DEBT",
+    "version": 1,
+    "exact_statement": "For a Boolean f with v=Var(f)>0, freeze any admissible conditioned-forest representation and globally feasible positive lambda and finite distinct-run sets W_A covering its nonempty spectral support. Put c=Lambda+log2 Z, t_A=sum_(r in W_A)2^(-B_lambda(A;r)), R_*=v c+sum_(A nonempty)p_A(-log2 t_A), Kref=3+2log2 3+log2(6e), and U(A)=2^(-c-Kref|A|)t_A. Then U is a subprobability, min_P(E B-H(P))=-log2 t_A, and h2(v)+Kref I+R_*=H(f)+v D(P^+||U). Consequently universal R_*<=K I implies FEI with C=2+Kref+K. Independently, B<=K I implies good-coordinate B_i<=K alpha_i and FEI(K+2/ln2); full-signed L<=K I implies FEI(K+3/ln2), while FEI(C) implies B<=C I and L<=C I. No reverse admission into the forest reference family is asserted.",
+    "hypotheses": [
+      "uniform finite Boolean cube",
+      "bits",
+      "actual distinct partition-forest runs",
+      "the run lower bound of forests.tex thm:posteriorforest",
+      "one global feasible lambda per representation",
+      "D(P||U) is generalized divergence to a subprobability; P^+=p/v"
+    ],
+    "statement_sha256": "f8dc089a50fe34c4efe3bbcf6aaa0bc9eec9e552a9a074fc71fd4d70ee771716",
+    "contributors": [
+      "account05/A003"
+    ],
+    "proof_source": {
+      "run_id": "20261011T221324Z-account05-A003-minimal-target-formulation",
+      "path": "REPORT.md",
+      "locator": "sections 1-3"
+    },
+    "proof_dependencies": [
+      {
+        "source": "source_material/reductions/paper/forests.tex",
+        "locator": "thm:posteriorforest"
+      },
+      {
+        "source": "sources/ERASURE_REDUCTION.md",
+        "locator": "sections 1-6"
+      },
+      {
+        "source": "context/threshold_paper_38pp.txt",
+        "locator": "Lemma 2.1"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "account05/A094, B19",
+        "at": "2026-10-12T04:54:34.381545+00:00",
+        "verdict": "HOLDS_AT_SPECIFIED_CLAUSE_ONLY",
+        "scope": "Only optimized-envelope subprobability, Gibbs variational identity and exact h2(v)+Kref I+R*=H+vD(Pplus||U) clause. Other bundled erasure/signed/selection arrows are NOT reviewed in this stage.",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261012T044109Z-account05-A094-proof-chain-challenger\\AUDIT.md",
+        "source_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A003\\runs\\20261011T221324Z-account05-A003-minimal-target-formulation\\CLAIMS.json",
+        "source_claims_sha256": "e017db562ff9e6a51392e10ef59682bd95970db3676881b867aa9c0f6c8dd6f7",
+        "method": "independent all-parameter source-complete proof reconstruction and distinct integer-FWHT/Fraction/log-prime implementation",
+        "substantive_repair_supplied": false,
+        "declared_statement_sha256": "f8dc089a50fe34c4efe3bbcf6aaa0bc9eec9e552a9a074fc71fd4d70ee771716",
+        "computed_plain_statement_sha256": "bf37bbdc6c86dbfd6077f2ad9b71b3e9e6e104d9be412627c1a34c189121ac24",
+        "computed_canonical_statement_hypotheses_sha256": "f8dc089a50fe34c4efe3bbcf6aaa0bc9eec9e552a9a074fc71fd4d70ee771716",
+        "declared_hash_matches_known_forms": true,
+        "hash_binding": "Original declared hash preserved; acceptance binds exact stored text, hypotheses, and source-file SHA256."
+      }
+    ],
+    "status": "PARTIALLY_INDEPENDENTLY_REVIEWED_AT_EXPLICIT_SCOPE_LOCALLY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A026",
+      "A034",
+      "A005",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A012-CONTROL-FIRST-POSTERIOR-REPAIR",
+    "version": 1,
+    "exact_statement": "For every balanced Boolean g, integer r>=1 and complete nonempty core spectral subprobability reference R_g of finite cost c_g, with p=2^(-r) and F=1+A_r(g-1) on fresh independent point controls, the explicit complete output subprobability reference Q_F has vacuum mass (1-p)^2, control-only nonempty mass p^2 per set, and mass p^2 R_g(T) for every control set U and nonempty data set T. It has total mass 1-p+p sum R_g and exact cost CE(P_F,Q_F)=p*c_g+A_r, A_r=2rp(2-p)+(1-p)^2 log2(1/(1-p)^2). The sharp universal selector coefficient is max_{r>=1} A_r/(rp)=C_act=15/4+(49/12)log2(8/7) in (4.536,4.537), uniquely attained at r=3. For the true control-first witness W retaining its physical stopping/core leaf J, actual leaf spectrum and queried membership bits, H(W|S)=2(1-p)+sum_{k=1}^r 2^(-(r-k)) B_k-A_r, B_k=q_k h2(epsilon_k)+(1-m_k^2)/2, m_k=1-2^(-(k-1)), q_k=(1+m_k^2)/2, epsilon_k=2^(-2(k-1))/(2(1+m_k^2)). This posterior is independent of the balanced core and tends to two bits. Disjoint-reference composition and fresh-character balancing preserve the full core bill; no arbitrary-core influence bound or shared-control transfer is assumed.",
+    "hypotheses": [
+      "Uniform finite data cube, Boolean sign g, Eg=0",
+      "r>=1 fresh independent point controls",
+      "Fixed complete nonempty spectral subprobability core reference with finite cross entropy; all costs in bits",
+      "Actual control-first coupling using the original Boolean child coefficients; zero packets omitted",
+      "Ideal cross-entropy cost; one-symbol integer prefix rounding is separate",
+      "Disjoint original variable blocks for reference-product claims"
+    ],
+    "statement_sha256": "b5b1d941a3fd7511b0ce648ad4d4f6573d0e89f7f04dffc6c1ff9a8943ba1895",
+    "contributors": [
+      "account05/A012"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T234525Z-account05-A012-sparse-activation-accounting\\DERIVATION.md",
+      "tex": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T234525Z-account05-A012-sparse-activation-accounting\\POSTERIOR_ACTIVATION.tex",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T234525Z-account05-A012-sparse-activation-accounting\\out\\EXACT_RESULTS.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A094, B19",
+        "at": "2026-10-12T04:54:34.381633+00:00",
+        "verdict": "HOLDS_AT_SPECIFIED_CLAUSE_ONLY",
+        "scope": "Only explicit full-output subprobability transfer Q_F, its total mass, exact CE=p*c_g+A_r and retained core bill under balancing/disjoint factorization. The sharp all-r selector coefficient and true-witness posterior claims are NOT independently accepted by this stage.",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261012T044109Z-account05-A094-proof-chain-challenger\\AUDIT.md",
+        "source_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T234525Z-account05-A012-sparse-activation-accounting\\CLAIMS.json",
+        "source_claims_sha256": "1037c9b736cfcebebb8924ceec010d2d10f578d38e3099071c2f9261c40d712a",
+        "method": "independent all-parameter source-complete proof reconstruction and distinct integer-FWHT/Fraction/log-prime implementation",
+        "substantive_repair_supplied": false,
+        "declared_statement_sha256": "b5b1d941a3fd7511b0ce648ad4d4f6573d0e89f7f04dffc6c1ff9a8943ba1895",
+        "computed_plain_statement_sha256": "de00f5b910d59a70a5ff899e360cbc44765ffb1df9757e0b038da1804c4db5f9",
+        "computed_canonical_statement_hypotheses_sha256": "b5b1d941a3fd7511b0ce648ad4d4f6573d0e89f7f04dffc6c1ff9a8943ba1895",
+        "declared_hash_matches_known_forms": true,
+        "hash_binding": "Original declared hash preserved; acceptance binds exact stored text, hypotheses, and source-file SHA256."
+      }
+    ],
+    "status": "PARTIALLY_INDEPENDENTLY_REVIEWED_AT_EXPLICIT_SCOPE_LOCALLY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A011",
+      "A013",
+      "A015",
+      "A039",
+      "A097",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A094-CONCRETE-ACTIVATED-DICTIONARY-DEBT-AND-RANK-BOUNDARY",
+    "version": 1,
+    "exact_statement": "For each L>=2 let t=4^L, r=4L+1, p=2^-r, h_L=1-2 A_L on L fresh fair bits, g=z0 product_{j=1}^t h_L on disjoint data blocks with fresh balancing sign z0, N=tL+1, and F=1+A_r(g-1) on fresh point controls. The one-support uniform-nonempty A008 dictionary R_g(T)=1/(2^N-1), transferred by vacuum mass (1-p)^2, control-only mass p^2, and data mass p^2 R_g(T), is a fixed normalized full-output reference. Its nonempty reference divided by v=p(2-p) has normalization and both sector/control projection debts zero; the entire remaining debt is C-H(F)=p[log2(2^N-1)-t H(h_L)]. Its I(F)=p[2L2^L+4L+2] tends to zero, minority probability is p/2, C/I(F)>=2^(L-2), and H(F)<4I(F). Hence (C-H(F))/I(F)>2^(L-2)-4 tends to infinity. A fixed explicit independent occupied-block/uniform-local-subset data reference has zero debt on the same family and transferred cost H(F)<4I(F). The failure is for the specified uniform dictionary, not FEI, general dictionaries or the original incidence queue. Independently, for a product of m width-L point-defect signs, every coordinate order has R=d ln((mL)!)-E ln(K!), d=2^(1-L), I=mLd, a=(L+1)/2-Ld, and ln(1/d)-ln(1+a/I)-(1+ln(I+1))/I <= R/I <= ln(1/d)+(1+ln(mL+1))/(mL); thus its exact all-order limit as m grows is (L-1)ln2.",
+    "hypotheses": [
+      "finite uniform Boolean cubes",
+      "fixed explicit structural references, independent of sampled spectral output",
+      "r>=1 fresh controls; explicit diagonal uses L>=2,t=4^L,r=4L+1",
+      "entropy, CE and generalized debt in bits; R in natural units",
+      "all original data blocks disjoint; shared-coordinate extensions not claimed",
+      "ideal reference cost; one-symbol prefix rounding separate"
+    ],
+    "statement_sha256": "a942f2e82af468cc6c71aeeccaef97e212ad52b3222a06dd6401ae972efc5597",
+    "contributors": [
+      "account05/A094; original global-order rank obstruction credited to Claude B19 lead and earlier A095 reconstruction"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261012T044109Z-account05-A094-proof-chain-challenger\\AUDIT.md",
+      "locators": "Sections 3,5,6; exact results and diagonal certificates in out/"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A086-ACTIVATION-REFERENCE-DEBT-PROJECTION",
+        "version": 1,
+        "status": "independently reviewed at scope in this stage"
+      },
+      {
+        "claim_id": "A012-CONTROL-FIRST-POSTERIOR-REPAIR",
+        "version": 1,
+        "status": "complete-reference transfer clause independently reconstructed; remaining bundled claims not assumed"
+      },
+      {
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261011T221357Z-account05-A008-gate-label-compression\\WHOLE_SET_CODEC.tex",
+        "locator": "generic one-gate dictionary generator, directly normalized in audit",
+        "status": "source definition reconstructed"
+      },
+      {
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261011T224936Z-account05-A094-proof-chain-challenger\\AUDIT.md",
+        "locator": "equal-influence identity",
+        "status": "consume previous proved identity; quantitative exact-limit extension proved in present audit"
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Prospective universal dimension-independent influence payment for the specified uniform single-support dictionary plus exact compatible balanced-core activation transfer"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A003",
+      "A008",
+      "A012",
+      "A085",
+      "A086",
+      "A095",
+      "B19",
+      "B20"
+    ]
+  }
+]

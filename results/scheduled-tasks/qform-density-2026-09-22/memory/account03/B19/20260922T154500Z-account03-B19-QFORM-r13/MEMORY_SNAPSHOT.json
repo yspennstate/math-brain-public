@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B19",
+  "run_id": "20260922T154500Z-account03-B19-QFORM-r13",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_start": "5a69cc04dcbe72c299100cb63458f1c3bae05502",
+  "source_control_commit_prepublication": "f6c9558100db89c49822b53d81400f94939b581c",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "claim": "account03/B19 previous one-effective normal form and actual mixed compression s_min>9/280",
+      "source": "yspennstate/math-open-problems@143e97c42cdbccb14fe847efb6abd3f6c3d349dc:proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260922T143049Z-account03-B19-QFORM-r11b/REPORT.md",
+      "status": "proved_in_stated_scope"
+    },
+    {
+      "claim": "QFORM-FINITE-UNION-CORE-v1",
+      "source": "yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4",
+      "status": "completed_designated_partner_result"
+    },
+    {
+      "claim": "QFORM-DIFFUSE-SEPARABLE-PHASE-v1 proof, including the pre-integration rank-one characteristic estimate",
+      "source": "yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb:proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md",
+      "status": "proved_supporting_argument_with_scoped_review_of_complex-amplitude_extension"
+    },
+    {
+      "claim": "QFORM-RIDGE-DENSITY-v1",
+      "source": "yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md",
+      "status": "complete_supporting_argument_pending_independent_review_of_extension"
+    }
+  ],
+  "new_results": [
+    "QFORM-CRITICAL-VALUE-QUARTER-SPLICE-v1",
+    "QFORM-LIVE-SCHUR-DIAGONAL-CLOSURE-v1: |S_ii|>=9/1120 implies ||p_Q||inf<25",
+    "QFORM-LIVE-SCHUR-CROSS-FORCING-v1: otherwise some original-coordinate cut has s1(S[I,J])>27/2240",
+    "QFORM-DIFFUSE-RANK1-SCHUR-SPLICE-v1: exact S=D+mu ww^T endpoint gives ||p_Q||inf<36"
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0e6d1715955458010d43193cab3dafc293c0e28c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260922T154500Z-account03-B19-QFORM-r13/",
+    "report": "REPORT.md",
+    "claims": "CLAIMS.json",
+    "verifier": "VERIFY.py",
+    "verifier_output": "VERIFY.out"
+  },
+  "partner_result_applied": {
+    "partner": "account04/B19",
+    "result": "QFORM-FINITE-UNION-CORE-v1",
+    "application": "transfer of the proved <25 physical-Schur-diagonal interval bound from the finite-union product core to arbitrary cap-one product laws"
+  },
+  "first_unproved_step": "QFORM-SCHUR-CROSS-LOWRIDGE-STABILITY-v1",
+  "next_step": "prove that the forced Schur cross resource s1>27/2240, when no ridge certificate fires, quantitatively yields either a second independent cross/ridge direction or a perturbatively stable diffuse rank-one-plus-diagonal Schur form; separately preserve the complementary s2(A-diag A)>1/8 extraction debt",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FOR_FULL_TARGET"
+}

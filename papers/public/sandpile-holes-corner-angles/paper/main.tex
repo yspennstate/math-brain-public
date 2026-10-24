@@ -1,0 +1,326 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem,booktabs}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\D}{\mathcal D}
+
+\hypersetup{pdftitle={Corner angles of sandpile aggregates on a background of holes},pdfauthor={Yitzchak Shmalo}}
+
+\title[Corner angles of sandpile aggregates]{Corner angles of sandpile aggregates on a background of holes}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{13 October 2026}
+\subjclass[2020]{60K35, 82C20, 35R35, 05C57}
+\keywords{abelian sandpile, limiting shape, chip-firing, odometer, free boundary}
+
+\begin{document}
+\begin{abstract}
+Start the abelian sandpile on $\Z^2$ with $n$ chips at the origin, on a background in which every site absorbs the first $H$ chips it receives (for $H<0$, every site starts with $-H$ chips), and let $S_{n,H}$ be the set of sites that fire. Holroyd, Levine, M\'esz\'aros, Peres, Propp and Wilson asked whether the limiting shape of $S_{n,H}$ is a regular $(4H+12)$-gon. We show that for $H\ge-1$ every corner of a subsequential limit of $S_{n,H}$, under any rescaling, has an interior angle $\alpha$ with $\alpha>\pi/2$ and $\sin\alpha\le1/(H+3)$. The corners of a regular $(4H+12)$-gon are sharper than this, so no such limit is a regular $(4H+12)$-gon; since $S_{n,-2}$ is a square for every $n$, this answers the question for every $H\ge-2$. A limit that is a convex polygon has a number of vertices that is divisible by $4$ and at least $2\pi/\arcsin(1/(H+3))$; it has at least $12$ vertices for $H=-1$ and at least $20$ for $H=0$. The proof combines the least action principle, a reflection argument and a count of last firings with the compactness argument of Pegden and Smart, and ends with a corner lemma for the limiting equation $\Delta U=s$, in which $H+2\le s\le H+3$ on the limit set and $s=0$ outside it.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+Fix an integer $H\ge-2$. Place $n$ chips at the origin of $\Z^2$ and a hole of depth $H$ at every site: each site absorbs the first $H$ chips it receives, and for $H<0$ every site instead starts with $-H$ chips. A site holding at least four chips beyond its hole fires, sending one chip to each of its four neighbours. Since $-H\le2$, firing stops after finitely many steps \cite{FR}, \cite[Section~1]{FLP}, and the number of times each site fires does not depend on the order of the firings. Following \cite[Section~6]{HLMPPW}, let $S_{n,H}$ be the set of sites that fire. Holroyd, Levine, M\'esz\'aros, Peres, Propp and Wilson asked the following \cite[Question~6.2]{HLMPPW}.
+
+\begin{quote}
+In $\Z^2$, is the limiting shape of $S_{n,H}$ as $n\to\infty$ a regular $(4H+12)$-gon?
+\end{quote}
+
+For $H=-2$ the set $S_{n,-2}$ is a square for every $n$ \cite{FR} (see \cite[Theorem~6.1]{HLMPPW}), in agreement with $4H+12=4$. For $H>-2$ simulations indicate a regular $(4H+12)$-gon with some rounding at the corners; whether the rounded portions of the boundary become negligible in the limit was left open, and so was the existence of a limiting shape \cite[Section~6]{HLMPPW}. Levine and Peres \cite[Theorem~4.1]{LP} (see \cite[Theorem~6.3]{HLMPPW}) showed that $S_{n,H}$ contains a disc and, for $H\ge-1$, lies in a disc, both of radius of order $\sqrt n$ (Theorem~\ref{thm:lp} below); their proof of the outer bound covers $H\ge0$, and Fey, Levine and Peres \cite[Section~3.1]{FLP} supplied the case $H=-1$. For $H=0$, Pegden and Smart \cite{PS} proved that the rescaled odometer and sandpile converge, and Bou-Rabee \cite[Theorem~9.2]{BR} states the corresponding convergence for other constant backgrounds. Neither convergence result is used below. Even for $H=0$ it is not known whether the boundary of the limit is a circle or a polygon \cite[Section~1]{LP}, \cite[Section~1]{PS}.
+
+A closed sector with vertex $p\in\R^2$ and opening $\alpha$ is a set $p+\{(t\cos\theta,t\sin\theta):t\ge0,\ |\theta-\theta_0|\le\alpha/2\}$, and $B(p,r)$ is the open disc of radius $r$ about $p$.
+
+\begin{theorem}\label{thm:main}
+Let $H\ge-1$ be an integer, let $n_j\to\infty$ and $c_j>0$, and suppose that $c_jS_{n_j,H}\to K$ in the Hausdorff metric for a compact set $K\subset\R^2$. Let $p\in K$ and $r>0$, and let $W$ be a closed sector with vertex $p$ and opening $\alpha\in(0,\pi)$ such that $K\cap B(p,r)=W\cap B(p,r)$. Then
+\[
+\alpha>\frac\pi2\qquad\text{and}\qquad\sin\alpha\le\frac1{H+3}.
+\]
+\end{theorem}
+
+The interior angles of a regular $(4H+12)$-gon equal $\pi-\pi/(2k)$ with $k=H+3\ge2$, and $\sin(\pi/(2k))>1/k$ by Jordan's inequality $\sin x>2x/\pi$ on $(0,\pi/2)$. So these corners violate the inequality of Theorem~\ref{thm:main}.
+
+\begin{corollary}\label{cor:polygon}
+In the setting of Theorem~\ref{thm:main}, suppose that $K$ is a convex polygon with $m$ vertices. Then $m$ is divisible by $4$ and
+\[
+m\ge\frac{2\pi}{\arcsin(1/(H+3))}>4H+12;
+\]
+in particular $m\ge4H+16$, and $K$ is not a regular $(4H+12)$-gon. For $H=-1$, $m\ge12$, with equality only if every interior angle equals $5\pi/6$; for $H=0$, $m\ge20$.
+\end{corollary}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lcccccc}
+\toprule
+$H$ & $-1$ & $0$ & $1$ & $2$ & $3$ & $4$\\
+\midrule
+$4H+12$ & $8$ & $12$ & $16$ & $20$ & $24$ & $28$\\
+$2\pi/\arcsin(1/(H+3))$ & $12$ & $18.49$ & $24.87$ & $31.20$ & $37.52$ & $43.83$\\
+least admissible $m$ & $12$ & $20$ & $28$ & $32$ & $40$ & $44$\\
+\bottomrule
+\end{tabular}
+\caption{Lower bounds for the number $m$ of vertices of a polygonal limit. The last row is the least multiple of $4$ that is at least $2\pi/\arcsin(1/(H+3))$.}
+\label{tab:vertices}
+\end{table}
+
+Together with the squares at $H=-2$, this answers Question~6.2 of \cite{HLMPPW} for every $H\ge-2$: for $H\ge-1$ no subsequential limit of $S_{n,H}$, under any rescaling, is a regular $(4H+12)$-gon. Table~\ref{tab:vertices} lists the bound of Corollary~\ref{cor:polygon} for small $H$.
+
+\begin{remark}\label{rem:scope}
+Theorem~\ref{thm:main} does not show that a limit exists, that it is a polygon, or that it has the dihedral symmetry $D_{4H+12}$, which \cite[Section~6]{HLMPPW} also asks about. It does bear on the rounding seen in simulations: every corner of a limit has an interior angle of at least $\pi-\arcsin(1/(H+3))$, which exceeds the angle $\pi-\pi/(2(H+3))$ of the regular $(4H+12)$-gon, and a polygonal limit needs at least $2\pi/\arcsin(1/(H+3))=2\pi(H+3)-O(1/(H+3))$ vertices, about $\pi/2$ times as many as $4H+12$.
+\end{remark}
+
+The proof works with the odometer, the function that counts how often each site fires. Section~\ref{sec:sandpile} collects discrete facts. The least action principle of Fey, Levine and Peres gives a reflection inequality for the odometer (Lemma~\ref{lem:reflection}), from which $S_{n,H}$ is an order ideal: with a site, it contains every site that is at most as far from the origin in each coordinate. The observation of Le Borgne and Rossin that, for each edge inside $S_{n,H}$, the endpoint that fires last sends the other a chip that never moves again, gives a weighted lower bound for the final configuration (Lemma~\ref{lem:lastfiring}). With the bounds of Levine and Peres, these facts pass to subsequential limits by the compactness argument of Pegden and Smart (Section~\ref{sec:limits}): the rescaled odometer converges to a continuous function $U\ge0$ with $\Delta U=s$, where $s=0$ off the limit set $K$ and $H+2\le s\le H+3$ in its interior. Section~\ref{sec:corners} proves a corner lemma for such functions by testing the equation against $\cos2\theta$. At a corner that violates the inequality, the projection of $U$ on $\cos2\theta$ satisfies an ordinary differential equation with a positive right-hand side, and its quotient by $r^2$ is then unbounded as $r\to0$, which the mean value inequality forbids. Section~\ref{sec:checks} describes computer checks.
+
+\section{The sandpile}\label{sec:sandpile}
+
+For $f\colon\Z^2\to\R$ let $\Delta f(x)=\sum_{y\sim x}(f(y)-f(x))$, where $y\sim x$ means that $y$ is one of the four lattice neighbours of $x$. A configuration is a function $\eta\colon\Z^2\to\Z$ that counts at each site the chips beyond those absorbed by its hole, so the initial configuration is
+\[
+\eta_0=n\delta_0-H.
+\]
+A configuration is stable if $\eta\le3$. Firing a site $x$ replaces $\eta$ by $\eta+\Delta\delta_x$: the site loses four chips and each of its neighbours gains one. A firing is legal if $\eta(x)\ge4$ before it. In \cite{FLP} and \cite{LP} a firing is called a toppling.
+
+For $H\ge-2$ the background $-H\le2$ is robust in the sense of \cite{FLP}: for every $n$ some finite sequence of legal firings makes $\eta_0$ stable \cite{FR}, \cite[Section~1]{FLP}. By the abelian property \cite[Lemma~2.1]{FLP} every such sequence fires each site the same number of times, and this number $u(x)$ is the odometer of $\eta_0$ \cite[(2)]{FLP}. The final configuration is $\eta=\eta_0+\Delta u$, and the set of sites that fire is $S=S_{n,H}=\{u>0\}$. We use the following facts:
+\begin{equation}\label{eq:heights}
+\eta\le3,\qquad\eta\ge0\ \text{on }S,\qquad\eta\ge-H\ \text{off }S,\qquad\sum_{x}(\eta(x)+H)=n.
+\end{equation}
+The first is stability. A site fires only when it holds at least four chips, so after its last firing it holds at least none, and afterwards it only receives chips; a site that never fires only receives chips. Finally $\eta+H=n\delta_0+\Delta u$ with $u$ finitely supported, and $\sum_x\Delta u(x)=0$.
+
+\emph{Least action principle} \cite[Lemma~2.3]{FLP}. If $v\colon\Z^2\to\N$ satisfies $\eta_0+\Delta v\le3$, then $u\le v$.
+
+\emph{Symmetry.} Let $g$ be one of the eight symmetries of $\Z^2$ that fix the origin. Then $\eta_0\circ g=\eta_0$ and $\Delta(u\circ g)=(\Delta u)\circ g$, so $\eta_0+\Delta(u\circ g)=\eta\circ g\le3$ and the least action principle gives $u\le u\circ g$. Applying this to $g^{-1}$ and composing with $g$ gives $u\circ g\le u$. Hence $u\circ g=u$, and $S$ is invariant under these symmetries.
+
+\begin{lemma}\label{lem:reflection}
+Let $k\ge1$ be an integer, $\rho(x)=(k-x_1,x_2)$ and $F=\{x\in\Z^2:x_1>k/2\}$. Then $u(x)\le u(\rho(x))$ for every $x\in F$. Consequently, if $x,y\in\Z^2$ satisfy $|y_1|\le|x_1|$ and $|y_2|\le|x_2|$, then $u(y)\ge u(x)$; in particular $x\in S$ implies $y\in S$.
+\end{lemma}
+
+For $H=0$ the inequality is a case of a theorem of Aleksanyan and Shahgholian \cite[Theorem~4.6]{AS} (see also \cite[Remark~4.8]{AS}); we give the short proof for general $H$.
+
+\begin{proof}
+Let $v=u$ off $F$ and $v=\min(u,u\circ\rho)$ on $F$. Then $v\colon\Z^2\to\N$ and $v\le u$. We show that $\eta_0+\Delta v\le3$; the least action principle then gives $u\le v$, that is, $u\le u\circ\rho$ on $F$.
+
+If $v(x)=u(x)$, then $\Delta v(x)\le\Delta u(x)$ because $v\le u$, so $\eta_0(x)+\Delta v(x)\le\eta(x)\le3$. Otherwise $x\in F$ and $v(x)=u(\rho x)<u(x)$. We claim that $v(y)\le u(\rho y)$ for every neighbour $y$ of $x$. If $y\in F$ this holds by the definition of $v$. Otherwise $y=x-e_1$ and $k/2<x_1\le k/2+1$. If $k$ is even, then $y_1=k/2$, so $\rho y=y$ and $v(y)=u(y)=u(\rho y)$. If $k$ is odd, then $x_1=(k+1)/2$, so $\rho x=y$ and $\rho y=x$, and $v(y)=u(y)=u(\rho x)<u(x)=u(\rho y)$. Since $\rho$ maps the neighbours of $x$ onto the neighbours of $\rho x$,
+\[
+\Delta v(x)=\sum_{y\sim x}(v(y)-v(x))\le\sum_{y\sim x}(u(\rho y)-u(\rho x))=\Delta u(\rho x).
+\]
+As $0\notin F$, we have $\eta_0(x)=-H\le\eta_0(\rho x)$, hence $\eta_0(x)+\Delta v(x)\le\eta_0(\rho x)+\Delta u(\rho x)=\eta(\rho x)\le3$.
+
+For the second statement, let $x_1\ge1$ and take $k=2x_1-1$. Then $x\in F$ and $\rho x=(x_1-1,x_2)$, so $u(x_1,x_2)\le u(x_1-1,x_2)$. By the symmetries, $u$ is nonincreasing in $|x_1|$ for fixed $x_2$ and in $|x_2|$ for fixed $x_1$, which gives $u(y_1,y_2)\ge u(x_1,y_2)\ge u(x_1,x_2)$.
+\end{proof}
+
+Let $E$ be the set of edges $\{x,y\}$ of $\Z^2$, $x\sim y$.
+
+\begin{lemma}\label{lem:lastfiring}
+Let $\varphi\colon\Z^2\to[0,\infty)$ be finitely supported with $\varphi=0$ off $S$. Then
+\[
+\sum_x\eta(x)\varphi(x)\ge\sum_{\{x,y\}\in E}\min(\varphi(x),\varphi(y))=2\sum_x\varphi(x)-\frac12\sum_{\{x,y\}\in E}|\varphi(x)-\varphi(y)|.
+\]
+\end{lemma}
+
+The idea is that of Le Borgne and Rossin \cite{LBR}: for each edge inside $S$, the endpoint that fires last sends the other a chip that never moves again (see \cite[Section~4]{LP}).
+
+\begin{proof}
+Fix a legal sequence of firings that stabilizes $\eta_0$, and for $x\in S$ let $t(x)$ be the position in it of the last firing of $x$. After that firing $x$ holds at least $0$ chips, it does not fire again, and it receives a chip from every later firing of a neighbour. Hence $\eta(x)\ge\#\{y\sim x:y\in S,\ t(y)>t(x)\}$ for $x\in S$. For an edge $e=\{x,y\}$ with $x,y\in S$ let $x_e$ be the endpoint with the smaller value of $t$. Multiplying by $\varphi(x)\ge0$ and summing over $x\in S$,
+\[
+\sum_x\eta(x)\varphi(x)\ge\sum_{\substack{e=\{x,y\}\in E\\x,y\in S}}\varphi(x_e)\ge\sum_{\{x,y\}\in E}\min(\varphi(x),\varphi(y)),
+\]
+since $\min(\varphi(x),\varphi(y))=0$ when an endpoint lies outside $S$. The identity follows from $\min(s,t)=(s+t-|s-t|)/2$ and the fact that every site lies on four edges.
+\end{proof}
+
+\begin{theorem}[{\cite[Theorem~4.1]{LP}, \cite[Section~3.1]{FLP}; see \cite[Theorem~6.3]{HLMPPW}}]\label{thm:lp}
+Let $H\ge-1$ and write $n=\pi r^2$. There are constants $c_2,c_2'$ depending only on $H$ such that
+\[
+B(0,c_1r-c_2)\cap\Z^2\subset S_{n,H}\subset B(0,c_1'r+c_2'),\qquad c_1=(H+3)^{-1/2},\quad c_1'=(H+3/2)^{-1/2}.
+\]
+\end{theorem}
+
+In \cite{LP} the outer constant is $(H+2-\varepsilon)^{-1/2}$ for any $\varepsilon>0$; we take $\varepsilon=1/2$. The inner bound is proved in \cite[Section~4]{LP} for the set of sites that topple, and the outer bound for the larger set of sites that receive a chip, so both apply to $S_{n,H}$.
+
+\section{Limits}\label{sec:limits}
+
+We follow the conventions of Pegden and Smart \cite[Section~2]{PS}. For $h>0$ and $f\colon h\Z^2\to\R$ let
+\[
+\Delta_hf(x)=h^{-2}\sum_{y\sim_hx}(f(y)-f(x)),
+\]
+the sum over the four points $y=x\pm he_i$. Functions on $h\Z^2$ are extended to $\R^2$ by nearest-neighbour interpolation \cite[Section~2.2]{PS}, so they are constant on half-open squares of side $h$ centred at the points of $h\Z^2$. With $h=n^{-1/2}$, let $\Phi_n\colon h\Z^2\to\R$ be the fundamental solution of \cite[Section~2.3]{PS}: $\Delta_h\Phi_n=-n$ at $0$ and $\Delta_h\Phi_n=0$ elsewhere, and $\Phi_n\to\Phi$ locally uniformly on $\R^2\setminus\{0\}$, where $\Phi(x)=-(2\pi)^{-1}\log|x|$.
+
+\begin{proposition}\label{prop:limit}
+Let $H\ge-1$, let $n_j\to\infty$ and $h_j=n_j^{-1/2}$, and let $S_j$, $u_j$ and $\eta_j$ be the set of fired sites, the odometer and the final configuration for $n=n_j$. For $x\in h_j\Z^2$ set
+\[
+\bar v_j(x)=h_j^2u_j(x/h_j),\qquad\bar s_j(x)=\eta_j(x/h_j)+H,\qquad\bar w_j=\bar v_j-\Phi_{n_j}.
+\]
+Then along a subsequence, still indexed by $j$, there are a continuous function $U\ge0$ on $\R^2\setminus\{0\}$ and $s\in L^\infty(\R^2)$ such that:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item $\bar v_j\to U$ locally uniformly on $\R^2\setminus\{0\}$, $\bar s_j\to s$ weakly-$*$ in $L^\infty(\R^2)$, and $\Delta U=s$ in $\D'(\R^2\setminus\{0\})$;
+\item $\min(H,0)\le s\le H+3$ almost everywhere;
+\item if moreover $h_jS_j\to K$ in the Hausdorff metric, then $K$ contains the closed disc of radius $((H+3)\pi)^{-1/2}$ about $0$, $U=0$ on $\R^2\setminus K$, $s=0$ almost everywhere on $\R^2\setminus K$, and $s\ge H+2$ almost everywhere on the interior of $K$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Since $\Delta_{h_j}\bar v_j(x)=\Delta u_j(x/h_j)=\eta_j(x/h_j)+H-n_j\mathbf 1_{\{x=0\}}$ and $\Delta_{h_j}\Phi_{n_j}=-n_j\mathbf 1_{\{x=0\}}$, we have $\Delta_{h_j}\bar w_j=\bar s_j$, and by \eqref{eq:heights}, $\min(H,0)\le\bar s_j\le H+3$.
+
+We bound $\bar w_j$ as in \cite[Lemma~3.1]{PS}, with barriers adapted to these bounds. Let $R=c_1'\pi^{-1/2}+c_2'$ with the constants of Theorem~\ref{thm:lp}. For $h_j\le1$, Theorem~\ref{thm:lp} gives $h_jS_j\subset B(0,R)$, so $\bar v_j=0$ and $\bar w_j=-\Phi_{n_j}$ off $E_j=h_j\Z^2\cap B(0,R)$. Write $h=h_j$, let $\partial_hE_j$ be the set of points of $h\Z^2\setminus E_j$ with a neighbour in $E_j$, and let
+\[
+\phi(x)=\frac{H+3}4\bigl(|x|^2-(R+h)^2\bigr)+\inf_{\partial_hE_j}(-\Phi_{n_j}),\qquad\psi(x)=\sup_{\partial_hE_j}(-\Phi_{n_j})+\frac{m}4\bigl((R+h)^2-|x|^2\bigr),
+\]
+with $m=-\min(H,0)$. Since $\Delta_h|x|^2=4$, we have $\Delta_h\phi=H+3\ge\Delta_h\bar w_j\ge-m=\Delta_h\psi$ in $E_j$, and $\phi\le\bar w_j\le\psi$ on $\partial_hE_j$, where $|x|<R+h$. The maximum principle \cite[Proposition~2.2]{PS} gives $\phi\le\bar w_j\le\psi$ on $E_j$. As $\Phi_n\to\Phi$ uniformly on $\{R\le|x|\le R+1\}$, the functions $\bar w_j$ are bounded on $E_j$ uniformly in $j$, and off $E_j$ they equal $-\Phi_{n_j}$. So $\bar w_j$ and $\Delta_{h_j}\bar w_j$ are locally uniformly bounded, and \cite[Lemma~3.1]{PS} and the note after it give a subsequence along which $\bar w_j\to w$ locally uniformly, with $w$ continuous, $\bar s_j\to s$ weakly-$*$ in $L^\infty(\R^2)$, and $\Delta w=s$ weakly. Set $U=w+\Phi$ on $\R^2\setminus\{0\}$. Then $\bar v_j\to U$ locally uniformly on $\R^2\setminus\{0\}$, so $U\ge0$, and $\Delta U=s$ in $\D'(\R^2\setminus\{0\})$ because $\Phi$ is harmonic there. This proves (i), and (ii) holds because weak-$*$ limits keep pointwise bounds.
+
+For (iii), Theorem~\ref{thm:lp} gives $h_jS_j\supset B(0,c_1\pi^{-1/2}-c_2h_j)\cap h_j\Z^2$, and every point of the open disc $B(0,c_1\pi^{-1/2})$ is a limit of such points, so $K$ contains its closure. If $y\notin K$, choose $\delta>0$ with $B(y,2\delta)\cap K=\emptyset$; for large $j$ the set $h_jS_j$ does not meet $B(y,\delta)$, so $\bar v_j=0$ on $B(y,\delta/2)$ and $U=0$ there. Hence $U=0$ on the open set $\R^2\setminus K$, which does not contain $0$, and $s=\Delta U=0$ in $\D'(\R^2\setminus K)$.
+
+Now let $x$ be an interior point of $K$, and choose $\delta>0$ with $\overline{B}(x,\delta)\subset K$. We first show that $h_j\Z^2\cap B(x,\delta/2)\subset h_jS_j$ for large $j$. Choose $\sigma_i\in\{-1,1\}$ with $\sigma_ix_i=|x_i|$ and let $q=x+\delta(\sigma_1,\sigma_2)/\sqrt2\in K$. There are $z_j\in S_j$ with $h_jz_j\to q$, and since $|q_i|=|x_i|+\delta/\sqrt2$, for large $j$ we have $|h_j(z_j)_i|>|x_i|+\delta/2$ for $i=1,2$. By Lemma~\ref{lem:reflection}, every $y\in\Z^2$ with $|h_jy_i|\le|x_i|+\delta/2$ for $i=1,2$ lies in $S_j$, and these points include all $y$ with $h_jy\in B(x,\delta/2)$.
+
+Let $\zeta\in C_c^\infty(B(x,\delta/4))$ with $\zeta\ge0$, and apply Lemma~\ref{lem:lastfiring} to $\varphi(y)=\zeta(h_jy)$, which for large $j$ vanishes off $S_j$:
+\[
+h_j^2\sum_{y}\bar s_j(h_jy)\zeta(h_jy)\ge(H+2)h_j^2\sum_y\zeta(h_jy)-\frac{h_j^2}2\sum_{\{y,y'\}\in E}|\zeta(h_jy)-\zeta(h_jy')|.
+\]
+The last sum has $O(h_j^{-2})$ nonzero terms, each at most $\|\nabla\zeta\|_\infty h_j$, so the last term is $O(h_j)$. Since $\bar s_j$ is constant on the interpolation squares, $\int\bar s_j\zeta$ differs from the left-hand side by at most $\|\bar s_j\|_\infty\|\nabla\zeta\|_\infty h_j$ times the area of a neighbourhood of the support of $\zeta$, and similarly $h_j^2\sum_y\zeta(h_jy)\to\int\zeta$. Letting $j\to\infty$ gives $\int s\zeta\ge(H+2)\int\zeta$. As $\zeta\ge0$ is arbitrary, $s\ge H+2$ almost everywhere on $B(x,\delta/4)$, and these discs cover the interior of $K$.
+\end{proof}
+
+\section{Corners}\label{sec:corners}
+
+Polar coordinates $(r,\theta)$ are centred at the origin. For a function $U$ continuous near $0$, let $M(r)=(2\pi)^{-1}\int_{-\pi}^{\pi}U(r\cos\theta,r\sin\theta)\,d\theta$ be its mean over the circle of radius $r$.
+
+\begin{lemma}\label{lem:mean}
+Let $U$ be continuous on $B(0,r_0)$ with $\Delta U=s$ in $\D'(B(0,r_0))$, where $s\in L^\infty$ and $s\le b$ almost everywhere. Then $M(r)\le U(0)+br^2/4$ for $0<r<r_0$.
+\end{lemma}
+
+\begin{proof}
+The function $V=U-b|x|^2/4$ satisfies $\Delta V=s-b\le0$ in $\D'$. For a radial mollifier $\rho_\varepsilon$, the smooth function $V*\rho_\varepsilon$ is superharmonic on $B(0,r_0-\varepsilon)$, so its mean over the circle of radius $r<r_0-\varepsilon$ is at most its value at $0$. Letting $\varepsilon\to0$, with $V*\rho_\varepsilon\to V$ locally uniformly, the mean of $V$ over the circle of radius $r$ is at most $V(0)=U(0)$. The mean of $|x|^2$ over that circle is $r^2$.
+\end{proof}
+
+\begin{lemma}\label{lem:corner}
+Let $0<a\le b$, $\alpha\in(0,\pi)$, $r_1>0$, $B=B(0,r_1)$ and $W=\{(t\cos\theta,t\sin\theta):t\ge0,\ |\theta|\le\alpha/2\}$. Let $U\ge0$ be continuous on $B$ with $U=0$ on $B\setminus W$, and suppose that $\Delta U=s$ in $\D'(B)$, where $a\le s\le b$ almost everywhere on $B\cap W$ and $s=0$ almost everywhere on $B\setminus W$. Then $\alpha>\pi/2$ and $a\le b(1-\sin\alpha)$.
+\end{lemma}
+
+\begin{proof}
+\emph{Step 1.} $U(0)=0$, because $U$ is continuous and vanishes on $B\setminus W$, whose closure contains $0$. As $s\le b$, Lemma~\ref{lem:mean} gives $M(r)\le br^2/4$. For $0<r<r_1$ let
+\[
+F(r)=\frac1\pi\int_{-\pi}^{\pi}U(r\cos\theta,r\sin\theta)\cos2\theta\,d\theta,\qquad G(r)=\frac1\pi\int_{-\pi}^{\pi}s(r\cos\theta,r\sin\theta)\cos2\theta\,d\theta,
+\]
+the second for almost every $r$. Then $F$ is continuous, $|F(r)|\le2M(r)\le br^2/2$ because $U\ge0$, and $|G|\le2b$ because $0\le s\le b$.
+
+\emph{Step 2.} For $\psi\in C_c^\infty((0,r_1))$ the function $\Psi(x)=\psi(|x|)\cos2\theta$ lies in $C_c^\infty(B\setminus\{0\})$, and $\Delta\Psi=(\psi''+\psi'/r-4\psi/r^2)\cos2\theta$. Testing $\Delta U=s$ against $\Psi$ in polar coordinates gives
+\[
+\int_0^{r_1}F(r)\Bigl((r\psi')'-\frac{4\psi}r\Bigr)dr=\int_0^{r_1}rG(r)\psi(r)\,dr,
+\]
+that is, $(rF')'-4F/r=rG$ in $\D'((0,r_1))$. The right-hand side and $4F/r$ are locally bounded, so $rF'$ agrees with a locally absolutely continuous function $Q$, and $F$ is continuously differentiable with $rF'=Q$ and $Q'=4F/r+rG$ almost everywhere.
+
+\emph{Step 3.} Let $f=F/r^2$, so that $|f|\le b/2$. Then $r^5f'=r^2Q-2r^2F$ is locally absolutely continuous on $(0,r_1)$, and almost everywhere
+\[
+(r^5f')'=2rQ+r^2Q'-4rF-2r^2F'=r^3G.
+\]
+Since $|t^3G(t)|\le2bt^3$, the limit $C=\lim_{r\to0}r^5f'(r)$ exists and $r^5f'(r)=C+\int_0^rt^3G(t)\,dt$.
+
+\emph{Step 4.} Suppose that $G\ge g_0$ almost everywhere on $(0,r_1)$ for some $g_0>0$. If $C\ne0$, then, since $|\int_0^rt^3G|\le br^4/2$, there is $r_2\in(0,r_1)$ such that $f'$ has the sign of $C$ and $|f'(r)|\ge|C|/(2r^5)\ge|C|/(2r_2^4r)$ on $(0,r_2)$. If $C=0$, then $r^5f'(r)\ge g_0r^4/4$, that is, $f'(r)\ge g_0/(4r)$. In both cases there are $c>0$ and $r_2>0$ with $|f(r_2)-f(r)|\ge c\log(r_2/r)$ for $0<r<r_2$, which contradicts $|f|\le b/2$. So no such $g_0$ exists.
+
+\emph{Step 5.} By Fubini's theorem, for almost every $r$ we have $a\le s(r,\theta)\le b$ for almost every $|\theta|\le\alpha/2$ and $s(r,\theta)=0$ for almost every $|\theta|>\alpha/2$. If $\alpha\le\pi/2$, then $\cos2\theta\ge0$ on $|\theta|\le\alpha/2$, and
+\[
+G(r)\ge\frac a\pi\int_{-\alpha/2}^{\alpha/2}\cos2\theta\,d\theta=\frac{a\sin\alpha}\pi.
+\]
+If $\alpha>\pi/2$, then $s\ge a$ and $\cos2\theta\ge0$ on $|\theta|\le\pi/4$, while $s\le b$ and $\cos2\theta\le0$ on $\pi/4<|\theta|\le\alpha/2$, so
+\[
+G(r)\ge\frac1\pi\Bigl(a\int_{-\pi/4}^{\pi/4}\cos2\theta\,d\theta+2b\int_{\pi/4}^{\alpha/2}\cos2\theta\,d\theta\Bigr)=\frac{a-b(1-\sin\alpha)}\pi.
+\]
+
+\emph{Step 6.} If $\alpha\le\pi/2$, Step~5 gives $G\ge a\sin\alpha/\pi>0$, against Step~4. So $\alpha>\pi/2$, and if $a>b(1-\sin\alpha)$, Step~5 again gives a positive lower bound for $G$. Hence $a\le b(1-\sin\alpha)$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Since $W\cap B(p,r)$ has nonempty interior, $R_K=\max_{y\in K}|y|>0$. Let $\rho_j=\max\{|x|:x\in S_{n_j,H}\}$. Hausdorff convergence gives $c_j\rho_j\to R_K$, and Theorem~\ref{thm:lp} gives $c_1\pi^{-1/2}\le\liminf\rho_j/\sqrt{n_j}\le\limsup\rho_j/\sqrt{n_j}\le c_1'\pi^{-1/2}$. So $c_j\sqrt{n_j}$ stays in a compact subset of $(0,\infty)$, and along a subsequence $c_j\sqrt{n_j}\to\lambda\in(0,\infty)$. Then $n_j^{-1/2}S_{n_j,H}\to\lambda^{-1}K$, and $\lambda^{-1}K$ coincides near $\lambda^{-1}p$ with the sector $\lambda^{-1}W$ of the same opening. We may therefore assume that $c_j=h_j=n_j^{-1/2}$, and we pass to the subsequence of Proposition~\ref{prop:limit}.
+
+By Proposition~\ref{prop:limit}(iii), $0$ is an interior point of $K$. The vertex $p$ is a boundary point of $K$, because $\alpha<\pi$ and $K=W$ in $B(p,r)$. So $p\ne0$. Let $\rho_0=\min(r,|p|/2)$ and $B=B(p,\rho_0)$, so that $0\notin\overline B$. On $B$ the function $U$ is continuous and nonnegative, $U=0$ on $B\setminus W=B\setminus K$, and $\Delta U=s$ in $\D'(B)$. The interior of $K$ meets $B$ in $B\cap\operatorname{int}W$, and the edges of $W$ have measure zero, so $H+2\le s\le H+3$ almost everywhere on $B\cap W$ and $s=0$ almost everywhere on $B\setminus W$. After a translation taking $p$ to $0$ and a rotation taking the bisector of $W$ to the positive first axis, Lemma~\ref{lem:corner} applies with $a=H+2\ge1$, $b=H+3$ and $r_1=\rho_0$. It gives $\alpha>\pi/2$ and $H+2\le(H+3)(1-\sin\alpha)$, that is, $\sin\alpha\le1/(H+3)$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:polygon}]
+Each set $S_{n,H}$ is invariant under the rotation $\mathcal R$ by $\pi/2$ about the origin (Section~\ref{sec:sandpile}), hence so is $K$, and $\mathcal R$ permutes the vertices of $K$. A vertex fixed by $\mathcal R$, $\mathcal R^2$ or $\mathcal R^3$ would be the origin, which is an interior point of $K$ by the proof of Theorem~\ref{thm:main}. So all orbits have four elements, and $4$ divides $m$.
+
+Let $\alpha_1,\dots,\alpha_m$ be the interior angles and $\beta_i=\pi-\alpha_i$ the exterior angles, so that $\sum_i\beta_i=2\pi$. Near each vertex $K$ coincides with a closed sector of opening $\alpha_i\in(0,\pi)$, so Theorem~\ref{thm:main} gives $\alpha_i>\pi/2$ and $\sin\beta_i=\sin\alpha_i\le1/k$ with $k=H+3$. As $\beta_i\in(0,\pi/2)$, $\beta_i\le\arcsin(1/k)$, so $2\pi\le m\arcsin(1/k)$. Jordan's inequality gives $\sin(\pi/(2k))>1/k$, so $\arcsin(1/k)<\pi/(2k)$ and $m>4k=4H+12$; as $4$ divides $m$, $m\ge4H+16$. For $H=-1$, $\arcsin(1/2)=\pi/6$, so $m\ge12$, and $m=12$ forces $\beta_i=\pi/6$ for every $i$. For $H=0$, $\sin(\pi/9)=0.3420\ldots>1/3$, so $\arcsin(1/3)<\pi/9$, $m>18$, and $m\ge20$.
+\end{proof}
+
+\begin{remark}\label{rem:sharp}
+For $a=b$, Lemma~\ref{lem:corner} excludes corners of every opening. In general it is sharp up to a constant factor in the exterior angle. For $\pi/\sqrt2<\alpha<\pi$ let $U=r^2\cos^2(\pi\theta/\alpha)$ on $W$ and $U=0$ off $W$. This function is continuously differentiable, its second derivatives are bounded, and on $W$
+\[
+\Delta U=2+\Bigl(2-\frac{2\pi^2}{\alpha^2}\Bigr)\cos\frac{2\pi\theta}\alpha,
+\]
+which takes all values between $a_\alpha=4-2\pi^2/\alpha^2>0$ and $b_\alpha=2\pi^2/\alpha^2$. So, with $k=H+3\ge2$, a multiple of $U$ satisfies the hypotheses of Lemma~\ref{lem:corner} with $a=k-1$ and $b=k$ whenever $b_\alpha/a_\alpha\le k/(k-1)$, that is, whenever $\alpha\ge\pi(1-1/(2k))^{1/2}$. The exterior angles $\pi-\alpha$ of these examples reach $\pi(1-(1-1/(2k))^{1/2})=\pi/(4k)+O(k^{-2})$, while Lemma~\ref{lem:corner} bounds them by $\arcsin(1/k)=1/k+O(k^{-3})$. For these functions $F$ is a multiple of $r^2$ and $G=0$. In particular, the bounds $H+2\le s\le H+3$ alone do not exclude corners in the limit.
+\end{remark}
+
+\begin{remark}
+For $H=-2$ the argument of Proposition~\ref{prop:limit}(iii) gives only $s\ge H+2=0$ in the interior of a limit, so Lemma~\ref{lem:corner} does not apply, in agreement with the right angles of the squares $S_{n,-2}$.
+\end{remark}
+
+\section{Computations}\label{sec:checks}
+
+The repository listed under Data availability contains a Python script, \texttt{checks.py}, with its output, and a Lean file, \texttt{Corner.lean}, with its output. The script needs Python~3 with NumPy, Numba, SymPy and mpmath. It carries out $22$ exact legal stabilizations, for $H=-2,\dots,2$ with $n=1024$, $4096$, $16384$ and $65536$ and for $H=-1,0$ with $n=262144$ (with $189{,}225$ and $113{,}777$ fired sites), and in each it checks the identity $\eta=\eta_0+\Delta u$, stability, the conservation law in \eqref{eq:heights}, that no chip reaches the border of the array, the bounds $\eta\ge0$ on the fired set and $\eta\ge-H$ off it, the symmetries of the square, the inequality of Lemma~\ref{lem:reflection} in the four coordinate directions, that every row of the fired set is a centred interval whose length does not increase with $|x_2|$, and the inequality of Lemma~\ref{lem:lastfiring} for $28$ weights (the indicator of the fired set, the odometer, $20$ random integer weights between $0$ and $1000$, $5$ random indicators and the indicator of the fired sites with an unfired neighbour) together with the identity for its right-hand side; for $H=-2$ it checks that the fired set is a square. It also prints the distances from the origin to the nearest site that does not fire and to the farthest site that fires, divided by $\sqrt n$, and the mean of $\eta+H$ over the fired set. On every run with $H\ge-1$ both distances lie between $((H+3)\pi)^{-1/2}$ and $((H+2)\pi)^{-1/2}$, and at the largest $n$ the mean of $\eta+H$ is $0.41$, $1.37$, $2.28$, $3.24$ and $4.21$ for $H=-2,\dots,2$, inside $[H+2,H+3]$ in each case. With SymPy the script verifies the integrals of $\cos2\theta$ in Step~5 of the proof of Lemma~\ref{lem:corner}, the formula for $\Delta(\psi(r)\cos2\theta)$ on three test functions, the identities of Step~3, the integration in Step~4, and the formula for $\Delta U$ in Remark~\ref{rem:sharp}, the continuity of the derivative of that $U$ across the edges, and $G=0$ for four openings. With mpmath, at $50$ digits, it checks $k\sin(\pi/(2k))>1$ for $k=2,\dots,1000$, the bounds of Corollary~\ref{cor:polygon} for $H=-1,\dots,20$, $\sin(\pi/9)>1/3$, and $a_\alpha\le b_\alpha(1-\sin\alpha)$ for the functions of Remark~\ref{rem:sharp} at $399$ openings. The Lean file, checked with Lean~4 \cite{MU21} (version 4.33.1) and Mathlib \cite{Mathlib20}, proves the integrals of $\cos2\theta$ in Step~5, the two lower bounds of Step~5 for a pointwise density, the equivalence of $k-1\le k(1-\sin\alpha)$ with $\sin\alpha\le1/k$, the algebra of Step~3, the logarithmic growth used in Step~4, the identity $\min(x,y)=(x+y-|x-y|)/2$ of Lemma~\ref{lem:lastfiring}, the inequalities $k\sin(\pi/(2k))>1$ and $\arcsin(1/k)<\pi/(2k)$ for integers $k\ge2$, the interior angle of the regular $4k$-gon, and the counting in the proof of Corollary~\ref{cor:polygon}, including $m\ge12$ with its case of equality for $H=-1$ and $m\ge20$ for $H=0$. These computations test the identities and inequalities used in the proofs; they are not part of them.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. On 11 October 2026 an agent running in OpenAI's Codex (GPT-6.1 Sol) found the argument, and two other Codex agents and a Claude agent checked it. On 13 October 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, searched the literature and wrote the proof in its present form, which treats subsequential limits under any rescaling, together with the computer checks, the Lean file and the manuscript. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code and the Lean file are available at\\ \url{https://github.com/yspennstate/sandpile-holes-corner-angles}.
+
+\begin{thebibliography}{10}
+
+\bibitem{AS}
+N.~Aleksanyan and H.~Shahgholian, Discrete balayage and boundary sandpile, \emph{J. Anal. Math.} \textbf{138} (2019), 361--403.
+
+\bibitem{BR}
+A.~Bou-Rabee, Convergence of the random abelian sandpile, \emph{Ann. Probab.} \textbf{49} (2021), 3168--3196.
+
+\bibitem{FLP}
+A.~Fey, L.~Levine and Y.~Peres, Growth rates and explosions in sandpiles, \emph{J. Stat. Phys.} \textbf{138} (2010), 143--159.
+
+\bibitem{FR}
+A.~Fey-den Boer and F.~Redig, Limiting shapes for deterministic centrally seeded growth models, \emph{J. Stat. Phys.} \textbf{130} (2008), 579--597.
+
+\bibitem{HLMPPW}
+A.~E.~Holroyd, L.~Levine, K.~M\'esz\'aros, Y.~Peres, J.~Propp and D.~B.~Wilson, Chip-firing and rotor-routing on directed graphs, in \emph{In and Out of Equilibrium~2}, Progr. Probab. \textbf{60}, Birkh\"auser, Basel, 2008, 331--364.
+
+\bibitem{LBR}
+Y.~Le Borgne and D.~Rossin, On the identity of the sandpile group, \emph{Discrete Math.} \textbf{256} (2002), 775--790.
+
+\bibitem{LP}
+L.~Levine and Y.~Peres, Strong spherical asymptotics for rotor-router aggregation and the divisible sandpile, \emph{Potential Anal.} \textbf{30} (2009), 1--27.
+
+\bibitem{MU21}
+L.~de~Moura and S.~Ullrich, The Lean~4 theorem prover and programming language, in \emph{Automated Deduction -- CADE~28}, Lecture Notes in Comput. Sci. \textbf{12699}, Springer, 2021, 625--635.
+
+\bibitem{Mathlib20}
+The mathlib Community, The Lean mathematical library, in \emph{Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020)}, ACM, 2020, 367--381.
+
+\bibitem{PS}
+W.~Pegden and C.~K.~Smart, Convergence of the Abelian sandpile, \emph{Duke Math. J.} \textbf{162} (2013), 627--642.
+
+\end{thebibliography}
+\end{document}

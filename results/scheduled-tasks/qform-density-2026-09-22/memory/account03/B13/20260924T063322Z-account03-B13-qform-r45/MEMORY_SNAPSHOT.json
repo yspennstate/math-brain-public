@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260924T063322Z-account03-B13-qform-r45",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit_start": "2ba6afa7c9576497d28e0e6093090a925448ada6",
+  "control_commit_prepublication": "1f620a0a861dc8e8b2ee6a2fd0b6696ade9a46d6",
+  "control_revision": "2026-09-22.15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "full_qform_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY; proved in the exact diffuse rank-two multisquare scope",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@57ccfc48fbd392d6b1948c288308c9e3db05e69b",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260924T053240Z-account03-B13-qform-r44/REPORT.md",
+      "scope": "one-physical-square rank-two Strichartz receiver and high-density near-rank-one reduction"
+    },
+    {
+      "source": "yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e",
+      "scope": "account04/B13 optimizer-free slab dichotomy in diffuse exact rank two"
+    },
+    {
+      "source": "yspennstate/math-open-problems@635da12cb1c19b27c455c662be800eb1113dd845",
+      "scope": "account04/B13 fifth-diagonal sparsification and optimizer-free product reduction"
+    },
+    {
+      "source": "yspennstate/math-open-problems@8b90908a934588442491cf1a41c7db12ece290bf",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260924T061740Z-account04-B13-nearnull-star-r3/REPORT.md",
+      "scope": "near-null determinant versus fixed physical-star dichotomy"
+    }
+  ],
+  "result_ids": [
+    "QFORM-R2-MULTISQUARE-STRICHARTZ-v1",
+    "QFORM-TWOSQUARE-DET-3OVER7-v1",
+    "QFORM-DIFFUSE-R2-DET-RHO7OVER3-COLLAPSE-v1",
+    "QFORM-DOMINANT-RANK1-PHYSICAL-STAR-v1"
+  ],
+  "key_results": [
+    "For 2<=m<=4 selected physical diagonal squares in a diffuse exact-rank-two carrier, integrated mixed Strichartz gives a continuous-density bound with exponent alpha=sum_i(1-2c_i)/4.",
+    "With two physical |d_i|>=delta and |det Lambda|<=1, ||p||_infinity <= C(1+delta^-1/3 |det Lambda|^-3/7).",
+    "The prior O(rho^-2) determinant branch plus s3(A)>=1 forces two physical |d_i|>=1/2, hence |det Lambda|=O(rho^-7/3) and the second carrier mode is O(rho^-7/6)=o(rho^-1).",
+    "Applying account04/B13 r3: either |det Lambda|<3072e^2 rho^-4 or the dominant rank-one carrier inherits an original-coordinate star of size 2^-1/2-o(1), with a four-coordinate-core/outside-bank split."
+  ],
+  "canonical_math_commit": "a1ccc98be0cd4752de1b2b29e4c46f8193854757",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260924T063322Z-account03-B13-qform-r45/REPORT.md",
+  "checker_status": "QFORM_B13_R45_EXPONENT_CHECK_PASS",
+  "handoff_commit": "cf59a21415d66f77d36944d8c888ae342026d19f",
+  "next": "QFORM-RANK1-4DIAG-SEPARABLE1OVERrho-ENTANGLED7OVER6-RECEIVER-v1",
+  "limitations": [
+    "Full QFORM is not proved or disproved.",
+    "The O(rho^-7/6) entangled second mode is retained and cannot be discarded on arbitrary fragmented/unbounded product supports.",
+    "No full-target continuity conclusion is claimed.",
+    "No native brain receiver ingestion was authenticated in this run."
+  ]
+}

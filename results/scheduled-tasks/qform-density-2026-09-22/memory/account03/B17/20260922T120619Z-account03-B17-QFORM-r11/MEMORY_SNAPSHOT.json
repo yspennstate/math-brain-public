@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260922T120619Z-account03-B17-QFORM-r11",
+  "execution_context": "scheduled_automation",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "control_start_commit": "60c0dab09d6b76cb8aa7b02108b5a0049c3662fd",
+  "prepublication_control_commit": "4286c417f2dd17b8550b88f332b02d03cd4d275e",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH"
+  ],
+  "reviewed_result": {
+    "status": "INDEPENDENT_SCOPED_REVIEW",
+    "claims": [
+      "Six-uniform target witness has continuous density with p_Q(0)=2*pi-7/3>pi.",
+      "Any finite universal target constant must satisfy C>=3*sqrt(2)."
+    ],
+    "source_commit": "8624982153e5a2154e4ae8922d2fe4dc77080efc"
+  },
+  "new_mathematics": [
+    "For rank-three A=R Lambda R^T with R^T R=I_3, sum over coordinate triples I of |det A_I| equals |det Lambda|.",
+    "For A_m=diag(J_m/m,J_m/m,-J_m/m), exactly m^3 coordinate triples are nonsingular, each with determinant -m^-3; all other principal triples are singular.",
+    "Applying the completed account04/B18 Schur-pivot theorem to every nonsingular triple of A_m gives the best one-triple bound 2*sqrt(pi)*m, proving that this one-triple closure mechanism cannot be dimension-free on the full target."
+  ],
+  "partner_result_applied": {
+    "requested_partner": "account04/B17",
+    "requested_partner_artifact_status": "NO_COMPLETED_QFORM_ARTIFACT_VISIBLE_AT_FINAL_PREPUBLICATION_READ",
+    "compatible_completed_source": "account04/B18",
+    "source_run": "20260922T113729Z-account04-B18-qform-r1",
+    "source_report": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T113729Z-account04-B18-qform-r1/REPORT.md",
+    "applied_theorem": "QFORM-SCHUR-PIVOT-SMOOTHING-v1"
+  },
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "cf171c3ee8e2068e3595e103a416cc26befa68f2",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T120619Z-account03-B17-QFORM-r11/REPORT.md",
+    "blob": "0106de91a586427e9ab14f4d8dc13d52a7064034"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "e29f6e83139be929a8db09f5ac5b67926e7741d2",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B17/20260922T120619Z-account03-B17-QFORM-r11.md"
+  },
+  "unresolved_implication": "Convert conserved aggregate rank-three determinant/cross-block mass into a dimension-free density or small-ball estimate before inverse determinant powers are paid, while handling mixed leverage and additional spectral directions.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "next_step": "Attempt an aggregate-minor randomized partition inequality on rank-three mixed-leverage frames, then test whether the argument survives arbitrary within-block quadratic terms and extra eigenvalues."
+}

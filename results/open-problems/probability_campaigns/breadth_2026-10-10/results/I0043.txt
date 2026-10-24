@@ -1,0 +1,267 @@
+{
+  "problem_id": "I0043",
+  "source_checks": {
+    "method": "Status assessed from memory only. No web search, browsing, or child agents.",
+    "source_excerpt": "The user supplied Schramm's Problem 7.2, recorded as schramm_2006_v2. The original document and revision were not inspected.",
+    "known_related_papers": [
+      {
+        "authors": ["Steffen Rohde", "Oded Schramm"],
+        "year": 2005,
+        "title": "Basic properties of SLE",
+        "relevance": "Foundational trace properties and the simple-path regime. Partial resolution of the boundary question.",
+        "verification": "Recalled from memory."
+      },
+      {
+        "authors": ["Vincent Beffara"],
+        "year": 2008,
+        "title": "The dimension of the SLE curves",
+        "relevance": "The Hausdorff dimension of the trace; relevant background, not a complete compact-set hitting criterion.",
+        "verification": "Recalled from memory."
+      },
+      {
+        "authors": ["Gregory F. Lawler", "Oded Schramm", "Wendelin Werner"],
+        "year": 2003,
+        "title": "Conformal restriction: the chordal case",
+        "relevance": "Exact avoidance probabilities for appropriate deterministic hulls at κ=8/3.",
+        "verification": "Recalled from memory."
+      }
+    ],
+    "status_from_memory": "I cannot identify a complete classification for arbitrary deterministic compact sets throughout κ<8. This does not certify current openness.",
+    "novelty": "No novelty claim. The interval formula and its consequences may already be standard literature results.",
+    "independent_audit": "Pending the user's reader from a different model family. All proposed nodes remain drafts."
+  },
+  "exact_statement": {
+    "recorded_problem": "Fix κ<8. Find necessary or sufficient conditions on a deterministic compact set K⊂H for P(K∩γ≠∅)>0, where γ is the SLEκ path. The case K⊂R is of particular interest.",
+    "conventions": "γ is chordal SLEκ in H from 0 to infinity, including its starting point, with driving function W_t=√κ B_t and Loewner equation ∂_t g_t(z)=2/(g_t(z)-W_t). Unless stated otherwise, 0<κ<8.",
+    "domain_clarification": "The recorded interior and boundary questions concern different classes of sets. The proved results below address deterministic compact K⊂R.",
+    "proved_results": [
+      "For 0<κ≤4 and compact K⊂R, P(γ∩K≠∅)=1 if 0∈K and equals 0 otherwise.",
+      "For 4<κ<8, put β=4/κ and α=8/κ−1. For 0<a<b, P(γ∩[a,b]≠∅)=B(1−β,α)^(−1)∫_(a/b)^1 u^(−β)(1−u)^(α−1) du.",
+      "Consequently every nondegenerate boundary interval has positive hitting probability when 4<κ<8. Every deterministic boundary point other than 0 has zero hitting probability.",
+      "For 4<κ<8, compact K⊂R with 0∉K and H^α(K)=0 is avoided almost surely. Thus positive hitting probability requires H^α(K)>0.",
+      "For each 4<κ<8 there is an explicit deterministic compact Cantor set K⊂[1,2] with dim_H K=α and H^α(K)=0, hence with zero hitting probability. Therefore dim_H K≥α alone is not sufficient."
+    ]
+  },
+  "answer": "partial",
+  "proof_or_counterexample": {
+    "label": "proof",
+    "scope": "Complete proofs of the stated boundary results, using the standard defining relations between a Loewner trace and its filled hull. No quantitative SLE hitting estimate is assumed.",
+    "definitions": [
+      "B(p,q)=∫_0^1 u^(p−1)(1−u)^(q−1) du for p,q>0.",
+      "H^s denotes Hausdorff measure defined using sums of s-th powers of covering diameters. Its normalization does not affect whether it vanishes.",
+      "For real x>0, T_x is the first collision time of g_t(x)−W_t with 0, with infinity allowed. This is the time x is first swallowed or touched.",
+      "For C_t=γ[0,t], let H_t be the unbounded component of H\\C_t. The hull fills the other components. Every later trace point belongs to the closure of H_t."
+    ],
+    "proofs": [
+      {
+        "id": "G",
+        "title": "Geometric comparison of interval hitting and swallowing",
+        "steps": [
+          "First fix a finite trace segment C_t and a real x>0 not in C_t. If C_t has no real contact at or to the right of x, then x is not swallowed: choose M larger than the trace's modulus. The compact real segment [x,M] is disjoint from C_t, so a sufficiently thin upper strip along it connects a neighborhood of x to infinity without meeting C_t.",
+          "If C_t has a real contact c>x, then x is swallowed and is outside the closure of H_t. Indeed, compactness and x∉C_t give a boundary gap around x. Before a contact to the right of this gap, take the last boundary contact to its left and then the first boundary contact to its right. The intervening path has interior in H and joins opposite sides of x. A simple subarc of this path, together with its real base interval, separates a small upper half-disk at x from infinity by the Jordan curve theorem.",
+          "Thus, for an untouched real point, swallowing is equivalent to the existence of a previous real contact to its right. In particular, an untouched point swallowed at time s cannot be touched later, because it is outside the closure of H_s.",
+          "For 0<a<b, if T_a<T_b, choose finite t strictly between them. Since b has not been swallowed or touched, there is no real trace contact at or beyond b. Since a has been swallowed or touched, either a was touched or there was a real contact c>a. In the latter case c<b. Therefore γ hits [a,b].",
+          "Conversely, suppose γ hits [a,b], and choose 0<a'<a<b<b'. Let τ be its first hit of [a,b]. Its real contact at τ swallows a', so T_a'≤τ. If T_b'≤τ, the preceding geometric characterization supplies a real contact d≥b' at some time s<τ. Every point of [a,b] was then untouched and swallowed at s, making a later first hit impossible. Hence T_b'>τ.",
+          "We have therefore proved {T_a<T_b}⊂{γ hits [a,b]}⊂{T_a'<T_b'} whenever 0<a'<a<b<b'. This avoids any assumption about endpoint hitting probabilities."
+        ]
+      },
+      {
+        "id": "D",
+        "title": "Exact swallowing probability",
+        "steps": [
+          "Fix 4<κ<8 and 0<a<b. Before T_a, set X_t=g_t(a)−W_t, Y_t=g_t(b)−W_t and D_t=Y_t−X_t. Then 0<X_t<Y_t, dX_t=(2/X_t)dt−√κ dB_t, dY_t=(2/Y_t)dt−√κ dB_t, and dD_t=−2D_t/(X_tY_t)dt.",
+          "Put Z_t=X_t/D_t and change time by v=∫_0^t D_s^(−2)ds. Itô's formula and Brownian time change give dZ_v=2(1/Z_v+1/(Z_v+1))dv+√κ dB̃_v, with Z_0=a/(b−a). The sign of the Brownian term is immaterial.",
+          "In this clock, D(v)=(b−a)exp(−2∫_0^v [Z_w(Z_w+1)]^(−1)dw), and physical time is t(v)=∫_0^v D(w)^2dw.",
+          "At any finite clock time before killing, Z cannot explode to infinity: on Z≥1 its drift is at most 3, so each excursion above 1 is bounded by a constant plus the Brownian oscillation on that finite time interval. Since the drift is nonnegative, boundedness of Z and Brownian continuity also imply that its accumulated drift has a finite limit at a finite terminal clock time.",
+          "If Z reaches 0 at a finite clock time, its SDE consequently gives ∫dv/Z_v<∞ up to that time. Hence D has a strictly positive terminal value. Physical time is finite because D≤b−a. Thus X reaches 0 while Y remains positive, which is exactly T_a<T_b.",
+          "Conversely, T_a<T_b implies that D approaches Y_(T_a)>0, so the clock up to T_a is finite and Z reaches 0 there. A simultaneous collision cannot terminate the clock at a finite time: a positive limit of Z would leave X positive, while a zero limit keeps D positive by the preceding integrability argument. Infinite physical time also forces infinite clock time because v(t)≥t/(b−a)^2. Therefore P(T_a<T_b) equals the probability that this autonomous diffusion reaches 0 at a finite time.",
+          "Write β=4/κ. The diffusion generator is Lf=(κ/2)f''+2(1/z+1/(z+1))f'. Its scale density is ρ(z)=[z(z+1)]^(−β), because ρ'/ρ=−(4/κ)(1/z+1/(z+1)). Let S(z)=∫_0^z ρ(y)dy. Since 1/2<β<1, S(0)=0 and 0<S(infinity)<∞.",
+          "Here is an explicit justification that exit through 0 means an actual finite-time hit. For M>z, put m(y)=2/(κρ(y)) and U_M(z)=∫_0^M G_M(z,y)m(y)dy, where G_M(z,y)=S(min(z,y))[S(M)−S(max(z,y))]/S(M). This function is nonnegative, bounded, continuous with zero endpoint values, and satisfies LU_M=−1. To check the equation, note that G_M'/ρ has a jump of −1 at z=y and is constant on each side. Near 0, S(y)m(y) is of order y, so the integral is finite.",
+          "Stop at exit from (ε,M). Itô's formula gives E[t∧τ_(ε,M)]≤U_M(z). Letting t tend to infinity and ε decrease to 0 proves that exit from (0,M) occurs in finite time almost surely. At that exit the SDE has a limit, by boundedness and the nonnegative drift, and the limit is 0 or M.",
+          "Since LS=0, bounded optional stopping first on (ε,M), then letting ε decrease to 0, gives P_z(τ_0<τ_M)=[S(M)−S(z)]/S(M). Let M tend to infinity. Every finite-time hit of 0 has a bounded path before it, so P_z(τ_0<∞)=[S(infinity)−S(z)]/S(infinity).",
+          "Finally substitute u=y/(1+y). Then ρ(y)dy=u^(−β)(1−u)^(2β−2)du. With α=2β−1, S(infinity)=B(1−β,α), and z=a/(b−a) corresponds to u=a/b. Thus P(T_a<T_b)=B(1−β,α)^(−1)∫_(a/b)^1 u^(−β)(1−u)^(α−1)du."
+        ]
+      },
+      {
+        "id": "I",
+        "title": "Boundary interval hitting, exact cases and limits",
+        "steps": [
+          "Apply G and D. The probability of hitting [a,b] is bounded below by the displayed swallowing probability for (a,b), and above by the same continuous function for (a',b'), where a' increases to a and b' decreases to b. The two bounds have the same limit. This proves the exact interval formula.",
+          "The integrand is positive and integrable, so every 0<a<b has strictly positive hitting probability for 4<κ<8. Reflection γ↦−conjugate(γ), induced by Brownian symmetry, gives the corresponding result for negative intervals.",
+          "For a fixed x≠0, enclose x in boundary intervals shrinking to x. The formula tends to zero. The point-hitting event is contained in each interval-hitting event, so P(x∈γ)=0. A countable union proves avoidance of every countable set not containing 0.",
+          "For κ=6, β=2/3 and α=1/3. The normalized density is u^(−2/3)(1−u)^(−2/3), symmetric about 1/2. Consequently P(γ hits [1,2])=1/2 exactly.",
+          "For b=a+ℓ, put ε=ℓ/(a+ℓ). The numerator is ∫_0^ε (1−v)^(−β)v^(α−1)dv=ε^α(1+O(ε))/α. Hence P(γ hits [a,a+ℓ])∼C_κ(ℓ/a)^α, where C_κ=1/[αB(1−β,α)]=Γ(β)/[Γ(1−β)Γ(1+α)].",
+          "For fixed 0<a<b, as κ decreases to 4 the beta normalization diverges while the numerator remains bounded, so the probability tends to 0. As κ increases to 8, B(1−β,α) diverges whereas ∫_0^(a/b) u^(−β)(1−u)^(α−1)du remains bounded. Writing the probability as one minus this latter integral divided by the normalization shows that it tends to 1."
+        ]
+      },
+      {
+        "id": "S",
+        "title": "Complete boundary classification for κ≤4",
+        "steps": [
+          "For a fixed x>0, X_t=g_t(x)−W_t solves dX_t=(2/X_t)dt−√κ dB_t until collision. Its increasing scale function h has derivative h'(x)=x^(−4/κ). For 0<κ≤4, h(ε) tends to minus infinity as ε decreases to 0.",
+          "For 0<ε<x<M, bounded optional stopping on (ε,M) gives P_x(τ_ε<τ_M)=[h(M)−h(x)]/[h(M)−h(ε)]. Exit from this bounded interval is almost surely finite because the diffusion coefficient is a nonzero constant and the drift is bounded there.",
+          "Let ε decrease to 0. The probability of a finite collision before reaching M is zero. Any finite collision has a bounded path before it, so a countable union over integer M proves P(T_x<∞)=0.",
+          "If the trace had any positive real contact c, every rational q with 0<q<c would have been swallowed or touched by then, by G. This contradicts the preceding conclusion simultaneously for the countably many positive rationals. Reflection excludes negative real contacts.",
+          "Thus γ∩R={0} almost surely. Since γ starts at 0, the claimed compact-set classification follows.",
+          "If the degenerate parameter κ=0 is admitted, direct solution of the Loewner equation gives the vertical trace γ(t)=2i√t, and the same boundary classification holds."
+        ]
+      },
+      {
+        "id": "H",
+        "title": "Hausdorff-null boundary sets are polar",
+        "steps": [
+          "Fix 4<κ<8 and a nonempty compact K⊂R with 0∉K. Let δ=dist(K,0)>0. Suppose H^α(K)=0.",
+          "For each η>0, cover K by intervals of positive lengths ℓ_j≤δ/2 with Σ_j ℓ_j^α<η. They can be chosen to meet K and stay on one side of 0. After reflection where necessary, their left endpoints satisfy a_j≥δ/2.",
+          "For one such positive interval [a,a+ℓ], ℓ≤a gives r=a/(a+ℓ)≥1/2. The exact formula yields P(γ hits [a,a+ℓ])≤2^β(1−r)^α/[αB(1−β,α)]≤[2^(β+α)/(αB(1−β,α))]δ^(−α)ℓ^α.",
+          "Use reflection for negative covering intervals and take a countable union bound. Then P(γ hits K)≤[2^(β+α)/(αB(1−β,α))]δ^(−α)η.",
+          "Let η decrease to 0. This proves avoidance. The empty set is immediate. Taking the contrapositive proves that positive hitting probability requires H^α(K)>0 when 0∉K."
+        ]
+      },
+      {
+        "id": "C",
+        "title": "An explicit avoided set at the critical dimension",
+        "steps": [
+          "Fix α∈(0,1), later chosen as 8/κ−1. Define L_n=2^(−n/α)(n+1)^(−1/α), including L_0=1. Start with [1,2]. At stage n≥1, replace every stage-(n−1) interval by its left and right subintervals of length L_n. Let K be the intersection of the resulting nested unions.",
+          "The ratio L_n/L_(n−1)=2^(−1/α)[n/(n+1)]^(1/α) is at most r=2^(−1/α)<1/2. Thus the construction consists of disjoint intervals and defines a nonempty compact Cantor set.",
+          "At level n there are 2^n intervals. Their α-dimensional covering cost is 2^n L_n^α=1/(n+1), which tends to 0. Therefore H^α(K)=0 and dim_H K≤α.",
+          "For the reverse dimension bound, give every level-n interval mass 2^(−n), obtaining a probability measure μ on K by independent fair choices of left and right children. Let c=1−2r>0. Every gap between consecutive level-n intervals is at least cL_(n−1): a gap formed at an earlier level is still larger.",
+          "For an interval I of length ℓ with L_n≤ℓ<L_(n−1), it consequently meets at most N_α=2+ceil(1/c) level-n intervals. Hence μ(I)≤N_α2^(−n).",
+          "For every 0<s<α, A_s=sup_(n≥1) 2^(−n)/L_n^s=sup_(n≥1) 2^(−n(1−s/α))(n+1)^(s/α) is finite. Thus μ(I)≤N_α A_s ℓ^s for every sufficiently small interval I.",
+          "Any sufficiently fine interval cover of K therefore satisfies Σ_j |I_j|^s≥1/(N_α A_s), because its μ-masses sum to at least 1. Arbitrary real-set covers can be replaced by intervals of the same diameter. Hence H^s(K)>0 and dim_H K≥s. Let s increase to α to obtain dim_H K=α.",
+          "Choose α=8/κ−1 and apply H. Then P(γ hits K)=0 although dim_H K=α. This is a counterexample to the proposed sufficient condition dim_H K≥8/κ−1, not a refutation of Schramm's problem.",
+          "For κ=6, L_n=1/[8^n(n+1)^3]. In particular L_1=1/64 and L_2=1/1728. This compact set has dimension 1/3 and is avoided, whereas its convex hull [1,2] is hit with probability 1/2."
+        ]
+      }
+    ],
+    "numerical_evidence": {
+      "label": "numerical evidence",
+      "purpose": "Checks of the proved interval formula, not a simulation-based proof.",
+      "method": "Endpoint-regularized beta integral evaluated by adaptive Simpson quadrature, with Lanczos log-gamma normalization. A separate calculation checked the generator in the X/Y coordinate.",
+      "values": [
+        {
+          "kappa": 5,
+          "interval": [1, 2],
+          "hitting_probability": 0.22737346108325257
+        },
+        {
+          "kappa": 6,
+          "interval": [1, 2],
+          "hitting_probability": 0.5000000000000001,
+          "exact_probability": "1/2"
+        },
+        {
+          "kappa": 7,
+          "interval": [1, 2],
+          "hitting_probability": 0.7638947101398651
+        },
+        {
+          "kappa": 6,
+          "interval": [1, 1.001],
+          "hitting_probability": 0.05659523841461793,
+          "ratio_to_leading_asymptotic": 0.9998334126490781
+        },
+        {
+          "kappa": 6,
+          "interval": [1, 1.000001],
+          "hitting_probability": 0.005660465860220912,
+          "ratio_to_leading_asymptotic": 0.999999833333413
+        }
+      ],
+      "independent_coordinate_check": "For R=X/Y, the time-changed generator is (κ/2)(1−r)^2∂²_r+(1−r)(2/r+2−κ)∂_r. The claimed probability function satisfies its harmonic equation algebraically.",
+      "maximum_observed_relative_generator_residual": 1.7622587692462806e-16,
+      "error_caveat": "Floating-point residuals and quadrature agreement are diagnostics, not certified numerical error bounds."
+    },
+    "conjectures": [],
+    "sketches": []
+  },
+  "hardest_remaining_gap": "This argument supplies no hitting lower bound for fractal boundary sets with positive H^(8/κ−1), and it does not classify compact sets inside H. Extending the calculation would require control of correlations between visits to different neighborhoods and a limiting hitting measure or capacity argument. These are gaps in this submission, not assertions that the literature has not already filled them. Current literature status and novelty remain for the designated reader to check.",
+  "evidence_status": "partial",
+  "draft_brain_nodes": [
+    {
+      "key": "draft:I0043:boundary-interval:v1",
+      "namespace": "probability.sle",
+      "logical_name": "chordal_sle_boundary_interval_hitting_probability",
+      "kind": "theorem",
+      "title": "Exact boundary-interval hitting probability for 4<κ<8",
+      "statement": "For chordal SLEκ in H from 0 to infinity, 4<κ<8 and 0<a<b, put β=4/κ and α=8/κ−1. Then P(γ∩[a,b]≠∅)=B(1−β,α)^(−1)∫_(a/b)^1 u^(−β)(1−u)^(α−1)du. In particular, SLE6 hits [1,2] with probability 1/2.",
+      "proof_text": "Use the geometric and diffusion lemmas proved as G and D in this campaign result. Before T_a, X=g_t(a)−W_t and Y=g_t(b)−W_t satisfy the common-noise Loewner SDEs. With D=Y−X and clock dv=dt/D², Z=X/D has generator (κ/2)∂²+2(1/z+1/(z+1))∂. Its scale density is [z(z+1)]^(−4/κ). The finite-exit argument in D establishes that its finite-time zero-hitting probability is its normalized scale tail and equals P(T_a<T_b). Substitution u=z/(1+z) gives the stated beta tail. G bounds interval hitting below by this probability and above by the analogous probability for expanded endpoints a'<a<b<b'. Continuity as the endpoints converge proves equality. At κ=6 the beta density is symmetric about 1/2, proving the exact value.",
+      "assumptions": [
+        "4<κ<8.",
+        "Chordal SLE in H from 0 to infinity with capacity normalization 2t.",
+        "0<a<b.",
+        "Geometric lemma G and diffusion lemma D, fully proved in this same result."
+      ],
+      "domain": "Probability; stochastic Loewner evolution",
+      "source": {
+        "source_id": "I0043_campaign_result_2026-10-10",
+        "url": null,
+        "revision": "v1; draft; literature and independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "draft:I0043:boundary-small-kappa:v1",
+      "namespace": "probability.sle",
+      "logical_name": "chordal_sle_boundary_compact_sets_kappa_at_most_four",
+      "kind": "theorem",
+      "title": "Boundary compact-set classification for κ≤4",
+      "statement": "For 0<κ≤4 and deterministic compact K⊂R, P(γ∩K≠∅) is 1 when 0∈K and 0 otherwise.",
+      "proof_text": "For each positive rational q, X=g_t(q)−W_t satisfies dX=2dt/X−√κ dB until collision. An increasing scale function has derivative x^(−4/κ), and tends to minus infinity at 0 when κ≤4. Stopping between ε and M gives lower-exit probability [h(M)−h(q)]/[h(M)−h(ε)], which tends to 0 as ε decreases to 0. A union over integer M excludes any finite collision for q. Any positive real trace contact would swallow or touch a smaller positive rational, by the crosscut argument G, so no such contact exists almost surely. Brownian reflection excludes negative contacts. The trace starts at 0, giving the conclusion.",
+      "assumptions": [
+        "0<κ≤4.",
+        "Chordal SLE in H from 0 to infinity.",
+        "K is a deterministic compact subset of R.",
+        "The defining trace-hull relations stated in this result."
+      ],
+      "domain": "Probability; stochastic Loewner evolution",
+      "source": {
+        "source_id": "I0043_campaign_result_2026-10-10",
+        "url": null,
+        "revision": "v1; draft; literature and independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "draft:I0043:hausdorff-null:v1",
+      "namespace": "probability.sle",
+      "logical_name": "sle_boundary_hausdorff_null_sets_are_polar",
+      "kind": "theorem",
+      "title": "Hausdorff-null obstruction to boundary hitting",
+      "statement": "Let 4<κ<8, α=8/κ−1, and K⊂R be deterministic compact with 0∉K. If H^α(K)=0, then P(γ∩K≠∅)=0.",
+      "proof_text": "For nonempty K let δ=dist(K,0)>0. Cover K by same-side intervals of lengths ℓ_j≤δ/2 with total α-cost below η and endpoint distances at least δ/2. The interval theorem bounds each hitting probability by Cδ^(−α)ℓ_j^α, with C=2^(4/κ+α)/[αB(1−4/κ,α)]. Indeed the beta-tail integrand has u^(−4/κ)≤2^(4/κ) because the endpoint ratio is at least 1/2. Reflection treats negative intervals. The union bound gives hitting probability at most Cδ^(−α)η. Let η decrease to 0. The empty set is immediate.",
+      "assumptions": [
+        "4<κ<8.",
+        "K is deterministic, compact, and excludes 0.",
+        "The exact interval theorem proved in this result."
+      ],
+      "domain": "Probability; stochastic Loewner evolution; geometric measure theory",
+      "source": {
+        "source_id": "I0043_campaign_result_2026-10-10",
+        "url": null,
+        "revision": "v1; draft; literature and independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "draft:I0043:critical-cantor:v1",
+      "namespace": "probability.sle",
+      "logical_name": "avoided_boundary_cantor_set_at_sle_critical_dimension",
+      "kind": "theorem",
+      "title": "An avoided Cantor set at dimension 8/κ−1",
+      "statement": "For every 4<κ<8, with α=8/κ−1, there is a deterministic compact K⊂[1,2] satisfying dim_H K=α, H^α(K)=0 and P(γ∩K≠∅)=0. Thus dim_H K≥α is not a sufficient hitting condition.",
+      "proof_text": "At level n retain two endpoint children in every parent, each of length L_n=2^(−n/α)(n+1)^(−1/α), starting from [1,2]. The child-to-parent ratio is at most r=2^(−1/α)<1/2. The level-n α-covering cost is 2^nL_n^α=1/(n+1), proving H^α(K)=0 and dimension at most α. Give each level-n interval mass 2^(−n). All level-n gaps are at least (1−2r)L_(n−1), so an interval with L_n≤ℓ<L_(n−1) meets at most N=2+ceil(1/(1−2r)) level-n intervals. For s<α, sup_n 2^(−n)/L_n^s is finite, giving μ(I)≤C_s|I|^s. Summing over covers proves positive H^s measure and dimension at least s. Let s increase to α. The Hausdorff-null obstruction then proves avoidance.",
+      "assumptions": [
+        "4<κ<8.",
+        "Chordal SLE in H from 0 to infinity.",
+        "The Hausdorff-null obstruction proved in this result."
+      ],
+      "domain": "Probability; stochastic Loewner evolution; fractal geometry",
+      "source": {
+        "source_id": "I0043_campaign_result_2026-10-10",
+        "url": null,
+        "revision": "v1; draft; literature and independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    }
+  ]
+}

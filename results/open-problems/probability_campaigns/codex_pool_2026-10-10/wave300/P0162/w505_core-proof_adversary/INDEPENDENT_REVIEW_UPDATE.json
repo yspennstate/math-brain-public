@@ -1,0 +1,116 @@
+{
+  "reviewer": "w506",
+  "received_at": "2026-10-10T07:18:48.671105+00:00",
+  "receipt_path": "~/brain_workers/w506/CLAIMS.jsonl",
+  "receipts": [
+    {
+      "id": "P0162-REVIEW-W505-C001",
+      "kind": "audit_verdict",
+      "verdict": "KEEP",
+      "statement": "For an arbitrary law p on subsets S of [n], H_2(p)<=sum_i h_2(q_i), where q_i=P(i in S); this fact alone cannot yield H_2(p)<=C sum_i q_i with universal C.",
+      "assumptions": [
+        "finite subset law",
+        "binary entropy",
+        "no Boolean-spectrum constraint"
+      ],
+      "source": "~/brain_workers/w505/CLAIMS.jsonl:w505-C001",
+      "source_quote": "H_2(p)<=sum_i h_2(q_i)",
+      "proof_or_counterexample": "Entropy chain rule and conditioning give subadditivity. For n=1, P(S={1})=q and P(S=empty)=1-q gives H/I=h_2(q)/q>=log_2(1/q), unbounded as q tends to zero. The prior P0162 attempt card also records an n-singleton law obstruction and the Boolean f^2=1 constraint.",
+      "independent_reviewer": "w506",
+      "remaining_gap": "General probability laws need not be Boolean Fourier spectra; Boolean convolution identities are required for FEI.",
+      "status": "independently checked proof for arbitrary laws"
+    },
+    {
+      "id": "P0162-REVIEW-W505-C002",
+      "kind": "audit_verdict",
+      "verdict": "KEEP",
+      "statement": "w505's exact identity Delta_i=sum_T r_T[h_2(w_T)+J(t_T)] and nonnegative lower bound by sum_T b_T^2 log_2(r_T/b_T^2) hold for Boolean uniform-cube f.",
+      "assumptions": [
+        "f Boolean +/-1",
+        "normalized Walsh coefficients",
+        "r_T=a_T^2+b_T^2",
+        "w_T=b_T^2/r_T for r_T>0",
+        "t_T=2a_Tb_T/r_T",
+        "base-2 entropy"
+      ],
+      "source": "~/brain_workers/w505/ATTEMPT.md:Exact local entropy identity",
+      "source_quote": "phi(a^2)+phi(b^2)-(phi((a+b)^2)+phi((a-b)^2))/2 = r [h_2(w)+J(t)]",
+      "proof_or_counterexample": "Expanding phi(x)=x log_2(1/x) on each Fourier pair gives the equality; J(t)=1-h_2((1+t)/2)>=0. The binary entropy term r h_2(w) includes b^2 log_2(r/b^2), with a further nonnegative term. Zero r contributes zero.",
+      "independent_reviewer": "w506",
+      "remaining_gap": "The identity has no universal upper bound by a single coordinate influence; the suitable-coordinate lemma remains unproved.",
+      "status": "independently checked proof of identity"
+    },
+    {
+      "id": "P0162-REVIEW-W505-004",
+      "kind": "audit_verdict",
+      "verdict": "KEEP",
+      "statement": "For F_m(u,v,y)=(-1)^(u dot v)-(1-y)1{u=v=0}, Delta_y(F_m)/I_y(F_m) >= log_2((2^m-1)^2+1); hence no universal bound Delta_i(f)<=C I_i(f) can hold for every Boolean f and every coordinate i.",
+      "assumptions": [
+        "m>=1",
+        "uniform measure on {0,1}^{2m} times selector y in {-1,1}",
+        "normalized Walsh coefficients",
+        "binary Fourier entropy"
+      ],
+      "source": "~/brain_workers/w505/ATTEMPT.md:Explicit Boolean obstruction",
+      "source_quote": "Delta_y(F_m)/I_y(F_m) >= log_2((2^m-1)^2+1)",
+      "proof_or_counterexample": "Independent Walsh derivation gives Bhat(alpha,beta)=2^-m(-1)^(alpha dot beta), dhat=2^-2m, I_y=2^-2m. Entropy identity gives Delta_y=sum_T r_T[h_2(b_T^2/r_T)+J(2a_Tb_T/r_T)] >= I_y log_2((2^m-1)^2+1). Direct truth-table run: python -X utf8 test_selector.py, m=1,2,3 ratios 4.867668747, 8.030013847, 10.255970235; each exceeded its lower bound; total influences matched m+(2m+1)/2^(2m).",
+      "independent_reviewer": "w506",
+      "remaining_gap": "This refutes only the all-coordinate induction input. A suitable-coordinate or amortized lemma is still unproved; it does not settle FEI.",
+      "status": "independently checked proof of intermediate counterexample"
+    },
+    {
+      "id": "P0162-REVIEW-W505-C004",
+      "kind": "audit_verdict",
+      "verdict": "KEEP",
+      "statement": "w505's bent-point selector family F_m has H_2(F_m)<=2I(F_m) for every m>=1.",
+      "assumptions": [
+        "exact F_m in w505 ATTEMPT.md",
+        "uniform cube",
+        "binary entropy"
+      ],
+      "source": "~/brain_workers/w505/ATTEMPT.md:Explicit Boolean obstruction",
+      "source_quote": "The complete H/I ratio therefore does not grow like the defective Delta_y/I_y ratio.",
+      "proof_or_counterexample": "The selector-present spectral slice has mass rho=2^-2m; conditional on selector presence or absence, at most 2^(2m) base Fourier indices occur. Thus H<=2m+h_2(rho). Direct flips give I=m+(2m+1)rho; h_2(rho)<=2m rho+rho/ln2 yields H<=2I. Independent truth tables m=1,2,3 corroborated.",
+      "independent_reviewer": "w506",
+      "remaining_gap": "Only this family is covered, and FEI for every Boolean function is unproved.",
+      "status": "independently checked proof of special family"
+    },
+    {
+      "id": "P0162-REVIEW-W505-C005",
+      "kind": "audit_verdict",
+      "verdict": "KEEP",
+      "statement": "For any Boolean f and coordinate i, 0<=Delta_i(f)<=h_2(q)+4q(1-q), q=Inf_i(f).",
+      "assumptions": [
+        "uniform cube",
+        "Boolean +/-1 output",
+        "binary entropy"
+      ],
+      "source": "~/brain_workers/w505/ATTEMPT.md:local upper bound",
+      "source_quote": "Delta_i<=h_2(I_i)+4I_i(1-I_i)",
+      "proof_or_counterexample": "From the exact identity, Jensen gives sum r h_2(w)<=h_2(q); J(t)<=t^2<=4w(1-w), and Jensen on w(1-w) gives sum r J(t)<=4q(1-q). J(t)<=t^2 follows from its positive even-power series whose coefficients sum to J(1)=1.",
+      "independent_reviewer": "w506",
+      "remaining_gap": "h_2(q)/q diverges as q tends to zero; prior owner memory records a sharper high-influence reduction, so no novelty is asserted.",
+      "status": "independently checked proof of elementary bound"
+    },
+    {
+      "id": "P0162-REVIEW-W505-C006",
+      "kind": "audit_verdict",
+      "verdict": "KEEP",
+      "statement": "If every nonconstant Boolean f has some relevant i with Delta_i(f)<=K Inf_i(f) for one universal K, then FEI follows with the same K.",
+      "assumptions": [
+        "the universal suitable-coordinate premise is assumed",
+        "all dimensions and all restrictions",
+        "uniform cube",
+        "Boolean restrictions"
+      ],
+      "source": "~/brain_workers/w505/CLAIMS.jsonl:w505-C006; https://arxiv.org/abs/2606.00246",
+      "source_quote": "A sufficient unproved input for full FEI is the existence of a universal C",
+      "proof_or_counterexample": "Induction uses exact entropy and influence recursions and the constant-function base case. This duplicates the conditional reduction checked in w504 C002 and the 2026 primary paper's induction framework.",
+      "independent_reviewer": "w506",
+      "remaining_gap": "The premise is not proved, so the full FEI conjecture does not follow from work in these packets.",
+      "status": "independently checked conditional reduction"
+    }
+  ],
+  "scope": "C001-C005 mathematical proofs checked; C006 conditional induction checked, existence premise NOT proved.",
+  "different_model_review_gate": "UNKNOWN; served model evidence unavailable"
+}

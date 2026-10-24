@@ -1,0 +1,60 @@
+{
+  "gate": {
+    "wall_seconds": 60.0,
+    "max_configurations_per_model": 128,
+    "local_cpu_only": true
+  },
+  "proof_scope": "Exact finite rational arithmetic controls only; G1 unproved; no formal theorem checker.",
+  "status": "PASS",
+  "models": [
+    {
+      "model": "two-path-diamond",
+      "p": "1/2",
+      "configurations": 16,
+      "variance": "23/64",
+      "energy": "1/2",
+      "variance_over_energy": "23/32"
+    },
+    {
+      "model": "two-path-diamond",
+      "p": "3/4",
+      "configurations": 16,
+      "variance": "6543/16384",
+      "energy": "63/128",
+      "variance_over_energy": "727/896"
+    },
+    {
+      "model": "two-path-diamond",
+      "p": "99/100",
+      "configurations": 16,
+      "variance": "96088711920399/2500000000000000",
+      "energy": "48524751/1250000000",
+      "variance_over_energy": "9803970199/9902000000"
+    },
+    {
+      "model": "two-by-three-ladder",
+      "p": "1/2",
+      "configurations": 128,
+      "variance": "1/2",
+      "energy": "1/2",
+      "variance_over_energy": "1"
+    }
+  ],
+  "counts": {
+    "variance_identities": 4,
+    "gradient_correlations": 15,
+    "forcing_sandwiches": 544,
+    "energy_sandwiches": 4,
+    "harmonic_identities": 4,
+    "negative_controls_rejected": 2
+  },
+  "endpoint_shortcut": {
+    "wrong": "1/2",
+    "actual": "23/64"
+  },
+  "typical_scale_shortcut": {
+    "wrong": "1/16",
+    "actual": "23/128"
+  },
+  "elapsed_seconds": 0.174503
+}

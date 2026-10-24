@@ -1,0 +1,45 @@
+{
+  "task": "T08 / Salez arXiv:2508.21055 Problem 2.3",
+  "worker": "NM13-01",
+  "date": "2026-09-20",
+  "runtime": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "UNVERIFIED",
+    "requested_gpt6_maximum": true
+  },
+  "parent_problem": {
+    "before": "OPEN",
+    "after": "OPEN",
+    "source_convention": "rate-one continuous time P_t=exp(t(T-I))"
+  },
+  "restricted_result": {
+    "status": "CANDIDATE_FULL pending independent review",
+    "name": "normalizing-voltage two-front cutoff transfer",
+    "scope_gain": "bounded-degree Cayley voltage lifts with a growing macroscopic hidden cutoff factor; no subcritical hidden-information-volume restriction",
+    "explicit_class": {
+      "degree": 14,
+      "vertex_transitive": true,
+      "spectral_gap_lower": "(3-sqrt(5))/7",
+      "vertex_count_relation": "N_j=4 n_j m_j with m_j=n_j^{2+o(1)}",
+      "cutoff_center": "(7/2) log_5 m_j = 7 log_5 n_j + O(1) = (7/3) log_5 N_j + O(1)",
+      "window": "O(sqrt(log N_j))",
+      "long_range_expansion": "fails every fixed positive LRE constant"
+    }
+  },
+  "mechanism_advance": {
+    "previous_obstruction": "the preceding growing-memory theorem needed 0.5 log|K_n| below the hidden L2 spectral-dissipation budget; critical/supercritical memory was unresolved",
+    "new_identity": "for normalizing voltage twists, conditioned monodromy commutes with the hidden semigroup, so hidden error is its actual TV distance rather than sqrt(|K|) times an L2 decay",
+    "two_front_sandwich": "max{d_G(dt/D),d_L(ell t/D)} <= d_H(t) <= d_G(dt/D)+d_L(ell t/D)+d_A(rt/D)",
+    "obstruction_removed": "supercritical polynomial hidden memory is not itself an obstruction; in the explicit family |K|=n^{2+o(1)} while the old L2 criterion only covered alpha<(3-sqrt(5))/log 5=0.4746576532...",
+    "residual_obstruction": "nonnormalizing monodromy, or the absence of a sharp macroscopic factor, can prevent replacement of hidden information by an actual factor TV profile"
+  },
+  "partner_split": "P26 remains on shell/NBRW Green and weighted-exceptional-spectrum transfer; this run is algebraic/transitivity/voltage-monodromy transfer",
+  "sanity": {
+    "checker": "2026-09-20T10-30-00Z__normalizing-voltage-check.py",
+    "output": "2026-09-20T10-30-00Z__normalizing-voltage-check.out",
+    "result": "ALL_CHECKS_PASS",
+    "finite_check_is_not_asymptotic_proof": true
+  },
+  "novelty": "UNVERIFIED",
+  "next_attack": "replace exact normalizer commutation by approximate conjugacy control or a bounded-dimensional representation decomposition, seeking a TV-stable factor criterion intrinsic to arbitrary transitive expanders"
+}

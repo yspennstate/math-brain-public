@@ -1,0 +1,48 @@
+[
+  {
+    "service": "source_pdf",
+    "query": "https://arxiv.org/pdf/2202.02366",
+    "date": "2026-10-11",
+    "result": "saved",
+    "bytes": 59904
+  },
+  {
+    "service": "arxiv",
+    "query": "http://export.arxiv.org/api/query?search_query=all:%22symmetric%20queues%22&start=0&max_results=30",
+    "date": "2026-10-11",
+    "result": "saved",
+    "bytes": 3279
+  },
+  {
+    "service": "openalex_search",
+    "query": "https://api.openalex.org/works?search=Conjectures%20on%20Symmetric%20Queues%20in%20Heavy%20Traffic&per-page=10",
+    "date": "2026-10-11",
+    "result": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "openalex_related",
+    "query": "https://api.openalex.org/works?search=symmetric%20queues%20heavy%20traffic&per-page=30",
+    "date": "2026-10-11",
+    "result": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "crossref",
+    "query": "https://api.crossref.org/works?query=symmetric%20queues%20heavy%20traffic&rows=30",
+    "date": "2026-10-11",
+    "result": "saved",
+    "bytes": 204506
+  },
+  {
+    "service": "semantic",
+    "query": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2202.02366?fields=title,authors,year,citations.title,citations.year,citations.externalIds",
+    "date": "2026-10-11",
+    "result": "HTTP Error 429: "
+  },
+  {
+    "service": "github",
+    "query": "https://api.github.com/search/repositories?q=%22symmetric+queues%22",
+    "date": "2026-10-11",
+    "result": "saved",
+    "bytes": 55
+  }
+]

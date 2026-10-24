@@ -1,0 +1,622 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\N}{\mathcal N}
+
+\title{Cover-Time Fluctuations Can Exceed the Maximal-Hitting-Time Scale}
+\author{Yitzchak Shmalo}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Ding, Lee and Peres asked whether, for finite connected graphs in the regime
+$t_{\rm cov}/t_{\rm hit}\to\infty$, the standard deviation of the cover time is
+universally of order at most the maximal hitting time, and whether the cover
+time centered at $t_{\rm cov}$ has a universal constant-rate exponential tail
+on the $t_{\rm hit}$ scale.  We give a simple family of unweighted graphs for
+which both conclusions fail.  The graph $G_k$ consists of a center with $k$
+pendant leaves and a $k$-clique attached through a single gateway edge.  We
+prove the exact formula
+\[
+ t_{\rm hit}(G_k)=2k^2+k+1
+\]
+and $t_{\rm cov}(G_k)/t_{\rm hit}(G_k)=\Theta(\log k)$.  More sharply, for
+\emph{every} sequence of starting vertices $x_k\in V(G_k)$,
+\[
+ \frac{\tau_{\rm cov}-t_{\rm cov}(G_k)}
+ {t_{\rm hit}(G_k)\sqrt{(\log k)/2}}
+ \Longrightarrow \N(0,1),
+\]
+and
+\[
+ \frac{\Var_{x_k}(\tau_{\rm cov})}
+ {t_{\rm hit}(G_k)^2\log k}\longrightarrow \frac12.
+\]
+Thus $\operatorname{SD}(\tau_{\rm cov})/t_{\rm hit}\sim
+\sqrt{(\log k)/2}\to\infty$.  The mechanism is a marked coupon collector:
+while the leaves are collected, rare departures into the clique contribute
+independent trap durations with variance of order $k^4$; their harmonic number
+of occurrences produces the additional $\sqrt{\log k}$ fluctuation factor.
+\end{abstract}
+
+\section{The source question and the graph family}
+
+Let $G$ be a finite connected graph and let simple random walk run on $G$.
+Write $\tau_{\rm cov}$ for the first time every vertex has been visited,
+\[
+ t_{\rm cov}(G)=\max_{x\in V(G)}\E_x\tau_{\rm cov},
+ \qquad
+ t_{\rm hit}(G)=\max_{x,y\in V(G)}\E_xT_y.
+\]
+Ding--Lee--Peres \cite{DLP} ask in their Question 5.2, under the asymptotic
+assumption $t_{\rm cov}(G_n)/t_{\rm hit}(G_n)\to\infty$, whether the standard
+deviation of $\tau_{\rm cov}$ is bounded by $t_{\rm hit}$ and whether
+$(\tau_{\rm cov}-t_{\rm cov})/t_{\rm hit}$ has exponential decay with a
+constant rate.  We refute both statements on one explicit family.
+
+For $k\ge3$, define $G_k$ as follows.  There is a center $s$, pendant leaves
+$a_1,\dots,a_k$ adjacent to $s$, a clique
+\[
+ Q=\{g,q_2,\dots,q_k\}
+\]
+of size $k$, and one bridge edge $s g$.  Thus
+\[
+ |V(G_k)|=2k+1,
+ \qquad
+ |E(G_k)|=\frac{k^2+k+2}{2}.
+\]
+All edges are unweighted and the walk is the ordinary simple random walk.
+Put
+\[
+ h_k=t_{\rm hit}(G_k).
+\]
+
+\begin{theorem}[Main theorem]\label{thm:main}
+For $G_k$ as above,
+\[
+ h_k=2k^2+k+1,
+ \qquad
+ \frac{t_{\rm cov}(G_k)}{h_k}=\Theta(\log k).
+\]
+Moreover, for every choice of starting vertices $x_k\in V(G_k)$,
+\begin{equation}\label{eq:clt-main}
+ \frac{\tau_{\rm cov}-t_{\rm cov}(G_k)}
+ {h_k\sqrt{(\log k)/2}}
+ \Longrightarrow \N(0,1),
+\end{equation}
+and
+\begin{equation}\label{eq:var-main}
+ \frac{\Var_{x_k}(\tau_{\rm cov})}{h_k^2\log k}
+ \longrightarrow \frac12.
+\end{equation}
+\end{theorem}
+
+The source-level consequences are immediate.
+
+\begin{corollary}\label{cor:refute}
+Along $G_k$,
+\[
+ \frac{\operatorname{SD}_{x_k}(\tau_{\rm cov})}{t_{\rm hit}(G_k)}
+ \sim \sqrt{\frac{\log k}{2}}\longrightarrow\infty
+\]
+uniformly over choices of starting vertices.  Hence there is no universal
+constant $C$ such that
+$\operatorname{SD}(\tau_{\rm cov})\le C t_{\rm hit}$ in the regime of
+Question 5.2.
+
+Furthermore, there do not exist universal constants $A,a>0$ for which
+\[
+ \Pp_x\!\left(\frac{\tau_{\rm cov}-t_{\rm cov}}{t_{\rm hit}}\ge u\right)
+ \le A e^{-au}
+ \qquad (u\ge0)
+\]
+for all such graphs and starts.  The same is therefore true for any stronger
+two-sided version.
+\end{corollary}
+
+\begin{proof}
+The standard-deviation assertion follows from \eqref{eq:var-main}.  For the
+tail assertion fix, for example, $u_k=\frac14\sqrt{\log k}$.  By
+\eqref{eq:clt-main},
+\[
+ \Pp_{x_k}\!\left(
+ \frac{\tau_{\rm cov}-t_{\rm cov}}{h_k}\ge u_k
+ \right)
+ \longrightarrow 1-\Phi(1/(2\sqrt2))>0,
+\]
+whereas $Ae^{-a u_k}\to0$ for every fixed $A,a>0$.
+\end{proof}
+
+\section{Exact maximal hitting time}
+
+We first calibrate the denominator exactly.  By symmetry there are only four
+vertex types: the center $s$, a leaf, the gateway $g$, and a non-gateway clique
+vertex $q$.
+
+\begin{proposition}\label{prop:hit}
+For every $k\ge3$,
+\[
+ t_{\rm hit}(G_k)=2k^2+k+1.
+\]
+\end{proposition}
+
+\begin{proof}
+We record the first-step solutions.  If $a$ is a fixed target leaf, $b\ne a$
+is another leaf, and $q\in Q\setminus\{g\}$, then
+\begin{align*}
+ H(s,a)&=k^2+k+1,\\
+ H(g,a)&=2k^2+2,\\
+ H(q,a)&=2k^2+k+1,\\
+ H(b,a)&=k^2+k+2.
+\end{align*}
+Indeed, writing $A=H(s,a)$, $B=H(g,a)$ and $C=H(q,a)$, the first-step
+relations are
+\[
+ C=(k-1)+B,
+ \qquad
+ B=1+\frac{A}{k}+\frac{k-1}{k}C,
+\]
+and
+\[
+ A=1+\frac{k-1}{k+1}(1+A)+\frac{1}{k+1}B.
+\]
+Solving gives the displayed values.
+
+For the other target types the corresponding values are
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Target & Start & Hitting time \\
+\midrule
+$s$ & $g$ & $k^2-k+1$ \\
+$s$ & $q$ & $k^2$ \\
+$s$ & leaf & $1$ \\
+\addlinespace
+$g$ & $s$ & $2k+1$ \\
+$g$ & leaf & $2k+2$ \\
+$g$ & $q$ & $k-1$ \\
+\addlinespace
+$q$ & $g$ & $k+3+4/k$ \\
+$q$ & $s$ & $3k+4+4/k$ \\
+$q$ & leaf & $3k+5+4/k$ \\
+$q$ & $q'\ne q,g$ & $k+1+2/k$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+These follow from the same two- or three-variable first-step systems.  For
+example, with $X=H(g,q)$, $Y=H(q',q)$ and $Z=H(s,q)$,
+\[
+ Y=\frac{k-1+X}{2},\qquad
+ Z=2k+1+X,\qquad
+ X=1+\frac{Z}{k}+\frac{k-2}{k}Y,
+\]
+which yields $X=k+3+4/k$.  Comparing the table for $k\ge3$ shows that the
+largest value is $H(q,a)=2k^2+k+1$.
+
+As an independent consistency check, the commute-time identity counts the
+same pair another way.  The effective resistance from a non-gateway clique
+vertex $q$ to a leaf $a$ is
+\[
+ R_{\rm eff}(q,a)=\frac{2}{k}+1+1=2+\frac2k.
+\]
+Since $2|E|=k^2+k+2$,
+\[
+ H(q,a)+H(a,q)
+ =2|E|R_{\rm eff}(q,a)
+ =2k^2+4k+6+\frac4k,
+\]
+which agrees exactly with
+$H(q,a)=2k^2+k+1$ and $H(a,q)=3k+5+4/k$.
+\end{proof}
+
+\section{The trap excursion}
+
+A \emph{trap excursion} begins with a step $s\to g$ and ends at the next
+return to $s$.  Let $Y_k$ be its duration, counting both the initial and final
+bridge steps.
+
+At $g$, the walk exits to $s$ with probability $1/k$.  On a failed exit it
+moves to a non-gateway clique vertex and must return to $g$.  Let
+\[
+ F\sim\operatorname{Geom}_0(1/k)
+\]
+be the number of failed exits before success.  From a non-gateway clique
+vertex, the hitting time $G$ of $g$ satisfies
+\[
+ G\sim\operatorname{Geom}_1(1/(k-1)).
+\]
+With iid $D_i=1+G_i$, independent of $F$,
+\begin{equation}\label{eq:Yrep}
+ Y_k=2+\sum_{i=1}^{F}D_i.
+\end{equation}
+Thus
+\begin{equation}\label{eq:Ymom}
+ \mu_k:=\E Y_k=k^2-k+2
+\end{equation}
+and, by the random-sum variance formula,
+\begin{align}
+ \sigma_k^2:=\Var(Y_k)
+ &= (k-1)^2(k-2)+k^3(k-1)\notag\\
+ &=k^4-4k^2+5k-2.\label{eq:Yvar}
+\end{align}
+We will also need a crude third moment.
+
+\begin{lemma}\label{lem:Ythird}
+There is a universal $C$ such that
+\[
+ \E Y_k^3\le Ck^6.
+\]
+\end{lemma}
+
+\begin{proof}
+The geometric variables in \eqref{eq:Yrep} satisfy
+$\E F^3=O(k^3)$ and $\E D_1^3=O(k^3)$.  For nonnegative $d_i$,
+\[
+ \left(\sum_{i=1}^m d_i\right)^3
+ \le m^2\sum_{i=1}^m d_i^3.
+\]
+Conditioning on $F$ therefore gives
+\[
+ \E\left(\sum_{i=1}^F D_i\right)^3
+ \le \E[F^3]\E[D_1^3]=O(k^6).
+\]
+The deterministic additive constant $2$ only changes the universal constant.
+\end{proof}
+
+\section{Marked coupon collection}
+
+Suppose the walk is at $s$ and exactly $r\in\{k-1,k\}$ specified leaves
+remain to be visited.  Let $\Lambda_{k,r}$ be the additional time until all
+those target leaves are visited.  When $j$ targets remain, discard from the
+departure sequence all departures to already visited or non-target leaves.
+Among the relevant symbols, the next symbol is
+\begin{itemize}
+\item a new target with probability $j/(j+1)$;
+\item the trap edge $s g$ with probability $1/(j+1)$.
+\end{itemize}
+Consequently the number $N_j$ of trap departures before the next new target is
+found satisfies
+\[
+ N_j\sim\operatorname{Geom}_0\!\left(\frac{j}{j+1}\right),
+\]
+and the variables $N_1,\dots,N_r$ are independent.  Their moments are
+\begin{equation}\label{eq:Nmom}
+ \E N_j=\frac1j,
+ \qquad
+ \Var(N_j)=\frac1j+\frac1{j^2},
+ \qquad
+ \E N_j^3=\frac1j+\frac6{j^2}+\frac6{j^3}\le\frac{13}{j}.
+\end{equation}
+Attach iid copies $Y_{k,j,\ell}$ of $Y_k$ to the trap symbols and set
+\[
+ Z_{k,j}=\sum_{\ell=1}^{N_j}Y_{k,j,\ell},
+ \qquad
+ S_{k,r}=\sum_{j=1}^r Z_{k,j}.
+\]
+The $Z_{k,j}$ are independent.  By \eqref{eq:Ymom}--\eqref{eq:Nmom},
+\begin{align}
+ b_{k,r}^2:=\Var(S_{k,r})
+ &=(\sigma_k^2+\mu_k^2)H_r+\mu_k^2H_r^{(2)},\label{eq:bexact}
+\end{align}
+where $H_r=\sum_{j\le r}j^{-1}$ and
+$H_r^{(2)}=\sum_{j\le r}j^{-2}$.  Hence for $r=k$ or $k-1$,
+\begin{equation}\label{eq:basymp}
+ b_{k,r}^2\sim 2k^4\log k.
+\end{equation}
+
+\begin{lemma}[Marked coupon-collector CLT]\label{lem:markedclt}
+For either $r=k$ or $r=k-1$,
+\[
+ \frac{S_{k,r}-\E S_{k,r}}{b_{k,r}}
+ \Longrightarrow \N(0,1).
+\]
+\end{lemma}
+
+\begin{proof}
+By nonnegativity,
+\[
+ Z_{k,j}^3
+ \le N_j^2\sum_{\ell=1}^{N_j}Y_{k,j,\ell}^3.
+\]
+Conditioning on $N_j$, using Lemma \ref{lem:Ythird} and \eqref{eq:Nmom},
+\[
+ \E Z_{k,j}^3\le C\frac{k^6}{j}.
+\]
+For any nonnegative $X$,
+$\E|X-\E X|^3\le8\E X^3$, so
+\[
+ \sum_{j=1}^r \E|Z_{k,j}-\E Z_{k,j}|^3
+ =O(k^6\log k).
+\]
+By \eqref{eq:basymp}, $b_{k,r}^3=\Theta(k^6(\log k)^{3/2})$.
+The Lyapunov ratio is therefore $O((\log k)^{-1/2})\to0$, proving the claim.
+\end{proof}
+
+We now put back the ordinary leaf excursions.  Delete the trap symbols from
+the departure sequence and let $L_{k,r}$ be the number of leaf departures
+needed to see all $r$ target leaves.  When $j$ targets remain the success
+probability among leaf departures is $j/k$, so
+\begin{equation}\label{eq:Lmom}
+ \E L_{k,r}=kH_r,
+ \qquad
+ \Var(L_{k,r})
+ =\sum_{j=1}^r\frac{1-j/k}{(j/k)^2}
+ \le \frac{\pi^2}{6}k^2.
+\end{equation}
+All non-final leaf excursions have length two, while the final target is
+covered on the first step into it.  Therefore, pathwise,
+\begin{equation}\label{eq:lambda}
+ \Lambda_{k,r}=S_{k,r}+2L_{k,r}-1.
+\end{equation}
+Since $k=o(b_{k,r})$, Lemma \ref{lem:markedclt}, \eqref{eq:Lmom} and Slutsky's
+theorem imply
+\begin{equation}\label{eq:lambdaclt}
+ \frac{\Lambda_{k,r}-\E\Lambda_{k,r}}{b_{k,r}}
+ \Longrightarrow\N(0,1),
+\end{equation}
+and, in fact,
+\begin{equation}\label{eq:lambdavar}
+ \frac{\Var(\Lambda_{k,r})}{b_{k,r}^2}\longrightarrow1.
+\end{equation}
+The mean is exact:
+\begin{equation}\label{eq:lambdamean}
+ \E\Lambda_{k,r}=(k^2+k+2)H_r-1.
+\end{equation}
+The variance conclusion follows because
+$2(L_{k,r}-\E L_{k,r})/b_{k,r}\to0$ in $L^2$, not merely in probability.
+
+\section{The source regime}
+
+Starting from $s$, the graph cannot be covered before all $k$ leaves are
+visited.  Hence \eqref{eq:lambdamean} gives
+\[
+ t_{\rm cov}(G_k)
+ \ge (k^2+k+2)H_k-1.
+\]
+Matthews' bound gives, with $|V|=2k+1$,
+\[
+ t_{\rm cov}(G_k)\le h_k H_{2k}.
+\]
+Together with Proposition \ref{prop:hit},
+\begin{equation}\label{eq:regime}
+ \frac{t_{\rm cov}(G_k)}{h_k}=\Theta(\log k)\to\infty.
+\end{equation}
+Thus $G_k$ lies in precisely the asymptotic regime preceding DLP Question 5.2.
+
+\section{From leaf completion to the actual cover time}
+
+We prove that everything outside the marked coupon-collector clock is negligible
+in $L^2$ on the scale $b_{k,r}$.
+
+Fix an arbitrary start $x=x_k$.  Let $T_s$ be the first hitting time of $s$.
+If $x$ is a leaf, put $r_k=k-1$; otherwise put $r_k=k$.  Before the first hit
+of $s$, no pendant leaf other than the starting leaf can have been visited.
+By the strong Markov property at $T_s$, define
+\[
+ V_k=T_s+\Lambda_{k,r_k}.
+\]
+Pathwise $\tau_{\rm cov}\ge V_k$.
+
+\begin{lemma}\label{lem:Ts}
+Uniformly in the starting vertex,
+\[
+ \E_x T_s^2=O(h_k^2)=O(k^4),
+\]
+and consequently
+\[
+ \frac{T_s-\E_xT_s}{b_{k,r_k}}\longrightarrow0
+ \qquad\text{in }L^2.
+\]
+\end{lemma}
+
+\begin{proof}
+From every state $z$, $\E_zT_s\le h_k$.  Markov's inequality gives
+$\Pp_z(T_s>2h_k)\le1/2$.  Applying the strong Markov property at deterministic
+blocks of length $2h_k$ yields
+\[
+ \Pp_z(T_s>2mh_k)\le2^{-m}.
+\]
+Integration of this geometric tail gives, for example,
+$\E_zT_s^2\le24h_k^2$.  Now use \eqref{eq:basymp}.
+\end{proof}
+
+Combining Lemma \ref{lem:Ts} with \eqref{eq:lambda} and
+\eqref{eq:lambdavar},
+\begin{equation}\label{eq:Vclt}
+ \frac{V_k-\E V_k}{b_{k,r_k}}\Longrightarrow\N(0,1),
+ \qquad
+ \frac{\Var(V_k)}{b_{k,r_k}^2}\longrightarrow1.
+\end{equation}
+
+It remains to show that, by the time the leaves are complete, the clique is
+also complete with probability $1-o(1)$, strongly enough for an $L^2$
+transfer.
+
+\begin{lemma}[One trap usually covers the clique]\label{lem:trapcovers}
+Let $\delta_k$ be the probability that a trap excursion returns to $s$ before
+visiting every vertex of $Q$.  Then
+\[
+ \delta_k=O\!\left(\frac{\log k}{k}\right).
+\]
+\end{lemma}
+
+\begin{proof}
+Couple the internal part of the excursion to simple random walk on $K_k$
+started at $g$.  Set
+$t_0=\lceil4(k-1)\log k\rceil$.  For any fixed clique vertex not equal to the
+initial vertex, before it is hit each step hits it with probability
+$1/(k-1)$.  A union bound therefore gives
+\[
+ \Pp(K_k\text{ is not covered by }t_0)
+ \le k\left(1-\frac1{k-1}\right)^{t_0}
+ \le k^{-3}.
+\]
+A bridge exit can occur only at a visit to $g$.  For the $K_k$ walk started at
+$g$, for every $t\ge1$,
+$\Pp(X_t=g)\le1/(k-1)$ (this follows directly from the two eigenvalues
+$1$ and $-1/(k-1)$ of the complete-graph transition matrix).  Hence the
+expected number of exit opportunities through time $t_0$ is at most
+$2+4\log k$.  At each such opportunity the bridge is selected with probability
+$1/k$.  Therefore
+\[
+ \delta_k\le k^{-3}+\frac{2+4\log k}{k}.
+\]
+\end{proof}
+
+Let $B_k$ be the event that the clique is not fully covered at time $V_k$.
+After $T_s$, restrict the departure sequence from $s$ to the trap symbol and
+the $r_k$ still-unvisited target leaves.  These $r_k+1$ symbols are symmetric.
+The probability that no trap occurs before every target leaf has appeared is
+exactly the probability that the trap is last in first-appearance order,
+namely $1/(r_k+1)$.  If a trap does occur and its first excursion covers the
+clique, then $B_k$ is impossible.  Lemma \ref{lem:trapcovers} therefore gives
+\begin{equation}\label{eq:Bprob}
+ \Pp_x(B_k)
+ \le \frac1{r_k+1}+\delta_k
+ =O\!\left(\frac{\log k}{k}\right)
+\end{equation}
+uniformly over $x$.
+
+Set
+\[
+ D_k=\tau_{\rm cov}-V_k\ge0.
+\]
+Then $D_k=0$ on $B_k^c$.  We next need a uniform second-moment bound for a
+fresh full cover time.  From every state $z$,
+$\E_z\tau_{\rm cov}\le t_{\rm cov}$.  The same block-Markov argument as in
+Lemma \ref{lem:Ts} yields
+\begin{equation}\label{eq:coversecond}
+ \sup_z\E_z\tau_{\rm cov}^2\le24t_{\rm cov}^2.
+\end{equation}
+At the stopping time $V_k$, the additional time to cover the still-missing
+vertices is stochastically bounded by the time to cover the whole graph afresh
+from the current state.  Hence, using \eqref{eq:Bprob},
+\begin{align}
+ \E_xD_k^2
+ &\le 24\Pp_x(B_k)t_{\rm cov}(G_k)^2\notag\\
+ &=O(k^3(\log k)^3),\label{eq:D2}
+\end{align}
+because Matthews' bound and Proposition \ref{prop:hit} give
+$t_{\rm cov}=O(k^2\log k)$.  Comparing \eqref{eq:D2} with
+$b_{k,r_k}^2\sim2k^4\log k$ shows
+\begin{equation}\label{eq:Dsmall}
+ \frac{D_k-\E D_k}{b_{k,r_k}}\longrightarrow0
+ \qquad\text{in }L^2.
+\end{equation}
+
+\section{Worst-start centering and proof of the main theorem}
+
+For any two starts $x,y$,
+\[
+ \E_y\tau_{\rm cov}\le H(y,x)+\E_x\tau_{\rm cov}\le h_k+\E_x\tau_{\rm cov}.
+\]
+Taking $y$ to attain the maximum in the definition of $t_{\rm cov}$ yields
+\begin{equation}\label{eq:meanstart}
+ 0\le t_{\rm cov}(G_k)-\E_x\tau_{\rm cov}\le h_k.
+\end{equation}
+Since $h_k=o(b_{k,r_k})$, the source's worst-start centering differs
+negligibly from the mean under any fixed start at our fluctuation scale.
+
+Now
+\[
+ \tau_{\rm cov}-\E_x\tau_{\rm cov}
+ =(V_k-\E V_k)+(D_k-\E D_k).
+\]
+Equations \eqref{eq:Vclt} and \eqref{eq:Dsmall} imply
+\begin{equation}\label{eq:tau-b-clt}
+ \frac{\tau_{\rm cov}-\E_x\tau_{\rm cov}}{b_{k,r_k}}
+ \Longrightarrow\N(0,1),
+ \qquad
+ \frac{\Var_x(\tau_{\rm cov})}{b_{k,r_k}^2}\longrightarrow1,
+\end{equation}
+uniformly over the four possible starting-orbit types.  By
+\eqref{eq:meanstart}, the first convergence remains true with
+$t_{\rm cov}(G_k)$ in place of $\E_x\tau_{\rm cov}$.
+
+Finally, \eqref{eq:basymp} and Proposition \ref{prop:hit} give
+\[
+ \frac{b_{k,r_k}^2}{h_k^2\log k}
+ \longrightarrow
+ \frac{2k^4}{(2k^2)^2}
+ =\frac12.
+\]
+Substituting this into \eqref{eq:tau-b-clt} proves
+\eqref{eq:clt-main} and \eqref{eq:var-main}, completing the proof of
+Theorem \ref{thm:main}.
+
+\section{Interpretation}
+
+The obstruction is not an unusually large expected cover time.  In fact
+$t_{\rm cov}/t_{\rm hit}$ grows only logarithmically, exactly as for many
+coupon-collector-type examples.  The obstruction is that each coupon-collector
+stage has a small chance of triggering a long clique excursion whose standard
+deviation is already of order $k^2$.  Summing those independent marked stages
+over the harmonic sequence $j=1,\dots,k$ creates variance
+$\asymp k^4\log k$, while the maximal hitting time is only $\asymp k^2$.
+
+This also explains why results under vertex-transitivity or strong spatial
+decorrelation do not extend automatically to arbitrary graphs.  The graph
+$G_k$ deliberately couples a coupon collector to a metastable region through a
+single gateway.  The cover state may be almost complete while the durations of
+covered-region detours continue to carry macroscopic random variance.
+
+\section*{Prior-art status}
+
+The original source is \cite{DLP}.  Ding proved geometric-mean-scale cover-time
+concentration for general trees and bounded-degree settings \cite{Ding}; Zhai
+proved a general GFF-based exponential concentration theorem \cite{Zhai};
+Hermon characterized qualitative concentration for vertex-transitive graphs
+and a wider reversible class \cite{Hermon}; and Berestycki--Hermon--Teyssier
+obtained Gumbel fluctuation results under bounded-degree vertex-transitive
+hypotheses \cite{BHT}, with refined hitting-time estimates in a 2026 companion
+preprint \cite{BHT26}.  A bounded literature search dated 19 September 2026
+did not locate the unrestricted counterexample above.  This negative search is
+\emph{not} a proof of novelty or priority.  The detailed search record is kept
+beside this manuscript in `prior_art_2026-09-19.md`.
+
+\begin{thebibliography}{9}
+\bibitem{DLP}
+J. Ding, J. R. Lee, and Y. Peres,
+\emph{Cover times, blanket times, and majorizing measures},
+Ann. of Math. 175 (2012), 1409--1471.
+\url{https://doi.org/10.4007/annals.2012.175.3.8}
+
+\bibitem{Ding}
+J. Ding,
+\emph{Asymptotics of cover times via Gaussian free fields: bounded-degree graphs and general trees},
+arXiv:1103.4402.
+
+\bibitem{Zhai}
+A. Zhai,
+\emph{Exponential concentration of cover times},
+arXiv:1407.7617; Electron. J. Probab. (2018).
+
+\bibitem{Hermon}
+J. Hermon,
+\emph{A spectral characterization for concentration of the cover time},
+J. Theoret. Probab. 33 (2020), 2167--2184.
+
+\bibitem{BHT}
+N. Berestycki, J. Hermon, and L. Teyssier,
+\emph{On the universality of fluctuations for the cover time},
+arXiv:2202.02255.
+
+\bibitem{BHT26}
+N. Berestycki, J. Hermon, and L. Teyssier,
+\emph{Stationary hitting times on vertex-transitive graphs},
+arXiv:2601.03864 (2026).
+\end{thebibliography}
+
+\end{document}

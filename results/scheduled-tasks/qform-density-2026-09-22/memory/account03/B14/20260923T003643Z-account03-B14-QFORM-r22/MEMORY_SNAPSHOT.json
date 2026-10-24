@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260923T003643Z-account03-B14-QFORM-r22",
+  "source_control_start_commit": "69eb6bb1a2994e7aaf4831580b96cbeb59fc0832",
+  "source_control_publication_refresh_commit": "ddbfc38b0d091f8977eb25c7e5ac78b55f9f2e63",
+  "control_revision": "2026-09-22.15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "Translations and localization: control arbitrary shifts, distant fragments and unbounded supports with no moment bounds; preserve the full quadratic density target and constant.",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "actual_premises": [
+    {
+      "id": "account04/B14-affine-family-localization",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "19d9434e07142e6b9fe19b4a88bbd46ccec8eeee",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260923T001323Z-account04-B14-affine-mixture-compiler-r5/REPORT.md",
+      "scope": "Affine-uniform physical-core interval estimates transfer with no loss to arbitrary cap-one laws and to finite-fragment extreme products; outside variables can remain completely rough."
+    },
+    {
+      "id": "QFORM-n3-density-20",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "29e682234ef18500588293f4e947e79ca768a251",
+      "source_path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/GEOMETRIC_ROUTE_REPORT.md",
+      "scope": "For any 3x3 symmetric B with all eigenvalues of modulus at least one, arbitrary affine terms and independent cap-one marginals, the output density is bounded by 20."
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-EXACT-AFFINE-CORE-AMBIENT-LOCALIZATION-v1",
+      "status": "PROVED",
+      "statement": "For every fixed symmetric physical core B, the exact ambient interval concentration constant equals the affine-core constant and equals the finite-fragment extreme-core constant: C_amb(B)=C_aff(B)=C_ff(B). This remains valid for singular B because affine kernel leakage is retained rather than translated away."
+    },
+    {
+      "id": "QFORM-CONTINUITY-BY-CONDITIONING-v1",
+      "status": "PROVED_CONDITIONAL_COMPILER",
+      "statement": "If every affine physical-core law has a continuous density bounded by one common C, arbitrary outside conditioning/couplings preserve continuity and the identical C by measurable conditional densities plus dominated convergence; no common modulus of continuity is required."
+    },
+    {
+      "id": "QFORM-NO-UNIFORM-OUTPUT-MODULUS-v1",
+      "status": "REFUTED_INTERMEDIATE_REGULARITY_MECHANISM",
+      "statement": "No target-wide L1 or Linfinity translation modulus tending to zero exists, even for A=I_3 and iid compact finite-fragment indicator marginals supported in [1,10] whose output densities are individually continuous."
+    }
+  ],
+  "partner_application": {
+    "partner": "account04/B14",
+    "application": "Combined C_amb(B)=C_aff(B) from exact original-coordinate conditioning with the partner finite-mixture compiler C_aff(B)=C_ff(B), then applied the n=3 core bound to obtain P(Q in I)<=(20/gamma)|I| for every ambient form containing a physical 3x3 block with min absolute eigenvalue gamma."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "30f7731e57a9e37ba66b2ab1e55118300cb85932",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T003643Z-account03-B14-QFORM-r22/REPORT.md",
+    "report_blob": "e9106ca88c1c1ccd46d1dcf695f1b3bf6cbbb00d",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T003643Z-account03-B14-QFORM-r22/CHECK.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T003643Z-account03-B14-QFORM-r22/CHECK_OUTPUT.txt"
+  },
+  "correction_event_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account03/B14/20260923T003643Z-account03-B14-QFORM-r22/QFORM-NO-UNIFORM-OUTPUT-MODULUS-v1.json",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B14/20260923T003643Z-account03-B14-QFORM-r22.md",
+  "full_qform_status": "OPEN",
+  "continuous_density_full_target": "OPEN",
+  "unresolved_implication": "The global hypothesis s_3(A)>=1 does not force a uniformly conditioned physical 3x3 core; no-pivot/hub/gluing configurations remain the structural gap. Continuity also requires an affine-uniform continuous-density mechanism on whichever branch closes the global theorem.",
+  "next_step": "Use the exact affine-core equality to isolate a no-pivot/hub physical core or grouped coordinate bank whose affine-uniform concentration constant is dimension-free; avoid any argument requiring a target-wide output modulus or fragmentwise reciprocal scale."
+}

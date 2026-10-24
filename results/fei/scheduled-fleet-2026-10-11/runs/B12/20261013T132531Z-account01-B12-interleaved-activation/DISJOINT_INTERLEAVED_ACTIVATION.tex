@@ -1,0 +1,145 @@
+\section*{Interleaved disjoint activation is monotone}
+
+All logarithms are natural.  Put
+\[
+ \psi(t)=t^2\log(1/t^2),\qquad
+ K(x,y)=\psi(x)+\psi(y)-\frac{\psi(x+y)+\psi(x-y)}2.
+\]
+
+\subsection*{Scalar kernel lemma}
+
+If $|x|+|y|\le1$, then
+\[
+ 0\le K(x,y)\le\psi(y)+3y^2.                         \tag{1}
+\]
+Both constants are sharp in their stated form.
+
+\paragraph{Proof of the lower bound.}
+The kernel is unchanged by changing either sign and is homogeneous of
+degree two.  It is therefore enough to take $x,y\ge0$ and $x+y=1$.
+Write $t=x-y\in[0,1]$, so $x=(1+t)/2$, $y=(1-t)/2$, and define
+\[
+ L(t)=2\psi((1+t)/2)+2\psi((1-t)/2)-\psi(t)=2K(x,y).
+\]
+Since $\psi'(r)=-4r\log r-2r$ for $r>0$,
+\[
+ L'(t)=4\{t\log t-x\log x+y\log y\}\le0.
+\]
+Indeed $x=t+y$ and
+$x\log x-t\log t-y\log y=xH(t/x)\ge0$.  As $L(1)=0$, the lower bound
+follows.
+
+For the upper bound, the function $G(r)=\psi(r)+3r^2$ is convex on
+$[-1,1]$, because $G''(r)=2\log(1/r^2)\ge0$.  Hence
+\[
+ \frac{\psi(x+y)+\psi(x-y)}2+3(x^2+y^2)
+ \ge\psi(x)+3x^2,
+\]
+which rearranges to the upper bound in (1).  The coefficient $3$ is
+approached as $x\uparrow1$ and $y\downarrow0$. \(\square\)
+
+\subsection*{The interleaved activation theorem}
+
+Let $W$ and $X$ be disjoint physical coordinate blocks, let $a,b$ be
+functions on $W$, let $h$ be Boolean on $X$, and assume $a+b$ and $a-b$
+are Boolean.  Define
+\[
+ F=a+hb,\qquad q=\|b\|_2^2,
+ \qquad \mathcal J(a,b;h)=\mathcal E_{\rm raw}(F)
+                         -q\mathcal E_{\rm raw}(h).                \tag{2}
+\]
+
+Consider any adaptive restriction tree which may interleave queries from
+$W$ and $X$, never querying a physical coordinate twice on one path, and
+which is complete on the source block $X$.  At a source-query node $v$,
+let $R_v$ be the exact biased coherent remainder for the current restricted
+pair $(a_v,b_v)$ and source $h_v$.  Then
+\[
+ \boxed{\sum_{v:\,i(v)\in X}w_vR_v\le\mathcal J(a,b;h).}          \tag{3}
+\]
+More precisely,
+\begin{align*}
+ \sum_{v:\,i(v)\in X}w_vR_v
+  ={}&\mathcal J(a,b;h)
+     -\sum_{\ell\ {m leaf}}w_\ell\mathcal J(a_\ell,b_\ell;h_\ell)\\
+    &-\sum_{v:\,i(v)\in W}w_vD_{i(v)}(F_v),                       \tag{4}
+\end{align*}
+and both subtracted terms are nonnegative.
+
+\paragraph{Proof.}
+At a source node, the fixed-pair identity gives
+\[
+ R_v=\mathcal J(a_v,b_v;h_v)
+   -\mathbb E[\mathcal J(a_v,b_v;h_{\rm child})\mid v].           \tag{5}
+\]
+At an activation node $z\in W$, the source is unchanged and Parseval gives
+$q_v=(q_{v+}+q_{v-})/2$.  Therefore the Doob decrement of (2) is exactly
+\[
+ \mathcal J(a_v,b_v;h_v)
+ -\mathbb E[\mathcal J(a_{\rm child},b_{\rm child};h_v)\mid v]
+ =D_z(F_v).                                                        \tag{6}
+\]
+If $F_v=P+zQ$, then
+\[
+ D_z(F_v)=\sum_TK(\widehat P(T),\widehat Q(T)).                    \tag{7}
+\]
+The two child coefficients are $\widehat P(T)\pm\widehat Q(T)$ and have
+absolute value at most one, so
+$|\widehat P(T)|+|\widehat Q(T)|\le1$.  The kernel lemma shows that every
+term in (7) is nonnegative.  Summing the Doob decrements over the whole
+tree yields (4).  At a leaf $h_\ell=\pm1$, hence
+\[
+ \mathcal J(a_\ell,b_\ell;h_\ell)
+ =\mathcal E_{\rm raw}(a_\ell\pm b_\ell)\ge0.
+\]
+Dropping the two nonnegative terms proves (3). \(\square\)
+
+The upper half of (1) also gives the exact activation-channel envelope
+\[
+ D_z(F_v)\le\mathcal E_{\rm raw}(Q)+3\|Q\|_2^2,                   \tag{8}
+\]
+where $Q=(F_{v,+}-F_{v,-})/2$.  Thus the activation loss has a derivative
+entropy plus influence form, although only its nonnegativity is needed in
+(3).
+
+For one activation bit, write $a=A+zC$ and $b=B+zD$.  If
+$\mu=\mathbb Eh$, Fourier separation of the disjoint blocks and homogeneity
+of $K$ give the more explicit formula
+\[
+ D_z(F)=\sum_S K(A_S+\mu B_S,C_S+\mu D_S)
+       +(1-\mu^2)\sum_S K(B_S,D_S).                    \tag{9}
+\]
+Thus the entire two-state activation mismatch depends on the source only
+through its mean and variance, not through its dimension or spectral shape.
+
+\subsection*{Selector corollary}
+
+For the one-bit selector pair
+\[
+ a(x)=\frac{1+x}{2},\qquad b(x)=\frac{1-x}{2},qquad h=2s-1,
+ \qquad p=\mathbb Es,
+\]
+the root defect is
+\[
+ Q(p)=\psi(p)+\psi(1-p)-\frac12\psi(2p-1)+4p(1-p)\log2.
+\]
+Consequently every adaptive tree which arbitrarily interleaves the selector
+query with all source queries satisfies
+\[
+ \sum_{v:\,i(v)\in X}w_vR_v
+ \le Q(p)\le8p\log2\le32\log2\,I\!\left(\frac{1-x}{2}s\right).   \tag{10}
+\]
+This is uniform in dimension, depth, query order, bias, and coherent
+collision ratios.  Querying the selector first spends the root defect in
+the nonnegative activation decrement; querying the source first can retain
+the full endpoint $Q(p)$.
+
+\subsection*{Scope}
+
+The theorem handles genuinely changing activation weights caused by
+restrictions of a disjoint activation block.  It does not cover a physical
+coordinate that simultaneously changes the activation pair and the source,
+nor reused-selector overlap.  In that shared-coordinate regime the
+Parseval cancellation in (6) acquires the crossed terms from the four-channel
+identity, and their multi-query payment remains open.
+

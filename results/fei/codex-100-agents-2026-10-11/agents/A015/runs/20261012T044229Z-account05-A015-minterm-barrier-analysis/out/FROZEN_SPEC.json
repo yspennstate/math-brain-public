@@ -1,0 +1,12 @@
+{
+  "helper_version": "A015-stage2-posterior-and-location-v1",
+  "family": "All balanced Boolean cores through m=3 with control-first point activation, plus balanced rare literal-switch multiplexers",
+  "domain": {"balanced_cores_m": [1,2,3], "activation_r": [1,2,3,4], "rare_mux_r": [1,2,3,4,5,6,7], "symbolic_mux_r": "1..64"},
+  "case_count": {"balanced_cores": 78, "activations": 312, "mux_truth_tables": 7, "symbolic_mux_parameters": 64},
+  "symmetry": "No reduction of balanced truth tables; exchangeable-reference formula proved from a globally randomized common order; no enumeration of n! orders",
+  "arithmetic": "integer Walsh transform, Fractions for spectra/joint witnesses/output references; formal log2-prime expressions for exact entropy identities; outward rational atanh logarithm intervals only for sharp constant and cost checks",
+  "memory_estimate_mb": 60,
+  "max_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "scope": "Independent reconstruction of A012 v1 repair and an explicit full-minterm one-root output reference with rational rank exponent 2; not a search for full FEI or a claim about the original exponent-6/5 PI-J infimum"
+}

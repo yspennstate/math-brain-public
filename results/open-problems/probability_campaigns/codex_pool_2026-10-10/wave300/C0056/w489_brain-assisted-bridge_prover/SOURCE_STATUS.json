@@ -1,0 +1,81 @@
+{
+  "worker": "w489",
+  "target_id": "C0056",
+  "checked_date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "exact_target_status": "Original primary Section 2.1 checked; both spectral and finite-volume GOE demands retained; a uniform-law spectral specialisation is explicitly chosen.",
+  "intake": {
+    "file": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 56,
+    "source_id": "bourgade_band_icm_2018",
+    "locator": "Section 2.1, p. 7",
+    "statement": "Prove existence of absolutely continuous spectrum (delocalised states) for the random Schrodinger operator -Delta + lambda V on Z^3 at small disorder lambda, and GOE local statistics for its finite-volume restriction.",
+    "record_status": "unverified / unreviewed"
+  },
+  "scope": "Uniform[-1,1] iid site law; fixed positive weak disorder; spectral bridge only. GOE statistics remain outside this proof attempt and unresolved.",
+  "recent_primary_claim": {
+    "title": "Absolutely Continuous Spectrum for Weak-Disorder Anderson Models in Dimensions at Least Three",
+    "date": "2026-09-23",
+    "url": "https://github.com/openai/math/tree/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026",
+    "assumptions": "Every fixed d>=3, iid Uniform[-1,1], every fixed sufficiently small lambda>0; d=3 interval (-6+e2/2,-6+e2) for an existential fixed sufficiently small e2>0.",
+    "status": "primary claimed theorem located; full proof not reviewed; no acceptance or solved/retired inference"
+  },
+  "new_followup": {
+    "url": "https://arxiv.org/abs/2610.11611",
+    "authors": [
+      "Vojkan Jaksic",
+      "Yoram Last"
+    ],
+    "date": "2026-10-08",
+    "status": "primary abstract explicitly references shortening the OpenAI boundary-to-purity step; not a full audit of its certificate"
+  },
+  "served_identity": {
+    "native_worker": "w489",
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "max",
+    "requested_tier": "Fast",
+    "response_side_receipt": null,
+    "status": "unavailable; requested settings are not served identity evidence"
+  },
+  "brain_memory_recall": {
+    "result": "timeout",
+    "timeout_seconds": 60,
+    "fallback": "Exact required scar perceptron_proof_open_gaps_fleet_2026_07_12.md read; memory-index term search had no matching entry."
+  },
+  "submitted": true,
+  "reviewed": false,
+  "ingested": false,
+  "retrievable": false,
+  "primary_source": {
+    "author": "Paul Bourgade",
+    "title": "Random band matrices",
+    "url": "https://math.nyu.edu/~bourgade/papers/ICMProceedings.pdf",
+    "arxiv": "1807.03031",
+    "locator": "Section 2.1, printed page 7 (PDF page index 6)",
+    "assumptions": "H=Delta+lambda V; iid real centred variance-one sites; periodic finite-volume boxes for the statistics discussion.",
+    "source_quote": "there is no clear understanding about how extended states imply GOE spectral statistics.",
+    "law_conversion": "Our V is Uniform[-1,1], variance 1/3. Set W=sqrt(3)V, alpha=lambda/sqrt(3) to obtain variance-one sites with the same diagonal alpha W=lambda V.",
+    "hash_check": "SOURCE_HASH_CHECK.json; both archived PDF and text match the intake hashes. This is provenance, not a proof."
+  },
+  "owner_solved_retired_check": {
+    "status": "No C0056 solved/retired finding in the scoped intake, H/I attempt searches, memory-index terms or direct root status-index filename check. New September primary claim located; referee source audit pending.",
+    "conclusion": "UNKNOWN, not certified open and not certified solved"
+  },
+  "mathematics": {
+    "claim_rows": 6,
+    "author_proved_lemmas": 5,
+    "parent_target_solved": false,
+    "independently_checked_claims": 0,
+    "single_hardest_spectral_gap": "Proposed sufficient-condition research target, not an established theorem: for H=-A+lambda V on l2(Z^3), V_x iid Uniform[-1,1], find q in (0,1), lambda_0>0 and a deterministic nonempty bounded open interval I of nonzero spectral weight such that for each fixed 0<lambda<lambda_0, each site x and each compact interval J contained in I, sup_{0<eta<1} E integral_J [eta+Im<b_x,(H^x-E-i eta)^(-1)b_x>]^(-q)dE<infinity. H^x is the compression deleting x and b_x has the six hopping coefficients. This bound would supply a conditional spectral route; it would not prove GOE microscopic statistics. No proof of this bound is supplied.",
+    "GOE_branch": "not established; no implication from absolute continuity asserted"
+  },
+  "adversary_feedback": {
+    "agent": "w490",
+    "event": "Independent joint-UI criterion sealed before reading the proof (reported prefix 3e357c12); conditional L3--L5 algebra supported in peer message.",
+    "scope_boundary": "w490 owns joint-UI equivalence and ac/no-Lp separation; w489 owns cavity negative-moment to Lp and deterministic height cutoff.",
+    "counted_as_completed_referee_verdict": false,
+    "served_identity_receipt": null
+  },
+  "inbox_draft": "~\\math-brain-inbox\\w489\\bundle_001.json"
+}

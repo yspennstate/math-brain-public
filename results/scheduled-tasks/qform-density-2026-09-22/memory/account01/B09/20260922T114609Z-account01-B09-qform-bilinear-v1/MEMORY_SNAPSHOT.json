@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_initial": "df398dd7cf7ac5580d250ff49ba833ba7fcf8f11",
+  "source_control_commit_final_read": "5788b663d223eb477ab5481ae4081de0356730f8",
+  "account": "account01",
+  "slot": "B09",
+  "run_id": "20260922T114609Z-account01-B09-qform-bilinear-v1",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B09",
+    "run_id": "20260922T115241Z-account02-B09-QFORM-r1",
+    "commit": "fa592b592c61bd1597aa8cf3270c3c9f58f410bf",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260922T115241Z-account02-B09-QFORM-r1/REPORT.md",
+    "use": "Its exact rank-two curved-both-sides logarithmic counterexample is the sharp endpoint exclusion for the new rank-r>=3 Plancherel theorem."
+  },
+  "other_dependencies": [
+    {
+      "worker": "account04/B18",
+      "result": "dependent square smoothing",
+      "use": "localized definite rank-three closure"
+    },
+    {
+      "worker": "account02/B06",
+      "result": "Hadamard fixed-minor obstruction and determinant mass",
+      "use": "stress test answered by aggregate volume-cut theorem"
+    },
+    {
+      "source": "Livshyts-Paouris-Pivovarov arXiv:1507.07949",
+      "result": "r-dimensional product marginal density <=2^(r/2)",
+      "use": "L2 amplitude control after SVD projection"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-RANKR-BILINEAR-PLANCHEREL-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "If a disjoint coordinate cross block has rank r>=3 and nonzero singular product D, then ||p_Q||inf <= 2r/(r-2) D^(-1/r); arbitrary same-side curvature is allowed."
+    },
+    {
+      "id": "QFORM-RANK3-VOLUME-CUT-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For exact rank-three A=R Lambda R^T, disjoint Pluecker mass M_disj yields a cut with cross singular product >=sqrt(M_disj)/8 and density <=12 M_disj^(-1/6)."
+    },
+    {
+      "id": "QFORM-RANK3-DEFINITE-UNIVERSAL-v1",
+      "status": "PROVED_SUBCLASS_THEOREM",
+      "statement": "Every exact-rank-three definite form with nonzero eigenvalues of modulus at least one has output density sup <13.5 under arbitrary independent input densities <=1."
+    }
+  ],
+  "canonical_outputs": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "6dc9ff8894e196a28a48c3eb6ce917103722f0ec",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260922T114609Z-account01-B09-qform-bilinear-v1/REPORT.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "5b4bf30186dafb2fdf6a6d7fd698fcd5061021dc",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260922T114609Z-account01-B09-qform-bilinear-v1/ADDENDUM.md"
+    }
+  ],
+  "unresolved_implication": "QFORM-INDEFINITE-LOCALIZED-OR-EXTRA-SPECTRUM-BRIDGE-v1",
+  "next_step": "Handle localized indefinite exact-rank-three geometry and additional spectral components without losing the product-coordinate cross-cut resource.",
+  "next_recipient": "account01/B19",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED"
+}

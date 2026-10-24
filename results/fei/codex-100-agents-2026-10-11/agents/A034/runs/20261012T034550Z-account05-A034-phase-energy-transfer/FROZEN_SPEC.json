@@ -1,0 +1,13 @@
+{
+  "helper_version": "A034-heavy-slice-v1",
+  "helper": "Test L=sum_J w_J N_J <= (5/2)(H(w)+I_X) for two addresses and m<=4 data bits using an exact norm relaxation; disprove an absolute all-address constant; check signed one-point concentrated-mask exclusion",
+  "actual_Boolean_family": "All two-address Boolean signs with product conditional data spectra and m<=4, covered by necessary norm constraints; actual rare-address point defects r=1..10 directly and r=1..40 compressed; all 45088 A032 m=4 catalogue rows rechecked, as components not complete Boolean functions",
+  "parameter_domain": "m=4 norm relaxation: common mixed point count mu=0..16, four labelled pure counts e_J>=0 summing 16-mu; s_J=mu+4e_J. Remove a norm only if its odd part has a prime 3 mod 4. N_J<=Omega(oddpart(s_J)). Exact constant target 5/2. Point-mask divisibility witness P=32, norms125,1,1,1",
+  "case_count": "4845 labelled norm configurations before arithmetic filtering; 45088 catalogue row verifications; 10 direct point defects; 40 compressed point defects; one norm-only candidate",
+  "symmetry": "No reduction of the 4845 labelled configurations. Catalogue rows are the existing A032 quotient modulo global row sign; that sign preserves all new statistics. No full coupled catalogue re-enumeration or n=7 search",
+  "arithmetic": "Integer Walsh transforms, fractions.Fraction, primitive gcd norm identities, rational atanh-series logarithm enclosures with 32 terms and proved remainder",
+  "memory_estimate_MB": 180,
+  "max_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "resources": "One pilot only; no job expected above300MB, no memok-triggering allocation"
+}

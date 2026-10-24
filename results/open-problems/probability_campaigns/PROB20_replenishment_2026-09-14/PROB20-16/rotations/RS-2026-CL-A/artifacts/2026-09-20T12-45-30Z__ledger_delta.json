@@ -1,0 +1,32 @@
+{
+  "native_id": "2b7d1c0e4f6a8b319d5e7024c1a963bf",
+  "claim_id": "RS-2026-CL-A",
+  "date_utc": "2026-09-20",
+  "status": "PROVED PARTIAL / RANK-ONE-GRAPHON-CYCLE-TRANSFER / AUDIT-PENDING",
+  "E_framework_before": 1,
+  "E_framework_after": 1,
+  "captured_master_before_report": "d6557df1e438a3012c1d55ee503420574ca1630c",
+  "newest_prior_report": "runs/2026-09-20/2026-09-20T11-49-00Z__report.md",
+  "old_claim": "The 11:49 latent-product theorem gives an all-test post-noise bound when total latent bias energy is coercively observable from the off-diagonal degree-2 correlation tensor; this abstract pair-observability condition can fail in natural exchangeable graph mixtures.",
+  "new_claim": "For the balanced rank-one vertex-sign graphon/dense two-spin SBM, bounded low-degree advantage through a growing degree l_n with l_n^2/n->0 forces n theta_n^2<=1+o(1) via the tower of simple-cycle moments. After any fixed retention rho<1, the exact replica-overlap second moment is subcritical and the noisy likelihood ratios are uniformly bounded in L2. Hence no test whatsoever can strongly distinguish the noisy planted law from the uniform graph null.",
+  "proof_mechanism": "Walsh moments equal theta^{|F|} exactly on Eulerian edge sets and vanish otherwise. There are (n)_l/(2l) simple l-cycles, so bounded LDA forces the effective signal c_n=n theta_n^2 to have limsup at most one. The noisy chi-square norm has the exact Curie-Weiss overlap representation E_u prod_{i<j}(1+rho^2 theta^2 u_i u_j). Writing it in terms of S=sum u_i and applying Gaussian linearization plus cosh(x)<=exp(x^2/2) gives 1+chi^2 <= [1-n artanh(rho^2 theta^2)]^{-1/2}. Fixed rho<1 makes the denominator uniformly positive. Cauchy-Schwarz then rules out strong tests.",
+  "strictness_example": "In this rank-one graph family, the latent edge-bias covariance is theta^2 times the identity: all off-diagonal pair correlations vanish while total latent energy is positive. Thus the previous pair-observability assumption fails maximally, yet the new higher-order cycle argument still proves an all-test post-noise result.",
+  "mao_boundary": "Mao has exact zero moments through D_n yet a noisy polynomial-time rank distinguisher. The rank-one graphon mechanism cannot realize this: nontrivial rank-one vertex-spin mixtures have triangle/cycle moments, and bounded LDA over growing cycle lengths forces the signal to the critical scale before noise. Mao therefore evades the cycle-pressure mechanism through genuinely different code/rank dependencies; this theorem does not cover Mao and is not an unrestricted low-degree conjecture.",
+  "exact_gap": "The theorem treats one balanced rank-one latent vertex factor. General finite-rank, finite-state, or Aldous-Hoover graph laws have multivariate replica overlaps and motif tensors; bounded low-degree cycle data has not yet been shown to force their noisy overlap pressure below the second-moment threshold.",
+  "next_attack": "Extend the proof to finite-rank/finite-state vertex-exchangeable graphons: express noisy chi-square as a partition function of the empirical replica-overlap matrix, use low-degree cycles/motifs to control the kernel spectral radius at the pre-noise critical point, and show fixed noise contracts it strictly subcritical. After two failed pivots, hand off and take another registered probability bottleneck per owner directive.",
+  "report": {
+    "path": "runs/2026-09-20/2026-09-20T12-45-30Z__report.md",
+    "commit": "150d0b4759f00e6ad9c7b150b050f3b48dd50122",
+    "blob": "03b4b4038b5f3531c947f63f266fbd2feb4b4fd0"
+  },
+  "handoff": {
+    "path": "artifacts/2026-09-20T12-45-30Z__P08_P09_overlap_pressure_handoff.md",
+    "commit": "c66f5140202f66fd8c6fa06790345b47afe16485",
+    "blob": "61e93bcaf0a8fae99df7893f59d2d03e41fdc360"
+  },
+  "source_ownership_preserved": true,
+  "full_source_claim": false,
+  "email": false,
+  "drive": false,
+  "public_posting": false
+}

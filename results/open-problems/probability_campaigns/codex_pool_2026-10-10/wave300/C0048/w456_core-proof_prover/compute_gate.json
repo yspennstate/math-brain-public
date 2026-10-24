@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-10-10T06:49:40.803809+00:00",
+  "source": "~\\.claude\\compute\\compute_state.json",
+  "doctrine": "~/<private-repo>/12_cognitive_architecture/compute_governor/COMPUTE_DOCTRINE.md",
+  "allowed": true,
+  "job": {
+    "processes": 1,
+    "gpu": false,
+    "model_load": false,
+    "max_vertices": 4,
+    "max_edges": 6,
+    "max_cases": 72,
+    "max_cpu_seconds": 5
+  },
+  "priority": "inherited; no promotion or governor modification",
+  "source_age_seconds": 19.78455877304077,
+  "status": "warn",
+  "mode": "owner_present_polite",
+  "reasons": [
+    "process_pressure"
+  ],
+  "local_metrics": {
+    "cpu_pct": 78.3,
+    "disk_free_gb": 43.3,
+    "commit_used_pct": 93.9
+  },
+  "decision": "permitted bounded short CPU arithmetic"
+}

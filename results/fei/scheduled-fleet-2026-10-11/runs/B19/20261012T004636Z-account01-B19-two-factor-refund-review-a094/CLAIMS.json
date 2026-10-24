@@ -1,0 +1,42 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T004636Z-account01-B19-two-factor-refund-review-a094",
+  "claims": [
+    {
+      "claim_id": "B19-A094-TWO-FACTOR-REFUND-REVIEW",
+      "version": 1,
+      "label": "INDEPENDENTLY_REVIEWED_AT_EXACT_SCOPE",
+      "exact_statement": "For all integers a,b>=2, the complete L+Q selector packet of q_a q_b against constant +1 equals F(2^-a+2^-b-2^(1-a-b)), where F is the scalar formula in REPORT.md. With R_(0,b)=D_b and Gamma_(m|b)=R_(m,b)-(R_(m-1,b)+D_b)/2, sum_(m=1)^a 2^(m-a)Gamma_(m|b)=R_(a,b)-D_b=D_a+Xi_(a,b), and R_(a,b)+N_(a|b)=D_b+P_(a|b). The reverse order holds. Xi changes sign between (4,4) and (5,5), and Xi_(n,n)=4^-n(4n-24+6/ln2)+O(n8^-n).",
+      "hypotheses": [
+        "uniform Boolean cube",
+        "disjoint point-defect factors",
+        "constant selector branch",
+        "complete L+Q packet",
+        "deterministic factor-first physical restriction order",
+        "entropy in bits"
+      ],
+      "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED",
+      "stable_gap_id": "B05_RARE_REFUNDS",
+      "contributors": ["account01/B05"],
+      "reviewer": "account01/B19",
+      "target_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "bdd93bb44cd0335a24e42e06dee81a73b5417768",
+        "path": "reports/fei-2026-10-11/runs/B05/20261012T003201Z-account01-B05-tensor-refund-a023/REPORT.md",
+        "blob_sha": "47383ab5e161b0e41584eda7eecf04e2c5d4aead"
+      },
+      "does_not_depend_on": [
+        "the all-dimension sign of the one-factor L+Q credit",
+        "the predecessor contributor-proved phase inequality"
+      ],
+      "does_not_prove": [
+        "canonical or order-independent cross-term ownership",
+        "many-factor or shared-variable payment",
+        "dimension-independent influence control",
+        "full FEI"
+      ]
+    }
+  ],
+  "full_fei_status": "OPEN",
+  "independent_review": "COMPLETE_AT_EXACT_TWO_FACTOR_SCOPE"
+}

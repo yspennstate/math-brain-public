@@ -1,0 +1,119 @@
+{
+  "worker": "w388",
+  "target_id": "P0117",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "exact_target": {
+    "graph": "undirected nearest-neighbor Z^2",
+    "weights": "iid finite nonnegative weights with a nonatomic common Borel law",
+    "conclusion": "Almost surely there is no injective doubly infinite nearest-neighbor path whose every finite segment attains the global passage-time infimum.",
+    "moment_free_statement_source": "Damron-Hanson arXiv:1512.00804v2 Conjecture 1",
+    "moment_qualified_working_class": "Additionally E[min(X1,X2,X3,X4)^2]<infinity for four independent weights; this is the A1 class used by the 2019/2022 structural results and the September 2026 claim.",
+    "ranking_qualification": "The ranking title omits continuity; the unqualified iid assertion is false for constant unit weights."
+  },
+  "sources": [
+    {
+      "id": "ADH-survey-Q31",
+      "url": "https://arxiv.org/abs/1511.03262",
+      "location": "Question 31, Section 4.5; PDF page 98; equation (4.25) on PDF page 99",
+      "evidence": "Survey poses the geodesic-line question and separately identifies the all-boundary-endpoint crossing probability. Its surrounding argument is explicitly heuristic.",
+      "proof_status": "Historical problem source; not evidence of current openness"
+    },
+    {
+      "id": "DH-1512.00804v2",
+      "url": "https://arxiv.org/abs/1512.00804v2",
+      "location": "Conjecture 1 and Theorem 1.1, page 2; A1-prime and Theorem 1 for the more general statement",
+      "conjecture_assumptions": [
+        "iid",
+        "continuous distribution",
+        "dimension two"
+      ],
+      "directional_theorem_assumptions": [
+        "iid continuous law",
+        "finite individual edge mean",
+        "differentiable entire limit-shape boundary",
+        "direction fixed deterministically before sampling"
+      ],
+      "proof_status": "Published qualified result; does not by itself exclude all random directions"
+    },
+    {
+      "id": "AH-1609.02447v2",
+      "url": "https://arxiv.org/abs/1609.02447v2",
+      "location": "A1 in Section 3; Theorems 2.1, 2.5, 2.6, 10.11 and Proposition 4.5",
+      "assumptions_checked": [
+        "iid continuous law",
+        "finite second moment of minimum of four incident weights"
+      ],
+      "relevant_scope": "Theorem 2.1 treats deterministic endpoint sequences escaping the origin; fixed-functional uniqueness/coalescence is a separate quantifier from simultaneous all-ray linear Busemann asymptotics.",
+      "proof_status": "Published structural inputs; primary statement/hypothesis check, no fresh full-proof audit"
+    },
+    {
+      "id": "AHH-2208.11576",
+      "url": "https://arxiv.org/abs/2208.11576",
+      "location": "Theorem 1.1 and Section 2.4 A1",
+      "assumptions_checked": [
+        "iid continuous law",
+        "finite second moment of minimum of four incident weights"
+      ],
+      "relevant_scope": "Uniformly vanishing probability that a distant specified vertex belongs to the union of all infinite rays from the origin; no shell-sum or o(1/n) bound is supplied by the stated result.",
+      "local_pdf": "sources/ahlberg_hanson_hoffman_2208.11576.pdf",
+      "sha256": "2616ec98324b9a892f8c97d67e1dae0230966941d528414fbb9f5ed337846bed",
+      "proof_status": "Published input; statement and hypotheses checked, no fresh full-proof audit"
+    },
+    {
+      "id": "OpenAI-no-bigeodesics-20260924",
+      "url": "https://github.com/openai/math/blob/main/preprints/No-bigeodesics-in-planar-first-passage-percolation-September-24-2026/main.pdf",
+      "raw_url": "https://raw.githubusercontent.com/openai/math/main/preprints/No-bigeodesics-in-planar-first-passage-percolation-September-24-2026/main.pdf",
+      "date_in_manuscript": "2026-09-24",
+      "location": "Theorem 1.1, page 1; Lemma 7.2, pages 29-30; final comparison, Section 8",
+      "claimed_assumptions": [
+        "iid finite nonnegative weights",
+        "nonatomic law",
+        "E[min(X1,X2,X3,X4)^2]<infinity"
+      ],
+      "claimed_conclusion": "Absence of every bigeodesic simultaneously, without shape regularity",
+      "local_pdf": "sources/no_bigeodesics_20260924.pdf",
+      "sha256": "f97d87dc82bcee0cd11725e3261df8ddf51c34442c8305873c27107074d3b5ae",
+      "proof_status": "UNVERIFIED main theorem; independently derived posterior-law sublemma only, review pending",
+      "formal_status": "No actual theorem/axioms formal-check receipt inspected; no formal proof claim made"
+    }
+  ],
+  "prior_local_work": {
+    "ranking": "2026-09-07 tier 5, attempted_un; not a current status certificate",
+    "intake_exact_nodes": [
+      "op-p0117",
+      "at-p0117"
+    ],
+    "intake_sources": [
+      "brain_bundle_C006p01.json",
+      "brain_bundle_C006a04.json"
+    ],
+    "recorded_attempt": "Symmetric endpoint geodesics can escape all fixed boxes; compactness needs a root anchor. No proof claimed.",
+    "attempts_H_I": "Targeted case-insensitive ID/bigeodesic searches returned no P0117-specific result",
+    "lean": "Only ranking annotation found for P0117; no formal-check receipt",
+    "team_O": "P0117 row open and unnamed at line 557 when checked",
+    "owner_solved_register": "Targeted check of Open problem project/solved_register.md found no P0117/bigeodesic entry; older unrelated Gaussian/phase-retrieval register",
+    "percolation_project": "README selects the different nonamenable-graph percolation target; relevant keyword search found no P0117 result",
+    "population_store": "Opened read-only with query_only=ON; two exact P0117 cards recovered; both truth_status unverified. No exact-title September manuscript node returned.",
+    "canonical_store": "Canonical repository code/readme inspected for location; no canonical mathematical store opened or changed. Do not infer absence of an owner's retired result from that incomplete check."
+  },
+  "brain_and_review": {
+    "recalled_top_three": [
+      "fpp_p7_gap_anticoncentration_refereed_p12_2026_08_22",
+      "fpp_first_chaos_floor_and_nlogn_delocalization_2026_08_22",
+      "fpp_sandwich_core_refereed_two_regularity_subproblems_2026_08_12"
+    ],
+    "required_scars_read": [
+      "perceptron_proof_open_gaps_fleet_2026_07_12",
+      "proof_steps_need_derived_joint_structure_2026_09_09"
+    ],
+    "paired_prover": "w387 arrived during final validation; statement-only packet and ATTEMPT.md L1-L4/G1 read after independent lock. PEER_VERDICTS.jsonl supplies four KEEP verdicts and an entropy-margin note.",
+    "independent_reviewer": "w389; request delivered as msg-3f8003d179; review pending",
+    "proof_gap": "No vanishing root-crossing estimate obtained. The all-ray shell-rate route is withdrawn: sum shell q>=1 and sup shell q>=1/(8n). The September manuscript's all-label crossing/no-fork bridge is not independently certified.",
+    "review_receipts": {
+      "w389": "C01,C02,C04,C05,C06 KEEP; C03 FIX accepted. C06 symbolic rederivation announced at05:16 UTC as R07.",
+      "w392": "Independent check requested for w389's new shell-floor correction; pending"
+    }
+  }
+}

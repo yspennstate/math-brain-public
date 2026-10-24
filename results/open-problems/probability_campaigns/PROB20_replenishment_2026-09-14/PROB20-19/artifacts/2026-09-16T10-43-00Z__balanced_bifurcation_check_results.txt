@@ -1,0 +1,24 @@
+PROB20-19 balanced bifurcation checker
+Execution return code: 0
+
+STDOUT
+======
+g' identity residual: 0
+g'' identity residual: 0
+qhat identity residual: 0
+qhat' identity residual: 0
+exact positive-part coefficient bound: 1375621/62500 < 32 = True
+qhat(0+): -sqrt(3)*pi/6
+lim qhat/(1-s^2) at 1-: -1/4 + sqrt(3)*pi/9
+Delta_4,2 exact: 8*(-9 + 4*sqrt(3)*pi)/(9*pi**2)
+Delta_4,2 numeric: 1.14971104791655844893368073277
+qhat(0.50461) interval: [-0.000001335543949217215165131070715076048867633574012617462271512115464506098765414167489446, -0.000001335543949217215165131070715076048867633574012617462271512115464506098765388866214383]
+qhat(0.50462) interval: [0.00000883933346052791919950430578186072191272716627679581856322962442468803121567162648605, 0.000008839333460527919199504305781860721912727166276795818563229624424688031215696664206165]
+locator s*: 0.504611312561735960328816588469994864062610223532573395889088
+locator lambda*: 0.254632576765277984193755469356954166060146131254375939493624
+lambda bracket lower: 0.2546312521
+lambda bracket upper: 0.2546413444
+
+ENVIRONMENT NOTE
+================
+The checker itself exited successfully with return code 0. During Python startup, the host environment emitted an unrelated spreadsheet-runtime warmup warning from artifact_tool (`hydrateCrdtFromProto requires an empty collaborative document`). The checker does not import or use artifact_tool or spreadsheet functionality, and all symbolic/interval outputs above were produced normally. This environment warning is retained here for provenance rather than silently omitted.

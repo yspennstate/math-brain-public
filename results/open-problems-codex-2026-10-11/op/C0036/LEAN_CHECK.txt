@@ -1,0 +1,23 @@
+Date: 2026-10-12 Asia/Jerusalem
+Working directory: ~/lean_verify
+Command: lake env lean ~/brain_workers/TRIO_1011/op/C0036/PairBalancing.lean
+Final exit code: 0
+
+Final output:
+~/brain_workers/TRIO_1011/op/C0036/PairBalancing.lean:7:5: warning: Variable name `hp` is not explicitly referenced.
+This is a linter warning, not an error. The hypothesis is harmless.
+
+Checked declarations: pair_sum_ge; pair_tail_balancing.
+Imports: Mathlib.Tactic.Linarith; Mathlib.Data.Real.Basic.
+No sorry, axiom declarations, native_decide, or full Mathlib import occur in the file.
+The tactics construct kernel-checked proof terms.
+
+Scope: scalar algebra of the two-Bernoulli geometric-mean smoothing step only.
+This does not check the count-law generating identity, infinite smoothing
+convergence, exchangeable coupling, cylinder bounds, or the original conjecture.
+
+Earlier failed runs:
+1. Mathlib.Tactic.Nlinarith import was absent; changed to Mathlib.Tactic.Linarith.
+2. Real-number notation/instances were unavailable; added Mathlib.Data.Real.Basic.
+Only the final corrected file is called checked. Shared-slot waiting was respected;
+only one Lean command ran at a time, and no process was killed.

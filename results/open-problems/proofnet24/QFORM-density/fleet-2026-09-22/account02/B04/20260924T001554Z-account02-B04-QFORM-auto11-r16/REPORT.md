@@ -1,0 +1,358 @@
+SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account account02, slot B04, 2026-09-24T00:15:54Z.
+attacking: rank-at-least-three zero-diagonal residual curvature: use partner residual paving to pay the diffuse higher-rank branch, then optimize third-volume weights and ridge on one Walsh physical carrier.
+
+# account02/B04 r16 — diffuse higher-rank C1 residual curvature exits by physical repaving
+
+Programme: `QFORM-DENSITY-3EIG-20260922`.
+Role: Product Fourier rearrangement / complementary constructions and source-valid counterexamples.
+Status: `ESSENTIAL_STEP_APPLIED / NEW SUPPORTING COROLLARY / SAME-MATRIX GLOBAL WEIGHT OPTIMIZATION / FULL TARGET OPEN`.
+Execution context: `WITHOUT_VERIFIED_BRAIN`.
+
+The unrestricted QFORM conjecture remains OPEN. All conditioning below is on original physical coordinates. All partitions are literal partitions of physical coordinate indices. Spectral frames are used only for deterministic coefficient inequalities. No moments, support restriction, log-concavity, post-rotation independence, arbitrary-joint coarea, or law-uniform pointwise quadratic-phase decay is used.
+
+## 0. First unpaid implication
+
+The immediately preceding B04 mathematics closed the zero-anchor C1 residual-curvature cases `rank(E_ZZ)=0` and `rank(E_ZZ)=2`; nonzero rank one is impossible for a symmetric zero-diagonal matrix. Its first unpaid branch was `rank(E_ZZ)>=3`.
+
+This run pays the entire subbranch in which the residual curvature has target-scale third singular value and sufficiently diffuse physical range. The remaining unpaid implication is therefore
+
+`QFORM-C1-ZCURVATURE-HIGHLEVERAGE-OR-SMALL-S3-ROUTING-v1`:
+
+> In the zero-anchor C1 star factorization, after removing the rank-zero and rank-two cases and the diffuse higher-rank case proved below, show that either high physical residual leverage or small `s_3(E_ZZ)` forces an already-completed grouped-hub, square-bank, pair, projected-crossing, D5, or ridge exit at target scale. Do not perturbatively delete `E_ZZ` and do not select/invert a vanishing local coefficient.
+
+So `rank(E_ZZ)>=3` by itself is no longer the obstruction.
+
+## 1. Sources actually used
+
+Fresh owner control remained revision `2026-09-22.15`, QFORM-only, with the full theorem open and the standard corrections active.
+
+The required pinned Claude/e5 source was reread at
+
+`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+
+under
+
+`proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
+
+In particular, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` were reread. The completed result applied at an actual inequality below is Theorem D: for a literal physical cross block `M`, with third-volume total `Z_3=E_3(M)` and an admissible physical minor law, the natural `q=1` form gives
+
+`||p_Q||_infinity <=6 sqrt(e) Z_3^(-1/6)`                        (1.1)
+
+when every constrained-side row marginal is at most `1/2`; the arbitrary-weight version replaces `Z_3` by the entropy-determinant currency `G(w)`.
+
+The newest compatible designated partner is account03/B04 r44,
+
+`yspennstate/math-open-problems@09b0020b571d5babcc315cfc9012a8a736b9b8a0`
+
+at
+
+`proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T234934Z-account03-B04-QFORM-auto11-r44/REPORT.md`.
+
+Its theorem `QFORM-RESIDUAL-PAVING-AFTER-HUB-DELETION-v1` says: if
+
+`S=U Lambda U^T`, `rank(S)=r<=R`, `U^T U=I_r`,
+
+one deletes a physical set `H`, writes `L=H^c`,
+
+`G=U_L^T U_L>=gamma I`,
+`beta=max_{i in L}||u_i||^2`,
+`R beta<gamma`,
+
+and puts
+
+`g=(1-sqrt(R beta/gamma))/2`,                                    (1.2)
+
+then a literal physical partition `L=I disjoint-union J` exists with
+
+`s_k(S[I,J])>=g gamma s_k(S)`                                    (1.3)
+
+for every retained singular direction. Combined with its completed marginal-free cross-E3 receiver,
+
+`||p_Q||_infinity <=C_* E_3(M)^(-1/6)`,
+`C_*=8.4530212255281768747...`,                                  (1.4)
+
+this pays a full ambient quadratic form once `s_3` of the physical crossing is bounded below. Same-bank curvature and induced affine terms are allowed.
+
+## 2. New branch corollary: diffuse higher-rank residual curvature
+
+Consider the account03/B04 zero-anchor C1 factorization. Thus `A_hh=0`; with
+
+`N={i:A_hi!=0}`, `Z={i:A_hi=0}`,
+
+and after the proved star subtraction, the remaining Z-Z curvature is a symmetric physical matrix `E=E_ZZ`. The exact details of the N-bank star terms will not matter here, because we condition them away before repaving Z.
+
+### Theorem 2.1 — `QFORM-C1-DIFFUSE-HIGHERRANK-ZCURVATURE-EXIT-v1`
+
+Write
+
+`E=U Lambda U^T`, `U^T U=I_r`, `r>=3`,
+
+and let
+
+`beta=max_{i in Z}||u_i||_2^2`,
+`sigma=s_3(E)>0`.                                                 (2.1)
+
+If
+
+`r beta<1`,                                                       (2.2)
+
+then the full quadratic form, including arbitrary outside original coordinates and all affine terms generated by conditioning, satisfies
+
+`boxed:
+ ||p_Q||_infinity
+ <= 2 C_*/[(1-sqrt(r beta)) sigma].`                              (2.3)
+
+More generally, for any physical subset `H subset Z`, let `L=Z\H`,
+
+`G=U_L^T U_L>=gamma I`,
+`beta_H=max_{i in L}||u_i||^2`,
+`r beta_H<gamma`.                                                 (2.4)
+
+Then
+
+`boxed:
+ ||p_Q||_infinity
+ <= C_*/[g gamma sigma],
+ g=(1-sqrt(r beta_H/gamma))/2.`                                  (2.5)
+
+### Proof
+
+Condition on the original anchor coordinate `X_h`, every original coordinate in `N`, every outside coordinate from the ambient form, and in the general version every coordinate in `H`. Product independence of the remaining Z-bank coordinates is untouched. All conditioned couplings become affine terms. The remaining quadratic part on `L` is exactly the corresponding physical compression of `E`.
+
+Apply partner r44 to the deterministic carrier `E=U Lambda U^T`. In the basic case `H=empty`, `G=I`, `gamma=1`, `R=r`; (1.2)-(1.3) give a literal physical partition `Z=I disjoint-union J` with
+
+`s_3(E[I,J])>=[(1-sqrt(r beta))/2] sigma.                         (2.6)
+
+In the deletion version, the same theorem gives
+
+`s_3(E[I,J])>=g gamma sigma.                                      (2.7)
+
+For `M=E[I,J]`,
+
+`E_3(M)>=s_1(M)^2s_2(M)^2s_3(M)^2>=s_3(M)^6`.                   (2.8)
+
+Apply the completed marginal-free physical cross-E3 theorem (1.4), uniformly in all induced affine terms. Equations (2.6)-(2.8) yield (2.3), and (2.7)-(2.8) yield (2.5). Averaging the uniform conditional density bound over the conditioned original coordinates proves the unconditional bound. QED.
+
+The theorem is useful precisely because arbitrary residual same-bank curvature is not deleted. It is converted into a literal cross packet by a deterministic physical repaving.
+
+## 3. A heavy-set consequence inside the C1 branch
+
+Fix `tau>0` and let
+
+`H={i in Z: ||u_i||^2>tau}`.                                     (3.1)
+
+Since the leverage scores sum to `r`,
+
+`|H|<r/tau`.                                                      (3.2)
+
+Choose `gamma` with `r tau<gamma<1`. Partner r44 implies the following exact alternative after the C1 conditioning:
+
+1. `G=U_L^T U_L>=gamma I`, in which case Theorem 2.1 pays the branch with `beta_H<=tau`; or
+2. some unit coefficient-space vector `z` satisfies
+
+   `||U_H z||^2>1-gamma`.                                        (3.3)
+
+Thus failure of the diffuse Fourier exit produces a concrete physical hub concentration, not merely the statement that a global volume functional is small. This is the correct next interface for the remaining branch.
+
+## 4. Target-valid Walsh stress matrix in the actual zero-anchor C1 branch
+
+Use 64 original physical coordinates indexed by `x in F_2^6`. Define a 64-by-5 coefficient frame
+
+`U_{xk}=2^(-3)(-1)^{x_k}`, `k=1,...,5`,                          (4.1)
+
+and
+
+`Lambda=diag(2,2,-2,-1,-1)`,
+`E=U Lambda U^T`.                                                 (4.2)
+
+Walsh orthogonality gives `U^T U=I_5`. Every physical row has leverage
+
+`beta=5/64`.                                                      (4.3)
+
+Since `tr Lambda=0` and every squared Walsh entry is `1/64`,
+
+`E_xx=0`                                                         (4.4)
+
+for every physical coordinate. The nonzero spectrum of E is exactly
+
+`{2,2,-2,-1,-1}`.                                                (4.5)
+
+Now add two further original physical coordinates `h,n` with the star block
+
+`[[0,1],[1,0]]`
+
+and take the direct sum
+
+`A_*=[[0,1],[1,0]] direct_sum E`.                                (4.6)
+
+Relative to the zero anchor h, `N={n}`, the 64 Walsh coordinates are precisely Z, and every physical principal triangle through h is singular. Thus (4.6) is a literal member of the zero-anchor C1 structural state. Its nonzero spectrum is
+
+`{2,2,1,-1,-1,-1,-2}`,                                          (4.7)
+
+so seven eigenvalues have modulus at least one. This is a genuinely rotated indefinite target matrix; the five residual eigenvectors are diffuse Walsh directions in the original product coordinates.
+
+The new generic theorem already applies. Here `r=5`, `beta=5/64`, `sigma=s_3(E)=2`, hence
+
+`g=(1-sqrt(25/64))/2=3/16`.                                     (4.8)
+
+Applying newest partner r44 at an actual inequality gives
+
+`boxed:
+ ||p_{X^T A_* X}||_infinity
+ <= C_*/[(3/16)*2]
+ =(8/3)C_*
+ =22.5413899347418... .}`                                       (4.9)
+
+This is a target-valid product-space estimate obtained without a physical scalar pivot.
+
+## 5. An explicit physical repaving with exact singular values
+
+The Walsh family allows a much sharper literal partition than the generic second-moment paving guarantee. Let
+
+`tau_x=(-1)^{x_6}`,
+`I={x:tau_x=+1}`, `J={x:tau_x=-1}`.                              (5.1)
+
+Both sides have 32 physical rows. The sixth Walsh character is distinct from every product of two of the first five coordinate characters, so
+
+`U_I^T U_I=U_J^T U_J=(1/2)I_5`.                                 (5.2)
+
+Put `L=sqrt(2)U_I`, `R=sqrt(2)U_J`. Then L and R have orthonormal columns and the literal physical crossing is
+
+`M=E[I,J]=(1/2)L Lambda R^T`.                                    (5.3)
+
+Therefore its five nonzero singular values are exactly
+
+`1,1,1,1/2,1/2`.                                                 (5.4)
+
+In particular
+
+`Z_3=E_3(M)=43/16`,
+`Z_5=E_5(M)=1/16`.                                                (5.5)
+
+Conditioning the independent star coordinates h,n leaves this same physical crossing, with no change to the density caps.
+
+## 6. Global optimization of all admissible third-volume weights on this same crossing
+
+Let `nu` be the natural squared-3-minor law of M. For an exact singular decomposition, the natural row marginal formula is
+
+`alpha_i=sum_m p_m l_m(i)^2`,
+`p_m=s_m^2 e_2(s^2 without m)/Z_3`.                               (6.1)
+
+For the three unit singular values,
+
+`p_m=33/43`,
+
+and for the two half singular values,
+
+`p_m=15/43`.                                                      (6.2)
+
+Each physical left singular vector is a column of L and has squared coordinate `1/32`; since `sum_m p_m=3`, every constrained-side physical row marginal is exactly
+
+`boxed: alpha_i=3/32.`                                           (6.3)
+
+Thus the pinned e5 Theorem D is comfortably admissible.
+
+More importantly, the optimization over supported weights is exact. For every supported probability law w on physical 3-minors,
+
+`log G(w)=log Z_3-D_KL(w||nu)<=log Z_3`.                          (6.4)
+
+The natural law nu attains equality and is itself admissible by (6.3). Since the Jensen/D' exponent cannot go below `q=1`, nu at `q=1` is the global optimum over every supported admissible weight and every proved D/D' exponent.
+
+Applying the required pinned e5 result at the actual inequality gives
+
+`boxed:
+ ||p_{X^T A_* X}||_infinity
+ <=6 sqrt(e) (43/16)^(-1/6)
+ =8.389583725151274... .}`                                       (6.5)
+
+This completed Fourier certificate also supplies a continuous `C_0` density for this displayed matrix family.
+
+For reference, the pinned marginal-free fifth-volume theorem on the identical crossing gives
+
+`5 sqrt(2e) (1/16)^(-1/10)
+ =15.383113394117070... .`                                       (6.6)
+
+The account03/B04 marginal-free E3 receiver used inside r44, applied to the exact `Z_3` rather than only the generic `s_3` lower bound, gives
+
+`C_* (43/16)^(-1/6)
+ =7.168922421105023... .`                                        (6.7)
+
+## 7. Globally optimized direct ridge certificate on the identical physical crossing
+
+Set `g=gamma^2`. From (5.4), the five nonzero ridge eigenvalues are
+
+`1/(1+g)` three times and `1/(1+4g)` twice. Hence
+
+`theta(g)=3/(1+g)+2/(1+4g)`.                                     (7.1)
+
+Because every physical left singular-vector squared coordinate is `1/32`, every physical ridge leverage equals
+
+`theta(g)/32<5/32<1/2`.                                          (7.2)
+
+So the completed simplified ridge theorem is admissible at `q=1` whenever `theta(g)>2`, equivalently
+
+`0<g<(1+sqrt(7))/4`.                                             (7.3)
+
+Its bound is
+
+`R(g)=sqrt(e)/(sqrt(2g)) * theta(g)/(theta(g)-2).`                (7.4)
+
+Differentiate `log R(g)^2`:
+
+`d/dg log R(g)^2
+=-3(112g^3+48g^2-6g-5)
+ /[g(14g+5)(8g^2-4g-3)].`                                       (7.5)
+
+The bound diverges at both ends of the admissible interval. The cubic in (7.5) has exactly one positive root by Descartes' rule of signs, hence that root is the unique global minimizer:
+
+`g_*=0.2894328117919802489...`,
+`112g_*^3+48g_*^2-6g_*-5=0`.                                    (7.6)
+
+Therefore the globally optimized certificate in this completed direct `q=1` ridge family is
+
+`boxed:
+ R(g_*)=5.624501198144349... .}`                                 (7.7)
+
+No claim is made here about every later determinant-retaining or square-assisted ridge variant; equation (7.7) is a genuine global optimization of the completed direct family stated above.
+
+## 8. Same-matrix hierarchy
+
+For the identical physical target matrix (4.6), and the identical Walsh residual crossing (5.3), the certified hierarchy is
+
+`5.6245011982` — globally optimized direct q=1 ridge;
+
+`7.1689224212` — marginal-free E3 on the exact crossing;
+
+`8.3895837252` — globally optimized pinned e5 D/D' weight;
+
+`15.3831133942` — pinned marginal-free D5;
+
+`22.5413899348` — generic newest-partner r44 repaving guarantee.  (8.1)
+
+The hierarchy is informative rather than competitive: r44 is a structural existence theorem designed to survive arbitrary low-rank carriers after physical hub deletion, while the Walsh example has an unusually symmetric explicit cut. The important new structural fact is that the entire diffuse `rank(E_ZZ)>=3` branch is now paid before any small local minor is inverted.
+
+## 9. What this changes in the zero-pivot C1 programme
+
+The previous B04 state had:
+
+- rank zero residual curvature: paid by grouped clean-bank top-two rearrangement;
+- nonzero rank one: impossible for a symmetric zero-diagonal residual;
+- rank two: paid by the physical bipartition theorem and grouped rearrangement;
+- rank at least three: unpaid.
+
+The present theorem replaces the last line by:
+
+- rank at least three with `s_3(E_ZZ)` at target scale and diffuse residual range: paid by product-coordinate residual paving plus marginal-free E3;
+- remaining branch: either `s_3(E_ZZ)` is quantitatively small or the residual range has a heavy physical coordinate set that captures a substantial actual carrier direction.
+
+That is a strict narrowing of the first unpaid implication. It also matches the newest partner's heavy-set dichotomy rather than trying to force a nonexistent universal local pivot.
+
+## 10. Audit / provenance
+
+Exact Walsh orthogonality, zero diagonal, target spectrum, explicit-cross singular values, third/fifth volume, natural row marginals, entropy optimum, and ridge minimization are recorded independently in `CHECKS.md` beside this report.
+
+The pinned e5 result is used positively at equation (6.5), not merely cited. The newest designated partner r44 is used positively at equations (2.6)-(2.8) and (4.9).
+
+Repository transport was authenticated, but no native learned-memory receiver/ingestion was observed. Therefore this run remains `WITHOUT_VERIFIED_BRAIN`.
+
+Manual narrow privacy review of the proposed files found mathematics, source pins, logical account/slot labels, and run provenance only; no credentials, scheduler identifiers, machine paths, private personal data, email/notification changes, benchmark/gold material, or unrelated data.

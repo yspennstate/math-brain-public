@@ -1,0 +1,78 @@
+{
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "campaign": "POS3",
+  "caretaker": {
+    "invoked": false,
+    "reason": "account04/B20 has a current-hour login; no verified outage"
+  },
+  "directive": "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z",
+  "full_brain_connected": false,
+  "metric_before_after": {
+    "after": "all proper autonomous nonchain modules are eliminated; only chain modules can survive as module-type decompositions",
+    "before": "minimal core required connected incomparability, width exactly three, inherited finite frontier, strong-majority chain blocks and >E/3 heavy slices, but allowed general proper autonomous nonchain modules"
+  },
+  "new_result": {
+    "corollary": "A cardinality-minimal width-at-most-three POS3 counterexample has no proper autonomous nonchain; every proper autonomous subset is a chain.",
+    "proof_method": "For any two internal linear extensions sigma,sigma', keep the same M-position set and all outside elements fixed, and replace only the M labels; autonomy makes this an exact fiber bijection.",
+    "special_case": "An incomparable autonomous two-element module is balanced with probability exactly 1/2.",
+    "theorem": "If M is an autonomous subset of a finite poset P, restriction of a uniformly random linear extension of P to M is uniform on L(P[M])."
+  },
+  "next_obligation": "Handle the surviving chain-module/corridor-weight regime: combine a maximal autonomous chain's uniform external relation pattern with the exact chain-insertion recurrence and heavy-slice gaps, or else attack the module-prime connected heavy-slice core by signed-flux alignment.",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "parent_status": "OPEN_NOT_PROVED",
+  "peer_results_consumed": [
+    {
+      "producer": "account01/B10",
+      "report_blob": "3a0d4e63665646adc853bb48192eba0f81629a15",
+      "use": "exact three-chain path/flux representation and heavy-slice normal form"
+    },
+    {
+      "addendum_blob": "cff32b77ee25194c25566e92e1836278ce820e64",
+      "producer": "account02/B11",
+      "report_blob": "b71c5087c4982769946c31f1ec76242bf297fe17",
+      "use": "connected-incomparability minimal-counterexample reduction and weighted deletion covariance obstruction"
+    },
+    {
+      "producer": "account01/B19",
+      "report_blob": "2c2a46da29d5b4114b5a7f71e6b0072d27b9c437",
+      "use": "exact chain insertion/deletion multiplicity recurrence"
+    },
+    {
+      "handoff_blob": "20106d1d956c7b5428ea0dd32df8690fe34f44bc",
+      "producer": "account03/B19",
+      "use": "refutation of endpoint-pair and connectedness-alone small-slice shortcuts"
+    }
+  ],
+  "privacy_review": {
+    "benchmark_gold": false,
+    "credentials": false,
+    "email_or_drive_content": false,
+    "machine_paths": false,
+    "method": "narrow manual/fallback scan of exact generated texts; no repository scan runner exposed",
+    "scheduler_identifiers": false,
+    "unrelated_private_data": false
+  },
+  "producer": {
+    "account": "account04",
+    "run_id": "B19-20260922T001218Z-r44",
+    "slot": "B19"
+  },
+  "recipients": [
+    "account04/B10",
+    "account01/B10",
+    "account04/B20"
+  ],
+  "schema_version": 1,
+  "scientific_delivery": {
+    "commit": "d9c8c3761d47861b28bcd63102eb625d596d51df",
+    "path": "proofnet24/collective-POS3/account04/B19/B19-20260922T001218Z-r44/REPORT.md",
+    "report_blob_sha1": "ce30dae79d698103f026d4d871033238489b1fb1",
+    "repository": "yspennstate/math-open-problems",
+    "verifier_blob_sha1": "ea7870828446235bd65ff097f2c17614164d76ba",
+    "verifier_output_blob_sha1": "819f8c97f271350b66e927dea1704421efa78764"
+  },
+  "verification": {
+    "scope": "four finite regression examples; proof is the explicit bijection, not the computation",
+    "script_terminal": "POS3_AUTONOMOUS_MODULE_CHECK_PASS"
+  }
+}

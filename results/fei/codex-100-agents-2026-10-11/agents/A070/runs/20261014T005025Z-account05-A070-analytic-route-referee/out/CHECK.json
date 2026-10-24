@@ -1,0 +1,165 @@
+{
+  "status": "PASS",
+  "helper": "A070-mask-referee-v1.1",
+  "mode": "full",
+  "cases": 70147,
+  "exact_assertions": 341515,
+  "seconds": 106.73181469997508,
+  "certificate_sha256": "9be008e68902ac12619fa0f66da71852fa372619be657181fed94f1ec8bd249d",
+  "normalized_real": {
+    "u": "(12+5x1)/13",
+    "normalized_product": "(169+120x1)/sqrt(42961)",
+    "W_u": "50/169",
+    "W_product": "28800/42961",
+    "comparison_gap": "571100/7260409",
+    "integer_positive_gap": 571100
+  },
+  "conversion_witnesses": [
+    {
+      "source_truth": [
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "final_truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "Gamma_source": "5",
+      "Gamma_final": "1",
+      "W_mask": "4",
+      "I_source": "3/2",
+      "I_mask": "3/2",
+      "I_final": "0",
+      "R_tree": "8",
+      "R_influence": "3",
+      "conversion_at_K12": "-28",
+      "source_slack_at_K12": "13",
+      "mask_bank_at_K12": "14"
+    },
+    {
+      "source_truth": [
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "final_truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "Gamma_source": "11/2",
+      "Gamma_final": "3",
+      "W_mask": "4",
+      "I_source": "5/2",
+      "I_mask": "3/2",
+      "I_final": "1",
+      "R_tree": "13/2",
+      "R_influence": "3",
+      "conversion_at_K12": "-59/2",
+      "source_slack_at_K12": "49/2",
+      "mask_bank_at_K12": "14"
+    }
+  ],
+  "mask_fixtures": [
+    {
+      "sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "net_W_over_I": "8/3"
+    },
+    {
+      "sizes": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "net_W_over_I": "3"
+    },
+    {
+      "sizes": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "net_W_over_I": "19/6"
+    },
+    {
+      "sizes": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "net_W_over_I": "19/6"
+    },
+    {
+      "sizes": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "net_W_over_I": "8/3"
+    }
+  ],
+  "author_code_imported": false
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "claim_id": "A055-CRITICAL-MIXED-REFUND-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For finite uniform Boolean signs, the two whole-sign exact refund gates hold iff D_K>=0. For disjoint edits E_+ and E_- within the opposite original sign sets, R(E_+ union E_-)-R(E_+)-R(E_-)=T, the four-point Fourier entropy difference, and the mixed deficit gain excess is T-4K e(E_+,E_-)/2^n. At n=3,K=2 the negative point defect at000 is a least-essential-dimension positive-deficit finite global maximizer, yet E_-={000},E_+={111} have e=0 and refund excess6-(9/4)log2(3)>12/5. Thus R(union)<=R(E_+)+R(E_-)+4K e/2^n is false even with every finite selector extremality test. Separately, for every labelled Boolean function through n=4 and K in {0,1/2,...,8}, all exact one-sign edits being nonimproving is equivalent to global deficit maximality; this last statement is only a finite certificate.",
+    "hypotheses": [
+      "uniform finite cube",
+      "Boolean signs",
+      "base2 Fourier entropy",
+      "exact finite maximality at K=2 for the named witness",
+      "finite census only n<=4 at the17 stated rates"
+    ],
+    "statement_sha256": "82bc4abb6ae28403f2008fbc7dcb9922ca30d6f9c002e63026930189e0dd53cd",
+    "contributors": [
+      "A055"
+    ],
+    "proof_source": [
+      "DERIVATION.md",
+      "out/CRITICAL_GUARD.json",
+      "out/INDEPENDENT_GUARD.json",
+      "out/LATTICE.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "kind": "author independent representation",
+        "source": "code/independent_guard.py",
+        "status": "PASS; not an independent-agent review"
+      },
+      {
+        "kind": "Lean attempt",
+        "source": "out/LEAN_REPLAY.json",
+        "status": "RUNTIME_UNVERIFIED; no formal certification"
+      }
+    ],
+    "status": "PROVED_AND_EXACTLY_CERTIFIED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "R(E_+ union E_-) <= R(E_+)+R(E_-)+4K e/2^n on every finite maximal-deficit minimal witness",
+        "status": "exploratory shortcut only; no registered A052 claim refuted"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A051",
+      "A052",
+      "A005",
+      "A090",
+      "A094"
+    ]
+  }
+]

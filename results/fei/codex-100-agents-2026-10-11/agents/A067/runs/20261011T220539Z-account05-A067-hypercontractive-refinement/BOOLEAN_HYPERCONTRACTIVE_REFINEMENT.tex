@@ -1,0 +1,101 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\wh}{\widehat}
+\begin{document}
+\title{A Boolean arithmetic refinement of level-wise entropy conversion}
+\author{A067, stream B14}\date{12 October 2026}\maketitle
+All cubes are uniform, outputs are $\{-1,1\}$, and entropies use bits.
+Write $q_S=\wh f(S)^2$, $I=\sum_S |S|q_S$, and $v=1-q_\varnothing$.
+For every nonzero nonempty coefficient put
+\[
+d_f(S)=\max_{T\supseteq S,\ \wh f(T)\ne0}|T|,
+\qquad U(f)=\sum_{S\ne\varnothing}q_S(d_f(S)-|S|).
+\]
+Zero terms are omitted, and constants have $U=0$.
+\begin{lemma}
+For every nonempty $S$ with nonzero coefficient,
+$\wh f(S)\in2^{1-d_f(S)}\mathbb Z$.
+\end{lemma}
+\begin{proof}
+An integer-valued cube polynomial of real degree $m$ has integer
+multilinear coefficients in the $y_i=(1-x_i)/2$ variables, by finite
+differences of vertex values. Its Fourier coefficients are therefore
+multiples of $2^{-m}$. If $s=|S|$, the mixed derivative
+\[
+D_S f=2^{-s}\sum_{z\in\{-1,1\}^S}\chi_S(z)f(z,x_{S^c})
+\]
+takes values in $2^{1-s}\mathbb Z$ and has degree $d_f(S)-s$.
+Apply the integer-polynomial observation to $2^{s-1}D_S f$ and its
+empty Fourier coefficient $2^{s-1}\wh f(S)$.
+\end{proof}
+\begin{theorem}
+Every Boolean sign satisfies
+\[
+H(f)\le2I(f)+2U(f)-(2-\log_2 e)v.
+\]
+Thus $U(f)\le KI(f)$ implies $H(f)\le(2+2K)I(f)$ in every dimension.
+\end{theorem}
+\begin{proof}
+The lemma bounds nonempty-coefficient surprisal by $2(d_f(S)-1)$.
+Their weighted sum is $2I+2U-2v$. The empty contribution is at most
+$(\log_2 e)v$ by $-x\ln x\le1-x$.
+\end{proof}
+This replaces the level-support estimate
+$H(q\mid |S|=k)\le\log_2\binom nk\le k\log_2(en/k)$
+on a stated Boolean regime. It is not an improvement of the general
+Bonami--Beckner norm inequality. In the recovered threshold paper,
+Section 5.1, Lemma 5.3 and equation (29), hypercontractivity bounds
+a ternary pivotal fiber's noise norm before paying rarity and rank
+costs. The entropy conversion still needs additional structure.
+
+For the point defect $f_n=1-2\mathbf1_{\{x=\mathbf1\}}$,
+put $p=2^{-n}$, $n\ge2$. Direct computation gives
+\[
+I=2np,\quad v=4p(1-p),\quad U=2np-4np^2\le I.
+\]
+Hence the theorem gives $H\le4I-(2-\log_2 e)v$, whereas the
+generic coordinate-marginal upper bound has ratio
+$nh_2(2p)/I=n-1+\log_2 e+O(p)$. Its Shannon ratio tends to four,
+while every fixed-order spectral R\'enyi ratio below order one diverges.
+The level-count bound is tight on point defects. For a strict gain
+over level counting, the existing addressing baseline on $a+2^a$
+variables has $d_f(S)=a+1$, $v=1$, $I=1+a/2$, and $U=a/2$.
+The refined bound is exactly $H\le2a$, whereas generic full-cube
+level counting costs $\Theta(a^2)$. Indeed its level law is
+$W_{t+1}=2^{-a}\binom at$; at least half the mass has $t\ge a/4$
+for $a\ge8$, and
+$\log_2\binom{a+2^a}{t+1}\ge(t+1)[a-\log_2(a+1)]$.
+This evaluates a new bound on a recovered baseline, rather than
+claiming the addressing theorem as new.
+
+The Boolean hypothesis is essential: the real function
+$n^{-1/2}\sum_i x_i$ has singleton support, $U=0$, $I=1$, and
+$H=\log_2 n$.
+
+Universal payment of $U$ is false. A one-point dictator surgery
+$g_n=x_1-2\mathbf1_{\{x=\mathbf1\}}$ has
+\[
+I(g_n)=1+(2n-4)2^{-n},\quad
+U(g_n)=n-1-(2n-4)2^{-n}-4n2^{-2n}.
+\]
+Its $U/I$ diverges although its entropy tends to zero.
+
+Even optimizing one character anchor fails. For
+$F_n=\operatorname{Maj}_3(z)f_n(y)$ on disjoint variables, define
+\[
+E_A=(\log_2 e)(1-\wh F_n(A)^2)+
+2\sum_{R\ne\varnothing}\wh{(F_n\chi_A)}(R)^2(d_{F_n\chi_A}(R)-1).
+\]
+One has $H(F_n)\le E_A$ for every $A$. At least $3/4$ of the
+translated majority spectrum has nonempty $z$-support. The point
+defect has full support on its $n$ variables; thus those coefficients
+have upper degree at least $n+1$. It follows that
+$E_A\ge3n/2$ for all anchors, although
+$I(F_n)=3/2+2n2^{-n}\le5/2$ and $H(F_n)=2+H(f_n)$ is bounded.
+
+Full FEI remains open. A tail-stable arithmetic replacement or a
+completely paid partition is required; a universal maximal-support
+envelope, even optimized over one anchor, cannot supply it.
+\end{document}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260922T204004Z-account01-B08-qform-r17",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_start_commit": "c6684ce2c276badc2f515b453dd5a68f057d3ab7",
+  "prepublication_control_commit_observed": "22a374e271efd0baefb07767015960a42240a0a6",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "NOT_PROVED_ON_THIS_BRANCH",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "940ce962343c131d78785562b03a99dcb16d894f",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260922T204004Z-account01-B08-qform-r17/",
+  "result_ids": [
+    "QFORM-RANK2-PHYSICAL-CROSS-HALF-RIESZ-v1",
+    "QFORM-PIVOT-PLUS-RANK2-CROSS-v1",
+    "QFORM-DIFFUSE-BICOLOOP-1P24PCT-TAIL-STABILITY-v1"
+  ],
+  "partner_results_applied": [
+    {
+      "account_slot": "account02/B08",
+      "run_id": "B08-20260922T201017Z-r15",
+      "commit": "7f37e244e4ec78acf9f499ebdf06ad3cb79a4ede",
+      "result": "QFORM-REGULARIZED-BICOLOOP-SCHUR-STAR-v1",
+      "application": "converted its normalized incident determinant bank into an exact-rank-two singular-product lower bound"
+    },
+    {
+      "account_slot": "account02/B08",
+      "run_id": "B08-20260922T204103Z-1dd824",
+      "commit": "c248abc9be918698c6d5a68108c615ba1c4790b3",
+      "result": "QFORM-DOUBLE-INCIDENT-RANK2-GROUPED-L3-v1",
+      "application": "derived h2/gamma>0.8163713602 and relative Frobenius tail <0.012385265 in the surviving higher-rank branch"
+    }
+  ],
+  "other_dependencies": [
+    {
+      "account_slot": "account02/B06",
+      "commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+      "result": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1"
+    },
+    {
+      "account_slot": "account03/B06",
+      "commit": "1287456c9a709f8c3f117c23faa46e75f4560d01",
+      "result": "QFORM-EXACT-RANK2-CROSSBANK-L3-v1",
+      "note": "fresh overlap check; stronger density-level exact-rank-two theorem already existed, so no novelty claim for exact-rank-two closure"
+    },
+    {
+      "account_slot": "account01/B06",
+      "commit": "4ed07d5034b4499841f831975ceccfbf1ae45606",
+      "result": "QFORM-BICOLOOP-STRONG-RANK2-TUBE-v1"
+    }
+  ],
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY",
+    "FIBER-SUP-DIMENSION-FREE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1",
+    "QFORM-SIGNED-LEAKAGE-FREE-TRIBANK-EXTRACTION-FALSE-v1"
+  ],
+  "mathematical_change": "Independent two-dimensional affine-fiber/Plancherel half-Riesz derivation for exact rank-two physical cross blocks; fresh designated-partner integration sharpens the live higher-rank survivor to a <1.239% Frobenius tail relative to the second rank-two core singular value.",
+  "unpaid_implication": "QFORM-DIFFUSE-BICOLOOP-1P24PCT-TAIL-STABILITY-v1",
+  "next_step": "retain the genuine tiny higher-rank cross phase and prove a dimension-free L3/half-Riesz/outer-square estimate, or force that tail into an already-paid ridge/second-curvature branch; do not repeat exact-rank-two payment"
+}

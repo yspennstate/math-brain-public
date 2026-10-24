@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A076 stage 2: majority-of-tribes tree controls}\author{A076}\maketitle
+The complete proof and exact certificate interpretation are in
+\texttt{MIXED\_TREE\_PROOF.md}. All physical inputs below are independent
+uniform signs and all entropies are in bits.
+
+For even $m\ge2$, put $\alpha=2^{-m}\binom{m}{m/2}$,
+$g(x)=\operatorname{sign}(\sum x)$ with $g=0$ on ties,
+$c(x)=\mathbf1_{\sum x=0}$, and
+$F=\operatorname{Maj}_{m+1}(x_1,\ldots,x_m,G(y))=g+cG$.
+The $x$ supports of $g$ and $c$ have odd and even cardinality,
+respectively. Consequently
+\[
+\widehat F(X,Y)=\widehat g(X)\mathbf1_{Y=\varnothing}
+                  +\widehat c(X)\widehat G(Y),\qquad
+H(F)=H(\operatorname{Maj}_{m+1})+\alpha H(G),
+\]
+\[
+I(F)=\alpha(m+I(G)),\quad B_i(F)=\alpha B_i(G)\ (i\in y).
+\]
+The same scaling holds for minority mass, retained packet logarithm,
+and actual Jensen--Shannon decrement at a data split. If $G$ is
+balanced, every $x$ erasure is zero and $B(F)=\alpha B(G)$.
+For $m=2$ and $\mu=\mathbb EG$,
+\[
+H(F)=2+\tfrac12H(G),\quad I(F)=1+\tfrac12I(G),\quad
+B(F)=\tfrac12B(G)+(1+\mu^2)h_2\!\left(\frac{\mu^2}{1+\mu^2}\right).
+\]
+
+Define the actual scalar charge
+$\Lambda_v=j_v\log_2(1+\kappa_{\min,v}/(2j_v))$,
+$j_v=\min(I_{i_v},1-I_{i_v})$,
+$\kappa(h)=1-\max_S\widehat h(S)^2$.
+At any data split while both majority3 inputs remain, both children
+have $\kappa=3/4$, independently of the core.
+For tribes $G=G_{w,t}$, put $q=2^{-w}$, $b=1-q$,
+$\beta=2qb^{t-1}$. The exact y-first charge is
+\[
+\Lambda_{Y}=\frac\beta2\sum_{j=0}^{t-1}\sum_{u=1}^{w}
+\log_2\left(1+\frac34 2^{u-1}b^{-(t-j-1)}\right).
+\]
+Stopping at symmetric thresholds subtracts only
+$\frac\beta2\log_2(7/4)$; its exact terminal values are
+$\mathbb EI(\mathrm{leaf})=1+\beta/2$ and
+$\mathbb EH(\mathrm{leaf})=2$.
+
+For even $w\ge16$ and $t=2^w$, every fixed interleaving of the two
+majority inputs with the contiguous block-by-block y order satisfies
+\[
+\boxed{\frac{\Lambda_{\mathcal T}}{I(F)}\ge\frac{w}{64}.}
+\]
+Indeed, at the first $w/2$ positions of the first $t/4$ blocks the
+weighted queried influence is exactly $\beta/2$ per position.
+Both core children have mean magnitude at most $1/2$ and
+$\kappa\ge3/4$. A branch with one remaining majority input has
+$\kappa\ge7/16$. Thus each logarithm is at least $w/4$.
+These nodes are nonsymmetric and have strictly positive erasure,
+so neither symmetric stopping nor exact-isospectral skipping removes
+them. Summing gives $\Lambda\ge I(G)w/64$; since
+$I(G)\ge2w/3>2$ and $I(F)=(2+I(G))/2$, the displayed bound follows.
+For y-first the exact sum improves this to
+$\Lambda_Y/I(F)=w/2+O(1)$.
+
+On the same family the exact tribes spectrum gives $H(G)\le5I(G)$,
+and hence $H(F)\le5I(F)$. Nonnegative JS and tree telescoping imply
+\[
+B_{\mathcal T}+\mathbb EH(\mathrm{leaf})\le H(F).
+\]
+Using only the symmetric-threshold leaf certificate
+$H(\mathrm{leaf})<9I(\mathrm{leaf})$ therefore gives
+\[
+\boxed{B_{\mathcal T}+9\mathbb EI(\mathrm{leaf})\le14I(F).}
+\]
+The same leaves thus have a bounded true bill and a divergent
+scalar child-defect bill. This refutes the proposed scalar payment
+for these schedules, not its valid local entropy upper bound,
+arbitrary adaptive schedules, or FEI.
+
+For any seed $h$, the balanced core $G=z\prod_{a=1}^k h_a$ on
+disjoint blocks has $B(G)=kB(h)$ and $I(G)=1+kI(h)$.
+Thus $B(F)/I(F)\to B(h)/I(h)$ at fixed even $m$.
+The central-majority/arbitrary-balanced-core endpoint retains the
+optimal universal erasure ratio; omitting the core entropy is
+therefore not a route to full FEI.
+\end{document}

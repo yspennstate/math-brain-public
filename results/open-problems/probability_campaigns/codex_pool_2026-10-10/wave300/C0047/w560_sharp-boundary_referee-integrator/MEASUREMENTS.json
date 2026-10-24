@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-10",
+  "referee_check": {
+    "command": "python -X utf8 ~/brain_workers/w560/verify_referee.py",
+    "result": "PASS",
+    "exact_checks": 6,
+    "review_verdicts": 10,
+    "claims": 4,
+    "draft_bundle_entries": 2,
+    "draft_relations": 1,
+    "hook_proposals_staged": 1,
+    "elapsed_seconds": 0.001731
+  },
+  "patch_check": {
+    "command": "python -X utf8 ~/brain_workers/w560/validate_patch.py",
+    "result": "PASS on isolated copy in w560/patch_check",
+    "original_rows_preserved": 142,
+    "correction_rows_added": 1
+  },
+  "claim_limit": "These local checks establish exact arithmetic and packet integrity; they do not certify the 2026 manuscript, served models, or live-store ingestion."
+}

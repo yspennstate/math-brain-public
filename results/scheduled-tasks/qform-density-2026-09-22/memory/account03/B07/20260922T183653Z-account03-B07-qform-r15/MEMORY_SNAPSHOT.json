@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B07",
+  "run_id": "20260922T183653Z-account03-B07-qform-r15",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.11",
+  "final_control_commit_observed_before_handoff": "577bada5d628e64018bfece3bbc0cc98d2a562b9",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-SCALAR-CONDITIONED-CORE-SUP-v1 refuted by current account03/B05 source"
+  ],
+  "incoming_state": {
+    "source": "yspennstate/math-open-problems@54e57957ed371362e28d0699ccb9a7b8e55e9238:proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260922T180507Z-account03-B07-qform-r14/REPORT_FINAL.md",
+    "fact": "After the one-heavy exclusion collar, an unpaid O0 state has either ell>7/8, or 3/4<=ell<=7/8 and a row j with exclusion-conditioned leverage m>=1/2."
+  },
+  "partner_result_applied": {
+    "designated_partner": "account04/B07",
+    "designated_partner_status": "NO_COMPLETED_CURRENT_QFORM_SOURCE_FOUND_AT_CHECK",
+    "compatible_source_used": "yspennstate/math-open-problems@54e57957ed371362e28d0699ccb9a7b8e55e9238:proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260922T161909Z-account04-B16-QFORM-r2/REPORT.md",
+    "application": "In the exact-rank-three target specialization, if g=det K_{ij}>ell/2 then h=g/ell>1/2 and the fixed-pair determinant bank satisfies sum_k |det A_{ijk}|=|det Lambda|g>3/8; the stated zero-diagonal atom subbranch has density <15.277."
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-O0-EXCLUSION-PAIR-DICHOTOMY-v1",
+      "status": "PROVED_IN_RUN",
+      "summary": "For 3/4<=ell<=7/8 and exclusion-conditioned m>=1/2, with g=det K_{ij}, either g>=1/16 and at least c_*=(31/64-exp(-1))/16 of the regularized determinant lies on row packets containing i,j of size 3 through 5, or g<=1/16 and the pair is a quantitative replacement/near-coloop."
+    },
+    {
+      "id": "QFORM-O0-BOUNDED-CARDINALITY-REGULARIZED-BANK-v1",
+      "status": "PROVED_IN_RUN",
+      "summary": "If g>=1/16, sum_{S superset {i,j},3<=|S|<=5} gamma^{-2|S|}det(B_SB_S^T) >= c_* det(I+gamma^{-2}BB^T), c_*=0.007280972426... ."
+    },
+    {
+      "id": "QFORM-O0-REPLACEMENT-PAIR-v1",
+      "status": "PROVED_IN_RUN",
+      "summary": "If g<=1/16, exact-one occupancy >=13/16, i-only>=11/16, j-only>=1/16, neither<=1/8, both<=1/16; pair-kernel eigenvalues obey mu_+>=(7+sqrt33)/16, mu_-<=(7-sqrt33)/16; regularized row distance squared to the first-row line <=1/12; reverse exclusion leverage >=11/13."
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "559e4be19d8f032bdae0392e7394bdcdca681a14",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260922T183653Z-account03-B07-qform-r15/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260922T183653Z-account03-B07-qform-r15/check_r15.py",
+    "check_results_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260922T183653Z-account03-B07-qform-r15/CHECK_RESULTS.txt"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B07/20260922T183653Z-account03-B07-qform-r15.md",
+  "unresolved_implication": "QFORM-O0-REPLACEMENT-PAIR-OR-SIZE5-BANK-PAYMENT-v1",
+  "next_step": "Pay either the replacement pair or the size-3-to-5 regularized determinant bank by a product-preserving grouped-square/rank-two/pair-log mechanism while retaining arbitrary self blocks and additional spectrum. The sibling one-row near-coloop ell>7/8 and O1/O2/O3 remain.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "NOT_PROVED_BY_THIS_RUN",
+  "telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_configured": null,
+    "elapsed_seconds": null
+  }
+}

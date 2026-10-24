@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B17",
+  "run_id": "QFORM-B17-20260923T023752Z-r11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_start_commit": "46ab968fb2d7f5e5121f87c49ed76dc5c3c60150",
+  "source_control_prepublication_commit": "6a3eccc60f520b86a30dbaddae7a28e9477cec9f",
+  "readme_blob": "fca13a89d221115332ce5e60d49554ee0e213efa",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "status": "SUPPORTING_SHARP-WITNESS_THEOREM",
+  "claim_id": "QFORM-LIGHTLIKE-ONE-HEAVY-GLOBAL-v1",
+  "headline": "For a one-heavy physical row on the J-lightlike direction (e1+e3)/sqrt(2), arbitrary cap-one heavy law plus Gaussian diffuse completion has global density at most 3 Gamma(1/4)/(sqrt(pi) Gamma(3/4)) = 5.0077610500..., and the exact finite uniform-bank target matrices converge uniformly in density to that limit.",
+  "mathematical_change": {
+    "limit_model": "T=2UV+W^2, U=sqrt(theta)X+sqrt(1-theta)G0, V,W~N(0,1/12)",
+    "global_bound": "||p_T||_infinity <= 3 Gamma(1/4)/(sqrt(pi) Gamma(3/4))",
+    "finite_frame": "rows sqrt(theta)w_plus; m copies sqrt((1-theta)/m)w_plus; m copies e2/sqrt(m); m copies w_minus/sqrt(m), so R^T R=I and spec_nonzero(R J R^T)={1,1,-1}",
+    "local_limit": "for fixed theta and fixed heavy cap-one law, ||p_Qm-p_T||_infinity ->0",
+    "sharpness_constraint": "absolute Fourier inversion loses factor 1.180340599... over 3sqrt(2), so sharp-constant proof needs phase/cancellation or a positive kernel"
+  },
+  "partner_result_actually_applied": {
+    "account_slot": "account02/B17",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fbf14cd80c31d2100cf849494016bb4703aefdd7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260922T181037Z-r11/REPORT.md",
+    "result": "E exp(-aH^2) <= (1+2a)^(-1/2) for H=sqrt(12theta)X+sqrt(1-theta)G",
+    "application": "a=t^2/72 gives E exp(-t^2 U^2/6) <= (1+t^2/36)^(-1/2), which combines with the Gaussian square factor to yield the integrable (1+t^2/36)^(-3/4) characteristic-function envelope"
+  },
+  "other_source_dependency": {
+    "result": "Ball cube-slicing bound for one-dimensional normalized cube projections",
+    "citation": "K. Ball, Cube slicing in R^n, Proc. Amer. Math. Soc. 97 (1986), 465-473",
+    "scope": "used only for the finite uniform-bank density cap in the local-limit transfer"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "68b163a7f6066ded405a958bc56d1825981eed56",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260923T023752Z-r11/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260923T023752Z-r11/verify_lightlike.py",
+    "checks": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260923T023752Z-r11/CHECKS.txt"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B17/QFORM-B17-20260923T023752Z-r11.md",
+  "unpaid_implication": "The theorem covers one J-lightlike macroscopic row and its exact diffuse-bank completion, not arbitrary one-heavy orientations globally, multiple non-collinear heavy rows, coupled non-Gaussian residuals, finite/mesoscopic overshoot outside this architecture, higher spectral rank, or the full arbitrary-matrix theorem.",
+  "next_recipient": "account03/B01",
+  "next_step": "Use the exact factorization phi(t)=(1-it/6)^(-1/2)L(t^2) to test whether phase-retaining inversion can reduce C_light from 5.00776 to 3sqrt(2), or extend the positive-kernel method to two non-collinear macroscopic rows.",
+  "brain_state": "WITHOUT_VERIFIED_BRAIN"
+}

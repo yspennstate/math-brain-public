@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.15",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "account": "account02",
+  "slot": "B07",
+  "run_id": "20260923T211034Z-account02-B07-qform-mixedvolume",
+  "brain_state": "WITHOUT_VERIFIED_BRAIN",
+  "initial_brain_main": "89367a67eda558e92c4981a4c5cd521d56adb151",
+  "final_control_refresh_brain_main": "ce93ec19a07594ad6edf4cafd8684ff532d57ed3",
+  "target_status": "FULL_QFORM_OPEN_NOT_PROVED_NOT_DISPROVED; CONTINUITY_SEPARATE",
+  "corrections_consumed": [
+    "CROSSMINOR-ALONE-FALSE",
+    "SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE"
+  ],
+  "latest_designated_partner": {
+    "account_slot": "account03/B07",
+    "run": "20260923T203843Z-account03-B07-qform-r38",
+    "source_commit": "f822a8dfdb6a2cbc763373954a8b9dadb498568d",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260923T203843Z-account03-B07-qform-r38/REPORT.md",
+    "applied_equation": "For nonheavy physical row i, F_i=c_i^T H_2(G_i)c_i >= (Z/9) q_i^2, with at most two physical-heavy rows."
+  },
+  "pinned_source": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "files_read": [
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+    ],
+    "actual_applications": [
+      "Pinned D' with h_marg=2/3 applied to the physicalized live E3 inequality Z3>0.0056602895272739135 h^6, giving ||p_Q||_infinity<60.880368159 h^-1 on its marginal-gated scope.",
+      "Pinned Theorem F applied to the exact three-bank target stress: rank six, leverage 1/m<=1/2, absolute eigenvalue product 64, hence |phi_Q(t)|<=(2pi)^3|t|^-3 and ||p_Q||_infinity<=3."
+    ]
+  },
+  "other_completed_dependencies": [
+    {
+      "name": "QFORM-Z3-CROSSING-MARGINAL-FREE-v1",
+      "source": "account02/B03 20260923T184716Z",
+      "scope": "Any actual original-coordinate crossing M with Z3=e3(MM^T)>0; arbitrary same-side curvature and affine terms retained; ||p_Q||_infinity<=10.550168831164775 Z3^-1/6 and continuity on this branch."
+    },
+    {
+      "name": "physical-fiber theorem / QFORM-DIAGONAL-RANK-TAIL-CORE-v1 dependency",
+      "source_commit": "dab16464e87c939cc0cf3fd01d070045290192fa",
+      "scope": "If an actual m-coordinate principal block has s3>=gamma>0, then full ambient density <=2 sqrt(6 pi m)/gamma, with outside conditioning producing only affine terms."
+    }
+  ],
+  "new_results": [
+    {
+      "name": "QFORM-OVERLAP-VOLUME-PHYSICALIZATION-v1",
+      "statement": "For V_{k,q}=sum det A[S,U union T]^2 over disjoint S,U subset L with |S|=k, |U|=q and |T|=k-q in R, some original-coordinate partition L=I sqcup J satisfies e_k(A[I,R union J]A[I,R union J]^T)>=2^{-(k+q)}V_{k,q}."
+    },
+    {
+      "name": "QFORM-E2-AGGREGATE-TRANSVERSE-TO-PHYSICAL-E3-v1",
+      "statement": "For partner r38, some original-coordinate crossing M satisfies e3(MM^T)>=(Z/144) sum_{i nonheavy} q_i^2. Thus failure at scale delta forces total transverse error sum q_i^2<delta^2, rather than only individual q_i<delta."
+    },
+    {
+      "name": "QFORM-BOUNDEDRANK-MOVINGPLANE-CORE-v1",
+      "statement": "If the crossing K has actual rank r and aggregate transverse error <delta, then the self-block factors exactly as diagonal + rank<=2r symmetrized full-K factor + Frobenius residual <delta on nonheavy coordinates. For any d>delta, either a (2r+3)-coordinate actual principal core has s3>=d-delta and is paid by the physical-fiber theorem, or the whole self-block is rank<=4r+6 plus entrywise residual <d after absorbing the at-most-two heavy rows and at most 2r+2 large diagonals."
+    },
+    {
+      "name": "exact common-plane obstruction",
+      "status": "TARGET-VALID INTERMEDIATE-MECHANISM COUNTEREXAMPLE; NOT A QFORM COUNTEREXAMPLE",
+      "statement": "Three flat left/right banks with K=2 sum u_a v_a^T and left self-block C=(1/4) sum_{a<b}(u_a u_b^T+u_b u_a^T) have six eigenvalues of modulus>1, Z=48, and q_i=0 for every physical row, yet the row-deleted E2-heavy planes cycle through three distinct rank-two planes and no common rank-two plane contains all self-column directions. Every fixed-cardinality physical principal block has operator norm O(1/m)."
+    }
+  ],
+  "live_numeric_application": {
+    "Z0": 854675.100194511,
+    "h": 1.1624826588606455e-6,
+    "delta": "h/1024",
+    "physicalized_Z3_lower": "0.0056602895272739135 h^6",
+    "marginal_free_density_bound": "<24.991153492 h^-1 <2.150e7",
+    "pinned_Dprime_bound_on_its_gate": "<60.880368159 h^-1 <5.238e7",
+    "exact_rank2_fallback_improvement": "rank<=14 + entrywise<2delta unless a 7-coordinate actual core has s3>=delta"
+  },
+  "unresolved_implication": "QFORM-AGGREGATE-MOVING-PLANE-TAIL-SYNCHRONIZATION-v1",
+  "next_step": "In the r36/r38 nonexact-tail chamber, use the exact diagonal + symmetrized factor through the FULL crossing K + Frobenius residual representation. Control K0 Zmat without truncating K to its top two carrier directions, since unknown coefficient vectors z_i can amplify the small singular tail. Either convert that correlated tail to aggregate E3/volume or force a finite spectral core/bounded-rank carrier. Literal common-plane synchronization is refuted and must not be assumed.",
+  "canonical_math": {
+    "report_commit": "b2d2cccb46aa3fc83162b2cc4fba61a5e040ebd2",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T211034Z-account02-B07-qform-mixedvolume/REPORT.md",
+    "early_commit": "c58b4007789b4e6bdee9da65f4e3febf3ac584ac",
+    "early_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T211034Z-account02-B07-qform-mixedvolume/EARLY.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T211034Z-account02-B07-qform-mixedvolume/CHECKS.py",
+    "checks_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T211034Z-account02-B07-qform-mixedvolume/CHECKS_OUTPUT.txt",
+    "checks_status": "PASS; regression evidence only"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B07/20260923T211034Z-account02-B07-qform-mixedvolume.md",
+  "model": "GPT-5.6 Sol",
+  "reasoning_effort": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

@@ -1,0 +1,65 @@
+7
+Nilpotent quotients and bounded projections
+25
+7.1
+From polynomial scales to the quotient action . . . . . . . . . . . . . . . . . . . . . .
+25
+7.2
+Cyclic series and the decreasing parameter . . . . . . . . . . . . . . . . . . . . . . . .
+26
+7.3
+The induction and equivariant coordinates . . . . . . . . . . . . . . . . . . . . . . . .
+27
+7.4
+Excluding rays with bounded projection . . . . . . . . . . . . . . . . . . . . . . . . .
+28
+8
+Two approximate coordinate moves
+29
+9
+Fresh corridors and a subcritical infinite cluster
+32
+9.1
+The deterministic layout . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+32
+9.2
+Relay regions and the order of scales . . . . . . . . . . . . . . . . . . . . . . . . . . .
+33
+9.3
+A transfer estimate in a fresh collar . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+35
+9.4
+Adaptive exploration with stored predictions
+. . . . . . . . . . . . . . . . . . . . . .
+37
+10 Completion and the lattice consequence
+39
+1
+Introduction
+Bernoulli bond percolation on an undirected graph G = (V, E) retains each edge independently with
+probability p ∈[0, 1]. Retained edges are called open. The open cluster Cx of a vertex x consists of
+the vertices joined to x by finite open paths, including x itself. Write x ↔A when Cx meets a set
+A ⊆V , and x ↔y when y ∈Cx. With Pp denoting the product law, the critical probability is
+pc(G) = inf{p ∈[0, 1] : Pp(there is an infinite open cluster) > 0}.
+A graph is quasi-transitive if its automorphism group has finitely many orbits on vertices. This
+includes every vertex-transitive graph and every Cayley graph of a finitely generated group with a
+finite generating set.
+The criticality problem asks whether an infinite cluster can first appear at the threshold itself.
+Benjamini and Schramm formulated the general quasi-transitive conjecture in their systematic study
+of percolation beyond Euclidean lattices [3, Conjecture 4].
+Theorem 1.1. Let G be an infinite connected locally finite quasi-transitive undirected graph. If
+pc(G) < 1, then
+Ppc(G)(there is an infinite open cluster) = 0.
+Equivalently, Ppc(G)(|Cx| = ∞) = 0 for every vertex x.
+Theorem 1.1 resolves the Benjamini–Schramm criticality conjecture positively for Bernoulli
+bond percolation. Its conclusion concerns all vertex orbits. The hypothesis pc < 1 is necessary:
+at parameter one every edge is open, so an infinite connected graph percolates. In particular, the
+theorem includes nearest-neighbor bond percolation on Zd for every d ≥2; see Corollary 10.1.
+1.1
+The two subexponential arguments
+For a vertex x, let B(x, r) be the graph-distance ball of integer radius r. Put V−(r) = minx |B(x, r)|
+and V+(r) = maxx |B(x, r)|. Quasi-transitivity makes these extrema finite and compares them
+up to a bounded shift of r. It also implies that V+(r)1/r has a limit. A limit greater than one is
+the exponential case covered by Hutchcroft. In the other case, the proof divides according to the
+following exhaustive alternatives:
+2

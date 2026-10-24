@@ -1,0 +1,177 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w498",
+  "bundle_slug": "c0120-sharp-boundary-w498-001",
+  "entries": [
+    {
+      "key": "c0120-scope",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-primary-ground-state-source-scope",
+      "kind": "concept",
+      "title": "DRAFT: C0120 primary-source scope correction",
+      "statement": "SOURCE CORRECTION, independent review pending. The cited Chatterjee 0810.4221v2 model has iid N(0,1) vertex weights on Z^2 and every up/right path of n visited vertices starting at the origin, with free endpoint. M_n is the maximum sum of those weights. Theorem 8.1 bounds Var(M_n) by C n/log n; Section 12(3) asks to improve the fluctuation exponent. A concrete campaign objective is Var(M_n)<=C' n^(1-epsilon) for fixed epsilon>0 and all n>=2. The intake's finite-temperature log Z_n/general weights/general dimension wording is broader than this primary source. Current openness UNKNOWN; no solution claimed.",
+      "proof_text": null,
+      "assumptions": [
+        "Historical source: 0810.4221v2, 2008-12-16; Sections 1, 8, 12(3)",
+        "n counts vertices including the origin; endpoint free"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign-w498:C0120-source-scope",
+        "url": "https://arxiv.org/pdf/0810.4221v2",
+        "revision": "author-proof-w498-2026-10-10-v1",
+        "license": "owner-own-work (campaign comparison and proofs; independent audit pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "layer-average",
+      "namespace": "probability.gaussian",
+      "logical_name": "layer-average-variance-decomposition-for-gaussian-path-functionals",
+      "kind": "concept",
+      "title": "DRAFT author proof: Gaussian layer-average variance decomposition",
+      "statement": "AUTHOR PROOF, independent review pending. Let a finite deterministic nonempty path family visit one site of each layer t, containing m_t independent N(0,sigma_t^2) variables, with independent layers. Set A_t to the layer average and R[t,x]=g[t,x]-A_t. For M=max_p sum_t g[t,p_t], Var(M)=sum_t sigma_t^2/m_t+Var(M(R)). For F_beta=log(sum_p a_p exp(beta sum_t g[t,p_t])), where a_p>0 are deterministic and beta is finite, Var(F_beta)=beta^2 sum_t sigma_t^2/m_t+Var(F_beta(R)). In the unrestricted planar n-vertex unit-Gaussian model, Var(M_n)>=H_n=sum_{j=1}^n 1/j. Proof packet: ATTEMPT.md L1; novelty unverified. No residual-variance upper bound is asserted.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite deterministic path family and finite layer sets",
+        "One visited site per layer per path",
+        "Independent centered Gaussian variables; variance constant within each layer",
+        "Deterministic positive a_p for F_beta"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign-w498:C0120-layer-average",
+        "url": null,
+        "revision": "author-proof-w498-2026-10-10-v1",
+        "license": "owner-own-work (campaign comparison and proofs; independent audit pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "strip-variance",
+      "namespace": "probability.polymers",
+      "logical_name": "exact-ground-state-variance-in-width-one-gaussian-diagonal-strip",
+      "kind": "concept",
+      "title": "DRAFT author proof: exact Gaussian strip variance",
+      "statement": "AUTHOR PROOF, independent review pending. For r>=1, iid N(0,1) vertex weights and all up/right paths from (0,0) to (r,r) restricted to |x-y|<=1, counting N=2r+1 vertices including both endpoints, M_r^strip=sum_{k=0}^r G_k+sum_{k=0}^{r-1} max(X_k,Y_k), with all G_k,X_k,Y_k independent standard normals. E M_r^strip=r/sqrt(pi), Var(M_r^strip)=(2-1/pi)r+1, and the variance per visited vertex tends to 1-1/(2pi)>0. The r+1 G_k are the forced diagonal junction weights. This restricted, fixed-endpoint model does not decide the unrestricted, free-endpoint C0120 target. Proof packet: ATTEMPT.md L2; novelty unverified.",
+      "proof_text": null,
+      "assumptions": [
+        "r>=1 integer; width-one strip and endpoint (r,r)",
+        "iid standard Gaussian vertex weights",
+        "All allowed nearest-neighbor up/right paths; both endpoints counted"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign-w498:C0120-strip-variance",
+        "url": null,
+        "revision": "author-proof-w498-2026-10-10-v1",
+        "license": "owner-own-work (campaign comparison and proofs; independent audit pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "noise-separation",
+      "namespace": "probability.polymers",
+      "logical_name": "gaussian-strip-path-instability-with-asymptotically-full-overlap",
+      "kind": "concept",
+      "title": "DRAFT author proof: path instability with overlap near one",
+      "statement": "AUTHOR PROOF, independent review pending. In the width-one Gaussian strip from (0,0) to (r,r), perturb weights by g^s=e^(-s)g+sqrt(1-e^(-2s))g', with independent iid standard Gaussian g'. The number B_r(s) of different diamond choices is Binomial(r,q(s)), where q(s)=arccos(e^(-s))/pi. P(P_r(g)=P_r(g^s))=(1-q(s))^r and E|P_r(g) intersect P_r(g^s)|/(2r+1)=1-rq(s)/(2r+1). For s=r^(-alpha), 0<alpha<2, identical-path probability tends to zero, while normalized expected overlap tends to one and Var(M_r^strip)=(2-1/pi)r+1 stays linear. Block independence is unconditional because the vertex sets are disjoint. This is a restricted-model boundary example, not a refutation of C0120. Proof packet: ATTEMPT.md L3; novelty unverified.",
+      "proof_text": null,
+      "assumptions": [
+        "Width-one strip with fixed endpoint (r,r), r>=1",
+        "Original and copied environments iid standard Gaussian",
+        "All N=2r+1 vertices, including endpoints",
+        "0<alpha<2 for the asymptotic assertion"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign-w498:C0120-noise-separation",
+        "url": null,
+        "revision": "author-proof-w498-2026-10-10-v1",
+        "license": "owner-own-work (campaign comparison and proofs; independent audit pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bad-bridge",
+      "namespace": "probability.polymers",
+      "logical_name": "refuted-path-change-alone-implies-power-variance-bridge",
+      "kind": "concept",
+      "title": "DRAFT route warning: maximizer change alone does not give a power variance bound",
+      "statement": "REFUTED AUXILIARY BRIDGE, author proof pending independent review: for all deterministic Gaussian nearest-neighbor layered path families with N vertices per path, the premise that a unique maximizing path changes with probability tending to one under polynomially small OU noise would, by itself, imply Var(M_N)<=C N^(1-epsilon) for some fixed epsilon>0. The width-one diagonal strip disproves this proposed implication: path equality tends to zero but its maximum has linear variance. A hypothesis on normalized common-vertex overlap is different. No counterexample is asserted for a bridge with an additional O(N/log N) variance premise, for the correctly quantified overlap-chaos implication, or for unrestricted C0120.",
+      "proof_text": null,
+      "assumptions": [
+        "The refuted implication uses path change alone",
+        "No additional logarithmic variance baseline premise"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign-w498:C0120-refuted-weak-bridge",
+        "url": null,
+        "revision": "author-proof-w498-2026-10-10-v1",
+        "license": "owner-own-work (campaign comparison and proofs; independent audit pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "residual-gap",
+      "namespace": "probability.polymers",
+      "logical_name": "c0120-unrestricted-planar-residual-variance-gap",
+      "kind": "concept",
+      "title": "DRAFT attempt gap: unrestricted planar residual variance",
+      "statement": "UNRESOLVED GAP. In the unrestricted planar iid standard Gaussian n-vertex ground-state model, remove the independent average on each diagonal layer to obtain R. The layer-average identity gives Var(M_n)=H_n+Var(M_n(R)). The current packet supplies no power upper bound on Var(M_n(R)) and no polynomial upper bound on expected common-vertex overlap under small OU noise. Either would require a new argument beyond the exact strip counterexample. Current openness UNKNOWN; the parent target is not solved.",
+      "proof_text": null,
+      "assumptions": [
+        "Unrestricted up/right planar paths starting at the origin",
+        "n vertices including origin; endpoint free",
+        "iid N(0,1) weights; R subtracts each diagonal layer average"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign-w498:C0120-residual-gap",
+        "url": null,
+        "revision": "author-proof-w498-2026-10-10-v1",
+        "license": "owner-own-work (campaign comparison and proofs; independent audit pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "c0120-scope",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro",
+      "kind": "cites",
+      "rationale": "Exact existing card is the subject of the proposed source-scope correction; its log Z_n wording is not promoted to a primary-source theorem."
+    },
+    {
+      "from_key": "strip-variance",
+      "to_key": "layer-average",
+      "kind": "specializes",
+      "rationale": "Strip has r+1 one-site layers and r two-site layers. The layer-average contribution is 3r/2+1; its residual variance is r(1/2-1/pi), summing to (2-1/pi)r+1."
+    },
+    {
+      "from_key": "noise-separation",
+      "to_key": "strip-variance",
+      "kind": "depends_on",
+      "rationale": "Uses the same r independent diamond choices and r+1 forced junctions, and the exact linear variance from the strip result."
+    },
+    {
+      "from_key": "noise-separation",
+      "to_key": "bad-bridge",
+      "kind": "refutes",
+      "rationale": "P(same path)=(1-q)^r tends to zero for polynomial OU noise, but the exact variance is (2-1/pi)r+1. This disproves the universally quantified path-change-alone implication."
+    },
+    {
+      "from_key": "residual-gap",
+      "to_key": "layer-average",
+      "kind": "depends_on",
+      "rationale": "The explicit decomposition identifies H_n plus residual variance; it provides no upper bound on that residual."
+    },
+    {
+      "from_key": "noise-separation",
+      "to_key": "c0120-scope",
+      "kind": "analogous_to",
+      "rationale": "Shares Gaussian up/right geometry and OU noise but restricts width and endpoint; these distinctions prevent claiming a refutation of the original target."
+    }
+  ]
+}

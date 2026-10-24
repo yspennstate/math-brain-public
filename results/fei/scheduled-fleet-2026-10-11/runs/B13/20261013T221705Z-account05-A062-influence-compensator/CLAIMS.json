@@ -1,0 +1,66 @@
+[
+  {
+    "claim_id": "A062-B05-MINIMAL-RESERVE-CREDIT",
+    "version": 2,
+    "exact_statement": "For every even k>=4, r>=2k, and C>=6, let F be the canonical quadratic bent k-bit function and its zero-vertex point flip, activated by r fresh point controls and selected by a fair physical selector. On the complete selector-controls-adjacent-data-pairs tree with irrelevant inputs skipped and constant leaves, the minimal nonnegative reserve Q*_v=[D_v-C Inf_v+average Q*_children]_+ vanishes at every control node and even point-edited paired-data entry. Odd edited data states have Q*<=2. For physical minority mu(g)=min(P[g=-1],P[g=+1]), every node obeys Q*_v<=4mu(g_v)log2(1/mu(g_v)); at the root Q*=[D_selector-C 2^{-(r+k)}]_+<4*2^{-k}mu(F)log2(1/mu(F))<=mu(F)log2(1/mu(F))/4 and Q*<=2^{1-k}I(F). At r=2k and fixed finite C, Q*/I(F) is asymptotic to (2/5)2^{-k}. In particular the C=6 reserve certificate gives H(F)<=(6+2^{1-k})I(F)<=49I(F)/8. Pointwise credit domination is not a local drift assertion for the rarity function, which remains false on these selector roots for fixed coefficients. Extension: For every even t>=2, every single vertex sign flip of a quadratic bent t-core, with any coordinate character phase, has zero complete increasing-pair-order entry reserve at every C>=6. For every even k>=4, T_k=b_k with sign flips at zero and e_1+e_3 has zero complete paired-entry reserve at C>=6. At its first query both children retain one edit; the expensive character-mate child has zero reserve and the other child reserve is at most two bits. If the clean core and T_k are activated by r>=2k point controls and selected by a fair bit, then all control entry reserves vanish, Q_root=[D_selector-2C*2^(-r-k)]_+, Q_root<8*2^-k*psi(mu) and Q_root<=4*2^-k*I_root; at C=6, H<=(6+4*2^-k)I<=25I/4. Its exact initial influence is 2^-r[k/2+r(1-2^(-k/2)+2^(1-k))+(2k-2)2^-k]. Original all-node rarity and asymptotic conclusions are retained only for the original one-zero-edit selector family; they are not asserted for the new phase or two-edit families.",
+    "hypotheses": [
+      "For original retained conclusions only: Actual Boolean signs on uniform finite cubes; entropy in bits; ordinary total influence",
+      "For original retained conclusions only: Canonical b_k=(-1)^(x1*x2+...+x_{k-1}*x_k), flipped only at zero; k even >=4",
+      "For original retained conclusions only: r fresh point controls with r>=2k; independent fair physical selector",
+      "For original retained conclusions only: Complete fresh-input order selector then controls then adjacent data pairs; skip irrelevant coordinates; zero constant leaves",
+      "For original retained conclusions only: Physical output minority, not spectral minority-fiber mass; psi(0)=0",
+      "For original retained conclusions only: Fixed finite C>=6 for the stated asymptotic; larger finite C allowed for inequalities",
+      "For the extension: actual Boolean signs; entropy bits; ordinary influences; C>=6",
+      "Single-edited core: t even >=2, quadratic bent times an arbitrary coordinate character; sign flip at any physical vertex",
+      "Two-edited core: canonical b_k, k even >=4, flipped at exactly 0 and e_1+e_3",
+      "Complete increasing adjacent-pair physical tree, skipping irrelevant coordinates and ending at constants",
+      "Activated-selector extension: r>=2k fresh point controls, fair fresh selector; selector then controls then paired data",
+      "psi(mu)=mu log2(1/mu) for physical output minority; the new credit is a root bound, not a local rarity drift claim"
+    ],
+    "statement_sha256": "a75d0e47ab2170f096f2e5843093449768c4146ee67b9f37d93e43d23c8ecc01",
+    "contributors": [
+      "A062; original target and Bellman convention B13; preceding scalar and empty-fiber credits retained"
+    ],
+    "proof_source": {
+      "extension": "DERIVATION.md",
+      "original_proof": "~\\brain_workers\\FEI100_20261011\\agents\\A062\\runs\\20261012T003951Z-account05-A062-influence-compensator\\DERIVATION.md",
+      "original_proof_sha256": "37ced5fda09fe8b621f4c7f19c289c7ba8cc904f77583962a42e67d852b4a588",
+      "validation": "out/EXACT_TREES.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A062-INFLUENCE-STOPPING-INTERFACE",
+        "version": 1,
+        "scope": "finite same-tree budgets only",
+        "review_status": "B13 lead v2 records both prior A062 claims checked and holding"
+      },
+      {
+        "source": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_REDUCTION.md",
+        "sha256": "eab8a37cae78930ad4c252be2297e024fc585a063969b6829433fe496a6008b1",
+        "scope": "section 2 singleton JS scalar bound"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A062-B05-MINIMAL-RESERVE-CREDIT",
+        "version": 1,
+        "scope": "extension retaining all original conclusions"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A017",
+      "A061",
+      "A064",
+      "A065",
+      "A087",
+      "A094",
+      "A097",
+      "B13",
+      "B20"
+    ]
+  }
+]

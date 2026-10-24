@@ -1,0 +1,35 @@
+Deterministic algebra/constant checks for account02/B09 r13
+
+C_0 = 2*sqrt(e) = 3.2974425414002564
+C_1 = (5/3)*exp(3/5) = 3.036864667317515
+
+Partner k=1 splice at eta=1/16:
+2*sqrt(e)*3^(1/4)*eta^(-1/2)*(1-eta)^(-1/4)
+= 17.641061846225885
+
+Dense rank-one splice prefactor at eta=1/16:
+C_1*(3/(eta^2*(1-eta)))^(1/5)
+= 11.61725246445258
+
+Heavy-row actual target star:
+v squared weights = 0.6 plus 100 copies of 0.004
+sum weights = 1
+sum squared weights = 0.3616
+v-support disjoint-choice probability = 0.6384
+flat 256-support disjoint-choice probability = 255/256
+rho = 0.6384*(255/256)^2 = 0.6334222412109375
+C_1*rho^(-1/5) = 3.3272602914637655
+raw maximum mixed leverage = 0.6 > 1/2
+active spectrum = {1,-1,1,-1,1}
+
+Latest partner r25 actual target:
+Q_* = X^2 + 2 Y Z + W^2
+physical pair core diag(1,0), Schur-transverse slope norm = 1
+4*sqrt(2)*exp(1/4) = 7.263544634846275
+active spectrum = {1,1,-1,1}
+
+Power check for Theorem 3:
+2^(-2)*(4*pi)^(-r/2)*(2*pi)^(r+2) = pi^((r+4)/2)
+alpha=(r+4)/2
+Fourier inversion constant alpha/(alpha-1)*exp((r+2)/(r+4))
+= ((r+4)/(r+2))*exp((r+2)/(r+4)).

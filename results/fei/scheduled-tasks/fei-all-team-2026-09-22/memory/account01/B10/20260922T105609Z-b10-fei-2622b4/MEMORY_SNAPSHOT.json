@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "control_revision": "2026-09-22.3",
+  "state_revision": "FEI-20260922T1000Z-v1",
+  "account": "account01",
+  "slot": "B10",
+  "run_id": "20260922T105609Z-b10-fei-2622b4",
+  "starting_control_head": "a7926b1ebd157c14e640586c1af6ebf125dbad7e",
+  "observed_head_at_snapshot": "c8515189d37356b435bc4b389c5252410a4690cb",
+  "mandatory_corrections_consumed": [
+    "FEI-DELTA-20260922-01-FIXED-POTENTIAL-AND-EXTREMALITY",
+    "FEI-DELTA-20260922-02-QUADRATIC-0337",
+    "FEI-DELTA-20260922-03-QUADRATIC-034",
+    "FEI-DELTA-20260922-04-SHAPED-WITNESS-REPAIR",
+    "FEI-DELTA-20260922-05-KL-HIERARCHY-TERM",
+    "FEI-DELTA-20260922-06-UNWEIGHTED-L2-NOGO",
+    "FEI-DELTA-20260922-07-RAW-U4-TERMINAL-NOGO",
+    "FEI-DELTA-20260922-08-BALANCED-SLICE-NOT-CLOSURE",
+    "FEI-DELTA-20260922-09-SAFE-DIRECTION-NOT-POTENTIAL-PROOF",
+    "FEI-DELTA-20260922-10-COPAIR-JOINT-CONSTRAINTS",
+    "FEI-DELTA-20260922-11-QUARTIC-WITNESS-REPAIR",
+    "FEI-DELTA-20260922-12-LATEST-SHAPED-FRONTIER",
+    "FEI-DELTA-20260922-13-LOWLEVEL-KL-PROJECTION-NOGO",
+    "FEI-DELTA-20260922-14-SAFE-CONE-SELECTOR-GAP"
+  ],
+  "pending_correction_events_consumed": [],
+  "partner_result": {
+    "worker": "account02/B10",
+    "run_id": "20260922T104655Z-f298f290",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fd0d86bca8aa49cea57cc6e6d4f5bd18e21374d3",
+    "path": "proofnet24/P03-fei/fleet-2026-09-22/account02/B10/20260922T104655Z-f298f290/REPORT.md",
+    "consumed_result": "Balanced two-point dictator perturbations satisfy H < (4+1/ln2)(I-1); used as complementary coverage of the balanced-uniform face where the new coordinate cap can be silent."
+  },
+  "source_premises": [
+    {
+      "id": "IPROJ",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+      "used": "R_Gamma=B_inf+K_occ and exact Q_r/Gibbs Pythagorean split"
+    },
+    {
+      "id": "BOOL_GAP",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "603b35e74227d1c2d8ee34c0c527c439c686e30b",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/account04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md",
+      "used": "exact biased quadratic Booleanity equation and KL lower bound"
+    },
+    {
+      "id": "LOWLEVEL_BARRIER",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "bff0d7b6c21485f386841c42582eb04f32705046",
+      "used": "preflight excludes fixed/sub-half-depth labelled KL plus one merged tail as universal payment"
+    }
+  ],
+  "new_claims": [
+    "B10-PHYSICAL-MARGINAL-CAP-v1",
+    "B10-CAPPED-GIBBS-DANGER-WEDGE-v1",
+    "B10-SINGLE-COORDINATE-SIGNFREE-RESERVE-v1",
+    "B10-VIOLATOR-ADMISSIBILITY-v1",
+    "B10-PHYSICAL-CAP-SHARPNESS-EXAMPLE-v1"
+  ],
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0b4726215b37e8120895c1966190aeaccb5a511d",
+    "report_path": "proofnet24/P03-fei/fleet-2026-09-22/account01/B10/20260922T105609Z-b10-fei-2622b4/REPORT.md",
+    "claims_path": "proofnet24/P03-fei/fleet-2026-09-22/account01/B10/20260922T105609Z-b10-fei-2622b4/CLAIMS.json"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "c8515189d37356b435bc4b389c5252410a4690cb",
+    "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/handoffs/account01/B10/20260922T105609Z-b10-fei-2622b4.md"
+  },
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "next_unpaid_implication": "On the residual set passing the Boolean physical caps, capped-Gibbs mismatch test, and one-coordinate Booleanity reserve, prove a joint multicoordinate or genuinely multiscale nonreusing lower bound K_occ >= -B_inf.",
+  "repository_memory": "loaded",
+  "native_memory": "unverified",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

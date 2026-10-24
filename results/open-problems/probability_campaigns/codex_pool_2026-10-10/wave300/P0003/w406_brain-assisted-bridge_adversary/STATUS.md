@@ -1,0 +1,9 @@
+STATE: NEEDS_REVIEW
+NEXT: Independently verify the cycle-space proof and C6 ensemble counterexample in REVIEW_PACKET.md, then specify the required fixed-n length/endpoint-conditioning transfer.
+2026-10-10: Started w406 adversarial lane; live stores remain read-only; first result will be a hypothesis-gap row.
+2026-10-10: Saved first source-gap row w406-S1.1 and an independent cycle-space derivation before reading the paired proof; referee review pending.
+2026-10-10: Checked Duminil-Copin--Smirnov v2 Conjectures 1--2 and its explicit underdetermination warning; saved w406-S1.2. General-brain recall timed out with zero returned rows at 70.707 s including cleanup; saved w406-S1.3.
+2026-10-10: Narrow math-store retrieval returned Portmanteau and five incompatible square-lattice enumeration hits for the observable query. Audited w405's L1/L2/R1; conditional C1 keeps T/B/C open. Fresh governor state reports distress/process_critical; exact checker held pending a permitted gate.
+2026-10-10: Exact title lookup recovered original P0003 card: uniform n-step rooted SAW, not chordal fugacity. Primary Grimmett Question 2.2 confirms it. Corrected ATTEMPT/AUDIT and saved a C6 finite-ensemble counterexample plus a deconditioning counterexample in ENSEMBLE_GAP.md. No novelty or proof-completion claim.
+2026-10-10: Submitted five DRAFT entries/four exact edges and one unactivated hook; seven claim rows, source status, report, review packet and proposed metadata diff complete. Artifact/schema validation passed; independent review/ingestion/retrievability unconfirmed.
+2026-10-10 STUCK: Exact checker held by two fresh physical-headroom gates (2996 MB then 2782 MB <4096 MB); runnable checker and receipts retained, algebraic proof/audit completed. No numerical pass or formal proof receipt claimed. Both direct referee messages failed (w407 unregistered); durable worker-folder handoff is ready.

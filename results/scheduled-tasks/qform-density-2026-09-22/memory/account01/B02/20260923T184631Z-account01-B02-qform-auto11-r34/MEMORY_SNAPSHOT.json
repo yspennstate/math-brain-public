@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260923T184631Z-account01-B02-qform-auto11-r34",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_final_refresh": "9b4fa36b6f9c3f59309df9c0f7916793350749f2",
+  "control_revision": "2026-09-22.15",
+  "continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "global_unweighted_L1_status": "OPEN_NOT_REFUTED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "no deletion of coefficient-small quadratic tails under rough unbounded inputs"
+  ],
+  "partner_result_actually_applied": {
+    "worker": "account02/B02",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T170839Z-account02-B02-qform-auto11/REPORT.md",
+    "statement_used": "For every original-coordinate physical cross block M with Z=E3(M)>0: ||p_Q||_infinity <= 10.345084 Z^(-1/6) and integral|phi_Q| <= 2*pi*10.345084 Z^(-1/6), with continuous C0 density."
+  },
+  "inherited_result": {
+    "source_commit": "50f8614dbe000baa0778481490440841c3960679",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T022040Z-account01-B02-qform-r20/REPORT.md",
+    "statement": "E_cut E3(A[J,J^c]) = D3(A)/64 for the disjoint third-compound mass."
+  },
+  "new_result": {
+    "id": "QFORM-GLOBAL-DISJOINT-COMPOUND-E3-L1-MARGINALFREE-v2",
+    "statement": "D3(A)>0 implies ||p_Q||_infinity <=20.690168 D3(A)^(-1/6) and integral|phi_Q| <=130.000160 D3(A)^(-1/6), with continuous C0 density, without any third-volume marginal or leverage gate.",
+    "target_reduction": "Writing C_k for squared 3x3 minor mass with row/column overlap k, e3(A^2)=sum_{k=0}^3 C_k>=1. Hence some C_k>=1/4. The C_0 branch is paid with ||p_Q||_infinity<26.067979 and integral|phi_Q|<163.789938; remaining debt is aggregate overlap k=1,2,3."
+  },
+  "unresolved": "QFORM-OVERLAP-COMPOUND-MASS-TO-INTEGRATED-RECEIVER-v1",
+  "next_step": "Build product-preserving aggregate receivers for C1, C2, C3, retaining repeated physical coordinates rather than duplicating them into independent banks and avoiding single-minor inversion.",
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ce5198bed939fb64aa3b0664ac9919374724bf10",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T184631Z-account01-B02-qform-auto11-r34/REPORT.md",
+    "source_correction_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T184631Z-account01-B02-qform-auto11-r34/SOURCE_CORRECTION.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "df67cd43316efad91dde2762ddcb6a8b3928b1e7",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B02/20260923T184631Z-account01-B02-qform-auto11-r34.md"
+  },
+  "login_note": "The canonical account01/B02 login for UTC hour 18 already existed with run_id 20260923T182322Z-account01-B02-qform-auto11-r34 when checked; protocol forbids overwrite, so no duplicate login was created for this supplemental same-hour derivation.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_requested": "maximum actually supported",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

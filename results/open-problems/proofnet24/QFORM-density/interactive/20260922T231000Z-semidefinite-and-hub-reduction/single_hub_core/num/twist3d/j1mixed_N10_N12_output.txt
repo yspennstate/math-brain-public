@@ -1,0 +1,12 @@
+python j1mixed.py 10 1,2,0.5 (first rotation; the kappa = 0.5 line was still running when this file was written)
+N=10 kappa=1.00  p=1.00:  28.231  p=1.25:  12.396  p=1.50:   7.402  p=1.75:   5.225  p=2.00:   4.077   (20643 y-values, 573s)
+N=10 kappa=2.00  p=1.00:  42.787  p=1.25:  16.693  p=1.50:   9.125  p=1.75:   6.018  p=2.00:   4.450   (21463 y-values, 1124s)
+N=10 kappa=0.50  p=1.00:  14.963  p=1.25:   8.218  p=1.50:   5.701  p=1.75:   4.475  p=2.00:   3.776   (20234 y-values, 1655s)
+python j1mixed.py 12 1,2
+N=12 kappa=1.00  p=1.00:  32.497  p=1.25:  13.248  p=1.50:   7.514  p=1.75:   5.107  p=2.00:   3.872   (30299 y-values, 1367s)
+python j1mixed.py 10 1 irr2 (second rotation)
+N=10 frame=irr2 kappa=1.00  p=1.00:  27.774  p=1.25:  15.431  p=1.50:  10.722  p=1.75:   8.385  p=2.00:   7.031   (17806 y-values, 483s)
+python j1check.py 10 0,0.5,1
+N=10 kappa=0.00  J2 = 3.094   (sup_a J = 0.843, 19824 a-values, 369s)
+N=10 kappa=0.50  J2 = 14.963   (sup_a J = 0.259, 20234 a-values, 744s)
+N=10 kappa=1.00  J2 = 28.231   (sup_a J = 0.332, 20643 a-values, 1284s)

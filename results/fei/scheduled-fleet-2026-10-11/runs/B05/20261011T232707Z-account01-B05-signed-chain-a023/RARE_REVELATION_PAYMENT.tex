@@ -1,0 +1,109 @@
+\section*{A signed single-use rarity payment for the Boolean point-defect chain}
+
+All logarithms are base two.  Let $q_n:\{0,1\}^n\to\{-1,1\}$ be $+1$
+only at the origin and $-1$ elsewhere.  Put $\delta_n=2^{-n}$ and, for a
+midpoint/half-difference Fourier pair $(a,v)$, define
+\[
+ \phi(u)=u\log_2(1/u),\qquad
+ L(a,v)=\phi(a^2)+\phi(v^2)-\phi(a^2+v^2),
+\]
+and
+\[
+ Q(a,v)=(a^2+v^2)\left[1-h_2\left(
+ \frac12+\frac{|av|}{a^2+v^2}\right)\right],\qquad D=L+Q,
+\]
+with the zero cell interpreted continuously.  The complete physical
+selector packet of $q_n$ is
+\[
+ D_n=D(-1+\delta_n,\delta_n)
+ +(2^n-1)D(\delta_n,\delta_n).
+\]
+Restricting any data coordinate has one constant child, whose packet is
+zero, and one exceptional child equal to $q_{n-1}$.  Hence the exact
+data/selector swap credit is
+\[
+ \Gamma_n^D=D_n-\frac12D_{n-1}.
+\]
+The preceding B05/B19 calculations prove $\Gamma_n^D<0$ for every $n\ge3$.
+
+\subsection*{Renormalized telescope}
+
+Define $C_n=2^nD_n$.  Then, identically,
+\[
+ 2^n\Gamma_n^D=C_n-C_{n-1}.                                      \tag{1}
+\]
+Fix integers $2\le t<n$.  Reveal any predetermined $n-t$ data coordinates
+and stop on the unique exceptional branch once $q_t$ is reached.  The reach
+probability of the node carrying $q_m$ is $2^{m-n}$.  The total expected
+negative swap debt is therefore
+\[
+ \mathfrak D_{n,t}
+ =\sum_{m=t+1}^n2^{m-n}(-\Gamma_m^D)
+ =2^{-n}\sum_{m=t+1}^n(C_{m-1}-C_m)
+ =2^{-n}(C_t-C_n).                                                \tag{2}
+\]
+The expected terminal packet is $2^{t-n}D_t=2^{-n}C_t$.  Thus
+\[
+ \boxed{D_n+\mathfrak D_{n,t}=2^{t-n}D_t=2^{-n}C_t.}              \tag{3}
+\]
+Every debt increment appears exactly once, at its first physical revelation,
+and the sole terminal packet is spent once.  The stopping rule is physical,
+nonadaptive, and finite.
+
+\subsection*{Uniform bound and retained rare logarithms}
+
+The all-$n$ negativity makes $C_n$ strictly decreasing for $n\ge3$.
+Furthermore $D(\delta_n,\delta_n)=4\delta_n^2$, while
+$D(-1+\delta_n,\delta_n)=O(n\delta_n^2)$, so $C_n\to4$.  Consequently
+\[
+ 0\le\mathfrak D_{n,t}
+ \le 2^{-n}(C_t-4)
+ \le 2^{-n}(C_2-4),                                              \tag{4}
+\]
+and
+\[
+ 4\,2^{-n}<2^{-n}C_t\le C_2,2^{-n}.                             \tag{5}
+\]
+Here
+\[
+ D_2=\frac34+\phi(9/16)+\phi(1/16)-\phi(5/8)
+ +\frac58\bigl(1-h_2(4/5)\bigr),
+\]
+so
+\[
+ C_2=4D_2=4.867668746754\ldots,
+ \qquad C_2-4=0.867668746754\ldots .                             \tag{6}
+\]
+In particular, even at infinite depth the debt consumes at most
+\[
+ 1-\frac4{C_2}=0.17825139545\ldots
+\]
+of the single-use terminal packet.
+
+The rare logarithm is not replaced by a pointwise $O(I)$ charge.  The
+previous full-credit expansion
+\[
+ \Gamma_m^D=4^{-m}\left(-2m+8-\frac3{\ln2}\right)+O(8^{-m})
+\]
+gives, after multiplying by the reach probability,
+\[
+ 2^{m-n}(-\Gamma_m^D)
+ =2^{-n}\left(2m+O(1)\right)2^{-m}+O(2^{-n}4^{-m}).              \tag{7}
+\]
+Thus the logarithmic factor $m=\log_2(1/\delta_m)$ remains visible at
+every level and is amortized geometrically.  More sharply, (2) telescopes it
+without loss.  Summing the full-credit expansion and using $C_n\to4$ yields
+\[
+ C_n=4+2^{-n}\left(2n-4+\frac3{\ln2}\right)+O(n4^{-n}).          \tag{8}
+\]
+
+\subsection*{Scope}
+
+Equations (1)--(8) prove a complete signed first-revelation payment for the
+unbounded genuine-Boolean family $\{q_n\}$, and the same ledger scales by an
+independent activation probability.  They do not prove that an arbitrary
+Boolean function has such a one-branch restriction chain, that a near tensor
+has a factorwise terminal refund, or that the terminal packet is universally
+bounded by total influence.  Addressing, reused selectors, and shared-variable
+products therefore remain outside this theorem.  In particular, this is not
+a proof or counterexample for full Fourier Entropy--Influence.

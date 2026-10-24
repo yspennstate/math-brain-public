@@ -1,0 +1,124 @@
+{
+  "database": "file:~/math-brain-build/local/population/brain.sqlite3?mode=ro",
+  "schema": {
+    "nodes": "CREATE TABLE nodes (\n    id TEXT PRIMARY KEY,\n    kind TEXT NOT NULL,\n    title TEXT NOT NULL,\n    body TEXT NOT NULL,\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)",
+    "claims": "CREATE TABLE claims (\n    id TEXT PRIMARY KEY REFERENCES nodes(id),\n    payload_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)",
+    "edges": "CREATE TABLE edges (\n    id TEXT PRIMARY KEY,\n    source_id TEXT NOT NULL REFERENCES nodes(id),\n    target_id TEXT NOT NULL REFERENCES nodes(id),\n    kind TEXT NOT NULL,\n    rationale TEXT NOT NULL,\n    weight REAL NOT NULL CHECK(weight > 0 AND weight <= 1),\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL,\n    UNIQUE(source_id, target_id, kind)\n)"
+  },
+  "queries": [
+    {
+      "sql": "SELECT * FROM nodes WHERE lower(title) LIKE '%self-avoiding%' OR lower(title) LIKE '%restriction%' OR lower(title) LIKE '%hexagonal%' LIMIT 12",
+      "rows": [
+        {
+          "id": "claim_b89c94837490413ca47c4f3618d366b3",
+          "kind": "claim",
+          "title": "There are exactly 1739 self-avoiding walks of length 10 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-3,2),",
+          "body": "There are exactly 1739 self-avoiding walks of length 10 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-3,2), (5,0). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\n\nAssumes: square lattice Z^2, nearest-neighbour steps",
+          "metadata_json": "{\"claim_kind\":\"computation\",\"domain\":\"research.enumeration\"}",
+          "digest": "sha256:76118e6cd01b4d0b9fe7d6c0a289ab28519939cd155d1d812dd0d17b294ef1e7",
+          "created_at": "2026-08-30T01:12:33.799089+00:00"
+        },
+        {
+          "id": "claim_ca1b9465da2c42a8b40a8dc7cefa3e39",
+          "kind": "claim",
+          "title": "There are exactly 3848 self-avoiding walks of length 10 that start at (0,0), stay in the strip 0 <= y < 4, and avoid the sites (-2,0),",
+          "body": "There are exactly 3848 self-avoiding walks of length 10 that start at (0,0), stay in the strip 0 <= y < 4, and avoid the sites (-2,0), (3,0), (5,0). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\n\nAssumes: square lattice Z^2, nearest-neighbour steps",
+          "metadata_json": "{\"claim_kind\":\"computation\",\"domain\":\"research.enumeration\"}",
+          "digest": "sha256:feeeaf5cafc01613bbcb3b17bae3b47b4e6ae169465a42c38ecc8190f851a3d4",
+          "created_at": "2026-08-30T01:12:33.803340+00:00"
+        },
+        {
+          "id": "claim_3742eb51dc48416eb0b69bf42cbb6e0e",
+          "kind": "claim",
+          "title": "There are exactly 6257 self-avoiding walks of length 12 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (3,1),",
+          "body": "There are exactly 6257 self-avoiding walks of length 12 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (3,1), (7,2). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\n\nAssumes: square lattice Z^2, nearest-neighbour steps",
+          "metadata_json": "{\"claim_kind\":\"computation\",\"domain\":\"research.enumeration\"}",
+          "digest": "sha256:29bd6a9b9075739b52681f60e71304c6745c88a31daa7bc2e34dd0ca78c0b12f",
+          "created_at": "2026-08-30T01:12:33.804579+00:00"
+        },
+        {
+          "id": "claim_a93fc38088d249e79c3c6a9b33d01191",
+          "kind": "claim",
+          "title": "There are exactly 10868 self-avoiding walks of length 11 that start at (0,0), stay in the strip 0 <= y < 5, and avoid the sites (-3,1),",
+          "body": "There are exactly 10868 self-avoiding walks of length 11 that start at (0,0), stay in the strip 0 <= y < 5, and avoid the sites (-3,1), (-1,2), (5,0). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\n\nAssumes: square lattice Z^2, nearest-neighbour steps",
+          "metadata_json": "{\"claim_kind\":\"computation\",\"domain\":\"research.enumeration\"}",
+          "digest": "sha256:7c642d5734ea5a461990327aa90782ee53c885b3fc032e96acf468a467d5ace9",
+          "created_at": "2026-08-30T01:12:33.806152+00:00"
+        },
+        {
+          "id": "claim_d576e13e831440079cd9e28f5ad64741",
+          "kind": "claim",
+          "title": "There are exactly 4153 self-avoiding walks of length 13 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-1,1),",
+          "body": "There are exactly 4153 self-avoiding walks of length 13 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-1,1), (4,1), (6,1). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\n\nAssumes: square lattice Z^2, nearest-neighbour steps",
+          "metadata_json": "{\"claim_kind\":\"computation\",\"domain\":\"research.enumeration\"}",
+          "digest": "sha256:9352062c10e3fb4a1ed4d4fc0f98d5d947b2dd82ebc06b40ed75bed3200180e7",
+          "created_at": "2026-08-30T01:12:33.807361+00:00"
+        },
+        {
+          "id": "claim_71663bb8273148faa8e451ae2faa2469",
+          "kind": "claim",
+          "title": "There are exactly 1469 self-avoiding walks of length 10 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-4,0),",
+          "body": "There are exactly 1469 self-avoiding walks of length 10 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-4,0), (3,2), (7,2). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\n\nAssumes: square lattice Z^2, nearest-neighbour steps",
+          "metadata_json": "{\"claim_kind\":\"computation\",\"domain\":\"research.enumeration\"}",
+          "digest": "sha256:0d13c900a426a7265cbaa28a76b64cc7ddaba20d748d760517238b2e8ba55e4f",
+          "created_at": "2026-08-30T01:12:33.808862+00:00"
+        },
+        {
+          "id": "claim_243d5a26f64b45e9911aa4010aa472ab",
+          "kind": "claim",
+          "title": "There are exactly 10425 self-avoiding walks of length 13 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-4,2),",
+          "body": "There are exactly 10425 self-avoiding walks of length 13 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-4,2), (7,0), (7,2). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\n\nAssumes: square lattice Z^2, nearest-neighbour steps",
+          "metadata_json": "{\"claim_kind\":\"computation\",\"domain\":\"research.enumeration\"}",
+          "digest": "sha256:2e5238d4eb838678a4d34c0e65038f52925a7f8cc63ae8b341b07ed858ed3198",
+          "created_at": "2026-08-30T01:12:33.809892+00:00"
+        },
+        {
+          "id": "claim_c688ca143f9f4b2bb27a39a7e6f0a6da",
+          "kind": "claim",
+          "title": "There are exactly 7636 self-avoiding walks of length 13 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-2,0),",
+          "body": "There are exactly 7636 self-avoiding walks of length 13 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-2,0), (1,0). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\n\nAssumes: square lattice Z^2, nearest-neighbour steps",
+          "metadata_json": "{\"claim_kind\":\"computation\",\"domain\":\"research.enumeration\"}",
+          "digest": "sha256:cf269e4b05ce51320ac18e3a3309683dae5c8b1a601617f17d44dbf09a7cf485",
+          "created_at": "2026-08-30T01:12:33.811330+00:00"
+        },
+        {
+          "id": "claim_dab638da1dff4cb2a3cd3bc6226ee217",
+          "kind": "claim",
+          "title": "There are exactly 5837 self-avoiding walks of length 10 that start at (0,0), stay in the strip 0 <= y < 5, and avoid the sites (1,0),",
+          "body": "There are exactly 5837 self-avoiding walks of length 10 that start at (0,0), stay in the strip 0 <= y < 5, and avoid the sites (1,0), (3,2). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\n\nAssumes: square lattice Z^2, nearest-neighbour steps",
+          "metadata_json": "{\"claim_kind\":\"computation\",\"domain\":\"research.enumeration\"}",
+          "digest": "sha256:1beda4854f3739d8b18ee41f8db0ddfe1d7128da409f1c0f3c5e5416fd4cdbab",
+          "created_at": "2026-08-30T01:12:33.812722+00:00"
+        },
+        {
+          "id": "claim_f61a38f2691a4946bcf92ec248979000",
+          "kind": "claim",
+          "title": "There are exactly 7737 self-avoiding walks of length 13 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-1,1),",
+          "body": "There are exactly 7737 self-avoiding walks of length 13 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-1,1), (6,0). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\n\nAssumes: square lattice Z^2, nearest-neighbour steps",
+          "metadata_json": "{\"claim_kind\":\"computation\",\"domain\":\"research.enumeration\"}",
+          "digest": "sha256:7baf56beebc783cadf38212bd01bebd9b603b0f9dc60163158e2621a64e9fc1e",
+          "created_at": "2026-08-30T01:12:33.814052+00:00"
+        },
+        {
+          "id": "claim_3ca832a739754227a0003bd61a0ad3d5",
+          "kind": "claim",
+          "title": "There are exactly 8385 self-avoiding walks of length 10 that start at (0,0), stay in the strip 0 <= y < 5, and avoid the sites (-3,3),",
+          "body": "There are exactly 8385 self-avoiding walks of length 10 that start at (0,0), stay in the strip 0 <= y < 5, and avoid the sites (-3,3), (7,0). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\n\nAssumes: square lattice Z^2, nearest-neighbour steps",
+          "metadata_json": "{\"claim_kind\":\"computation\",\"domain\":\"research.enumeration\"}",
+          "digest": "sha256:f25bf55480387df70f7a6ca0d88d078d1d008aa4c57f9ea16efa3d3c02f92079",
+          "created_at": "2026-08-30T01:12:33.815138+00:00"
+        },
+        {
+          "id": "claim_c9b114a70fe94d30bd0290feb6753100",
+          "kind": "claim",
+          "title": "There are exactly 3131 self-avoiding walks of length 12 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-2,1),",
+          "body": "There are exactly 3131 self-avoiding walks of length 12 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-2,1), (4,1). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\n\nAssumes: square lattice Z^2, nearest-neighbour steps",
+          "metadata_json": "{\"claim_kind\":\"computation\",\"domain\":\"research.enumeration\"}",
+          "digest": "sha256:283a55bce88d2c77432da488c30aace7802fd5aea80c65d2a8930db2f3720421",
+          "created_at": "2026-08-30T01:12:33.816470+00:00"
+        }
+      ],
+      "count": 12
+    }
+  ]
+}

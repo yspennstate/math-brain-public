@@ -1,0 +1,39 @@
+{
+  "schema": "fei-composition-scope/1",
+  "primary_packet": "A091",
+  "target_stream": "B09",
+  "accepted": [
+    {
+      "claim": "product-biased restriction ledger L_A=M_A+J_A",
+      "scope": "arbitrary finite physical coordinate block A under a product bias"
+    },
+    {
+      "claim": "0 <= J_A <= M_A + Delta_A",
+      "scope": "the normalized product-biased block and Fourier transform defined in the B09 source"
+    },
+    {
+      "claim": "exact additivity",
+      "scope": "tensor products on genuinely disjoint physical coordinate blocks"
+    }
+  ],
+  "repaired": [
+    {
+      "claim": "a uniformly O(p) additive correction is impossible",
+      "old_gap": "the asymptotic of an available upper bound was not a lower bound",
+      "new_evidence": "the genuine Boolean AND family has J_X-M_X=4q(1-2q)p log2(1/p)+O_q(p) for each fixed 0<q<1/2"
+    }
+  ],
+  "not_proved": [
+    "coefficient optimality of the exact Maassen-Uffink correction Delta(p)",
+    "single-use payment through arbitrary Boolean composition trees",
+    "transfer with repeated physical variables or overlapping witnesses",
+    "a dimension-independent full-FEI bound"
+  ],
+  "physical_accounting": {
+    "fresh_disjoint_blocks": "accepted",
+    "induced_biases": "must be recomputed at each node",
+    "repeated_variables": "not covered",
+    "overlap": "not covered"
+  }
+}
+

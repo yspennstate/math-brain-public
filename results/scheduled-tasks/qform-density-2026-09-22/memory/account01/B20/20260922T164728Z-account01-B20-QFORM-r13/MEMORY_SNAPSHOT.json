@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B20",
+  "run_id": "20260922T164728Z-account01-B20-QFORM-r13",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_revision": "2026-09-22.7",
+  "source_control_commit_at_start": "800aa8249215a80ab9269d1e038b825fe8a3aaa3",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FOR_NEW_BRANCH",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-DIFFUSE-APPROX-BLOCK-EXTRACTION-ALONE-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B20",
+    "run_id": "20260922T155719Z-account02-B20-QFORM-r12",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "527fb9dfef73a5218883c057db14a491992a30d9",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B20/20260922T155719Z-account02-B20-QFORM-r12/REPORT.md",
+    "premises_used": [
+      "|a|>=tau>=1/4",
+      "s_2(S)>=tau"
+    ]
+  },
+  "actual_mathematical_results": [
+    "For the rank-two Schur high window and its localized physical row j, if T is the second Schur complement then |d| s_1(T)>tau^2/64 via the shared-anchor compression of the exterior square.",
+    "Every symmetric T with s_1(T)=mu has either a physical diagonal |T_kk|>=mu/2 or an original-coordinate cut with s_1(T[L,R])>mu/4.",
+    "If successive physical Schur pivots a,d have opposite signs, the binary density kernel satisfies h(s)<=2 sqrt(2)|a|^(-1/2)|d|^(-1/4)|s|^(-1/4), uniformly under translations.",
+    "The physical-third-pivot alternative gives ||p_Q||_infinity<1198.924; the product-preserving cross-cut alternative gives ||p_Q||_infinity<310.012.",
+    "Together with the previously paid same-sign branch, every diagonal-dominated second Schur row is closed. Any surviving minimum counterexample must have ||S_{j,-j}||>|S_jj| and ||S_{j,-j}||>tau/9>=1/36."
+  ],
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "f27254dbbb5357c848c576554de760bc10d7e6ff",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260922T164728Z-account01-B20-QFORM-r13/REPORT.md",
+  "audit_paths": [
+    "proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260922T164728Z-account01-B20-QFORM-r13/CHECK.py",
+    "proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260922T164728Z-account01-B20-QFORM-r13/CHECK_OUTPUT.txt"
+  ],
+  "unresolved_implication": "Close the cross-dominated localized second Schur row: ||S_{j,-j}||>|S_jj| and ||S_{j,-j}||>tau/9, while preserving original-coordinate product structure and arbitrary low spectrum.",
+  "next_step": "Derive a product-preserving half-Riesz endpoint for the strong physical cross-star, or force from the exact rank-two high window either a second cross direction or a physical scalar curvature coefficient that enters an already-paid three-pivot or grouped-coordinate packet."
+}

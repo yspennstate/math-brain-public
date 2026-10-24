@@ -1,0 +1,126 @@
+{
+  "mesh": {
+    "path": "~\\.agents\\coordination\\agent_mesh.sqlite3",
+    "mode": "ro",
+    "tables": [
+      "agents",
+      "messages",
+      "claims"
+    ],
+    "agents_columns": [
+      "agent_id",
+      "runtime",
+      "session_key",
+      "parent_agent",
+      "campaign_id",
+      "cwd",
+      "task",
+      "status",
+      "started_at",
+      "last_seen",
+      "lease_until",
+      "ttl_seconds",
+      "metadata_json"
+    ],
+    "messages_columns": [
+      "message_id",
+      "sender_agent",
+      "recipient",
+      "topic",
+      "kind",
+      "body",
+      "created_at",
+      "delivered_at",
+      "acked_at",
+      "requires_ack",
+      "idempotency_key"
+    ],
+    "messages_worker_rows": [],
+    "claims_columns": [
+      "claim_id",
+      "agent_id",
+      "resource",
+      "canonical_resource",
+      "resource_kind",
+      "mode",
+      "purpose",
+      "acquired_at",
+      "renewed_at",
+      "expires_at",
+      "ttl_seconds",
+      "released_at"
+    ],
+    "claims_peer_rows": []
+  },
+  "brain": {
+    "path": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+    "mode": "ro",
+    "tables": [
+      "nodes"
+    ],
+    "nodes_columns": [
+      "id",
+      "kind",
+      "title",
+      "body",
+      "metadata_json",
+      "digest",
+      "created_at"
+    ],
+    "nodes_fei_rows": [
+      {
+        "id": "claim_18624c8e131bd62a8e54d53444db401acb41efde623dbfb5079418ce06c10c53",
+        "title": "Benaim-Rossignol (2008) gave the second proof of sublinear variance in first-passage percolation, for weight laws in the NEARLY-GAMMA class - those satisfying a log-Sobolev inequality similar to the one for the Gamma distribution - replacing Talagrand's hypercube influence inequality by an entropy argument through the Falik-Samorodnitsky inequality. The nearly-Gamma class is the class that Chatterjee's scaling relation later assumes.",
+        "kind": "claim"
+      },
+      {
+        "id": "claim_d7e82bff88909352dff2f23bfcaf7a76446d6bfd14af38c5bda1d5efeb9d9c06",
+        "title": "Open problem: Fourier entropy versus total influence",
+        "kind": "claim"
+      },
+      {
+        "id": "claim_06b0c09db7e28efc6febd3962e234332a00c2ba45a17792cc4d83fdbc6752fba",
+        "title": "Attempt on Fourier entropy versus total influence",
+        "kind": "claim"
+      },
+      {
+        "id": "claim_fb024fa2ccc6416cacc2948c66e0fd62",
+        "title": "Fourier entropy-influence for linear threshold functions: H(f) <= 14.22 I(f) for every f = sgn(w.x - theta)",
+        "kind": "claim"
+      },
+      {
+        "id": "claim_6be3bfaf180a468fa98e6834b0e6d1e4",
+        "title": "Fourier entropy-influence for read-k DNFs and CNFs (O(log k)), for regular functions, and for read-once formulas of threshold gates",
+        "kind": "claim"
+      },
+      {
+        "id": "claim_d15d0160e58b4c9183707be9f49462d2",
+        "title": "Fourier entropy-influence: reduction to small-influence functions, a 7.05 floor for restriction inductions, and read-once formulas over AND, OR, XOR, NOT",
+        "kind": "claim"
+      }
+    ],
+    "named_target_nodes": [
+      {
+        "id": "claim_06b0c09db7e28efc6febd3962e234332a00c2ba45a17792cc4d83fdbc6752fba",
+        "kind": "claim",
+        "title": "Attempt on Fourier entropy versus total influence",
+        "body_excerpt": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Fourier entropy versus total influence exact calculation or structural obstruction Result: Discarding the Boolean constraint destroys the claim: the probability measure uniform on the n singleton subsets has entropy log2(n) but mean subset size1. It cannot be the squared spectrum of a Boolean function when n>=2. Check: If all Fourier mass were on singletons, f=sum_i a_i*x_i with a_i=plus/minus1/sqrt(n). In f^2 the coefficient of x_i*x_j is2*a_i*a_j, nonzero for distinct i,j, whereas Boolean f requires f^2=1. This independently exhibits the violated Fourier convolution identity. Obstruction: Entropy versus mean cardinality alone is insufficient. Any proof must use the nonlinear identities imposed by f^2=1; no dimension-free inequality exploiting all of them is obtained.\nRefers to the open problem node open-problem-p0162-fourier-entropy-versus-total-influence\nNo independent review",
+        "metadata_excerpt": "{\"artifact_digest\":\"sha256:b72f4f012a030b718161827bc556ae55c7bfa5a182d9c70ff66bc27d20848a15\",\"artifact_path\":\"objects/sha256/b7/b72f4f012a030b718161827bc556ae55c7bfa5a182d9c70ff66bc27d20848a15.md\",\"bundle_digest\":\"sha256:f3e0d4cb2f270970b3a7e311e549325fd4a447f22688326d8e681b699cda8afb\",\"bundle_entry_key\":\"at-p0162\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-04\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_012.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0162-fourier-entropy-versus-total-influence\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:705337efabf29cd94bdc3e6e7eb6e032d19e1a439ab1ed1610b6421824e2eead\",\"revision_digest\":\"sha256:06b0c09db7e28efc6febd3962e234332a00c2ba45a17792cc4d83fdbc6752fba\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0162\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_d15d0160e58b4c9183707be9f49462d2",
+        "kind": "claim",
+        "title": "Fourier entropy-influence: reduction to small-influence functions, a 7.05 floor for restriction inductions, and read-once formulas over AND, OR, XOR, NOT",
+        "body_excerpt": "The Fourier entropy-influence conjecture is equivalent to its restriction to Boolean functions all of whose influences are below any fixed tau: a coordinate of influence at least tau has restriction drop Delta_i <= (2/ln 2 + log2(e/tau)) Inf_i, so a violation localizes to a subcube on which every influence is small and the restriction step fails at every coordinate. On self-compositions of Numaro's record function the restriction-step constant rho_0 = min_i Delta_i/Inf_i is 6.3290, 6.8901 and 7.0519 at 324, 5832 and 104976 variables (limit about 7.1116), so no potential-free coordinate induction can give a constant below 7.05. The XOR gate inequality is certified, so read-once formulas over AND, OR, XOR and NOT satisfy H <= 6.4573 I; a prime monotone 7-input gate breaks the read-once potential behind that bound; the five prime 3-input classes (one-hot, MAJ3, EQ3, MUX, Q3) are proved, while fan-in 3 at 6.4573 in general is numerical only. Per-coordinate erasure bounds fail even for monotone functions (majority with one flipped point gives ratio at least (n - 3 log2 n)/2). The full conjecture remains open.",
+        "metadata_excerpt": "{\"campaign\":\"mb10d-2026-09-24\",\"claim_kind\":\"lemma\",\"domain\":\"analysis of Boolean functions\",\"memory_status\":\"provisional\",\"provenance\":\"typed refinement of the transported prose claim claim_201fffcee2604bcb9b42ffcc83185769; statement checked against the memory by session claude-46849b92 on 2026-09-24\",\"source_id\":\"memory:fei_opus_wave1_reduction_small_influences_gates_and_ltf_2026_09_23\",\"supersedes\":\"claim_201fffcee2604bcb9b42ffcc83185769\"}"
+      },
+      {
+        "id": "claim_d7e82bff88909352dff2f23bfcaf7a76446d6bfd14af38c5bda1d5efeb9d9c06",
+        "kind": "claim",
+        "title": "Open problem: Fourier entropy versus total influence",
+        "body_excerpt": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Bound the Shannon entropy of the squared Fourier coefficients of every Boolean function by a universal constant times its total influence. Source: O Donnell: Open problems in analysis of Boolean functions, PDF p.5, Fourier Entropy-Influence Conjecture.\nPosed in O Donnell: Open problems in analysis of Boolean functions\nStatus as recorded in the campaign ledger on 2026-09-07",
+        "metadata_excerpt": "{\"artifact_digest\":\"sha256:06ccae3b330eb0c89163eb1ed8fb61b8d5c02bc60369bad303c9c898d3ef0c1d\",\"artifact_path\":\"objects/sha256/06/06ccae3b330eb0c89163eb1ed8fb61b8d5c02bc60369bad303c9c898d3ef0c1d.md\",\"bundle_digest\":\"sha256:58d74c8da229fa6b81fe6bac4abdfaadf798d61b07728701a8922a92ccd764b6\",\"bundle_entry_key\":\"op-p0162\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-01\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_009.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0162-fourier-entropy-versus-total-influence\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:772492982336f844e436033d99bbb6870cb26f16b277731cabc6cb87e48d4e89\",\"revision_digest\":\"sha256:d7e82bff88909352dff2f23bfcaf7a76446d6bfd14af38c5bda1d5efeb9d9c06\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0162\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      }
+    ]
+  }
+}

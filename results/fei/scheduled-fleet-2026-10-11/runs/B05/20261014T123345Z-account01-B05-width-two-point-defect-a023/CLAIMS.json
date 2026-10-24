@@ -1,0 +1,36 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261014T123345Z-account01-B05-width-two-point-defect-a023",
+  "claims": [
+    {
+      "claim_id": "B05-A023-FULL-BLOCK-POINT-DEFECT-NOGO",
+      "version": "v1",
+      "exact_statement": "For rank-r Boolean point defects, the complete signed node coefficient required when every surviving coordinate is retained in the orbit block is 4r-3+4/ln(2)+o(1). Consequently no fixed c can make the repeated full-block history policy SOLD on all ranks.",
+      "hypotheses": ["genuine Boolean one-point defect", "full inherited block at every nonconstant node", "reviewed signed SOLD charge"],
+      "contributors": ["account01/B05"],
+      "proof_source": "PROOF.md; CERTIFY.py; CERTIFY.out",
+      "proof_dependencies": ["B05-A023-SIGNED-ORBIT-OWNERSHIP-v1"],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": "universal repeated full-block history policy",
+      "first_unproved_line": null,
+      "next_consumers": ["A087", "A094", "B20"]
+    },
+    {
+      "claim_id": "B05-A023-WIDTH-TWO-POINT-DEFECT-SOLD",
+      "version": "v1",
+      "exact_statement": "For c0=14+4/ln(2), every finite-rank Boolean one-point defect has a complete adapted signed-orbit restriction tree of physical history width at most two, using transitions {x,y}->{y,z} above rank two and direct endpoint transitions at ranks two and one. Hence G<=(16+4/ln(2))I and H<=(34+8/ln(2))I on this family.",
+      "hypotheses": ["genuine Boolean one-point defect", "uniform cube", "signed opening and reveal retained", "adapted physical width-two history"],
+      "contributors": ["account01/B05"],
+      "proof_source": "PROOF.md; CHECK.py; CHECK.out; CERTIFY.py; CERTIFY.out",
+      "proof_dependencies": ["B05-A023-SIGNED-ORBIT-OWNERSHIP-v1", "B19-A094-SIGNED-ORBIT-OWNERSHIP-REVIEW-v1", "U-UNIVERSAL-SIGNED-MISMATCH-REDUCTION"],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": "Universal width-two query/entering-coordinate selection for an arbitrary Boolean core.",
+      "next_consumers": ["A087", "A094", "B20"]
+    }
+  ]
+}

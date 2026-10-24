@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B09",
+  "run_id": "20260923T190048Z-account02-B09-QFORM-r19",
+  "status": "ESSENTIAL_STEP_APPLIED_STRONG_LOCALIZATION_FORK_FULL_TARGET_OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8ab6f5a06544fdf25b8fc82b1792049b098a8868",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T190048Z-account02-B09-QFORM-r19/REPORT.md",
+    "blob": "f640a41e45793c7b03ba4a70ee3b1a506843b18e"
+  },
+  "early_checkpoint": {
+    "commit": "8aa4509a7f6efcfe577496c7bef1e36c5761a90e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T190048Z-account02-B09-QFORM-r19/EARLY.md",
+    "blob": "d4d22766c089ddc47c7244d5f4860bd3f5afc113",
+    "note": "Rank-three endpoint correct; its initially stated rank-four transition frontier was superseded in the same run by freshly discovered account03/B09 r39."
+  },
+  "handoff": {
+    "commit": "b4b0398d3a4aa4baa010bdcf5844afdb57c97837",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B09/20260923T190048Z-account02-B09-QFORM-r19.md"
+  },
+  "source_pins": {
+    "required_e5f": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "latest_designated_partner_account03_B09_report": "4b076c614a1e1b826433acf811adcffc29e8f05d",
+    "latest_designated_partner_account03_B09_late_note": "af81ace54b10d45b8284185c92e89df38b92063c",
+    "partner_r38_dual_collapse": "b2a0ccad9d4f4d654e0fc84dd0323ce84230ebc4"
+  },
+  "new_theorem": {
+    "id": "QFORM-R4-CARRIER-ETA-LOCALIZATION-FORK-v1",
+    "statement": "If A=D+V K V^T with physical diagonal D, V^T V=I_r, r in {3,4}, K invertible and s3(K)>=gamma, then for every 0<eta<=1 either ||p_Q||inf <= 24 sqrt(2e)/[gamma sqrt(eta(2-eta))] with continuous density and direct linear interval bound, or some unit carrier direction Vu has >1-eta squared mass on at most 64 eta^-2 original coordinates. Proof random-splits only rows of leverage <=eta^2/16 and applies account03/B09 r39 aggregate physical third-volume smoothing."
+  },
+  "partner_application": {
+    "statement": "For overlapping two-bank Walsh frames W=diag(P_N,C_N), N>=8, K_epsilon=[[diag(1,0),I2],[I2,diag(1+epsilon,0)]], and any physical diagonal D, a balanced physical cut has Z3=(4+2epsilon+3epsilon^2)/64>=1/16 and row-volume marginals <=4/N<=1/2. Thus account03/B09 r39 gives ||p||inf <=6 sqrt(2e) 2^(2/3)=22.2075246553 uniformly for epsilon>=0, including the rank-four to rank-three limit. At D=0 the spectrum is {1,-1,(2+epsilon +/- sqrt(4+epsilon^2))/2}, so the owner target holds for all epsilon>=0."
+  },
+  "required_pinned_application": {
+    "statement": "For one physical hub and Walsh leaf bank with flat orthonormal c,v1,v2, Q=2X_h<c,X_I>+<v1,X_I>^2+<v2,X_I>^2 has target spectrum {1,-1,1,1}. The pinned e5f Theorem H gives |phi(t)|<=8pi^2|t|^-2, hence ||p_Q||inf<=4sqrt2 and P{Q in L}<=4sqrt2|L|, while retaining arbitrary allowed outside blocks and dense same-side leaf curvature."
+  },
+  "method_obstruction": "A >1-eta coefficient localization certificate does not make the light tail probabilistically small: v=sqrt(1-eta)e1+sqrt(eta)e2 with X2 uniform on [eta^-1/2,eta^-1/2+1] has order-one light contribution. Do not delete the tail or r38 residual by norm smallness.",
+  "first_unpaid_implication": "QFORM-R4-CARRIER-STRONG-LOCALIZED-HUB-OR-RESIDUAL-CROSSING-v1",
+  "first_unpaid_detail": "Route a strong finite localization certificate (e.g. eta=1/4 gives >3/4 mass on <=1024 physical coordinates) into a physical hub/fixed-pair/projected-crossing receiver while retaining the light tail. Separately extend exact-carrier crossing to r38's nonzero retained block-diagonal residual E without treating E as a small random quadratic perturbation.",
+  "full_qform_status": "OPEN",
+  "valid_full_target_counterexample_found": false,
+  "telemetry": {
+    "reasoning_effort": "UNKNOWN",
+    "provider_thinking_usage": null,
+    "provider_thinking_seconds": null
+  }
+}

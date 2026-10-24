@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T103250Z-account01-B01-fei-r11",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "control_revision": "2026-09-22.3",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "FEI-B01-SIGNED-CREDIT-BELLMAN-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For C(G;p)=V_{q(G;p)} K_occ(G;p), A_{Gamma,lambda}=D_Gamma-lambda C, and physical restriction j of bias s, the exact identity A(G)=(1-s)A(G0)+sA(G1)+L_Gamma-lambda Xi_j holds, where Xi_j=C(G)-[(1-s)C(G0)+sC(G1)]. Therefore any finite symmetric nonnegative Gamma and selector policy satisfying L_Gamma>=lambda Xi_j at every nonconstant state implies the ordinary all-gate inequality and hence FEI.",
+      "scope": "All finite Boolean gates at product bias, with constant children assigned C=0; lambda>=0.",
+      "dependencies": [
+        {
+          "mode": "premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4ccd51ad517f425a529daa52c3352905b86ea69d",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md",
+          "section": "Sections 2-4 exact selector recursion; historical candidate excluded"
+        },
+        {
+          "mode": "premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "section": "Sections 2-4 definition and nonnegativity of K_occ"
+        }
+      ],
+      "verification": "algebraic derivation in REPORT.md; no external theorem beyond pinned exact identities"
+    },
+    {
+      "id": "FEI-B01-KOCC-RESTRICTION-NONMONOTONE-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "There is an explicit uniform four-bit Boolean function with C(parent)=0 but positive average child C under restriction of its first coordinate, hence Xi_j<0. Thus parent K_occ in defect units is not a monotone consumable bank under every physical restriction.",
+      "scope": "Explicit 4-bit truth table in REPORT.md, selector bias 1/2.",
+      "dependencies": [
+        {
+          "mode": "premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "section": "I-projection definition"
+        }
+      ],
+      "verification": {
+        "checker": "check_credit_transfer.py",
+        "output": "CHECKER_OUT.txt",
+        "exact_parts": "Walsh vectors, rational variances and marginals, closed-form I-projection parameters; strict child KL positivity follows because the child laws have zero cells while their I-projections have full positive support.",
+        "numeric_parts": "Displayed KL values and Xi are diagnostic evaluations in bits."
+      }
+    },
+    {
+      "id": "FEI-B01-INTERIOR-CREDIT-SIGN-NOT-WZERO-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For the same witness, the restriction has s=1/2, d=1/2, |Delta|=1/4, so the local Poincare contribution s(1-s)(d-Delta^2)=7/64>0. The negative Xi_j is therefore not a boundary-collapse or Poincare-equality artifact.",
+      "dependencies": [
+        {
+          "mode": "premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "35ca31a959e9c40d7a5387f913197b6682b5dda6",
+          "path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B04/20260922T103904Z-nearzero-poincare-trichotomy/REPORT.md",
+          "section": "Sections 2-6"
+        },
+        {
+          "mode": "context",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "2bf247373576eb406ca91bb3ea5f3ce5e5ab8588",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md",
+          "section": "Theorem 2.1 and Section 3: composition superadditivity contrasts with restriction nonmonotonicity"
+        }
+      ]
+    },
+    {
+      "id": "FEI-B01-SIGNED-TRANSFER-LOCAL-INEQUALITY-v1",
+      "status": "OPEN",
+      "statement": "Find finite symmetric nonnegative Gamma, lambda>=0 and an admissible physical-selector policy such that L_Gamma(G,j;p)>=lambda Xi_j(G;p) at every nonconstant restriction state, retaining actual child defects; equivalently establish a source-valid bound on only Xi_j^+ using local selector/Poincare currencies plus child slack.",
+      "scope": "Universal all-gate/all-bias target; not established here."
+    }
+  ]
+}

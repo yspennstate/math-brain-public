@@ -1,0 +1,52 @@
+{
+  "id": "C0089",
+  "ledger_rows": [
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+      "line": 89,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "C0089",
+        "historical_status": "source_says_open",
+        "intake": "claude_20260907",
+        "locator": "Open Problem 16.7, p. 248",
+        "problem_id": "C0089",
+        "recorded_at": "2026-09-07T06:52:37Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "heydenreich_hofstad_highd_2017",
+        "statement": "Prove a quenched invariance principle for simple random walk on the random interlacement set and on an infinite component of the vacant set of random interlacements.",
+        "status_search": "Procaccia, Rosenthal and Sapozhnikov (PTRF 2016) proved a quenched invariance principle for random walk on the interlacement set for every u > 0 and on the vacant set for u small; combined with the 2023 sharpness result of Duminil-Copin, Goswami, Rodriguez, Severo and Teixeira (which gives the required decoupling and local uniqueness for all u < u*), the vacant-set case throughout the supercritical phase appears to follow, but this combination was not verified in a fetched source. Admitted for the vacant set with u in the whole phase (0, u*) as the residual question.",
+        "title": "Quenched invariance principle for random walk on the vacant set of random interlacements in the whole supercritical phase",
+        "verification": "unreviewed"
+      }
+    },
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+      "line": 77,
+      "record": {
+        "attempt_id": "C0089-A001",
+        "author": "claude-probability-1000-continue-0907",
+        "independent_check": "",
+        "key_identity": "QIP (PRS 2016) holds under decoupling + local uniqueness; DGRST 2023 supplies both for all u < u*.",
+        "method": "Check the hypotheses of the Procaccia-Rosenthal-Sapozhnikov framework against the 2023 sharpness result.",
+        "obstruction": "Exact matching of the hypotheses not verified against fetched texts.",
+        "problem_id": "C0089",
+        "recorded_at": "2026-09-07T06:52:37Z",
+        "result": "PRS prove the QIP for correlated percolation models satisfying a decoupling condition with polynomial error, a local uniqueness condition and a density condition; for the vacant set these were verified for u < u** (strongly supercritical) at the time. The 2023 sharpness theorem establishes u* = u** = bar u, so the local uniqueness and decoupling inputs hold for every u < u*, and the PRS conclusion should extend verbatim. The only step to check is that the constants in the PRS conditions are allowed to depend on u (they are), and that the decoupling inequalities used in the sharpness paper are of the form PRS assume (stretched-exponential in the scale with polynomial sprinkling), which they are by construction of the u** definition. So the vacant-set QIP for all u in (0, u*) is, to the best of this attempt, a corollary of PRS 2016 plus DGRST 2023; I could not fetch both sources in this session to confirm the exact form of the conditions, so this is recorded as a conditional resolution, not a promotion.",
+        "schema": "probability-attempt.v1",
+        "substantive": true
+      }
+    }
+  ],
+  "store_cards": [
+    {
+      "id": "claim_f33f481fe0f6fba21198223ed9626f1580f20c3b71818bf9cf668d814d5b2712",
+      "kind": "claim",
+      "title": "Open problem: Quenched invariance principle for random walk on the vacant set of random interlacements in the whole supercritical phase",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove a quenched invariance principle for simple random walk on the random interlacement set and on an infinite component of the vacant set of random interlacements. Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 16.7, p. 248. Status notes: Procaccia, Rosenthal and Sapozhnikov (PTRF 2016) proved a quenched invariance principle for random walk on the interlacement set for every u > 0 and on the vacant set for u small; combined with the 2023 sharpness result of Duminil-Copin, Goswami, Rodriguez, Severo and Teixeira (which gives the required decoupling and local uniqueness for all u < u*), the vacant-set case throughout the supercritical phase appears to follow, but this combination was not verified in a fetched source. Admitted for the vacant set with u in the whole phase (0, u*) as the residual question.\nPosed in Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems\nCurrent status unverified as of 2026-09-07",
+      "metadata_json": "{\"artifact_digest\":\"sha256:33c3a90ff40f19fa94cdbb690648517521926f51337cf62bf9e1128c16b986a8\",\"artifact_path\":\"objects/sha256/33/33c3a90ff40f19fa94cdbb690648517521926f51337cf62bf9e1128c16b986a8.md\",\"bundle_digest\":\"sha256:bee140cfde7d5bf56318732d7b8273e9824005d4b35903e078e74d929a549266\",\"bundle_entry_key\":\"op-c0089\",\"bundle_id\":\"population.probability-intake-claude-bulk-problems-and-exclusions-c004a\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_006.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.percolation:open-problem-c0089-quenched-invariance-principle-for-random-walk-on-the-vacant-set-of-ran\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:27ce636e4c81aa81a5dbf74798c83425e9bd5ce208c7c2ac89a1b27196ba3791\",\"revision_digest\":\"sha256:f33f481fe0f6fba21198223ed9626f1580f20c3b71818bf9cf668d814d5b2712\",\"source_id\":\"owner-probability-intake-claude-20260907:op-c0089\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    }
+  ]
+}

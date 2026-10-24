@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B16",
+  "run_id": "20260922T203148Z-account02-B16-QFORM-auto11",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "9397b657cb5327fa0a01cefb0c2aa6f89cca5116",
+  "control_commit_refresh": "040a3383a55f7fdd517538cabd52a29426540a6b",
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SYMMETRIC-THREE-AMBIGUITY-BL-FAIL-v1"
+  ],
+  "new_supporting_lemma": {
+    "id": "QFORM-MIXED-AMBIGUITY-BL-SUFFICIENT-v1",
+    "statement": "With unnormalized ambiguity kernels K_j, difference masses q_j, weights theta_j, and finite mixed BL constant B_theta(A) for L_j u=(u_j,(Au)_j) at exponent theta_j/2 and P_j u=u_j at exponent 1-theta_j, |phi_A(t)|^2 <= B_theta(A) pi^(Theta/2)|t|^(-Theta/2). Theta>4 is sufficient for an L1 Fourier closure."
+  },
+  "new_correction": {
+    "id": "QFORM-MIXED-AMBIGUITY-BL-BANK-BARRIER-v1",
+    "statement": "For A_m=[1] direct_sum J_m/m direct_sum (-J_m/m), every finite mixed ambiguity/section-mass BL datum forces theta_0=0 and bank ambiguity weights at most 2 each, hence Theta<=4. This absolute BL interpolation cannot give an integrable |phi| bound even on this target-valid exact-rank-three family."
+  },
+  "positive_family_payment": {
+    "id": "QFORM-DISJOINT-BANK-CURVED-PROJECTION-v1",
+    "statement": "For the same A_m and arbitrary independent cap-one source laws, group each rank-one bank into Y_+=m^(-1/2)sum X_j and Y_-=m^(-1/2)sum X_j. Ball--Rogozin plus the beta convolution gives ||p_Q||_infinity<=pi sqrt(2), uniformly in m."
+  },
+  "partner_applied": [
+    {
+      "account": "account03",
+      "slot": "B16",
+      "run_id": "20260922T195823Z-account03-B16-QFORM-r15",
+      "math_commit": "c6601cc34ac9ca1f485f8c20dc4a28c909580817",
+      "use": "Used QFORM-UNNORMALIZED-AMBIGUITY-LP-v1 and exact decoupling as the primitive for the mixed BL lemma and bank obstruction."
+    },
+    {
+      "account": "account03",
+      "slot": "B16",
+      "run_id": "20260922T202347Z-account03-B16-QFORM-r15",
+      "math_commit": "b94cc7446401c02727c42024274c002e2f4e0cab",
+      "use": "Applied QFORM-PHYSICAL-TRIPLE-DETERMINANT-v1 to A_m: every invertible triple has determinant magnitude m^-2, yielding <105 m^(2/3), quantitatively worse than the grouped pi sqrt(2) bound and confirming aggregate-before-inversion is necessary."
+    }
+  ],
+  "next_open_bridge": "QFORM-GROUPED-AMBIGUITY-BANK-BRIDGE-v1: control a bank-level unnormalized ambiguity/oscillatory object for a normalized original-coordinate product projection and synthesize grouped banks or a full-matrix exit under only three large eigenvalues, retaining arbitrary extra spectrum and never normalizing thin fibers.",
+  "math_repository": "yspennstate/math-open-problems",
+  "report_commit": "484069f14f49a3303befbe62863d950e67c809e1",
+  "report_blob": "cea752dea4e1778ccc101d8f54a717feb56f8811",
+  "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260922T203148Z-account02-B16-QFORM-auto11/REPORT.md",
+  "partner_addendum_commit": "67bc6c4c6e1236e1c124a1d8afa27f9c538e96a5",
+  "partner_addendum_blob": "c03b4540b3cf33314704f090be82956cc3151370",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B16/20260922T203148Z-account02-B16-QFORM-auto11.md",
+  "correction_event_commit": "4b1267f62fef6d908f826fa381655ba644b34cc1"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "event_id": "QFORM-TWOJACOBIAN-TRANSVERSALITY-ONLY-FALSE-v1",
+  "account": "account01",
+  "slot": "B11",
+  "run_id": "20260924T074041Z-account01-B11-QFORM-auto11",
+  "status": "REFUTED_INTERMEDIATE_MECHANISM",
+  "scope": "Arbitrary dependent three-dimensional laws only; this is not a counterexample to the independent-product QFORM target.",
+  "statement": "Joint/pair/scalar density caps plus any finite or infinite collection of negative-moment/small-tail bounds for the full two-Jacobian J_2(Y,Q) do not by themselves bound an indefinite quadratic pushforward. Applying account02/B11 r13's shell to F_epsilon=epsilon U^2-epsilon^{-1}Y^2+V^2 gives J_2(Y,F)=2 sqrt(epsilon^2 U^2+V^2)>=2 sqrt(epsilon)R, hence E J_2^{-p}<=(2 sqrt(epsilon)R)^{-p} for all p>0, while p_F>=sqrt(2/3)/delta on [-delta,0]. At epsilon=1/4,R=2 delta^{-2}, all negative moments tend to zero while ||p_F||_infinity grows at least as sqrt(2/3)/delta.",
+  "partner_source": {
+    "worker": "account02/B11",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260924T055712Z-account02-B11-QFORM-r13/REPORT.md",
+    "theorem": "QFORM-LDL-MARGINAL-CAPS-SUFFICIENT-FALSE-v1"
+  },
+  "canonical_math_commit": "421ab63b728168ac31d263ce0279229445904b51",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/20260924T074041Z-account01-B11-QFORM-auto11/REPORT.md",
+  "implication": "The remaining LDL two-sheet proof must spend original-coordinate product provenance before dependence-blind coarea, marginal, X-ray, or Jacobian-moment envelopes."
+}

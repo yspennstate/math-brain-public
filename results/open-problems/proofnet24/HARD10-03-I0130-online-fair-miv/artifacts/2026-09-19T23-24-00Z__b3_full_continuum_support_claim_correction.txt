@@ -1,0 +1,9 @@
+I0130_B3_SUPPORT_CLAIM_CORRECTION
+
+The line named `full_continuum_support_theorem` in the immediately preceding self-check output is NOT accepted as a theorem and MUST NOT be used as evidence of full-continuous finite support.
+
+The proposed argument correctly proves only this local tail fact: at a non-reflected positive state J above the old654 support, an action that realizes the Bellman value cannot have floor(v)=0; hence floor(v)>=1 and its non-reflected low immediate reward is at most -20P. Following low branches therefore decreases J by 1..3840 while increasing the required continuation value by at least 20P per such tail step.
+
+The attempted global bound `n <= max(F0)/(20P)` has a gap: after the low path enters the reflected/core region, the remaining full-continuous recourse value has not been proved uniformly bounded by max(F0). The finite-action fixed points do not supply an upper bound for the full-continuous operator. Consequently the printed arithmetic values `active_steps_bound=1839172` and `J_support_bound=7062438930` are conditional diagnostics only, not a certified support theorem.
+
+Accepted B3 outcome for the run: the simple low-slack proof route FAILS at the missing depth-independent core-value bound. Any future finite-support theorem must add a valid global/core Bellman supersolution, a cycle/mean-payoff exclusion, or another uniform bound. The exact metric movement and B20/B11 same-template separator calculations are unaffected.

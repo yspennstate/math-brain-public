@@ -1,0 +1,47 @@
+R17 PROB10-02 exact recursive-congruence / MTBDD checker
+SECTION quotient_congruence
+CONGRUENCE ell=1 classes=2 formula=2 PASS
+CONGRUENCE ell=2 classes=5 formula=5 PASS
+CONGRUENCE ell=3 classes=15 formula=15 PASS
+CONGRUENCE ell=4 classes=51 formula=51 PASS
+CONGRUENCE ell=5 classes=187 formula=187 PASS
+CONGRUENCE ell=6 classes=715 formula=715 PASS
+CONGRUENCE ell=7 classes=2795 formula=2795 PASS
+CONGRUENCE ell=8 classes=11051 formula=11051 PASS
+SECTION coarsest_refinement_finite
+REFINEMENT ell=1 counts=[2, 2] agrees_recursive_quotient=YES
+REFINEMENT ell=2 counts=[2, 5, 5] agrees_recursive_quotient=YES
+REFINEMENT ell=3 counts=[2, 5, 15, 15] agrees_recursive_quotient=YES
+REFINEMENT ell=4 counts=[2, 5, 15, 51, 51] agrees_recursive_quotient=YES
+REFINEMENT ell=5 counts=[2, 5, 15, 51, 187, 187] agrees_recursive_quotient=YES
+REFINEMENT ell=6 counts=[2, 5, 15, 51, 187, 715, 715] agrees_recursive_quotient=YES
+REFINEMENT ell=7 counts=[2, 5, 15, 51, 187, 715, 2795, 2795] agrees_recursive_quotient=YES
+REFINEMENT ell=8 counts=[2, 5, 15, 51, 187, 715, 2795, 11051, 11051] agrees_recursive_quotient=YES
+SECTION exact_value_iterate_mtbdd
+VALUE ell=4 step=29 denom=288230376151711744 min_increment_num=176123098275119104 distinct_terminals=30
+MTBDD ell=4 order=interleaved terminals=30 internal=135 total=165
+MTBDD ell=4 order=a_then_b terminals=30 internal=148 total=178
+MTBDD ell=4 order=reverse_interleaved terminals=30 internal=161 total=191
+VALUE ell=5 step=29 denom=288230376151711744 min_increment_num=178689318076547072 distinct_terminals=92
+MTBDD ell=5 order=interleaved terminals=92 internal=516 total=608
+MTBDD ell=5 order=a_then_b terminals=92 internal=540 total=632
+MTBDD ell=5 order=reverse_interleaved terminals=92 internal=612 total=704
+VALUE ell=6 step=29 denom=288230376151711744 min_increment_num=180425308284911616 distinct_terminals=298
+MTBDD ell=6 order=interleaved terminals=298 internal=1851 total=2149
+MTBDD ell=6 order=a_then_b terminals=298 internal=1935 total=2233
+MTBDD ell=6 order=reverse_interleaved terminals=298 internal=2305 total=2603
+VALUE ell=7 step=29 denom=288230376151711744 min_increment_num=181463508938915840 distinct_terminals=1018
+MTBDD ell=7 order=interleaved terminals=1018 internal=6750 total=7768
+MTBDD ell=7 order=a_then_b terminals=1018 internal=6977 total=7995
+MTBDD ell=7 order=reverse_interleaved terminals=1018 internal=8844 total=9862
+VALUE ell=8 step=29 denom=288230376151711744 min_increment_num=181769434124255232 distinct_terminals=3521
+MTBDD ell=8 order=interleaved terminals=3521 internal=24574 total=28095
+MTBDD ell=8 order=a_then_b terminals=3521 internal=25285 total=28806
+MTBDD ell=8 order=reverse_interleaved terminals=3521 internal=33845 total=37366
+VALUE ell=9 step=29 denom=288230376151711744 min_increment_num=180381853000138752 distinct_terminals=12639
+MTBDD ell=9 order=interleaved terminals=12639 internal=90926 total=103565
+MTBDD ell=9 order=a_then_b terminals=12639 internal=92897 total=105536
+MTBDD ell=9 order=reverse_interleaved terminals=12639 internal=130746 total=143385
+ELL22 raw_states=17592186044416 recursive_classes=2932033104555 old_CS_orbits=4398048608256
+ALL_EXACT_CHECKS_PASS
+RETURN_CODE=0

@@ -1,0 +1,50 @@
+{
+  "candidate_id": "C0052",
+  "worker": "w472",
+  "checked_date": "2026-10-10",
+  "primary_statement_verified": true,
+  "primary_source": {
+    "author": "Hugo Duminil-Copin",
+    "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+    "url": "https://arxiv.org/abs/1707.00520",
+    "version": "v1, 2017-07-03",
+    "locator": "Conjecture 6 and equations (7.1)-(7.2), printed p94, PDF index 93; Exercise 61 gives the sign of U4",
+    "source_quote": "Prove that the three-dimensional Ising model is non-trivial",
+    "exact_scope": "Zero-field ferromagnetic nearest-neighbor Ising on Z^3. The source defines g(beta)=sum U4(0,x2,x3,x4)/(chi(beta)^2 xi(beta)^3), with infinite-volume free-state susceptibility and exponential correlation length. Triviality means g(beta) tends to zero as beta increases to beta_c from below. This packet uses the positive sign convention g_+=-g.",
+    "quantifier_note": "Preventing convergence to zero suffices for the literal source target. A positive liminf is stronger. Uniqueness/existence of a full continuum limit is a separate issue.",
+    "verification": "Local intake row and targeted raw excerpt matched public primary PDF text. Source verification is not mathematical proof."
+  },
+  "historical_openness": "SOURCE_SAYS_OPEN (2017); intake bounded search dated 2026-09-07",
+  "current_openness": "UNKNOWN",
+  "parent_problem_solved": false,
+  "novelty_claim": false,
+  "local_checks": {
+    "ranking": "probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:542",
+    "problem": "Same intake/problems.jsonl:52; unreviewed, current_status unverified",
+    "attempt": "Same intake/attempts.jsonl:42, C0052-A001; random-current route with open intersection-count variance estimate",
+    "H_I_Lean": "Targeted exact-ID searches of named H/I attempt directories found no C0052 records; Lean annotation retains the historical attempted_unsolved label.",
+    "Team_O": "No C0052 row in targeted Team O board search",
+    "owner_solved_retired": "Canonical target-node check pending in READ_ONLY_STORE_RECEIPT.json; no broad owner-work scan or novelty assertion",
+    "source_receipt": "LOCAL_SOURCE_RECEIPT.json"
+  },
+  "public_primary_checks": [
+    {"url":"https://arxiv.org/abs/1912.07973","result":"Aizenman and Duminil-Copin prove Gaussian scaling limits in 4D; this does not solve the 3D half."},
+    {"url":"https://arxiv.org/html/2210.03602","result":"Jiang and Newman, equations (25)-(27), verify paired zeros and cumulants; Theorem 1 gives a thermodynamic unnormalized zero limit, without the missing normalized block-zero bound."},
+    {"url":"https://arxiv.org/html/2404.05700","result":"Duminil-Copin and Panis improve the 3D two-point exponent bound to eta<=1/2 if the exponent exists. This is not a non-Gaussian scaling-limit proof."},
+    {"url":"https://arxiv.org/abs/1612.02436","result":"The abstract describes four-point information extracted from conformal bootstrap results. It does not furnish the lattice theorem required by this task."}
+  ],
+  "bounded_search_result": "No verified solution found in the examined primary sources. Search absence does not certify openness as of 2026-10-10.",
+  "brain_exposure": {
+    "recall": "RECALL_RECEIPT.json records a 60-second timeout; fallback index search plus named scars used",
+    "read_memory_slugs": ["perceptron_proof_open_gaps_fleet_2026_07_12", "proof_steps_need_derived_joint_structure_2026_09_09"],
+    "applied": "Separate numerical/source receipts from proof; name the hardest missing bound; derive joint-law identities rather than multiply conditional factors.",
+    "unread_hints": "Unrelated notes in the network-resume message were not used. No outcome attributed to mere delivery."
+  },
+  "independence": {
+    "independent_route_saved": "ATTEMPT.md initial checkpoint preceded opening w471/ROUTE_PRECOMMIT.md or ATTEMPT.md",
+    "peer_same_method_found": "w471 independently chose Lee-Yang zeros; w472 took the disjoint thermal normalization/zero-mass and 1D transfer-matrix control",
+    "peer_proof_read": "w471/ATTEMPT.md L1 and L2; no peer review-of-review used"
+  },
+  "review": {"referee":"w473","own_new_claims":"pending","formal_check":null,"cross_account_admission":"not verified"},
+  "served_settings": {"requested_model":"gpt-6.1-sol","requested_reasoning":"max","requested_service_tier":"Fast","served_receipt":null}
+}

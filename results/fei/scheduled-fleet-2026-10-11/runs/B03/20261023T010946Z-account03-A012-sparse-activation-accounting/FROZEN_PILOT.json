@@ -1,0 +1,12 @@
+{
+  "helper_version": "aggregate-pilot-v18",
+  "actual_Boolean_family": "G=c(s), H=c(s)(1-2 E_s(V)) for arbitrary8 private row events on one independent cube; arbitrary correlation",
+  "parameter_domain": "point-defect phase c=1-2point0; r=Pr(E0) in[0,1],p=sum other7 event probabilities in[0,2]; remaining p>=2 is in analytic moderate regime",
+  "case_count": "129x257 grid, only 1/4<=r+p<=4/3 evaluated; optional bounded local minimization not authorized in this pilot",
+  "symmetry": "all256 three-bit phases partition into affine,4-support semibent,point-defect times character/sign; phase classification will be checked exactly separately",
+  "arithmetic": "binary64 discovery ONLY for explicit log-sum upper bound; exact proof requires rational tangent/continuum and exact phase classification",
+  "memory_estimate_mb": 40,
+  "maximum_runtime_seconds": 55,
+  "no_dimension_escalation": true,
+  "bound": "d=(r+p)/8,b0=(p-r)/8,delta_max=(r^2+floor(p)+(p-floor(p))^2)/8; t=delta_max-b0^2; B<=2d-2delta_max+Phi((3/4-b0)^2,b0^2)+Phi(7/16-2d+3b0/2+t,t)"
+}

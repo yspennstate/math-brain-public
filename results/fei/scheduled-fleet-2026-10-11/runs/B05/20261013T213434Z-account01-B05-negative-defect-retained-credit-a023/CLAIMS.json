@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "run_id": "20261013T213434Z-account01-B05-negative-defect-retained-credit-a023",
+  "stream": "B05",
+  "packet_id": "A023",
+  "gap_id": "B05_RARE_REFUNDS",
+  "claims": [
+    {
+      "claim_id": "B05_A023_NEGATIVE_DEFECT_BLOCK_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every r>=2, the negative point-defect block N_r satisfies U(N_r)<=16 I(N_r)/9.",
+      "quantifiers": "all integers r>=2",
+      "evidence": "PROOF.md Section 1; CHECK.py checks ranks 2 through 40 diagnostically"
+    },
+    {
+      "claim_id": "B05_A023_NEGATIVE_DEFECT_ENDPOINT_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "If U(P)<=16I(P)/9, every fresh fair-selector tower with arbitrary negative point-defect ranks r_k>=2 satisfies U(F_d)<=16I(F_d)/9 for every finite depth.",
+      "quantifiers": "all base dimensions, Boolean bases satisfying the endpoint, all finite depths, and all rank sequences r_k>=2",
+      "evidence": "PROOF.md Sections 2-3; CHECK.py direct and recurrence checks"
+    },
+    {
+      "claim_id": "B05_A023_NEGATIVE_DEFECT_RETAINED_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "Every finite adaptive/pruned physical restriction tree on such a tower, with any common disjoint Boolean terminal core, has signed retained U loss at most 16I(F_d)/9.",
+      "quantifiers": "all permitted finite trees, rank sequences, reveal orders, pruning policies, and common disjoint terminal cores",
+      "evidence": "PROOF.md Section 4; CHECK.py pruned-tree and terminal-cancellation checks"
+    }
+  ],
+  "scope_correction": "The retained theorem is an endpoint signed telescope; it does not establish first-revelation or single-use credit ownership.",
+  "unaffected_open_claim": "No dimension-independent retained-credit theorem is proved for biased outer selectors, variable reuse, or changing/overlapping/leaf-dependent coherent cores.",
+  "full_fei_status": "OPEN"
+}

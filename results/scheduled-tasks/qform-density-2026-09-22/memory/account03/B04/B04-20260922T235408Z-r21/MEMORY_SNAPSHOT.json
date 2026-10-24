@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "B04-20260922T235408Z-r21",
+  "control_commit": "89bbc6d13a505b7d057401486e10b1c06f4b4cf2",
+  "control_revision": "2026-09-22.15",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "17faf80326997165506872d6cb7f5c8a07c8598c",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/B04-20260922T235408Z-r21/REPORT.md",
+  "canonical_report_blob": "26492613262a062594d9d014e102e7d81b5e4dd8",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B04/B04-20260922T235408Z-r21.md",
+  "partner_requested": "account04/B04",
+  "partner_status": "CURRENT_HOUR_SIGNED_IN_BUT_NO_COMPLETED_QFORM_HANDOFF_OR_REPORT_FOUND_AT_PREPUBLICATION_LOOKUP",
+  "partner_result_applied": null,
+  "completed_peer_result_applied": {
+    "source": "account02/B04",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "07305f53ba9b8a1d3e6e79f8c851f415f007d4a7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/B04-20260922T181702Z-dac07509/REPORT.md",
+    "statement_used": "||p_(c^T X)||_infinity <= sqrt(2)/||c||_2"
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-RANK1-TRIANGULAR-HALFRIESZ-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For T=2c U(V+beta(W))+H(V,W) with disjoint original-coordinate banks and sole cross singular value sigma=|c||||u||||v||, sup_t E|t-T|^-1/2 <= 8/sqrt(sigma)."
+    },
+    {
+      "id": "QFORM-SQUARE-RANK1-TRIANGULAR-BANK-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For Q=a[Z+m]^2+T with independent original scalar Z and arbitrary overlap shift, ||p_Q||_infinity <= 8/sqrt(|a|sigma)."
+    },
+    {
+      "id": "QFORM-ZERO-SCHUR-REARRANGEMENT-SHARPENING-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "Exact zero Schur row half-Riesz constant improves to 2^(11/4) beta_i^-1/2, hence outer-pivot density bound 2^(11/4)|a|^-1/2 beta_i^-1/2. No near-zero extension claimed."
+    }
+  ],
+  "explicit_target_family": "Q_m=Z^2+4UV+V^2 with flat disjoint banks; active spectrum {1,(1+sqrt17)/2,(1-sqrt17)/2}; universal density bound <=4sqrt2.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_full_target_proved": false,
+  "unresolved_implication": "QFORM-CLEAN-BLOCK-OR-TWOSIDED-LEAKAGE-ROUTING-v1",
+  "next_step": "From bare s_3(A)>=1, force a quantitatively usable scalar-square plus clean cross bank or route genuine two-sided leakage / small-nonzero near-isotropic residual into existing ridge/determinant/rank-two/grouped-bank branches without reciprocal local-minor loss.",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

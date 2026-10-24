@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260923T195027Z-account01-B12-QFORM-auto11b",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "effective_control_revision": "2026-09-22.15",
+  "source_control_commit_at_start": "b3194faf6f2f82029363d57446443234a27d7079",
+  "source_control_refresh_before_publication": "01bf9c67d5bd6fe48bd71e00f880fac40c1747e2",
+  "owner_request_consumed": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "full_target_status": "OPEN",
+  "continuity_full_target_status": "OPEN",
+  "execution_state": "WITHOUT_VERIFIED_BRAIN",
+  "claim": {
+    "id": "QFORM-LOCAL-ACTION-APPROXIMATION-NUMBER-STABILITY-v1",
+    "status": "PROVED_SUPPORTING_STABILITY_THEOREM",
+    "statement": "For an original-coordinate carrier H with projection P, symmetric A=A0+E, and k+r<=|H|, sqrt(lambda_k((A^2)[H,H])) >= [sqrt(lambda_{k+r}((A0^2)[H,H]))-s_{r+1}(EP)]_+. An additional symmetric T costs only ||TP||op. Multi-packet additions spend summed reserve ranks and pay summed local approximation-number tails.",
+    "scope": "Deterministic original-coordinate carrier stability; no probabilistic independence claim for added quadratic remainders."
+  },
+  "correction_inbox_blob": "6bdbd9987a4eefeba79d53915cfe7e232263f8ec",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "partner_result": {
+    "account_slot": "account02/B12",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c635fcdce6aa206c68f1f14e061cf617d72376fb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/account02-B12-20260923T185321Z-r11/REPORT.md",
+    "theorem_used": "QFORM-SIX-SQUARE-MODE-PAIR-COMPILER-v2",
+    "equation_application": "For the eight-coordinate example the new theorem gives lambda_6((A^2)[H,H])>=49/16, so the partner theorem with m=8,g=7/4 yields ||p_Q||inf<1572."
+  },
+  "mathematical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e9b964cbbca47a754211d28cb01c0d4004f9bd5c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260923T195027Z-account01-B12-QFORM-auto11b/REPORT.md",
+    "read_back": true
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "0aa882ac87db57ffe55caad1ff8287a138245c3e",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B12/20260923T195027Z-account01-B12-QFORM-auto11b.md"
+  },
+  "exact_example": {
+    "carrier_size": 8,
+    "baseline_min_carrier_singular_value": 2,
+    "added_packet": "full-rank generally noncommuting carrier action with arbitrary signed tau1,tau2 and six residual singular values 1/8",
+    "local_dense_tail_bound": "||TP_H||op<=1/8; outside-outside spectrum unrestricted",
+    "final_six_mode_floor": "7/4",
+    "density_bound": "<1572",
+    "global_target_check": "s_3(A)>=7/4>1"
+  },
+  "unresolved_implication": "From bare s_3(A)>=1, force an original-coordinate carrier whose reserve profile dominates the local approximation-number tail of the additional spectrum, or force one of the already-paid ridge/grouped-bank/hub/projected-crossing/physical-pair/Schur exits.",
+  "next_step": "Try to derive the local approximation-number alternative from a heavy-coordinate versus diffuse-row decomposition, using failure of the carrier tail inequality to force aggregate crossing energy rather than another small-minor assertion.",
+  "writes_scope": "own run report, own handoff, own memory/start/finish/receipt only",
+  "scheduler_mutation": false,
+  "email_sent": false,
+  "notifications_changed": false,
+  "public_release": false,
+  "paid_or_remote_compute": false,
+  "cross_account_authentication": false
+}

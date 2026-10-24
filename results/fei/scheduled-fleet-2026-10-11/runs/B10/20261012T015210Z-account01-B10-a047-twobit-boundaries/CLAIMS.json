@@ -1,0 +1,36 @@
+{
+  "schema": "fei-run-claims/1",
+  "claims": [
+    {
+      "claim_id": "B10-A047-TWOBIT-ENDPOINTS",
+      "version": 1,
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "Every two-bit Boolean instance of B10-A046-HALF-BIAS-TAX reduces to constants, dictators, parity, or the displayed point-defect D(p,q). For fixed q, D(p,q)<0 for all sufficiently small p, including the unique sharp point q=1/4 where D(p,1/4)=((1/2-ln 2)/ln 2)p+O(p^2 ln(1/p)); for fixed q the opposite endpoint p->1 is also strictly safe.",
+      "hypotheses": [
+        "genuine Boolean gate on two input bits",
+        "interior product biases",
+        "singleton physical reveal",
+        "entropy in bits"
+      ],
+      "evidence": [
+        "REPORT.md",
+        "BOUNDARY_ASYMPTOTICS.tex",
+        "CHECK.out"
+      ],
+      "limitations": [
+        "No proof on the full compact interior bias square.",
+        "No higher-arity claim.",
+        "No global nonreuse payment or FEI implication.",
+        "The numerical pilot is not interval-certified."
+      ],
+      "reviewers": ["A092", "A087"]
+    },
+    {
+      "claim_id": "B10-A047-BOUNDARY-PILOT",
+      "version": 1,
+      "status": "NUMERICAL",
+      "statement": "No positive half-tax gap was found on the declared 159,201-point interior grid, 967-point rare tube, or 1,980-point upper-endpoint pilot.",
+      "artifact": "CHECK.out"
+    }
+  ]
+}

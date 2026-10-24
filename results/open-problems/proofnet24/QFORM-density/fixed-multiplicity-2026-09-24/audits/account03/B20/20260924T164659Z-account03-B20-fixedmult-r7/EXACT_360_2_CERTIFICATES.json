@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "candidate": "QFORM-NINE-EIGENVALUES-360.2-v1",
+  "reviewer": "account03/B20",
+  "run_id": "20260924T164659Z-account03-B20-fixedmult-r7",
+  "source": {
+    "commit": "eeb752c8943536541b34b42b8bf48e924f4d3d2f",
+    "blob": "19fb119877426b640b2c0dae19ec2f78a399fe11",
+    "sha256": "bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3",
+    "lines": 955,
+    "literal_status": "GAP_REPAIRABLE_LOCAL",
+    "repaired_chain_status": "PASS"
+  },
+  "parameters": {
+    "d": "3757/50000",
+    "p": "14251/5000000",
+    "h": "164557/2000000",
+    "q": "3687/40000",
+    "target": "1801/5"
+  },
+  "structural_margins": {
+    "q^2-(p+d^2)": "441/40000000000",
+    "1-d-h": "1685163/2000000",
+    "1-d-q-4h": "503571/1000000",
+    "1-d-2q-9h": "7/2000000"
+  },
+  "no_pivot": {
+    "e_upper": "271828183/100000000",
+    "sqrt2_upper": "141421357/100000000",
+    "sixthroot_9over2_upper": "12848983/10000000",
+    "branch_upper": "1481833782698283801136119/4113925000000000000000",
+    "target_slack": "2002301716198863881/4113925000000000000000",
+    "e_upper_margin_over_series_bound": "7/5400000000",
+    "sqrt2_square_margin": "215721449/10000000000000000",
+    "sixth_power_margin": "138155852642983616598199542383579569/1000000000000000000000000000000000000000000"
+  },
+  "scalar_scalar": {
+    "dinv_sqrt_upper": "3649/1000",
+    "dinv_certificate": "25210157/50000000000",
+    "pi_upper": "22/7",
+    "ln2_upper": "69315/100000",
+    "ln5_upper": "160944/100000",
+    "exp_ln2_partial_margin": "3016283573717844627378512063/716800000000000000000000000000000",
+    "exp_ln5_partial_margin": "2920443557292926742337563197984336603/582076609134674072265625000000000000000000",
+    "branch_upper": "9472807051/26299000",
+    "target_slack": "92749/26299000"
+  },
+  "indefinite_pair": {
+    "pinv_sqrt_upper": "187311/10000",
+    "pinv_certificate": "2188184971/500000000000000",
+    "ln10_upper": "2302586/1000000",
+    "exp_ln10_partial_margin": "4416312567305049537172236641389807826709638003031634827812753305634860964939/590625000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "inv_e_upper": "9197/25000",
+    "e_lower_partial": "109601/40320",
+    "e_lower_margin_over_25000_over_9197": "397/370823040",
+    "branch_upper": "450248443123/1250000000",
+    "target_slack": "1556877/1250000000"
+  },
+  "coarse_branches": {
+    "scalar_no_pivot": "<280",
+    "scalar_pair": "<320",
+    "definite_pair": "<80"
+  },
+  "conclusion": {
+    "normalized_density_bound": "<1801/5",
+    "scaled_density_bound": "<360.2*K^2/s",
+    "global_continuity": false,
+    "no_pivot_order3_continuity": true,
+    "review_status": "ONE_INDEPENDENT_RECONSTRUCTION_OF_ACCOUNT02_B02_CANDIDATE; SECOND_COMPLETE_REVIEW_STILL_REQUIRED"
+  }
+}

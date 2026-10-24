@@ -1,0 +1,18 @@
+{
+  "helper_version": "A097-padded-reserve-v1; independent Walsh and directed rational logarithms",
+  "family": "selector between k-bit quadratic bent embedded in n=k+m bits and its actual n-bit zero-point flip; arbitrary independent two-bit terminal tensor and one fresh point-control insertion",
+  "compressed_domain": "k in {4,6,8,10}, m=0..32, 132 exact cases; direct Walsh/edge checks k in {4,6}, m in {0,1,2}, six cases",
+  "composition_domain": "k=4,m in {0,1,2}, all 16 labelled two-bit terminal q signs, three normalized references; r in {1,2} fresh controls",
+  "composition_case_count": 48,
+  "tensor_reference_case_count": 144,
+  "activation_reference_case_count": 288,
+  "symmetry": "compressed counts only by exact quadratic Fourier signs and padded-support sector; terminal truth tables unquotiented",
+  "arithmetic": "Fraction probabilities, separate integer FWHT and physical edges; 32-term rational atanh with proved remainder and outward dyadic rounding to 2^-90; exact rational likelihood-ratio identities",
+  "memory_estimate_mb": 100,
+  "maximum_runtime_seconds_per_job": 60,
+  "internal_runtime_cutoff_seconds": 55,
+  "maximum_materialized_dimension": 11,
+  "automatic_dimension_escalation": false,
+  "jobs": ["compressed pilot", "composition"],
+  "large_parameter_certificate": "n=22, k=4 materializes no truth table; exact four probability/count types"
+}

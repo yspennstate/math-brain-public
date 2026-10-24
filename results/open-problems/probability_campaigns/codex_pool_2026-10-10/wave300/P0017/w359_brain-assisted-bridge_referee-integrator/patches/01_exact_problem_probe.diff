@@ -1,0 +1,77 @@
+--- a/~/.claude/dreaming/math_problem_probe.py
++++ b/~/.claude/dreaming/math_problem_probe.py
+@@ -0,0 +1,74 @@
++"""Read-only exact problem-ID rescue, proposed for explicit research workflows.
++
++This helper retrieves historical cards; it never certifies current openness or
++changes proof status. It is not installed in general recall by this patch.
++"""
++import argparse
++import json
++from pathlib import Path
++import re
++import sqlite3
++import time
++
++PROBLEM_ID = re.compile(r'(?<![A-Za-z0-9])P[0-9]{4}(?![A-Za-z0-9])', re.I)
++
++def probe(query, database, budget_seconds=1.0):
++    ids = list(dict.fromkeys(m.group().upper() for m in PROBLEM_ID.finditer(query)))
++    if not ids:
++        return {'status':'not_applicable','hits':[]}
++    if len(ids)!=1:
++        return {'status':'ambiguous_problem_ids','problem_ids':ids,'hits':[]}
++    if not 0 < budget_seconds <= 10:
++        raise ValueError('budget_seconds must be positive and at most 10')
++    problem_id=ids[0]
++    begin=time.monotonic()
++    result={'problem_id':problem_id,'status':'no_historical_card','hits':[],
++            'notice':'Historical cards only: current openness and proof correctness require primary-source and independent mathematical checks.'}
++    conn=None
++    try:
++        path=Path(database).resolve()
++        conn=sqlite3.connect(path.as_uri()+'?mode=ro',uri=True,timeout=min(.1,budget_seconds))
++        conn.execute('PRAGMA query_only=ON')
++        conn.set_progress_handler(lambda:int(time.monotonic()-begin>budget_seconds),1000)
++        keys=['op-'+problem_id.lower(),'at-'+problem_id.lower()]
++        rows=conn.execute(
++            "SELECT id,title,body,metadata_json FROM nodes "
++            "WHERE json_valid(metadata_json) "
++            "AND json_extract(metadata_json,'$.bundle_entry_key') IN (?,?) "
++            "ORDER BY json_extract(metadata_json,'$.bundle_entry_key'),id LIMIT 4",keys).fetchall()
++        for node_id,title,body,raw_metadata in rows:
++            metadata=json.loads(raw_metadata)
++            if len(body)>12000:
++                result.setdefault('omitted_oversize_ids',[]).append(node_id)
++                continue  # Do not serve truncated hypotheses.
++            result['hits'].append({'id':node_id,'title':title,'statement':body,
++                                   'logical_id':metadata.get('logical_id'),
++                                   'source_id':metadata.get('source_id'),
++                                   'source_revision':metadata.get('source_revision'),
++                                   'truth_status':metadata.get('truth_status','unknown'),
++                                   'independent_proof_review':'not_established_by_this_lookup'})
++        if result['hits']:
++            result['status']='historical_cards_found'
++    except (sqlite3.Error,OSError,ValueError) as exc:
++        result.update(status='lookup_unavailable',hits=[],error=f'{type(exc).__name__}: {exc}')
++    finally:
++        if conn is not None:
++            conn.close()
++    result['elapsed_seconds']=time.monotonic()-begin
++    return result
++
++def main():
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('query')
++    parser.add_argument('--database',type=Path,required=True)
++    parser.add_argument('--budget-seconds',type=float,default=1.0)
++    parser.add_argument('--output',type=Path)
++    args=parser.parse_args()
++    result=probe(args.query,args.database,args.budget_seconds)
++    value=json.dumps(result,ensure_ascii=False,indent=2)
++    if args.output:
++        args.output.write_text(value+'\n',encoding='utf-8')
++    print(value)
++
++if __name__=='__main__':
++    main()

@@ -1,0 +1,15 @@
+RANK2 AFFINE-LEAF RECEIVER
+
+Let X,Y be independent original-coordinate product vectors, each coordinate density <=K. Let D have s2(D)>0. For any measurable H(X),
+
+Q=H(X)+2 X^T D Y+a^T Y+c
+
+has density cap
+
+e*sqrt(pi)*K^2/sqrt(s1(D)*s2(D)).
+
+Proof: condition on X=x. The Y-linear form has density cap sqrt(e)K/||2D^T x+a||. Project that coefficient onto the top two right singular directions of D. The resulting planar affine image Z of the original product X has density cap M=eK^2/(4s1s2). Since ||2D^TX+a||>=|Z| and
+
+E[1/|Z|] <= integral_0^infinity min(1,pi*M/t^2) dt =2 sqrt(pi M),
+
+averaging the conditional cap gives the result. No random vector is rotated. H may be arbitrary, but no arbitrary Y-quadratic remainder is allowed. Essential boundedness only; continuity is not claimed.

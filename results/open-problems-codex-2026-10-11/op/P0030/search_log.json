@@ -1,0 +1,155 @@
+[
+  {
+    "service": "arxiv_http",
+    "url": "http://export.arxiv.org/api/query?search_query=all%3A%22forward%20Brownian%20motion%22&max_results=30",
+    "status": 200,
+    "date": "2026-10-12",
+    "file": "search_arxiv_http.txt"
+  },
+  {
+    "service": "arxiv_https",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22forward%20Brownian%20motion%22&max_results=30",
+    "status": 200,
+    "date": "2026-10-12",
+    "file": "search_arxiv_https.txt"
+  },
+  {
+    "service": "openalex_title",
+    "url": "https://api.openalex.org/works?search=Forward%20Brownian%20motion&per-page=30",
+    "status": "ERROR",
+    "date": "2026-10-12",
+    "file": "search_openalex_title.txt"
+  },
+  {
+    "service": "crossref",
+    "url": "https://api.crossref.org/works?query.title=Forward%20Brownian%20motion&rows=20",
+    "status": 200,
+    "date": "2026-10-12",
+    "file": "search_crossref.txt"
+  },
+  {
+    "service": "semantic",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=Forward%20Brownian%20motion&limit=30&fields=title,authors,year,abstract,externalIds,url",
+    "status": "ERROR",
+    "date": "2026-10-12",
+    "file": "search_semantic.txt"
+  },
+  {
+    "service": "github",
+    "url": "https://api.github.com/search/repositories?q=%22forward%20Brownian%22",
+    "status": 200,
+    "date": "2026-10-12",
+    "file": "search_github.txt"
+  },
+  {
+    "service": "openalex_compat",
+    "url": "https://api.openalex.org/works?search=decomposable%20forward%20backward%20Brownian%20motion&per-page=20",
+    "status": "ERROR",
+    "date": "2026-10-12",
+    "file": "search_openalex_compat.txt"
+  },
+  {
+    "service": "openalex_retry",
+    "url": "https://api.openalex.org/works?search=%22Forward%20Brownian%20motion%22&per_page=10",
+    "status": "ERROR",
+    "date": "2026-10-12",
+    "file": "search_openalex_retry.txt"
+  },
+  {
+    "service": "openalex_doi",
+    "url": "https://api.openalex.org/works/https://doi.org/10.1214/13-EJP3343",
+    "status": "ERROR",
+    "date": "2026-10-12",
+    "file": "search_openalex_doi.txt"
+  },
+  {
+    "service": "semantic_source",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1302.6958?fields=title,year,authors,externalIds,citations.title,citations.year,citations.abstract,citations.externalIds",
+    "status": "ERROR",
+    "date": "2026-10-12",
+    "file": "search_semantic_source.txt"
+  },
+  {
+    "service": "arxiv_decomp",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22decomposable%22%20AND%20all%3A%22Brownian%22&max_results=30",
+    "status": 200,
+    "date": "2026-10-12",
+    "file": "search_arxiv_decomp.txt"
+  },
+  {
+    "service": "arxiv_authors",
+    "url": "https://export.arxiv.org/api/query?search_query=au%3ABurdzy%20AND%20au%3AScheutzow&max_results=40",
+    "status": 200,
+    "date": "2026-10-12",
+    "file": "search_arxiv_authors.txt"
+  },
+  {
+    "service": "crossref_compat",
+    "url": "https://api.crossref.org/works?query=%22backward%20Brownian%22%20%22forward%20Brownian%22&rows=20",
+    "status": 200,
+    "date": "2026-10-12",
+    "file": "search_crossref_compat.txt"
+  },
+  {
+    "service": "github_decomp",
+    "url": "https://api.github.com/search/repositories?q=Brownian%20decomposable",
+    "status": 200,
+    "date": "2026-10-12",
+    "file": "search_github_decomp.txt"
+  },
+  {
+    "service": "openalex_correct_doi",
+    "url": "https://api.openalex.org/works/https://doi.org/10.1007/s00440-013-0524-x",
+    "status": "ERROR",
+    "date": "2026-10-12",
+    "file": "search_openalex_correct_doi.txt"
+  },
+  {
+    "service": "openalex_citing_filter",
+    "url": "https://api.openalex.org/works?filter=references.doi:https%3A//doi.org/10.1007/s00440-013-0524-x&per-page=100",
+    "status": "ERROR",
+    "date": "2026-10-12",
+    "file": "search_openalex_citing_filter.txt"
+  },
+  {
+    "service": "openalex_citing_search",
+    "url": "https://api.openalex.org/works?search=1302.6958&per-page=50",
+    "status": "ERROR",
+    "date": "2026-10-12",
+    "file": "search_openalex_citing_search.txt"
+  },
+  {
+    "service": "semantic_citations",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1302.6958/citations?fields=title,year,abstract,externalIds&limit=100",
+    "status": 200,
+    "date": "2026-10-12",
+    "file": "search_semantic_citations.txt"
+  },
+  {
+    "service": "crossref_exact",
+    "url": "https://api.crossref.org/works/10.1007/s00440-013-0524-x",
+    "status": 200,
+    "date": "2026-10-12",
+    "file": "search_crossref_exact.txt"
+  },
+  {
+    "service": "arxiv_stationary",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22forward%20Brownian%22%20AND%20%28all%3Astationary%20OR%20all%3Acoupling%29&max_results=30",
+    "status": 200,
+    "date": "2026-10-12",
+    "file": "search_arxiv_stationary.txt"
+  },
+  {
+    "service": "arxiv_backward",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22backward%20Brownian%20motion%22&max_results=50",
+    "status": 200,
+    "date": "2026-10-12",
+    "file": "search_arxiv_backward.txt"
+  },
+  {
+    "service": "citing_paper_pdf",
+    "url": "https://arxiv.org/pdf/1411.0040",
+    "date": "2026-10-12",
+    "file": "pitman_tang.pdf"
+  }
+]

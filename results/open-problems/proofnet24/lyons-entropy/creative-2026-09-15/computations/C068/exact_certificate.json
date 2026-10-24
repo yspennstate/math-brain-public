@@ -1,0 +1,435 @@
+{
+  "arithmetic": "Exact SymPy rational, polynomial, rational-function, and formal prime-log arithmetic",
+  "checks": [
+    "symbolic atom 000",
+    "zero first derivative 000",
+    "second derivative 000",
+    "symbolic atom 001",
+    "zero first derivative 001",
+    "second derivative 001",
+    "symbolic atom 010",
+    "zero first derivative 010",
+    "second derivative 010",
+    "symbolic atom 011",
+    "zero first derivative 011",
+    "second derivative 011",
+    "symbolic atom 100",
+    "zero first derivative 100",
+    "second derivative 100",
+    "symbolic atom 101",
+    "zero first derivative 101",
+    "second derivative 101",
+    "symbolic atom 110",
+    "zero first derivative 110",
+    "second derivative 110",
+    "symbolic atom 111",
+    "zero first derivative 111",
+    "second derivative 111",
+    "symbolic atom normalization",
+    "signed reservoir perturbation has zero sum",
+    "leaf marginal 00",
+    "conditional reservoir law 00",
+    "signed Schur coefficient 00",
+    "leaf marginal 01",
+    "conditional reservoir law 01",
+    "signed Schur coefficient 01",
+    "leaf marginal 10",
+    "conditional reservoir law 10",
+    "signed Schur coefficient 10",
+    "leaf marginal 11",
+    "conditional reservoir law 11",
+    "signed Schur coefficient 11",
+    "constant leaf 1 marginal 0",
+    "constant leaf 1 marginal 1",
+    "constant leaf 2 marginal 0",
+    "constant leaf 2 marginal 1",
+    "rational atom 000",
+    "rational atom 001",
+    "rational atom 010",
+    "rational atom 011",
+    "rational atom 100",
+    "rational atom 101",
+    "rational atom 110",
+    "rational atom 111",
+    "characteristic polynomial",
+    "K leading principal minor 1",
+    "K leading principal minor 2",
+    "K leading principal minor 3",
+    "I_minus_K leading principal minor 1",
+    "I_minus_K leading principal minor 2",
+    "I_minus_K leading principal minor 3",
+    "all base probabilities positive",
+    "all base first scores vanish",
+    "second derivatives sum to zero",
+    "Doob covariance identity stage 1",
+    "Doob covariance identity stage 2",
+    "Doob covariance identity stage 3",
+    "first reveal curvature",
+    "leaf-pair curvature",
+    "reservoir curvature",
+    "Doob telescoping",
+    "full entropy curvature",
+    "J exact value",
+    "L exact value",
+    "early is twice J",
+    "late is minus twice J plus L",
+    "total is minus twice L",
+    "late direct residual",
+    "late is negative symmetric relative entropy",
+    "second-score residual 000",
+    "second-score residual 001",
+    "second-score residual 010",
+    "second-score residual 011",
+    "second-score residual 100",
+    "second-score residual 101",
+    "second-score residual 110",
+    "second-score residual 111",
+    "early sign via rational logarithm argument",
+    "late sign via rational logarithm argument",
+    "total sign via rational logarithm argument",
+    "strict recovery gap exact logarithm",
+    "entire Fisher rational function",
+    "Fisher quadratic limit",
+    "moving-base early curvature formula",
+    "moving-base early positive limit",
+    "scaled obstruction limit prefactor",
+    "J generator second derivative",
+    "J generator value at zero",
+    "J generator derivative at zero",
+    "L generator derivative",
+    "L generator value at zero",
+    "all-index coefficient difference",
+    "quartic gap coefficient",
+    "J quadratic coefficient",
+    "L quadratic coefficient",
+    "sharp quartic coefficient",
+    "sharp recovery factor",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder",
+    "prime-log form has no unrecorded remainder"
+  ],
+  "checks_passed": 127,
+  "nonzero_fisher_obstruction": {
+    "complete_fisher": "32*t**2*(1/(4*t**2 + 1) + 1/(3 - 8*t**2) + 1/(1 - 8*t**2))",
+    "early_over_Fisher_limit": "+infinity, since numerator tends to log(27/16)>0 and Fisher is positive and tends to zero",
+    "limit_Fisher_over_t_squared": "224/3",
+    "limit_early_curvature": {
+      "expression": "-4*log_2 + 3*log_3",
+      "prime_log_coefficients": {
+        "2": "-4",
+        "3": "3"
+      }
+    },
+    "limit_t_squared_times_early_over_Fisher": {
+      "expression": "-3*log_2/56 + 9*log_3/224",
+      "prime_log_coefficients": {
+        "2": "-3/56",
+        "3": "9/224"
+      }
+    }
+  },
+  "rational_example": {
+    "Doob_frozen_surprisal_means": {
+      "0": {
+        "empty": {
+          "expression": "7*log_2/2 - 3*log_3/8",
+          "prime_log_coefficients": {
+            "2": "7/2",
+            "3": "-3/8"
+          }
+        }
+      },
+      "1": {
+        "0": {
+          "expression": "7*log_2/2 - 3*log_3/8",
+          "prime_log_coefficients": {
+            "2": "7/2",
+            "3": "-3/8"
+          }
+        },
+        "1": {
+          "expression": "7*log_2/2 - 3*log_3/8",
+          "prime_log_coefficients": {
+            "2": "7/2",
+            "3": "-3/8"
+          }
+        }
+      },
+      "2": {
+        "00": {
+          "expression": "4*log_2 - 3*log_3/4",
+          "prime_log_coefficients": {
+            "2": "4",
+            "3": "-3/4"
+          }
+        },
+        "01": {
+          "expression": "3*log_2",
+          "prime_log_coefficients": {
+            "2": "3"
+          }
+        },
+        "10": {
+          "expression": "3*log_2",
+          "prime_log_coefficients": {
+            "2": "3"
+          }
+        },
+        "11": {
+          "expression": "4*log_2 - 3*log_3/4",
+          "prime_log_coefficients": {
+            "2": "4",
+            "3": "-3/4"
+          }
+        }
+      },
+      "3": {
+        "000": {
+          "expression": "4*log_2",
+          "prime_log_coefficients": {
+            "2": "4"
+          }
+        },
+        "001": {
+          "expression": "4*log_2 - log_3",
+          "prime_log_coefficients": {
+            "2": "4",
+            "3": "-1"
+          }
+        },
+        "010": {
+          "expression": "3*log_2",
+          "prime_log_coefficients": {
+            "2": "3"
+          }
+        },
+        "011": {
+          "expression": "3*log_2",
+          "prime_log_coefficients": {
+            "2": "3"
+          }
+        },
+        "100": {
+          "expression": "3*log_2",
+          "prime_log_coefficients": {
+            "2": "3"
+          }
+        },
+        "101": {
+          "expression": "3*log_2",
+          "prime_log_coefficients": {
+            "2": "3"
+          }
+        },
+        "110": {
+          "expression": "4*log_2 - log_3",
+          "prime_log_coefficients": {
+            "2": "4",
+            "3": "-1"
+          }
+        },
+        "111": {
+          "expression": "4*log_2",
+          "prime_log_coefficients": {
+            "2": "4"
+          }
+        }
+      }
+    },
+    "Doob_second_score_means": {
+      "0": {
+        "empty": "0"
+      },
+      "1": {
+        "0": "0",
+        "1": "0"
+      },
+      "2": {
+        "00": "-8",
+        "01": "8",
+        "10": "8",
+        "11": "-8"
+      },
+      "3": {
+        "000": "-16",
+        "001": "-16/3",
+        "010": "8",
+        "011": "8",
+        "100": "8",
+        "101": "8",
+        "110": "-16/3",
+        "111": "-16"
+      }
+    },
+    "J": {
+      "expression": "-2*log_2 + 3*log_3/2",
+      "prime_log_coefficients": {
+        "2": "-2",
+        "3": "3/2"
+      }
+    },
+    "L": {
+      "expression": "2*log_2 - log_3",
+      "prime_log_coefficients": {
+        "2": "2",
+        "3": "-1"
+      }
+    },
+    "base_first_derivatives": {
+      "000": "0",
+      "001": "0",
+      "010": "0",
+      "011": "0",
+      "100": "0",
+      "101": "0",
+      "110": "0",
+      "111": "0"
+    },
+    "base_probabilities": {
+      "000": "1/16",
+      "001": "3/16",
+      "010": "1/8",
+      "011": "1/8",
+      "100": "1/8",
+      "101": "1/8",
+      "110": "3/16",
+      "111": "1/16"
+    },
+    "base_second_derivatives": {
+      "000": "-1",
+      "001": "-1",
+      "010": "1",
+      "011": "1",
+      "100": "1",
+      "101": "1",
+      "110": "-1",
+      "111": "-1"
+    },
+    "characteristic_polynomial": "-(2*lambda - 1)*(-8*lambda**2 + 8*lambda + 8*t**2 - 1)/16",
+    "frozen_curvature_by_reveal": [
+      {
+        "expression": "0",
+        "prime_log_coefficients": {}
+      },
+      {
+        "expression": "-4*log_2 + 3*log_3",
+        "prime_log_coefficients": {
+          "2": "-4",
+          "3": "3"
+        }
+      },
+      {
+        "expression": "-log_3",
+        "prime_log_coefficients": {
+          "3": "-1"
+        }
+      }
+    ],
+    "leading_principal_minors": {
+      "I_minus_K": [
+        "1/2",
+        "-(2*t - 1)*(2*t + 1)/4",
+        "-(8*t**2 - 1)/16"
+      ],
+      "K": [
+        "1/2",
+        "-(2*t - 1)*(2*t + 1)/4",
+        "-(8*t**2 - 1)/16"
+      ]
+    },
+    "probabilities": {
+      "000": "1/16 - t**2/2",
+      "001": "3/16 - t**2/2",
+      "010": "t**2/2 + 1/8",
+      "011": "t**2/2 + 1/8",
+      "100": "t**2/2 + 1/8",
+      "101": "t**2/2 + 1/8",
+      "110": "3/16 - t**2/2",
+      "111": "1/16 - t**2/2"
+    },
+    "strict_contraction_domain": "t**2 < 1/8",
+    "strict_recovery_gap_L_minus_J": {
+      "expression": "4*log_2 - 5*log_3/2",
+      "prime_log_coefficients": {
+        "2": "4",
+        "3": "-5/2"
+      }
+    },
+    "total_entropy_curvature": {
+      "expression": "-4*log_2 + 2*log_3",
+      "prime_log_coefficients": {
+        "2": "-4",
+        "3": "2"
+      }
+    }
+  },
+  "scalar_series": {
+    "J_coefficient_of_z_to_2k": "1/(k*(2*k - 1))",
+    "J_generator_second_derivative": "2/(1-z**2), with J(0)=J_prime(0)=0",
+    "L_coefficient_of_z_to_2k": "1/k",
+    "L_generator_derivative": "2*z/(1-z**2), with L(0)=0",
+    "domain": "abs(z)<1",
+    "gap_coefficient_of_z_to_2k": "(2*k - 2)/(k*(2*k - 1))",
+    "gap_first_nonzero_coefficient": "1/3 at k=2; every coefficient is positive for k>=2",
+    "sharp_recovery_factor": "2"
+  },
+  "scope": "DPP Doob recovery cancellation and Fisher-only method obstruction; no new entropy family",
+  "status": "PASS",
+  "symbolic_scalar_reservoir": {
+    "conditional_reservoir_kernels": {
+      "00": "rho + w**2/(1/4 - t**2)",
+      "01": "rho",
+      "10": "rho",
+      "11": "rho - w**2/(1/4 - t**2)"
+    },
+    "kernel": [
+      [
+        "1/2",
+        "I*t",
+        "w"
+      ],
+      [
+        "-I*t",
+        "1/2",
+        "w"
+      ],
+      [
+        "w",
+        "w",
+        "rho"
+      ]
+    ],
+    "probabilities": {
+      "000": "rho*t**2 - rho/4 - t**2 - w**2 + 1/4",
+      "001": "-rho*t**2 + rho/4 + w**2",
+      "010": "-rho*t**2 - rho/4 + t**2 + 1/4",
+      "011": "rho*t**2 + rho/4",
+      "100": "-rho*t**2 - rho/4 + t**2 + 1/4",
+      "101": "rho*t**2 + rho/4",
+      "110": "rho*t**2 - rho/4 - t**2 + w**2 + 1/4",
+      "111": "-rho*t**2 + rho/4 - w**2"
+    }
+  },
+  "sympy_version": "1.14.0"
+}

@@ -1,0 +1,9 @@
+PAIR_MATRIX_IDENTITY: symbolic construction exact
+LINEAR_TERM: -C*u1 + C*u2 - S*b1 + S*b2
+QUADRATIC_EXPECTATION: (-2*C*rho1 + 2*C*rho2 + 2*rho1 + 2*rho2 + v1 + v2)/2
+LINEAR_VARIANCE: v1 + v2
+REPORT_INPUT_ASYMPTOTICS: rho_n=1/(2n)+O(n^-2), v_n=1/(2n)+O(n^-2)
+ALGEBRA_PLUS_REPORT_ASYMPTOTICS: pair drift 3/(4m)+O(m^-2)
+ALGEBRA_PLUS_REPORT_ASYMPTOTICS: pair variance 1/(2m)+O(m^-2)
+TARGET_CGF_AFTER_REMAINDER_PROOF: (3t/4+t^2/4)/m + O_T(m^-3/2)
+ALL_EXACT_SYMBOLIC_IDENTITIES_PASS

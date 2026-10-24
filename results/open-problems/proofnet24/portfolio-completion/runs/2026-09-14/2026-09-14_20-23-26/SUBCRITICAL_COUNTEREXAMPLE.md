@@ -1,0 +1,501 @@
+# A fixed subcritical offspring law with non-Gaussian degree-count fluctuations
+
+Research proof assembled in this run, 14 September 2026. This is a complete repair of the archived rare-pair construction, with a fixed explicit law and a non-Gaussian subsequence limit. The source match is Thévenin’s subcritical closing conjecture. A separate [critical infinite-variance construction](CRITICAL_COUNTEREXAMPLE.md) addresses the other clause. Historical novelty and current literature priority are not certified.
+
+The derivation is adapted from [agent015](agents/015.md), with the parent independently checking the construction, conditioning estimates, Fourier lemma, and tree transfer. The full independent audit [034](agents/034.md) found no mathematical gap and added the moment threshold, joint-lattice clarification and cyclic endpoint detail incorporated below.
+
+## 1. Exact theorem
+
+There is a probability law `pi` on the nonnegative integers with
+
+\[
+\pi_1=q=\frac14,\qquad \pi_0>\frac12,\qquad
+\frac14<\nu:=\mathbb E\xi<\frac5{16},\qquad
+0<\sigma^2:=\operatorname{Var}\xi<\infty,
+\]
+
+and `E exp(theta xi)=infinity` for every `theta>0`, such that the following holds. Let `T_n` be the Galton–Watson tree with offspring law `pi`, conditioned to have exactly `n` vertices; it is defined for every positive integer `n`. Put
+
+\[
+n_r=2^{8\cdot4^{r-1}},\qquad
+\gamma=q(1-\nu),\qquad
+a_*:=\frac{\gamma}{\sigma^2},\qquad
+v_*:=q(1-q)-\frac{\gamma^2}{\sigma^2}.
+\tag{1}
+\]
+
+Then `a_*>0`, `v_*>0`, and
+
+\[
+\frac{N_1(T_{n_r})-n_r/4}{\sqrt{n_r}}
+\ \Longrightarrow\
+\frac12\mathcal N(-a_*,v_*)+
+\frac12\mathcal N(a_*,v_*).
+\tag{2}
+\]
+
+The law on the right is not Gaussian. In particular, the full sequence cannot converge to `N(0,3/16)` under this centering and scaling. Along this subsequence the tree also has one degree asymptotic to `(1-nu)n_r`, while its second-largest degree is `o(n_r)`, with probability tending to one.
+
+## 2. One fixed law, including exact integer support
+
+Set
+
+\[
+n_1=256,\quad n_{r+1}=n_r^4,\quad p_r=n_r^{-4},\quad d_0=\frac34.
+\]
+
+Recursively define
+
+\[
+H_r=d_{r-1}n_r,\qquad
+L_r^\pm=H_r\pm\sqrt{n_r},\qquad
+d_r=d_{r-1}(1-2n_r^{-3}).
+\tag{3}
+\]
+
+Assign masses
+
+\[
+\pi_1=\frac14,\qquad
+\pi_{L_r^-}=\pi_{L_r^+}=p_r,\qquad
+\pi_0=\frac34-2\sum_{r\ge1}p_r,
+\tag{4}
+\]
+
+with all remaining masses zero. These formulas define the law once and for all. Neither the probabilities nor the support are adjusted after a conditioning size is chosen.
+
+For `a>0` and every `r`, scale growth gives the useful bound
+
+\[
+\sum_{s\ge r}n_s^{-a}
+\le\sum_{j\ge0}n_r^{-a(j+1)}
+=\frac{n_r^{-a}}{1-n_r^{-a}}.
+\tag{5}
+\]
+
+For the exponents `a=2,3,4` used below, this is at most `2n_r^{-a}`.
+
+The construction has integer support without rounding. To see this inductively, write
+
+\[
+c_r:=\sum_{s\le r}p_s(L_s^-+L_s^+)=\frac34-d_r.
+\tag{6}
+\]
+
+The identity follows from `p_r(L_r^-+L_r^+)=2d_{r-1}n_r^{-3}`. Assuming all earlier atoms are integers, each denominator `n_s^4`, for `s<r`, divides `n_r`; moreover `n_r/4` is an integer. Therefore
+
+\[
+H_r=\Big(\frac34-c_{r-1}\Big)n_r
+\]
+
+is an integer. Also `sqrt(n_r)` is an integer. The base case is `H_1=192`, giving `L_1^-=176` and `L_1^+=208`.
+
+Every `d_r` is positive and at most `3/4`. From (5) and (6),
+
+\[
+0<c_r\le\frac32\sum_{s\ge1}n_s^{-3}
+\le3\cdot256^{-3}<\frac1{16}.
+\]
+
+Consequently,
+
+\[
+\frac{11}{16}<d_r\le\frac34,
+\qquad
+\frac58 n_r<L_r^-<L_r^+\le\frac{13}{16}n_r<n_r.
+\tag{7}
+\]
+
+Here `sqrt(n_r)/n_r<=1/16` was used. Further, `L_{r+1}^->(5/8)n_r^4>n_r`. Thus different stages do not collide, no rare atom is zero or one, and every earlier-stage atom is below `n_{r-1}`.
+
+The total mass assigned to rare atoms is at most `4n_1^{-4}<1/4`; hence (4) is a probability law with `pi_0>1/2`. Its mean is
+
+\[
+\nu=q+\sum_{r\ge1}p_r(L_r^-+L_r^+)
+=1-d_\infty,\qquad
+d_\infty=\frac34\prod_{r\ge1}(1-2n_r^{-3})
+\in\Big(\frac{11}{16},\frac34\Big).
+\tag{8}
+\]
+
+Its second moment satisfies
+
+\[
+\mathbb E\xi^2
+=q+\sum_{r\ge1}p_r\big((L_r^-)^2+(L_r^+)^2\big)
+\le\frac14+2\sum_{r\ge1}n_r^{-2}
+\le\frac14+4\cdot256^{-2}<\frac12.
+\tag{9}
+\]
+
+In particular, its variance is finite. It is positive, even at least `pi_0 pi_1>1/8`, by the independent-copy identity for variance and the atoms at zero and one. The support has lattice span one.
+
+The full independent audit [034](agents/034.md) also gives the exact moment threshold:
+\[
+\mathbb E\xi^h<\infty\quad(0<h<4),\qquad
+\mathbb E\xi^h=\infty\quad(h\ge4).
+\]
+For the first assertion the rare contribution is at most \(2\sum_r n_r^{h-4}\). For the second, a single atom at each stage contributes at least \((5/8)^h n_r^{h-4}\). Thus this subcritical counterexample has a finite third moment.
+
+For every `theta>0`, individual terms of the exponential-moment sum satisfy
+
+\[
+p_r e^{\theta L_r^-}
+\ge n_r^{-4}e^{5\theta n_r/8}\longrightarrow\infty.
+\tag{10}
+\]
+
+Thus there is no positive exponential moment. The probability generating function has radius exactly one. If the simply generated weights are chosen to be `w_k=pi_k`, their canonical law in Janson's subcritical parametrization is this same `pi`: `rho=tau=1`, `Phi(1)=1`, and `Psi(1)=nu<1`.
+
+## 3. The correct truncated law and its uniform bounds
+
+For a fixed stage `r`, abbreviate `n=n_r`, and let
+
+\[
+\mathcal A_r=\{0,1\}\cup\{L_s^-,L_s^+:s<r\},\qquad
+t_r=2\sum_{s\ge r}p_s,\qquad z_r=1-t_r.
+\]
+
+Let `X_r` have the law of `xi` conditioned on membership in `A_r`. Write
+
+\[
+u_r=q+c_{r-1}=1-d_{r-1},\qquad
+\mu_r=\mathbb E X_r=\frac{u_r}{z_r},\qquad
+q_r=\mathbb P(X_r=1)=\frac q{z_r}.
+\tag{11}
+\]
+
+By (5),
+
+\[
+0<t_r\le4n^{-4},\qquad z_r>\frac34,\qquad
+\mu_r-u_r=\frac{u_rt_r}{z_r}=O(n^{-4}),\qquad
+q_r-q=\frac{qt_r}{z_r}=O(n^{-4}).
+\tag{12}
+\]
+
+The implicit constants here are numerical, independent of the stage. Also
+
+\[
+\mu_r<\frac{5/16}{3/4}=\frac5{12}<\frac12,
+\qquad
+\operatorname{Var}X_r\le\mathbb E X_r^2
+\le\frac{\mathbb E\xi^2}{z_r}<1.
+\tag{13}
+\]
+
+For `r>=2`, every value of `X_r` is at most `M_r=n_{r-1}`. The first stage can instead use `M_1=1` and has no bearing on the limit. The probabilities of zero and one in every row are at least `1/2` and `1/4`, respectively.
+
+As `r` tends to infinity, `X_r` converges in distribution to `xi`, its mean and variance converge to `nu` and `sigma^2`, and its squares are uniformly integrable. Indeed,
+
+\[
+\sup_r\mathbb E[X_r^2;X_r>K]
+\le\frac43\mathbb E[\xi^2;\xi>K]\longrightarrow0.
+\tag{14}
+\]
+
+These are exactly the hypotheses of the conditional local CLT in agent 001, restated with its proof in Section 8 below. In particular, the limiting covariance is
+
+\[
+\operatorname{Cov}(\mathbf1_{\{\xi=1\}},\xi)=q(1-\nu)=\gamma,
+\tag{15}
+\]
+
+not the covariance obtained by treating category counts as independent.
+
+## 4. Exact conditioning decomposition and current rare branches
+
+Let `xi_1,...,xi_n` be independent with law `pi`, and condition on
+
+\[
+\mathcal C_r=\{\xi_1+\cdots+\xi_n=n-1\}.
+\]
+
+No later-stage atom can appear on `C_r`, because (7) gives `L_s^->n_r` for every `s>r`. Two current-stage atoms cannot appear either, because `2L_r^->(5/4)n>n-1`. Thus `C_r` has exactly three disjoint possible types:
+
+* all variables belong to `A_r`;
+* exactly one variable equals `L_r^+`, and all others belong to `A_r`;
+* exactly one variable equals `L_r^-`, and all others belong to `A_r`.
+
+Call their joint probabilities with `C_r` `beta_r^0`, `beta_r^+`, and `beta_r^-`, respectively. For `epsilon` equal to `+1` or `-1`, write `L_r^epsilon=H_r+epsilon sqrt(n)`. If `R_{r,k}` is the sum of `k` independent copies of `X_r`, then exactly
+
+\[
+\beta_r^\epsilon
+=np_rz_r^{n-1}\mathbb P(R_{r,n-1}=k_r^\epsilon),
+\qquad k_r^\epsilon=n-1-L_r^\epsilon.
+\tag{16}
+\]
+
+The target and centering error have the exact expression
+
+\[
+\begin{aligned}
+k_r^\epsilon-(n-1)\mu_r
+&=u_rn-1-\epsilon\sqrt n-(n-1)\frac{u_r}{z_r}\\
+&=-\epsilon\sqrt n-d_{r-1}
+  -(n-1)\frac{u_rt_r}{z_r}\\
+&=-\epsilon\sqrt n-d_{r-1}+O(n^{-3}).
+\end{aligned}
+\tag{17}
+\]
+
+Thus this quantity divided by `sqrt(n-1)` tends to `-epsilon`. The local CLT gives, for both signs,
+
+\[
+\mathbb P(R_{r,n-1}=k_r^\epsilon)
+\sim\frac{C_\sigma}{\sqrt n},\qquad
+C_\sigma=\frac{1}{\sqrt{2\pi\sigma^2}}
+             e^{-1/(2\sigma^2)}>0.
+\tag{18}
+\]
+
+Since `(n-1)t_r=O(n^{-3})`, we have `z_r^{n-1}=1+O(n^{-3})`. Consequently,
+
+\[
+\beta_r^+=C_\sigma n^{-7/2}(1+o(1)),\qquad
+\beta_r^-=C_\sigma n^{-7/2}(1+o(1)).
+\tag{19}
+\]
+
+Equal limiting weights follow from the equal Gaussian density at the two opposite targets. No exact finite-size symmetry, independence of category counts, or unequal-probability correction device is assumed.
+
+## 5. A whole-sum Bernstein estimate eliminates the remaining type
+
+The no-current-rare probability is exactly
+
+\[
+\beta_r^0=z_r^n\mathbb P(R_{r,n}=n-1).
+\tag{20}
+\]
+
+Put `D_r=n-1-n mu_r`. By (13), for every stage,
+
+\[
+\frac n3\le D_r\le n.
+\tag{21}
+\]
+
+For `r>=2`, centered summands `X_r-mu_r` are bounded above by `M_r=n_{r-1}` and have variance below one. Bernstein's inequality, applied once to their entire sum, gives
+
+\[
+\begin{aligned}
+\mathbb P(R_{r,n}=n-1)
+&\le\mathbb P(R_{r,n}-n\mu_r\ge D_r)\\
+&\le \exp\!\left[-\frac{D_r^2}
+                       {2(n\operatorname{Var}X_r+M_rD_r/3)}\right]\\
+&\le \exp\!\left[-\frac{n}{24M_r}\right]
+=\exp\!\left[-\frac{n^{3/4}}{24}\right].
+\end{aligned}
+\tag{22}
+\]
+
+For the final numerical constant, use
+\[
+D_r^2\ge n^2/9,\qquad
+2\bigl(n\operatorname{Var}X_r+M_rD_r/3\bigr)
+\le 2n(1+M_r/3)\le 8nM_r/3.
+\]
+
+This inequality can be derived directly: if a centered variable `Z` has `|Z|<=M`, then for `0<lambda<3/M`, the exponential series and `k!>=2*3^(k-2)` for `k>=2` give
+
+\[
+\log\mathbb E e^{\lambda Z}
+\le\frac{\lambda^2\mathbb E Z^2}{2(1-\lambda M/3)}.
+\]
+
+Apply this to the independent centered summands and choose
+`lambda=D/(V+MD/3)`, where `V` is their total variance. This yields the middle line of (22). Here `|X_r-mu_r|<=M_r` because `0<=X_r<=M_r`. Thus no unverified tail theorem is essential to this step.
+
+Equations (19), (20), and (22) imply
+
+\[
+\frac{\beta_r^0}{\beta_r^++\beta_r^-}
+=O\!\left(n^{7/2}e^{-n^{3/4}/24}\right)\longrightarrow0.
+\tag{23}
+\]
+
+In particular,
+
+\[
+\mathbb P(\mathcal C_r)\sim2C_\sigma n^{-7/2},\qquad
+\mathbb P(J_r=1\mid\mathcal C_r)\to1,\qquad
+\mathbb P(\text{current sign}=\epsilon\mid\mathcal C_r)\to\frac12,
+\tag{24}
+\]
+
+where `J_r` counts current rare atoms. This proves the exact conditioning-dominance obligation left open in agent 001. It avoids the original memo's nonuniform union bound over earlier stages entirely.
+
+## 6. Conditional degree-one count and the non-Gaussian limit
+
+Given a current sign and the conditioning, the other `n-1` variables have the law of independent `X_r` variables conditioned on sum `k_r^epsilon`. The current atom is not one, so the total number of ones is just the number `B_r` of ones in those `n-1` variables.
+
+Apply the conditional CLT using (17). It gives
+
+\[
+\mathcal L\left(
+\frac{B_r-(n-1)q_r}{\sqrt{n-1}}
+\ \middle|\ R_{r,n-1}=k_r^\epsilon\right)
+\Longrightarrow \mathcal N(-\epsilon a_*,v_*).
+\tag{25}
+\]
+
+The requested centering by `nq` introduces no hidden order-`sqrt(n)` error, because exactly
+
+\[
+(n-1)q_r-nq
+=-q+(n-1)\frac{qt_r}{z_r}
+=-q+O(n^{-3}).
+\tag{26}
+\]
+
+Also `sqrt((n-1)/n)->1`. Thus (25) remains valid with `(B_r-nq)/sqrt(n)`. Combine this with (24), testing against any bounded continuous function; the discarded no-current-rare type has conditional probability tending to zero. This proves the mixture limit for the conditioned independent sample.
+
+For completeness, `v_*>0`, not merely nonnegative. Equality in the covariance Cauchy–Schwarz inequality would require `1_{xi=1}-q` to be an affine multiple of `xi-nu` almost surely. The left side has the same value at `xi=0` and at `xi=L_1^->1`, so the multiplier would be zero; its different value at `xi=1` then gives a contradiction. All three atoms have positive probability.
+
+The limit's characteristic function is
+
+\[
+e^{-v_*s^2/2}\cos(a_*s).
+\tag{27}
+\]
+
+It vanishes at `s=pi/(2a_*)`, while every Gaussian characteristic function is everywhere nonzero. Thus the limit is non-Gaussian. Its symmetry and continuity also imply
+
+\[
+\mathbb P\left((N_1(T_{n_r})-n_rq)/\sqrt{n_r}>0\right)\to\frac12.
+\]
+
+## 7. Transfer from conditioned allocations to conditioned trees
+
+The count transfer is exact. A nonnegative integer vector `(x_1,...,x_n)` with sum `n-1` has increments `a_i=x_i-1` summing to `-1`. Exactly one cyclic rotation has all partial increment sums nonnegative before the final step, and this rotation encodes a plane tree's depth-first outdegrees.
+
+Here is a short deterministic verification of uniqueness. Write \(H_0=0\) and \(H_j=\sum_{i\le j}a_i\), and choose the first index \(j\) minimizing \(H_0,\ldots,H_{n-1}\). Starting after \(j\), the non-wrapping partial sums before the original endpoint are nonnegative because later heights are at least \(H_j\). If the original endpoint occurs before the final rotated step, then \(j>0\); the first-minimum property and integrality give \(H_j\le-1=H_n\), so that partial sum is also nonnegative. Wrapped partial sums are \(-1-H_j+H_\ell\) for \(\ell<j\), which are nonnegative because those earlier heights are strictly larger integers. Conversely, these inequalities force the starting index to be that first minimum. No vector here has a nontrivial cyclic period, since repetitions would make its total increment sum divisible by their number, whereas that sum is \(-1\).
+
+The conditional independent-sample probability is proportional to `product_i pi_{x_i}` and is invariant under rotation. Each rotation orbit has `n` elements, exactly one encoding a tree, all with the same product weight. Consequently the selected valid rotation has the conditioned Galton–Watson tree law, and every rotation-invariant statistic, including degree counts and the sorted degree sequence, has exactly the same distribution before and after the rotation. This proves the transfer used in (2).
+
+Every positive size is possible: the path with `n` vertices has probability `pi_1^(n-1) pi_0>0`. There is thus no omitted admissibility subsequence. Our subsequence is chosen for the asymptotic phenomenon, not to avoid undefined conditionings.
+
+On the event with one current rare atom, the largest degree is `L_r^epsilon`, with
+
+\[
+L_r^\epsilon/n_r=d_{r-1}+\epsilon n_r^{-1/2}\to1-\nu,
+\]
+
+and the second-largest is at most `n_{r-1}=n_r^{1/4}`. Together with (24), this proves the stated unique macroscopic degree conclusion along `n_r` only.
+
+## 8. Conditional local CLT dependency, reproduced for completeness
+
+This is the lemma proved in agent 001, with notation adapted to the preceding proof. Let integer-valued `X_r` converge in distribution to `X`, with uniformly integrable squares, and suppose their masses at zero and one are bounded below by a common positive constant. Let `N_r->infinity`, `mu_r=E X_r`, `q_r=P(X_r=1)`, `mu=E X`, `q=P(X=1)`, `sigma^2=Var X>0`, `b=q(1-q)`, and `gamma=q(1-mu)`. For sums `S_r` and counts of ones `B_r` from `N_r` independent row variables, if
+
+\[
+\frac{k_r-N_r\mu_r}{\sqrt{N_r}}\to a,
+\]
+
+then
+
+\[
+\sqrt{N_r}\mathbb P(S_r=k_r)
+\to\frac{e^{-a^2/(2\sigma^2)}}{\sqrt{2\pi\sigma^2}},
+\tag{28}
+\]
+
+and the conditional law of `(B_r-N_r q_r)/sqrt(N_r)` converges to
+
+\[
+\mathcal N\left(\frac{\gamma a}{\sigma^2},
+b-\frac{\gamma^2}{\sigma^2}\right).
+\tag{29}
+\]
+
+To prove it, set `Y_r=1_{X_r=1}`. Distributional convergence and uniform integrability give convergence of the covariance matrix of `(X_r,Y_r)` to entries `sigma^2,gamma,b`. For fixed real `s`, Fourier inversion in the sum variable gives
+
+\[
+\mathbb E\left[e^{is(B_r-N_rq_r)/\sqrt{N_r}};S_r=k_r\right]
+=\frac1{2\pi}\int_{-\pi}^{\pi}
+e^{-it(k_r-N_r\mu_r)}
+\left(\mathbb E e^{it(X_r-\mu_r)+is(Y_r-q_r)/\sqrt{N_r}}\right)^{N_r}dt.
+\tag{30}
+\]
+
+After putting `t=v/sqrt(N_r)`, the quadratic characteristic-function expansion converges pointwise to
+
+\[
+e^{-iav}\exp[-(\sigma^2v^2+2\gamma vs+bs^2)/2].
+\tag{31}
+\]
+
+Uniform integrability of the squared centered variables justifies the expansion with an `o(1/N_r)` remainder. Explicitly, one truncates the centered linear combination at a fixed threshold, uses the Taylor remainder there, and then bounds the remaining remainder by its second-moment tail before increasing that threshold.
+
+To justify integration, put `phi_r(t,s)=E exp(itX_r+isY_r/sqrt(N_r))`. An independent-copy expansion, retaining only the ordered pairs of atoms zero and one, gives
+
+\[
+1-|\phi_r(t,s)|^2
+\ge2\mathbb P(X_r=0)\mathbb P(X_r=1)
+       [1-\cos(t+s/\sqrt{N_r})].
+\tag{32}
+\]
+
+On a fixed small interval \(|t|\le\delta\), its \(N_r\)-th-power modulus is at most
+\[
+\exp\!\left[-cN_r\left(t+\frac{s}{\sqrt{N_r}}\right)^2\right].
+\]
+Under the substitution this is the integrable bound \(\exp[-c(v+s)^2]\). On \(\delta\le|t|\le\pi\) it is exponentially small uniformly in \(r\), for each fixed \(s\). Thus dominated convergence applied to (30) yields the Gaussian integral of (31), divided by \(2\pi\), after multiplication by \(\sqrt{N_r}\).
+
+At `s=0` this is (28). Dividing the general integral by its value at zero gives
+
+\[
+\exp\!\left(i\frac{\gamma a}{\sigma^2}s
+-\frac12\Big(b-\frac{\gamma^2}{\sigma^2}\Big)s^2\right),
+\]
+
+proving (29) by characteristic functions. Nonnegativity of the variance follows from Cauchy–Schwarz. This derivation never factors the count of ones from the contribution of other categories.
+
+The audit also checked a lattice detail. All rare degrees are multiples of 16: the recursion for \(H_r\), the earlier pair sums, and \(\sqrt{n_r}\) preserve that divisibility. Since \(\gcd(176,208)=16\), the joint pair \((\xi,\mathbf1_{\{\xi=1\}})\) has difference-lattice index 16, although \(\xi\) itself has span one. Under the sum conditioning, the count is congruent to \(n_r-1\) modulo 16. Its scaled spacing tends to zero, and the proof above inverts only the offspring-sum coordinate. It therefore does not require an incorrect joint aperiodicity assumption.
+
+## 9. Reproducible arithmetic certificate
+
+Script: `computations/015_lacunary_certificate.py`. Executed with Python in this session; exit code zero. It uses exact rational arithmetic for the first three stages, verifies the integrality and support bounds, and encloses the infinite tail by (5). Decimal endpoints are rounded outwards. It does not simulate conditioned trees and is not a substitute for the proof of convergence.
+
+The first two pairs are
+
+| Stage | Conditioning size | Smaller atom | Larger atom |
+|---|---:|---:|---:|
+| 1 | 256 | 176 | 208 |
+| 2 | 4,294,967,296 | 3,221,159,552 | 3,221,290,624 |
+
+The script certifies, including the full infinite tail,
+
+\[
+\begin{aligned}
+\nu&\in[0.25000008940696716308593750001893,
+         0.25000008940696716308593750001894],\\
+\sigma^2&\in[0.18751724064349328819349030655071,
+               0.18751724064349328819349030655072],\\
+a_*&\in[0.99990793915708316509750109871089,
+          0.99990793915708316509750109871090],\\
+v_*&\in[0.000017283757730977125785051309865713,
+          0.000017283757730977125785051309865714].
+\end{aligned}
+\]
+
+For example, after retaining stages through `R` and writing `m_1,m_2` for their first and second moments including the atom at one, the remaining errors are at most `4n_{R+1}^{-3}` and `4n_{R+1}^{-2}`. Hence
+
+\[
+m_2-(m_1+4n_{R+1}^{-3})^2
+\le\sigma^2\le
+m_2+4n_{R+1}^{-2}-m_1^2.
+\]
+
+The intervals for (1) follow by monotone interval arithmetic with positive denominators. These explicit numbers illustrate that each Gaussian component is narrow and has mean close to `+1` or `-1`; the qualitative non-Gaussian conclusion needs only `a_*>0`.
+
+## 10. Exact source match and limitations
+
+Primary sources inspected through the web on 2026-09-14:
+
+1. [Paul Thévenin, *Vertices with fixed outdegrees in large Galton–Watson trees*, arXiv:1812.07365v2](https://arxiv.org/pdf/1812.07365v2), Section 6.2, Theorem 6.7 and the immediately following conjecture, printed page 23. The theorem assumes a power-law mass function; its following conjecture extends the stated normal limit to subcritical offspring laws without exponential moments. For the set `{1}`, that proposed limit is `N(0,pi_1(1-pi_1))` under centering `n pi_1` and scaling `sqrt(n)`. The present law satisfies the conjecture's subcritical and exponential-moment conditions, plus the paper's nondegeneracy and span assumptions. It therefore contradicts that literal subcritical conjectural extension. It does not contradict Theorem 6.7, since this lacunary mass function is not asymptotic to a positive power law.
+
+2. [Svante Janson, *Simply generated trees, conditioned Galton–Watson trees, random allocations and condensation*](https://arxiv.org/pdf/1112.0510), Problem 20.2, together with the canonical-law definitions and Section 8's subcritical classification. The subcritical part of Problem 20.2 is an open-ended question about degree-count fluctuations. The present result supplies a negative example to unrestricted Gaussian behavior at its displayed centering and scaling; it does not provide a classification of subcritical fluctuation laws or answer every part of that problem.
+
+The construction starts from the project's archived Janson degree-count memo. Its full path, source snapshot, inherited gaps and repairs are documented in [agent001](agents/001.md) and [agent015](agents/015.md). Those complete reports preserve the research provenance.
+
+The source checks establish the mathematical hypothesis match; they do not establish whether another author had already disproved or modified the conjecture by September 2026. No literature-priority or novelty clearance is claimed. The construction itself is adapted from the supplied memo. The substantive repairs are the exact law/support assembly, the uniform conditioning-dominance estimate, and application of the correct conditional covariance formula.

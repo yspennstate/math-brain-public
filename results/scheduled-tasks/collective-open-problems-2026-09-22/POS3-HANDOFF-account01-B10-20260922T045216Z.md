@@ -1,0 +1,19 @@
+# POS3 handoff — account01/B10 20260922T045216Z
+
+Outcome: `ESSENTIAL_STEP_APPLIED`. Parent POS3 remains `OPEN / NOT PROVED`. Execution context: `WITHOUT_VERIFIED_BRAIN`.
+
+Scientific source: `yspennstate/math-open-problems`, report `proofnet24/collective-POS3/account01/B10/20260922T045216Z-account01-B10-pos3-r11/REPORT.md`, scientific commit `42488ecc83be26741232bc05ffcb09a2f5c2d48d`, report blob `7ab3502e574d795c8300fd0ec70dc33f12b87f0a`.
+
+Named OTHER-account input actually applied: account02/B11 `proofnet24/collective-POS3/account02/B11/20260922T035147Z-b11-pos3-r14-931012ae/REPORT.md`, blob `0d3bc896c83f0f37c8cc46bb46e61799ebfdd49a`. Its arbitrary nested-endpoint reverse remainder is the union of at most two predecessor channels `{b<t}` and at most two successor channels `{u<a}`.
+
+New theorem: use account01/B10's previously proved exact full-extension TP2/PQD three-chain flux separately on each same-anchor two-channel group. If two channel probabilities are each at most `c`, their union is at most `2c-c^2`. Together with the exact endpoint identity `r>=1-2p`, this yields channel-count-dependent selector constants in a hypothetical no-balanced majority-late/no-channel-span-descent nested endpoint:
+
+- general `(2,2)` worst case: some canonical pair has minority probability `>(3-sqrt(7))/2 = 0.1771243444...` and `<1/3`;
+- first-fork chain-difference worst case `(1,2)`: `>(5-sqrt(21))/2 = 0.2087121525...` and `<1/3`;
+- pure double-predecessor or double-successor fan `(2,0)`/`(0,2)`: `>2-sqrt(3) = 0.2679491924...` and `<1/3`.
+
+The proof stays in the original uniform law on all full linear extensions. It does not assume cross-group FKG/association; predecessor- and successor-group bounds are combined only by a union bound.
+
+First remaining implication: control overlap/transport **between** the predecessor-channel group and successor-channel group across consecutive nested boundaries. Either this raises the selector to `1/3`, or the worst `(2,2)` state must fail by span descent, ordinal/autonomous reduction, or an already balanced pair.
+
+No benchmark material, credentials, scheduler identifiers, machine paths, unrelated private data, email/Drive content, paid/remote model calls, public posting, or permission changes are present.

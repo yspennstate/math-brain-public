@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "review_record": "20260922T220600Z-claude-review",
+  "scope": "Pinned new REPORT.md path coverage, not certification of all worker activity or all proof bodies",
+  "repository": "yspennstate/math-open-problems",
+  "comparisons": [
+    {"base":"c35c25f941bd343ea93b6c22a8c3adaf17d9511d","head":"e2730bd0eda8cddd81d2d2156b5b06c067cf4578","ahead_by":171},
+    {"base":"e2730bd0eda8cddd81d2d2156b5b06c067cf4578","head":"c5b2350b76a01283a2503368d013a44beadbbcc6","ahead_by":172}
+  ],
+  "new_commits_total": 343,
+  "unique_slots_with_new_REPORT_md": 63,
+  "accounts": {
+    "account01": {"window1":["B01","B02","B03","B05","B06","B07","B08","B09","B10","B11","B12","B13","B14","B15","B17","B18","B19","B20"],"window2":["B01","B03","B04","B05","B06","B07","B08","B09","B10","B11","B12","B13","B14","B15","B16","B17","B18","B20"],"union_count":20,"no_new_report_in_window":[]},
+    "account02": {"window1":["B01","B02","B03","B04","B05","B07","B08","B09","B10","B12","B14","B15","B16","B17","B18","B19","B20"],"window2":["B01","B02","B03","B04","B05","B06","B07","B09","B10","B11","B12","B14","B15","B17","B19","B20"],"union_count":19,"no_new_report_in_window":["B13"]},
+    "account03": {"window1":["B01","B02","B04","B05","B06","B07","B08","B09","B10","B11","B12","B13","B14","B15","B16","B17","B18","B19","B20"],"window2":["B01","B02","B03","B04","B05","B06","B07","B08","B09","B10","B11","B12","B13","B14","B15","B17","B18","B19","B20"],"union_count":20,"no_new_report_in_window":[]},
+    "account04": {"window1":["B13","B14","B17"],"window2":["B15","B17"],"union_count":4,"no_new_report_in_window":["B01","B02","B03","B04","B05","B06","B07","B08","B09","B10","B11","B12","B16","B18","B19","B20"]}
+  },
+  "native_scheduler_observation": {
+    "source":"one live automations.list in the resumed check, after 2026-09-22T22:06Z",
+    "account":"account04","tasks":20,"enabled":20,"hourly":20,"QFORM_only":20,
+    "email_flags_false":20,"push_flags_false":20,
+    "earliest_last_run":"2026-09-22T21:24:40.899352Z",
+    "latest_last_run":"2026-09-22T21:26:16.199903Z",
+    "mutations_performed":0,
+    "execution_is_not_successful_push":true,
+    "other_accounts_direct_native_read":false
+  },
+  "signin_observation": {
+    "brain_snapshot":"1465c762f87fb07931cbac374246019be6297635",
+    "path":"scheduled_tasks/status/account04/logins/2026-09-22T21Z",
+    "result":"GitHub contents GET returned 404 at this readable snapshot; no canonical directory verified",
+    "older_snapshot":"ac3c46217437a8254fbb37718ae7effa22eadcb7",
+    "older_20Z_canonical_slots":["B02","B04","B06","B10"],
+    "interpretation":"Canonical login coverage, supplemental request acknowledgements, native runs and mathematics pushes are distinct; no global outage inferred."
+  },
+  "claude_attribution": {
+    "basis":"Explicit Co-Authored-By metadata, not model-runtime authentication",
+    "commits":["25a69cb93391eeb8d594949b222096de14275bd3","19010c8cab817f3da2fd028d0be0bf70b735c01a","b0cbc2233369b6a3f366cf569d425f485f123e1c","7359c982f3fa85f61b99e8768b915cce6e596d36"],
+    "QFORM_package_files_read":5,
+    "full_QFORM_solution_verified":false
+  },
+  "review_limits":["Not a line-by-line audit of all 343 commits or all 7937 exported claims","No complete Monte Carlo rerun at original multi-million-sample settings","Independent finite checks and actual outputs are saved separately","No worker or Claude acknowledgement is fabricated by this interactive record"]
+}

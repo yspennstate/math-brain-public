@@ -1,0 +1,46 @@
+# MOC4 shared handoff — account03/B09 — spinor cofactor edge purge
+
+Run: `20260922T064814Z-b09-moc4-r11`  
+Outcome: **ESSENTIAL_STEP_APPLIED**; full MOC4 remains **OPEN / NOT PROVED / NOT DISPROVED**.  
+Execution: `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.
+
+Canonical report: `yspennstate/math-open-problems/proofnet24/collective-MOC4/account03/B09/20260922T064814Z-b09-moc4-r11/REPORT.md`, report blob `1a13f7866c83871f1b07767073eeab00adee2c02`. Exact verifier blob `676f68b118741deedc2897f29ddea6d82c4b8b4f`.
+
+## Source state consumed
+
+Fresh lead: account03/B07 `20260922T064004Z-account03-B07-MOC4-r12`, `MOC4-KERNEL-QUARTIC-RESERVE-v1` / live `MOC4-MIXED-SCHUR-LS-RESIDUAL-v1`.
+
+Required named OTHER-account partner: account04/B07 latest `20260922T061043Z-account04-B07-moc4-r13`, especially the spinor Hessian moment and pure-block rigidity theorems, together with its immediately preceding exact `MOC4-SPINOR-P-COUPLED-UNISTOCHASTIC-v1` augmentation. No arbitrary bistochastic data were used.
+
+## New exact same-unitary identity
+
+In any even-even exterior-square gauge `(i,j)`, let `N=N_ij`, `B_ab=|N_ab|^2`, and let `tau_alpha(i)` denote the partner tetrahedral index map. For complementary row labels `gamma,delta` and column labels `mu,nu`, every genuine `4 x 4` unitary satisfies
+
+`P_{tau_alpha(i),j} P_{i,tau_beta(j)}`
+`= |N_{gamma,mu}N_{delta,nu}-N_{gamma,nu}N_{delta,mu}|^2`.
+
+Hence the 144 phase-free cofactor annuli
+
+`(sqrt(B_gm B_dn)-sqrt(B_gn B_dm))^2`
+`<= P_{tau_alpha(i),j}P_{i,tau_beta(j)}`
+`<= (sqrt(B_gm B_dn)+sqrt(B_gn B_dm))^2`
+
+hold on the genuine unitary locus. These are exact `(P,R,D)` constraints because each `B^ij=(R-s_i s_j D)/2` and `D=E^T P E/4`.
+
+## New target-facing theorem: `MOC4-EXTERNAL-WEYL-EDGE-PURGE-v1`
+
+For every one of the 48 non-Weyl normalized-Saxl external vertices `e_{tau,rho'}` and every Weyl endpoint `delta_sigma`, consider `lambda e+(1-lambda)delta_sigma`.
+
+- If `sigma != tau`, every point with `lambda>0` violates at least one cofactor annulus, so no open part of the edge is genuine.
+- If `sigma=tau`, two exact cofactor annuli force `lambda in {0,3/4}`.
+- At `lambda=3/4`, the functional is exactly `1/2(B_{rho_tau}+B_{rho'})`, an explicit convex average of eight Weyl evaluations, hence MOC4-safe for all complex spectra and support directions.
+
+Therefore **no external–Weyl edge of the 72-vertex Saxl outer base can carry a genuine MOC4 support violation**. The exact standard-library verifier checks all 1152 such edges: 1104 open edges with `sigma!=tau` are identically incompatible; all 48 exceptional edges have the exact `{0,3/4}` condition.
+
+For the preceding B09 structured stress direction, `M=240`, the unique dangerous external value is `740/3`, its associated `tau` endpoint is `-1538`, and the only nontrivial cofactor-compatible point on that exceptional edge has support `-399/2`, safely below `M`.
+
+## Integration / next obligation
+
+The live support is `s=<D,K>+<R,X>/2`, so the cofactor identities insert directly into the lead's `MSQR` and `NDI` same-unitary systems. A remaining positive-gap candidate cannot be one external atom moving toward one Weyl atom; it must use a genuinely higher-dimensional external face while satisfying all 144 cofactor annuli plus stationarity/Hessian/Lyapunov–Schmidt gates.
+
+Next: `MOC4-MULTI-EXTERNAL-COFACTOR-PAYMENT-v1` — quantify the support cost of such higher-dimensional coordinated external mixtures, or construct a genuine normal-matrix witness. No full-proof or counterexample claim is made.

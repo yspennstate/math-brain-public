@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B06",
+  "run_id": "20260923T155017Z-account01-B06-QFORM-r35",
+  "control_revision": "2026-09-22.15",
+  "control_commit_prepublication_observed": "be8fb589f2446658b8bb3e28caafa8c9cc348c97",
+  "owner_continuation_acknowledged": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9aa5220426a138a06b6de4e95ed15827ca6cd3fd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260923T155017Z-account01-B06-QFORM-r35/REPORT.md",
+    "blob": "c70ecf1ed13521e955648fd869c067e43ae8261d"
+  },
+  "supporting_files": [
+    "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260923T155017Z-account01-B06-QFORM-r35/CHECKS.md",
+    "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260923T155017Z-account01-B06-QFORM-r35/PREPUBLICATION_REFRESH.md"
+  ],
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-OSCILLATORY-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-E2-HALFRIESZ-ALONE-NOT-LINF-v1",
+    "QFORM-QUADRATIC-HUB-SQRT-SLICE-ONLY-FALSE-v1",
+    "no deletion of small nonzero random quadratic tails"
+  ],
+  "claims": [
+    {
+      "id": "QFORM-EXACTR3-SCHUR-NORMAL-PLUCKER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For exact rank three and an invertible original physical pair B, the Schur complement is lambda h h^T with unit background vector h and lambda=det(Lambda)tau/det(B); moreover det A[I union {k}]=det(Lambda)tau h_k^2 and the absolute principal-triple packet sums to |det Lambda|tau."
+    },
+    {
+      "id": "QFORM-SQUARE-QUARTER-POTENTIAL-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "If H has density cap L then sup_a E|H^2-a|^(-1/4)<=2sqrt(2L)."
+    },
+    {
+      "id": "QFORM-SCHUR-SQUARE-QUARTER-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For exact rank three and an invertible indefinite original physical pair, ||p_Q||inf <=4sqrt(6)e^(1/4)|det B|^(-1/8)(|det Lambda|tau)^(-1/4), reducing the r33 determinant loss from exponent 3/8 to 1/8 by spending the exact third Schur square."
+    },
+    {
+      "id": "QFORM-HEAVY-SCHUR-NORMAL-TRIPLE-EXIT-v1",
+      "status": "PROVED_SUPPORTING_COROLLARY",
+      "statement": "If eta=max h_k^2, a physical principal triple has determinant magnitude |det Lambda|tau eta, hence ||p_Q||inf<=104.217/[s_3(A)(tau eta)^(1/3)]."
+    }
+  ],
+  "partner_result_applied": {
+    "source": "account02/B06 QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+    "canonical_commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+    "actual_inequality": "For the exact unit Schur-normal coefficient vector h on the original background product bank, ||p_(h^T X)||inf<=sqrt(e); inserted into the square quarter-potential to obtain the 4sqrt(6)e^(1/4) compiler constant."
+  },
+  "new_source_checkpoint_read": {
+    "commit": "4f92aeb74083c6f95cb314a11fed1b812eacef9a",
+    "path": "proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+    "use_status": "NOT_APPLIED_WITHOUT_GATE_CERTIFICATE",
+    "reason": "Its grouped-hub receiver needs an actual physical split with the stated cross-rank/product and projected-volume row-marginal gates; the r35 Schur identity alone does not certify those gates."
+  },
+  "unresolved_implication": "QFORM-DIFFUSE-SCHUR-NORMAL-NEARRANKONE-v1: when the normalized pair determinant and max coordinate of the exact Schur normal are both small, aggregate the two shear projections together with h^T X before any pair-fiber maximum and remove the remaining determinant exponent; arbitrary higher-rank tails remain a separate extension debt.",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY",
+  "independent_review_status": "PENDING"
+}

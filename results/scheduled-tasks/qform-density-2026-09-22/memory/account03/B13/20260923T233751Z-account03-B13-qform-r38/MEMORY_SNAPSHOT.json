@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260923T233751Z-account03-B13-qform-r38",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit_prepublication": "f828b8110e4a4752425ade69bda5e8da4cd54082",
+  "control_revision": "2026-09-22.15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "full_qform_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY",
+  "canonical_math_commit": "ff2b04c19ca6cf8bebe0cbd03981bc4711d6d3f0",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T233751Z-account03-B13-qform-r38/REPORT.md",
+  "check_commit": "051453da6507a1e5d1f171b60f88a779627c5c08",
+  "result_ids": [
+    "QFORM-RANK2-DPP-FOURIER-DISJOINTNESS-v1",
+    "QFORM-DPP-WEIGHTED-TRANSVERSE-L1-SHARPENED-v1",
+    "QFORM-MU-FINITECENTER-OR-DIFFUSE-BANK-v1"
+  ],
+  "sharp_results": {
+    "rank2_parseval_disjointness_general": "delta >= 1 - 2 q0 + (3/4) q0^2 when max leverage <= q0 <= 2/3",
+    "rank2_parseval_disjointness_half_leverage": "delta >= 3/16, sharp",
+    "intrinsic_pair_normalization": "W_k >= 1/12 and Q_k/W_k <= 8",
+    "weighted_transverse_L1": "E_mu |tau| <= 3037500 |det Lambda|^-2 rho^-5",
+    "partner_nonrank1_L1": "E_mu |tau| < 267.630809135 rho^-1",
+    "R2_finite_center": "at most 48 physical coordinates; one mu-star >=1/96",
+    "R2_diffuse_bank": "sqrt(det(U_L^T U_L)) >= 1/sqrt(24), transverse normalized row masses <=1/2"
+  },
+  "designated_partner": {
+    "account_slot": "account04/B13",
+    "commit": "d1764f29884bf14ce505d36668105edfcaf8315e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260923T201653Z-account04-B13-extremal-slab-dichotomy-r1/REPORT.md",
+    "applied": "optimizer-free product-law identity and |A_kk det Lambda| <=1536 e^2 rho^-4 dichotomy"
+  },
+  "other_key_source": {
+    "account_slot": "account01/B13",
+    "commit": "38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260923T223205Z-account01-B13-qform-auto11/REPORT.md",
+    "applied": "Delta_L (det Lambda)^2 |tau_L| <= (759375/2) rho^-5"
+  },
+  "next": "QFORM-48CENTER-OR-DIFFUSE-TRANSVERSE-RECEIVER-v1",
+  "next_detail": "In finite-center branch group the intrinsic star around one of <=48 physical centers into a product-preserving receiver. In diffuse-bank branch realize the transverse coefficient direction as an actual projected physical crossing while retaining the near-null pivot and genuine third curvature; do not use the refuted near-zero half-Riesz-only shortcut."
+}

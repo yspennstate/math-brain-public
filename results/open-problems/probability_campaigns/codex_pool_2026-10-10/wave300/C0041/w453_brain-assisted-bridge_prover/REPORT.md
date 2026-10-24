@@ -1,0 +1,25 @@
+Saved a conditional regeneration-clock bridge and an exact obstruction to dropping its rate hypothesis. This does not solve C0041. Its original primary statement uses one fixed direction and positive liminf speed. A September 23 preprint now claims the exact target; current openness is UNKNOWN pending independent mathematical review, and w455 owns that review.
+
+L1 bounds an arbitrary random clock using its spatial range and a uniformly elliptic fixed-box exit estimate. It also gives the correct factor 1/P(A) when conditioning on a positive-probability event such as never backtracking. L2 gives a finite mean if the spatial tail rate exceeds log(1/kappa). L3 is an exact random-box countermodel showing that an unspecified exponential rate is insufficient. It omits C0041's iid, transience and dimension assumptions, so it is not a counterexample to the target.
+
+Measurements from actual runs:
+
+- `python -B -X utf8 verify_range_clock.py`: 22,680 exact rational inequalities, 0 failures, 9.357349 seconds; radii 1–7, steps 1–120, three transition laws, all starting sites.
+- `python -B -X utf8 verify_countermodel.py`: 8 exact independent linear-system solves, 0 failures, 0.010783 seconds. Mean box exits at radii 0–7: 1, 8, 33, 112, 353, 1080, 3265, 9824. The infinite-mean mixture follows from the written geometric-growth proof, not these finite checks.
+- `python -B -X utf8 bounded_recall.py`: 15.594104 seconds; 0 of the top 3 notes supplied a RWRE bridge; C0041 was reported absent. This is a memory-recall observation, not a math-store coverage count.
+- `python -B -X utf8 retrieve_cards.py`: 4 bounded read-only lookups, 0.151194 seconds. The actual math-store C0041 card exists. `retrieve_bridge_subset.py` uses the live ranking function on four targeted cards in 0.036102 seconds; full bodies fail to discharge the moment gap. HYPOTHESIS_COMPARISON.md records why.
+- `python -B -X utf8 measure_candidate_lookup.py`: exact target-ID fixture changed from 3 returned rows / 2 false positives to 1 returned row / 0 false positives, preserving the target. Five malformed identifiers were rejected; 0.097996 seconds. This is a measured local prototype, not a deployed general recall improvement.
+
+The bounded lookup repair uses the semantic bundle_entry_key instead of raw metadata substrings, which matched an unrelated hash and a bibliography reference. Reviewer application: apply patches/01_candidate_lookup.diff at its named live module path, then rerun the exact-ID measurement before any CLI integration; the source copy is copies/candidate_lookup.py. No existing live code was edited. Other intake key conventions and wider retrieval quality remain unmeasured.
+
+Brain drafts are in bundle_001.json and the explicitly authorized w453 inbox. BUNDLE_STATES.json records submitted, reviewed, ingested and retrievable separately. The integrator has not been run because this worker may not write live stores. Structural validity, source provenance, finite exact checks and our own proof claims are not independent mathematical audits. The hook proposal is local in HOOK_PROPOSALS.jsonl with a named-path diff; a reviewer can append that single schema-valid row to the proposals destination without overwriting peers' lines.
+
+Risks: the spatial-tail hypothesis is stronger than the target premise and is not necessary by our proof; box estimates ignore transverse escape and iid geometry. The conditioning normalization must be preserved. The current cards have empty structured condition arrays despite hypotheses in their prose, and their September 7 status is stale relative to the new claim. This packet changes neither those cards nor global recall controls.
+
+The statement was sent first to w454 via msg-df9463a7c8. An initial w455 lemma-boundary send hit a locked mesh database; the complete REVIEW_PACKET.md is the review handoff. Independent verdicts must identify the current conditional-normalization version before a claim is upgraded.
+
+Progress event, prepared for the reviewer because the worker-specific rule restricts other outside writes: `python -B -X utf8 ~/primary_directive/pd_progress.py --event "w453 C0041: range-clock lemmas and countermodel saved; 22680 exact checks pass; target gap remains" --agent w453 --row S1.C0041.w453 --evidence ~/brain_workers/w453/REVIEW_PACKET.md`
+
+NEXT: Audit the conditional-normalization L1–L3 packet, then replace the box-only estimate by a transverse-escape bound that yields a summable regeneration clock tail under the exact C0041 assumptions.
+
+2026-10-10 final receipt: packaging and structural validation passed (6 entries, 6 relations, 7 claims). Inbox submission is complete. w454's saved audits KEEP the original L1/L2 and L3 statements; their exact receipt is INDEPENDENT_REVIEW_RECEIPT.json. The future-conditioning extension and designated referee review remain pending. Full packet reached active w455 through msg-7afe9fc051. Coordinate the exact-ID adapter with w454's reserved lookup-repair lane; only one implementation should land.

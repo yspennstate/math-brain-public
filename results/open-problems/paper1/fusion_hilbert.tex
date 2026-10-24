@@ -1,0 +1,785 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+
+\newcommand{\Q}{Q_\infty}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\EX}{\mathsf{Ex}}
+
+\title{Margin-stable schemes and the Baire category of full complexity\\
+in non-autonomous dynamics on the Hilbert cube}
+\author{Yitzchak Shmalo\\
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In the full non-autonomous mapping space $\F(\Q)=C(\Q,\Q)^{\mathbb N}$ of the Hilbert cube,
+equipped with the uniform-in-time metric, the recent construction of
+\cite{Shmalo2026} produces a \emph{dense} set of systems admitting exact windowed
+Hilbert horseshoes, with all-tail symbolic semifactors, windowed distributional chaos of
+type~1, infinite topological entropy, and infinite metric mean dimension; the same paper
+observes that the exact class is not stable and asks (Section~14 of \cite{Shmalo2026})
+for a residual theorem obtained by a ``Baire-fusion mechanism.''
+This paper resolves the stability side of that question.  First, we introduce
+\emph{strict depth-$N$ brick schemes}, margin-protected finite-coordinate covering
+configurations, and prove that for every depth $N$ and every sequence of dense open
+windows the corresponding class $\mathcal U_N$ is open and dense, with explicit
+stability radius $\theta\,2^{-N-1}$ for a scheme of margin~$\theta$.  Consequently the
+class $\mathcal S=\bigcap_N \mathcal U_N$ of systems carrying windowed strict schemes of
+\emph{every} finite depth is residual.  Second, on $\mathcal S$ every branch brick covers
+every depth-$N$ coordinate pattern of the next bricks \emph{exactly}, by a
+Poincar\'e--Miranda argument; this is the maximal one-step covering compatible with
+stability.  Third, a genuinely dynamical statement holds residually: for a residual
+set of systems, every tail exhibits separated orbit growth of every order $q$ at
+arbitrarily fine scales (``entropy bursts''), the residual shadow of the dense
+infinite-metric-mean-dimension theorem.  Fourth, we prove an obstruction theorem: the
+exact-horseshoe class of
+\cite{Shmalo2026} has \emph{empty interior}, and indeed every property that forces some
+image to have full range in arbitrarily deep coordinates has empty interior.  The
+obstruction shows that the depth stratification is not an artifact: no margin-stable
+strengthening of the exact theorem can be open, so the residual hierarchy
+$\mathcal S$ is the natural generic object.  We close with a precise formulation of
+what remains open.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+A non-autonomous discrete dynamical system on a compact metric space $(X,\rho)$ is a
+sequence $f=(f_1,f_2,\dots)$ of continuous self-maps of $X$, acting through the
+compositions $f_n\circ\cdots\circ f_1$.  The full mapping space
+\[
+\F(X)=C(X,X)^{\mathbb N},
+\qquad
+D_X(f,g)=\sup_{n\ge 1}\,\sup_{x\in X}\rho\bigl(f_n(x),g_n(x)\bigr),
+\]
+is a complete, hence Baire, metric space (Lemma~\ref{lem:baire} below).  For interval
+systems and for systems on finite-dimensional cubes and compact manifolds, the paper
+\cite{Shmalo2026} constructs $D$-open dense sets of systems displaying \emph{all-tail
+full complexity}: after deleting any finite initial segment, the remaining system
+admits a compact symbolic semifactor onto a full variable-alphabet shift, a
+continuum-sized scrambled set for distributional chaos of type 1 visiting prescribed
+dense open windows at prescribed absolute times, infinite topological entropy, and the
+sharp small-scale entropy spectrum $H_{g,r}(\varepsilon)=d\log(1/\varepsilon)+O(1)$.
+The proofs rest on \emph{strict} cubical covering relations: face inequalities with a
+positive margin $\theta$, which survive every perturbation of size less than $\theta$
+and are converted into covering statements by the Poincar\'e--Miranda theorem
+\cite{Miranda,Kulpa}.
+
+On the Hilbert cube
+\[
+\Q=[0,1]^{\mathbb N},
+\qquad
+\rho(x,y)=\sum_{j=1}^\infty 2^{-j}\,|x_j-y_j|,
+\]
+the situation changes.  The result of \cite{Shmalo2026} on $\Q$ is a \emph{dense}
+theorem: a dense set of systems admits exact windowed Hilbert horseshoes
+(Definition~\ref{def:exact} below), built from finite-support boxes mapped
+\emph{exactly} onto the next box.  Exactness in arbitrarily high coordinates is not
+stable, because coordinate $j$ carries metric weight $2^{-j}$: a perturbation of
+uniform size $\delta$ can move the $j$-th image coordinate by $2^{j}\delta$.  Section 14
+of \cite{Shmalo2026} records the resulting question, which is the starting point of
+the present paper:
+
+\begin{quotation}
+\noindent``The Hilbert-cube conclusion is dense but is not asserted to be open: exact
+covering in arbitrarily high coordinates is not stable under the Hilbert metric.  A
+residual Hilbert-cube theorem with coherent all-tail symbolic codings would require an
+additional Baire-fusion mechanism beyond the exact finite-support implantations proved
+here.''
+\end{quotation}
+
+This paper carries out the stability analysis that any such fusion mechanism must
+confront, and proves four results: a residual depth hierarchy of margin-stable
+schemes (Theorem~\ref{thm:A}), exact one-step covering at every depth on that
+residual set (Theorem~\ref{thm:B}), a residual entropy-burst theorem in every tail
+(Theorem~\ref{thm:burst}; see Section~\ref{sec:burst}), and an empty-interior
+obstruction (Theorem~\ref{thm:C}).
+
+\subsection*{Main results}
+
+Fix a sequence $W_\bullet=(W_n)_{n\ge 1}$ of dense open subsets of $\Q$ (\emph{windows})
+and geometric data $(M_n,q_n,\gamma_n)_{n\ge1}$ as in Section~\ref{sec:schemes}
+(finitely many branches $M_n\ge 2$, separation dimensions $q_n\ge 1$, diameter bounds
+$\gamma_n>0$; the block schedule of \cite[Section~12]{Shmalo2026} is the motivating
+instance).  For each integer $N\ge 1$ we define in Section~\ref{sec:schemes} the class
+\[
+\mathcal U_N(W_\bullet)\subseteq\F(\Q)
+\]
+of systems admitting a \emph{strict depth-$N$ windowed brick scheme}: a time-indexed
+family of pairwise separated finite-support \emph{bricks} inside the windows, such that
+every brick crosses, in every coordinate $\ell\le N$ and with a uniform margin
+$\theta>0$, the coordinate range of all bricks at the next time.
+
+\begin{theorem}[Finite-depth genericity; Theorem~\ref{thm:main} below]\label{thm:A}
+For every depth $N\ge1$ and every window sequence $W_\bullet$, the class
+$\mathcal U_N(W_\bullet)$ is open and dense in $(\F(\Q),D)$.  A scheme with margin
+$\theta$ persists, with margin $\theta/2$, on the entire ball of radius
+$\theta\,2^{-N-1}$ around the realizing system.  Consequently
+\[
+\mathcal S(W_\bullet)\;=\;\bigcap_{N\ge1}\mathcal U_N(W_\bullet)
+\]
+is residual in $\F(\Q)$, as is the simultaneous class
+$\bigcap_{a\ge1}\mathcal S(W^a_\bullet)$ for any countable family of window sequences.
+\end{theorem}
+
+\begin{theorem}[Generic exact one-step covering; Theorem~\ref{thm:covering} below]\label{thm:B}
+Let $g\in\mathcal S(W_\bullet)$.  Then for every $N\ge 1$ there is a depth-$N$ scheme
+for $g$ such that for every time $n$, every brick $B_{n,i}$ of the scheme, and every
+target pattern $t=(t_\ell)_{\ell\le N}$ lying coordinatewise in the interval spanned
+by the bricks at time $n+1$, there exists $x\in B_{n,i}$ with
+\[
+\pi_\ell\,g_n(x)=t_\ell\qquad(1\le\ell\le N).
+\]
+In particular every brick maps exactly onto every depth-$N$ coordinate pattern of every
+brick at the next time, inside the prescribed windows.
+\end{theorem}
+
+\begin{theorem}[Obstruction: the exact class has empty interior; Theorem~\ref{thm:empty} below]\label{thm:C}
+Let $\EX\subseteq\F(\Q)$ denote the set of systems admitting an exact windowed Hilbert
+horseshoe in the sense of \cite[Definition~12.1]{Shmalo2026}
+(Definition~\ref{def:exact} below).  Then $\EX$ is dense and has empty interior.
+More generally, every class $\mathcal P\subseteq\F(\Q)$ with the property that each
+$g\in\mathcal P$ has, for some $n$ and some compact $A\subseteq\Q$, an image $g_n(A)$
+whose coordinate projections are onto $[0,1]$ in infinitely many coordinates, has empty
+interior.
+\end{theorem}
+
+Theorem~\ref{thm:C} shows that the ``dense, not open'' phenomenon of
+\cite{Shmalo2026} is intrinsic and not an artifact of the construction: \emph{no}
+sharpening of exact infinite-depth covering can be open, since arbitrarily small
+uniform perturbations (an explicit coordinate squeeze) destroy full range in deep
+coordinates everywhere in the space.  Theorems~\ref{thm:A} and~\ref{thm:B} identify
+the optimal margin-stable substitute: full strict covering of every finite depth,
+simultaneously for all depths, on a residual set.  The stability radius
+$\theta2^{-N-1}$ quantifies the cost of depth and explains the stratification: the
+margins of conditions at depth $N$ have stability comparable to $2^{-N}$, so no single
+open set can certify unbounded depth, while the intersection over $N$ retains
+residuality.
+
+\subsection*{Discussion: what the fusion mechanism can and cannot give}
+
+It is natural to ask whether membership in $\mathcal S(W_\bullet)$ already implies the
+\emph{dynamical} conclusions of the dense theorem of \cite{Shmalo2026} (semifactors,
+DC1, infinite entropy and metric mean dimension in every tail).  We do not claim this,
+and we believe the question is genuinely delicate, for a reason worth recording.  The
+infinite-horizon conclusions all require orbits threading prescribed bricks at
+\emph{all} times.  The backward-induction production of such orbits in
+\cite{Shmalo2026} consumes exact surjectivity onto the next box in \emph{all}
+coordinates; a depth-$N$ scheme controls only $N$ image coordinates per step, and the
+uncontrolled deep coordinates of the image re-enter as uncontrolled \emph{inputs} at
+the next step.  Quantitatively, a condition involving image coordinate $\ell$ has
+stability $O(2^{-\ell})$ under $D$, while restoring such a condition after a
+perturbation of size $r$ costs $\Omega(\min(1,2^{\ell}r))$ per coordinate in amplitude;
+summing over the critical band of coordinates, maintenance of unbounded-depth margins
+along a Baire fusion fails against an adversary that shrinks neighbourhoods faster
+than geometrically.  This is exactly the obstruction isolated in
+Theorem~\ref{thm:C} in its sharpest open form.  We therefore state the remaining
+problem precisely in Section~\ref{sec:open}, in a form that separates what is now
+known (the residual depth hierarchy, with exact one-step covering at every depth, plus
+the empty-interior obstruction) from what is open (residuality of the infinite-horizon
+conclusions themselves).
+
+\subsection*{Relation to the finite-dimensional theory}
+
+On $Q_d=[0,1]^d$ with the sup metric, all $d$ coordinates have unit weight, margins
+have uniform stability, and \cite{Shmalo2026} obtains a single open dense class with
+the full dynamical conclusions.  The present results show in what precise sense
+$d=\infty$ differs: openness survives at every finite depth with an exponentially
+small but positive radius, and fails at infinite depth for structural reasons.  The
+residual set $\mathcal S(W_\bullet)$ is the direct analogue of the finite-dimensional
+open dense class under this constraint.
+
+\subsection*{Organization}
+
+Section~\ref{sec:prelim} fixes notation and records the Baire property.
+Section~\ref{sec:schemes} defines strict depth-$N$ brick schemes and proves openness
+and the covering theorem.  Section~\ref{sec:density} proves the selection and
+implantation lemmas and density.  Section~\ref{sec:residual} assembles
+Theorem~\ref{thm:A}.  Section~\ref{sec:burst} proves the residual entropy-burst
+theorem.  Section~\ref{sec:obstruction} proves the obstruction theorem.
+Section~\ref{sec:open} states the remaining open problem.
+
+\section{Preliminaries}\label{sec:prelim}
+
+Throughout, $\Q=[0,1]^{\mathbb N}$ carries the metric
+$\rho(x,y)=\sum_{j\ge1}2^{-j}|x_j-y_j|$, which induces the product topology and makes
+$\Q$ compact.  We write $\pi_\ell:\Q\to[0,1]$ for the $\ell$-th coordinate projection.
+The mapping space $C(\Q,\Q)$ carries the uniform metric
+$d_\infty(u,v)=\sup_{x}\rho(u(x),v(x))$, and
+\[
+\F(\Q)=C(\Q,\Q)^{\mathbb N},\qquad
+D(f,g)=\sup_{n\ge1}d_\infty(f_n,g_n).
+\]
+
+\begin{lemma}[{\cite[Lemma 2.1]{Shmalo2026}}]\label{lem:baire}
+$(\F(\Q),D)$ is a complete metric space, and hence a Baire space.
+\end{lemma}
+
+\begin{proof}
+$C(\Q,\Q)$ is complete because $\Q$ is compact and uniform limits of continuous maps
+are continuous.  If $(f^{(k)})_k$ is $D$-Cauchy, each coordinate sequence
+$(f^{(k)}_n)_k$ is $d_\infty$-Cauchy with a modulus independent of $n$; the coordinate
+limits $f_n$ assemble to $f\in\F(\Q)$ with $D(f^{(k)},f)\to0$.  Completeness implies
+the Baire property.
+\end{proof}
+
+We use the elementary weight estimate repeatedly: for $u,v\in C(\Q,\Q)$ and any
+coordinate $\ell$,
+\begin{equation}\label{eq:weight}
+\sup_{x\in\Q}\,\bigl|\pi_\ell u(x)-\pi_\ell v(x)\bigr|
+\;\le\;2^{\ell}\,d_\infty(u,v),
+\qquad
+d_\infty(u,v)\;\le\;\sum_{\ell\ge1}2^{-\ell}\sup_x|\pi_\ell u(x)-\pi_\ell v(x)|.
+\end{equation}
+
+A \emph{finite-support box} is a product $B=\prod_{j\ge1}I_j$ with each
+$I_j\subseteq[0,1]$ a nondegenerate closed interval and $I_j=[0,1]$ for all $j>R$; the
+least such $R$ is the \emph{support level}.  Finite-support boxes are compact with
+nonempty interior, and they form a local base: every nonempty open $U\subseteq\Q$
+contains finite-support boxes of arbitrarily small diameter
+\cite[Lemma~10.2]{Shmalo2026}.  For $K\ge1$ and $\alpha\in(0,1)$, an
+\emph{$(\alpha,K)$-box} is a finite-support box of the form
+$J=\prod_{j=1}^{K}[a_j,a_j+\alpha]\times[0,1]^{\{K+1,K+2,\dots\}}$; then
+$\diam_\rho(J)\le\alpha+2^{-K}$.
+
+Finally we recall the Poincar\'e--Miranda theorem \cite{Miranda,Kulpa}.
+
+\begin{theorem}[Poincar\'e--Miranda]\label{thm:miranda}
+Let $P=\prod_{\ell=1}^{N}[r_\ell,s_\ell]\subset\mathbb R^N$ and let
+$\Phi=(\Phi_1,\dots,\Phi_N):P\to\mathbb R^N$ be continuous.  If for every $\ell$,
+$\Phi_\ell\le0$ on $\{z\in P: z_\ell=r_\ell\}$ and $\Phi_\ell\ge0$ on
+$\{z\in P: z_\ell=s_\ell\}$, then $\Phi$ has a zero in $P$.
+\end{theorem}
+
+\section{Strict depth-\texorpdfstring{$N$}{N} brick schemes}\label{sec:schemes}
+
+Fix once and for all \emph{geometric data}: integers $M_n\ge2$ (branch counts),
+$q_n\ge1$ (separation dimensions), and reals $\gamma_n>0$ (diameter bounds), $n\ge1$.
+For the dynamical applications of \cite{Shmalo2026} one takes the universal block
+schedule of \cite[Section~12]{Shmalo2026}, where every label $C_a$, $D_s$, $E_{q,m}$
+occurs on infinitely many blocks and $\gamma_n\to0$; none of the results below depends
+on that specific choice.  Fix also a sequence $W_\bullet=(W_n)$ of dense open subsets
+of $\Q$.
+
+\begin{definition}[Bricks]\label{def:brick}
+A \emph{brick} with support level $R$ is a finite-support box
+$B=\prod_{j\le R}I_j\times[0,1]^{\{R+1,\dots\}}$ with all restricted intervals $I_j$
+nondegenerate.  For bricks $B,B'$ and $q\ge1$ we write
+\[
+\dist_q(B,B')=\inf_{x\in B,\,y\in B'}\ \max_{1\le\ell\le q}|x_\ell-y_\ell|.
+\]
+\end{definition}
+
+\begin{definition}[Strict depth-$N$ windowed brick scheme]\label{def:scheme}
+Let $N\ge1$.  A system $g\in\F(\Q)$ \emph{admits a strict depth-$N$
+$W_\bullet$-windowed brick scheme} if there exist $\alpha\in(0,1/4)$, a margin
+$\theta\in(0,1/16]$, support levels $R_n\ge\max(N,q_n)$, and bricks
+\[
+B_{n,1},\dots,B_{n,M_n}\subseteq W_n,
+\qquad
+B_{n,i}=\prod_{j\le R_n}I^{n,i}_j\times[0,1]^{\{R_n+1,\dots\}},
+\]
+such that, writing
+\[
+m^-_{n,\ell}=\min_{1\le i\le M_n}\min I^{n,i}_\ell,
+\qquad
+m^+_{n,\ell}=\max_{1\le i\le M_n}\max I^{n,i}_\ell
+\qquad(\ell\le N),
+\]
+the following hold for all $n\ge1$:
+\begin{enumerate}
+\item[(S0)] (\emph{anchoring}) $I^{n,i}_\ell\subseteq[2\theta,\,1-2\theta]$ for all
+$i$ and all $\ell\le N$;
+\item[(S1)] $\diam_\rho(B_{n,i})<\gamma_n$ for all $i$;
+\item[(S2)] $\dist_{q_n}(B_{n,i},B_{n,j})>c_{\alpha,q_n}M_n^{-1/q_n}$ for $i\ne j$,
+where $c_{\alpha,q}>0$ are the selection constants of
+Lemma~\ref{lem:selection};
+\item[(S3)] (\emph{strict depth-$N$ crossing}) for every $i$ and every
+$\ell\le N$,
+\[
+\pi_\ell\,g_n(x)\;\le\;m^-_{n+1,\ell}-\theta
+\quad\text{for all }x\in B_{n,i}\text{ with }x_\ell=\min I^{n,i}_\ell,
+\]
+\[
+\pi_\ell\,g_n(x)\;\ge\;m^+_{n+1,\ell}+\theta
+\quad\text{for all }x\in B_{n,i}\text{ with }x_\ell=\max I^{n,i}_\ell .
+\]
+\end{enumerate}
+We write $\mathcal U_N(W_\bullet)$ for the set of systems admitting such a scheme.
+By (S0), $m^-_{n+1,\ell}-\theta\ge\theta>0$ and $m^+_{n+1,\ell}+\theta\le1-\theta<1$,
+so the inequalities in (S3) are never vacuous for range reasons.
+\end{definition}
+
+\begin{lemma}[Openness with quantified radius]\label{lem:open}
+Let $g\in\mathcal U_N(W_\bullet)$, realized by a scheme with margin $\theta$.  If
+$h\in\F(\Q)$ satisfies $D(h,g)<\theta\,2^{-N-1}$, then $h$ realizes the \emph{same}
+bricks as a strict depth-$N$ scheme with margin $\theta/2$.  In particular
+$\mathcal U_N(W_\bullet)$ is open in $(\F(\Q),D)$.
+\end{lemma}
+
+\begin{proof}
+Conditions (S1) and (S2) and the window membership concern only the bricks.  For (S3),
+fix $n,i,\ell\le N$ and $x\in B_{n,i}$ with $x_\ell=\min I^{n,i}_\ell$.  By
+\eqref{eq:weight},
+\[
+\pi_\ell h_n(x)\;\le\;\pi_\ell g_n(x)+2^{\ell}D(h,g)
+\;<\;\bigl(m^-_{n+1,\ell}-\theta\bigr)+2^{N}\,\theta\,2^{-N-1}
+\;=\;m^-_{n+1,\ell}-\tfrac{\theta}{2},
+\]
+and symmetrically on the faces $x_\ell=\max I^{n,i}_\ell$.
+\end{proof}
+
+\begin{theorem}[Exact one-step depth-$N$ covering]\label{thm:covering}
+Let $g$ admit a strict depth-$N$ scheme with bricks $B_{n,i}$ and margin $\theta$.
+Then for every $n\ge1$, every $1\le i\le M_n$, and every target pattern
+$t=(t_\ell)_{\ell\le N}$ with
+$t_\ell\in[m^-_{n+1,\ell},\,m^+_{n+1,\ell}]$ for all $\ell\le N$,
+there exists $x\in B_{n,i}$ with
+\[
+\pi_\ell\,g_n(x)=t_\ell\qquad(1\le\ell\le N).
+\]
+In particular, for every $1\le i'\le M_{n+1}$ there is $x\in B_{n,i}$ whose image
+$g_n(x)$ agrees in its first $N$ coordinates with a prescribed point of $B_{n+1,i'}$;
+all such $x$ lie in $B_{n,i}\subseteq W_n$.
+\end{theorem}
+
+\begin{proof}
+Write $I_\ell=I^{n,i}_\ell$.  Define the section
+$\sigma:\prod_{\ell\le N}I_\ell\to B_{n,i}$ by
+$\sigma(z)_\ell=z_\ell$ for $\ell\le N$, $\sigma(z)_j=\operatorname{mid}I^{n,i}_j$ for
+$N<j\le R_n$, and $\sigma(z)_j=1/2$ for $j>R_n$; $\sigma$ is continuous and takes
+values in $B_{n,i}$.  Let
+\[
+\Phi_\ell(z)=\pi_\ell\,g_n(\sigma(z))-t_\ell\qquad(\ell\le N).
+\]
+If $z_\ell=\min I_\ell$, then $\sigma(z)\in B_{n,i}$ has $\ell$-th coordinate
+$\min I_\ell$, so by (S3),
+$\Phi_\ell(z)\le m^-_{n+1,\ell}-\theta-t_\ell\le-\theta<0$; if
+$z_\ell=\max I_\ell$, then $\Phi_\ell(z)\ge\theta>0$.  By
+Theorem~\ref{thm:miranda} there is $z$ with $\Phi(z)=0$, and $x=\sigma(z)$ is the
+required point.  For the final assertion take
+$t_\ell\in I^{n+1,i'}_\ell\subseteq[m^-_{n+1,\ell},m^+_{n+1,\ell}]$ for $\ell\le N$.
+\end{proof}
+
+\begin{remark}\label{rem:depth-cost}
+The radius $\theta2^{-N-1}$ in Lemma~\ref{lem:open} is the correct order of the
+stability of depth-$N$ information: a perturbation supported in the $N$-th image
+coordinate of size $2\theta$ in amplitude has $D$-size $2^{-N+1}\theta$ and destroys
+the margin-$\theta$ inequalities (S3) at $\ell=N$ for the given scheme.  Stability of
+margin conditions thus decays exponentially in depth, which is the quantitative form
+of the instability observed in \cite[Section~14]{Shmalo2026} and the reason the
+classes $\mathcal U_N$ are stratified by depth rather than united in a single open
+class; Theorem~\ref{thm:empty} below makes the impossibility of the united class
+precise.
+\end{remark}
+
+\section{Selection, implantation, and density}\label{sec:density}
+
+We first record the measure-theoretic separation lemma and the windowed selection
+lemma of \cite{Shmalo2026}, in the form needed here.
+
+\begin{lemma}[{Separated points; \cite[Lemma 5.1]{Shmalo2026}}]\label{lem:separated}
+Let $A\subseteq\mathbb R^{q}$ be bounded and measurable with $\lambda_q(A)>0$.  For
+every $m\ge2$ the set $A$ contains $m$ points whose pairwise sup distances exceed
+$\tfrac14\,\lambda_q(A)^{1/q}m^{-1/q}$.
+\end{lemma}
+
+\begin{proof}
+Put $r=\tfrac1{16}(\lambda_q(A)/m)^{1/q}$ and let $P\subseteq A$ be a maximal
+$4r$-separated subset.  If $\operatorname{card}(P)\le m-1$, maximality lets $A$ be
+covered by at most $m-1$ sup-balls of radius $4r$, whence
+$\lambda_q(A)\le(m-1)(8r)^q<2^{-q}\lambda_q(A)$, a contradiction.
+\end{proof}
+
+\begin{lemma}[Windowed selection]\label{lem:selection}
+Fix $\alpha\in(0,1/4)$ and $q\ge1$.  There is a constant $c_{\alpha,q}>0$ with the
+following property.  Let $J=\prod_{j\le K}[u_j,u_j+\alpha]\times[0,1]^{\{K+1,\dots\}}$
+be an $(\alpha,K)$-box with $K\ge q$, let $W\subseteq\Q$ be dense open, let
+$f\in C(\Q,\Q)$, and let $m\ge2$.  Then there are points
+$p_1,\dots,p_m\in\operatorname{int}(J)\cap W$ such that
+\[
+\max_{1\le\ell\le q}\bigl|(p_i)_\ell-(p_j)_\ell\bigr|>4c_{\alpha,q}\,m^{-1/q}
+\quad(i\ne j),
+\qquad
+\diam_\rho\{f(p_1),\dots,f(p_m)\}<\alpha/16 .
+\]
+\end{lemma}
+
+\begin{proof}
+Define a slice $\iota:P\to\operatorname{int}(J)$,
+$P=\prod_{\ell\le q}[u_\ell+\alpha/4,\,u_\ell+3\alpha/4]$, by
+$(\iota z)_\ell=z_\ell$ for $\ell\le q$, $(\iota z)_j=u_j+\alpha/2$ for $q<j\le K$,
+and $(\iota z)_j=1/2$ for $j>K$.  By compactness cover $\Q$ by Borel sets
+$R_1,\dots,R_P$ of $\rho$-diameter less than $\alpha/64$, where $P=P_\alpha$ depends
+only on $\alpha$.  The sets $A_s=\{z\in P: f(\iota z)\in R_s\}$ cover $P$, so some
+$A_s$ has $\lambda_q(A_s)\ge(\alpha/2)^qP_\alpha^{-1}$.  Lemma~\ref{lem:separated}
+gives $z_1,\dots,z_m\in A_s$ pairwise more than $8c_{\alpha,q}m^{-1/q}$ apart in sup
+norm, where $c_{\alpha,q}=\tfrac1{32}\bigl((\alpha/2)^qP_\alpha^{-1}\bigr)^{1/q}$.
+All $f(\iota z_i)$ lie in one $R_s$.  By continuity of $f$, choose pairwise disjoint
+relatively open $U_i\ni\iota z_i$ inside $\operatorname{int}(J)$ with first-$q$
+separation above $4c_{\alpha,q}m^{-1/q}$ between different $U_i$ and
+$\rho(f(u),f(\iota z_i))<\alpha/64$ on $U_i$, and pick
+$p_i\in U_i\cap W$ by density of $W$.
+\end{proof}
+
+\begin{lemma}[Implantation; density of $\mathcal U_N(W_\bullet)$]\label{lem:density}
+For every $N\ge1$, every $f\in\F(\Q)$, and every $\eta>0$ there exists
+$g\in\mathcal U_N(W_\bullet)$ with $D(f,g)<\eta$.
+\end{lemma}
+
+\begin{proof}
+Set $\alpha=\min(\eta/8,1/8)$ and $\theta=\alpha/8\le1/64$.  Let
+$K_n=\max\bigl(N,q_n,\lceil\log_2(1/\alpha)\rceil+1\bigr)$.  All sites below are
+$(\alpha,K_n)$-boxes \emph{anchored} in the sense that their restricted intervals lie
+in $[2\theta,\,1-2\theta]$.
+
+Let $J_1$ be any anchored $(\alpha,K_1)$-box.  Assume the anchored site $J_n$ is
+defined.  Apply Lemma~\ref{lem:selection} to $(J_n,W_n,f_n,q_n,M_n)$ to obtain points
+$p_{n,1},\dots,p_{n,M_n}\in\operatorname{int}(J_n)\cap W_n$ with first-$q_n$ pairwise
+separation above $4c_{\alpha,q_n}M_n^{-1/q_n}$ and $f_n$-image diameter below
+$\alpha/16$.  Choose pairwise disjoint open sets
+$O_{n,i}\subseteq\operatorname{int}(J_n)\cap W_n$ with $p_{n,i}\in O_{n,i}$, first-$q_n$
+separation above $c_{\alpha,q_n}M_n^{-1/q_n}$ between different $O_{n,i}$, and
+$\rho(f_n(x),f_n(p_{n,i}))<\alpha/32$ for $x\in O_{n,i}$.  Since finite-support boxes
+form a local base, choose bricks
+$B_{n,i}\subseteq O_{n,i}$ with $p_{n,i}\in\operatorname{int}B_{n,i}$, support level
+$R_n\ge K_n$, and $\diam_\rho(B_{n,i})<\gamma_n$.  As
+$B_{n,i}\subseteq J_n$ in coordinates $\ell\le K_n$, the intervals $I^{n,i}_\ell$ for
+$\ell\le N$ lie in the anchored site intervals, hence in $[2\theta,1-2\theta]$:
+condition (S0) of Definition~\ref{def:scheme} holds, and (S1), (S2) and the window
+membership hold by construction.
+
+Let $c_{n+1}=f_n(p_{n,1})$ and define the next anchored site
+$J_{n+1}=\prod_{\ell\le K_{n+1}}[u_\ell,u_\ell+\alpha]\times[0,1]^{\{K_{n+1}+1,\dots\}}$
+with $u_\ell=\min\bigl(\max((c_{n+1})_\ell-\alpha/2,\,2\theta),\,1-2\theta-\alpha\bigr)$.
+Every point $y\in J_{n+1}$ satisfies
+$|y_\ell-(c_{n+1})_\ell|\le\alpha+2\theta$ for $\ell\le K_{n+1}$, hence
+$\rho(y,c_{n+1})\le\alpha+2\theta+2^{-K_{n+1}}$.
+
+Define the model map $q_{n,i}\in C(\Q,\Q)$ coordinatewise.  Writing
+$I^{n,i}_\ell=[b_\ell,c_\ell]$ and
+$\lambda_\ell(t)=\min\bigl(\max\bigl(\tfrac{t-b_\ell}{c_\ell-b_\ell},0\bigr),1\bigr)$:
+\[
+\pi_\ell q_{n,i}(x)=
+\begin{cases}
+(u_\ell-2\theta)+(\alpha+4\theta)\,\lambda_\ell(x_\ell), & \ell\le N,\\[2pt]
+u_\ell+\alpha/2, & N<\ell\le K_{n+1},\\[2pt]
+(c_{n+1})_\ell, & \ell>K_{n+1}.
+\end{cases}
+\]
+The values in the first line range over $[u_\ell-2\theta,\,u_\ell+\alpha+2\theta]
+\subseteq[0,1]$ by the anchoring of $J_{n+1}$.  Choose Urysohn functions
+$\varphi_{n,i}:\Q\to[0,1]$ with $\varphi_{n,i}=1$ on $B_{n,i}$ and
+$\varphi_{n,i}=0$ off $O_{n,i}$, and set
+\[
+g_n=\Bigl(1-\sum_i\varphi_{n,i}\Bigr)f_n+\sum_i\varphi_{n,i}\,q_{n,i},
+\]
+a coordinatewise convex combination, hence a continuous self-map of $\Q$ agreeing with
+$f_n$ off $\bigcup_iO_{n,i}$ and with $q_{n,i}$ on $B_{n,i}$.
+
+\emph{Error estimate.}  For $x\in O_{n,i}$ and $\ell\le N$, the value
+$\pi_\ell q_{n,i}(x)$ lies in the $2\theta$-enlargement of the site interval
+$[u_\ell,u_\ell+\alpha]$, every point of which is within $\alpha+4\theta$ of
+$(c_{n+1})_\ell$; for $N<\ell\le K_{n+1}$ the value is the site centre, within
+$\alpha/2+2\theta$ of $(c_{n+1})_\ell$; and for $\ell>K_{n+1}$ it equals
+$(c_{n+1})_\ell$ exactly.  Hence
+\[
+\rho\bigl(q_{n,i}(x),c_{n+1}\bigr)
+\le\sum_{\ell\le K_{n+1}}2^{-\ell}\bigl(\alpha+4\theta\bigr)
+\le\alpha+4\theta .
+\]
+Also
+$\rho(c_{n+1},f_n(x))\le\rho(f_n(p_{n,1}),f_n(p_{n,i}))+\rho(f_n(p_{n,i}),f_n(x))
+<\alpha/16+\alpha/32<\alpha/8$.  Since $4\theta=\alpha/2$, we get
+$\rho(g_n(x),f_n(x))\le\rho(q_{n,i}(x),f_n(x))<\alpha+\alpha/2+\alpha/8<2\alpha$,
+and therefore $D(f,g)\le2\alpha<\eta$.
+
+\emph{Verification of (S3).}  The bricks at time $n+1$, constructed at the next step
+inside $\operatorname{int}(J_{n+1})$, have $\ell$-intervals contained in
+$[u_\ell,u_\ell+\alpha]$ for every $\ell\le K_{n+1}$, so
+$m^-_{n+1,\ell}\ge u_\ell$ and $m^+_{n+1,\ell}\le u_\ell+\alpha$ for $\ell\le N$.
+If $x\in B_{n,i}$ has $x_\ell=b_\ell$, then
+$\pi_\ell g_n(x)=\pi_\ell q_{n,i}(x)=u_\ell-2\theta\le m^-_{n+1,\ell}-2\theta$,
+and on the opposite face the value is
+$u_\ell+\alpha+2\theta\ge m^+_{n+1,\ell}+2\theta$.  Thus (S3) holds with margin
+$2\theta>\theta$, for \emph{whatever} bricks the next step selects inside $J_{n+1}$.
+Carrying out the induction for all $n$ yields $g\in\mathcal U_N(W_\bullet)$ with
+$D(f,g)<\eta$.
+\end{proof}
+
+\section{The residual depth hierarchy}\label{sec:residual}
+
+\begin{theorem}[Finite-depth genericity]\label{thm:main}
+For every $N\ge1$ and every window sequence $W_\bullet$ the class
+$\mathcal U_N(W_\bullet)$ is open and dense in $(\F(\Q),D)$.  Hence
+\[
+\mathcal S(W_\bullet)=\bigcap_{N\ge1}\mathcal U_N(W_\bullet)
+\]
+is residual.  Moreover, for any countable family $\{W^a_\bullet\}_{a\ge1}$ of window
+sequences, $\bigcap_{a\ge1}\mathcal S(W^a_\bullet)$ is residual, and every
+$g$ in this set admits, for every $a$ and every depth $N$, a strict depth-$N$
+$W^a_\bullet$-windowed brick scheme with the exact one-step covering property of
+Theorem~\ref{thm:covering}.
+\end{theorem}
+
+\begin{proof}
+Openness is Lemma~\ref{lem:open}, density is Lemma~\ref{lem:density}, and
+$(\F(\Q),D)$ is Baire by Lemma~\ref{lem:baire}; countable intersections of residual
+sets are residual.  The covering property is Theorem~\ref{thm:covering}.
+\end{proof}
+
+\section{Generic entropy bursts in every tail}\label{sec:burst}
+
+The depth hierarchy of Theorem~\ref{thm:main} is a statement about one-step structure.
+We now prove that a genuinely \emph{dynamical}, infinite-horizon shadow of the dense
+theorem of \cite{Shmalo2026} also holds residually.  Recall the tail Bowen data: for
+$g\in\F(\Q)$ and $r\ge0$, $G^0_r=\operatorname{id}$,
+$G^j_r=g_{r+j}\circ\cdots\circ g_{r+1}$, the Bowen metric
+$\rho^{g}_{r,N}(x,y)=\max_{0\le j<N}\rho(G^j_r(x),G^j_r(y))$, and
+$s_{r,N}(g,\varepsilon)$, the maximal cardinality of an
+$(r,N,\varepsilon)$-separated set.  The tail scale entropy is
+$H_{g,r}(\varepsilon)=\limsup_N\frac1N\log s_{r,N}(g,\varepsilon)$.
+
+\begin{lemma}\label{lem:sep-open}
+For fixed $r\ge0$, $N\ge1$, $\varepsilon>0$ and $m\in\mathbb N$, the set
+$\{g\in\F(\Q):s_{r,N}(g,\varepsilon)\ge m\}$ is open.
+\end{lemma}
+
+\begin{proof}
+Let $g$ admit an $(r,N,\varepsilon)$-separated set $E=\{x_1,\dots,x_m\}$, with
+$\min_{u\ne v}\rho^g_{r,N}(x_u,x_v)=\varepsilon+2\kappa$ for some $\kappa>0$.  The maps
+$g_{r+1},\dots,g_{r+N-1}$ are uniformly continuous; hence there is $\delta>0$ such
+that $D(h,g)<\delta$ implies
+$\sup_x\rho\bigl(H^j_r(x),G^j_r(x)\bigr)<\kappa$ for $0\le j<N$, by a finite induction
+on $j$:
+$\rho(H^{j}_r(x),G^{j}_r(x))\le
+\rho\bigl(h_{r+j}(H^{j-1}_rx),g_{r+j}(H^{j-1}_rx)\bigr)
++\rho\bigl(g_{r+j}(H^{j-1}_rx),g_{r+j}(G^{j-1}_rx)\bigr)
+\le D(h,g)+\omega_{g_{r+j}}\bigl(\rho(H^{j-1}_rx,G^{j-1}_rx)\bigr)$,
+where $\omega_u$ is a modulus of continuity of $u$.  Then $E$ is
+$(r,N,\varepsilon)$-separated for every such $h$.
+\end{proof}
+
+\begin{theorem}[Residual entropy bursts]\label{thm:burst}
+The set
+\[
+\mathcal R \;=\;
+\Bigl\{\,g\in\F(\Q):\ \forall r\ge0\ \forall q\ge1\ \forall j\ge1:\
+\limsup_{N\to\infty}\ \sup_{0<\varepsilon<1/j}
+\frac{\log s_{r,N}(g,\varepsilon)}{N\,\log(1/\varepsilon)}\;\ge\;q\Bigr\}
+\]
+is residual in $(\F(\Q),D)$.  In particular, for a residual set of systems,
+\emph{every} tail exhibits separated orbit growth of every order $q$ at arbitrarily
+fine scales:
+$\limsup_{N}\sup_{\varepsilon<1/j}\frac{\log s_{r,N}}{N\log(1/\varepsilon)}=\infty$
+for every $r$ and $j$.
+\end{theorem}
+
+\begin{proof}
+For $r,q,j,N_0$ let
+\[
+V^{r,q,j}_{N_0}
+=\bigcup_{\substack{\varepsilon\in\mathbb Q,\ 0<\varepsilon<1/j}}
+\ \bigcup_{N\ge N_0}
+\bigl\{\,g:\ s_{r,N}(g,\varepsilon)>\varepsilon^{-qN}\,\bigr\}.
+\]
+Each $V^{r,q,j}_{N_0}$ is open by Lemma~\ref{lem:sep-open}.  We claim it is dense.
+Let $f\in\F(\Q)$ and $\eta>0$.  By the dense Hilbert-cube theorem of
+\cite[Theorem~3.6]{Shmalo2026} there is $g$ with $D(f,g)<\eta$ and constants
+$C_{g,q+1}$ such that
+$H_{g,r}(\varepsilon)\ge(q+1)\log(1/\varepsilon)-C_{g,q+1}$
+for every $r\ge0$ and all sufficiently small $\varepsilon>0$.  Choose a rational
+$\varepsilon<1/j$ small enough that
+$(q+1)\log(1/\varepsilon)-C_{g,q+1}>q\log(1/\varepsilon)$, i.e.\
+$\log(1/\varepsilon)>C_{g,q+1}$.  Since
+$H_{g,r}(\varepsilon)>q\log(1/\varepsilon)$, there are arbitrarily large $N$ with
+$\frac1N\log s_{r,N}(g,\varepsilon)>q\log(1/\varepsilon)$, in particular some
+$N\ge N_0$; then $s_{r,N}(g,\varepsilon)>\varepsilon^{-qN}$ and $g\in V^{r,q,j}_{N_0}$.
+Thus each $V^{r,q,j}_{N_0}$ is open dense, and
+$\mathcal R\supseteq\bigcap_{r,q,j,N_0}V^{r,q,j}_{N_0}$
+is residual: indeed, if $g$ lies in the intersection then for all $r,q,j$ and every
+$N_0$ there are $N\ge N_0$ and $\varepsilon<1/j$ with
+$\log s_{r,N}(g,\varepsilon)>qN\log(1/\varepsilon)$, which is exactly the displayed
+$\limsup\sup$ condition.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:burst} is the residual shadow of the dense
+metric-mean-dimension theorem: it asserts unbounded \emph{burst} complexity, where
+the certifying scale $\varepsilon$ may vary with the horizon $N$.  Upgrading it to
+residual infinite \emph{upper metric mean dimension} --- where a single scale sequence
+$\varepsilon\downarrow0$ must work for fixed-$\varepsilon$ horizon limits --- runs
+precisely into the scale-pinning issue discussed in Section~\ref{sec:intro}; we leave
+it as part of Problem~\ref{prob:main}.  Note also that near contracting systems the
+fixed-scale sets $\{g:H_{g,r}(\varepsilon_0)>0\}$ fail to be dense (a $\delta$-ball
+around a constant system has all tail orbits eventually $2\delta$-confined, killing
+all separation at scales above $4\delta$), so the burst formulation, with its
+scale flexibility, is the natural residual statement at this level of generality.
+\end{remark}
+
+\section{The obstruction: exact schemes have empty interior}\label{sec:obstruction}
+
+We recall the exact class of \cite{Shmalo2026}.
+
+\begin{definition}[{Exact windowed Hilbert horseshoe; \cite[Definition~12.1]{Shmalo2026}}]\label{def:exact}
+A system $g\in\F(\Q)$ has an exact $W_\bullet$-windowed Hilbert horseshoe if there are
+$\alpha\in(0,1/4)$, integers $K_n\ge q_n$, $(\alpha,K_n)$-boxes $J_n$, and
+finite-support boxes $B_{n,1},\dots,B_{n,M_n}\subseteq\operatorname{int}(J_n)\cap W_n$
+with $\diam_\rho(B_{n,i})<\gamma_n$, pairwise separation
+$\dist_{q_n}(B_{n,i},B_{n,j})>c_{\alpha,q_n}M_n^{-1/q_n}$, and
+\[
+g_n(B_{n,i})=J_{n+1}\qquad(n\ge1,\ 1\le i\le M_n).
+\]
+Let $\EX$ denote the set of such systems.
+\end{definition}
+
+\begin{theorem}[Empty interior]\label{thm:empty}
+$\EX$ is dense in $(\F(\Q),D)$ and has empty interior.  More generally, let
+$\mathcal P\subseteq\F(\Q)$ be any class such that every $g\in\mathcal P$ admits some
+$n\ge1$ and a compact set $A\subseteq\Q$ for which
+$\pi_j\bigl(g_n(A)\bigr)=[0,1]$ for infinitely many coordinates $j$.  Then
+$\mathcal P$ has empty interior.
+\end{theorem}
+
+\begin{proof}
+Density of $\EX$ is \cite[Proposition~12.2]{Shmalo2026}.  For the rest, fix any
+$g\in\F(\Q)$ and $\delta>0$; we produce $h$ with $D(h,g)<\delta$ and
+$h\notin\mathcal P$.  Choose $L$ with $2^{-L}<\delta$ and define the
+\emph{coordinate squeeze} $\Phi:\Q\to\Q$,
+\[
+\Phi(y)_j=
+\begin{cases}
+y_j, & j\le L,\\
+\tfrac18+\tfrac34\,y_j, & j>L .
+\end{cases}
+\]
+$\Phi$ is continuous and
+$\rho(\Phi(y),y)=\sum_{j>L}2^{-j}\bigl|\tfrac18-\tfrac{y_j}{4}\bigr|
+\le\tfrac38\,2^{-L}<\delta$.
+Set $h=(\Phi\circ g_n)_{n\ge1}$, so $D(h,g)<\delta$.  For every $n$ and every
+$x\in\Q$ and every $j>L$ we have $\pi_j h_n(x)\in[\tfrac18,\tfrac78]$.  Hence for
+every $n$ and every compact $A$, $\pi_j(h_n(A))\subseteq[\tfrac18,\tfrac78]\ne[0,1]$
+for all $j>L$: the image projections of $h$ are full in at most finitely many
+coordinates.  Thus $h\notin\mathcal P$, and $\mathcal P$ contains no $D$-ball.
+
+Finally, $\EX$ is such a class: if $g\in\EX$, then
+$g_1(B_{1,1})=J_2$, and the $(\alpha,K_2)$-box $J_2$ has
+$\pi_j(J_2)=[0,1]$ for every $j>K_2$, which is an infinite set of coordinates.
+Hence $\operatorname{int}(\EX)=\emptyset$.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:empty} sharpens the observation of \cite[Section~14]{Shmalo2026}
+from ``not asserted to be open'' to ``cannot meet any open set in a stable way'': the
+dense class $\EX$ is topologically thin in the strongest possible sense compatible
+with density.  The squeeze perturbation also destroys surjectivity of each map and
+every property forcing deep full-range images, e.g.\ exactness onto any
+finite-support box family with unbounded supports.  Together with
+Remark~\ref{rem:depth-cost}, this closes the open-versus-dense question raised in
+\cite[Section~14]{Shmalo2026}: openness is impossible at infinite depth, holds with
+radius $\theta2^{-N-1}$ at depth $N$, and the residual object produced by Baire
+fusion is the full depth hierarchy $\mathcal S(W_\bullet)$ of
+Theorem~\ref{thm:main}.
+\end{remark}
+
+\section{What remains open}\label{sec:open}
+
+\begin{problem}\label{prob:main}
+Let $W_\bullet$ be a sequence of dense open subsets of $\Q$ and consider the class
+$\mathcal C(W_\bullet)$ of systems $g\in\F(\Q)$ such that for every $r\ge0$ the tail
+$\operatorname{tail}_rg$ admits a compact symbolic semifactor onto a full
+variable-alphabet shift, a continuum-sized DC1-scrambled set visiting
+$W_{r+j+1}$ at tail time $j$, infinite topological entropy, and
+$H_{g,r}(\varepsilon)\ge q\log(1/\varepsilon)-C_{g,q}$ for every finite $q$.  By
+\cite[Theorem~3.6]{Shmalo2026}, $\mathcal C(W_\bullet)$ is dense.  Is
+$\mathcal C(W_\bullet)$ residual?  Is the subclass with infinite upper metric mean
+dimension in every tail residual?
+\end{problem}
+
+The results of this paper bound the possible strategies.  By
+Theorem~\ref{thm:empty}, no proof can proceed through an open class of systems with
+unbounded-depth exact or margin-protected covering, since every such class has empty
+interior; by Theorem~\ref{thm:main} the natural residual envelope is the depth
+hierarchy $\mathcal S(W_\bullet)$, on which one-step covering is exact at every
+finite depth but infinite-horizon orbit selection is not automatic; and by
+Theorem~\ref{thm:burst} the burst form of infinite-order complexity is already
+residual.  What is missing is exactly a mechanism producing, for a residual set of
+systems, orbits threading infinitely many prescribed bricks --- equivalently, a
+replacement for the backward induction of \cite[Lemma~13.1]{Shmalo2026} that consumes
+only finite-depth information per step.  The quantitative erosion estimate of
+Remark~\ref{rem:depth-cost} suggests that such a mechanism, if it exists, must
+interleave depth and horizon nontrivially; we intend to return to this elsewhere.
+
+\subsection*{Acknowledgments}
+The research presented in this paper was supported by the European Research Council
+(ERC) under the European Union's Horizon Europe research and innovation programme
+(grant agreement No.\ 101041711), by the Israel Science Foundation (grant number
+2258/19) and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\subsection*{Declaration on generative AI}
+During the preparation of this work the author used generative AI tools to accelerate
+drafting and revision.  All mathematical claims, proofs, and bibliographic information
+were subsequently reviewed and edited by the author, who takes full responsibility for
+the content of the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{Shmalo2026}
+Y.~Shmalo,
+\emph{Strict cubical horseshoes and all-tail full complexity in non-autonomous
+dynamics}, manuscript, submitted, 2026.
+
+\bibitem{Miranda}
+C.~Miranda,
+\emph{Un'osservazione su un teorema di Brouwer},
+Boll.\ Un.\ Mat.\ Ital.\ (2) \textbf{3} (1940--41), 5--7.
+
+\bibitem{Kulpa}
+W.~Kulpa,
+\emph{The Poincar\'e--Miranda theorem},
+Amer.\ Math.\ Monthly \textbf{104} (1997), no.~6, 545--550.
+
+\bibitem{KolyadaSnoha}
+S.~Kolyada and L.~Snoha,
+\emph{Topological entropy of nonautonomous dynamical systems},
+Random Comput.\ Dynam.\ \textbf{4} (1996), 205--233.
+
+\bibitem{BalibreaProblems}
+F.~Balibrea,
+\emph{On problems of topological dynamics in non-autonomous discrete systems},
+Appl.\ Math.\ Nonlinear Sci.\ \textbf{1} (2016), no.~2, 391--404.
+
+\bibitem{Oxtoby}
+J.~C.~Oxtoby,
+\emph{The Banach--Mazur game and Banach category theorem},
+in: Contributions to the Theory of Games, Vol.~III,
+Ann.\ of Math.\ Stud.\ \textbf{39}, Princeton Univ.\ Press, 1957, 159--163.
+
+\bibitem{LindenstraussWeiss}
+E.~Lindenstrauss and B.~Weiss,
+\emph{Mean topological dimension},
+Israel J.\ Math.\ \textbf{115} (2000), 1--24.
+
+\bibitem{CRV}
+M.~Carvalho, F.~B.~Rodrigues and P.~Varandas,
+\emph{Generic homeomorphisms have full metric mean dimension},
+Ergodic Theory Dynam.\ Systems \textbf{42} (2022), no.~1, 40--64.
+
+\end{thebibliography}
+
+\end{document}

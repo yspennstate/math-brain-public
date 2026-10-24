@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B07",
+  "run_id": "20260924T013915Z-account03-B07-qform-r43",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "02921811b74daa8c751faf870eeec499820dd94b",
+  "control_commit_prepublication": "67340898014b6d913e553869c3cf306b34b9ceef",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b028ca514bbb6d42baf6b544d787b55fcac0c24b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260924T013915Z-account03-B07-qform-r43/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260924T013915Z-account03-B07-qform-r43/CHECKS.txt"
+  },
+  "status": "PROVED_TWO_SIDED_E2_PLANE_SYNCHRONIZATION_AND_RANK12_CROSS_SKELETON_FULL_TARGET_OPEN",
+  "new_claims": [
+    {
+      "id": "QFORM-E2-TWO-SIDED-PLANE-SYNCHRONIZATION-v1",
+      "status": "PROVED_SUPPORTING_STRUCTURAL_THEOREM",
+      "scope": "For a literal crossing K with e2(KK^T)>=2^-12 and e3(KK^T)<2^-30, either an anchor-augmented literal crossing has e3>=2^-30 and is analytically paid, or both entire anchor interfaces are within sqrt(3)/512 Frobenius distance of fixed rank-at-most-two determinant-heavy planes determined by K."
+    },
+    {
+      "id": "QFORM-R12-PHYSICAL-CROSS-SKELETON-v1",
+      "status": "PROVED_SUPPORTING_STRUCTURAL_THEOREM",
+      "scope": "In the un-paid branch, all H-I, H-J and I-J physical cross-bank coefficients equal a rank-at-most-12 symmetric cross carrier plus an exact retained Frobenius tail of norm <sqrt(12)/512. Same-bank blocks and outside couplings are untouched."
+    }
+  ],
+  "premises": [
+    "Complete E2 determinant-pair inclusion marginals sum to 2.",
+    "Second Newton transform H2(B)=B^2-tr(B)B+e2(B)I has eigenvalues e2(B)(1-alpha_j).",
+    "Cauchy-Binet / rank-one update makes e3([K U][K U]^T)-e3(KK^T) at least tr(U^T H2(KK^T)U).",
+    "account02/B07@81d6956476fa400f61d266effb4123a42fe3185c: tau_2(K)e2(KK^T)<=3e3(KK^T).",
+    "account02/B03 marginal-free physical-E3 receiver: positive literal cross third volume yields continuous bounded density with scale C3*Z3^(-1/6)."
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B07",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "dab16464e87c939cc0cf3fd01d070045290192fa",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B07/20260923T161510Z-account04-B07-coordinate-core-r2/REPORT.md",
+    "actual_inequality": "On three physical high-diagonal anchors with |A_hh|>=1/64 and mutual |A_hk|<=1/768, the r=0 coordinate-core theorem gives s3>=1/64-3/768=3/256 and full ambient essential density <=1283.393676611072... ."
+  },
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE"
+  ],
+  "continuity": {
+    "full_target": "OPEN",
+    "physical_E3_exit": "CONTINUOUS_C0",
+    "partner_coordinate_core_exit": "ESSENTIAL_BOUNDEDNESS_ONLY"
+  },
+  "unresolved_implication": "QFORM-R12-CROSS-SKELETON-PLUS-LOWCURVATURE-BANK-RECEIVER-v1: consume the exact rank<=12 inter-bank cross carrier plus retained Frobenius tail <sqrt(12)/512 while allowing arbitrary same-bank blocks and all outside couplings. The separate E2(K)<2^-12 diffuse low-diagonal cloud remains unpaid.",
+  "next_step": "Try a product-law receiver for finite-rank cross coupling plus arbitrary same-bank phases, or show the three-large-eigenvalue hypothesis forces a paid physical E3/principal-core subbranch inside this skeleton.",
+  "checker_status": "PASS",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

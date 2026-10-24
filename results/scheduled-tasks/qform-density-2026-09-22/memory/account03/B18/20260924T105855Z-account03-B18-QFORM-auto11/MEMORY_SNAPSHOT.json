@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260924T105855Z-account03-B18-QFORM-auto11",
+  "control_start_commit": "4b9131a2ec2f3cfd000c460f4bd748f3ee5c0a9d",
+  "control_prepublication_commit": "b456ef3f05c2fa87220af0fe6512486d4e8f3784",
+  "control_revision": "2026-09-22.15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "new_result_ids": ["QFORM-LITERAL-RANK1-DEFINITE-TRANSVERSE-PLANE-v1"],
+  "result_summary": "A literal zero-self source coordinate coupled to a 3D active complement with definite 2D transverse curvature has a continuous C0 output density bounded by 2^(7/4)sqrt(pi)/sqrt(beta sqrt(Delta)), provided outside-to-complement affine directions remain in that active 3-plane.",
+  "primary_sources": [
+    {"citation": "Livshyts-Paouris-Pivovarov, On sharp bounds for marginal densities of product measures, Israel J. Math. 216 (2016), arXiv:1507.07949, Theorem 1.1", "use": "3D orthogonal marginal density cap 2^(3/2) for cap-one product inputs"},
+    {"citation": "Herry-Malicet-Poly, Regularity of laws via Dirichlet forms -- Application to quadratic forms in independent and identically distributed random variables, arXiv:2303.09488", "use": "scope comparison only; hypotheses are too narrow for the owner target"}
+  ],
+  "corrections_consumed": ["QFORM-POINTWISE-DECAY-FALSE","QFORM-FIBER-SUP-DIMENSION-LOSS","QFORM-NO-INDEPENDENCE-AFTER-ROTATION","QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1","QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1","QFORM-NEARCOLOOP-MARGINAL-CAPS-NOT-PROVENANCE-v1","QFORM-HUBSTAR-FIBERL2-MIXEDNORM-UNIVERSAL-FALSE-v1"],
+  "partner_result_applied": {
+    "worker": "account04/B18",
+    "run": "20260924T032058Z-account04-B18-QFORM-r6",
+    "report_commit": "48c914d1bd070cad090d6d5deac743bd8465bc15",
+    "inequality": "||p_Q||_infinity <= 2 sqrt(2pi)/sqrt(c1 c2)",
+    "application": "For Q_eps=2X1W+2epsX2Y1+2epsX3Y2+Y1^2+Y2^2, c1=c2=eps; combine with the new uniform 2^(7/4)sqrt(pi) bound."
+  },
+  "scientific_outputs": {
+    "repository": "yspennstate/math-open-problems",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260924T105855Z-account03-B18-QFORM-auto11/",
+    "report_commit": "66fc5c80cc24b1917c2c83114dbd47e197018d2f",
+    "checks_commit": "5f25adc61b2f8579204f97ee309301309b0e3e60",
+    "checks_status": "PASS"
+  },
+  "handoff_commit": "453a2218e351985e6110d56d2dd2b703dfde82c2",
+  "full_target_status": "OPEN",
+  "continuity_full_target_status": "OPEN",
+  "unresolved_implication": "Handle indefinite or singular transverse curvature and active complement dimension above three while retaining product provenance; separately derive a paid geometry from bare s3(A)>=1.",
+  "next_step": "Replace the definite 2D slice cap by a quantitative logarithmic indefinite-slice envelope and integrate it jointly against the literal rank-one source smoother without taking a dimension-losing fiber supremum."
+}

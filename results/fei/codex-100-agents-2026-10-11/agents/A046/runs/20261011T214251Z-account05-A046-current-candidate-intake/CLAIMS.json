@@ -1,0 +1,44 @@
+[
+  {
+    "claim_id": "A046-AND-ENDPOINT-TAX-NECESSITY",
+    "version": 1,
+    "exact_statement": "For the actual Boolean sign g(x,y)=(-1)^(xy) on independent Bernoulli inputs with P(X=1)=p and fixed P(Y=1)=q in (0,1/2), and physical reveal A={X}, the Shannon spectral/physical-channel quantities satisfy J_A-M_A=4q(1-2q)*p*log2(1/p)+O_q(p) as p tends to zero. Consequently every scalar tau(p) such that J_A<=M_A+tau(p) for all finite actual Boolean signs under every interior product bias and every singleton block of bias p satisfies liminf_{p->0} tau(p)/(p*log2(1/p))>=1/2. In particular no universal O(p) tax is valid. This does not refute B09 Delta(p), prove its optimality, or disprove uniform-cube FEI.",
+    "hypotheses": [
+      "actual two-bit AND sign, not an arbitrary normalized spectrum",
+      "independent interior product biases p and q",
+      "q fixed in (0,1/2) for the asymptotic; q=1/4 for the universal lower bound",
+      "orthonormal biased Fourier basis including the empty coefficient",
+      "physical reveal A={X} with actual branch probabilities",
+      "M_A=H(S_A|S_B), J_A=I(Z;S_B), all entropy in bits"
+    ],
+    "statement_sha256": "fa3b9633a087f44695f64cf7aa7c4a70bb4a03c47363878ac59a090295ef5732",
+    "contributors": [
+      "account05/A046"
+    ],
+    "proof_source": {
+      "run_id": "20261011T214251Z-account05-A046-current-candidate-intake",
+      "path": "REPORT.md",
+      "locator": "complete derivation, steps 1-4",
+      "finite_checker": "code/exact_check.py"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "universal scalar tax tau(p)=O(p) in biased singleton J_A<=M_A+tau(p)",
+      "universal tau(p)=c*p*log2(1/p)+O(p) with c<1/2"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A047",
+      "A048",
+      "A071",
+      "A092",
+      "A087",
+      "B09",
+      "B19",
+      "B20"
+    ]
+  }
+]

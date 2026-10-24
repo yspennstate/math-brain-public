@@ -1,0 +1,126 @@
+{
+  "full_fei_status": "OPEN",
+  "chain_inventory": [
+    {
+      "packet_id": "A001",
+      "reports": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261011T210330Z-account05-A001-quantifier-audit\\REPORT.md"
+      ],
+      "availability": "PRESENT"
+    },
+    {
+      "packet_id": "A002",
+      "reports": [],
+      "availability": "NO_REPORT_AT_INTAKE"
+    },
+    {
+      "packet_id": "A003",
+      "reports": [],
+      "availability": "NO_REPORT_AT_INTAKE"
+    },
+    {
+      "packet_id": "A004",
+      "reports": [],
+      "availability": "NO_REPORT_AT_INTAKE"
+    },
+    {
+      "packet_id": "A005",
+      "reports": [],
+      "availability": "NO_REPORT_AT_INTAKE"
+    },
+    {
+      "packet_id": "A006",
+      "reports": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261011T210855Z-account05-A006-posterior-forest-optimization\\REPORT.md"
+      ],
+      "availability": "PRESENT"
+    },
+    {
+      "packet_id": "A007",
+      "reports": [],
+      "availability": "NO_REPORT_AT_INTAKE"
+    },
+    {
+      "packet_id": "A008",
+      "reports": [],
+      "availability": "NO_REPORT_AT_INTAKE"
+    },
+    {
+      "packet_id": "A009",
+      "reports": [],
+      "availability": "NO_REPORT_AT_INTAKE"
+    },
+    {
+      "packet_id": "A010",
+      "reports": [],
+      "availability": "NO_REPORT_AT_INTAKE"
+    },
+    {
+      "packet_id": "A011",
+      "reports": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A011\\runs\\20261011T213831Z-account05-A011-representation-existence\\REPORT.md"
+      ],
+      "availability": "PRESENT"
+    },
+    {
+      "packet_id": "A012",
+      "reports": [],
+      "availability": "NO_REPORT_AT_INTAKE"
+    },
+    {
+      "packet_id": "A013",
+      "reports": [],
+      "availability": "NO_REPORT_AT_INTAKE"
+    },
+    {
+      "packet_id": "A014",
+      "reports": [],
+      "availability": "NO_REPORT_AT_INTAKE"
+    },
+    {
+      "packet_id": "A015",
+      "reports": [],
+      "availability": "NO_REPORT_AT_INTAKE"
+    }
+  ],
+  "gaps": [
+    {
+      "gap_id": "G-J-COST",
+      "exact_first_unsupported_line": "For every Boolean f there exists one globally fixed admissible representation and reference whose complete expected posterior residual is at most K I(f) for one absolute finite K.",
+      "status": "OPEN_NOT_USED_BY_ACCEPTED_RESTRICTED_PROOFS",
+      "consumer": "A089"
+    },
+    {
+      "gap_id": "G-LOWSEL-COLLISION",
+      "exact_first_unsupported_line": "Physical-path labels and support membership bits can be jointly compressed with a complete normalized reference under an explicit new structural hypothesis beyond I_sel>=gamma D.",
+      "status": "OPEN_CONTINUATION",
+      "consumer": "A089",
+      "precise_test_family": "First-positive a-selector comb: all stopping labels y1 and only terminal label y2; D=2(1-2^-a), B=a*2^(-(a-1)), hence B/D->0.",
+      "retain": [
+        "physical path label",
+        "leaf costs",
+        "Kraft normalizer",
+        "signed cross terms",
+        "posterior H(W|S)",
+        "no repeated physical influence payment"
+      ]
+    },
+    {
+      "gap_id": "A086-MISSING-ORIGINALS",
+      "exact_first_unsupported_line": "No complete source was available for A002-A005,A007-A010,A012-A015 at intake; no verdict can be issued.",
+      "status": "DEPENDENCY_NOT_AVAILABLE",
+      "consumer": "A096"
+    },
+    {
+      "gap_id": "A086-A001-UNRECONSTRUCTED-INTERFACES",
+      "exact_first_unsupported_line": "The remaining broad A001 inventory analytic dependencies have not been independently reconstructed by this stage.",
+      "status": "REVIEW_OUTSTANDING",
+      "consumer": "A094"
+    }
+  ],
+  "reviewers": [
+    "A094",
+    "A085"
+  ],
+  "repair_contribution": false
+}

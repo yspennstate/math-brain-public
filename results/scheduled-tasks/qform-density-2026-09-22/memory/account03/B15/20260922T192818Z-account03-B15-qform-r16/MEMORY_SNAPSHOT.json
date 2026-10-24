@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260922T192818Z-account03-B15-qform-r16",
+  "control_commit": "f9c9de562645a66900820391f4959519d09842d0",
+  "control_revision": "2026-09-22.15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": ["QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1","QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1","QFORM-POINTWISE-DECAY-FALSE","QFORM-FIBER-SUP-DIMENSION-LOSS","QFORM-NO-INDEPENDENCE-AFTER-ROTATION"],
+  "partner_result_applied": {
+    "worker": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "07672b7beb8f867c7a7b973aa3157a42ae506460",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md",
+    "application": "smooth cap-one approximants have C0 outputs; new L1-to-Linfinity stability forces uniform convergence to rough zero-diagonal outputs"
+  },
+  "new_results": [
+    "PRODUCT-VARIATION-KERNEL: k(s)<=4 log(1+(1/2)sqrt(delta/|s|))",
+    "QUADRATIC-AVERAGE: E Phi_delta(W)<=Omega(L sqrt(delta)), Omega(a)=2a log(1+2/a)+4log(1+a/2)",
+    "TRIANGLE-MARGINAL-STABILITY: explicit sqrt(delta)log(1/delta) output-sup modulus",
+    "BILINEAR-4BLOCK-STABILITY: sqrt(2pi delta)/sigma_min(C) output-sup modulus",
+    "ZERO-DIAGONAL-C0: diag(A)=0 and rank(A)>=3 implies matrix-dependent bounded density in C0",
+    "CANDIDATE-FULL-ROUGH-CONTINUITY: combine with prior nonzero-diagonal theorem; independent review required"
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ad09656b2fda9de070137f9df96550d87f73f278",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T192818Z-account03-B15-qform-r16/REPORT.md"
+  },
+  "handoff_commit": "72ee3b82dc363a7e4d82a7fbd15aebdeed3f244f",
+  "unresolved": "Universal dimension- and matrix-independent density height remains open; local constants can diverge on diffuse or near-degenerate matrices.",
+  "next_step": "account04/B15 independent review; central proof must aggregate original-coordinate product structure before reciprocal local-minor costs."
+}

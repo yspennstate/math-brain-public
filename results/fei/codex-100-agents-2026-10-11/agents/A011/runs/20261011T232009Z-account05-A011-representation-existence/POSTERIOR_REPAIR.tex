@@ -1,0 +1,178 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\CE}{\operatorname{CE}}
+\newcommand{\I}{\operatorname{I}}
+\begin{document}
+\title{An output-only reference repairing the repeated-label comb transcript}
+\author{A011, B03; stage 20261011T232009Z}
+\maketitle
+All logarithms are to base two unless written $\ln$; cubes are uniform.
+The result repairs an existing complete-code cost, not universal FEI.
+
+\begin{lemma}[Binary empty-sector correction]
+For $p+q=1$, $p,q\ge0$, with $L(t)=t\log(1/t)$ and $L(0)=0$,
+\[
+ L(p^2)+L(q^2)\le4pq.
+\]
+\end{lemma}
+\begin{proof}
+By symmetry assume $0\le p\le1/2$. Set
+$A(p)=p^2\log(1/p)+(1-p)^2\log(1/(1-p))$ and
+$E(p)=2p(1-p)-A(p)$. Then $E(0)=E(1/2)=0$ and
+\[
+ E'(0)=2-1/\ln2>0,\quad E'(1/2)=0,
+ \quad E''(p)=-4+\frac{2\ln(p(1-p))+6}{\ln2},
+ \quad E'''(p)=\frac{2}{\ln2}\left(\frac1p-\frac1{1-p}\right)>0.
+\]
+Also $E''(0)=-\infty$ and
+$E''(1/2)=(6-8\ln2)/\ln2>0$. Thus $E''$ changes sign once,
+$E'$ first decreases then increases to zero, and $E$ first increases then
+decreases to zero. Consequently $E\ge0$. Since
+$L(p^2)+L(q^2)=2A(p)$, the result follows. The elementary bounds
+$1/2<\ln2<3/4$ justify the stated signs: the lower bound follows by
+integrating $1/t$ on $[1,2]$, and the upper bound by the strict trapezoid
+bound for the convex function $1/t$ on that interval.
+\end{proof}
+
+\begin{theorem}[All repeated two-label combs]
+Let $a\ge1$, and let $\sigma_1,\ldots,\sigma_{a+1}\in\{-1,1\}$
+be arbitrary. Query independent selectors $x_1,\ldots,x_a$ in order,
+stopping at the first positive coordinate; index $a+1$ is the terminal
+all-negative leaf. A positive label selects $\chi_A(y)$, and a negative
+label selects $\chi_B(y)$, for distinct nonempty sets $A,B$ on the same
+independent data cube. The data supports can overlap. Call the result $F$.
+
+There is an explicit normalized output spectral reference $Q_F$, fixed
+from the labelled tree, whose full cost satisfies
+\[
+ \CE(\widehat F^2,Q_F)=H(F)
+ \le C_*\I_{\rm sel}(F),\qquad
+ C_*=4+\frac{2}{e\ln2}<\frac{41}{8}.
+\]
+It admits a physical output prefix code of expected length at most
+$(41/8)\I(F)$. No boundary-retention hypothesis is needed, including when
+$\I_{\rm sel}/D\to0$, where $D=2(1-2^{-a})$.
+\end{theorem}
+\begin{proof}
+Define physical suffix means and disagreement probabilities by
+\[
+ m_{a+1}=\sigma_{a+1},\qquad
+ m_j=(\sigma_j+m_{j+1})/2,\qquad
+ r_j=(1-\sigma_jm_{j+1})/2,
+ \qquad p=(1+m_1)/2,\quad q=1-p.
+\]
+For the Boolean selector-label sign $g$, repeated restriction gives
+\[
+ \widehat g(T)=2^{1-j}\sigma_jr_j(-1)^{|T|-1},
+ \qquad T\ne\varnothing,\quad j=\max T.
+\]
+Indeed, all earlier selectors continue on the negative branch, producing
+factors $(1-x_i)/2$; at query $j$ the coefficient of $x_j$ is
+$(\sigma_j-m_{j+1})/2=\sigma_jr_j$. This proves the formula directly.
+Now $F=(1+g)\chi_A/2+(1-g)\chi_B/2$. Its empty-selector masses are
+$p^2,q^2$. For every $j$, its $2^j$ max-index-$j$ output atoms each have
+mass $2^{-2j}r_j^2$. Their total is
+\[
+ v_j=2^{-j}r_j^2,
+ \qquad p^2+q^2+\sum_j v_j=1.
+\]
+The latter follows from the explicit Fourier expansion and Parseval of
+the actual Boolean $F$, including zero atoms. A normalized generator
+selects either empty atom or a group $j$ with these masses. Conditional
+on $j$, choose a fair data label and a uniform subset of $[j-1]$, then
+include $j$. This is $Q_F$, with no physical stopping label. All its
+parameters were computed from the physical suffix means.
+
+Write $J=\I_{\rm sel}(F)$. The physical boundary calculation and the
+uniform predecessor-subset calculation give respectively
+\[
+ J=\sum_j2^{-j}r_j,
+ \qquad J=\frac12\sum_j(j+1)v_j.
+\]
+For the first, reaching query $j$ has probability $2^{-(j-1)}$, its
+continuation has a different character with probability $r_j$, and
+different unsigned characters disagree on half the data cube. For the
+second, each group has expected selector cardinality $(j+1)/2$.
+Put $V=\sum_jv_j=2pq$. The complete output cost is
+\[
+ L(p^2)+L(q^2)+2\sum_j jv_j
+       +2\sum_{j:r_j>0}v_j\log(1/r_j).
+\]
+The lemma bounds its empty part by $2V$, while its middle part is exactly
+$4J-2V$. Thus no empty-sector or normalization term is left unpaid.
+The scalar maximum $r\log(1/r)\le1/(e\ln2)$ gives
+\[
+ 2\sum_j2^{-j}r_j^2\log(1/r_j)
+ \le\frac{2}{e\ln2}\sum_j2^{-j}r_j
+ =\frac{2}{e\ln2}J.
+\]
+This proves the ideal reference cost bound. The rational constant follows
+from $e>8/3$ (the first four terms of its power series sum to $8/3$ and
+the remaining terms are positive) and $\ln2>2/3$ (strict midpoint
+integral bound for the strictly convex function $1/t$ on $[1,2]$).
+
+Assign lengths $\lceil\log(1/Q_F(S))\rceil$ to the finite positive
+outputs. Their Kraft sum is at most one, so a canonical prefix trie
+provides a decoder. If the law is deterministic use the empty word.
+Otherwise the expected output length is less than $H(F)+1$. Since
+$\I_{\rm data}(F)=p|A|+q|B|\ge1$, this is at most
+$(41/8)\I(F)$. A prefix code of the \emph{output} is asserted, not a
+shortened code decoding the old physical witness.
+\end{proof}
+
+\paragraph{Failure of passive marginalization.}
+Set all stopping labels to $\chi_A$ and only the terminal to $\chi_B$.
+Let $u=2^{-a}$. The old path-then-uniform-mask Kraft reference has
+\[
+ Q_{\rm raw}(A)=\sum_{j=1}^a4^{-j}=(1-u^2)/3.
+\]
+The true output mass there is $(1-u)^2$. Consequently
+\[
+ \CE(P_F,Q_{\rm raw})\ge(1-u)^2\log\frac3{1-u^2}\longrightarrow\log3,
+ \qquad \I_{\rm sel}(F)=au\longrightarrow0.
+\]
+Marginalizing the old uniform-Kraft reference is insufficient. The repaired
+reference uses the coherent suffix calculation. It does not subtract
+posterior entropy from a transmitted physical-leaf code.
+
+\paragraph{Independent reconstruction of the A012 objection.}
+For the different Boolean function $F_r=1+A_r(y-1)$, $u=2^{-r}$,
+the control-first tree has $D=2(1-u)$, deterministic spectral leaves,
+and raw cost $2D$. Direct physical edge counting gives
+$\I(F_r)=u(r+1)$. Hence raw cost/influence is
+$4(2^r-1)/(r+1)\to\infty$. Its Fourier constant coefficient is $1-u$
+and every other occupied coefficient has magnitude $u$, giving
+$H(F_r)=2ru(2-u)+L((1-u)^2)\le4ru+2u/\ln2$.
+If the exact witness retains the physical leaf $L$, then
+\[
+ H(W\mid S)\ge H(L\mid S)\ge H(L)-H(S)
+ \ge2(1-u)-4ru-2u/\ln2\longrightarrow2.
+\]
+This accepts only the specified transcript-obstruction subclaim of
+A012 v1, not its entire hereditary/class package. The comb theorem
+concerns two nonempty unsigned data labels; it is not a proved code
+for every constant/Boolean-core activation. A012 owns that separate repair.
+
+\paragraph{Arbitrary seed and the universal line.}
+For any Boolean $h$ on disjoint coordinates and any complete seed reference
+$Q_h$, the product $Q_F\otimes Q_h$ is a complete subprobability and
+\[
+ \CE(P_{Fh},Q_F\otimes Q_h)=\CE(P_F,Q_F)+\CE(P_h,Q_h),\qquad
+ \I(Fh)=\I(F)+\I(h).
+\]
+For $h^{\otimes t}$ the latter terms multiply by $t$; no seed entropy is
+erased. More directly, for an arbitrary Boolean selector $g$ the exact
+two-character ledger is
+\[
+ H(F_g)=L(p^2)+L(q^2)+\operatorname{Var}(g)+\tfrac12 H_{\ne\varnothing}(g),
+ \qquad \I_{\rm sel}(F_g)=\I(g)/2.
+\]
+For balanced $g$ this is $H(F_g)=2+H(g)/2$. The first unsupported
+universal line is a cheap full conditional reference replacing the uniform
+predecessor law in the comb's max-index groups for arbitrary Boolean
+selectors. Its conditional entropy is not paid by merely compressing a
+physical label. Full FEI, literature novelty and independent acceptance
+of the present repair are not claimed.
+\end{document}

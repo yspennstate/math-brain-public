@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B14",
+  "run_id": "20260922T140126Z-b14-qform-localization-r13",
+  "execution_context": "scheduled_automation_WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit_before_scientific_write": "f131875d619a0186efc7e7aa942257f5247ac01a",
+  "latest_control_commit_observed_before_snapshot": "fdf63fb10c9845cf46796e82f056f69b779584e7",
+  "assignment": "Translations and localization",
+  "full_target_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account03/B14",
+    "run_id": "20260922T133524Z-account03-B14-qform-r11",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2208c3f666582999f1fbc7e55921a4530cbe2789",
+    "scope": "Cap-preserving compact-smooth reduction and select-before-localize: keep a chosen original-coordinate active block unfragmented and localize only the complement; deterministic-outside uniform active bounds transfer with unchanged constant."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d358b89ba78735cee238c01e83c2c3ca9ec66352",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260922T140126Z-b14-qform-localization-r13/REPORT.md",
+    "blob": "eb024864dfb71b63c4f5f52d986291ad23365231"
+  },
+  "result_scope": "Proved a dimension-free acyclic/triangular fragment-packing compiler: if each current fragment-center anchor depends only on later labels/variables and every exponent theta_i is below one, the weighted fragment sum is at most K product_i 2^{theta_i}/(1-theta_i). Three square-root losses cost at most 16 sqrt(2). Constructed an explicit cyclic-anchor family with exact threshold theta_1+theta_2=1: logarithmic divergence at equality and power divergence above it. This corrects the scope of the prior product-packing statement but is not a QFORM counterexample.",
+  "correction_event": {
+    "event_id": "QFORM-SUBCRITICAL-PACKING-ACYCLIC-SCOPE-v1",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account02/B14/20260922T140126Z-b14-qform-localization-r13/QFORM-SUBCRITICAL-PACKING-ACYCLIC-SCOPE-v1.json",
+    "inbox_merge_status": "event persisted; shared CORRECTION_INBOX merge encountered a concurrent-main conflict and was not forced"
+  },
+  "first_unresolved_implication": "Derive a source-valid local shell/coarea estimate for the heavy/localized active block whose fragment singularities admit an acyclic elimination order, or keep that active block unfragmented via select-before-localize.",
+  "next_step": "Attempt sequential completion-of-squares/coarea on the localized-triple conditional polynomial and track whether every square-root singularity center depends only on not-yet-eliminated variables; if a cycle appears, seek an aggregation identity rather than applying coordinatewise subcritical packing.",
+  "source_bound_handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B14/20260922T140126Z-b14-qform-localization-r13.md"
+}

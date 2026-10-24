@@ -1,0 +1,305 @@
+{
+  "schema": "fei-obstruction-registry/2",
+  "revision": "2026-10-11-execution-v2",
+  "snapshot_at": "2026-10-11T20:03:27+00:00",
+  "owner": "B20",
+  "rules": [
+    "Use controls applicable to the exact hypotheses; no mandatory unrelated exhaustive suite.",
+    "A failed helper and FEI itself have different quantifiers.",
+    "Read original sources before relying on the navigation summary."
+  ],
+  "controls": [
+    {
+      "obstruction_id": "O-ADDRESS",
+      "title": "Addressing calibration",
+      "exact_scope": "H=2a and I=1+a/2; a complete-set code should not pay the same address label independently for every coordinate.",
+      "consumer_streams": [
+        "B02",
+        "B03",
+        "B04"
+      ],
+      "sources": [
+        {
+          "repository": "yspennstate/fourier-entropy-threshold-functions",
+          "commit": "cd27aa96a5bb670a5b3ae5451095b7020db8e9d4",
+          "path": "paper/main.tex",
+          "sha256": "5cff9d1b91c92883a6d35ec7674ff5953365cadc85299747e4047d9deb150dac"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": []
+    },
+    {
+      "obstruction_id": "O-B05",
+      "title": "Sparse activated bent point surgery",
+      "exact_scope": "For d=2^(-3k), L/d=k+log2(e)+o(1), V_post/d<=4*2^(-k), M_inf/d=12k*2^(-3k). Refutes the fixed-price all-coordinate local helper only.",
+      "consumer_streams": [
+        "B05",
+        "B06",
+        "B08",
+        "B10",
+        "B13"
+      ],
+      "sources": [
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "80cc2e5027efa56d79c4ecdf7d4949759ef2068b",
+          "path": "reports/fei-2026-10-11/runs/B05/20261011T193057Z-account01-B05-rare-restrictions/REPORT.md"
+        },
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "7955d427222392911dc6af2e4ee3aa8aab67ac8c",
+          "path": "reports/fei-2026-10-11/runs/B19/20261011T195038Z-account01-B19-independent-review/REPORT.md"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": [
+        "B05_RARE_REFUNDS"
+      ]
+    },
+    {
+      "obstruction_id": "O-BENT-SPLICE",
+      "title": "Selector erasure synergy",
+      "exact_scope": "A one-bit actual selector can have entropy increment divided by selector influence tending to infinity. Preserve the data and terminal contribution.",
+      "consumer_streams": [
+        "B04",
+        "B06",
+        "B12"
+      ],
+      "sources": [
+        {
+          "path": "verification/plan_mathematical_audit_2026-10-11.md",
+          "role": "audited source map; follow its immutable originals for proofs"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": [
+        "BENT_SELECTOR"
+      ]
+    },
+    {
+      "obstruction_id": "O-PHYSICAL-TC",
+      "title": "Weighted biased threshold total correlation",
+      "exact_scope": "The existing family has alpha*TC(Q)/I=(ln(m)+1)/8+O(ln(m)/m). Natural units. This refutes that physical conditional-TC payment, not FEI+.",
+      "consumer_streams": [
+        "B09",
+        "B12",
+        "B14"
+      ],
+      "sources": [
+        {
+          "path": "verification/plan_mathematical_audit_2026-10-11.md",
+          "role": "audited source map; follow its immutable originals for proofs"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": [
+        "WEIGHTED_TC"
+      ]
+    },
+    {
+      "obstruction_id": "O-PIVOTAL-ONE",
+      "title": "Weighted threshold pivotal credit with coefficient one",
+      "exact_scope": "The existing family has [V*ln(1/V)-sum I_i*ln^+(4*rho_i/V)]/I=.5*ln(m)-ln(2)+O(ln(m)/m). Refutes exactly the unit-multiplier proposal; larger multipliers are not settled.",
+      "consumer_streams": [
+        "B09",
+        "B10",
+        "B14"
+      ],
+      "sources": [
+        {
+          "path": "verification/plan_mathematical_audit_2026-10-11.md",
+          "role": "audited source map; follow its immutable originals for proofs"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": [
+        "WEIGHTED_PIVOTAL_CREDIT"
+      ]
+    },
+    {
+      "obstruction_id": "O-COORD-PHYSICAL-TC",
+      "title": "Every coordinate physical-TC obstruction",
+      "exact_scope": "At fixed m and q->0, the ratio for every j tends to m*ln(2)/2. Refutes the existential coordinate physical-TC helper; does not refute spectral good-coordinate FEI.",
+      "consumer_streams": [
+        "B09",
+        "B06",
+        "B14"
+      ],
+      "sources": [
+        {
+          "path": "verification/plan_mathematical_audit_2026-10-11.md",
+          "role": "audited source map; follow its immutable originals for proofs"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": [
+        "WEIGHTED_LOCAL_TC"
+      ]
+    },
+    {
+      "obstruction_id": "O-FINITE-BOOL",
+      "title": "Fixed Booleanity-prefix relaxations",
+      "exact_scope": "Known non-Boolean constructions defeat fixed signed-convolution orders and fixed atom-cap prefixes. State the exact relaxation; do not reject full Booleanity itself.",
+      "consumer_streams": [
+        "B07",
+        "B08",
+        "B14",
+        "B15"
+      ],
+      "sources": [
+        {
+          "path": "verification/plan_mathematical_audit_2026-10-11.md",
+          "role": "audited source map; follow its immutable originals for proofs"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": [
+        "FIXED_CONV_PREFIX",
+        "FIXED_CAP_PREFIX"
+      ]
+    },
+    {
+      "obstruction_id": "O-RAW-CONV",
+      "title": "Raw collision entropy under tensors",
+      "exact_scope": "For v_U=C_b(U)^2 and Z=sum v_U, L=sum v_U*log2(1/v_U) is not tensor additive; L/Z=H(v/Z)-log2 Z is. A Boolean factor with Z=319/256 refutes the recorded raw-L payments after tensoring.",
+      "consumer_streams": [
+        "B08",
+        "B10",
+        "B12"
+      ],
+      "sources": [
+        {
+          "path": "verification/plan_mathematical_audit_2026-10-11.md",
+          "role": "audited source map; follow its immutable originals for proofs"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": [
+        "RAW_CONV_TENSOR"
+      ]
+    },
+    {
+      "obstruction_id": "O-OVERLAP-PRODUCT",
+      "title": "Overlapping Boolean product entropy",
+      "exact_scope": "Universal overlapping-product entropy subadditivity is false. Disjoint variable-set additivity remains valid.",
+      "consumer_streams": [
+        "B03",
+        "B12"
+      ],
+      "sources": [
+        {
+          "path": "verification/plan_mathematical_audit_2026-10-11.md",
+          "role": "audited source map; follow its immutable originals for proofs"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": [
+        "OVERLAP_PRODUCT"
+      ]
+    },
+    {
+      "obstruction_id": "O-PARITY-ERASURE",
+      "title": "Parity-coded erasure zero",
+      "exact_scope": "Aggregate local erasure can vanish while an arbitrary seed retains its Fourier entropy; a zero local quantity is not a universal entropy payment.",
+      "consumer_streams": [
+        "B01",
+        "B06",
+        "B07",
+        "B13"
+      ],
+      "sources": [
+        {
+          "path": "verification/plan_mathematical_audit_2026-10-11.md",
+          "role": "audited source map; follow its immutable originals for proofs"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": []
+    },
+    {
+      "obstruction_id": "O-TENSOR-AUX",
+      "title": "Arbitrary tensor factor in an auxiliary class",
+      "exact_scope": "A conditional phase statement must pay the residual conditional spectral entropy and survive arbitrary tensor embeddings; low X-degree alone is insufficient for that term.",
+      "consumer_streams": [
+        "B01",
+        "B07",
+        "B14",
+        "B16"
+      ],
+      "sources": [
+        {
+          "path": "verification/plan_mathematical_audit_2026-10-11.md",
+          "role": "audited source map; follow its immutable originals for proofs"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": []
+    },
+    {
+      "obstruction_id": "O-RENYI",
+      "title": "Fixed spectral Renyi below one",
+      "exact_scope": "The actual point-defect family has H_alpha/I->infinity for every fixed 0<alpha<1, while Shannon H/I->4. Does not refute scale-dependent orders or auxiliary piece Renyi quantities.",
+      "consumer_streams": [
+        "B05",
+        "B08",
+        "B14",
+        "B16"
+      ],
+      "sources": [
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "bfb1d10b25cb5cb2e09112357cd24b21b5b1fe5e",
+          "path": "research_pushes/2026-10-11-full-fei-100-agents/SEED_LEMMAS.md",
+          "blob_sha": "c575d18146a9a9d2bdee006dc3856947565442bc"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": []
+    },
+    {
+      "obstruction_id": "O-POSITIVE-SELECTOR",
+      "title": "Already proved positive selector-energy closure",
+      "exact_scope": "Fresh uniform selectors with I_sel>=c*a close ordinary FEI at max{2/c,C}; this is baseline, not a new target. New work must derive c for a new unbounded class or handle low energy/reused selectors.",
+      "consumer_streams": [
+        "B04",
+        "B12"
+      ],
+      "sources": [
+        {
+          "repository": "yspennstate/fourier-entropy-threshold-functions",
+          "commit": "cd27aa96a5bb670a5b3ae5451095b7020db8e9d4",
+          "path": "paper/main.tex",
+          "sha256": "5cff9d1b91c92883a6d35ec7674ff5953365cadc85299747e4047d9deb150dac"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": []
+    },
+    {
+      "obstruction_id": "O-ACTIVATION-EQUIV",
+      "title": "Arbitrarily rare activated cores",
+      "exact_scope": "Rarity by itself can retain full-FEI difficulty. State the exact ratio-preserving embedding before calling a restricted endpoint easier.",
+      "consumer_streams": [
+        "B01",
+        "B05",
+        "B11",
+        "B16"
+      ],
+      "sources": [
+        {
+          "repository": "yspennstate/fourier-entropy-threshold-functions",
+          "commit": "cd27aa96a5bb670a5b3ae5451095b7020db8e9d4",
+          "path": "paper/main.tex",
+          "sha256": "5cff9d1b91c92883a6d35ec7674ff5953365cadc85299747e4047d9deb150dac"
+        },
+        {
+          "path": "verification/plan_mathematical_audit_2026-10-11.md",
+          "role": "audited source map; follow its immutable originals for proofs"
+        }
+      ],
+      "status": "RECOVERED_CONTROL",
+      "aliases": []
+    }
+  ]
+}

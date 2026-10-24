@@ -1,0 +1,44 @@
+[
+  {
+    "claim_id": "A068-ACTIVATED-QUADRATIC-CONTRAST",
+    "version": 1,
+    "exact_statement": "For every pair of Boolean functions g_+,g_- on one uniform data cube X, every independent quadratic F2 sign beta on Z, and every pair of complete normalized references Q_+,Q_- supporting their full spectra, the explicit product reference R=Q times [(1-d)delta_empty+d P_beta], Q=pQ_+ +(1-p)Q_-, p=(1+E beta)/2, d=Pr(g_+!=g_-), satisfies H(F)<=Gamma_R(F)<=p Gamma_Q+(g_+)+(1-p)Gamma_Q-(g_-)+4 I(g_+g_-)+2 I_Z(F), where F=g_beta. For nonconstant beta, I(g_+g_-)<=4 I_X(F). Thus admitted complete threshold-terminal references imply Gamma_R(F)<=25 I(F), in every dimension, including weak/unequal identified pairs with independent relative controls. The original terminal references and their physical weights are retained.",
+    "hypotheses": [
+      "Uniform independent physical blocks X and Z",
+      "g_+,g_- are Boolean, sharing arbitrary data in X",
+      "beta is an F2 phase of degree at most two on Z",
+      "Q_+,Q_- are normalized full references with finite complete branch costs",
+      "The <25 corollary uses accepted complete terminal-reference cost <=C_reg influence, C_reg<8.937"
+    ],
+    "statement_sha256": "07bb2dcb3db0db408213fcad4cb79831e76ba8eacaab77bfb4f485aeb83e369d",
+    "contributors": [
+      "A068"
+    ],
+    "proof_source": "REPORT.md, complete derivation or exact first unsupported line",
+    "proof_dependencies": [
+      "A068-QUADRATIC-CONTEXT-RANK-REFERENCE@1 for threshold-terminal corollary only",
+      "Threshold baseline C001, source SHA256 5d87f625fbadad4aa9841416712b8193a869fa9dffcb4e9c200d2f39a62e6a10; elementary rank/log-sum/payment reconstructed locally"
+    ],
+    "review_records": [
+      {
+        "kind": "author proof and exact independent-representation checks",
+        "verifier": "code/verify.py",
+        "output": "out/verification.json",
+        "rung": "proof; exact finite certificate; Lean not certified",
+        "independent_acceptance": false
+      }
+    ],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Not part of the proved scoped statement: carry the SAME inherited reference and old debits through overlapping/conditional relative controls, without a renewed contrast reserve.",
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A066",
+      "A067",
+      "A096"
+    ]
+  }
+]

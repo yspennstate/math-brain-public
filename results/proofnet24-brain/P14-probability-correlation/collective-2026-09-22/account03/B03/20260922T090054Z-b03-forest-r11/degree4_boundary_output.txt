@@ -1,0 +1,35 @@
+FOREST-DEG4-REALIZABILITY-DEFICIT-v1
+partitions 15
+local 0123 5 1 1 0
+local 012|3 8 2 2 0
+local 013|2 8 2 2 0
+local 01|23 9 3 3 0
+local 01|2|3 12 4 4 0
+local 023|1 8 2 4 1
+local 02|13 9 3 3 1
+local 02|1|3 12 4 6 2
+local 03|12 9 3 3 1
+local 03|1|2 12 4 6 2
+local 0|123 8 4 2 1
+local 0|12|3 12 6 4 2
+local 0|13|2 12 6 4 2
+local 0|1|23 12 6 6 3
+local 0|1|2|3 16 8 8 4
+quadratic_coefficients negative 6 zero 46 positive 68
+negative 0123 0|1|23 -3
+negative 0123 0|1|2|3 -4
+negative 02|13 0|1|23 -3
+negative 02|13 0|1|2|3 -4
+negative 03|12 0|1|23 -3
+negative 03|12 0|1|2|3 -4
+negative_factor = -(4*N[0|1|2|3] + 3*N[0|1|23])*(N[0123] + N[02|13] + N[03|12])
+toy_nonrealized_vector {'0123': 1, '012|3': 0, '013|2': 0, '01|23': 0, '01|2|3': 0, '023|1': 0, '02|13': 0, '02|1|3': 0, '03|12': 0, '03|1|2': 0, '0|123': 0, '0|12|3': 0, '0|13|2': 0, '0|1|23': 0, '0|1|2|3': 1} tuple (21, 9, 9, 4) delta -3
+K6_edge_masks 32768 forest_edge_masks 2932
+all_H negative 0 zero 2504 minimum_delta 0
+three_connected_G count 5744 negative 0 zero 0 minimum_delta 5384
+three_connected_min_H_edges [(0, 4), (0, 5), (1, 2), (1, 3), (2, 5), (3, 4), (4, 5)]
+three_connected_min_partition_vector {'0123': 16, '012|3': 5, '013|2': 5, '01|23': 0, '01|2|3': 0, '023|1': 3, '02|13': 5, '02|1|3': 5, '03|12': 5, '03|1|2': 5, '0|123': 16, '0|12|3': 14, '0|13|2': 14, '0|1|23': 1, '0|1|2|3': 14}
+three_connected_min_Z_tuple (1094, 462, 400, 164)
+
+checker_sha256 21c647043de1b3cf558c4676099bc2d1bd60e7d44230907cdef18e74a4038009
+output_core_sha256 81804fdf4b41a2f17270c11e5a09bc4cfbeeda1e118508ed665125f9f1e88c85

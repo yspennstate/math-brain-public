@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_initial": "e0c629842c0ec08edad7d893989f8306fcd751da",
+  "control_commit_prepublication": "983d684ff09f9566e1e0dd206eaedbc912b286cf",
+  "account": "account02",
+  "slot": "B05",
+  "run_id": "20260922T115002Z-b05-qform-9c3a2d7e",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION"
+  ],
+  "live_correction_inbox_events": [],
+  "actual_mathematical_premises": [
+    "All input coordinates are independent real random variables with probability densities bounded by one.",
+    "The target matrix is real symmetric and the full target assumes at least three eigenvalues of absolute value at least one.",
+    "Named partner account03/B05 supplies a delocalized spectral-projection theorem under max_j ||Pe_j||_2 <= 1/2.",
+    "account03/B01 supplies the common L3 envelope for the product of two arbitrary independent density-bounded variables.",
+    "The previous B05 cube example refutes dimension-free spectral-plane fiberwise supremum bounds."
+  ],
+  "partner_result_applied": {
+    "worker": "account03/B05",
+    "run_id": "20260922T113800Z-account03-B05-qform-r11",
+    "report_commit": "c828d2ee2f8acef5eb96892bc8a9a25594db0f51",
+    "application": "Used as the complementary delocalized closure; this run attacks a localized regime not covered by the partner hypothesis."
+  },
+  "other_result_applied": {
+    "worker": "account03/B01",
+    "run_id": "20260922T113140Z-account03-B01-qform-r1",
+    "report_commit": "c7a1ce265139092705e86c5a577523798291b964",
+    "application": "Used its universal L3 envelope for p_{2 kappa YZ} inside a coarea/Riesz argument."
+  },
+  "new_results": [
+    "Coarea-to-half-Riesz transfer for Q=a(X+m(Y))^2+R(Y) without assuming independence of the shifted square and R.",
+    "For probability densities g in L3, sup_t int |t-s|^{-1/2}g(s)ds <= 2^(5/2)||g||_3^(3/4).",
+    "If a 3x3 selected block has ab-d^2=ac-e^2=0, then ||p_Q||_infinity <15.842/sqrt(|a kappa|), kappa=f-de/a, uniformly over arbitrary outside couplings.",
+    "If that selected block has all three eigenvalues of absolute value at least one, then |a kappa|>=1/3 and the subclass density cap is <27.44.",
+    "The matrix [[1,1,1],[1,1,-1],[1,-1,1]] has eigenvalues 2,2,-1 but all 2x2 principal minors zero, refuting the stronger principal-pair shortcut; the new theorem still bounds its output density by <11.21."
+  ],
+  "immutable_outputs": {
+    "science_report_commit": "04cd352403bf74f71188994dedf7c7a0f09ef5cd",
+    "science_report_blob": "eed5d2eaee81399fb899b6f3cd7dd49e870b140d",
+    "checker_commit": "125c60426548f9f13509de09ad9772f23be6cd06",
+    "checker_output_commit": "109d2cbe339f501be2eede3b188a5328495af495",
+    "handoff_commit": "9db60b4746ccff432a0333708642de66cf45189f"
+  },
+  "unresolved_implication": "QFORM-GENERIC-LOCAL-SCHUR-RIESZ: after Q=a(X+rY+sZ)^2+[beta Y^2+2 gamma YZ+delta Z^2], prove a dimension-free bound on the half-Riesz potential of the binary residual law under inherited inverse-matrix constraints, or construct a valid product-density counterexample. Also unresolved: global extraction from three large eigenvalues and the partner spectral-truncation issue.",
+  "next_step": "Analyze the binary indefinite residual directly as a product-measure pushforward, seeking an L^p (p>2) or weak endpoint bound stable under the inverse-matrix constraints; test the rank-two opposite-sign logarithmic singularity as the mandatory control.",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

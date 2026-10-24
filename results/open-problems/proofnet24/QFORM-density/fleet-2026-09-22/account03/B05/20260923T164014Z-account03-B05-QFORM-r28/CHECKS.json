@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T164014Z-account03-B05-QFORM-r28",
+  "role": "diagnostic_only_exact_algebra_not_proof_substitute",
+  "symbolic_identities": {
+    "Delta": "a*d-c^2",
+    "z1": "(d*r-c*s)/Delta",
+    "z2": "(-c*r+a*s)/Delta",
+    "det_HY": "L*(c*r-a*s)^2/Delta = L*Delta*z2^2",
+    "det_HZ": "L*(d*r-c*s)^2/Delta = L*Delta*z1^2",
+    "absolute_sum": "|det H_Y|+|det H_Z| = mu*m*(z1^2+z2^2) when L=lambda*m and mu=|Delta|*|lambda|"
+  },
+  "stress_family": {
+    "epsilon_range": "0<epsilon<=1/2",
+    "B": "[[epsilon,1],[1,epsilon]]",
+    "q": "(epsilon^(-1/2),0)",
+    "L": "1/(1-epsilon^2)",
+    "mu": 1,
+    "z": "(-sqrt(epsilon)/(1-epsilon^2), 1/(sqrt(epsilon)*(1-epsilon^2)))",
+    "chi": "1/(1-epsilon^2)^2",
+    "scaled_target_matrix": "2*H_epsilon",
+    "spectral_certificate": "H_epsilon=diag(L,M_epsilon), rank(M_epsilon)=2; B is a principal 2x2 block of M_epsilon with eigenvalues epsilon-1 and epsilon+1. Interlacing gives lambda_min(M_epsilon)<=epsilon-1<=-1/2 and lambda_max(M_epsilon)>=epsilon+1>=1; the third eigenvalue is 0. Thus 2*H_epsilon has three eigenvalues of absolute value >=1.",
+    "new_atlas_bound": "<=64*sqrt(2)*sqrt(1-epsilon^2)<90.51"
+  },
+  "numeric_constant_checks": {
+    "6e^(2/3)": 11.686404246328054,
+    "one_null_mu1_m3over20_z1over16": 139.65735322581423,
+    "64sqrt2": 90.50966799187809,
+    "partner_mu1_mstar1over8": 103.2
+  }
+}

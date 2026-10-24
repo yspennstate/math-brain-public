@@ -1,0 +1,221 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w465",
+  "bundle_slug": "potts-c0048-fixed-witness-bridge-001",
+  "entries": [
+    {
+      "key": "fk-edge-identity",
+      "namespace": "probability.statmech",
+      "logical_name": "random-cluster-edge-connection-identity",
+      "kind": "lemma",
+      "title": "DRAFT: FK edge density from deletion connectivity",
+      "statement": "Proved special case; awaiting independent review. For the finite-graph random-cluster measure with p in (0,1), q>=1 and fixed boundary partition xi, let K_e be the event that the endpoints of e are connected by open edges other than e after applying xi. Then phi_p,q^xi(omega_e=1)=a+(p-a)phi_p,q^xi(K_e), where a=p/[p+q(1-p)].",
+      "proof_text": "Condition on every edge except e. If the endpoints are already connected, opening e preserves the cluster count and has conditional probability p. Otherwise it reduces the cluster count by one, giving probability p/[p+q(1-p)]. Take expectations.",
+      "assumptions": [
+        "finite undirected graph",
+        "fixed boundary partition",
+        "0<p<1",
+        "q>=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w465:C0048:w465-L1",
+        "url": "file:///~/brain_workers/w465/ATTEMPT.md",
+        "revision": "2026-10-10-unreviewed-draft-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "fixed-cylinder-witness",
+      "namespace": "probability.statmech",
+      "logical_name": "monotone-cylinder-total-variation-edge-bound",
+      "kind": "lemma",
+      "title": "DRAFT: Fixed cylinder witness bounds the FK edge gap",
+      "statement": "Proved special case; awaiting independent review. If mu_0,mu_1 on {0,1}^E admit a coupling X<=Y, then for every finite F subset E, the total variation distance of their restrictions to F is at most sum_{e in F}(mu_1(omega_e)-mu_0(omega_e)). Hence on a translation- and rotation-invariant lattice, a cylinder probability gap delta on M edges forces a common edge-marginal gap at least delta/M.",
+      "proof_text": "For every event A supported on F, the coupled indicators differ only if some coordinate differs; use the union bound, then P(X_e!=Y_e)=E[Y_e]-E[X_e]. Take the supremum over A.",
+      "assumptions": [
+        "coordinatewise monotone coupling exists",
+        "F finite",
+        "translation and rotation invariance only for the common-edge conclusion"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w465:C0048:w465-L2",
+        "url": "file:///~/brain_workers/w465/ATTEMPT.md",
+        "revision": "2026-10-10-unreviewed-draft-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "pressure-bridge",
+      "namespace": "probability.statmech",
+      "logical_name": "potts-fixed-cylinder-pressure-gap-bound",
+      "kind": "lemma",
+      "title": "DRAFT: Conditional Potts pressure gap from a fixed FK witness",
+      "statement": "Proved special case; awaiting independent review. For the nearest-neighbor zero-field Potts model with integer q>=2,d>=2,beta=-log(1-p)>0, assume its free and monochromatic-boundary Gibbs states and associated FK marginals are translation/rotation invariant. If a fixed event on M>=1 edges has free/wired probability gap delta>0, the pressure derivative gap per vertex is at least d*delta/(p*M).",
+      "proof_text": "Apply L2 to obtain edge gap rho>=delta/M. Edwards-Sokal gives spin energy difference d*rho/p. DLR and finite-box Jensen, averaged over the exterior and with vanishing boundary/volume ratio, put each state's energy in the pressure subdifferential. The subdifferential width bounds their difference.",
+      "assumptions": [
+        "0<p<1",
+        "integer q>=2",
+        "integer d>=2",
+        "monotone free/wired FK coupling",
+        "Edwards-Sokal correspondence",
+        "infinite-volume DLR states",
+        "fixed cylinder witness with positive delta",
+        "pressure thermodynamic limit"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w465:C0048:w465-L3",
+        "url": "file:///~/brain_workers/w465/ATTEMPT.md",
+        "revision": "2026-10-10-unreviewed-draft-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "vanishing-path-gap",
+      "namespace": "probability.statmech",
+      "logical_name": "random-cluster-path-boundary-gap-geometric-decay",
+      "kind": "lemma",
+      "title": "DRAFT: Positive finite FK path boundary gaps vanish in the limit",
+      "statement": "Proved special case; awaiting independent review. For a length-L path with L>=2,q>1,0<p<1,a=p/[p+q(1-p)], identifying its endpoints gives every edge a marginal gap (q-1)(1-a)a^L/[1+(q-1)a^L] above free boundaries. This is positive for all finite L and tends to zero; both local infinite-volume limits are iid Bernoulli(a), with no infinite cluster for p<1.",
+      "proof_text": "The free tree law is iid Bernoulli(a). Endpoint identification lowers k by one except for the all-open configuration, so wired density relative to free is [1+(q-1)1_all_open]/[1+(q-1)a^L]. Compute the marginal; the fixed-support density correction decays geometrically.",
+      "assumptions": [
+        "path graph",
+        "endpoints identified versus free",
+        "q>1",
+        "0<p<1",
+        "fixed parameters as L tends to infinity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w465:C0048:w465-L4",
+        "url": "file:///~/brain_workers/w465/ATTEMPT.md",
+        "revision": "2026-10-10-unreviewed-draft-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "q3-mf-barrier",
+      "namespace": "probability.statmech",
+      "logical_name": "three-state-potts-mean-field-separator-error-obstruction",
+      "kind": "lemma",
+      "title": "DRAFT: Exact q=3 mean-field separator and infrared allowance obstruction",
+      "statement": "Proved special case; awaiting independent review. For q=3 and F_J(x)=sum_i x_i log x_i-(J/2)sum_i x_i^2, at J_0=4 log 2 the min on max_i x_i=1/2 exceeds F_J0(uniform) by B=log 3-(19/12)log 2>0. The Biskup-Chayes published infrared error allowance E=(2J/3)I_d, with I_d=int t^2/(1-t), t=d^-1 sum cos k_j, satisfies E>=J/(3d); at d=3,J_0 this allowance is greater than B.",
+      "proof_text": "Strict convexity along x1=1/2 fixes the min at (1/2,1/4,1/4); direct substitution gives B and 3^12>2^19 proves positivity. Pair Fourier points under pi shift to get I_d=int t^2/(1-t^2)>=int t^2=1/(2d). Insert n=2,kappa=2/3.",
+      "assumptions": [
+        "probability simplex with three coordinates",
+        "normalized J=2d*beta",
+        "separator max_i x_i=1/2",
+        "published Biskup-Chayes allowance, not actual covariance",
+        "d>=3 for infrared integral"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w465:C0048:w465-L5",
+        "url": "file:///~/brain_workers/w465/ATTEMPT.md",
+        "revision": "2026-10-10-unreviewed-draft-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "finite-gap-misstep",
+      "namespace": "probability.statmech",
+      "logical_name": "finite-random-cluster-boundary-gap-limit-inference-refuted-route",
+      "kind": "concept",
+      "title": "DRAFT refuted route: finite boundary positivity as a transition certificate",
+      "statement": "Refuted inference, not a theorem: positive free/wired marginal differences in every finite volume by themselves imply a bulk first-order transition. The length-L endpoint-wired FK path has positive differences at every L, but for each fixed 0<p<1 and q>1 those differences tend geometrically to zero; its infinite-volume law is iid Bernoulli(p/[p+q(1-p)]). A valid critical-transition bridge needs a fixed-support positive limiting witness or a different argument.",
+      "proof_text": null,
+      "assumptions": [
+        "Inference is refuted in a path family; this does not refute C0048 on Z^d,d>=3"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w465:C0048:finite-gap-misstep",
+        "url": "file:///~/brain_workers/w465/ATTEMPT.md",
+        "revision": "2026-10-10-unreviewed-draft-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "critical-witness-gap",
+      "namespace": "probability.statmech",
+      "logical_name": "potts-c0048-fixed-critical-cylinder-witness-missing-bridge",
+      "kind": "concept",
+      "title": "DRAFT open bridge: a fixed positive critical Potts boundary witness",
+      "statement": "Unproved proof need for C0048, not a theorem: for each integer q>=3 and d>=3 in the zero-field ferromagnetic nearest-neighbor model, find a fixed finite cylinder event A and delta(q,d)>0 with phi^w_{p_c,q}(A)-phi^f_{p_c,q}(A)>=delta. Under a monotone coupling, a witness on M edges would give a common edge-marginal gap at least delta/M, and under the Potts Gibbs/Edwards-Sokal assumptions a pressure slope gap at least d*delta/(p_c*M). The critical wired infinite-cluster conclusion still requires its full argument; no positive witness, critical free-state nonpercolation theorem, or parent-problem solution is supplied by this draft.",
+      "proof_text": null,
+      "assumptions": [
+        "integer q>=3,d>=3",
+        "nearest-neighbor ferromagnetic interactions",
+        "zero external field",
+        "p_c defined by wired critical percolation",
+        "the positive witness is unproved"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w465:C0048:critical-witness-gap",
+        "url": "file:///~/brain_workers/w465/ATTEMPT.md",
+        "revision": "2026-10-10-unreviewed-draft-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "pressure-bridge",
+      "to_key": "fixed-cylinder-witness",
+      "kind": "depends_on",
+      "rationale": "The pressure lemma uses rho>=delta/M from the exact finite-cylinder monotone-coupling bound; the other explicit hypotheses remain necessary."
+    },
+    {
+      "from_key": "vanishing-path-gap",
+      "to_key": "finite-gap-misstep",
+      "kind": "refutes",
+      "rationale": "Its complete path formula supplies positive differences at every finite L but zero limiting difference and no infinite cluster for p<1, contradicting the proposed general inference."
+    },
+    {
+      "from_key": "critical-witness-gap",
+      "to_key": "fixed-cylinder-witness",
+      "kind": "semantic_association",
+      "rationale": "The concept names the unproved positive critical delta required to use the proved cylinder lemma."
+    },
+    {
+      "from_key": "critical-witness-gap",
+      "to_key": "pressure-bridge",
+      "kind": "semantic_association",
+      "rationale": "The proved pressure consequence is conditional on the missing critical witness; this link makes no parent-proof claim."
+    },
+    {
+      "from_key": "critical-witness-gap",
+      "to_key": "fk-edge-identity",
+      "kind": "semantic_association",
+      "rationale": "The edge-deletion identity quantifies what a local critical connectivity gap would imply, but supplies no positivity."
+    },
+    {
+      "from_key": "critical-witness-gap",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0048-discontinuity-of-the-potts-phase-transition-on-z-d-for-q-3-d-3",
+      "kind": "semantic_association",
+      "rationale": "The checked existing concept is precisely C0048; the new entry is an explicitly unproved bridge for that target."
+    },
+    {
+      "from_key": "critical-witness-gap",
+      "to_existing_logical": "math:probability.statmech:attempt-c0048-discontinuity-of-the-potts-phase-transition-on-z-d-for-q-3-d-3",
+      "kind": "cites",
+      "rationale": "The retrieved prior attempt says No result and has no independent review; this draft continues its FK route while preserving the missing critical estimate."
+    },
+    {
+      "from_key": "q3-mf-barrier",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0048-discontinuity-of-the-potts-phase-transition-on-z-d-for-q-3-d-3",
+      "kind": "semantic_association",
+      "rationale": "The exact q=3 separator exposes why the published large-d error allowance does not certify this chosen bridge at d=3; it does not settle the conjecture."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "track": "NM13-10/progress-extrapolation",
+  "source": "Agresti--Veraar arXiv:2501.18561 / NoDEA 32 (2025), Problem 3",
+  "frozen_pair": {
+    "X0": "H^{-1}(Torus)",
+    "Xhalf": "L^2(Torus)",
+    "X1": "H^1(Torus)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "brownian_dimension": 1
+  },
+  "fixed_source_endpoint_before": "r_*=3, endpoint excluded",
+  "fixed_source_endpoint_after": "r_*=3, endpoint excluded",
+  "full_critical_bracket_before": "2/3 <= alpha_*(T) <= 1",
+  "full_critical_bracket_after": "2/3 <= alpha_*(T) <= 1",
+  "parent_status": "PARTIAL",
+  "new_claim_status": "CANDIDATE_FULL / SELF-CHECKED / PENDING INDEPENDENT REVIEW",
+  "new_gain": {
+    "name": "finite multiband critical endpoint gluing",
+    "statement": "For dyadic spectral projections P_j and J_j=E int ||P_jY||^3, ||T_TY||_{Z_{3,2/3}} <= 65 sqrt(66) (sum_j J_j^(2/3))^(1/2) whenever the right side is finite. In particular, if Y is supported in N arbitrary dyadic blocks, the norm is <529 N^(1/6)||Y||_3; for two arbitrary dyadic blocks it is <594||Y||_3, independent of their spectral separation.",
+    "mechanism": "dimension-free 2-convex square-function inequality for Z_{3,2/3}, combined with the predecessor 65 sqrt(2) dyadic-block endpoint",
+    "source_level_change": "none; unrestricted full-spectrum endpoint remains open",
+    "quantitative_improvement": "For finite spectral ratio K, an alternative bound <529(2+ceil(log_2 K))^(1/6), improving the predecessor 65 sqrt(K) loss for sufficiently wide ranges."
+  },
+  "essential_dependencies": [
+    "P24 exact endpoint r_*=3 and endpoint failure",
+    "NM13-10 exact subcritical norm C_p^g(T)=1/(sqrt(2/(p-1))-1)",
+    "NM13-10 full critical bracket [2/3,1]",
+    "NM13-10 comparable-band endpoint ||T_TY||_{Z_{3,2/3}} <=65 sqrt(K)||Y||_3"
+  ],
+  "failed_or_insufficient_route": "Black-box block endpoint gluing alone still leaves the factor (sum J_j^(2/3))^(1/2); arbitrary L^3 input only controls sum J_j. Thus this mechanism cannot by itself close the unrestricted full-spectrum endpoint.",
+  "residual_obstruction": "Remove the N^(1/6)/spectral-cubic-entropy loss for arbitrarily many simultaneously active dyadic bands by exploiting common-Brownian cross-scale covariance/Hellinger structure, not only separate block bounds.",
+  "next_attack": "Prove a covariance-improved 3-convex/Carleson gluing inequality for active dyadic bands; two arbitrarily separated active bands are now already controlled at the critical 2/3 exponent.",
+  "checker": "2026-09-20T13-48-00+0300__multiband_squarefunction_checker.py",
+  "checker_output": "2026-09-20T13-48-00+0300__multiband_squarefunction_checker.out",
+  "checker_status": "CHECK_PASS",
+  "runtime": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "UNVERIFIED"
+  }
+}

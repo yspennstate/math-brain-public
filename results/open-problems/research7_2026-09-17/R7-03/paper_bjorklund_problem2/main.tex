@@ -1,0 +1,155 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+
+\title{An Infinite-Star Homogeneous Space with No Nonconstant Left Quasi-Harmonic Functions}
+\author{}
+\date{Draft of 18 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Michael Bj\"orklund asked in Appendix II, Problem 2 of \emph{Five remarks about random walks on groups} (arXiv:1406.0763v2) for a countable measured group $(G,\mu)$ and an infinite-index subgroup $H<G$ such that $G/H$ has no nonconstant left (quasi-)$\mu$-harmonic functions. We give an explicit construction using the finitary symmetric group. The induced random walk on the quotient is an infinite star. The leaf equations force every constant-defect solution to grow like the reciprocal of the corresponding transition mass, while integrability at the center forbids a nonzero defect. No boundedness assumption is used. This draft records the source-level argument; publication novelty has not been certified independently.
+\end{abstract}
+
+\section{The source question}
+Let $G$ be a countable group and let $\mu$ be a probability measure whose support generates $G$ as a semigroup. Following Bj\"orklund, such a pair is a measured group. Left $\mu$-harmonicity is defined using the reflected measure $\check\mu$. In the source, a $\mu$-integrable function $\phi$ is left $\mu$-quasiharmonic if there exists a constant $\ell(\phi)$ such that
+\[
+\int_G \phi(sg)\,d\check\mu(s)=\phi(g)+\ell(\phi),\qquad g\in G.
+\]
+Bj\"orklund's Appendix II, \S7.1, Problem 2 asks for an example for which an infinite homogeneous space $G/H$ admits no nonconstant left harmonic or quasiharmonic functions, including unbounded ones.
+
+We prove the required arbitrary-constant-defect statement directly.
+
+\section{Construction}
+Let
+\[
+X=\mathbb N_0=\{0,1,2,\ldots\},\qquad G=\operatorname{Sym}_{\mathrm{fin}}(X),
+\]
+the group of finitely supported permutations of $X$, and let
+\[
+H=\operatorname{Stab}_G(0).
+\]
+For $n\ge1$, write $\tau_n=(0\ n)$. Fix any numbers $p_n>0$ satisfying
+\[
+\sum_{n=1}^{\infty}p_n=1
+\]
+and put
+\[
+\mu(\tau_n)=p_n.
+\]
+For one completely explicit choice one may take $p_n=2^{-n}$.
+
+\begin{lemma}
+The pair $(G,\mu)$ is a countable measured group, $\mu$ is symmetric, and $H$ has infinite index.
+\end{lemma}
+\begin{proof}
+Every finitary permutation has support in $\{0,1,\dots,m\}$ for some $m$, so
+\[
+G=\bigcup_{m\ge0}\operatorname{Sym}(\{0,1,\dots,m\}),
+\]
+a countable union of finite groups. Each $\tau_n$ is an involution, hence $\check\mu=\mu$. For distinct $i,j\ge1$,
+\[
+\tau_i\tau_j\tau_i=(i\ j),
+\]
+so the support of $\mu$ generates every transposition and therefore every finitary permutation; because the generators are involutions, this is generation as a semigroup as well as as a group.
+
+Finally, the map
+\[
+G/H\longrightarrow X,\qquad gH\longmapsto g(0)
+\]
+is a bijection. Indeed, it is well-defined because elements of $H$ fix $0$, and equality of the images implies that $g^{-1}g'$ fixes $0$. Thus $[G:H]=|X|=\infty$.
+\end{proof}
+
+\section{The quotient kernel}
+Via $G/H\cong X$, left multiplication by $\tau_n$ acts exactly as the permutation $\tau_n$ on $X$. Since $\check\mu=\mu$, the left convolution operator is
+\[
+(Pu)(x)=\sum_{n\ge1}p_nu(\tau_nx).
+\]
+Hence
+\begin{align}
+(Pu)(0)&=\sum_{n\ge1}p_nu(n), \label{eq:center}\\
+(Pu)(k)&=p_ku(0)+(1-p_k)u(k),\qquad k\ge1. \label{eq:leaf}
+\end{align}
+The only infinite tail occurs in \eqref{eq:center}. If $u$ is source-integrable, then this series is absolutely convergent. At a leaf $k$ the corresponding absolute integral is
+\[
+p_k|u(0)|+(1-p_k)|u(k)|<\infty.
+\]
+
+\section{No nonconstant constant-defect functions}
+\begin{theorem}\label{thm:main}
+Suppose $u:X\to\mathbb C$ is source-integrable at the center,
+\[
+\sum_{n\ge1}p_n|u(n)|<\infty,
+\]
+and satisfies
+\[
+Pu=u+c
+\]
+for some constant $c\in\mathbb C$. Then $c=0$ and $u$ is constant.
+\end{theorem}
+
+\begin{proof}
+At a leaf $k\ge1$, equation \eqref{eq:leaf} gives
+\[
+p_ku(0)+(1-p_k)u(k)=u(k)+c.
+\]
+Therefore
+\[
+p_k\bigl(u(0)-u(k)\bigr)=c
+\]
+and, because $p_k>0$,
+\begin{equation}\label{eq:forced}
+u(k)=u(0)-\frac{c}{p_k}.
+\end{equation}
+If $c\ne0$, then
+\[
+p_k|u(k)|=|p_ku(0)-c|.
+\]
+Since a positive summable sequence satisfies $p_k\to0$, the right side tends to $|c|>0$. Consequently the summands in $\sum_kp_k|u(k)|$ fail even to tend to zero, contradicting integrability. Hence $c=0$. Equation \eqref{eq:forced} then gives $u(k)=u(0)$ for every $k\ge1$, so $u$ is constant.
+\end{proof}
+
+\section{Exact match to Bj\"orklund's quasiharmonic definition}
+Let $u:G/H\to\mathbb C$ and let $\widetilde u(g)=u(gH)$ be its right-$H$-invariant pullback. Bj\"orklund's definition says that $\widetilde u$ is left $\mu$-quasiharmonic if it is $\mu$-integrable and there exists a constant $\ell(\widetilde u)$ such that
+\[
+\int_G\widetilde u(sg)\,d\check\mu(s)
+=
+\widetilde u(g)+\ell(\widetilde u),\qquad g\in G.
+\]
+Because $\check\mu=\mu$ and the pullback is right-$H$-invariant, this descends exactly to
+\[
+Pu=u+\ell(\widetilde u)
+\]
+on $G/H$. At the basepoint one has
+\[
+\ell(\widetilde u)=\sum_{n\ge1}p_nu(n)-u(0),
+\]
+so no normalization $u(0)=0$ is imposed. Theorem~\ref{thm:main}, applied with $c=\ell(\widetilde u)$, gives $\ell(\widetilde u)=0$ and makes $u$ constant. Nonzero constant functions remain allowed, as required: Problem 2 excludes nonconstant functions, not nonzero constants. Ordinary left harmonicity is the special case $c=0$.
+
+\section{Conclusion}
+Taking, for instance,
+\[
+G=\operatorname{Sym}_{\mathrm{fin}}(\mathbb N_0),\qquad
+H=\operatorname{Stab}_G(0),\qquad
+\mu((0\ n))=2^{-n},
+\]
+provides an explicit source-valid construction answering Bj\"orklund's Appendix-II Problem 2. In fact every strictly positive probability vector $(p_n)_{n\ge1}$ gives the same conclusion.
+
+\begin{remark}[Prior-art scope]
+A bounded literature search dated 18 September 2026 did not locate an explicit later resolution of the exact source problem or this construction. This is negative evidence only and is not a certification of publication novelty. The repository protocol also requires independent audits before this draft can be called audit-complete.
+\end{remark}
+
+\begin{thebibliography}{9}
+\bibitem{Bjorklund2014}
+M.~Bj\"orklund,
+\emph{Five remarks about random walks on groups},
+arXiv:1406.0763v2, 2014.
+\end{thebibliography}
+
+\end{document}

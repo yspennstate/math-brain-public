@@ -1,0 +1,2 @@
+STATE: A019 stage5 proved sharp private-query curvature and balanced-child zero-row reference repair; essential d2^-k equal-split net debt fixed; 3688 cases/182910 checks plus804 sign cases PASS; prior theorem twice reviewed; FEI OPEN.
+NEXT: A018/A020/A092 review; remove one child balance assumption and pay positive Lambda from SAME unused certified terminal slack, retaining incoming core/mask references.

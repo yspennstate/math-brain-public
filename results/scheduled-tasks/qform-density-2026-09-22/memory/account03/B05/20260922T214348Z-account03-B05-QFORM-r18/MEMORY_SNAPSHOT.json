@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B05",
+  "run_id": "20260922T214348Z-account03-B05-QFORM-r18",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_revision": "2026-09-22.15",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_NOT_PROVED_BY_THIS_RUN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1b86f205262fdfdba6fd1f1166fcc9f7ea75828c",
+    "root": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260922T214348Z-account03-B05-QFORM-r18/",
+    "report": "REPORT.md",
+    "claims": "CLAIMS.json",
+    "verify": "VERIFY.txt"
+  },
+  "proved_claims": [
+    "QFORM-TWO-PIVOT-RECIPROCAL-MAX-v1",
+    "QFORM-DOUBLE-STAR-DIRECT-COAREA-v1",
+    "QFORM-DOUBLE-STAR-SQUARE-COAREA-v1",
+    "QFORM-INCIDENT-RANK1-TUBE-ARM-OR-RANK2-v1"
+  ],
+  "review_claims": [
+    {
+      "id": "QFORM-PAIR-LOG-SCOPED-REVIEW-v1",
+      "status": "PASS_SCOPED_ONLY",
+      "scope": "pair-log far/near coarea, logarithmic trace, layer cake, optimization, exact-rank-three Schur application"
+    }
+  ],
+  "key_inequalities": [
+    "E[1/max(A|X-x0|,B|Y-y0|)] <=4/sqrt(AB)",
+    "||p_R||inf <=2/sqrt(|beta gamma|) for the two independent-arm direct coarea form",
+    "||p_(R+a(S+psi)^2)||inf <=2sqrt(2)|a|^(-1/2)|beta gamma|^(-1/4)",
+    "bank version <=2^(7/4)|a|^(-1/2)(||b||||c||)^(-1/4)",
+    "B06 rank-one tube: |alpha|<1/4 => ||b||||c||>0.479784; |alpha|>=1/4 => distance to rank<=2 cross block <0.121012"
+  ],
+  "first_unpaid_implication": "QFORM-DOUBLE-STAR-DEPENDENT-BANK-LEAKAGE-v1",
+  "missing_factor": "The same two original-coordinate banks that furnish the strong aggregate arms may also carry residual cross bilinear U^T D V and/or same-bank quadratic phases. The new coarea theorem pays the arm geometry only before this dependent leakage is added. A successful next step must spend the leakage jointly with the aggregate arms; small coefficient/Frobenius tails cannot be discarded because input supports are unbounded.",
+  "partner_status": {
+    "designated": "account04/B05",
+    "completed_current_qform_artifact_found": false,
+    "fabricated_use": false,
+    "compatible_account04_result_applied": "account04/B18 QFORM-DEPENDENT-SQUARE-SMOOTHING-v1",
+    "compatible_source": "yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3"
+  },
+  "source_dependencies": [
+    "account03/B06 r19 @ f82fe367b06909082f94eda2b98f4a2fd2a5bb7c",
+    "account03/B09 rank-two bilinear/product marginal source @ 55b475aece02e3bd181935ff66a26b8988100a0c",
+    "account04/B18 dependent square smoothing @ 441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+    "interactive pair-log theorem @ f7f0fedb2d93b46824f96cac1164af6f8a55626f"
+  ],
+  "binding_corrections": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SIGNED-LEAKAGE-FREE-TRIBANK-EXTRACTION-FALSE-v1",
+    "QFORM-TRIBANK-CROSS-CORE-LEAKAGE-CLOSURE-FALSE-v1"
+  ],
+  "next_mechanism": "Attack dependent-bank leakage by conditioning only after a two-bank product-preserving decomposition. Try to combine the reciprocal-max two-pivot budget with either a rank-two bilinear direct theorem on the residual D block or the regularized determinant before taking absolute reciprocals. In the |alpha|>=1/4 branch, seek an integrated robust rank-two-cross theorem for the <0.121012 Frobenius tail instead of value perturbation."
+}

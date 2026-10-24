@@ -1,0 +1,66 @@
+[
+  {
+    "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+    "version": 2,
+    "exact_statement": "For actual Boolean children g and h=g(1-2*1_D) on m uniform bits, nonempty D of s vertices and E(D) internal unordered edges, d=s*2^-m and c_D=I(gh)/2=2^-m(ms-2E(D)), and c_D+log2(e)*d-B equals 2^-m(s log2(s)-2E(D)) + [d+(1-d)ln(1-d)]/ln2 + I(Z;T), with Z the selector spectral bit and T the residual label. For quadratic bent core b on even k>=4 and a one-point activation on r>=0 controls, actual selector surgery F has I(F)=2^-r[k/2+r(1-2^(-k/2))+2^-k(A_D+r S_D+s)], with S_D=sum_D b(v) and A_D=sum_(v in D,i:v^i notin D)b(v)b(v^i). For alpha=s*2^-k<1/2, c_D/I(F)<=2alpha/(1-2alpha). Every fair constant-child split obeys B/d<=2+log2(e)/sqrt(e)<3, so control-first activation creates no threshold-4 bad-node credit and scales the full active core ledger by 2^-r. Exact exhaustion of k=4, r in {0,2,4}, all D of sizes 1..4 and four named complete orders gives maximum Q_bad,4/I=4/29 at D={15},r=0,selector-first or control-first, while control-data-selector has zero bad-node credit for every such D and every integer r>=0. For D3={2,4,6} and D4={2,4,6,11}, the data-first descendant after x0=0 querying x1 is bad for every r>=1; its B/d is at least [112-54log2(3)+80log2(5)-98log2(7)+26log2(13)]/8 in (4157/1000,4158/1000). The full data-first bad-node ratio is at least (r+3)/(35+15r) or (r+3)/(34+14r), respectively. These are scoped root/ledger claims, not a universal stopping-tree payment or an FEI disproof. Extension: For every even k>=2, every r>=0 and every D of at most four vertices, the same activated fair-selector quadratic-bent surgery has an explicit physical stopping tree querying controls, then the first coordinate of each quadratic pair, then the selector, while retaining all partner bits at the leaves. Every access node obeys B<=4d (pair nodes obey B/d<=8-3log2(3)<4; control and selector nodes obey B/d<3 for d>0), so access bad-node odd-face credit is exactly zero. Every retained leaf is a character or a character times a defect on at most four points, and every such leaf on any dimension obeys H<=6I. Hence H(F)<=(4+2/ln2)I_removed+6I_terminal<=(4+2/ln2)I(F), with I_removed+I_terminal=I(F) exactly. The new stopping policy was certified on 9212 labelled roots at k=4,6,8 and r=0,2; all 41650 sparse-defect/character cases on dimensions 0..4 were also certified. No extension to arbitrary cores, overlapping controls or zero-cost constant-leaf completion is asserted.",
+    "hypotheses": [
+      "Uniform cube, actual Boolean signs, fair physical selector",
+      "Entropy in bits; badness is strict B>4d",
+      "Root bound k>=4 even and 0<alpha<1/2",
+      "Finite maxima restricted to the frozen four named orders and declared domain",
+      "All-r zero-credit extension restricted to k=4 and |D|=1..4",
+      "All-r bad-descendant lower bounds restricted to the two named vertex sets",
+      "New all-dimensional result: quadratic paired bent reference, uniform fair selector, fresh point-activation controls, |D|<=4",
+      "New zero-credit result concerns the stated stopping access tree; complete retained terminal entropy is included"
+    ],
+    "statement_sha256": "247825d8e61a1bd6143c644e048c7753ca4a37ae2a6848e53b49b3b16d9d4276",
+    "contributors": [
+      "A022"
+    ],
+    "proof_source": {
+      "run_id": "20261013T220954Z-account05-A022-one-point-surgery",
+      "new_proof": "PROOF.md",
+      "inherited_proof": "~\\brain_workers\\FEI100_20261011\\agents\\A022\\runs\\20261011T234607Z-account05-A022-one-point-surgery\\ODDFACE_GAP.tex",
+      "finite_certificate": "out/full_RESULTS.json",
+      "cases": "out/full_CASES.jsonl",
+      "independent_implementation": "out/EDGE_RECONSTRUCTION.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+        "version": 1,
+        "scope": "inherited ledger statements and constant-child bound; partial independent acceptance for constant-child bound only"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A025",
+        "verdict": "HOLDS_FOR_INHERITED_CONSTANT_CHILD_SUBCLAIM_ONLY",
+        "reviewed_version": 1,
+        "source": "~/brain_workers/FEI100_20261011/agents/A025/runs/20261012T045020Z-account05-A025-rare-event-counterfamily/REVIEW_A022.md",
+        "new_version_review": "PENDING; separate edge implementation is author verification, not independent human acceptance"
+      }
+    ],
+    "status": "AUTHOR_PROVED_SCOPED_EXTENSION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+        "version": 1
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A021",
+      "A023",
+      "A025",
+      "A028",
+      "A064",
+      "A067",
+      "A087",
+      "A094",
+      "A097",
+      "B05"
+    ]
+  }
+]

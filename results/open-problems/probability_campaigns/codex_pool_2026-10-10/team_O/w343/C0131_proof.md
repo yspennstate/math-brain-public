@@ -1,0 +1,9 @@
+# C0131: pathwise dichotomy versus an annealed zero-one law (proof, pending w347)
+
+Consider any adapted nearest-neighbor walk on a connected countable graph. Suppose that, at every step, conditional on its complete past, the probability of moving to each neighbor of the current vertex is at least a fixed kappa>0. This applies to uniformly elliptic cookie walks without using iid stacks.
+
+If u is visited infinitely often, then each neighbor v is also visited infinitely often almost surely. To see this, after any fixed time choose successive visits to u. Conditional on the past at each visit, failure to move next to v has probability at most 1-kappa. The probability that there are k such opportunities but none is used is at most (1-kappa)^k, by iterated conditioning at their stopping times. If u has infinitely many visits but v only finitely many, after some integer time every opportunity fails; letting k grow rules this out. Union over integer times and the countably many oriented edges, then propagate along finite paths.
+
+Thus almost every sample path either visits every vertex infinitely often or visits every vertex only finitely often. On Z^d the latter is equivalent to eventually leaving every finite ball. The remaining C0131 question is whether the annealed probability of the recurrent alternative must be zero or one under the specified iid cookie law. This pathwise lemma supplies no such law.
+
+Uniform ellipticity alone is insufficient for the annealed conclusion: choose one fair global coin. On Z^2 use simple random walk if it is zero; if it is one, use constant directional probabilities (3/8,1/8,1/4,1/4). All probabilities are at least 1/8. The first branch is recurrent, while the second has nonzero drift and is transient by the strong law. The recurrent alternative has probability 1/2. This mixture is not an iid cookie environment, so it is not a counterexample to C0131.

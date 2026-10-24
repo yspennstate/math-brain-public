@@ -1,0 +1,12 @@
+{
+  "helper_version": "A012-exact-v1",
+  "family": "All Boolean cores on three bits, their point activations on r=1,2,3 fresh bits; all read-once AND/OR/XOR formula truth tables on at most three labelled bits",
+  "domain": {"core_n":3,"core_truth_tables":256,"activation_r":[1,2,3]},
+  "case_count": {"activations":768,"core_spectra":256,"formula_closure":"finite saturation over disjoint nonempty supports in {0,1,2}"},
+  "symmetry": "None: all labelled truth tables; associative multi-input AND/OR/XOR reduced to binary gates; complements explicitly included",
+  "arithmetic": "Integer FWHT and fractions.Fraction; exact squared spectrum, mass, physical influence, activation coefficients, entropy histograms and class membership. No floating entropy is a certificate.",
+  "memory_estimate_MB": 30,
+  "max_runtime_seconds":60,
+  "automatic_dimension_escalation":false,
+  "expected_outputs":["validation.json","three_bit_admitted.json","mux_certificate.json"]
+}

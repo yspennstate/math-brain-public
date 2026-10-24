@@ -1,0 +1,58 @@
+{
+  "direct_full_walsh_k": [
+    2,
+    3,
+    4
+  ],
+  "full_FEI": "OPEN",
+  "proved_formula": {
+    "DeltaD": "k/4",
+    "I_A_k": "k/2+1",
+    "I_B_k": "1+(k+1)/2^(k+1)",
+    "ratio": "(k/4)/(1+(k+1)/2^(k+1)) -> infinity"
+  },
+  "records": [
+    {
+      "I_A": "2/1",
+      "I_B": "11/8",
+      "delta_depth_energy": "1/2",
+      "delta_over_I_B": 0.36363636363636365,
+      "dim_A": 6,
+      "dim_B": 5,
+      "dim_tensor": 11,
+      "expected_delta": "1/2",
+      "k": 2,
+      "q1_tail_mass_B": "7/32"
+    },
+    {
+      "I_A": "5/2",
+      "I_B": "5/4",
+      "delta_depth_energy": "3/4",
+      "delta_over_I_B": 0.6,
+      "dim_A": 8,
+      "dim_B": 6,
+      "dim_tensor": 14,
+      "expected_delta": "3/4",
+      "k": 3,
+      "q1_tail_mass_B": "15/128"
+    },
+    {
+      "I_A": "3/1",
+      "I_B": "37/32",
+      "delta_depth_energy": "1/1",
+      "delta_over_I_B": 0.8648648648648649,
+      "dim_A": 10,
+      "dim_B": 7,
+      "dim_tensor": 17,
+      "expected_delta": "1/1",
+      "k": 4,
+      "q1_tail_mass_B": "31/512"
+    }
+  ],
+  "scope": "exact Walsh/Fraction verification of the remote-gap D0 catalyst obstruction",
+  "status": "PASS",
+  "symbolic_formula_k": [
+    2,
+    32
+  ]
+}

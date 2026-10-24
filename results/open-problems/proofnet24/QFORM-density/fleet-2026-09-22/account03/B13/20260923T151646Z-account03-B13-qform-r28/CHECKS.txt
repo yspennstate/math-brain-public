@@ -1,0 +1,34 @@
+QFORM_B13_R28_TRANSVERSE_CHECKS
+
+1. For alpha=d/2>1 and K>0:
+   integral_R min(1,K|t|^(-alpha)) dt
+   =2*K^(1/alpha)+2*K*integral_{K^(1/alpha)}^infty t^(-alpha)dt
+   =2*alpha/(alpha-1)*K^(1/alpha).
+
+2. K=(4*pi)^(d/2)*|pdet R|^(-1/2), so K^(2/d)=4*pi*|pdet R|^(-1/d).
+   Multiplying item 1 by (2*pi)^(-1) with alpha=d/2 gives
+   4*d/(d-2)*|pdet R|^(-1/d).
+
+3. If every retained eigenvalue has modulus >=tau, then
+   |pdet R_tau|^(1/d_tau)>=tau.
+   For d_tau>=3, 4*d_tau/(d_tau-2)<=12.
+   Therefore M_tau<=12/tau.
+
+4. With eta=1/2,
+   rho <= M_tau/(1-eta)*(1+2*tau*r^2/L)
+       <=24/tau + 48*r^2/L.
+   Thus rho>24/tau implies r^2 >= (L/48)*(rho-24/tau).
+   If rho>48/tau then r^2 > rho*L/96.
+
+5. Numerical compatibility constants:
+   10*sqrt(2e)=23.316439815971243.
+   16*sqrt(60*pi)=219.66989588730453.
+
+6. Perturbation identity:
+   Q_z=Q-(V-z)^T E_tau(V-z).
+   Since E_tau=P_tau^perp E_tau P_tau^perp and ||E_tau||op<=tau,
+   on ||P_tau^perp V-z||<=r,
+   |Q-Q_z|<=tau*r^2.
+   Hence an interval of length L enlarges to length L+2*tau*r^2.
+
+QFORM_B13_R28_TRANSVERSE_CHECK_PASS

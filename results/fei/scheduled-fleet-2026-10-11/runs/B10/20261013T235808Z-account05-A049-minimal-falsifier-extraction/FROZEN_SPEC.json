@@ -1,0 +1,17 @@
+{
+ "helper_version":"B10 lead v2 block claim: J_A-M_A <= tau*(p1)+tau*(p2), |A|=2; target is conditional additivity as used, not retired tax-free helper",
+ "family":"All Boolean sign truth tables on two revealed bits and m=0,1,2 fair residual bits; actual physical child spectra",
+ "parameter_domain":"p1,p2 independently in {1/8,1/4,3/8,1/2}; residual inputs uniform",
+ "case_count":1052928,
+ "evaluated_representatives":526464,
+ "symmetry":"Global output negation preserves all squared spectra and J,M. Fix f at all-zero input to +1; every omitted table is exactly its complement. No other computational reduction.",
+ "arithmetic":"Integer child Walsh vectors; parent rational masses with denominator 4096*2^(2m); rational atanh log bounds projected outward to 2^-40 integer lattice; ambiguous zero signs by exact prime-log products; independent direct centered-basis witness reconstruction",
+ "tau_comparison":"Use explicit rational qubit witness lower bounds on tau* at x=1/32,1/16,1/256 for p=1/8,1/4,3/8. At p=1/2 use lower bound 0 from a basis vector. Passing against a lower bound is stronger than passing against tau*; failure of this stronger test is inconclusive until refined.",
+ "helper_version_hash_binding":"code and input SHA256 receipts written before pilot",
+ "pilot_domain":"m=0,1, all 16 bias pairs: 2176 representatives, 4352 full truth-table cases",
+ "pilot_max_seconds":60,
+ "memory_estimate_mb":120,
+ "max_runtime_seconds":1200,
+ "automatic_dimension_escalation":false,
+ "full_domain_action":"Run only after pilot PASS; one search job at a time; no job above 300 MB expected"
+}

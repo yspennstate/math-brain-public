@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "event_id": "QFORM-SAMEBANK-L3-L32-DEPENDENCE-BARRIER-v1",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260924T023910Z-account03-B11-QFORM-r48",
+  "status": "REFUTED_INTERMEDIATE_MECHANISM",
+  "challenged_claim": "In the r45/r46 same-bank puncture, a finite L^3 bound for the hyperbolic-plus-puncture component and a finite L^(3/2) bound for the determinant-tied third square can be combined into a universal L^infinity bound using only residual joint/marginal density caps and small puncture size.",
+  "correction": "False. For every 0<eta<=1/sqrt(63), take independent centered unit uniforms H,R,V,W and set T=R-V^2/(2 eta W) off the null event W=0. The residual triple (T,V,W) has joint density cap 1 and all coordinate one/two-dimensional marginal caps <=1. The coefficient matrix of Q=2HW+2eta TW+V^2 has exact rank three, signature (2,1), spectrum {-sqrt(1+eta^2),0,1,sqrt(1+eta^2)}, hub leverage q=1/(1+eta^2)>=63/64, and matches the r45 determinant identity. Yet Q=2W(H+eta R), so p_Q(z)>=log((1-eta)/(2|z|)) near zero. Meanwhile r46 gives ||p_(2HW+2eta TW)||_3^3<=6 and ||p_(V^2)||_(3/2)=2. Thus same-source dependence defeats the dependence-blind L^3 x L^(3/2) step. This is not a QFORM counterexample because (T,V,W) is a nonlinear image of the independent cube, not an exhibited orthogonal linear projection of an original product source; pulled back to H,R,V,W the form has rank two. The true remaining proof must use orthogonal product-projection provenance before collapsing to marginal norms.",
+  "canonical_repository": "yspennstate/math-open-problems",
+  "canonical_commit": "1981b7ded0883caf72e23b833f34274a6763a43c",
+  "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260924T023910Z-account03-B11-QFORM-r48/REPORT.md",
+  "full_target_status": "OPEN"
+}

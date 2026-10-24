@@ -1,0 +1,736 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\smin}{\sigma_{\min}}
+\newcommand{\dF}{d_{\F}}
+\DeclareMathOperator{\Beta}{Beta}
+\DeclareMathOperator{\Var}{Var}
+
+\title[The sharp exponent for coordinate-optimized least singular values]{The sharp exponent for the smallest singular value of a coordinate-optimized Gaussian submatrix}
+\author{Research draft}
+\date{July 6, 2026}
+
+\begin{document}
+\begin{abstract}
+Let $A$ be an $N\times N$ matrix with independent standard real or complex Gaussian entries, write
+$\dF\in\{1,2\}$ for the real dimension of the field, and for $\alpha\in(0,1)$ set
+$n=\lfloor\alpha N\rfloor$ and
+\[
+  M_N(\alpha)=\min_{|S|=|T|=n}\smin\bigl(A[T,S]\bigr),
+\]
+the least value of the smallest singular value over all pairs of coordinate sets $S,T\subseteq[N]$
+of size $n$, where $A[T,S]$ is the $n\times n$ submatrix on rows $T$ and columns $S$. We prove
+\[
+  -\frac1N\log M_N(\alpha)\ \xrightarrow{\ \PP\ }\ \frac{2H(\alpha)}{\dF},\qquad
+  H(\alpha)=-\alpha\log\alpha-(1-\alpha)\log(1-\alpha).
+\]
+This is the sharp large-deviation exponent for the worst conditioning achievable by restricting a
+Gaussian linear map to an $\alpha$-fraction of its coordinates in domain and range. The value settles,
+for square submatrices, the two-sided problem for which only the surrounding bounds $H(\alpha)/\dF$
+and $2H(\alpha)/\dF$ were available. More generally, for submatrices with $r$ surplus rows the same
+argument gives the exponent $2H(\alpha)/(\dF(r+1))$ for every fixed $r$. The upper bounds are
+first-moment estimates. The lower bounds are second-moment arguments on a marked-row construction;
+the new ingredient is a small-ball estimate for two blocks of linear functionals of Gaussian vectors
+taken along two directions of arbitrary overlap, sharp up to a logarithmic factor uniformly in the
+overlap, which removes the loss a crude bound incurs on heavily overlapping submatrices. Two
+consequences are recorded: the achievable rate for support-optimized products of Gaussian matrices
+improves to $2H(\alpha)/\dF$, and for Rademacher entries the minimum vanishes for all
+$\alpha\le\tfrac12$, so the Gaussian constant is not distribution-free.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+Throughout $\F\in\{\R,\C\}$, $\dF=\dim_\R\F\in\{1,2\}$, and $A=(a_{ij})_{i,j=1}^N$ has independent
+entries, each a standard $\F$-Gaussian: $a_{ij}\sim N(0,1)$ when $\F=\R$, and $a_{ij}$ a standard
+complex Gaussian with $\EE|a_{ij}|^2=1$ when $\F=\C$. For $S,T\subseteq[N]$ we write $A[T,S]$ for the
+submatrix with rows indexed by $T$ and columns by $S$. Fix $\alpha\in(0,1)$, put $n=\lfloor\alpha
+N\rfloor$, and study
+\begin{equation}\label{eq:MN}
+  M_N(\alpha)=\min_{\substack{S,T\subseteq[N]\\ |S|=|T|=n}}\smin\bigl(A[T,S]\bigr).
+\end{equation}
+Because $A$ has independent entries, each fixed $A[T,S]$ is itself an $n\times n$ matrix with
+independent standard $\F$-Gaussian entries, so its smallest singular value is polynomially small in
+$n$ (the hard edge). The minimum in \eqref{eq:MN} is taken over $\binom Nn^2=e^{2H(\alpha)N+o(N)}$
+strongly dependent submatrices, and it is exponentially small. Our result identifies the exponent.
+
+\begin{theorem}\label{thm:main}
+For every $\alpha\in(0,1)$,
+\[
+  -\frac1N\log M_N(\alpha)\ \xrightarrow{\ \PP\ }\ \frac{2H(\alpha)}{\dF}\qquad(N\to\infty).
+\]
+\end{theorem}
+
+The same holds with surplus rows. For an integer $r\ge0$ put
+\begin{equation}\label{eq:MNr}
+  M_N^{(r)}(\alpha)=\min_{\substack{T,S\subseteq[N]\\ |T|=n+r,\ |S|=n}}\smin\bigl(A[T,S]\bigr),
+\end{equation}
+the minimum over all $(n+r)\times n$ coordinate submatrices; $M_N^{(0)}=M_N$.
+
+\begin{theorem}\label{thm:surplus}
+For every $\alpha\in(0,1)$ and every fixed integer $r\ge0$,
+\[
+  -\frac1N\log M_N^{(r)}(\alpha)\ \xrightarrow{\ \PP\ }\ \frac{2H(\alpha)}{\dF(r+1)}\qquad(N\to\infty).
+\]
+\end{theorem}
+
+Section~\ref{sec:surplus} proves Theorem~\ref{thm:surplus}; the case $r=0$ recovers
+Theorem~\ref{thm:main}, and Sections~\ref{sec:construct}--\ref{sec:second} present that case
+separately because all the ideas are visible there with lighter bookkeeping. Section~\ref{sec:conseq}
+records some consequences and complements: for support-optimized products, for Rademacher entries,
+and for tall submatrices, where support optimization is powerless and the minimum stays of order
+$\sqrt N$.
+
+\paragraph{Relation to previous work.}
+The one-sided statistic $\min_{|T|=m+r}\smin(G_T)$, where $G\in\F^{N\times m}$ is Gaussian and the
+minimum is over row sets $T$ of size $m+r$ with columns fixed, was determined by Shmalo
+\cite{shmalo}: for fixed surplus $r$ it satisfies $\tfrac{r+1}{m}\log(\cdot)\to-h(\gamma)/\dF$, where
+$\gamma=\lim N/m$ and $h(\gamma)=\gamma\log\gamma-(\gamma-1)\log(\gamma-1)$. Specializing to a square
+window ($r=0$, columns all of $[m]$) and then also minimizing over columns is exactly \eqref{eq:MN}.
+For that two-sided minimum \cite{shmalo} records the bracket
+\begin{equation}\label{eq:bracket}
+  \frac{H(\alpha)}{\dF}\ \le\ \liminf_N-\tfrac1N\log M_N(\alpha)\ \le\ \limsup_N-\tfrac1N\log M_N(\alpha)\ \le\ \frac{2H(\alpha)}{\dF},
+\end{equation}
+with the sharp constant left open; the lower end used only a single fixed column set, while the
+upper end is a union bound over all pairs. It was not known whether the exponent exceeds
+$H(\alpha)/\dF$ at all, i.e.\ whether optimizing over columns helps at exponential order. Theorem
+\ref{thm:main} gives the sharp value $2H(\alpha)/\dF$, the top of the bracket. We use the identity
+$H(\alpha)=\alpha\,h(1/\alpha)$, which reconciles the two normalizations.
+
+\paragraph{The point of the proof.}
+The upper bound in \eqref{eq:bracket} is a first moment (Section~\ref{sec:upper}); the content is the
+matching lower bound. The natural route is a second moment for the number of near-singular
+submatrices, but the pairs of submatrices that overlap in almost all of their rows and columns are
+too correlated for the crude estimate that suffices at the typical scale, and they are numerous
+(this is the obstruction identified in \cite{shmalo}). Two devices resolve it. First, a marked-row
+construction (Section~\ref{sec:construct}) reduces near-singularity of $A[T,S]$ to a single linear
+constraint through one distinguished row; drawing that row from a small fixed set $M$ while barring
+the remaining rows from $M$ forces two constructed events with distinct marked rows to be exactly
+independent, so all correlation is carried by pairs sharing a marked row. Second, for such pairs the
+correlation is governed by one overlap parameter, the inner product of the two constructed normals,
+whose small-ball behaviour we control by a sharp two-direction estimate (Section~\ref{sec:twoslab})
+together with the fact that the constructed normal is Haar-distributed. The crude bound on heavily
+overlapping pairs is replaced by these, and the second moment concentrates
+(Section~\ref{sec:second}).
+
+\paragraph{An interpretation.}
+$M_N(\alpha)$ is the worst conditioning of the Gaussian linear map $A$ restricted to an
+$\alpha$-fraction of coordinates in domain and range. If $A$ is the weight matrix of a one-layer
+network with a hard-threshold gate, then $S$ and $T$ are an input and an output activation pattern,
+and $M_N(\alpha)$ is the most singular input--output map realized by some pattern; Theorem
+\ref{thm:main} gives the rate at which this worst case decays with width. This is the
+coordinate-selection counterpart, at speed $N$ and governed by entropy, of the fixed-support hard
+edge, which is only polynomial.
+
+\paragraph{Notation.}
+$H$ and $h$ are as above (natural logarithm). For a standard $\F$-Gaussian scalar $\zeta$ (so
+$\EE|\zeta|^2=1$) and $0<t\le1$ put $p(t)=\PP(|\zeta|\le t)$; then
+\begin{equation}\label{eq:pball}
+  c_\F\,t^{\dF}\ \le\ p(t)\ \le\ C_\F\,t^{\dF},
+\end{equation}
+with $p(t)=2\varphi(0)t(1+O(t^2))$ when $\F=\R$ and $p(t)=1-e^{-t^2}$ when $\F=\C$ (there $|\zeta|^2$ is
+$\mathrm{Exp}(1)$). More generally, for a standard $\F$-Gaussian vector $g^{(k)}\in\F^k$ put
+$p_k(t)=\PP(\|g^{(k)}\|\le t)$; since $\|g^{(k)}\|^2$ is a chi-square variable with $\dF k$ real
+degrees of freedom,
+\begin{equation}\label{eq:pkball}
+  c_{\F,k}\,t^{\dF k}\ \le\ p_k(t)\ \le\ C_{\F,k}\,t^{\dF k},\qquad 0<t\le1,
+\end{equation}
+and $p_1=p$. For a unit vector $w\in\F^d$ and a standard $\F$-Gaussian vector $g\in\F^d$, the
+scalar $\langle g,w\rangle$ is a standard $\F$-Gaussian, by rotation invariance. Constants
+$c_\F,C_\F,C_{\F,k}$ depend only on the subscripts and may change between lines.
+
+\section{The first-moment upper bound}\label{sec:upper}
+\begin{proposition}\label{prop:upper}
+For every $\varepsilon>0$, $\PP\bigl(M_N(\alpha)\le e^{-(2H(\alpha)/\dF+\varepsilon)N}\bigr)\to0$. In
+particular $\limsup_N-\tfrac1N\log M_N(\alpha)\le 2H(\alpha)/\dF$ in probability.
+\end{proposition}
+\begin{proof}
+For a single $n\times n$ standard $\F$-Gaussian matrix $G$ one has the hard-edge tail
+\begin{equation}\label{eq:hardedge}
+  \PP\bigl(\smin(G)\le t\bigr)\ \le\ C_\F\,\bigl(\sqrt n\,t\bigr)^{\dF},\qquad t>0,
+\end{equation}
+valid for all $t$ (real case: Edelman \cite{edelman} and Rudelson--Vershynin \cite{rv}; complex case
+analogously, the smallest squared singular value having a bounded density near $0$ at scale $1/n$).
+Each $A[T,S]$ has the law of $G$, so by a union bound over the $\binom Nn^2$ pairs and $\binom
+Nn=e^{H(\alpha)N+o(N)}$,
+\[
+  \PP\bigl(M_N(\alpha)\le t\bigr)\ \le\ \binom Nn^2 C_\F(\sqrt n\,t)^{\dF}
+  = e^{2H(\alpha)N+o(N)}\,t^{\dF}.
+\]
+With $t=e^{-(2H(\alpha)/\dF+\varepsilon)N}$ the right side is $e^{-\dF\varepsilon N+o(N)}\to0$.
+\end{proof}
+
+\section{The sharp two-direction small-ball estimate}\label{sec:twoslab}
+This is the one new analytic ingredient. Let $u,v$ be independent Haar-random unit vectors in $\F^D$
+($D\ge2$) and $g$ a standard $\F$-Gaussian vector in $\F^D$ independent of $u,v$. With $p$ as in
+\eqref{eq:pball}, set
+\[
+  q_D(t)=\PP\bigl(|\langle g,u\rangle|\le t,\ |\langle g,v\rangle|\le t\bigr).
+\]
+\begin{lemma}\label{lem:twoslab}
+There is $C_\F<\infty$, independent of $D$, such that for all $D\ge2$ and $0<t\le1$,
+\[
+  q_D(t)\ \le\ C_\F\,p(t)^2\,\bigl(1+\log(1/t)\bigr).
+\]
+\end{lemma}
+\begin{proof}
+Condition on $u,v$ and write $\rho=\langle u,v\rangle$, $s^2=1-|\rho|^2$. Put $X=\langle
+g,u\rangle$, $Y=\langle g,v\rangle$; these are jointly (circularly symmetric) $\F$-Gaussian with unit
+variances and $\EE[Y\overline X]=\rho'$, $|\rho'|=|\rho|$. Regressing, $Y=cX+sW$ with $|c|=|\rho|$ and
+$W$ a standard $\F$-Gaussian independent of $X$. If $|X|\le t$ then $|cX|\le t$, so
+$|sW|=|Y-cX|\le|Y|+|cX|$, whence $\{|X|\le t\}\cap\{|Y|\le t\}\subseteq\{|X|\le t\}\cap\{|W|\le
+2t/s\}$. As $X\perp W$,
+\begin{equation}\label{eq:cond}
+  \PP\bigl(|X|\le t,|Y|\le t\mid u,v\bigr)\ \le\ p(t)\,p(2t/s)\ \le\ C_\F\,p(t)\,\min\!\bigl(1,(t/s)^{\dF}\bigr),
+\end{equation}
+using $p(r)\le C_\F\min(1,r^{\dF})$ from \eqref{eq:pball}. Now $R:=|\rho|^2=|\langle
+u,v\rangle|^2\sim\Beta(a_0,b_0)$ with $(a_0,b_0)=(\tfrac{\dF}2,\tfrac{(D-1)\dF}2)$ (the squared first
+coordinate of a Haar unit vector), so $s^2=1-R\sim\Beta(b_0,a_0)$. Taking expectations in
+\eqref{eq:cond},
+\[
+  q_D(t)\ \le\ C_\F\,p(t)\,\EE\bigl[\min(1,(t/s)^{\dF})\bigr],\qquad
+  \EE\bigl[\min(1,(t/s)^{\dF})\bigr]=t^{\dF}\,\EE\bigl[s^{-\dF}\one_{\{s\ge t\}}\bigr]+\PP(s<t).
+\]
+For the first term, with $\alpha_0:=\dF/2$,
+\[
+  \EE\bigl[s^{-\dF}\one_{\{s\ge t\}}\bigr]=\frac1{B(b_0,a_0)}\int_{t^2}^1 w^{\,b_0-\alpha_0-1}(1-w)^{a_0-1}\,dw,
+  \qquad b_0-\alpha_0=\tfrac{(D-2)\dF}2 .
+\]
+When $D=2$ the exponent $b_0-\alpha_0-1=-1$ and the integral is $\le C_\F(1+\log(1/t))$ (the factor
+$(1-w)^{a_0-1}$ is integrable at $w=1$). When $D\ge3$ the exponent exceeds $-1$, the integral
+converges, and $B(b_0-\alpha_0,a_0)/B(b_0,a_0)\to1$ and is bounded uniformly in $D$ (as
+$\Gamma(x+a)/\Gamma(x)\asymp x^{a}$). Hence $\EE[s^{-\dF}\one_{\{s\ge t\}}]\le C_\F(1+\log(1/t))$
+uniformly in $D\ge2$. For the second term, $\PP(s<t)=\PP(\Beta(b_0,a_0)<t^2)\le C_\F\,t^{2b_0}\le
+C_\F\,t^{\dF}$ since $2b_0=(D-1)\dF\ge\dF$. Therefore $\EE[\min(1,(t/s)^{\dF})]\le
+C_\F\,t^{\dF}(1+\log(1/t))$, and since $t^{\dF}\le p(t)/c_\F$ by \eqref{eq:pball},
+\[
+  q_D(t)\ \le\ C_\F\,p(t)\cdot t^{\dF}(1+\log(1/t))\ \le\ C_\F'\,p(t)^2\,(1+\log(1/t)).\qedhere
+\]
+\end{proof}
+
+\begin{remark}\label{rem:crude}
+The crude bound $q_D(t)\le p(t)$ (either marginal) loses the factor $p(t)^{-1}=e^{\Theta(N)}$ at the
+scales below. Lemma~\ref{lem:twoslab} shows the true excess over independence is only the polynomial
+$1+\log(1/t)$, for \emph{every} $D\ge2$; this is what makes the second moment converge at the sharp
+constant. The single conditional inequality \eqref{eq:cond} is also the mechanism used for
+same-column pairs in Section~\ref{sec:second}, where the overlap is not Haar in a fixed dimension.
+\end{remark}
+
+In the second-moment arguments the conditional inequality \eqref{eq:cond} (and its block version
+\eqref{eq:vectorslab} below) is averaged over the law of the overlap. The following elementary
+estimate packages that step; the factor $\Lambda$ accommodates the polynomial prefactors that the
+overlap tails of Section~\ref{sec:second} carry.
+
+\begin{lemma}\label{lem:averaged}
+Let $j\ge1$, $q=\dF j$, and let $\sigma^2\in[0,1]$ be a random variable whose lower tail satisfies,
+for some $\beta\ge\dF(j+1)/2$, $\gamma\ge1$ and $\Lambda\ge1$,
+\[
+  \PP\bigl(\sigma^2\le x\bigr)\ \le\ \Lambda\,(\gamma x)^{\beta}\qquad\text{for all }x\in(0,1].
+\]
+Then, for all $t$ with $\sqrt\gamma\,t\le1$,
+\[
+  \EE\Bigl[\min\!\bigl(1,(2t/\sigma)^{q}\bigr)\Bigr]\ \le\ C_{\F,j}\,\Lambda\,\gamma^{q/2}\,t^{q}.
+\]
+\end{lemma}
+
+\begin{proof}
+Since $\gamma x\le1$ on the range where the bound is below one, the hypothesis also holds with
+$\beta$ replaced by $\beta'=\dF(j+1)/2\le\beta$, so assume $\beta=\beta'$. Write
+$\EE[\min(1,(2t/\sigma)^q)]\le\PP(\sigma^2\le4t^2)+(2t)^q\,\EE[\sigma^{-q}\one_{\{\sigma^2>4t^2\}}]$.
+The first term is at most $\Lambda(4\gamma t^2)^{\beta'}\le C\Lambda\gamma^{q/2}t^{q}\,
+(\gamma^{1/2}t)^{\dF}\le C\Lambda\gamma^{q/2}t^q$. For the second, integrating by parts,
+\[
+  \EE[\sigma^{-q}\one_{\{\sigma^2>4t^2\}}]\ \le\ 1+\tfrac q2\int_{0}^{1}w^{-q/2-1}\,
+  \min\!\bigl(1,\Lambda(\gamma w)^{\beta'}\bigr)\,dw .
+\]
+Split at $w_*=(\gamma\Lambda^{1/\beta'})^{-1}$: on $(0,w_*]$ the integrand is
+$\Lambda\gamma^{\beta'}w^{\beta'-q/2-1}$ and $\beta'-q/2=\dF/2$, giving
+$C\Lambda\gamma^{\beta'}w_*^{\dF/2}\le C\Lambda\gamma^{q/2}$; on $[w_*,1]$ the integrand is at most
+$w^{-q/2-1}$, giving $Cw_*^{-q/2}\le C\Lambda\gamma^{q/2}$. Multiplying by $(2t)^q$ finishes.
+\end{proof}
+
+\section{The marked-row construction}\label{sec:construct}
+Fix $\varepsilon\in(0,H(\alpha)/\dF)$ and set $t=t_N=e^{-(2H(\alpha)/\dF-\varepsilon)N}$. Fix a
+\emph{marked set} $M\subseteq[N]$ with $|M|=m_N:=\lceil\sqrt N\rceil$; the only properties used are
+$m_N\to\infty$ and $m_N=o(N)$. A \emph{configuration} is a triple $c=(S,R,y)$ with $S\subseteq[N]$,
+$|S|=n$; $y\in M$; and $R\subseteq[N]\setminus M$, $|R|=n-1$ (so $R$ avoids every marked index, in
+particular $y\notin R$). Since $A$ has independent Gaussian entries, the vectors
+$\{A_i|_S:i\in R\}$ (rows of $A$ restricted to $S$) are almost surely linearly independent and span a
+hyperplane in $\F^S\cong\F^n$; let $u_c\in\F^S$ be a unit normal (defined up to a unit scalar in the
+complex case; all events below are invariant under this). Put
+\[
+  E_c=\bigl\{\,|\langle A_y|_S,\,u_c\rangle|\le t\,\bigr\},\qquad W=W_N=\sum_c \one_{E_c}.
+\]
+\begin{lemma}\label{lem:suff}
+If $W>0$ then $M_N(\alpha)\le t$.
+\end{lemma}
+\begin{proof}
+If $E_c$ holds, set $T=R\cup\{y\}$, so $|T|=n$. For $i\in R$, $\langle A_i|_S,u_c\rangle=0$; hence
+$\|A[T,S]\,u_c\|^2=\sum_{i\in T}|\langle A_i|_S,u_c\rangle|^2=|\langle A_y|_S,u_c\rangle|^2\le t^2$.
+As $u_c$ is a unit vector, $\smin(A[T,S])\le\|A[T,S]u_c\|\le t$.
+\end{proof}
+\begin{lemma}\label{lem:mean}
+$\EE W=m_N\binom Nn\binom{N-m_N}{n-1}p(t)=\exp(2H(\alpha)N+o(N))\,t^{\dF}=e^{\dF\varepsilon
+N+o(N)}\to\infty.$
+\end{lemma}
+\begin{proof}
+Because $y\notin R$, the row $A_y$ is independent of $u_c$, so conditionally on $u_c$ the scalar
+$\langle A_y|_S,u_c\rangle$ is a standard $\F$-Gaussian and $\PP(E_c)=p(t)$. The number of
+configurations is $m_N\binom Nn\binom{N-m_N}{n-1}$. Since $m_N=o(N)$, $\tfrac1N\log\binom
+Nn\to H(\alpha)$ and $\tfrac1N\log\binom{N-m_N}{n-1}\to H(\alpha)$ as well, while $\tfrac1N\log
+m_N\to0$; with \eqref{eq:pball} this gives the stated asymptotics.
+\end{proof}
+
+\section{The second moment and the lower bound}\label{sec:second}
+\begin{proposition}\label{prop:lower}
+For every $\varepsilon>0$, $\PP\bigl(M_N(\alpha)>e^{-(2H(\alpha)/\dF-\varepsilon)N}\bigr)\to0$; hence
+$\liminf_N-\tfrac1N\log M_N(\alpha)\ge 2H(\alpha)/\dF$ in probability.
+\end{proposition}
+Theorem~\ref{thm:main} follows from Propositions~\ref{prop:upper} and~\ref{prop:lower}. By
+Lemma~\ref{lem:suff} and Chebyshev, $\PP(M_N>t)\le\PP(W=0)\le\Var(W)/(\EE W)^2$, so it suffices to
+show $\Var(W)=o((\EE W)^2)$. Write $B=\binom Nn\binom{N-m_N}{n-1}=e^{2H(\alpha)N+o(N)}$, so $\EE
+W=m_N\,B\,p(t)$ and $(\EE W)^2=m_N^2B^2p(t)^2$. We must control $\EE[W^2]=\sum_{c,c'}\PP(E_c\cap
+E_{c'})$.
+
+\subsection{Distinct marked rows give independence}
+Let $c=(S,R,y)$, $c'=(S',R',y')$ and $\mathcal G=\sigma(A_i:i\neq y)$. The marked set is the point
+of the restriction: since $y,y'\in M$ while $R,R'\subseteq[N]\setminus M$, we always have $y'\notin
+R$ and $y\notin R'$, and also $y\neq y'\Rightarrow y\notin\{y'\}$.
+\begin{lemma}\label{lem:indep}
+If $y\neq y'$ then $\PP(E_c\cap E_{c'})=p(t)^2$.
+\end{lemma}
+\begin{proof}
+The row $A_y$ enters neither $u_c$ (built from $R\not\ni y$), nor $u_{c'}$ (from $R'\not\ni y$), nor
+the marked row $A_{y'}$ of $c'$ (as $y'\neq y$); hence both normals and the event $E_{c'}$ are
+$\mathcal G$-measurable, while $E_c=\{|\langle A_y|_S,u_c\rangle|\le t\}$ depends on the fresh row
+$A_y$ with $\PP(E_c\mid\mathcal G)=p(t)$ for every value of $u_c$. Since $A_y\perp\mathcal G$,
+$\PP(E_c\cap E_{c'})=\EE[\one_{E_{c'}}\PP(E_c\mid\mathcal G)]=p(t)\,\PP(E_{c'})=p(t)^2$.
+\end{proof}
+Thus the only correlated pairs have $y=y'$: a marked row can never be another configuration's
+normal-defining row, which is exactly what the restriction $R\subseteq[N]\setminus M$ buys.
+
+\subsection{Same marked row}\label{sub:same}
+Here $y=y'$ and $A_y=A_{y'}$ is a single fresh row. Given $\mathcal G$, $u_c,u_{c'}$ are determined,
+and $(\langle A_y|_S,u_c\rangle,\langle A_y|_{S'},u_{c'}\rangle)=(\langle A_y,\tilde
+u_c\rangle,\langle A_y,\tilde u_{c'}\rangle)$, where $\tilde u_c,\tilde u_{c'}\in\F^N$ are the
+zero-padded normals. By the conditional inequality \eqref{eq:cond} (applied to the standard Gaussian
+$A_y$ and the unit vectors $\tilde u_c,\tilde u_{c'}$, with $R:=|\langle\tilde u_c,\tilde
+u_{c'}\rangle|^2$ and $s^2=1-R$),
+\begin{equation}\label{eq:sameG}
+  \PP(E_c\cap E_{c'}\mid\mathcal G)\ \le\ C_\F\,p(t)\,\min\!\bigl(1,(t/s)^{\dF}\bigr).
+\end{equation}
+The overlap $R=|\langle\tilde u_c,\tilde u_{c'}\rangle|^2$ is controlled by two tail bounds, one
+through the columns and one through the rows. Write $D_{\mathrm c}=n-|S\cap S'|$ and $D_{\mathrm
+r}=n-|R\cap R'|$, so $D_{\mathrm r}\ge1$ with equality iff $R=R'$.
+
+\begin{lemma}\label{lem:overlaptail}
+For two configurations $c,c'$ (with any marked data) and all $x\in(0,1]$:
+\begin{enumerate}
+\item (row bound) if $D_{\mathrm r}\ge2$, then
+  $\PP\bigl(R>1-x\bigr)\le C_\F\,x^{(D_{\mathrm r}-1)\dF/2}$, with $C_\F$ uniform in $D_{\mathrm r}$
+  and $N$;
+\item (column bound) if $D_{\mathrm c}\ge1$, then
+  $\PP\bigl(R>1-x\bigr)\le n\,\bigl(C_\F\,n\,x/D_{\mathrm c}\bigr)^{D_{\mathrm c}\dF/2}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(ii) Since $\langle\tilde u_c,\tilde u_{c'}\rangle=\langle u_c|_{S\cap S'},u_{c'}|_{S\cap
+S'}\rangle$ and $u_{c'}$ is a unit vector, $R\le\|u_c|_{S\cap S'}\|^2=1-Z$ with
+$Z=\|u_c|_{S\setminus S'}\|^2$. The normal $u_c$ is Haar on the unit sphere of $\F^S$ (the span of
+$n-1$ i.i.d.\ Gaussian vectors is a uniformly random hyperplane), so
+$Z\sim\Beta(a,b)$ with $a=D_{\mathrm c}\dF/2$, $b=(n-D_{\mathrm c})\dF/2$. We may assume $x\le1/2$
+and $b\ge1$, since otherwise the stated bound exceeds one. Hence, bounding
+$(1-w)^{b-1}\le1$,
+\[
+  \PP(Z\le x)\ \le\ \frac{x^a}a\cdot\frac1{B(a,b)}
+  =x^a\,\frac{\Gamma(a+b)}{\Gamma(a+1)\Gamma(b)}
+  \ \le\ x^a\,(a+b)^{a+1}\Bigl(\frac ea\Bigr)^a
+  \ \le\ n\,\Bigl(\frac{C_\F nx}{D_{\mathrm c}}\Bigr)^{a},
+\]
+using $\Gamma(a+b)\le\Gamma(b)(a+b)^{a+1}$ and $\Gamma(a+1)\ge(a/e)^a$.
+
+(i) Condition on all rows indexed by $R$; this determines $u_c$. Set
+$V=\mathrm{span}\{A_i|_{S'}:i\in R\cap R'\}\subseteq\F^{S'}$, of dimension $n-D_{\mathrm r}$ almost
+surely, and $W_0=V^\perp\subseteq\F^{S'}$, of dimension $D_{\mathrm r}$. The $D_{\mathrm r}-1$ rows
+indexed by $R'\setminus R$ are independent of the conditioning, their restrictions to $S'$ are
+standard Gaussians in $\F^{S'}$, and their orthogonal projections onto $W_0$ are independent
+standard Gaussians in $W_0$. The normal $u_{c'}$ lies in $W_0$ and is orthogonal to these
+projections, so, given the conditioning, $u_{c'}$ is Haar on the unit sphere of $W_0$. If
+$\hat w$ denotes the unit vector along the projection of $\tilde u_c$ onto $W_0$ (when the
+projection vanishes, $R=0$), then
+$R=|\langle\tilde u_c,u_{c'}\rangle|^2\le|\langle\hat w,u_{c'}\rangle|^2=:1-Z'$, and
+$Z'\sim\Beta(b_0,a_0)$ with $b_0=(D_{\mathrm r}-1)\dF/2$, $a_0=\dF/2$. Hence
+\[
+  \PP(Z'\le x)\ \le\ \frac{x^{b_0}}{b_0}\cdot\frac1{B(b_0,a_0)}
+  =x^{b_0}\,\frac{\Gamma(a_0+b_0)}{\Gamma(b_0+1)\Gamma(a_0)}\ \le\ C_\F\,x^{b_0},
+\]
+because $a_0\le1$ gives $\Gamma(a_0+b_0)\le\max\{\Gamma(b_0),\Gamma(b_0+1)\}\le
+C\,\Gamma(b_0+1)$ by the log-convexity of $\Gamma$. Averaging over the conditioning preserves both
+bounds.
+\end{proof}
+
+We now bound $\EE[\one_{E_c\cap E_{c'}}]=\EE[\PP(E_c\cap E_{c'}\mid\mathcal G)]$ over three regions
+of $(D_{\mathrm c},D_{\mathrm r})$. Recall from \eqref{eq:sameG} that the quantity to average is
+$C_\F\,p(t)\min(1,(t/s)^{\dF})$ with $s^2=1-R$; Lemma~\ref{lem:averaged} (with $j=1$, $q=\dF$)
+converts each tail bound of Lemma~\ref{lem:overlaptail} into a bound on this average. Note
+$\sqrt\gamma\,t\le1$ holds in all cases below since $\gamma\le C_\F n$ and $t=e^{-\Theta(N)}$. Two
+counting facts are used: the fraction of ordered pairs $(S,S')$ with $D_{\mathrm c}\le a$ is at most
+$N^{2a}\binom Nn^{-1}=N^{2a}e^{-H(\alpha)N+o(N)}$, and likewise for rows.
+
+\emph{Region $D_{\mathrm r}\ge3$.} The row bound gives the hypothesis of Lemma~\ref{lem:averaged}
+with $\beta=(D_{\mathrm r}-1)\dF/2\ge\dF$, $\gamma=C_\F$, $\Lambda=1$, so
+$\PP(E_c\cap E_{c'})\le C_\F\,p(t)\cdot t^{\dF}\le C_\F\,p(t)^2$. Summed over the $m_N$ choices of
+$y=y'$ and all such pairs, the contribution is at most $C_\F(\EE W)^2/m_N=o((\EE W)^2)$.
+
+\emph{Region $D_{\mathrm r}\le2$, $D_{\mathrm c}\ge2$.} The column bound gives the hypothesis with
+$\beta=D_{\mathrm c}\dF/2\ge\dF$, $\gamma=C_\F n/D_{\mathrm c}$, $\Lambda=n$, so $\PP(E_c\cap
+E_{c'})\le C_\F\,n\,(n/D_{\mathrm c})^{\dF/2}\,p(t)^2\le N^{C}p(t)^2$. The rows are pinned:
+the fraction of pairs with $D_{\mathrm r}\le2$ is at most $N^{4}e^{-H(\alpha)N+o(N)}$, so the
+contribution is at most $N^{C}e^{-H(\alpha)N+o(N)}(\EE W)^2=o((\EE W)^2)$.
+
+\emph{Region $D_{\mathrm r}\le2$, $D_{\mathrm c}\le1$.} Use the crude bound $\PP(E_c\cap
+E_{c'}\mid\mathcal G)\le p(t)$ (one marginal), so the ratio to $p(t)^2$ is at most
+$C_\F\,t^{-\dF}=C_\F e^{(2H(\alpha)-\dF\varepsilon)N}$. Both coordinates are pinned: the fraction of
+such pairs is at most $N^{C}e^{-2H(\alpha)N+o(N)}$. The contribution is at most
+$N^{C}e^{-\dF\varepsilon N+o(N)}(\EE W)^2=o((\EE W)^2)$; this region includes the diagonal $c=c'$,
+whose contribution $\EE W$ is $o((\EE W)^2)$ as well.
+
+\subsection{Conclusion}
+By Lemma~\ref{lem:indep} the distinct-marked-row pairs contribute $\le(\#\text{configs})^2p(t)^2=(\EE
+W)^2$, and the same-marked-row pairs, split into the three regions above, contribute $o((\EE W)^2)$.
+Hence $\EE[W^2]\le(\EE W)^2+o((\EE W)^2)$, i.e.\ $\Var(W)=o((\EE W)^2)$. By Chebyshev $\PP(W=0)\to0$,
+and Lemma~\ref{lem:suff} yields Proposition~\ref{prop:lower}. \qed
+
+\begin{remark}
+The marked set $M$ is what makes the second moment converge \emph{at the sharp constant}. Without it,
+pairs in which each configuration's marked row is the other's normal-defining row form a $\Theta(1)$
+fraction of all pairs and are genuinely correlated, so no crude bound controls them; forbidding
+normal rows from $M$ removes them, leaving only the same-marked-row pairs, whose $\Theta(1/m_N)$
+weight and the estimates of \S\ref{sub:same} suffice. Any $m_N$ with $m_N\to\infty$, $m_N=o(N)$
+works; $m_N=\lceil\sqrt N\rceil$ is one choice.
+\end{remark}
+
+\section{Surplus rows}\label{sec:surplus}
+Fix an integer $r\ge1$ and write $k=r+1$; throughout this section $r$ (hence $k$) is fixed as
+$N\to\infty$, and constants may depend on $\F$ and $k$. We prove Theorem~\ref{thm:surplus}. The
+architecture is that of Sections~\ref{sec:construct}--\ref{sec:second} with $k$ marked rows per
+configuration instead of one; the new points are a vector version of the two-direction estimate, a
+second tail bound for the overlap of two constructed normals, and a bookkeeping of pairs by the
+number of shared marked rows.
+
+\subsection{Upper bound}
+For a single $(n+r)\times n$ standard $\F$-Gaussian matrix $G$ the rectangular hard-edge tail
+\begin{equation}\label{eq:recttail}
+  \PP\bigl(\smin(G)\le t\bigr)\ \le\ \bigl(C_{\F,r}\,\sqrt n\,t\bigr)^{\dF(r+1)},\qquad t>0,
+\end{equation}
+holds \cite[Lemma 2.2]{shmalo} (see also \cite{rv}). A union bound over the
+$\binom Nn\binom N{n+r}=e^{2H(\alpha)N+o(N)}$ support pairs gives, for
+$t=e^{-(2H(\alpha)/(\dF k)+\varepsilon)N}$,
+\[
+  \PP\bigl(M_N^{(r)}(\alpha)\le t\bigr)\ \le\ e^{2H(\alpha)N+o(N)}\,t^{\dF k}
+  \ =\ e^{-\dF k\varepsilon N+o(N)}\ \to\ 0 .
+\]
+
+\subsection{Construction and mean}
+Fix $\varepsilon\in(0,H(\alpha)/(\dF k))$ and set $t=t_N=e^{-(2H(\alpha)/(\dF k)-\varepsilon)N}$.
+Keep the marked set $M\subseteq[N]$, $|M|=m_N=\lceil\sqrt N\rceil$. A configuration is now a triple
+$c=(S,R,Y)$ with $|S|=n$; $Y\subseteq M$, $|Y|=k$; and $R\subseteq[N]\setminus M$, $|R|=n-1$. As
+before $u_c\in\F^S$ is the unit normal to $\mathrm{span}\{A_i|_S:i\in R\}$, and
+\[
+  E_c=\Bigl\{\,\sum_{y\in Y}|\langle A_y|_S,\,u_c\rangle|^2\le t^2\,\Bigr\},\qquad
+  W=\sum_c\one_{E_c}.
+\]
+If $E_c$ holds, then $T=R\cup Y$ has $|T|=n+r$ and $\|A[T,S]u_c\|^2=\sum_{y\in Y}|\langle
+A_y|_S,u_c\rangle|^2\le t^2$, so $\smin(A[T,S])\le t$ and $M_N^{(r)}\le t$. Since the rows indexed
+by $Y$ are independent of $u_c$, the vector $(\langle A_y|_S,u_c\rangle)_{y\in Y}$ is standard
+$\F$-Gaussian in $\F^k$ given $u_c$, so $\PP(E_c)=p_k(t)$, and with
+$\binom{m_N}k=e^{o(N)}$,
+\[
+  \EE W=\binom Nn\binom{m_N}k\binom{N-m_N}{n-1}\,p_k(t)
+  =e^{2H(\alpha)N+o(N)}\,t^{\dF k}=e^{\dF k\varepsilon N+o(N)}\ \to\ \infty .
+\]
+
+\subsection{A vector two-direction estimate}
+The two-direction estimate of Section~\ref{sec:twoslab} extends to blocks of $j$ rows with no change
+in the proof. Let $u,v$ be unit vectors in $\F^d$ with $|\langle u,v\rangle|^2=\omega$ and
+$s^2=1-\omega$, and let $g_1,\dots,g_j$ be independent standard $\F$-Gaussian vectors in $\F^d$.
+Set $X=(\langle g_i,u\rangle)_{i\le j}$ and $Y=(\langle g_i,v\rangle)_{i\le j}$, standard
+$\F$-Gaussian vectors in $\F^j$ with componentwise regression $Y=cX+sW$, $|c|^2=\omega$, where
+$W\in\F^j$ is standard and independent of $X$ (each pair $(X_i,Y_i)$ is jointly Gaussian with the
+same correlation $c$, and the pairs are independent). On $\{\|X\|\le t\}$ one has $\|sW\|\le\|Y\|+
+|c|\,\|X\|\le2t$ whenever $\|Y\|\le t$, so
+\begin{equation}\label{eq:vectorslab}
+  \PP\bigl(\|X\|\le t,\ \|Y\|\le t\ \big|\ u,v\bigr)\ \le\ p_j(t)\,p_j(2t/s)
+  \ \le\ C_{\F,j}\,p_j(t)\,\min\!\bigl(1,(t/s)^{\dF j}\bigr).
+\end{equation}
+
+The averaged form is supplied by Lemma~\ref{lem:averaged} with $q=\dF j$, fed by the overlap tails
+of Lemma~\ref{lem:overlaptail}. That lemma was stated and proved for two arbitrary configurations;
+its hypotheses involve only the column sets and the normal-row sets, so it applies verbatim to the
+configurations of this section, whose normals are built from $R,R'$ exactly as before. As there, we
+write $\omega=|\langle\tilde u_c,\tilde u_{c'}\rangle|^2$ for the squared overlap of the zero-padded
+normals, $s^2=1-\omega$, and $D_{\mathrm c}=n-|S\cap S'|$, $D_{\mathrm r}=n-|R\cap R'|$.
+
+\subsection{Second moment}
+Let $c,c'$ be two configurations and $j=|Y\cap Y'|\in\{0,\dots,k\}$. As in
+Section~\ref{sec:second} let $\mathcal G=\sigma(A_i:i\notin Y\cup Y')$; both normals are $\mathcal
+G$-measurable because $R,R'$ avoid $M\supseteq Y\cup Y'$.
+
+\emph{Disjoint marked sets ($j=0$).} Given $\mathcal G$, the event $E_c$ depends only on the rows
+in $Y$ and $E_{c'}$ only on the rows in $Y'$, disjoint families of fresh rows, and each conditional
+probability equals $p_k(t)$ exactly. Hence $\PP(E_c\cap E_{c'})=p_k(t)^2$, and these pairs
+contribute at most $(\EE W)^2$.
+
+\emph{Shared marked rows ($1\le j\le k$).} The fraction of ordered configuration pairs with
+$|Y\cap Y'|=j$ is $\binom kj\binom{m_N-k}{k-j}/\binom{m_N}k\le C_k\,m_N^{-j}$. Split each event
+along shared and own marked rows:
+\[
+  E_c\ \subseteq\ \Bigl\{\sum_{y\in Y\cap Y'}|\langle A_y,\tilde u_c\rangle|^2\le t^2\Bigr\}
+  \cap\Bigl\{\sum_{y\in Y\setminus Y'}|\langle A_y,\tilde u_c\rangle|^2\le t^2\Bigr\},
+\]
+and similarly for $E_{c'}$. Given $\mathcal G$, the three row families $Y\cap Y'$, $Y\setminus Y'$,
+$Y'\setminus Y$ are independent, the own-row events have probabilities $p_{k-j}(t)$ each, and the
+joint shared-row event is bounded by \eqref{eq:vectorslab} with $d=N$, $u=\tilde u_c$,
+$v=\tilde u_{c'}$:
+\[
+  \PP(E_c\cap E_{c'}\mid\mathcal G)\ \le\ p_{k-j}(t)^2\cdot C\,p_j(t)\,
+  \min\!\bigl(1,(t/s)^{\dF j}\bigr),\qquad s^2=1-\omega .
+\]
+Taking expectations, using Lemma~\ref{lem:overlaptail} through Lemma~\ref{lem:averaged}
+($q=\dF j$), and noting $p_{k-j}(t)^2p_j(t)\,t^{\dF j}\le C\,p_k(t)^2$ by \eqref{eq:pkball}, the
+pairs with a given $j\ge1$ split into three regions, exactly as in Section~\ref{sec:second}. Recall
+$t^{-\dF k}=e^{(2H(\alpha)-\dF k\varepsilon)N}$, and that the fraction of ordered column pairs with
+$D_{\mathrm c}\le a$ is at most $N^{2a}e^{-H(\alpha)N+o(N)}$, likewise for rows.
+
+\emph{Region $D_{\mathrm r}\ge j+2$.} The row bound of Lemma~\ref{lem:overlaptail} verifies the
+hypothesis of Lemma~\ref{lem:averaged} with $\beta=(D_{\mathrm r}-1)\dF/2\ge\dF(j+1)/2$,
+$\gamma=C_\F$, $\Lambda=1$, so $\PP(E_c\cap E_{c'})\le C\,p_{k-j}(t)^2p_j(t)\,t^{\dF j}\le
+C\,p_k(t)^2$, uniformly over the region. With the factor $m_N^{-j}$ from the shared marked rows the
+contribution is at most $C\,m_N^{-j}(\EE W)^2=o((\EE W)^2)$.
+
+\emph{Region $D_{\mathrm r}\le j+1$, $D_{\mathrm c}\ge j+1$.} The column bound verifies the
+hypothesis with $\beta=D_{\mathrm c}\dF/2\ge\dF(j+1)/2$, $\gamma=C_\F n/D_{\mathrm c}$,
+$\Lambda=n$, so $\PP(E_c\cap E_{c'})\le C\,n\,(n/D_{\mathrm c})^{\dF j/2}p_k(t)^2\le
+N^{C_k}p_k(t)^2$. The rows are pinned ($D_{\mathrm r}\le j+1\le k+1$), so the pair fraction is at
+most $N^{C_k}e^{-H(\alpha)N+o(N)}$, and the contribution is $o((\EE W)^2)$.
+
+\emph{Region $D_{\mathrm r}\le j+1$, $D_{\mathrm c}\le j$.} Use the crude bound: dropping the
+$E_{c'}$ shared-row constraint, $\PP(E_c\cap E_{c'}\mid\mathcal G)\le p_j(t)\,p_{k-j}(t)^2$, so the
+ratio to $p_k(t)^2$ is at most $C\,t^{-\dF j}\le C\,t^{-\dF k}=Ce^{(2H(\alpha)-\dF
+k\varepsilon)N}$. Both coordinates are pinned, so the pair fraction is at most
+$N^{C_k}e^{-2H(\alpha)N+o(N)}$, and the contribution is at most $N^{C_k}e^{-\dF k\varepsilon
+N+o(N)}(\EE W)^2=o((\EE W)^2)$; this region includes the diagonal, whose contribution is $\EE W$.
+
+Summing over $j$, $\EE[W^2]\le(\EE W)^2(1+o(1))$, so $\Var(W)=o((\EE W)^2)$, and Chebyshev's
+inequality gives $W>0$ with probability tending to one, hence $M_N^{(r)}\le t$. Combined with the
+upper bound this proves Theorem~\ref{thm:surplus}. \qed
+
+\begin{remark}
+The row bound of Lemma~\ref{lem:overlaptail} is what makes the $k\ge2$ case work: the column bound
+alone leaves the pairs with small $D_{\mathrm c}$ but generic $D_{\mathrm r}$ uncontrolled, and
+there the row bound takes over --- two normals built on row sets that differ in many places cannot
+be nearly parallel, no matter how similar their column sets are. Only pairs pinned in both
+coordinates are genuinely correlated, and those are exponentially rare.
+\end{remark}
+
+\begin{remark}\label{rem:moderate}
+The argument is uniform in a slowly growing surplus. For $r=r_N\to\infty$ the only steps that see
+$r$ are the shared-marked-row count, which requires $\sum_{j\ge1}\binom kj^2m_N^{-j}C^j\to0$ and
+hence $r^2=o(m_N)$, and various factors $e^{O(r\log N)}$ (binomials in $k$, the constants
+$C_{\F,k}$ of \eqref{eq:pkball}, the pinned-pair counts $N^{C_k}$), which are absorbed because the
+comparison budget $e^{\dF k\varepsilon N}$ itself grows linearly in $k$. With $m_N=\lceil\sqrt
+N\rceil$ this gives Theorem~\ref{thm:surplus} uniformly for $r=o(N^{1/4})$, in the form
+$-\tfrac{r+1}N\log M_N^{(r)}(\alpha)\to2H(\alpha)/\dF$. We have not pursued the optimal range of
+$r_N$.
+\end{remark}
+
+\section{Consequences and complements}\label{sec:conseq}
+
+\subsection{Support-optimized products}
+Let $\kappa\ge1$ and let $A_1,\dots,A_\kappa$ be independent $N\times N$ standard $\F$-Gaussian
+matrices. For supports $S_0,\dots,S_\kappa\subseteq[N]$ of size $n$ let
+$M(\mathbf S)=P_{S_\kappa}A_\kappa\cdots P_{S_1}A_1P_{S_0}$, viewed as a map $\F^{S_0}\to
+\F^{S_\kappa}$, where $P_S$ is the coordinate restriction.
+
+\begin{corollary}\label{cor:products}
+In probability,
+\[
+  \liminf_{N\to\infty}\ -\frac1N\log\ \min_{\mathbf S}\ \smin\bigl(M(\mathbf S)\bigr)
+  \ \ge\ \frac{2H(\alpha)}{\dF}.
+\]
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:main} applied to $A_1$, with probability tending to one there are $S_0,S_1$ and
+a unit $v\in\F^{S_0}$ with $\|P_{S_1}A_1P_{S_0}v\|\le e^{-(2H(\alpha)/\dF-\varepsilon)N}$. Choose
+the remaining supports arbitrarily. Then
+\[
+  \smin\bigl(M(\mathbf S)\bigr)\le\|M(\mathbf S)v\|
+  \le\prod_{i=2}^{\kappa}\|A_i\|\cdot\|P_{S_1}A_1P_{S_0}v\|
+  \le(3\sqrt N)^{\kappa-1}e^{-(2H(\alpha)/\dF-\varepsilon)N}
+\]
+with probability tending to one, using the standard bound $\|A_i\|\le3\sqrt N$. The polynomial
+factor is $e^{o(N)}$.
+\end{proof}
+
+For $\kappa=1$ this is sharp by Theorem~\ref{thm:main}. For $\kappa\ge2$ the best available upper
+bound remains the union bound over all $\kappa+1$ supports, with exponent
+$(\kappa+1)H(\alpha)/\dF$, and the sharp constant is open; the natural guess is that one factor
+carries all the singularity and the exponent stays $2H(\alpha)/\dF$. One piece of evidence can be
+made precise: selecting the \emph{output} coordinates of a factor cannot shrink a fixed direction
+at speed $N$.
+
+\begin{lemma}\label{lem:outputselect}
+Let $A$ be $N\times N$ standard $\F$-Gaussian and $u\in\F^N$ a fixed unit vector. For every $b>0$,
+\[
+  \PP\Bigl(\min_{|S|=n}\bigl\|P_SAu\bigr\|\le e^{-bN}\Bigr)\ \le\
+  e^{H(\alpha)N}\bigl(C_\F e^{-bN}\bigr)^{\dF n}\ =\ e^{-\dF\alpha bN^2+O(N)} .
+\]
+\end{lemma}
+
+\begin{proof}
+The coordinates of $Au$ are i.i.d.\ standard $\F$-Gaussians $\zeta_1,\dots,\zeta_N$. If some $S$
+with $|S|=n$ has $\|P_SAu\|\le e^{-bN}$, then at least $n$ of the $\zeta_i$ satisfy
+$|\zeta_i|\le e^{-bN}$, an event of probability at most
+$\binom Nn\,p(e^{-bN})^{n}\le e^{H(\alpha)N}(C_\F e^{-bN})^{\dF n}$.
+\end{proof}
+
+Thus in a product only the two supports adjacent to a single factor can buy singularity at speed
+$N$ through that factor, which is what the guess $2H(\alpha)/\dF$ expresses; what remains open is
+to control the exponentially many composed input directions that a chain of factors makes
+available.
+
+\subsection{Rademacher entries}
+The constant in Theorem~\ref{thm:main} is a Gaussian (more precisely, absolutely continuous)
+phenomenon; for discrete entries the minimum can vanish outright.
+
+\begin{proposition}\label{prop:rademacher}
+Let $B$ be $N\times N$ with independent uniform $\pm1$ entries and let $M_N^{\pm}(\alpha)$ be as in
+\eqref{eq:MN} with $A$ replaced by $B$.
+\begin{enumerate}
+\item If $\alpha\le\tfrac12$, then $M_N^{\pm}(\alpha)=0$ with probability tending to one.
+\item If $2H(\alpha)<\alpha\log2$ (numerically $\alpha>\alpha_0$, $\alpha_0=0.9051\ldots$ the root
+  of $2H(\alpha)=\alpha\log2$), then $M_N^{\pm}(\alpha)>0$ with probability tending to one.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Pair up the columns as $(1,2),(3,4),\dots$; for the $i$-th pair let $Z_i$ be the number of rows
+on which the two columns agree. The $Z_i$ are independent $\mathrm{Bin}(N,\tfrac12)$ variables, so
+$\PP(Z_i\ge\lfloor N/2\rfloor)\ge\tfrac12$ for each $i$, and with probability at least
+$1-2^{-\lfloor N/2\rfloor}$ some pair agrees on at least $\lfloor N/2\rfloor\ge n$ rows. Taking $T$
+inside the agreement set of that pair and $S$ containing the two columns produces a submatrix with
+two equal columns.
+
+(ii) By \cite{tikhomirov}, $\PP(\text{an $n\times n$ $\pm1$ matrix is singular})=(\tfrac12+o(1))^n$.
+A union bound over the $\binom Nn^2$ submatrices gives
+$\PP(\exists\,T,S:\ B[T,S]\text{ singular})\le e^{(2H(\alpha)-\alpha\log2)N+o(N)}\to0$.
+\end{proof}
+
+For $\alpha\in(\tfrac12,\alpha_0)$ the expected number of singular submatrices diverges and we
+expect $M_N^{\pm}=0$ there too; the second-moment question is open. In particular no
+distribution-free version of Theorem~\ref{thm:main} can hold below $\alpha_0$, and the correct
+universality class (continuous entry laws, say) is an open question.
+
+\subsection{Tall submatrices}
+For $\beta>\alpha$ the behaviour is qualitatively different. A single $(\beta N)\times(\alpha N)$
+Gaussian submatrix is well conditioned, $\smin\asymp(\sqrt\beta-\sqrt\alpha)\sqrt N$ by Bai--Yin, and
+support optimization cannot spoil this: the minimum stays of order $\sqrt N$.
+
+\begin{proposition}\label{prop:tall}
+Fix $0<\alpha<\beta<1$. There is $c_1=c_1(\alpha,\beta,\F)>0$ such that, in probability,
+\[
+  c_1\sqrt N\ \le\ \min_{|T|=\lfloor\beta N\rfloor,\ |S|=\lfloor\alpha N\rfloor}\smin\bigl(A[T,S]\bigr)
+  \ \le\ \bigl(\sqrt\beta-\sqrt\alpha+o(1)\bigr)\sqrt N .
+\]
+\end{proposition}
+
+\begin{proof}
+Put $m=\lfloor\beta N\rfloor$, $n=\lfloor\alpha N\rfloor$. The upper bound is Bai--Yin for one fixed
+submatrix. For the lower bound fix a support $(T,S)$ and a level $c\sqrt N$ with $c\le\sqrt\beta/2$.
+For a fixed unit $u\in\F^S$, $\|A[T,S]u\|^2=\sum_{i\in T}|\langle A_i|_S,u\rangle|^2$ is a sum of $m$
+independent squared standard $\F$-Gaussians (mean $m$), so a chi-square lower tail gives
+$\PP(\|A[T,S]u\|\le2c\sqrt N)\le(C_\F c^2/\beta)^{\dF m/2}$. Set $\tau=\sqrt{2(H(\beta)+H(\alpha))+2}$
+and let $\mathcal N$ be a $\rho$-net of the unit sphere of $\F^S$ with $|\mathcal N|\le(3/\rho)^{\dF
+n}$ and $\rho=c/(\sqrt\beta+\sqrt\alpha+\tau)$. On the event
+$\|A[T,S]\|\le(\sqrt\beta+\sqrt\alpha+\tau)\sqrt N$, whose complement has probability at most
+$e^{-\tau^2N/2+o(N)}$, any unit $u$ with $\smin(A[T,S])\le c\sqrt N$ realized at $u$ has a net point
+$u_0$ with $\|A[T,S]u_0\|\le c\sqrt N+\|A[T,S]\|\rho\le2c\sqrt N$. Hence
+\[
+  \PP\bigl(\smin(A[T,S])\le c\sqrt N\bigr)\ \le\
+  \Bigl(\tfrac{3(\sqrt\beta+\sqrt\alpha+\tau)}{c}\Bigr)^{\dF n}\bigl(C_\F c^2/\beta\bigr)^{\dF m/2}
+  +e^{-\tau^2N/2+o(N)}.
+\]
+Summing over the $\binom Nm\binom Nn=e^{(H(\beta)+H(\alpha))N+o(N)}$ supports, the second term
+contributes $e^{-N+o(N)}$ (as $\tau^2/2=H(\beta)+H(\alpha)+1$), and the first contributes
+$e^{-\eta N+o(N)}$ with
+\[
+  \eta=\dF(\beta-\alpha)\log(1/c)-H(\beta)-H(\alpha)-\dF\alpha\log\bigl(3(\sqrt\beta+\sqrt\alpha+\tau)\bigr)
+  -\tfrac{\dF\beta}2\log(C_\F/\beta),
+\]
+which is positive for all small enough $c$ because $\beta>\alpha$. Thus $\PP(\min\le c\sqrt N)\to0$.
+\end{proof}
+
+\begin{remark}
+The term $\dF(\beta-\alpha)\log(1/c)$ is the hard-edge cost of driving the $(\beta-\alpha)N$ excess
+rows into near-dependence; it diverges as $c\to0$, which is why the exponential support entropy
+cannot reach zero. As $\beta\downarrow\alpha$ the admissible $c_1$ tends to $0$, matching the square
+case, where the entropy overcomes the now $O(1)$ hard-edge exponent and drives the minimum to
+$e^{-\Theta(N)}$. The sharp constant $\lim N^{-1/2}\min$ is the solution of
+$H(\beta)+H(\alpha)=\dF\,I(c;\alpha,\beta)$, with $I$ the left-tail rate of the smallest singular
+value of a rectangular Gaussian ensemble of aspect ratio $\beta/\alpha$; we do not determine it.
+\end{remark}
+
+\section{Numerical confirmation}\label{sec:num}
+Two checks accompany the proof (scripts in \texttt{numerics/}). First, the two-direction estimate
+of Lemma~\ref{lem:twoslab}: Monte Carlo gives $q_D(t)/p(t)^2$ growing like $\log(1/t)$ at $D=2$
+(real: $2.2,2.5,2.8$; complex: $3.8,4.5,5.1$ at $t=0.15,0.10,0.06$), decaying to $1$ as $D$ grows,
+and everywhere far below the crude ratio $1/p(t)$ — confirming the polynomial (not exponential)
+excess over independence. Second, an exhaustive evaluation of $M_N(\alpha)$ at $\alpha=1/2$ and its
+comparison with the first-moment scale $t_\ast$ solving $\binom Nn^2 C_\F(\sqrt n\,t_\ast)^{\dF}=1$
+(with $C_\F$ calibrated separately): the measured $-\tfrac1N\log M_N$ equals the first-moment
+prediction to within the sampling error — real ($N=8,10,12$): $1.19,1.24,1.24$ versus $1.14,1.18,1.21$;
+complex ($N=6,8,10$): $0.64,0.64,0.68$ versus $0.59,0.62,0.63$ — and both rise toward $2H(1/2)/\dF$
+($=1.386$ real, $0.693$ complex), the slow $O(N^{-1}\log N)$ approach accounting for the finite-$N$
+gap. That the minimum sits at the first-moment scale is the finite-$N$ signature of the second-moment
+concentration proved above.
+
+The same check was run for one surplus row ($r=1$), where the exponent should approach
+$2H(1/2)/(2\dF)$, i.e.\ $0.693$ (real) and $0.347$ (complex), and the first-moment scale $t_\ast$
+solves $\binom Nn\binom N{n+1}C_\F(\sqrt n\,t_\ast)^{2\dF}=1$. Measured against predicted: real
+($N=8,10,12$): $0.560,0.601,0.598$ versus $0.559,0.590,0.606$; complex ($N=8,10$): $0.311,0.329$
+versus $0.305,0.319$. Again the minimum sits at the first-moment scale in both fields
+(\texttt{numerics/verify\_surplus\_finite\_size.py}).
+
+\begin{thebibliography}{9}
+\bibitem{shmalo} Y.~Shmalo, \emph{Extreme least singular values of Gaussian row submatrices}, 2026.
+\bibitem{edelman} A.~Edelman, \emph{Eigenvalues and condition numbers of random matrices}, SIAM J.
+  Matrix Anal. Appl. \textbf{9} (1988), 543--560.
+\bibitem{rv} M.~Rudelson and R.~Vershynin, \emph{The Littlewood--Offord problem and invertibility of
+  random matrices}, Adv. Math. \textbf{218} (2008), 600--633.
+\bibitem{tikhomirov} K.~Tikhomirov, \emph{Singularity of random Bernoulli matrices}, Ann. of Math.
+  \textbf{191} (2020), 593--634.
+\end{thebibliography}
+\end{document}

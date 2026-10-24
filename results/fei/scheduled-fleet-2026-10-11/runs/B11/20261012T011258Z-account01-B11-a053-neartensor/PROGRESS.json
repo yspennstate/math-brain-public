@@ -1,0 +1,53 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "stream": "B11",
+  "run_id": "20261012T011258Z-account01-B11-a053-neartensor",
+  "primary_packet_id": "A053",
+  "packet_ids": ["A053"],
+  "gap_id": "G-CRITICAL-NEARTENSOR",
+  "attempt_id": "A053-HI-NEARTENSOR-1",
+  "attempt_counter": 1,
+  "method": "Signed Fourier Hamming perturbation plus block descendant-criticality",
+  "claim_versions_used": ["B11-A052-CRITICAL-SLACK-v1"],
+  "claims_created_or_changed": ["B11-A053-HI-NEARTENSOR-SEPARATION-v1"],
+  "source_plan_head_observed": "09f2917268fffc50848bfb60fe16fca7e1b24b0d",
+  "source_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+  "source_contract_blob": "faaa0875ddb129d134bb62abb513f3795e88b590",
+  "source_artifacts": [
+    "A052 report blob 9f0d4ec16e611bc845c92b6b2173b0eae7d34ac7",
+    "A052 theorem blob 33850b3519c3e04e8ea1e59eef7d7d8ffe956b8a",
+    "Historical near-tensor report blob f72df6ef58bd07f99d9d4f39b0104b7077c354e4",
+    "Primitive surgery report blob 000f6250c095d5a40870c6cfc3fabaf8f07c8d0e"
+  ],
+  "prior_status": "Exact critical tensors were classified and critical slack was identified, but tiny point surgery showed that qualitative primitivity did not control hidden tensor structure.",
+  "new_status": "A descendant-critical source obeys an explicit ratio cap near every tensor with a lower-ratio physical factor. For the six-bit point defect, any critical H/I>4 source has polynomial Hamming separation; the one-point-surgery near-tensor family is excluded for m>=5.",
+  "mathematical_delta": "Proved a general ordinary-H/I near-tensor separation theorem with signed Fourier perturbation, exact physical influence transport, a rational six-bit gap, and a quantified primitivity interface.",
+  "deliverable_status": {
+    "A053-D1": "COMPLETE_PENDING_INDEPENDENT_REVIEW",
+    "A053-D2": "COMPLETE_PENDING_INDEPENDENT_REVIEW"
+  },
+  "mathematical_status": "PROVED_STRUCTURAL_THEOREM_PENDING_INDEPENDENT_REVIEW",
+  "acceptance_evidence": [
+    "REPORT.md",
+    "NEAR_TENSOR_PERTURBATIONS.tex",
+    "HIDDEN_TENSOR_DIAGNOSTIC.md",
+    "verify_neartensor.py",
+    "CHECK.out",
+    "CLAIMS.json"
+  ],
+  "remaining_obstacle": "Extract a low-ratio physical factor or paid interface from every tensor-prime descendant-critical source, or construct a genuine critical prime family avoiding all such tests.",
+  "blockers": [],
+  "next_consumers": ["A022", "A054", "A055", "A090", "A094", "A096", "B20"],
+  "independent_reviewers": ["A090", "A094"],
+  "next_action": "Test the separation inequality on near tensors whose factors have ratios approaching the critical root ratio, and seek a block-extraction criterion driven by the A052 slack identity.",
+  "stagnant_substantive_attempts": 0,
+  "delivery_status": {
+    "canonical": "SAVED_AND_FULL_NONEMPTY_READBACK_VERIFIED: artifact commit 851292c1cd05309e4f1bb2a63013456d4a974950",
+    "brain_mirror": "SAVED_AND_FULL_NONEMPTY_READBACK_VERIFIED: artifact commit bba0c39c7d2ca83f454a98462f4476d39fa10d15",
+    "independent_review": "NOT_PERFORMED",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN"
+}
+

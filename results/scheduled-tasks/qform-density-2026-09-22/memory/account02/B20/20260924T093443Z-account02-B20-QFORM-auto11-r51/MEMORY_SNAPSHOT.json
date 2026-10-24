@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B20",
+  "run_id": "20260924T093443Z-account02-B20-QFORM-auto11-r51",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control_commits_seen": [
+    "7b4964e68078ff3c059e590895bb6023599a0e60",
+    "a9b39d6eff1111e6974f0f5e91ec885a0cba1347",
+    "7f2ce14f3cddd4a2d036ff4eb042fc43de01b0c5"
+  ],
+  "math_master_head_seen": "006892a091e8f58edf21e071244a2c7e2a340ec0",
+  "canonical_math_commit": "212611f51310745be444342dc5b1da66065f31c3",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B20/20260924T093443Z-account02-B20-QFORM-auto11-r51/REPORT.md",
+  "partner": {
+    "slot": "account03/B20",
+    "run_id": "20260924T091209Z-account03-B20-QFORM-auto11-r51",
+    "math_commit": "ceb973b9c1549a8247baf169db9152844b9decde",
+    "result_applied": "QFORM-R13-SCHUR-RANK4-ULTRATHIN-v1",
+    "exact_expression": {
+      "D0": 9.530157744638501e-7,
+      "kappa0": 6.075614261408114e-5
+    }
+  },
+  "source_theorems": [
+    {
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+      "used": "physical-pair completion scope and D5 on the partner's literal MSS tail cut"
+    },
+    {
+      "commit": "742ac943440e41925fe09db9a8c02a96cbd83dbc",
+      "path": "proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md",
+      "used": "arbitrary-rank indefinite physical-pair theorem"
+    },
+    {
+      "commit": "6d920f5ad706016d41d3072a2dc6e71a64bc0296",
+      "path": "proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_pairs/REPORT.md",
+      "used": "Lemma 5 small-ball constant 4"
+    }
+  ],
+  "claim": {
+    "id": "QFORM-R51-STRONGPAIR-DIRECT-TERMINATION-v1",
+    "status": "PROVED_SCOPED_TARGET_BRANCH",
+    "statement": "On the newest account03/B20 r51 strong-edge leaf, the still-present quantitative indefinite physical pair already gives the full-law essential-density bound ||p_Q||_infinity<9763; the ultrathin rank-six retained-tail endpoint is not unpaid."
+  },
+  "pinned_D5_application": "On the partner's actual MSS cut, e5(A[I,J]^T A[I,J])>=1/1024 implies ||p_Q||_infinity<=10sqrt(2e)<23.317.",
+  "first_unpaid_implication": {
+    "id": "QFORM-R50-PAIRFREE-MODERATE-RESIDUAL-R12/R11-ENDPOINT-v3",
+    "extra_gate": "Every original-coordinate invertible indefinite principal pair B satisfies |det B|<D0 or s_min(B)<kappa0; otherwise the new direct pair termination closes the full law.",
+    "status": "OPEN"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION"
+  ],
+  "continuity_status": "OPEN_GLOBALLY",
+  "full_target_status": "OPEN",
+  "next_step": "Attack the pair-free moderate rank-three/rank-four residual jointly with the latent rank-two crossing; do not revisit the closed r13 strong-edge retained-tail leaf."
+}

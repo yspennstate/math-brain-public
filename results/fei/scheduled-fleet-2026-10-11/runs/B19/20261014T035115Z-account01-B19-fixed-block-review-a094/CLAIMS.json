@@ -1,0 +1,28 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B19",
+  "run_id": "20261014T035115Z-account01-B19-fixed-block-review-a094",
+  "primary_packet_id": "A094",
+  "claims": [
+    {
+      "claim_id": "B05-FIXED-SHARED-BLOCK-TRANSPORT-v1",
+      "status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_SCOPE",
+      "scope_correction": "The factor |X| is valid but not exact or sharp.",
+      "evidence": ["REPORT.md", "SECOND_CHAIN_CHALLENGE.md", "REVIEW_CHECK.py", "REVIEW_CHECK.out"]
+    },
+    {
+      "claim_id": "B19-FIXED-BLOCK-LOG-POTENTIAL-v1",
+      "status": "PROVED_BY_REVIEWER_PENDING_FRESH_REVIEW",
+      "statement": "The potential q(E_empty)+E_empty log2|X| plus coefficient-one private orbit charges satisfies the same product and reveal-order contraction laws.",
+      "reviewers_required": ["A085", "A090"]
+    },
+    {
+      "claim_id": "B19-MAJORITY-EMPTY-ORBIT-NOGO-v1",
+      "status": "PROVED_BY_REVIEWER_PENDING_FRESH_REVIEW",
+      "statement": "No absolute multiple of q(empty-orbit energy) alone pays all shared singleton charges; odd majority has unit empty-orbit energy and Phi=(2/pi)log2(k)+O(1).",
+      "scope": "auxiliary singleton potential only; not a counterexample to FEI"
+    }
+  ],
+  "full_fei_status": "OPEN"
+}
+

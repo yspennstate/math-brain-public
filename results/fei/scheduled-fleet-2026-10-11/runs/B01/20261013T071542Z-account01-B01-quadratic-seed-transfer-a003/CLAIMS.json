@@ -1,0 +1,47 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261013T071542Z-account01-B01-quadratic-seed-transfer-a003",
+  "stream": "B01",
+  "packet_id": "A003",
+  "gap_id": "G-UPPER-SET-ASYMMETRY",
+  "claims": [
+    {
+      "claim_id": "B01-A003-QUADRATIC-SEED-GUP-TRANSFER-v1",
+      "status": "AUTHOR_PROVED_PENDING_A086_A094_REVIEW",
+      "statement": "For every restriction-closed Boolean class C satisfying G(g)<=aI(g)+bU(g) with finite a and 0<=b<1, every disjoint product qg with q an arbitrary-dimensional quadratic phase satisfies G(qg)<=max(3,a)I(qg)+bU(qg).",
+      "quantifiers": "Every quadratic dimension and rank; every interaction graph and monomial overlap; every g in C; disjoint physical coordinate blocks.",
+      "hypotheses": [
+        "C is restriction closed",
+        "The seed GU' inequality holds uniformly on C",
+        "The quadratic and seed blocks use disjoint physical coordinates"
+      ],
+      "proof_artifact": "QUADRATIC_SEED_TRANSFER.md#theorem-2-gu-transfer-through-an-arbitrary-quadratic-block",
+      "dependencies": [
+        "B01 all-quadratic theorem report blob 460a47083324f194bb431650ab912c126f9894f2",
+        "B19 independent acceptance report blob 7c15eca2c0b82f3d781c36d8808ffe5722b22866"
+      ],
+      "limitations": "Transfers rather than proves a seed payment; disjointness is essential to the exact tensor identities.",
+      "reviewers": ["A086", "A094"]
+    },
+    {
+      "claim_id": "B01-A003-QUADRATIC-BOUNDED-SEED-CLASS-v1",
+      "status": "AUTHOR_PROVED_PENDING_A086_A094_REVIEW",
+      "statement": "For every integer k>=1, quadratic phases times arbitrary Boolean seeds on at most k disjoint variables form a restriction-closed class satisfying G<=max(3,k*2^(k-1))I, U<=2^(k-1)I, and H<=max(2,2^(k-1))I.",
+      "quantifiers": "Every k>=1, every quadratic block dimension/rank/graph, every Boolean seed on at most k variables.",
+      "proof_artifact": "QUADRATIC_SEED_TRANSFER.md#theorem-3-an-expanding-restriction-closed-class-proved",
+      "finite_audit": "CHECK_QUADRATIC_SEED_TRANSFER.py and .out",
+      "class_extension": "Strictly extends quadratic phases for k>=3; includes arbitrary quadratic dimension with bounded arbitrary terminal cores.",
+      "parameter_dependence": "The displayed seed constants grow with k and therefore are not universal.",
+      "reviewers": ["A086", "A094"]
+    },
+    {
+      "claim_id": "B01-A003-DISJOINT-UPPER-SET-TENSOR-IDENTITIES-v1",
+      "status": "PROVED",
+      "statement": "For disjoint Boolean products, U, H, I, and G are exactly additive.",
+      "proof_artifact": "QUADRATIC_SEED_TRANSFER.md#lemma-1-exact-tensor-identities-proved",
+      "finite_audit": "5328 exact identities over 1332 products",
+      "scope_guard": "This is disjoint tensor additivity, not a general overlapping composition rule."
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

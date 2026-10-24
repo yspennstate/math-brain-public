@@ -1,0 +1,81 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w485",
+  "bundle_slug": "c0056-source-status-split-20261010",
+  "entries": [
+    {
+      "key": "c0056-two-obligations",
+      "namespace": "probability.random-matrices",
+      "logical_name": "c0056-anderson-three-dimensional-two-obligations",
+      "kind": "concept",
+      "title": "C0056 has separate spectral and GOE obligations",
+      "statement": "The 2018 Bourgade survey studies the Anderson operator Delta + lambda V on Z^d, with iid centered variance-one site potentials. In dimension three at weak disorder it identifies two distinct open-at-publication questions: existence of absolutely continuous spectrum for the infinite-volume operator, and GOE microscopic eigenvalue statistics for periodic finite-volume restrictions. The survey does not prove either implication, and its 2018 open label is not a current-status certificate. The C0056 intake combined the two goals in one row.",
+      "proof_text": null,
+      "assumptions": ["Historical source statement as of 2018", "Delta is the nearest-neighbor hopping operator with free spectrum [-2d,2d]"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1807.03031",
+        "url": "https://arxiv.org/pdf/1807.03031",
+        "revision": "Bourgade ICM 2018 Section 2.1 as read 2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "c0056-ac-2026-claim",
+      "namespace": "probability.random-matrices",
+      "logical_name": "anderson-weak-disorder-ac-openai-2026-unverified-claim",
+      "kind": "concept",
+      "title": "2026 preprint claims the C0056 AC branch for uniform sites",
+      "statement": "An OpenAI preprint dated 2026-09-23 claims that for every fixed d >= 3 there is lambda_d > 0 and a nonempty open interval I_d independent of lambda such that, for each fixed 0 < lambda < lambda_d, the nearest-neighbor Anderson operator on Z^d with iid uniform[-1,1] site potentials almost surely has nonzero, purely absolutely continuous spectrum on I_d. In d=3 its stated interval is (-6+e_2/2,-6+e_2), where 0 < e_2 < 1/100. This card records the authors' claim and theorem scope, not an independent proof verification. The preprint does not state a GOE local-statistics result.",
+      "proof_text": null,
+      "assumptions": ["Authors' theorem statement inspected; mathematical proof not independently checked by w485", "Uniform site law only", "Probability-one event may depend on each fixed lambda"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "openai-math:anderson-ac-2026-09-23:introduction",
+        "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/build/01-introduction.tex",
+        "revision": "main as read 2026-10-10; verify commit before publication",
+        "license": "apache-2.0",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "c0056-goe-target",
+      "namespace": "probability.random-matrices",
+      "logical_name": "anderson-three-dimensional-weak-disorder-goe-target",
+      "kind": "concept",
+      "title": "GOE local statistics is the separate C0056 finite-volume target",
+      "statement": "For the same weak-disorder three-dimensional Anderson operator, Bourgade's 2018 survey expects GOE microscopic bulk eigenvalue statistics for periodic finite-volume restrictions. This is a finite-volume level-correlation question. Neither existence nor purity of infinite-volume absolutely continuous spectrum alone supplies a GOE limit. The exact energy, unfolding convention, law class, and limiting point-process formulation must be fixed before a theorem claim. Current status of this branch is not certified by the 2018 survey or by the 2026 AC preprint.",
+      "proof_text": null,
+      "assumptions": ["Historical 2018 research expectation, not a theorem", "Finite-volume restrictions use periodic boundary conditions"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1807.03031",
+        "url": "https://arxiv.org/pdf/1807.03031",
+        "revision": "Bourgade ICM 2018 Section 2.1 as read 2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "c0056-two-obligations",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor",
+      "kind": "semantic_association",
+      "rationale": "The existing C0056 card combines the AC and GOE targets; this concept records their exact source distinction and dated status."
+    },
+    {
+      "from_key": "c0056-ac-2026-claim",
+      "to_key": "c0056-two-obligations",
+      "kind": "semantic_association",
+      "rationale": "The 2026 author claim addresses the infinite-volume AC branch only, for iid uniform sites."
+    },
+    {
+      "from_key": "c0056-goe-target",
+      "to_key": "c0056-two-obligations",
+      "kind": "semantic_association",
+      "rationale": "The finite-volume GOE branch is the second question explicitly separated in Bourgade Section 2.1."
+    }
+  ]
+}

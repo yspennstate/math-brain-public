@@ -1,0 +1,147 @@
+\section*{Optimal root-KL payment on the positive-residual critical class}
+
+All logarithms are base two.  Let $f:\{-1,1\}^n\to\{-1,1\}$ be
+Boolean and write
+\[
+ p(S)=\widehat f(S)^2,\qquad
+ U(f)=\sum_Sp(S)\log_2\frac{\pi(S)}{p(S)},\qquad
+ I(f)=\sum_S|S|p(S).
+\]
+For a physical coordinate $i$, use the signed restriction notation
+\[
+ a_A=\widehat f(A),\quad b_A=\widehat f(A\cup\{i\}),\quad
+ m_A=a_A^2+b_A^2,
+\]
+\[
+ C_A=\sum_{T\supseteq A}a_Tb_T,\quad
+ M_A=\sum_{T\supseteq A}m_T,\quad
+ \alpha_A=\frac{2a_Ab_A}{m_A},\quad
+ \beta_A=\frac{2C_A}{M_A}.
+\]
+The exact Boolean restriction identity is
+\[
+ \Delta_iU=B_i-\Gamma_i+K_i,
+ \qquad
+ K_i=\sum_A m_AD_2\left(\frac{1+\alpha_A}{2}\middle\|
+                         \frac{1+\beta_A}{2}\right).       \tag{1}
+\]
+Boolean convolution gives $C_\varnothing=0$, so the root row of (1) is
+\[
+ K_i^{(0)}=m\left[1-h_2\left(\frac{1+2ab/m}{2}\right)\right],
+ \quad a=\widehat f(\varnothing),\ b=\widehat f(\{i\}),\
+ m=a^2+b^2.                                             \tag{2}
+\]
+
+\subsection*{1. The sharp scalar coefficient}
+
+\paragraph{Lemma.}
+For every real $a,b$,
+\[
+ \boxed{K_i^{(0)}\le\frac{2}{\ln2}\min\{a^2,b^2\}.}       \tag{3}
+\]
+The constant $2/\ln2$ is optimal.
+
+\paragraph{Proof.}
+By symmetry assume $b^2\le a^2$ and put
+\[
+ r=\frac{b^2}{a^2+b^2}\le\frac12,
+ \qquad x=\frac{2|ab|}{a^2+b^2}=2\sqrt{r(1-r)}.
+\]
+In natural units define
+\[
+ d(x)=\frac{1+x}{2}\ln(1+x)+\frac{1-x}{2}\ln(1-x).
+\]
+Then $d'(x)=\operatorname{artanh}x$.  Moreover
+\[
+ q(x):=\frac{x}{\sqrt{1-x^2}}-\operatorname{artanh}x
+\]
+satisfies $q(0)=0$ and
+\[
+ q'(x)=\frac{1-\sqrt{1-x^2}}{(1-x^2)^{3/2}}\ge0.
+\]
+Therefore $d'(x)\le x/\sqrt{1-x^2}$, and integration from zero gives
+\[
+ d(x)\le1-\sqrt{1-x^2}=2r.                            \tag{4}
+\]
+Since
+\[
+ 1-h_2\left(\frac{1+x}{2}\right)=\frac{d(x)}{\ln2},
+\]
+equations (2)--(4) prove
+\[
+ K_i^{(0)}\le\frac{2m r}{\ln2}=\frac{2b^2}{\ln2}.
+\]
+Interchanging $a,b$ proves (3).  As $|b/a|\to0$,
+$d(x)=x^2/2+O(x^4)$ and $x=2|b/a|+O(|b/a|^3)$, so
+$K_i^{(0)}/b^2\to2/\ln2$.  Hence the coefficient is sharp. \qed
+
+Define the bias-sensitive singleton reserve
+\[
+ M_1(f)=\sum_i\min\{p(\varnothing),p(\{i\})\},             \tag{5}
+\]
+and the nonroot signed debt
+\[
+ D_+(f)=\sum_i(B_i-\Gamma_i)+
+ \sum_i\sum_{A\ne\varnothing}m_{i,A}D_2\left(
+ \frac{1+\alpha_{i,A}}2\middle\|\frac{1+\beta_{i,A}}2
+ \right).                                                \tag{6}
+\]
+Summing (1) and applying (3) yields the dimension-free exact consequence
+\[
+ \boxed{G(f)\le D_+(f)+\frac{2}{\ln2}M_1(f).}              \tag{7}
+\]
+
+\subsection*{2. Positive-residual extremal reduction}
+
+Freeze $(a,b)=(4,3/4)$ and set
+\[
+ R(f)=G(f)-4I(f)-\frac34U(f).                              \tag{8}
+\]
+The complete residual is additive under disjoint Boolean tensor products.
+Thus if the frozen GU inequality fails, a positive-residual tensor-prime
+factor exists; equivalently one may choose a dimension-minimal
+positive-residual counterexample, which is tensor-prime.  No optimizer over
+all dimensions is assumed.
+
+It is therefore sufficient to prove only on tensor-prime Boolean functions
+with $R(f)>0$ the aggregate inequality
+\[
+ \boxed{
+ D_+(f)+\frac{2}{\ln2}M_1(f)
+ \le4I(f)+\frac34U(f).
+ }                                                        \tag{E}
+\]
+Indeed (7) and (E) imply $R(f)\le0$, contradicting the admitted class.
+Tensor additivity then gives
+\[
+ G(f)\le4I(f)+\frac34U(f)                                 \tag{9}
+\]
+for every Boolean $f$.  The source reduction consequently gives
+\[
+ U(f)\le16I(f),\qquad H(f)\le34I(f).                      \tag{10}
+\]
+
+This is strictly weaker than the preceding coefficient-four root payment.
+That payment consumed the whole $4I$ term and left the requirement
+$D_+\le3U/4$.  The new endpoint permits
+\[
+ D_+\le4I+\frac34U-\frac{2}{\ln2}M_1.                    \tag{11}
+\]
+Since $M_1\le I$, its right side exceeds $3U/4$ by at least
+$(4-2/\ln2)I=1.114609918\ldots I$ for every nonconstant source.
+It also retains the exact bias information in (5) rather than replacing it
+by singleton influence.
+
+\subsection*{3. Scope and controls}
+
+The even quadratic phases that refute every unqualified fixed
+good-coordinate curvature bound have $R<0$ and are excluded at the exact
+extremality line (8), not by an added exception.  The new proof changes
+mechanism from physical curvature to the signed Boolean root normalization.
+
+The companion computation reconstructs (1), (5), and (6) on all $32,906$
+Boolean signs modulo global output sign through dimension four.  It checks
+(E) there and the scalar inequality independently.  This is finite evidence
+only.  The all-dimensional nonempty-row inequality (E) remains open, as do
+universal GU and full FEI.  No claim is made that positive residual is
+attained or that descendants inherit criticality.

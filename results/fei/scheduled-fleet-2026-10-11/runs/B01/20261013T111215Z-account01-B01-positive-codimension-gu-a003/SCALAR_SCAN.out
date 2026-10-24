@@ -1,0 +1,14 @@
+COMMAND: python3 SCALAR_SCAN.py
+t 0 best (2.1176687467547968, (0, 3, 0, 0, 1.5882515600660976, 0.75, 1.0294171866886992))
+t 8 best (2.3018796874098557, (3, 0, 3, 0, 6.905639062229567, 3.0, 3.0))
+t 16 best (2.3018796874098557, (3, 0, 3, 0, 6.905639062229567, 3.0, 3.0))
+t 24 best (2.3018796874098557, (3, 0, 3, 0, 6.905639062229567, 3.0, 3.0))
+BEST (2.3018796874098557, (3, 0, 3, 0, 6.905639062229567, 3.0, 3.0))
+MINSLACK (0.0, (0, 1, 0, 1, 0.0, 0.0))
+BEST_HI (3.97935907558848, (0, 54, 0, 0, 2.385707077243481e-14, 5.995204332975845e-15))
+BEST_COORD (32768.0, ('z0', 24, 40, 24, 3))
+
+INTERPRETATION:
+- G<=(5/2)I survived this scan, but is NUMERICAL/OPEN and is not used in the proof.
+- H/I approaches 4 on raw point defects, matching the proved sharp class constant.
+- A single rare-coordinate charge divided by its own influence can be 32768 in the scanned range, so the proof must retain aggregate signed compensation.

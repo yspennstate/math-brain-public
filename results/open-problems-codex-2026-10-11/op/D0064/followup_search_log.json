@@ -1,0 +1,95 @@
+[
+  {
+    "date": "2026-10-11",
+    "service": "arxiv_star",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22scale+invariant%22+AND+%28all%3A%22chaos%22+OR+all%3A%22random+measures%22%29&max_results=60",
+    "query": {
+      "search_query": "all:\"scale invariant\" AND (all:\"chaos\" OR all:\"random measures\")",
+      "max_results": 60
+    },
+    "http_status": "200",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "date": "2026-10-11",
+    "service": "arxiv_uniqueness",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22multiplicative+chaos%22+AND+%28all%3A%22uniqueness%22+OR+all%3A%22classification%22%29&max_results=60",
+    "query": {
+      "search_query": "all:\"multiplicative chaos\" AND (all:\"uniqueness\" OR all:\"classification\")",
+      "max_results": 60
+    },
+    "http_status": "200",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "date": "2026-10-11",
+    "service": "arxiv_freezing",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22multiplicative+chaos%22+AND+%28all%3A%22glassy%22+OR+all%3A%22supercritical%22%29&max_results=40",
+    "query": {
+      "search_query": "all:\"multiplicative chaos\" AND (all:\"glassy\" OR all:\"supercritical\")",
+      "max_results": 40
+    },
+    "http_status": "200",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "date": "2026-10-11",
+    "service": "crossref_source",
+    "url": "https://api.crossref.org/works?query.title=Gaussian+multiplicative+chaos+and+applications+a+review&rows=3",
+    "query": {
+      "query.title": "Gaussian multiplicative chaos and applications a review",
+      "rows": 3
+    },
+    "http_status": "200",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "date": "2026-10-11",
+    "service": "openalex_doi",
+    "url": "https://api.openalex.org/works/https://doi.org/10.1214/13-PS218?",
+    "query": {},
+    "http_status": "429",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "date": "2026-10-11",
+    "service": "semantic_source",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1305.6221/citations?limit=100&fields=title%2Cyear%2CexternalIds",
+    "query": {
+      "limit": 100,
+      "fields": "title,year,externalIds"
+    },
+    "http_status": "200",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "date": "2026-10-11",
+    "service": "github_followup",
+    "url": "https://api.github.com/search/repositories?q=%22multiplicative+chaos%22&per_page=20",
+    "query": {
+      "q": "\"multiplicative chaos\"",
+      "per_page": 20
+    },
+    "http_status": "200",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "date": "2026-10-11",
+    "service": "openalex_citing_doi",
+    "url": "https://api.openalex.org/works?filter=cites%3Adoi%3A10.1214%2F13-PS218&per-page=200",
+    "query": {
+      "filter": "cites:doi:10.1214/13-PS218",
+      "per-page": 200
+    },
+    "http_status": "429",
+    "returncode": 0,
+    "stderr": ""
+  }
+]

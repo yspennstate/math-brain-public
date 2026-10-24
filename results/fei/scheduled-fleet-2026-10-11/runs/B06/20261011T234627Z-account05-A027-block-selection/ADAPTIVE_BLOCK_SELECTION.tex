@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\section*{Partial-core activation transport}
+Use uniform normalized Boolean Fourier spectra and base-two entropy. Let $u$ be any Boolean core, $r\ge1$, $p=2^{-r}$, and $F=1+A_r(u-1)$ with fresh point controls. Let $\mathcal T$ be a finite physical core restriction tree, keeping controls unqueried, and $\mathcal T^A$ its lift. Set $\Pi_H(h)=H(h)-\sum_\ell w_\ell H(h_\ell)$ and let $\Pi_I$ be the actual weighted queried influence. For the proper-subset selection rule, every path leaves at least one core coordinate unqueried.
+\begin{theorem}
+For every such core and tree, with $\kappa=12+8/\ln2<24$,
+\[\Pi_I(F)=p\Pi_I(u),\qquad |\Pi_H(F)-p\Pi_H(u)|\le\kappa\Pi_I(F).\]
+Thus $\Pi_H(u)\le K\Pi_I(u)$ implies $\Pi_H(F)\le(K+\kappa)\Pi_I(F)$ for the same actual leaf partition. If its core terminals are C001-regular (including constants),
+\[H(F)\le\max\{K+\kappa,C_{\rm reg}\}I(F).\]
+In particular, for $u(z,y)=\chi_{[t]}(z)g(y)$, $t\ge1$, where $g$ is regular on at least one remaining coordinate, querying just the $t$ character coordinates is a proper core subset and gives $H(F)\le\kappa I(F)$. The surcharge in a universal forward transfer cannot be any fixed number below $4$.
+\end{theorem}
+\begin{proof}
+Write $\delta=\Pr(u=-1)$, $E(a)=a^2\log_2(1/a^2)$ with $E(0)=0$, and
+\[G_p(\delta)=8rp\delta(1-p\delta)+p(1-p)E(2\delta)+E(1-2p\delta)-pE(1-2\delta).\]
+The Fourier amplitudes at nonempty core sets are $p\widehat u(T)$ for all control sets, at empty-core nonempty-control sets are $-2p\delta$ up to signs, and at the empty set are $1-2p\delta$. Direct summation yields $H(F)=pH(u)+G_p(\delta)$.
+Subtract $8rp\delta$ and call the result $J_p$. The derivative $E'(a)=-2a(\ln a^2+1)/\ln2$ extends continuously at zero. Its absolute value is bounded by $2/\ln2$ on $[-1,1]$ and by $8+4/\ln2$ on $[-2,2]$: the only interior magnitude extremum below $1$ is at $e^{-3/2}$, and above $1$ the magnitude increases to the endpoint $2$. Differentiating $J_p$ and using $rp\le1/2$ gives
+\[|J_p'|\le p(24+16/\ln2)=2\kappa p.\]
+The rational lower bound $\ln2\ge56/81>2/3$ gives $\kappa<24$.
+At every actual core node, minority probabilities obey $\delta_v=(\delta_{v,+}+\delta_{v,-})/2$ and $|\delta_{v,+}-\delta_{v,-}|\le\operatorname{Inf}_{i_v}(u_v)$. Summing the increments on the actual finite input path gives $\sum_\ell w_\ell|\delta_\ell-\delta|\le\Pi_I(u)/2$. Also $\sum_\ell w_\ell\delta_\ell=\delta$, so the affine term cancels exactly. Subtracting weighted leaf entropies now gives
+\[\Pi_H(F)=p\Pi_H(u)+J_p(\delta)-\sum_\ell w_\ell J_p(\delta_\ell),\]
+and proves the transfer bound. Physical core influences scale by $p$, and terminal influence is exactly $p\sum_\ell w_\ell I(u_\ell)+2rp\delta$, preserving the control reserve.
+Point activation preserves regularity: orient a regular negative indicator to be monotone, put the activation controls first in its total desirability order, and inherit the data order. A control on/data off input dominates the opposite exchange because the latter has zero activation. Thus every lifted terminal is regular; C001 and the physical telescope prove the terminal-inclusive conclusion.
+For a character times $g$, all leaves are $\pm g$ and have entropy $H(g)=H(u)$, while $\Pi_I(u)=t$. The root minority probability is $1/2$ and terminal deviations have magnitude $|\mathbb Eg|/2$, so the preceding derivative bound also yields $\Pi_H(F)\le\kappa p$.
+Finally take $g=D_s$ and query the single character coordinate. With $q=2^{-s}$, the surcharge divided by $p$ is $[G_p(1/2)-(G_p(q)+G_p(1-q))/2]/p$. For fixed bias $\delta$, $J_p(\delta)/p$ tends to $j(\delta)=E(2\delta)+4\delta/\ln2-E(1-2\delta)$ as $r\to\infty$. The values at $0,1/2,1$ are $0,2/\ln2,-8+4/\ln2$, respectively. Sending $s\to\infty$ therefore gives surcharge $4$. The core density $(1+2s2^{-s})/(s+1)$ tends to zero; both terminals are point defects or regular functions. The separate exact compressed-spectrum certificate at $s=32,r=16$ has surcharge greater than $8193/2048>4$, so a universal surcharge exactly $4$ also fails. No full-FEI claim follows.
+\end{proof}
+Full explicit derivation, boundary discussion and exact frozen validation are in \texttt{DERIVATION.md} and \texttt{out/}.
+\end{document}

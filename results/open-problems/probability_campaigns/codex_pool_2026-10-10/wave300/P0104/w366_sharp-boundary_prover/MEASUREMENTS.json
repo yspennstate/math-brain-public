@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "formal_proof": false,
+  "command": "python -X utf8 verify_boundaries.py",
+  "route_cases": 64,
+  "pairwise_disjointness_checks": 384,
+  "finite_graph_configurations": 3504,
+  "finite_graph_cases": [
+    {
+      "n": 1,
+      "epsilon": "1",
+      "configurations": 16,
+      "straight_losses": 0,
+      "variance_exact": "1/4",
+      "linear_window_expected_variance": "1/4"
+    },
+    {
+      "n": 1,
+      "epsilon": "2",
+      "configurations": 16,
+      "straight_losses": 0,
+      "variance_exact": "1",
+      "linear_window_expected_variance": "1"
+    },
+    {
+      "n": 1,
+      "epsilon": "3",
+      "configurations": 16,
+      "straight_losses": 1,
+      "variance_exact": "543/256",
+      "linear_window_expected_variance": null
+    },
+    {
+      "n": 2,
+      "epsilon": "1/2",
+      "configurations": 128,
+      "straight_losses": 0,
+      "variance_exact": "1/8",
+      "linear_window_expected_variance": "1/8"
+    },
+    {
+      "n": 2,
+      "epsilon": "1",
+      "configurations": 128,
+      "straight_losses": 0,
+      "variance_exact": "1/2",
+      "linear_window_expected_variance": "1/2"
+    },
+    {
+      "n": 2,
+      "epsilon": "3/2",
+      "configurations": 128,
+      "straight_losses": 2,
+      "variance_exact": "4479/4096",
+      "linear_window_expected_variance": null
+    },
+    {
+      "n": 3,
+      "epsilon": "1/3",
+      "configurations": 1024,
+      "straight_losses": 0,
+      "variance_exact": "1/12",
+      "linear_window_expected_variance": "1/12"
+    },
+    {
+      "n": 3,
+      "epsilon": "2/3",
+      "configurations": 1024,
+      "straight_losses": 0,
+      "variance_exact": "1/3",
+      "linear_window_expected_variance": "1/3"
+    },
+    {
+      "n": 3,
+      "epsilon": "1",
+      "configurations": 1024,
+      "straight_losses": 4,
+      "variance_exact": "48639/65536",
+      "linear_window_expected_variance": null
+    }
+  ],
+  "uniform_law_ratios": [
+    {
+      "n": 8,
+      "epsilon": "1/8",
+      "variance": "1/96",
+      "edge_variance": "1/768",
+      "ratio_to_edge_variance_times_n_two_thirds": "2"
+    },
+    {
+      "n": 64,
+      "epsilon": "1/64",
+      "variance": "1/768",
+      "edge_variance": "1/49152",
+      "ratio_to_edge_variance_times_n_two_thirds": "4"
+    },
+    {
+      "n": 512,
+      "epsilon": "1/512",
+      "variance": "1/6144",
+      "edge_variance": "1/3145728",
+      "ratio_to_edge_variance_times_n_two_thirds": "8"
+    }
+  ],
+  "cpu_seconds": 0.078125,
+  "wall_seconds": 0.2926059999736026,
+  "scope": "Exact finite checks plus algebraic evaluations; the infinite-lattice proofs are in LEMMAS.md. No asymptotic exponent verified."
+}

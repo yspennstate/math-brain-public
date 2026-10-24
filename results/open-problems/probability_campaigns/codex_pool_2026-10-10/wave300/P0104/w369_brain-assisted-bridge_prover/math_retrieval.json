@@ -1,0 +1,238 @@
+{
+  "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "mode": "read-only; query_only=ON",
+  "query": "FPP passage-time concentration; full hypotheses and scale",
+  "seconds": 0.07705249998252839,
+  "nodes": [
+    {
+      "id": "claim_9ffe9930e9d9ed5c9d98ff4d61a32155d942cd754628487fc173a2d2c6493b2f",
+      "title": "Attempt on Subdiffusive and KPZ passage-time fluctuation exponents",
+      "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Subdiffusive and KPZ passage-time fluctuation exponents structural argument Result: A variance upper bound of order n/log n does not establish an exponent below1/2. Indeed log(n/log n)/(2log n) tends to1/2. Sums of floor(n/log n) independent mean-zero variance-one variables realize that variance order in an elementary model. Check: The logarithm calculation is exact in the limit; the example has additive variances. It is not asserted to be FPP. Obstruction: Known sublinear-variance estimates leave a polynomial-exponent gap. An additional power saving, and a matching lower bound for identification, are required.\nRefers to the open problem node open-problem-p0104-subdiffusive-and-kpz-passage-time-fluctuation-exponents\nNo independent review",
+      "metadata": {
+        "artifact_digest": "sha256:3f4b1c5cb572b33795df7ed631389cc81fedfa8dceb806a998b9a139e9e36f37",
+        "artifact_path": "objects/sha256/3f/3f4b1c5cb572b33795df7ed631389cc81fedfa8dceb806a998b9a139e9e36f37.md",
+        "bundle_digest": "sha256:f3e0d4cb2f270970b3a7e311e549325fd4a447f22688326d8e681b699cda8afb",
+        "bundle_entry_key": "at-p0104",
+        "bundle_id": "population.probability-codex-ledger-attempts-c006-04",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_012.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.core:attempt-p0104-subdiffusive-and-kpz-passage-time-fluctuation-exponents",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:705337efabf29cd94bdc3e6e7eb6e032d19e1a439ab1ed1610b6421824e2eead",
+        "revision_digest": "sha256:9ffe9930e9d9ed5c9d98ff4d61a32155d942cd754628487fc173a2d2c6493b2f",
+        "source_id": "owner-probability-campaign-codex-20260906:at-p0104",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    },
+    {
+      "id": "claim_7d89ec88ac106731309c7ad6ae486d38ba159c1513cd7c88f80d7ae78a0a65ca",
+      "title": "Damron-Hanson-Sosoe subdiffusive concentration: for d >= 2 with P(tau_e = 0) < p_c, the passage time concentrates EXPONENTIALLY on the scale sqrt(||x||_1 / log ||x||_1), and the two tails need DIFFERENT hypotheses - the upper tail needs an exponential moment E[e^{alpha tau_e}] < infinity for some alpha > 0, while the lower tail needs only E[tau_e^2 (log tau_e)_+] < infinity. These are exponential, not Gaussian, inequalities.",
+      "statement": "d >= 2\nP(tau_e = 0) < p_c\nupper tail P(T - E T >= lambda sqrt(||x||_1/log||x||_1)) <= c_1 e^{-c_2 lambda}: requires E[e^{alpha tau_e}] < infinity for some alpha > 0\nlower tail P(T - E T <= -lambda sqrt(||x||_1/log||x||_1)) <= c_1 e^{-c_2 lambda}: requires only E[tau_e^2 (log tau_e)_+] < infinity\n||x||_1 > 1, lambda >= 0\n\nTHE ASYMMETRY IS THE POINT: the lower-tail condition is strictly weaker than the upper-tail condition. A statement that gives both tails under one hypothesis has merged two theorems.\nWHAT IT FEEDS: this is the source of exponential decay at chi = 1/2 + delta for every delta > 0, which is what the survey's own sketch uses to reach the wandering bound xi_x <= 3/4 in a direction of curvature (an alternative route to Newman-Piza's original one, which went through Kesten's and Alexander's chi' <= 1/2).\nHISTORY: the first such exponential inequality was not for general distributions, only for the nearly-Gamma class.\nOPEN, per the survey: whether the sqrt(||x||/log||x||) scale on the right side is optimal.\nSOURCE: Damron, M., Hanson, J. and Sosoe, P., 'Subdiffusive concentration in first-passage percolation', arXiv:1401.0917. Read in Auffinger-Damron-Hanson, '50 years of first passage percolation', arXiv:1511.03262v2 (AMS University Lecture Series 68, 2017), theorem 'thm: subdiffusive', tex lines 1512-1528.\nVERIFICATION STATUS: survey-claim. Lane P4 did not read arXiv:1401.0917.",
+      "metadata": {
+        "bundle_key": "kr06_dhs_subdiffusive_concentration",
+        "bundle_tag": "p4-fpp-known-results-v1",
+        "claim_kind": "theorem",
+        "domain": "probability / first-passage percolation / known results",
+        "filed_by": "claude-8e06e1f7-P4",
+        "filed_on": "2026-08-22",
+        "lane": "campaign_2026-08-22_30h/P4_known_results",
+        "layer": "fpp_known_results",
+        "raw_sources_dir": "~\\<private-repo>\\12_cognitive_architecture\\brain_improvement\\campaign_2026-08-22_30h\\lanes\\P4_known_results\\arxiv_raw",
+        "verification_status": "survey-claim"
+      }
+    },
+    {
+      "id": "claim_32684d2ece2943d218971312722a87f42333b030b9c7a29f034d6c11f31f8f1d",
+      "title": "Open problem: Subdiffusive and KPZ passage-time fluctuation exponents",
+      "statement": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Under suitable nondegenerate iid passage-time assumptions, prove a fluctuation exponent strictly below1/2, identify the planar exponent as1/3, and establish a positive exponent in a suitable dimension. Source: Auffinger, Damron and Hanson: 50 years of first-passage percolation, Questions13 and15, PDF pp.34 and40; Section3.\nPosed in Auffinger, Damron and Hanson: 50 years of first-passage percolation\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "metadata": {
+        "artifact_digest": "sha256:a34a791e0d66c0aeb239db3ebe924055d350a6bb2c47e49e20d3612115754c33",
+        "artifact_path": "objects/sha256/a3/a34a791e0d66c0aeb239db3ebe924055d350a6bb2c47e49e20d3612115754c33.md",
+        "bundle_digest": "sha256:58d74c8da229fa6b81fe6bac4abdfaadf798d61b07728701a8922a92ccd764b6",
+        "bundle_entry_key": "op-p0104",
+        "bundle_id": "population.probability-codex-ledger-problems-c006-01",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_009.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.core:open-problem-p0104-subdiffusive-and-kpz-passage-time-fluctuation-exponents",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:772492982336f844e436033d99bbb6870cb26f16b277731cabc6cb87e48d4e89",
+        "revision_digest": "sha256:32684d2ece2943d218971312722a87f42333b030b9c7a29f034d6c11f31f8f1d",
+        "source_id": "owner-probability-campaign-codex-20260906:op-p0104",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    },
+    {
+      "id": "source_4e53cc5a702584107208963b5cdfcc8d668686a9fcf233e2f9f28b9d58761079",
+      "title": "Subdiffusive concentration in first-passage percolation",
+      "statement": "Bibliographic reference as cited: arxiv:1401.0917.",
+      "metadata": {
+        "arxiv": "1401.0917",
+        "author_spellings": [
+          "Damron, M., Hanson"
+        ],
+        "authors": [
+          "Damron, M., Hanson"
+        ],
+        "bibliography_status": "as_cited_not_independently_catalogued",
+        "candidate_source_id": "source_57d0ab3c974d26d4c188e8e7",
+        "citation_evidence": [
+          {
+            "arxiv_ids": [
+              "1401.0917"
+            ],
+            "authors": null,
+            "card_id": "claim_7d89ec88ac106731309c7ad6ae486d38ba159c1513cd7c88f80d7ae78a0a65ca",
+            "dois": [],
+            "expected_card_node_digest": "sha256:dc7bb425f0ce38d486bb791e323a9588deb6a3a86253f85ebbea6a880251fde4",
+            "field": "body",
+            "logical_id": null,
+            "raw": "arXiv:1401.0917",
+            "route": "explicit_arxiv",
+            "title": null,
+            "year": null
+          },
+          {
+            "arxiv_ids": [
+              "1401.0917"
+            ],
+            "authors": "Damron, M., Hanson",
+            "card_id": "claim_7d89ec88ac106731309c7ad6ae486d38ba159c1513cd7c88f80d7ae78a0a65ca",
+            "dois": [],
+            "expected_card_node_digest": "sha256:dc7bb425f0ce38d486bb791e323a9588deb6a3a86253f85ebbea6a880251fde4",
+            "field": "body",
+            "logical_id": null,
+            "raw": "Damron, M., Hanson, J. and Sosoe, P., 'Subdiffusive concentration in first-passage percolation', arXiv:1401.0917.",
+            "route": "citation_label",
+            "title": "Subdiffusive concentration in first-passage percolation",
+            "year": null
+          },
+          {
+            "arxiv_ids": [
+              "1401.0917"
+            ],
+            "authors": null,
+            "card_id": "claim_74dbfde8ff7726783a6e7e09eb683c369d3e9bc4dffe92abc8a6d00f0e0ab80c",
+            "dois": [],
+            "expected_card_node_digest": "sha256:f83d2d6360c2dbd5caa86a12966dd6afb50881821a1b7ca85a7e5f3bb94dc50a",
+            "field": "body",
+            "logical_id": null,
+            "raw": "arXiv:1401.0917",
+            "route": "explicit_arxiv",
+            "title": null,
+            "year": null
+          }
+        ],
+        "doi": null,
+        "flags": [
+          "year_not_given_or_unparsed"
+        ],
+        "key": "arxiv:1401.0917",
+        "kind": "paper",
+        "reviewer": "w68",
+        "source_identity_evidence": "Exact arXiv/DOI spans on current cards",
+        "title_spellings": [
+          "Subdiffusive concentration in first-passage percolation"
+        ],
+        "venue": null,
+        "work_key": "arxiv:1401.0917",
+        "year": null,
+        "years_as_cited": []
+      }
+    },
+    {
+      "id": "claim_e521f4b1732a6322a393fe60481c08581bcd0323a86935cd2a519aa5c723aaa7",
+      "title": "Attempt on High-dimensional limit of the FPP fluctuation exponent",
+      "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: High-dimensional limit of the FPP fluctuation exponent structural argument Result: Embedding Z^d into Z^(d+1) with shared weights gives T_(d+1)<=T_d and hence mu_(d+1)<=mu_d. This ordering says nothing comparable about variance: a Bernoulli random variable is bounded above by the constant1 but has larger variance. Check: The passage-time inequality follows because the higher-dimensional infimum has more admissible paths. The variance counterexample has values1/4 and0 at Bernoulli parameter1/2. Obstruction: A distributional comparison controlling centered fluctuations across dimensions is missing. Monotonicity of means cannot supply it.\nRefers to the open problem node open-problem-p0105-high-dimensional-limit-of-the-fpp-fluctuation-exponent\nNo independent review",
+      "metadata": {
+        "artifact_digest": "sha256:ed88101cbdba3ff830999a66d2cc88d12021cfde2ab31192192b73b390ced1d7",
+        "artifact_path": "objects/sha256/ed/ed88101cbdba3ff830999a66d2cc88d12021cfde2ab31192192b73b390ced1d7.md",
+        "bundle_digest": "sha256:f3e0d4cb2f270970b3a7e311e549325fd4a447f22688326d8e681b699cda8afb",
+        "bundle_entry_key": "at-p0105",
+        "bundle_id": "population.probability-codex-ledger-attempts-c006-04",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_012.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.core:attempt-p0105-high-dimensional-limit-of-the-fpp-fluctuation-exponent",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:705337efabf29cd94bdc3e6e7eb6e032d19e1a439ab1ed1610b6421824e2eead",
+        "revision_digest": "sha256:e521f4b1732a6322a393fe60481c08581bcd0323a86935cd2a519aa5c723aaa7",
+        "source_id": "owner-probability-campaign-codex-20260906:at-p0105",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    },
+    {
+      "id": "claim_82d8cc27848fcea8a5f9deec83f1bd84499a7c7255201b6e0069b46410df6877",
+      "title": "Basu-Sidoravicius-Sly (arXiv:2312.14143, 2023), 'Rotationally invariant first passage percolation: Concentration and scaling relations': for rotationally invariant first passage percolation on the plane, a multi-scale argument gives stretched exponential concentration of the passage times at the scale of the standard deviation. This is the input that the 2026 barrier-breaking paper consumes.",
+      "statement": "rotationally invariant first passage percolation on the plane\nthe authors describe the hypotheses only as ones 'which can be verified for many standard rotationally invariant models of first passage percolation, e.g. Riemannian FPP, Voronoi FPP and the Howard-Newman model' - the hypothesis SET itself is not available to lane P4\n\nWHY THE STATUS IS abstract-only AND NOT MORE: the abstract names the conclusion and the model class but deliberately abstracts the hypotheses behind 'hypotheses which can be verified for many standard rotationally invariant models'. Since the whole question for the campaign is WHICH hypotheses are load-bearing and whether any lattice analogue could satisfy them, an abstract that does not list them is not enough to answer anything. Anyone who needs the dependency audit of the 2026 paper has to read this one.\nSOURCE: arXiv:2312.14143v1, official arXiv API record retrieved by lane P4 on 2026-08-22.\nVERIFICATION STATUS: abstract-only.",
+      "metadata": {
+        "bundle_key": "kr15_bss_2023_concentration_input",
+        "bundle_tag": "p4-fpp-known-results-v1",
+        "claim_kind": "theorem",
+        "domain": "probability / first-passage percolation / known results",
+        "filed_by": "claude-8e06e1f7-P4",
+        "filed_on": "2026-08-22",
+        "lane": "campaign_2026-08-22_30h/P4_known_results",
+        "layer": "fpp_known_results",
+        "raw_sources_dir": "~\\<private-repo>\\12_cognitive_architecture\\brain_improvement\\campaign_2026-08-22_30h\\lanes\\P4_known_results\\arxiv_raw",
+        "verification_status": "abstract-only"
+      }
+    },
+    {
+      "id": "claim_41be3350db028a796e58590ede7a39ff0b7b7cfb91588e7d71794db41ce598f3",
+      "title": "Current best upper bound on the NON-RANDOM fluctuation in first-passage percolation: if F(0) < p_c and E[Y^2] < infinity, where Y is the minimum of d i.i.d. copies of tau_e, then there is C = C(F,d) with mu(x) <= E T(0,x) <= mu(x) + C (|x| log |x|)^{1/2} for every x in Z^d with |x| > 1. Obtained by Damron-Kubota with Alexander's method plus a lower-tail concentration inequality; it improves Kesten's n^{5/6} log n.",
+      "statement": "F(0) < p_c\nE[Y^2] < infinity, where Y is the minimum of d i.i.d. copies of tau_e (note: not a moment condition on tau_e itself)\n|x| > 1\nmu(x) is the limit-shape norm evaluated at x, so mu(x) <= E T(0,x) is subadditivity\n\nTHE MOMENT CONDITION IS ON THE MINIMUM OF d COPIES, NOT ON tau_e. That is a genuinely weaker condition and it is the point of the low-moment version; quoting it as 'E tau_e^2 < infinity' changes the theorem.\nCONSTANT DEPENDENCE: C depends on F and d only.\nWHAT IT IS NOT: this bounds E T - mu, the non-random fluctuation. It says nothing directly about Var T. The two are different quantities and neither dominates the other for free.\nSOURCE: Auffinger-Damron-Hanson, '50 years of first passage percolation', arXiv:1511.03262v2 (AMS University Lecture Series 68, 2017), theorem 'thm:non-randomAlexanderFPP' and equation 'nonrandomfluctuations', tex lines 2110-2117, attributing the low-moment case to Damron, M. and Kubota, N. (2014), 'Gaussian concentration for the lower tail in first-passage percolation under low moments', arXiv:1406.3105.\nVERIFICATION STATUS: survey-claim. Lane P4 did not read arXiv:1406.3105.",
+      "metadata": {
+        "bundle_key": "kr12_alexander_method_nonrandom_fluctuation_state_of_art",
+        "bundle_tag": "p4-fpp-known-results-v1",
+        "claim_kind": "theorem",
+        "domain": "probability / first-passage percolation / known results",
+        "filed_by": "claude-8e06e1f7-P4",
+        "filed_on": "2026-08-22",
+        "lane": "campaign_2026-08-22_30h/P4_known_results",
+        "layer": "fpp_known_results",
+        "raw_sources_dir": "~\\<private-repo>\\12_cognitive_architecture\\brain_improvement\\campaign_2026-08-22_30h\\lanes\\P4_known_results\\arxiv_raw",
+        "verification_status": "survey-claim"
+      }
+    },
+    {
+      "id": "claim_3ccc6fc493b4e17b5c29966949004f575c51205c8a4f0ba3bc516d0b752ebea4",
+      "title": "Damron-Hanson-Houdre-Xu (2019) prove ANTI-CONCENTRATION rather than a variance lower bound: for GENERAL edge-weight distributions on Z^d they show T(0,x) is with high probability not contained in an interval of size o(log||x||)^{1/2}, with similar statements for first-passage percolation in thin cylinders. In the same abstract they record that the log||x|| variance lower bound was found in the 1990s and 'there has not been any improvement since'.",
+      "statement": "general i.i.d. edge-weight distributions on Z^d - the point of the paper is removing the special-distribution restriction under which such statements were previously proved\nthe conclusion is anti-concentration (an interval-avoidance statement), NOT a variance lower bound\nthe log||x|| variance lower bound it cites is available only in two dimensions\n\nWHY THE DISTINCTION IS NOT PEDANTRY: an anti-concentration statement bounds how much mass the law of T(0,x) can put in a short interval. It does not by itself lower-bound the variance, and a variance lower bound does not by itself give anti-concentration. Chaining them silently is a category error.\nMETHOD: inducing a fluctuation in the number of edges in a box whose weights are of 'hi-mode' (large).\nTHE LITERATURE STATEMENT IS THE SECOND REASON THIS NODE EXISTS: it is a dated, first-hand confirmation from four people working directly on the problem that Newman-Piza's logarithmic bound had not been improved.\nSOURCE: arXiv:1810.08270v2, 'Lower bounds for fluctuations in first-passage percolation for general distributions'. Official arXiv API record retrieved by lane P4 on 2026-08-22.\nVERIFICATION STATUS: theorem-checked-against-source at abstract level for both the conclusion shape and the literature statement; the proof was not read and the precise 'general distributions' hypothesis is not stated in the abstract.",
+      "metadata": {
+        "bundle_key": "kr20_damron_hanson_houdre_xu_general_anticoncentration",
+        "bundle_tag": "p4-fpp-known-results-v1",
+        "claim_kind": "theorem",
+        "domain": "probability / first-passage percolation / known results",
+        "filed_by": "claude-8e06e1f7-P4",
+        "filed_on": "2026-08-22",
+        "lane": "campaign_2026-08-22_30h/P4_known_results",
+        "layer": "fpp_known_results",
+        "raw_sources_dir": "~\\<private-repo>\\12_cognitive_architecture\\brain_improvement\\campaign_2026-08-22_30h\\lanes\\P4_known_results\\arxiv_raw",
+        "verification_status": "theorem-checked-against-source"
+      }
+    }
+  ]
+}

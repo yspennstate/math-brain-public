@@ -1,0 +1,122 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w484",
+  "bundle_slug": "c0056-poisson-cavity-obstructions-w484-001",
+  "entries": [
+    {
+      "key": "atomic",
+      "namespace": "probability.random-operators",
+      "logical_name": "annealed-poisson-bound-does-not-imply-sample-absolute-continuity",
+      "kind": "concept",
+      "title": "Draft obstruction: smooth average, atomic samples",
+      "statement": "DRAFT, independent review pending. For D on l^2(Z^3) with D delta_x=U_x delta_x and iid U_x uniform[-1,1], every sample has a complete eigenbasis. For u_eta(E)=pi^(-1) Im <delta_0,(D-E-i eta)^(-1)delta_0>, sup_{eta>0,E} E u_eta(E)<=1/2, but each local spectral measure is delta_{U_x}. Ward identity also holds. For every sample integral_R u_eta(E)^2 dE=1/(2 pi eta). This refutes an inference from annealed first moments to sample absolute continuity. Zero hopping excludes this example from the unit-hopping Anderson target.",
+      "proof_text": null,
+      "assumptions": [
+        "eta>0",
+        "zero hopping",
+        "iid uniform[-1,1] potentials",
+        "resolvent (H-z)^(-1)"
+      ],
+      "domain": "probability theory; spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w484:C0056:atomic",
+        "url": "file:///~/brain_workers/w484/ATTEMPT.md",
+        "revision": "2026-10-10-independent-unreviewed",
+        "license": "owner-own-work (campaign derivation; pending independent review)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "compactness",
+      "namespace": "probability.random-operators",
+      "logical_name": "poisson-lp-compactness-criterion-draft",
+      "kind": "concept",
+      "title": "Draft criterion: Poisson Lp control at fixed disorder",
+      "statement": "DRAFT sufficient criterion, independent review pending. For a measurable random probability measure mu, a fixed bounded open interval I, 1<p<infinity, and eta_n->0, the bound sup_n E integral_I (P_eta_n*mu)^p dE<infinity implies an Lp(I) density almost surely. Fatou and pathwise weak compactness identify that density against compactly supported tests. Stationarity and a countable site intersection extend this conclusion to all lattice basis spectral measures. The premise is unproved for weak-disorder Z^3, and nonzero mass in I must be established separately. The p=1 variant is false. No GOE assertion follows.",
+      "proof_text": null,
+      "assumptions": [
+        "mu is a positive probability measure",
+        "fixed bounded open I",
+        "1<p<infinity",
+        "eta_n tends to zero",
+        "stationarity for all-site transfer",
+        "fixed positive disorder"
+      ],
+      "domain": "probability theory; spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w484:C0056:compactness",
+        "url": "file:///~/brain_workers/w484/ATTEMPT.md",
+        "revision": "2026-10-10-independent-unreviewed",
+        "license": "owner-own-work (campaign derivation; pending independent review)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "cavity",
+      "namespace": "probability.random-operators",
+      "logical_name": "anderson-single-site-cavity-second-moment-gap-draft",
+      "kind": "concept",
+      "title": "Draft reduction: resonant inverse cavity response",
+      "statement": "DRAFT conditional reduction, independent review pending. For H=A+lambda V on Z^3, unit adjacency A, lambda>0 and bounded iid potentials with density rho bounded by M, remove site 0 and write Sigma=<h,(H^(0)-E-i eta)^(-1)h>, a=E+Re Sigma and b=eta+Im Sigma>0. The exact Schur complement gives G_00=(lambda V_0-a-i b)^(-1). Conditioning only on sites other than 0 yields E[(Im G_00/pi)^2|cavity]<=M/(2 pi lambda b). A uniform expected integral of b^(-1) along eta_n->0 is sufficient for the Poisson L2 criterion. If V_0 is uniform[-1,1], the same second moment is >=1/(4 lambda pi^2 b) on {|a|+b<=lambda}. Control of these resonant small-b environments is unproved. The six cavity neighbors need not be independent.",
+      "proof_text": null,
+      "assumptions": [
+        "eta>0",
+        "fixed lambda>0",
+        "bounded iid potentials",
+        "bounded density rho",
+        "single-site independence from the cavity",
+        "uniform[-1,1] only for lower bound"
+      ],
+      "domain": "probability theory; spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w484:C0056:cavity",
+        "url": "file:///~/brain_workers/w484/ATTEMPT.md",
+        "revision": "2026-10-10-independent-unreviewed",
+        "license": "owner-own-work (campaign derivation; pending independent review)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "scope",
+      "namespace": "probability.random-operators",
+      "logical_name": "c0056-spectral-and-goe-obligations-separated-draft",
+      "kind": "concept",
+      "title": "Draft scope: C0056 has two proof obligations",
+      "statement": "DRAFT scope note. The C0056 intake requests both weak-disorder absolutely continuous spectrum on Z^3 and GOE local statistics of finite-volume bulk eigenvalues. The independent Poisson/cavity route supplies conditional spectral reductions only. Its uniform inverse-cavity estimate is unproved and its GOE branch is untouched. The dated attempted_unsolved label does not certify current openness; a September 2026 public proof claim remains unaudited here. Current openness UNKNOWN; no novelty or solved claim.",
+      "proof_text": null,
+      "assumptions": [
+        "intake C0056 at problems.jsonl:56",
+        "historical sources are dated",
+        "no complete current-status certification"
+      ],
+      "domain": "probability theory; spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w484:C0056:scope",
+        "url": "file:///~/brain_workers/w484/ATTEMPT.md",
+        "revision": "2026-10-10-independent-unreviewed",
+        "license": "owner-own-work (campaign derivation; pending independent review)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "cavity",
+      "to_key": "compactness",
+      "kind": "depends_on",
+      "rationale": "The second-moment upper bound plus uniform expected inverse-b energy control gives exactly the p=2 premise of the conditional compactness criterion; that uniform control remains open."
+    },
+    {
+      "from_key": "atomic",
+      "to_key": "compactness",
+      "kind": "semantic_association",
+      "rationale": "The atomic example satisfies first-moment control but has Poisson L2 norm 1/(2 pi eta), so it tests the failed p=1 weakening of the criterion."
+    },
+    {
+      "from_key": "scope",
+      "to_key": "cavity",
+      "kind": "semantic_association",
+      "rationale": "The cavity route covers only the spectral obligation and explicitly leaves both its hard estimate and GOE unresolved."
+    }
+  ]
+}

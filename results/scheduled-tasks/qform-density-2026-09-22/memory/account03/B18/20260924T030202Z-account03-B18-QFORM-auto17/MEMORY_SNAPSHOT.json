@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260924T030202Z-account03-B18-QFORM-auto17",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "startup_control_commit": "d4e2fdf35e934a33000ad623eb9c68024ef3fce1",
+  "publication_refresh_commit": "04ecd57e3a082fbb758e1d1675aabf5ac7b906df",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "new_result": {
+    "id": "QFORM-CROSS-SQUARE-LORENTZ-ENDPOINT-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "statement": "For disjoint original-coordinate cap-one product banks X,Y and another independent original coordinate W, M!=0 with sigma=||M||op, arbitrary alpha,G(Y), a!=0,d,c, T=X^T M Y+alpha^T X+G(Y)+aW^2+dW+c has a continuous C0 density with ||p_T||inf<=16/sqrt(|a| sigma).",
+    "proof_currency": [
+      "Rudelson--Vershynin Theorem 1.2 gives conditional scalar density cap sqrt(2)/||My+alpha|| and top-singular projection cap sqrt(2)/sigma",
+      "the random conditional cap has tail P(K>s)<=4/(sigma s)",
+      "layer cake gives p_R^*(t)<=C(1+log(1/(Ct))) for t<=1/C and <=1/t afterwards, C=4/sigma",
+      "therefore int t^-1/2 p_R^*(t)dt<=16/sqrt(sigma)",
+      "the translated square density satisfies g^*(t)<=1/sqrt(|a|t)",
+      "Hardy--Littlewood/O'Neil endpoint convolution gives the L-infinity bound; L21 compact approximation gives C0 continuity"
+    ]
+  },
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3d3c43d327b37347cc67c937d4daae8d28bf433f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260924T030202Z-account03-B18-QFORM-auto17/",
+    "check_status": "PASS"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "75ecd85f63a9e2aeb0380299bafa3952986d31f4",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B18/20260924T030202Z-account03-B18-QFORM-auto17.md"
+  },
+  "partner_application": {
+    "partner": "account04/B18",
+    "dependency_commit": "84fa5922df082f90064dea4d22a600a60e799803",
+    "dependency_result": "QFORM-4COORD-NULLHUB-WINDOW-EDGE-DICHOTOMY-v1",
+    "actual_inequality": "For B_c with spectrum {1,-1,c,0}, ||p||inf<=min(576^(1/3)c^(2/3),8sqrt(2)c^(-1/2))."
+  },
+  "primary_sources": [
+    "Rudelson--Vershynin, Small ball probabilities for linear images of high dimensional distributions, arXiv:1402.4492, Theorem 1.2",
+    "Richard O'Neil, Convolution operators and L(p,q) spaces, Duke Math. J. 30 (1963), 129--142, DOI 10.1215/S0012-7094-63-03015-1"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "unresolved_implication": "Bare s_3(A)>=1 does not force a target-scale product-preserving cross-plus-private-square decomposition. The global compiler must extract this geometry or route its failure into paid E3/ridge/grouped-hub/pair-log mechanisms with arbitrary extra spectrum retained.",
+  "next_step": "Try to convert failure of the endpoint cross-plus-square certificate into a quantitative third-compound/ridge alternative without inverting a vanishing fixed minor."
+}

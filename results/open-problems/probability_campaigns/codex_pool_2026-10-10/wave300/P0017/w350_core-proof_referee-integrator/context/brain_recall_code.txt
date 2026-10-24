@@ -1,0 +1,83 @@
+1470:def recall(query, n=8):
+1471-    idx = _archived_index_lines()
+1472-    idx.update(sr._index_lines())     # live entries override archived twins
+1473-    words = sr._words(query)
+1474-    seeds, lex = sr._seeds_from_prompt(words, idx)
+1475-    # Some older integrations supplied a mapping for the lexical-match collection.  The
+1476-    # public contract is set-like, so normalize once at the boundary before policy filtering.
+1477-    lex = set(lex)
+1478-    known_slugs = None
+1479-
+1480-    try:
+1481-        recall_policy = _load_recall_policy()
+1482-    except Exception as exc:
+1483-        print("BRAIN RECALL POLICY ERROR: %s: %s" % (type(exc).__name__, exc))
+1484-        return 2
+1485-    disabled = {slug for slug, row in recall_policy.items() if row["mode"] == "disabled"}
+1486-    parent_only = {slug for slug, row in recall_policy.items() if row["mode"] == "parent_only"}
+1487-    policy_seeds = {}
+1488-    for slug in parent_only:
+1489-        intent_gate = recall_policy[slug].get("intent_gate")
+1490-        if intent_gate is not None:
+1491-            strength = _intent_gate_strength(query, intent_gate)
+1492-        else:
+1493-            blocked = _policy_blocked(query, recall_policy[slug])
+1494-            strength = 0.0 if blocked else _policy_parent_strength(words, idx.get(slug, ""))
+1495-            if not blocked and _policy_triggered(query, recall_policy[slug]):
+1496-                strength = max(strength, 3.0)
+1497-        if strength:
+1498-            policy_seeds[slug] = strength
+1499-            seeds[slug] = max(seeds.get(slug, 0.0), strength)
+1500-            lex.add(slug)
+1501-        else:
+1502-            # sr._seeds_from_prompt includes a full-text BM25 arm.  Such a hit is useful for
+1503-            # normal nodes but cannot masquerade as the direct-parent evidence this policy
+1504-            # requires, including when the matching bytes came from an attached document.
+1505-            seeds.pop(slug, None)
+1506-            lex.discard(slug)
+1507-    # A NORMAL node may carry trigger_groups too (2026-09-23, T11). When one whole group is in the query the
+1508-    # node is pinned above the BM25 block the way a parent-only foothold is; otherwise it ranks as usual.
+1509-    # Built for the standing-orders hubs: T11 found his film orders reaching an agent 35 of 35 times through
+1510-    # the hourly prompt block and 24 through recall, because each law memory ranks low on a task's own words
+1511-    # and the hub that lists them all ranked nowhere on his 24 real film prompts. BRAIN_RECALL_PINS=0 opts out.
+1512-    if os.environ.get("BRAIN_RECALL_PINS", "1") != "0":
+1513-        for slug, row in recall_policy.items():
+1514-            if row["mode"] != "normal" or not row.get("trigger_groups") or slug in policy_seeds:
+1515-                continue
+1516-            if not _policy_blocked(query, row) and _policy_triggered(query, row):
+1517-                policy_seeds[slug] = 3.0
+1518-                seeds[slug] = max(seeds.get(slug, 0.0), 3.0)
+1519-                lex.add(slug)
+1520-    for slug in disabled:
+1521-        seeds.pop(slug, None)
+1522-        lex.discard(slug)
+1523-
+1524-    # Attached text is part of its parent node's memory, not an inert filing cabinet.
+1525-    # Search the live manifests on every deliberate recall so a new attachment is reachable
+1526-    # immediately, even before the nightly BM25 rebuild. Integrity failure is a stop condition:
+1527-    # silently skipping a damaged "full notes" file recreates the exact harm this lane closes.
+1528-    # One bundle that fails verification is left out of the search and named, not a stop for every query (28 Sep,
+1529-    # scheduled audit account03/B02 r68, B02-R1-ATTACHMENT-CORRUPTION-GLOBAL-RECALL-STOP-001): its text and scores never
+1530-    # count, the line below says the attachment corpus is incomplete and which bundles, and the rest of recall runs.
+1531-    # Until then one broken bundle anywhere ended every deliberate recall before BM25 ranked anything.
+1532-    attachment_failures = []
+1533-    try:
+1534-        attachment_hits = node_docs.search_nodes(MEM, query, limit=10, failures=attachment_failures)
+1535-    except Exception as exc:
+1536-        print("BRAIN NODE DOCUMENT ERROR: attachment retrieval is unsafe: %s: %s" %
+1537-              (type(exc).__name__, exc))
+1538-        return 2
+1539-    if attachment_failures:
+1540-        print("BRAIN NODE DOCUMENT WARNING: INCOMPLETE_ATTACHMENT_CORPUS - %d attachment bundle(s) failed verification and "
+1541-              "were left out of this recall, their text and scores counting for nothing: %s. Check them with python "
+1542-              "brain.py verify-attachments." % (len(attachment_failures),
+1543-                                         ", ".join("%s (%s)" % f for f in attachment_failures[:12])))
+1544-        # The seeds above were drawn before the bundles were verified, and spread_recall's BM25 arm reads the published
+1545-        # index, which can still hold a failed bundle's text (B02-R23 below). A failed parent keeps only the seed its own
+1546-        # index line or file name earns, by spread_recall's overlap rule; a policy or pinned seed stays as it was given.
+1547-        _own_words = sr._distinctive_words(words) if len(words) >= 2 else []
+1548-        for _slug in sorted({s for s, _e in attachment_failures}):
+1549-            if _slug not in seeds or _slug in policy_seeds:
+1550-                continue
+
+STDERR:

@@ -1,0 +1,2 @@
+STATE: A039 stage5 saved: A038 parity payment independently HOLDS;128 non-flat3bit cores/all1152 policies final D<-19/100; all-n parity delayed debit paid once by<1/8 final surplus; external review pending, FEI OPEN.
+NEXT: Derive arbitrary-core final-bank eligibility from inherited core surplus and owned selector reserves with no reuse; start biased rare v_n under same two-query history; A088/A094 review, A038/A064/A091/A092 consume.

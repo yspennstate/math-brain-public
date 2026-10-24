@@ -1,0 +1,40 @@
+{
+  "candidate_id": "C0044",
+  "checked_date": "2026-10-10",
+  "exact_target": "For each integer d >= 3, each iid law P of nearest-neighbour transition rows on Z^d with every one of the 2d probabilities strictly positive almost surely, and each fixed nonzero l in R^d, the annealed probability E_P[P_0^omega(lim_n X_n dot l = +infinity)] belongs to {0,1}.",
+  "quantifiers": "Every fixed nonzero direction; no assertion of a single quenched null set uniform over uncountably many directions. The environment is sampled once and retained on revisits.",
+  "uniformly_elliptic_subtarget": "The same assertion under a deterministic positive lower bound on every transition probability. Uniform ellipticity is stronger than strict ellipticity.",
+  "dated_ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 430,
+    "row": "4,C0044,Zero-one law for directional transience in dimensions d >= 3,attempted_un,directional 0-1 law in d>=3",
+    "certifies": "Historical title, tier and attempted_un classification only"
+  },
+  "primary_classical_source": {
+    "author": "Martin P. W. Zerner",
+    "title": "The zero-one law for planar random walks in i.i.d. random environments revisited",
+    "url": "https://arxiv.org/pdf/0706.0745",
+    "version": "v1, 2007-06-05",
+    "scoped_locations": "Pages 1-2: model, Kalikow union law, strict-ellipticity extension and directional conjecture; pages 3-4: two-walk proof mechanism",
+    "scope": "Theorem 1 proves the strict elliptic iid planar case. The d >= 3 open-status sentence is historical, not current-status evidence. The union law P_0(A_l union A_-l) in {0,1} does not by itself imply the single-direction law."
+  },
+  "recent_primary_claim": {
+    "title": "A directional zero-one law under strict ellipticity",
+    "dated_path": "September-23-2026",
+    "url": "https://github.com/openai/math/blob/main/preprints/A-directional-zero-one-law-under-strict-ellipticity-September-23-2026/paper.pdf",
+    "scope_document": "https://github.com/openai/math/blob/main/lean/docs/220.md",
+    "formal_comparator": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalWalk.lean",
+    "formal_theorem": "OAI.DirectionalZeroOne.directional_zero_one",
+    "formal_assumptions": "3 <= d; iid product of probability transition rows; each allowed step probability positive mu-a.e.; fixed nonzero real direction",
+    "comparator_gap": "The comparator theorem at lines 78-81 ends with by sorry. It is not a completed formal-check receipt. This does not audit or refute any separate companion formalization.",
+    "manuscript_fetch": "GitHub PDF page located; raw-PDF web parsing failed with unsupported content-type. Local pinned inspection still pending.",
+    "accepted_proof_receipt": null
+  },
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "full_target_solved": false,
+  "prior_search": "Targeted C0044/standard-title rg in the named intake, attempts H/I and Lean roots; exact matching records identified. No matching C0044 record was returned from attempts H or I. Further exact intake extraction and scoped store check pending.",
+  "independent_phase": "ATTEMPT.md sections I-III and CLAIMS.jsonl R001 saved before reading paired proof; exact experiment MEASUREMENT.json checks 128 configurations with defect 1/12.",
+  "served_identity": {"author": "UNVERIFIED", "referee": "UNVERIFIED", "requested_settings_are_evidence": false},
+  "review": {"independent_reviewer": "w578", "state": "requested; awaiting delivery receipt"}
+}

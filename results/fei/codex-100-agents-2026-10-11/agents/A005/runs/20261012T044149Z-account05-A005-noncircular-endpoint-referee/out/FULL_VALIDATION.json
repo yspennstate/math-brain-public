@@ -1,0 +1,94 @@
+{
+  "helper_version": "A005-stage2-v1",
+  "mode": "full",
+  "cases": 1129,
+  "assertions": 14961,
+  "failures": 0,
+  "all_individual_child_certified_violators": 67,
+  "all_average_child_certified_violators": 68,
+  "maximum_dimension": 12,
+  "elapsed_seconds": 14.50786979999998,
+  "tensor_seed_records": [
+    {
+      "m": 1,
+      "relevant_dimension": 3,
+      "average_child_slack_signs": [
+        1,
+        1,
+        1
+      ],
+      "all_individual_children_certified": true,
+      "delta_interval": [
+        "30528380035671/140737488355328",
+        "3816047504459/17592186044416"
+      ]
+    },
+    {
+      "m": 2,
+      "relevant_dimension": 6,
+      "average_child_slack_signs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "all_individual_children_certified": false,
+      "delta_interval": [
+        "30528380035671/70368744177664",
+        "122113520142687/281474976710656"
+      ]
+    },
+    {
+      "m": 3,
+      "relevant_dimension": 9,
+      "average_child_slack_signs": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "all_individual_children_certified": false,
+      "delta_interval": [
+        "91585140107013/140737488355328",
+        "91585140107015/140737488355328"
+      ]
+    },
+    {
+      "m": 4,
+      "relevant_dimension": 12,
+      "average_child_slack_signs": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "all_individual_children_certified": false,
+      "delta_interval": [
+        "30528380035671/35184372088832",
+        "244227040285373/281474976710656"
+      ]
+    }
+  ],
+  "seed_ratio_interval": [
+    "416004475661769/140737488355328",
+    "832008951323541/281474976710656"
+  ],
+  "gap_over_a_div10_margin_lower": "24062852687/35184372088832",
+  "dimension_obstruction": "At C=8/3, no n>=11 relevant-variable Boolean function of ratio >= that of the three-bit point defect can have all average children certified.",
+  "arithmetic": "integer Walsh, direct physical edge count, exact log-prime vectors; rational atanh intervals with outward dyadic rounding"
+}

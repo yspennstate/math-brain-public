@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "run_id": "account02-B18-20260924T110300Z-r11",
+  "purpose": "finite deterministic checks only; not evidence for the universal conjecture",
+  "family": "A_eps=[[0,D_eps],[D_eps^T,ww^T]], D_eps=u v^T+eps u2 v2^T, m=8",
+  "orthogonality_residuals": {
+    "u_dot_u2": 2.2162789822939568e-17,
+    "v_dot_v2": 2.2162789822939568e-17,
+    "v_dot_w": -5.5927857926893454e-18,
+    "v2_dot_w": -2.2162789822939568e-17
+  },
+  "spectra": [
+    {"eps": 0.0, "nonzero_eigenvalues": [-1.0, 1.0, 1.0]},
+    {"eps": 0.01, "nonzero_eigenvalues": [-1.0, -0.01, 0.01, 1.0, 1.0]},
+    {"eps": 0.5, "nonzero_eigenvalues": [-1.0, -0.5, 0.5, 1.0, 1.0]}
+  ],
+  "partner_pair_m8_eps001": {
+    "kappa0": 0.5000249993750311,
+    "tau": 0.24999999999999992,
+    "bound_direct": 25.78871131731012,
+    "bound_formula": 25.788711317310113,
+    "raw_currency_sum": 0.2500375009374844
+  },
+  "uniform_fourth_moment_dependence": [
+    {"m": 4, "E_U2U2sq": 0.004861111111111111, "product_second_moments": 0.006944444444444444},
+    {"m": 8, "E_U2U2sq": 0.005902777777777778, "product_second_moments": 0.006944444444444444},
+    {"m": 16, "E_U2U2sq": 0.006423611111111111, "product_second_moments": 0.006944444444444444}
+  ],
+  "exact_formulas_checked": {
+    "spectrum": "{-1,1,1,-eps,eps}",
+    "partner_bound": "2^(13/8)*3^(3/4)*(1+eps^2)^(-3/8)*m^(5/8)",
+    "useful_pair_currency_sum": "(1+eps^2)^(3/2)/sqrt(2m)",
+    "fourth_moment": "E[U^2 U2^2]=1/144-1/(120m)"
+  }
+}

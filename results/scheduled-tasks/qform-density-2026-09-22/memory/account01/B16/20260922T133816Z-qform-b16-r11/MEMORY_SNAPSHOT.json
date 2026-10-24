@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account01",
+  "slot": "B16",
+  "run_id": "20260922T133816Z-qform-b16-r11",
+  "source_control_start_commit": "a061e3c35962dd58137107493fe491a17a8714cb",
+  "source_control_revalidated_commit": "4fe2c8b1001d46d88ece1c901066a2edbe97ee43",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "new_correction": "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+  "partner_results_applied": [
+    {
+      "worker": "account02/B16",
+      "run": "20260922T115600Z-account02-B16-qform-projprod",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "0605c987ff531ccc2fd5554c48df29e65b3eaaa8",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260922T115600Z-account02-B16-qform-projprod/REPORT.md",
+      "blob": "aa77eea73a99b6a58329ece190589b110716b485",
+      "applied_scope": "Integrated phase-weighted Wiener sufficient criterion."
+    },
+    {
+      "worker": "account02/B16",
+      "run": "20260922T133220Z-account02-B16-QFORM-auto11",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "1740bd1f5b9f68ddae851236d8a633604baa1e8a",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260922T133220Z-account02-B16-QFORM-auto11/REPORT.md",
+      "blob": "739d8884ff98ab8ec101800a5e133aeb3de0555a",
+      "applied_scope": "Authentic product-source complement-fiber trace obstruction; motivates averaging/cancellation before curved trace."
+    }
+  ],
+  "mathematical_change": {
+    "classification": "ESSENTIAL_STEP_APPLIED / UNIVERSAL INTERMEDIATE INTERFACE REFUTED",
+    "statement": "For A=I_3 and iid Uniform[-1/2,1/2], the account02/B16 spectral Wiener norm W(t) is infinite for every t because the sinc transform is not L1; hence the averaged absolute phase-Wiener condition cannot be a universal obligation. Separately, any shifted-square channel from a density h<=M has characteristic function L3 norm <=2(2pi)^(1/3)M^(2/3)|lambda|^(-1/3); three independent channels yield an L1 characteristic function and density cap 8(M1M2M3)^(2/3)|lambda1lambda2lambda3|^(-1/3).",
+    "full_target_status": "OPEN_NOT_PROVED"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2a6981ee2518d8b92f734b5763e89d5bf26a8048",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B16/20260922T133816Z-qform-b16-r11/REPORT.md",
+    "blob": "133bb6c05ffa8c5e8b01ac842bccc8f9d46f8e2e"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B16/20260922T133816Z-qform-b16-r11.md",
+  "unresolved_implication": "QFORM-DEPENDENT-L3-TRIPLE-v1: obtain a dependent three-channel time-integrated estimate from original-coordinate product provenance for arbitrary rotated selected spectral directions, while averaging the account02/B16 bad complement fibers before any normalized trace supremum.",
+  "next_step": "Heavy-core/diffuse-remainder decomposition retaining Fresnel/time cancellation; test against the fresh eight-coordinate authentic-fiber obstruction and rank-two logarithmic control."
+}

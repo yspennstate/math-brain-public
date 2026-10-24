@@ -1,0 +1,738 @@
+--- a/math-brain-inbox/w344/bundle_001.json
++++ b/math-brain-inbox/w344/bundle_001.json
+@@ -0,0 +1,88 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w344",
++  "bundle_slug": "w344-open-problem-p0341-checked-partials-20261010",
++  "entries": [
++    {
++      "key": "fixed-trim-divergent-occupation-counterexample",
++      "namespace": "probability.harmonic_descent",
++      "logical_name": "fixed-trim-divergent-occupation-counterexample",
++      "kind": "lemma",
++      "title": "Fixed-width trimming fails for sparse harmonic-descent occupation tests",
++      "statement": "Let a(n,j) be the probability that the strictly descending chain with transitions q(n,j)=1/((n-j)H_(n-1)), 1<=j<n, visits j, where H_k=sum_(r=1)^k 1/r. Put a(j)=6H_(j-1)/(pi^2(j-1)) and g(j)=j when j=2^r for some r>=1, zero otherwise. For every fixed integer L>=0, along n=2^K+L+1 the ratio [sum_(j=2)^(n-L-1) a(n,j)g(j)]/[sum_(j=2)^n a(j)g(j)] tends to infinity. The same holds with the denominator stopped at n-L-1. Thus deleting any fixed-width near-root band does not repair the divergent-series occupation ansatz for polynomially bounded weights.",
++      "proof_text": "The source is Aldous-Janson, Critical Beta-splitting Random Tree II, arXiv:2303.02529v3 (17 April 2025), Section 3.1, equation (2), and Open Problem 8/Ansatz 20, PDF pp.39-40. The earlier campaign already refuted both clauses by sparse powers-of-two weights. We retain that attribution and extend its failed-repair analysis.\n\nLet H_k=sum_(r=1)^k 1/r. The discrete tagged descent chain jumps n to j<n with probability 1/((n-j)H_(n-1)); a(n,j) is its visiting probability. Fix an integer L>=0, and truncate the occupation sum at j<=n-L-1. Set g(j)=j 1_{j=2^r,r>=1}. Along N=2^K and n=N+L+1, a(n,N)>=1/((L+1)H_(N+L)), since the first jump alone is a visit. Thus the retained sum is at least N/((L+1)H_(N+L)). The comparison coefficients are a(j)=6H_(j-1)/(pi^2(j-1)). For large K, n<2N and the comparison sum, whether stopped at n or n-L-1, has exactly K nonzero terms. Since H_(2^r-1) is of order r, that sum is of order K^2. For fixed L, H_(N+L) is of order K, and the ratio is bounded below by c_L 2^K/K^3 -> infinity. This proves that removing the root, or any fixed number of states just below it, does not repair the divergent-series clause.\n\nThis proof does not cover a growing trimming width, regular test classes, or the general quantitative occupation-bound problem. The first-jump bound needs no recurrence solution. Nineteen exact rational transition-normalization checks, three complete small descent computations, and sixteen finite lower-bound checks are saved in p0341_measurements.json. At K=18 the ratio lower bound is 126.182 for L=1 and 3.88245 for L=64.\n\nA positive repair criterion is available without inventing a rate: for nonnegative b_n(j) supported on j<=n with b_n(j)->b(j) for each fixed j, and f(j)>=0 with S=sum b(j)f(j)<infinity, sum b_n(j)f(j)->S if and only if lim_(M->infinity) limsup_(n->infinity) sum_(j>M) b_n(j)f(j)=0. For fixed M, the finite prefix converges. Tail control gives the forward implication by splitting the sum into prefix and tail; conversely, convergence of total and prefix gives limsup tail=S-sum_(j<=M)b(j)f(j), which tends to zero. This is a criterion requiring weighted tail control, not a proof that the tagged chain satisfies it for any new test class.",
++      "assumptions": [
++        "L is fixed as K tends to infinity",
++        "The chain uses the displayed harmonic-descent transition probabilities"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:fixed-trim-divergent-occupation-counterexample",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Let a(n,j) be the probability that the strictly descending chain with transitions q(n,j)=1/((n-j)H_(n-1)), 1<=j<n, visits j, where H_k=sum_(r=1)^k"
++      }
++    },
++    {
++      "key": "weighted-tail-criterion-for-occupation-convergence",
++      "namespace": "probability.harmonic_descent",
++      "logical_name": "weighted-tail-criterion-for-occupation-convergence",
++      "kind": "lemma",
++      "title": "Weighted tail criterion for convergence of occupation sums",
++      "statement": "Suppose b_n(j)>=0, b_n(j)=0 for j>n, and b_n(j)->b(j) for every fixed positive integer j. Let f(j)>=0 be finite and S=sum_(j>=1)b(j)f(j)<infinity. Then sum_j b_n(j)f(j)->S if and only if lim_(M->infinity) limsup_(n->infinity) sum_(j>M)b_n(j)f(j)=0. This criterion requires an actual weighted tail estimate; pointwise convergence alone does not supply it.",
++      "proof_text": "The source is Aldous-Janson, Critical Beta-splitting Random Tree II, arXiv:2303.02529v3 (17 April 2025), Section 3.1, equation (2), and Open Problem 8/Ansatz 20, PDF pp.39-40. The earlier campaign already refuted both clauses by sparse powers-of-two weights. We retain that attribution and extend its failed-repair analysis.\n\nLet H_k=sum_(r=1)^k 1/r. The discrete tagged descent chain jumps n to j<n with probability 1/((n-j)H_(n-1)); a(n,j) is its visiting probability. Fix an integer L>=0, and truncate the occupation sum at j<=n-L-1. Set g(j)=j 1_{j=2^r,r>=1}. Along N=2^K and n=N+L+1, a(n,N)>=1/((L+1)H_(N+L)), since the first jump alone is a visit. Thus the retained sum is at least N/((L+1)H_(N+L)). The comparison coefficients are a(j)=6H_(j-1)/(pi^2(j-1)). For large K, n<2N and the comparison sum, whether stopped at n or n-L-1, has exactly K nonzero terms. Since H_(2^r-1) is of order r, that sum is of order K^2. For fixed L, H_(N+L) is of order K, and the ratio is bounded below by c_L 2^K/K^3 -> infinity. This proves that removing the root, or any fixed number of states just below it, does not repair the divergent-series clause.\n\nThis proof does not cover a growing trimming width, regular test classes, or the general quantitative occupation-bound problem. The first-jump bound needs no recurrence solution. Nineteen exact rational transition-normalization checks, three complete small descent computations, and sixteen finite lower-bound checks are saved in p0341_measurements.json. At K=18 the ratio lower bound is 126.182 for L=1 and 3.88245 for L=64.\n\nA positive repair criterion is available without inventing a rate: for nonnegative b_n(j) supported on j<=n with b_n(j)->b(j) for each fixed j, and f(j)>=0 with S=sum b(j)f(j)<infinity, sum b_n(j)f(j)->S if and only if lim_(M->infinity) limsup_(n->infinity) sum_(j>M) b_n(j)f(j)=0. For fixed M, the finite prefix converges. Tail control gives the forward implication by splitting the sum into prefix and tail; conversely, convergence of total and prefix gives limsup tail=S-sum_(j<=M)b(j)f(j), which tends to zero. This is a criterion requiring weighted tail control, not a proof that the tagged chain satisfies it for any new test class.",
++      "assumptions": [
++        "Nonnegative arrays and weights",
++        "Finite limiting weighted sum",
++        "Finite support of each row"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:weighted-tail-criterion-for-occupation-convergence",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Suppose b_n(j)>=0, b_n(j)=0 for j>n, and b_n(j)->b(j) for every fixed positive integer j. Let f(j)>=0 be finite and"
++      }
++    },
++    {
++      "key": "archival-sparse-ansatz-refutation-scope",
++      "namespace": "probability.harmonic_descent",
++      "logical_name": "archival-sparse-ansatz-refutation-scope",
++      "kind": "concept",
++      "title": "Scope of the archived sparse-test refutation of Ansatz 20",
++      "statement": "The campaign archived on 7-8 September 2026 refutes both clauses of Aldous-Janson Ansatz 20 using powers-of-two weights and a(n,n)=1. This is a partial answer to P0341: it refutes the unrestricted auxiliary ansatz while leaving general quantitative occupation error bounds and regular-weight repairs unresolved. A ranking label candidate_pa does not mean that no substantive prior result exists. This row records archival scope and claims no new priority.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:archival-sparse-ansatz-refutation-scope",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; source-backed scope audit; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "The campaign archived on 7-8 September 2026 refutes both clauses of Aldous-Janson Ansatz 20 using powers-of-two weights and"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "fixed-trim-divergent-occupation-counterexample",
++      "to_existing_logical": "math:probability.core:open-problem-p0341-uniform-occupation-estimates-and-the-polynomial-test-ansatz",
++      "kind": "cites",
++      "rationale": "New end: \"Let a(n,j) be the probability that the strictly descending chain with transitions q(n,j)=1/((n-j)H_(n-1)), 1<=j<n, visits j, where H_k=sum_(r=1)^k\"; existing end: \"Find quantitative bounds on the tagged harmonic-descent occupation probabilities and determine the validity of the displayed weighted-convergence ansatz\". This result addresses or audits P0341; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "weighted-tail-criterion-for-occupation-convergence",
++      "to_existing_logical": "math:probability.core:open-problem-p0341-uniform-occupation-estimates-and-the-polynomial-test-ansatz",
++      "kind": "cites",
++      "rationale": "New end: \"Suppose b_n(j)>=0, b_n(j)=0 for j>n, and b_n(j)->b(j) for every fixed positive integer j. Let f(j)>=0 be finite and\"; existing end: \"Find quantitative bounds on the tagged harmonic-descent occupation probabilities and determine the validity of the displayed weighted-convergence ansatz\". This result addresses or audits P0341; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "archival-sparse-ansatz-refutation-scope",
++      "to_existing_logical": "math:probability.core:open-problem-p0341-uniform-occupation-estimates-and-the-polynomial-test-ansatz",
++      "kind": "cites",
++      "rationale": "New end: \"The campaign archived on 7-8 September 2026 refutes both clauses of Aldous-Janson Ansatz 20 using powers-of-two weights and\"; existing end: \"Find quantitative bounds on the tagged harmonic-descent occupation probabilities and determine the validity of the displayed weighted-convergence ansatz\". This result addresses or audits P0341; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    }
++  ]
++}
+--- a/math-brain-inbox/w344/bundle_002.json
++++ b/math-brain-inbox/w344/bundle_002.json
+@@ -0,0 +1,65 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w344",
++  "bundle_slug": "w344-open-problem-c0039-checked-partials-20261010",
++  "entries": [
++    {
++      "key": "s3-noncommuting-dpp-linear-distance-experiment",
++      "namespace": "probability.determinantal",
++      "logical_name": "s3-noncommuting-dpp-linear-distance-experiment",
++      "kind": "concept",
++      "title": "Twelve finite S3 tests of the noncommuting determinantal distance bound",
++      "statement": "Numerical evidence only: for twelve seeded real symmetric S3-equivariant kernel pairs with spectra in [0.1,0.9], the optimal expected normalized Hamming coupling distance divided by trace|Q-Qprime|/6 had maximum 0.6934876897518668, with no violation found. The 4096-variable transport LP was checked against DPP normalization, one-site marginals, equivariance, primal residuals and dual objectives; a .3I/.7I commuting control gave ratio 1. Finite-group averaging makes the unrestricted LP optimum an invariant coupling optimum. These finite observations do not prove the general linear bound.",
++      "proof_text": null,
++      "assumptions": [
++        "Seed 344",
++        "Finite group S3",
++        "Strictly interior real symmetric positive contractions"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:s3-noncommuting-dpp-linear-distance-experiment",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; numerical evidence; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Numerical evidence only: for twelve seeded real symmetric S3-equivariant kernel pairs with spectra in [0.1,0.9], the optimal expected"
++      }
++    },
++    {
++      "key": "finite-rank-one-dpp-linear-hamming-bound",
++      "namespace": "probability.determinantal",
++      "logical_name": "finite-rank-one-dpp-linear-hamming-bound",
++      "kind": "lemma",
++      "title": "Linear trace-norm coupling bound for rank-one determinantal kernels",
++      "statement": "For unit vectors v,w in C^n, let P=vv* and Q=ww*. Their determinantal laws are single-site laws with probabilities |v_i|^2 and |w_i|^2. The optimal coupling cost for normalized Hamming distance on subsets of {1,...,n} equals (1/n)sum_i ||v_i|^2-|w_i|^2| and is at most trace|P-Q|/n. If both laws are invariant under a finite permutation group, averaging yields an invariant coupling of the same cost. This is a finite rank-one result, with no general equivariant approximation theorem asserted.",
++      "proof_text": "Lyons, Determinantal Probability: Basic Properties and Conjectures, arXiv:1406.2707v1 (10 June 2014), Theorem 5.6 and the following paragraph, PDF p.23, explicitly leaves the noncommuting linear bound open. The cached intake's S3 transport experiment was specified but not run. No later local resolution was found in the named attempts.\n\nexperiment_c0039.py constructs real symmetric right-convolution kernels on S3, rescales their spectra into [0.1,0.9], and verifies that they commute with every left translation. For a strictly positive contraction Q, the exact-set DPP formula is P_Q(S)=det(I-Q)det((Q(I-Q)^-1)_S). All 64 configuration probabilities and six one-site marginals are checked. Coupling distance is the 4096-variable transportation LP with cost |S symmetric_difference T|/6. Averaging any finite-group coupling over simultaneous left translations preserves the marginals and cost, so this unrestricted LP equals the invariant coupling optimum. The normalized Schatten norm is trace|Q-Q'|/6, which is the equivariant trace on the transitive six-point set. Primal constraints, dual feasibility and objective gap are checked; the .3I/.7I control gives equality.\n\nTwelve noncommuting pairs, seed 344, gave no violation. The largest ratio was 0.6934876897518668; the largest marginal residual was 1.124100812432971e-15 and dual gap 5.551115123125783e-17. These are finite numerical observations, not proof for all finite or infinite kernels, complex kernels, projections, or spectra near the boundary.\n\nA proved finite special case: for unit vectors v,w in C^n and rank-one projections P=vv*, Q=ww*, their DPPs select one site with probabilities |v_i|^2 and |w_i|^2. The minimum expected normalized Hamming cost is (1/n) sum_i ||v_i|^2-|w_i|^2|. Multiply w by a phase so <v,w>=r>=0. The real-part identity for squared magnitudes and Cauchy-Schwarz give sum_i ||v_i|^2-|w_i|^2| <= ||v-w||_2 ||v+w||_2=2 sqrt(1-r^2). The two nonzero eigenvalues of P-Q are plus and minus sqrt(1-r^2), as follows by restricting to span(v,w), checking trace zero and trace of its square. Hence the cost is <=trace|P-Q|/n. This proves the finite rank-one inequality; it does not give an approximation argument for the general equivariant problem.",
++      "assumptions": [
++        "Unit vectors",
++        "Finite dimension",
++        "Normalized Hamming cost"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:finite-rank-one-dpp-linear-hamming-bound",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "For unit vectors v,w in C^n, let P=vv* and Q=ww*. Their determinantal laws are single-site laws with probabilities"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "s3-noncommuting-dpp-linear-distance-experiment",
++      "to_existing_logical": "math:probability.determinantal:open-problem-c0039-d-bar-distance-bound-for-commuting-versus-general-equivariant-kernels",
++      "kind": "analogous_to",
++      "rationale": "New end: \"Numerical evidence only: for twelve seeded real symmetric S3-equivariant kernel pairs with spectra in [0.1,0.9], the optimal expected\"; existing end: \"For Gamma-equivariant positive contractions Q, Q' the bound d-bar(P_Q, P_{Q'}) <= 6 3^{2/3} ||Q - Q'||_1^{1/3} holds, and\". This result addresses or audits C0039; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "finite-rank-one-dpp-linear-hamming-bound",
++      "to_existing_logical": "math:probability.determinantal:open-problem-c0039-d-bar-distance-bound-for-commuting-versus-general-equivariant-kernels",
++      "kind": "analogous_to",
++      "rationale": "New end: \"For unit vectors v,w in C^n, let P=vv* and Q=ww*. Their determinantal laws are single-site laws with probabilities\"; existing end: \"For Gamma-equivariant positive contractions Q, Q' the bound d-bar(P_Q, P_{Q'}) <= 6 3^{2/3} ||Q - Q'||_1^{1/3} holds, and\". This result addresses or audits C0039; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    }
++  ]
++}
+--- a/math-brain-inbox/w344/bundle_003.json
++++ b/math-brain-inbox/w344/bundle_003.json
+@@ -0,0 +1,37 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w344",
++  "bundle_slug": "w344-open-problem-p0023-checked-partials-20261010",
++  "entries": [
++    {
++      "key": "symmetric-triangle-mirror-start-efficient-coupling",
++      "namespace": "probability.reflected_brownian",
++      "logical_name": "symmetric-triangle-mirror-start-efficient-coupling",
++      "kind": "lemma",
++      "title": "Efficient reflected Brownian coupling for mirror starting pairs in a symmetric triangle",
++      "statement": "Let D be a bounded triangle invariant under reflection R across an axis, and let lambda_1 be the first positive Neumann eigenvalue of -Delta/2 on D. For starting points x and Rx with x off the axis, there is a coalescent coupling of reflected Brownian motions with generator Delta/2 whose meeting time T satisfies P(T>t)<=C_(x,gamma) exp(-gamma t) for every 0<gamma<lambda_1. The coupling reflects one path across the axis until it hits that axis, then uses the same path. The killed half-domain principal eigenvalue is at least lambda_1 by odd extension and the Neumann Rayleigh principle. In particular, the result covers mirror starting pairs in reflection-symmetric acute triangles, not arbitrary pairs or scalene triangles.",
++      "proof_text": "Burdzy's cached official open-problems page, Problem 4, asks about arbitrary distinct starting points in any acute triangle. The prior attempt gives only a spectral lower bound, with the correct generator convention. For a bounded reflection-symmetric triangle D, let R be reflection through a symmetry axis and start at x and Rx, with x off the axis. Run Neumann reflected Brownian motion X with generator Delta/2, set Y=RX until the first hitting time T of the axis, and set Y=X thereafter. Reflection invariance of the domain and the strong Markov property make both marginals reflected Brownian motion. At T, X=RX, so the construction is coalescent.\n\nBefore T, X lives in one half-triangle with Neumann condition on its exterior sides and absorbing condition on the axis. Its survival exponent is the first mixed-boundary eigenvalue lambda_mix of -Delta/2. Odd extension across the axis sends every admissible half-domain test function to a mean-zero H^1 function on D, preserving its Rayleigh quotient. Thus lambda_mix>=lambda_1, where lambda_1 is the first positive full-domain Neumann generator eigenvalue. The bounded-domain killed heat semigroup therefore gives, for each gamma<lambda_1, P_x(T>t)<=C_(x,gamma) exp(-gamma t). This is an affirmative special case for mirror-image starting points in reflection-symmetric acute triangles. It does not construct a coupling for arbitrary pairs or scalene triangles.\n\nChecks: require a global domain symmetry, not just a reflected noise formula; identify absorbing/reflecting boundary pieces; require coalescence after meeting; use -Delta/2 rather than -Delta. A one-dimensional reflection control on [0,1], starting at 1/4 and 3/4, has generator exponent pi^2/2. Its exact mixed-boundary survival expansion has scaled limit (4/pi)cos(pi/4); three values are saved in special_case_measurements.jsonl. That control checks the convention and stopping mechanism, not the full triangular spectral theory.",
++      "assumptions": [
++        "A global reflection symmetry of the triangle",
++        "Starting points are mirror images",
++        "Generator Delta/2"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:symmetric-triangle-mirror-start-efficient-coupling",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Let D be a bounded triangle invariant under reflection R across an axis, and let lambda_1 be the"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "symmetric-triangle-mirror-start-efficient-coupling",
++      "to_existing_logical": "math:probability.core:open-problem-p0023-efficient-reflected-brownian-coupling-in-acute-triangles",
++      "kind": "specializes",
++      "rationale": "New end: \"Let D be a bounded triangle invariant under reflection R across an axis, and let lambda_1 be the\"; existing end: \"In any acute triangle, can reflected Brownian motions from distinct starting points be coupled so their meeting-time tail\". This result addresses or audits P0023; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    }
++  ]
++}
+--- a/math-brain-inbox/w344/bundle_004.json
++++ b/math-brain-inbox/w344/bundle_004.json
+@@ -0,0 +1,73 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w344",
++  "bundle_slug": "w344-open-problem-p0177-checked-partials-20261010",
++  "entries": [
++    {
++      "key": "finite-variance-free-brownian-unique-global-mode",
++      "namespace": "probability.free_brownian",
++      "logical_name": "finite-variance-free-brownian-unique-global-mode",
++      "kind": "lemma",
++      "title": "A unique large-time global free Brownian mode under finite variance",
++      "statement": "Let X have a probability law on R with mean m and finite variance sigma^2, and let mu_t be its free convolution with a semicircle law of variance t. For every t>0 with t>=1024(7+4sqrt(2))sigma^2, the continuous density of mu_t has a unique global maximizer M(t), and M(t)->m as t tends to infinity. If M3=E|X-m|^3 is finite, put B=(sqrt(2)+2)sigma, A=B^2+sigma^2 and K=A(B+sigma)+4(B^3+M3); then |M(t)-m|<=36K/t at those times. For sigma=0 the mode is exactly m. These are sufficient large-time bounds for a global density maximizer, without a compact-support assumption or a claimed optimal transition threshold.",
++      "proof_text": "The earlier campaign already derived the classical expansion under an exponential quadratic moment. The following worker proof addresses the free global mode and retains no claim of priority or full-problem acceptance.\n\nLabel: proof (worker checked), independent audit pending w346. No novelty or full-problem solution certificate. The mode here means the global maximizer of the canonical continuous density.\n\nLet X have mean m and finite variance sigma^2, and let mu_t be its law freely convolved with a semicircle law of variance t. If sigma=0, mu_t is a semicircle centered at m and the assertions below hold directly. Assume sigma>0. Put\n\n    B=(sqrt(2)+2)sigma,\n    A=B^2+sigma^2=(7+4sqrt(2))sigma^2,\n    T=1024 A.\n\nFor every t>=T, mu_t has a unique global mode. That mode tends to m as t tends to infinity. If E|X-m|^3<infinity, putting M3=E|X-m|^3 and K=A(B+sigma)+4(B^3+M3), its location M(t) satisfies the explicit estimate |M(t)-m|<=36 K/t for t>=T. If E|X-m|^7<infinity, then\n\n    M(t)=m-3mu_3/t+(5mu_5-22mu_2mu_3)/t^2+O_mu(t^-3),\n\nwhere mu_k=E[(X-m)^k]. The threshold is a proved sufficient bound, with no optimal transition location claimed. An exponential quadratic moment, as in the original classical question, implies the required seventh moment.\n\nUse the general Biane parametrization from Hasebe-Ueda, ALEA 15 (2018), equations (2.10), (2.13), (2.14). With w_t(u)=v_t(u)^2>0, it reads E[1/((u-X)^2+w_t(u))]=1/t, the density at psi_t(u) is sqrt(w_t(u))/(pi t), and psi_t is a homeomorphism. Hence global density maxima correspond exactly to global maxima of w_t. The function v_t is continuous and tends to zero at both infinities: for any a>0, E[1/((u-X)^2+a)] tends to zero as |u| tends to infinity by dominated convergence, forcing w_t(u)<a eventually. Thus a positive global maximum is attained.\n\nJensen's inequality gives w_t(m)>=t-sigma^2 when t>sigma^2. Indeed, at w=t-sigma^2 the reciprocal expectation is at least 1/t, and the expectation is strictly decreasing in positive w. Every positive solution also has w_t(u)<=t. Let u_* be any global maximizer and w_*=w_t(u_*). Then w_*>=t-sigma^2 and\n\n    E[(u_*-X)^2/(w_*+(u_*-X)^2)]=1-w_*/t<=sigma^2/t.\n\nChebyshev gives P(|X-m|<=sqrt(2)sigma)>=1/2. If r=|u_*-m|-sqrt(2)sigma>0, the last expectation is at least (1/2)r^2/(t+r^2). For t>=4sigma^2 this implies r^2<=2sigma^2 t/(t-2sigma^2)<=4sigma^2. Consequently every global maximizer lies in I=[m-B,m+B].\n\nFor every u in I and t>=T, Jensen similarly yields t-A<=w_t(u)<=t. Set epsilon=1/t, r_t(u)=w_t(u)/t, d=r_t(u)+epsilon(u-X)^2, and\n\n    C2=E[d^-2], J=E[(u-X)d^-2].\n\nThe positive implicit solution is smooth in u and r_t'(u)=-2epsilon J/C2. Its stationary points have J=0. Differentiating J along this solution gives\n\n    J'=C2-4epsilon E[(u-X)^2 d^-3]-2r_t'(u)E[(u-X)d^-3].\n\nUniformly on I, E[(u-X)^2]<=A, r_t>=1-epsilon A>=1/2, C2>=(1+epsilon A)^-2>=1-2epsilon A, and |J|<=4E|u-X|. For epsilon A<=1/2, |r_t'|<=18epsilon E|u-X|, so the magnitude of the final term is at most 288epsilon A; the middle term is at most 32epsilon A. Thus J'>=1-322epsilon A>0 for t>=1024A. At least one global maximizer exists inside I, is a positive interior stationary point of w_t, and therefore has J=0. Strict increase of J permits only one such point. This proves eventual uniqueness of the global density maximizer without a compact-support or unimodality assumption.\n\nAs t tends to infinity, r_t->1 uniformly on I. The functions J(u) tend uniformly to u-m: split the integral at a bounded |X-m|, use uniform convergence on the bounded part, and dominate the tail by a constant times |X-m|+B. Its unique zero u_t therefore tends to m. The same truncation argument gives E[(u_t-X)/d]->u_t-m, so psi_t(u_t)=u_t+E[(u_t-X)/d]->m.\n\nIf M3 is finite, |d^-2-1|<=16|d-1| and |d^-1-1|<=4|d-1| because d>=1/2. With E|u-X|<=B+sigma and E|u-X|^3<=4(B^3+M3), the equation J=0 yields |u_t-m|<=16epsilon K. The spatial map then yields |psi_t(u_t)-m|<=2(16epsilon K)+4epsilon K=36K/t. All constants and hypotheses are explicit.\n\nFor the second-order expansion, translate m to zero and work with F(epsilon,u,r)=E[1/(r+epsilon(u-X)^2)]-1 and J(epsilon,u,r)=E[(u-X)/(r+epsilon(u-X)^2)^2]. Finite seventh absolute moment makes these functions C^3 up to epsilon=0 from epsilon>=0, for u near zero and r near one. Every derivative of total order at most three is dominated by a constant times 1+|X|^7 when r>=1/2. To use the ordinary C^3 implicit-function theorem, extend to epsilon<0 using the degree-three Taylor polynomial in epsilon at zero, with its smooth u,r-dependent coefficients; this matches all partial derivatives through order three at zero. No reciprocal expectation at negative epsilon is used. The Jacobian with respect to (u,r) at (epsilon,u,r)=(0,0,1) is [[0,-1],[1,0]], hence invertible. The resulting C^3 branch has a Taylor expansion with O(epsilon^3) remainder and is the unique global-maximizer branch already identified above.\n\nWriting r=1+c1 epsilon+c2 epsilon^2+O(epsilon^3) and u=a1 epsilon+a2 epsilon^2+O(epsilon^3), direct expansion gives c1=-mu2, c2=mu4-mu2^2, a1=-2mu3, a2=3mu5-14mu2mu3. Inserting into psi=u+E[(u-X)/(r+epsilon(u-X)^2)] gives -3mu3 epsilon+(5mu5-22mu2mu3)epsilon^2+O(epsilon^3). Translation back yields the displayed formula.\n\nChecks requiring the auditor's attention: global existence of a maximum for an unbounded initial law; the Chebyshev interval; the uniform derivative constants; the sign of r_t'; positivity of w on the entire interval; the one-sided C^3 extension rather than an unjustified analytic continuation; variance normalization; and the distinction between a unique global maximizer and the number of local density peaks.\n\nNumerical evidence: special_case_measurements.jsonl contains five compact-law comparisons with the classical expansion; mode_boundary_measurements.json contains twelve point-mass, symmetry, three-atom and zero-third-moment controls. unbounded_mode_measurements.json tests the geometric law with an explicit truncation and seventh-moment tail bound. These computations check coefficients and physical equations; the written argument supplies the noncompact global-maximizer step.",
++      "assumptions": [
++        "Finite variance",
++        "Semicircle variance is t",
++        "Mode means the global maximizer of the continuous density",
++        "Finite third absolute central moment only for the stated explicit rate"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:finite-variance-free-brownian-unique-global-mode",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Let X have a probability law on R with mean m and finite variance sigma^2, and let mu_t"
++      }
++    },
++    {
++      "key": "finite-seventh-moment-free-brownian-global-mode-expansion",
++      "namespace": "probability.free_brownian",
++      "logical_name": "finite-seventh-moment-free-brownian-global-mode-expansion",
++      "kind": "lemma",
++      "title": "Second-order global free Brownian mode expansion under a finite seventh moment",
++      "statement": "Let X have a probability law on R with E|X|^7<infinity, mean m, and central moments mu_k=E[(X-m)^k]. Normalize free Brownian motion as convolution with a semicircle law of variance t. Its unique sufficiently-large-time global density maximizer obeys m-3mu_3/t+(5mu_5-22mu_2mu_3)/t^2+O_mu(t^-3). With epsilon=1/t, the equations E[1/(r+epsilon(u-X)^2)]=1 and E[(u-X)/(r+epsilon(u-X)^2)^2]=0 have a C^3 branch at the limiting point (epsilon,u,r)=(0,m,1); finite seventh moment justifies one-sided derivatives and a C^3 extension in epsilon, and the global-mode lemma identifies the branch. An exponential quadratic moment implies this hypothesis. The remainder is law dependent and no originality certificate is asserted.",
++      "proof_text": "The earlier campaign already derived the classical expansion under an exponential quadratic moment. The following worker proof addresses the free global mode and retains no claim of priority or full-problem acceptance.\n\nLabel: proof (worker checked), independent audit pending w346. No novelty or full-problem solution certificate. The mode here means the global maximizer of the canonical continuous density.\n\nLet X have mean m and finite variance sigma^2, and let mu_t be its law freely convolved with a semicircle law of variance t. If sigma=0, mu_t is a semicircle centered at m and the assertions below hold directly. Assume sigma>0. Put\n\n    B=(sqrt(2)+2)sigma,\n    A=B^2+sigma^2=(7+4sqrt(2))sigma^2,\n    T=1024 A.\n\nFor every t>=T, mu_t has a unique global mode. That mode tends to m as t tends to infinity. If E|X-m|^3<infinity, putting M3=E|X-m|^3 and K=A(B+sigma)+4(B^3+M3), its location M(t) satisfies the explicit estimate |M(t)-m|<=36 K/t for t>=T. If E|X-m|^7<infinity, then\n\n    M(t)=m-3mu_3/t+(5mu_5-22mu_2mu_3)/t^2+O_mu(t^-3),\n\nwhere mu_k=E[(X-m)^k]. The threshold is a proved sufficient bound, with no optimal transition location claimed. An exponential quadratic moment, as in the original classical question, implies the required seventh moment.\n\nUse the general Biane parametrization from Hasebe-Ueda, ALEA 15 (2018), equations (2.10), (2.13), (2.14). With w_t(u)=v_t(u)^2>0, it reads E[1/((u-X)^2+w_t(u))]=1/t, the density at psi_t(u) is sqrt(w_t(u))/(pi t), and psi_t is a homeomorphism. Hence global density maxima correspond exactly to global maxima of w_t. The function v_t is continuous and tends to zero at both infinities: for any a>0, E[1/((u-X)^2+a)] tends to zero as |u| tends to infinity by dominated convergence, forcing w_t(u)<a eventually. Thus a positive global maximum is attained.\n\nJensen's inequality gives w_t(m)>=t-sigma^2 when t>sigma^2. Indeed, at w=t-sigma^2 the reciprocal expectation is at least 1/t, and the expectation is strictly decreasing in positive w. Every positive solution also has w_t(u)<=t. Let u_* be any global maximizer and w_*=w_t(u_*). Then w_*>=t-sigma^2 and\n\n    E[(u_*-X)^2/(w_*+(u_*-X)^2)]=1-w_*/t<=sigma^2/t.\n\nChebyshev gives P(|X-m|<=sqrt(2)sigma)>=1/2. If r=|u_*-m|-sqrt(2)sigma>0, the last expectation is at least (1/2)r^2/(t+r^2). For t>=4sigma^2 this implies r^2<=2sigma^2 t/(t-2sigma^2)<=4sigma^2. Consequently every global maximizer lies in I=[m-B,m+B].\n\nFor every u in I and t>=T, Jensen similarly yields t-A<=w_t(u)<=t. Set epsilon=1/t, r_t(u)=w_t(u)/t, d=r_t(u)+epsilon(u-X)^2, and\n\n    C2=E[d^-2], J=E[(u-X)d^-2].\n\nThe positive implicit solution is smooth in u and r_t'(u)=-2epsilon J/C2. Its stationary points have J=0. Differentiating J along this solution gives\n\n    J'=C2-4epsilon E[(u-X)^2 d^-3]-2r_t'(u)E[(u-X)d^-3].\n\nUniformly on I, E[(u-X)^2]<=A, r_t>=1-epsilon A>=1/2, C2>=(1+epsilon A)^-2>=1-2epsilon A, and |J|<=4E|u-X|. For epsilon A<=1/2, |r_t'|<=18epsilon E|u-X|, so the magnitude of the final term is at most 288epsilon A; the middle term is at most 32epsilon A. Thus J'>=1-322epsilon A>0 for t>=1024A. At least one global maximizer exists inside I, is a positive interior stationary point of w_t, and therefore has J=0. Strict increase of J permits only one such point. This proves eventual uniqueness of the global density maximizer without a compact-support or unimodality assumption.\n\nAs t tends to infinity, r_t->1 uniformly on I. The functions J(u) tend uniformly to u-m: split the integral at a bounded |X-m|, use uniform convergence on the bounded part, and dominate the tail by a constant times |X-m|+B. Its unique zero u_t therefore tends to m. The same truncation argument gives E[(u_t-X)/d]->u_t-m, so psi_t(u_t)=u_t+E[(u_t-X)/d]->m.\n\nIf M3 is finite, |d^-2-1|<=16|d-1| and |d^-1-1|<=4|d-1| because d>=1/2. With E|u-X|<=B+sigma and E|u-X|^3<=4(B^3+M3), the equation J=0 yields |u_t-m|<=16epsilon K. The spatial map then yields |psi_t(u_t)-m|<=2(16epsilon K)+4epsilon K=36K/t. All constants and hypotheses are explicit.\n\nFor the second-order expansion, translate m to zero and work with F(epsilon,u,r)=E[1/(r+epsilon(u-X)^2)]-1 and J(epsilon,u,r)=E[(u-X)/(r+epsilon(u-X)^2)^2]. Finite seventh absolute moment makes these functions C^3 up to epsilon=0 from epsilon>=0, for u near zero and r near one. Every derivative of total order at most three is dominated by a constant times 1+|X|^7 when r>=1/2. To use the ordinary C^3 implicit-function theorem, extend to epsilon<0 using the degree-three Taylor polynomial in epsilon at zero, with its smooth u,r-dependent coefficients; this matches all partial derivatives through order three at zero. No reciprocal expectation at negative epsilon is used. The Jacobian with respect to (u,r) at (epsilon,u,r)=(0,0,1) is [[0,-1],[1,0]], hence invertible. The resulting C^3 branch has a Taylor expansion with O(epsilon^3) remainder and is the unique global-maximizer branch already identified above.\n\nWriting r=1+c1 epsilon+c2 epsilon^2+O(epsilon^3) and u=a1 epsilon+a2 epsilon^2+O(epsilon^3), direct expansion gives c1=-mu2, c2=mu4-mu2^2, a1=-2mu3, a2=3mu5-14mu2mu3. Inserting into psi=u+E[(u-X)/(r+epsilon(u-X)^2)] gives -3mu3 epsilon+(5mu5-22mu2mu3)epsilon^2+O(epsilon^3). Translation back yields the displayed formula.\n\nChecks requiring the auditor's attention: global existence of a maximum for an unbounded initial law; the Chebyshev interval; the uniform derivative constants; the sign of r_t'; positivity of w on the entire interval; the one-sided C^3 extension rather than an unjustified analytic continuation; variance normalization; and the distinction between a unique global maximizer and the number of local density peaks.\n\nNumerical evidence: special_case_measurements.jsonl contains five compact-law comparisons with the classical expansion; mode_boundary_measurements.json contains twelve point-mass, symmetry, three-atom and zero-third-moment controls. unbounded_mode_measurements.json tests the geometric law with an explicit truncation and seventh-moment tail bound. These computations check coefficients and physical equations; the written argument supplies the noncompact global-maximizer step.",
++      "assumptions": [
++        "Finite seventh absolute moment",
++        "Semicircle variance is t",
++        "Global density maximizer",
++        "Law-dependent asymptotic remainder"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:finite-seventh-moment-free-brownian-global-mode-expansion",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Let X have a probability law on R with E|X|^7<infinity, mean m, and central moments mu_k=E[(X-m)^k]. Normalize free"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "finite-variance-free-brownian-unique-global-mode",
++      "to_existing_logical": "math:probability.core:open-problem-p0177-location-of-brownian-modes-at-large-time",
++      "kind": "cites",
++      "rationale": "New end: \"Let X have a probability law on R with mean m and finite variance sigma^2, and let mu_t\"; existing end: \"Estimate the mode of classical Brownian motion started from a law with a finite exponential quadratic moment, and\". This result addresses or audits P0177; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "finite-seventh-moment-free-brownian-global-mode-expansion",
++      "to_existing_logical": "math:probability.core:open-problem-p0177-location-of-brownian-modes-at-large-time",
++      "kind": "cites",
++      "rationale": "New end: \"Let X have a probability law on R with E|X|^7<infinity, mean m, and central moments mu_k=E[(X-m)^k]. Normalize free\"; existing end: \"Estimate the mode of classical Brownian motion started from a law with a finite exponential quadratic moment, and\". This result addresses or audits P0177; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "finite-seventh-moment-free-brownian-global-mode-expansion",
++      "to_key": "finite-variance-free-brownian-unique-global-mode",
++      "kind": "depends_on",
++      "rationale": "New end: \"Let X have a probability law on R with E|X|^7<infinity, mean m, and central moments mu_k=E[(X-m)^k]. Normalize free\"; goal end: \"Let X have a probability law on R with mean m and finite variance sigma^2, and let mu_t\". The finite-variance global-mode result identifies the stationary implicit-function branch with the unique global density maximizer."
++    }
++  ]
++}
+--- a/math-brain-inbox/w344/bundle_005.json
++++ b/math-brain-inbox/w344/bundle_005.json
+@@ -0,0 +1,63 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w344",
++  "bundle_slug": "w344-open-problem-c0004-checked-partials-20261010",
++  "entries": [
++    {
++      "key": "dgff-maximum-joint-density-source-scope",
++      "namespace": "probability.gaussian_fields",
++      "logical_name": "dgff-maximum-joint-density-source-scope",
++      "kind": "concept",
++      "title": "DGFF Problem 16.4 concerns joint maximum position and height density",
++      "statement": "Source correction: Biskup arXiv:1712.09972v4, Theorem 12.19, equation (12.86), and Problem 16.4 concern the joint density rho^D(x,t) in maximizer position x and centered maximum height t. At fixed t its measure in position is A -> exp(-alpha t) E[Z^D(A)exp(-alpha^-1 exp(-alpha t)Z^D(D))]. Integrating over t gives the related marginal E[Z^D(A)/Z^D(D)] when the total mass is almost surely finite and positive. A marginal-only intake statement narrows the primary target; neither explicit joint nor marginal density is resolved by this correction.",
++      "proof_text": null,
++      "assumptions": [
++        "Positive finite total extremal mass for the marginal integration identity"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:dgff-maximum-joint-density-source-scope",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; source-backed scope correction; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Source correction: Biskup arXiv:1712.09972v4, Theorem 12.19, equation (12.86), and Problem 16.4 concern the joint density rho^D(x,t) in maximizer"
++      }
++    },
++    {
++      "key": "zero-covariance-normalized-random-measure-criterion",
++      "namespace": "probability.random_measures",
++      "logical_name": "zero-covariance-normalized-random-measure-criterion",
++      "kind": "lemma",
++      "title": "Zero covariance rather than independence characterizes normalized-average equality",
++      "statement": "Let Z be a random finite measure on D with total mass T>0 almost surely and 0<E[T]<infinity. Put U_A=Z(A)/T. Then E[Z(A)]/E[T]-E[U_A]=Cov(T,U_A)/E[T] for each measurable A. Consequently mean normalized measure equals normalized mean measure exactly when Cov(T,U_A)=0 for every A. Independence of total mass and normalized measure is sufficient but unnecessary: three equally likely outcomes T=(1,2,3), U_first=(1,0,1) on two sites give both averages (2/3,1/3), yet T and the normalized measure are dependent. No integrability or independence claim for DGFF extremal mass is inferred from this finite example.",
++      "proof_text": "Biskup, arXiv:1712.09972v4 (17 August 2019), Theorem 12.19, equation (12.86), and Problem 16.4, request the joint density rho^D(x,t) of the rescaled maximizer location and centered maximum height. The intake instead states a marginal location-density problem. The source's measure at height t is\n\n    A -> e^(-alpha t) E[Z^D(A) exp(-alpha^-1 e^(-alpha t) Z^D(D))].\n\nIts density in x, combined with dt, is the joint law. Integrating in t yields E[Z^D(A)/Z^D(D)], assuming 0<Z^D(D)<infinity almost surely. Indeed, conditional on Z, substitute s=alpha^-1 e^(-alpha t); the integral becomes Z(A) int_0^infinity exp(-s Z(D)) ds=Z(A)/Z(D). This explains the related marginal question without replacing the actual joint-density target. The cached paper supplies no explicit general answer; no current-status certificate is claimed.\n\nThe intake's C0004-A002 also falsely says equality of normalized averages requires independence. For a general random finite measure Z with T=Z(D)>0 and 0<E T<infinity, write U_A=Z(A)/T. Then\n\n    E[Z(A)]/E[T] - E[U_A] = Cov(T,U_A)/E[T].\n\nEquality for every measurable A is exactly zero covariance for every such U_A. Independence is sufficient but unnecessary. On two sites, take three equally likely outcomes with T=(1,2,3), U_{first}=(1,0,1), and Z=T(U_{first},1-U_{first}). Both averaging procedures give (2/3,1/3), but P(T=2,U_{first}=1)=0 whereas P(T=2)P(U_{first}=1)=2/9. This is an exact counterexample to the necessity direction in A002. It does not establish equality or inequality for the actual DGFF extremal measure; integrability must be checked before using normalized intensity.\n\nFraction arithmetic verifies the example. C0004Counterexample.lean formalizes only its denominator-cleared arithmetic. lean_check_receipt.json records SETUP_UNVERIFIED: Compute status is distressed or unknown. It is not Lean-checked, and no admission setting was changed.",
++      "assumptions": [
++        "Positive total mass",
++        "Finite positive mean total mass",
++        "0<=U_A<=1"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:zero-covariance-normalized-random-measure-criterion",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; Lean unavailable; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Let Z be a random finite measure on D with total mass T>0 almost surely and 0<E[T]<infinity. Put"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "dgff-maximum-joint-density-source-scope",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0004-explicit-density-of-the-position-of-the-dgff-maximum",
++      "kind": "cites",
++      "rationale": "New end: \"Source correction: Biskup arXiv:1712.09972v4, Theorem 12.19, equation (12.86), and Problem 16.4 concern the joint density rho^D(x,t) in maximizer\"; existing end: \"Determine explicitly, or characterise by a PDE with a unique solution, the density rho^D of the limit law\". This result addresses or audits C0004; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "zero-covariance-normalized-random-measure-criterion",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0004-explicit-density-of-the-position-of-the-dgff-maximum",
++      "kind": "analogous_to",
++      "rationale": "New end: \"Let Z be a random finite measure on D with total mass T>0 almost surely and 0<E[T]<infinity. Put\"; existing end: \"Determine explicitly, or characterise by a PDE with a unique solution, the density rho^D of the limit law\". This result addresses or audits C0004; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    }
++  ]
++}
+--- a/math-brain-inbox/w344/bundle_006.json
++++ b/math-brain-inbox/w344/bundle_006.json
+@@ -0,0 +1,87 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w344",
++  "bundle_slug": "w344-open-problem-c0063-checked-partials-20261010",
++  "entries": [
++    {
++      "key": "regular-tree-percolation-linear-critical-amplitude",
++      "namespace": "probability.percolation",
++      "logical_name": "regular-tree-percolation-linear-critical-amplitude",
++      "kind": "lemma",
++      "title": "Exact near-critical percolation amplitude on a regular tree",
++      "statement": "For independent bond percolation on the infinite d-regular tree with d>=3, p_c=1/(d-1), theta(p)=0 for p<=p_c, and theta(p)=[2d(d-1)/(d-2)](p-p_c)+O((p-p_c)^2) as p decreases to p_c from above. The positive descendant-survival solution u obeys 1-u=(1-pu)^(d-1); division by u and the implicit-function theorem give the expansion, and theta=1-(1-pu)^d. This is an exact tree analogue, not a high-dimensional lattice solution.",
++      "proof_text": "The cached Heydenreich-van der Hofstad source's Open Problem 9.1 asks for a positive limit of theta(p)/(p-p_c) for high-dimensional lattice percolation, beyond bounded ratios. The intake route writes beta=gamma-Delta while substituting gamma=1 and Delta=2; that displayed subtraction cannot produce beta=1. We do not accept the claimed equivalence or differentiation of a singular limit as proved.\n\nFor bond percolation on the infinite d-regular tree, d>=3, p_c=1/(d-1) and\n\n    theta(p) = [2d(d-1)/(d-2)] (p-p_c)+O((p-p_c)^2).\n\nLet k=d-1 and u be the probability that a vertex with its parent edge removed has an infinite descendant cluster. It solves 1-u=(1-pu)^k. For p>1/k it is the positive branching-process survival solution. Dividing by u and expanding gives kp-1=binom(k,2)p^2 u+O(u^2). The divided equation has nonzero u derivative at (u,p)=(0,1/k), so its positive branch is analytic. With epsilon=p-1/k, u=2k^2 epsilon/(k-1)+O(epsilon^2), and theta=1-(1-pu)^d gives the claimed coefficient. This is a tree analogue, not a proof on Z^d. Nine small numerical checks for d=3,4,8 approach the predicted slopes.\n\nBounded-ratio exponent information and monotonicity alone are insufficient: F(epsilon)=epsilon(2+sin(log epsilon)), epsilon>0 small, lies between epsilon and 3epsilon and is strictly increasing because F'=2+sin(log epsilon)+cos(log epsilon)>=2-sqrt(2)>0. Nevertheless F(epsilon)/epsilon has no limit, while log F/log epsilon ->1. A lattice-percolation proof therefore needs an additional mechanism ruling out oscillation; this example is not a percolation counterexample.",
++      "assumptions": [
++        "Independent bond percolation",
++        "Infinite d-regular tree",
++        "d>=3"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:regular-tree-percolation-linear-critical-amplitude",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "For independent bond percolation on the infinite d-regular tree with d>=3, p_c=1/(d-1), theta(p)=0 for p<=p_c, and theta(p)=[2d(d-1)/(d-2)](p-p_c)+O((p-p_c)^2) as"
++      }
++    },
++    {
++      "key": "monotone-bounded-ratio-exponent-without-amplitude-limit",
++      "namespace": "probability.critical_scaling",
++      "logical_name": "monotone-bounded-ratio-exponent-without-amplitude-limit",
++      "kind": "lemma",
++      "title": "Monotonicity and exponent one do not force a limiting amplitude",
++      "statement": "On 0<epsilon<1/4, F(epsilon)=epsilon(2+sin(log epsilon)) is strictly increasing, lies between epsilon and 3epsilon, and satisfies log F(epsilon)/log epsilon ->1 as epsilon tends to zero. Nevertheless F(epsilon)/epsilon has no limit. Thus monotonicity plus bounded-ratio beta=1 alone cannot establish asymptotic equivalence to c epsilon. This analytic counterexample is a refuted inference, not a percolation counterexample.",
++      "proof_text": "The cached Heydenreich-van der Hofstad source's Open Problem 9.1 asks for a positive limit of theta(p)/(p-p_c) for high-dimensional lattice percolation, beyond bounded ratios. The intake route writes beta=gamma-Delta while substituting gamma=1 and Delta=2; that displayed subtraction cannot produce beta=1. We do not accept the claimed equivalence or differentiation of a singular limit as proved.\n\nFor bond percolation on the infinite d-regular tree, d>=3, p_c=1/(d-1) and\n\n    theta(p) = [2d(d-1)/(d-2)] (p-p_c)+O((p-p_c)^2).\n\nLet k=d-1 and u be the probability that a vertex with its parent edge removed has an infinite descendant cluster. It solves 1-u=(1-pu)^k. For p>1/k it is the positive branching-process survival solution. Dividing by u and expanding gives kp-1=binom(k,2)p^2 u+O(u^2). The divided equation has nonzero u derivative at (u,p)=(0,1/k), so its positive branch is analytic. With epsilon=p-1/k, u=2k^2 epsilon/(k-1)+O(epsilon^2), and theta=1-(1-pu)^d gives the claimed coefficient. This is a tree analogue, not a proof on Z^d. Nine small numerical checks for d=3,4,8 approach the predicted slopes.\n\nBounded-ratio exponent information and monotonicity alone are insufficient: F(epsilon)=epsilon(2+sin(log epsilon)), epsilon>0 small, lies between epsilon and 3epsilon and is strictly increasing because F'=2+sin(log epsilon)+cos(log epsilon)>=2-sqrt(2)>0. Nevertheless F(epsilon)/epsilon has no limit, while log F/log epsilon ->1. A lattice-percolation proof therefore needs an additional mechanism ruling out oscillation; this example is not a percolation counterexample.",
++      "assumptions": [
++        "epsilon tends to zero through positive values"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:monotone-bounded-ratio-exponent-without-amplitude-limit",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "On 0<epsilon<1/4, F(epsilon)=epsilon(2+sin(log epsilon)) is strictly increasing, lies between epsilon and 3epsilon, and satisfies log F(epsilon)/log epsilon ->1"
++      }
++    },
++    {
++      "key": "archival-critical-exponent-subtraction-route-audit",
++      "namespace": "probability.critical_scaling",
++      "logical_name": "archival-critical-exponent-subtraction-route-audit",
++      "kind": "concept",
++      "title": "The archived beta equals gamma minus Delta route does not establish beta one",
++      "statement": "The C0063-A001 intake attempt displays beta=gamma-Delta with gamma=1 and Delta=2 and claims that this gives beta=1. The displayed arithmetic instead gives -1. This records a route failure in that attempt and does not assert a replacement scaling theorem or equivalence of unresolved amplitude statements. Singular-limit differentiation and a right derivative at criticality still require proof for the requested lattice model.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:archival-critical-exponent-subtraction-route-audit",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; source-backed route audit; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "The C0063-A001 intake attempt displays beta=gamma-Delta with gamma=1 and Delta=2 and claims that this gives beta=1. The displayed"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "regular-tree-percolation-linear-critical-amplitude",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0063-critical-exponent-beta-1-in-the-asymptotic-sense-for-high-dimensional",
++      "kind": "analogous_to",
++      "rationale": "New end: \"For independent bond percolation on the infinite d-regular tree with d>=3, p_c=1/(d-1), theta(p)=0 for p<=p_c, and theta(p)=[2d(d-1)/(d-2)](p-p_c)+O((p-p_c)^2) as\"; existing end: \"Prove that theta(p) ~ c (p - p_c) as p decreases to p_c for percolation on Z^d in\". This result addresses or audits C0063; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "monotone-bounded-ratio-exponent-without-amplitude-limit",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0063-critical-exponent-beta-1-in-the-asymptotic-sense-for-high-dimensional",
++      "kind": "analogous_to",
++      "rationale": "New end: \"On 0<epsilon<1/4, F(epsilon)=epsilon(2+sin(log epsilon)) is strictly increasing, lies between epsilon and 3epsilon, and satisfies log F(epsilon)/log epsilon ->1\"; existing end: \"Prove that theta(p) ~ c (p - p_c) as p decreases to p_c for percolation on Z^d in\". This result addresses or audits C0063; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "archival-critical-exponent-subtraction-route-audit",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0063-critical-exponent-beta-1-in-the-asymptotic-sense-for-high-dimensional",
++      "kind": "cites",
++      "rationale": "New end: \"The C0063-A001 intake attempt displays beta=gamma-Delta with gamma=1 and Delta=2 and claims that this gives beta=1. The displayed\"; existing end: \"Prove that theta(p) ~ c (p - p_c) as p decreases to p_c for percolation on Z^d in\". This result addresses or audits C0063; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    }
++  ]
++}
+--- a/math-brain-inbox/w344/bundle_007.json
++++ b/math-brain-inbox/w344/bundle_007.json
+@@ -0,0 +1,64 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w344",
++  "bundle_slug": "w344-open-problem-c0087-checked-partials-20261010",
++  "entries": [
++    {
++      "key": "kruskal-sublevel-intrinsic-diameter-lower-transfer",
++      "namespace": "probability.minimum_spanning_trees",
++      "logical_name": "kruskal-sublevel-intrinsic-diameter-lower-transfer",
++      "kind": "lemma",
++      "title": "Sublevel component intrinsic diameter is a lower bound for MST diameter",
++      "statement": "Let G be a finite connected graph with distinct edge weights, T its minimum spanning tree, and G_p its subgraph of edges of weight at most p. For each component C of G_p, the restriction T to C is a spanning tree and the T path between vertices of C stays in C. Therefore max_C diam_intrinsic(C)<=diam(T). A probabilistic lower bound on sublevel intrinsic component diameter transfers directly to the MST; this gives no MST upper bound or high-dimensional cluster estimate by itself.",
++      "proof_text": "Open Problem 16.3 in the same cached source asks for MST diameter of order V^(1/3) on high-dimensional tori and the hypercube. The prior proposed reduction lacked complete geometric hypotheses. We prove only its deterministic lower-bound step.\n\nLet G be a finite connected graph with distinct edge weights, T its MST, and G_p the graph of edges with weight <=p. Kruskal's algorithm has, by level p, selected a spanning tree inside every component C of G_p. These selected edges remain in T. Hence the unique T path between any u,v in C lies inside C, and its length is at least their shortest-path distance in C. Consequently max_C diam_intrinsic(C)<=diam(T). Any probabilistic lower bound for the left side transfers directly to the MST diameter without a universality assumption.\n\nThe reverse inequality fails: on K_n give the edges of a Hamilton path the n-1 smallest weights and every other edge larger distinct weights. Kruskal selects exactly that path, so diam(T)=n-1. At a threshold including every edge, G_p=K_n has intrinsic diameter 1. Thus intrinsic cluster-diameter control at one level gives no MST upper bound. This does not refute high-dimensional scaling. The script checks all 38 connected labeled four-vertex graphs at every selected threshold and exact K_4,K_8,K_16 path examples. Full torus/hypercube bounds remain unresolved in this packet.",
++      "assumptions": [
++        "Finite connected graph",
++        "Distinct edge weights",
++        "Graph distance counts edges"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:kruskal-sublevel-intrinsic-diameter-lower-transfer",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Let G be a finite connected graph with distinct edge weights, T its minimum spanning tree, and G_p"
++      }
++    },
++    {
++      "key": "complete-graph-path-mst-reverses-no-diameter-upper-bound",
++      "namespace": "probability.minimum_spanning_trees",
++      "logical_name": "complete-graph-path-mst-reverses-no-diameter-upper-bound",
++      "kind": "lemma",
++      "title": "Small sublevel graph diameter need not bound MST diameter",
++      "statement": "For each n>=3 there is a distinct-weight assignment on K_n such that the MST is a Hamilton path of diameter n-1, while a sublevel including all edges has intrinsic diameter 1. Assign the n-1 path edges the smallest weights and every other edge larger weights. Hence a cluster intrinsic-diameter bound at one threshold does not imply the reverse MST-diameter inequality. This refutes that generic upper-bound route, not torus or hypercube scaling.",
++      "proof_text": "Open Problem 16.3 in the same cached source asks for MST diameter of order V^(1/3) on high-dimensional tori and the hypercube. The prior proposed reduction lacked complete geometric hypotheses. We prove only its deterministic lower-bound step.\n\nLet G be a finite connected graph with distinct edge weights, T its MST, and G_p the graph of edges with weight <=p. Kruskal's algorithm has, by level p, selected a spanning tree inside every component C of G_p. These selected edges remain in T. Hence the unique T path between any u,v in C lies inside C, and its length is at least their shortest-path distance in C. Consequently max_C diam_intrinsic(C)<=diam(T). Any probabilistic lower bound for the left side transfers directly to the MST diameter without a universality assumption.\n\nThe reverse inequality fails: on K_n give the edges of a Hamilton path the n-1 smallest weights and every other edge larger distinct weights. Kruskal selects exactly that path, so diam(T)=n-1. At a threshold including every edge, G_p=K_n has intrinsic diameter 1. Thus intrinsic cluster-diameter control at one level gives no MST upper bound. This does not refute high-dimensional scaling. The script checks all 38 connected labeled four-vertex graphs at every selected threshold and exact K_4,K_8,K_16 path examples. Full torus/hypercube bounds remain unresolved in this packet.",
++      "assumptions": [
++        "Complete graph K_n",
++        "Distinct weights with path edges first"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:complete-graph-path-mst-reverses-no-diameter-upper-bound",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "For each n>=3 there is a distinct-weight assignment on K_n such that the MST is a Hamilton path"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "kruskal-sublevel-intrinsic-diameter-lower-transfer",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0087-diameter-of-the-minimal-spanning-tree-on-high-dimensional-tori-and-the",
++      "kind": "cites",
++      "rationale": "New end: \"Let G be a finite connected graph with distinct edge weights, T its minimum spanning tree, and G_p\"; existing end: \"Show that the diameter of the minimal spanning tree (with i.i.d. uniform edge weights) on the torus T_{n,d},\". This result addresses or audits C0087; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "complete-graph-path-mst-reverses-no-diameter-upper-bound",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0087-diameter-of-the-minimal-spanning-tree-on-high-dimensional-tori-and-the",
++      "kind": "cites",
++      "rationale": "New end: \"For each n>=3 there is a distinct-weight assignment on K_n such that the MST is a Hamilton path\"; existing end: \"Show that the diameter of the minimal spanning tree (with i.i.d. uniform edge weights) on the torus T_{n,d},\". This result addresses or audits C0087; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    }
++  ]
++}
+--- a/math-brain-inbox/w344/bundle_008.json
++++ b/math-brain-inbox/w344/bundle_008.json
+@@ -0,0 +1,104 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w344",
++  "bundle_slug": "w344-open-problem-c0139-checked-partials-20261010",
++  "entries": [
++    {
++      "key": "isoperimetric-dimension-greater-than-one-percolation-goal",
++      "namespace": "probability.percolation",
++      "logical_name": "isoperimetric-dimension-greater-than-one-percolation-goal",
++      "kind": "concept",
++      "title": "C0139: nontrivial percolation threshold under isoperimetric dimension greater than one",
++      "statement": "Historical open-problem target, current status unverified: for an infinite connected bounded-degree graph G satisfying |boundary_E S|>=c|S|^((d-1)/d) for every finite nonempty S, for some c>0 and d>1, must independent bond percolation have p_c(G)<1? The local intake attributes this to the Benjamini-Schramm conjecture in Pete lecture notes, Conjecture 12.7. Positive-Cheeger expansion is a stronger sufficient hypothesis; it does not cover the entire finite-dimensional isoperimetric condition. This goal card fills an exact C0139 anchor absent from the read-only population snapshot and supplies no claimed resolution.",
++      "proof_text": null,
++      "assumptions": [
++        "Infinite connected bounded-degree graph",
++        "Uniform isoperimetric constant and dimension d>1"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:isoperimetric-dimension-greater-than-one-percolation-goal",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; archival problem context; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Historical open-problem target, current status unverified: for an infinite connected bounded-degree graph G satisfying |boundary_E S|>=c|S|^((d-1)/d) for every"
++      }
++    },
++    {
++      "key": "positive-edge-cheeger-explicit-bond-percolation-threshold-bound",
++      "namespace": "probability.percolation",
++      "logical_name": "positive-edge-cheeger-explicit-bond-percolation-threshold-bound",
++      "kind": "lemma",
++      "title": "Positive edge-Cheeger constant gives an explicit nontrivial bond threshold",
++      "statement": "Let G be an infinite connected graph of maximum degree D<infinity and edge-Cheeger constant h=inf_(finite nonempty S)|boundary_E S|/|S|>0. For independent bond percolation, 1/(D-1)<=p_c<=1/(1+h)<1. A simple-path first moment proves the lower bound. During cluster exploration after s discoveries and f failures, at least h(s+1)-f boundary edges remain untested. For p>1/(1+h), the comparison walk h+hs-f has positive drift and positive probability to remain positive forever, forcing an infinite cluster. This proves a positive-Cheeger special case; the drift argument does not decide critical equality or the full finite-dimensional isoperimetric conjecture.",
++      "proof_text": "The cached Pete problem asks whether bounded-degree isoperimetric dimension >1 ensures p_c<1. The intake credits the dimension >4/Cayley results and leaves the non-Cayley intermediate regime unresolved. We give a self-contained stronger-hypothesis special case, not a new general resolution.\n\nFor an infinite connected graph of maximum degree D<infinity with edge-Cheeger constant h=inf_(finite nonempty S) |boundary_E S|/|S|>0, independent bond percolation satisfies\n\n    1/(D-1) <= p_c <= 1/(1+h) < 1.\n\nThe lower bound is the union bound over at most D(D-1)^(r-1) simple paths of length r from a fixed vertex, for p(D-1)<1. To prove the upper bound, explore a cluster by testing only unrevealed edges from discovered vertices to undiscovered vertices. After s successful discoveries and f failures, the discovered set has s+1 vertices, and at least h(s+1)-f boundary edges remain untested. Thus the exploration cannot finish while Z=h+hs-f>0. The tests are an independent Bernoulli(p) sequence: each success adds h to Z and each failure subtracts 1. If p>1/(1+h), its drift is positive. For sufficiently small lambda>0, p exp(-lambda h)+(1-p) exp(lambda)<1. Then exp(-lambda Z), stopped at the first Z<=0, is a nonnegative supermartingale, and the probability ever reaching Z<=0 is at most exp(-lambda h)<1. With positive probability exploration never terminates, proving the upper bound. Critical equality itself is not decided by this drift argument. For the d-regular tree h=d-2, the upper bound matches its exact critical probability.\n\nIP_(1+epsilon) does not supply a positive uniform h: the square lattice has a two-dimensional isoperimetric inequality but its square boxes have boundary/volume tending to zero. This explains the remaining gap rather than incorrectly applying the proved bound to the whole question.",
++      "assumptions": [
++        "Independent bond percolation",
++        "Infinite connected graph",
++        "Finite maximum degree",
++        "Uniform positive edge-Cheeger constant"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:positive-edge-cheeger-explicit-bond-percolation-threshold-bound",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Let G be an infinite connected graph of maximum degree D<infinity and edge-Cheeger constant h=inf_(finite nonempty S)|boundary_E S|/|S|>0."
++      }
++    },
++    {
++      "key": "square-lattice-finite-isoperimetry-with-zero-cheeger",
++      "namespace": "probability.percolation",
++      "logical_name": "square-lattice-finite-isoperimetry-with-zero-cheeger",
++      "kind": "lemma",
++      "title": "Finite isoperimetric dimension does not imply a positive Cheeger constant",
++      "statement": "Every finite nonempty S in the square lattice Z^2 has |boundary_E S|>=4sqrt(|S|), while the edge-Cheeger constant of Z^2 is zero. Indeed, if S occupies a columns and b rows then its edge boundary is at least 2a+2b>=4sqrt(ab)>=4sqrt(|S|); square boxes of side r have boundary/volume=4/r. Thus an IP_2 inequality cannot be substituted for the uniform positive-Cheeger hypothesis in the explicit threshold proof. This does not refute the conjecture that finite isoperimetric dimension greater than one ensures p_c<1.",
++      "proof_text": "The cached Pete problem asks whether bounded-degree isoperimetric dimension >1 ensures p_c<1. The intake credits the dimension >4/Cayley results and leaves the non-Cayley intermediate regime unresolved. We give a self-contained stronger-hypothesis special case, not a new general resolution.\n\nFor an infinite connected graph of maximum degree D<infinity with edge-Cheeger constant h=inf_(finite nonempty S) |boundary_E S|/|S|>0, independent bond percolation satisfies\n\n    1/(D-1) <= p_c <= 1/(1+h) < 1.\n\nThe lower bound is the union bound over at most D(D-1)^(r-1) simple paths of length r from a fixed vertex, for p(D-1)<1. To prove the upper bound, explore a cluster by testing only unrevealed edges from discovered vertices to undiscovered vertices. After s successful discoveries and f failures, the discovered set has s+1 vertices, and at least h(s+1)-f boundary edges remain untested. Thus the exploration cannot finish while Z=h+hs-f>0. The tests are an independent Bernoulli(p) sequence: each success adds h to Z and each failure subtracts 1. If p>1/(1+h), its drift is positive. For sufficiently small lambda>0, p exp(-lambda h)+(1-p) exp(lambda)<1. Then exp(-lambda Z), stopped at the first Z<=0, is a nonnegative supermartingale, and the probability ever reaching Z<=0 is at most exp(-lambda h)<1. With positive probability exploration never terminates, proving the upper bound. Critical equality itself is not decided by this drift argument. For the d-regular tree h=d-2, the upper bound matches its exact critical probability.\n\nIP_(1+epsilon) does not supply a positive uniform h: the square lattice has a two-dimensional isoperimetric inequality but its square boxes have boundary/volume tending to zero. This explains the remaining gap rather than incorrectly applying the proved bound to the whole question.",
++      "assumptions": [
++        "Unweighted square lattice",
++        "Finite nonempty vertex sets"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:square-lattice-finite-isoperimetry-with-zero-cheeger",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Every finite nonempty S in the square lattice Z^2 has |boundary_E S|>=4sqrt(|S|), while the edge-Cheeger constant of Z^2"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "isoperimetric-dimension-greater-than-one-percolation-goal",
++      "to_existing_logical": "math:harvest.wikipedia:wiki-cheeger-constant-graph-theory",
++      "kind": "cites",
++      "rationale": "New end: \"Historical open-problem target, current status unverified: for an infinite connected bounded-degree graph G satisfying |boundary_E S|>=c|S|^((d-1)/d) for every\"; existing end: \"In mathematics, the Cheeger constant of a graph is a numerical measure of whether or not a graph\". This result addresses or audits C0139; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "positive-edge-cheeger-explicit-bond-percolation-threshold-bound",
++      "to_existing_logical": "math:harvest.wikipedia:wiki-cheeger-constant-graph-theory",
++      "kind": "cites",
++      "rationale": "New end: \"Let G be an infinite connected graph of maximum degree D<infinity and edge-Cheeger constant h=inf_(finite nonempty S)|boundary_E S|/|S|>0.\"; existing end: \"In mathematics, the Cheeger constant of a graph is a numerical measure of whether or not a graph\". This result addresses or audits C0139; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "square-lattice-finite-isoperimetry-with-zero-cheeger",
++      "to_existing_logical": "math:harvest.wikipedia:wiki-cheeger-constant-graph-theory",
++      "kind": "cites",
++      "rationale": "New end: \"Every finite nonempty S in the square lattice Z^2 has |boundary_E S|>=4sqrt(|S|), while the edge-Cheeger constant of Z^2\"; existing end: \"In mathematics, the Cheeger constant of a graph is a numerical measure of whether or not a graph\". This result addresses or audits C0139; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "positive-edge-cheeger-explicit-bond-percolation-threshold-bound",
++      "to_key": "isoperimetric-dimension-greater-than-one-percolation-goal",
++      "kind": "cites",
++      "rationale": "New end: \"Let G be an infinite connected graph of maximum degree D<infinity and edge-Cheeger constant h=inf_(finite nonempty S)|boundary_E S|/|S|>0.\"; goal end: \"Historical open-problem target, current status unverified: for an infinite connected bounded-degree graph G satisfying |boundary_E S|>=c|S|^((d-1)/d) for every\". The positive-Cheeger result and the zero-Cheeger IP_2 example identify the proved special case and its remaining hypothesis gap."
++    },
++    {
++      "from_key": "square-lattice-finite-isoperimetry-with-zero-cheeger",
++      "to_key": "isoperimetric-dimension-greater-than-one-percolation-goal",
++      "kind": "cites",
++      "rationale": "New end: \"Every finite nonempty S in the square lattice Z^2 has |boundary_E S|>=4sqrt(|S|), while the edge-Cheeger constant of Z^2\"; goal end: \"Historical open-problem target, current status unverified: for an infinite connected bounded-degree graph G satisfying |boundary_E S|>=c|S|^((d-1)/d) for every\". The positive-Cheeger result and the zero-Cheeger IP_2 example identify the proved special case and its remaining hypothesis gap."
++    }
++  ]
++}
+--- a/math-brain-inbox/w344/bundle_009.json
++++ b/math-brain-inbox/w344/bundle_009.json
+@@ -0,0 +1,62 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w344",
++  "bundle_slug": "w344-open-problem-p0018-checked-partials-20261010",
++  "entries": [
++    {
++      "key": "single-edge-partition-graph-matrix-sharp-norm",
++      "namespace": "probability.graph_matrices",
++      "logical_name": "single-edge-partition-graph-matrix-sharp-norm",
++      "kind": "lemma",
++      "title": "Sharp expected norm for the valid single-edge graph-matrix shape",
++      "statement": "Under the partition convention of Randomstrasse101 Definition 14.2, the shape with one edge uv, U={u} and V={v}, gives a symmetric n by n Rademacher matrix A with zero diagonal. Its expected operator norm is Theta(sqrt(n)), so this shape has exponents f=1/2 and g=0. Deterministically ||A||>=sqrt(n-1) by its Frobenius norm. For each unit real x, P(|x^T A x|>=r)<=2exp(-r^2/4); a 1/4 sphere net of size at most 9^n and integration give the O(sqrt(n)) expectation bound. This does not resolve the existence conjecture for every fixed shape.",
++      "proof_text": "Randomstrasse101, arXiv:2603.29571, Definition 14.2 and Conjecture 31, PDF p.14, define the cited restricted graph matrices using a partition into left and right vertex sets. Overlapping index vertices and unindexed internal vertices are not supplied by that displayed definition. The diagonal signed-degree experiment in special_case_measurements.jsonl therefore belongs to a broader convention and is explicitly excluded as a special case of this literal problem. Its finite calculations are retained only as a scope warning.\n\nA valid shape has two distinct vertices u,v, one edge uv, U={u} and V={v}. Injective labeling gives an n by n symmetric Rademacher matrix A with zero diagonal. It satisfies E||A||=Theta(sqrt(n)), so f=1/2 and g=0 for this shape. The lower bound is deterministic: ||A||>=||A||_F/sqrt(n)=sqrt(n-1). For a fixed unit real x, x^T A x=sum_(i<j)2x_i x_j epsilon_ij. Its moment-generating function is at most exp(s^2), since cosh z<=exp(z^2/2) and sum_(i<j)x_i^2 x_j^2<=1/2. Hence P(|x^T A x|>=r)<=2 exp(-r^2/4). A 1/4 net of the unit sphere has at most 9^n points and ||A||<=2 max_net |x^T A x|; a union bound and integration of this tail give E||A||<=C sqrt(n). This proves the shape exponents, without resolving the all-shapes existence conjecture.\n\nvalid_shape_measurements.json uses 12 samples each at n=64,128,256 and verifies the shape's n(n-1) nonzero entries. The mean norm divided by sqrt(n) is 1.926,1.955,1.974. At n=256 the old Frobenius upper bound is 255.500 and the mean norm is 31.5894, a factor 8.088 numerical gap. The experiment illustrates the bound's loss; the proved improvement is the order n to order sqrt(n) for this one shape.",
++      "assumptions": [
++        "Independent Rademacher variables for unordered distinct pairs",
++        "Single-edge shape",
++        "Injective labels",
++        "Disjoint left/right partition"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:single-edge-partition-graph-matrix-sharp-norm",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Under the partition convention of Randomstrasse101 Definition 14.2, the shape with one edge uv, U={u} and V={v}, gives"
++      }
++    },
++    {
++      "key": "graph-matrix-partition-convention-excludes-diagonal-internal-vertex-example",
++      "namespace": "probability.graph_matrices",
++      "logical_name": "graph-matrix-partition-convention-excludes-diagonal-internal-vertex-example",
++      "kind": "concept",
++      "title": "Exclude an overlapping diagonal example from the cited graph-matrix convention",
++      "statement": "Definition 14.2 in the cached Randomstrasse101 paper partitions all shape vertices into left and right sets. The diagonal signed-degree construction using the same vertex on both sides and an unindexed leaf requires a broader graph-matrix convention. Its finite norm experiment therefore supplies no special-case answer under this literal definition. The valid one-edge example uses distinct left and right vertices. Exact indexing conventions must be fixed before assigning shape exponents.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:graph-matrix-partition-convention-excludes-diagonal-internal-vertex-example",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; source-backed scope correction; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "Definition 14.2 in the cached Randomstrasse101 paper partitions all shape vertices into left and right sets. The diagonal"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "single-edge-partition-graph-matrix-sharp-norm",
++      "to_existing_logical": "math:probability.core:open-problem-p0018-sharp-polynomial-logarithmic-expected-norm-of-graph-matrices",
++      "kind": "specializes",
++      "rationale": "New end: \"Under the partition convention of Randomstrasse101 Definition 14.2, the shape with one edge uv, U={u} and V={v}, gives\"; existing end: \"For each fixed graph shape alpha with specified left and right index sets, form M_alpha by summing injective\". This result addresses or audits P0018; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "graph-matrix-partition-convention-excludes-diagonal-internal-vertex-example",
++      "to_existing_logical": "math:probability.core:open-problem-p0018-sharp-polynomial-logarithmic-expected-norm-of-graph-matrices",
++      "kind": "cites",
++      "rationale": "New end: \"Definition 14.2 in the cached Randomstrasse101 paper partitions all shape vertices into left and right sets. The diagonal\"; existing end: \"For each fixed graph shape alpha with specified left and right index sets, form M_alpha by summing injective\". This result addresses or audits P0018; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    }
++  ]
++}
+--- a/math-brain-inbox/w344/bundle_010.json
++++ b/math-brain-inbox/w344/bundle_010.json
+@@ -0,0 +1,65 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w344",
++  "bundle_slug": "w344-open-problem-p0047-checked-partials-20261010",
++  "entries": [
++    {
++      "key": "tail-trivial-forest-infinite-component-count-dichotomy",
++      "namespace": "probability.uniform_spanning_forests",
++      "logical_name": "tail-trivial-forest-infinite-component-count-dichotomy",
++      "kind": "lemma",
++      "title": "The finite-versus-infinite component dichotomy is a tail event",
++      "statement": "For any random spanning forest on a countable graph with trivial edge-tail sigma-field, the event that it has infinitely many components has probability zero or one. Finitely many edge changes alter a finite component count by at most finitely much and cannot change finiteness. For every finite edge set K, the infinite-count event can therefore be computed after making all edges in K absent, so it is measurable outside K. In particular FUSF on an infinite connected locally finite network has either infinitely many components almost surely or finitely many almost surely. In the finite case the argument does not make the component count constant.",
++      "proof_text": "Lyons-Peres, Probability on Trees and Networks, electronic edition 19 August 2026, Theorem 10.18 and Question 10.28, prove tail triviality but leave determinism of the FUSF component count on arbitrary networks open. The earlier attempt correctly warns that finite component counts can change under one edge modification.\n\nFor any spanning subgraph on a countable graph, adding or removing one edge changes a finite component count by at most one; finitely many modifications cannot change an infinite count to a finite one or conversely. For every finite edge set K, the event {infinitely many components} is therefore identical to the same event computed after setting all edges in K absent. It is measurable using only edges outside K, hence is a tail event. Under any tail-trivial forest law, in particular FUSF on an infinite connected locally finite network, its probability is 0 or 1. Thus either there are infinitely many components almost surely, or the number is finite almost surely. The latter alternative does not force the finite number to be constant.\n\nThis tail argument does not prove the full Question 10.28. On the infinite path, removing one edge changes the deterministic spanning subgraph from one component to two, so a generic finite count is not a tail statistic. Three finite path checks confirm this elementary obstruction; they are not samples from an allegedly random FUSF count. On a network that is itself a tree, every finite connected exhaustion has a unique spanning tree, and its free limit contains every edge, giving the trivial connected special case.",
++      "assumptions": [
++        "Countable underlying graph",
++        "Tail-trivial forest law",
++        "For the FUSF corollary use Lyons-Peres Theorem 10.18"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:tail-trivial-forest-infinite-component-count-dichotomy",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "For any random spanning forest on a countable graph with trivial edge-tail sigma-field, the event that it has"
++      }
++    },
++    {
++      "key": "free-uniform-spanning-forest-on-tree-is-connected",
++      "namespace": "probability.uniform_spanning_forests",
++      "logical_name": "free-uniform-spanning-forest-on-tree-is-connected",
++      "kind": "lemma",
++      "title": "FUSF on a tree is the whole connected tree",
++      "statement": "On an infinite connected locally finite network whose underlying graph is a tree and whose edge conductances are positive, the free uniform spanning forest contains every edge almost surely and has exactly one component. Every finite connected induced exhaustion is itself a tree with a unique spanning tree; the free weak limit therefore fixes every edge as present. This is a boundary case of component-count determinism, not an argument for arbitrary networks.",
++      "proof_text": "Lyons-Peres, Probability on Trees and Networks, electronic edition 19 August 2026, Theorem 10.18 and Question 10.28, prove tail triviality but leave determinism of the FUSF component count on arbitrary networks open. The earlier attempt correctly warns that finite component counts can change under one edge modification.\n\nFor any spanning subgraph on a countable graph, adding or removing one edge changes a finite component count by at most one; finitely many modifications cannot change an infinite count to a finite one or conversely. For every finite edge set K, the event {infinitely many components} is therefore identical to the same event computed after setting all edges in K absent. It is measurable using only edges outside K, hence is a tail event. Under any tail-trivial forest law, in particular FUSF on an infinite connected locally finite network, its probability is 0 or 1. Thus either there are infinitely many components almost surely, or the number is finite almost surely. The latter alternative does not force the finite number to be constant.\n\nThis tail argument does not prove the full Question 10.28. On the infinite path, removing one edge changes the deterministic spanning subgraph from one component to two, so a generic finite count is not a tail statistic. Three finite path checks confirm this elementary obstruction; they are not samples from an allegedly random FUSF count. On a network that is itself a tree, every finite connected exhaustion has a unique spanning tree, and its free limit contains every edge, giving the trivial connected special case.",
++      "assumptions": [
++        "Tree underlying graph",
++        "Positive conductances",
++        "Free connected exhaustion"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w344-open-problems-20261010:free-uniform-spanning-forest-on-tree-is-connected",
++        "url": "file:///~/brain_workers/w344/PROOFS.md",
++        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
++        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
++        "excerpt": "On an infinite connected locally finite network whose underlying graph is a tree and whose edge conductances are"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "tail-trivial-forest-infinite-component-count-dichotomy",
++      "to_existing_logical": "math:probability.core:open-problem-p0047-deterministic-component-count-of-the-free-uniform-spanning-forest",
++      "kind": "specializes",
++      "rationale": "New end: \"For any random spanning forest on a countable graph with trivial edge-tail sigma-field, the event that it has\"; existing end: \"On every infinite connected locally finite network, is the number of free uniform spanning-forest components almost surely a\". This result addresses or audits P0047; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    },
++    {
++      "from_key": "free-uniform-spanning-forest-on-tree-is-connected",
++      "to_existing_logical": "math:probability.core:open-problem-p0047-deterministic-component-count-of-the-free-uniform-spanning-forest",
++      "kind": "specializes",
++      "rationale": "New end: \"On an infinite connected locally finite network whose underlying graph is a tree and whose edge conductances are\"; existing end: \"On every infinite connected locally finite network, is the number of free uniform spanning-forest components almost surely a\". This result addresses or audits P0047; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
++    }
++  ]
++}

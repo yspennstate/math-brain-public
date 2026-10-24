@@ -1,0 +1,18 @@
+{
+  "helper_version": "A040-layer-reserve-independent-v1",
+  "review_target": "A046-SEPARATOR-LAYER-CUTOFF-RESERVE@1; reconstruct physical face ownership and reserve by a direct weighted suffix sum",
+  "family": "F=1+[WUV OR S(U OR V)](g-1), disjoint positive point blocks, balanced independent core",
+  "physical_domain": "s in {1,2}, L=1, R,T independently in {1,2}, dictator core (8 roots); plus s=2,L=1,R=1,T=2 with balanced bent4 and balanced bent4/one-vertex-flip selector (2 roots)",
+  "physical_case_count": 10,
+  "rational_domain": "s=1..10; L,R,T=1..4 independently; formal I(g) in {1,5/2,10}; exactly 1920 independent account cases",
+  "envelope_obstruction_domain": "h in {2,3,4,6,8,10}; w=2^h-2,m=h+2,s=2m,L=4m,R=T=w,g=z; exact factorized accounts, 6 cases",
+  "symmetry": "No quotient in physical or rational domains; factorized large-width accounts justified by direct point-event edge counting, not a biased mask replacement",
+  "arithmetic": "integer Boolean truth tables, integer Walsh, Fraction physical influences and face prices; exact prime-log entropy vectors and rational log intervals; direct suffix-sum reserve versus closed form",
+  "memory_estimate_mb": 110,
+  "max_truth_table_dimension": 12,
+  "pilot": "first physical case only, max 55 seconds",
+  "maximum_runtime_seconds_per_job": 55,
+  "checkpoint_rule": "No new physical case after 40 seconds; resume unchanged saved prefix in a later sequential bounded job; no automatic parameter increase",
+  "helper_provenance": "Own A040 stage-3 rational/Walsh helper copied into this run; no A046 or A025 author code imported or executed",
+  "analytic_target": "Review all-width cutoff and exact reserve; prove or refute a width-independent bound for this specific cutoff envelope, explicitly distinct from the actual bad-only debit"
+}

@@ -1,0 +1,73 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w500",
+  "bundle_slug": "c0120-gaussian-polymer-source-scope-and-boundaries-001",
+  "entries": [
+    {
+      "key": "source-scope",
+      "namespace": "probability.directed-polymers",
+      "logical_name": "chatterjee-2008-polymer-fluctuation-question-scope",
+      "kind": "concept",
+      "title": "Scope of Chatterjee's 2008 polymer fluctuation question",
+      "statement": "In Chatterjee, Chaos, concentration, and multiple valleys (arXiv:0810.4221), Section 8 considers independent standard Gaussian weights on the nonnegative integer quadrant and the maximum M_n over all n-vertex up/right paths from the origin with free endpoint. Theorem 8.1 gives Var(M_n) <= C n/log n, and Section 12(3) asks to improve the fluctuation exponent. The paper does not state that theorem for a finite-temperature log partition function or for general dimension. A power target Var(M_n) <= C n^(1-epsilon) for some epsilon>0 is an operational formalization, not a verbatim source quantifier. Current openness is unverified.",
+      "proof_text": null,
+      "assumptions": ["Source comparison to arXiv:0810.4221 Sections 8 and 12(3)", "No claim about October 2026 openness"],
+      "domain": "probability; Gaussian directed polymers; source scoping",
+      "source": {"source_id": "owner-own-work:w500-C0120-source-scope-002", "url": "https://arxiv.org/pdf/0810.4221", "revision": "as-read-2026-10-10", "license": "owner-own-work (source comparison; paper attributed)", "excerpt": null}
+    },
+    {
+      "key": "layer-mean",
+      "namespace": "probability.directed-polymers",
+      "logical_name": "gaussian-layer-mean-variance-decomposition",
+      "kind": "lemma",
+      "title": "Gaussian layer-mean variance decomposition",
+      "statement": "Let a finite nonempty deterministic path family visit exactly one site in each of finitely many layers t. In layer t there are m_t independent N(0,sigma_t^2) weights, and all layers are independent. For deterministic positive a_p and finite beta, put F=log(sum_p a_p exp(beta sum_t omega(t,p_t))). If A_t is the layer mean and R(t,x)=omega(t,x)-A_t, then Var(F)=beta^2 sum_t sigma_t^2/m_t+Var(F(R)). For M=max_p sum_t omega(t,p_t), Var(M)=sum_t sigma_t^2/m_t+Var(M(R)). In the unrestricted n-vertex up/right model with unit Gaussian weights, this gives Var(M_n)>=H_n; in any n-layer width-W family it gives Var(M)>=n/W.",
+      "proof_text": "For each layer, Cov(A_t,R(t,x))=sigma_t^2/m_t-sigma_t^2/m_t=0. Joint Gaussianity makes A_t independent of its entire residual vector; layer independence gives independence across all layers. Every path receives the same A_t once, so F(omega)=beta sum_t A_t+F(R) and M(omega)=sum_t A_t+M(R). All terms are square integrable since the path family is finite. Variances add by independence. The unrestricted up/right layer t has t+1 sites, giving sum_{t=0}^{n-1}1/(t+1)=H_n; m_t<=W gives sum_t 1/m_t>=n/W.",
+      "assumptions": ["Finite nonempty deterministic path family", "One selected site per layer", "Independent centered Gaussian weights with common variance within each layer", "Deterministic positive coefficients for F", "Finite beta for F"],
+      "domain": "probability; Gaussian directed polymers",
+      "source": {"source_id": "owner-own-work:w498-C0120-L1-and-L1M-reviewed-w500", "url": "~/brain_workers/w498/ATTEMPT.md", "revision": "sha256:6EBDA797BDF6A41F03D2F24CCFAF31508867182C36B5722C5931D3F9D8DDFC08", "license": "owner-own-work (campaign proof, independently checked by w500)", "excerpt": null}
+    },
+    {
+      "key": "strip-variance",
+      "namespace": "probability.directed-polymers",
+      "logical_name": "width-one-gaussian-polymer-strip-exact-variance",
+      "kind": "lemma",
+      "title": "Exact variance for a width-one Gaussian polymer strip",
+      "statement": "For r>=1, put iid N(0,1) weights on all vertices of up/right paths from (0,0) to (r,r) constrained by |x-y|<=1, including both endpoints. If M_r is the maximum path-weight sum over this family, then E M_r=r/sqrt(pi) and Var(M_r)=(2-1/pi)r+1. Each path visits 2r+1 vertices, so Var(M_r)/(2r+1) tends to 1-1/(2pi)>0. This fixed-endpoint strip is not the unrestricted free-endpoint source model.",
+      "proof_text": "Every allowed path visits the r+1 diagonal junctions and chooses one of two off-diagonal vertices in each of r disjoint diamonds. Thus M_r=sum_{k=0}^r G_k+sum_{k=0}^{r-1}max(X_k,Y_k), with all displayed groups independent standard Gaussian weights. For independent X,Y~N(0,1), max(X,Y)=(X+Y)/2+|(X-Y)/2|. The two terms are independent N(0,1/2) before taking the absolute value, so E max=1/sqrt(pi) and Var(max)=1-1/pi. Sum the independent contributions.",
+      "assumptions": ["r is an integer >=1", "Fixed endpoint (r,r)", "Width-one condition |x-y|<=1", "Independent standard Gaussian weights at every visited vertex"],
+      "domain": "probability; Gaussian directed polymers; boundary case",
+      "source": {"source_id": "owner-own-work:w498-C0120-L2-reviewed-w500", "url": "~/brain_workers/w498/ATTEMPT.md", "revision": "sha256:6EBDA797BDF6A41F03D2F24CCFAF31508867182C36B5722C5931D3F9D8DDFC08", "license": "owner-own-work (campaign proof, independently checked by w500)", "excerpt": null}
+    },
+    {
+      "key": "false-bridge",
+      "namespace": "probability.directed-polymers",
+      "logical_name": "qualitative-maximizer-change-power-variance-bridge-false",
+      "kind": "concept",
+      "title": "False auxiliary bridge from path change to small variance",
+      "statement": "The unqualified auxiliary implication 'a maximizing Gaussian polymer path changes with probability tending to one under polynomially small Ornstein-Uhlenbeck noise, hence its maximum has a power sublinear variance bound' is false. A width-one strip counterexample has path-change probability tending to one, normalized common-vertex overlap tending to one, and linear maximum variance. This says nothing against a quantitative small-overlap hypothesis or the unrestricted source model.",
+      "proof_text": null,
+      "assumptions": ["This is a clearly labeled false proposed bridge, not a theorem", "Noise scale may depend polynomially on path length"],
+      "domain": "probability; Gaussian chaos; proof strategy",
+      "source": {"source_id": "owner-own-work:w498-C0120-L3-reviewed-w500", "url": "~/brain_workers/w498/ATTEMPT.md", "revision": "sha256:6EBDA797BDF6A41F03D2F24CCFAF31508867182C36B5722C5931D3F9D8DDFC08", "license": "owner-own-work (refuted auxiliary bridge)", "excerpt": null}
+    },
+    {
+      "key": "strip-chaos-counterexample",
+      "namespace": "probability.directed-polymers",
+      "logical_name": "width-one-gaussian-strip-path-change-overlap-separation",
+      "kind": "lemma",
+      "title": "Path change separates from overlap and variance in a Gaussian strip",
+      "statement": "In the width-one strip of the exact-variance lemma, perturb all Gaussian vertex weights by g^s=e^(-s)g+sqrt(1-e^(-2s))g' with independent copy g'. The number B_r(s) of diamonds where the maximizing choice differs has Binomial(r,q(s)) law, q(s)=arccos(e^(-s))/pi. The probability of identical maximizing paths is (1-q(s))^r, and their expected shared-vertex fraction is 1-rq(s)/(2r+1). For s=r^(-alpha) with fixed 0<alpha<2, the path-equality probability tends to zero, shared fraction tends to one, and Var(M_r) remains linear in r. This refutes only the unqualified path-change auxiliary bridge.",
+      "proof_text": "A diamond's choice is the sign of D=(X-Y)/sqrt(2). The perturbed sign comes from D^s=rho D+sqrt(1-rho^2)Z, where rho=e^(-s) and D,Z are independent standard Gaussian. Polar-angle symmetry gives sign mismatch probability arccos(rho)/pi. Diamond environments are independent, so B_r is exactly binomial. The two paths always share r+1 diagonal junctions and lose one common intermediate vertex per mismatch, hence shared count 2r+1-B_r. As s tends to zero, arccos(e^(-s))~sqrt(2s); therefore r q(r^(-alpha)) diverges for 0<alpha<2 while q tends to zero. Apply (1-q)^r<=exp(-rq), and use the exact variance formula from the strip lemma.",
+      "assumptions": ["All assumptions of the width-one exact-variance lemma", "Independent Gaussian copy in the Ornstein-Uhlenbeck perturbation", "Fixed alpha in (0,2) for the asymptotic claim"],
+      "domain": "probability; Gaussian chaos; directed polymers; counterexample to auxiliary bridge",
+      "source": {"source_id": "owner-own-work:w498-C0120-L3-reviewed-w500", "url": "~/brain_workers/w498/ATTEMPT.md", "revision": "sha256:6EBDA797BDF6A41F03D2F24CCFAF31508867182C36B5722C5931D3F9D8DDFC08", "license": "owner-own-work (campaign proof, independently checked by w500)", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "layer-mean", "to_key": "source-scope", "kind": "semantic_association", "rationale": "The layer formula yields an H_n floor in the source model but no target upper bound."},
+    {"from_key": "strip-variance", "to_key": "layer-mean", "kind": "semantic_association", "rationale": "The exact strip calculation is compatible with the common-layer decomposition."},
+    {"from_key": "strip-chaos-counterexample", "to_key": "strip-variance", "kind": "depends_on", "rationale": "Its linear-variance conclusion uses the exact strip variance formula."},
+    {"from_key": "strip-chaos-counterexample", "to_key": "false-bridge", "kind": "refutes", "rationale": "High-probability path change coexists with linear variance and near-full normalized overlap in this model."}
+  ]
+}

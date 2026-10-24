@@ -1,0 +1,13 @@
+{
+  "helper_version": "A077-majority-bridge-v1",
+  "family": "odd uniform majority and every symmetric physical restriction; unate child coefficient maxima",
+  "domain": "pilot n=3,5,9,17,33,65; full n=3,5,9,17,33,65,129,257,511,513,1025; complete Walsh thresholds k=1..6, shifts t=-(k+1),-(k-1),...,k+1",
+  "case_count": "6 pilot roots, 11 full roots, 33 Walsh child thresholds; all first-half restriction states for each root, at most 131841 states per largest root",
+  "symmetry": "all coordinate choices have the same residual threshold state (remaining m, revealed sum s); state multiplicity binomial(d,(d+s)/2); no arbitrary Boolean census",
+  "arithmetic": "integer binomial counts, integer Walsh, Fraction identities; 32-term atanh log intervals with explicit tail and outward 2^120 rounding",
+  "memory_estimate_mb": 60,
+  "pilot_max_runtime_seconds": 60,
+  "max_runtime_seconds": 180,
+  "candidate": "complete-tree Lambda=sum w*j*log2(1+kappa_min/(2j)); prove divergence on majority, including deleting exactly isospectral splits",
+  "stop_rule": "fixed domain, stop on any assertion failure or time cap; no automatic n escalation"
+}

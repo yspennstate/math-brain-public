@@ -1,0 +1,38 @@
+\section*{A097 cross-route substitution: complete critical blocks}
+
+Let $f:\{-1,1\}^n\to\{-1,1\}$ be Boolean and let
+$[n]=A\sqcup C$.  If $S=(S_A,S_C)$ has law
+$\Pr(S=(T,U))=\widehat f(T,U)^2$, if $X$ is a uniform assignment to
+$A$, and if $Y$ conditionally on $X=x$ has the Fourier law of $f_x$, define
+\[
+ \Gamma_A(f)=H(S_A\mid S_C)+I(X;Y),\qquad
+ I_A(f)=\sum_{T,U}|T|\widehat f(T,U)^2.
+\]
+Orthogonality of the restricted coefficients gives, for every real $r$,
+\[
+ \mathbb E_X[H(f_X)-rI(f_X)]
+ =H(f)-rI(f)+rI_A(f)-\Gamma_A(f).                 \tag{1}
+\]
+
+Among the finitely many nonconstant physical restrictions of $f$, choose
+$g$ maximizing $R=H/I$.  Every nonconstant restriction of $g$ then has
+ratio at most $R(g)$.  Applying (1) at $r=R(g)$ yields
+\[
+ \Gamma_A(g)\ge R(g)I_A(g)                       \tag{2}
+\]
+for every physical block $A$.
+
+Therefore the following proper-block statement is sufficient for full FEI:
+there is a universal $K$ such that every restriction-critical $g$ on at
+least two relevant coordinates has a nonempty proper block $A$ with
+$I_A(g)>0$ and
+\[
+ \Gamma_A(g)\le K I_A(g).                         \tag{3}
+\]
+Indeed, (2)--(3) imply $R(f)\le R(g)\le K$.
+
+This transfers the overlap-safe endpoint-tax problem into the complete
+physical quantity $\Gamma_A$.  It does not prove (3).  Criticality supplies
+the lower bound (2), so using it as an upper endpoint-tax payment is an
+invalid direction.  The all-coordinate block is excluded because it gives
+the tautology $\Gamma_{[n]}=H=RI$.

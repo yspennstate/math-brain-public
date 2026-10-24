@@ -1,0 +1,57 @@
+Deterministic algebra checks for account01/B01 run 20260923T161404Z-account01-B01-qform-auto11
+These checks are diagnostics only; the proof is analytic in REPORT.md.
+
+1. Frequency optimization.
+For x=P*R2>0 and
+  I(T)=2*T+2*pi*sqrt(pi)*x*T^(-1/2),
+stationarity gives
+  T=(pi^(3/2)*x/2)^(2/3)=2^(1/3)*pi*x^(2/3)/2.
+Then
+  I(T)/(2*pi)=3*2^(-2/3)*x^(2/3).
+STATUS=PASS
+
+2. Hyperbolic-edge substitution.
+P <= sqrt(2)*D^(-1/4),
+R2 <= sqrt(2)*|c|^(-1/2).
+Thus x<=2*D^(-1/4)|c|^(-1/2), and
+  3*2^(-2/3)*x^(2/3)
+  <=3*D^(-1/6)|c|^(-1/3).
+STATUS=PASS
+
+3. Strict-N3 family scale.
+D=k^4, c=k^(-2), hence
+  3*D^(-1/6)*c^(-1/3)=3.
+STATUS=PASS
+
+4. Stress-family spectrum before dense leaf curvature.
+The two-hub / two-bank block has singular values k,k, hence eigenvalues +k,+k,-k,-k plus leaf zeros.
+The source-disjoint hyperbolic edge coefficient k^(-2) contributes eigenvalues +k^(-2),-k^(-2).
+Therefore the nonzero spectrum is
+  {+k,+k,-k,-k,+k^(-2),-k^(-2)}.
+Adding C_m with ||C_m||op=N^(-1/2) perturbs every eigenvalue by at most N^(-1/2).
+STATUS=PASS
+
+5. Partner account02/B01 r46 on P={U,V}.
+D_P=k^(-4), kappa_P=k^(-2).
+For the normalized-Hadamard C_m=N^(-1/2)S_N,
+  ||C_m||_F^2=1,
+  sum_i C_ii^2=1/N,
+  F(C_m)=1-1/N.
+The remaining H-Y cross block contributes ordered off-diagonal energy 4*k^2. Hence
+  F(A/P)=4*k^2+1-1/N,
+  W2(P)=D_P^2 F(A/P)=k^(-8)(4*k^2+1-1/N).
+Partner r46 therefore gives
+  ||p_Q||inf <=22.385*k^(5/3)*(4*k^2+1-1/N)^(-1/12),
+with asymptotic coefficient
+  22.385*4^(-1/12)=19.942767805571496
+multiplying k^(3/2).
+STATUS=PASS
+
+6. Scaling.
+Under A -> sA,
+  D -> s^4 D, c -> s c,
+so
+  D^(-1/6)|c|^(-1/3) -> s^(-1) D^(-1/6)|c|^(-1/3).
+STATUS=PASS
+
+FINAL_STATUS=PASS

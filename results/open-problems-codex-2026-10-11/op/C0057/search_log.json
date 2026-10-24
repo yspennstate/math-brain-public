@@ -1,0 +1,87 @@
+[
+  [
+    "arxiv",
+    "https://export.arxiv.org/api/query?search_query=all%3A%22peeling%22%20AND%20all%3A%22Boltzmann%22&max_results=30&sortBy=submittedDate&sortOrder=descending",
+    "OK 31853"
+  ],
+  [
+    "openalex",
+    "https://api.openalex.org/works?search=filled%20peeling%20critical%20Boltzmann%20maps&per-page=30",
+    "<HTTPError 429: 'Too Many Requests'>"
+  ],
+  [
+    "crossref",
+    "https://api.crossref.org/works?query=Peeling%20random%20planar%20maps%20Curien&rows=15",
+    "OK 94600"
+  ],
+  [
+    "semantic",
+    "https://api.semanticscholar.org/graph/v1/paper/search?query=peeling%20Boltzmann%20maps&limit=30&fields=title,authors,year,externalIds,abstract",
+    "<HTTPError 429: ''>"
+  ],
+  [
+    "github",
+    "https://api.github.com/search/repositories?q=peeling%20Boltzmann%20maps",
+    "OK 55"
+  ],
+  [
+    "openalex_source",
+    "https://api.openalex.org/works/https://doi.org/10.1007/978-3-031-36854-7",
+    "HTTP Error 429: Too Many Requests"
+  ],
+  [
+    "openalex_retry",
+    "https://api.openalex.org/works?search=Peeling%20Random%20Planar%20Maps&per_page=5",
+    "HTTP Error 429: Too Many Requests"
+  ],
+  [
+    "semantic_retry",
+    "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1007/978-3-031-36854-7?fields=title,year,citations.title,citations.year,citations.externalIds",
+    "OK 7512"
+  ],
+  [
+    "arxiv_exhaust",
+    "http://export.arxiv.org/api/query?search_query=all%3A%22peeling%22%20AND%20%28all%3A%22exhaustion%22%20OR%20all%3A%22critical%20weight%22%29&max_results=30",
+    "OK 17562"
+  ],
+  [
+    "simple_pdf",
+    "https://arxiv.org/pdf/1909.10217",
+    "OK 1428946"
+  ],
+  [
+    "markov_pdf",
+    "https://arxiv.org/pdf/2505.05447",
+    "OK 1364490"
+  ],
+  [
+    "curien_page",
+    "https://www.imo.universite-paris-saclay.fr/~nicolas.curien/",
+    "OK 4978"
+  ],
+  [
+    "budd",
+    "https://arxiv.org/pdf/1506.01590",
+    "OK 702597"
+  ],
+  [
+    "conditioned",
+    "https://arxiv.org/pdf/math/0602306",
+    "OK 394430"
+  ],
+  [
+    "research_page",
+    "https://www.imo.universite-paris-saclay.fr/~nicolas.curien/recherche.html",
+    "OK 120995"
+  ],
+  [
+    "openalex_cites",
+    "https://api.openalex.org/works?filter=cites:W4386255711&per-page=30",
+    "HTTP Error 429: Too Many Requests"
+  ],
+  [
+    "dichotomy",
+    "https://arxiv.org/pdf/2603.13642",
+    "OK 617198"
+  ]
+]

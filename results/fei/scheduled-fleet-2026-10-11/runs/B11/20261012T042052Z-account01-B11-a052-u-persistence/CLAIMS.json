@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "run_id": "20261012T042052Z-account01-B11-a052-u-persistence",
+  "primary_packet_id": "A052",
+  "claims": [
+    {
+      "claim_id": "B11-A052-U-PERSISTENCE-v1",
+      "gap_id": "G-CRITICAL-U-PAYMENT",
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For any restriction law dominated by ratio R, E U >= (R-2) E I/2 - E(RI-H)/2 + E Var + E b/2. For c_n-maximizers under t-random physical restrictions this is at least [((c_n-2)t)/2-(1-t)/ln2] I(f) plus the retained terminal terms.",
+      "scope": "Genuine Boolean functions and genuine physical restrictions; bits; endpoint convention 0 log(1/0)=0.",
+      "dependencies": [
+        "B11-A052-CRITICAL-SLACK-v1",
+        "U-G-Theorem-G",
+        "U-C-Theorem-C-ix"
+      ],
+      "acceptance_evidence": [
+        "RANDOM_RESTRICTION_U_PERSISTENCE.tex",
+        "verify_u_persistence.py",
+        "CHECK.out"
+      ],
+      "remaining_obstacle": "No dimension-independent upper bound on U/I follows; an independent asymmetry, pivotal-height, or GU' payment is still required."
+    }
+  ],
+  "full_fei_status": "OPEN"
+}
+

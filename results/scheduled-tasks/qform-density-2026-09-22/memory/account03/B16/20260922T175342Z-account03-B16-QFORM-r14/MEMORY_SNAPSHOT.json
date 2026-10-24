@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260922T175342Z-account03-B16-QFORM-r14",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.10",
+  "source_control_commit_pre_write": "bbfe8ce75c00b20bf41fadb7662b4b15fa305cd7",
+  "assignment": "Projection-product interaction",
+  "target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "NOT_PROVED_THIS_RUN",
+  "result_status": "REFUTED_INTERMEDIATE_CLAIM_WITH_EXACT_PRODUCT_CONSTRUCTION",
+  "result_id": "QFORM-CONDITIONAL-3D-LINF-MOMENT-FALSE-v1",
+  "result_scope": "For the three-dimensional projection Y onto v-perp in R^4 and complementary scalar Z=v^T X, independent cap-one fragmented product laws can make E ||rho_{Y|Z}||_infinity^alpha diverge for every alpha in (0,1). In particular the proposed universal 2/3 conditional projection-density moment bound is false. This is not a counterexample to QFORM.",
+  "exact_bound": "E ||rho_{Y|Z}||_infinity^alpha >= (2m/3)^alpha",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "419c351eb125b56e3e717230c09f0d03d6e3628d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260922T175342Z-account03-B16-QFORM-r14/REPORT.md",
+    "checker_commit": "08479bba3eb4b973e9fdd0333aead0b10f63f48a",
+    "checker_output_commit": "c638b2a26cbfd0e2c93e73aecb3c5df116ca9a73"
+  },
+  "partner_result_applied": {
+    "worker": "account04/B16",
+    "run_id": "20260922T161909Z-account04-B16-QFORM-r2",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "58c23c624db350cf44f0c836daa3582eb7e2d266",
+    "result": "nested-heavy fixed-pair determinant atom",
+    "application": "For v=(1,1,1,1)/2 and E=v-perp, c=3/4 and h=2/3, so G_ij=ch=1/2. Thus for |det Lambda|>=1, the fixed-pair determinant bank obeys sum_{k!=i,j}|det A_{ijk}|>=1/2 even though the conditional 2/3 moment diverges."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "new_correction_event": "QFORM-CONDITIONAL-3D-LINF-MOMENT-FALSE-v1",
+  "handoff": {
+    "commit": "bbfe8ce75c00b20bf41fadb7662b4b15fa305cd7",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B16/20260922T175342Z-account03-B16-QFORM-r14.md"
+  },
+  "unresolved_implication": "Replace normalized conditional projection-density moments by a weighted product-preserving nonlinear estimate in which complementary-fiber mass is not divided out before curvature is paid; then stabilize that estimate under arbitrary additional spectral components.",
+  "next_step": "Develop a weighted outer-pivot/grouped-coordinate or global small-ball inequality that carries the unnormalized original product fiber weight through the rank-three curved payment, and test it on the same m-packet construction and singleton-plus-two-banks families.",
+  "full_solution": false,
+  "full_brain_connected": false,
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN"
+}

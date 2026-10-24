@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260923T104329Z-account01-B04-QFORM-auto11",
+  "utc_start": "2026-09-23T10:43:29Z",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit_observed_before_handoff": "a6c5adba6c5538d35beb1f8aa51504de4bf530ad",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "target": "For arbitrary independent real cap-one densities and symmetric A with at least three eigenvalues of modulus at least one, prove a universal density bound or give a valid counterexample; continuity tracked separately.",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "no law-uniform pointwise quadratic-phase decay",
+    "no independence after spectral rotation",
+    "no arbitrary-joint rank-three coarea",
+    "no universally good fixed physical minor/cross cut"
+  ],
+  "actual_mathematical_premises": [
+    {
+      "name": "QFORM-THIRDVOLUME-Q1-BASEPACKING-v1",
+      "scope": "Original-coordinate physical cross block; q=1 row-marginal support exists iff rank-three row matroid has two disjoint bases.",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "cf648c06ce0b8ffeb9f62838dee132c0ca41598b",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/account02-B04-20260923T094548Z-auto11/REPORT.md"
+    },
+    {
+      "name": "QFORM-WEIGHTED-FRACTIONAL-VOLUME-SHARP-v1",
+      "scope": "Any probability weight on nonzero physical 3x3 minors with row marginals <=q/2, 1<=q<3/2; arbitrary same-bank quadratic terms/outside couplings/affine terms; continuous C0 density.",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "b967ff246e7e5b480b098c17f01cd0fc93072991",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T014717Z-account02-B04-QFORM-auto11-cont/REPORT.md"
+    },
+    {
+      "name": "Claude/e5 Theorem D arbitrary-weight q=1 route",
+      "scope": "Original-coordinate cross block, row marginals <=1/2; arbitrary-weight determinant/entropy replacement; same-bank phases retained by decoupling.",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md"
+    }
+  ],
+  "new_result": {
+    "name": "QFORM-SIXROW-COMPLEMENT-HELLINGER-VOLUME-v1",
+    "statement": "For a physical cross block M and six-row set R, define a_S=sum_T det(M[S,T])^2 and C_R=sum_{|S|=3} sqrt(a_S a_{R\\S}). If C_R>0 then ||p_Q||_inf <=3e C_R^(-1/6), with a C0 density in the weighted-three-volume theorem scope.",
+    "exact_identity": "The complement-Hellinger row law mu(S)=sqrt(a_S a_{R\\S})/C_R has row marginals 1/2; canonical conditional column weights produce G(w)=C_R exactly; C_R/Z_R is the Bhattacharyya affinity with the complement image and KL(mu||p_R)=log(Z_R/C_R).",
+    "partner_application": "Partner base-packing theorem implies C_R>0 exactly compiles a two-disjoint-base support packet into q=1 Fourier currency; on the partner equal-minor example C_R=64 and the compiler reproduces 3e/2.",
+    "explicit_target_example": "M=U diag(4,2,1)V^T with six-row U and dense orthogonal V; A=[[0,M],[M^T,0]] has spectrum +/-4,+/-2,+/-1,0,0,0, all 18 cross entries nonzero, Z_R=64, C_R=32sqrt(3), giving ||p||inf<=4.17635398765184 and ||phi||1<=26.240806012794916."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d57e4401409946cb300e16500f1c85906b943a49",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T104329Z-account01-B04-QFORM-auto11/REPORT.md",
+    "readback_blob": "2bf288bcd7ed9b24da188c19a252a66fc485bb39",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T104329Z-account01-B04-QFORM-auto11/CHECKS.json",
+    "checkpoint_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T104329Z-account01-B04-QFORM-auto11/CHECKPOINT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "00b6d43adaec23b6ad5f12cd8759d18a3504210c",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B04/20260923T104329Z-account01-B04-QFORM-auto11.md"
+  },
+  "outcome": "SUPPORTING_THEOREM_PROVED_PARTNER_APPLIED_EXPLICIT_TARGET_ESTIMATE_FULL_TARGET_OPEN",
+  "first_unproved_step": "QFORM-SIXROW-HELLINGER-CURRENCY-OR-SUPPORTDEFECT-ROUTING-v1",
+  "full_target_proved": false,
+  "full_target_disproved": false,
+  "continuity_full_target_proved": false,
+  "continuity_supporting_branch_proved": true,
+  "independent_end_to_end_review_recorded": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN"
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B04",
+  "run_id": "20260923T211520Z-account02-B04-qform",
+  "control_commit_prepublication": "13f8970486ba0fd2990dc06eec66f8b13ae40e70",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "target_status": "QFORM-FULL_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "pinned_e5_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "directory": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "files_read": [
+      "RESULTS.md",
+      "FOURIER_ROUTE_REPORT.md",
+      "COUNTEREXAMPLE_SEARCH.md"
+    ],
+    "results_applied": "The product linear-form/projection cap is used in QFORM-CLEANBANK-TOPTWO-REARRANGEMENT-v1. Theorem D, D' and D5 are applied globally over every physical cut of the stress family: D5 has zero fifth volume on every cut; every rank-three cut has a constrained row marginal one, so D/D' admit no weighting."
+  },
+  "partner_sources": [
+    {
+      "account_slot": "account03/B04",
+      "commit": "f5e2f6935273fd126982d1e66f83b6c5623f430d",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T211945Z-account03-B04-QFORM-auto11/REPORT.md",
+      "result_applied": "QFORM-ZERO-PIVOT-3COORD-LINEAR-SQUARE-v1 is checked against the stress family as a precise obstruction: every physical principal 3x3 block is singular, so its determinant hypothesis never triggers."
+    },
+    {
+      "account_slot": "account03/B04",
+      "commit": "fc213cf50d21dd7e00a36fbb2ad2c4e7ad55f056",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T204706Z-account03-B04-auto11-r41/REPORT.md",
+      "result_applied": "QFORM-C1-ZEROPIVOT-STAR-FACTOR-v1 is used positively: in the E_ZZ=0 branch, the factorization becomes a clean-bank crossing K=[b,E_NZ] and the new top-two rearrangement theorem gives a density bound."
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-CLEANBANK-TOPTWO-REARRANGEMENT-v1",
+      "statement": "For disjoint original product banks X,Y with cap-one scalar densities, Q=F(X)+2 X^T M Y+b^T Y+c and no Y-Y quadratic curvature satisfies ||p_Q||_infinity <= 2 sqrt(pi)(s1(M)s2(M))^(-1/2) whenever s2(M)>0. F is arbitrary and M may have rank greater than two.",
+      "status": "proved_supporting_theorem_pending_independent_review"
+    },
+    {
+      "id": "QFORM-C1-STAR-CLEANBANK-GROUPED-RECEIVER-v1",
+      "statement": "Under the account03/B04 zero-anchor star factorization, the subbranch E_ZZ=0 is paid by applying QFORM-CLEANBANK-TOPTWO-REARRANGEMENT-v1 to the grouped crossing K=[b,E_NZ].",
+      "status": "proved_partner_application_pending_independent_review"
+    }
+  ],
+  "stress_family": {
+    "definition": "b0=(1,1,1)/sqrt(3), c0=(1,2,-3)/sqrt(14), K_m=[2b0,(2/sqrt(m))c0 repeated m times], A_m=[[0,K_m],[K_m^T,0]]",
+    "spectrum": "{2,2,-2,-2,0^(m)}",
+    "target_status": "four eigenvalues have modulus two",
+    "partner_local_status": "every physical principal 3x3 block is singular",
+    "anchored_compound": "C_(1,h)=128/3 for every m",
+    "single_local_area": "4/sqrt(m)",
+    "density_bound_universal_projection": "sqrt(pi)",
+    "density_bound_exact_frame": "sqrt(pi*sqrt(42)/10)=1.426879370091898...",
+    "optimized_two_volume": "Z2=16, nu=(25/42,16/42,1/42), minimal feasible q=4/3, optimal row-pair weight=(1/3,1/3,1/3), G2=16(50/343)^(1/3)=8.42064342546374...",
+    "half_riesz_optimum": "9.97494811429056... at q=4/3; this is a fractional-potential certificate, not an L-infinity certificate",
+    "e5_volume_status": "D5 has Z5=0 on every cut; every positive third-volume cut has a constrained row marginal exactly one, so D and D' are globally infeasible over all cuts and all weights",
+    "direct_ridge_status": "No certificate on any cut, gamma or q>=1: the leverage gate implies theta<q+1<=2q, contradicting theta>2q"
+  },
+  "outputs": {
+    "early_commit": "39b6b2797f43b910e7c581d3f8e0572b55f87ec4",
+    "early_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T211520Z-account02-B04-qform/EARLY_CALC.md",
+    "report_commit": "dfe442ee899867f5677e5ced85a196eca922fe64",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T211520Z-account02-B04-qform/REPORT.md",
+    "checks_commit": "5eca9cffd9ca738db9a3c61e4408b24761040724",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T211520Z-account02-B04-qform/CHECKS.md",
+    "handoff_commit": "7ad45823db1ea21b9e5cbe85544b1cbe0e05707e",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B04/20260923T211520Z-account02-B04-qform.md"
+  },
+  "first_unproved_step": "QFORM-C1-STAR-FACTOR-ROUGH-ZCURVATURE-RECEIVER-v1",
+  "next_step": "Starting from the zero-anchor factorization with E_ZZ nonzero, either route the Z-bank quadratic curvature into a completed pair/D5/ridge/projected-crossing/grouped-hub endpoint or preserve a target-scale grouped top-two coefficient norm through a product rearrangement without small-operator perturbation or local minor inversion."
+}

@@ -1,0 +1,92 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w547",
+  "bundle_slug": "p0321-gaussian-stiffness-endpoint-obstruction-20261010",
+  "entries": [
+    {
+      "key": "gaussian-model",
+      "namespace": "probability.gaussian",
+      "logical_name": "two-dimensional-cutoff-longitudinal-transverse-displacement-proxy",
+      "kind": "definition",
+      "title": "Cutoff Gaussian displacement proxy for a Riesz phase route",
+      "statement": "For T,mu,a,Lambda>0 and 0<=p<=2, define a centered real Gaussian displacement u on R^2 modulo an additive constant by spectral covariance S_p(k)=T*(P_T(k)/(mu*|k|^2)+P_L(k)/(a*|k|^p))*1_{0<|k|<Lambda}, with Fourier measure d^2k/(2*pi)^2, P_L(k)=k*k^t/|k|^2 and P_T=I-P_L. The infrared limit is taken on anchored increments u(x)-u(0). For G!=0 define C_G,p(x)=E exp(i*G.(u(x)-u(0))); define theta=curl(u)/2 and C_6(x)=E exp(6*i*(theta(x)-theta(0))). These are defined elastic proxies, not identified with microscopic particle or bond correlations; p is a stipulated stiffness exponent, not an asserted Riesz exponent.",
+      "proof_text": null,
+      "assumptions": [
+        "T,mu,a,Lambda>0; nonzero G in R^2; fixed unit direction e; Fourier measure d^2k/(2*pi)^2.",
+        "Only the specified Gaussian proxy; no microscopic Riesz Gibbs measure or bond-observable comparison is established."
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w547:p0321-gaussian-boundary-20261010",
+        "url": "urn:owner-work:w547:p0321-gaussian-boundary:20261010",
+        "revision": "draft-auxiliary-proof-w548-keep-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "proxy-asymptotics",
+      "namespace": "probability.gaussian",
+      "logical_name": "draft-cutoff-gaussian-elastic-proxy-correlation-asymptotics",
+      "kind": "concept",
+      "title": "DRAFT: Gaussian proxy exponents and persistent curl orientation",
+      "statement": "INDEPENDENTLY CHECKED AUXILIARY GAUSSIAN RESULT (w548 KEEP); DRAFT CONCEPT. Fix T,mu,a,Lambda>0, nonzero G in R^2, unit e and 0<=p<=2. For a centered real Gaussian displacement with spectral covariance T*(P_T/(mu*|k|^2)+P_L/(a*|k|^p))*1_{0<|k|<Lambda} and Fourier measure d^2k/(2*pi)^2, let C_G,p(x)=E exp(i*G.(u(x)-u(0))), interpreting u by anchored increments. For each fixed p<2, C_G,p(r*e)=A_p(G,e)*r^{-eta_T}*(1+o(1)), with A_p finite positive and eta_T=T*|G|^2/(4*pi*mu). At p=2 the exponent is eta_T+T*|G|^2/(4*pi*a), also with a finite positive prefactor. For theta=curl(u)/2, E exp(6*i*(theta(x)-theta(0))) tends to exp(-9*T*Lambda^2/(4*pi*mu))>0. These proxies therefore have neither exponential positional decay nor sixfold correlations decaying to zero. This calculation does not settle a microscopic Riesz hexatic phase.",
+      "proof_text": null,
+      "assumptions": [
+        "T,mu,a,Lambda>0; nonzero G in R^2; fixed unit direction e; Fourier measure d^2k/(2*pi)^2.",
+        "Only the specified Gaussian proxy; no microscopic Riesz Gibbs measure or bond-observable comparison is established.",
+        "Named independent referee w548 kept C002/C003; this submission remains concept/draft material with no microscopic Gibbs claim."
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w547:p0321-gaussian-boundary-20261010",
+        "url": "urn:owner-work:w547:p0321-gaussian-boundary:20261010",
+        "revision": "draft-auxiliary-proof-w548-keep-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "endpoint-obstruction",
+      "namespace": "probability.gaussian",
+      "logical_name": "draft-gaussian-stiffness-endpoint-and-distance-limits-do-not-commute",
+      "kind": "concept",
+      "title": "DRAFT: noncommuting Gaussian stiffness endpoint and distance limits",
+      "statement": "INDEPENDENTLY CHECKED AUXILIARY GAUSSIAN RESULT (w548 KEEP); DRAFT CONCEPT. Fix T,mu,a,Lambda>0, G!=0 in R^2 and unit e. For the centered real Gaussian displacement increment model with spectral covariance T*(P_T/(mu*|k|^2)+P_L/(a*|k|^p))*1_{0<|k|<Lambda}, 0<=p<=2, and Fourier measure d^2k/(2*pi)^2, put C_G,p(x)=E exp(i*G.(u(x)-u(0))) and L(p,r)=-log(C_G,p(r*e))/log(r), r>1. Then lim_{p->2-}lim_{r->infinity} L(p,r)=T*|G|^2/(4*pi*mu), while lim_{r->infinity}lim_{p->2-} L(p,r)=T*|G|^2/(4*pi*mu)+T*|G|^2/(4*pi*a). Thus the fixed-p asymptotic exponent is not uniform over p<2. At finite r the covariance integral is continuous at p=2, but its fixed-p longitudinal large-distance contribution diverges like 1/(2-p). This is an obstruction to an auxiliary limit interchange; p has not been identified with a microscopic Riesz exponent and no P0321 refutation follows.",
+      "proof_text": null,
+      "assumptions": [
+        "T,mu,a,Lambda>0; nonzero G in R^2; fixed unit direction e; Fourier measure d^2k/(2*pi)^2.",
+        "Only the specified Gaussian proxy; no microscopic Riesz Gibbs measure or bond-observable comparison is established.",
+        "Named independent referee w548 kept C002/C003; this submission remains concept/draft material with no microscopic Gibbs claim."
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w547:p0321-gaussian-boundary-20261010",
+        "url": "urn:owner-work:w547:p0321-gaussian-boundary:20261010",
+        "revision": "draft-auxiliary-proof-w548-keep-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "proxy-asymptotics",
+      "to_key": "gaussian-model",
+      "kind": "depends_on",
+      "rationale": "The asymptotic calculation uses exactly the defined anchored displacement covariance and cutoff curl proxy."
+    },
+    {
+      "from_key": "endpoint-obstruction",
+      "to_key": "proxy-asymptotics",
+      "kind": "depends_on",
+      "rationale": "The two different distance-limit exponents, combined with finite-distance continuity, yield the noncommuting iterated limits."
+    },
+    {
+      "from_key": "endpoint-obstruction",
+      "to_existing_logical": "math:probability.core:open-problem-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases",
+      "kind": "semantic_association",
+      "rationale": "P0321 concerns correlations across a hexatic phase; this auxiliary elasticity-route calculation identifies a specific nonuniform-limit pitfall, without claiming a microscopic result. Target logical entry verified at export/population/nodes.jsonl:3643."
+    }
+  ]
+}

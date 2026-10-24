@@ -1,0 +1,36 @@
+{
+  "schema": "fei-transfer-hypothesis-check/1",
+  "primary_packet_id": "A097",
+  "transfer_id": "A097-RANKONE-CRITICAL-CLASSIFICATION-1",
+  "source_claims": [
+    {
+      "claim": "B03-A014-RANK-ONE-SIGNED-OVERLAP-v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "role": "Converts a balanced rank-one selector into the genuine disjoint tensor F=sigma*g and supplies exact H/I additivity."
+    },
+    {
+      "claim": "B11-A052-CRITICAL-TENSOR-PURITY-v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "role": "Classifies critical and eta-critical disjoint tensor factors under actual physical descendants."
+    }
+  ],
+  "matched_hypotheses": {
+    "Booleanity": "All branches, controller, core, selector, and descendants are genuine {-1,1}-valued functions.",
+    "measure": "Uniform product measure on disjoint address and data cubes.",
+    "branch_condition": "Branches are balanced and the nonconstant-frequency branch matrix has exact rank one.",
+    "physicality": "Each factor and each factor descendant is obtained from F by actual coordinate restrictions and fixing the other block.",
+    "normalizers": "Fourier entropy is in bits; influence and entropy are exactly additive on the disjoint tensor.",
+    "constants": "The eta loss is eta/min{w_sigma,w_g}; no constant is hidden or normalized away."
+  },
+  "unmatched_or_open_hypotheses": [
+    "No transfer for spectral rank greater than one.",
+    "No quantitative stability theorem for matrices merely close to rank one.",
+    "No transfer for unbalanced branches without a replacement factorization.",
+    "Both source claims still require named independent review.",
+    "The classification does not bound the ratio of a prime critical remainder."
+  ],
+  "target_debt_paid": "Complete classification and strict-core exclusion for the exact balanced rank-one selector regime.",
+  "remaining_target_debt": "Pay rank>=2 or near-rank-one interference, or bound critical-step ratios on the prime remainder.",
+  "full_fei_status": "OPEN"
+}
+

@@ -1,0 +1,1 @@
+Start with REVIEW_PACKET.md and REPORT.md. The code and hook patches are proposals; the math draft is submitted, partially kept, not ingested. Exact checks: python -X utf8 verify_bridge.py. The last proof gap is a nonzero microscopic Riesz orientational lower bound.

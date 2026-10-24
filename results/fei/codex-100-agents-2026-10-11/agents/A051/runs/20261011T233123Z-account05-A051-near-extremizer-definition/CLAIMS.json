@@ -1,0 +1,76 @@
+[
+  {
+    "claim_id": "A051-PROPER-BLOCK-DESCENT-SQUEEZE",
+    "version": 1,
+    "exact_statement": "For every actual nonconstant Boolean sign f on the n-bit uniform cube, n>=2, with H in bits and phi=min over nonempty proper physical blocks A with I_A>0 of (H(f)-E H(f_a))/I_A, phi(f)<=H(f)/(I(f)-min_i Inf_i(f))<=n(H(f)/I(f))/(n-1). If M_n=max H/I over all nonconstant n-bit functions and K_desc(n)=max phi over the same finite domain, then M_n<=K_desc(n)<=n M_n/(n-1). Therefore lim_n K_desc(n)=sup_n M_n=C_* in the extended real sense, and bounded universal proper-block descent is equivalent in finiteness to FEI. No all-dimensional optimizer, independent uniform bound, or paid entropy estimate is asserted.",
+    "hypotheses": [
+      "Actual Boolean signs; uniform physical cube; entropy in bits",
+      "n>=2 for universal squeeze; fixed frozen6..9 domain for census",
+      "phi uses only nonempty proper blocks with I_A>0; constants never divided by I"
+    ],
+    "statement_sha256": "73d58531120ba7f205daeba0377b80be5e77770475f92a06c0ad0eb5702dfd5e",
+    "contributors": [
+      "account05/A051"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A051\\runs\\20261011T233123Z-account05-A051-near-extremizer-definition\\UNIVERSAL_DESCENT_SQUEEZE.md",
+      "sha256": "424c08830e4dd0b7898f9bc832515ab47e818dbc0e60036b5c26dbab66482d56",
+      "certificate": null
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_ANALYTIC_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A052",
+      "A053",
+      "A055",
+      "A090",
+      "A094",
+      "B11 lead",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A051-NAND-SEED-DESCENT-CERTIFICATES",
+    "version": 1,
+    "exact_statement": "For the full family of 1150 unordered read-once NAND formula trees with no unary internal gate, arbitrary arity>=2, and6..9 disjoint literal leaves, exact orbit certificates cover117240 proper-block orbits representing470340 labelled blocks and certify phi<227/50 for every member. Dimensionwise maxima are certified by the rational intervals in out/AGGREGATE_CERTIFICATES.json. The eight-bit three-level complete binary NAND tree has exactly phi/(H/I)=8/7. Seven explicitly defined Hod corrected six/eight-bit seed and fresh NAND-extension controls also have phi<227/50. These are finite family results, not all Boolean functions, not all recursive lower-bound compositions, and not a universal block payment.",
+    "hypotheses": [
+      "Actual Boolean signs; uniform physical cube; entropy in bits",
+      "n>=2 for universal squeeze; fixed frozen6..9 domain for census",
+      "phi uses only nonempty proper blocks with I_A>0; constants never divided by I"
+    ],
+    "statement_sha256": "1da05b24382a7f567ab4d31a28ca81d99eb90e9940bea62171571716ef54f3dd",
+    "contributors": [
+      "account05/A051"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A051\\runs\\20261011T233123Z-account05-A051-near-extremizer-definition\\COMPOSITION_CERTIFICATES.md",
+      "sha256": "e26dc447756225df04104da8640ef54035050bb0d34c2ba3fb9245e4269a1927",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A051\\runs\\20261011T233123Z-account05-A051-near-extremizer-definition\\out\\AGGREGATE_CERTIFICATES.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A051-PROPER-BLOCK-DESCENT-SQUEEZE",
+        "version": 1,
+        "use": "Universal comparison and interpretation of exact8/7 finite sharpness"
+      }
+    ],
+    "review_records": [],
+    "status": "EXACT_FINITE_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A052",
+      "A053",
+      "A055",
+      "A090",
+      "A094",
+      "B11 lead",
+      "B20"
+    ]
+  }
+]

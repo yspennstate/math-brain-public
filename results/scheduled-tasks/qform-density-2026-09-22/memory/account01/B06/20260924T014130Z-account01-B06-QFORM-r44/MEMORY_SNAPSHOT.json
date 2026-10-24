@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B06",
+  "run_id": "20260924T014130Z-account01-B06-QFORM-r44",
+  "control_revision": "2026-09-22.15",
+  "control_commit_observed_before_publication": "471a84f58ffe0b83ffc9b702e35c6bb69c9385be",
+  "control_readme_blob": "14046b5138615be52bb1c49a998122a7c84e200e",
+  "correction_inbox_blob": "a884b835aba929c5376e6417ae5cfcd44c0f7a76",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "status": "SUPPORTING_RESULTS_PROVED_FULL_TARGET_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-RANK1T-NONRESONRANCE-NO-DPIVOT-LOCALBLOCK-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B06",
+    "source_commit": "f3cb7a2b4cd43febe06534df231125fbd13a138d",
+    "result": "QFORM-PAIR-RANK1SQUARE-WEIGHTED-v1",
+    "equation": "||p_(Q|Y_K)||_infinity <= 8 sqrt(2)[|det B| sigma_min(B)|lambda| ||w_J0||_2^2]^(-1/4)",
+    "use": "condition on the diagonal-carrying complement K, translate the zero-diagonal original-coordinate subbank J0 along w_J0, then average the uniform conditional density bound"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-PHYSICAL-CURVATURE-SQRT-SMALLBALL-v1",
+      "scope": "arbitrary quadratic-plus-affine form on independent cap-one original coordinates with nonzero symmetric quadratic matrix M",
+      "statement": "with chi(M)=max(max_i |M_ii|, max_{i<j}|det M_ij|^(1/2)), sup_t P(|S-t|<rho)<=16 sqrt(30) chi(M)^(-1/2) sqrt(rho)"
+    },
+    {
+      "id": "QFORM-OUTERPAIR-PHYSICALCURVATURE-WEIGHTED-v1",
+      "scope": "invertible indefinite literal outer physical pair with arbitrary dependent center and arbitrary remaining quadratic matrix M!=0 on an independent product bank",
+      "statement": "||p_Q||_infinity <=4 sqrt(32 sqrt(30))[|det B| sigma_min(B) chi(M)]^(-1/4)"
+    },
+    {
+      "id": "QFORM-SHARED-DIAG-RANK1-TWOHEAVY-v1",
+      "scope": "M=diag(d)+lambda ww^T on one shared original-coordinate bank",
+      "statement": "chi(M)>=|lambda|max_{i<j}|w_i w_j|/sqrt(2), hence a two-heavy rank-one direction survives arbitrary shared diagonal cancellation"
+    },
+    {
+      "id": "QFORM-SHARED-DIAG-ZEROSUBBANK-PARTNER-SPLICE-v1",
+      "scope": "shared diagonal plus rank-one square with J0={j:d_j=0} and w_J0!=0",
+      "statement": "||p_Q||_infinity <=8 sqrt(2)[|det B| sigma_min(B)|lambda| ||w_J0||_2^2]^(-1/4) by conditional application of account02/B06"
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "8364a3a0a4fce7b1c011e78e7d2336af4d690439",
+    "report_commit": "8364a3a0a4fce7b1c011e78e7d2336af4d690439",
+    "report_blob": "bc257642f6954d9d1f7673d6e18670471307e0ea",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260924T014130Z-account01-B06-QFORM-r44/REPORT.md"
+  },
+  "handoff_commit": "67ff8c4548ca02509c3ccfba740c6f003f5a997a",
+  "unresolved_implication": "QFORM-R48-FULLYSHARED-DIFFUSE-RANK1SQUARE-AGGREGATE-v1",
+  "next_step": "Aggregate the many small physical minors of diag(d)+lambda ww^T before reciprocal payment, or prove that simultaneous small zero-diagonal mass, small second w-coordinate, and small physical curvature forces an existing r48 two-heavy-hub/projected-crossing receiver.",
+  "continuity": "OPEN_GLOBALLY; r44 establishes essential boundedness only in the stated branches",
+  "login_commit": "7b319a06c6307032ae4ba34dfbbc8db6b38cd653",
+  "start_record_commit": "b0378dcb6d0a81a4c6746c864d51a0dffeac9039"
+}

@@ -1,0 +1,2 @@
+STATE: Stage5 complete: A044 full local integer-profile claim independently accepted; sharp mean-only refund all-pairs bill/Delta diverges on actual band/parity selector with H/I<=2+2/n;36220 exact assertions PASS;FEI OPEN.
+NEXT: A044/A043/A041 select or merge one complete conditional pair owner on this fixture, retaining exact h(mean), prior quadratic energy and full terminals; A090/A091/A085 review. Scalar variance repricing alone is refuted.

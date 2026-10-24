@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "QFORM-B17-20260922T144511Z-9b3d6a",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit": "81f4f051ff3b99d8ce3a34aafb497c21c6e97ee0",
+  "execution_memory_status": "WITHOUT_VERIFIED_BRAIN",
+  "assignment": "Sharp constant and witnesses",
+  "result_status": "PROVED_SUPPORTING_THEOREM_FULL_TARGET_OPEN",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "6676b37d6b7c0557bd618f0273f0b58abbec0ca0",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/QFORM-B17-20260922T144511Z-9b3d6a/REPORT.md",
+  "partner_result_applied": {
+    "worker": "account03/B17",
+    "commit": "3d0926c161ba4cbea4016bff63d89e34f87cb0e6",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/account03-B17-20260922T140220Z-r11/REPORT.md",
+    "scope": "Noncentral Gaussian three-mode density envelope: covariance >= v I gives density sup <= 1/(2sqrt(2)v)."
+  },
+  "mathematical_delta": {
+    "headline": "Critical finite rare-fragment non-Lindeberg banks converge to Gaussian plus finite compound-Poisson shifts, whose quadratic-form density remains capped by 3sqrt(2).",
+    "construction": "Each cap-one physical density is an indicator of a central interval of length 1-alpha/m plus finitely many intervals of length alpha_r/m centered at b_r sqrt(m); A_m=diag(J_m/m,J_m/m,-J_m/m).",
+    "limit": "S_j,m => N(0,1/12)+sum_r b_jr Poisson(alpha_jr), independently across banks.",
+    "non_lindeberg": "A rare fragment (alpha,b) contributes exactly alpha*b^2+alpha^3/(12m^3) to the row Lindeberg sum.",
+    "ceiling": "Conditioning on the compound-Poisson shifts and applying the partner theorem gives ||p_Qinfty||_infinity <= 3sqrt(2).",
+    "exact_negative_fragment_saddle": "p_Qinfty(0)=3sqrt(2)e^-alpha sum_k alpha^k/k! exp(-3b^2k^2), strictly below 3sqrt(2) for alpha>0,b!=0."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "correction_status": "No refuted intermediate is used. The finite-fragment theorem is not an extremality reduction for arbitrary marginals.",
+  "unresolved_implication": "A witness above 3sqrt(2), if it exists, must escape finite compound-Poisson mesoscopic shifts; finite transient spikes, growing fragment alphabets, other scalings and mixed-leverage core/tail interactions remain open.",
+  "next_step": "Stress growing-fragment and mixed-leverage core-plus-diffuse-tail product sources for a target-valid peak above 3sqrt(2), or prove a product-preserving ceiling for that branch."
+}

@@ -1,0 +1,66 @@
+{
+  "static_packet_validation": "PASS",
+  "entries": 11,
+  "relations": 8,
+  "claims": 7,
+  "retrieval_failure": {
+    "command": "python -X utf8 ~/.claude/dreaming/brain.py recall 'C0052 3D Ising nontriviality random current proof mistakes' -n 3",
+    "timeout_seconds": 60,
+    "returned_hits": 0,
+    "outcome": "TimeoutExpired"
+  },
+  "mention_only_fallback": {
+    "command": "python -X utf8 targeted_math_fallback.py C0052 --limit 3 --timeout 10",
+    "seconds": 9.150454000104219,
+    "related_hits": 1,
+    "exact_problem_hits": 0,
+    "returned_logical_id": "math:probability.statmech:attempt-c0051-improved-two-point-function-bounds-for-the-critical-three-dimensional"
+  },
+  "bounded_exact_lookup": {
+    "command": "python -X utf8 store_lookup.py",
+    "seconds": 0.18513889994937927,
+    "exact_problem_hits": 1,
+    "logical_id": "math:probability.statmech:open-problem-c0052-non-triviality-of-the-scaling-limit-of-the-three-dimensional-ising-mod",
+    "truth_status_preserved": "unverified"
+  },
+  "source_scope_checklist": {
+    "before": {
+      "subcritical_regime": false,
+      "susceptibility_definition": false,
+      "correlation_length_definition": false,
+      "coupling_normalization": false,
+      "source_sign": false
+    },
+    "staged_after": {
+      "subcritical_regime": true,
+      "susceptibility_definition": true,
+      "correlation_length_definition": true,
+      "coupling_normalization": true,
+      "source_sign": true
+    },
+    "before_score": 0,
+    "staged_after_score": 5,
+    "interpretation": "Five source-recording atoms, not five independent math proofs; the draft is not ingested."
+  },
+  "compute_gate": {
+    "path": "~\\.claude\\compute\\compute_state.json",
+    "optional_arithmetic_allowed": false,
+    "ts": "2026-10-10 10:17:40",
+    "age_seconds": 18.390565,
+    "status": "warn",
+    "mode": "owner_present_polite",
+    "reasons": [
+      "process_pressure"
+    ],
+    "cpu_pct": 87.2,
+    "mem_avail_mb": 3954,
+    "commit_used_pct": 91,
+    "hung_windows": 0
+  },
+  "optional_arithmetic": {
+    "status": "HELD_BY_FRESH_COMPUTE_GATE",
+    "rows": []
+  },
+  "seconds": 0.17223999998532236,
+  "limits": "No formal proof verification, Ising simulation, local theorem promotion, model/account attestation, or global retrieval change."
+}

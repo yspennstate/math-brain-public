@@ -1,0 +1,102 @@
+### A002-FULL-SUPPORT-ADMISSION [file of A002] SOURCE_COMPLETE_PENDING_INDEPENDENT_REVIEW
+STATEMENT: For every epsilon,delta>0 the supremum H/I over nonconstant uniform Boolean signs with every Fourier coefficient nonzero, I<=epsilon and P(F=-1)<=delta equals C_FEI as an extended-real supremum. This also holds with max_i I_i/Var<=epsilon. The full-support construction has distance one and does not preserve the separated-support physical restriction plateau.
+HYP: ["Entropy in bits", "Finite uniform Boolean signs", "Arbitrarily large final dimension allowed", "Strict numerical slack before two-dummy one-point surgery"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: "TRANSFORMATION_LEDGER.tex sections 7"
+
+### A003-PARITY-DEFECT-COMPLETE-RESIDUAL [file of A003] AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW
+STATEMENT: For every n>=2, set N=2^n,d=n+1,g_n(x)=1-2*1_(x=(1,...,1)) and F_n(x,z)=g_n(x_1z,...,x_nz). Then B(F_n)=L(F_n)=0, I(F_n)=2d/N, and the single-gate conditioned forest for -F_n, ordered support 1,...,d, M=1,lambda=1,pi=1/N and the unique partition run on each nonempty A has complete residual R=(6/5)sum_(A nonempty)p_A log2[(product_(j=1..|A|) i_j)/|A|!] <=(12/5)I(F_n). Here i_1<...<i_|A| enumerate A. Its root rarity cancels against v(Lambda+log2 Z) exactly.
+HYP: ["uniform Boolean cubes", "n integer >=2", "bits", "arbitrary single gate allowed by the conditioned forest theorem", "no fractional regular-gate estimate invoked"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: {"run_id": "20261011T221324Z-account05-A003-minimal-target-formulation", "path": "REPORT.md", "locator": "section 4"}
+
+### A021-UNIFORM-RARE-CORE-EXPANSION [file of A021] PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW
+STATEMENT: For every balanced Boolean b, integers t,k>=1, q=2^-k and c=1/ln2, F=1+A_k(product_{j=1}^t b_j-1) has H(F)=q[tH(b)+4k+2c]-q^2(2k+3c)+R(q), I(F)=q[tI(b)+k], and -2cq^3/[3(1-q)]<=R(q)<=0. The exact entropy is q t H(b)+(4q-2q^2)k-2(1-q)^2 log2(1-q); variance is 2q-q^2 and minority probability q/2. If k=o(t) and 2^-k t->0 for a fixed seed, H(F)/I(F)->H(b)/I(b) with influence tending to zero.
+HYP: ["uniform physical cube", "Boolean sign seed with mean zero", "disjoint independent seed copies and fresh point controls", "bit entropy"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T214020Z-account05-A021-rare-core-asymptotics\\REPORT.md"
+
+### A027-DATA-FIRST-PROPER-BLOCK [file of A027] PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW
+STATEMENT: For every Boolean u on m>=1 uniform core bits, r>=1 fresh control bits, p=2^(-r), d=1-Eu, and F=1+A_r(u-1), the proper core block W satisfies B_W(F)<=p(2dm+2)<=6pm. I_W(F)=pI(u), expected terminal influence=rpd, and all leaves are constants or point defects satisfying H<=4I. For each fixed eta>0, I(u)>=eta*m implies H(F)<=max(6/eta+2/ln(2),4)*I(F) by a single-use physical stopping ledger.
+HYP: ["Uniform normalized Boolean Fourier spectrum; entropy in bits", "Explicit core/control activation representation", "For the constant bound only: fixed eta>0 and I(u)>=eta*m"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: "~\\brain_workers\\FEI100_20261011\\agents\\A027\\runs\\20261011T215911Z-account05-A027-block-selection\\ADAPTIVE_BLOCK_SELECTION.tex"
+
+### A032-EXACT-PHASE-ADMISSION [file of A032] PROVED_WITH_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW
+STATEMENT: For every uniform Boolean cube, a spectral probability law supported on at most four labels is realizable iff it is a singleton of mass1 or the uniform law on an affine plane. A uniform affine-subspace law of dimension r is realizable iff r is even, and then H=r<=2D<=2I. For arbitrary supported laws, phase realizability is equivalent to phase realizability on the support affine-span quotient. The labelled four-variable law with Walsh magnitudes (8,8,4,4,4,4,4,4,4,4,0,0,0,0,0,0) and denominator256 passes all15 separate XOR pair partitions but has no realizing phase (all512 phases certified). Complete exact enumeration on n=4 yields2261 distinct Boolean spectral laws among975621 magnitude laws satisfying square norm and necessary even/common-mod4 arithmetic.
+HYP: ["Finite uniform cube; real Boolean outputs +/-1", "Labelled full spectral law, not an unlabelled mass histogram", "D=sum_i min(Inf_i,1-Inf_i); H in bits", "Finite enumeration fixes n<=4; all-dimensional claims proved analytically"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: ["REALIZABILITY_METHOD.md", "out/coupled_phase_certificate.json", "code/enumerate_exact.py", "out/summary_n4.json", "code/verify_direct.py"]
+
+### A036-POINT-DEFECT-TENSOR-NORMALIZED-PAYMENT-RECOVERY [file of A036] ANALYTICALLY_PROVED_LOCALLY_EXACTLY_CHECKED_PENDING_INDEPENDENT_REVIEW
+STATEMENT: For every finite disjoint tensor product of Boolean one-point defects f_m=1-2*1_point, m>=2, including physical translations, global sign, character multiplication, fresh character coordinates and irrelevant coordinates, let P=fhat^2, Q be the product of its actual spectral coordinate marginals, B=sum_i h2(P(i in S)), K=D2(P||Q), b=sign(fhat)*sqrt(Q) on the common support and zero off it, v_U=(sum_S b_S b_{S xor U})^2, Z=sum_U v_U, T=H(v/Z)-log2 Z, I=sum_i P(i in S). Then K>=max(0,B-4I), K>=T/4-8I, and B<=T/4+8I. In particular the latter two separately proved inequalities imply H(P)<=16I, while the direct factor entropy bound gives H(P)<=4I. All entropy and divergence quantities are in bits.
+HYP: ["Genuine Boolean sign on uniform finite cube", "Disjoint point-defect tensor factorization as stated", "Actual product-marginal reference Q, same-sign amplitude b", "Product-compatible actual phases; support terms retained", "All logarithms base two"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: "REPORT.md, Sections 1-7; code/check.py; out/verification.json"
+
+### A047-SHARP-FIXED-CHILD-RARE-SELECTOR [file of A047] PROVED_LOCALLY_REVIEW_PENDING
+STATEMENT: For every fixed finite pair of Boolean children g,h in a fixed product-biased Fourier basis, lim_{p->0}(J_X-M_X)/(p log2(1/p))=2Z+2E(gh)-2<=1/2-2(E(gh)-1/2)^2<=1/2, where Z=sum_{G_T=0}H_T^2. Equality 1/2 is attained by constant/quarter-defect children and by balanced children after fresh-character multiplication. If child Fourier supports are disjoint then M_X=J_X=h2(p) for every p in (0,1).
+HYP: ["finite Boolean sign children", "common fixed orthonormal product Fourier basis", "fixed interior data biases", "independent selector with p down to zero", "entropy in bits"]
+FIRST_UNPROVED: Uniform finite-p half-tax bound and nonreusing stopping-tree transport remain unproved.
+PROOF_SOURCE: "REPORT.md complete derivation; BOUNDARY_ASYMPTOTICS.tex"
+
+### A051-THRESHOLD-CRITICAL-EXISTENCE [file of A051] AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW
+STATEMENT: For actual Boolean signs on finite uniform cubes with entropy in bits, let C_* be the extended supremum of H/I over nonconstants. Fixed-dimensional maxima M_n exist, increase to C_*, and satisfy M_n<=n*2^(n-1). For every finite 0<=C<C_*, there exists a witness H>CI of least essential physical dimension; such witnesses approximate C_* along thresholds approaching C_* (or increasing to infinity). Disjoint tensor products add H,I,D_C and violating products have a violating factor. Balancing k tensor copies gives deficit kD_C-C. Balanced singleton activation has H=pH(g)+2rp(2-p)+h((1-p)^2), I=p(I(g)+r). For every nonconstant f, the activated balanced sequence k=m^2,r=m has R tending to R(f) with I and minority probability tending to zero. These operations preserve threshold admission after sufficient amplification but do not generally preserve dimension-criticality; arbitrary restriction nee
+HYP: ["Actual Boolean signs on finite uniform cubes", "Entropy in bits; constants never divided by influence", "Fixed finite C>=0; existence of a violation where criticality is invoked"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: {"path": "~\\brain_workers\\FEI100_20261011\\agents\\A051\\runs\\20261011T214321Z-account05-A051-near-extremizer-definition\\EXISTENCE_AND_LIMITS.md", "sha256": "123fcf33fb47d6823a28afd1a9f282e6f1d0f3bc38a929987510933c0bf020c8", "locat
+
+### A051-CRITICAL-BLOCK-DEFICIT [file of A051] AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW
+STATEMENT: Fix finite C>=0 and an actual Boolean dimension-critical C-witness f, meaning H(f)>CI(f) and its essential physical dimension is minimal among all such witnesses. Every proper physical restriction has deficit D_C<=0, and f has no proper nonconstant disjoint tensor factorization. For every nonempty block A of its essential coordinates, L_A-CI_A>=D_C(f)>0, with L_A=H(f)-E H(f_a)=H(Z_A|Z_Ac)+I(a;T), where a is uniform and T is sampled from the actual child Fourier spectrum. Every finite adaptive physical restriction tree satisfies D_C(f)=sum_internal pi_v(L_v-Cd_v)+sum_leaves pi_lD_C(f_l); with proper leaves the internal sum is at least D_C(f). No component-pruning, connectedness, or inherited descendant-criticality conclusion is asserted.
+HYP: ["Actual Boolean signs on finite uniform cubes", "Entropy in bits; constants never divided by influence", "Fixed finite C>=0; existence of a violation where criticality is invoked"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: {"path": "~\\brain_workers\\FEI100_20261011\\agents\\A051\\runs\\20261011T214321Z-account05-A051-near-extremizer-definition\\EXISTENCE_AND_LIMITS.md", "sha256": "123fcf33fb47d6823a28afd1a9f282e6f1d0f3bc38a929987510933c0bf020c8", "locat
+
+### A052-AFFINE-SYNDROME-CRITICAL-DISORDER [file of A052] AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW
+STATEMENT: For every actual Boolean sign f on a finite uniform cube with entropy in bits, every rank-r binary matrix V, every r-coordinate physical pivot block A with V_A invertible, and every syndrome word y0, set Y=VS for the squared Fourier law S, e0(t)=V_A^-1(y0+V_Ac t), b=E|S_A+e0(S_Ac)| and epsilon=P(Y!=y0). The actual restriction entropy drop L_A obeys L_A=H(Y|S_Ac)+J_A<=H(Y|S_Ac)+(2/ln2)b, with b<=r epsilon. If all proper physical restrictions have ratio at most R(f)=H(f)/I(f), then R(f)I_A<=H(Y|S_Ac)+(2/ln2)b<=h2(epsilon)+epsilon log2(2^r-1)+(2r/ln2)epsilon. If instead D_K(f)>0 and every proper restriction has D_K<=0, replace the left side by KI_A+D_K(f). For every nonzero physical flip mask u and pivot i in its support, epsilon_u=(1-|E f(x)f(x+u)|)/2 satisfies the rank-one bound R(f)I_i<=h2(epsilon_u)+(2/ln2)epsilon_u (or its threshold-critical version). No connectedness or universal infl
+HYP: ["Actual Boolean signs on finite uniform cubes; entropy in bits", "V has positive rank r; A consists of r physical coordinates and V_A is invertible over F2", "Ratio conclusions require I(f)>0 and the stated all-proper-physical-restriction comparison; constants have H=I=0", "Threshold conclusions require fixed finite K>=0, positive root deficit and nonpositive deficits in all proper physical restr
+FIRST_UNPROVED: None
+PROOF_SOURCE: {"path": "~\\brain_workers\\FEI100_20261011\\agents\\A052\\runs\\20261011T220243Z-account05-A052-critical-source-structure\\CRITICAL_SOURCE_STRUCTURE.tex", "sha256": "0980a162537c8bf566cb1218aa9772ebccda10eeec44eb9604fefb5a82a2cfd1", "
+
+### A062-BOOLEAN-DIMENSION-LIMIT-OBSTRUCTION [file of A062] AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW
+STATEMENT: There is an actual Boolean activation family F_k=1+A_k(g_k-1), with k fair controls, p_k=2^{-k}, and balanced g_k=y_0 times 2^{k-1} quadratic bent two-bit factors, for which I(F_k)=1/2+(k+1)2^{-k}<=3/2. Stopping after control revelation gives terminal influence (2^{k-1}+1)1_{A_k} and terminal entropy 2^k 1_{A_k}; on coupled infinite fair controls they converge to zero almost surely but their expectations tend to 1/2 and equal 1. Thus bounded root influence does not imply dimension-uniform terminal uniform integrability or allow exchanging these terminal expectations with almost-sure limits. Also an activated two-bit parity has root influence 3/2 and a child of influence 2, so residual influence need not decrease pathwise.
+HYP: ["k is a positive integer", "all control/data inputs are independent uniform signs", "controls are revealed in order and the tree stops at the first inactive control or after all k controls", "entropy is in bits", "dimension-limit comparison is across F_k, not unbounded stopping for one fixed finite-dimensional function"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: ["STOPPING_JUSTIFICATION.md", "out/LIMIT_CHECK.json", "out/CHECK.json"]
+
+### A066-NO-INTEGRABLE-HEAT-ENVELOPE [file of A066] AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW
+STATEMENT: There is no nonnegative measurable k with finite integral on (0,infinity) such that J_f(t)<=I(f)k(t) for every finite-dimensional Boolean sign f and almost every t. For f_n(x)=1-2 indicator{x=(1,...,1)}, n>=2, J_f_n(t)/I(f_n)=(2n-2)ln(2)exp(-2t)((1+exp(-2t))/2)^(n-1). Any such pointwise envelope must be at least ln(2)exp(-3/2)/t almost everywhere on (0,1/4]. Nevertheless integral J_f_n/I(f_n)=2(1-1/n)(1-2^(-n))ln(2)<=2ln(2). This refutes the integrable pointwise-envelope helper, not the integrated target or FEI.
+HYP: ["Finite uniform cube", "Boolean outputs in {-1,1}", "Natural logarithms; zero mass contributes zero", "J_f as defined in DERIVATION.md"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\DERIVATION.md"
+
+### A067-MAXIMAL-SUPPORT-ENVELOPE-NOGO [file of A067] AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW
+STATEMENT: No universal finite K can bound the preceding U(f) by K I(f). For p=2^(-n), n>=2, the actual Boolean dictator surgery g_n=x_1-2 indicator{x=all +} has I=1+(2n-4)p and U=n-1-(2n-4)p-4np^2, so U/I diverges. Further define the valid entropy envelope E_A=(log2(e))(1-hat f(A)^2)+2 sum_nonempty_R hat(f chi_A)(R)^2(d_(f chi_A)(R)-1) for every character anchor A. On F_n=Maj_3(z)*(1-2 indicator{y=all +}), with disjoint three-variable z and n-variable y, every E_A>=3n/2, although I(F_n)=3/2+2n2^(-n)<=5/2 and H(F_n)=2+o(1). Hence min_A E_A<=K I is false universally, including anchors outside the Fourier support. These are helper refutations, not FEI counterexamples.
+HYP: ["Every finite-dimensional uniform cube", "Boolean outputs in {-1,1}", "Entropy and logarithmic constants in bits", "Zero Fourier masses omitted; constants handled explicitly"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-account05-A067-hypercontractive-refinement\\DERIVATION.md"
+
+### A077-MULTISCALE-MINORITY-KL-LEDGER [file of A077] AUTHOR_PROVED_EXACT_CHECKED_PENDING_INDEPENDENT_REVIEW
+STATEMENT: For every n>=1 and every fresh disjoint block partition of n, the nested constant-seed activation tower is the Boolean point defect f_n=1-2*1{x=0}, with I=2n*2^(-n), H<=4I and H/I tending to 4. Every complete one-coordinate restriction tree, with irrelevant queries skipped, has blind exact-minority surcharge R=2^(-n)n(n-1), hence R/I=(n-1)/2. Retaining the exact base-two KL rebate gives Q<=2I and, for n>=2, 1-1/n<=Q/I<=1+3/n, hence Q/I tends to 1. For disjoint products and sequential factor trees, H,I,R,Q add.
+HYP: ["uniform independent physical bits", "Boolean sign outputs", "fresh disjoint activation blocks and constant negative seed", "entropy and KL in bits", "M is the sum of smaller parent spectral masses in each residual fiber", "full one-coordinate physical restriction tree; zero-M terms vanish", "tensor extension uses disjoint variable blocks and sequential factor trees"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: "REPORT.md; SPARSE_DEFECT_TOWERS.tex; code/check.py; out/validation.json"
+
+### A087-CONTROL-TREE-LAMBDA-KL-IDENTITY [file of A087] PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW
+STATEMENT: For every balanced Boolean core g on a finite uniform cube and k>=1 fresh fair point controls, let q=2^-k and F=1+A_k(g-1). On the physical control-first tree stopped at the first inactive control or at g, A061 one-sided logarithmic charge lambda_s equals the exact magnitude-mismatch KL residual at every active node s: lambda_s=u-u^2+u^2 log2((1-2u+2u^2)/u^2), u=2^-s. Its physically weighted sum is q(k+A_k)<=4kq with A_k=sum_(s=1..k)2^-s[2s-1+log2(1-2^(1-s)+2^(1-2s))]. Queried influence is kq, terminal influence qI(g), and terminal entropy qH(g); no terminal bound on arbitrary cores is implied.
+HYP: ["Uniform finite cube, Boolean balanced core", "Fresh disjoint point controls, k>=1", "Control-first stopping and fair physical branch probabilities", "Bit entropy; signed/magnitude equality only for these actual children"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md"
+
+### A092-AND-EXPLICIT-ENDPOINT-LOWER-BOUND [file of A092] ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW
+STATEMENT: For the actual Boolean sign f(x,y)=(-1)^(xy) with independent P(X=1)=p in (0,1/2] and P(Y=1)=1/4, and physical reveal A={X}, E=J_A-M_A >= p*(log2(1/p)/2-7). Consequently for every finite K>=0 and every integer k>2K+14, the choice p=2^(-k) gives E>Kp. This refutes universal singleton taxes bounded above by Kp; it does not refute B09 Delta, prove the sharp tax, or disprove uniform FEI.
+HYP: ["actual two-bit AND truth table", "independent interior product biases", "orthonormal biased Fourier basis including empty coefficient", "M_A=H(S_X|S_Y), J_A=I(X;S_Y) in the actual physical-child spectral experiment", "Shannon entropy in bits"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: {"run_id": "20261011T221121Z-account05-A092-counterexample-referee", "path": "REPORT.md", "locator": "complete derivation: explicit contributed bound", "finite_calibration": "out/REPRODUCTION.json"}
+
+### A096-SHARP-FIXED-PAIR-BIASED-ENDPOINT [file of A096] ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW
+STATEMENT: For every fixed finite residual cube with a fixed interior product measure and fixed Boolean sign children G,H, let X be independent Bernoulli(p), F_p=G when X=1 and H when X=0, M_p=H(S_X|S_residual) and J_p=I(X;T) in the physical-child/spectral experiment, in bits. If a=hat G,b=hat H,D=support(b),A=sum_D a_T^2,c=E[GH], then J_p-M_p=2(c-A)p log2(1/p)+O_{G,H,measure}(p), and 1/2-2(c-A)=2||P_D a-c b||_2^2+2(c-1/2)^2. Therefore -4<=2(c-A)<=1/2, and the supremum over fixed actual Boolean pairs of the limiting coefficient equals 1/2. Equality holds exactly when c=1/2 and P_D a=b/2, realized by H=1,G=(-1)^(y1*y2) on two uniform residual bits. No dimension-uniform remainder or exchange of supremum and limit is asserted.
+HYP: ["Finite residual cube", "Fixed genuine Boolean sign children", "Fixed interior residual product measure", "Independent selector bias p tends to zero", "Entropy in bits"]
+FIRST_UNPROVED: None
+PROOF_SOURCE: {"path": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261011T215017Z-account05-A096-live-gap-ledger\\REPORT.md", "locator": "complete derivation, equations (1)-(4)"}
+

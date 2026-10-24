@@ -1,0 +1,50 @@
+{
+  "command": "python -X utf8 benchmark_p0209.py",
+  "runs": [
+    {
+      "command": "python -X utf8 baseline_p0209.py",
+      "returncode": 0,
+      "elapsed_wall_seconds": 5.1637665999587625
+    },
+    {
+      "command": "python -X utf8 p0209_check.py",
+      "returncode": 0,
+      "elapsed_wall_seconds": 7.59341349999886
+    }
+  ],
+  "baseline": {
+    "unchanged_copy_of": "~/<private-repo>/06_math_research/prob1000_lean_20260908/p0209.py",
+    "monte_carlo_scale_count": 4,
+    "monte_carlo_paths": 80000,
+    "gaussian_fast_process_surrogate": true,
+    "exact_fraction_identity_cases": 0,
+    "analytic_lower_bound_cases": 0,
+    "measured_K_distances": [
+      {
+        "s": 30,
+        "distance": 0.4783
+      },
+      {
+        "s": 100,
+        "distance": 0.5054
+      },
+      {
+        "s": 300,
+        "distance": 0.5086
+      },
+      {
+        "s": 1000,
+        "distance": 0.5063
+      }
+    ]
+  },
+  "replacement": {
+    "monte_carlo_paths": 0,
+    "gaussian_fast_process_surrogate": false,
+    "exact_fraction_identity_cases": 6,
+    "analytic_lower_bound_cases": 6,
+    "largest_scale": 10000,
+    "largest_scale_K_lower_bound": 0.499749999952824
+  },
+  "scope": "Verification-quality comparison only. No deployed recall-performance or speedup claim."
+}

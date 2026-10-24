@@ -1,0 +1,146 @@
+{
+  "snapshot_utc": "2026-09-14T22:19:48.858151+00:00",
+  "source_hashes": {
+    "SESSION.md": "6281283ec5344796e80c58027e60209d6fd78b83201c43156b705a5a93b1349c",
+    "repository-policy.md": "f485859d8a19bc831493a1bf495fc4706c7356eb59e9664bae1702658485be6a",
+    "QSO_GLOBAL_051.md": "395951b0722fa0e5dd0345f619182b80047b1d3c8d4b8bbc742cfa0cb30f222e",
+    "QSO_AVERAGING_RANGE.md": "19e0baa68562f1732fb7942b076669e47ffc84abe7be7cf6d4c1445e92e259ac",
+    "FOUR_TYPE_UNIQUENESS.md": "1d9e00b127318c24f599f4790264699ba85311ff998bca79ab85dc01f80f8ca4",
+    "QSO_HALF_STEP_EXPLICIT.md": "55bcc63ea54c4ff2df867816d9d46b4812e37fbec3deabaab0db0c43e66cb681"
+  },
+  "two_step_cap": {
+    "bernstein_coefficients_checked": 5,
+    "derivative_certificates": [
+      {
+        "k": 0,
+        "derivative_bernstein_on_lambda_interval": [
+          "-1/4",
+          "-9/40",
+          "-1997/10000"
+        ],
+        "derivative_sign": -1,
+        "max_at_lambda": "1/2",
+        "maximum": "3/8",
+        "gap_below_2_over_5": "1/40"
+      },
+      {
+        "k": 1,
+        "derivative_bernstein_on_lambda_interval": [
+          "1/8",
+          "29/200",
+          "3303/20000"
+        ],
+        "derivative_sign": 1,
+        "max_at_lambda": "51/100",
+        "maximum": "752901/2000000",
+        "gap_below_2_over_5": "47099/2000000"
+      },
+      {
+        "k": 2,
+        "derivative_bernstein_on_lambda_interval": [
+          "5/24",
+          "259/1200",
+          "13397/60000"
+        ],
+        "derivative_sign": 1,
+        "max_at_lambda": "51/100",
+        "maximum": "795983/2000000",
+        "gap_below_2_over_5": "4017/2000000"
+      },
+      {
+        "k": 3,
+        "derivative_bernstein_on_lambda_interval": [
+          "-1/8",
+          "-27/200",
+          "-2903/20000"
+        ],
+        "derivative_sign": -1,
+        "max_at_lambda": "1/2",
+        "maximum": "3/8",
+        "gap_below_2_over_5": "1/40"
+      },
+      {
+        "k": 4,
+        "derivative_bernstein_on_lambda_interval": [
+          "-1/4",
+          "-53/200",
+          "-2797/10000"
+        ],
+        "derivative_sign": -1,
+        "max_at_lambda": "1/2",
+        "maximum": "3/8",
+        "gap_below_2_over_5": "1/40"
+      }
+    ],
+    "v_zero_maximum": "387549/1000000",
+    "v_zero_gap_below_cap": "12451/1000000",
+    "upper_envelope_convex_v_second_derivative": "2 lambda^3 > 0",
+    "common_scalar_bound": "795983/2000000"
+  },
+  "overlap": {
+    "q": "2/5",
+    "d": "1/5",
+    "epsilon": "1/50",
+    "minimum_preimage_other_coordinate": "39/245",
+    "theta_at_epsilon": "2401/3042",
+    "h_at_epsilon": "641/16900",
+    "h_minus_epsilon": "303/16900",
+    "other_midpoint_mass_minus_epsilon": "4/25"
+  },
+  "transfer_polytope": {
+    "capped_mass_vertices": 12,
+    "probability_cube_vertices": 32,
+    "exact_vertex_checks": 384,
+    "attained_maximum": "2/5",
+    "limitation": "This certifies the two-pair transfer inequality; it does not replace the third-image overlap proof."
+  },
+  "zero_sum_cut_norm": {
+    "ordered_column_pairs": 12,
+    "subsets_per_pair": 16,
+    "category_counts": {
+      "empty_or_full": 24,
+      "forward_singleton": 12,
+      "reverse_separating": 48,
+      "same_side": 72,
+      "forward_pair": 24,
+      "forward_triple": 12
+    },
+    "uniform_bounds_same_side_forward_pair_reverse": [
+      "2499/2500",
+      "9/10",
+      "53/100"
+    ],
+    "uniform_rate": "2499/2500",
+    "gap_from_one": "1/2500"
+  },
+  "below_half": {
+    "entry_polynomial_minimum_on_q_to_one": "1/25",
+    "entry_polynomial_derivative_bernstein_on_2_over_5_to_one": [
+      "11/5",
+      "1"
+    ],
+    "entry_bound": "d=lambda*(3*q-q^2-1); N=ceil((1-q)/d)",
+    "cap": "q=max(2/5,lambda), 0<lambda<1/2",
+    "rate": "L=1-lambda*(1-2*q)"
+  },
+  "half_step_dependency": {
+    "cap": "49/128",
+    "d": "15/64",
+    "epsilon": "225/8192",
+    "theta_at_epsilon": "2048/2401",
+    "h_at_epsilon": "598335/19668992",
+    "h_minus_epsilon": "29055/9834496",
+    "R": "7967/8192"
+  },
+  "distinct_0502_perturbative_method": {
+    "lambda_upper": "251/500",
+    "e_upper": "1/500",
+    "exact_error_coefficient_upper": "1564501/125000",
+    "rounded_coefficient": 13,
+    "R": "7967/8192",
+    "uniform_rate": "1022499/1024000",
+    "gap_from_one": "1501/1024000"
+  },
+  "live_source_hashes_differing_at_run": {},
+  "all_assertions_passed": true
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "fei-run-progress/2",
+  "run_id": "20261012T050125Z-account01-B18-k3-fiber-review",
+  "stream": "B18",
+  "packet_ids": ["A088"],
+  "primary_packet_id": "A088",
+  "attempt_id": "B18-A088-K3-FIBER-REVIEW-01",
+  "attempt_counter": 1,
+  "bounded_objective": "Independently reconstruct B07-A034-K3-FIBER-v1 from the signed Boolean Walsh identities, challenge its quantifiers, and locate the first unsupported line.",
+  "reviewed_packet": "A034",
+  "reviewed_claim": "B07-A034-K3-FIBER-v1",
+  "reviewed_source_commit": "f73eca4c1bc554d485ae8d2439060bdf781d7dea",
+  "source_registry": {
+    "owner_control_revision": "2026-10-12.1",
+    "owner_order_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "stream_contract_blob": "e6e014bc066a2f8b0454a1944ef6e03b969a5690"
+  },
+  "prior_mathematical_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "new_mathematical_status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_SCOPE_WITH_TWO_RECORD_ONLY_REPAIRS; K3_FEI_OPEN; FULL_FEI_OPEN",
+  "mathematical_delta": "The three-fiber classification, exact 4/3 non-character charge, odd product-row cylinder reserve, and general-k point-defect formula were reconstructed independently. The first unsupported layer is confirmed to be joint mod-4 control for even nu'=2 rows.",
+  "exact_repairs": [
+    "TeX equation (4) needs multiplication instead of a comma.",
+    "The duplicated statement_sha256 values in B07 CLAIMS.json must be regenerated."
+  ],
+  "acceptance": {
+    "A088_original_proof_read": "MET",
+    "A088_independent_reconstruction": "MET",
+    "A088_endpoint_and_realizability_checks": "MET",
+    "A088_first_gap_located": "MET",
+    "packet_complete": false
+  },
+  "finite_check": {
+    "status": "PASS",
+    "arithmetic": "integer and Fraction only",
+    "seed": null,
+    "command": "python3 INDEPENDENT_AUDIT.py",
+    "output": "CHECK.out",
+    "scope": "all 256 three-bit fibers, all point-defect major characters through k=9, and exhaustive one/two-bit integer product-row numerator parity controls"
+  },
+  "first_unsupported_line": "Even product rows with normalized granularity nu'=2 have only mod-2 cancellation; no common mod-4 event or paid multi-row reserve is proved.",
+  "next_action": "Classify the joint mod-4 residues 2^{r+2} ghat_T(V) across all eight rows for nu'=2, retaining semibent and paired-point-defect signs; prove a paid common reserve or extract a genuine Boolean row-local falsifier.",
+  "routing": {
+    "accepted_claim_consumers": ["A003", "A032", "A033", "A079", "A096", "B20"],
+    "record_repair_owner": "B07",
+    "future_extension_reviewers": ["A094", "A085"]
+  },
+  "deliverable_status": {
+    "canonical": "SAVED_AND_EXACT_READBACK_VERIFIED_AT_b9c8b564c9241ee6b199358edb6f90503e48f8b6",
+    "brain_mirror": "SAVED_AND_EXACT_READBACK_VERIFIED_AT_6eb9a3dabc7dc8252fce02afa7127526e5f35fbf",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN"
+}
+

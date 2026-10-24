@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B14",
+  "run_id": "20260923T025915Z-account02-B14-QFORM-r24",
+  "role": "Translations and localization",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "fresh_main_initial": "373586c26f8d20611243bc5d61a25780aba36f3f",
+    "fresh_main_prepublication": "81fcbfd6e199ab32f5feee75e6f9646f34bd7b52",
+    "owner_control_revision": "2026-09-22.15",
+    "full_target_status": "OPEN",
+    "continuity_status": "SEPARATE_OPEN"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-RENYI-OBSTRUCTION-v1",
+    "QFORM-NO-MONOTONE-CAP-ONLY-CONJUGATE-COMPILER-v1"
+  ],
+  "required_claude_source": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "directory": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "result_applied": "D_k theorem: for k>=5 and Z_k=e_k(M^TM), ||p_Q||inf <= sqrt(2e) k/(k-4) Z_k^(-1/(2k)), with no row-marginal condition and arbitrary self blocks/affine terms"
+  },
+  "partner_result": {
+    "partner": "account03/B14",
+    "run_id": "20260923T023535Z-account03-B14-QFORM-r24",
+    "canonical_report_commit": "2fe2734d7fc9a7e9a29edd26cbeda837fee10900",
+    "overlap_threshold_commit": "9f7efc2c599ca92ad63e2f55a526498132d8604b",
+    "applied_at": "Exact conjugate-fiber cap M(u)=1/(2m(u)) and exact formula int m_N^gamma = 2/(gamma+1)[(1-1/N)N^(1-gamma)+1/N]"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-OVERLAP-POWER-LOCALIZATION-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "An unnormalized local small-ball bound C w(u)^gamma |J| transfers with the same C whenever 0<=w<=1, int w=1 and gamma>=1; the exponent one is sharp for unrestricted fragmented conjugate fibers."
+    },
+    {
+      "id": "QFORM-SIMULTANEOUS-VARIABLE-CAP-LOCALIZATION-v1",
+      "status": "PROVED_SUPPORTING_LOCALIZATION_THEOREM",
+      "statement": "For arbitrary positive cap vector M and arbitrary parameter family of convex TV-lsc output functionals, the supremum over all product laws with marginal caps M equals the supremum over compact finite-fragment variable-cap extreme products, simultaneously over all parameters including affine shifts."
+    },
+    {
+      "id": "QFORM-Dk-CONDITIONING-ORDER-N2-BARRIER-v1",
+      "status": "PROVED_TARGET_VALID_MECHANISM_OBSTRUCTION",
+      "statement": "For every fixed k>=5, a target-valid hyperbolic cross form with eigenvalues +/-1 has direct D_k density bound C_k independent of fragment count N, while condition->normalize conjugate fibers->D_k->average produces an exact certificate growing as const(k) N^2."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8c74cde9c5de560923027d3af8debe2da5c79bc4",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T025915Z-account02-B14-QFORM-r24/REPORT.md",
+    "readback_blob": "9040c427b2e52bb423b62c24bea06d57b4d40da6",
+    "early_checkpoint_commit": "5acbafbb6788b05995495929ec163601208664c1"
+  },
+  "handoff": {
+    "commit": "6e5e11b815389dd39614ea404ef8175b5e21f581",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B14/20260923T025915Z-account02-B14-QFORM-r24.md",
+    "readback_blob": "234d01ed95e7d4a1a1774fcb48e3d04c51fcbfb6"
+  },
+  "first_unpaid_implication": "QFORM-UNNORMALIZED-DECOUPLING-OR-KERNEL-LEAKAGE-v1: in every remaining no-pivot/heavy-star branch, take an existing volume/ridge/bank exit before normalized fiber conditioning, or prove a product-preserving kernel-leakage/positive-copy estimate retaining at least one full overlap or subprobability mass power for each independently introduced conditioning variable until reciprocal inversion is complete.",
+  "scope_warnings": [
+    "The D_k conditioning construction refutes only a proof ordering, not D_k and not QFORM.",
+    "Uniformity in affine shifts does not by itself justify normalizing thin conditional fibers before averaging.",
+    "No moments, bounded supports, fixed fragment counts, log-concavity, post-rotation independence, or law-uniform matrix perturbation continuity are assumed."
+  ],
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  }
+}

@@ -1,0 +1,111 @@
+\section*{A097: retain the posterior-normalization credit in the singleton rowwise minimum}
+
+All logarithms are base two. Let \(f:\{-1,1\}^n\to\{-1,1\}\) be genuine Boolean, \(p(S)=\widehat f(S)^2\), and \(\pi(A)=\sum_{S\supseteq A}p(S)\). The exact signed restriction identity is
+\[
+G=D_{\ge2}+K^{(0)}+K^{(1)},\qquad
+D_{\ge2}=\sum_i(B_i-\Gamma_i)+\sum_i\sum_{|A|\ge2}K_{i,A}.
+\]
+For each \(j\), set
+\[
+P_j=\pi(\{j\}),\quad m_{ij}=p(\{j\})+p(\{i,j\}),\quad
+r_j=\sum_{i\ne j}p(\{i,j\}),\quad
+s_j=\sum_{\substack{|S|\ge3\\j\in S}}p(S),
+\]
+\[
+V_j=\sum_{i\ne j}m_{ij}\log_2(P_j/m_{ij}),\qquad
+L_j=\sum_{i\ne j}m_{ij}\log_2P_j.
+\]
+Zero-mass terms are omitted. Since \(P_j\le1\), \(L_j\le0\).
+
+\paragraph{Refined singleton row.}
+Fix \(i\ne j\), put \(a=\widehat f(\{j\})\), \(b=\widehat f(\{i,j\})\), \(m=a^2+b^2\), and let \(C\) be the signed upper correlation. The two physical restrictions have singleton coefficients \(a\pm b\) and singleton influences \(P_j\pm2C\). Boolean singleton granularity gives
+\[
+|a\pm b|\le P_j\pm2C.
+\]
+For \(m>0\), define
+\[
+\rho_\pm={(a\pm b)^2\over2m},\qquad
+\sigma_\pm={P_j\pm2C\over2P_j}.
+\]
+Terms of zero posterior mass are omitted. Then
+\[
+{\rho_\pm\over\sigma_\pm}
+={(a\pm b)^2P_j\over m(P_j\pm2C)}
+\le {P_j|a\pm b|\over m}
+=P_j\sqrt{{2\rho_\pm\over m}}.
+\]
+Averaging logarithms against \(\rho\) yields
+\[
+D_2(\rho\Vert\sigma)
+\le \log_2P_j+\frac12(1-h_2(\rho_+))-\frac12\log_2m.
+\]
+Multiplying by \(m\) and regrouping,
+\[
+K_{i,\{j\}}\le
+\frac12m\log_2(P_j/m)+\frac12m\log_2P_j
++\frac12m(1-h_2(\rho_+)).
+\]
+The sharp scalar root estimate gives
+\[
+m(1-h_2(\rho_+))
+\le {2\over\ln2}\min\{a^2,b^2\}
+\le {2\over\ln2}b^2.
+\]
+Thus
+\[
+K_{i,\{j\}}\le
+\frac12m\log_2(P_j/m)+\frac12m\log_2P_j
++{p(\{i,j\})\over\ln2}.
+\]
+Summing over \(i\ne j\) proves
+\[
+K_j:=\sum_{i\ne j}K_{i,\{j\}}
+\le {1\over2}V_j+{1\over2}L_j+{r_j\over\ln2}.
+\tag{1}
+\]
+
+\paragraph{Rowwise minimum and exact GU implication.}
+The independently proved ternary-derivative row bound remains
+\[
+K_j\le {9\over\ln2}(2r_j+s_j).
+\tag{2}
+\]
+Taking the minimum of (1) and (2) separately for each \(j\), then using the sharp root payment \(K^{(0)}\le(2/\ln2)M_1\), gives the all-dimensional inequality
+\[
+\boxed{G\le D_{\ge2}+{2\over\ln2}M_1+
+\sum_j\min\left\{
+{1\over2}V_j+{1\over2}L_j+{r_j\over\ln2},
+{9\over\ln2}(2r_j+s_j)
+\right\}.}
+\tag{3}
+\]
+This strictly refines the prior rowwise-minimum cut because \(L_j\le0\). It retains the signed term and every \(|A|\ge2\) KL row.
+
+For \(R=G-4I-3U/4\), tensor additivity and the degree-at-most-two bound \(G\le2I\) reduce the remaining proof to tensor-prime genuine Boolean \(f\) with \(R>0\) and Fourier degree at least three. It is sufficient to prove
+\[
+\boxed{D_{\ge2}+{2\over\ln2}M_1+
+\sum_j\min\left\{
+{1\over2}V_j+{1\over2}L_j+{r_j\over\ln2},
+{9\over\ln2}(2r_j+s_j)
+\right\}\le4I+{3\over4}U.}
+\tag{4}
+\]
+Equation (4) is OPEN. If proved on the stated class, (3) yields \(G\le4I+3U/4\) universally.
+
+\paragraph{Strictness.}
+For \(n=3\), take \(f=+1\) at one input and \(-1\) elsewhere. Then \(p(\varnothing)=9/16\), \(p(S)=1/16\) for every nonempty \(S\), and for each \(j\),
+\[
+P_j=1/4,\ m_{ij}=1/8,\ V_j=1/4,\ L_j=-1/2,\ r_j=1/8,\ s_j=1/16.
+\]
+The previous first branch equals \(1/8+1/(8\ln2)\); the refined first branch equals \(1/(8\ln2)-1/8\), reducing it by \(1/4\) per row and \(3/4\) in total. The ternary branch is larger on this witness.
+
+\paragraph{Conditional FEI reduction, verified from source.}
+If \(G\le aI+bU\) universally with \(b<1\), weighted averaging of \(\sum_i\Delta_iU=G\) against \(\sum_i\operatorname{Inf}_i=I\) gives a relevant coordinate with
+\[
+\Delta_iU\le(aI+bU)\operatorname{Inf}_i/I.
+\]
+Induction on both physical children, with \(C=a/(1-b)\), \(r=U/I\), and \(t=\operatorname{Inf}_i/I>0\), yields
+\[
+r\le C(1-t)+(a+br)t=C+bt(r-C).
+\]
+Since \(1-bt>0\), \(r\le C\), so \(U\le aI/(1-b)\). The separately proved source estimate \(H\le2(I-\operatorname{Var}f)+2U\) then gives \(H\le(2+2a/(1-b))I\). For \((a,b)=(4,3/4)\), this is \(U\le16I\) and \(H\le34I\).

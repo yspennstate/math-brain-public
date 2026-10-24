@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "checks": {
+    "q_3_over_2_physical_constant": 9.524406311809196,
+    "delta_sample": {
+      "delta": 0.0078125,
+      "cross_scale": 11.313708498984761,
+      "lambda_plus": 1.0039138793654276,
+      "lambda_minus": -0.9961013793654276,
+      "three_abs_eigenvalues_at_least_one": true,
+      "all_physical_diagonals_below_1_over_64": true,
+      "a_times_cross_scale_squared": 1.0
+    },
+    "delta_second_sample": {
+      "delta": 0.0009765625,
+      "cross_scale": 32.0,
+      "lambda_plus": 1.0004884004592824,
+      "lambda_minus": -0.9995118379592824,
+      "three_abs_eigenvalues_at_least_one": true,
+      "a_times_cross_scale_squared": 1.0
+    },
+    "companion_tail_cut_rank": {
+      "symbolic_row_space_dimension_upper_bound": 2,
+      "e3_every_disjoint_cut": 0
+    }
+  },
+  "notes": "Numerical values support the exact algebra in REPORT.md; they are not used as proof. The spectrum and cross-rank statements are proved symbolically in the report."
+}

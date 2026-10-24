@@ -1,0 +1,42 @@
+{
+  "schema": "fei-campaign-claims/1",
+  "full_FEI_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "B20-A097-ACTIVATION-WEIGHTED-ENDPOINT-TAX-v1",
+      "status": "PROVED",
+      "scope": "The exact B05 sparse-activation bent-defect family for every even k >= 4",
+      "statement": "With delta=2^-k, p=2^-2k, d=p*delta, and L the B05 selector-packet entropy, L < p*Delta(delta)+3d, where Delta(u)=u log_2((1-u)/u).",
+      "proof_location": "REPORT.md#3-proved-cross-route-substitution",
+      "proof_dependencies": [
+        {
+          "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO-v1",
+          "version": "report blob 1b7e3cb572354cac4e506d7de0a3ed8af720472b",
+          "use": "Exact Boolean family and four packet classes",
+          "review": "Accepted by independent B19 report blob dcec4cb77233a7b233b4798b25aab5f2dd5c82b6"
+        }
+      ],
+      "independent_review": "PENDING_A090_OR_A094",
+      "universal_FEI_implication": false
+    },
+    {
+      "claim_id": "B20-A097-OVERLAP-SAFE-TAX-LIFT-v1",
+      "status": "OPEN",
+      "scope": "Arbitrary shared-variable activated Boolean decompositions",
+      "statement": "Create p*Delta(delta) once at a rare activated piece and transport it to selector packet entropy without assuming a fresh independent defect coordinate or reusing credit.",
+      "proof_dependencies": [],
+      "first_gap": "The B09 physical product-coordinate hypothesis does not match a defect indicator sharing variables with the source phase.",
+      "universal_FEI_implication": "CONDITIONAL_ONLY"
+    },
+    {
+      "claim_id": "B09-TAXFREE-BIASED-UNCERTAINTY",
+      "status": "REFUTED",
+      "scope": "Arbitrary interior product biases and genuine Boolean gates",
+      "statement": "J_A <= M_A",
+      "witness": "g(X,Y)=(-1)^(XY), P(X=1)=1/8, P(Y=1)=1/4, A={X}",
+      "certified_margin_bits": ">0.1195",
+      "evidence_blob": "c3adb486c8ca9f7a35f384ee82942eef66bd64be",
+      "dependent_claim_action": "Retire exact helper; re-audit any claim using it without Delta_A(p)."
+    }
+  ]
+}

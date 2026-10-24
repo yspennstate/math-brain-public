@@ -1,0 +1,90 @@
+{
+  "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "open_mode": "ro",
+  "tables": [
+    {
+      "name": "nodes",
+      "sql": "CREATE TABLE nodes (\n    id TEXT PRIMARY KEY,\n    kind TEXT NOT NULL,\n    title TEXT NOT NULL,\n    body TEXT NOT NULL,\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)",
+      "columns": [
+        [
+          0,
+          "id",
+          "TEXT",
+          0,
+          null,
+          1
+        ],
+        [
+          1,
+          "kind",
+          "TEXT",
+          1,
+          null,
+          0
+        ],
+        [
+          2,
+          "title",
+          "TEXT",
+          1,
+          null,
+          0
+        ],
+        [
+          3,
+          "body",
+          "TEXT",
+          1,
+          null,
+          0
+        ],
+        [
+          4,
+          "metadata_json",
+          "TEXT",
+          1,
+          null,
+          0
+        ],
+        [
+          5,
+          "digest",
+          "TEXT",
+          1,
+          null,
+          0
+        ],
+        [
+          6,
+          "created_at",
+          "TEXT",
+          1,
+          null,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "reflex_sources",
+      "sql": "CREATE TABLE reflex_sources (\n    reflex_id TEXT NOT NULL REFERENCES reflexes(id),\n    mistake_id TEXT NOT NULL REFERENCES mistakes(id),\n    PRIMARY KEY(reflex_id, mistake_id)\n)",
+      "columns": [
+        [
+          0,
+          "reflex_id",
+          "TEXT",
+          1,
+          null,
+          1
+        ],
+        [
+          1,
+          "mistake_id",
+          "TEXT",
+          1,
+          null,
+          2
+        ]
+      ]
+    }
+  ]
+}

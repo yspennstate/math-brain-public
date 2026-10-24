@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T103024Z-b19-fei-r11",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "account": "account03",
+  "slot": "B19",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "research_mode": "WITHOUT_VERIFIED_BRAIN",
+  "claims": [
+    {
+      "claim_id": "B19_SELECTED_PAIR_IPROJ_PAYMENT_20260922",
+      "status": "PROVED_IN_THIS_RUN_NOT_INDEPENDENTLY_REVIEWED",
+      "statement": "For the full Fourier law pi of any nonconstant uniform-cube Boolean function in the fixed centered gauge, let v=Pr_pi[X nonempty], q_i=Pr_pi[i in X], let P=pi conditioned nonempty, let Q_r be the exact maximum-entropy nonempty I-projection with r_i=q_i/v and parameter c, and lift Q_r back to the full law by preserving empty mass. For every selector alpha on ordered pairs independent of X, v K_occ >= sum_{i!=j} alpha_ij d_2(s_ij || (c/v)q_iq_j). Using the source co-pair identity omega_{i<-j}=4s_ij-2c_{i<-j}, this implies v K_occ >= sum alpha_ij Psi_{(c/v)q_iq_j}(omega_{i<-j}), where Psi_b(omega)=d_2(omega/4||b) for omega>4b and 0 otherwise.",
+      "scope": "Uniform-cube Boolean functions; fixed median/character gauge used by the co-pair source; one randomized selected physical pair. This is not an additive sum over all pair projections.",
+      "proof": "REPORT.md Sections 2-4; lifted I-projection identity plus KL data processing and monotonicity of Bernoulli KL.",
+      "dependencies": [
+        {
+          "mode": "uses_proved_source_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "result": "Exact nonempty occurrence I-projection Q_r and K_occ=D(P||Q_r)."
+        },
+        {
+          "mode": "uses_proved_source_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "85ffa60db26997421d980b1f86c03d82259504ca",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md",
+          "result": "s_ij=p_ij/4+o_ij and omega_{i<-j}=4s_ij-2c_{i<-j}."
+        },
+        {
+          "mode": "other_account_result_applied",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "200e3fd37fe201f78d882ba8809414d201efb829",
+          "path": "proofnet24/P03-fei/fleet-2026-09-22/account04/B18/20260922T091529Z-surplus-hidden-curvature/REPORT.md",
+          "result": "Path-C hidden-curvature bank U4 and explicit tensor-centered/nonreusing payment gap."
+        }
+      ]
+    },
+    {
+      "claim_id": "B19_CORRECT_CONDITIONAL_PRODUCT_PAIR_BASELINE_20260922",
+      "status": "PROVED_IN_THIS_RUN_NOT_INDEPENDENTLY_REVIEWED",
+      "statement": "The exact pair reference seen by K_occ after restoring the true empty spectral mass is b_ij=(c/v)q_iq_j, not q_iq_j in general. The two coincide exactly when c=v.",
+      "scope": "Same as B19_SELECTED_PAIR_IPROJ_PAYMENT_20260922.",
+      "proof": "REPORT.md Lemma 2.1."
+    },
+    {
+      "claim_id": "B19_RAW_ORIENTATION_NOT_KL_CREDIT_REGRESSION_20260922",
+      "status": "EXACT_REGRESSION_CHECK_IN_THIS_RUN",
+      "statement": "For f(a,b,c,d)=(-1)^(ab+cd), all 16 Walsh squares are 1/16, v=c=15/16, q_i=1/2, K_occ=0, and for a cross-factor pair s=b=1/4 while the source tensor formula gives omega=1=4b. Thus raw hidden orientation can be positive with zero occurrence KL; the baseline subtraction is necessary.",
+      "scope": "One explicit genuine four-bit Boolean tensor; not a terminal critical core and not a counterexample to FEI.",
+      "verification": {
+        "checker": "CHECKER.py",
+        "captured_output": "CHECKER.out",
+        "terminator": "FEI_B19_SELECTED_PAIR_BASELINE_REGRESSION_PASS"
+      }
+    }
+  ],
+  "remaining_implication": "TERMINAL-SELECTOR-TO-KL: construct a realizable state-dependent pair selector on every uncovered ratio-critical terminal branch whose exact selected-pair KL charge controls the still-unpaid trigger/entropy deficit with a dimension-independent constant, while the conditional-product baseline is separately absorbed by tensor-centered criticality or forces an affordable block.",
+  "partner_status": {
+    "designated_partner": "account04/B19",
+    "compatible_completed_fei_handoff_found_at_prepublication_snapshot": false,
+    "fallback_completed_other_account_result_consumed": "account04/B18 surplus-hidden-curvature"
+  }
+}

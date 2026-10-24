@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "scope": "Every Boolean function through n=4, every pivot",
+  "dimensions": [
+    {
+      "n": 0,
+      "functions": 2,
+      "splits": 0
+    },
+    {
+      "n": 1,
+      "functions": 4,
+      "splits": 4
+    },
+    {
+      "n": 2,
+      "functions": 16,
+      "splits": 32
+    },
+    {
+      "n": 3,
+      "functions": 256,
+      "splits": 768
+    },
+    {
+      "n": 4,
+      "functions": 65536,
+      "splits": 262144
+    }
+  ],
+  "totals": {
+    "functions": 65814,
+    "splits": 262948,
+    "high_influence": 95482,
+    "beta_zero_high": 9262,
+    "alpha_one": 1082,
+    "alpha_one_nonconstant_B": 1062,
+    "alpha_zero": 1082
+  },
+  "observed_maxima": {
+    "delta_over_nu_high": 7.4249513495100725,
+    "delta_over_conditional_entropy": 2.0,
+    "empty_entropy_over_delta": 1.1811669518817753
+  },
+  "entropy_tolerance": 2e-11,
+  "exact_checks": [
+    "signed derivative mean and A mean bounds",
+    "nu >= alpha(1-alpha)",
+    "influence gap alpha",
+    "variance gap beta^2",
+    "I-Var gap nu",
+    "low-alpha nu >= alpha/2"
+  ],
+  "numerical_checks": [
+    "Delta <= 2 conditional bit entropy",
+    "high-alpha Delta <= 14 nu",
+    "alpha=1 Delta=0",
+    "empty entropy <2 delta",
+    "nonempty entropy <=nu+delta"
+  ]
+}

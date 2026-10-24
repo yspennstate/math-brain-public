@@ -1,0 +1,11 @@
+P13 T02 overlapping-reset finite-to-infinite checker
+reset_check w=1 m=2 reachable=14 targets_unique=2 PASS
+reset_check w=2 m=4 reachable=224 targets_unique=2 PASS
+reset_check w=3 m=6 reachable=3098 targets_unique=2 PASS
+reset_check w=4 m=8 reachable=39774 targets_unique=2 PASS
+w=1 m=2 E_tau=10 old_additive=16 old/new=1.600000000000 tail_N=4:89/128 old_block_tail=49/64 strict_tail_gain=9/128
+w=2 m=4 E_tau=170 old_additive=512 old/new=3.011764705882 tail_N=8:31745/32768 old_block_tail=16129/16384 strict_tail_gain=513/32768
+w=3 m=6 E_tau=2730 old_additive=12288 old/new=4.501098901099 tail_N=12:8366081/8388608 old_block_tail=4190209/4194304 strict_tail_gain=14337/8388608
+w=4 m=8 E_tau=43690 old_additive=262144 old/new=6.000091554131 tail_N=16:2147024897/2147483648 old_block_tail=1073676289/1073741824 strict_tail_gain=327681/2147483648
+w=5 m=10 E_tau=699050 old_additive=5242880 old/new=7.500007152564 tail_N=20:549746900993/549755813888 old_block_tail=274876858369/274877906944 strict_tail_gain=6815745/549755813888
+ALL_EXACT_CHECKS_PASS

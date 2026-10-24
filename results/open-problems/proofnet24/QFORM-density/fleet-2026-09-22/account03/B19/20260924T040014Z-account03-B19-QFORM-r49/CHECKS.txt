@@ -1,0 +1,34 @@
+account03/B19 r49 deterministic/numerical regression
+seed = 20260924049
+
+live constants:
+tau = 1.52587890625e-05
+b0 = 0.011048543456039804
+theta0 = 0.0013829779184588303
+epsilon0 = 0.00026608729606929297
+eta0 = 0.08541402203824304
+half_scale_leverage = 0.029182220642997872 < 1/32 = 0.03125
+
+rank-two deleted-subspace transport:
+10000 cases
+violations = 0
+max lhs/bound = 0.9650274809877549
+
+symmetric two-anchor common-plane rigidity:
+10000 cases
+violations = 0
+max residual-row/bound = 0.18662535174635408
+
+row-small => spectral-diffuse near-sharp rank-one stress:
+1000 cases
+violations = 0
+max leverage/bound = 0.9996157482570733
+
+partner exact-scope gate:
+34*sqrt(log(e*2^32)) = 163.69758856890195 < 164
+
+fresh account01/B01 physical-pair gate:
+27.2653244653667*(1/64)^(-1/10)*(2^-12)^(-2/5) = 1151.2579622989156
+
+These checks are regression diagnostics only. Exact proofs are in REPORT.md.
+QFORM_B19_R49_COMMONPLANE_CHECK_PASS

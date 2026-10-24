@@ -1,0 +1,256 @@
+{
+  "complete": true,
+  "cases": 8,
+  "assertions": 31,
+  "elapsed_seconds": 0.0011346999963279814,
+  "flag_bound_dimension_loss": [
+    {
+      "r": 3,
+      "fiber_count": 2,
+      "H_bits_exact": 2,
+      "I_exact": 1,
+      "alpha": "3/4",
+      "crude_flag_alphabet_bound": "h2(3/4)+(3/4)*r",
+      "theorem_control_coefficient": "2*r+2/ln2",
+      "relevant_controls": [
+        0,
+        1
+      ]
+    },
+    {
+      "r": 5,
+      "fiber_count": 8,
+      "H_bits_exact": 2,
+      "I_exact": 1,
+      "alpha": "3/4",
+      "crude_flag_alphabet_bound": "h2(3/4)+(3/4)*r",
+      "theorem_control_coefficient": "2*r+2/ln2",
+      "relevant_controls": [
+        0,
+        1
+      ]
+    },
+    {
+      "r": 9,
+      "fiber_count": 128,
+      "H_bits_exact": 2,
+      "I_exact": 1,
+      "alpha": "3/4",
+      "crude_flag_alphabet_bound": "h2(3/4)+(3/4)*r",
+      "theorem_control_coefficient": "2*r+2/ln2",
+      "relevant_controls": [
+        0,
+        1
+      ]
+    }
+  ],
+  "U_admission_rejections": [
+    {
+      "family": "pointdefect",
+      "r": 3,
+      "preset": 2,
+      "fibers": [
+        [],
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1
+        ]
+      ],
+      "rejected_actual_leaves": [
+        {
+          "z": 2,
+          "truth_values": [
+            -1,
+            1,
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "U": "25/16",
+          "I": "5/4",
+          "H_prime_log_map": {
+            "2": "4",
+            "3": "-9/8"
+          }
+        }
+      ]
+    },
+    {
+      "family": "pointdefect",
+      "r": 3,
+      "preset": 3,
+      "fibers": [
+        [],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        []
+      ],
+      "rejected_actual_leaves": [
+        {
+          "z": 1,
+          "truth_values": [
+            -1,
+            -1,
+            -1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "U": "25/16",
+          "I": "5/4",
+          "H_prime_log_map": {
+            "2": "4",
+            "3": "-9/8"
+          }
+        }
+      ]
+    },
+    {
+      "family": "pointdefect",
+      "r": 4,
+      "preset": 2,
+      "fibers": [
+        [],
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1
+        ]
+      ],
+      "rejected_actual_leaves": [
+        {
+          "z": 2,
+          "truth_values": [
+            -1,
+            1,
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "U": "25/16",
+          "I": "5/4",
+          "H_prime_log_map": {
+            "2": "4",
+            "3": "-9/8"
+          }
+        }
+      ]
+    },
+    {
+      "family": "pointdefect",
+      "r": 4,
+      "preset": 3,
+      "fibers": [
+        [],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        []
+      ],
+      "rejected_actual_leaves": [
+        {
+          "z": 1,
+          "truth_values": [
+            -1,
+            -1,
+            -1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "U": "25/16",
+          "I": "5/4",
+          "H_prime_log_map": {
+            "2": "4",
+            "3": "-9/8"
+          }
+        }
+      ]
+    }
+  ],
+  "non_Boolean_ownership_guard": {
+    "seed": "psi=(1/4)sum_{i=1}^{16} x_i; normalized real, not Boolean",
+    "spectral_energy_core": 1,
+    "spectral_entropy_bits": 4,
+    "core_edit_support": "Hamming layer weight 8",
+    "controls": "r2, z00 only",
+    "maximum_fiber_size": 1,
+    "fiber_cap": "1/4",
+    "support_density": "6435/32768",
+    "F_equals_psi": "every edited seed value is zero",
+    "mask_core_influence": "6435/4096",
+    "ownership_failure": "1 < 6435/4096"
+  }
+}

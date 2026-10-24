@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T104712Z-b11-fei-r18",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_fei_status": "OPEN",
+  "supersedes_only": "The primary CLAIMS.json partner_status field; primary q/(8r) claims remain unchanged.",
+  "partner_result": {
+    "account": "account03",
+    "slot": "B11",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "32e98f96b54e9c0e8bdee8f7ac49cba9aca0fe46",
+    "path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B11/20260922T105133Z-account03-B11-fei/REPORT.md",
+    "applied_expression": "For any row family N on a rho>4 critical core, Z_N > 2 L_N - (7/22)[P-DTC(X)], with L_N=sum_{i in N} q_i log2(1/q_i) and Z_N=sum_{i in N} sum_{j!=i}[p_ij-c_{i<-j}-c_{j<-i}]."
+  },
+  "claims": [
+    {
+      "claim_id": "FEI-B11-Q8R-PARTNER-RESIDUAL-DICHOTOMY-20260922",
+      "status": "PROVED_IN_SOURCE",
+      "scope_kind": "AUXILIARY_LEMMA",
+      "statement": "At any centered rho>4 critical leaf after the q/(8r) physical compiler stalls, for any chosen residual row family N, either L_N <= (7/22)[P-DTC(X)] or Z_N > L_N. In the first branch L_N <= 7/(11 ln 2) J; in the second branch a nonnegative common-source invisible-boundary bank dominates the full logarithmic row load.",
+      "dependencies": [
+        {
+          "mode": "uses_proved_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "32e98f96b54e9c0e8bdee8f7ac49cba9aca0fe46",
+          "path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B11/20260922T105133Z-account03-B11-fei/REPORT.md",
+          "section": "Equation (5.5), derived from the two-face common-source decomposition"
+        },
+        {
+          "mode": "uses_proved_premise",
+          "claim_id": "FEI-B11-Q8R-PATHWISE-REFUND-COMPILER-20260922"
+        }
+      ],
+      "verification": "One-line consequence of partner equation (5.5), proved in PARTNER_ADDENDUM.md Section 2."
+    }
+  ],
+  "revised_next_unpaid_implication": "On the branch Z_N>L_N at a stalled centered rho>4 critical leaf, convert the common-source two-face bank Z_N (or xi_ij=zeta_ij+4o_ij) into a realizable physical entropy decrement or terminal contradiction without asserting raw U4=O(J) and without erasing the tensor-orientation baseline."
+}

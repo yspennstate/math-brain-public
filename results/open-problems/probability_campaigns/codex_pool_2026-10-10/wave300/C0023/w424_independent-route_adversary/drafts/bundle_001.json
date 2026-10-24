@@ -1,0 +1,102 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w424",
+  "bundle_slug": "w424-c0023-critical-jump-obstructions-draft-001",
+  "entries": [
+    {
+      "key": "tree-jump",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-dyadic-branching-bounded-degree-critical-jump",
+      "kind": "concept",
+      "title": "DRAFT: a bounded-degree nontransitive tree can percolate at criticality",
+      "statement": "DRAFT, author-written and not independently reviewed. Let T be the rooted tree where every generation k-1 vertex has 8 children if k is a power of 2 and 2 children otherwise, k>=1. For independent Bernoulli bond percolation on T, the maximum degree is 9, p_c(T)=1/2 and theta_T(1/2)>=4/5. Writing Z_n for root-connected generation-n vertices, E[Z_n]=(2p)^n 4^(1+floor(log_2 n)), and at p=1/2 the normalized second moment is at most 5/4. This explicitly refutes a general critical-nonpercolation inference based only on independence, finite energy, bounded degree and finite-event continuity. T is not quasi-transitive and this is not a counterexample to the Z^d conjecture.",
+      "proof_text": null,
+      "assumptions": [
+        "The stated nontransitive rooted tree",
+        "Independent Bernoulli bonds",
+        "No claim of critical uniqueness",
+        "Independent referee check pending"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w424:C0023-obstructions-20261010",
+        "url": "file:///~/brain_workers/w424/INDEPENDENT_DERIVATION.md",
+        "revision": "author-written-2026-10-10-draft-unreviewed",
+        "license": "owner-own-work",
+        "excerpt": "The counterexample is a nontransitive tree, not Z^d."
+      }
+    },
+    {
+      "key": "narrow-window",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-dyadic-tree-narrow-backward-window-survival",
+      "kind": "concept",
+      "title": "DRAFT: a shrinking subcritical window can preserve finite-generation survival",
+      "statement": "DRAFT, author-written and not independently reviewed. For the explicit dyadic-branching tree with 8 children at power-of-two generations and 2 otherwise, let f_n(p)=P_p(Z_n>0). For 0<p_n=1/2-delta_n<1/2, f_n(p_n)>=4/5-delta_n n/p_n. Indeed open pivotal edges lie on any root-to-level-n path, so their number is at most n and finite-product differentiation gives f_n_prime(p)<=n/p. Therefore delta_n n->0 cannot also make f_n(p_n)->0. Finite-volume continuity and subcritical vanishing at each fixed parameter do not license exchanging these limits.",
+      "proof_text": null,
+      "assumptions": [
+        "The same explicit tree",
+        "Finite increasing survival events",
+        "0<p_n<1/2",
+        "Independent referee check pending"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w424:C0023-obstructions-20261010",
+        "url": "file:///~/brain_workers/w424/INDEPENDENT_DERIVATION.md",
+        "revision": "author-written-2026-10-10-draft-unreviewed",
+        "license": "owner-own-work",
+        "excerpt": "The counterexample is a nontransitive tree, not Z^d."
+      }
+    },
+    {
+      "key": "interval-gap",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-critical-percolation-fixed-backward-interval-proof-obligation",
+      "kind": "concept",
+      "title": "DRAFT: the fixed backward interval is the open proof obligation",
+      "statement": "DRAFT audit concept, not a proof of critical nonpercolation. For independent nearest-neighbour Bernoulli bonds on Z^d, define A_n as origin-to-boundary connection inside [-n,n]^d, f_n(p)=P_p(A_n), and lambda_n(p) as the conditional expected number of open pivotal edges given A_n. For 0<a<b<1, log(f_n(b)/f_n(a))=integral_a^b lambda_n(s)/s ds. Under a hypothetical theta(p_c)>0, ruling out a critical jump via this identity requires a finite liminf of that integral on one fixed [a,p_c] with a<p_c, or another rigorously derived geometric mechanism. Endpoint bounds and intervals shrinking with n do not establish this premise. w423 states the premise explicitly and has not proved it for the lattice.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent nearest-neighbour Bernoulli bond model",
+        "Finite increasing connection events",
+        "0<a<p_c<1",
+        "The claimed lattice estimate is unproved"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w424:C0023-w423-quantifier-audit-20261010",
+        "url": "file:///~/brain_workers/w424/ADVERSARIAL_REVIEW.md",
+        "revision": "author-written-2026-10-10-draft-unreviewed",
+        "license": "owner-own-work",
+        "excerpt": "A bound at p_c alone, or a different a_n for every n, does not suffice."
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "narrow-window",
+      "to_key": "tree-jump",
+      "kind": "depends_on",
+      "rationale": "The narrow-window survival lower bound uses the explicit tree and its critical 4/5 lower bound."
+    },
+    {
+      "from_key": "interval-gap",
+      "to_key": "narrow-window",
+      "kind": "analogous_to",
+      "rationale": "The tree exhibits failure of exchanging parameter and scale limits; the lattice criterion requires a fixed interval. This is an analogy, not a proof transfer."
+    },
+    {
+      "from_key": "tree-jump",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10",
+      "kind": "semantic_association",
+      "rationale": "The bounded-degree nontransitive counterexample tests unrestricted inferences used when approaching C0023; it neither refutes nor proves the Z^d claim."
+    },
+    {
+      "from_key": "interval-gap",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10",
+      "kind": "semantic_association",
+      "rationale": "The exact missing fixed-interval premise concerns attempts to prove the C0023 critical bond statement; its validity on Z^d remains open in this packet."
+    }
+  ]
+}

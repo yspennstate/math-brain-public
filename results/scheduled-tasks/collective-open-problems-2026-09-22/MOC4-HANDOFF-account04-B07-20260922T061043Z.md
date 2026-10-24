@@ -1,0 +1,54 @@
+# MOC4 shared handoff — account04/B07 — 20260922T061043Z
+
+Status: `ESSENTIAL_STEP_APPLIED`; full MOC4 remains **OPEN / NOT PROVED / NOT DISPROVED**. Execution: `WITHOUT_VERIFIED_BRAIN`.
+
+## Source state consumed
+
+Team lead latest complete source consumed: account03/B07 `20260922T060726Z-account03-B07-MOC4-r11`, theorem `MOC4-SPIN4-SATURATION-TO-ZERO-FACE-v1`, scientific report blob `c8911d75149115eb15810e4f8fac624cfc5e34f5`. It proves that saturation `T=|C|` of any complementary-pair mixed-Hessian gate at a genuine global support maximizer moves along a true coordinate `SU(2)` flat orbit to an equal-support zero-entry unitary.
+
+Named assigned OTHER-account partner consumed: account01/B08 `20260922T060423Z-account01-B08-MOC4-r11`, theorem `MOC4-PR-JOINT-LIFT-FACET-v1`, report blob `5a93eb14d686499625085947cf3fcc4612597863`. Its dense exact true-unitary violation of the necessary common-lift facet `T(R)<=3S(P)` rules out using a universal positive same-unitary common-compound lift.
+
+## New exact exterior-algebra results
+
+Write each real `2 x 2` block of `O=Lambda^2 U in SO(6)` as the real-linear complex map
+
+`z -> m_{alpha beta} z + n_{alpha beta} zbar`.
+
+For a real symmetric `S`, put `chi(S)=(S11-S22)/2+i S12`. Direct expansion gives
+
+`chi(B B^T)=2mn`.
+
+Combining this with the lead's full mixed-conformal Hessian gate gives `MOC4-SPINOR-HESSIAN-MOMENT-v1`:
+
+`(|sum_beta dX_beta m_{alpha beta}n_{alpha beta}| + |sum_beta dX_beta m_{gamma beta}n_{gamma beta}|)^2 <= T_{alpha gamma}^2-C_{alpha gamma}^2`.
+
+Orthogonality also gives the exact row identity `sum_beta m_{alpha beta}n_{alpha beta}=0`. Hence, when the affine coefficient matrix `L_alpha` is invertible,
+
+`||z_alpha||_2 <= ||L_alpha^{-1}||_2 sqrt(r_{alpha gamma}+r_{alpha delta})`, `r=T^2-C^2`,
+
+and the orientation impurity obeys
+
+`sum_beta min(|m|^2,|n|^2) <= sqrt(3)||L_alpha^{-1}||_2 sqrt(r_{alpha gamma}+r_{alpha delta})`.
+
+`MOC4-PURE-BLOCK-SPINOR-RIGIDITY-v1`: if `m_{alpha beta}n_{alpha beta}=0` for all nine blocks, row/column orthogonality forces the signed support graph to be balanced. An even-even coordinate-conjugation gauge then makes the map complex-linear (`N=0`). The prior exact Spin(6) singular-value identity forces some original `P_ij=1`, so the underlying `4 x 4` unitary is permutation/phase equivalent to `1+3` and is MOC4-safe, including singular and repeated spectra.
+
+`MOC4-GENERIC-TRIPLE-FLAT-CLOSURE-v1`: if the affine row determinant `Omega_X !=0` and all three row-pair Hessian gates are flat, the universal and weighted spinor moment equations force every `mn=0`, hence the preceding `1+3` safe conclusion. For an existing exact structured campaign coefficient matrix, `Omega_X=-133824`, so this nondegeneracy is not vacuous.
+
+The finite standard-library verifier checked the block identity on 81 integer samples and all `3^9` zero/conformal/anticonformal support sign patterns admitted by the necessary orthogonality support rules. It found 512 admissible patterns, 0 gauge-balance failures, 256 determinant-compatible patterns, and 0 even-even gauge failures.
+
+## Integration with newest lead result
+
+The lead's newer saturation-to-zero-face theorem supersedes this run's initially named one-flat propagation residual: a single flat pair already reduces to the zero face. The spinor theorem therefore belongs on the surviving strictly curved branch. The updated first exterior-algebra implication is:
+
+**`MOC4-STRICT-SPINOR-RESERVE-PAYMENT-v1` (OPEN):** at a genuine positive-gap global maximizer with no zero entry, every left/right complementary-pair gate is strictly curved. Combine the exact spinor moment/reserve bounds, full first-order stationarity, and same-unitary `P/R/D` identities to make that positive reserve pay the support gap. Handle affine-degenerate coefficient profiles separately rather than assuming them away.
+
+## Canonical artifacts
+
+Scientific root: `proofnet24/collective-MOC4/account04/B07/20260922T061043Z-account04-B07-moc4-r13/`.
+
+- `REPORT.md`, blob `8759b7ea58093b119bd7efd058db52020260b912`.
+- `ADDENDUM_LATEST_LEAD.md`, blob `6e925d0f592d909f15ea1154ef56399d3336e41d`.
+- `verify_pure_block_rigidity.py`, blob `a9c09bb657725ce4075fcac0e8238c39a1a04c7d`.
+- `VERIFY_OUTPUT.txt`, blob `ff35cfaee54e2ad65f46c683679b31e31aa8faf2`.
+
+No common-positive lift is claimed; no benchmark material, credentials, email/Drive data, paid/remote compute, scheduler mutation, or public release was used.

@@ -1,0 +1,32 @@
+{
+  "schema": "fei-refuted-statement/1",
+  "packet_id": "A025",
+  "claim_id": "B05-OVERLAP-SINGLETON-PAYMENT-v1",
+  "status": "AUTHOR_PROVED_COUNTERFAMILY_PENDING_INDEPENDENT_REVIEW",
+  "refuted_quantifiers": "There is a finite absolute C such that for every pair of Boolean factors sharing only one physical coordinate x, Phi(fg) <= Phi(f)+Phi(g)+C(Inf_x(f)+Inf_x(g)).",
+  "stronger_special_case_refuted": "For the accepted disjoint constant M, Phi(Bf) <= Phi(f)+M I(B) remains valid when B reuses one coordinate of f.",
+  "family": {
+    "parameters": "r>=1, epsilon=2^-r, n=2m+1 with m unbounded",
+    "core": "balanced majority K_n",
+    "f": "x K_n(u)",
+    "g": "x on one r-cube control point and 1 elsewhere",
+    "product": "fg"
+  },
+  "exact_values": {
+    "Phi_f": "0",
+    "Phi_g": "(r+1) phi(epsilon)",
+    "Phi_fg": "n phi(epsilon c_m), c_m=binom(2m,m)/4^m",
+    "Inf_x_f": "1",
+    "Inf_x_g": "epsilon",
+    "Inf_x_fg": "1-epsilon",
+    "I_g": "(r+1)epsilon"
+  },
+  "violation_range": "All m with (epsilon^2/2) log2(m+1) > (r+1)phi(epsilon)+C(1+epsilon).",
+  "unaffected_claims": [
+    "The independently reviewed disjoint-variable singleton-potential theorem.",
+    "The exact mismatch/KL restriction identity and any complete signed ledger retaining it.",
+    "Existential good-coordinate selection or an optimized globally chosen physical restriction tree.",
+    "The Fourier Entropy-Influence conjecture."
+  ],
+  "guard": "OVERLAP_PRODUCT"
+}

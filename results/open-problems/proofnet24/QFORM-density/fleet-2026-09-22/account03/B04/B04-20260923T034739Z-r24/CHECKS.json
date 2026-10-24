@@ -1,0 +1,37 @@
+{
+  "run_id": "B04-20260923T034739Z-r24",
+  "claim": "QFORM-SPECTRAL-WINDOW-TRADEOFF-v1",
+  "checks": {
+    "corollary_mu_1_20_tau_1_256": {
+      "L": 0.13377223398316207,
+      "sigma": 0.12986598398316207,
+      "gate_lhs": 0.6850454379397136,
+      "gate_rhs": 0.7071067811865475,
+      "density_constant": 98.95209002028422,
+      "passes": true
+    },
+    "hadamard_family_mu_3_64_tau_1_256": {
+      "L": 0.14693878215210276,
+      "sigma": 0.14303253215210276,
+      "gate_lhs": 0.6317061636859248,
+      "gate_rhs": 0.7071067811865475,
+      "density_constant": 89.84327092810767,
+      "high_projector_diagonal": 0.046875,
+      "old_1_over_32_gate_fails": true,
+      "new_1_over_20_gate_passes": true
+    },
+    "hadamard_spectrum_numeric": {
+      "min_eigenvalue": -1.0,
+      "tail_eigenvalue": 0.0009765625,
+      "max_eigenvalue": 1.0,
+      "number_abs_ge_1_over_256": 3
+    },
+    "gamma_optimization": {
+      "objective_denominator": "x(1-2x^2)",
+      "critical_point": "x=1/sqrt(6)",
+      "second_derivative_at_positive_critical_point": "-12/sqrt(6)<0",
+      "passes": true
+    }
+  },
+  "scope": "finite arithmetic and spectrum checks only; the universal proof is analytic in REPORT.md"
+}

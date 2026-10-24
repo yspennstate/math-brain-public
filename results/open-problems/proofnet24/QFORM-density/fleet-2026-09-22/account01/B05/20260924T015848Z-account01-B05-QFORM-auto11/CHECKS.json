@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T015848Z-account01-B05-QFORM-auto11",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "witt-determinant",
+      "statement": "det([[0,beta,0],[beta,alpha,gamma],[0,gamma,delta]])=-beta^2 delta",
+      "method": "exact symbolic expansion",
+      "result": "PASS"
+    },
+    {
+      "id": "residual-column-gram",
+      "statement": "Deleting row (sqrt(c),0,0) from an orthonormal 3-frame leaves column Gram diag(1-c,1,1)",
+      "method": "R^T R=I minus r_i^T r_i",
+      "result": "PASS"
+    },
+    {
+      "id": "star-cauchy-binet",
+      "statement": "sum_{j<k}|det A_{i,j,k}| = c |det M| because sum_{j<k}(y_j z_k-y_k z_j)^2=1",
+      "method": "3x3 Cauchy-Binet plus 2x2 Cauchy-Binet for orthonormal residual y,z columns",
+      "result": "PASS"
+    },
+    {
+      "id": "residual-pseudodeterminant",
+      "statement": "Delta_C=(1-c)Delta_3",
+      "method": "C=R0(DMD)R0^T, R0^T R0=I, det D^2=1-c",
+      "result": "PASS"
+    },
+    {
+      "id": "target-star-currency",
+      "statement": "If Delta_3>=1 and c>=1/2 then a^2|delta|=S_i=c Delta_3>=1/2",
+      "method": "exact identities",
+      "result": "PASS"
+    },
+    {
+      "id": "moderate-diffuse-constant",
+      "statement": "12[(1-c)Delta_3]^(-1/3)<=24 when Delta_3>=1 and c<=7/8",
+      "method": "1-c>=1/8 and 8^(1/3)=2",
+      "result": "PASS"
+    },
+    {
+      "id": "residual-singular-floor",
+      "statement": "sigma_min(DMD)>=(1-c)sigma_min(M)",
+      "method": "sigma_min(ABC)>=sigma_min(A)sigma_min(B)sigma_min(C), sigma_min(D)=sqrt(1-c)",
+      "result": "PASS"
+    }
+  ],
+  "correction_guard": {
+    "no_post_rotation_independence": true,
+    "no_arbitrary_joint_coarea": true,
+    "no_conditional_cap_substitution": true,
+    "no_moment_or_support_assumption": true,
+    "full_target_claimed": false,
+    "continuity_claimed": false
+  }
+}

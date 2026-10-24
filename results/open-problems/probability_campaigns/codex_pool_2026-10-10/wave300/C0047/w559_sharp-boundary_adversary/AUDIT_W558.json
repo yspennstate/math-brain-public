@@ -1,0 +1,30 @@
+{
+  "audit_id": "w559-C0047-w558-adversarial-001",
+  "auditor": "w559",
+  "author": "w558",
+  "proof_path": "~\\brain_workers\\w558\\ATTEMPT.md",
+  "proof_sha256": "sha256:12ad41ab289527f83377a7d9964c901cf7fdb8ce4c591c4a65eca1aa71edf430",
+  "independent_derivation_path": "~\\brain_workers\\w559\\ATTEMPT.md",
+  "independent_derivation_sha256": "sha256:df0dd85c512a52c307c704d1909e879e4551ee34f05dd5ea292bcb6b5137eb58",
+  "independent_derivation_created_utc": "2026-10-10T07:01:09.920918+00:00",
+  "first_paired_proof_read": "After ATTEMPT.md was saved; see native tool trace and STATUS.md",
+  "verdict": "KEEP scoped free-product family; no general-Cayley extension",
+  "checked": [
+    "Fresh horizontal factor clusters are finite for p<1 by disjoint closed finite-width cuts",
+    "Exactly 2K_N-1 unused b-edges lead to distinct fresh factor lines; the incoming edge is excluded",
+    "The quotient of the ordinary F_2 tree by connected a-lines is a tree, also after adding a-power edges inside lines",
+    "Closed b-bridges isolate edge-disjoint infinite branch clusters for alpha_N<p<1",
+    "Spanning T_4 gives edge expansion >=2; a-line intervals approach expansion 2",
+    "Rayleigh lower bound N/(N+1)-N/(2L) and split-adjacency upper bound (N-1+sqrt(3))/(N+1)",
+    "Strict alpha_N<1/3 for N>=2 follows by pointwise addition of +/-2 indicators, without independence of those indicators",
+    "N=1 and p=0,alpha_N,1 boundary cases are treated correctly"
+  ],
+  "separate_derivation": "Explore alternating a-factor and b-factor clusters. Their two-type offspring means are chi_N-1 and chi_Z-1=2p/(1-p). Disjoint free-product cosets make offspring independent. The critical product (chi_N-1)*2p/(1-p)=1 is exactly p(2chi_N-1)=1; finite nondegenerate offspring laws imply critical extinction. This independently recovers the principal critical equation.",
+  "minimal_missing_premise": "A generalization needs a tree of disjoint unexplored factor cosets and finite separating bridge cuts. Nonamenability by itself does not supply either premise.",
+  "counterexample_to_stronger_bridge": "The separately derived simple C_2*C_3 triangle graph has 3*rho*p_c>1.26 although p_c<p_u=1. It disproves universal satisfaction of the sufficient spectral inequality, not C0047.",
+  "remaining_gap": "Required referee w560 remains pending; author/referee response-side served-model evidence and different-model gate are unverified. No parent-problem solution or store promotion.",
+  "new_result_by_referee": false,
+  "status": "proved special case",
+  "parent_problem_solved": false,
+  "created_utc": "2026-10-10T07:24:34.893476+00:00"
+}

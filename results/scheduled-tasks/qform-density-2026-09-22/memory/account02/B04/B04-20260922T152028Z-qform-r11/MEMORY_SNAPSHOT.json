@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit": "5359873c00d1c81bf64867b2d4a7fb390d9a4e6c",
+  "account": "account02",
+  "slot": "B04",
+  "run_id": "B04-20260922T152028Z-qform-r11",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "target_status": "QFORM-FULL_OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_result": {
+    "worker": "account03/B04",
+    "commit": "a6cdaaf6e0723f54cc591269183029423cd77154",
+    "claims_commit": "f447c650e04ef27d14be3380ac541c1cec60ab0c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/B04-20260922T145033Z-r12/REPORT.md",
+    "applied_scope": "regularized determinant bound plus square-assisted L^(3/2)-to-L^3-to-half-Riesz closure"
+  },
+  "new_result": {
+    "id": "QFORM-SQUARE-ASSISTED-EK-AGGREGATE-v1",
+    "scope": "For a genuine original-coordinate scalar square and a residual physical cross block B, replace selected lower singular-value hypotheses by the elementary symmetric determinant mass E_k=e_k(s_i^2), under the same q leverage gate and k>4q/3.",
+    "q1k2_bound": "11.26662855015649 |a|^(-1/2) E_2(B)^(-1/8)",
+    "q2k3_bound": "16.70346480643532 |a|^(-1/2) E_3(B)^(-1/12)",
+    "report_commit": "69c4571401b4376ffb84ad34aff2a748330acf8a",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/B04-20260922T152028Z-qform-r11/REPORT.md"
+  },
+  "explicit_target_instance": {
+    "family": "coupled scalar pivot plus two Walsh banks with m cross singular values m^(-1/2)",
+    "target_spectrum_certificate": "exact residual eigenvalues +1,-1 and pivot Rayleigh quotient 2, so the full indefinite matrix has at least three eigenvalues of modulus at least one",
+    "uniform_bound": "<=9.474067560 for all powers-of-two m>=2",
+    "m64_bound": "<=8.704877343 in dimension 513",
+    "why_new": "E_2=(m-1)/(2m) stays bounded below while every individual cross singular value tends to zero; the partner selected-two-singular bound diverges as m^(1/4)."
+  },
+  "first_unproved_step": "QFORM-AGGREGATE-PIVOT-CURRENCY-v1: force leverage-valid |a|^4 E_2>=delta or unconditional |a|^6 E_3>=delta from the three-large-eigenvalue hypothesis, or route simultaneous failure to an already controlled diffuse/hyperbolic/fresh-square branch.",
+  "next_step": "Attack the structural aggregate-currency dichotomy using exterior-power mass before any reciprocal local-minor payment; keep the zero-physical-pivot isotropic rank-three branch separate and route it to bilinear/hyperbolic aggregation.",
+  "full_brain_connected": false
+}

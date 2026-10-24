@@ -1,0 +1,2 @@
+STATE: A022 stage7 saved: exact signed seed-reference log cut/full entropy bank; low-influence nonflat tensor point surgery at rate4 retains t/64 original reserve; 4256 cases/137425 exact main assertions PASS; review pending; FEI OPEN.
+NEXT: A087/A094 review v6; expose one actual tensor-data coordinate with original Q, old U, BOTH terminal debts and SAME remaining t/64 reserve; no reference or bank reset.

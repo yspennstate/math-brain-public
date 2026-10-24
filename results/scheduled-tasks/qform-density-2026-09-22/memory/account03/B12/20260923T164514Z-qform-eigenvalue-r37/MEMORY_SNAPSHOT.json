@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260923T164514Z-qform-eigenvalue-r37",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "control_initial_commit": "4e19b067da9367f9db2bd5ed4f6dbb7d3a860f1f",
+  "control_prepublication_commit": "d708fb9bc4d3798da196b908427256e3a012eba2",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "3d6d9699d94146c3d2cbc475936dacd74109f913",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T164514Z-qform-eigenvalue-r37/REPORT.md",
+  "result_ids": [
+    "QFORM-ORTHOGONAL-SPECTRAL-COMPLETION-PROFILE-v1",
+    "QFORM-DIFFUSE-3EIG-BALANCED-CUT-SPLITTER-v1"
+  ],
+  "core_result": "For symmetric A=A0+R with A0R=0 and original-coordinate cut I,J, writing C=A[I,I], M=A[I,J], one has s_p(C)^2+s_q(M)^2 >= lambda_k((A0^2)[I,I]) whenever p+q=k+1. Consequently arbitrary remaining eigenvalues of either sign and magnitude can only transfer a protected spectral-square carrier between self and cross blocks.",
+  "diffuse_splitter": "For three selected |lambda|>=1 eigenvectors with max row leverage <=1/256, a balanced original-coordinate cut exists. At a=1/(2sqrt(2)), if q is the number of cross singular values >=a, each self block has at least 3-q singular values >=a. If q>=3 and final cross-range leverage <=1/2, the current fractional-volume theorem gives continuous density <64.",
+  "partner_result_applied": "account04/B12 complementary-Schur shield at math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b. Its gamma_p=ell(rho)^2 mu is inserted into the profile theorem, yielding s1(C)^2+s3(M)^2, s2(C)^2+s2(M)^2, s3(C)^2+s1(M)^2 >= gamma_p^2 after arbitrary orthogonal spectral completion.",
+  "volume_result_applied": "math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba. With cross s3>=1/(2sqrt2) and max range leverage <=1/2, continuous density <=48sqrt(6)e/5<64.",
+  "checks": "10,000 random spectral completions, 28,738 profile inequalities, zero violations; 5,000 Bernoulli cuts for a 1024x3 Hadamard frame all met the 1/4 Gram deviation gate. Checks are non-proof sanity tests.",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "unresolved_implication": "Close high-leverage row/cross-range survivors and mixed q=1,2 self/cross receivers without losing original-coordinate product structure; q=0 cannot be discharged circularly by reusing the conjecture on a large self block.",
+  "next_step": "Prove a mixed receiver combining r=1 or 2 strong self singular directions with 3-r strong cross directions at a common universal scale, including arbitrary within-bank curvature and affine terms, then integrate the hub/high-leverage exits.",
+  "full_target_status": "OPEN",
+  "continuity_status": "CONTINUOUS_ON_VOLUME_EXIT_ONLY; FULL_TARGET_CONTINUITY_OPEN",
+  "independent_review_status": "NOT_INDEPENDENTLY_REVIEWED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

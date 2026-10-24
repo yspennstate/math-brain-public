@@ -1,0 +1,43 @@
+\section{An actual Boolean lower bound for the one-bit uncertainty tax}
+Let $X\sim\operatorname{Ber}(p)$ and $Y\sim\operatorname{Ber}(q)$ be
+independent, with fixed $0<q<1$, and let $f=1-2XY$. Reveal only $X$.
+Write $v=4q(1-q)$ and use base-two Shannon entropy throughout this
+section. In the order $\varnothing,\{X\},\{Y\},\{X,Y\}$, the exact
+orthonormal product Fourier masses are
+\[
+ P=((1-2pq)^2,\ 4p(1-p)q^2,\ p^2v,\ p(1-p)v).
+\]
+The marginal spectral $Y$ mass is $pv$. The $X=0$ child is constant,
+and the $X=1$ child has spectral masses $1-v,v$. Consequently
+\[
+ M=H(P)-h_2(pv),\qquad J=h_2(pv)-p h_2(v),
+\]
+and the signed difference is exactly
+\[
+ J-M=2h_2(pv)-H(P)-p h_2(v).
+\]
+For fixed $c>0$, $h_2(cp)=cp\log_2(1/p)+O_c(p)$.
+The empty spectral mass contributes $O_q(p)$ to $H(P)$; the
+$\{X\}$ and $\{X,Y\}$ masses contribute respectively
+$4q^2p\log_2(1/p)+O_q(p)$ and
+$vp\log_2(1/p)+O_q(p)$. The $\{Y\}$ mass contributes
+$O_q(p^2\log(1/p))=o_q(p)$. Therefore
+\[
+ J-M=4q(1-2q)p\log_2(1/p)+O_q(p).
+\]
+In particular, at fixed $q=1/4$,
+\begin{equation}\label{a041:necessarytax}
+ \lim_{p\downarrow0}\frac{J-M}{p\log_2(1/p)}=\frac12.
+\end{equation}
+Thus every scalar $\tau(p)$ making $J\le M+\tau(p)$ valid for all
+Boolean functions, product biases, and one-coordinate physical reveals
+satisfies $\liminf_{p\downarrow0}\tau(p)/[p\log_2(1/p)]\ge1/2$.
+In particular no finite fixed $K$ makes $\tau(p)=Kp$ sufficient.
+This is an actual Boolean lower bound, not an inference from the
+asymptotic size of an available upper bound. It repairs the precise
+unsupported endpoint implication in the recovered B09 report, section
+5(4). It neither proves optimality of the coefficient-one
+Maassen--Uffink tax nor pays the tax through arbitrary composition.
+The known upper tax
+$h_2(p)+\log_2(1-p)=p\log_2(1/p)+O(p)$ leaves an asymptotic
+coefficient gap between $1/2$ and $1$.

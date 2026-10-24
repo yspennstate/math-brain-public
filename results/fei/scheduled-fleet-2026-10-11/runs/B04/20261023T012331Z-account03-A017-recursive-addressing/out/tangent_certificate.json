@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "pilot": false,
+  "actual_parent_cases": 4624,
+  "assertions": 9252,
+  "sharp_boundary": {
+    "inside_edits": [
+      2,
+      6,
+      10,
+      15,
+      18,
+      22,
+      26,
+      31,
+      34,
+      38,
+      42,
+      47,
+      50,
+      54,
+      58,
+      63
+    ],
+    "outside_edits": [
+      60,
+      61
+    ],
+    "influence": "3/16"
+  },
+  "counterexamples": {
+    "non_tangent_row": "q=x1*(x0+x2), i0,j1,E=negative(q) contained in P; edited phase constant",
+    "dependent_tangent_row": "same q,i0,j2,rows Qj=Qi; edited phase constant",
+    "outside_density_above_threshold": {
+      "outside_edits": [
+        8,
+        9,
+        24
+      ],
+      "influence": "5/32",
+      "allowed_threshold": "3/16"
+    }
+  },
+  "elapsed_seconds": 0.3039433999801986
+}

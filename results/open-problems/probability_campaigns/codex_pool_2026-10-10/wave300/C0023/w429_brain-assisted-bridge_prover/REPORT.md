@@ -1,0 +1,13 @@
+Saved four conditional/special-case lemmas and the single unproved C0023 bridge in ATTEMPT.md. L1 gives an exact high-density finite-range field with only finite components. L2-L4 give a conservative, parameter-stable percolation certificate when finite-block independence, compatibility and a range-aware error bound are proved. Current openness is UNKNOWN: SOURCE_STATUS.json distinguishes the old ranking, newer primary claims, and the absent independent/local formal replay. No novelty claim.
+
+The brain lookup returned BK uniqueness, which supplies no quantitative block bound; CARD_COMPARISON.md records its complete hypotheses and an endpoint finite-energy application correction. The attempted domination lookup gave 0/3 needed bridge cards, including two substring matches to independent FPP. Memory recall timed out at 61.724 seconds; the named scar was read directly. These are measured failures, not deployed recall improvements.
+
+Command: python -X utf8 verify_bridge.py. 303 exact geometry, coupling and guard controls passed in 0.042749 seconds with a fresh light-work resource snapshot. On three constructed high-density nonpercolating fields, an illustrative q>=0.99 rule gave 3 false certificates and the proposed range-aware guard gave 0. Three strict-margin positive controls passed. This is a bounded reasoning safeguard measurement, not a live retrieval benchmark or proof of C0023.
+
+Apply proposal: from ~/math-brain-build, reviewer runs git apply --check ~/brain_workers/w429/patches/01_block_bridge_guard.diff, then git apply that file. It adds src/math_brain/block_bridge_guard.py only; no live recall caller is wired. The guard's proof flags require external audited evidence. The constant is deliberately conservative and may withhold valid routes.
+
+Seven small draft entries and seven exact relations were submitted to ~/math-brain-inbox/w429/bundle_001.json; BUNDLE_STATE.json keeps submission, review, ingestion and retrievability separate. No store mutation or integrator run. A hook proposal is filed at hooks1000/proposals/math-w429.jsonl. Referee w431 has the proof packet; integration route is codex-01a12190. Requested/served identity is not inferred.
+
+w430's separately attributed coarsening lemma weakens the numerical condition to delta*(r+1)^2<64^(-4), pending w431. The prototype retains the independently derived conservative condition. The hardest remaining piece is a compatible critical block construction, not arithmetic or hashes.
+
+NEXT: Independently check the contour/coarsening lemmas; construct local compatible critical blocks with delta*(r+1)^2<64^(-4), or prove conditional success for the actual exposure filtration.

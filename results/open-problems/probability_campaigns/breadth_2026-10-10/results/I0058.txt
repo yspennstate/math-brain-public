@@ -1,0 +1,31 @@
+{
+  "problem_id": "I0058",
+  "source_checks": [
+    {
+      "source_id": "lyons_peres_20260819",
+      "location": "Question 6.49",
+      "method": "User-provided excerpt; no browsing.",
+      "finding": "The excerpt explicitly reports a counterexample without transitivity and a positive answer for nonamenable transitive graphs at p > pc(G)."
+    },
+    {
+      "source_id": "hermon_hutchcroft_2019",
+      "authors": ["Jonathan Hermon", "Tom Hutchcroft"],
+      "title": "Supercritical percolation on nonamenable graphs: isoperimetry, analyticity, and exponential decay of the cluster size distribution",
+      "year": 2019,
+      "publication": "Inventiones mathematicae 224 (2021), 445–486",
+      "url": "https://arxiv.org/abs/1904.10448",
+      "method": "Existing literature knowledge; not independently retrieved or checked during this turn.",
+      "finding": "This work resolves the stated general implication negatively and proves the supercritical transitive case."
+    }
+  ],
+  "exact_statement": "Does positive anchored edge expansion Φ_E^*(G) > 0 imply that, for Bernoulli percolation on G, almost surely every infinite cluster K has Φ_E^*(K) > 0?",
+  "answer": "no",
+  "proof_or_counterexample": {
+    "label": "Literature resolution",
+    "result": "Hermon and Hutchcroft give a nontransitive counterexample: positive anchored expansion of the ambient graph does not generally pass to its infinite Bernoulli percolation clusters. They also prove positive anchored expansion of every infinite cluster for p > pc(G) when G is nonamenable and transitive.",
+    "proof_status": "The published counterexample is cited, not reconstructed here. Following instruction 1, work stops at the literature resolution; no independent proof or new result is claimed."
+  },
+  "hardest_remaining_gap": "No research gap remains for the unrestricted yes/no question. The independent literature reader should verify the cited counterexample and its precise hypotheses.",
+  "evidence_status": "resolved_in_literature",
+  "draft_brain_nodes": []
+}

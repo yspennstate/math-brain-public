@@ -1,0 +1,39 @@
+{
+  "target_id": "C0052",
+  "checked_at": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "exact_statement_status": "2017 primary source checked; current openness bounded-search UNKNOWN",
+  "primary_source": {
+    "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+    "author": "Hugo Duminil-Copin",
+    "url": "https://arxiv.org/pdf/1707.00520",
+    "locator": "Section 7, Conjecture 6 and equations (7.1)-(7.2), printed page 94/PDF page index 93; Exercise 34 printed page 42 and Exercise 61 printed page 95"
+  },
+  "source_criterion": "For zero-field nearest-neighbour Ising on Z^3, beta<beta_c, U4 is the connected four-point function, chi(beta)=sum_x <sigma_0 sigma_x>, and xi(beta)=[lim_n -(1/n)log<sigma_0 sigma_{n e1}>]^{-1}. The source defines g(beta)=sum_{x2,x3,x4}U4(0,x2,x3,x4)/(chi(beta)^2 xi(beta)^3). Nontrivial means g(beta) does not tend to 0 as beta increases to beta_c; equivalently, since U4<=0, limsup[-g(beta)]>0. This is a near-critical criterion, not an assertion about every critical finite-volume spin-field limit.",
+  "prior_status_check": "2026-09-07 intake problems.jsonl line 52 and attempts.jsonl line 42 show attempted_unsolved, not a proof. No C0052 match in named H/I attempt directories or Team O board query; no located owner solved/retired receipt. Bounded check only.",
+  "current_literature_check": "Primary arXiv:1912.07973 abstract proves Gaussian 4D scaling limits, not C0052. Bounded arXiv searches for 2024-2026 rigorous 3D nontriviality did not locate a resolution; absence is not proof of current openness.",
+  "store_correction_needed": "Read-only math store title query returned one random-current node; its body asserts a uniform unweighted intersection equivalence without endpoint weights, scale-window definition, or near-critical localization. See RETRIEVAL.md.",
+  "evidence_rows": [
+    {
+      "kind": "historical ranking",
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "line": 542,
+      "quote": "5,C0052,Non-triviality of the scaling limit of the three-dimensional Ising model,attempted_un,3D Ising non-triviality",
+      "verdict": "This is a candidate label and historical attempt status; it is not an exact theorem statement or present-day open-status check."
+    },
+    {
+      "kind": "intake problem paraphrase",
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+      "line": 52,
+      "quote": "Prove that the three-dimensional Ising model is non-trivial: its scaling limit is not a Gaussian field (the renormalised coupling constant does not vanish).",
+      "verdict": "Paraphrase omits the primary source's explicit g(beta) formula and near-critical quantifier."
+    },
+    {
+      "kind": "prior attempt route",
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "line": 42,
+      "quote": "Non-triviality <=> inf_L P(two independent currents at scale L intersect) > 0",
+      "verdict": "Unsupported as written: Exercise 61 has endpoint-dependent source laws and correlation weights; the global g(beta) requires a localization/limit comparison."
+    }
+  ]
+}

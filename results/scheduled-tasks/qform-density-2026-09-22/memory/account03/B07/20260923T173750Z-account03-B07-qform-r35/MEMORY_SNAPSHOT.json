@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B07",
+  "run_id": "20260923T173750Z-account03-B07-qform-r35",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_revision": "2026-09-22.15",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "source_control_commit_initial": "c803a4055c0d2074fa55c1f3cf8e67356666b02b",
+  "source_control_commit_prepublication": "1296067e6893015e19621787427759a2920a4367",
+  "source_control_commit_final_refresh": "bc27219a6805b763ffbd5e9be395cc7a64915244",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "no post-rotation independence",
+    "no law-uniform scalar quadratic-phase decay",
+    "bounded projection density alone does not control arbitrary indefinite quadratic pushforward",
+    "small coefficient/operator tails are not deletable random quadratic errors without input moments"
+  ],
+  "premises": [
+    "account03/B07 r34 aggregate-E2 branch: e2(KK^T)>854675.100194511 h^4, canonical commit d82a9db01d8e89e36f85d634df0ab364d74e7a8e",
+    "account04/B07 r1 strict-N3 physical coefficient cap |A_ij|<=h/8 at h=(2sqrt(2)-1)/1572864, canonical commit 842652e93680813d356fde0f15f12ab70b59c3c3",
+    "account03/B02 marginal-free physical-E3 Fourier theorem, canonical commit 52cef3abd27c641ae6666d6ee3bbc25d90cb4813"
+  ],
+  "partner_result_actually_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "842652e93680813d356fde0f15f12ab70b59c3c3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B07/20260923T091740Z-account04-B07-actual-core-diffuse-banks-r1/REPORT.md",
+    "use": "strict-N3 coefficient cap h/8 inserted into Hadamard at the new E3 inequality, proving that e3>=h^6 forces at least 9710 nonzero literal physical 3x3 cross minors"
+  },
+  "newer_partner_checked": {
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B07/20260923T161510Z-account04-B07-coordinate-core-r2/REPORT.md",
+    "scope_result": "valid diagonal-plus-rank coordinate-core theorem, but its required large physical diagonals are absent in the current strict-N3 packet"
+  },
+  "new_theorems": [
+    "QFORM-E2-COMPOUND-INTERFACE-R2-OR-E3-v1",
+    "QFORM-BANKCYCLE-TWOSIDED-R2-INTERFACE-v1"
+  ],
+  "result_summary": "For K with aggregate second volume Z=e2(KK^T), the PSD two-compound defect H= (KK^T)^2-tr(KK^T)KK^T+ZI has at most two spectral directions below Z/3. For any physical column extension T=[K Y], exact exterior algebra yields dist_F(T,rank<=2)<=3 sqrt(e3(TT^T)/Z). Applied to r34, either an actual full-interface E3 packet of size h^6 pays the full ambient law continuously by <=9075549.429274965, or both one-sided interfaces are within 0.003245046 h of rank two and the union-to-outside cross block is within 0.004589187 h of rank four. All tails are retained.",
+  "canonical_math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3a3334245375f0d72687f3cb482b4478d51f3188",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260923T173750Z-account03-B07-qform-r35/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260923T173750Z-account03-B07-qform-r35/CHECKS.txt"
+  },
+  "analytic_receiver": {
+    "commit": "52cef3abd27c641ae6666d6ee3bbc25d90cb4813",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T170106Z-account03-B02-qform-r35/REPORT.md",
+    "use": "physical e3(TT^T)>=h^6 implies full ambient continuous C0 density with ||p_Q||inf<=C_E3/h"
+  },
+  "unresolved_implication": "QFORM-R2-INTERFACE-TUBE-RECEIVER-v1",
+  "next_step": "Consume the two-sided original-coordinate rank-two interface tubes / rank-four union carrier while retaining their nonzero tails and arbitrary internal curvature; alternatively force another literal E3 packet or an actual bounded physical principal core. Keep the r34 hub/12-bank and 12-by-2-grid siblings separate.",
+  "full_qform_status": "OPEN",
+  "full_continuity_status": "OPEN",
+  "paid_branch_continuity": "PROVED_C0_ON_E3_BRANCH"
+}

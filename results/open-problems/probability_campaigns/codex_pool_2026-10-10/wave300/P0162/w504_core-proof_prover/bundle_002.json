@@ -1,0 +1,124 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w504",
+  "bundle_slug": "p0162-adaptive-coordinate-reviewed-draft-20261010-v2",
+  "entries": [
+    {
+      "key": "restriction-identity",
+      "namespace": "probability.boolean-fourier",
+      "logical_name": "draft-exact-restriction-entropy-defect",
+      "kind": "lemma",
+      "title": "DRAFT: Exact restriction entropy defect",
+      "statement": "Draft of an exact identity independently checked by w506; it is not a full FEI proof. For Boolean f under uniform measure, let H be Shannon entropy in bits of squared normalized Walsh coefficients, and Delta_i=H(f)-[H(f_i^+)+H(f_i^-)]/2. For restriction coefficients u_T,v_T put w_T=(u_T^2+v_T^2)/2, p_T=u_T^2/(u_T^2+v_T^2), q_T=(u_T-v_T)^2/[2(u_T^2+v_T^2)]. Omit zero weights. Then sum w_T=1, Inf_i(f)=sum w_T q_T and Delta_i=sum w_T[1+h_2(q_T)-h_2(p_T)], where h_2 is binary entropy with zero endpoint terms. In particular 0<=Delta_i<=2. The extra imbalance term is nonnegative and cannot be dropped for an upper bound.",
+      "proof_text": "Put u_T and v_T for the restriction coefficients. Walsh restriction gives fhat(T)=(u_T+v_T)/2 and fhat(T union {i})=(u_T-v_T)/2, so the corresponding probabilities are w_T(1-q_T) and w_T q_T. Thus H(f)=H(w)+sum w_T h_2(q_T). The auxiliary joint law (B,T) with probabilities u_T^2/2 and v_T^2/2 has uniform branch marginal by Parseval. Its entropy is both 1+[H(f_i^+)+H(f_i^-)]/2 and H(w)+sum w_T h_2(p_T). Subtracting gives the stated equality; summing selector-present probabilities gives Inf_i=sum w_T q_T. Since sum w_T=1 and binary entropy lies in [0,1], the defect lies in [0,2]. No independence of branch and Fourier index is assumed. Independently checked by w506, KEEP C001.",
+      "assumptions": [
+        "Uniform independent input bits",
+        "Boolean values -1,+1",
+        "Entropy in bits"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-p0162-w504-20261010:restriction-identity",
+        "url": "urn:owner-work:p0162:w504:20261010:restriction-identity",
+        "revision": "independently-reviewed-special-cases-20261010-v2",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "supersedes_existing": true
+    },
+    {
+      "key": "adaptive-family",
+      "namespace": "probability.boolean-fourier",
+      "logical_name": "draft-bent-rare-flip-base-coordinate-bound",
+      "kind": "lemma",
+      "title": "DRAFT: Suitable base coordinates in a bent rare-flip family",
+      "statement": "Draft special-case lemma independently checked by w506; no novelty or full FEI claim. For even m>=2, let g_m(b)=(-1)^(sum_{r=1}^{m/2}b_{2r-1}b_{2r}) and F_m(b,z)=g_m(b)-2*1_{b=0,z=1} on independent uniform bits b in {0,1}^m and z in {0,1}. Set t=2^-m. For every base coordinate j in [m], Inf_j(F_m)=1/2+t and Delta_j(F_m)<=2-(m/2)t<4 Inf_j(F_m), where Delta_j is parent spectral entropy minus the average spectral entropy of its two restrictions. This is an explicit family only; arbitrary Boolean coordinate selection remains unproved.",
+      "proof_text": "Write a=2^(-m/2), t=a^2. A two-bit Walsh transform of (-1)^(b_1 b_2) is (1,1,1,-1)/2. Tensoring pairs gives ghat_m(s)=a epsilon_s, with sign weights (1+epsilon a)/2. The point indicator at zero has every coefficient t. Hence Fhat_m(s,0)=a epsilon_s-t and Fhat_m(s,1)=t. Direct edge counting gives Inf_j(F_m)=1/2+t for each base coordinate: the exceptional flip increases h_m=g_m-2*1_0's j-influence by 2t, and F_m averages g_m and h_m. Define L(d)=sum_{epsilon=+/-1}[(1+epsilon d)/2](1-epsilon a)^2 log_2[(1-epsilon a)^2], with zero logarithmic terms zero. The full entropy is m(1+t)-L(a). When b_j=1 there is no exceptional flip, one partner parity and m-2 quadratic-core bits, giving entropy m-2. When b_j=0 there are m-2 core bits and two controls (partner and z); the zero-control block has coefficients 2a epsilon-2t with sign weights (1+2epsilon a)/2, and each of the other three blocks has coefficients -2t. Their masses are 1-3t,t,t,t, giving entropy m-2+3mt-L(2a). Thus Delta_j=2-(m/2)t-L(a)+L(2a)/2. Algebra gives L(2a)-2L(a)=-[R(1-a)+R(1+a)], R(u)=u^2 log_2 u. For a<=1/2, R''=(2ln u+3)/ln 2>0 on [1/2,3/2]; Jensen gives R(1-a)+R(1+a)>=0. Consequently Delta_j<=2-(m/2)t<4(1/2+t). At m=2 the core has zero variables and the positive sign has weight one, so the same calculation applies. Independently checked by w506, KEEP C003, with separate algebra and truth tables at m=2,4,6,8.",
+      "assumptions": [
+        "Uniform independent input bits",
+        "Boolean values -1,+1",
+        "Entropy in bits",
+        "m is even and at least 2",
+        "The exception is exactly one vertex"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-p0162-w504-20261010:adaptive-family",
+        "url": "urn:owner-work:p0162:w504:20261010:adaptive-family",
+        "revision": "independently-reviewed-special-cases-20261010-v2",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "supersedes_existing": true
+    },
+    {
+      "key": "family-fei",
+      "namespace": "probability.boolean-fourier",
+      "logical_name": "draft-bent-rare-flip-fei-constant-two",
+      "kind": "lemma",
+      "title": "DRAFT: FEI with constant 2 for the bent rare-flip family",
+      "statement": "Draft special-case lemma independently checked by w506. For even m>=2 define F_m(b,z)=(-1)^(sum_{r=1}^{m/2}b_{2r-1}b_{2r})-2*1_{b=0,z=1} on uniform independent bits. With spectral entropy H in bits, total influence I=sum_S |S| Fhat_m(S)^2, and t=2^-m, one has I=m/2+(m+1)t and H<=m+h_2(t)<=2I. This family satisfies FEI despite an unbounded selector Delta_z/Inf_z ratio; neither observation settles FEI for all Boolean functions.",
+      "proof_text": "The quadratic function has influence 1/2 in every base coordinate. Because its values at zero and each unit vector are both +1, flipping only the value at zero increases each restriction influence by 2t. Averaging over the selector therefore gives base influences 1/2+t and selector influence t, so I=m/2+(m+1)t. In the Fourier spectrum the selector-present slice consists of 2^m coefficients t, so its total probability is t. Conditional on presence or absence there are at most 2^m possible base indices. The entropy chain rule gives H<=m+h_2(t), without an independence assumption. The inequality -(1-t)ln(1-t)<=t and log_2(1/t)=m give h_2(t)<=mt+t/ln 2. Since m>=2, m+1/ln 2<=2(m+1), proving H<=2I. Independently checked by w506, KEEP C004. This proof uses no closure of the family under arbitrary restrictions.",
+      "assumptions": [
+        "Uniform independent input bits",
+        "Boolean values -1,+1",
+        "Entropy in bits",
+        "m is even and at least 2"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-p0162-w504-20261010:family-fei",
+        "url": "urn:owner-work:p0162:w504:20261010:family-fei",
+        "revision": "independently-reviewed-special-cases-20261010-v2",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "supersedes_existing": true
+    },
+    {
+      "key": "coordinate-gap",
+      "namespace": "probability.boolean-fourier",
+      "logical_name": "draft-small-influence-suitable-coordinate-gap",
+      "kind": "concept",
+      "title": "DRAFT: Unproved suitable-coordinate input for FEI",
+      "statement": "Unproved sufficient input, explicitly CONJECTURAL: there is a finite K_0 such that every nonconstant Boolean f on every uniform cube with max_i Inf_i(f)<1/16 has a relevant coordinate i satisfying Delta_i(f)<=K_0 Inf_i(f). Here H(f) is entropy in bits of squared normalized Walsh coefficients, Delta_i=H(f)-[H(f_i^+)+H(f_i^-)]/2 and Inf_i=sum_{S containing i} fhat(S)^2. The identity Delta_i<=2 handles any function with some Inf_i>=1/16 using constant 32. Thus this input would imply H(f)<=max(K_0,32) I(f) for every Boolean function by induction. The input itself is not proved, and choosing the largest influence is not justified.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform independent input bits",
+        "Boolean values -1,+1",
+        "Entropy in bits",
+        "One K_0 independent of dimension and function",
+        "EXISTS relevant coordinate, not FOR EVERY coordinate"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-p0162-w504-20261010:coordinate-gap",
+        "url": "urn:owner-work:p0162:w504:20261010:coordinate-gap",
+        "revision": "conjectural-input-with-reviewed-context-20261010-v2",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "supersedes_existing": true
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "adaptive-family",
+      "to_key": "coordinate-gap",
+      "kind": "semantic_association",
+      "rationale": "The family proves a good coordinate exists in one explicit class; it does not establish the all-small-influence input."
+    },
+    {
+      "from_key": "adaptive-family",
+      "to_key": "restriction-identity",
+      "kind": "semantic_association",
+      "rationale": "Both statements concern exactly the same Delta_i under uniform measure; the family bound retains both entropy terms."
+    },
+    {
+      "from_key": "family-fei",
+      "to_key": "adaptive-family",
+      "kind": "semantic_association",
+      "rationale": "The statements concern exactly the same explicitly defined Boolean family, comparing its global entropy bound with local splitting costs."
+    }
+  ]
+}

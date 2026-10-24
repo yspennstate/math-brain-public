@@ -1,0 +1,36 @@
+{
+  "target_id": "C0052",
+  "checked_on": "2026-10-10",
+  "ranking_source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:542",
+  "ranking_quote": "5,C0052,Non-triviality of the scaling limit of the three-dimensional Ising model,attempted_un,3D Ising non-triviality",
+  "primary_source": {
+    "author": "Hugo Duminil-Copin",
+    "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+    "url": "https://arxiv.org/pdf/1707.00520",
+    "version": "1707.00520v1",
+    "locator": "Section 7, equations 7.1-7.2, Conjecture 6; printed p.94, PDF page index 93",
+    "exact_target_quote": "Prove that the three-dimensional Ising model is non-trivial",
+    "read_receipt": "Primary PDF text at the conjecture and its coupling definition, plus page-93 screenshot retrieved on 2026-10-10",
+    "fresh_file_hash_verified": false,
+    "mathematical_proof_receipt": false
+  },
+  "primary_statement": "In the zero-field nearest-neighbor ferromagnetic Ising model on Z^3, with the free infinite-volume state, the signed coupling g(beta)=sum U4(0,x2,x3,x4)/(chi(beta)^2 xi(beta)^3) does not tend to zero as beta increases to beta_c from below.",
+  "exact_nonvanishing_quantifier": "There exist epsilon>0 and beta_n increasing to beta_c with -g(beta_n)>=epsilon. A positive liminf or a uniform lower bound for every endpoint quadruple is stronger.",
+  "prior_attempt": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl:42",
+    "attempt_id": "C0052-A001",
+    "status": "Unclosed second-moment/current-intersection variance argument",
+    "unsafe_source_edge": "SOLVER_MAP.md:14 says C0052 reduces_to C0051 but omits the attempt's variance condition; no unconditional reduction is certified."
+  },
+  "primary_literature_checked": [
+    {"url":"https://arxiv.org/abs/1912.07973","finding":"Gaussian scaling for nearest-neighbor d=4; this resolves the historical four-dimensional half, not C0052."},
+    {"url":"https://arxiv.org/abs/2309.05797","version":"v2 2025-04-30","finding":"Triviality for reflection-positive models of effective dimension at least four; includes long-range low-dimensional models, not the nearest-neighbor d=3 target."},
+    {"url":"https://arxiv.org/abs/1612.02436","finding":"Four-point functions extracted from conformal bootstrap; not a recovered proof of the lattice-to-scaling nontriviality statement."}
+  ],
+  "local_checks": {"H_and_I_attempt_directories":"Targeted C0052/3D-Ising searches returned no matches.","lean_ranked_list":"Dated status record only.","team_O_board":"No C0052 assignment found.","owner_solved_retired":"No verified C0052 solution recovered from the bounded named-source checks; incomplete inventory, so not evidence of openness."},
+  "brain_scar": "perceptron_proof_open_gaps_fleet_2026_07_12: a green receipt or completed sublemma is not completion of the hardest unchecked proof gap.",
+  "served_model_evidence": "UNKNOWN; requested settings and native thread identity do not establish served model or account.",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "next": "Mathematical review of L1-L3 and C1; then seek the normalized four-distinct-site lower bound rather than repeat status searches."
+}

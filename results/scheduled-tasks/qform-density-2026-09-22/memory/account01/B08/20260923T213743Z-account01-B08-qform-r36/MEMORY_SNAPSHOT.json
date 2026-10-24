@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260923T213743Z-account01-B08-qform-r36",
+  "utc_start": "2026-09-23T21:37:43Z",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "control_commit_prepublication": "668247d30c83f1ad501e1f87293b86f7d0549e9a",
+  "control_revision": "2026-09-22.15",
+  "correction_inbox_blob": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "e7518cad31bf0381bdf682478ca472a0c08f77b9",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T213743Z-account01-B08-qform-r36/REPORT.md",
+    "addendum_commit": "be69878c354322977d5741284a7802d2c12a75e5",
+    "addendum_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T213743Z-account01-B08-qform-r36/HEAVY_ROW_ADDENDUM.md",
+    "checker_commit": "ff55abdf11de6f8c5851a8d1ec44c00073062361",
+    "check_results_commit": "202f5b77d7ba2fa579066617832495ee2ab4c47b"
+  },
+  "claim_ids": [
+    "QFORM-DELETE1-TRANSVERSE-STAR-AMPLIFICATION-v1",
+    "QFORM-DIFFUSE-TRANSVERSE-STAR-PAID-130-v1",
+    "QFORM-AMPLIFIED-HEAVYROW-PHYSICAL-CURRENCY-v1"
+  ],
+  "proved_summary": [
+    "For AR=R Lambda with three selected |lambda|>=L, after deleting original coordinate i with selected leverage p, if x=s3(C)/L<1 then the component tau of the physical star b orthogonal to the top-two child eigenspace satisfies tau >= (1-x)L sqrt((1-p)/p).",
+    "Also s2(C)>=sqrt(1-p)L. Thus p<=1/48 and s3(C)<=L/130 force transverse star component tau>=6.80291879578 L and two child singular values >=0.989528507253 L.",
+    "If the star angle to the top-two child plane is >=1/2 and the resulting physical three-frame has max row leverage <=1/48, completed account02/B08 r28 supplies a balanced original-coordinate half-cut. The literal-cross reference then has s3>=0.123609363053 L, row-range leverage <=1/12, and the actual child-tail error L/130 is <s3/16. Volume stability gives a continuous C0 density ||p_Q||_infinity<182.829/L.",
+    "General tail-angle tradeoff: every unpaid diffuse low-tail state must have star angle d below d_crit(x)=64 x tau0(x)/(sigma0 sqrt(tau0(x)^2-1024x^2)); for p0=1/48 this is asymptotic to 64x/sqrt(47/48).",
+    "If the same low-tail transverse three-frame is not diffuse, a heavy row forces either a paid scalar pivot >0.02613L, a physical principal 2x2 determinant >0.04843L^2, or a literal child off-diagonal row star >0.02613L."
+  ],
+  "designated_partner_applied": {
+    "account": "account02",
+    "slot": "B08",
+    "commit": "66582bd87d50634f3525a57c87acffdbde97aea1",
+    "result": "balanced physical three-frame half-cut",
+    "actual_inequality": "s3(M0)>=0.12360936305311279 L, leading to ||p_Q||_infinity<182.829/L"
+  },
+  "unresolved_implication": "QFORM-AMPLIFIED-NEARALIGNMENT-OR-HEAVYROW-COMPILER-v1",
+  "unresolved_details": [
+    "compile d=O(s3(C)/L) quantitatively near-aligned star without rotating the product source",
+    "compile the fixed physical two-pivot determinant or child off-diagonal row-star exits without using a refuted one-minor/one-star shortcut",
+    "handle s3(C)>L/130 in the global exhaustive assembly"
+  ],
+  "continuity": "proved only on the literal-cross volume-stability paid branch; not claimed on scalar-pivot or remaining localized branches",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_effort_requested": "maximum actually supported",
+  "thinking_usage": null
+}

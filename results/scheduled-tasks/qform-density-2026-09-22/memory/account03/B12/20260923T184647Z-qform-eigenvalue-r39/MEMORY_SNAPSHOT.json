@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260923T184647Z-qform-eigenvalue-r39",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "control_commit_start": "fc919bb6362788e5e61ad24963aa37a118ecc720",
+  "control_commit_prepublication": "a4c99b43a044c127787c26997ed942f41591aac6",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "required_claude_source_read": {
+    "commit": "c4c23b784395630c094ba299a50712209921d1ae",
+    "path": "proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md",
+    "use": "source map and current unpaid interfaces only; no unproved claim from this source used as a premise"
+  },
+  "result_ids": [
+    "QFORM-SEVEN-SQUARE-MODE-HYBRID-COMPILER-v1",
+    "QFORM-DESTRUCTIVE-GRAM-SEVEN-MODE-STABILITY-v1"
+  ],
+  "partner_result_applied": {
+    "source": "yspennstate/math-open-problems@c307f81b3196820aa711a5c47f243feeeeb74781",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260923T182100Z-account04-B12-local-destructive-square-r6/REPORT.md",
+    "application": "with a 10-coordinate carrier, k=7, r=3, full-rank signed dilation packet, rank<=3 destructive carrier defect and ||T||<=1/4, obtain sqrt(lambda7((A^2)[H,H]))>=sqrt(4+t^2)-1/4>=7/4"
+  },
+  "other_proved_sources_applied": [
+    {
+      "source": "yspennstate/math-open-problems@7f2c9f4c2dfeb6134d9291eb7e83b62a9cb4b3b0",
+      "use": "finite physical-core projected-gradient density bound 2*sqrt(6*pi*m)/sigma, uniform in affine terms"
+    },
+    {
+      "source": "yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7",
+      "use": "one-scale ridge theorem; q=2 gives automatic leverage gate and a five-cross-direction bound 15*sqrt(3e)/(2*s5(B))"
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "005c80f70952024e3460260cb12936870f26d70e",
+    "bundle_tail_commit": "b4745ece98fa3839cf7afe35d829d08384c815b4",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T184647Z-qform-eigenvalue-r39/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T184647Z-qform-eigenvalue-r39/CHECKS.py",
+    "check_results_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T184647Z-qform-eigenvalue-r39/CHECKS.json"
+  },
+  "mathematical_core": "For an actual physical split H|H^c, (A^2)[H,H]=C^2+BB^T and Weyl imply s3(C)^2+s5(B)^2>=lambda7((A^2)[H,H]). The self branch is controlled by the finite-core theorem; the five-cross branch is controlled by q=2 ridge with gamma=s5(B)/sqrt(12). This yields ||p||<=sqrt(24*pi*m+675*e/4)/g from lambda7 carrier>=g^2. Composing with the account04/B12 destructive Gram theorem charges arbitrary added signed spectrum only by the destructive carrier square-Gram footprint.",
+  "finite_check": {
+    "trials": 10000,
+    "violations": 0,
+    "minimum_margin": 1.909193461459049,
+    "status": "CONSISTENCY_CHECK_ONLY"
+  },
+  "explicit_partner_family_bound": 19.899275305553434,
+  "unresolved_implication": "From bare s3(A)>=1, force a bounded original-coordinate carrier with seven square-energy modes at universal scale, or route failure into an already-paid ridge/grouped-crossing/hub/rank-two mechanism. Bare three large modes do not imply seven carrier modes.",
+  "next_mechanism": "combine the seven-mode carrier compiler with a low-carrier-rank structural alternative; in the failure case seek a quantitative grouped-crossing or compound-hub certificate while retaining all nonzero tails",
+  "continuity_status": "CONTINUOUS_ON_FIVE-CROSS-RIDGE_EXIT_ONLY; COMBINED_SEVEN-MODE THEOREM ASSERTS ESSENTIAL BOUNDEDNESS; FULL_TARGET_CONTINUITY_OPEN",
+  "full_target_status": "OPEN"
+}

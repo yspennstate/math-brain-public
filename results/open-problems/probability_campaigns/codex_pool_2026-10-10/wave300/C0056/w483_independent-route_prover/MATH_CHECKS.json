@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "formal_check": false,
+  "trusted_axioms": "Not a formal theorem receipt; analytic proofs are in ATTEMPT.md",
+  "checks": [
+    {
+      "name": "L1 pair formula vs independent energy quadrature",
+      "pass": true,
+      "evidence": {
+        "pair_formula": 0.21144675061846224,
+        "quadrature": 0.2114464863461493,
+        "absolute_error": 2.6427231294978704e-07,
+        "steps": 8000
+      }
+    },
+    {
+      "name": "L5 exact Walsh orthogonality and constructed eigenvalue equations",
+      "pass": true,
+      "evidence": {
+        "dimension": 8,
+        "exact_fraction_arithmetic": true,
+        "flat_squared_component": "1/8"
+      }
+    },
+    {
+      "name": "L5 Cantor positive cross pairs and asymptotic-bound controls",
+      "pass": true,
+      "evidence": {
+        "alpha": 0.6309297535714574,
+        "rows": [
+          {
+            "k": 2,
+            "N": 4,
+            "eta": 0.5,
+            "S": 0.2659546729413546,
+            "diagonal": 0.07957747154594767,
+            "off_diagonal": 0.18637720139540692,
+            "proved_lower_bound": 0.08222073175874142,
+            "off_diagonal_fraction": 0.7007855862585455
+          },
+          {
+            "k": 4,
+            "N": 16,
+            "eta": 0.25,
+            "S": 0.41130048468499747,
+            "diagonal": 0.039788735772973836,
+            "off_diagonal": 0.37151174891202365,
+            "proved_lower_bound": 0.10618973874784984,
+            "off_diagonal_fraction": 0.9032611502915033
+          },
+          {
+            "k": 6,
+            "N": 64,
+            "eta": 0.125,
+            "S": 0.576140905244475,
+            "diagonal": 0.019894367886486918,
+            "off_diagonal": 0.5562465373579881,
+            "proved_lower_bound": 0.13714619627108526,
+            "off_diagonal_fraction": 0.965469613934034
+          },
+          {
+            "k": 8,
+            "N": 256,
+            "eta": 0.0625,
+            "S": 0.7683769116119712,
+            "diagonal": 0.009947183943243459,
+            "off_diagonal": 0.7584297276687277,
+            "proved_lower_bound": 0.17712708754552697,
+            "off_diagonal_fraction": 0.9870542909437826
+          }
+        ]
+      }
+    },
+    {
+      "name": "L6 short-interval pair covering including endpoint cases",
+      "pass": true,
+      "evidence": {
+        "exact_fraction_cases": 4
+      }
+    },
+    {
+      "name": "L7 finite explicit free-model bound",
+      "pass": true,
+      "evidence": {
+        "bound": 0.44347058428905756,
+        "beta": 5.244115108584238
+      }
+    },
+    {
+      "name": "L8 bounded averaged density with divergent quenched second moment",
+      "pass": true,
+      "evidence": {
+        "rows": [
+          {
+            "eta": 0.5,
+            "second_moment": 0.3183098861837907,
+            "averaged_density_max": 0.5
+          },
+          {
+            "eta": 0.25,
+            "second_moment": 0.6366197723675814,
+            "averaged_density_max": 0.7048327646991335
+          },
+          {
+            "eta": 0.125,
+            "second_moment": 1.2732395447351628,
+            "averaged_density_max": 0.8440417392452615
+          },
+          {
+            "eta": 0.0625,
+            "second_moment": 2.5464790894703255,
+            "averaged_density_max": 0.9208331516788689
+          }
+        ]
+      }
+    }
+  ],
+  "check_count": 6,
+  "elapsed_compute_seconds": 0.03161770000588149,
+  "command": "python -X utf8 -u ~/brain_workers/w483/verify_math.py"
+}

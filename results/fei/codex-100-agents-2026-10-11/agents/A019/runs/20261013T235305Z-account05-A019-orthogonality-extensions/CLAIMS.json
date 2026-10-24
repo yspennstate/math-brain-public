@@ -1,0 +1,50 @@
+{
+  "claims": [
+    {
+      "claim_id": "A019-FOLDED-SEPARATOR-OWNER",
+      "version": 1,
+      "exact_statement": "For arbitrary Boolean modules f_j(z,y_j) sharing one uniform separator z with mutually disjoint uniform private cubes, set J_j=(I(f_j|z0)+I(f_j|z1))/2 and fold each module by an optional selector character to delta_j=min(Inf_z(f_j),1-Inf_z(f_j)). With q_j=1-2delta_j>=0, delta_*=(1-product_j q_j)/2, Q_-j=product_(k!=j)q_k and kappa_j=I((a_j-b_j)/2) for the folded children, the folded product has private influence J=sum J_j and separator influence delta_*. Entropy and normalized-reference costs are unchanged by folding and original separator influence is at least delta_*. Its repeated-selector loss satisfies 0<=sum delta_j-delta_*<=J-delta_*, with optimal coefficient1 on J. Its exact derivative energy is I(D)=sum_j t_j, t_j=(1-Q_-j)J_j/2+Q_-j kappa_j<=J_j. Supplied finite normalized complete references of terminal costs c_0,c_1 admit a normalized root reference with CE_root<=(c_0+c_1)/2+(3/ln2)delta_*+2sum_j t_j. Thus exclusive per-module terminal allocations c_j,avg+2t_j<=KJ_j and K>=3/ln2 suffice for CE_root<=K I(original product). No universal terminal allocation or paired-row entropy-subadditivity statement is asserted.",
+      "hypotheses": [
+        "Boolean signs on uniform physical cubes; entropy and CE in bits",
+        "Private blocks mutually disjoint and independent of the single common separator",
+        "Character folding permutes Fourier labels and normalized references; original physical influence retained in final conclusion",
+        "I(D) is L2 Dirichlet energy for a real derivative",
+        "Terminal references supplied, normalized, finite-cost; their complete CE is retained",
+        "All-r sharpness witnessed by a_j=1,b_j=private coordinate character"
+      ],
+      "statement_sha256": "44ba0dda071d6205a5ef985e5839455d2aa9e3566f74ce3d7decc10dfadadaaf",
+      "contributors": [
+        "A019"
+      ],
+      "proof_source": "REPORT.md sections2-5; code/check_owner.py; out/OWNER_CHECK.json",
+      "proof_dependencies": [
+        "B04-NODE-BOUNDARY@1 (A018 independent acceptance)",
+        "A097 compatible conditional-mixture reference lift; needed log-sum step reconstructed in REPORT section5"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A019",
+          "independent": false,
+          "verdict": "AUTHOR_PROOF_AND_STRICT_EXACT_VALIDATION",
+          "cases": 8448,
+          "assertions": 98432
+        }
+      ],
+      "status": "PROVED_AT_STATED_SCOPE_INDEPENDENT_REVIEW_PENDING",
+      "supersedes": null,
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A016",
+        "A018",
+        "A020",
+        "A064",
+        "A090",
+        "A091",
+        "A095",
+        "A097",
+        "B04-lead"
+      ]
+    }
+  ]
+}

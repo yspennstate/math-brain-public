@@ -1,0 +1,104 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A048 stage 2: essential sharp-tax payment}
+\author{A048, B10}\date{12 October 2026}\maketitle
+All entropies are bits; $e(x)=-x\log_2x$. Let
+\[
+ \tau_*(p)=h_2(p)-\min_t\{h_2(\sin^2t)+h_2(\sin^2(t-b))\},
+ \quad\sin^2b=\min(p,1-p).
+\]
+The exact angular channel reduction gives $E=J-M\le\tau_*(p)$.
+The actual biased AND at $p=1/8,q=1/4$ certifies
+$\tau_*(1/8)>1195/10000$. No half-tax theorem is assumed here.
+Also $0\le\tau_*(p)\le h_2(p)$ and $\tau_*(1/2)=0$.
+For the last equality, the positive power series for $1-h_2((1+z)/2)$
+implies $h_2(x)\ge4x(1-x)$; the two terms at $b=\pi/4$ then sum to at least one,
+with equality at an eigenstate.
+
+\paragraph{Essential point-defect obstruction.}
+Let $f_r=1-2\prod_{i=1}^r X_i$, with independent bias $q=1/8$.
+All bits are essential; $I_{\rm phys}=rq^{r-1}$ and
+$I_{\rm spec}=4r(1-q)q^r$.
+Every minimal exact essential computing tree is a short-circuit chain:
+it stops at the first zero, and the all-one path queries all bits.
+Thus its sharp-tax bill is
+\[
+ A_{\mathcal T}=\tau_*(q)\frac{1-q^r}{1-q},\qquad
+ \frac{A_{\mathcal T}}{I_{\rm phys}}\longrightarrow\infty.
+\]
+Randomized policies are mixtures and cannot lower this value.
+The transcript entropy is $h_2(q)(1-q^r)/(1-q)$, also not linearly influence-paid.
+Disjoint tensor products add both ledgers; they do not repair dimension growth.
+
+\paragraph{The actual uncertainty defect.}
+Writing $U(p)=\min_tF_p(t)$, define
+$D_v=\sum_T q_T(F_p(t_T)-U(p))\ge0$.
+Exactly $E_v=\tau_*(p)-D_v$ and
+\[
+ A_{\mathcal T}-\sum_vw_vD_v=\sum_vw_v(J_v-M_v).
+\]
+For a selected point-defect bit of bias $p$ and residual exceptional probability
+$\epsilon$, put $m=1-2\epsilon$, $v=4\epsilon(1-\epsilon)$.
+The exact channel and conditional entropy are
+\begin{align*}
+ J&=h_2(pv)-p h_2(v),\\
+ M&=e((1-p+pm)^2)+e(p(1-p)(1-m)^2)-e(1-pv)+pv h_2(p).
+\end{align*}
+An independent erasure flag of probability $v$ enriches the data observation and
+reveals the selected bit only when the flag is one. Data processing gives
+$[E]_+\le J\le v h_2(p)\le4\epsilon h_2(p)$.
+For a heterogeneous defect, $\delta=\prod_i p_i$ and the reach weight when
+querying $i$ is $w=\delta/(p_i\epsilon)$. Therefore
+\[
+ \sum_vw_v[E_v]_+\le\sum_vw_vJ_v
+ \le4\delta\sum_i\frac{h_2(p_i)}{p_i}\le4I_{\rm phys}.
+\]
+Each physical influence is spent once. Common unrevealed independent factors
+preserve the local channel and retain their terminal entropy.
+
+\paragraph{Exact asymptotic cancellation.}
+For homogeneous bias $q$, $\delta=q^r$ and
+\[
+ P_\varnothing=(1-2\delta)^2,\quad
+ P_S=4\delta^2\prod_{i\in S}\frac{1-q}{q}\ (S\ne\varnothing),
+\]
+\[
+ H=e((1-2\delta)^2)+e(4\delta)+4\delta r h_2(q)-e(4\delta^2).
+\]
+For fixed $q\in(0,1)$,
+\begin{align*}
+ H/I_{\rm phys}&\to4q[\log_2(1/q)+h_2(q)],\\
+ J_{\mathcal T}/I_{\rm phys}&\to4q\log_2(1/q),\\
+ E_{\mathcal T}/I_{\rm phys}&\to4q[\log_2(1/q)-h_2(q)].
+\end{align*}
+Indeed $h_2(qv)-qh_2(v)=qv\log_2(1/q)+O_q(v^2)$;
+weighted summation over residual sizes has error $O_q(q^{r-1})$.
+The exact entropy formula has error $O_q(\delta)+O_q(r\delta^2)$.
+Since $|E_{\mathcal T}|\le H\to0$ while $A_{\mathcal T}$ tends to a positive constant,
+$\sum_vw_vD_v/A_{\mathcal T}\to1$. Almost all scalar tax is overcharge.
+
+\paragraph{Collapsed activation within A036's uniform class.}
+Activate an $n$-bit fair point defect on three fresh fair point controls.
+The result is the fair $N=n+3$ bit point defect, with $d=2^{1-N}$,
+$I=Nd$ and $I_{\rm ctrl}=3d$. Every actual physical tax is zero.
+Pricing the control mask as a single bias-$1/8$ bit charges more than
+$1195/10000$, independently of $n$.
+The fixed product-marginal reference has
+\[
+ K_{\rm KL}=Nh_2(d)-H\le Nd[\log_2(1/d)+\log_2e]<N(N+1)d.
+\]
+Both $K_{\rm KL}$ and $I$ vanish. For $N=13$,
+\[
+ K_{\rm KL}+8I<\frac{13\cdot22}{4096}
+ =\frac{143}{2048}<\frac{1195}{10000}<\tau_*(1/8).
+\]
+This refutes only the extra scalar mask-tax payment, not A036's collision payment
+or its separate entropy recovery.
+
+\paragraph{Open universal bridge.}
+The retained positive debt is paid on point-defect tensors. A universal result still
+needs compatible uncertainty-defect transport through overlapping controls,
+payment of the conditional $M$ cost, and all terminal entropy, without reusing influence.
+Full FEI remains open.
+\end{document}

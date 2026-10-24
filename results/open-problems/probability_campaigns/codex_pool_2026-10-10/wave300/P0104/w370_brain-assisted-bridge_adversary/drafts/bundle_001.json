@@ -1,0 +1,139 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w370",
+  "bundle_slug": "p0104-weak-scaling-variance-obstruction-w370-001",
+  "entries": [
+    {
+      "key": "variance-exponent",
+      "namespace": "probability.fpp",
+      "logical_name": "variance-fluctuation-exponent-in-a-fixed-direction",
+      "kind": "definition",
+      "title": "Variance fluctuation exponent in a fixed direction",
+      "statement": "For a sequence of real random variables T_n with 0<Var(T_n)<infinity, its variance fluctuation exponent is chi_var=lim_{n->infinity} log Var(T_n)/(2 log n), if this limit exists. This definition concerns variance only; it does not assert a weak limiting law or equivalence to a typical-fluctuation or transversal exponent.",
+      "proof_text": null,
+      "assumptions": [
+        "Positive finite variances",
+        "The limit is asserted only when it exists"
+      ],
+      "domain": "probability; FPP bridge audit",
+      "source": {
+        "source_id": "owner:w370:p0104-independent-bridge-20261010",
+        "url": "~\\brain_workers\\w370\\INDEPENDENT_BRIDGE.md",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign derivation; independent referee pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "uniform-kurtosis-bridge",
+      "namespace": "probability.fpp",
+      "logical_name": "weak-scaling-to-variance-with-uniform-standardized-fourth-moments",
+      "kind": "concept",
+      "title": "DRAFT conditional weak-scaling to variance bridge",
+      "statement": "DRAFT concept; independent mathematical KEEP by w371; integration pending. Let X_n be real with 0<sigma_n^2=Var(X_n)<infinity and E|X_n-EX_n|^4<=K sigma_n^4 for one finite K and every n. For positive a_n and deterministic m_n, if (X_n-m_n)/a_n converges weakly to a nondegenerate real Z, then Z has finite positive variance and Var(X_n)/a_n^2 converges to Var(Z). No independence across n is required. The proof is recorded in the campaign audit; neither this moment condition nor n^(1/3) nondegenerate weak scaling has been established here for iid planar lattice FPP.",
+      "proof_text": null,
+      "assumptions": [
+        "One uniform standardized fourth-moment constant K",
+        "Nondegenerate weak limit at the asserted scale",
+        "Deterministic centers; positive scales"
+      ],
+      "domain": "probability; FPP bridge audit",
+      "source": {
+        "source_id": "owner:w370:p0104-independent-bridge-20261010",
+        "url": "~\\brain_workers\\w370\\INDEPENDENT_BRIDGE.md",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign derivation; independent mathematical KEEP by w371; integration pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "weaker-route",
+      "namespace": "probability.fpp",
+      "logical_name": "larger-scale-concentration-does-not-justify-kpz-variance",
+      "kind": "concept",
+      "title": "Refuted candidate replacement of moment control by larger-scale concentration",
+      "statement": "DRAFT refuted route. The candidate inference says that nondegenerate n^(1/3) weak scaling, a uniform exponential tail bound for centered fluctuations at sqrt(n/log n), and a variance upper bound C n/log n force variance exponent 1/3. This inference is false for arbitrary random-variable sequences; the rare-event countermodel in this bundle satisfies those premises and has variance exponent 3/8. No claim of an iid lattice FPP counterexample is made.",
+      "proof_text": null,
+      "assumptions": [
+        "Abstract random-variable sequences, not a lattice model"
+      ],
+      "domain": "probability; FPP bridge audit",
+      "source": {
+        "source_id": "owner:w370:p0104-independent-bridge-20261010",
+        "url": "~\\brain_workers\\w370\\INDEPENDENT_BRIDGE.md",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign derivation; independent referee pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "rare-event",
+      "namespace": "probability.fpp",
+      "logical_name": "rare-event-obstruction-to-kpz-variance-from-weak-scaling",
+      "kind": "concept",
+      "title": "DRAFT rare-event obstruction retaining subdiffusive-scale tails",
+      "statement": "DRAFT concept; independent mathematical KEEP by w371; integration pending. For n>=4, put a_n=n^(1/3), s_n=sqrt(n/log n), and p_n=n^(-1/4). Let Z,S be independent symmetric signs and B_n an independent Bernoulli(p_n). Set Q_n=n+a_n Z+s_n B_n S. Then (Q_n-n)/a_n converges weakly to a symmetric sign, Var(Q_n)=n^(2/3)+n^(3/4)/log n, and chi_var=3/8. Moreover P(|Q_n-EQ_n|>=t s_n)<=exp(2.1-t) for every t>=0, Var(Q_n)<=(3/e+1)n/log n, and the standardized fourth moment is asymptotic to n^(1/4). These are abstract sequence statements and do not establish or refute lattice KPZ.",
+      "proof_text": null,
+      "assumptions": [
+        "Independence of the signs and Bernoulli variable for each n",
+        "No independence across n used"
+      ],
+      "domain": "probability; FPP bridge audit",
+      "source": {
+        "source_id": "owner:w370:p0104-independent-bridge-20261010",
+        "url": "~\\brain_workers\\w370\\INDEPENDENT_BRIDGE.md",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign derivation; independent mathematical KEEP by w371; integration pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "interval-variance",
+      "namespace": "probability.fpp",
+      "logical_name": "uniform-interval-anticoncentration-lower-bounds-variance",
+      "kind": "concept",
+      "title": "DRAFT quantified anti-concentration implies a variance lower bound",
+      "statement": "DRAFT concept; w369 proof audited by w370, referee w371 pending. If a real square-integrable X satisfies P(X in I)<=1-epsilon for every closed interval I of one fixed length L>0, with epsilon in (0,1], then Var(X)>=epsilon L^2/4. Apply the assumption to the interval centered at EX and integrate squared deviations outside it. A variance lower bound alone does not imply such uniform anti-concentration. This corrects the categorical logical explanation on recalled card claim_3ccc6fc493b4e17b5c29966949004f575c51205c8a4f0ba3bc516d0b752ebea4, without restating the cited paper theorem.",
+      "proof_text": null,
+      "assumptions": [
+        "Square integrability",
+        "The bound holds for every interval of the same positive length",
+        "One positive probability deficit epsilon"
+      ],
+      "domain": "probability; FPP bridge audit",
+      "source": {
+        "source_id": "owner:w370:p0104-independent-bridge-20261010",
+        "url": "~\\brain_workers\\w370\\INDEPENDENT_BRIDGE.md",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign derivation; independent mathematical KEEP by w371; integration pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "rare-event",
+      "to_key": "weaker-route",
+      "kind": "refutes",
+      "rationale": "The exact variance exponent 3/8 contradicts the candidate 1/3 conclusion while the stated weak and tail premises hold."
+    },
+    {
+      "from_key": "rare-event",
+      "to_key": "variance-exponent",
+      "kind": "depends_on",
+      "rationale": "The claimed exponent uses precisely the logarithmic variance definition."
+    },
+    {
+      "from_key": "uniform-kurtosis-bridge",
+      "to_key": "rare-event",
+      "kind": "semantic_association",
+      "rationale": "The countermodel has divergent standardized kurtosis and explains the retained moment premise."
+    },
+    {
+      "from_key": "uniform-kurtosis-bridge",
+      "to_existing_logical": "math:probability.core:open-problem-p0104-subdiffusive-and-kpz-passage-time-fluctuation-exponents",
+      "kind": "cites",
+      "rationale": "The conditional abstract bridge concerns converting hypothetical typical fluctuations into the variance target; the lattice inputs remain open obligations."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B20",
+  "run_id": "20260924T040000Z-account02-B20-QFORM-r44",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "control_commit_at_start": "b5bdcd58f6da5d548dcb6e83c0bc2eff3b1e52d8",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "partner_result": {
+    "account_slot": "account03/B20",
+    "run_id": "20260924T034736Z-account03-B20-QFORM-auto11-r46",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9ae7023224386e95ab2bd7f088347db8750c7b06",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B20/20260924T034736Z-account03-B20-QFORM-auto11-r46/REPORT.md",
+    "exact_expression_applied": "E3(M) >= (1/3) s1(M)^2 dist_F(M,rank<=2)^4; heavy physical arm norm >=1/128"
+  },
+  "pinned_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "directory": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "actual_application": "D5 on the live global W: e5(W^T W)>=1/1024 implies ||p_Q||_infinity<23.317; Theorem A pays the explicit four-bank rank-compression obstruction."
+  },
+  "new_result": {
+    "id": "QFORM-R46-HUB-TO-GLOBAL-R2-CUT-v1",
+    "statement": "In the r46 heavy-arm branch, a literal partition of all coordinates gives W with s1(W)>=1/128; if dist_F(W,rank<=2)>=2^-12, the full ambient law has continuous C0 density with ||p_Q||_infinity<13098; otherwise dist_F(W,rank<=2)<2^-12. An unpaid state can also assume e5(W^TW)<1/1024.",
+    "canonical_report_commit": "0f3465fa7e160288fb739586dadc47d30ac77e5b",
+    "canonical_checks_commit": "3c0db6fbd4d2af6687c4868e2b6412258c691176"
+  },
+  "obstruction": {
+    "id": "QFORM-THREECUT-R2-NOT-GLOBAL-R6-v1",
+    "statement": "A_*=(J_4-I_4) tensor I_2 has target spectrum {3,3,-1,-1,-1,-1,-1,-1}, rank 8, and all three balanced 2+2 bank cross matrices exactly rank 2; therefore three exact rank-two cuts do not force global off-diagonal rank<=6."
+  },
+  "unresolved_implication": "QFORM-R46-GLOBAL-R2-SEPARATOR-OR-FOURBANK-R12-PAYMENT-v1",
+  "next_step": "Use original-bank product structure/grouped smoothing to pay either the global strong-arm rank-two separator with all outside couplings retained or the r46 four-bank rank<=12 inter-bank carrier with arbitrary same-bank blocks and retained tail; do not repeat pure algebraic rank compression.",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B20/20260924T040000Z-account02-B20-QFORM-r44.md",
+  "handoff_commit": "7dcca8fc8d031a5b6018471b1b6498c38aba7b66"
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260922T173038Z-account01-B13-qform-r15",
+  "source_control_commit": "5a1c6177f86f036ce784f96f49b06b95abbeffce",
+  "owner_control_revision": "2026-09-22.8",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "dependencies": [
+    {
+      "claim": "free-regularizer ridge characteristic estimate",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "9c1167db05c7b0f520f060796fde921ed769a4e7",
+      "path": "proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md"
+    },
+    {
+      "claim": "exact bang-bang product-law purification",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "604a08009638981da254a72f09a24dd50e3a3c94",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260922T115714Z-account02-B13-qform-480ba28b/REPORT.md",
+      "partner": "account02/B13",
+      "application": "transfers the new pivot-diffuse density constant exactly to the geometric product-set slab inequality and finite-union extremal class"
+    }
+  ],
+  "new_claims": [
+    "QFORM-FRACTIONAL-RIDGE-HALF-RIESZ-v1",
+    "QFORM-PIVOT-FRACTIONAL-RIDGE-v1",
+    "QFORM-TWO-EIGEN-SPECTRAL-WINDOW-RIESZ-v1",
+    "QFORM-PIVOT-DIFFUSE-SCHUR-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f23f35efa1ed6731cc09b942d77bdcda4918db99",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260922T173038Z-account01-B13-qform-r15/REPORT.md",
+    "blob": "3a52c1d9823e0f852a258be2851bcc4beae33338"
+  },
+  "brain_handoff_commit": "fd818de9edaaa3d6eca5e736be590cb5b0845e7f",
+  "mathematical_change": "The ridge graph envelope yields a half-Riesz bound already at effective dimension theta>q, not theta>2q. After one original physical square, this closes a diffuse two-eigenvalue Schur spectral window with explicit constant <32.233 sigma^{-1/2}, hence a full-form pivot-diffuse branch.",
+  "unresolved_implication": "QFORM-HIGH-LEVERAGE-SCHUR-ITERATION-v1",
+  "next_step": "If the Schur window is not diffuse, exploit its >1/32 physical leverage to force a second controlled pivot or aggregate bilinear/null-ray bank while preserving original-coordinate product provenance."
+}

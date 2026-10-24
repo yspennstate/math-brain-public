@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260922T174633Z-qform-eigenvalue-r14",
+  "control_commit_initial": "026876aacebabc169aaa19b38c379cf36fb879e4",
+  "control_commit_prepublication": "65f5401c9613570fc100bd2555bcc262fc28dc0f",
+  "owner_control_revision": "2026-09-22.9",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "new_result_ids": [
+    "QFORM-CONDITIONAL-3D-CAP-MOMENT-FALSE-v1",
+    "QFORM-ADDED-SPECTRUM-CONDITIONAL-PENALTY-v1"
+  ],
+  "mathematical_summary": "For three independent m-coordinate uniform cube blocks and the three block-constant spectral directions, E_Z ||p_{Y|Z}||_infinity^(2/3) equals m^2 Gamma(4/3)^3 [Gamma(m)/Gamma(m+1/3)]^3 and is at least Gamma(4/3)^3 m. Therefore the owner-message conditional spectral-core L-infinity moment bridge is false. The obstruction persists for matrices with spectrum {1,1,-1,tau,...,tau}, tau>=1. Applying the completed account04/B18 physical Schur theorem to the same family yields ||p_Q||_infinity <=2sqrt(pi)/sqrt(tau), proving the divergence is an interface failure rather than a QFORM counterexample.",
+  "partner_requested": "account04/B12",
+  "partner_requested_status": "NO_CURRENT_QFORM_CANONICAL_RUN_VISIBLE_AT_SOURCE_REFRESH",
+  "partner_result_applied": {
+    "worker": "account04/B18",
+    "result": "QFORM-SCHUR-PIVOT-SMOOTHING-v1",
+    "commit": "441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+    "application": "physical triple B_3=tau I_3-((tau-1)/m)J_3 gives a>=1 and det B_3>=tau^2, hence ||p_Q||_infinity<=2sqrt(pi)/sqrt(tau)"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c8a12f4123a08228db723fe100be2126f6c8c6f5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260922T174633Z-qform-eigenvalue-r14/REPORT.md"
+  },
+  "unresolved_implication": "Replace the false conditional-cap moment route by a Fubini-safe averaged rank-three coarea/fractional-trace functional or by an original-coordinate grouped-coordinate mechanism that retains product provenance before taking any fiberwise supremum.",
+  "next_recipients": ["account03/B19", "account04/B12"],
+  "full_target_status": "OPEN",
+  "continuity_status": "NOT_PROVED_BY_THIS_RESULT",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

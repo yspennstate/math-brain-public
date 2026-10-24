@@ -1,0 +1,60 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T233808Z-account05-A071-search-space-design",
+  "stream": "B15",
+  "packet_id": "A071",
+  "gap_id": "G-R-SELECT",
+  "attempt_id": "A071-G-R-SELECT-001",
+  "method": "Exact minority truth-table census with covering cube symmetries; integer Walsh/direct-edge checks; rigorous rational packet entropy upper bounds; exact prime-log ties",
+  "mathematical_delta": "Decided the full E*(5), not only minority<=6: K5=16/3-(3/8)log2(3)-(169/24)log2(13)+(89/24)log2(89), approximately 2.695887520153101. All 2^31 anchored masks scanned, 5778648 representatives evaluated, 5778647 strict passes and one exact equality. Exactly 640 extremizing truth tables. Universal FEI and dimension-uniform selection remain open.",
+  "deliverable_status": "COMPLETE_LOCAL_SAVED",
+  "mathematical_status": "FULL_FIVEBIT_CONSTANT_CERTIFIED_PENDING_REVIEW; UNIVERSAL_FEI_OPEN",
+  "claim_versions_used": [
+    "B15-STREAM-NOTES-v2@2026-10-11T23:25Z (dispatch direction)",
+    "B15-LKSTAR-FAILS-N5-N6@1 (witness intake, no dependency of the five-bit upper certificate)",
+    "B15-SELECTION-EQUIVALENCE-COMPOSITION-INVARIANCE@1 (bridge context)",
+    "C005 (only the conditional universal-bridge implication)"
+  ],
+  "claims_created_or_changed": [
+    "A071-EXACT-FIVEBIT-ERASURE-SELECTION@1"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "SEARCH_DOMAIN.json",
+    "FULL_DOMAIN.json",
+    "FINAL_CERT_SPEC.json",
+    "SEARCH_BUDGET.md",
+    "code/sparse_search.py",
+    "code/full_census.py",
+    "code/check_final.py",
+    "out/pilot.json",
+    "out/search.json",
+    "out/full_pilot.json",
+    "out/full_census.json",
+    "out/final_certificate.json",
+    "out/candidate_certificates.json",
+    "out/source_receipts.json"
+  ],
+  "next_consumers": [
+    "A075",
+    "A074",
+    "A073",
+    "A085",
+    "A092",
+    "A026",
+    "A028",
+    "A082",
+    "B15",
+    "B20"
+  ],
+  "next_action": "A074/A085 independently reconstruct the all-function covering filters and packet upper bounds; A075 use the completely classified five-bit extremizer and the existing six-bit matching witness to isolate a dimension-growing erasure obstruction. A071 next freezes a bounded test of the first proposed structural payment in that derivation, rather than launching an n=6 census.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Independent end-to-end reproduction of full census pending",
+    "Supervisor repository copy/mirror not observed",
+    "Dimension-independent sup_n E*(n) remains unpaid; E*(6)>368/125 already rules out universal use of K5"
+  ],
+  "packet_ids": [
+    "A071"
+  ]
+}

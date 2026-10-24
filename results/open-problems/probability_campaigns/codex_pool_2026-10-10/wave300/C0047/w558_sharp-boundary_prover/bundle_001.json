@@ -1,0 +1,200 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w558",
+  "bundle_slug": "c0047-w558-degree-correction-and-sharp-boundary-20261010",
+  "entries": [
+    {
+      "key": "target",
+      "namespace": "probability.percolation",
+      "logical_name": "benjamini-schramm-bond-cayley-universal-quantifier",
+      "kind": "concept",
+      "title": "Benjamini-Schramm bond Cayley target: universal prescribed generators",
+      "statement": "[DRAFT scope card; current 2026 openness UNKNOWN, with a public resolution claim awaiting review.] For every infinite finitely generated group Gamma and every finite symmetric identity-free generating set S, let G be its undirected simple Cayley graph and consider independent bond percolation. With p_c=inf{p: the root has positive probability to lie in an infinite cluster} and p_u=inf{p: exactly one infinite cluster exists almost surely}, the target asserts p_c(G)<p_u(G) iff Gamma is nonamenable. An existence theorem for a favorable generating set or a generating multiset does not establish the universal prescribed-S direction.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite finitely generated group",
+        "Finite symmetric identity-free generating set",
+        "Independent bond percolation; simple undirected Cayley graph"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w558:c0047-boundary-20261010",
+        "url": "file:///~/brain_workers/w558/ATTEMPT.md",
+        "revision": "2026-10-10 author proof; independent audit pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, independent frozen review pending",
+      "proof_packet": "~\\brain_workers\\w558\\ATTEMPT.md",
+      "parent_problem_solved": false
+    },
+    {
+      "key": "criterion",
+      "namespace": "probability.percolation",
+      "logical_name": "benjamini-schramm-spectral-criterion-degree-normalization-c0047-correction",
+      "kind": "concept",
+      "title": "C0047 source correction: retain degree in the spectral sufficient condition",
+      "statement": "[DRAFT source correction; independent frozen audit pending.] For a D-regular Cayley graph, rho denotes the l2 norm of uniform simple random walk. The published spectral sufficient condition for independent bond p_c<p_u is D*rho*p_c<1, equivalently p_c<1/(D*rho). A putative p_c<1/rho criterion drops degree; for rho<1 and p_c<=1 that malformed inequality is automatic and supplies no argument for the strict nonuniqueness phase. The condition is sufficient, not necessary. Exact source: Juschenko-Nagnibeda arXiv:1206.2183v3, Section 1, Theorem 2.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite D-regular Cayley graph degree",
+        "Normalized uniform simple random walk",
+        "Independent bond percolation"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1206.2183v3",
+        "url": "https://arxiv.org/html/1206.2183v3",
+        "revision": "v3 / as-read-2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, independent frozen review pending",
+      "proof_packet": "~\\brain_workers\\w558\\ATTEMPT.md",
+      "parent_problem_solved": false
+    },
+    {
+      "key": "false-bridge",
+      "namespace": "probability.percolation",
+      "logical_name": "refuted-universal-degree-spectral-percolation-bridge",
+      "kind": "concept",
+      "title": "Refuted stronger bridge: nonamenability implies D rho p_c below one",
+      "statement": "[REFUTED AUXILIARY ROUTE; counterexample author proof awaits audit.] The proposed statement that every nonamenable simple Cayley graph satisfies D*rho*p_c<1 is false: the standard 4-regular Cayley tree of F_2 has p_c=1/3, p_u=1 and normalized rho=sqrt(3)/2, so D*rho*p_c=2sqrt(3)/3>1. This refutes the stronger auxiliary inequality and does not refute the Benjamini-Schramm target, which holds for this tree.",
+      "proof_text": null,
+      "assumptions": [
+        "D is degree",
+        "rho is normalized simple-random-walk norm",
+        "Independent bond percolation"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w558:c0047-boundary-20261010",
+        "url": "file:///~/brain_workers/w558/ATTEMPT.md",
+        "revision": "2026-10-10 author proof; independent audit pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, independent frozen review pending",
+      "proof_packet": "~\\brain_workers\\w558\\ATTEMPT.md",
+      "parent_problem_solved": false
+    },
+    {
+      "key": "tree",
+      "namespace": "probability.percolation",
+      "logical_name": "four-regular-tree-counterexample-to-necessity-of-spectral-criterion",
+      "kind": "concept",
+      "title": "Four-regular-tree boundary for the normalized spectral route",
+      "statement": "[DRAFT author-proved special case; independent audit pending; no novelty claim.] For independent bond percolation on the standard Cayley tree of F_2 with generators a,a^-1,b,b^-1, p_c=1/3 and p_u=1. Uniform simple random walk has rho=sqrt(3)/2. Thus D*rho*p_c=2sqrt(3)/3>1 although p_c<p_u. A Galton-Watson exploration proves the percolation values; an end-oriented quadratic-form bound and truncated radial test functions prove the exact operator norm. The spectral sufficient condition cannot be a necessary criterion.",
+      "proof_text": null,
+      "assumptions": [
+        "Standard simple 4-regular Cayley tree of F_2",
+        "Independent bond percolation",
+        "Uniform simple random walk"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w558:c0047-boundary-20261010",
+        "url": "file:///~/brain_workers/w558/ATTEMPT.md",
+        "revision": "2026-10-10 author proof; independent audit pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, independent frozen review pending",
+      "proof_packet": "~\\brain_workers\\w558\\ATTEMPT.md",
+      "parent_problem_solved": false
+    },
+    {
+      "key": "family",
+      "namespace": "probability.percolation",
+      "logical_name": "free-group-long-power-generators-sharp-percolation-boundary",
+      "kind": "concept",
+      "title": "Fixed F_2 long-power family: exact branching threshold, p_u=1, rho approaches one",
+      "statement": "[DRAFT author-proved special case; independent audit pending; published free-product specialization, no novelty claim.] Let G_N be Cay(F_2,{a^k:1<=|k|<=N} union {b,b^-1}), N>=1, and let chi_N(p) be the expected root-cluster size for independent bond percolation on Z with edges of lengths 1 through N. It is finite for p<1. The critical bond probability is the unique alpha_N in (0,1) satisfying alpha_N(2chi_N(alpha_N)-1)=1; there is no infinite cluster at alpha_N, and p_u(G_N)=1. Its degree is 2N+2, edge-isoperimetric infimum is exactly 2, normalized conductance is 1/(N+1), and N/(N+1)<=rho<=(N-1+sqrt(3))/(N+1)<1. Hence rho approaches one on this fixed nonamenable group while every graph has a nonempty nonuniqueness phase. For N>=2, alpha_N<0.29, established by the upper-bound quartic 4p^4-8p^3+7p^2+2p-1; its root is an upper bound, not the exact alpha_N.",
+      "proof_text": null,
+      "assumptions": [
+        "F_2 freely generated by a,b",
+        "Finite integer N>=1",
+        "Independent bond percolation",
+        "rho normalized by degree",
+        "phi_E counts unoriented outgoing edges"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w558:c0047-boundary-20261010",
+        "url": "file:///~/brain_workers/w558/ATTEMPT.md",
+        "revision": "2026-10-10 author proof; independent audit pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, independent frozen review pending",
+      "proof_packet": "~\\brain_workers\\w558\\ATTEMPT.md",
+      "parent_problem_solved": false
+    },
+    {
+      "key": "prior",
+      "namespace": "probability.percolation",
+      "logical_name": "free-product-factor-susceptibility-critical-equation-prior-art",
+      "kind": "concept",
+      "title": "Published prior art: free-product critical equation for factor generating sets",
+      "statement": "[DRAFT prior-art concept.] For nontrivial finitely generated groups G_1,G_2 with finite symmetric factor generating sets, independent bond percolation on Cay(G_1*G_2,S_1 union S_2) has critical parameter characterized by (chi_1(p)-1)(chi_2(p)-1)=1, where chi_i is expected root-cluster size on the corresponding factor Cayley graph. In the F_2 long-power family, G_1=G_2=Z, the b factor has chi_b=(1+p)/(1-p), and this specializes to p(2chi_N(p)-1)=1. The union-of-factor-generators assumption is essential; this formula is not asserted for arbitrary prescribed generating sets. Source: Kozakova arXiv:math/0611668v3, Theorem 1.",
+      "proof_text": null,
+      "assumptions": [
+        "Nontrivial finitely generated factors",
+        "Generating set is the union of factor generating sets",
+        "Independent bond percolation"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:math/0611668v3",
+        "url": "https://arxiv.org/html/math/0611668",
+        "revision": "v3 / as-read-2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, independent frozen review pending",
+      "proof_packet": "~\\brain_workers\\w558\\ATTEMPT.md",
+      "parent_problem_solved": false
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "tree",
+      "to_key": "false-bridge",
+      "kind": "refutes",
+      "rationale": "The bridge requires D*rho*p_c<1 for every nonamenable graph; the tree entry gives D*rho*p_c=2sqrt(3)/3>1 with p_c<p_u."
+    },
+    {
+      "from_key": "tree",
+      "to_key": "criterion",
+      "kind": "semantic_association",
+      "rationale": "The criterion entry states sufficiency only; the tree entry shows it is not necessary."
+    },
+    {
+      "from_key": "family",
+      "to_key": "prior",
+      "kind": "specializes",
+      "rationale": "The prior uses the union of factor generators and (chi_1-1)(chi_2-1)=1; the family sets the factors to Z and substitutes chi_b=(1+p)/(1-p)."
+    },
+    {
+      "from_key": "family",
+      "to_key": "target",
+      "kind": "specializes",
+      "rationale": "The target quantifies over all nonamenable prescribed Cayley graphs; the family proves p_c<p_u only for its explicitly specified F_2 generating sets."
+    },
+    {
+      "from_key": "criterion",
+      "to_existing_logical": "math:probability.statmech:attempt-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+      "kind": "semantic_association",
+      "rationale": "The read-only existing attempt says if p_c<1/rho for normalized walk. This correction restores the degree D in the exact cited sufficient condition."
+    },
+    {
+      "from_key": "target",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+      "kind": "cites",
+      "rationale": "Existing C0047 problem card states the infinite Cayley iff target with current status unverified; the draft makes its generating-set and bond quantifiers explicit without retiring it."
+    }
+  ],
+  "submission_status": "DRAFT: no unreviewed theorem promotion or ingestion authorized",
+  "independent_review": "pending w560; w559 preliminarily confirms source correction",
+  "served_identity_gate": "Author/referee response-side served-model evidence unavailable; do not certify the different-model gate."
+}

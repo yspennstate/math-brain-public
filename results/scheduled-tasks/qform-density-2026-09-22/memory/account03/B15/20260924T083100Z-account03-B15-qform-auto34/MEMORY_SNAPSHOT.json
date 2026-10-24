@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260924T083100Z-account03-B15-qform-auto34",
+  "control_start_commit": "15a2745066adf9e743f220d53b8a28056beb267b",
+  "control_prepublication_commit": "3285f3c0292b751e4ce594637681c0fcf2a011d4",
+  "control_revision": "2026-09-22.15",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-COEFFICIENT-PERTURBATION-CONTINUITY-v1"
+  ],
+  "mathematical_result": {
+    "id": "QFORM-OPNORM-RANKCOLLAPSE-TV-HEIGHT-BARRIER-v1",
+    "status": "proved_supporting_regularitiy_obstruction",
+    "statement": "For every 0<delta,eta<1 there are two owner-target matrices at operator distance <delta and one common cap-one product law whose quadratic-output laws have TV distance at least 1-eta after every deterministic output translation; both have canonical C0 densities, with the base height at least 4/3 and perturbed height at most 4eta/3.",
+    "scope_warning": "This is not a counterexample to QFORM; the small perturbation flattens the output. It forbids an operator-norm continuity/discard-the-tail step under arbitrary cap-one supports."
+  },
+  "partner_result_applied": {
+    "worker": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7b2b0f54db9acbd23a5f69f715178ab666e22d8e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260923T221909Z-account04-B15-ruled-trace-c0-r8/REPORT.md",
+    "application": "Applied Theorem 6.1 to P(Q_e in I)<=|I|/L, obtaining canonical p_e in C0 with the identical height 1/L; also applied to the diagonal pi interval bound for A_0."
+  },
+  "frontier_dependency": {
+    "worker": "account03/B19",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5ec1cc2bf208bc0249ea89d86fd7298b62ac324e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260924T070220Z-account03-B19-QFORM-r52/REPORT.md",
+    "use": "The determinant-collapse funnel produces operator-nearness to rank<=3 but explicitly retains residuals/tail; the new B15 theorem proves operator-nearness alone cannot justify uniform law or density-height replacement."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "45d5605fa5fbd9adb06b5d81f242fa02c5e084cc",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260924T083100Z-account03-B15-qform-auto34/REPORT.md",
+    "rigor_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260924T083100Z-account03-B15-qform-auto34/RIGOR_CHECK.md"
+  },
+  "remaining_implication": "In B19's rank-three latent-collapse chamber, retain the small latent direction and physical residual/tail exactly or absorb them with a translation-uniform, product-provenance-sensitive receiver; operator-norm perturbation continuity is unavailable.",
+  "full_qform": "OPEN"
+}

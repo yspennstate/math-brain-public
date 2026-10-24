@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260923T211022Z-account01-B01-qform-auto11",
+  "control_revision": "2026-09-22.15",
+  "control_head_observed_before_publication": "b24a2de960499ad61cdbee2bc3f85b21d4597fcd",
+  "source_owner_message_commit": "0dc369ddf8b860648dd780d8f92c62994dc53ecf",
+  "correction_inbox_blob_sha": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "status": "PROVED_SUPPORTING_THEOREM_PENDING_INDEPENDENT_REVIEW",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3caab0b3f2921e493563995821cf3652b09817d9",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T211022Z-account01-B01-qform-auto11/REPORT.md"
+  },
+  "checks": {
+    "commit": "22f2c9471041bb2a8cd80275e75b0b21bc5a7253",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T211022Z-account01-B01-qform-auto11/CHECKS.txt",
+    "status": "PASS_DIAGNOSTIC_ONLY"
+  },
+  "refinement": {
+    "commit": "fa4f9a9820aed9cca84a6afb2cc96ad9f1787a29",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T211022Z-account01-B01-qform-auto11/DUAL_NULL_REFINEMENT.md"
+  },
+  "handoff": {
+    "commit": "6ecb80062d92cd07c20d735d206dc8dffb91dcc0",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B01/20260923T211022Z-account01-B01-qform-auto11.md"
+  },
+  "main_claim": "At zero quadratic slope-kernel curvature d_U=0, a bounded density for the residual linear slope beta(R) yields an integrated L^rho frequency budget. At rho=4, ||p_Q||_infinity <= 4.83295511233 (M_U M_V)^(2/5)|det B|^(-2/5)L_beta^(1/5), with continuous C0 density. For an orthonormal original-product two-dimensional bank, L_beta <= 1/(sqrt(2)H_U), H_U=||K w_U||, so every H_U>0 branch is paid.",
+  "phase_aligned_counterexample_preserved": true,
+  "exact_kernel_identity": "d_U=0 implies K w_U=(theta_U,h_U,0); hence H_U=0 implies K w_U=0",
+  "dual_null_refinement": "If both orientations fail exactly and (p,q)!=(0,0), w_U,w_V are independent null vectors and rank K<=3; under a three-large-eigenvalue packet hypothesis rank K=3. If p=q=0, exact failure forces a=0 and the scalar coordinate decouples, leaving a pure four-dimensional two-bank core.",
+  "strict_target_family": "A=C=0, B=I_2, p=e1, q=e2, a=0 has spectrum {-sqrt(3),-1,0,1,sqrt(3)}. Flat orthonormal product-bank embedding makes all physical diagonals zero and pair determinants O(1/m); theorem gives ||p_Q||_infinity<=7.85115874295 with continuous density.",
+  "partner": {
+    "account": "account02",
+    "slot": "B01",
+    "completed_result": "QFORM-ONEHUB-Z1-NOMARGINAL-HALFRIESZ-v1",
+    "canonical_commit": "339c1fdf3bc65a79f5be126e730dd3b251320e66",
+    "actual_application": "On partner strict-N3 family a=epsilon, ||m||=epsilon^-1, ||C||_F=epsilon^-1, giving 8 epsilon^-1/2 (epsilon^-2)^-1/4 = 8.",
+    "later_uncompleted_checkpoint_not_used": "2587ce884e0895beccc1a3c5436574c49bebc1b8"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE"
+  ],
+  "first_unpaid_implication": "QFORM-TWOBANK-TRUE-NULL-OR-SINGULAR-CROSS-ROUTING-v3",
+  "next_step": "Route exact/near dual-null invertible-cross states: exact dual failure reduces to rank-three unless the scalar decouples; then address the pure four-dimensional two-bank critical core and singular/nearly-singular B without reciprocal tiny local minors.",
+  "independent_end_to_end_reviews": 0
+}

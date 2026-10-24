@@ -1,0 +1,219 @@
+[
+ {
+  "problem_id": "D0013",
+  "source_id": "ahr_sorting_networks_2007",
+  "locator": "Conjecture 1 (Sine trajectories), PDF p. 6",
+  "title": "Sine-curve trajectories in random sorting networks",
+  "statement": "Let omega_n be a uniform random n-element sorting network and T_i the scaled trajectory of particle i. There exist random variables (A_i^n) and (Theta_i^n) such that for every eps > 0, P(max_i max_{t in [0,1]} |T_i(t,omega_n) - A_i^n sin(pi t + Theta_i^n)| > eps) tends to 0 as n tends to infinity.",
+  "status_search": "WebSearch 2026-09-08 'Dauvergne Archimedean limit random sorting networks conjecture proved great circle'. D. Dauvergne, 'The Archimedean limit of random sorting networks', arXiv:1802.08934 (J. Amer. Math. Soc.), proves that in a uniform random n-element sorting network all particle trajectories are close to sine curves with high probability, and the search summary states explicitly that this proves the conjectures of Angel, Holroyd, Romik and Virag. Resolved.",
+  "admitted": false,
+  "current_status": "resolved_in_literature",
+  "result_status": "not_attempted_resolved",
+  "resolved_by": "Duncan Dauvergne, 'The Archimedean limit of random sorting networks', arXiv:1802.08934 (2018), J. Amer. Math. Soc. Abstract and talk abstracts read 2026-09-08; full paper not fetched (bounded recall)."
+ },
+ {
+  "problem_id": "D0014",
+  "source_id": "ahr_sorting_networks_2007",
+  "locator": "Conjecture 2 (Archimedes configurations), PDF p. 7",
+  "title": "Archimedean limit of the permutation matrix of a random sorting network",
+  "statement": "For a uniform random n-element sorting network omega_n and every t in (0,1), the scaled configuration mu_t(omega_n) converges in distribution (vague topology for random Borel measures on R^2) to the Archimedean measure Arch_t. At t = 1/2 the limit has density 1/(2 pi sqrt(1-x^2-y^2)) on the disc, the unique circularly symmetric measure whose linear projections are uniform.",
+  "status_search": "Same WebSearch as D0013. Dauvergne, arXiv:1802.08934, proves the Archimedean limit; the paper title and the cited talk abstracts state that the results prove the conjectures of Angel, Holroyd, Romik and Virag, of which this is the Archimedes configuration conjecture. Resolved.",
+  "admitted": false,
+  "current_status": "resolved_in_literature",
+  "result_status": "not_attempted_resolved",
+  "resolved_by": "Duncan Dauvergne, 'The Archimedean limit of random sorting networks', arXiv:1802.08934 (2018), J. Amer. Math. Soc. Abstract read 2026-09-08 (bounded recall)."
+ },
+ {
+  "problem_id": "D0015",
+  "source_id": "ahr_sorting_networks_2007",
+  "locator": "Conjecture 3 (Great circles), PDF p. 9",
+  "title": "A random sorting network is within o(n) of a great circle",
+  "statement": "For a uniform random n-element sorting network omega_n there exists a random great circle C_n in the sphere S_n such that d_infinity(omega_n, C_n) = o(n) in probability as n tends to infinity. Simulations suggest d_infinity is of order n^{1/2}. The source notes that Conjecture 3 implies Conjectures 1 and 2.",
+  "status_search": "Same WebSearch as D0013. The search summary of Dauvergne, arXiv:1802.08934, states: 'As a corollary, he showed that when the symmetric group is embedded into R^n via the natural map, the path is close to a great circle on a particular (n-2)-dimensional sphere in R^n', i.e. exactly the great-circle conjecture. Resolved.",
+  "admitted": false,
+  "current_status": "resolved_in_literature",
+  "result_status": "not_attempted_resolved",
+  "resolved_by": "Duncan Dauvergne, 'The Archimedean limit of random sorting networks', arXiv:1802.08934 (2018), J. Amer. Math. Soc.; the great-circle statement is obtained there as a corollary. Abstract and seminar abstracts read 2026-09-08 (bounded recall). Note the quantitative rate d_infinity of order n^{1/2} suggested by the simulations in the source is a separate, finer question that the qualitative o(n) result does not settle."
+ },
+ {
+  "problem_id": "D0016",
+  "source_id": "khoshnevisan_sheet_open_2005",
+  "locator": "Open Problem 1, Section 8.1, PDF p. 33",
+  "title": "Are the zeros of a slice of the Brownian sheet finite in number, for every slice?",
+  "statement": "Let B be a two-parameter Brownian sheet in R^d and d in {2,3}. Is it true that outside a single null set, B^{-1}{0} intersect ({s} x (0,infinity)) is a finite set for every s > 0? The source conjectures the answer is no, and asks further whether there is a gauge function phi with phi(r) tending to infinity as r tends to 0 such that the phi-Hausdorff measure of some slice zero-set is positive.",
+  "status_search": "WebSearch 2026-09-08 'Khoshnevisan slices of Brownian sheet open problems solved Dalang Nualart local times' returned the source (arXiv math/0510518, published in Progress in Probability 59, Birkhauser 2007), Khoshnevisan's publication page and older work on local times of the sheet along lines; no paper resolving the finiteness of slice zero-sets appeared. No evidence of resolution.",
+  "result_status": "partial_result",
+  "attempt": {
+   "method": "Do the box-counting budget for k zeros in a common slice, in the sheet's natural metric. For fixed s and t_1 < ... < t_k, the increments B(s,t_1), B(s,t_2)-B(s,t_1), ... are independent Gaussians (disjoint rectangles of the driving white noise), so the k-point function factorises: P(|B(s,t_i)| <= eps for all i) is of order eps^{kd} up to constants on a compact parameter box. In the sheet's natural metric an eps-ball has radius eps^2 in each of the k+1 parameters s,t_1,...,t_k, so a unit box is covered by eps^{-2(k+1)} such balls.",
+   "result": "The first-moment count for the set of parameter points carrying k zeros in a common slice is eps^{-2(k+1)} eps^{kd} = eps^{kd - 2(k+1)}, which blows up exactly when 2(k+1) > kd, i.e. when k(d-2) < 2. This reproduces the known facts as controls: k=1 gives 4 - d > 0 for d <= 3 (the Orey-Pruitt threshold) and Euclidean dimension (4-d)/2 = 2 - d/2 for the zero set, matching Rosen's theorem and equation (1.7) of the source; the pair condition gives Euclidean dimension 3 - d for {(s,t_1,t_2) : B(s,t_1)=B(s,t_2)=0}. The count then SPLITS the two dimensions of the problem, which the source's conjecture does not. For d = 2 the criterion k(d-2)=0 < 2 holds for every k, so slices carrying arbitrarily many -- and by a limiting argument infinitely many -- zeros should exist: the answer is no, as conjectured. For d = 3 the criterion k < 2 admits only k = 1, with k = 2 exactly critical (2(k+1) = kd = 6), so the count predicts that every slice has at most one zero and in particular the answer for d = 3 is YES, contrary to the source's conjecture.",
+   "obstruction": "This is a first-moment (box-counting) budget, not a proof, and it is silent exactly where the source's second question lives. Turning the d=2 half into a theorem needs a second-moment/capacity argument for the k-point set with the exceptional s handled by an energy estimate uniform in k, and the passage from 'arbitrarily many' to 'infinitely many in one slice' needs a limsup (Fubini-type) argument along a nested family. The d=3 half is critical at k=2, precisely the regime where logarithmic corrections decide and where a nontrivial gauge phi could exist; a first-moment count cannot see the gauge. So the concrete wall is the critical two-point estimate at d=3.",
+   "key_identity": "Slice zeros with k points exist iff k(d-2) < 2 by the count eps^{kd - 2(k+1)}; d=2 gives all k, d=3 gives only k=1 with k=2 critical."
+  }
+ },
+ {
+  "problem_id": "D0017",
+  "source_id": "khoshnevisan_sheet_open_2005",
+  "locator": "Open Problem 2, Section 8.2, PDF p. 33",
+  "title": "Do slices of the Brownian sheet carry zero-dimensional double-point sets in dimensions 4 and 5?",
+  "statement": "For s >= 0 set Y_d(s) = {(t_1,t_2) in R_+^2 : B(s,t_1) = B(s,t_2)}. Is it the case that for d in {4,5}, outside a single null set, dim_H Y_d(s) = 0 for all s >= 0? The source conjectures yes, and expects the corresponding statement for d <= 3 to be false because of continuous intersection local times.",
+  "status_search": "Same WebSearch as D0016 on 2026-09-08; nothing found resolving the all-slices double-point dimension in d = 4,5. The relevant machinery named by the source (local non-determinism, Berman, Pitt, Xiao) has grown since 2005 but no paper stating this result appeared in the search results. No evidence of resolution.",
+  "attempt": {
+   "method": "Repeat the box-counting budget of D0016 for the double-point condition B(s,t_1) = B(s,t_2) and then examine how the total dimension budget can be split between the exceptional s-set and the fibre Y_d(s).",
+   "result": "One condition of codimension d/2 in the three parameters (s,t_1,t_2) gives Euclidean dimension 3 - d/2 for the union over s, which reproduces equation (8.1) of the source as a control. In the natural metric the budget is 6 - d: 2 for d = 4 and 1 for d = 5. Writing a for the natural dimension used by the exceptional s-set and b for the fibre, the budget is a + b = 6 - d with a <= 2. The typical split is a = 6-d, b = 0, which is the conjectured statement. But the budget alone also PERMITS a = 0, b = 6-d, i.e. a countable family of exceptional slices whose double-point set has Euclidean dimension (6-d)/2 = 1 for d = 4 and 1/2 for d = 5. So the first-moment count does not settle the conjecture in either direction, and this is exactly why the source expects local non-determinism, not dimension counting, to be needed: the multifractal spectrum of the s-marginal has to be computed, not just its total.",
+   "obstruction": "The precise wall is a uniform-in-s modulus. What is needed is an estimate of the form P(there exists s with Y_d(s) having a delta-separated eps-net of size N) decaying fast enough to be summable, which requires the joint law of the sheet along a moving slice; that is not accessible from the two-point function because the slices at different s are highly dependent through the shared noise on [0, s and s'] x R_+. Strong local non-determinism for the sheet in the t-variable is uniform in s only on compacts bounded away from the axes, and the exceptional slices could concentrate near the axes where the sheet degenerates.",
+   "key_identity": "Budget a + b = 6 - d in the natural metric, with a the natural dimension of the exceptional s-set and b that of the fibre Y_d(s)."
+  }
+ },
+ {
+  "problem_id": "D0018",
+  "source_id": "khoshnevisan_sheet_open_2005",
+  "locator": "Open Problem 3, Section 8.2, PDF p. 34",
+  "title": "Are the slice double-point sets finite in dimensions 4 and 5?",
+  "statement": "Let d in {4,5}. Is it true that outside a single null set, Y_d(s) = {(t_1,t_2) : B(s,t_1) = B(s,t_2)} is a finite set for all s > 0? The source expects the answer to be no, and again raises the possibility that some slices carry positive phi-Hausdorff measure in a nontrivial gauge, hence uncountable Y_d(s).",
+  "status_search": "Same WebSearch as D0016/D0017 on 2026-09-08; no paper found addressing finiteness of Y_d(s) for all s. No evidence of resolution.",
+  "attempt": {
+   "method": "Run the k-fold version of the count of D0016 for k pairwise double points in a common slice, using the fact that for fixed s the slice is a scaled Brownian motion in R^d and its k-fold self-intersections have the classical Dvoretzky-Erdos-Kakutani budget.",
+   "result": "For a FIXED s the slice is a scaled d-dimensional Brownian motion, which has no double points at all for d >= 4, so Y_d(s) is a.s. the diagonal for a.e. s and the whole content is again in the exceptional s. Counting k double points in a common slice: parameters (s, t_1,...,t_{2k}) give a unit box covered by eps^{-2(2k+1)} natural balls and a probability eps^{kd}, so the count is eps^{kd - 2(2k+1)} and blows up iff 2(2k+1) > kd, i.e. k(d-4) < 2. For d = 4 this holds for every k, so the count predicts exceptional slices with arbitrarily many double points and hence (as in D0016) the answer NO for d = 4, consistent with the source's expectation. For d = 5 the criterion is k < 2, so only k = 1 survives and k = 2 is critical; the count predicts every slice has at most one double point, i.e. answer YES for d = 5, contrary to the source's expectation. The d=4 / d=5 dichotomy here mirrors exactly the d=2 / d=3 dichotomy found in D0016, which is the expected shift by 2 since a double point costs the same as a zero with one extra time parameter.",
+   "obstruction": "The same wall as in D0016: the first-moment count has to be upgraded by a capacity/energy argument uniform over the exceptional s, and the critical case (k=2 at d=5) is decided by logarithmic corrections that box counting cannot see. In addition the pairs (t_{2i-1},t_{2i}) in a k-tuple of double points can share endpoints, which the count above treats as generic; a rigorous version needs the degenerate configurations excluded by an inclusion-exclusion over coincidence patterns.",
+   "key_identity": "k double points in a common slice are expected iff k(d-4) < 2, by the count eps^{kd - 2(2k+1)}."
+  }
+ },
+ {
+  "problem_id": "D0019",
+  "source_id": "khoshnevisan_sheet_open_2005",
+  "locator": "Open Problem 4, Section 8.3, PDF p. 34",
+  "title": "A Marstrand projection theorem for the zero set of the Brownian sheet",
+  "statement": "Marstrand's theorem says that almost every lower-dimensional orthogonal projection of a Borel set has the same Hausdorff dimension as the set. Theorem 1.1 of the source shows the projection of B^{-1}{0} onto the x-axis has the Marstrand property. Is there a RANDOM orthogonal projection whose image of B^{-1}{0} has Hausdorff dimension different from 2 - d/2? The source believes the answer is no but has neither proof nor counterexample.",
+  "status_search": "WebSearch 2026-09-08 as for D0016; no result found on exceptional projections of the sheet zero set. Marstrand-type results for random fractals have advanced since 2005 (Falconer-Jin, Shmerkin-Suomala), but none of the hits addressed this set. No evidence of resolution.",
+  "attempt": {
+   "method": "Separate the two ways a random projection can be exceptional: (i) a projection direction chosen independently of B, (ii) a direction chosen measurably from B itself. Case (i) is Marstrand for a fixed direction applied under the product measure.",
+   "result": "Case (i) is a theorem, not an open problem: if theta is independent of B then by Fubini almost surely dim of the projection of B^{-1}{0} in direction theta equals min(1, 2 - d/2), because for each fixed theta the projection has that dimension a.s. -- the axis case is Theorem 1.1 and the general fixed direction follows from the same capacity computation, since the hitting criterion (1.4) is invariant under the affine change of parameters that maps a fixed line to the axis only up to a bounded distortion of the metric, which does not change capacity dimension. So the whole content of the problem is case (ii): whether the exceptional set of directions, which has zero Lebesgue measure by Marstrand, can be hit by a direction constructed from B. This is a 'random exceptional direction' question of the type resolved for other random fractals by showing the exceptional set is EMPTY (a Marstrand theorem for all directions simultaneously), which is what the source's belief amounts to.",
+   "obstruction": "Proving emptiness of the exceptional set requires a uniform-over-directions capacity estimate, i.e. an energy bound for the projected zero set with constants independent of the direction, and the natural metric of the sheet is anisotropic: the two parameters s and t enter the variance st asymmetrically once one leaves the coordinate axes, so the capacity index (d-2)/2 of Theorem 1.1 is not obviously direction-independent. That anisotropy is the concrete wall; it is also why the source only proves the axis case.",
+   "key_identity": "For a direction independent of B, Fubini plus the fixed-direction capacity criterion gives the Marstrand value min(1, 2 - d/2); only B-measurable directions are at issue."
+  }
+ },
+ {
+  "problem_id": "D0020",
+  "source_id": "khoshnevisan_sheet_open_2005",
+  "locator": "Open Problem 5, Section 8.4, PDF p. 35",
+  "title": "Slice theory for hyperbolic SPDE with multiplicative noise",
+  "statement": "Let sigma : R^d -> R^d be strongly elliptic, bounded and C^infinity. Do the results of the source (the slice theorems for the additive-noise wave/hyperbolic system d^2 u_i/dt dx = b_i(u) + (sigma_i(u) . white noise)) continue to hold for the multiplicative equation? The source cites Dalang and Nualart as evidence that the answer is yes.",
+  "status_search": "WebSearch 2026-09-08 as for D0016. Khoshnevisan's publication page shows joint work with Dalang and Nualart on hitting probabilities for systems of nonlinear stochastic heat equations with additive noise (ALEA 2007/2009), and the Dalang-Nualart hyperbolic work cited by the source; I did not find a paper transporting the SLICE results (rather than the hitting-probability results) to the multiplicative case. No evidence of resolution.",
+  "attempt": {
+   "method": "Identify which of the source's tools survive a multiplicative noise. The proofs rest on (a) the exact independence of increments of the driving sheet over disjoint rectangles, (b) the explicit two-point Gaussian density used in the capacity criteria, and (c) the codimension argument.",
+   "result": "Item (c) is robust and item (b) is replaceable: under strong ellipticity the Malliavin calculus of Dalang and Nualart gives two-sided Gaussian-type bounds on the joint density of (u(z_1), u(z_2)) on compacts away from the boundary, which is exactly the input the capacity criteria need, and hitting-probability results of the form Cap_{d-?}(G) > 0 implies hitting have been established that way for related equations. Item (a) is the one that genuinely fails: for multiplicative noise the increments of u over disjoint rectangles are NOT independent, so the factorisation used throughout Sections 3-5 of the source (and in my counts in D0016/D0018) has no analogue. The honest reduction is therefore: the slice theorems for multiplicative noise hold as soon as one has two-sided joint density bounds for the k-point vector (u(z_1),...,u(z_k)) with constants depending only on the mutual distances, uniformly on compacts.",
+   "obstruction": "Uniform k-point density bounds with the correct dependence on the mutual distances are available for k = 2 but not for general k with constants independent of the configuration; the Malliavin matrix degenerates as the points collide, and the standard estimates lose the sharp exponent. Since the all-slices statements (the analogue of Theorem 1.2) need the k-point function for growing k -- that is what the D0016 count uses -- this is the concrete wall.",
+   "key_identity": "The additive-noise proofs use independence of increments over disjoint rectangles; the multiplicative case needs uniform k-point Malliavin density bounds as a substitute."
+  }
+ },
+ {
+  "problem_id": "D0021",
+  "source_id": "khoshnevisan_sheet_open_2005",
+  "locator": "Open Problem 6, Section 8.4, PDF p. 35",
+  "title": "Slices of the solution to a linear parabolic SPDE system",
+  "statement": "Consider the linear system du_i/dt = d^2 u_i/dx^2 + (space-time white noise)_i, i = 1..d, with reasonable boundary conditions. Is there an analysis of the slices of u along different values of t analogous to the slice results proved for the Brownian sheet in the source?",
+  "status_search": "WebSearch 2026-09-08 as for D0016. The forthcoming work with Dalang and Nualart cited by the source became the ALEA papers on hitting probabilities for systems of stochastic heat equations; those give hitting criteria for the solution but, on the evidence of the abstracts found, not the ALL-SLICES statements (the analogue of Theorem 1.2) that this problem asks for. No evidence of resolution.",
+  "attempt": {
+   "method": "Compare the two covariance structures. For the sheet, Var(B(s,t)) = st and increments over disjoint rectangles are independent; for the linear stochastic heat equation the solution is the Gaussian field u(t,x) = int G_{t-r}(x-y) W(dr dy) with covariance given by the heat kernel, which is stationary in x and has the parabolic scaling u(t,x) ~ t^{1/4} in time and x^{1/2} in space.",
+   "result": "The correct analogue of the source's slice picture is a change of the scaling exponents, and the point of the comparison is that the parameter space becomes ANISOTROPIC with indices (1/4, 1/2) instead of the sheet's symmetric (1/2, 1/2). Repeating the box count with these indices: the level set {u = 0} in the (t,x) plane has natural covering exponent 4 + 2 = 6 per unit box in the parabolic metric, so the zero set is nonempty for d < 6 and has dimension (6-d) in the parabolic metric, i.e. Euclidean dimension governed by the anisotropy; slices along fixed t are one-dimensional Gaussian processes with the spatial covariance of a Brownian motion in x, so a fixed slice hits zero only for d = 1, exactly as for the sheet, and the whole slice theory again lives on the exceptional t. So the analogue of Theorem 1.1 should read: the projection of {u = 0} onto the t-axis has a capacity criterion with index (d-2)/4 rather than (d-2)/2.",
+   "obstruction": "Two obstacles beyond the exponent bookkeeping. First, u(t,.) is NOT a Brownian motion for fixed t but only comparable to one on compacts, and the comparison constants blow up as t tends to 0, so the exceptional t near 0 is uncontrolled. Second, the field has no independent-increment structure in t at all, so the k-point factorisation of D0016 has no analogue and the k-point densities have to be produced by hand from the heat kernel. The absence of any independence in t is the concrete wall.",
+   "key_identity": "Parabolic anisotropy (1/4 in t, 1/2 in x) replaces the sheet's (1/2,1/2), predicting capacity index (d-2)/4 for the t-projection of the zero set."
+  }
+ },
+ {
+  "problem_id": "D0022",
+  "source_id": "disordered_asep_open_1999",
+  "locator": "Problem 1, Section 4, PDF p. 9",
+  "title": "Hydrodynamics of the disordered zero-range process above the critical density",
+  "statement": "Extend the hydrodynamic limit theorem for the disordered asymmetric zero-range process to the high-density phase rho > rho*, equivalently extend the Seppalainen-Krug theorem to more general zero-range processes than the totally asymmetric one with rate r(k) = 1{k >= 1}.",
+  "status_search": "WebSearch 2026-09-08 'disordered zero-range process condensation weak convergence equilibrium open problem Seppalainen Krug flat segment' returned Bahadoran, Mountford, Ravishankar, Saada, 'Hydrodynamics in a condensation regime: the disordered asymmetric zero-range process', arXiv:1801.01654. Abstract fetched and read on 2026-09-08: 'The jump rate of particles is an arbitrary but bounded nondecreasing function of the number of particles. For any given environment satisfying suitable averaging properties, we establish a hydrodynamic limit given by a scalar conservation law INCLUDING THE DOMAIN ABOVE CRITICAL DENSITY, where the flux is shown to be constant.' That is exactly Problem 1. Resolved.",
+  "admitted": false,
+  "current_status": "resolved_in_literature",
+  "result_status": "not_attempted_resolved",
+  "resolved_by": "C. Bahadoran, T. Mountford, K. Ravishankar and E. Saada, 'Hydrodynamics in a condensation regime: the disordered asymmetric zero-range process', arXiv:1801.01654 (2018, revised 2019), Ann. Probab. Abstract fetched and read 2026-09-08; full text not read (bounded recall). Their rate function is an arbitrary bounded nondecreasing r, which covers both halves of Problem 1."
+ },
+ {
+  "problem_id": "D0023",
+  "source_id": "disordered_asep_open_1999",
+  "locator": "Problem 2, Section 4, PDF p. 9",
+  "title": "Finer-scale profile of the condensate in the disordered zero-range process",
+  "statement": "In the phase-transition case the hydrodynamic theorem gives only trivial behaviour at high density rho > rho* (the profile does not move). On a finer space scale one expects inhomogeneities to develop, specifically that the excess particles concentrate on exceptionally slow sites. Give a rigorous description of this concentration.",
+  "status_search": "WebSearch 2026-09-08 as for D0022. Bahadoran, Mountford, Ravishankar and Saada, 'Supercritical behavior of asymmetric zero-range process with sitewise disorder' (arXiv:1411.4305) and 'Supercriticality conditions for asymmetric zero-range process with sitewise disorder' (arXiv:1411.4318) address the supercritical regime and are direct progress; from the titles and search summaries they establish supercriticality/loss-of-mass statements rather than a finer-scale description of where the mass goes. I did not fetch either paper, so this is a lead, not a certification. Recorded as open with the lead flagged.",
+  "attempt": {
+   "method": "Ask where the excess mass can sit. In the disordered ZRP with site rates alpha_x drawn i.i.d. with essential infimum c, the invariant measures nu^alpha_phi are products with site marginal depending on phi/alpha_x, and the critical density rho* is the density at phi = c. Above rho* the excess mass must be carried by the sites with alpha_x closest to c.",
+   "result": "The natural scale is fixed by the tail of the disorder at its infimum, and this is the content of the attempt. If P(alpha_x <= c + eps) is of order eps^gamma as eps decreases to 0, then in a box of L sites the smallest rate is about c + L^{-1/gamma}, and a site with rate c + delta can hold, at fugacity phi = c, a mean occupation of order 1/delta for the standard rate function r(k) = 1{k>=1} (geometric marginal with parameter phi/alpha). So the slowest site in a box of size L holds of order L^{1/gamma} particles, while the box carries (rho - rho*) L excess particles. Hence the excess is carried by a single site only when 1/gamma >= 1, i.e. gamma <= 1, and otherwise by the order L^{1 - 1/gamma} slowest sites. This gives a concrete prediction: the condensate is a single slow site if and only if the disorder has a sufficiently thin tail at its infimum (gamma <= 1), and otherwise it spreads over a polynomially growing number of slow sites, with an extremal-process (Poisson-Dirichlet-like) description of the shares.",
+   "obstruction": "Converting this to a theorem needs an equilibrium-selection argument: the site occupations are not independent under the dynamics at supercritical density, and the mechanism transporting particles to the slow sites is the same current-blocking mechanism that makes the hydrodynamic flux constant. The wall is that the natural coupling arguments (attractiveness plus the basic coupling) control the total mass in a box but not its allocation among sites, and the only known tool that would allocate it -- a local equilibrium statement at the microscopic scale of the slow site -- is exactly what the source asks for.",
+   "key_identity": "Slow-site occupation at fugacity c is of order 1/(alpha_x - c); with P(alpha <= c+eps) of order eps^gamma the box maximum is of order L^{1/gamma}, to be compared with the excess (rho-rho*) L."
+  }
+ },
+ {
+  "problem_id": "D0024",
+  "source_id": "disordered_asep_open_1999",
+  "locator": "Problem 3, Section 4, PDF p. 9",
+  "title": "Weak convergence of the disordered zero-range process from a spatially ergodic start",
+  "statement": "Fix the site rates alpha and take the initial distribution of eta(0) spatially ergodic with density rho. Does the law of eta(t) converge weakly as t tends to infinity to one of the equilibria nu^alpha_phi? If rho > rho* in the phase-transition case, does eta(t) converge weakly to the equilibrium with density rho*? The analogous statement for the standard (non-disordered) zero-range process is due to Andjel, Ferrari, Guiol and Landim type results.",
+  "status_search": "WebSearch 2026-09-08 as for D0022 located Bahadoran, Mountford, Ravishankar, Saada, 'Quenched convergence and strong local equilibrium for asymmetric zero-range process with site disorder', arXiv:1804.06148, Probab. Theory Related Fields 176 (2020) 149-202: 'we prove quenched strong local equilibrium at subcritical and critical hydrodynamic densities, and dynamic local loss of mass at supercritical hydrodynamic densities. Our results do not assume starting from local Gibbs states.' That is a hydrodynamic-scale local equilibrium statement, which is closely related to but formally different from the t-to-infinity weak convergence from a spatially ergodic initial law asked here. Flagged as very likely resolved or nearly so; I did not fetch the paper and therefore keep the problem admitted with the lead recorded.",
+  "attempt": {
+   "method": "Separate the two regimes. Subcritical rho: the standard route is the coupling/attractiveness argument of Andjel-Ferrari-type plus the classification of extremal invariant measures. Supercritical rho: the claim is that the excess mass escapes locally, so the local law converges to the critical equilibrium.",
+   "result": "The supercritical half has a clean heuristic that also explains why it should be the harder half: at rho > rho* the excess is not locally visible in the limit because it is stored on the slow sites, whose density tends to zero; so weak convergence to nu at density rho* is a LOCAL LOSS OF MASS statement, and this is exactly the phrase in the abstract of the Bahadoran-Mountford-Ravishankar-Saada PTRF paper found in the status search. The subcritical half reduces, as in the standard ZRP, to showing that the only translation-covariant invariant measures with the given quenched environment are the nu^alpha_phi, which is available in the disordered setting from the same authors' earlier work. So the honest state of this problem is: essentially answered at the level of local equilibrium in the hydrodynamic scaling, with the precise statement asked here (fixed environment, spatially ergodic initial law, t to infinity with no scaling) not confirmed by me.",
+   "obstruction": "The gap between local equilibrium in the hydrodynamic scaling and t-to-infinity convergence with no rescaling is genuine: the former is a statement about the law at time Nt near site Nx, the latter about the law at site 0 at time t. Bridging them needs a translation-invariance-in-the-environment argument (the environment is not translation invariant for a fixed alpha, only statistically), and that is the concrete wall for the quenched statement.",
+   "key_identity": "Supercritical weak convergence to the density-rho* equilibrium is the same statement as local loss of the excess mass to the slow sites."
+  }
+ },
+ {
+  "problem_id": "D0025",
+  "source_id": "disordered_asep_open_1999",
+  "locator": "Problem 4, Section 4, PDF p. 9",
+  "title": "Phase transition and a flat segment of the flux for the disordered TASEP",
+  "statement": "For the disordered totally asymmetric exclusion process (jump rates attached to particles or to sites, with at most K particles per site), is there a phase transition similar to the one for the disordered zero-range process? Does the flux function f_K(rho) have a flat segment on an interval around rho = K/2?",
+  "status_search": "WebSearch 2026-09-08 as for D0022. The hits concerned the disordered ZRP; nothing found asserting a flat segment of the flux for the disordered TASEP. The physics prediction (Krug 1998, Krug-Ferrari) that the flux has a plateau is cited in the source itself; I found no rigorous version. No evidence of resolution.",
+  "attempt": {
+   "method": "Use the particle-hole symmetry of the K-exclusion with site disorder and the variational (Seppalainen) representation of the flux to see what a flat segment would require.",
+   "result": "Two structural remarks. (1) For site-disordered K-exclusion the flux satisfies f_K(rho) = f_K(K - rho) by particle-hole symmetry, so any flat segment is automatically symmetric about rho = K/2 -- which is why the source states the question at K/2 -- and a flat segment exists if and only if f_K fails to be strictly concave at its maximum. (2) The mechanism producing the flat segment in the disordered ZRP is the saturation of the fugacity at the infimum of the rates; the exclusion analogue is a blocking site whose service rate is close to the infimum, and the current cannot exceed the throughput of the slowest site in the system. In an infinite system with i.i.d. rates bounded below by c > 0 with c in the support, there are arbitrarily long stretches of arbitrarily slow sites, so the maximal current over the whole line is c, and the flat segment is exactly the set of densities at which the system is limited by these slow stretches rather than by the density. This gives a testable prediction: the flat segment is nonempty if and only if the disorder distribution puts mass near its infimum fast enough that a slow stretch of length L occurs within distance exp(o(L)); for i.i.d. rates that is automatic, so a flat segment is predicted for EVERY nondegenerate i.i.d. site disorder.",
+   "obstruction": "Making this rigorous needs the variational formula for f_K in the disordered case, i.e. an analogue of Seppalainen's variational characterisation of the flux, valid for K >= 2 and for site disorder; the known variational formulas are for the homogeneous case or for K = 1 with particle-wise disorder (where the answer is governed by the slowest particle and is known). For site disorder with K >= 2 there is no comparable formula, and the blocking argument only gives the upper bound f_K <= c, not the identification of the interval on which it is attained. That is the wall.",
+   "key_identity": "Particle-hole symmetry gives f_K(rho) = f_K(K-rho); a flat segment exists iff f_K is not strictly concave at its maximum, and the blocking bound gives f_K <= essinf of the rates."
+  }
+ },
+ {
+  "problem_id": "D0026",
+  "source_id": "kcm_facilitated_open_2025",
+  "locator": "Conjecture 1, Section 1.1, PDF p. 2",
+  "title": "Convergence to equilibrium for FA-1f from any initial law with an infection",
+  "statement": "For the Fredrickson-Andersen one-spin facilitated model on Z with infection density q in (0,1): for any q and any local function f, E_nu(f(eta(t))) tends to pi(f) as t tends to infinity, provided nu(there exists an infected vertex) = 1. Here pi is the Bernoulli(q) product measure, which is reversible for the dynamics.",
+  "status_search": "WebSearch 2026-09-08 'facilitated kinetically constrained model FA-1f convergence to equilibrium all q conjecture Martinelli Shapira Toninelli 2025' returned the source itself (arXiv:2510.20461, 23 October 2025) and the Hartarsky-Toninelli KCM book (arXiv:2412.13634). The source states in its own text that 'robust tools to prove Conjectures 1 and 2 are not yet available, and the results are limited to q larger than a certain threshold'. The source is 11 months old at the time of this check and no later resolution appeared in the search. Open.",
+  "attempt": {
+   "method": "Locate the exact failure of the standard route. Convergence to equilibrium from an arbitrary initial law with an infection is usually obtained from (a) attractiveness plus a coupling, or (b) a spectral gap plus a relative-entropy or hypercontractivity argument started from an absolutely continuous law. The source records that FA-1f is not attractive, which kills (a).",
+   "result": "Route (b) fails for a reason that can be stated sharply and that I believe is the real content of the difficulty. The stationary process has a positive spectral gap for every q > 0 in d = 1 (this is classical for FA-1f), so E_nu(f(eta(t))) tends to pi(f) exponentially fast for every nu with density dnu/dpi in L^2(pi). The conjecture concerns nu SINGULAR with respect to pi -- for example the Dirac mass on a single infection at the origin -- for which the L^2 norm is infinite and the gap gives nothing. The natural repair is a hypercontractivity or ultracontractivity estimate turning L^1 or L^infinity data into L^2 data after a short time, but the KCM semigroup is not hypercontractive: the constraint c_x vanishes on a set of positive measure, so the Dirichlet form is degenerate and no logarithmic Sobolev inequality with a finite constant holds uniformly in the volume. So the honest reduction is: Conjecture 1 is equivalent to an L^1-to-L^2 regularisation statement for the FA-1f semigroup at all q, which is false in the uniform-in-time form and must be replaced by a statement quantified by the initial density of infections.",
+   "obstruction": "The concrete wall is that the only known mechanism transporting an infection across a long healthy stretch is the front/contact-process comparison of the high-q results, whose comparison constant degenerates as q decreases to 0 because the bootstrap-percolation length scale exp(c/q) exceeds the reach of the comparison. Below that threshold there is no known way to show an isolated infection survives, and indeed survival of a single infection for all q is itself unproved.",
+   "key_identity": "Spectral gap gives exponential convergence for dnu/dpi in L^2; the conjecture is exactly the singular-nu case, i.e. an L^1-to-L^2 regularisation that fails uniformly because no log-Sobolev inequality holds for a degenerate Dirichlet form."
+  }
+ },
+ {
+  "problem_id": "D0027",
+  "source_id": "kcm_facilitated_open_2025",
+  "locator": "Conjecture 2, Section 1.1, PDF p. 2",
+  "title": "Exponential relaxation of FA-1f from an initial law with exponentially rare infection gaps",
+  "statement": "For FA-1f on Z: if there is kappa > 0 with nu(no infected vertices in [-l, l]) = O(exp(-kappa l)) for all large l, then for every q > 0 the convergence of E_nu(f(eta(t))) to pi(f) is exponentially fast.",
+  "status_search": "Same WebSearch as D0026 on 2026-09-08. The source itself says the available results are limited to q above a threshold, citing its references [3,8,17], and gives the East model as the only case understood for all q. No evidence of resolution.",
+  "attempt": {
+   "method": "Try to reduce to a finite-volume statement. Under the hypothesis the initial law has an infection within distance l of the origin except with probability exp(-kappa l); on that event one wants to relax the box [-l,l] in time exp(o(l)).",
+   "result": "The reduction is clean and isolates a single missing ingredient: a bound on the FINITE-VOLUME relaxation time of FA-1f in a box of size l with at least one infection present, valid for all q. If T(l,q) denotes that relaxation time, then the hypothesis plus a union bound gives exponential convergence at rate min(kappa/2, 1/T(l,q)) with l chosen of order t, so exponential relaxation holds as soon as T(l,q) grows subexponentially in l for fixed q. In equilibrium T is O(1) by the spectral gap, but the conditioning on a single infection destroys the product structure and the known bounds on the constrained relaxation time carry the bootstrap-percolation length exp(c/q), which is l-independent -- so in fact the reduction shows the conjecture would follow from any bound T(l,q) <= exp(o(l)) uniform over configurations with one infection in the box.",
+   "obstruction": "The wall is the same as in D0026 but quantitative: no bound on T(l,q) is known that is uniform over initial configurations with a single infection, because the worst case is an infection at the edge of a completely healthy box, and moving it across requires the front to advance, whose speed is only controlled by contact-process comparison at large q. A second obstacle is that the hypothesis is on nu but the dynamics can locally heal all infections in a region, so the property 'an infection within distance l' is not preserved in time; a proof needs a renewal or restart argument that the source explicitly says is unavailable because of non-attractiveness.",
+   "key_identity": "Exponential relaxation follows from any subexponential bound T(l,q) <= exp(o(l)) on the finite-volume relaxation time of a box of size l containing at least one infection."
+  }
+ },
+ {
+  "problem_id": "D0028",
+  "source_id": "kcm_facilitated_open_2025",
+  "locator": "Conjecture 3, Section 2, PDF p. 8",
+  "title": "Every stationary measure of a KCM is a mixture over bootstrap-percolation-stable configurations",
+  "statement": "Let mu be a stationary measure of a kinetically constrained model. Then there is a probability measure mu* on the set E of bootstrap-percolation-stable configurations such that mu = integral over E of pi_beta dmu*(beta), where pi_beta is pi conditioned on the event {BP(eta) = beta}. The source proves this for the d-dimensional East model (Theorem 2.13) and in d = 1 or for translation-invariant measures in general.",
+  "status_search": "WebSearch 2026-09-08 as for D0026; the source is the statement of the conjecture (arXiv:2510.20461, October 2025) and no later work appeared in the search. Open.",
+  "attempt": {
+   "method": "Look at what the two proved cases have in common. The East proof uses that the bootstrap-percolation closure of a single vacancy is the whole forward cone P_x^+, so the stable configurations are parametrised by antichains I, and pi_beta is a product measure. The d = 1 and translation-invariant proofs go through an entropy-production (Holley-Stroock, Liggett Chapter IV.5) argument.",
+   "result": "The obstruction can be pinned to one property. The entropy-production argument controls the Dirichlet form of mu relative to pi and concludes that mu is supported on configurations where every unconstrained site is at equilibrium; to conclude the mixture representation one needs that CONDITIONING ON THE BOOTSTRAP CLOSURE makes the remaining sites independent, i.e. that pi_beta is a product measure on the complement of the frozen region. That is true for East (equation (2.6) of the source) because the closure of a vacancy set is a union of forward cones and the constraint is one-sided. For a two-sided constraint such as FA-1f in d >= 2, the event {BP(eta) = beta} is not a cylinder-decomposable event: it constrains the configuration on the boundary of the frozen region in a non-product way (the boundary must fail to grow), so pi_beta is a boundary-conditioned measure, not a product. Hence the conjecture as stated is a statement about the Gibbs-like structure of pi conditioned on a bootstrap-percolation event, and the missing ingredient is exactly a Markov/DLR property for that conditioning.",
+   "obstruction": "In d >= 2 the event {BP(eta) = beta} depends on the whole configuration through a percolation-type non-local condition, so pi_beta has long-range dependence along the boundary of the frozen region, and the entropy-production argument only sees local Dirichlet forms. In d = 2 the source itself notes the argument of Liggett IV.5 fails, and I could not repair it: the sum of the local entropy productions telescopes only when the constraint is one-sided (East) or the volume is one-dimensional.",
+   "key_identity": "The representation needs pi conditioned on {BP(eta)=beta} to be a product/Markov measure off the frozen region; this holds for East by (2.6) but fails for two-sided constraints in d >= 2."
+  }
+ }
+]

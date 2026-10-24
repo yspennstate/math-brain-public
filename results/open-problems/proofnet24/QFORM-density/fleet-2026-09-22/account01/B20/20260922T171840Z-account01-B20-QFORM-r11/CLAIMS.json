@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T171840Z-account01-B20-QFORM-r11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target": "OPEN",
+  "continuity_full_target": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-O0-SCHUR-GRAM-EXTERIOR-RESERVE-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "For the account02/B20 O0 heavy row i, E3(i)=||B[i,R]||_2^2 e2(C_perp C_perp^T)>1/12288, with C_perp the algebraic right-space projection orthogonal to the heavy row."
+    },
+    {
+      "id": "QFORM-O0-FIVEBANK-LAPLACE-CASCADE-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "From the source-realizable six-block packet P>1/110592, some permutation (q,p,r) satisfies ||B[i,Rq]||_2^2 e2(C_pr C_pr^T)>1/995328 for C_pr=B[L1 union L2,Rp union Rr]."
+    },
+    {
+      "id": "QFORM-O0-DISJOINT-MATCHING-ENERGY-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "For some orientation of the same six physical banks, the product of three pairwise-disjoint cross-block Frobenius-square energies exceeds 1/3981312."
+    },
+    {
+      "id": "QFORM-E2-DIFFUSE-HALF-RIESZ-v1",
+      "status": "PROVED_SUPPORTING_ANALYTIC",
+      "statement": "For any physical cross block C with E2=e2(CC^T)>0, at the ridge scale tr K=3/2, if max diag K<=1/2 then sup_z E|z-R|^(-1/2) <= 3*2^(31/24)*sqrt(e)*E2^(-1/8)<12.109 E2^(-1/8), in the completed fractional-ridge theorem's arbitrary-self/outside-coupling scope."
+    },
+    {
+      "id": "QFORM-O0-DIFFUSE-CASCADE-HALF-RIESZ-v1",
+      "status": "PROVED_SUPPORTING_ANALYTIC",
+      "statement": "In the B20 physical cascade, if the four-bank C_pr is ridge-diffuse at tr K=3/2, then its full residual half-Riesz potential is <68.053 s^(1/8), where s=||B[i,Rq]||_2^2 and s e2(C_pr C_pr^T)>1/995328."
+    },
+    {
+      "id": "QFORM-O0-ONE-EDGE-EXTRACTION",
+      "status": "REFUTED_INTERMEDIATE",
+      "statement": "The aggregate heavy packet does not force one dimension-free physical singleton edge or one dimension-free 3x3 minor; the explicit B_m family has packet mass 1 while the largest such edge is m^(-1/2) and each nonzero third-minor square is 1/m."
+    },
+    {
+      "id": "QFORM-RANK1xRANK2-BANK-PAYMENT-v1",
+      "status": "OPEN",
+      "statement": "Pay the physical cascade with arbitrary self blocks/cross contamination, or route it to existing square-pivot/grouped/ridge endpoints. In the diffuse C branch only the bank-level singleton hyperbolic transducer remains; in the heavy C branch recurse on ridge localization."
+    }
+  ],
+  "dependencies": [
+    {
+      "account": "account02",
+      "slot": "B20",
+      "run_id": "20260922T165822Z-account02-B20-QFORM-r13",
+      "commit": "ccd703b260df4eca8b539b6614e2cecdad3e7465"
+    },
+    {
+      "account": "account01",
+      "slot": "B03",
+      "run_id": "account01-B03-20260922T164925Z-r12",
+      "commit": "c301be6b21f382934962aeb4c019b713377eac2f"
+    }
+  ]
+}

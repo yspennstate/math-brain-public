@@ -1,0 +1,396 @@
+{
+  "gate": {
+    "kind": "fresh deterministic CPU gate",
+    "max_dimension": 10,
+    "max_sign_rows_enumerated_per_dimension": 1024,
+    "no_gpu": true,
+    "no_external_compute": true,
+    "writes": "this worker folder only"
+  },
+  "B01": {
+    "matrices": 16,
+    "counts": {
+      "singular": 8,
+      "orthogonal": 8
+    },
+    "scaled_singular_values": {
+      "0": "1/2",
+      "2": "1/2"
+    }
+  },
+  "B02": {
+    "delta_checks": [
+      {
+        "delta": 1.0,
+        "t": 0.5,
+        "excess": 0.2768698398515702,
+        "proved_lower_bound": 0.16666666666666666,
+        "excess_over_lower_bound": 1.6612190391094213
+      },
+      {
+        "delta": 0.5,
+        "t": 0.3535533905932738,
+        "excess": 0.1352265239493754,
+        "proved_lower_bound": 0.05892556509887897,
+        "excess_over_lower_bound": 2.2948702099413216
+      },
+      {
+        "delta": 0.1,
+        "t": 0.15811388300841897,
+        "excess": 0.014141223162352057,
+        "proved_lower_bound": 0.0052704627669473,
+        "excess_over_lower_bound": 2.6831084456256926
+      },
+      {
+        "delta": 0.01,
+        "t": 0.05,
+        "excess": 0.0004576288231852993,
+        "proved_lower_bound": 0.00016666666666666666,
+        "excess_over_lower_bound": 2.745772939111796
+      },
+      {
+        "delta": 0.001,
+        "t": 0.015811388300841896,
+        "excess": 1.4495094313653895e-05,
+        "proved_lower_bound": 5.270462766947299e-06,
+        "excess_over_lower_bound": 2.750250775806085
+      },
+      {
+        "delta": 0.0001,
+        "t": 0.005,
+        "excess": 4.583730922333787e-07,
+        "proved_lower_bound": 1.666666666666667e-07,
+        "excess_over_lower_bound": 2.7502385534002713
+      },
+      {
+        "delta": 1e-06,
+        "t": 0.0005,
+        "excess": 4.583384182171163e-10,
+        "proved_lower_bound": 1.6666666666666663e-10,
+        "excess_over_lower_bound": 2.7500305093026984
+      }
+    ],
+    "comparison_checks": 455,
+    "scope": "numerical checks of an analytic scalar-CDF obstruction; not matrix simulations"
+  },
+  "B03": {
+    "witness_gram": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        4
+      ]
+    ],
+    "flat_atoms": [
+      {
+        "n": 2,
+        "rank": 1,
+        "zero_count": 2,
+        "total": 4,
+        "atom": "1/2",
+        "basis": [
+          [
+            1,
+            -1
+          ]
+        ]
+      },
+      {
+        "n": 4,
+        "rank": 3,
+        "zero_count": 6,
+        "total": 16,
+        "atom": "3/8",
+        "basis": [
+          [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            -1,
+            1
+          ]
+        ]
+      },
+      {
+        "n": 6,
+        "rank": 5,
+        "zero_count": 20,
+        "total": 64,
+        "atom": "5/16",
+        "basis": [
+          [
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          [
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          [
+            1,
+            -1,
+            1,
+            1,
+            -1,
+            -1
+          ]
+        ]
+      },
+      {
+        "n": 8,
+        "rank": 7,
+        "zero_count": 70,
+        "total": 256,
+        "atom": "35/128",
+        "basis": [
+          [
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          [
+            1,
+            1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1
+          ]
+        ]
+      },
+      {
+        "n": 10,
+        "rank": 9,
+        "zero_count": 252,
+        "total": 1024,
+        "atom": "63/256",
+        "basis": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        ]
+      }
+    ],
+    "n4_gaussian_projection_atom_at_zero": 0,
+    "n4_actual_rademacher_projection_atom_at_zero": "3/8"
+  },
+  "B04": {
+    "n": 1,
+    "t": 1,
+    "actual_gaussian_cdf": 0.6826894921370857,
+    "hard_edge_limiting_cdf": 0.7768698398515702,
+    "actual_right_derivative_at_zero": 0.7978845608028654,
+    "limiting_right_derivative_at_zero": 1
+  },
+  "elapsed_seconds": 0.044419500045478344,
+  "verdict": "PASS",
+  "formal_check": false,
+  "independent_mathematical_review": "pending w572"
+}

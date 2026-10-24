@@ -1,0 +1,67 @@
+S=
+Matrix([[4, 1, 1, 1, 1], [0, 4, 0, 0, 2], [0, 0, 4, 0, 2], [0, 0, 0, 4, 2], [0, 0, 0, 0, 4]])
+B(K2 right block)=
+Matrix([[23, 12, 12, 12, 22], [0, 23, 0, 0, 24], [0, 0, 23, 0, 24], [0, 0, 0, 23, 24], [0, 0, 0, 0, 23]])
+A(P3 right block)=
+Matrix([[130, 103, 103, 103, 273], [0, 130, 0, 0, 206], [0, 0, 130, 0, 206], [0, 0, 0, 130, 206], [0, 0, 0, 0, 130]])
+N^3=0: PASS
+B = 23 I + 12 N + (5/3)N^2: PASS
+A = 130 I + 103 N + (85/3)N^2: PASS
+Z/(130^p 23^m 4^r) = (29203200*m**2 + 88695360*m*p + 27986400*m*r + 60975200*m + 67345932*p**2 + 42499860*p*r + 92750628*p + 6705075*r**2 + 29055325*r + 35760400)/35760400
+closed forest-count formula: PASS
+edge-pair orbit count = 46: PASS
+ORBIT 01 | A0:v0-T0     | A0:v0-T1     | deg=4 | Newton_terms=35 | constant=5988 | min_Newton=1323/2
+ORBIT 02 | A0:v0-T0     | A0:v1-T0     | deg=4 | Newton_terms=35 | constant=18884 | min_Newton=675/16
+ORBIT 03 | A0:v0-T0     | A0:v1-T1     | deg=4 | Newton_terms=35 | constant=1796 | min_Newton=675/16
+ORBIT 04 | A0:v0-T0     | A0:v2-T0     | deg=4 | Newton_terms=35 | constant=11684 | min_Newton=27/8
+ORBIT 05 | A0:v0-T0     | A0:v2-T1     | deg=4 | Newton_terms=34 | constant=3140 | min_Newton=27/8
+ORBIT 06 | A0:h01       | A0:v0-T0     | deg=4 | Newton_terms=35 | constant=13120 | min_Newton=5589/16
+ORBIT 07 | A0:h01       | A0:v2-T0     | deg=4 | Newton_terms=35 | constant=1728 | min_Newton=81/4
+ORBIT 08 | A0:v0-T0     | A1:v0-T0     | deg=2 | Newton_terms=10 | constant=430084904 | min_Newton=11795741
+ORBIT 09 | A0:v0-T0     | A1:v0-T1     | deg=2 | Newton_terms=10 | constant=162038560 | min_Newton=4469591
+ORBIT 10 | A0:v0-T0     | A1:v1-T0     | deg=2 | Newton_terms=10 | constant=436385568 | min_Newton=23923475/2
+ORBIT 11 | A0:v0-T0     | A1:v1-T1     | deg=2 | Newton_terms=10 | constant=160455508 | min_Newton=8840225/2
+ORBIT 12 | A0:h01       | A1:v0-T0     | deg=2 | Newton_terms=10 | constant=37116288 | min_Newton=970101
+ORBIT 13 | A0:v0-T0     | B0:v0-T0     | deg=2 | Newton_terms=10 | constant=10269924 | min_Newton=738765/2
+ORBIT 14 | A0:v0-T0     | B0:v0-T1     | deg=2 | Newton_terms=10 | constant=3878196 | min_Newton=281295/2
+ORBIT 15 | A0:v0-T0     | B0:h01       | deg=2 | Newton_terms=10 | constant=923208 | min_Newton=31548
+ORBIT 16 | A0:v0-T0     | O0:v0-T0     | deg=2 | Newton_terms=10 | constant=222760 | min_Newton=21985/2
+ORBIT 17 | A0:v0-T0     | O0:v0-T1     | deg=2 | Newton_terms=10 | constant=87236 | min_Newton=8725/2
+ORBIT 18 | A0:v1-T0     | A0:v1-T1     | deg=4 | Newton_terms=35 | constant=3556 | min_Newton=16875/32
+ORBIT 19 | A0:h01       | A0:v1-T0     | deg=4 | Newton_terms=35 | constant=9536 | min_Newton=2025/8
+ORBIT 20 | A0:v1-T0     | A1:v1-T0     | deg=2 | Newton_terms=10 | constant=442845050 | min_Newton=48528125/4
+ORBIT 21 | A0:v1-T0     | A1:v1-T1     | deg=2 | Newton_terms=10 | constant=158799400 | min_Newton=17474375/4
+ORBIT 22 | A0:h01       | A1:v1-T0     | deg=2 | Newton_terms=10 | constant=37269708 | min_Newton=1946475/2
+ORBIT 23 | A0:v1-T0     | B0:v0-T0     | deg=2 | Newton_terms=10 | constant=10421040 | min_Newton=1498275/4
+ORBIT 24 | A0:v1-T0     | B0:v0-T1     | deg=2 | Newton_terms=10 | constant=3841320 | min_Newton=556425/4
+ORBIT 25 | A0:v1-T0     | B0:h01       | deg=2 | Newton_terms=10 | constant=927144 | min_Newton=31650
+ORBIT 26 | A0:v1-T0     | O0:v0-T0     | deg=2 | Newton_terms=10 | constant=226010 | min_Newton=44575/4
+ORBIT 27 | A0:v1-T0     | O0:v0-T1     | deg=2 | Newton_terms=10 | constant=86500 | min_Newton=17275/4
+ORBIT 28 | A0:h01       | A0:h12       | deg=4 | Newton_terms=35 | constant=4608 | min_Newton=243/2
+ORBIT 29 | A0:h01       | A1:h01       | deg=2 | Newton_terms=10 | constant=5473368 | min_Newton=136161
+ORBIT 30 | A0:h01       | B0:v0-T0     | deg=2 | Newton_terms=10 | constant=893592 | min_Newton=60885/2
+ORBIT 31 | A0:h01       | B0:h01       | deg=2 | Newton_terms=10 | constant=137088 | min_Newton=4428
+ORBIT 32 | A0:h01       | O0:v0-T0     | deg=2 | Newton_terms=10 | constant=19884 | min_Newton=1845/2
+ORBIT 33 | B0:v0-T0     | B0:v0-T1     | deg=4 | Newton_terms=35 | constant=36 | min_Newton=675/32
+ORBIT 34 | B0:v0-T0     | B0:v1-T0     | deg=4 | Newton_terms=35 | constant=360 | min_Newton=27/16
+ORBIT 35 | B0:v0-T0     | B0:v1-T1     | deg=4 | Newton_terms=35 | constant=36 | min_Newton=27/16
+ORBIT 36 | B0:h01       | B0:v0-T0     | deg=4 | Newton_terms=35 | constant=162 | min_Newton=81/8
+ORBIT 37 | B0:v0-T0     | B1:v0-T0     | deg=2 | Newton_terms=10 | constant=234990 | min_Newton=46269/4
+ORBIT 38 | B0:v0-T0     | B1:v0-T1     | deg=2 | Newton_terms=10 | constant=88794 | min_Newton=17703/4
+ORBIT 39 | B0:h01       | B1:v0-T0     | deg=2 | Newton_terms=10 | constant=21324 | min_Newton=990
+ORBIT 40 | B0:v0-T0     | O0:v0-T0     | deg=2 | Newton_terms=10 | constant=4804 | min_Newton=1377/4
+ORBIT 41 | B0:v0-T0     | O0:v0-T1     | deg=2 | Newton_terms=10 | constant=1876 | min_Newton=549/4
+ORBIT 42 | B0:h01       | B1:h01       | deg=2 | Newton_terms=10 | constant=3300 | min_Newton=144
+ORBIT 43 | B0:h01       | O0:v0-T0     | deg=2 | Newton_terms=10 | constant=448 | min_Newton=30
+ORBIT 44 | O0:v0-T0     | O0:v0-T1     | deg=4 | Newton_terms=34 | constant=0 | min_Newton=27/32
+ORBIT 45 | O0:v0-T0     | O1:v0-T0     | deg=2 | Newton_terms=10 | constant=90 | min_Newton=41/4
+ORBIT 46 | O0:v0-T0     | O1:v0-T1     | deg=2 | Newton_terms=10 | constant=36 | min_Newton=17/4
+all 46 orbit Rayleigh polynomials have strictly positive nonzero Newton/binomial coefficients: PASS
+zero-constant orbit(s) = [44] (the two distinct spokes of the unique singleton star; equality only for K_{3,1})
+ordinary monomial coefficient mixed-sign orbit(s) = [5]
+ORBIT 05 Newton certificate = [((0, 0, 0), 3140), ((0, 0, 1), 5005/4), ((0, 0, 2), 2877/16), ((0, 0, 4), 27/8), ((0, 1, 0), 1481440/529), ((0, 1, 1), 198588/529), ((0, 1, 2), 2040/529), ((0, 1, 3), 162/23), ((0, 2, 0), 220557152/279841), ((0, 2, 1), 195840/12167), ((0, 2, 2), 7776/529), ((0, 3, 0), 14100480/279841), ((0, 3, 1), 373248/12167), ((0, 4, 0), 17915904/279841), ((1, 0, 0), 19243487/4225), ((1, 0, 1), 2427306/4225), ((1, 0, 2), 197007/16900), ((1, 0, 3), 2781/260), ((1, 1, 0), 117848788/97175), ((1, 1, 1), 81689532/2235025), ((1, 1, 2), 33372/1495), ((1, 2, 0), 5232246336/51405575), ((1, 2, 1), 1601856/34385), ((1, 3, 0), 76889088/790855), ((2, 0, 0), 33483063389/17850625), ((2, 0, 1), 20291721/274625), ((2, 0, 2), 286443/8450), ((2, 1, 0), 28029073584/145276625), ((2, 1, 1), 6874632/97175), ((2, 2, 0), 329982336/2235025), ((3, 0, 0), 6270141789/17850625), ((3, 0, 1), 29503629/274625), ((3, 1, 0), 1416174192/6316375), ((4, 0, 0), 6077747574/17850625)]
+ORBIT 44 Newton certificate = [((0, 0, 1), 9/4), ((0, 0, 2), 265/64), ((0, 0, 3), 99/32), ((0, 0, 4), 27/32), ((0, 1, 0), 5044/529), ((0, 1, 1), 6460/529), ((0, 1, 2), 7851/1058), ((0, 1, 3), 81/46), ((0, 2, 0), 9525320/279841), ((0, 2, 1), 212904/12167), ((0, 2, 2), 1944/529), ((0, 3, 0), 11394432/279841), ((0, 3, 1), 93312/12167), ((0, 4, 0), 4478976/279841), ((1, 0, 0), 1672/65), ((1, 0, 1), 1687913/67600), ((1, 0, 2), 214953/16900), ((1, 0, 3), 2781/1040), ((1, 1, 0), 149199372/2235025), ((1, 1, 1), 66155928/2235025), ((1, 1, 2), 8343/1495), ((1, 2, 0), 3503271744/51405575), ((1, 2, 1), 400464/34385), ((1, 3, 0), 19222272/790855), ((2, 0, 0), 9049821569/71402500), ((2, 0, 1), 108852357/2197000), ((2, 0, 2), 286443/33800), ((2, 1, 0), 16428378666/145276625), ((2, 1, 1), 1718658/97175), ((2, 2, 0), 82495584/2235025), ((3, 0, 0), 6650920017/35701250), ((3, 0, 1), 29503629/1098500), ((3, 1, 0), 354043548/6316375), ((4, 0, 0), 3038873787/35701250)]
+BRUTE L_(1, 0, 0): n=6 m=11 Z=712 min_gap=1728
+BRUTE L_(0, 1, 1): n=6 m=10 Z=488 min_gap=448
+BRUTE L_(1, 1, 0): n=8 m=18 Z=31332 min_gap=137088
+ALL_EXACT_CHECKS_PASS

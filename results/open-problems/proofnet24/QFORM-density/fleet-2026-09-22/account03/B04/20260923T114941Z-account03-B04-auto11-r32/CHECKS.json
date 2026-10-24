@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T114941Z-account03-B04-auto11-r32",
+  "check_type": "deterministic_symbolic_and_finite_arithmetic",
+  "monte_carlo_used": false,
+  "matrix_P": [
+    ["9/10","3/20","3/20","3/20","3/20"],
+    ["3/20","21/40","1/40","1/40","-19/40"],
+    ["3/20","1/40","21/40","-19/40","1/40"],
+    ["3/20","1/40","-19/40","21/40","1/40"],
+    ["3/20","-19/40","1/40","1/40","21/40"]
+  ],
+  "exact_results": {
+    "UtU": "I_3",
+    "P_squared_equals_P": true,
+    "rank_P": 3,
+    "all_P_entries_nonzero": true,
+    "A_spectrum": {"plus_one":3,"minus_one":3,"zero":4},
+    "E3_total": "1",
+    "J3_anchor_0_0": "81/100",
+    "incident_row_marginals": ["1","1/2","1/2","1/2","1/2"],
+    "incident_column_marginals": ["1","1/2","1/2","1/2","1/2"],
+    "residual_E2": "51/50",
+    "residual_row_marginals": ["1/2","1/2","1/2","1/2"],
+    "residual_column_marginals": ["1/2","1/2","1/2","1/2"],
+    "mixed_theta_half_marginals": ["1/2","1/2","1/2","1/2","1/2"],
+    "J3_times_E2": "4131/5000"
+  },
+  "anchored_row_triple_weights_after_anchored_column_sum": {
+    "012":"81/400",
+    "013":"81/400",
+    "014":"0",
+    "023":"0",
+    "024":"81/400",
+    "034":"81/400"
+  },
+  "peer_bound_specialization": "(5e/2^(1/5))*(4131/5000)^(-1/10)",
+  "peer_bound_numeric": 12.060073872851982,
+  "pure_E3_natural_max_marginal": "9/10",
+  "pure_E3_gate_threshold_strict_upper": "3/4",
+  "pure_E3_natural_gate_fails": true
+}

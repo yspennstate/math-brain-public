@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260923T111916Z-account01-B02-qform-auto11-r28",
+  "control_revision": "2026-09-22.15",
+  "owner_control_commit": "f571209fbad50281e9cbe2065102fe9dc8aa5a0f",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "global_unweighted_L1_status": "OPEN_NOT_REFUTED",
+  "continuity": "PROVED_ON_EXPLICIT_L1_BRANCHES_ONLY",
+  "partner_result": {
+    "theorem": "QFORM-INCIDENT32-DISJOINT-TRANSPORT-L1-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6f408fc6a3726d1dc6ea86f7ef322ca291c85e12",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T100819Z-account02-B02-qform-r11/REPORT.md",
+    "blob": "aa85a320ce54c90b1929ab1a5fd5b90d89746bbf",
+    "actual_use": "Applied Hall transport to obtain the live 17.659639 density bound and applied the independent-disjoint compiler at raw threshold 1/64 to delta_r^H J3 H > 7 Z3 E2/6144, yielding density <23.302033 (Z3E2)^(-1/10) and integral |phi| <146.410989 (Z3E2)^(-1/10)."
+  },
+  "supporting_result": {
+    "theorem": "QFORM-EXACT-RANK3-CROSSBLOCK-FOURIER-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "484c89f85cda352b2c4318364a6206ebc4154950",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260922T230126Z-account03-B02-QFORM-r17/REPORT.md"
+  },
+  "new_results": [
+    "QFORM-STARCOLLISION-UNIQUE-NEARCOLOOP-v1",
+    "QFORM-INCIDENT32-NESTED-COLOOP-TRICHOTOMY-v1"
+  ],
+  "mathematical_delta": "For p_i<=3/4 in the live common-anchor packet, after partner Hall/disjoint exits fail, conditional star collision delta_i^*<1/16 forces G={r:u_r>3/4} to have size one or two. Size two implies a literal physical three-row cross block with E3>Z3/24 and is paid by exact-rank-three Fourier L1. Size one is a unique nested near-coloop with u_r,v_r>3/4, incident scale >Z3/16, and anchored-H scale >21E2/128. Transpose gives the column analogue. Double singleton gives one residual physical 2x2 cross minor squared >H/2>7E2/64, retained only as scale currency.",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "POINTWISE-OSCILLATORY-DECAY refuted",
+    "NO-INDEPENDENCE-AFTER-ROTATION",
+    "conditional-cap/sum-difference corrections",
+    "small-matrix-tail deletion invalid on arbitrary unbounded product laws"
+  ],
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "328498814b61c548b6033eb14228d379519e1ebe",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T111916Z-account01-B02-qform-auto11-r28/REPORT.md",
+  "source_pin_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T111916Z-account01-B02-qform-auto11-r28/SOURCE_PIN.md",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B02/20260923T111916Z-account01-B02-qform-auto11-r28.md",
+  "handoff_commit": "f8a9c403e3d00f63da719ce0a1098437d40ebdd8",
+  "unresolved": "QFORM-NESTED-INCIDENT-E2-NEARCOLOOP-RECEIVER-v1",
+  "next_step": "Use a product-preserving true pair/scalar-Schur, grouped-star, ridge, or mixed-hub receiver on the inner p_i>3/4 anchor-heavy branch or the unique nested row/column near-coloop; do not infer full control from the single cross minor alone.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_tokens": null,
+  "provider_thinking_seconds": null,
+  "notifications_changed": false,
+  "schedules_changed": false
+}

@@ -1,0 +1,19 @@
+Deterministic regression for QFORM-HEAVYSTAR-STRIP-TO-DOUBLEANCHOR-v1
+seed=20260923
+
+200 random 6x6 real matrices with fixed row-pair/column-pair anchors:
+checked G = det(P0)^2 ||S0||_F^2 for invertible P0.
+max relative error = 9.544600296399676e-16
+
+100 random 6x6 matrices with the fixed 2x2 anchor forced to rank one:
+choose a nonzero scalar entry p and its scalar cross-Schur residual S1.
+checked p^2 E2(S1) >= G for the fixed double-anchor 3-minor packet.
+violations = 0
+minimum observed ratio p^2 E2(S1)/G = 2.547554804679629
+
+Constants:
+3 e^(1/3) 24^(1/6) = 7.110846258225242
+3 e^(2/3) 24^(1/6) = 9.923985390856076
+(5e/sqrt(2))*24^(1/10) = 13.205979311715065
+
+These checks are regression only; the proof is algebraic/combinatorial.

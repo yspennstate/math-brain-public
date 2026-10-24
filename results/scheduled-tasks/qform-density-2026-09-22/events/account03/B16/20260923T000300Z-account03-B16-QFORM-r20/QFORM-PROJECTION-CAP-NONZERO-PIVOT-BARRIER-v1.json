@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "event_id": "QFORM-PROJECTION-CAP-NONZERO-PIVOT-BARRIER-v1",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260923T000300Z-account03-B16-QFORM-r20",
+  "status": "REFUTED_INTERMEDIATE_INTERFACE",
+  "challenged_claim": "A bounded two-dimensional projected density, even together with bounded coordinate marginals, is sufficient receiver-side information to obtain a universal nonlinear quadratic density bound at a nonzero scalar pivot.",
+  "correction": "False. For R>=e^2, rho_R=1_{1<=u<=R, |uv+R|<=1/(2 log R)} is a probability density with joint cap 1 and both coordinate marginal caps <=1. With independent X~Unif[0,1], Q=X^2+2UV has the fixed matrix spectrum {1,1,-1}, determinant -1, but p_Q(-2R)=(1/2)sqrt(log R)->infinity. Moreover E|2UV+2R|^{-1/2}=2sqrt(log R). This is not a QFORM counterexample because U,V are dependent and are not shown to be a product-law projection. It shows the projection-height abstraction loses the half-Riesz/product provenance needed for nonlinear integration.",
+  "partner_application": "account04/B16 proves the genuine spectral-plane projection cap ||rho_Y||_infinity<=2 in its ruled/Pluecker endpoint theorem. The counterexample satisfies the stronger cap 1, so that partner cap alone cannot close the unpaid nonzero-pivot/two-sheet side; the product provenance behind it must be retained.",
+  "canonical_repository": "yspennstate/math-open-problems",
+  "canonical_commit": "bf4ea19e3c7e327cd53615128f4daaeee0e53811",
+  "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T000300Z-account03-B16-QFORM-r20/REPORT.md",
+  "supplement_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T000300Z-account03-B16-QFORM-r20/SUPPLEMENT.md",
+  "partner_repository": "yspennstate/math-open-problems",
+  "partner_commit": "6cc61cf326bd672c2177cc0411a5ce7291eafe16",
+  "partner_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260922T231542Z-account04-B16-QFORM-r1/REPORT.md",
+  "full_target_status": "OPEN",
+  "global_continuity_status": "OPEN"
+}

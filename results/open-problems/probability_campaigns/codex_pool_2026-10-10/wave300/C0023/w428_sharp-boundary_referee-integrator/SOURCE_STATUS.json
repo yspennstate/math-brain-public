@@ -1,0 +1,37 @@
+{
+  "problem_id": "C0023",
+  "checked_on": "2026-10-10",
+  "original_intake": {
+    "status": "historically_open_as_of_2026-09-07",
+    "source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:23",
+    "statement_quote": "Prove theta(p_c) = 0 for Bernoulli percolation on Z^d for every d >= 3; open for 3 <= d <= 10",
+    "warning": "The intake does not specify bond versus site. Heydenreich and van der Hofstad, Open Problem 1.1, explicitly focus on bond percolation."
+  },
+  "precise_bond_statement": "For independent nearest-neighbor Bernoulli bond percolation on Z^d with p_c=inf{p: P_p(|C(0)|=infinity)>0}, P_{p_c}(|C(0)|=infinity)=0 for every integer d>=2.",
+  "primary_historical_source": "https://rhofstad.win.tue.nl/survey-high-d-percolation.pdf, Open Problem 1.1, printed p. 4; definitions (1.1.1)-(1.1.2) and bond focus on pp. 3-4",
+  "new_primary_source": {
+    "paper": "https://github.com/openai/math/blob/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf",
+    "downloaded_pdf_sha256": "5929CCEA200FD7433C5AC519C924316CCDD56FC0208EA0CC65D5A424BB2E425F",
+    "paper_theorems": "Theorem 1.1: all infinite connected locally finite quasi-transitive undirected graphs with p_c<1; Corollary 10.1: nearest-neighbor Bernoulli bond percolation on Z^d for every d>=2 has no infinite cluster at criticality.",
+    "formal_statement": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/CriticalPercolation.lean",
+    "solution_theorem": "https://raw.githubusercontent.com/openai/math/main/lean/OAI/Probability/CriticalPercolation/Main.lean",
+    "exact_scope": "Infinite connected locally finite quasi-transitive labelled-bond graph with criticalProbability < 1; law at criticalProbability gives percolates measure zero.",
+    "comparator": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/CriticalPercolation.json: theorem name OAI.CriticalPercolation.BondGraph.no_percolation_at_criticality, permitted axioms propext, Quot.sound, Classical.choice, enable_nanoda false.",
+    "formal_check_limit": "The comparator file includes a sorry placeholder for the trusted statement; the implementation theorem in Main.lean has a proof term. I have not run Lean or comparator independently and cannot certify the entire dependency chain from these reads alone."
+  },
+  "current_bond_status": "PUBLISHED_RESOLUTION_CLAIM_REQUIRES_INDEPENDENT_PROOF_AUDIT; old open ranking is stale as a work target. Do not claim an original new solution.",
+  "site_status": "The separate CriticalZ3.lean solution claims site criticality on Z^3; no all-d site result is inferred from the bond theorem.",
+  "live_store_before": {
+    "command": "python -X utf8 ~/brain_workers/w428/store_check.py (SQLite URI mode=ro, PRAGMA query_only=ON)",
+    "stale_nodes_found": 3,
+    "logical_names": ["open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10", "open-problem-c0084-no-infinite-cluster-at-criticality-on-quasi-transitive-graphs-with-p-c", "open-problem-c0094-no-infinite-cluster-at-criticality-on-z-d-for-all-d-2-duplicate-record"],
+    "observation": "All three live node bodies still begin OPEN PROBLEM, with historical attempted_unsolved language."
+  },
+  "draft_bundle_states": {
+    "submitted": "yes: ~/math-brain-inbox/w428/bundle_001.json; 4 entries, 3 superseding revisions, 5 relations",
+    "reviewed_by_integrator": "pending",
+    "ingested": "unconfirmed",
+    "retrievable": "unconfirmed"
+  },
+  "remaining_review": "Read the preprint theorem and audit the application to Z^d and proof dependencies; report independent proof confidence distinctly from public claim."
+}

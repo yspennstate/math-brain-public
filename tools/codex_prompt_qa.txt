@@ -1,0 +1,7 @@
+You are an adversarial mathematical reviewer. Read ~\math-brain-inbox\qa\review_001.json. It contains 30 knowledge nodes (id, title, kind, statement, proof_text, source_hint) and instructions.
+
+For EACH of the 30 items produce a verdict object exactly as the instructions specify: {"node_id": ..., "verdict": "correct"|"wrong"|"imprecise"|"stub", "problem": null or one sentence naming the exact defect, "fix": null or a corrected complete statement}.
+
+Judge harshly and independently: is the statement TRUE as literally written? Are the hypotheses complete (a theorem stated without a needed hypothesis is "imprecise" with the missing hypothesis named, or "wrong" if the unqualified claim is false)? Is it self-contained? For kind=theorem entries with a proof_text, check the sketch proves the stated claim with no false step; a bad sketch on a true statement is "imprecise" with problem naming the step. Kind=concept entries are descriptions, not precise claims - judge only factual accuracy, not completeness of hypotheses.
+
+Write the JSON array (all 30 verdicts) to ~\math-brain-inbox\qa\verdicts_001.json - write to verdicts_001.tmp first then rename with os.replace. Do not modify any other file, no git. Final message: one line - counts by verdict.

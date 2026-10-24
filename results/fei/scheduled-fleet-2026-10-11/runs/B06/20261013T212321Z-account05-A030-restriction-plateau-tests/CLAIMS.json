@@ -1,0 +1,40 @@
+[
+  {
+    "claim_id": "A030-PLATEAU-SNELL-TRANSPORT",
+    "version": 1,
+    "exact_statement": "Fix C>=0 and a prescribed complete finite fair physical tree T for a Boolean core g, with constant leaves, and let q=Q_C(g,T) be the least nonnegative reserve satisfying D<=Cd+Q-EQ_child. For F_L=g(product of L fresh inputs in each block), a physical compression tree retaining one input per block followed by consistently sign-translated copies of T has Q_C at a node with ell_i surviving inputs equal to [q-C sum_i(ell_i-1)Inf_i(g)]_+. In particular its root reserve is [q-C(L-1)I(g)]_+. Spectator parity of m fresh inputs has root reserve [q-Cm]_+. Whole-block simulation of T instead has Q_C(F_L)=Q_(LC)(g,T), which is at least the compression-first reserve. For ordinary addressing A_a and data-first T, at C=4,L=2, compression-first reserve is0 whereas block-data-first reserve is at least [a-8]_+; both complete trees can be extended without reserve change to the same singleton physical leaf partition and have Pi_H=2a,Pi_I=a+2. Thus their reserve gap is unbounded although total paid debt is identical and root H/I<2. On a general zero-entropy plateau with terminal nonnegative reserve q_l and total path influence b_l, [E q_l-C E b_l]_+<=Q_root<=E[q_l-Cb_l]_+. No universal FEI or initial reserve bound is asserted.",
+    "hypotheses": [
+      "Uniform finite physical cubes, Boolean sign outputs and entropy in bits",
+      "C>=0,L integer>=2,m integer>=0; constant leaves for the prescribed core continuation",
+      "Compression never exhausts a block and its core continuation is consistently input/output-sign translated",
+      "Whole-block simulation queries all inputs in the block corresponding to the seed query before its next query",
+      "The general plateau bound assumes exactly zero entropy decrements, nonnegative path influences and nonnegative terminal reserve values"
+    ],
+    "statement_sha256": "bcb5bfc214d016bd107e909a9ad50d96e50aa9a5571c961547549914e86855f6",
+    "contributors": [
+      "A030; reserve definition and addressing prefix credited to A065"
+    ],
+    "proof_source": "RESERVE_TRANSPORT.md; REPORT.md; out/VALIDATION.json; out/BLOCK_VALIDATION.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Extension of leaf-partition invariance to the minimal nonnegative C-priced Snell reserve",
+      "Universal multiplicative inheritance of a zero root Q_C/I through zero-entropy restriction"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A065",
+      "A064",
+      "A029",
+      "A027",
+      "A028",
+      "A087",
+      "A094",
+      "B06",
+      "B13",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "candidate_id": "C0041",
+  "checked_date": "2026-10-10",
+  "historical_primary_source": {
+    "title": "Selected Topics in Random Walk in Random Environment",
+    "authors": ["Alexander Drewitz", "Alejandro F. Ramírez"],
+    "url": "https://arxiv.org/pdf/1309.2589",
+    "locator": "Open question 2.20, PDF zero-based page 23, lines 1012-1016",
+    "quote": "Let d ≥ 2. Assume given a RWRE for which (UE) and (IID) are fulfilled, and which is transient in direction l ∈ S^{d−1}. Is the RWRE necessarily ballistic in direction l?"
+  },
+  "historical_intake": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 540,
+    "quote": "5,C0041,Transience in a direction implies ballisticity for uniformly elliptic i.i.d. RWR,attempted_un,\"transience implies ballisticity, UE i.i.d., d>=2\""
+  },
+  "precise_target": "For d>=2, an iid law of nearest-neighbor site transition rows on Z^d with a deterministic positive lower bound on every allowed probability, and a fixed unit direction ell: annealed almost-sure X_n·ell -> +infinity implies an almost-sure deterministic vector limit X_n/n -> v with v·ell>0.",
+  "recent_public_resolution_claim": {
+    "status": "PUBLISHED_CLAIM_WITH_FORMALIZATION_SOURCE_LOCATED_NOT_INDEPENDENTLY_COMPILED",
+    "public_release_date": "2026-10-06",
+    "announcement": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+    "catalogue": "https://github.com/openai/math/blob/main/CONTENTS.md#L4419-L4443",
+    "scope_note": "https://raw.githubusercontent.com/openai/math/main/lean/docs/220.md",
+    "paper": "https://github.com/openai/math/blob/main/preprints/Directional-transience-implies-ballisticity-September-23-2026/paper.pdf",
+    "comparator": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalBallisticity.lean",
+    "comparator_body": "sorry; statement placeholder only",
+    "comparison_config": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalBallisticity.json",
+    "solution_module": "OAI.Probability.Ballisticity.Main",
+    "solution_source": "https://raw.githubusercontent.com/openai/math/main/lean/OAI/Probability/Ballisticity/Main.lean",
+    "main_theorem": "OAI.DirectionalTransience.directional_transience_implies_ballisticity",
+    "main_proof_step": "directional_transience_implies_ballisticity_unit",
+    "hard_gap_lemma": "conditioned_wordDuration_integrable",
+    "hard_gap_source": "https://raw.githubusercontent.com/openai/math/main/lean/OAI/Probability/Ballisticity/Renewal/DurationMoment.lean",
+    "comparison_permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "independent_lean_build": false,
+    "paper_proof_independently_audited": false
+  },
+  "current_openness": "PUBLICLY_CLAIMED_RESOLVED; independent mathematical validation pending",
+  "prior_owner_solved_or_retired_status": "No owner resolution established in the exact-ID local records checked; recent public claim supersedes attempted_un as current-status evidence.",
+  "prior_campaign_search": {
+    "intake_problem_row": "probability_1000_intake_claude_20260907/problems.jsonl:41 records attempted_unsolved with a bounded 2026-09-07 search",
+    "intake_attempt_row": "probability_1000_intake_claude_20260907/attempts.jsonl:32 leaves regeneration-time integrability open",
+    "attempts_H_and_I": "no exact C0041 hit in targeted local search",
+    "prob1000_lean_20260908": "historical ranked-list hit only"
+  },
+  "novelty_policy": "No new proof or open-problem novelty claim for C0041."
+}

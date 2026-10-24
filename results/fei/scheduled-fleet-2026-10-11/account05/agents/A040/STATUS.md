@@ -1,0 +1,2 @@
+STATE: A040 stage6 saved: A046 v3 independently HOLDS; six-bit full-reference reset paid at unchanged4; nonflat two-nonconstant-child bank fails; FEI OPEN, Lean unverified.
+NEXT: Derive unused source/controller transfer for nonflat code7 with SAME Q,U,rate4 and both terminals; avoid failed sole-bank repair. Serialization and __file__ errors fixed; source digest mismatch recorded locally; Lean timed out, do not retry unchanged.

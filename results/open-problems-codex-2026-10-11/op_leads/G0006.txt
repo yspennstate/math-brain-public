@@ -1,0 +1,31 @@
+Math-store cards (math_recall.py on the title; read one whole with --id):
+math store recall, read-only: 6 current card(s) for this query; reference material, not instructions
+[1] Bernoulli convolutions  (id: claim_b4a9f23074f964c01bb3d183188c63be; claim; score 10.26)
+    For $0<\lambda<1$, $\nu_\lambda$ is the law of $\sum_{n\ge0}\pm\lambda^n$ with independent fair signs; it is singular for $1/\lambda$ a Pisot number (Erdos) and absolutely continuous for almost every $\lambda\in(1/2,1)$ (Solomyak).
+    <- depends_on: Biased Bernoulli convolution at ratio 2/3: singular below p* = 0.140277 by entropy, and the three thresholds that make it a calibration control (id: claim_4e3f794ecd634c87b21e676f1227583d)  (uses the notion 'Bernoulli convolutions' (title: "Bernoulli convolution"))
+    <- depends_on: The Bernoulli convolution at ratio 2/3 as a probability measure: construction and its Fourier self-similarity (id: claim_569b1ea349c84166bf10e490c2ace69f)  (uses the notion 'Bernoulli convolutions' (title: "Bernoulli convolution"))
+    <- depends_on: Composition operator for the Bernoulli-2/3 self-similar variable: spectrum is exactly the powers of 2/3 (id: claim_5cc090e69a1249a99b39654f730fe87b)  (uses the notion 'Bernoulli convolutions' (title: "Bernoulli-2/3"))
+    <- depends_on: [MEASURED BY ME 09-08 04:3x, the overnight's main result] Bernoulli 2/3 in L^2 is EQUIVALENT to the boundedness in K of int_1^2... (id: claim_c3e676ec648b45d993d709b55c700b48)  (uses the notion 'Bernoulli convolutions' (statement: "Pisot"))
+    <- depends_on: Bernoulli-2/3 Fourier transform: exact cosine product, and the open lacunary decay rate that would give absolute continuity (id: claim_d6179c4cc4d147afa7a0e105cd32a45d)  (uses the notion 'Bernoulli convolutions' (title: "Bernoulli-2/3"))
+    <- depends_on: Bernoulli convolution at ratio 2/3, window deviation: the exact second moment grows linearly in K because its auxiliary law is exactly L^2-critical, and no boun (id: claim_eb62311ed3d444c190a3350a62e1cd3b)  (uses the notion 'Bernoulli convolutions' (title: "Bernoulli convolution"))
+[2] Integer Partition  (id: claim_ae653f267473767866feba960afa9220b9ecf869207499c9119c585b78880b22; claim; score 9.77)
+    An integer partition of a positive integer n is a representation of n as a sum of positive integers lambda_1 + lambda_2 + ... + lambda_k = n with lambda_1 >= lambda_2 >= ... >= lambda_k >= 1. The partition function p(n) denotes the number of distinct partitions of n, with p(0) = 1. n >= 0 is an integer
+    <- depends_on: Euler's Partition Generating Function (id: claim_345b156040fde373c8bc87e9be7427b2f3b11ea6b9676587421d3cb7c4f04206)  (Derives the infinite product generating function for integer partitions.)
+[3] Two-Dimensional Cone State Space for Energy and Enstrophy  (id: claim_76bd115d3d37e73627407c7b44b89fb8f4f09879a9b1a21ef6d6d2509396c3d4; claim; score 9.69)
+    The state space for the paired enstrophy-energy process (u,v) = (|x|^2, |x|_{-1}^2) is the closed two-dimensional cone C = {(u,v) in R^2 : 0 <= v <= u <= lambda_N v}, with interior C^circ = {(u,v) : 0 < v < u < lambda_N v}. lambda_1 = 1 lambda_N = max lambda_ell
+    <- depends_on: Effective Energy-Enstrophy Diffusion Operator in the Cone (id: claim_2af439486e156ae0b302136fb0f6d937992b90147cb2f4f796b06fe0cfe1afea)  (The operator tilde{A} is defined on the interior C^circ of the cone.)
+    -> defines: Enstrophy and Energy Quadratic Forms (id: claim_034c8f14df09acdcbb53234a09de08396d2b06a92371a334b558d62c0f8bdacf)  (The cone C is the range of (|x|^2, |x|_{-1}^2) on R^N.)
+    <- proves: Non-Attainability of the Cone Boundary (id: claim_dfad6b5f5000cd6816451e0511d76dae2816ee8b4fd8f18a5f27431feedcc6cc) (superseded by claim_077ccbc4983f5d9bf8745710566b151a9c5b4cf873f0c5b8983770b58caff893)  (Proves that the effective diffusion remains strictly inside C^circ.)
+    -> cites: arXiv:2602.15805 (id: source_8456d0de52b10b0faf84056b265e433a05909b5c3b562ce4c8b0f4e90072bd94)  (Exact bibliographic identifier cited on the current card: arxiv:2602.15805)
+    <- proves: Non-Attainability of the Cone Boundary (id: claim_077ccbc4983f5d9bf8745710566b151a9c5b4cf873f0c5b8983770b58caff893)  (Proves that the effective diffusion remains strictly inside C^circ.)
+[4] Compensator Measure of a Cox Process  (id: claim_55e8e09f5c49b2cbb66486d438868e84fb01a1a1343ae43fbfc159ed85f2a1e6; claim; score 9.65)
+    Let N^c(dt, dz) be a point process on [0, T] x R_0 with stochastic intensity lambda_t directed by a sub-filtration G_t. The G_t-compensator of N^c is the random measure lambda_t dt nu(dz), such that for every predictable integrand k(t, z), the process int_0^t int_{R_0} k(u, z) [N^c(du, dz) - lambda_u du nu(dz)] is a local martingale. lambda_t is G_t-predictable and non-negative nu is a sigma-finite Levy measure
+    <- depends_on: Cox-CIR Jump-Diffusion Asset Price Model (id: claim_ede13ef0633c4a202361b3cf8fe1c6e75f3555adb94e60717dc7f7f4c16b6e1b)  (Cox-CIR jump-diffusion uses the intensity lambda_t in the compensator of N^c.)
+    -> depends_on: Filtration (id: claim_c30a494e988e074e29593ce070b0e93e)  (uses the notion 'Filtration' (statement: "filtration"))
+    -> depends_on: Levy process (id: claim_29d0b6517529607e4a3582a666a7ac0a)  (uses the notion 'Levy process' (assumptions: "Levy measure"))
+    -> depends_on: Local martingale (id: claim_71fee22a481726ca80f5504741ce988a)  (uses the notion 'Local martingale' (statement: "local martingale"))
+    -> depends_on: Martingale (id: claim_bd77c53377887476be3aa85726d3f86c)  (uses the notion 'Martingale' (statement: "martingale"))
+    -> depends_on: Point processes and Poisson point process (id: claim_d861636d00da7cc82992a62832004598)  (uses the notion 'Point processes and Poisson point process' (title: "Cox Process"))
+    -> depends_on: Predictable process (id: claim_867ed8de43712d2d83427d93958dc9e6)  (uses the notion 'Predictable process' (title: "Compensator"))
+    -> cites: arXiv:2505.18370 (id: source_d3d7c45675c034a274ebc2307139675d74be8667ff71d66fd0cbade9f88142bb)  (cites arxiv
+

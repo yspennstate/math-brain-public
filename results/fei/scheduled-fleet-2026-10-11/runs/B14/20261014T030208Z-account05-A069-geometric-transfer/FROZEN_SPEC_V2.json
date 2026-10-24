@@ -1,0 +1,13 @@
+{
+  "helper_version": "A069-shared-control-v2",
+  "family": "compatible two-subcube XOR masks with source independent of private blocks; unequal one-coordinate shared source cores, and arbitrary C,Y source",
+  "parameter_domain": "(r,s,t,k)=(1,1,1,2),(2,1,1,2),(1,2,1,2),(1,1,2,2), all 256 ordered pairs of two-bit Boolean core tables, one reflected canonical event assignment each; (2,1,1,1) all 256 Boolean sources g(C,Y), canonical event. Two explicit witnesses.",
+  "case_count": 1282,
+  "case_count_detail": "4*256+256+2",
+  "symmetry": "Independent coordinate reflections send any compatible common/private assignment to the all-zero assignment. These preserve each fixed tree cell, physical influence and Gamma. Reflections of shared source coordinates permute the exhaustively included source truth tables; reflection of the distinguished shared bit exchanges the exhaustively included ordered core pair. Thus canonical assignment suffices for this validation domain.",
+  "arithmetic": "integer Walsh and Fraction",
+  "memory_estimate_mb": 32,
+  "maximum_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "reason_for_revision": "V1 pilot exceeded frozen wall guard before completing the first family; symmetry reduction explicitly justified before second pilot."
+}

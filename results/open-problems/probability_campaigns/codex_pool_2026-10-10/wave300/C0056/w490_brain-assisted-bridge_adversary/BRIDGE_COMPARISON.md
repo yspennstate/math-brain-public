@@ -1,0 +1,13 @@
+# Returned statements compared with the proof need
+
+The read-only, capped population-store lookup returned six full cards in 0.095286 seconds of SQL time. This was a targeted lookup, not a semantic-recall benchmark. No card in this returned set establishes the fixed-disorder, all-small-height cavity inverse-moment bound. This says nothing about absence from the whole store.
+
+The relevant Stieltjes inversion card is claim_930971f2e2958ad4b39127882e7fb8c2f41978d305608de432e06a9933e30a3d. Its measure is finite and positive, its transform is defined on the upper half-plane, and its interval endpoints must be continuity points for the interval inversion formula. Its density boundary formula additionally assumes absolute continuity and continuity of the density at the point; its real-part formula assumes local Holder regularity. These density hypotheses cannot be imported as conclusions for a random spectral measure. The complete returned statement and proof metadata are preserved in scoped_evidence.json; its store status is unverified.
+
+The proof need is instead to establish absolute continuity of each realization's measure on an entire open interval, including absence of mass on random null sets. The averaged measure and each realization's measure are different objects. Applying inversion to an averaged transform does not identify the spectral type of the sample measures. INDEPENDENT.md supplies a complete random-atom obstruction and the draft joint-UI repair.
+
+The prior C0056 attempt card invokes tree-specific closed Green recursions and a finite weak-coupling result. Tree forward branches are independent after removing a vertex; neighboring lattice cavities overlap because of cycles. A tree theorem cannot be used for the six-neighbor Z^3 operator without a separate transfer argument. Likewise lambda tending to zero along a disorder-dependent time or positive-height scale does not establish a boundary statement at fixed lambda. No full tree theorem or finite-time diffusion theorem is promoted in this packet.
+
+For w489 L4, the exact stronger assumption is sup over all 0<eta<1 of the expected local energy integral of Gamma_x^(-q), q>0 at fixed lambda; own-site conditioning freezes the full complement, not independent neighbors. L5 supplies only a lower bound above eta^2=12lambda/c. The missing arbitrarily small heights are preserved as a hypothesis gap. Pure ac on an interval may still have zero spectral weight; GOE is a different finite-volume limit.
+
+NEXT: Check joint weak-L1 identification using event-weighted tests and a countable test family; then decide whether that criterion is a useful weaker route than the assumed higher moment.

@@ -1,0 +1,22 @@
+R17 PROB10-02 extremal-gradient / one-site obstruction exact checker
+SANDWICH_EXHAUSTIVE m=2 N=3 cases=1024 max_gap=1 bound_w=1 PASS
+SANDWICH_EXHAUSTIVE m=4 N=3 cases=16384 max_gap=2 bound_w=2 PASS
+SANDWICH_EXHAUSTIVE m=6 N=2 cases=65536 max_gap=2 bound_w=3 PASS
+SANDWICH_SHARP_FAMILY m=2 horizon=1 lower=0 upper=1 gap=1 PASS
+SANDWICH_SHARP_FAMILY m=4 horizon=2 lower=0 upper=2 gap=2 PASS
+SANDWICH_SHARP_FAMILY m=6 horizon=3 lower=0 upper=3 gap=3 PASS
+SANDWICH_SHARP_FAMILY m=8 horizon=4 lower=0 upper=4 gap=4 PASS
+SANDWICH_SHARP_FAMILY m=10 horizon=5 lower=0 upper=5 gap=5 PASS
+SANDWICH_SHARP_FAMILY m=12 horizon=6 lower=0 upper=6 gap=6 PASS
+H0_EXHAUSTIVE m=4 min_residual=2/3 PASS
+H0_EXHAUSTIVE m=6 min_residual=2/3 PASS
+H0_EXHAUSTIVE m=8 min_residual=2/3 PASS
+PSEUDO_MARGINAL_INVARIANCE m=4 a=1/9 b=2/9 expected_reward=2/3 PASS
+PSEUDO_MARGINAL_INVARIANCE m=6 a=1/5 b=2/15 expected_reward=2/3 PASS
+PSEUDO_MARGINAL_INVARIANCE m=8 a=5/21 b=2/21 expected_reward=2/3 PASS
+PSEUDO_MARGINAL_INVARIANCE m=10 a=7/27 b=2/27 expected_reward=2/3 PASS
+PSEUDO_MARGINAL_INVARIANCE m=12 a=3/11 b=2/33 expected_reward=2/3 PASS
+PSEUDO_MARGINAL_INVARIANCE m=20 a=17/57 b=2/57 expected_reward=2/3 PASS
+PRIOR_W5_UPPER_LT_CURRENT_SOURCE_LOWER 14629595631439197766705/18889465931478580854784 < 99083249/125000000 PASS
+ONE_SITE_OPTIMUM_EXACT_VALUE 2/3 (lower witness H0 + upper pseudo-stationary marginal law)
+ALL_EXACT_CHECKS_PASS

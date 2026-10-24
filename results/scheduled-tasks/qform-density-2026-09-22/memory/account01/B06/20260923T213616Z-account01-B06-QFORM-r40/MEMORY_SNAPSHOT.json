@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B06",
+  "run_id": "20260923T213616Z-account01-B06-QFORM-r40",
+  "control_commit_start": "15513324dc21941d5646919ee0aee357ef235b0b",
+  "control_commit_publication_refresh": "39b2278e1a1422208a736cbbda96f10ff95271b3",
+  "control_revision": "2026-09-22.15",
+  "owner_request_acknowledged": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_GLOBALLY; not claimed by this run",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-B15-NONZERO-SQUARE-AFFINE-SLOPE-RESCUE-FALSE-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1"
+  ],
+  "partner_results_applied": [
+    {
+      "worker": "account02/B06",
+      "id": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+      "source_commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+      "actual_use": "For the two-dimensional right singular projection V^T Z of the original product bank, ||p||_infinity<=e; for the surviving longitudinal scalar projection, ||p_(m.Z)||_infinity<=sqrt(e)/||m||."
+    },
+    {
+      "worker": "account02/B06",
+      "id": "QFORM-E2-HALFRIESZ-ROW-GATE-FREE-v1",
+      "source_commit": "b38a9627f059b13d532f5c208c30579ec2d2d362",
+      "actual_use": "For the same literal 2xm physical cross block B, e2(B^T B)=Delta^2, hence H_1/2(S)<=8 e^(1/4) Delta^(-1/4), independently checking the source-compatible half-Riesz scale before the sharper constant is proved."
+    }
+  ],
+  "other_source_applied": {
+    "id": "exact-rank crossing with arbitrary internal functions",
+    "source_commit": "829192412f2a2d84e72b4bed91115fc5fab68401",
+    "path": "proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+    "actual_use": "r=2 with left projection cap 1 and right projection cap e gives |phi_S(t)|<=min(1,pi sqrt(e) Delta^(-1/2)/|t|)."
+  },
+  "new_results": [
+    "QFORM-RANK2-CROSS-HALFRIESZ-v1: H_1/2(F(H)+2H^T BZ+G(Z))<=4sqrt(2)e^(1/4)(sigma1 sigma2)^(-1/4) for two original hub coordinates, a disjoint original product bank, exact-rank-two B, and arbitrary internal F,G.",
+    "QFORM-SQUARE-PLUS-RANK2-CROSS-v1: adding an independent original physical square c(X0+Psi)^2 gives ||p_Q||_infinity<=4sqrt(2)e^(1/4)|c|^(-1/2)(sigma1 sigma2)^(-1/4).",
+    "r39 mixed-packet area closure: if Bmix>=D0/2 and Delta^2>=eta Bmix, then ||p_Q||_infinity<=2^(21/8)e^(1/4)eta^(-1/8)|c|^(-1/4)(D_i^diag)^(-1/8); target-scale eta=1/16 gives <103.479/s.",
+    "If the eta=1/16 area exit fails, sin(angle(m,n))<1/4. If additionally sum n_j^4<D0/16, then sum m_j^4>4D0 and ||p_(m.Z)||_infinity<sqrt(e)/(sqrt(2)D0^(1/4)).",
+    "If in that survivor the longitudinal currency sum(rho d_j+m_j^2)^2<D0/2, there is a same-sign set G with sum_G d_j^2>D0/(2rho^2)."
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "0673157dc58805629c39a7c868b65b5199c33537",
+    "bundle_commit": "7f98da9ecde19ee9d87c3b265a8543cbf0c4011d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260923T213616Z-account01-B06-QFORM-r40/"
+  },
+  "handoff_commit": "da646720ecfac633ccac6985bf2b192d00cdab5b",
+  "unresolved_implication": "QFORM-NEARCOLLINEAR-HUB-PLUS-SAMESIGN-DIAGONAL-BANK-v1",
+  "next_step": "In the usable-pivot residue, keep the nearly rank-one two-hub crossing and the forced same-sign physical diagonal bank jointly while retaining arbitrary off-diagonal background curvature; alternatively route a large longitudinal-square currency into a grouped/ridge/projected-crossing receiver. Treat the small-pivot complement separately.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_requested": "maximum actually supported",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

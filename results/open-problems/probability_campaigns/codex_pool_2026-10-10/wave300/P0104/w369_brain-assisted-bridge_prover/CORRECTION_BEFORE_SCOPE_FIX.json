@@ -1,0 +1,15 @@
+{
+  "state": "DRAFT; independent review required",
+  "original_node_id": "claim_3ccc6fc493b4e17b5c29966949004f575c51205c8a4f0ba3bc516d0b752ebea4",
+  "original_logical_id": null,
+  "original_statement": "general i.i.d. edge-weight distributions on Z^d - the point of the paper is removing the special-distribution restriction under which such statements were previously proved\nthe conclusion is anti-concentration (an interval-avoidance statement), NOT a variance lower bound\nthe log||x|| variance lower bound it cites is available only in two dimensions\n\nWHY THE DISTINCTION IS NOT PEDANTRY: an anti-concentration statement bounds how much mass the law of T(0,x) can put in a short interval. It does not by itself lower-bound the variance, and a variance lower bound does not by itself give anti-concentration. Chaining them silently is a category error.\nMETHOD: inducing a fluctuation in the number of edges in a box whose weights are of 'hi-mode' (large).\nTHE LITERATURE STATEMENT IS THE SECOND REASON THIS NODE EXISTS: it is a dated, first-hand confirmation from four people working directly on the problem that Newman-Piza's logarithmic bound had not been improved.\nSOURCE: arXiv:1810.08270v2, 'Lower bounds for fluctuations in first-passage percolation for general distributions'. Official arXiv API record retrieved by lane P4 on 2026-08-22.\nVERIFICATION STATUS: theorem-checked-against-source at abstract level for both the conclusion shape and the literature statement; the proof was not read and the precise 'general distributions' hypothesis is not stated in the abstract.",
+  "exact_fragment_to_replace": "an anti-concentration statement bounds how much mass the law of T(0,x) can put in a short interval. It does not by itself lower-bound the variance, and a variance lower bound does not by itself give anti-concentration. Chaining them silently is a category error.",
+  "replacement_fragment": "Quantitative anti-concentration DOES imply a variance lower bound: if every interval of length L has probability at most 1-epsilon and X is square-integrable, Var(X)>=epsilon L^2/4. A variance lower bound alone need not imply anti-concentration. The cited planar Theorem 1 also gives two separated quantiles with positive probability; these imply a logarithmic variance lower bound when the passage time is square-integrable. For d>2 the paper says its method gives only a constant-scale lower bound.",
+  "supporting_claim_ids": [
+    "w369-l0",
+    "w369-l1"
+  ],
+  "primary_source": "https://arxiv.org/html/1810.08270v2",
+  "primary_locator": "Theorem 1, condition (1.2.1), Remark 2",
+  "application": "Append a reviewed corrected revision through the coordinator; preserve the old node and its provenance."
+}

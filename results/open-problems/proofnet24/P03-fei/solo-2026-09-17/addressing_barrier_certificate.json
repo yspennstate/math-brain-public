@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact integers and rational intervals",
+  "full_transform_checks": [
+    {
+      "m": 2,
+      "N": 4,
+      "dimension": 7,
+      "full_truth_table_entries": 128,
+      "integer_walsh_backend": "python int",
+      "all_signed_coefficients_match": true,
+      "nonzero_coefficients": 40,
+      "edge_histogram": [
+        {
+          "smaller": "1/64",
+          "larger": "1/64",
+          "count": 48
+        },
+        {
+          "smaller": "1/64",
+          "larger": "1/16",
+          "count": 32
+        },
+        {
+          "smaller": "1/16",
+          "larger": "1/16",
+          "count": 12
+        }
+      ],
+      "I": "2",
+      "H": "5",
+      "K": "1",
+      "B_interval": {
+        "lower": "219445395117979923218789999581650509303506918111/45671926166590716193865151022383844364247891968",
+        "upper": "6857668597436872600587187486926578415734591191/1427247692705959881058285969449495136382746624"
+      },
+      "T_one_quarter_exact": null,
+      "signed_convolution_identities_checked": 128
+    },
+    {
+      "m": 4,
+      "N": 16,
+      "dimension": 21,
+      "full_truth_table_entries": 2097152,
+      "integer_walsh_backend": "numpy.int64",
+      "all_signed_coefficients_match": true,
+      "nonzero_coefficients": 544,
+      "edge_histogram": [
+        {
+          "smaller": "1/1024",
+          "larger": "1/1024",
+          "count": 1280
+        },
+        {
+          "smaller": "1/1024",
+          "larger": "1/64",
+          "count": 512
+        },
+        {
+          "smaller": "1/64",
+          "larger": "1/64",
+          "count": 80
+        }
+      ],
+      "I": "3",
+      "H": "8",
+      "K": "2",
+      "B_interval": {
+        "lower": "22103597050208366052923307510567956331349399059/2854495385411919762116571938898990272765493248",
+        "upper": "5525899262552091513230826877641989082837349765/713623846352979940529142984724747568191373312"
+      },
+      "T_one_quarter_exact": "7/2",
+      "signed_convolution_identities_checked": 0
+    }
+  ],
+  "optional_check": "m=4 full truth table checked with integer arithmetic",
+  "formula_ratio_examples": [
+    {
+      "m": 4,
+      "formal_dimension": 21,
+      "T_one_quarter_over_I": "7/6",
+      "evaluation": "exact formula; not full enumeration"
+    },
+    {
+      "m": 16,
+      "formal_dimension": 65553,
+      "T_one_quarter_over_I": "11/6",
+      "evaluation": "exact formula; not full enumeration"
+    },
+    {
+      "m": 32,
+      "formal_dimension": 4294967329,
+      "T_one_quarter_over_I": "17/2",
+      "evaluation": "exact formula; not full enumeration"
+    },
+    {
+      "m": 64,
+      "formal_dimension": 18446744073709551681,
+      "T_one_quarter_over_I": "21867/22",
+      "evaluation": "exact formula; not full enumeration"
+    },
+    {
+      "m": 128,
+      "formal_dimension": 340282366920938463463374607431768211585,
+      "T_one_quarter_over_I": "858993485/26",
+      "evaluation": "exact formula; not full enumeration"
+    }
+  ],
+  "proof_scope": "All positive gamma fail by the analytic all-m proof; finite checks are self-checks, not independent audits or universal enumeration.",
+  "FEI_status": "OPEN; this family has H/I < 3"
+}

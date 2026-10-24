@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B08",
+  "run_id": "20260923T104126Z-account02-B08-qform-diffuse-r26",
+  "control_revision": "2026-09-22.15",
+  "control_prepublication_commit": "90f59b2e3c0feb6b9ebd479f27c5a2db433bce2b",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": ["law-uniform pointwise quadratic-phase decay is false","arbitrary-joint coarea is insufficient","post-rotation independence is unavailable","positive conditional projection-density moments are not universally bounded","one good local minor cannot replace aggregate determinant currency","small matrix norm is not a uniformly small random quadratic perturbation for unbounded product inputs"],
+  "premises": ["account02/B08 r25 actual k=1,2 child/cross spectral gate and conditioning-stable Hadamard hybrid","account03/B08 r32 QFORM-SCALAR-SCHUR-E2-LINF-v1","e5f71d79 D5 no-marginal fifth-volume theorem","e5f71d79 Fresnel-Brascamp-Lieb exact diffuse finite-range theorem"],
+  "new_claims": [
+    {"id":"QFORM-ACTUAL-GATE-D5-RANK4-ROUTER-v1","status":"PROVED_SUPPORTING_STRUCTURAL_THEOREM_PENDING_INDEPENDENT_REVIEW","statement":"At the actual hybrid gate beta=(3/16)sqrt(3/5), if s5 of the actual physical cross block is >=L/64 then the full ambient density is <306/L in k=1 and <478/L in k=2; otherwise the actual cross block is within L/64 in operator norm of rank at most four."},
+    {"id":"QFORM-HYBRID-SCALAR-SCHUR-CROSS2-ROUTER-v1","status":"PROVED_SUPPORTING_ANALYTIC_THEOREM_PENDING_INDEPENDENT_REVIEW","statement":"For an original scalar pivot a and residual cross block B with pivot couplings u,v, let r=||u||||v||/|a|. If s2(B)>r then ||p_Q||inf<36.45[|a|(s2(B)-r)]^(-1/2), retaining the full ambient residual form."},
+    {"id":"QFORM-HADAMARD-SCHUR-E2-SEPARATION-v1","status":"PROVED_TARGET_VALID_MECHANISM_OBSTRUCTION","statement":"On the exact-three-large-eigenvalue Hadamard hybrid every physical scalar pivot is Theta(1/m). In k=1 the exact Schur residual cross block has E2 >=62304/105625 uniformly as d->0, yet the scalar-Schur compiler gives only <34.15 sqrt(m); in k=2 residual E2 is Theta(d^2), giving <26.60 sqrt(m)d^(-1/4)."}
+  ],
+  "quantitative_outputs": {"beta_gate":0.14523687548277814,"D5_k1_eta_1_64":305.85069281929094,"D5_k2_eta_1_64":477.70616146059024,"k1_exact_schur_E2_floor":"62304/105625 = 0.5898603550295858","k1_partner_bound":"<34.15 sqrt(m)","k2_exact_schur_E2_floor":">=(7779/10000)d^2","k2_partner_bound":"<26.60 sqrt(m)d^(-1/4)","fixed_source_F_k1":7.3833337852872525,"fixed_source_F_k2":7.037677794089426},
+  "partner_application": {"source":"yspennstate/math-open-problems@2cb64b71f8aafa0892547dffebcf6af647ea7c64:proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260923T102108Z-account03-B08-qform-diffuse-r32/REPORT.md","actual_use":"Applied QFORM-SCALAR-SCHUR-E2-LINF-v1 to the exact physical Schur residual of every scalar pivot in the target-valid Hadamard k=1,2 families."},
+  "required_source_application": {"source":"yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}","actual_use":"Applied D5 to the actual hybrid cross block and Fresnel-Brascamp-Lieb to the exact Hadamard family."},
+  "canonical_output": {"repository":"yspennstate/math-open-problems","commit":"ac7e9c4772e977672044e7cacd55b74c91ea8b6d","root":"proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/20260923T104126Z-account02-B08-qform-diffuse-r26/","controlling_file":"REPORT.md","early_checkpoint":"PARTIAL.md","checks":["CHECKS.py","CHECKS.txt"],"checker":"QFORM_B08_R26_CHECK_PASS"},
+  "continuity": "D5 and exact-range Fresnel branches give continuous densities; partner scalar-Schur branch gives an essential bound; full target continuity OPEN",
+  "unresolved": "QFORM-K1-GROUPED-CHILD-SQUARE-E2-COMPILER-v1: aggregate one collective actual child eigendirection with robust two-cross/residual-E2 currency before selecting any scalar physical pivot, retaining arbitrary same-bank curvature and complementary spectrum. k=2 remains separately harder because residual E2 may be Theta(d^2). Tiny-N3 R1/E2/BICORE descendants remain parallel.",
+  "full_target": "OPEN"
+}

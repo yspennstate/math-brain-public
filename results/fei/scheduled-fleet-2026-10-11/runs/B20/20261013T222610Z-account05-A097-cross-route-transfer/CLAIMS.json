@@ -1,0 +1,62 @@
+[
+  {
+    "claim_id": "A097-ONE-SHARED-DATA-COLLISION-TRANSFER",
+    "version": 1,
+    "exact_statement": "For all Boolean G(s,X),H(s,Y) with one shared fair physical bit s, disjoint private uniform blocks X,Y and a fresh fair selector z, and normalized complete finite-cost references R_G,R_H, calibrate each reference separately on the two atoms empty and {s} to the true Fourier probabilities and rescale its complement. Costs c_G^c,c_H^c do not increase; the exact decrease is the categorical KL of those two atoms and the complement. The normalized compatible reference Q=rK, r=(R_G^c+R_H^c)/2 and K the actual conditional selector spectrum with a fixed normalized kernel on zero true fibers, has zero posterior mismatch kappa and D(P_F||Q)=[D(P_G||R_G^c)+D(P_H||R_H^c)]/2. Its complete cost is CE_F=(c_G^c+c_H^c)/2+Delta<=(c_G^c+c_H^c)/2+(2+4/ln2)Inf_z(F), where F=(G+H)/2+z(G-H)/2, Delta=B_z+J_z and I(F)=[I(G)+I(H)]/2+Inf_z(F), including s only through its actual averaged influence. Thus supplied child bounds transfer with constant max(K_G,K_H,2+4/ln2). For a t-bit shared block the same constant holds if both conditional-mean Fourier vectors have l1 norm <=1; without that hypothesis a proved coefficient is 2+(2*2^(t/2)+2)/ln2. No absolute selector-only coefficient holds for unrestricted sharing: selecting the even-k quadratic bent sign and its actual singleton flip has Inf_z=2^-k and Delta/Inf_z>=k-log2(16/9) for every even k>=4. This is a scoped reference transfer and an actual Boolean obstruction to its unrestricted selector-only extension, not a disproof of FEI.",
+    "hypotheses": [
+      "Boolean signs on finite uniform physical cubes; one shared bit, private blocks disjoint, selector fresh; private blocks may be empty",
+      "Normalized complete references fixed before the spectral sample, positive on true supports and with finite cross entropy",
+      "Both collision atoms calibrated separately; all complement normalizers and complete calibrated seed costs retained",
+      "All information units bits, ordinary total physical influence; ideal costs with separate integer-word rounding",
+      "Larger shared-block extension uses the expressly stated l1 admission or the dimension-dependent coefficient; no repeated allocation of selector or shared data influence"
+    ],
+    "statement_sha256": "a0b36345e9b8eb02731703c849109a548a1738428547c88e303ece41c8419b3b",
+    "contributors": [
+      "A097"
+    ],
+    "proof_source": {
+      "run_id": "20261013T222610Z-account05-A097-cross-route-transfer",
+      "files": [
+        "REPORT.md",
+        "DERIVATION.md",
+        "BOUNDARY.md",
+        "TRANSFER_HYPOTHESIS_CHECK.json",
+        "code/check.py",
+        "code/check_boundary.py",
+        "out/EXACT_RESULTS.json",
+        "out/BOUNDARY_RESULTS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A097-COMPATIBLE-LEAF-REFERENCE-TRANSFER",
+        "version": 1,
+        "statement_sha256": "408ea90dea600f4f8f1b9ffa66c29e34cc87a87a518ec3f87273d2905bef9246",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A097\\runs\\20261011T221240Z-account05-A097-cross-route-transfer\\CLAIMS.json",
+        "status": "Prior theorem; one-node KL identity reconstructed directly here"
+      },
+      {
+        "claim_id": "A086-DISJOINT-SELECTOR-PRESCRIBED-REFERENCE",
+        "version": 1,
+        "statement_sha256": "4ca5e14de151b95b20b31bb43aa71189213ec529966dd1342424bb5961b7e8b3",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261013T220217Z-account05-A086-joint-code-referee\\CLAIMS.json",
+        "status": "Author-proved pending review; collision packet and scalar JS lemmas independently reconstructed here, no full claim acceptance assumed"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPED_TRANSFER_AND_BOOLEAN_BOUNDARY_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A086",
+      "A094",
+      "A011",
+      "A012",
+      "A095",
+      "A039",
+      "A064",
+      "B20"
+    ]
+  }
+]

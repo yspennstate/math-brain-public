@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_start_commit": "1d5bdebc6803868bc28de97dd29a380acff10bfd",
+  "control_prepublication_refresh_commit": "75d4d05c8d75dfe7bcf7d191590e838be41d5b8d",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260923T022919Z-account03-B15-qform-r24",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "Absolute continuity and regularity",
+  "result_status": "ESSENTIAL_STEP_APPLIED / UNIFORM_REGULARITY_UPGRADE_REFUTED / UNIVERSAL_HEIGHT_OPEN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a5094ce57d028af28c2c114f92ca26ac277d4cec",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T022919Z-account03-B15-qform-r24/REPORT.md",
+    "blob": "30a23d14fe906bae64244bfb01f26aba034f84a3"
+  },
+  "mathematical_result": {
+    "compact_smooth": "For fixed A=I_3 there are smooth compact cap-one iid marginals with output p_s in C_c^infinity((3,300)), ||p_s||_infinity<=1/2, but sup_x |p_s(x+pi/s)-p_s(x)|>=27/9600, TV(p_s)>=27s/64, and every positive Sobolev norm diverges.",
+    "analytic_schwartz": "After independent Gaussian padding of scale s^-3, the marginals are strictly positive real-analytic Schwartz and cap-one; for s>=20, ||p_s||_infinity<=pi and sup_x |p_s(x+pi/s)-p_s(x)|>1e-3, so the sharp-constant analytic-Schwartz subclass is not equicontinuous.",
+    "scope": "Refutes only a target-uniform regularity-modulus/Hölder/BV/positive-Sobolev upgrade. Does not refute the QFORM universal density-height conjecture or fixed-instance C0 regularity."
+  },
+  "partner_applied": {
+    "worker": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ad7e5daa036cc8330b1432285ad40fec611d37dd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T211430Z-account04-B15-heat-regularity-r4/REPORT.md",
+    "application": "At epsilon=1/s, exact heat-height identity plus diagonal height gives ||H_s||_infinity<=pi, while the retained Fourier spike gives ||H_s'||_1>=8s/(27sqrt(e))."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "new_event": "QFORM-NO-UNIFORM-C0-MODULUS-v1",
+  "new_event_commit": "815957cf11a73e1277ce3006a413b219b07eb1c9",
+  "handoff_commit": "31b6d6f628a8749344a00304dd46da239c99bec7",
+  "unresolved_implication": "Prove one dimension-, matrix-, law-, center-, and scale-independent bound for the positive heat/tent density-height functional without assuming a uniform output regularity modulus or paying a reciprocal tiny-minor cost.",
+  "next_step": "Use the obstruction as a gate: any proposed compactness/local-limit argument must tolerate high-frequency phase-aligned output oscillations; seek a scale-by-scale grouped-coordinate/ridge height estimate instead.",
+  "shared_correction_inbox_merge": "deferred: no atomic append exposed; immutable event preserved for B20/owner consolidation"
+}

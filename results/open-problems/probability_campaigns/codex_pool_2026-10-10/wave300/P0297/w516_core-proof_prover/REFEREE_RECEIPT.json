@@ -1,0 +1,43 @@
+{
+  "reviewer": "w518",
+  "source": "~\\brain_workers\\w518\\VERDICTS.jsonl",
+  "recorded_at": "2026-10-10T06:19:16.226628+00:00",
+  "verdicts": [
+    {
+      "target": "w516/ATTEMPT.md:L1",
+      "verdict": "KEEP",
+      "scope": "finite centered Gaussian, finite nonempty path family, xi,beta>0",
+      "reproduction": "Independently differentiated the Gibbs path weights: d_j pi_p=-beta*xi*pi_p(w_pj-bar_w_j). Gaussian IBP then gives d_xi E F_beta=xi E[A_beta-beta B_beta]. The covariance term has the required minus sign; pair expansion gives B_beta>=0 without independent coordinates.",
+      "remaining_gap": "No uniform regularization-scale information or exact LQG exponent follows from L1."
+    },
+    {
+      "target": "w516/ATTEMPT.md:L2",
+      "verdict": "KEEP",
+      "scope": "fixed finite positive-definite Gaussian model with distinct coefficient vectors; xi>0",
+      "reproduction": "Distinct analytic path-length differences have null tie sets. The envelope derivative is bounded by max_i|X_i|, so dominated convergence gives f' and convergence of derivatives; 0<=A_beta<=V and L1 then yield S=lim beta E B_beta>=0.",
+      "remaining_gap": "The beta limit is at fixed finite model; no beta/cutoff exchange has been proved."
+    },
+    {
+      "target": "w516/ATTEMPT.md:L3",
+      "verdict": "KEEP",
+      "scope": "two parallel single-edge Gaussian paths",
+      "reproduction": "For X1-X2~N(0,2), E min(X1,X2)=-1/sqrt(pi), so d_xi E F=-1/sqrt(pi) while A_*=0 and S=1/(xi sqrt(pi). Independent deterministic Simpson quadrature in review_repro.py gives |direct-corrected|<=2.22e-15 at beta=2,10,50,250 for xi=0.7; at beta=250 the limit error is 1.51511e-5.",
+      "remaining_gap": "Toy graph does not determine the GFF crossing exponent."
+    },
+    {
+      "target": "w516/ATTEMPT.md:L4",
+      "verdict": "KEEP",
+      "scope": "fixed epsilon smooth GFF; finite approximants retaining a unit horizontal path; xi in compact positive interval",
+      "reproduction": "Gaussian Poincare applied to the a.e. selected-path gradient xi*w yields Var(log crossing)<=xi^2 V. Median displacement is at most xi sqrt(2V); V=T+O(1) makes this o(T). Rational polygonal paths and quadratures can be chosen successively at each fixed epsilon, with uniform-in-xi error on compact I by the common sup-field Lipschitz bound.",
+      "remaining_gap": "Uses the published median exponent; it does not evaluate Q(xi). The approximation is existential, not a uniform computational algorithm."
+    },
+    {
+      "target": "w516/ATTEMPT.md:L5",
+      "verdict": "KEEP",
+      "scope": "conditional response-measure reduction using L1-L4 and published continuity of Q(xi)",
+      "reproduction": "Differentiating Psi_n=(V_n/T_n)xi^2/2-EF_n/T_n gives xi[T_n^-1(V_n-EA_*+S_n)]>=0. Pointwise convergence to continuous Psi and integration by parts give local Stieltjes convergence; the Brownian anchor yields g(xi*)=-1/6.",
+      "remaining_gap": "H: no explicit mass of the limiting measure, no absolute continuity, and no exact generic d_gamma. Record as reduction only."
+    }
+  ],
+  "scope": "Finite or conditional reductions L1-L5 only; H remains unproved; L6 not covered by these verdicts."
+}

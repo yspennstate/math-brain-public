@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260923T225405Z-account03-B18-QFORM-auto13",
+  "source_control": {
+    "initial_commit": "b226b586002e834cd12d1f3cec7632bd6e3cf42a",
+    "prepublication_commit": "485ee31d197386c8e2973238163a1bed4236995f",
+    "owner_control_revision": "2026-09-22.15",
+    "owner_request": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z"
+  },
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-GSTAR-SCALE-FORCING-FALSE-v1",
+    "QFORM-B15-NONZERO-SQUARE-AFFINE-SLOPE-RESCUE-FALSE-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1"
+  ],
+  "primary_sources": [
+    {
+      "citation": "Livshyts--Paouris--Pivovarov, On sharp bounds for marginal densities of product measures, arXiv:1507.07949",
+      "use": "For a cap-one product density, every k-dimensional orthogonal marginal has density cap 2^(k/2); k=1 is used on each disjoint scalar bank."
+    },
+    {
+      "citation": "Herry--Malicet--Poly, Regularity of laws via Dirichlet forms -- Application to quadratic forms in independent and identically distributed random variables, arXiv:2303.09488",
+      "use": "Scope check only; not applicable to arbitrary non-iid rough cap-one inputs because its quadratic-form regularity framework assumes iid inputs with a sufficiently smooth Gaussian-field representation and further conditions."
+    }
+  ],
+  "premises": [
+    {
+      "id": "QFORM-THREE-DISJOINT-BANKS-ALLPIVOTS-v1/dimension-three-core",
+      "source": "yspennstate/math-open-problems@602d508c11f3bb5848b65581a750b4497708bd5f:proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T112422Z-account03-B18-QFORM-r27/REPORT.md",
+      "scope": "Three independent cap-one real variables, symmetric quadratic matrix sigma_min>=tau, arbitrary affine term; density <148/tau."
+    },
+    {
+      "id": "QFORM-4COORD-NULLHUB-WINDOW-EDGE-DICHOTOMY-v1",
+      "source": "yspennstate/math-open-problems@84fa5922df082f90064dea4d22a600a60e799803:proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260923T221534Z-account04-B18-QFORM-r5/REPORT.md",
+      "scope": "Original-coordinate rank-three 4x4 null-hub block, s<=|mu_j|<=L, edge >=a; density <=576^(1/3)L^(2/3)/(s a^(2/3))."
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-FOUR-SOURCE-RANK3-COMPRESSION-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "Four independent cap-one real variables with a symmetric rank-three 4x4 quadratic matrix whose nonzero singular values are >=s have density <592/s, arbitrary affine terms included.",
+      "continuity": false,
+      "engine": "If z spans the kernel, a principal compression deleting j satisfies sigma_min(C)>=s z_j^2; choose max z_j^2>=1/4 and condition that original coordinate."
+    },
+    {
+      "id": "QFORM-FOUR-DISJOINT-BANKS-RANK3-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "Four disjoint unit original-coordinate scalar banks with an effective rank-three 4x4 matrix having nonzero eigenvalue magnitudes >=s have density <1184/s.",
+      "continuity": false,
+      "engine": "LPP gives each normalized bank density cap sqrt(2); scaling reduces to the four-source theorem."
+    }
+  ],
+  "partner_application": {
+    "worker": "account04/B18",
+    "source": "yspennstate/math-open-problems@84fa5922df082f90064dea4d22a600a60e799803:proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260923T221534Z-account04-B18-QFORM-r5/REPORT.md",
+    "equation": "||p||inf <= min(592/s, 576^(1/3)L^(2/3)/(s a^(2/3)))",
+    "worked_example": "B=[[0,1,0,0],[1,0,0,0],[0,0,1,0],[0,0,0,0]] gives spectrum {1,-1,1,0} and partner bound 8.320335292207616."
+  },
+  "outputs": {
+    "scientific_repository": "yspennstate/math-open-problems",
+    "scientific_commit": "2a053b6a128ce68f93b524fa3177d227f0990dbb",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T225405Z-account03-B18-QFORM-auto13/REPORT.md",
+    "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T225405Z-account03-B18-QFORM-auto13/CHECK.json",
+    "check_status": "PASS",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B18/20260923T225405Z-account03-B18-QFORM-auto13.md",
+    "handoff_commit": "8ce83b9a267a1ff8c5baccec653eb854179a13ee"
+  },
+  "full_target_status": "OPEN / NOT PROVED",
+  "full_target_continuity": "OPEN",
+  "unresolved_implication": "Bare s_3(A)>=1 does not force an exact-rank-three four-original-coordinate core or four disjoint scalar banks carrying the active rank-three matrix; arbitrary additional spectrum and fully source-entangled configurations remain.",
+  "next_step": "Use the four-source certificate inside a product-preserving structural compiler; route failure toward grouped/ridge/projected-crossing or compound-hub exits without asserting a fixed good minor."
+}

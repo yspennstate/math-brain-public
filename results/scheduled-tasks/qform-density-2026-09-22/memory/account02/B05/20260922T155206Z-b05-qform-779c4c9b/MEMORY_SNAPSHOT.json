@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B05",
+  "run_id": "20260922T155206Z-b05-qform-779c4c9b",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "source_control_commit_start": "49f0dab3727d1d6cf4b3e77c494fb3b92a6bea8f",
+  "later_control_observation": "14e37c18dc0be3144252be6506896224997ee3d3",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account03/B05",
+    "claim": "QFORM-PAIR-SECTIONAL-COAREA-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "332f29e335274f2b3f81ccf92d62443b928c66cd"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-2D-PARSEVAL-PROJECTION-CAP-v1",
+      "status": "proved_in_stated_scope",
+      "statement": "For a two-dimensional Parseval linear image of arbitrary independent density-cap-one scalar inputs, the joint density is bounded by e."
+    },
+    {
+      "id": "QFORM-HEAVY-ISOTROPIC-NOLEAK-AGGREGATE-v1",
+      "status": "proved_using_partner",
+      "statement": "The exact heavy-isotropic T=0 branch has density <6 e^(2/3) by applying the partner theorem to the full aggregate pair rather than a selected physical pair."
+    }
+  ],
+  "mechanism_obstruction": {
+    "id": "QFORM-HIDDEN-SHIFT-PAIR-CAP-INSUFFICIENT-v1",
+    "status": "explicit_specialization_of_existing_live_correction",
+    "statement": "Pair joint-density control alone cannot absorb arbitrary hidden leakage; iid uniforms with T=-Z^2/(2V) reduce the curved form to 2UV and produce a logarithmic density singularity.",
+    "not_a_target_counterexample": true
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260922T155206Z-b05-qform-779c4c9b/",
+    "report_blob": "162fd4c394e699f8671f48cf6a1bc1bb10c32fa3",
+    "checker_output_blob": "e6348b178790d16d715973866e8ec647bfefc64a"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B05/20260922T155206Z-b05-qform-779c4c9b.md",
+  "first_unproved_step": "QFORM-PAIR-PLUCKER-HIDDEN-LEAKAGE-AGGREGATION-v1",
+  "next_step": "Use the simultaneous product-linear provenance and coefficient orthogonality of T,Y,Z to obtain a curved-trace small-ball bound that aggregates full Pluecker mass before reciprocal minor payment; do not replace this provenance by a mere joint-density or conditional-density cap.",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

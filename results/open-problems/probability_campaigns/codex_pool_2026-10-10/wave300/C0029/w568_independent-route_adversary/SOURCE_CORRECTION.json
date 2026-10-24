@@ -1,0 +1,48 @@
+{
+  "source_path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+  "line": 23,
+  "expected_original_line_sha256": "49b28a70c1c1d5ad1c9ee92d17995347b975b110bc2697b56d0e9d25d1244f4d",
+  "original": {
+    "attempt_id": "C0029-A001",
+    "author": "claude-probability-1000-continue-0907",
+    "independent_check": "",
+    "key_identity": "Gaussian case: P(sqrt n s_n <= t) = 1 - exp(-t^2/2 - t), so the conjectured constant is the Gaussian value.",
+    "method": "Test whether the constant 1 in front of t is forced by the Gaussian comparison and whether the Bernoulli case can beat it.",
+    "obstruction": "Hard-edge universality covers t >= n^{-c}; the conjecture needs the constant 1 down to exponentially small t.",
+    "problem_id": "C0029",
+    "recorded_at": "2026-09-07T06:38:45Z",
+    "result": "For the Gaussian matrix Edelman's exact law gives P(sqrt n s_n <= t) = 1 - e^{-t^2/2 - t} ~ t as t -> 0, so the constant 1 is exactly the Gaussian density at zero of sqrt n s_n; the conjecture says Bernoulli matrices are no worse than Gaussian up to the exponentially small singular mass. A sufficient condition would be a local limit theorem for sqrt n s_n at zero uniform in n, which is a universality statement at the hard edge (the smallest singular value) and is known (Tao-Vu 2010 hard-edge universality) only in the form P(sqrt n s_n <= t) = (1 - e^{-t^2/2-t}) + O(n^{-c}) for t in a fixed range, which gives the conjecture for t >= n^{-c'} but not for t between c^n and n^{-c'}. The gap regime is exactly the small-ball regime where the Rudelson-Vershynin constant C appears. No improvement obtained.",
+    "schema": "probability-attempt.v1",
+    "substantive": true
+  },
+  "corrected_draft": {
+    "attempt_id": "C0029-A001",
+    "author": "claude-probability-1000-continue-0907",
+    "independent_check": "",
+    "key_identity": "Real Gaussian hard-edge LIMIT: for each fixed t>=0, P(sqrt(n) s_min(G_n)<=t)=1-exp(-t-t^2/2)+o(1) as n tends to infinity. This is not an exact finite-n identity.",
+    "method": "Test whether the constant 1 in front of t is forced by the Gaussian comparison and whether the Bernoulli case can beat it.",
+    "obstruction": "Hard-edge universality covers t >= n^{-c}; the conjecture needs the constant 1 down to exponentially small t.",
+    "problem_id": "C0029",
+    "recorded_at": "2026-09-07T06:38:45Z",
+    "result": "The limiting real-Gaussian law has slope one at zero. At finite n=1 the CDF is erf(t/sqrt(2)), with slope sqrt(2/pi). Tao--Vu Theorem 1.1 gives the real formula with an o(1) error, and Theorem 1.3 gives a uniform polynomial error under its moment hypotheses. Sah--Sahasrabudhe--Sawhney Theorem 1.1 supplies coefficient 1+O((log n)^(-1/16)) and an exponential remainder, rather than the exact coefficient one. The original exact-coefficient route remains incomplete; no improvement or solved claim is inferred.",
+    "schema": "probability-attempt.v1",
+    "substantive": true,
+    "original_key_identity_before_source_correction": "Gaussian case: P(sqrt n s_n <= t) = 1 - exp(-t^2/2 - t), so the conjectured constant is the Gaussian value.",
+    "original_result_before_source_correction": "For the Gaussian matrix Edelman's exact law gives P(sqrt n s_n <= t) = 1 - e^{-t^2/2 - t} ~ t as t -> 0, so the constant 1 is exactly the Gaussian density at zero of sqrt n s_n; the conjecture says Bernoulli matrices are no worse than Gaussian up to the exponentially small singular mass. A sufficient condition would be a local limit theorem for sqrt n s_n at zero uniform in n, which is a universality statement at the hard edge (the smallest singular value) and is known (Tao-Vu 2010 hard-edge universality) only in the form P(sqrt n s_n <= t) = (1 - e^{-t^2/2-t}) + O(n^{-c}) for t in a fixed range, which gives the conjecture for t >= n^{-c'} but not for t between c^n and n^{-c'}. The gap regime is exactly the small-ball regime where the Rudelson-Vershynin constant C appears. No improvement obtained.",
+    "source_correction": {
+      "author": "w568",
+      "date": "2026-10-10",
+      "status": "DRAFT, w569 independent review pending",
+      "source": "https://arxiv.org/pdf/0903.0614",
+      "locator": "Theorem 1.1, equations (1)-(2), printed page 3",
+      "counterexample": "n=1 right derivative sqrt(2/pi) differs from one"
+    }
+  },
+  "brain_node_id": "claim_cbd6e1bc44ea67c88a3ad2112abab63bbfcf63f991be2eeccb063fdba514f1fa",
+  "brain_logical_id": "math:probability.random-matrices:attempt-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr",
+  "original_brain_quote": "Edelman's exact law gives P(sqrt n s_n <= t) = 1 - e^{-t^2/2 - t}",
+  "primary_source_quote": "Limiting distributions for gaussian models",
+  "primary_locator": "Tao--Vu 0903.0614, Theorem 1.1, printed page 3; real case has +o(1)",
+  "review_state": "DRAFT",
+  "store_mutation": false
+}

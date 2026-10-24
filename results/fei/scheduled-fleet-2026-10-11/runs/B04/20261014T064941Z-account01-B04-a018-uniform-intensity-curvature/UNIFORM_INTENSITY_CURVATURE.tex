@@ -1,0 +1,130 @@
+\section*{Uniform shared-data curvature away from the balanced atom}
+
+All logarithms are base two.  Split the cube into $k$ disjoint $r$-bit
+blocks and let $f_{k,r}$ be $-1$ exactly when at least one block equals a
+fixed point.  Put $\epsilon=2^{-r}$ and expose one physical bit $s$ of
+one block.  Its two children share every other physical data coordinate.
+Their disagreement probability is
+\[
+ \delta=\operatorname{Inf}_s(f_{k,r})
+ ={2\epsilon(1-\epsilon)^k\over1-\epsilon}.           \tag{1}
+\]
+For the complete signed GU increment write
+\[
+ Q_s=G(f_{k,r})-
+ {G((f_{k,r})_{s,+})+G((f_{k,r})_{s,-})\over2}
+ =\Delta_sU+\sum_{i\ne s}\Delta_s\Delta_iU.          \tag{2}
+\]
+
+\paragraph{Theorem.}
+Let $K$ be a compact subset of
+$(0,\infty)\setminus\{\ln2\}$.  Uniformly for $\lambda\in K$ and
+$k_r=\lfloor\lambda2^r\rfloor$, as $r\to\infty$,
+\[
+ {\Delta_sU\over\delta}
+ =1+2r2^{-r}+O_K(2^{-r}),                              \tag{3}
+\]
+\[
+ {Q_s\over\delta}
+ =1-2r^2 2^{-r}+O_K(r2^{-r}).                          \tag{4}
+\]
+Consequently there exists $r_0(K)$ such that for every
+$r\ge r_0(K)$ and every $\lambda\in K$,
+\[
+ \boxed{\Delta_sU>\operatorname{Inf}_s(f_{k_r,r}),
+ \qquad Q_s<\operatorname{Inf}_s(f_{k_r,r}).}          \tag{5}
+\]
+Thus the selector-only charge fails uniformly as the nonuniform branch
+gap $\delta\asymp_K2^{-r}$ vanishes, while the complete signed shared-data
+increment is paid with coefficient one by the same, nonreused physical
+influence.
+
+\paragraph{Exact formulas.}
+For a heterogeneous vector of block sizes $\mathbf r$, set
+\[
+ P=\prod_j(1-\epsilon_j),\quad
+ L_j=-\log_2(1-\epsilon_j),\quad
+ \epsilon_j=2^{-r_j}.
+\]
+The exact upper-set calculation is
+\[
+ U(\mathbf r)=c((2P-1)^2)
+ +4P\sum_j\epsilon_j\left(r_j-{r_j\over2(1-\epsilon_j)}\right)
+ +4P\sum_jL_j((1-\epsilon_j)-P),                       \tag{6}
+\]
+where $c(x)=x\log_2(1/x)$.  Restricting $s$ either deletes its block or
+replaces it by an $(r-1)$-block.  Therefore (2), including both unequal
+children and every normalization term, is obtained by applying (6) first
+to $U$ and then to every physical restriction defining $G$.
+
+\paragraph{Selector surcharge.}
+Write $P=(1-\epsilon)^k$.  The child products are
+\[
+ P_-={P\over1-\epsilon},\qquad
+ P_+={P(1-2\epsilon)\over1-\epsilon},\qquad
+ {P_-+P_+\over2}=P.                                    \tag{7}
+\]
+For $\lambda\in K$, $P\to e^{-\lambda}$ in a compact subset of
+$(0,1)$ disjoint from $1/2$.  Hence $c((2P-1)^2)$ has uniformly bounded
+derivatives.  Substitution of (7) in (6), together with
+$L=\epsilon/\ln2+O(\epsilon^2)$, gives
+\[
+ \Delta_sU=\delta\{1+2r\epsilon+O_K(\epsilon)\},       \tag{8}
+\]
+which is (3).  Block symmetry gives the equivalent exact relation
+$G=kr\Delta_sU$ and $I=kr\delta$.
+
+\paragraph{Complete curvature refund.}
+Let $E=G-I$.  Influence recursion and commutation of restrictions give
+the exact child-residual identity
+\[
+ Q_s-\delta=E(f_{k,r})-
+ {E((f_{k,r})_{s,+})+E((f_{k,r})_{s,-})\over2}.        \tag{9}
+\]
+Taylor expansion of the complete expression (6), uniform on $K$, yields
+for the root and its two one-bit children
+\[
+ E(\mathbf r)=4P\sum_j r_j^2\epsilon_j^2
+                 +\mathcal E(\mathbf r),              \tag{10}
+\]
+where changing the exposed $r$-block to an $(r-1)$-block or deleting it
+changes $\mathcal E$ by $O_K(r\epsilon^2)$.  The leading functional in
+(10) has the exact central change
+\[
+ E(f_{k,r})-
+ {E((f_{k,r})_{s,+})+E((f_{k,r})_{s,-})\over2}
+ =-4Pr^2\epsilon^2+O_K(Pr\epsilon^2).                 \tag{11}
+\]
+Dividing (11) by (1) proves (4).
+
+\paragraph{Paid boundary and why this is not closure.}
+The root residual itself is positive:
+\[
+ E(f_{k_r,r})
+ =4\lambda e^{-\lambda}r^2 2^{-r}
+   +O_K(r2^{-r}).                                      \tag{12}
+\]
+Rearranging (9) gives the complete stopping ledger
+\[
+ {E((f_{k,r})_{s,+})+E((f_{k,r})_{s,-})\over2}
+ =E(f_{k,r})+(\delta-Q_s).                             \tag{13}
+\]
+The nonreused reserve $\delta-Q_s$ is genuine and nonnegative by (4),
+but (13) transports rather than erases the positive residual: the average
+child debt is larger by exactly that reserve.  This is a paid boundary,
+not an arbitrary-leaf assumption.  It proves that favorable complete
+local drift alone cannot establish $G\le I$.
+
+The excluded intensity $\lambda=\ln2$ is structural.  There
+$P\to1/2$, the constant Fourier mass $(2P-1)^2$ vanishes, and its
+$x\log(1/x)$ cusp changes the asymptotic scale.  The exact formulas remain
+valid, but the bounded-derivative proof of (3)--(4) does not.  No claim at
+that exceptional intensity is made here.
+
+\paragraph{GU scope.}
+Equations (4), (9), and (13) give a coefficient-one payment for one
+complete shared-data restriction step, uniformly over every compact
+fixed-intensity range away from the balanced atom.  They do not provide a
+universal pair $(a,b)$: a universal proof still needs a potential whose
+terminal value pays the transported $E$ debt for arbitrary Boolean
+functions without charging any physical influence twice.

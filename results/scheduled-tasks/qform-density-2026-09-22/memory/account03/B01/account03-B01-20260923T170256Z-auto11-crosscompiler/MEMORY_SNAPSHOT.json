@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260923T170256Z-auto11-crosscompiler",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_at_start": "a7ca43de162752c23edbc379977be6e670cb6ec2",
+  "latest_control_head_observed_before_snapshot": "96970f058f57cec99d883cae3304e17d69051320",
+  "execution_context": "scheduled_automation; WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "target_status": "FULL_CONJECTURE_OPEN",
+  "assignment": "Oscillatory replacement",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8410ab9d8238baa40c033f83dbae6af44b0b2582",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260923T131003Z-account04-B01-singular-star-routing-r2/REPORT.md",
+    "equation_used": "leakage branch L(ell)>=W2/(4a^2) and random-coloring product identity"
+  },
+  "fresh_peer_result_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4f92aeb74083c6f95cb314a11fed1b812eacef9a",
+    "path": "proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+    "scope": "one original hub plus ell=2 arbitrary-rank projected crossing, with all 2-volume row marginals <=1/2"
+  },
+  "proved_results": [
+    {
+      "id": "QFORM-OUTER-SQUARE-OVER-BOUNDED-REMAINDER-v1",
+      "statement": "If X has density<=1, X is independent of V, p_R<=M, and h(V) may be arbitrarily correlated with R(V), then Q=a(X+h(V))^2+R(V) has density cap <=2sqrt(2)|a|^(-1/2)M^(1/2)."
+    },
+    {
+      "id": "QFORM-NEARNULL-PROJECTED-CROSSING-COMPILER-v1",
+      "statement": "After scalar completion, if the one-hub projected-crossing certificate has S_J=||ell_J||>0, Z2=e2(CC^T)>0 and all 2-volume row marginals<=1/2, then ||p_Q||_infinity<=8.671393 |a|^(-1/2)(S_J^2 Z2)^(-1/12)."
+    },
+    {
+      "id": "QFORM-NEARNULL-LEAKAGE-SPREAD-CROSSING-v1",
+      "statement": "Using the valid product consequence of account04/B01 leakage, the same gate implies ||p_Q||_infinity<=9.733310 |a|^(-5/12)W2^(-1/24)Z2^(-1/12); exact-null constant improves to 9.187021."
+    }
+  ],
+  "correction_emitted": {
+    "id": "QFORM-PARTNER-BANK-INDIVIDUAL-BOUND-CORRECTION-v1",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account03/B01/account03-B01-20260923T170256Z-auto11-crosscompiler/QFORM-PARTNER-BANK-INDIVIDUAL-BOUND-CORRECTION-v1.json",
+    "summary": "Partner random-coloring proof gives a product lower bound on the two bank norms, not the displayed identical lower bound on each bank separately."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "5210a794376aaab39c9b5ff204a4e895bc5dc195",
+    "checks_commit": "55c8ad644424e23ed2efe86e47cbb63a9f4fa040",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260923T170256Z-auto11-crosscompiler/REPORT.md"
+  },
+  "continuity": "Residual projected-crossing law is C0; full Q only proved to have an essentially bounded density because the completed-square translation may be correlated with the residual.",
+  "unresolved_implication": "In the near-null leakage branch, handle the complementary structural concentration case where every product-certified orientation has projected-crossing Z2 tiny/zero or a 2-volume row marginal >1/2; route it to a heavy-row/grouped-hub/low-rank receiver without deleting nonseparable curvature.",
+  "next_step": "Analyze heavy 2-volume marginal >1/2 as a concentrated row-star and attempt a rank-one/rank-two grouped-hub reduction retaining the full Schur self-curvature.",
+  "shared_correction_inbox_merge": "not_performed_in_this_run; immutable correction event was published. Shared inbox consolidation is left to an owner-authorized/B20 consolidator to avoid unsafe concurrent rewrite of the shared registry."
+}

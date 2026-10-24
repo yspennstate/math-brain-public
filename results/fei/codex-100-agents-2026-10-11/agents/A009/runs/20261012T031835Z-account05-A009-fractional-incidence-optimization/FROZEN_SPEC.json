@@ -1,0 +1,14 @@
+{
+ "helper_version":"A009-affine-forest-v1.1-aggregated-logs",
+ "family":"Boolean OR of positive affine-line conjunctions over F_q",
+ "domain":{"exact_truth_tables_q":[2,3],"scalar_all_parameter_certificate_q":[16,17,32,64,128,256],"finite_graphs":"all nonempty spectral sets at q=2,3"},
+ "case_count":{"Boolean_functions":2,"truth_inputs":528,"scalar_parameters":6},
+ "symmetry":"No finite spectrum or coordinate reduction; analytic affine transitivity only in physical influence lower bound",
+ "arithmetic":"integer Walsh, Fraction, rational log intervals with 36-term atanh tail; rational all-parameter endpoint and recurrence checks",
+ "memory_estimate_MB":40,
+ "max_runtime_seconds":60,
+ "dimension_max":9,
+ "search":"One deterministic actual partition forest per spectral set, not posterior optimization or all-forest enumeration",
+ "boundary_guards":"uniform lambda=1/(q+1), all relevant supports distinct and nonempty; exactly retained log D; no extrapolation of finite truth-table ratios",
+ "revision_note":"v1 completed in 84.39 seconds, exceeding the intended pilot cap; v1.1 aggregates identical rational log terms before interval evaluation, retaining the exact same domain. Attachment-slot child chronology is explicitly sorted. Revision frozen before rerun."
+}

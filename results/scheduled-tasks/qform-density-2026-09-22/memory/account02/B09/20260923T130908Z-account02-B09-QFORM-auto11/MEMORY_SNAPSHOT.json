@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B09",
+  "run_id": "20260923T130908Z-account02-B09-QFORM-auto11",
+  "control_commit_first_observed": "7eec3e35966f2142b9d78a53a53f7462871bff6b",
+  "control_commit_before_publication": "cd1f02942b08d1de273398d5cc98beb45c1b5c87",
+  "control_revision": "2026-09-22.15",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  },
+  "status": "ESSENTIAL_STEP_APPLIED_SELECTED_Q_SUBVOLUME_EXTENDS_HUB_LEVERAGE_LT_3_4_FULL_TARGET_OPEN",
+  "required_sources_consumed": [
+    {
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "paths": [
+        "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+        "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+        "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+      ],
+      "actual_use": "Applied completed Theorem H to Q_m=2X_1<c_1,Y>+2X_2<c_2,Y>+<v,Y>^2 with flat orthonormal Walsh c_1,c_2,v. The mixed Gram is I_3, row leverage 3/m, giving |phi(t)|<=8 pi^(5/2)|t|^(-5/2) and ||p||inf<3.829 for a target-valid active spectrum {1,-1,1,-1,1}."
+    },
+    {
+      "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "actual_use": "The q-dependent sharp-Hausdorff--Young fractional three-volume proof is extended from full volume weights to any selected physical minor family by restricting only the Gaussian determinant expansion."
+    }
+  ],
+  "partner_result_applied": {
+    "source": "yspennstate/math-open-problems@56d0211f2f04d74152032fd1914196673eb5c3e6",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T124906Z-account03-B09-QFORM-r32/REPORT.md",
+    "claim": "QFORM-RANK2-HUBSTAR-AGGREGATE-COMPILER-v1",
+    "actual_use": "Its Bernoulli aggregate compiler and exact selected-family marginals were combined with the new q-selected theorem. On a target-valid equal-norm 3-hub Parseval frame of leverage 2/3 and rank-(m-2) dense Walsh-sign leaf curvature, Gamma_k^2=(1-2/m)^2 and G_*=m(1-2/m)^2; for m>=32 the diffuse branch is genuine and the new estimate is ||p||inf<=30.824 G_*^(-1/6)."
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-FRACTIONAL-SUBVOLUME-BL-q-v1",
+      "statement": "For any selected nonempty family Omega of actual physical 3x3 minors, if its normalized physical row marginals satisfy alpha_i<=q/2 for 1<=q<3/2, then ||p_Q||inf <= [3e/((3-2q)sqrt(q))] Z_Omega^(-1/6), with continuous density and the same coefficient times interval length, retaining arbitrary same-side phases.",
+      "status": "PROVED_SUPPORTING_THEOREM"
+    },
+    {
+      "id": "QFORM-RANK2-HUBSTAR-AGGREGATE-q-v1",
+      "statement": "For A[H,I]=PC^T with P^TP=I_2, arbitrary symmetric D=A[I,I], eta=max_h(PP^T)_hh<3/4 and G_*=sum Gamma_k^2>0, ||p_Q||inf<=C(eta)G_*^(-1/6), where q_eta=max(1,2eta) and C(eta)=max{3e(512/27)^(1/6), [3e/((3-2q_eta)sqrt(q_eta))](256/27)^(1/6)}. All same-side curvature/outside couplings remain arbitrary; density is continuous and interval bounds are linear.",
+      "status": "PROVED_SUPPORTING_THEOREM"
+    }
+  ],
+  "actual_inequalities": [
+    "For the target-valid equal-norm three-hub Parseval frame with eta=2/3 and dense rank-(m-2) Walsh-sign leaf curvature D, every nonzero coefficient-matrix eigenvalue has modulus one, G_*=m(1-2/m)^2, and for m>=32 ||p||inf<=30.824[m(1-2/m)^2]^(-1/6).",
+    "For Q_m=2X_1<c_1,Y>+2X_2<c_2,Y>+<v,Y>^2, completed e5f71 Theorem H gives ||p||inf<3.829 and active spectrum {1,-1,1,-1,1}."
+  ],
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "57cb337f65c30114d12bc21ee05d2925663dc641",
+  "canonical_math_blob": "d694911ef5f82089dd917ff245cc81ec18a1541a",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T130908Z-account02-B09-QFORM-auto11/REPORT.md",
+  "checkpoint_blob": "c4519278ad9653abae78b0c40e0e03562cee4872",
+  "handoff_commit": "c75d30baccca2338b81232b43940d0c2918ef40c",
+  "handoff_blob": "ea0b99f2963f25a7bd3be3337a60c2193392bddf",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B09/20260923T130908Z-account02-B09-QFORM-auto11.md",
+  "unresolved_implication": "QFORM-RANK2-HUBSTAR-VERY-HIGH-LEVERAGE-GENERAL-CURVATURE-v1",
+  "next_step": "In the residual eta>=3/4 rank-two physical hub/star with genuinely general leaf curvature, combine the concentrated physical hub direction with an actual third spectral/product resource without conditioning that resource away; or structurally route to an already-paid determinant-balanced mixed packet, literal rank-three cross cut, ridge/pair/definite/multi-hyperbolic exit. Separately force universal G_* scale or such an exit from s_3(A)>=1.",
+  "method_endpoint": "At eta=3/4 the selected-family row gate forces q>=3/2 and the absolute characteristic-function envelope reaches |t|^-1; this exact route is no longer L1. This is a method obstruction, not a QFORM counterexample.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity": "OPEN",
+  "independent_review": "PENDING"
+}

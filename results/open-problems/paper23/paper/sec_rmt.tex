@@ -1,0 +1,149 @@
+\section{Extreme singular values of Gaussian submatrices and their products}\label{sec:rmt}
+
+This section collects the random-matrix statements that the network theory rests on. The proofs of
+the two rate theorems are the substance of \Cref{app:twosided,app:product}; the operator-norm
+brackets and the order-statistic facts are proved in \Cref{app:brackets}. We first recall the
+single-layer results, then state the product rate (the main new random-matrix theorem), then the
+operator-norm side and the contraction thresholds.
+
+\subsection{One layer}
+Fix $\alpha\in(0,1)$, $n=\lfloor\alpha N\rfloor$, and recall
+$M_N(\alpha)=\min_{|S|=|T|=n}\smin(A[T,S])$ for an $N\times N$ Gaussian matrix $A$. The one-sided
+problem, in which the columns are fixed and only the rows are chosen, is the extreme least
+singular value law of \cite{shmaloBAMS}: if $G$ is an $N\times m$ Gaussian matrix with $N/m\to\gamma>1$
+and $r\ge0$ is a fixed surplus, then
+\begin{equation}\label{eq:BAMS}
+  \frac{1}{m}\log\min_{|T|=m+r}\sigma_m(G_T)\ \xrightarrow{\ \PP\ }\ -\frac{h(\gamma)}{\dF(r+1)},
+\end{equation}
+where $G_T$ is the row submatrix on $T$. In the square, per-$N$ normalization this reads, via
+\eqref{eq:Hident}, as rate $H(\alpha)/\dF$ per unit $N$ when $r=0$. Optimizing over the columns as
+well doubles the rate:
+
+\begin{theorem}[Two-sided single-layer rate \cite{shmaloSharp}]\label{thm:twosided}
+For every $\alpha\in(0,1)$,
+\[
+  -\frac1N\log M_N(\alpha)\ \xrightarrow{\ \PP\ }\ \frac{2H(\alpha)}{\dF}\qquad(N\to\infty).
+\]
+\end{theorem}
+
+We reprove \Cref{thm:twosided} in \Cref{app:twosided}, both because the paper must be self-contained
+and because the product theorem uses its construction and its sharp two-direction small-ball estimate
+as an ingredient. The upper bound is a first moment against the hard-edge tail
+$\PP(\smin\le t)\le C_\F(\sqrt n\,t)^{\dF}$; the lower bound is a second moment over an alternately
+marked family of near-singular events, whose correlations are controlled by a small-ball estimate for
+two Gaussian linear functionals taken along directions of arbitrary overlap, sharp up to a logarithm
+uniformly in the overlap.
+
+\subsection{The product rate}
+Let $A_1,\dots,A_k$ be independent $N\times N$ Gaussian matrices and, for supports
+$S_0,\dots,S_k\subseteq[N]$ of size $n=\lfloor\alpha N\rfloor$, set
+\[
+  M(S_0,\dots,S_k)=P_{S_k}A_kP_{S_{k-1}}\cdots P_{S_1}A_1P_{S_0},\qquad
+  M_N^{(k)}(\alpha)=\min_{S_0,\dots,S_k}\smin\bigl(M(S_0,\dots,S_k)\bigr).
+\]
+The nonzero singular values of $M$ are those of the compressed chain of $n\times n$ blocks
+$F_j=A_j[S_j,S_{j-1}]$, each a Gaussian matrix, so $M$ is singular as soon as any factor is, and the
+crude bracket $H(\alpha)/\dF\le-N^{-1}\log M_N^{(k)}\le(k+1)H(\alpha)/\dF$ holds: the lower end from
+making one factor one-sided singular, the upper end from a union bound over all $k+1$ supports
+\cite{shmaloProducts}. The truth is the upper end.
+
+\begin{theorem}[Product least singular value]\label{thm:product}
+For each fixed $k\ge1$ and $\alpha\in(0,1)$, in probability,
+\[
+  \frac{2H(\alpha)}{\dF}\ \le\ \liminf_N\Bigl(-\tfrac1N\log M_N^{(k)}(\alpha)\Bigr)\ \le\
+  \limsup_N\Bigl(-\tfrac1N\log M_N^{(k)}(\alpha)\Bigr)\ \le\ \frac{(k+1)H(\alpha)}{\dF},
+\]
+with equality to $2H(\alpha)/\dF$ when $k=1$. The upper end is the sharp value: exhaustive computation
+(\Cref{sec:numerics}) places the exponent on $(k+1)H(\alpha)/\dF$.
+\end{theorem}
+
+The upper end of the bracket is a union bound over the $e^{(k+1)H(\alpha)N}$ support tuples against the
+product hard edge $\PP(\smin\le t)=t^{\dF+o(1)}$; the lower end drives one factor two-sided singular by
+\Cref{thm:twosided} and bounds the rest by operator norm. Both are proved in \Cref{app:product}; the
+lower end already improves the previously proved $H(\alpha)/\dF$ of \cite{shmaloProducts} to
+$2H(\alpha)/\dF$.
+
+\begin{remark}\label{rem:product-refute}
+The value $(k+1)H(\alpha)/\dF$ refutes the constant conjectured in \cite{shmaloProducts}, where it was
+expected that a single two-sided near-singular factor would dominate and the rate would be
+$2H(\alpha)/\dF$ for all $k$. The product is instead strictly worse conditioned than any single factor,
+by a further $(k-1)H(\alpha)/\dF$. The mechanism is a cascade: drive one factor two-sided singular, then
+adjoin each later factor by a one-sided selection on the composite, whose row covariance inherits the
+prior near-singularity, so each added factor contributes another $H(\alpha)/\dF$ (\Cref{rem:achieve}).
+The numerics of \Cref{sec:numerics} confirm this and separate the two predictions cleanly at $N=8$: the
+measured ratio of the depth-$2$ to depth-$1$ rate is $1.53$, against $1.5$ for the sharp value and $1.0$
+for the earlier guess. The cascade's one-sided step is an anisotropic least-singular-value law at
+exponential covariance condition, just outside the proven regime of \cite{shmaloBAMS}; making it rigorous
+for $k\ge2$ is the open problem this paper isolates.
+\end{remark}
+
+\begin{remark}[Unequal densities]\label{rem:unequal}
+For densities $\alpha_0,\dots,\alpha_k$ the same cascade gives the rate
+$2H(\alpha_{j^*})/\dF+\sum_{j\ne j^*}H(\alpha_j)/\dF$ minimized over the choice of the doubly optimized
+factor $j^*$, provided the chain has a square bottleneck there; we state the equal-density case, which
+is what the network application uses (all gates have the same asymptotic density $1/2$ under a
+symmetric input law, or a common density set by the bias). The general statement and its proof are the
+same with heavier notation.
+\end{remark}
+
+\subsection{The largest singular value and the two speeds}
+The optimizations of the four extreme statistics separate by large-deviation speed. Raising
+$\smax$ or lowering $\smin$ of one block is an edge event of speed $N$, so the $e^{O(N)}$ available
+supports move the constant; lowering $\smax$ or raising $\smin$ costs speed $N^2$, which the supports
+cannot buy, and the optimum stays pinned \cite{shmaloProducts}. The least-singular optimizations are
+\Cref{thm:twosided,thm:product}; on the operator-norm side we use the following, proved in
+\Cref{app:brackets}.
+
+\begin{proposition}[Optimized operator norm, one layer]\label{prop:A2}
+Let $M_1(\alpha)=\max_{|S|=|T|=\alpha N}\|P_TAP_S\|_\op$ for an $N\times N$ Gaussian matrix with entry
+variance $1/N$. Then w.h.p.
+\[
+  \max\bigl\{2\sqrt\alpha,\ \sqrt{\kappa(\alpha)}\bigr\}\ \le\ M_1(\alpha)\ \le\ 2\sqrt{\kappa(\alpha)}+o(1).
+\]
+The upper bound is Chevet's inequality; the lower bounds are one fixed submatrix (Bai--Yin) and one
+fixed direction (top-$\alpha$ coordinates of $Ax_0$).
+\end{proposition}
+
+\begin{proposition}[Optimized operator norm, product]\label{prop:A4}
+For a length-$k$ product with all densities $\alpha$, w.h.p.
+\[
+  \max\bigl\{2\sqrt\alpha,\sqrt{\kappa(\alpha)}\bigr\}\,\kappa(\alpha)^{(k-1)/2}\ \le\
+  \max_{S_0,\dots,S_k}\smax(M)\ \le\ \bigl(2\sqrt{\kappa(\alpha)}\bigr)^{k}+o(1).
+\]
+\end{proposition}
+
+The subgaussian version of the upper bracket, with an absolute constant in place of the Gaussian
+$2\sqrt\kappa$, holds for any i.i.d.\ entries with subgaussian norm $\le K$ and constant $C(K)$
+linear in $K$; this is what carries the operator-norm certificates to non-Gaussian weights
+(\Cref{app:brackets}).
+
+For the opposite least-singular optimization we use the deterministic interlacing cap: enlarging the
+least singular value by deleting rows and columns cannot exceed the ambient spectrum.
+
+\begin{proposition}[Interlacing cap]\label{prop:B5}
+For a single square factor, $\max_{|S|=|T|=\alpha N}\smin(P_TAP_S)\le\sigma_{\lceil\alpha N\rceil}(A)\to s^*(\alpha)$,
+the top-$\alpha$ quantile of the quarter-circle law; $s^*(1/2)=0.807946$. This bound is $\Theta(1)$, but
+the true maximum is $o(1)$, since a square block with least singular value bounded below by a constant is a
+speed-$N^2$ event that the $e^{O(N)}$ supports cannot buy.
+\end{proposition}
+
+\begin{proposition}[Contraction thresholds]\label{prop:contract}
+For all densities equal to $\alpha$, the optimized product operator norm satisfies
+$\max_{S_\bullet}\smax(M)\le(2\sqrt{\kappa(\alpha)})^k$, which tends to $0$ as $k\to\infty$ whenever
+$\kappa(\alpha)<1/4$, i.e.\ $\alpha<\alpha^*=0.042672$ (the root of $\kappa(\alpha^*)=1/4$). For a fixed
+support product the threshold is weaker, $\alpha<(k^k/(k+1)^{k+1})^{1/k}$, e.g.\ $0.535$ at $k=4$.
+\end{proposition}
+
+\Cref{prop:contract} is what gives a regime of certified global robustness for sparsely gated deep
+networks (\Cref{thm:sparse-robust}): below $\alpha^*$ even the worst gate pattern contracts the signal
+geometrically, so no input has a large Jacobian and no gradient attack can succeed.
+
+\subsection{The eigenvalue companion}
+For completeness, and because it is what governs the weight-tied dynamical limit of \Cref{sec:depth},
+we record that the \emph{sustained} gain of a genuine cycle is not the operator norm but the
+eigenvalue radius. For a period-$p$ product of independent square Gaussian blocks of density $\alpha$
+the Brown-measure edge is $\alpha^{p/2}$, the per-step $L^2$ gain compounded around the cycle, far
+inside the Fuss--Catalan operator edge $\alpha^{p/2}\sqrt{(p+1)^{p+1}/p^p}$; the gap measures the
+non-normality of the product. This is a theorem for asymptotically free (e.g.\ disjoint-support)
+blocks via Haagerup--Larsen \cite{shmaloProducts,relumap}, and it is why the reused-weight ReLU
+dynamics contracts even though its per-step submatrix operator norm exceeds one.

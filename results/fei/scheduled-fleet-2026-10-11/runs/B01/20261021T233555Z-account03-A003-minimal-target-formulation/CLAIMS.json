@@ -1,0 +1,51 @@
+[
+  {
+    "claim_id": "A003-CANONICAL-RESET-NO-EDIT-MASS-PRICE",
+    "version": 1,
+    "exact_statement": "For every finite A>=0 there is an actual Boolean negative-cell edit F_m=1-2 A_m+2 A_(2m+1), m>=4, and the explicitly calibrated finite-cost source reference R_m described in UNIFORM_SOURCE_OBSTRUCTION.md, with CE(P_gm,R_m)<=17 I(g_m), such that the specified canonical active reset has expected signed likelihood cost Z_m>A e_m, e_m=2^(-2m). More precisely Z_m/Inf_j(F_m) tends to 2/ln(2)-2>0 while Z_m/e_m tends to infinity. The full complementary inherited reference and any booked independent AND2 erasure debit are retained; this does not refute the paid original-bank theorem or full FEI.",
+    "hypotheses": [
+      "Uniform finite Boolean physical cubes; bits and ordinary flip influence.",
+      "m>=4 integer, one active source coordinate queried; a=r=m,b=1.",
+      "R_m calibrated with nonvacuum two-scale allocation, epsilon=e_m^3 and dummy allocation e_m.",
+      "Incoming and reset joint references are the explicitly normalized completed floors, with the complementary reference unchanged."
+    ],
+    "statement_sha256": "51129d27968937f4cbbb7110dda0b2e3e5d9de3237b10060b946fc6f9d2fb4c6",
+    "contributors": [
+      "A003"
+    ],
+    "proof_source": [
+      "UNIFORM_SOURCE_OBSTRUCTION.md",
+      "DERIVATION.md",
+      "code/verify.py",
+      "code/uniform_family.py",
+      "code/polynomial_audit.py",
+      "out/VALIDATION.json",
+      "out/UNIFORM_SOURCE_VALIDATION.json",
+      "out/POLYNOMIAL_AUDIT.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A003 author adversarial reconstruction",
+        "result": "analytic proof plus 82544 exact assertions; external review pending; Lean runtime unverified"
+      }
+    ],
+    "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "Every such canonical active reset on a uniformly influence-paid source has Z<=A e for some finite dimension-independent A.",
+        "scope": "Stronger candidate only; A096 explicitly leaves the Z<=0 sign question open and does not assert this false edit-mass bound."
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A097",
+      "A094",
+      "A085",
+      "A099",
+      "B01 lead"
+    ]
+  }
+]

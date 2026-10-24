@@ -1,0 +1,15 @@
+d=6 factorization identity: PASS
+H Bernstein degree 25 coefficients:
+256, 5888/25, 16064/75, 110608/575, 46864/275, 1316848/8855, 5649964/44275, 25824111/240350, 95736109/1081575, 29047472/408595, 22632223/408595, 1544537/37145, 7742247/260015, 5207792/260015, 6872237/557175, 5417161/817190, 5712814/2042975, 724288/1081575, 4914/120175, 29622/44275, 60854/26565, 29296/6325, 4266/575, 1559/150, 333/25, 16
+all Bernstein coefficients strictly positive: True
+Therefore F_6(x) < x for every 0 < x <= 1.
+Since F_d(x) is increasing in d for fixed x in (0,1], the same holds for d<=6.
+d=7 exact sign values:
+F_7(2/5)-2/5 = -37669256/1170850315
+F_7(1/2)-1/2 = 96321/15251714
+F_7(9/10)-9/10 = 54169976315169/9628934500050890
+F_7(19/20)-19/20 = -1192464602770178031/67772143275429860180
+IVT intervals with nonzero fixed points: (2/5,1/2) and (9/10,19/20)
+ALL_EXACT_CHECKS_PASS
+
+Execution note: reproduced during this bounded HARD7-06 iteration with Python Fraction/integer arithmetic before archival; all assertions passed.

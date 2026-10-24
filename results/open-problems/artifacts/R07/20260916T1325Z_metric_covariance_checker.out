@@ -1,0 +1,14 @@
+PASS
+p(r)= 1 - exp(-r)
+E[min(X,r)]= 1 - exp(-r)
+E[min(X,r)^2]= -(2*r + 2)*exp(-r) + 2
+q(r)=Var(min(X,r))= -2*r*exp(-r) + 1 - exp(-2*r)
+p series: r - r**2/2 + r**3/6 - r**4/24 + r**5/120 + O(r**6)
+q series: r**3/3 - r**4/3 + 11*r**5/60 - 13*r**6/180 + O(r**7)
+q/p series: r**2/3 - r**3/6 + 2*r**4/45 + O(r**5)
+lim_{r->0+} q/p = 0
+cube variance = 1447/64
+Doob increments squared = [Fraction(1089, 64), Fraction(117, 32), Fraction(31, 16)]
+ANOVA norms = {'(0,)': Fraction(1089, 64), '(1,)': Fraction(225, 64), '(0, 1)': Fraction(9, 64), '(2,)': Fraction(81, 64), '(0, 2)': Fraction(25, 64), '(1, 2)': Fraction(9, 64), '(0, 1, 2)': Fraction(9, 64)}
+refresh covariance a=1/2 = 5675/512
+ANOVA refresh RHS = 5675/512

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "directive": "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z",
+  "campaign": "POS3",
+  "account": "account03",
+  "slot": "B10",
+  "run_id": "B10-20260922T041731Z-pos3-r11",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "parent_status": "OPEN_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "assignment": "Apply bounded-width/high-variance results to the exact width-three target and derive the remaining exceptional-case requirement with constants/hypotheses explicit.",
+  "assigned_partner": "account04/B11",
+  "partner_result_consumed": {
+    "path": "proofnet24/collective-POS3/account04/B11/20260922T031025Z-B11-pos3-r14/REPORT.md",
+    "commit": "0f70b53c27a912ae687521cc5cceda60cfc7f8d7",
+    "blob": "d8584c12674d6210d372c631e7c7da586457f90a",
+    "applied": "endpoint pinned-mass plus rank-variance mechanism giving E[J^2]<585/64 and a quantitative shallow-cut tail without replacing the projected law by uniform"
+  },
+  "additional_dependency": {
+    "worker": "account01/B19",
+    "path": "proofnet24/collective-POS3/account01/B19/20260922T024644Z-b19-pos3-r11/REPORT.md",
+    "applied": "exact first-element insertion law dmu/dnu=(kappa+1)/E_nu[kappa+1], where nu is genuinely uniform on L(P\\{c})"
+  },
+  "source_repository": "yspennstate/math-open-problems",
+  "source_commit": "6be044772361c4652a51e23b460ae36d242c70ef",
+  "source_report": "proofnet24/collective-POS3/account03/B10/B10-20260922T041731Z-pos3-r11/REPORT.md",
+  "source_report_blob": "c2ccba77c8790e42710cfb9cb6ca609cab2c4989",
+  "essential_step": "For the first strong-majority element c, let Q=P\\{c}, let nu be uniform on L(Q), kappa the initial incomparability-ideal prefix length, W=kappa+1, and mu the exact projection of uniform L(P), so dmu/dnu=W/E_nu W. If J=rank(c)-1 then Pr(J=0)>4/9 and Var(J)<65/16 imply E[J^2]<585/64. Conditional on kappa under the actual projected law, J is uniform on {0,...,kappa}, hence E_mu[kappa(2kappa+1)]<1755/32. Therefore mu(kappa>=47)<351/28576<1/81, so more than 80/81 of the actual projected mass has W<=47. Size-bias inversion also gives E_nu[kappa(kappa+1)(2kappa+1)]<15795/128 and nu(kappa>=17)<351/30464<1/81. Thus the unbounded-weight transfer problem reduces to a 47-bounded core plus <1/81 projected tail, under the actual induced law rather than a uniform surrogate.",
+  "remaining_requirement": "BW47-WICSL: on G={kappa<=46}, with mu_G the exact (kappa+1)-tilt of nu conditioned on G and all no-balanced/endpoint-blocker constraints retained, find an incomparable pair with mu_G ordering probability in [28/81,53/81]. This would transfer to [1/3,2/3] under full mu because mu(G^c)<1/81.",
+  "mechanism_change": "Changed from the prior strict-corridor two-child conditioning mechanism to exact size-biased moment transfer through the first-element deletion kernel.",
+  "claims_not_made": [
+    "POS3 solved",
+    "finite-kernel reduction",
+    "fixed-pair transfer",
+    "brain verified",
+    "novelty or priority"
+  ]
+}

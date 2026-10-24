@@ -1,0 +1,79 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w335",
+  "bundle_slug": "w335-p0027-20261010",
+  "entries": [
+    {
+      "key": "p0027-smooth-map-rigidity",
+      "namespace": "probability.stochastic-processes",
+      "logical_name": "smooth-deterministic-reflected-brownian-state-map-euclidean-rigidity",
+      "kind": "lemma",
+      "title": "Smooth deterministic reflected-Brownian maps are Euclidean isometries [draft; pending w347]",
+      "statement": "Let D be a bounded connected C^2 domain in R^d and F:D->D a C^2 diffeomorphism. If, for every initial x in D, normal reflected Brownian motion X started at x has F(X_t) with the normal reflected-Brownian law started at F(x), then F(x)=Qx+b for a fixed orthogonal Q and b. The conclusion uses smoothness, an onto map, and all starting points; it does not classify arbitrary measurable deterministic maps or convert every shy coupling to a deterministic one.",
+      "proof_text": "At an interior starting point the small-time covariance of F(X_t)-F(x), divided by t, tends to DF(x)*DF(x)^T by Ito's formula (reflection has no first-order effect before the boundary is hit). The corresponding limit for a reflected Brownian motion started at the interior point F(x) is the identity. Thus DF*DF^T=I at every x. Since DF is square, it is orthogonal, so its columns e_i=partial_i F form an orthonormal basis.\n\nSet A_ijk=<partial_i partial_j F,e_k>. Equality of mixed partials gives A_ijk=A_jik. Differentiating <e_j,e_k>=delta_jk gives A_ijk=-A_ikj. Combining the two symmetries,\n\n    A_ijk = A_jik = -A_jki = -A_kji\n           = A_kij = A_ikj = -A_ijk,\n\nso every A_ijk is zero. The e_k span R^d, hence every second derivative of F is zero. On a connected open domain this makes DF a fixed orthogonal matrix Q and F-Qx a constant b. This establishes rigidity under the stated regularity and all-starting-points assumptions.",
+      "assumptions": [
+        "Bounded connected C^2 domain",
+        "C^2 diffeomorphism from D onto D",
+        "Normal Brownian covariance in the interior",
+        "Reflected law preserved for every initial point"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w335:p0027-smooth-map-rigidity",
+        "url": "file:///~/brain_workers/w335/P0027_proof.md",
+        "revision": "author-checked-20261010-pending-independent-w347",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0027-isometry-gap",
+      "namespace": "probability.stochastic-processes",
+      "logical_name": "reflected-brownian-isometry-coupling-positive-displacement-criterion",
+      "kind": "lemma",
+      "title": "Positive displacement characterizes shy isometry couplings [draft; pending w347]",
+      "statement": "Let F(x)=Qx+b be a Euclidean isometry preserving a bounded connected smooth domain D. Suppose normal reflected Brownian motion X in D almost surely visits every nonempty interior open set infinitely often. Then Y=F(X) is a reflected-Brownian coupling, and it is shy if and only if min_{closure D}|x-F(x)|>0. A bounded convex preserving domain has a fixed centroid and therefore no shy isometry coupling. A planar annulus with inner radius R>0 and nontrivial rotation theta has separation at least 2R*|sin(theta/2)|. No claim about arbitrary nondeterministic shy couplings is made.",
+      "proof_text": "For an isometry F preserving D, normal reflection is equivariant: Q sends Brownian noise to Brownian noise and the inward normal at x to the inward normal at F(x). Thus F(X) has the reflected law. Suppose also that X visits every nonempty interior open set infinitely often almost surely, as normal reflected Brownian motion does in a bounded smooth connected domain. Then the deterministic isometry coupling is shy exactly when\n\n    min_{x in closure D} |x-F(x)| > 0.\n\nIf the minimum is positive the distance stays uniformly positive. If it is zero, for every epsilon>0 the set {x in D: |x-F(x)|<epsilon} is nonempty and open by continuity and density of D in its closure. Recurrence forces visits to it. Applying this to epsilon=1/k shows inf_t |X_t-F(X_t)|=0 almost surely, ruling out shyness.\n\nIf D is convex, its volume centroid c lies in D. Any preserving Euclidean isometry fixes c: change variables in its centroid integral to obtain Qc+b=c. Therefore this regular deterministic class has no shy coupling on a bounded convex smooth domain. This is not a claim about all nondeterministic couplings on such a domain.\n\nOn the annulus R<|x|<R_out in R^2, 0<R<R_out, rotation by theta has minimum displacement 2R*|sin(theta/2)|. Every nontrivial rotation modulo 2*pi is therefore a deterministic shy coupling. The prior antipodal example is theta=pi. Letting R=0 or theta=0 removes the positive-gap check.",
+      "assumptions": [
+        "Euclidean isometry preserving D",
+        "Normal reflection",
+        "Recurrence to every nonempty interior open set",
+        "Compact domain closure"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w335:p0027-isometry-gap",
+        "url": "file:///~/brain_workers/w335/P0027_proof.md",
+        "revision": "author-checked-20261010-pending-independent-w347",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0027-smooth-map-rigidity",
+      "to_existing_logical": "math:probability.core:open-problem-p0027-rigidity-of-shy-reflected-brownian-couplings",
+      "kind": "specializes",
+      "rationale": "New card: \"it does not classify arbitrary measurable deterministic maps\"; existing card: \"If reflected Brownian motions in a bounded connected domain can remain a positive distance apart forever with positive probability, must there be such a coupling with one path a fixed deterministic function of the other at each time? Source: Krzysztof Burdzy: My favorite open pro\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    },
+    {
+      "from_key": "p0027-smooth-map-rigidity",
+      "to_existing_logical": "math:probability.core:attempt-p0027-rigidity-of-shy-reflected-brownian-couplings",
+      "kind": "generalizes",
+      "rationale": "New card: \"F(x)=Qx+b\"; existing card: \"If an isometry F preserves a reflected-Brownian domain\"."
+    },
+    {
+      "from_key": "p0027-isometry-gap",
+      "to_existing_logical": "math:probability.core:open-problem-p0027-rigidity-of-shy-reflected-brownian-couplings",
+      "kind": "specializes",
+      "rationale": "New card: \"No claim about arbitrary nondeterministic shy couplings is made\"; existing card: \"If reflected Brownian motions in a bounded connected domain can remain a positive distance apart forever with positive probability, must there be such a coupling with one path a fixed deterministic function of the other at each time? Source: Krzysztof Burdzy: My favorite open pro\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    },
+    {
+      "from_key": "p0027-isometry-gap",
+      "to_key": "p0027-smooth-map-rigidity",
+      "kind": "semantic_association",
+      "rationale": "Gap card: \"it is shy if and only if min_{closure D}|x-F(x)|>0\"; rigidity card: \"F(x)=Qx+b for a fixed orthogonal Q and b\". Together they delimit the stated smooth deterministic-map class."
+    }
+  ]
+}

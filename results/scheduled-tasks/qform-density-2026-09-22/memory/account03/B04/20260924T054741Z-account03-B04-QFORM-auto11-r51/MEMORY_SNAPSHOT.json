@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260924T054741Z-account03-B04-QFORM-auto11-r51",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "final_control_commit": "93859832af76a6b88666e5bfe9ace9ad5ed7b9f4",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "result": {
+    "name": "QFORM-PHYSICAL-TRIPLE-DET-ONE-THIRD-v2",
+    "statement": "For an invertible symmetric physical 3x3 coefficient matrix M and independent cap-one inputs, including arbitrary affine terms, the output density satisfies ||p||_inf <= 12(1+pi)|det M|^(-1/3). Ambient conditioning gives the same bound for any physical principal triple.",
+    "constant": 49.69911184307752,
+    "regularity": "essentially bounded density; continuity not proved by this receiver",
+    "supporting_lemma": "sup_t E|t-[s(Z+h)^2+c]|^(-1/3) <= 6|s|^(-1/3)",
+    "mechanism": "determinant-only physical-pair envelope plus scalar square one-third Riesz; exact Schur determinant cancellation; coefficient perturbation handles all-principal-pairs-singular edge case"
+  },
+  "fresh_application": {
+    "source": "account04/B03 r4 exact-rank-three Plucker localization",
+    "conclusion": "Exact-rank-three normalized overlap-two sector E2/Delta^2>=1/4 is fully paid: pair-star branch <333.880; dominant principal-triple branch <143.358, with no anisotropy gate."
+  },
+  "designated_partner_application": {
+    "source": "account04/B04 r2",
+    "inequality": "eta_ab>2/75 => K_ab^2>(4/75)D2 E4 => ||p||_inf<6.824377206888847(D2 E4)^(-1/12)",
+    "regularity": "continuous C0 on that partner branch"
+  },
+  "stress_test": {
+    "matrix": "[[1,1,1],[1,1,-1],[1,-1,1]]",
+    "spectrum": "{2,2,-1}",
+    "determinant": -4,
+    "principal_pair_determinants": [0,0,0],
+    "density_bound": 31.308478586086476
+  },
+  "report_repository": "yspennstate/math-open-problems",
+  "report_commit": "bea2c0032ad06ad46a5d7bf7f9a9a8718135648c",
+  "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260924T054741Z-account03-B04-QFORM-auto11-r51/REPORT.md",
+  "handoff_commit": "600a7c0f1d434c5624c5939eaa1b16017be7a000",
+  "next": "QFORM-GENERALRANK-E2-AGGREGATE-TO-TRIPLEDET-OR-PAIRJ2-v1",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN"
+}

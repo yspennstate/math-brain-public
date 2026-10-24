@@ -1,0 +1,28 @@
+{
+  "problem_id": "C0056",
+  "checked_at": "2026-10-10",
+  "historical_intake": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:56",
+    "statement": "Prove existence of absolutely continuous spectrum (delocalised states) for the random Schrodinger operator -Delta + lambda V on Z^3 at small disorder lambda, and GOE local statistics for its finite-volume restriction.",
+    "status": "unverified historical intake"
+  },
+  "primary_source": {
+    "author": "Paul Bourgade",
+    "title": "Random band matrices",
+    "url": "https://cims.nyu.edu/~bourgade/papers/ICMProceedings.pdf",
+    "locator": "section 2.1, printed page 7, PDF page 7; lines 503-537 in web text",
+    "model": "Anderson random Schrodinger operator on Z^d, discrete Laplacian plus lambda V, V(x) iid centered variance 1; finite-volume restriction to a box with periodic boundary conditions, bulk microscopic eigenvalue scaling by N^d.",
+    "historical_claim": "At publication, weak-disorder delocalization in d>=3 and GOE local statistics of the finite-volume Anderson operator were open; the source explicitly notes that extended states alone did not supply a known implication to GOE statistics."
+  },
+  "recent_claim": {
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/build/01-introduction.tex",
+    "date": "2026-09-23",
+    "claimed_result": "For iid uniform [-1,1] site potentials and each fixed d>=3 at sufficiently small positive coupling, an open interval has nonzero purely absolutely continuous spectral weight almost surely; for d=3 this is near the lower free band edge, with an existential coupling threshold.",
+    "limitation": "Author preprint claim seen; this check did not independently verify the 93-page proof. It does not assert GOE local statistics. It covers the uniform law, narrower than the historical iid centered variance-one class. Uniform[-1,1] has variance 1/3 and can be rescaled to the source's variance-one convention by adjusting lambda; that convention match does not broaden the law class.",
+    "confidence": "source and assertion verified, mathematical correctness not independently established"
+  },
+  "current_open_status": "UNKNOWN for the absolute-continuity branch until independent proof review; GOE branch not resolved by the located preprint",
+  "owner_solved_retired_status": "No exact C0056 hit in the named H/I attempts or Team O board; the dated math-brain C0056 card still says current status unverified as of 2026-09-07. No owner solved/retired receipt was established. Do not infer absence globally.",
+  "source_hash_check": "The 2026-09-07 intake lists SHA-256 b8b15c02ac7b675471097e9c499a6d588cfd7b0c591c49b0135f2a42eaedddb0 for its downloaded arXiv PDF; this session checked the author's public PDF text but did not rehash the intake file. A hash match would establish bytes, not mathematical validity.",
+  "novelty_claim": false
+}

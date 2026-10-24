@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260923T000236Z-account01-B15-qform-r15",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_at_start": "70e6aebd6e15e9024e7b1a965f74763e0fc9f013",
+  "execution_context": "scheduled_automation",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "status": "ESSENTIAL_STEP_APPLIED_EXACT_SINGLE_SCALE_N3_NORMAL_FORM_FULL_TARGET_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "dependencies": [
+    {
+      "result": "newest Claude N3-to-full reduction",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "472b70df7d1edbb3afac23269bc2e4368ae0e371",
+      "path": "proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md",
+      "use": "explicit N3-to-full transfer constant"
+    },
+    {
+      "result": "account02/B15 fixed-target bounded continuous density for every rank>=3 matrix",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T150242Z-account02-B15-qform-r3/REPORT.md",
+      "use": "attained continuous maximum and pointwise approximate-identity limit"
+    },
+    {
+      "result": "account02/B15 exact Choquet product-indicator representation",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "b1d930ff0fbc625393aebcd4a59f9ba1ead465ed",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T130201Z-account02-B15-qform-r2/REPORT.md",
+      "use": "exact mixture identity for the positive tent inequality"
+    },
+    {
+      "result": "account03/B15 multiscale tent identity",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "626e33966e69eda517dd09776028cbd80bd5d372",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T221924Z-account03-B15-qform-r20/REPORT.md",
+      "use": "comparison showing the new result removes the scale parameter only after homogeneous no-pivot normalization"
+    }
+  ],
+  "new_result": {
+    "name": "exact single-scale compact-tent normal form for N3",
+    "statement": "For fixed tau in (0,1], the sharp Claude N3 constant equals sup s_3(A) E(1-|X^TAX-y|)_+ over the homogeneous scale-free no-pivot class |A_ii|<tau s_3(A), |A_iiA_jj-A_ij^2|<tau s_3(A)^2. The same supremum is unchanged when all marginals are restricted to indicators of bounded finite unions of intervals of measure one, with no uniform fragment-count restriction.",
+    "application": "Any finite C0 for this one fixed-tent finite-fragment inequality gives the full QFORM theorem through the completed Claude transfer with C_full <= tau^(-1/2) max{1+2exp(pi)C0, 1+3K_tau}, K_tau=(2/sqrt(tau))[6.2+log_+(16sqrt(tau))]."
+  },
+  "canonical_scientific_commit": "da66fb6cecde707466ed82f0a9d05b53044bbbf4",
+  "canonical_scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T000236Z-account01-B15-qform-r15/REPORT.md",
+  "handoff_commit": "a48e235d02cd4988ef14fd61a62446ff537390cd",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B15/20260923T000236Z-account01-B15-qform-r15.md",
+  "unresolved_implication": "Prove a finite bound on the fixed unit-tent integral for every scale-free no-pivot matrix and every finite-fragment measure-one product set.",
+  "next_step": "Exploit the simultaneous small diagonal and small 2x2 principal-determinant inequalities directly inside the positive unit-tent integral before conditional L-infinity or reciprocal-minor payment.",
+  "full_problem_status": "OPEN_NOT_PROVED"
+}

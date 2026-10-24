@@ -1,0 +1,56 @@
+[
+  {
+    "claim_id": "A047-SHARP-FIXED-CHILD-RARE-SELECTOR",
+    "version": 1,
+    "exact_statement": "For every fixed finite pair of Boolean children g,h in a fixed product-biased Fourier basis, lim_{p->0}(J_X-M_X)/(p log2(1/p))=2Z+2E(gh)-2<=1/2-2(E(gh)-1/2)^2<=1/2, where Z=sum_{G_T=0}H_T^2. Equality 1/2 is attained by constant/quarter-defect children and by balanced children after fresh-character multiplication. If child Fourier supports are disjoint then M_X=J_X=h2(p) for every p in (0,1).",
+    "hypotheses": [
+      "finite Boolean sign children",
+      "common fixed orthonormal product Fourier basis",
+      "fixed interior data biases",
+      "independent selector with p down to zero",
+      "entropy in bits"
+    ],
+    "statement_sha256": "81d834734e7315b3a311892e2384e05cd519497131ccd3ce60a01cd83546bade",
+    "contributors": [
+      "A047"
+    ],
+    "proof_source": {
+      "original_run": "~\\brain_workers\\FEI100_20261011\\agents\\A047\\runs\\20261011T220210Z-account05-A047-boundary-search",
+      "original_report_sha256": "c6734d7cca88896e125bbe4af8effd01745af72e9c412fdfd406ef1fc0814567",
+      "original_claim_file_sha256": "a951d32888f5b80f72badddbb09fdeb930bb636e21a8b6cb955677ddc7536344",
+      "original_statement_sha256": "a7c1f6e2b4813f92ed2d1166200b84c078aa44f1d3d124226777bf7f13e0b84f",
+      "original_hash_convention": "SHA256 of exact_statement only",
+      "canonical_hash_convention": "SHA256 of compact sorted JSON containing statement and hypotheses",
+      "audit_run": "20261012T004903Z-account05-A092-counterexample-referee",
+      "audit_report": "REPORT.md",
+      "audit_code": "code/review.py",
+      "audit_output": "out/RESULT.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A092",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent finite entropy asymptotic reconstruction, projection sharpness test, direct-character ordered-pair census, recursive centered truth-table transform and independent logarithm series",
+        "endpoint_pairs": 65812,
+        "finite_certificates": 20,
+        "source": "REPORT.md; code/review.py; out/RESULT.json",
+        "repair_supplied_to_this_version": false
+      }
+    ],
+    "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED",
+    "supersedes": [],
+    "refutes": [
+      "Endpoint repaired tax coefficient strictly below 1/2"
+    ],
+    "first_unproved_line": "This fixed-child endpoint result alone does not prove a uniform finite-p envelope; complete nonreusing stopping-tree influence payment with terminal entropy remains open.",
+    "next_consumers": [
+      "A092",
+      "A087",
+      "A049",
+      "A050",
+      "A042",
+      "A071"
+    ]
+  }
+]

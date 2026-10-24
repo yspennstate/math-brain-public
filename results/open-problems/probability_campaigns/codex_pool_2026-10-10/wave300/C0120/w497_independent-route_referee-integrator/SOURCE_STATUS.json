@@ -1,0 +1,27 @@
+{
+  "target_id": "C0120",
+  "checked_at_local": "2026-10-10 09:40 Asia/Jerusalem",
+  "source_rows": [
+    {
+      "kind": "dated_ranking",
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "line": 544,
+      "quote": "5,C0120,Fluctuation exponent of directed polymers beyond the logarithmic improvement,attempted_un,power improvement of polymer variance (KPZ)",
+      "verdict": "KEEP as a dated ranking, not as an exact statement or current-open certificate."
+    },
+    {
+      "kind": "intake_statement_correction",
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+      "line": 120,
+      "quoted_intake": "Improve the bound Var(log Z_n) = O(n/log n) for directed polymers in random environment in general dimension to a power improvement n^{1-eps}.",
+      "primary_source": "Sourav Chatterjee, Chaos, concentration, and multiple valleys, arXiv:0810.4221v2, Section 8 and Section 12(3), https://arxiv.org/pdf/0810.4221",
+      "primary_source_locations": ["PDF printed p.37-38, Theorem 8.1; browser lines 3153-3215", "PDF printed p.59, Section 12(3); browser lines 4968-4984"],
+      "primary_quote": "Improve the fluctuation exponent in directed polymers.",
+      "corrected_statement": "The cited model has i.i.d. standard Gaussian vertex weights on nonnegative Z^2, directed up/right paths of n vertices starting at the origin, and M_n equal to the maximum path-weight sum (zero-temperature ground-state energy with sign reversed). Theorem 8.1 proves Var(M_n) <= C n/log n. Problem (3) asks to improve that fluctuation exponent. A proposed precise strengthening is: there exist constants epsilon>0 and C<infinity such that for every integer n>=2, Var(M_n)<=C n^(1-epsilon). The last sentence formalizes the question; it is not verbatim from the source.",
+      "verdict": "FIX the intake: log Z_n and general dimension are unsupported by the cited problem and change the mathematical object and domain."
+    }
+  ],
+  "exact_statement_status": "PRIMARY_SOURCE_RECOVERED_WITH_EXPLICIT_WORKING_FORMULATION",
+  "current_openness": "UNKNOWN",
+  "next": "Check recent primary literature and local solved/retired records for this exact Gaussian point-to-line last-passage variance target."
+}

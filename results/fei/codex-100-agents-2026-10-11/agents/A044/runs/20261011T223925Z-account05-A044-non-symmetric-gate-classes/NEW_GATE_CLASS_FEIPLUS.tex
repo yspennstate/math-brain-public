@@ -1,0 +1,21 @@
+% Source-complete proof and scopes in REPORT.md; research exploration held under review cap.
+\paragraph{Equal-mean addressing.}
+For every $a\ge0$, independent address bits of arbitrary probabilities $q_i$,
+and $2^a$ distinct data signs of common mean $m$, put $v=1-m^2$ and $F(z,y)=y_z$.
+Then
+\[
+ H_\mu^+(F)=v\sum_i\left[4q_i(1-q_i)-2q_i^2\log_2q_i
+ -2(1-q_i)^2\log_2(1-q_i)\right],\qquad
+ \Delta_\mu(F)=2v\sum_iq_i(1-q_i).
+\]
+Thus $H_\mu^+(F)\le4\Delta_\mu(F)$, sharply and uniformly in arity and endpoints.
+The scalar inequality follows from concavity of
+$g(t)=\int_0^1 t/(s+(1-s)t)\,ds=t\ln(1/t)/(1-t)$.
+For arbitrary data means $m_c$, with $h(z)=m_z$, $v_c=1-m_c^2$,
+$r_{ci}=\Pr(z_i=c_i)$, $p_c=\prod_i r_{ci}$, and
+$\ell(r)=2(1-r)-2r\log_2r$, the exact remaining debt is
+\[
+ H_\mu^+(F)=H_q^+(h)+\sum_cp_cv_c\sum_i\ell(r_{ci}),\quad
+ \Delta_\mu(F)=\Delta_q(h)+\sum_cp_cv_c\sum_i(1-r_{ci}).
+\]
+The centered-data cost is paid with $2+2/\ln2$; the real mean-profile cost is open.

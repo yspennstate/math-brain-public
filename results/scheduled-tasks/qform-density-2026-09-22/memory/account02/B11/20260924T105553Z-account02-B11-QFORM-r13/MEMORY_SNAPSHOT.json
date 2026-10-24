@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B11",
+  "run_id": "20260924T105553Z-account02-B11-QFORM-r13",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_at_prepublication_refresh": "e8c4f4778bcc37501fc9003dffab13e4471cc436",
+  "target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_FOR_FULL_TARGET",
+  "authenticated_retrieval_and_receiver_use": true,
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE"
+  ],
+  "new_result": {
+    "id": "QFORM-INDEFINITE-PHYSICAL-TRIPLE-DET49-v1",
+    "status": "PROVED_SUPPORTING_AMBIENT_THEOREM_THIS_RUN",
+    "statement": "For any invertible indefinite literal original-coordinate 3x3 principal block B, arbitrary ambient extensions, arbitrary affine terms, and independent cap-one inputs, ||p_(X^TAX)||_infinity <= 49 |det B|^(-1/3). Continuity not claimed."
+  },
+  "partner_result_applied": {
+    "worker": "account03/B11",
+    "run_id": "20260924T101550Z-account03-B11-QFORM-r55",
+    "id": "QFORM-INDEFINITE-PAIR-L3-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bc05973cb71eb6707de7342cafeef36af6a99230",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260924T101550Z-account03-B11-QFORM-r55/REPORT.md",
+    "applied_inequality": "The indefinite Schur pair in the large-diagonal branch has ||p||_3 <=22|det S|^(-1/3); after dependent square smoothing and |lambda|>=|det B|^(1/3)/2 this yields <48.321|det B|^(-1/3)."
+  },
+  "pinned_source_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "directory": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "actual_use": "The completed indefinite pair-log receiver pays the all-small-diagonal branch: determinant expansion forces an indefinite pair with sigma_min>|det B|^(1/3)/16, while the third scalar Schur square has a sqrt(rho) small-ball law, yielding <19.028|det B|^(-1/3). Ruled Theorem C is applied only on the one-sheet side."
+  },
+  "rank_two_control": "For independent centered unit uniforms, p_(2XY)(t)=log(1/(2|t|)) for 0<|t|<1/2; the third direction removes the singularity via L3-square smoothing or the Schur-square half-power small-ball law, without first making the rank-two density bounded.",
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e65ea69496521e9d4f4469e8cc8366381d03473f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260924T105553Z-account02-B11-QFORM-r13/REPORT.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B11/20260924T105553Z-account02-B11-QFORM-r13.md",
+  "remaining_implication": "QFORM-DET49-AGGREGATE-EXTRACTION-v1: from the bare three-large-eigenvalue hypothesis force a quantitative literal physical-triple determinant or one of the already-paid diffuse/cross-volume/hub exits; arbitrary additional nonseparable spectrum remains part of the structural bridge.",
+  "owner_request_acknowledgments": {
+    "QFORM-DENSITY-3EIG-20260922": "implemented_in_scope",
+    "QFORM-PROOF-FIRST-20260922T161801Z": "implemented_in_scope",
+    "QFORM-CLAUDE-LATEST-20260922T225732Z": "implemented_in_scope"
+  }
+}

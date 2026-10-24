@@ -1,0 +1,280 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w528",
+  "bundle_slug": "p0309-compact-defect-moments-and-repair-obstructions-001",
+  "entries": [
+    {
+      "key": "moment-balance",
+      "namespace": "probability.riesz",
+      "logical_name": "neutral-and-dipole-free-compact-signed-charge",
+      "kind": "definition",
+      "title": "Neutral and dipole-free compact signed charge",
+      "statement": "A finite signed Borel measure nu on R^3 is neutral when integral dnu=0. With finite first absolute moment it is dipole-free when integral x dnu(x)=0. Define Mp(nu)=integral |x|^p d|nu|(x), where |nu| is its total variation. For a charge centered at c use x-c in the moment definitions; for a neutral charge the dipole is independent of c.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite signed Borel measure",
+        "Finite moments at the stated orders"
+      ],
+      "domain": "probability, mathematical physics, Riesz interactions",
+      "source": {
+        "source_id": "owner-own-work:w528:p0309-moment-definition",
+        "url": "urn:owner-own-work:w528:P0309:20261010:moment-definition",
+        "revision": "campaign-2026-10-10-w528-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l1",
+      "namespace": "probability.riesz",
+      "logical_name": "neutral-riesz-defect-two-power-interaction-bound",
+      "kind": "lemma",
+      "title": "Neutral compact Riesz defects: two-power interaction bound",
+      "statement": "AUTHOR-PROVED AUXILIARY RESULT, independent review pending. For s>0, finite signed Borel measures nu,mu supported in B(0,a),B(0,b) with zero total mass, and |z|>a+b, the absolute interaction integral of |z+x-y|^{-s} is at most s(s+1) M1(nu)M1(mu)(|z|-a-b)^{-s-2}, where M1(nu)=integral |x|d|nu|(x).",
+      "proof_text": "**L1: neutral charges gain two powers of distance.** Let nu and mu be finite signed Borel measures, supported in B(0,a) and B(0,b), with zero total mass. Put M1(nu)=integral |x| d|nu|(x). For |z|>a+b,\n\n|I_s(z)| <= s(s+1) M1(nu)M1(mu)(|z|-a-b)^{-s-2},\n\nwhere I_s(z)=integral integral K_s(z+x-y)dnu(x)dmu(y).\n\nProof. Mass cancellation replaces K_s(z+x-y) inside the integral by K_s(z+x-y)-K_s(z+x)-K_s(z-y)+K_s(z). By the fundamental theorem of calculus this is minus integral_0^1 integral_0^1 D^2K_s(z+tx-uy)[x,y]dtdu. The Hessian has radial eigenvalue s(s+1)|w|^{-s-2} and tangential eigenvalues -s|w|^{-s-2}; its operator norm is s(s+1)|w|^{-s-2}. All w=z+tx-uy satisfy |w|>=|z|-a-b. Taking absolute values and integrating the two finite total variations proves the bound. These are deterministic integrals, not multiplied conditional probabilities.",
+      "assumptions": [
+        "s>0",
+        "finite total variations",
+        "compact supports as stated",
+        "both masses vanish",
+        "positive separation gap"
+      ],
+      "domain": "probability, mathematical physics, Riesz interactions",
+      "source": {
+        "source_id": "owner-own-work:w528:p0309-neutral-two-moment-bound",
+        "url": "urn:owner-own-work:w528:P0309:20261010:L1",
+        "revision": "campaign-2026-10-10-w528-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l2",
+      "namespace": "probability.riesz",
+      "logical_name": "dipole-free-riesz-defect-four-power-interaction-bound",
+      "kind": "lemma",
+      "title": "Dipole-free compact Riesz defects: four-power interaction bound",
+      "statement": "AUTHOR-PROVED AUXILIARY RESULT, independent review pending. For s>0, finite signed Borel measures nu,mu supported in B(0,a),B(0,b), each with zero mass and first moment, and |z|>a+b, their absolute Riesz interaction is at most C4(s)M2(nu)M2(mu)/(4(|z|-a-b)^{s+4}), where M2(nu)=integral |x|^2d|nu|(x) and C4(s)=s(s+2)(s^2+16s+51).",
+      "proof_text": "**L2: vanishing dipoles gain another two powers.** Assume in addition integral x dnu(x)=integral y dmu(y)=0. Define M2(nu)=integral |x|^2 d|nu|(x) and C4(s)=s(s+2)(s^2+16s+51). Then\n\n|I_s(z)| <= C4(s) M2(nu)M2(mu)/(4(|z|-a-b)^{s+4}).\n\nProof. Apply Taylor's formula with integral second-order remainder first in x, then in y. The constant and linear terms vanish by the two moment assumptions in each variable, leaving the exact identity\n\nI_s(z)=integral_0^1 integral_0^1 (1-t)(1-u) integral integral D^4K_s(z+tx-uy)[x,x,y,y] dnu(x)dmu(y)dtdu.\n\nTo bound D^4, its coordinate formula at w is\n\ns(s+2)(s+4)(s+6) w_i w_j w_k w_l |w|^{-s-8}\n- s(s+2)(s+4) (delta_ij w_k w_l + the five other pair placements) |w|^{-s-6}\n+ s(s+2) (delta_ij delta_kl + delta_ik delta_jl + delta_il delta_jk) |w|^{-s-4}.\n\nContracting against any four vectors v1,...,v4 and applying Cauchy-Schwarz bounds its absolute value by\n\ns(s+2)[(s+4)(s+6)+6(s+4)+3] |w|^{-s-4} product_j |vj|\n= C4(s)|w|^{-s-4} product_j |vj|.\n\nThe path stays away from zero. The two remainder weights integrate to 1/4. Finite total variation, compact supports, and this uniform derivative bound justify Fubini and give the asserted inequality, including for atomic signed measures.",
+      "assumptions": [
+        "s>0",
+        "finite total variations",
+        "compact supports as stated",
+        "both masses AND both dipoles vanish",
+        "positive separation gap"
+      ],
+      "domain": "probability, mathematical physics, Riesz interactions",
+      "source": {
+        "source_id": "owner-own-work:w528:p0309-dipole-free-fourth-derivative-bound",
+        "url": "urn:owner-own-work:w528:P0309:20261010:L2",
+        "revision": "campaign-2026-10-10-w528-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l3",
+      "namespace": "probability.riesz",
+      "logical_name": "uniform-cross-sum-for-dipole-free-riesz-defect-blocks",
+      "kind": "lemma",
+      "title": "Uniform cross sum for dipole-free Riesz defect blocks",
+      "statement": "AUTHOR-PROVED AUXILIARY RESULT, independent review pending. For s>0, block centers c_i=L i on Z^3 with L>=4a>0, signed blocks supported in B(c_i,a) with zero mass and dipole and M2<=M, and any finite index set I, the sum over i in I,j not in I of absolute cross interactions is at most J_s|I|, where J_s=(s(s+2)(s^2+16s+51)M^2/4)(2/L)^{s+4}[24 zeta(s+2)+2 zeta(s+4)]. Here a block interaction is the double signed integral of |x-y|^{-s}; zeta(t)=sum_{n>=1} n^{-t}. M2 of each block is measured about its own center, and C4(s)=s(s+2)(s^2+16s+51).",
+      "proof_text": "**L3: a uniform cross-interaction bound, with its full hypotheses.** Put block centers c_i=L i for i in Z^3, with L>=4a>0. Let every compact signed block nu_i be supported in B(c_i,a), have zero mass and first moment about c_i, and have M2(nu_i)<=M. For any finite set I of blocks, even if all other blocks are present,\n\nsum_{i in I} sum_{j not in I} |interaction(nu_i,nu_j)| <= J_s |I|,\n\nJ_s=(C4(s)M^2/4)(2/L)^{s+4}[24 zeta(s+2)+2 zeta(s+4)]<infinity.\n\nProof. For i!=j, |c_i-c_j|-2a >= (L/2)|i-j|. Apply L2. The infinity-norm shell |k|_infinity=n has exactly (2n+1)^3-(2n-1)^3=24n^2+2 integer points, and |k|>=n. Hence sum_{k!=0}|k|^{-s-4} is at most 24 sum_n n^{-s-2}+2 sum_n n^{-s-4}, which is finite for s>0. Summing the resulting per-block bound over I proves the claim. This bounds only these signed-block cross terms: the interaction with the reference lattice, local energies, a positive defect gap, and a physical repair map are separate inputs. Block radii and M must be uniform; grouping increasingly distant charges invalidates the stated constant.",
+      "assumptions": [
+        "all blocks have the stated uniform support radius and moment bound",
+        "all block dipoles vanish",
+        "fixed lattice centers",
+        "s>0"
+      ],
+      "domain": "probability, mathematical physics, Riesz interactions",
+      "source": {
+        "source_id": "owner-own-work:w528:p0309-dipole-free-cross-interaction-sum",
+        "url": "urn:owner-own-work:w528:P0309:20261010:L3",
+        "revision": "campaign-2026-10-10-w528-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l4",
+      "namespace": "probability.riesz",
+      "logical_name": "neutral-riesz-dipoles-fail-absolute-summability-in-three-dimensions",
+      "kind": "lemma",
+      "title": "Neutral Riesz dipoles fail absolute summability at and below Coulomb",
+      "statement": "AUTHOR-PROVED AUXILIARY RESULT, independent review pending. Let e=(1,0,0) and I_s(z)=2|z|^{-s}-|z+e|^{-s}-|z-e|^{-s}, the interaction of two copies of the neutral dipole delta_e-delta_0. For every 0<s<=1, sum over z in 4Z^3 with |z|>=16 of |I_s(z)| diverges.",
+      "proof_text": "**L4: neutrality alone does not give the needed absolute sum at or below Coulomb.** Let e=(1,0,0), nu=delta_e-delta_0, and I_s(z)=2K_s(z)-K_s(z+e)-K_s(z-e). For 0<s<=1,\n\nsum_{z in 4Z^3, |z|>=16} |I_s(z)|=infinity.\n\nProof. Consider z=4(n,m,l), n>=4, |m|,|l|<=floor(n/4), and f(t)=K_s(z+te) for -1<=t<=1. Throughout this interval the squared cosine with e is at least 9/11 and |z+te|<=6n. Thus\n\nf''(t)=s |z+te|^{-s-2}[(s+2)(z_1+t)^2/|z+te|^2-1]\n>= (7s/11)(6n)^{-s-2}.\n\nThe exact central-difference identity gives -I_s(z)=integral_{-1}^1 (1-|t|) f''(t)dt, so |I_s(z)|>=(7s/11)(6n)^{-s-2}. There are (2floor(n/4)+1)^2>=n^2/16 such centers for each n. Distinct n give distinct centers, and the total contribution at n is therefore at least 7s/(176*6^{s+2}) n^{-s}. The p-series diverges for 0<s<=1. This proves absolute divergence on an explicit separated set, not just an upper-bound failure or an angular heuristic. Conditional angular cancellation, renormalization, and collective screening remain possible; this is not a counterexample to crystallization.\n\nTwo exact Coulomb controls are I_1(R e)=-2/[R(R^2-1)] for R>1, and, for q=delta_e+delta_{-e}-2delta_0, interaction(q,q+R e)=24/[R(R^2-1)(R^2-4)] for R>2. The first decays as R^-3 and the second as R^-5. The axial R^-3 series by itself converges; the cone count above is essential to establish the 3D absolute divergence.",
+      "assumptions": [
+        "0<s<=1",
+        "the explicitly specified separated neutral dipoles",
+        "absolute, not conditionally renormalized summation"
+      ],
+      "domain": "probability, mathematical physics, Riesz interactions",
+      "source": {
+        "source_id": "owner-own-work:w528:p0309-neutral-dipole-absolute-divergence",
+        "url": "urn:owner-own-work:w528:P0309:20261010:L4",
+        "revision": "campaign-2026-10-10-w528-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l5",
+      "namespace": "probability.riesz",
+      "logical_name": "neutral-charge-dipole-conservation-under-finite-regrouping",
+      "kind": "lemma",
+      "title": "Neutral-charge dipole conservation under finite regrouping",
+      "statement": "AUTHOR-PROVED AUXILIARY RESULT, independent review pending. For any finite signed measure nu with zero mass and finite first absolute moment, its dipole integral(x-c)dnu(x) is independent of c. A neutral measure with nonzero dipole cannot be a finite sum of neutral dipole-free measures. In particular delta_{c+u}-delta_c has dipole u.",
+      "proof_text": "**L5: a physical dipole cannot be removed by recentering or finite regrouping.** For a neutral measure nu, integral(x-c)dnu(x)=integral x dnu(x), independent of c. First moments are additive. Consequently a neutral measure with nonzero first moment cannot be a finite sum of dipole-free neutral measures. In particular a single displaced particle relative to its reference position gives delta_{c+u}-delta_c, with mass zero and dipole u. It satisfies L2 only if u=0. Likewise a point against a symmetric unit-volume cell background has dipole u when displaced by u from the cell center. Thermal displacements therefore do not automatically satisfy L2.",
+      "assumptions": [
+        "zero total mass",
+        "finite first absolute moments",
+        "a finite exact decomposition, if used"
+      ],
+      "domain": "probability, mathematical physics, Riesz interactions",
+      "source": {
+        "source_id": "owner-own-work:w528:p0309-neutral-dipole-conservation-obstruction",
+        "url": "urn:owner-own-work:w528:P0309:20261010:L5",
+        "revision": "campaign-2026-10-10-w528-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l6",
+      "namespace": "probability.riesz",
+      "logical_name": "gibbs-contour-repair-pushforward-probability-bound",
+      "kind": "lemma",
+      "title": "Gibbs contour repair probability bound with entropy accounted for",
+      "statement": "AUTHOR-PROVED AUXILIARY RESULT, independent review pending. Let beta>0, 0<Z=integral exp(-beta H)dlambda<infinity, and P_beta=Z^{-1}exp(-beta H)lambda. For an event E of contour size m>=1 and measurable repair T:E->configuration space, assume H(x)-H(Tx)>=tau m for lambda-a.e. x in E, tau>0, and T_#(lambda restricted to E)<=exp(kappa m)lambda. Then P_beta(E)<=exp[-(beta tau-kappa)m]. With at most A^m covering contours of each size and q=A exp(kappa-beta tau)<1, the covered bad-block probability is at most q/(1-q).",
+      "proof_text": "**L6: the precise conditional repair estimate, without independence.** Let a finite-volume canonical reference measure be lambda, Z=integral exp(-beta H)dlambda, and P_beta=Z^{-1}exp(-beta H)lambda. Suppose a contour gamma of size m has event E_gamma and a measurable repair map T_gamma:E_gamma->configuration space such that (i) H(x)-H(T_gamma x)>=tau m for lambda-a.e. x in E_gamma, and (ii) (T_gamma)_#(lambda restricted to E_gamma)<=exp(kappa m)lambda as measures. Then\n\nP_beta(E_gamma)<=exp[-(beta tau-kappa)m].\n\nProof. The energy inequality bounds integral_E exp(-beta H(x))dlambda(x) by exp(-beta tau m) integral_E exp(-beta H(Tx))dlambda(x). The pushforward inequality bounds the latter integral by exp(kappa m)Z. Divide by Z. This argument requires neither contour independence nor a product of per-row conditional estimates. If at most A^m contours of size m cover a given marked block, and its bad event is contained in their union, then its bad probability is at most q/(1-q) when q=A exp(kappa-beta tau)<1. The counting and event-cover assumptions must be proved for the chosen contours.",
+      "assumptions": [
+        "the energy gain is for the actual Hamiltonian",
+        "finite partition function",
+        "measurable repair with the stated pushforward domination",
+        "the stated counting and event-cover hypotheses for the union bound",
+        "no independence assumption"
+      ],
+      "domain": "probability, mathematical physics, Riesz interactions",
+      "source": {
+        "source_id": "owner-own-work:w528:p0309-gibbs-repair-measure-comparison",
+        "url": "urn:owner-own-work:w528:P0309:20261010:L6",
+        "revision": "campaign-2026-10-10-w528-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l7",
+      "namespace": "probability.riesz",
+      "logical_name": "collapsed-configuration-repairs-have-no-finite-density-bound",
+      "kind": "lemma",
+      "title": "Collapsed configuration repairs have no finite density bound",
+      "statement": "AUTHOR-PROVED AUXILIARY RESULT, independent review pending. If a measurable repair maps a positive-lambda-measure event E into a lambda-null set B, no finite constant C can satisfy T_#(lambda restricted to E)<=C lambda. In particular collapsing displaced particles exactly onto prescribed lattice sites cannot provide a finite-entropy Gibbs repair estimate.",
+      "proof_text": "Let B be the measurable null set containing T(E). Then the pushforward of lambda restricted to E assigns mass lambda(E)>0 to B. Any finite multiple C lambda assigns zero mass to B. The claimed domination is therefore impossible.",
+      "assumptions": [
+        "lambda(E)>0",
+        "T(E) is contained in a measurable lambda-null set B",
+        "reference configuration volume is lambda"
+      ],
+      "domain": "probability, mathematical physics, Riesz interactions",
+      "source": {
+        "source_id": "owner-own-work:w528:p0309-collapsed-repair-volume-obstruction",
+        "url": "urn:owner-own-work:w528:P0309:20261010:L7",
+        "revision": "campaign-2026-10-10-w528-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "g",
+      "namespace": "probability.riesz",
+      "logical_name": "unproved-crystalline-riesz-reconstruction-energy-entropy-input",
+      "kind": "concept",
+      "title": "Unproved input: crystalline Riesz reconstruction energy and entropy",
+      "statement": "UNPROVED DRAFT ROUTE INPUT; no crystalline-phase proof is claimed. Conjectural input G: for actual 3D neutral Riesz jellium with phase-selected crystalline boundary, explicit core-defect contour events admit volume-uniform same-N measurable repairs with strictly positive energy gain tau m and reference-measure pushforward cost exp(kappa m), while dipole carriers and competing configurations are controlled. This repair estimate still requires an actual energy gain and a finite configuration-volume cost. It does not itself supply phonon coherence or the unperturbed Gibbs limit.",
+      "proof_text": null,
+      "assumptions": [
+        "actual unmodified Riesz Hamiltonian",
+        "an explicit contour definition excluding ordinary acoustic modes",
+        "legitimate crystalline boundary selection",
+        "tau>0 and finite kappa uniform in volume"
+      ],
+      "domain": "probability, mathematical physics, Riesz interactions",
+      "source": {
+        "source_id": "owner-own-work:w528:p0309-crystalline-reconstruction-gap",
+        "url": "urn:owner-own-work:w528:P0309:20261010:G",
+        "revision": "campaign-2026-10-10-w528-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "l1",
+      "to_key": "moment-balance",
+      "kind": "depends_on",
+      "rationale": "L1 uses the defined zero-mass and M1 conditions."
+    },
+    {
+      "from_key": "l2",
+      "to_key": "moment-balance",
+      "kind": "depends_on",
+      "rationale": "L2 additionally uses both vanishing first moments and M2."
+    },
+    {
+      "from_key": "l3",
+      "to_key": "l2",
+      "kind": "depends_on",
+      "rationale": "The uniform cross sum follows by applying the L2 interaction bound to each separated pair and counting integer shells."
+    },
+    {
+      "from_key": "l4",
+      "to_key": "l1",
+      "kind": "semantic_association",
+      "rationale": "L1 gives the neutral two-power upper bound; L4 gives an explicit 3D absolute-divergence obstruction for 0<s<=1."
+    },
+    {
+      "from_key": "l5",
+      "to_key": "moment-balance",
+      "kind": "depends_on",
+      "rationale": "Moment additivity and zero mass establish center independence and the finite regrouping obstruction."
+    },
+    {
+      "from_key": "g",
+      "to_key": "l3",
+      "kind": "semantic_association",
+      "rationale": "The attempted reconstruction route would use L3 only after its stronger moment hypotheses are obtained for actual defects."
+    },
+    {
+      "from_key": "g",
+      "to_key": "l4",
+      "kind": "semantic_association",
+      "rationale": "L4 obstructs the naive mass-only absolute-interaction estimate in the Coulomb regime."
+    },
+    {
+      "from_key": "g",
+      "to_key": "l5",
+      "kind": "semantic_association",
+      "rationale": "L5 identifies the real dipole carrier that the unproved reconstruction estimate must account for."
+    },
+    {
+      "from_key": "g",
+      "to_key": "l6",
+      "kind": "semantic_association",
+      "rationale": "G is the unproved physical repair input whose energy and measure hypotheses would allow application of L6."
+    },
+    {
+      "from_key": "g",
+      "to_key": "l7",
+      "kind": "semantic_association",
+      "rationale": "L7 rules out an exact site-collapse map as a finite-entropy physical repair."
+    },
+    {
+      "from_key": "g",
+      "to_existing_logical": "math:probability.core:open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "semantic_association",
+      "rationale": "The recovered P0309 title asks for a crystalline Gibbs phase; G is only an explicitly unproved reconstruction input in one route."
+    }
+  ]
+}

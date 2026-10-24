@@ -1,0 +1,60 @@
+account01/B01 deterministic checks for QFORM-LITERAL-3X3-UNIVERSAL-LINF-v1
+run=20260924T074241Z-account01-B01-qform-auto11-r16
+
+1. Threshold arithmetic
+
+tau = 23/40 = 0.575
+1-tau^2 = 2142/3200
+b0 = sqrt((1-tau^2)/2) = sqrt(1071/3200) = 0.5785218232703068...
+kappa0 = b0-tau = 0.003521823270306812...
+Thus b0>tau, so the small-diagonal physical pair is automatically indefinite and invertible.
+
+2. Case A constant
+
+C_A = 16*sqrt(30)*tau^(-1/4)
+    = 100.63838269447342...
+    < 101.
+
+3. Case B constant
+
+C_B = 2^(13/4)*kappa0^(-1/4)
+    = 39.05310744041935...
+    < 101.
+
+4. Exact determinant compensation
+
+For a 3x3 matrix split as [[P,u],[u^T,c]] with invertible 2x2 P and scalar Schur complement s=c-u^T P^(-1)u,
+det B = det(P)*s.
+Hence D^(-1/4)|s|^(-1/4)=|det B|^(-1/4), D=|det P|.
+Under sigma_min(B)>=1, |det B|>=1.
+
+5. Zero-diagonal strict-target stress
+
+B_* = [[0,1,1],[1,0,1],[1,1,0]].
+Characteristic polynomial = (lambda-2)(lambda+1)^2, so spec={2,-1,-1} and sigma_min=1.
+For P=[[0,1],[1,0]], D=1 and kappa=1.
+Scalar Schur coefficient satisfies |s|=|det B_*|/D=2.
+The pair-log/square-root-small-ball bound gives
+2^(13/4)*D^(-1/4)*kappa^(-1/4)*|s|^(-1/4)=8 exactly.
+
+6. Singular-pair stress for the complementary branch
+
+B_0 = [[1,1,1],[1,1,-1],[1,-1,1]].
+Characteristic polynomial = (lambda+1)(lambda-2)^2, so spec={-1,2,2} and sigma_min=1.
+Every physical 2x2 principal determinant equals 0.
+The Case A scalar-pivot/rank-two-Schur route applies because all literal diagonals equal 1.
+
+7. Designated-partner actual inequality
+
+Q_partner = X0^2 + 2 H[(sqrt(3)/2)Y1 + (1/2)Y2].
+The hub-leaf cross vector has Euclidean norm 1, so the nonzero bipartite eigenvalues are +1,-1; adjoining X0^2 gives spectrum {1,1,-1,0}.
+Partner heavy-leaf parameters:
+s=1,
+|c_h|=sqrt(3)/2,
+T=1/2,
+theta=|c_h|T=sqrt(3)/4.
+C_partner = 2^(23/8)*(sqrt(3)/4)^(-1/4)
+          = 9.043490329708042...
+
+STATUS=PASS
+These are deterministic algebra/arithmetic diagnostics, not an independent proof review.

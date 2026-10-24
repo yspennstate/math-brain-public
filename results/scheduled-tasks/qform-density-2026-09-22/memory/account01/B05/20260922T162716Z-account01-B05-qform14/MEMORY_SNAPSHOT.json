@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B05",
+  "run_id": "20260922T162716Z-account01-B05-qform14",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_prepublication": "5cd9bf4e0e52d0177b7e132df4c09ca57b2a0196",
+  "control_revision": "2026-09-22.7",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B05",
+    "theorem": "QFORM-2D-PARSEVAL-PROJECTION-CAP-v1",
+    "canonical_commit": "e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a",
+    "application": "sup_(y,z) int g(t,y,z)dt=||p_(Y,Z)||_infinity<=e and ||p_(sqrt(c)X_0+T,Y,Z)||_infinity<=e c^(-1/2)"
+  },
+  "additional_dependency": {
+    "worker": "account03/B05",
+    "theorem": "QFORM-PAIR-SECTIONAL-COAREA-v1",
+    "canonical_commit": "332f29e335274f2b3f81ccf92d62443b928c66cd"
+  },
+  "new_results": [
+    "QFORM-LEAKAGE-DISINTEGRATION-FUNCTIONAL-v1",
+    "QFORM-HEAVY-CONVOLUTION-LEAKAGE-CAP-v1",
+    "QFORM-LEAKAGE-SLICE-MIXED-NORM-FALSE-v1"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c2ee90049c201a04657853c8989e63ea92d5dfbc",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260922T162716Z-account01-B05-qform14/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "bdf3c9edbb76ec37401aa563dc850cef7f8730a0",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B05/20260922T162716Z-account01-B05-qform14.md"
+  },
+  "unresolved_implication": "QFORM-CURVED-PRODUCT-FIBER-TRACE-v1: integrate the leakage projection jointly with the indefinite curved trace while retaining affine-fiber product provenance; conditioning on leakage and paying conditional pair L-infinity is refuted by a target-valid fragmented product family.",
+  "status": "ESSENTIAL_STEP_APPLIED_FULL_TARGET_OPEN",
+  "continuity": "NOT_PROVED"
+}

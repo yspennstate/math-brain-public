@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B09",
+  "run_id": "20260923T141440Z-account01-B09-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit": "1711ded2e40f904a773fb2b34386ba9126bb9701",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_full_target_status": "OPEN",
+  "new_claims": [
+    {
+      "id": "QFORM-INDEFINITE-PAIR-PLUS-ONECROSS-v1",
+      "status": "NEW_SUPPORTING_THEOREM_UNREVIEWED",
+      "statement": "For an invertible indefinite original-coordinate physical pair E with D=|det E| and kappa=sigma_min(E), if the exact Schur complement has any nonzero cross C between disjoint remaining original-coordinate banks, then ||p_Q||_infinity <=11.463 D^(-2/5) kappa^(-1/10) ||C||_F^(-1/10), and the same coefficient times interval length bounds every interval probability. Continuity is not claimed."
+    },
+    {
+      "id": "QFORM-PAIRANCHORED-3VOLUME-SCHUR-SURVIVAL-v1",
+      "status": "EXACT_STRUCTURAL_IDENTITY_AND_COROLLARY",
+      "statement": "For pair rows a,b and exact Schur rows c_k=m_k-span{a,b}, a wedge b wedge c_k=a wedge b wedge m_k. Thus pair-anchored third volume V_P is at most Delta ||C||_F^2 with Delta=||a wedge b||^2, giving ||p_Q||_infinity <=11.463 D^(-2/5) kappa^(-1/10) Delta^(1/20) V_P^(-1/20) when V_P>0."
+    }
+  ],
+  "mathematical_premises": [
+    "physical-pair logarithmic envelope at yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md",
+    "account03/B01 fractional k-volume compiler at yspennstate/math-open-problems@936b0f0bad22de82921c2a743fb0738226270348:proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260923T013054Z-auto11/REPORT.md",
+    "for k=1,q=2,gamma=1/8 every one-volume row marginal automatically satisfies alpha_i<=q/2",
+    "log x <= x^gamma/(e gamma) for x>=1",
+    "Schur row elimination subtracts linear combinations of the two physical pair rows, so the anchored exterior 3-form is invariant"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "partner_result_actually_applied": {
+    "partner": "account02/B09",
+    "claim": "QFORM-ONE-ANCHOR-THREEVOLUME-HYBRID-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "59ccddd0766b466b30abd645926887f907b0bcd7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T134326Z-account02-B09-QFORM-r13/REPORT.md",
+    "actual_inequality": "For cross-only A_*=[[0,M],[M^T,0]] with M^TM=I_3 and the five physical rows (1,0,0),(0,1/sqrt2,0),(0,1/sqrt2,0),(0,0,1/sqrt2),(0,0,1/sqrt2), selected anchor three-volume Z=1 and all non-anchor row marginals=1/2, so ||p||_infinity <=5*2^(4/5)*sqrt(e)<14.353 and P(Q in L)<14.353|L|; density continuous."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4b3c7fd28ec13d4d0c926affe670109c0738d816",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T141440Z-account01-B09-QFORM-auto11/REPORT.md",
+    "report_blob": "0c00c29dc63e6e735ba5c585cca9ec9e684d1610",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T141440Z-account01-B09-QFORM-auto11/CHECKS.md",
+    "checks_blob": "6e530f0fd735c3de502f1d2bb720a79a4f694fd6"
+  },
+  "unresolved_implication": "QFORM-ZEROPIVOT-NO-INVERTIBLE-COLLAR-PAIR-ROUTING-v1",
+  "next_step": "In the aggregate-heavy zero-pivot collar, treat the case in which every companion carrying the third-volume resource has zero internal coupling to the anchor, or all pair certificates D,kappa,V_P quantitatively degenerate. Use direct source-coordinate conditional-linear/grouped-cross anti-concentration or force an already-paid definite/singular pair, one-anchor three-volume, ridge, or grouped-square exit; do not infer a good individual pair from spectral size alone.",
+  "independent_review_status": "NOT_YET_REVIEWED",
+  "full_brain_connected": false
+}

@@ -1,0 +1,65 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w344",
+  "bundle_slug": "w344-open-problem-c0039-checked-partials-20261010",
+  "entries": [
+    {
+      "key": "s3-noncommuting-dpp-linear-distance-experiment",
+      "namespace": "probability.determinantal",
+      "logical_name": "s3-noncommuting-dpp-linear-distance-experiment",
+      "kind": "concept",
+      "title": "Twelve finite S3 tests of the noncommuting determinantal distance bound",
+      "statement": "Numerical evidence only: for twelve seeded real symmetric S3-equivariant kernel pairs with spectra in [0.1,0.9], the optimal expected normalized Hamming coupling distance divided by trace|Q-Qprime|/6 had maximum 0.6934876897518668, with no violation found. The 4096-variable transport LP was checked against DPP normalization, one-site marginals, equivariance, primal residuals and dual objectives; a .3I/.7I commuting control gave ratio 1. Finite-group averaging makes the unrestricted LP optimum an invariant coupling optimum. These finite observations do not prove the general linear bound.",
+      "proof_text": null,
+      "assumptions": [
+        "Seed 344",
+        "Finite group S3",
+        "Strictly interior real symmetric positive contractions"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:s3-noncommuting-dpp-linear-distance-experiment",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; numerical evidence; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "Numerical evidence only: for twelve seeded real symmetric S3-equivariant kernel pairs with spectra in [0.1,0.9], the optimal expected"
+      }
+    },
+    {
+      "key": "finite-rank-one-dpp-linear-hamming-bound",
+      "namespace": "probability.determinantal",
+      "logical_name": "finite-rank-one-dpp-linear-hamming-bound",
+      "kind": "lemma",
+      "title": "Linear trace-norm coupling bound for rank-one determinantal kernels",
+      "statement": "For unit vectors v,w in C^n, let P=vv* and Q=ww*. Their determinantal laws are single-site laws with probabilities |v_i|^2 and |w_i|^2. The optimal coupling cost for normalized Hamming distance on subsets of {1,...,n} equals (1/n)sum_i ||v_i|^2-|w_i|^2| and is at most trace|P-Q|/n. If both laws are invariant under a finite permutation group, averaging yields an invariant coupling of the same cost. This is a finite rank-one result, with no general equivariant approximation theorem asserted.",
+      "proof_text": "Lyons, Determinantal Probability: Basic Properties and Conjectures, arXiv:1406.2707v1 (10 June 2014), Theorem 5.6 and the following paragraph, PDF p.23, explicitly leaves the noncommuting linear bound open. The cached intake's S3 transport experiment was specified but not run. No later local resolution was found in the named attempts.\n\nexperiment_c0039.py constructs real symmetric right-convolution kernels on S3, rescales their spectra into [0.1,0.9], and verifies that they commute with every left translation. For a strictly positive contraction Q, the exact-set DPP formula is P_Q(S)=det(I-Q)det((Q(I-Q)^-1)_S). All 64 configuration probabilities and six one-site marginals are checked. Coupling distance is the 4096-variable transportation LP with cost |S symmetric_difference T|/6. Averaging any finite-group coupling over simultaneous left translations preserves the marginals and cost, so this unrestricted LP equals the invariant coupling optimum. The normalized Schatten norm is trace|Q-Q'|/6, which is the equivariant trace on the transitive six-point set. Primal constraints, dual feasibility and objective gap are checked; the .3I/.7I control gives equality.\n\nTwelve noncommuting pairs, seed 344, gave no violation. The largest ratio was 0.6934876897518668; the largest marginal residual was 1.124100812432971e-15 and dual gap 5.551115123125783e-17. These are finite numerical observations, not proof for all finite or infinite kernels, complex kernels, projections, or spectra near the boundary.\n\nA proved finite special case: for unit vectors v,w in C^n and rank-one projections P=vv*, Q=ww*, their DPPs select one site with probabilities |v_i|^2 and |w_i|^2. The minimum expected normalized Hamming cost is (1/n) sum_i ||v_i|^2-|w_i|^2|. Multiply w by a phase so <v,w>=r>=0. The real-part identity for squared magnitudes and Cauchy-Schwarz give sum_i ||v_i|^2-|w_i|^2| <= ||v-w||_2 ||v+w||_2=2 sqrt(1-r^2). The two nonzero eigenvalues of P-Q are plus and minus sqrt(1-r^2), as follows by restricting to span(v,w), checking trace zero and trace of its square. Hence the cost is <=trace|P-Q|/n. This proves the finite rank-one inequality; it does not give an approximation argument for the general equivariant problem.",
+      "assumptions": [
+        "Unit vectors",
+        "Finite dimension",
+        "Normalized Hamming cost"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:finite-rank-one-dpp-linear-hamming-bound",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "For unit vectors v,w in C^n, let P=vv* and Q=ww*. Their determinantal laws are single-site laws with probabilities"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "s3-noncommuting-dpp-linear-distance-experiment",
+      "to_existing_logical": "math:probability.determinantal:open-problem-c0039-d-bar-distance-bound-for-commuting-versus-general-equivariant-kernels",
+      "kind": "analogous_to",
+      "rationale": "New end: \"Numerical evidence only: for twelve seeded real symmetric S3-equivariant kernel pairs with spectra in [0.1,0.9], the optimal expected\"; existing end: \"For Gamma-equivariant positive contractions Q, Q' the bound d-bar(P_Q, P_{Q'}) <= 6 3^{2/3} ||Q - Q'||_1^{1/3} holds, and\". This result addresses or audits C0039; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    },
+    {
+      "from_key": "finite-rank-one-dpp-linear-hamming-bound",
+      "to_existing_logical": "math:probability.determinantal:open-problem-c0039-d-bar-distance-bound-for-commuting-versus-general-equivariant-kernels",
+      "kind": "analogous_to",
+      "rationale": "New end: \"For unit vectors v,w in C^n, let P=vv* and Q=ww*. Their determinantal laws are single-site laws with probabilities\"; existing end: \"For Gamma-equivariant positive contractions Q, Q' the bound d-bar(P_Q, P_{Q'}) <= 6 3^{2/3} ||Q - Q'||_1^{1/3} holds, and\". This result addresses or audits C0039; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    }
+  ]
+}

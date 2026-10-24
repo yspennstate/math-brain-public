@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B20",
+  "run_id": "20260924T080024Z-account02-B20-QFORM-auto11-r49",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "classification": "ESSENTIAL_STEP_APPLIED / FOURCELL-E3-OR-TWOSIDED-ALIGNMENT / AUGMENTED-D5-PINNED / FULL-QFORM-OPEN",
+  "control_refresh": {
+    "latest_owner_request": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+    "owner_control_revision": "2026-09-22.15",
+    "active_programme": "QFORM-DENSITY-3EIG-20260922",
+    "later_stop_observed": false
+  },
+  "newest_partner": {
+    "account_slot": "account03/B20",
+    "run": "20260924T065238Z-account03-B20-QFORM-auto11-r49",
+    "math_commit": "4bf5217dace0129fcb6995727e1d8afa671c2435",
+    "exact_expression": "s_grid=(1/2-1/(4sqrt(2)))/126-2^-16=0.002550005533980064...",
+    "applied_fact": "four literal cells M_ab=A[R_a,C_b] satisfy sigma_2(M_ab)>s_grid"
+  },
+  "new_theorem": {
+    "id": "QFORM-R49-FOURCELL-E3-OR-TWOSIDED-ALIGNMENT-COLLAR-v1",
+    "core_identity": "e3([M D][M D]^T)>=sigma1(M)^2 sigma2(M)^2 ||(I-P2)D||_F^2",
+    "payment_threshold": "delta=2^-16",
+    "payment_currency": "e3>=s_grid^4 2^-32",
+    "payment_bound": "||p_Q||inf<22790 via marginal-free physical cross-E3 receiver",
+    "unpaid_R_collar": "||A[R1,R2]-P_1b A[R1,R2] P_2b'||_F<2^-15 for every b,b'",
+    "unpaid_C_collar": "||A[C1,C2]-Q_a1 A[C1,C2] Q_a'2||_F<2^-15 for every a,a'",
+    "rank2_tail": "both same-side cross-half blocks have dist_F(rank<=2)<2^-16",
+    "robust_mode_refinement": "at kappa=s_grid either dist_F(rank<=1)<0.002550052 or associated cell planes differ in operator norm by <0.011967652"
+  },
+  "required_pinned_application": {
+    "source_commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "result": "Theorem D5",
+    "actual_cuts": "all eight augmented blocks K^R_ab=A[R_a,C_b union R_(3-a)] and K^C_ab=A[C_b,R_a union C_(3-b)]",
+    "inequality": "e5(K^T K)>=1/1024 => ||p_Q||inf<=10sqrt(2e)<23.317",
+    "unpaid_assumption": "all eight augmented e5 currencies <1/1024"
+  },
+  "target_valid_obstruction": {
+    "construction": "four flat two-frame nodes with all R-C cells s U_a V_b^T and same-side bridges t U1U2^T, t V1V2^T",
+    "choice": "s=t=1",
+    "spectrum": "{3,3,-1,-1,-1,-1,-1,-1}",
+    "augmented_rank": 2,
+    "augmented_E3": 0,
+    "meaning": "the target plus robust four-cell grid does not force transverse E3; this refutes only that stronger structural shortcut, not QFORM"
+  },
+  "first_unpaid_implication": "QFORM-R49-ALIGNED-FOURNODE-R2-PLUS-SELF-CURVATURE-ENDPOINT-v1",
+  "first_unpaid_summary": "After E3/D5 failure, all same-side cross-half curvature is plane-aligned rank-two up to explicit 2^-15 collars; only the four principal node blocks retain unrestricted curvature. Pay this four-node product system or route a node/self-curvature resource into a completed source-valid receiver.",
+  "corrections_preserved": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "no arbitrary-joint rank-three coarea",
+    "no conditional-cap transfer",
+    "no deletion of nonzero coefficient tails",
+    "no generic fractional-small-ball-to-L-infinity interpolation"
+  ],
+  "math_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b7a664d483bcf443586a217441b6471caaf2c616",
+    "checks_commit": "74afca07d6fc5c07e9df38e59318bed146759684",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B20/20260924T080024Z-account02-B20-QFORM-auto11-r49/"
+  },
+  "handoff_commit": "c4c1c06b15ab30f23cc5a24ce268e7cee236151a",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_SEPARATELY"
+}

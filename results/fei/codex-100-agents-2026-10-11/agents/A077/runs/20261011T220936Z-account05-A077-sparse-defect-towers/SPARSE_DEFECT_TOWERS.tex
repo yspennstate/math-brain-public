@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{Sparse-defect towers: blind rarity reuse and exact KL cancellation}
+\author{A077, stream B16}\maketitle
+All entropies are in bits. For $n=\sum_j r_j$ and disjoint physical blocks, let $A_j$ indicate their zero vertices. The Boolean recursion $F_0=-1$, $F_j=1+A_j(F_{j-1}-1)$ gives
+\[F_L=1-2\prod_j A_j=f_n=1-2\mathbf1_{\{x=0\}}.\]
+Writing $p=2^{-n}$, its Fourier coefficients are $1-2p$ at the empty set and $-2p$ elsewhere. Hence
+\[ I(f_n)=2np,\qquad H(f_n)=(1-2p)^2\log_2\frac1{(1-2p)^2}+8p(1-p)(n-1).\]
+The inequality $-(1-v)\log_2(1-v)\le v/\ln2$, with $v=4p(1-p)$, gives $H\le4I$ and $H/I\to4$.
+
+At the unique surviving restriction node of residual dimension $m\ge2$, set $d=2^{-(m-1)}$. The history weight is $w_m=2^{-(n-m)}$. For parent amplitude pairs $(u_T,v_T)$, define $q_T=u_T^2+v_T^2$, $b_T=\min(u_T^2,v_T^2)$, $M=\sum_T b_T$, $\nu_T=b_T/M$. The empty pair is $(1-d,-d)$; all $1/d-1$ other pairs are $(-d,-d)$. Thus
+\[q_0=1-2d+2d^2,\qquad q_T=2d^2\ (T\ne\varnothing),\qquad b_T=d^2,\qquad M=d,\quad \nu_T=d.\]
+The residual dimension-one character has $M=0$. Any complete one-coordinate physical restriction order gives the same residual spectra and history weights. Consequently
+\[ R=\sum_{m=2}^n w_mM\log_2(1/M)=p n(n-1),\qquad R/I=(n-1)/2.\]
+No finite absolute constant pays this blind surcharge.
+
+The exact relative entropy is
+\[D_2(\nu\Vert q)=(1-d)\log_2\frac1{2d}+d\log_2\frac d{q_0}.\]
+Thus, with $a_m=\log_2(1/M)-D_2(\nu\Vert q)$,
+\[a_m=1-d+2d(m-1)+d\log_2q_0.\]
+Since $q_T/b_T\ge2$, $a_m\ge1$. Since $q_0\le1$ and $l2^{-l}\le1/2$ for integers $l\ge1$, $a_m\le2$. Therefore
+\[Q=\sum_{m=2}^nw_mMa_m\le2I.\]
+Moreover, $\sum_{l\ge1}l2^{-l}=2$ implies
+\[1-1/n\le Q/I\le1+3/n,\qquad Q/I\longrightarrow1.\]
+For $n=1$, $Q=R=H=0$. The exact erasure is
+\[ B_m=2d(1-d)+q_0h_2(d^2/q_0),\]
+and the mixture term is $J_m=H(q)-H(f_{m-1})/2$. Thus $B_m+J_m=H(f_m)-H(f_{m-1})/2$, whose weighted sum is $H(f_n)$; leaves have zero entropy.
+
+For disjoint tensor products of these towers and sequential factor-restriction trees, $H,I,R,Q$ add. Tensor spectators multiply both $q$ and $b$ by their spectral probabilities, leaving $M$ unchanged and cancelling from $\nu/q$. In particular $Q\le2I$ and $H\le4I$ still hold, whereas $R/I$ is an influence-weighted average of $(n_j-1)/2$.
+
+This disproves a blind tree surcharge, not FEI or its retained-KL stopping-tree criterion. The first missing universal implication is existence of a physical stopping tree with $Q$ and terminal entropy paid by one influence budget for every Boolean function. Independent review is pending. The full report supplies source pins, exact validation and scope limits.
+\end{document}

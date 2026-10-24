@@ -1,0 +1,13 @@
+T07 one-port field / macro-network exact checker
+states = 15 ; N^3 != 0 and N^4 = 0: PASS
+non-port orbit count = 18 ; port-edge orbit count = 4
+degree<=6 interpolation/readback: PASS on all 18 non-port orbits
+coefficientwise-positive field orbits = 15
+special n=1 cs_A_non_otherg: b(1) = -2/25 disc(1) = -37884/625
+cc_A_disjoint discriminant coefficients = ['-32', '-2736/125', '-92271/15625', '-2414/3125', '-743/15625', '-16/15625']
+ss_diffR_gg discriminant coefficients = ['-2479971456/244140625', '-52504631616/6103515625', '-3712817548/1220703125', '-3507574928/6103515625', '-373574032/6103515625', '-21271072/6103515625', '-506112/6103515625']
+port-pair field-independence and positivity: PASS
+Q1=K5-port brute force: Z=198 min_gap=124
+parallel Q1||Q1 brute force: n=8 m=18 Z=28179 min_gap=44100
+series Q1oQ1 brute force: n=9 m=18 Z=39204 min_gap=0
+ALL_EXACT_CHECKS_PASS

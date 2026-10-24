@@ -1,0 +1,40 @@
+python j2d.py 3 irr ; python j2d.py 3 rat (kappa = 0, 0.25, 0.5, 1, 2)
+N=3 frame=irr points=369 grid=(392, 374) (0s)
+  kappa= 0.00  J2=  13.346  int|T|^2=  4.5810  max|T|=1.000
+  kappa= 0.25  J2=  13.786  int|T|^2=  4.5228  max|T|=0.988
+  kappa= 0.50  J2=  14.650  int|T|^2=  4.3618  max|T|=0.953
+  kappa= 1.00  J2=  16.980  int|T|^2=  3.8765  max|T|=0.836
+  kappa= 2.00  J2=  22.883  int|T|^2=  3.0266  max|T|=0.573
+N=3 frame=rat points=369 grid=(414, 414) (0s)
+  kappa= 0.00  J2=  37.341  int|T|^2=  9.7004  max|T|=1.000
+  kappa= 0.25  J2=  37.341  int|T|^2=  9.5524  max|T|=0.988
+  kappa= 0.50  J2=  37.341  int|T|^2=  9.1374  max|T|=0.955
+  kappa= 1.00  J2=  37.340  int|T|^2=  7.8294  max|T|=0.840
+  kappa= 2.00  J2=  37.340  int|T|^2=  5.3293  max|T|=0.580
+python j2d.py N irr 0,0.5,1,2 for N = 4, 5
+N=4 frame=irr points=1105 grid=(722, 688) (0s)
+  kappa= 0.00  J2=   9.033  int|T|^2=  2.6938  max|T|=1.000
+  kappa= 0.50  J2=  11.217  int|T|^2=  2.3293  max|T|=0.855
+  kappa= 1.00  J2=  15.432  int|T|^2=  1.8968  max|T|=0.607
+  kappa= 2.00  J2=  25.131  int|T|^2=  1.6127  max|T|=0.342
+N=5 frame=irr points=2465 grid=(1162, 1104) (1s)
+  kappa= 0.00  J2=   7.051  int|T|^2=  1.9043  max|T|=1.000
+  kappa= 0.50  J2=  10.467  int|T|^2=  1.4937  max|T|=0.702
+  kappa= 1.00  J2=  16.592  int|T|^2=  1.2582  max|T|=0.420
+  kappa= 2.00  J2=  28.953  int|T|^2=  1.1912  max|T|=0.221
+python j2d.py N irr 0,0.125,0.25,0.5,1,2 for N = 6, 8
+N=6 frame=irr points=4641 grid=(1712, 1626) (4s)
+  kappa= 0.00  J2=   5.669  int|T|^2=  1.4412  max|T|=1.000
+  kappa= 0.12  J2=   6.268  int|T|^2=  1.3950  max|T|=0.945
+  kappa= 0.25  J2=   7.466  int|T|^2=  1.2886  max|T|=0.813
+  kappa= 0.50  J2=  10.742  int|T|^2=  1.0884  max|T|=0.545
+  kappa= 1.00  J2=  18.624  int|T|^2=  0.9905  max|T|=0.299
+  kappa= 2.00  J2=  32.627  int|T|^2=  0.9715  max|T|=0.154
+N=8 frame=irr points=12209 grid=(3144, 2982) (17s)
+  kappa= 0.00  J2=   3.957  int|T|^2=  0.9272  max|T|=1.000
+  kappa= 0.12  J2=   5.171  int|T|^2=  0.8720  max|T|=0.842
+  kappa= 0.25  J2=   7.355  int|T|^2=  0.8061  max|T|=0.590
+  kappa= 0.50  J2=  12.547  int|T|^2=  0.7361  max|T|=0.330
+  kappa= 1.00  J2=  23.448  int|T|^2=  0.7247  max|T|=0.171
+  kappa= 2.00  J2=  38.346  int|T|^2=  0.7164  max|T|=0.089
+(4 pi)^2 = 157.9

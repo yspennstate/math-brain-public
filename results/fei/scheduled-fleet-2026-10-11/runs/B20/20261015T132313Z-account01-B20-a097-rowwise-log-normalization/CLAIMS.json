@@ -1,0 +1,47 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B20",
+  "run_id": "20261015T132313Z-account01-B20-a097-rowwise-log-normalization",
+  "primary_packet_id": "A097",
+  "gap_id": "G-GU-SIGNED-KL",
+  "claims": [
+    {
+      "claim_id": "B20-A097-ROWWISE-MIN-LOG-NORMALIZATION-v1",
+      "version": 1,
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "scope": "Every genuine Boolean function on every finite uniform cube",
+      "exact_statement": "With L_j=sum_{i!=j}(p(j)+p(ij))log2(pi(j))<=0, K^(1)<=sum_j min{V_j/2+L_j/2+r_j/ln2,(9/ln2)(2r_j+s_j)}; hence G<=D_ge2+(2/ln2)M1 plus this rowwise minimum.",
+      "proof_source": "ROWWISE_MIN_LOG_NORMALIZATION.tex",
+      "proof_dependencies": [
+        "B20-A097-ROWWISE-MIN-SINGLETON-CUT-v1",
+        "B11-A052-SINGLETON-KL-LAYER-v1",
+        "B11-A052-OPTIMAL-ROOT-v1",
+        "B07-A031-GU-TENSOR-PRIME-v1"
+      ],
+      "review_records": [],
+      "contributors": [
+        "account01"
+      ],
+      "supersedes": []
+    },
+    {
+      "claim_id": "G-GU-SIGNED-KL-LOG-NORMALIZATION-LEAF",
+      "version": 1,
+      "status": "OPEN",
+      "scope": "Tensor-prime positive-residual genuine Boolean functions of Fourier degree at least three",
+      "exact_statement": "D_ge2+(2/ln2)M1+sum_j min{V_j/2+L_j/2+r_j/ln2,(9/ln2)(2r_j+s_j)}<=4I+3U/4.",
+      "proof_dependencies": [
+        "B20-A097-ROWWISE-MIN-LOG-NORMALIZATION-v1",
+        "B07-A031-GU-TENSOR-PRIME-v1",
+        "B11 degree-at-most-two theorem"
+      ]
+    },
+    {
+      "claim_id": "FULL-FEI",
+      "version": 1,
+      "status": "OPEN",
+      "scope": "All genuine Boolean functions on all finite uniform cubes",
+      "exact_statement": "No universal GU proof or two independent end-to-end reviews are claimed."
+    }
+  ]
+}

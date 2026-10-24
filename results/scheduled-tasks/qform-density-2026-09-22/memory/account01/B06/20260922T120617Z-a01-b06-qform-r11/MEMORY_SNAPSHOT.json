@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "account": "account01",
+  "slot": "B06",
+  "run_id": "20260922T120617Z-a01-b06-qform-r11",
+  "source_control_commit_at_start": "645e8645c43810e908a42b7ee70452403b179c89",
+  "fresh_control_commit_before_delivery": "2fc958197a89e1c7d9ed83b16c2ba395d31522fc",
+  "assignment": "Curved fiber integration",
+  "target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES",
+  "execution_context": "scheduled_automation",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH"
+  ],
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B06",
+    "run_id": "b06-20260922T113045Z-d47192d10a82",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6902eb62f21a7c833ca27dcca69f34d50e711a7d",
+    "blob": "9cced3d58d10574ef548c119c8d5a67276dc870f",
+    "scope_used": [
+      "QFORM-HADAMARD-DELOCALIZED-v1",
+      "QFORM-SAMESIGN-DETERMINANT-MASS-v1"
+    ]
+  },
+  "other_result_used": {
+    "account": "account01",
+    "slot": "B16",
+    "report_creation_commit": "8004481452c19f103fd5dd24c2cb4d787860b56a",
+    "scope_used": "three-dimensional spectral marginal has line integrals at most 2; straight ruling closes one-sheet majority-sign rank-three levels"
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-TWOSHEET-XRAY-ONLY-FALSE-v1",
+      "status": "PROVED_SUPPORTING_COUNTEREXAMPLE",
+      "scope": "Arbitrary 3D probability densities with X-ray norm <=2; not restricted to product projections",
+      "statement": "The X-ray cap alone does not uniformly bound the q=y1^2+y2^2-y3^2 pushforward density on two-sheet levels."
+    },
+    {
+      "id": "QFORM-B06-INFORMATION-SANDWICH-v1",
+      "status": "PROVED_STRUCTURAL_CONSEQUENCE",
+      "scope": "Proof-strategy information budget",
+      "statement": "A curved-fiber proof cannot rely only on one bounded physical block or only on generic spectral X-ray data; it must preserve distributed curvature plus stronger product-projection provenance."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "branch": "master",
+    "commit": "cfb4137e221cd87aeb4f669389d14fa65e3251e7",
+    "blob": "ace66e9d293f4a70005c0ca86a91c8cc29373eac",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260922T120617Z-a01-b06-qform-r11/REPORT.md"
+  },
+  "correction_event": "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+  "unresolved_implication": "QFORM-PRODUCT-PROJECTION-TWOSHEET-TRACE-v1: exploit actual coordinate-product provenance, rather than only generic X-ray bounds, to control the minority-sign two-sheet trace; after that, correlated additional spectral components remain.",
+  "next_step": "Combine account02/B06 Pluecker determinant-mass weights and the fresh account02/B07 localized-plus-diffuse flag decomposition with a product-projection trace inequality; test whether all one-dimensional marginals or a Brascamp-Lieb/Radon invariant rules out the shell concentration.",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

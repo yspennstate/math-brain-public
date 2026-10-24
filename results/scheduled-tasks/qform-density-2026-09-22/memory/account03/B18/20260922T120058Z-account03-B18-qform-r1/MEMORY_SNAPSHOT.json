@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260922T120058Z-account03-B18-qform-r1",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "source_control_commit": "9c946331d5e97e35584005a98d0e496fae7014d0",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "correction_ids_consumed": [],
+  "premises": [
+    {
+      "name": "Banks Corollary 4.18, k=1 non-Gaussian branch",
+      "scope": "two mutually independent coordinate groups, scalar entries each density <=1; deterministic bilinear matrix and arbitrary deterministic linear terms; no moment/log-concavity/Gaussian assumption",
+      "source": "Jesse M. Banks, Random Matrices and Provable Algorithms for Approximate Diagonalization, UC Berkeley PhD thesis (2022), Chapter 4"
+    },
+    {
+      "name": "QFORM-DEPENDENT-SQUARE-SMOOTHING-v1",
+      "scope": "R has density <=M; conditional shifted-square variable has density <=1; no independence between R and shifted variable required",
+      "source_repo": "yspennstate/math-open-problems",
+      "source_commit": "441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T113729Z-account04-B18-qform-r1/REPORT.md",
+      "source_blob": "f33758725ac803c6375215b522c86bd6409d2521"
+    }
+  ],
+  "new_results": [
+    {
+      "claim": "QFORM-BANKS-PHYSICAL-BIPARTITE-v1",
+      "status": "PROVED",
+      "statement": "If an original-coordinate physical bipartite block [[0,B],[B^T,0]] occurs, with arbitrary conditioned outside couplings, then ||p_Q||_infinity <= 2 sqrt(e pi)/sqrt(sigma_1(B)sigma_2(B))."
+    },
+    {
+      "claim": "pure bipartite three-eigenvalue target subclass",
+      "status": "PROVED",
+      "statement": "For A=[[0,B],[B^T,0]], at least three eigenvalues |lambda|>=1 forces sigma_2(B)>=1 and hence ||p_Q||_infinity <= 2 sqrt(e pi)."
+    },
+    {
+      "claim": "QFORM-BANKS-BIPARTITE-SCHUR-SMOOTHING-v1",
+      "status": "PROVED",
+      "statement": "After one original-coordinate pivot a and Schur complement S, if S has a physical bipartite cross block B with zero within-block quadratic terms, then ||p_Q||_infinity <= 4(2 e pi)^(1/4)/(j^(1/4) sqrt(|a| g_j(2B)))."
+    }
+  ],
+  "output_sources": {
+    "scientific_repo": "yspennstate/math-open-problems",
+    "scientific_commit": "53bf1a45bf46dfa09a963d95935f6413c911d1b5",
+    "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260922T120058Z-account03-B18-qform-r1/REPORT.md",
+    "scientific_blob": "6a6f96c4d0aef4d25c7679800056c9e4a13f55cf",
+    "handoff_commit": "82c5ad2cb08372675f55051ab1fa4a207c6fc226",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B18/20260922T120058Z-account03-B18-qform-r1.md",
+    "handoff_blob": "ef9d4bab6c31eb998e0c136dafba49f8c189462a"
+  },
+  "unresolved_implication": "Derive from the bare hypothesis of at least three eigenvalues |lambda|>=1 either a dimension-free physical bipartite rank-two scale (possibly after one physical Schur pivot) or an aggregate Banks-type payment over many weak cross blocks.",
+  "next_step": "Give B19/B20 and coordinate-structure workers the exact Banks cross-block criterion; attack spectral-to-original-coordinate extraction/aggregation without selecting a dimension-degrading fixed minor.",
+  "full_target_status": "OPEN"
+}

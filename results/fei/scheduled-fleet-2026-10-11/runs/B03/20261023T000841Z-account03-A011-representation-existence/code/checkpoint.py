@@ -1,0 +1,8 @@
+from pathlib import Path
+import json,datetime,hashlib
+R=Path(__file__).resolve().parents[1];A=R.parents[1];stamp=datetime.datetime.now(datetime.timezone.utc).isoformat()
+results=[json.loads(p.read_text(encoding='utf-8')) for p in sorted((R/'out').glob('CHECK_*.json'))]
+(R/'out/CHECKPOINT.json').write_text(json.dumps({'saved_utc':stamp,'analytic_result':'all source-prefix prescribed resets paid SAME K4C0+15 with at least K(C+J) residual; final source collapse explicit','jobs_finished':[x['mode'] for x in results],'assertions':sum(x['exact_assertions'] for x in results),'next':'finish frozen census, independent direct-Walsh replay, then finalize protocol files','formal':'HELD: fresh memok physical2.3GB<4GB, no Lean process launched'},indent=2),encoding='utf-8')
+(A/'STATUS.md').write_text('STATE: A011 stage18 ACTIVE: analytic ALL source-prefix fresh-reset payment at SAME K4C0+15; pilot and first main batch PASS; fixed census/replay pending; Lean admission HELD; FEI OPEN.\nNEXT: Finish exact census/replay; retain source-restriction mass and both full terminals; then target per-edit rate inflation from SAME original bank.\n',encoding='utf-8')
+with (A/'WORKLOG.md').open('a',encoding='utf-8',newline='') as f:f.write(f'\n## {stamp} — stage18 checkpoint/account03\nSource-reference KL contracts under mass-preserving physical queries. This pays every active source-prefix fresh floor after padding from original K4C0+15, at least K(C+J) residual. Pilot and first exhaustive batch passed. Formal admission refused at2.3GB free, no Lean launched. Frozen remaining census and independent direct-Walsh replay underway.\n')
+print('checkpoint saved')

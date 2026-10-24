@@ -1,0 +1,13 @@
+{
+  "helper_version": "A085-finite-audit-v2",
+  "reason": "Strengthen original interval review from overlap to containment of an independently computed tighter certified interval",
+  "family": "Same frozen A042 and A047 actual Boolean controls as FROZEN_SPEC.json",
+  "domain": "Six A042 controls with three ratios each; all twenty A047 finite cases",
+  "case_count": 38,
+  "symmetry": "None",
+  "arithmetic": "Exact Fraction 44-term positive range-reduced atanh log enclosure; original A047 uses 40 terms. No fixed-scale term rounding for finite bit entropies. A042 natural-log conversion additionally uses certified 2^96 ln2 enclosure.",
+  "memory_estimate_mb": 150,
+  "max_runtime_seconds": 55,
+  "frozen_before_search": true,
+  "script": "code/audit.py finite"
+}

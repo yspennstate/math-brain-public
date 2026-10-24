@@ -1,0 +1,70 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T062423Z-account01-B12-constant-output-gauge",
+  "stream": "B12",
+  "primary_packet_id": "A057",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "B12-A057-ACTIVATION-QUOTIENT-COLLAPSE",
+      "version": "v1",
+      "status": "PROVED",
+      "scope": "For every Boolean F,h and every A,lambda>=0, the infimum of A q I(h)+lambda Var(h)E_raw(b) over all Boolean branch-pair representations g_h=F is zero.",
+      "proof": "The admissible degenerate representation g_+=g_-=F has b=0, hence q=E_raw(b)=0.",
+      "does_not_prove": [
+        "failure of a quotient constrained by a fixed physical branch structure",
+        "failure of a signed representation-invariant remainder",
+        "full FEI"
+      ],
+      "review_status": "CONTRIBUTOR_CHECK_ONLY",
+      "independent_reviewers_requested": ["A091", "A090"]
+    },
+    {
+      "claim_id": "B12-A057-CONSTANT-OUTPUT-GAUGE-NOGO",
+      "version": "v1",
+      "status": "PROVED_COUNTEREXAMPLE_TO_HELPER",
+      "scope": "There is a genuine three-bit activation-irreducible representation of F=1 whose shared-coordinate drop of A qI+lambda Var*E_raw is negative for every nonzero A,lambda>=0 with A>=4lambda. Hence the current B12 potential cannot be repaired at that step by appending a finite normalized output-only local potential.",
+      "exact_values": {
+        "delta_qI": "-1/32",
+        "delta_VE": "(57/64)ln2-(63/128)ln3 < (ln2)/8 < 1/8",
+        "current_potential_drop_decimal": "-0.1147031920008456744721721501003444540...",
+        "output": "constant 1",
+        "disagreement_support_zero_based": [0, 2, 4, 6, 7]
+      },
+      "proof_dependencies": [
+        {"claim": "exact rational Walsh calculation", "evidence": "CONSTANT_OUTPUT_GAUGE.tex and check_constant_output_gauge.py"},
+        {"claim": "2^98<3^63", "evidence": "(2^14)^7<(3^9)^7"},
+        {"claim": "output-only local charges vanish", "evidence": "F and both restricted outputs are the same constant function"}
+      ],
+      "does_not_prove": [
+        "failure of the exact signed shared remainder",
+        "failure of multi-step cancellation",
+        "failure of the disjoint theorem",
+        "an FEI counterexample"
+      ],
+      "review_status": "CONTRIBUTOR_CHECK_ONLY",
+      "independent_reviewers_requested": ["A091", "A090"]
+    },
+    {
+      "claim_id": "B12-A057-SHARED-COVARIANCE-FORMULA",
+      "version": "v1",
+      "status": "INDEPENDENTLY_RECONSTRUCTED_ONCE",
+      "review_evidence": {
+        "reviewer_stream": "B17",
+        "review_packet": "A085",
+        "report_blob": "a5c089fbd06c2bcac0c3272d4ec5aad8302bbf15",
+        "verdict": "HOLDS_AT_STATED_HELPER_OBSTRUCTION_SCOPE"
+      },
+      "second_review": "PENDING"
+    },
+    {
+      "claim_id": "B12-A057-COHERENT-HIERARCHY",
+      "version": "v6",
+      "status": "OPEN_SHARPENED",
+      "new_obstruction": "unrestricted activation quotient is identically zero, while a constant selected output can still exhibit negative drift of the representation-dependent coherent potential",
+      "required_new_mechanism": "future-activation gauge budget, exact signed shared remainder, or multi-step block cancellation",
+      "stable_gap_alias": "WEIGHTED_LOCAL_TC"
+    }
+  ]
+}
+

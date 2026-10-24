@@ -1,0 +1,12 @@
+{
+  "helper_version": "A067-strip-tree-v1.1",
+  "families": ["dictator one-point surgery N=2,...,10", "Maj3 tensor n-bit point defect n=1,...,8", "tribes with width 2 and 2 or 3 blocks, one-point edited after r=2,...,5 dummy pads", "fixed seed padding strip: dictator, AND2, Maj3, address2 with r=2,...,6"],
+  "parameter_domain": "Fixed explicit dimensions, at most 12 physical variables; no automatic dimension escalation",
+  "case_count": {"dictator_surgery":9,"majority_tensor_defect":8,"edited_tribes":8,"fixed_seed_padding_nodes":20},
+  "symmetry": "No truth-table symmetry quotient; deterministic first relevant padding coordinate, then first remaining relevant physical coordinate. Irrelevant coordinates skipped exactly. Stop at U<=I exactly, including constants.",
+  "arithmetic": "Integer Walsh transforms; exact Fraction spectra/influence/U; rational logarithm intervals via range-reduced atanh with proved positive tail",
+  "memory_estimate_mb": 100,
+  "maximum_runtime_seconds": 60,
+  "pilot": "Same named families at smallest parameters, then full separately invoked fixed domain",
+  "candidate_tests": ["Padding split closed-form identity", "U<=I stopping predicate", "entropy and influence telescopes with terminal costs", "node ratio <=5 on the two analytic families", "edited-tribes maximum node ratio recorded without assuming a universal bound"]
+}

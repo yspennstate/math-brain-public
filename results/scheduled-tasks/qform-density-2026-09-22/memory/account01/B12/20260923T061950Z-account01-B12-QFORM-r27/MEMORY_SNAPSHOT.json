@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260923T061950Z-account01-B12-QFORM-r27",
+  "status": "PROVED_SUPPORTING_THEOREMS_FULL_TARGET_OPEN",
+  "continuity_status": "NOT_PROVED_BY_THIS_BRANCH",
+  "brain_ingestion": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7db285b17fa3c7e5e5a33b6c9dd9d1be5cbeffbe",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260923T061950Z-account01-B12-QFORM-r27/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "036df48e01b7b9fc46cd18d120e466256e81417e",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B12/20260923T061950Z-account01-B12-QFORM-r27.md"
+  },
+  "control": {
+    "initial_commit": "84597da00ef1ab282d3a84481920d438fa8ec9c5",
+    "prepublication_refresh_commit": "5d515c276421ebeaf01a00e5adf30337e521a424",
+    "owner_control_revision": "2026-09-22.15",
+    "programme_revision": "2026-09-22.5"
+  },
+  "new_claims": [
+    {
+      "name": "QFORM-RECIPROCAL-SATURATION-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_NOT_INDEPENDENTLY_REVIEWED",
+      "summary": "For invertible symmetric B and update U Theta U^T, if K=U^T B^{-1}U is nonsingular with kappa=sigma_min(K) and ||Theta^{-1}||<kappa, then sigma_min(B+UThetaU^T) is bounded below by [||B^{-1}||+||B^{-1}U||^2/(kappa-||Theta^{-1}||)]^{-1}, with no sign compatibility requirement."
+    },
+    {
+      "name": "QFORM-SMALL-LARGE-SPECTRAL-SPLIT-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_NOT_INDEPENDENTLY_REVIEWED",
+      "summary": "An active large spectral subset satisfying reciprocal saturation can be combined with arbitrarily many omitted signed eigenvalues charged only by their maximum magnitude and an arbitrary dense tail charged by operator norm; on an original-coordinate physical triple the localized theorem yields an explicit density bound."
+    },
+    {
+      "name": "QFORM-TWO-EIGENVALUE-PARTNER-STRESS-v1",
+      "status": "PROVED_SUPPORTING_EXAMPLE_NOT_INDEPENDENTLY_REVIEWED",
+      "summary": "In the account02/B12 exact C+tau vv^T family, a second orthogonal eigenline w=(0,1,-1,0)/sqrt(2) gives spectrum {1+tau,7+s,7,-11}. For all tau and s outside (-9,-5), plus any dense tail of op norm <=1/4, the partner-routed physical triple has gap >=7/4 and ||p_Q||infinity<=24sqrt(pi)/7."
+    },
+    {
+      "name": "QFORM-INVERSE-LEVERAGE-ZERO-OBSTRUCTION-v1",
+      "status": "PROVED_INTERFACE_LIMITATION_NOT_QFORM_COUNTEREXAMPLE",
+      "summary": "For B=diag(1,-1), u=(1,1)/sqrt(2), u^T B^{-1}u=0 and sigma_min(B+tau uu^T)->0 as |tau|->infinity, so large-eigenvalue stability of a fixed core requires nonzero inverse leverage or a certificate switch."
+    }
+  ],
+  "partner_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "06fbcbb277d5db4f89dfc0c04b14174cc4315cc7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260923T045101Z-account02-B12-auto11/REPORT.md",
+    "applied_to_actual_inequality": "||p_Q||infinity <= 24 sqrt(pi)/7 for the two-literal-eigenvalue stress family outside the finite second-eigenvalue resonance window"
+  },
+  "unresolved": "From s_3(A)>=1 alone, force a physical core and active spectral subset with quantitatively nonsingular inverse leverage and a small residual spectral tail, or switch to another already-paid aggregate certificate. Full conjecture and continuity remain open.",
+  "updated_utc": "2026-09-23T06:42:09Z"
+}

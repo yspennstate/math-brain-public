@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B12",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260923T005556Z-account02-B12-qform",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "initial_commit": "d833e9756c585812963b8066735aa95fbb58defb",
+    "prepublication_commit": "689f2f67cdfe617be4e465de6e4ed7656ccfc6b2",
+    "owner_control_revision": "2026-09-22.15",
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+    "scope_change": "none; QFORM remained sole target"
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "48c0c0c269e7b67adccf6000c0b2b1ca0d1038fa",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260923T005556Z-account02-B12-qform/REPORT.md",
+    "blob": "ffb8bdf77f69764f7d4c7157438545922312879a"
+  },
+  "early_checkpoint": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5485b2e9747e0897befb640793c2dd5da9668947",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260923T005556Z-account02-B12-qform/CHECKPOINT.md"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B12/20260923T005556Z-account02-B12-qform.md",
+    "commit": "1d0f7a6476040c719753e8eedce74da3abd389f4"
+  },
+  "result_ids": [
+    "QFORM-TAIL-RESERVE-MINIMAX-v1",
+    "QFORM-THRESHOLDED-COLLECTIVE-TAIL-STABILITY-v1",
+    "QFORM-COLLECTIVE-TAIL-OPNORM-RAW-STABILITY-FALSE-v1",
+    "QFORM-SCALAR-PIVOT-THRESHOLDED-TAIL-HYBRID-v1"
+  ],
+  "required_source_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+    "result": "Theorem D-prime applied after proving the final three-volume row-marginal gate; yields an explicit density inequality in Theorem 5.1."
+  },
+  "current_volume_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "paths": [
+      "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md"
+    ],
+    "use": "sharp q-dependent coefficient and collective-tail marginal identity; matrix part independently rederived in this run"
+  },
+  "partner_result_applied": {
+    "partner": "account03/B12",
+    "run_id": "20260923T004313Z-qform-eigenvalue-r21",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "dd754a0bfed889fd29c931b7112c8c3285fc83e8",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T004313Z-qform-eigenvalue-r21/REPORT.md",
+    "use": "threshold-preserving physical Schur spectral count plus dependence-safe scalar-square completion, producing the scalar-pivot/collective-tail hybrid inequality"
+  },
+  "main_claims": {
+    "tail_reserve": "inf_{||R||op<=rho} sum_{j>=3}s_j(M0+R)^2 = sum_{j>=3}(s_j(M0)-rho)_+^2",
+    "stability_gate": "with low-leverage row projection P, B the thresholded tail reserve and theta=(||(I-P)M0||op+rho)/B < (sqrt(3/2)-1)/sqrt(3), the final cross block satisfies the D-prime row-marginal gate and yields a dimension-free density bound",
+    "obstruction": "raw T2 and E3 can collapse from order one to zero under operator-norm perturbations tending to zero in a Hadamard no-pivot target family"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "full_target_status": "OPEN",
+  "continuity_status": "PROVED_ON_THRESHOLD-COLLECTIVE-TAIL-BRANCH_ONLY",
+  "independent_review": "PENDING",
+  "unresolved_implication": "From bare s3(A)>=1 in the no-pivot low-reserve class, force an aggregate physical-pair determinant budget or a singular star/grouped-bank certificate before reciprocal local curvature is paid.",
+  "next_mechanism": "Use exact low thresholded-reserve information to make the cross block quantitatively rank-two at the perturbation scale, then combine no-pivot entry bounds with grouped pair/star aggregation. Stress-test against the Hadamard tail-cancellation family from this run."
+}

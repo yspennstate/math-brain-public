@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260923T202515Z-account03-B15-qform-auto11",
+  "source_control_commit_initial": "da6c72c13e7266930ccc7525552a47a8436c2d96",
+  "source_control_commit_refresh": "e95583435d171db49c0a7e61b33d65b2a1955de2",
+  "owner_control_revision": "2026-09-22.15",
+  "owner_request_acknowledged": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "execution_state": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "new_correction": "QFORM-B15-NONZERO-SQUARE-AFFINE-SLOPE-RESCUE-FALSE-v1",
+  "mathematical_result": {
+    "status": "PROVED_CORRECTION_AND_SHARP_SUPPORTING_LEMMA",
+    "statement": "For cap-one Z, gamma!=0, r real, and 1<q<2, ||p_(gamma Z^2+2rZ)||_q <= [2^(q-1)/(2-q)]^(1/q)|gamma|^(-1+1/q), sharply. Therefore the prior claimed additional affine-slope bound (2|r|)^(-1/3) is false. The exact gamma=0 external-coupling branch remains valid with ||p_Q||_infinity <= p q |b|^(-1+1/p)|c|^(-1/p), and p_Q in C_0.",
+    "counterexample": "Z=-r/gamma+U, U uniform[-1/2,1/2], gives gamma Z^2+2rZ=gamma U^2-r^2/gamma and attains the sharp Lq constant independently of r."
+  },
+  "partner_result_applied": {
+    "partner": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f8d97d9b706dc383144c98bec09a0af076e762da",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260923T151702Z-account04-B15-pivoted-convolution-r6/REPORT.md",
+    "equation_used": "||p_T||_p <= p|b|^(-1+1/p)",
+    "derived_inequality": "For q=p/(p-1)<2, ||p_(T+S)||_infinity <= p[2^(q-1)/(2-q)]^(1/q)|b|^(-1/q)|gamma|^(-1/p)."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4d7b28c4737455388bd14f7bb7abeca5264dffd7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T202515Z-account03-B15-qform-auto11/REPORT.md"
+  },
+  "unresolved_implication": "For nonzero near-null physical curvature, create smoothing while retaining the external coordinate jointly with the curved coordinate; fiberwise conditioning on the affine slope cannot supply a law-uniform improvement.",
+  "next_step": "Seek an original-coordinate two-variable/grouped Lq receiver for gamma Z^2+2cUZ plus the actual allowed same-group curvature/affine terms, uniform as gamma tends to zero, without conditioning U away first.",
+  "full_qform_status": "OPEN"
+}

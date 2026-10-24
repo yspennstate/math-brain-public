@@ -1,0 +1,27 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B04-A018-SHARED-ADDRESS-PACKET",
+      "version": 1,
+      "packet_id": "A018",
+      "attempt_id": "A018-PACKET-COMPRESSION-1",
+      "gap_id": "G-LOWSEL-COLLISION",
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For all integers t,k>=1, the genuine Boolean shared-address function F_{t,k}(x,y)=product_{r=1}^k y_{r,x} has a uniform spectral law on 2^(2t) atoms, H(F_{t,k})=2t and I(F_{t,k})=t/2+k. Its exact collision terms are B_W=M_W=t. It admits a lossless packet cover whose selector fractional spectral congestion is 1/2 although its unweighted worst-case read is 2^t. Meanwhile sum_i h2(I_i)=t+k2^t h2(2^-t), so with k=t that coordinatewise budget divided by influence diverges while H/I=4/3.",
+      "quantifiers": "All integers t,k>=1; all selector and data coordinates are fair and mutually independent; every data coordinate y_{r,b} is physically distinct.",
+      "units": "bits",
+      "scope_exclusions": [
+        "Not a proof or counterexample for full FEI.",
+        "The family has positive selector energy I_sel/t=1/2 and is inside the existing closure.",
+        "Does not prove a universal cheap packet representation.",
+        "Does not control the unrestricted signed-dictator embedding."
+      ],
+      "refutes": [
+        "Universal coordinatewise marginal-entropy estimate sum_i h2(I_i(f)) <= C I(f) for fixed finite C"
+      ],
+      "next_consumers": ["A014", "A019", "A020", "B20"],
+      "independent_reviewers": ["A091", "A090"]
+    }
+  ]
+}

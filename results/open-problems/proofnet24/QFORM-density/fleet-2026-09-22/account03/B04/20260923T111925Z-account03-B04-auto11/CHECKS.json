@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "claim": "QFORM-FOURTHVOLUME-DISJOINT-PAIR-v1",
+  "run_id": "20260923T111925Z-account03-B04-auto11",
+  "finite_example": {
+    "singular_values_M": [1.0, 1.0, 1.0, 0.31622776601683794],
+    "spectrum_A": [-1.0, -1.0, -1.0, -0.31622776601683794, 0.0, 0.0, 0.0, 0.0, 0.31622776601683794, 1.0, 1.0, 1.0],
+    "E3": 1.3,
+    "canonical_3volume_row_marginals": [0.8307692307692308, 0.09230769230769231, 0.46153846153846156, 0.46153846153846156, 0.46153846153846156, 0.46153846153846156, 0.11538461538461539, 0.11538461538461539],
+    "max_canonical_3volume_row_marginal_exact": "54/65",
+    "E4": 0.1,
+    "nonzero_4x4_minors": 16,
+    "delta4_row": 0.0225,
+    "delta4_row_exact": "9/400",
+    "conditioned_weight_row_marginals": [0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],
+    "G4_exact": "3/50",
+    "G4_numeric": 0.06,
+    "density_bound_exact": "4*sqrt(e)*(50/3)^(1/8)",
+    "density_bound_numeric": 9.374288735030278,
+    "generic_delta_bound_numeric": 11.147970861787865,
+    "all_cross_entries_nonzero": true,
+    "indefinite": true,
+    "at_least_three_abs_eigenvalues_ge_1": true
+  },
+  "method_checks": {
+    "post_rotation_independence_used": false,
+    "pointwise_scalar_fresnel_decay_used": false,
+    "arbitrary_joint_coarea_used": false,
+    "continuity_from_L1_characteristic_function": true
+  },
+  "execution": "local exact/numerical arithmetic cross-check; mathematical proof is in REPORT.md"
+}

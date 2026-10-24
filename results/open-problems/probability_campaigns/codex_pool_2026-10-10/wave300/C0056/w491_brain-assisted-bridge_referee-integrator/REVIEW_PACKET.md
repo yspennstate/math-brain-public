@@ -1,0 +1,18 @@
+# C0056 independent referee packet, w491, 2026-10-10
+
+Scope: snapshot of w489 and w490 artifacts read today. KEEP below means a limited lemma/counterexample survived my independent check. It does not mean the parent problem or the September 23 preprint has been checked.
+
+| Peer item | Verdict | Independent reproduction and boundary |
+| --- | --- | --- |
+| w489 CLAIMS L1 | KEEP | For mu=delta_0, substitute E=eta u: integral eta/(E^2+eta^2) dE=pi and integral eta^2/(E^2+eta^2)^2 dE=pi/(2 eta). Atomic mu remains possible. |
+| w489 ATTEMPT L2 / w490 CE-001 | KEEP | For X uniform [-1,1], mu_X=delta_X. The disorder-averaged normalized Poisson density is at most 1/2, although every sample is atomic. w490's joint tail equals (2/pi) arctan sqrt(1/(pi eta M)-1) for 0<eta<1/(pi M), and tends to 1 as eta falls. |
+| w489 ATTEMPT L3 | KEEP | Fatou supplies an almost-sure bounded-Lp subsequence; reflexive weak compactness (p>1), tested against C_c(I), identifies the weak limit with pi mu on I. Weak lower semicontinuity and Fatou yield the claimed expected density norm. Requires a genuine pth moment of the random resolvent, not the pth power of its expectation. |
+| w489 ATTEMPT L4 | KEEP as conditional lemma | Schur complement sign checked: Im M_x=eta+Im<b,(H^x-z)^(-1)b> >0. Own-site independence allows integration of rho(v); u=(lambda v-Re M_x)/Gamma_x gives exactly ||rho||_infinity c_p Gamma_x^(1-p)/lambda. No independence of different neighbors is used. The fixed-lambda negative-moment premise is unproved. |
+| w489 ATTEMPT L5 | KEEP as barrier calculation | Resolvent identity and ||R(z)||<=1/eta give ||R_lambda-R_0||<=lambda/eta^2. Since ||b_x||^2=6, the cavity imaginary part differs by at most 6 lambda/eta^2. A hypothetical free lower bound c therefore transfers only if eta^2>=12 lambda/c, not down to zero at fixed lambda. |
+| w490 BRIDGE-001 | KEEP as conditional equivalence | In the forward direction, uniform integrability on P x J gives weak L1 compactness. Testing against 1_A phi for every event A and a countable dense family of phi gives samplewise equality of measures. Conversely, choose J inside K inside I; the joint kernel on K has an L1 density, Poisson convolution converges in joint L1, and the outside-K contribution is O(eta/dist(J,R\K)^2). Heights eta>=epsilon are uniformly bounded. |
+| w490 UI_SEPARATION.md | KEEP as special-case counterexample | For g(E)=1/[E(log(1/E))^2] on (0,e^-1), u=log(1/E) gives integral g=integral_1^infinity u^-2 du=1, but integral g^p=integral_1^infinity e^((p-1)u)u^(-2p)du=infinity for every p>1. Poisson approximate identities converge to g in L1, so the transforms are uniformly integrable; Fatou makes their local Lp norms unbounded. This is a deterministic scalar spectral example, not an Anderson result. |
+| w490 SOURCE-001 / SOURCE_STATUS.json snapshot | FIX documentary status | Its saved SOURCE_STATUS still says exact statement null and owner/primary checks pending. Replace from the original Bourgade Section 2.1 and split the two targets; record the 2026 author preprint as a claim, not a verified proof. This packet's SOURCE_STATUS.json supplies the source comparison. |
+
+Unresolved: no peer proves the uniform cavity negative moment, another fixed-lambda zero-height certificate, nonzero weight from the conditional lemmas alone, or GOE local statistics. The original-source/source-hash checks are not mathematical proof receipts. No served-model identity evidence was available in this review.
+
+Review evidence: `~/brain_workers/w489/ATTEMPT.md`, `~/brain_workers/w489/CLAIMS.jsonl`, `~/brain_workers/w490/INDEPENDENT.md`, `~/brain_workers/w490/UI_SEPARATION.md`, `~/brain_workers/w490/CLAIMS.jsonl`, Bourgade 2018 Section 2.1, and `retrieval_measure.json`.

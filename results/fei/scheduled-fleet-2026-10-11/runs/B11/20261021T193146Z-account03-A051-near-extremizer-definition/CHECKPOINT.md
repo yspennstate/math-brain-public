@@ -1,0 +1,1 @@
+Target: entropy-preserving affine Fourier recentering and coordinate shears of a finite maximal-deficit minimal witness. Prove minimum-basis constraints, affine spectral compression, and isolate unpaid Boolean pair residual. FEI OPEN. NEXT: exact GF(2) proof and bounded exhaustive n<=3 verification.

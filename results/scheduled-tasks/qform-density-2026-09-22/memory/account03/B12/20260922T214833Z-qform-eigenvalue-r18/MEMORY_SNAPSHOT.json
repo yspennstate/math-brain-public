@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260922T214833Z-qform-eigenvalue-r18",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "source_control_start": "7db9e7842f8cc0881366615d452035da95f7ecc5",
+  "source_control_prepublication": "744e0110da52416b912170eb98a6e64dfec3145f",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-MIXED-NORM-SHEAR-COMPILER",
+      "source": "yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e:proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260922T192552Z-account04-B12-mixed-shear-r1/REPORT.md",
+      "scope": "For joint density h(u,r), M(h)=int esssup_u h(u,r)dr bounds every U+psi(R), with no independence between U and R required."
+    },
+    {
+      "id": "QFORM-FULL-MATRIX-INDEFINITE-PAIR-LOG-v1",
+      "source": "yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md",
+      "scope": "For cap-one independent coordinates, s3(H)>=s and an invertible indefinite original-coordinate pair B with D=|det B|, kappa=sigma_min(B), density cap 3*400^(1/3)(D^2 kappa s)^(-1/6), arbitrary affine terms and arbitrary remaining spectrum."
+    },
+    {
+      "id": "QFORM-ONE-DIMENSIONAL-BANK-DENSITY-CAP",
+      "source": "Rudelson-Vershynin theorem as source-pinned in yspennstate/math-open-problems account02/B02 QFORM report",
+      "scope": "Normalized linear combination of independent cap-one one-dimensional densities has density cap sqrt(2)."
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-TWO-BANK-THIRD-SOURCE-ARBITRARY-COMPLETION-v1",
+      "status": "PROVED_SUPPORTING_TARGET_LEVEL_THEOREM",
+      "statement": "For two disjoint original-coordinate normalized banks Y1,Y2, disjoint core Z, outside R, Q=W^T H W+2W^T C R+psi(R), W=(Y1,Y2,Z), if s3(H)>=s and the bank pair B is invertible indefinite with D=|det B|, kappa=sigma_min(B), then ||p_Q||inf <= 6*400^(1/3)(D^2 kappa s)^(-1/6). If B is definite, ||p_Q||inf <=2*pi/sqrt(|det B|). The third singular source may lie anywhere in Z; psi and C are arbitrary."
+    },
+    {
+      "id": "QFORM-TWO-BANK-SPECTRAL-LEAKAGE-STABILITY-v1",
+      "status": "PROVED_SUPPORTING_STABILITY_THEOREM",
+      "statement": "For protected H0 with s3(H0)>=s0 and bank pair gap beta0, signed added rank-one spectral terms have core leakage F with Delta=||F||. If Delta<min(s0,beta0), an indefinite pair obeys ||p_Q||inf <=6*400^(1/3)[(beta0-Delta)^5(s0-Delta)]^(-1/6); a definite pair obeys <=2*pi/(beta0-Delta). Added directions entirely outside the protected core cost zero regardless of sign, rank, or magnitude."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "partner": "account04/B12",
+    "source": "yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e:proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260922T192552Z-account04-B12-mixed-shear-r1/REPORT.md",
+    "application": "After fixed-outside application of the arbitrary-rank indefinite-pair theorem, the joint core/outside mixed norm is bounded by the same constant; account04/B12 then adds the actual dependent measurable remainder psi(R) with no convolution or independence assumption."
+  },
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "e71ed8023266f157a6f5c7a04ea6f9c53acc59c5",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260922T214833Z-qform-eigenvalue-r18/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260922T214833Z-qform-eigenvalue-r18/CHECK.py",
+    "checker_result_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260922T214833Z-qform-eigenvalue-r18/CHECK_RESULT.json"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "37f890f8bc7651f09165ede0fc6516802f9bf695",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B12/20260922T214833Z-qform-eigenvalue-r18.md"
+  },
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "NOT_PROVED_BY_THIS_RESULT",
+  "unresolved_implication": "From only s3(A)>=1, force two disjoint scalar banks with a quantitative nonsingular pair while retaining any third singular direction in the reduced core, or reach an already-paid physical-pair/ridge/localized branch; heavily overlapping Hadamard frames remain the stress case.",
+  "next_mathematical_attempt": "Attack overlapping-frame-to-two-bank extraction with a perturbative factorization error paid before reciprocal pair costs, using the two-bank third-source theorem as the payment endpoint.",
+  "scheduler_mutations": 0,
+  "quiet_delivery_changed": false
+}

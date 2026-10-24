@@ -1,0 +1,119 @@
+[
+  {
+    "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+    "version": 5,
+    "exact_statement": "For actual Boolean children g and h=g(1-2*1_D) on m uniform bits, nonempty D of s vertices and E(D) internal unordered edges, d=s*2^-m and c_D=I(gh)/2=2^-m(ms-2E(D)), and c_D+log2(e)*d-B equals 2^-m(s log2(s)-2E(D)) + [d+(1-d)ln(1-d)]/ln2 + I(Z;T), with Z the selector spectral bit and T the residual label. For quadratic bent core b on even k>=4 and a one-point activation on r>=0 controls, actual selector surgery F has I(F)=2^-r[k/2+r(1-2^(-k/2))+2^-k(A_D+r S_D+s)], with S_D=sum_D b(v) and A_D=sum_(v in D,i:v^i notin D)b(v)b(v^i). For alpha=s*2^-k<1/2, c_D/I(F)<=2alpha/(1-2alpha). Every fair constant-child split obeys B/d<=2+log2(e)/sqrt(e)<3, so control-first activation creates no threshold-4 bad-node credit and scales the full active core ledger by 2^-r. Exact exhaustion of k=4, r in {0,2,4}, all D of sizes 1..4 and four named complete orders gives maximum Q_bad,4/I=4/29 at D={15},r=0,selector-first or control-first, while control-data-selector has zero bad-node credit for every such D and every integer r>=0. For D3={2,4,6} and D4={2,4,6,11}, the data-first descendant after x0=0 querying x1 is bad for every r>=1; its B/d is at least [112-54log2(3)+80log2(5)-98log2(7)+26log2(13)]/8 in (4157/1000,4158/1000). The full data-first bad-node ratio is at least (r+3)/(35+15r) or (r+3)/(34+14r), respectively. These are scoped root/ledger claims, not a universal stopping-tree payment or an FEI disproof. Extension: For every even k>=2, every r>=0 and every D of at most four vertices, the same activated fair-selector quadratic-bent surgery has an explicit physical stopping tree querying controls, then the first coordinate of each quadratic pair, then the selector, while retaining all partner bits at the leaves. Every access node obeys B<=4d (pair nodes obey B/d<=8-3log2(3)<4; control and selector nodes obey B/d<3 for d>0), so access bad-node odd-face credit is exactly zero. Every retained leaf is a character or a character times a defect on at most four points, and every such leaf on any dimension obeys H<=6I. Hence H(F)<=(4+2/ln2)I_removed+6I_terminal<=(4+2/ln2)I(F), with I_removed+I_terminal=I(F) exactly. The new stopping policy was certified on 9212 labelled roots at k=4,6,8 and r=0,2; all 41650 sparse-defect/character cases on dimensions 0..4 were also certified. That fair-selector theorem has its original restricted scope; it does not certify arbitrary data cores or constant-leaf completion. Additional one-point controller theorem: Let k=2m>=4, b be the paired quadratic bent sign, v any data vertex, A any indicator on any number of fresh uniform controller bits, a=1-2A, alpha=EA, delta=2^-k, and F=b(x)(1-2*1_(x=v)*A(z)). Query only the first coordinate in each bent pair and STOP with all partners/controllers retained. Every access node has d>=1/2-2^-m>=1/4 and B/d<=8-3log2(3)<4; no inactive-branch fairness or bounded-contrast hypothesis is required. Exactly I_ctrl(F)=delta I(a) and H(F)<=7 I_data(F)+delta H(a), so H(a)<=C I(a) implies H(F)<=max(7,C)I(F). The exceptional leaf has reach tau=2^-m and, before its common character shift, is q=1-2*1_(t=w)*A(z); its complete entropy is phi((1-2tau alpha)^2)+(2^m-1)phi(4tau^2 alpha^2)+tau[H(a)-phi((1-2alpha)^2)]+8tau alpha(1-alpha)m. The character shift increases its raw data influence 2m tau alpha and preserves controller influence. All controller entropy is retained with final coefficient delta; only the actual terminal data reserve pays its spreading and alpha log alpha terms. For every bent reference (including nonquadratic), the signed root spectrum is bhat(S)*1_(T=empty)-2delta b(v)chi_S(v)Ahat(T), and its complete entropy is N_plus phi((beta-2delta alpha)^2)+N_minus phi((beta+2delta alpha)^2)+delta[H(a)-phi((1-2alpha)^2)]+8delta alpha(1-alpha)k, beta=2^(-k/2),N_plus/minus=(2^k plus/minus 2^(k/2))/2,phi(u)=u log2(1/u),phi(0)=0. The all-bent root identity does not extend the stopping policy beyond paired quadratic references. Arbitrary-controller FEI and constant-leaf completion remain open; unequal two-point controllers are handled by the subsequent theorem. Additional two-vertex theorem: For every paired quadratic bent k=2m>=6, distinct data vertices v,w, and arbitrary indicators A,B on the same uniform independent-of-data controller cube (with any dependence between A and B), F=b[1-2*1_(x=v)*A-2*1_(x=w)*B] has K4-good paired data access, I_ctrl=delta[I(1-2A)+I(1-2B)], and H(F)<=9I_data+delta[H(1-2A)+H(1-2B)]. The exact signed root cross terms are retained. Adjacent data edges contribute -4delta b(v)b(w)E(AB) to their data direction, and the leaf data bank uses the actual post-cancellation influence. No inherited controller entropy is omitted or paid twice. Growing edit sets without a data-support guard remain open. Growing-edit extension: For every k=2m>=4, paired quadratic bent b, q distinct data vertices v_j, and arbitrary indicators A_j on the same uniform controller cube independent of the data (with unrestricted controller dependence), set a_j=1-2A_j, delta=2^-k and F=b[1-2 sum_j point_(v_j) A_j]. If q<=2^(m-2), then I_ctrl(F)=delta sum_j I(a_j) and H(F)<=K(m,q)I_data(F)+delta sum_j H(a_j), where K=max(4+2log2(e),[4m+2log2(e)+4log2(e)/e]/[m-log2(q)]). If q^2<=2^(m-2), K<8, so H(F)<=8I_data(F)+delta sum_j H(a_j). Every paired access query has d>=1/4 and B<4d; every terminal bill uses actual post-cancellation data influence once. Signed root and terminal spectra and their exact entropy-row decompositions are given in current PROOF.md (4),(7); the root identities and adjacent E(A_j A_l) influence correction hold for every bent reference, while access requires quadratic pairs. Starting with constants/characters and repeatedly applying this guarded construction with fresh independent data blocks and previously constructed controllers gives H<=8I at all finite depths, even when controllers share existing bits. This is a scoped grammar; arbitrary Boolean admission and unguarded dense-edit payment remain open. Root-density extension: On k data bits with ANY Boolean seed b, distinct per-vertex indicators A_j on a shared controller cube independent of data, a_j=1-2A_j, delta=2^-k, p=delta sum EA_j, V=delta sum[1-(Ea_j)^2], and L=delta sum H(a_j), the exact controller spectral marginal is R=(1-qdelta) point_empty+delta sum_j ahat_j^2. The complete signed root entropy obeys H(F)<=L+k(1+V)+phi(1-V)-delta sum phi((Ea_j)^2), and its exact excess is the nonempty-row label mixing refund plus sum_T R_T[k-H(nu_T)], with actual signed conditional data laws nu_T. Exactly I_ctrl=delta sum I(a_j); I_data>=I(b)-2kp and V<=4p(1-p)<=4p. Thus if k>=4, I(b)>=k/2 and actual expected flip density p<=1/8, then H(F)<=7I_data+L, with NO cardinality or quadratic-pair guard: every vertex can carry a dependent controller. This includes all bent references and supplied high-influence non-flat tensor/parity seeds. If nominal q/2^k<=1/8 or<=1/16, the respective data rates5 and3 suffice. Starting with constants/characters and iterating fresh-data high-influence seeds and previously certified shared-bit controllers under p<=1/8 gives H<=7I at every finite depth. This is a whole-root capacity payment; it does not assert K4-good access, paid prescribed mixed histories, or a renewed leaf bank. Arbitrary target admission and low-influence-seed payment without ambient k/I(b) loss remain open.",
+    "hypotheses": [
+      "Inherited v1/v2 statements keep their own original fair-selector, fresh-control, pattern and dimension hypotheses.",
+      "Entropy in bits; badness is strict B>4d",
+      "Root bound k>=4 even and 0<alpha<1/2",
+      "Finite maxima restricted to the frozen four named orders and declared domain",
+      "All-r zero-credit extension restricted to k=4 and |D|=1..4",
+      "All-r bad-descendant lower bounds restricted to the two named vertex sets",
+      "New all-dimensional result: quadratic paired bent reference, uniform fair selector, fresh point-activation controls, |D|<=4",
+      "New zero-credit result concerns the stated stopping access tree; complete retained terminal entropy is included",
+      "Additional one-point theorem: paired quadratic bent data k>=4 even; one fixed data vertex; arbitrary indicator controller independent of all data bits; no controller balance or point-block assumption",
+      "All-bent root spectrum/entropy identity needs only a flat Boolean Fourier spectrum; the stopping theorem needs explicit quadratic pairs",
+      "All access and terminal accounts use one physical stopping tree; the complete delta H(controller sign) bill is retained",
+      "Two-vertex extension has paired quadratic k>=6, distinct vertices and arbitrary possibly dependent controllers; exact adjacent-edge cancellation retained",
+      "Growing-edit result has k=2m>=4 paired quadratic bent data, distinct vertices, arbitrary possibly overlapping controllers independent of the data, and the explicitly stated q support guard.",
+      "Recursive closure uses fresh data blocks and previously certified controller signs; no arbitrary-function representation is asserted.",
+      "Root-density theorem: independent uniform data/controller cubes, distinct edited data vertices, arbitrary Boolean seed; high-influence absolute rates additionally require k>=4, I(seed)>=k/2, and actual p<=1/8.",
+      "The root data budget is used once with all controller spectra retained; recursive closure admits only previously certified controllers on fresh data blocks."
+    ],
+    "statement_sha256": "ce033ca4d482920ff37b414900678cbc21c7a18a2903db0fe18baf2775ce39e0",
+    "contributors": [
+      "A022"
+    ],
+    "proof_source": {
+      "run_id": "20261014T103056Z-account05-A022-one-point-surgery",
+      "new_proof": "PROOF.md",
+      "inherited_proof": "~\\brain_workers\\FEI100_20261011\\agents\\A022\\runs\\20261014T043413Z-account05-A022-one-point-surgery\\PROOF.md",
+      "certificate": "out/full_RESULTS.json",
+      "exact_cases": "out/full_CASES.json",
+      "separate_edges_and_frontier": "out/EDGE_FRONTIER_RESULTS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+        "version": 4,
+        "scope": "inherited statements only; new root-density proof is self-contained",
+        "status": "author proved; independent full review pending"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A025",
+        "verdict": "HOLDS_FOR_INHERITED_CONSTANT_CHILD_SUBCLAIM_ONLY",
+        "reviewed_version": 1,
+        "source": "~/brain_workers/FEI100_20261011/agents/A025/runs/20261012T045020Z-account05-A025-rare-event-counterfamily/REVIEW_A022.md",
+        "new_version_review": "PENDING; separate edge implementation is author verification, not independent human acceptance"
+      }
+    ],
+    "status": "AUTHOR_PROVED_ROOT_DENSITY_HIGH_INFLUENCE_EXTENSION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+        "version": 4
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A021",
+      "A023",
+      "A025",
+      "A027",
+      "A028",
+      "A029",
+      "A064",
+      "A087",
+      "A094",
+      "B05"
+    ]
+  },
+  {
+    "claim_id": "A021-POINT-SWITCH-RELATIVE-BIAS-PRICE",
+    "version": 1,
+    "exact_statement": "Let G,H be arbitrary Boolean signs on a common uniform data cube, gamma=P(G!=H)>0, eta=P(G=-1), c=1/ln2, and F=G+A_j(H-G) for any j>=1 fresh independent point controls. At a live selector query d=rho gamma, rho=2^-(j-1), and B_i(F)/d<=max{4,c+log2(8eta/gamma+4)}+2c/sqrt(e). If eta<=gamma/5 all live point-selector queries are strictly 6-good; if eta<=gamma they are strictly 7-good, uniformly as gamma tends to zero and in both dimensions. Let P(theta) be the supremum of this B_i/d over every actual Boolean pair, every data dimension and every positive point width with gamma>0 and eta/gamma<=theta. For every real theta>=8, log2(theta)-3<=P(theta)<=log2(theta)+307/45, hence P(theta)/log2(theta)->1. Actual balanced bent_m/one-vertex-flip branches G=z b_m,H=z bprime_m with even m>=4 have eta=1/2,gamma=2^-m and B/d>=m-2, proving necessity of the logarithmic contrast price up to an absolute additive constant. For independent positive point blocks S,W,U,V of arbitrary positive widths and ANY independent Boolean g, A=WUV+S(U OR V-WUV), F=1+A(g-1) has an explicit control-only stopping tree (S first, conjunction on failure, U then V on success) with Q_bad,7=0. Its full terminal accounts are pi H(g),pi I(g), pi=EA; queried physical influence is (1-Eg)J(A), J(A)=I(1-2A)/2. Thus H(F)<=(7+2/ln2)(1-Eg)J(A)+pi H(g). If H(g)<=C0 I(g), then H(F)<=max(10,C0)I(F). This is not threshold-4 payment or a universal terminal-core bound.",
+    "hypotheses": [
+      "actual Boolean signs on uniform physical cubes; entropy in bits",
+      "G,H may share all data coordinates; point-selector controls fresh and independent",
+      "eta uses the inactive source branch, gamma the unthinned source disagreement; live queries retain the same source branches",
+      "gamma=0 is interpreted separately as B=d=0",
+      "P(theta) includes all data dimensions and point-selector widths, with positive source disagreement",
+      "three-event application uses mutually disjoint fresh positive point blocks independent of g; arbitrary terminal bias is permitted",
+      "all terminal entropy and influence retained; no reused full-face reserve"
+    ],
+    "statement_sha256": "2ccea9f4bf55495791c70de6b742e9bee6587eb7fd21103751abec2a29dd5b84",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261014T011316Z-account05-A021-rare-core-asymptotics\\DERIVATION.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A022",
+        "verdict": "HOLDS_UPPER_POINT_SWITCH_PRICE_AND_K6_K7_CONSEQUENCES_ONLY",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A022\\runs\\20261014T014918Z-account05-A022-one-point-surgery\\REVIEW_A021.md",
+        "scope": "DERIVATION.md sections1-2 only; no acceptance of whole bundled claim or its lower supremum/application",
+        "repair_contribution": false
+      }
+    ],
+    "status": "PARTIAL_INDEPENDENT_REVIEW_FULL_BUNDLE_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "A scalar price for all point-switch branch pairs can be bounded independently of inactive-branch contrast without an owned rebate. This is a scoped pricing obstruction, not an FEI counterexample."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A025",
+      "A027",
+      "A028",
+      "A087",
+      "B05",
+      "B20"
+    ]
+  }
+]

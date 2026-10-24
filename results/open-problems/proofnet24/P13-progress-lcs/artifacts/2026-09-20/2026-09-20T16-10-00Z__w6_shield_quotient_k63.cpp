@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;using u128=unsigned __int128;
+static string S(u128 x){if(!x)return"0";string s;while(x){s.push_back(char('0'+x%10));x/=10;}reverse(s.begin(),s.end());return s;}
+static inline uint32_t step_state(uint32_t state,int uv,int w){int m=2*w;uint32_t mask=(1u<<m)-1,x=state&mask,g=(state>>m)&mask;int u=(uv>>1)&1,v=uv&1,c[32];c[0]=0;for(int i=1;i<=m;i++){int gi=(g>>(i-1))&1,xi=(x>>(i-1))&1;c[i]=(1-gi)*(c[i-1]||(xi==v));}uint32_t gp=0;for(int i=1;i<m;i++){int z=((g>>i)&1)+c[i+1]-c[i];if(z)gp|=1u<<(i-1);}if((1-c[m])*(u==v))gp|=1u<<(m-1);uint32_t xp=(x>>1)|(uint32_t(u)<<(m-1));return xp|(gp<<m);}
+static inline uint32_t canon(uint32_t s,int w){int m=2*w;uint32_t mask=(1u<<m)-1,x=s&mask,g=(s>>m)&mask;int l=0;while(l<m&&((g>>l)&1u))l++;if(l) x&=~((1u<<l)-1u);return x|(g<<m);}
+struct QNode{uint32_t n[4];uint8_t gm;};
+int main(){constexpr int w=6,m=12;const uint32_t BAD=0xffffffffu;size_t total=1ull<<(2*m);vector<uint32_t> seen(total,BAD),states;states.reserve(5800000);seen[0]=0;states.push_back(0);for(size_t h=0;h<states.size();h++){for(int a=0;a<4;a++){uint32_t t=step_state(states[h],a,w);if(seen[t]==BAD){seen[t]=states.size();states.push_back(t);}}}cout<<"reachable="<<states.size()<<"\n";
+vector<uint32_t> qid(total,BAD),reps;reps.reserve(4500000);for(uint32_t s:states){uint32_t c=canon(s,w);if(qid[c]==BAD){qid[c]=reps.size();reps.push_back(c);}}
+cout<<"shield_quotient="<<reps.size()<<" collapsed="<<states.size()-reps.size()<<"\n";
+vector<QNode> Q(reps.size());for(size_t qi=0;qi<reps.size();qi++){uint32_t s=reps[qi];QNode q{};q.gm=(s>>(2*m-1))&1u;for(int a=0;a<4;a++){uint32_t c=canon(step_state(s,a,w),w);uint32_t j=qid[c];if(j==BAD){cerr<<"missing quotient successor\n";return 2;}q.n[a]=j;}Q[qi]=q;}
+size_t checks=0;for(uint32_t s:states){uint32_t qi=qid[canon(s,w)];if(((s>>(2*m-1))&1u)!=Q[qi].gm){cerr<<"output mismatch\n";return 3;}for(int a=0;a<4;a++){uint32_t t=step_state(s,a,w);uint32_t qj=qid[canon(t,w)];if(qj!=Q[qi].n[a]){cerr<<"transition mismatch\n";return 4;}checks++;}}
+cout<<"bisimulation_transition_checks="<<checks<<" PASS\n";
+vector<u128> cur(Q.size()),nxt(Q.size());for(size_t i=0;i<Q.size();i++)cur[i]=Q[i].gm;u128 p4=1,mn62=0,mx62=0,mn63=0,mx63=0,p62=0,p63=0;for(int k=0;k<=63;k++){u128 mn=cur[0],mx=cur[0];for(size_t i=1;i<cur.size();i++){mn=min(mn,cur[i]);mx=max(mx,cur[i]);}if(k==62){mn62=mn;mx62=mx;p62=p4;}if(k==63){mn63=mn;mx63=mx;p63=p4;break;}for(size_t i=0;i<Q.size();i++){auto&q=Q[i];nxt[i]=cur[q.n[0]]+cur[q.n[1]]+cur[q.n[2]]+cur[q.n[3]];}cur.swap(nxt);p4*=4;}
+cout<<"k62 pow4="<<S(p62)<<" min="<<S(mn62)<<" max="<<S(mx62)<<" spread="<<S(mx62-mn62)<<"\n";cout<<"k63 pow4="<<S(p63)<<" min="<<S(mn63)<<" max="<<S(mx63)<<" spread="<<S(mx63-mn63)<<"\n";cout<<"width_strict_slack_numerator_common_denom="<<S(4*(mx62-mn62)-(mx63-mn63))<<"\n";cout<<"lower_inward_num="<<S(4*mx62-mx63)<<" upper_inward_num="<<S(mn63-4*mn62)<<"\n";cout<<"ALL_EXACT_CHECKS_PASS\n";}

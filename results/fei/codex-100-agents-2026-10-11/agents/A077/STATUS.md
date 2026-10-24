@@ -1,0 +1,2 @@
+STATE: A077 stage5 complete: repeated rare-private exposures paid by one geometric mark; arbitrary interleaving/selector timing B_T+E K_leaf<=10P_data+22Inf_z; 318,065 exact main+review checks; A076 scoped HOLDS; FEI OPEN.
+NEXT: Replace the point-exit release by unused certified signed child surplus at a second private collision with both children nonconstant; retain original selector account, quarter core bill and both terminals.

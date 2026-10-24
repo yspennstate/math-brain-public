@@ -1,0 +1,71 @@
+[
+  {
+    "claim_id": "A031-SIGNED-ENTROPY-ANCHOR",
+    "version": 1,
+    "exact_statement": "For every finite uniform-cube Boolean sign f, let a_S=fhat(S), p_S=a_S^2, ell_S=log2(1/p_S) on positive atoms and a_S ell_S=0 otherwise, c_U=sum_S a_S a_(S xor U) ell_S, E_log=sum_(U nonempty)|U|c_U^2, and J_R=sum_(U nonempty)p_(R xor U)/|U|. Every occupied R obeys p_R[H(f)-ell_R]^2<=J_R E_log; also sum_(U nonempty)c_U^2=Var_p(ell). For a largest atom, H(f)<=ell_R+sqrt(J_R E_log/p_R).",
+    "hypotheses": [
+      "Finite uniform cube",
+      "Genuine Boolean sign",
+      "Entropy in bits",
+      "Definitions and zero conventions in DERIVATION.md"
+    ],
+    "statement_sha256": "e9a7f192c2df83c229a7cfd2c6f88992f84e39cf2da61142a8e013c4e9030c95",
+    "contributors": [
+      "account05/A031"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261011T214115Z-account05-A031-convolution-identity\\DERIVATION.md",
+      "sha256": "1d6bc376f6b158b32fa6046519470f65e7d6f8558d090a5ca1e3fcc7defddbb8"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A088",
+      "A094",
+      "A034",
+      "A035",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A031-ANCHOR-POSITIVE-PAYMENT-NOGO",
+    "version": 1,
+    "exact_statement": "There is no finite universal K with E_log(f)<=K I(f), nor any finite universal K with sqrt(J_R E_log(f)/p_R)<=K I(f) for the largest-atom anchor R of every Boolean f. The first is refuted by n-bit one-point defects with E_log/I~4n^2; the second by disjoint tensor powers of the three-bit point defect, whose anchor cost is exponentially large while influence is linear.",
+    "hypotheses": [
+      "Finite uniform cube",
+      "Genuine Boolean sign",
+      "Entropy in bits",
+      "Definitions and zero conventions in DERIVATION.md"
+    ],
+    "statement_sha256": "9bd6c083fcc52f8c5620dd69e770a89e45a9128eebf7c0860abeb8c228edd605",
+    "contributors": [
+      "account05/A031"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261011T214115Z-account05-A031-convolution-identity\\DERIVATION.md",
+      "sha256": "1d6bc376f6b158b32fa6046519470f65e7d6f8558d090a5ca1e3fcc7defddbb8"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "universal E_log<=K I",
+      "universal largest-atom positive anchor cost<=K I"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A088",
+      "A094",
+      "A034",
+      "A035",
+      "B14",
+      "B20"
+    ]
+  }
+]

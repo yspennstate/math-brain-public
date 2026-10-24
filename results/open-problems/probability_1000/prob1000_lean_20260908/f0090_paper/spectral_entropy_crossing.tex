@@ -1,0 +1,237 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Ent}{\operatorname{Ent}}
+\newcommand{\Inf}{\operatorname{Inf}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\Sc}{\mathcal{S}}
+\newcommand{\Pc}{\mathcal{P}}
+\newcommand{\Var}{\operatorname{Var}}
+
+\title[Spectral entropy of the percolation crossing event]{The spectral entropy of the percolation crossing event is bounded by its influence}
+\author{Yitzchak Shmalo}
+\date{September 2026}
+
+\begin{document}
+
+\begin{abstract}
+Let $f_R$ be the $\pm1$-valued indicator of a left--right crossing of the square $[0,R]^2$ in critical bond percolation on $\ZZ^2$ or critical site percolation on the triangular lattice, and let $\Ent(f_R)=\sum_A \hat f_R(A)^2\log(1/\hat f_R(A)^2)$ be its spectral entropy. We prove that $\Ent(f_R)\le C\,I(f_R)$ for a constant $C$ depending only on the lattice, where $I(f_R)$ is the total influence. This is the percolation case of the entropy/influence conjecture of Friedgut and Kalai, raised as an open problem by Garban, Pete and Schramm and again by Kalai in his ICM survey; equivalently $\Ent(f_R)=O(R^2\alpha_4(R))$. The same bound holds for the entropy of the pivotal set. The proof combines a hierarchical coding bound for the entropy of a random planar set with the one-box estimate for the spectral sample of Garban, Pete and Schramm and the polynomial lower bound on the four-arm probability. More generally the entropy/influence inequality holds for any Boolean function on a planar array of bits whose spectral sample hits the dyadic squares of side larger than one no more often, in expectation, than it hits the bits themselves.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $f$ be a Boolean function on $\{-1,1\}^n$ with values in $\{-1,1\}$, and let $f=\sum_{A}\hat f(A)\chi_A$ be its Fourier--Walsh expansion, the sum running over the subsets $A$ of $[n]$. Parseval's identity says that $\hat f(A)^2$ is a probability distribution on subsets of $[n]$. Its entropy
+\[
+\Ent(f)=\sum_{A}\hat f(A)^2\log\frac{1}{\hat f(A)^2}
+\]
+is the spectral entropy of $f$, and $I(f)=\sum_A\hat f(A)^2|A|=\sum_{x}\Inf_x(f)$ is the total influence. Friedgut and Kalai \cite{FK96} conjectured that $\Ent(f)\le C\,I(f)$ for a universal constant $C$. The conjecture is known for symmetric functions, read-$k$ decision trees, functions of very small influence or very large entropy, and several other classes \cite{OWZ11,KMS12,Sha18}, but it is open in general, and the best general bound to date \cite{Combinatorica24},
+\[
+\Ent(f)\le O\Big(I(f)+\sum_x\Inf_x(f)\log\frac{1}{\Inf_x(f)}\Big),
+\]
+loses a logarithm on functions all of whose influences are small.
+
+Critical planar percolation supplies the most natural test case. Let $f_R$ be the $\pm1$ indicator of a left--right open crossing of the square $[0,R]^2$. Garban, Pete and Schramm, at the end of their study of the Fourier spectrum of $f_R$ \cite[Section~11, Problem~1]{GPS10}, write that ``it is natural to test the conjecture in the setting of percolation: if $f_R$ is the $\pm1$-indicator function of the left--right crossing in the square $[0,R]^2$, is it true that $\Ent(f_R)=O(R^2\alpha_4(R))$?'' Here $\alpha_4(R)$ is the probability of four alternating arms from a point to distance $R$, and $R^2\alpha_4(R)$ is the order of $I(f_R)$. Kalai \cite[Conjecture~8]{Kal18} states the same question, together with the analogous statement for the entropy of the pivotal set, as a conjecture. For the crossing event every influence is of order $\alpha_4(R)=R^{-5/4+o(1)}$ on the triangular lattice, so the general bound of \cite{Combinatorica24} gives only $\Ent(f_R)=O(I(f_R)\log R)$, which is the trivial bound obtained from $|\{A:\hat f(A)\ne0\}|\le 2^{n}$ and $\Ent\le\log(\text{support})$ in a different guise.
+
+We answer the question.
+
+\begin{theorem}\label{thm:main}
+Consider critical bond percolation on $\ZZ^2$ or critical site percolation on the triangular lattice, and let $f_R$ be the $\pm1$ indicator of a left--right crossing of $[0,R]^2$. Let $\Sc$ be the spectral sample of $f_R$ and $\Pc$ its set of pivotal bits. There is a constant $C$, depending only on the lattice, such that for every $R\ge2$
+\[
+H(\Sc)\le C\,I(f_R)\qquad\text{and}\qquad H(\Pc)\le C\,I(f_R).
+\]
+In particular $\Ent(f_R)=O(R^2\alpha_4(R))$.
+\end{theorem}
+
+Here $H$ denotes the entropy of a random set, so $H(\Sc)=\Ent(f_R)$. Neither inequality holds for general Boolean functions with the pivotal set in place of the spectral sample: for the function $\mathrm{OR}_n$ the pivotal set is one of the $n$ singletons or the whole set, each with probability $2^{-n}$, so $H(\Pc)\sim \tfrac{n}{2}\log 2\cdot I(f)$. That the crossing event satisfies both inequalities reflects the geometry of its pivotal set rather than a general Fourier-analytic fact.
+
+The proof has three ingredients. The first is a coding bound: a random subset $\mathcal A$ of the bits of the square can be described scale by scale, recording at each dyadic scale which children of each hit square are hit, and Shannon's source coding theorem turns the expected length of that description into an upper bound on $H(\mathcal A)$. The finest scale contributes a multiple of $\EE|\mathcal A|$, which is $I(f_R)$ for both $\mathcal A=\Sc$ and $\mathcal A=\Pc$; the coarser scales contribute the expected numbers $\EE|\mathcal A_r|$ of hit squares of side $r=2,4,8,\dots$. The second ingredient is the one-box estimate of Garban, Pete and Schramm: the probability that the spectral sample meets a box $B$ is at most the probability of four alternating arms from $B$ to the four sides of the square, and the same holds for the pivotal set. Summing this over all $r$-squares gives $\EE|\mathcal A_r|\le C(R/r)^2\alpha_4(r,R)+C$, after a boundary analysis that uses the half-plane arm exponents. The third ingredient is the polynomial lower bound $\alpha_4(r,R)\ge c(r/R)^{2-\epsilon}$, which makes $(R/r)^2\alpha_4(r,R)$ decay geometrically in $r$: the sum over scales is dominated by its finest term. On the triangular lattice the scale-$r$ term is $(R/r)^{3/4+o(1)}$, as one expects for a random fractal of dimension $3/4$.
+
+The argument uses no second-moment or clustering information about the spectral sample, and this is why it treats $\Sc$ and $\Pc$ alike. Its general content is the following statement, proved in Section~\ref{sec:coding}: for any Boolean function on a two-dimensional array of bits, the entropy/influence inequality holds as soon as $\sum_{k\ge1}\EE|\Sc_{2^k}|=O(\EE|\Sc|)$, where $\Sc_r$ is the set of dyadic $r$-squares hit by the spectral sample. For critical percolation this is a first-moment statement, and it holds because the four-arm exponent is strictly smaller than $2$.
+
+\section{Setting and the percolation inputs}\label{sec:setup}
+
+\subsection{Bits, crossings, spectral sample}
+Fix one of the two lattices. The bits are the edges of $\ZZ^2$ inside $[0,R]^2$ (bond percolation) or the hexagons of the triangular lattice meeting $[0,R]^2$ (site percolation), each open with probability $1/2$ independently; write $\omega\in\{-1,1\}^{n}$ for the configuration. The tile of a bit is its edge or hexagon, and for a set $B\subseteq[0,R]^2$ we write $B$ also for the set of bits whose tiles meet $B$. Let $f_R(\omega)=1$ if there is an open path from the left side to the right side of $[0,R]^2$ and $f_R(\omega)=-1$ otherwise; by planar duality $f_R=-1$ if and only if there is a closed path (dual path for bond percolation) from the top side to the bottom side.
+
+The spectral sample $\Sc$ of $f=f_R$ is the random subset of bits with $\PP[\Sc=A]=\hat f(A)^2$. The pivotal set $\Pc$ is the random set of bits $x$ such that flipping $\omega_x$ changes $f(\omega)$. For a $\pm1$-valued $f$ the influence of $x$ is $\Inf_x(f)=\sum_{A\ni x}\hat f(A)^2=\PP[x\in\Pc]$, so
+\begin{equation}\label{eq:firstmoment}
+\EE|\Sc|=\sum_x\Inf_x(f)=\EE|\Pc|=I(f).
+\end{equation}
+
+\subsection{Arm events}
+For $1\le r\le \rho$ let $\alpha_4(r,\rho)$ be the probability that there are four arms of alternating colours (open, closed, open, closed in cyclic order) crossing the annulus between the discs of radii $r$ and $\rho$ around a point, and let $\alpha_3^+(r,\rho)$ be the probability of three arms of alternating colours crossing the half-annulus between radii $r$ and $\rho$ in a half-plane whose boundary passes through the centre. We write $\alpha_4(\rho)=\alpha_4(1,\rho)$. We use the following standard facts.
+
+\begin{itemize}
+\item[(F1)] \emph{Quasi-multiplicativity and the polynomial lower bound.} There are constants $c,C,\epsilon>0$, depending only on the lattice, such that
+\[
+c\,\alpha_4(r,s)\,\alpha_4(s,\rho)\le\alpha_4(r,\rho)\le C\,\alpha_4(r,s)\,\alpha_4(s,\rho)\qquad(r\le s\le\rho),
+\]
+and
+\begin{equation}\label{eq:lower}
+\alpha_4(r,\rho)\ge c\,(r/\rho)^{2-\epsilon}\qquad(1\le r\le\rho).
+\end{equation}
+Quasi-multiplicativity is Kesten's \cite{Kes87}; see \cite[Section~4]{Nol08}. The lower bound \eqref{eq:lower} follows, as in \cite[(2.6)]{GPS10}, from the five-arm probability $\alpha_5(r,\rho)\asymp(r/\rho)^2$, the Russo--Seymour--Welsh bound $\alpha_1(r,\rho)\le C(r/\rho)^{\epsilon}$ and Reimer's inequality $\alpha_1\alpha_4\ge\alpha_5$. On the triangular lattice $\alpha_4(r,\rho)=(r/\rho)^{5/4+o(1)}$ \cite{SW01}, so \eqref{eq:lower} holds with any $\epsilon<3/4$. Together with quasi-multiplicativity, \eqref{eq:lower} gives the two consequences we use:
+\begin{equation}\label{eq:qm1}
+\alpha_4(r,d)\le C\,\alpha_4(r,\rho)\,(\rho/d)^{2-\epsilon}\quad(r\le d\le\rho),\qquad
+(\rho/r)^2\alpha_4(r,\rho)\le C\,\rho^2\alpha_4(\rho)\,r^{-\epsilon}\quad(1\le r\le\rho).
+\end{equation}
+Also, by Russo--Seymour--Welsh, $\alpha_4(r,\rho/2)\le C\alpha_4(r,\rho)$.
+\item[(F2)] \emph{The half-plane three-arm bound.} $\alpha_3^+(r,\rho)\le C\,(r/\rho)^2$ for $1\le r\le\rho$. The half-plane three-arm exponent equals $2$ on both lattices \cite{Nol08}. Only the weaker half-plane two-arm bound $\alpha_2^+(r,\rho)\le C\,r/\rho$, which is also universal, is really needed; see Remark~\ref{rem:twoarm}.
+\item[(F3)] \emph{The influence is of order $R^2\alpha_4(R)$.} There is $c>0$ with
+\begin{equation}\label{eq:influence}
+I(f_R)\ge c\,R^2\alpha_4(R).
+\end{equation}
+Indeed a bit $x$ at distance at least $R/4$ from the boundary is pivotal if and only if it has four alternating arms to the four sides of the square, with the open arms ending on the left and right sides; this has probability at least $c\,\alpha_4(1,R/4)$ by the standard gluing of arms with Russo--Seymour--Welsh crossings, and there are of order $R^2$ such bits. By \eqref{eq:lower}, \eqref{eq:influence} also gives $I(f_R)\ge c R^{\epsilon}$.
+\end{itemize}
+
+\subsection{The one-box estimate}
+For a set of bits $B$ let $\Lambda_B$ be the event that, in the configuration restricted to the bits outside $B$, there are four alternating arms from $B$ to the four sides of the square: an open path from $B$ to the left side, an open path from $B$ to the right side, and closed paths from $B$ to the top and to the bottom side, all using bits outside $B$ only. This is \cite[Lemma~3.2]{GPS10}; we include the short proof.
+
+\begin{lemma}\label{lem:onebox}
+For every set of bits $B$, $\PP[\Sc\cap B\ne\emptyset]\le\PP[\Lambda_B]$ and $\PP[\Pc\cap B\ne\emptyset]\le\PP[\Lambda_B]$.
+\end{lemma}
+
+\begin{proof}
+Let $\mathcal G$ be the $\sigma$-field generated by the bits outside $B$. Since $\EE[\chi_A\mid\mathcal G]=\chi_A$ if $A\cap B=\emptyset$ and $=0$ otherwise, $\EE[f\mid\mathcal G]=\sum_{A\cap B=\emptyset}\hat f(A)\chi_A$, and by Parseval
+\[
+\PP[\Sc\cap B\ne\emptyset]=\sum_{A\cap B\ne\emptyset}\hat f(A)^2=\big\|f-\EE[f\mid\mathcal G]\big\|_2^2=\EE\big[\Var(f\mid\mathcal G)\big].
+\]
+Since $f=\pm1$, the conditional variance is at most $1$, and it vanishes unless the configuration outside $B$ leaves $f$ undetermined, that is, unless some filling of the bits in $B$ gives $f=1$ and another gives $f=-1$. In the first case there is an open left--right crossing, which must use $B$ (otherwise $f=1$ for every filling); its part before its first visit to $B$ and its part after its last visit to $B$ are open paths outside $B$ joining $B$ to the left and to the right side. In the second case, likewise, there are closed paths outside $B$ from $B$ to the top and to the bottom side. So $\Var(f\mid\mathcal G)\ne0$ implies $\Lambda_B$, and the first claim follows. For the second, if $x\in B$ is pivotal then with $\omega_x$ open there is an open crossing through $x$ and with $\omega_x$ closed there is a closed top--bottom path through $x$; the parts of these paths outside $B$ again realise $\Lambda_B$.
+\end{proof}
+
+We write $\alpha_\square(B)=\PP[\Lambda_B]$.
+
+\section{A coding bound for the entropy of a random planar set}\label{sec:coding}
+
+Let $K$ be the least integer with $2^K\ge R$, and place the dyadic grid so that $[0,R]^2\subseteq[0,2^K)^2$. For $0\le k\le K$ the dyadic squares of side $2^k$ form a partition of $[0,2^K)^2$, each square of side $2^k$ ($k\ge1$) being the union of four children of side $2^{k-1}$. For a set of bits $\mathcal A$ and $r=2^k$ let $\mathcal A_r$ be the set of dyadic squares of side $r$ whose closure meets a tile of some bit of $\mathcal A$; thus $\mathcal A_{2^K}$ is either empty or the single top square. Let $c_0$ be the number of bits needed to describe the intersection of $\mathcal A$ with a unit dyadic square: a unit square meets a bounded number $m_0$ of tiles, and $c_0=m_0$ bits suffice.
+
+\begin{lemma}[coding bound]\label{lem:coding}
+For every random set of bits $\mathcal A$ in $[0,R]^2$,
+\[
+H(\mathcal A)\le 1+4\sum_{k=1}^{K}\EE|\mathcal A_{2^k}|+c_0\,\EE|\mathcal A_1|.
+\]
+\end{lemma}
+
+\begin{proof}
+Encode $\mathcal A$ by the following binary string. One bit records whether $\mathcal A=\emptyset$; if it is, the string ends. Otherwise, for $k=K,K-1,\dots,1$ in turn, and for each square $Q\in\mathcal A_{2^k}$ taken in a fixed order (say lexicographic order of the lower left corners), four bits record which of the four children of $Q$ belong to $\mathcal A_{2^{k-1}}$. Finally, for each unit square in $\mathcal A_1$, in the same fixed order, $c_0$ bits record $\mathcal A\cap Q$. The decoder knows that the top square is hit, reads its four bits, hence knows $\mathcal A_{2^{K-1}}$, hence how many groups of four bits to read next, and so on down to the unit scale, where it knows $\mathcal A_1$ and reads $c_0$ bits per unit square. So the code is uniquely decodable, its length is $1+4\sum_{k=1}^{K}|\mathcal A_{2^k}|+c_0|\mathcal A_1|$, and by the source coding theorem for uniquely decodable codes \cite[Chapter~5]{CT06} the entropy of $\mathcal A$ is at most the expected length.
+\end{proof}
+
+Since $|\mathcal A_1|\le|\mathcal A|$, the lemma gives at once:
+
+\begin{proposition}\label{prop:principle}
+Let $f$ be any Boolean function on the bits of $[0,R]^2$ (any planar lattice), with spectral sample $\Sc$. Then
+\[
+\Ent(f)\le 1+c_0\,I(f)+4\sum_{k=1}^{K}\EE|\Sc_{2^k}|.
+\]
+In particular, if $\sum_{k\ge1}\EE|\Sc_{2^k}|\le M\,\EE|\Sc|$ then $\Ent(f)\le 1+(c_0+4M)\,I(f)$.
+\end{proposition}
+
+The finest scale contributes exactly a multiple of the influence, and the entropy/influence inequality holds for every function whose spectral sample hits the coarser dyadic squares, in total expectation, no more often than it hits the bits. Theorem~\ref{thm:main} is the statement that the crossing event has this property.
+
+\section{The expected number of hit squares at one scale}\label{sec:onescale}
+
+Throughout this section $\mathcal A$ is either $\Sc$ or $\Pc$, $r=2^k$ with $1\le k\le K$, and the constants $C$ depend only on the lattice.
+
+\begin{lemma}\label{lem:onescale}
+$\EE|\mathcal A_r|\le C\,(R/r)^2\,\alpha_4(r,R)+C$ for $2\le r\le R$.
+\end{lemma}
+
+\begin{proof}
+Only the dyadic $r$-squares meeting $[0,R]^2$ matter; there are at most $(R/r+1)^2$ of them. By Lemma~\ref{lem:onebox},
+\begin{equation}\label{eq:sumbox}
+\EE|\mathcal A_r|=\sum_{B}\PP[\mathcal A\cap B\ne\emptyset]\le\sum_{B}\alpha_\square(B),
+\end{equation}
+the sums running over these squares (with $B$ standing for the set of bits whose tiles meet the closed square). Let $Q=[0,R]^2$. For a square $B$ let $d=d(B)$ be the distance from $B$ to the nearest side of $Q$ and $D=D(B)$ the distance from $B$ to the second nearest side, so that $d\le D$ and the two remaining sides are at distance at least $D$ from $B$. Let $z$ be the centre of $B$. Every point of $B$ is within $r/\sqrt2$ of $z$, and we may assume $r\ge2$ so that the tiles of $B$ lie within distance $r$ of $z$.
+
+\emph{The bulk bound.} Suppose $d\ge4r$ and $D\ge16d$. On $\Lambda_B$ each of the four arms joins $B$ to a side of $Q$, at distance at least $d$ from $B$; hence each crosses the annulus $\mathcal U=\{y:r\le|y-z|\le d/2\}$, which lies inside $Q$ because $d/2+r\le d$. The four arms are of alternating colours, so $\Lambda_B$ implies the four-arm event in $\mathcal U$, of probability $\alpha_4(r,d/2)$. Next let $L$ be the line containing the nearest side, $\mathcal H$ the closed half-plane bounded by $L$ that contains $Q$, and $z'$ the orthogonal projection of $z$ on $L$, so that $|z-z'|\le d+r\le 2d$. The three arms to the three farther sides join $B$ to points at distance at least $D$ from $B$, and they stay inside $Q\subseteq\mathcal H$. Every point of $B$ is within $3d$ of $z'$, and every point at distance at least $D$ from $B$ is at distance at least $D-3d\ge D/4$ from $z'$; hence each of the three arms crosses the half-annulus
+\[
+\mathcal V=\mathcal H\cap\{y:3d\le|y-z'|\le D/4\},
+\]
+centred at the boundary point $z'$. It lies inside $Q$: its points are on the correct side of $L$, and they are within $D/4+2d\le D/2$ of $z$ while the three other sides are at distance at least $D-r>D/2$ from $z$. The three arms have alternating colours in the cyclic order around $B$, and removing the near arm leaves the pattern (open, closed, open) or (closed, open, closed); so $\Lambda_B$ implies the half-plane three-arm event in $\mathcal V$, of probability $\alpha_3^+(3d,D/4)$. Since $\mathcal U\subseteq\{|y-z'|\le d/2+2d\}$ is disjoint from $\mathcal V$, the two events are determined by disjoint sets of bits and are independent, and by (F1), (F2),
+\begin{equation}\label{eq:bulk}
+\alpha_\square(B)\le\alpha_4(r,d/2)\,\alpha_3^+(3d,D/4)\le C\,\alpha_4(r,d)\,(d/D)^2.
+\end{equation}
+If $d<4r$ we keep only the second factor with $3d$ replaced by $12r$: every point of $B$ is within $12r$ of $z'$, so when $D\ge 48r$ the three far arms cross $\mathcal H\cap\{12r\le|y-z'|\le D/4\}$ and $\alpha_\square(B)\le\alpha_3^+(12r,D/4)\le C(r/D)^2$. If $D<16d$ we keep only the first factor: $\alpha_\square(B)\le C\alpha_4(r,d)$ when $d\ge4r$. If $d<4r$ and $D<64r$ we use $\alpha_\square(B)\le1$; there are at most $C$ such squares, all within distance $64r$ of a corner.
+
+\emph{Counting.} Fix a side $\sigma$ and a second side $\sigma'$ adjacent to it. The $r$-squares whose nearest side is $\sigma$ with $d\in[\delta,2\delta)$ and whose second nearest side is $\sigma'$ with $D\in[\Delta,2\Delta)$ have their centres within $2\delta+r$ of $\sigma$ and within $2\Delta+r$ of $\sigma'$, hence inside a rectangle of sides $2\Delta+r$ and $2\delta+r$; as the squares are disjoint their number is at most $C(\Delta/r)(\delta/r)$ for $\delta,\Delta\ge r$. Summing over the eight ordered pairs of adjacent sides only changes the constant. (If the second nearest side is opposite to the nearest one, then $D\ge R/2$ and the squares in question lie in a strip of width $2\delta+r$ along $\sigma$, at most $C(R/r)(\delta/r)$ of them, which is again at most $C(\Delta/r)(\delta/r)$ with $\Delta\asymp R$.)
+
+\emph{Summation.} Let $\delta,\Delta$ range over powers of two with $r\le\delta\le\Delta\le R$. By \eqref{eq:bulk} and the count, the squares with $d\ge4r$ and $D\ge16d$ contribute at most
+\[
+C\sum_{\delta}\sum_{\Delta\ge\delta}\frac{\Delta\delta}{r^2}\,\alpha_4(r,\delta)\Big(\frac{\delta}{\Delta}\Big)^2
+= C\sum_{\delta}\frac{\delta^2}{r^2}\,\alpha_4(r,\delta)\sum_{\Delta\ge\delta}\frac{\delta}{\Delta}
+\le C\sum_{\delta}\frac{\delta^2}{r^2}\,\alpha_4(r,\delta),
+\]
+where we used $\alpha_4(r,d)\le C\alpha_4(r,\delta)$ for $d\in[\delta,2\delta)$ (Russo--Seymour--Welsh) and the geometric sum in $\Delta$. By the first inequality in \eqref{eq:qm1},
+\[
+\sum_{\delta\le R}\frac{\delta^2}{r^2}\,\alpha_4(r,\delta)\le C\,\alpha_4(r,R)\,\frac{R^{2-\epsilon}}{r^2}\sum_{\delta\le R}\delta^{\epsilon}\le C\,\alpha_4(r,R)\,\frac{R^2}{r^2},
+\]
+the last sum being geometric and dominated by $\delta\asymp R$. The squares with $D<16d$ and $d\ge4r$ number at most $C(\delta/r)^2$ in the class $d\in[\delta,2\delta)$ and contribute at most $C\sum_\delta(\delta^2/r^2)\alpha_4(r,\delta)$, the same sum. The squares with $d<4r$ and $D\ge48r$ number at most $C\Delta/r$ in the class $D\in[\Delta,2\Delta)$ and contribute at most $C\sum_{\Delta}(\Delta/r)(r/\Delta)^2\le C$. The remaining squares contribute at most $C$. Adding up gives the lemma.
+\end{proof}
+
+\begin{remark}\label{rem:twoarm}
+With only the half-plane two-arm bound $\alpha_2^+(3d,D/4)\le C\,d/D$ in place of (F2), the inner sum over $\Delta$ becomes $\sum_{\Delta\ge\delta}1\le\log_2(R/\delta)$, so the bulk contribution is at most
+\[
+C\sum_\delta\frac{\delta^2}{r^2}\,\alpha_4(r,\delta)\log\frac R\delta\le C\,\alpha_4(r,R)\Big(\frac Rr\Big)^2\sum_\delta\Big(\frac\delta R\Big)^{\epsilon}\log\frac R\delta,
+\]
+still bounded by $C\alpha_4(r,R)(R/r)^2$, and the boundary classes contribute $C\log R$ instead of $C$. Lemma~\ref{lem:onescale} then holds with $C\log R$ in place of the additive constant, which changes nothing below since $\log^2R=o(R^{\epsilon})$.
+\end{remark}
+
+\section{Proof of Theorem~\ref{thm:main}}
+
+Let $\mathcal A$ be $\Sc$ or $\Pc$. By Lemma~\ref{lem:coding}, Lemma~\ref{lem:onescale}, and the second inequality in \eqref{eq:qm1},
+\[
+H(\mathcal A)\le 1+c_0\,\EE|\mathcal A|+4\sum_{k=1}^{K}\Big(C\,(R/2^k)^2\alpha_4(2^k,R)+C\Big)
+\le 1+c_0\,I(f_R)+C\,R^2\alpha_4(R)\sum_{k\ge1}2^{-\epsilon k}+CK.
+\]
+The geometric series converges, $K\le\log_2R+1$, and by \eqref{eq:firstmoment}, \eqref{eq:influence} and $I(f_R)\ge cR^{\epsilon}$,
+\[
+H(\mathcal A)\le c_0\,I(f_R)+C\,I(f_R)+C\log R+1\le C'\,I(f_R).
+\]
+This proves both inequalities, and $\Ent(f_R)=H(\Sc)=O(I(f_R))=O(R^2\alpha_4(R))$ by \eqref{eq:firstmoment} and the upper bound $I(f_R)=\EE|\Pc|\le c_0\,\EE|\Pc_1|\le CR^2\alpha_4(R)+C$, which is the argument of Lemma~\ref{lem:onescale} run with $r=1$ (the tiles of a unit square lie within a bounded distance of its centre, which only changes the constants; compare \cite[Section~3]{GPS10}). \qed
+
+\section{Remarks}
+
+\begin{remark}[magnitudes on the triangular lattice]
+There $\alpha_4(r,R)=(r/R)^{5/4+o(1)}$, so the scale-$r$ term of the coding bound is $(R/r)^2\alpha_4(r,R)=(R/r)^{3/4+o(1)}$: the expected number of hit $r$-squares decays like $r^{-3/4}$, the sum over dyadic scales is dominated by its finest term, and $\Ent(f_R)=O(R^2\alpha_4(R))=R^{3/4+o(1)}$. This is what one expects for a random set of dimension $3/4$ with $R^{3/4+o(1)}$ points: its description needs a bounded number of bits per point. The $o(1)$ cannot be dropped from the exponent, since $\alpha_4(R)$ is not known to be a pure power with a bounded prefactor; the theorem is stated with $\alpha_4$ for this reason. Note also where the strict inequality in the exponent enters: with the five-arm bound alone, for which the exponent is exactly $2$, the scale sum would only give the trivial $O(I\log R)$.
+\end{remark}
+
+\begin{remark}[the pivotal set]
+Kalai remarks that the pivotal inequality $H(\Pc)=O(I)$ ``is not so general''. Indeed it fails for $\mathrm{OR}_n$, as noted in the introduction, and more generally it fails whenever the pivotal set is typically empty but occasionally large and diffuse. For the crossing event the pivotal set has, by Lemma~\ref{lem:onebox}, exactly the same one-box bounds as the spectral sample, and the proof above does not distinguish the two.
+\end{remark}
+
+\begin{remark}[general quads]
+Lemma~\ref{lem:onebox} holds for the crossing event of any quad, and the coding bound is lattice-independent. The boundary analysis of Lemma~\ref{lem:onescale} uses the square only through the half-plane arm bound near a side; for a fixed quad with piecewise smooth boundary the same sums go through with the half-plane bound replaced by the corresponding arm bound in the domain, with constants depending on the quad. We have checked the details only for the square.
+\end{remark}
+
+\begin{remark}[what the argument does not use]
+No estimate on the joint behaviour of the spectral sample at two scales, no clustering, and no scaling limit enters. The ingredients are the one-box bound, which is one line from the conditional-variance identity, the polynomial lower bound on the four-arm probability, and the coding lemma. In particular the proof gives the entropy/influence inequality, with an explicit constant, for every Boolean function on a planar array whose spectral sample satisfies $\sum_{k\ge1}\EE|\Sc_{2^k}|=O(\EE|\Sc|)$, and this hypothesis is a statement about first moments only.
+\end{remark}
+
+\begin{thebibliography}{99}
+\bibitem{Combinatorica24} X.~Han, A new bound for the Fourier--entropy--influence conjecture, \emph{Combinatorica} (2024), arXiv:2312.08271.
+\bibitem{CT06} T.~M. Cover and J.~A. Thomas, \emph{Elements of Information Theory}, 2nd ed., Wiley, 2006.
+\bibitem{FK96} E.~Friedgut and G.~Kalai, Every monotone graph property has a sharp threshold, \emph{Proc. Amer. Math. Soc.} 124 (1996), 2993--3002.
+\bibitem{GPS10} C.~Garban, G.~Pete and O.~Schramm, The Fourier spectrum of critical percolation, \emph{Acta Math.} 205 (2010), 19--104.
+\bibitem{Kal18} G.~Kalai, Three puzzles on mathematics, computation, and games, \emph{Proc. Int. Congr. Math. (Rio de Janeiro 2018)}, vol.~1, 551--606.
+\bibitem{KMS12} N.~Keller, E.~Mossel and T.~Schlank, A note on the entropy/influence conjecture, \emph{Discrete Math.} 312 (2012), 3364--3372.
+\bibitem{Kes87} H.~Kesten, Scaling relations for 2D-percolation, \emph{Comm. Math. Phys.} 109 (1987), 109--156.
+\bibitem{Nol08} P.~Nolin, Near-critical percolation in two dimensions, \emph{Electron. J. Probab.} 13 (2008), 1562--1623.
+\bibitem{OWZ11} R.~O'Donnell, J.~Wright and Y.~Zhou, The Fourier entropy--influence conjecture for certain classes of Boolean functions, \emph{ICALP 2011}, LNCS 6755, 330--341.
+\bibitem{Sha18} G.~Shalev, On the Fourier entropy influence conjecture for extremal classes, arXiv:1806.03646.
+\bibitem{SW01} S.~Smirnov and W.~Werner, Critical exponents for two-dimensional percolation, \emph{Math. Res. Lett.} 8 (2001), 729--744.
+\end{thebibliography}
+
+\end{document}

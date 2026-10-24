@@ -1,0 +1,41 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261012T001125Z-account01-B14-A067-boolean-granularity",
+  "stream": "B14",
+  "packet_id": "A067",
+  "claims": [
+    {
+      "claim_id": "B14-A067-BOOLEAN-DEGREE-FEI-v1",
+      "gap_id": "G-A067-BOOLEAN-LOSS",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every d>=1 and every genuine Boolean f:{-1,1}^n->{-1,1} of Fourier degree at most d, if v=1-fhat(empty)^2 then H(f)<=2(d-1)v+fhat(empty)^2 log2(1/fhat(empty)^2)<=(2(d-1)+log2(e))I(f). The first inequality is sharp for the degree-d address function.",
+      "quantifiers": "all integers n>=0, d>=1, and all genuine Boolean functions of Fourier degree at most d",
+      "units": "bits",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "800b5d942417ec0f67e74d3e6d276275daf77ced",
+        "path": "reports/fei-2026-10-11/runs/B14/20261012T001125Z-account01-B14-A067-boolean-granularity/REPORT.md",
+        "sections": "2-4"
+      },
+      "mirror_source": {
+        "repository": "yspennstate/math-research-brain",
+        "commit": "605d2c388b821be9c66264b11aeef2a7443fb697",
+        "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B14/20261012T001125Z-account01-B14-A067-boolean-granularity/REPORT.md"
+      },
+      "known_inputs": [
+        "Boolean Fourier granularity, Tal ECCC TR14-048 Fact 2.5",
+        "Boolean Bohnenblust-Hille support bound, Mathematische Annalen 2025 Lemma 4.1 and Proposition 4.2",
+        "A066 parity-lift boundary theorem B14-A066-PARITY-LIFT-SEMI-v1"
+      ],
+      "limitations": [
+        "constant grows linearly with d",
+        "does not extend to real or nearly Boolean degree-d functions",
+        "does not bound fixed-order Renyi entropy below one",
+        "does not solve full FEI"
+      ],
+      "independent_reviewers": ["A088", "A094"],
+      "next_consumers": ["A070", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

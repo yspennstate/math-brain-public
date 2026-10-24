@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "claim": "QFORM-DUAL-LEVERAGE-RANKONE-SIGN-ROUTING-v1",
+  "symbolic_family": {
+    "charpoly": "(lambda-1)(lambda+1)(lambda^2-tau*lambda-1)",
+    "P_plus_det": "-(1+tau/2)",
+    "P_minus_det": "tau/2-1",
+    "s3": 1
+  },
+  "finite_stress": {
+    "seed": 20260922,
+    "accepted_trials": 1994,
+    "checks": [
+      "matrix determinant lemma",
+      "Sherman-Morrison inverse",
+      "indefinite inertia preservation when tau*q>=0",
+      "sigma_min lower bound beta_star"
+    ],
+    "minimum_observed_kappa_over_beta_star": 1.0839660772606692
+  },
+  "partner_constant": 44.208377983684635,
+  "note": "The finite stress checks are sanity checks; the proof in REPORT.md is analytic."
+}

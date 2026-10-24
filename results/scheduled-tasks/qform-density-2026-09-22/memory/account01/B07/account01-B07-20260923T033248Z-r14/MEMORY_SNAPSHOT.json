@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "account01-B07-20260923T033248Z-r14",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "status": "ESSENTIAL_STEP_APPLIED_NEW_STRUCTURAL_REDUCTION_FULL_TARGET_OPEN",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "024b6fce8657363e2999433732e0a3438c7a63c5",
+  "canonical_math_root": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T033248Z-r14/",
+  "handoff_commit": "b121288d1bda02489787ecf9c79f860087e380f1",
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B07",
+    "run_id": "20260923T023322Z-r11",
+    "name": "QFORM-DETERMINANT-MARGINAL-TAIL-CORE-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1f5ab2ddba6e99675fb9177666c5e64e396e54e5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T023322Z-r11/REPORT.md",
+    "actual_use": "for the anchored packet M_ij>P/3, residual marginal tails delta_R+delta_C<1/2 imply E3(B[R0,C0])>(1/2)M_ij>P/6 on physical supports of size at most four per side"
+  },
+  "newest_source_applied": {
+    "name": "fractional three-volume Fourier theorem",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+    "actual_use": "q=4/3 pays either row- or column-diffuse E3 volume law continuously when all corresponding inclusion marginals are <=2/3"
+  },
+  "new_results": [
+    "QFORM-E3-VOLUME-GATE-FOURCORE-OR-DIFFUSE-BIANCHOR-v1",
+    "if either E3 volume marginal side has maximum <=2/3, ||p_Q||inf <= (9sqrt(3)e/2)P^(-1/6) with continuous C0 density",
+    "otherwise physical row/column anchors carry joint E3 mass M_ij>P/3",
+    "conditional residual heavy sets at threshold 1/2 have at most four physical coordinates per side including anchors",
+    "if residual marginal tails sum <1/2, partner theorem forces a <=4x4 physical core with E3>P/6",
+    "in N3 tau=1/128 and P>=1/256, that core has s3>=32/(129sqrt(6)) and the dimension-8 spectral receiver yields ||p_Q||inf<=242.516285571",
+    "if residual marginal tails sum >=1/2, the anchored survivor has an actual light-residual determinant packet of mass >P/24; under P>=1/256 this is >1/6144"
+  ],
+  "corrections_respected": [
+    "no universal good single minor",
+    "no arbitrary-joint rank-three coarea cap",
+    "no post-rotation independence",
+    "no law-uniform pointwise quadratic-phase decay",
+    "no positive-moment worst conditional projection-density cap"
+  ],
+  "unresolved_implication": "QFORM-DIFFUSE-BIANCHOR-CURVATURE-PAYMENT-v1: pay the support-diffuse bi-anchor determinant packet while retaining arbitrary same-bank light curvature and the full spectrum",
+  "continuity": "continuous C0 density proved on fractional-volume exit only; finite physical-core branch gives absolute continuity and an essential L-infinity bound; global continuity OPEN",
+  "independent_end_to_end_review": "not claimed",
+  "notifications_or_email_sent": false,
+  "scheduler_or_permission_mutation": false
+}

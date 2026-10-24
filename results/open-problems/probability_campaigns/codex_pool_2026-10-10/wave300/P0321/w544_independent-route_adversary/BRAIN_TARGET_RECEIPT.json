@@ -1,0 +1,30 @@
+{
+  "store": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "open_mode": "mode=ro",
+  "query": "SELECT id,kind,title,body,metadata_json FROM nodes WHERE lower(title) LIKE '%hexatic%' LIMIT 10",
+  "records": [
+    {
+      "id": "claim_648b6149635f3ed755552a110f297d32ce8291ed63aa1fbfa8c148a36fcad248",
+      "kind": "claim",
+      "title": "Open problem: Existence of a hexatic phase for two-dimensional Riesz gases",
+      "statement": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status unsolved). Prove or refute the intermediate hexatic phase predicted in two-dimensional Riesz-gas phase diagrams, distinguished by orientational order and absence of crystalline positional order. Source: Lewin: Coulomb and Riesz gases, the known and the unknown,2022, SectionVI.B,PDF66-67.\nPosed in Lewin: Coulomb and Riesz gases, the known and the unknown,2022\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "logical_id": "math:probability.core:open-problem-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0321",
+      "metadata_status": {
+        "source_revision": "author-checked-private-20260907-v1"
+      }
+    },
+    {
+      "id": "claim_f0fcbb1d46ce0001a883659cae4db27b444d22c8c3d7f3b762bd0376496a0c54",
+      "kind": "claim",
+      "title": "Attempt on Existence of a hexatic phase for two-dimensional Riesz gases",
+      "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Source-specific calculation, conditional implication or exact obstruction Result: A rotationally invariant Gibbs mixture can have zero mean orientational order while retaining long-range two-point order. As a diagnostic let theta_x=Theta+eta_x, where Theta is uniform modulo2*pi and the eta_x are iid. Then E exp(6*i*theta_x)=0, but for x distinct from y, E exp(6*i*(theta_x-theta_y))=|E exp(6*i*eta_x)|^2, which can be strictly positive. Check: The global angle cancels in the difference and independence factors the two local terms into conjugates. Taking all eta_x=0 gives two-point order1 despite the zero one-point mean. Obstruction: Consequently a vanishing rotation-averaged one-point order parameter cannot rule out the proposed phase. A proof must establish the proper bond-orientational correlations together with positional decorrelation for the actual Gibbs law, with defects and thermodynamic limits controlled.\nRefers to the open problem node open-problem-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0321",
+      "metadata_status": {
+        "source_revision": "author-checked-private-20260907-v1"
+      }
+    }
+  ],
+  "scope": "Target-only query; not a complete solved/retired-work audit."
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260923T195244Z-account03-B04-auto11-r40",
+  "source_control_commit": "a83db46cbe0877b897067f1816c81d03006b79b9",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-SHARP-ROW-MARGINAL-FREE-2VOLUME-COLLISION-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For an original-coordinate two-bank quadratic with Z2=e2(BB^T)>0, |phi(t)| <= min(1, pi*2^(7/4) Z2^(-1/4)|t|^(-1)); consequently sup_s E|R-s|^(-1/2) <=8*2^(3/8) Z2^(-1/8)."
+    },
+    {
+      "id": "QFORM-SHARP-E2-PLUS-SQUARE-RECEIVER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For Q=d[Z+h]^2+R with one independent cap-one scalar Z and the preceding E2 background, ||p_Q||inf <=8*2^(3/8)|d|^(-1/2) Z2^(-1/8)."
+    },
+    {
+      "id": "QFORM-PIVOTED-C1-OVERLAP-RECEIVER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For anchored overlap-one third-compound mass C1_h and nonzero physical scalar pivot a=A_hh, ||p_Q||inf <=8*2^(7/8)[a^2 C1_h]^(-1/8)."
+    }
+  ],
+  "premises": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "51d2edb29d7a4c150e4d47ed3a6685875a8483ae",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260923T175336Z-account01-B03-QFORM-r30/REPORT.md",
+      "scope": "completed row-marginal-free two-volume collision proof and heavy-row physical-promotion branches"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "51d2edb29d7a4c150e4d47ed3a6685875a8483ae",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T184631Z-account01-B02-qform-auto11-r34/REPORT.md",
+      "scope": "global third-compound overlap decomposition C0+C1+C2+C3=e3(A^2), with C0 branch already paid"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "04f0b30d5f729ed26d9f8c2cb1354973c587c3cc",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T185112Z-account03-B04-auto11-r39/REPORT.md",
+      "scope": "sharp fixed-cardinality subset entropy; rederived in the present report for ell=2"
+    }
+  ],
+  "designated_partner": {
+    "partner": "account04/B04",
+    "completed_current_qform_result_found": false,
+    "action": "worked asynchronously; did not fabricate or wait"
+  },
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "d795290dd6280b18d6cd02e29e6f7fe06e4c65c2",
+    "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T195244Z-account03-B04-auto11-r40/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T195244Z-account03-B04-auto11-r40/CHECKS.json",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B04/20260923T195244Z-account03-B04-auto11-r40.md",
+    "handoff_commit": "0c6346b196ba3d4bab036b654148a1218fa1e67c"
+  },
+  "explicit_application": {
+    "matrix": "A_*=[[1,1,1,1,1],[1,1,1,3,2],[1,1,1,2,-1],[1,3,2,1,1],[1,2,-1,1,1]]",
+    "spectrum_certificate": "charpoly=(lambda^2-5)(lambda^3-5lambda^2-9lambda+5); cubic roots in (-2,-1) and (6,7)",
+    "compound_overlap_masses": [0,484,1728,198],
+    "chosen_pivot_one_based": 2,
+    "chosen_residual_E2": 36,
+    "new_uniform_density_bound": 6.628853526064557,
+    "exact_rank2_peer_comparison": 3.6144080144393793,
+    "continuity_from_new_receiver": false
+  },
+  "full_qform_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "unresolved_implication": "QFORM-C1-ZEROPIVOT-OR-FRACTIONAL-HUB-RECEIVER-v1",
+  "next_step": "From C1(A)>=1/4 and failure of every diagonal-weighted anchored exit, aggregate zero/near-zero scalar-pivot anchors by a product-preserving hyperbolic/one-hub Fourier mechanism or route them to existing pair/star/ridge/grouped-bank endpoints without duplicating the shared coordinate or paying a vanishing local reciprocal.",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed"
+  },
+  "notifications": "not_modified; quiet delivery preserved"
+}

@@ -1,0 +1,43 @@
+K-partite GF(2) polynomials: B <= H <= sum_k H(S_Xk) <= 2 sum_k I_X-k = 2(K-1) I
+(1) exhaustive shapes
+  exhaustive (1, 1)                        cases=      8 viol=0  max H/I=2.000000  bound 2(K-1)=2  min block slack=0.00e+00
+  exhaustive (2, 1)                        cases=     32 viol=0  max H/I=2.000000  bound 2(K-1)=2  min block slack=0.00e+00
+  exhaustive (2, 2)                        cases=    256 viol=0  max H/I=2.000000  bound 2(K-1)=2  min block slack=0.00e+00
+  exhaustive (3, 1)                        cases=    128 viol=0  max H/I=2.000000  bound 2(K-1)=2  min block slack=0.00e+00
+  exhaustive (1, 1, 1)                     cases=    128 viol=0  max H/I=2.955890  bound 2(K-1)=4  min block slack=0.00e+00
+  exhaustive (2, 1, 1)                     cases=   2048 viol=0  max H/I=2.955890  bound 2(K-1)=4  min block slack=0.00e+00
+  exhaustive (3, 1, 1)                     cases=  32768 viol=0  max H/I=2.955890  bound 2(K-1)=4  min block slack=0.00e+00
+  exhaustive (2, 2, 1)                     cases= 131072 viol=0  max H/I=2.955890  bound 2(K-1)=4  min block slack=0.00e+00
+  exhaustive (1, 1, 1, 1)                  cases=  32768 viol=0  max H/I=3.402476  bound 2(K-1)=6  min block slack=0.00e+00
+(1b) negative control: any monomials allowed, judged with the block shape; the checks must trip
+  control, not partite, (2, 2, 2)          cases=    300 viol=18 (expected > 0)
+  control, not partite, (3, 3)             cases=    300 viol=396 (expected > 0)
+(2) random members
+  random (3, 3) density 0.2                cases=    300 viol=0  max H/I=2.000000  bound 2(K-1)=2  min block slack=0.00e+00
+  random (3, 3) density 0.5                cases=    300 viol=0  max H/I=2.000000  bound 2(K-1)=2  min block slack=0.00e+00
+  random (4, 4) density 0.2                cases=    200 viol=0  max H/I=2.000000  bound 2(K-1)=2  min block slack=0.00e+00
+  random (4, 4) density 0.5                cases=    200 viol=0  max H/I=2.000000  bound 2(K-1)=2  min block slack=0.00e+00
+  random (2, 2, 2) density 0.2             cases=    400 viol=0  max H/I=2.955890  bound 2(K-1)=4  min block slack=0.00e+00
+  random (2, 2, 2) density 0.5             cases=    400 viol=0  max H/I=2.340497  bound 2(K-1)=4  min block slack=7.50e-01
+  random (3, 3, 3) density 0.2             cases=    150 viol=0  max H/I=2.339576  bound 2(K-1)=4  min block slack=1.89e-01
+  random (3, 3, 3) density 0.5             cases=    150 viol=0  max H/I=1.911654  bound 2(K-1)=4  min block slack=2.25e+00
+  random (3, 3, 2) density 0.2             cases=    200 viol=0  max H/I=2.416936  bound 2(K-1)=4  min block slack=1.89e-01
+  random (3, 3, 2) density 0.5             cases=    200 viol=0  max H/I=2.081854  bound 2(K-1)=4  min block slack=9.22e-01
+  random (2, 2, 2, 2) density 0.2          cases=    200 viol=0  max H/I=2.268692  bound 2(K-1)=6  min block slack=1.44e+00
+  random (2, 2, 2, 2) density 0.5          cases=    200 viol=0  max H/I=1.938827  bound 2(K-1)=6  min block slack=3.14e+00
+  random (3, 2, 2, 2) density 0.2          cases=    100 viol=0  max H/I=2.187802  bound 2(K-1)=6  min block slack=1.96e+00
+  random (3, 2, 2, 2) density 0.5          cases=    100 viol=0  max H/I=1.862829  bound 2(K-1)=6  min block slack=2.57e+00
+  random (2, 2, 2, 2, 2) density 0.2       cases=     60 viol=0  max H/I=1.975628  bound 2(K-1)=8  min block slack=4.75e+00
+  random (2, 2, 2, 2, 2) density 0.5       cases=     60 viol=0  max H/I=1.873931  bound 2(K-1)=8  min block slack=5.56e+00
+(3) greedy search for the largest H/I in the class
+  greedy (2, 2)                            cases=  12030 viol=0  max H/I=2.000000  bound 2(K-1)=2  min block slack=0.00e+00
+  greedy (3, 3)                            cases=   6015 viol=0  max H/I=2.000000  bound 2(K-1)=2  min block slack=0.00e+00
+  greedy (2, 2, 2)                         cases=  12030 viol=0  max H/I=2.955890  bound 2(K-1)=4  min block slack=0.00e+00
+  greedy (3, 2, 2)                         cases=   6015 viol=0  max H/I=2.955890  bound 2(K-1)=4  min block slack=0.00e+00
+  greedy (3, 3, 3)                         cases=   2406 viol=0  max H/I=2.502219  bound 2(K-1)=4  min block slack=4.22e-01
+  greedy (2, 2, 2, 2)                      cases=   4010 viol=0  max H/I=2.536525  bound 2(K-1)=6  min block slack=1.52e+00
+(4) side search, evidence only: general polynomials of GF(2) degree <= 3 (no block condition), H/I against 4
+  greedy cubic n=5                         cases=   4812 max H/I=2.955890  (4 = 2(deg-1))
+  greedy cubic n=6                         cases=   4812 max H/I=2.728513  (4 = 2(deg-1))
+  greedy cubic n=7                         cases=   2406 max H/I=2.470588  (4 = 2(deg-1))
+done in 81.5 s

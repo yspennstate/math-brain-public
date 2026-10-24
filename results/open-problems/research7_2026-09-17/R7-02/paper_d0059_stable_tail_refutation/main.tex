@@ -1,0 +1,186 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+
+\title{A Stable-Tail Obstruction to the Literal Critical MGF Conjecture\
+for the Derrida--Retaux Recursion}
+\author{R7-02 research note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For the critical Derrida--Retaux recursion with deterministic branching factor $m\ge2$, Chen--Derrida--Hu--Lifshits--Shi conjectured, under their displayed critical moment condition, that
+\[
+\mathbf E[m^{X_n}]-1\sim \frac{2}{m-1}\frac1n.
+\]
+The source itself warns that an additional third weighted moment may be necessary.  We show that this warning is essential: for every $m\ge2$ and every $\alpha\in(2,4)$ there is an explicit critical law with tail $p_k\asymp m^{-k}k^{-\alpha}$ satisfying the displayed critical hypothesis for which the conjectured endpoint asymptotic is impossible.  The proof combines an explicit normalization of the stable tail with Theorem~1.1 of Chen--Shi (2020), which gives a different polynomial order for the product of the critical moment generating functions.  Thus the result is a source-scope refutation of the literal displayed hypothesis, not a refutation of a repaired finite-third-weighted-moment conjecture.
+\end{abstract}
+
+\section{Source statement}
+Fix an integer $m\ge2$ and let
+\[
+X_{n+1}=\bigl(X_n^{(1)}+\cdots+X_n^{(m)}-1\bigr)^+,
+\]
+where the variables on the right are independent copies of $X_n$.  Write
+\[
+G_n(s)=\mathbf E[s^{X_n}].
+\]
+Chen, Derrida, Hu, Lifshits and Shi assume the critical identity
+\begin{equation}
+(m-1)\mathbf E[X_0m^{X_0}]=\mathbf E[m^{X_0}]<\infty
+\tag{C}
+\end{equation}
+and in Conjecture~1.6(b) (Conjecture~4 in the PDF version) predict
+\begin{equation}
+G_n(m)-1\sim \frac{2}{m-1}\frac1n.
+\tag{E}
+\end{equation}
+Immediately after the conjecture they note that additional integrability, for example
+$\mathbf E[X_0^3m^{X_0}]<\infty$, may be necessary.
+
+Our only imported asymptotic theorem is the following published stable-regime result.
+
+\medskip
+\noindent\textbf{Chen--Shi input.}
+For a critical Derrida--Retaux system whose initial law satisfies
+\[
+\mathbf P(X_0=k)\sim c_0m^{-k}k^{-\alpha},\qquad 2<\alpha<4,
+\]
+Theorem~1.1 of X.~Chen and Z.~Shi, \emph{The stable Derrida--Retaux system at criticality}, arXiv:2006.06140 (2020), gives constants $0<c_1<c_2<\infty$ such that
+\begin{equation}
+c_1n^{\alpha-2}
+\le
+\prod_{i=0}^{n-1}G_i(m)^{m-1}
+\le
+c_2n^{\alpha-2}
+\qquad(n\ge1).
+\tag{CS}
+\end{equation}
+We do not claim this theorem as new; the note below is an explicit corollary of it.
+
+\section{An explicit critical stable-tail family}
+
+\begin{theorem}
+For every integer $m\ge2$ and every $\alpha\in(2,4)$ there exists a nonconstant $\mathbb Z_+$-valued random variable $X_0$ satisfying \textup{(C)} and
+\[
+\mathbf P(X_0=k)\sim c_0m^{-k}k^{-\alpha},
+\]
+for which \textup{(E)} is false.  Consequently the literal Conjecture~1.6(b), under the displayed condition \textup{(C)} alone, is false.
+\end{theorem}
+
+\begin{proof}
+Define the convergent positive sums
+\[
+A:=\sum_{k=2}^{\infty}m^{-k}k^{-\alpha},
+\qquad
+B:=\sum_{k=2}^{\infty}\bigl((m-1)k-1\bigr)k^{-\alpha}.
+\]
+The convergence of $B$ uses $\alpha>2$.  Put
+\[
+b_1:=m(m-2),\qquad c:=\frac1{2(A+B)},
+\]
+and define
+\begin{align*}
+p_k&:=c\,m^{-k}k^{-\alpha}, &&k\ge2,\\
+p_1&:=\frac1{2(1+b_1)},\\
+p_0&:=b_1p_1+cB.
+\end{align*}
+All these numbers are nonnegative.  Moreover
+\[
+p_0+p_1+\sum_{k=2}^{\infty}p_k
+=(1+b_1)p_1+c(A+B)
+=\frac12+\frac12=1,
+\]
+so they define a probability law.
+
+We next check criticality exactly.  Expanding \textup{(C)} and separating the $k=0$ term shows that \textup{(C)} is equivalent to
+\begin{equation}
+p_0=\sum_{k=1}^{\infty}\bigl((m-1)k-1\bigr)m^kp_k.
+\tag{1}
+\end{equation}
+For $k=1$ the coefficient is
+\[
+((m-1)-1)m=m(m-2)=b_1,
+\]
+while for $k\ge2$ our choice of $p_k$ gives
+\[
+\bigl((m-1)k-1\bigr)m^kp_k
+=c\bigl((m-1)k-1\bigr)k^{-\alpha}.
+\]
+Hence the right-hand side of (1) equals
+\[
+b_1p_1+cB=p_0,
+\]
+proving the critical identity.
+
+The integrability required in the displayed conjecture also holds:
+\[
+\sum_{k\ge2} k m^kp_k
+=c\sum_{k\ge2}k^{1-\alpha}<\infty
+\]
+because $\alpha>2$.  On the other hand,
+\[
+\sum_{k\ge2} k^3m^kp_k
+=c\sum_{k\ge2}k^{3-\alpha}=\infty
+\]
+for every $\alpha<4$, so these examples lie precisely outside the natural finite-third-weighted-moment repair.
+
+The tail is exactly of the form required by the Chen--Shi theorem, with $c_0=c$.  Therefore (CS) applies:
+\begin{equation}
+\prod_{i=0}^{n-1}G_i(m)^{m-1}=\Theta(n^{\alpha-2}).
+\tag{2}
+\end{equation}
+Suppose, toward a contradiction, that the conjectured endpoint asymptotic (E) held.  Then, writing
+\[
+u_i:=G_i(m)-1,
+\]
+we would have
+\[
+u_i=\frac{2}{m-1}\frac1i+o(i^{-1}).
+\]
+Since $u_i=O(i^{-1})$, the elementary expansion $\log(1+u)=u+O(u^2)$ gives
+\[
+\log G_i(m)=\frac{2}{m-1}\frac1i+o(i^{-1}).
+\]
+Summing, and using that a pointwise $o(i^{-1})$ term contributes $o(\log n)$ to its partial sums,
+\begin{align*}
+\log\left(\prod_{i=0}^{n-1}G_i(m)^{m-1}\right)
+&=(m-1)\sum_{i=0}^{n-1}\log G_i(m)\\
+&=2\log n+o(\log n).
+\end{align*}
+Thus
+\begin{equation}
+\prod_{i=0}^{n-1}G_i(m)^{m-1}=n^{2+o(1)}.
+\tag{3}
+\end{equation}
+Equations (2) and (3) are incompatible because $\alpha-2<2$.  Indeed, dividing the logarithms by $\log n$, (2) forces the limit $\alpha-2$, whereas (3) forces the limit $2$.  This contradiction proves that (E) fails for the constructed critical law.
+\end{proof}
+
+\begin{remark}[What the theorem does not say]
+The argument does not contradict the finite-third-weighted-moment version suggested by the source authors.  It only shows that the literal displayed hypothesis (C) is too weak.  In particular, the finite-moment shape-attractor problem studied in the accompanying R7-02 reports remains a meaningful repaired question.
+\end{remark}
+
+\begin{remark}[Prior-art status]
+The decisive polynomial product exponent is Chen--Shi's published theorem.  The contribution of this note is the explicit probability normalization satisfying the original critical identity and the short incompatibility argument with the literal endpoint coefficient.  A bounded search on 17 September 2026 did not locate this exact corollary stated as a refutation of Conjecture~1.6(b), but a negative search is not evidence of novelty.
+\end{remark}
+
+\begin{thebibliography}{9}
+\bibitem{CDHLS}
+X.~Chen, B.~Derrida, Y.~Hu, M.~Lifshits and Z.~Shi,
+\emph{A max-type recursive model: some properties and open questions},
+arXiv:1705.04787v2 (2019).
+
+\bibitem{CS}
+X.~Chen and Z.~Shi,
+\emph{The stable Derrida--Retaux system at criticality},
+arXiv:2006.06140 (2020).
+\end{thebibliography}
+
+\end{document}

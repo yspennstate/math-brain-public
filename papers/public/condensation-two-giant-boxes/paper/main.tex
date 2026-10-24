@@ -1,0 +1,385 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem,booktabs}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{problem*}{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cT}{\mathcal T}
+
+\hypersetup{pdftitle={Two giant boxes in random allocations},pdfauthor={Yitzchak Shmalo}}
+
+\title[Two giant boxes in random allocations]{Two giant boxes in random allocations}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{13 October 2026}
+\subjclass[2020]{60C05, 60F05, 05C05}
+\keywords{Random allocation, balls in boxes, condensation, simply generated trees, largest box}
+
+\begin{document}
+\begin{abstract}
+Let $(Y_1,\dots,Y_n)$ be the random allocation of $m$ balls into $n$ boxes in which an allocation $(y_1,\dots,y_n)$ has probability proportional to $\prod_iw_{y_i}$, for a weight sequence $(w_k)_{k\ge0}$. When $m/n\to\lambda>\nu$, where $\nu$ is determined by the weights, a positive fraction of the balls condenses into boxes whose sizes tend to infinity. For weights $w_k\sim ck^{-\beta}$ with $\beta>2$ the largest box then contains $(\lambda-\nu)n+o_p(n)$ balls and the second largest $o_p(n)$. Janson asked whether the same holds for every nonincreasing weight sequence, and for every weight sequence with $w_{k+1}/w_k\to\infty$. We show that neither condition suffices. We construct nonincreasing weights for which, for every $\lambda>\nu$ and along a sequence of pairs $(m,n)$ with $m/n\to\lambda$, each of the two largest boxes contains at least $(\lambda-\nu)n/13$ balls with probability tending to one, and weights with $w_{k+1}/w_k\ge e^k$ for which the second largest box contains more than $m/8$ balls with probability at least $1-\exp(-m^3/256)$ whenever $m\ge64$ is a power of two, $n\ge2$ and $\log(m+n)\le m^2/256$. Both constructions give simply generated random trees in which, for infinitely many $n$, two nodes have outdegree of order $n$ with probability tending to one.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $w=(w_k)_{k\ge0}$ be a sequence of nonnegative weights with $w_0>0$ and $w_k>0$ for some $k\ge1$. For integers $m\ge0$ and $n\ge1$ let $\cB_{m,n}$ be the set of $y=(y_1,\dots,y_n)\in\Z_{\ge0}^n$ with $y_1+\dots+y_n=m$, let $w(y)=\prod_{i=1}^nw_{y_i}$, and let $Z(m,n)=\sum_{y\in\cB_{m,n}}w(y)$. When $Z(m,n)>0$, the random allocation $B_{m,n}=(Y_1,\dots,Y_n)$ is the random element of $\cB_{m,n}$ with
+\[
+\Pp(B_{m,n}=y)=\frac{w(y)}{Z(m,n)},\qquad y\in\cB_{m,n}.
+\]
+We think of $Y_i$ as the number of balls in box $i$, and we write $Y_{(1)}\ge Y_{(2)}\ge\dots\ge Y_{(n)}$ for $Y_1,\dots,Y_n$ in decreasing order. We follow the notation of Janson's survey \cite{J12}, which treats random allocations together with simply generated random trees. If $\cT_n$ denotes the simply generated random tree with $n$ nodes and weights $w$, then by \cite[Lemma~17.1]{J12} the outdegrees of the nodes of $\cT_n$, taken as a multiset, have the same distribution as $Y_1,\dots,Y_n$ for $m=n-1$.
+
+Let $\Phi(t)=\sum_kw_kt^k$, let $\rho\in[0,\infty]$ be its radius of convergence, and let $\nu=\lim_{t\uparrow\rho}t\Phi'(t)/\Phi(t)\in(0,\infty]$ if $\rho>0$, and $\nu=0$ if $\rho=0$. Suppose that $n\to\infty$ and $m=m(n)$ with $m/n\to\lambda$. If $\nu<\lambda<\infty$ and $w_k>0$ for infinitely many $k$, then for suitable $K_n\to\infty$ the boxes with more than $K_n$ balls contain $(\lambda-\nu)n+o_p(n)$ balls in total \cite[Lemma~19.32]{J12}. The simplest way in which this condensation can happen is that the excess goes into a single box:
+\begin{align}
+Y_{(1)}&=(\lambda-\nu)n+o_p(n),\label{eq:Y1}\\
+Y_{(2)}&=o_p(n).\label{eq:Y2}
+\end{align}
+Jonsson and Stef\'ansson \cite{JS11} showed this for simply generated trees with weights $w_k\sim ck^{-\beta}$, $\beta>2$, and Janson \cite[Theorem~19.34]{J12} proved \eqref{eq:Y1}--\eqref{eq:Y2} for random allocations with such weights and every $\lambda>\nu$. Janson also gave examples, with weights supported on sparse sets of integers, in which the excess is shared by two or more boxes along suitable sequences of $(m,n)$ \cite[Examples~19.37 and 19.38]{J12}, and wrote that such behaviour is expected only for quite irregular weight sequences. He asked the following two questions.\footnote{In the arXiv version of \cite{J12} they are Problems~18.41 and 18.42.}
+
+\begin{problem*}[{Janson \cite[Problem~19.42]{J12}}]
+Suppose that $w_k\ge w_{k+1}$ for all (large) $k$. Does this imply that \eqref{eq:Y1}--\eqref{eq:Y2} hold when $\lambda>\nu$?
+\end{problem*}
+
+\begin{problem*}[{Janson \cite[Problem~19.43]{J12}}]
+Suppose that $w_{k+1}/w_k\to\infty$ as $k\to\infty$. (Hence, $\rho=0$ and $\nu=0$.) Does this imply that \eqref{eq:Y1}--\eqref{eq:Y2} hold when $\lambda>\nu$?
+\end{problem*}
+
+The answer to both questions is negative.
+
+\begin{theorem}\label{thm:ratio}
+There is a weight sequence $w$ with $w_0=w_1=1$ and $w_{k+1}/w_k\ge e^k$ for all $k\ge1$ such that the following holds. If $m\ge64$ is a power of two and $n\ge2$ satisfies $\log(m+n)\le m^2/256$, then
+\[
+\Pp\bigl(Y_{(2)}\le m/8\bigr)\le\exp\bigl(-m^3/256\bigr).
+\]
+\end{theorem}
+
+For $\lambda>0$ let $m_i=2^{i+1}$ and $n_i=\lceil m_i/\lambda\rceil$. Then $m_i/n_i\to\lambda$, and by Theorem~\ref{thm:ratio}, with probability tending to one, $Y_{(2)}>m_i/8$ and therefore $Y_{(1)}<7m_i/8$. Thus neither \eqref{eq:Y1} nor \eqref{eq:Y2} holds for $(m,n)=(m_i,n_i)$, for any $\lambda>0=\nu$. Setting $m(n)=\lfloor\lambda n\rfloor$ for $n\notin\{n_i\}$ gives a sequence $m=m(n)$ with $m/n\to\lambda$ along which \eqref{eq:Y1} and \eqref{eq:Y2} fail. For the weights of Theorem~\ref{thm:ratio} the ratio $w_{k+1}/w_k$ is exceptionally large when $k$ is a power of two; the weights in \cite[Example~19.38]{J12} are supported on $\{0\}$ and the powers of two, while here every $w_k$ is positive and $w_{k+1}/w_k\to\infty$. By contrast, for $w_k=k!$ and $m=n-1$ the largest box contains $n-O_p(1)$ balls \cite[Example~19.36]{J12}; simply generated trees with superexponential weights such as $((k-1)!)^\alpha$ are studied in \cite{JJS11}.
+
+\begin{theorem}\label{thm:mono}
+There is a weight sequence $w$ with $w_0=w_1=1$ and $w_k\ge w_{k+1}$ for all $k\ge0$, for which $\rho=1$ and $0<\nu<0.7$, such that the following holds. For every $\lambda>\nu$ there are integers $n_1<n_2<\dots$ and $m_1,m_2,\dots$ with $m_r/n_r\to\lambda$ such that for every $\varepsilon>0$, with $(m,n)=(m_r,n_r)$,
+\[
+\Pp\Bigl(Y_{(2)}\ge\bigl(\tfrac1{12}-\varepsilon\bigr)(\lambda-\nu)n\ \text{ and }\ Y_{(1)}\le\bigl(\tfrac{11}{12}+\varepsilon\bigr)(\lambda-\nu)n\Bigr)\to1\qquad(r\to\infty).
+\]
+\end{theorem}
+
+In particular neither \eqref{eq:Y1} nor \eqref{eq:Y2} holds along $(m_r,n_r)$, and, as above, the pairs $(m_r,n_r)$ can be completed to a sequence $m=m(n)$ with $m/n\to\lambda$. The weights of Theorem~\ref{thm:mono} satisfy $e^{-4}k^{-2\alpha}\le w_k\le e^3k^{-\alpha}$ for $k\ge1$, where $\alpha=3/\log2$ (Lemma~\ref{lem:weights}). They drop sharply on a sparse sequence of dyadic blocks of box sizes. When the excess is comparable to such a block, it is cheaper to share it between two boxes below the block than to put it into one box above it. The drop acts as a cut-off on the box sizes, as in the zero-range processes with hop rates $u(k)=1+b/k+e^{k-aL}$ studied by Schwarzkopf, Evans and Mukamel \cite{SEM08}. There the stationary distribution on $L$ sites is the random allocation with the weights $\prod_{j=1}^ku(j)^{-1}$, which are nonincreasing in $k$ but depend on $L$, and they find, by a grand canonical analysis and numerical simulations, that the excess splits into several condensates of size at most $aL$. In Theorem~\ref{thm:mono} the weight sequence does not depend on $n$; the cut-offs at all the scales are part of one sequence.
+
+For the trees, $m=n-1$ and $\lambda=1$.
+
+\begin{corollary}\label{cor:trees}
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=*]
+\item For the weights of Theorem~\ref{thm:ratio} and $n=2^{i+1}+1$ with $i\ge5$, with probability at least $1-\exp(-(n-1)^3/256)$ the tree $\cT_n$ has two nodes of outdegree larger than $(n-1)/8$.
+\item For the weights of Theorem~\ref{thm:mono} there is an infinite set of $n$ along which, with probability tending to one, $\cT_n$ has two nodes of outdegree at least $(1-\nu)n/13$ and no node of outdegree larger than $12(1-\nu)n/13$.
+\end{enumerate}
+\end{corollary}
+
+Theorem~\ref{thm:ratio} is proved in Section~\ref{sec:ratio}. The weights of Theorem~\ref{thm:mono} are constructed in Section~\ref{sec:weights}, the theorem is proved in Section~\ref{sec:mono}, and Corollary~\ref{cor:trees} is proved in Section~\ref{sec:trees}. Section~\ref{sec:remarks} contains remarks, and Section~\ref{sec:checks} describes computer checks of the lemmas.
+
+\section{Proof of Theorem~\ref{thm:ratio}}\label{sec:ratio}
+
+Let $d_0=0$, let $d_j=j^3$ if $j\ge1$ is a power of two and $d_j=j$ otherwise, and let
+\[
+L(k)=\sum_{j=0}^{k-1}d_j,\qquad w_k=e^{L(k)}\qquad(k\ge0).
+\]
+Then $w_0=w_1=1$, and $w_{k+1}/w_k=e^{d_k}\ge e^k$ for $k\ge1$. Write $L(y)=Q(y)+S(y)$, where $Q(y)$ is the sum of the $j<y$ that are not powers of two and $S(y)$ is the sum of $j^3$ over the powers of two $j<y$.
+
+\begin{lemma}\label{lem:QS}
+For $y\ge1$ we have $\frac12y(y-1)-2y<Q(y)\le\frac12y(y-1)$. Moreover $S(0)=S(1)=0$, and if $2^l<y\le2^{l+1}$ with $l\ge0$, then $S(y)=(8^{l+1}-1)/7$ and $S(y)<\frac87\,4^ly$.
+\end{lemma}
+
+\begin{proof}
+If $2^l<y\le2^{l+1}$, the powers of two below $y$ are $1,2,\dots,2^l$; their sum is $2^{l+1}-1<2y$ and the sum of their cubes is $\sum_{t=0}^l8^t=(8^{l+1}-1)/7<\frac87\,8^l<\frac87\,4^ly$. Since $Q(y)$ is $\frac12y(y-1)$ minus the sum of the powers of two below $y$, the bounds on $Q$ follow; for $y\le1$ there are no powers of two below $y$.
+\end{proof}
+
+\begin{lemma}\label{lem:max}
+Let $i\ge5$, $m=2^{i+1}$, $a^*=2^i+1$, $b^*=2^i-1$ and $L^*=L(a^*)+L(b^*)$. If $y_1,\dots,y_n\ge0$ satisfy $\sum_ky_k=m$ and at most one $y_k$ exceeds $m/8$, then
+\[
+\sum_kL(y_k)\le L^*-\frac{m^3}{128}.
+\]
+\end{lemma}
+
+\begin{proof}
+Let $D=m/8=2^{i-2}$, let $Y=\max_ky_k$, and fix $k_0$ with $y_{k_0}=Y$. All $y_k$ with $k\ne k_0$ are at most $D$, and their sum is $m-Y$. If $2\le y\le D$, then $2^l<y\le2^{l+1}$ with $l\le i-3$, so $S(y)<\frac87\,4^{i-3}y$ by Lemma~\ref{lem:QS}; as $S(0)=S(1)=0$,
+\[
+\sum_{k\ne k_0}S(y_k)\le\tfrac87\,4^{i-3}(m-Y).
+\]
+By Lemma~\ref{lem:QS}, $S(a^*)=(8^{i+1}-1)/7$ and $S(b^*)=(8^i-1)/7$, so $S^*=S(a^*)+S(b^*)=(8^{i+1}+8^i-2)/7$.
+
+If $Y\ge2^i+1$, then $m-Y\le2^i-1$ and $S(Y)=(8^{i+1}-1)/7$, since $2^i<Y\le2^{i+1}$. Hence
+\[
+\sum_kS(y_k)<\frac{8^{i+1}-1}7+\frac87\,4^{i-3}2^i=\frac{8^{i+1}-1}7+\frac{8^{i-1}}7,
+\]
+and $S^*-\sum_kS(y_k)>(8^i-1-8^{i-1})/7=8^{i-1}-\frac17$. If $Y\le2^i$, then $S(Y)\le(8^i-1)/7$ and
+\[
+\sum_kS(y_k)\le\frac{8^i-1}7+\frac87\,4^{i-3}2^{i+1}=\frac{8^i-1}7+\frac{2\cdot8^{i-1}}7,
+\]
+so $S^*-\sum_kS(y_k)\ge(8^{i+1}-1-2\cdot8^{i-1})/7>8^{i-1}$. In both cases $S^*-\sum_kS(y_k)>8^{i-1}-\frac17=\frac{m^3}{64}-\frac17$.
+
+Next, $\sum_k\binom{y_k}2\le\binom m2$, so $\sum_kQ(y_k)\le\frac12m(m-1)$ by Lemma~\ref{lem:QS}. Since $a^*+b^*=m$ and $a^*(a^*-1)+b^*(b^*-1)=\frac12m^2-m+2$, Lemma~\ref{lem:QS} also gives
+\[
+Q(a^*)+Q(b^*)>\tfrac14m^2-\tfrac12m+1-2m=\tfrac14m^2-\tfrac52m+1,
+\]
+and therefore $\sum_kQ(y_k)-Q(a^*)-Q(b^*)<\frac14m^2+2m-1$. Adding the two estimates,
+\[
+\sum_kL(y_k)-L^*<\frac{m^2}4+2m-\frac67-\frac{m^3}{64}\le-\frac{m^3}{128},
+\]
+because $m\ge64$ gives $m^3/128\ge m^2/2\ge m^2/4+2m$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:ratio}]
+Let $m=2^{i+1}$ with $i\ge5$, and let $n\ge2$ with $\log(m+n)\le m^2/256$. Since $w_0=1$, the allocation with $y_1=a^*$, $y_2=b^*$ and $y_k=0$ for $k\ge3$ has weight $e^{L^*}$, so $Z(m,n)\ge e^{L^*}$. By Lemma~\ref{lem:max}, every allocation with $Y_{(2)}\le m/8$ has weight at most $e^{L^*-m^3/128}$, and there are $\binom{m+n-1}m\le(m+n)^m$ allocations. Hence
+\[
+\Pp\bigl(Y_{(2)}\le m/8\bigr)\le(m+n)^me^{-m^3/128}=\exp\Bigl(m\log(m+n)-\frac{m^3}{128}\Bigr)\le\exp\Bigl(-\frac{m^3}{256}\Bigr).\qedhere
+\]
+\end{proof}
+
+\section{The weights of Theorem~\ref{thm:mono}}\label{sec:weights}
+
+Let $J_1<J_2<\cdots$ be positive integers with $J_{r+1}\ge2J_r+6$ for all $r$, for instance $J_r=7\cdot2^{r-1}-6$, so that $(J_r)=(1,8,22,50,\dots)$. We call the $J_r$ cliffs. For integers $j\ge0$ let
+\[
+g(j)=\max\bigl(\{3j\}\cup\{6J_r+4:\ J_r\le j\}\bigr),
+\]
+and let $w_0=1$ and $w_k=e^{-g(\lfloor\log_2k\rfloor)}$ for $k\ge1$. Let $\alpha=3/\log2$, so that $e^{-3j}=2^{-\alpha j}$; note that $4.32<\alpha<4.33$. The distribution $\pi_k=w_k/\Phi(1)$ below is well defined by part (ii) of the following lemma.
+
+\begin{lemma}\label{lem:weights}
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=*]
+\item The function $g$ is nondecreasing, $g(0)=0$, and $3j\le g(j)\le6j+4$ for all $j$. Hence $w_0=w_1=1$, $w_k\ge w_{k+1}$ for all $k\ge0$, and $e^{-4}k^{-2\alpha}\le w_k<e^3k^{-\alpha}$ for $k\ge1$.
+\item We have $\rho=1$. The probability distribution $\pi_k=w_k/\Phi(1)$ on $\Z_{\ge0}$ has mean $\nu=\Phi'(1)/\Phi(1)$ and finite variance $\sigma^2$, and $0<\nu<\nu_0<0.7$, where $\nu_0=0.6243\ldots$ is the value of $\nu$ for the weights $w^0_0=1$, $w^0_k=e^{-3\lfloor\log_2k\rfloor}$ $(k\ge1)$.
+\item If $J$ is a cliff, then $g(j)=3j$ for $\max(0,J-4)\le j\le J-1$, and $g(j)\ge6J+4$ for $j\ge J$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) The second set in the definition of $g$ grows with $j$ and consists of numbers at most $6j+4$, so $g$ is nondecreasing and $3j\le g(j)\le6j+4$; and $g(0)=0$ because $J_1\ge1$. Hence $w_1=e^{-g(0)}=1=w_0$ and $(w_k)$ is nonincreasing. For $k\ge1$ let $j=\lfloor\log_2k\rfloor$, so that $k/2<2^j\le k$. Then $w_k\le e^{-3j}=2^{-\alpha j}<(k/2)^{-\alpha}=e^3k^{-\alpha}$, and $w_k\ge e^{-6j-4}=e^{-4}2^{-2\alpha j}\ge e^{-4}k^{-2\alpha}$.
+
+(ii) By (i), $w_k^{1/k}\to1$, so $\rho=1$, and $\sum_kk^pw_k<\infty$ for $p<\alpha-1$, in particular for $p\le3$. Hence $\Phi(1)$, $\Phi'(1)$ and $\sum_kk^2w_k$ are finite, $\pi$ has finite variance, and $\nu=\lim_{t\uparrow1}t\Phi'(t)/\Phi(t)=\Phi'(1)/\Phi(1)$, which is the mean of $\pi$. Since $w_1>0$, $\nu>0$. Write $\Phi_0$ for the generating function of $w^0$. Summing over the dyadic blocks $[2^j,2^{j+1})$,
+\begin{align*}
+\Phi_0(1)&=1+\sum_{j\ge0}2^je^{-3j}=1+\frac1{1-2e^{-3}},\\
+\Phi_0'(1)&=\sum_{j\ge0}e^{-3j}2^{j-1}(3\cdot2^j-1)=\frac3{2(1-4e^{-3})}-\frac1{2(1-2e^{-3})},
+\end{align*}
+which gives $\nu_0=\Phi_0'(1)/\Phi_0(1)=0.62433\ldots$. Now $w_k\le w^0_k$ for all $k$, with equality for $k\le1$, and $w\ne w^0$ because $g(J_1)=6J_1+4>3J_1$. Let $\delta_k=w^0_k-w_k$, $\Delta_0=\sum_k\delta_k>0$ and $\Delta_1=\sum_kk\delta_k\ge2\Delta_0$. Then
+\[
+\nu=\frac{\Phi_0'(1)-\Delta_1}{\Phi_0(1)-\Delta_0}<\frac{\Phi_0'(1)}{\Phi_0(1)}=\nu_0,
+\]
+since this inequality is equivalent to $\Delta_1/\Delta_0>\nu_0$, and $\Delta_1/\Delta_0\ge2>\nu_0$.
+
+(iii) Let $J=J_r$. The second assertion holds by the definition of $g$. Let $\max(0,J-4)\le j\le J-1$. The cliffs $J_s\le j$ have $s<r$; if $r\ge2$, each of them satisfies $6J_s+4\le6J_{r-1}+4\le3(J-6)+4=3J-14<3j$. Hence $g(j)=3j$.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:mono}}\label{sec:mono}
+
+In this section $w$ is the weight sequence of Section~\ref{sec:weights}, $\pi_k=w_k/\Phi(1)$, and $\xi,\xi_1,\xi_2,\dots$ are independent random variables with distribution $\pi$; let $S_k=\xi_1+\dots+\xi_k$. Since $w(y)=\Phi(1)^n\prod_i\pi_{y_i}$, the allocation $B_{m,n}$ has the distribution of $(\xi_1,\dots,\xi_n)$ conditioned on $S_n=m$, and $\Pp(S_n=m)>0$ because all $w_k$ are positive.
+
+We use the following truncated form of Bennett's inequality \cite{Ben62}; its proof is the usual one, applied to truncated variables.
+
+\begin{lemma}\label{lem:bennett}
+Let $X_1,\dots,X_k$ be independent random variables with $\E X_i\le0$ and $\sum_i\E X_i^2\le V$, where $V>0$. Then for $x>0$ and $h>0$,
+\[
+\Pp\Bigl(\sum_iX_i\ge x,\ \max_iX_i\le h\Bigr)\le\Bigl(\frac{eV}{V+xh}\Bigr)^{x/h}.
+\]
+\end{lemma}
+
+\begin{proof}
+Let $Y_i=X_i\mathbf 1\{X_i\le h\}$. On the event in question $\sum_iY_i=\sum_iX_i$. Moreover $\E Y_i\le\E X_i\le0$, $\E Y_i^2\le\E X_i^2$ and $Y_i\le h$. Let $\psi(u)=e^u-1-u$. Since $\psi(u)/u^2=\int_0^1(1-s)e^{su}\,ds$ is nondecreasing in $u$, for $t>0$ we have $\psi(tY_i)\le Y_i^2\psi(th)/h^2$, and so
+\[
+\E e^{tY_i}=1+t\E Y_i+\E\psi(tY_i)\le1+\frac{\psi(th)}{h^2}\E Y_i^2\le\exp\Bigl(\frac{\psi(th)}{h^2}\E Y_i^2\Bigr).
+\]
+By Markov's inequality and independence, $\Pp(\sum_iY_i\ge x)\le\exp\bigl(V\psi(th)/h^2-tx\bigr)$. Let $u=xh/V$ and $t=h^{-1}\log(1+u)$. Then $\psi(th)=u-\log(1+u)$, and
+\[
+\frac{V\psi(th)}{h^2}-tx=\frac xh-\Bigl(\frac xh+\frac V{h^2}\Bigr)\log(1+u)\le\frac xh\bigl(1-\log(1+u)\bigr),
+\]
+which gives the claim.
+\end{proof}
+
+Let $J$ be a cliff, let $N=2^J$, $H=N/2$, $K=3H$ and $D=N/8$, and let $n=n_J$ and $m=m_J$ be integers with
+\begin{equation}\label{eq:mn}
+c_0N\le n\le C_0N,\qquad|m-\nu n-K|\le1,
+\end{equation}
+where $0<c_0\le C_0$ do not depend on $J$. In the rest of this section $c$ and $C$ denote positive constants that may depend on $w$, $c_0$ and $C_0$ but not on $J$, and whose values may change from one occurrence to the next; ``for large $J$'' means for all cliffs $J$ larger than some constant. By Lemma~\ref{lem:weights}(iii), the monotonicity of $g$ and $g(j)\ge3j$, and since $e^{-3J}=N^{-\alpha}$,
+\begin{align}
+\pi_k&=p_J:=e^{-3(J-1)}/\Phi(1)&&\text{for }H\le k<N,\label{eq:pH}\\
+\pi_k&\le e^{-3(J-3)}/\Phi(1)=e^9N^{-\alpha}/\Phi(1)&&\text{for }D\le k<N,\label{eq:pD}\\
+\pi_k&\le e^{-6J-4}/\Phi(1)=e^{-4}N^{-2\alpha}/\Phi(1)&&\text{for }k\ge N.\label{eq:pN}
+\end{align}
+
+\begin{lemma}\label{lem:lower}
+For large $J$, $\Pp(S_n=m)\ge cN^{3-2\alpha}$.
+\end{lemma}
+
+\begin{proof}
+For $1\le i<j\le n$ let $E_{ij}$ be the event that $\xi_i,\xi_j\in[H,N)$ and $\xi_l<H$ for all $l\ne i,j$; these events are disjoint. For an integer $s$ let $\kappa(s)$ be the number of pairs $(a,b)\in[H,N)^2$ with $a+b=K+s$. A direct count gives $\kappa(s)=H-|s|-1$ for $0\le s<H$ and $\kappa(s)=H-|s|+1$ for $-H<s<0$, so $\kappa(s)\ge H-|s|-1$ whenever $|s|<H$. By symmetry, independence and \eqref{eq:pH},
+\[
+\Pp(S_n=m)\ge\sum_{i<j}\Pp(E_{ij},\,S_n=m)=\binom n2p_J^2\sum_r\kappa(m-r-K)\,\Pp\Bigl(S_{n-2}=r,\ \max_{l\le n-2}\xi_l<H\Bigr).
+\]
+Let $s_0=1+2\nu+2\sigma\sqrt n$. If $|r-\nu(n-2)|\le2\sigma\sqrt n$, then $|m-r-K|\le|m-\nu n-K|+2\nu+|\nu(n-2)-r|\le s_0$, so
+\[
+\Pp(S_n=m)\ge\binom n2p_J^2\,(H-s_0-1)\,\Pp\Bigl(|S_{n-2}-\nu(n-2)|\le2\sigma\sqrt n,\ \max_{l\le n-2}\xi_l<H\Bigr).
+\]
+By Chebyshev's inequality, $|S_{n-2}-\nu(n-2)|>2\sigma\sqrt{n-2}$ with probability at most $\frac14$. By Lemma~\ref{lem:weights}(i), $\Pp(\max_{l\le n-2}\xi_l\ge H)\le n\sum_{k\ge H}\pi_k\le CnH^{1-\alpha}\le CN^{2-\alpha}\to0$, as $\alpha>2$. Since $s_0\le C\sqrt N$, for large $J$ the last probability is at least $\frac12$ and $H-s_0-1\ge H/2$. Hence, using $n\ge c_0N$ and $e^{-6(J-1)}=e^6N^{-2\alpha}$,
+\[
+\Pp(S_n=m)\ge\binom n2p_J^2\,\frac H4\ge cN^2\cdot N^{-2\alpha}\cdot N=cN^{3-2\alpha}.\qedhere
+\]
+\end{proof}
+
+\begin{lemma}\label{lem:upper}
+For large $J$,
+\[
+\Pp\bigl(S_n=m\text{ and }\xi_i\ge D\text{ for at most one }i\bigr)\le C\bigl(N^{-11}+N^{1-2\alpha}+N^{-3-\alpha}\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+Let $A_0=\Pp(S_n=m,\ \max_i\xi_i<D)$ and let $A_1$ be the probability that $S_n=m$ and $\xi_i\ge D$ for exactly one $i$.
+
+Let $X_i=\xi_i-\nu$, so that $\E X_i=0$ and $\sum_{i\le n}\E X_i^2=n\sigma^2$. If $\max_i\xi_i<D$, then $X_i\le D-1-\nu<D$ for all $i$, and if $S_n=m$, then $\sum_iX_i=m-\nu n\ge K-1$. For $N\ge8$ we have $(K-1)/D=12-8/N\ge11$ and $(K-1)D\ge N^2/8$. By Lemma~\ref{lem:bennett} with $V=n\sigma^2$, $x=K-1$ and $h=D$,
+\[
+A_0\le\Bigl(\frac{en\sigma^2}{(K-1)D}\Bigr)^{(K-1)/D}\le\Bigl(\frac{8eC_0\sigma^2}N\Bigr)^{11}\le CN^{-11},
+\]
+where we used that the base is less than $1$ for large $J$.
+
+By symmetry,
+\[
+A_1\le n\sum_{k\ge D}\pi_k\,\Pp\Bigl(S_{n-1}=m-k,\ \max_{l\le n-1}\xi_l<D\Bigr).
+\]
+By \eqref{eq:pN}, and since the probabilities $\Pp(S_{n-1}=m-k)$ add up to at most $1$, the terms with $k\ge N$ contribute at most $n\,e^{-4}N^{-2\alpha}/\Phi(1)\le CN^{1-2\alpha}$. For $D\le k<N$ we have $\pi_k\le e^9N^{-\alpha}/\Phi(1)$ by \eqref{eq:pD}, and
+\[
+m-k-\nu(n-1)\ge m-\nu n-(N-1)+\nu\ge K-N+\nu\ge N/2.
+\]
+The events $\{S_{n-1}=m-k\}$ are disjoint, so by Lemma~\ref{lem:bennett} with $V=(n-1)\sigma^2$, $x=N/2$ and $h=D$, the terms with $D\le k<N$ contribute at most
+\[
+n\,\frac{e^9N^{-\alpha}}{\Phi(1)}\,\Pp\Bigl(\sum_{l\le n-1}(\xi_l-\nu)\ge\frac N2,\ \max_{l\le n-1}\xi_l<D\Bigr)\le CN^{1-\alpha}\Bigl(\frac{16en\sigma^2}{N^2}\Bigr)^4\le CN^{-3-\alpha}.
+\]
+Adding the three bounds proves the lemma.
+\end{proof}
+
+\begin{proposition}\label{prop:main}
+Let $J$ run through the cliffs and let $(m,n)=(m_J,n_J)$ satisfy \eqref{eq:mn}. Then $\Pp(Y_{(2)}\ge N/8)\to1$, and $\Pp(Y_{(1)}\le11N/8+\varepsilon n)\to1$ for every $\varepsilon>0$.
+\end{proposition}
+
+\begin{proof}
+The event $Y_{(2)}<D$ is the event that at most one box contains $D$ or more balls. By Lemmas~\ref{lem:lower} and~\ref{lem:upper},
+\[
+\Pp\bigl(Y_{(2)}<D\bigr)\le\frac{C\bigl(N^{-11}+N^{1-2\alpha}+N^{-3-\alpha}\bigr)}{cN^{3-2\alpha}}=C\bigl(N^{2\alpha-14}+N^{-2}+N^{\alpha-6}\bigr)\to0,
+\]
+since $\alpha<5$.
+
+Let $\varepsilon>0$. If $Y_{(1)}+Y_{(2)}>m-\nu n+\varepsilon n/2$, then there are boxes $i\ne j$ with $Y_i+Y_j>m-\nu n+\varepsilon n/2$, and the other $n-2$ boxes contain fewer than $\nu n-\varepsilon n/2$ balls. Hence
+\[
+\Pp\bigl(Y_{(1)}+Y_{(2)}>m-\nu n+\varepsilon n/2\bigr)\le\binom n2\frac{\Pp(S_{n-2}<\nu n-\varepsilon n/2)}{\Pp(S_n=m)}.
+\]
+For $\theta\ge0$ and $x\ge0$ we have $e^{-\theta x}\le1-\theta x+\theta^2x^2/2$, so $\E e^{-\theta\xi}\le\exp(-\theta\nu+\theta^2\E\xi^2/2)$, and Markov's inequality gives $\Pp(S_k\le k\nu-t)\le\exp(-\theta t+k\theta^2\E\xi^2/2)$ for $t\ge0$. With $k=n-2$, $t=\varepsilon n/2-2\nu\ge\varepsilon n/4$ and $\theta=t/(k\E\xi^2)$ this gives $\Pp(S_{n-2}<\nu n-\varepsilon n/2)\le\exp(-\varepsilon^2n/(32\E\xi^2))$ for large $n$. Since $\Pp(S_n=m)\ge cN^{3-2\alpha}$ and $c_0N\le n\le C_0N$, the right-hand side above tends to $0$. On the complementary event, if also $Y_{(2)}\ge D$, then
+\[
+Y_{(1)}\le m-\nu n+\frac{\varepsilon n}2-D\le K+1+\frac{\varepsilon n}2-\frac N8=\frac{11N}8+1+\frac{\varepsilon n}2\le\frac{11N}8+\varepsilon n
+\]
+for large $J$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:mono}]
+Take the cliffs $J_r=7\cdot2^{r-1}-6$ in Section~\ref{sec:weights}; by Lemma~\ref{lem:weights} the weights have the stated properties. Let $\lambda>\nu$, and for a cliff $J$ let $n_J=\lceil K/(\lambda-\nu)\rceil$ and $m_J=\lfloor\nu n_J+K\rfloor$. Then \eqref{eq:mn} holds for large $J$ with $c_0=3/(2(\lambda-\nu))$ and $C_0=2/(\lambda-\nu)$, $n_J$ is strictly increasing in $J$ for large $J$, and $K/n_J\to\lambda-\nu$ and $m_J/n_J\to\lambda$. Since $N/8=K/12$ and $11N/8=11K/12$, Proposition~\ref{prop:main} gives, for every $\varepsilon>0$, with probability tending to one,
+\[
+Y_{(2)}\ge\frac K{12}\ge\Bigl(\frac1{12}-\varepsilon\Bigr)(\lambda-\nu)n\quad\text{and}\quad Y_{(1)}\le\frac{11K}{12}+\frac{\varepsilon}2(\lambda-\nu)n\le\Bigl(\frac{11}{12}+\varepsilon\Bigr)(\lambda-\nu)n
+\]
+for large $J$. The pairs $(m_J,n_J)$ for the cliffs $J$ from the point on where $n_J$ is strictly increasing are the pairs $(m_r,n_r)$ of the theorem.
+\end{proof}
+
+\section{Trees}\label{sec:trees}
+
+\begin{proof}[Proof of Corollary~\ref{cor:trees}]
+By \cite[Lemma~17.1]{J12}, the outdegrees of $\cT_n$ have, as a multiset, the distribution of $Y_1,\dots,Y_n$ for $m=n-1$. (i) Let $n=2^{i+1}+1$ with $i\ge5$, so that $m=n-1=2^{i+1}\ge64$ and $\log(m+n)=\log(2m+1)\le m^2/256$. Theorem~\ref{thm:ratio} gives the claim. (ii) Let $n_J=\lceil(K+1)/(1-\nu)\rceil$ and $m_J=n_J-1$ for the cliffs $J$; recall that $\nu<1$. Then $(1-\nu)n_J\ge K+1$ and $(1-\nu)n_J<K+2-\nu$, so $K\le m_J-\nu n_J<K+1$, and \eqref{eq:mn} holds for large $J$. Since $K/n_J\to1-\nu$, Proposition~\ref{prop:main} gives, with probability tending to one, $Y_{(2)}\ge K/12\ge(1-\nu)n_J/13$ and $Y_{(1)}\le11K/12+\varepsilon n_J\le12(1-\nu)n_J/13$, when $\varepsilon<(1-\nu)/312$ and $J$ is large.
+\end{proof}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}\label{rem:exchange}
+In both constructions, replacing two large boxes by one larger box and one small box lowers the product of their weights, even when the small box holds a constant multiple of $n$ balls. In Section~\ref{sec:ratio}, $w_{m-j}w_j<w_{a^*}w_{b^*}$ for $1\le j\le m/4$: as in the proof of Lemma~\ref{lem:max}, $S(a^*)+S(b^*)-S(m-j)-S(j)\ge8^{i-1}$ and $Q(m-j)+Q(j)-Q(a^*)-Q(b^*)<m^2/4+2m$. In Section~\ref{sec:mono}, if $a,b\in[N/2,N)$ and $0\le j\le a+b-N$, then $w_{a+b-j}w_j\le e^{-10}w_aw_b$ by \eqref{eq:pH} and \eqref{eq:pN}. For the distribution $\pi$ of Section~\ref{sec:mono} and $k$ near $3N/2$, the ratio $\Pp(\xi_1+\xi_2=k)/\Pp(\xi=k)$ is of order $N$, whereas for weights $w_k\sim ck^{-\beta}$ with $\beta>2$ it tends to $2$ as $k\to\infty$.
+\end{remark}
+
+\begin{remark}\label{rem:scope}
+The theorems concern particular sequences: in Theorem~\ref{thm:ratio} the number of balls is a power of two, and in Theorem~\ref{thm:mono} the excess $m-\nu n$ lies within $1$ of $3\cdot2^{J-1}$ for a cliff $J$. We do not determine the behaviour of $Y_{(1)}$ and $Y_{(2)}$ along other sequences, nor their joint limit law along $(m_r,n_r)$. Nor do the constructions bear on Problems~19.40 and~19.41 of \cite{J12}, which ask whether $Y_{(1)}/n\to0$ in probability is possible when $0<\nu<\lambda$ and when $\lambda>\nu=0$.
+\end{remark}
+
+\section{Computer checks}\label{sec:checks}
+
+The script \texttt{code/checks.py} in the repository listed under Data availability uses only the Python standard library, and its output is \texttt{code/checks.out}. Identities and inequalities between integers and rational numbers are checked exactly. The moments of $\pi$ are computed in double precision by summing over the dyadic blocks, and probabilities are computed from the generating functions, without sampling, in double precision, by repeated squaring of power series truncated at degree $m$. The probabilities compared with bounds are sums of positive terms; for the weights of Section~\ref{sec:ratio} they are computed from the logarithms of the terms.
+
+For the weights of Section~\ref{sec:ratio}, the script checks $L=Q+S$ and Lemma~\ref{lem:QS} for every $y\le4096$, and $w_{k+1}/w_k=e^{d_k}$ with $d_k\ge k$ for every $k<4096$. For $2\le i\le12$ and $m=2^{i+1}$ it computes, by dynamic programming over the box sizes, the exact maximum of $\sum_kL(y_k)$ over all $y_1,y_2,\ldots\ge0$ with $\sum_ky_k=m$ and at most one $y_k$ larger than $m/8$, and it checks the steps of the proof of Lemma~\ref{lem:max} on the corresponding maxima of $\sum_kS(y_k)$ and $\sum_kQ(y_k)$. For $i\ge5$ the ratio $(L^*-\max\sum_kL(y_k))/m^3$ lies between $0.0138$ and $0.0163$, against $1/128<0.0079$ in Lemma~\ref{lem:max}; it is $0.0096$ for $i=4$, $0.0007$ for $i=3$, and negative for $i=2$. For $(m,n)=(64,32)$, $(64,64)$, $(64,65)$, $(64,128)$, $(128,128)$, $(128,129)$, $(128,256)$ and $(256,512)$ the script computes $\log\Pp(Y_{(2)}\le m/8)$, which lies between $2.32$ and $2.41$ times the bound $m\log(m+n)-m^3/128$ from the proof of Theorem~\ref{thm:ratio}; for $(m,n)=(64,32)$ the two numbers are $-4085.8$ and $-1755.9$. As controls, for the weights $w_k=e^{k(k-1)/2}$, which also satisfy $w_{k+1}/w_k\to\infty$, the maximum exceeds $L^*$ for every $i$, and $\Pp(Y_{(2)}\le m/8)$ equals $1$ up to rounding error for $m\le128$.
+
+For the weights of Section~\ref{sec:weights}, the script checks Lemma~\ref{lem:weights}(i) and (iii) for $j\le400$ and the cliff sequences with $1\le J_1\le12$ and $J_{r+1}=2J_r+c$, $c\in\{6,7,9\}$ ($29{,}824$ checks); with $J_{r+1}=2J_r+4$ the identity $g(J-3)=3(J-3)$ fails at $58$ cliffs. For $g(j)=3j$ it obtains $\Phi_0(1)=2.110586$ and $\nu_0=0.624335$, in agreement with the closed forms in the proof of Lemma~\ref{lem:weights}, and for the sequences $J_{r+1}=2J_r+6$ with $1\le J_1\le12$ it finds $0<\nu<\nu_0$; for the sequence of Theorem~\ref{thm:mono}, which has $J_1=1$, it obtains $\nu=0.503957$. It checks the bound $\kappa(s)\ge H-|s|-1$ from the proof of Lemma~\ref{lem:lower} for $3\le J\le14$ and all $|s|<H$ ($32{,}748$ checks). It checks Lemma~\ref{lem:bennett} for $X_i=\xi_i-\nu$, where the $\xi_i$ have the law $\pi$ for the cliffs starting at $J_1=8$, with $k\in\{5,10,30,100\}$, $h\in\{1,2,4,8,16,32\}$ and $x/h\in\{1,2,4,8,12\}$: in these $120$ cases the largest ratio of the probability to the bound is $0.0858$, and without the event $\max_iX_i\le h$ the bound fails in $41$ of them.
+
+Finally, the script computes the law of $Y_{(2)}$ at the cliffs $J=8,9,10$ for the cliff sequence that starts at $J$ ($J_1=J$ and $J_{r+1}=2J_r+6$), and at $J=8$ for the sequence of Theorem~\ref{thm:mono}. It takes $(m,n)$ as in the proof of Theorem~\ref{thm:mono} with $\lambda-\nu=1$, that is $n=K$ and $m=K+\lfloor\nu K\rfloor$, and as in the proof of Corollary~\ref{cor:trees}(ii) for the trees. Table~\ref{tab:b5} gives $\Pp(Y_{(2)}<N/8)$. The control is $\Pp(Y_{(2)}\ge N/8)$ for the weights without cliffs, $g(j)=3j$, at the pair $(m,n)$ given by the same rule with $\nu_0$ in place of $\nu$; it is below $1\%$ in every case. For $J_1=1$ the two rules give different pairs, since $\nu=0.504$. At the pairs listed in the table for $J_1=1$, the excess $m-\nu_0n$ of the weights without cliffs is about $1.32N$ for $\lambda-\nu=1$ and $1.14N$ for the tree, instead of $1.5N$, and there $\Pp(Y_{(2)}\ge N/8)$ is $5.3\cdot10^{-3}$ and $2.7\cdot10^{-2}$. The probabilities that $Y_{(2)}<N/4$ are larger and decrease in the same way; for the trees they are $0.135$, $7.5\cdot10^{-3}$ and $3.4\cdot10^{-4}$ for $J=8,9,10$.
+
+\begin{table}[ht]
+\small
+\caption{$\Pp(Y_{(2)}<N/8)$ at a cliff $J$, $N=2^J$, and the control $\Pp(Y_{(2)}\ge N/8)$ for the weights without cliffs.}\label{tab:b5}
+\begin{tabular}{rrrrllrll}
+\toprule
+&&\multicolumn{4}{c}{$\lambda-\nu=1$}&\multicolumn{3}{c}{trees, $m=n-1$}\\
+\cmidrule(lr){3-6}\cmidrule(lr){7-9}
+$J$&$J_1$&$n$&$m$&$\Pp(Y_{(2)}<N/8)$&control&$n$&$\Pp(Y_{(2)}<N/8)$&control\\
+\midrule
+8&8&384&623&$5.2\cdot10^{-5}$&$2.4\cdot10^{-3}$&1025&$3.5\cdot10^{-2}$&$7.1\cdot10^{-3}$\\
+9&9&768&1247&$8.3\cdot10^{-8}$&$4.6\cdot10^{-4}$&2048&$1.8\cdot10^{-4}$&$1.3\cdot10^{-3}$\\
+10&10&1536&2494&$2.1\cdot10^{-10}$&$9.1\cdot10^{-5}$&4092&$1.1\cdot10^{-7}$&$2.5\cdot10^{-4}$\\
+8&1&384&577&$1.6\cdot10^{-6}$&$2.4\cdot10^{-3}$&777&$6.7\cdot10^{-5}$&$7.1\cdot10^{-3}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These computations test the identities and inequalities used in the proofs; they are not part of them.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. Problems~19.42 and~19.43 of \cite{J12} were among the open problems in probability on which the project's agents worked in September 2026. On 13 and 14 September 2026 Claude Fable~5.1 (Anthropic) found the constructions of Theorems~\ref{thm:ratio} and~\ref{thm:mono} and their proofs. On 12 and 13 October 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, wrote the proofs in their present form, searched the literature, and wrote the computer checks and the manuscript. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/condensation-two-giant-boxes}.
+
+\begin{thebibliography}{9}
+
+\bibitem{Ben62}
+G.~Bennett, Probability inequalities for the sum of independent random variables, \emph{J. Amer. Statist. Assoc.} \textbf{57} (1962), 33--45.
+
+\bibitem{J12}
+S.~Janson, Simply generated trees, conditioned Galton--Watson trees, random allocations and condensation, \emph{Probab. Surv.} \textbf{9} (2012), 103--252.
+
+\bibitem{JJS11}
+S.~Janson, T.~Jonsson and S.~\"O. Stef\'ansson, Random trees with superexponential branching weights, \emph{J. Phys. A} \textbf{44} (2011), 485002.
+
+\bibitem{JS11}
+T.~Jonsson and S.~\"O. Stef\'ansson, Condensation in nongeneric trees, \emph{J. Stat. Phys.} \textbf{142} (2011), no.~2, 277--313.
+
+\bibitem{SEM08}
+Y.~Schwarzkopf, M.~R. Evans and D.~Mukamel, Zero-range processes with multiple condensates: statics and dynamics, \emph{J. Phys. A} \textbf{41} (2008), 205001.
+
+\end{thebibliography}
+\end{document}

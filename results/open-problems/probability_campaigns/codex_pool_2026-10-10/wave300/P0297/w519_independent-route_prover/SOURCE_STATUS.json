@@ -1,0 +1,82 @@
+{
+  "target_id": "P0297",
+  "checked_on": "2026-10-10",
+  "exact_statement_source": {
+    "authors": "Ewain Gwynne and Jason Miller",
+    "title": "Existence and uniqueness of the Liouville quantum gravity metric for gamma in (0,2)",
+    "arxiv": "1905.00383v3",
+    "location": "Problem 7.1, printed page 80, PDF index 79",
+    "url": "https://arxiv.org/pdf/1905.00383",
+    "status": "primary text read"
+  },
+  "dated_local_status": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 554,
+    "quote": "5,P0297,Exact Hausdorff dimension of Liouville quantum gravity,unsolved,exact Hausdorff dimension of LQG",
+    "status": "dated ranking only"
+  },
+  "current_openness": "UNKNOWN",
+  "latest_primary_reported_status": "OPEN in the checked 2026 primary surveys; exhaustive current owner solved/retired and novelty verification is unavailable",
+  "recent_primary_evidence": [
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/25M181012X",
+      "authors": "Nina Holden and Xin Sun",
+      "publication": "ICM 2026 proceedings",
+      "statement": "General d_gamma is described as unknown in the indexed primary article; arXiv version 2510.16431 located."
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.10496",
+      "date": "2026-06-09",
+      "result": "Lower bounds for dimensions of metric-related sets; abstract does not claim an exact general d_gamma."
+    }
+  ],
+  "recall": {
+    "query": "P0297 Liouville quantum gravity dimension proof mistakes",
+    "result": "60-second timeout; wall time 67.65 seconds",
+    "artifact": "recall.txt",
+    "fallback_slugs_read": [
+      "perceptron_proof_open_gaps_fleet_2026_07_12",
+      "proof_steps_need_derived_joint_structure_2026_09_09"
+    ],
+    "MEMORY_index_term_search": "No matching Liouville/P0297/scar row; directly read task-named scar files."
+  },
+  "local_attempt_check": {
+    "stored_attempt": "brain_bundle_C006a05.json at-p0297: constant-shift identity xi*d_gamma=gamma; no computation of xi",
+    "intake_D_duplicate": "D0049, lqg_hausdorff_dimension_d_gamma",
+    "source_correction": "D0049-A001 attempts.jsonl:43 has d_gamma=2Q/xi twice; proposed C2 correction is gamma/xi",
+    "H_I_and_Lean_search": "No matching P0297/Liouville/Watabiki proof in targeted named paths; this is not an exhaustive owner-work claim",
+    "Team_O": "No P0297 row in scoped board search",
+    "canonical_store_checked": "~/math-brain-build/local/population/brain.sqlite3 opened mode=ro",
+    "store_result": "Existing P0297 problem and constant-shift attempt cards have unverified status; no solution in those inspected cards",
+    "other_owner_registers": "No exhaustive solved/retired register verified"
+  },
+  "peer_proof_read_before_preregistration": false,
+  "served_model_verified": false,
+  "formal_proof_receipt": null,
+  "novelty_claim": false,
+  "original_ledger_source": {
+    "authors": "Remi Rhodes and Vincent Vargas",
+    "arxiv": "2509.21053v1",
+    "url": "https://arxiv.org/html/2509.21053v1",
+    "location": "Section 3, paragraph on constructed random distance",
+    "published_version": "https://epubs.siam.org/doi/10.1137/25M1803632",
+    "published_date": "2026-07-13",
+    "status": "primary exact open-question paragraph read"
+  },
+  "primary_inputs": [
+    {
+      "url": "https://arxiv.org/pdf/1601.00556",
+      "version": "v4",
+      "location": "Corollary 2.3, PDF p.5",
+      "use": "Exact-dimensionality of disk GMC with gamma^2/2<2 and domain condition (A0)"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1301.2876",
+      "location": "Sections 2.1, 2.3, 2.4",
+      "use": "Revuz/PCAF and Green-potential framework; no unmatched-field diffusion theorem imported"
+    }
+  ],
+  "proof_packet": "REVIEW_PACKET.md",
+  "new_draft_path": "~/math-brain-inbox/w519/bundle_001.json",
+  "source_hash_check_is_not_proof": true
+}

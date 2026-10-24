@@ -1,0 +1,20 @@
+{
+  "interface_id": "A056-DISJOINT-SUBSTITUTION-v1",
+  "packet_id": "A056",
+  "measure": "Independent uniform physical signs on mutually disjoint blocks",
+  "output_values": [-1, 1],
+  "entropy_units": "bits; full squared spectrum including empty coefficient",
+  "balanced_hypotheses": ["All nonconstant children are balanced under the current physical product law", "Constant children are absorbed by fixing their outer gate coordinates", "Pairwise disjoint physical blocks", "Outer gate need not be balanced"],
+  "balanced_identities": {"mean": "E F = E h", "variance": "Var F = Var h", "entropy": "H(F)=H(h)+sum_i Inf_i(h) H(g_i)", "influence": "I(F)=sum_i Inf_i(h) I(g_i)", "coordinate_influence": "Inf_x(F)=Inf_i(h) Inf_x(g_i) for x in block i"},
+  "arbitrary_mean_definitions": {"m_i": "E g_i", "v_i": "1-m_i^2 > 0 after absorbing constants", "output_law": "Independent Y_i with P(Y_i=+1)=(1+m_i)/2", "outer_basis": "product_{i in T}(Y_i-m_i)/sqrt(v_i)", "w_i": "sum_{T containing i} a_mu(T)^2; equals v_i times output pivotal probability", "child_conditional_entropy": "K_i=(H(g_i)-h2(v_i))/v_i"},
+  "arbitrary_mean_identities": {"mean": "E F=E_mu h", "entropy": "H(F)=H_mu(h)+sum_i w_i K_i", "influence": "I(F)=sum_i (w_i/v_i) I(g_i)"},
+  "physical_restriction_updates": ["Fix actual physical coordinate values", "Restrict each child on its block", "Recompute every child mean and variance", "Absorb all newly constant children into the outer gate", "Expand the reduced outer gate under the new independent output law", "Recompute all w_i; untouched child multipliers may change", "Use balanced formulas only when remaining child means are zero"],
+  "single_child_recenter": {"outer_form": "h=A+y_j B", "empty_changed_block_coefficient": "Ahat(T)+m Bhat(T)", "nonempty_changed_block_outer_coefficient": "sqrt(1-m^2) Bhat(T)", "coherent_squared_term": "2m Ahat(T) Bhat(T)", "endpoint": "If |m|=1, fix y_j=m; do not divide by variance"},
+  "adaptive_scope": "Apply branchwise at physical decision-tree cylinder leaves; retain branch-dependent means and gate laws when averaging",
+  "scope_exclusions": ["Overlapping physical child blocks", "Conditioning on output events that do not preserve product physical law", "Reusing initial outer coefficients after a child changes mean", "Inferring max-constant closure from ordinary H<=C I alone", "Applying uniform-only weighted threshold bounds to biased output inputs"],
+  "proof": "REPORT.md; BALANCED_SUBSTITUTION_BASELINE.tex",
+  "verification": "code/check.py and out/checks.json",
+  "independent_review": "pending A091; alternate A090",
+  "baseline_retirement": "Do not rederive after adoption except for a specific correction or new application",
+  "full_fei_status": "OPEN"
+}

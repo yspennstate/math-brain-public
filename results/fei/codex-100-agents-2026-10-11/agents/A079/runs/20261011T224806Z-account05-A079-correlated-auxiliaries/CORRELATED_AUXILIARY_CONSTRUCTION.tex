@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{proposition}{Proposition}
+\newcommand{\E}{\mathbb E}
+\newcommand{\F}{\mathbb F}
+\newcommand{\wh}{\widehat}
+\begin{document}
+\title{A079: correlated bent-branch phases and the retained conditional entropy}
+\author{A079, stream B16}
+\date{12 October 2026}
+\maketitle
+All physical inputs are disjoint, independent, uniform bits. Fourier transforms are normalized; entropy is measured in bits. Full FEI remains open. This is a diagnostic derivation, not independent reviewer acceptance or a novelty claim.
+
+\begin{proposition}[Actual Boolean realization]
+Let $h_b:\F_2^k\to\{-1,1\}$ be arbitrary for each $b\in\F_2^m$. Put
+\[
+ F(x,a,b)=(-1)^{a\cdot b}h_b(x),\qquad
+ \wh F(v,s,t)=2^{-m}(-1)^{s\cdot t}\wh h_s(v).
+\]
+Every physical $x$-branch is bent. If $(V,S,T)$ is the squared Fourier law, then
+\begin{align*}
+ P(V=v,S=s,T=t)&=2^{-2m}\wh h_s(v)^2,\\
+ H(F)&=2m+\E_s H(h_s),& I_Y(F)&=m,& I_X(F)&=\E_s I(h_s),\\
+ H(S_Y\mid S_X)&=2m-I(V;S),&H(S_X\mid S_Y)&=\E_s H(h_s).
+\end{align*}
+\end{proposition}
+\begin{proof}
+In the defining Fourier expectation, summing over $a$ gives $\mathbf1_{b=s}$. The remaining transform in $x$ gives the coefficient formula. Summing its square over $v$ gives the uniform data marginal. The entropy identities follow by the chain rule, and influence follows by taking the expected Hamming weight in each spectral block. Fixing $x$ leaves data coefficients $2^{-m}(-1)^{s\cdot t}h_s(x)$, all of the same magnitude.
+\end{proof}
+
+For arbitrary bent branches on $d$ data bits, write their coefficients as $2^{-d/2}\sigma_t(x)$ with $\sigma_t(x)\in\{-1,1\}$. The same derivation gives
+\[
+ H(S_Y\mid S_X)\le d=2I_Y,\qquad
+ H(S_X\mid S_Y)=\E_t H(\sigma_t),\qquad
+ I_X=\E_t I(\sigma_t).
+\]
+The magnitude-difference energy is zero; the signed coefficient-difference energy is
+\[
+ \frac14\sum_{i\in X}\E_x\sum_t
+ (\wh g_x(t)-\wh g_{x+e_i}(t))^2=I_X.
+\]
+Thus the unpaid phase-row entropy is not a change-of-magnitudes charge.
+
+\begin{proposition}[Distinct correlated branches retain an arbitrary seed]
+Fix $k\ge1$, $m\ge k+1$, an arbitrary Boolean seed $g$ on $k$ bits, and injective tags $u\mapsto\tau(u)\in\F_2^m$. Choose
+\[
+ h_b(x)=g(x)(-1)^{\mathbf1_{b=\tau(x)}}.
+\]
+Every branch is bent and the branches are distinct even modulo sign. Their spectral marginals are dependent. Let $g^{(u)}$ be the seed with its value flipped at $u$, and let $p_g=\wh g^2$. Then
+\begin{align*}
+ B_X:=H(S_X\mid S_Y)
+ &= (1-2^{k-m})H(g)+2^{-m}\sum_u H(g^{(u)}),\\
+ p_X&=(1-2^{2-m})p_g+2^{2-m}\operatorname{Unif}(\F_2^k),\\
+ I_X&=I(g)+2^{1-m}\bigl(k-2I(g)\bigr).
+\end{align*}
+For every fixed nonconstant seed, $B_X/I_X\to H(g)/I(g)$ as $m\to\infty$.
+\end{proposition}
+\begin{proof}
+The phase rows consist of $2^m-2^k$ copies of $g$ and one copy of every $g^{(u)}$. The exact coefficient perturbation is
+\[
+ \wh g^{(u)}(v)=\wh g(v)-2^{1-k}g(u)(-1)^{v\cdot u}.
+\]
+Using $\sum_u g(u)(-1)^{v\cdot u}=2^k\wh g(v)$ yields
+\[
+ \sum_u\bigl(\wh g^{(u)}(v)^2-\wh g(v)^2\bigr)
+ =-4\wh g(v)^2+2^{2-k}.
+\]
+Averaging gives the marginal formula, and its mean spectral weight gives $I_X$.
+Branches with different selector values have different exceptional data tags; at an untagged point their relative global signs are determined, so they cannot coincide even modulo sign.
+
+Every one-point flip changes the squared spectrum: a zero coefficient becomes nonzero, or equality of all squared coefficients forces all $\wh g(v)$ to have magnitude $2^{-k}$, contradicting Parseval. Because untagged rows also occur, strict entropy concavity gives $I(V;S)>0$.
+
+With $\delta=2^{k-m}$ and $\epsilon=2^{2-m}$, entropy bounds on $2^k$ atoms and the Bernoulli mixture-label bound give
+\[
+ |B_X-H(g)|\le\delta k,\quad
+ 0<I(V;S)\le h_2(\epsilon)+(\epsilon+\delta)k,\quad
+ |I_X-I(g)|\le2^{1-m}k.
+\]
+They imply the asserted limit, since $I(g)>0$.
+\end{proof}
+
+Uniform $B_X\le K I_X$ on this tagged family implies FEI($K$) for every seed by the limit. FEI($K$) conversely bounds every phase row. This equivalence does not solve either statement. The full tagged functions satisfy $H(F)/I(F)<3$ because $H(F)\le2m+k<3m$ and $I(F)\ge m$.
+
+For an explicit phase-only payment obstruction, take $h_b(x)=(-1)^{x\cdot b_{[k]}}$, $1\le k\le m$. Then $V=S_{[k]}$, $H=2m$, $I_X=k/2$, $I_Y=m$, and $H(S_Y\mid S_X)=2m-k$. At $k=1$, the ratio of this conditional auxiliary entropy to phase energy is $4m-2\to\infty$, whereas the actual FEI ratio is less than two.
+
+\paragraph{Exact remaining gap.}
+No absolute phase-row payment is obtained from Booleanity, common flat magnitudes, branch distinctness and spectral dependence alone: arbitrary seed FEI remains in that payment. A genuinely restriction-stable additional hypothesis, together with its terminal entropy cost, is still needed.
+\end{document}

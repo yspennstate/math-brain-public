@@ -1,0 +1,14 @@
+P0282 exact averaged-shadow regression falsifier
+shadow_counts_n2_to_n6=PASS
+edge_size_bias_identity=PASS for all ranks n=2..6
+negative_covariance_shortcut_fails_at_n4_r1=True
+cov_uniform_parent_e_vs_child_average_n4_r1=8/243 > 0
+mean_q_parent_n4_r1=26/81 child_global_mean_q=3/52
+first_parentwise_average_domination_failure_n6_r3=True
+S={(2,6),(3,5),(5,3)} eS=3
+child_average_q_from_S=1/6
+global_parent_mean_q=524/3429
+strict_failure: 1/6 > 524/3429
+actual_child_global_mean_q=5/524 < 524/3429
+interpretation=local negative-regression strengthenings are false; the desired rank-average inequality requires global compensation
+ALL_EXACT_CHECKS_PASS

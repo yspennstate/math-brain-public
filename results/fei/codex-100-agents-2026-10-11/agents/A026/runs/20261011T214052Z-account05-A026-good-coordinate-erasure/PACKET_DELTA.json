@@ -1,0 +1,59 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T214052Z-account05-A026-good-coordinate-erasure",
+  "stream": "B06",
+  "packet_id": "A026",
+  "gap_id": "G-R-SELECT",
+  "attempt_id": "A026-stage1-amplitude-affine4",
+  "method": "Exact finite edge-amplitude coordinate certificate; affine-support zero-cost physical reductions; hereditary disjoint tensor closure; symmetric threshold stress.",
+  "mathematical_delta": "Certified K=7/2 good-coordinate erasure for affine Fourier dimension <=4 and disjoint products. All 32906 sign-normalized tables through n=4 checked independently. Exact symmetric threshold witness refutes proxy K=4. Universal selection remains open.",
+  "deliverable_status": "COMPLETE_LOCAL_ARTIFACT",
+  "mathematical_status": "RESTRICTED_CLASS_PROVED_LOCALLY; UNIVERSAL_G-R-SELECT_OPEN; INDEPENDENT_REVIEW_PENDING",
+  "claim_versions_used": [
+    "Recovered ERASURE_REDUCTION.md sections 1-4; source hashes in out/source_receipts.json",
+    "Recovered ISOSPECTRAL_SPLICING_CURATED.md sections 2-3; used for exact rebate and zero-cost scope"
+  ],
+  "claims_created_or_changed": [
+    {
+      "claim_id": "A026-AFFINE4-GOOD-COORDINATE",
+      "version": 1
+    },
+    {
+      "claim_id": "A026-AMPLITUDE-K4-THRESHOLD-NOGO",
+      "version": 1
+    }
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "GOOD_COORDINATE_TARGET.tex",
+    "SELECTION_SCOPE.md",
+    "FROZEN_SPEC.json",
+    "REPRODUCTION_SPEC.json",
+    "SYMMETRIC_SPEC.json",
+    "out/source_receipts.json",
+    "code/edge_pilot.py",
+    "code/independent_check.py",
+    "code/symmetric_pilot.py",
+    "out/edge_pilot.json",
+    "out/independent_check.json",
+    "out/gray_selections.bin",
+    "out/symmetric_pilot.json"
+  ],
+  "next_consumers": [
+    "A003",
+    "A087",
+    "A094",
+    "A027",
+    "A061",
+    "A096"
+  ],
+  "next_action": "Analyze the symmetric threshold amplitude proxy asymptotically at t=n/2+c sqrt(n), from exact binomial Walsh sums, to decide whether it is an overly strong universal selector; A087/A094 review the affine4 selection certificate.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "B06 STREAM_NOTES.md absent at stage start; not a mathematical block",
+    "External independent review and supervisor mirror not performed by A026"
+  ],
+  "packet_ids": [
+    "A026"
+  ]
+}

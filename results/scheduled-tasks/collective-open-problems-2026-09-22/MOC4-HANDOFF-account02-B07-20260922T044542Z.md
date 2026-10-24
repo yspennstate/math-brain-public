@@ -1,0 +1,55 @@
+# MOC4 source-bound handoff — account02/B07
+
+Run: `20260922T0432Z-b07-moc4-11`  
+Outcome: **ESSENTIAL_STEP_APPLIED**. Parent MOC4 remains **OPEN / NOT PROVED / NOT DISPROVED**.  
+Execution: `WITHOUT_VERIFIED_BRAIN`.
+
+Canonical scientific report: `proofnet24/collective-MOC4/account02/B07/20260922T0432Z-b07-moc4-11/REPORT.md` in `yspennstate/math-open-problems`, report blob `c3640f95b4751144c250e1f52d99b4f74faa7ba8`. Exact verifier blob `4a1a577513e5de86fc6ea1a5c35cf0e3785a655`; captured exact output blob `a9d2f2a3439b5a20abcde5905dd86869b2caf6ab`.
+
+Consumed campaign lead account03/B07 `MOC4-V4-PAIR-GAP-CEILING-v1`, latest complete report blob `28cbce0f0a6213c0760e0777a5baa5b0de12b31a`. Consumed named partner account03/B08 `MOC4-ONE-CYCLE-SU2-ELLIPSE-v1`, report blob `cd4264eb161c05fd44ff188490e4e0354295213c`, plus account03/B20 `MOC4-ONE-CYCLE-FACET-REDUCTION-v1` and account01/B08 `MOC4-CHAIN-CUBE-FACE-PROPAGATION-v1`.
+
+## New theorem: `MOC4-ONE-CYCLE-RESERVE-BOUND-v1`
+
+For a support normal let `d_sigma=M-L(v_sigma)>=0`, and set
+
+`A=c1^2, B=s1^2, u=c2^2, v=s2^2, r=c3^2, t=s3^2`,
+
+`chi=d_1423-d_4123`,
+
+`R0=ur(A d_1234+B d_2134)`, `R1=ur(B d_2431+A d_4231)`.
+
+Using the two exact rank-two chord identities
+
+`chi=d_1243-d_2143+d_2413-d_4213`
+
+and
+
+`chi=d_1324-d_3124+d_3421-d_4321`,
+
+if `chi>=0` then
+
+`delta0 delta1 >= min((R0+A chi vt)(R1+B chi(1-ur)), (R0+A chi(1-ur))(R1+B chi vt))`.
+
+For `chi<=0`, replace `chi` by `|chi|` and swap `A,B` in the directed terms. Since the partner interference satisfies `C^2=ABvt chi^2`, this is a direct singular-safe sufficient certificate for the exact one-cycle payment. The proof is an exact bridge-allocation argument: two clipped shares produce `F in [vt,1-ur]`, and the lower product is a concave quadratic in `F`, so its minimum is at the two endpoints.
+
+Consequences: every first-three Givens boundary is automatically safe. A strict payment failure with `chi>0` must have simultaneously `R0<A ur chi` and `R1<B ur chi` (with the swapped version for `chi<0`), so any unresolved exposed facet lies in a genuine four-corner-collapse branch.
+
+Exact application: the theorem certifies all nine exposed edges of the account03/B08 near-saturation datum; the smallest exact reserve margin is
+
+`158299673505299970564422605824/95367431640625 > 0`.
+
+Necessary non-claim: the stronger shortcut “the reserve lower bound is nonnegative on every genuine spectral facet” is false. Exact spectra
+
+`a=(-4-i,-4-4i,2-6i,-4-6i)`, `b=(-3+4i,5-3i,-1+2i,-5-3i)`
+
+with Givens pairs `(24/25,7/25),(5/13,12/13),(21/29,20/29)` have an actual exposed edge `4231--2431` with reserve lower bound
+
+`-1197741650400867575808/505016316025 < 0`,
+
+while the true payment is
+
+`193355269568346202280949888/24279630578125 > 0`.
+
+Thus the new estimate is a rigorous localization, not a characterization and not a MOC4 counterexample.
+
+First remaining one-cycle implication: **`MOC4-ONE-CYCLE-COLLAPSE-RIGIDITY-v1`** — on actual complex spectra and exposed facet normals not already certified by the reserve theorem, prove `delta0 delta1-C^2>=0` using same-spectrum cross-ratio/common-unitary geometry, or produce strict reverse payment, which by account03/B08 would immediately yield a genuine true-unitary MOC4 counterexample. The lead’s broader `MOC4-RESIDUAL-PR-RESERVE-v1` remains the global first unpaid implication.

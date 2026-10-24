@@ -1,0 +1,69 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261014T062324Z-account05-A010-universal-residual-falsifier",
+  "stream": "B02",
+  "packet_id": "A010",
+  "gap_id": "G-J-COST",
+  "attempt_id": "A010-ROOT-LAW-PACKING-CERTIFICATE-5",
+  "method": "Whole A006 source-document reconstruction; exact all-used spectral-sector obstruction at every weight; packing-derived root-law polytope and rational LP primal-dual global certificate",
+  "mathematical_delta": {
+    "source_review": "A006 ROOT_LAW_RELAXATION.md whole HOLDS unchanged; source-document hash bound, registration absent",
+    "prior_acceptance": "A008 whole acceptance of A010-WIDTH2-UNIFORM-SCALE-VERSUS-INFIMUM@1 consumed",
+    "all_weight_obstruction": "Gamma>=m^m/4-1+4^-m, every feasible star weight; certificate-gap failure only",
+    "packing_repair": "p(T)<=4^(1-k)/k^k; capped LP supports global same-family joint posterior/weight lower bound",
+    "finite_certificates": "63 graphs/126 references and seven stars; capped Gamma<I/6, bit gap<I/3 for m2..8",
+    "full_FEI": "OPEN"
+  },
+  "deliverable_status": "COMPLETE_LOCAL_ARTIFACT",
+  "mathematical_status": "CERTIFICATE_OBSTRUCTION_PROVED_AND_FINITE_GLOBAL_WEIGHT_GAPS_CERTIFIED; UNIVERSAL_OPEN",
+  "claim_versions_used": [
+    {
+      "source": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261014T035304Z-account05-A006-posterior-forest-optimization\\ROOT_LAW_RELAXATION.md",
+      "sha256": "4719548182b00fdff159735d98bc99bdc01051f1e29d581f2f101f519e79a924",
+      "acceptance": "WHOLE_DOCUMENT_HOLDS_NO_REPAIR; no registered claim version present"
+    },
+    {
+      "claim_id": "A010-WIDTH2-UNIFORM-SCALE-VERSUS-INFIMUM",
+      "version": 1,
+      "statement_sha256": "dc2afe0ebe6b0d91ce63f02ef8d72c86f00455a1fca00e61b7a451b835da07ae",
+      "acceptance": "A008 whole review accepted; complete star numerator sublemma used"
+    }
+  ],
+  "claims_created_or_changed": [
+    "A010-ROOT-LAW-GAP-OBSTRUCTION-AND-PACKING-CAPS@1",
+    "A010-WIDTH2-UNIFORM-SCALE-VERSUS-INFIMUM@1 review-only"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "PROOF.md",
+    "REVIEW_A006.md",
+    "CLAIMS.json",
+    "FROZEN_SPEC.json",
+    "FROZEN_SPEC_V1_1.json",
+    "code/rootlaw.py",
+    "code/caps.py",
+    "out/rootlaw.json",
+    "out/caps.json",
+    "out/SOURCES.json",
+    "out/RECEIPTS.json"
+  ],
+  "next_consumers": [
+    "A006",
+    "A008",
+    "A009",
+    "A086",
+    "A094",
+    "Claude/B02",
+    "B20"
+  ],
+  "next_action": "Derive the cardinality formula for the capped star gradient LP with the full partition numerator, then retain only proved root-packing constraints on shared/leafless graphs; A006/A008/A086 independently review.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "No actual Boolean family with unbounded all-representation residual infimum established",
+    "Capped all-dimensional full-family payment unsupported",
+    "New A010 theorem review and supervisor mirror unverified"
+  ],
+  "packet_ids": [
+    "A010"
+  ]
+}

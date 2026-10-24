@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account04",
+  "slot": "B14",
+  "run_id": "20260924T001624Z-account04-B14-scaled-schur-localization-r10",
+  "recorded_at_utc": "2026-09-24T00:20:00Z",
+  "source_control_commit": "db743fe65d0185d3a4da5fff6f874aa442cac0fa",
+  "scientific_commit": "deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260924T001624Z-account04-B14-scaled-schur-localization-r10/REPORT.md",
+  "handoff_commit": "92d027fe49e4e19912c964fc097d2147a4944231",
+  "status": "SCALED_PHYSICAL_TRIPLE_LOCALIZATION_PROVED_FULL_QFORM_OPEN",
+  "premises": [
+    {
+      "source": "math-open-problems@be9d93b288079c9261fea04074bac234974da89c",
+      "scope": "exact Schur zero-tax localization for invertible physical blocks"
+    },
+    {
+      "source": "math-open-problems@7a0ffb7d9c4c6074cc6e13375db70828740e1bd4",
+      "scope": "three-dimensional affine target theorem with constant 6 sqrt(pi) at unit spectral threshold"
+    }
+  ],
+  "proved": {
+    "gate": "an actual invertible 3x3 principal block B with sigma=min abs eig(B)>0",
+    "interval_bound": "P(Q in I)<=6 sqrt(pi)/sigma |I|",
+    "density_bound": "essential sup p_Q<=6 sqrt(pi)/sigma",
+    "robustness": "arbitrary ambient dimension, outside block, cross coupling, affine leakage, fragments, tails and supports"
+  },
+  "unresolved": "The global hypothesis s3(A)>=1 does not yet force a physical triple with sigma bounded below universally.",
+  "continuity": "separate; not claimed by this essential-height result",
+  "next_step": "combine physical-minor extraction with the scaled Schur compiler or pay the nearly singular triple branch",
+  "model": "UNKNOWN",
+  "thinking": "UNKNOWN"
+}

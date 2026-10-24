@@ -1,0 +1,169 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w592",
+  "bundle_slug": "c0049-driver-and-scope-audit-001",
+  "entries": [
+    {
+      "key": "wiring",
+      "namespace": "probability.statmech",
+      "logical_name": "fk-boundary-wiring-density-draft",
+      "kind": "concept",
+      "title": "DRAFT: Boundary wiring density and its q=1 degeneracy",
+      "statement": "DRAFT, independent mathematical review pending. On a finite FK graph with fixed edge probabilities, q>0 and boundary partition xi, merging u,v gives R=Z_eta/Z_xi=1/q+(1-1/q)*P_xi(u connected to v). For a common predictable edge-revelation filtration, the density is D_n=[1/q+(1-1/q)*P_xi(u connected to v|F_n)]/R. At q=1 it is identically one, so this density alone supplies no Loewner variance constraint.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite graph; 0<p_e<1; q>0",
+        "Count every connected component, including identified boundary components",
+        "Same edge factors and same predictable revelation rule"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w592:c0049-audit:wiring",
+        "url": null,
+        "revision": "2026-10-10-review-pending",
+        "license": "owner-own-work (original campaign derivation or source-scope audit; not a claim of mathematical novelty)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "two-profile",
+      "namespace": "probability.statmech",
+      "logical_name": "loewner-two-profile-identification-draft",
+      "kind": "concept",
+      "title": "DRAFT: Two profiles identify a localized Loewner driver",
+      "statement": "DRAFT, independent mathematical review pending. Let continuous adapted W_0=0 drive dg_t(z)=2/(g_t(z)-W_t)dt. For 0<x1<x2<y, set X_i=g_t(x_i)-W_t,Y=g_t(y)-W_t,U_i=X_i/Y. Stop before swallowing and localize with positive X_i,Y and U_i in compact subsets of (0,1). For kappa>0 let H prime be u^(-4/kappa)(1-u)^(8/kappa-2). If both H(U_i) are continuous local martingales in the same filtration, the independent calculation recovers W as a semimartingale and gives zero drift and bracket kappa dt on that stopped interval. This supplies no FK profile convergence theorem.",
+      "proof_text": null,
+      "assumptions": [
+        "Capacity normalization 2",
+        "Two distinct ordered marked points",
+        "Common filtration and compact unswallowed localization",
+        "Conclusion only on the stopped interval"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w592:c0049-audit:two-profile",
+        "url": null,
+        "revision": "2026-10-10-review-pending",
+        "license": "owner-own-work (original campaign derivation or source-scope audit; not a claim of mathematical novelty)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "one-profile",
+      "namespace": "probability.statmech",
+      "logical_name": "loewner-one-profile-constant-ratio-counterexample-draft",
+      "kind": "concept",
+      "title": "DRAFT: One profile does not identify the driver",
+      "statement": "DRAFT, independent mathematical review pending. For 0<x<y and t<xy/4, the smooth deterministic driver W_t=(x+y)(1-sqrt(1-4t/(xy))) has Loewner images with X_t=x*sqrt(1-4t/(xy)) and Y_t=y*sqrt(1-4t/(xy)). Therefore U_t=x/y is constant and every finite H(U_t) is a local martingale, while W has nonzero finite variation and bracket zero. The second independent observable in the two-profile criterion cannot simply be dropped.",
+      "proof_text": null,
+      "assumptions": [
+        "Stop strictly before xy/4",
+        "H is finite at x/y",
+        "Counterexample targets a one-profile inference, not the actual two-profile criterion"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w592:c0049-audit:one-profile",
+        "url": null,
+        "revision": "2026-10-10-review-pending",
+        "license": "owner-own-work (original campaign derivation or source-scope audit; not a claim of mathematical novelty)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "profile-gap",
+      "namespace": "probability.statmech",
+      "logical_name": "fk-random-slit-profile-convergence-obligation-draft",
+      "kind": "concept",
+      "title": "DRAFT: The unresolved input in a boundary-event SLE route",
+      "statement": "DRAFT, independent mathematical review pending. The proposed boundary-event route requires two actual FK observables converging jointly with the exploration to the specified conformal profiles, uniformly in localized random slit domains, with a justified limiting-filtration martingale argument and coverage beyond fixed marked-point swallowing. Finite domain Markov and partition identities give martingales without identifying their profiles. The parent C0049 statement remains unproved in this packet.",
+      "proof_text": null,
+      "assumptions": [
+        "Conjectural FK-to-profile input",
+        "No theorem promotion from finite enumeration"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w592:c0049-audit:profile-gap",
+        "url": null,
+        "revision": "2026-10-10-review-pending",
+        "license": "owner-own-work (original campaign derivation or source-scope audit; not a claim of mathematical novelty)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-scope",
+      "namespace": "probability.statmech",
+      "logical_name": "fk-q-four-loop-versus-chordal-source-audit-draft",
+      "kind": "concept",
+      "title": "DRAFT: q=4 loop convergence source scope",
+      "statement": "DRAFT, independent mathematical review pending. A source-scope audit of Averous et al. (October 6, 2026), Theorem 1.2, finds a free-boundary q=4,p=2/3 FK loop convergence theorem to CLE(4) in simply connected square-lattice domains with Caratheodory approximation and Camia-Newman topology. A marked Dobrushin chordal-path limit requires a separate justified transfer. Preserve that distinction when updating the dated C0049 card; this packet makes no blanket retirement claim.",
+      "proof_text": null,
+      "assumptions": [
+        "Original audit of the cited primary theorem",
+        "Separate chordal transfer not established here"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w592:c0049-audit:source-scope",
+        "url": null,
+        "revision": "2026-10-10-review-pending",
+        "license": "owner-own-work (original campaign derivation or source-scope audit; not a claim of mathematical novelty)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "route-scope",
+      "namespace": "probability.statmech",
+      "logical_name": "fk-parafermionic-route-sufficient-not-necessary-draft",
+      "kind": "concept",
+      "title": "DRAFT: A sufficient route is not an equivalence",
+      "statement": "DRAFT, independent mathematical review pending. The 2017 lecture after Conjecture 3 provides a sufficient implication from parafermionic observable convergence to interface convergence. The old C0049 attempt says the problem is reduced exactly to finding an additional discrete relation; the cited source does not establish necessity of that method. Retain alternative approaches while recording their own precise gaps.",
+      "proof_text": null,
+      "assumptions": [
+        "Source-scope audit of C0049-A001",
+        "No completed alternate FK proof claimed"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w592:c0049-audit:route-scope",
+        "url": null,
+        "revision": "2026-10-10-review-pending",
+        "license": "owner-own-work (original campaign derivation or source-scope audit; not a claim of mathematical novelty)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "one-profile",
+      "to_key": "two-profile",
+      "kind": "semantic_association",
+      "rationale": "The one-profile card says \"the second independent observable ... cannot simply be dropped\"; the two-profile card explicitly requires \"two distinct ordered marked points\". The counterexample does not refute the stated two-profile criterion."
+    },
+    {
+      "from_key": "profile-gap",
+      "to_key": "two-profile",
+      "kind": "depends_on",
+      "rationale": "The gap card requires \"two actual FK observables\" converging to the \"specified conformal profiles\"; the conditional driver criterion begins \"If both H(U_i) are continuous local martingales\"."
+    },
+    {
+      "from_key": "profile-gap",
+      "to_key": "wiring",
+      "kind": "semantic_association",
+      "rationale": "The gap card distinguishes finite martingales from identified profiles; the wiring card states that q=1 density is \"identically one\"."
+    },
+    {
+      "from_key": "source-scope",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0049-convergence-of-random-cluster-interfaces-to-sle-kappa-for-q-in-0-4-q-n",
+      "kind": "semantic_association",
+      "rationale": "Existing C0049 node names Dobrushin exploration convergence; this audit records that the October 6 theorem is a free-boundary loop theorem. No relation asserts a full solution."
+    },
+    {
+      "from_key": "route-scope",
+      "to_existing_logical": "math:probability.statmech:attempt-c0049-convergence-of-random-cluster-interfaces-to-sle-kappa-for-q-in-0-4-q-n",
+      "kind": "semantic_association",
+      "rationale": "The exact existing attempt says \"reduced ... exactly to finding an additional discrete relation\"; the primary source says only that the conjecture would follow from observable convergence."
+    }
+  ]
+}

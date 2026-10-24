@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B05",
+  "run_id": "20260924T032721Z-account01-B05-QFORM-auto11",
+  "status": "PAIRWISE_PLUECKER_TUBE_PROVED_PARTNER_MAXCUT_APPLIED_AGGREGATE_COAREA_REMAINS",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_login": "c39c94da8c37d039fc460c844f5f89b515ba7884",
+  "prepublication_control_head_observed": "f12a06a122d79b027a4e9a3d6ad6e75bc0da9ede",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE"
+  ],
+  "mathematical_premises": [
+    "account01/B05 previous Borel-profile compiler at math-open-problems@28238ad9b68d613f205feab35e3048a51fd48179",
+    "surviving Witt form Q=2aV(H+kappa U)+alpha V^2+2gamma VW+delta W^2 with determinant star S_i=a^2|delta|",
+    "H literal original coordinate independent of residual bank; U,V,W orthonormal coefficient projections but not probabilistically independent",
+    "original physical coordinate densities bounded by one"
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-WITT-PAIRWISE-PLUECKER-TUBE-v1",
+      "status": "SUPPORTING_PRODUCT_PRESERVING_THEOREM_PROVED",
+      "statement": "For b_jk=v_j w_k-v_k w_j nonzero, shell Borel profile <=K0 |b_jk|^-1 sqrt(|a/delta|) r^(3/2)|E|^(1/2), uniformly in kappa and affine shear; hence ||p_Q||_inf,ess<=6.160689335164 |b_jk|^-2/3 S_i^-1/3."
+    },
+    {
+      "id": "QFORM-WITT-PLUECKER-JACOBIAN-CONSERVATION-v1",
+      "status": "EXACT_STRUCTURAL_IDENTITY_PROVED",
+      "statement": "J_jk=kappa(v_j u_k-v_k u_j)+(delta/a)(Z/V)(v_j w_k-v_k w_j), and sum J_jk^2=kappa^2+(delta^2/a^2)(Z^2/V^2)."
+    },
+    {
+      "id": "QFORM-WITT-PAIR-FIRST-DIMENSION-LOSS-v1",
+      "status": "TARGET_VALID_METHOD_OBSTRUCTION_PROVED",
+      "statement": "Exact rank-three Walsh frame with spectrum {1,-1,1} and c=15/16 has total/cross Pluecker square mass one but max nonzero physical pair minor 2/N; any one-pair application of the proved tube theorem loses N^(2/3)."
+    }
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B05",
+    "source_commit": "4ad9d206dba1b22fd917280717c24f4e1dd6ea09",
+    "claim": "QFORM-NULLSTAR-MAXCUT-v1",
+    "actual_application": "M_JK>=1/2 implies max_cross |b_jk|>=(2|J||K|)^-1/2; the pairwise theorem gives ||p_Q||_inf,ess<=7.761982175236(|J||K|)^(1/3)S_i^-1/3, hence <9.780(|J||K|)^(1/3) at S_i>=1/2."
+  },
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "2d7d3e756da21e4416c57655a3c276be9f2eef54",
+  "canonical_math_root": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260924T032721Z-account01-B05-QFORM-auto11/",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B05/20260924T032721Z-account01-B05-QFORM-auto11.md",
+  "handoff_commit": "47d36e41e33ba3b383e22b27a137709b023668c0",
+  "first_unpaid_implication": "QFORM-WITT-CROSSSTAR-AGGREGATE-COAREA-v1",
+  "next_step": "Using the source-disjoint banks J,K from account02/B05, prove a two-bank nonlinear coarea/Brascamp-Lieb Borel profile with reciprocal sqrt of aggregate cross Pluecker mass before selecting any individual edge; retain all within-bank tails.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

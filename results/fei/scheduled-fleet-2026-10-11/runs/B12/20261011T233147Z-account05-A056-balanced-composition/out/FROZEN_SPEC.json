@@ -1,0 +1,13 @@
+{
+  "helper_version": "A056-biased-erasure-v1",
+  "actual_Boolean_family": "All two-input Boolean gates composed with all pairs of two-input Boolean children on disjoint uniform blocks, tested at all four physical coordinates; explicit physically restricted majority/AND fixture",
+  "parameter_domain": "Gate and child truth-table codes 0..15; physical coordinates 0..3; constants retained as endpoint controls",
+  "case_count": {"pilot": 64, "main_physical_splits": 16384, "explicit_fixtures": 4},
+  "symmetry_reduction": "None",
+  "arithmetic": "Fraction Fourier amplitudes; exact rational prime-log vectors; signed comparisons by integer products after denominator clearing",
+  "memory_estimate_MB": 45,
+  "maximum_runtime_seconds": {"pilot": 60, "main": 180},
+  "dimension_escalation": false,
+  "assertions": "Exact erasure B, entropy decrement D, signed residual, positive-sector residual, physical influence; M(t) bound at t=beta^2 and zero/deterministic endpoints; negative-residual witness",
+  "inequality_constants": "Finite JS check uses 4 q t; analytic proof gives (2/ln2)q t. No floating-point proof."
+}

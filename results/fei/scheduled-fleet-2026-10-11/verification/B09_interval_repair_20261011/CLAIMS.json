@@ -1,0 +1,69 @@
+{
+  "schema": "fei.independent_interval_repair.v1",
+  "date_utc": "2026-10-11T20:04:08Z",
+  "packet": "B09_interval_repair_20261011",
+  "execution_class": "INTERACTIVE_INDEPENDENT_REPAIR",
+  "counts_as_natural_scheduled_run": false,
+  "original_run": "20261011T195500Z-account01-B09-biased-restriction-uncertainty",
+  "sources": {
+    "open_problems_commit": "adb671ffcda143fa68347806bb96e8c305621a7d",
+    "brain_commit": "bfe8eafa2194feb32cb3881957ef844b8fe30de0",
+    "script_blob": "d8a3849f1fed3f2c879aa4c6cd12407d08e6f383",
+    "report_blob": "71b68e4decf9658a42fef6bb2668e19f25bd214a",
+    "source_sha256": "3147bc3d2dfeb54a2ecabce7c074131d9985a22fcd55b9a9fda3c4656b5af1fc"
+  },
+  "claims": [
+    {
+      "id": "B09-INTERVAL-DIVISION-REPAIR-01",
+      "status": "VERIFIED_SCOPED_REPAIR",
+      "statement": "For a real interval numerator and a strictly positive denominator interval, extrema of all four corner quotients provide a valid quotient enclosure, including negative logarithms.",
+      "evidence": [
+        "REPORT.md#defect",
+        "CHECK.py",
+        "CHECK.out"
+      ],
+      "original_defect": "Original probability-log quotient formula used positive-numerator denominator ordering."
+    },
+    {
+      "id": "B09-TAXFREE-BIASED-UNCERTAINTY-COUNTEREXAMPLE-01",
+      "status": "CERTIFIED_COUNTEREXAMPLE_TO_HELPER",
+      "statement": "For g(X,Y)=(-1)^(XY), p=1/8,q=1/4,A={X}, J_A-M_A>0.1195 bits. Hence J_A<=M_A is false for arbitrary product-biased Boolean gates.",
+      "arithmetic": "Exact rational Fourier masses; rational atanh remainder; corrected signed interval division.",
+      "closed_interval": [
+        "0.119545016024424957",
+        "0.119545016024424958"
+      ],
+      "strict_rational_lower_bound": "1195/10000",
+      "evidence": [
+        "REPORT.md#counterexample-and-certified-margin",
+        "CHECK.out"
+      ]
+    },
+    {
+      "id": "B09-BIASED-BLOCK-UNCERTAINTY-01",
+      "status": "REVIEW_PENDING",
+      "statement": "The original auxiliary inequality with Delta_A(p) is not accepted or fully audited by this repair packet.",
+      "required_review": [
+        "Independent Maassen-Uffink and posterior-normalization proof review",
+        "Composition-scope and nonreused-tax audit",
+        "Endpoint claim review"
+      ]
+    }
+  ],
+  "verification": {
+    "exit_code": 0,
+    "status": "PASS",
+    "exact_log2_power_cases": 11,
+    "exact_sign_quotient_cases": 3,
+    "original_inversion_reproduced": true,
+    "zero_one_probabilities_checked": true,
+    "invalid_domain_rejections": 4,
+    "certificate_terms": 1200,
+    "check_sha256": "d33caeaaf0232eec128a8406c6bb3bf8e4872937bddc91871ea195021c81f408",
+    "output_sha256": "d0efbda7a310e0a3ed704a2a373988a58ae5482e5e8612f9b43ccdd686110884"
+  },
+  "original_peer_files_overwritten": false,
+  "remote_mutations": false,
+  "full_fei_status": "OPEN"
+}
+

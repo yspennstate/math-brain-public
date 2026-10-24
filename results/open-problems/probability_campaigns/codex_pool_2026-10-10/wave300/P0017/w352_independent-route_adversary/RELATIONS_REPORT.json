@@ -1,0 +1,13 @@
+{
+  "status": "DRAFT",
+  "relations": [
+    {
+      "from_key": "ball-variance",
+      "to_key": "epigraph-sobolev",
+      "kind": "semantic_association",
+      "rationale": "The first endpoint gives the draft comparison factor (n+4)/4; the second gives the draft conditional gradient energy D_p/p -> 1/3. These are distinct obstructions to a conditioning proof mechanism. Neither endpoint states that KLS is false.",
+      "from_statement": "DRAFT concept; independent w353 proof check pending. Let n=2d, d>=1, and X=(U,V) be uniform on the Euclidean ball of radius sqrt(n+2) in R^n, split into orthogonal d-dimensional blocks. This law is centered isotropic and log-concave. For f=|U|^2-|V|^2 the author derivation gives Var(f)=2n(n+2)/(n+4), E|grad f|^2=4n, and Var(f)/[E Var(f|U)+E Var(f|V)]=(n+4)/4. Maximal block correlation is at least n/(n+4). A dimension-uniform conditional-variance comparison for every balanced split therefore requires hypotheses beyond isotropic log-concavity. This does not refute KLS or an unbalanced splitting strategy.",
+      "to_statement": "DRAFT concept; independent w353 proof check pending. For p>=2, start with joint density proportional to exp(-x) on x>=|y|^p. Let sigma^2=Gamma(3/p)/Gamma(1/p), U=(X-1-1/p)/sqrt(1+1/p), V=Y/sigma. The resulting law is centered isotropic and log-concave. The author derivation for f(u,v)=u gives input gradient energy 1 and conditional-mean gradient energy D_p=p^2 Gamma(3/p) Gamma(2-1/p)/[(1+1/p) Gamma(1/p)^2], with D_p/p tending to 1/3. This candidate obstruction concerns a uniform Sobolev bound for conditional averaging, not the KLS conclusion. The conditional mean variance is 1/(p+1)."
+    }
+  ]
+}

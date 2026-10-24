@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B09",
+  "run_id": "20260923T211152Z-account01-B09-QFORM-auto11",
+  "owner_request_acknowledged": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_login": "61bc5084156380142ff818045a8b3041e2d098c2",
+  "prepublication_control_head_observed": "f50a7186d0a6526cb1ea6bd8cda336612bd1b965",
+  "control_readme_blob": "14046b5138615be52bb1c49a998122a7c84e200e",
+  "claims_blob": "1e28cd8da25ecdfc5641b22a90519c5061896862",
+  "correction_inbox_blob": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-GROUPED-RANK2-KERNELDERIVATIVE-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "scope": "Fixed original-coordinate triple L versus arbitrary disjoint original-coordinate right bank J, rank A[L,J]=2, with P=A[L,L] and Pn nonzero for n spanning ker(A[L,J]^T). Arbitrary same-side curvature and conditioned affine terms retained. Continuous density with C_G Delta^(-2/5)||Pn||^(-1/5), C_G=9.018613132839628... ."
+    },
+    {
+      "id": "QFORM-FIXEDTRIPLE-ONEOVERLAP-ADJUGATE-v1",
+      "status": "PROVED_EXACT_STRUCTURAL_IDENTITY",
+      "scope": "For C=A[L,J] with three-row L, sum over physical right pairs of cross-product outer products equals adj(CC^T). In rank two, V_L=e_2(CC^T)||Pn||^2 and ||A tilde n||^2=V_L/e_2(CC^T)."
+    }
+  ],
+  "mathematical_premises": [
+    {
+      "id": "QFORM-3x2-KERNELDERIVATIVE-L1-v1",
+      "source": "yspennstate/math-open-problems@65ed9ea70175fb28541d756aea01f6aeb491fd6c:proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T201318Z-account02-B09-QFORM-r14/REPORT.md",
+      "use": "Left moving-quadratic-fiber L4 estimate and concrete packet inequality."
+    },
+    {
+      "id": "QFORM-PHYSICAL-D3-NO-MARGINAL-GATE-v1",
+      "source": "yspennstate/math-open-problems@8a4e6d0048174e047fc3b4ae8cabfbabba3cdc3b:proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260923T165154Z-account01-B20-QFORM-auto11/NO_MARGINAL_D3.md",
+      "use": "Rank-three branch of the fixed-triple compiler only."
+    },
+    {
+      "id": "ORTHONORMAL_PROJECTION_DENSITY_CAP",
+      "source": "same reviewed projected-crossing dependency used explicitly in account02/B09 r14",
+      "use": "Two-dimensional probability projection density at most 2, one-dimensional at most sqrt(2)."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "partner": "account02/B09",
+    "theorem": "QFORM-3x2-KERNELDERIVATIVE-L1-v1",
+    "source_commit": "65ed9ea70175fb28541d756aea01f6aeb491fd6c",
+    "actual_inequality": "For Q_m=2Y1Y3+2sqrt(2/m)Y1 sum_first Z_j+2sqrt(2/m)Y2 sum_second Z_j, any opposite-half physical right pair has ||w||||Pw||=4/m^2, hence ||p_Qm||inf<=C_KD(4/m^2)^(-1/5); at m=8 this is <11.901."
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "branch": "master",
+    "bundle_commit": "0935472589914e2b57853f54cb4c35b348ded34d",
+    "directory": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T211152Z-account01-B09-QFORM-auto11/",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T211152Z-account01-B09-QFORM-auto11/REPORT.md",
+    "report_blob": "9a64ac14f90b0896c7d401a4002dacacd60ca76a",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T211152Z-account01-B09-QFORM-auto11/CHECKS.md",
+    "prepublication_refresh_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T211152Z-account01-B09-QFORM-auto11/PREPUBLICATION_REFRESH.md"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B09/20260923T211152Z-account01-B09-QFORM-auto11.md",
+    "commit": "25fa51512cdaa37a257f7f1935bd00a7b0460a4c"
+  },
+  "unresolved_implication": "QFORM-AGGREGATE-TRIPLE-SELECTION-OR-SUPPORTED-KERNEL-v1",
+  "next_step": "Aggregate over physical left triples as well as right pairs, or promote genuinely high-leverage literal coordinates until a completed D3, grouped-rank2, fixed-pair-volume, 3x2-kernel-derivative, grouped-hub, ridge or finite-collar receiver applies. Preserve the exact rank-two endpoint A tilde n=0 rather than inverting a vanishing packet.",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "brain_status_reason": "Authenticated repository retrieval and mathematical receiver use occurred, but native learned-memory ingestion/receiver restoration was not independently exposed or verified.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_effort_requested": "maximum actually supported"
+}

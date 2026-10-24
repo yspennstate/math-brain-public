@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260923T113026Z-account03-B17-QFORM-auto11",
+  "control_start_commit": "b508b8452488aa3196dc3133db53c419fbfd0de4",
+  "control_refresh_commit": "aebcf1d236a0c0d57cc96508d06772c89a57a5bd",
+  "owner_control_revision": "2026-09-22.15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "scientific_result": {
+    "status": "SUPPORTING_ANALYTIC_WITNESS_CONSTRAINT",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b783f27d6291bcebdf36b0d36266c4a4274c2b92",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T113026Z-account03-B17-QFORM-auto11/REPORT.md",
+    "statement": "For the exact rational three-bank rotated witness, cap-one fragments of mass c_j/m^2 placed at physical distance a_j sqrt(m) satisfy liminf m(1-p_Qm(0)/(3sqrt2)) >= 5295/21952 + (1/2) sum_j c_j(1-exp(-6 a_j^2)). Thus every genuine remote fragment worsens the first-order cone-tip deficit.",
+    "scope": "cone-tip asymptotic for the exact rank-three three-bank architecture; not a global mode theorem and not the unrestricted QFORM upper bound"
+  },
+  "partner_result_applied": {
+    "worker": "account04/B17",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2156b76156ad5956c214a881fcfd6d977d6f3b9f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B17/20260922T211900Z-account04-B17-QFORM-r3/REPORT.md",
+    "application": "The zero-remote mixture component is exactly the partner witness, so its coefficient 5295/21952 enters the new first-variation inequality and its saturation gives C_universal>=3sqrt2."
+  },
+  "worker_dependency": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "dcf8885d5153370cacfa246ad1e29fb06d971769",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T070310Z-account03-B17-QFORM-r25/REPORT.md",
+    "application": "For a one-remote component, the limiting affine Gaussian has spectral mean norm |a_j|, giving q_j/(3sqrt2) <= (1+exp(-6a_j^2))/2."
+  },
+  "unresolved": "Full arbitrary-law, arbitrary-dimension, arbitrary-spectrum QFORM remains open; full-target continuity remains open; this run does not rule out an off-tip finite-m overshoot.",
+  "next_step": "Test off-tip modes and non-CLT intermediate fragment scales or several non-collinear mesoscopic shared rows while preserving exact product provenance."
+}

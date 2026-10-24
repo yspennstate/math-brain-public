@@ -1,0 +1,57 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B19",
+  "primary_packet_id": "A092",
+  "claims": [
+    {
+      "claim_id": "B19-A092-ACTIVATION-SMR-REVIEW-v1",
+      "version": "v1",
+      "status": "INDEPENDENTLY_ACCEPTED",
+      "exact_statement": "For the fair activation of four-bit mask 56242, M+(5/4)U-2I>0 exactly; hence the universal SMR_{2,1/4} helper is false.",
+      "statement_sha256": "dc8403b38436ab6b999d27040333f4bf4aaa548c8a56876f6d6277b1ae0e53db",
+      "contributors": ["B19 independent reviewer"],
+      "hypotheses": "Genuine Boolean sign on the finite uniform cube; base-two logarithms; zero-mass terms omitted.",
+      "proof_source": ["INDEPENDENT_RECONSTRUCTION.md", "INDEPENDENT_REVIEW.py", "INDEPENDENT_REVIEW.out"],
+      "proof_dependencies": ["Exact definitions of U, I, G, B and M=G-B"],
+      "review_records": ["This run is the independent review."],
+      "supersedes": null,
+      "refutes": "B01-A003-SMR-2-ONE-QUARTER-v1",
+      "first_unproved_line": null,
+      "next_consumers": ["A003", "A005", "A023", "A043", "A064", "A086", "A094", "A096", "B01", "B05", "B08", "B20"]
+    },
+    {
+      "claim_id": "B05-A023-ACTIVATION-RESIDUAL-IDENTITY-v1",
+      "version": "v1",
+      "status": "INDEPENDENTLY_ACCEPTED",
+      "exact_statement": "The displayed L_{c,eta} fair-activation recurrence holds for every genuine Boolean core and all c>=0, eta>0.",
+      "statement_sha256": "4274657ce0dce0c76cadf718523349a58b2cdbf40d506536356daae4057de363",
+      "contributors": ["B05 author"],
+      "hypotheses": "Fresh fair selector only; no assertion of a nonpositive node charge.",
+      "proof_source": ["REPORT.md"],
+      "proof_dependencies": ["Exact activation Fourier coefficients", "Exact cap identity U(A(q))=U(q)/2+R(Eq)"],
+      "review_records": ["Independently reconstructed in this B19 run."],
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": null,
+      "next_consumers": ["A023", "A043", "A064", "A094", "B05", "B20"]
+    },
+    {
+      "claim_id": "GU-ASYMMETRY-MISMATCH",
+      "version": "v4.1",
+      "status": "OPEN",
+      "exact_statement": "Find some universal finite c and eta>0 satisfying the signed aggregate refund, or prove GU through another noncircular payment. The c=2, eta=1/4 instance is refuted.",
+      "statement_sha256": "e72b38079bfab738204194b916223d8da1a6d05cb501b8e338795b15f1918c11",
+      "contributors": ["B01", "B05", "B19"],
+      "hypotheses": "All genuine Boolean functions on all finite uniform cubes.",
+      "proof_source": null,
+      "proof_dependencies": [],
+      "review_records": ["Sharp helper refutation accepted in this run."],
+      "supersedes": "GU-ASYMMETRY-MISMATCH v4.0",
+      "refutes": null,
+      "first_unproved_line": "No dimension-independent replacement reserve is proved.",
+      "next_consumers": ["B01", "B05", "B08", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}
+

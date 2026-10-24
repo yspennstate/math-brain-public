@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "B16-20260922T135620Z-r11",
+  "source_control_commit": "fdf63fb10c9845cf46796e82f056f69b779584e7",
+  "programme_revision": "2026-09-22.5",
+  "status": "ESSENTIAL_SUPPORTING_STEP_FULL_TARGET_OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "correction_ids_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "mathematical_premises": [
+    {
+      "source": "account04/B18",
+      "commit": "441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+      "scope": "Definite Schur scalar-pivot smoothing: ||p_Q||_infinity <= 2 sqrt(pi)(|a det B|)^(-1/4)."
+    },
+    {
+      "source": "account01/B07",
+      "commit": "22acf813ef825872ffe594818d6adb27e9d4e41f",
+      "scope": "Aggregate cross-minor/determinant mass survives even when one fixed-cut leverage gate fails; used only to identify the remaining mixture obligation, not as a premise of the local theorem."
+    }
+  ],
+  "partner_result_applied": {
+    "assigned_partner": "account04/B16",
+    "assigned_partner_completed_artifact_visible": false,
+    "compatible_partner_used": "account04/B18",
+    "applied_to": "definite-Schur branch of the all-Schur physical-triple theorem"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-INDEFINITE-PRODUCT-FRACTIONAL-TRACE-v1",
+      "statement": "For independent cap-one X,Y and invertible indefinite 2x2 S, sup_z E|z-R(X,Y)|^{-1/2} <= 16 sqrt(15)|det S|^{-1/4}, allowing affine perturbations."
+    },
+    {
+      "id": "QFORM-ALL-SCHUR-PIVOT-PRODUCT-TRACE-v1",
+      "statement": "Every invertible original-coordinate physical 3x3 block with a nonzero diagonal scalar pivot has a bounded-density payment regardless of Schur signature; the indefinite branch is <=16 sqrt(15)(|a det B|)^(-1/4), and the definite branch uses account04/B18."
+    },
+    {
+      "id": "QFORM-HADAMARD-MAJORITY-PIVOT-CLOSED-v1",
+      "statement": "For H=[[1,1,1],[1,1,-1],[1,-1,1]], arbitrary independent cap-one inputs satisfy ||p_{X^T H X}||_infinity <=4."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "1defc84f1bfd79994a103a6d683c887d9dead1e7",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/B16-20260922T135620Z-r11/REPORT.md",
+    "report_blob": "d64c5e5cfc01bf3783cdcdeac2f03dd766bbda3d",
+    "bundle_tip_commit": "c498280a0fb9919451bbfa125daba68e8ad169b6"
+  },
+  "continuity_status": "NOT_PROVED_FOR_NEW_BRANCH",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "unresolved_implication": "Control a determinant-weighted mixture of reciprocal local scalar-pivot payments from aggregate third-minor mass, without selecting one tiny physical triple; additionally pay invertible all-zero-diagonal physical triples or use a two-coordinate pivot.",
+  "next_step": "Attempt heavy-coordinate stopping with determinant-loss currency and the new fractional-trace local estimate, preserving original-coordinate product provenance and arbitrary extra spectral components."
+}

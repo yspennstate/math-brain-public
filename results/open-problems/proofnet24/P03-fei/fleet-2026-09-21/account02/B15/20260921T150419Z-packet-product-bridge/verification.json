@@ -1,0 +1,22 @@
+{
+  "functions": 65812,
+  "max_abs_residual_bits": 8.881784197001252e-16,
+  "one_point_defect": [
+    {"I": 0.75, "KL_bridge": 0.33239059736047566, "difference": 1.0796883312034067, "log2_Z": 1.4120789285638824, "n": 3},
+    {"I": 0.5, "KL_bridge": 0.9043329773647396, "difference": 0.7992397221580297, "log2_Z": 1.7035726995227694, "n": 4},
+    {"I": 0.3125, "KL_bridge": 1.4011262049923334, "difference": 0.5153582067654128, "log2_Z": 1.9164844117577462, "n": 5},
+    {"I": 0.1875, "KL_bridge": 1.7648288312058016, "difference": 0.3106292937650674, "log2_Z": 2.075458124970869, "n": 6},
+    {"I": 0.109375, "KL_bridge": 2.017477550108659, "difference": 0.180160851152678, "log2_Z": 2.197638401261337, "n": 7},
+    {"I": 0.0625, "KL_bridge": 2.192926704371118, "difference": 0.10197087439141406, "log2_Z": 2.294897578762532, "n": 8},
+    {"I": 0.03515625, "KL_bridge": 2.31845061526811, "difference": 0.05675453329514957, "log2_Z": 2.3752051485632597, "n": 9},
+    {"I": 0.01953125, "KL_bridge": 2.4125743526227956, "difference": 0.031201997552160243, "log2_Z": 2.443776350174956, "n": 10}
+  ],
+  "per_dimension": {
+    "1": {"functions": 4, "max_abs_residual_bits": 0.0},
+    "2": {"functions": 16, "max_abs_residual_bits": 0.0},
+    "3": {"functions": 256, "max_abs_residual_bits": 8.881784197001252e-16},
+    "4": {"functions": 65536, "max_abs_residual_bits": 8.881784197001252e-16}
+  },
+  "scope": "all Boolean truth tables through n=4; floating sanity check only",
+  "note": "The report's earlier exploratory evaluator used a different floating operation order and saw 1.7763568394002505e-15; the committed checker saw 8.881784197001252e-16. Both are roundoff-scale sanity residuals and neither is used as the proof."
+}

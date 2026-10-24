@@ -1,0 +1,31 @@
+{
+  "run_id": "20260923T035847Z-account02-B20-QFORM-r24",
+  "status": "ESSENTIAL_STEP_APPLIED / O3-STAR-THIRD-RESOURCE-QUANTIZED / FULL_TARGET_OPEN",
+  "claims": [
+    {
+      "id": "QFORM-STAR-THIRD-RESOURCE-WEDGE-ANCHOR-v1",
+      "status": "PROVED",
+      "statement": "For C=[[a,m^T],[m,B]] symmetric, r=||m||>0, gamma=s3(C), W_j=sum_{k<l,k,l!=j}(m_k B_jl-m_l B_jk)^2 and E_j=sum_{k!=j}(m_j B_jk-B_jj m_k)^2, one has sum_j(W_j+E_j)>=r^2 gamma^2/2."
+    },
+    {
+      "id": "QFORM-O3-R22-AGGREGATE-THIRD-RESOURCE-v1",
+      "status": "PROVED_BY_SUBSTITUTION",
+      "statement": "In account03/B20 r22's surviving selected physical block, s3(C)>1/6 and ||m||>1/48 imply W+E>1/165888, hence W>1/331776 or E>1/331776."
+    },
+    {
+      "id": "QFORM-O3-SINGLE-WEDGE-2OVER3-v1",
+      "status": "PROVED_BY_EXISTING_RECEIVER",
+      "statement": "If some W_j>=1/331776, account03/B19 r24 gives sup_z P(|Q-z|<=eps)<79.247 eps^(2/3) and half-Riesz currency <106.245 in its exact original-product scope."
+    },
+    {
+      "id": "QFORM-O3-STAR-AGGREGATE-WEDGE-OR-ANCHOR-PAYMENT-v1",
+      "status": "OPEN",
+      "statement": "Pay the fixed aggregate W or E packet linearly without extracting a vanishing single minor or assuming rotated-source independence."
+    },
+    {
+      "id": "QFORM-FULL",
+      "status": "OPEN"
+    }
+  ],
+  "continuity": "OPEN except on already-paid branches that explicitly prove it"
+}

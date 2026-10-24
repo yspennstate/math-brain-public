@@ -1,0 +1,68 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "RS-2026-CL-A",
+  "report_kind": "research_progress_positive_factorization_width_boundary",
+  "input_snapshot_sha": "23703e5054ee0adf103d141e496d00a42eadd91d",
+  "previous_report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T22-44-40Z__report.md",
+  "previous_report_creation_commit": "62b3de61fb239bf80add6941509267ac498caab4",
+  "previous_report_blob": "17e2b89aebecee6fd9cf09a289af93c91dc36cf9",
+  "report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T23-59-06Z__report.md",
+  "report_creation_commit": "968169993e6b27d7132fc6e103bd462614dc0870",
+  "report_blob": "15e3430c1a5fd846ab893291a32c3d7924405458",
+  "source": "Anastasia Kireeva, Randomstrasse 101, posted 2026-06-05, first displayed Open Problem 35",
+  "fixed_metric": "E_framework in {0,1}",
+  "metric_before": 1,
+  "metric_after": 1,
+  "remaining_obligation_moved": true,
+  "remaining_obligation_stagnation_count_before": 0,
+  "remaining_obligation_stagnation_count_after": 0,
+  "hard_recovery_cycles_consumed": 1,
+  "methods": [
+    {
+      "id": 29,
+      "name": "ADD THE POINTS AT INFINITY",
+      "status": "SUCCESS",
+      "outcome": "Infinitesimal bounded-degree positive factors converge locally uniformly to exp(sum c_r z^r), whose normalized form is compound-Poisson."
+    },
+    {
+      "id": 27,
+      "name": "SWAP THE QUANTIFIERS",
+      "status": "SUCCESS_PARTIAL",
+      "outcome": "For every finite graded pair with positive-factorization width of its spectral-energy polynomial at most D, bounded degree-D LDA implies bounded full chi-square and a uniform TV gap; no necessity/maximality claim."
+    },
+    {
+      "id": 24,
+      "name": "FIND THE EXTREMAL OBJECT",
+      "status": "SUCCESS",
+      "outcome": "At fixed primitive mass profile C_r, the sharp compactified envelope is exp(sum C_r q^r), approached by products (1+C_r z^r/m)^m."
+    }
+  ],
+  "new_core_results": [
+    "Define F_{P,Q}(z)=1+sum_j ||Pi_j(L-1)||_2^2 z^j. Then Adv^{<=D}(P,Q)^2=sum_{j<=D}b_j and 1+chi2(T_{sqrt(q)}P||Q)=F_{P,Q}(q).",
+    "If w_+(F_{P,Q})<=R<=D, then 1+chi2(T_{sqrt(q)}P||Q)<=exp(sum_{r<=R}q^r b_r)<=exp(q Adv^{<=D}(P,Q)^2).",
+    "If normalized F_{P,Q} is Hurwitz stable, Klich 2026 Corollary 4.4 implies w_+(F)<=2, hence the full pre-noise chi-square bound for every D>=2.",
+    "Mao's exact zero-LDA window forces w_+(F_n)>D_n, so his counterexample is excluded by a high-degree positive-atom/reassembly obstruction rather than by naming rank tests.",
+    "Infinitesimal width-R positive factorizations compactify to compound-Poisson spectral-energy entire functions."
+  ],
+  "prior_art": {
+    "Klich_2026": "arXiv:2607.14409, positive factorization poset, atoms, real-rooted Poisson-binomial sector, Hurwitz-stable atoms of degree at most two",
+    "sector_stability": "KNOWN stable/sector-stable polynomial literature; no novelty claim",
+    "compound_poisson_boundary": "classical law-of-rare-events / compound-Poisson mechanism; no novelty claim",
+    "inference_translation": "NOVELTY_UNVERIFIED"
+  },
+  "failed_routes": [
+    "A root-sector-only theorem is superseded by the cleaner Klich positive-factorization/Hurwitz route.",
+    "Positive-factorization width is not necessary for an individual sequence; a tiny high-degree parity atom may be killed by noise.",
+    "Independent parity-block replication does not reproduce Mao at the source superlogarithmic cutoff with only polynomial ambient size."
+  ],
+  "mathematical_status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / POSITIVE_FACTORIZATION_WIDTH_BOUNDARY",
+  "audit_count": "0/2",
+  "audit_refs": [],
+  "history_gaps": [
+    "No canonical probability_1000_intake_* row recovered for this later Randomstrasse admission.",
+    "operations/VISIBLE_FLEET_2026-09-16.md still displays the historical PROB20-16 Lyons assignment for this native ID; later exclusive claim/history supersede it."
+  ],
+  "artifact_refs": [],
+  "next_methods": [11, 30, 2],
+  "next_attack": "Dualize positive-factorization width into a robust approximate certificate, localize primitive mass by degree bands, and counterexample-test any approximate-width extension against Mao/code-like spectra; deepen Klich/PGF/likelihood-ratio prior-art search and obtain P26 plus distinct OTHER audit."
+}

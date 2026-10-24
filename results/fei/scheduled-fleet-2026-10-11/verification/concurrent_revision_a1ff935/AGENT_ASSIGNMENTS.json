@@ -1,0 +1,3671 @@
+{
+  "schema": "fei-campaign-assignments/2",
+  "campaign_start": "2026-10-11T22:15:57+03:00",
+  "campaign_end": "2026-10-21T22:15:57+03:00",
+  "timezone": "Asia/Jerusalem",
+  "status": "Operational research design; all 100 original packet IDs and native B owners retained. Packet completion is unobserved unless a later source-bound run proves it.",
+  "revision_date": "2026-10-11",
+  "deadline_utc": "2026-10-21T19:15:57Z",
+  "scope": "Existing account01/B01-B20 only; no new agents, native jobs, recurrence reset or deadline extension. F groups are topical crosswalks for the same effort.",
+  "source_pins": {
+    "current_public_paper": {
+      "repository": "yspennstate/fourier-entropy-threshold-functions",
+      "commit": "b38ba0ab49618ccbe6d1518a34c141dcec9f247c",
+      "source_path": "paper/main.tex",
+      "source_sha256": "85e9c4f36026eb5890be5686d03bf5264e524144686ee203ed799e3d41ac7017",
+      "pdf_sha256": "e7c8c3d7f2324f0a0720368f08ba8cbd2eeadad015bacbef4564080fd534f490",
+      "pages": 38,
+      "status": "Publication verified by the parent task; data-availability paragraph revised to URL only; mathematics unchanged from the reviewed 38-page baseline."
+    },
+    "installed_plan": {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/FEI_100_agent_research_plan.tex",
+      "commit": "bc85302284612e979faae67ea51663242d322221",
+      "blob": "5dcf9280217bcbf744c4484653c0c363304f9118"
+    },
+    "installed_registry": {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/AGENT_ASSIGNMENTS.json",
+      "commit": "bc85302284612e979faae67ea51663242d322221",
+      "blob": "ffe3cd38fae549db3fd809d9ea688a83a1e75c7b"
+    },
+    "installed_brain_mirror": {
+      "repository": "yspennstate/math-research-brain",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/",
+      "commit": "ee564b1b6b2b170137df31ce28b609fa5e063219"
+    },
+    "supplement": {
+      "repository": "yspennstate/math-open-problems",
+      "path": "research_pushes/2026-10-11-full-fei-100-agents/",
+      "commit": "bfb1d10b25cb5cb2e09112357cd24b21b5b1fe5e",
+      "current_files": {
+        "REPORT.md": "ee0baf11414766ba4f4604b1b985656464a7448e",
+        "CAMPAIGN.md": "1eb09316c0b40da377bc19ff543649b6ea0474b1",
+        "NATIVE_MAPPING.md": "27ec2c0d811b9145acb413d518805ecc8c321fc7",
+        "CLAIMS.md": "c1f4c6d9543d0474599d9eeb9f193e09aabcc999",
+        "COUNTEREXAMPLES.md": "4c393aa5507b67198127bae61f71f1a7fdb328ac",
+        "SEED_LEMMAS.md": "c575d18146a9a9d2bdee006dc3856947565442bc"
+      }
+    },
+    "supplement_brain_mirror": {
+      "repository": "yspennstate/math-research-brain",
+      "path": "research_pushes/2026-10-11-full-fei-100-agents/",
+      "commit": "4c068736601dade589d094a37bdb880ad0cd1416"
+    },
+    "B05_local_no_go": {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/runs/B05/20261011T193057Z-account01-B05-rare-restrictions/REPORT.md",
+      "commit": "80cc2e5027efa56d79c4ecdf7d4949759ef2068b",
+      "blob": "1b7e3cb572354cac4e506d7de0a3ed8af720472b"
+    },
+    "B05_brain_mirror": {
+      "repository": "yspennstate/math-research-brain",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B05/20261011T193057Z-account01-B05-rare-restrictions/REPORT.md",
+      "commit": "532e0b5ddb5b3b320b46beb155ee8b2be7e97761"
+    },
+    "B19_independent_review": {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/runs/B19/20261011T195038Z-account01-B19-independent-review/REPORT.md",
+      "commit": "7955d427222392911dc6af2e4ee3aa8aab67ac8c",
+      "blob": "dcec4cb77233a7b233b4798b25aab5f2dd5c82b6",
+      "verdict": "ACCEPT_AT_STATED_SCOPE"
+    },
+    "B19_brain_mirror": {
+      "repository": "yspennstate/math-research-brain",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B19/20261011T195038Z-account01-B19-independent-review/REPORT.md",
+      "commit": "b57496edc22cb5b0dc058fb183bde2b787dc9d42"
+    }
+  },
+  "input_dependency_policy": "input_packet_ids are preferred source handoffs to inspect and derive locally if absent. They are not theorem assumptions or prerequisites that every upstream research objective be solved. A refuted input triggers a new-version repair, scoped theorem or counterexample; it never licenses using a false lemma.",
+  "proof_dependency_policy": "For every claimed result, populate proof_dependencies with claim ID, exact version/hash, hypotheses and evidence state. A complete proof may use only established dependencies (or explicitly discharged assumptions of a conditional theorem). Refutation invalidates descendants pending re-audit. No proof-dependency cycle is allowed.",
+  "review_policy": "Suggested reviewer packet IDs route work, not evidence that reviewers ran. Actual author/reviewer identities must be distinct and source-bound; a contributor recuses from independent review of their own argument. Full-FEI candidates require complete independent reconstruction by eligible reviewers from both B18 and B19; a B17 certificate review does not replace either. If an audit stream contributed the candidate, use a different eligible reviewer in that stream and keep acceptance pending until available.",
+  "run_output_contract": [
+    "Exact target and quantified scope; source pins actually read; full new proof, counterexample or derivation with first unsupported line.",
+    "Validation code, commands, actual outputs, exact tested domain and certified error bounds when computation is used.",
+    "Claim ID/version, actual proof dependencies, old-to-new mathematical delta, remaining debt and reviewer request.",
+    "Source-bound private open-problems commit and Brain handoff; save failure remains explicit.",
+    "A partial derivation can satisfy substantive-run work but does not complete the packet or prove its target."
+  ],
+  "claim_states": [
+    "OPEN_TARGET",
+    "WORK_IN_PROGRESS",
+    "PROOF_CANDIDATE",
+    "REFUTATION_CANDIDATE",
+    "CONDITIONAL_PROVED",
+    "FINITE_VERIFIED",
+    "INDEPENDENTLY_REVIEWED",
+    "REFUTED",
+    "SUPERSEDED",
+    "BLOCKED"
+  ],
+  "observed_no_go": {
+    "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO-v1",
+    "statement": "For any fixed finite K,A,B>=0, some genuine Boolean physical split satisfies L>K*d+A*V+B*M.",
+    "source_key": "B05_local_no_go",
+    "review_source_key": "B19_independent_review",
+    "status": "INDEPENDENTLY_REVIEWED / ACCEPT_AT_STATED_SCOPE; B19 reconstructed the analytic proof and an independent exact finite source with 16,404 assertions. This plan audit read the original B19 review; it does not claim to have rerun that checker itself.",
+    "scope": "Retires the universal all-node fixed-price local helper. Does not refute existential good-coordinate selection, adaptive stopping trees, a nonlocal logarithmic payment, or FEI.",
+    "repair_requirement": "Any proposed replacement must pay at least (k-O(1))*d on the archived family, or prove an additional condition that excludes it and is satisfied by the intended application."
+  },
+  "reallocation_policy": {
+    "after_3_unchanged_runs": "B owner records the exact unchanged unpaid term and changes method, hypothesis, test family or nearest lemma.",
+    "after_6_unchanged_runs": "B20 records a mathematical reassignment within existing B ownership and real capacity; it does not disable slots, create workers or revive obsolete work.",
+    "refuted_helper": "Immediately stop using that exact helper, preserve statement and witness, invalidate proof descendants, and open a separately versioned repair or new route.",
+    "no_progress_definition": "Renaming a residual, replaying an established check, adding prose, or repeating a known falsifier is not a mathematical delta.",
+    "positive_delta_definition": "A proved bound on a previously unpaid term; a removed hypothesis; a meaningful new class; a rigorous new falsifier; an exact obstruction to an embedding; a validated finite-to-infinite bridge."
+  },
+  "streams": [
+    {
+      "native_stream": "B01",
+      "name": "Universal reduction and gap map",
+      "packet_ids": [
+        "A001",
+        "A002",
+        "A003",
+        "A004",
+        "A005"
+      ],
+      "first_packet_id": "A003",
+      "supplemental_F_groups": [
+        "F04",
+        "F09",
+        "F15",
+        "F20"
+      ],
+      "next_action": "Freeze J/R and the supplemental history-transfer obligations; prove one exact implication or arbitrary-seed embedding and put all unpaid leaves in the same graph.",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ]
+    },
+    {
+      "native_stream": "B02",
+      "name": "Joint Fourier-set coding",
+      "packet_ids": [
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010"
+      ],
+      "first_packet_id": "A006",
+      "supplemental_F_groups": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F10",
+        "F18"
+      ],
+      "next_action": "Compute the complete conditioned posterior cost for one low-energy/shared-data family, including v log Z, witness entropy and the supplement's paid scale prior.",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ]
+    },
+    {
+      "native_stream": "B03",
+      "name": "Overlap and activated representations",
+      "packet_ids": [
+        "A011",
+        "A012",
+        "A013",
+        "A014",
+        "A015"
+      ],
+      "first_packet_id": "A014",
+      "supplemental_F_groups": [
+        "F02",
+        "F10",
+        "F11",
+        "F14"
+      ],
+      "next_action": "Prove a fractional or spectral congestion bound for an explicit family with unbounded worst-case read; include its constructive cover and all label/rank costs.",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ]
+    },
+    {
+      "native_stream": "B04",
+      "name": "Addressing and shared-data tests",
+      "packet_ids": [
+        "A016",
+        "A017",
+        "A018",
+        "A019",
+        "A020"
+      ],
+      "first_packet_id": "A018",
+      "supplemental_F_groups": [
+        "F01",
+        "F11",
+        "F12"
+      ],
+      "next_action": "Use the exact collision law on nearly identical branches to derive a low-energy credit; ordinary addressing and uniform selector-energy closure are established controls.",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ]
+    },
+    {
+      "native_stream": "B05",
+      "name": "Rare restrictions and logarithmic costs",
+      "packet_ids": [
+        "A021",
+        "A022",
+        "A023",
+        "A024",
+        "A025"
+      ],
+      "first_packet_id": "A023",
+      "supplemental_F_groups": [
+        "F03",
+        "F15",
+        "F17"
+      ],
+      "next_action": "Use the archived B05 bent-defect family to design one nonlocal logarithmic transport with explicit single-use credit; retire the universal all-node fixed-price L<=Kd+AV+BM claim at unchanged hypotheses.",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ]
+    },
+    {
+      "native_stream": "B06",
+      "name": "Nonlocal restriction induction",
+      "packet_ids": [
+        "A026",
+        "A027",
+        "A028",
+        "A029",
+        "A030"
+      ],
+      "first_packet_id": "A027",
+      "supplemental_F_groups": [
+        "F05",
+        "F06",
+        "F07"
+      ],
+      "next_action": "Prove a proper adaptive-block selection or stopping rule on a growing class, retaining full block channel/conditional entropy and the terminal cost.",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ]
+    },
+    {
+      "native_stream": "B07",
+      "name": "Signed Booleanity identities",
+      "packet_ids": [
+        "A031",
+        "A032",
+        "A033",
+        "A034",
+        "A035"
+      ],
+      "first_packet_id": "A034",
+      "supplemental_F_groups": [
+        "F07",
+        "F09",
+        "F12",
+        "F14"
+      ],
+      "next_action": "Preserve conditional auxiliary entropy while testing one signed Boolean phase bound; for the two-address alternative keep coupled rows and move beyond the refuted constant two.",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ]
+    },
+    {
+      "native_stream": "B08",
+      "name": "Relative entropy and posterior credit",
+      "packet_ids": [
+        "A036",
+        "A037",
+        "A038",
+        "A039",
+        "A040"
+      ],
+      "first_packet_id": "A037",
+      "supplemental_F_groups": [
+        "F03",
+        "F05",
+        "F07",
+        "F08",
+        "F09"
+      ],
+      "next_action": "Derive a posterior-credit identity with an explicit debt and no reuse; if using reveal lifetime retain its exact policy, natural units and separate entropy-transfer obligation.",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ]
+    },
+    {
+      "native_stream": "B09",
+      "name": "Product biases and prime gates",
+      "packet_ids": [
+        "A041",
+        "A042",
+        "A043",
+        "A044",
+        "A045"
+      ],
+      "first_packet_id": "A041",
+      "supplemental_F_groups": [
+        "F04",
+        "F06",
+        "F12",
+        "F13"
+      ],
+      "next_action": "Locate the first unequal-weight failure of the symmetric biased-threshold proof and prove a replacement estimate for a new weight class or a precise obstruction.",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ]
+    },
+    {
+      "native_stream": "B10",
+      "name": "Potential falsification",
+      "packet_ids": [
+        "A046",
+        "A047",
+        "A048",
+        "A049",
+        "A050"
+      ],
+      "first_packet_id": "A046",
+      "supplemental_F_groups": [
+        "F11",
+        "F13",
+        "F14",
+        "F16",
+        "F17",
+        "F19"
+      ],
+      "next_action": "Freeze one currently live helper from the claim ledger and attack its hardest analytic boundary; do not spend runs retesting a retired helper under unchanged quantifiers.",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ]
+    },
+    {
+      "native_stream": "B11",
+      "name": "Extremal and critical structure",
+      "packet_ids": [
+        "A051",
+        "A052",
+        "A053",
+        "A054",
+        "A055"
+      ],
+      "first_packet_id": "A052",
+      "supplemental_F_groups": [
+        "F15",
+        "F17"
+      ],
+      "next_action": "Derive one critical-source structural consequence from a proved extremality notion and test both component counterexamples and arbitrary-core embeddings.",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ]
+    },
+    {
+      "native_stream": "B12",
+      "name": "Composition and decomposition",
+      "packet_ids": [
+        "A056",
+        "A057",
+        "A058",
+        "A059",
+        "A060"
+      ],
+      "first_packet_id": "A058",
+      "supplemental_F_groups": [
+        "F02",
+        "F10",
+        "F11",
+        "F13",
+        "F14"
+      ],
+      "next_action": "Prove an overlap/composition theorem outside fresh-selector orthogonal or uniform-positive-energy closure, using a low-energy collision credit or controlled selector reuse.",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ]
+    },
+    {
+      "native_stream": "B13",
+      "name": "Restriction martingales",
+      "packet_ids": [
+        "A061",
+        "A062",
+        "A063",
+        "A064",
+        "A065"
+      ],
+      "first_packet_id": "A064",
+      "supplemental_F_groups": [
+        "F05",
+        "F06",
+        "F08",
+        "F10"
+      ],
+      "next_action": "Prove a finite-tree debt/compensator identity paying the rare logarithm once; alternatively reconstruct the exact weighted reveal-lifetime obligation with its forced-information refund.",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ]
+    },
+    {
+      "native_stream": "B14",
+      "name": "Independent analytic routes",
+      "packet_ids": [
+        "A066",
+        "A067",
+        "A068",
+        "A069",
+        "A070"
+      ],
+      "first_packet_id": "A067",
+      "supplemental_F_groups": [
+        "F04",
+        "F07",
+        "F08",
+        "F09",
+        "F13",
+        "F18"
+      ],
+      "next_action": "Isolate and improve one Boolean-specific logarithmic loss in an analytic route; fixed spectral Renyi order below one is excluded by the existing point-defect family.",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ]
+    },
+    {
+      "native_stream": "B15",
+      "name": "Exact targeted countersearch",
+      "packet_ids": [
+        "A071",
+        "A072",
+        "A073",
+        "A074",
+        "A075"
+      ],
+      "first_packet_id": "A071",
+      "supplemental_F_groups": [
+        "F12",
+        "F16",
+        "F18"
+      ],
+      "next_action": "Freeze one lemma and a bounded actual-Boolean search family; compute exact spectra and transfer any promising violation to rigorous logarithmic certification.",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ]
+    },
+    {
+      "native_stream": "B16",
+      "name": "Scalable Boolean counterfamilies",
+      "packet_ids": [
+        "A076",
+        "A077",
+        "A078",
+        "A079",
+        "A080"
+      ],
+      "first_packet_id": "A077",
+      "supplemental_F_groups": [
+        "F03",
+        "F15",
+        "F17"
+      ],
+      "next_action": "Turn a named finite warning into a new sparse-defect/coding/auxiliary Boolean family and derive which payment ratio diverges, including all added influence.",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ]
+    },
+    {
+      "native_stream": "B17",
+      "name": "Certificates and finite-to-infinite bridges",
+      "packet_ids": [
+        "A081",
+        "A082",
+        "A083",
+        "A084",
+        "A085"
+      ],
+      "first_packet_id": "A081",
+      "supplemental_F_groups": [
+        "F01",
+        "F02",
+        "F06",
+        "F16",
+        "F18",
+        "F19"
+      ],
+      "next_action": "Bind the current proof graph and certificate requests to exact claim versions; certify the one finite/continuum bridge needed by the leading candidate.",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ]
+    },
+    {
+      "native_stream": "B18",
+      "name": "Independent proof audit A",
+      "packet_ids": [
+        "A086",
+        "A087",
+        "A088",
+        "A089",
+        "A090"
+      ],
+      "first_packet_id": "A087",
+      "supplemental_F_groups": [
+        "F05",
+        "F08",
+        "F19",
+        "F20"
+      ],
+      "next_action": "Independently reconstruct the strongest current restriction or witness proof from originals, starting with any new replacement for the retired B05 local payment.",
+      "suggested_review_packets": [
+        "A094",
+        "A085"
+      ]
+    },
+    {
+      "native_stream": "B19",
+      "name": "Independent proof audit B and literature",
+      "packet_ids": [
+        "A091",
+        "A092",
+        "A093",
+        "A094",
+        "A095"
+      ],
+      "first_packet_id": "A092",
+      "supplemental_F_groups": [
+        "F19",
+        "F20"
+      ],
+      "next_action": "Independently certify the strongest new no-go or composition claim and perform its primary-source overlap check; challenge any full-proof candidate independently of B18.",
+      "suggested_review_packets": [
+        "A090",
+        "A085"
+      ]
+    },
+    {
+      "native_stream": "B20",
+      "name": "Synthesis and mathematical coordination",
+      "packet_ids": [
+        "A096",
+        "A097",
+        "A098",
+        "A099",
+        "A100"
+      ],
+      "first_packet_id": "A096",
+      "supplemental_F_groups": [
+        "F01",
+        "F20"
+      ],
+      "next_action": "Ingest complete new B-stream results, propagate refutations through exact claim dependencies, perform one cross-route mathematical substitution, and issue distinct next actions.",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "agent_id": "A001",
+      "stream": "B01",
+      "stream_name": "Universal reduction and gap map",
+      "topic": "Quantifier audit",
+      "assignment": "Write the exact all-dimensions FEI target, inventory every sufficient condition in both recovered manuscripts, and identify its first unproved implication. Separate equivalence, one-way reduction, and proved class theorem.",
+      "input_packet_ids": [],
+      "completion_criterion": "A source-pinned table distinguishes sufficient implication, equivalence and class theorem for every current endpoint; it identifies one first unproved line for J, R, signed Booleanity and reveal/history transfer.",
+      "owner_native_stream": "B01",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F09",
+        "F15",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A002",
+      "stream": "B01",
+      "stream_name": "Universal reduction and gap map",
+      "topic": "Hardness-preserving transformations",
+      "assignment": "Reprove the tensor, balancing, sparse-activation, and auxiliary coding ledgers. Determine which extra hypotheses survive each transformation and which proposed restricted endpoints still contain arbitrary tensor factors.",
+      "input_packet_ids": [
+        "A001",
+        "A004"
+      ],
+      "completion_criterion": "Exact tensor, balancing, activation and padding formulas include constants and limiting regimes; each added hypothesis is marked preserved or failed with a proof.",
+      "owner_native_stream": "B01",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F09",
+        "F15",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A003",
+      "stream": "B01",
+      "stream_name": "Universal reduction and gap map",
+      "topic": "Minimal target formulation",
+      "assignment": "Compare the witness residual, good-coordinate erasure, and signed-Booleanity targets. Produce a formally explicit implication diagram with constants and a smallest genuinely stronger lemma for each route.",
+      "input_packet_ids": [
+        "A001",
+        "A002"
+      ],
+      "completion_criterion": "An acyclic implication graph records constants for the whole-witness residual, existential coordinate criterion and source/history interfaces; no OPEN_TARGET becomes an accepted lemma.",
+      "owner_native_stream": "B01",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F09",
+        "F15",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A004",
+      "stream": "B01",
+      "stream_name": "Universal reduction and gap map",
+      "topic": "Constant and unit ledger",
+      "assignment": "Normalize bits versus natural logarithms, sign functions versus indicators, total versus directional influence, and empty versus nonempty entropy. Check every imported inequality at constant, dictator, parity, and nearly constant endpoints.",
+      "input_packet_ids": [],
+      "completion_criterion": "One normalized ledger checks constant, dictator, parity and rare-defect endpoints; every imported quantity has its Fourier basis, log base and empty-coefficient convention stated.",
+      "owner_native_stream": "B01",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F09",
+        "F15",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A005",
+      "stream": "B01",
+      "stream_name": "Universal reduction and gap map",
+      "topic": "Noncircular endpoint referee",
+      "assignment": "Attempt to embed an arbitrary Boolean seed into every supposedly easier universal endpoint. Supply the embedding and limit when it exists; otherwise identify the precise obstruction and ask for its proof.",
+      "input_packet_ids": [
+        "A002",
+        "A003"
+      ],
+      "completion_criterion": "For one named easier endpoint, either a complete arbitrary-seed embedding preserves the target ratio, or an exact obstruction to that embedding is proved under the endpoint's full hypotheses.",
+      "owner_native_stream": "B01",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F09",
+        "F15",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A006",
+      "stream": "B02",
+      "stream_name": "Joint Fourier-set coding",
+      "topic": "Posterior forest optimization",
+      "assignment": "Optimize distributions on distinct actual partition-forest runs, retaining the subtraction of posterior witness entropy. Derive computable lower or upper bounds for the resulting variational cost without identifying duplicate descriptions as distinct runs.",
+      "input_packet_ids": [
+        "A004"
+      ],
+      "completion_criterion": "One explicit growing family has a complete posterior law on distinct actual finite runs, a normalized reference and a derived expected cost; posterior entropy and all residual terms remain present.",
+      "owner_native_stream": "B02",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F10",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A007",
+      "stream": "B02",
+      "stream_name": "Joint Fourier-set coding",
+      "topic": "Root normalization",
+      "assignment": "Analyze conditioning on a nonempty initial root set and the term v log Z. Prove cancellation with rare-root costs on new overlapping families; never drop a negative normalization term before testing its mathematical role.",
+      "input_packet_ids": [
+        "A006",
+        "A021"
+      ],
+      "completion_criterion": "A symbolic computation retains v log Z and every rare-root term on a parameterized overlapping family, with a uniform remainder estimate and an explicit residual-to-influence comparison.",
+      "owner_native_stream": "B02",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F10",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A008",
+      "stream": "B02",
+      "stream_name": "Joint Fourier-set coding",
+      "topic": "Gate-label compression",
+      "assignment": "Construct codes that communicate each shared gate label once per complete spectral set. Prove decodability and account for gate names, attachments, subset choices, root choices, and the final output ambiguity.",
+      "input_packet_ids": [
+        "A006",
+        "A016"
+      ],
+      "completion_criterion": "A decoder or injective run description shares each gate label once, and a full cost formula accounts for roots, attachments, subsets, output ambiguity and the reference normalizer.",
+      "owner_native_stream": "B02",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F10",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A009",
+      "stream": "B02",
+      "stream_name": "Joint Fourier-set coding",
+      "topic": "Fractional incidence optimization",
+      "assignment": "Choose global fractional gate weights subject to all coordinate incidence constraints. Derive an optimization dual or a verifiable certificate that bounds the expected residual for a meaningful family beyond bounded-read formulas.",
+      "input_packet_ids": [
+        "A006",
+        "A014"
+      ],
+      "completion_criterion": "A feasible global fractional-weight rule or exact dual certificate bounds the complete spectral expectation on a named class with unbounded worst-case read; finite optimization alone is marked finite evidence.",
+      "owner_native_stream": "B02",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F10",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A010",
+      "stream": "B02",
+      "stream_name": "Joint Fourier-set coding",
+      "topic": "Universal residual falsifier",
+      "assignment": "Search for actual Boolean functions and all admissible representations in a bounded class for which the proposed residual-to-influence bound grows. Distinguish failure of one representation from failure of the variational infimum.",
+      "input_packet_ids": [
+        "A006",
+        "A009"
+      ],
+      "completion_criterion": "A stated finite representation class is exhaustively covered or rigorously lower-bounded; the conclusion distinguishes a failed representation, failed bounded class and the unrestricted variational infimum.",
+      "owner_native_stream": "B02",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F10",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A011",
+      "stream": "B03",
+      "stream_name": "Overlap and activated representations",
+      "topic": "Representation existence",
+      "assignment": "Construct structured gate covers for broad Boolean classes and bound their total joint description cost. An arbitrary DNF representation is only a starting point; prove the quantitative cost of its use.",
+      "input_packet_ids": [
+        "A004",
+        "A015"
+      ],
+      "completion_criterion": "A constructive cover theorem includes its admission test and complete expected description cost for an explicit growing class; an arbitrary DNF existence statement is insufficient.",
+      "owner_native_stream": "B03",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F02",
+        "F10",
+        "F11",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A012",
+      "stream": "B03",
+      "stream_name": "Overlap and activated representations",
+      "topic": "Sparse activation accounting",
+      "assignment": "Use the exact activation formula to test whether a rare outer gate hides an arbitrary difficult core. Identify a structural admission condition that is proved, survives needed operations, and excludes this hidden-core construction.",
+      "input_packet_ids": [
+        "A002",
+        "A021"
+      ],
+      "completion_criterion": "One proposed structural admission condition is proved for its intended class and explicitly tested under sparse activation; an arbitrary hidden core is either excluded or identified without a stronger scope claim.",
+      "owner_native_stream": "B03",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F02",
+        "F10",
+        "F11",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A013",
+      "stream": "B03",
+      "stream_name": "Overlap and activated representations",
+      "topic": "Representation stability",
+      "assignment": "Study how a useful ordered cover changes under a physical restriction, tensor product, or multiplexer composition. Bound the extra gates, label entropy, and changes in root probabilities explicitly.",
+      "input_packet_ids": [
+        "A011",
+        "A056"
+      ],
+      "completion_criterion": "Restriction, tensor or selector transformation has a precise cover-update rule, with bounds for every changed label, root and rank term; at least one unbounded-parameter family is covered.",
+      "owner_native_stream": "B03",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F02",
+        "F10",
+        "F11",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A014",
+      "stream": "B03",
+      "stream_name": "Overlap and activated representations",
+      "topic": "Overlap beyond worst-case read",
+      "assignment": "Replace maximum read k by a spectral or fractional congestion quantity. Prove a theorem where k grows but the new quantity remains bounded, and supply an explicit unbounded-overlap example.",
+      "input_packet_ids": [
+        "A004"
+      ],
+      "completion_criterion": "A new congestion functional is fully defined, its link to the complete code cost proved, and an explicit family separates its bound from maximum read k.",
+      "owner_native_stream": "B03",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F02",
+        "F10",
+        "F11",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A015",
+      "stream": "B03",
+      "stream_name": "Overlap and activated representations",
+      "topic": "Minterm barrier analysis",
+      "assignment": "Quantify the dimension term in naive minterm coding on majority, tribes, and sparse activated cores. Prove which compression feature is missing before proposing a universal representation lemma.",
+      "input_packet_ids": [
+        "A004",
+        "A016"
+      ],
+      "completion_criterion": "Majority, tribes or an activated core gives an exact or uniform asymptotic minterm-cost gap; the missing compression feature is expressed as a concrete inequality.",
+      "owner_native_stream": "B03",
+      "suggested_review_packets": [
+        "A086",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F02",
+        "F10",
+        "F11",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A016",
+      "stream": "B04",
+      "stream_name": "Addressing and shared-data tests",
+      "topic": "Addressing benchmark",
+      "assignment": "Reproduce H=2a and I=1+a/2 for a-bit addressing, and compare coordinatewise, one-root, and posterior code costs. Derive the asymptotic ratio of each proposed cost to I.",
+      "input_packet_ids": [
+        "A004"
+      ],
+      "completion_criterion": "An independent derivation gives H=2a and I=1+a/2 and the asymptotic cost of each frozen coding proposal; this existing identity is recorded as calibration, not a new theorem.",
+      "owner_native_stream": "B04",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F11",
+        "F12"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A017",
+      "stream": "B04",
+      "stream_name": "Addressing and shared-data tests",
+      "topic": "Recursive addressing",
+      "assignment": "Build iterated address functions with controlled input reuse. Derive exact recursive entropy and influence ledgers and identify where the same gate label can be shared across levels.",
+      "input_packet_ids": [
+        "A016",
+        "A056"
+      ],
+      "completion_criterion": "A growing-depth selector family has exact entropy and influence recursions, including data reuse; a new feature beyond the established fresh-selector closure is isolated.",
+      "owner_native_stream": "B04",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F11",
+        "F12"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A018",
+      "stream": "B04",
+      "stream_name": "Addressing and shared-data tests",
+      "topic": "Shared-data collision law",
+      "assignment": "Exploit the exact Walsh collision identity for arbitrary overlapping branches. Characterize when posterior label entropy cancels the selector alphabet cost and when coherent interference adds entropy.",
+      "input_packet_ids": [
+        "A016"
+      ],
+      "completion_criterion": "The exact signed Walsh collision formula is used to prove a bound for low selector energy or to exhibit a fully Boolean counterfamily to one proposed collision-credit estimate.",
+      "owner_native_stream": "B04",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F11",
+        "F12"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A019",
+      "stream": "B04",
+      "stream_name": "Addressing and shared-data tests",
+      "topic": "Orthogonality extensions",
+      "assignment": "Start from the proved orthogonal-neighbor multiplexer theorem. Replace exact orthogonality by a quantified disagreement or correlation condition and prove the resulting influence-based closure constant.",
+      "input_packet_ids": [
+        "A018"
+      ],
+      "completion_criterion": "A new closure criterion covers vanishing I_sel/a, selector-coordinate reuse or another explicit family outside C035; merely assuming I_sel>=c a is identified as the established baseline.",
+      "owner_native_stream": "B04",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F11",
+        "F12"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A020",
+      "stream": "B04",
+      "stream_name": "Addressing and shared-data tests",
+      "topic": "Selector boundary tests",
+      "assignment": "Construct selectors with coincident Fourier supports, unequal cell sizes, affine cells, and nearly identical branches. Refute any proposed closure that silently discards interference or selector influence.",
+      "input_packet_ids": [
+        "A018"
+      ],
+      "completion_criterion": "One actual Boolean selector violates a precisely stated stronger closure, or exact calculations delimit its scope; overlapping supports and nearly identical branches are retained throughout.",
+      "owner_native_stream": "B04",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F11",
+        "F12"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A021",
+      "stream": "B05",
+      "stream_name": "Rare restrictions and logarithmic costs",
+      "topic": "Rare-core asymptotics",
+      "assignment": "For balanced tensor cores activated on one control point, expand every entropy and influence term uniformly in the two parameters. Extract necessary asymptotic conditions on any claimed global potential.",
+      "input_packet_ids": [
+        "A002",
+        "A004"
+      ],
+      "completion_criterion": "Uniform two-parameter activation or bent-defect expansions identify the leading logarithm and every candidate payment; the existing B05 family is cited and any new regime is stated.",
+      "owner_native_stream": "B05",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A022",
+      "stream": "B05",
+      "stream_name": "Rare restrictions and logarithmic costs",
+      "topic": "One-point surgery",
+      "assignment": "Analyze Boolean seeds after one-point or adjacent-point flips, including bent and near-tensor seeds. Produce exact spectral formulas for the logarithmic terms that a local estimate would have to pay.",
+      "input_packet_ids": [
+        "A021",
+        "A053"
+      ],
+      "completion_criterion": "An exact Fourier perturbation formula for one-point or adjacent-point surgery yields the claimed logarithmic term with a controlled remainder; its debt is compared to a specified local payment.",
+      "owner_native_stream": "B05",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A023",
+      "stream": "B05",
+      "stream_name": "Rare restrictions and logarithmic costs",
+      "topic": "Amortized rarity budget",
+      "assignment": "Develop a ledger paying a rare event once at its first revelation, with an explicit stopping rule and no reuse across descendants. Prove a complete bound for at least one nontrivial family.",
+      "input_packet_ids": [
+        "A021",
+        "A061"
+      ],
+      "completion_criterion": "A stated stopping rule creates and consumes rare-event credit once; a full path and terminal estimate is proved for a nontrivial growing family, including the B05 logarithmic obstruction.",
+      "owner_native_stream": "B05",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A024",
+      "stream": "B05",
+      "stream_name": "Rare restrictions and logarithmic costs",
+      "topic": "Biased-child stability",
+      "assignment": "Track induced product biases and near-dictator limits after restrictions or composition. Identify the normalization credit necessary to prevent a small-probability branch from creating an unpaid logarithm.",
+      "input_packet_ids": [
+        "A004",
+        "A042"
+      ],
+      "completion_criterion": "A corrected biased-child identity includes normalization credit and analytic endpoint limits; the exact small-probability term that is paid or remains unpaid is displayed.",
+      "owner_native_stream": "B05",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A025",
+      "stream": "B05",
+      "stream_name": "Rare restrictions and logarithmic costs",
+      "topic": "Rare-event counterfamily",
+      "assignment": "Turn a finite failure of a local charge into a rigorous parameterized Boolean family. State whether it refutes a constant, an all-coordinate rule, or a universal route; do not upgrade its scope.",
+      "input_packet_ids": [
+        "A021",
+        "A049"
+      ],
+      "completion_criterion": "A parameterized Boolean family rigorously refutes one frozen helper with its complete quantifiers; the archived fixed-price local no-go is not counted again as a new result.",
+      "owner_native_stream": "B05",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A026",
+      "stream": "B06",
+      "stream_name": "Nonlocal restriction induction",
+      "topic": "Good-coordinate erasure",
+      "assignment": "Attack the existential inequality B_i(f)<=K I_i(f) for some relevant i. Use the exact entropy decrement identity and distinguish a genuine coordinate-selection theorem from an all-coordinate claim.",
+      "input_packet_ids": [
+        "A003",
+        "A004"
+      ],
+      "completion_criterion": "Either a quantitative coordinate-selection theorem is proved on a specified class with its FEI implication, or a counterexample meets the exact proposed extra hypotheses; a reformulated existential target remains open.",
+      "owner_native_stream": "B06",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F06",
+        "F07"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A027",
+      "stream": "B06",
+      "stream_name": "Nonlocal restriction induction",
+      "topic": "Block selection",
+      "assignment": "Choose adaptive coordinate blocks using the exact block entropy identity. Seek a selection theorem in which conditional block entropy and logarithmic-Sobolev mixing are charged to the block influence lost.",
+      "input_packet_ids": [
+        "A026",
+        "A030"
+      ],
+      "completion_criterion": "A proper-block selection rule has an exact physical entropy/influence ledger and a proved cost bound on a growing class; choosing the full cube is not credited as a selection theorem.",
+      "owner_native_stream": "B06",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F06",
+        "F07"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A028",
+      "stream": "B06",
+      "stream_name": "Nonlocal restriction induction",
+      "topic": "Stopping-tree payment",
+      "assignment": "Design trees stopping at the recovered regular, bounded-overlap, or threshold-formula classes. Prove the full expected path cost plus terminal cost is at most a fixed multiple of root influence.",
+      "input_packet_ids": [
+        "A027",
+        "A062"
+      ],
+      "completion_criterion": "A terminating tree reaches certified leaves and pays the entire expected path plus leaf entropy by one root influence budget, with a constant independent of the claimed growth parameters.",
+      "owner_native_stream": "B06",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F06",
+        "F07"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A029",
+      "stream": "B06",
+      "stream_name": "Nonlocal restriction induction",
+      "topic": "Child-deficit transport",
+      "assignment": "Keep the actual deficits of both physical children in an induction. Derive conditions under which a difficult split is compensated by child slack, and test that the slack is not counted repeatedly.",
+      "input_packet_ids": [
+        "A023",
+        "A027"
+      ],
+      "completion_criterion": "A child-deficit transport identity specifies which slack is consumed at which node and proves non-reuse; the B05 family is explicitly paid or gives a scope-limiting failure.",
+      "owner_native_stream": "B06",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F06",
+        "F07"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A030",
+      "stream": "B06",
+      "stream_name": "Nonlocal restriction induction",
+      "topic": "Restriction plateau tests",
+      "assignment": "Use separated Fourier-support coding to create functions with long entropy-preserving restriction plateaux. Determine what a global selection or stopping argument sees that bounded-depth local statistics miss.",
+      "input_packet_ids": [
+        "A002",
+        "A016"
+      ],
+      "completion_criterion": "An actual Boolean coded family exhibits the stated restriction plateau, with its length and added influence quantified; one candidate stopping rule is tested on its complete expected tree.",
+      "owner_native_stream": "B06",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F06",
+        "F07"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A031",
+      "stream": "B07",
+      "stream_name": "Signed Booleanity identities",
+      "topic": "Convolution identity",
+      "assignment": "Use sum_S fhat(S) fhat(S triangle U)=1_{U=empty} to derive a nontrivial entropy-weighted inequality. Preserve signs until after the cancellation that is supposed to pay the cost.",
+      "input_packet_ids": [
+        "A004",
+        "A032"
+      ],
+      "completion_criterion": "A sign-sensitive entropy or edge inequality follows from the full XOR convolution identities; its exact hypotheses and a new quantitative payment are proved or a Boolean falsifier is supplied.",
+      "owner_native_stream": "B07",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F07",
+        "F09",
+        "F12",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A032",
+      "stream": "B07",
+      "stream_name": "Signed Booleanity identities",
+      "topic": "Boolean phase realizability",
+      "assignment": "Given a candidate spectral probability law, determine whether signs can produce a Boolean inverse Walsh transform. Produce exact impossibility certificates or actual truth tables, never a merely normalized vector.",
+      "input_packet_ids": [
+        "A004"
+      ],
+      "completion_criterion": "A claimed spectral law has either an exact sign-valued inverse Walsh realization or an impossibility certificate; normalization or a finite prefix of identities alone never certifies Booleanity.",
+      "owner_native_stream": "B07",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F07",
+        "F09",
+        "F12",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A033",
+      "stream": "B07",
+      "stream_name": "Signed Booleanity identities",
+      "topic": "Derivative hierarchy",
+      "assignment": "Study the complete hierarchy of physical derivative constraints and Fourier granularity. Determine which constraints rule out existing non-Boolean cyclic-law obstructions and whether a finite prefix can ever suffice.",
+      "input_packet_ids": [
+        "A031",
+        "A032"
+      ],
+      "completion_criterion": "A precise derivative/convolution hierarchy theorem identifies which levels are used and how known non-Boolean relaxations evade them; any finite-prefix sufficiency claim includes an exact proof or counterexample.",
+      "owner_native_stream": "B07",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F07",
+        "F09",
+        "F12",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A034",
+      "stream": "B07",
+      "stream_name": "Signed Booleanity identities",
+      "topic": "Phase-energy transfer",
+      "assignment": "Extend the known marginal phase-energy estimate while retaining the conditional spectral entropy. Seek a proved restricted conditional theorem whose hypotheses cannot hide arbitrary tensor factors.",
+      "input_packet_ids": [
+        "A032",
+        "A078"
+      ],
+      "completion_criterion": "A restricted conditional phase-energy theorem retains H(S_Y|S_X), proves its structural hypothesis and survives the arbitrary-tensor embedding test; a paid marginal alone leaves the packet open.",
+      "owner_native_stream": "B07",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F07",
+        "F09",
+        "F12",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A035",
+      "stream": "B07",
+      "stream_name": "Signed Booleanity identities",
+      "topic": "Signed cancellation countersearch",
+      "assignment": "Test proposed weighted convolution payments on actual Boolean functions with severe cancellation. Separate an invalid triangle inequality or lost sign from a genuine obstruction to the target statement.",
+      "input_packet_ids": [
+        "A031",
+        "A032"
+      ],
+      "completion_criterion": "A genuine Boolean witness or a proved signed-cancellation estimate resolves one frozen weighted-convolution helper; the sign-taking step is pinpointed and the hypothesis check is exact.",
+      "owner_native_stream": "B07",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F07",
+        "F09",
+        "F12",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A036",
+      "stream": "B08",
+      "stream_name": "Relative entropy and posterior credit",
+      "topic": "Reference-law divergence",
+      "assignment": "Choose a spectral reference Q and expand cross-entropy as H(P)+D(P||Q). Identify a structural lower bound on the divergence that pays a specified excess term, with all normalizers retained.",
+      "input_packet_ids": [
+        "A004",
+        "A006"
+      ],
+      "completion_criterion": "One reference expansion retains its normalizer and gives a quantitative divergence lower bound against a named excess term; nonnegativity of KL alone does not complete the packet.",
+      "owner_native_stream": "B08",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F05",
+        "F07",
+        "F08",
+        "F09"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A037",
+      "stream": "B08",
+      "stream_name": "Relative entropy and posterior credit",
+      "topic": "Conditional credit ledger",
+      "assignment": "Develop chain rules for posterior witness information across an adaptive hierarchy. Prove the total released credit is bounded by an initial resource and cannot be spent again after conditioning.",
+      "input_packet_ids": [
+        "A036",
+        "A061"
+      ],
+      "completion_criterion": "An adaptive posterior-credit chain rule proves a single-use resource bound with the filtration and conditioning order explicit; the terminal credit and root normalization are retained.",
+      "owner_native_stream": "B08",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F05",
+        "F07",
+        "F08",
+        "F09"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A038",
+      "stream": "B08",
+      "stream_name": "Relative entropy and posterior credit",
+      "topic": "Occupancy term audit",
+      "assignment": "Retrieve the exact current Brain definition of the occupancy-information or K_occ candidate before working on it. Prove a quantitative lower bound with an explicit target debt, or archive a source-exact counterexample.",
+      "input_packet_ids": [
+        "A001",
+        "A036"
+      ],
+      "completion_criterion": "The exact source definition and current version of occupancy credit are frozen before a quantitative theorem or source-exact counterexample is supplied; a substitute functional is assigned a new claim ID.",
+      "owner_native_stream": "B08",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F05",
+        "F07",
+        "F08",
+        "F09"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A039",
+      "stream": "B08",
+      "stream_name": "Relative entropy and posterior credit",
+      "topic": "Projection under restrictions",
+      "assignment": "Study how an information projection changes under a physical restriction. Establish a monotonicity or compensated identity that remains valid when the two child spectra interfere coherently.",
+      "input_packet_ids": [
+        "A036",
+        "A037"
+      ],
+      "completion_criterion": "A physical-restriction information-projection identity retains both child spectra and their interference; monotonicity is proved under stated conditions or refuted by an actual Boolean split.",
+      "owner_native_stream": "B08",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F05",
+        "F07",
+        "F08",
+        "F09"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A040",
+      "stream": "B08",
+      "stream_name": "Relative entropy and posterior credit",
+      "topic": "Credit insufficiency tests",
+      "assignment": "Construct examples where every proposed KL term is positive but much smaller than the unpaid entropy. Require asymptotic ratios, not a statement that relative entropy is nonnegative.",
+      "input_packet_ids": [
+        "A036",
+        "A038"
+      ],
+      "completion_criterion": "A parameterized example compares the complete proposed KL credit with its named unpaid entropy and certifies an asymptotic ratio; a positive KL value alone is not treated as payment.",
+      "owner_native_stream": "B08",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F05",
+        "F07",
+        "F08",
+        "F09"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A041",
+      "stream": "B09",
+      "stream_name": "Product biases and prime gates",
+      "topic": "Weighted-threshold FEI+",
+      "assignment": "Extend the symmetric-threshold product-measure proof to arbitrary real weights. Identify where the integer-sum tilt and predecessor symmetry fail and prove a substitute with an arity-independent constant.",
+      "input_packet_ids": [
+        "A004",
+        "A042"
+      ],
+      "completion_criterion": "The first unequal-weight failure of the symmetric proof is isolated and replaced by a proved uniform probability estimate, yielding a stated weighted class theorem or an exact obstruction to that replacement.",
+      "owner_native_stream": "B09",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F06",
+        "F12",
+        "F13"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A042",
+      "stream": "B09",
+      "stream_name": "Product biases and prime gates",
+      "topic": "Bias endpoint certificates",
+      "assignment": "Analyze limits as selected input probabilities tend to zero or one. Derive symbolic expansions for corrected FEI+ and I-Var, including zero-deficit and unit-atom endpoints.",
+      "input_packet_ids": [
+        "A004"
+      ],
+      "completion_criterion": "Symbolic bias-boundary expansions cover corrected FEI+, I-Var and unit-atom/zero-deficit limits on a specified family, with uniform remainders needed by the proposed theorem.",
+      "owner_native_stream": "B09",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F06",
+        "F12",
+        "F13"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A043",
+      "stream": "B09",
+      "stream_name": "Product biases and prime gates",
+      "topic": "Prime-gate decomposition",
+      "assignment": "Factor Boolean functions under genuine disjoint composition and identify remaining irreducible gates. Prove what a uniform theorem on that precisely defined prime class would imply.",
+      "input_packet_ids": [
+        "A002",
+        "A005"
+      ],
+      "completion_criterion": "A genuine disjoint-prime decomposition is defined and proved; its exact universal implication is stated without assuming an unproved finite prime classification or hidden bounded arity.",
+      "owner_native_stream": "B09",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F06",
+        "F12",
+        "F13"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A044",
+      "stream": "B09",
+      "stream_name": "Product biases and prime gates",
+      "topic": "Non-symmetric gate classes",
+      "assignment": "Seek an arity-uniform corrected FEI+ inequality for a new explicit gate family. Give a composition corollary whose depth and fan-in dependence are completely controlled.",
+      "input_packet_ids": [
+        "A041",
+        "A043"
+      ],
+      "completion_criterion": "A new explicit nonsymmetric gate family has an arity-uniform corrected biased FEI+ proof and a full depth-independent composition corollary, with a primary-source overlap check.",
+      "owner_native_stream": "B09",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F06",
+        "F12",
+        "F13"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A045",
+      "stream": "B09",
+      "stream_name": "Product biases and prime gates",
+      "topic": "Biased realizability referee",
+      "assignment": "Check that a proposed biased spectral law is the normalized product Fourier law of an actual Boolean gate. Audit deterministic inputs, repeated variables, and the distinction between physical and spectral conditioning.",
+      "input_packet_ids": [
+        "A004",
+        "A032"
+      ],
+      "completion_criterion": "The product-biased Fourier law is derived from an actual Boolean truth function, including deterministic-input limits and repeated-variable exclusions; all conditioning operations are distinguished.",
+      "owner_native_stream": "B09",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F06",
+        "F12",
+        "F13"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A046",
+      "stream": "B10",
+      "stream_name": "Potential falsification",
+      "topic": "Current-candidate intake",
+      "assignment": "Freeze the exact formula and quantifiers of one live potential from the campaign status file. List known falsifiers and reject obsolete numerical repairs before starting a new computation.",
+      "input_packet_ids": [
+        "A001"
+      ],
+      "completion_criterion": "One live potential is frozen by formula, quantifiers and source version; known counterexamples and the precise unknown remainder are listed, and a concrete next analytic or computational test is fixed.",
+      "owner_native_stream": "B10",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F11",
+        "F13",
+        "F14",
+        "F16",
+        "F17",
+        "F19"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A047",
+      "stream": "B10",
+      "stream_name": "Potential falsification",
+      "topic": "Boundary search",
+      "assignment": "Search near constants, dictators, balanced seeds, and sharply unequal biases for the frozen potential. Use analytic endpoint expansions to guide finite experiments.",
+      "input_packet_ids": [
+        "A046",
+        "A042"
+      ],
+      "completion_criterion": "A boundary search for that frozen potential is guided by analytic endpoint expansions and records its bounded domain; any violation has a reproducible exact witness and certified sign.",
+      "owner_native_stream": "B10",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F11",
+        "F13",
+        "F14",
+        "F16",
+        "F17",
+        "F19"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A048",
+      "stream": "B10",
+      "stream_name": "Potential falsification",
+      "topic": "Tensor stress",
+      "assignment": "Compute the potential under tensor powers and sparse activation. Determine whether its claimed budget scales linearly, accumulates an extra logarithm, or can be manipulated by an irrelevant factor.",
+      "input_packet_ids": [
+        "A046",
+        "A002"
+      ],
+      "completion_criterion": "Tensor and activation transforms of the frozen potential are derived exactly or with uniform asymptotics, distinguishing linear scaling, unpaid logarithms and irrelevant spectator effects.",
+      "owner_native_stream": "B10",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F11",
+        "F13",
+        "F14",
+        "F16",
+        "F17",
+        "F19"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A049",
+      "stream": "B10",
+      "stream_name": "Potential falsification",
+      "topic": "Minimal falsifier extraction",
+      "assignment": "Reduce a found violation to the fewest variables, parameters, and inequalities needed to reproduce it. Produce a complete truth-table or exact circuit certificate and a rigorous sign comparison.",
+      "input_packet_ids": [
+        "A046",
+        "A072",
+        "A073"
+      ],
+      "completion_criterion": "A reduced Boolean witness has an exact truth table/circuit, complete hypotheses and rigorous inequality margin; minimality is asserted only for a proved exhaustive reduction domain.",
+      "owner_native_stream": "B10",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F11",
+        "F13",
+        "F14",
+        "F16",
+        "F17",
+        "F19"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A050",
+      "stream": "B10",
+      "stream_name": "Potential falsification",
+      "topic": "Repair with scope",
+      "assignment": "Find the weakest useful additional hypothesis that repairs a failed potential and prove it. State explicitly which intended applications still satisfy that hypothesis.",
+      "input_packet_ids": [
+        "A049",
+        "A005"
+      ],
+      "completion_criterion": "A repaired statement receives a new claim version and proof; the original falsifier remains archived, and at least one intended nontrivial application is shown to meet the new hypothesis.",
+      "owner_native_stream": "B10",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F11",
+        "F13",
+        "F14",
+        "F16",
+        "F17",
+        "F19"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A051",
+      "stream": "B11",
+      "stream_name": "Extremal and critical structure",
+      "topic": "Near-extremizer definition",
+      "assignment": "Define an admissible extremality notion stable under the reductions actually used. Prove a compactness, finite approximation, or minimal-counterexample statement before assuming existence of an optimizer.",
+      "input_packet_ids": [
+        "A001",
+        "A002"
+      ],
+      "completion_criterion": "The chosen extremality notion has a proved existence, finite approximation or minimal-counterexample principle under the actual reductions, before any optimizing object is used.",
+      "owner_native_stream": "B11",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A052",
+      "stream": "B11",
+      "stream_name": "Extremal and critical structure",
+      "topic": "Critical-source structure",
+      "assignment": "Seek a structural restriction forced by ratio extremality under every allowed physical descendant. Test the claim against known component-pruning failures and explain why criticality changes the argument.",
+      "input_packet_ids": [
+        "A051",
+        "A054"
+      ],
+      "completion_criterion": "A critical-source structural lemma is proved under an explicit extremality hypothesis and tested against the component witnesses; its new hypothesis is used in the decisive implication.",
+      "owner_native_stream": "B11",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A053",
+      "stream": "B11",
+      "stream_name": "Extremal and critical structure",
+      "topic": "Near-tensor perturbations",
+      "assignment": "Analyze point surgery on products and quantify entropy, influence, and mixed derivative curvature. Determine whether proposed primitivity or nonfactorization conditions really control hidden tensor structure.",
+      "input_packet_ids": [
+        "A002",
+        "A004"
+      ],
+      "completion_criterion": "Near-tensor surgery has exact perturbation and influence formulas and a uniform entropy remainder, exposing whether proposed primitivity excludes arbitrary hard tensor factors.",
+      "owner_native_stream": "B11",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A054",
+      "stream": "B11",
+      "stream_name": "Extremal and critical structure",
+      "topic": "Connectedness alternatives",
+      "assignment": "Replace false unrestricted component entropy or ratio inequalities by a controlled-excess theorem with an explicit interface term. Prove that the interface term can be paid in a stated critical class.",
+      "input_packet_ids": [
+        "A004",
+        "A053"
+      ],
+      "completion_criterion": "A component theorem keeps an explicit interface excess and proves its payment on a specified critical class; both raw-entropy and maximum-ratio counterexamples are respected.",
+      "owner_native_stream": "B11",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A055",
+      "stream": "B11",
+      "stream_name": "Extremal and critical structure",
+      "topic": "Extremal obstruction referee",
+      "assignment": "Try to realize arbitrary hard cores inside every proposed critical class. Preserve all extremality tests in the embedding or identify the exact failed condition.",
+      "input_packet_ids": [
+        "A051",
+        "A052"
+      ],
+      "completion_criterion": "An arbitrary-core embedding preserves every claimed criticality test or a proved obstruction identifies the failed test; the endpoint is classified as equivalent, proper-class or unresolved.",
+      "owner_native_stream": "B11",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A056",
+      "stream": "B12",
+      "stream_name": "Composition and decomposition",
+      "topic": "Balanced composition",
+      "assignment": "Reprove the full entropy and influence identities for balanced disjoint substitution. Track means and the precise conditions needed when a child is later physically restricted.",
+      "input_packet_ids": [
+        "A004"
+      ],
+      "completion_criterion": "Balanced disjoint composition is independently derived with exact means, entropy and influence; its behavior under physical child restriction is stated without reusing disjointness when it fails.",
+      "owner_native_stream": "B12",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F02",
+        "F10",
+        "F11",
+        "F13",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A057",
+      "stream": "B12",
+      "stream_name": "Composition and decomposition",
+      "topic": "Coherent restriction remainder",
+      "assignment": "Use the exact coherent-composition remainder from the Brain. Seek a summable bound that retains its alpha^2 log(1/alpha^2) term rather than replacing it by O(alpha^2).",
+      "input_packet_ids": [
+        "A022",
+        "A029",
+        "A056"
+      ],
+      "completion_criterion": "A coherent-composition remainder theorem preserves alpha^2 log(1/alpha^2), proves summability of that term or gives an exact non-summable family under the proposed hypotheses.",
+      "owner_native_stream": "B12",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F02",
+        "F10",
+        "F11",
+        "F13",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A058",
+      "stream": "B12",
+      "stream_name": "Composition and decomposition",
+      "topic": "Overlapping compositions",
+      "assignment": "Identify a nontrivial class of shared-input compositions with a provable entropy ledger. Use collision or posterior information explicitly; disjoint-block chain rules cannot simply be reused.",
+      "input_packet_ids": [
+        "A018",
+        "A019",
+        "A056"
+      ],
+      "completion_criterion": "A shared-input class outside C035 has a complete interference ledger and controlled FEI constant; the already proved orthogonal or uniformly positive-energy closure is used as input.",
+      "owner_native_stream": "B12",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F02",
+        "F10",
+        "F11",
+        "F13",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A059",
+      "stream": "B12",
+      "stream_name": "Composition and decomposition",
+      "topic": "Decomposition depth",
+      "assignment": "Prove a factorization or stopping theorem that limits accumulated overhead without assuming bounded formula depth. Supply an explicit family of growing-depth functions covered by the theorem.",
+      "input_packet_ids": [
+        "A013",
+        "A028",
+        "A058"
+      ],
+      "completion_criterion": "An explicit growing-depth decomposition has a proved termination/factorization rule and a summable overhead bound; bounded depth or unproved cheap access to terminal classes is not assumed.",
+      "owner_native_stream": "B12",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F02",
+        "F10",
+        "F11",
+        "F13",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A060",
+      "stream": "B12",
+      "stream_name": "Composition and decomposition",
+      "topic": "Composition sharpness",
+      "assignment": "Find exact examples showing which constants or hypotheses in new closure results are necessary. Check whether a purported improvement changes only an additive constant that disappears under tensorization.",
+      "input_packet_ids": [
+        "A019",
+        "A056"
+      ],
+      "completion_criterion": "Exact examples isolate a necessary closure hypothesis or constant, and tensorization shows whether the improvement persists beyond an additive finite-size correction.",
+      "owner_native_stream": "B12",
+      "suggested_review_packets": [
+        "A091",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F02",
+        "F10",
+        "F11",
+        "F13",
+        "F14"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A061",
+      "stream": "B13",
+      "stream_name": "Restriction martingales",
+      "topic": "Entropy process",
+      "assignment": "Construct the entropy process along a fair adaptive restriction tree, with its filtration and exact one-step increments. Determine which compensated quantity is a supermartingale under a proved hypothesis.",
+      "input_packet_ids": [
+        "A004"
+      ],
+      "completion_criterion": "A fair adaptive restriction filtration has exact entropy increments and a compensated process whose supermartingale property is proved under explicitly stated hypotheses.",
+      "owner_native_stream": "B13",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F06",
+        "F08",
+        "F10"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A062",
+      "stream": "B13",
+      "stream_name": "Restriction martingales",
+      "topic": "Influence compensator",
+      "assignment": "Use the exact influence telescope to budget entropy increments. Prove optional-stopping for a finite tree first, then justify any passage to randomized stopping or unbounded depth.",
+      "input_packet_ids": [
+        "A061"
+      ],
+      "completion_criterion": "A finite-tree influence identity is proved first, and every extension to randomized stopping includes its boundary and integrability argument; no hidden infinite-horizon limit is used.",
+      "owner_native_stream": "B13",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F06",
+        "F08",
+        "F10"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A063",
+      "stream": "B13",
+      "stream_name": "Restriction martingales",
+      "topic": "Information revelation",
+      "assignment": "Separate physical branch information from spectral erasure information. Derive a chain rule that measures the information actually revealed by a query rather than assuming they coincide.",
+      "input_packet_ids": [
+        "A027",
+        "A061"
+      ],
+      "completion_criterion": "A physical-query versus spectral-erasure chain rule identifies the full channel term and conditional entropy, with a concrete example separating the two operations.",
+      "owner_native_stream": "B13",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F06",
+        "F08",
+        "F10"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A064",
+      "stream": "B13",
+      "stream_name": "Restriction martingales",
+      "topic": "Global debt potential",
+      "assignment": "Build a potential that can temporarily grow on rare branches but has a controlled expected terminal value. Provide a theorem with every boundary term and initial condition stated.",
+      "input_packet_ids": [
+        "A023",
+        "A029",
+        "A062"
+      ],
+      "completion_criterion": "A global debt potential pays rare growth through a proved initial-to-terminal expectation bound; the B05 no-go is passed analytically and no node reuses descendant credit.",
+      "owner_native_stream": "B13",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F06",
+        "F08",
+        "F10"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A065",
+      "stream": "B13",
+      "stream_name": "Restriction martingales",
+      "topic": "Stopping-rule falsifier",
+      "assignment": "Stress-test proposed stopping rules on addressing, rare activations, and coded restriction plateaux. Exhibit a path family where the expected unpaid cost grows if the rule fails.",
+      "input_packet_ids": [
+        "A030",
+        "A064"
+      ],
+      "completion_criterion": "One frozen stopping rule is evaluated on full addressing, rare-activation or coded-plateau trees, yielding a proved payment or a parameterized expected-cost failure.",
+      "owner_native_stream": "B13",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F06",
+        "F08",
+        "F10"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A066",
+      "stream": "B14",
+      "stream_name": "Independent analytic routes",
+      "topic": "Semigroup dissipation",
+      "assignment": "Express a relevant entropy quantity through a noise semigroup and identify an integral whose universal influence bound would imply FEI. Check both small-time and large-time integrability.",
+      "input_packet_ids": [
+        "A004"
+      ],
+      "completion_criterion": "A semigroup identity reduces a named Shannon entropy debt to an explicit integral, with both time boundaries handled; any fixed-Renyi strengthening is tested against the point defect.",
+      "owner_native_stream": "B14",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F07",
+        "F08",
+        "F09",
+        "F13",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A067",
+      "stream": "B14",
+      "stream_name": "Independent analytic routes",
+      "topic": "Hypercontractive refinement",
+      "assignment": "Locate exactly where standard hypercontractivity loses a logarithmic degree or dimension factor. Seek a Boolean-specific improvement on a measurable regime, not a restatement of an already general real-valued bound.",
+      "input_packet_ids": [
+        "A066",
+        "A032"
+      ],
+      "completion_criterion": "The exact logarithmic loss in a standard inequality is isolated and a Boolean-specific improvement is proved on a measurable regime, or the proposed improvement is rigorously refuted.",
+      "owner_native_stream": "B14",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F07",
+        "F08",
+        "F09",
+        "F13",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A068",
+      "stream": "B14",
+      "stream_name": "Independent analytic routes",
+      "topic": "Antichain beyond one order",
+      "assignment": "Generalize the recovered pivotal-antichain estimate to a broader partially ordered or multi-scale geometry. Prove a rank-reference theorem for a class not already covered by desirability width.",
+      "input_packet_ids": [
+        "A004",
+        "A014"
+      ],
+      "completion_criterion": "A rank-reference theorem covers a class outside existing desirability-width bounds; effective piece count, normalizer and the full remaining cost are all paid or left explicitly open.",
+      "owner_native_stream": "B14",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F07",
+        "F08",
+        "F09",
+        "F13",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A069",
+      "stream": "B14",
+      "stream_name": "Independent analytic routes",
+      "topic": "Geometric transfer",
+      "assignment": "Extract an abstract encoding property from the percolation proof and ask which nongeometric Boolean families satisfy it. Prove the property directly for a new family instead of assuming spatial estimates are universal.",
+      "input_packet_ids": [
+        "A001",
+        "A014"
+      ],
+      "completion_criterion": "A precise encoding property is extracted from the percolation source and proved directly for a named nongeometric family; spatial hypotheses are not imported without proof.",
+      "owner_native_stream": "B14",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F07",
+        "F08",
+        "F09",
+        "F13",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A070",
+      "stream": "B14",
+      "stream_name": "Independent analytic routes",
+      "topic": "Analytic route referee",
+      "assignment": "Compare every new functional inequality against normalized non-Boolean spectra and known cyclic-law failures. Identify the indispensable Boolean hypothesis and test whether it is actually used.",
+      "input_packet_ids": [
+        "A032",
+        "A066"
+      ],
+      "completion_criterion": "A proposed analytic theorem states its indispensable Boolean hypothesis and is checked against the strongest applicable normalized non-Boolean relaxation; a scope failure is precisely identified.",
+      "owner_native_stream": "B14",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F04",
+        "F07",
+        "F08",
+        "F09",
+        "F13",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A071",
+      "stream": "B15",
+      "stream_name": "Exact targeted countersearch",
+      "topic": "Search-space design",
+      "assignment": "Define a bounded Boolean circuit or truth-table family that can falsify one current lemma. Record symmetries, completeness claims, resource limits, and the reason this family targets the hypothesis.",
+      "input_packet_ids": [
+        "A046"
+      ],
+      "completion_criterion": "A frozen search plan names one helper, a finite actual-Boolean family, symmetry/completeness claims and resource bound, explaining why that family targets the live hypothesis.",
+      "owner_native_stream": "B15",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F12",
+        "F16",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A072",
+      "stream": "B15",
+      "stream_name": "Exact targeted countersearch",
+      "topic": "Exact Walsh engine",
+      "assignment": "Compute integer Walsh spectra and exact influences for the chosen family. Verify Parseval, sign-valued inverse transforms, and independent edge counts before any entropy comparison.",
+      "input_packet_ids": [
+        "A071",
+        "A004"
+      ],
+      "completion_criterion": "Exact integer Walsh coefficients and influences agree with independent edge counts, Parseval and a sign-valued inverse transform for the chosen domain; no floating equality is an exact certificate.",
+      "owner_native_stream": "B15",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F12",
+        "F16",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A073",
+      "stream": "B15",
+      "stream_name": "Exact targeted countersearch",
+      "topic": "Certified logarithms",
+      "assignment": "Turn a promising entropy inequality into rational interval bounds or an exact integer-product comparison. State the margin and stop precision refinement when its sign is rigorously determined.",
+      "input_packet_ids": [
+        "A072"
+      ],
+      "completion_criterion": "Every entropy inequality used as a certificate has a rational interval or exact integer-product sign proof and an explicit margin; precision increases stop when the sign is certified.",
+      "owner_native_stream": "B15",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F12",
+        "F16",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A074",
+      "stream": "B15",
+      "stream_name": "Exact targeted countersearch",
+      "topic": "Independent reproducer",
+      "assignment": "Implement a second calculation for selected witnesses, using a different derivation or representation. Distinguish an independent implementation from rerunning the original script.",
+      "input_packet_ids": [
+        "A072",
+        "A073"
+      ],
+      "completion_criterion": "A selected witness is independently recomputed from a different representation or derivation, with matching exact quantities and certified sign; rerunning the first checker is labeled replay only.",
+      "owner_native_stream": "B15",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F12",
+        "F16",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A075",
+      "stream": "B15",
+      "stream_name": "Exact targeted countersearch",
+      "topic": "Search-to-theorem bridge",
+      "assignment": "Convert a recurring finite pattern into a parameterized construction and an analytic proof. If no bridge is found, archive the bounded search domain and do not present its absence of failures as a theorem.",
+      "input_packet_ids": [
+        "A049",
+        "A074"
+      ],
+      "completion_criterion": "A finite pattern becomes an analytic parameterized Boolean construction with proved scaling, or its bounded domain and missing generalization are fully documented without a universal conclusion.",
+      "owner_native_stream": "B15",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F12",
+        "F16",
+        "F18"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A076",
+      "stream": "B16",
+      "stream_name": "Scalable Boolean counterfamilies",
+      "topic": "Threshold and tribes controls",
+      "assignment": "Derive exact or rigorous asymptotic spectra for selected threshold, tribes, and threshold-composition controls. Use them to discriminate among candidate universal payments.",
+      "input_packet_ids": [
+        "A004",
+        "A016"
+      ],
+      "completion_criterion": "A named threshold, tribes or composition control has exact or rigorous asymptotic H and I, and its comparison resolves a specified current payment rather than repeating baseline calibration.",
+      "owner_native_stream": "B16",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A077",
+      "stream": "B16",
+      "stream_name": "Scalable Boolean counterfamilies",
+      "topic": "Sparse-defect towers",
+      "assignment": "Construct increasingly rare Boolean defects inside tensor or selector towers. Track the entropy and influence contribution of each scale separately to expose repeated use of the same budget.",
+      "input_packet_ids": [
+        "A021",
+        "A053"
+      ],
+      "completion_criterion": "A sparse-defect tower has separate scale-by-scale debts and payments, proving a new summability result or a repeated-budget counterfamily with the claimed quantifiers.",
+      "owner_native_stream": "B16",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A078",
+      "stream": "B16",
+      "stream_name": "Scalable Boolean counterfamilies",
+      "topic": "Coding and padding",
+      "assignment": "Build actual Boolean parity-code and auxiliary-padding constructions. Track added influence as well as preserved entropy; a formal spectral-law construction is insufficient.",
+      "input_packet_ids": [
+        "A002",
+        "A032"
+      ],
+      "completion_criterion": "An actual Boolean parity-code or padding construction has exact entropy preservation and added influence; its physical restriction behavior and conditional residual are explicitly computed.",
+      "owner_native_stream": "B16",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A079",
+      "stream": "B16",
+      "stream_name": "Scalable Boolean counterfamilies",
+      "topic": "Correlated auxiliaries",
+      "assignment": "Seek genuine Boolean realizations with correlated auxiliary spectra that evade independent-padding bounds. Retain the conditional auxiliary entropy and quantify the energy required by phase realization.",
+      "input_packet_ids": [
+        "A034",
+        "A078"
+      ],
+      "completion_criterion": "A correlated-auxiliary Boolean realization retains full conditional entropy and quantifies required phase energy; the result proves a new bound or defeats a precisely stated independent-padding extension.",
+      "owner_native_stream": "B16",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A080",
+      "stream": "B16",
+      "stream_name": "Scalable Boolean counterfamilies",
+      "topic": "Universal-counterexample standard",
+      "assignment": "For any candidate FEI disproof, prove a sequence of actual Boolean functions with H/I unbounded. Check that the growth survives every normalization; a finite ratio above a proposed constant is only a constant lower bound.",
+      "input_packet_ids": [
+        "A002",
+        "A075"
+      ],
+      "completion_criterion": "A conjecture disproof claim supplies actual Boolean f_m and an analytic proof that H(f_m)/I(f_m) tends to infinity; finite ratio improvements or non-Boolean laws are explicitly insufficient.",
+      "owner_native_stream": "B16",
+      "suggested_review_packets": [
+        "A092",
+        "A090"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F03",
+        "F15",
+        "F17"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A081",
+      "stream": "B17",
+      "stream_name": "Certificates and finite-to-infinite bridges",
+      "topic": "Dependency certificates",
+      "assignment": "Encode the accepted proof dependency graph with exact statement versions, hypotheses, units, source pins, and unresolved leaves. Reject any cycle passing through the final FEI claim.",
+      "input_packet_ids": [
+        "A001",
+        "A003"
+      ],
+      "completion_criterion": "A versioned proof graph contains exact statements, units, source pins, accepted and open leaves, and no proof-dependency cycle; a changed or refuted ancestor invalidates downstream acceptance.",
+      "owner_native_stream": "B17",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F02",
+        "F06",
+        "F16",
+        "F18",
+        "F19"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A082",
+      "stream": "B17",
+      "stream_name": "Certificates and finite-to-infinite bridges",
+      "topic": "Finite inequalities",
+      "assignment": "Produce rational or symbolic certificates for finite extremal estimates needed by an analytic argument. State separately the theorem that makes this finite domain exhaustive for the intended application.",
+      "input_packet_ids": [
+        "A072",
+        "A073"
+      ],
+      "completion_criterion": "A rational/symbolic finite certificate is accompanied by the theorem making its finite domain exhaustive for the claimed analytic application; absent that bridge the claim remains finite-only.",
+      "owner_native_stream": "B17",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F02",
+        "F06",
+        "F16",
+        "F18",
+        "F19"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A083",
+      "stream": "B17",
+      "stream_name": "Certificates and finite-to-infinite bridges",
+      "topic": "Formal core",
+      "assignment": "Formalize one small, decisive identity or combinatorial lemma using an available proof assistant only if it reduces a concrete risk. Do not spend the campaign building unrelated formalization infrastructure.",
+      "input_packet_ids": [
+        "A081",
+        "A082"
+      ],
+      "completion_criterion": "One decisive identity is checked by an available proof assistant or exact symbolic proof with its trusted scope and actual output; unused formal infrastructure is not a mathematical completion.",
+      "owner_native_stream": "B17",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F02",
+        "F06",
+        "F16",
+        "F18",
+        "F19"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A084",
+      "stream": "B17",
+      "stream_name": "Certificates and finite-to-infinite bridges",
+      "topic": "Continuum parameters",
+      "assignment": "Certify a compact bias or weight region by interval bounds together with analytic boundary reductions. A grid alone does not cover all real parameter values.",
+      "input_packet_ids": [
+        "A042",
+        "A073"
+      ],
+      "completion_criterion": "A compact parameter region is covered by rigorous intervals plus analytic boundary reductions, with complete coverage and no hidden grid or dimension gap.",
+      "owner_native_stream": "B17",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F02",
+        "F06",
+        "F16",
+        "F18",
+        "F19"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A085",
+      "stream": "B17",
+      "stream_name": "Certificates and finite-to-infinite bridges",
+      "topic": "Certificate adversary",
+      "assignment": "Try to invalidate every numerical-to-universal bridge through a missed endpoint, underflow, insufficient precision, or hidden dimension cutoff. Supply the smallest explicit failure or a completed scope check.",
+      "input_packet_ids": [
+        "A081",
+        "A082",
+        "A084"
+      ],
+      "completion_criterion": "An independent adversarial audit resolves each numerical-to-universal bridge, including endpoints, underflow, precision and dimension; an unresolved bridge leaves its dependent theorem unaccepted.",
+      "owner_native_stream": "B17",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F02",
+        "F06",
+        "F16",
+        "F18",
+        "F19"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A086",
+      "stream": "B18",
+      "stream_name": "Independent proof audit A",
+      "topic": "Joint-code referee",
+      "assignment": "Read complete proofs from A001-A015 and attempt to reconstruct each code independently. Check finite success, decoding, duplicate witnesses, normalizers, and the final expectation.",
+      "input_packet_ids": [
+        "A006",
+        "A008",
+        "A011"
+      ],
+      "completion_criterion": "A source-pinned code is independently reconstructed through finite success, decoding, duplicate witnesses, normalizers and final expectation; the first unproved implication is recorded precisely.",
+      "owner_native_stream": "B18",
+      "suggested_review_packets": [
+        "A094",
+        "A085"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F08",
+        "F19",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A087",
+      "stream": "B18",
+      "stream_name": "Independent proof audit A",
+      "topic": "Restriction referee",
+      "assignment": "Audit A021-A030 and A061-A065 with exact physical children. Test conditional probabilities, averaging order, boundary costs, and reuse of influence.",
+      "input_packet_ids": [
+        "A023",
+        "A028",
+        "A064"
+      ],
+      "completion_criterion": "A restriction argument is independently rebuilt from exact physical children, filtration, averaging and terminal terms, explicitly checking the B05 no-go and single-use budget.",
+      "owner_native_stream": "B18",
+      "suggested_review_packets": [
+        "A094",
+        "A085"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F08",
+        "F19",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A088",
+      "stream": "B18",
+      "stream_name": "Independent proof audit A",
+      "topic": "Booleanity referee",
+      "assignment": "Audit A031-A040 and A066-A070 for a genuine use of Boolean phase constraints. Test each stated theorem on the strongest applicable non-Boolean relaxation as a scope diagnostic.",
+      "input_packet_ids": [
+        "A031",
+        "A034",
+        "A036",
+        "A066"
+      ],
+      "completion_criterion": "A complete Booleanity/analytic argument is independently reconstructed with its conditional remainder, signs and source constraints intact; arbitrary-law scope tests are used correctly.",
+      "owner_native_stream": "B18",
+      "suggested_review_packets": [
+        "A094",
+        "A085"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F08",
+        "F19",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A089",
+      "stream": "B18",
+      "stream_name": "Independent proof audit A",
+      "topic": "Repair specialist",
+      "assignment": "Take a specific failed proof step from the first three referees and prove the strongest correct replacement that preserves a useful application. Keep the original failed statement and counterexample visible.",
+      "input_packet_ids": [
+        "A086",
+        "A087",
+        "A088"
+      ],
+      "completion_criterion": "A failed referee step is replaced by a proved narrower lemma with a surviving application and new statement version; the old failure is retained and the repair is independently reviewed.",
+      "owner_native_stream": "B18",
+      "suggested_review_packets": [
+        "A094",
+        "A085"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F08",
+        "F19",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A090",
+      "stream": "B18",
+      "stream_name": "Independent proof audit A",
+      "topic": "Independent reconstruction",
+      "assignment": "Reprove a near-complete campaign candidate from its theorem statements and original sources, without relying on the supplied derivation. Report the first unreconstructed implication precisely.",
+      "input_packet_ids": [
+        "A081"
+      ],
+      "completion_criterion": "A near-complete candidate is reconstructed from theorem statements and original sources without its author's derivation; all unreconstructed implications and limiting assumptions are itemized.",
+      "owner_native_stream": "B18",
+      "suggested_review_packets": [
+        "A094",
+        "A085"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F05",
+        "F08",
+        "F19",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A091",
+      "stream": "B19",
+      "stream_name": "Independent proof audit B and literature",
+      "topic": "Composition referee",
+      "assignment": "Audit the prime-gate and shared-data closure results with all biases and overlaps explicit. Recompute constants independently and inspect the terminal cases.",
+      "input_packet_ids": [
+        "A041",
+        "A044",
+        "A058"
+      ],
+      "completion_criterion": "A complete biased-gate or shared-data closure chain is independently reconstructed, including all biases, overlap, constants and terminal cases; C035 is treated as an existing input.",
+      "owner_native_stream": "B19",
+      "suggested_review_packets": [
+        "A090",
+        "A085"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F19",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A092",
+      "stream": "B19",
+      "stream_name": "Independent proof audit B and literature",
+      "topic": "Counterexample referee",
+      "assignment": "Verify new Boolean counterexamples from original truth tables or circuit definitions. Confirm the exact target they refute and the rigorous sign of the violation.",
+      "input_packet_ids": [
+        "A049",
+        "A075",
+        "A077"
+      ],
+      "completion_criterion": "A counterexample is independently verified from its original Boolean definition with the exact target and rigorous sign or asymptotic limit; the no-go's scope is neither enlarged nor lost.",
+      "owner_native_stream": "B19",
+      "suggested_review_packets": [
+        "A090",
+        "A085"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F19",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A093",
+      "stream": "B19",
+      "stream_name": "Independent proof audit B and literature",
+      "topic": "Literature and priority",
+      "assignment": "Check primary versions, corrections, and withdrawn claims relevant to each new theorem. Record theorem-level overlap and avoid a latest-best or first-result claim without sufficient evidence.",
+      "input_packet_ids": [
+        "A001"
+      ],
+      "completion_criterion": "Primary corrected source versions are compared theorem by theorem with each claimed new result; novelty language is supported, narrowed or removed with precise locators.",
+      "owner_native_stream": "B19",
+      "suggested_review_packets": [
+        "A090",
+        "A085"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F19",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A094",
+      "stream": "B19",
+      "stream_name": "Independent proof audit B and literature",
+      "topic": "Proof-chain challenger",
+      "assignment": "Challenge the strongest complete-looking argument from A086-A090, independently selecting difficult regimes and embeddings. Agreement counts only after examining the full proof chain.",
+      "input_packet_ids": [
+        "A086",
+        "A087",
+        "A088",
+        "A090"
+      ],
+      "completion_criterion": "A second independent challenge examines the complete candidate chain and different difficult regimes; agreement by summary or repeated computations does not count as reconstruction.",
+      "owner_native_stream": "B19",
+      "suggested_review_packets": [
+        "A090",
+        "A085"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F19",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A095",
+      "stream": "B19",
+      "stream_name": "Independent proof audit B and literature",
+      "topic": "Restricted-result extraction",
+      "assignment": "When a universal proof fails, isolate a complete nontrivial class theorem, sharp obstruction, or useful equivalence suitable for a separate manuscript with honest scope.",
+      "input_packet_ids": [
+        "A050",
+        "A089",
+        "A093"
+      ],
+      "completion_criterion": "A failed universal route yields a self-contained proper-class theorem, sharp no-go or explicit equivalence with full proof and correct novelty/scope, excluding every unpaid universal leaf.",
+      "owner_native_stream": "B19",
+      "suggested_review_packets": [
+        "A090",
+        "A085"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F19",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A096",
+      "stream": "B20",
+      "stream_name": "Synthesis and mathematical coordination",
+      "topic": "Live gap ledger",
+      "assignment": "Maintain the current claim/dependency/counterexample map from complete saved reports. Select the nearest unpaid lemma and perform a substantive derivation on that lemma each work cycle.",
+      "input_packet_ids": [
+        "A081"
+      ],
+      "completion_criterion": "The current ledger names each live unpaid lemma, accepted incoming result and invalidated dependency; the run also proves or derives a substantive step on the nearest live gap.",
+      "owner_native_stream": "B20",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A097",
+      "stream": "B20",
+      "stream_name": "Synthesis and mathematical coordination",
+      "topic": "Cross-route transfer",
+      "assignment": "Try to transfer a proved lemma from one route into the exact missing term of another. Write the substitution with all hypotheses and constants; analogies alone do not count.",
+      "input_packet_ids": [
+        "A003",
+        "A037",
+        "A057"
+      ],
+      "completion_criterion": "A transfer substitutes one accepted lemma into the exact debt of another route with all constants and hypotheses checked; an analogy or an unpaid assumption is not completion.",
+      "owner_native_stream": "B20",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A098",
+      "stream": "B20",
+      "stream_name": "Synthesis and mathematical coordination",
+      "topic": "Resource reallocation",
+      "assignment": "At each campaign checkpoint compare mathematical output against predefined milestones. Reassign packets within available authorized capacity to distinct next lemmas; do not create extra workers or schedules.",
+      "input_packet_ids": [
+        "A096"
+      ],
+      "completion_criterion": "At a checkpoint, a source-bound delta ledger identifies productive, stuck and refuted packets and assigns distinct next mathematical actions within existing B ownership and actual capacity.",
+      "owner_native_stream": "B20",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A099",
+      "stream": "B20",
+      "stream_name": "Synthesis and mathematical coordination",
+      "topic": "Candidate assembly",
+      "assignment": "Assemble the strongest fully supported proof into a single source with complete lemmas and references. Preserve open leaves as explicit conjectures until both independent audits close them.",
+      "input_packet_ids": [
+        "A081",
+        "A090",
+        "A093",
+        "A094"
+      ],
+      "completion_criterion": "One assembled source has a fully traceable acyclic proof chain and explicit open leaves; a full-FEI label requires no open or refuted dependency and two independent reconstructions.",
+      "owner_native_stream": "B20",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    {
+      "agent_id": "A100",
+      "stream": "B20",
+      "stream_name": "Synthesis and mathematical coordination",
+      "topic": "Release and continuation ledger",
+      "assignment": "Prepare the final accepted-theorem list, failed-route archive, proof status, and next ten precise research questions. Verify durable private artifacts and distinguish configured, executed, saved, reviewed, and publicly released work.",
+      "input_packet_ids": [
+        "A095",
+        "A096",
+        "A099"
+      ],
+      "completion_criterion": "The final handoff separates proved, refuted, conditional and finite-only claims, contains ten precise next questions and verified private paths, and distinguishes research execution from publication.",
+      "owner_native_stream": "B20",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "review_status": "NOT_OBSERVED",
+      "execution_status": "NOT_INFERRED_FROM_ASSIGNMENT",
+      "deliverable_status": "UNASSESSED",
+      "mathematical_status": "OPEN_TARGET",
+      "proof_dependencies": [],
+      "supplemental_F_groups": [
+        "F01",
+        "F20"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "output_contract": "run_output_contract",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    }
+  ]
+}
+

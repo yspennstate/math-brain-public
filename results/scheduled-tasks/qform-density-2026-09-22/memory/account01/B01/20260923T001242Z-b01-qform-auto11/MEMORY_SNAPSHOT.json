@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260923T001242Z-b01-qform-auto11",
+  "control_revision": "2026-09-22.15",
+  "control_commit_observed_before_run": "74e9168dcf9dd0ee98fd57b4414a57b51d9c928f",
+  "execution_context": "scheduled_automation_repository_retrieval_writeback",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "assignment": "Oscillatory replacement",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "fresh live CORRECTION_INBOX re-read after theorem write"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "scope": "physical-cross-block decoupling, full diagonal-plus-PSD determinant expansion, Brascamp-Lieb Gaussian formula, and Lp characteristic-function lemma"
+    },
+    {
+      "source": "account02/B01 r31, report proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260922T233020Z-account02-B01-qform-r31/REPORT.md",
+      "scope": "natural 3-volume heavy-row identity e2(N^T N) >= alpha Z/||r_i||^2"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-MIXED-ORDER-MINOR-FOURIER-v1",
+    "status": "supporting analytic proof supplied; independent review pending",
+    "statement": "For any probability law Omega on nonzero square physical minors of variable order, with I-side row marginals <=1/2 and mean order kbar>2, defining K=exp(E log det^2 + H), the full conditioned quadratic form satisfies ||p_Q||_infinity <= 2 sqrt(e) kbar/(kbar-2) K^(-1/(2 kbar)); its density is continuous and vanishes at infinity.",
+    "heavy_row_corollary": "If the natural 3-volume law has row i mass alpha and every conditional co-marginal a_k<=1/2, then a self-matched natural-on-pairs 2-minor law yields K_mix>=2 alpha Z/||r_i|| and ||p_Q||_infinity<=10 sqrt(e)[2 alpha Z/||r_i||]^(-1/5).",
+    "partner_applied": "account02/B01 r31 e2(N^T N)>=alpha Z/||r_i||^2 used in Corollary 2A; Corollary 2B strengthens the same inequality by matching conditional row-pair weights directly."
+  },
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "86f318f0826325e6df3504e1e8ec15f4316cc861",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T001242Z-b01-qform-auto11/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T001242Z-b01-qform-auto11/CHECK_OUTPUT.txt",
+    "checker_status": "PASS_SANITY_ONLY"
+  },
+  "stress_test": "Exact-target bipartite family M=U_alpha V_m^T has nonzero spectrum {+1,+1,+1,-1,-1,-1}; individual heavy-row entries vanish with m, but conditional co-marginals are 2/5 and the new theorem gives <=15.383113394117073 for alpha>=1/2, arbitrary cap-one product laws.",
+  "unresolved_implication": "QFORM-CLUSTERED-COHEAVY-MIXED-MINOR-v1",
+  "next_step": "When some conditional co-marginal exceeds 1/2, derive a cluster-level variable-order minor law with mean order >2 and all row marginals <=1/2 at bounded entropy-determinant cost, or quantitatively route the cluster to an existing ridge/mixed-hub/endpoint/grouped-square certificate.",
+  "continuity": "proved only in the mixed-order theorem scope via L1 Fourier inversion; full-target continuity remains open"
+}

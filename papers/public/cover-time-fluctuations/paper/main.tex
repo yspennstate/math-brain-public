@@ -1,0 +1,956 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\numberwithin{equation}{section}
+
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\SD}{SD}
+\DeclareMathOperator{\diag}{diag}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\tcov}{t_{\mathrm{cov}}}
+\newcommand{\thit}{t_{\mathrm{hit}}}
+\newcommand{\taucov}{\tau_{\mathrm{cov}}}
+\newcommand{\dK}{d_{\mathrm{K}}}
+\newcommand{\Harm}{\mathsf{H}}
+\newcommand{\Geom}{\mathrm{Geom}}
+\newcommand{\bone}{\mathbf{1}}
+\newcommand{\Lap}{\mathcal{L}}
+\newcommand{\Nor}{\mathcal{N}}
+\newcommand{\Rl}{\mathbb{R}}
+\newcommand{\ind}{\mathbf{1}}
+\newcommand{\T}{\mathsf{T}}
+
+\begin{document}
+
+\title[Cover-time fluctuations beyond the hitting-time scale]{Cover-time fluctuations beyond the maximal hitting-time scale}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@mail.huji.ac.il}
+\date{September 2026}
+\subjclass[2020]{Primary 60J10, 60F05; Secondary 05C81, 60F10, 60G50}
+\keywords{Cover time, maximal hitting time, Gaussian fluctuations, coupon collector, occupation times, Gaussian free field, moderate deviations}
+
+\begin{abstract}
+Ding, Lee and Peres asked whether the standard deviation of a graph cover time is universally bounded by the maximal hitting time, and whether the centered cover time has an exponential tail on that scale. We give negative answers even under $\tcov/\thit\to\infty$. An explicit unweighted clique--star graph satisfies $\Var_x(\taucov)\sim\thit\tcov$ and $(\taucov-\tcov)/\sqrt{\thit\tcov}\Longrightarrow\Nor(0,1)$ from every starting vertex. We obtain exact hitting times and coupon-clock transforms, two-term mean and variance expansions, a Berry--Esseen bound of order $(\log k)^{-1/2}$, and Gaussian moderate deviations. We also show that the failure is already present on trees of diameter three. More generally, attaching $k$ leaves to each vertex of a fixed connected graph yields a cover-time fluctuation limit equal to the centered maximum of a Gaussian vector with covariance twice the pseudoinverse of the core Laplacian. For the two-vertex core this is an explicit centered half-normal law. The examples show that the geometric-mean fluctuation scale cannot be replaced by any smaller interpolation power of the cover time, even though the cover time itself concentrates around its mean.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+
+Let $G=(V,E)$ be a finite connected simple graph. Throughout the main arguments the walk is the ordinary discrete-time simple random walk, and time zero counts as a visit to the starting vertex. Write
+\[
+\taucov=\inf\{t\ge 0:\{X_0,\dots,X_t\}=V\},\qquad \tcov(G)=\max_{x\in V}\E_x\taucov,\qquad \thit(G)=\max_{x,y\in V}\E_xT_y.
+\]
+Aldous's concentration theorem identifies $\thit=o(\tcov)$ as a fundamental sufficient condition for $\taucov/\tcov\to 1$ in probability \cite{Aldous91}. In Question 5.2 of \cite{DLP12}, Ding, Lee and Peres ask whether this concentration can be sharpened to a universal standard-deviation bound on the $\thit$ scale, and to a constant-rate exponential tail for $(\taucov-\tcov)/\thit$. The question is stated immediately after the assumption $\tcov(G_n)/\thit(G_n)\to\infty$.
+
+We answer both questions negatively. The counterexamples satisfy that assumption and are unweighted graphs. Moreover, the obstruction is not confined to dense graphs: it occurs on trees of diameter three. We identify two different fluctuation mechanisms. A coupon collector interrupted by long excursions produces a Gaussian limit. Several comparable coupon collectors competing through a fixed core produce the maximum of a finite-dimensional Gaussian vector.
+
+The relevant comparison is the geometric-mean scale $\sqrt{\thit\tcov}$. Ding obtained exponential cover-time concentration on that scale for trees \cite{Ding14}. For rate-one continuous-time simple random walk, Zhai established a general Gaussian-free-field concentration bound \cite{Zhai18}, of the form
+\begin{equation}\label{eq:zhai}
+\Prob\big(|\taucov-|E|M^2|\ge |E|(\sqrt{\lambda R}\,M+\lambda R)\big)\le Ce^{-c\lambda},
+\end{equation}
+for $\lambda$ greater than an absolute constant, where $M$ is the expected maximum of the pinned Gaussian free field and $R$ is the resistance diameter. The same fluctuation order holds in discrete time by the clock comparison noted in \cite{Zhai18}. The comparison $|E|M^2\asymp\tcov$ and the commute-time identity relate the leading scale in \eqref{eq:zhai} to $\sqrt{\thit\tcov}$. Our examples concern the necessity of this order; the limiting constant one below is attained by one family, not asserted as a best universal constant in all variance inequalities.
+
+Cover-time limits under homogeneity assumptions can be quite different. Gumbel limits arise for high-dimensional tori and, under the appropriate geometric condition, for bounded-degree vertex-transitive graphs \cite{Belius13,BHT22}. Neither construction here is vertex-transitive, and its maximal degree grows. Thus the results do not contradict these theorems. Nor do they change the cover-time/Gaussian-free-field equivalence proved in \cite{DLP12}.
+
+\subsection{Outline and notation}
+Sections \ref{sec:cliquestar}--\ref{sec:moderate} give an explicit Gaussian counterexample and its quantitative refinements. Sections \ref{sec:fixedcore}--\ref{sec:decorated} establish a general theorem for a fixed graph with many pendant leaves. The same method permits unequal proportional leaf multiplicities. Section \ref{sec:doublestar} specializes that theorem to diameter-three trees. Section \ref{sec:holding} records stability under independent holding times. All asymptotic assertions are uniform over starting vertices in the stated family. Constants denoted by $c,C$ may change from line to line; constants for a fixed core may depend on that core.
+
+Let
+\[
+\Harm_r=\sum_{j=1}^r\frac1j,\qquad \Harm^{(2)}_r=\sum_{j=1}^r\frac1{j^2}.
+\]
+We use $\Geom_0(p)$ for failures before a success and $\Geom_1(p)$ for trials up to and including that success. The Kolmogorov distance is $\dK(U,V)=\sup_z|\Prob(U\le z)-\Prob(V\le z)|$. The number $\gamma$ denotes Euler's constant, $\Phi$ the standard normal distribution function, and $Z$ a standard normal random variable. Basic hitting-time and electrical-network facts may be found in \cite{AldousFill,LevinPeres,DoyleSnell}.
+
+\section{The clique--star graph and its sharp fluctuations}\label{sec:cliquestar}
+
+For $k\ge 3$, let $G_k$ have a center $s$, leaves $a_1,\dots,a_k$ adjacent to $s$, and a clique $Q=\{g,q_2,\dots,q_k\}$, joined to $s$ by the single edge $sg$. Thus
+\[
+|V(G_k)|=2k+1,\qquad 2|E(G_k)|=k^2+k+2.
+\]
+Set $\chi(x)=\ind_{\{x\in Q\}}$.
+
+\begin{theorem}[Gaussian counterexample and second-order terms]\label{thm:main}
+For the graph $G_k$,
+\begin{equation}\label{eq:thit}
+h_k:=\thit(G_k)=2k^2+k+1.
+\end{equation}
+Uniformly in $x\in V(G_k)$,
+\begin{align}
+\E_x\taucov&=k^2\log k+(\gamma+\chi(x))k^2+o(k^2),\label{eq:mean2}\\
+\Var_x(\taucov)&=2k^4\log k+\Big(2\gamma+\frac{\pi^2}{6}+\chi(x)\Big)k^4+o(k^4).\label{eq:var2}
+\end{align}
+In particular,
+\begin{equation}\label{eq:tcov}
+\tcov(G_k)=k^2\log k+(1+\gamma)k^2+o(k^2),
+\end{equation}
+and, for every starting sequence $x_k$,
+\begin{equation}\label{eq:clt}
+\frac{\taucov-\tcov(G_k)}{\sqrt{h_k\tcov(G_k)}}\Longrightarrow\Nor(0,1),\qquad
+\frac{\Var_{x_k}(\taucov)}{h_k\tcov(G_k)}\longrightarrow 1.
+\end{equation}
+There is an absolute $C<\infty$ such that, for all sufficiently large $k$,
+\begin{equation}\label{eq:be}
+\sup_{x\in V(G_k)}\dK\Big(\frac{\taucov-\tcov(G_k)}{\sqrt{h_k\tcov(G_k)}},Z\Big)\le\frac{C}{\sqrt{\log k}}.
+\end{equation}
+\end{theorem}
+
+\begin{corollary}[Failure of the hitting-time scale]\label{cor:failure}
+The graphs $G_k$ satisfy
+\[
+\frac{\tcov(G_k)}{h_k}=\frac12\log k+\frac{1+\gamma}{2}+o(1),\qquad \frac{\SD_x(\taucov)}{h_k}\sim\sqrt{\frac{\log k}{2}}.
+\]
+For every $a,A>0$, a universal inequality
+\[
+\Prob_x\Big(\frac{\taucov-\tcov(G)}{\thit(G)}\ge u\Big)\le Ae^{-au}\qquad(u\ge 0)
+\]
+fails within the regime $\tcov/\thit\to\infty$. For each $\beta>1/2$,
+\begin{equation}\label{eq:interp}
+\frac{\SD_x(\taucov)}{h_k^{\beta}\tcov(G_k)^{1-\beta}}\sim\Big(\frac{\log k}{2}\Big)^{\beta-1/2}\longrightarrow\infty.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+The first assertions follow from \Cref{thm:main}. Take $u_k=c\sqrt{\log k}$ with any fixed $c>0$. The Gaussian limit gives
+\[
+\Prob_x\big((\taucov-\tcov)/h_k\ge u_k\big)\longrightarrow 1-\Phi(c\sqrt2)>0,
+\]
+whereas $Ae^{-au_k}\to 0$. Finally, divide the standard-deviation asymptotic in \eqref{eq:clt} by the denominator in \eqref{eq:interp}.
+\end{proof}
+
+\section{Exact hitting times and the excursion transform}\label{sec:hitting}
+
+Write $H(x,y)=\E_xT_y$. Only four vertex orbits occur. The following table lists all nontrivial hitting-time types; $a,b$ are distinct leaves and $q,q'$ are distinct non-gateway clique vertices.
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Target & Start & $H(\text{start},\text{target})$\\
+\midrule
+$a$ & $s$ & $k^2+k+1$\\
+$a$ & $g$ & $2k^2+2$\\
+$a$ & $q$ & $2k^2+k+1$\\
+$a$ & $b$ & $k^2+k+2$\\
+\midrule
+$s$ & $g$ & $k^2-k+1$\\
+$s$ & $q$ & $k^2$\\
+$s$ & $a$ & $1$\\
+\midrule
+$g$ & $s$ & $2k+1$\\
+$g$ & $a$ & $2k+2$\\
+$g$ & $q$ & $k-1$\\
+\midrule
+$q$ & $g$ & $k+3+4/k$\\
+$q$ & $s$ & $3k+4+4/k$\\
+$q$ & $a$ & $3k+5+4/k$\\
+$q$ & $q'$ & $k+1+2/k$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{proposition}\label{prop:table}
+The table is exact. Its largest entry is $2k^2+k+1$ for $k\ge 3$.
+\end{proposition}
+
+\begin{proof}
+For target $a$, set $A=H(s,a)$, $B=H(g,a)$, $C=H(q,a)$. First-step analysis yields
+\[
+C=B+k-1,\qquad kB=k+A+(k-1)C,\qquad (k+1)A=k+1+(k-1)(1+A)+B.
+\]
+These equations give the first four entries. For target $s$, the gateway and clique equations give $H(g,s)=k^2-k+1$ and $H(q,s)=k^2$. For target $g$, each unsuccessful attempt from $s$ costs two steps, giving $H(s,g)=2k+1$.
+
+For target $q$, put $X=H(g,q)$, $Y=H(q',q)$ and $W=H(s,q)$. Then
+\[
+2Y=k-1+X,\qquad W=2k+1+X,\qquad kX=k+W+(k-2)Y.
+\]
+Solving gives the last four entries. A walk from a leaf incurs one initial step to $s$. First-step systems with an absorbing target have a unique solution, since the target is hit almost surely with finite mean in a finite irreducible chain.
+
+The largest entry in the last block is $3k+5+4/k$. After multiplication by $k$, its difference from $k(2k^2+k+1)$ is
+\[
+2k^3-2k^2-4k-4.
+\]
+Writing $k=3+t$, this equals $2t^3+16t^2+38t+20>0$ for $t\ge 0$. The other comparisons are immediate. This proves \eqref{eq:thit}.
+\end{proof}
+
+A completed \emph{trap excursion} consists of the step $s\to g$ and all subsequent steps up to the next return to $s$. Denote its length by $Y_k$. At $g$, the probability of exit to $s$ is $1/k$. On failure, the walk steps into the clique and returns to $g$ after an additional geometric waiting time. Thus
+\begin{equation}\label{eq:excursion}
+Y_k=2+\sum_{i=1}^F D_i,\qquad F\sim\Geom_0(1/k),\quad D_i=1+G_i,\quad G_i\sim\Geom_1(1/(k-1)),
+\end{equation}
+with independent variables on the right.
+
+\begin{lemma}[Exact excursion transform and moments]\label{lem:excursion}
+For $0\le z\le 1$,
+\begin{equation}\label{eq:pgf}
+f_k(z):=\E z^{Y_k}=\frac{z^2\big(k-1-(k-2)z\big)}{k(k-1)-k(k-2)z-(k-1)z^2}.
+\end{equation}
+Moreover,
+\begin{align}
+\mu_k&:=\E Y_k=k^2-k+2,\label{eq:mu}\\
+\sigma_k^2&:=\Var(Y_k)=k^4-4k^2+5k-2,\label{eq:sigma}\\
+\E Y_k^3&\le Ck^6.\label{eq:third}
+\end{align}
+There exist absolute $c_0,C_0>0$ such that
+\begin{equation}\label{eq:mgf}
+\sup_{k\ge 3}\E\exp(c_0Y_k/k^2)\le C_0.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The generating function of $D_i$ is $z^2/(k-1-(k-2)z)$. Substitution into the generating function of $F$ gives \eqref{eq:pgf}. From \eqref{eq:excursion},
+\[
+\E D_i=k,\quad \Var(D_i)=(k-1)(k-2),\quad \E F=k-1,\quad \Var(F)=k(k-1).
+\]
+The random-sum formulas give \eqref{eq:mu} and
+\[
+\sigma_k^2=(k-1)^2(k-2)+k^3(k-1),
+\]
+which expands to \eqref{eq:sigma}.
+
+For nonnegative $d_i$, $(\sum_{i=1}^m d_i)^3\le m^2\sum_{i=1}^m d_i^3$. The geometric moments satisfy $\E F^3=O(k^3)$ and $\E D_i^3=O(k^3)$; conditioning on $F$ proves \eqref{eq:third}.
+
+For completeness, the moment-generating bound can be obtained directly from geometric tails. Those tails give $\sup_{k\ge 3}\E\exp(c_1D_i/k)<\infty$ for some $c_1>0$. Consequently, by $e^u-1\le ue^u$,
+\[
+\E e^{cD_i/k^2}\le 1+\frac{Cc}{k}
+\]
+for sufficiently small fixed $c>0$. Choose $c$ so that $Cc\le 1/2$. Then $(1-1/k)\E e^{cD_i/k^2}\le 1-1/(2k)$. Summing over $F$ in \eqref{eq:excursion} yields a uniform bound, proving \eqref{eq:mgf}.
+\end{proof}
+
+\section{The marked coupon collector: exact distribution and variance}\label{sec:coupon}
+
+Suppose the walk is at $s$ and $r\in\{k-1,k\}$ specified leaves remain unvisited. Let $\Lambda_{k,r}$ be the additional time needed to visit those leaves. At a stage with $j$ remaining target leaves, let $N_j$ be the number of trap excursions before the next new target is selected and let $M_j$ be the number of excursions to already visited or nontarget leaves.
+
+The successive departures from $s$ are independent uniform choices among its $k+1$ neighbors. The stages are independent and
+\begin{equation}\label{eq:stage}
+\E[u^{N_j}v^{M_j}]=\frac{j}{k+1-u-(k-j)v}.
+\end{equation}
+In particular,
+\begin{align}
+\E N_j&=j^{-1},& \Var(N_j)&=j^{-1}+j^{-2},\label{eq:Nj}\\
+\E M_j&=(k-j)/j,& \Cov(N_j,M_j)&=(k-j)/j^2.\label{eq:Mj}
+\end{align}
+The marginal $N_j$ has distribution $\Geom_0(j/(j+1))$. Attach independent copies of $Y_k$ to the trap symbols and put
+\[
+S_{k,r}=\sum_{j=1}^rZ_{k,j},\qquad Z_{k,j}=\sum_{i=1}^{N_j}Y_{k,j,i},\qquad L_{k,r}=r+\sum_{j=1}^rM_j.
+\]
+The random variables $Z_{k,j}$ are independent. The number $L_{k,r}$ counts all leaf departures up to the final target. Pathwise,
+\begin{equation}\label{eq:Lambda}
+\Lambda_{k,r}=S_{k,r}+2L_{k,r}-1.
+\end{equation}
+The subtraction of one is necessary: the final leaf is covered on arrival, without the return step.
+
+\begin{proposition}[Exact coupon-clock formulas]\label{prop:clock}
+For $0<z\le 1$,
+\begin{equation}\label{eq:clockpgf}
+\E z^{\Lambda_{k,r}}=z^{-1}\prod_{j=1}^r\frac{jz^2}{k+1-(k-j)z^2-f_k(z)}.
+\end{equation}
+Let $d_k=k^2+k+2$ and $c_k=2k^4-2k^3-3k^2+k-6$. Then
+\begin{align}
+\E\Lambda_{k,r}&=d_k\Harm_r-1,\label{eq:clockmean}\\
+\Var(\Lambda_{k,r})&=c_k\Harm_r+d_k^2\Harm^{(2)}_r.\label{eq:clockvar}
+\end{align}
+Also,
+\begin{align}
+b_{k,r}^2&:=\Var(S_{k,r})=(\sigma_k^2+\mu_k^2)\Harm_r+\mu_k^2\Harm^{(2)}_r,\label{eq:VarS}\\
+\Var(L_{k,r})&=k^2\Harm^{(2)}_r-k\Harm_r,\label{eq:VarL}\\
+\Cov(S_{k,r},L_{k,r})&=\mu_k(k\Harm^{(2)}_r-\Harm_r).\label{eq:CovSL}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+Equation \eqref{eq:stage} follows by summing a geometric series of unsuccessful departure types. Each completed successful stage costs two steps. Substituting $u=f_k(z)$ and $v=z^2$, then subtracting the final return, proves \eqref{eq:clockpgf}.
+
+Conditional on $N_j$, the trap durations are iid, so
+\[
+\Var(Z_{k,j})=\frac{\sigma_k^2}{j}+\mu_k^2\Big(\frac1j+\frac1{j^2}\Big).
+\]
+This proves \eqref{eq:VarS}. Deleting trap symbols leaves the classical coupon collector on $k$ labels; its stage success probability is $j/k$, giving \eqref{eq:VarL} and $\E L_{k,r}=k\Harm_r$. The marks are independent of the departure categories, and \eqref{eq:Mj} gives \eqref{eq:CovSL}. In particular, $S_{k,r}$ and $L_{k,r}$ are generally \emph{not} independent.
+
+Taking the mean in \eqref{eq:Lambda} proves \eqref{eq:clockmean}. Taking its variance and retaining the covariance term gives
+\[
+\Var(\Lambda_{k,r})=(\sigma_k^2+\mu_k^2-4\mu_k-4k)\Harm_r+(\mu_k+2k)^2\Harm^{(2)}_r.
+\]
+The identities $\mu_k+2k=d_k$ and $\sigma_k^2+\mu_k^2-4\mu_k-4k=c_k$ prove \eqref{eq:clockvar}.
+\end{proof}
+
+\begin{lemma}[Gaussian approximation for the trap clock]\label{lem:trapclt}
+For $r=k$ or $k-1$,
+\[
+b_{k,r}^2\sim 2k^4\log k,\qquad \dK\Big(\frac{S_{k,r}-\E S_{k,r}}{b_{k,r}},Z\Big)\le C(\log k)^{-1/2}.
+\]
+\end{lemma}
+
+\begin{proof}
+The variance asymptotic follows from \eqref{eq:VarS}. The third raw moment of $N_j$ is
+\[
+\E N_j^3=\frac1j+\frac6{j^2}+\frac6{j^3}\le\frac{13}{j}.
+\]
+Using nonnegativity as in \Cref{lem:excursion},
+\[
+\E Z_{k,j}^3\le\E N_j^3\,\E Y_k^3\le Ck^6/j.
+\]
+Since $\E|U-\E U|^3\le 8\E U^3$ for $U\ge 0$, the sum of centered third absolute moments is $O(k^6\log k)$. The Berry--Esseen inequality for independent, not necessarily identically distributed summands \cite{Petrov75} gives the claimed bound after division by $b_{k,r}^3\asymp k^6(\log k)^{3/2}$.
+\end{proof}
+
+\section{Transfer to the actual cover time}\label{sec:transfer}
+
+Fix a starting vertex $x$. Let $T_s$ be the first hit of $s$, and set $r=k-1$ if $x$ is a leaf and $r=k$ otherwise. No other leaf can be visited before $T_s$. By the strong Markov property, the post-$T_s$ coupon clock is independent of $T_s$. Put
+\[
+V=T_s+\Lambda_{k,r},\qquad R_k=\taucov-V\ge 0.
+\]
+The random variable $R_k$ measures the residual clique-covering time after all leaves have been visited.
+
+\begin{lemma}[Residual estimate]\label{lem:residual}
+Uniformly over all starts,
+\begin{equation}\label{eq:residual}
+\Prob_x(R_k>0)\le C\frac{\log k}{k},\qquad \E_xR_k\le Ck(\log k)^2,\qquad \E_xR_k^2\le Ck^3(\log k)^3.
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:Tstail}
+\Prob_x(T_s>uk^2)\le Ce^{-cu},\qquad u\ge 0.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+A single trap excursion usually covers the clique. Couple its internal path to a walk on $K_k$ started at $g$, with independent exit coins of success probability $1/k$ on visits to $g$. For $t_0=\lceil 4(k-1)\log k\rceil$, a union bound gives
+\[
+\Prob(K_k\text{ is not covered by }t_0)\le k\Big(1-\frac1{k-1}\Big)^{t_0}\le k^{-3}.
+\]
+The expected number of visits to $g$ by that time is $O(1+\log k)$: for positive times the return probability on $K_k$ is at most $1/(k-1)$. Thus the probability $\delta_k$ that the excursion exits before covering $Q$ is at most $C\log k/k$.
+
+Among the trap symbol and the $r$ remaining leaf symbols, each is equally likely to be the last to make its first appearance. The probability of no trap before all targets are collected is therefore $1/(r+1)$. If a trap occurs and its first excursion covers $Q$, then $R_k=0$. Consequently
+\[
+\Prob_x(R_k>0)\le\frac1{r+1}+\delta_k\le C\log k/k.
+\]
+Prior visits to $Q$ only help.
+
+Matthews' bound \cite{Matthews88}, together with \eqref{eq:thit}, gives $\tcov\le h_k\Harm_{2k}=O(k^2\log k)$. For a fixed hitting target whose mean from every state is at most $a$, the Markov property in blocks of length $\lceil 2a\rceil$ yields a geometric tail and a second-moment bound $Ca^2$. For cover times the same argument applies because, conditional on the past, completing the remaining vertices is bounded by a fresh full cover. Apply these bounds to $T_s$, for which $a\le k^2$, and to a fresh full cover time, for which $a=\tcov$.
+
+At the stopping time $V$, on $\{R_k>0\}$ the remaining cover obligation is no larger than a fresh full cover from the current vertex. Hence
+\[
+\E_xR_k\le\Prob_x(R_k>0)\tcov,\qquad \E_xR_k^2\le C\Prob_x(R_k>0)\tcov^2.
+\]
+These give \eqref{eq:residual}; the same block argument gives \eqref{eq:Tstail}.
+\end{proof}
+
+\subsection{Mean and variance through the second order}
+The exact initial means are
+\[
+\E_xT_s=0,\ 1,\ k^2-k+1,\ k^2
+\]
+for $x=s$, a leaf, $g$, and a nongateway clique vertex, respectively. Define
+\[
+m_{k,x}=\E_xT_s+d_k\Harm_r-1.
+\]
+Then \Cref{lem:residual} proves the useful finite-error statement
+\begin{equation}\label{eq:bracket}
+0\le\E_x\taucov-m_{k,x}\le Ck(\log k)^2.
+\end{equation}
+Using $\Harm_k=\log k+\gamma+O(k^{-1})$ and $\Harm_{k-1}=\Harm_k-k^{-1}$ proves \eqref{eq:mean2}. Since a nongateway clique start attains the largest $\E_xT_s$, the same inequalities give
+\begin{equation}\label{eq:tcovexact}
+\tcov(G_k)=k^2+d_k\Harm_k-1+O\big(k(\log k)^2\big).
+\end{equation}
+This is stronger than \eqref{eq:tcov}; no assertion of an exact maximizing start for each finite $k$ is required.
+
+For the initial variance, \eqref{eq:excursion} gives
+\begin{equation}\label{eq:VarTs}
+\Var_x(T_s)=
+\begin{cases}
+0, & x=s\text{ or a leaf},\\
+\sigma_k^2, & x=g,\\
+\sigma_k^2+(k-1)(k-2), & x\in Q\setminus\{g\}.
+\end{cases}
+\end{equation}
+Indeed, from $g$ the time to $s$ has law $Y_k-1$; from a nongateway vertex one first incurs an independent $\Geom_1(1/(k-1))$ time to $g$. Independence at $T_s$ and \eqref{eq:clockvar} show
+\[
+\Var_x(V)=\Var_x(T_s)+c_k\Harm_r+d_k^2\Harm^{(2)}_r.
+\]
+The residual satisfies
+\begin{align*}
+|\Var_x(\taucov)-\Var_x(V)|&\le\E_xR_k^2+2\sqrt{\Var_x(V)\E_xR_k^2}\\
+&\le Ck^3(\log k)^3+Ck^{7/2}(\log k)^2=o(k^4).
+\end{align*}
+Now $c_k=2k^4+O(k^3)$, $d_k^2=k^4+O(k^3)$, $\Harm^{(2)}_r=\pi^2/6+O(k^{-1})$, and $\Var_x(T_s)=\chi(x)k^4+O(k^2)$. This proves \eqref{eq:var2}. In particular, its second-order term cannot be inferred merely from convergence in distribution; it uses the $L^2$ residual estimate.
+
+\subsection{Uniform Berry--Esseen bound}
+Let $b=b_{k,r}$. By \Cref{lem:trapclt}, the standardized $S_{k,r}$ is within $C/\sqrt{\log k}$ of a standard normal. Its independence from $T_s$ and the Lipschitz bound for the normal distribution function imply
+\[
+\dK\Big(\frac{S_{k,r}-\E S_{k,r}+T_s-\E_xT_s}{b},Z\Big)\le\frac{C}{\sqrt{\log k}}+C\frac{\E_x|T_s-\E_xT_s|}{b}\le\frac{C}{\sqrt{\log k}}.
+\]
+For the leaf-departure term, \eqref{eq:VarL} gives
+\[
+\Prob\big(|2(L_{k,r}-\E L_{k,r})|>k^2\big)\le C/k^2.
+\]
+Its contribution to Kolmogorov distance is bounded by this probability plus $Ck^2/b=O((\log k)^{-1/2})$, by a deterministic-shift comparison. No independence of $L_{k,r}$ and $S_{k,r}$ is used.
+
+Replacing $V$ by $\taucov$ costs at most $\Prob(R_k>0)$ before centering. The change in its mean costs at most $C\E R_k/b$. Finally, for any starts $x,y$,
+\[
+\E_y\taucov\le H(y,x)+\E_x\taucov,
+\]
+so
+\begin{equation}\label{eq:tcovgap}
+0\le\tcov-\E_x\taucov\le h_k.
+\end{equation}
+Changing from the start-dependent mean to $\tcov$ therefore costs $O((\log k)^{-1/2})$. The exact formulas and \eqref{eq:tcovexact} imply
+\[
+\frac{b^2}{h_k\tcov}=1+O((\log k)^{-1}).
+\]
+A change of normal scale by this amount alters Kolmogorov distance by $O((\log k)^{-1})$. This proves \eqref{eq:be}, and completes the proof of \Cref{thm:main}.
+
+\section{Moderate deviations on the sharp Gaussian scale}\label{sec:moderate}
+
+The explicit excursion transform also controls deviations beyond the central limit window.
+
+\begin{theorem}[Moderate deviations]\label{thm:moderate}
+Let $a_k\to\infty$ with $a_k=o(\sqrt{\log k})$. For every starting sequence $x_k$, the variables
+\[
+W_k=\frac{\taucov-\tcov(G_k)}{a_k\sqrt{h_k\tcov(G_k)}}
+\]
+satisfy a large-deviation principle with speed $a_k^2$ and rate $I(u)=u^2/2$. In particular, for each $u>0$,
+\[
+\lim_{k\to\infty}\frac1{a_k^2}\log\Prob_{x_k}(W_k\ge u)=\lim_{k\to\infty}\frac1{a_k^2}\log\Prob_{x_k}(W_k\le -u)=-\frac{u^2}{2}.
+\]
+\end{theorem}
+
+\begin{proof}
+Write $U_k=Y_k/k^2$ and $M_k(z)=\E e^{zU_k}$. By \eqref{eq:mgf}, $M_k$ is analytic and uniformly bounded on a fixed complex disc about zero. Shrinking that disc if necessary makes $|M_k(z)-1|\le 1/2$ uniformly. The generating function of $N_j$ gives
+\[
+\E e^{zZ_{k,j}/k^2}=\frac1{1-(M_k(z)-1)/j}.
+\]
+Taylor expansion of the logarithm, with Cauchy bounds uniform in $k,j$, yields
+\begin{equation}\label{eq:cumulant}
+\log\E e^{z(Z_{k,j}-\E Z_{k,j})/k^2}=\frac{z^2}{2k^4}\Var(Z_{k,j})+O(|z|^3/j).
+\end{equation}
+Summing over $j\le r$ and putting $z=\theta a_kk^2/b_{k,r}$ gives
+\[
+\frac1{a_k^2}\log\E\exp\Big(\theta a_k\frac{S_{k,r}-\E S_{k,r}}{b_{k,r}}\Big)=\frac{\theta^2}{2}+O_\theta\Big(\frac{a_k}{\sqrt{\log k}}\Big)\longrightarrow\frac{\theta^2}{2}.
+\]
+The G\"artner--Ellis theorem therefore gives the asserted principle for the trap clock \cite[Section 2.3]{DemboZeitouni}.
+
+We verify exponential equivalence with the actual clock rather than transferring a weak limit. On the scale $a_kb_{k,r}$, \eqref{eq:Tstail} gives, for each $\varepsilon>0$,
+\[
+\frac1{a_k^2}\log\Prob(T_s>\varepsilon a_kb_{k,r})\le-c\varepsilon\frac{\sqrt{\log k}}{a_k}+o(1)\longrightarrow-\infty.
+\]
+Chebyshev's inequality and \eqref{eq:VarL} give
+\[
+\Prob(|L_{k,r}-\E L_{k,r}|>\varepsilon a_kb_{k,r})\le\frac{C}{\varepsilon^2a_k^2k^2\log k},
+\]
+whose logarithm divided by $a_k^2$ also tends to $-\infty$ because $a_k^2=o(\log k)$. The residual term is zero except on an event of probability at most $C\log k/k$, again superexponentially small at speed $a_k^2$. The deterministic centering difference is $O(k^2)+O(k(\log k)^2)=o(a_kb_{k,r})$ by \eqref{eq:tcovgap} and \eqref{eq:residual}. Finally $b_{k,r}/\sqrt{h_k\tcov}\to 1$. The exponential-equivalence and continuous-mapping principles \cite[Section 4.2]{DemboZeitouni} finish the proof.
+\end{proof}
+
+\section{A fixed core with many leaves: Gaussian-maximum limits}\label{sec:fixedcore}
+
+Let $F$ be a fixed finite connected simple graph with vertex set $\{1,\dots,q\}$, where $q\ge 2$, and $e$ edges. Write $d_v$ for its degrees and
+\[
+\Lap=\diag(d_v)-A_F
+\]
+for its combinatorial Laplacian. Let $\Lap^+$ be the Moore--Penrose pseudoinverse: it is zero on the constants and the inverse of $\Lap$ on $\bone^\perp$. Define the centered Gaussian vector and its maximum by
+\begin{equation}\label{eq:XF}
+X_F\sim\Nor(0,2\Lap^+),\qquad M_F=\max_{v\in V(F)}X_F(v).
+\end{equation}
+In particular, $\sum_vX_F(v)=0$ almost surely. Thus $M_F\ge 0$, and $\Var(M_F)>0$ because the Gaussian law has full support on $\bone^\perp$ and its maximum is not constant there.
+
+For each $k\ge 2$, form $F^{(k)}$ by attaching $k$ new pendant leaves to each vertex of $F$. The original vertices will be called \emph{core vertices}. This produces $q(k+1)$ vertices and $qk+e$ edges. Put $\ell_k=\log k$.
+
+\begin{theorem}[Fixed-core decoration theorem]\label{thm:fixedcore}
+For every fixed $F$ as above, uniformly over starting vertices of $F^{(k)}$,
+\begin{equation}\label{eq:fclimit}
+\frac{\taucov(F^{(k)})-2qk\log k}{2qk\sqrt{\log k}}\Longrightarrow M_F,
+\end{equation}
+and the first two moments converge as well. Consequently,
+\begin{align}
+\tcov(F^{(k)})&=2qk\log k+2qk\sqrt{\log k}\,\E M_F+o_F(k\sqrt{\log k}),\label{eq:fcmean}\\
+\Var_x(\taucov(F^{(k)}))&=4q^2k^2\log k\,\Var(M_F)+o_F(k^2\log k),\label{eq:fcvar}\\
+\frac{\taucov(F^{(k)})-\tcov(F^{(k)})}{2qk\sqrt{\log k}}&\Longrightarrow M_F-\E M_F.\label{eq:fccentered}
+\end{align}
+The limiting law in \eqref{eq:fccentered} is nondegenerate and is not Gaussian.
+\end{theorem}
+
+The final assertion follows from nondegeneracy and the lower bound $M_F-\E M_F\ge-\E M_F$. The covariance in \eqref{eq:XF} is twice the covariance of the mean-zero Gaussian free field on the fixed core. The proof below derives it directly from finite-dimensional spectral perturbation; no cover-time isomorphism theorem is used.
+
+\subsection{An exact operational-time construction}\label{subsec:operational}
+Run a continuous-time chain $Y(t)$ on $F$ with rate one along each oriented core edge. Its generator is $-\Lap$, its invariant distribution is uniform on the $q$ core vertices, and its occupation times are
+\[
+A_v(t)=\int_0^t\ind_{\{Y(s)=v\}}\,ds.
+\]
+This time variable is an \emph{auxiliary operational time}, not the physical time of rate-one continuous-time simple random walk on $F^{(k)}$.
+
+For each $v$ and each of its $k$ leaves, place an independent rate-one Poisson process on the local occupation-time axis $A_v$. Make all these processes independent of $Y$. An event of one of them marks the two-step excursion from $v$ to its leaf and back. While the process is at core vertex $v$, its $d_v$ possible core jumps have rates one, and its $k$ possible leaf marks have rates one. The next incident edge is therefore uniform among the $d_v+k$ choices. After a leaf mark, the core state remains $v$; after a core jump, it changes. The memoryless property shows that the resulting sequence of edges is exactly the discrete-time simple random walk on $F^{(k)}$, with two physical steps assigned to each completed leaf excursion.
+
+Let $E_{v,j}$ be the first arrival time of the Poisson process assigned to leaf $j$ at $v$, and put
+\begin{equation}\label{eq:threshold}
+B_{v,k}=\max_{1\le j\le k}E_{v,j}.
+\end{equation}
+The variables $E_{v,j}$ are iid exponential with mean one. In particular,
+\begin{equation}\label{eq:thresholdlaw}
+\Prob(B_{v,k}\le t)=(1-e^{-t})^k\qquad(t\ge 0).
+\end{equation}
+All the $B_{v,k}$ are independent of the core chain. The operational completion time is exactly
+\begin{equation}\label{eq:sigmadef}
+\sigma_k=\inf\{t\ge 0:A_v(t)\ge B_{v,k}\text{ for every }v\}.
+\end{equation}
+Since every core has a leaf, completing all the leaves also visits all the core vertices.
+
+Let $P_k(t)$ count all leaf marks by operational time $t$, and let $J(t)$ count the core jumps. Starting from a core vertex, the physical cover time satisfies the pathwise identity
+\begin{equation}\label{eq:pathwise}
+\taucov=2P_k(\sigma_k)+J(\sigma_k)-1.
+\end{equation}
+The subtraction of one reflects that the final leaf is covered on arrival, without taking its return step. Simultaneous events have probability zero. Starting instead from a leaf requires one initial physical step to its core; the starting leaf is already covered, so its core has a maximum of $k-1$ rather than $k$ first-arrival times in \eqref{eq:threshold}. The remaining proof is unchanged by this modification.
+
+\section{Occupation fluctuations and inversion of the cover clock}\label{sec:occupation}
+
+We give the finite-state estimates needed to analyze \eqref{eq:sigmadef}.
+
+\begin{lemma}[Core occupation CLT and concentration]\label{lem:occupation}
+For the chain with generator $-\Lap$, uniformly over its finitely many starting states,
+\begin{equation}\label{eq:occclt}
+\frac{A(t)-(t/q)\bone}{\sqrt t}\Longrightarrow\Nor\Big(0,\frac2q\Lap^+\Big).
+\end{equation}
+There are $c_F,C_F>0$ such that, for all $t,u\ge 0$ and all $v$,
+\begin{equation}\label{eq:occtail}
+\Prob_x\big(|A_v(t)-t/q|\ge u\big)\le C_F\exp\Big(-\frac{c_Fu^2}{t+u}\Big),
+\end{equation}
+where the case $t=u=0$ is interpreted trivially. Also,
+\begin{equation}\label{eq:occsecond}
+\E_x\big(A_v(t)-t/q\big)^2\le C_F(t+1).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For a real vector $\theta$, set $f=\theta-\bar\theta\bone$, where $\bar\theta=q^{-1}\sum_v\theta_v$, and let $D_f=\diag(f)$. The finite-state Feynman--Kac identity is
+\begin{equation}\label{eq:fk}
+\E_x\exp\Big(z\int_0^tf(Y(s))\,ds\Big)=e_x^{\T}\exp\big(t(-\Lap+zD_f)\big)\bone.
+\end{equation}
+For completeness, this identity follows by conditioning on the first small time interval: the vector of expectations solves $u'=(-\Lap+zD_f)u$, $u(0)=\bone$.
+
+At $z=0$, the eigenvalue zero is simple and separated from the other eigenvalues by the positive spectral gap of $\Lap$. Finite-dimensional analytic perturbation, or substitution of convergent power series into the eigenvalue equation, gives an eigenvalue $\lambda(z)$ and an eigenvector $r(z)$, normalized by $q^{-1}\bone^{\T}r(z)=1$, with $r(0)=\bone$. The first two derivatives of
+\[
+(-\Lap+zD_f)r(z)=\lambda(z)r(z)
+\]
+give
+\[
+\lambda'(0)=0,\qquad r'(0)=\Lap^+f,\qquad \lambda''(0)=\frac2qf^{\T}\Lap^+f.
+\]
+The complementary spectral subspace remains separated into the left half-plane for sufficiently small complex $z$. Thus, at $z=i/\sqrt t$, the right side of \eqref{eq:fk} converges to
+\[
+\exp\Big(-\frac1q\theta^{\T}\Lap^+\theta\Big).
+\]
+The coefficient of the leading spectral projection tends to one, uniformly over $x$; the complementary contribution decays exponentially in $t$. This is the characteristic function required by Cram\'er--Wold for \eqref{eq:occclt}.
+
+For the tail bound take $f=\ind_{\{v\}}-1/q$ and real $|z|\le z_0(F)$. The matrix in \eqref{eq:fk} is symmetric. Its top eigenvalue satisfies $\lambda(z)\le C_Fz^2$. The operator norm bound for the exponential gives
+\[
+\E_xe^{z(A_v(t)-t/q)}\le\sqrt q\,e^{C_Fz^2t}.
+\]
+Chernoff's inequality with $z$ of the appropriate sign and magnitude comparable to $\min\{u/t,1\}$ proves \eqref{eq:occtail}.
+
+One can obtain \eqref{eq:occsecond} directly from the Poisson equation. Let $h=\Lap^+f$. Then
+\[
+N(t)=h(Y(t))-h(Y(0))+\int_0^tf(Y(s))\,ds
+\]
+is a martingale. Its predictable squared-jump rate is $\sum_{w\sim Y(s)}(h(w)-h(Y(s)))^2$, bounded by a constant depending only on $F$. Hence $\E N(t)^2\le C_Ft$. The endpoint difference of $h$ is bounded, which proves \eqref{eq:occsecond}.
+\end{proof}
+
+\begin{lemma}[Thresholds, tightness, and moments]\label{lem:thresholds}
+For every fixed $p\in(0,\infty)$,
+\begin{equation}\label{eq:thresholdmoments}
+\sup_{k\ge 2,v}\E|B_{v,k}-\log k|^p<\infty.
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:sigmamoments}
+\sup_{k\ge 3,x}\E_x\Big|\frac{\sigma_k-q\log k}{\sqrt{\log k}}\Big|^p<\infty.
+\end{equation}
+In particular, $\E\sigma_k=O_F(\log k)$ and $\E\sigma_k^2=O_F((\log k)^2)$. The conclusions also hold when one threshold in \eqref{eq:threshold} is a maximum of $k-1$ exponentials.
+\end{lemma}
+
+\begin{proof}
+Write $\ell=\log k$. From \eqref{eq:thresholdlaw}, for $u\ge 0$,
+\[
+\Prob(B_{v,k}>\ell+u)\le e^{-u},\qquad \Prob(B_{v,k}<\ell-u)\le e^{-e^u},
+\]
+with the second probability zero when $\ell-u<0$. These bounds imply \eqref{eq:thresholdmoments}. For $k-1$ exponentials, the second upper bound can be replaced by $e^{-e^u/2}$, uniformly for $k\ge 2$; the first remains valid.
+
+At $t=q\ell+u$, if all thresholds are at most $\ell+u/(2q)$ and every occupation is at least that value, then $\sigma_k\le t$. A union bound and \eqref{eq:occtail} therefore give
+\begin{equation}\label{eq:sigmaupper}
+\Prob_x(\sigma_k>q\ell+u)\le qe^{-u/(2q)}+C_F\exp\Big(-\frac{c_Fu^2}{\ell+u}\Big).
+\end{equation}
+On the other hand, $\sum_vA_v(t)=t$. If $\sigma_k<q\ell-u$, then $\sum_vB_{v,k}<q\ell-u$, and at least one threshold is less than $\ell-u/q$. Thus
+\begin{equation}\label{eq:sigmalower}
+\Prob_x(\sigma_k<q\ell-u)\le q\exp(-ce^{u/q}),
+\end{equation}
+where the probability is zero when the time on the left is negative. Substitute $u=z\sqrt\ell$ into \eqref{eq:sigmaupper}--\eqref{eq:sigmalower} and integrate the tails. For $z\le\sqrt\ell$ the second term in \eqref{eq:sigmaupper} is bounded by $C_Fe^{-c_Fz^2}$, while for $z>\sqrt\ell$ it is bounded by $C_Fe^{-c_Fz\sqrt\ell}$. These estimates give \eqref{eq:sigmamoments} for every fixed $p$.
+\end{proof}
+
+\begin{lemma}[Inversion at the coupon threshold]\label{lem:inversion}
+As $k\to\infty$,
+\begin{equation}\label{eq:inversion}
+\frac{\sigma_k-q\log k}{q\sqrt{\log k}}\Longrightarrow M_F,
+\end{equation}
+with convergence of every fixed absolute moment.
+\end{lemma}
+
+\begin{proof}
+Let $t_0=q\ell$ and
+\[
+X_k(v)=\frac{A_v(t_0)-\ell}{\sqrt\ell}.
+\]
+By \eqref{eq:occclt}, $X_k\Longrightarrow X_F$. We first show, for each fixed $K<\infty$,
+\begin{equation}\label{eq:increments}
+\max_v\sup_{|r|\le K\sqrt\ell}\frac{|A_v(t_0+r)-A_v(t_0)-r/q|}{\sqrt\ell}\xrightarrow{\ \Prob\ }0.
+\end{equation}
+For a fixed grid of $r$-values with mesh $\varepsilon\sqrt\ell$, the Markov property and \eqref{eq:occsecond} show that each centered increment over a time interval of length at most $K\sqrt\ell$ has second moment $O_F(\sqrt\ell+1)$. Chebyshev's inequality, divided by $\ell$, proves convergence to zero at all grid points. This applies equally to negative increments by starting the interval at $t_0+r$. Between grid points the occupation functions are one-Lipschitz. The supremum is therefore bounded by the grid maximum plus $2\varepsilon\sqrt\ell$. First let $k\to\infty$, then $\varepsilon\downarrow 0$, proving \eqref{eq:increments}.
+
+By \eqref{eq:thresholdmoments}, $\max_v|B_{v,k}-\ell|/\sqrt\ell\to 0$ in probability. By \eqref{eq:sigmamoments}, $\sigma_k$ lies in $[t_0-K\sqrt\ell,t_0+K\sqrt\ell]$ with probability approaching one as $K\to\infty$, uniformly in large $k$. On this interval, \eqref{eq:increments} and monotonicity of the occupations allow us to invert the simultaneous inequalities $A_v\ge B_{v,k}$. More explicitly, for any fixed $\varepsilon>0$, with probability tending to one on the localized event, all inequalities hold at
+\[
+t_0+q\sqrt\ell\Big(\max_v(-X_k(v))+\varepsilon\Big),
+\]
+and at least one fails at the same expression with $+\varepsilon$ replaced by $-\varepsilon$. Consequently,
+\[
+\frac{\sigma_k-t_0}{q\sqrt\ell}=\max_v(-X_k(v))+o_{\Prob}(1).
+\]
+The symmetry $X_F\overset{d}{=}-X_F$ proves \eqref{eq:inversion}. The moment bounds in \eqref{eq:sigmamoments}, applied with an exponent larger than the desired moment, provide uniform integrability and yield moment convergence. One threshold with $k-1$ terms changes none of these arguments.
+\end{proof}
+
+\begin{proof}[Proof of \Cref{thm:fixedcore}]
+It remains to transfer operational time to physical time. With respect to the full filtration revealing the core chain and all observed Poisson marks,
+\[
+P_k(t)-kt
+\]
+is a square-integrable martingale with predictable quadratic variation $kt$: at every operational instant exactly $k$ rate-one leaf processes are active. Stopping and the square-integrable martingale isometry, justified first at bounded times and then using \Cref{lem:thresholds}, give
+\begin{equation}\label{eq:leafmart}
+\E(P_k(\sigma_k)-k\sigma_k)^2=k\E\sigma_k=O_F(k\ell).
+\end{equation}
+Similarly, the core-jump counting process has compensator $\int_0^td_{Y(s)}\,ds\le d_{\max}t$. Its compensated martingale and \Cref{lem:thresholds} imply
+\begin{equation}\label{eq:jumpmart}
+\E J(\sigma_k)^2=O_F(\ell^2+\ell).
+\end{equation}
+To be precise, the stopping identity in \eqref{eq:leafmart} follows by applying the isometry to $\sigma_k\wedge n$; the stopped martingales are Cauchy in $L^2$ since the expected bracket tails are at most $k\E(\sigma_k-n)_+\to 0$.
+
+By \eqref{eq:pathwise}--\eqref{eq:jumpmart},
+\begin{equation}\label{eq:transfer}
+\frac{\taucov-2k\sigma_k}{k\sqrt\ell}\longrightarrow 0\quad\text{in }L^2.
+\end{equation}
+The initial one-step modification for a leaf start is negligible, and the same estimates hold. Combining \eqref{eq:transfer} with \Cref{lem:inversion} proves the distributional limit and convergence of the first two moments in \eqref{eq:fclimit}. Uniformity follows because there are only finitely many core and associated leaf starting types. Taking the maximum of the corresponding expectations gives \eqref{eq:fcmean}; centering and variance give \eqref{eq:fcvar}--\eqref{eq:fccentered}.
+\end{proof}
+
+\section{Exact hitting times for decorated cores}\label{sec:decorated}
+
+The denominator can also be calculated without asymptotic approximation. For $u,v\in V(F)$, let
+\[
+T_F(u,v)=\E_u\inf\{t\ge 0:Y(t)=v\}
+\]
+be the mean hitting time of the rate-one-per-edge core chain, and let $H_F(u,v)$ be the ordinary discrete-time hitting time on $F$. Set
+\[
+T_*=\max_{u,v\in V(F)}T_F(u,v)>0.
+\]
+
+\begin{proposition}[Exact hitting identity]\label{prop:hitting}
+For every $k\ge 1$ and a pendant leaf $a_v$ at $v$,
+\begin{equation}\label{eq:leafhit}
+H_{F^{(k)}}(u,a_v)=2qk+2e-1+2kT_F(u,v)+H_F(u,v).
+\end{equation}
+For core targets,
+\begin{equation}\label{eq:corehit}
+H_{F^{(k)}}(u,v)=2kT_F(u,v)+H_F(u,v).
+\end{equation}
+A non-target pendant-leaf start adds one to the value from its parent. In particular,
+\begin{align}
+\thit(F^{(k)})&=2qk+2e+\max_{u,v}\{2kT_F(u,v)+H_F(u,v)\},\label{eq:thitF}\\
+&=2k(q+T_*)+O_F(1).\label{eq:thitFasym}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+Eliminate the leaf states in the first-step equations. For a core target $v$, the core hitting vector $h$, with $h_v=0$, satisfies
+\[
+(\Lap h)_u=2k+d_u\qquad(u\ne v).
+\]
+The two functions $T_F(\cdot,v)$ and $H_F(\cdot,v)$ solve the Dirichlet equations with right sides $1$ and $d_u$, respectively. Uniqueness proves \eqref{eq:corehit}.
+
+For a pendant target at $v$, write $h_u=H_{F^{(k)}}(u,a_v)$. At $u\ne v$, the same equation holds. At $v$, there are $k-1$ non-target leaves rather than $k$, and the first-step equation becomes
+\[
+(\Lap h)_v+h_v=2k+d_v-1.
+\]
+Summing over all core vertices, using $\bone^{\T}\Lap=0$, gives
+\[
+h_v=2qk+2e-1.
+\]
+The difference $h_u-h_v$ solves the previous Dirichlet problem, proving \eqref{eq:leafhit}. Finally a leaf start takes one step to its parent. The maximum of $2kT_F(u,v)+H_F(u,v)$ is positive and is attained with $u\ne v$, so a starting leaf at $u$ is distinct from the target leaf at $v$, even for $k=1$. The largest leaf-target value exceeds every core-target value. This proves \eqref{eq:thitF}.
+\end{proof}
+
+\begin{corollary}[Geometric-mean scale for every nontrivial core]\label{cor:geomean}
+For every fixed connected $F$ with $q\ge 2$,
+\[
+\frac{\tcov(F^{(k)})}{\thit(F^{(k)})}\sim\frac{q}{q+T_*}\log k\longrightarrow\infty,
+\]
+and
+\begin{align}
+\frac{\Var_x(\taucov)}{\thit(F^{(k)})\tcov(F^{(k)})}&\longrightarrow\frac{q\Var(M_F)}{q+T_*}>0,\label{eq:geomeanvar}\\
+\frac{\taucov-\tcov(F^{(k)})}{\sqrt{\thit(F^{(k)})\tcov(F^{(k)})}}&\Longrightarrow\sqrt{\frac{q}{q+T_*}}\,(M_F-\E M_F).\label{eq:geomeanlimit}
+\end{align}
+Thus the hitting-time standard-deviation bound and the constant-rate upper-tail bound fail for every such fixed-core family. The interpolation obstruction \eqref{eq:interp}, up to a positive core-dependent constant, holds as well.
+\end{corollary}
+
+\begin{proof}
+Combine \Cref{thm:fixedcore,prop:hitting}. For the upper-tail conclusion, $M_F$ has unbounded support above: the Gaussian law has full support on $\bone^\perp$ and the maximum is unbounded on that subspace. Hence the limiting law has a fixed positive tail at some positive level, whereas the corresponding threshold in units of $\thit$ grows as $\sqrt{\log k}$. This contradicts any universal $Ae^{-au}$ bound exactly as in \Cref{cor:failure}.
+\end{proof}
+
+\subsection{Unequal leaf multiplicities}\label{subsec:unequal}
+The fixed-core method also covers nonuniform decorations and yields a further family of non-Gaussian limits. Fix positive numbers $a_v$, put
+\[
+A=\sum_{v\in V(F)}a_v,\qquad k_v=\lfloor a_vk\rfloor,
+\]
+and attach $k_v$ leaves to $v$. Denote the resulting graph by $F^{(k,a)}$; all $k_v$ are positive for sufficiently large $k$. Retain $X_F$ from \eqref{eq:XF} and define
+\begin{equation}\label{eq:G}
+G_{F,a}=\sum_va_vX_F(v)-A\min_vX_F(v)=\max_v\Big\{\sum_ua_uX_F(u)-AX_F(v)\Big\}.
+\end{equation}
+This is a nonnegative maximum of a finite Gaussian vector. It is nondegenerate because every $a_v>0$ and $q\ge 2$.
+
+\begin{theorem}[Proportional, unequal decorations]\label{thm:unequal}
+Uniformly over starting vertices of $F^{(k,a)}$,
+\begin{equation}\label{eq:unequallimit}
+\frac{\taucov(F^{(k,a)})-2Ak\log k}{2k\sqrt{\log k}}\Longrightarrow G_{F,a},
+\end{equation}
+with convergence of the first two moments. In particular,
+\begin{align}
+\tcov(F^{(k,a)})&=2Ak\log k+2Ak\sqrt{\log k}\,\E M_F+o_{F,a}(k\sqrt{\log k}),\label{eq:unequalmean}\\
+\Var_x(\taucov(F^{(k,a)}))&=4k^2\log k\,\Var(G_{F,a})+o_{F,a}(k^2\log k).\label{eq:unequalvar}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+Use the same core chain of rate one along each edge, but activate $k_v$ leaf processes at $v$. The threshold at $v$ is now the maximum of $k_v$ exponentials. Since $\log k_v=\log k+O_a(1)$, the threshold bounds, occupation estimates, clock localization, and inversion in \Cref{lem:thresholds,lem:inversion} apply without change in their leading terms. With $X_k$ as in the inversion proof, write $m_k=-\min_vX_k(v)$. Then
+\[
+\frac{\sigma_k-q\log k}{\sqrt{\log k}}=qm_k+o_{\Prob}(1),\qquad \frac{A_v(\sigma_k)-\log k}{\sqrt{\log k}}=X_k(v)+m_k+o_{\Prob}(1).
+\]
+These occupation variables have uniformly bounded moments of every fixed order. Indeed, at completion $A_v(\sigma_k)\ge B_{v,k_v}$ and $\sum_vA_v(\sigma_k)=\sigma_k$, so
+\[
+|A_v(\sigma_k)-\log k|\le|\sigma_k-q\log k|+\sum_u|B_{u,k_u}-\log k|.
+\]
+The moment bounds proved above apply to the right side.
+
+The compensated total leaf-count martingale now has compensator
+\[
+C_k(t)=\sum_vk_vA_v(t),
+\]
+not the constant-rate compensator $kt$. Its stopped quadratic mean is $\E C_k(\sigma_k)=O_{F,a}(k\log k)$. The core-jump error is still $O_{L^2}(\log k)$, and therefore
+\[
+\taucov=2\sum_vk_vA_v(\sigma_k)+o_{L^2}(k\sqrt{\log k}).
+\]
+Substitution of the occupation limits gives \eqref{eq:unequallimit} and moment convergence. The rounding error from $k_v-a_vk=O(1)$ contributes only $O_{L^2}(\log k)$. Finally,
+\[
+\E G_{F,a}=-A\,\E\min_vX_F(v)=A\,\E M_F
+\]
+by symmetry and $\E X_F(v)=0$. This proves the mean formula.
+\end{proof}
+
+There is a corresponding exact hitting formula. Put $K=\sum_vk_v$ and let
+\[
+T_{\mathbf k}(u,v)=\E_u\int_0^{T_v}k_{Y(s)}\,ds.
+\]
+The same Dirichlet equations as in \Cref{prop:hitting}, now with right side $2k_u+d_u$, give
+\begin{equation}\label{eq:unequalhit}
+\thit(F^{(k,a)})=2K+2e+\max_{u,v}\{2T_{\mathbf k}(u,v)+H_F(u,v)\}.
+\end{equation}
+If $T_a(u,v)=\E_u\int_0^{T_v}a_{Y(s)}\,ds$ and $T_{a,*}=\max_{u,v}T_a(u,v)$, then
+\[
+\thit(F^{(k,a)})=2k(A+T_{a,*})+O_{F,a}(1).
+\]
+Thus the geometric-mean variance ratio tends to
+\[
+\frac{\Var(G_{F,a})}{A(A+T_{a,*})}>0.
+\]
+This extension keeps the graph unweighted: the parameters change the integer numbers of pendant leaves, not the transition probabilities on a fixed graph.
+
+For a two-vertex core with leaf proportions $a,b>0$, formula \eqref{eq:G} becomes
+\[
+G_{F,(a,b)}=\sqrt2\big(aZ_++b(-Z)_+\big),\qquad Z_+=\max\{Z,0\}.
+\]
+Its mean and variance are
+\[
+\E G_{F,(a,b)}=\frac{a+b}{\sqrt\pi},\qquad \Var(G_{F,(a,b)})=a^2+b^2-\frac{(a+b)^2}{\pi}.
+\]
+Accordingly, unequal double stars give a two-scale mixture of half-normal laws, while equal double stars give the single half-normal law in the next section.
+
+\section{Diameter-three trees and an explicit half-normal law}\label{sec:doublestar}
+
+Let $D_k$ be the double-star tree with two adjacent centers, each having $k$ pendant leaves. It has $2k+2$ vertices, $2k+1$ edges, and diameter three. Taking $F$ to be a single edge,
+\[
+\Lap=\begin{pmatrix}1&-1\\-1&1\end{pmatrix},\qquad \Lap^+=\frac14\begin{pmatrix}1&-1\\-1&1\end{pmatrix}.
+\]
+Therefore $X_F\overset{d}{=}(Z/\sqrt2,-Z/\sqrt2)$ and $M_F\overset{d}{=}|Z|/\sqrt2$.
+
+\begin{theorem}[Double-star counterexample]\label{thm:doublestar}
+For every $k\ge 1$,
+\begin{equation}\label{eq:dsthit}
+\thit(D_k)=6k+3.
+\end{equation}
+As $k\to\infty$, uniformly in the starting vertex,
+\begin{align}
+\frac{\taucov(D_k)-4k\log k}{2\sqrt2\,k\sqrt{\log k}}&\Longrightarrow|Z|,\label{eq:dslimit}\\
+\tcov(D_k)&=4k\log k+\frac4{\sqrt\pi}k\sqrt{\log k}+o(k\sqrt{\log k}),\label{eq:dsmean}\\
+\Var_x(\taucov(D_k))&=8\Big(1-\frac2\pi\Big)k^2\log k+o(k^2\log k).\label{eq:dsvar}
+\end{align}
+Consequently,
+\begin{equation}\label{eq:dscentered}
+\frac{\taucov-\tcov(D_k)}{\sqrt{\thit(D_k)\tcov(D_k)}}\Longrightarrow\frac{|Z|-\sqrt{2/\pi}}{\sqrt3},
+\end{equation}
+and
+\[
+\frac{\SD_x(\taucov)}{\thit(D_k)}\sim\frac{\sqrt2}{3}\sqrt{1-\frac2\pi}\,\sqrt{\log k}\longrightarrow\infty.
+\]
+\end{theorem}
+
+\begin{proof}
+For the two-vertex core, $q=2$, $e=1$, and $T_F(u,v)=H_F(u,v)=1$ for distinct vertices. Equation \eqref{eq:thitF} gives $4k+2+2k+1=6k+3$. Substitution of $M_F=|Z|/\sqrt2$ into \Cref{thm:fixedcore} gives \eqref{eq:dslimit}--\eqref{eq:dsvar}, using $\E|Z|=\sqrt{2/\pi}$ and $\Var(|Z|)=1-2/\pi$. The remaining formulas follow by division.
+\end{proof}
+
+\subsection{Why a half-normal variable appears}
+The operational core chain alternates between its two states after independent exponential holding times of mean one. At deterministic operational time $2\ell$, the difference between its two occupations is of order $\sqrt\ell$, with a Gaussian limit. Each center needs approximately $\ell$ units of occupation time to visit all its leaves. Whichever center is behind determines the extra completion time. The sign of the occupation imbalance is irrelevant, so its absolute value survives in the limit. The randomness of each individual coupon threshold is only order one in operational time, smaller than the order-$\sqrt\ell$ imbalance. This explains both the non-Gaussian limit and the extra $\sqrt{\log k}$ factor relative to the hitting time.
+
+\begin{proposition}[Minimal tree diameter]\label{prop:diameter}
+Diameter three is the smallest possible fixed diameter of a family of finite trees for which $\SD_x(\taucov)/\thit$ is unbounded.
+\end{proposition}
+
+\begin{proof}
+A connected tree of diameter at most two is a star. Let it have $k\ge 2$ leaves. From its center, the cover time is $2C_k-1$, where $C_k$ is the number of uniform leaf choices needed to collect all $k$ leaves. Thus
+\[
+\Var_s(\taucov)=4\big(k^2\Harm^{(2)}_k-k\Harm_k\big)\le\frac{2\pi^2}{3}k^2.
+\]
+From a leaf, after the first step only $k-1$ target leaves remain, and the variance is $4(k^2\Harm^{(2)}_{k-1}-k\Harm_{k-1})$, with the same upper bound. Since $\thit=2k$ for a star with $k\ge 2$,
+\[
+\frac{\SD_x(\taucov)}{\thit}\le\frac{\pi}{\sqrt6}.
+\]
+The one-edge and one-vertex cases are deterministic and do not produce divergence. The diameter-three construction in \Cref{thm:doublestar} completes the proof.
+\end{proof}
+
+\begin{remark}[Graph restrictions]\label{rem:restrictions}
+The double stars are simultaneously trees, planar, and bipartite. More generally, when $F$ is a fixed tree, every $F^{(k)}$ is a tree of diameter $\operatorname{diam}(F)+2$. These statements do not address bounded-degree families: the degrees of the decorated core vertices tend to infinity.
+\end{remark}
+
+\section{Stability under holding times and laziness}\label{sec:holding}
+
+We now distinguish the operational time used above from standard changes of the physical clock.
+
+\begin{proposition}[Independent holding times]\label{prop:holding}
+Let $\tau_k$ be any of the discrete cover times considered above. Let $W_1,W_2,\dots$ be iid nonnegative random variables independent of the walk, with mean $m\in(0,\infty)$ and variance $v<\infty$. Define
+\[
+\widetilde\tau_k=\sum_{i=1}^{\tau_k}W_i.
+\]
+Then
+\begin{equation}\label{eq:holding}
+\E_x\widetilde\tau_k=m\E_x\tau_k,\qquad \Var_x(\widetilde\tau_k)=m^2\Var_x(\tau_k)+v\E_x\tau_k.
+\end{equation}
+For the clique--star family and every fixed-core decorated family, the centered distributional limits and leading variance asymptotics remain valid after multiplying the time scales by $m$. Their mean hitting times and mean cover times are multiplied exactly by $m$.
+\end{proposition}
+
+\begin{proof}
+Condition on the entire discrete walk. The conditional expectation and variance of the random sum are $m\tau_k$ and $v\tau_k$, giving \eqref{eq:holding}. Also,
+\[
+\E_x(\widetilde\tau_k-m\tau_k)^2=v\E_x\tau_k.
+\]
+For the clique--star, the square of the fluctuation scale has order $k^4\log k$, while $\E\tau_k$ has order $k^2\log k$. For fixed-core decorations, these orders are $k^2\log k$ and $k\log k$, respectively. Thus the displayed clock error is negligible in $L^2$ at the relevant fluctuation scale. Apply Slutsky and the variance identity. The same conditional expectation identity applied to a discrete hitting time gives the exact factor $m$ for every mean hitting time.
+\end{proof}
+
+Taking exponential mean-one holding times gives ordinary continuous-time simple random walk with total jump rate one. Taking $W_i\sim\Geom_1(p)$ gives a lazy walk in which a genuine jump is made with probability $p$ on each tick; the time scale is multiplied by $1/p$. The graph restrictions and the failures of the hitting-time fluctuation scale persist. Only the leading distribution and variance statements are asserted for arbitrary finite-variance holding times; moderate deviations require additional control of the holding-time tails.
+
+\section{Consequences and further questions}\label{sec:consequences}
+
+The two mechanisms separate concentration from its rate. In all these examples $\taucov/\tcov\to 1$, but fluctuations exceed $\thit$ by a factor of order $\sqrt{\log k}$. The clique--star gives a Gaussian law and the asymptotic identity $\Var_x(\taucov)\sim\thit\tcov$. Fixed-core decorations give a non-Gaussian family of limits whose covariance input is the pseudoinverse of a finite Laplacian. Already the two-vertex core gives a tree of diameter three and an explicit half-normal law.
+
+The source question therefore has a negative answer even with strong restrictions on graph geometry. A different question is which restrictions restore the hitting-time scale. Our examples do not resolve that question for bounded-degree graphs, vertex-transitive graphs, or families with a uniform expansion assumption. The vertex-transitive fluctuation theorems in \cite{BHT22} demonstrate that additional hypotheses genuinely change the problem.
+
+Several quantitative directions remain. A fixed-core Berry--Esseen theorem would require a quantitative inversion of the occupation process at the simultaneous coupon thresholds. Allowing the core to grow would require uniform spectral and occupation-time estimates; neither a growing-core theorem nor a classification of all possible fluctuation laws follows from \Cref{thm:fixedcore}. Finally, the moderate-deviation result in \Cref{thm:moderate} stops at $a_k=o(\sqrt{\log k})$. At larger deviations the rare event that the clique remains uncovered at leaf completion is no longer automatically negligible on the deviation scale. A full large-deviation analysis would have to retain that event explicitly.
+
+\appendix
+
+\section{Exact checks and the formal development}\label{app:checks}
+
+All asymptotic statements in this paper are proved in the preceding sections. The repository \cite{Repo} accompanying the paper contains, beside the \LaTeX{} source, two independent verifications of the finite identities on which the proofs rest.
+
+The first is a set of exact-arithmetic programs. They recompute the hitting table of Section \ref{sec:hitting} and $\thit(G_k)$ from the first-step system on all $2k+1$ vertices for $3\le k\le 14$, together with $\E_xT_s$ and $\Var_x(T_s)$ for every start type. They recover the excursion transform \eqref{eq:pgf} from the random-sum structure \eqref{eq:excursion}, its moments \eqref{eq:mu}--\eqref{eq:third} by symbolic differentiation, and the coupon-clock formulas \eqref{eq:clockpgf}--\eqref{eq:CovSL} by differentiating the transform with $k$ symbolic and $r\le 6$. A lumped absorbing chain on the states (position type, visited leaves, visited clique vertices) gives the exact mean and variance of the leaf-completion clock $V$ and of the cover time itself for $3\le k\le 12$ from all four start types, confirming \eqref{eq:clockmean}--\eqref{eq:clockvar} and the bracket \eqref{eq:bracket}; the lumping is checked against the full visited-set chain for $k\le 5$. The identities \eqref{eq:leafhit}--\eqref{eq:thitF} and \eqref{eq:unequalhit} are checked on nine cores (the edge, the paths on three and four vertices, the triangle, the three-leaf star, the four- and five-cycles, the complete graph on four vertices, and the paw) with equal decorations $k\le 4$ and with every leaf vector in $\{1,2,3\}^{q}$, the Penrose equations are checked for each pseudoinverse, and $\thit(D_k)=6k+3$ is checked for $k\le 25$. The exact cover-time moments of $D_k$ are computed for $k\le 16$ and those of stars for $k\le 30$, and the perturbation identities of \Cref{lem:occupation} are checked numerically on the same cores. An exact-in-law sampler of $\taucov(D_k)$ built from the operational construction of Section \ref{subsec:operational} agrees with the lumped chain at $k=1000$; the standardized cover time approaches the half-normal limit \eqref{eq:dslimit} slowly, as the $o(k\sqrt{\log k})$ terms of \eqref{eq:dsmean} allow. The sampler is a diagnostic, not a proof.
+
+The second is a Lean~4 development, checked against Mathlib. It formalises the finite content of the argument: the first-step systems behind the hitting table and their unique solutions, the comparison polynomial of \Cref{prop:table}, the composition of generating functions in \eqref{eq:pgf}, the derivative of $f_k$ at $1$ and the second-order Taylor data that give \eqref{eq:mu}--\eqref{eq:sigma}, the algebra behind \eqref{eq:mgf}, the stage transform and its geometric parameters, the stage-by-stage sums that give \eqref{eq:clockmean}--\eqref{eq:CovSL}, the third-moment bounds of \Cref{lem:trapclt}, the union bound of \Cref{lem:residual}, the initial variances \eqref{eq:VarTs}, the scaling in the proof of \Cref{thm:moderate}, the interpolation exponent \eqref{eq:interp}, the second-order mean expansion \eqref{eq:mean2} from \eqref{eq:tcovexact} with an explicit error term, the perturbation coefficients of \Cref{lem:occupation} and the explicit eigenvalue of the two-vertex core, the threshold tails of \Cref{lem:thresholds}, the elimination of leaf states and the linearity of the Dirichlet problems in \Cref{prop:hitting}, the hitting times on $D_k$ and on the decorated three-vertex path, the two-vertex pseudoinverse, the two-vertex limit variable of Section \ref{subsec:unequal} with its mean and variance, the star bound of \Cref{prop:diameter}, the constants of \Cref{thm:doublestar}, and the variance identity \eqref{eq:holding}. Every theorem in it depends only on \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}. The probability spaces, the stopping-time constructions and the limit theorems are not formalised; they are carried by the arguments in the text.
+
+\section*{Acknowledgements}
+The research was supported by the European Research Council under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, Heights Labs, Convex Nexus Capital, and the Israel Science Foundation (grants 2258/19 and 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital; both entities supported this work and are named above. These entities and the other sources of support had no role in the design of the study, its analysis, the preparation of the manuscript, or the decision to publish.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+During the preparation of this work the author made substantial use of generative AI tools, and describes their role here. The mathematical arguments, the computations and the first draft of this manuscript were produced by OpenAI's ChatGPT working under the author's direction, as part of Math Brain, a project on the use of AI systems in mathematical research. The author set the research problem and commissioned the work; he did not supply the arguments or carry them out. The manuscript was then audited by Claude (Anthropic), which re-derived every proof, wrote the exact-arithmetic checks and the Lean~4 development described in Appendix~\ref{app:checks}, and revised the text. The author reviewed the mathematics, the code and the text, and takes full responsibility for the content of the manuscript.
+
+\section*{Code availability}
+The \LaTeX{} source, the exact-arithmetic programs with their recorded output, and the Lean~4 development are available at \url{https://github.com/yspennstate/cover-time-fluctuations} \cite{Repo}. The Lean development builds against Mathlib with the pinned toolchain recorded in the repository, and a separate file prints the axioms used by every theorem. It formalises the finite statements on which the proofs rest, as listed in Appendix~\ref{app:checks}; no computational result is used as a substitute for a proof in the paper.
+
+\begin{thebibliography}{99}
+
+\bibitem{Aldous91}
+D.~J. Aldous, \emph{Threshold limits for cover times}, J. Theoret. Probab. \textbf{4} (1991), 197--211.
+\href{https://doi.org/10.1007/BF01047002}{doi:10.1007/BF01047002}.
+
+\bibitem{AldousFill}
+D.~Aldous and J.~A. Fill, \emph{Reversible Markov Chains and Random Walks on Graphs}, unfinished monograph, 2002; recompiled 2014.
+\url{https://www.stat.berkeley.edu/~aldous/RWG/book.html}.
+
+\bibitem{Belius13}
+D.~Belius, \emph{Gumbel fluctuations for cover times in the discrete torus}, Probab. Theory Related Fields \textbf{157} (2013), 635--689.
+\href{https://doi.org/10.1007/s00440-012-0467-7}{doi:10.1007/s00440-012-0467-7}.
+
+\bibitem{BHT22}
+N.~Berestycki, J.~Hermon and L.~Teyssier, \emph{On the universality of fluctuations for the cover time}, preprint, arXiv:2202.02255.
+\url{https://arxiv.org/abs/2202.02255}.
+
+\bibitem{DemboZeitouni}
+A.~Dembo and O.~Zeitouni, \emph{Large Deviations Techniques and Applications}, second edition, Applications of Mathematics \textbf{38}, Springer, 1998; corrected printing 2010.
+\href{https://doi.org/10.1007/978-3-642-03311-7}{doi:10.1007/978-3-642-03311-7}.
+
+\bibitem{Ding14}
+J.~Ding, \emph{Asymptotics of cover times via Gaussian free fields: bounded-degree graphs and general trees}, Ann. Probab. \textbf{42} (2014), 464--496.
+\href{https://doi.org/10.1214/12-AOP822}{doi:10.1214/12-AOP822}.
+
+\bibitem{DLP12}
+J.~Ding, J.~R. Lee and Y.~Peres, \emph{Cover times, blanket times, and majorizing measures}, Ann. of Math. (2) \textbf{175} (2012), 1409--1471.
+\href{https://doi.org/10.4007/annals.2012.175.3.8}{doi:10.4007/annals.2012.175.3.8}.
+
+\bibitem{DoyleSnell}
+P.~G. Doyle and J.~L. Snell, \emph{Random Walks and Electric Networks}, Carus Mathematical Monographs \textbf{22}, Mathematical Association of America, 1984.
+
+\bibitem{LevinPeres}
+D.~A. Levin and Y.~Peres, \emph{Markov Chains and Mixing Times}, second edition, with contributions by E.~L. Wilmer, American Mathematical Society, 2017.
+
+\bibitem{Matthews88}
+P.~Matthews, \emph{Covering problems for Markov chains}, Ann. Probab. \textbf{16} (1988), 1215--1228.
+\href{https://doi.org/10.1214/aop/1176991686}{doi:10.1214/aop/1176991686}.
+
+\bibitem{Petrov75}
+V.~V. Petrov, \emph{Sums of Independent Random Variables}, Ergebnisse der Mathematik und ihrer Grenzgebiete \textbf{82}, Springer, 1975.
+\href{https://doi.org/10.1007/978-3-642-65809-9}{doi:10.1007/978-3-642-65809-9}.
+
+\bibitem{Repo}
+Y.~Shmalo, \emph{Cover-time fluctuations beyond the maximal hitting-time scale: source, exact checks and Lean~4 development}, GitHub repository, 2026.
+\url{https://github.com/yspennstate/cover-time-fluctuations}.
+
+\bibitem{Zhai18}
+A.~Zhai, \emph{Exponential concentration of cover times}, Electron. J. Probab. \textbf{23} (2018), paper no. 32, 22 pp.
+\href{https://doi.org/10.1214/18-EJP149}{doi:10.1214/18-EJP149}.
+
+\end{thebibliography}
+
+\end{document}

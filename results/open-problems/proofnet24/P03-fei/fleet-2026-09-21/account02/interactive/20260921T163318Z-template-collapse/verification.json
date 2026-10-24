@@ -1,0 +1,231 @@
+{
+  "checks": {
+    "fibres": {
+      "exact_boolean_template_fibre_instances": 33044,
+      "identities": [
+        "sum(G-B)^2=1",
+        "C=1+4 sum G*B",
+        "2^r C >= M^2"
+      ],
+      "normalization": "integer numerators; common Walsh denominator 2^n",
+      "scope": "all Boolean functions and quadratic templates through three variables",
+      "status": "PASS"
+    },
+    "majority": {
+      "direct_nine_bit_case": {
+        "H": 5,
+        "I": "9/4",
+        "M": 7,
+        "phase": "sum_{i<j} s_i*s_j",
+        "support": 76
+      },
+      "exact_recursive_examples": [
+        {
+          "2_log_M_lower_bound_exact": 2,
+          "H_exact": "2",
+          "I_exact": "3/2",
+          "M_bit_length": 2,
+          "coarse_cost_over_I_lower_bound_exact": "4/3",
+          "depth": 1,
+          "minimum_exact_phase_rank_lower_bound": 2,
+          "variables": 3
+        },
+        {
+          "2_log_M_lower_bound_exact": 4,
+          "H_exact": "5",
+          "I_exact": "9/4",
+          "M_bit_length": 3,
+          "coarse_cost_over_I_lower_bound_exact": "16/9",
+          "depth": 2,
+          "minimum_exact_phase_rank_lower_bound": 6,
+          "variables": 9
+        },
+        {
+          "2_log_M_lower_bound_exact": 10,
+          "H_exact": "19/2",
+          "I_exact": "27/8",
+          "M_bit_length": 8,
+          "coarse_cost_over_I_lower_bound_exact": "80/27",
+          "depth": 3,
+          "minimum_exact_phase_rank_lower_bound": 18,
+          "variables": 27
+        },
+        {
+          "2_log_M_lower_bound_exact": 28,
+          "H_exact": "65/4",
+          "I_exact": "81/16",
+          "M_bit_length": 22,
+          "coarse_cost_over_I_lower_bound_exact": "448/81",
+          "depth": 4,
+          "minimum_exact_phase_rank_lower_bound": 54,
+          "variables": 81
+        },
+        {
+          "2_log_M_lower_bound_exact": 82,
+          "H_exact": "211/8",
+          "I_exact": "243/32",
+          "M_bit_length": 64,
+          "coarse_cost_over_I_lower_bound_exact": "2624/243",
+          "depth": 5,
+          "minimum_exact_phase_rank_lower_bound": 162,
+          "variables": 243
+        },
+        {
+          "2_log_M_lower_bound_exact": 244,
+          "H_exact": "665/16",
+          "I_exact": "729/64",
+          "M_bit_length": 190,
+          "coarse_cost_over_I_lower_bound_exact": "15616/729",
+          "depth": 6,
+          "minimum_exact_phase_rank_lower_bound": 486,
+          "variables": 729
+        },
+        {
+          "2_log_M_lower_bound_exact": 730,
+          "H_exact": "2059/32",
+          "I_exact": "2187/128",
+          "M_bit_length": 569,
+          "coarse_cost_over_I_lower_bound_exact": "93440/2187",
+          "depth": 7,
+          "minimum_exact_phase_rank_lower_bound": 1458,
+          "variables": 2187
+        },
+        {
+          "2_log_M_lower_bound_exact": 2188,
+          "H_exact": "6305/64",
+          "I_exact": "6561/256",
+          "M_bit_length": 1704,
+          "coarse_cost_over_I_lower_bound_exact": "560128/6561",
+          "depth": 8,
+          "minimum_exact_phase_rank_lower_bound": 4374,
+          "variables": 6561
+        }
+      ],
+      "novelty": "recursive majority is inherited; its use refutes the new global phase-budget target",
+      "scope": "all-depth claim is analytic; only nine-bit truth table is materialized here",
+      "status": "PASS"
+    },
+    "scalar": {
+      "Lipschitz_constant_exact": 3,
+      "certified_interval": [
+        "1/65",
+        "1/2"
+      ],
+      "closed_cells": 224,
+      "each_cell_lower_bound_strictly_greater_than": "1/1000",
+      "ln2_certified_interval_contained_in": [
+        "2/3",
+        "3/4"
+      ],
+      "minimum_lower_bound_float_diagnostic": 0.0018188141683739502,
+      "outside_grid_proof": "analytic tail on [0,1/64], trivial bound on [1/2,1]",
+      "parameterization": "t=k/256, k=32,...,256; x=t^2/(1+t^2)",
+      "rational_nodes": 225,
+      "series_terms": 40,
+      "status": "PASS",
+      "theorem": "R(x)<=h2(x)/8+9*x/4 for all x in [0,1]"
+    },
+    "templates": {
+      "all_boolean_template_pairs": 134250772,
+      "all_quadratic_phase_checks": 2198,
+      "arithmetic": "int64; largest comparison is safely below 2^63",
+      "by_dimension": [
+        {
+          "boolean_truth_tables": 2,
+          "exact_pairs": 4,
+          "n": 0,
+          "quadratic_templates": 2
+        },
+        {
+          "boolean_truth_tables": 4,
+          "exact_pairs": 16,
+          "n": 1,
+          "quadratic_templates": 4
+        },
+        {
+          "boolean_truth_tables": 16,
+          "exact_pairs": 256,
+          "n": 2,
+          "quadratic_templates": 16
+        },
+        {
+          "boolean_truth_tables": 256,
+          "exact_pairs": 32768,
+          "n": 3,
+          "quadratic_templates": 128
+        },
+        {
+          "boolean_truth_tables": 65536,
+          "exact_pairs": 134217728,
+          "n": 4,
+          "quadratic_templates": 2048
+        }
+      ],
+      "status": "PASS"
+    },
+    "tribes": {
+      "all_w_claim": "proved analytically; examples do not enumerate large truth tables",
+      "analytic_family_examples": [
+        {
+          "actual_H_over_I_float_diagnostic": 2.0628779910387194,
+          "balanced_variables": 9,
+          "coarse_cost_over_I_lower_bound_exact": "2",
+          "w": 2
+        },
+        {
+          "actual_H_over_I_float_diagnostic": 3.0519283097043197,
+          "balanced_variables": 65,
+          "coarse_cost_over_I_lower_bound_exact": "6",
+          "w": 4
+        },
+        {
+          "actual_H_over_I_float_diagnostic": 3.4078150821522293,
+          "balanced_variables": 385,
+          "coarse_cost_over_I_lower_bound_exact": "18",
+          "w": 6
+        },
+        {
+          "actual_H_over_I_float_diagnostic": 3.648422761337761,
+          "balanced_variables": 10241,
+          "coarse_cost_over_I_lower_bound_exact": "186",
+          "w": 10
+        },
+        {
+          "actual_H_over_I_float_diagnostic": 3.7722357962674984,
+          "balanced_variables": 1048577,
+          "coarse_cost_over_I_lower_bound_exact": "7710",
+          "w": 16
+        }
+      ],
+      "direct_checks": [
+        {
+          "I_exact": "1",
+          "M_exact": "2",
+          "balanced_I_exact": "2",
+          "balanced_lift_variables": 3,
+          "entropy_float_diagnostic": 2.0,
+          "scope": "full integer Walsh transform and rational log intervals",
+          "tribes": 2,
+          "variables": 2,
+          "w": 1
+        },
+        {
+          "I_exact": "27/16",
+          "M_exact": "631/64",
+          "balanced_I_exact": "43/16",
+          "balanced_lift_variables": 9,
+          "entropy_float_diagnostic": 5.543984600916557,
+          "scope": "full integer Walsh transform and rational log intervals",
+          "tribes": 4,
+          "variables": 8,
+          "w": 2
+        }
+      ],
+      "limit_H_over_I": 4,
+      "status": "PASS"
+    }
+  },
+  "full_FEI": "OPEN_NOT_PROVED",
+  "schema_version": 1,
+  "verification_kind": "self-check and exact scalar interval certificate, not independent audit"
+}

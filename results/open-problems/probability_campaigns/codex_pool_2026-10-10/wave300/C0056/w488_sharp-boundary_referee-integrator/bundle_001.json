@@ -1,0 +1,105 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w488",
+  "bundle_slug": "c0056-reviewed-boundaries-001",
+  "entries": [
+    {
+      "key": "born-norm-threshold",
+      "namespace": "probability.random-operators",
+      "logical_name": "anderson-iid-bounded-born-series-operator-norm-threshold",
+      "kind": "lemma",
+      "title": "Exact operator-norm threshold for the unrenormalized Anderson Born series",
+      "statement": "Let H0 be nearest-neighbor adjacency with free spectrum [-2d,2d] on ell^2(Z^d), d>=1. Let V_x be iid bounded real site values with M=ess sup |V_x|>0. Almost surely, simultaneously for every E in [-2d,2d], eta>0, lambda>0 and integer n>=0, writing R0=(H0-E-i eta)^(-1) and K=lambda V R0, one has ||K^n||=(lambda M/eta)^n and ||R0 K^n||=eta^(-1)(lambda M/eta)^n. Hence sum_{n>=0} R0(-K)^n converges in operator norm exactly when eta>lambda M. This is an obstruction to this expansion, not a conclusion about spectral type.",
+      "proof_text": "Choose an extremal support point m with |m|=M. For each cube side L, iid disjoint cube trials almost surely yield arbitrarily distant cubes where every |V_x-m|<1/L; intersect over integer L. A normalized plane wave cut off to such a cube is an approximate E-eigenvector of H0 for every E in the free band, with defect at most 2d sqrt(2/L), and V-m has defect at most 1/L. For a=(E-E-i eta)^(-1)=i/eta and b=lambda m a, the resolvent identity makes these vectors approximate b-eigenvectors of K. Since ||K||<=lambda M/eta=|b|, telescoping gives ||K^n||=|b|^n. Applying R0 and its approximate action a gives ||R0K^n||=|a b^n|. The terms therefore fail to tend to zero when eta<=lambda M; above that threshold the geometric Neumann series converges.",
+      "assumptions": ["d>=1", "iid bounded real site values", "M=ess sup |V_x|>0", "infinite lattice operator norm", "E in closed free band", "eta and lambda positive"],
+      "domain": "random Schrodinger operators",
+      "source": {
+        "source_id": "owner-own-work:C0056:w486:L1-L2",
+        "url": "~/brain_workers/w486/ATTEMPT.md",
+        "revision": "2026-10-10 author proof; w488 independent KEEP in REVIEWS.jsonl",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "poisson-p-criterion",
+      "namespace": "analysis.spectral-measures",
+      "logical_name": "random-spectral-measure-integrated-poisson-lp-ac-criterion",
+      "kind": "lemma",
+      "title": "Integrated Poisson Lp criterion for almost-sure absolute continuity",
+      "statement": "Let mu_omega be jointly measurable random probability Borel measures on R, let I be a bounded open interval, 1<p<infinity, and eta_n>0 deterministic with eta_n tending to zero. Set F_n(omega,E)=integral eta_n/((t-E)^2+eta_n^2) dmu_omega(t). If sup_n E integral_I F_n^p dE<=C, then almost surely mu_omega restricted to I equals rho_omega dE with rho_omega in Lp(I), and E integral_I rho_omega^p dE<=C/pi^p. For 0<p<=1 the analogous integrated bound is universal for probability measures and alone cannot imply absolute continuity.",
+      "proof_text": "Fatou yields a samplewise subsequence whose Lp energies are bounded with expected liminf at most C. Reflexivity gives a weak Lp limit f; testing against compactly supported continuous functions and using the Poisson approximate identity identifies f dE=pi dmu on I. Lower semicontinuity yields the bound after expectation. For p<=1, concavity gives integral_I F_eta^p<=|I|^(1-p)(integral_I F_eta)^p<=|I|^(1-p)pi^p, including Dirac measures.",
+      "assumptions": ["random probability Borel measures jointly measurable", "bounded open interval I", "1<p<infinity for the sufficient implication", "deterministic eta_n tending to zero", "uniform expected integrated p moment"],
+      "domain": "spectral measure theory",
+      "source": {
+        "source_id": "owner-own-work:C0056:w487:S1.487.2",
+        "url": "~/brain_workers/w487/ATTEMPT.md",
+        "revision": "2026-10-10 author proof; w488 independent KEEP in REVIEWS.jsonl",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "annealed-first-moment-counterexample",
+      "namespace": "analysis.spectral-measures",
+      "logical_name": "annealed-diagonal-poisson-first-moment-does-not-imply-quenched-ac",
+      "kind": "lemma",
+      "title": "Atomic diagonal model with bounded annealed Poisson first moment",
+      "statement": "For lambda>0 let H_omega delta_x=lambda V_x delta_x on ell^2(Z^3), where the V_x are iid uniform on [-1,1]. Every spectral measure is almost surely pure point, yet for every site x, real E and eta>0 one has E Im <delta_x,(H_omega-E-i eta)^(-1)delta_x><=pi/(2lambda). Thus a uniform annealed first-moment bound alone does not imply quenched absolute continuity. This diagonal model has no hopping and does not refute the Anderson extended-states target.",
+      "proof_text": "Each delta_x is an eigenvector with eigenvalue lambda V_x, and a general vector has a countable atomic spectral measure. The imaginary resolvent at x equals eta/((lambda V_x-E)^2+eta^2). Average over lambda V_x uniform on [-lambda,lambda] and extend the integral to R; the Poisson kernel has total mass pi, giving pi/(2lambda).",
+      "assumptions": ["lambda>0", "iid uniform[-1,1] diagonal site values", "no hopping"],
+      "domain": "spectral measure theory",
+      "source": {
+        "source_id": "owner-own-work:C0056:w487:S1.487.1",
+        "url": "~/brain_workers/w487/ATTEMPT.md",
+        "revision": "2026-10-10 author proof; w488 independent KEEP in REVIEWS.jsonl",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "free-ac-non-goe",
+      "namespace": "probability.random-operators",
+      "logical_name": "free-z3-ac-spectrum-does-not-imply-odd-torus-goe-spacings",
+      "kind": "lemma",
+      "title": "Free lattice a.c. spectrum with degenerate periodic-box spacings",
+      "statement": "Nearest-neighbor adjacency on ell^2(Z^3) has only absolutely continuous spectral measures. For its periodic box restrictions with odd side length L, in any fixed nondegenerate energy interval I whose closure lies inside (-6,6), if M_L eigenvalues in I are counted with multiplicity, then M_L tends to infinity and at least M_L/2 adjacent gaps in the sorted list are zero. A strictly monotone unfolding preserves those zero gaps, so infinite-volume a.c. spectrum alone does not imply GOE bulk local statistics. This example has zero disorder and does not refute the fixed-positive-disorder Anderson target.",
+      "proof_text": "Fourier transform makes the infinite-volume operator multiplication by h(theta)=2 sum_{j=1}^3 cos(theta_j). Its gradient vanishes only at eight Haar-null points; coordinate changes on the complement show the preimage of any Lebesgue-null energy set is Haar null, hence all spectral measures are a.c. In an odd periodic box the involution k->-k preserves every eigenvalue and has only fixed momentum k=0, whose energy 6 lies outside I. Thus all I-levels occur in pairs, there are at most M_L/2 distinct energies, and at least M_L/2 zero adjacent gaps. A nondegenerate interior I has positive-measure open preimage, with null boundary preimage, so Riemann sums give M_L asymptotic to a positive multiple of L^3.",
+      "assumptions": ["zero disorder", "nearest-neighbor adjacency on Z^3", "periodic boxes with odd L", "fixed nondegenerate interval with closure inside (-6,6)", "strictly monotone unfolding if used"],
+      "domain": "random Schrodinger operators",
+      "source": {
+        "source_id": "owner-own-work:C0056:w487:S1.487.5",
+        "url": "~/brain_workers/w487/ATTEMPT.md",
+        "revision": "2026-10-10 author proof; w488 FIX on interval quantifier in REVIEWS.jsonl",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "born-norm-threshold",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor",
+      "kind": "semantic_association",
+      "rationale": "The existing C0056 card says 'Prove existence of absolutely continuous spectrum'; this lemma says the unrenormalized Born series converges in operator norm exactly when eta>lambda M. It limits that route to the target, without refuting the target."
+    },
+    {
+      "from_key": "poisson-p-criterion",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor",
+      "kind": "semantic_association",
+      "rationale": "The existing C0056 card asks for 'absolutely continuous spectrum'; this lemma says a uniform integrated p>1 Poisson moment forces a.c. spectral measures. Its moment hypothesis is unproved for the Anderson target."
+    },
+    {
+      "from_key": "annealed-first-moment-counterexample",
+      "to_key": "poisson-p-criterion",
+      "kind": "semantic_association",
+      "rationale": "The diagonal example has only a bounded annealed first moment with pure point measures; the criterion uses an integrated p>1 moment to conclude absolute continuity. Both ends specify the distinct moment strengths."
+    },
+    {
+      "from_key": "free-ac-non-goe",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor",
+      "kind": "semantic_association",
+      "rationale": "The existing C0056 card separately asks for 'GOE local statistics for its finite-volume restriction'; this free-operator lemma has a.c. spectrum but at least half zero odd-torus gaps. It shows the GOE clause needs its own proof, without addressing fixed positive disorder."
+    }
+  ]
+}

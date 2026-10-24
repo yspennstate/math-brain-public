@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260923T022040Z-account01-B02-qform-r20",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_read": "scheduled_tasks/README.md on fresh main; refreshed before publication",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuity_status": "PROVED_ONLY_ON_DIRECT_L1_BRANCH",
+  "global_unweighted_L1_status": "OPEN_NOT_REFUTED",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "643f1ee2b4e0d66e0051e54c129c96148af505d1",
+    "blob": "549e3fbd5731a710c0df720cfd735a6b1f9fed02",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T022040Z-account01-B02-qform-r20/REPORT.md"
+  },
+  "finite_check": {
+    "source_commit": "bc531384fe20eaf461732a70dbcb9bc33b129bc7",
+    "output_commit": "d8b3176d1b59337bf01687baf920a489bea46518",
+    "status": "PASS_NUMERICAL_SANITY_ONLY"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B02/20260923T022040Z-account01-B02-qform-r20.md",
+    "commit": "672ac0a70b5cfdf1e77d83559172c13b164ad0a2"
+  },
+  "partner_result_applied": {
+    "worker": "account02/B02",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ffcfabe542e6005c8d62d231eb5566f5d569498a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T010832Z-account02-B02-QFORM-auto11/REPORT.md",
+    "application": "Applied the sharp three-volume Fourier theorem to Z3>=eta*C3/64 from the new random-cut compound identity, yielding int|phi_Q|<=18*pi*sqrt(3)*e*eta^(-1/6) when one orientation has third-volume marginal maximum <=2/3."
+  },
+  "new_results": [
+    "QFORM-RANDOM-CUT-COMPOUND-IDENTITY-v1: E_cut e3(A[I,J]^T A[I,J])=D3(A)/64.",
+    "Direct unweighted Fourier branch: if D3>=eta*C3 and one induced orientation has h<=2/3, then int|phi_Q|<266.243 eta^(-1/6), hence continuous density <42.374 eta^(-1/6).",
+    "Heavy-row deletion: h_i Z3<=||r_i||^2 e2(N_i^T N_i), forcing e2>=eta/96 in the >2/3 heavy branch.",
+    "Nested two-volume Fourier fallback: under residual two-volume marginal max <=2/3, int|phi_Q|^(5/3)<=5*pi*e*sqrt(3)*(96/eta)^(1/4).",
+    "Double-heavy nonzero-cross-pivot identity: P(i in S,j in T) Z3=a^2 e2(B^T B), giving e2(B^TB)>eta/192 at >2/3 row/column thresholds."
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "first_unpaid_implication": "QFORM-COMPOUND-OVERLAP-OR-NESTED-COLOOP-CLOSURE-v1: route overlap sizes 1,2,3 and nested e2 coloops into existing original-coordinate square/pair/grouped-bank or mixed-hub smoothers before reciprocal local-minor payment.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_requested": "maximum actually supported",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  }
+}

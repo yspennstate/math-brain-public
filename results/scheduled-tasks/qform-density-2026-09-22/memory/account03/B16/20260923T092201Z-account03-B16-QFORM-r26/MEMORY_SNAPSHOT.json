@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_prepublication": "8233b4d61b12bd3d9395a9693e2690588bbedc25",
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260923T092201Z-account03-B16-QFORM-r26",
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_tokens": null,
+  "provider_thinking_time": null,
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "ESSENTIAL_BOUNDEDNESS_PROVED_ON_NEW_BRANCH_GLOBAL_CONTINUITY_OPEN",
+  "result_id": "QFORM-DEPENDENT-PAIR-FRESH-SQUARE-SCHUR-v1",
+  "result_status": "PROVED_SUPPORTING_THEOREM",
+  "proved": "If X, (H,U), V are mutually independent source objects, Y=gamma X+H, U may depend arbitrarily on H, and an invertible symmetric 3x3 coefficient matrix B has b=B_VV nonzero with b*(B/B_VV Schur diagonal at Y)>=0, then the full quadratic plus affine form has an essentially bounded density <=8 L_V sqrt(L_X L_U/|gamma|)(|b det B|)^(-1/4); exact Schur-null improves 8 to4. All YV, UV, U^2 couplings are retained.",
+  "partner_applied": {
+    "account": "account04",
+    "slot": "B16",
+    "source_repository": "yspennstate/math-open-problems",
+    "source_commit": "b111363ff02b67015d14db35482e0150591744cd",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260922T231542Z-account04-B16-QFORM-r1/REPORT.md",
+    "inequality": "d>=1/64 => ||p_Q||_infinity <=12*d^(-1/6)<=24"
+  },
+  "important_sources": [
+    "yspennstate/math-open-problems@a398a1c2e6e97683e3fe594fa19476929a882be6:proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T045948Z-account03-B16-QFORM-r26/REPORT.md",
+    "yspennstate/math-open-problems@2eaaea917e087d7cf276dc37714e02af3a50d64a:proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260923T082859Z-account02-B16-QFORM-r11/REPORT.md",
+    "yspennstate/math-open-problems@b111363ff02b67015d14db35482e0150591744cd:proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260922T231542Z-account04-B16-QFORM-r1/REPORT.md"
+  ],
+  "correction_classes_consumed": [
+    "POINTWISE_OSCILLATORY_DECAY_FALSE",
+    "ARBITRARY_JOINT_COAREA_FALSE",
+    "CONDITIONAL_PROJECTION_POSITIVE_MOMENTS_FALSE",
+    "FIBER_SUP_DIMENSION_FREE_FALSE",
+    "CONDITIONAL_CAP_NOT_INDEPENDENCE",
+    "SMALL_COEFFICIENT_DELETION_NOT_ALLOWED"
+  ],
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "1b0efed8d90194030e144c6f2678ed31d5684f6e",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T092201Z-account03-B16-QFORM-r26/REPORT.md",
+  "checker_commit": "4621b549784362e2c6630906962fd72ffcedc03d",
+  "checker_output_commit": "06f29f974c0e593ff6579199610ee2cc91c60115",
+  "handoff_commit": "999466091f0a1529f972514f93ce4f21d7b9d00b",
+  "next_implication": "QFORM-NEAR-COLOOP-FRESH-SQUARE-OR-SHARED-BANK-v1: in the residual c>63/64 exact-rank-three collar, either extract a disjoint fresh scalar bank with same-sign Schur gate and quantitative |b det B|, or force and pay the shared-bank endpoint without conditional projection caps. Opposite-sign Schur and arbitrary additional spectrum remain separate debts."
+}

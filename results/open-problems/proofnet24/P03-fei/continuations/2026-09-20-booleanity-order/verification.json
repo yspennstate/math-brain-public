@@ -1,0 +1,258 @@
+{
+  "status": "PASS",
+  "date": "2026-09-20",
+  "seed": 2026092042,
+  "full_FEI_proved": false,
+  "counterexamples_are_Boolean": false,
+  "independent_review": false,
+  "formal_proof_assistant_used": false,
+  "base_hadamard": {
+    "cases": [
+      {
+        "K": 4,
+        "w": 1,
+        "dimension": 7,
+        "nonzero_amplitudes": 16,
+        "nonzero_square_coefficients": 13,
+        "exact_fourth_moment": "7/4",
+        "exact_energy": "7/4",
+        "erasure_over_energy_midpoint": "0.857142857142857142857143"
+      },
+      {
+        "K": 4,
+        "w": 2,
+        "dimension": 11,
+        "nonzero_amplitudes": 16,
+        "nonzero_square_coefficients": 13,
+        "exact_fourth_moment": "7/4",
+        "exact_energy": "11/4",
+        "erasure_over_energy_midpoint": "0.545454545454545454545455"
+      },
+      {
+        "K": 4,
+        "w": 3,
+        "dimension": 15,
+        "nonzero_amplitudes": 16,
+        "nonzero_square_coefficients": 13,
+        "exact_fourth_moment": "7/4",
+        "exact_energy": "15/4",
+        "erasure_over_energy_midpoint": "0.4"
+      },
+      {
+        "K": 4,
+        "w": 5,
+        "dimension": 23,
+        "nonzero_amplitudes": 16,
+        "nonzero_square_coefficients": 13,
+        "exact_fourth_moment": "7/4",
+        "exact_energy": "23/4",
+        "erasure_over_energy_midpoint": "0.260869565217391304347826"
+      },
+      {
+        "K": 16,
+        "w": 1,
+        "dimension": 28,
+        "nonzero_amplitudes": 208,
+        "nonzero_square_coefficients": 4481,
+        "exact_fourth_moment": "679/256",
+        "exact_energy": "7/4",
+        "erasure_over_energy_midpoint": "1.54698877475863360257926"
+      },
+      {
+        "K": 16,
+        "w": 2,
+        "dimension": 44,
+        "nonzero_amplitudes": 208,
+        "nonzero_square_coefficients": 4481,
+        "exact_fourth_moment": "679/256",
+        "exact_energy": "11/4",
+        "erasure_over_energy_midpoint": "0.984447402119130474368617"
+      },
+      {
+        "K": 16,
+        "w": 3,
+        "dimension": 60,
+        "nonzero_amplitudes": 208,
+        "nonzero_square_coefficients": 4481,
+        "exact_fourth_moment": "679/256",
+        "exact_energy": "15/4",
+        "erasure_over_energy_midpoint": "0.721928094887362347870319"
+      }
+    ],
+    "physical_restriction_norm_checks": 1778,
+    "nonzero_erasure_edges": 624,
+    "scope": "Exact sparse Fourier convolutions. Large physical cubes were not enumerated."
+  },
+  "dyadic_near_boolean": {
+    "cases": [
+      {
+        "K": 4,
+        "w": 1,
+        "R": 8,
+        "formal_dimension": 50,
+        "nonzero_amplitudes": 113,
+        "square_defect_L2_squared": "1365/1024",
+        "distance_to_one_L2_squared": "1/2",
+        "energy": "77/64",
+        "normalized_restrictions_checked": 24
+      },
+      {
+        "K": 4,
+        "w": 2,
+        "R": 8,
+        "formal_dimension": 79,
+        "nonzero_amplitudes": 113,
+        "square_defect_L2_squared": "1365/1024",
+        "distance_to_one_L2_squared": "1/2",
+        "energy": "133/64",
+        "normalized_restrictions_checked": 24
+      },
+      {
+        "K": 4,
+        "w": 3,
+        "R": 8,
+        "formal_dimension": 108,
+        "nonzero_amplitudes": 113,
+        "square_defect_L2_squared": "1365/1024",
+        "distance_to_one_L2_squared": "1/2",
+        "energy": "189/64",
+        "normalized_restrictions_checked": 24
+      },
+      {
+        "K": 4,
+        "w": 2,
+        "R": 16,
+        "formal_dimension": 167,
+        "nonzero_amplitudes": 241,
+        "square_defect_L2_squared": "13485/16384",
+        "distance_to_one_L2_squared": "1/4",
+        "energy": "285/256",
+        "normalized_restrictions_checked": 24
+      }
+    ],
+    "physical_restriction_norm_checks": 96,
+    "scope": "Exact sparse arithmetic; functions are non-Boolean and are not claimed uniformly close to one."
+  },
+  "uniformly_close": {
+    "K": 4,
+    "w": 2,
+    "dimension": 11,
+    "actual_square_roots_enclosed": 2048,
+    "selected_amplitude_certificates": 16,
+    "selected_erasure_edges": 12,
+    "epsilon": "1/16",
+    "coefficient_relative_error_upper": "1/16",
+    "approximate_boolean_lift_auxiliary_bits": 10,
+    "conditional_mean_certificates": 2048,
+    "distinct_lift_negative_counts": [
+      15,
+      22,
+      30,
+      37,
+      45
+    ],
+    "exact_lift_auxiliary_influence": "2551/8192",
+    "universal_lift_influence_floor_upper": "0.109375",
+    "exact_square_defect_L2_squared": "1/1024",
+    "certified_B_over_energy_plus_square_defect_lower": "0.216438704200884144401149",
+    "certified_erasure_over_energy_lower": "0.511582391747544341311806",
+    "required_four_fifths_base_ratio_upper": "0.436363636363636363636364",
+    "normalization_and_low_order_constraints": "Exact from U^2=1+epsilon Q; Q has no terms below degree w.",
+    "amplitudes_are_dyadic": false,
+    "function_is_Boolean": false
+  },
+  "exact_boolean_rigidity": {
+    "all_boolean_functions_examined": 65536,
+    "functions_with_required_support": 36,
+    "characters": 12,
+    "four_coefficient_functions": 24,
+    "sharp_ratio_four_thirds_cases": 16,
+    "scope": "Exhaustive n=4 Boolean scan filtered by the precise block-linear/data-affine support hypothesis."
+  },
+  "genuine_booleanization": {
+    "K": 4,
+    "dimension": 7,
+    "truth_values_generated": 128,
+    "tie_rule": "sign(0)=+1",
+    "exact_control_influence": "5/4",
+    "exact_total_influence": "35/16",
+    "erasure_over_influence_midpoint": "1.00670268358976866676247",
+    "scope": "One exact genuine Boolean threshold example; asymptotic influence lower bound is analytical."
+  },
+  "parameter_formulas": {
+    "rows": [
+      {
+        "k": 2,
+        "K": "4^2",
+        "w": 1,
+        "base_ratio_lower": "1.54698877475863360257926",
+        "uniformly_close_ratio_lower": "1.23759101980690688206340",
+        "uniformly_close_B_over_energy_plus_square_defect_lower": "0.376658136462971659758428",
+        "exact_low_order_cancellation_through_base": 1,
+        "uniformly_close_cancellation_through": 0
+      },
+      {
+        "k": 4,
+        "K": "4^4",
+        "w": 1,
+        "base_ratio_lower": "3.19453193436408987315582",
+        "uniformly_close_ratio_lower": "2.55562554749127189852466",
+        "uniformly_close_B_over_energy_plus_square_defect_lower": "0.777799079671256664768374",
+        "exact_low_order_cancellation_through_base": 1,
+        "uniformly_close_cancellation_through": 0
+      },
+      {
+        "k": 8,
+        "K": "4^8",
+        "w": 1,
+        "base_ratio_lower": "6.61831674323651513487064",
+        "uniformly_close_ratio_lower": "5.29465339458921210789651",
+        "uniformly_close_B_over_energy_plus_square_defect_lower": "1.61141625052715151109894",
+        "exact_low_order_cancellation_through_base": 1,
+        "uniformly_close_cancellation_through": 0
+      },
+      {
+        "k": 16,
+        "K": "4^16",
+        "w": 1,
+        "base_ratio_lower": "13.4754407320974731301789",
+        "uniformly_close_ratio_lower": "10.7803525856779785041432",
+        "uniformly_close_B_over_energy_plus_square_defect_lower": "3.28097687390199345778270",
+        "exact_low_order_cancellation_through_base": 1,
+        "uniformly_close_cancellation_through": 0
+      },
+      {
+        "k": 64,
+        "K": "4^64",
+        "w": 1,
+        "base_ratio_lower": "54.6182978746666986031543",
+        "uniformly_close_ratio_lower": "43.6946382997333588825234",
+        "uniformly_close_B_over_energy_plus_square_defect_lower": "13.2983681781797179207680",
+        "exact_low_order_cancellation_through_base": 1,
+        "uniformly_close_cancellation_through": 0
+      },
+      {
+        "k": 64,
+        "K": "4^64",
+        "w": 4,
+        "base_ratio_lower": "20.1225307959298363274779",
+        "uniformly_close_ratio_lower": "16.0980246367438690619823",
+        "uniformly_close_B_over_energy_plus_square_defect_lower": "8.73892765994667177650468",
+        "exact_low_order_cancellation_through_base": 7,
+        "uniformly_close_cancellation_through": 3
+      },
+      {
+        "k": 256,
+        "K": "4^256",
+        "w": 4,
+        "base_ratio_lower": "80.7541097432982573801095",
+        "uniformly_close_ratio_lower": "64.6032877946386059040876",
+        "uniformly_close_B_over_energy_plus_square_defect_lower": "35.0703562313752432050761",
+        "exact_low_order_cancellation_through_base": 7,
+        "uniformly_close_cancellation_through": 3
+      }
+    ],
+    "scope": "Analytic sparse formulas with rational log enclosures; these huge physical truth tables were not generated."
+  },
+  "checker_sha256": "2b3352243e594b8df2b7843d970dafdabe3d3a9d2eee20d63c0ea14076689bd2"
+}

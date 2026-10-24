@@ -1,0 +1,28 @@
+{
+  "schema": "fei-restriction-gaps/1",
+  "primary_packet": "A087",
+  "reviewed_claim": "B09-BIASED-BLOCK-UNCERTAINTY@1",
+  "original_claim_verdict": "ACCEPT_AT_STATED_SCOPE",
+  "first_gap": {
+    "gap_id": "FEI-GAP-B09-GLOBAL-NONREUSE",
+    "status": "OPEN",
+    "statement": "No proved adaptive restriction or composition rule pays the accumulated actual M_A+Delta_A costs, terminal entropy, and rare-branch costs by C times total influence without reusing credit.",
+    "not_supplied_by": [
+      "the local Maassen-Uffink inequality",
+      "disjoint tensor additivity",
+      "finite Numaro checks",
+      "the two-bit AND endpoint lower bound"
+    ]
+  },
+  "source_overclaim": {
+    "location": "B09 report Section 5 item 4",
+    "old_reasoning": "The upper bound Delta(p) has p log(1/p) scale, so an O(p) replacement was declared impossible.",
+    "verdict": "UNSUPPORTED_AS_WRITTEN",
+    "repair": "B18-AND-BIASED-TAX-LOWER-BOUND@1 gives a genuine Boolean lower-bound family with leading coefficient 1/2 at q=1/4."
+  },
+  "credit_reuse_audit": "NOT_APPLICABLE_TO_LOCAL_LEMMA_AND_STILL_OPEN_GLOBALLY",
+  "terminal_entropy_audit": "NOT_PAID_BY_REVIEWED_CLAIM",
+  "rare_branch_audit": "LOGARITHMIC_SCALE_NECESSARY_ON_AND_FAMILY",
+  "full_fei": "OPEN"
+}
+

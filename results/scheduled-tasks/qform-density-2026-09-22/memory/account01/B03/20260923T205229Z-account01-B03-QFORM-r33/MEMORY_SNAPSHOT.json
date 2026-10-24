@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B03",
+  "run_id": "20260923T205229Z-account01-B03-QFORM-r33",
+  "control_revision": "2026-09-22.15",
+  "prepublication_control_head": "138e6179e3626eee8e819831cf3f1328c08e7f50",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "execution_context": "scheduled_automation",
+  "full_brain_connected": false,
+  "brain_state": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-B15-NONZERO-SQUARE-AFFINE-SLOPE-RESCUE-FALSE-v1"
+  ],
+  "partner_result": {
+    "account_slot": "account02/B03",
+    "theorem": "QFORM-JOINT-PROJECTION-COEFFICIENT-PLANCHEREL-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1cf28b1faa4ca92850b551bd1cc23457164639d6",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/b03-20260923T191657Z-4d3b23/REPORT.md",
+    "actual_application": "whole-selector Plancherel applied to the weighted coefficient density q_t(c)=p_C(c) E[e^{itR}G_h(t)|C=c], giving |phi_Q(t)|^2 <= K^2 |t|^-2 E|G_h(t)|^2"
+  },
+  "new_result": {
+    "id": "QFORM-CRITICAL-SQUARE-SCALE-INTERPOLATION-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "statement_short": "For a critical two-dimensional selector packet plus one genuinely disjoint cap-one physical square with arbitrary background-dependent center, ||p_Q||inf <=7.14 D^-1 max(1,(KD)^(2/3)(1+log_+(KD))^(1/3)); the branch has a continuous C0 density.",
+    "whole_copy_integral": "int |t|^-1/2 |phi_Q(t)|^2 dt <= (16/3) K^1/2",
+    "essential_mechanism": "The weighted Plancherel envelope holds for every nonzero t, so the dyadic square-energy tail need only start at D t >=1 rather than t>=K; optimizing the split changes the critical selector loss from K to K^(2/3) up to a logarithm.",
+    "scope_gate": "The physical square coordinate is disjoint from and unused by the coefficient vector C(W); do not double-spend a pivot already used to obtain the coefficient-density cap."
+  },
+  "target_valid_stress_test": {
+    "family": "Q_eps=X^2+2eps(Z1Y1+Z2Y2)+2Y1Y3, 0<eps<=1",
+    "spectrum": "{1,+sqrt(1+eps^2),-sqrt(1+eps^2),+eps,-eps,0}",
+    "new_bound": "7.14 (pi/eps)^(2/3)(1+log(pi/eps))^(1/3)",
+    "prior_generic_bound": "10pi/eps"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bb05e9ecb5e1954cb40152bac603854916b1aa39",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260923T205229Z-account01-B03-QFORM-r33/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260923T205229Z-account01-B03-QFORM-r33/CHECKS.md",
+    "early_checkpoint_commit": "98524ac1e4fcc3cc8dcbfc11e96b92be664cf18d"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B03/20260923T205229Z-account01-B03-QFORM-r33.md",
+    "commit": "e248707f1feaa980e639879dff518621b02c958c"
+  },
+  "unresolved_implication": "From only s3(A)>=1, product-preservingly extract either a genuinely disjoint square plus critical selector packet with enough aggregate scale or an already-paid crossing/pivot/grouped-hub/semidefinite/ridge/coloop receiver; selector determinant scale alone is not spectrally forced.",
+  "next_step": "Attempt a structural switch criterion that compares square resource D against selector determinant resource K before individual-minor inversion, retaining original-coordinate provenance and avoiding double spending.",
+  "new_correction_event": null
+}

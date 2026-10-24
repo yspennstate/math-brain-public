@@ -1,0 +1,56 @@
+{
+  "arithmetic": "exact Fraction",
+  "exhaustive_source_bound_through_n4": {
+    "1": {
+      "function_order_cases": 4,
+      "max_source_over_I": "0",
+      "witness_I": "1",
+      "witness_J": "0",
+      "witness_order": [0],
+      "witness_source": "0",
+      "witness_truth_mask_hex": "0x1"
+    },
+    "2": {
+      "function_order_cases": 32,
+      "max_source_over_I": "1/2",
+      "witness_I": "1",
+      "witness_J": "1",
+      "witness_order": [0,1],
+      "witness_source": "1/2",
+      "witness_truth_mask_hex": "0x1"
+    },
+    "3": {
+      "function_order_cases": 1536,
+      "max_source_over_I": "2/3",
+      "witness_I": "3/2",
+      "witness_J": "3/2",
+      "witness_order": [0,1,2],
+      "witness_source": "1",
+      "witness_truth_mask_hex": "0x6"
+    },
+    "4": {
+      "function_order_cases": 1572864,
+      "max_source_over_I": "3/4",
+      "witness_I": "2",
+      "witness_J": "2",
+      "witness_order": [0,1,2,3],
+      "witness_source": "3/2",
+      "witness_truth_mask_hex": "0x69"
+    }
+  },
+  "identity_checks": {
+    "1": {"flag_identity_cases":4,"hardy_identity_cases":4},
+    "2": {"flag_identity_cases":64,"hardy_identity_cases":32},
+    "3": {"flag_identity_cases":4608,"hardy_identity_cases":768}
+  },
+  "notes": [
+    "finite checks are falsification/self-check evidence, not the proof",
+    "the coordinatewise constant one in E_flag p_i^2 <= beta_i is attained by (-1)^(x_i x_j)",
+    "the stronger candidate E_flag p_i^2 <= 4 T_i^2 is refuted by the same example by factor 2"
+  ],
+  "sharp_coordinate_example": {
+    "T":"1/4","alpha":"1/2","beta":"1/2","mean_p2":"1/2","ratio_to_4T2":"2","ratio_to_beta":"1"
+  },
+  "status":"PASS",
+  "total_function_order_cases":1574436
+}

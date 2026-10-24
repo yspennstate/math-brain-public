@@ -1,0 +1,14 @@
+{
+  "path": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "mode": "read-only",
+  "tables": [
+    {
+      "name": "nodes",
+      "sql": "CREATE TABLE nodes (\n    id TEXT PRIMARY KEY,\n    kind TEXT NOT NULL,\n    title TEXT NOT NULL,\n    body TEXT NOT NULL,\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "edges",
+      "sql": "CREATE TABLE edges (\n    id TEXT PRIMARY KEY,\n    source_id TEXT NOT NULL REFERENCES nodes(id),\n    target_id TEXT NOT NULL REFERENCES nodes(id),\n    kind TEXT NOT NULL,\n    rationale TEXT NOT NULL,\n    weight REAL NOT NULL CHECK(weight > 0 AND weight <= 1),\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL,\n    UNIQUE(source_id, target_id, kind)\n)"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+\section*{A genuine Boolean endpoint lower-bound family}
+Let $g(x,y)=(-1)^{xy}$ under independent Bernoulli biases $p,q$, and reveal
+$A=\{X\}$.  Put $s=4q(1-q)$ and $c=4q^2$.  The exact squared product-biased
+Fourier masses are
+\[
+ (1-2pq)^2,\quad cp(1-p),\quad sp^2,\quad sp(1-p).
+\]
+Consequently, with $u=cp(1-p)/(1-sp)$,
+\[
+ M_A=(1-sp)h_2(u)+sp h_2(p),\qquad
+ J_A=h_2(sp)-p h_2(s).
+\]
+For fixed $q\in(0,1/2)$, the elementary expansion
+\[
+ h_2(ap+O(p^2))=ap\log_2(1/p)
+ +p\left(a\log_2(1/a)+\frac a{\ln2}\right)
+ +O_a(p^2\log(1/p))
+\]
+gives
+\[
+ J_A-M_A=(s-c)p\log_2(1/p)+\kappa(q)p
+ +O_q(p^2\log(1/p)),
+\]
+where
+\[
+ \kappa(q)=(1-s)\log_2(1-s)+c\log_2c+\frac{s-c}{\ln2}.
+\]
+At $q=1/4$, this becomes
+\[
+ J_A-M_A=\frac12p\log_2(1/p)
+ +\left(-1+\frac1{2\ln2}\right)p
+ +O(p^2\log(1/p)).
+\]
+Thus any correction $\epsilon(p)$ valid for every Boolean gate and all other
+product biases in $J_A\le M_A+\epsilon(p)$ satisfies
+\[
+ \liminf_{p\downarrow0}\frac{\epsilon(p)}{p\log_2(1/p)}\ge\frac12.
+\]
+The statement is fixed-$q$, not uniform as $q\to0$ or $q\to1/2$.  At $p=0$
+the coordinate contracts and both $M_A,J_A$ are zero.

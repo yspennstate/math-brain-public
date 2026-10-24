@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "account02-B18-20260923T230752Z-r11",
+  "status": "PASS",
+  "theorem": "QFORM-DIFFUSE-FOURCORE-VS-FOURBANK-GAP-v1",
+  "exact_algebra": {
+    "tetrahedral_rows": [[1,1,1],[1,-1,-1],[-1,1,-1],[-1,-1,1]],
+    "epsilon_transpose_epsilon": "4 I_3",
+    "effective_four_bank_matrix": "I_4-(1/4)11^T",
+    "effective_spectrum": [1,1,1,0],
+    "physical_nonzero_spectrum": [1,1,1],
+    "physical_row_leverage": "3/m",
+    "one_per_bank_four_core_nonzero_spectrum": "{4/m,4/m,4/m}"
+  },
+  "inequalities": {
+    "pinned_e5f_theorem_F": "||p_Q||_infinity <= 12 for m>=8",
+    "lpp_bank_cap": "||p_{S_k}||_infinity <= sqrt(2)",
+    "latest_account03_B18_four_bank": "||p_Q||_infinity < 1184",
+    "generic_diffuse_four_core_scale": "s_J <= 4 ell/3",
+    "generic_partner_rhs_floor": "592/s_J >= 444/ell",
+    "tetrahedral_partner_rhs_floor": "592/s_J >= 148 m",
+    "tetrahedral_one_per_bank_rhs": "592/(4/m)=148m"
+  },
+  "scope_audit": {
+    "independence_used_only_on_disjoint_original_banks": true,
+    "post_rotation_independence_used": false,
+    "moments_required": false,
+    "support_required": false,
+    "log_concavity_required": false,
+    "iid_required": false,
+    "smoothness_required": false,
+    "counterexample_to_full_QFORM": false,
+    "obstruction_only": "fixed-four-physical-coordinate use of the four-source compiler degenerates in diffuse rank-three frames"
+  },
+  "source_pins": {
+    "pinned_completed_result": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md#Theorem-F",
+    "latest_partner": "yspennstate/math-open-problems@c11bba404e9782ff3a919e1f7d352f39a7100eaf:proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T225405Z-account03-B18-QFORM-auto13/REPORT.md",
+    "partner_check": "yspennstate/math-open-problems@2a053b6a128ce68f93b524fa3177d227f0990dbb:proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T225405Z-account03-B18-QFORM-auto13/CHECK.json",
+    "primary_marginal_source": "Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1"
+  },
+  "full_target": "OPEN / NOT PROVED / NOT DISPROVED"
+}

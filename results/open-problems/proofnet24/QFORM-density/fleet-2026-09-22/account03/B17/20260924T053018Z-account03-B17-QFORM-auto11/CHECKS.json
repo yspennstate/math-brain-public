@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T053018Z-account03-B17-QFORM-auto11",
+  "theorem": "QFORM-SYMMETRIC-SATELLITE-NEAR-DIFFUSIVE-SHARP-WITNESS-v1",
+  "status": "PASS",
+  "checks": {
+    "matrix_spectrum": {
+      "n": "(1,2,3)/sqrt(14)",
+      "B_m": "I-(2+1/m)nn^T",
+      "nonzero_spectrum_A_m": ["1", "1", "-(1+1/m)"],
+      "reason": "R_m^T R_m=I_3"
+    },
+    "matrix_dense_entries": {
+      "diagonal": ["(12-1/m)/14", "(3-2/m)/7", "-(4+9/m)/14"],
+      "off_diagonal": "-(2+1/m)n_i n_j, all nonzero"
+    },
+    "input_normalization": {
+      "main_length": "ell=1-eps",
+      "satellite_lengths": ["eps/2", "eps/2"],
+      "total_length": "1",
+      "density_cap": 1,
+      "mean": 0
+    },
+    "moments": {
+      "variance_exact": "ell^3/12 + eps R^2 + eps^3/48",
+      "third_absolute_exact": "ell^4/32 + eps R^3 + eps^3 R/16",
+      "regime": "eps=L/m, L->infinity, L=o(m), R->infinity, eps R^2->0",
+      "variance_limit": "1/12",
+      "lyapunov_ratio": "E|X|^3/sqrt(m)->0"
+    },
+    "fragment_statistics": {
+      "satellite_count": "Binomial(3m,eps)",
+      "expected_count": "3L->infinity",
+      "relative_variance_bound": "<=1/(3L)",
+      "all_main_probability": "(1-L/m)^(3m)=exp(-3L+o(L))->0"
+    },
+    "characteristic_function": {
+      "exact": "phi(s)=ell*sinc(ell*s/2)+eps*sinc(eps*s/4)*cos(Rs)",
+      "small_frequency": "|phi(s)|<=exp(-c s^2) for |s|<=1, eventually",
+      "middle_frequency": "sup_{1<=|s|<=12}|phi(s)|<=rho<1, eventually",
+      "large_frequency": "|phi(s)|<=6/|s|",
+      "tail_integral": "<=24*sqrt(m)/(m-1)*2^(-m) for |t|>=12sqrt(m)",
+      "conclusion": "||g_m-gamma_{1/12}||_infinity->0"
+    },
+    "cone_tip": {
+      "coarea_factor": "1/(2sqrt(c_m)), c_m=1+1/m",
+      "gaussian_reference": "6/sqrt(2+1/m)",
+      "limit": "3sqrt(2)",
+      "tail_control": "O(M^-2) from uniform bank-density cap plus bounded second moment"
+    },
+    "partner_application": {
+      "partner": "account04/B17",
+      "commit": "4be63022324b82f254f1d7a4353a3e883f08d10a",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B17/20260924T011922Z-account04-B17-QFORM-r6/REPORT.md",
+      "inequality_used": "||p_Q||_infinity >= ell^(3m-2)||p_Qm0||_infinity",
+      "present_regime": "ell^(3m-2)=exp(-3L+o(L))->0 while p_Q(0)->3sqrt(2)",
+      "all_main_tip_contribution": "ell^(3m-2)p_Qm0(0)->0",
+      "satellite_pattern_tip_contribution": "p_Q(0)-ell^(3m-2)p_Qm0(0)->3sqrt(2)",
+      "ratio_growth": "exp(3L+o(L))"
+    },
+    "concrete_near_diffusive_example": {
+      "L": "log m",
+      "R": "sqrt(m)/(log m)^(3/4)",
+      "expected_satellites": "3 log m",
+      "all_main_probability": "m^(-3+o(1))",
+      "variance_satellite_term": "(log m)^(-1/2)",
+      "lyapunov_satellite_term": "(log m)^(-5/4)"
+    }
+  },
+  "full_target_status": "OPEN",
+  "full_target_continuity": "OPEN",
+  "monte_carlo_used": false
+}

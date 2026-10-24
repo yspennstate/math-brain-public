@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B03",
+  "run_id": "20260924T045125Z-account01-B03-QFORM-r41",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "startup_control_commit": "98cf0e5a0f67ad2fa4905d9032fa32f55baaf1a7",
+  "prepublication_control_commit": "956272603b443a13a3752bb17661b42a1d31c8b8",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "classification": "NEW_SUPPORTING_THEOREM_RANK1_SINGULAR_PAIR_OVERLAP2",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B03",
+    "brain_commit": "c2cf502ba91445ad3119cfb9991131ec7d32d725",
+    "math_commit": "5e5366b98337d13ba24bf666f4e42155553de7c2",
+    "result": "QFORM-DISJOINT-EXTERIOR-MASS-EXIT-v1",
+    "actual_inequality": "E0(A)>=1/4 implies ||p_Q||_infinity<21.301"
+  },
+  "premises": [
+    "Rogozin--Ball one-dimensional product projection: normalized linear form of independent cap-one variables has density cap <=sqrt(2), pinned source e542b1a6ef471b329e4e88a6553e1aacb45acc1a.",
+    "account01/B03 r40 invertible physical-pair overlap-two compiler at math-open-problems a3b7f8899b5e8f95a62811bb4b78885ace2f9c4d."
+  ],
+  "new_results": [
+    "For T=lambda(v.X+h)^2+2 ell(w.X+k) on two independent cap-one physical coordinates with v,w orthonormal, ||p_T||inf<=2^(5/3)|lambda|^(-1/3)|ell|^(-2/3).",
+    "For rank-one physical pair B=lambda vv^T, the exact mixed-minor identity is J2(H)=lambda^2[(sum beta_i^2)^2-sum beta_i^4], beta_i=w.A[H,i].",
+    "If J2(H)>0 and B has rank one, ||p_Q||inf<=6*2^(5/3) J2(H)^(-1/6)=19.048812623618396... J2(H)^(-1/6), with arbitrary external quadratic curvature retained.",
+    "Combining r40 and this run, every physical pair H with J2(H)>0 is locally paid by ||p_Q||inf<=129.924435862525374 J2(H)^(-1/6).",
+    "Whole-copy identity gives posterior int |t|^(-1/2)|phi_Q(t)|^2 dt<=30.943460646273696 J2(H)^(-1/12) in the rank-one branch."
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1629c2f5ee835709c7dcbef2a0ebe44e36486e3f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260924T045125Z-account01-B03-QFORM-r41/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260924T045125Z-account01-B03-QFORM-r41/CHECKS.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "7b45e49a2060f7bd66913aa62eb25b5f2f0619e5",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B03/20260924T045125Z-account01-B03-QFORM-r41.md"
+  },
+  "unresolved_implication": "Large aggregate E2=sum_H J2(H) need not select one dimension-free large J2(H); develop an aggregate/amortized product-preserving receiver. E1/E3 and current low-rank/high-leverage structural branches remain separate debt.",
+  "next_step": "Exploit the exact rank-one J2 formula and/or the all-local-packets-paid theorem inside an aggregate E2 selection/amortization argument; do not reintroduce reciprocal single-minor losses.",
+  "continuity": "Not proved in the new rank-one mixture branch."
+}

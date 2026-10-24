@@ -1,0 +1,14 @@
+name = "paper19_lean"
+version = "0.1.0"
+defaultTargets = ["SignCritical"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+
+[[require]]
+name = "mathlib"
+path = "../../../phase_retrieval_omega/lean/omega_comb/.lake/packages/mathlib"
+
+[[lean_lib]]
+name = "SignCritical"

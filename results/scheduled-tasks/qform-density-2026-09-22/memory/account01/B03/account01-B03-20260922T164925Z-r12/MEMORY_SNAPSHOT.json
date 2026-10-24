@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B03",
+  "run_id": "account01-B03-20260922T164925Z-r12",
+  "source_control_commit_initial": "7c3bbf733dfaaf335aba3b90866b3b2244a06cc8",
+  "source_control_commit_final_refresh": "686c29e2359c7db243dae3c3633d83751aa21050",
+  "owner_control_revision": "2026-09-22.8",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "claim_status": "ESSENTIAL_STEP_APPLIED_FULL_TARGET_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-RIDGE-DENSITY-v1-envelope",
+      "source_repository": "yspennstate/math-open-problems",
+      "commit": "9c1167db05c7b0f520f060796fde921ed769a4e7",
+      "path": "proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md",
+      "scope": "Dependence-safe characteristic envelope for an original-coordinate cross block; arbitrary self blocks/outside couplings."
+    },
+    {
+      "id": "partner-account02-B03-indefinite-binary-half-Riesz",
+      "source_repository": "yspennstate/math-open-problems",
+      "commit": "33cd6fae4e8adb85cf1ee43a244f628e563f1cbf",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260922T161346Z-account02-B03-QFORM-r12/REPORT.md",
+      "scope": "Translation-uniform 2/3 small-ball and half-Riesz bound for independent cap-one indefinite binary quadratics."
+    }
+  ],
+  "new_mathematics": [
+    "For 0<s<1, the ridge characteristic envelope integrates against the exact Fourier multiplier of |x|^{-s}; if theta>2qs, this gives an explicit translation-uniform fractional Riesz-potential bound.",
+    "For s=1/2 the threshold is theta>q, giving a direct physical-square-plus-ridge linear density/small-ball theorem below the direct inversion threshold theta>2q.",
+    "The singleton-plus-two-banks spectrum-{1,1,-1} family is uniformly controlled: <14.206 for m>=3 by the new ridge half-Riesz theorem, <=32 for m=2 by the named account02/B03 theorem, and <=pi for m=1.",
+    "A uniform conditional 3D density cap for three large spectral coordinates given the rest is false: a rotated Uniform[0,1]^4 cube has conditional cap 3/(8z^3) on Z=(sum Xi)/2 slices."
+  ],
+  "new_correction_event": "QFORM-CONDITIONAL-3D-PROJECTION-CAP-FALSE-v1",
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c301be6b21f382934962aeb4c019b713377eac2f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/account01-B03-20260922T164925Z-r12/REPORT.md"
+  },
+  "unresolved_implication": "Derive an exhaustive dimension-free original-coordinate structural alternative from the bare three-large-eigenvalue condition: direct ridge theta>2q, physical-pivot residual ridge theta>q, or a completed grouped-bank/light-cone branch, while paying all pivot/determinant factors and retaining arbitrary extra spectrum.",
+  "next_step": "Try fractional exponents s other than 1/2 in grouped-coordinate transducers and test whether the continuum threshold theta>2qs closes a low-effective-dimension residual branch without invoking a uniform conditional spectral-density cap.",
+  "continuity": "NOT_PROVED in the new intermediate pivot+ridge branch",
+  "full_target": "OPEN"
+}

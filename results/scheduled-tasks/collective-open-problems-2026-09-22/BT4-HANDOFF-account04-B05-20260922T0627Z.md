@@ -1,0 +1,41 @@
+# BT4 handoff — account04/B05 2026-09-22T06:27Z
+
+Run: `b05-20260922t061406z-r34`  
+Candidate: `BT4-HT-EQUALITY-COLLAR-ELIMINATION-v1`  
+Outcome: `ESSENTIAL_STEP_APPLIED`  
+Brain status: `WITHOUT_VERIFIED_BRAIN`  
+Target status: `OPEN_NOT_PROVED`
+
+Canonical scientific report: `proofnet24/collective-BT4/account04/B05/b05-20260922t061406z-r34/REPORT.md`, scientific commit `7162ccef67e317d113b7bbc9b47c5e15cfd9318f`.
+
+## Exact team state consumed
+
+Latest complete lead: account02/B04 run `20260922T051543Z-b04-bt4-r11`, primary blob `9f1ec8ca9ab3f2737b9dddf98389826f5b926933`, controlling strengthening blob `aa71a6d910955a009b020ee77aba4a0da0052cdb`.
+
+Named OTHER-account assigned partner actually applied: account01/B06 run `20260922T053614Z-account01-b06-bt4-r11`, controlling common-port strengthening blob `542273320eb6f3cdf4c198fef8d6ae6a2dec435b`.
+
+Fresh compatible exact-cage input: account02/B06 `BT4-HT-ARCMAX-CAGE-COLLAPSE-v2`, blob `96fa9bdb0033fc6e6c3c42092e8259f882f8cd26`.
+
+## New theorem
+
+In the exact-two-predecessor four-remainder global-NO-SIX heavy-triangle cage, in the partner's aligned triangular-light branch with `h2` heavy on the forced triangle `A`, both residual no-cross equality collars are impossible:
+
+1. `B->r0->r1`, `m_B(r1)=3`, `r1->p`;
+2. `B->r0->r1->r2`, `m_B(r2)=4`, `r2->p`.
+
+The key dependency-aware counting lemma is: if a remainder vertex `q` has at least two outtargets on a packed chordless cycle `B`, then global minimum of the three-cycle packing allows at most one `B`-vertex to send to `q`; if `b->q`, necessarily `m_B(q)=2` and the targets are exactly `{b+,b++}`.
+
+For the `r2` collar, global NO-SIX forces every `B` vertex to have a remainder exit, while the large fan excludes exits to `r1,r2`, and the sink `x` has at most one `B` inport. Hence at least `|B|-1` vertices would have to enter `r0`, contradicting the capacity-one lemma and `|B|>=3`.
+
+For the `r1` collar, if `r2` is heavy on `B` the same contradiction applies. Thus `r2` is heavy on the triangular `A`, so it has exactly two `B` targets. The three possible remainder exits `r0,r2,x` each have B-inport capacity one; global NO-SIX forces `|B|=3` and one distinct B-inport into each. The two possible assignments give explicit four-cycle certificates:
+
+- `b1->r2`, `b2->x`: replace `B` by `b0->r0->b2->b0`; the new remainder contains `b1->r2->x->b1`.
+- `b2->r2`, `b1->x`: replace `B` by `b2->r2->b1->b2`; the new remainder contains `b0->r0->x->b0`.
+
+Therefore the partner's common-port shortest-routing dichotomy is forced into its genuine cross-packed transition output in this branch.
+
+## Exact next implication
+
+`HT-CROSS-HALL-SPLICE`: combine either the now-compulsory same-heavy-A cross or the alternative same-heavy-B Hall object with the lead's x-free/reciprocal/third-port interfaces and produce a legal two-cycle replacement, strict lexicographic decrease, cyclic exchanged remainder, SIX exit, or fourth disjoint directed cycle. The separate global SIX and seven-remainder debts remain open.
+
+No full BT4 proof or novelty claim is made. Scoped manual privacy review: only source-bound mathematical statements and logical worker labels are included; no credentials, scheduler identifiers, machine paths, private transcripts, benchmark material, email/Drive data, or unrelated private content.

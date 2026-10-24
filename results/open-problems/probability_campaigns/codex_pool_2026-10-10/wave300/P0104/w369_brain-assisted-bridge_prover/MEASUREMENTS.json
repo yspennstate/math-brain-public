@@ -1,0 +1,143 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w369/check_bridge.py",
+  "seconds": 0.0012247000122442842,
+  "checks_passed": 11,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "name": "L2-exact-0",
+      "pass": true,
+      "variance": "1",
+      "kurtosis": "1",
+      "p": "1/32",
+      "width": "2"
+    },
+    {
+      "name": "L0-exact-0",
+      "pass": true
+    },
+    {
+      "name": "L2-exact-1",
+      "pass": true,
+      "variance": "99/10000",
+      "kurtosis": "9703/99",
+      "p": "99/310496",
+      "width": "1"
+    },
+    {
+      "name": "L0-exact-1",
+      "pass": true
+    },
+    {
+      "name": "L2-exact-2",
+      "pass": true,
+      "variance": "3/5",
+      "kurtosis": "5",
+      "p": "1/160",
+      "width": "3"
+    },
+    {
+      "name": "L0-exact-2",
+      "pass": true
+    },
+    {
+      "name": "L2-exact-3",
+      "pass": true,
+      "variance": "109/10",
+      "kurtosis": "100090/11881",
+      "p": "11881/3202880",
+      "width": "20"
+    },
+    {
+      "name": "L0-exact-3",
+      "pass": true
+    },
+    {
+      "name": "L1-sharp-equality",
+      "pass": true,
+      "variance": "3/5"
+    },
+    {
+      "name": "L5-cubic-term-cannot-be-discarded",
+      "pass": true,
+      "actual_fourth": "27",
+      "without_cubic": "19"
+    },
+    {
+      "name": "L4-seven-scale-formulas-and-tail-endpoints",
+      "pass": true
+    }
+  ],
+  "counterexample_measurements": [
+    {
+      "log_n": 3,
+      "total_variation_to_sign": 0.6065306597126334,
+      "kolmogorov_distance_to_sign": 0.3032653298563167,
+      "variance_over_n_two_thirds": 5.339633152387751,
+      "finite_n_variance_exponent": 0.6125261587595926,
+      "standardized_fourth_moment": 1.4284906335818037,
+      "max_tail_ratio": 1.1913538146252984
+    },
+    {
+      "log_n": 6,
+      "total_variation_to_sign": 0.36787944117144233,
+      "kolmogorov_distance_to_sign": 0.18393972058572117,
+      "variance_over_n_two_thirds": 16.941811529582825,
+      "finite_n_variance_exponent": 0.5691487184581959,
+      "standardized_fourth_moment": 2.521423240160928,
+      "max_tail_ratio": 1.162050541737562
+    },
+    {
+      "log_n": 12,
+      "total_variation_to_sign": 0.1353352832366127,
+      "kolmogorov_distance_to_sign": 0.06766764161830635,
+      "variance_over_n_two_thirds": 89.53333790393121,
+      "finite_n_variance_exponent": 0.5206087936029228,
+      "standardized_fourth_moment": 7.247134073298381,
+      "max_tail_ratio": 1.0812695523595064
+    },
+    {
+      "log_n": 24,
+      "total_variation_to_sign": 0.01831563888873418,
+      "kolmogorov_distance_to_sign": 0.00915781944436709,
+      "variance_over_n_two_thirds": 1311.337285156573,
+      "finite_n_variance_exponent": 0.4828917234139176,
+      "standardized_fourth_moment": 54.51643541373619,
+      "max_tail_ratio": 1.0150670369106236
+    },
+    {
+      "log_n": 48,
+      "total_variation_to_sign": 0.00033546262790251185,
+      "kolmogorov_distance_to_sign": 0.00016773131395125593,
+      "variance_over_n_two_thirds": 143086.98304254035,
+      "finite_n_variance_exponent": 0.4569917499723308,
+      "standardized_fourth_moment": 2980.916334789223,
+      "max_tail_ratio": 1.0003874339101828
+    },
+    {
+      "log_n": 96,
+      "total_variation_to_sign": 1.1253517471925912e-07,
+      "kolmogorov_distance_to_sign": 5.626758735962956e-08,
+      "variance_over_n_two_thirds": 853066610.9687557,
+      "finite_n_variance_exponent": 0.44043931350333376,
+      "standardized_fourth_moment": 8886110.499674542,
+      "max_tail_ratio": 1.0000001837691876
+    },
+    {
+      "log_n": 192,
+      "total_variation_to_sign": 1.2664165549094176e-14,
+      "kolmogorov_distance_to_sign": 6.332082774547088e-15,
+      "variance_over_n_two_thirds": 1.5160888355074696e+16,
+      "finite_n_variance_exponent": 0.4303580608646557,
+      "standardized_fourth_moment": 78962960182680.69,
+      "max_tail_ratio": 1.0000000000000293
+    }
+  ],
+  "analytical_limits": {
+    "weak_limit": "symmetric sign",
+    "variance_exponent": "5/12",
+    "claimed_KPZ_variance_exponent": "1/3",
+    "standardized_fourth_moment": "asymptotic to n^(1/6)"
+  },
+  "scope": "Supporting finite calculations only; no FPP simulation, no proof certification."
+}

@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FEI live correction inbox",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "programme_id",
+    "control_revision",
+    "inbox_revision",
+    "pending_events"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "programme_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "control_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "inbox_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pending_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "target_claim_id",
+          "candidate_id",
+          "event_source",
+          "blocks_positive_use"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "target_claim_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "candidate_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "event_source": {
+            "type": "object",
+            "required": [
+              "repository",
+              "commit",
+              "path"
+            ],
+            "properties": {
+              "repository": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+              },
+              "commit": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "locator": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "additionalProperties": true
+          },
+          "blocks_positive_use": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

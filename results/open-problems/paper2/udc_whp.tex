@@ -1,0 +1,883 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\emp}{\bar\mu_N}
+\newcommand{\Sl}{S}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\diam}{\operatorname{diam}}
+
+\title{The uniform doubling condition holds with high probability\\for independent samples}
+\author{Yitzchak Shmalo\\
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The uniform doubling condition was introduced in \cite{ShmaloUDC} as a verifiable
+property of a training set $T\subset\R^n$ guaranteeing stability of accuracy during
+the training of deep neural networks with piecewise linear activation, refining the
+doubling condition of Berlyand, Jabin and Safsten \cite{BJS}.  The stability theorems
+of \cite{BJS,ShmaloUDC} are conditional: they apply to data satisfying the (uniform)
+doubling condition, and the question of which data sets actually satisfy it was left
+open --- indeed \cite{ShmaloUDC} notes that the condition cannot be fully verified
+numerically even in small dimensions.  This paper proves that the condition is
+satisfied \emph{with high probability} by independent samples.  Let $\mu$ be a
+probability measure with density bounded above and below on a convex body
+$K\subset\R^n$, and let $T$ consist of $N$ i.i.d.\ samples from $\mu$.  We show that
+for every truncation number $k$ and every family $\mathcal L$ of truncation sets whose
+truncation regions contain a ball of radius $r_0$, the training set $T$ satisfies the
+uniform doubling condition with explicit constants
+$(\kappa,\delta,\sigma,\beta)$ depending only on $n$, the density ratio, $r_0$ and
+$\diam K$ --- not on $N$ --- and with scaling factor
+$\ell_N=O\bigl((\log N/N)^{1/n}\bigr)$, with probability at least $1-N^{-1}$.  The
+proof combines a new one-dimensional dichotomy for measures with log-concave profile
+(every symmetric window, when widened by $\kappa$, either multiplies its mass by
+$1+\sigma$ or already carries a fixed fraction of the total mass), the
+Brunn--Minkowski inequality, a cone-volume estimate, and
+Vapnik--Chervonenkis relative deviation bounds for classes of truncated slabs.  We
+complement the theorem with two examples showing that the thickness hypothesis and
+the scaling-factor decay rate are necessary in this generality.  As a corollary,
+the stability-of-accuracy theorem of \cite{ShmaloUDC} applies with high probability
+to i.i.d.\ training data.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+A basic phenomenon in the training of deep neural networks (DNNs) with cross-entropy
+loss is that the loss may decrease while classification accuracy deteriorates.
+Berlyand, Jabin and Safsten \cite{BJS} identified a geometric condition on the
+training data --- a \emph{doubling condition} on slabs in $\R^n$ --- which rules this
+out: if the data satisfies the doubling condition, then a DNN with absolute-value
+activation that achieves sufficiently high accuracy at some training time keeps high
+accuracy for all later times.  In \cite{ShmaloUDC} the condition was made
+\emph{uniform}: the constants were made independent of the choice of slabs, the class
+of activations was broadened to piecewise linear activations such as Leaky ReLU, and
+the stability theorems were proved under this uniform condition.  The condition reads
+as follows (Definitions \ref{def:slab}--\ref{def:udc} below): for every slab
+$S$ --- the region between two parallel hyperplanes, truncated by $k$ half-spaces
+taken from a family $\mathcal L$ --- and for every width $w=\ell\kappa^i<\beta$ on the
+geometric grid, the empirical mass of the widened slab $S_{\kappa w}$ must be at
+least $\min\{\delta,\,(1+\sigma)\,\bar\mu(S_w)\}$.  Informally: no slab can trap a
+small, isolated cluster of data; mass near a candidate decision boundary must keep
+growing as the boundary is thickened, until a definite amount $\delta$ of data has
+been captured.
+
+The stability theorems of \cite{BJS,ShmaloUDC} are conditional on this property of
+the data, and \cite{ShmaloUDC} observes that a full numerical verification is
+infeasible already in small dimensions, resorting to a simplified surrogate.  This
+leaves the basic question:
+
+\begin{quote}
+\emph{Which training sets actually satisfy the uniform doubling condition?}
+\end{quote}
+
+This paper answers the question for the most natural model of data: independent
+samples from a distribution with density bounded above and below on a convex body.
+We prove that such data satisfies the uniform doubling condition with high
+probability, with constants independent of the sample size and with an explicit,
+necessary decay of the scaling factor $\ell$.  Thus the hypothesis of the stability
+theorems of \cite{BJS,ShmaloUDC} is not an idealization: it is a generic property of
+i.i.d.\ data.
+
+\subsection*{Main result}
+
+Throughout, $K\subset\R^n$ is a convex body (compact, convex, nonempty interior),
+$D:=\diam K$, and $\mu$ is a probability measure of the form
+$d\mu=\rho\,dx$ on $K$ with
+\begin{equation}\label{eq:density}
+0<\rho_{\min}\le\rho(x)\le\rho_{\max}<\infty\quad(x\in K),
+\qquad
+\widetilde R:=\rho_{\max}/\rho_{\min}.
+\end{equation}
+The training set is $T=\{X_1,\dots,X_N\}$ with $X_i$ i.i.d.\ $\sim\mu$, and
+$\emp:=\frac1N\sum_{i=1}^N\delta_{X_i}$ denotes the empirical measure, which is the
+measure $\bar\mu$ of \cite{ShmaloUDC} normalized by $N$.
+
+\begin{theorem}[Main theorem]\label{thm:main}
+Let $\mu$ satisfy \eqref{eq:density}, let $k\in\mathbb N$, and let $r_0\in(0,D]$.
+Set
+\[
+\kappa:=1+150\,\widetilde R,
+\qquad
+\sigma:=1,
+\qquad
+\delta:=\frac{3\,\rho_{\min}\,\omega_n r_0^{\,n}}{32\,\widetilde R},
+\qquad
+\beta:=D,
+\]
+where $\omega_n=\vol(B^n_1)$.  There are constants $C_0=C_0(n,k)$ and
+$N_0=N_0(n,k,\widetilde R,r_0/D,\rho_{\min}r_0^n)$ such that for all $N\ge N_0$ the
+following holds with probability at least $1-\frac1N$.  For \emph{every} family
+$\mathcal L$ of truncation sets of size $k$ all of whose truncation regions
+$G=H\cap K$ (Section~\ref{sec:prelim}) are either empty or contain a ball of radius
+$r_0$, the training set $T$ satisfies the uniform doubling condition of
+\cite[Definition 3.3]{ShmaloUDC} with doubling constant $\kappa$, mass cap $\delta$,
+growth constant $\sigma$, scale parameter $\beta$, and global scaling factor
+\[
+\ell_N:=\Bigl(C_0\,\frac{\widetilde R}{\rho_{\min}}\Bigl(\frac{D}{r_0}\Bigr)^{n-1}
+\frac{\log N}{N}\Bigr)^{1/n}.
+\]
+That is, for every truncated slab $S$ generated by a truncation set in $\mathcal L$
+and every $i\in\mathbb N_0$ with $\ell_N\kappa^i<\beta$,
+\[
+\emp\bigl(S_{\ell_N\kappa^{i+1}}\bigr)\;\ge\;
+\min\bigl\{\delta,\;(1+\sigma)\,\emp\bigl(S_{\ell_N\kappa^{i}}\bigr)\bigr\}.
+\]
+\end{theorem}
+
+Two features deserve emphasis.  First, the constants $(\kappa,\delta,\sigma,\beta)$
+do not depend on $N$: as the sample grows, the condition holds at finer and finer
+scales ($\ell_N\to0$) with the \emph{same} doubling geometry, which is the regime
+needed by the stability theorems.  Second, the family $\mathcal L$ may be infinite
+--- the theorem is uniform over \emph{all} truncation sets with $r_0$-thick regions
+--- so the same high-probability event serves every admissible network
+simultaneously; in particular the truncation set of the DNN may move during training.
+
+Both hypotheses are necessary in this generality, as the following examples
+(Section~\ref{sec:sharp}) show.
+
+\begin{example}[Thickness is necessary]\label{ex:sliver-intro}
+For $K=[0,1]^n$ and the (population) measure $\mu=\mathrm{Leb}$, the truncation
+region $H=\{x:x_2\le\varepsilon'\}$ produces, for the slab direction $e_2$, a
+truncated slab whose mass saturates at $\varepsilon'$: for every
+$\delta>\varepsilon'$ and every $\sigma,\ell>0$ the doubling condition fails at all
+grid scales in $[\varepsilon',\beta)$.  Hence no choice of constants works uniformly
+over all truncation sets, and a lower bound on the truncation-region thickness (or on
+their masses) cannot be dispensed with.
+\end{example}
+
+\begin{example}[The scaling factor must decay no faster than a power]\label{ex:gap-intro}
+For $K$ the Euclidean unit ball and $\mu$ uniform, with probability bounded below by
+an absolute constant the sample contains a directional extreme point separated, in
+that direction, from the rest of the sample by a gap of order $N^{-2/(n+1)}$.  A slab
+of width below that gap captures this single point at all scales until the gap is
+crossed, so the uniform doubling condition with $\sigma\le1$, $\delta\ge2/N$ forces
+$\ell\ge c\,N^{-2/(n+1)}$.  Thus a sample-size--dependent scaling factor is
+unavoidable, and the rate $\ell_N\asymp(\log N/N)^{1/n}$ of Theorem~\ref{thm:main}
+is of the correct power-law type.
+\end{example}
+
+\subsection*{Method}
+
+The proof has three independent ingredients.
+
+\emph{(1) A one-dimensional dichotomy} (Lemma~\ref{lem:1d}): if $\nu$ is a finite
+measure on $\R$ whose density is a log-concave function times a factor bounded
+between $\rho_{\min}$ and $\rho_{\max}$, then for every center $c$ and width $w$,
+widening the window $I_w(c)$ by the factor $\kappa\ge4$ either multiplies its mass by
+$1+\frac{\kappa-1}{15\widetilde R}$ or the widened window already carries the mass
+$\frac{3}{16\widetilde R}\nu(\R)$.  The proof is elementary but delicate; the
+log-concavity enters through a quantitative ``no thin tails'' estimate.
+
+\emph{(2) Geometry of truncated slabs.}  By Brunn--Minkowski, the slice profile of a
+truncation region $G=H\cap K$ in any direction is log-concave, so ingredient (1)
+applies to the projected measure and yields the doubling dichotomy for the
+\emph{population} measure $\mu$, with the cap $\delta$ made uniform by the
+$r_0$-thickness of $G$.  A cone-volume estimate (Lemma~\ref{lem:cone}) shows that any
+truncated slab containing at least one sample point has, after widening, population
+mass at least $c\,w^n$ --- the key to controlling scales where concentration fails.
+
+\emph{(3) VC relative deviations.}  Truncated slabs are intersections of $k+2$
+half-spaces, a class of VC dimension $O(nk\log k)$; the
+Vapnik--Chervonenkis relative deviation bounds transfer the population dichotomy to
+the empirical measure uniformly over all slabs and all grid scales at once, above the
+scale $\ell_N$.  Below mass $\asymp\log N/N$ concentration is impossible, and it is
+exactly here that the cone estimate and the choice of $\kappa$ absorb the
+fluctuations: the population growth factor $1+\sigma_0=11$ beats the worst sampling
+distortion, yielding the clean empirical constants $\sigma=1$ and an
+$N$-independent mass cap $\delta$.
+
+\subsection*{Relation to prior work}
+
+The doubling condition originates in \cite{BJS}, where it is verified for measures
+with density bounded above and below \emph{at the population level and for
+non-truncated slabs with slab-dependent parameters}; the uniform, truncated version
+that the stability theorems of \cite{ShmaloUDC} require is strictly stronger, and the
+passage from population to empirical measure --- the content of this paper --- does
+not appear there.  The empirical-process tools are classical
+\cite{VC71,Vapnik,BEHW,AnthonyBartlett}; the geometric ingredient we need from convex
+geometry is the Brunn--Minkowski inequality in its slice form
+\cite{Gardner}.  For the role of the condition in the stability of accuracy, and for
+the numerical surrogate it replaces, see \cite[Sections 3--5]{ShmaloUDC} and
+\cite{BJS2}.
+
+\subsection*{Organization}
+Section~\ref{sec:prelim} recalls the definitions and the VC tools.
+Section~\ref{sec:1d} proves the one-dimensional dichotomy.
+Section~\ref{sec:population} proves the population doubling property.
+Section~\ref{sec:empirical} proves Theorem~\ref{thm:main}.
+Section~\ref{sec:sharp} contains the two sharpness examples, and
+Section~\ref{sec:corollary} states the corollary for stability of accuracy.
+
+\section{Preliminaries}\label{sec:prelim}
+
+\subsection{Slabs, truncated slabs, and the uniform doubling condition}
+
+We follow \cite[Section 3]{ShmaloUDC}.
+
+\begin{definition}[Slab]\label{def:slab}
+For a unit vector $u\in\R^n$, a center $s\in\R^n$ and a width $w>0$, the slab is
+\[
+S'_w(u,s):=\Bigl\{x\in\R^n:\ |(x-s)\cdot u|\le\frac w2\Bigr\}.
+\]
+\end{definition}
+
+\begin{definition}[Truncated slab]\label{def:tslab}
+Given additionally vectors $v_1,\dots,v_k\in\R^n$ and $t_1,\dots,t_k\in\R$, the
+truncated slab is
+\[
+S_w=S_w(u,s,v_1,t_1,\dots,v_k,t_k):=S'_w(u,s)\cap H,
+\qquad
+H:=\{x:\ v_i\cdot x\le t_i,\ i=1,\dots,k\}.
+\]
+The half-space collection $h=\{(v_i,t_i)\}_{i\le k}$ is the \emph{truncation set};
+a family of truncation sets of size $k$ is denoted $\mathcal L$.  We call
+$G:=H\cap K$ the \emph{truncation region} of $h$ (relative to the data support $K$).
+The width parameter $w$ scales the slab only; the truncation $H$ is fixed.
+\end{definition}
+
+\begin{definition}[{Uniform doubling condition, \cite[Definition 3.3]{ShmaloUDC}}]\label{def:udc}
+Let $T\subset\R^n$ be a finite set with empirical measure $\emp$, and let
+$\mathcal L$ be a family of truncation sets of size $k$.  The \emph{uniform doubling
+condition} holds on $T$ with constants $\kappa>1$, $\delta,\sigma,\beta,\ell>0$ if
+for every truncated slab $S$ generated by a truncation set $h\in\mathcal L$ and every
+$i\in\mathbb N_0$ with $\ell\kappa^i<\beta$,
+\[
+\emp\bigl(S_{\ell\kappa^{i+1}}\bigr)\;\ge\;
+\min\bigl\{\delta,\ (1+\sigma)\,\emp\bigl(S_{\ell\kappa^{i}}\bigr)\bigr\}.
+\]
+\end{definition}
+
+In \cite{ShmaloUDC} the scaling factor may be chosen per slab; we prove the stronger
+\emph{global} form, where the single scaling factor $\ell=\ell_N$ serves all slabs.
+
+\begin{proposition}[Affine transfer of the uniform doubling condition]\label{prop:affine-transfer}
+Let $T\subset\R^n$ satisfy the uniform doubling condition for a truncation family
+$\mathcal L$ with constants $(\kappa,\delta,\sigma,\beta,\ell)$.  Let
+$A(x)=Mx+b$ be an invertible affine map, and write
+\[
+\lambda=s_{\min}(M),\qquad \Lambda=s_{\max}(M).
+\]
+Let $A\mathcal L$ be the image truncation family, meaning that the half-space
+$v\cdot x\le t$ is sent to
+\[
+(M^{-T}v)\cdot y\le t+(M^{-T}v)\cdot b .
+\]
+If
+$\Lambda\ell<\lambda\beta/\kappa$, then $A(T)$ satisfies the uniform doubling
+condition for $A\mathcal L$ with constants
+\[
+\bigl(\kappa^2,\delta,\sigma,\lambda\beta/\kappa,\Lambda\ell\bigr).
+\]
+If, in addition, the original doubling inequality holds at every width
+$w\in[\ell,\beta)$ rather than only on the geometric grid, then the image
+sample satisfies the same continuous-width form with constants
+\[
+\bigl(\kappa,\delta,\sigma,\lambda\beta,\Lambda\ell\bigr).
+\]
+\end{proposition}
+
+\begin{proof}
+We first interpolate the grid.  Suppose $w\in[\ell,\beta/\kappa)$.  Choose
+$i\ge0$ with $\ell\kappa^i\le w<\ell\kappa^{i+1}$.  Monotonicity of slab mass
+in the width and the grid doubling inequality give
+\[
+\emp(S_{\kappa^2 w})
+\ge \emp(S_{\ell\kappa^{i+2}})
+\ge \min\{\delta,(1+\sigma)\emp(S_{\ell\kappa^{i+1}})\}
+\ge \min\{\delta,(1+\sigma)\emp(S_w)\}.
+\]
+Thus grid-UDC with multiplier $\kappa$ implies continuous-width UDC on
+$[\ell,\beta/\kappa)$ with multiplier $\kappa^2$.
+
+Now let $\bar\mu_A=A_\#\emp$ be the empirical measure of $A(T)$.  Take a slab
+in the image with unit normal $u$, center $s$, and width $t$.  Its preimage is a
+slab with unit normal
+\[
+v=\frac{M^Tu}{|M^Tu|}
+\]
+and width $w=t/|M^Tu|$, truncated by the corresponding member of $\mathcal L$.
+Since
+\[
+\lambda\le |M^Tu|\le \Lambda,
+\]
+the range $t\in[\Lambda\ell,\lambda\beta/\kappa)$ implies
+$w\in[\ell,\beta/\kappa)$.  Applying the interpolated inequality to the
+preimage and using pushforward equality of empirical masses gives
+\[
+\bar\mu_A(S_{\kappa^2 t})
+\ge \min\{\delta,(1+\sigma)\bar\mu_A(S_t)\}.
+\]
+This is exactly the UDC for $A(T)$ with multiplier $\kappa^2$, scale
+$\Lambda\ell$, and upper parameter $\lambda\beta/\kappa$.  If the original
+inequality is already available for every width in $[\ell,\beta)$, the same
+argument applies directly with $t\in[\Lambda\ell,\lambda\beta)$ and multiplier
+$\kappa$, giving the stated continuous-width constants.
+\end{proof}
+
+\subsection{VC tools}
+
+For a class $\mathcal C$ of measurable subsets of $\R^n$, $\mathrm{vc}(\mathcal C)$
+denotes its VC dimension.  Truncated slabs with $k$ truncations are intersections of
+$k+2$ half-spaces:
+\[
+\mathcal C_{n,k}:=\Bigl\{\,\bigcap_{j=1}^{k+2}\{x:\ a_j\cdot x\le b_j\}\ :\
+a_j\in\R^n,\ b_j\in\R\Bigr\}\supseteq\{\text{all truncated slabs}\}.
+\]
+
+\begin{lemma}[{\cite{BEHW}}]\label{lem:vc}
+$\mathrm{vc}(\mathcal C_{n,k})\le 2(n+1)(k+2)\log_2\bigl(3(k+2)\bigr)=:d_{n,k}$.
+\end{lemma}
+
+\begin{lemma}[Relative uniform deviations; \cite{VC74,Vapnik,AnthonyBartlett}]\label{lem:relvc}
+Let $\mathcal C$ be a class of measurable sets with $\mathrm{vc}(\mathcal C)=d\ge1$,
+let $X_1,\dots,X_N$ be i.i.d.\ $\sim\mu$ with empirical measure $\emp$, and let
+$\varepsilon\in(0,1)$.  Set
+\[
+u_N(\varepsilon):=\frac{4}{N}\Bigl(d\ln\frac{2eN}{d}+\ln\frac{8}{\varepsilon}\Bigr).
+\]
+Then with probability at least $1-\varepsilon$, simultaneously for all
+$C\in\mathcal C$,
+\begin{equation}\label{eq:relvc}
+\mu(C)-\emp(C)\;\le\;\sqrt{\mu(C)\,u_N(\varepsilon)},
+\qquad
+\emp(C)-\mu(C)\;\le\;\sqrt{\emp(C)\,u_N(\varepsilon)} .
+\end{equation}
+\end{lemma}
+
+\begin{proof}[Source]
+These are the classical Vapnik--Chervonenkis relative deviation inequalities: each
+one-sided supremum
+$\sup_{C}\bigl(\mu(C)-\emp(C)\bigr)/\sqrt{\mu(C)}$ and
+$\sup_{C}\bigl(\emp(C)-\mu(C)\bigr)/\sqrt{\emp(C)}$ exceeds $t$ with probability at
+most $4\,\Pi_{\mathcal C}(2N)\,e^{-Nt^2/4}$, where
+$\Pi_{\mathcal C}(2N)\le(2eN/d)^d$ by Sauer's lemma; see
+\cite[Section A.5]{Vapnik}, \cite[Theorem 5.7]{AnthonyBartlett} and the survey
+discussion in \cite{BBL}.  Solving
+$4(2eN/d)^de^{-Nt^2/4}\le\varepsilon/2$ for $t^2$ and taking a union over the two
+one-sided statements gives \eqref{eq:relvc} with the stated $u_N(\varepsilon)$.
+\end{proof}
+
+We record the two consequences used below.  On the event \eqref{eq:relvc}, for every
+$C\in\mathcal C$ and every $\tau\ge u_N(\varepsilon)$:
+\begin{align}
+\mu(C)\ge16\tau
+&\;\Longrightarrow\;
+\emp(C)\ge\mu(C)-\sqrt{\mu(C)\,\tau}\ge\tfrac34\,\mu(C);
+\label{eq:lower}\\
+\emp(C)\ge4\tau
+&\;\Longrightarrow\;
+\mu(C)\ge\emp(C)-\sqrt{\emp(C)\,\tau}\ge\tfrac12\,\emp(C).
+\label{eq:upper}
+\end{align}
+Indeed, in \eqref{eq:lower} $\sqrt{\mu\tau}\le\mu/4$; in \eqref{eq:upper}
+$\sqrt{\emp\tau}\le\emp/2$.
+
+\section{A one-dimensional dichotomy for log-concave profiles}\label{sec:1d}
+
+For $c\in\R$ and $w>0$ write $I_w(c):=[c-\frac w2,\,c+\frac w2]$.
+
+\begin{lemma}[Dichotomy]\label{lem:1d}
+Let $\nu$ be a finite measure on $\R$ with density $g=\tilde\rho\,v$, where
+$v:\R\to[0,\infty)$ is log-concave and integrable and
+$\rho_{\min}\le\tilde\rho\le\rho_{\max}$ on $\{v>0\}$, with
+$\widetilde R=\rho_{\max}/\rho_{\min}$.  Let $\kappa\ge4$.  Then for every $c\in\R$
+and $w>0$,
+\[
+\nu\bigl(I_{\kappa w}(c)\bigr)\;\ge\;
+\min\Bigl\{\frac{3}{16\widetilde R}\,\nu(\R),\
+\Bigl(1+\frac{\kappa-1}{15\widetilde R}\Bigr)\,\nu\bigl(I_w(c)\bigr)\Bigr\}.
+\]
+\end{lemma}
+
+\begin{proof}
+Write $I=I_w(c)$, $\sigma_0=\frac{\kappa-1}{15\widetilde R}$.  We may assume
+$\nu(I)>0$ and
+\begin{equation}\label{eq:smallwindow}
+\nu(I)<\frac{3}{16\widetilde R}\,\nu(\R),
+\end{equation}
+since otherwise $\nu(I_{\kappa w})\ge\nu(I)$ finishes the proof.  By
+\eqref{eq:smallwindow} the complement of $I$ carries at least
+$\bigl(1-\frac{3}{16}\bigr)\nu(\R)=\frac{13}{16}\nu(\R)$, so one of the two tails
+carries at least $\frac{13}{32}\nu(\R)\ge\frac38\nu(\R)$.  All hypotheses are
+invariant under reflection about $c$, so we may assume it is the right tail:
+\begin{equation}\label{eq:Mplus}
+M_+:=\nu\bigl(\bigl(c+\tfrac w2,\,\infty\bigr)\bigr)\;\ge\;\tfrac38\,\nu(\R)>0 .
+\end{equation}
+Put $p:=c+\frac w2$, $q:=c+\frac{\kappa w}2$, $E:=(p,q]$, and
+$\Lambda:=q-p=\frac{(\kappa-1)w}2\ge\frac{3w}2$.  Since $\nu(I)>0$ and $M_+>0$, the
+support interval of $v$ meets both $I$ and $(p,\infty)$; as it is an interval,
+$v(p)>0$.  Let $\varphi:=-\log v$, a convex function on the support, and let
+$m^*$ be a maximizer of $v$ (which exists: $v$ is log-concave, integrable, and not
+a.e.\ zero; on the closure of its support $v$ is unimodal).  We will use twice the
+following consequence of convexity: for $t_1<t_2<t_3$ in the support,
+\begin{equation}\label{eq:slopes}
+\frac{\varphi(t_2)-\varphi(t_1)}{t_2-t_1}\;\le\;
+\frac{\varphi(t_3)-\varphi(t_2)}{t_3-t_2}.
+\end{equation}
+
+\medskip\noindent\emph{Case A: $m^*\le p$.}  Then $v$ is nonincreasing on
+$[p,\infty)$.
+
+\emph{A1: $v(q)\le v(p)/e$.}  Then $\varphi(q)-\varphi(p)\ge1$, so by
+\eqref{eq:slopes} (with $t_1=p,t_2=q,t_3=t$), for every $t\ge q$ in the support,
+$\varphi(t)\ge\varphi(q)+\frac{t-q}{\Lambda}$, i.e.\
+$v(t)\le v(q)e^{-(t-q)/\Lambda}$.  Hence
+\[
+\int_q^\infty v\;\le\;\Lambda\,v(q)\;\le\;\int_p^q v,
+\]
+the last step because $v\ge v(q)$ on $[p,q]$.  Therefore
+\[
+M_+\;\le\;\rho_{\max}\Bigl(\int_p^qv+\int_q^\infty v\Bigr)
+\;\le\;2\rho_{\max}\int_p^qv
+\;\le\;2\widetilde R\,\nu(E),
+\]
+so by \eqref{eq:Mplus},
+$\nu(I_{\kappa w})\ge\nu(E)\ge\frac{M_+}{2\widetilde R}\ge\frac{3}{16\widetilde R}\nu(\R)$:
+the first branch of the dichotomy holds.
+
+\emph{A2: $v(q)>v(p)/e$.}  Then $\varphi(q)-\varphi(p)<1$, so the slope of
+$\varphi$ on $[p,q]$ is less than $1/\Lambda$; by \eqref{eq:slopes} (with
+$t_2=p$, $t_3=q$ and $t_1=t$), every $t\le p$ in the support satisfies
+$\varphi(p)-\varphi(t)\le\frac{p-t}{\Lambda}$, i.e.\
+$v(t)\le v(p)\,e^{(p-t)/\Lambda}$.  For $t\in I$ we have $p-t\le w$ and
+$w/\Lambda\le\frac2{\kappa-1}\le\frac23$, so
+$\sup_Iv\le e^{2/3}v(p)$ and
+\[
+\nu(I)\;\le\;\rho_{\max}\,w\,e^{2/3}\,v(p).
+\]
+On the other hand $v\ge v(q)>v(p)/e$ on $E$, so
+$\nu(E)\ge\rho_{\min}\Lambda\,v(p)/e$.  Hence
+\[
+\frac{\nu(E)}{\nu(I)}\;\ge\;\frac{\Lambda}{w}\cdot\frac{1}{\widetilde R\,e^{5/3}}
+\;=\;\frac{\kappa-1}{2e^{5/3}\widetilde R}\;\ge\;\frac{\kappa-1}{11\widetilde R}
+\;\ge\;\sigma_0,
+\]
+and $\nu(I_{\kappa w})\ge\nu(I)+\nu(E)\ge(1+\sigma_0)\nu(I)$: the second branch.
+
+\medskip\noindent\emph{Case B: $m^*>p$.}  Then $v$ is nondecreasing on
+$(-\infty,m^*]$; in particular $v\le v(p)$ on $I$, so
+\begin{equation}\label{eq:IwB}
+\nu(I)\;\le\;\rho_{\max}\,w\,v(p).
+\end{equation}
+
+\emph{B1: $m^*\ge q$.}  Then $v\ge v(p)$ on $E$, so
+$\nu(E)\ge\rho_{\min}\Lambda v(p)$ and, by \eqref{eq:IwB},
+$\nu(E)/\nu(I)\ge\frac{\kappa-1}{2\widetilde R}\ge\sigma_0$: second branch.
+
+\emph{B2: $p<m^*<q$.}  Let $\lambda_1:=m^*-p$ and $\lambda_2:=q-m^*$, so
+$\lambda_1+\lambda_2=\Lambda$.
+
+If $\lambda_1\ge\Lambda/2$: on $[p,m^*]$ we have $v\ge v(p)$, so
+$\nu(E)\ge\rho_{\min}\lambda_1v(p)\ge\rho_{\min}\frac\Lambda2v(p)$, and by
+\eqref{eq:IwB}, $\nu(E)/\nu(I)\ge\frac{\kappa-1}{4\widetilde R}\ge\sigma_0$:
+second branch.
+
+If $\lambda_2\ge\Lambda/2$, consider the drop of $v$ over $[m^*,q]$, where $v$ is
+nonincreasing.
+
+\quad If $v(q)\le v(m^*)/e$: as in A1 (with $[m^*,q]$ in place of $[p,q]$),
+$\int_q^\infty v\le\lambda_2v(q)\le\int_{m^*}^qv$, hence
+\[
+M_+\;\le\;\rho_{\max}\Bigl(\int_p^qv+\int_q^\infty v\Bigr)
+\;\le\;2\rho_{\max}\int_p^qv\;\le\;2\widetilde R\,\nu(E),
+\]
+and as in A1 the first branch holds.
+
+\quad If $v(q)>v(m^*)/e$: then on $[m^*,q]$, $v\ge v(q)>v(m^*)/e\ge v(p)/e$, so
+$\nu(E)\ge\rho_{\min}\lambda_2v(p)/e\ge\rho_{\min}\frac{\Lambda}{2e}v(p)$, and by
+\eqref{eq:IwB}, $\nu(E)/\nu(I)\ge\frac{\kappa-1}{4e\widetilde R}
+\ge\frac{\kappa-1}{11\widetilde R}\ge\sigma_0$: second branch.
+
+\medskip
+All cases yield one of the two branches, completing the proof.
+\end{proof}
+
+\section{Population doubling for truncated slabs}\label{sec:population}
+
+\begin{proposition}[Population dichotomy]\label{prop:population}
+Let $\mu$ satisfy \eqref{eq:density}, let $\kappa\ge4$, and let $S_w$ be a truncated
+slab (direction $u$, center $s$, truncation $H$) whose truncation region $G=H\cap K$
+contains a ball of radius $r_0$.  Then for every $w>0$,
+\[
+\mu(S_{\kappa w})\;\ge\;\min\Bigl\{\delta_0,\
+\Bigl(1+\frac{\kappa-1}{15\widetilde R}\Bigr)\mu(S_w)\Bigr\},
+\qquad
+\delta_0:=\frac{3\,\rho_{\min}\,\omega_nr_0^{\,n}}{16\,\widetilde R}.
+\]
+\end{proposition}
+
+\begin{proof}
+Let $\nu$ be the push-forward of $\mu|_G$ under $x\mapsto x\cdot u$; then
+$\mu(S_w)=\nu\bigl(I_w(c)\bigr)$ with $c=s\cdot u$, for every $w$.  The measure
+$\nu$ has density
+\[
+g(t)=\int_{G\cap\{x\cdot u=t\}}\rho\,d\mathcal H^{n-1}
+\;\in\;\bigl[\rho_{\min}v(t),\ \rho_{\max}v(t)\bigr],
+\qquad
+v(t):=\vol_{n-1}\bigl(G\cap\{x\cdot u=t\}\bigr).
+\]
+$G$ is a convex body, so by the Brunn--Minkowski inequality
+\cite[Section 5]{Gardner} the function $v^{1/(n-1)}$ is concave on the interval
+$\{v>0\}$ when $n\ge2$; hence $v$ is log-concave (for $n=1$, $v$ is the indicator of
+an interval, also log-concave).  Writing $g=\tilde\rho v$ with
+$\tilde\rho:=g/v\in[\rho_{\min},\rho_{\max}]$ on $\{v>0\}$,
+Lemma~\ref{lem:1d} applies and gives
+\[
+\mu(S_{\kappa w})\ge\min\Bigl\{\frac{3}{16\widetilde R}\,\mu(G),\
+(1+\sigma_0)\,\mu(S_w)\Bigr\},
+\]
+and $\mu(G)\ge\rho_{\min}\vol\bigl(B(z,r_0)\bigr)=\rho_{\min}\omega_nr_0^n$ by the
+thickness hypothesis.
+\end{proof}
+
+\begin{lemma}[Cone volume]\label{lem:cone}
+Let $G\subseteq K$ be convex with $B(z,r_0)\subseteq G$, let $x\in G$, let $u$ be a
+unit vector and $L>0$.  Then
+\[
+\vol\Bigl(G\cap\bigl\{y:\ |(y-x)\cdot u|\le L\bigr\}\Bigr)
+\;\ge\;
+b_n\Bigl(\frac{r_0}{D}\Bigr)^{n-1}\min(L,\,2r_0)^n,
+\qquad
+b_n:=\frac{\min\{\omega_n,\,\omega_{n-1}/n\}}{4^{\,n}},
+\]
+where $D=\diam K$ and, for $n=1$, the right-hand side is read as
+$\tfrac12\min(L,2r_0)$.
+\end{lemma}
+
+\begin{proof}
+For $n=1$: $G$ is an interval containing $x$ and an interval of length $2r_0$; the
+segment from $x$ towards $z$ of length $\min(L,r_0)\ge\frac12\min(L,2r_0)$ lies in
+$G\cap\{|y-x|\le L\}$.
+
+Let $n\ge2$ and $\zeta:=|z-x|\le D$.
+
+\emph{Case $\zeta\le L/2$.}  Every $y\in B(z,L/2)$ satisfies
+$|(y-x)\cdot u|\le|y-z|+\zeta\le L$, so the slab contains $B(z,L/2)$ and
+\[
+\vol\bigl(G\cap\text{slab}\bigr)\ge\vol\bigl(B(z,\min(r_0,L/2))\bigr)
+=\omega_n\min(r_0,L/2)^n\ge\omega_n4^{-n}\min(L,2r_0)^n,
+\]
+using $\min(r_0,L/2)\ge\frac14\min(L,2r_0)$ (check both cases $L\le2r_0$, $L>2r_0$).
+
+\emph{Case $\zeta>L/2$.}  The convex hull $C$ of $\{x\}\cup B(z,r_0)$ lies in $G$ and
+contains all points $x+s\hat a+e$ with $\hat a=(z-x)/\zeta$, $0\le s\le\zeta$ and
+$|e|\le s\,r_0/\zeta$ (take $t=s/\zeta$ in $x+t(z-x)+tr_0b$, $|b|\le1$).  For
+$0\le s\le L/2$ and $|e|\le s\,\min(1,r_0/\zeta)$ we get
+$|(x+s\hat a+e-x)\cdot u|\le s+|e|\le2s\le L$, so this truncated cone lies in
+$G\cap\text{slab}$ and
+\[
+\vol\ge\int_0^{L/2}\omega_{n-1}\bigl(s\,\min(1,r_0/\zeta)\bigr)^{n-1}ds
+=\frac{\omega_{n-1}}{n}\,\min\Bigl(1,\frac{r_0}{\zeta}\Bigr)^{n-1}
+\Bigl(\frac L2\Bigr)^n
+\ge\frac{\omega_{n-1}}{n}\Bigl(\frac{r_0}{D}\Bigr)^{n-1}\Bigl(\frac L2\Bigr)^n,
+\]
+and $\bigl(\frac L2\bigr)^n\ge4^{-n}\min(L,2r_0)^n$ again in both cases
+($L\le2r_0$: $(L/2)^n=2^{-n}\min^n$; $L>2r_0$: $(L/2)^n\ge r_0^n=2^{-n}\min^n$).
+\end{proof}
+
+\section{Proof of the main theorem}\label{sec:empirical}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Set $d:=d_{n,k}$ (Lemma~\ref{lem:vc}), $\varepsilon:=1/N$, and
+\[
+u_N:=\frac4N\Bigl(d\ln\frac{2eN}{d}+\ln(8N)\Bigr),
+\qquad
+c_*:=\rho_{\min}\,b_n\Bigl(\frac{r_0}{D}\Bigr)^{n-1},
+\]
+with $b_n$ from Lemma~\ref{lem:cone}.  Let $\mathcal E$ be the event of
+Lemma~\ref{lem:relvc} for the class $\mathcal C_{n,k}$, so
+$\PP(\mathcal E)\ge1-\frac1N$, and \eqref{eq:lower}--\eqref{eq:upper} hold on
+$\mathcal E$ with $\tau=u_N$ for every truncated slab simultaneously --- note that
+$\mathcal E$ does not depend on the family $\mathcal L$.  Define
+\[
+\ell_N:=\frac{2}{\kappa-1}\Bigl(\frac{32\,u_N}{c_*}\Bigr)^{1/n},
+\]
+which is bounded by the expression in the statement of the theorem for a suitable
+$C_0(n,k)$, and let
+\[
+N_0:=\min\Bigl\{N:\ 32u_N\le\min\bigl\{c_*(2r_0)^n,\ 2\delta_0\bigr\}
+\ \text{ and }\ \ell_N<\beta\Bigr\},
+\]
+with $\delta_0$ from Proposition~\ref{prop:population}; thus $N_0$ depends only on
+$(n,k,\widetilde R,r_0/D,\rho_{\min}r_0^n)$.
+
+Work on $\mathcal E$ and let $N\ge N_0$.  Fix a truncated slab $S$ generated by a
+truncation set in $\mathcal L$, with truncation region $G$, and fix any scale
+$w\in[\ell_N,\beta)$; this covers in particular every grid scale
+$\ell\kappa^i<\beta$ for every $\ell\ge\ell_N$, so the theorem follows for the
+scaling factor in the statement, which dominates $\ell_N$ as defined here.  We must
+show
+\begin{equation}\label{eq:goal}
+\emp(S_{\kappa w})\;\ge\;\min\bigl\{\delta,\ 2\,\emp(S_w)\bigr\},
+\qquad
+\delta=\tfrac12\delta_0 .
+\end{equation}
+
+\emph{Case 1: $\emp(S_w)=0$.}  Then the right-hand side of \eqref{eq:goal} is $0$
+and there is nothing to prove.
+
+\emph{Case 2: $\emp(S_w)>0$.}  Then there is a sample point $x\in S_w\cap T$.
+Almost surely $x\in K$, and $x\in H$ since $S_w\subseteq H$; hence $x\in G$, so $G$
+is nonempty and, by hypothesis, contains a ball of radius $r_0$.  Since
+$|(x-s)\cdot u|\le w/2$, the slab of half-width $L:=\frac{(\kappa-1)w}2$ around $x$
+satisfies $\{y:|(y-x)\cdot u|\le L\}\subseteq S'_{\kappa w}(u,s)$, so by
+Lemma~\ref{lem:cone},
+\[
+\mu(S_{\kappa w})\;\ge\;\rho_{\min}\vol\Bigl(G\cap\{|(y-x)\cdot u|\le L\}\Bigr)
+\;\ge\;c_*\min(L,2r_0)^n .
+\]
+If $L\le2r_0$ then $\min(L,2r_0)^n=L^n\ge\bigl(\frac{(\kappa-1)\ell_N}2\bigr)^n
+=\frac{32u_N}{c_*}$ by the definition of $\ell_N$ and $w\ge\ell_N$; if $L>2r_0$ then
+$c_*\min(L,2r_0)^n=c_*(2r_0)^n\ge32u_N$ by the definition of $N_0$.  In both cases
+\begin{equation}\label{eq:mass-big}
+\mu(S_{\kappa w})\;\ge\;32\,u_N,
+\end{equation}
+hence by \eqref{eq:lower},
+\begin{equation}\label{eq:emp-big}
+\emp(S_{\kappa w})\;\ge\;\tfrac34\,\mu(S_{\kappa w})\;\ge\;24\,u_N .
+\end{equation}
+
+\emph{Case 2a: $\emp(S_w)\le12u_N$.}  Then by \eqref{eq:emp-big},
+$\emp(S_{\kappa w})\ge24u_N\ge2\,\emp(S_w)$, proving \eqref{eq:goal}.
+
+\emph{Case 2b: $\emp(S_w)>12u_N$.}  By \eqref{eq:upper},
+$\mu(S_w)\ge\frac12\emp(S_w)$.  Proposition~\ref{prop:population} gives
+$\mu(S_{\kappa w})\ge\min\{\delta_0,(1+\sigma_0)\mu(S_w)\}$ with
+$\sigma_0=\frac{\kappa-1}{15\widetilde R}=10$ for our choice
+$\kappa=1+150\widetilde R$ (note $\kappa\ge151\ge4$).
+
+If $\mu(S_{\kappa w})\ge\delta_0$: since $\delta_0\ge16u_N$ (definition of $N_0$),
+\eqref{eq:lower} gives
+$\emp(S_{\kappa w})\ge\frac34\delta_0\ge\frac12\delta_0=\delta$, proving
+\eqref{eq:goal}.
+
+If $\mu(S_{\kappa w})\ge(1+\sigma_0)\mu(S_w)$: combining with
+\eqref{eq:mass-big}, \eqref{eq:lower} applies to $S_{\kappa w}$ and
+\[
+\emp(S_{\kappa w})\;\ge\;\tfrac34(1+\sigma_0)\,\mu(S_w)
+\;\ge\;\tfrac38(1+\sigma_0)\,\emp(S_w)
+\;=\;\tfrac38\cdot11\cdot\emp(S_w)\;\ge\;2\,\emp(S_w),
+\]
+proving \eqref{eq:goal}.
+
+Thus on $\mathcal E$, for every admissible $\mathcal L$, every truncated slab and
+every grid scale below $\beta$, the doubling inequality holds with
+$(\kappa,\delta,\sigma,\beta,\ell_N)$ and $\sigma=1$,
+$\delta=\frac12\delta_0=\frac{3\rho_{\min}\omega_nr_0^n}{32\widetilde R}$.
+\end{proof}
+
+\begin{remark}
+The proof gives more than stated: the doubling inequality holds at \emph{every}
+scale $w\in[\ell_N,\beta)$, not only on the geometric grid; and the same event
+$\mathcal E$ serves all truncation families simultaneously, so the truncation set of
+a DNN may change during training without leaving the scope of the theorem.  The
+constants have not been optimized.
+\end{remark}
+
+\section{Sharpness}\label{sec:sharp}
+
+\begin{proposition}[Thickness is necessary]\label{prop:sliver}
+Let $K=[0,1]^n$, $\mu=\mathrm{Leb}|_K$, and let $\kappa>1$,
+$\delta,\sigma,\beta,\ell>0$ with $\kappa\ell<\beta$ be given.  For
+$0<\varepsilon'<\min\{\delta,\,\beta/\kappa\}$ consider the truncation set
+$h=\{(e_2,\varepsilon')\}$ (padded by $k-1$ copies), with truncation region
+$G=\{x\in K:\ x_2\le\varepsilon'\}$.  Then the \emph{population} measure $\mu$
+violates the doubling inequality for the truncated slab with direction $u=e_2$ and
+center $s=(\tfrac12,\tfrac{\varepsilon'}2,\tfrac12,\dots)$ at every scale
+$w\in[\varepsilon',\beta/\kappa)$:
+\[
+\mu(S_{\kappa w})=\varepsilon'
+\;<\;\min\{\delta,\ (1+\sigma)\varepsilon'\}
+=\min\{\delta,\ (1+\sigma)\mu(S_w)\}.
+\]
+Consequently the empirical measure of an i.i.d.\ sample violates it as well for all
+large $N$, almost surely.  Hence no choice of constants in
+Definition~\ref{def:udc} holds uniformly over all truncation sets: a quantitative
+lower bound on the truncation regions, such as the $r_0$-thickness of
+Theorem~\ref{thm:main} (here the inradius of $G$ is $\varepsilon'/2\to0$), is
+necessary.
+\end{proposition}
+
+\begin{proof}
+For $w\ge\varepsilon'$ the truncated slab
+$S_w=\{x\in K:\ |x_2-\tfrac{\varepsilon'}2|\le\tfrac w2,\ x_2\le\varepsilon'\}$
+equals $G$, so $\mu(S_w)=\mu(S_{\kappa w})=\varepsilon'$, while
+$\min\{\delta,(1+\sigma)\varepsilon'\}>\varepsilon'$ because
+$\delta>\varepsilon'$ and $\sigma>0$.  Some required grid scale lies in
+$[\varepsilon',\beta)$: if $\ell\ge\varepsilon'$, take $i=0$, noting
+$\ell<\beta$; if $\ell<\varepsilon'$, take the smallest $i$ with
+$\ell\kappa^i\ge\varepsilon'$, which satisfies
+$\ell\kappa^i<\kappa\varepsilon'\le\beta$ since $\varepsilon'<\beta/\kappa$.  At
+that scale the doubling inequality fails.  For the empirical
+statement, $\emp(S_w)\to\mu(S_w)=\varepsilon'$ and
+$\emp(S_{\kappa w})\to\varepsilon'$ almost surely, while
+$\min\{\delta,(1+\sigma)\emp(S_w)\}\to\min\{\delta,(1+\sigma)\varepsilon'\}
+>\varepsilon'$.
+\end{proof}
+
+\begin{proposition}[The scaling factor must decay]\label{prop:gap}
+Let $K=B^n_1$ be the unit ball, $\mu$ the uniform measure, $n\ge1$, and let
+$\kappa>1$, $\sigma>0$, $\beta>0$ be fixed.  There are constants
+$c_2(n,\kappa),c_3(n,\kappa)>0$ such that for all large $N$, with probability at
+least $c_3(n,\kappa)$, the sample $T$ admits a (trivially truncated) slab witnessing the failure
+of the doubling inequality at every scale
+$w\in\bigl[\ell,\ c_2(n,\kappa)N^{-2/(n+1)}\bigr)$ whenever $\delta\ge\frac2N$.
+Consequently, on an event of probability bounded below, the uniform doubling
+condition with constants $(\kappa,\delta,\sigma,\beta)$, $\delta\ge\frac2N$, forces
+\[
+\ell\;\ge\;c_2(n,\kappa)\,N^{-2/(n+1)} .
+\]
+\end{proposition}
+
+\begin{proof}
+Let $F(h):=\mu(\{x:\ x_1>1-h\})$ be the cap mass; there are constants
+$c_4,c_5(n)>0$ with $c_4h^{(n+1)/2}\le F(h)\le c_5h^{(n+1)/2}$ for $h\in(0,\tfrac12]$
+(integrate the marginal density, which is comparable to $(1-t)^{(n-1)/2}$ near
+$t=1$).  Fix $\Lambda:=2\kappa$ and let $h_N:=N^{-2/(n+1)}$.  Consider the events
+\[
+A:=\{\text{exactly one sample point has }x_1>1-h_N\},
+\qquad
+B:=\{\text{no sample point has }x_1\in(1-\Lambda h_N,\,1-h_N]\}.
+\]
+With $p_1:=F(h_N)\le c_5/N$ and
+$p_2:=F(\Lambda h_N)-F(h_N)\le c_5\Lambda^{(n+1)/2}/N$,
+\[
+\PP(A\cap B)=N\,p_1\,(1-p_1-p_2)^{N-1}
+\;\ge\;N\,\frac{c_4}{N}\Bigl(1-\frac{c_5(1+\Lambda^{(n+1)/2})}{N}\Bigr)^{N-1}
+\;\ge\;c_3(n)>0
+\]
+for all large $N$.  On $A\cap B$, let $x^*$ be the unique sample point with
+$x_1^*>1-h_N$; every other sample point has $x_1\le1-\Lambda h_N$, hence is at
+$e_1$-distance greater than $(\Lambda-1)h_N$ from $x^*$.  Consider the slab with
+$u=e_1$, center $s$ with $s\cdot e_1=x^*_1$, and trivial truncations.  For every
+$w$ with $\kappa w<2(\Lambda-1)h_N$, the slabs $S_w$ and $S_{\kappa w}$ contain
+$x^*$ and no other sample point, so
+$\emp(S_{\kappa w})=\frac1N<\min\{\delta,\ (1+\sigma)\frac1N\}$, violating the
+doubling inequality at scale $w$.  The violating range is
+$w<c_2h_N$ with $c_2:=\frac{2(\Lambda-1)}{\kappa}=\frac{2(2\kappa-1)}{\kappa}\ge2$.
+If $\ell<c_2N^{-2/(n+1)}=c_2h_N$, the grid scale $w=\ell$ itself lies in the
+violating range (and $\ell<\beta$ for large $N$), so the condition fails.
+\end{proof}
+
+\begin{remark}
+Propositions \ref{prop:sliver} and \ref{prop:gap} delimit
+Theorem~\ref{thm:main} from both sides: the thickness hypothesis cannot be removed
+(even for the population measure), and the scaling factor must be allowed to decay
+at a power rate in $N$ (even for the most regular data).  The gap between the
+necessary rate $N^{-2/(n+1)}$ and the sufficient rate $(\log N/N)^{1/n}$ of
+Theorem~\ref{thm:main} is an interesting open problem.
+\end{remark}
+
+\section{Stability of accuracy for i.i.d.\ data}\label{sec:corollary}
+
+Combining Theorem~\ref{thm:main} with the stability theorems of \cite{ShmaloUDC}
+(Theorem 3.6 there, and its Leaky ReLU variants) yields an unconditional statement
+for i.i.d.\ data: with probability at least $1-\frac1N$ over the sample, every DNN
+of the class considered in \cite{ShmaloUDC} whose truncation set has
+$r_0$-thick regions relative to $K$, and which at some training time $t_0$
+classifies the data with sufficiently high accuracy in the sense required there,
+retains the corresponding accuracy lower bound for all $t>t_0$, with the loss of
+accuracy quantified by the constants
+$(\kappa,\delta,\sigma,\beta,\ell_N)$ of Theorem~\ref{thm:main}.  We refer to
+\cite[Section 3]{ShmaloUDC} for the precise stability statements, which take the
+constants of the doubling condition as inputs; the contribution of the present
+paper is that for i.i.d.\ data these inputs hold with overwhelming probability with
+$N$-independent $(\kappa,\delta,\sigma,\beta)$ and explicitly decaying $\ell_N$.
+
+Two directions seem worth pursuing.  First, closing the gap of
+Proposition~\ref{prop:gap} would identify the critical decay of the scaling factor;
+the cap analysis suggests that boundary effects dominate and that
+$N^{-\Theta(1/n)}$ is not optimal for strictly convex bodies.  Second, the
+log-concave profile structure used in Lemma~\ref{lem:1d} holds for every
+log-concave measure $\mu$, not only for densities bounded above and below on a
+convex body; extending Theorem~\ref{thm:main} to unbounded log-concave data
+(e.g.\ Gaussian mixtures with separation) requires replacing the cone estimate of
+Lemma~\ref{lem:cone}, and we expect the main dichotomy to persist.
+
+\subsection*{Acknowledgments}
+The research presented in this paper was supported by the European Research Council
+(ERC) under the European Union's Horizon Europe research and innovation programme
+(grant agreement No.\ 101041711), by the Israel Science Foundation (grant number
+2258/19) and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\subsection*{Declaration on generative AI}
+During the preparation of this work the author used generative AI tools to
+accelerate drafting and revision.  All mathematical claims, proofs, and
+bibliographic information were subsequently reviewed and edited by the author, who
+takes full responsibility for the content of the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{BJS}
+L.~Berlyand, P.-E.~Jabin and C.~A.~Safsten,
+\emph{Stability for the training of deep neural networks and other classifiers},
+Math.\ Models Methods Appl.\ Sci.\ \textbf{31} (2021), no.~11, 2345--2390.
+
+\bibitem{BJS2}
+L.~Berlyand and P.-E.~Jabin,
+\emph{Mathematics of Deep Learning: An Introduction},
+De Gruyter, Berlin, 2023.
+
+\bibitem{ShmaloUDC}
+Y.~Shmalo,
+\emph{Stability of accuracy for the training of DNNs via the uniform doubling
+condition},
+Ann.\ Math.\ Artif.\ Intell.\ (2024), DOI 10.1007/s10472-023-09919-1;
+arXiv:2210.08415.
+
+\bibitem{VC71}
+V.~N.~Vapnik and A.~Ya.~Chervonenkis,
+\emph{On the uniform convergence of relative frequencies of events to their
+probabilities},
+Theory Probab.\ Appl.\ \textbf{16} (1971), 264--280.
+
+\bibitem{VC74}
+V.~N.~Vapnik and A.~Ya.~Chervonenkis,
+\emph{Theory of Pattern Recognition},
+Nauka, Moscow, 1974 (in Russian).
+
+\bibitem{Vapnik}
+V.~N.~Vapnik,
+\emph{Statistical Learning Theory},
+Wiley, New York, 1998.
+
+\bibitem{BEHW}
+A.~Blumer, A.~Ehrenfeucht, D.~Haussler and M.~K.~Warmuth,
+\emph{Learnability and the Vapnik--Chervonenkis dimension},
+J.\ Assoc.\ Comput.\ Mach.\ \textbf{36} (1989), no.~4, 929--965.
+
+\bibitem{AnthonyBartlett}
+M.~Anthony and P.~L.~Bartlett,
+\emph{Neural Network Learning: Theoretical Foundations},
+Cambridge University Press, Cambridge, 1999.
+
+\bibitem{BBL}
+S.~Boucheron, O.~Bousquet and G.~Lugosi,
+\emph{Theory of classification: a survey of some recent advances},
+ESAIM Probab.\ Stat.\ \textbf{9} (2005), 323--375.
+
+\bibitem{Gardner}
+R.~J.~Gardner,
+\emph{The Brunn--Minkowski inequality},
+Bull.\ Amer.\ Math.\ Soc.\ (N.S.) \textbf{39} (2002), no.~3, 355--405.
+
+\end{thebibliography}
+
+\end{document}

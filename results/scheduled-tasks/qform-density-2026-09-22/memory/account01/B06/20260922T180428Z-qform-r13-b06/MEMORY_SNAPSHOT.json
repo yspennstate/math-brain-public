@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B06",
+  "run_id": "20260922T180428Z-qform-r13-b06",
+  "control_commit_prepublication": "70e831492a1b8e841d2b31e818dbfdbadde6a237",
+  "control_revision": "2026-09-22.11",
+  "execution_context": "scheduled",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "partner_result": {
+    "worker": "account02/B06",
+    "claim": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+    "report_commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+    "use": "Applied at k=1 to each disjoint row-direction group to obtain density cap sqrt(e) for the normalized grouped scalar."
+  },
+  "own_dependency": {
+    "claim": "QFORM-THREE-COORDINATE-CURVED-COAREA-v1",
+    "report_commit": "1bc95193312b70572b2765529ac3b6d98e3fe754",
+    "use": "Applied after grouping and Cauchy-Binet to a three-variable grouped Hessian with sigma_min at least p."
+  },
+  "new_result": {
+    "claim": "QFORM-RANK3-FINITE-DIRECTION-GROUPING-v1",
+    "statement": "For exact rank three A=R Lambda R^T with min |lambda_j|>=1, if the nonzero rows of R lie in at most m one-dimensional subspaces, then ||p_(X^TAX)||_infinity <= 6 e sqrt(6 pi) binom(m,3) for arbitrary independent input densities <=1.",
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_commit": "0410d4dbac5e8406438a81bc9541f8d79c64a8da",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260922T180428Z-qform-r13-b06/REPORT.md",
+    "canonical_blob": "38bfe3aa88b5cc48e8bdc053550cff05524dffbf",
+    "status": "SUPPORTING_THEOREM_PROVED"
+  },
+  "stress_tests": [
+    "Sylvester-Hadamard rank-three four-direction family closes uniformly with p=1/4 and bound <283.25.",
+    "Singleton-plus-two-banks rank-three three-direction family closes uniformly with p=1 and bound <70.82."
+  ],
+  "unpaid_implication": "QFORM-APPROX-GROUP-OR-RIDGE-CLOSE-v1: obtain a dimension-free product-preserving decomposition into finitely many coherent row-direction groups or an already paid diffuse/ridge branch; then bridge arbitrary extra spectral components.",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN"
+}

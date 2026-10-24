@@ -1,0 +1,16 @@
+AREA = -(a*b - 4*a + 2*b + 1)/(a*(a - b))
+INT_hB = -(2*a**3*b - 6*a**3 + 3*a**2*b + b)/(3*a**3*(a - b))
+INT_hE = (6*a - b**3 - 3*b - 2)/(3*a*(a - b))
+DUAL_J = -(4*a**3*b - 12*a**3 - a**2*b**3 + 6*a**2*b + 4*a**2 - b)/(3*a**3*(a - b))
+DEFECT_DENOM = 18*a^3*(a-b)
+DEFECT_NUM = -4*a**4*b**2 + 8*a**4*b + a**3*b**4 + a**3*b**3 - 6*a**3*b**2 - 2*a**3*b + 8*a**3 + a**2*b**3 - 6*a**2*b - 4*a**2 + a*b**2 + a*b + b
+DEFECT_NUM_AFTER_a=1+X_b=1-Y = -4*X**4*Y**2 + 4*X**4 + X**3*Y**4 - 5*X**3*Y**3 - 13*X**3*Y**2 + 7*X**3*Y + 18*X**3 + 3*X**2*Y**4 - 16*X**2*Y**3 - 12*X**2*Y**2 + 24*X**2*Y + 21*X**2 + 3*X*Y**4 - 17*X*Y**3 + 24*X*Y + 6*X + Y**4 - 6*Y**3 + 3*Y**2 + 6*Y
+COEFFICIENTS_IN_X = [4 - 4*Y**2, Y**4 - 5*Y**3 - 13*Y**2 + 7*Y + 18, 3*Y**4 - 16*Y**3 - 12*Y**2 + 24*Y + 21, 3*Y**4 - 17*Y**3 + 24*Y + 6, Y**4 - 6*Y**3 + 3*Y**2 + 6*Y]
+SAMPLE_PRODUCTS =
+  a= 2 b= 1/2 product= 53/54 gap= 17/54
+  a= 2 b= 4/5 product= 27347/27000 gap= 9347/27000
+  a= 5 b= 1/10 product= 138853/176400 gap= 21253/176400
+  a= 1 b= 1/2 product= 145/144 gap= 49/144
+  a= 3/2 b= 1 product= 248/243 gap= 86/243
+SYMBOLIC_IDENTITIES_PASS = True
+ALL_EXACT_CHECKS_PASS = True

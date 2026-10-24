@@ -1,0 +1,44 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "claim_id": "RS-2026-CL-A",
+  "captured_master_before_report": "8ce1fc90d9fc4afdba28af0bca2f8334638f4a72",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-20/2026-09-20T01-51-00Z__report.md",
+    "creation_commit": "7488c20acc5020e41280ab2da5cc8a2a90031623",
+    "readback_blob": "72940b7d0b7004ef08f5a0e5978a73a4a6508896"
+  },
+  "metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": "NO_FROZEN_METRIC_MOVEMENT"
+  },
+  "status": "PROVED PARTIAL / LEVERAGE-TRIMMED ROBUSTIFICATION",
+  "new_claim": "If P=(1-eps)P_core+eps H, then the core low-degree advantage is at most [Adv(P,Q)+eps sqrt(E_H kappa_D)]/(1-eps), where kappa_D is the source low-degree Christoffel/leverage function. Therefore the inherited covariance-pressure + smoothed-tail theorem only needs high-degree regularity on a 1-o(1) core, provided eps sqrt(E_H kappa_{D_n})->0.",
+  "strict_improvement": "On the uniform Boolean cube, kappa_D=sum_{k<=D} binom(N,k). A parity core plus a point-mass contamination of weight eps=1/kappa_D has vanishing degree-D LDA and noised TV ->0, while every fixed-order Renyi divergence of the whole planted law is Theta(N) when D=o(N/log N). Thus whole-law Renyi regularity can fail maximally while the new theorem applies.",
+  "mao_boundary": "For Mao, Q is uniform and source LDA is exactly zero. Any decomposition with eps sqrt(sum_{k<=D_n}binom(N,k))->0 transfers vanishing LDA to the 1-o(1) core. Since Mao remains strongly distinguishable after fixed noise, no such dominant core can satisfy the inherited smoothed-tail regularity. Mao is therefore not explainable as a vanishing contamination below the low-degree resolution scale.",
+  "gaussian_transfer": "For standard Gaussian gamma_m, kappa_{m,D}(x)=sum_{1<=|alpha|<=D}He_alpha(x)^2/alpha!. Mehler gives 1+kappa_{m,D}(x)<=rho^{-D}(1-rho^2)^(-m/2)exp(rho||x||^2/(1+rho)), yielding a direct trimming certificate for P08/P09 rare Gaussian bad events.",
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-20/2026-09-20T02-46-00Z__report.md",
+    "creation_commit": "db355ef18407ded907aac9c1f320408a4cb5cb3e",
+    "readback_blob": "db96c207f2d1f16fc80aeb195dce4734e0ec1cca"
+  },
+  "cross_role_handoff": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-20T02-46-00Z__gaussian_tensor_leverage_handoff.md",
+    "creation_commit": "ca3c3a2fe3b7e975d9e9445909afdf161c9e45e1",
+    "readback_blob": "19571a149be1bc64669ed30af2dd5ee44083b872",
+    "roles": ["P08", "P09"],
+    "ownership_preserved": true
+  },
+  "audit_state": "0/2 qualifying independent full-claim audits; candidate proofs await later review without freezing research",
+  "recovery_state": "one HARD recovery cycle remains consumed; no new recovery cycle used",
+  "stagnation_state": "0 because the theorem removes whole-law tail regularity on low-degree-invisible exceptional planted mass and gives a sharp resolution scale",
+  "novelty": "UNVERIFIED; Christoffel/leverage and Mehler ingredients are prior art",
+  "next_attack": [
+    "Differentiate the noise-weighted covariance operator along a product-to-weak-Gibbs interpolation and seek a cluster-connected O(degree) susceptibility bound.",
+    "Develop a TV-tail or Orlicz/uniform-integrability criterion on the trimmed dominant core that is weaker than smoothed L2 yet still quantitatively excludes Mao.",
+    "Use the leverage theorem to isolate bad events first in Gaussian/tensor examples, then compare whether the remaining core admits the same covariance-pressure mechanism."
+  ],
+  "delivery": "GitHub only; native task remained enabled and its prompt/schedule were not modified; no email, Drive, public posting, permission change, force-push, or peer/historical overwrite"
+}

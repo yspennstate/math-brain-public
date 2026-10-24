@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "result": "PASS",
+  "checks": {
+    "core_matrix": [[0, "2*sqrt(3)", 0], ["2*sqrt(3)", 2, "sqrt(6)"], [0, "sqrt(6)", 3]],
+    "characteristic_polynomial": "lambda^3 - 5 lambda^2 - 12 lambda + 36",
+    "factorization": "(lambda+3)(lambda-2)(lambda-6)",
+    "core_eigenvalues": [-3, 2, 6],
+    "tail_eigenvalues": "+/- epsilon, multiplicity N each",
+    "target_gate": "0<epsilon<1 implies exactly three eigenvalues have modulus >=1",
+    "bilinear_M_operator_norm": "4*sqrt(3)",
+    "bilinear_M_HS_norm": "2*sqrt(12+N*epsilon^2)",
+    "auto20_diffuse_bank_bound": "8*sqrt(2)/sqrt(12*sqrt(3))",
+    "auto20_diffuse_bank_bound_numeric": 2.4816129576055994,
+    "pinned_theorem_C_core_integral_numeric": 1.2981166082242226,
+    "pinned_theorem_C_coarse_scaled_bound_numeric": 2.221441469079183,
+    "D5_volume_formula": "12*C(N,4)*epsilon^8 + C(N,5)*epsilon^10",
+    "example_D5_N4_epsilon_half": {
+      "Z5": 0.046875,
+      "bound": 15.832085079543702
+    }
+  },
+  "notes": [
+    "No random simulation is used as proof.",
+    "Theorem C is used only on the one-sheet side t>=0 for the exact rank-three N=0 core.",
+    "The Hilbert-Schmidt fused bound is whole-line; continuity comes separately from account03/B18 auto20 on the same scope.",
+    "No post-rotation independence is asserted."
+  ]
+}

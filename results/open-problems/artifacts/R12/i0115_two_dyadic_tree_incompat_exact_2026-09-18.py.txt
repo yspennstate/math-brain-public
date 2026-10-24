@@ -1,0 +1,53 @@
+from fractions import Fraction as F
+
+# Exact self-check for R12/I0115 finite two-dyadic-tree incompatibility witness.
+NMIN,NMAX=-5,3
+GA={-5:(F(1,96),F(1,80)),-4:(F(1,96),F(7,160)),-3:(F(7,96),F(7,160)),-2:(F(19,96),F(27,160)),-1:(F(19,96),F(67,160)),0:(F(67,96),F(67,160)),1:(F(67,96),F(227,160)),2:(F(259,96),F(227,160)),3:(F(643,96),F(867,160))}
+GB={-5:(F(1,72),F(1,88)),-4:(F(13,288),F(1,88)),-3:(F(13,288),F(13,176)),-2:(F(49,288),F(13,176)),-1:(F(49,288),F(57,176)),0:(F(49,288),F(145,176)),1:(F(337,288),F(145,176)),2:(F(337,288),F(497,176)),3:(F(1489,288),F(497,176))}
+PAIR_A=((F(1751,1000),F(-999,1000)),(F(-1249,1000),F(1,1000)))
+PAIR_B=((F(1,1000),F(251,1000)),(F(751,1000),F(469,250)))
+
+def s(n): return F(2)**n
+def floorf(q): return q.numerator//q.denominator
+def idx(p,G,n):
+    h=s(n);o=G[n]
+    return (floorf((p[0]-o[0])/h),floorf((p[1]-o[1])/h))
+def ctr(ij,G,n):
+    h=s(n);o=G[n]
+    return (o[0]+(F(ij[0])+F(1,2))*h,o[1]+(F(ij[1])+F(1,2))*h)
+def lca_n(x,y,G):
+    for n in range(NMIN,NMAX+1):
+        if idx(x,G,n)==idx(y,G,n): return n
+    raise AssertionError
+def route(x,y,G):
+    n=lca_n(x,y,G)
+    px=[x]+[ctr(idx(x,G,k),G,k) for k in range(NMIN,n+1)]
+    py=[ctr(idx(y,G,k),G,k) for k in range(NMIN,n)]
+    return px+list(reversed(py))+[y]
+def cross(a,b): return a[0]*b[1]-a[1]*b[0]
+def proper_intersection(a,b,c,d):
+    r=(b[0]-a[0],b[1]-a[1]);ss=(d[0]-c[0],d[1]-c[1]);q=(c[0]-a[0],c[1]-a[1]);den=cross(r,ss)
+    if den==0:return None
+    t=cross(q,ss)/den;u=cross(q,r)/den
+    if F(0)<t<F(1) and F(0)<u<F(1):return (a[0]+t*r[0],a[1]+t*r[1])
+def check_nested(G):
+    for n in range(NMIN,NMAX):
+        h=s(n)
+        for j in range(2): assert (G[n+1][j]-G[n][j])/h in (F(0),F(1))
+for G in (GA,GB):check_nested(G)
+print('NESTED_OFFSETS_PASS')
+a0,a1=PAIR_A;b0,b1=PAIR_B
+aA=s(lca_n(a0,a1,GA));aB=s(lca_n(a0,a1,GB));bA=s(lca_n(b0,b1,GA));bB=s(lca_n(b0,b1,GB))
+assert (aA,aB)==(F(4),F(8));assert (bA,bB)==(F(8),F(4))
+print('STRICT_TREE_SELECTION_PASS pairA=A(4<8) pairB=B(4<8)')
+RA=route(a0,a1,GA);RB=route(b0,b1,GB);hits=[]
+for i,(p,q) in enumerate(zip(RA,RA[1:])):
+    for j,(u,v) in enumerate(zip(RB,RB[1:])):
+        h=proper_intersection(p,q,u,v)
+        if h is not None and h not in [x[2] for x in hits]:hits.append((i,j,h))
+want={(F(-587,31680),F(4283,31680)),(F(-11513,31680),F(11323,31680))};got={h for _,_,h in hits}
+assert want.issubset(got)
+print('TWO_PROPER_CROSSINGS_PASS')
+for i,j,h in hits:
+    if h in want: print(' crossing',i,j,str(h[0]),str(h[1]))
+print('ALL_EXACT_CHECKS_PASS')

@@ -1,0 +1,59 @@
+{
+  "gate": {
+    "id": "w388-peer-shortcuts-20261010-v1",
+    "max_worlds": 256,
+    "max_cpu_seconds": 1,
+    "max_wall_seconds": 30,
+    "no_gpu": true,
+    "scope": "exact finite pattern/entropy controls only"
+  },
+  "command": "python -X utf8 check_peer_shortcuts.py",
+  "worlds": 256,
+  "fixed_pattern_probability": "1/256",
+  "selected_pattern_probability": "0",
+  "entropy_counterexamples": [
+    {
+      "n": 2,
+      "count": 2,
+      "marginal": "1/4",
+      "union": "1/2",
+      "strict_log_cardinality_gap": "log2 (constant, not diverging)"
+    },
+    {
+      "n": 4,
+      "count": 8,
+      "marginal": "1/16",
+      "union": "1/2",
+      "strict_log_cardinality_gap": "log2 (constant, not diverging)"
+    },
+    {
+      "n": 8,
+      "count": 128,
+      "marginal": "1/256",
+      "union": "1/2",
+      "strict_log_cardinality_gap": "log2 (constant, not diverging)"
+    },
+    {
+      "n": 16,
+      "count": 32768,
+      "marginal": "1/65536",
+      "union": "1/2",
+      "strict_log_cardinality_gap": "log2 (constant, not diverging)"
+    },
+    {
+      "n": 32,
+      "count": 2147483648,
+      "marginal": "1/4294967296",
+      "union": "1/2",
+      "strict_log_cardinality_gap": "log2 (constant, not diverging)"
+    }
+  ],
+  "L": 6,
+  "D": 421,
+  "eta": "1/268435456",
+  "c": 1.4747784265244686e-12,
+  "unrestricted_path_entropy_log3_minus_c": 1.098612288666635,
+  "wall_seconds": 0.013391999993473291,
+  "cpu_seconds": 0.015625,
+  "scope": "Whole high/low strata are classified exactly; no route-selection frequencies or asymptotic FPP conclusion are inferred."
+}

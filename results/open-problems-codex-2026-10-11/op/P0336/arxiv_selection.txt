@@ -1,0 +1,935 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/gKB1hwCKDEvOXBjCAhMJgTN9leA</id>
+  <title>arXiv Query: search_query=all:"optimal transport" AND (all:selection OR all:nonunique OR all:rectangles)&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-10-11T23:51:53Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22optimal+transport%22+AND+(all:selection+OR+(all:nonunique+OR+all:rectangles))&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>313</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.12305v1</id>
+    <title>From What to Which: Decoding Modifier Grounding in Frozen MLLMs</title>
+    <updated>2026-10-08T16:53:59Z</updated>
+    <link href="https://arxiv.org/abs/2610.12305v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.12305v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As Multimodal Large Language Models (MLLMs) can describe increasingly complex visual scenes, token-level grounding becomes crucial. Yet, when an MLLM generates "the yellow banana on the left", established grounding approaches focus on what is in the image ("banana"), overlooking tokens that help describe which instance is meant ("yellow", "left"). In this work, we ask whether frozen MLLM representations contain decodable grounding information about the referred instance across generated tokens, extending to modifiers such as attributes, spatial expressions, and relational/action terms. To address this question, we introduce OTTER, a lightweight supervised probe over frozen MLLM representations that uses Optimal Transport (OT) to align generated tokens with visual regions and produce compact grounding maps. Our results show that (i) instance-discriminative visual information can be decoded from modifier tokens, with the clearest evidence for spatial terms, but (ii) is not confined to them, as contextualized object nouns also carry referential information; (iii) the recovered grounding remains informative under context perturbations, while selected regions remain relevant to generation; and (iv) the learned OT-based grounding extends beyond the controlled setting to free generation and cross-dataset transfer.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-08T16:53:59Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Barbara Toniella Corradini</name>
+      <arxiv:affiliation>AI for Good</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Caterina Gallegati</name>
+      <arxiv:affiliation>University of Siena, Italy</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ludovica Genovese</name>
+      <arxiv:affiliation>AI for Good</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vittorio Murino</name>
+      <arxiv:affiliation>AI for Good</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.10257v1</id>
+    <title>First-order $Γ$-expansion for entropic optimal transport with non-degenerate costs</title>
+    <updated>2026-10-07T15:33:27Z</updated>
+    <link href="https://arxiv.org/abs/2610.10257v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.10257v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Entropy-regularized optimal transport (EOT) has become a key tool in optimal transport, providing both theoretical insight and efficient computation via the Sinkhorn algorithm. We study the first-order \(Γ\)-expansion of EOT as the regularization parameter \(\varepsilon\) vanishes, by rewriting EOT as the minimization of a relative entropy with respect to a Gibbs measure \(\gibbs\) associated with the duality gap energy. Using a mild extension of the Laplace method, we prove the convergence of the Gibbs measures and derive this \(Γ\)-expansion for non-degenerate ground costs, under suitable assumptions on the duality gap, the contact set and the marginals. This yields at the same time an entropic selection principle and an expansion of the EOT cost up to \(o(\varepsilon)\) for this class of ground costs, generalizing existing results.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-07T15:33:27Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Luca Nenna</name>
+    </author>
+    <author>
+      <name>Brendan Pass</name>
+    </author>
+    <author>
+      <name>Paul Pegon</name>
+    </author>
+    <author>
+      <name>Louis Tocquec</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.06101v1</id>
+    <title>Which modelling choices shape your interpolation map? An Optimal Transport sensitivity analysis for groundwater sulfate concentration</title>
+    <updated>2026-10-05T10:34:17Z</updated>
+    <link href="https://arxiv.org/abs/2610.06101v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.06101v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Spatial prediction maps are crucial for environmental management yet highly sensitive to subjective modelling choices such as, e.g., covariates, spatial dependence structures, or mesh resolution. We develop a workflow that attributes the resulting map uncertainty to these choices and is applicable to any spatial model, since it operates only on an ensemble of maps produced by propagating the choices through spatial prediction. This ensemble is then filtered to retain only models with acceptable predictive performance, reduced in dimension by principal component (PC) analysis, and the sensitivity of the resulting scores to each choice is quantified by global sensitivity analysis based on optimal transport (OT) metrics.
+  We demonstrate the framework with Bayesian geostatistics applied to the spatial mapping of sulphate concentrations in groundwater of Paris Basin (France), which is key for assessing groundwater chemical quality and establishing the natural geochemical baseline of aquifers. For this application, the covariates, mesh resolution, covariance models, and priors are combined into 18000 candidate configurations. These are filtered by cross-validated root mean square error (RMSE) and 95% coverage of the prediction interval, and the retained configurations are then inferred on a high-resolution grid and reduced to its three PCs. The OT analysis identifies covariate selection (under 95% coverage) and mesh resolution (under RMSE) as the dominant sources of uncertainty to the PCs, and a negligible one for the choice of the covariance model.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-05T10:34:17Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Corinna Perchtold</name>
+    </author>
+    <author>
+      <name>Jérémy Rohmer</name>
+    </author>
+    <author>
+      <name>Augustin Thomas</name>
+    </author>
+    <author>
+      <name>Julie Lions</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.04363v1</id>
+    <title>TacOT: Learning Contact-Rich Dexterous Manipulation from Human Demonstrations via Tactile-Guided Optimal Transport</title>
+    <updated>2026-10-03T08:00:56Z</updated>
+    <link href="https://arxiv.org/abs/2610.04363v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.04363v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning contact-rich dexterous manipulation from human demonstrations provides a scalable source of interaction data, yet transferring such skills to robots remains challenging due to unreliable human--robot correspondence. Existing human-to-robot transfer methods typically rely on visual appearance or motion similarity, which may associate similar motions with different contact states and force patterns. Tactile dynamics provide interaction-aware cues to distinguish manipulation processes with similar motions but different contact states. We introduce tactile-guided optimal transport (TacOT), a framework for human-to-robot contact-rich manipulation. TacOT leverages action--tactile dynamic time warping to identify human--robot demonstration correspondences with consistent interaction dynamics and uses these correspondences to guide soft optimal transport alignment in a shared policy representation space. This enables human demonstrations to provide contact-rich supervision for robot policy learning without requiring predefined frame-level human--robot pairing. Across four real-world dexterous manipulation tasks, TacOT improves closed-loop success rates over action-guided OT by up to 17 points on in-distribution tasks and 20 points under targeted human-to-robot out-of-distribution transfer. Further analyses show that tactile-guided correspondence selects demonstration pairs with more consistent contact dynamics and produces latent representations that better reflect interaction-state evolution. These results demonstrate that tactile dynamics provide an effective semantic signal for establishing reliable human-to-robot correspondence in contact-rich dexterous manipulation.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-03T08:00:56Z</published>
+    <arxiv:comment>9 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Xingting Li</name>
+    </author>
+    <author>
+      <name>Yifan Han</name>
+    </author>
+    <author>
+      <name>Zijian Lin</name>
+    </author>
+    <author>
+      <name>Wei Hou</name>
+    </author>
+    <author>
+      <name>Chuqiao Lyu</name>
+    </author>
+    <author>
+      <name>Shoujie Li</name>
+    </author>
+    <author>
+      <name>Wenbo Ding</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.03221v1</id>
+    <title>VDOT++: Unified Few-Step Video Generation via Unbalanced Optimal Transport Distillation</title>
+    <updated>2026-10-02T12:37:55Z</updated>
+    <link href="https://arxiv.org/abs/2610.03221v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.03221v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Video creation spans text-to-video (T2V), image-to-video (I2V), and condition-based generation, yet video diffusion models remain costly because they repeatedly evaluate large backbones during sampling. Distribution matching distillation (DMD) reduces this cost, but its reverse Kullback--Leibler (KL) objective can provide unstable or incomplete guidance when the student and teacher distributions have limited overlap. VDOT addressed this issue by adding optimal transport distillation (OTD), whose explicit coupling supplies geometric directions for condition-based generation. Balanced OTD, however, performs full-mass matching between the spatial tokens of each corresponding student--teacher frame pair. This assumption weakens for T2V and I2V, where one condition admits many valid outputs and spatial content need not align across different realizations. We present VDOT++, a unified distillation framework that applies the same training recipe separately to generators for the three task families. It makes OTD robust to output diversity through an asymmetric unbalanced formulation that allows unreliable student tokens to carry less mass while maintaining coverage of the teacher tokens. An $\ell_1$ ground cost further replaces mean-based aggregation with a more mode-preserving weighted median that limits the influence of distant transport targets. The two changes respectively determine whom to match and how the selected targets should be aggregated. We additionally combine distribution matching and adversarial refinement through sequential backward passes, and exploit the decoupled score networks for cross-scale distillation, where larger score networks improve a compact generator. Experiments on UVCBench, VBench, VBench-I2V, and the VACE benchmark show that the resulting four-step generators are competitive with many-step teachers and strong few-step baselines across all three task families.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-02T12:37:55Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yutong Wang</name>
+    </author>
+    <author>
+      <name>Xingtong Ge</name>
+    </author>
+    <author>
+      <name>Enhuai Liu</name>
+    </author>
+    <author>
+      <name>Yunke Wang</name>
+    </author>
+    <author>
+      <name>Tianfan Xue</name>
+    </author>
+    <author>
+      <name>Yu Qiao</name>
+    </author>
+    <author>
+      <name>Yaohui Wang</name>
+    </author>
+    <author>
+      <name>Xinyuan Chen</name>
+    </author>
+    <author>
+      <name>Chang Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.03162v1</id>
+    <title>Budgeted-GS: Real-Time Large-Scale Gaussian Splatting via Factoring LOD</title>
+    <updated>2026-10-02T11:42:49Z</updated>
+    <link href="https://arxiv.org/abs/2610.03162v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.03162v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>3D Gaussian Splatting achieves excellent visual quality with real-time rendering, but at the scale of entire cities it does not fit: a trained model carries millions of primitives and gigabytes of memory, and real-time rendering at high quality on a consumer GPU remains out of reach. We introduce Budgeted-GS, a post-hoc method that turns any trained 3DGS model into a factoring tree, a multi-resolution hierarchy of moment-matched aggregates. After a construction pass of a few seconds, a single quality parameter selects, for each view, the level of detail that fits the memory of the target device, so the same city-scale model serves GPUs with widely different memory capacities. When a new scene is to be trained, the same theory applies: instead of growing a full-sized model and compressing it afterwards, budget-centered training first measures how many primitives the scene needs and then trains the model directly at that size, avoiding the wasted effort of optimizing primitives that are later discarded. Both methods are grounded in a measurable capacity floor, a budget-error law derived from optimal transport in phase space; selection rules certified by recent covering theorems decide which primitives are redundant. The floor answers how many primitives a scene actually needs and how many can safely be given up. We validate the floor on 13 public scenes under a preregistered protocol, and exercise both methods from object scenes to an official city capture, rendering it at native 1920x1080, full SH, in real time on one consumer GPU.</summary>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-02T11:42:49Z</published>
+    <arxiv:comment>28 pages, 21 figures. Preprint of the EG 2027 submission (paper1075)</arxiv:comment>
+    <arxiv:primary_category term="cs.GR"/>
+    <author>
+      <name>Haipeng Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.01199v1</id>
+    <title>Low-Budget Active Learning through Entropic Optimal Transport</title>
+    <updated>2026-10-01T07:11:24Z</updated>
+    <link href="https://arxiv.org/abs/2610.01199v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.01199v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider low-budget active learning, which consists of selecting a limited number of points, the coreset, such that a model can be trained to high accuracy on the selection only. This problem is particularly relevant in contexts where labeling requires costly expert intervention, as in medical applications. We leverage features extracted from a pretrained self-supervised model to represent the data, and perform coreset selection directly in this feature space. In this paper, we use entropic optimal transport, specifically the Sinkhorn divergence, as the coreset selection criterion, which first allows us to get dimension-free sample complexity results, and second admits computationally efficient gradient evaluations. This opens the way to using gradient-based algorithms to rapidly compute solution candidates, further improved by a swap-based local search, with guarantees on the solution quality. Experiments on image benchmarks and medical datasets show that our method outperforms state-of-the-art heuristics in low-budget settings.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-01T07:11:24Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Rim Hajal</name>
+    </author>
+    <author>
+      <name>Mathieu Besançon</name>
+    </author>
+    <author>
+      <name>Jérôme Malick</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.40047v1</id>
+    <title>Gromov-Wasserstein Distillation for Inductive Multi-View Embedding</title>
+    <updated>2026-09-30T16:14:13Z</updated>
+    <link href="https://arxiv.org/abs/2609.40047v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.40047v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gromov-Wasserstein multidimensional scaling (GW-MDS) learns low-dimensional representations from relational data but remains transductive, providing no explicit mapping for unseen samples. We introduce an inductive framework based on barycentric distillation. A GW-MDS teacher learns a latent support and an optimal transport plan from the training data, and barycentric projection converts the resulting coupling into sample-aligned targets. A neural student then learns an explicit out-of-sample mapping, avoiding additional relational-matrix construction and GW optimization at inference. We formulate the approach for single-view data and extend it to Mean-GWMDS and Multi-GWMDS teachers through consensus and selected-projection targets learned by a multi-view student with view-specific encoders. We also investigate a direct neural baseline trained solely with a GW objective. Experiments on synthetic and real-world data using Euclidean, geodesic, and cosine relations show that the distilled models preserve the teacher geometry on unseen samples and consistently outperform direct neural GW training in sample-indexed relational preservation. These results establish barycentric projection as an effective bridge between transductive GW embeddings and inductive neural mappings.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-30T16:14:13Z</published>
+    <arxiv:comment>This paper was accepted at the GDDL (Geometric Distributional Deep Learning) Workshop at NeurIPS 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Rafael Pereira Eufrazio</name>
+    </author>
+    <author>
+      <name>Eduardo Fernandes Montesuma</name>
+    </author>
+    <author>
+      <name>Charles Casimiro Cavalcante</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.32824v2</id>
+    <title>Unlocking Geodesic Gromov-Wasserstein Distances for 3D Modeling</title>
+    <updated>2026-10-02T14:51:01Z</updated>
+    <link href="https://arxiv.org/abs/2609.32824v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.32824v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>\textit{Gromov-Wasserstein Distances} (GWDs) provide quantitative ways of comparing probabilistic distributions defined on different metric spaces by applying techniques from the optimal transport theory. As such, GWD can be potentially useful in a large variety of applications ranging from graph matching problems to 3D object detection. However its practical use at scale is significantly limited by cubic time complexity computations involving dense intra-space distance matrices. Even though in the Euclidean metric spaces several techniques (e.g. involving scalable kernel methods) were proposed to address it, to the best of our knowledge, analogous techniques for general geodesic distances on manifolds, or shortest-path distance on graphs in their discretized variants, were not developed. In this paper, we present \textbf{E}fficient \textbf{G}eodesic \textbf{Gro}mov-\textbf{W}asserstein methods (EGGroW), a new class of efficient algorithms designed to calculate geodesic Gromov-Wasserstein distances with entropic Sinkhorn-like approaches, leveraging recently introduced \textit{GenusSink} methods \citep{genussink} and the theory of random features. We provide important downstream applications, namely: 3D pose estimation and 3D template detection. In the latter setting, we formulate a partial 3D template recovery as a staged problem: capacity-constrained scene selection is followed by semi-relaxed recovery of template visibility and correspondence. Our empirical findings show that EGGroW provides accurate solutions when standard Euclidean-based techniques fail and is characterized by light computational footprint, as our theoretical analysis predicts.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-26T17:49:27Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Krzysztof Marcin Choromanski</name>
+    </author>
+    <author>
+      <name>Derek Long</name>
+    </author>
+    <author>
+      <name>Ananya Parashar</name>
+    </author>
+    <author>
+      <name>Dwaipayan Saha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.16317v1</id>
+    <title>Generative models for simulation based filtering: Formulations and Empirical Comparisons</title>
+    <updated>2026-09-14T20:31:29Z</updated>
+    <link href="https://arxiv.org/abs/2609.16317v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.16317v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This letter presents a unified formulation and a controlled numerical comparison of generative-model approaches to the nonlinear filtering problem. Under this formulation the analysis step is realized by a transport of the forecast distribution to the posterior, the approaches differing only in how that transport is selected and learned. We derive three new filters, based on stochastic interpolants, their deterministic flow-matching limit, and Schrödinger bridges realized through forward--backward SDEs. We develop a two-stage tuning procedure that separates the training of the generative model from its online refinement. The resulting methods are compared against the optimal transport filter (OTF), the Knothe--Rosenblatt filter (KRF), the sequential importance resampling (SIR) particle filter and the ensemble Kalman filter (EnKF), in terms of accuracy, computational time, and sensitivity to ensemble size and state dimension. The results indicate that every generative filter resolves multimodal posteriors that the EnKF and SIR do not, that no single generative framework dominates, the preferred method being set by the available online budget and ensemble size, and that the filters differ in the regularity of the particle trajectories they produce.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-14T20:31:29Z</published>
+    <arxiv:comment>6 pages, 2 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mohammad Al-Jarrah</name>
+    </author>
+    <author>
+      <name>Wei Deng</name>
+    </author>
+    <author>
+      <name>Bamdad Hosseini</name>
+    </author>
+    <author>
+      <name>Amirhossein Taghvaei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.15897v1</id>
+    <title>Bridging Control, Inference, Transport, and Thermodynamics: From Theory to Applications in Learning</title>
+    <updated>2026-09-14T17:16:33Z</updated>
+    <link href="https://arxiv.org/abs/2609.15897v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.15897v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The last decade has seen the development of powerful methods for learning complex structure from high-dimensional data. These advances have brought to the foreground fundamental connections between subdisciplines of physics, applied mathematics, and machine learning. In this review, we bring together some of these ideas, often expressed in different languages, to highlight a conceptual thread that links five distinct fields: control theory, optimal transport, probabilistic inference, non-equilibrium thermodynamics, and machine learning. A common theme is the optimization of free-energy-like functionals under dynamical or statistical constraints. We offer a guided tour through this thread and present selected applications in reinforcement learning, variational inference, and generative modeling. The review does not assume prior familiarity with these topics, and begins with principles originating from physics.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.bio-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-14T17:16:33Z</published>
+    <arxiv:comment>5 Chapters, 62 pages, 16 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Emmy Blumenthal</name>
+    </author>
+    <author>
+      <name>Nikolas Claussen</name>
+    </author>
+    <author>
+      <name>Benjamin Eysenbach</name>
+    </author>
+    <author>
+      <name>Catherine Ji</name>
+    </author>
+    <author>
+      <name>Gautam Reddy</name>
+    </author>
+    <author>
+      <name>Colin Scheibner</name>
+    </author>
+    <author>
+      <name>Benjamin Sorkin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.13587v1</id>
+    <title>The Generalized Excursion Coupling as the Limit of Concave Optimal Transport</title>
+    <updated>2026-09-11T22:52:00Z</updated>
+    <link href="https://arxiv.org/abs/2609.13587v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.13587v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Monge-Kantorovich problem with the Euclidean distance cost is degenerate, typically admitting infinitely many optimal plans. A unique optimal plan is selected by perturbing the distance to a strictly convex or increasing strictly concave cost and passing to the limit: the convex side gives the plan induced by the map which is monotone on each transport ray, while the concave side was understood only on the real line, where Juillet proved that power-cost optimizers converge to the so-called excursion coupling, which is induced by a map when the source is atomless. This paper extends the concave selection to $\mathbb{R}^n$ for mutually singular finite positive Borel measures $μ$ and $ν$ with equal total mass and finite first moments, assuming that $μ$ is absolutely continuous with respect to the Lebesgue measure: for a broad class of increasing strictly concave perturbations of the distance with a well-defined first-order profile, the corresponding optimal maps converge in $μ$-measure to the same intrinsic limit $t_\#$, independent of the perturbation family and its profile. The map $t_\#$ is obtained by disintegrating the transport along its maximal rays and applying the one-dimensional excursion coupling on each ray. The same limit is established for the power costs $\|x-y\|^{1-\varepsilon}$ under a finite $\|x\|\ln(1+\|x\|)$ moment condition, establishing a conjecture of Juillet.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-11T22:52:00Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Yash Kanoria</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.09866v1</id>
+    <title>UniStream: Multi-Expert Residual Vector Quantization for 48 kHz Causal Streaming Audio Coding</title>
+    <updated>2026-09-09T08:16:52Z</updated>
+    <link href="https://arxiv.org/abs/2609.09866v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.09866v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present UniStream, a fully causal 48 kHz neural audio codec for streaming speech, music, and environmental sounds. At its core is Multi-Expert Residual Vector Quantization (ME-RVQ), which replaces the single shared codebook in each residual quantization layer with four expert codebooks controlled by a deterministic Top-K router. Because routing decisions are derived solely from previously decoded quantized states, the decoder can reproduce the selected experts without transmitting expert identifiers, thereby expanding quantization capacity while adding 5.5M parameters. We further introduce an auxiliary Optimal Transport Conditional Flow Matching (OT-CFM) objective to regularize the quantized latent space during training. The flow module is removed entirely at inference and therefore incurs no runtime overhead. UniStream supports a 12 kbps Top-1 mode and a 22.5 kbps Top-2 mode within a causal 48 kHz encoder-decoder framework, while achieving real-time GPU inference. To complement narrow-band speech metrics, we report 48 kHz ViSQOL audio mode, ViSQOL speech mode, standard VGGish-FAD, DNSMOS P.835, and higher-rate reference comparisons with Opus and EnCodec. At 12 kbps, UniStream-Top1 achieves PESQ and UTMOS scores comparable to EnCodec while reducing speech Mel-D from 13.07 to 8.21. At 22.5 kbps, UniStream-Top2 achieves a ViSQOL speech-mode score of 4.67 and an environmental audio-mode score of 3.96, exceeding all evaluated systems operating at 12 kbps or below in the latter setting. It also comes within 0.03 MOS-LQO of Opus at 24 kbps on speech in ViSQOL audio mode. Ablation studies confirm that ME-RVQ is the primary source of quality improvement, whereas OT-CFM provides perceptual gains on speech with a mild trade-off in spectral distortion.</summary>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-09T08:16:52Z</published>
+    <arxiv:comment>15 pages, 1 figure, 5 tables. Accepted at NCMMSC 2026</arxiv:comment>
+    <arxiv:primary_category term="eess.AS"/>
+    <author>
+      <name>Mingyu Zhao</name>
+    </author>
+    <author>
+      <name>Zhiyong Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.05062v1</id>
+    <title>From plans to maps: Nonlocal regularization of optimal transport</title>
+    <updated>2026-09-04T12:25:04Z</updated>
+    <link href="https://arxiv.org/abs/2609.05062v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.05062v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a nonlocal regularization of optimal transport that bridges Kantorovich and Monge formulations. The regularization penalizes oscillations through an interaction kernel singular near the diagonal. We show that, for sufficiently strong singularities, every finite-energy transport plan is induced by a map, yielding equivalence between the regularized Kantorovich and Monge problems. For fractional kernels, the regularizer reduces to a fractional Sobolev seminorm that can allow jump discontinuities, leading to existence results for broad classes of source and target measures. We derive first-order optimality conditions and analyze the vanishing-regularization limit. The regularized functionals $Γ$-converge to the classical Kantorovich problem, while the first-order $Γ$-limit selects, whenever they exist, finite-energy Monge minimizers with minimal nonlocal energy. When no such minimizer exists, we identify a different asymptotic regime and establish a sharp scaling law in a prototypical mass-splitting example. Finally, after lifting the problem to the product of transport plans, we derive a dual formulation using the cone of copositive functions and propose a fixed-point numerical scheme illustrating the regularization.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-04T12:25:04Z</published>
+    <arxiv:comment>36 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Marcello Carioni</name>
+    </author>
+    <author>
+      <name>Leonardo Del Grande</name>
+    </author>
+    <author>
+      <name>José A. Iglesias</name>
+    </author>
+    <author>
+      <name>Hidde Schönberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.03516v1</id>
+    <title>Residual Optimal Transport-Based Experts Collaboration Towards Modality-Aware Infrared-Visible Object Detection</title>
+    <updated>2026-09-03T08:17:40Z</updated>
+    <link href="https://arxiv.org/abs/2609.03516v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.03516v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Infrared-visible object detection (IVOD) integrates complementary evidence from visible and infrared sensors for reliable perception in challenging scenes. In practice, sensors may fail or drop frames, leaving one modality unavailable or intermittent. Existing methods for IVOD assume both modalities are always present, and fixed fusion collapses when one stream is missing. Furthermore, it remains a critical challenge to reliably estimate semantic correlation across heterogeneous modalities, especially under spectral distribution discrepancy. We present FlexibleFusion, a unified and adaptive method that flexibly allocates integration pathways and fusion strength, operating seamlessly across complete and missing-modality regimes. At its core, the Modality-Aware Experts Collaboration (MAEC) mechanism selectively activates and aggregates cross-modal or intra-modal expert pathways. It allows cross-modal fusion when full modalities are available and falls back to self-fusion under missing conditions. Additionally, we design Residual Self-Paced Entropic Optimal Transport (RSPEOT) to align heterogeneous feature distributions from a transport perspective. Instead of relying on the fixed sparsity coefficient in standard entropic optimal transport (EOT), RSPEOT introduces a residual-driven self-paced update that prioritizes reliable matches and progressively refines harder ones. This design alleviates the additional optimization burden of standard EOT while preserving reliable semantic alignment. Comprehensive experiments under complete and missing-modality protocols show consistent performance across arbitrary modality configurations. Code will be released upon publication.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T08:17:40Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yue Zhao</name>
+    </author>
+    <author>
+      <name>Hua Yu</name>
+    </author>
+    <author>
+      <name>Yukun Zhao</name>
+    </author>
+    <author>
+      <name>Yuzhi Zhang</name>
+    </author>
+    <author>
+      <name>Maoguo Gong</name>
+    </author>
+    <author>
+      <name>Xin Mei</name>
+    </author>
+    <author>
+      <name>Zhuping Hu</name>
+    </author>
+    <author>
+      <name>Yanchi Li</name>
+    </author>
+    <author>
+      <name>A. K. Qin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.01387v1</id>
+    <title>Weighted persistence intensity regression</title>
+    <updated>2026-09-01T15:16:51Z</updated>
+    <link href="https://arxiv.org/abs/2609.01387v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.01387v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Persistence diagrams summarize the multiscale topological structure of data, and in applications they often arrive paired with covariates. We develop nonparametric methodology and theory for estimating the expected weighted persistence diagram conditional on a Euclidean covariate. Representing each weighted diagram as a finite random measure on a compact window, we take the density of its conditional expectation as the regression target, the conditional weighted persistence intensity. For a conditional double-kernel estimator we establish finite-sample sup-norm rates with a matching minimax lower bound, uniform rates in partial optimal transport, and an unbiased-risk cross-validation criterion for bandwidth selection. Simulations with analytically known intensities corroborate the theory and show that cross-validation selects the oracle candidate bandwidth in the exact-intensity design. The method is illustrated by studying how radial geometry in cerebral artery trees varies with age.</summary>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-01T15:16:51Z</published>
+    <arxiv:primary_category term="math.ST"/>
+    <author>
+      <name>Matteo Pegoraro</name>
+    </author>
+    <author>
+      <name>Mario Beraha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.29628v1</id>
+    <title>Mathematical modelling of a multicluster open system: transfer-operator recovery from aggregate data under a least-action prior</title>
+    <updated>2026-08-28T17:14:28Z</updated>
+    <link href="https://arxiv.org/abs/2609.29628v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.29628v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many open systems are observed only through aggregate snapshots, while the rule that moves objects between states stays hidden. This paper studies the inverse problem of recovering the transfer operator of a multicluster open system from two adjacent snapshots. The consistent operators fill an affine manifold: the data fix the aggregate flows and leave the internal routing free, so every recovery method commits to a prior that selects one operator. Tikhonov regularisation with a zero reference gives the uniform outflow on each source simplex, which underestimates retention in an inertial system. We propose least action on the operator trajectory, under which the rule changes as little as the data permit. In discrete time this is exact as a probability statement: the action prices a trajectory by its likelihood under a Gaussian reference drawn toward full retention, so least action selects the most probable trajectory consistent with the balance. A causal construction keeps the balance exact by moving the operator only inside the null space of the constraints, and we relate it to optimal transport, to Perron-Frobenius coarse-graining, and to the Schrödinger bridge. Two instantiations carry it: the Russian labour market and a radiation-damped relativistic electron ensemble. The construction holds the balance to machine precision where temporal smoothing corrupts it by twelve percent on the labour series and sixty percent in the physical one. The spectral gap is non-identifiable from aggregate snapshots but available from micro-trajectories, where Ulam's method reproduces the Landau-Lifshitz rate to within six percent. On the short labour series no method beats the naive forecast in point accuracy at conventional significance levels. The value is structural: an interpretable operator, an exactly preserved balance, and an explicit information limit of aggregate observation.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-28T17:14:28Z</published>
+    <arxiv:comment>42 pages, 10 figures, 5 tables. Extended version of an article accepted in Mathematical Modeling and Computational Methods (BMSTU). Code and data: doi:10.5281/zenodo.21140416. Preprint record: doi:10.5281/zenodo.21758814</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>A. P. Nevecheria</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.26693v1</id>
+    <title>High-Dimensional Spectral Limits for Gaussian KL-Unbalanced Optimal Transport</title>
+    <updated>2026-08-27T06:51:32Z</updated>
+    <link href="https://arxiv.org/abs/2608.26693v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26693v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study high-dimensional random-matrix limits of Gaussian Kullback--Leibler unbalanced optimal transport (KL-UOT). Under equal marginal penalties, the covariance action admits an exact log-determinant representation in terms of a nonlinear ridge product, together with a positive-semidefinite extension that remains finite at arbitrary aspect ratios. For independent real Wishart samples, strong asymptotic freeness gives the limiting free multiplicative convolution and almost-sure Hausdorff convergence of the ridge-product spectrum; independent Haar orientations yield the corresponding first-order limit for deformed populations. In the symmetric nonsingular identity-Wishart model, we derive an explicit $η$-transform and a low-degree algebraic equation that select the physical branch and determine the support interval, square-root edges, and extreme-eigenvalue limits. We further obtain all-aspect one-sample Marchenko--Pastur limits under finite fourth moments, real-Gaussian Bai--Silverstein fluctuations for $c&lt;1$, and a joint random-matrix/penalty limit showing that sample-covariance noise produces the critical scale $τ_p\asymp p$.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-27T06:51:32Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Jiaping Yang</name>
+    </author>
+    <author>
+      <name>Yunxin Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.25036v1</id>
+    <title>4DGS-JEPA: Temporally Compositional Joint-Embedding Prediction for Dynamic Gaussian Splatting</title>
+    <updated>2026-08-24T22:02:10Z</updated>
+    <link href="https://arxiv.org/abs/2609.25036v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.25036v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dynamic Gaussian Splatting provides an explicit representation of evolving 3D scenes, but existing approaches are primarily optimized for reconstruction, future-state generation, or rendering rather than for learning reusable predictive dynamics. We propose 4DGS-JEPA, a Gaussian-native joint-embedding predictive architecture for causal multi-horizon prediction over dynamic Gaussian scenes. The model uses a hierarchical scene-, motion-group-, and Gaussian-level representation together with a horizon-conditioned transition operator that supports both direct prediction and recursive rollout. Its central principle is temporal composition: different chronological transition paths reaching the same future endpoint should produce compatible predictive states. Endpoint and multi-horizon path supervision anchor these predictions to future target embeddings, while a selective geometry decoder and geometry-level composition ground the learned dynamics in consistent group motion and Gaussian geometry without requiring complete future appearance reconstruction. We further introduce a hybrid correspondence mechanism that combines persistent canonical identity with residual optimal-transport matching under reordering and topology change. We characterize zero-loss path agreement and finite-error rollout accumulation theoretically. Three controlled experiments provide mechanism-level evidence that temporal composition reduces latent path dependence while retaining predictive accuracy, geometry-level composition improves consistency of decoded motion, and hybrid correspondence preserves reliable identity while remaining robust when correspondence becomes ambiguous. Together, 4DGS-JEPA provides a predictive, temporally compositional formulation of dynamic Gaussian worlds.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-24T22:02:10Z</published>
+    <arxiv:comment>44 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yongchao Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.19933v1</id>
+    <title>Building atomistic models of heterointerfaces with optimal transport</title>
+    <updated>2026-08-20T11:46:06Z</updated>
+    <link href="https://arxiv.org/abs/2608.19933v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.19933v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Heterogeneous interfaces underpin technologies from microelectronics to energy conversion and storage, but their configurational complexity precludes exhaustive first-principles screening of interface registries. Although data-driven approaches can alleviate this burden, they remain limited by sparse interface datasets. Here, we introduce an energy-independent workflow that represents coherent interfaces as attributed graphs, quantifies their similarity to parent bulk environments using the fused Gromov-Wasserstein (FGW) distance, and couples this metric with Bayesian optimization over the in-plane registry space. We assess the approach for KI/NaCl, GaP/GaAs and GaN/$\mathrm{Al_{2}O_{3}}$ interfaces spanning ionic, covalent and mixed-bonding regimes, using hierarchical validation with MACE and density functional theory (DFT). Comparison with single-point energy landscapes shows that the FGW distance captures registry-dependent periodicity, while interfaces exhibit deviations between structural and energetic extrema, reflecting additional chemistry-specific contributions. Furthermore, FGW distances show an overall association with relaxed energies. Under limited screening budgets, FGW-guided registry selection consistently outperforms random search and is more robust across interface systems than selection guided by pretrained MACE energies. The workflow converts the qualitative notion of bulk-like continuity into a quantitative prescreening criterion, enabling efficient registry exploration and providing physically informed candidate structures for materials discovery workflows.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-20T11:46:06Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Yuxuan Tang</name>
+    </author>
+    <author>
+      <name>Keith T. Butler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.16101v1</id>
+    <title>EMS Coreset: An Efficient Expectation-Maximization Algorithm for Sinkhorn Coreset</title>
+    <updated>2026-08-17T04:46:34Z</updated>
+    <link href="https://arxiv.org/abs/2608.16101v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.16101v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Coresets distill large datasets into small, representative subsets for efficient downstream learning. Yet Optimal Transport (OT)-based selection typically requires intensive computation of transport plans, limiting scalability. We introduce a scalable Sinkhorn coreset method that permits closed-form updates of the entropically regularized OT coupling by allowing non-uniform coreset weights. This produces centroids that generalize k-means via soft assignments. We establish asymptotic consistency of the selected measure and Lipschitz stability to data perturbations, providing accuracy and robustness guarantees. Across synthetic and real-world benchmarks, the proposed method achieves competitive or improved approximation quality while substantially reducing runtime compared to Wasserstein- and standard Sinkhorn-based coreset selection, especially at large scale.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-17T04:46:34Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Haoyun Yin</name>
+    </author>
+    <author>
+      <name>Chuanhui Liu</name>
+    </author>
+    <author>
+      <name>Xiao Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.13418v1</id>
+    <title>Wasserstein Filtering: A Sample Selection Method for Robust Distribution Learning</title>
+    <updated>2026-08-13T16:12:28Z</updated>
+    <link href="https://arxiv.org/abs/2608.13418v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.13418v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a dataset where a portion of the samples are contaminated, our goal is to recover the underlying clean population distribution. To this end, we propose Wasserstein Filtering (WF), a novel sample selection framework that discards a fraction of suspicious samples and estimates the target distribution using the empirical measure of the remaining data. The core insight is to select a subset of samples whose empirical distribution maximizes its Wasserstein distance to the fully contaminated empirical distribution, thereby preferentially isolating and removing geometrically influential outliers. To render this optimization computationally tractable, we introduce three algorithms: a marginal screening scheme, SinkMarg, and two joint optimization algorithms, SinkWF and SlicedWF, leveraging entropic optimal transport and sliced Wasserstein approximations, respectively. On the theoretical front, we introduce the Far Exclusion and Local Projection (FELP) contamination model, which characterizes corruptions consisting of well-separated outliers and locally indistinguishable perturbations. Under this model, we prove that the WF estimator achieves minimax optimality over distribution families with bounded covariance. Extensive numerical experiments on synthetic datasets, benchmark anomaly detection suites, and robust generative learning with diffusion models demonstrate that WF serves as a highly practical, model-agnostic preprocessing tool. It delivers competitive outlier detection performance and provides substantial downstream benefits for generative modeling under heavy contamination.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-13T16:12:28Z</published>
+    <arxiv:comment>48 pages, 3 figures, and 11 tables</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Yikai Xu</name>
+    </author>
+    <author>
+      <name>Zhao Chen</name>
+    </author>
+    <author>
+      <name>Jian Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.13226v1</id>
+    <title>CoverPrune: Coverage-Driven Token Pruning for 3D VLMs via Optimal Transport</title>
+    <updated>2026-08-13T13:29:15Z</updated>
+    <link href="https://arxiv.org/abs/2608.13226v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.13226v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While 3D Vision-Language Models (3D VLMs) have demonstrated remarkable spatial reasoning capabilities, they suffer from massive visual token counts that create severe computational bottlenecks during inference. Existing token pruning methods primarily rely on diversity-based selection, discarding similar tokens to maximize dispersion. However, in 3D environments, this approach frequently drops representative prototype tokens in favor of outliers, breaking the multi-view consistencies and geometric structures essential for spatial reasoning. In this paper, we propose a paradigm shift for 3D VLM token pruning: from maximizing diversity to preserving visual evidence coverage. We introduce CoverPrune, a training-free framework that formulates inference-time token pruning as an Optimal Transport (OT) problem. To overcome the intractable combinatorial subset selection inherent in this formulation, we design the Feature-Spatial-Temporal (FST) transport cost and target capacity, along with an efficient Spatial-Guided Greedy Selection (SGS) algorithm to approximate the OT objective. Furthermore, we propose CoverPrune-Lite, an accelerated variant utilizing spatially structured local matching for minimal overhead. Extensive experiments across multiple 3D visual-spatial reasoning benchmarks demonstrate that our methods achieve state-of-the-art token efficiency, maintaining robust reasoning performance even under highly aggressive pruning budgets. Visit our project website at https://github.com/Brucess/CoverPrune.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-13T13:29:15Z</published>
+    <arxiv:comment>Accepted to ECCV 2026 as an Oral Presentation</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Peng Ling</name>
+    </author>
+    <author>
+      <name>Yingda Yin</name>
+    </author>
+    <author>
+      <name>Lingting Zhu</name>
+    </author>
+    <author>
+      <name>Weikai Chen</name>
+    </author>
+    <author>
+      <name>Shengju Qian</name>
+    </author>
+    <author>
+      <name>Zeyu Hu</name>
+    </author>
+    <author>
+      <name>Xin Wang</name>
+    </author>
+    <author>
+      <name>Wenming Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.12057v4</id>
+    <title>Towards Truly Unsupervised Evaluation of Feature Selection -- Extended Version</title>
+    <updated>2026-09-14T10:17:59Z</updated>
+    <link href="https://arxiv.org/abs/2608.12057v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.12057v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Feature selection is one of the most important and fundamental tasks in data mining, tackled by a family of methods with an established set of evaluation techniques to measure the quality of a specific method. Most of the methods commonly used for the unsupervised evaluation of feature selection algorithms suffer from critical design flaws which question their unsupervised nature. In this paper, we provide a critical discussion on the established allegedly unsupervised evaluation techniques, and shed light on the reasons why they are not truly unsupervised but, at best, supervised evaluation under an unsupervised downstream task. We also propose a novel, truly unsupervised evaluation framework to measure the quality of the feature selection algorithms without any form of information about the labels. The proposed framework utilizes unsupervised Principal Component Analysis, and optimal transport to measure the quality of the feature selection methods in a truly unsupervised manner.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T13:39:49Z</published>
+    <arxiv:comment>The paper is extended with Appendix. We have added the results for all the datasets and the ranking produced by each of the proposed metrics</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hafiz Saud Arshad</name>
+    </author>
+    <author>
+      <name>Muhammad Rajabinasab</name>
+    </author>
+    <author>
+      <name>Arthur Zimek</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.10619v1</id>
+    <title>Pair-Centric Graph Rewiring for Over-Squashing via Optimal Transport-Guided Communication Alignment</title>
+    <updated>2026-08-11T08:05:32Z</updated>
+    <link href="https://arxiv.org/abs/2608.10619v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.10619v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Message-passing neural networks (MPNNs) often struggle when task-relevant information is distributed across distant regions of a graph, since local propagation must compress remote signals through limited structural interfaces. Graph rewiring provides a structural response to over-squashing. Most existing methods rely on edge-level bottleneck scores or graph-level connectivity surrogates. With a limited rewiring budget, the key question is which pairwise communications most need structural support. This paper proposes PairAlign, a pair-centric graph rewiring framework that makes this question explicit through demand-support shortage. Specifically, PairAlign combines original-graph structural demand with current-graph finite-hop propagation support; their ratio highlights interactions whose communication demand is poorly supported by topology, and our theory shows that this score provides a computable proxy for the corresponding Jacobian-based shortage with a pair-level interpretation of over-squashing. Our theory reveals a two-sided effect of edge insertion: a new edge can create useful walks and simultaneously dilute existing normalized transition mass. Guided by this observation, PairAlign optimizes shortage to favor edge additions that alleviate over-squashing. Beyond selecting useful additions, PairAlign further introduces an Optimal Transport-guided rewiring mechanism to coordinate the finite edge budget for pair-level structural compatibility and shortage-target coverage. It formulates communication alignment between the candidate edge budget and the shortage targets, and the theory shows that this allocation covers shortage targets more broadly and effectively than a greedy-local assignment. Experiments on standard graph benchmarks show PairAlign's improvement across message-passing backbones, validating pair-level repair as an effective route for alleviating over-squashing.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-11T08:05:32Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yan Wang</name>
+    </author>
+    <author>
+      <name>Chuan-Xian Ren</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.08840v1</id>
+    <title>SLAP: Selective Local Vision-Language Alignment for Fish Re-Identification via Partial Optimal Transport</title>
+    <updated>2026-08-09T18:04:41Z</updated>
+    <link href="https://arxiv.org/abs/2608.08840v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.08840v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Individual fish re-identification (ReID) is a fine-grained recognition problem in which identity-discriminative cues are often localized to specific body regions rather than distributed uniformly across the animal. Nevertheless, recent CLIP-based ReID methods rely predominantly on global image-text alignment, allowing background and weakly discriminative regions to contribute to cross-modal supervision. We propose a selective local vision-language alignment framework that establishes localized correspondences between visual patch embeddings and multiple identity-aware prompt embeddings through Partial Optimal Transport (POT). Rather than enforcing exhaustive correspondence, POT enables selective matching between visual patches and prompt embeddings, allowing the model to emphasize the strongest cross-modal correspondences while avoiding forced alignment of weakly matching regions, thereby yielding more discriminative visual representations for retrieval. The framework is trained end-to-end, while only the adapted visual encoder is retained during inference. Experiments on the longitudinal Symphodus melops dataset demonstrate consistent improvements over recent CLIP-based ReID methods under both closed-set and open-set evaluation protocols. Additional evaluations on other datasets further demonstrate the generalization capability of the proposed method across diverse marine ReID benchmarks.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-09T18:04:41Z</published>
+    <arxiv:comment>This is the author version prior to incorporating the camera-ready comments. The final version will be included in the Proceedings of the European Conference on Computer Vision (ECCV) 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Cigdem Beyan</name>
+    </author>
+    <author>
+      <name>Tonje Knutsen Sordalen</name>
+    </author>
+    <author>
+      <name>Kim Tallaksen Halvorsen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.06824v1</id>
+    <title>Control-Anchored Residual Flow Matching Conditioned on Gene Geometry for Virtual Cell Perturbation Modeling</title>
+    <updated>2026-08-07T05:29:00Z</updated>
+    <link href="https://arxiv.org/abs/2608.06824v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.06824v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A central task in virtual cell modeling is predicting single-cell transcriptional responses to unseen genetic perturbations and drug combinations, and biological networks provide valuable priors on gene relationships. Existing graph-based models commonly use the same network to structure gene representations and mediate intergene interactions, thereby implicitly treating stable associations as perturbation-response pathways. Gene Ontology and control-derived coexpression networks encode relatively stable relationships rather than intervention-specific response directions or magnitudes. We therefore propose GeneGeoFlow, which conditions a control-anchored residual flow on gene-wise geometry derived from biological networks to learn intervention-specific transcriptional responses. GeneGeoFlow derives multi-scale spectral coordinates from Gene Ontology and control-derived coexpression networks. A perturbation-conditioned, gene-wise gating module selects relevant structural scales and network sources, yielding intervention-specific gene geometry. The resulting geometry conditions a control-anchored residual flow without explicitly propagating target-derived signals along the graph. Condition-wise optimal transport couples unpaired control and perturbed populations for training, while a Delta-correlation objective aligns the predicted and observed condition-level expression-shift directions. GeneGeoFlow achieves Pearson Delta scores of 0.8979 on the Norman additive benchmark and 0.9088 on five held-out drug combinations in the fixed ComboSciPlex test split. These results support perturbation-conditioned gene geometry as an effective structural prior for intervention-specific response prediction, without conflating stable gene relationships with response propagation.</summary>
+    <category term="q-bio.MN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T05:29:00Z</published>
+    <arxiv:primary_category term="q-bio.MN"/>
+    <author>
+      <name>Quanquan Li</name>
+    </author>
+    <author>
+      <name>Yihe Chi</name>
+    </author>
+    <author>
+      <name>Liuyang Song</name>
+    </author>
+    <author>
+      <name>Hongbo Zhang</name>
+    </author>
+    <author>
+      <name>Jingyu Li</name>
+    </author>
+    <author>
+      <name>Xidong Xi</name>
+    </author>
+    <author>
+      <name>Conghua Wei</name>
+    </author>
+    <author>
+      <name>Yijie Sun</name>
+    </author>
+    <author>
+      <name>Yu Chen</name>
+    </author>
+    <author>
+      <name>Xin Liu</name>
+    </author>
+    <author>
+      <name>Qi Hu</name>
+    </author>
+    <author>
+      <name>Jing Ke</name>
+    </author>
+    <author>
+      <name>Guitao Cao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.03249v1</id>
+    <title>One Knob to Rule Them All: A Unified Optimal Transport View of Cold-Start Active Learning</title>
+    <updated>2026-08-04T07:21:39Z</updated>
+    <link href="https://arxiv.org/abs/2608.03249v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03249v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cold-Start Active Learning (CSAL) aims to select a valuable subset from an unlabeled pool without any prior knowledge or human assistance. Existing methods take diverse routes based on typicality, coverage, or diversity. Each rests on its own inductive bias and therefore performs well on some tasks yet poorly on others. We argue that the real challenge is not to design yet another selection heuristic, but to make CSAL adapt automatically to the data and task at hand. To this end, we revisit CSAL through the lens of optimal transport. First, we propose a generalized transport selection framework that reveals the shared allocation structure of existing methods and exactly subsumes representative formulations. Second, we introduce a theoretical analysis that characterizes the trade-off controlled by entropic regularization and establishes a task-agnostic minimax bound for cold-start selection. These results provide a principled foundation for adapting the regularization strength to the unlabeled data. Third, we derive a data-adaptive regularization rule and present a novel Sinkhorn-based CSAL algorithm, termed $ε$-Adaptive Selection ($ε$-AS). Extensive experiments on six public datasets and multiple annotation budgets show that $ε$-AS consistently achieves state-of-the-art performance. On ImageNet-1k, it improves the average accuracy over ActiveFT by 1.29% while reducing selection time by 56.2%. Code will be released at https://github.com/Z-yiwei/OT-CSAL</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T07:21:39Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Ning Zhu</name>
+    </author>
+    <author>
+      <name>Xiaochuan Ma</name>
+    </author>
+    <author>
+      <name>Juntao Xu</name>
+    </author>
+    <author>
+      <name>Jingze Liang</name>
+    </author>
+    <author>
+      <name>Mengfei Zhao</name>
+    </author>
+    <author>
+      <name>An Chen</name>
+    </author>
+    <author>
+      <name>Liang-Jian Deng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.20260v1</id>
+    <title>Counterexamples and Sufficient Conditions: Comments on "Optimally-Transported Generalized Method of Moments"</title>
+    <updated>2026-08-04T02:51:56Z</updated>
+    <link href="https://arxiv.org/abs/2609.20260v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.20260v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We comment on the optimally-transported generalized method of moments (OTGMM) estimator proposed by Schennach &amp; Starck (2026a) and give counterexamples to Theorems 2-6 under their stated assumptions. First, the assumptions used in the small-error analysis are insufficient for consistency in Theorem 2 and asymptotic normality in Theorem 3. Next, we consider the large-error analysis, in which Theorem 4 states that the OTGMM estimator is equivalent to a GMM estimator with modified moments. We show that in a scalar model, Theorem 4 selects a value that differs from the unique OTGMM minimizer and violates the OTGMM sample moment restriction. In an overidentified model satisfying the assumptions used in Theorems 5 and 6, the first component of the Lagrange multiplier has different probability limits under the OTGMM estimator and the GMM estimator with modified moments. Under misspecification, the population value selected by OTGMM depends on the transport metric and on which variables may be adjusted. We give a sufficient condition under which solutions of the modified moment equations also solve the original constrained problem at a given parameter value, and separate conditions for consistency and asymptotic normality of the OTGMM estimator. We also show that Assumption 16 does not imply the matrix bound used in the supplemental proofs and replace Assumption 16 with a matrix condition that yields the bound.</summary>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T02:51:56Z</published>
+    <arxiv:comment>Comment on arXiv:2511.05712</arxiv:comment>
+    <arxiv:primary_category term="econ.EM"/>
+    <author>
+      <name>Masahiro Kato</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.25778v1</id>
+    <title>A Unified Benchmark and Modality-Adaptive Network for Day-and-Night Drone-View Geo-Localization</title>
+    <updated>2026-07-28T14:34:57Z</updated>
+    <link href="https://arxiv.org/abs/2607.25778v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.25778v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Most existing drone-view geo-localization (DVGL) benchmarks contain drone imagery captured under a single illumination condition and lack geographically aligned visible drone images, infrared drone images, and satellite images from the same locations. To evaluate the generalization capability of DVGL methods under challenging illumination conditions, some methods train models on a visible benchmark and test them on an independent infrared benchmark. This protocol essentially constitutes transfer between datasets, which makes it difficult to systematically evaluate DVGL across daytime and nighttime conditions within a unified benchmark. To address this limitation, we construct IRCHN,a real-world DVGL benchmark designed for localization across different illumination conditions. IRCHN contains 26,460 images collected from 8,820 geographic locations across four representative scene categories, including farmland, coastline, forest, and urban areas. Each location provides one visible drone image, one infrared drone image, and one corresponding satellite image, which enables unified evaluation of DVGL methods across different illumination conditions and sensing modalities. We further propose the Modality-Adaptive State-Space Transport Relation Network (MASTR-Net), a DVGL framework tailored to localization under varying illumination conditions. MASTR-Net integrates modality-adaptive feature enhancement, bidirectional selective state-space relation modeling, and soft optimal transport relation alignment to jointly reduce modality gaps and view-induced structural discrepancies. Extensive experiments demonstrate that MASTR-Net outperforms existing state-of-the-art methods on IRCHN for localization under varying illumination conditions and achieves competitive performance on two infrared benchmarks, IR-VL328 and CVGL-RGBT. Code: https://github.com/SongtianhaoXu/MASTR-Net</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-28T14:34:57Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Songtianhao Xu</name>
+    </author>
+    <author>
+      <name>Zhongwei Chen</name>
+    </author>
+    <author>
+      <name>Zhao-Xu Yang</name>
+    </author>
+    <author>
+      <name>Weifeng Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.24741v3</id>
+    <title>DrainSinkhorn: Safe Elimination for Batched Entropic Optimal Transport</title>
+    <updated>2026-09-03T17:09:20Z</updated>
+    <link href="https://arxiv.org/abs/2607.24741v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.24741v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fast entropic optimal transport backends reduce the cost of each Sinkhorn update, but static batches still run at full width until the slowest problem finishes. We introduce DrainSinkhorn, a verifier-gated active-packing layer for batches of independent Sinkhorn problems. It combines candidate-axis packing, a Sinkhorn-specific one-sided screen, verifier-gated retirement under the backend's configured two-sided residual check, and physical compaction of all candidate-indexed state. The EOT objective, per-instance Sinkhorn map, and stopping rule are unchanged; later kernels run only on unfinished problems.
+  We characterize the removable work exactly. If completion depths differ within a packed window, active execution removes the padding between the static batch rectangle and the observed survival curve. A quotient nonlinear Perron-Frobenius analysis gives a local explanation for these finite-tolerance depth differences: convergence depends on the full modal spectrum and proposal alignment, not only on the slowest mode.
+  DrainSinkhorn achieves state-of-the-art execution performance on the tested heterogeneous batched-EOT workloads within matched backend families. The complete Flash-backed OT path is 4.110x faster on MetroPT-3, 3.798x faster on ImageNet-32 feature couplings, and 1.250-1.270x faster across a five-tolerance Packer19 sweep. Independent implementations reach 2.600x on ImageNet-32 with OTT-JAX, 3.174x on A2D2 LiDAR with PyKeOps, and 1.415x on large ImageNet-32 PyKeOps couplings. End-to-end speedups remain 4.074x on MetroPT-3 and 2.786x on ImageNet-32 feature-space OT flow matching, with all reported residual, consumer-output, and training-quality checks passing.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-27T17:59:36Z</published>
+    <arxiv:comment>12 pages. Code: https://github.com/cis-aconiticacid/DrainSinkhorn</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Xinyang Wen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.18787v1</id>
+    <title>Image Editing Models are Numerical Solvers</title>
+    <updated>2026-07-21T07:06:46Z</updated>
+    <link href="https://arxiv.org/abs/2607.18787v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.18787v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate whether a pretrained generative image-editing model can provide a common interface for numerical simulation. Physical inputs and solutions are rendered as images, while scalar quantities such as material properties, diffusivity, and loading parameters enter through lightweight adapters. Using established numerical and analytic solvers for supervision, we apply the same architecture and training protocol to heterogeneous elliptic equations, forced heat and Burgers evolution, complex Ginzburg-Landau dynamics, two-dimensional Navier-Stokes prediction, potential flow, elasticity, eikonal travel time, phase-field fracture, and entropic optimal transport. The results show that a pretrained image model can represent diverse static and time-dependent physical mappings, including unstable and shock-like behavior, when each task is expressed through a suitable visual encoding. This work is a capability study rather than an attempt to surpass specialized solvers. It also identifies fundamental constraints: image and latent representations complicate numerical range selection and direct enforcement of governing equations or invariants, while a failed Kuramoto-Sivashinsky experiment indicates that representation errors prevent meaningful long-horizon simulation of chaotic systems.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-21T07:06:46Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Ulysse Mizrahi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.16881v1</id>
+    <title>Entropic optimal transport need not select a zero-temperature limit</title>
+    <updated>2026-07-18T16:43:29Z</updated>
+    <link href="https://arxiv.org/abs/2607.16881v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.16881v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct a compact metric space with an atomless probability measure and a bounded Lipschitz cost for which the entropic optimal-transport minimisers have no zero-temperature weak limit. More precisely, $P_\varepsilon$ does not converge as $\varepsilon\downarrow0$. In the example, every unregularised minimiser is singular with respect to $μ\otimesμ$, so that the entropy on the optimal face is identically $+\infty$. We describe the cluster set by \[ \operatorname{Clust}(P_\varepsilon)=\{P_w:w\in\mathcal W\}, \] where $P_w$ is the mixture of the two zero-cost graph couplings with weight $w$, and where $\mathcal W\subset[0,1]$ is a non-degenerate compact interval. We then compute two explicit points $w^-&lt;w^+$ in this interval. This shows that compactness, atomlessness, and Lipschitz regularity of the cost do not imply zero-temperature convergence. We also present a compactness theorem for the general problem. If $C\in L^1(μ\otimesν)$ is continuous and bounded from below on Polish spaces, then the zero-temperature cluster set is a nonempty weakly compact connected subset of the optimal face. In the proof, we apply the cluster-point theorem of Bernton, Ghosal, and Nutz and the continuity of $\varepsilon\mapstoπ_\varepsilon$. Finally, we give local and exterior first-order criteria for full convergence and cluster membership. We show that nonconvergence is possible, but only through a connected continuum of optimal plans.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-18T16:43:29Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Maja Gwozdz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.12551v1</id>
+    <title>Semismooth Newton methods for degenerate polyhedral projection</title>
+    <updated>2026-07-14T09:23:43Z</updated>
+    <link href="https://arxiv.org/abs/2607.12551v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.12551v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study dual semismooth Newton (SSN) methods for degenerate polyhedral projection problems, where generalized Jacobians of the dual residual may remain singular even arbitrarily close to the solution set. Rather than regularizing these singular systems, we exploit the nonuniqueness of the dual representation. We introduce a primal--dual lifted projection-equivalent set that always possesses extreme points without additional structural assumptions on the polyhedron, and show that its extreme-point geometry identifies dual representatives at which nonsingular generalized Jacobians of the dual residual can be constructed. This geometry is further linked to a full-column-rank condition and a generalized weak strict Robinson constraint qualification, showing that the regularity required by the Newton step can be recovered rather than imposed \emph{a priori}. We also establish displacement bounds that connect representative selection throughout the algorithm with the local Newton mechanism. Building on this variational framework, we develop an inexact dual SSN method with local superlinear convergence and a globalized version combining monotone representative selection with a Wolfe line search. The resulting method is globally convergent and eventually recovers the fast local rate. Numerical experiments on regularized optimal transport, battery-scheduling feasibility restoration, and occupation-measure projection demonstrate its robustness in highly degenerate settings.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-14T09:23:43Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Chao Ding</name>
+    </author>
+    <author>
+      <name>Fuxiaoyue Feng</name>
+    </author>
+    <author>
+      <name>Xudong Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.04809v1</id>
+    <title>Context-Constrained Transfer Learning for Tabular Foundation Models via Data Distillation</title>
+    <updated>2026-07-06T08:46:47Z</updated>
+    <link href="https://arxiv.org/abs/2607.04809v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.04809v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Tabular Foundation Models (TFMs) have demonstrated strong empirical performance as black-box inference engines through in-context learning. However, their use in transfer learning is limited by two obstacles: strict context-size constraints and sensitivity to distribution shifts between source and target tasks. Directly pooling heterogeneous source data can therefore lead to negative transfer. To address these challenges, we propose Context-Constrained Transfer Learning via ANchoring and DIstillation (TL-ANDI), a posterior-aware distillation framework for TFMs. TL-ANDI constructs a compact source context by solving a budget-constrained optimal transport problem whose cost jointly measures target covariate coverage and posterior compatibility. The selected anchor samples are then equipped with locally distilled labels and combined with a residual calibration step using target data.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-06T08:46:47Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Yijun Lin</name>
+    </author>
+    <author>
+      <name>Sai Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.28393v1</id>
+    <title>Transition-Aware best-of-N sampling for Longitudinal Chest X-ray Reports</title>
+    <updated>2026-06-23T23:11:59Z</updated>
+    <link href="https://arxiv.org/abs/2606.28393v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.28393v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In longitudinal clinical practice, every chest X-ray is read in the context of the patients prior exam, and much of what the radiologist communicates is the change from one visit to the next. To the best of our knowledge, we present the first training-free best-of-N sampling scheme for pre-trained chest X-ray report generators that is explicitly aware of this longitudinal prior to current transition. We call it transition-aware best-of-N sampling, each report is split into sentences and embedded into an unordered set in Rd; each (prior, current) pair is reduced to a fixed-dim directional vector via a set-to-set distance designed to encode the change between the two sets; and candidates are scored by cosine distance from their candidate transition vector to a cached bank of ground-truth training transition vectors, aggregated as min or kNN. We instantiate the framework with four directional set distances (mean-shift, novelty residual, directed-Hausdorff anchor, and cost-weighted optimal transport) and evaluate on a multi-visit AP-PA cohort, running inference under three prompts on three vision-language generators. Transition-aware best-of-N outperforms random selection across the board, with the largest relative gains on the Impression section.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-23T23:11:59Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Halil Ibrahim Gulluk</name>
+    </author>
+    <author>
+      <name>Max Van Puyvelde</name>
+    </author>
+    <author>
+      <name>Wim Van Criekinge</name>
+    </author>
+    <author>
+      <name>Olivier Gevaert</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.21585v5</id>
+    <title>A Transport-Based Geometry of Belief-Cost</title>
+    <updated>2026-07-06T14:31:29Z</updated>
+    <link href="https://arxiv.org/abs/2606.21585v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.21585v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A finite agent, a machine's digital twin or any bounded reasoner, infers a fixed and noisy world through finite sensors, so its coherent output is a belief: a probability density over states (the Bayes posterior). Such an agent stops short of certainty, and revising a belief carries a cost. We propose a framework for belief costs based on optimal transport, motivated by these facts. We pose two postulates. P0 (the arena): a revision cost is a scalar price on optimal transport, so beliefs live in Wasserstein space. P1 (uniform pricing): one nat of knowledge costs the same metric length everywhere, the eikonal condition. Among conceivable pricing rules we study this one. Under P0 and P1 the cost metric is optimal transport conformally reweighted by Fisher information, $\tilde g_{e,U}=2(e+U)\,g_{W_2}$, and the Fisher family is a characterization: among continuous reliefs, uniform pricing is equivalent to $U=cJ$. Two consequences follow on the conformal class. Certainty sits at infinite cost-distance once the relief dominates the Fisher information, so a well-posed inference has a cost floor diverging at certainty (necessity conjectural beyond power laws). On location-scale leaves the geometry is hyperbolic, and the Stam bound places the Gaussian as the most curved one (at $e=0$). The results are geometric, in nats, and hold up to units: a change of cost unit rescales all distances and preserves every conclusion (boundary, eikonal family, hyperbolicity, Gaussian extremum), a gauge theorem; a global change of state units at $e=0$ is an isometry; the content lies in signs, rankings and ratios. Via Landauer (one nat worth $k_BT$) the cost floor becomes an energy floor: revising toward certainty would demand unbounded energy. Physics anchors the unit and enters no theorem. Removing either postulate leaves the selection open.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-19T16:41:28Z</published>
+    <arxiv:comment>27 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Laurent Caraffa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.20878v1</id>
+    <title>Understanding Latent Flow Models for Tabular Data Synthesis: Targets, Paths, and Sampling</title>
+    <updated>2026-06-18T19:09:21Z</updated>
+    <link href="https://arxiv.org/abs/2606.20878v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20878v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Synthetic tabular data enables microdata sharing in regulated domains, yet deploying continuous-time generative models requires balancing analytical utility, disclosure risk, and computational cost. Latent-space flow models are flexible, but theoretical equivalences across learning targets, probability paths, and sampling dynamics can translate into different behaviour under finite-step integration and explicit compute budgets. We present an empirical study of tabular latent flow models across seven datasets, evaluating velocity, score, noise, and posterior matching objectives under optimal transport (OT) and variance-preserving (VP) paths, ODE and SDE sampling, and varying integration budgets. Our contributions are threefold: (1) we show that the learning target largely determines the utility-risk operating regime, with velocity and posterior matching tending to yield higher utility, while score and noise matching tend to achieve lower disclosure risk; (2) we demonstrate that configuration and sampling choices shift performance, with midpoint often improving distributional fidelity and OT paths often tolerating earlier stopping than VP, enabling compute savings under fixed budgets or risk thresholds; and (3) we distil these findings into actionable defaults and practical configuration guidance to support pre-release model selection under disclosure risk and resource constraints. The code implementation and supplementary materials can be accessed in https://github.com/rulnasution/tabular-latent-flow/.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-18T19:09:21Z</published>
+    <arxiv:comment>Accepted at ECML-PKDD 2026, Applied Data Science Track. 18 pages main, 27 pages supplementary, 7 figures, 45 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Bahrul Ilmi Nasution</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.19148v1</id>
+    <title>Fast Computation of Free-Support Wasserstein Medians</title>
+    <updated>2026-06-17T14:50:29Z</updated>
+    <link href="https://arxiv.org/abs/2606.19148v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.19148v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Wasserstein median is a robust alternative to the Wasserstein barycenter for averaging probability measures, but exact empirical computation can be expensive. A natural metric-space Weiszfeld scheme updates the current candidate by solving a weighted Wasserstein barycenter problem at each outer iteration, producing a nested optimization problem. We propose a direct fixed-weight free-support solver that avoids this inner barycenter loop. At each iteration, the method solves exact optimal transport (OT) subproblems from the current candidate to the input measures, computes barycentric projections of the selected plans, and relocates each support atom to an inverse-distance-weighted average of its projected destinations. For a smoothed median objective, we show that this relocation is the exact minimizer of a tight majorization--minimization surrogate. This yields monotone descent for exact transport subproblems, convex-hull invariance, a finite-time best-residual rate, residual-to-gradient control under differentiability, and fixed-point and stationarity characterizations. We also give smoothing, stability, and resolution-consistency results clarifying the fixed-weight approximation. In exact-OT benchmarks, the direct solver attains median objectives close to tightly solved nested Weiszfeld baselines while using substantially fewer exact transport subproblems. Additional contamination, posterior aggregation, and image-prototype experiments show that the direct solver produces median summaries comparable to nested computation and less sensitive to outlying distributions than Wasserstein barycenters.</summary>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-17T14:50:29Z</published>
+    <arxiv:primary_category term="stat.CO"/>
+    <author>
+      <name>Kisung You</name>
+    </author>
+    <author>
+      <name>Mauro Giuffré</name>
+    </author>
+    <author>
+      <name>Dennis Shung</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.19057v1</id>
+    <title>Quantifying and Auditing LLM Evaluation via Positive--Unlabeled Learning</title>
+    <updated>2026-06-17T13:26:04Z</updated>
+    <link href="https://arxiv.org/abs/2606.19057v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.19057v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) are increasingly used as judges for scalable evaluation, yet such LLM--as--a--Judge systems exhibit systematic biases that are decoupled from semantic quality, most notably verbosity bias. Meanwhile, human supervision is costly and typically selective, yielding reliable positive judgments but leaving most outputs unlabelled and potentially mixed in quality. We formulate LLM evaluation under selective human supervision as a positive--unlabelled learning problem and propose a geometric auditing framework based on Partial Optimal Transport. By aligning a small set of human--verified positives with a reliable subset of unlabelled outputs in a fixed embedding space, our method identifies human--consistent preferences and corrects biased judges without retraining. Experiments demonstrate improved alignment with human preferences, increased robustness to presentation biases, and interpretable confidence estimates, offering a scalable and statistically grounded alternative to existing LLM--as--a--judge pipelines.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-17T13:26:04Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Zilong Zhang</name>
+    </author>
+    <author>
+      <name>Yi-Ting Hung</name>
+    </author>
+    <author>
+      <name>Lei Ding</name>
+    </author>
+    <author>
+      <name>Chi-Kuang Yeh</name>
+    </author>
+  </entry>
+</feed>

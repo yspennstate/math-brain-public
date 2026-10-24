@@ -1,0 +1,339 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\TV}{\mathrm{TV}}
+\DeclareMathOperator{\dc}{dc}
+
+\hypersetup{pdftitle={The binary and ternary harmonic measures of the Cantor set are mutually singular},pdfauthor={Yitzchak Shmalo}}
+
+\title[Binary and ternary harmonic measures of the Cantor set]{The binary and ternary harmonic measures\\ of the Cantor set are mutually singular}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+
+\subjclass[2020]{60J10, 31C20, 28A80, 11A63}
+\keywords{harmonic measure, random walk on trees, coding tree, Cantor set, mutual singularity, Hellinger affinity, digit changes}
+
+\begin{document}
+
+\begin{abstract}
+Let $E$ be the middle-thirds Cantor set and, for an integer $b\ge 2$, let $\nu_b$ be the measure on $E$ obtained by pushing forward the harmonic measure of simple random walk on the tree of $b$-adic intervals that meet $E$. The measure $\nu_3$ is the Cantor measure. Lyons and Peres asked whether $\nu_2$ and $\nu_3$ are mutually singular. We show that they are. The proof compares the conditional splits of the two measures on dyadic cells through Hellinger affinities. At one explicit dyadic cell, whose intersection with $E$ is a single ternary cylinder, the Cantor measure splits evenly while the harmonic measure, computed as an electrical current, does not; an exact computation with rational arithmetic bounds the harmonic split away from $1/2$, and the discrepancy persists for all nearby positions and scales of the cylinder. A Fourier argument resting on Stewart's theorem on digit changes in the bases $2$ and $3$ then shows that, if the two measures were not singular, such cells would carry a fixed share of their overlap at infinitely many levels, which is incompatible with the summability of the Hellinger losses.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $E\subset[0,1]$ be the middle-thirds Cantor set. For an integer $b\ge2$, an interval $[kb^{-n},(k+1)b^{-n}]$ with integers $k,n$ is called $b$-adic of order $n$, and the \emph{coding tree} $T_{[b]}(E)$ has as its vertices the $b$-adic intervals contained in $[0,1]$ that meet $E$, with an edge between two such intervals when one is contained in the other and their orders differ by one; its root is $[0,1]$~\cite[p.~15]{LP}. Each end of $T_{[b]}(E)$, that is, each decreasing sequence $I_0\supset I_1\supset\cdots$ of intervals along a ray from the root, codes the point $\bigcap_nI_n$ of $E$. Simple random walk on $T_{[b]}(E)$ is transient (Lemma~\ref{lem:frostman} below), so it converges to an end, and the law $\mu_b$ of that end is the harmonic measure. Let $\nu_b$ be its image on $E$ under the coding map. As Lyons and Peres note, $\nu_3$ is the Cantor measure~\cite[p.~542]{LP}.
+
+Lyons and Peres observe that the base used for coding $E$ does not affect transience of critical random walk, and they state the following question as open~\cite[Question~16.7, p.~542]{LP}: is $\nu_2\perp\nu_3$? We answer it.
+
+\begin{theorem}\label{thm:main}
+The measures $\nu_2$ and $\nu_3$ are mutually singular.
+\end{theorem}
+
+The proof compares the conditional probabilities with which $\nu_2$ and $\nu_3$ split a dyadic interval between its two halves. If the measures were not mutually singular, their Hellinger affinities on the dyadic partitions would stay bounded away from zero, and this forces the two splits to agree in a square-summable sense, averaged over the dyadic cells with weights given by the overlap of the two measures (Corollary~\ref{cor:finite-series}). The splits of $\nu_2$ are current splits in an electrical network. At the dyadic cell $[4/128,5/128]$, whose intersection with $E$ is the ternary cylinder $[8/243,9/243]$ and whose midpoint falls in the central gap of that cylinder, the Cantor measure splits evenly, while the harmonic measure gives the left half more than $0.507$ of the mass. We prove the latter with a flow bound on the left and a wired network on the right, evaluated in rational arithmetic (Proposition~\ref{prop:base}), and the inequality persists, with a uniform margin, for every cell whose picture of $E$ is a nearby translate and rescaling of the same cylinder (Lemma~\ref{lem:robust}). Such cells occur at a level $n$ whenever the ternary expansion of a point of $E$ up to the scale $2^{-n}$ ends in two $2$s and sits in a suitable position inside its dyadic cell. A Fourier computation shows that, for every probability measure absolutely continuous with respect to $\nu_3$, the position of the cylinder in its dyadic cell becomes equidistributed and asymptotically independent of the last ternary digits (Lemma~\ref{lem:mixing}). This rests on Stewart's theorem that $2^{n}k$ has many digit changes in base $3$~\cite{Stewart}, used in the same way by Allen, Chow and Yu~\cite{ACY} in their work on dyadic approximation in the Cantor set. Applied to the overlap of $\nu_2$ and $\nu_3$, it produces a positive share of good cells at infinitely many levels, and the sum of the Hellinger losses diverges.
+
+\section{Harmonic measure on coding trees}\label{sec:prelim}
+
+\subsection*{Networks}
+We use the electrical apparatus of~\cite[Chapter~2]{LP} with unit conductances. For a vertex $v$ of a locally finite rooted tree $T$ write $T^v$ for the subtree of descendants of $v$ (including $v$), and for $R\ge1$ let $\mathcal C_R(v)$ be the effective conductance in $T^v$ between $v$ and the set of descendants at distance $R$ from $v$, all identified to one vertex. By Rayleigh's monotonicity principle~\cite[p.~35]{LP}, $\mathcal C_R(v)$ is nonincreasing in $R$, and its limit $\mathcal C(v)$ is the effective conductance from $v$ to infinity in $T^v$~\cite[p.~27]{LP}. For a child $c$ of $v$, the branch consisting of the edge $(v,c)$ followed by $T^c$ has conductance
+\[
+G(c)=\frac{\mathcal C(c)}{1+\mathcal C(c)}\qquad(G(c)=0\text{ if }\mathcal C(c)=0),
+\]
+and $\mathcal C(v)=\sum_cG(c)$, the sum over the children of $v$. We use two bounds.
+
+\begin{lemma}\label{lem:bounds}
+Let $c$ be a vertex of $T$.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item If $\theta$ is a unit flow from $c$ to infinity in $T^c$ with energy $\mathcal E(\theta)=\sum_e\theta(e)^2<\infty$, then $G(c)\ge 1/(1+\mathcal E(\theta))$.
+\item For every $R\ge1$, $G(c)\le \mathcal C_R(c)/(1+\mathcal C_R(c))$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+By~\cite[Theorem~2.11 and Proposition~2.12, p.~39]{LP}, $T^c$ is transient and $1/\mathcal C(c)$ is the minimum of the energies of unit flows from $c$ to infinity, so $1/\mathcal C(c)\le\mathcal E(\theta)$, which is (i). Part (ii) follows from $\mathcal C(c)\le\mathcal C_R(c)$ and the monotonicity of $x\mapsto x/(1+x)$.
+\end{proof}
+
+Suppose simple random walk on $T$, started at the root $o$, is transient, and let $i$ be the unit current flow from $o$ to infinity. Lyons and Peres show that the harmonic measure of the set of ends passing through a vertex $x$ is $i(e(x))$, where $e(x)$ is the edge from $x$ to its parent~\cite[p.~539]{LP}. The current splits at a vertex $v$ in proportion to the branch conductances:
+\begin{equation}\label{eq:split}
+i(e(c))=i(e(v))\,\frac{G(c)}{\mathcal C(v)}\qquad\text{for each child $c$ of $v$, when }\mathcal C(v)>0.
+\end{equation}
+Indeed, let $i_R$ be the unit current from $o$ in the network obtained from $T$ by identifying all vertices at distance $R$ from $o$ into one vertex $z_R$. For $R$ larger than the depth of $v$, each branch below $v$ meets the rest of this network only at $v$ and at $z_R$, so the currents $i_R(e(c))$ are proportional to the conductances $\mathcal C_{R'}(c)/(1+\mathcal C_{R'}(c))$ of these branches, with $R'$ the distance from $c$ to $z_R$. As $R\to\infty$, $i_R\to i$ pointwise~\cite[Proposition~2.12, p.~39]{LP} and $\mathcal C_{R'}(c)\to\mathcal C(c)$, which gives~\eqref{eq:split}.
+
+\subsection*{The coding trees}
+Let $d=\log_32$ and let $\nu=\nu_3$ be the Cantor measure, with distribution function $F$.
+
+\begin{lemma}\label{lem:frostman}
+For every interval $J\subset\R$, $\nu(J)\le 2|J|^d$. Consequently simple random walk on $T_{[2]}(E)$ is transient.
+\end{lemma}
+
+\begin{proof}
+If $|J|\ge1/3$ then $\nu(J)\le1\le2|J|^d$, and if $|J|=0$ then $\nu(J)=0$. Otherwise choose $m\ge0$ with $3^{-m-1}\le|J|<3^{-m}$. The ternary cylinders of order $m+1$, the intervals of the $(m+1)$st stage of the construction of $E$, have length $a=3^{-m-1}$, mass $2^{-m-1}=a^d$, and are separated by gaps of length at least $a$. An interval of length less than $3a$ meets the interiors of at most two of them, so $\nu(J)\le 2a^d\le 2|J|^d$.
+
+For the second assertion, define $\theta$ on the edge $e(I)$ above each vertex $I$ of $T_{[2]}(E)$ by $\theta(e(I))=\nu(I)$. Since $\nu$ has no atoms, $\theta$ is a unit flow from the root to infinity, and by the first part its energy is at most $\sum_{n\ge1}\max_{|I|=2^{-n}}\nu(I)\le\sum_n2\cdot2^{-dn}<\infty$. Transience follows from~\cite[Theorem~2.11, p.~39]{LP}.
+\end{proof}
+
+We write $\mu=\nu_2$. For a dyadic interval $I$ meeting $E$, $\mu(I)$ is the harmonic measure of the ends through the vertex $I$: an end not passing through $I$ can only code an endpoint of $I$, a point of $E$ is coded by at most two ends of $T_{[2]}(E)$, and harmonic measure has no atoms, because an end of positive harmonic measure $a$ would carry current at least $a$ on each of the infinitely many edges of its ray and the unit current flow has finite energy. Hence $\mu$ has no atoms, and $\mu(I)$ is the same for closed and half-open dyadic intervals. Below, $\cD_n$ is the partition of $[0,1)$ into the half-open dyadic intervals $I_{n,k}=[k2^{-n},(k+1)2^{-n})$, $0\le k<2^n$; we use the same name for the closed interval when it is a vertex of the tree. For $v\in\cD_n$ let $v0,v1\in\cD_{n+1}$ be its left and right halves. When $\mu(v)\nu(v)>0$ put
+\[
+p_v=\frac{\mu(v0)}{\mu(v)},\qquad q_v=\frac{\nu(v0)}{\nu(v)}.
+\]
+By~\eqref{eq:split}, if both halves of $v$ meet $E$ then $p_v=G(v0)/(G(v0)+G(v1))$, where $G$ is computed in $T_{[2]}(E)$; it depends only on the subtree $T^v$.
+
+\section{Hellinger affinities}\label{sec:hellinger}
+
+For $n\ge0$ let
+\[
+A_n=\sum_{v\in\cD_n}\sqrt{\mu(v)\nu(v)}.
+\]
+
+\begin{lemma}\label{lem:hellinger}
+The sequence $(A_n)$ is nonincreasing, and $\mu\perp\nu$ if and only if $A_n\to0$.
+\end{lemma}
+
+\begin{proof}
+Let $\rho=(\mu+\nu)/2$, $f=d\mu/d\rho$, $g=d\nu/d\rho$, let $\cF_n$ be the $\sigma$-field generated by $\cD_n$, and let $f_n=\mathbb E_\rho[f\mid\cF_n]$, $g_n=\mathbb E_\rho[g\mid\cF_n]$. On $v\in\cD_n$ we have $f_n=\mu(v)/\rho(v)$ and $g_n=\nu(v)/\rho(v)$, so $A_n=\int\sqrt{f_ng_n}\,d\rho$. The inequality $\sqrt{\mu(v0)\nu(v0)}+\sqrt{\mu(v1)\nu(v1)}\le\sqrt{\mu(v)\nu(v)}$ (Cauchy--Schwarz) gives $A_{n+1}\le A_n$. The fields $\cF_n$ generate the Borel field of $[0,1)$, so by the martingale convergence theorem $f_n\to f$ and $g_n\to g$ $\rho$-almost everywhere; since $0\le f_n,g_n\le2$, dominated convergence gives $A_n\to\int\sqrt{fg}\,d\rho$. This integral vanishes if and only if $fg=0$ $\rho$-almost everywhere, that is, if and only if $\mu\perp\nu$.
+\end{proof}
+
+For $v\in\cD_n$ let $w_n(v)=\sqrt{\mu(v)\nu(v)}/A_n$, a probability vector on $\cD_n$ (if $A_n>0$), and let
+\[
+h(p,q)=\sqrt{pq}+\sqrt{(1-p)(1-q)}.
+\]
+Expanding $A_{n+1}$ over the halves of each $v\in\cD_n$ gives
+\begin{equation}\label{eq:cocycle}
+A_{n+1}=A_n\sum_{v\in\cD_n}w_n(v)\,h(p_v,q_v),
+\end{equation}
+where the sum runs over the $v$ with $w_n(v)>0$. Moreover
+\begin{equation}\label{eq:hloss}
+1-h(p,q)=\tfrac12\Big[\big(\sqrt p-\sqrt q\big)^2+\big(\sqrt{1-p}-\sqrt{1-q}\big)^2\Big]\ge\tfrac14(p-q)^2,
+\end{equation}
+since $|p-q|=|\sqrt p-\sqrt q|(\sqrt p+\sqrt q)$ and $|(1-p)-(1-q)|=|\sqrt{1-p}-\sqrt{1-q}|(\sqrt{1-p}+\sqrt{1-q})$, where both sums of square roots are at most $2$, so that each of the two squares in the bracket is at least $(p-q)^2/4$.
+
+\begin{corollary}\label{cor:finite-series}
+If $A_\infty=\lim_nA_n>0$, then
+\[
+\sum_{n\ge0}\ \sum_{v\in\cD_n}w_n(v)(p_v-q_v)^2<\infty.
+\]
+\end{corollary}
+
+\begin{proof}
+Let $L_n=\sum_vw_n(v)(1-h(p_v,q_v))\in[0,1]$. By~\eqref{eq:cocycle}, $A_{n+1}=A_n(1-L_n)$, so $\sum_n-\log(1-L_n)=\log(A_0/A_\infty)<\infty$. Since $-\log(1-x)\ge x$, $\sum_nL_n<\infty$, and~\eqref{eq:hloss} gives the claim.
+\end{proof}
+
+\section{A dyadic cell where the two splits differ}\label{sec:gap}
+
+\subsection*{Sceneries}
+For $0<u<u+r<1$ let $K_{u,r}=u+rE$ and let $\nu_{u,r}$ be the image of $\nu$ under $x\mapsto u+rx$. We call $K_{u,r}$ a \emph{scenery}. If $D$ is a closed dyadic interval and $D\cap E$ is a ternary cylinder $C$ contained in the interior of $D$, then the affine map from $D$ onto $[0,1]$ carries $C\cap E$ onto some $K_{u,r}$, it carries the dyadic subintervals of $D$ that meet $E$ onto the dyadic subintervals of $[0,1]$ that meet $K_{u,r}$, and therefore it is an isomorphism of $T^D$ (in $T_{[2]}(E)$) onto $T_{[2]}(K_{u,r})$, the tree of dyadic intervals meeting $K_{u,r}$. It also carries $\nu(\,\cdot\cap D)/\nu(D)$ to $\nu_{u,r}$. If $1/2\notin K_{u,r}$ and both halves of $[0,1]$ meet $K_{u,r}$, let
+\[
+p(u,r)=\frac{G_{u,r}([0,\tfrac12])}{G_{u,r}([0,\tfrac12])+G_{u,r}([\tfrac12,1])},\qquad q(u,r)=\nu_{u,r}([0,\tfrac12]),
+\]
+with $G_{u,r}$ computed in $T_{[2]}(K_{u,r})$. Then $p_D=p(u,r)$ and $q_D=q(u,r)$ whenever $\mu(D)\nu(D)>0$, by the last paragraph of Section~\ref{sec:prelim}.
+
+\subsection*{The base cell}
+Let $D_0=[4/128,5/128]$, the closed dyadic interval of order $7$ with $k=4$. The ternary cylinder $C_0=[8/243,9/243]$ of order $5$, with digits $0,0,0,2,2$, lies in the interior of $D_0$, and the neighbouring cylinders of order $5$, $[6/243,7/243]$ and $[18/243,19/243]$, lie outside $D_0$, so $D_0\cap E=C_0\cap E$. The corresponding scenery is $K_{u_0,r_0}$ with
+\[
+u_0=\frac{52}{243},\qquad r_0=\frac{128}{243},
+\]
+and
+\begin{equation}\label{eq:margins0}
+\frac{u_0}{r_0}=\frac{13}{32}<1,\qquad \frac{1-u_0-r_0}{r_0}=\frac{63}{128}<9,\qquad \frac{1/2-u_0}{r_0}=\frac{139}{256}\in\Big(\frac13,\frac23\Big).
+\end{equation}
+The last relation says that $1/2$ lies in the image of the central gap $(1/3,2/3)$ of $E$, so $q(u_0,r_0)=1/2$.
+
+\begin{proposition}\label{prop:base}
+In $T_{[2]}(E)$, the halves $D_0'=[8/256,9/256]$ and $D_0''=[9/256,10/256]$ of $D_0$ satisfy
+\[
+G(D_0')\ge\frac{22568879259648}{72515958735737}=0.31122\ldots,\qquad G(D_0'')\le\frac{13703}{45323}=0.30234\ldots,
+\]
+hence $p_{D_0}\ge \dfrac{1022889314685026304}{2016575497240830415}=0.50724\ldots$, while $q_{D_0}=1/2$.
+\end{proposition}
+
+\begin{proof}
+Let $\theta$ be the flow on $T^{D_0'}$ with $\theta(e(J))=\nu(J)/\nu(D_0')$ for every vertex $J\ne D_0'$; here $\nu(D_0')=1/64$. As in Lemma~\ref{lem:frostman}, $\theta$ is a unit flow from $D_0'$ to infinity. Its energy is
+\[
+\mathcal E(\theta)=\sum_{s\ge1}\ \sum_{J}\Big(\frac{\nu(J)}{\nu(D_0')}\Big)^2,
+\]
+where $J$ runs over the dyadic intervals of order $8+s$ in $D_0'$. The terms with $s\le8$ add up to $955961/524288$; this is a finite computation with the exact values of $F$ at dyadic rationals (Section~\ref{sec:computations}). For $s\ge9$, the inner sum is at most $\max_J\nu(J)/\nu(D_0')$, since the values $\nu(J)/\nu(D_0')$ add up to $1$, and by Lemma~\ref{lem:frostman} this is at most $64\cdot 2\cdot2^{-d(8+s)}=128\,q_0^{8+s}$ with $q_0=2^{-d}=0.6457\ldots<2/3$. Hence
+\[
+\sum_{s\ge9}128\,q_0^{8+s}=\frac{128\,q_0^{17}}{1-q_0}<384\Big(\frac23\Big)^{17}=\frac{16777216}{43046721},
+\]
+and
+\[
+\mathcal E(\theta)<E_*:=\frac{955961}{524288}+\frac{16777216}{43046721}=\frac{49947079476089}{22568879259648}.
+\]
+Lemma~\ref{lem:bounds}(i) gives $G(D_0')\ge1/(1+E_*)$, the first bound.
+
+For the second, the subtree of $T^{D_0''}$ down to distance $6$ consists of the dyadic intervals of orders $9$ to $14$ in $D_0''$ that meet $E$; whether such an interval meets $E$ is decided exactly (an endpoint lies in $E$, or $F$ increases across it). The effective conductance between $D_0''$ and its descendants at distance $6$, wired together, is computed by the series--parallel recursion $\mathcal C_R(v)=\sum_c\mathcal C_{R-1}(c)/(1+\mathcal C_{R-1}(c))$, $\mathcal C_0=\infty$, and equals $13703/31620$. Lemma~\ref{lem:bounds}(ii) gives $G(D_0'')\le 13703/45323$.
+
+Both halves of $D_0$ meet $E$, so by~\eqref{eq:split} $p_{D_0}=G(D_0')/(G(D_0')+G(D_0''))$, and this ratio is increasing in $G(D_0')$ and decreasing in $G(D_0'')$.
+\end{proof}
+
+\begin{lemma}\label{lem:robust}
+There are open intervals $U\ni u_0$ and $R\ni r_0$, with $\overline R\subset(1/3,1)$, and $\eta>0$ such that every $(u,r)\in U\times R$ satisfies
+\begin{equation}\label{eq:margins}
+0<u<u+r<1,\qquad \frac ur<1,\qquad\frac{1-u-r}{r}<9,\qquad\frac{1/2-u}{r}\in\Big(\frac13,\frac23\Big),
+\end{equation}
+$q(u,r)=1/2$ and $p(u,r)\ge1/2+\eta$.
+\end{lemma}
+
+\begin{proof}
+The inequalities~\eqref{eq:margins} are strict at $(u_0,r_0)$ by~\eqref{eq:margins0}, so they hold on a product of small open intervals around $u_0$ and $r_0$, and we may take $\overline R\subset(1/3,1)$ since $r_0=0.526\ldots$. The last one says that $1/2$ lies in the image of the central gap of $E$, so both halves of $[0,1]$ meet $K_{u,r}$, $1/2\notin K_{u,r}$, and $q(u,r)=1/2$. Put $a=1/(1+E_*)$ and $b=13703/45323$, so that $a>b$ by Proposition~\ref{prop:base}.
+
+\emph{The left half.} For $(u,r)$ as above let $\theta_{u,r}$ be the flow on $T^{[0,1/2]}$ in $T_{[2]}(K_{u,r})$ given by $\theta_{u,r}(e(J))=\nu_{u,r}(J)/\nu_{u,r}([0,\tfrac12])=2\nu_{u,r}(J)$. It is a unit flow from $[0,1/2]$ to infinity, and its energy is $\Phi(u,r)=\sum_{s\ge1}\Phi_s(u,r)$, where $\Phi_s(u,r)=\sum_J4\nu_{u,r}(J)^2$ over the dyadic intervals $J\subset[0,1/2]$ of length $2^{-s-1}$ (those not meeting $K_{u,r}$ have $\nu_{u,r}(J)=0$). Each $\Phi_s$ is a finite sum of squares of differences $F((y-u)/r)-F((x-u)/r)$, where $F$ is extended by $0$ on $(-\infty,0)$ and by $1$ on $(1,\infty)$; since $F$ is continuous, $\Phi_s$ is continuous. By Lemma~\ref{lem:frostman}, $\Phi_s(u,r)\le\max_J2\nu_{u,r}(J)\le4(2^{-s-1}/r)^d$, and on a neighbourhood where $r$ is bounded below this bound is summable uniformly in $(u,r)$. Hence $\Phi$ is continuous. At the base point the affine isomorphism of $T^{D_0}$ onto $T_{[2]}(K_{u_0,r_0})$ carries the flow $\theta$ of the proof of Proposition~\ref{prop:base} to $\theta_{u_0,r_0}$, so $\Phi(u_0,r_0)=\mathcal E(\theta)<E_*$. After shrinking $U$ and $R$ we have $\Phi<E_*$ on $U\times R$, and Lemma~\ref{lem:bounds}(i) gives $G_{u,r}([0,\tfrac12])>a$ there.
+
+\emph{The right half.} The network used for the upper bound in Proposition~\ref{prop:base}, transported to $T_{[2]}(K_{u_0,r_0})$, is the subtree of $T^{[1/2,1]}$ down to distance $6$, with the vertices at distance $6$ wired. It is determined by which of the dyadic intervals of $[1/2,1]$ of length $2^{-2},\dots,2^{-7}$ meet $K_{u_0,r_0}$. Their endpoints are among the points $j/128$, $0\le j\le128$, and none of these lies in $K_{u_0,r_0}$: equivalently, none of the points $(512+j)/2^{14}$ lies in $E$, which is again a finite exact check. So for each such interval $J$, either $J\cap K_{u_0,r_0}=\emptyset$, and then $J$ has positive distance from $K_{u_0,r_0}$, or the interior of $J$ contains a point $u_0+r_0x$ with $x\in E$. Since $|(u+rx)-(u_0+r_0x)|\le|u-u_0|+|r-r_0|$ for $x\in[0,1]$, both alternatives persist for $(u,r)$ near $(u_0,r_0)$. After shrinking $U$ and $R$, the wired network is the same for all $(u,r)\in U\times R$, its conductance is $13703/31620$, and Lemma~\ref{lem:bounds}(ii) gives $G_{u,r}([\tfrac12,1])\le b$.
+
+Hence $p(u,r)\ge a/(a+b)$ on $U\times R$, and $\eta=a/(a+b)-1/2>0$.
+\end{proof}
+
+\section{The overlap measure}\label{sec:overlap}
+
+Suppose that $\mu$ and $\nu$ are not mutually singular. By Lemma~\ref{lem:hellinger}, $A_n\to A_\infty>0$. With the notation of the proof of Lemma~\ref{lem:hellinger}, define probability measures $\lambda_n$ and $\lambda$ by
+\[
+\frac{d\lambda_n}{d\rho}=\frac{\sqrt{f_ng_n}}{A_n},\qquad\frac{d\lambda}{d\rho}=\frac{\sqrt{fg}}{A_\infty}.
+\]
+For $v\in\cD_n$, $\lambda_n(v)=\sqrt{\mu(v)\nu(v)}/A_n=w_n(v)$. Since $\sqrt{f_ng_n}\to\sqrt{fg}$ in $L^1(\rho)$ (pointwise convergence and the bound $2$) and $A_n\to A_\infty$,
+\begin{equation}\label{eq:tv}
+\|\lambda_n-\lambda\|_{\TV}\le\int\Big|\frac{\sqrt{f_ng_n}}{A_n}-\frac{\sqrt{fg}}{A_\infty}\Big|\,d\rho\longrightarrow0.
+\end{equation}
+The density of $\lambda$ vanishes where $g=0$, so $\lambda\ll\nu$. In particular $|\lambda_n(B_n)-\lambda(B_n)|\to0$ for every sequence of Borel sets $B_n$.
+
+\section{Digit changes and equidistribution}\label{sec:mixing}
+
+For a positive integer $N$ and a base $b\ge2$, write $N=\sum_{i=0}^{\Delta-1}e_ib^i$ with digits $e_i\in\{0,\dots,b-1\}$ and $e_{\Delta-1}\ne0$, and let $\dc_b(N)=\#\{1\le i\le\Delta-1:e_i\ne e_{i-1}\}$ be the number of digit changes of $N$ in base $b$.
+
+\begin{theorem}[{Stewart~\cite{Stewart}; see also~\cite{BCM} and~\cite[Theorem~6.9]{Bugeaud}}]\label{thm:stewart}
+Let $a,b\ge2$ be multiplicatively independent integers. There is an effectively computable constant $c$ such that $\dc_a(N)+\dc_b(N)\ge\dfrac{\log\log N}{\log\log\log N+c}-1$ for all sufficiently large $N$.
+\end{theorem}
+
+The next lemma is the estimate in the proof of Lemma~2.6 of Allen, Chow and Yu~\cite{ACY}. Write $e(t)=e^{2\pi it}$, so that $|(1+e(t))/2|=|\cos\pi t|$.
+
+\begin{lemma}\label{lem:digits}
+Let $N=\sum_ie_i3^i$ be a positive integer with ternary digits $e_i$ \textup{(}$e_i=0$ for $i\ge\Delta$\textup{)}, and let $j\ge2$. If $e_{j-1}\ne e_{j-2}$, then $|\cos(\pi N/3^j)|\le\cos(\pi/9)$. Consequently, for integers $1\le K<M$,
+\[
+\prod_{j=K+1}^M\big|\cos(\pi N/3^j)\big|\le\cos(\pi/9)^{\,\dc_3(N)-(K-1)-\max(0,\Delta-M)}.
+\]
+\end{lemma}
+
+\begin{proof}
+The fractional part of $N/3^j$ is $t=e_{j-1}/3+e_{j-2}/9+t'$ with $0\le t'=\sum_{i<j-2}e_i3^{i-j}<1/9$. If $e_{j-1}=0$ then $e_{j-2}\ge1$ and $t\in[1/9,1/3)$; if $e_{j-1}=1$ then $t\in[1/3,2/3)$; if $e_{j-1}=2$ then $e_{j-2}\le1$ and $t\in[2/3,8/9)$. In all cases $t\in[1/9,8/9]$, where $|\cos\pi t|\le\cos(\pi/9)$. For the product, each change $e_i\ne e_{i-1}$ with $K\le i\le M-1$ contributes a factor at most $\cos(\pi/9)$ (take $j=i+1$), and at most $K-1$ of the changes counted by $\dc_3(N)$ have $i<K$ and at most $\max(0,\Delta-M)$ have $i\ge M$.
+\end{proof}
+
+Every $x\in E$ has a unique expansion $x=\sum_{j\ge1}\xi_j3^{-j}$ with $\xi_j\in\{0,2\}$; under $\nu$ the digits $\xi_j$ are independent and uniform on $\{0,2\}$. For $m\ge1$ let $a_m(x)=\sum_{j\le m}\xi_j3^{-j}$, so that $C_m(x)=[a_m(x),a_m(x)+3^{-m}]$ is the ternary cylinder of order $m$ containing $x$. Let
+\[
+\alpha=\log_32,\qquad m_n=\lceil\alpha n\rceil,\qquad r_n=2^n3^{-m_n}=3^{\{\alpha n\}-1}\in(1/3,1)\qquad(n\ge1),
+\]
+using that $\alpha$ is irrational ($2^q=3^p$ has no solution in positive integers), and
+\[
+u_n(x)=\{2^na_{m_n}(x)\}\in[0,1).
+\]
+Thus $C_{m_n}(x)$ has length $r_n2^{-n}$, and its left endpoint lies at relative position $u_n(x)$ in the dyadic interval of order $n$ that contains $a_{m_n}(x)$.
+
+\begin{lemma}\label{lem:mixing}
+Let $\lambda$ be a probability measure on $E$ with $\lambda\ll\nu$, let $L\ge1$ and $s\in\{0,2\}^L$, and let $S_n=\{x\in E:(\xi_{m_n-L+1}(x),\dots,\xi_{m_n}(x))=s\}$. For every continuous $\phi$ on $\R/\Z$,
+\[
+\int_{S_n}\phi(u_n(x))\,d\lambda(x)\longrightarrow2^{-L}\int_0^1\phi(t)\,dt\qquad(n\to\infty).
+\]
+Consequently $\lambda(S_n\cap\{u_n\in J\})\to2^{-L}|J|$ for every interval $J\subset[0,1)$.
+\end{lemma}
+
+\begin{proof}
+Let $h=d\lambda/d\nu$ and, for $K\ge1$, let $h_K$ be the conditional expectation of $h$ under $\nu$ given $\xi_1,\dots,\xi_K$. By the martingale convergence theorem $\|h-h_K\|_{L^1(\nu)}\to0$, and replacing $h$ by $h_K$ changes the integral by at most $\|\phi\|_\infty\|h-h_K\|_{L^1(\nu)}$, uniformly in $n$. It is therefore enough to prove the statement with $h_K\,d\nu$ in place of $d\lambda$ for each fixed $K$, and, by uniform approximation with trigonometric polynomials, for $\phi(t)=e(kt)$, $k\in\Z$. Let $n$ be so large that $m=m_n>K+L$.
+
+For $k=0$ the integral is $\int\one_{S_n}h_K\,d\nu=2^{-L}\int h_K\,d\nu=2^{-L}$, since the digits $\xi_{m-L+1},\dots,\xi_m$ are independent of $\xi_1,\dots,\xi_K$.
+
+Let $k\ne0$ and write $\xi_j=2\beta_j$. Since $k$ is an integer,
+\[
+e(ku_n(x))=e(k2^na_m(x))=\prod_{j\le m}e(k2^{n+1}\beta_j/3^j).
+\]
+Integrating first over the independent digits $\beta_{K+1},\dots,\beta_{m-L}$ shows that
+\[
+\Big|\int_{S_n}e(ku_n)\,h_K\,d\nu\Big|\le2^{-L}\prod_{j=K+1}^{m-L}\Big|\frac{1+e(2^{n+1}k/3^j)}2\Big|=2^{-L}\prod_{j=K+1}^{m-L}\big|\cos(\pi N_n/3^j)\big|,
+\]
+with $N_n=2^{n+1}|k|$. The binary expansion of $N_n$ is that of $|k|$ followed by $n+1$ zeros, so $\dc_2(N_n)\le\dc_2(|k|)+1$, and Theorem~\ref{thm:stewart} gives $\dc_3(N_n)\to\infty$. The number of ternary digits of $N_n$ is at most $\log_3N_n+1\le m+\alpha+\log_3|k|+1$, so in Lemma~\ref{lem:digits} with $M=m-L$ we have $\Delta-M\le L+2+\log_3|k|$. Hence the product tends to $0$, which proves the first statement.
+
+For the second, approximate $\one_J$ from above and below by continuous functions on $\R/\Z$ whose integrals differ from $|J|$ by less than any given $\varepsilon>0$.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+\begin{lemma}\label{lem:isolate}
+Let $C$ be a ternary cylinder of order $m\ge2$ whose last two digits are $2,2$, and let $\ell=3^{-m}$. The nearest point of $E$ to the left of $C$, if there is one, lies at distance $\ell$ from $C$, and the nearest point of $E$ to the right of $C$, if there is one, lies at distance at least $9\ell$ from $C$.
+\end{lemma}
+
+\begin{proof}
+Order the cylinders of order $m$ from left to right; identifying the digits $0,2$ with the binary digits $0,1$, this is the lexicographic order of binary words of length $m$, and the left endpoint of the word $\beta$ is $\sum_j2\beta_j3^{-j}$. The points of $E$ outside $C$ lie in the other cylinders, so it suffices to look at the neighbouring ones. The word of $C$ ends in $11$; its predecessor ends in $10$ and agrees with it otherwise, so its left endpoint is $2\ell$ to the left of that of $C$ and its right endpoint is $\ell$ to the left of $C$. If the word of $C$ has a successor, it ends with $01^t$ for some $t\ge2$ and the successor replaces this by $10^t$; the left endpoint moves right by $2\cdot3^t\ell-\sum_{i=0}^{t-1}2\cdot3^i\ell=(3^t+1)\ell$, so the gap after $C$ has length $3^t\ell\ge9\ell$.
+\end{proof}
+
+Suppose that $\mu$ and $\nu$ are not mutually singular, and let $\lambda_n$, $\lambda$ be the measures of Section~\ref{sec:overlap}. Let $U$, $R$ and $\eta$ be as in Lemma~\ref{lem:robust}, and for $n\ge1$ with $m_n\ge2$ let
+\[
+B_n=\{x\in E:\ \xi_{m_n-1}(x)=\xi_{m_n}(x)=2,\ u_n(x)\in U\}.
+\]
+Let $n$ be such that $r_n\in R$ and let $x\in B_n$. Write $m=m_n$, $\ell=3^{-m}=r_n2^{-n}$, and let $D$ be the closed dyadic interval of order $n$ whose left endpoint is $2^{-n}\lfloor2^na_m(x)\rfloor$. By~\eqref{eq:margins}, $C_m(x)$ lies in the interior of $D$; the left end of $D$ is at distance $u_n(x)2^{-n}<r_n2^{-n}=\ell$ from $C_m(x)$, and the right end at distance $(1-u_n(x)-r_n)2^{-n}<9\ell$. By Lemma~\ref{lem:isolate}, $D\cap E=C_m(x)\cap E$, and the scenery of $D$ is $K_{u_n(x),r_n}$. Every $y\in E\cap D$ has the same first $m$ digits as $x$, hence lies in $B_n$. Since $x$ lies in the interior of $D$, the half-open interval of $\cD_n$ containing $x$ is $D$ without its right endpoint. So $B_n$ is the union of the sets $E\cap v$ over the family $\mathcal G_n$ of those $v\in\cD_n$ that meet $B_n$, and every $v\in\mathcal G_n$ with $w_n(v)>0$ satisfies, by Lemma~\ref{lem:robust} and Section~\ref{sec:gap},
+\[
+q_v=\tfrac12,\qquad p_v\ge\tfrac12+\eta.
+\]
+Therefore
+\begin{equation}\label{eq:loss}
+\sum_{v\in\cD_n}w_n(v)(p_v-q_v)^2\ge\eta^2\lambda_n\Big(\bigcup\mathcal G_n\Big)\qquad\text{whenever }r_n\in R.
+\end{equation}
+
+Since $\alpha$ is irrational, the sequence $\{\alpha n\}$ is dense in $[0,1)$, and $r_n\in R$ means that $\{\alpha n\}$ lies in the nonempty open interval $1+\log_3R$; so $r_n\in R$ for infinitely many $n$. By Lemma~\ref{lem:mixing} with $s=(2,2)$ and $J=U$, $\lambda(B_n)\to|U|/4$, and $\lambda(\bigcup\mathcal G_n)=\lambda(B_n)$ because $\lambda\ll\nu$. By~\eqref{eq:tv}, $\lambda_n(\bigcup\mathcal G_n)\to|U|/4$ as well. With~\eqref{eq:loss}, the left side of~\eqref{eq:loss} is at least $\eta^2|U|/8$ for infinitely many $n$, so
+\[
+\sum_{n\ge0}\ \sum_{v\in\cD_n}w_n(v)(p_v-q_v)^2=\infty,
+\]
+which contradicts Corollary~\ref{cor:finite-series}. Hence $\mu\perp\nu$, that is, $\nu_2\perp\nu_3$. \qed
+
+\section{Computations}\label{sec:computations}
+
+The file \texttt{code/check\_gap.py} in~\cite{code} (Python~3, standard library only; its output is the file \texttt{code/check\_gap\_output.txt}) works with exact rational numbers. It computes the Cantor function at rational points from the periodic ternary expansion, decides membership in $E$ of rational points, and checks: the description of $D_0\cap E$ and the relations~\eqref{eq:margins0}; that none of the $129$ points $(512+j)/2^{14}$, $0\le j\le128$, lies in $E$ (and, more generally, that the only points of $E$ of the form $i/2^{16}$ are $0$, $1/4$, $3/4$ and $1$); the masses $\nu(D_0)=1/32$ and $\nu(D_0')=\nu(D_0'')=1/64$; the energy $955961/524288$ of the first eight levels of the flow $\theta$; the values of $E_*$ and of the two bounds of Proposition~\ref{prop:base}, including the wired conductance $13703/31620$; and the final bound on $p_{D_0}$. The inequality $q_0<2/3$ is checked in floating point; it is $(\log2)^2>\log3\,\log(3/2)$, that is, $0.4804\ldots>0.4454\ldots$. The run takes about ten seconds. For orientation it also prints the wired conductances of the right half at radii $6$ to $9$, namely $0.4334$, $0.4242$, $0.4181$, $0.4141$, and that of the left half at radius $6$, $0.6318$.
+
+The file \texttt{lean/CantorGapArithmetic.lean} is a Lean~4 file without external libraries. It checks by kernel evaluation the integer identities and inequalities behind~\eqref{eq:margins0}, the value of $384(2/3)^{17}$, the values of $E_*$ and $1/(1+E_*)$, the inequality $13703/45323<1/(1+E_*)$, and the bound on $p_{D_0}$. None of the arguments above depends on either file beyond the numerical values stated in Proposition~\ref{prop:base} and the finite membership check in the proof of Lemma~\ref{lem:robust}.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. In September 2026 an OpenAI GPT model, running as a scheduled ChatGPT research task of that project, found the argument and wrote the first exact-arithmetic checks of the conductance bounds; further tasks of the same project checked the argument. In October 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, checked the proof, wrote Lemma~\ref{lem:digits}, the computer checks and the Lean file of the repository~\cite{code}, and wrote the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/cantor-harmonic-codings-singular}.
+
+\begin{thebibliography}{9}
+\bibitem{ACY} D.~Allen, S.~Chow and H.~Yu, \emph{Dyadic approximation in the middle-third Cantor set}, Selecta Math. (N.S.) \textbf{29} (2023), Paper No.~11; arXiv:2005.09300.
+\bibitem{Bugeaud} Y.~Bugeaud, \emph{Distribution Modulo One and Diophantine Approximation}, Cambridge Tracts in Mathematics~193, Cambridge University Press, Cambridge, 2012.
+\bibitem{BCM} Y.~Bugeaud, M.~Cipu and M.~Mignotte, \emph{On the representation of Fibonacci and Lucas numbers in an integer base}, Ann. Math. Qu\'e. \textbf{37} (2013), 31--43.
+\bibitem{LP} R.~Lyons and Y.~Peres, \emph{Probability on Trees and Networks}, Cambridge Series in Statistical and Probabilistic Mathematics~42, Cambridge University Press, New York, 2016. Page numbers refer to the version of 19 August 2026 at \url{https://rdlyons.pages.iu.edu/prbtree/}.
+\bibitem{Stewart} C.~L.~Stewart, \emph{On the representation of an integer in two different bases}, J. Reine Angew. Math. \textbf{319} (1980), 63--72.
+\bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/cantor-harmonic-codings-singular}.
+\end{thebibliography}
+
+\end{document}

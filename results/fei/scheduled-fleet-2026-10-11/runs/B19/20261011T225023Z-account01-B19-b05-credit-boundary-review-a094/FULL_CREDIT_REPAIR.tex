@@ -1,0 +1,50 @@
+\section*{Full physical credit for the AND point defect}
+
+Let $q_n$ be $+1$ at one point and $-1$ elsewhere, and put
+$\delta=2^{-n}$.  For a midpoint/half-difference pair $(a,v)$ define
+\[
+ q=a^2+v^2,\qquad
+ Q(a,v)=qj(v^2/q),\qquad
+ j(t)=1-h_2\!\left(\frac12+\sqrt{t(1-t)}\right).
+\]
+With $P(x)=Q(1-x,x)$, the phase packet and its restriction credit are
+\[
+ Q_n=P(\delta)+2\delta-2\delta^2,
+ \qquad
+ \Gamma_n^Q=Q_n-\frac12Q_{n-1}
+ =P(\delta)-\frac12P(2\delta)+2\delta^2.
+\]
+Put $r=2\sqrt{t(1-t)}$.  Then
+\[
+ j(t)=\frac1{\ln2}\sum_{m\ge1}
+ \frac{r^{2m}}{(2m)(2m-1)}.
+\]
+The first term gives $j(t)\ge2t(1-t)/\ln2$.  Comparing coefficients
+with $1-\sqrt{1-r^2}$, and using
+$\binom{2m}{m}/4^m\ge1/(2m)$, gives
+$j(t)\le2t/\ln2$ for $0\le t\le1/2$.  It follows that
+\[
+ P(x)\le\frac{2x^2}{\ln2},\qquad
+ P(2x)\ge\frac{8x^2}{\ln2}
+ \frac{(1-2x)^2}{(1-2x)^2+4x^2}.
+\]
+For $0<x\le1/8$ the rational factor is at least $9/10$, so
+\[
+ \Gamma_n^Q\le x^2\left(2-\frac8{5\ln2}\right)<0.
+\]
+Taking $x=\delta$ proves $\Gamma_n^Q<0$ for every $n\ge3$.
+Combining this with the independently reviewed B05 theorem
+$\Gamma_n^L<0$ yields the complete physical sign
+\[
+ \Gamma_n^{L+Q}<0\qquad(n\ge3).
+\]
+Moreover,
+\[
+ \Gamma_n^Q=\left(2-\frac2{\ln2}\right)\delta^2+O(\delta^4),
+\]
+and hence, using the B05 label asymptotic,
+\[
+ \Gamma_n^{L+Q}
+ =\delta^2\left(-2n+8-\frac3{\ln2}\right)+O(\delta^3).
+\]
+

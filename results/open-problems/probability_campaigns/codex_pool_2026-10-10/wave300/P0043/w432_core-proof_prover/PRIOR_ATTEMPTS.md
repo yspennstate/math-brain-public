@@ -1,0 +1,19 @@
+# Prior-attempt digest, P0043
+
+The 2026-09-07 ranking calls P0043 tier 5 and attempted_un, with the short reason theta(p_c)=0 on quasi-transitive graphs. The original ledger is Downloads/Probability_1000_20h_20260906/problems.jsonl, lines 46 and 143: source_id lyons_peres_20260819, Conjecture 8.15, printed p.285. Both records explicitly require p_c<1; the later record calls the result attempted_unsolved. The same corrected full target is recorded as C0084 in intake_claude_20260907/problems.jsonl, line 84, with p_c<1 and locator Open Problem 15.11 in Heydenreich--van der Hofstad (2017).
+
+P0043-A001 in the original attempts.jsonl, line 43, proves critical regular-tree extinction from strict concavity of x -> 1-(1-x/b)^b for b>=2. It explicitly excludes b=1, records full_problem_solved=false, and names the obstacle: general critical clusters have loop dependence rather than independent branching. L06 here adds an explicit uniform finite-radius derivative bound to this known special case; it does not claim the extinction theorem new. The new central work is L02-L05's parameter-space obstruction and the precise G01 input.
+
+C0084-A001, attempts.jsonl line 72, is a growth split, not a proof. It explicitly warns that critical percolation behaviour does not directly transfer under quasi-isometry to a nilpotent Cayley graph. Its discussion of intermediate growth is exploratory and is not adopted as a source theorem here. The source itself provides no independent check.
+
+SOLVER_MAP.md line 18 nevertheless records a reduces_to link with reason "polynomial growth case is the Z^d question". That direction is unsupported by the attempt it summarizes. The rigorous direction is that the general graph target specializes to Z^d, so a proof of the full target would prove the lattice case. A proof only on Z^d does not establish critical extinction on all polynomial-growth quasi-transitive graphs. This should be a specializes relation or an explicit one-way implication, not an equivalence or a reduction of the full graph problem to the lattice problem.
+
+The named attempts_H_20260912 and attempts_I_20260914 directories had no exact P0043/C0084 hits in the targeted mathematical files. prob1000_lean_20260908 has percolation material for other questions, not an identified formal P0043 proof. No formal-check receipt is claimed.
+
+G0001-A001 (intake_G_20260910, line 1) observes that Cerf's stretched-exponential finite-cluster-tail route retains the critical gap. The independently fetched August 2026 arXiv abstract specifies Bernoulli SITE percolation on Z^d. Its partial theorem must not be silently imported as a bond result on arbitrary graphs. The H0016 intake record's "by extension, bond" context is not independently justified here.
+
+Team O has C0084 assigned to w344. Its checkpoint lists work on other fronts and no P0043 critical-window pivotal-measure lemma. The other triads' initial checkpoints identify finite-cut (w435), sharp-boundary (w438), and brain-assisted (w441) routes. This packet's lane is parameter-space pivotal concentration and the symmetry boundary of that estimate.
+
+The owner's Big Open problem workspace contains nonamenable two-point-operator and finite-set-escape work, a different target. Only the selected README and relevant grep hits are used; no completion claim for P0043 was recovered from them.
+
+Brain recall returned the top three slugs kalai_conj8_percolation_entropy_is_o_influence_2026_09_10, four_two_hour_transcripts_2026_09_16, and prob1000_proofs_directory_audit_what_is_spent_and_what_is_live_2026_09_08. These and the required perceptron_proof_open_gaps_fleet_2026_07_12 scar were read. They are process evidence, not mathematical authorities for this packet: separate an author proof, a partial reduction, an independently checked proof, and an actual end-to-end result.

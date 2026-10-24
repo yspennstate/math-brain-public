@@ -1,0 +1,45 @@
+--- a/~/math-brain-inbox/w336/bundle_002.json
++++ b/~/math-brain-inbox/w336/bundle_002.json
+@@ -0,0 +1,42 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w336",
++  "bundle_slug": "w336-p0458-checked-attempt-20261010",
++  "audit_status": "PENDING_W346_KEEP; do not promote to audited or solved",
++  "entries": [
++    {
++      "key": "standard-normal-positive-part-transform-density",
++      "namespace": "probability.distributions",
++      "logical_name": "standard-normal-positive-part-transform-density",
++      "kind": "lemma",
++      "title": "Distribution of the normal positive-part transform",
++      "statement": "Let Z be standard normal, g(z)=phi(z)+z Phi(z), a=1/sqrt(pi), and v=1/3+(sqrt(3)-2)/(2*pi). Then E[g(Z)]=a and Var(g(Z))=v. W=(a-g(Z))/sqrt(v) has support (-infinity,a/sqrt(v)] and no atom at its finite endpoint. For w<a/sqrt(v), with z=g^{-1}(a-sqrt(v)w), its CDF is 1-Phi(z) and its density is sqrt(v)*phi(z)/Phi(z). This non-Gaussian law is the standardized-degree limit only conditional on the earlier degree/moment convergence being established in a stated regime.",
++      "proof_text": "# P0458: exact normal-transform law, conditional application\n\nStatus: proof written; w346 KEEP pending. The general growing bilateral-preference degree question remains unverified in the cached literature. The previous candidate's degree convergence is an assumption in the application below, not established again here.\n\nLet Z be standard normal, phi its density, Phi its distribution function, and g(z)=phi(z)+z*Phi(z). Put a=1/sqrt(pi), v=1/3+(sqrt(3)-2)/(2*pi), and W=(a-g(Z))/sqrt(v). Then E[W]=0, Var(W)=1, W has support (-infinity,a/sqrt(v)], has no atom at the finite endpoint, and is not Gaussian. For w<a/sqrt(v), define z=g^{-1}(a-sqrt(v)*w). Then\n\n    P(W<=w)=1-Phi(z),\n    density_W(w)=sqrt(v)*phi(z)/Phi(z).\n\nProof: differentiation gives g'=Phi>0 and g''=phi. Also g(z)=E[(z-Y)_+] for an independent standard normal Y, so g is positive; it tends to zero as z tends to minus infinity and diverges at plus infinity. Thus it is a continuous increasing bijection onto (0,infinity). The distribution and density follow by reversing its monotone change of variables. No finite Z maps to the upper endpoint, so that endpoint has no mass.\n\nFor the constants, normal integration by parts gives E[phi(Z)]=1/(2*sqrt(pi)) and E[Z*Phi(Z)]=E[phi(Z)], hence E[g(Z)]=a. Write A=E[phi(Z)^2]=1/(2*pi*sqrt(3)) and B=E[Z*phi(Z)*Phi(Z)]=A/2, by integrating the derivative of phi^2. Since Phi(Z) is uniform, E[Phi(Z)^2]=1/3. Applying E[Z^2*h(Z)]=E[h(Z)]+E[h''(Z)] to h=Phi^2 gives E[Z^2*Phi(Z)^2]=1/3+2A-2B=1/3+A. Therefore E[g(Z)^2]=A+2B+(1/3+A)=1/3+sqrt(3)/(2*pi). Subtracting a^2 gives v. All integrations have Gaussian tails, so the boundary terms vanish. A nondegenerate Gaussian has no finite upper endpoint; W does.\n\nConditional application: if the earlier packet proves (k-D)/sqrt(k) converges to g(Z) with convergence of the first two moments in a specified k,n regime, subtracting its mean and dividing by its standard deviation gives (D-E[D])/sqrt(Var(D)) converging to W. This consequence does not extend the packet to other k regimes. The saved attempt's error O(k^2/n+k^5/n^2) tends to zero, for example, when k tends to infinity and k=o(n^(2/5)); that observation alone is not a proof of the whole graph limit.\n\nCheck: deterministic quadrature of the first two moments, normalization, and inverse-transform round trips. The mathematical proof is analytic; the checks do not validate the earlier graph comparison.\n",
++      "assumptions": [
++        "All hypotheses and scope restrictions in the statement apply."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner:campaign:w336:P0458:standard-normal-positive-part-transform-density",
++        "url": "~\\brain_workers\\w336\\proofs\\P0458.md",
++        "revision": "author-proof-2026-10-10; independent audit w346 pending",
++        "license": "owner-own-work; campaign proof, no novelty claim",
++        "excerpt": "Let Z be standard normal, g(z)=phi(z)+z Phi(z), a=1/sqrt(pi), and v=1/3+(sqrt(3)-2)/(2*pi). Then E[g(Z)]=a and"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "standard-normal-positive-part-transform-density",
++      "to_existing_logical": "math:probability.core:open-problem-p0458-the-standardized-degree-law-in-growing-bilateral-preference-graphs",
++      "kind": "cites",
++      "rationale": "New: \"Let Z be standard normal, g(z)=phi(z)+z Phi(z), a=1/sqrt(pi), and v=1/3+(sqrt(3)-2)/(2*pi). Then E[g(Z)]=a and Var(g(Z))=v. W=(a-g(Z))/sqrt(v) has support (-infinity,a/sqrt(v)] and\"; existing: \"Determine the limiting law of (D-E[D])/sqrt(Var(D)) for a typical LK(n,k) degree as the preference budget grows.\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
++    },
++    {
++      "from_key": "standard-normal-positive-part-transform-density",
++      "to_existing_logical": "math:probability.core:attempt-p0458-the-standardized-degree-law-in-growing-bilateral-preference-graphs",
++      "kind": "cites",
++      "rationale": "New: \"Let Z be standard normal, g(z)=phi(z)+z Phi(z), a=1/sqrt(pi), and v=1/3+(sqrt(3)-2)/(2*pi). Then E[g(Z)]=a and Var(g(Z))=v. W=(a-g(Z))/sqrt(v) has support (-infinity,a/sqrt(v)] and\"; existing: \"and explicit moment controls then give (k-D)/sqrt(k)->g(Z), g(z)=phi(z)+z*Phi(z), with convergence of its first two moments. The variance constant is v=1/3+(sqrt(3)-2)/(2*pi), and the standardized degree limit is (1/sqrt(pi)-g(Z))/sqrt(v), \". The new result addresses the stated problem or continues the recorded route within its explicit scope."
++    }
++  ]
++}

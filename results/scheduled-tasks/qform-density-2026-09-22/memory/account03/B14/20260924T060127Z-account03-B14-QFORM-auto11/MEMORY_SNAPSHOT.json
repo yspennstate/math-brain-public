@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260924T060127Z-account03-B14-QFORM-auto11",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit_prepublication": "db0d6dbe2a76fa54e663e4bcbe1a7acd0b2fc956",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null,
+  "reasoning_effort_status": "UNKNOWN_NOT_EXPOSED",
+  "provider_thinking_tokens": null,
+  "provider_thinking_time": null,
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "result": {
+    "theorem_id": "QFORM-QUANTILE-GAUGE-ZERO-LOSS-LOCALIZATION-v1",
+    "status": "SUPPORTING_LOCALIZATION_THEOREM_PROVED_FULL_QFORM_OPEN",
+    "statement": "For every fixed p in (0,1), the optimal full QFORM interval-height constant equals the optimal constant on smooth compact cap-one product laws with lower p-quantile zero in every original coordinate, strict spectral margin s3(A)>1, and arbitrary deterministic affine perturbations. Equality includes infinity. Arbitrary translations, unbounded supports and distant fragments incur zero constant loss; affine leakage must be retained.",
+    "continuity": "NOT_PROVED_BY_THIS_LOCALIZATION; FULL_TARGET_CONTINUITY_REMAINS_OFFICIALLY_OPEN"
+  },
+  "premises": [
+    {
+      "name": "QFORM-EXACT-CONSTANT-COMPACT-AFFINE-LOCALIZATION-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "a0917bc3d1bea79d37bf8e5e043ec673d3084517",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T213400Z-account03-B14-QFORM-auto11/REPORT.md",
+      "scope_used": "cap-preserving compactification by tail mass and affine homogenization without moments"
+    },
+    {
+      "name": "account04/B14 r10 scale-covariant Schur localization",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260924T001624Z-account04-B14-scaled-schur-localization-r10/REPORT.md",
+      "scope_used": "physical invertible 3x3 block gives essential-density bound 6 sqrt(pi)/sigma, uniform in affine leakage and outside curvature"
+    }
+  ],
+  "partner_application": {
+    "partner": "account04/B14",
+    "inequality": "sup_t ||p_((X+t)^T A (X+t))||_infinity,ess <= 6 sqrt(pi)/sigma for any matrix with an invertible physical 3x3 block of minimum absolute eigenvalue sigma",
+    "concrete_block": "B_*=I_3-(2/3)11^T, spec={1,1,-1}, sigma=1",
+    "constant": 10.634723105433096
+  },
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "canonical_commit": "7b0507a694df2c6f727f4d293c92d616bb46befb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260924T060127Z-account03-B14-QFORM-auto11/",
+    "report_blob": "df0af2f0a1a531de7f7a7ef269f96158d3b0a851",
+    "checks_blob": "1967d5ec9869d38212435bf90d2c841bdff2b21d"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B14/20260924T060127Z-account03-B14-QFORM-auto11.md",
+    "commit": "d498bc979087ce8c8d09446af9d93b2d548bd887"
+  },
+  "unresolved_implication": "On the quantile-gauge smooth compact strict-margin affine core, obtain a dimension-independent estimate that remains uniform through vanishing physical pivots/minors; full QFORM remains open.",
+  "next_step": "Use the gauge-fixed affine core to test product-preserving Schur/cross-bank mechanisms without any translation-size or moment bookkeeping; do not discard the affine term after centering.",
+  "scheduler_mutation": false,
+  "email_action": false,
+  "push_notification_action": false,
+  "cross_account_authentication": false,
+  "paid_api_or_codex_action": false,
+  "public_release_action": false
+}

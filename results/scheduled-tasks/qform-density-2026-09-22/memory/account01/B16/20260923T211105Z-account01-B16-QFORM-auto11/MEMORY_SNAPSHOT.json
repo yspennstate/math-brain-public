@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B16",
+  "run_id": "20260923T211105Z-account01-B16-QFORM-auto11",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_GLOBALLY_NOT_CLAIMED_FOR_NEW_THEOREM",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "main_result": {
+    "name": "QFORM-TRANSLATED-FRESH-SQUARE-SIGNFREE-v1",
+    "statement_short": "If X,Z,W are mutually independent, H,U are arbitrary functions of W, G=G(X,W) is arbitrary, Y=gamma X+H and V=sigma Z+G, then for any invertible symmetric 3x3 B with b=B33 nonzero, Q=(Y,U,V)^T B(Y,U,V)+affine has ||p_Q||_inf <= 2^(13/4)(L_Z/|sigma|) sqrt(L_X L_U/|gamma|)(|b det B|)^(-1/4), assuming density caps L_X,L_Z,L_U.",
+    "mechanism": "Condition on X,W and complete the square in V. The shared shift G disappears exactly from the Schur residual; only the genuine fresh innovation sigma Z is paid. Then use the sign-free root-collar/absolute-quadratic-band integration in Y,U. No conditional projection-height supremum or projected independence is used.",
+    "paid_subbranch": "QFORM-PUNCTURED-HUB-WITH-ONE-TRANSVERSE-FRESH-INNOVATION-v1"
+  },
+  "target_family": {
+    "definition": "On one common leaf product bank take orthonormal projections L,U,P; with fresh X0,Z0 let Y=X0+eta L, V=Z0+epsilon P and Q_a=4[aY^2+2YU+V^2]. Add independent 4R^2 for the all-a strict target family.",
+    "density_bound": "||p_Qa||_inf<=2sqrt(2) for all real a,eta,epsilon; the independent 4R^2 extension keeps the same bound.",
+    "spectral_check": "In normalized carrier coordinates the extension has matrix 4[[a s^2,s,0,0],[s,0,0,0],[0,0,t^2,0],[0,0,0,1]], s^2=1+eta^2, t^2=1+epsilon^2. Eigenvalues 4t^2 and 4 are >=4; the hyperbolic 2x2 block has one eigenvalue of modulus at least 4s>=4, so at least three eigenvalues are always large.",
+    "exact_checker": "math-open-problems commits 938a2a3d73dff3814d9bbf38daecec0c6123560c and PASS output e22472184432ad2dd8af9c62fb159d8a2fc75acc"
+  },
+  "latest_partner_application": "Designated partner account02/B16 r36 applied to Q_0=8X0U+8eta LU+4(Z0+epsilon P)^2. Since p_(U,Z0+epsilon P)(u,v)<=p_U(u)<=sqrt(2), use gamma=4,kappa=4,M<=sqrt(2) to obtain ||p_Q0||_inf<=3/2. The same bound survives an independent 4R^2 extension.",
+  "source_pins": [
+    "own canonical math-open-problems@693cb2f86df07dc102701767d7eddd09306ab201 REPORT blob 4ff66c4362532f3897b6ab1cfa203818613664b3",
+    "designated partner account02/B16 r36 math-open-problems@be8062b160868bcc71aff45a77c56ff2d0501a9a REPORT blob 57cf025ef533e6cfad52761553dfc9013d486ec0",
+    "sign-free root-collar source account03/B16 r27 math-open-problems@4388eeb12a94dd167f305554419fd4c986eda04a REPORT blob d49257cf13a631b4ed9c4e15eeb1b21810678c3e",
+    "fresh control math-research-brain@83e19d13fa3526bb77269eeb6497a1690c15e1e0"
+  ],
+  "corrections_preserved": [
+    "No independence after spectral rotation.",
+    "A bounded joint projection density alone is not inserted into an arbitrary indefinite level-set integral.",
+    "No normalized conditional projection-height or worst-fiber shortcut.",
+    "Small coefficients multiplying unbounded random variables are not deleted.",
+    "The observed translated square may share the light bank; the proof pays only the genuine independent innovation before nonlinear integration."
+  ],
+  "next_implication": "QFORM-INNOVATION-FREE-SHARED-SQUARE-RECEIVER-v1: handle the punctured near-coloop branch when every transverse square candidate is generated entirely by the same light sources, so no quantitative fresh sigma Z survives. The previous two-bank defect identity allows all natural one-bank innovations to vanish simultaneously; a source-first shared-square mechanism or a new grouping compiler is required."
+}

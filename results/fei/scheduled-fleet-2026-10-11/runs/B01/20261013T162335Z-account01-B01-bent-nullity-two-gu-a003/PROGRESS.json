@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "run_id": "20261013T162335Z-account01-B01-bent-nullity-two-gu-a003",
+  "stream_id": "B01",
+  "account": "account01",
+  "primary_packet_id": "A003",
+  "packet_ids": ["A003"],
+  "attempt_id": "B01-A003-BENT-NULLITY-TWO-GU-03",
+  "stable_gap_id": "GU-ASYMMETRY-MISMATCH",
+  "claim_version": "B01_A003_BENT_NULLITY_TWO_GU_LOWER_v1",
+  "objective": "Test the frozen G<=3I candidate on larger arbitrary nullity-two shields, preserve exact normalization and physical input accounting, and certify either a crossing or the strongest new lower obstruction.",
+  "source_plan": {
+    "control_revision": "2026-10-12.1",
+    "control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "prior_run_visible_commit": "f108d34dd304d03aae2d28c5160c4a32a45758d3",
+    "prior_package_commit": "99c60c7a5554f2a435016ad100ccb5d2d10a6bd0",
+    "prior_claim": "B01_A003_ARBITRARY_NULLITY_TWO_FEI_v1"
+  },
+  "prior_status": "G<=3I on arbitrary nullity-two shields was open with exact lower calibration G/I=277/96=2.885416... on six variables.",
+  "new_status": "PROVED_EXACT_FINITE_WITNESS_PENDING_INDEPENDENT_REVIEW",
+  "mathematical_delta": "Certified a genuine ten-variable bent nullity-two shield with H=10, U=I=5 and 2.974<G/I<2.975. This improves the necessary GU' coefficient condition from a+b>=277/96 to a+b>2.974 and shows the candidate constant 3 is within 0.026 on this class.",
+  "case_extension": {
+    "starting_case": "six-variable exact GU calibration",
+    "new_case": "ten-variable bent shield with dense physical orientation and arbitrary fiber choices",
+    "previous_lower_bound_on_a_plus_b": "277/96",
+    "new_lower_bound_on_a_plus_b": ">2.974",
+    "candidate_upper_bound": "3",
+    "parameters_tracked": "dimension 10, data width 6, rank 4, nullity 2, all physical columns nonzero, U=I=5"
+  },
+  "verification": {
+    "method": "integer Walsh transforms, exact edge counts, and rational outward log intervals",
+    "parent_walsh_magnitude": 32,
+    "restriction_count": 20,
+    "nonzero_coefficients_per_restriction": 256,
+    "interval_terms": 36,
+    "certified_ratio_lower": "2.974",
+    "certified_ratio_upper": "2.975",
+    "result": "PASS"
+  },
+  "acceptance_evidence": "CHECK_BENT_GU.py and CHECK_BENT_GU.out reconstruct the truth table, rank, bent spectrum, physical influence, all child upper-set counts, and a rational outward interval for G/I.",
+  "remaining_obstacle": "The finite witness does not prove G<=3I. The unpaid step is a universal lower bound on the aggregate child upper-set logarithms forced by dual-bent derivative structure, or a certified larger-width crossing of 3.",
+  "next_action": "Freeze the bent-support child inequality and prove it from dual-bent derivatives; in parallel only as a falsifier, test width 7 bent-fiber shields and certify any crossing of 3.",
+  "consumer_targets": ["B05", "B08", "B10", "B18", "B20", "A005", "A087"],
+  "reviewer_targets": ["A086", "A094"],
+  "delivery": {
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_path": "reports/fei-2026-10-11/runs/B01/20261013T162335Z-account01-B01-bent-nullity-two-gu-a003/",
+    "brain_repository": "yspennstate/math-research-brain",
+    "brain_path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B01/20261013T162335Z-account01-B01-bent-nullity-two-gu-a003/",
+    "canonical_package_commit": "92b9dd65273085c6cfa2c3ba69fa624b248e2959",
+    "brain_package_commit": "ae55279a46aa02c219720f5d702adf11a0dffffe",
+    "readback": "VERIFIED_EXACT_FOR_ALL_NINE_PACKAGE_FILES_IN_BOTH_REPOSITORIES",
+    "status": "DELIVERED_AND_VERIFIED",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN"
+}
+

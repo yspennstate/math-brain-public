@@ -1,0 +1,55 @@
+{
+  "ledger_delta": {
+    "worker": "NM13-13",
+    "role": "T04_cluster_aware_3SAT_variational",
+    "target": "T04",
+    "status": "OPEN/PARTIAL; CANDIDATE_FULL for explicit fixed-count upper endpoint 4.392 pending later independent review",
+    "runtime_model": "GPT-5.6 Sol",
+    "runtime_reasoning": "UNVERIFIED",
+    "source_model": "classical iid proper random 3-CNF with m=floor(alpha*n), three distinct variables per clause, independent uniform literal signs",
+    "literature_explicit_decimal_bracket_before": [3.52, 4.4898],
+    "literature_explicit_decimal_bracket_after": [3.52, 4.4898],
+    "literature_symbolic_frontier": "3.52 <= liminf c_n <= limsup c_n <= U_1RSB(3); published physics evaluation near alpha=4.267 is not independently interval-certified by this track",
+    "project_candidate_upper_before": 4.39539,
+    "project_candidate_upper_after": 4.392,
+    "project_candidate_bracket_before": [3.52, 4.39539],
+    "project_candidate_bracket_after": [3.52, 4.392],
+    "project_candidate_width_before": 0.87539,
+    "project_candidate_width_after": 0.872,
+    "source_endpoint_gain_vs_predecessor": 0.00339,
+    "source_endpoint_gain_vs_historical_explicit_upper": 0.0978,
+    "claim_id": "NM13-13-T04-THREE-SUPPORT-4392-UPPER-03",
+    "claim": "For the exact fixed-count proper iid random 3-SAT model, Pr[Phi_{n,floor(4.392 n)} is SAT] -> 0, using the rigorous one-step interpolation transfer inherited and restated in the accompanying report; status CANDIDATE_FULL pending later independent review.",
+    "order_parameter": {
+      "support": ["179/3125", "1/2", "2946/3125"],
+      "weights": ["20997/100000", "29003/50000", "20997/100000"],
+      "alpha": "4392/1000",
+      "series_truncation_K": 1000,
+      "interval_digits": 850
+    },
+    "certified_variational_core": "A <= A_1000 < -2.1403418190123965e-5 by outward mpmath interval arithmetic; every mu_k interval for k<=1000 is strictly positive.",
+    "new_variational_inequality": "For every finite K, A_{K+1}=A_K-mu_{K+1}^2/(K+1) <= A_K and A<=A_K. Hence deeper certified truncation is monotone one-sided tightening, not an uncontrolled approximation.",
+    "demonstrated_mechanism_gain": "At alpha=4.392 the predecessor law has A_1000 approximately +1.28749215e-5, while the reoptimized rational law has A_1000 < -2.14034182e-5, a coefficient gain about 3.4278e-5. For the new law A_300 is about +4.32676884e-4 while A_1000 is negative, so the additional exact positive tail terms contribute more than 4.54e-4 of certified tightening.",
+    "predecessor_handoff": "Previous run proved the same-density de-Poissonization transfer and certified a three-support law at 4.39539 with K=300. Those proof steps are retained; this run only changes the exact trial parameters and the monotone finite truncation depth.",
+    "prior_failures_preserved": [
+      "rescue stars fail composition because multiple individually rescued children can jointly falsify another clause",
+      "anchored degree-one matching gives a strict local exponent penalty but lacks full Diaz-polytope global reoptimization",
+      "positive clause-local multiplicative second moments hit the identical-pair barrier alpha<=log(2)/log(5/4)=3.1062837...",
+      "solution-graph quotienting by radius o(n/log n) yields only exp(o(n)) savings",
+      "full-component quotienting leaves an uncontrolled overlap moment",
+      "whitening/core history counting lacks a proved uniform exponential cluster-multiplicity lower bound",
+      "q-binomial radius-two route only reached about 4.5923",
+      "equal-weight two-support survey family crosses only near 4.4178",
+      "a local five-support split-atom diagnostic around the predecessor law did not improve the finite-K objective at alpha=4.39; this was heuristic and is not a no-go theorem"
+    ],
+    "companion_status": "NM13-06 now proves a no-go theorem for every one-shot independent zero-break thinning kernel and identifies negatively correlated conflict-free batches as its next constructive object; this remains complementary to the present variational upper-bound route.",
+    "residual_obstruction": "The full U_1RSB(3) variational numerical frontier is still not independently interval-certified here. The present three-support hard-field family may be locally close to exhausted; further progress likely needs either a genuinely richer survey law with a certified decrease or direct finite-support approximation of the full 1RSB order parameter.",
+    "next_attack": "Use first-variation calculations for adding a symmetric atom pair to the optimized three-support law; only if a negative direction is certified, optimize the resulting five-support family. Otherwise move to a finite-support approximation of the full U_1RSB(3) distributional order parameter rather than increasing K alone.",
+    "artifacts": {
+      "code": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T05-22-56Z__three_support_4392_interval.py",
+      "code_commit": "bec8c7ea570c02f78a4ff8c02146aa7de78af918",
+      "output": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T05-22-56Z__three_support_4392_interval.out",
+      "output_commit": "a536bc5c18ab20155c57f2150d560f3d889978c6"
+    }
+  }
+}

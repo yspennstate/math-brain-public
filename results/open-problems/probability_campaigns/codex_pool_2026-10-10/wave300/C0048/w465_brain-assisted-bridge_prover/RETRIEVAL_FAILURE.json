@@ -1,0 +1,30 @@
+{
+  "task": "C0048 brain-assisted bridge",
+  "query": "Potts nearest-neighbor discontinuity q 3 d 3 wired free critical",
+  "receipt": "evidence/math_recall_corrected.json",
+  "summary": "evidence/math_recall_summary.json",
+  "command": "python -X utf8 ~/brain_workers/w465/run_math_recall.py",
+  "elapsed_seconds": 23.042026999988593,
+  "hit_count": 5,
+  "target_rank": 1,
+  "prior_attempt_rank": 2,
+  "hits_with_the_required_complete_critical_witness_bridge": 0,
+  "full_hypotheses_comparison": "The top two cards are explicitly unverified concept/attempt records with empty proof text, not usable theorem proofs. Uniform spanning trees, a generic phase-transition concept, and mean-field nearest-neighbor percolation in d>10 do not imply a fixed positive critical free/wired Potts witness at q=d=3.",
+  "related_memory_recall": {
+    "receipt": "evidence/memory_recall.json",
+    "elapsed_seconds": 53.163019399973564,
+    "literal_id_present": false,
+    "qualification": "Process-local graph-mixture/query-embedding dials were disabled to avoid writes/model loads; this is not a default-live-recall measurement."
+  },
+  "reasoning_failure": "A finite-volume positive boundary gap is not a nonzero infinite-volume gap; exact path measurements and proof refute that inference.",
+  "bounded_repair": "Add DRAFT fixed-cylinder-to-edge/pressure bridges, the explicit geometric boundary-gap counterexample, and a critical-witness concept with exact depends_on/refutes links to the existing C0048 concepts. Require scope and limiting-gap evidence before treating the records as proof support. No global retrieval weights change.",
+  "deployment": "not deployed",
+  "general_recall_improvement_claim": false,
+  "bounded_repair_measurement": {
+    "receipt": "evidence/draft_recall_pilot.json",
+    "before_conditional_bridge_hits_at_5": 0,
+    "after_conditional_bridge_hits_at_5": 1,
+    "scope": "Frozen local pilot: the five previously returned live cards, then those same cards plus seven unreviewed draft entries. The existing retrieve() function and two local typed edges are used. This is not a full-store after-ingestion or blind evaluation measurement.",
+    "elapsed_seconds": 0.00651470001321286
+  }
+}

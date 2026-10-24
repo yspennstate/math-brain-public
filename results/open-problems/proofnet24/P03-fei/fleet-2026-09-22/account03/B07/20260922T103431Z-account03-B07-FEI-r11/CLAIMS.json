@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "assignment_id": "FEI-20260922-account03-B07",
+  "run_id": "20260922T103431Z-account03-B07-FEI-r11",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "claims": [
+    {
+      "claim_id": "B07-WEIGHTED-BENT-NEIGHBORHOOD-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "balanced uniform Boolean functions; any C>2; any character-times-bent occurrence template",
+      "statement": "C(I-1)-H >= S_* - E_C + T(r) + K_occ >= S_* - E_C + T(r) + G(r), where E_C is the coordinatewise positive phi_C-loss relative to the template, T=sum_i h2(r_i)-H_max(r), and G is the account04/B17 balanced Booleanity-gap lower bound. Hence E_C <= S_*+T+G is a sufficient FEI-safety certificate with no ambient-alphabet entropy term.",
+      "dependencies": [
+        {
+          "mode": "premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "result": "IPROJ exact H_max/K_occ identity"
+        },
+        {
+          "mode": "premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "603b35e74227d1c2d8ee34c0c527c439c686e30b",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md",
+          "result": "B-BIASED-BOOLEANITY-GAP-v1 specialized to the balanced uniform slice"
+        },
+        {
+          "mode": "context",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "84c69136ca6b008badb76f15bf1071d029c927aa",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account03/B15/20260922T085625Z-product-equality-rigidity/REPORT.md",
+          "result": "character-times-bent classification of K_occ=0"
+        }
+      ],
+      "verification_provenance": "analytic proof in REPORT.md; not independently reviewed"
+    },
+    {
+      "claim_id": "B07-AFFINE-BENT-TV-COLLAR-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "balanced squared spectral laws supported on one exact character-times-bent affine coordinate cube",
+      "statement": "If TV(P,U_{F,A})<=epsilon, then C(I-1)-H >= C(|F|-1)+|A|[C(1/2-epsilon)-1]. Thus epsilon<=1/2-1/C is a dimension-independent safe radius for every C>2.",
+      "dependencies": [],
+      "verification_provenance": "analytic proof in REPORT.md; not independently reviewed"
+    },
+    {
+      "claim_id": "B07-QUANTITATIVE-TEMPLATE-RECOVERY-v1",
+      "status": "OPEN",
+      "scope": "balanced uniform Boolean functions in the dangerous I-projection corridor",
+      "statement": "Derive from signed Boolean equations and the Walsh lattice that every dangerous near-product source is close to some character-times-bent occurrence template strongly enough to satisfy the weighted neighborhood certificate.",
+      "dependencies": [
+        {
+          "mode": "context",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "84c69136ca6b008badb76f15bf1071d029c927aa",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account03/B15/20260922T085625Z-product-equality-rigidity/REPORT.md",
+          "result": "exact endpoint classification"
+        }
+      ],
+      "verification_provenance": "not proved"
+    }
+  ],
+  "partner_status": {
+    "preferred_partner": "account04/B07",
+    "current_compatible_partner_output": "NOT_FOUND_AT_OBSERVED_FEI_PATHS",
+    "fallback_named_other_account_result_consumed": "account04/B17 B-BIASED-BOOLEANITY-GAP-v1"
+  }
+}

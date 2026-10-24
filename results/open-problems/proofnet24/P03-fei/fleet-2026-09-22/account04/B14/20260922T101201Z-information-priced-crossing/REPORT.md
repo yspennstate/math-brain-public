@@ -1,0 +1,274 @@
+# account04/B14 — information-priced posterior crossing and gross-Shannon stopping
+
+**Run:** `20260922T101201Z-account04-B14-fei-a11`  
+**Classification:** `ESSENTIAL_STEP_APPLIED / FULL_FEI_OPEN / WITHOUT_VERIFIED_BRAIN`  
+**Role:** FEI physical restrictions/selectors; interface A under the later all-gate convergence order.  
+**Full uniform-cube FEI:** **OPEN / NOT PROVED.**
+
+## 0. Source discipline and change of method
+
+Control was resolved at invocation start in `yspennstate/math-research-brain` commit `7d3fa2919d2595cc139df068f6074c863a00f569`, OWNER CONTROL revision `2026-09-22.2`. The required control files, full owner message, shared `ORDER.md`, shared `RESEARCH_STATE.md`, and fresh FEI handoffs were read before the mathematics. The later owner order supersedes the narrow older lane wording by converging FEI work on the all-gate formulation, while retaining B14's physical restriction/selector role.
+
+Fresh account01/B18 result consumed: `proofnet24/P03-fei/fleet-2026-09-21/account01/B18/20260922T095300Z-shaped-safe-frontier/REPORT.md`, scientific commit `a5f19f05fa03671fb5ffeb435081ed92e9827e6a`, which constructs the current universally safe shaped repair direction but leaves the universal composition-prime obligation open.
+
+The exact curvature-refunded source requested by the owner is account01/B18 `account01/B18/20260921T1856Z-curvature-refunded-crossing/REPORT.md`, blob `ef9f471c019a7d81e9864fd457a0e4bae9da890d`. Its universal physical-block inequality is
+
+\[
+\boxed{
+\Delta_A\mathcal F
+\le B_A-\sum_{j\notin A}\mathfrak j'(p_j)c_j(A)
+}
+\tag{0.1}
+\]
+
+and the exact folded drift is
+
+\[
+\boxed{
+D_A:=\mathcal J(g)-\mathbb E_z\mathcal J(g_{A=z})=I_A+C_A.
+}
+\tag{0.2}
+\]
+
+After the preceding B14 runs had already extracted the same universal scalar consequences from (0.1), this run deliberately changes method: it prices a posterior crossing by the **mutual information that the physical block must acquire about the pivotality event**, then couples that with a realizable gross-Shannon stopping rule. No prescribed-coordinate payment is used.
+
+## 1. Exact information price of a posterior crossing
+
+Median-center a parent state. Fix a survivor coordinate `j` with folded pivotality marginal
+
+\[
+p:=p_j=\Pr(\eta_j=1)\le\frac12.
+\]
+
+For a physical original-coordinate block `A` not containing `j`, write
+
+\[
+U:=\Pr(\eta_j=1\mid X_A).
+\]
+
+The B14 crossing functional is
+
+\[
+c_j(A):=\mathbb E(2U-1)_+.
+\tag{1.1}
+\]
+
+Because pointwise
+
+\[
+\min(U,1-U)=U-(2U-1)_+,
+\]
+
+and `EU=p`, one has the exact identity
+
+\[
+\boxed{
+\mathbb E\min(U,1-U)=p-c_j(A).
+}
+\tag{1.2}
+\]
+
+Since binary entropy is symmetric, `h_2(U)=h_2(min(U,1-U))`; since it is concave on `[0,1/2]`, Jensen gives
+
+\[
+\begin{aligned}
+H(\eta_j\mid X_A)
+&=\mathbb E h_2(U)\\
+&=\mathbb E h_2(\min(U,1-U))\\
+&\le h_2\!\left(\mathbb E\min(U,1-U)\right)\\
+&=h_2(p-c_j(A)).
+\end{aligned}
+\tag{1.3}
+\]
+
+Therefore:
+
+### Theorem 1.1 — information-priced crossing
+
+For every centered Boolean state, every physical block `A`, and every survivor `j`,
+
+\[
+\boxed{
+I(\eta_j;X_A)
+\ge h_2(p_j)-h_2\bigl(p_j-c_j(A)\bigr).
+}
+\tag{1.4}
+\]
+
+In particular, if a block produces a fractional crossing
+
+\[
+c_j(A)\ge\gamma p_j,\qquad 0<\gamma\le1,
+\]
+
+then
+
+\[
+\boxed{
+I(\eta_j;X_A)
+\ge h_2(p_j)-h_2((1-\gamma)p_j).
+}
+\tag{1.5}
+\]
+
+Since `h_2'(x)=log_2((1-x)/x)` is decreasing on `(0,1/2]`, (1.5) further implies the explicit price
+
+\[
+\boxed{
+I(\eta_j;X_A)
+\ge \gamma p_j\log_2\frac{1-p_j}{p_j}.
+}
+\tag{1.6}
+\]
+
+This is a lower bound on information acquired by the **whole revealed physical block** about a survivor pivotality event. It is not a claim that any prescribed coordinate pays its own Shannon entropy.
+
+## 2. Realizable cheap-crossing stopping policy with gross Shannon budget O(J)
+
+Fix constants `K>0` and `0<gamma<=1`. At each reached centered physical restriction state `g`, inspect unrevealed original-coordinate blocks `A` and survivor coordinates `j notin A`. Call `(A,j)` admissible when
+
+\[
+\boxed{
+c_j(A)\ge\gamma p_j}
+\tag{2.1}
+\]
+
+and simultaneously
+
+\[
+\boxed{B_A\le K D_A,}
+\qquad
+D_A=\mathcal J(g)-\mathbb E_z\mathcal J(g_{A=z}).
+\tag{2.2}
+\]
+
+If an admissible pair exists, choose one by a fixed deterministic tie rule, reveal the **actual original coordinates** in `A`, recenter the realized child by a character if necessary, and recurse. Stop when no admissible pair remains.
+
+This is physically realizable. Along each branch, revealed original coordinates are removed, so the process terminates in finitely many steps.
+
+Let `v` range over internal tree nodes, `pi_v` be their reach probabilities, and `A_v` the revealed block. Exact drift telescoping gives
+
+\[
+\begin{aligned}
+\sum_v\pi_v B_{A_v}
+&\le K\sum_v\pi_vD_{A_v}\\
+&=K\left(\mathcal J(f)-\mathbb E\mathcal J(f_L)\right)\\
+&\le K\mathcal J(f).
+\end{aligned}
+\tag{2.3}
+\]
+
+Hence:
+
+### Theorem 2.1 — realizable gross-Shannon stopping
+
+The total **unpaid/gross Shannon restriction term** generated by the entire executed adaptive crossing phase satisfies
+
+\[
+\boxed{
+\sum_v\pi_vB_{A_v}\le K\mathcal J(f).
+}
+\tag{2.4}
+\]
+
+At every executed node, Theorem 1.1 simultaneously gives the block-information certificate
+
+\[
+\boxed{
+I(\eta_{j_v};X_{A_v})
+\ge h_2(p_{j_v})-h_2((1-\gamma)p_{j_v}).
+}
+\tag{2.5}
+\]
+
+No curvature refund is required to establish (2.4); therefore no refund is double-spent.
+
+A concrete clean specialization is `K=4`, `gamma=1/2`: every executed block satisfies `B_A<=4D_A`, produces at least a half-crossing of one survivor, the whole adaptive phase costs at most `4J(root)` in gross Shannon, and each executed crossing acquires at least `h_2(p)-h_2(p/2)` bits about its selected pivotality event.
+
+## 3. Exact terminal class
+
+When the policy stops, for every survivor `j` and every physical original-coordinate block `A`,
+
+\[
+\boxed{
+ c_j(A)\ge\gamma p_j
+\quad\Longrightarrow\quad
+B_A>K D_A.
+}
+\tag{3.1}
+\]
+
+Equivalently, every block with `B_A<=KD_A` has
+
+\[
+ c_j(A)<\gamma p_j
+\quad\text{for every survivor }j.
+\tag{3.2}
+\]
+
+Thus the remaining obstruction is sharply localized: **every large posterior crossing is expensive in gross Shannon relative to exact folded drift.** This residual statement is dimension-free and makes no demand on a fixed coordinate.
+
+## 4. Exact source-to-next-arrow use of account01/B18
+
+For an executed block, the account01/B18 curvature-refunded theorem (0.1) gives
+
+\[
+\Delta_A\mathcal F
+\le B_A-W_A,
+\qquad
+W_A:=\sum_{j\notin A}\mathfrak j'(p_j)c_j(A)\ge0.
+\tag{4.1}
+\]
+
+The new policy already has `B_A<=KD_A`, hence
+
+\[
+\boxed{
+\Delta_A\mathcal F\le K D_A-W_A\le K D_A.
+}
+\tag{4.2}
+\]
+
+So the same physical block is simultaneously safe for the curvature-refunded corrected entropy and gross-paid by the exact drift. The refund `W_A` remains an unspent surplus; it is not invoked again to justify (2.4).
+
+The genuinely new source-to-next-arrow statement comes from combining (1.4) with the B18 structure. If a terminal obstruction nevertheless contains a large crossing `c_j(A)>=gamma p_j`, then:
+
+1. it is gross-expensive: `B_A>K D_A` by (3.1);
+2. it creates explicit curvature credit `j'(p_j)c_j(A)` inside `W_A` by (4.1);
+3. independently, the same crossing forces the physical block to carry at least
+   `h_2(p_j)-h_2((1-gamma)p_j)` mutual information about the pivotality event by (1.5).
+
+Thus the next exact arrow is to compare these two *non-prescribed* currencies on the high-`B_A/D_A` terminal class: either prove that the curvature refund plus the forced block/pivotality information rules out a high-ratio terminal core, or construct an actual Boolean terminal obstruction satisfying all three constraints. This comparison is **not claimed proved here**.
+
+At an `F/J`-critical core of ratio `rho`, B18 further gives
+
+\[
+B_A\ge \rho D_A+W_A.
+\tag{4.3}
+\]
+
+Thus the new information price can be attached directly to the existing critical-core obstruction without changing the exact drift or asserting coordinatewise erasure payment.
+
+## 5. Addressing obstruction and nonreuse discipline
+
+The known addressing obstruction is preserved. Nothing above claims
+
+\[
+B_i\le K\operatorname{Inf}_i
+\]
+
+for a prescribed coordinate, nor that a target survivor `j` pays the cost of revealing `A`. Selection is adaptive over **physical blocks**, and the algorithm is allowed to stop when no gross-cheap large-crossing block exists.
+
+The only global payment in (2.4) is the telescoping folded drift
+
+\[
+D_A=\mathcal J-\mathbb E\mathcal J_{child}=I_A+C_A.
+\]
+
+Every block's Shannon cost is charged once at the node where the block is revealed. The curvature refund is retained in (4.2) but is not needed to prove the gross Shannon budget, so there is no credit reuse.
+
+## 6. Status
+
+This is a new universal interface-A lemma and a realizable adaptive stopping theorem. It does **not** prove the remaining terminal-class implication and does **not** prove full FEI. The later all-gate program and account01/B18's shaped-safe frontier remain compatible: this result supplies a source-exact restriction/selector compiler component rather than a new universal potential candidate.
+
+Execution is `WITHOUT_VERIFIED_BRAIN`; no native authenticated brain package or formal kernel was used or claimed. No benchmark gold, mock theorem, paid/remote compute, workflow dispatch, email/Drive access, unrelated private data, or weakened proof/source gate is used here.

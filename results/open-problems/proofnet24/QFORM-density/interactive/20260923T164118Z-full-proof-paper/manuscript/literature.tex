@@ -1,0 +1,91 @@
+\section{Relation to earlier work}\label{sec:literature}
+
+The question considered here is an endpoint question with a uniformity requirement. If independent real random variables have densities bounded by $K$, and $A$ has three eigenvalues of absolute value at least $a>0$, the proposed conclusion is a bound of the form $C K^2/a$ for the density of $X^{\mathsf T}AX+b^{\mathsf T}X+c$. The constant must be independent of the ambient dimension, the remaining eigenvalues, the eigenvectors, the linear term, and the supports and regularity of the coordinate densities. Several established theories address parts of this question. Their precise hypotheses matter when they are used in the proofs below.
+
+\subsection{Linear images, convolution, and geometric inequalities}
+
+The basic linear input is the theory of marginal densities of product measures. \citet[Theorem~1.1]{RV2015} prove that an orthogonal projection onto a $k$-dimensional subspace has density bounded by $(C K)^k$. \citet[Theorem~1.1]{LPP2016} obtain the sharper estimate
+\[
+ \|f_{PX}\|_{\infty}\leq 2^{k/2}K^k,
+\]
+as well as a refinement depending on the ambient dimension and unequal coordinate density bounds. In the one-dimensional case, the sharp constant follows from the convolution comparison of \citet{Rogozin1987} and the cube slicing theorem of \citet{Ball1986}; the higher-codimension geometric background includes \citet{Ball1989}.
+
+The integral arguments use the Brascamp--Lieb inequality \citep{BL1976}, its Gaussian extremization theory \citep{Lieb1990}, and its geometric formulation and transport proof \citep{Barthe1998}. For unit vectors $u_j$ and nonnegative weights $c_j$ satisfying $\sum_j c_j u_j u_j^{\mathsf T}=I_k$, the geometric inequality reads
+\[
+ \int_{\mathbb R^k}\prod_j h_j(\langle u_j,x\rangle)^{c_j}\,dx
+ \leq\prod_j\left(\int_{\mathbb R}h_j\right)^{c_j}.
+\]
+These are established analytic tools. Gaussian extremization for this integral does not assert that Gaussian coordinate densities maximize every quadratic pushforward under an $L^\infty$ constraint. Likewise, a bound on a projected density does not give a uniform bound on the conditional density on each affine fiber: conditioning includes division by the marginal density, which can be arbitrarily small.
+
+Where the proof partitions a frame with small individual vectors into nondegenerate groups, the relevant structural input is the partition consequence of the solution of the Kadison--Singer problem by \citet{MSS2015}. Applications must retain its upper bound on each vector norm and the resulting quantitative spectral bounds for the groups.
+
+\subsection{Fourier estimates for rough densities}
+
+An $L^\infty$ bound on a probability density gives useful integral control of its characteristic function, but does not furnish a universal pointwise rate of decay at every frequency. The estimate in \citet[Lemma~3.1]{RV2015} concerns the nonincreasing rearrangement of the modulus of the characteristic function. It is therefore suited to integral estimates and geometric Brascamp--Lieb arguments. Sharp Hausdorff--Young estimates provide another input \citep{Beckner1975}.
+
+For linear combinations of independent variables, \citet{FS2007} use an analytic argument to bound L\'evy concentration functions in terms of Diophantine properties of the coefficients, including a multidimensional extension. The arithmetic hypotheses and the linear map in that result differ from the quadratic pushforward considered here.
+
+\citet[Theorems~1--2 and~8]{BCG2012} give quantitative separation from modulus one using density bounds together with variance or quantile information, and give entropy versions of these estimates. The variance or quantile parameters are essential in those bounds. Related convolution concentration estimates are developed in \citet{BC2015}.
+
+\subsection{Bilinear forms and the role of independence}
+
+A particularly close result is the density estimate of \citet[Section~2]{BGKS2024}. Although their Theorem~2.1 is titled ``Density of Quadratic Forms,'' the expression there is bilinear in two independent random matrices. In the scalar case their Corollary~2.4 gives, for independent vectors $X,Y$ with independent coordinates of density at most $K$,
+\[
+ \left\|f_{X^{\mathsf T}ZY+u^{\mathsf T}X+v^{\mathsf T}Y+w}\right\|_\infty
+ \leq C K^2\min_{j\geq2}
+ \frac{1}{\sqrt j\left(\prod_{i=1}^j\sigma_i(Z)\right)^{1/j}}.
+\]
+The minimum is over nonzero singular values. Conditioning reduces the proof to a linear density estimate and an integrable negative first moment in dimension at least two. This result explains why a well-conditioned crossing block with at least two directions is useful. It does not directly cover a rank-one interaction accompanied by a quadratic expression in the same light coordinates; the independence and rank needed by the displayed estimate are then absent.
+
+\subsection{The parabola extension estimate}
+
+For the Fourier convention
+\[
+ (E h)(s,\tau)=\int_{\mathbb R}h(x)e^{i(sx^2+\tau x)}\,dx,
+\]
+the bound
+\[
+ \int_{\mathbb R^2}|E h(s,\tau)|^6\,ds\,d\tau
+ \leq\frac{4\pi^3}{\sqrt3}\|h\|_2^6
+\]
+is the sharp one-dimensional Schr\"odinger Strichartz inequality. The underlying restriction theory is due to \citet{Strichartz1977}; sharp constants and Gaussian extremizers are established in \citet{Foschi2007,HZ2006}. The normalization follows from the constant $12^{-1/12}$ in \citet[Theorem~1.1]{Foschi2007} and Plancherel. If $h$ is a probability density bounded by one, then $\|h\|_2\leq1$, giving the constant $4\pi^3/\sqrt3$ used below. An elementary coarea proof of this special case is included below.
+
+\subsection{General polynomial and Gaussian results}
+
+The polynomial anti-concentration inequality of \citet{CW2001} gives, for a degree-$d$ polynomial $P$ under a log-concave probability measure, a bound of the form
+\[
+ \mu\{|P|\leq\varepsilon\}
+ \leq C d\left(\frac{\varepsilon}{\int |P|\,d\mu}\right)^{1/d}.
+\]
+The degree-two exponent is $1/2$. Log-concavity and the normalization of the polynomial are part of that statement. \citet{GM2022} establish dimension-free covariance bounds for polynomials of product measures, and obtain sublevel and Fourier estimates under additional log-concavity hypotheses. Recent work treats further polynomial anti-concentration questions on $L^p$ balls and symmetric measures \citep{GM2026}, and regularity of nondegenerate polynomial pushforwards of log-concave measures \citep{KZ2026}. These conclusions have different hypotheses or exponents from the linear-in-interval-length endpoint sought here.
+
+For analytic maps, \citet[Theorems~1.1--1.2]{GHS2026} relate local $L^p$ integrability of pushforward densities to singularity invariants. The value $\epsilon_\star=\infty$ means membership in every finite $L^p$; boundedness is a stronger property, treated for algebraic maps in their Corollary~6.2. In the real setting, \citet{Reiser2018} proves continuity of pushforward densities of compactly supported smooth measures for flat maps with rational-singularity fibers. These statements concern specified map and input regularity and do not give a dimension-uniform constant for arbitrary bounded product densities.
+
+For Gaussian input, rotation preserves independence and a quadratic polynomial can be diagonalized without leaving the input class. Density bounds for squared Gaussian norms and weighted chi-square variables are studied by \citet{GNSU2019,BNU2020}; signed, noncentral Gaussian quadratic forms are also treated in \citet{CK2026}. The elementary characteristic-function identity already gives
+\[
+ |\mathbb E e^{it(g^{\mathsf T}Ag+b^{\mathsf T}g)}|
+ \leq\prod_i(1+4t^2\lambda_i(A)^2)^{-1/4}.
+\]
+Three nonzero eigenvalues make the right-hand side integrable at infinity. General product laws lack this rotational invariance, so the Gaussian computation does not settle their uniform density bound.
+
+A related Gaussian quadratic estimate appears in \citet[Lemma~2.1]{APSSS2017}: for any nonzero real symmetric matrix $B$, standard Gaussian vector $g$, fixed vector $d$, and scalar $s$,
+\[
+ \mathbb P\!\left\{
+ \frac{\|B(g+d)\|}{|(g+d)^{\mathsf T}B(g+d)-s|}\geq t
+ \right\}\leq\frac{C}{t},\qquad t\geq1,
+\]
+with an absolute constant. Its proof uses Gaussian rotational invariance and a joint characteristic function of quadratic quantities, assumptions that do not hold for general bounded product densities.
+
+A related regularity method of \citet{HMP2025} uses a Gaussian
+representation of independent identically distributed input laws and
+spectral quantities of a Hessian multiplied by a random diagonal
+matrix.  Their results combine inverse moments of the associated
+Dirichlet energy with spectral remainders and small influences.
+Its smooth representation and quantitative regularity hypotheses
+differ from the sole coordinate density bound here.  In particular,
+these results do not yield a dimension-uniform estimate for arbitrary
+bounded coordinate laws and noncentral forms.
+
+\subsection{Scope of the present results}
+
+The semidefinite theorem below concerns bounded product densities, with an explicit constant controlled by the third spectral scale. The indefinite results require the additional geometric or analytic hypotheses in their statements. The unrestricted dimension-uniform bound remains a conjecture; the cited results do not establish it for arbitrary product laws.

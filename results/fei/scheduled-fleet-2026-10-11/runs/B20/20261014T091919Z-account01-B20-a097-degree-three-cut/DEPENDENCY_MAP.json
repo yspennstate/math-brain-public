@@ -1,0 +1,48 @@
+{
+  "target": "For every genuine Boolean f, G(f)<=4I(f)+(3/4)U(f)",
+  "status": "OPEN",
+  "closed_dependencies": [
+    {
+      "id": "signed-row-cut",
+      "statement": "G<=D_ge2+V1/2+(2/ln2)I",
+      "status": "PROVED_SOURCE_PINNED"
+    },
+    {
+      "id": "tensor-prime-localization",
+      "statement": "positive frozen residual localizes to a tensor-prime factor",
+      "status": "PROVED_SOURCE_PINNED"
+    },
+    {
+      "id": "degree-two-exclusion",
+      "statement": "every degree<=2 Boolean f has G<=2I and therefore R_4,3/4<0 unless constant",
+      "status": "PROVED_THIS_ASSEMBLY_FROM_SOURCE_PINNED_B11"
+    },
+    {
+      "id": "gu-to-fei",
+      "statement": "universal (4,3/4)-GU implies U<=16I and H<=34I",
+      "status": "INDEPENDENTLY_AUDITED"
+    }
+  ],
+  "sole_open_leaf": {
+    "id": "G-GU-SIGNED-KL-DEGREE-GE3",
+    "quantifiers": "every tensor-prime genuine Boolean f on every finite uniform cube with R_4,3/4(f)>0 and Fourier degree>=3",
+    "statement": "D_ge2(f)+V1(f)/2 <= (4-2/ln2)I(f)+(3/4)U(f)",
+    "status": "OPEN"
+  },
+  "preserved_terms": [
+    "sum_i(B_i-Gamma_i)",
+    "all K_{i,A} with |A|>=2",
+    "V1/2 singleton reuse cost",
+    "normalization and zero-mass conventions",
+    "single-use influence accounting"
+  ],
+  "invalidations": [
+    "V1/2<=U is false",
+    "adaptive root-tree payment does not pay the static singleton sum",
+    "B05 fair/disjoint transfer is not universal",
+    "I>=1 conversion is false",
+    "fixed-sign projection and unsigned coefficient four are unavailable",
+    "unrepaired B09 intervals are unavailable"
+  ]
+}
+

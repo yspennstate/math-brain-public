@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260923T055256Z-account03-B04-qform-auto11-r26",
+  "control_revision": "2026-09-22.15",
+  "control_head_prepublication": "bebec006f22d6e9aed3a5e542b65f466b6c9e63a",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "status": "SUPPORTING_THEOREM_PROVED_FULL_TARGET_OPEN",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "mathematical_result": {
+    "id": "QFORM-KSAMPLE-MINOR-OVERLAP-ENTROPY-v1",
+    "summary": "Condition k iid canonical squared 2x2 physical minors on empty common row intersection; the first marginal has inclusion cap (k-1)/k and entropy loss at most log(1/delta_k)/k, yielding a product-Fourier half-Riesz bound. At k=3, zero overlap probability is exactly a physical row-star support and hence a rank-one-deletion residue.",
+    "k3_constant": 13.019035313822702,
+    "example_density_bound": 12.082473081510534,
+    "continuity_proved": false,
+    "essential_bounded_density_proved_in_scope": true
+  },
+  "peer_result_applied": {
+    "worker": "account02/B04",
+    "theorem": "QFORM-ENTROPY-WEIGHTED-RANK2-HALFRIESZ-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "04297a630381fcfcf429b4c5ec560886bebacb39",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T052139Z-account02-B04-qform-auto11/REPORT.md"
+  },
+  "designated_partner": {
+    "worker": "account04/B04",
+    "completed_current_qform_result_visible": false,
+    "note": "Fresh search found only QFORM login/start evidence; no current-QFORM canonical report or shared handoff was fabricated."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "053c462960cc0c0068d221ffece8029a662a7ab6",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T055256Z-account03-B04-qform-auto11-r26/REPORT.md",
+    "checks": ["CHECKS.py", "CHECKS.json"],
+    "handoff_commit": "5fecda45705db58a758a99d1e68f0eb2ee67c91e"
+  },
+  "corrections_respected": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "unresolved_implication": "QFORM-DOUBLE-STAR-LOW-CROSSRANK-TO-PAID-HUB-v1",
+  "next_step": "Use the exact row/column rank-one-deletion geometry from delta3^r=delta3^c=0 to route the low-cross-rank survivor into grouped-square, pair-log, true-pair-Schur, or mixed-hub endpoints without a vanishing local reciprocal."
+}

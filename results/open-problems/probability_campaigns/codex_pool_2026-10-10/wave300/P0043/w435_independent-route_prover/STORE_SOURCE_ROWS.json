@@ -1,0 +1,26 @@
+[
+  {
+    "id": "claim_30119004c0a0723b7dc89795b1550bfc945a85fefb68a5e3601d15b9e191359d",
+    "kind": "claim",
+    "title": "Open problem: No infinite cluster at criticality on quasi-transitive graphs with p_c < 1",
+    "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For any quasi-transitive graph G with p_c(G) < 1, prove theta(p_c) = 0 (Benjamini-Schramm Conjecture 4). Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 15.11, p. 235. Status notes: Known for quasi-transitive graphs of exponential growth (Hutchcroft 2016) and for nonamenable graphs (Benjamini-Lyons-Peres-Schramm); the polynomial-growth case reduces essentially to the Z^d question (C0023).\nPosed in Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems\nCurrent status unverified as of 2026-09-07"
+  },
+  {
+    "id": "claim_074b08d2f079277d5ce5423b113d46801b9ed62cd7be7598eb47b46fb59b1aeb",
+    "kind": "claim",
+    "title": "Attempt on No infinite cluster at criticality on quasi-transitive graphs with p_c < 1",
+    "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Split by growth type and identify the remaining cases precisely. Result: By Trofimov's theorem a quasi-transitive graph of polynomial growth is quasi-isometric to a Cayley graph of a virtually nilpotent group, and the critical behaviour of percolation is not a quasi-isometry invariant in general, so this does not reduce directly to Z^d; however the known proof for Z^2 (Harris-Kesten) and the high-dimensional proof (lace expansion, d >= 11) do not transfer either. Exponential growth is Hutchcroft's theorem. The remaining cases are (a) polynomial growth of degree 3 to 10 (and all virtually nilpotent non-abelian cases, e.g. the Heisenberg group of growth degree 4), where the problem is at least as hard as C0023, and (b) intermediate growth (Grigorchuk-type groups), where Hutchcroft's argument fails because it uses that the number of vertices at distance n grows exponentially to compare the cluster with a branching structure. For case (b) I checked the two known routes: the nonamenable route (Burton-Keane fails, so uniqueness monotonicity gives theta(p_c)=0 through the Benjamini-Lyons-Peres-Schramm argument) does not apply since intermediate-growth groups are amenable; the exponential-growth route uses a subadditivity argument on the expected number of vertices at distance n reached by the cluster, which requires growth rate > 1 in the exponential sense. Intermediate growth groups have growth exp(n^alpha), alpha < 1, which is superpolynomial, and Hutchcroft's argument actually needs only that the growth is faster than any polynomial? His proof uses the growth to show that the susceptibility is finite at p_c in a spherically-averaged sense via a comparison with a branching random walk with killing at rate given by the growth; I believe the argument requires exponential growth for the comparison to be uniform, so intermediate growth is a genuine gap. Recorded: the open cases are polynomial growth (degree 3 to 10 and non-abelian nilpotent) and intermediate growth. Obstruction: Polynomial growth is the Z^d problem; intermediate growth defeats the exponential-growth comparison.\nRefers to the open problem node open-problem-c0084-no-infinite-cluster-at-criticality-on-quasi-transitive-graphs-with-p-c\nNo independent review; result status attempted_unsolved"
+  },
+  {
+    "id": "claim_c84438aaebd3352ec231b6a011882233b933b517484f1aceb0e487376b263099",
+    "kind": "claim",
+    "title": "Open problem: Absence of infinite clusters at critical percolation",
+    "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). If G is quasi-transitive and p_c(G)<1, is there almost surely no infinite Bernoulli cluster at p_c(G)? Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Conjecture 8.15, printed p.285.\nPosed in Probability on Trees and Networks, paperback electronic version 19 August 2026\nStatus as recorded in the campaign ledger on 2026-09-07"
+  },
+  {
+    "id": "claim_9850a15b06f23b6e38459dc61373db77c0b50e6ff9678c5a92e051af94f90dc4",
+    "kind": "claim",
+    "title": "Attempt on Absence of infinite clusters at critical percolation",
+    "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Critical branching-process extinction Result: For the regular tree at p=1/b, an infinite descendant cluster would have survival probability x satisfying x=1-(1-px)^b. For b>=2 strict concavity gives 1-(1-x/b)^b<x for every x>0, so only x=0 is possible. Check: The strict inequality can also be obtained from the binomial generating function lying strictly above its tangent at one. This excludes the deterministic b=1 exception, whose p_c is one. Obstruction: Critical clusters in a general quasi-transitive graph are not independent branching trees. Their loop dependence is not captured by this fixed-point proof.\nRefers to the open problem node open-problem-p0043-absence-of-infinite-clusters-at-critical-percolation\nNo independent review"
+  }
+]

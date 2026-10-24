@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B07",
+  "run_id": "20260922T163428Z-account02-B07-QFORM-r12",
+  "status": "ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "latest_observed_commit_before_memory_write": "f1bcae262d478691ee95eea07681eac13e67094d",
+    "owner_control_revision": "2026-09-22.7",
+    "active_programme": "QFORM-DENSITY-3EIG-20260922",
+    "later_stop_observed": false
+  },
+  "assignment": {
+    "title": "Coordinate minor selection",
+    "method": "complementary constructions and source-valid counterexamples",
+    "partner": "account03/B07"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "5f319d96212a5828ec74a6ea3e3c87d67290628a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260922T163428Z-account02-B07-QFORM-r12/",
+    "report": "REPORT.md",
+    "partner_addendum": "PARTNER_R12_APPLICATION.md",
+    "checker": "CHECK.py",
+    "checker_output": "CHECK_OUTPUT.txt"
+  },
+  "new_result": {
+    "name": "QFORM-Q0-RIDGE-FOUR-HEAVY-DPP-v1",
+    "statement": "An actual full-matrix q=0 overlap packet E0(R)>=c admits a random original-coordinate bipartition with e3(BB^T)>=c/64. At ridge effective dimension three, either all row leverages are <=3/5 and the full quadratic form has continuous density bounded by 10 e sqrt(5/12)c^(-1/6), or the determinant L-ensemble has at most four original coordinates with inclusion marginal >3/5. In the rank-three limit the law is ordinary third-volume sampling.",
+    "classification": "proved supporting theorem"
+  },
+  "partner_result_applied": {
+    "account": "account03",
+    "slot": "B07",
+    "run_id": "20260922T163733Z-account03-B07-qform-r12",
+    "name": "QFORM-THIRD-COMPOUND-OVERLAP-REDUCTION-v1",
+    "canonical_commit": "685929d9daee92a164dbf6ba6f9305d2e6550826",
+    "application": "Its unconditional O0 branch gives e3(BB^T)>=1/256. Combining the partner's theta=8/3 leverage-1/2 payment with the new theta=3 theorem gives either a direct full-form bound <=22.107121236243 after the partner gate fails, or an O0 residual supported by at most four determinant-heavy original rows with marginal >3/5."
+  },
+  "other_sources": [
+    {
+      "name": "QFORM-RIDGE-DENSITY-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "9c1167db05c7b0f520f060796fde921ed769a4e7",
+      "path": "proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md"
+    },
+    {
+      "name": "QFORM-EXTERIOR-PACKET-ENERGY-TRANSFER-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "92802adbc9d6fd13ba3be5ab3abea17fa8c49e19",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260922T160205Z-account02-B07-QFORM-r11/REPORT.md"
+    },
+    {
+      "name": "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1 correction source",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "exact_output": {
+    "terminal_marker": "QFORM_Q0_RIDGE_DPP_CHECK_PASS",
+    "generic_packet_bound_c_1_over_32": 31.264190677321,
+    "old_partner_q0_c_1_over_16": 27.85322739812,
+    "old_partner_two_coloop_q0_c_3_over_16": 23.192913897831,
+    "new_partner_O0_direct_bound_after_theta3_gate": 22.107121236243
+  },
+  "unresolved_implication": "QFORM-MIXED-STRATUM-OR-FOUR-HEAVY-PAYMENT-v1: pay O1/O2 shared-coordinate aggregates, O3 principal aggregate, and the O0 four-heavy determinant core by product-preserving grouped-coordinate analysis without selecting one dimension-dependent tiny minor.",
+  "full_target_status": "OPEN / NOT PROVED / NOT DISPROVED",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

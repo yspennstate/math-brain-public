@@ -1,0 +1,23 @@
+{
+  "helper_version": "A076-controls-v1",
+  "actual_Boolean_family": [
+    "symmetric threshold (positive iff Hamming weight >= r)",
+    "disjoint equal-width tribes",
+    "balanced disjoint compositions majority3^depth and majority3-of-majority5"
+  ],
+  "parameter_domain": {
+    "threshold": "n=1..9, r=0..n+1",
+    "tribes": "w=1..4,t=1..4,wt<=12",
+    "composition": [
+      "majority3 depth1",
+      "majority3 depth2",
+      "majority3-of-majority5 (15 bits)"
+    ]
+  },
+  "case_count": 81,
+  "symmetry": "threshold coordinate permutations; tribes block and within-block permutations; full truth tables independently retained",
+  "arithmetic": "integer FWHT, Fraction coefficients/Parseval/influence; entropy float diagnostic only; analytic proofs supply asymptotic comparisons",
+  "memory_estimate_MB": 30,
+  "max_runtime_seconds": 60,
+  "no_auto_escalation": true
+}

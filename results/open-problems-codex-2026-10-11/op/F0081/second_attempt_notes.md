@@ -1,0 +1,1 @@
+COMPLETED: Conservative insertion and product variance proof establish subcritical moment finiteness in all d and full criterion for d=2. Remaining gap: E*X^(d/2)=infinity for d>=3. See SECOND_ATTEMPT.md.

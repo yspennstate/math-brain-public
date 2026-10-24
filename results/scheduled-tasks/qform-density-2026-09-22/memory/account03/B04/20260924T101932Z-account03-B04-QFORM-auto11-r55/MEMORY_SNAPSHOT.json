@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260924T101932Z-account03-B04-QFORM-auto11-r55",
+  "status": "NEW_SUPPORTING_THEOREM_FULL_TARGET_OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "startup_commit": "b89630d777d368fc8d48f15aff5478f2a1bd64f3",
+    "prepublication_commit": "1d5b87714ce4165e5ee4cd9f4c2e946da797e189",
+    "final_refresh_commit": "414242d1f16ce941b28a4737dd5a991a88b07733",
+    "owner_revision": "2026-09-22.15",
+    "programme_revision": "2026-09-22.5",
+    "correction_inbox_blob": "ba7aeac3d879f59da5ec8a12daad74ea85714465"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "live CORRECTION_INBOX through blob ba7aeac3d879f59da5ec8a12daad74ea85714465"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@35bc266eff789abbc87566751c074d636337489d",
+      "path": "proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+      "scope": "grouped projected-crossing Fourier theorem and exact-rank crossing theorem"
+    },
+    {
+      "source": "yspennstate/math-open-problems@7321520c5803837aa09af68ef8ecce57dfab79f1",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260924T091631Z-account03-B04-QFORM-auto11-r54/REPORT.md",
+      "scope": "previous B04 near-zero overlap-one frontier"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-ONEHUB-PROJECTED-E2-MARGINALFREE-v1",
+    "statement": "For a literal original hub h and disjoint original-coordinate banks I,J, with m=A[h,J], s=||m||, B=A[I,J], C=B(I-P_m), and Z=e_2(CC^T)>0, the full ambient quadratic form has a continuous C_0 density bounded by 3*2^(7/6)*e^(1/3)*(s^2 Z)^(-1/6). No E2 row-marginal gate and no A_hh denominator remain.",
+    "constant": 9.39913188784886,
+    "regularity": "continuous_C0",
+    "review_status": "proved_in_worker_report_pending_independent_end_to_end_review"
+  },
+  "partner_application": {
+    "partner": "account04/B04",
+    "source": "yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57",
+    "premise": "eta_ab>2/75 on the designated double-anchor branch",
+    "applied_inequality": "H_ab>(2/75)E4(M) => ||p_Q||_inf < 4*75^(1/8) E4(M)^(-1/8) = 6.861872579851902... E4(M)^(-1/8)"
+  },
+  "stress_test": {
+    "dimension": 7,
+    "fully_dense": true,
+    "indefinite": true,
+    "near_zero_pivot": "A_hh=2^-20",
+    "squared_hub_coupling": 12,
+    "projected_E2": 6336,
+    "E2_row_marginals": ["32/33", "17/33", "17/33"],
+    "generic_bound": 1.4440703172492453,
+    "actual_promoted_branch_bound": 0.8254818122236568,
+    "rigorous_spectral_modulus_floor": 1.5411388300841897
+  },
+  "outputs": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8943de4ce7adbeef5a110d0bf0fc634b2fce39c5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260924T101932Z-account03-B04-QFORM-auto11-r55/",
+    "report_blob": "f07f5499b601a9c1025e7eafdd4d84c1feece487",
+    "checks_blob": "c8a3d302090fda8cb687821c47b7416d09d615ee",
+    "check_script_blob": "0e050e12d6b7cd94573109270b28bf814f52b092",
+    "check_output_blob": "1434f3d6921b09bb553a3c6a1df24694d189aada",
+    "final_refresh_blob": "813a88bb5d1703d8275b48b7ca48a8c1d5a68010",
+    "handoff_commit": "dc47478f07485da99d4cb4bfaabdb924a13974c8"
+  },
+  "unresolved_implication": "QFORM-OVERLAP1-TO-PROJECTED-E2-OR-BISTAR-v1: from the global J_1(h)>=1/144 near-zero chamber, force target-scale s^2 e_2(projected crossing) on some physical split or route its failure into existing inverse-free bistar/ridge/square-bank receivers while retaining arbitrary same-bank curvature and extra spectrum.",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_thinking_counters": null,
+  "scheduler_changed": false,
+  "notifications_changed": false,
+  "email_sent": false
+}

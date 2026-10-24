@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B10",
+  "run_id": "20260922T135338Z-account01-B10-QFORM-r13",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "initial_control_commit": "8a49b9a365a1854da7b24fdecaf264e917092055",
+  "latest_control_commit_observed_before_publication": "45bc35d5534994cc92cdc29ae56a2fcec1e15f89",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "parent_status": "OPEN_NOT_PROVED",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B10",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "11c9ae19edfd07e3a0bd4053a910667c20e721ab",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B10/20260922T130225Z-b10-qform-r11/REPORT.md",
+    "application": "Its independent-leakage heavy-isotropic inequality ||p_Q||_infinity < 3*2^(5/3) pays that subbranch; its conditional-cap counterexample excludes replacing genuine independence by low-dimensional caps."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-AFFINE-MIXTURE-L3-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "If L has density cap H, X is independent of the sigma-field containing L and has density cap one, F is arbitrary measurable in that sigma-field, and c is nonzero, then cLX+F has L3 density norm at most 66^(1/3)(H/|c|)^(2/3)."
+    },
+    {
+      "id": "QFORM-RANK3-RESIDUAL-ISOTROPIC-HEAVY-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "After a nonzero physical pivot in exact rank three, if a residual physical row is isotropic for the residual Schur form, then ||p_Q||_infinity <= 4*66^(1/4)[h ell |det Lambda| |a|]^(-1/4)."
+    },
+    {
+      "id": "QFORM-RANK3-RESIDUAL-LARGE-RAYLEIGH-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For an indefinite residual Schur form B with Delta=-det B, a residual row of leverage h and normalized Schur Rayleigh beta satisfying |beta|>=sqrt(Delta)/5 yields a determinant-scale residual L3 bound and hence an explicit full rank-three L-infinity bound after outer square smoothing."
+    }
+  ],
+  "science_sources": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "763dacfa296a1a2212c79f16aa900320cf424050",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B10/20260922T135338Z-account01-B10-QFORM-r13/REPORT.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "2152b0b8c7ddc76247b46d74dd1888d93920b0dd",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B10/20260922T135338Z-account01-B10-QFORM-r13/SUPPLEMENT.md"
+    }
+  ],
+  "unresolved_implication": "QFORM-RANK3-SMALL-NONZERO-RESIDUAL-RAYLEIGH-v1: after a nonzero outer physical pivot, close the residual-heavy indefinite branch with 0<|beta|<sqrt(Delta)/5 without reciprocal local-minor payment; separately remove the outer |a|->0 debt.",
+  "continuity_status": "NOT_PROVED_FOR_NEW_BRANCHES",
+  "operational_write_note": "Canonical login creation was attempted through the authorized connector and blocked by platform safety checks; no successful login/start/finish record is claimed."
+}

@@ -1,0 +1,305 @@
+Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 maximum. ADMISSION_PENDING / NO MATHEMATICAL MOVEMENT: successor metric `UNMEASURED -> UNMEASURED`; Section-B methods #2/#11/#30 were NOT_TRIED because no residue-9 source passed admission.**
+
+# NM13-10 — admission delta screen 37: three new CLOSABLE claims are owned/off-shard; P0220 handoff is not a release
+
+Date: 2026-09-19 UTC  
+Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Worker / namespace: `NM13-10` / `proofnet24/NM13-10/`  
+Category: **CLOSABLE OUTSIDE**  
+Preferred lane: source-posed probability or analysis inequalities with an exact sharp constant, explicit counterexample, finite certificate, or complete restricted-class theorem  
+Exclusive shard: `int(SHA256(UTF-8 canonical dedup_key).hexdigest(),16) mod 13 = 9`
+
+## 1. Result
+
+No genuinely unassigned, source-current, lifecycle-eligible residue-9 **CLOSABLE OUTSIDE** source passed the complete admission gate in this invocation.
+
+Therefore:
+
+- status remains **ADMISSION_PENDING**;
+- admitted source ID: **NONE**;
+- canonical claim ID: **NONE**;
+- no `operations/claims/<ID>.md` was created;
+- successor metric remains **`UNMEASURED -> UNMEASURED`**;
+- mathematical movement: **none**;
+- admission screening is **not** counted as mathematical progress;
+- successor unchanged-run counter remains **NOT_STARTED_PRE_ADMISSION**;
+- successor recovery/stuck counter remains **NOT_STARTED_PRE_ADMISSION**;
+- reserved first research methods **#2 ATTACK THE NEGATION FIRST, #11 DUALIZE, #30 DO ONE PRIME/SCALE/DIRECTION AT A TIME remain genuinely NOT_TRIED**;
+- no checker, theorem artifact, audit request, or paper folder was manufactured merely to certify screening.
+
+The retained residue-9 sentinels D0012 and P0213 remain `PENDING / NOT READY`. Claim-path absence for either does not make it READY.
+
+## 2. Runtime truth and scheduler/control limits
+
+The requested `GPT-6 / maximum` line remains prompt text only. This invocation actually runs as **GPT-5.6 Sol**. Authenticated reasoning-effort telemetry is not exposed, so the reasoning level is **UNVERIFIED**. I do not claim GPT-6, maximum reasoning, an hour-long execution, or a support escalation.
+
+The exposed task-control schema still provides ordinary task identity/title, prompt, schedule or relative-start configuration, timing mode, enabled state, and list/update operations. It exposes **no bindable model-family selector and no bindable reasoning-effort selector**, and no authenticated applied-model/applied-effort receipt for this inference. Making GPT-6/maximum binding would require an owner-authorized product/workspace/API/admin scheduling surface that persists those fields into inference routing and returns trustworthy per-run attestation.
+
+The historical P26 `You cannot modify this task` response is an authorization-context boundary. Current `RESULTS.md` records that a later full P26 update succeeded from another authorized context. If such a denial recurs, the compliant route is the owning/otherwise-authorized account, workspace, API/admin context, or authorized platform support for the **same existing task**. It is not task duplication, identity substitution, or permission bypass. No scheduler or permission was modified in this invocation.
+
+## 3. Authoritative continuity recovered
+
+The controlling predecessor is
+
+`proofnet24/NM13-10/runs/2026-09-19/2026-09-19T06-57-30Z__admission-delta-screen-36-p0411-owned-gz-hard-release.md`
+
+at creation commit
+
+`c0363420808cfa2218de9c70f60ef65b409258f7`.
+
+Its preserved state is:
+
+- `ADMISSION_PENDING`;
+- no admitted successor and no NM13-10 canonical claim;
+- successor metric `UNMEASURED -> UNMEASURED`, never an invented zero;
+- legacy Codex P-series canonical reconciliation complete through the populated endpoint P0488;
+- durable cursor `LEGACY_P_RECONCILIATION_COMPLETE_THROUGH_P0488__DELTA_PLUS_CANONICAL_CORRECTION_WATCH`;
+- retained residue-9 sentinels D0012 and P0213 both `PENDING / NOT READY`;
+- initial methods #2/#11/#30 still unspent.
+
+For this invocation I freshly recovered/read the required control and current-state surfaces: `FLEET_RULES.md`; `operations/new_methods_2026-09-16/OWNER_DIRECTIVE.md`; `operations/NEW_METHODS_2026-09-16.md`; later owner-authorized `operations/NM13_DEPLOYMENT_2026-09-17T203709Z.md`; root `QUEUE.md`, `POSTED.md`, and `RESULTS.md`; `probability_campaign_2026_09/INDEX.md` and `RANKING.md`; the predecessor report; newest neighboring NM13-09 and NM13-11 reports; all new canonical claims in the exact predecessor delta; the new P0220 handoff; direct current claim-path probes for D0012/P0213; relevant candidate/source/attempt history; and fresh bounded public source/current-literature checks for D0012/P0213.
+
+The append-only intake and attempt corpora are too large to honestly claim byte-for-byte model-visible re-rendering of every unchanged historical row in one invocation. I make no such claim. The predecessor's completed canonical P0001-P0488 reconciliation remains authoritative because the exact complete Git comparison below contains **no changed `probability_1000_intake_*/problems.jsonl`, no changed probability attempt ledger, no changed root queue/campaign selection surface, and no canonical dedup/alias correction**. Material changed candidates, ownership, handoff, and source/literature evidence were reopened individually. Missing display is never treated as permission to reset history.
+
+No private-repository history needed for this admission decision was known to be inaccessible. Public-web searches are bounded and do not establish worldwide openness, novelty, or priority.
+
+## 4. Exact predecessor-to-prewrite repository delta
+
+Frozen prewrite `master` head:
+
+`3a136dac93d2b1aff4665fc02123cd7319130e27`
+
+Exact comparison
+
+`c0363420808cfa2218de9c70f60ef65b409258f7 .. 3a136dac93d2b1aff4665fc02123cd7319130e27`
+
+reports:
+
+- status: `ahead`;
+- commits ahead: **108**;
+- commits behind: **0**;
+- total commits: **108**;
+- `too_large = null`, so the connector returned a complete changed-file set.
+
+Admission-critical consequences:
+
+1. Exactly **three canonical claim files were added** in the interval: `operations/claims/P0336.md`, `operations/claims/P0458.md`, and `operations/claims/P0459.md`.
+2. No canonical claim deletion appears in the complete changed-file set.
+3. Root `QUEUE.md`, `POSTED.md`, `RESULTS.md`, campaign `INDEX.md`/`RANKING.md`, screened intake `problems.jsonl`, probability attempt ledgers, and controlling owner/NM13 policy files do not occur in the changed-file set.
+4. The interval adds R7-04's terminal P0220 handoff, which expressly states that worker-local retirement is **not a release of canonical ownership**.
+5. No new residue-9 canonical claim or explicit owner-authorized residue-9 release appears.
+
+Thus the material delta consumes CLOSABLE inventory but does not create a free residue-9 successor for NM13-10.
+
+## 5. New CLOSABLE claim events: all owned and off shard
+
+### 5.1 P0336 — separated-rectangle empirical OT selection
+
+Canonical key from `operations/claims/P0336.md`:
+
+`selected_limit_of_empirical_euclidean_transport_between_separated_rectangles`
+
+SHA-256:
+
+`c30dfcaa5755777a4bea112324bcb19330e2133cf478934af7b47705384dd0d3`
+
+so
+
+`int(SHA256(key),16) mod 13 = 1`.
+
+The canonical claim names **R7-05** as owner, category `CLOSABLE OUTSIDE`, and records a create-only admission for the del Barrio--González-Sanz--Loubes--Rodríguez-Vítores empirical optimal-transport limit question. It is both actively owned and off NM13-10's shard.
+
+Disposition: **OWNED_ACTIVE / CLOSABLE / RESIDUE1 / UNAVAILABLE**.
+
+### 5.2 P0458 — standardized degree law in bilateral-preference graphs
+
+Canonical key:
+
+`the_standardized_degree_law_in_growing_bilateral_preference_graphs`
+
+SHA-256:
+
+`ef2c5c46a15943674af2ddc28d94e779c3d04db682355d9843dc038b9e0016b8`
+
+so its residue is **3 mod 13**.
+
+`operations/claims/P0458.md` names **R7-03** as owner and status `ADMITTED_ACTIVE / CLOSABLE OUTSIDE / PARTIAL`. Current R7-03 work is substantive rather than a stale reservation. NM13-10 cannot duplicate it and it is off shard anyway.
+
+Disposition: **OWNED_ACTIVE / CLOSABLE / RESIDUE3 / UNAVAILABLE**.
+
+### 5.3 P0459 — simultaneous degree concentration in bilateral-preference graphs
+
+Canonical key recovered from the campaign dedup index and admission record:
+
+`simultaneous_concentration_of_bilateral_preference_degrees`
+
+SHA-256:
+
+`4b7cee417518e43a3891bd8b131f6263db87def44f2a342e244fca835df93ac9`
+
+so its residue is **10 mod 13**.
+
+`operations/claims/P0459.md` names native CLOSABLE slot `6aa7b517489c8191a5250c9384e9b33c` as owner and status `CLAIMED / READY / CLOSABLE OUTSIDE / OPEN`. Its admission record explicitly recovers the historical September P0459 partial rather than resetting history. It is owned and off shard.
+
+Disposition: **OWNED_ACTIVE / READY / CLOSABLE / RESIDUE10 / UNAVAILABLE**.
+
+### 5.4 P0220 terminal handoff — not a release
+
+Canonical key:
+
+`explicit_stationary_law_of_the_leftmost_hammersley_drift-jump_particles`
+
+SHA-256:
+
+`06aa486153de472a20fa8c5040de6f9304f3989debc1e8f6c596655c3bf4d05c`
+
+so its residue is **6 mod 13**.
+
+R7-04's new six-unchanged-run handoff says in its first ownership paragraph that this is a **worker-local protocol action**, is **not a release of canonical ownership**, and is not permission for another worker to ignore `operations/claims/P0220.md`; only owner/coordinator-authorized release or reassignment can change that boundary. The source is also retired from that worker after six ordinary unchanged runs, so the exhausted/retired safeguard independently forbids opportunistic reopening.
+
+Disposition: **TERMINAL_WORKER_HANDOFF / OWNERSHIP_NOT_RELEASED / RESIDUE6 / DO_NOT_REOPEN**.
+
+## 6. Retained residue-9 sentinel D0012 remains HOLD_SCOPE / PENDING
+
+Canonical identity remains:
+
+- ID: `D0012`;
+- Ruodu Wang, *Current Open Questions in Complete Mixability*, Open Problem 12;
+- key: `complete_mixability_open_2014::open_problem_12`;
+- SHA-256: `2e1961ed8e2704913ac904fe4bf479ddb4010fec590415405ea927f6df62309a`;
+- residue: **9 mod 13**;
+- current direct probe of `operations/claims/D0012.md`: **404 / absent**.
+
+The exact source was rechecked on 2026-09-19 at Ruodu Wang's Probability Surveys paper. Open Problem 12 asks how to characterize the aggregation set `D_n`—possibly for some simple marginal distributions—and, for a proposed law `G`, determine whether a sum with law `G` lies in the Fréchet aggregation set. The source itself describes this as a general question summarizing the challenges of complete/joint mixability.
+
+Fresh bounded later-literature checks on 2026-09-19 recovered:
+
+- Tiantian Mao, Bin Wang and Ruodu Wang, *Sums of standard uniform random variables*, J. Appl. Probab. 56(3), 918-936 (2019), DOI `10.1017/jpr.2019.52`: full characterization for standard-uniform margins when dimension is at least 3, with only partial characterization in dimension 2;
+- Ruodu Wang's current publication/working-paper pages, which list current 2026 work but did not surface a general Fréchet-class solution to Open Problem 12 in this bounded pass.
+
+Repository continuity is also unchanged: coordinator screening remains `HOLD_SCOPE / PENDING, not READY`, the prior `D0012-A001` dual-separation attempt is substantive, and R7-05's Bernoulli-margins theorem is explicitly only a subclass result. Claim absence therefore clears only the ownership-file gate; it does not turn the broad parent into a source-fixed sharp scalar, exact interval, finite witness, or short residual theorem.
+
+Disposition: **RESIDUE9 / CLAIM_ABSENT / PRIOR_ATTEMPTED / HOLD_SCOPE / PENDING / NOT_READY**.
+
+## 7. Retained residue-9 sentinel P0213 remains PENDING / HARD-shaped
+
+Canonical identity remains:
+
+- ID: `P0213`, Aldous, “Bacon and eggs: task scheduling into batches”;
+- key: `constant-factor_online_scheduling_with_subadditive_batch_durations`;
+- SHA-256: `9781b1c074b5af5af3282a880371a755e16752f680c40ecd124322499809126f`;
+- residue: **9 mod 13**;
+- current direct probe of `operations/claims/P0213.md`: **404 / absent**.
+
+The live Aldous source was freshly checked on 2026-09-19. It still asks for an explicit online algorithm, depending on arbitrary admissible monotone subadditive batch-time function `S` and holding-cost function `c`, and one universal constant `C` satisfying
+
+`W/W_* < C`
+
+for **all** such `S,c` whenever `W_*` is finite. This is an infinite-dimensional universal algorithm theorem, not a fixed candidate constant or finite certificate.
+
+Fresh bounded literature checks on 2026-09-19 recovered:
+
+- Aldous--Miyazawa--Rolski, *On the stability of a batch clearing system with Poisson arrivals and subadditive service times*, J. Appl. Probab. 38 (2001), 621-634: a stability theorem for the clear-everything batch system;
+- Ezra--Leonardi--Pawłowski--Russo--Umboh, *Universal Optimization for Non-Clairvoyant Subadditive Joint Replenishment*, Algorithmica 88(3), article 43 (June 2026): competitive algorithms in a finite-type joint-replenishment model with different service/delay structure and benchmark;
+- Dinitz--Fineman--Umboh, *Learning-Augmented Online Algorithms for Nonclairvoyant Joint Replenishment Problem with Deadlines*, ICALP 2026: a deadline/prediction JRP model, again not Aldous's exact Poisson waiting-cost ratio problem.
+
+No source-matching theorem or source-valid all-algorithms counterexample surfaced in this bounded pass. That is **negative screening evidence only**, not a worldwide-openness certificate. The existing repository attempt obstructs one greedy policy but does not refute the existence of some universal-competitive algorithm.
+
+Disposition: **RESIDUE9 / CLAIM_ABSENT / PRIOR_ATTEMPTED / HARD_SHAPED / PENDING / NOT_READY**.
+
+## 8. Admission decision, method accounting, and next trigger
+
+**Decision: `ADMISSION_PENDING`. No canonical claim was created.**
+
+No source currently satisfies all required gates simultaneously:
+
+1. canonical identity recovered before hashing;
+2. residue 9 under SHA-256 modulo 13;
+3. literal source scope honestly CLOSABLE under the finite/sharp/counterexample/short-theorem lane;
+4. current source/literature status sufficient for admission;
+5. no posted/settled/retired/exhausted exclusion;
+6. no current or historical exclusive owner.
+
+The three genuinely new CLOSABLE claims are residues 1, 3 and 10 and already owned. P0220 is residue 6 and explicitly not released. D0012 and P0213 are residue-9 claim-path absences, but each still fails the scope/admission gate for the reasons above.
+
+Accordingly no Section-B method is charged. The reserved initial triple remains:
+
+- **#2 ATTACK THE NEGATION FIRST — NOT_TRIED**;
+- **#11 DUALIZE — NOT_TRIED**;
+- **#30 DO ONE PRIME, ONE SCALE, ONE DIRECTION AT A TIME — NOT_TRIED**.
+
+This is pre-admission screening and ownership/literature reconciliation, not a mathematical unchanged research run.
+
+Retain the durable cursor exactly:
+
+`LEGACY_P_RECONCILIATION_COMPLETE_THROUGH_P0488__DELTA_PLUS_CANONICAL_CORRECTION_WATCH`
+
+Do not restart the static P0001-P0488 corpus absent a material canonical/status/source correction. Re-enter a full candidate admission gate only on a real trigger: a new canonical source row; a dedup/alias correction exposing a residue-9 candidate; an explicit owner-authorized release/reassignment of a non-exhausted residue-9 CLOSABLE source; or a source/literature correction that turns a residue-9 HOLD into a literal finite/sharp/short endpoint.
+
+On the first candidate crossing all gates: fresh race-check `master`; re-read exact source/current primary/later-author/citing literature and prior attempts; recover all aliases and current/historical ownership; verify the canonical claim path is absent; create the canonical claim with create-only semantics and read it back at the creation commit; freeze the exact source inequality/class and one metric with baseline `UNMEASURED` unless actually recovered/measured; then begin substantive #2/#11/#30 in that same admitted run, starting with refutation.
+
+## 9. Structured ledger_delta for P26
+
+```yaml
+worker: NM13-10
+namespace: proofnet24/NM13-10
+category: CLOSABLE_OUTSIDE
+exclusive_residue_mod_13: 9
+status_before: ADMISSION_PENDING
+status_after: ADMISSION_PENDING
+source_id: NONE
+claim_id: NONE
+metric:
+  name: successor_source_native_sharp_constant_or_parameter_interval
+  scope: NOT_FROZEN_NO_ADMITTED_SOURCE
+  before: UNMEASURED
+  after: UNMEASURED
+mathematical_movement: false
+predecessor_report_commit: c0363420808cfa2218de9c70f60ef65b409258f7
+prewrite_master: 3a136dac93d2b1aff4665fc02123cd7319130e27
+repository_delta:
+  ahead: 108
+  behind: 0
+  complete_changed_file_set: true
+new_claims_seen:
+  - id: P0336
+    owner: research7_2026-09-17/R7-05
+    category: CLOSABLE_OUTSIDE
+    canonical_residue_mod_13: 1
+    disposition: OWNED_ACTIVE_OFFSHARD
+  - id: P0458
+    owner: research7_2026-09-17/R7-03
+    category: CLOSABLE_OUTSIDE
+    canonical_residue_mod_13: 3
+    disposition: OWNED_ACTIVE_OFFSHARD
+  - id: P0459
+    owner: native_slot_6aa7b517489c8191a5250c9384e9b33c
+    category: CLOSABLE_OUTSIDE
+    canonical_residue_mod_13: 10
+    disposition: OWNED_READY_OFFSHARD
+handoff_events:
+  - id: P0220
+    canonical_residue_mod_13: 6
+    disposition: TERMINAL_WORKER_HANDOFF_OWNERSHIP_NOT_RELEASED_DO_NOT_REOPEN
+retained_residue9_pending:
+  - id: D0012
+    claim_path: ABSENT_404
+    disposition: HOLD_SCOPE_PENDING_NOT_READY
+  - id: P0213
+    claim_path: ABSENT_404
+    disposition: HARD_SHAPED_PENDING_NOT_READY
+methods_actual: []
+methods_reserved_not_tried: [2, 11, 30]
+admitted_source_unchanged_runs: NOT_STARTED_PRE_ADMISSION
+recovery_counter: NOT_STARTED_PRE_ADMISSION
+admission_screen_counter_before: 36
+admission_screen_counter_after: 37
+next_cursor: LEGACY_P_RECONCILIATION_COMPLETE_THROUGH_P0488__DELTA_PLUS_CANONICAL_CORRECTION_WATCH
+audits:
+  P26: NOT_APPLICABLE_NO_COMPLETED_NM13_10_CLAIM
+  NM13-11: NOT_APPLICABLE_NO_COMPLETED_NM13_10_CLAIM
+```
+
+## 10. Safeguards / writes
+
+This invocation creates exactly this one immutable NM13-10 report. It creates no canonical claim, no checker/theorem artifact, no audit request, and no paper package. It edits no shared root and no peer namespace. No email/Gmail, Drive, public posting, paid compute, workflow execution, permission change, force-push, new schedule, or schedule modification occurred.

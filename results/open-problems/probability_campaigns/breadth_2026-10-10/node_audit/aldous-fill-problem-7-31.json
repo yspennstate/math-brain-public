@@ -1,0 +1,26 @@
+{
+ "verdicts": {
+  "aldous-fill-problem-7-31-intersection-array-hitting-time-identity": {
+   "verdict": "FAITHFUL",
+   "why": "The statement matches the record's boxed identity, its hypotheses, the birth-and-death derivation, and the corollary tau_0 >= n-1 with equality exactly when d=1 (complete graphs). I spot-checked K_4 (3), Petersen (12) and Q_3 (10) and they agree with the record. The problem is named correctly. The proof text is the record's own derivation, nearly verbatim, with no invented steps. The verification tag is the record's own.",
+   "statement": ""
+  },
+  "aldous-fill-problem-7-31-intersection-ratio-product-reduction": {
+   "verdict": "FAITHFUL",
+   "why": "The statement reproduces the record's substitution u_i = k/(k_i c_i) and T_i, the recursion u_1 = 1, u_{i+1} = u_i c_i/b_i (which follows from k_{i+1}c_{i+1} = k_i b_i), the expression tau_0/n = sum (T_i/n) prod_{j<i} c_j/b_j, and the bound by the plain product sum via T_i <= n. It presents this as a sufficient condition only, which is the record's strength, says the uniform bound is unproved, and does not claim necessity. It leaves out the record's numerical observations about the sum (1 to 3.5 on cubic graphs, the feasible-array search), so it does not misstate them.",
+   "statement": ""
+  },
+  "aldous-fill-problem-7-31-cubic-maximum-computational-result": {
+   "verdict": "FIX",
+   "why": "All thirteen (n, tau_0) pairs are correct; I rechecked each from its intersection array using the identity. The problem is the strength. The record states plainly that, because the cubic distance-regular graphs are classified (exactly thirteen), 195/101 is the maximum of tau_0/(n-1) over all cubic distance-regular graphs, which settles that part of Biggs's outlined claim. The draft weakens this to 'among these reported values' and adds its own disclaimer that the record lacks a classification proof and the arrays, so it is 'not a proved universal theorem.' The record does not take that stance. It relies on the known classification as a cited theorem, and the values are exact consequences of the identity, not loose numerics. The entry should state the record's claim at full strength, conditional on the classification, and keep that the general O(n) conjecture remains open. One more point: the twelve-graph linear-solve check covered only some of the cubic graphs (K_{3,3}, Q_3, Petersen, Heawood, Pappus, Desargues, dodecahedron). The other values rest on the identity.",
+   "statement": "[campaign result 2026-09-14; values computed exactly from the intersection-array identity tau_0 = k sum_{i=1}^d (k_i+...+k_d)/(k_i c_i). That identity was checked against a direct linear-algebra solve on twelve graphs, among them the cubic graphs K_{3,3}, Q_3, Petersen, Heawood, Pappus, Desargues and the dodecahedron, with the complete graph and the cycle as independent controls.] This is the cubic case of Open Problem 7.31 in David Aldous and James Allen Fill's Reversible Markov Chains and Random Walks on Graphs, unfinished monograph (2002, recompiled 2014; official source https://www.stat.berkeley.edu/~aldous/RWG/book.html). For a finite connected simple distance-regular graph G with n vertices, let tau_0 = max_{x,y} E_x[T_y] for simple random walk. By the known classification, there are exactly thirteen cubic (valency-three) distance-regular graphs. Their (n, tau_0) values are: K_4 (4, 3); K_{3,3} (6, 6); cube Q_3 (8, 10); Petersen (10, 12); Heawood (14, 19); Pappus (18, 27); Desargues (20, 65/2); dodecahedron (20, 35); Coxeter (28, 45); Tutte-Coxeter (30, 48); Foster (90, 675/4); Biggs-Smith (102, 195); Tutte 12-cage (126, 234). Hence, given the classification, the maximum of tau_0/(n-1) over all cubic distance-regular graphs is 195/101 (about 1.9307), attained uniquely by the Biggs-Smith graph. This reproduces exactly the value Aldous and Fill attribute to Biggs and settles, for valency three, Biggs's outlined claim that it is the largest. The general O(n) conjecture over non-cycle distance-regular graphs is not settled by this computation. This is an unrefereed campaign result."
+  }
+ },
+ "served": [
+  "claude-opus-5-5"
+ ],
+ "stop_reason": "end_turn",
+ "rc": 0,
+ "cost_usd": 0.1749486,
+ "raw": ""
+}

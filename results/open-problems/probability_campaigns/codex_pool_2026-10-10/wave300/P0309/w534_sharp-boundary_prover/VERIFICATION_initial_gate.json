@@ -1,0 +1,32 @@
+{
+  "command": "python -B -X utf8 verify_boundary.py",
+  "outcome": "incomplete",
+  "cpu_seconds": 0.0,
+  "wall_seconds": 0.001990000018849969,
+  "rows": [
+    {
+      "utc": "2026-10-10T05:48:03.214885+00:00",
+      "kind": "fresh_compute_gate",
+      "unit": "rational-hessian-s4",
+      "allowed": false,
+      "snapshot_age_seconds": 6.615757465362549,
+      "selected_state": {
+        "ts": "2026-10-10 08:47:56",
+        "status": "warn",
+        "mode": "owner_present_polite",
+        "cpu_pct": 71,
+        "mem_avail_mb": 7576,
+        "commit_eff_avail_mb": 72320,
+        "hung_windows": 0
+      },
+      "work_cap": "one process; N=8; <=728 octant vectors per exponent; <=1024 log-quadrature panels; total CPU cap 4s"
+    },
+    {
+      "utc": "2026-10-10T05:48:03.215626+00:00",
+      "kind": "error",
+      "type": "RuntimeError",
+      "message": "Fresh compute gate did not allow this small CPU unit; no heavy fallback."
+    }
+  ],
+  "independent_mathematical_review": "pending"
+}

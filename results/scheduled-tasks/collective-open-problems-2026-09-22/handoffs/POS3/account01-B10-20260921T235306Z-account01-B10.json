@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B10",
+  "run_id": "20260921T235306Z-account01-B10",
+  "campaign": "POS3",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "scientific_archive": {
+    "repository": "yspennstate/math-open-problems",
+    "branch": "master",
+    "report_path": "proofnet24/collective-POS3/account01/B10/20260921T235306Z-account01-B10/REPORT.md",
+    "report_commit": "e72e4c5649ca5fa7e865d163e2e58d0c99b771d2",
+    "report_blob": "3a0d4e63665646adc853bb48192eba0f81629a15",
+    "checker_blob": "754097e764ede75ae0a4661f25fc61066319bc46",
+    "checker_output_blob": "35534c53092df23484983394f01ce711dbcbeeaf"
+  },
+  "consumed_other_account": {
+    "account": "account02",
+    "slot": "B11",
+    "commit": "8a4f5bf21872cbcfbc38433903f60a1f25faacdf",
+    "blob": "b71c5087c4982769946c31f1ec76242bf297fe17",
+    "path": "proofnet24/collective-POS3/account02/B11/20260921T235736Z-b11-44e20585/REPORT.md",
+    "result_used": "exact ordinal factorization by incomparability components; minimal counterexample may be assumed incomparability-connected"
+  },
+  "proved": [
+    "exact bijection between uniform linear extensions and monotone paths through the three-chain ideal-state lattice",
+    "exact forward/backward edge-flux formula W_{x,b}(t) for insertion slices and cross-chain pair probabilities",
+    "anti-concentration certificate: if every insertion slice across one incomparable chain interval is at most one third of e(P), a balanced pair exists",
+    "heavy-slice normal form: in any counterexample, the strong-majority insertion gap for every nonempty cross-chain incomparability interval has flux strictly greater than one third of e(P)",
+    "two-chain projection is exactly weighted by third-chain lift multiplicities"
+  ],
+  "falsified_shortcuts": [
+    "projecting/deleting the third chain and treating the induced two-chain law as uniform",
+    "assuming chain-insertion slice counts inherit Stanley rank log-concavity"
+  ],
+  "exact_checks": {
+    "projection_bias_example": "width 3, 15 extensions, projected AB lift weights 3,6,6",
+    "non_log_concavity_example": "width 3, 45 extensions, insertion slices 19,14,12 with 14^2 < 19*12",
+    "terminal": "POS3_THREE_CHAIN_FLUX_CHECK_PASS"
+  },
+  "next_obligation": "Combine incomparability-connectedness and the inherited >=5 strong-majority chain-block core with the heavy-slice normal form; force one cumulative flux into [e(P)/3,2e(P)/3] or prove one relevant insertion-slice vector has no jump exceeding e(P)/3.",
+  "privacy_review": {
+    "benchmark_gold": false,
+    "held_out_labels": false,
+    "credentials": false,
+    "scheduler_ids": false,
+    "machine_paths": false,
+    "unrelated_private_data": false
+  }
+}

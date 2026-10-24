@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B12",
+  "run_id": "20260924T102338Z-account02-B12-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit_start": "5f61a23c9648328ca20ae14e1885dfe2b76ece19",
+  "source_control_commit_refresh": "df90481f0848cb9bff1109c17730c71dd0fbde9e",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_problem_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "role": "Additional eigenvalue control",
+  "partner": "account03/B12",
+  "correction_inbox_blob": "ba7aeac3d879f59da5ec8a12daad74ea85714465",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-GSTAR-SCALE-FORCING-FALSE-v1",
+    "QFORM-HUBSTAR-FIBERL2-MIXEDNORM-UNIVERSAL-FALSE-v1"
+  ],
+  "partner_result": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fb41bed86e2f0730da84c5559618029bc667db3d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260924T094857Z-qform-eigenvalue-r54/REPORT.md",
+    "result": "two-sided relative-resonance stability and exact whitened carrier identity"
+  },
+  "pinned_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "completed_result_applied": "D_5 no-marginal fifth-volume density theorem"
+  },
+  "new_result": {
+    "id": "QFORM-CROSS-SIGN-SKEW-RANK-SHIELD-v1",
+    "statement": "For full-column-rank M with g=s_m(M), arbitrary N, normalized relative action B=G^{-1/2}M^TNG^{-1/2}=H+K, D=I+H, resonance dimension q=dim 1_{(-rho,rho)}(D), and cross-sign skew block K_{+-}=P_+KP_-, if kappa_r=s_{r+1}(K_{+-}) and m-q-2r>=1, then s_{m-q-2r}(M+N)>=g(rho-kappa_r)_+. After any further coefficient tail of operator norm delta, subtract delta by Weyl.",
+    "mechanism": "Within-sign skew blocks are free because their quadratic form vanishes against a definite sign block. Approximate only the opposite-sign skew block by rank r plus operator tail; the rank-r part spends at most 2r modes and the tail costs kappa_r.",
+    "survivor_obstruction": "For tau<rho and r_tau=#{s_j(K_{+-})>tau}, a five-mode carrier surviving D_5 must satisfy q+2r_tau>=m-4 whenever g(rho-tau)>delta."
+  },
+  "strict_family": {
+    "baseline_cross": "M=2I_5",
+    "relative_action": "B_L=D-I+K_L with D=diag(I_3,-I_2), K_L=diag(LR_2,0,LR_2)",
+    "property": "K_{+-}=0 while ||K_L||=L tends to infinity; new theorem gives s_5=2 exactly. Partner r54 arbitrary-skew branch retains only 3 modes and global-skew branch is vacuous for L>=1.",
+    "dense_tail": "arbitrary global symmetric operator-norm tail <=1/64",
+    "final_cross_floor": "s_5>=127/64",
+    "density_bound": "||p_Q||_infinity <= 5 sqrt(2e)/(127/64) = 5.875008457567557...",
+    "target_certificate": "s_10(A_final)>=127/64>1, hence at least three eigenvalues have modulus >=1"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4918f8df2f6b49747f5795085775393350156630",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260924T102338Z-account02-B12-QFORM-auto11/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "3d548b00c2ae6310ddda5f61daf3db93bcd75a91",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B12/20260924T102338Z-account02-B12-QFORM-auto11.md"
+  },
+  "unresolved_implication": "From bare s_3(A)>=1, extract an original-coordinate quantitative carrier violating q+2r_tau>=m-4 at positive scale, or prove persistent failure forces an already-paid physical pair/projected crossing/grouped hub/ridge/Schur/common-plane exit. Do not use the refuted g_* scale-forcing shortcut.",
+  "dense_tail_safeguard": "Tail used only through coefficient compression and singular-value Weyl; no uniformly-small random quadratic perturbation claim.",
+  "independence_safeguard": "Whitening/sign decompositions are deterministic matrix devices; probabilistic receiver is applied only to literal original-coordinate banks.",
+  "continuity": "C0 density proved only in the pinned D_5 branch; full-target continuity remains open."
+}

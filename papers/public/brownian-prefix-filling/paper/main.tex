@@ -1,0 +1,226 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\I}{\mathcal I}
+\newcommand{\Wi}{\mathbb W}
+
+\hypersetup{pdftitle={A Brownian piece in front of a process absolutely continuous with respect to Brownian motion},pdfauthor={Yitzchak Shmalo}}
+
+\title[A Brownian piece in front of a process]{A Brownian piece in front of a process\\ absolutely continuous with respect to Brownian motion}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{16 October 2026}
+\subjclass[2020]{60J65, 60G10, 37A05, 60G40}
+\keywords{Brownian motion, random time shift, filling scheme, shift-coupling, forward Brownian motion}
+
+\begin{document}
+\begin{abstract}
+Burdzy and Scheutzow asked whether, for every process $(X_t)_{t\ge0}$ whose law is equivalent to Wiener measure, one can put a random piece of path in front of $X$ so that the new process is a Brownian motion. We show that the answer is yes, and that absolute continuity suffices: on an extension of the probability space there are a Brownian motion $B$ and an almost surely finite random integer $N\ge0$ with $X_t=B_{N+t}-B_N$ for all $t\ge0$, so that $(B_t)_{0\le t\le N}$ is the required piece. The proof is Rost's filling scheme for the unit shift of two-sided Brownian motion. We give it in the form of a criterion for an invertible measure-preserving map $\theta$ and a target law $fP$: a randomized forward shift $\theta^N$ carries $P$ to $fP$ if and only if $\E[f\mid\I]=1$, where $\I$ is the invariant $\sigma$-field. The time $N$ cannot in general be a stopping time for $B$, and the auxiliary randomness cannot be dropped from the criterion.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+A forward Brownian motion, in the sense of Burdzy and Scheutzow \cite{BS}, is a process on $\R$ that is a Brownian motion forward in time from random times accumulating at $-\infty$. Among the open problems at the end of \cite{BS} is the following \cite[Problem~7.5, p.~125]{BS}.
+
+\begin{quote}
+Is it true that for any process $\{X_t, t\ge0\}$ whose law is equivalent to BM, we can find some random piece which we can put in front of $X$ such that the new process is Brownian motion?
+\end{quote}
+
+Write $C_0[0,\infty)$ for the continuous paths $x:[0,\infty)\to\R$ with $x(0)=0$, with the topology of uniform convergence on compacts, and $\Wi$ for Wiener measure on it. Putting a piece $(P_t)_{0\le t\le\tau}$, continuous with $P_0=0$, in front of $X$ means forming the process
+\begin{equation}\label{eq:concat}
+Z_t=P_t\quad(0\le t\le\tau),\qquad Z_t=P_\tau+X_{t-\tau}\quad(t\ge\tau).
+\end{equation}
+The answer is yes, and equivalence can be weakened to absolute continuity.
+
+\begin{theorem}\label{thm:main}
+Let $X=(X_t)_{t\ge0}$ be a random element of $C_0[0,\infty)$ defined on a probability space $(\Omega,\mathcal F,\Pp)$, and suppose that its law $Q$ is absolutely continuous with respect to $\Wi$. Then on an extension of $(\Omega,\mathcal F,\Pp)$ there exist a standard Brownian motion $B=(B_t)_{t\ge0}$ and a random variable $N$ with values in $\{0,1,2,\dots\}$ such that, almost surely,
+\[
+X_t=B_{N+t}-B_N\qquad\text{for all }t\ge0 .
+\]
+In particular the piece $P_t=B_t$, $0\le t\le N$, put in front of $X$ as in \eqref{eq:concat} gives the Brownian motion $Z=B$.
+\end{theorem}
+
+The time $N$ looks into the future, and it has to.
+
+\begin{remark}\label{rem:stopping}
+Suppose that $Z$ in \eqref{eq:concat} is a Brownian motion with respect to a filtration $(\mathcal G_t)$ and that $\tau$ is an almost surely finite $(\mathcal G_t)$-stopping time. By the strong Markov property $(Z_{\tau+t}-Z_\tau)_{t\ge0}=X$ is then a Brownian motion. So unless $Q=\Wi$, the length of the piece is not a stopping time for any filtration in which $Z$ is a Brownian motion; this excludes in particular randomized stopping times of $Z$, with randomization independent of $Z$.
+\end{remark}
+
+The construction is the filling scheme of Chacon and Ornstein \cite{CO} and Rost \cite{Rost71a,Rost71b}, run on the unit time shift of two-sided Brownian motion. In Section~\ref{sec:filling} we state and prove the filling step for an arbitrary invertible measure-preserving map, with a necessary and sufficient condition (Theorem~\ref{thm:filling}), and in Section~\ref{sec:proof} we deduce Theorem~\ref{thm:main}. Section~\ref{sec:remarks} relates the result to the literature on random shifts and records two limits of the construction.
+
+Problem~7.5 of \cite{BS} is close to the questions on shift-coupling studied by Aldous and Thorisson \cite{AT} and Thorisson \cite{Th96,ThBook}, and to the embedding of path laws in Brownian motion by a random shift of origin studied by Pitman and Tang \cite{PT-patterns,PT-slepian}. In particular \cite[Section~3.5]{PT-patterns} uses Rost's filling scheme, in the form of \cite[Chapter~IX, nos.~63--74]{DM}, to embed laws on $C[0,1]$ that are absolutely continuous with respect to the law of a Brownian meander; Theorem~\ref{thm:main} applies the same idea to laws on the whole half-line.
+
+\section{The filling step}\label{sec:filling}
+
+Let $(E,\mathcal E,P)$ be a probability space and $\theta:E\to E$ a bijection such that $\theta$ and $\theta^{-1}$ are measurable and $P\circ\theta^{-1}=P$. Let $\I=\{A\in\mathcal E:\theta^{-1}A=A\}$ be the invariant $\sigma$-field. For a nonnegative measurable function $h$ put $Lh=h\circ\theta^{-1}$. If a random element $Y$ of $E$ has the subprobability law $hP$, that is $\Pp(Y\in A)=\int_A h\,dP$, then $\theta Y$ has the law $(Lh)P$: for $A\in\mathcal E$, the change of variables $y=\theta z$ and the invariance of $P$ give
+\begin{equation}\label{eq:push}
+\Pp(\theta Y\in A)=\int h(z)\,1_A(\theta z)\,P(dz)=\int h(\theta^{-1}y)\,1_A(y)\,P(dy).
+\end{equation}
+In particular $L$ preserves integrals with respect to $P$, and $L1=1$.
+
+\begin{theorem}\label{thm:filling}
+Let $f\ge0$ be measurable with $\int f\,dP=1$, and let $Q=fP$.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item If $\E_P[f\mid\I]=1$ $P$-almost surely, then on a probability space carrying a random element $Z$ of $E$ with law $P$ and an independent sequence $U_0,U_1,\dots$ of independent uniform random variables on $[0,1]$, there is a random variable $N$ with values in $\{0,1,2,\dots\}$, a measurable function of $(Z,U_0,U_1,\dots)$, such that $\theta^NZ$ has law $Q$.
+\item Conversely, if $Z$ has law $P$ and $N$ is any random variable with values in $\Z$, on any probability space, such that $\theta^NZ$ has law $Q$, then $\E_P[f\mid\I]=1$ almost surely.
+\end{enumerate}
+\end{theorem}
+
+When $\theta$ is ergodic, $\I$ is trivial and the condition in (i) holds for every $f$.
+
+\begin{proof}[Proof of \textup{(ii)}]
+For $A\in\I$ we have $1_A(\theta^nz)=1_A(z)$ for every $z\in E$ and $n\in\Z$, hence $Q(A)=\Pp(\theta^NZ\in A)=\Pp(Z\in A)=P(A)$. Thus $\int_A f\,dP=P(A)$ for all $A\in\I$, which is $\E_P[f\mid\I]=1$.
+\end{proof}
+
+\begin{proof}[Proof of \textup{(i)}]
+Define measurable functions $a_n,b_n,m_n$ by $a_0=1$, $b_0=f$ and
+\begin{equation}\label{eq:recursion}
+m_n=\min(a_n,b_n),\qquad a_{n+1}=L(a_n-m_n),\qquad b_{n+1}=b_n-m_n\qquad(n\ge0).
+\end{equation}
+\emph{Masses.} By induction $0\le m_n\le a_n\le1$ and $0\le b_{n+1}\le b_n\le f$. Since $L$ preserves integrals, $\int a_{n+1}=\int a_n-\int m_n$ and $\int b_{n+1}=\int b_n-\int m_n$, and $\int a_0=\int b_0=1$; hence $\int a_n=\int b_n=:r_n$ for all $n$. The sequence $r_n$ decreases to a limit $r\ge0$, $b_n$ decreases pointwise to some $b_\infty\ge0$, and by monotone convergence
+\begin{equation}\label{eq:sum}
+\sum_{k\ge0}m_k=f-b_\infty,\qquad \sum_{k\ge0}\int m_k\,dP=1-r,\qquad \int b_\infty\,dP=r .
+\end{equation}
+
+\emph{The remaining mass vanishes.} Iterating \eqref{eq:recursion} and using $L1=1$,
+\[
+a_n=1-\sum_{k=0}^{n-1}L^{n-k}m_k\qquad(n\ge0).
+\]
+Summing over $0\le n<M$ and exchanging the sums,
+\begin{equation}\label{eq:cesaro}
+\frac1M\sum_{n=0}^{M-1}a_n=1-\sum_{k\ge0}c_{k,M},\qquad c_{k,M}=\frac1M\sum_{j=1}^{M-1-k}L^jm_k ,
+\end{equation}
+with $c_{k,M}=0$ for $k\ge M-1$. The map $\theta^{-1}$ preserves $P$ and has the same invariant $\sigma$-field $\I$, so by the mean ergodic theorem in $L^1$ \cite[Chapter~10]{Ka}, $\frac1J\sum_{j=1}^{J}L^jg\to\E_P[g\mid\I]$ in $L^1(P)$ for every $g\in L^1(P)$. Since $(M-1-k)/M\to1$, this gives $c_{k,M}\to\E_P[m_k\mid\I]$ in $L^1(P)$ as $M\to\infty$, for each fixed $k$. Moreover $\|c_{k,M}\|_1\le\int m_k\,dP$ and $\|\E_P[m_k\mid\I]\|_1=\int m_k\,dP$, so
+\[
+\Bigl\|\sum_{k\ge0}c_{k,M}-\sum_{k\ge0}\E_P[m_k\mid\I]\Bigr\|_1\le\sum_{k<K}\|c_{k,M}-\E_P[m_k\mid\I]\|_1+2\sum_{k\ge K}\int m_k\,dP
+\]
+for every $K$. Letting $M\to\infty$ and then $K\to\infty$, and using \eqref{eq:sum} (conditional expectation commutes with the monotone sum),
+\begin{equation}\label{eq:limit}
+\frac1M\sum_{n=0}^{M-1}a_n\longrightarrow h:=1-\E_P[f-b_\infty\mid\I]=\E_P[b_\infty\mid\I]\qquad\text{in }L^1(P),
+\end{equation}
+where the last equality is the hypothesis $\E_P[f\mid\I]=1$.
+
+Suppose that $r>0$. Then $\int h\,dP=r>0$, so there is $\varepsilon>0$ with $P(H)>0$ for $H=\{h\ge\varepsilon\}$. As $H\in\I$, $\int_Hb_\infty\,dP=\int_Hh\,dP\ge\varepsilon P(H)>0$, so there is $\delta\in(0,1]$ such that $D=H\cap\{b_\infty\ge\delta\}$ has $P(D)>0$. On $D$ we have $b_n\ge b_\infty\ge\delta$ and $a_n\le1$, hence
+\[
+m_n=\min(a_n,b_n)\ge\min(a_n,\delta)\ge\delta a_n .
+\]
+By \eqref{eq:limit},
+\[
+\liminf_{M\to\infty}\frac1M\sum_{n=0}^{M-1}\int_Dm_n\,dP\ge\delta\lim_{M\to\infty}\int_D\frac1M\sum_{n=0}^{M-1}a_n\,dP=\delta\int_Dh\,dP\ge\delta\varepsilon P(D)>0 .
+\]
+But $\sum_n\int_Dm_n\,dP\le1$ by \eqref{eq:sum}, so the Ces\`aro means on the left tend to $0$. This contradiction shows $r=0$; by \eqref{eq:sum}, $b_\infty=0$ almost surely and $\sum_km_k=f$.
+
+\emph{The random time.} Let $g_n=m_n/a_n$ on $\{a_n>0\}$ and $g_n=0$ on $\{a_n=0\}$; then $0\le g_n\le1$ and $a_ng_n=m_n$. Put
+\[
+N=\inf\{n\ge0:U_n\le g_n(\theta^nZ)\}.
+\]
+We claim that for every $n$ the subprobability law of $\theta^nZ$ on $\{N\ge n\}$ is $a_nP$. This holds for $n=0$. If it holds for $n$, then, since $\{N\ge n\}$ and $\theta^nZ$ are functions of $(Z,U_0,\dots,U_{n-1})$ and $U_n$ is independent of these,
+\[
+\Pp(N=n,\ \theta^nZ\in A)=\int_A a_n\,g_n\,dP=\int_A m_n\,dP,\qquad \Pp(N\ge n+1,\ \theta^nZ\in A)=\int_A(a_n-m_n)\,dP ,
+\]
+and by \eqref{eq:push} the subprobability law of $\theta^{n+1}Z$ on $\{N\ge n+1\}$ is $L(a_n-m_n)P=a_{n+1}P$. Hence $\Pp(N\ge n)=r_n\to0$, so $N<\infty$ almost surely, and $\theta^NZ$ has law $\sum_nm_nP=fP=Q$.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+Let $E=\{w\in C(\R):w(0)=0\}$ with the topology of uniform convergence on compacts, a Polish space, and let $P$ be two-sided Wiener measure on $E$: under $P$ the processes $(w(t))_{t\ge0}$ and $(w(-t))_{t\ge0}$ are independent standard Brownian motions. Define
+\[
+(\theta w)(t)=w(t+1)-w(1),\qquad t\in\R .
+\]
+Then $\theta$ is a homeomorphism of $E$ with inverse $(\theta^{-1}w)(t)=w(t-1)-w(-1)$, and $P\circ\theta^{-1}=P$ because a two-sided Brownian motion has stationary independent increments. The map $\theta$ is ergodic under $P$. Indeed, the map $w\mapsto(\xi_k)_{k\in\Z}$, $\xi_k(s)=w(k+s)-w(k)$ for $s\in[0,1]$, is a bimeasurable bijection of $E$ onto $C_0[0,1]^{\Z}$, with inverse given by concatenating the pieces; under $P$ the $\xi_k$ are independent with the law of Brownian motion on $[0,1]$, and $\theta$ becomes the shift $(\xi_k)_k\mapsto(\xi_{k+1})_k$. Approximating an invariant event by events that depend on finitely many $\xi_k$ and shifting the approximations shows that it lies, up to a null set, in the tail $\sigma$-field of $(\xi_k)_{k\ge0}$, so its probability is $0$ or $1$ by Kolmogorov's zero-one law.
+
+Let $\pi:E\to C_0[0,\infty)$ be the restriction to $[0,\infty)$, so that $P\circ\pi^{-1}=\Wi$. Let $f_+=dQ/d\Wi$ and $f=f_+\circ\pi$. Then $\int f\,dP=\int f_+\,d\Wi=1$ and $(fP)\circ\pi^{-1}=f_+\Wi=Q$. Since $\theta$ is ergodic, Theorem~\ref{thm:filling}(i) gives, on some probability space, a random element $W$ of $E$ with law $P$ and an almost surely finite random variable $N$ with values in $\{0,1,2,\dots\}$ such that $\theta^NW$ has law $fP$. Put $B_t=W(t)$ for $t\ge0$, a standard Brownian motion, and
+\[
+Y=\pi(\theta^NW),\qquad Y_t=W(N+t)-W(N)=B_{N+t}-B_N\quad(t\ge0).
+\]
+Then $Y$ has law $(fP)\circ\pi^{-1}=Q$, and $Y=\Phi(B,N)$ for the measurable map $\Phi(b,n)=(b(n+t)-b(n))_{t\ge0}$ from $C_0[0,\infty)\times\{0,1,\dots\}$ to $C_0[0,\infty)$.
+
+It remains to move the construction onto the space of $X$. Since $X$ and $Y$ have the same law and $C_0[0,\infty)\times\{0,1,\dots\}$ is Polish, the transfer theorem \cite[Theorem~6.10]{Ka} gives, on an extension of $(\Omega,\mathcal F,\Pp)$, a pair $(B',N')$ with $(X,B',N')\overset{d}{=}(Y,B,N)$. The set $\{(x,b,n):x=\Phi(b,n)\}$ is measurable and has probability one under the law of $(Y,B,N)$, hence also under the law of $(X,B',N')$. So $B'$ is a standard Brownian motion, $N'$ is an almost surely finite random variable with values in $\{0,1,2,\dots\}$, and $X_t=B'_{N'+t}-B'_{N'}$ for all $t\ge0$, almost surely. This proves Theorem~\ref{thm:main}. \qed
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Relation to Rost's filling scheme]\label{rem:rost}
+The recursion \eqref{eq:recursion} is the filling scheme of \cite{CO,Rost71a} for the deterministic Markov kernel $y\mapsto\delta_{\theta y}$, started from $P$ and filling the target $fP$; for this kernel every nonnegative measurable $N$ built from $Z$ and independent uniforms is a randomized stopping time, since the chain $(\theta^nZ)_n$ is a function of its starting point. One may instead run the scheme on the forward paths alone, the chain $Y_n=(B_{n+t}-B_n)_{t\ge0}$ with stationary law $\Wi$: a bounded excessive function $u$ satisfies $u(\theta y)\le u(y)$, hence by stationarity $u(\theta y)=u(y)$ for $\Wi$-almost every $y$, hence is almost surely constant, because the shift of the independent unit increments has a trivial invariant $\sigma$-field. Since $Q\ll\Wi$, the argument of \cite[Section~3.5]{PT-patterns} for meanders, which rests on Rost's theorem in the form \cite[Chapter~IX, no.~69]{DM}, then gives an almost surely finite randomized stopping time $N$ of $(Y_n)$ with $Y_N$ distributed as $Q$. Theorem~\ref{thm:filling} gives a self-contained proof, together with the exact condition for a general invertible $\theta$.
+\end{remark}
+
+\begin{remark}[The auxiliary randomness in Theorem~\ref{thm:filling}]\label{rem:integer}
+Theorem~\ref{thm:filling}(i) fails in general if $N$ is required to be a measurable function $n(Z)$ of $Z$ alone. For such $N$ and measurable $A$,
+\[
+\Pp(\theta^{n(Z)}Z\in A)=\sum_{k\in\Z}\int1_{\{n(z)=k\}}1_A(\theta^kz)\,P(dz)=\int1_A(y)\sum_{k\in\Z}1_{\{n(\theta^{-k}y)=k\}}\,P(dy),
+\]
+so the law of $\theta^{n(Z)}Z$ has a density with values in $\{0,1,2,\dots\}$, and a target $f$ that is not integer-valued is out of reach. Whether in Theorem~\ref{thm:main} the time $N$ can be taken to be a function of the resulting Brownian motion $B$ alone is a separate question that we do not address; the construction above uses $W$ on the negative half-line and the uniforms $U_n$.
+\end{remark}
+
+\begin{remark}[The size of $N$]\label{rem:size}
+The proof gives $\Pp(N\ge n)=r_n$, and nothing forces $\E N=\sum_{n\ge1}r_n$ to be finite. The scheme fills the two-sided law $fP$, which is more than Theorem~\ref{thm:main} needs, and this can make $N$ large. On the Bernoulli shift of fair bits $(x_i)_{i\in\Z}$ with $f=2\cdot1_{\{x_0=1\}}$, exact computation of \eqref{eq:recursion} gives $r_n=\binom{2j}{j}2^{-2j-1}$ with $j=\lfloor n/2\rfloor$ for $1\le n\le13$, a sequence with infinite sum if the pattern continues, while the forward law of $(x_i)_{i\ge0}$ under $fP$ is already reached by the first $n$ with $x_n=1$, which has mean one.
+\end{remark}
+
+The computations quoted in Remark~\ref{rem:size}, and exact checks of Theorem~\ref{thm:filling} on permutations of finite sets (where the scheme fills an orbit-balanced target within $|E|$ steps and leaves a positive residual otherwise), are in the repository listed under Data availability.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. On 6 September 2026 an agent running in OpenAI's Codex obtained the filling argument and its application to Problem~7.5 of \cite{BS}; on 10 October 2026 a second Codex agent extended it to the condition of Theorem~\ref{thm:filling} and a third checked finite cases. On 16 October 2026 Claude Opus~5.5, working in Claude Code, checked the proof line by line, traced the argument to Rost's filling scheme as used by Pitman and Tang, and wrote the computer checks and the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/brownian-prefix-filling}.
+
+\begin{thebibliography}{99}
+
+\bibitem{AT} D.~J. Aldous and H.~Thorisson, Shift-coupling, \emph{Stochastic Process. Appl.} \textbf{44} (1993), 1--14.
+
+\bibitem{BS} K.~Burdzy and M.~Scheutzow, Forward Brownian motion, \emph{Probab. Theory Related Fields} \textbf{160} (2014), 95--126.
+
+\bibitem{CO} R.~V. Chacon and D.~S. Ornstein, A general ergodic theorem, \emph{Illinois J. Math.} \textbf{4} (1960), 153--160.
+
+\bibitem{DM} C.~Dellacherie and P.-A. Meyer, \emph{Probabilities and Potential C}, North-Holland Mathematics Studies 151, North-Holland, Amsterdam, 1988.
+
+\bibitem{Ka} O.~Kallenberg, \emph{Foundations of Modern Probability}, 2nd ed., Springer, New York, 2002.
+
+\bibitem{PT-patterns} J.~Pitman and W.~Tang, Patterns in random walks and Brownian motion, in \emph{S\'eminaire de Probabilit\'es XLVII}, Lecture Notes in Math. 2137, Springer, Cham, 2015, 49--88.
+
+\bibitem{PT-slepian} J.~Pitman and W.~Tang, The Slepian zero set, and Brownian bridge embedded in Brownian motion by a spacetime shift, \emph{Electron. J. Probab.} \textbf{20} (2015), no.~61.
+
+\bibitem{Rost71a} H.~Rost, Markoff-Ketten bei sich f\"ullenden L\"ochern im Zustandsraum, \emph{Ann. Inst. Fourier (Grenoble)} \textbf{21} (1971), 253--270.
+
+\bibitem{Rost71b} H.~Rost, The stopping distributions of a Markov process, \emph{Invent. Math.} \textbf{14} (1971), 1--16.
+
+\bibitem{Th96} H.~Thorisson, Transforming random elements and shifting random fields, \emph{Ann. Probab.} \textbf{24} (1996), 2057--2064.
+
+\bibitem{ThBook} H.~Thorisson, \emph{Coupling, Stationarity, and Regeneration}, Springer, New York, 2000.
+
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,19 @@
+{
+  "reference": "Original forests.tex queue, conditioned on nonempty initial roots; gate table is every disjoint DNF clause; lambda_l=1; M_l=1",
+  "gate_names": "Every selected gate is one root, named once in the initial root-set experiment. L_l=0 but root activation flags are paid through log D plus sum root w_l. No name is charged per coordinate.",
+  "root_choices": "Unique used-gate root set; exact conditioned probability product_used p_l / D. Spectral root cost v log D+sum_l mu_l w_l <=(2+log2 e)I.",
+  "attachments": "No incidence edges between distinct used blocks; zero children and unique empty attachment multisets. Multiset probability is one.",
+  "child_count": "c_l=0 costs 1 bit per used gate; expected cost sum_l mu_l<=I. This probability is not omitted.",
+  "subset_size": "1/[s(s+1)] for each root, invalid sizes retain failure mass; expected valid-witness cost <=log2(3)I.",
+  "subset_normalizer": "Z_s=e_s(theta_s), retained exactly in q_pf; log Z_s<=s log2(6e), expected contribution <=log2(6e)I.",
+  "subset_weights": "theta_s(j)=min(1,(s/rank(j))^(6/5)); cost <=(6/5) source rank sum, spectral expectation <=(6/5)I by exact conditional binomial law.",
+  "cover_and_congestion": "M_l=1 and kappa_l=s_l, so both are exactly zero, not discarded positive terms.",
+  "reference_normalizer": "D=product_l(1+p_l)-1; Lambda+log2 Z=log2 D. Keep the exact sign; v log2 D<=log2(e)I.",
+  "final_output_ambiguity": "None within the selected partition-run family: disjoint supports force owners, roots, subset choices and zero-child order. No posterior entropy credited. Additional original-generator runs are omitted, yielding a valid subprobability lower reference.",
+  "codebook_choice": "One table and fixed orders chosen globally from the given representation. No extra selector. Any later mixture must include its normalized prior penalty.",
+  "empty_output": "h2(v) included in full entropy-reference cost, with reference masses 1-v and v*q_pf(A). Bound h2(v)<=2I from source.",
+  "binary_prefix_rounding": "Not included in 67I/5 ideal entropy-reference bound. An optional complete prefix implementation adds <1 bit per whole message, which is not silently influence-paid when I is small.",
+  "residual_bound": "R <=(16/5+log2 e)I <47I/10",
+  "complete_nonempty_cost_bound": "C_pf <=(26/5+2log2 3+2log2 e)I",
+  "complete_entropy_reference_bound": "h2(v)+C_pf <67I/5"
+}

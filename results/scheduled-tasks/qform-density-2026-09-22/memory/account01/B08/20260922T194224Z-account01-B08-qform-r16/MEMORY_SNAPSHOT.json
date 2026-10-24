@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260922T194224Z-account01-B08-qform-r16",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit_prepublication": "042018872fc4eaa44bd0239dfcf8f595673007cd",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "continuity_full_target_status": "OPEN",
+  "previous_worker_latest": {
+    "run_id": "20260922T184021Z-account01-B08-qform-r17",
+    "canonical_math_commit": "ec1f5892be70d83a72145c8cc3fb36640605e4c2",
+    "claims": [
+      "QFORM-DIFFUSE-CROSS-SELF-CURVATURE-BUDGET-v1",
+      "QFORM-ZERO-SELF-GROUPED-CROSSBANK-v1"
+    ]
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-SPECTRAL-WINDOW-LEVERAGE-1OVER22-v1",
+      "status": "SUPPORTING_THEOREM_PROVED",
+      "scope": "If P=1_{|A|>=1/64} has max coordinate leverage <=1/22, while A has at least three eigenvalues of modulus >=1, then every independent cap-one product input gives a continuous C0 density with universal bound <655."
+    },
+    {
+      "id": "QFORM-SELECTED-EIGENVECTOR-DIFFUSENESS-NONINVARIANT-v1",
+      "status": "REFUTED_INTERMEDIATE_MECHANISM",
+      "scope": "Existence of a chosen diffuse triple of large eigenvectors does not imply physical cross/ridge diffuseness under repeated eigenvalues; A=I_n with a flat chosen eigen-triple is the exact witness."
+    }
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B08",
+    "id": "QFORM-SCALAR-ORTHOGONAL-CROSSBLOCK-v1",
+    "source": "yspennstate/math-open-problems@caf8de3c65ae54b8ec8df9bfe977a76bf0a6ab99:proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/B08-20260922T173452Z-r15/REPORT.md",
+    "application": "On normalized Sylvester-Hadamard A_k, BB^T=(1/2)I across the first tensor-bit cut, giving ||p||_infinity <= e n/[2(n-8)] <= e for n>=16."
+  },
+  "dependencies": [
+    "yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md",
+    "yspennstate/math-open-problems@caf8de3c65ae54b8ec8df9bfe977a76bf0a6ab99:proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/B08-20260922T173452Z-r15/REPORT.md",
+    "yspennstate/math-open-problems@ec1f5892be70d83a72145c8cc3fb36640605e4c2:proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260922T184021Z-account01-B08-qform-r17/REPORT.md"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-DIFFUSE-FIXED-LOCAL-PRINCIPAL-ONLY-FALSE-v1"
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5b8b9be4ff4c9ce0cde44158f9a170876ed2a0b1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260922T194224Z-account01-B08-qform-r16/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260922T194224Z-account01-B08-qform-r16/check_constants.py"
+  },
+  "unresolved_implication": "QFORM-HIGH-WINDOW-HEAVY-TO-LOCAL-OR-RIDGE-v1",
+  "next_step": "Assume max_i(1_{|A|>=1/64})_ii>1/22 and use the heavy physical coordinate to force one of: full-matrix indefinite pair, scalar-pivot-plus-ridge, grouped-bank/projection-Plancherel, or global ridge, retaining arbitrary complementary spectrum and repeated-eigenvalue invariance."
+}

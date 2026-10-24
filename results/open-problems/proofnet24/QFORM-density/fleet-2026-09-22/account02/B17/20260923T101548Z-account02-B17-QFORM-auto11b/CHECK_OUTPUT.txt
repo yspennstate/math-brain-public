@@ -1,0 +1,30 @@
+PASS QFORM-LIGHTLIKE-GROWING-FRAGMENT-NOESCAPE-v1
+
+Exact 3x3 core check:
+B^2 = I_3
+spec(B) = {-1,1,1}
+therefore A_m=R_m B R_m^T has exact nonzero spectrum {-1,1,1} whenever R_m^T R_m=I_3.
+
+Growing-fragment row variance identity:
+v_m = a^2 + 1/12 - lambda_m/(12m) + lambda_m^3/(48m^3)
+so v_m -> 1/12+a^2 for lambda_m->infinity and lambda_m=o(m).
+
+Partner lightlike constant:
+C_x = 2^(13/6)*sqrt(3/pi)*Gamma(5/4)^(2/3)
+    = 4.109270566451296
+3*sqrt(2) = 4.242640687119286
+strict gap = 0.1333701206679896
+
+Scaled growing-activity ceiling C_x*(1+12a^2)^(-1/3):
+a=0.25 -> 3.409981748822218
+a=0.50 -> 2.588678243192709
+a=1.00 -> 1.747633200799065
+All are < C_x < 3sqrt(2).
+
+Transfer constant with M=2 and eta=delta^(2/3):
+delta/(2eta)+8sqrt(2M eta) = (1/2+16) delta^(1/3) = (33/2) delta^(1/3).
+
+Newest-Claude Lemma 1 application:
+int |hat f_m(s)|^m ds <=4pi/sqrt(m)
+=> int |psi_m(t)| dt <=4pi
+=> ||h_m||_infinity <=2.

@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A054: density-free sign payment of the component interface}
+For any finite uniform-cube indicator $g$, let $f=1-2g$ and query a
+physical block $A$. Let $p=\mathbb Eg$, $p_x=\mathbb E_y g(x,y)$,
+$\Lambda_A(g)=F(g)-\mathbb E_xF(g_x)$, $L_A(f)=H(f)-\mathbb E_xH(f_x)$.
+Raw Fourier entropy $F$ and sign entropy $H$ are in bits, and
+$I_A(f)=4E_A(g)$. Define
+\[
+T(p)=-(1-2p)^2\ln((1-2p)^2)+4p^2\ln(p^2)-8\ln2\,p(1-p).
+\]
+Exact empty-coefficient accounting gives
+\[
+(\ln2)L_A(f)=4(\ln2)\Lambda_A(g)+T(p)-\mathbb E_xT(p_x).
+\]
+The scalar curvature $T''(p)=16\ln(2p/|1-2p|)$ satisfies
+$pT''(p)\ge-8/e$. Therefore Jensen and cube log Sobolev give
+\[
+T(p)-\mathbb E_xT(p_x)\le(8/e)\operatorname{Ent}_x(p_x)
+\le(16/e)E_A(g),
+\quad L_A(f)\le4\Lambda_A(g)+\frac4{e\ln2}I_A(f).
+\]
+Let $g_k$ be actual connected components, $p_k=\mathbb Eg_k$, $r=|A|$,
+and $\mu_k$ their physical projection measures on $A$.
+If a proper nonempty block has disjoint projections and
+$\sum_kp_k\log_2(1/\mu_k)\ge r\mathbb Eg/2$, then
+\[
+\Gamma_A=[B_A(g)+(2/\ln2)E_A(g)-\sum_k\Lambda_A(g_k)]_+
+\le(2/\ln2)E_A(g),\qquad
+L_A(f)\le C_{\rm proj}I_A(f),\quad
+C_{\rm proj}=4+2/\ln2+4/(e\ln2)<10.
+\]
+This holds at every support density. Physical ratio criticality forces
+$H(f)/I(f)\le C_{\rm proj}$. A dimension-minimal positive fixed-$K$
+deficit is excluded at $K\ge C_{\rm proj}$, preserving the actual
+averaged child reserve. Universal proper-block admission remains open.
+Full proofs appear in \texttt{RAW\_SIGN\_TRANSFER.md}.
+\end{document}

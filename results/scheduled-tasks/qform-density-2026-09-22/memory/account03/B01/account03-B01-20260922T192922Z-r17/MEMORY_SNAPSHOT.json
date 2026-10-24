@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260922T192922Z-r17",
+  "control_revision_seen": "2026-09-22.15",
+  "control_commit_seen": "dbab66ce244f14a3a04c263cbca443c1b067f292",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "assignment": "Oscillatory replacement",
+  "new_claims": [
+    {
+      "id": "QFORM-TRANSLATED-FRESNEL-LP-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For every cap-one real probability density, every a!=0 and arbitrary b,c, the quadratic phase transform belongs uniformly to L^p(dt) for every p>2 with explicit C_p=[4*pi*(p-1)]^(1/p)[(p-1)/(p-2)]^((p-1)/p)|a|^(-1/p); p=2 fails uniformly."
+    },
+    {
+      "id": "QFORM-THREE-PHYSICAL-INDEPENDENT-PIVOTS-v1",
+      "status": "PROVED_TARGET_LEVEL_BRANCH",
+      "statement": "Three original coordinates with pairwise zero mutual A entries and nonzero physical pivots imply a continuous Q density bounded by 16 times the inverse cube root of the pivot product, with arbitrary outside block and couplings."
+    }
+  ],
+  "mechanism_falsifier": {
+    "id": "QFORM-DECOUPLED-CONDITIONAL-L3-CRITICAL-LOSS-v1",
+    "status": "REFUTED_INTERMEDIATE_MECHANISM",
+    "statement": "Normalizing V_j|U_j in the X-X'/X+X' decoupling, applying coordinatewise absolute L3 Hausdorff-Young, and then averaging reciprocal overlap-density costs is not law-uniform: f_R=1_[1,R]/(x log R) creates a logarithmically growing three-factor majorant even for A=I_3. The exact decoupling identity is not refuted."
+  },
+  "partner_applied": {
+    "worker": "account04/B01",
+    "claim": "QFORM-SIGNED-FEJER-EXACT-INTERFACE-v1",
+    "source_repository": "yspennstate/math-open-problems",
+    "source_commit": "a3693ed6d50e8e4143b2f33bf997c5de2cb52d79",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md",
+    "application": "sup_{T,y} D_T law(Q)(y) <=16 |a_i a_j a_k|^(-1/3) on the new three-pivot branch"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "b6c3fd34d5c608023be5149189c1e88e66f3baeb",
+    "addendum_commit": "e3ea72181ebd1934c889703821a7a9396c5fb853",
+    "path_root": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260922T192922Z-r17/"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "unresolved_implication": "Combine unnormalized overlap-kernel cancellation with the three-large-eigenvalue geometry, or obtain a product-preserving three-factor grouped-coordinate extraction. The full QFORM target remains open.",
+  "continuous_density_status": "PROVED only on the new three-pivot branch; OPEN for full target"
+}

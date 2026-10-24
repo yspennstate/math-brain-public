@@ -1,0 +1,13 @@
+{
+  "family": "F*=(b(x)-2*1_(x=0)) y_(Mx), b=(-1)^q, q quadratic and q(0)=0",
+  "control_reuse": "Arbitrary repeated controls in the program computing M; physical x remains independent of data y",
+  "data_reuse": "Each terminal y_z can be shared by all histories reaching z; distinct states have distinct physical data coordinates",
+  "entropy_requires": "Signed zero-fiber point-surgery histogram, not the unperturbed H=2r+k identity",
+  "influence_requires": "Active controls stay at 1/2; inactive control i changes by (1-2*l_i)2^(1-n)",
+  "stopping_tree_requires": "Zero linear phase at the flipped origin; query all nonzero address-column controls, then nonzero remaining quadratic polar rows on the origin-containing branch",
+  "terminal_reserves": "Quadratic phases and point defects multiplied by one fixed data sign; every terminal retains one data influence and its full entropy",
+  "localized_boundary": "No internal node has exact B_i>2Inf_i; bad-node sum w_v 2I(D_i)=0 at K=2",
+  "unsupported_extensions": ["arbitrary Boolean phases", "two flipped points with incompatible quadratic gradients", "linear terms at the flipped point for the same high-influence tree", "merging distinct physical data labels"],
+  "proof_source": "POINT_FLIPPED_FIBERS.tex",
+  "review_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW"
+}

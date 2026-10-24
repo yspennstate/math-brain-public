@@ -1,0 +1,17 @@
+{
+ "helper_version":"A065 compressed-activation reserve v2; pinned v1 interval kernel copied locally",
+ "actual_Boolean_family":["B05 k=2,4,6 with r=2k point controls","AND of two disjoint bent point-splice sign cores, k-pairs (2,2),(2,4),(4,4)","AND of two bent point splices with one shared physical selector, same k-pairs","same AND cores activated by r=2 point controls"],
+ "parameter_domain":{"B05_k":[2,4,6],"AND_pairs":[[2,2],[2,4],[4,4]],"AND_shared_selector":[false,true],"AND_activation_r":[0,2],"prices":["4","32609/5000","8"]},
+ "rules":["min-influence","max-influence","greedy-min-D-over-d","control-first","selector-first"],
+ "case_count":"15 families x5 rules x3 prices =225 reserve intervals; calibration all 256 three-bit cores at s=0,1,2 plus B05 k2,k4 saved-certificate comparisons",
+ "symmetry":"All live point controls exchangeable; reveal least original control index. No core symmetry quotient. Identical core restrictions cached; exact prime-log equality certifies greedy ties.",
+ "arithmetic":"Integer core Walsh, exact rational physical influences, actual activation coefficient multiplicities, rational atanh-series interval logarithms, outward fixed-point at 2^-70",
+ "memory_estimate_MB":90,
+ "maximum_runtime_seconds":1500,
+ "pilot_maximum_runtime_seconds":60,
+ "pilot":"All 256 core calibrations at s=0,1,2 and B05 k2/k4 five-rule certificate comparisons",
+ "maximum_physical_dimension":19,
+ "maximum_core_table_entries":1024,
+ "automatic_dimension_escalation":false,
+ "reserve":"Q_v=max(0,D_v-Cd_v+mean(Q_children)), constant leaves zero"
+}

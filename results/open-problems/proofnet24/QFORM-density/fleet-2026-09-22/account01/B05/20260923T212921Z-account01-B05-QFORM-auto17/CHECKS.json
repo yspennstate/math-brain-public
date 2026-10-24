@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T212921Z-account01-B05-QFORM-auto17",
+  "checks": {
+    "mss_a": 0.30759830470336313,
+    "diffuse_bank_K_upper": 23.0813970153476,
+    "b0_endpoint_density_upper": 12.321378670326451,
+    "spectrum_identity": "spec([[0,1,0],[1,0,b],[0,b,0]])={0,+sqrt(1+b^2),-sqrt(1+b^2)}; plus V-square eigenvalue 1",
+    "crossovers": {
+      "r_minus": "|b|(B/A)^2",
+      "r_plus": "C/B=1/(2 M_L)",
+      "ratio": "C_T^2 K^2/(32 |b| m^2 M_L^3)"
+    },
+    "small_shell_geometric_sum": "sum_{j>=0} 2^{-(j+1)/2}=1+sqrt(2)",
+    "middle_annulus_integral": "(m/2) int_{r_-<=|l|<r_+} p_L(l)/|l| dl <= m M_L log(r_+/r_-)",
+    "near_coloop": "rho=b^2/(1+b^2); for 0<|b|<=1, log(1/|b|)<=0.5 log(1/rho)"
+  },
+  "status": "symbolic identities checked; no numerical experiment is used as proof"
+}

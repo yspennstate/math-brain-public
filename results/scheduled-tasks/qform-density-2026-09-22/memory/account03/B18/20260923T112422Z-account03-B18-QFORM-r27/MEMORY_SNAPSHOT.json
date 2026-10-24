@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260923T112422Z-account03-B18-QFORM-r27",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "start_control_commit": "83bda685365b66ae220fbaf60c797640c3b78cbc",
+  "prepublication_control_commit": "76d1ad5cef0fc0eee0294923b5184d038de1e980",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "assignment": "Literature-to-proof transfer",
+  "new_result_ids": [
+    "QFORM-THREE-DISJOINT-BANKS-ALLPIVOTS-v1",
+    "QFORM-THREECAP-PIVOT-OR-INDEFINITE-PAIR-v1"
+  ],
+  "result_summary": "Three disjoint normalized original-coordinate scalar banks with effective symmetric 3x3 matrix K satisfying sigma_min(K)>=s have an essentially bounded quadratic-form density <296/s, uniformly in arbitrary affine terms from conditioned outside coordinates. The proof transfers the LPP sqrt(2) one-dimensional marginal cap, rescales to independent cap-one bank variables, and uses a deterministic alpha=9/16 dichotomy between a quantitative scalar pivot and a quantitative indefinite physical pair. Exact zero-pivot subcase is sharpened using the completed account04/B18 theorem to 12|det K|^(-1/3), with continuity.",
+  "primary_source": {
+    "citation": "Livshyts--Paouris--Pivovarov, On sharp bounds for marginal densities of product measures, Israel J. Math. 216 (2016), arXiv:1507.07949",
+    "used_hypothesis": "product of one-dimensional probability densities each bounded by one",
+    "used_conclusion": "every k-dimensional orthogonal marginal density <=2^(k/2); in particular each normalized scalar bank <=sqrt(2)"
+  },
+  "internal_dependencies": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e542b1a6ef471b329e4e88a6553e1aacb45acc1a",
+      "path": "proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md",
+      "use": "rank-three nonzero scalar-pivot bound with arbitrary affine term"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f7f0fedb2d93b46824f96cac1164af6f8a55626f",
+      "path": "proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md",
+      "use": "quantitative indefinite-pair density bound"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "ce50e74f705c49f66524aa6565d4aa4a9be88061",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T182500Z-account04-B18-QFORM-r2/REPORT.md",
+      "use": "designated partner exact zero-pivot inequality and continuity"
+    }
+  ],
+  "partner_actual_inequality": "||p_Q||_infinity <=12 |det K|^(-1/3) for a zero pivot in the three-bank theorem; <=12 under sigma_min(K)>=1",
+  "scientific_repository": "yspennstate/math-open-problems",
+  "scientific_commit": "602d508c11f3bb5848b65581a750b4497708bd5f",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T112422Z-account03-B18-QFORM-r27/REPORT.md",
+  "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T112422Z-account03-B18-QFORM-r27/CHECK.json",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B18/20260923T112422Z-account03-B18-QFORM-r27.md",
+  "handoff_commit": "f8ea7bbb6f75c7e2ce9369078b55ceb0548aff5a",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "continuity": {
+    "all_pivot_three_bank": false,
+    "exact_zero_pivot_partner_subcase": true,
+    "full_target": false
+  },
+  "remaining_implication": "Bare s_3(A)>=1 still does not force a uniformly nonsingular three-disjoint-scalar-bank representation. The live small-pivot star / plane-plus-one and arbitrary-extra-spectrum compiler remains unpaid; the new theorem is an endpoint once such a grouped certificate is produced.",
+  "full_target_status": "OPEN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null
+}

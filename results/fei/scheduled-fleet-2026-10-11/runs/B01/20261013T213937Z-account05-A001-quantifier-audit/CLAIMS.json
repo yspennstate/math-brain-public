@@ -1,0 +1,120 @@
+[
+  {
+    "claim_id": "A001-ALL-DEGREE-INFLUENCE-REFERENCE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For actual finite uniform-cube Boolean signs, the following proposed all-degree reference mechanisms cannot uniformly pay cross entropy or their stated majorants by total influence. On F_r=1+A_r(chi_{123}-1), r>=4, all r+3 influences equal delta=2^-r, H/I<4, and the complete derivative row of a data coordinate has all its energy delta at residual degrees >=2, contradicting a proposed all-degree bound 2 delta^2 ln(2/delta). The normalized nonempty product-influence reference Q(S)=prod_{i in S}Inf_i/[prod_i(1+Inf_i)-1] has nonempty cross entropy X/I>=r-2r/(r+3). On even-dimensional quadratic bent signs, B/I=2 while degree-weighted atom entropy/I=n and influence-weighted normalized derivative entropy/I=n-1. More generally, for every rule selecting a complete spectral subprobability reference using only the labeled influence vector and permutation-invariant metadata, for every integer w>=2 some coordinate permutation of OR of 2^w disjoint width-w point conjunctions has CE/I>=w/18. This last assertion also covers nonexchangeable reference rules; it does not exclude function-specific references or retained-KL corrections, and does not disprove FEI.",
+    "hypotheses": [
+      "Actual Boolean signs, finite uniform cubes, standard physical influence",
+      "Entropy and ideal complete subprobability cross entropy in bits; natural logs explicitly ln",
+      "Product reference is on nonempty subsets and its actual nonempty spectral mass is retained",
+      "Influence-only rule gives the same reference for every Boolean realization with the same labeled influence vector and permitted invariant metadata",
+      "Coordinate permutation changes the function, while the equal-influence vector in the stated tribes family is unchanged",
+      "No claim that arbitrary conditional-edge references or function-specific spectral references have unbounded cost"
+    ],
+    "statement_sha256": "f5824091a300e9fac3d0f028c7bbd0f0ebca64e58ddf0d2c25c3178060f83675",
+    "contributors": [
+      "A001"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261013T213937Z-account05-A001-quantifier-audit\\REPORT.md",
+      "locator": "complete derivation sections 2-5",
+      "validation": [
+        "out/CHECK.json",
+        "out/ORBIT_CHECK.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SCOPED_MECHANISM_OBSTRUCTION_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "All-degree extension of sparse degree-one derivative suppression",
+      "Uniform payment of the normalized product-influence nonempty reference",
+      "Uniform payment of all-degree upper-atom/complete-row entropy majorants",
+      "Universal complete spectral-reference cross entropy payment using only influences and invariant metadata"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A045",
+      "A073",
+      "A096",
+      "A098",
+      "A099",
+      "A015",
+      "A086",
+      "A094",
+      "B01",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A015-CONDITIONED-MINTERM-LOCATION-BARRIER",
+    "version": 1,
+    "exact_statement": "For any nonconstant Boolean f on n>=1 declared uniform coordinates, its N positive full-cell conjunctions with pi=2^-n, weights lambda_l=1/N and a common rank order have conditioned exactly-one-root probability eta=pi/((1+pi/N)^N-1), with exp(-pi)<=eta<=1. Summing their identical one-root/no-child subset laws cancels both gate labels and root rarity up to -log2 eta. A globally uniform common permutation prior gives the complete nonempty subprobability R_sym(A)=eta/[2*s*(s+1)*binom(n,s)], s=|A|>=1, of mass eta*n/[2*(n+1)]. For every probability law P on subsets, the infimum of CE(P,Q) over exchangeable subprobabilities Q is H(|S|)+E log2 binom(n,|S|), whose exact excess over H(P) is sum_s W_s D(P(.|s)||Uniform_s). For the actual balanced Boolean family M_r=y+A_r(z-y), r>=1,p=2^-r,n=r+2, every coordinate is relevant, I=1+r*p, H=(1-p)^2 log2(1/(1-p)^2)+2*r*(2*p-p^2)->0, and W_1=(1-p)^2+p^2. Every exchangeable reference has CE/I>=W_1 log2(r+2)/(1+r*p)->infinity; its best CE is log2(r+2)+o(1). The explicit ordered full-minterm one-root reference with y ranked first and exponent-two subset weights has CE<(639/80)*I<8*I for all r. For a balanced regular core with a desirability order, the same mandatory-one-gate exponent-two reference has mass n/[2*(n+1)] and c_g<=K_ord*I(g), K_ord=3+log2(6)+3*log2(e)<101/10, by the stated regular rank mean. The accepted A012 fresh-activation output construction transfers it with full mass 1-p+p*z and CE=p*c_g+A_r<=K_ord I(F), retaining D(P_F||Q_F)=p D(P_g||R_g). The exponent-two ordered reference is explicitly modified from the original exponent-6/5 PI-J law; this refutes only a universal exchangeable-reference payment, not FEI or an arbitrary function-adapted posterior reference.",
+    "hypotheses": [
+      "Uniform finite Boolean cubes; entropy, CE and all log quantities in bits",
+      "All full-cell supports have the same declared coordinate set and a common chosen order",
+      "Exactly-one-root/no-child finite-run subreference conditioned on nonempty initial roots",
+      "Exchangeable means invariant under all permutations of physical coordinates",
+      "Exponent two for the explicit rational ordered-cost repair; the averaged subset identity holds for any exponent >1",
+      "Balanced core and fresh independent controls for activation; regular rank mean is a source-bound input only for the stated grouped-gate application",
+      "Ideal complete subprobability cross entropy; failure mass retained and single-sample integer-code rounding separate"
+    ],
+    "statement_sha256": "acf6bed04f902c2f86fd24150acbc026fac5b2b958d2d56cbdfb69795b1ee10c",
+    "contributors": [
+      "A015/account05"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A015\\runs\\20261012T044229Z-account05-A015-minterm-barrier-analysis\\REPORT.md",
+      "locators": "complete derivation Sections 2--7",
+      "validation": [
+        "out/EXACT_RESULTS.json",
+        "out/TRANSFER_RESULTS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A012-CONTROL-FIRST-POSTERIOR-REPAIR",
+        "version": 1,
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T234525Z-account05-A012-sparse-activation-accounting\\DERIVATION.md",
+        "status": "INDEPENDENTLY_ACCEPTED_IN_THIS_STAGE",
+        "scope": "Only the final balanced-core reference-transfer application"
+      },
+      {
+        "source": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\baseline\\current-threshold-paper.tex",
+        "sha256": "5d87f625fbadad4aa9841416712b8193a869fa9dffcb4e9c200d2f39a62e6a10",
+        "locator": "lem:ranktail and one-regular-gate derivative-law rank expectation",
+        "status": "SOURCE_COMPLETE_BASELINE_READ",
+        "scope": "Only grouped regular-core CE bound"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A001/account05",
+        "verdict": "ACCEPT_EXCHANGEABLE_REFERENCE_OPTIMUM_IDENTITY_ONLY",
+        "scope": "Only inf_Q exchangeable subprobability CE(P,Q)=H(|S|)+E log2 binom(n,|S|), and excess equals degree-conditioned location KL, for any finite subset probability law. No acceptance of the original bundled conditioning, ordered reference repair, regular-core transfer or their constants.",
+        "method": "Independent permutation-orbit symmetrization and subprobability Gibbs reconstruction; REPORT.md section 5 equations (6)-(8)",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261013T213937Z-account05-A001-quantifier-audit\\REPORT.md",
+        "source_statement_sha256": "d41a4c62d86b18e4c46905972d1c207540e93a750f0ac65323b1804457c10b49",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "AUTHOR_PROVED_PENDING_FULL_REVIEW; EXCHANGEABLE_OPTIMUM_SLICE_INDEPENDENTLY_ACCEPTED_BY_A001",
+    "supersedes": [],
+    "refutes": [
+      "Every balanced Boolean spectrum has an exchangeable complete output subprobability reference with CE<=K I for one absolute K",
+      "Root/name erasure followed by exchangeable size coding is sufficient for universal influence-paid complete cost"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A011",
+      "A012",
+      "A013",
+      "A006",
+      "B03",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  }
+]

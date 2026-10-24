@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B14",
+  "run_id": "20260923T235641Z-account02-B14-QFORM-auto11b",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_before_final_publication": "fc746132478921d05d66e386514898ebbd98395f",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  },
+  "target_status": "FULL_QFORM_OPEN_CONTINUITY_SEPARATE",
+  "assignment": "Translations and localization; complementary constructions/source-valid counterexamples; partner account03/B14",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-SMOOTH-CONNECTED-SLICE-ROUGH-HUB-FALSE-v1"
+  ],
+  "fixed_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "files_read": [
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+    ],
+    "result_applied": "Theorem A: in dimension 3, all eigenvalues of modulus at least sigma and arbitrary linear terms imply density at most 6 sqrt(pi)/sigma. Applied to independent (L,D,Y) for 2LD+Y^2 with spectrum {1,-1,1}, giving 6 sqrt(pi)."
+  },
+  "designated_partner": {
+    "account_slot": "account03/B14",
+    "report_commit": "8b915c140db7d5bcecfce69e46eb1b81297af93b",
+    "checks_commit": "571914cc7d3cb368840d3a69a90167d79eff3b3c",
+    "result_used": "Smooth connected strict-subcap frozen-slice half-Frostman control does not bound the rough hub: p_{2L(X-X')}(0) >= (3/16) log(1/(2 epsilon))."
+  },
+  "new_result": {
+    "id": "QFORM-HYPERBOLIC-LOG-PLUS-SQUARE-CLOSURE-v1",
+    "statement": "For independent cap-one U,V,Y and arbitrary affine coefficients, Q=2aUV+lambda Y^2+alpha U+beta V+gamma Y+eta satisfies ||p_Q||_inf <= |a|^{-1}+8/sqrt(|a lambda|). Thus |a|,|lambda|>=1 gives <=9.",
+    "proof_core": [
+      "p_{UV}(z) <= 2+2 log_+(1/|z|)",
+      "Lebesgue measure {y: |tau-y^2|<delta} <= 2 sqrt(2 delta)",
+      "layer cake: E log_+(A/|t-cY^2|) <= 4 sqrt(2A/c)",
+      "affine completion and conditioning outside original coordinates preserve the bound"
+    ],
+    "exact_target_application": "For partner stress laws, D=X-X' has density <=1 and is independent of L. Hence ||p_{2L(X-X')+Y^2}||_inf<=9. In original independent variables (L,X,X',Y), spectrum is {sqrt(2),-sqrt(2),1,0}.",
+    "scope_guard": "Supporting branch only; not full QFORM and no continuity claim. Requires a genuinely disjoint independent square after whole-product aggregation."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "010ccf4cdc4f0b07d0a443eba99fd147e6feab65",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T235641Z-account02-B14-QFORM-auto11b/REPORT.md",
+    "early_commit": "5695c695b900f9bb65aa32ede474398b6404de62"
+  },
+  "handoff": {
+    "commit": "2fde75b928c12ff0cdbb0e04091d5ca8c5825aa5",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B14/20260923T235641Z-account02-B14-QFORM-auto11b.md"
+  },
+  "unresolved_implication": "QFORM-LOG-ENVELOPE-EXTRACTION-OR-WHOLE-VOLUME-EXIT-v1: in every surviving no-pivot/near-degenerate configuration, expose a whole hyperbolic product plus genuinely disjoint independent square, or a compatible whole-law volume/hub/pair/ridge/receiver exit. The difficult overlap is when the third curvature uses the same active bank.",
+  "next_step": "Attack the overlapping-third-resource case without normalized frozen slices: seek a phase-sensitive/positive-copy aggregate that preserves the whole rank-two logarithmic envelope while coupling the third curvature from the same product bank.",
+  "login_note": "The canonical 23Z login already existed for this same slot/hour from the immediately preceding invocation and was preserved, as required by the one-file-per-slot-per-hour rule.",
+  "quiet_state": "preserved",
+  "prohibited_actions": "none taken"
+}

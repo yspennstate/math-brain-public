@@ -1,0 +1,210 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w450",
+  "bundle_slug": "c0041-green-boundary-w450-001",
+  "entries": [
+    {
+      "key": "kalikow-definition",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "finite-domain-kalikow-directional-drift",
+      "kind": "definition",
+      "title": "Finite-domain Kalikow directional drift",
+      "statement": "For an iid uniformly elliptic nearest-neighbour RWRE, let U be a finite connected domain containing 0 and x, T_U its first exit, G_U^omega(0,x)=E_omega^0[sum_(n<T_U) 1_(X_n=x)], and d_ell(omega(x))=sum_e omega(x,e)(e dot ell). The finite-domain Kalikow directional drift at x is E[G_U^omega(0,x)d_ell(omega(x))]/E[G_U^omega(0,x)]. The weighting by the Green function depends on the site's kernel.",
+      "proof_text": null,
+      "assumptions": [
+        "finite connected U contains 0 and x",
+        "nearest-neighbour UE kernel",
+        "iid site law for the conditional expectation statement"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w450:c0041-boundary:kalikow-definition",
+        "url": "~\\brain_workers\\w450\\ATTEMPT.md",
+        "revision": "author-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "nonnegative-bound",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "nonnegative-local-drift-kalikow-lower-bound",
+      "kind": "concept",
+      "title": "DRAFT: Nonnegative local drift gives a uniform occupation bound",
+      "statement": "DRAFT; author proof, independent review pending. For every iid nearest-neighbour environment on Z^d, d>=2, with all transitions >=kappa>0, and a unit ell such that d_ell(p)>=0 almost surely and m=E[d_ell(p)]>0, every finite connected U containing 0 and x has E[G_U(0,x)d_ell(omega(x))]/E[G_U(0,x)] >= kappa*m/[1-(2d-1)kappa]. In particular E_0[(X_(T_U)-X_0) dot ell] >= this constant times E_0[T_U].",
+      "proof_text": null,
+      "assumptions": [
+        "d>=2",
+        "iid site kernels",
+        "deterministic uniform ellipticity kappa>0",
+        "fixed unit direction",
+        "nonnegative local directional drift almost surely",
+        "positive mean m"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w450:c0041-boundary:nonnegative-bound",
+        "url": "~\\brain_workers\\w450\\ATTEMPT.md",
+        "revision": "author-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "rare-bias-bound",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "rare-positive-bias-among-balanced-sites-velocity-bound",
+      "kind": "concept",
+      "title": "DRAFT: Quantitative rare-positive-bias special case",
+      "statement": "DRAFT; author proof, independent review pending. Let d>=2, a=1/(2d), 0<b<a and theta in (0,1]. At iid sites choose the balanced row p0(e)=a with probability 1-theta and row p+(+e1)=a+b, p+(-e1)=a-b, p+(e)=a transversely with probability theta. Every finite-domain Kalikow drift in e1 is at least 2*b*theta/[1+(1-theta)*b/a]. The bound is sharp over arbitrary nonnegative exit vectors q, with no assertion of geometric or speed sharpness. The standard Kalikow criterion and L5 give a deterministic velocity with v dot e1 at least that bound. At theta=0 or b=0 the e1 speed is zero.",
+      "proof_text": null,
+      "assumptions": [
+        "d>=2",
+        "iid binary site kernels as explicitly stated",
+        "0<b<1/(2d)",
+        "0<theta<=1",
+        "standard Kalikow implication used only for velocity existence"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w450:c0041-boundary:rare-bias-bound",
+        "url": "~\\brain_workers\\w450\\ATTEMPT.md",
+        "revision": "author-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "discount-transfer",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "discounted-green-occupation-to-velocity-bound",
+      "kind": "concept",
+      "title": "DRAFT: Discounted occupation bound transfers to velocity",
+      "statement": "DRAFT; author proof, independent review pending. For a law satisfying L2 or L3 and admitting an almost-sure deterministic velocity v, the corresponding uniform occupation-drift lower bound c also satisfies v dot ell>=c. Proof uses discounted single-site Green functions and an Abelian limit; it needs no separate regeneration moment assumption. Velocity existence for these restricted laws follows from the standard Kalikow-to-ballisticity theorem, treated as an external dependency.",
+      "proof_text": null,
+      "assumptions": [
+        "iid law L2 or L3",
+        "almost-sure deterministic velocity exists",
+        "nearest-neighbour increments bounded by 1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w450:c0041-boundary:discount-transfer",
+        "url": "~\\brain_workers\\w450\\ATTEMPT.md",
+        "revision": "author-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "false-bridge",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "refuted-positive-mean-drift-to-kalikow-bridge",
+      "kind": "concept",
+      "title": "Refuted auxiliary bridge: positive mean implies positive Kalikow drift",
+      "statement": "REFUTED PROPOSED BRIDGE, not a theorem: the proposed universal implication is that in an iid uniformly elliptic nearest-neighbour environment on Z^2, E[d_e1(omega(0))]>0 forces positive finite-domain Kalikow e1 drift at every x in every finite connected U containing 0. The explicit two-site example in this bundle contradicts that implication. This refuted bridge has no directional transience hypothesis and is distinct from C0041.",
+      "proof_text": null,
+      "assumptions": [
+        "hypothetical iid UE law on Z^2",
+        "positive mean local e1 drift"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w450:c0041-boundary:false-bridge",
+        "url": "~\\brain_workers\\w450\\ATTEMPT.md",
+        "revision": "author-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "two-site-obstruction",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "iid-positive-mean-negative-kalikow-two-site-example",
+      "kind": "concept",
+      "title": "DRAFT: Exact iid two-site obstruction to a mean-drift bridge",
+      "statement": "DRAFT; author counterexample, independent review pending. In an iid UE environment on Z^2 with rows p+=(9/20,1/20,1/4,1/4) and p-=(1/20,9/20,1/4,1/4), P(p+)=51/100, the mean e1 local drift is 1/125>0, but the annealed Kalikow drift at x=0 in U={0,-e1}, starting at 0, is -62753/3982809<0. For general type probability theta the signed numerator has sign 31280*theta^2+223282*theta-127281, giving exactly the negative-drift interval 1/2<theta<theta_star, with theta_star in (53/100,531/1000). This is a counterexample to a mean-drift-to-Kalikow bridge; no directional transience claim is made for this law.",
+      "proof_text": null,
+      "assumptions": [
+        "d=2",
+        "iid two-type law explicitly stated",
+        "kappa=1/20",
+        "finite domain U={0,-e1}",
+        "no premise or conclusion about full-walk directional transience"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w450:c0041-boundary:two-site-obstruction",
+        "url": "~\\brain_workers\\w450\\ATTEMPT.md",
+        "revision": "author-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "c0041-status",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "c0041-historical-question-current-status-caution",
+      "kind": "concept",
+      "title": "C0041: Historical question and unverified recent resolution claim",
+      "statement": "STATUS NOTE 2026-10-10: C0041 asks whether iid uniformly elliptic nearest-neighbour RWRE on Z^d, d>=2, that is annealed almost surely transient in a fixed direction must be ballistic in that direction. The 2013 source is Open question 2.20 (PDF p.24, printed p.22). The stored September-7 search is dated. A September-23-2026 public manuscript and separate Lean proof entrypoint claim the full conclusion; no independent rebuild or transitive trusted-axiom receipt was obtained here. Current openness UNKNOWN. Do not confuse the admitted comparator statement with the separate proof or mark C0041 solved from a source/hash check.",
+      "proof_text": null,
+      "assumptions": [
+        "dated source-status note",
+        "no parent-target proof certified by w450"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w450:c0041-boundary:c0041-status",
+        "url": "~\\brain_workers\\w450\\ATTEMPT.md",
+        "revision": "author-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "nonnegative-bound",
+      "to_key": "kalikow-definition",
+      "kind": "depends_on",
+      "rationale": "The conclusion bounds exactly the occupation-weighted ratio in the definition."
+    },
+    {
+      "from_key": "rare-bias-bound",
+      "to_key": "nonnegative-bound",
+      "kind": "specializes",
+      "rationale": "The binary balanced/positive-drift law has nonnegative local drift and permits a stronger exact ratio bound."
+    },
+    {
+      "from_key": "rare-bias-bound",
+      "to_key": "discount-transfer",
+      "kind": "depends_on",
+      "rationale": "The velocity lower bound uses the discounted transfer after the standard criterion gives a velocity."
+    },
+    {
+      "from_key": "discount-transfer",
+      "to_key": "kalikow-definition",
+      "kind": "depends_on",
+      "rationale": "The finite-domain ratio proof extends to discounted Green functions and an Abelian velocity limit."
+    },
+    {
+      "from_key": "two-site-obstruction",
+      "to_key": "false-bridge",
+      "kind": "refutes",
+      "rationale": "Both ends refer to iid UE Z^2; mean drift 1/125 is positive, but the specific finite-domain Kalikow drift is -62753/3982809."
+    },
+    {
+      "from_key": "two-site-obstruction",
+      "to_key": "kalikow-definition",
+      "kind": "depends_on",
+      "rationale": "The computed negative quantity is exactly the defined finite-domain occupation ratio."
+    },
+    {
+      "from_key": "c0041-status",
+      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0041-transience-in-a-direction-implies-ballisticity-for-uniformly-elliptic",
+      "kind": "semantic_association",
+      "rationale": "Adds a dated source-status caution to the exact existing target without asserting a proof or refutation."
+    }
+  ]
+}

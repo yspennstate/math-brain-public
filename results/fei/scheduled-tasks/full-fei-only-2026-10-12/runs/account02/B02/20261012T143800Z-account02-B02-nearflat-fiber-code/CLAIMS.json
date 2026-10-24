@@ -1,0 +1,45 @@
+{
+  "schema": "fei-claim-record/1",
+  "stream": "B02",
+  "packet_id": "A008",
+  "claims": [
+    {
+      "claim_id": "B02-A008-nearflat-fibers-20261012",
+      "version": 1,
+      "exact_statement": "For all integers t>=6 and 0<=m<=2^t-2t, and all Boolean g:F_2^(m+t)->{+1,-1}, put f(z,x)=g(z,A_t x), where A_t has all nonzero t-bit vectors as columns. If at least half of the fibers g(z,.) are nonconstant and Var_z(E_u g(z,u)) <= (1/4) E_z Var_u(g(z,u)), then the complete physical Fourier supports have a fixed distribution-independent prefix-free code of expected length L(f)<(8/3)I(f), hence H(f)<(8/3)I(f).",
+      "hypotheses": [
+        "t integer >=6",
+        "0<=m<=2^t-2t",
+        "all nonzero binary t-vectors are columns of A_t",
+        "g Boolean on uniform F_2^(m+t)",
+        "at least half of g(z,.) fibers are nonconstant",
+        "eta^2=Var_z E_u g(z,u) <= q/4, q=E_z Var_u g(z,u)"
+      ],
+      "statement_sha256": "49670a3d6c2c0a8d7826c0e82c894c0ec87beb84d452f85c6b9506f4d23be61f",
+      "contributors": [
+        "account02/B02"
+      ],
+      "proof_source": "scheduled_tasks/work/shared/full-fei-only-2026-10-12/runs/account02/B02/20261012T143800Z-account02-B02-nearflat-fiber-code/REPORT.md",
+      "proof_dependencies": [
+        "finite-cube Fourier transfer under full-rank linear map",
+        "Kraft-McMillan inequality on complete physical support labels",
+        "nonconstant Boolean-fiber variance minimum"
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_REVIEW_PENDING",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A006",
+        "A086",
+        "A094"
+      ],
+      "limits": [
+        "not actual partition-forest run distribution",
+        "not full FEI",
+        "no separate independent review"
+      ]
+    }
+  ]
+}

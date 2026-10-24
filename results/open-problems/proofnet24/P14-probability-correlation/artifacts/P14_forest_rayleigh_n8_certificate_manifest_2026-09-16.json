@@ -1,0 +1,61 @@
+{
+  "problem": "Geoffrey R. Grimmett, Selected Problems in Probability Theory, Conjecture 4.2",
+  "status": "PASS",
+  "scope": {
+    "graphs": "all finite simple graphs on exactly 8 vertices, including disconnected graphs",
+    "measure": "uniform over all acyclic edge subsets (all forests, isolated vertices allowed)",
+    "property": "pairwise edge negative correlation for every distinct present edge pair",
+    "weights": "unit weights only"
+  },
+  "tracked_complete_vertex_metric_after": 8,
+  "coverage": {
+    "construction": "all 1044 unlabeled 7-vertex graph atlas classes; add an eighth vertex with all 2^7 neighborhoods; exact NetworkX isomorphism deduplication inside isomorphism-invariant prefilter buckets",
+    "candidate_extensions": 133632,
+    "unlabeled_8_vertex_representatives": 12346,
+    "independent_mckay_nauty_count": 12346,
+    "graph6_unique_lines": 12346,
+    "graph6_sha256": "22d0b5dc0a9da6ff5d1618fe0ec31fd396a8a42b19f4f98072c9959c7b3fab90",
+    "exact_isomorphism_tests": 121286,
+    "generator_path": "proofnet24/P14-probability-correlation/artifacts/P14_generate_n8_exact_2026-09-16.py",
+    "generator_blob_sha": "feab212af12a754171932337dec98dbe842230e3",
+    "generator_creation_commit": "aac75792d5f0a33a574f713015ec5363a0b093fe",
+    "generation_output_path": "proofnet24/P14-probability-correlation/artifacts/P14_forest_rayleigh_n8_generation_2026-09-16.out",
+    "generation_output_blob_sha": "8c8ae2d2c6c6c4958016724392f70b4390c0bdc1",
+    "generation_output_creation_commit": "eac1dc0b63b0d5f63b9e53a80b2b6e6689fb9e41"
+  },
+  "exact_checker": {
+    "method": "Kirchhoff/Matrix-Tree component counts plus exact forest component dynamic programming and exact first/second edge-inclusion counts; Rayleigh numerators accumulated as integers",
+    "checker_path": "proofnet24/P14-probability-correlation/artifacts/P14_forest_rayleigh_n8_checker_2026-09-16.c",
+    "checker_blob_sha": "26f8c039916a95a22c86fa0eb8b3bae81bf821ee",
+    "checker_creation_commit": "53cf7a9b44efd4bdcccd2cdbc06682660d0f8d7f",
+    "output_path": "proofnet24/P14-probability-correlation/artifacts/P14_forest_rayleigh_n8_checker_2026-09-16.out",
+    "output_blob_sha": "f084a6c58e8595af6a4b8f5210c7a54c715e6ca7",
+    "output_creation_commit": "9498fd81eca4b62d8f9a4c88e2dc1b7e0b357b37",
+    "graphs_checked": 12346,
+    "distinct_edge_pairs_checked": 1181246,
+    "negative_rayleigh_numerators": 0,
+    "zero_rayleigh_numerators": 80642,
+    "minimum_positive_rayleigh_numerator": 2,
+    "maximum_forest_count": 561948,
+    "maximum_rayleigh_numerator": 3613955472
+  },
+  "independent_self_check": {
+    "graph": "K8",
+    "Z": 561948,
+    "Z_e": 125292,
+    "Z_f": 125292,
+    "Z_ef": 21504,
+    "Delta": 3613955472,
+    "method": "independent brute-force enumeration of all acyclic edge subsets of K8"
+  },
+  "literature_cross_check": {
+    "grimmett_winkler_2004": "published numerical verification for all graphs on at most 8 vertices, and 9 vertices with at most 18 edges",
+    "mckay_graph_count_source": "https://users.cecs.anu.edu.au/~bdm/data/graphs.html"
+  },
+  "limitations": [
+    "This certificate is only the source's unweighted pairwise statement; it does not certify the all-positive-rational-weight I-Rayleigh property.",
+    "It does not certify full negative association for arbitrary increasing events on disjoint edge sets.",
+    "The published 9-vertex <=18-edge computation is partial at n=9 and therefore does not advance the complete-size metric beyond 8.",
+    "The emitted graph6 catalog itself is reproducibly generated and hash-certified but is not separately stored in this repository; the deterministic generator and complete execution manifest are stored."
+  ]
+}

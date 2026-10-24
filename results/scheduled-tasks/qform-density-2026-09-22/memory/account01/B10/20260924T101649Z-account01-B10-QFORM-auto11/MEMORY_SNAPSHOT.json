@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B10",
+  "run_id": "20260924T101649Z-account01-B10-QFORM-auto11",
+  "control_revision": "2026-09-22.15",
+  "prepublication_refresh_head_observed": "bd674aa420bdd445b131df6b1abb264881953521",
+  "correction_inbox_blob": "ba7aeac3d879f59da5ec8a12daad74ea85714465",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-ARBITRARY-JOINT-COAREA-FALSE"
+  ],
+  "partner_result": {
+    "account": "account02",
+    "slot": "B10",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "461ca4597face7955d318d0540729ca6b809fce2",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B10/20260924T094654Z-account02-B10-QFORM-r13/REPORT.md",
+    "applied_at": "exact-coloop null-hub endpoint inequality ||p_Q||_infinity <= 6*2^(2/3) < 9.525"
+  },
+  "new_result": {
+    "id": "QFORM-LEVERAGE-HALF-WIENER-FRESNEL-v1",
+    "statement": "For a 3D orthogonal product projection Y=U^T X whose physical row leverages c_i=||u_i||^2 are all <=1/2, sharp Hausdorff-Young plus geometric Brascamp-Lieb gives ||hat p_Y||_1 <= (2*pi)^3 e^(3/2). Hence for every invertible symmetric 3x3 M and arbitrary affine term, Y^T M Y+beta^T Y+gamma has a continuous density bounded by 3e |det M|^(-1/3).",
+    "conditional_residual_extension": "After conditioning any ORIGINAL coordinate set S, if G=U_R^T U_R>0 and all normalized residual leverages u_i^T G^(-1)u_i <=1/2, then ||p_Q||_infinity <=3e [|det M| det G]^(-1/3), with continuity.",
+    "one_hub_application": "For one physical hub of leverage h<1, det G=1-h, so the residual-diffuse branch obeys ||p_Q||_infinity <=3e [D(1-h)]^(-1/3). In particular D(1-h)>=1/64 gives <12e<32.620."
+  },
+  "compatibility_note": "The live PHASE-WIENER universal-false correction is not contradicted: its A=I_3 example has row leverage 1, outside the <=1/2 hypothesis. The new result uses original-product Fourier factorization and never claims post-rotation independence.",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "aff6876a6017be77544c50e8904e9baf8dac3bfe",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B10/20260924T101649Z-account01-B10-QFORM-auto11/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "744dd9eb6853d1fbe4e18439b4c6abbb6a9ba078",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B10/20260924T101649Z-account01-B10-QFORM-auto11.md"
+  },
+  "first_unpaid_implication": "QFORM-HEAVY-ROW-WIENER-TO-PARTNER-ENDPOINT-GLUING-v1",
+  "next_step": "Bridge the punctured small-D(1-h) heavy-row collar to account02/B10's finite exact-coloop endpoint without coefficient continuity, or recursively spend a second heavy normalized residual row before determinant inversion while retaining ORIGINAL-product provenance.",
+  "full_exact_rank3_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "FULL_TARGET_CONTINUITY_OPEN_NEW_LEVERAGE_HALF_BRANCH_CONTINUOUS",
+  "brain_ingestion_status": "WITHOUT_VERIFIED_BRAIN"
+}

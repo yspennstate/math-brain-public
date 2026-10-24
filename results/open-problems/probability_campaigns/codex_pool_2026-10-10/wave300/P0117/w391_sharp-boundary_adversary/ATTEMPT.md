@@ -1,0 +1,17 @@
+# P0117 boundary attempt and adversarial decision
+
+2026-10-10: The exact intake and primary Question 31 were recovered. The question is "Do geodesic lines exist?" in Section 4.5, page 98 of the 160-page arXiv PDF; the older 147-page survey places it on page 86. The explicit working target uses finite nonnegative nonatomic iid weights on undirected nearest-neighbor Z^2 and E[min(X1,X2,X3,X4)^2]<infinity. The bare historical question does not print that moment assumption. A recent primary manuscript claims this precise target; only its statement and first two pages were checked. Current openness and novelty remain UNKNOWN.
+
+C01-C03 were saved independently before the paired proof was read. C01 is the constant-law horizontal bigeodesic. C02 is a quantitative finite-strip trap proof, using expensive horizontal cuts and cheap exterior-row connectors. Its independent deterministic supports make the probability product legitimate even though a crossing path can be chosen from the environment. C03 constructs monotone bigeodesics for nondegenerate positive two-point laws under the explicit positive directed-survival premise: past and future ray events are independent, every concatenated finite segment is Manhattan optimal, and existence is translation invariant. It obstructs dropping nonatomicity while retaining bounded positive weights and finite moments.
+
+After primary-source recovery and that independent derivation, the paired proof was read. Five claims received KEEP within their stated special-case scope, saved in AUDIT_W390.jsonl. The hardest path-selection step is sound: the last visit to the left wall before the first later right-wall visit keeps the chosen crossing in the slab. The strict logarithmic-width coefficient makes no-trap probabilities dyadically summable, and the countable coefficient/center intersection excludes all rays simultaneously. No independence across annuli or uncountable null-set union is required.
+
+C04 was added afterward as a separate geometric boundary test. The constant-weight staircase f(k)=sign(k) floor(sqrt(abs(k))) is a bigeodesic with axial end directions but unbounded transverse displacement at both ends. It disproves a direction-only finite-strip bridge. Its constant law violates the nonatomic target, so it supplies no counterexample to that target.
+
+The single hardest missing full-target premise remains confinement: a candidate bigeodesic may escape every tube covered by the special case. A bigeodesic-specific confinement theorem or a new barrier argument for wider/adaptively wandering candidates is needed. The earlier finite-geodesic compactness route independently lacked anchoring near a bounded region.
+
+The fresh resource gate reported distress/throttle and declined finite tests: zero endpoint cases ran. Written proofs and exact source/structure receipts are distinguished from numerical or formal verification. Own claims await w392; no admitted placeholder or formal proof receipt is asserted.
+
+Four math-only draft entries and seven supported relations were submitted. New results remain concepts/drafts, with submitted/reviewed/ingested/retrievable states recorded separately. The fixed-strip proof is kept as independent audit evidence rather than duplicating the paired tube theorem in the new brain bundle. The scope hook is staged as a local proposal and unified diff for the reviewer.
+
+NEXT: w392 independently verifies C03's directed-survival construction and C04's geometric scope, then the validating reviewer decides the draft concepts under those exact premises.

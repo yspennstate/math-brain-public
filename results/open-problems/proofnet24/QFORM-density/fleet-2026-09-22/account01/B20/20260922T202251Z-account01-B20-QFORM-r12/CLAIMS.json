@@ -1,0 +1,49 @@
+{
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260922T202251Z-account01-B20-QFORM-r12",
+  "classification": "ESSENTIAL_STEP_APPLIED / TARGET-LEVEL SUBBRANCH CLOSED / FULL_TARGET_OPEN",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_OUTSIDE_PREVIOUSLY_PAID_BRANCHES",
+  "claims": [
+    {
+      "id": "QFORM-BALANCED-HUB-E2-PAYMENT-v1",
+      "status": "PROVED",
+      "statement": "In the account02/B20 r18 balanced-hub packet with |a|>=3501/8000 and both hub arms >1/(8sqrt(2)), if E_2(S[U,V]S[U,V]^T)>=2^-20 then the full ambient density has essential supremum <92, with arbitrary self blocks and outside couplings retained."
+    },
+    {
+      "id": "QFORM-BALANCED-HUB-E2-FAILURE-TUBE-v1",
+      "status": "PROVED",
+      "statement": "Failure of the E2 payment forces either ||S[U,V]||op<1/(16sqrt(2)) or Frobenius distance to rank one <sqrt(2)/64."
+    },
+    {
+      "id": "QFORM-HUB-WEDGE-OR-DIRECT-ALIGNMENT-v1",
+      "status": "PROVED",
+      "statement": "For N_U=[c_U,M] and N_V^T=[c_V,M^T], if the corresponding selected-side range leverage is <=1/2 and the component of M transverse to the normalized hub arm is >=1/64, the full density is <61. If both augmented banks are low-leverage and unpaid, M lies within 1/32 in Frobenius norm of lambda u v^T where u,v are the normalized actual hub arms."
+    },
+    {
+      "id": "QFORM-TWO-ARM-ONEFACTOR-OR-HIGHLEVERAGE-PAYMENT-v1",
+      "status": "OPEN",
+      "statement": "Pay the surviving pivot-star/dominant-heavy-edge packet, an augmented balanced-hub bank with physical range leverage >1/2, or the direct two-arm one-factor packet with arbitrary same-bank self curvature and outside couplings, without post-rotation independence."
+    }
+  ],
+  "dependencies": [
+    {
+      "worker": "account02/B20",
+      "run": "20260922T200120Z-account02-B20-QFORM-r18",
+      "result": "QFORM-STRONG-HUB-CUT-GLUING-v1",
+      "source_commit": "8f7fc147ba50f1bcdf3a5c83c3722ae18238e9db"
+    },
+    {
+      "worker": "account03/B06",
+      "run": "20260922T201841Z-account03-B06-qform-r18",
+      "result": "QFORM-ONE-ROW-E2-HYBRID-L3-v1",
+      "source_commit": "897d37adecb8f18c46b456569884b2ee22eeb3ee"
+    },
+    {
+      "worker": "account03/B03",
+      "run": "20260922T175531Z-account03-B03-QFORM-r17",
+      "result": "determinant-bank half-Riesz q=1,k=2",
+      "source_commit": "924b3c4c70f86a64402863fe228f641bf3db60b2"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260923T091659Z-account03-B04-qform-auto11-r30",
+  "control_commit_start": "bd2f9c0381a249f47fdd8676575367a01f618fa6",
+  "control_commit_final_refresh": "ae41328c8f7f1be8b6b8a3f1571811716877ae23",
+  "owner_control_revision": "2026-09-22.15",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "mathematical_status": "NEW_SUPPORTING_THEOREM_FULL_TARGET_OPEN",
+  "theorem_id": "QFORM-SOFT-RIDGE-THIRDVOLUME-GATE-v1",
+  "premises": [
+    {
+      "result": "q-dependent fractional third-volume product-Fourier theorem and exact volume-marginal matrix W",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "96ef944654c4056cc75bba6256e600eb791fb2d1",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "scope": "original-coordinate cross block; arbitrary same-bank measurable phases/outside affine terms; alpha_i<=q/2; continuous C0 density"
+    },
+    {
+      "result": "T2 E2 <= 3 E3",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "5bf3d5e6765ecd1dd091fc7d862f6f04211c530f",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260922T234545Z-account01-B20-QFORM-auto11/REPORT.md",
+      "scope": "squared singular-value elementary-symmetric identity; applied before Fourier inversion"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "new_result": {
+    "statement": "For T2=sum_{j>=3}s_j(M)^2 and K_theta=MM^T(MM^T+theta*T2*I)^(-1), the exact third-volume marginal matrix satisfies W<=(1+3theta)K_theta. If A_theta=(1+3theta)max_i(K_theta)_ii<3/4, set q=max(1,2A_theta); then ||p_Q||inf <= [3e/((3-2q)sqrt(q))] E3(M)^(-1/6), with a continuous C0 density.",
+    "fixed_scale_dichotomy": "At theta=1/3, max diag K<=1/3 pays the Fourier branch with constant (9sqrt(3)e/2)E3^-1/6; failure yields a physical row with cross-energy>T2/9, and failure after transposition yields a row/column aggregate double hub.",
+    "explicit_example": "M=diag(2,2,1^62) H_64/8, A=[[0,M],[M^T,0]]; all cross entries nonzero; spectrum +/-2,+/-2 and 62 pairs +/-1; hard projection certificate fails for every P; soft-ridge gate has A=12/37, E3=53940 and ||p_Q||inf<=1.326673068190509 with continuous C0 density."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1e5343fdf008f0da0d800b028dcfeec46550b1b0",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T091659Z-account03-B04-qform-auto11-r30/REPORT.md",
+    "report_blob": "95e00dafacba2c4cba1776c5ac6f31201e39d219",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T091659Z-account03-B04-qform-auto11-r30/CHECKS.json",
+    "checks_blob": "b737ba0709add19e5ee068e248927341c94310a0"
+  },
+  "handoff_commit": "9048c5b3a0fa0d5109b557aec86195966ff5761f",
+  "designated_partner": "account04/B04",
+  "designated_partner_result_applied": false,
+  "designated_partner_note": "No completed current-QFORM canonical report, shared handoff, or recovery result was visible at fresh direct lookups; none was fabricated.",
+  "peer_result_actually_applied": "account01/B20 T2 E2<=3E3 at commit 5bf3d5e6765ecd1dd091fc7d862f6f04211c530f",
+  "unresolved_implication": "QFORM-SOFT-RIDGE-DOUBLE-HUB-PAYMENT-v1: pay the survivor with row and column intrinsic ridge leverage>1/3, together with the small-total-tail/rank-two-tube case, through product-preserving pair/star/grouped-bank endpoints without a vanishing local reciprocal.",
+  "continuity": "proved only in the soft-ridge Fourier branch; full-target continuity remains open",
+  "privacy_scope": "math-only; no unrelated data",
+  "scheduler_mutation": false,
+  "email_mutation": false,
+  "notification_mutation": false
+}

@@ -1,0 +1,15 @@
+Execution environment: local exact-rational Python execution during R7-02 research run, 2026-09-19 UTC.
+Script: research7_2026-09-17/R7-02/artifacts/2026-09-19/p0169_degree5_sparse_dual_checker.py
+Arithmetic: fractions.Fraction only for all asserted identities and inequalities; no floating-point comparisons.
+
+P0169 d=5 exact sparse-dual checker
+arithmetic=fractions.Fraction; floating_point=False
+objective_newton_coeffs [Fraction(0, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(-3, 4), Fraction(-1, 2), Fraction(-5, 16)]
+n=11_dual_coeffs [Fraction(0, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(-3, 4), Fraction(-1, 2), Fraction(-5, 16)]
+n=11_bound 17/8 square 289/64 <5
+n=12_dual_coeffs [Fraction(0, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(-3, 4), Fraction(-1, 2), Fraction(-5, 16)]
+n=12_continuous_bound 331/144
+dyadic_gap: (35/16)^2 = 1225/256 < 5 < (36/16)^2 = 81/16
+n=12_granular_bound <= 36/16 = 9/4
+if n=12 has L=9/4, each singleton >= 9/4-17/8 = 1/8
+ASSERTIONS_PASS

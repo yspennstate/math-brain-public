@@ -1,0 +1,13 @@
+{
+  "helper_version": "A044-two-mean-v2",
+  "actual_Boolean_family": "F(z,y0,y1)=(1-z)y0+z y1; general addressing with data means selected from two values by Boolean profile b(c)",
+  "parameter_domain": {"mux_q":["1/16","1/4","1/2","3/4","15/16"],"mux_data_Bernoulli_biases":["1/16","1/4","1/2","3/4","15/16"],"boundary_q":["1/16","1/4","1/2","3/4","15/16"],"boundary_epsilon":["1/4","1/16","1/256","1/65536"],"profile_address_arity":2,"profile_truth_tables":"all 16 Boolean tables","profile_address_biases":[["1/4","1/2"],["1/4","3/4"],["1/2","1/2"]],"profile_mean_pairs":[["-1/2","1/2"],["-3/4","7/8"]]},
+  "additional_boundary_domain": "q=epsilon, m0=-1+epsilon, m1=1-epsilon^2 for the four listed epsilons",
+  "case_count": {"mux_grid":125,"mux_fixed_q_boundary":20,"mux_co_degenerating_boundary":4,"two_mean_profiles":96,"total":245},
+  "symmetry_reduction": "none; complement and repeated-mean tuples retained",
+  "arithmetic": "exact Fraction biased spectra without square roots; prime-log coefficient dictionaries for exact identities; rational atanh intervals with range reduction and proved geometric remainder for signs",
+  "memory_estimate_MB": 64,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "purpose": "verify repaired unequal-mean identity, fixed-q supremum bound and arbitrary-profile transfer; all-dimensional proof is analytic"
+}

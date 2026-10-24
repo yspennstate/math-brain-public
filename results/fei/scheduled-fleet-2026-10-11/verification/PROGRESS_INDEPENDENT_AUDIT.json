@@ -1,0 +1,29 @@
+{
+  "schema": "fei-progress-independent-audit/1",
+  "registry_sha256": "09def38e18a7e7c09272463e69cac96965ae7963d814134391b1a42a4c93e413",
+  "progress_sha256": "75d2523dccef046949cd7896596f7d184e21ae674fc74dfbaf6ba410189f2bf8",
+  "packet_keys": 100,
+  "two_status_axes_valid": true,
+  "owned_contracts_identical": true,
+  "source_keys_resolve": true,
+  "canonical_B05_claim_ID_preserved": true,
+  "observed_related_evidence_packets": [
+    "A021",
+    "A025",
+    "A087",
+    "A092"
+  ],
+  "deliverable_counts": {
+    "UNASSESSED": 100
+  },
+  "mathematical_counts": {
+    "OPEN_TARGET": 100
+  },
+  "hard_failures": [],
+  "limits": [
+    "This is contract/schema consistency and source-binding verification. Packet target completion is not inferred from plan metadata.",
+    "A092 has substantial existing B19 evidence for B20 to assess against its precise completion contract; initial UNASSESSED is a pending assessment, not a finding that the original review failed.",
+    "Input DAG checks do not establish acyclicity of future actual proof claims; each run must record and audit those claim-level dependencies.",
+    "Reviewer routes are assignments only, not receipts or additional workers."
+  ]
+}

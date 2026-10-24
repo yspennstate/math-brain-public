@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "account": "account04",
+  "slot": "B15",
+  "run_id": "20260924T171428Z-account04-B15-nine385-regularity-r3",
+  "timestamp_utc": "2026-09-24T17:14:28Z",
+  "objective_id": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "source_pins": {
+    "manuscript_commit": "eeb752c8943536541b34b42b8bf48e924f4d3d2f",
+    "manuscript_blob": "19fb119877426b640b2c0dae19ec2f78a399fe11",
+    "manuscript_sha256": "bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3",
+    "scientific_commit": "5b116380e01d27aab636d962fec9b60e0fb91121",
+    "brain_handoff_commit": "61aeb0df107d6c59e1003790798604a29c52bb09"
+  },
+  "status": {
+    "gaussian_inversion": "PASS",
+    "riesz_half_potential": "PASS",
+    "no_pivot_regularity": "C0 with bound <375 K^2/s",
+    "full_s9_bounded_density": "PASS at essential-boundedness scope",
+    "full_s9_continuity": "OPEN at pivot branches",
+    "s8_bounded_density": "OPEN",
+    "unrestricted_s3": "OPEN"
+  },
+  "correction_consumed": [
+    "CURRENT_OBJECTIVE QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+    "continuity is separate from essential boundedness",
+    "rough smoothing plus uniform density cap does not imply continuity"
+  ],
+  "actual_premises": [
+    "integrable exponent-3/2 characteristic-function envelope in the no-pivot order-three crossing branch",
+    "Fourier inversion of an L1 characteristic function",
+    "nonnegative-test-function conditional domination and Tonelli in pivot branches"
+  ],
+  "formulas": {
+    "no_pivot": "p_Q in C0(R), ||p_Q||_infinity < 375 K^2/s",
+    "riesz": "sup_a E|Z-a|^(-1/2) <= (2pi)^(-1/2) integral |t|^(-1/2)|phi_Z(t)|dt"
+  },
+  "unresolved_implication": "Obtain a uniform output translation modulus or an L1 characteristic-function majorant in scalar/pair pivot branches; smooth approximation alone cannot supply it.",
+  "next_step": "Test pivot-conditioned density families for an integrable translation modulus after averaging over the Schur remainder, without assuming uniform input regularity."
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "claim_id": "A007-SHARED-CORE-ROOT-CANCELLATION",
+    "version": 1,
+    "exact_statement": "For every nonconstant finite Boolean indicator B=OR_l b_l with rho_l=E b_l>0, every r>=1 and every fixed lambda_l>0 with sum lambda_l<=1, let p=2^-r, F=2 A_r B-1 on fresh core coordinates, g=2B-1, v=Var(F), s=sum lambda_l rho_l, D=product(1+p lambda_l rho_l)-1 and delta=log2(D/(p s)). There exist distinct actual partition-forest laws with K=1 when the spectral set meets the core and 1<=K<=|T| otherwise. Their root block equals v log2(s)+v delta+r(E K-v) +E sum_roots log2(1/rho_l), with 0<=r(E K-v)<=p I(g)/2 and v delta<=(log2 e) 2rp E B. Thus normalized common-core rarity overhead is at most (log2 e) I(F), leaving base rarity and all remaining coding costs unpaid. For disjoint private conjunctions rho_l=2^-w_l and Q=product(1-rho_l), E K-v=4p^2 Q(sum rho_l-(1-Q)). All E are unconditioned spectral-weighted sums over nonempty sets; entropy units are bits. A fixed complete-reference scale prior lambda^(j)=2^-j lambda, w_j=1/((j+1)(j+2)) pays v for selecting j=0.",
+    "hypotheses": [
+      "uniform finite cube",
+      "fresh r>=1 conjunction core",
+      "B nonconstant",
+      "rho_l>0",
+      "positive fixed incidence weights with sum<=1",
+      "actual conditioned partition forests",
+      "bits"
+    ],
+    "statement_sha256": "0d08e23fa6995ac6bb05140d5410161cafb3c6ed6233519eacd75e25463a075e",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": {
+      "path": "REPORT.md",
+      "sections": "Derivation 1-6",
+      "companion": "ROOT_NORMALIZATION.tex"
+    },
+    "proof_dependencies": [
+      {
+        "source": "source_material/reductions/paper/forests.tex",
+        "locator": "thm:posteriorforest and eq:forestconditioning",
+        "status": "source-complete baseline"
+      },
+      {
+        "source": "SEED_LEMMAS.md",
+        "locator": "Section 2",
+        "status": "source-complete elementary mixture interface"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A014",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  }
+]

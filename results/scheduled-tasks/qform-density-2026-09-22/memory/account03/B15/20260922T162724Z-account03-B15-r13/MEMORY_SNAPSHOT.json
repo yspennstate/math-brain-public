@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260922T162724Z-account03-B15-r13",
+  "source_control_commit_initial": "9fc4f287e43d9adc271f9ad0f0a56fbb12b3c800",
+  "source_control_commit_refresh": "01165d9eb80dffd7b8b26f867341650f3200ca9d",
+  "owner_control_revision_refresh": "2026-09-22.7",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "premises": [
+    {
+      "source": "own_previous_run",
+      "commit": "d73760eb784a86c356c64f05dd92f84655618f02",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T153101Z-account03-B15-r12/REPORT.md",
+      "scope": "rank(A)>=3 and some original diagonal A_jj nonzero implies p_Q in C_0 with finite matrix-dependent height"
+    },
+    {
+      "source": "partner_account04_B15",
+      "commit": "07672b7beb8f867c7a7b973aa3157a42ae506460",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md",
+      "scope": "C_all=C_C0=C_sm and smooth approximation can approach any rough output height from below"
+    }
+  ],
+  "new_result": {
+    "status": "proved_in_stated_scope_pending_independent_review",
+    "commit": "4813f09ed4f518a1ee172b77a0f1d315989a84e1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T162724Z-account03-B15-r13/REPORT.md",
+    "statement": "For every symmetric A with rank(A)>=3 and independent cap-one coordinate densities, X^TAX has a density in C_0(R) and a finite matrix-dependent L-infinity bound. The new part handles diag(A)=0 by an exhaustive triangle versus invertible bipartite 4-block physical-coordinate dichotomy.",
+    "key_quantitative_bounds": [
+      "UV density k(s)<=2+2 log_+(1/|s|)",
+      "triangle branch ||p||_infinity<=|a|^{-1}[1+Psi(2sqrt(2)|a|/sqrt(|bc|))]",
+      "bipartite four-block branch ||p||_infinity<=sqrt(2pi)/sigma_min(C)",
+      "cap-one F on R^2: integral F(u)/|u| du <=2sqrt(pi)"
+    ]
+  },
+  "partner_result_actually_applied": "For every rough zero-diagonal output p and eta>0, account04/B15 gives a smooth target output p_eta with ||p_eta||_infinity>=||p||_infinity-eta; hence ||p||_infinity<=C_sm after eta->0.",
+  "unresolved_implication": "Prove C_sm<infinity with a dimension- and matrix-independent constant from the three-large-eigenvalue hypothesis. The new local block constants can deteriorate and cannot be paid by one-good-minor selection.",
+  "next_step": "Aggregate original-coordinate block smoothing or combine the completed ridge-certified diffuse branch with a grouped high-leverage reduction before reciprocal-minor payment.",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

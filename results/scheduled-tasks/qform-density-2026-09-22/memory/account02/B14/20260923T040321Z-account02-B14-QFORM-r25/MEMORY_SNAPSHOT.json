@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B14",
+  "run_id": "20260923T040321Z-account02-B14-QFORM-r25",
+  "status": "SUPPORTING_PROOF_MECHANISM_BARRIER_FULL_QFORM_OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control_revision": "2026-09-22.15",
+  "control_commit_pre_handoff": "8267d03132b16b30d6e9294f673c7df7e334b832",
+  "target": "For arbitrary independent densities <=1 and symmetric A with at least three eigenvalues of modulus >=1, prove a universal essential density bound for X^TAX or give a valid counterexample.",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "required_claude_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+    "result_used": "Theorem D: ||p_Q||inf <= 6 sqrt(e) e_3(M^T M)^(-1/6) under row volume marginals <=1/2."
+  },
+  "partner_used": {
+    "account_slot": "account03/B14",
+    "commit": "2fe2734d7fc9a7e9a29edd26cbeda837fee10900",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T023535Z-account03-B14-QFORM-r24/REPORT.md",
+    "result_used": "Exact conjugate-fiber overlap law p_U=m_E and conditional cap ||p_(V|U=u)||inf=(2m_E(u))^-1."
+  },
+  "new_claim": {
+    "id": "QFORM-D3-GOOD-FIBER-NORMALIZATION-BARRIER-v1",
+    "classification": "TARGET_VALID_PROOF_MECHANISM_BARRIER",
+    "summary": "There is a target-valid cross form with direct Theorem-D bound 6sqrt(e), but after conditioning on pair differences and normalizing sum fibers, even the constant-mass subset of fibers that still satisfies the exact k=3 row-marginal gate alpha<=1/2 produces an averaged reciprocal-volume certificate at least c_*(1-1/N)^18 N^2, c_*=0.0183573692706076... .",
+    "not_a_counterexample_to": ["QFORM", "Claude Theorem D"]
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c93a8766da1f8546f2b4260d305a79484f834c4e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T040321Z-account02-B14-QFORM-r25/REPORT.md"
+  },
+  "handoff": {
+    "commit": "402996b12f4112d92e1a69943abe5053f86cddd2",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B14/20260923T040321Z-account02-B14-QFORM-r25.md"
+  },
+  "first_unpaid_implication": "QFORM-PREINVERSION-AGGREGATE-OR-KERNEL-LEAKAGE-v1: in each surviving no-pivot/heavy-star branch, either use a volume/ridge/bank certificate before conjugate normalization, or prove an unnormalized kernel-leakage/positive-copy estimate retaining a full mass/overlap power through reciprocal curvature/determinant payment.",
+  "scope_guards": [
+    "No moment or bounded-support assumption.",
+    "No fixed fragment-count assumption.",
+    "No independence after rotation.",
+    "No small-output-law perturbation from small matrix coefficients.",
+    "Continuity remains separate."
+  ]
+}

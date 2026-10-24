@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260923T235337Z-account03-B16-QFORM-r37",
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_head_at_prepublication_refresh": "47d9b52fcf49ce23e58bcb7b4eb02480d0f5766b",
+  "control_revision": "2026-09-22.15",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "correction_inbox_blob_at_refresh": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-GSTAR-SCALE-FORCING-FALSE-v1",
+    "QFORM-B15-NONZERO-SQUARE-AFFINE-SLOPE-RESCUE-FALSE-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1"
+  ],
+  "mathematical_premises": [
+    {
+      "source": "yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6",
+      "path": "proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+      "scope": "bounded-density orthonormal projection cap and grouped projected-crossing theorem; all stated rank and volume-marginal gates retained"
+    },
+    {
+      "source": "yspennstate/math-open-problems@c47c53d4ef3e255431a6fb13960de1794bf2698f",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260923T211939Z-account04-B16-QFORM-r3/REPORT.md",
+      "scope": "designated partner near-coloop innovation payment and normalized slope collar"
+    },
+    {
+      "source": "yspennstate/math-open-problems@22c3bd6c84f41cdaa57601540b36674270f41a33",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T225318Z-account03-B16-QFORM-r36/REPORT.md",
+      "scope": "prior exact literal-hub factorization; this run preserves the proved identity/receiver but retracts its proposed two-hub structural escape"
+    }
+  ],
+  "result_ids": [
+    "QFORM-GROUPED-PLUCKER-SCHUR-FACTOR-v2",
+    "QFORM-DISJOINT-FULLVOLUME-NEARCOLOOP-BARRIER-v1",
+    "QFORM-TWO-HUB-PLUCKER-ESCAPE-FALSE-v1"
+  ],
+  "result_status": "PROVED_SUPPORTING_IDENTITY_AND_METHOD_BARRIER_WITH_CORRECTION",
+  "result_scope": "exact-rank-three Pluecker geometry for arbitrary physical groups H,I,J with rank-k H-J crossing, k in {1,2}; nonlinear density corollary additionally requires the source theorem's k-dimensional hub-interaction representation and volume marginals <=1/2",
+  "main_identity": "S_B^2 Z_ell=(det Lambda)^2 V_{k,ell}(H,I)V_3(J), ell=3-k",
+  "near_coloop_barrier": "if ||r_h||^2=1-epsilon then every pairwise-disjoint full-volume split obeys V_{k,ell}(H,I)V_3(J)<=epsilon and hence S_B^2 Z_ell<=(det Lambda)^2 epsilon",
+  "sharp_example": "seven-row Parseval frame with h=sqrt(1-epsilon)e3, two transverse literal hubs, two transverse J rows and two sqrt(epsilon/2)e3 I rows gives product epsilon(1-epsilon)/16 and exact I-row volume marginals 1/2",
+  "grouped_two_hub_receiver_constant": 6.734772289856,
+  "partner_result_applied": "account04/B16 r3: Xi=|Gamma|(s1s2)^2 epsilon>=2^-20 gives ||p_Q||_infinity<320/3<106.667; on slope dominance 2epsilon<||d||^2<=(16/3)epsilon, so any disjoint full-volume certificate P satisfies P<||d||^2/2 and its own P^(-1/6) factor diverges as d->0",
+  "canonical_report_commit": "8a3d1f682f8352180982dc903fecd8590b6d7990",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T235337Z-account03-B16-QFORM-r37/REPORT.md",
+  "checker_source_commit": "53b839281b5ff7dbb127a6b247b7765bbc4e6f0b",
+  "checker_output_commit": "8a3d1f682f8352180982dc903fecd8590b6d7990",
+  "handoff_commit": "fc746132478921d05d66e386514898ebbd98395f",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B16/20260923T235337Z-account03-B16-QFORM-r37.md",
+  "correction_event_commit": "8355de32bafa1e7b1745e677baaab3a7b1d14f4e",
+  "correction_event_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account03/B16/20260923T235337Z-account03-B16-QFORM-r37/QFORM-TWO-HUB-PLUCKER-ESCAPE-FALSE-v1.json",
+  "unresolved_implication": "QFORM-OVERLAP-AWARE-PUNCTURED-HUB-STABILITY-v1: obtain a density bound uniform as epsilon->0 in the partner slope-dominant packet by coupling the exact-coloop fresh-hub receiver to the puncture before absolute values, preserving overlapping original leaf sources",
+  "next_step": "abandon disjoint k+ell=3 Pluecker-volume splits on this endpoint; derive an overlap-aware Fourier or direct small-ball identity that spends the same near-coloop source in the hub and third-curvature smoothing without conditioning to a worst fiber",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "GLOBAL_OPEN_GROUPED_PROJECTED_CROSSING_BRANCH_C0"
+}

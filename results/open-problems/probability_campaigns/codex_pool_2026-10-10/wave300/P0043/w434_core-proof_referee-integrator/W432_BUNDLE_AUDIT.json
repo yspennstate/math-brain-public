@@ -1,0 +1,30 @@
+{
+  "reviewer": "w434",
+  "author": "w432",
+  "date": "2026-10-10",
+  "artifact": "~/math-brain-inbox/w432/bundle_002.json",
+  "sha256": "367d884521581941812575433576a7519354b59a6d150d780a14b10edf3b74ff",
+  "verdict": "FIX_RELATIONS; KEEP_SCOPED_ENTRIES",
+  "scope": "Nine concept entries and nine relations; review applies to revision 002 only; old revision 001 is preserved, not another set of results.",
+  "claim_verdicts": {
+    "L01": "KEEP: decreasing finite-ball events and polynomial probabilities imply right continuity by upper semicontinuity plus monotonicity.",
+    "L02": "KEEP: finite Russo measures converge weakly to the critical survival atom; a critical atom is not excluded.",
+    "L03": "KEEP as exact equivalence: necessity controls large n by one f_N(p_c) and finitely many small n by continuity; sufficiency takes n-limit of each critical-window increment. The condition G01 remains unproved.",
+    "L04": "KEEP: level means M_n=2^(n+k_n)p^n, conditional variance increments (1-p)/M_n, and E W_n^2<=pi^2/6 at p=1/2 give survival >=6/pi^2. The graph is not quasi-transitive.",
+    "L05": "KEEP: at most n open pivotals on a surviving root-to-level-n tree path gives the derivative upper bound; the critical atom still has positive mass.",
+    "L06": "KEEP: forward-tree curvature bound and open-pivotal identity give D(1+2/c_b) on [1/(2b),1/b].",
+    "L07": "KEEP with explicit mass-transport assumption: each edge is incident to two vertices, yielding the factor 1/2 and the full incoming-center sum; no uniform spatial-tail bound follows.",
+    "L08": "KEEP: independently checked s_m<=1/(1+c_b m) and p s_m'<=m s_m; hence f_n'<=D(m+1)/(1+c_b m)<=D/c_b on [0,1/b], with p=0 by polynomial continuity. For D=3, 12 replaces 27 on a wider interval.",
+    "G01": "KEEP only as explicit unproved input; it is equivalent in force to the parent target.",
+    "R01": "KEEP FIX of the overstrong source mapping: the general quasi-transitive target implies its lattice specialization; no converse reduction is supplied by the cited attempt.",
+    "R02": "KEEP FIX of source scope: Cerf arXiv:2608.23661 abstract explicitly concerns Bernoulli site percolation on Z^d, d>=3; no bond or arbitrary-graph transfer follows from that abstract."
+  },
+  "bundle_relation_fixes": [
+    {"from_key": "w432-L03", "to_key": "w432-L02", "current_kind": "depends_on", "recommended_kind": "semantic_association", "why": "The UI equivalence has a direct proof from f_n increments and does not require the weak-limit theorem L02; it shares notation and interpretation."},
+    {"from_key": "w432-G01", "to_key": "w432-L03", "current_kind": "depends_on", "recommended_kind": "semantic_association", "why": "G01 is the unproved target-strength input identified by L03, not a theorem depending logically on L03's proof."}
+  ],
+  "checks": "JSON parsed; nine concept entries all have null proof_text and nonempty source fields; all nine relation endpoints resolve. Mathematical proofs independently rederived as scoped above. Numerical runner was held by the fresh compute gate; no numerical PASS is claimed.",
+  "remaining_gap": "A vanishing bound for the critical-window integral of the full incoming pivotal mass in L07 on residual subexponential quasi-transitive graphs, already difficult on Z^3. The 2026 public full-scope claim is not certified by this review.",
+  "brain_state": "submitted concept draft only; not ingested or retrievable; independent-account diversity unverified",
+  "next": "Change the two dependency relation kinds, preserve G01 as unproved, then have a separate account audit source/edge rows before coordinator integration."
+}

@@ -1,0 +1,42 @@
+Command: lake env lean ~\brain_workers\TRIO_1011\op\D0047\BoundaryAlgebra.lean
+Working directory: ~/lean_verify
+Timeout: 3600 seconds
+Exit code: 1
+Elapsed: 159.14 seconds
+~\brain_workers\TRIO_1011\op\D0047\BoundaryAlgebra.lean:6:56: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~\brain_workers\TRIO_1011\op\D0047\BoundaryAlgebra.lean:7:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub ℝ ℝ ?m.9
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~\brain_workers\TRIO_1011\op\D0047\BoundaryAlgebra.lean:7:38: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HDiv ℝ ℝ ?m.13
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~\brain_workers\TRIO_1011\op\D0047\BoundaryAlgebra.lean:9:2: error: No goals to be solved
+~\brain_workers\TRIO_1011\op\D0047\BoundaryAlgebra.lean:13:10: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~\brain_workers\TRIO_1011\op\D0047\BoundaryAlgebra.lean:13:5: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℝ ℝ ?m.14
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+~\brain_workers\TRIO_1011\op\D0047\BoundaryAlgebra.lean:15:48: error: unsolved goals
+ℝ : Type u_1
+a r : ℝ
+⊢ sorry

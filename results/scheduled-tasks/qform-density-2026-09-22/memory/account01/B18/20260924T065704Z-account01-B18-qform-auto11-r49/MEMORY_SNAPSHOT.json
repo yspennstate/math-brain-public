@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260924T065704Z-account01-B18-qform-auto11-r49",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "assignment_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "fresh_control_head_initial": "b128a0ddd5a3d9fb05c5637ff2145850ff1cb2a7",
+  "fresh_control_head_prepublication": "fb71ccb02937b879a9a55b5cbeb641a63c731836",
+  "execution_context": "scheduled_automation",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "full_target_continuity_status": "OPEN",
+  "outcome": "PROVED_QFORM_ZEROSELF_PRIVATE_SQUARE_HS_CROSS_FUSION_v1_AND_CURVED_DIFFUSE_TARGET_FAMILY",
+  "new_result": {
+    "id": "QFORM-ZEROSELF-PRIVATE-SQUARE-HS-CROSS-FUSION-v1",
+    "statement": "For an original-coordinate principal packet [[0,B,0],[B^T,C,h],[0,h^T,a]] with a!=0 and B!=0, arbitrary outside couplings, the full form has a C0 density with ||p||_inf <= 4 sqrt(2)/sqrt(|a| ||B||_HS). If rank(B)>=2, combine with exact prior account03/B18 to get min{2 sqrt(pi)/sqrt(sigma1 sigma2), 4 sqrt(2)/sqrt(|a| ||B||_HS)}.",
+    "continuity": "C0 supplied by the private-square HS branch; cross-only branch alone did not assert continuity."
+  },
+  "target_family": {
+    "id": "QFORM-CURVED-DIFFUSE-TAIL-v1",
+    "formula": "B_N=N^(-1/2)I_N, C_N=R diag(2,-2,0,...,0) R^T, a=1",
+    "spectrum": "1+-sqrt(1+1/N), -1+-sqrt(1+1/N), +/-N^(-1/2) repeated N-2, and 1",
+    "large_eigenvalue_count": 3,
+    "density_bound": "min{2 sqrt(pi) sqrt(N), 4 sqrt(2)} <= 4 sqrt(2)",
+    "mechanism": "HS aggregate remains one while every cross singular value tends to zero."
+  },
+  "designated_partner": {
+    "partner": "account02/B18",
+    "run_id": "account02-B18-20260924T060756Z-db964583",
+    "scientific_commit": "fd7c768025320fbb5e54e13a1acd00d329e8f8dd",
+    "result": "QFORM-HS-MOVING-DIFFUSE-SQUARE-v1",
+    "actual_inequality": "For Q0=4sqrt(3)X0Y0+2 eps sum XjYj+3(W+sqrt(2/3)Y0)^2 with literal original W and D=12+N eps^2, ||p_Q0||_inf <= min{K_HP/[sqrt(6)D^(1/4)], 8/sqrt(12sqrt(3))}; explicit branch 1.7547653506033234."
+  },
+  "curved_partner_extension": {
+    "formula": "Q=Q0+Y_tail^T C_N Y_tail for arbitrary symmetric C_N",
+    "target_certificate": "The direct core principal block keeps spectrum {-3,2,6} regardless of C_N.",
+    "density_bound": "8/[sqrt(6)(12+N eps^2)^(1/4)]",
+    "epsilon_inverse_sqrt_N_bound": 1.7200003042251348,
+    "continuity": true
+  },
+  "exact_prior_result_found": {
+    "id": "QFORM-ONE-SIDED-CROSS-NEGATIVE-MOMENT-v1",
+    "source_commit": "a2cf029c5c935d6eadf4216c073911fc8dc404ac",
+    "novelty_claimed": false
+  },
+  "primary_sources_checked": [
+    "Rudelson-Vershynin arXiv:1402.4492 Theorem 1.2: independent real variables, density caps, sharp sqrt(2) one-dimensional sum bound.",
+    "Livshyts-Paouris-Pivovarov arXiv:1507.07949 Theorem 1.1: k-dimensional orthogonal marginal cap 2^(k/2) for cap-one product densities.",
+    "Banks-Garza Vargas-Kulkarni-Srivastava arXiv:2005.08930 Theorem 2.1 and Corollary 2.4: independent bounded-density bilinear-affine form; arbitrary same-bank quadratic Y^T C Y is outside its displayed theorem.",
+    "Herry-Malicet-Poly arXiv:2303.09488: iid plus sufficiently smooth Gaussian-field representation; narrower than owner quantifiers."
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "173be723f777b3bf25609f5b1d04cd16e3b2813e",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260924T065704Z-account01-B18-qform-auto11-r49/REPORT.md",
+  "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260924T065704Z-account01-B18-qform-auto11-r49/CHECK.json",
+  "handoff_commit": "a2b43ab9b5dcce991f1f9d99b0fd6e44eb85b0cb",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B18/20260924T065704Z-account01-B18-qform-auto11-r49.md",
+  "first_unpaid_implication": "STRUCTURAL_COMPILER: from s3(A)>=1 force a source-preserving zero-self/private packet with |a| ||B||_HS>=c or sigma1(B)sigma2(B)>=c, or route all failures into an already-paid branch; no such universal extraction is proved.",
+  "novelty_status": "NO_PUBLICATION_NOVELTY_CLAIM; exact prior cross branch explicitly credited; search miss for the full fusion/curved-tail application is not novelty evidence.",
+  "same_hour_login": "2026-09-24T06Z B18 login already existed from prior actual invocation and was not overwritten.",
+  "permissions_state": "unchanged",
+  "notifications_state": "unchanged_quiet",
+  "email_state": "unchanged_off"
+}

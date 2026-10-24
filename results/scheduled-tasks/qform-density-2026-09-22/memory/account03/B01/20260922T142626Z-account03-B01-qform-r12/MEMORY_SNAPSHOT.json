@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_initial": "11210176bf06312445659a1a2f5e5fcee61e90e2",
+  "control_commit_prepublication": "220d5de12dccbcd089c50e22e70dbba2ed49c6e7",
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "20260922T142626Z-account03-B01-qform-r12",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "Oscillatory replacement",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "mathematical_output": {
+    "status": "PROVED_SUPPORTING_THEOREM_FULL_TARGET_OPEN",
+    "claim_ids": [
+      "QFORM-HALF-INTEGRAL-LP-L1-v1",
+      "QFORM-DEPENDENT-SQUARE-LP-SHARP-v1"
+    ],
+    "p3_constant": "2*sqrt(pi)/3^(1/4)",
+    "p3_constant_numeric": 2.693547374177196,
+    "localized_diffuse_new_constant_numeric": 7.691879759019982,
+    "localized_diffuse_old_constant_numeric": 11.422676033488569,
+    "continuity": "NOT_PROVED_FOR_NEW_DEPENDENT_SQUARE_BRANCH"
+  },
+  "partner_result_applied": {
+    "worker": "account04/B01",
+    "claim": "QFORM-SIGNED-FEJER-EXACT-INTERFACE-v1",
+    "canonical_commit": "a3693ed6d50e8e4143b2f33bf997c5de2cb52d79",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md",
+    "application": "Converted the new essential-density bound into an exact uniform signed Fejer cap, avoiding absolute Fourier L1."
+  },
+  "dependencies": [
+    {
+      "claim": "QFORM-DIFFUSE-AVERAGED-LP-v1",
+      "commit": "d54e3a5d40a1d9837d39a1e525781fcf44ec0d9d",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260922T123142Z-qform-r11/REPORT.md"
+    },
+    {
+      "claim": "rank-three spectral-Schur localized/diffuse decomposition",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/account03-B19-20260922T123215Z-186f53a8/REPORT.md"
+    }
+  ],
+  "output_source": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "a80bb254a3a1e2883cbfabdf03b53919d6621990",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/20260922T142626Z-account03-B01-qform-r12/REPORT.md",
+    "report_blob": "0ce045ad3a7c675587f116a603b093f5ade7304d",
+    "checker_output_blob": "497b5d3b8cd714279432591aeca4954f6fd8392d"
+  },
+  "unresolved_implication": "Global product-preserving aggregation in mixed-leverage/near-isotropic cases; no source-valid theorem yet forces a uniformly good local certificate from three large eigenvalues.",
+  "next_step": "Attempt multi-pivot averaging inside the signed Fejer functional before local reciprocal-minor payment."
+}

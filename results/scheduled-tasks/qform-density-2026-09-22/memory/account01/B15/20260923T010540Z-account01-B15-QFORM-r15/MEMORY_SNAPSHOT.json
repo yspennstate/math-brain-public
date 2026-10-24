@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260923T010540Z-account01-B15-QFORM-r15",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_at_start": "56b3319e1fb7d9344ae1c5e306f04220b583c410",
+  "source_control_commit_before_publication": "35fb1c48fca03525ba026ec7f5a94d1c2903c660",
+  "execution_context": "scheduled_automation",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "status": "ESSENTIAL_STEP_APPLIED_EXACT_TWOSHEET_HYPERBOLIC_TRACE_NORMAL_FORM_FULL_TARGET_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1"
+  ],
+  "dependencies": [
+    {
+      "result": "account02/B15 exact majority-sign one-sheet ruled bound",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "113aff6eea39e748c1bb6685c7656add2487c03e",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260923T000548Z-account02-B15-QFORM/REPORT.md",
+      "use": "actual inequality ||p_+||_infinity <= pi*sqrt(2)/s and the majority tent payment"
+    },
+    {
+      "result": "account02/B15 fixed-matrix bounded C0 regularity for rank>=3",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "9b8bb7e84811978a2c46c7bb5ec50f2570dbc056",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T200544Z-account02-B15-qform-r11/REPORT.md",
+      "use": "pointwise critical-value bound and attained-maximizer localization only"
+    }
+  ],
+  "new_result": {
+    "name": "exact two-sheet hyperbolic-trace normal form for rank-three indefinite targets",
+    "statement": "For A=R diag(lambda1,lambda2,-mu) R^T and the product-provenance spectral density rho of Z=diag(sqrt(lambda1),sqrt(lambda2),sqrt(mu))R^T X, the minority density is H_rho(alpha)=(1/2)sum_{sigma=+/-1} int_0^{2pi} int_{sqrt(alpha)}^infinity rho(sqrt(w^2-alpha)cos(theta),sqrt(w^2-alpha)sin(theta),sigma w) dw dtheta. The formula follows from a full-dimensional change of variables with Jacobian 1/2 and is valid for rough inputs. If s=min(lambda1,lambda2,mu) and M_-=s esssup H_rho, then M_- <= s||p_Q||_infinity <= max{pi sqrt(2),M_-} by the completed account02/B15 one-sheet theorem. Hence finiteness of the exact-rank-three indefinite universal constant is equivalent to a universal product-provenance bound on this hyperbolic-ray trace.",
+    "regularity_application": "Using account02/B15 fixed-target C0 regularity, p_Q(t)<=pi sqrt(2)/s pointwise on the whole majority half-line including the critical value; any attained maximum above that threshold lies strictly on the minority/two-sheet side."
+  },
+  "canonical_scientific_commit": "2dd13eb25c309436f299b93bfc5d99985c00672c",
+  "canonical_scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T010540Z-account01-B15-QFORM-r15/REPORT.md",
+  "claims_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T010540Z-account01-B15-QFORM-r15/CLAIMS.json",
+  "handoff_commit": "778743c9879cf35f2766c1251d1e1f3db7b4154a",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B15/20260923T010540Z-account01-B15-QFORM-r15.md",
+  "unresolved_implication": "Prove a universal bound s esssup_{alpha>0} H_rho(alpha)<=M for product-provenance spectral densities; generic X-ray caps are insufficient by the live two-sheet correction.",
+  "next_step": "Attack the curved hyperbolic-ray trace while retaining convolution/product provenance of rho, or splice it into grouped-coordinate/N3 aggregation before any generic projection or reciprocal-minor relaxation.",
+  "full_problem_status": "OPEN_NOT_PROVED"
+}

@@ -1,0 +1,47 @@
+{
+  "task": "T08 / Salez Problem 2.3",
+  "runtime_model": "GPT-5.6 Sol",
+  "reasoning_level": "UNVERIFIED",
+  "date": "2026-09-20",
+  "status": "CANDIDATE_FULL_RESTRICTED / PARENT_OPEN",
+  "publication_novelty": "UNVERIFIED",
+  "source_level": {
+    "before": "OPEN: prove cutoff for every bounded-degree vertex-transitive spectral-expander sequence in Salez's rate-one continuous-time convention.",
+    "after": "OPEN: parent conjecture unchanged. New proved restricted class: fixed categorical/tensor powers of nonbipartite Ramanujan Cayley graphs, in particular 36-regular tensor squares of degree-six LPS-type Ramanujan Cayley graphs, with source-continuous-time cutoff at an explicit center and O(sqrt(log N)) window."
+  },
+  "new_restricted_theorem": {
+    "operation": "For a connected nonbipartite d-regular Cayley graph G=Cay(Gamma,S), take the categorical/tensor k-th power Y=G^{x k}=Cay(Gamma^k,S^k). Its discrete kernel is P^{tensor k}, so Salez continuous time uses one common Poisson clock shared by all coordinates.",
+    "general_ramanujan_center": "T_N = d/[k(d-2)] * log_{d-1} N, for fixed k and N=|V(G)|^k",
+    "window": "O(sqrt(log N))",
+    "gap_lower": "1-2sqrt(d-1)/d for nonbipartite d-regular Ramanujan bases",
+    "degree_six_square": "degree 36, gap >= (3-sqrt(5))/3, center (3/4)log_5 N, window O(sqrt(log N))."
+  },
+  "exact_transfer": {
+    "statement": "For Y=G^{x k}, for every integer m0 >= 0, d_G^ct(t) <= d_Y^ct(t) <= P(Poi(t)<m0) + k d_G^disc(m0).",
+    "proof_mechanism": "The lower bound is projection to one coordinate. Conditional on the shared jump count N_t=m, the k coordinates are independent m-step discrete walks, giving a product-TV union bound; discrete TV contracts in m."
+  },
+  "mechanism_progress": {
+    "name": "synchronous common-clock tensor transfer",
+    "obstruction_removed": "Exact independent continuous-time factorization is not necessary for a fixed number of sharp transitive factors. In the tensor power all coordinate jump counts are perfectly synchronized by the same Poisson clock, yet the cutoff transfers with only the unavoidable sqrt(T) Poisson smoothing.",
+    "contrast_with_partner": "P26's newest Cartesian multifront theorem uses independent coordinate continuous-time clocks and Green/shell order statistics. This run uses a nonfactorizing common-clock semigroup and no Green-function cleanup.",
+    "remaining_obstruction": "An arbitrary vertex-transitive expander need not decompose into finitely many synchronous factors. Moreover ordinary one-sided expansion alone does not control near-minus-one spectrum, which tensoring can turn into slow positive modes. A next transitivity-specific route is coupled stabilizer-orbital/Hecke kernels without product structure, with explicit control of parity/negative-spectrum modes."
+  },
+  "non_lre": {
+    "reason": "A radius-r ball in the tensor power lies inside the product of k radius-r base balls, so it grows at most C(d-1)^{kr}, while the degree-d^k LRE benchmark is (d^k-1)^r. Since (d-1)^k < d^k-1, every fixed positive LRE constant fails.",
+    "degree_six_square_exponent": "beta=0.5*(1-log(25)/log(35))=0.047319169713057"
+  },
+  "source_dependencies": {
+    "salez": "arXiv:2508.21055 Problem 2.3 and rate-one exponential holding-time convention",
+    "altschuler": "arXiv:2609.14945, submitted 14 September 2026: long-range-expander cutoff, strictly stronger hypothesis than spectral expansion",
+    "pedrotti_salez": "arXiv:2607.05345: local-product/non-equilibrium-Poincare sufficient mechanism",
+    "ramanujan_cutoff": "Lubetzky-Peres arXiv:1507.04725: discrete-time cutoff on nonbipartite d-regular Ramanujan graphs at d/(d-2) log_{d-1} n with sqrt(log n) window"
+  },
+  "partner_handoff": "Newest relevant P26 report read: 2026-09-20_17-59-36__cartesian-multifront-green-transfer.md. P26 owns Cartesian independent-clock multifront Green transfer; NM13-01 here handles categorical/tensor common-clock synchronization.",
+  "posted_exclusion": "Salez Problem 2.4 / Abelian Cayley product-condition material remains excluded and is not reopened.",
+  "sanity_check": {
+    "code": "2026-09-20T16-04-21Z__check_synchronous_tensor.py",
+    "output": "2026-09-20T16-04-21Z__check_synchronous_tensor.out",
+    "result": "ALL_EXACT_AND_SANITY_CHECKS_PASS",
+    "scope": "Exact tensor spectrum/common-Poisson representation/marginal identity/TV sandwich on K4 plus exact degree-six constants; finite calculations are sanity checks only, not asymptotic proof evidence."
+  }
+}

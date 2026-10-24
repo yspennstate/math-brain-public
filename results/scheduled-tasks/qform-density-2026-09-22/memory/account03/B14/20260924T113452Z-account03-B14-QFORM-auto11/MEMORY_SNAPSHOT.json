@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260924T113452Z-account03-B14-QFORM-auto11",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "final_control_main_seen": "5c4bbfa80cb57129f0726a281d467f401cde2221",
+  "execution_state": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-FINITE-FRAGMENT-DENSE-EXTREME-LOCALIZATION-v1",
+      "source": "yspennstate/math-open-problems@801205dcdefd30acfe1609146aeead485c4a7c71:proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260924T101356Z-account01-B14-QFORM-auto11/REPORT.md",
+      "scope": "For every fixed symmetric A, the optimal interval-density height over arbitrary independent cap-one marginals equals the optimum over indicator densities of bounded finite unions of intervals of total length one; no uniform complexity bound."
+    },
+    {
+      "id": "QFORM-ANCHOR-RECYCLING-v1",
+      "source": "yspennstate/math-open-problems@a660ad837e01bdaa7459104cfbaa37b9172b3b8e:proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260924T101606Z-account04-B14-anchor-recycling-r12/REPORT.md",
+      "scope": "Literal B_*=I-(2/3)11^T anchor block with arbitrary outside couplings/curvature and translations has essential density cap 6 sqrt(pi); outside localization is mass-linear."
+    }
+  ],
+  "result": {
+    "id": "QFORM-CENTERED-EXTREME-RANGE-AFFINE-QUOTIENT-v1",
+    "status": "SUPPORTING_LOCALIZATION_IDENTITY",
+    "statement": "For every fixed symmetric A and p in (0,1), the optimal homogeneous QFORM concentration height over all independent cap-one marginals equals the supremum over p-centered indicator laws of bounded finite unions of total length one and affine coefficients b in Range(A) of D(L(Y^T A Y+b^T Y)). The identity is exact including +infinity. Taking the supremum over all target A preserves the full universal constant.",
+    "proof_key": "Translate each finite-union extreme marginal by its lower p-quantile m_i; X^TAX=Y^TAY+2(Am)^TY+m^TAm. Conversely every b in Range(A) equals 2Am. Output scalar shifts do not change concentration height.",
+    "continuity": "NOT_PROVED_FOR_FULL_TARGET"
+  },
+  "partner_application": {
+    "partner": "account04/B14",
+    "source": "yspennstate/math-open-problems@a660ad837e01bdaa7459104cfbaa37b9172b3b8e",
+    "inequality": "For mathcal A=[[B_*,C],[C^T,D]], centered finite-union product inputs and every b in Range(mathcal A) satisfy ||p_{Y^T mathcal A Y+b^T Y}||_infty,ess <= 6 sqrt(pi)."
+  },
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "51cca4c406c807894d72381774ae0cc9d1f8b032",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260924T113452Z-account03-B14-QFORM-auto11/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260924T113452Z-account03-B14-QFORM-auto11/CHECKS.md",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B14/20260924T113452Z-account03-B14-QFORM-auto11.md"
+  },
+  "unresolved_implication": "Prove a whole-law density receiver on the centered finite-union extreme core, uniform in fragment count, support diameter and fragment locations, from only s_3(A)>=1, without paying a tiny physical principal minor.",
+  "suggested_next_step": "Use the centered finite-union core as the legal input endpoint for grouped-bank / product-preserving spectral extraction; do not spend further runs on truncation or centering unless a new correction invalidates the source theorem.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null,
+  "native_receiver_ingestion_verified": false
+}

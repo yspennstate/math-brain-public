@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T221112Z-account03-B07-qform-r18",
+  "account": "account03",
+  "slot": "B07",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_used_for_final_publication": "d9772b50ce4d4786c9818c1a036ec38340efe9dd",
+  "control_revision": "2026-09-22.15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "incoming_state": {
+    "source": "yspennstate/math-open-problems@a20d669ff2c433cc70cb70234f49431da4518fa5:proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260922T203738Z-account03-B07-qform-r17/REPORT.md",
+    "fact": "In the surviving S0 two-sided ridge-near-coloop branch, either b^2||C||_F^2>E_2(B)/8 or ||r||_2^2||c||_2^2>E_2(B)/8; the account02/B19 source gives E_2(B)>=1/48, hence a reserve >1/384."
+  },
+  "partner_result": {
+    "designated_partner": "account04/B07",
+    "designated_partner_status": "NO_COMPLETED_CURRENT_QFORM_HANDOFF_FOUND_AT_FRESH_SOURCE_CHECK",
+    "actual_compatible_result_applied": "account04/B18 sharp Rogozin/Ball original-coordinate product-projection cap",
+    "source": "yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061:proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T182500Z-account04-B18-QFORM-r2/REPORT.md",
+    "scope_used": "A normalized linear combination over an original-coordinate independent bank with cap-one inputs has density cap at most sqrt(2)."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-PRODUCT-L2-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For independent X,Y with density caps M,N and kappa!=0, ||p_(kappa X Y)||_2 <= 2 sqrt(MN/|kappa|)."
+    },
+    {
+      "id": "QFORM-TWO-DISJOINT-PRODUCT-DENSITY-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For two independent product terms k1 X1Y1+k2 X2Y2 with four mutually independent factors having density caps M1,N1,M2,N2, the density is continuous and has sup norm <=4 sqrt(M1N1M2N2/|k1k2|)."
+    },
+    {
+      "id": "QFORM-S0-CLEAN-TWOSTAR-PAYMENT-v1",
+      "status": "ESSENTIAL_STEP_APPLIED",
+      "statement": "At the clean four-bank endpoint of the B07 two-star reserve ||r||^2||c||^2>1/384, Ball--Rogozin plus the two-product theorem gives ||p_R||_infinity<12.520676640586299 and H_(1/2)(R)<14.153827265067946."
+    }
+  ],
+  "scope_limit": "The clean endpoint excludes arbitrary same-bank quadratic curvature, residual Y-Z cross core, and own-side anchor couplings; those terms are not conditioned away or discarded.",
+  "unresolved_implication": "QFORM-S0-TWOSTAR-CURVATURE-ABSORPTION-v1",
+  "next_step": "Preserve the product L2 estimate through an exact physical Schur or grouped-coordinate decomposition; either absorb arbitrary same-bank/core curvature or force an already-paid physical-pair, ridge, second-pivot, zero-pivot, grouped-square, or affine-hyperbolic branch.",
+  "outputs": {
+    "canonical_math_commit": "816c00139a183545a0f85c5b4a939eb52cabcfac",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260922T221112Z-account03-B07-qform-r18/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260922T221112Z-account03-B07-qform-r18/CHECKS.txt",
+    "handoff_commit": "aaaee129bbd1bf81693dbaf27833e75d051a2d38",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B07/20260922T221112Z-account03-B07-qform-r18.md"
+  }
+}

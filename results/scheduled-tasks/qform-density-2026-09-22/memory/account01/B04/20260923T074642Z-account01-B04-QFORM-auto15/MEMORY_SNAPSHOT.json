@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260923T074642Z-account01-B04-QFORM-auto15",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "fresh_control_head_before_handoff": "33badce64dccb868adbb5d0f7851696415f8c038",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "status": "SUPPORTING_THEOREM_PROVED_PARTNER_APPLIED_TARGET_VALID_FAMILY_FULL_TARGET_OPEN",
+  "mathematical_premises": [
+    "Original-coordinate independent input densities satisfy 0<=f_i<=1.",
+    "Canonical physical 2x2 minor law pi(S,T)=det(M[S,T])^2/Z2 with Z2=e2(M^T M)>0.",
+    "Partner theorem QFORM-ENTROPY-WEIGHTED-RANK2-HALFRIESZ-v1 applies to arbitrary same-bank curvature when row minor marginals are <=q/2, 1<=q<2.",
+    "No random-coordinate rotation is used; deterministic coefficient rotations are part of the matrix only."
+  ],
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B04",
+    "theorem": "QFORM-ENTROPY-WEIGHTED-RANK2-HALFRIESZ-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "04297a630381fcfcf429b4c5ec560886bebacb39",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T052139Z-account02-B04-qform-auto11/REPORT.md"
+  },
+  "latest_partner_result_read": {
+    "theorem": "QFORM-COEFFICIENT-PROJECTED-ROWSTAR-CLEANBANK-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c7fbb4f97fef82c9e6920e17bc01fa3efc0da85e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T071501Z-account02-B04-QFORM-r11/REPORT.md",
+    "actual_application": "strict-coloop endpoint p=1 in the quadratically-clean-bank scope, using P=I after rank(M_-h)<=1 and rank(M)=2"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-SINGLE-HUB-BERNOULLI-TILT-v1",
+      "statement": "Changing only the canonical hub-inclusion Bernoulli frequency from p to theta gives exact entropy currency G2=Z2 exp[-D_Ber(theta||p)] and row marginals alpha_h=theta, alpha_k=theta u_k+(1-theta)v_k; applying the partner theorem yields explicit half-Riesz and outer-square density bounds whenever q_theta<2."
+    },
+    {
+      "id": "QFORM-BALANCED-HUB-NEARCOLOOP-LOG-v1",
+      "statement": "If u_k+v_k<=1 and p=1-epsilon with epsilon<=e^-2, choosing theta=1-1/log(1/epsilon) gives D_Ber<=1 and ||p_Q||inf <=5.284197541698714 |a|^-1/2 log(1/epsilon) Z2^-1/8."
+    },
+    {
+      "id": "QFORM-SINGLE-HUB-ENDPOINT-CLASSIFICATION-v1",
+      "statement": "For the half-tilt theta=1/2, q_h=2 iff some second physical row is a strict coloop (u_k=v_k=1). A single heavy row alone is not a support-level Fourier endpoint."
+    }
+  ],
+  "target_valid_example": {
+    "family": "Q_L=Z^2+2 X^T M_L Y with explicit dense 5x2 M_L",
+    "spectrum_nonzero": "{1,+sqrt(L^2+2),-sqrt(L^2+2),+sqrt(2),-sqrt(2)}",
+    "Z2": "2(L^2+2)",
+    "p": "L^2/(L^2+2)",
+    "u_leaf": "1/4",
+    "v_leaf": "1/2",
+    "L3_new_bound": 6.546515487110656,
+    "L3_canonical_bound": 15.409272446385636
+  },
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-K1-CORE-RESOURCE-FORCING-ALONE-FALSE-v1",
+    "QFORM-TWO-MATRIX-RESONANCE-SEPARATION-IMPOSSIBLE-v1"
+  ],
+  "canonical_outputs": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "0b008a87e1d222be1c91d934e1e42e95200df5da",
+    "checks_commit": "1c92e9e88b332b4807a9cbe0254da6122f4bfd14",
+    "addendum_commit": "1dcd6f396ef2c4faab50232478d2ae315f47779d",
+    "bundle_tail_commit": "f38d3881909ac0d1fdb4e45e6a03703fe552262b",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T074642Z-account01-B04-QFORM-auto15/REPORT.md",
+    "addendum_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T074642Z-account01-B04-QFORM-auto15/ADDENDUM.md"
+  },
+  "handoff_commit": "85a737d26e3dee0472c2b9cace9829dd95969909",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B04/20260923T074642Z-account01-B04-QFORM-auto15.md",
+  "first_unproved_step": "QFORM-HUB-BERNOULLI-TILT-OR-TWOCENTER-ROUTING-v1",
+  "next_step": "Use near-endpoint u_k approximately 1 and v_k approximately 1 to force a two-center grouped/hub packet that retains arbitrary same-bank curvature, or obtain a target-scale entropy tilt. Keep zero/near-zero outer-square as separate debt.",
+  "full_target_proved": false,
+  "full_target_disproved": false,
+  "continuity_full_target_proved": false,
+  "continuity_supporting_square_branch_proved": false
+}

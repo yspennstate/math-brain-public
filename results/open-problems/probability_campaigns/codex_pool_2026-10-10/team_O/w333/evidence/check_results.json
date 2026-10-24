@@ -1,0 +1,225 @@
+{
+  "P0189": {
+    "exact_finite_field_cases": 79,
+    "all_passed": true,
+    "note": "Primitive-root characteristic polynomial and nilpotency; no numerical eigenvalues or Brown-measure verification."
+  },
+  "P0390": {
+    "fixed_mass_enumeration_cases": 160,
+    "weighted_covariance_example_cases": 192,
+    "all_passed": true,
+    "note": "Comparison fields only; these are not ARW simulations."
+  },
+  "C0100": {
+    "periodic_patch_cases": 5,
+    "fractions": [
+      {
+        "N": 8,
+        "fractions": {
+          "0": "1/4",
+          "1": "1/2",
+          "2": "1/4"
+        }
+      },
+      {
+        "N": 16,
+        "fractions": {
+          "0": "1/4",
+          "1": "1/2",
+          "2": "1/4"
+        }
+      },
+      {
+        "N": 32,
+        "fractions": {
+          "0": "1/4",
+          "1": "1/2",
+          "2": "1/4"
+        }
+      },
+      {
+        "N": 64,
+        "fractions": {
+          "0": "1/4",
+          "1": "1/2",
+          "2": "1/4"
+        }
+      },
+      {
+        "N": 128,
+        "fractions": {
+          "0": "1/4",
+          "1": "1/2",
+          "2": "1/4"
+        }
+      }
+    ],
+    "all_passed": true,
+    "note": "Synthetic arrays check the conditional counting lemma, not sandpile dynamics."
+  },
+  "P0031": {
+    "exact_distribution_evaluations": 9,
+    "values": [
+      {
+        "N": 10000,
+        "exponent": 0.25,
+        "m": 10,
+        "P_selected_clock_gt_N": 0.07965567455405796
+      },
+      {
+        "N": 10000,
+        "exponent": 0.5,
+        "m": 100,
+        "P_selected_clock_gt_N": 0.6826894921370857
+      },
+      {
+        "N": 10000,
+        "exponent": 0.75,
+        "m": 1000,
+        "P_selected_clock_gt_N": 1.0
+      },
+      {
+        "N": 100000000,
+        "exponent": 0.25,
+        "m": 100,
+        "P_selected_clock_gt_N": 0.007978712629263208
+      },
+      {
+        "N": 100000000,
+        "exponent": 0.5,
+        "m": 10000,
+        "P_selected_clock_gt_N": 0.682689492137086
+      },
+      {
+        "N": 100000000,
+        "exponent": 0.75,
+        "m": 1000000,
+        "P_selected_clock_gt_N": 1.0
+      },
+      {
+        "N": 1000000000000,
+        "exponent": 0.25,
+        "m": 1000,
+        "P_selected_clock_gt_N": 0.0007978844278221252
+      },
+      {
+        "N": 1000000000000,
+        "exponent": 0.5,
+        "m": 1000000,
+        "P_selected_clock_gt_N": 0.682689492137086
+      },
+      {
+        "N": 1000000000000,
+        "exponent": 0.75,
+        "m": 1000000000,
+        "P_selected_clock_gt_N": 1.0
+      }
+    ],
+    "all_passed": true,
+    "note": "Clock law only; no backward-Brownian classification."
+  },
+  "P0242": {
+    "symbolic_residual_checks": 50,
+    "independent_fundamental_matrix_entry_checks": 200,
+    "ratio_at_s1000": "24076090051009/16078132074513",
+    "ratio_float": 1.4974432315538901,
+    "all_passed": true
+  },
+  "C0011": {
+    "analytical_marginal_checks": 3,
+    "counterexample_marginals": [
+      {
+        "t": 1,
+        "g": 1,
+        "local_time_mean": 1,
+        "shifted_square_mean": 1.5,
+        "local_time_zero_atom": 0.36787944117144233,
+        "shifted_square_zero_atom": 0
+      },
+      {
+        "t": 2,
+        "g": 0.5,
+        "local_time_mean": 2,
+        "shifted_square_mean": 2.25,
+        "local_time_zero_atom": 0.01831563888873418,
+        "shifted_square_zero_atom": 0
+      },
+      {
+        "t": 0.5,
+        "g": 2,
+        "local_time_mean": 0.5,
+        "shifted_square_mean": 1.5,
+        "local_time_zero_atom": 0.7788007830714049,
+        "shifted_square_zero_atom": 0
+      }
+    ],
+    "all_passed": true,
+    "note": "The full planar spatial level-set limit is not checked."
+  },
+  "C0070": {
+    "poisson_duality_checks": 6,
+    "values": [
+      {
+        "epsilon": 0.0001,
+        "q": 0.9998000266635562,
+        "dual_mean": 0.9999000066662225,
+        "rate_residual": 2.710505431213761e-20,
+        "second_order_coefficient": 0.6666222462925475
+      },
+      {
+        "epsilon": 0.001,
+        "q": 0.9980026635589893,
+        "dual_mean": 0.9990006662225481,
+        "rate_residual": 0.0,
+        "second_order_coefficient": 0.6662225481290918
+      },
+      {
+        "epsilon": 0.01,
+        "q": 0.9802635895604086,
+        "dual_mean": 0.9900662254560126,
+        "rate_residual": 3.469446951953614e-18,
+        "second_order_coefficient": 0.662254560126474
+      },
+      {
+        "epsilon": 0.05,
+        "q": 0.9062981629270985,
+        "dual_mean": 0.9516130710734535,
+        "rate_residual": 1.3877787807814457e-17,
+        "second_order_coefficient": 0.6452284293814169
+      },
+      {
+        "epsilon": 0.1,
+        "q": 0.8238658563681904,
+        "dual_mean": 0.9062524420050095,
+        "rate_residual": 1.3877787807814457e-17,
+        "second_order_coefficient": 0.6252442005009516
+      },
+      {
+        "epsilon": 0.5,
+        "q": 0.4171883561341887,
+        "dual_mean": 0.625782534201283,
+        "rate_residual": 5.551115123125783e-17,
+        "second_order_coefficient": 0.5031301368051322
+      }
+    ],
+    "all_passed": true,
+    "note": "Branching process, not hypercube cluster conditioning."
+  },
+  "C0105": {
+    "phase_moment_cases": 1200,
+    "max_bound_violation": 0.0,
+    "all_passed": true,
+    "note": "No zeta approximation remainder or growing-moment independence is certified."
+  },
+  "C0153": {
+    "exact_fk_exterior_partition_cases": 12,
+    "all_passed": true,
+    "note": "Finite-energy obstruction only; no infinite-graph FK phase selection."
+  },
+  "P0025": {
+    "exact_skorokhod_log_identity_cases": 8,
+    "all_passed": true,
+    "note": "Deterministic paths; no Brownian asymptotic claim."
+  },
+  "elapsed_seconds": 0.5872797999763861
+}

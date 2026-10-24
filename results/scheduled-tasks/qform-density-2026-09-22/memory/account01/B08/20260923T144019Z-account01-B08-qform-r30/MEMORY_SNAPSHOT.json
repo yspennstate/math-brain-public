@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260923T144019Z-account01-B08-qform-r30",
+  "status": "PROVED_SUPPORTING_STRUCTURAL_ANALYTIC_ROUTER_FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "programme": "QFORM-DENSITY-3EIG-20260922",
+    "owner_control_revision": "2026-09-22.15",
+    "initial_commit": "5a4cf759e31910ac6716d6c0e957aedaf7e2ed93",
+    "prepublication_refresh_commit": "edfd77e9bd8a58250c3b74d60e798160a66a6e2f"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6a5c09bd5aa856e378e0dc0b03db1d4e5d6ba183",
+    "directory": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T144019Z-account01-B08-qform-r30/",
+    "primary_report": "REPORT.md",
+    "stronger_addendum": "ROW_DEFECT_ADDENDUM.md"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-PHYSICAL-DELETION-SPECTRAL-CONSERVATION-v1",
+      "statement": "If AU=U Lambda, U has r orthonormal genuine eigenvectors with min |lambda|>=a, and H is a physical set of size h<r, then for C=A[H^c,H^c], s_{r-h}(C)>=a sqrt(1-||U_H^T U_H||op)."
+    },
+    {
+      "id": "QFORM-DIFFUSE-ROW-DEFECT-TRADEOFF-v1",
+      "statement": "For a selected-three eigframe and physical coordinate i with row leverage p, writing b=A[-i,i] and C=A[-i,-i], s3(C)>=[L sqrt(1-p)-||b|| sqrt(p)]_+. Under p<=1/48, either ||b||>L/4 or s3(C)>=0.953444115428808 L."
+    },
+    {
+      "id": "QFORM-DIFFUSE-WINDOW-TWOLEVEL-ROUTER-v1",
+      "statement": "The full one-scale spectral window either pays the ambient form continuously by <64/L, or a high-window physical coordinate leaves a three-direction child at L/(64sqrt3) unless it is ultra-high; the child window either pays the original ambient form by <7013/L or produces a second physical high-window coordinate."
+    }
+  ],
+  "partner_applied": {
+    "worker": "account02/B08",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "41ee49f6e9c3383e4c3a322bdc52779768a17eb7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/20260923T130941Z-account02-B08-qform-diffuse-r27/REPORT.md",
+    "actual_use": "Partner k=1 high-top-two-leverage branch supplies an original cross-row g with ||g||>(3/16)sqrt(3/10)L=0.102697979532218L. At the same coordinate, the new row-defect theorem forces either a full star >L/4 or a principal child with s3>=0.953444115428808L. On the latter branch, the ambient child ridge theorem pays the original full form by <67/L with continuous C0 density when the child window is diffuse; otherwise a distinct child coordinate has scalar/star >0.00186219553795L."
+  },
+  "collective_tail_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md",
+    "actual_use": "Under the current partner k=1 collective-tail hypotheses, gives continuous density <584/L, so the star/core router treats a genuine survivor after this diffuse exit."
+  },
+  "paid_density_branches": {
+    "global_window_diffuse": "<64/L, continuous C0",
+    "partner_row_child_window_diffuse": "<67/L, continuous C0",
+    "collective_tail": "<584/L, continuous",
+    "generic_second_level_child_window_diffuse": "<7013/L, continuous C0"
+  },
+  "unresolved_implication": "QFORM-QUARTER-STAR-OR-TWOLEVEL-CORE-RECEIVER-v1",
+  "next_step": "Pay either a literal physical star >L/4 or the two-level physical core while retaining arbitrary same-bank curvature, every unused coupling, full complementary spectrum and affine terms. Do not infer a good physical pair from an l2 star alone.",
+  "full_solution": false,
+  "global_continuity": false,
+  "full_brain_connected": false
+}

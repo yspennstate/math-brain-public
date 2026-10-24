@@ -1,0 +1,26 @@
+{
+  "helper_version": "A006-anchored-root-packing-v1",
+  "actual_Boolean_family": "all labelled nonempty positive graph edge DNFs on n=3 pilot, n=4 full; four explicitly frozen n5 graphs from A010 stage6",
+  "parameter_domain": "one fixed reference lambda_e=1/(2 max degree), full partition coefficients already reconstructed by A010; global infimum over every positive packing-feasible weight and actual-run posterior",
+  "case_count": {
+    "pilot": 7,
+    "full": 67
+  },
+  "symmetry": "none",
+  "arithmetic": "integer Walsh; Fraction exact spectra, packing cuts, h and certified dual; scipy floating LP proposes multipliers only; all reported signs rechecked rationally",
+  "memory_estimate_MB": 180,
+  "max_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "cuts": {
+    "pair_t": [
+      "0",
+      "1/4",
+      "1/2",
+      "1",
+      "2",
+      "4"
+    ],
+    "anchor": "every nonempty U and each physical row, only gates outside U; full and truncated incidence budgets"
+  },
+  "independent_checks": "read-only source coefficient comparison and standalone rational certificate replay"
+}

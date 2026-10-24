@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B05",
+  "run_id": "20260924T015848Z-account01-B05-QFORM-auto11",
+  "control_commit_start": "e160dfa5be9ce65fa60f89e10116b90c457a95d8",
+  "control_commit_prepublication": "7ccbee0c5c46af2e234ffd6369dc5707f8121f50",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "arbitrary-joint rank-3 coarea density-cap theorem false"
+  ],
+  "premises": [
+    {
+      "id": "ACCOUNT01-B05-AUTO20-NULLSTAR-TRICHOTOMY",
+      "source": "yspennstate/math-open-problems@9eecd3041a39fa4953c0a4cf5fd0dd4bf73d9f14:proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260924T003326Z-account01-B05-QFORM-auto20/REPORT.md",
+      "scope": "exact-rank-three zero-pivot survivor is rank(C)=3, l in Ran(C), l^T C^+l=0"
+    },
+    {
+      "id": "ACCOUNT02-B05-RATIO-SCALAR-COFACTOR-COMPILER-v1",
+      "source": "yspennstate/math-open-problems@592ae3869873b6cf71cc375758b11655b1630aac:proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T232530Z-account02-B05-QFORM-r11a/REPORT.md",
+      "scope": "exact rank-three determinant-star identity S_i=c_i Delta_3"
+    },
+    {
+      "id": "ACCOUNT02-B05-NULL-HUB-TRANSVERSE-SQUARE-v1",
+      "source": "yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349:proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T200516Z-account02-B05-QFORM-auto11c/REPORT.md",
+      "scope": "independent scalar hub + dependent pair joint-density cap + nonzero transverse square, constant 7.761982175235"
+    },
+    {
+      "id": "FRESNEL-BRASCAMP-LIEB-THEOREM-F",
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "scope": "exact rank-three normalized frame with every physical leverage <=1/2; arbitrary affine terms; density <=12 times determinant currency^(-1/3)"
+    }
+  ],
+  "proved_this_run": [
+    "QFORM-ISOTROPIC-SHEAR-WITT-CURRENCY-COMPILER-v1",
+    "QFORM-ISOTROPIC-SHEAR-CURVATURE-SPLIT-v1: S_i=c Delta_3=a^2|delta|, Delta_C=(1-c)Delta_3, S_i+Delta_C=Delta_3",
+    "target normalized partner currency a^2|delta|>=1/2 for c>=1/2",
+    "QFORM-ISOTROPIC-SHEAR-MODERATE-DIFFUSE-RESIDUAL-v1: ||p_Q||_essinf<=12[(1-c)Delta_3]^(-1/3), hence <=24 for 1/2<c<=7/8 at target normalization",
+    "pair-anchored star identity T_ij=S_i(y_j^2+z_j^2)",
+    "residual-heavy dichotomy: either T_ij>=S_i/4 or row is one of at most three longitudinal spikes"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "eb3f79c374f107f3891fbf0503402ec71ba82fd0",
+    "root": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260924T015848Z-account01-B05-QFORM-auto11/",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260924T015848Z-account01-B05-QFORM-auto11/REPORT.md",
+    "structural_addendum_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260924T015848Z-account01-B05-QFORM-auto11/STRUCTURAL_ADDENDUM.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260924T015848Z-account01-B05-QFORM-auto11/CHECKS.json"
+  },
+  "partner_result_actually_applied": "account02/B05 cofactor compiler gives the actual target inequality a^2|delta|=S_i=c Delta_3>=1/2; null-hub theorem gives the exact kappa=0 endpoint bound 12.3213786703265(a^2|delta|)^(-1/3)",
+  "unresolved_implication": "QFORM-WITT-SHARED-MULTIPLIER-ENDPOINT-v1",
+  "next_step": "Prove a shell/coarea estimate for Q=2aV(H+kappa U)+alpha V^2+2gamma VW+delta W^2 uniform for 0<=kappa<1/sqrt(7), depending on curvature only through (a^2|delta|)^(-1/3), retaining that H is a literal independent original coordinate and (U,V,W) is one orthogonal projection of the residual product law. In the complementary residual-heavy branch, aggregate the fixed-pair star T_ij before minor selection; only at most three longitudinal-spike rows avoid that star gate.",
+  "full_qform_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_continuity_status": "OPEN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "thinking_usage": null
+}

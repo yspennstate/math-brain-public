@@ -1,0 +1,69 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "claim_id": "RS-2026-CL-A",
+  "timestamp_utc": "2026-09-20T03:49:00Z",
+  "captured_master_before_report": "f780ac3f299a69dc7581e0cede7584f22dfd6131",
+  "source": {
+    "author": "Anastasia Kireeva",
+    "venue": "Randomstrasse 101",
+    "title": "Low-degree hardness of finding the largest clique in Erdos-Renyi graph (problems 36-38)",
+    "posted": "2026-06-05",
+    "displayed_problem_number": "Open Problem 35",
+    "target": "conditions on (P_n,Q_n) under which bounded low-degree advantage through D=(log n)^{1+Omega(1)} rigorously limits a specified higher-degree polynomial distinguishing class"
+  },
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-20/2026-09-20T02-46-00Z__report.md",
+    "creation_commit": "db355ef18407ded907aac9c1f320408a4cb5cb3e",
+    "blob": "db96c207f2d1f16fc80aeb195dce4734e0ec1cca"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-20/2026-09-20T03-49-00Z__report.md",
+    "creation_commit": "16db543df6a61cbc146ee5a7307be2c6188cdf90",
+    "blob": "7f83f7211ce4228691dd3c2a37635b5459d897a9"
+  },
+  "shared_handoff": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-20T03-49-00Z__P08_P09_sandwiching_handoff.md",
+    "creation_commit": "91a638ded8d487fd1faef336581384e596da4505",
+    "blob": "fbf8ee36a8748b7a836783822a4d3183225f8b94",
+    "roles": ["P08", "P09"],
+    "ownership_preserved": true
+  },
+  "metric": {
+    "name": "E_framework",
+    "before": 1,
+    "after": 1,
+    "movement": "NO_FROZEN_METRIC_MOVEMENT"
+  },
+  "status": "PROVED PARTIAL / VARIANCE-SENSITIVE-SANDWICHING-TRANSFER",
+  "methods": ["B11 DUALIZE", "B23 DO WHAT THE PROPOSER DID NOT EXPECT", "B21 ASK WHO ELSE HAS THIS SHAPE"],
+  "historical_initial_triple": ["B2", "B27", "B21"],
+  "inherited_claim": "The preceding route used noise-weighted covariance pressure plus a smoothed high-degree likelihood-tail condition, with leverage trimming allowing exceptional planted mass below low-degree resolution.",
+  "new_claim": {
+    "definition": "Sand_D(u;Q)=inf ||a||_{L2(Q)} over degree-<=D g,a with a>=0 and |u-g|<=a pointwise.",
+    "theorem": "If Q is stationary for Markov T and A=Adv_Q^{<=D}(P,Q)<infinity, then |E_{PT}f-E_Qf| <= A sqrt(Var_Q f) + (2+2A) Sand_D(Tf;Q).",
+    "scope": "This removes all planted high-degree likelihood-tail assumptions for a specified noised test class whose variance-sensitive low-degree sandwiching defect is controlled. It is a sufficient test-side framework, not an unrestricted solution of the source problem.",
+    "strong_test_corollary": "For [0,1] tests f_n with E_Q f_n->0, bounded source LDA and Sand_{D_n}(T_nf_n;Q_n)->0 imply E_{P_nT_n}f_n->0, hence no strong distinction.",
+    "exact_matching_endpoint": "When A=0, classical degree-D polynomial sandwiches recover |E_{PT}f-E_Qf| <= E_Q[p_+-p_-]."
+  },
+  "mao_boundary": {
+    "reference": "Songtao Mao, arXiv:2607.20318",
+    "consequence": "For Mao's successful noised rank-test indicator, exact source LDA zero through D_n forces Sand_{D_n}(T_nf_n;Q_n) >= 1/2-o(1). Thus Mao violates the new condition on the test side for a substantive quantitative reason, complementary to the earlier persistent high-degree likelihood-energy obstruction."
+  },
+  "prior_art_state": "Sandwiching polynomials and bounded-independence-plus-noise are established prior art; Hsieh et al. 2601.05850 explicitly connect their program to that lineage. Novelty of the exact variance-sensitive bounded-LDA transfer statement and its source-directed synthesis remains UNVERIFIED.",
+  "audits": {
+    "qualifying_independent_full_claim": "0/2",
+    "state": "AUDIT_PENDING"
+  },
+  "recovery_state": {
+    "hard_recovery_cycles_consumed": 1,
+    "same_obligation_stagnation": 0,
+    "reason": "The run removes a material planted-tail assumption by a distinct test-side implication and derives a new quantitative Mao obstruction."
+  },
+  "next_attack": [
+    "Prove quantitative sandwiching-defect bounds for a meaningful structured test class of degree L_n>D_n, giving an explicit degree-amplification theorem rather than an abstract condition.",
+    "Develop a bulk-plus-nonnegative-tail-guard criterion that converts a typical-set approximant into a global L2 sandwich; target Boolean symmetric/Krawtchouk and Gaussian Hermite settings.",
+    "Extend the theorem from exactly Q-stationary noise to controlled adjoint defect and reconnect the weak-Gibbs/current theory without raw-Gram inversion.",
+    "Analyze Mao's rank acceptance set directly for an approximate-degree or dual-polynomial lower bound explaining its macroscopic sandwiching defect."
+  ],
+  "delivery": "GitHub only; no shared RESULTS/QUEUE/POSTED edits, no email/Drive/public posting, no permission changes, no force-push, no scheduler mutation."
+}

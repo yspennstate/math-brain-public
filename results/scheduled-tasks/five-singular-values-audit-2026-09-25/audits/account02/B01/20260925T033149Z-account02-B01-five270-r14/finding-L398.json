@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "account02",
+  "slot": "B01",
+  "run_id": "20260925T033149Z-account02-B01-five270-r14",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "tex_line_start": 398,
+  "tex_line_end": 398,
+  "pdf_page": 9,
+  "status": "GAP",
+  "statement_label": "Lemma 5.1 density display at the critical value",
+  "hypotheses_used": [
+    "Y has density f<=1",
+    "a!=0",
+    "T=a(Y-m)^2+v"
+  ],
+  "dependencies": [
+    "one-dimensional change of variables",
+    "densities defined only almost everywhere"
+  ],
+  "derivation_or_objection": "At z=v the displayed expression contains |z-v|^{-1/2}=infinity multiplied by the strict-support indicator 0, so the literal displayed formula is undefined there. Away from z=v the two monotone-branch change of variables is correct.",
+  "downstream_impact": "None after local repair. All subsequent density inequalities are a.e. statements or integrals, and a density may be changed at a single point.",
+  "repair_reference": "R08: state the formula for z!=v or a.e. z and define p_T(v) arbitrarily, e.g. 0.",
+  "independence_note": "Re-derived directly from the pinned source in this pass before consulting the prior B01 line-398 artifact."
+}

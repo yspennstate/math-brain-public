@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B06",
+  "run_id": "b06-20260923T025657Z-adca02bb41f7",
+  "status": ["ESSENTIAL_STEP_APPLIED", "CANDIDATE_REFUTED"],
+  "full_target_status": "OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "commit_used_for_publication": "f44aba147602ade362205984416b49b725ad77fb",
+    "later_refresh_observed": "1a4ba3ca662e4ba2839735ea5b7d7ebb1fb1f95f",
+    "revision": "2026-09-22.15",
+    "later_stop_observed": false
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "required_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "actual_application": "The physical-pair theorem closes the independent-input fixed matrix A=3B0; the new dependent-pair construction shows that this source-valid conclusion cannot be transferred through a joint pair-density cap alone."
+  },
+  "partner_result": {
+    "partner": "account03/B06",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "606257652f3c70e90c7b7f80ea7cb76c1abf689b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T011959Z-account03-B06-qform-r24/REPORT.md",
+    "actual_application": "On the crossed-star/tiny-tail family sigma=(1,1,eps), the partner no-leverage sigma3 endpoint gives <25/sqrt(|a|eps), while Delta2=1+2eps^2 remains constant but the ordinary range-leverage gate fails at the anchors."
+  },
+  "premises": [
+    "X is independent of the pair (Y,Z)",
+    "p_X<=1",
+    "p_Y<=L",
+    "p_(Z|Y=y)<=K for almost every y",
+    "physical chain quadratic aX^2+2bXY+cY^2+2dYZ+affine with ad!=0"
+  ],
+  "new_result": {
+    "id": "QFORM-PHYSICAL-CHAIN-WEIGHTED-FIBER-v1",
+    "statement": "||p_Q||inf <= 4 sqrt(LK)/sqrt(|ad|); in the original independent cap-one case, <=4/sqrt(|ad|).",
+    "mechanism": "condition on the middle original coordinate; convolve the one-sided square kernel against the affine transverse density; average the remaining reciprocal-square-root singularity against the actual capped middle marginal, never taking a fiber supremum"
+  },
+  "counterexample": {
+    "id": "QFORM-NEARNULL-JOINT-PAIR-CAP-FALSE-v1",
+    "scope": "proof interface only, not QFORM",
+    "matrix": "A=3[[1,1,0],[1,0,1],[0,1,0]], all three eigenvalues have modulus >1",
+    "construction": "X uniform[0,1] independent of a dependent pair of unit joint density on E_N={e^-N/N<=y<=1/N, 0<=z<=1/(Ny)}; p_(Z|Y=y)<=1 but interval density lower bound sqrt(N)/36",
+    "repair": "retain a bounded middle marginal together with a bounded conditional transverse density, or stronger original-product provenance"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8ea6c8ee1c50f0d02a455ff646e2035a22eba845",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260923T025657Z-adca02bb41f7/REPORT.md",
+    "checker_source_commit": "273c55b45f2f56861bb5b9506ac28749e3e67352",
+    "checker_output_commit": "2492c23f859cfea78eb7b1c74f45ae4c5611de87",
+    "checker_status": "PASS",
+    "executed_code_sha256": "1094228bd9597a027ef7379962accb5597527ae06bd50bfa666243b8ee02fe4b",
+    "output_sha256": "9f24b6e3857a1b8a419ab3c6ac49ed92222fcadde25fd9cd2d766b5bfc6953c9"
+  },
+  "handoff": {
+    "commit": "fa18c11aaef5ed3354fb83f3d794020515a44732",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B06/b06-20260923T025657Z-adca02bb41f7.md"
+  },
+  "correction_event": {
+    "commit": "708b40a449b6f0e2b8d5bc9f6a51f596e4ee06b2",
+    "id": "QFORM-NEARNULL-JOINT-PAIR-CAP-FALSE-v1"
+  },
+  "first_unpaid_implication": {
+    "id": "QFORM-N3-PRODUCT-CHAIN-OR-VOLUME-v1",
+    "statement": "Every remaining no-pivot/high-leverage survivor not paid by existing volume/ridge/physical-pair exits yields a product-preserving chain with universally bounded LK and |ad| bounded below, or another already-paid exit."
+  },
+  "continuity_status": "NOT_CLAIMED",
+  "independent_review_status": "NOT_FULLY_REVIEWED"
+}

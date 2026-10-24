@@ -1,0 +1,100 @@
+[
+  {
+    "claim_id": "A079-CUBIC-ROW-CONDITIONAL-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every Boolean F on two independent uniform physical address bits X and arbitrarily many uniform data bits Y, if each nonzero conditional squared Fourier row is a coordinate-product law with at most one nonfair varying coordinate, arbitrary nonfair marginal, arbitrary Fourier signs and arbitrary fixed frequency coordinates, then H(S_Y|S_X)<=[3/2+(5/2)h2(1/10)]I_Y(F), sharply, and H(F)<=[6+2log2(65/64)]I(F). If all nonfair primitive magnitude ratios belong to {2,3,4}, the sharper bound H(F)<=[10-3log2(3)]I(F) holds. Universally for every two-address Boolean F, H(w)<=sum_J w_J H_{1/2}(p_J)+2I_X(F); hence full H(F)<=sum_J w_J[H(p_J)+H_{1/2}(p_J)]+2I_X(F). For integer height-two rows of the fixed-ratio family, ratio2 requires at least one other fair coordinate, ratio4 requires at least three, and weights are <=5/8 for ratio2 or3 and <=17/32 for ratio4. Quadratic branch signs admit exactly the equal/overlapping/disjoint affine inverse-support amplitude classification in DERIVATION.md; the low-dimensional exclusion holds for arbitrary signs.",
+    "hypotheses": [
+      "Normalized Walsh; entropy in bits; all influence in the original physical coordinates",
+      "Exactly two address bits and actual Boolean signs; nonzero row h_J=2 E_X F chi_J",
+      "Conditional spectra are coordinate products with at most one nonfair varying coordinate; arbitrary marginal and Fourier signs; the sharper joint bound assumes ratios2,3,4",
+      "Inverse-support classification alone assumes quadratic Fourier-sign branches; universal row ledger assumes neither product spectra nor phase degree"
+    ],
+    "statement_sha256": "54e35f267d50603bd438aa62575dd1ae671be77dee1eba5a102706e89ad30b85",
+    "contributors": [
+      "A079"
+    ],
+    "proof_source": {
+      "original": {
+        "path": "~\\brain_workers\\FEI100_20261011\\agents\\A079\\runs\\20261014T030635Z-account05-A079-correlated-auxiliaries\\DERIVATION.md",
+        "sha256": "0498cf11c17539bde91c5be6a3a70e78918f58b25e6245456d5a311c7a8ef11c"
+      },
+      "independent_review": "REVIEW_A079.md",
+      "validation": [
+        "out/a079_audit.json",
+        "out/endpoints.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A032",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A032\\runs\\20261014T043539Z-account05-A032-boolean-phase-realizability\\REVIEW_A079.md",
+        "method": "Full all-dimensional chain independently reconstructed; direct character sums/physical edges for32768 actual truth tables; rational log objectives and gcd-scaled low-dimension sign tests; no author code imported; no substantive repair",
+        "registry_adoption": "NOT_VERIFIED"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_STATED_SCOPE_LOCAL",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A032",
+      "A034",
+      "A068",
+      "A088",
+      "A092",
+      "A094",
+      "B16",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A034-SIGNED-ODD-MASK-ADMISSION",
+    "version": 1,
+    "exact_statement": "For every actual two-address Boolean sign on a uniform physical cube with product conditional row spectra and odd shared mixed mask M, let t be its full-parity signed size and E_J its pure row supports. Primitive integer magnitude pairs are odd with scale1, and D_J=product_i a_Ji b_Ji divides t+4 sum_EJ(-1)^|y|; gcd_J D_J divides3t. If one row owns the entire pure region, P=2^m, mu=|M| and its nonfair count N satisfy 3^N<=D<=3|t| and 8P<=9t^2+6mu+1<=(3mu+1)^2. In particular a singleton mixed mask is impossible for that concentrated row in every m>=2. This is necessary admission only, not weighted Q payment or FEI.",
+    "hypotheses": [
+      "Exactly two address bits; independent uniform physical X,Y",
+      "Actual Boolean signs; integer partial rows h_J=2 E_X F chi_J",
+      "Product squared conditional row spectra; odd common mixed-mask size",
+      "Concentrated-row bounds additionally require one row to own all pure points; m>=1"
+    ],
+    "statement_sha256": "2975777c467d0ae7e193328cb9ec8cf876af80c03ad728dbdd28fe11a12cc66d",
+    "contributors": [
+      "A034"
+    ],
+    "proof_source": {
+      "original": {
+        "path": "~\\brain_workers\\FEI100_20261011\\agents\\A034\\runs\\20261014T025347Z-account05-A034-phase-energy-transfer\\PROOF.md",
+        "sha256": "ad4115b94fc5f3327847a2991671b134dc4a18900f768440c267824a7ab49876"
+      },
+      "independent_review": "REVIEW_A034.md",
+      "validation": [
+        "out/odd_mask_validation.json",
+        "out/coupled_gap.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A032",
+        "verdict": "CONCENTRATED_AND_INDIVIDUAL_DIVISIBILITY_HOLD; COUPLED_GCD_PROOF_GAP",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A032\\runs\\20261014T043539Z-account05-A032-boolean-phase-realizability\\REVIEW_A034.md",
+        "method": "Independent parity/gcd/signed-convolution reconstruction; all144 odd rows in45088-row catalogue checked; exact arithmetic nonimplication of disputed summation; not a Boolean counterexample",
+        "registry_adoption": "NOT_VERIFIED"
+      }
+    ],
+    "status": "PARTIAL_ACCEPTANCE_COUPLED_CLAUSE_GAP",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "In Shared-mask transfer, summing D_J|(t+4t_J) with sum t_J=-t gives gcd(D_J)|0, not gcd(D_J)|3t; an additional argument is missing.",
+    "next_consumers": [
+      "A032",
+      "A079",
+      "A088",
+      "A094",
+      "B07",
+      "B20"
+    ]
+  }
+]

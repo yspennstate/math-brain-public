@@ -1,0 +1,631 @@
+\documentclass[11pt]{amsart}
+\usepackage[a4paper,margin=1.05in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={The maximal Kemeny constant of an n-vertex graph},pdfauthor={Yitzchak Shmalo}}
+\setlength{\emergencystretch}{1.5em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{question}[theorem]{Question}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Vol}{\operatorname{vol}}
+\newcommand{\diamR}{\operatorname{diam}_{R}}
+\newcommand{\Kbr}{K_{\mathrm{br}}}
+\newcommand{\trel}{\tau_{\mathrm{rel}}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\cG}{\mathcal G}
+\title[The maximal Kemeny constant]{The maximal Kemeny constant of an $n$-vertex graph}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{18 September 2026}
+\subjclass[2020]{Primary 60J10, 05C81; Secondary 05C35, 05C50}
+\keywords{Kemeny's constant, random walk, effective resistance, extremal graph, barbell graph, Turan graph}
+\begin{document}
+\begin{abstract}
+We determine the asymptotic maximum of Kemeny's constant over connected simple graphs of a given order. If $M_n$ denotes this maximum for the usual discrete-time simple random walk, then
+\[
+M_n=\frac{n^3}{54}+O(n^{19/7}).
+\]
+This proves the Kemeny-constant assertion in Aldous--Fill Open Problem~6.13. The proof combines an effective-resistance decomposition of Alev, Anari, Lau and Oveis Gharan with a comparison under edge deletion and a sharp inequality for the contribution of bridges. The leading constant comes from a two-mass optimization, and balanced barbells attain it. We also prove stability: every asymptotically extremal graph has two almost complete sets of order $n/3$, contains $n^2/9+o(n^2)$ edges, and admits a spanning subgraph obtained by deleting $o(n^2)$ edges whose two large blocks are separated by $(1/3+o(1))n$ bridges. The method extends to a uniform upper bound under an induced-edge capacity constraint. In particular, among $K_{r+1}$-free graphs, for fixed $r\ge2$, the maximal Kemeny constant and maximal relaxation time both equal $(r-1)n^3/(54r)+O_r(n^{19/7})$. The bipartite and triangle-free constants are therefore $1/108$.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+For simple random walk on a finite connected graph, Kemeny's constant is the mean hitting time of a vertex sampled from stationarity. The starting vertex does not affect this mean. It measures an average obstruction to transport, whereas the relaxation time measures the slowest spectral mode. These parameters have a common extremal scale among unrestricted graphs, but an upper bound on the relaxation time alone does not give a sharp upper bound on Kemeny's constant, which is a sum of inverse eigenvalues.
+
+Aldous and Fill ask in Open Problem~6.13 of \cite[Chapter~6, Section~6.3.2]{AF} for proofs of two conjectures:
+\begin{equation}\label{eq:AF}
+\max_G\tau_0(G)\sim\frac{n^3}{54},\qquad
+\max_G\tau_2(G)\sim\frac{n^3}{54},
+\end{equation}
+where the maxima are over connected simple graphs on $n$ vertices. Here $\tau_0$ is Kemeny's constant in the hitting-time convention used below, and $\tau_2$ is the reciprocal of the normalized spectral gap. Aksoy, Chung, Tait and Tobin \cite{ACTT} proved the relaxation-time assertion. This paper proves the first assertion. Our proof also recovers the second assertion as a consequence, but the latter is not a new resolution.
+
+Write $\cG_n$ for the connected simple unweighted graphs with $n\ge2$ vertices. If $G\in\cG_n$, let $P_G$ be its simple-random-walk transition matrix and let
+\[
+1=\lambda_1>\lambda_2\ge\cdots\ge\lambda_n\ge-1
+\]
+be its eigenvalues. We use
+\begin{equation}\label{eq:Kdef}
+K(G)=\sum_{j=2}^n\frac1{1-\lambda_j},\qquad
+\trel(G)=\frac1{1-\lambda_2}.
+\end{equation}
+Periodicity is allowed; an eigenvalue $-1$ contributes $1/2$ to $K(G)$. No absolute spectral gap is used.
+
+\begin{theorem}\label{thm:main}
+There are absolute constants $C_-,C_+>0$ such that, for all sufficiently large $n$,
+\begin{equation}\label{eq:main}
+\frac{n^3}{54}-C_-n^2
+\le M_n:=\max_{G\in\cG_n}K(G)
+\le\frac{n^3}{54}+C_+n^{19/7}.
+\end{equation}
+In particular, $M_n\sim n^3/54$.
+\end{theorem}
+
+The lower bound is obtained by two complete graphs of order $n/3+O(1)$ joined by a path whose internal vertices account for the remaining vertices. Such constructions and their exact Kemeny constants have been studied in \cite{Breen,Faught}. We give the short lower-bound argument needed here. The principal issue is the upper bound over arbitrary graphs: no assumption on the architecture of a maximizing graph is made.
+
+\subsection{Capacity constraints and clique-free graphs}
+The upper-bound proof is sensitive to how many edges a vertex set can hold. This gives a general formulation.
+
+\begin{definition}\label{def:capacity}
+For $0<\gamma\le1$, a graph $G$ satisfies the induced-edge capacity bound with parameter $\gamma$ if
+\begin{equation}\label{eq:capacity}
+e_G(U):=|E(G[U])|\le\frac\gamma2|U|^2
+\qquad(U\subseteq V(G)).
+\end{equation}
+\end{definition}
+Every simple graph satisfies \eqref{eq:capacity} with $\gamma=1$. Edge deletion preserves the bound. The use of induced subsets, rather than only a bound on the total edge count, is important.
+
+\begin{theorem}\label{thm:capacity}
+For each fixed $0<\gamma\le1$, there is a constant $C_\gamma$ such that every connected simple $n$-vertex graph satisfying \eqref{eq:capacity} obeys
+\begin{equation}\label{eq:capacityK}
+K(G)\le\frac{\gamma n^3}{54}+C_\gamma n^{19/7}.
+\end{equation}
+\end{theorem}
+
+For an integer $r\ge2$, put $\gamma_r=1-1/r$. Turan's inequality gives \eqref{eq:capacity} with $\gamma=\gamma_r$ for every $K_{r+1}$-free graph. The same sharp leading constant is achieved by replacing the two complete blocks in a barbell by balanced complete $r$-partite graphs.
+
+\begin{theorem}\label{thm:clique}
+Fix $r\ge2$. Among connected simple $K_{r+1}$-free graphs on $n$ vertices,
+\begin{align}
+\max_G K(G)&=\frac{r-1}{54r}n^3+O_r(n^{19/7}),\label{eq:cliqueK}\\
+\max_G\trel(G)&=\frac{r-1}{54r}n^3+O_r(n^{19/7}).\label{eq:cliqueR}
+\end{align}
+The same statements hold if the class is restricted to graphs of chromatic number at most $r$. Consequently, both the bipartite maximum and the triangle-free maximum of each parameter are
+\[
+\frac{n^3}{108}+O(n^{19/7}).
+\]
+In all these classes the matching lower bound has error $O_r(n^2)$.
+\end{theorem}
+
+These conclusions concern maxima over the whole indicated classes, not only over complete multipartite graphs. In particular, the familiar small Kemeny constant of a complete bipartite graph is not the extremal configuration here; the long connecting path is essential.
+
+\subsection{Asymptotic structure}
+There is also a stability statement. A bridge block is a connected component remaining after all bridges of a graph are deleted. Single vertices count as bridge blocks.
+
+\begin{theorem}\label{thm:stability}
+Let $G_n\in\cG_n$ satisfy $K(G_n)/n^3\to1/54$. Then
+\begin{equation}\label{eq:edges-stability}
+|E(G_n)|=\left(\frac19+o(1)\right)n^2.
+\end{equation}
+There are disjoint sets $A_n,B_n\subseteq V(G_n)$ with
+\begin{align}
+|A_n|,|B_n|&=\left(\frac13+o(1)\right)n,\label{eq:sizes-stability}\\
+\binom{|A_n|}{2}-e_{G_n}(A_n)&=o(n^2),\qquad
+\binom{|B_n|}{2}-e_{G_n}(B_n)=o(n^2),\label{eq:cliques-stability}\\
+|E(G_n)\setminus(E(G_n[A_n])\cup E(G_n[B_n]))|&=o(n^2).\label{eq:outside-stability}
+\end{align}
+Moreover, there is a connected spanning subgraph $H_n\subseteq G_n$, obtained by deleting $O(n^{12/7})$ edges, in which $A_n,B_n$ are bridge blocks and their quotient-tree distance is $(1/3+o(1))n$. All but $o(n)$ vertices outside $A_n\cup B_n$ are singleton bridge blocks on that quotient path.
+\end{theorem}
+
+The long-path assertion is about the specified spanning subgraph $H_n$. It does not assert that every edge of that path is a bridge of the original graph. Nor does the theorem classify exact finite-order maximizers.
+
+\subsection{Proof strategy and relation to other work}
+The starting identity expresses $K(G)$ as a degree-weighted average of effective resistances. A near-maximizer must be dense, since $K(G)\le |E(G)|(n-1)$. The effective-resistance decomposition theorem of Alev, Anari, Lau and Oveis Gharan \cite{AALG} then divides the graph into internally low-resistance clusters, with relatively few edges between them. We retain a spanning tree of the cluster quotient and all internal edges. A direct comparison controls the increase needed to upper-bound $K(G)$ after this surgery.
+
+The leading term is the bridge contribution. On the bridge quotient, assign mass proportional to the internal edge count plus one. This choice gives an exact tree-distance formula. Most of the mass in a dense graph lies in large blocks. Their vertex cost constrains the mass distribution, and a Holder inequality shows that two equal masses are optimal. The remaining scalar optimization is
+\[
+\max_{0\le s\le1}\frac{s^2(1-s)}8=\frac1{54}.
+\]
+Here $s$ is the proportion of vertices used by the large blocks. The equality case explains the two-thirds/one-third division in a balanced barbell. Keeping the slack proves Theorem~\ref{thm:stability}.
+
+A counting refinement of the cluster error gives the exponent $19/7$: a nontrivial simple graph of resistance diameter at most $\epsilon$ has at least $1+1/\epsilon$ vertices. Thus at most $n\epsilon/(1+\epsilon)$ nontrivial clusters can occur. Singleton clusters contribute no internal resistance. This improves the accumulated internal error from the crude $mn\epsilon$ to $mn\epsilon^2/(1+\epsilon)$.
+
+The decomposition theorem is a published ingredient, not a new result of this paper. Effective-resistance separation formulas for Kemeny's constant appear in \cite{Faught}. Recent work studies matrix-compression and edge-deletion estimates \cite{Abiad}, as well as diameter-two and Nordhaus--Gaddum questions \cite{LiSunYang}; those concern different extremal restrictions. Our general comparison is proved below, so no priority claim about every auxiliary inequality is required. The regular-graph relaxation-time problem is also different; a recent preprint of Zhu \cite{Zhu} treats that problem with a parity-dependent leading constant. None of those results is used as a substitute for the Kemeny upper bound proved here.
+
+\section{Normalization and resistance identities}\label{sec:prelim}
+Let $G=(V,E)$ be connected and simple, with $n\ge2$, $m=|E|$, degrees $d_v$, adjacency matrix $A$, and combinatorial Laplacian $L=D-A$. The stationary distribution is $\pi_v=d_v/(2m)$. Every edge is assigned unit resistance. Write $R_G(u,v)$ for effective resistance, with $R_G(u,u)=0$.
+
+For a vertex $v$, let $T_v=\inf\{k\ge0:X_k=v\}$. In particular, $\E_vT_v=0$, not the mean return time. Kemeny's identity and the spectral formula \eqref{eq:Kdef} use this convention; see \cite{AF}. We recall the resistance form, including its normalization.
+
+\begin{lemma}\label{lem:resistance}
+For every connected simple graph,
+\begin{equation}\label{eq:resistance}
+K(G)=\frac1{2m}\sum_{u<v}d_ud_vR_G(u,v)
+=m\,\E_{\pi\otimes\pi}R_G(X,Y).
+\end{equation}
+Consequently,
+\begin{equation}\label{eq:coarse}
+\trel(G)\le K(G)\le m(n-1).
+\end{equation}
+\end{lemma}
+\begin{proof}
+The commute identity is
+\[
+\E_uT_v+\E_vT_u=2mR_G(u,v).
+\]
+One direct verification uses the Moore--Penrose inverse $L^+$. The vector $h^v_u=\E_uT_v$ solves $Lh^v=d-2me_v$, with $h^v_v=0$. Thus
+\[
+h^v_u=(L^+d)_u-(L^+d)_v-2mL^+_{uv}+2mL^+_{vv}.
+\]
+Adding the formulas for $h^v_u$ and $h^u_v$ gives the commute identity, since $R_G(u,v)=L^+_{uu}+L^+_{vv}-2L^+_{uv}$. Averaging Kemeny's hitting-time identity over the initial stationary vertex gives
+\[
+K(G)=\sum_{u,v}\pi_u\pi_v\E_uT_v
+=\sum_{u<v}\pi_u\pi_v\bigl(\E_uT_v+\E_vT_u\bigr),
+\]
+which is \eqref{eq:resistance}. Alternatively, multiplying the displayed formula for $h^v_u$ by $\pi_v$ and summing proves directly that the result is independent of $u$.
+
+Each effective resistance is at most the length of a simple path connecting its endpoints, hence at most $n-1$. This gives the upper bound in \eqref{eq:coarse}. Its lower bound follows from \eqref{eq:Kdef}, whose positive sum includes the term $\trel(G)$.
+\end{proof}
+
+We use two standard consequences of the electrical characterization. Deleting edges can only increase the resistance between fixed vertices. Also, if a graph is assembled from connected subgraphs according to a tree, the resistance between two vertices is the sum of the resistances traversed along the unique sequence of subgraphs between them. Both facts follow from Thomson's principle: effective resistance is the minimum of $\sum_{e\in E}f_e^2$ over unit flows between the specified endpoints. An off-path branch attached at a single vertex carries no current in the minimizing flow.
+
+\begin{lemma}[Comparison under edge deletion]\label{lem:deletion}
+Let $H\subseteq G$ be a connected spanning subgraph, and put $q=m_G-m_H$. Then
+\begin{equation}\label{eq:deletion}
+K(G)\le\frac{m_H}{m_G}K(H)
++(n-1)\left(2q-\frac{q^2}{m_G}\right)
+\le K(H)+2q(n-1).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write $d^G=d^H+r$, where $r_v\ge0$ and $\sum_vr_v=2q$. By edge-deletion monotonicity, $R_G(u,v)\le R_H(u,v)$. Expand the degree product in \eqref{eq:resistance} and use $R_H(u,v)\le n-1$. The $d^Hd^H$ sum equals $2m_HK(H)$. The two cross terms have total coefficient at most $(2m_H)(2q)=4m_Hq$. The $rr$ sum has coefficient at most $(\sum r_v)^2/2=2q^2$. Consequently
+\[
+K(G)\le\frac{m_H}{m_G}K(H)
++\frac{(n-1)(2qm_H+q^2)}{m_G}.
+\]
+Since $m_H=m_G-q$, the last fraction is $(n-1)(2q-q^2/m_G)$. Finally $K(H)\ge0$ and $m_H\le m_G$.
+\end{proof}
+
+\begin{remark}
+No monotonicity of $K$ itself under deleting edges is assumed. The changed stationary weights are exactly the reason for the error term in Lemma~\ref{lem:deletion}. In particular, if $q=o(n^2)$, then $K(G)\le K(H)+o(n^3)$.
+\end{remark}
+
+\section{The contribution of bridges}\label{sec:bridges}
+For a bridge $e$ of $H$, let $A_e,A_e^c$ be the two vertex sets of $H-e$, and use degrees in $H$ to define $\Vol(A)=\sum_{v\in A}d_v$. Put
+\begin{equation}\label{eq:Kbrdef}
+\Kbr(H)=\frac1{2m}\sum_{e\text{ a bridge}}
+\Vol(A_e)\Vol(A_e^c).
+\end{equation}
+It is the contribution of the unit-resistance bridges to \eqref{eq:resistance}; hence $0\le\Kbr(H)\le K(H)$.
+
+\begin{lemma}[Exact bridge-tree identity]\label{lem:bridgeidentity}
+Delete all bridges of a connected graph $H$ with $m$ edges. Let its bridge blocks be $C_i$, with orders $n_i$ and internal edge counts $m_i$, and let $Q$ be their quotient tree. Set
+\begin{equation}\label{eq:weights}
+w_i=m_i+1,\qquad W=\sum_iw_i=m+1,\qquad p_i=w_i/W.
+\end{equation}
+For independent $X,Y$ with law $p$ on $V(Q)$,
+\begin{equation}\label{eq:bridgeidentity}
+\Kbr(H)=\frac{(m+1)^2}{m}\E_p d_Q(X,Y)
+-\frac{(2m+1)|E(Q)|}{2m}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+If the quotient has $h$ vertices, it has $h-1$ edges, and $m=\sum_i m_i+h-1$. This proves $W=m+1$. A side of a quotient edge corresponding to a node set $S$ contains $\sum_{i\in S}m_i+|S|-1$ internal edges and exactly one edge leaving it. Its volume is therefore
+\[
+2\sum_{i\in S}m_i+2(|S|-1)+1=2Wp(S)-1.
+\]
+The opposite volume is $2W(1-p(S))-1$. Their product is
+\[
+4W^2p(S)(1-p(S))-2W+1.
+\]
+Finally, for independent $X,Y\sim p$ on a tree,
+$\E d_Q(X,Y)=2\sum_{e\in E(Q)}p(S_e)(1-p(S_e))$.
+Insert this into \eqref{eq:Kbrdef} and use $2W-1=2m+1$.
+\end{proof}
+
+The next elementary inequality is the sharp probability-vector input.
+\begin{lemma}\label{lem:holder}
+For a probability vector $p=(p_i)$, write $S=\sum_i\sqrt{p_i}$ and $Q_2=\sum_ip_i^2$. Then
+\begin{equation}\label{eq:holder}
+Q_2S^2\ge1,\qquad
+\frac{1-Q_2}{S^2}\le Q_2(1-Q_2)\le\frac14.
+\end{equation}
+Equality in the final bound for the ratio occurs precisely when $p$ has two nonzero entries, each equal to $1/2$.
+\end{lemma}
+\begin{proof}
+Holder's inequality gives
+\[
+1=\sum_i(p_i^2)^{1/3}(\sqrt{p_i})^{2/3}
+\le Q_2^{1/3}S^{2/3}.
+\]
+This proves the first inequality and hence the second. The last bound is $Q_2(1-Q_2)\le1/4$. Equality requires $Q_2=1/2$ and equality in Holder. The latter requires all positive $p_i$ to be equal, so exactly two entries are present.
+\end{proof}
+
+\begin{proposition}[Uniform sharp bridge bound]\label{prop:bridgebound}
+Fix $\kappa>0$ and $0<\gamma\le1$. There is $C_{\kappa,\gamma}$ such that every connected simple graph $H$ on $n$ vertices with $m\ge\kappa n^2$ and satisfying \eqref{eq:capacity} obeys
+\begin{equation}\label{eq:bridgebound}
+\Kbr(H)\le\frac{\gamma n^3}{54}+C_{\kappa,\gamma}n^{5/2}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Use the notation of Lemma~\ref{lem:bridgeidentity}. Call a block large if $n_i\ge\sqrt n$, and let $I$ be the set of large blocks. Write
+\[
+P=\sum_{i\in I}p_i,\quad
+s=\frac1n\sum_{i\in I}n_i,\quad
+\widetilde p_i=p_i/P\ (i\in I),\quad
+S=\sum_{i\in I}\sqrt{\widetilde p_i},\quad
+Q_2=\sum_{i\in I}\widetilde p_i^2.
+\]
+We work for sufficiently large $n$, depending only on $\kappa,\gamma$; the finitely many remaining orders can be absorbed into the constant.
+
+For a small block, $m_i\le\gamma n_i^2/2\le\gamma\sqrt n\,n_i/2$. There are at most $n$ blocks, so
+\begin{equation}\label{eq:smallmass}
+1-P\le\frac{\gamma n^{3/2}/2+n}{W}
+\le\frac{\gamma}{2\kappa\sqrt n}+\frac1{\kappa n}
+=O_{\kappa,\gamma}(n^{-1/2}).
+\end{equation}
+In particular $I$ is nonempty and $P\ge1/2$ for sufficiently large $n$.
+
+There are at most $\sqrt n$ large blocks. The capacity bound and $\sqrt{x+1}\le\sqrt x+1$ give
+\[
+\sqrt P\,S=\frac1{\sqrt W}\sum_{i\in I}\sqrt{m_i+1}
+\le\frac{\sqrt{\gamma/2}\,sn+\sqrt n}{\sqrt W}.
+\]
+Put $A=W/n^2$ and $a_n=\sqrt{2/\gamma}\,n^{-1/2}$. Then
+\begin{equation}\label{eq:capacitymass}
+A\le\frac{\gamma(s+a_n)^2}{2PS^2}.
+\end{equation}
+
+For two distinct large quotient vertices, their tree path contains at most all small blocks and all large blocks. Small blocks use at most $(1-s)n$ original vertices, so
+\[
+\frac{d_Q(i,j)}n\le1-s+n^{-1/2}\qquad(i,j\in I,
+\ i\ne j).
+\]
+Pairs with at least one endpoint in a small block have probability at most $2(1-P)$, and all quotient distances are at most $n-1$. It follows that
+\begin{equation}\label{eq:distancebudget}
+\frac1n\E_p d_Q(X,Y)
+\le P^2(1-Q_2)(1-s+n^{-1/2})+2(1-P).
+\end{equation}
+
+Discard the nonpositive term in \eqref{eq:bridgeidentity}, divide by $n^3$, and apply \eqref{eq:capacitymass} to the first term in \eqref{eq:distancebudget}. Since $W/m=1+O_\kappa(n^{-2})$, $A\le1/2+O(n^{-1})$, and \eqref{eq:smallmass} holds, this gives
+\begin{align}
+\frac{\Kbr(H)}{n^3}
+&\le\frac{\gamma P(s+a_n)^2(1-s+n^{-1/2})}{2}
+       \frac{1-Q_2}{S^2}
+       +O_{\kappa,\gamma}(n^{-1/2})\notag\\
+&\le\frac\gamma8(s+a_n)^2(1-s+n^{-1/2})
+       +O_{\kappa,\gamma}(n^{-1/2})\notag\\
+&\le\frac\gamma8s^2(1-s)+O_{\kappa,\gamma}(n^{-1/2}),\label{eq:bridgechain}
+\end{align}
+where Lemma~\ref{lem:holder} and $P\le1$ were used. The error in the last line is uniform for $s\in[0,1]$. Finally,
+\begin{equation}\label{eq:cubicgap}
+\frac1{54}-\frac{s^2(1-s)}8
+=\frac{(3s-2)^2(3s+1)}{216}\ge0.
+\end{equation}
+This proves \eqref{eq:bridgebound}.
+\end{proof}
+
+\section{Reduction to a tree of low-resistance clusters}\label{sec:reduction}
+We state the published decomposition input with its quantifiers. The constants are independent of the graph and of the parameter.
+
+\begin{theorem}[Alev--Anari--Lau--Oveis Gharan \cite{AALG}]\label{thm:AALG}
+There are absolute constants $C_0,C_1,\delta_0>0$ such that, for every connected simple graph $G$ on $n$ vertices and $m$ edges, and every $\delta\ge\delta_0$, there is a partition
+\[
+V(G)=V_1\sqcup\cdots\sqcup V_h
+\]
+into connected induced subgraphs such that
+\begin{equation}\label{eq:AALG}
+\left|E(G)\setminus\bigcup_iE(G[V_i])\right|
+\le C_0m/\delta,\qquad
+\diamR(G[V_i])\le C_1\delta^3n/m\quad\text{for every }i.
+\end{equation}
+The resistance diameter of a singleton is defined to be zero.
+\end{theorem}
+
+This is the unweighted case of \cite[Theorem~3]{AALG}. In particular, the resistance in \eqref{eq:AALG} is computed within each induced subgraph. The theorem is not a bound on the resistance in the original graph restricted to pairs of cluster vertices.
+
+\begin{lemma}[Counting nontrivial clusters]\label{lem:smallres}
+Let a simple connected graph on $k\ge2$ vertices have resistance diameter at most $\epsilon>0$. Then $k\ge1+1/\epsilon$. Consequently, if connected graphs partition $n$ vertices and each has resistance diameter at most $\epsilon$, the sum of the resistance diameters of any subcollection of the nontrivial graphs is at most
+\begin{equation}\label{eq:epsiloncount}
+\frac{n\epsilon^2}{1+\epsilon}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For distinct vertices $u,v$, a unit flow from $u$ to $v$ has total net outflow one at $u$. Cauchy--Schwarz on the incident edges gives energy at least $1/d(u)$. Thomson's principle therefore implies
+\[
+R(u,v)\ge1/d(u)\ge1/(k-1).
+\]
+Thus $k\ge1+1/\epsilon$. There are at most $n/(1+1/\epsilon)$ nontrivial components in the partition. Multiplying this number by $\epsilon$ proves \eqref{eq:epsiloncount}; singleton components contribute zero.
+\end{proof}
+
+\begin{proposition}[Tree reduction]\label{prop:reduction}
+Suppose $G$ has a partition into connected induced subgraphs of resistance diameter at most $\epsilon$, with $q_{\mathrm{cross}}$ edges between parts. Then there is a connected spanning subgraph $H\subseteq G$, formed by keeping all internal edges and at most $h-1$ cross edges, such that
+\begin{equation}\label{eq:reduction}
+K(G)\le\Kbr(H)+2q_{\mathrm{cross}}(n-1)
++\frac{m_Hn\epsilon^2}{1+\epsilon}.
+\end{equation}
+It has $m_G-m_H\le q_{\mathrm{cross}}$. Any capacity bound \eqref{eq:capacity} satisfied by $G$ is also satisfied by $H$.
+\end{proposition}
+\begin{proof}
+The quotient on parts is connected. Choose a spanning tree of its underlying simple graph and retain one original cross edge for each tree edge, together with all internal edges. This gives a connected spanning graph $H$; every retained cross edge is a bridge.
+
+Let $r(u,v)$ count the retained cross edges on the quotient path between the parts containing $u$ and $v$. Resistance additivity through cut vertices gives
+\[
+R_H(u,v)=r(u,v)+\sum_{i\text{ on the quotient path}}R_{G[V_i]}(a_i,b_i),
+\]
+where $a_i,b_i$ are the entry and exit vertices, including $u,v$ in the endpoint parts. By Lemma~\ref{lem:smallres}, the sum is at most $n\epsilon^2/(1+\epsilon)$. Averaging by \eqref{eq:resistance}, the contribution of $r$ is the contribution of the retained cross-edge bridges, and is therefore at most $\Kbr(H)$. Hence
+\[
+K(H)\le\Kbr(H)+\frac{m_Hn\epsilon^2}{1+\epsilon}.
+\]
+Apply Lemma~\ref{lem:deletion} with at most $q_{\mathrm{cross}}$ deletions. Capacity is preserved because $H[U]$ has no more edges than $G[U]$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:capacity}]
+If $m<\gamma n^2/54$, then \eqref{eq:coarse} gives $K(G)<\gamma n^3/54$. It remains to consider $m\ge\kappa n^2$, with $\kappa=\gamma/54$ fixed. Set
+\begin{equation}\label{eq:delta}
+\delta=n^{2/7}.
+\end{equation}
+For sufficiently large $n$, Theorem~\ref{thm:AALG} gives a partition satisfying
+\[
+q_{\mathrm{cross}}=O(mn^{-2/7})=O(n^{12/7}),\qquad
+\epsilon=C_1\delta^3n/m=O_\gamma(n^{-1/7}).
+\]
+The graph $H$ in Proposition~\ref{prop:reduction} has $m_H\ge m/2\ge\kappa n^2/2$ for sufficiently large $n$, and retains \eqref{eq:capacity}. Proposition~\ref{prop:bridgebound} therefore gives
+\[
+\Kbr(H)\le\gamma n^3/54+O_\gamma(n^{5/2}).
+\]
+The two reduction errors satisfy
+\[
+2q_{\mathrm{cross}}(n-1)=O(n^{19/7}),\qquad
+m_Hn\epsilon^2/(1+\epsilon)=O_\gamma(n^{19/7}).
+\]
+Combining these estimates proves \eqref{eq:capacityK} for large $n$. Increasing $C_\gamma$ covers the finitely many remaining orders.
+\end{proof}
+
+\begin{remark}[The exponent]\label{rem:rate}
+For a dense graph, the two principal errors with $\delta=n^a$ are $n^{3-a}$ and $n^{1+6a}$. Balancing them gives $a=2/7$ and the exponent $19/7$. The bridge error $n^{5/2}$ is smaller. The exponent is the output of this proof, not a claim of an optimal convergence rate. Omitting Lemma~\ref{lem:smallres} and using the cruder internal error $mn\epsilon$ instead gives $O(n^{11/4})$ with $\delta=n^{1/4}$.
+\end{remark}
+
+\section{Matching lower bounds}\label{sec:lower}
+A single test function supplies lower bounds for both parameters.
+
+\begin{lemma}[Two blocks joined by a path]\label{lem:barbelllower}
+Let $B$ be any connected simple graph with $q$ vertices and $e$ edges. Take two disjoint isomorphic copies of $B$, choose corresponding vertices, and join them by a path of length $\ell\ge1$ whose $\ell-1$ internal vertices are new. The resulting graph $G$ has $n=2q+\ell-1$ vertices and satisfies
+\begin{equation}\label{eq:barbelllower}
+K(G)\ge\trel(G)\ge\frac{(2e+1)\ell}{2}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Assign the value $-1$ to the first block, $+1$ to the second block, and interpolate linearly along the path. The graph automorphism exchanging the two isomorphic blocks and reversing the path changes the sign of this function, so its stationary mean is zero. Each block has degree volume $2e+1$. With $m=2e+\ell$, its stationary variance is at least $(2e+1)/m$, while its Dirichlet energy is
+\[
+\frac1{2m}\sum_{uv\in E}(f(u)-f(v))^2
+=\frac1{2m}\,\ell\left(\frac2\ell\right)^2
+=\frac2{m\ell}.
+\]
+The variational characterization of $\trel$ gives \eqref{eq:barbelllower}; use \eqref{eq:coarse} for $K$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The upper bound is Theorem~\ref{thm:capacity} with $\gamma=1$. For the lower bound, take $q=\lfloor n/3\rfloor$, $B=K_q$, and $\ell=n-2q+1$. Then $e=q(q-1)/2=n^2/18+O(n)$ and $\ell=n/3+O(1)$. Lemma~\ref{lem:barbelllower} gives
+\[
+K(G)\ge(e+1/2)\ell=n^3/54+O(n^2).
+\]
+This proves the required two-sided estimate.
+\end{proof}
+
+\begin{corollary}\label{cor:relaxation}
+The maximum relaxation time among connected simple $n$-vertex graphs is $n^3/54+O(n^{19/7})$.
+\end{corollary}
+\begin{proof}
+The upper bound follows from $\trel(G)\le K(G)$ and Theorem~\ref{thm:main}. The lower bound follows from the same test function in Lemma~\ref{lem:barbelllower}.
+\end{proof}
+The leading-order statement in Corollary~\ref{cor:relaxation} is the theorem of \cite{ACTT}; it is included to clarify the relationship between the two assertions in \eqref{eq:AF}.
+
+\section{Stability of asymptotically maximizing graphs}\label{sec:stability}
+We first record a dimension-free consequence of near equality in Lemma~\ref{lem:holder}.
+
+\begin{lemma}[Stability of the mass inequality]\label{lem:mass-stability}
+Let $p^{(j)}$ be finite probability vectors, padded with zeros and arranged in nonincreasing order. If
+\[
+\frac{1-\sum_i(p_i^{(j)})^2}{(\sum_i\sqrt{p_i^{(j)}})^2}\longrightarrow\frac14,
+\]
+then $p_1^{(j)},p_2^{(j)}\to1/2$ and $\sum_{i\ge3}p_i^{(j)}\to0$.
+\end{lemma}
+\begin{proof}
+Write $Q_j=\sum_i(p_i^{(j)})^2$ and $S_j=\sum_i\sqrt{p_i^{(j)}}$. The inequalities
+\[
+(1-Q_j)/S_j^2\le Q_j(1-Q_j)\le1/4
+\]
+force $Q_j\to1/2$ and $S_j^2\to2$. The vectors are tight in $\ell^1$: since $p_{k+1}^{(j)}\le1/(k+1)$,
+\[
+\sum_{i>k}p_i^{(j)}
+\le\sqrt{p_{k+1}^{(j)}}\sum_{i>k}\sqrt{p_i^{(j)}}
+\le S_j/\sqrt{k+1}.
+\]
+Every subsequence therefore has a further subsequence converging in $\ell^1$ to a nonincreasing probability vector $p$. Its squared sum is $1/2$, and Fatou's lemma gives $\sum_i\sqrt{p_i}\le\sqrt2$. Holder's inequality gives the reverse inequality, so equality holds. Equality in Holder requires all nonzero coordinates to coincide. Since their sum is one and squared sum is $1/2$, there are exactly two and each is $1/2$. Every subsequential limit is the same vector, proving the lemma.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:stability}]
+The coarse bound \eqref{eq:coarse} and $K(G_n)/n^3\to1/54$ imply $m(G_n)\ge\kappa n^2$ for an absolute $\kappa>0$ and all sufficiently large $n$. Perform the reduction of Section~\ref{sec:reduction} with $\delta=n^{2/7}$, obtaining $H_n$ with
+\begin{equation}\label{eq:stability-reduction}
+m(G_n)-m(H_n)=O(n^{12/7}),\qquad
+K(G_n)\le\Kbr(H_n)+O(n^{19/7}).
+\end{equation}
+Proposition~\ref{prop:bridgebound} bounds $\Kbr(H_n)$ above by $n^3/54+o(n^3)$, so
+\begin{equation}\label{eq:brlimit}
+\Kbr(H_n)/n^3\longrightarrow1/54.
+\end{equation}
+
+Apply the notation and estimates in the proof of Proposition~\ref{prop:bridgebound} to the bridge blocks of $H_n$, with the moving cutoff $\sqrt n$ and $\gamma=1$. Thus $P\to1$, and, with $s,S,Q_2$ depending on $n$,
+\begin{equation}\label{eq:stability-chain}
+\frac1{54}+o(1)
+\le\frac{s^2(1-s)}2\frac{1-Q_2}{S^2}+o(1)
+\le\frac{s^2(1-s)}8+o(1)
+\le\frac1{54}+o(1).
+\end{equation}
+The unique maximum in \eqref{eq:cubicgap} implies $s\to2/3$, and then \eqref{eq:stability-chain} implies $(1-Q_2)/S^2\to1/4$. By Lemma~\ref{lem:mass-stability}, two large blocks, denoted $A_n,B_n$, carry asymptotic normalized large-block masses $1/2,1/2$, with all others carrying total mass $o(1)$. In particular $Q_2\to1/2$ and $S^2\to2$.
+
+Let $A=W/n^2$, where $W=m(H_n)+1$. The capacity estimate \eqref{eq:capacitymass} gives
+\[
+\limsup A\le\frac{(2/3)^2}{2\cdot2}=\frac19.
+\]
+On the other hand, \eqref{eq:distancebudget} yields
+$\limsup n^{-1}\E_p d_Q(X,Y)\le(1/3)(1/2)=1/6$.
+By \eqref{eq:bridgeidentity}, its discarded correction is $O(n)$, and $W/m(H_n)\to1$. Equation~\eqref{eq:brlimit} therefore forces $\liminf A\ge1/9$. Hence
+\begin{equation}\label{eq:alpha-stability}
+m(H_n)/n^2\to1/9,\qquad n^{-1}\E_p d_Q(X,Y)\to1/6.
+\end{equation}
+The edge-deletion estimate in \eqref{eq:stability-reduction} proves \eqref{eq:edges-stability}.
+
+Since $p_{A_n},p_{B_n}\to1/2$, their internal edge counts satisfy
+\[
+m_{A_n},m_{B_n}=(1/18+o(1))n^2.
+\]
+Simplicity gives $|A_n|,|B_n|\ge(1/3-o(1))n$. Their total size is at most $sn=(2/3+o(1))n$, so each has size $(1/3+o(1))n$. This gives the two almost-completeness assertions in $H_n$, and hence in $G_n$, since $H_n\subseteq G_n$. The two internal edge counts already sum to $(1/9+o(1))n^2$, accounting for all but $o(n^2)$ edges of $G_n$. This proves \eqref{eq:outside-stability}.
+
+Finally, the probability that one of $X,Y\sim p$ is outside these two quotient nodes tends to zero, and all quotient distances are at most $n$. Thus
+\[
+\frac1n\E_p d_Q(X,Y)
+=2p_{A_n}p_{B_n}\frac{d_Q(A_n,B_n)}n+o(1).
+\]
+By \eqref{eq:alpha-stability}, $d_Q(A_n,B_n)/n\to1/3$. The quotient path has $d_Q(A_n,B_n)-1=(1/3+o(1))n$ internal nodes, whereas there are only $(1/3+o(1))n$ original vertices outside $A_n\cup B_n$. Each internal quotient node requires at least one original vertex. The sum of the surplus vertices in these nodes and all vertices in off-path nodes is therefore $o(n)$. A nontrivial internal node of size $k\ge2$ has $k\le2(k-1)$ vertices, so all but $o(n)$ outside vertices are singleton blocks on the path, as asserted.
+\end{proof}
+
+\begin{remark}
+The conclusion is an asymptotic structural theorem. It allows subquadratically many altered edges and does not prove that a maximizing graph of every large finite order is exactly a particular barbell. The proof also shows why density alone is insufficient: the mass must be split into two asymptotically equal dense blocks, with a linear vertex budget reserved for resistance between them.
+\end{remark}
+
+\section{Clique-free and bipartite extremal constants}\label{sec:clique}
+For completeness, the capacity input is proved in the form needed. This is the standard Motzkin--Straus proof of Turan's edge bound \cite{MS}.
+
+\begin{lemma}\label{lem:turan}
+If $F$ contains no clique on $r+1$ vertices, then $e(F)\le(1-1/r)|V(F)|^2/2$.
+\end{lemma}
+\begin{proof}
+On the probability simplex $x_i\ge0$, $\sum_i x_i=1$, maximize
+$\Phi(x)=\sum_{ij\in E(F)}x_ix_j$, choosing a maximizer with the smallest support. If two nonadjacent vertices $u,v$ have positive weights, then with their total weight fixed, $\Phi$ is affine in the split between $x_u$ and $x_v$. Moving their combined weight to an endpoint with no smaller value removes a support vertex, a contradiction. The support is consequently a clique of size $k\le r$. On this support,
+\[
+\Phi(x)=\frac12\left(1-\sum_i x_i^2\right)
+\le\frac12(1-1/k)\le\frac12(1-1/r).
+\]
+Evaluate $\Phi$ at the uniform vector on $V(F)$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:clique}]
+Every induced subgraph of a $K_{r+1}$-free graph is $K_{r+1}$-free. Lemma~\ref{lem:turan} gives \eqref{eq:capacity} with $\gamma=\gamma_r=(r-1)/r$. Theorem~\ref{thm:capacity} and $\trel\le K$ provide both upper bounds.
+
+For the lower bound, set $q=\lfloor n/3\rfloor$ and take $B=T_r(q)$, the complete $r$-partite graph with part sizes differing by at most one. It is connected for large $q$, and
+\[
+e(B)=\frac{\gamma_r}{2}q^2+O_r(1).
+\]
+Join two copies by a path of length $\ell=n-2q+1$. The resulting graph is $r$-colorable: choose a proper coloring of the path and permute the colors of each end block to match its attachment vertex. In particular it is $K_{r+1}$-free. Lemma~\ref{lem:barbelllower} gives
+\[
+\trel(G),K(G)\ge(e(B)+1/2)\ell
+=\frac{\gamma_r}{54}n^3+O_r(n^2).
+\]
+Thus the upper bounds are sharp in both classes. For $r=2$, the lower construction is bipartite and the upper class is triangle-free, proving both special cases.
+\end{proof}
+
+\begin{remark}[A general lower-bound principle]
+More generally, suppose a class contains graphs obtained by joining two isomorphic connected blocks $B_q$ with a path, where $e(B_q)=\gamma q^2/2+O(q)$, and all graphs in the class satisfy \eqref{eq:capacity}. The same proof determines both extremal parameters as $\gamma n^3/54+O(n^{19/7})$. The upper bound requires capacity on every induced subset; it is not valid merely from $e(G)\le\gamma n^2/2$.
+\end{remark}
+
+\section{Further questions and precise scope}\label{sec:scope}
+Theorem~\ref{thm:main} answers the $\tau_0$ assertion of the explicitly numbered Aldous--Fill Open Problem~6.13. The proof of the sharp upper bound is independent of the known $\tau_2$ result, and the latter is recovered, with attribution, in Corollary~\ref{cor:relaxation}. The clique-free and stability theorems are additional consequences of the method. They are not labeled as resolutions of separate named conjectures without an identified source posing those exact statements.
+
+\subsection{Exact maximizers and second-order terms}
+The argument leaves the exact finite-order maximizer undetermined. Balanced barbells provide the correct leading coefficient, and Theorem~\ref{thm:stability} constrains any competing family. A natural next question is whether the maximum has an $O(n^2)$ remainder, and whether sufficiently large exact maximizers belong to a specific barbell family, with an explicit rounding rule. Neither conclusion follows from an $o(n^2)$ edge-edit stability statement. The constants in the decomposition theorem also prevent the present argument from giving a useful sharp numerical coefficient in its $n^{19/7}$ error.
+
+\subsection{The regular-graph questions}
+Aldous--Fill Open Problem~6.14 contains several separate extremal assertions over regular graphs, including a proposed $n^2/4$ Kemeny scale. The spanning-subgraph surgery used here generally destroys regularity, so Theorem~\ref{thm:main} does not answer that question. The recent regular-graph relaxation-time preprint \cite{Zhu} is distinct from this Kemeny problem; in particular, the parity dependence recorded there should not be suppressed when comparing extremal regular-graph statements. A proof of a regular Kemeny bound would need to retain the degree constraints or control the full inverse-eigenvalue sum on an appropriate degree-preserving reduction.
+
+\subsection{Other recently posed questions}
+The diameter-two linear bound and a Nordhaus--Gaddum product bound are treated in \cite{LiSunYang}; they are not counted here as new open-problem resolutions. Likewise, the coloring-based lower bound and deletion estimates in \cite{Abiad} are different from the clique-free maxima in Theorem~\ref{thm:clique}. A lower bound in terms of chromatic number is not an upper bound over all graphs with bounded clique number.
+
+Thus the definite named-problem conclusion of this paper is one previously unresolved assertion of Open Problem~6.13. The further theorems strengthen that result and solve related extremal optimization problems, but do not establish every neighboring conjecture in the Aldous--Fill list.
+
+\appendix
+\section{Reproducible finite checks}\label{app:checks}
+The accompanying Python script uses exact rational arithmetic for finite resistance and hitting-time identities. It checks the bridge-tree identity, the comparison under deletion, and the resistance formula for Kemeny's constant against the fundamental-matrix formula on small connected graphs. It also checks the refined accumulated-resistance bound from Lemma~\ref{lem:smallres} and Proposition~\ref{prop:reduction}, the scalar factorization \eqref{eq:cubicgap}, the exponent balance $3-2/7=1+12/7=19/7$, and the path test function on complete and multipartite barbells. The script and its output state the actual tested ranges.
+
+The all-order statements are proved analytically in the body of the paper. The finite checks do not certify a universal asymptotic, the published decomposition theorem, or publication priority. They are included as reproducible checks of normalization and arithmetic.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+This manuscript was developed with substantial assistance from OpenAI's
+ChatGPT (GPT-5.6) as part of an ongoing AI-assisted mathematical research
+project, provisionally called Math Brain. AI assistance contributed to the
+mathematical arguments, literature searches, computations, and writing.
+The argument for the leading term was produced in two recorded research
+runs and received two documented review passes by the same AI reviewer,
+together with exact finite checks; the quantitative refinement, the
+stability theorem and the clique-free extensions were then written and
+self-reviewed in the manuscript-preparation session. The manuscript in its
+present form was read line by line by Anthropic's Claude (Fable~5.1), which
+re-derived the bridge identity, the comparison under deletion, the
+mass--capacity inequality and the lower-bound test function independently,
+checked the cited decomposition theorem and the original problem statement
+against their sources, reproduced the accompanying exact checks, ran the
+large-order checks in the source package, and machine-checked
+identity~\eqref{eq:cubicgap} in Lean~4; its report accompanies the source
+package. None of these review passes is an independent referee report,
+human peer review, or a formal verification of the asymptotic theorem. The
+author directed the project and is responsible for decisions concerning
+dissemination. The present version is a research draft for further
+mathematical review.
+
+\section*{Data and code availability}
+No empirical data are used. The complete \LaTeX{} source, the exact-arithmetic
+verification script with its recorded output, a large-order spectral check
+of the barbell families with the exact maxima over all connected graphs of
+order at most seven, the Lean~4 certificate of identity~\eqref{eq:cubicgap},
+and the audit report accompany the manuscript. The proofs do not depend on
+numerical experimentation. The development archive is maintained in the
+author's private repository \texttt{yspennstate/math-open-problems}; public
+repository access is not asserted.
+
+\begin{thebibliography}{10}
+\bibitem{AF}
+D.~Aldous and J.~A.~Fill, \emph{Reversible Markov Chains and Random Walks on Graphs}, unfinished monograph, 2002; recompiled 2014. Chapter~6, Section~6.3.2, Open Problems~6.13 and~6.14. \url{https://www.stat.berkeley.edu/~aldous/RWG/book.html}.
+\bibitem{AALG}
+V.~L.~Alev, N.~Anari, L.~C.~Lau and S.~Oveis Gharan, \emph{Graph clustering using effective resistance}, in 9th Innovations in Theoretical Computer Science Conference (ITCS 2018), LIPIcs \textbf{94} (2018), 41:1--41:16. \href{https://doi.org/10.4230/LIPIcs.ITCS.2018.41}{doi:10.4230/LIPIcs.ITCS.2018.41}.
+\bibitem{ACTT}
+S.~G.~Aksoy, F.~Chung, M.~Tait and J.~Tobin, \emph{The maximum relaxation time of a random walk}, Adv. Appl. Math. \textbf{101} (2018), 1--14. \href{https://doi.org/10.1016/j.aam.2018.07.002}{doi:10.1016/j.aam.2018.07.002}.
+\bibitem{Breen}
+J.~Breen, S.~Butler, N.~Day, C.~DeArmond, K.~Lorenzen, H.~Qian and J.~Riesen, \emph{Computing Kemeny's constant for a barbell graph}, Electron. J. Linear Algebra \textbf{35} (2019). \href{https://doi.org/10.13001/ela.2019.5175}{doi:10.13001/ela.2019.5175}.
+\bibitem{Faught}
+N.~Faught, M.~Kempton and A.~Knudson, \emph{A 1-separation formula for the graph Kemeny constant and Braess edges}, J. Math. Chem. \textbf{60} (2022), 49--69. \href{https://doi.org/10.1007/s10910-021-01294-8}{doi:10.1007/s10910-021-01294-8}.
+\bibitem{MS}
+T.~S.~Motzkin and E.~G.~Straus, \emph{Maxima for graphs and a new proof of a theorem of Turan}, Canad. J. Math. \textbf{17} (1965), 533--540. \href{https://doi.org/10.4153/CJM-1965-053-6}{doi:10.4153/CJM-1965-053-6}.
+\bibitem{Abiad}
+A.~Abiad, A.~Carmona, A.~M.~Encinas, E.~Ghorbani, M.~J.~Jimenez and A.~Samperio, \emph{Kemeny's constant via matrix compression and eigenvalue interlacing}, preprint, arXiv:2609.17481 (2026). \url{https://arxiv.org/abs/2609.17481}.
+\bibitem{LiSunYang}
+W.~Li, W.~Sun and Y.~Yang, \emph{On two conjectures concerning Kemeny's constant of graphs}, preprint, arXiv:2608.08797 (2026). \url{https://arxiv.org/abs/2608.08797}.
+\bibitem{Zhu}
+H.~Zhu, \emph{The maximum relaxation time of a random walk on regular graphs}, preprint, arXiv:2609.06818v1 (2026). \url{https://arxiv.org/abs/2609.06818v1}.
+\end{thebibliography}
+\end{document}

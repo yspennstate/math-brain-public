@@ -1,0 +1,82 @@
+{
+  "target": "P0017",
+  "title": "Dimension-free log-concave Poincare or Cheeger constant",
+  "historical_ranking_date": "2026-09-07",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN; recent primary preprints claim a complete solution",
+  "novelty_claim": false,
+  "exact_statement": {
+    "quantifiers": "There is a universal C>0 such that for every n>=1 and every full-dimensional isotropic log-concave probability measure mu on R^n, CP(mu)<=C.",
+    "normalization": "E_mu X=0 and Cov_mu(X)=I_n. CP is the smallest c for Var_mu(f)<=c integral |grad f|^2 dmu for locally Lipschitz f in L2(mu) of finite Dirichlet energy.",
+    "equivalent_covariance_form": "For a full-dimensional log-concave mu with covariance Sigma, ||Sigma||op<=CP(mu)<=C||Sigma||op.",
+    "cheeger_form": "A universal positive lower bound for the Euclidean Cheeger constant in isotropic position; equivalence uses log-concavity and the appropriate reverse Cheeger/Buser theorem, not Cheeger alone."
+  },
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2603.29571v1",
+      "arxiv": "2603.29571v1",
+      "location": "Entry 13, Conjecture 30",
+      "license": "cc-by-4.0",
+      "statement": "Cheeger(mu)>=c/sqrt(||Cov(mu)||op) uniformly over log-concave laws",
+      "source_status": "dated problem statement, not a current openness certificate"
+    },
+    {
+      "url": "https://arxiv.org/html/2610.05474v1",
+      "arxiv": "2610.05474v1",
+      "authors": [
+        "Pierre Bizeul",
+        "Boaz Klartag",
+        "Joseph Lehec"
+      ],
+      "submitted": "2026-10-04",
+      "location": "Theorem 1.1; equations (5)-(6)",
+      "claim": "dimension-free CP for all isotropic log-concave probabilities",
+      "independent_mathematical_audit": "not completed"
+    },
+    {
+      "url": "https://arxiv.org/html/2610.07728v1",
+      "arxiv": "2610.07728v1",
+      "authors": [
+        "Krishnakumar Balasubramanian",
+        "Shiva Kasiviswanathan"
+      ],
+      "submitted": "2026-10-06",
+      "claim": "dimension-free CP and Cheeger bound",
+      "independent_mathematical_audit": "not completed"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2303.14938",
+      "arxiv": "2303.14938",
+      "authors": [
+        "Boaz Klartag"
+      ],
+      "submitted": "2023-03-27",
+      "claim": "historical logarithmic approximation, not a current openness certificate"
+    }
+  ],
+  "owner_prior_work_check": {
+    "ranking": "2026-09-07 P0017 row 548: attempted_un",
+    "exact_problem_record": "brain_bundle_C006p01.json entry op-p0017",
+    "exact_attempt_record": "brain_bundle_C006a04.json entry at-p0017: Gaussian-only Hermite expansion, author-checked, no full solution",
+    "H_I_attempts": "Targeted P0017/KLS/Kannan/Poincare search found no P0017 full-proof record in the named H/I attempt folders",
+    "lean_prior": "Targeted reads locate dated ranked list only for this target; no actual formal theorem receipt identified",
+    "team_O": "TEAM_BOARD.md line 553 has historical listing; named triad claims are disjoint",
+    "canonical_repository": "No SQLite file found by targeted filename lookup; local has named subdirectories and no immediate files. Canonical store location unresolved; benchmark/evaluation subdirectories were not opened.",
+    "retirement_certification": "No owner full-solution or retirement certificate found in these narrowly named records; not an exhaustive claim"
+  },
+  "independent_derivation_before_peer_proof": "INDEPENDENT_DERIVATION.md saved before any paired proof; POSTERIOR_BRIDGE_CHECK.md saved after statement-only packet and before w357/ATTEMPT.md",
+  "paired_proof_read": "w357/ATTEMPT.md: L1-L6 independently audited KEEP at stated scope; strict nonlinear gap remains",
+  "independent_math_receipts": {
+    "reviewer": "w359",
+    "scalar_claims": "~/brain_workers/w359/REVIEW_w358.md",
+    "posterior_and_gram": "~/brain_workers/w359/REVIEW_w358_POSTERIOR.md",
+    "kept_claims": [
+      "w358-S1.3",
+      "w358-S1.4",
+      "w358-S1.5",
+      "w358-S1.6",
+      "w358-S1.8"
+    ],
+    "not_certified": "full October proof manuscripts, whole bundle/edge admission, or compact truncation corollary"
+  }
+}

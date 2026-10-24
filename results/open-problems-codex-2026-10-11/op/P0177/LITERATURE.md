@@ -1,0 +1,267 @@
+# Literature status
+Search date: 2026-10-11. API failures are recorded, not interpreted as negative searches.
+
+- arxiv: https://export.arxiv.org/api/query?search_query=all%3A%22Brownian%22%20AND%20all%3A%22mode%22%20AND%20all%3A%22free%22&max_results=30
+  OK 69370 bytes
+
+- arxiv_source: https://export.arxiv.org/api/query?id_list=1710.08240
+  OK 2200 bytes
+
+- openalex: https://api.openalex.org/works?search=Large%20time%20unimodality%20classical%20free%20Brownian&per-page=30
+  <HTTPError 429: 'Too Many Requests'>
+
+- crossref: https://api.crossref.org/works?query=Brownian%20mode%20location%20Hasebe%20Ueda&rows=30
+  OK 162667 bytes
+
+- semantic: https://api.semanticscholar.org/graph/v1/paper/search?query=Brownian%20unimodality%20mode&limit=30&fields=title,year,authors,url,abstract
+  <HTTPError 429: ''>
+
+- github: https://api.github.com/search/repositories?q=Brownian%20mode%20unimodality
+  OK 55 bytes
+
+- arxiv_unimodal: https://export.arxiv.org/api/query?search_query=all%3Aunimodality%20AND%20all%3ABrownian&max_results=50&sortBy=lastUpdatedDate&sortOrder=descending
+  OK 38855 bytes
+
+- openalex_doi: https://api.openalex.org/works/https://doi.org/10.30757/ALEA.v15-15
+  <HTTPError 429: 'Too Many Requests'>
+
+- openalex_retry: https://api.openalex.org/works?search=Brownian%20unimodality&per_page=30
+  <HTTPError 429: 'Too Many Requests'>
+
+- semantic_citations: https://api.semanticscholar.org/graph/v1/paper/ARXIV:1710.08240/citations?fields=title,year,abstract&limit=100
+  OK 5825 bytes
+
+- openalex_citations: https://api.openalex.org/works?filter=cites:W2765978315&per_page=100
+  <HTTPError 429: 'Too Many Requests'>
+
+## arXiv unimodality/Brownian results
+http://arxiv.org/abs/2609.36339v1 Bridging cone-beam CT and MRI to stopping power ratio maps: a modality-agnostic Brownian bridge approach to support robust adaptive proton therapy
+Purpose: Adaptive proton therapy (APT) relies on routine offline CT simulations for updated anatomy. We present a modality-agnostic regularized Brownian bridge (rBBrg) framework to deterministically predict stopping power ratio (SPR) maps from CBCTs or MRIs. Methods: rBBrg consisted of (1) generation mapping where a Brownian bridge predicted SPR from input and (2) reconstruction mapping where a cGAN reconstructed input from predicted SPR. Class embedding was adopted for modality conditioning. Efficient, deterministic prediction was achieved via one-step sampling. Unimodality rBBrg and ResNet were implemented for comparison. Matched-pair planning CT-CBCT (n=37) and CT-MRI (n=21) from head-and-neck cancer patients were evaluated. A calibration phantom was scanned to establish Hounsfield look-up table for real SPR. Predicted SPR maps were evaluated via mean absolute error (MAE), peak-signal-to-noise ratio and structural similarity against ground truth with demonstration of dosimetric performance. Results: For CBCT-SPR synthesis, most metrics were comparable across models (p>=0.05). Modality-agnostic rBBrg outperformed ResNet in MAEbone (0.059 vs 0.067, difference=11%, p<0.05) and showed lower MAEexternal than ResNet (0.038 vs 0.040, p=0.05). Modality-agnostic and unimodality rBBrg were comparable (p>0.05). Qualitatively, both rBBrg better preserved anatomical fidelity than ResNet. For MRI-SPR synthesis, performance was overall comparable across models (p>0.05). Modality-agnostic rBBrg obtained MAEexternal=0.057. Dose calculation comparisons between real and CBCT-predicted SPR were higher in modality-agnostic rBBrg predictions compared to ResNet with gamma pass rate=98.8%/99.3% vs 94.5%/96.9% at 2 mm/2%, respectively. Conclusion: A novel modality-agnostic rBBrg model was developed to generate high fidelity, deterministic SPR from CBCT or MRI to support efficient and flexible APT workflow.
+
+http://arxiv.org/abs/2602.11380v1 Chemo Hydrodynamic Transceivers for the Internet of Bio-Nano Things, Modeling the Joint Propulsion Transmission trade-off
+The Internet of Bio-Nano Things (IoBNT) requires mobile nanomachines that navigate complex fluids while exchanging molecular signals under external supervision. We introduce the chemo-hydrodynamic transceiver, a unified model for catalytic Janus particles in which an external optical control simultaneously drives molecular emission and active self-propulsion. Unlike common abstractions that decouple mobility and communication, we derive a stochastic channel model that captures their physicochemical coupling and shows that actuation-induced distance jitter can dominate the received-signal variance, yielding a fundamental trade-off: stronger actuation increases emission but can sharply reduce reliability through motion-induced fading. Numerical results reveal a unimodal reliability profile with a critical actuation level beyond which the signal-to-noise ratio collapses, and an optimal control level that scales approximately linearly with link distance. Compared with Brownian-mobility baselines, the model exposes a pronounced estimation gap: neglecting active motility noise can underestimate the bit error probability by orders of magnitude. These findings provide physical-layer guidelines for mobility-aware IoBNT protocol design and closed-loop control of nanorobotic swarms.
+
+http://arxiv.org/abs/2511.08956v1 Towards a characterization of elliptic Harnack inequality for jump processes
+Let $X$ be an isotropic unimodal Lévy jump process on $\mathbb{R}^d$. We develop probabilistic methods which in many cases allow us to determine whether $X$ satisfies the elliptic Harnack inequality (EHI), by looking only at the jump kernel of $X$, and its truncated second moments. Both our positive results and our negative results can be applied to subordinated Brownian motions (SBMs) in particular. We produce the first known example of an SBM that does \textit{not} satisfy EHI. We show that for many SBMs that were previously known to satisfy EHI (such as the geometric stable process, the iterated geometric stable process, and the relativistic geometric stable process), bounded perturbations of them also satisfy EHI (which was not previously clear). We show that certain SBMs with Laplace exponent $φ(λ) = \tildeΩ(λ)$ satisfy EHI, which previous methods were unable to determine.
+
+http://arxiv.org/abs/2507.18862v2 Active particles in power-law potentials: steady state distributions and shape transitions
+We study the stationary states of an active Brownian particle (ABP) and run-and-tumble particle (RTP) in two dimensional power-law potentials, in the limit where translational diffusion is negligible. The potential energy of the particle has the form $U(r)\propto r^{n}$, where $n\geq 2$ and even. In two dimensions, we derive the exact equations for the positional probability distribution $φ({\bf r})$ of ABP ($n\geq 2)$ and RTP ($n=2$), whose solutions are obtained under the assumption that the particle's orientation angle is Gaussian. Both analytical and numerical results show that, in all cases, $φ({\bf r})$ has compact support and undergoes a phase transition-like shape change as a function of the trap strength. For ABP, our theory predicts a continuous transition in shape for $n=2$ and a discontinuous transition for $n>2$, both of which agree with the simulation results. Simulations suggest the existence of both types of shape transition in the case of RTP as well. For ABP, in the strongly active regime, the orientational probability distribution is unimodal near the outer boundary but becomes bimodal towards the interior, signifying a transition from predominantly radial orientation to orbiting motion. In RTP, the analogous shape transition in the orientational distribution is almost absent.
+
+http://arxiv.org/abs/2209.09184v2 Stationary states of an active Brownian particle in a harmonic trap
+We study the stationary states of an over-damped active Brownian particle (ABP) in a harmonic trap in two dimensions, via mathematical calculations and numerical simulations. In addition to translational diffusion, the ABP self-propels with a certain velocity, whose magnitude is constant, but its direction is subject to Brownian rotation. In the limit where translational diffusion is negligible, the stationary distribution of the particle's position shows a transition between two different shapes, one with maximum and the other with minimum density at the centre, as the trap stiffness is increased. We show that this non-intuitive behaviour is captured by the relevant Fokker-Planck equation, which, under minimal assumptions, predicts a continuous ``phase transition" between the two different shapes. As the translational diffusion coefficient is increased, both these distributions converge into the equilibrium, Boltzmann form. Our simulations support the analytical predictions, and also show that the probability distribution of the orientation angle of the self-propulsion velocity undergoes a transition from unimodal to bimodal forms in this limit. We also extend our simulations to a three dimensional trap, and find similar behaviour.
+
+http://arxiv.org/abs/2209.09778v3 Counterexamples to elliptic Harnack inequality for isotropic unimodal Lévy processes
+Until now, it has been an open question whether every subordinated Brownian motion (SBM) satisfies the elliptic Harnack inequality (EHI). In this paper, we show that the answer is ``no." In our first theorem, we show that if $X=(X_t)_{t \geq 0}$ is an isotropic unimodal Lévy process, and $X$ satisfies certain criteria (involving the jump kernel of $X$ and the distribution of the location upon first exiting balls of various sizes) then $X$ does not satisfy EHI. (Note that the class of isotropic unimodal Lévy processes is larger than the class of SBMs.) We then check that many specific SBMs do indeed satisfy the criteria, and thus do not satify EHI.
+
+http://arxiv.org/abs/2201.01244v1 The Parental Active Model: a unifying stochastic description of self-propulsion
+We propose a new overarching model for self-propelled particles that flexibly generates a full family of "descendants". The general dynamics introduced in this paper, which we denote as "parental" active model (PAM), unifies two special cases commonly used to describe active matter, namely active Brownian particles (ABPs) and active Ornstein-Uhlenbeck particles (AOUPs). We thereby document the existence of a deep and close stochastic relationship between them, resulting in the subtle balance between fluctuations in the magnitude and direction of the self-propulsion velocity. Besides illustrating the relation between these two common models, the PAM can generate additional offspring, interpolating between ABP and AOUP dynamics, that could provide more suitable models for a large class of living and inanimate active matter systems, possessing characteristic distributions of their self-propulsion velocity. Our general model is evaluated in the presence of a harmonic external confinement. For this reference example, we present a two-state phase diagram which sheds light on the transition in the shape of the positional density distribution, from a unimodal Gaussian for AOUPs to a Mexican-hat-like profile for ABPs.
+
+http://arxiv.org/abs/2009.13848v1 Log-unimodality for free positive multiplicative Brownian motion
+We prove that the marginal law $σ_{t}\boxtimesν$ of free positive multiplicative Brownian motion is log-unimodal for all $t>0$ if $ν$ is a multiplicatively symmetric log-unimodal distribution, and that $σ_{t}\boxtimesν$ is log-unimodal for sufficiently large $t$ if $ν$ is supported on a suitably chosen finite interval. Counterexamples are given when $ν$ is not assumed to be symmetric or having a bounded support.
+
+http://arxiv.org/abs/1710.08240v2 Large time unimodality for classical and free Brownian motions with initial distributions
+We prove that classical and free Brownian motions with initial distributions are unimodal for sufficiently large time, under some assumption on the initial distributions. The assumption is almost optimal in some sense. Similar results are shown for a symmetric stable process with index 1 and a positive stable process with index $1/2$. We also prove that free Brownian motion with initial symmetric unimodal distribution is unimodal, and discuss strong unimodality for free convolution.
+
+http://arxiv.org/abs/1505.06876v6 Fluctuation Spectra and Force Generation in Non-equilibrium Systems
+Many biological systems are appropriately viewed as passive inclusions immersed in an active bath: from proteins on active membranes to microscopic swimmers confined by boundaries. The non-equilibrium forces exerted by the active bath on the inclusions or boundaries often regulate function, and such forces may also be exploited in artificial active materials. Nonetheless, the general phenomenology of these active forces remains elusive. We show that the fluctuation spectrum of the active medium, the partitioning of energy as a function of wavenumber, controls the phenomenology of force generation. We find that for a narrow, unimodal spectrum, the force exerted by a non-equilibrium system on two embedded walls depends on the width and the position of the peak in the fluctuation spectrum, and oscillates between repulsion and attraction as a function of wall separation. We examine two apparently disparate examples: the Maritime Casimir effect and recent simulations of active Brownian particles. A key implication of our work is that important non-equilibrium interactions are encoded within the fluctuation spectrum. In this sense the noise becomes the signal.
+
+http://arxiv.org/abs/1606.06658v3 On the Quasi-Stationary Distribution of the Shiryaev-Roberts Diffusion
+We consider the diffusion $(R_t^r)_{t\ge0}$ generated by the equation $dR_t^r=dt+μR_t^r dB_t$ with $R_0^r\triangleq r\ge0$ fixed, and where $μ\neq0$ is given, and $(B_t)_{t\ge0}$ is standard Brownian motion. We assume that $(R_t^r)_{t\ge0}$ is stopped at $\mathcal{S}_A^r\triangleq\inf\{t\ge0\colon R_t^r=A\}$ with $A>0$ preset, and obtain a closed-from formula for the quasi-stationary distribution of $(R_t^r)_{t\ge0}$, i.e., the limit $Q_A(x)\triangleq\lim_{t\to+\infty}\Pr(R_t^r\le x|\mathcal{S}_A^r>t)$, $x\in[0,A]$. Further, we also prove $Q_A(x)$ to be unimodal for any $A>0$, and obtain its entire moment series. More importantly, the pair $(\mathcal{S}_A^r,R_t^r)$ with $r\ge0$ and $A>0$ is the well-known Generalized Shiryaev-Roberts change-point detection procedure, and its characteristics for $r\sim Q_A(x)$ are of particular interest, especially when $A>0$ is large. In view of this circumstance we offer an order-three large-$A$ asymptotic approximation of $Q_A(x)$ valid for all $x\in[0,A]$. The approximation is rather accurate even if $A$ is lower than what would be considered "large" in practice.
+
+http://arxiv.org/abs/1505.01184v2 Intermediate-Level Crossings of a First-Passage Path
+We investigate some simple and surprising properties of a one-dimensional Brownian trajectory with diffusion coefficient $D$ that starts at the origin and reaches $X$ either: (i) at time $T$ or (ii) for the first time at time $T$. We determine the most likely location of the first-passage trajectory from $(0,0)$ to $(X,T)$ and its distribution at any intermediate time $t<T$. A first-passage path typically starts out by being repelled from its final location when $X^2/DT\ll 1$. We also determine the distribution of times when the trajectory first crosses and last crosses an arbitrary intermediate position $x<X$. The distribution of first-crossing times may be unimodal or bimodal, depending on whether $X^2/DT\ll 1$ or $X^2/DT\gg 1$. The form of the first-crossing probability in the bimodal regime is qualitatively similar to, but more singular than, the well-known arcsine law.
+
+http://arxiv.org/abs/1403.0076v2 Unavoidable collections of balls for processes with isotropic unimodal Green function
+Let us suppose that we have a right continuous Markov semigroup on $R^d$, $d\ge 1$, such that its potential kernel is given by convolution with a function $G_0=g(|\cdot|)$, where $g$ is decreasing, has a mild lower decay property at zero, and a very weak decay property at infinity. This captures not only the Brownian semigroup (classical potential theory) and isotropic $α$-stable semigroups (Riesz potentials), but also more general isotropic Lévy processes, where the characteristic function has a certain lower scaling property, and various geometric stable processes. There always exists a corresponding Hunt process. A subset $A$ of $R^d$ is called unavoidable, if the process hits $A$ with probability $1$, wherever it starts. It is known that, for any locally finite union of pairwise disjoint balls $B(z,r_z)$, $z\in Z$, which is unavoidable, $\sum_{z\in Z} g(|z|)/g(r_z)=\infty$. The converse is proven assuming, in addition, that, for some $\varepsilon>0$, $|z-z'|\ge \varepsilon |z| (g(|z|)/g(r_z))^{1/d}$, whenever $z,z'\in Z$, $z\ne z'$. It also holds, if the balls are regularly located, that is, if their centers keep some minimal mutual distance, each ball of a certain size intersects $Z$, and $r_z=g(φ(|z|))$, where $φ$ is a decreasing function. The results generalize and, exploiting a zero-one law, simplify recent work by A. Mimica and Z. Vondracek.
+
+http://arxiv.org/abs/1306.5433v2 Unavoidable sets and harmonic measures living on small sets
+Given a connected open set $U\ne\emptyset$ in $ R^d$, $d\ge 2$, a relatively closed set $A$ in $U$ is called \emph{unavoidable in $U$}, if Brownian motion, starting in $x\in U\setminus A$ and killed when leaving $U$, hits $A$ almost surely or, equivalently, if the harmonic measure for $x$ with respect to $U\setminus A$ has mass $1$ on $A$. First a new criterion for unavoidable sets is proven which facilitates the construction of smaller and smaller unavoidable sets in $U$. Starting with an arbitrary champagne subdomain of $U$ (which is obtained omitting a locally finite union of pairwise disjoint closed balls $\overline B(z, r_z)$, $z\in Z$, satisfying $\sup_{z\in Z} r_z/\mbox{dist}(z,U^c)<1$), a combination of the criterion and the existence of small nonpolar compact sets of Cantor type yields a set $A$ on which harmonic measures for $U\setminus A$ are living and which has Hausdorff dimension $d-2$ and, if $d=2$, logarithmic Hausdorff dimension $1$. This can be done as well for Riesz potentials (isotropic $α$-stable processes) on Euclidean space and for censored stable processes on $C^{1,1}$ open subsets. Finally, in the very general setting of a balayage space $(X,\mathcal W)$ on which the function $1$ is harmonic (which covers not only large classes of second order partial differential equations, but also non-local situations as, for example, given by Riesz potentials, isotropic unimodal Lévy processes or censored stable processes) a construction of champagne subsets $X\setminus A$ of $X$ with small unavoidable sets $A$ is given which generalizes (and partially improves) recent constructions in the classical case.
+
+http://arxiv.org/abs/1306.5909v4 Unavodiable collections of balls for isotropic Lévy processes
+A collection $\{\bar{B}(x_n,r_n)\}_{n\ge 1}$ of pairwise disjoint balls in the Euclidean space $\R^d$ is said to be avoidable with respect to a transient process $X$ if the process with positive probability escapes to infinity without hitting any ball. In this paper we study sufficient and necessary conditions for avoidability with respect to unimodal isotropic Lévy processes satisfying a certain scaling hypothesis. These conditions are expressed in terms of the characteristic exponent of the process, or alternatively, in terms of the corresponding Green function. We also discuss the same problem for a random collection of balls. The results are generalization of several recent results for the case of Brownian motion.
+
+http://arxiv.org/abs/1305.0637v1 Trajectory-to-trajectory fluctuations in first-passage phenomena in bounded domains
+We study the statistics of the first passage of a random walker to absorbing subsets of the boundary of compact domains in different spatial dimensions. We describe a novel diagnostic method to quantify the trajectory-to-trajectory fluctuations of the first passage, based on the distribution of the so-called uniformity index $ω$, measuring the similarity of the first passage times of two independent walkers starting at the same location. We show that the characteristic shape of $P(ω)$ exhibits a transition from unimodal to bimodal, depending on the starting point of the trajectories. From the study of different geometries in one, two and three dimensions, we conclude that this transition is a generic property of first passage phenomena in bounded domains. Our results show that, in general, the Mean First Passage Time (MFPT) is a meaningful characteristic measure of the first passage behaviour only when the Brownian walkers start sufficiently far from the absorbing boundary. Strikingly, in the opposite case, the first passage statistics exhibit large trajectory-to-trajectory fluctuations and the MFPT is not representative of the actual behaviour.
+
+http://arxiv.org/abs/1209.4537v1 Synchronization and random long time dynamics for mean-field plane rotators
+We consider the natural Langevin dynamics which is reversible with respect to the mean-field plane rotator (or classical spin XY) measure. It is well known that this model exhibits a phase transition at a critical value of the interaction strength parameter K, in the limit of the number N of rotators going to infinity. A Fokker-Planck PDE captures the evolution of the empirical measure of the system as N goes to infinity, at least for finite times and when the empirical measure of the system at time zero satisfies a law of large numbers. The phase transition is reflected in the fact that the PDE for K above the critical value has a stable manifold of stationary solutions, that are equivalent up to rotations. These stationary solutions are actually unimodal densities parametrized by the position of their maximum (the synchronization phase or center). We characterize the dynamics on times of order N and we show substantial deviations from the behavior of the solutions of the PDE. In fact, if the empirical measure at time zero converges as N goes to infinity to a probability measure (which is away from a thin set that we characterize) and if time is speeded up by N, the empirical measure reaches almost instantaneously a small neighborhood of the stable manifold, to which it then sticks and on which a non-trivial random dynamics takes place. In fact the synchronization center performs a Brownian motion with a diffusion coefficient that we compute. Our approach therefore provides, for one of the basic statistical mechanics systems with continuum symmetry, a detailed characterization of the macroscopic deviations from the large scale limit -- or law of large numbers -- due to finite size effects. But the interest for this model goes beyond statistical mechanics, since it plays a central role in a variety of scientific domains in which one aims at understanding synchronization phenomena.
+
+http://arxiv.org/abs/1206.1003v2 First passages in bounded domains: When is the mean first passage time meaningful?
+We study the first passage statistics to adsorbing boundaries of a Brownian motion in bounded two-dimensional domains of different shapes and configurations of the adsorbing and reflecting boundaries. From extensive numerical analysis we obtain the probability P(ω) distribution of the random variable ω=τ_1/(τ_1+τ_2), which is a measure for how similar the first passage times τ_1 and τ_2 are of two independent realisations of a Brownian walk starting at the same location. We construct a chart for each domain, determining whether P(ω) represents a unimodal, bell-shaped form, or a bimodal, M-shaped behaviour. While in the former case the mean first passage time (MFPT) is a valid characteristic of the first passage behaviour, in the latter case it is an insufficient measure for the process. Strikingly we find a distinct turnover between the two modes of P(ω), characteristic for the domain shape and the respective location of absorbing and reflective boundaries. Our results demonstrate that large fluctuations of the first passage times may occur frequently in two-dimensional domains, rendering quite vague the general use of the MFPT as a robust measure of the actual behaviour even in bounded domains, in which all moments of the first passage distribution exist.
+## Semantic Scholar citations
+```json
+{
+  "offset": 0,
+  "data": [
+    {
+      "citingPaper": {
+        "paperId": "4892d8d196cd037ca227bce97f3fd98af17fd421",
+        "title": "On freely quasi-infinitely divisible distributions",
+        "year": 2021,
+        "openAccessPdf": {
+          "url": "https://arxiv.org/pdf/2107.09473",
+          "status": "GREEN",
+          "license": null,
+          "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2107.09473, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+          {
+            "authorId": "94213289",
+            "name": "I. Hotta"
+          },
+          {
+            "authorId": "3387321",
+            "name": "W. Mlotkowski"
+          },
+          {
+            "authorId": "89010833",
+            "name": "Noriyoshi Sakuma"
+          },
+          {
+            "authorId": "47386180",
+            "name": "Yuki Ueda"
+          }
+        ],
+        "abstract": "Inspired by the notion of quasi-infinite divisibility (QID), we introduce and study the class of freely quasi-infinitely divisible (FQID) distributions on $\\mathbb{R}$, i.e. distributions which admit the free L\\'{e}vy-Khintchine-type representation with signed L\\'{e}vy measure. We prove several properties of the FQID class, some of them in contrast to those of the QID class. For example, a FQID distribution may have negative Gaussian part, and the total mass of its signed L\\'{e}vy measure may be negative. Finally, we extend the Bercovici-Pata bijection, providing a characteristic triplet, with the L\\'{e}vy measure having nonzero negative part, which is at the same time classical and free characteristic triplet."
+      }
+    },
+    {
+      "citingPaper": {
+        "paperId": "b0f3b9310e385dc05cc60950fef01088dcfc34e2",
+        "title": "Log-unimodality for free positive\nmultiplicative Brownian motion",
+        "year": 2020,
+        "openAccessPdf": {
+          "url": "https://www.impan.pl/shop/publication/transaction/download/product/114564?download.pdf",
+          "status": "BRONZE",
+          "license": null,
+          "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2009.13848, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+          {
+            "authorId": "2055738916",
+            "name": "Takahiro Hasebe"
+          },
+          {
+            "authorId": "47386180",
+            "name": "Yuki Ueda"
+          },
+          {
+            "authorId": "2110178740",
+            "name": "Jiun-Chau Wang"
+          }
+        ],
+        "abstract": "We prove that the marginal law $\\sigma_{t}\\boxtimes\\nu$ of free positive multiplicative Brownian motion is log-unimodal for all $t>0$ if $\\nu$ is a multiplicatively symmetric log-unimodal distribution, and that $\\sigma_{t}\\boxtimes\\nu$ is log-unimodal for sufficiently large $t$ if $\\nu$ is supported on a suitably chosen finite interval. Counterexamples are given when $\\nu$ is not assumed to be symmetric or having a bounded support."
+      }
+    },
+    {
+      "citingPaper": {
+        "paperId": "9647e90a0a02233f804c69198a6052f5aaac23bc",
+        "title": "The Brown measure of the sum of a self-adjoint element and an elliptic element",
+        "year": 2020,
+        "openAccessPdf": {
+          "url": "https://projecteuclid.org/journals/electronic-journal-of-probability/volume-27/issue-none/The-Brown-measure-of-the-sum-of-a-self-adjoint/10.1214/22-EJP840.pdf",
+          "status": "GOLD",
+          "license": "CCBY",
+          "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2007.06100, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+          {
+            "authorId": "2106134808",
+            "name": "Ching-Wei Ho"
+          }
+        ],
+        "abstract": "We compute the Brown measure of the sum of a self-adjoint element and an elliptic element. We prove that the push-forward of this Brown measure of a natural map is the law of the free convolution of the self-adjoint element and the semicircle law; it is also a push-forward measure of the Brown measure of the sum of the self-adjoint element and a circular element by another natural map. We also study various asymptotic behaviors of this family of Brown measures as the variance of the elliptic element approaches infinity."
+      }
+    },
+    {
+      "citingPaper": {
+        "paperId": "8302baf1caa6ea0bb2e0225be896a3f0094915bd",
+        "title": "Studies on freely infinitely divisible distributions",
+        "year": 2020,
+        "openAccessPdf": {
+          "url": "http://hdl.handle.net/2115/78463",
+          "status": "GREEN",
+          "license": "CCBY"
+        },
+        "authors": [
+          {
+            "authorId": "2497673403",
+            "name": "優基 植田"
+          }
+        ],
+        "abstract": null
+      }
+    },
+    {
+      "citingPaper": {
+        "paperId": "f2abf258ddeac1a91c1ff3be31f8e1bfe68525d6",
+        "title": "Unimodality for free multiplicative convolution with free normal distributions on the unit circle",
+        "year": 2019,
+        "openAccessPdf": {
+          "url": "",
+          "status": "CLOSED",
+          "license": null,
+          "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1903.05327, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+          {
+            "authorId": "2055738916",
+            "name": "Takahiro Hasebe"
+          },
+          {
+            "authorId": "47386180",
+            "name": "Yuki Ueda"
+          }
+        ],
+        "abstract": "We study unimodality for free multiplicative convolution with free normal distributions {λt}t>0 on the unit circle. We give four results on unimodality for μ⊠λt: (1) if μ is a symmetric unimodal distribution on the unit circle then so is μ⊠λt at any time t>0; (2) if μ is a symmetric distribution on T supported on {eiθ:θ∈[−φ,φ]} for some φ∈(0,π2), then μ⊠λt is unimodal for sufficiently large t>0; (3) b⊠λt is not unimodal at any time t>0, where b is the equally weighted Bernoulli distribution on {1,−1}; (4) λt is not freely strongly unimodal for sufficiently small t>0. Moreover, we study unimodality for classical multiplicative convolution, which is useful in proving the above four results."
+      }
+    }
+  ]
+}
+```
+
+- follow-up ho: https://arxiv.org/pdf/2007.06100
+  OK 391753
+
+- follow-up multiplicative: https://arxiv.org/pdf/2009.13848
+  OK 177885
+
+- follow-up circle: https://arxiv.org/pdf/1903.05327
+  OK 279156
+
+- follow-up openalex_resolve: https://api.openalex.org/works?filter=doi:https%3A%2F%2Fdoi.org%2F10.30757%2FALEA.v15-15&per-page=1
+  <HTTPError 429: 'Too Many Requests'>
+
+- follow-up arxiv_modes: https://export.arxiv.org/api/query?search_query=all%3A%22free%20Brownian%22%20AND%20%28all%3Amode%20OR%20all%3Amaximum%20OR%20all%3Alocation%29&max_results=50&sortBy=lastUpdatedDate&sortOrder=descending
+  OK 10522
+
+- OpenAlex DOI citation filter (2026-10-11): https://api.openalex.org/works?filter=cites%3Ahttps%3A//doi.org/10.30757/ALEA.v15-15&per-page=100
+  <HTTPError 429: 'Too Many Requests'>
+
+## Verified source and literature disposition
+
+Takahiro Hasebe and Yuki Ueda, **Large time unimodality for classical and free Brownian motions with initial distributions**, ALEA, Latin American Journal of Probability and Mathematical Statistics **15** (2018), 353--374, DOI **10.30757/ALEA.v15-15**, arXiv:**1710.08240**. Downloaded published PDF: source.pdf; full extracted text: source.txt.
+
+Problem 4.6, journal p.367/PDF p.15, reads (line wrapping normalized, mathematical typography transcribed):
+> Estimate the position of the mode of classical Brownian motion with initial distributions satisfying the assumption (4.13). Our proof shows that for t >= (36/epsilon) log(2alpha), the mode is located in the interval [-sqrt(t)/2, sqrt(t)/2]. How about free Brownian motion?
+
+Hypothesis (4.13), Theorem 4.3, journal p.364: alpha := integral_R exp(epsilon x^2) dmu(x) < infinity for some epsilon > 0. The published source's Proposition 3.4/Theorem 1.2(2) shows arbitrary tail integrability does NOT guarantee eventual free unimodality. Therefore the free conclusion here is a unique global maximum, with smaller local maxima allowed.
+
+Relevant exact references and disposition:
+
+- Philippe Biane, **On the free convolution with a semi-circular distribution**, Indiana University Mathematics Journal **46** (1997), 705--718, DOI 10.1512/iumj.1997.46.1467. Background formula, directly reproduced in the checked Hasebe--Ueda source equations (2.8)--(2.14), pp.356--357. This is not a later solution to Problem 4.6.
+- Takahiro Hasebe, Yuki Ueda, Jiun-Chau Wang, **Log-unimodality for free positive multiplicative Brownian motion**, Colloquium Mathematicum **169**(2) (2022), 209--226, DOI **10.4064/cm8413-6-2021**, arXiv:**2009.13848**. Fetched full paper (multiplicative.pdf/.txt); multiplicative rather than additive process, so not a solution of this question.
+- Takahiro Hasebe and Yuki Ueda, **Unimodality for free multiplicative convolution with free normal distributions on the unit circle**, Journal of Operator Theory **85**(1) (2021), 21--43, DOI **10.7900/jot.2019mar23.2264**, arXiv:**1903.05327**. Full paper fetched (circle.pdf/.txt). Different objects and no estimate of the additive real-line global modes under (4.13).
+- Ching-Wei Ho, **The Brown measure of the sum of a self-adjoint element and an elliptic element**, Electronic Journal of Probability **27** (2022), pp.1--32, DOI **10.1214/22-EJP840**, arXiv:**2007.06100**, checked v2 dated 23 August 2022 (ho.pdf/.txt). Theorems 4.1 and 5.1 give graph/domain asymptotics for bounded self-adjoint initial variables and elliptic Brown measures. This is a relevant large-variance lead; it does not state and prove both requested mode estimates under the source's unbounded exponential-moment class.
+- Ikkei Hotta, Wojciech Mlotkowski, Noriyoshi Sakuma, Yuki Ueda, **On freely quasi-infinitely divisible distributions**, arXiv:**2107.09473** (2021). Identified in source's Semantic Scholar citation list; abstract concerns signed free Levy measures, not mode location. No solution claimed from it.
+- Yuki Ueda, **Studies on freely infinitely divisible distributions**, Hokkaido University dissertation (2020), persistent handle **http://hdl.handle.net/2115/78463**. Listed in the citation API; not treated as a proved solution based on title alone.
+
+Semantic Scholar's source citation endpoint returned five records, saved in semantic_citations.response. arXiv unimodality/Brownian query returned 18 entries (listed above), of which the source and positive multiplicative follow-up are the directly relevant ones. Crossref returned source plus the two multiplicative follow-ups. GitHub repository search returned total_count=0. OpenAlex consistently returned HTTP 429 on search, source DOI lookup, and citation attempts, so its coverage is **unavailable**, not a negative result. The first OpenAlex citation URL used an unverified guessed work ID; that attempt is invalid as a citation search and supplies no evidence. The later DOI-based citation request also failed with 429. Semantic Scholar keyword search also returned 429; its citation endpoint succeeded.
+
+**No exact published solution was identified in these bounded searches. This is not an exhaustive novelty certificate, and SOLVED_IN_LITERATURE is not asserted.** The proof here is independent mathematics checked against the source, not a claim that a paper already contains the answer.
+
+## Prior brain/repository work checked read-only
+
+Read math-store cards for finite-variance global free mode and finite-seventh-moment second-order expansion; recalled topic mistakes; read the full brain node the_free_brownian_mode_moves_six_times_the_classical_one_2026_09_13. The older node explicitly only proved compact support. Read origin/master:probability_campaigns/codex_pool_2026-10-10/team_O/w344/P0177_general_global_mode.md using git show, saved as prior_0.md; it already contains a finite-variance proof with threshold 1024A and the expansion. Our fixed-height concavity proof independently supplies threshold 7A, and direct positive-time Taylor estimates replace its one-sided C3 extension. Read the scope discussion in prior_1.md: it notes that "estimate the position" specifies no sharp accuracy or time threshold. This is acknowledged in ATTEMPT.md, with precise proved estimates and no claim of an optimal bound. Intake and prior measurement/result JSONL rows were searched read-only; prior independent audit was still recorded PENDING.
+
+- Crossref exact DOI metadata (2026-10-11): https://api.crossref.org/works/10.1214/22-EJP840; OK. Saved ho_crossref.response.

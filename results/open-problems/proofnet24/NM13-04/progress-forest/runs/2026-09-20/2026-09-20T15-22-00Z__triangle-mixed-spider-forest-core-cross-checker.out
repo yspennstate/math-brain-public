@@ -1,0 +1,20 @@
+core_mixed_orbits 11
+coremixed 1 reg 1 disc 0 fail 0
+coremixed 2 reg 2 disc 0 fail 0
+coremixed 3 reg 3 disc 0 fail 0
+coremixed 4 reg 4 disc 0 fail 0
+coremixed 5 reg 5 disc 0 fail 0
+coremixed 6 reg 6 disc 0 fail 0
+coremixed 7 reg 7 disc 0 fail 0
+coremixed 8 reg 8 disc 0 fail 0
+coremixed 9 reg 9 disc 0 fail 0
+coremixed 10 reg 10 disc 0 fail 0
+coremixed 11 reg 11 disc 0 fail 0
+COREMIXED_FINAL 11 0 0
+CORECORE_FULL_STRIP_PASS
+CROSS_SEED_LIFT L2t=L2
+CROSS_SEED_LIFT L1t=L1+2L2
+CROSS_SEED_LIFT C0t=C0+L1+L2+k(1-6h)
+since h<=1/8, 1-6h>=1/4 >0
+TRIANGLE_CORE_AND_CROSS_FULL_STRIP_PASS
+ALL_EXACT_CHECKS_PASS

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B08",
+  "run_id": "20260923T032334Z-account03-B08-qform-diffuse-r26",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "90ac6c1c66d8fdc1bb5af6028c01a5a4309791cc",
+  "control_commit_prepublication_refresh": "e07cdf5f3bb8168cf5f8f2519b8eecf75da2e249",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "04f2ba32ba1b84f970789a4b0fd9e305f6010ffe",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260923T032334Z-account03-B08-qform-diffuse-r26/REPORT.md",
+    "addendum_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260923T032334Z-account03-B08-qform-diffuse-r26/ADDENDUM_PREPUBLICATION.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260923T032334Z-account03-B08-qform-diffuse-r26/CHECKS.txt",
+    "checks_status": "QFORM_B08_R26_CHECK_PASS"
+  },
+  "prior_b08_state_consumed": {
+    "latest_prior_run": "20260923T012351Z-account03-B08-qform-diffuse-r26",
+    "latest_prior_commit": "8c04ccbc1f032d1a82ad505223f08e3c344bde74",
+    "relation": "prior run compiled q=1,q=2,q=3 overlap packets and paid exact-rank-three q=0; current run complements it by routing arbitrary-rank q=0 volume-leverage failure"
+  },
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "statement": "Fractional third-volume Fourier theorem: if row volume marginals alpha_i<=q/2, 1<=q<3/2, then continuous density <=3e/((3-2q)sqrt(q))*Delta3^(-1/6), retaining arbitrary same-side/outside curvature."
+    },
+    {
+      "source": "yspennstate/math-open-problems@d30dba6db19d1eceabde6222c84a5b57a85506f0",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260923T002108Z-account03-B08-qform-diffuse-r25/REPORT.md",
+      "statement": "For selected-three-eigenvector leverage <=1/48, q=0 Pluecker bank supplies an actual original-coordinate cross block with Delta3>=L^6/2304."
+    },
+    {
+      "source": "account03/B07 r21",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260923T004111Z-account03-B07-qform-r21/REPORT.md",
+      "statement": "Exact anchored deshearing T=b C2(D)-L_c D iota_r and random physical coloring converting transverse HS mass G to four disjoint original-coordinate banks with CRF>=G/8."
+    },
+    {
+      "source": "yspennstate/math-open-problems@ac54330d3df42a48098ef7c704ac268382accd7c",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260923T030701Z-account03-B07-qform-r22/REPORT.md",
+      "statement": "Four-bank CRF>kappa compiler: large star, low rank-two tail, paid continuous volume branch, or two-sided bounded-rank physical core."
+    }
+  ],
+  "new_results": [
+    "QFORM-VOLUME-BILEVERAGE-ANCHOR-v1: if neither row nor column third-volume marginals meet q/2, a row-column anchor carries > (q-1)Delta3 of the aggregate third-minor mass.",
+    "QFORM-THIRD-VOLUME-TO-HUB-OR-T4-v1: every cross block with Delta3>0 has either the fractional-volume continuous exit, |b|sqrt(E2(D))>(1/2)sqrt((q-1)Delta3), or four disjoint original-coordinate banks with CRF>(1/16)sqrt((q-1)Delta3).",
+    "QFORM-DIFFUSE-Q0-ROUTER-v1: on r25 q=0 at q=4/3, either continuous density <77/L, or |b|sqrt(E2(D))>L^3/(96sqrt(3)), or CRF>L^3/(768sqrt(3)).",
+    "Applying B07 r22 to the four-bank branch with Lambda=L^2, theta=1/16 gives either CR>L^2; dist_F(core,rank<=2)<F/4; continuous density <95732/L; or a matched rank<3600 bicore with original-row/column core norms >L/(46080sqrt(6))."
+  ],
+  "partner_result_applied": {
+    "designated_partner": "account04/B08",
+    "designated_partner_status": "NO_COMPLETED_CURRENT_QFORM_CANONICAL_ARTIFACT_FOUND_AT_FRESH_CHECK",
+    "compatible_completed_account04_result": "account04/B18 sharp product-projection/rearrangement theorem",
+    "source_commit": "ce50e74f705c49f66524aa6565d4aa4a9be88061",
+    "actual_inequality": "On the disjoint four-bank large-star alternative CR>L^2, ||p_(c_L^T X_L,r_R^T X_R)||_inf <=2/(CR)<2/L^2. This is a product-linear resource, not a generic curved-pushforward bound."
+  },
+  "unresolved": "Consume the anchored |b|sqrt(E2(D)) resource; pay the large-star branch through a valid curved kernel; pay the rank-two Frobenius tube or bounded-rank bicore; continue the prior q=1,q=2,q=3 overlap currencies. Full QFORM and global continuity remain open.",
+  "full_target_status": "OPEN",
+  "continuity_full_target_status": "OPEN"
+}

@@ -1,0 +1,140 @@
+[
+  {
+    "claim_id": "A060-SINGLETON-AND-MONOTONE-CAP-SHARPNESS",
+    "version": 1,
+    "exact_statement": "For every balanced Boolean h on n<=4 uniform bits, and every antipodally odd Boolean h on n=5, Lambda(h)<=3 ln(2)(I(h)-1). The maximum ratio for non-dictators is 3 ln(2) for n=3,4 and odd n=5. All 224 n=4 equality tables form two NPN orbits: 32 Maj3 juntas and 192 variants of h that returns x3 if x3=x4, otherwise x1 when x3=+1 and x2 when x3=-1; this h has H=3, I=3/2 and singleton coefficients (1/4,1/4,1/2,1/2). For every even m>=2, d=2^-m, paired quadratic bent b, D=1_(y=0), g_m=D+z(b-D), and 0<x<1, 0<B_z(g_m)-L_z(x)<=d log2(1/x). For even m>=4, L_z(x)/B_z(g_m)>=1-log2(1/x)/m. Consequently for every 0<c<1 the supremum L_j(alpha^2)/B_j(g) over genuine balanced-child disjoint compositions with B_j(g)>0 and |alpha|<=1-c is 1; this also admits a sequence alpha->0. The cap coefficient 1 survives disjoint outer tensor products and cannot be reduced using a fixed additive overhead. In contrast, Lambda of a product of two balanced functions is zero and is not tensor additive.",
+    "hypotheses": [
+      "uniform physical input cube and Boolean sign output",
+      "Lambda is singleton-log functional in nats; H,B,L in bits; I ordinary total influence",
+      "finite singleton domains are all balanced n<=4 and all antipodally odd n=5, not all balanced n=5 or all dimensions",
+      "cap L_j(x)=sum_T phi(ahat_T^2,x bhat_T^2), phi in bits; g=a+z_j b",
+      "for coefficient-realization: disjoint input blocks, balanced actual Boolean inner, alpha its queried singleton",
+      "tensor overhead assertion requires sums over selected independent factors and a fixed additive term"
+    ],
+    "statement_sha256": "0df64f03e71ced9466a39fdeadaf526643f29906c97e81cc7ee6b527388229be",
+    "contributors": [
+      "A060; B12 lead supplied sharpness questions and earlier L1/L2 bounds; X009 source credited"
+    ],
+    "proof_source": {
+      "path": "PROOF.md",
+      "sha256": "5f9c1d7150c151db5ea3ca38e616600d70cd85070a3148f56d8f89964751a920",
+      "finite_certificate": "out/integer_certificates.json",
+      "independent_n4_reproduction": "out/reproduction.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "B12-L1-MONOTONE-ERASURE",
+        "version": 1,
+        "scope": "packet monotonicity/concavity, independently reconstructed in this run; cap counterfamily separately derived"
+      },
+      {
+        "claim_id": "A057-COHERENT-ERASURE-SPLIT",
+        "version": 1,
+        "scope": "balanced physical B identity; A087 stage2 independent acceptance; explicit inner examples also derived directly"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_AT_SCOPED_DOMAINS_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Maj3 is the unique singleton-log equality family in n=4",
+      "any universal strict multiplicative L_j(alpha^2)<=kappa(c)B_j(g), kappa(c)<1, based only on |alpha|<=1-c, 0<c<1",
+      "singleton Lambda is additive under products of balanced Boolean functions"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A056",
+      "A057",
+      "A058",
+      "A059",
+      "A019",
+      "A091",
+      "A090",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "B12-L1-MONOTONE-ERASURE",
+    "version": 1,
+    "exact_statement": "Let F=g(h_1,...,h_m) on pairwise disjoint blocks of independent uniform signs, g Boolean on m bits, every h_k Boolean and balanced. Fix a coordinate i in block j; write a_T=ghat(T), b_T=ghat(T+{j}) for T not containing j, q=Inf_j(g)=sum_T b_T^2, alpha=hhat_j({i}), phi(u,v)=(u+v)ln(u+v)-u ln u-v ln v and L_j(x)=sum_T phi(a_T^2, x b_T^2) (nats). Then L_j is nondecreasing and concave on [0,1] with L_j'(x)=sum_T b_T^2 ln(1+a_T^2/(x b_T^2)) and L_j(1)=B_j(g); hence L_j(alpha^2) <= min{B_j(g), alpha^2 B_j(g)+q alpha^2 ln(1/alpha^2)} and, by the A057 erasure split, B_i(F) <= q B_i(h_j) + min{B_j(g), alpha^2 B_j(g)+q alpha^2 ln(1/alpha^2)}.",
+    "hypotheses": [
+      "disjoint blocks",
+      "uniform product measure",
+      "children balanced",
+      "B_i = erasure entropy H(1[i in S] | S minus i) of the squared Fourier law, nats"
+    ],
+    "statement_sha256": "70c5ed59a33532a11bf03518ec53acd75aec3bb6ab849b67626d1756ba75a586",
+    "contributors": [
+      "claude-B12-lead"
+    ],
+    "proof_source": "REPORT.md section L1 (one-line derivative of phi in v; L_j(1) is the packet form of B_j(g); concavity from second derivative)",
+    "proof_dependencies": [
+      "A057-COHERENT-ERASURE-SPLIT v1 (identity only; lead re-derived it and replayed it exactly on 6,468 cases)"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A060",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "artifact": "REVIEW_L1.md",
+        "sha256": "830ed1168a08b50d86ba93f27b401500f621dfafd7e0d66e618438f24557e709",
+        "source_claim_file": "~\\brain_workers\\FEI100_20261011\\claude\\B12\\runs\\20261011T225832Z-claude-B12-erasure-ledger-depth\\CLAIMS.json",
+        "source_claim_file_sha256": "7483de2999f3a54ecb350bd185bd02f3067f374c0499d45b4e515fda9e4fd117",
+        "source_recorded_statement_sha256": "f46847a9a363b79c09c980ca018a16f735e54a3fc124060e1557dbce5266f27a",
+        "hash_convention": "canonical statement+hypotheses JSON normalized in this review record",
+        "source_report_availability": "source REPORT.md pointer absent locally; complete claim read and proof independently reconstructed",
+        "repair_contribution": false
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A057 (outer-erasure transport)",
+      "A059 (depth)",
+      "A091 review"
+    ]
+  },
+  {
+    "claim_id": "B12-L2-DEFICIT-LOG-BANK",
+    "version": 1,
+    "exact_statement": "For every balanced Boolean h on finitely many independent uniform signs, Lambda(h) := sum_i hhat({i})^2 ln(1/hhat({i})^2) <= (4+6/e)(I(h)-1) nats. Consequently, in a balanced disjoint composition F=g(h_1,...,h_m), sum_j q_j Lambda(h_j) <= (4+6/e)(I(F)-I(g)), q_j=Inf_j(g).",
+    "hypotheses": [
+      "h Boolean, E h = 0",
+      "I = total influence",
+      "natural logarithms"
+    ],
+    "statement_sha256": "c46a19d1771ede0f681593bc7769e8858f6dcdf2344937fbdd7e6bf6266e49d5",
+    "contributors": [
+      "claude-B12-lead"
+    ],
+    "proof_source": "REPORT.md section L2: with M=max|hhat({i})|, u=1-M, s=sum of the other influences, I-1>=s-u and I-1>=1-W1>=u(2-u)-(1-u)s give I-1>=u/2 and s<=3(I-1); M^2 ln(1/M^2)<=2Mu<=2u and r^2 ln(1/r^2)<=(2/e)r with |hhat({i})|<=Inf_i(h)",
+    "proof_dependencies": [
+      "|hhat({i})| <= Inf_i(h) (half-difference)",
+      "I(F)=sum_j q_j I(h_j) for balanced disjoint children (A056 identity)"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A060",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "artifact": "REVIEW_L2.md",
+        "sha256": "3c3b1f9b9a62784261a66447ab36044cb0f6516973627019245cf34eb4983f6b",
+        "source_claim_file": "~\\brain_workers\\FEI100_20261011\\claude\\B12\\runs\\20261011T225832Z-claude-B12-erasure-ledger-depth\\CLAIMS.json",
+        "source_claim_file_sha256": "7483de2999f3a54ecb350bd185bd02f3067f374c0499d45b4e515fda9e4fd117",
+        "source_recorded_statement_sha256": "8378ccdef65a051456789177218d34e9c5d643718904a185ae15fca31b47a57c",
+        "hash_convention": "canonical statement+hypotheses JSON normalized in this review record",
+        "source_report_availability": "source REPORT.md pointer absent locally; complete claim read and proof independently reconstructed",
+        "repair_contribution": false
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A057",
+      "A059",
+      "A091 review"
+    ]
+  }
+]

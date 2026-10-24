@@ -1,0 +1,275 @@
+{
+  "helper": "A010-root-law-independent-v1",
+  "graphs": 7,
+  "references": 14,
+  "stars": [
+    {
+      "m": 2,
+      "Gamma": "19/16",
+      "all_weight_lower_bound": "1/16",
+      "I": "5/4",
+      "full_set_column": "1/72"
+    },
+    {
+      "m": 3,
+      "Gamma": "875/64",
+      "all_weight_lower_bound": "369/64",
+      "I": "5/4",
+      "full_set_column": "1/144"
+    }
+  ],
+  "rows": [
+    {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "I": "1",
+      "V": "3/4",
+      "Gamma": "0",
+      "argmax": 1,
+      "coefficient_terms": 3,
+      "weights": "uniform"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "I": "1",
+      "V": "3/4",
+      "Gamma": "0",
+      "argmax": 1,
+      "coefficient_terms": 3,
+      "weights": "local"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "I": "1",
+      "V": "3/4",
+      "Gamma": "0",
+      "argmax": 1,
+      "coefficient_terms": 3,
+      "weights": "uniform"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "I": "1",
+      "V": "3/4",
+      "Gamma": "0",
+      "argmax": 1,
+      "coefficient_terms": 3,
+      "weights": "local"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "I": "5/4",
+      "V": "15/16",
+      "Gamma": "19/16",
+      "argmax": 3,
+      "coefficient_terms": 8,
+      "weights": "uniform"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "I": "5/4",
+      "V": "15/16",
+      "Gamma": "35/16",
+      "argmax": 3,
+      "coefficient_terms": 8,
+      "weights": "local"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "I": "1",
+      "V": "3/4",
+      "Gamma": "0",
+      "argmax": 1,
+      "coefficient_terms": 3,
+      "weights": "uniform"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "I": "1",
+      "V": "3/4",
+      "Gamma": "0",
+      "argmax": 1,
+      "coefficient_terms": 3,
+      "weights": "local"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "I": "5/4",
+      "V": "15/16",
+      "Gamma": "19/16",
+      "argmax": 3,
+      "coefficient_terms": 8,
+      "weights": "uniform"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "I": "5/4",
+      "V": "15/16",
+      "Gamma": "35/16",
+      "argmax": 3,
+      "coefficient_terms": 8,
+      "weights": "local"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "I": "5/4",
+      "V": "15/16",
+      "Gamma": "19/16",
+      "argmax": 3,
+      "coefficient_terms": 8,
+      "weights": "uniform"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "I": "5/4",
+      "V": "15/16",
+      "Gamma": "35/16",
+      "argmax": 3,
+      "coefficient_terms": 8,
+      "weights": "local"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "I": "3/2",
+      "V": "1",
+      "Gamma": "121/96",
+      "argmax": 3,
+      "coefficient_terms": 9,
+      "weights": "uniform"
+    },
+    {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "I": "3/2",
+      "V": "1",
+      "Gamma": "625/192",
+      "argmax": 3,
+      "coefficient_terms": 9,
+      "weights": "local"
+    }
+  ],
+  "elapsed_seconds": 0.017405199999302567,
+  "verdict": "PASS exact coefficient/root-law identity, gradient averaging and actual-star certificate-gap obstruction"
+}

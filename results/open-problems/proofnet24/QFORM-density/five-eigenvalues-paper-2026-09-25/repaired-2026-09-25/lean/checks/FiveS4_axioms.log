@@ -1,0 +1,29 @@
+~/qform_five_lean_2026_09_25/lean/FiveS4_run.lean:199:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+~/qform_five_lean_2026_09_25/lean/FiveS4_run.lean:245:8: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+'QformFiveB.omega_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.omega_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.omega_le_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.omega_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.pow_succ_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.esymm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.sum_incidence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.entropy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.hub_selection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.decay_const_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.decay_const_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.decay_const_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.step5_log_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.hub_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+rc=0 secs=61

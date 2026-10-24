@@ -1,0 +1,27 @@
+QFORM account01/B08 r42 deterministic algebra/constant check
+
+The report theorem is an at-least-one alternative (the two conclusions need not be mutually exclusive):
+  (A) continuous C_0 density with ||p_Q||_inf < 4049/L, or
+  (B) an original coordinate k with max{|A_kk|, ||A[-k,k]||_2} > L/32768.
+
+Small-tail branch:
+  partner half-cut gives lambda_min(R_S^T R_S), lambda_min(R_T^T R_T) >= 1/4,
+  hence s_min(R_S), s_min(R_T) >= 1/2 and s_3(R_S Lambda R_T^T) >= L/4.
+  s_4(A) <= L/64 = (L/4)/16, so literal-cross stability gives < 23/(L/4) = 92/L.
+
+Large-tail spectral-window branch:
+  C_RW = 288*sqrt(3e)/13 = 63.26405187778285...
+  if sigma=s_4(A)>L/64, C_RW/sigma < 64*C_RW/L
+  64*C_RW = 4048.899320178102... < 4049.
+
+Failure of the sigma-window leverage gate:
+  P_kk>1/32 and |lambda|>=sigma/64 on Ran(P) imply
+  ||Ae_k|| > sigma/(64*sqrt(32)).
+  Since ||Ae_k||^2=A_kk^2+||A[-k,k]||_2^2,
+  max{|A_kk|,||A[-k,k]||_2} > sigma/(64*sqrt(64)) = sigma/512 > L/32768.
+
+Non-diffuse top-three frame:
+  top-three leverage >1/48 gives ||Ae_k||>L/sqrt(48), hence
+  max{|A_kk|,||A[-k,k]||_2}>L/sqrt(96)=0.10206207261596577... L.
+
+No random/numerical sampling is used in the proof; these are exact algebra and arithmetic checks only.

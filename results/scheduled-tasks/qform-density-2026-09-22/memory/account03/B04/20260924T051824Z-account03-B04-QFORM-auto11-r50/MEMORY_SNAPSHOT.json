@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260924T051824Z-account03-B04-QFORM-auto11-r50",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "continuity_full_target_status": "OPEN",
+  "new_result": {
+    "name": "QFORM-PAIR-ANCHORED-E3-PROMOTION-v1",
+    "statement": "For a literal original-coordinate cross block M=A[I,J] and physical row pair {a,b}, if K_ab=sum_r det Gram(m_a,m_b,m_r)>0, then the full ambient quadratic-plus-affine form has a continuous C0 density with ||p_Q||_infinity <= 3*2^(5/6) K_ab^(-1/6).",
+    "constant": 5.345392308842036,
+    "mechanism": "Exact factorization K_ab=D2*Z1; diffuse residual one-volume uses grouped projected crossing at (k,ell,d)=(2,1,3); a >1/2 residual row is promoted to a literal third hub and paid by exact-rank-three crossing."
+  },
+  "partner_application": {
+    "partner": "account04/B04",
+    "partner_source": "yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57",
+    "input": "H_ab^(4)>(2/75)E4(M)",
+    "derived_inequality": "||p_Q||_infinity < 6.824377206888847 [D2 E4(M)]^(-1/12)",
+    "continuity": true
+  },
+  "stress_test": {
+    "description": "Fully dense 9x9 indefinite source-coordinate matrix with cross block 2 R V^T, R,V Parseval rank 3 frames, and same-bank +/-J/100 curvature.",
+    "spectral_certificate": "pure-cross eigenvalues +/-2 x3; same-bank perturbation op norm <=1/20, hence at least six eigenvalues have modulus >=39/20",
+    "K12": "225/4",
+    "density_bound": 2.730816364073070,
+    "generic_rank3_comparison": 3.0
+  },
+  "remaining_implication": "QFORM-OMEGA2-TO-PAIR-ANCHORED-E3-OR-SINGULAR-COLLAR-v1",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "81a90afb15045c054702e4029d6016b82a16118b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260924T051824Z-account03-B04-QFORM-auto11-r50/REPORT.md"
+  },
+  "final_control_commit": "1f799508e01b700b50e478e299ce48f19b07108b",
+  "correction_inbox_blob": "a884b835aba929c5376e6417ae5cfcd44c0f7a76"
+}

@@ -1,0 +1,13 @@
+# A035 reconstruction of A031-FOURTH-ROOT-ERASURE-CREDITS v1
+
+Source: A031 run 20261011T232738Z, PHASE_ERASURE.md and CLAIMS.json, read in full. Verdict: **ACCEPT_AT_STATED_SCOPE**, pending supervisor adoption. This review supplies no repair to the source claim and does not accept a universal joint-credit payment.
+
+Reconstruction uses physical disagreement indicators and independent character sums, rather than the author's Fourier implementation. For an actual Boolean split, A=(g+h)/2 and V=(g-h)/2 satisfy A^2+V^2=1 and AV=0 pointwise. Thus F=A+iV is a fourth root of unity, F^2=gh=1-2V^2, and all imaginary mixed convolutions vanish BEFORE squaring. Parseval on 1-2V^2 gives W=I(gh)/2=2 sum_{U!=0}|U|(sum_T v_T v_(T xor U))^2.
+
+The real/imaginary-sector joint law is exactly u_T^2,v_T^2. The conditional entropy identity B=h2(d)-M gives, after adding and subtracting d log2(1/d), the exact B=W+log2(e)d-R-M-sigma. Internal-edge isoperimetry gives R>=0; the entropy scalar integral gives sigma>=0. Therefore B+M<=W+log2(e)d. This implication needs the pointwise Boolean restrictions; the normalized coefficients (4/5,3/5) instead have W=0, M=0 and h2(9/25)>(9/25)log2(e). That sign was re-certified with exact rational logarithm intervals.
+
+For bent one-point child surgery on even r bits, V=1_{0}, d=q=2^-r and W=rq. The signed bent positive-count difference determines the exact chi-square expression 4q^2/(1+4q^2), explicitly reconstructed in DERIVATION.md section 4. Hence h2(q)-4q^2 log2(e)<=B<=h2(q); dividing by rq proves B/(rq)->1. A bound B<=alpha I(F^2)+C d for fixed finite C therefore requires alpha>=1/2. The sharpness conclusion is source-correct and does not assert a whole-function FEI obstruction.
+
+Executed checks: five new shared-parity Boolean tables through 16 variables, nine previously fixed-selector contexts, and 202 counted exact assertions, including physical boundaries versus signed phase energy. A separate direct-character implementation checks the decisive seven-bit root, the five-bit module, and all 64 remaining-frequency shifts, with exact prime-power signs. All arithmetic deciding signs is integer or Fraction. A preliminary expected-histogram denominator mistake in the reproduction was repaired and preserved in out/reproduction_initial_failure.txt; it did not alter the reviewed source or the primary result. This is a different agent's reconstruction of A031 and a different critical implementation. No shared indices or author artifacts were edited.
+
+The new shared-parity counterfamily demonstrates why the reviewed claim retains BOTH credits: even localization to actually bad nodes cannot generally discard R and keep only M. This corroborates the claim's stated scope; it is not a contributor repair of that version.

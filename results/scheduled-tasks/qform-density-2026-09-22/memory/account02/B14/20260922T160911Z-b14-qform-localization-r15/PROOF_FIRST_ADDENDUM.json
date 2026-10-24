@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B14",
+  "run_id": "20260922T160911Z-b14-qform-localization-r15",
+  "owner_continuation": "QFORM-PROOF-FIRST-20260922T161801Z",
+  "source_control_commit_before_addendum": "29e91087236ca7ebeaa5d6b64e42adc450cba975",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "new_result": {
+    "name": "arbitrary-offset graphical inverse-gap localization",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "statement": "For any fixed finite simple graph with edge exponents theta_e, the pair-gap moment with arbitrary real edge offsets is uniformly finite over all independent cap-one input densities iff every vertex cluster S has internal exponent sum strictly below |S|-1. The offsets need not be cycle-consistent.",
+    "proof_mechanism": "scale exponents into the graphic-matroid independent-set polytope; convex-decompose into forests; dominate by truncated near-gap kernels; apply Holder across the forest mixture; eliminate leaves using a translation-uniform one-dimensional cap-one bound",
+    "explicit_constant": "with epsilon=min(1/2,delta/(2(m-1))), C_off <= (1+2/epsilon)^(m-1)",
+    "canonical_addendum_commit": "b157d48994785c3224d2fdf9e694396548f9b347",
+    "canonical_addendum_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260922T160911Z-b14-qform-localization-r15/PROOF_FIRST_ADDENDUM.md",
+    "handoff_commit": "3849060b24ff77ba6dc6dcc1c9d4bc1e99cc1aeb",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B14/20260922T160911Z-b14-qform-localization-r15-proof-first-addendum.md"
+  },
+  "peers_applied": [
+    {
+      "worker": "account03/B14",
+      "commit": "871a2d4c9f1ea58d89748ab1abab05021b4408de",
+      "scope": "global convex-mixture localization, allowing component-adaptive bounded-size graph certificates to transfer to arbitrary supports"
+    },
+    {
+      "worker": "account01/B14",
+      "commit": "2ad67886f215eff6f3daed247871a882a6f0314b",
+      "scope": "independent arbitrary-offset triangle theorem, consistent with and subsumed by the new graph theorem"
+    },
+    {
+      "worker": "account01/B06",
+      "commit": "1bc95193312b70572b2765529ac3b6d98e3fe754",
+      "scope": "translation-uniform three-coordinate curved coarea; supplies the live reciprocal-kernel synthesis target"
+    }
+  ],
+  "first_unproved_step": "Convert the prebound determinant/Pluecker-weighted curved-coarea reciprocal kernel into a convex combination of uniformly bounded-size arbitrary-offset pair-gap graphs with uniform positive cluster slack, or prove a critical collision cluster is unavoidable.",
+  "full_target_status": "OPEN"
+}

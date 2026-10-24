@@ -1,0 +1,2457 @@
+
+ 
+ 
+ Non-perturbative finite connectivities in supercritical Bernoulli percolation on ℤ^𝑑 with 𝑑≥3 
+ 
+ 
+ 
+   
+ 
+  // Restore the saved color scheme preference, or
+  // enact the browser preference if "automatic", 
+  // without expecting DOM load to have completed.
+  //
+  // Also restore any saved readingmode and ToC display preferences.
+  function initializeReadingPreferences() {
+    let saved_theme = localStorage.getItem("ar5iv_theme") || "automatic";
+    if (saved_theme === "automatic") {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        saved_theme = "dark";
+      }
+    }
+    if (saved_theme == "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+
+    const tocDisplay = localStorage.getItem('arxiv_html_paper_toc_display');
+    if (tocDisplay) {
+      document.documentElement.setAttribute("data-toc-display", tocDisplay);
+    }
+    const readingMode = localStorage.getItem('arxiv_html_paper_reading_mode');
+    if (readingMode) {
+      document.documentElement.setAttribute("data-reading-mode", readingMode);
+    }
+    // Pre-apply spinout-banner dismissal here, before the banner paints, so it
+    // never flashes in only to be hidden later by the deferred arxiv-header.js.
+    // Key matches arxiv-header.js: "arxiv-banner-dismissed:" + data-banner-name.
+    if (localStorage.getItem('arxiv-banner-dismissed:spinout-nonprofit')) {
+      document.documentElement.setAttribute("data-banner-dismissed", "");
+    }
+  }
+  // Run as soon as JS starts, to minimize repainting
+  initializeReadingPreferences();
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  /* Banner pre-dismissal (set above before paint -> no flash-then-hide) and
+     reading-mode chrome hiding. */
+  html[data-banner-dismissed] .ds-announcement { display: none; }
+  html[data-reading-mode="enabled"] .ds-announcement,
+  html[data-reading-mode="enabled"] .ds-site-footer { display: none; }
+  /* Print keeps the reader header's logo, not its controls: the theme's own print rule
+     (header, nav { display: none }) sits in a layer that its header layer outranks. */
+  @media print { .arxiv-html-header .html-header-nav { display: none; } }
+  /* Keep the announcement text dark on the Open-Blue band in both colour themes
+     (otherwise it inherits the paper's warm-wash text in dark mode and washes out). */
+  .ds-announcement-text { color: var(--arxiv-ink, #1c1a17); }
+ 
+ 
+ 
+ 
+ 
+   
+     
+       Report GitHub Issue 
+       × 
+     
+
+     
+       Title: 
+       
+
+       Content selection saved. Describe the issue below: 
+
+       Description: 
+       
+     
+
+     
+       Submit without GitHub 
+       Submit in GitHub 
+     
+   
+ 
+     
+     arXiv is now an independent nonprofit! 
+     Learn more 
+     × 
+   
+
+ 
+   
+     
+       Back to arXiv 
+     
+   
+   
+   
+     Why HTML? 
+     
+       
+         
+       
+       Report Issue 
+     
+     
+       
+         
+         
+       
+       Back to Abstract 
+     
+     
+     
+       
+         
+       
+       Download PDF 
+     
+     
+       
+         
+         
+       
+     
+     
+     
+       
+         
+       
+     
+     
+     
+       
+         
+           
+           
+         
+       
+       
+         
+           
+           
+         
+       
+       
+         
+           
+           
+         
+       
+     
+   
+ 
+ 
+ 
+ Abstract 
+ 1  Introduction 
+ 
+ 1.1  Context 
+ 1.2  Basic definitions and properties 
+ 1.3  Main results 
+ 1.4  Idea of the proof 
+ 1.5  Extensions 
+ 1.6  Definitions and inputs 
+ 
+ 2  A priori volume control for long finite clusters 
+ 
+ 2.1  Definitions and inputs from  [ 2 ] 
+ 2.2  Proof of Theorem  
+ 
+ 3  Extension of the Ornstein-Zernike theory 
+ 
+ 3.1  Coarse-graining 
+ 
+ 3.1.1  Skeleton 
+ 
+ Algorithm of the coarse graining 
+ The energy estimate. 
+ The entropy estimate. 
+ Trunk and branches. 
+ 
+ 3.1.2  Geometry of typical trees: bound on the size 
+ 3.1.3  Geometry of typical trees: refined estimates 
+ 
+ The surcharge function. 
+ Typical trunks have many cone-points. 
+ Typical trees have many cone-points. 
+ 
+ 
+ 3.2  Geometry of typical clusters 
+ 
+ 3.2.1  Cone-points of  C C 
+ 
+ Cones. 
+ Cone-points of the cluster. 
+ 
+ 3.2.2  Decomposition of  C C  into irreducible pieces 
+ 
+ Irreducible pieces. 
+ The weights. 
+ 
+ 
+ 
+ 4  Acknowledgments 
+ 
+ Use of AI tools. 
+ 
+ References 
+ 
+ 
+ 
+ 
+   
+    License: CC BY 4.0
+   
+   
+arXiv:2610.08682v1 [math.PR] 06 Oct 2026 
+ 
+ 
+ Non-perturbative finite connectivities in supercritical Bernoulli percolation on  ℤ d \mathbb{Z}^{d}  with  d ≥ 3 d\geq 3 
+ 
+ 
+ Yacine Aoun
+ 
+    
+ Kamil Khettabi
+ † † thanks:  
+Section de mathématiques, Université de Genève, Switzerland.
+Email:  kamil.khettabi@unige.ch 
+ 
+
+ Abstract 
+    
+ We solve a longstanding problem in Bernoulli percolation: we derive sharp Ornstein–Zernike asymptotics for the probability that two distant points are connected by a finite cluster in the whole supercritical regime. Our proof has two main ingredients. First, the renewal structure of  [ 2 ]  yields an  a priori  bound on cluster volume. Second, we adapt the coarse-graining and irreducible-cluster framework of  [ 10 ]  to finite supercritical connections. The main distinction from the subcritical analysis is that our argument  does not require  a separation of masses between irreducible and unrestricted finite connections. The volume bound and a modified coarse-graining construction instead provide stretched-exponential tails for the effective random-walk increments, which suffice to obtain the sharp asymptotics. 
+  
+ 
+ 
+ 1  Introduction 
+
+ 
+ 1.1  Context 
+
+ 
+ The problem of establishing a sharp control on general two-point functions (covariance, connectivity functions, Green functions) has a long history in mathematics and physics. It can be traced back to the original work of Ornstein and Zernike on density fluctuations in fluids  [ 14 ] . The resulting Ornstein–Zernike (OZ) asymptotics describe exponential decay with a polynomial prefactor of order  ∥ x ∥ − ( d − 1 ) / 2 \|x\|^{-(d-1)/2} , where  ∥ ⋅ ∥ \|\cdot\|  is the Euclidean norm. Since then, the OZ asymptotics became a cornerstone of the study of two-point functions in statistical mechanics: see for instance  [ 19 ,  20 ,  21 ,  22 ] . 
+ 
+ 
+ For Bernoulli percolation, the first non-perturbative OZ asymptotics for the probability of two distant points to be in the same cluster were derived for the subcritical regime by Campanino, Chayes and Chayes  [ 8 ]  for axial directions, and later extended to arbitrary directions by Campanino and Ioffe  [ 9 ] . The theory was then extended for the finite-range Ising model above the critical temperature  [ 15 ]  and for the subcritical finite-range FK percolation model by Campanino, Ioffe and Velenik  [ 10 ] . For the infinite-range Ising model with exponentially decaying interactions, the OZ asymptotics can fail  [ 18 ,  27 ] . The OZ asymptotics were established under appropriate assumptions in the subcritical and non-saturated regime by Aoun, Ott and Velenik  [ 16 ] . At the saturated point (where the transition between the saturated and unsaturated regime occurs), we established  [ 17 ]  the OZ asymptotics up to constants on  ℤ \mathbb{Z}  under appropriate assumptions. 
+ 
+ 
+ For the supercritical counterpart, Bricmont and Fröhlich  [ 6 ]  established the OZ asymptotics for spin covariances in the Ising model at very low temperatures on  ℤ d \mathbb{Z}^{d}  with  d ≥ 3 d\geq 3 . For Bernoulli percolation, the two-point function is the probability of two points of being connected by a finite cluster. On  ℤ 2 \mathbb{Z}^{2} , Campanino, Ioffe and Louidor  [ 13 ]  derived a different type of asymptotics (of order  ‖ x ‖ − 2 \|x\|^{-2}  instead of  ∥ x ∥ − 1 / 2 \|x\|^{-1/2}  that would be given by the OZ formula) in the whole supercritical phase. In dimension  d ≥ 3 d\geq 3 , the OZ asymptotics were derived for  p p  sufficiently close to  1 1  by Braga, Procacci and Sanchis  [ 26 ]  for the axial directions and by Campanino and Gianfelice  [ 11 ]  for an arbitrary direction (and later extended to FK percolation  [ 12 ] ). More recently, Fribergh and Hammond  [ 2 ]  proved sharp point-to-plane asymptotics in the whole supercritical phase using a renewal structure with stretched-exponential tails on  ℤ d \mathbb{Z}^{d}  with  d ≥ 3 d\geq 3 . In the present work, we prove the last remaining asymptotics for nearest neighbor Bernoulli percolation on  ℤ d \mathbb{Z}^{d} : we establish the OZ asymptotics in the whole supercritical regime in dimension  d ≥ 3 d\geq 3 . 
+ 
+ 
+ 
+ 1.2  Basic definitions and properties 
+
+ 
+ Consider nearest-neighbour Bernoulli bond percolation on  ℤ d \mathbb{Z}^{d}  with  d ≥ 3 d\geq 3 : each edge of  ℤ d \mathbb{Z}^{d}  is declared  open  with probability  p ∈ ( 0 , 1 ) p\in(0,1)  and  closed  with probability  1 − p 1-p , independently of all other edges. We denote the corresponding measure by  ℙ p \mathbb{P}_{p} . We say that  x , y ∈ ℤ d x,y\in\mathbb{Z}^{d}  are connected if there exists a sequence of open edges from  x x  to  y y . We denote this event by  { x ↔ y } \{x\leftrightarrow y\} . There exists a critical parameter  p c ​ ( d ) p_{c}(d)  such that almost surely there is not an open infinite connected component when  p < p c p<p_{c}  and almost surely there is an open infinite connected component when  p > p c p>p_{c} , see  [ 23 ] . From now on, we consider  p ∈ ( p c , 1 ) p\in(p_{c},1) . Write  C 0 C_{0}  for the open cluster of  0 0 ,
+regarded as a graph, and  | C 0 | |C_{0}|  for its number of vertices. Set 
+ 
+
+ 
+ 
+ G p ​ ( x ) \displaystyle G_{p}(x) 
+ = ℙ p ( 0 ↔ x , | C 0 | < ∞ ) , \displaystyle=\mathbb{P}_{p}(0\leftrightarrow x,\ |C_{0}|<\infty), 
+ 
+ 
+ 
+ ξ p ​ ( z ) \displaystyle\xi_{p}(z) 
+ = − lim k → ∞ 1 k log G p ( k z ) ( z ∈ ℤ d ) . \displaystyle=-\lim_{k\to\infty}\frac{1}{k}\log G_{p}(kz)\quad(z\in\mathbb{Z}^{d}). 
+ 
+ 
+ The limit above exists and its continuous homogeneous extension defines a norm on  ℝ d \mathbb{R}^{d} , see  [ 3 ,  23 ,  12 ] . We will denote the Euclidean norm by  ∥ ⋅ ∥ \|\cdot\| . 
+ 
+ 
+ 
+ 1.3  Main results 
+
+ 
+ Our first theorem establishes a control of the volume of the cluster of two distant points at the exponential scale: 
+ 
+ 
+ Theorem 1.1 . 
+ 
+ There exist  K , C , c ∈ ( 0 , ∞ ) K,C,c\in(0,\infty) , depending only on  p , d p,d , such that,
+for every  x ∈ ℤ d ∖ { 0 } x\in\mathbb{Z}^{d}\setminus\{0\} , 
+ 
+
+ 
+ 
+ ℙ p ( 0 ↔ x , K ∥ x ∥ < | C 0 | < ∞ ) ≤ C exp { − ξ p ( x ) − c ∥ x ∥ d − 1 2 ​ d } . \mathbb{P}_{p}(0\leftrightarrow x,\ K\|x\|<|C_{0}|<\infty)\leq C\exp\left\{-\xi_{p}(x)-c\|x\|^{\frac{d-1}{2d}}\right\}. 
+ 
+ (1) 
+ 
+ 
+ 
+ 
+ The proof of this theorem will use the setting of  [ 2 ] . We prove this theorem in Section  2 . Our second theorem is the main result of this paper: 
+ 
+ 
+ Theorem 1.2 . 
+ 
+ There exists a continuous function  Ψ p : 𝕊 d − 1 → ( 0 , ∞ ) \Psi_{p}:\mathbb{S}^{d-1}\to(0,\infty)  such that, uniformly in  x ∈ ℤ d x\in\mathbb{Z}^{d}  as  ‖ x ‖ → ∞ \|x\|\rightarrow\infty , 
+ 
+
+ 
+ 
+ ℙ p ( 0 ↔ x , | C 0 | < ∞ ) = Ψ p ​ ( x / ‖ x ‖ ) ‖ x ‖ ( d − 1 ) / 2 e − ξ p ​ ( x ) ( 1 + o ‖ x ‖ → ∞ ( 1 ) ) , \mathbb{P}_{p}(0\leftrightarrow x,|C_{0}|<\infty)=\frac{\Psi_{p}(x/\|x\|)}{\|x\|^{(d-1)/2}}e^{-\xi_{p}(x)}(1+o_{\|x\|\rightarrow\infty}(1)), 
+ 
+ 
+ 
+ 
+ 
+ The proof of this theorem goes through an extension of the modern Ornstein-Zernike theory. We prove this theorem in Section  3 . 
+ 
+ 
+ 
+ 1.4  Idea of the proof 
+
+ 
+ As already mentioned, our proof has two ingredients : a control on the volume of the cluster  C 0 C_{0}  on  { 0 ↔ x } \{0\leftrightarrow x\}  and a modification of the modern OZ theory. Let us explain quickly the main ideas : 
+ 
+ 
+ For the first result, fix  x ≠ 0 x\neq 0  and choose  ℓ ∈ 𝕊 d − 1 \ell\in\mathbb{S}^{d-1}  such that
+ ζ ℓ ​ ℓ ⋅ x = ξ p ​ ( x ) \zeta_{\ell}\,\ell\cdot x=\xi_{p}(x) , where  ζ ℓ \zeta_{\ell} 
+is the point-to-plane decay rate of  [ 2 ] .
+Set  u = ℓ ⋅ x u=\ell\cdot x  and
+ ℋ u = { z ∈ ℤ d : ℓ ⋅ z ≥ u } \mathcal{H}_{u}=\{z\in\mathbb{Z}^{d}:\ell\cdot z\geq u\} .
+Since  x ∈ ℋ u x\in\mathcal{H}_{u} , 
+ 
+
+ 
+ 
+ ℙ p ( 0 ↔ x , K ∥ x ∥ < | C 0 | < ∞ ) ≤ ℙ p ( 0 ↔ ℋ u , K ∥ x ∥ < | C 0 | < ∞ ) . \mathbb{P}_{p}(0\leftrightarrow x,\ K\|x\|<|C_{0}|<\infty)\leq\mathbb{P}_{p}(0\leftrightarrow\mathcal{H}_{u},\ K\|x\|<|C_{0}|<\infty). 
+ 
+ 
+ The choice of  ℓ \ell  ensures that this comparison preserves
+the exponential cost of the connection. 
+ 
+ 
+ Using the string decomposition of  [ 2 ] , we then extract
+a factor  e − ζ ℓ ​ u = e − ξ p ​ ( x ) e^{-\zeta_{\ell}u}=e^{-\xi_{p}(x)}  from the RHS.
+We then show that 
+ 
+
+ 
+ 
+ μ ℓ ​ ( V 1 ≥ v ) ≤ C ​ e − c ​ v α / 2 . \mu_{\ell}(V_{1}\geq v)\leq Ce^{-cv^{\alpha/2}}. 
+ 
+ 
+ A routine large-deviation estimate then yields 
+ 
+
+ 
+ 
+ ℙ p ( 0 ↔ ℋ u , K ∥ x ∥ < | C 0 | < ∞ ) ≤ C e − ξ p ​ ( x ) − c ​ ‖ x ‖ β , \mathbb{P}_{p}(0\leftrightarrow\mathcal{H}_{u},\ K\|x\|<|C_{0}|<\infty)\leq Ce^{-\xi_{p}(x)-c\|x\|^{\beta}}, 
+ 
+ 
+ We may therefore restrict to clusters of volume at most
+ K ​ ‖ x ‖ K\|x\|  up to a stretched exponential error. 
+ 
+ 
+ Then, we develop a OZ theory for the supercritical finite connections. The main skeleton of the proof stays the same : to every cluster, we associate a skeleton and we derive an appropriate energy estimate for every skeleton. The standard problem when deriving asymptotics in this way is that it might happen that some parts of the cluster are very densely connected, and hence on a local level it might be impossible to extract any energy. To circumvent this problem, we notice that the a priori control on the volume of the connected component  prevents  this from happening too often, yielding overall a ’missing’ exponential cost that can be made (on an exponential scale) arbitrarily small, hence removing the problem altogether. We establish that, up to an exponential error, there is a positive density of cone-points. In a sense, this result establishes a  mass-gap  of some particular connections. Combined with the first result above, this allows us to construct a directed random walk with stretched exponential tails, which are enough to sharply derive the wanted asymptotics. 
+ 
+ 
+ 
+ 1.5  Extensions 
+
+ 
+ Our results suggest several directions for further research. A natural extension would be to prove the OZ asymptotics in the supercritical phase for a general finite-range Bernoulli percolation model. This would require an extension of the renewal theory from  [ 2 ]  as well as extending the OZ theory for this setting (the latter seems to be a more direct adaptation). 
+ 
+ 
+ Another natural direction would be extending our results for dependent percolation models such as FK percolation. This would extend the perturbative results of  [ 12 ]  in the whole supercritical regime. 
+ 
+ 
+ Another (potentially more challenging) extension would be to apply our framework to study the low-temperature covariances in Ising and Potts models. For the Ising model, possible approaches include the random current representation  [ 24 ]  and the recent double cluster swapping representation introduced by van Engelenburg, Heeney and Lis  [ 25 ] , which provides a percolation representation of truncated correlations. 
+ 
+ 
+ 
+ 1.6  Definitions and inputs 
+
+ 
+ For a finite graph  A A , write  Vert ⁡ ( A ) \operatorname{Vert}(A)  and  E ⁡ ( A ) E(A)  for its vertex and edge sets, and  v ⁡ ( A ) := | Vert ⁡ ( A ) | v(A):=|\operatorname{Vert}(A)| . Inclusions of graphs in regions and intersections with regions refer to their vertex sets unless edges are explicitly mentioned. For a vertex set  D D ,  A ∖ D A\setminus D  denotes the subgraph induced by  Vert ⁡ ( A ) ∖ D \operatorname{Vert}(A)\setminus D . For an edge viewed as an unordered pair of endpoints,  | e ∩ D | |e\cap D|  is the number of its endpoints in  D D . Unless specified otherwise,  c , C > 0 c,C>0  are constants whose values may change from line to line.
+
+ We will need the following supercritical estimates 
+ 
+
+ 
+ 
+ ℙ ⁡ ( v ≤ | C 0 | < ∞ ) \displaystyle\mathbb{P}(v\leq|C_{0}|<\infty) 
+ ≤ C ​ e − c ​ v α , \displaystyle\leq Ce^{-cv^{\alpha}}, 
+ 
+ 
+ 
+ ℙ ⁡ ( | C 0 | < ∞ , max z ∈ C 0 ⁡ ‖ z ‖ ≥ u ) \displaystyle\mathbb{P}\bigl(|C_{0}|<\infty,\ \max_{z\in C_{0}}\|z\|\geq u\bigr) 
+ ≤ C ​ e − c ​ u . \displaystyle\leq Ce^{-cu}. 
+ 
+ (2) 
+ 
+ where  α = ( d − 1 ) / d = : 2 ​ β \alpha=(d-1)/d=:2\beta . The first follows from Kesten–Zhang and Grimmett–Marstrand
+ [ 4 ,  5 ] , for the second see  [ 3 ,  5 ] . 
+ 
+ 
+ A direct consequence of  [ 7 , Theorem 1.2]  is that 
+ 
+
+ 
+ 
+ G p ​ ( x ) ≤ e − ξ p ​ ( x ) . G_{p}(x)\leq e^{-\xi_{p}(x)}. 
+ 
+ (3) 
+ 
+ 
+ 
+ We denote by  U p U_{p}  the unit ball associated to the norm  ξ p \xi_{p}  and  K p K_{p}  its polar body 
+ 
+
+ 
+ 
+ 𝖴 p \displaystyle\mathsf{U}_{p} 
+ = { y : ξ p ​ ( y ) ≤ 1 } \displaystyle=\{y:\xi_{p}(y)\leq 1\} 
+ 
+ 
+ 
+ 𝖪 p \displaystyle\mathsf{K}_{p} 
+ = { t ∈ ℝ d : t ⋅ y ≤ ξ p ​ ( y ) ​  for all  ​ y ∈ ℝ d } . \displaystyle=\{t\in\mathbb{R}^{d}:t\cdot y\leq\xi_{p}(y)\text{ for all }y\in\mathbb{R}^{d}\}. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2  A priori volume control for long finite clusters 
+
+ 
+ Firstly, we are going to introduce some definitions and recall few results from  [ 2 ] . The, we prove Theorem  1.1 . 
+ 
+ 
+ 2.1  Definitions and inputs from  [ 2 ] 
+
+ 
+ Fix now  ℓ ∈ 𝕊 d − 1 \ell\in\mathbb{S}^{d-1}  and choose a vector  e ∈ { ± e 1 , … , ± e d } e\in\{\pm e_{1},\ldots,\pm e_{d}\} 
+such that 
+ 
+
+ 
+ 
+ r = ℓ ⋅ e = max i | ℓ i | ∈ [ d − 1 / 2 , 1 ] . r=\ell\cdot e=\max_{i}|\ell_{i}|\in[d^{-1/2},1]. 
+ 
+ 
+ We are going to import some of the technology developed in  [ 2 ] , which is a crucial input for the main result.
+Let  A A  be a finite nonempty connected subgraph of  ℤ d \mathbb{Z}^{d} .
+Define the  ℓ \ell -height of a vertex  z z  to be equal to  ℓ ⋅ z \ell\cdot z . Introduce 
+ 
+
+ 
+ 
+ b ℓ ​ ( A ) \displaystyle b_{\ell}(A) 
+ : = min lex ⁡ arg ​ min z ∈ Vert ⁡ ( A ) ⁡ ℓ ⋅ z , \displaystyle:=\min_{\mathrm{lex}}\operatorname*{arg\,min}_{z\in\operatorname{Vert}(A)}\ell\cdot z, 
+ 
+ 
+ 
+ t ℓ ​ ( A ) \displaystyle t_{\ell}(A) 
+ : = min lex ⁡ arg ​ max z ∈ Vert ⁡ ( A ) ⁡ ℓ ⋅ z , \displaystyle:=\min_{\mathrm{lex}}\operatorname*{arg\,max}_{z\in\operatorname{Vert}(A)}\ell\cdot z, 
+ 
+ 
+ where  min lex \min_{\mathrm{lex}}  selects the smallest, for the lexicographic order, vertex among those attaining the minimal / maximal height, so that  b ℓ ​ ( A ) b_{\ell}(A)  and  t ℓ ​ ( A ) t_{\ell}(A)  are unique.
+Define 
+ 
+
+ 
+ 
+ H ℓ ​ ( A ) := ℓ ⋅ ( t ℓ ​ ( A ) − b ℓ ​ ( A ) ) = max z ∈ Vert ⁡ ( A ) ⁡ ℓ ⋅ z − min z ∈ Vert ⁡ ( A ) ⁡ ℓ ⋅ z . H_{\ell}(A):=\ell\cdot\bigl(t_{\ell}(A)-b_{\ell}(A)\bigr)=\max_{z\in\operatorname{Vert}(A)}\ell\cdot z-\min_{z\in\operatorname{Vert}(A)}\ell\cdot z. 
+ 
+ 
+ For an edge  a a , let  a ∘ a^{\circ}  be the corresponding open line segment in  ℝ d \mathbb{R}^{d} . Define the edge sets 
+ 
+
+ 
+ 
+ U h \displaystyle U_{h} 
+ : = { a : a ∘ ∩ { z : ℓ ⋅ z ≥ h } ≠ ∅ } , \displaystyle:=\{a:a^{\circ}\cap\{z:\ell\cdot z\geq h\}\neq\varnothing\}, 
+ 
+ 
+ 
+ L h \displaystyle L_{h} 
+ : = { a : a ∘ ⊂ { z : ℓ ⋅ z < h } } , \displaystyle:=\{a:a^{\circ}\subset\{z:\ell\cdot z<h\}\}, 
+ 
+ 
+ 
+ 𝒮 a , b \displaystyle\mathcal{S}_{a,b} 
+ : = U a ∩ L b . \displaystyle:=U_{a}\cap L_{b}. 
+ 
+ 
+ A vertex  z z  is a renewal point of  A A  if 
+ 
+
+ 
+ 
+ { v ∈ Vert ⁡ ( A ) : ℓ ⋅ z − r < ℓ ⋅ v ≤ ℓ ⋅ z } = { z } . \{v\in\operatorname{Vert}(A):\ell\cdot z-r<\ell\cdot v\leq\ell\cdot z\}=\{z\}. 
+ 
+ 
+ A string is a finite connected graph  S S , of strictly positive height,
+whose edges lie in  𝒮 ℓ ⋅ b ℓ ​ ( S ) , ℓ ⋅ t ℓ ​ ( S ) \mathcal{S}_{\ell\cdot b_{\ell}(S),\ell\cdot t_{\ell}(S)} 
+and whose base and head are renewal points. An
+ irreducible string , called a sausage in  [ 2 ] , has no other
+renewal point. All strings below have base  0 0 .
+Let  O ℓ ​ ( S ) O_{\ell}(S)  be the event that every edge of  S S  is open and every other edge of its slab with at least one endpoint in  Vert ⁡ ( S ) \operatorname{Vert}(S)  is closed. For an interval  I ⊂ ℝ I\subset\mathbb{R} , let  Str I \operatorname{Str}_{I}  be the union of these events over strings based at  0 0  whose height belongs to  I I . Define 
+ 
+
+ 
+ 
+ w ℓ ​ ( S ) := ℙ p ​ ( O ℓ ​ ( S ) ) . w_{\ell}(S):=\mathbb{P}_{p}(O_{\ell}(S)). 
+ 
+ 
+ It was shown in  [ 2 , Proposition 1.7]  that 
+ 
+
+ 
+ 
+ ζ ℓ = − lim u → ∞ 1 u log ℙ p ( Str [ u , u + r ) ) ∈ ( 0 , ∞ ) . \zeta_{\ell}=-\lim_{u\to\infty}\frac{1}{u}\log\mathbb{P}_{p}(\operatorname{Str}_{[u,u+r)})\in(0,\infty). 
+ 
+ (4) 
+ 
+ By  [ 2 , Lemma 2.7 and Proposition 2.9] , for every  S S  irreducible one has that 
+ 
+
+ 
+ 
+ μ ℓ ​ ( S ) := e ζ ℓ ​ H ℓ ​ ( S ) ​ w ℓ ​ ( S ) \mu_{\ell}(S):=e^{\zeta_{\ell}H_{\ell}(S)}w_{\ell}(S) 
+ 
+ (5) 
+ 
+ is a probability measure on the set of irreducible strings.
+Every string is uniquely representable as a concatenation of irreducible strings, and
+its weight is the product of the weights of the irreducible strings that compose it. 
+ 
+ 
+ Let  S 1 , S 2 , … S_{1},S_{2},\ldots  be independent with law  μ ℓ \mu_{\ell} , and define
+ H i = H ℓ ​ ( S i ) H_{i}=H_{\ell}(S_{i}) ,  V i = v ⁡ ( S i ) V_{i}=v(S_{i}) ,
+ T N = ∑ i ≤ N H i T_{N}=\sum_{i\leq N}H_{i} ,  W N = ∑ i ≤ N V i W_{N}=\sum_{i\leq N}V_{i} .
+With these notations, for any interval  I I  of finite length  L L , 
+ 
+
+ 
+ 
+ ∑ S : H ℓ ​ ( S ) ∈ I e ζ ℓ ​ H ℓ ​ ( S ) w ℓ ( S ) = 𝔼 μ ℓ [ ∑ N ≥ 1 𝟏 { T N ∈ I } ] ≤ 1 + L r , \sum_{S:\,H_{\ell}(S)\in I}e^{\zeta_{\ell}H_{\ell}(S)}w_{\ell}(S)=\mathbb{E}_{\mu_{\ell}}\left[\sum_{N\geq 1}\mathbf{1}_{\{T_{N}\in I\}}\right]\leq 1+\frac{L}{r}, 
+ 
+ (6) 
+ 
+ where the sum on the left runs over all strings with base  0 0 .
+It is immediate to see that 
+ 
+
+ 
+ 
+ w ℓ ​ ( S ) ≤ ( 1 − p ) − 4 ​ d ​ ℙ p ​ ( C 0 = S ) . w_{\ell}(S)\leq(1-p)^{-4d}\mathbb{P}_{p}(C_{0}=S). 
+ 
+ (7) 
+ 
+ Note that there exist constants  ζ − , ζ + ∈ ( 0 , ∞ ) \zeta_{-},\zeta_{+}\in(0,\infty) , depending only on  p , d p,d , such that for every  ℓ ∈ 𝕊 d − 1 \ell\in\mathbb{S}^{d-1}  one has  0 < ζ − ≤ ζ ℓ ≤ ζ + < ∞ 0<\zeta_{-}\leq\zeta_{\ell}\leq\zeta_{+}<\infty .
+
+ Indeed, for the lower bound, let  c 0 > 0 c_{0}>0  be the constant in the second
+estimate of ( 2 ). Then, 
+ 
+
+ 
+ 
+ ℙ p ( Str [ u , u + r ) ) \displaystyle\mathbb{P}_{p}\bigl(\operatorname{Str}_{[u,u+r)}\bigr) 
+ ≤ ( 1 − p ) − 4 ​ d ​ ℙ p ​ ( | C 0 | < ∞ , max z ∈ C 0 ⁡ ‖ z ‖ ≥ u ) \displaystyle\leq(1-p)^{-4d}\mathbb{P}_{p}\left(|C_{0}|<\infty,\,\max_{z\in C_{0}}\|z\|\geq u\right) 
+ 
+ 
+ 
+ 
+ ≤ C ​ ( 1 − p ) − 4 ​ d ​ e − c 0 ​ u . \displaystyle\leq C(1-p)^{-4d}e^{-c_{0}u}. 
+ 
+ 
+ Therefore, one can choose  ζ ℓ ≥ c 0 = : ζ − . \zeta_{\ell}\geq c_{0}=:\zeta_{-}. 
+The upper bound is trivial.
+It is proven in  [ 2 , Lemma 2.18]  that the tail of the head is stretched-exponential, in the sense that 
+ 
+
+ 
+ 
+ μ ℓ ​ ( H 1 ≥ u ) ≤ C ​ e − c ​ u . \mu_{\ell}(H_{1}\geq u)\leq Ce^{-c\sqrt{u}}. 
+ 
+ (8) 
+ 
+ Here  c , C c,C  can be chosen independently of  ℓ \ell , as specified before
+ [ 2 , Lemma 2.18] . 
+ 
+ 
+ 
+ 2.2  Proof of Theorem  1.1 
+
+ 
+ In this subsection, we are going to prove Theorem  1.1 . We are firstly going to prove few technical lemmas. The proof of Theorem  1.1  can be found at the very end of this subsection. Let us explain the strategy of the proof. Given the irreducible decomposition explained above, we reason as follows : firstly, we prove that the independent random variables  V i V_{i}  have stretched exponential tails under the tilted measure, this is directly proved below. We then derive some basic estimates on the large deviation of the sum of these variables. Finally, we combine all of these to prove the main estimate.
+Recall that  β := α / 2 = d − 1 2 ​ d \beta:=\alpha/2=\frac{d-1}{2d} .
+By ( 7 ) and the first bound in ( 2 ),
+ ∑ S : v ⁡ ( S ) ≥ v w ℓ ( S ) ≤ C e − c 0 ​ v α . \sum_{S:\,v(S)\geq v}w_{\ell}(S)\leq Ce^{-c_{0}v^{\alpha}}.  Choosing  a > 0 a>0  small enough, one has 
+ 
+
+ 
+ 
+ μ ℓ ​ ( V 1 ≥ v ) \displaystyle\mu_{\ell}(V_{1}\geq v) 
+ ≤ μ ℓ ( H 1 ≥ a v α ) + e ζ + ​ a ​ v α ∑ S : v ⁡ ( S ) ≥ v w ℓ ( S ) \displaystyle\leq\mu_{\ell}(H_{1}\geq av^{\alpha})+e^{\zeta_{+}av^{\alpha}}\sum_{S:\,v(S)\geq v}w_{\ell}(S) 
+ 
+ 
+ 
+ 
+ ≤ C e − c ​ v β + C e − c 0 v α / 2 ≤ C e − c ​ v β . \displaystyle\leq Ce^{-cv^{\beta}}+Ce^{-c_{0}v^{\alpha}/2}\leq Ce^{-cv^{\beta}}. 
+ 
+ (9) 
+ 
+ In particular, there exists  κ > 0 \kappa>0  such that 
+ 
+
+ 
+ 
+ m := sup ℓ 𝔼 μ ℓ ​ V 1 \displaystyle m:=\sup_{\ell}\mathbb{E}_{\mu_{\ell}}V_{1} 
+ < ∞ , \displaystyle<\infty, 
+ 
+ 
+ 
+ sup ℓ 𝔼 μ ℓ ​ [ V 1 2 ​ e κ ​ V 1 β ] \displaystyle\sup_{\ell}\mathbb{E}_{\mu_{\ell}}[V_{1}^{2}e^{\kappa V_{1}^{\beta}}] 
+ < ∞ . \displaystyle<\infty. 
+ 
+ (10) 
+ 
+ 
+ 
+ Lemma 2.1 . 
+ 
+ For each fixed  A < ∞ A<\infty , there are  K , C , c > 0 K,C,c>0 , independent of  ℓ \ell ,
+such that for  n ≥ 1 n\geq 1  and  1 ≤ N ≤ A ​ n 1\leq N\leq An , 
+ 
+
+ 
+ 
+ ℙ μ ℓ ​ ( W N > K ​ n ) \displaystyle\mathbb{P}_{\mu_{\ell}}(W_{N}>Kn) 
+ ≤ C ​ e − c ​ n β , \displaystyle\leq Ce^{-cn^{\beta}}, 
+ 
+ 
+ 
+ 𝔼 μ ℓ ​ [ W N ​ 𝟏 W N > K ​ n ] \displaystyle\mathbb{E}_{\mu_{\ell}}[W_{N}\mathbf{1}_{\ W_{N}>Kn}] 
+ ≤ C ​ n ​ e − c ​ n β . \displaystyle\leq Cne^{-cn^{\beta}}. 
+ 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ Take  U i := V i 𝟏 { V i ≤ n } U_{i}:=V_{i}\mathbf{1}_{\{V_{i}\leq n\}}  and
+ λ := κ ​ n β − 1 \lambda:=\kappa n^{\beta-1} .
+By union bound and Markov inequality, for  K K  big enough one has 
+ 
+
+ 
+ 
+ ℙ μ ℓ ​ ( W N > K ​ n ) \displaystyle\mathbb{P}_{\mu_{\ell}}(W_{N}>Kn) 
+ ≤ N ​ ℙ μ ℓ ​ ( V 1 > n ) + exp ⁡ { − λ ​ K ​ n + N ​ λ ​ m + C ​ N ​ λ 2 } \displaystyle\leq N\mathbb{P}_{\mu_{\ell}}(V_{1}>n)+\exp\{-\lambda Kn+N\lambda m+CN\lambda^{2}\} 
+ 
+ 
+ 
+ 
+ ≤ C ​ e − c ′ ​ n β , \displaystyle\leq Ce^{-c^{\prime}n^{\beta}}, 
+ 
+ 
+ Since  𝔼 μ ℓ ​ W N 2 ≤ C ​ N 2 \mathbb{E}_{\mu_{\ell}}W_{N}^{2}\leq CN^{2} , the second bound follows immediately.
+∎ 
+ 
+ 
+ 
+ For a finite connected graph  A A  with  b ℓ ​ ( A ) = 0 b_{\ell}(A)=0 , let  z = t ℓ ​ ( A ) z=t_{\ell}(A) .
+Add the two edges { − e , 0 } \{-e,0\}  and  { z , z + e } \{z,z+e\}  and translate the resulting graph by  e e . Denote it by  S ⁡ ( A ) S(A) . Clearly, this new graph is a string with  H ℓ ​ ( S ⁡ ( A ) ) > H ℓ ​ ( A ) H_{\ell}(S(A))>H_{\ell}(A)  and  v ⁡ ( S ⁡ ( A ) ) > v ⁡ ( A ) v(S(A))>v(A) .
+Moreover, deleting the two added vertices recovers  A + e A+e , so this map is injective. Therefore 
+ 
+
+ 
+ 
+ w ℓ ​ ( S ⁡ ( A ) ) ≥ p 2 ​ ( 1 − p ) 4 ​ d ​ ℙ p ​ ( C 0 = A ) . w_{\ell}(S(A))\geq p^{2}(1-p)^{4d}\mathbb{P}_{p}(C_{0}=A). 
+ 
+ (11) 
+ 
+ Now, remark that for any nonnegative translation-invariant function  F F  of finite graphs, it is easy to see that  𝔼 p [ F ( C 0 ) 𝟏 { | C 0 | < ∞ } ] = ∑ A : b ℓ ​ ( A ) = 0 v ( A ) ℙ p ( C 0 = A ) F ( A ) . \mathbb{E}_{p}[F(C_{0})\mathbf{1}_{\{|C_{0}|<\infty\}}]=\sum_{A:\,b_{\ell}(A)=0}v(A)\mathbb{P}_{p}(C_{0}=A)F(A).  Therefore, for  u , v ≥ 0 u,v\geq 0 , 
+ 
+
+ 
+ 
+ ℙ p ( H ℓ ( C 0 ) ≥ u , v < | C 0 | < ∞ ) \displaystyle\mathbb{P}_{p}\bigl(H_{\ell}(C_{0})\geq u,\ v<|C_{0}|<\infty\bigr) 
+ ≤ C ​ ∑ S v ⁡ ( S ) ​ w ℓ ​ ( S ) ​ 𝟏 { H ℓ ​ ( S ) ≥ u , v ⁡ ( S ) > v } \displaystyle\leq C\sum_{S}v(S)w_{\ell}(S)\mathbf{1}_{\{H_{\ell}(S)\geq u,\ v(S)>v\}} 
+ 
+ 
+ 
+ 
+ ≤ C ​ ∑ N ≥ 1 𝔼 μ ℓ ​ [ e − ζ ℓ ​ T N ​ W N ​ 𝟏 { T N ≥ u , W N > v } ] , \displaystyle\leq C\sum_{N\geq 1}\mathbb{E}_{\mu_{\ell}}\!\left[e^{-\zeta_{\ell}T_{N}}W_{N}\mathbf{1}_{\{T_{N}\geq u,\ W_{N}>v\}}\right], 
+ 
+ (12) 
+ 
+ 
+ 
+ Lemma 2.2 . 
+ 
+ There exist  K , C , c > 0 K,C,c>0 , depending only on  p , d p,d , such that,
+for every  ℓ ∈ 𝕊 d − 1 \ell\in\mathbb{S}^{d-1} ,  n ≥ 1 n\geq 1  and  0 ≤ u ≤ n 0\leq u\leq n , 
+ 
+
+ 
+ 
+ ℙ p ( H ℓ ( C 0 ) ≥ u , K n < | C 0 | < ∞ ) ≤ C e − ζ ℓ ​ u − c ​ n β . \mathbb{P}_{p}\bigl(H_{\ell}(C_{0})\geq u,\ Kn<|C_{0}|<\infty\bigr)\leq Ce^{-\zeta_{\ell}u-cn^{\beta}}. 
+ 
+ 
+ 
+ 
+ 
+ Take  n ≥ 1 n\geq 1 ,  0 ≤ u ≤ n 0\leq u\leq n , and let  A = 2 ​ d A=2\sqrt{d} .
+Choose  K K  as in Lemma  2.1 . In ( 12 ) with  v = K ​ n v=Kn ,
+first restrict to  T N ≤ 2 ​ n T_{N}\leq 2n . Since  H i ≥ r ≥ d − 1 / 2 H_{i}\geq r\geq d^{-1/2} , this forces
+ N ≤ A ​ n N\leq An , and therefore 
+ 
+
+ 
+ 
+ ∑ N ≥ 1 𝔼 μ ℓ ​ [ e − ζ ℓ ​ T N ​ W N ​ 𝟏 u ≤ T N ≤ 2 ​ n , W N > K ​ n ] \displaystyle\sum_{N\geq 1}\mathbb{E}_{\mu_{\ell}}\!\left[e^{-\zeta_{\ell}T_{N}}W_{N}\mathbf{1}_{u\leq T_{N}\leq 2n,\ W_{N}>Kn}\right] 
+ ≤ e − ζ ℓ ​ u ​ ∑ N ≤ A ​ n 𝔼 μ ℓ ​ [ W N ​ 𝟏 W N > K ​ n ] \displaystyle\leq e^{-\zeta_{\ell}u}\sum_{N\leq An}\mathbb{E}_{\mu_{\ell}}[W_{N}\mathbf{1}_{\ W_{N}>Kn}] 
+ 
+ 
+ 
+ 
+ ≤ C ​ e − ζ ℓ ​ u − c ​ n β . \displaystyle\leq Ce^{-\zeta_{\ell}u-cn^{\beta}}. 
+ 
+ (13) 
+ 
+ 
+ 
+ On  T N > 2 ​ n T_{N}>2n , one has that  u ≤ n u\leq n  so 
+ 
+
+ 
+ 
+ ζ ℓ ​ T N ≥ ζ ℓ ​ u + ζ ℓ ​ n 2 + ζ ℓ ​ T N 4 . \zeta_{\ell}T_{N}\geq\zeta_{\ell}u+\frac{\zeta_{\ell}n}{2}+\frac{\zeta_{\ell}T_{N}}{4}. 
+ 
+ 
+ 
+ 
+ By ( 10 ) and the independence of the heights, we obtain 
+ 
+
+ 
+ 
+ ∑ N ≥ 1 𝔼 μ ℓ [ W N e − ζ ℓ T N / 4 ] = 𝔼 μ ℓ [ V 1 e − ζ ℓ H 1 / 4 ] ( 1 − 𝔼 μ ℓ e − ζ ℓ H 1 / 4 ) 2 ≤ C . \sum_{N\geq 1}\mathbb{E}_{\mu_{\ell}}[W_{N}e^{-\zeta_{\ell}T_{N}/4}]=\frac{\mathbb{E}_{\mu_{\ell}}[V_{1}e^{-\zeta_{\ell}H_{1}/4}]}{(1-\mathbb{E}_{\mu_{\ell}}e^{-\zeta_{\ell}H_{1}/4})^{2}}\leq C. 
+ 
+ 
+ Thus the contribution of  T N > 2 ​ n T_{N}>2n  is at most
+ C ​ e − ζ ℓ ​ u − ζ − ​ n / 2 Ce^{-\zeta_{\ell}u-\zeta_{-}n/2} . Together with
+( 12 ) and ( 13 ), this proves that, for  0 ≤ u ≤ n 0\leq u\leq n  , one has 
+ 
+
+ 
+ 
+ ℙ p ( H ℓ ( C 0 ) ≥ u , K n < | C 0 | < ∞ ) ≤ C e − ζ ℓ ​ u − c ​ n β , \mathbb{P}_{p}(H_{\ell}(C_{0})\geq u,\ Kn<|C_{0}|<\infty)\leq Ce^{-\zeta_{\ell}u-cn^{\beta}}, 
+ 
+ (14) 
+ 
+ Finally, we are going to need the following technical result for the proof of Theorems  1.1  and  1.2 . Remember 
+ 
+
+ 
+ 
+ 𝖪 p = { t ∈ ℝ d : t ⋅ y ≤ ξ p ​ ( y ) ​  for all  ​ y ∈ ℝ d } . \mathsf{K}_{p}=\{t\in\mathbb{R}^{d}:t\cdot y\leq\xi_{p}(y)\text{ for all }y\in\mathbb{R}^{d}\}. 
+ 
+ 
+ 
+ 
+ Lemma 2.3 . 
+ 
+ For every  ℓ ∈ 𝕊 d − 1 \ell\in\mathbb{S}^{d-1} ,  ζ ℓ ​ ℓ ∈ ∂ 𝖪 p \zeta_{\ell}\ell\in\partial\mathsf{K}_{p} .
+Consequently, every  t ∈ ∂ 𝖪 p t\in\partial\mathsf{K}_{p}  satisfies
+ t = ζ ℓ ​ ℓ t=\zeta_{\ell}\ell  with  ℓ = t / ‖ t ‖ \ell=t/\|t\| , and 
+ 
+
+ 
+ 
+ ∑ y ∈ ℤ d e t ⋅ y ​ G p ​ ( y ) = ∞ . \sum_{y\in\mathbb{Z}^{d}}e^{t\cdot y}G_{p}(y)=\infty. 
+ 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ Fix  ℓ \ell  and  0 < ε < ζ ℓ 0<\varepsilon<\zeta_{\ell} . By ( 12 ) with  v = 0 v=0 , 
+ 
+
+ 
+ 
+ ℙ p ​ ( H ℓ ​ ( C 0 ) ≥ u , | C 0 | < ∞ ) ≤ C ​ e − ( ζ ℓ − ε ) ​ u ​ ∑ N ≥ 1 𝔼 μ ℓ ​ [ W N ​ e − ε ​ T N ] . \mathbb{P}_{p}(H_{\ell}(C_{0})\geq u,\ |C_{0}|<\infty)\leq Ce^{-(\zeta_{\ell}-\varepsilon)u}\sum_{N\geq 1}\mathbb{E}_{\mu_{\ell}}[W_{N}e^{-\varepsilon T_{N}}]. 
+ 
+ 
+ Independence and ( 10 ) give 
+ 
+
+ 
+ 
+ ∑ N ≥ 1 𝔼 μ ℓ ​ [ W N ​ e − ε ​ T N ] = 𝔼 μ ℓ ​ [ V 1 ​ e − ε ​ H 1 ] ( 1 − 𝔼 μ ℓ ​ [ e − ε ​ H 1 ] ) 2 < ∞ , \sum_{N\geq 1}\mathbb{E}_{\mu_{\ell}}[W_{N}e^{-\varepsilon T_{N}}]=\frac{\mathbb{E}_{\mu_{\ell}}[V_{1}e^{-\varepsilon H_{1}}]}{(1-\mathbb{E}_{\mu_{\ell}}[e^{-\varepsilon H_{1}}])^{2}}<\infty, 
+ 
+ 
+ since  H 1 ≥ r > 0 H_{1}\geq r>0 . Applying this bound to  G p ​ ( k ​ z ) G_{p}(kz)  for
+ ℓ ⋅ z > 0 \ell\cdot z>0 , then letting  k → ∞ k\to\infty  and  ε ↓ 0 \varepsilon\downarrow 0 ,
+yields  ξ p ​ ( z ) ≥ ζ ℓ ​ ℓ ⋅ z \xi_{p}(z)\geq\zeta_{\ell}\ell\cdot z .
+For  ℓ ⋅ z ≤ 0 \ell\cdot z\leq 0  this is immediate. Homogeneity and continuity therefore give 
+ 
+
+ 
+ 
+ ζ ℓ ​ ℓ ∈ 𝖪 p . \zeta_{\ell}\ell\in\mathsf{K}_{p}. 
+ 
+ 
+ On the other hand, ( 7 ) and the renewal decomposition imply 
+ 
+
+ 
+ 
+ ∑ y e ζ ℓ ​ ℓ ⋅ y ​ G p ​ ( y ) ≥ ( 1 − p ) 4 ​ d ​ ∑ S ​  string e ζ ℓ ​ H ℓ ​ ( S ) ​ w ℓ ​ ( S ) = ( 1 − p ) 4 ​ d ​ ∑ N ≥ 1 1 = ∞ . \sum_{y}e^{\zeta_{\ell}\ell\cdot y}G_{p}(y)\geq(1-p)^{4d}\sum_{S\text{ string}}e^{\zeta_{\ell}H_{\ell}(S)}w_{\ell}(S)=(1-p)^{4d}\sum_{N\geq 1}1=\infty. 
+ 
+ 
+ By ( 3 ), this series is finite in the interior of
+ 𝖪 p \mathsf{K}_{p} , so  ζ ℓ ​ ℓ ∈ ∂ 𝖪 p \zeta_{\ell}\ell\in\partial\mathsf{K}_{p} .
+Each ray from  0 0  meets this boundary exactly once, proving the remaining claims.
+∎ 
+ 
+ 
+ 
+ Proof of Theorem  1.1 . 
+ 
+ Choose  t ∈ ∂ 𝖪 p t\in\partial\mathsf{K}_{p}  with  t ⋅ x = ξ p ​ ( x ) t\cdot x=\xi_{p}(x)  and set
+ ℓ = t / ‖ t ‖ \ell=t/\|t\| . By Lemma  2.3 ,
+ ζ ℓ ​ ℓ = t \zeta_{\ell}\ell=t . On  { 0 ↔ x } \{0\leftrightarrow x\} ,
+ H ℓ ​ ( C 0 ) ≥ ℓ ⋅ x H_{\ell}(C_{0})\geq\ell\cdot x , with  0 < ℓ ⋅ x ≤ ‖ x ‖ 0<\ell\cdot x\leq\|x\| .
+Thus ( 14 ), with  n = ‖ x ‖ n=\|x\|  and  u = ℓ ⋅ x u=\ell\cdot x ,
+gives ( 1 ).
+∎ 
+ 
+ 
+ 
+ 
+ 
+ 3  Extension of the Ornstein-Zernike theory 
+
+ 
+ In this section, we are going to prove Theorem  1.2 . We are going to use and adapt the modern Ornstein-Zernike theory as developed in  [ 9 ,  16 ,  10 ] . 
+ 
+ 
+ 3.1  Coarse-graining 
+
+ 
+ 3.1.1  Skeleton 
+
+ 
+ First we construct the skeleton, same as in  [ 10 , Section 2.2] , but boxes have different shape in order to minimize their intersection with the cluster of  0 0 . This is a crucial detail that will allow us to extract a cost of disconnecting these boxes from the cluster of  0 0 , which is exactly the point of Lemma  3.1 . Define 
+ 
+
+ 
+ 
+ 𝔼 d = { { u , v } : u , v ∈ ℤ d , ∥ u − v ∥ 1 = 1 } , \mathbb{E}^{d}=\{\{u,v\}:u,v\in\mathbb{Z}^{d},\ \|u-v\|_{1}=1\}, 
+ 
+ 
+ Define 
+ 
+
+ 
+ 
+ 𝖡 R ​ ( z ) = ( z + R ​ 𝖴 p ) ∩ ℤ d . \mathsf{B}_{R}(z)=(z+R\mathsf{U}_{p})\cap\mathbb{Z}^{d}. 
+ 
+ 
+ Let  n = ‖ x ‖ n=\|x\| , and  E x ​ ( M ) := { x ∈ C 0 , | C 0 | ≤ M ​ n } E_{x}(M):=\{x\in C_{0},\ |C_{0}|\leq Mn\} , with  M M  big enough so that Theorem  1.1  applies.
+Then 
+ 
+
+ 
+ 
+ 0 ≤ G p ​ ( x ) − ℙ ⁡ ( E x ​ ( M ) ) ≤ C ​ e − ξ p ​ ( x ) − c ​ n β 0\leq G_{p}(x)-\mathbb{P}(E_{x}(M))\leq Ce^{-\xi_{p}(x)-cn^{\beta}} 
+ 
+ (15) 
+ 
+ Finally, fix  c 0 := min ‖ y ‖ = 1 ⁡ ξ p ​ ( y ) > 0 , c_{0}:=\min_{\|y\|=1}\xi_{p}(y)>0,  and 
+ 
+
+ 
+ 
+ a = max ⁡ { 1 , ξ p ​ ( e 1 ) , … , ξ p ​ ( e d ) } , a=\max\{1,\xi_{p}(e_{1}),\ldots,\xi_{p}(e_{d})\}, 
+ 
+ 
+ For a vertex set  D ⊂ ℤ d D\subset\mathbb{Z}^{d} , define 
+ 
+
+ 
+ 
+ ∂ ext D = { y ∈ ℤ d ∖ D : { y , z } ∈ 𝔼 d ​  for some  ​ z ∈ D } . \partial^{\mathrm{ext}}D=\{y\in\mathbb{Z}^{d}\setminus D:\ \{y,z\}\in\mathbb{E}^{d}\text{ for some }z\in D\}. 
+ 
+ 
+ 
+ 
+ Algorithm of the coarse graining 
+
+ 
+ Fix  η > 0 \eta>0  small and an integer  K K  big.
+Let  C C  be a finite cluster containing  0 , x 0,x .
+For  z ∈ C z\in C , set 
+ 
+
+ 
+ 
+ b C ( z , r ) = # { e ∈ 𝔼 d : e ∩ C ≠ ∅ , | e ∩ 𝖡 r ( z ) | = 1 } . b_{C}(z,r)=\#\{e\in\mathbb{E}^{d}:e\cap C\neq\varnothing,\ |e\cap\mathsf{B}_{r}(z)|=1\}. 
+ 
+ 
+ This counts all crossing edges incident to  C C , including closed edges.
+Fix the lexicographic order on vertices. 
+ 
+ 1.  
+ 
+ Set  x 0 = 0 x_{0}=0  and  𝒞 − 1 = ∅ \mathcal{C}_{-1}=\varnothing . 
+ 
+ 2.  
+ 
+ Given  x i x_{i} , set 
+ 
+
+ 
+ 
+ r i = min ⁡ arg ​ min r ∈ { K , … , K + ⌊ η ​ K ⌋ } ​ b C ​ ( x i , r ) r_{i}=\min\operatorname*{arg\,min}_{r\in\{K,\ldots,K+\lfloor\eta K\rfloor\}}b_{C}(x_{i},r) 
+ 
+ 
+ Then set  A i = 𝖡 r i ​ ( x i ) ∖ 𝒞 i − 1 A_{i}=\mathsf{B}_{r_{i}}(x_{i})\setminus\mathcal{C}_{i-1} , and  𝒞 i = 𝒞 i − 1 ∪ 𝖡 r i ​ ( x i ) \mathcal{C}_{i}=\mathcal{C}_{i-1}\cup\mathsf{B}_{r_{i}}(x_{i}) . 
+ 
+ 3.  
+ 
+ If possible, choose 
+ 
+
+ 
+ 
+ x i + 1 = min ⁡ { y ∈ C ∩ ∂ ext 𝒞 i : y ⟷ C ∖ 𝒞 i ∂ ext 𝖡 K ​ ( y ) } . x_{i+1}=\min\{y\in C\cap\partial^{\mathrm{ext}}\mathcal{C}_{i}:y\stackrel{{\scriptstyle C\setminus\mathcal{C}_{i}}}{{\longleftrightarrow}}\partial^{\mathrm{ext}}\mathsf{B}_{K}(y)\}. 
+ 
+ 
+ Return to step 2. Otherwise stop. 
+ 
+ 
+ For  i ≥ 1 i\geq 1 , join  x i x_{i}  to  x j ⁡ ( i ) x_{j(i)} , where 
+ 
+
+ 
+ 
+ j ⁡ ( i ) = min ⁡ { j < i : x i ∈ ∂ ext 𝖡 r j ​ ( x j ) } . j(i)=\min\{j<i:x_{i}\in\partial^{\mathrm{ext}}\mathsf{B}_{r_{j}}(x_{j})\}. 
+ 
+ 
+ These big edges form the skeleton tree  𝔗 \mathfrak{T} , for which  m = N ⁡ ( 𝔗 ) + 1 m=N(\mathfrak{T})+1  is its number of vertices.
+We also keep track of the chosen radius  r i r_{i}  at each vertex in  𝔗 \mathfrak{T} . 
+ 
+ 
+ 
+ The energy estimate. 
+
+ 
+ For  A ⊂ D A\subset D  finite, define
+ b D ( A ) := # { { u , v } ∈ 𝔼 d : u ∈ A , v ∉ D } b_{D}(A):=\#\{\{u,v\}\in\mathbb{E}^{d}:u\in A,\ v\notin D\} .
+Let  ℙ p D \mathbb{P}_{p}^{D}  be independent Bernoulli bond percolation with parameter  p p  on the induced edge set  𝔼 ( D ) = { { u , v } ∈ 𝔼 d : u , v ∈ D } \mathbb{E}(D)=\{\{u,v\}\in\mathbb{E}^{d}:u,v\in D\} , and let  𝔼 p D \mathbb{E}_{p}^{D}  be its expectation. For  z ∈ D z\in D ,  C z D C_{z}^{D}  is the open cluster of  z z  in this induced graph. 
+ 
+ 
+ Lemma 3.1 . 
+ 
+ For  z ∈ D z\in D  and every nonnegative function  f f  of  C z D C_{z}^{D} , 
+ 
+
+ 
+ 
+ 𝔼 p D [ ( 1 − p ) b D ​ ( C z D ) f ( C z D ) ] = 𝔼 p [ f ( C z )  1 { C z ⊂ D } ] . \mathbb{E}_{p}^{D}[(1-p)^{b_{D}(C_{z}^{D})}f(C_{z}^{D})]=\mathbb{E}_{p}[f(C_{z})\,\mathbf{1}_{\{C_{z}\subset D\}}]. 
+ 
+ (16) 
+ 
+ In particular, 
+ 
+
+ 
+ 
+ 𝔼 p D [ ( 1 − p ) b D ​ ( C z D )  1 { max y ∈ C z D ξ p ( y − z ) ≥ K − a } ] ≤ c K d e − K . \mathbb{E}_{p}^{D}[(1-p)^{b_{D}(C_{z}^{D})}\,\mathbf{1}_{\{\max_{y\in C_{z}^{D}}\xi_{p}(y-z)\geq K-a\}}]\leq cK^{d}e^{-K}. 
+ 
+ (17) 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ Given all internal edges,  C z D C_{z}^{D}  is in fact exactly the entire cluster if and only if its  b D ​ ( C z D ) b_{D}(C_{z}^{D})  external edges that have one endpoint in  D c D^{c}  are closed, which openness is independent of the internal cluster. This proves ( 16 ).
+Applying this to the indicator function leads to 
+ 
+
+ 
+ 
+ ∑ ξ p ​ ( y − z ) ≥ K − a G p ​ ( y − z ) ≤ ∑ ξ p ​ ( y ) ≥ K − a e − ξ p ​ ( y ) ≤ c ​ K d ​ e − K , \sum_{\xi_{p}(y-z)\geq K-a}G_{p}(y-z)\leq\sum_{\xi_{p}(y)\geq K-a}e^{-\xi_{p}(y)}\leq cK^{d}e^{-K}, 
+ 
+ 
+ ∎ 
+ 
+ 
+ 
+ Note that with the notation of the coarse-graining algorithm, 
+ 
+
+ 
+ 
+ ∑ i b A i ​ ( C x i A i ) ≤ c ​ | C | / ( η ​ K ) . \sum_{i}b_{A_{i}}(C_{x_{i}}^{A_{i}})\leq c|C|/(\eta K). 
+ 
+ (18) 
+ 
+ Indeed, an edge crosses  ∂ 𝖡 r ​ ( x i ) \partial\mathsf{B}_{r}(x_{i})  for a bounded number
+of integer values of  r r .Therefore, since  r i r_{i}  is chosen in order to minimize  b b , there exists  c > 0 c>0  such that 
+ 
+
+ 
+ 
+ b C ​ ( x i , r i ) ≤ c η ​ K ​ | C ∩ 𝖡 2 ​ K ​ ( x i ) | . b_{C}(x_{i},r_{i})\leq\frac{c}{\eta K}|C\cap\mathsf{B}_{2K}(x_{i})|. 
+ 
+ 
+ So we get  ∑ i b A i ​ ( C x i A i ) ≤ c ​ ∑ i b C ​ ( x i , r i ) ≤ c ​ | C | / ( η ​ K ) . \sum_{i}b_{A_{i}}(C_{x_{i}}^{A_{i}})\leq c\sum_{i}b_{C}(x_{i},r_{i})\leq c|C|/(\eta K). 
+Fix now a skeleton  𝔗 \mathfrak{T} .
+Define  B i = b A i ​ ( C x i A i ) , B_{i}=b_{A_{i}}(C_{x_{i}}^{A_{i}}),  and the event 
+ 
+
+ 
+ 
+ F i = { max y ∈ C x i A i ξ p ( y − x i ) ≥ K − a } . F_{i}=\left\{\max_{y\in C_{x_{i}}^{A_{i}}}\xi_{p}(y-x_{i})\geq K-a\right\}. 
+ 
+ 
+ For  n n  sufficiently large, on  { E x ​ ( M ) , 𝔗 ⁡ ( C 0 ) = 𝔗 } \{E_{x}(M),\mathfrak{T}(C_{0})=\mathfrak{T}\} , all events  F i F_{i}  occur,
+and by ( 18 ) 
+ 
+
+ 
+ 
+ ∏ i ( 1 − p ) B i ≥ exp ⁡ { − c ​ M ​ n η ​ K } . \prod_{i}(1-p)^{B_{i}}\geq\exp\!\left\{-\frac{cMn}{\eta K}\right\}. 
+ 
+ 
+ Dropping the skeleton constraint after this bound, ( 17 )
+and independence of the edges inside the fixed, disjoint regions  A i A_{i}  give 
+ 
+
+ 
+ 
+ ℙ p ​ ( E x ​ ( M ) , 𝔗 ⁡ ( C 0 ) = 𝔗 ) \displaystyle\mathbb{P}_{p}(E_{x}(M),\mathfrak{T}(C_{0})=\mathfrak{T}) 
+ ≤ e c ​ M ​ n / ( η ​ K ) ​ 𝔼 p ​ [ ∏ i ( 1 − p ) B i ​  1 ⋂ i F i ] \displaystyle\leq e^{cMn/(\eta K)}\mathbb{E}_{p}\!\left[\prod_{i}(1-p)^{B_{i}}\,\mathbf{1}_{\bigcap_{i}F_{i}}\right] 
+ 
+ 
+ 
+ 
+ = e c ​ M ​ n / ( η ​ K ) ​ ∏ i 𝔼 p A i ​ [ ( 1 − p ) B i ​  1 F i ] \displaystyle=e^{cMn/(\eta K)}\prod_{i}\mathbb{E}_{p}^{A_{i}}\!\left[(1-p)^{B_{i}}\,\mathbf{1}_{F_{i}}\right] 
+ 
+ 
+ 
+ 
+ ≤ e c ​ M ​ n / ( η ​ K ) ​ ( c ​ K d ​ e − K ) m \displaystyle\leq e^{cMn/(\eta K)}(cK^{d}e^{-K})^{m} 
+ 
+ 
+ 
+ 
+ ≤ exp ⁡ { − K ​ m + c ​ m ​ log ⁡ K + c ​ M ​ n / ( η ​ K ) } , \displaystyle\leq\exp\{-Km+cm\log K+cMn/(\eta K)\}, 
+ 
+ 
+ 
+ 
+ 
+ The entropy estimate. 
+
+ 
+ Lemma 3.2 . 
+ 
+ There are at most  exp ⁡ ( c ​ m ​ log ⁡ K ) \exp(cm\log K)  skeletons with  m m  vertices. 
+ 
+ 
+ 
+ Proof. 
+ 
+ Use the tree count of  [ 1 , Lemma 4.1]  and multiply by at most
+ ( 1 + ⌊ η ​ K ⌋ ) m (1+\lfloor\eta K\rfloor)^{m}  choices of radii, still absorbed in
+ exp ⁡ ( c ​ m ​ log ⁡ K ) \exp(cm\log K) .
+∎ 
+ 
+ 
+ 
+ 
+ Trunk and branches. 
+
+ 
+ Let  x F x_{F}  be the first vertex  x i x_{i}  of the skeleton such that
+ x ∈ 𝖡 3 ​ K ​ ( x i ) x\in\mathsf{B}_{3K}(x_{i}) . Such a vertex exists by the stopping rule for  η < 1 \eta<1  and  K K  sufficiently large.
+The path from  0 0  to  x F x_{F}  is what we call the trunk, and we denote it by
+ 𝔱 = ( 𝔱 0 = 0 , … , 𝔱 N ⁡ ( 𝔱 ) = x F ) \mathfrak{t}=(\mathfrak{t}_{0}=0,\ldots,\mathfrak{t}_{N(\mathfrak{t})}=x_{F}) .
+After deleting its edges, let  𝔟 i \mathfrak{b}_{i}  be the branch rooted at  𝔱 i \mathfrak{t}_{i}  and define, as in  [ 1 ] 
+ 
+
+ 
+ 
+ 𝔅 \displaystyle\mathfrak{B} 
+ : = ( 𝔟 0 , … , 𝔟 N ⁡ ( 𝔱 ) ) , \displaystyle:=(\mathfrak{b}_{0},\ldots,\mathfrak{b}_{N(\mathfrak{t})}), 
+ 
+ 
+ 
+ N ⁡ ( 𝔅 ) \displaystyle N(\mathfrak{B}) 
+ : = ∑ i N ⁡ ( 𝔟 i ) = N ⁡ ( 𝔗 ) − N ⁡ ( 𝔱 ) . \displaystyle:=\sum_{i}N(\mathfrak{b}_{i})=N(\mathfrak{T})-N(\mathfrak{t}). 
+ 
+ 
+ Since consecutive vertices of the trunk are at  ξ p \xi_{p} -distance at most
+ ( 1 + η ) ​ K + a (1+\eta)K+a , one has 
+ 
+
+ 
+ 
+ N ⁡ ( 𝔱 ) ≥ ξ p ​ ( x ) − 3 ​ K ( 1 + η ) ​ K + a . N(\mathfrak{t})\geq\frac{\xi_{p}(x)-3K}{(1+\eta)K+a}. 
+ 
+ (19) 
+ 
+ 
+ 
+ 
+ 
+ 3.1.2  Geometry of typical trees: bound on the size 
+
+ 
+ Lemma 3.3 . 
+ 
+ For every  ν > 0 \nu>0  and  ε > 0 \varepsilon>0 , choose  η > 0 \eta>0  sufficiently small and  K K 
+sufficiently large. For all sufficiently large  n = ‖ x ‖ n=\|x\| , 
+ 
+
+ 
+ 
+ ℙ p ​ ( E x ​ ( M ) , N ⁡ ( 𝔗 ) ≥ ( 1 + ν ) ​ ξ p ​ ( x ) / K ) ≤ C ​ e − ( 1 + ν / 2 ) ​ ξ p ​ ( x ) , \mathbb{P}_{p}\!\left(E_{x}(M),N(\mathfrak{T})\geq(1+\nu)\xi_{p}(x)/K\right)\leq Ce^{-(1+\nu/2)\xi_{p}(x)}, 
+ 
+ (20) 
+ 
+ and 
+ 
+
+ 
+ 
+ ℙ p ​ ( E x ​ ( M ) , N ⁡ ( 𝔅 ) ≥ ε ​ ξ p ​ ( x ) / K ) ≤ C ​ e − ξ p ​ ( x ) − c ε ​ n . \mathbb{P}_{p}\!\left(E_{x}(M),N(\mathfrak{B})\geq\varepsilon\xi_{p}(x)/K\right)\leq Ce^{-\xi_{p}(x)-c_{\varepsilon}n}. 
+ 
+ (21) 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ The proof is a routine energy-entropy argument and essentially the same as in  [ 9 , Section 2] . Here are the ideas :
+Apply the energy–entropy argument of  [ 9 , Section 2] 
+using the energy estimate derived earlier, and Lemma  3.2 .
+The additional factor  exp ⁡ { c ​ M ​ n / ( η ​ K ) } \exp\{cMn/(\eta K)\}  is absorbed by taking
+ K K  large, since  ξ p ​ ( x ) ≥ c 0 ​ n \xi_{p}(x)\geq c_{0}n .
+For ( 21 ), use the argument of
+ [ 10 , Section 2.4, proof of Lemma 2.2] :
+by ( 19 ), for  η \eta  small and then  K , n K,n  large, 
+ 
+
+ 
+ 
+ N ⁡ ( 𝔱 ) ≥ ( 1 − ε / 2 ) ​ ξ p ​ ( x ) / K . N(\mathfrak{t})\geq(1-\varepsilon/2)\xi_{p}(x)/K. 
+ 
+ 
+ Thus  N ⁡ ( 𝔅 ) ≥ ε ​ ξ p ​ ( x ) / K N(\mathfrak{B})\geq\varepsilon\xi_{p}(x)/K  implies
+ N ⁡ ( 𝔗 ) ≥ ( 1 + ε / 2 ) ​ ξ p ​ ( x ) / K N(\mathfrak{T})\geq(1+\varepsilon/2)\xi_{p}(x)/K , and conclude by applying ( 20 ).
+∎ 
+ 
+ 
+ 
+ Call trunks such that  N ⁡ ( 𝔱 ) ≤ ν 1 ​ ξ p ​ ( x ) / K N(\mathfrak{t})\leq\nu_{1}\xi_{p}(x)/K ,  ν 1 > 1 \nu_{1}>1   admissible .
+In this language, equation ( 20 ) shows that inadmissible trunks can be neglected. 
+ 
+ 
+ 
+ 3.1.3  Geometry of typical trees: refined estimates 
+
+ 
+ The surcharge function. 
+
+ 
+ For  t ∈ ∂ 𝖪 p t\in\partial\mathsf{K}_{p} , define 
+ 
+
+ 
+ 
+ 𝔰 t ​ ( y ) \displaystyle\mathfrak{s}_{t}(y) 
+ = ξ p ​ ( y ) − t ⋅ y , \displaystyle=\xi_{p}(y)-t\cdot y, 
+ 
+ 
+ 
+ 𝔰 t ​ ( 𝔱 ) \displaystyle\mathfrak{s}_{t}(\mathfrak{t}) 
+ = ∑ i = 1 N ⁡ ( 𝔱 ) 𝔰 t ​ ( 𝔱 i − 𝔱 i − 1 ) , \displaystyle=\sum_{i=1}^{N(\mathfrak{t})}\mathfrak{s}_{t}(\mathfrak{t}_{i}-\mathfrak{t}_{i-1}), 
+ 
+ 
+ For  0 < δ < 1 0<\delta<1 , define 
+ 
+
+ 
+ 
+ 𝒴 δ ◀ := { y ∈ ℝ d : 𝔰 t ​ ( y ) ≤ δ ​ ξ p ​ ( y ) } , \mathcal{Y}_{\delta}^{\blacktriangleleft}:=\{y\in\mathbb{R}^{d}:\mathfrak{s}_{t}(y)\leq\delta\xi_{p}(y)\}, 
+ 
+ 
+ and also  𝒴 δ ▶ = − 𝒴 δ ◀ , 𝒴 δ ◀ ​ ( z ) = z + 𝒴 δ ◀ , 𝒴 δ ▶ ​ ( z ) = z + 𝒴 δ ▶ . \mathcal{Y}_{\delta}^{\blacktriangleright}=-\mathcal{Y}_{\delta}^{\blacktriangleleft},~\mathcal{Y}_{\delta}^{\blacktriangleleft}(z)=z+\mathcal{Y}_{\delta}^{\blacktriangleleft},~\mathcal{Y}_{\delta}^{\blacktriangleright}(z)=z+\mathcal{Y}_{\delta}^{\blacktriangleright}. 
+ 
+ 
+ Proposition 3.4 . 
+ 
+ For every  ε > 0 \varepsilon>0 , choose  η \eta  small and then  K K  large.
+For large enough  n n , uniformly in  t ∈ ∂ 𝖪 p t\in\partial\mathsf{K}_{p} , 
+ 
+
+ 
+ 
+ ℙ p ( E x ( M ) , 𝔰 t ( 𝔱 ) + K N ( 𝔅 ) ≥ ε n ) ≤ e − t ⋅ x − ε n / 2 . \mathbb{P}_{p}(E_{x}(M),\mathfrak{s}_{t}(\mathfrak{t})+KN(\mathfrak{B})\geq\varepsilon n)\leq e^{-t\cdot x-\varepsilon n/2}. 
+ 
+ (22) 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ Let  n = ‖ x ‖ n=\|x\|  and define 
+ 
+
+ 
+ 
+ Q := 𝔰 t ​ ( 𝔱 ) + K ​ N ​ ( 𝔅 ) . Q:=\mathfrak{s}_{t}(\mathfrak{t})+KN(\mathfrak{B}). 
+ 
+ 
+ Since  x F ∈ 𝖡 3 ​ K ​ ( x ) x_{F}\in\mathsf{B}_{3K}(x)  and every trunk edge has
+ ξ p \xi_{p} -length at most  ( 1 + η ) ​ K + a (1+\eta)K+a , one has 
+ 
+
+ 
+ 
+ K ⁡ ( N ⁡ ( 𝔗 ) + 1 ) \displaystyle K\bigl(N(\mathfrak{T})+1\bigr) 
+ ≥ ∑ i = 1 N ⁡ ( 𝔱 ) ξ p ​ ( 𝔱 i − 𝔱 i − 1 ) + K ​ N ​ ( 𝔅 ) − ( η ​ K + a ) ​ N ​ ( 𝔱 ) + K \displaystyle\geq\sum_{i=1}^{N(\mathfrak{t})}\xi_{p}(\mathfrak{t}_{i}-\mathfrak{t}_{i-1})+KN(\mathfrak{B})-(\eta K+a)N(\mathfrak{t})+K 
+ 
+ 
+ 
+ 
+ ≥ t ⋅ x + Q − ( η ​ K + a ) ​ N ​ ( 𝔱 ) − 2 ​ K . \displaystyle\geq t\cdot x+Q-(\eta K+a)N(\mathfrak{t})-2K. 
+ 
+ 
+ Fix a sufficiently large constant  L L . For trees with
+ N ⁡ ( 𝔗 ) ≤ L ​ n / K N(\mathfrak{T})\leq Ln/K , the energy estimate and
+Lemma  3.2  therefore gives 
+ 
+
+ 
+ 
+ 
+ ℙ p ​ ( E x ​ ( M ) , Q ≥ ε ​ n , N ⁡ ( 𝔗 ) ≤ L ​ n / K ) \displaystyle\mathbb{P}_{p}\bigl(E_{x}(M),Q\geq\varepsilon n,N(\mathfrak{T})\leq Ln/K\bigr) 
+ 
+ 
+ 
+ 
+ ≤ ( 1 + L n / K ) exp { − t ⋅ x − ε n + c L ( η + log ⁡ K K ) n + c ​ M ​ n η ​ K + c K } . \displaystyle\leq(1+Ln/K)\exp\left\{-t\cdot x-\varepsilon n+cL\left(\eta+\frac{\log K}{K}\right)n+\frac{cMn}{\eta K}+cK\right\}. 
+ 
+ 
+ Choose  η \eta  small and then  K K  large so that the two terms
+proportional to  n n  in the error are at most  ε ​ n / 4 \varepsilon n/4 .
+For sufficiently large  n n , this bound is at most
+ 1 2 e − t ⋅ x − ε n / 2 \tfrac{1}{2}e^{-t\cdot x-\varepsilon n/2} . 
+ 
+ 
+ For the remaining trees, the same energy–entropy estimate gives 
+ 
+
+ 
+ 
+ ℙ p ​ ( E x ​ ( M ) , N ⁡ ( 𝔗 ) > L ​ n / K ) ≤ C ​ exp ⁡ { − L 2 ​ n + c ​ M ​ n η ​ K } . \mathbb{P}_{p}\bigl(E_{x}(M),N(\mathfrak{T})>Ln/K\bigr)\leq C\exp\left\{-\frac{L}{2}n+\frac{cMn}{\eta K}\right\}. 
+ 
+ 
+ Since  | t ⋅ x | = O ⁡ ( n ) |t\cdot x|=O(n) , uniformly in
+ t ∈ ∂ 𝖪 p t\in\partial\mathsf{K}_{p} , taking  L L  sufficiently large makes this
+bound at most  1 2 e − t ⋅ x − ε n / 2 \tfrac{1}{2}e^{-t\cdot x-\varepsilon n/2} .
+This proves ( 22 ). The last assertion follows from
+ t ⋅ x = ξ p ​ ( x ) − 𝔰 t ​ ( x ) t\cdot x=\xi_{p}(x)-\mathfrak{s}_{t}(x) .
+∎ 
+ 
+ 
+ 
+ 
+ Typical trunks have many cone-points. 
+
+ 
+ A trunk vertex  𝔱 i \mathfrak{t}_{i}  is a forward cone-point if all its successors belong to  𝒴 δ ◀ ​ ( 𝔱 i ) \mathcal{Y}_{\delta}^{\blacktriangleleft}(\mathfrak{t}_{i}) , and a backward cone-point
+if all its predecessors belong to  𝒴 δ ▶ ​ ( 𝔱 i ) \mathcal{Y}_{\delta}^{\blacktriangleright}(\mathfrak{t}_{i}) .
+A cone-point of the trunk satisfies both conditions.
+Define recursively 
+ 
+
+ 
+ 
+ ℓ 1 ◀ \displaystyle\ell_{1}^{\blacktriangleleft} 
+ = min ⁡ { i : 𝔱 i ​  is not a forward cone-point } , \displaystyle=\min\{i:\mathfrak{t}_{i}\text{ is not a forward cone-point}\}, 
+ 
+ 
+ 
+ r k ◀ \displaystyle r_{k}^{\blacktriangleleft} 
+ = min ⁡ { j > ℓ k ◀ : 𝔱 j ∉ 𝒴 δ ◀ ​ ( 𝔱 ℓ k ◀ ) } , \displaystyle=\min\{j>\ell_{k}^{\blacktriangleleft}:\mathfrak{t}_{j}\notin\mathcal{Y}_{\delta}^{\blacktriangleleft}(\mathfrak{t}_{\ell_{k}^{\blacktriangleleft}})\}, 
+ 
+ 
+ 
+ ℓ k + 1 ◀ \displaystyle\ell_{k+1}^{\blacktriangleleft} 
+ = min ⁡ { i ≥ r k ◀ : 𝔱 i ​  is not a forward cone-point } . \displaystyle=\min\{i\geq r_{k}^{\blacktriangleleft}:\mathfrak{t}_{i}\text{ is not a forward cone-point}\}. 
+ 
+ 
+ Stop when the set is empty. Define the backward intervals by reversing
+the order and using  𝒴 δ ▶ \mathcal{Y}_{\delta}^{\blacktriangleright} .
+We say that a trunk vertex  𝔱 i \mathfrak{t}_{i}  is marked if 
+ 
+
+ 
+ 
+ i ∈ ⋃ k [ ℓ k ◀ , r k ◀ ) ∪ ⋃ k ( r k ▶ , ℓ k ▶ ] . i\in\bigcup_{k}[\ell_{k}^{\blacktriangleleft},r_{k}^{\blacktriangleleft})\;\cup\;\bigcup_{k}(r_{k}^{\blacktriangleright},\ell_{k}^{\blacktriangleright}]. 
+ 
+ 
+ Let  # δ marked ​ ( 𝔱 ) \#_{\delta}^{\mathrm{marked}}(\mathfrak{t})  be the number of marked vertices.
+Note that every unmarked vertex is a cone-point of the trunk. 
+ 
+ 
+ Lemma 3.5   (Corresponding to Lemma 4.4 of  [ 1 ] ) . 
+ 
+ For  0 < δ < 1 / 3 0<\delta<1/3 , 
+ 
+
+ 
+ 
+ # δ marked ​ ( 𝔱 ) ≤ 2 ​ 𝔰 t ​ ( 𝔱 ) δ ​ K . \#_{\delta}^{\mathrm{marked}}(\mathfrak{t})\leq\frac{2\mathfrak{s}_{t}(\mathfrak{t})}{\delta K}. 
+ 
+ (23) 
+ 
+ For every  ε > 0 \varepsilon>0 , there exist  a 0 , c , C > 0 a_{0},c,C>0  and suitable
+ η , K \eta,K  such that, if  𝔰 t ​ ( x ) ≤ a 0 ​ n \mathfrak{s}_{t}(x)\leq a_{0}n , 
+ 
+
+ 
+ 
+ ℙ p ​ ( E x ​ ( M ) , # δ marked ​ ( 𝔱 ) ≥ ε ​ N ​ ( 𝔱 ) ) ≤ C ​ e − ξ p ​ ( x ) − c ​ n . \mathbb{P}_{p}(E_{x}(M),\#_{\delta}^{\mathrm{marked}}(\mathfrak{t})\geq\varepsilon N(\mathfrak{t}))\leq Ce^{-\xi_{p}(x)-cn}. 
+ 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ Use the marked-interval argument of  [ 1 , Lemma 4.4] .
+For the constant in ( 23 ), on each forward
+marked interval  [ i , j ) [i,j) , define
+ L i , j = ∑ k = i + 1 j ξ p ​ ( 𝔱 k − 𝔱 k − 1 ) L_{i,j}=\sum_{k=i+1}^{j}\xi_{p}(\mathfrak{t}_{k}-\mathfrak{t}_{k-1}) . Then 
+ 
+
+ 
+ 
+ ∑ k = i + 1 j 𝔰 t ​ ( 𝔱 k − 𝔱 k − 1 ) = L i , j − t ⋅ ( 𝔱 j − 𝔱 i ) ≥ δ ​ L i , j > δ ​ K ​ ( j − i ) , \sum_{k=i+1}^{j}\mathfrak{s}_{t}(\mathfrak{t}_{k}-\mathfrak{t}_{k-1})=L_{i,j}-t\cdot(\mathfrak{t}_{j}-\mathfrak{t}_{i})\geq\delta L_{i,j}>\delta K(j-i), 
+ 
+ 
+ since  𝔱 j − 𝔱 i ∉ 𝒴 δ ◀ \mathfrak{t}_{j}-\mathfrak{t}_{i}\notin\mathcal{Y}_{\delta}^{\blacktriangleleft}  and
+ ξ p ​ ( 𝔱 j − 𝔱 i ) ≤ L i , j \xi_{p}(\mathfrak{t}_{j}-\mathfrak{t}_{i})\leq L_{i,j} .
+Sum over the disjoint forward intervals and then the backward intervals.
+The probability bound follows from Proposition  3.4 
+and  N ⁡ ( 𝔱 ) ≥ c 0 ​ n / ( 4 ​ K ) N(\mathfrak{t})\geq c_{0}n/(4K) , as in the cited proof.
+∎ 
+ 
+ 
+ 
+ 
+ Typical trees have many cone-points. 
+
+ 
+ A vertex  𝔱 i \mathfrak{t}_{i}  of the trunk is a cone-point of  𝔗 \mathfrak{T}  when 
+ 
+
+ 
+ 
+ 𝔗 ⊂ 𝒴 2 ​ δ ▶ ​ ( 𝔱 i ) ∪ 𝒴 2 ​ δ ◀ ​ ( 𝔱 i ) . \mathfrak{T}\subset\mathcal{Y}_{2\delta}^{\blacktriangleright}(\mathfrak{t}_{i})\cup\mathcal{Y}_{2\delta}^{\blacktriangleleft}(\mathfrak{t}_{i}). 
+ 
+ 
+ A trunk cone-point is blocked if it doesn’t satisfy this. Let
+ # δ blocked ​ ( 𝔗 ) \#_{\delta}^{\mathrm{blocked}}(\mathfrak{T})  be the number of blocked points.
+We write  # δ cone ​ ( 𝔗 ) \#_{\delta}^{\mathrm{cone}}(\mathfrak{T})  for the number of cone-points
+of the tree among the vertices of the trunk. 
+ 
+ 
+ Lemma 3.6 . 
+ 
+ For a constant  c δ c_{\delta} , 
+ 
+
+ 
+ 
+ # δ blocked ​ ( 𝔗 ) ≤ c δ ​ N ​ ( 𝔅 ) . \#_{\delta}^{\mathrm{blocked}}(\mathfrak{T})\leq c_{\delta}N(\mathfrak{B}). 
+ 
+ (24) 
+ 
+ For every  ε > 0 \varepsilon>0  and suitable  η , K \eta,K , 
+ 
+
+ 
+ 
+ ℙ p ​ ( E x ​ ( M ) , # δ blocked ​ ( 𝔗 ) ≥ ε ​ N ​ ( 𝔱 ) ) ≤ C ​ e − ξ p ​ ( x ) − c ​ n . \mathbb{P}_{p}(E_{x}(M),\#_{\delta}^{\mathrm{blocked}}(\mathfrak{T})\geq\varepsilon N(\mathfrak{t}))\leq Ce^{-\xi_{p}(x)-cn}. 
+ 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ We use same argument as in the proof of
+ [ 10 , Section 2.7, Lemma 2.5] .
+Let  X i X_{i}  be the number of cone-points of the trunk blocked
+by the branch  𝔟 i \mathfrak{b}_{i} . By that argument,
+ X i ≤ c δ ​ N ​ ( 𝔟 i ) X_{i}\leq c_{\delta}N(\mathfrak{b}_{i}) .
+Since every blocked cone-point is blocked by at least one branch, 
+ 
+
+ 
+ 
+ # δ blocked ​ ( 𝔗 ) ≤ ∑ i X i ≤ c δ ​ ∑ i N ⁡ ( 𝔟 i ) = c δ ​ N ​ ( 𝔅 ) , \#_{\delta}^{\mathrm{blocked}}(\mathfrak{T})\leq\sum_{i}X_{i}\leq c_{\delta}\sum_{i}N(\mathfrak{b}_{i})=c_{\delta}N(\mathfrak{B}), 
+ 
+ 
+ which proves ( 24 ). 
+ 
+ 
+ For  η \eta  sufficiently small,  K K  sufficiently large, and
+ n = ‖ x ‖ n=\|x\|  sufficiently large, ( 19 ) gives
+ N ⁡ ( 𝔱 ) ≥ ξ p ​ ( x ) / ( 4 ​ K ) N(\mathfrak{t})\geq\xi_{p}(x)/(4K) . Consequently, 
+ 
+
+ 
+ 
+ { # δ blocked ( 𝔗 ) ≥ ε N ( 𝔱 ) } ⊂ { N ( 𝔅 ) ≥ ε 4 ​ c δ ξ p ​ ( x ) K } . \left\{\#_{\delta}^{\mathrm{blocked}}(\mathfrak{T})\geq\varepsilon N(\mathfrak{t})\right\}\subset\left\{N(\mathfrak{B})\geq\frac{\varepsilon}{4c_{\delta}}\frac{\xi_{p}(x)}{K}\right\}. 
+ 
+ 
+ Applying ( 21 ) with
+ ε / ( 4 ​ c δ ) \varepsilon/(4c_{\delta})  proves the probability bound.
+∎ 
+ 
+ 
+ 
+ Theorem 3.7 . 
+ 
+ For every  ε > 0 \varepsilon>0  and  0 < δ < 1 / 3 0<\delta<1/3 , small enough  η \eta  and big enough  K K  give 
+ 
+
+ 
+ 
+ ℙ p ​ ( E x ​ ( M ) , # δ cone ​ ( 𝔗 ) ≤ ( 1 − ε ) ​ N ​ ( 𝔱 ) ) ≤ C ​ e − ξ p ​ ( x ) − c ​ n \mathbb{P}_{p}(E_{x}(M),\#_{\delta}^{\mathrm{cone}}(\mathfrak{T})\leq(1-\varepsilon)N(\mathfrak{t}))\leq Ce^{-\xi_{p}(x)-cn} 
+ 
+ 
+ whenever  𝔰 t ​ ( x ) ≤ a 0 ​ n \mathfrak{s}_{t}(x)\leq a_{0}n , for a sufficiently small  a 0 > 0 a_{0}>0 .
+Moreover, the number of trunk vertices which are either marked or
+blocked is at most 
+ 
+
+ 
+ 
+ c δ ​ ( K − 1 ​ 𝔰 t ​ ( 𝔱 ) + N ⁡ ( 𝔅 ) ) . c_{\delta}\bigl(K^{-1}\mathfrak{s}_{t}(\mathfrak{t})+N(\mathfrak{B})\bigr). 
+ 
+ (25) 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ We combine the marked-point and blocked-point estimates of
+ [ 10 , Sections 2.6–2.8, Lemmas 2.4–2.5] . 
+ 
+ 
+ Every unmarked and unblocked trunk vertex is a cone-point
+of the tree. By the deterministic estimates in
+Lemmas  3.5  and  3.6 , 
+ 
+
+ 
+ 
+ # ​ { i : 𝔱 i ​  is marked or blocked } \displaystyle\#\{i:\mathfrak{t}_{i}\text{ is marked or blocked}\} 
+ ≤ # δ marked ​ ( 𝔱 ) + # δ blocked ​ ( 𝔗 ) \displaystyle\leq\#_{\delta}^{\mathrm{marked}}(\mathfrak{t})+\#_{\delta}^{\mathrm{blocked}}(\mathfrak{T}) 
+ 
+ 
+ 
+ 
+ ≤ c δ ​ ( K − 1 ​ 𝔰 t ​ ( 𝔱 ) + N ⁡ ( 𝔅 ) ) , \displaystyle\leq c_{\delta}\bigl(K^{-1}\mathfrak{s}_{t}(\mathfrak{t})+N(\mathfrak{B})\bigr), 
+ 
+ 
+ which proves ( 25 ). 
+ 
+ 
+ Moreover, since the trunk has  N ⁡ ( 𝔱 ) + 1 N(\mathfrak{t})+1  vertices, 
+ 
+
+ 
+ 
+ 
+ { # δ cone ( 𝔗 ) ≤ ( 1 − ε ) N ( 𝔱 ) } \displaystyle\left\{\#_{\delta}^{\mathrm{cone}}(\mathfrak{T})\leq(1-\varepsilon)N(\mathfrak{t})\right\} 
+ 
+ 
+ 
+ 
+ ⊂ { # δ marked ( 𝔱 ) ≥ ε 2 N ( 𝔱 ) } ∪ { # δ blocked ( 𝔗 ) ≥ ε 2 N ( 𝔱 ) } . \displaystyle\quad\subset\left\{\#_{\delta}^{\mathrm{marked}}(\mathfrak{t})\geq\frac{\varepsilon}{2}N(\mathfrak{t})\right\}\cup\left\{\#_{\delta}^{\mathrm{blocked}}(\mathfrak{T})\geq\frac{\varepsilon}{2}N(\mathfrak{t})\right\}. 
+ 
+ 
+ Choose the existing  η , K \eta,K  of Lemmas  3.5  and  3.6  and take  a 0 a_{0}  sufficiently small. A union bound then gives the claimed estimate whenever  𝔰 t ​ ( x ) ≤ a 0 ​ n \mathfrak{s}_{t}(x)\leq a_{0}n .
+∎ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 3.2  Geometry of typical clusters 
+
+ 
+ 3.2.1  Cone-points of  C C 
+
+ 
+ Cones. 
+
+ 
+ For fixed  t t , choose  e ∈ { ± e 1 , … , ± e d } e\in\{\pm e_{1},\ldots,\pm e_{d}\}  such that
+ r = t ⋅ e = max j ⁡ | t ⋅ e j | r=t\cdot e=\max_{j}|t\cdot e_{j}| , and write  y ∥ := t ⋅ y / r y^{\parallel}:=t\cdot y/r , and 
+ 
+
+ 
+ 
+ 𝒴 + \displaystyle\mathcal{Y}^{+} 
+ = 𝒴 3 ​ δ ◀ , \displaystyle=\mathcal{Y}_{3\delta}^{\blacktriangleleft}, 
+ 
+ 
+ 
+ 𝒴 − \displaystyle\mathcal{Y}^{-} 
+ = − 𝒴 + . \displaystyle=-\mathcal{Y}^{+}. 
+ 
+ 
+ 
+ 
+ 
+ Cone-points of the cluster. 
+
+ 
+ For a finite connected graph  C C , a vertex  v v  is a  cone-point of  C C 
+if both of the following conditions hold: 
+ 
+
+ 
+ 
+ C ⊂ ( v + 𝒴 − ) ∪ ( v + 𝒴 + ) , C ∩ { z : v ∥ − 1 ≤ z ∥ ≤ v ∥ + 1 } = { v − e , v , v + e } , \begin{gathered}C\subset(v+\mathcal{Y}^{-})\cup(v+\mathcal{Y}^{+}),\\
+C\cap\{z:v^{\parallel}-1\leq z^{\parallel}\leq v^{\parallel}+1\}=\{v-e,v,v+e\},\end{gathered} 
+ 
+ 
+ which is nothing else than the definition of Campanino and Ioffe  [ 9 , Section 4.1] . We say that  v v  is a  forward cone-point  of  C C  if 
+ 
+
+ 
+ 
+ C ⊂ ( v + 𝒴 + ) , C\subset(v+\mathcal{Y}^{+}), 
+ 
+ 
+ and 
+ 
+
+ 
+ 
+ C ∩ { z : v ∥ − 1 ≤ z ∥ ≤ v ∥ + 1 } = { v , v + e } . C\cap\{z:v^{\parallel}-1\leq z^{\parallel}\leq v^{\parallel}+1\}=\{v,v+e\}. 
+ 
+ 
+ We say that  v v  is a  backward cone-point  of  C C  if 
+ 
+
+ 
+ 
+ C ⊂ ( v + 𝒴 − ) , C\subset(v+\mathcal{Y}^{-}), 
+ 
+ 
+ and 
+ 
+
+ 
+ 
+ C ∩ { z : v ∥ − 1 ≤ z ∥ ≤ v ∥ + 1 } = { v , v − e } . C\cap\{z:v^{\parallel}-1\leq z^{\parallel}\leq v^{\parallel}+1\}=\{v,v-e\}. 
+ 
+ 
+ Let  # δ cone ​ ( C , 0 , x ) \#_{\delta}^{\mathrm{cone}}(C;0,x)  count the cone-points. 
+ 
+ 
+ Theorem 3.8 . 
+ 
+ There exist  a 0 , ρ , c , C > 0 a_{0},\rho,c,C>0  such that, if  𝔰 t ​ ( x ) ≤ a 0 ​ ‖ x ‖ \mathfrak{s}_{t}(x)\leq a_{0}\|x\| , 
+ 
+
+ 
+ 
+ ℙ p ​ ( E x ​ ( M ) , # δ cone ​ ( C 0 , 0 , x ) ≤ ρ ​ ‖ x ‖ ) \displaystyle\mathbb{P}_{p}(E_{x}(M),\#_{\delta}^{\mathrm{cone}}(C_{0};0,x)\leq\rho\|x\|) 
+ ≤ C ​ e − ξ p ​ ( x ) − c ​ ‖ x ‖ , \displaystyle\leq Ce^{-\xi_{p}(x)-c\|x\|}, 
+ 
+ (26) 
+ 
+ 
+ ℙ p ​ ( x ∈ C 0 , | C 0 | < ∞ , # δ cone ​ ( C 0 , 0 , x ) ≤ ρ ​ ‖ x ‖ ) \displaystyle\mathbb{P}_{p}(x\in C_{0},\ |C_{0}|<\infty,\ \#_{\delta}^{\mathrm{cone}}(C_{0};0,x)\leq\rho\|x\|) 
+ ≤ C ​ e − ξ p ​ ( x ) − c ​ ‖ x ‖ β . \displaystyle\leq Ce^{-\xi_{p}(x)-c\|x\|^{\beta}}. 
+ 
+ (27) 
+ 
+ The constants are uniform in  t ∈ ∂ 𝖪 p t\in\partial\mathsf{K}_{p} . 
+ 
+ 
+ 
+ Proof. 
+ 
+ The exact same proof as in 
+ [ 10 , Section 2.9, Theorem 2.2]  shows ( 26 )
+Then, 
+ 
+
+ 
+ 
+ 
+ ℙ p ​ ( x ∈ C 0 , | C 0 | < ∞ , # δ cone ​ ( C 0 , 0 , x ) ≤ ρ ​ n ) \displaystyle\mathbb{P}_{p}\bigl(x\in C_{0},\ |C_{0}|<\infty,\ \#_{\delta}^{\mathrm{cone}}(C_{0};0,x)\leq\rho n\bigr) 
+ 
+ 
+ 
+ 
+ ≤ ℙ p ( E x ( M ) , # δ cone ( C 0 ; 0 , x ) ≤ ρ n ) + ℙ p ( x ∈ C 0 , M n < | C 0 | < ∞ ) \displaystyle\quad\leq\mathbb{P}_{p}\bigl(E_{x}(M),\ \#_{\delta}^{\mathrm{cone}}(C_{0};0,x)\leq\rho n\bigr)+\mathbb{P}_{p}(x\in C_{0},\ Mn<|C_{0}|<\infty) 
+ 
+ 
+ 
+ 
+ ≤ C ​ e − ξ p ​ ( x ) − c ​ n β , \displaystyle\quad\leq Ce^{-\xi_{p}(x)-cn^{\beta}}, 
+ 
+ 
+ which is what we wanted.
+∎ 
+ 
+ 
+ 
+ Remark :   Notice that we actually recover a form of separation of masses on irreducible connections. 
+ 
+ 
+ 
+ 
+ 3.2.2  Decomposition of  C C  into irreducible pieces 
+
+ 
+ Irreducible pieces. 
+
+ 
+ We are now going to associate a directed random walk to every cluster and study its properties.
+Fix  t 0 ∈ ∂ 𝖪 p t_{0}\in\partial\mathsf{K}_{p} .
+The cones  𝒴 ± \mathcal{Y}^{\pm}  and  e e  are
+those defined from  t 0 t_{0} .
+Define the height of a vertex  z z  to be 
+ 
+
+ 
+ 
+ z ∥ := t 0 ⋅ z t 0 ⋅ e . z^{\parallel}:=\frac{t_{0}\cdot z}{t_{0}\cdot e}. 
+ 
+ 
+ We denote by  ℐ b \mathcal{I}_{\mathrm{b}} ,  ℐ f \mathcal{I}_{\mathrm{f}}  and  ℐ \mathcal{I} 
+the sets of backward-irreducible, forward-irreducible and irreducible pieces,
+respectively, defined as follows. 
+ 
+ •  
+ 
+ C ∈ ℐ b C\in\mathcal{I}_{\mathrm{b}}  if  0 ∈ C 0\in C ,  v v  is a backward cone-point,  v ∥ ≥ 0 v^{\parallel}\geq 0 , and  v v  is the only cone-point of nonnegative height. Define  X ⁡ ( C ) := v X(C):=v . 
+ 
+ •  
+ 
+ C ∈ ℐ f C\in\mathcal{I}_{\mathrm{f}}  if  0 ∈ C 0\in C ,  v v  is a forward cone-point of  C C ,  v ∥ ≤ 0 v^{\parallel}\leq 0 , and  v v  is the only cone-point of nonpositive height. Define  X ⁡ ( C ) := − v X(C):=-v . 
+ 
+ •  
+ 
+ C ∈ ℐ C\in\mathcal{I}  if  0 0  is its only forward cone-points and  v v  its only backward cone-point,  v ∥ > 0 v^{\parallel}>0 . Define  X ⁡ ( C ) = v X(C)=v . 
+ 
+ 
+ 
+ 
+ Lemma 3.9 . 
+ 
+ A finite cluster containing  0 , x 0,x , with at least two cone-points
+between their heights, has a unique decomposition 
+ 
+
+ 
+ 
+ C = C b ⊔ C 1 ⊔ ⋯ ⊔ C N ⊔ C f , C=C_{\mathrm{b}}\sqcup C_{1}\sqcup\cdots\sqcup C_{N}\sqcup C_{\mathrm{f}}, 
+ 
+ 
+ where  N ≥ 1 N\geq 1  and  C b ∈ ℐ b C_{\mathrm{b}}\in\mathcal{I}_{\mathrm{b}} ,  C f ∈ ℐ f C_{\mathrm{f}}\in\mathcal{I}_{\mathrm{f}} ,  C i ∈ ℐ C_{i}\in\mathcal{I}  are translated and joined
+at their marked endpoints, and
+ x = X ⁡ ( C b ) + ∑ i X ⁡ ( C i ) + X ⁡ ( C f ) x=X(C_{\mathrm{b}})+\sum_{i}X(C_{i})+X(C_{\mathrm{f}}) .
+Conversely every such concatenation gives one of these clusters. 
+ 
+ 
+ 
+ Proof. 
+ 
+ Same as  [ 10 , Section 2.10] .
+∎ 
+ 
+ 
+ 
+ 
+ The weights. 
+
+ 
+ We define the following weights 
+ 
+
+ 
+ 
+ 𝗐 ~ ​ ( C ) = { ( 1 − p ) − 2 ​ d ​ ℙ p ​ ( C 0 = C ) , C ∈ ℐ , ( 1 − p ) − d ​ ℙ p ​ ( C 0 = C ) , C ∈ ℐ b ⊔ ℐ f . \widetilde{\mathsf{w}}(C)=\begin{cases}(1-p)^{-2d}\mathbb{P}_{p}(C_{0}=C),&C\in\mathcal{I},\\
+(1-p)^{-d}\mathbb{P}_{p}(C_{0}=C),&C\in\mathcal{I}_{\mathrm{b}}\sqcup\mathcal{I}_{\mathrm{f}}.\end{cases} 
+ 
+ (28) 
+ 
+ This gives us : 
+ 
+
+ 
+ 
+ ℙ p ​ ( C 0 = C ) = 𝗐 ~ ​ ( C b ) ​ 𝗐 ~ ​ ( C f ) ​ ∏ i = 1 N 𝗐 ~ ​ ( C i ) . \mathbb{P}_{p}(C_{0}=C)=\widetilde{\mathsf{w}}(C_{\mathrm{b}})\widetilde{\mathsf{w}}(C_{\mathrm{f}})\prod_{i=1}^{N}\widetilde{\mathsf{w}}(C_{i}). 
+ 
+ (29) 
+ 
+ 
+ 
+ We then consider the weights  𝗐 t ​ ( C ) = e t ⋅ X ⁡ ( C ) ​ 𝗐 ~ ​ ( C ) \mathsf{w}_{t}(C)=e^{t\cdot X(C)}\widetilde{\mathsf{w}}(C)  and 
+ 
+
+ 
+ 
+ 𝗉 t ​ ( y ) \displaystyle\mathsf{p}_{t}(y) 
+ : = ∑ C ∈ ℐ X ⁡ ( C ) = y 𝗐 t ​ ( C ) , \displaystyle:=\sum_{\begin{subarray}{c}C\in\mathcal{I}\\
+X(C)=y\end{subarray}}\mathsf{w}_{t}(C), 
+ 
+ 
+ 
+ ρ b , t ​ ( y ) \displaystyle\rho_{\mathrm{b},t}(y) 
+ : = ∑ C ∈ ℐ b X ⁡ ( C ) = y 𝗐 t ​ ( C ) , \displaystyle:=\sum_{\begin{subarray}{c}C\in\mathcal{I}_{\mathrm{b}}\\
+X(C)=y\end{subarray}}\mathsf{w}_{t}(C), 
+ 
+ 
+ 
+ ρ f , t ​ ( y ) \displaystyle\rho_{\mathrm{f},t}(y) 
+ : = ∑ C ∈ ℐ f X ⁡ ( C ) = y 𝗐 t ​ ( C ) . \displaystyle:=\sum_{\begin{subarray}{c}C\in\mathcal{I}_{\mathrm{f}}\\
+X(C)=y\end{subarray}}\mathsf{w}_{t}(C). 
+ 
+ 
+ 
+ 
+ The following proposition provides the directed random walk representation of  G p ​ ( x ) G_{p}(x)  : 
+ 
+ 
+ Proposition 3.10 . 
+ 
+ For  t ∈ 𝖪 p t\in\mathsf{K}_{p}  sufficiently close to  t 0 t_{0} , there exists  C , c > 0 C,c>0  such that 
+ 
+
+ 
+ 
+ | r t ​ ( x ) | ≤ C ​ e − c ​ ‖ x ‖ β |r_{t}(x)|\leq Ce^{-c\|x\|^{\beta}} 
+ 
+ 
+ with 
+ 
+
+ 
+ 
+ e t ⋅ x G p ( x ) − ∑ n ≥ 1 ∑ a , b , y 1 , … , y n 𝟏 { a + y 1 + … + y n + b = x } ρ b , t ( a ) ρ f , t ( b ) ∏ i = 1 n 𝗉 t ( y i ) = : r t ( x ) e^{t\cdot x}G_{p}(x)-\sum_{n\geq 1}\sum_{a,b,y_{1},...,y_{n}}\mathbf{1}_{\{a+y_{1}+...+y_{n}+b=x\}}\rho_{\mathrm{b},t}(a)\rho_{\mathrm{f},t}(b)\prod_{i=1}^{n}\mathsf{p}_{t}(y_{i})=:r_{t}(x) 
+ 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ The result follows directly from ( 29 ) and the control on  r t ​ ( x ) r_{t}(x)  follows from Theorem  3.8 
+∎ 
+ 
+ 
+ 
+ We will need several properties of the weights above. Firstly, we will show that they inherit from the stretched exponential decay. Moreover,  𝗉 t \mathsf{p}_{t}  actually defines a probability measure on  ℤ d \mathbb{Z}^{d}  for  t ∈ ∂ 𝖪 p t\in\partial\mathsf{K}_{p}  sufficiently close to  t 0 t_{0} . This will in particular imply that all of the moments of the displacements exist, and hence we will be able to use standard probability results to conclude Theorem  1.2 . 
+ 
+ 
+ Proposition 3.11 . 
+ 
+ For  t ∈ 𝖪 p t\in\mathsf{K}_{p}  sufficiently close to  t 0 t_{0} , uniformly in  t , y t,y , 
+ 
+
+ 
+ 
+ 𝗉 t ​ ( y ) + ρ b , t ​ ( y ) + ρ f , t ​ ( y ) ≤ C ​ e − c ​ ‖ y ‖ β . \mathsf{p}_{t}(y)+\rho_{\mathrm{b},t}(y)+\rho_{\mathrm{f},t}(y)\leq Ce^{-c\|y\|^{\beta}}. 
+ 
+ (30) 
+ 
+ For  t ∈ ∂ 𝖪 p t\in\partial\mathsf{K}_{p}  in this neighbourhood, 
+ 
+
+ 
+ 
+ H ⁡ ( t ) := ∑ y 𝗉 t ​ ( y ) = 1 . H(t):=\sum_{y}\mathsf{p}_{t}(y)=1. 
+ 
+ (31) 
+ 
+ 
+ 
+ 
+ Proof of ( 30 ). 
+ 
+ We first consider  𝗉 t \mathsf{p}_{t} . We consider two cases : if  𝔰 t 0 ​ ( y ) > a 0 ​ ‖ y ‖ \mathfrak{s}_{t_{0}}(y)>a_{0}\|y\| , then, for
+ ‖ t − t 0 ‖ < a 0 / 2 \|t-t_{0}\|<a_{0}/2 , 
+ 
+
+ 
+ 
+ 𝗉 t ( y ) ≤ ( 1 − p ) − 2 ​ d e t ⋅ y G p ( y ) ≤ ( 1 − p ) − 2 ​ d e − a 0 ∥ y ∥ / 2 . \mathsf{p}_{t}(y)\leq(1-p)^{-2d}e^{t\cdot y}G_{p}(y)\leq(1-p)^{-2d}e^{-a_{0}\|y\|/2}. 
+ 
+ 
+ Otherwise, since irreducible pieces have exactly two
+cone-points, Theorem  3.8  gives
+for  ‖ y ‖ \|y\|  sufficiently large, 
+ 
+
+ 
+ 
+ 𝗉 t ​ ( y ) ≤ C ​ e t ⋅ y − ξ p ​ ( y ) − c ​ ‖ y ‖ β ≤ C ​ e − c ​ ‖ y ‖ β , \mathsf{p}_{t}(y)\leq Ce^{t\cdot y-\xi_{p}(y)-c\|y\|^{\beta}}\leq Ce^{-c\|y\|^{\beta}}, 
+ 
+ 
+ where we used  t ∈ 𝖪 p t\in\mathsf{K}_{p} . 
+ 
+ 
+ The same bounds hold for  ρ b , t \rho_{\mathrm{b},t}  and  ρ f , t \rho_{\mathrm{f},t} , and the proof is a classical OZ theory argument.
+Let us define the following generating functions : 
+ 
+
+ 
+ 
+ G ⁡ ( t ) \displaystyle G(t) 
+ : = ∑ x ∈ ℤ d e t ⋅ x ​ G p ​ ( x ) , \displaystyle:=\sum_{x\in\mathbb{Z}^{d}}e^{t\cdot x}G_{p}(x), 
+ 
+ 
+ 
+ R ⁡ ( t ) \displaystyle R(t) 
+ : = ∑ x ∈ ℤ d r t ​ ( x ) , \displaystyle:=\sum_{x\in\mathbb{Z}^{d}}r_{t}(x), 
+ 
+ 
+ and  H ⁡ ( t ) := ∑ y ∈ ℤ d 𝗉 t ​ ( y ) , B ⁡ ( t ) := ∑ y ∈ ℤ d ρ b , t ​ ( y ) , F ⁡ ( t ) := ∑ y ∈ ℤ d ρ f , t ​ ( y ) . H(t):=\sum_{y\in\mathbb{Z}^{d}}\mathsf{p}_{t}(y),~B(t):=\sum_{y\in\mathbb{Z}^{d}}\rho_{\mathrm{b},t}(y),~F(t):=\sum_{y\in\mathbb{Z}^{d}}\rho_{\mathrm{f},t}(y). 
+For any  t t  in the interior of  𝖪 p \mathsf{K}_{p} , all of these series converge. Hence, using the decomposition above, we get the following renewal equation : 
+ 
+
+ 
+ 
+ G ⁡ ( t ) \displaystyle G(t) 
+ = R ⁡ ( t ) + B ⁡ ( t ) ​ F ​ ( t ) ​ ∑ n ≥ 1 H ​ ( t ) n \displaystyle=R(t)+B(t)F(t)\sum_{n\geq 1}H(t)^{n} 
+ 
+ 
+ 
+ 
+ = R ⁡ ( t ) + B ⁡ ( t ) ​ F ​ ( t ) ​ H ⁡ ( t ) 1 − H ⁡ ( t ) . \displaystyle=R(t)+B(t)F(t)\dfrac{H(t)}{1-H(t)}. 
+ 
+ 
+ Notice now that by estimates above, for  t ∈ ∂ 𝖪 p t\in\partial\mathsf{K}_{p}  close to  t 0 t_{0} ,  R ⁡ ( t ) , B ⁡ ( t ) , F ⁡ ( t ) R(t),B(t),F(t)  are all finite and  G ⁡ ( t ) = ∞ G(t)=\infty  by Lemma  2.3 . Together with  H ⁡ ( t ) ≤ 1 H(t)\leq 1 , this implies that  H ⁡ ( t ) = 1 H(t)=1  finishing the proof.
+∎ 
+ 
+ 
+ 
+ For  t ∈ ∂ 𝖪 p t\in\partial\mathsf{K}_{p}  sufficiently close to  t 0 t_{0} , write
+ ℙ t , 0 \mathbb{P}_{t,0}  for the law of the random walk started at  S 0 = 0 S_{0}=0 
+with increment law  𝗉 t \mathsf{p}_{t} , and  𝔼 t , 0 \mathbb{E}_{t,0}  for its expectation. 
+ 
+ 
+ We will now study a random walk  S n = ∑ i = 1 n X i S_{n}=\sum_{i=1}^{n}X_{i}  where  X i X_{i}  are sampled according to  𝗉 t \mathsf{p}_{t} . We will first show that the expected value of these random variables point to the direction  x / ‖ x ‖ x/\|x\| . In previous works, this was done using the exponential moments coming from the separation of masses, which is unavailable here, but we give a simpler argument. 
+ 
+ 
+ Proposition 3.12 . 
+ 
+ For  x ≠ 0 x\neq 0  and  t ∈ ∂ 𝖪 p t\in\partial\mathsf{K}_{p}  sufficiently close to  t 0 t_{0}  with  t ⋅ x = ξ p ​ ( x ) t\cdot x=\xi_{p}(x) , there exists  c > 0 c>0  such that 
+ 
+
+ 
+ 
+ 𝔼 t , 0 ​ [ X 1 ] = c ⋅ x ‖ x ‖ \mathbb{E}_{t,0}[X_{1}]=c\cdot\dfrac{x}{\|x\|} 
+ 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ Firstly, one can use Taylor’s theorem on  H H  for vectors on the boundary of  ∂ 𝖪 p \partial\mathsf{K}_{p}  since the sum  ∑ y ‖ y ‖ k ​ 𝗉 t ​ ( y ) \sum_{y}\|y\|^{k}\mathsf{p}_{t}(y)  is uniformly bounded. Set  s = x / ‖ x ‖ s=x/\|x\|  and  m = 𝔼 t , 0 ​ [ X 1 ] m=\mathbb{E}_{t,0}[X_{1}] .
+Since every irreducible displacement has positive  t 0 t_{0}  projection, one has  t 0 ⋅ m > 0 t_{0}\cdot m>0 . Consider now 
+ 
+
+ 
+ 
+ H ⁡ ( u ) = ∑ y 𝗉 t ​ ( y ) ​ e ( u − t ) ⋅ y . H(u)=\sum_{y}\mathsf{p}_{t}(y)e^{(u-t)\cdot y}. 
+ 
+ 
+ The preceding renewal argument implies that  H ⁡ ( u ) ≤ 1 H(u)\leq 1  in  𝖪 p \mathsf{K}_{p}  near  t t , with equality on its boundary.
+By Taylor near  t t , 
+ 
+
+ 
+ 
+ H ⁡ ( u ) = 1 + m ⋅ ( u − t ) + O ⁡ ( ‖ u − t ‖ 2 ) . H(u)=1+m\cdot(u-t)+O(\|u-t\|^{2}). 
+ 
+ 
+ In particular, if  u u  is on the boundary one has 
+ 
+
+ 
+ 
+ m ⋅ ( u − t ) = O ⁡ ( ‖ u − t ‖ 2 ) . m\cdot(u-t)=O(\|u-t\|^{2}). 
+ 
+ 
+ 
+ 
+ Suppose  s ≠ m / ‖ m ‖ s\neq m/\|m\|  and define  v = s − m / ‖ m ‖ v=s-m/\|m\| .
+Direct calculation shows that  s ⋅ v > 0 s\cdot v>0 , while  m ⋅ v < 0 . m\cdot v<0. 
+For small enough  ε > 0 \varepsilon>0 ,  ( 1 − ε ) ​ t (1-\varepsilon)t  lies inside  𝖪 p \mathsf{K}_{p} , and  t + ε ​ v t+\varepsilon v  lies outside of it.
+The segment joining their endpoints consequently contains a boundary point 
+ 
+
+ 
+ 
+ u ε := ( 1 − θ ε ) ​ ( 1 − ε ) ​ t + θ ε ​ ( t + ε ​ v ) u_{\varepsilon}:=(1-\theta_{\varepsilon})(1-\varepsilon)t+\theta_{\varepsilon}(t+\varepsilon v) 
+ 
+ 
+ for some  θ ε ∈ ( 0 , 1 ) \theta_{\varepsilon}\in(0,1) .
+Then,  u ε − t u_{\varepsilon}-t  must have a projection on  m m  that goes in the opposite direction of  m m , and that has a norm of order  ε \varepsilon .
+Indeed, 
+ 
+
+ 
+ 
+ m ⋅ ( u ε − t ) \displaystyle m\cdot(u_{\varepsilon}-t) 
+ = − ε ( ( 1 − θ ε ) m ⋅ t + θ ε ( − m ⋅ v ) ) \displaystyle=-\varepsilon\bigl((1-\theta_{\varepsilon})m\cdot t+\theta_{\varepsilon}(-m\cdot v)\bigr) 
+ 
+ 
+ 
+ 
+ ≤ − ε ⁡ ( ( 1 − θ ε ) ​ c 1 + θ ε ​ c 1 ) \displaystyle\leq-\varepsilon\bigl((1-\theta_{\varepsilon})c_{1}+\theta_{\varepsilon}c_{1}\bigr) 
+ 
+ 
+ 
+ 
+ = − c 1 ​ ε , \displaystyle=-c_{1}\varepsilon, 
+ 
+ 
+ where  c 1 := min { m ⋅ t , − m ⋅ v } c_{1}:=\min\{m\cdot t,-m\cdot v\} , which is strictly positive for  t t  sufficiently close to  t 0 t_{0} .
+Since  u ε ∈ ∂ 𝖪 p u_{\varepsilon}\in\partial\mathsf{K}_{p} , the preceding Taylor bound gives
+ m ⋅ ( u ε − t ) = O ⁡ ( ε 2 ) m\cdot(u_{\varepsilon}-t)=O(\varepsilon^{2}) , a contradiction for sufficiently
+small  ε > 0 \varepsilon>0 .
+∎ 
+ 
+ 
+ 
+ Proposition 3.13 . 
+ 
+ Consider a random walk  S n = ∑ i = 1 n X i S_{n}=\sum_{i=1}^{n}X_{i} , with law  ℙ 0 \mathbb{P}_{0} , expectation  𝔼 0 \mathbb{E}_{0}  and  S 0 = 0 S_{0}=0 , where  X i ∈ ℤ d X_{i}\in\mathbb{Z}^{d}  are i.i.d and  𝔼 0 ​ ( ‖ X 1 ‖ l ) < ∞ \mathbb{E}_{0}(\|X_{1}\|^{l})<\infty  for every integer  l ≥ 1 l\geq 1 . Assume that  𝔼 0 ​ ( X 1 ) = c ​ s \mathbb{E}_{0}(X_{1})=cs  with  c > 0 c>0  and  s ∈ 𝕊 d − 1 s\in\mathbb{S}^{d-1}  and that the covariance matrix of  X 1 X_{1}  is non-degenerate. Assume also that the walk is aperiodic. Then, as  k → ∞ k\to\infty  with  k ​ s ∈ ℤ d ks\in\mathbb{Z}^{d} , there exists  C > 0 C>0  : 
+ 
+
+ 
+ 
+ ∑ N ≥ 1 ℙ 0 ​ ( S N = k ​ s ) = C k ( d − 1 ) / 2 ​ ( 1 + o k ​ ( 1 ) ) . \sum_{N\geq 1}\mathbb{P}_{0}(S_{N}=ks)=\dfrac{C}{k^{(d-1)/2}}(1+o_{k}(1)). 
+ 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ Fix  0 < ε < 1 / 2 0<\varepsilon<1/2 . We consider two regimes :
+ | N − k / c | ≤ k 1 / 2 + ε |N-k/c|\leq k^{1/2+\varepsilon}  and  | N − k / c | > k 1 / 2 + ε |N-k/c|>k^{1/2+\varepsilon} .
+Write  Σ \Sigma  for the covariance matrix of  X 1 X_{1}  and define 
+ 
+
+ 
+ 
+ g N ​ ( z ) = 1 ( 2 ​ π ​ N ) d / 2 ​ det Σ ​ exp ⁡ { − ( z − N ​ c ​ s ) 𝖳 ​ Σ − 1 ​ ( z − N ​ c ​ s ) 2 ​ N } . g_{N}(z)=\frac{1}{(2\pi N)^{d/2}\sqrt{\det\Sigma}}\exp\!\left\{-\frac{(z-Ncs)^{\mathsf{T}}\Sigma^{-1}(z-Ncs)}{2N}\right\}. 
+ 
+ 
+ Under our moment and aperiodicity assumptions, the quantitative local
+central limit theorem gives 
+ 
+
+ 
+ 
+ sup z ∈ ℤ d | ℙ 0 ( S N = z ) − g N ( z ) | ≤ C 1 N − ( d + 1 ) / 2 . \sup_{z\in\mathbb{Z}^{d}}|\mathbb{P}_{0}(S_{N}=z)-g_{N}(z)|\leq C_{1}N^{-(d+1)/2}. 
+ 
+ 
+ In the first regime, summing this error gives
+ O ( k − d / 2 + ε ) = o ( k − ( d − 1 ) / 2 ) O(k^{-d/2+\varepsilon})=o(k^{-(d-1)/2}) . A Gaussian Riemann sum,
+with  v = ( N − k / c ) / k v=(N-k/c)/\sqrt{k} , therefore yields 
+ 
+
+ 
+ 
+ ∑ | N − k / c | ≤ k 1 / 2 + ε ℙ 0 ​ ( S N = k ​ s ) \displaystyle\sum_{|N-k/c|\leq k^{1/2+\varepsilon}}\mathbb{P}_{0}(S_{N}=ks) 
+ = C k ( d − 1 ) / 2 ​ ( 1 + o ​ ( 1 ) ) , \displaystyle=\frac{C}{k^{(d-1)/2}}(1+o(1)), 
+ 
+ 
+ 
+ C \displaystyle C 
+ = c ( d − 3 ) / 2 ( 2 ​ π ) ( d − 1 ) / 2 ​ det Σ ​ s 𝖳 ​ Σ − 1 ​ s > 0 . \displaystyle=\frac{c^{(d-3)/2}}{(2\pi)^{(d-1)/2}\sqrt{\det\Sigma}\sqrt{s^{\mathsf{T}}\Sigma^{-1}s}}>0. 
+ 
+ 
+ 
+ 
+ For the second regime, for every even integer  q ≥ 4 q\geq 4 , 
+ 
+
+ 
+ 
+ 𝔼 0 ​ ‖ S N − c ​ s ​ N ‖ q \displaystyle\mathbb{E}_{0}\|S_{N}-csN\|^{q} 
+ ≤ C q ​ N q / 2 , \displaystyle\leq C_{q}N^{q/2}, 
+ 
+ 
+ 
+ ℙ 0 ​ ( S N = k ​ s ) \displaystyle\mathbb{P}_{0}(S_{N}=ks) 
+ ≤ C q ​ N q / 2 | N − k / c | q . \displaystyle\leq\frac{C_{q}N^{q/2}}{|N-k/c|^{q}}. 
+ 
+ 
+ Summing this bound separately over  k / ( 2 ​ c ) ≤ N ≤ 2 ​ k / c k/(2c)\leq N\leq 2k/c  and its
+complement gives 
+ 
+
+ 
+ 
+ ∑ | N − k / c | > k 1 / 2 + ε ℙ 0 ​ ( S N = k ​ s ) ≤ C q ​ ( k 1 / 2 + ε − q ​ ε + k 1 − q / 2 ) . \sum_{|N-k/c|>k^{1/2+\varepsilon}}\mathbb{P}_{0}(S_{N}=ks)\leq C_{q}\bigl(k^{1/2+\varepsilon-q\varepsilon}+k^{1-q/2}\bigr). 
+ 
+ 
+ Taking  q q  sufficiently large makes this  o ( k − ( d − 1 ) / 2 ) o(k^{-(d-1)/2}) , which
+finishes the proof.
+∎ 
+ 
+ 
+ 
+ Now, we are in position to prove Theorem  1.2 
+ 
+ 
+ Proof of Theorem  1.2 . 
+ 
+ Fix  x ∈ ℤ d x\in\mathbb{Z}^{d}  and  t ∈ ∂ 𝖪 p t\in\partial\mathsf{K}_{p}  dual to  x x . Firstly, thanks to Proposition  3.10 , we have: 
+ 
+
+ 
+ 
+ e ξ p ​ ( x ) ​ G p ​ ( x ) = ∑ a , b ∑ n ≥ 1 ρ b , t ​ ( a ) ​ ρ f , t ​ ( b ) ​ ℙ t , 0 ​ ( S n = x − a − b ) + O ⁡ ( e − c ​ ‖ x ‖ β ) . e^{\xi_{p}(x)}G_{p}(x)=\sum_{a,b}\sum_{n\geq 1}\rho_{\mathrm{b},t}(a)\rho_{\mathrm{f},t}(b)\mathbb{P}_{t,0}(S_{n}=x-a-b)+O(e^{-c\|x\|^{\beta}}). 
+ 
+ 
+ Moreover, using Proposition  3.11 , we assume (up to a negligible error) that  ‖ a ‖ + ‖ b ‖ ≤ ‖ x ‖ 1 / 4 \|a\|+\|b\|\leq\|x\|^{1/4} . Therefore, this means that  x − a − b = x + o ⁡ ( ‖ x ‖ ) x-a-b=x+o(\sqrt{\|x\|}) , and we get that 
+ 
+
+ 
+ 
+ ∑ n ≥ 1 ℙ t , 0 ​ ( S n = x − a − b ) = C ‖ x ‖ d − 1 2 ​ ( 1 + o ‖ x ‖ ​ ( 1 ) ) \sum_{n\geq 1}\mathbb{P}_{t,0}(S_{n}=x-a-b)=\dfrac{C}{\|x\|^{\frac{d-1}{2}}}(1+o_{\|x\|}(1)) 
+ 
+ 
+ Overall, since the sums above over  a , b a,b  converge, we can conclude that : 
+ 
+
+ 
+ 
+ G p ​ ( x ) = Ψ p ​ ( x / ‖ x ‖ ) ‖ x ‖ ( d − 1 ) / 2 ​ e − ξ p ​ ( x ) ​ ( 1 + o ⁡ ( 1 ) ) , G_{p}(x)=\frac{\Psi_{p}(x/\|x\|)}{\|x\|^{(d-1)/2}}e^{-\xi_{p}(x)}(1+o(1)), 
+ 
+ 
+ ∎ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 4  Acknowledgments 
+
+ 
+ K.K. gratefully acknowledges the financial support of the Swiss National
+Science Foundation (SNSF) under grant number  200021 ​ _ ​ 219333 200021\_219333 . K.K. is a member of the NCCR SwissMAP.
+Both authors are deeply grateful to Yvan Velenik for his detailed reading of the manuscript, his many suggestions for improving its presentation, and his corrections of several errors. We also thank him for being an outstanding PhD supervisor. His patience and skill as a teacher were essential to our understanding of Ornstein–Zernike theory. Without his patience and all that he has taught us, neither this paper nor any of our other papers would have been possible. 
+ 
+ 
+ Use of AI tools. 
+
+ 
+ We used ChatGPT to check proofs, identify relevant references, and improve the writing. All the mathematical ideas, proof strategies and proofs were developed by the authors. The authors take full responsibility for the final manuscript. 
+ 
+ 
+ 
+ 
+ References 
+
+ 
+      
+ [1] 
+ 
+Y. Velenik.
+ Typical geometry of long subcritical clusters:
+An introduction to the Ornstein–Zernike theory .
+ https://www.unige.ch/~velenik/Ischia/IschiaLN.pdf .
+
+ 
+      
+ [2] 
+ 
+A. Fribergh and A. Hammond.
+ Sharp asymptotics for finite point-to-plane connections in
+supercritical bond percolation in dimension at least three .
+ arXiv:2408.16636v1 
+
+ 
+      
+ [3] 
+ 
+J. T. Chayes, L. Chayes, G. R. Grimmett, H. Kesten and R. H. Schonmann.
+ The correlation length for the high-density phase of Bernoulli percolation .
+Annals of Probability 17(4), 1277–1302 (1989).
+ https://www.jstor.org/stable/2244436 .
+
+ 
+      
+ [4] 
+ 
+H. Kesten and Y. Zhang.
+ The probability of a large finite cluster in supercritical Bernoulli percolation .
+Annals of Probability 18(2), 537–555 (1990).
+
+ 
+      
+ [5] 
+ 
+G. R. Grimmett and J. M. Marstrand.
+ The supercritical phase of percolation is well behaved .
+Proceedings of the Royal Society of London A 430(1879), 439–457 (1990).
+ https://doi.org/10.1098/rspa.1990.0100 .
+
+ 
+      
+ [6] 
+ 
+J. Bricmont and J. Fröhlich.
+ Statistical mechanical methods in particle structure
+analysis of lattice field theories.
+II. Scalar and surface models .
+Communications in Mathematical Physics
+98(4), 553–578 (1985).
+ https://doi.org/10.1007/BF01209330 .
+
+ 
+      
+ [7] 
+ 
+J. van den Berg, O. Häggström and J. Kahn.
+ Some conditional correlation inequalities for percolation and related processes .
+Random Structures & Algorithms 29(4), 417–435 (2006).
+ https://doi.org/10.1002/rsa.20102 .
+
+ 
+      
+ [8] 
+ 
+M. Campanino, J. T. Chayes and L. Chayes.
+ Gaussian fluctuations of connectivities in the subcritical regime of percolation .
+Probability Theory and Related Fields 88(3), 269–341 (1991).
+
+ 
+      
+ [9] 
+ 
+M. Campanino and D. Ioffe.
+ Ornstein–Zernike theory for the Bernoulli bond percolation on  ℤ d \mathbb{Z}^{d} .
+Annals of Probability 30(2), 652–682 (2002).
+ https://doi.org/10.1214/aop/1023481005 .
+
+ 
+      
+ [10] 
+ 
+M. Campanino, D. Ioffe and Y. Velenik.
+ Fluctuation theory of connectivities for subcritical random cluster models .
+Annals of Probability 36(4), 1287–1321 (2008).
+ https://arxiv.org/abs/math/0610100 .
+
+ 
+      
+ [11] 
+ 
+M. Campanino and M. Gianfelice.
+ On the Ornstein–Zernike behaviour for the Bernoulli bond percolation
+on  ℤ d \mathbb{Z}^{d} ,  d ≥ 3 d\geq 3 , in the supercritical regime .
+Journal of Statistical Physics 145, 1407–1422 (2011).
+ https://doi.org/10.1007/s10955-011-0330-8 .
+ https://arxiv.org/abs/1104.1595 .
+
+ 
+      
+ [12] 
+ 
+M. Campanino and M. Gianfelice.
+ On the Ornstein–Zernike behaviour for the supercritical
+random-cluster model on  ℤ d \mathbb{Z}^{d} ,  d ≥ 3 d\geq 3 .
+Journal of Statistical Physics
+159(6), 1456–1476 (2015).
+
+ 
+      
+ [13] 
+ 
+M. Campanino, D. Ioffe and O. Louidor.
+ Finite connections for supercritical Bernoulli bond percolation in 2D .
+Markov Processes and Related Fields 16(2), 225–266 (2010).
+ https://arxiv.org/abs/0910.1831 .
+
+ 
+      
+ [14] 
+ 
+L. S. Ornstein and F. Zernike.
+ Accidental deviations of density and opalescence at the
+critical point of a single substance .
+Proceedings of the Royal Netherlands Academy of Arts and Sciences
+17, 793–806 (1914).
+
+ 
+      
+ [15] 
+ 
+M. Campanino, D. Ioffe and Y. Velenik.
+ Ornstein–Zernike theory for finite range Ising models above
+ T c T_{c} .
+Probability Theory and Related Fields
+125, 305–349 (2003).
+
+ 
+      
+ [16] 
+ 
+Y. Aoun, S. Ott and Y. Velenik.
+ Ornstein–Zernike behavior for Ising models with infinite-range
+interactions .
+Annales de l’Institut Henri Poincaré,
+Probabilités et Statistiques
+60(1), 167–207 (2024).
+
+ 
+      
+ [17] 
+ 
+Y. Aoun and K. Khettabi.
+ On the two-point function of the Ising model with
+infinite-range interactions .
+Journal of Statistical Physics 190, article 168 (2023).
+ https://doi.org/10.1007/s10955-023-03175-7 .
+
+ 
+      
+ [18] 
+ 
+Y. Aoun, S. Ott and Y. Velenik.
+ On the two-point function of the Potts model in the saturation regime .
+Communications in Mathematical Physics 399, 1103–1138 (2023).
+
+ 
+      
+ [19] 
+ 
+M. E. Fisher.
+ Correlation functions and the critical region of simple fluids .
+Journal of Mathematical Physics
+5(7), 944–962 (1964).
+
+ 
+      
+ [20] 
+ 
+W. J. Camp and M. E. Fisher.
+ Behavior of two-point correlation functions at high temperatures .
+Physical Review Letters
+26(2), 73–77 (1971).
+
+ 
+      
+ [21] 
+ 
+D. B. Abraham and H. Kunz.
+ Ornstein–Zernike theory of classical fluids at low density .
+Physical Review Letters
+39(16), 1011–1014 (1977).
+
+ 
+      
+ [22] 
+ 
+P. J. Paes-Leme.
+ Ornstein–Zernike and analyticity properties for classical lattice
+spin systems .
+Annals of Physics
+115(2), 367–387 (1978).
+
+ 
+      
+ [23] 
+ 
+G. Grimmett.
+ Percolation .
+Second edition.
+Grundlehren der Mathematischen Wissenschaften, Vol. 321.
+Springer, Berlin (1999).
+
+ 
+      
+ [24] 
+ 
+M. Aizenman.
+ Geometric analysis of  φ 4 \varphi^{4}  fields and Ising models.
+Parts I and II .
+Communications in Mathematical Physics
+86, 1–48 (1982).
+
+ 
+      
+ [25] 
+ 
+D. van Engelenburg, L. Heeney and M. Lis.
+ Double cluster swapping for spin models:
+Pfaffian relations and sharpness .
+Preprint, arXiv:2609.01362 (2026).
+
+ 
+      
+ [26] 
+ 
+G. A. Braga, A. Procacci and R. Sanchis.
+ Ornstein–Zernike behavior for the Bernoulli bond
+percolation on  ℤ d \mathbb{Z}^{d}  in the supercritical regime .
+Commun. Pure Appl. Anal. 3(4), 581–606 (2004).
+
+ 
+      
+ [27] 
+ 
+Y. Aoun, D. Ioffe, S. Ott and Y. Velenik.
+ Non-analyticity of the correlation length in systems
+with exponentially decaying interactions .
+Communications in Mathematical Physics
+386(1), 433–467 (2021).
+
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+   
+    Experimental support, please
+     view the build logs 
+    for errors. Generated by
+     
+       
+        L
+         A 
+        T
+         E 
+       
+       xml 
+       
+     .
+   
+   
+     Instructions for reporting errors 
+     We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: 
+     
+       Click the "Report Issue"  ( 
+             
+           )  button, located in the page header. 
+     
+     Tip:  You can select the relevant text first, to include it in your report. 
+     Our team has already identified  the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. 
+     Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a  list of packages that need conversion , and welcome  developer contributions . 
+   
+ 
+   
+     
+       
+        We gratefully acknowledge support from
+        our  major funders ,
+         member institutions ,  ,
+        and all contributors.
+       
+       
+         About 
+         · 
+         Help 
+         · 
+         Contact 
+         · 
+         Subscribe 
+         · 
+         Copyright 
+         · 
+         Privacy 
+         · 
+         Accessibility 
+         · 
+         Operational Status  (opens in new tab) 
+       
+     
+
+     
+       Major funding support from 
+       
+         
+           
+         
+         
+           
+         
+         
+           
+         
+       
+     
+   
+ 
+   
+     
+       
+     
+   
+ 
+ 

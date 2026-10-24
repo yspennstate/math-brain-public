@@ -1,0 +1,23 @@
+# Construction briefs recovered by the coordinator
+
+These are construction checkpoints, not terminal agent reports or completed proofs. The replacement workers own the full proofs and certificates in agents/C059.md through agents/C062.md.
+
+## C059: independent singleton satellites
+
+Free 2x2 core A, fixed independent leaf means d_i, cross row z_i w_i* for fixed core vectors w_i. Conditioning leaves gives M_x=A-sum |z_i|² r_di(x_i) w_iw_i*, r_d(1)=1/d, r_d(0)=-1/(1-d). The exact entropy is sum h(d_i)+E H2(M_x). It is jointly concave in A and squared strengths on the affine Schur domain. Leaf reset is exact rank-one block replacement, making each strength nonincreasing. Composition with squared complex affine amplitudes proves arbitrary mixed slopes. The saved strict identity is -H''=E[-H2''(M_x)[M_x',M_x']]+2 sum |z_i'|² J(P,R_iP)/|z_i|², with zero-strength limits handled separately. The fixed2D-support core extension follows from ROOT_RANK_TWO_SUPPORT.md. Existing rational computation and certificate are saved.
+
+## C060: triangle trees with nonnegative log-minor Mobius coefficients
+
+Rooted trees of edge and triangle clique blocks, positive definite real odds L. For triangle parent r, children a,b, write u=L_ra, v=L_rb, c=L_ab, d_a=L_aa,d_b=L_bb. Sufficient local inequality delta=|c|²(|u|²/d_a+|v|²/d_b)-2Re(u c conj(v))>=0. Subtree inverse-diagonal response g_a=x_a/(d_a-R_a). Triangle response Q=(|u|²g_a+|v|²g_b-2Re(u c conj(v))g_ag_b)/(1-|c|²g_ag_b). Subtract |u|²g_a+|v|²g_b; remainder numerator is delta g_ag_b+|c|²|u|²(g_a²-g_a/d_a)g_b+|c|²|v|²g_a(g_b²-g_b/d_b). Positive Boolean coefficient induction and convergent positive logarithmic Schur expansions should give all Mobius coefficients of normalized -logdet principal minors nonnegative. The correct frustrated example orientation is d_a=d_b=4, |u|=|c|=1, |v|=1/10, giving delta=21/400. Putting the weak edge opposite the parent fails the condition. A seven-site triangle chain has an exact certificate planned. Consequences use C054's imaginary arbitrary-rank plus real inertia-(1,1) decomposition, not an automatic full-Lyons claim.
+
+## C061: two coherent reservoirs and arbitrary finite binary-input channels
+
+K=diag(D1,D2)+U C U*, U block supported guide vectors u,v, C=[[a,z],[conj(z),b]]. Set alpha_i=1/(u_i*D_i^-1u_i), beta_i=1/(u_i*(I-D_i)^-1u_i), ell_i=alpha_i+beta_i. The physical domain is exactly 0<=M<=I2 with Mii=(Cii+alpha_i)/ell_i and M12=z/sqrt(ell1ell2). The measured law is product binary-input channels applied to P_M, whose block endpoint channels are P_(Di-alpha_i uiui*) and P_(Di+beta_i uiui*).
+
+Balanced-pair channel lemma: for any finite binary-input channel, d_y=C(y|1)-C(y|0). Transport positive differences to negative differences with masses r_ij, and split each output row proportionally by r_ij/|d_i|, independent of input. Each resulting pair has input-independent total w_g and a binary affine channel inside with slope r_ij/w_g>0; zero-difference rows give singleton groups. Splitting adds entropy affine in the input mean and preserves Fisher information. Independent pair labels reduce product-channel entropy, modulo affine terms, to a positive weighted sum of ordinary binary-noised two-site DPP entropies H2(R+SMS), affine in M. Hence full joint concavity, exact Fisher decomposition, and definite-direction bound 8 det(E) TV_1 TV_2.
+
+## C062: arbitrary-rank coherent satellites
+
+Free measured 2x2 core A, mutually independent fixed coherent reservoir blocks C_j, cross z_j B_j with fixed rectangular B_j of rank up to two. Conditioning reservoirs gives core A-sum s_j B_j(C_j-P_abs)^-1 B_j*, s_j=|z_j|². Conditional H2 makes entropy jointly concave in (A,s), and Schur feasibility is affine/downward closed. Decoupling a reservoir preserves both marginals, so subadditivity makes s_j=0 a maximum. Concavity then gives coordinatewise nonincrease, proving joint concavity in (A,z) for arbitrary complex affine amplitudes. Rank-two B_j is NOT a classical reset.
+
+Finite chord: sbar_j=(1-t)|z0_j|²+t|z1_j|², delta_j=t(1-t)|Delta z_j|², lambda_j=delta_j/sbar_j. Let L have Abar and cross sqrt(sbar_j)B_j. Independently choose removed block set R with probabilities lambda_j. The gap decomposes into expected H2 endpoint conditional Jensen gaps, expected H2 Jensen gaps over partially decoupled strength kernels, and E_R I_L(Y_R;X,Y_Rc). Independence of reservoir blocks gives a lower bound sum lambda_j I_L(Y_j;X), and Pinsker/covariance gives 8t(1-t) sum |Delta z_j|² sbar_j max |B_j,ik|^4. Boundary/zero denominators require continuous formulations. The class is closed under binary local noise, so C061's finite-channel refinement supplies a further direct channel lift if retained.

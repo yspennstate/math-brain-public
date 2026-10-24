@@ -1,0 +1,113 @@
+{
+  "schema": "fei-run-progress/2",
+  "run_id": "20261012T032618Z-account01-B12-uniform-kernel-envelope",
+  "stream": "B12",
+  "packet_ids": ["A057"],
+  "primary_packet_id": "A057",
+  "attempt_id": "B12-A057-ATTEMPT-03",
+  "attempt_counter": 3,
+  "bounded_objective": "Prove the owner-requested signed near-collision and uniform separated-region kernel bounds, then sum the complete remainder across an actual adaptive physical hierarchy with one explicit source reserve.",
+  "source_registry": {
+    "owner_control_revision": "2026-10-12.1",
+    "owner_order_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "owner_order_blob": "81b6d6f988aee4489512c6e62543253900620453",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "current_status_blob": "c416d4b4a83fc67965cb95d06a0cc80c5c29a520",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "stream_contract_blob": "40935ac651643a17815d0addf664ec4c1c0313cc",
+    "protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "packet_status_blob": "035e0df7c89fb70cffaa636ba56514c9f8a452c8",
+    "claim_registry_blob": "6512687657b5147048de5707fb48c0b5c7ca2ace",
+    "obstruction_registry_blob": "e111933338dff1d7798c5e59b43700bbf30f7b96"
+  },
+  "input_handoffs_used": [
+    {
+      "description": "exact biased coherent identity, fixed-bias collision law, and adaptive alpha-log payment",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "4fa89c32748c17c91aeca56c55c7a054b760ba6e",
+      "path": "reports/fei-2026-10-11/runs/B12/20261012T022322Z-account01-B12-biased-coherent-hierarchy/",
+      "proof_blobs": {
+        "REPORT.md": "2c03a3b551b3719797ddeff3269566f98270e93a",
+        "BIASED_COHERENT_IDENTITY.tex": "bdd2a39e8882b66f2917261df28b3b2432ff3ad3",
+        "ADAPTIVE_LOG_PAYMENT.tex": "8aca47d80e7298f510b2f543eaff384e99e70656"
+      }
+    },
+    {
+      "description": "current B12 full-FEI-only target and known review correction",
+      "repository": "yspennstate/math-research-brain",
+      "commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+      "path": "scheduled_tasks/work/shared/full-fei-only-2026-10-12/CASE_TARGETS.json",
+      "blob": "97e41262ebb4f09eec53630a918acae09efc9a48"
+    }
+  ],
+  "claim_versions": [
+    "B12-A057-SCALAR-KERNEL-ENVELOPE-v1",
+    "B12-A057-NEAR-SEPARATED-SPLIT-v1",
+    "B12-A057-FIXED-SOURCE-COMPLETE-PAYMENT-v1"
+  ],
+  "gap_id": "B12-A057-COHERENT-HIERARCHY",
+  "gap_version": "v3",
+  "prior_mathematical_status": "PARTIAL_PROVED: the adaptive alpha-log envelope was paid, but the complete R_mu sum was unbounded in the simultaneous near-balance/near-collision transition",
+  "new_mathematical_status": "PARTIAL_PROVED: uniform scalar transition bound and complete depth-free R_mu payment for every fixed outer Boolean pair, with one explicit reverse-collision source reserve M(a,b); changing outer witnesses remain open",
+  "mathematical_delta": "The requested near/separated split is now proved without a bias floor or collision separation. The entire complete remainder is summed over arbitrary-depth adaptive physical child hierarchies for the all-parameter class M(a,b)<=Lq, with constant L+4+2ln2+2/e.",
+  "previous_value": "only sum_v w_v q alpha_v^2 ln(1/alpha_v^2) <= (2/e)q I(h); the rest of R_mu was unpaid",
+  "new_value": "sum_v w_v R_{mu_v}(alpha_v) <= [M(a,b)+(4+2ln2+2/e)q]I(h) for every fixed outer Boolean pair and arbitrary adaptive nonreusing child tree",
+  "unchanged_obstruction_count": 0,
+  "case_extension": {
+    "starting_class": "adaptive physical child hierarchies with only the explicit alpha-log component paid",
+    "new_class": "all fixed Boolean outer pairs a±b satisfying M(a,b)<=Lq, with arbitrary Boolean child, arbitrary child biases/collision ratios, arbitrary adaptive nonreusing query order, and unbounded depth",
+    "exact_quantifiers": "one theorem for every finite outer/child dimension and every c>0; hierarchy constant independent of dimension, depth, mu/alpha, collision gap, and query order, but depending linearly on L",
+    "prior_constant": "not finite for the complete remainder",
+    "new_constant": "L+4+2ln2+2/e = L+6.122053243462775... in nats",
+    "parameter_dependence": "independent of child dimension, bias, address count, depth, and collision separation; depends on the normalized outer reserve L=M/q",
+    "proof_status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+    "universal_gap": "pay the changing-witness sum of alpha_v^2 M(a_v,b_v) once from source influence or a terminal reserve"
+  },
+  "acceptance": {
+    "A057-D1": "SUBSTANTIALLY_ADVANCED: complete fixed-source hierarchy payment proved; changing coherent source reserve remains unpaid",
+    "A057-D2": "MET_FOR_FROZEN_TRANSITION_TARGET: balanced, fixed-bias collision, mu=O(alpha), near-collision, parity, rare-chain, addressing and prime-gate controls retained",
+    "criterion_complete_source_remainder": "MET",
+    "criterion_logarithmic_counterexample": "MET",
+    "criterion_nonreusing_physical_hierarchy": "MET_FOR_FIXED_OUTER_PAIR_AND_M_BOUNDED_CLASS",
+    "packet_complete": false
+  },
+  "finite_check": {
+    "status": "PASS",
+    "scope": [
+      "1121 high-precision scalar mesh points over magnitudes 0 through 10^15",
+      "15876 deterministic cross-scale scalar pairs",
+      "205824 actual Boolean splice cases: every ordered Boolean branch pair on two variables and every Boolean child/coordinate through three variables",
+      "genuine mu=1/2 collision-refund family through n=16"
+    ],
+    "arithmetic": "70-digit Decimal for scalar mesh; exact dyadic rational Walsh coefficients and float64 logarithms for finite Boolean controls",
+    "seed": null,
+    "command": "python 20261012T032618Z-account01-B12-uniform-kernel-envelope/check_uniform_kernel.py",
+    "output": "check_uniform_kernel.out",
+    "limitation": "finite development controls; all-real and all-dimension claims are proved analytically"
+  },
+  "failed_or_insufficient_approaches": [
+    "A fixed-bias Taylor expansion is unnecessary and nonuniform; exact homogeneity and the scalar k envelope replace it.",
+    "Dropping the negative near-region term loses the fixed-bias collision refund; equation (7) retains it.",
+    "The coarse separated envelope introduces M(a,b). Bounding M/q universally is not proved and is blocked by arbitrary-spectrum activation embeddings.",
+    "The fixed-source theorem cannot be applied unchanged when (a_v,b_v) varies coherently; that would recharge the reserve at every node."
+  ],
+  "review": {
+    "contributor_check": "complete",
+    "independent_review": "PENDING",
+    "requested_packets": ["A091", "A090"],
+    "observed_reviewer_evidence": []
+  },
+  "routing": {
+    "next_consumers": ["A058", "A059", "A091", "A097", "B20"],
+    "complete_candidate_count_after_run": 2,
+    "note": "This is a proved restricted A057 hierarchy theorem and a universal scalar bridge, not a complete A057 or full-FEI candidate."
+  },
+  "deliverable_status": {
+    "canonical": "SAVED_AND_EXACT_BLOB_READBACK_VERIFIED_AT_e4cddfa3e7e6895ac94a069abeaa9d894671ce92",
+    "brain_mirror": "SAVED_AND_EXACT_BLOB_READBACK_VERIFIED_AT_8f05b2af210e802b9cd05bebff57502ed98e870d",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "next_action": "Treat M(a_v,b_v) as a martingale reverse-collision potential: prove a one-use telescope for sum_v w_v alpha_v^2 M(a_v,b_v), retaining the signed near refund, or construct a genuine Boolean changing-witness family showing that this exact reserve cannot be source-paid.",
+  "full_fei_status": "OPEN"
+}
+

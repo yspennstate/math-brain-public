@@ -1,0 +1,60 @@
+{
+  "status": "PASS finite checks; analytic proof separately supplied",
+  "dimensions": [
+    {
+      "dimension": 0,
+      "functions": 2,
+      "parity_subsets": 1
+    },
+    {
+      "dimension": 1,
+      "functions": 4,
+      "parity_subsets": 2
+    },
+    {
+      "dimension": 2,
+      "functions": 16,
+      "parity_subsets": 4
+    },
+    {
+      "dimension": 3,
+      "functions": 256,
+      "parity_subsets": 8
+    },
+    {
+      "dimension": 4,
+      "functions": 65536,
+      "parity_subsets": 16
+    }
+  ],
+  "counts": {
+    "universal_truth_functions": 65814,
+    "universal_parity_pairs": 1050698,
+    "unate_gate_combinations": 440,
+    "gate_parity_pairs": 3155,
+    "unate_gates": 1320,
+    "differently_oriented_combinations": 350,
+    "overlapping_inputs_combinations": 352,
+    "constant_functions": 71
+  },
+  "maxima": {
+    "entropy_over_universal_target": 0.5358983848622455,
+    "entropy_over_gate_target": 0.3431457505076198,
+    "rho_over_gate_count": 1.0
+  },
+  "exact_checks": [
+    "coordinate influence and parity complement identity",
+    "integer Fourier parity permutation",
+    "unate singleton coefficient magnitudes equal physical influences",
+    "unate Parseval influence-vector bound",
+    "pointwise gate flip union",
+    "combined influence-vector squared norm <= gate_count^2"
+  ],
+  "numerical_checks": [
+    "generic H<=8*n*minority_probability and H<=4*n*I",
+    "universal rho-parity FEI",
+    "unate-gate-count FEI"
+  ],
+  "entropy_tolerance": 3e-11,
+  "scope": "No ordinary FEI for unmodulated composition; no novelty certificate"
+}

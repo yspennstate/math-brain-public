@@ -1,0 +1,35 @@
+NOTE: this penalty-annealer run used one variable per hole component; its K_5 and K_{2,5} values (<= 3.45) are from a weak method and only show that the method failed there. K_{3,4} was redone with exact balance and pair matching in graphbal_k34_match.log (best 5.9389).
+k5: m=10 orbits=34 build 4.0s
+  restart 0 (rand): balanced R = 3.070531112270 holes=84 ncomp=84 nvars=94 I=3.851562 t=1s
+  restart 1 (rand): balanced R = 2.366550837845 holes=100 ncomp=100 nvars=110 I=5.117188 t=1s
+  restart 2 (rand): balanced R = 2.098365080050 holes=154 ncomp=49 nvars=59 I=5.248047 t=1s
+  restart 3 (rand): balanced R = 2.718481415571 holes=120 ncomp=100 nvars=110 I=4.843750 t=1s
+  restart 4 (rand): balanced R = 2.272645356815 holes=110 ncomp=86 nvars=96 I=5.283203 t=1s
+  restart 5 (rand): balanced R = 2.672851615078 holes=164 ncomp=89 nvars=99 I=4.925781 t=1s
+BEST k5 3.0705311122702015
+k25: m=10 orbits=34 build 3.5s
+  Pr[saturating matching] = 956/1024
+  restart 0 (pm): balanced R = 2.796809871703 holes=290 ncomp=240 nvars=250 I=5.166016 t=3s
+  restart 1 (rand): balanced R = 3.454477473893 holes=152 ncomp=152 nvars=162 I=4.035156 t=1s
+  restart 2 (pm): balanced R = -1000000000.000000000000 holes=0 ncomp=None nvars=None I=0.000000 t=1s
+  restart 3 (rand): balanced R = 2.022633294489 holes=50 ncomp=21 nvars=31 I=5.419922 t=1s
+  restart 4 (pm): balanced R = -1000000000.000000000000 holes=0 ncomp=None nvars=None I=0.000000 t=1s
+  restart 5 (rand): balanced R = 2.338586058114 holes=140 ncomp=91 nvars=101 I=5.156250 t=1s
+BEST k25 3.4544774738928825
+k34: m=12 orbits=87 build 4.2s
+  Pr[saturating matching] = 3125/4096
+  restart 0 (pm): balanced R = 2.805237139104 holes=754 ncomp=47 nvars=59 I=4.748535 t=2s
+  restart 1 (rand): balanced R = 2.196791288340 holes=146 ncomp=146 nvars=158 I=5.783691 t=2s
+  restart 2 (pm): balanced R = 2.597256655838 holes=592 ncomp=202 nvars=214 I=5.523438 t=16s
+  restart 3 (rand): balanced R = 2.508032231361 holes=382 ncomp=40 nvars=52 I=5.413574 t=4s
+  restart 4 (pm): balanced R = 2.919230550395 holes=1024 ncomp=125 nvars=137 I=4.773438 t=3s
+  restart 5 (rand): balanced R = 1.685084999160 holes=214 ncomp=148 nvars=160 I=7.030762 t=3s
+BEST k34 2.919230550395134
+q3: m=12 orbits=144 build 4.3s
+  restart 0 (rand): balanced R = 2.258313739047 holes=160 ncomp=112 nvars=124 I=5.933594 t=3s
+  restart 1 (rand): balanced R = 2.245654105739 holes=136 ncomp=112 nvars=124 I=5.992188 t=2s
+  restart 2 (rand): balanced R = 2.280579865351 holes=142 ncomp=142 nvars=154 I=5.952637 t=2s
+  restart 3 (rand): balanced R = 2.265156790903 holes=218 ncomp=194 nvars=206 I=6.047363 t=5s
+  restart 4 (rand): balanced R = 2.384321650702 holes=274 ncomp=134 nvars=146 I=5.949707 t=5s
+  restart 5 (rand): balanced R = 2.360582391803 holes=302 ncomp=158 nvars=170 I=5.962402 t=5s
+BEST q3 2.384321650701604

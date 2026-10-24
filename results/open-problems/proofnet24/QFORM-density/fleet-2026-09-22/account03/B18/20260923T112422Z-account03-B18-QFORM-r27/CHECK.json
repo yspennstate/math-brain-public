@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T112422Z-account03-B18-QFORM-r27",
+  "status": "PASS",
+  "theorem_id": "QFORM-THREE-DISJOINT-BANKS-ALLPIVOTS-v1",
+  "alpha": 0.5625,
+  "identities": {
+    "alpha_exact": "9/16",
+    "large_pivot_constant_exact": "256/sqrt(3)",
+    "large_pivot_constant_numeric": 147.8016689125442,
+    "small_pivot_det_lower_exact": "13/512",
+    "small_pivot_kappa_lower_exact": "(5*sqrt(14)-18)/32",
+    "small_pivot_kappa_lower_numeric": 0.022133966683428374,
+    "indefinite_pair_constant_numeric": 116.18279722024326,
+    "cap_one_three_variable_constant": 148,
+    "LPP_bank_scaling_loss": 2,
+    "three_bank_constant": 296
+  },
+  "partner_application": {
+    "zero_pivot_pair_cap_after_full_sqrt2_scaling": 1,
+    "scaled_determinant": "det(K)/8",
+    "bound": "12*abs(det(K))^(-1/3)",
+    "target_normalized_bound": 12,
+    "continuity": true
+  },
+  "near_zero_family": {
+    "K_delta": "(1/(1-delta))*[[delta,1,1],[1,delta,1],[1,1,delta]]",
+    "eigenvalues": "{(delta+2)/(1-delta),-1,-1}",
+    "all_pivots_nonzero_for": "delta>0",
+    "pair_branch_range": "0<delta<9/25",
+    "pair_branch_bound_numeric": 232.36559444048652,
+    "exact_zero_partner_bound_numeric": 9.524406311809196
+  },
+  "quantifier_checks": {
+    "no_moment_assumption": true,
+    "no_support_assumption": true,
+    "no_log_concavity_assumption": true,
+    "no_gaussian_assumption": true,
+    "independence_only_from_disjoint_original_banks": true,
+    "post_rotation_independence_used": false,
+    "near_zero_replaced_by_zero": false,
+    "full_target_claimed": false,
+    "all_pivot_continuity_claimed": false
+  }
+}

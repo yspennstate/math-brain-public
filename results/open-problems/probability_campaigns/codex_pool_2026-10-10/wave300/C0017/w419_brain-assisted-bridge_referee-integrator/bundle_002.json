@@ -1,0 +1,89 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w419",
+  "bundle_slug": "c0017-source-theorem-boundary-002",
+  "entries": [
+    {
+      "key": "c0017-target",
+      "namespace": "probability.percolation.conformal",
+      "logical_name": "square-bond-cardy-sle6-target",
+      "kind": "concept",
+      "title": "C0017: square-bond Cardy and SLE6 target (current status unknown)",
+      "statement": "Historical target: for independent nearest-neighbor bond percolation on mesh-delta Z^2 at p=1/2, establish Cardy's conformally invariant limit for open crossings of marked Jordan domains as delta tends to zero, and convergence of critical Dobrushin exploration interfaces to chordal SLE_6. Garban-Steif's 2012 preprint called the square-lattice conformal-invariance problem open; later proof-claim preprints exist, so current openness is UNKNOWN until those proofs are audited.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent bonds at p=1/2",
+        "A specified lattice approximation and marked Jordan-domain boundary arcs",
+        "Dobrushin boundary conditions for the separate interface component"
+      ],
+      "domain": "probability; critical planar percolation",
+      "source": {
+        "source_id": "arxiv:1102.5761v3:ChapterII4",
+        "url": "https://arxiv.org/pdf/1102.5761",
+        "revision": "as-read-2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "on Z^2 at p_c = 1/2, proving the conformal invariance"
+      }
+    },
+    {
+      "key": "smirnov-q2",
+      "namespace": "probability.percolation.conformal",
+      "logical_name": "smirnov-fk-ising-parafermion-limit-q2",
+      "kind": "theorem",
+      "title": "Smirnov FK-Ising parafermion limit, q=2",
+      "statement": "Let mesh-delta_j square-lattice Dobrushin domains (Omega_j,a_j,b_j) converge in the Caratheodory sense to a simply connected marked domain (Omega,a,b), with delta_j tending to zero. In the critical FK-Ising random-cluster model q=2 and p=sqrt(2)/(1+sqrt(2)), let F_j be Smirnov's parafermionic observable of spin sigma=1/2. Then delta_j^(-1/2) F_j converges uniformly on compact subsets away from the boundary to (Phi')^(1/2), where Phi maps Omega conformally to a horizontal strip of width 2 and sends a,b to its ends. This theorem has q=2 and an observable conclusion; it does not directly establish the independent square-bond q=1 target.",
+      "proof_text": "Smirnov proves Ising-specific discrete analyticity and boundary conditions for F_j, obtains compactness and convergence of a discrete primitive of F_j squared to Im Phi using harmonic estimates, then identifies every subsequential limit by the boundary value problem and normalization. The q=2 discrete analyticity and estimates are essential in the source proof.",
+      "assumptions": [
+        "q=2 critical FK-Ising, p=sqrt(2)/(1+sqrt(2))",
+        "Dobrushin marked lattice domains",
+        "Caratheodory convergence of marked domains",
+        "delta_j -> 0"
+      ],
+      "domain": "probability; random-cluster models; complex analysis",
+      "source": {
+        "source_id": "smirnov:fk1:theorem2.2",
+        "url": "https://arxiv.org/pdf/0708.0039",
+        "revision": "as-read-2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "Then for the Ising model the corresponding functions F_j converge uniformly away from the boundary"
+      }
+    },
+    {
+      "key": "fk-local-relation",
+      "namespace": "probability.percolation.conformal",
+      "logical_name": "critical-fk-parafermionic-local-relation",
+      "kind": "lemma",
+      "title": "Critical FK parafermionic weak contour relation",
+      "statement": "In a finite square-lattice FK random-cluster Dobrushin domain at the critical self-dual parameter, for 0<q<4 define the medial-edge parafermionic observable F(e)=E[exp(i sigma W_gamma(e,e_b)) 1_{e in gamma}], where sin(pi sigma/2)=sqrt(q)/2 and sigma is in (0,1). At every interior medial vertex with incident edges NW,SE,NE,SW, F(NW)-F(SE)=i(F(NE)-F(SW)). At q=1, sigma=1/3. This one local relation alone does not identify a holomorphic continuum limit.",
+      "proof_text": "Pair configurations by toggling the primal edge corresponding to the medial vertex. At the critical self-dual edge weight, the paired probabilities and the change in interface winding make the NW-SE and i times NE-SW contributions equal; summing over each involution pair yields the stated identity. This is Duminil-Copin Proposition 4's local proof mechanism.",
+      "assumptions": [
+        "Finite square-lattice FK Dobrushin domain",
+        "Critical self-dual parameter",
+        "0<q<4",
+        "Interior medial vertex"
+      ],
+      "domain": "probability; random-cluster models",
+      "source": {
+        "source_id": "arxiv:1208.3787v2:definition3-proposition4",
+        "url": "https://arxiv.org/pdf/1208.3787",
+        "revision": "as-read-2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "F(NW) - F(SE) = i[F(NE) - F(SW)]"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "smirnov-q2",
+      "to_key": "c0017-target",
+      "kind": "analogous_to",
+      "rationale": "Source theorem ends at q=2 FK-Ising and (Phi')^(1/2); target begins at q=1 independent bonds and Cardy/SLE6. Exact model and conclusion mismatch makes this an analogy, not a proof or generalization."
+    },
+    {
+      "from_key": "fk-local-relation",
+      "to_key": "c0017-target",
+      "kind": "semantic_association",
+      "rationale": "Local-relation card explicitly includes q=1 spin 1/3 and a contour identity; target asks for square-bond Cardy/SLE6. The identity is a relevant ingredient whose scaling-limit bridge is absent."
+    }
+  ]
+}

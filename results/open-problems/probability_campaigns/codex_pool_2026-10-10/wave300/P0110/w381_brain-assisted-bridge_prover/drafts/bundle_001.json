@@ -1,0 +1,243 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w381",
+  "bundle_slug": "p0110-terminal-bias-sphere-20261010-001",
+  "entries": [
+    {
+      "key": "terminal-bias-detour",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0110-w381-terminal-bias-detour",
+      "kind": "lemma",
+      "title": "Terminal-only mean bias controls a geodesic norm detour",
+      "statement": "Let T be an integrable, translation-invariant undirected lattice FPP metric, h(x)=E T(0,x), and g a norm with g(x)=lim_m h(mx)/m on lattice x. Write b(x)=h(x)-g(x) and X(x,y)=T(x,y)-h(y-x). Then b(x)>=0. If z lies on any attained minimizing path from 0 to v, then g(z)+g(v-z)-g(v)=b(v)-b(z)-b(v-z)+X(0,v)-X(0,z)-X(z,v) <= b(v)+X(0,v)-X(0,z)-X(z,v). In particular, if the three centered errors have magnitude at most s, the detour is at most b(v)+3s. No upper bound on the two interior mean biases is required.",
+      "proof_text": "nonnegative mean bias\n\nFor every lattice x, b(x):=h(x)-g(x)>=0. Indeed h(mx)<=m h(x) by the triangle inequality and translation invariance; divide by m and take the defining limit. This uses neither independence of selected paths nor conditional-product estimates.\n\nterminal-bias detour identity\n\nWrite X(x,y)=T(x,y)-h(y-x). If z belongs to ANY minimizing path from 0 to v, additivity on that path gives exactly\n\ng(z)+g(v-z)-g(v) = b(v)-b(z)-b(v-z)+X(0,v)-X(0,z)-X(z,v).\n\nConsequently the left side is at most b(v)+X(0,v)-X(0,z)-X(z,v), and at most b(v)+3s whenever the three centered errors have magnitude at most s. No upper bound on b(z) or b(v-z) is needed. All endpoints will be bounded on a deterministic set before taking a union bound; z is not treated as an independent or fixed random endpoint.",
+      "assumptions": [
+        "Finite mean passage times",
+        "Translation invariance of the edge law",
+        "A limiting norm g with the stated expectation limit",
+        "An attained minimizing path contains z"
+      ],
+      "domain": "probability / undirected first-passage percolation",
+      "source": {
+        "source_id": "owner-p0110-w381-20261010:terminal-bias-detour",
+        "url": "urn:owner-own-work:p0110:w381:20261010:terminal-bias-detour",
+        "revision": "draft-20261010-independently-unchecked",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "euclidean-segment-detour",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0110-w381-euclidean-segment-detour",
+      "kind": "lemma",
+      "title": "Euclidean detour inequality measures distance to a segment",
+      "statement": "For any d>=1, v in R^d with v!=0, and z in R^d, put L=|v|, S=|z|+|v-z| and r=dist(z,[0,v]) in Euclidean norm. Then S-L>=2r^2/S. The inequality includes projections of z beyond either endpoint.",
+      "proof_text": "Euclidean detour inequality, including overshoot\n\nFor v!=0 let L=|v|, S=|z|+|v-z| and r=dist(z,[0,v]). Then S-L>=2r^2/S. Proof: if the projection of z onto the line through v lies in the segment, write its coordinate as t in [0,L] and perpendicular distance r. Convexity of t -> sqrt(t^2+r^2)+sqrt((L-t)^2+r^2) gives S>=sqrt(L^2+4r^2), hence S-L>=4r^2/(S+L)>=2r^2/S. If the projection lies outside the segment, r is the distance to the closer endpoint, the distance to the other endpoint is at least r, and S-L>=r. Thus S>=2r and the claimed bound follows. The case r=0 is immediate.",
+      "assumptions": [
+        "Euclidean norm",
+        "v is nonzero"
+      ],
+      "domain": "probability / undirected first-passage percolation",
+      "source": {
+        "source_id": "owner-p0110-w381-20261010:euclidean-segment-detour",
+        "url": "urn:owner-own-work:p0110:w381:20261010:euclidean-segment-detour",
+        "revision": "draft-20261010-independently-unchecked",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "support-sphere-rounding",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0110-w381-support-sphere-rounding",
+      "kind": "lemma",
+      "title": "A norm has a lower sphere-contact direction, with bounded lattice-rounding defect",
+      "statement": "Let g be a norm on R^d with g(x)<=b||x||_1, b>0. Let rho=min_{|u|=1}g(u)>0 and choose a minimizing unit u. Then g(x)>=rho|x| for all x and g(u)=rho. For integer n>=sqrt(d), round coordinates of nu to obtain v_n in Z^d. If delta=sqrt(d)/2 and K0=bd/2+rho delta, then v_n!=0, |v_n-nu|<=delta, and 0<=g(v_n)-rho|v_n|<=K0. This supplies a lower detour direction and no upper-curvature assertion.",
+      "proof_text": "Compactness of the Euclidean unit sphere gives u and rho. Homogeneity gives g(x)>=rho|x|. Coordinate rounding has Euclidean error <=sqrt(d)/2 and l1 error <=d/2. Thus g(v_n)<=rho n+bd/2 and |v_n|>=n-sqrt(d)/2, giving the upper defect bound. The lower defect bound follows from the global norm bound.",
+      "assumptions": [
+        "A positive norm g on a finite-dimensional real vector space",
+        "g(x)<=b||x||_1",
+        "Coordinatewise nearest-integer rounding"
+      ],
+      "domain": "probability / undirected first-passage percolation",
+      "source": {
+        "source_id": "owner-p0110-w381-20261010:support-sphere-rounding",
+        "url": "urn:owner-own-work:p0110:w381:20261010:support-sphere-rounding",
+        "revision": "draft-20261010-independently-unchecked",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "finite-scale-wandering-tail",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0110-w381-finite-scale-wandering-tail",
+      "kind": "lemma",
+      "title": "Finite-scale wandering tail from centered concentration and terminal mean bias",
+      "statement": "Consider iid edge FPP on Z^d, d>=2, with a<=tau_e<=b almost surely, 0<a<b<infinity. Let h(x)=E T(0,x), g its limiting norm, rho=min_{|u|=1}g(u), and u any minimizer. For integer n>=sqrt(d), round nu to v_n and put L_n=|v_n|, C=(b/a)sqrt(d), K0=bd/2+rho sqrt(d)/2, B_n=h(v_n)-g(v_n), Lambda_n={z in Z^d:||z||_1<=(b/a)||v_n||_1}, and A_n=2|Lambda_n|+1. Let D(0,v_n) be the maximum distance of all minimizing paths to the segment [0,v_n]. Suppose q>=0, alpha>0, K>=1 and E exp(alpha |T(0,w)-h(w)|/|w|^q)<=K for every nonzero lattice w. Then for s>=0, P(D(0,v_n)>sqrt(C L_n (B_n+K0+3s)/(2rho))) <= min(1,A_n K exp(-alpha s/(((C+1)L_n)^q))). If B_n<=H n^q log(2+n), choosing s=(((C+1)L_n)^q/alpha) log(A_n K n^p) gives probability <=n^(-p) and a threshold O(n^((1+q)/2)sqrt(log n)) for any fixed p>0. No independence of the centered passage times is used; this is an upper bound along one rounded direction and does not assert matched global exponents.",
+      "proof_text": "a lower curvature direction exists for every norm\n\nLet rho=min_{|u|=1} g(u)>0 and choose a minimizing unit vector u. Then g(x)>=rho|x| for every x and g(u)=rho, by compactness and homogeneity. Equivalently the g-unit ball is contained in a Euclidean sphere tangent in direction u. This supplies a lower quadratic detour in that direction; it supplies no UPPER curvature bound, no explicit direction, and no exponent existence.\n\nFor integer n>=sqrt(d), choose v_n by rounding each coordinate of n u to a nearest integer. Put delta=sqrt(d)/2, K0=bd/2+rho delta, and L_n=|v_n|. Then |v_n-nu|<=delta, L_n>=n-delta>0, and\n\n0 <= g(v_n)-rho L_n <= K0.\n\nThe upper bound uses g(v_n)<=ng(u)+g(v_n-nu)<=rho n+bd/2. This handles a minimizing direction that is irrational; no rational direction is assumed to attain the sphere contact.\n\nEvery minimizing path to v_n has at most (b/a)||v_n||_1 edges, since its time is at most b||v_n||_1 and each edge costs at least a. Minimizers exist: loops strictly increase time and only finitely many paths can meet this length bound. With C=(b/a)sqrt(d), any vertex z on such a path has S<=C L_n. L3 and the norm bound therefore give\n\ng(z)+g(v_n-z)-g(v_n) >= (2rho/C) dist(z,[0,v_n])^2/L_n - K0.\n\nThis bound applies simultaneously to all minimizing paths, including vertices whose projection overshoots either endpoint.\n\nfinite-scale tail from a centered envelope and one terminal bias\n\nAssume q>=0, alpha>0 and K>=1 satisfy, for every nonzero lattice w,\n\nE exp(alpha |T(0,w)-h(w)| / |w|^q) <= K.\n\nThis is an extra input, not an estimate proved here for q=1/3. Let B_n=h(v_n)-g(v_n). Define the deterministic set Lambda_n={z in Z^d: ||z||_1<=(b/a)||v_n||_1}, and A_n=2|Lambda_n|+1. All path vertices lie in Lambda_n. For z in Lambda_n both |z| and |v_n-z| are at most (C+1)L_n. Translation invariance, exponential Markov, and a finite union bound give, for s>=0,\n\nP(max{|X(0,v_n)|, |X(0,z)|, |X(z,v_n)|:z in Lambda_n}>s)\n <= A_n K exp(-alpha s/(((C+1)L_n)^q)).\n\nZero-displacement terms are identically zero and omitted from the moment hypothesis. There is NO independence assumption between these variables.\n\nCombining L2 and L4 proves the finite-scale implication\n\nP(D(0,v_n)>sqrt(C L_n (B_n+K0+3s)/(2rho)))\n <= min(1, A_n K exp(-alpha s/(((C+1)L_n)^q))).\n\nThe maximum over all minimizing paths causes no extra factor: all their vertices already belong to the same deterministic Lambda_n.\n\nFor any p>0 set s=(((C+1)L_n)^q/alpha) log(A_n K n^p). The right side is n^(-p). If B_n<=H n^q log(2+n), then D(0,v_n)=O(n^((1+q)/2) sqrt(log n)) with this polynomial tail, for any fixed p. This is an upper bound along the rounded support direction, not equality of global exponents or a lower bound on wandering.",
+      "assumptions": [
+        "Iid undirected nearest-neighbor lattice FPP",
+        "Strictly positive bounded weights a<=tau_e<=b",
+        "The stated uniform centered exponential-moment input",
+        "For the final asymptotic consequence, the stated terminal mean-bias bound"
+      ],
+      "domain": "probability / undirected first-passage percolation",
+      "source": {
+        "source_id": "owner-p0110-w381-20261010:finite-scale-wandering-tail",
+        "url": "urn:owner-own-work:p0110:w381:20261010:finite-scale-wandering-tail",
+        "revision": "draft-20261010-independently-unchecked",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "centered-subadditive-shortcut",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0110-w381-centered-subadditive-shortcut",
+      "kind": "concept",
+      "title": "Rejected generic shortcut from centered concentration to nonrandom error",
+      "statement": "REJECTED INFERENCE: abstract subadditivity of h(n)=E T_n and a centered exponential concentration envelope alone do not imply h(n)-n lim_m h(m)/m=O(n^q log n) on that envelope scale. An FPP subadditive approximation theorem requires its additional stochastic and geometric hypotheses. This concept records a failed shortcut, not a theorem asserting the shortcut.",
+      "proof_text": null,
+      "assumptions": [
+        "The rejected statement concerns arbitrary subadditive sequences, not a proved iid FPP representation"
+      ],
+      "domain": "probability / undirected first-passage percolation",
+      "source": {
+        "source_id": "owner-p0110-w381-20261010:centered-subadditive-shortcut",
+        "url": "urn:owner-own-work:p0110:w381:20261010:centered-subadditive-shortcut",
+        "revision": "draft-20261010-independently-unchecked",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "subadditive-bias-countermodel",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0110-w381-subadditive-bias-countermodel",
+      "kind": "lemma",
+      "title": "Deterministic subadditive countermodel has perfect centered concentration and large bias",
+      "statement": "Fix 0<beta<1. Put h(0)=0, h(n)=n+n^beta for integers n>=1, and T_n=h(n) deterministically. Then h is subadditive, lim_m h(m)/m=1, and E exp(alpha |T_n-E T_n|/n^q)=1 for every n>=1, alpha>0 and q>=0. Nevertheless h(n)-n=n^beta is not O(n^q log n) for q<beta. This is a counterexample to a generic inference, not an iid lattice FPP law.",
+      "proof_text": "a refuted generic shortcut about the mean bias\n\nCentered concentration plus abstract subadditivity alone cannot give the terminal bound. For 0<beta<1 let h(n)=n+n^beta for n>=1, h(0)=0, and T_n=h(n) deterministically. The concavity power inequality gives h(m+n)<=h(m)+h(n). The limiting slope is 1 and the centered variables vanish, so every centered exponential bound holds even with q=0. Yet h(n)-n=n^beta, which is not O(n^q log n) for q<beta. This is a countermodel to the GENERIC inference, not an iid lattice FPP example. Alexander's theorem has additional stochastic/geometric structure; that structure cannot be erased from a proof citation.",
+      "assumptions": [
+        "0<beta<1",
+        "Deterministic sequence rather than an FPP metric"
+      ],
+      "domain": "probability / undirected first-passage percolation",
+      "source": {
+        "source_id": "owner-p0110-w381-20261010:subadditive-bias-countermodel",
+        "url": "urn:owner-own-work:p0110:w381:20261010:subadditive-bias-countermodel",
+        "revision": "draft-20261010-independently-unchecked",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "lower-to-upper-curvature-shortcut",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0110-w381-lower-to-upper-curvature-shortcut",
+      "kind": "concept",
+      "title": "Rejected reuse of a lower-curvature direction as an upper-curvature direction",
+      "statement": "REJECTED INFERENCE: a norm satisfying a lower quadratic transverse bound at a supporting outer-sphere direction need not satisfy an upper quadratic transverse bound at that same direction. The direction in a lower-bound argument cannot be reused in an upper-bound argument without verifying the upper hypothesis.",
+      "proof_text": null,
+      "assumptions": [
+        "This is a rejected implication about arbitrary norms"
+      ],
+      "domain": "probability / undirected first-passage percolation",
+      "source": {
+        "source_id": "owner-p0110-w381-20261010:lower-to-upper-curvature-shortcut",
+        "url": "urn:owner-own-work:p0110:w381:20261010:lower-to-upper-curvature-shortcut",
+        "revision": "draft-20261010-independently-unchecked",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "lower-not-upper-curvature",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0110-w381-lower-not-upper-curvature",
+      "kind": "lemma",
+      "title": "The l1 norm separates lower from upper quadratic curvature",
+      "statement": "For g(s,t)=|s|+|t| on R^2 and u=(1,0), u minimizes g on the Euclidean unit circle. For |t|<=1, g(u+(0,t))-g(u)=|t|>=t^2. There is no finite C such that g(u+(0,t))-g(u)<=C t^2 for every sufficiently small nonzero t, since the ratio is 1/|t|. This norm example makes no assertion about the limit shape of any particular iid FPP law.",
+      "proof_text": "the lower curvature direction cannot be reused as an upper curvature direction\n\nFor g(s,t)=|s|+|t|, u=(1,0) minimizes g on the Euclidean unit circle and g(u)=1. For |t|<=1, g(u+(0,t))-g(u)=|t|>=t^2. But the ratio to t^2 is 1/|t|, unbounded as t tends to zero. Thus a supporting outer sphere giving a lower quadratic bound does not give an upper quadratic bound at the SAME direction. This norm example refutes that geometric substitution; it is not asserted to be the shape of Uniform[1,2] FPP.",
+      "assumptions": [
+        "The l1 norm on R^2"
+      ],
+      "domain": "probability / undirected first-passage percolation",
+      "source": {
+        "source_id": "owner-p0110-w381-20261010:lower-not-upper-curvature",
+        "url": "urn:owner-own-work:p0110:w381:20261010:lower-not-upper-curvature",
+        "revision": "draft-20261010-independently-unchecked",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "primary-curvature-hypothesis-check",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0110-w381-primary-curvature-hypothesis-check",
+      "kind": "concept",
+      "title": "Primary-source clarification for the conditional KPZ theorem, pending Claude review",
+      "statement": "PRIMARY-SOURCE CHECK, review pending: Chatterjee, Annals of Mathematics 177 (2013), Theorem 1.1, states iid lattice weights, a nearly-Gamma law, a moment generating function near zero, the uniform upper/lower exponent definitions, and the matching conditions chi_a=chi_b and xi_a=xi_b for the relation chi=2xi-1. Its complete hypothesis list does not include a separate uniform-positive-curvature assumption. Proposition 5.1 provides suitable sphere-contact directions. This resolves an unknown-curvature flag in the retrieved secondary brain card only after source review; it supplies no matched-exponent proof for Uniform[1,2] and no current-openness certificate.",
+      "proof_text": null,
+      "assumptions": [
+        "Historical statement: the original 2013 theorem, not every subsequent theorem",
+        "Primary hypothesis list read on 2026-10-10",
+        "Claude source clarification review pending"
+      ],
+      "domain": "probability / undirected first-passage percolation",
+      "source": {
+        "source_id": "owner-p0110-w381-20261010:primary-curvature-hypothesis-check",
+        "url": "urn:owner-own-work:p0110:w381:20261010:primary-curvature-hypothesis-check",
+        "revision": "draft-20261010-independently-unchecked",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "finite-scale-wandering-tail",
+      "to_key": "terminal-bias-detour",
+      "kind": "depends_on",
+      "rationale": "The terminal-bias identity controls the norm excess on every minimizing path; its two interior mean biases are nonnegative."
+    },
+    {
+      "from_key": "finite-scale-wandering-tail",
+      "to_key": "euclidean-segment-detour",
+      "kind": "depends_on",
+      "rationale": "The segment-distance bound includes longitudinal overshoot and turns a geometric detour into a quadratic cost."
+    },
+    {
+      "from_key": "finite-scale-wandering-tail",
+      "to_key": "support-sphere-rounding",
+      "kind": "depends_on",
+      "rationale": "The selected norm direction and bounded rounding defect supply the quadratic norm lower bound without asserting uniform curvature."
+    },
+    {
+      "from_key": "subadditive-bias-countermodel",
+      "to_key": "centered-subadditive-shortcut",
+      "kind": "refutes",
+      "rationale": "The deterministic subadditive sequence has centered concentration on every scale but a mean bias n^beta."
+    },
+    {
+      "from_key": "lower-not-upper-curvature",
+      "to_key": "lower-to-upper-curvature-shortcut",
+      "kind": "refutes",
+      "rationale": "The l1 norm has a lower quadratic bound at the selected direction and an unbounded ratio to any upper quadratic bound there."
+    },
+    {
+      "from_key": "finite-scale-wandering-tail",
+      "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
+      "kind": "semantic_association",
+      "rationale": "A conditional passage-time-to-wandering bridge useful for P0110; neither exponent matching nor a solution of the target is proved."
+    },
+    {
+      "from_key": "primary-curvature-hypothesis-check",
+      "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
+      "kind": "semantic_association",
+      "rationale": "Clarifies the conditional theorem hypotheses for the P0110 target while retaining the unresolved matching-exponent gap."
+    }
+  ]
+}

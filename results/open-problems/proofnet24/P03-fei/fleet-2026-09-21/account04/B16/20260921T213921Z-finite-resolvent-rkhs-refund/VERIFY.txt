@@ -1,0 +1,14 @@
+B16 finite-resolvent RKHS/refund checker
+execution: local standard-library Python; no paid or remote compute
+checker: check_finite_resolvent_rkhs_refund.py
+checker_git_blob: a25c4154714283a1d06c6f9c757876491f5c88a8
+checker_sha256: beed9be67915c3cdcac8188906dd98652b9e64cdb7c53b9db4320295b1729d42
+
+PASS
+kernel_identity_numeric=30
+kernel_psd_random=400
+quadratic_cancellation_exact=352
+quartic_first_separator_exact=176
+borel_relation_identity_numeric=528
+
+The exact-rational checks cover distance-four quadratic cancellation and the quartic first-separator identity. The floating checks cover the finite-resolvent sine-kernel identity, PSD quadratic forms, and the all-order signed relation/Borel identity on the enumerated small instances. These checks are falsification/self-check evidence; the all-dimensional claims in REPORT.md are symbolic proofs.

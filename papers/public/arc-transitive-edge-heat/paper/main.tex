@@ -1,0 +1,215 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\Var}{Var}
+\newcommand{\E}{\mathbb{E}}
+
+\hypersetup{pdftitle={Heat across an edge of an arc-transitive graph},pdfauthor={Yitzchak Shmalo}}
+
+\title[Heat across an edge]{Heat across an edge of an arc-transitive graph}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+
+\subjclass[2020]{60J27, 05C81, 05C25, 60J10}
+\keywords{random walk, heat kernel, arc-transitive graph, walk-regular graph, normalized heat diffusion}
+
+\begin{document}
+
+\begin{abstract}
+Aldous and Fill ask whether random walk on an arc-transitive graph has some monotonicity property stronger than the inequality $P_i(X_{2t}=j)\le P_i(X_{2t}=i)$ that holds for every symmetric chain (Open Problem~7.30 of their monograph). We show that on every finite connected $1$-walk-regular graph, and so on every finite connected arc-transitive graph and every distance-regular graph, the ratio $H_t(x,y)/H_t(x,x)$ of the continuous-time heat kernel is strictly increasing in $t$ for every edge $xy$. Its derivative is the variance of the Laplacian eigenvalue under the exponentially tilted spectral measure of $x$, and its distance from $1$ is pinned between the spectral gap and the largest eigenvalue times $1-1/(nH_t(x,x))$. The same holds for the lazy walk in discrete time. The hypothesis cannot be weakened to regularity: on the $4$-regular graph of Regev and Shinkar the ratio across an edge exceeds $1$ and then decreases, although on every regular graph its average over the neighbours of $x$ is increasing.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $G=(V,E)$ be a finite, simple, connected, $d$-regular graph on $n\ge2$ vertices with adjacency matrix $A$. Put $P=A/d$, $L=I-P$ and
+\[
+H_t=e^{-tL}=e^{t(P-I)},\qquad t\ge0,
+\]
+so that $H_t(x,y)$ is the probability that the continuous-time simple random walk started at $x$, jumping at rate $1$, is at $y$ at time $t$. For $x\ne y$ write
+\[
+r_{xy}(t)=\frac{H_t(x,y)}{H_t(x,x)} .
+\]
+Then $r_{xy}(0)=0$ and $r_{xy}(t)\to1$ as $t\to\infty$.
+
+Aldous and Fill~\cite[Section~7.1.3, Corollary~7.3, p.~241]{AF} show that for a symmetric reversible chain the most likely place after $2t$ steps is the starting point, $P_i(X_{2t}=j)\le P_i(X_{2t}=i)$, and remark that in continuous time the inequality holds for all times; in the notation above, $r_{xy}(t)\le1$ for all $x,y$ and $t$ when $G$ is vertex-transitive. For distance-regular graphs they state a much stronger, ``geometric'' property~\cite[Proposition~7.29, p.~262]{AF}: $H_t(v,w)=q(t,d(v,w))$, where $q(t,\cdot)$ is non-increasing in the distance and $q(t,k)/q(t,0)$ is non-decreasing in $t$ for each $k$. They then write that Corollary~7.3 ``gave a much weaker result in a more general setting'' and that it is natural to ask for intermediate results:
+
+\begin{question}[{Aldous--Fill~\cite[Open Problem~7.30, p.~262]{AF}}]\label{q:AF}
+Does random walk on an arc-transitive graph have some monotonicity property stronger than that of Corollary~7.3?
+\end{question}
+
+The property that $r_{xy}$ is non-decreasing for every pair $x,y$ is now called monotonic normalized heat diffusion. Peres asked in 2013 whether it holds on every vertex-transitive graph, and Regev and Shinkar~\cite{RS} answered no with a Cayley graph. It holds on abelian Cayley graphs (Price~\cite{Pr}), on graphs with three distinct Laplacian eigenvalues (Nica~\cite{Ni}), on regular bipartite graphs with four distinct eigenvalues (Kubo and Namba~\cite{KN}), and on distance-regular graphs with classical parameters of diameter~$3$ (Liu and Zhang~\cite{LZ}). The theorems below give such a property at distance one, for a class containing the arc-transitive graphs.
+
+\begin{definition}
+The graph $G$ is \emph{$1$-walk-regular} if for every $k\ge0$ the diagonal entries of $A^k$ are all equal and the entries $(A^k)_{xy}$ with $xy\in E$ are all equal.
+\end{definition}
+
+The notion is due to Dalf\'o, Fiol and Garriga~\cite{DFG}. A connected arc-transitive graph is vertex-transitive and edge-transitive, and an automorphism carries walks to walks, so it is $1$-walk-regular. A distance-regular graph is $1$-walk-regular, since $(A^k)_{xy}$ depends only on the distance between $x$ and $y$~\cite[Chapter~4]{BCN}.
+
+Let $\mu_x$ be the spectral measure of $L$ at $x$: if $L=\sum_\lambda \lambda E_\lambda$ is the spectral decomposition, $\mu_x$ puts mass $E_\lambda(x,x)$ at $\lambda$. It is a probability measure on $[0,2]$ with $\mu_x(\{0\})=1/n$, and $H_t(x,x)=\int e^{-t\lambda}\,d\mu_x(\lambda)$. Let $\nu_{x,t}$ be its exponential tilt, $d\nu_{x,t}(\lambda)=e^{-t\lambda}\,d\mu_x(\lambda)/H_t(x,x)$. Write $0=\lambda_1<\lambda_2\le\dots\le\lambda_n\le2$ for the eigenvalues of $L$.
+
+\begin{theorem}\label{thm:main}
+Let $G$ be a finite connected $1$-walk-regular graph on $n\ge2$ vertices. For every edge $xy$ and every $t\ge0$,
+\begin{equation}\label{eq:mean}
+r_{xy}(t)=1-\E_{\nu_{x,t}}[\lambda],\qquad r_{xy}'(t)=\Var_{\nu_{x,t}}(\lambda)>0 .
+\end{equation}
+In particular $r_{xy}$ is strictly increasing on $[0,\infty)$, from $r_{xy}(0)=0$ with $r_{xy}'(0)=1/d$ to the limit $1$, and
+\begin{equation}\label{eq:bounds}
+\lambda_2\Bigl(1-\frac{1}{nH_t(x,x)}\Bigr)\;\le\;1-r_{xy}(t)\;\le\;\lambda_n\Bigl(1-\frac{1}{nH_t(x,x)}\Bigr).
+\end{equation}
+The function $r_{xy}$ is the same for every edge.
+\end{theorem}
+
+\begin{theorem}\label{thm:lazy}
+Let $G$ be as in Theorem~\ref{thm:main}, let $Q=(I+P)/2$ be the lazy walk, and let $xy\in E$. If $n\ge3$, then $Q^k(x,y)/Q^k(x,x)$ is strictly increasing in $k\ge0$ and tends to $1$. If $n=2$ it equals $0$ at $k=0$ and $1$ for $k\ge1$.
+\end{theorem}
+
+\begin{corollary}\label{cor:arc}
+On every finite connected arc-transitive graph, and on every distance-regular graph, the ratio $H_t(x,y)/H_t(x,x)$ is strictly increasing in $t$ for every pair of adjacent vertices, and so is $Q^k(x,y)/Q^k(x,x)$ in $k$ when $n\ge3$.
+\end{corollary}
+
+For distance-regular graphs, Corollary~\ref{cor:arc} is the case $k=1$ of part~(ii) of Proposition~7.29 of~\cite{AF}, whose proof is not written out there; it contains the case of adjacent vertices in the theorem of Liu and Zhang~\cite[Theorem~1]{LZ}. Section~\ref{sec:scope} shows where the hypothesis enters. On a regular graph that is not $1$-walk-regular the ratio across an edge can decrease (Example~\ref{ex:regular}), although its average over the neighbours of $x$ cannot (Proposition~\ref{prop:average}).
+
+\section{Proofs}
+
+\begin{lemma}\label{lem:constant}
+If $G$ is $1$-walk-regular, there are functions $a,b$ on $[0,\infty)$ with $H_t(x,x)=a(t)$ for every vertex $x$ and $H_t(x,y)=b(t)$ for every edge $xy$, and
+\[
+a'(t)=b(t)-a(t).
+\]
+\end{lemma}
+
+\begin{proof}
+The series $H_t=e^{-t}\sum_{k\ge0}t^kA^k/(d^kk!)$ converges absolutely, and each $A^k$ has constant diagonal and is constant on edges; this gives $a$ and $b$. Since $\frac{d}{dt}H_t=H_t(P-I)$,
+\[
+a'(t)=\sum_{z}H_t(x,z)P(z,x)-H_t(x,x)=\frac1d\sum_{z\sim x}H_t(x,z)-H_t(x,x)=b(t)-a(t). \qedhere
+\]
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+By Lemma~\ref{lem:constant}, on every edge
+\[
+r_{xy}(t)=\frac{b(t)}{a(t)}=1+\frac{a'(t)}{a(t)}=1+(\log a)'(t).
+\]
+Since $a(t)=\int e^{-t\lambda}\,d\mu_x(\lambda)$, differentiation under the integral (the measure is finitely supported) gives $a'(t)/a(t)=-\E_{\nu_{x,t}}[\lambda]$ and
+\[
+(\log a)''(t)=\frac{a''(t)}{a(t)}-\Bigl(\frac{a'(t)}{a(t)}\Bigr)^2=\E_{\nu_{x,t}}[\lambda^2]-\E_{\nu_{x,t}}[\lambda]^2=\Var_{\nu_{x,t}}(\lambda),
+\]
+which is~\eqref{eq:mean}. The measure $\mu_x$ has mass $1/n$ at $0$: the eigenvalue $0$ of $L$ is simple because $G$ is connected, and its eigenprojection is $J/n$. The remaining mass $1-1/n>0$ lies on $(0,2]$. Tilting by $e^{-t\lambda}$ keeps both parts positive, so $\nu_{x,t}$ is not a point mass and its variance is positive.
+
+At $t=0$, $H_0=I$ gives $r_{xy}(0)=0$, and $r_{xy}'(0)=\Var_{\mu_x}(\lambda)=(L^2)_{xx}-(L_{xx})^2=(1+1/d)-1=1/d$. As $t\to\infty$, $H_t\to J/n$, so $r_{xy}(t)\to1$. Finally $\nu_{x,t}(\{0\})=1/(na(t))$, and the rest of $\nu_{x,t}$ lies on $[\lambda_2,\lambda_n]$; hence $\E_{\nu_{x,t}}[\lambda]$ lies between $\lambda_2(1-1/(na(t)))$ and $\lambda_n(1-1/(na(t)))$, which is~\eqref{eq:bounds}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:lazy}]
+Put $\alpha_k=Q^k(x,x)$ and $\beta_k=Q^k(x,y)$. As in Lemma~\ref{lem:constant}, $Q^k$ is a polynomial in $A$, so $\alpha_k$ does not depend on $x$ and $\beta_k$ does not depend on the edge. Since $Q(z,x)=\tfrac12\mathbf 1\{z=x\}+\tfrac1{2d}\mathbf 1\{z\sim x\}$,
+\[
+\alpha_{k+1}=\sum_z Q^k(x,z)Q(z,x)=\tfrac12(\alpha_k+\beta_k),\qquad\text{so}\qquad \frac{\beta_k}{\alpha_k}=\frac{2\alpha_{k+1}}{\alpha_k}-1 .
+\]
+The eigenvalues of $Q$ are $\theta=1-\lambda/2\in[0,1]$, and $\alpha_k=\int\theta^k\,d\mu_x$ (with $\theta$ read as a function of $\lambda$). By the Cauchy--Schwarz inequality for the measure $\theta^k\,d\mu_x$,
+\[
+\alpha_{k+1}^2=\Bigl(\int\theta\cdot\theta^k\,d\mu_x\Bigr)^2\le\int\theta^k\,d\mu_x\int\theta^2\theta^k\,d\mu_x=\alpha_k\alpha_{k+2},
+\]
+with equality only if $\theta$ is constant almost everywhere for $\theta^k\,d\mu_x$. Thus $\alpha_{k+1}/\alpha_k$ is non-decreasing, and it is strictly increasing if that measure charges two values of $\theta$. It always charges $\theta=1$, with mass $1/n$. If $n\ge3$ it also charges a point of $(0,1)$: otherwise $\mu_x$ would be $\frac1n\delta_0+(1-\frac1n)\delta_2$, and $1=L_{xx}=\int\lambda\,d\mu_x=2(1-\frac1n)$ would force $n=2$. Since $Q$ is irreducible and aperiodic, $Q^k\to J/n$ and the ratio tends to $1$. For $n=2$ the graph is $K_2$, $Q=J/2$, and the ratio is $0$ and then $1$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:arc}]
+Arc-transitive graphs and distance-regular graphs are $1$-walk-regular, as noted after the definition.
+\end{proof}
+
+\begin{remark}
+The proof of Theorem~\ref{thm:main} uses $1$-walk-regularity only at the vertex $x$: it needs $H_t(x,z)$ to be the same for all neighbours $z$ of $x$. The diagonal constancy is not used.
+\end{remark}
+
+\section{Scope}\label{sec:scope}
+
+On any regular graph the heat equation gives
+\[
+\frac{d}{dt}H_t(x,x)=\frac1d\sum_{z\sim x}H_t(x,z)-H_t(x,x),
+\]
+and the proof above then applies to the average of the ratios over the neighbours.
+
+\begin{proposition}\label{prop:average}
+Let $G$ be a finite connected $d$-regular graph on $n\ge2$ vertices and $x\in V$. Then
+\[
+\frac1d\sum_{z\sim x}r_{xz}(t)=1-\E_{\nu_{x,t}}[\lambda]
+\]
+is strictly increasing in $t$, with derivative $\Var_{\nu_{x,t}}(\lambda)$.
+\end{proposition}
+
+\begin{proof}
+The displayed identity is $1+(\log H_t(x,x))'$, and the second half of the proof of Theorem~\ref{thm:main} did not use $1$-walk-regularity.
+\end{proof}
+
+The average cannot be replaced by a single edge without some homogeneity.
+
+\begin{example}\label{ex:regular}
+Regev and Shinkar~\cite[Appendix~A]{RS} take the cube $Q_3$ and attach a square pyramid to each of two opposite faces. The resulting graph is $4$-regular on $10$ vertices, and its second Laplacian eigenvalue is simple. Their Proposition~A.1 gives $r_{u,v}(t)>1$ for large $t$ whenever the second eigenvector $f_2$ satisfies $f_2(v)>f_2(u)>0$; in their eigenvector this holds when $v$ is an apex and $u$ a vertex of the face below it, so $u$ and $v$ are adjacent. Concretely, with $x$ a vertex of a pyramid's base and $y$ its apex,
+\[
+r_{xy}(7)>1\qquad\text{and}\qquad r_{xy}'(7)<-9\cdot10^{-4} .
+\]
+The script \texttt{regular\_counterexample.py} of~\cite{code} certifies both inequalities in exact rational arithmetic. It sums the Taylor series of $e^{-tL}$ at $t=7$ to $120$ terms and bounds the tail by $2q^{121}/121!$ with $q=\|tL\|_\infty=14$, below $10^{-61}$. Numerically $r_{xy}$ reaches its maximum $1.0198$ near $t=6.8$ and then decreases to $1$.
+\end{example}
+
+The vertex-transitive case is less clear. In the weighted Cayley graph of Regev and Shinkar~\cite[Section~3]{RS}, a lamplighter graph over the hypercube $Q_d$, the two vertices $u$ and $v$ on which $r_{u,v}$ fails to be monotone differ by toggling the lamp at the origin, so they are joined by an edge. That graph has edges of two weights, $1/d$ and $\varepsilon$, so no weight-preserving automorphism carries one kind of edge to the other, the heat across a toggle edge need not equal the heat across a step edge, and the argument of Theorem~\ref{thm:main} does not apply. Regev and Shinkar then make the weights integers, replace each vertex $w$ by an $N$-clique $\{(w,i):i\in\mathbb Z_N\}$ and each edge of weight $m$ by $m$ perfect matchings $(w,i)\sim(w',i+j)$, $1\le j\le m$, to obtain a simple Cayley graph; the failing pair there is $(u,0),(v,0)$, which is not an edge.
+
+\begin{question}
+Is $H_t(x,y)/H_t(x,x)$ non-decreasing in $t$ for every edge $xy$ of every finite simple vertex-transitive graph? Is it non-decreasing for every pair $x,y$ of vertices of every finite arc-transitive graph?
+\end{question}
+
+For the first question, the Cayley graphs of the groups listed in the file \texttt{vt\_search.py} of~\cite{code} ($S_3$, the dihedral groups of orders $8$ to $24$, $A_4$, $S_4$, $Q_8$ and five direct products), with connection sets made of at most three inverse pairs, show no decrease across any edge on a grid of $[0,12]$ in floating point. For the second, no decrease larger than $10^{-12}$ (rounding) appears on a grid of $[0,20]$ for any pair of vertices in thirteen arc-transitive graphs, among them four that are not distance-regular: the generalized Petersen graphs $GP(8,3)$, $GP(12,5)$, $GP(24,5)$ and the cubic graph on $26$ vertices with LCF notation $[-7,7]^{13}$ (\texttt{allpairs\_scan.py} in~\cite{code}). These are numerical observations, not proofs.
+
+\section*{Computations}
+The repository~\cite{code} contains four Python scripts with their outputs. The file \texttt{edge\_examples.py} checks five arc-transitive graphs (the Petersen graph, the cube $Q_3$, the graphs $C_7[2K_1]$ and $C_{11}[2K_1]$ obtained from a cycle by doubling every vertex, and the circulant $C_{13}(1,5)$): arc-transitivity by an explicit automorphism for every arc, $1$-walk-regularity in exact integer arithmetic, the identity $r'=\Var_{\nu_{x,t}}(\lambda)$ and monotonicity on a grid in floating point, and the strict monotonicity of the lazy ratio for $1\le k\le60$ in exact rational arithmetic. The file \texttt{regular\_counterexample.py} certifies the two inequalities of Example~\ref{ex:regular}. The files \texttt{vt\_search.py} and \texttt{allpairs\_scan.py} produce the floating-point observations of Section~\ref{sec:scope}. The inequality $\bigl(\sum_i m_il_ix_i\bigr)^2\le\bigl(\sum_i m_ix_i\bigr)\bigl(\sum_i m_il_i^2x_i\bigr)$ for $m_i,x_i\ge0$, which is the finite form of $\Var_{\nu_{x,t}}(\lambda)\ge0$, is checked in Lean~4 with Mathlib in \texttt{lean/TiltedVariance.lean}.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. In September 2026 OpenAI GPT models, running as research tasks of that project, proposed Theorem~\ref{thm:main} for edges of $1$-walk-regular graphs with the variance identity and its proof, and the observation behind Proposition~\ref{prop:average}. In October 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, checked the proof against the sources, added Theorem~\ref{thm:lazy}, the bounds~\eqref{eq:bounds} and the exact check in Example~\ref{ex:regular}, wrote the computer checks and the Lean file of the repository~\cite{code}, and wrote the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/arc-transitive-edge-heat}.
+
+\begin{thebibliography}{9}
+\bibitem{AF} D.~Aldous and J.~A.~Fill, \emph{Reversible Markov Chains and Random Walks on Graphs}, unfinished monograph, 2002, recompiled 2014, \url{https://www.stat.berkeley.edu/~aldous/RWG/book.html}.
+\bibitem{BCN} A.~E.~Brouwer, A.~M.~Cohen and A.~Neumaier, \emph{Distance-Regular Graphs}, Springer, Berlin, 1989.
+\bibitem{DFG} C.~Dalf\'o, M.~A.~Fiol and E.~Garriga, \emph{On $k$-walk-regular graphs}, Electron.\ J.\ Combin.\ \textbf{16} (2009), \#R47.
+\bibitem{KN} T.~Kubo and R.~Namba, \emph{Monotonic normalized heat diffusion for regular bipartite graphs with four eigenvalues}, Graphs Combin.\ \textbf{38} (2022), paper no.~22.
+\bibitem{LZ} S.~Liu and H.~Zhang, \emph{Monotonic normalized heat diffusion for distance-regular graphs with classical parameters of diameter $3$}, arXiv:2505.04314.
+\bibitem{Ni} B.~Nica, \emph{A note on normalized heat diffusion for graphs}, Bull.\ Aust.\ Math.\ Soc.\ \textbf{102} (2020), 1--6.
+\bibitem{Pr} T.~M.~Price, \emph{An inequality for the heat kernel on an Abelian Cayley graph}, Electron.\ Commun.\ Probab.\ \textbf{22} (2017), paper no.~20.
+\bibitem{RS} O.~Regev and I.~Shinkar, \emph{A counterexample to monotonicity of relative mass in random walks}, Electron.\ Commun.\ Probab.\ \textbf{21} (2016), paper no.~11; arXiv:1506.08631.
+\bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/arc-transitive-edge-heat}.
+\end{thebibliography}
+
+\end{document}

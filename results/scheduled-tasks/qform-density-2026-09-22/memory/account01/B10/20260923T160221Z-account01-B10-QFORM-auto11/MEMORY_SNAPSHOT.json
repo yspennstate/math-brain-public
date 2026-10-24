@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B10",
+  "run_id": "20260923T160221Z-account01-B10-QFORM-auto11",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit_prepublication": "1cdca4ec52a550e742bbb6d80c616de37ec264e1",
+  "control_revision": "2026-09-22.15",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_full_target_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-TWO-HUB-SCHUR-FRESNEL-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For exact rank-three A=UMU^T, any invertible original-coordinate physical 2x2 block B=RMR^T may be integrated exactly. If the complement Gram G=I-R^TR is positive definite and every remaining whitened leverage u_j^T G^{-1}u_j is at most 1/2, then Q has a continuous density and ||p_Q||_infinity <= 12 [|det M| det G]^(-1/3). No lower bound on |det B| survives."
+    },
+    {
+      "id": "QFORM-TWO-HUB-LOCAL-CANCELLATION-v1",
+      "status": "PROVED_EXACT_IDENTITY",
+      "statement": "With g=det(RR^T), the rank-one Schur coefficient theta=det(M)g/det(B), the three-dimensional Fresnel change has Jacobian g^(-1/2), and |det B|^(-1/2)|theta|^(-1/2)sqrt(g)=|det M|^(-1/2)."
+    },
+    {
+      "id": "QFORM-HUB-LEAF-LEFTOVER-VOLUME-v1",
+      "status": "PROVED_EXACT_IDENTITY",
+      "statement": "For near-coloop hub Gram G_L=I-hrr^T and leaf leverage ell_i=u_i^T G_L^{-1}u_i, deleting hub and leaf gives det G_i=(1-h)(1-ell_i), with post-deletion leverage ell_(j|i)=ell_j+(u_j^T G_L^{-1}u_i)^2/(1-ell_i)."
+    }
+  ],
+  "partner_applied": {
+    "account_slot": "account02/B10",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ebceb50f1e0c2589cb7599f57c4deb4a3ffd0f2b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B10/20260923T141719Z-account02-B10-QFORM-r11/REPORT.md",
+    "result": "QFORM-COLOOP-RANKONE-TRANSVERSE-MF-v1",
+    "actual_inequality": "||p_Q||_infinity <= 3*2^(4/3)D^(-1/3) < 7.560 for D>=1, with continuity"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "591cf390780c8acf7e3dfac2ea7195ba56552276",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B10/20260923T160221Z-account01-B10-QFORM-auto11/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "668926433bf13c5be3b43a1f7331ab4c61e9affc",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B10/20260923T160221Z-account01-B10-QFORM-auto11.md"
+  },
+  "unresolved_implication": "QFORM-PHASE-RETAINING-BORDERED-PAIR-TRIPLE-RECEIVER-v1",
+  "next_step": "Spend the previously proved disjoint packet W_H T_JK>0.05379357 while retaining the hub-containing triple phase through the first Fresnel integration; do not replace the full transformed product by its absolute Wiener integral and do not peel the hub before spending T_JK.",
+  "continuity_scope": "The new two-hub diffuse-complement theorem and the applied partner exact-coloop rank-one branch have continuous densities. No continuity claim is made for the unresolved punctured ultra-coloop branch."
+}

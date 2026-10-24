@@ -1,0 +1,70 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target": "RS-2026-CL-A",
+  "category": "HARD OUTSIDE",
+  "run_utc": "2026-09-19T04:38:30Z",
+  "captured_master_before_report_write": "1a32c73f53f88a747fdf79a3cf66494b900a93f7",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T03-50-00Z__report.md",
+    "creation_commit": "e9b095bf11ac7d20edb81b654aadd4b45033848a",
+    "readback_blob": "b17ffdbd8583869af6eed241d37809888bb5963a"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T04-38-30Z__report.md",
+    "creation_commit": "5e6eee365f764c90cfa8a7cf8b723486d5554388",
+    "readback_blob": "f233569c1869c4528697561a7639f7592cfc19be"
+  },
+  "metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": "NO_FROZEN_METRIC_MOVEMENT"
+  },
+  "status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / POSTERIOR_TYPICAL_RENYI_PRESSURE_AND_TORUS_DEFECT_PROGRESS",
+  "historical_initial_methods": ["B2", "B27", "B21"],
+  "methods": ["B28", "B11", "B4"],
+  "method_outcomes": {
+    "B28": "Proved posterior-typical bulk-neutrality theorem: after exact latent bulk cancellation, pressure is controlled by oscillation of the posterior mean defect plus a centered posterior exponential moment. A uniform one-sided exponential tail with exponent gamma>1 gives an explicit o(D) pressure bound and permits rare arbitrarily large positive defects.",
+    "B11": "Identified exact residual scalar pressure as the order-2 Renyi free-energy gap log E_Q exp(2F)-2 log E_Q exp(F). Derived Gibbs variational and shell entropy-versus-defect upper/lower envelopes, plus the universal collision-entropy/self-overlap lower obstruction -H_2(pi)+log E_rho exp(b_z).",
+    "B4": "Instantiated an explicit weak zero-field Ising torus class with constant-amplitude sign bulk and translation-randomized local defect. Exact latent summation gives pressure <= R(lambda,beta)m_n, so m_n=o(D_n) plus the prior fixed transport tilt implies noised LDA control through D_n-o(D_n)."
+  },
+  "mathematical_delta": {
+    "posterior_typical": "With q_x(z)=c_z w_z^(0)(x)/C0, m(x)=E_{q_x}U and R(x)=log E_{q_x} exp(U-m), osc log W <= osc m + sup R. If q_x{U-m >= a_n+r} <= C exp(-gamma r), gamma>1, then R <= a_n + log(1+C gamma/(gamma-1)).",
+    "exact_renyi_pressure": "Pi_2(F;Q)=log(1+chi2)=log E_Q exp(2F)-2 log E_Q exp(F), where F(x)=log E_{q_x} exp(U).",
+    "entropy_defect_duality": "For latent shells A_r, max_r(ell_r-h_r) <= F <= log sum_r exp(u_r-h_r). Universally log(1+chi2) >= -H_2(pi)+log E_rho exp(b_z), rho_z proportional pi_z^2, b_z=log K(z,z).",
+    "explicit_torus": "For weak Ising Q_n on the 2D torus and w_{z,r}=exp(lambda sum z_u x_u + beta sum_{u in I_r} z_u x_{u+e1}), aggregate pressure is <= R_{lambda,beta} m_n with R=log(max{2cosh(lambda+beta),2cosh(lambda-beta)}/min{...}). Taking m_n=o(D_n) yields pressure o(D_n) and output-degree loss o(D_n)."
+  },
+  "source_status": {
+    "checked_date": "2026-09-19",
+    "randomstrasse": "LIVE_OPEN_IN_BOUNDED_CHECK",
+    "mao_2607_20318": "MANDATORY_NEGATIVE_STRESS",
+    "hsieh_2601_05850": "POSITIVE_COMPARATOR",
+    "chen_li_2608_06279": "POSITIVE_INTERFACE_COMPARATOR",
+    "later_source_wide_characterization_found": false,
+    "novelty": "UNVERIFIED"
+  },
+  "audits": {
+    "P26": 0,
+    "OTHER": 0,
+    "qualifying_total": "0/2"
+  },
+  "hard_recovery_cycles_consumed": 1,
+  "same_obligation_stagnation": 0,
+  "checker": "NONE_NEW_THEOREM_SIZED_ANALYTIC_CLAIMS_ONLY",
+  "next_methods": ["B25", "B15", "B22"],
+  "next_obligation": [
+    "Count residual pressure both through aggregate posterior free energy and the latent two-copy Gram kernel to isolate the exact cluster cancellation bridge.",
+    "Quantify stability of bulk neutrality under perturbation of the normalizer-balanced prior and approximate latent quadrature.",
+    "Derive posterior shell tails or approximate partition-of-unity directly from bounded-arity polymer/interface hypotheses and reconcile with prior art.",
+    "Determine optimality of the Pi_n/2 pressure-to-degree loss under scalar L2 pressure plus reversible transport.",
+    "Obtain actual P26 and one distinct OTHER full theorem/source audit before closure."
+  ],
+  "model_control": {
+    "requested": "GPT-6 / maximum",
+    "actual_exposed_model": "GPT-5.6 Sol",
+    "reasoning": "UNVERIFIED",
+    "authenticated_model_selector_available": false,
+    "authenticated_reasoning_selector_available": false
+  }
+}

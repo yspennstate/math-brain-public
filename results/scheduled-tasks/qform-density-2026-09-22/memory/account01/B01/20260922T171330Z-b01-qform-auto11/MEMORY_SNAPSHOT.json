@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260922T171330Z-b01-qform-auto11",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuous_density_status": "NOT_PROVED_BY_THIS_RESULT",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "source_control": {
+    "startup_commit": "c4115aae8ab36cf62a513889c5d422fab16d1e2f",
+    "prepublication_commit": "fc0119de4d51a54a867a5360ae40d937446bf8f1",
+    "owner_control_revision": "2026-09-22.8",
+    "owner_continuation": "QFORM-PROOF-FIRST-20260922T161801Z"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "premises": [
+    {
+      "name": "QFORM-RANK2-AFFINE-HALF-RIESZ-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e542b1a6ef471b329e4e88a6553e1aacb45acc1a",
+      "path": "proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md",
+      "scope": "rank-two quadratic form in an orthonormal physical projection plus arbitrary original-coordinate affine term; half-Riesz bound 128 |det Lambda|^-1/4; 16 sqrt(30) if affine term lies in the rank-two range",
+      "review_status": "source-complete; independent review pending"
+    }
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B01",
+    "run_id": "20260922T162930Z-account02-B01-qform-r24",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "007d06d8118bc87becd247676c7a63ae336755c9",
+    "result": "heavy-row conditioned rank-two residual bound with factor 2*3^(1/4)*sqrt(pi e)*(1-c)^(-1/4)",
+    "application": "combined with the new whole-principal-patch bound to remove the c->1 blow-up in the pure quadratic exact-rank-two residual branch"
+  },
+  "new_result": {
+    "id": "QFORM-PRINCIPAL-RANK2-SCHUR-PATCH-v1",
+    "statement": "For physical pivot a=A_ii!=0 and Schur complement S, if an original-coordinate principal patch H=S[J,J] has exact rank two with nonzero eigenvalues mu1,mu2, then the full ambient quadratic form has an essentially bounded density with norm <=128 |a|^-1/2 |mu1 mu2|^-1/4, with arbitrary outside quadratic terms and cross couplings. If range(S[J,Jc]) is contained in range(H), replace 128 by 16 sqrt(30).",
+    "aggregate_identity": "|mu1 mu2|^2 = sum_{|R|=|C|=2} det(H[R,C])^2",
+    "classification": "ESSENTIAL_STEP_APPLIED"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6e80788292d04da8a6e0ff4a63faf33c450d631c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260922T171330Z-b01-qform-auto11/REPORT.md",
+    "checker_source_commit": "37b8db7cdfdeba9c95a378c54b2dbff237b3990b",
+    "checker_output_commit": "7dbd2e4164369b931d75dce3920789d6e34aa804",
+    "checker_status": "PASS"
+  },
+  "unresolved_implication": "Replace the exact rank-two principal Schur patch hypothesis by a higher-rank/product-preserving condition forced by the bare three-large-eigenvalue assumption, while controlling arbitrary additional Schur curvature without selecting a shrinking single minor.",
+  "next_step": "Attempt a dependence-safe splice of the orientation-free rank-two half-Riesz theorem with the existing ridge/diffuse estimate on orthogonal residual curvature."
+}

@@ -1,0 +1,51 @@
+{
+  "arithmetic": "independent exact Fraction generator and solver",
+  "base": {
+    "arrival": "11/10",
+    "small_probability": "3/7",
+    "small_service_mean": "1/5",
+    "large_service_mean": "8/5",
+    "mean_service": "1",
+    "derived_small_rate": "5",
+    "derived_large_rate": "5/8",
+    "lower": "0.3928726193785124206366671950742728563769600690751058873",
+    "upper": "0.3928931900472240517674819361196440707363530945657863330",
+    "tail": "0.00003388196508336099854991147812455246625393995185432952741"
+  },
+  "scaled_target": {
+    "arrival": "11/10",
+    "small_probability": "200/533",
+    "small_service_mean": "10001/10000000",
+    "large_service_mean": "10001/6250",
+    "mean_service": "10001/10000",
+    "derived_small_rate": "10000000/10001",
+    "derived_large_rate": "6250/10001",
+    "lower": "0.3904100961171857913875746396412345814989030137704568529",
+    "upper": "0.3904309172156204546413347038758258673484982382003552460",
+    "tail": "0.00003415591088534191733248462392111522579561921594355510073"
+  },
+  "time_rescaled_control": {
+    "arrival": "110011/100000",
+    "small_probability": "200/533",
+    "small_service_mean": "1/1000",
+    "large_service_mean": "8/5",
+    "mean_service": "1",
+    "derived_small_rate": "1000",
+    "derived_large_rate": "5/8",
+    "lower": "0.3904100961171857913875746396412345814989030137704568529",
+    "upper": "0.3904309172156204546413347038758258673484982382003552460",
+    "tail": "0.00003415591088534191733248462392111522579561921594355510073"
+  },
+  "exact_binding": "target enclosure equals unchanged target at arrival lambda*beta",
+  "gap_lower_display": "0.002441702162891965995332491198446989028461830874750641321",
+  "positive_threshold_gap_lower_display": "0.002341702162891965995332491198446989028461830874750641321",
+  "checks": [
+    "independently generated all killed-generator rows",
+    "independent block solve",
+    "all backward equations",
+    "actual scaled service means and rates",
+    "exact time-rescaling equality",
+    "gap>12/5000",
+    "positive-threshold gap>23/10000"
+  ]
+}

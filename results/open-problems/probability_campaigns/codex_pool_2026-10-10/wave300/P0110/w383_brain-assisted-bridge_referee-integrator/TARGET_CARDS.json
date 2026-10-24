@@ -1,0 +1,106 @@
+{
+  "cards": [
+    {
+      "id": "claim_a60b9dcbea1c3b4133831211a8107b42fbce24f2c59d8b4b21ede96b3cab07f1",
+      "title": "Attempt on An iid FPP law with proved KPZ exponent relation",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: An iid FPP law with proved KPZ exponent relation structural argument Result: If a geodesic deviates transversely by n^xi and the norm has quadratic curvature, the deterministic excess norm over a displacement of length n has order n*(n^(xi-1))^2=n^(2xi-1). This yields the proposed balance only after assuming random fluctuations are of the same order. Check: The power follows from norm homogeneity and the square of the relative transverse displacement. A curvature exponent kappa would instead give kappa*xi-(kappa-1). Obstruction: Both the required exponent existence and error control when replacing random passage times by the norm remain unproved for a concrete iid law here. The balance calculation is conditional, not a proof.\nRefers to the open problem node open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation\nNo independent review",
+      "metadata": {
+        "artifact_digest": "sha256:1cbe8d7ad52e92812b2ddaf33f86d8b183e48a2ed295ef9244fd93fa95feba01",
+        "artifact_path": "objects/sha256/1c/1cbe8d7ad52e92812b2ddaf33f86d8b183e48a2ed295ef9244fd93fa95feba01.md",
+        "bundle_digest": "sha256:f3e0d4cb2f270970b3a7e311e549325fd4a447f22688326d8e681b699cda8afb",
+        "bundle_entry_key": "at-p0110",
+        "bundle_id": "population.probability-codex-ledger-attempts-c006-04",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_012.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.core:attempt-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:705337efabf29cd94bdc3e6e7eb6e032d19e1a439ab1ed1610b6421824e2eead",
+        "revision_digest": "sha256:a60b9dcbea1c3b4133831211a8107b42fbce24f2c59d8b4b21ede96b3cab07f1",
+        "source_id": "owner-probability-campaign-codex-20260906:at-p0110",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    },
+    {
+      "id": "claim_cdf706646c2b45447e641263ec41ed5425512f1b415ae6923ee1a889e83be95c",
+      "title": "Auffinger-Damron (2014) reprove only ONE of the two inequalities in the first-passage percolation scaling relation - they obtain chi <= 2 xi - 1, still assuming that the exponents defined in Chatterjee (2013) exist, but WITHOUT Chatterjee's 'nearly Gamma' assumption. So the nearly-Gamma hypothesis is removable for the '<=' direction and, as of the survey, not for the equality.",
+      "body": "the exponents defined in Chatterjee (2013) are assumed to exist\nfirst-passage percolation on Z^d\nNO nearly-Gamma assumption on the weight law\nconclusion is the single inequality chi <= 2 xi - 1, not the equality\n\nIN THE AUTHORS' OWN WORDS: 'we show that under the assumption that exponents defined in Chatterjee (2013) exist, one has the relation chi <= 2 xi - 1. One advantage of our argument is that it does not require the \"nearly Gamma\" assumption of Chatterjee (2013).'\nWHY THE SPLIT MATTERS: quoting 'Auffinger-Damron proved the scaling relation' overstates it in two ways at once - it upgrades an inequality to an equality, and it hides that the exponents are still only assumed to exist. The other inequality's first proof appeared in a model of a Brownian particle in a Poissonian potential; in FPP a version of chi >= 2 xi - 1 goes back to Newman-Piza (1995).\nSOURCE: Auffinger, A. and Damron, M. (2014), 'A simplified proof of the relation between scaling exponents in first-passage percolation', Ann. Probab. 42, no. 3, 1197-1211; arXiv:1109.0523v2.\nVERIFICATION STATUS: theorem-checked-against-source. The v2 abstract states the hypothesis, the conclusion and the dropped assumption in full; the proof was not read.",
+      "metadata": {
+        "bundle_key": "kr10_auffinger_damron_2014_one_inequality_without_nearly_gamma",
+        "bundle_tag": "p4-fpp-known-results-v1",
+        "claim_kind": "theorem",
+        "domain": "probability / first-passage percolation / known results",
+        "filed_by": "claude-8e06e1f7-P4",
+        "filed_on": "2026-08-22",
+        "lane": "campaign_2026-08-22_30h/P4_known_results",
+        "layer": "fpp_known_results",
+        "raw_sources_dir": "~\\<private-repo>\\12_cognitive_architecture\\brain_improvement\\campaign_2026-08-22_30h\\lanes\\P4_known_results\\arxiv_raw",
+        "verification_status": "theorem-checked-against-source"
+      }
+    },
+    {
+      "id": "claim_e090760039c41cb781c56fbb85679625a58a678ff42cfb3ec11a01d8887de6c5",
+      "title": "Chatterjee (2013) proved the KPZ scaling relation chi = 2 xi - 1 for first-passage percolation on Z^d - but ONLY for his own strengthened definitions of the exponents, ONLY under the assumption that those strengthened exponents exist, and ONLY for 'nearly Gamma' weight laws. The Auffinger-Damron-Hanson survey records that Chatterjee's exponents are not known to exist for ANY distribution of passage times, so as of the survey the relation is established for no distribution at all, and proving it remains open.",
+      "body": "the exponents are Chatterjee's STRONGER definitions, not the standard chi, chi', chi_x, xi or xi_x\nthose strengthened exponents are ASSUMED to exist - and are not known to exist for any weight law\nthe weight law is 'nearly Gamma' (the Benaim-Rossignol log-Sobolev class)\ni.i.d. non-negative edge weights on Z^d under moment assumptions\nthe curvature status is NOT settled by this node: the survey says only that a strong definition of the exponents was introduced partly because the relation should need uniform positive curvature of the limit shape, which is unproven. Whether Chatterjee's own theorem carries a curvature hypothesis was NOT verified by lane P4 - see the flag in the body\n\nTHIS NODE EXISTS BECAUSE THE RESULT IS ROUTINELY MISQUOTED. The four misquotations, named:\n  (1) 'Chatterjee proved chi = 1/3.' No. The relation is between two unknown exponents. Getting       chi = 1/3 out of it needs xi = 2/3, which is exactly as open as chi = 1/3.\n  (2) 'chi = 2 xi - 1 holds for FPP.' Not for the standard exponents. It holds for Chatterjee's       strengthened ones, and only if they exist.\n  (3) 'The relation is known for some distribution.' The survey is explicit: 'as of today, there       is not a single distribution of passage times where we know that [chi = 2 xi - 1] holds',       and it poses finding one as an open question.\n  (4) 'It is universal, hence distribution-free.' The universality is a statement ABOUT the       relation (independent of d and of the law within the class), not a licence to drop the       nearly-Gamma hypothesis. Auffinger-Damron removed nearly-Gamma for the inequality       chi <= 2 xi - 1 only.\nTHE AUTHOR'S OWN SUMMARY: 'This article gives a rigorous proof of this conjecture assuming that the exponents exist in a certain sense' (abstract, arXiv:1105.4566v3).\nMETHOD: break a geodesic into segments and compare the passage time to a sum of nearly i.i.d. variables through an approximation scheme, then trade off approximation error against the variance; the nearly-Gamma hypothesis is what lets that optimisation be carried out.\nCURVATURE - THE ONE PLACE THIS NODE IS MOST LIKELY TO BE SUBTLY WRONG, FLAGGED ON PURPOSE. The survey says two things: that the relation 'should be valid only under the unproven assumption of uniform positive curvature of the limit shape', and that this 'is one of the main reasons for the introduction of a strong definition of exponents'. It is tempting to read that as 'Chatterjee's theorem therefore has no curvature hypothesis', and an earlier draft of this node did. That is an INFERENCE from the survey's motivation sentence, not a quoted hypothesis list, and lane P4 did not verify it. THE CHECK THAT WOULD SETTLE IT: read the hypothesis list of the main theorem of arXiv:1105.4566v3 and record whether a curvature or limit-shape condition appears in it. Until then, treat the curvature status of this theorem as unknown here.\nRelated, and this part IS quoted: the survey adds that with a different curvature exponent kappa one would expect chi = kappa xi - (kappa - 1), reducing to chi = 2 xi - 1 at kappa = 2.\nSOURCE: Chatterjee, S. (2013), 'The universal relation between scaling exponents in first-passage percolation', Ann. of Math. (2) 177, no. 2, 663-697; arXiv:1105.4566v3. Hypothesis set read in Auffinger-Damron-Hanson, '50 years of first passage percolation', arXiv:1511.03262v2 (AMS University Lecture Series 68, 2017), section 'The scaling relation chi = 2 xi - 1', tex lines 2943-2963 (in particular 'Chatterjee's exponents are not known to exist for any distribution of passage times' and \"Assuming that the distribution is 'nearly Gamma'...\").\nVERIFICATION STATUS: survey-claim for the complete hypothesis set, with the existence assumption independently confirmed against Chatterjee's own abstract. Lane P4 did not read the Annals paper.",
+      "metadata": {
+        "bundle_key": "kr09_chatterjee_2013_scaling_relation_full_hypotheses",
+        "bundle_tag": "p4-fpp-known-results-v1",
+        "claim_kind": "theorem",
+        "domain": "probability / first-passage percolation / known results",
+        "filed_by": "claude-8e06e1f7-P4",
+        "filed_on": "2026-08-22",
+        "lane": "campaign_2026-08-22_30h/P4_known_results",
+        "layer": "fpp_known_results",
+        "raw_sources_dir": "~\\<private-repo>\\12_cognitive_architecture\\brain_improvement\\campaign_2026-08-22_30h\\lanes\\P4_known_results\\arxiv_raw",
+        "verification_status": "survey-claim"
+      }
+    },
+    {
+      "id": "claim_081071dcf812e1c0843a53fe1da486f97876afe30678a091de36c26017e679f0",
+      "title": "Open problem: An iid FPP law with proved KPZ exponent relation",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1. Source: Auffinger, Damron and Hanson: 50 years of first-passage percolation, Question22, PDF p.89; equation4.19.\nPosed in Auffinger, Damron and Hanson: 50 years of first-passage percolation\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "metadata": {
+        "artifact_digest": "sha256:53ed5f63a17ce48ed04744ed37a7172602259671f2ff18da37068d22aee73c32",
+        "artifact_path": "objects/sha256/53/53ed5f63a17ce48ed04744ed37a7172602259671f2ff18da37068d22aee73c32.md",
+        "bundle_digest": "sha256:58d74c8da229fa6b81fe6bac4abdfaadf798d61b07728701a8922a92ccd764b6",
+        "bundle_entry_key": "op-p0110",
+        "bundle_id": "population.probability-codex-ledger-problems-c006-01",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_009.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:772492982336f844e436033d99bbb6870cb26f16b277731cabc6cb87e48d4e89",
+        "revision_digest": "sha256:081071dcf812e1c0843a53fe1da486f97876afe30678a091de36c26017e679f0",
+        "source_id": "owner-probability-campaign-codex-20260906:op-p0110",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    }
+  ],
+  "edge_columns": [
+    "id",
+    "source_id",
+    "target_id",
+    "kind",
+    "rationale",
+    "weight",
+    "metadata_json",
+    "digest",
+    "created_at"
+  ],
+  "access": "mode=ro; PRAGMA query_only=ON"
+}

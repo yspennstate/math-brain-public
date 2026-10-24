@@ -1,0 +1,14 @@
+{
+  "helper_version": "A029-MM-cut-v1.1 (pilot corrected physical-to-local influence indexing)",
+  "family": "F_g(x,y)=(-1)^(x dot y)g(y), m=3; every one of the 256 actual Boolean three-bit seeds",
+  "domain": "seed masks 0..255, each on six physical coordinates; all 3^6=729 physical restrictions per seed",
+  "case_count": "pilot: seed254 and 729 restrictions; full: 256 seeds and 186624 restrictions",
+  "symmetry": "None; complementary seeds all retained",
+  "arithmetic": "Integer FWHT; exact Fraction spectral laws; outward rational atanh log intervals at fixed point 2^-100; exact physical boundary influence",
+  "memory_estimate_mb": 120,
+  "pilot_max_seconds": 60,
+  "max_runtime_seconds": 1800,
+  "dimensions": "n=6 only for the frozen family; no ambient truth-table census and no automatic escalation",
+  "tests": ["Bent root and every local ratio4", "Every codimension<=2 restriction D2>=0", "General unmatched-pair restriction spectrum identity", "Explicit seed254 stopped tree ratio<2", "Minimal terminal D2 by allowed maximum depth for seed254"],
+  "purpose": "Distinguish depth-two gain from arbitrary stopping gain; falsify the latter <=2 if an exact Boolean witness exists"
+}

@@ -1,0 +1,322 @@
+{
+  "helper_version": "A004-ledger-check-v1",
+  "exhaustive_counts": {
+    "0": 2,
+    "1": 4,
+    "2": 16,
+    "3": 256
+  },
+  "exhaustive_total": 278,
+  "endpoint_cases": 32,
+  "assertions": 11819,
+  "status": "PASS",
+  "runtime_seconds": 2.765407400089316,
+  "constants": {
+    "Clev_bits": {
+      "lower": "3483620875324144824142246060501/1267650600228229401496703205376",
+      "upper": "1741810437662072412071123030251/633825300114114700748351602688",
+      "display_only": 2.7480923171550184
+    },
+    "Creg_bits": {
+      "lower": "11328327463982878830895513712369/1267650600228229401496703205376",
+      "upper": "5664163731991439415447756856185/633825300114114700748351602688",
+      "display_only": 8.936474657877582
+    },
+    "CT_bits": {
+      "lower": "235668833975420796610787387831271/316912650057057350374175801344",
+      "upper": "942675335901683186443149551325089/1267650600228229401496703205376",
+      "display_only": 743.6397188089231
+    },
+    "Kref_bits": {
+      "lower": "6463485815788664677786280631799/633825300114114700748351602688",
+      "upper": "12926971631577329355572561263599/1267650600228229401496703205376",
+      "display_only": 10.197582543052432
+    },
+    "erasure_additive_bits": {
+      "lower": "1828833234529184422442202814989/633825300114114700748351602688",
+      "upper": "3657666469058368844884405629979/1267650600228229401496703205376",
+      "display_only": 2.8853900817779268
+    }
+  },
+  "endpoints": [
+    {
+      "label": "constant",
+      "n": 1,
+      "I": "0",
+      "variance": "0",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "dictator",
+      "n": 1,
+      "I": "1",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "parity",
+      "n": 1,
+      "I": "1",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "point_defect",
+      "n": 1,
+      "I": "1",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "constant",
+      "n": 2,
+      "I": "0",
+      "variance": "0",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "dictator",
+      "n": 2,
+      "I": "1",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "parity",
+      "n": 2,
+      "I": "2",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "point_defect",
+      "n": 2,
+      "I": "1",
+      "variance": "3/4",
+      "D": "1",
+      "H_log2_prime_coefficients": {
+        "2": "2"
+      }
+    },
+    {
+      "label": "constant",
+      "n": 3,
+      "I": "0",
+      "variance": "0",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "dictator",
+      "n": 3,
+      "I": "1",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "parity",
+      "n": 3,
+      "I": "3",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "point_defect",
+      "n": 3,
+      "I": "3/4",
+      "variance": "7/16",
+      "D": "3/4",
+      "H_log2_prime_coefficients": {
+        "3": "-9/8",
+        "2": "4"
+      }
+    },
+    {
+      "label": "constant",
+      "n": 4,
+      "I": "0",
+      "variance": "0",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "dictator",
+      "n": 4,
+      "I": "1",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "parity",
+      "n": 4,
+      "I": "4",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "point_defect",
+      "n": 4,
+      "I": "1/2",
+      "variance": "15/64",
+      "D": "1/2",
+      "H_log2_prime_coefficients": {
+        "7": "-49/32",
+        "2": "6"
+      }
+    },
+    {
+      "label": "constant",
+      "n": 5,
+      "I": "0",
+      "variance": "0",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "dictator",
+      "n": 5,
+      "I": "1",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "parity",
+      "n": 5,
+      "I": "5",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "point_defect",
+      "n": 5,
+      "I": "5/16",
+      "variance": "31/256",
+      "D": "5/16",
+      "H_log2_prime_coefficients": {
+        "3": "-225/128",
+        "5": "-225/128",
+        "2": "8"
+      }
+    },
+    {
+      "label": "constant",
+      "n": 6,
+      "I": "0",
+      "variance": "0",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "dictator",
+      "n": 6,
+      "I": "1",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "parity",
+      "n": 6,
+      "I": "6",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "point_defect",
+      "n": 6,
+      "I": "3/16",
+      "variance": "63/1024",
+      "D": "3/16",
+      "H_log2_prime_coefficients": {
+        "31": "-961/512",
+        "2": "10"
+      }
+    },
+    {
+      "label": "constant",
+      "n": 7,
+      "I": "0",
+      "variance": "0",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "dictator",
+      "n": 7,
+      "I": "1",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "parity",
+      "n": 7,
+      "I": "7",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "point_defect",
+      "n": 7,
+      "I": "7/64",
+      "variance": "127/4096",
+      "D": "7/64",
+      "H_log2_prime_coefficients": {
+        "3": "-3969/1024",
+        "7": "-3969/2048",
+        "2": "12"
+      }
+    },
+    {
+      "label": "constant",
+      "n": 8,
+      "I": "0",
+      "variance": "0",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "dictator",
+      "n": 8,
+      "I": "1",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "parity",
+      "n": 8,
+      "I": "8",
+      "variance": "1",
+      "D": "0",
+      "H_log2_prime_coefficients": {}
+    },
+    {
+      "label": "point_defect",
+      "n": 8,
+      "I": "1/16",
+      "variance": "255/16384",
+      "D": "1/16",
+      "H_log2_prime_coefficients": {
+        "127": "-16129/8192",
+        "2": "14"
+      }
+    }
+  ],
+  "arithmetic": "integer Walsh; Fraction; exact log-linear identities; rational atanh/Taylor/Machin interval certificates"
+}

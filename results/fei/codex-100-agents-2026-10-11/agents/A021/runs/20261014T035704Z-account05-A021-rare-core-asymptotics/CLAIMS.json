@@ -1,0 +1,35 @@
+[
+  {
+    "claim_id": "A021-COHERENT-THREE-CORE-RESERVE",
+    "version": 1,
+    "exact_statement": "For every even m>=4, every bent Boolean b on m uniform bits, distinct point edits b_u,b_v, and independent positive-width point blocks A,B of widths r,s, set g0=z*b,g1=z*b_u,g2=z*b_v and f=g0+A(g1+B(g2-g1)-g0). With alpha=2^-r,beta=2^-s,delta=2^-m,pi=(1-alpha,alpha(1-beta),alpha*beta), IC=2*r*alpha*delta+4*s*alpha*beta*delta, D=H(f)-sum pi_j H(gj), Rstar=2 sum_{i<j}pi_i*pi_j I(gi*gj), VA=2*alpha*(1-alpha)*delta*(1+(1-2*beta)^2), VB=8*alpha*beta*(1-beta)*delta,V=VA+VB, and L=VA*(2*r-2)+VB*(2*r+2*s-4)+2*alpha*(1-alpha)*delta*(1-2*beta)^2*log2(1/(1-2*beta)^2), one has |D-m*V-L-3*V/ln(2)|<=8*sqrt(delta)*V/ln(2) and Rstar<=D<=Rstar+18*IC. The coefficient of Rstar in any uniform bound D<=lambda*Rstar+K*IC with fixed finite K is necessarily lambda>=1. The nested sufficient reserve excess is exactly 2*alpha*(1-alpha)*beta*(1-beta)*I(g1*g2), equal to IC*(m-e_adj)/4 when r=s=1.",
+    "hypotheses": [
+      "Uniform cubes; Shannon Fourier entropy in bits; ordinary total influence.",
+      "The balancing sign z, data, A and B use mutually disjoint coordinates.",
+      "u!=v, m even and >=4, r,s positive integers; 0 log(1/0)=0.",
+      "No claim for arbitrary non-flat cores, arbitrary depth, or source rate 11/2."
+    ],
+    "statement_sha256": "1a43eb7e410b45f6ae3dd4b6fd4ec5aeec726880bada340459d0ba689d931a0f",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": [
+      "DERIVATION.md",
+      "code/check.py",
+      "out/validation.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A025",
+      "A029",
+      "B05",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B20",
+  "run_id": "20260924T011328Z-account02-B20-QFORM-auto11",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_checkpoint_initial": "3d8f36f0d844068c5780915579c75cd4dac60cfd",
+  "source_control_checkpoint_publication_refresh": "111462742701aa8ddaf3549053f93401c62a618e",
+  "target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "corrections_consumed": [
+    "no law-uniform pointwise quadratic-phase decay",
+    "no worst-fibre supremum integration",
+    "no arbitrary-joint coarea substitution",
+    "no conditional-cap-as-independence",
+    "no post-rotation independence",
+    "no deletion of nonzero small coefficient tails",
+    "no unsupported one-good-minor inference from aggregate volume"
+  ],
+  "partner_result": {
+    "account": "account03",
+    "slot": "B20",
+    "run_id": "20260924T004659Z-account03-B20-QFORM-r43",
+    "compatible_report_ref": "1e8d908588d359d291adf1d9c926bc9870039041",
+    "applied_expressions": [
+      "E2(M)>4/9 and, after the completed E3 exit, E3(M)<2^-18",
+      "T2 E2(M)<=3E3(M) with T2=dist_F(M,rank<=2)^2",
+      "r43 R2/R1 split at s2(M)=1/8"
+    ]
+  },
+  "new_results": [
+    {
+      "id": "QFORM-R43-MULTIPLICATIVE-TUBE-TRICHOTOMY-v1",
+      "status": "PROVED_SUPPORTING_CLOSURE",
+      "summary": "On the unpaid r43 E2 packet, (s1s2)dist_F(rank<=2)<1/512. R2 has s1s2>0.6663003548, s1*dist_F(rank<=2)<1/64 and dist_F(rank<=2)<0.002931299. R1 has s1*dist_F(rank<=1)>0.6665748056 and a sharper rank2 tail; it splits into a multiplicative rank2 core s1s2>0.4713395652 or an ultra-giant diffuse rank1 state s1>113.7464 and dist_F(rank<=1)<0.005860183."
+    },
+    {
+      "id": "QFORM-R43-GIANT-R1-THIRDMODE-SEPARATION-v1",
+      "status": "PROVED_SUPPORTING_CLOSURE",
+      "summary": "For s2(M)<1/8 and s3(A)>=1, zeroing the full physical I|J crossing leaves coefficient operator norm >7/8. Therefore one of AII, AJJ, AKK, AIK, AJK has operator norm >7/40. The argument is deterministic only and does not delete random terms."
+    },
+    {
+      "id": "QFORM-R43-THIRDMODE-IN-CROSSING-FORCING",
+      "status": "REFUTED_STRONGER_INTERMEDIATE_CLAIM",
+      "summary": "A spread target-valid family has E2>1/2, E3->0 and s2->0 on the selected crossing while a disjoint flat rank-one block supplies the full matrix's third large eigenvalue. Thus the third mode may be wholly exterior. This is not a QFORM counterexample."
+    }
+  ],
+  "pinned_source": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "applied_result": "Unrestricted D5 applied to the live r43 physical block: e5(M^T M)>=1/1024 implies ||p_Q||infinity<=10 sqrt(2e)<23.317; every unpaid packet may assume e5(M^T M)<1/1024."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "7320b73d2b8e9548653c01a9a97515e337f3cc3d",
+    "checks_commit": "668e03d3b135d8d89cbb97ffcfc0971b0c755533",
+    "claims_commit": "b62179853ba1f359cf952849df1e98e44c615948",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B20/20260924T011328Z-account02-B20-QFORM-auto11/"
+  },
+  "handoff_commit": "587875aac6dc55221473f37c47521e57fca3db89",
+  "unresolved_implication": "QFORM-R43-MULTIPLICATIVE-R2-OR-EXTERIOR-THIRDMODE-PAYMENT-v1",
+  "next_step": "For R2, prove a tail-retaining robust version of the anchored four-currency Fourier receiver using the multiplicative exterior bounds. For R1, feed the guaranteed >7/40 complementary physical block into two-star/one-anchor/ridge/physical-volume compilers. Do not try again to force a third crossing direction inside M."
+}

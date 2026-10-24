@@ -1,0 +1,20 @@
+# Whole independent reconstruction of A008 complete mass v1
+
+Source: A008-COMPLETE-QUEUE-DEGREE-WEIGHTED-DETERMINANT-MASS v1, statement SHA256 f64b142a5309e20059893f5fba1082151a3b74f4beb6e13849c6f2b07d5f2f3f. Read the whole REPORT, COMPLETE_MASS and claim entry. Verdict: HOLDS at the original stated scope; no substantive repair supplied. This does not accept a universal influence payment, which the source explicitly leaves open.
+
+Reconstruction starts at actual probabilities. The conditioned initial-root probability is product_root(lambda*pi)/D, since conditioning cancels product_all(1+lambda*pi). Each nonroot is chosen once as a child, supplying its lambda, so all used labels contribute product_used lambda exactly once. Size/subset probabilities t_u are kept unchanged and may be algebraic. For each visit its c children have count probability 1/((c+1)(c+2)); the attachment multiset has probability 1/binom(s+c-1,c). A repeated attachment group with h distinct child labels admits exactly h! chronological label draws. Initial roots and different attachment groups have fixed order. Therefore the claimed N_s coefficient follows directly.
+
+The determinant premise is reconstructed as follows: expand each nonroot row as sum_parent w_uv(e_v-e_u). A nonroot cycle gives a zero determinant because its selected rows sum to zero. Otherwise parent chains terminate at roots; ordering parents before children makes the restricted selected matrix triangular with diagonal one. Expanding w selects the attachment coordinate. The prescribed one-root-per-original-source-SCC sets thus enumerate precisely the selected attached forests. No extra root or attachment permutation is counted. The resulting actual BFS draw event recovers the partition assignment, parents, attachment slots and chronological label sequence. The sum over assignments is disjoint and contains only successful finite runs; hence Q_part is a subprobability and a lower bound on full output mass. This proves the source exact mass and final-output ambiguity assertion, including all lambda, pi, D, t and child factors.
+
+For each vertex let h sum to c. Independent beta, exponential and simplex moments multiply to
+
+    [2/((c+1)(c+2))] c! [(s-1)! product h!/(s+c-1)!]
+      = 2 product h! / [(c+1)(c+2) binom(s+c-1,c)].
+
+The beta integrals follow by integration by parts; the simplex integral follows by iterating the same beta identity. Different vertices are independent, so multiplying and then multiplying by 2^-g gives exactly N_s. No multiplication of expectations of SCC factors is used. The coefficient bounds follow from count denominator >=2 and <=2*3^c, and binomial <=2^(s+c). Over all vertices sum s=a, sum c=e, giving the exact source inequalities. The correction upper cost is a+g+e+e log2(3)<= (3+log2(3))a because g<=a and e<=g. This pays only the count/multiset part, not labels, subsets or rank.
+
+For the forced singleton star, only the parent has c=e and all other visits have c=0, and binom(1+e-1,e)=1. Thus N_s(pi*x^e)=pi*e!/((e+1)(e+2)2^e), exactly the claimed missing factor. The positive spectral-mass statement follows from the Boolean core-times-OR expansion. These reconstructions cover all original quantifiers rather than promoting a selected matching special case to a whole theorem.
+
+Independent arithmetic checks in code/review.py cover all exponent vectors with s=1,...,4 and c=0,...,6; exact moment products and both monomial inequalities are tested. The new matching checker independently reconstructs original queue events in 63 graph prime tables and K_n, n=4,...,8, without importing author code; these are supplementary finite checks. Neither test is extrapolated to prove the general formula: the all-finite argument is above.
+
+Universal boundary is unchanged: sum_A P_f(A)log2(1/Q_part(A))<=K I(f) under one fixed feasible prime-table reference is not proved for arbitrary Boolean f. A continuum integral identity and a matching certificate for complete graphs do not close it. Mirror adoption and outside review receipts are unobserved.

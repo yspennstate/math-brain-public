@@ -1,0 +1,116 @@
+# FEI100 tokens - 2026-10-20 12:18 UTC
+
+Account 5 weekly meter: ?% (resets ?); target now: no meter yet; running 1.
+
+Totals over every finished stage (per-stage deltas of the thread-cumulative usage Codex reports):
+
+- cache_write_input_tokens: 0
+- cached_input_tokens: 1,049,725,312
+- input_tokens: 1,139,380,786
+- output_tokens: 12,746,065
+- reasoning_output_tokens: 4,525,023
+
+Per agent (thread-cumulative at the last finished stage):
+
+- A001: stages 8, in 15,584,624, cached 14,045,952, out 148,943, reasoning 49,963
+- A002: stages 8, in 12,894,153, cached 12,006,144, out 145,096, reasoning 47,514
+- A003: stages 8, in 9,973,153, cached 9,177,216, out 101,878, reasoning 31,666
+- A004: stages 8, in 13,601,788, cached 12,796,672, out 136,495, reasoning 44,498
+- A005: stages 7, in 11,200,628, cached 10,491,264, out 132,718, reasoning 53,235
+- A006: stages 8, in 13,234,076, cached 12,163,072, out 146,026, reasoning 50,021
+- A007: stages 8, in 11,334,650, cached 10,486,912, out 153,812, reasoning 54,668
+- A008: stages 8, in 13,007,867, cached 12,328,448, out 116,879, reasoning 35,168
+- A009: stages 8, in 11,835,288, cached 10,879,104, out 141,673, reasoning 50,641
+- A010: stages 7, in 16,495,320, cached 15,381,760, out 169,704, reasoning 73,438
+- A011: stages 8, in 12,215,498, cached 11,085,056, out 185,426, reasoning 75,751
+- A012: stages 8, in 15,257,409, cached 14,193,280, out 146,758, reasoning 46,237
+- A013: stages 8, in 14,723,162, cached 14,111,616, out 173,558, reasoning 69,520
+- A014: stages 8, in 8,886,190, cached 8,147,072, out 128,677, reasoning 53,658
+- A015: stages 7, in 10,506,174, cached 9,354,624, out 135,218, reasoning 47,229
+- A016: stages 8, in 11,570,861, cached 10,935,680, out 149,733, reasoning 55,832
+- A017: stages 8, in 12,633,016, cached 11,717,376, out 204,321, reasoning 88,275
+- A018: stages 8, in 12,078,790, cached 11,313,152, out 148,487, reasoning 55,018
+- A019: stages 8, in 10,934,072, cached 10,098,560, out 115,575, reasoning 37,705
+- A020: stages 7, in 11,247,213, cached 10,456,576, out 113,671, reasoning 38,075
+- A021: stages 8, in 11,745,619, cached 10,899,840, out 178,080, reasoning 77,842
+- A022: stages 8, in 12,012,432, cached 11,109,376, out 156,254, reasoning 55,880
+- A023: stages 8, in 9,283,347, cached 8,589,824, out 115,819, reasoning 39,351
+- A024: stages 8, in 8,468,112, cached 7,782,144, out 94,755, reasoning 37,673
+- A025: stages 7, in 9,304,780, cached 8,440,832, out 125,644, reasoning 46,422
+- A026: stages 8, in 10,979,649, cached 9,931,904, out 159,270, reasoning 70,316
+- A027: stages 8, in 9,919,224, cached 8,235,648, out 136,659, reasoning 48,699
+- A028: stages 8, in 9,458,725, cached 8,705,536, out 122,241, reasoning 47,587
+- A029: stages 8, in 10,363,559, cached 9,605,504, out 118,888, reasoning 42,133
+- A030: stages 7, in 9,353,502, cached 8,223,744, out 107,249, reasoning 39,401
+- A031: stages 8, in 10,408,596, cached 9,441,152, out 120,442, reasoning 43,705
+- A032: stages 8, in 12,387,895, cached 11,214,848, out 147,735, reasoning 55,949
+- A033: stages 8, in 8,229,320, cached 7,788,544, out 86,017, reasoning 38,042
+- A034: stages 8, in 7,237,867, cached 6,556,800, out 85,052, reasoning 36,810
+- A035: stages 7, in 11,180,041, cached 10,332,800, out 149,360, reasoning 57,530
+- A036: stages 8, in 6,888,941, cached 6,480,896, out 94,008, reasoning 44,046
+- A037: stages 8, in 5,376,661, cached 4,545,280, out 52,828, reasoning 11,333
+- A038: stages 8, in 13,974,261, cached 13,140,352, out 123,901, reasoning 46,702
+- A039: stages 8, in 12,459,162, cached 11,319,552, out 140,155, reasoning 47,923
+- A040: stages 7, in 13,756,799, cached 12,998,528, out 138,330, reasoning 44,005
+- A041: stages 8, in 13,116,079, cached 12,123,392, out 147,110, reasoning 54,873
+- A042: stages 8, in 8,460,998, cached 7,723,136, out 105,027, reasoning 27,298
+- A043: stages 8, in 13,390,581, cached 12,627,840, out 153,129, reasoning 59,859
+- A044: stages 8, in 7,096,108, cached 6,276,096, out 84,737, reasoning 26,692
+- A045: stages 7, in 10,456,718, cached 9,829,248, out 118,975, reasoning 38,526
+- A046: stages 8, in 11,283,207, cached 10,124,032, out 126,145, reasoning 35,603
+- A047: stages 8, in 11,780,823, cached 10,841,600, out 133,134, reasoning 45,821
+- A048: stages 8, in 10,424,936, cached 9,768,704, out 106,807, reasoning 34,277
+- A049: stages 8, in 8,038,822, cached 7,351,552, out 94,357, reasoning 32,414
+- A050: stages 7, in 10,678,651, cached 9,555,328, out 142,482, reasoning 55,916
+- A051: stages 8, in 11,709,811, cached 10,379,520, out 152,119, reasoning 50,667
+- A052: stages 8, in 16,022,730, cached 14,639,488, out 146,190, reasoning 50,889
+- A053: stages 8, in 10,527,653, cached 9,667,200, out 130,997, reasoning 49,767
+- A054: stages 7, in 8,920,226, cached 8,152,320, out 92,723, reasoning 30,358
+- A055: stages 7, in 13,106,350, cached 12,000,512, out 141,401, reasoning 56,262
+- A056: stages 8, in 10,547,863, cached 9,434,880, out 167,843, reasoning 64,930
+- A057: stages 8, in 20,198,403, cached 19,177,344, out 173,484, reasoning 67,384
+- A058: stages 8, in 16,218,259, cached 15,187,712, out 141,691, reasoning 55,032
+- A059: stages 7, in 8,067,704, cached 7,338,240, out 94,043, reasoning 32,522
+- A060: stages 7, in 8,913,038, cached 8,198,144, out 112,885, reasoning 43,186
+- A061: stages 8, in 10,928,556, cached 9,915,008, out 106,131, reasoning 29,788
+- A062: stages 8, in 11,651,779, cached 10,606,336, out 143,353, reasoning 53,438
+- A063: stages 8, in 5,514,681, cached 4,942,336, out 53,912, reasoning 19,476
+- A064: stages 7, in 14,975,441, cached 14,126,208, out 130,930, reasoning 47,741
+- A065: stages 7, in 2,986,502, cached 2,487,168, out 33,966, reasoning 9,137
+- A066: stages 8, in 10,289,950, cached 9,404,288, out 136,464, reasoning 50,181
+- A067: stages 8, in 15,309,638, cached 14,502,272, out 177,141, reasoning 68,367
+- A068: stages 8, in 12,349,793, cached 11,744,512, out 141,589, reasoning 66,619
+- A069: stages 7, in 6,932,656, cached 6,285,440, out 100,133, reasoning 32,965
+- A070: stages 7, in 8,923,100, cached 8,399,616, out 112,717, reasoning 35,590
+- A071: stages 8, in 13,623,504, cached 12,722,176, out 145,445, reasoning 47,822
+- A072: stages 8, in 13,050,994, cached 12,036,224, out 124,493, reasoning 43,287
+- A073: stages 8, in 7,156,020, cached 6,279,680, out 80,821, reasoning 19,715
+- A074: stages 7, in 11,754,662, cached 10,839,552, out 86,226, reasoning 19,074
+- A075: stages 7, in 8,833,004, cached 7,473,152, out 161,194, reasoning 65,193
+- A076: stages 8, in 12,604,043, cached 11,252,864, out 183,333, reasoning 75,652
+- A077: stages 8, in 11,465,388, cached 10,726,144, out 138,080, reasoning 55,449
+- A078: stages 8, in 15,204,966, cached 14,007,040, out 138,881, reasoning 50,212
+- A079: stages 7, in 10,531,934, cached 9,693,312, out 175,732, reasoning 80,569
+- A080: stages 7, in 11,932,272, cached 10,793,472, out 116,025, reasoning 37,924
+- A081: stages 8, in 14,472,761, cached 13,264,512, out 144,906, reasoning 28,245
+- A082: stages 8, in 7,720,880, cached 6,990,208, out 51,640, reasoning 13,595
+- A083: stages 8, in 15,123,007, cached 14,498,176, out 112,222, reasoning 35,989
+- A084: stages 7, in 12,774,498, cached 12,172,032, out 134,107, reasoning 49,290
+- A085: stages 7, in 10,085,930, cached 9,558,272, out 109,056, reasoning 29,118
+- A086: stages 8, in 13,794,490, cached 12,664,320, out 130,944, reasoning 37,913
+- A087: stages 8, in 15,206,311, cached 14,552,192, out 122,299, reasoning 36,026
+- A088: stages 8, in 13,908,912, cached 13,031,040, out 122,247, reasoning 33,158
+- A089: stages 7, in 10,615,469, cached 9,967,872, out 144,005, reasoning 63,953
+- A090: stages 7, in 6,267,407, cached 4,989,952, out 86,664, reasoning 30,006
+- A091: stages 8, in 21,088,320, cached 19,853,440, out 196,886, reasoning 66,914
+- A092: stages 8, in 9,436,798, cached 8,654,592, out 96,485, reasoning 25,747
+- A093: stages 8, in 8,920,414, cached 8,132,224, out 63,529, reasoning 16,186
+- A094: stages 7, in 12,981,853, cached 11,499,904, out 136,683, reasoning 44,295
+- A095: stages 7, in 11,852,970, cached 10,955,008, out 138,967, reasoning 55,868
+- A096: stages 8, in 10,681,001, cached 9,815,936, out 136,911, reasoning 46,483
+- A097: stages 8, in 12,024,485, cached 11,104,640, out 122,951, reasoning 42,566
+- A098: stages 8, in 10,240,443, cached 9,378,688, out 81,021, reasoning 18,194
+- A099: stages 7, in 15,878,982, cached 14,745,216, out 125,165, reasoning 21,099
+- A100: stages 7, in 9,325,588, cached 8,751,360, out 90,197, reasoning 20,442
+
+Raw ledger: ledger/tokens.jsonl. Full transcripts: the Codex rollouts of these threads in account 5's sessions folder (never deleted).

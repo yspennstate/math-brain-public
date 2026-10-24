@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260923T101407Z-account01-B15-QFORM-r17",
+  "source_control_commit_start": "fa93f3270488c48a28b561227b2214032c85622b",
+  "source_control_commit_pre_handoff_recheck": "105222dcb9c5076ea9d7cf8f75a90c36fb5ff235",
+  "owner_control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "target_status": "FULL_CONJECTURE_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "no-uniformly-good-single-physical-minor"
+  ],
+  "partner_results_applied": [
+    {
+      "partner": "account02/B15",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260923T083434Z-account02-B15-QFORM-auto11/REPORT.md",
+      "result": "rough ambient ruled-side submeasure domination P(Q in I,M_B)<=pi*sqrt(2)*|I|/sigma_min(B), retaining arbitrary outside terms/couplings and original-coordinate product provenance"
+    },
+    {
+      "partner": "account02/B15",
+      "commit": "9b8bb7e84811978a2c46c7bb5ec50f2570dbc056",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T200544Z-account02-B15-qform-r11/REPORT.md",
+      "result": "for each fixed rank>=3 matrix and cap-one product source, instance-dependent bounded C0 density"
+    }
+  ],
+  "new_results": [
+    "finite positive measure has density <=M iff all sufficiently small Gaussian regularizations have L-infinity norm <=M",
+    "finite positive measure has C0 density iff its Gaussian regularizations converge in L-infinity at the boundary",
+    "sharp full-target scaled raw density constant equals sharp fixed-unit-Gaussian heat-height constant by A -> A/epsilon scaling",
+    "fractional ruled-cover compiler: pointwise sum lambda_j 1_Mj >= delta off residual E implies EK(Q)<=pi sqrt(2)/delta sum lambda_j/kappa_j + residual for every normalized positive kernel",
+    "empty-residual fractional cover yields raw density bound directly via Gaussian boundary lemma",
+    "weighted pointwise coverage sum kappa_j 1_Mj >= theta sum kappa_j plus average kappa >= c s3(A) yields s3(A)||p_Q||inf <= pi sqrt(2)/(c theta)"
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3751c0a85d3502b4fa172333f435e1d62d817ee9",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T101407Z-account01-B15-QFORM-r17/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "c19f3f588f625a8289a1df0082e14fa535be54e1",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B15/20260923T101407Z-account01-B15-QFORM-r17.md"
+  },
+  "unresolved_implication": "Prove on each surviving N3/high-leverage class a pointwise fractional original-coordinate majority cover with universally bounded scaled reciprocal conditioning cost, or isolate a residual minority/two-sheet event paid by an existing product-sensitive exit.",
+  "next_step": "Test the weighted coverage sum kappa_j 1_Mj >= theta sum kappa_j, or a hybrid residual version, on the no-pivot bank survivors without replacing product provenance by X-ray/projection-only information.",
+  "independent_review_status": "NOT_YET_REVIEWED"
+}

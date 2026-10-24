@@ -1,0 +1,15 @@
+{
+ "helper_version":"A009-complete-star-weight-gap-v1",
+ "actual_Boolean_family":"positive simple graph edge DNFs with both endpoint orders",
+ "parameter_domain":{"pilot":"all 7 nonempty graphs on 3 named vertices","full":"all 63 nonempty graphs on 4 named vertices; named 5-vertex cycle, path, star, clique and triangle-with-two-leaves"},
+ "case_count":{"pilot_functions":7,"full_functions":68,"base_vectors_per_graph":1,"base_vector":"lambda_e=1/maximum_degree","truth_inputs_full":1168},
+ "symmetry":"none; physical vertices and all covered nonempty spectral sets retained; no graph-isomorphism reduction",
+ "arithmetic":"integer FWHT and physical edges; Fraction complete star masses and occupation membership; float convex search proposes vectors only; rounded rational feasible vectors/prices and rational KL/log intervals certify global gaps",
+ "memory_estimate_MB":120,
+ "maximum_runtime_seconds":180,
+ "pilot_maximum_runtime_seconds":60,
+ "target_gap_bits":"I/1000 (certificate target, not assumed achieved)",
+ "maximum_numeric_search_iterations":1000,
+ "fixed_rational_grid_denominator":100000000,
+ "automatic_dimension_escalation":false
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T000327Z-account01-B07-qform-r37",
+  "status": "PASS_REGRESSION_ONLY_NOT_PROOF",
+  "random_seed": 0,
+  "random_trials": 1000,
+  "checks": {
+    "h1_nonzero_pivot_identity": {
+      "statement": "sum_{I,J} det([[a,w_J],[u_I,M_IJ]])^2 = a^2 e2((M-u w^T/a)(M-u w^T/a)^T)",
+      "max_relative_discrepancy": 1.427601684941636e-15
+    },
+    "h2_invertible_pair_identity": {
+      "statement": "||det(B)M-V adj(B)U||_F^2 = det(B)^2 ||M-V B^{-1}U||_F^2",
+      "max_relative_discrepancy": 1.074985308357367e-15
+    }
+  },
+  "symbolic_family_checks": {
+    "family": "A_m=m^(1/3) sum_{a=1}^3 u_a u_a^T on three disjoint m-coordinate constant blocks",
+    "nonzero_eigenvalues": "m^(1/3),m^(1/3),m^(1/3)",
+    "third_minor_square": "m^(-4)",
+    "overlap_mass_formula": "W_h=binom(3,h)(m-1)^(3-h)/m",
+    "W2": "3(m-1)/m",
+    "fixed_pair_W2": "(m-1)/m^3",
+    "fixed_pair_m": "m^(-2/3)",
+    "fixed_pair_selection_score": "(m-1)/m^(13/3) -> 0"
+  },
+  "warning": "Finite numerical regression is not evidence for the universal theorem; the report contains exact proofs/counting identities."
+}

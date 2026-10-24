@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260922T142939Z-account03-B02-QFORM-r11b",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "initial_control_commit": "a8fdbdcfe1026ea8d753e994781b3dabeb3a4922",
+  "prepublication_control_commit": "961367e314b02a3024f2ad443b987059b664962f",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "partner": {
+    "designated": "account04/B02",
+    "completed_result_observed": false,
+    "compatible_result_applied": "account02/B02 20260922T140817Z-account02-B02-qform-r11",
+    "compatible_math_commit": "e3fe4ce35f6aa4a90cca913051886c96c7febfc3"
+  },
+  "premises": [
+    {
+      "name": "regularized determinant characteristic-function estimate",
+      "source_commit": "a302aab3477c64757b511e80d3907f982e04873a",
+      "review": "account02/B02 scoped PASS on Sections 3-6"
+    },
+    {
+      "name": "physical-coordinate shifted-square density kernel",
+      "scope": "original coordinate density <=1; uniform under translations after conditioning"
+    },
+    {
+      "name": "Hausdorff-Young and elementary one-dimensional potential optimization",
+      "scope": "integrated Fourier route; no pointwise decay assumption"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-SQUARE-PIVOT-EK-INTEGRATED-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "summary": "A nonzero physical scalar pivot lowers the regularized-determinant aggregate order needed for bounded density from k>2q to k>q. Explicitly, ||p_Q||inf <= C(q,k,r)|d|^-1/2 E_k(B)^-1/(4k) for max(1,2q/k)<r<2; q=2 is unconditional and q<2 uses the published leverage condition.",
+    "explicit_rank2_constant": 11.67915220701016,
+    "explicit_rank3_unconditional_constant": 17.315056317897863,
+    "continuity": "NOT_PROVED_BY_THIS_ARGUMENT"
+  },
+  "math_repository": "yspennstate/math-open-problems",
+  "math_commit": "c080587ef3f1458c8d1fecff9083d5a8c0d0f6bb",
+  "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260922T142939Z-account03-B02-QFORM-r11b/REPORT.md",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B02/20260922T142939Z-account03-B02-QFORM-r11b.md",
+  "unresolved_implication": "QFORM-PIVOT-AGGREGATE-OR-LOWRANK-BANK-v1",
+  "next_step": "In the low-stable-rank residual, obtain either a nonzero physical pivot with a covered Schur E2/E3 packet or an explicit product-bank/star/hyperbolic-square representation; do not assume the refuted universal Schur-rank2 extraction.",
+  "full_target_status": "OPEN"
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260923T043653Z-account03-B02-qform-r20",
+  "type": "correction_and_extension",
+  "supersedes_novelty_claim_in": "MEMORY_SNAPSHOT.json",
+  "correction": "The initial r20 all-three-volume Fourier theorem is valid but not new: same-hour r19 ADDENDUM_BALANCED_CROSSMINOR.md at math-open-problems@601f3b5a79ffc72be9e2ef68b8d23c679eebdf50 already proves a strictly stronger constant (3e/sqrt(2)) delta_row^(-1/6) W3(B)^(-1/6). Do not count the initial r20 theorem as new progress.",
+  "new_result": {
+    "id": "QFORM-COMPOUND-HUB-TO-JOINT-STAR-RESOURCE-v1",
+    "source": "yspennstate/math-open-problems@648ea277fc2cfcc8ce11a7093c61951a9e15baa8:proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T043653Z-account03-B02-qform-r20/ADDENDUM_COMPOUND_HUB_COMPILER.md",
+    "statement": "If a cross block B has W3(B)=Z>0 and determinant-weighted row/column disjointness delta_r,delta_c with delta_r+delta_c<1, then some physical anchor pair gives max{a^2 E2(N), ||c||^2||r||^2||P_(c^perp)NP_(r^perp)||_F^2} >= (1-delta_r-delta_c)Z/36. In a strict no-tau-pivot matrix, the edge/E2 branch forces E2(N) >= (1-delta_r-delta_c)Z/[36 tau(1+tau)]. For a!=0 the exact incident identity is J_ij=a^2 E2(N-c r^T/a)."
+  },
+  "actual_peer_equation_use": {
+    "source": "yspennstate/math-open-problems@e8d024801adae701d47d58d85c41acb5b8ec4454:proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T020523Z-account02-B02-QFORM-auto11-c1a7e2f4/REPORT.md",
+    "lemma": "QFORM-JOINT-STAR-BLOCK-COMPILER-v1",
+    "use": "Applied sqrt(J_ij)<=|a|sqrt(E2(N))+||c||||r||F_perp after pigeonholing the r19 six-coordinate compound hub over its nine anchor pairs."
+  },
+  "prior_self_result_used": "yspennstate/math-open-problems@601f3b5a79ffc72be9e2ef68b8d23c679eebdf50:proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T040049Z-account03-B02-qform-r19/STRUCTURAL_COROLLARY.md",
+  "designated_partner_use": "account04/B02 L2 zero-diagonal-triple Fourier estimate was applied in the initial r20 report to a correct hybrid inequality; retained as valid, not principal new progress.",
+  "next_implications": [
+    "QFORM-EDGE-E2-TO-L1-v1: exploit a^2 E2(S)=J_ij without a large scalar diagonal pivot and with arbitrary same-bank curvature.",
+    "QFORM-TWOSTAR-TRANSVERSE-TO-L1-v1: spend ||c||^2||r||^2 F_perp^2 by a dependence-safe mixed-Fresnel/graph-BL estimate.",
+    "Compile the overlap-one/two/principal compound-mass branches T^(1)+T^(2)+T^(3)."
+  ],
+  "full_target_status": "OPEN",
+  "target_wide_unweighted_L1_fourier_status": "OPEN_NOT_REFUTED",
+  "full_target_continuity_status": "OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

@@ -1,0 +1,67 @@
+P03 exact C6 verifier: spectral integer relaxation + dense-boundary exact enumeration
+edge_upper_recurrence_verified_for_Q6: U6(k)=sum_{j<k}popcount(j) for k=0..64
+QLOG=1048576; exact product fallback enabled
+prime=2 floor(QLOG*log2 p)=1048576
+prime=3 floor(QLOG*log2 p)=1661953
+prime=5 floor(QLOG*log2 p)=2434718
+prime=7 floor(QLOG*log2 p)=2943724
+prime=11 floor(QLOG*log2 p)=3627476
+prime=13 floor(QLOG*log2 p)=3880192
+prime=17 floor(QLOG*log2 p)=4286015
+prime=19 floor(QLOG*log2 p)=4454274
+prime=23 floor(QLOG*log2 p)=4743298
+prime=29 floor(QLOG*log2 p)=5093962
+prime=31 floor(QLOG*log2 p)=5194851
+candidate C6 = 160/3 - (961/96) log2(31)
+candidate_decimal=3.7397640178980511 (display only; never used for decisions)
+RELAXATION SUMMARY
+k=1 bmin=6 valid_relax_states=1 strict=0 zero=1 noncertifying_negative=0 exception_B=6,
+k=2 bmin=10 valid_relax_states=2 strict=2 zero=0 noncertifying_negative=0
+k=3 bmin=14 valid_relax_states=3 strict=3 zero=0 noncertifying_negative=0
+k=4 bmin=16 valid_relax_states=5 strict=4 zero=0 noncertifying_negative=1 exception_B=16,
+k=5 bmin=20 valid_relax_states=6 strict=5 zero=0 noncertifying_negative=1 exception_B=20,
+k=6 bmin=22 valid_relax_states=8 strict=7 zero=0 noncertifying_negative=1 exception_B=22,
+k=7 bmin=24 valid_relax_states=10 strict=9 zero=0 noncertifying_negative=1 exception_B=24,
+k=8 bmin=24 valid_relax_states=13 strict=11 zero=0 noncertifying_negative=2 exception_B=24,26,
+k=9 bmin=28 valid_relax_states=14 strict=13 zero=0 noncertifying_negative=1 exception_B=28,
+k=10 bmin=30 valid_relax_states=16 strict=15 zero=0 noncertifying_negative=1 exception_B=30,
+k=11 bmin=32 valid_relax_states=18 strict=18 zero=0 noncertifying_negative=0
+k=12 bmin=32 valid_relax_states=21 strict=20 zero=0 noncertifying_negative=1 exception_B=32,
+k=13 bmin=34 valid_relax_states=23 strict=23 zero=0 noncertifying_negative=0
+k=14 bmin=34 valid_relax_states=26 strict=25 zero=0 noncertifying_negative=1 exception_B=34,
+k=15 bmin=34 valid_relax_states=29 strict=29 zero=0 noncertifying_negative=0
+k=16 bmin=32 valid_relax_states=33 strict=32 zero=0 noncertifying_negative=1 exception_B=32,
+k=17 bmin=36 valid_relax_states=34 strict=34 zero=0 noncertifying_negative=0
+k=18 bmin=38 valid_relax_states=36 strict=36 zero=0 noncertifying_negative=0
+k=19 bmin=40 valid_relax_states=38 strict=38 zero=0 noncertifying_negative=0
+k=20 bmin=40 valid_relax_states=41 strict=41 zero=0 noncertifying_negative=0
+k=21 bmin=42 valid_relax_states=43 strict=43 zero=0 noncertifying_negative=0
+k=22 bmin=42 valid_relax_states=46 strict=46 zero=0 noncertifying_negative=0
+k=23 bmin=42 valid_relax_states=49 strict=49 zero=0 noncertifying_negative=0
+k=24 bmin=40 valid_relax_states=53 strict=53 zero=0 noncertifying_negative=0
+k=25 bmin=42 valid_relax_states=55 strict=55 zero=0 noncertifying_negative=0
+k=26 bmin=42 valid_relax_states=58 strict=58 zero=0 noncertifying_negative=0
+k=27 bmin=42 valid_relax_states=61 strict=61 zero=0 noncertifying_negative=0
+k=28 bmin=40 valid_relax_states=65 strict=65 zero=0 noncertifying_negative=0
+k=29 bmin=40 valid_relax_states=68 strict=68 zero=0 noncertifying_negative=0
+k=30 bmin=38 valid_relax_states=72 strict=72 zero=0 noncertifying_negative=0
+k=31 bmin=36 valid_relax_states=75 strict=75 zero=0 noncertifying_negative=0
+k=32 bmin=32 valid_relax_states=80 strict=80 zero=0 noncertifying_negative=0
+relax_totals valid=1102 strict=1090 zero=1 negative=11
+noncertifying_pairs: (k=1,B=6) (k=4,B=16) (k=5,B=20) (k=6,B=22) (k=7,B=24) (k=8,B=24) (k=8,B=26) (k=9,B=28) (k=10,B=30) (k=12,B=32) (k=14,B=34) (k=16,B=32)
+singleton_rooted_tie=1; by translations there are 64 singleton functions and by output complement 128 literal extremizers
+DENSE EXCEPTION ENUMERATION (translation-normalized by 0 in minority set)
+k=4 B=16 target_internal_edges=4 rooted_exact_sets=15 strict=15 ties=0 bad=0
+k=5 B=20 target_internal_edges=5 rooted_exact_sets=300 strict=300 ties=0 bad=0
+k=6 B=22 target_internal_edges=7 rooted_exact_sets=180 strict=180 ties=0 bad=0
+k=7 B=24 target_internal_edges=9 rooted_exact_sets=140 strict=140 ties=0 bad=0
+k=8 B=24 target_internal_edges=12 rooted_exact_sets=20 strict=20 ties=0 bad=0
+k=8 B=26 target_internal_edges=11 rooted_exact_sets=0 strict=0 ties=0 bad=0
+k=9 B=28 target_internal_edges=13 rooted_exact_sets=540 strict=540 ties=0 bad=0
+k=10 B=30 target_internal_edges=15 rooted_exact_sets=900 strict=900 ties=0 bad=0
+k=12 B=32 target_internal_edges=20 rooted_exact_sets=270 strict=270 ties=0 bad=0
+k=14 B=34 target_internal_edges=25 rooted_exact_sets=420 strict=420 ties=0 bad=0
+k=16 B=32 target_internal_edges=32 rooted_exact_sets=15 strict=15 ties=0 bad=0
+dense_totals rooted_exact_sets=2800 strict=2800 ties=0
+PASS: C6 is exactly 160/3-(961/96)log2(31); equality only for truth-table Hamming weight 1 or 63.
+Coverage certificate: output complement reduces to 1<=k<=32; spectral relaxation certifies every feasible (k,B) outside the listed pairs; for every remaining pair, translation puts 0 in the minority set and the branch-and-bound enumerates every exact-edge k-subset containing 0.

@@ -1,0 +1,130 @@
+\section*{Exact Doob bridge for the complete biased coherent remainder}
+
+All logarithms are natural and
+\[
+ \psi(t)=t^2\log(1/t^2),\qquad
+ \mathcal E_{\rm raw}(c)=\sum_T\psi(c_T).
+\]
+Let $a,b$ be functions on a block $W$, let $g$ be a Boolean sign on a
+disjoint block $X$, assume $a+b$ and $a-b$ are Boolean signs, and put
+\[
+ F_g=a+gb,\qquad q=\|b\|_2^2,
+ \qquad \mathcal J_{a,b}(g)=\mathcal E_{\rm raw}(F_g)
+                         -q\mathcal E_{\rm raw}(g).                 \tag{1}
+\]
+
+\subsection*{Theorem 1: the biased remainder is already event-local}
+
+At a restriction node write $g=u+x_i v$, let
+$\mu=\mathbb Eg$ and $\alpha=\widehat g(\{i\})$, and let $g_+,g_-$ be
+the two physical restrictions.  The exact remainder $R_\mu(\alpha)$ of
+the biased-child kernel identity satisfies
+\[
+ \boxed{R_\mu(\alpha)=\mathcal J_{a,b}(g)
+ -\frac{\mathcal J_{a,b}(g_+)+\mathcal J_{a,b}(g_-)}2.}             \tag{2}
+\]
+Consequently, for every complete adaptive restriction tree on $X$, with
+node reach probabilities $w_v$,
+\begin{align*}
+ \sum_{v\ {m internal}}w_vR_{\mu_v}(\alpha_v)
+  ={}&\mathcal J_{a,b}(g)
+    -\Pr[g=1]\,\mathcal E_{\rm raw}(a+b)\\
+   &-\Pr[g=-1]\,\mathcal E_{\rm raw}(a-b).                         \tag{3}
+\end{align*}
+Both identities are uniform in $\mu/\alpha$, in every coherent collision
+ratio, in the dimension, and in the adaptive query order.
+
+\paragraph{Proof.}
+The physical split decrement is
+\[
+ D_i(f)=\mathcal E_{\rm raw}(f)
+       -\frac{\mathcal E_{\rm raw}(f_+)+
+              \mathcal E_{\rm raw}(f_-)}2.
+\]
+The exact biased identity is
+$D_i(F_g)=qD_i(g)+R_\mu(\alpha)$.  Subtracting the two decrements is
+exactly (2).  Multiplying (2) by $w_v$ and summing cancels every internal
+state.  At a complete leaf $g=\pm1$, whose raw entropy is zero, so
+$\mathcal J_{a,b}(\pm1)=\mathcal E_{\rm raw}(a\pm b)$.  This proves
+(3).  Notice in particular that (2) is zero on every unchanged dummy
+cylinder. \(\square\)
+
+Equation (2) gives the precise relation to the event-local compensator:
+the complete $R_\mu(\alpha)$, not merely its alpha-log envelope, is the
+Doob decrement of the composition defect (1) whenever the activation pair
+$(a,b)$ is fixed.  Thus a near/separated coefficient split is unnecessary
+in this fixed-activation regime.
+
+\subsection*{Theorem 2: arbitrary Boolean source at a selector interface}
+
+Let $x$ be one fresh selector bit, let $s:\{-1,1\}^n\to\{0,1\}$ be
+arbitrary, put $h=2s-1$ and $p=\mathbb Es$, and choose
+\[
+ a(x)=\frac{1+x}{2},\qquad b(x)=\frac{1-x}{2},\qquad
+ F=a+hb.
+\]
+Then $q=1/2$, $a+b=1$, $a-b=x$, and every complete adaptive physical
+restriction tree for $s$ satisfies the exact scalar law
+\[
+ \boxed{\sum_vw_vR_{\mu_v}(\alpha_v)=Q(p)}                         \tag{4}
+\]
+where
+\[
+ Q(p)=\psi(p)+\psi(1-p)-\frac12\psi(2p-1)
+       +4p(1-p)\log2.                                             \tag{5}
+\]
+Moreover
+\[
+ Q(p)\le8p\log2.                                                  \tag{6}
+\]
+If $d=bs$ is the activated source, then
+\[
+ I(d)=\frac12I(s)+\frac p4,
+\]
+and hence
+\[
+ \boxed{\sum_vw_vR_{\mu_v}(\alpha_v)
+       \le32\log2\,I(d).}                                        \tag{7}
+\]
+In bits, the constant in (7) is $32$.
+
+\paragraph{Proof.}
+For nonempty source Fourier indices $T$, the two selector copies of the
+$F$ coefficient are $s_T$ and $-s_T$; its two constant coefficients are
+$p$ and $1-p$.  Also $\widehat h(\varnothing)=2p-1$ and
+$\widehat h(T)=2s_T$ for $T\ne\varnothing$.  Parseval gives
+$\sum_{T\ne\varnothing}s_T^2=p-p^2$.  Therefore
+\begin{align*}
+ \mathcal E_{\rm raw}(F)-\frac12\mathcal E_{\rm raw}(h)
+  =\psi(p)+\psi(1-p)-\frac12\psi(2p-1)
+   +4p(1-p)\log2,
+\end{align*}
+which, together with (3) and the zero entropy of $1$ and $x$, proves
+(4)--(5).
+
+The function $Q$ is symmetric under $p\leftrightarrow1-p$.  For
+$0<p\le1/2$, discard the nonpositive term $-\psi(1-2p)/2$ and use
+\[
+ \psi(p)=2p^2\log(1/p)\le\frac{2p}{e},\qquad
+ \psi(1-p)\le2p(1-p)\le2p.
+\]
+Thus
+\[
+ Q(p)\le p\left(\frac2e+2+4\log2\right)\le8p\log2;
+\]
+the last elementary inequality follows, for example, from
+$e>8/3$ and $\log2>11/16$.  Symmetry handles $p\ge1/2$, and the endpoints
+are immediate.  Finally, tensor/edge counting for $d=bs$ gives
+$I(d)=I(s)/2+p/4$, proving (7). \(\square\)
+
+\subsection*{Exact scope}
+
+The result pays the entire changing biased coherent remainder, uniformly
+through balanced, near-balanced, separated, and exact-collision nodes, for
+one fixed selector activation and an arbitrary Boolean source.  It is
+cylinder-safe and uses only one terminal activation reserve.  It does not
+cover a hierarchy in which the pair $(a_v,b_v)$ itself changes coherently
+with restricted physical variables, nor an overlapping-input interface.
+For those regimes, (2) identifies the exact new term: the inter-node drift
+of the potential $\mathcal J_{a_v,b_v}(g_v)$ caused by changing activation.
+

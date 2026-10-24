@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B01",
+  "run_id": "20260923T073435Z-account02-B01-qform-aggfresnel",
+  "status": "PROVED_SUPPORTING_TARGET_LEVEL_THEOREM",
+  "full_target_status": "OPEN",
+  "control": {
+    "initial_commit": "f35f17214d6433f31380efbea0cad28b47d8e832",
+    "prepublication_commit": "d95fceaa80e0498172d2d98a8fdf869a60d51a71",
+    "owner_control_revision": "2026-09-22.15"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "source_inputs": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "applied": "source Lp Fourier lemma plus geometric Brascamp-Lieb and Fresnel linearisation"
+    },
+    {
+      "repository": "yspennstate/math-research-brain",
+      "commit": "00703d7b1378fd37c26de163532b2790acbdb7c4",
+      "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B01/account03-B01-20260923T073210Z-auto11.md",
+      "applied": "newest designated-partner rank-two-cross plus source-disjoint-square L3 receiver"
+    }
+  ],
+  "mathematics": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d16921498c8ca82b8ab89f115b8b6bded05da4e9",
+    "directory": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260923T073435Z-account02-B01-qform-aggfresnel/",
+    "main_result": "For an exact rank-two cross block K with Delta=kappa1*kappa2 and receiver self block D+R Lambda R^T, if the augmented receiver space span(range(K^T),R) has physical leverage <=1/2 and transverse Jacobian Omega>0, then |phi_Q(t)|<=min(1,B_r|t|^{-(2+r/2)}) with B_r=(4pi)^(2+r/2)/(2 Delta Omega sqrt(|det Lambda|)), hence ||p_Q||inf<=4(r+4)/(r+2)[2 Delta Omega sqrt(|det Lambda|)]^(-2/(r+4)), while arbitrary nonlinear curvature on the opposite active bank is retained.",
+    "r1_constant": 5.052388555035,
+    "stress_family_bound_eta_quarter": 4.2263818466,
+    "partner_source_disjoint_bound_eta_quarter": 8.4,
+    "phase_aligned_pointwise_refutation_preserved": true
+  },
+  "remaining_implication": "QFORM-CURVED-RECEIVER-TRANSVERSE-OR-ALIGN-ROUTING-v1",
+  "next_step": "In the strict-N3 two-sided-curved bicore, prove a product-preserving matrix routing theorem: either find a quantitatively transverse low-rank receiver packet for the new grouped-Fresnel theorem, a source-disjoint square for the newest partner theorem, or route to an already-paid physical-pair/hub/ridge/volume/grouped-square/exact-null branch before inverting a tiny local determinant.",
+  "review_status": "supporting theorem not independently end-to-end reviewed; no full candidate",
+  "execution_context": "scheduled_automation",
+  "full_brain_connected": false
+}

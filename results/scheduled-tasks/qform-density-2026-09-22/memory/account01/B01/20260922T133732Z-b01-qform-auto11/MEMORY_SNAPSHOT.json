@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_initial": "a061e3c35962dd58137107493fe491a17a8714cb",
+  "control_commit_refreshed": "ba4d529d2fc96add303b46fe7846045aef311f54",
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260922T133732Z-b01-qform-auto11",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "partner_results_applied": [
+    {
+      "worker": "account02/B01",
+      "run_id": "20260922T120355Z-account02-B01-qform-r19",
+      "canonical_commit": "fedbec07e3e8b2f9fcd2b1a65b0bb2a0137c212f",
+      "use": "scalar quadratic L^q gate"
+    },
+    {
+      "worker": "account02/B01",
+      "run_id": "20260922T130024Z-account02-B01-qform-r20",
+      "canonical_commit": "3f6eacae4f27ffb171ba0e680f1861ae01b7246d",
+      "use": "translation-uniform local L^2 scalar gate"
+    }
+  ],
+  "new_results": [
+    "Full-coupled transfer of the scalar local-L2 interval estimate by conditioning and Jensen.",
+    "Conditional smoothing-budget lemma: endpoint pointwise decay plus separated L^q quadratic gates crosses the Fourier L1 threshold when rho+m/q>1.",
+    "Explicit continuous-density branches: 2 cross-slope +1 scalar with constant 11.6946442037; 1 cross-slope +2 scalars with constant 40.6631805953; 3 separated scalar gates with constant 8."
+  ],
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "e58461e07b19315b290cb4b397929090ec6f48b9",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260922T133732Z-b01-qform-auto11/REPORT.md",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B01/20260922T133732Z-b01-qform-auto11.md",
+  "unresolved_implication": "Remove the conditional block-separation requirement: combine a rank-two cross packet with a genuinely coupled scalar gate while retaining product provenance and displacement cancellation, or obtain an exhaustive high-cardinality aggregate alternative from the three-large-eigenvalue hypothesis.",
+  "next_step": "Attempt a vector-valued/coupled version of the smoothing-budget inequality; do not infer factorization from separate characteristic-function bounds.",
+  "operational_note": "Canonical login write was attempted once and blocked by platform safety checks; no bypass was attempted."
+}

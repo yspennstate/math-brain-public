@@ -1,0 +1,59 @@
+\section*{Coherent-potential repair for a physical restriction tree}
+
+Let $T$ be a finite binary physical restriction tree for a Boolean function
+$f$ on the uniform cube.  At an internal node $v$, let $f_v$ be the
+restricted Boolean function and let $i(v)$ be a previously unrevealed
+coordinate.  Its children are the two physical restrictions
+$f_{v,0},f_{v,1}$.  Put $w(v)=2^{-\operatorname{depth}(v)}$.
+
+The B20 notation $D(f_\ell)$ is not defined by the B05--B19 source: there,
+$D$ is a packet attached to a chosen selector/data split.  To obtain a
+well-posed telescope, first assign a nonnegative scalar potential $P_v$ to
+every node, including every terminal node.  Define
+\[
+  \Gamma_v=P_v-\frac12(P_{v,0}+P_{v,1})
+\]
+at each internal node.  Then
+\[
+ \boxed{
+ P_{\varnothing}
+ =\sum_{v\ \mathrm{internal}}w(v)\Gamma_v
+ +\sum_{\ell\ \mathrm{terminal}}w(\ell)P_\ell .}
+\tag{1}
+\]
+This follows by summing the defining recurrences; every non-root,
+nonterminal potential occurs once with each sign and the same fair-path
+weight.
+
+Total influence obeys the independent physical recursion
+\[
+ I(f_v)=I_{i(v)}(f_v)+\frac12 I(f_{v,0})+
+                         \frac12 I(f_{v,1}).
+\]
+Consequently,
+\[
+ \boxed{
+ I(f)=\sum_{v\ \mathrm{internal}}w(v)I_{i(v)}(f_v)
+ +\sum_{\ell\ \mathrm{terminal}}w(\ell)I(f_\ell).}
+\tag{2}
+\]
+Thus no influence is reused if the tree reveals a coordinate at most once
+on each path.  Equations (1)--(2) give the correct sufficient condition:
+if, for one coherent preassigned potential,
+\[
+ \Gamma_v\le C I_{i(v)}(f_v)
+ \quad\hbox{and}\quad
+ P_\ell\le C I(f_\ell),
+\]
+then $P_{\varnothing}\le C I(f)$.
+
+For the canonical one-point-defect chain, take $P_{q_n}=D_n$, take the
+constant child's potential to be zero, and continue only down the
+exceptional child.  Equation (1) then reduces exactly to
+\[
+ D_N=2^{-(N-2)}D_2+
+ \sum_{n=3}^{N}2^{-(N-n)}\Gamma_n^D.
+\]
+The repair therefore preserves the proved chain identity.  What it does
+not supply is a canonical $P_v$ for arbitrary Boolean descendants or the
+two displayed bounds.  Those are the first unpaid universal statements.

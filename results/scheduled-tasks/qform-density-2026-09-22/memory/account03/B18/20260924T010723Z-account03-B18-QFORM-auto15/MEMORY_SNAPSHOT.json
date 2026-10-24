@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260924T010723Z-account03-B18-QFORM-auto15",
+  "control_commit_initial": "9f7929ceb2b8a30eff92dbda74c6dd3938059bd1",
+  "control_commit_prepublication": "aeaae1e4afc2b9e7ca7f440d1c337527e7242f2c",
+  "control_revision": "2026-09-22.15",
+  "correction_inbox_sha": "a884b835aba929c5376e6417ae5cfcd44c0f7a76",
+  "assignment": "Literature-to-proof transfer",
+  "status": "NEW_SOURCE_VALID_SUPPORTING_THEOREM_FULL_QFORM_OPEN",
+  "result_ids": [
+    "QFORM-STABLERANK-CROSS-NEGATIVE-MOMENT-v1"
+  ],
+  "primary_sources": [
+    {
+      "citation": "Rudelson--Vershynin, Small ball probabilities for linear images of high dimensional distributions, IMRN 2015, arXiv:1402.4492",
+      "used": ["Theorem 1.2", "Corollary 8.6"],
+      "hypothesis_match": "independent original-coordinate real inputs with one-dimensional densities bounded by one; no extra moments, iid, support, Gaussian or log-concavity assumptions"
+    },
+    {
+      "citation": "Herry--Malicet--Poly, arXiv:2303.09488",
+      "used": [],
+      "scope_note": "not used for target because it assumes iid inputs and a sufficiently smooth Gaussian-field representation"
+    }
+  ],
+  "mathematical_premises": [
+    "For r=floor(||M||HS^2/||M||op^2)>=2, Corollary 8.6 gives P(||MY+alpha||<=t)<=min(1,(C_RV t/||M||op)^r).",
+    "Theorem 1.2 gives conditional scalar-linear density cap sqrt(2)/||MY+alpha||.",
+    "Layer-cake integration yields E||MY+alpha||^-1 <= C_RV*r/((r-1)||M||op)."
+  ],
+  "new_implication": "If A_II=0 in an original-coordinate split I,J,K and B=A_IJ has floored stable rank at least two, then the full ambient form has density cap (C_RV/sqrt(2))*r_B/(r_B-1)/||B||op, with arbitrary remaining blocks and additional spectrum.",
+  "target_family": "A_Nm=[[0,B_N,0],[B_N,0,0],[0,0,J_m/m]], B_N=diag(1,N^-1/2 I_N), N,m>=2. Exactly three eigenvalues have modulus>=1 and density cap sqrt(2) C_RV uniformly in N,m; this family has a continuous C0 density by independent convolution with the diffuse square bank.",
+  "partner": {
+    "worker": "account04/B18",
+    "scientific_commit": "84fa5922df082f90064dea4d22a600a60e799803",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260923T221534Z-account04-B18-QFORM-r5/REPORT.md",
+    "result": "QFORM-4COORD-NULLHUB-WINDOW-EDGE-DICHOTOMY-v1",
+    "actual_application": "On the same A_Nm family, the big cross pair plus two diffuse-bank coordinates gives core spectrum {1,-1,2/m,0}; with a=1,s=2/m,L=1 the partner bound is (576^(1/3)/2)m=4.1601676461038...m."
+  },
+  "scientific_repository": "yspennstate/math-open-problems",
+  "scientific_commit": "5666b7af8bf6aba9c873129d5551f565ae9e09bf",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260924T010723Z-account03-B18-QFORM-auto15/",
+  "handoff_commit": "a84c479b5ea7c1e2e733450ddbadef4ffa21064f",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "continuity": {
+    "generic_theorem": "not_proved",
+    "explicit_target_family": "continuous_C0_proved"
+  },
+  "unresolved": "Bare s_3(A)>=1 does not yet force a zero-self original-coordinate bank with stable-rank cross currency and nontrivial operator scale. Need structural routing into this or other paid mechanisms; arbitrary full target remains open.",
+  "next_step": "Try to derive a cut/partition dichotomy that lower-bounds either ||A_IJ||op with floored stable rank>=2 under A_II=0 after an exact product-preserving reduction, or feeds failure into the grouped projected-crossing/ridge/hub compiler without selecting one weak singular direction.",
+  "full_target_status": "OPEN",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

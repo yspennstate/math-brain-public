@@ -1,0 +1,1 @@
+Paired transport pilot PASS: 370 roots, 14932 exact assertions, 1.1086 seconds. Each b-first pair pays B=1, JS=1, I_removed=1; leaf H/B/I exactly those of arbitrary h_b. A034 admission: rare tags with k>=2 fail unit amplitude; k=1,m>=3 fail affine support; k=1,m=2 is admitted.

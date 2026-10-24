@@ -1,0 +1,31 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261013T105028Z-account01-B19-canonical-bilinear-review-a094",
+  "primary_packet_id": "A094",
+  "claims": [
+    {
+      "claim_id": "B19-A094-CANONICAL-BILINEAR-ROOT-REVIEW-v1",
+      "target_claims": ["B01-A003-CANONICAL-BILINEAR-ROOT-GU-v1"],
+      "status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_CANONICAL_ROOT_SCOPE",
+      "statement": "For the matched physical form x dot y with one y=0 point defect, all ranks and affine phases satisfy U=I=r, H=2r, and G<=(5/2)I; the same constant holds for disjoint products.",
+      "proof_evidence": ["REPORT.md", "PROOF_RECONSTRUCTION.md", "CHECK_REVIEW.py", "CHECK_REVIEW.out"],
+      "limitations": [
+        "No positive-codimension restriction-closure theorem",
+        "No arbitrary invertible physical-bilinear-matrix transfer",
+        "No universal GU inequality",
+        "Full FEI remains open"
+      ]
+    },
+    {
+      "claim_id": "B19-A094-ARBITRARY-FULL-RANK-MATRIX-5OVER2-NOGO-v1",
+      "status": "RIGOROUS_FINITE_REFUTATION",
+      "statement": "The same 5/2 GU constant fails for all invertible bilinear matrices in fixed physical coordinates: at r=3, rows (111,101,011), a=111, b=0 give G/I>2.709116536420773.",
+      "proof_evidence": ["CHECK_REVIEW.py", "CHECK_REVIEW.out", "PROOF_RECONSTRUCTION.md"],
+      "limitations": [
+        "This does not refute any larger dimension-independent constant",
+        "This is not an FEI counterexample",
+        "This does not affect the canonical matched-form theorem"
+      ]
+    }
+  ]
+}

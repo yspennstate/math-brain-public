@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B19",
+  "run_id": "20260924T025057Z-account02-B19-QFORM-auto11b",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_start_commit": "c1f31aa1415f249d6f24957883117c9c19059365",
+  "control_final_refresh_commit": "04f9de9d9b9e13f59438cd9b4ac34fc7a2b67bf9",
+  "control_revision": "2026-09-22.15",
+  "classification": "ESSENTIAL_STEP_APPLIED+CANDIDATE_STRUCTURAL_IMPLICATION_REFUTED",
+  "full_target_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_math_commit": "cddd95e8f2034382419d488197e0eb08cb506543",
+  "math_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B19/20260924T025057Z-account02-B19-QFORM-auto11b/REPORT.md",
+  "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B19/20260924T025057Z-account02-B19-QFORM-auto11b/CHECKS.md",
+  "partner_applied": {
+    "account": "account03",
+    "slot": "B19",
+    "run_id": "20260924T020346Z-account03-B19-QFORM-r47",
+    "canonical_math_commit": "1a64d8ce29d893fd99b9af8dac5a63e359a9cc08",
+    "brain_handoff_commit": "d7a71d65d4c65b0fc15e485542bb25090bfbf9a1",
+    "theorem": "QFORM-SINGULARPAIR-LARGELEAF-TO-E3-OR-ALIGNEDR2-v1",
+    "equation_level_use": "Its strong multiplicative rank-two branch sigma1*sigma2>28159/(4194304 sqrt(2)) is paid by the new pure-bilinear theorem whenever same-bank live curvature is absent, giving ||p_Q||inf<51.449809294."
+  },
+  "owner_pinned_source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+  "owner_pinned_result_applied": "Checked cap-one product projection bounds: 2D orthogonal product projection density <=2 and 1D unit projection density <=sqrt(2); these yield the new pure rank-two bilinear bound ||p||inf<=2sqrt(pi)(sigma1 sigma2)^(-1/2). Physical E3/E5 are also shown to vanish exactly on the obstruction family.",
+  "new_results": [
+    {
+      "id": "QFORM-TWOSTAR-BORDERED-SCHUR-E2-IDENTITY-v1",
+      "status": "PROVED_STRUCTURAL_IDENTITY",
+      "statement": "For B=[[N,u],[v^T,b]], b!=0, S=N-b^{-1}uv^T and D_pq the squared aggregate of bordered 3x3 minors using the appended row/column, D_pq=b^2 E2(S) exactly. Thus E3(B)<2^-18 implies |b|sqrt(E2(S))<2^-9."
+    },
+    {
+      "id": "QFORM-WEAKEDGE-RAW-E2-COMPLETE-COLLAPSE-v1",
+      "status": "TARGET_VALID_STRUCTURAL_COUNTEREXAMPLE",
+      "statement": "There are full-target bipartite matrices with four eigenvalues of modulus >=1, arbitrarily strict local scalar/pair/triple no-pivot geometry, delta=F=1 and |b|sqrt(E2(N))=1, while E2(N-b^{-1}uv^T)=D_pq=E3(B)=E5(B)=0 exactly. Hence raw-E2 survival or positive bordered-volume forcing is false."
+    },
+    {
+      "id": "QFORM-PURE-BILINEAR-R2-PROJECTION-PAYMENT-v1",
+      "status": "PROVED_DENSITY_SUBBRANCH",
+      "statement": "For disjoint original-coordinate banks and Q=2 X_I^T M X_J with rank(M)=2 and singular values sigma1>=sigma2>0, ||p_Q||inf<=2sqrt(pi)(sigma1 sigma2)^(-1/2). Independent disjoint addends preserve the bound by convolution."
+    }
+  ],
+  "stress_family": {
+    "definition": "N=epsilon^{-1}uv^T+ac^T with u perp a and v perp c flat orthonormal, B=[[N,u],[v^T,epsilon]], A=[[0,B],[B^T,0]].",
+    "spectrum": "+/-(epsilon^{-1}+epsilon), +/-1",
+    "raw_currency": "E2(N)=epsilon^{-2}, epsilon*sqrt(E2(N))=1, delta=F=1",
+    "collapsed_currency": "S=ac^T rank1, E2(S)=D_pq=E3(B)=E5(B)=0",
+    "density_payment": "||p_Q||inf<=2sqrt(pi)*sqrt(epsilon/(1+epsilon^2))<2sqrt(pi epsilon)"
+  },
+  "corrections_consumed": [
+    "no post-rotation independence",
+    "no arbitrary-joint coarea cap",
+    "no conditional projection-density cap shortcut",
+    "no law-uniform scalar pointwise quadratic-phase decay",
+    "no deletion of a small nonzero coefficient tail",
+    "finite E2 half-Riesz alone does not imply L-infinity",
+    "raw pre-completion E2 need not survive pair Schur completion",
+    "physical E3/E5 volume gates cannot be assumed positive in the weak-edge/raw-E2 chamber"
+  ],
+  "unresolved_first_implication": "QFORM-R2-SCHUR-COLLAPSE-WITH-INTERNAL-CURVATURE-PAYMENT-v1",
+  "unresolved_scope": "Pay the rank-one-update cancellation geometry N=b^{-1}uv^T+S while arbitrary same-bank quadratic curvature, opposite anchor-to-bank couplings and other live terms remain on the same two product banks, or descend to an already-paid source-valid branch. The pure-bilinear case is now paid; stronger bordered E3/E5 or post-pair E2 forcing is refuted by the explicit target-valid family.",
+  "review_status": "NO_TWO_INDEPENDENT_END_TO_END_REVIEWS",
+  "b20_current_hour_login_observed": true,
+  "keeper_mutations": 0,
+  "notifications": false,
+  "email": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

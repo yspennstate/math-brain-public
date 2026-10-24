@@ -1,0 +1,39 @@
+{
+  "helper_version": "A058-matching-conditional-mean-v1",
+  "family": "Boolean G(X,S), H(Y,S) on disjoint X,Y with equal conditional means for each S; F=mux_z(G,H)",
+  "domain": [
+    {
+      "shared": 0,
+      "private_each": 1,
+      "cases": 6
+    },
+    {
+      "shared": 1,
+      "private_each": 1,
+      "cases": 36
+    },
+    {
+      "shared": 2,
+      "private_each": 1,
+      "cases": 1296
+    },
+    {
+      "shared": 1,
+      "private_each": 2,
+      "cases": 4900
+    }
+  ],
+  "case_count": 6238,
+  "symmetry": "none; enumerate all paired slices of equal Hamming weight",
+  "arithmetic": "integer Walsh coefficients and formal rational linear combinations of prime logarithms; no floating-point acceptance",
+  "memory_estimate": "under 30 MB",
+  "max_runtime_seconds": 60,
+  "pilot": "fixed domain only; no dimension escalation",
+  "checks": [
+    "full entropy collision identity",
+    "influence identity",
+    "zero-selector boundary",
+    "equal-global-mean-only counterexample",
+    "overlapping-private-block counterexample"
+  ]
+}

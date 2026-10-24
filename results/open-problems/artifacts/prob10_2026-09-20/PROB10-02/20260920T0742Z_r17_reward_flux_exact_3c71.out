@@ -1,0 +1,15 @@
+R17 PROB10-02 exact reward-flux checker
+FLUX m=2 edges=16 edge_inputs=64 survive=36 left_absorb=16 right_absorb=12
+FLUX m=4 edges=512 edge_inputs=2048 survive=1568 left_absorb=256 right_absorb=224
+FLUX m=6 edges=12288 edge_inputs=49152 survive=41420 left_absorb=4096 right_absorb=3636
+FLUX m=8 edges=262144 edge_inputs=1048576 survive=924792 left_absorb=65536 right_absorb=58248
+LOCAL_REWARD_FLUX_IDENTITY_PASS through m=8
+RAW_ONE_BIT_COMMON_WORD_OSCILLATION m=2 horizon=6 final=(6, -1, 1, 36)
+RAW_ONE_BIT_COMMON_WORD_OSCILLATION m=4 horizon=10 final=(10, -1, 1, 1630)
+RAW_ONE_BIT_SMALL_WIDTH_EXACT_PASS
+FULL_STATE_COMMON_WORD_OSCILLATION m=2 horizon=6 maxabs=2 history=[(1, -1, 1, 112), (2, -2, 2, 56), (3, -2, 2, 56), (4, -2, 2, 56), (5, -2, 2, 56), (6, -2, 2, 56)]
+FULL_STATE_COMMON_WORD_OSCILLATION m=4 horizon=10 maxabs=4 history=[(1, -1, 1, 20792), (2, -2, 2, 9258), (3, -3, 3, 4522), (4, -4, 4, 2310), (5, -4, 4, 2266), (6, -4, 4, 2258), (7, -4, 4, 2258), (8, -4, 4, 2258), (9, -4, 4, 2258), (10, -4, 4, 2258)]
+STRONGER_M_SPAN_SMALL_WIDTH_EVIDENCE_PASS_NOT_A_THEOREM
+PROVED_TRANSFER_CONSTANT_BY_THEOREM m=8 C<=16
+PROVED_TRANSFER_CONSTANT_BY_THEOREM m=12 C<=24
+ALL_EXACT_CHECKS_PASS

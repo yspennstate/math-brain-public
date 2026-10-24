@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260923T165432Z-account01-B18-qform-r34",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit_start": "5961f581d091b82f34f58b7c047c08c5da8df84f",
+  "source_control_commit_prewrite": "b6d1a098e011f55aa7808b33da3dddaabd683107",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "new_claim": {
+    "id": "QFORM-NEARNULL-SOURCE-SPLIT-COLLAR-v1",
+    "status": "PROVED_SUPPORTING_EXACT_RANK3_SUBBRANCH",
+    "statement": "For an exact-rank-three target A=RMR^T with |eig M|>=1, a heavy original physical row u0=sqrt(h)r, h>1/2, and 0<|A00|<1/32, if the residual original coordinates split exactly into rows parallel to r and rows perpendicular to r, then ||p_(X^TAX)||_infinity<147.530. The proof retains the nonzero Rayleigh term and uses genuine disjoint-source independence."
+  },
+  "new_corollary": {
+    "id": "QFORM-SOURCE-SPLIT-HEAVY-ANCHOR-COMPLETE-v1",
+    "statement": "After splicing the latest account02/B18 heavy-pivot, exact-null, and double-heavy theorems, every exact-rank-three target whose heavy row admits this exact source-separated residual longitudinal/transverse decomposition satisfies ||p_Q||_infinity<363."
+  },
+  "designated_partner_result_applied": {
+    "partner": "account02/B18",
+    "run_id": "20260923T154246Z-account02-B18-QFORM-auto11b",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260923T154246Z-account02-B18-QFORM-auto11b/REPORT.md",
+    "results": [
+      "QFORM-DOUBLEHEAVY-TRANSVERSE-CLOSURE-v1",
+      "QFORM-EXACTNULL-HEAVY-ANCHOR-COMPLETE-v1",
+      "physical-pivot half-Riesz bound"
+    ],
+    "application": "The partner pays |A00|>=1/32 by <256sqrt(2), exact-null heavy anchors by <363, and any punctured state with a transverse-heavy residual row by <363. The only remaining source-separated punctured collar is paid here by <147.530."
+  },
+  "analytic_dependencies": [
+    {
+      "source": "account02/B05 r21",
+      "theorem": "QFORM-NEARNULL-SCALAR-DEPENDENT-PAIR-v1",
+      "statement": "For a cap-one scalar independent of a dependent pair with joint cap M, ||p_Q||_infinity<=31 M^(2/3)|beta^2 gamma det B|^(-1/6), uniformly in the scalar pivot."
+    },
+    {
+      "source": "rank-two-fusion completed source",
+      "theorem": "rank-two half-Riesz endpoint",
+      "statement": "For a 2D orthogonal projection of cap-one product input and invertible symmetric S, sup_t E|Z^T S Z-t|^(-1/2)<=16sqrt(30)|det S|^(-1/4) in the zero-affine case."
+    }
+  ],
+  "primary_sources_checked": [
+    "Galyna Livshyts, Grigoris Paouris, Peter Pivovarov, On sharp bounds for marginal densities of product measures, arXiv:1507.07949 / Israel J. Math. 216 (2016), Theorem 1.1",
+    "Tomas Juškevičius, Jungbin Lee, Small ball probabilities, maximum density and rearrangements"
+  ],
+  "source_valid_transfer": {
+    "claim": "On disjoint ORIGINAL-coordinate source banks, the longitudinal norm-one aggregate has density <=sqrt(2), the transverse orthogonal 2D projection has joint density <=2, and these two objects are genuinely independent because the source-coordinate sets are disjoint.",
+    "warning": "This does not extend to overlapping longitudinal/transverse projections; a joint density cap does not create independence."
+  },
+  "key_inequalities": [
+    "|epsilon|<1/16",
+    "s^2=||P_(r^perp)Mr||^2>=1-epsilon^2>255/256",
+    "if |d|>=1/2: ||p_Q||_infinity<=62(512/255)^(1/6)=69.6380582404...",
+    "if |d|<1/2: |epsilon det M|>s^2/2>255/512",
+    "if |d|<1/2: ||p_Q||_infinity<sqrt(2)*16sqrt(30)*(512/255)^(1/4)=147.529222282..."
+  ],
+  "corrections_consumed": [
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-COHEAVY-SINGLE-ROW-EXTRACTION-FALSE-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1cb05aa25ac11e10ec2b227aacf80682a604bcb1",
+    "blob": "563d975048bab766a920ba203e6f4953156a120b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260923T165432Z-account01-B18-qform-r34/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "aa2965d9e6845aea3c97f1fb5e42f826973bb755",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B18/20260923T165432Z-account01-B18-qform-r34.md"
+  },
+  "continuity": "not claimed for the new punctured nonzero-pivot theorem; retained only on already-completed partner branches that explicitly prove an L1 characteristic-function envelope",
+  "unresolved_implication": "QFORM-NEARNULL-OVERLAPPING-SOURCE-COLLAR-v1: pay the same near-null heavy-anchor geometry when residual rows have simultaneous longitudinal and transverse components, without promoting a joint cap to independence or deleting the small Rayleigh term.",
+  "next_step": "Use a product-preserving grouped-projection/crossing interface to extract the independent-scalar/dependent-pair packet from the overlapping-source collar, or prove a direct selector-preserving analogue that allows the longitudinal aggregate to share source coordinates with the transverse pair."
+}

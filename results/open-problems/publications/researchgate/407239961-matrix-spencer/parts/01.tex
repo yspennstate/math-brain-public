@@ -1,0 +1,324 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[nameinlink,capitalise]{cleveref}
+
+\setlist[itemize]{leftmargin=2em}
+\setlist[enumerate]{leftmargin=2em}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\disc}{disc}
+\DeclareMathOperator{\discop}{disc_{op}}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\spanop}{span}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle}
+
+\title[Matrix Spencer for Toeplitz and Hankel matrices]{Matrix Spencer for finite Toeplitz and Hankel matrices}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{June 2026}
+
+\begin{document}
+
+\subjclass[2020]{Primary 15A60, 11K38; Secondary 15B05, 42A05, 47B35, 68Q25}
+\keywords{Matrix discrepancy, Matrix Spencer conjecture, Toeplitz matrices, Hankel matrices, trigonometric polynomials, finite Toeplitz extension, vector balancing}
+
+\begin{abstract}
+The Matrix Spencer problem asks whether every family of self-adjoint
+$n\times n$ contractions admits signs whose signed sum has operator norm
+$O(\sqrt n)$.  We prove this bound for finite scalar Toeplitz and Hankel
+matrices.  More precisely, for arbitrary complex $d\times d$ Toeplitz
+contractions $A_1,\ldots,A_n$,
+\[
+   \discop(A_1,\ldots,A_n)
+   \le C\sqrt{n\log\!\left(e+\frac dn\right)} .
+\]
+The same estimate holds for arbitrary complex Hankel contractions.  In
+particular, self-adjoint scalar Toeplitz and Hankel matrices satisfy the
+conjectured $O(\sqrt n)$ Matrix Spencer bound throughout the regime $d\le n$.
+The proof is short and uses only three ingredients: the finite scalar Toeplitz
+extension theorem of Nikolskaya--Farforovskaya, de la Vall\'ee Poussin
+localization, and the rectangular vector form of Spencer's theorem on an
+$O(d)$-point norming grid.  We also record two direct finite-section variants:
+a bandwidth-$w$ estimate with entropy $w$, and a tame full-bandwidth estimate
+under the scale-invariant condition $\|p_i'\|_\infty=O(d)$.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+
+Spencer's theorem that six standard deviations suffice is a central result of
+combinatorial discrepancy theory \cite{Spencer1985}.  In a rectangular form, if
+$x_1,\ldots,x_n$ lie in the unit ball of $\ell_\infty^m$, then there are signs
+$\eps_i\in\{-1,1\}$ such that
+\[
+   \left\|\sum_{i=1}^n \eps_i x_i\right\|_\infty
+   \le C\sqrt{n\log\!\left(e+\frac mn\right)} .
+\]
+This form follows from the classical entropy method; see, for example,
+Gluskin \cite{Gluskin1989}, Chazelle \cite{Chazelle2000}, Matousek
+\cite{Matousek1999}, and Giannopoulos \cite{Giannopoulos1997}.
+
+The Matrix Spencer problem asks for an analogous estimate with vectors replaced
+by self-adjoint matrices and the $\ell_\infty$ norm replaced by operator norm.
+We use the following notation.
+
+\begin{definition}[Matrix discrepancy]
+For complex matrices $A_1,\ldots,A_n$ of the same size, define
+\[
+   \discop(A_1,\ldots,A_n)
+   := \min_{\eps\in\{-1,1\}^n}
+      \left\|\sum_{i=1}^n \eps_i A_i\right\|_{op} .
+\]
+When the matrices are self-adjoint we also use the shorter notation
+\[
+   \disc(A_1,\ldots,A_n)=\discop(A_1,\ldots,A_n).
+\]
+\end{definition}
+
+\begin{question}[Matrix Spencer]
+Is there a universal constant $C$ such that, for every $n$ and every family of
+self-adjoint $n\times n$ contractions $A_1,\ldots,A_n$,
+\[
+   \disc(A_1,\ldots,A_n)\le C\sqrt n ?
+\]
+Equivalently for the applications below, one asks for the same estimate for
+$d\times d$ self-adjoint contractions whenever $d\le n$, with $C$ independent of
+$d$ and $n$.
+\end{question}
+
+The conjecture was popularized by Meka \cite{Meka2014}.  General random-sign
+arguments based on noncommutative Khintchine inequalities give logarithmic
+dimensional losses \cite{LustPiquardPisier1991}.  Several important cases are
+known: rank-one and Kadison--Singer type settings
+\cite{MSS2015,KyngLuhSong2020}, low-rank and Frobenius-norm regimes
+\cite{BansalJiangMeka2024,DadushJiangReis2022}, and consequences of intrinsic
+freeness and matrix concentration \cite{BBvH2023,BCSvH2026}.  These methods do
+not directly cover general finite Toeplitz contractions, which can have rank
+$d$ and Frobenius norm of order $\sqrt d$.
+
+A scalar trigonometric polynomial
+\[
+   p(\theta)=\sum_{|k|<d} c_k e^{ik\theta}
+\]
+defines the finite Toeplitz section
+\[
+   T_d(p)=(c_{x-y})_{0\le x,y<d} .
+\]
+The matrix is self-adjoint exactly when $p$ is real-valued.  A Hankel matrix is
+constant on anti-diagonals.  These classes are among the most basic structured
+full-rank matrix families; standard background on Toeplitz matrices and
+Toeplitz operators may be found in \cite{GrenanderSzego1958,Gray2006,BoettcherGrudsky2005,BoettcherSilbermann2006}.
+
+\subsection{Main result}
+
+\begin{theorem}[Toeplitz and Hankel Matrix Spencer]\label{thm:main}
+There is a universal constant $C$ such that the following holds.  Let
+$A_1,\ldots,A_n\in M_d(\C)$ be arbitrary complex Toeplitz matrices satisfying
+$\norm{A_i}_{op}\le1$.  Then
+\[
+   \discop(A_1,\ldots,A_n)
+   \le C\sqrt{n\log\!\left(e+\frac dn\right)} .
+\]
+The same estimate holds for arbitrary complex Hankel matrices.  Consequently,
+self-adjoint scalar Toeplitz and Hankel matrices satisfy Matrix Spencer in the
+regime $d\le n$.
+\end{theorem}
+
+The proof is given in \cref{sec:main-proof}.  The finite Toeplitz extension
+theorem supplies, for each finite Toeplitz contraction $A_i$, a bounded
+$L^\infty$ symbol with the same Fourier coefficients in the range seen by
+$T_d$.  Convolution with a de la Vall\'ee Poussin kernel turns this symbol into a
+trigonometric polynomial of degree $O(d)$ without changing the finite Toeplitz
+section.  An $O(d)$-point grid norms every such polynomial up to an absolute
+constant, so rectangular vector Spencer can be applied to the sampled values.
+The signed polynomial is then transferred back to operator norm by the elementary
+Toeplitz compression estimate $\norm{T_d(f)}_{op}\le\norm{f}_\infty$.
+
+\subsection{Finite-section refinements}
+
+The main theorem uses a global bounded extension theorem, and therefore its
+entropy parameter is $d$.  Direct finite-section arguments give sharper or more
+intrinsic statements in two common situations.
+
+\begin{theorem}[Banded Toeplitz signing]\label{thm:banded-intro}
+There is a universal constant $C$ such that the following holds.  Let
+$w\ge1$ and $d\ge20w$.  Let $A_1,\ldots,A_n\in M_d(\C)$ be Toeplitz matrices of
+bandwidth at most $w$, and assume $\norm{A_i}_{op}\le1$ for all $i$.  Then
+\[
+   \discop(A_1,\ldots,A_n)
+   \le C\sqrt{n\log\!\left(e+\frac wn\right)} .
+\]
+In particular, if $w\le n$, then the discrepancy is $O(\sqrt n)$.
+\end{theorem}
+
+\begin{theorem}[Tame full-bandwidth Toeplitz signing]\label{thm:tame-intro}
+There is a universal constant $C$ such that the following holds.  Let
+$A_i=T_d(p_i)$, where each $p_i$ is a complex trigonometric polynomial of degree
+less than $d$, and assume $\norm{A_i}_{op}\le1$.  Suppose
+\[
+   \max_{1\le i\le n}\norm{p_i'}_\infty\le L .
+\]
+Then
+\[
+   \discop(A_1,\ldots,A_n)
+   \le C\left(1+\frac Ld\right)
+      \sqrt{n\log\!\left(e+\frac dn\right)} .
+\]
+In particular, if $d\le n$ and $L=O(d)$, then the discrepancy is $O(\sqrt n)$.
+\end{theorem}
+
+The proofs of these refinements are included in \cref{app:finite-section}.  They
+are not needed for \cref{thm:main}.
+
+\subsection{Scope and relation to recent algebraic work}
+
+This paper is focused on scalar Toeplitz and Hankel matrices.  A broader
+finite-block lifting language is useful for organizing related examples, and a
+fixed-block version is recorded in \cref{app:lifts}.  We keep that material in
+an appendix because it is not needed for the scalar theorem and because recent
+work of Akbas--Sra \cite{AkbasSra2026} proves an algebraic Matrix Spencer
+theorem for finite-dimensional $C^*$-algebras, while Bandeira--B{\"o}lcskei
+\cite{BandeiraBolcskei2026} proves the Matrix Spencer bound for the signed list
+of left-regular representation matrices of a finite group.  The new structured
+case treated here is the scalar finite Toeplitz/Hankel family, obtained through
+bounded Toeplitz extension rather than through a common finite-dimensional
+matrix algebra.
+
+\section{Preliminaries}\label{sec:prelim}
+
+We identify $\T$ with $\R/(2\pi\mathbb Z)$ and use normalized Haar measure
+$d\theta/(2\pi)$.  For $f\in L^1(\T)$, write
+\[
+   \widehat f(k)=\int_{\T} f(\theta)e^{-ik\theta}\,\frac{d\theta}{2\pi} .
+\]
+If $f\in L^\infty(\T)$, the $d\times d$ Toeplitz section induced by $f$ is
+\[
+   T_d(f)=(\widehat f(x-y))_{0\le x,y<d} .
+\]
+When $p$ is a trigonometric polynomial of degree less than $d$, this agrees with
+the finite Toeplitz matrix determined by the Fourier coefficients of $p$ in the
+range $|k|<d$.
+
+\subsection{Vector Spencer}
+
+\begin{theorem}[Rectangular vector Spencer]\label{thm:vector-spencer}
+There is a universal constant $C_S$ such that, for every
+$x_1,\ldots,x_n\in\C^m$ with $\norm{x_i}_\infty\le1$, there are signs
+$\eps\in\{-1,1\}^n$ satisfying
+\[
+   \left\|\sum_{i=1}^n \eps_i x_i\right\|_\infty
+   \le C_S\sqrt{n\log\!\left(e+\frac mn\right)} .
+\]
+\end{theorem}
+
+For complex vectors this follows by applying the real theorem to the real and
+imaginary parts and absorbing the resulting absolute factor.  The real theorem
+is the standard rectangular form of Spencer's theorem
+\cite{Spencer1985,Gluskin1989,Chazelle2000,Matousek1999,Giannopoulos1997}.
+
+\subsection{Toeplitz compression}
+
+\begin{lemma}[Toeplitz upper bound]\label{lem:toeplitz-upper}
+For every $f\in L^\infty(\T)$ and every $d\ge1$,
+\[
+   \norm{T_d(f)}_{op}\le \norm{f}_\infty .
+\]
+If $f$ is real-valued, then $T_d(f)$ is self-adjoint.
+\end{lemma}
+
+\begin{proof}
+For $z,y\in\C^d$, set
+$q_z(\theta)=\sum_{x=0}^{d-1}z_x e^{ix\theta}$ and define $q_y$ similarly.  Then
+\[
+   \ip{T_d(f)z}{y}
+   =\int_\T f(\theta)q_z(\theta)\overline{q_y(\theta)}\,
+       \frac{d\theta}{2\pi} .
+\]
+Cauchy's inequality and Parseval give
+$\abs{\ip{T_d(f)z}{y}}\le\norm{f}_\infty\norm z_2\norm y_2$.  Taking the
+supremum over unit vectors proves the norm bound.  If $f$ is real-valued, then
+$\widehat f(-k)=\overline{\widehat f(k)}$, so $T_d(f)$ is self-adjoint.
+\end{proof}
+
+\subsection{Norming grids}
+
+We shall use Bernstein's inequality for trigonometric polynomials
+\cite[Chapter X]{Zygmund1959}.
+
+\begin{lemma}[Bernstein inequality]\label{lem:bernstein}
+If $P$ is a trigonometric polynomial of degree at most $N$, then
+\[
+   \norm{P'}_\infty\le N\norm{P}_\infty .
+\]
+\end{lemma}
+
+\begin{lemma}[Scalar norming grid]\label{lem:grid}
+Let $P$ be a complex trigonometric polynomial of degree at most $N$.  Let
+$Q\subset\T$ be a uniform grid of size at least $8N$ when $N\ge1$, and let
+$Q$ consist of one point when $N=0$.  Then
+\[
+   \norm{P}_\infty\le2\max_{\theta\in Q}\abs{P(\theta)} .
+\]
+\end{lemma}
+
+\begin{proof}
+Assume $N\ge1$, since the constant case is immediate.  Choose $\theta_*$ with
+$\abs{P(\theta_*)}=\norm{P}_\infty$, and choose $\theta\in Q$ with
+$\abs{\theta-\theta_*}\le\pi/|Q|$.  By \cref{lem:bernstein},
+\[
+   \abs{P(\theta_*)-P(\theta)}
+   \le N\norm{P}_\infty\frac{\pi}{|Q|}
+   \le\frac\pi8\norm{P}_\infty .
+\]
+Thus
+$\max_Q\abs P\ge(1-\pi/8)\norm{P}_\infty\ge\frac12\norm{P}_\infty$.
+\end{proof}
+
+\subsection{De la Vallee Poussin kernels}
+
+Let $F_M$ denote the Fejer kernel with Fourier coefficients
+\[
+   \widehat F_M(k)=\max\!\left(0,1-\frac{|k|}{M}\right),
+   \qquad M\ge1 .
+\]
+Thus $F_M\ge0$ and $\norm{F_M}_{L^1}=1$.  Define
+\[
+   V_M=2F_{2M}-F_M .
+\]
+Then
+\[
+   \widehat V_M(k)=1 \quad (|k|\le M),
+   \qquad
+   \widehat V_M(k)=0 \quad (|k|\ge2M),
+\]
+and
+\[
+   \norm{V_M}_{L^1}\le3 .
+\]
+The strict inequalities at the endpoints are immaterial for us; we only use the

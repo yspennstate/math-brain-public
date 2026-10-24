@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B04",
+  "run_id": "20260923T071501Z-account02-B04-QFORM-r11",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "secondary_status": "COEFFICIENT_PROJECTED_ROWSTAR_CLOSURE_FULL_CROSS_RANK",
+  "target_status": "QFORM-FULL_OPEN",
+  "source_control_commit_initial": "f5fa2fb64098722170bc7f34b885564a268584c2",
+  "source_control_commit_final_checked": "398784a523ebbda01243fad6975e70c5c4b96e1d",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "law-uniform scalar quadratic-phase pointwise decay is false",
+    "arbitrary-joint rank-three coarea gate is false",
+    "post-rotation independence is unavailable"
+  ],
+  "required_claude_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "paths": [
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+    ],
+    "applied_result": "Theorem D/D' arbitrary-minor-weight determinant/entropy route; actual stress block has only one 3x3 minor and row marginals one, so the admissible D/D' weight set is empty."
+  },
+  "partner_result": {
+    "partner": "account03/B04",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b0d436cae66ffaf557b60427db5ae2fd4d909e65",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T065845Z-account03-B04-qform-auto11-r27/REPORT.md",
+    "results_applied": [
+      "QFORM-2D-INVERSE-RADIUS-BATHTUB-v1",
+      "QFORM-ROWSTAR-CLEANBANK-LINF-v1"
+    ]
+  },
+  "new_result": {
+    "id": "QFORM-COEFFICIENT-PROJECTED-ROWSTAR-CLEANBANK-v1",
+    "status": "PROVED_SUPPORTING_THEOREM_PENDING_INDEPENDENT_REVIEW",
+    "statement": "For Q=F(X_I,W)+2 X_I^T M Y_J+b(W)^T Y_J+c(W) with Y_J quadratically clean, if an orthogonal deterministic coefficient projection P makes N=MP an exact rank-two physical row star, then ||p_Q||_infinity <= 2^(3/4) sqrt(pi) E2(N)^(-1/4), independently of all extra cross directions in P^perp.",
+    "core_premises": [
+      "original-coordinate product projection density cap sqrt(2)/||q||",
+      "pointwise norm monotonicity ||q||>=||Pq||",
+      "partner two-dimensional inverse-radius bathtub",
+      "row-star factorization and original-coordinate hub/aggregate independence"
+    ]
+  },
+  "explicit_target_family": {
+    "M0": "[[2,1,1],[1,1,1],[1,1,1]]",
+    "w": "(0,1,-1)/sqrt(2)",
+    "M_eps": "M0+eps*w*w^T",
+    "range": "0<eps<=1/4",
+    "projection": "P=I-w*w^T, so M_eps P=M0",
+    "target_form": "Q_eps=Z^2+2 X^T M_eps Y",
+    "spectrum": "{1, ±(2+sqrt(2)), ±(2-sqrt(2)), ±eps}",
+    "uniform_density_bound": "2^(1/4)*sqrt(pi)=2.1078147305108117..."
+  },
+  "same_matrix_comparison_eps_1e_minus_12": {
+    "e5_third_volume": "inadmissible; only 3x3 minor has every row marginal one",
+    "globally_optimized_entropy_weighted_two_volume": 60.69465364306978,
+    "two_volume_q_star": 1.7112671098349872,
+    "two_volume_ell_star": 0.14436644508250645,
+    "direct_ridge": "no certificate at any scale",
+    "square_assisted_ridge_valid_point_gamma_eps_over_2_q_2": 1119.4770613815082,
+    "projected_rowstar": 2.1078147305108117
+  },
+  "output_sources": {
+    "report_commit": "c7fbb4f97fef82c9e6920e17bc01fa3efc0da85e",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T071501Z-account02-B04-QFORM-r11/REPORT.md",
+    "report_blob": "1c505ba1b06a8c87fa8bce5f6e013c89b7d9e04c",
+    "checks_commit": "4ad7da05a535ad1a1413bf0cb306d032b98f4323",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T071501Z-account02-B04-QFORM-r11/CHECKS.md",
+    "checks_blob": "0368e620f88a10fe22cbaf6b9d51f1b16776eab7",
+    "early_checkpoint_commit": "4d4f9a02d0bda9bbfd2af773c60474be42c69010",
+    "handoff_commit": "7affb6ff79f55369f3499c0f0dc478c5d0b43032",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B04/20260923T071501Z-account02-B04-QFORM-r11.md",
+    "handoff_blob": "d9f08a9f1e6800d91cd6fb6e3e75e45fe3baa8ee"
+  },
+  "first_unproved_step": "QFORM-NEARSTAR-COEFFICIENT-PROJECTION-OR-HUB-v1",
+  "next_step": "From a genuine full-target near-star survivor, force a target-scale deterministic two-dimensional coefficient projection whose projected physical cross block is an exact/quantitative star, or route failure to a completed diffuse/ridge/grouped-hub mechanism; then extend beyond the clean-bank branch without rotating random coordinates.",
+  "regularity": {
+    "general_new_theorem": "essential boundedness / absolute continuity only",
+    "explicit_Q_eps": "continuous after convolution with the independent Z^2 density"
+  },
+  "review_status": "independent review pending",
+  "model_self_report": "GPT-5.6 Sol",
+  "configured_reasoning_effort": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time_seconds": null
+}

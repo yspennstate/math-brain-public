@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B14",
+  "run_id": "20260922T192403Z-account01-B14-qform-r18",
+  "execution_context": "scheduled_automation",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "startup_commit": "09c86b976b555738450505507b0a2bca107a535c",
+    "publication_refresh_commit": "9df57ec0dcbc5261ef9ac8f14714e1df3aa9aa4a",
+    "owner_control_revision": "2026-09-22.14"
+  },
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "partner_result": {
+    "worker": "account02/B14",
+    "run_id": "20260922T191035Z-account02-B14-QFORM-r17",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "51c319713bf7b8f8bff3c08e8b6bae462fc5b9fd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260922T191035Z-account02-B14-QFORM-r17/REPORT.md",
+    "applied_scope": "For A_m=[1] direct_sum J_m/m direct_sum (-J_m/m), all nonzero principal 3x3 determinants are m^-2, any randomized determinant-first selector pays m^(2/3), while overlap-one third-compound squared-minor mass tends to one."
+  },
+  "mathematical_change": [
+    {
+      "id": "QFORM-EXACT-EXTREME-PRODUCT-LOCALIZATION-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For every bounded measurable 0<=Phi<=1, the supremum over independent cap-one probability densities equals the supremum over product indicators of arbitrary unit-measure sets, and is unchanged by restricting each set to a bounded finite union of intervals of total measure one. Therefore a uniform interval small-ball constant transfers with zero loss to all cap-one product laws."
+    },
+    {
+      "id": "QFORM-RANGE-ALIGNED-NO-TAX-LOCALIZATION-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For A=[[B,C],[C^T,D]], conditioning outside and shifting by B^dagger Cz leaves only kernel leakage P_Ker(B) C z. If Ran(C) subset Ran(B), any pure-active law-uniform density cap transfers to the full matrix with exactly the same constant, including singular B and arbitrary outside rank/couplings/support geometry."
+    },
+    {
+      "id": "QFORM-RANGE-ALIGNED-DISJOINT-BANK-v1",
+      "status": "PROVED_TARGET_LEVEL_BRANCH",
+      "statement": "For a direct sum of disjoint physical rank-one active banks with at least three coefficients of magnitude at least one and range-aligned outside coupling, the full quadratic density is at most 2*pi; if a selected same-sign pair contains a singleton bank, at most pi*sqrt(2)."
+    },
+    {
+      "id": "QFORM-PARTNER-DIFFUSE-BANK-PAYMENT-v1",
+      "status": "PROVED_APPLICATION",
+      "statement": "For the partner family A_m, Q=X0^2+U_m^2-V_m^2 has density at most pi*sqrt(2)<4.443 for every m and every cap-one product law, despite determinant-first cost m^(2/3). The same bound persists after arbitrary outside block/couplings with Ran(C) subset Ran(A_m)."
+    }
+  ],
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fc439d3b6583c19f36900489b54e4f2c7f54cd0f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260922T192403Z-account01-B14-qform-r18/REPORT.md",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B14/20260922T192403Z-account01-B14-qform-r18.md"
+  },
+  "unresolved_implication": "Control kernel leakage P_Ker(B) C or derive an aggregate-before-inversion structural decomposition that turns order-one third-compound mass into product-linear bank smoothing without selecting a tiny determinant first.",
+  "next_step": "Attempt a quantitative kernel-leakage alternative: show substantial leakage yields a hyperbolic/linear smoothing branch, while small leakage can be absorbed into the range-aligned bank theorem without moment or support assumptions.",
+  "full_qform_status": "OPEN_NOT_PROVED"
+}

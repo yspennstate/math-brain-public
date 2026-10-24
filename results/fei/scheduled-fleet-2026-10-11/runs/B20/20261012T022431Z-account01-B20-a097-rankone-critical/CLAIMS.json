@@ -1,0 +1,51 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B20-A097-RANKONE-CRITICAL-CLASSIFICATION",
+      "version": 1,
+      "packet_id": "A097",
+      "attempt_id": "A097-RANKONE-CRITICAL-TRANSFER-1",
+      "gap_id": "G-CRITICAL-STEP",
+      "status": "PROVED_CROSS_ROUTE_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every uniform balanced Boolean selector whose nonconstant-frequency branch Fourier matrix has rank one, A014 factors F as a disjoint Boolean tensor sigma*g. If F is descendant-critical then sigma and g are descendant-critical and R(sigma)=R(g)=R(F); conversely equal-ratio critical factors give a critical F. If F is eta-critical then |R(sigma)-R(g)|<=eta/min(w_sigma,w_g), and factor descendants inherit eta/w criticality. Therefore no nontrivial rank-one selector product is a strict critical core.",
+      "quantifiers": "All finite uniform address and data cubes; genuine balanced Boolean branches; exact spectral rank one; all physical descendants; every eta>=0.",
+      "units": "bits for entropy; dimensionless ratios and eta",
+      "hypotheses": [
+        "A014 exact rank-one factorization",
+        "Uniform product measure",
+        "Disjoint physical address/data blocks",
+        "Genuine Boolean controller and core",
+        "Actual physical descendant criticality"
+      ],
+      "source_claim_versions": [
+        "B03-A014-RANK-ONE-SIGNED-OVERLAP-v1",
+        "B11-A052-CRITICAL-TENSOR-PURITY-v1"
+      ],
+      "scope_exclusions": [
+        "Not full FEI",
+        "No rank greater than one",
+        "No near-rank-one stability theorem",
+        "No unbalanced-branch factorization",
+        "Both input claims remain pending independent review"
+      ],
+      "next_consumers": ["A052", "A054", "A055", "A086", "A090", "A094", "A099", "B20"],
+      "independent_reviewers": ["A090", "A094"]
+    },
+    {
+      "claim_id": "B20-A097-ONEDEFECT-NONCRITICAL",
+      "version": 1,
+      "packet_id": "A097",
+      "attempt_id": "A097-RANKONE-CRITICAL-TRANSFER-1",
+      "gap_id": "G-CRITICAL-STEP",
+      "status": "PROVED_EXPLICIT_COROLLARY_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For the A014 family F_t=h_t*Maj_3, any eta-criticality tolerance for t>=2 is at least [3/2/(t*2^(1-t)+3/2)]*[R(h_t)-4/3], which tends to 8/3. Thus this unbounded-read rank-one family stays a constant distance from descendant-criticality and cannot approach a strict critical endpoint.",
+      "quantifiers": "Every integer t>=2; uniform cube; h_t is the one-address defect sign.",
+      "units": "bits and dimensionless ratio",
+      "scope_exclusions": ["Does not rule out rank>=2 overlap", "Does not prove FEI"],
+      "next_consumers": ["A014", "A052", "A055", "A099", "B20"],
+      "independent_reviewers": ["A090", "A094"]
+    }
+  ]
+}
+

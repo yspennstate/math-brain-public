@@ -1,0 +1,18 @@
+QFORM_B13_R21_CONSTANT_CHECK
+kappa = 7/800 = 0.00875
+threshold rho0 = kappa/32 = 7/25600 = 0.0002734375
+C1 = (e*sqrt(pi)/(2*sqrt(2)))*Gamma(1/4)/Gamma(3/4) = 5.039897503914386...
+diffuse constant = 8*C1/kappa = 4607.906289293152...
+
+High-leverage exterior mass:
+A_* > (93/80) kappa^2
+B_* > (1/96) kappa^3
+good disjoint fraction > 29/31
+D0 > (29/31)*(93/80)*(1/96) kappa^5
+   = (29/2560) kappa^5
+   = 5.810296535491945e-13
+high-leverage density constant = 12*D0^(-1/6) = 1313.6556249324306...
+
+Therefore max branch constant < 4607.907.
+
+This file checks only arithmetic. The proof is the analytic argument in REPORT.md.

@@ -1,0 +1,26 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B11",
+  "primary_packet_id": "A052",
+  "claims": [
+    {
+      "claim_id": "B11-A052-QUADRATIC-CURVATURE-OBSTRUCTION-v1",
+      "status": "PROVED_REFUTATION_OF_HELPER",
+      "statement": "For even n, q_n(x)=(-1)^{sum_{r<s}x_rx_s} is tensor-prime, has U=I=n/2 and G=3n/2-n2^{1-n}, while every coordinate has Delta_iG/Inf_i=4n-1-(2n-1)2^{2-n}. Hence GC14 and every fixed all-tensor-prime good-coordinate pair are false.",
+      "scope": "All even dimensions; genuine uniform-cube Boolean complete-graph quadratic phases.",
+      "not_claimed": "This is not a GU or FEI counterexample; the family satisfies G<3I.",
+      "evidence": ["QUADRATIC_CURVATURE_OBSTRUCTION.tex", "verify_quadratic_curvature.py", "CHECK.out"],
+      "fresh_review_required": true
+    },
+    {
+      "claim_id": "B11-A052-RESIDUAL-QUALIFIED-GOOD-COORDINATE-v1",
+      "status": "PROVED_SUFFICIENT_REDUCTION_TARGET_OPEN",
+      "statement": "Universal GU for a fixed pair follows if the good-coordinate inequality is proved only for tensor-prime Boolean functions with positive GU residual; the stronger all-tensor-prime quantifier is unnecessary.",
+      "scope": "Minimal-counterexample induction for any fixed finite a and 0<=b<1.",
+      "first_unpaid_line": "Prove the residual-qualified coordinate inequality with one absolute pair, retaining child residual and signed KL terms."
+    }
+  ],
+  "full_gu_status": "OPEN",
+  "full_fei_status": "OPEN"
+}
+

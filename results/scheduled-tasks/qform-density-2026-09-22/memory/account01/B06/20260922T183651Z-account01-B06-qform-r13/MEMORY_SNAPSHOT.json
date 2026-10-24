@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B06",
+  "run_id": "20260922T183651Z-account01-B06-qform-r13",
+  "source_control_commit": "2a80b37fa9821df6a149e9ca7babe4826828336c",
+  "owner_control_revision": "2026-09-22.11",
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "partner_result": {
+    "worker": "account02/B06",
+    "id": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+    "canonical_commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+    "application": "For a heavy row r_i=sqrt(c)e and V spanning e-perp, (R_-V)^T(R_-V)=I_2, so the partner theorem gives ||p_Y||_infinity<=e for Y=V^T R_-^T X_-."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-VOLUME-SAMPLED-TWO-BANK-v1",
+      "status": "SUPPORTING_THEOREM_PROVED",
+      "statement": "For exact rank three with max leverage alpha<1/3, ||p_Q||_infinity<=12(1-3alpha)^(-1/6)|det Lambda|^(-1/3), with continuity."
+    },
+    {
+      "id": "QFORM-HIGH-ROW-SEMIPRODUCT-v1",
+      "status": "STRUCTURAL_IDENTITY_PROVED",
+      "statement": "The heavy-row disintegration has ||p_Y||_infinity<=e and ||p_(T|Y=y)||_infinity<=c^(-1/2), while preserving the full spectral quadratic matrix."
+    },
+    {
+      "id": "QFORM-SEMIPRODUCT-CAP-ONLY-FALSE-v1",
+      "status": "REFUTED_INTERMEDIATE_INTERFACE",
+      "statement": "Those marginal/conditional density caps alone do not bound an indefinite rank-three quadratic pushforward; an explicit independent T and unit-density hyperbolic strip Y gives density scale at least delta^(-1/2)."
+    }
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6674c9a362ec6712140e97eb1e068a3b6f57c7b3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260922T183651Z-account01-B06-qform-r13/REPORT.md",
+    "blob": "1f9dd6912108e6a2012d8a1c4fc778c1b047b888"
+  },
+  "unresolved_implication": "QFORM-HIGH-ROW-PRODUCT-TRACE-v1: use the actual product-projection provenance of (Z,Y) in the near-isotropic heavy-row curved trace; cap-only replacement is false.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "PROVED_ONLY_IN_EXACT_RANK3_ALPHA_LT_ONE_THIRD_SCOPE",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B05",
+  "run_id": "20260924T072900Z-account01-B05-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_head_prepublication": "8d31791cf57790e327f27bd814c4c26cd9fd375f",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_qform_status": "OPEN_NOT_PROVED_OR_DISPROVED",
+  "full_target_continuity": "OPEN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1ca1fc77ae8435274325c25657c496fd703c0b51",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260924T072900Z-account01-B05-QFORM-auto11/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260924T072900Z-account01-B05-QFORM-auto11/CHECKS.json"
+  },
+  "new_result": {
+    "id": "QFORM-HIGHLEVERAGE-NULLPIVOT-WITT-CLOSURE-v1",
+    "scope": "exact rank three; one original coordinate i with A_ii=0 and spectral leverage c_i>=1/2; three nonzero eigenvalues all modulus>=1; arbitrary independent cap-one inputs",
+    "conclusion": "absolute continuity and ||p_Q||_inf,ess<781",
+    "case_1": "if every transverse physical leverage q_j<=1/2, account03/B10 null-hub theorem gives p_Q in C_0 and ||p_Q||_inf<9.525",
+    "case_2": "if some q_j>1/2, exact T_ij=S_i q_j>1/4 and account03/B05 r39 pair-star theorem gives ||p_Q||_inf,ess<780.581",
+    "retired_blocker": "QFORM-WITT-RANKTWO-TAIL-GLUE-v1 on this exact scope"
+  },
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@c0d7e627b3b877fcecc3004a58335658f6541d64",
+      "result": "QFORM-NULL-HUB-TRANSVERSE-LEVERAGE-CLOSURE-v1"
+    },
+    {
+      "source": "yspennstate/math-open-problems@2c56afab4cdeef591f4d39f4e8d065951a03d572",
+      "result": "QFORM-PAIR-ANCHORED-DETSTAR-COAREA-v1"
+    }
+  ],
+  "partner_application": {
+    "source": "yspennstate/math-open-problems@3ca6f8113ff32fc642cc3582b4a338082e8d6d25",
+    "partner": "account02/B05",
+    "result": "source-disjoint Pluecker max-cut",
+    "actual_inequality": "sum_{j in J,k in K}|det A_{i,j,k}| >= S_i/2 >=1/4"
+  },
+  "corrections_consumed": [
+    "no post-rotation independence",
+    "arbitrary-joint rank-three coarea false",
+    "conditional projection-density cap false",
+    "pointwise law-uniform quadratic-phase decay false",
+    "fiber-sup dimension loss"
+  ],
+  "next_step": "move to the neighboring nonzero/near-zero physical-pivot high-leverage collar or arbitrary-higher-rank aggregate pair-star/Schur interface; do not continue sigma_T tail interpolation on the closed zero-pivot scope"
+}

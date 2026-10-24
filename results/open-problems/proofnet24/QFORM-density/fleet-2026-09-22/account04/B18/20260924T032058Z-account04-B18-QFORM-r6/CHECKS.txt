@@ -1,0 +1,13 @@
+QFORM-TWOSIDED-ANCHOR-PAY-OR-RANK2-COLLAR-v1 checks
+run_id=20260924T032058Z-account04-B18-QFORM-r6
+
+1. theta=2^-12.
+2. sqrt(theta)=2^-6=1/64.
+3. 2*sqrt(2*pi)/sqrt(theta)=128*sqrt(2*pi)=320.84841915276803.
+4. If c1>=c2>=0 and c1*c2<theta, then c2^2<=c1*c2<theta.
+5. Best rank-one approximation R1 to P_r C has op error c2 (Eckart-Young).
+6. P_<r>C and the appended column r have range contained in span(r).
+7. Therefore [R1+P_<r>C, r] has rank at most 2.
+8. The approximation error is exactly ||P_r C-R1||op=c2<sqrt(theta).
+
+No stochastic simulation or histogram is used.

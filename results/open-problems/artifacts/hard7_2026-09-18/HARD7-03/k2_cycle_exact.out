@@ -1,0 +1,16 @@
+PASS exact K=2 homogeneous 3-cycle certificate
+states: [(0, 1, 2), (0, 2, 1), (1, 0, 2), (1, 1, 1), (1, 2, 0), (2, 0, 1), (2, 1, 0)]
+stationary_pi: ['2/11', '1/11', '1/11', '2/11', '2/11', '2/11', '1/11']
+piQ: ['0', '0', '0', '0', '0', '0', '0']
+bond_currents: ['6/11', '6/11', '6/11']
+product_conditioning_obstruction: P(0,1,2)=2/11 != P(0,2,1)=1/11
+transitions:
+  (0, 1, 2) -> [(1, 1, 1)]
+  (0, 2, 1) -> [(0, 1, 2), (1, 2, 0)]
+  (1, 0, 2) -> [(0, 1, 2), (2, 0, 1)]
+  (1, 1, 1) -> [(0, 2, 1), (1, 0, 2), (2, 1, 0)]
+  (1, 2, 0) -> [(1, 1, 1)]
+  (2, 0, 1) -> [(1, 1, 1)]
+  (2, 1, 0) -> [(1, 2, 0), (2, 0, 1)]
+
+Execution note: this exact Fraction-arithmetic checker was executed during the HARD7-03 2026-09-18 admission run before this output was archived.

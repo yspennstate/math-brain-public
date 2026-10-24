@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B03",
+  "run_id": "20260923T021907Z-account02-B03-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_before_publication": "1c9a140cc5268d5f8d0d1a4a9004068747bb306a",
+  "control_revision": "2026-09-22.15",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "status": "ESSENTIAL_STEP_APPLIED_SUPPORTING_THEOREM_PROVED_FULL_TARGET_OPEN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fab77e73a6163b18eea08d2807aa1a38166279ff",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260923T021907Z-account02-B03-QFORM-auto11/REPORT.md",
+    "blob": "6d46cace004ed0131b22429c25e640abc36b8944"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "70585cec4d7563827b8925b6e77a672c060976d4",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B03/20260923T021907Z-account02-B03-QFORM-auto11.md"
+  },
+  "source_pins": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "use": "k-volume dependence-safe decoupling and fractional-potential framework"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "406753a39f5fbaf78396b31075f36ae5682ef3ad",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260922T235821Z-account03-B03-QFORM-r22/REPORT.md",
+      "use": "designated partner weighted Riesz theorem, specialized at k=1 gamma=1/4"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f7f0fedb2d93b46824f96cac1164af6f8a55626f",
+      "path": "proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md",
+      "use": "indefinite physical-pair logarithmic density envelope"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-POINTWISE-DECAY-FALSE"
+  ],
+  "new_claim": {
+    "id": "QFORM-INDEFINITE-PAIR-ONEVOLUME-QUARTER-RIESZ-v1",
+    "scope": "After completing an invertible indefinite original-coordinate physical pair B, if the Schur residual has a disjoint original-coordinate cross block M with Z1=||M||_F^2>0 and maximum row-energy marginal h<1, then with q=max(1,2h), ||p_Q||inf <= C_pair1(q)|det B|^(-1/3)sigma_min(B)^(-1/6)Z1^(-1/12).",
+    "constant_at_h_le_half": 19.942433131734543,
+    "independent_review": "NONE_THIS_RUN"
+  },
+  "concrete_application": {
+    "family": "A_m=[[0,1],[1,0]] direct_sum [epsilon I_(2m)+vv^T], v=1/sqrt(2m)*(1,...,1), m>=2, 0<epsilon<1",
+    "spectrum": "+1,-1,1+epsilon,epsilon^(2m-1)",
+    "certificate": "D=kappa=1, Z1=1/4, h=1/m<=1/2",
+    "density_bound": 22.38462434131946
+  },
+  "unresolved_implication": "Derive from the bare three-large-eigenvalue hypothesis an exhaustive structural alternative forcing either a quantitative indefinite physical pair whose Schur residual has a nonhub one-volume cross certificate, or one of the already-paid diffuse/hub/bank/physical-core exits.",
+  "next_step": "Stress-test the one-volume certificate on the remaining N3 high-leverage / near-pair-degenerate class and seek a matrix-level aggregation alternative before any local inversion.",
+  "continuity": "NOT_CLAIMED",
+  "full_target": "OPEN"
+}

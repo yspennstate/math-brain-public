@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "command": "python -X utf8 ~/brain_workers/w450/verify_exact.py",
+  "fresh_arithmetic_gate": {
+    "max_cases": 1000,
+    "max_seconds": 5.0,
+    "one_process": true,
+    "network": false
+  },
+  "cases": 973,
+  "wall_seconds": 0.03937710006721318,
+  "counterexample": {
+    "dimension": 2,
+    "ellipticity": "1/20",
+    "positive_type_probability": "51/100",
+    "mean_one_step_drift": "1/125",
+    "weighted_numerator": "-1004048/59246275",
+    "weighted_denominator": "63724944/59246275",
+    "kalikow_drift": "-62753/3982809",
+    "kalikow_drift_decimal": -0.015755965199435874,
+    "site_cases": [
+      {
+        "types": "++",
+        "mass": "2601/10000",
+        "green": "400/391",
+        "drift": "2/5"
+      },
+      {
+        "types": "+-",
+        "mass": "2499/10000",
+        "green": "400/399",
+        "drift": "2/5"
+      },
+      {
+        "types": "-+",
+        "mass": "2499/10000",
+        "green": "400/319",
+        "drift": "-2/5"
+      },
+      {
+        "types": "--",
+        "mass": "2401/10000",
+        "green": "400/391",
+        "drift": "-2/5"
+      }
+    ],
+    "reflected_domain_drift": "41121/1327603",
+    "threshold_polynomial": "31280*theta^2+223282*theta-127281",
+    "unique_zero_bracket": [
+      "53/100",
+      "531/1000"
+    ]
+  },
+  "rare_bias_bound": {
+    "grid_cases": 960,
+    "minimum_checked_ratio_to_bound": "1",
+    "selected_b": "1/5",
+    "selected_theta": "1/10",
+    "generic_bound": "1/425",
+    "binary_bound": "1/43",
+    "improvement_factor": "425/43"
+  },
+  "limits": "Exact finite arithmetic confirms the displayed example and sampled formulas. General inequalities are proved in ATTEMPT.md; no simulation or formal check of C0041 was performed."
+}

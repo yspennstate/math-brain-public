@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260923T143034Z-account01-B13-qform-auto11",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit_initial": "2623f3fef86427e9e3a1c5a996cc8c0ae06687af",
+  "control_commit_prepublication": "b2ad68baa905a5f9924116dcd3200323360c049b",
+  "control_revision": "2026-09-22.15",
+  "full_qform_status": "OPEN",
+  "continuity_status": "OPEN",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "021955d775dbf66c204f781ab851916dbed442ef",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260923T143034Z-account01-B13-qform-auto11/REPORT.md",
+  "handoff_commit": "898dbcc168a13c3c0a372ce6d4fd2c897084cd4f",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B13/20260923T143034Z-account01-B13-qform-auto11.md",
+  "result_ids": [
+    "QFORM-TWOHUB-ANCHORED-D3-IDENTITY-v1",
+    "QFORM-TWOHUB-ANCHORED-D3-DENSITY-v1",
+    "QFORM-JOINT-BALANCED-SCHUR-CUT-v1",
+    "QFORM-DIFFUSE-HUB-ALIGNED-RANK2-TUBE-v1"
+  ],
+  "partner_result_applied": {
+    "partner": "account02/B13",
+    "source": "yspennstate/math-open-problems@04973c0d13c8cbe814f1303b7de8aeffd40791df",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260923T110032Z-account02-B13-extremal-r25/REPORT.md",
+    "result": "QFORM-TWOHUB-LEVERAGE-STAR-IDENTITY-v1",
+    "use": "The actual high-leverage branch max beta_j>1/256 implies sum_{k!=j} det(b_j,b_k)^2>D/256 for the same physical two-hub bank."
+  },
+  "other_dependencies": [
+    {
+      "source": "yspennstate/math-open-problems@ac5acc0621d0b45e2942a259747399d983e24c14",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260923T113036Z-account01-B13-qform-auto22/REPORT.md",
+      "use": "invertible two-hub Nystrom max-norm rigidity"
+    },
+    {
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "use": "weighted D3 Brascamp-Lieb Fourier theorem and Schur large-spectrum retention"
+    }
+  ],
+  "key_formulas": {
+    "anchored_identity_left": "Z_I=det(B_I B_I^T)||P_I T||_F^2",
+    "anchored_identity_right": "Z_J=det(B_J B_J^T)||T P_J||_F^2",
+    "anchored_density": "||p_Q||_inf<=6 exp(1/6) Z^(-1/6) when anchored row marginals<=1/2",
+    "balanced_cut": "max beta<=1/256, ||S||op>=1, max|S_ii|<=1/2 => exists I|J with s1(S[I,J])>=1/8 and D_I,D_J>=9D/64",
+    "rank2_tube": "A[I,J]=B_I^T L B_J+E, ||E||_F<=576 sqrt(2e)/(rho^3 sqrt(D))",
+    "partner_star": "max beta_j>1/256 => sum_{k!=j}det(b_j,b_k)^2>D/256"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "integrity": {
+    "no_attained_global_optimizer": true,
+    "finite_mixture_approximation_only": true,
+    "fragmented_unbounded_original_supports_preserved": true,
+    "no_post_rotation_independence": true,
+    "no_small_matrix_deleted_as_random_error": true,
+    "continuity_separate": true
+  },
+  "first_unpaid_implication": "QFORM-HUBALIGNED-RANK2-TAIL-OR-ANCHORED-STAR-CLOSURE-v1",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  },
+  "full_brain_connected": false
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260923T144950Z-account03-B04-auto11-r35",
+  "control_revision": "2026-09-22.15",
+  "control_commit_initial": "c1937dcd37fcbe435538270865921daefadce7fa",
+  "control_commit_refreshed": "4ee2acd8d1812049663ec4eaec0292cfd05fb356",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-SIXROW-HELLINGER-UNIVERSAL-EXTRACTION-FALSE-v1"
+  ],
+  "premises_applied": [
+    {
+      "name": "fractional third-volume Fourier theorem and matrix marginal stability",
+      "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "review_status_this_run": "PASS_SUPPORTING_SCOPE"
+    },
+    {
+      "name": "T2 E2 <= 3 E3",
+      "source": "yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f:proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260922T234545Z-account01-B20-QFORM-auto11/REPORT.md",
+      "use": "W <= (3/T2) M M^T"
+    },
+    {
+      "name": "QFORM-COMPATIBILITY-HELLINGER-COUPLING-v1",
+      "source": "yspennstate/math-open-problems@77053ce0593dd60c613220d313569cb3f48244bd:proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T121357Z-account01-B04-QFORM-auto11/REPORT.md",
+      "use": "explicit disjoint-base inequality on the Hadamard target"
+    },
+    {
+      "name": "QFORM-GIBBS-SOFT-HUB-v1",
+      "source": "yspennstate/math-open-problems@da8e2c011cc93a5c776a1de6010f7366da5f2fbf:proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T144427Z-account01-B04-QFORM-auto11-r13/REPORT.md",
+      "use": "zero-KL interpretation and four-row soft-hub alternative"
+    }
+  ],
+  "result": {
+    "name": "QFORM-OPTIMIZED-PROJECTION-TAIL-CERTIFICATE-v1",
+    "statement_short": "If h(P)=max_i(sqrt(Pii)+sqrt(3)|||(I-P)M||op/sqrt(T2)*sqrt(1-Pii))^2<3/4, q=max(1,2h(P)) gives ||p_Q||inf <=3e/((3-2q)sqrt(q))*E3(M)^(-1/6), with p_Q in C0.",
+    "notable_corollaries": [
+      "P=0 gives a leverage-free exit when T2>4s1^2 and q=1 when T2>=6s1^2",
+      "for top-two leverage <=1/2 the stable-tail threshold improves from 225 to 30+12sqrt(6)",
+      "projection certificate is a zero-KL region of the Gibbs volume optimizer"
+    ],
+    "explicit_target": "M=diag(2,2,1^30) H_32/sqrt(32), A=[[0,M],[M^T,0]]",
+    "explicit_density_bound": 1.822720208282299,
+    "continuity_scope": "C0 on theorem branches; full-target continuity open"
+  },
+  "designated_partner": {
+    "slot": "account04/B04",
+    "status": "NO_COMPLETED_CURRENT_QFORM_RESULT_FOUND_AT_FINAL_LOOKUP",
+    "action": "did not fabricate or wait"
+  },
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "7753c88ce48b7d20051c7986afdf2b19c3e056d3",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T144950Z-account03-B04-auto11-r35/REPORT.md",
+    "addendum_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T144950Z-account03-B04-auto11-r35/LATE_SOURCE_ADDENDUM.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T144950Z-account03-B04-auto11-r35/CHECKS.json",
+    "handoff_commit": "2d7bf68862069e4f9def1158b035cfe6230ef908"
+  },
+  "full_target_status": "OPEN",
+  "next_step": "QFORM-LOW-STABLERANK-HIGHLEVERAGE-COMPOUND-HUB-v1: route bounded tail stable rank/high leverage or the Gibbs at-most-four-row soft hub with tiny residual E3 into paid pair/star/ridge/rank-two/grouped-bank endpoints without a vanishing local reciprocal."
+}

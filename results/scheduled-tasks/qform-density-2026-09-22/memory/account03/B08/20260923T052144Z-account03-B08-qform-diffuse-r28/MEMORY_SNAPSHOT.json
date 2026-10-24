@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B08",
+  "run_id": "20260923T052144Z-account03-B08-qform-diffuse-r28",
+  "control_start_commit": "7d2e7c8ec01c8843fd226292ab75bdb17385abae",
+  "control_prepublication_commit": "9358e0b4f2434b95271dc7a8259d87955aa2b226",
+  "control_revision": "2026-09-22.15",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-COHEAVY-SINGLE-ROW-EXTRACTION-FALSE-v1",
+    "aggregate-before-local-reciprocal-payment requirement"
+  ],
+  "premises": [
+    {
+      "id": "B08-r27-self-matched-anchored-third-volume",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e76d2e984f81a058590bb143ff21e387fbbeab09",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260923T042303Z-account03-B08-qform-diffuse-r27/REPORT.md",
+      "scope": "Anchored third-volume Z and self-matched half-half order3/order2 law Omega with kbar=5/2, K(Omega)>=2Z/R_i, anchor marginal 1/2, residual marginals alpha_k; diffuse q=0 has Z>L^6/6912 after the <77/L exit."
+    },
+    {
+      "id": "mixed-order-physical-minor-BL-Fourier",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "86f318f0826325e6df3504e1e8ec15f4316cc861",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T001242Z-b01-qform-auto11/REPORT.md",
+      "scope": "Varying-order physical-minor determinant expansion, entropy currency K(Omega), and q=1 Brascamp-Lieb/Fourier theorem."
+    },
+    {
+      "id": "sharp-HY-volume-Jensen",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "49c80441f24d6c697350119fac09426077b7e313",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260922T231047Z-account02-B02-qform-r16-6c4f9a1e/REPORT.md",
+      "scope": "Jensen q>=1 and sharp Hausdorff-Young row factor H_q(c), including the coarse entropy bound, proved for fixed-order volume laws and applied in r28 to the varying-order determinant law."
+    }
+  ],
+  "new_claim": {
+    "id": "QFORM-MIXED-ORDER-JENSEN-COMPILER-v1",
+    "status": "PROVED_SUPPORTING_TARGET_RELEVANT_THEOREM_PENDING_INDEPENDENT_REVIEW",
+    "statement": "For a varying-order physical minor law Omega with mean order kbar, row marginals alpha_i<=q/2 and kbar>2q, the full ambient quadratic form has continuous C0 density with ||p_Q||inf <= [kbar/(kbar-2q)] [B_beta prod H_q(alpha_i)]^(1/kbar) K(Omega)^(-1/(2kbar)), hence <= e q^(-1/2) kbar/(kbar-2q) K(Omega)^(-1/(2kbar)).",
+    "diffuse_corollary": "For the B08 r27 anchored self-matched law, every residual occupancy h<5/8 is paid. If h<=1/2, the diffuse branch improves to <70/L continuously. If h<=3/5, it is <317/L continuously; failure with anchor star <=L forces nested third-volume >L^6/11520. Transpose gives the column version."
+  },
+  "partner_result_applied": {
+    "designated_partner_status": "account04/B08 current-QFORM artifact not found; none fabricated",
+    "actual_source": "account04/B18 product-projection theorem",
+    "source_commit": "ce50e74f705c49f66524aa6565d4aa4a9be88061",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T182500Z-account04-B18-QFORM-r2/REPORT.md",
+    "application": "Large row star R_i>L gives original-coordinate linear projection cap <sqrt(2)/L; simultaneous opposite-side large stars on disjoint banks give joint cap <2/L^2."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "af8d585f3ac8b3cc243045caf6bbe65d8e956f99",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260923T052144Z-account03-B08-qform-diffuse-r28/REPORT.md",
+    "checks": "QFORM_B08_R28_CHECK_PASS"
+  },
+  "unresolved": "Full QFORM remains open. Next B08 implication: consume the >L^6/11520 nested anchored third-volume packet at bank level; use co-heavy identity plus aggregate e2 when a nonzero physical pivot exists and a zero-pivot pair/ridge/grouped-bank receiver otherwise.",
+  "continuity": "Proved on the new mixed-order Jensen branches; not proved globally."
+}

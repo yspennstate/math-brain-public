@@ -1,0 +1,107 @@
+\section{Consequences and remaining questions}\label{sec:discussion}
+
+\subsection{Relaxation, mixing, and the visible modes}
+
+For the polymer semigroup $P_t=\exp(tL_M)$, the exact reduction gives
+\begin{equation}\label{eq:L2-decay}
+ \|P_tf\|_{L^2(\pi_M)}\le e^{-\gamma_Qt}\|f\|_{L^2(\pi_M)},
+ \qquad \pi_Mf=0.
+\end{equation}
+The exponent is optimal. A strictly monotone first eigenfunction
+of the count chain attains it. At stationarity,
+\begin{equation}\label{eq:cov-decay}
+ \left|\operatorname{Cov}_{\pi_M}(f(M_0),f(M_t))\right|
+ \le e^{-\gamma_Qt}\operatorname{Var}_{\pi_M}(f).
+\end{equation}
+For $\beta=b/n$, relaxation therefore occurs on the scale
+$\sqrt n/(2\sqrt b)$, while total-variation mixing from either
+extreme polymer configuration has the larger scale
+$\sqrt n\log n/(8\sqrt b)$. The logarithm measures the time needed
+for the count to enter its equilibrium fluctuation range.
+Its equilibrium location is of order $\sqrt n$, its standard
+deviation is of order $n^{1/4}$, and its local restoring rate is
+asymptotic to $2\sqrt b/\sqrt n$.
+
+The distinction between labelled and unlabelled states is necessary
+when fragmentation is rare. At $n=2$, the polymer chain has only
+one dimer and two monomers, with gap $\beta+1$. The labelled cut
+chain has an additional eigenfunction given by the difference of
+the two singleton indicators, with eigenvalue $-\beta$.
+Both singleton cuts represent the same dimer, so this function
+cannot be a polymer observable. In general, rotation invariance
+removes degree one, and the sector comparison proves that no
+remaining polymer mode is slower than the count mode.
+
+With spatial diffusion the labels are part of the state. The
+degree-one mode is then visible, and the exact minimum
+$\min\{\gamma_Q,\eta_1+D\lambda_G\}$ determines which mode controls
+relaxation. At $\beta=b/n$ its two reaction rates are asymptotic to
+$2\sqrt b/\sqrt n$ and $\sqrt b/\sqrt n$. At
+$\beta=b/n^2$ the corresponding rates are $\rho(b)/n$ and
+$\sigma(b)/n$. These formulas give both the crossover and the
+diffusion strength needed for count relaxation to become the
+limiting mechanism.
+
+\subsection{The remaining mixing question}
+
+The count gap and the polymer gap agree, but a spectral-gap
+identity does not by itself identify the worst-case mixing time;
+see~\cite{LevinPeres2017}. From a specified state $m$, the usual
+estimate is
+\[
+ \|P_t(m,\cdot)-\pi_M\|_{\mathrm{TV}}
+ \le\tfrac12\sqrt{\pi_M(m)^{-1}-1}\,e^{-\gamma_Qt}.
+\]
+Its prefactor can be large. The singleton-fiber argument avoids
+that prefactor for the two extreme states, because their evolving
+density is exactly constant on count fibers. An arbitrary initial
+partition has additional within-fiber information.
+Theorem~\ref{thm:full-polymer-tv-upper-new} controls that information
+uniformly and yields, for each fixed $\varepsilon\in(0,1)$,
+\[
+ \frac{\sqrt n\log n}{8\sqrt b}-O_{b,\varepsilon}(\sqrt n)
+ \le t^{\mathrm{polymer}}_{\mathrm{mix},n}(\varepsilon)
+ \le C_b\sqrt n(\log n)^2.
+\]
+
+The main open mixing problem is to determine whether this
+additional information disappears by
+$\sqrt n\log n/(8\sqrt b)+O_b(\sqrt n)$ uniformly over initial
+partitions, or whether some configurations mix later. The
+endpoint cutoff theorem supplies the lower bound with the exact
+constant. It does not identify the worst initial polymer state,
+prove a worst-case polymer cutoff, or determine a limiting cutoff
+profile. An optimal window lower bound is also a separate question.
+
+\subsection{Beyond the solvable reaction structure}
+
+The bounded-conductance comparisons allow spatial and size
+dependence while retaining a specified equilibrium law. Growing
+kernels require further estimates because a uniform comparison
+with the constant kernel loses powers of $n$.
+For the shared multipliers $ij$ and $i+j$, the monomer test function
+gives upper bounds of order $1+\beta$
+(Proposition~\ref{prop:growing-kernel-upper}). At $\beta=b/n$, the
+proved lower bounds still have order $n^{-1/2}$, leaving a gap between
+the two estimates. The classical Ewens
+model shows that the fragmentation rule matters as much as the
+merger kernel: its equilibrium weights and its spectral scale are
+different from those of the constant-kernel polymer chain.
+
+The nonreversible results distinguish two convergence quantities.
+A directed current can improve the least nonzero real part of the
+spectrum while leaving the symmetric part, and hence the best
+prefactor-one $L^2$ exponent, unchanged. The four-state polymer
+construction proves strict acceleration for each finite system.
+It leaves open a choice of currents with a gain bounded away from
+zero as $n$ grows, as well as a quantitative total-variation
+comparison at the cutoff scale.
+
+Finally, the spatial model studied here has local conservative
+motion but globally count-dependent reactions. A general spatial
+coagulation--fragmentation system may have spatially varying
+concentrations, cluster diffusion depending on size, collision
+kernels depending on distance, and a nonexchangeable equilibrium.
+Those changes remove the tensor decomposition used in the graph
+formula. Establishing comparable estimates for such systems would
+require new control of their spatial and cluster-size fluctuations.

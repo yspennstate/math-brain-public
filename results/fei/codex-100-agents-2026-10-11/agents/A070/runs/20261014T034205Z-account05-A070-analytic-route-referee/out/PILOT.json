@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "helper": "A070-partial-privacy-v1",
+  "mode": "pilot",
+  "cases": 26,
+  "counts": {
+    "review_core1": 16,
+    "partial_privacy": 8,
+    "boundary": 1,
+    "real": 1
+  },
+  "exact_assertions": 213,
+  "seconds": 0.02930620001279749,
+  "ordered_certificate_sha256": "37ab8b60a8524e61f0b4a106df1018267da494e79b75aa6b233b9eac8870e90b",
+  "boundary_family": [
+    {
+      "t": 4,
+      "I_source": "3/2",
+      "I_mask": "5/4",
+      "I_final": "13/16",
+      "Gamma_source": "811/128",
+      "Gamma_final": "32431/8192",
+      "ancestral_bill_over_final_I": "408/13",
+      "R_influence": "31/16",
+      "nonconstant_terminal_core": "point mask on t independent Y bits",
+      "entropy_certificate": "H(final)<=4I(final), analytic disjoint point-mask bound"
+    }
+  ],
+  "real_source": {
+    "source": "sqrt(2)1{x=+}",
+    "mask": "single flip at x=-,z1=z2=+",
+    "I_source": "1/2",
+    "I_final": "1/2",
+    "I_mask": "3/4",
+    "theta": "1/4",
+    "Boolean_factor": "5/3",
+    "left_bill": "5/4",
+    "right_bill": "5/6",
+    "normalized_final": true
+  },
+  "author_code_imported": false
+}

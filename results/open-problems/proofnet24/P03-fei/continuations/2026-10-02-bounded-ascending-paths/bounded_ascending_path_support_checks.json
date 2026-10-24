@@ -1,0 +1,107 @@
+{
+  "status": "PASS analytic theorem separately supplied",
+  "theorem_constant": 4.0,
+  "dimensions": [
+    {
+      "dimension": 0,
+      "support_families": 2
+    },
+    {
+      "dimension": 1,
+      "support_families": 4
+    },
+    {
+      "dimension": 2,
+      "support_families": 16
+    },
+    {
+      "dimension": 3,
+      "support_families": 256
+    },
+    {
+      "dimension": 4,
+      "support_families": 65536
+    }
+  ],
+  "counts": {
+    "exhaustive_families": 65814,
+    "random_structured_families": 368,
+    "explicit_nilpotency": 172,
+    "adjacency_eigenvalue_checks": 172,
+    "large_n_support_cases": 890,
+    "large_label_cases": 26503,
+    "k1_cases": 881,
+    "singleton_asymptotic_cases": 11,
+    "weighted_band_rounding_cases": 128
+  },
+  "singleton_ratios": [
+    {
+      "dimension": 1,
+      "entropy_over_I": 0.0
+    },
+    {
+      "dimension": 2,
+      "entropy_over_I": 2.0
+    },
+    {
+      "dimension": 3,
+      "entropy_over_I": 2.955889582251599
+    },
+    {
+      "dimension": 4,
+      "entropy_over_I": 3.4024755511985876
+    },
+    {
+      "dimension": 8,
+      "entropy_over_I": 3.8427825918979237
+    },
+    {
+      "dimension": 16,
+      "entropy_over_I": 3.930271404540879
+    },
+    {
+      "dimension": 32,
+      "entropy_over_I": 3.9651684390903594
+    },
+    {
+      "dimension": 64,
+      "entropy_over_I": 3.98258422002778
+    },
+    {
+      "dimension": 128,
+      "entropy_over_I": 3.99129211001389
+    },
+    {
+      "dimension": 256,
+      "entropy_over_I": 3.995646055006945
+    },
+    {
+      "dimension": 512,
+      "entropy_over_I": 3.9978230275034723
+    }
+  ],
+  "maxima": {
+    "entropy_over_I": 3.8043570697715694,
+    "entropy_over_path_bound": 0.2377723168607231,
+    "entropy_over_refined_bound": 0.9510892674428921,
+    "energy_over_refined_bound": 0.9999999999999999,
+    "energy_over_path_bound": 0.25,
+    "adjacency_over_cosine_bound": 0.9897433186107875
+  },
+  "entropy_tolerance": 3e-11,
+  "exact_checks": [
+    "physical influence and integer Walsh energy",
+    "longest upward path vertices",
+    "n*minority_size <= (k+1)^2*undirected_boundary",
+    "explicit compressed raising nilpotency on selected families"
+  ],
+  "refined_theorem": "H<=4*cot(pi/(2(k+1)))^2*I",
+  "numerical_checks": [
+    "Fourier entropy and H<=8*n*minority_probability",
+    "binary entropy bound h2(4r(1-r))<=4r*log2(1/r)",
+    "selected adjacency spectral bounds",
+    "refined cotangent entropy and support energy bounds",
+    "sharp singleton asymptotic"
+  ],
+  "scope": "Finite validation; no novelty or unrestricted FEI conclusion"
+}

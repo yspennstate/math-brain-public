@@ -1,0 +1,138 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\C}{\mathbb C}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Stab}{Stab}
+
+\hypersetup{pdftitle={A homogeneous space with no nonconstant quasiharmonic functions},pdfauthor={Yitzchak Shmalo}}
+
+\title[No nonconstant quasiharmonic functions on a homogeneous space]{A homogeneous space with no nonconstant\\ quasiharmonic functions}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+
+\subjclass[2020]{60J50, 60B15, 20B07, 31C05}
+\keywords{random walk on groups, harmonic functions, quasiharmonic functions, homogeneous space, finitary symmetric group}
+
+\begin{document}
+
+\begin{abstract}
+Bj\"orklund asked for a countable measured group $(G,\mu)$ and a subgroup $H$ of infinite index such that the homogeneous space $G/H$ carries no nonconstant left $\mu$-harmonic or $\mu$-quasiharmonic functions, bounded or not. We give such an example. The group is the group of finitely supported permutations of $\N_0=\{0,1,2,\dots\}$, the subgroup is the stabiliser of $0$, and $\mu$ is any probability measure that charges every transposition $(0\ n)$, $n\ge1$, and nothing else. The induced walk on $G/H\cong\N_0$ is a star with infinitely many leaves. The equation at a leaf $k$ forces a quasiharmonic function with defect $c$ to satisfy $u(k)=u(0)-c/\mu((0\ k))$, and the equation at the centre then forces $c=0$ and $u$ constant. The argument uses only the convergence of the single series that defines the equation at the centre.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+A \emph{measured group} is a pair $(G,\mu)$ where $G$ is a countable group and $\mu$ is a probability measure on $G$ whose support generates $G$ as a semigroup. Write $\check\mu(s)=\mu(s^{-1})$. Following~\cite[Sections~1 and~4.1]{Bj}, a complex-valued function $\phi$ on $G$ is \emph{left $\mu$-harmonic} if
+\begin{equation}\label{eq:harm}
+\int_G \phi(sg)\,d\check\mu(s)=\phi(g)\qquad(g\in G),
+\end{equation}
+and \emph{left $\mu$-quasiharmonic} if there is a constant $\ell(\phi)\in\C$ with
+\begin{equation}\label{eq:qharm}
+\int_G \phi(sg)\,d\check\mu(s)=\phi(g)+\ell(\phi)\qquad(g\in G),
+\end{equation}
+in both cases for $\mu$-integrable $\phi$. Left translation commutes with right translation, so for a subgroup $H<G$ these equations make sense for functions on the space $G/H$ of left cosets, that is, for right $H$-invariant functions on $G$. Constant functions are harmonic, and harmonic functions are quasiharmonic with $\ell=0$.
+
+Bj\"orklund studies harmonic and quasiharmonic functions on homogeneous spaces in~\cite[Appendix~II]{Bj}. His Problem~2 in~\cite[Appendix~II, Section~7.1]{Bj} reads: construct a countable measured group $(G,\mu)$ and an infinite index subgroup $H<G$ such that $G/H$ admits no non-constant left (quasi-)$\mu$-harmonic functions whatsoever. The text before it remarks that for general quotient spaces there could well be simple counterexamples. The following theorem gives one.
+
+\begin{theorem}\label{thm:main}
+Let $G=\Sym_{\mathrm{fin}}(\N_0)$ be the group of permutations of $\N_0$ that move only finitely many points, let $H=\Stab_G(0)$, and let $\mu$ be a probability measure on $G$ with $\mu((0\ n))=p_n>0$ for every $n\ge1$ and $\sum_{n\ge1}p_n=1$. Then $(G,\mu)$ is a measured group, $\mu$ is symmetric, $H$ has infinite index in $G$, and every left $\mu$-quasiharmonic function on $G/H$ is constant. In particular every left $\mu$-harmonic function on $G/H$ is constant.
+\end{theorem}
+
+A concrete choice is $p_n=2^{-n}$. The proof in Section~\ref{sec:proof} shows a little more: a function $u$ on $G/H$ satisfying the quasiharmonic equation is constant as soon as the one series defining its left side at the coset $H$ converges; absolute convergence is not needed (Theorem~\ref{thm:star}). The group $G$ is not finitely generated and $\mu$ has infinite support. Both features are used: the centre of the star has infinitely many neighbours, and this is what rules out a nonzero defect. The problem with $G$ finitely generated or $\mu$ finitely supported is not treated here.
+
+\section{The measured group and its quotient}
+
+For $n\ge1$ write $\tau_n=(0\ n)$, and let $\mu$ be as in Theorem~\ref{thm:main}.
+
+\begin{lemma}\label{lem:group}
+The group $G$ is countable, $\check\mu=\mu$, the support of $\mu$ generates $G$ as a semigroup, and the map $gH\mapsto g(0)$ is a bijection from $G/H$ onto $\N_0$ satisfying $(sg)(0)=s(g(0))$ for $s,g\in G$. In particular $[G:H]=\infty$.
+\end{lemma}
+
+\begin{proof}
+Every element of $G$ lies in $\Sym(\{0,1,\dots,m\})$ for some $m$, so $G$ is a countable union of finite groups. Each $\tau_n$ is an involution, so $\check\mu=\mu$. For distinct $i,j\ge1$ one has $\tau_i\tau_j\tau_i=(i\ j)$, since conjugating $(0\ j)$ by $(0\ i)$ replaces $0$ by $i$. Hence the semigroup generated by the $\tau_n$ contains every transposition of $\N_0$, and every element of $G$ is a finite product of transpositions. The map $gH\mapsto g(0)$ is well defined because $H$ fixes $0$; it is injective because $g(0)=g'(0)$ means $g^{-1}g'\in H$; and it is onto because $\tau_n(0)=n$. The identity $(sg)(0)=s(g(0))$ is the definition of composition.
+\end{proof}
+
+Identify $G/H$ with $\N_0$ through Lemma~\ref{lem:group}, and let $u\colon\N_0\to\C$ correspond to the right $H$-invariant function $\tilde u(g)=u(g(0))$ on $G$. Since $\check\mu=\mu$ and $\tau_n^{-1}=\tau_n$, the left side of~\eqref{eq:qharm} for $\tilde u$ at $g$ equals $(Pu)(g(0))$, where
+\[
+(Pu)(x)=\sum_{n\ge1}p_n\,u(\tau_n x)\qquad(x\in\N_0).
+\]
+Because $\tau_n0=n$, while for $k\ge1$ one has $\tau_nk=0$ if $n=k$ and $\tau_nk=k$ otherwise,
+\begin{align}
+(Pu)(0)&=\sum_{n\ge1}p_n\,u(n),\label{eq:centre}\\
+(Pu)(k)&=p_k\,u(0)+(1-p_k)\,u(k)\qquad(k\ge1).\label{eq:leaf}
+\end{align}
+This is the transition operator of the walk on the infinite star with centre $0$ that jumps from the centre to the leaf $n$ with probability $p_n$ and from the leaf $k$ to the centre with probability $p_k$, staying put otherwise. The series in~\eqref{eq:leaf} has only two distinct values of $u$ in it and converges absolutely for every $u$; the series~\eqref{eq:centre} is the only one whose convergence depends on $u$.
+
+\section{Proof of the theorem}\label{sec:proof}
+
+\begin{theorem}\label{thm:star}
+Let $u\colon\N_0\to\C$ and $c\in\C$. Suppose that the series $\sum_{n\ge1}p_nu(n)$ converges, in the order $n=1,2,\dots$, and that $Pu=u+c$ on $\N_0$. Then $c=0$ and $u$ is constant.
+\end{theorem}
+
+\begin{proof}
+For $k\ge1$, equation~\eqref{eq:leaf} and $(Pu)(k)=u(k)+c$ give $p_k\,u(0)+(1-p_k)\,u(k)=u(k)+c$, that is,
+\begin{equation}\label{eq:forced}
+p_k\bigl(u(0)-u(k)\bigr)=c,\qquad u(k)=u(0)-\frac{c}{p_k}.
+\end{equation}
+Hence the $n$-th term of the series in~\eqref{eq:centre} is $p_nu(n)=p_nu(0)-c$. Since $\sum_np_n=1$, we have $p_n\to0$, so the terms tend to $-c$. The terms of a convergent series tend to $0$, so $c=0$, and then~\eqref{eq:forced} gives $u(k)=u(0)$ for every $k\ge1$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Lemma~\ref{lem:group} gives the statements about $G$, $\mu$ and $H$. If $\phi$ is a left $\mu$-quasiharmonic function on $G/H$, then $u=\phi$ viewed on $\N_0$ satisfies $Pu=u+\ell(\phi)$, and the left side of~\eqref{eq:qharm} at $g=e$ is the convergent series $\sum_np_nu(n)$. Theorem~\ref{thm:star} shows that $\ell(\phi)=0$ and $u$ is constant. Harmonic functions are the case $\ell=0$.
+\end{proof}
+
+\begin{remark}
+The value of the defect is not normalised anywhere: at the coset $H$ the equation reads $\ell(\phi)=\sum_np_nu(n)-u(0)$, and nonzero constants are harmonic. The conclusion is that nonconstant solutions do not exist, not that every solution vanishes.
+\end{remark}
+
+\begin{remark}
+The same proof applies to $\Sym_{\mathrm{fin}}(X)$ and the stabiliser of a point $x_0$, for any countably infinite set $X$, with $\mu$ charging every transposition $(x_0\ x)$, $x\ne x_0$. Positivity of every $p_n$ is used: if $p_k=0$, then $\tau_k$ is not in the support and $u(k)$ may be changed freely, so the support no longer generates $G$ and nonconstant harmonic functions appear.
+\end{remark}
+
+\section*{Computations}
+The file \texttt{code/checks.py} in~\cite{code} (Python~3, standard library, exact integer and rational arithmetic; its output is \texttt{code/checks\_output.txt}) checks on finite truncations the identities used above: $\tau_i\tau_j\tau_i=(i\ j)$ on $\{0,\dots,N\}$ for $N\le8$; that positive words in $\tau_1,\dots,\tau_N$ give all $(N+1)!$ permutations of $\{0,\dots,N\}$ for $N\le6$; that $gH\mapsto g(0)$ is well defined, injective on cosets and equivariant for $N\le5$; the rows~\eqref{eq:centre} and~\eqref{eq:leaf} on $\{0,\dots,12\}$; and the identities~\eqref{eq:forced} and $p_ku(k)=p_ku(0)-c$ for $p_k=2^{-k}$, $k\le60$. The proofs above do not depend on this file.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. In September 2026 an OpenAI GPT model, running as a research task of that project, proposed the construction and the argument. In October 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, checked the proof against the source, wrote the computer checks of the repository~\cite{code}, and wrote the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/bjorklund-star-quotient}.
+
+\begin{thebibliography}{9}
+\bibitem{Bj} M.~Bj\"orklund, \emph{Five remarks about random walks on groups}, preprint, 2014, arXiv:1406.0763v2.
+\bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/bjorklund-star-quotient}.
+\end{thebibliography}
+
+\end{document}

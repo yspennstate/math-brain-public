@@ -1,0 +1,14 @@
+{
+ "helper_version":"A059-interleave-v1",
+ "family":"exclusive arbitrary 2-bit controller with labels +1,u,v and disjoint Boolean cores; physical restriction trees",
+ "domain":"all 3^4=81 label maps, all 4^2=16 ordered one-bit Boolean cores; plus point/priority controllers and all 16 two-bit first cores paired with all four one-bit second cores",
+ "case_count":"1296 primary roots plus 128 biased-core fixtures; four full/adaptive policies on primary roots and two on fixtures, checking every reached state and stopping frontier",
+ "symmetry":"none",
+ "arithmetic":"integer FWHT, rational Fourier probabilities and prime-log symbolic entropy; rational atanh log enclosures with explicit tails",
+ "memory_estimate_MB":120,
+ "pilot_max_seconds":60,
+ "main_max_seconds":180,
+ "max_truth_table_bits":5,
+ "automatic_dimension_escalation":false,
+ "pilot":"first label map and all 16 one-bit-core pairs, four policies"
+}

@@ -1,0 +1,48 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w458",
+  "bundle_slug": "c0048-reviewed-fk-critical-gap-20261010",
+  "entries": [
+    {
+      "key": "fk-magnetization",
+      "namespace": "probability.statmech",
+      "logical_name": "finite-potts-fk-boundary-magnetization-identity",
+      "kind": "lemma",
+      "title": "Finite-volume Potts magnetization is a wired FK connection probability",
+      "statement": "Let G be a finite graph, let B be a nonempty set of vertices fixed to Potts color 1, and let q>=2 be an integer. Give the zero-field ferromagnetic Potts model weight exp(beta times the number of equal-color edges), beta>=0, and set p=1-exp(-beta). Under the Edwards-Sokal coupling with B wired, for x outside B, mu_G^1(sigma_x=1)=1/q+(1-1/q) phi_G^w(x connected to B). Thus normalized favored-color magnetization (q mu_G^1(sigma_x=1)-1)/(q-1) equals phi_G^w(x connected to B). This is a finite-volume identity; it does not assert a critical infinite cluster.",
+      "proof_text": "Expand each edge factor as 1+(exp(beta)-1)1{the endpoint colors agree}. Summing colors gives the FK weight p^{open}(1-p)^{closed}q^{number of components after wiring B}, up to normalization. Conditional on the FK edges, the component containing B has color 1, while each other component is colored independently and uniformly from the q colors. Hence the conditional probability that sigma_x=1 is 1 if x connects to B and 1/q otherwise. Average this identity over FK edges and rearrange.",
+      "assumptions": ["Finite graph and nonempty wired vertex set B", "B is fixed to a single Potts color", "Integer q>=2, beta>=0, zero field", "Ferromagnetic delta-spin edge interaction"],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w457:c0048-fk-identity-20261010", "url": "file:///~/brain_workers/w457/ATTEMPT.md", "revision": "author-derived-2026-10-10-referee-w458-KEEP", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "wired-right-continuity",
+      "namespace": "probability.statmech",
+      "logical_name": "wired-fk-infinite-cluster-right-continuity-on-zd",
+      "kind": "lemma",
+      "title": "Right continuity of the wired FK infinite-cluster order parameter",
+      "statement": "For nearest-neighbor random-cluster measure on Z^d with fixed real q>=1, let theta_w(p)=phi^w_{p,q}(0 connected to infinity). For p in (0,1), theta_w(p) is increasing and right continuous. In particular, if theta_w(p)>=delta>0 for every p in some interval (p_c,p_c+epsilon), then theta_w(p_c)>=delta. The uniform delta is an assumption, not a consequence of positive theta_w(p) separately for each p>p_c.",
+      "proof_text": "Let f_N(p) be the wired FK probability in Lambda_N that 0 connects to its boundary. FK domain Markov comparison for q>=1 makes f_N decrease with N, and finite-volume weights make each f_N continuous and increasing in p. The limit equals theta_w: the infinite-volume wired marginal on Lambda_N is dominated by the fully wired box, giving theta_w<=inf_N f_N; conversely f_N is at most the probability in Lambda_N that 0 reaches the boundary of any fixed inner Lambda_n. Sending N to infinity and then n to infinity gives inf_N f_N<=theta_w. Thus theta_w=inf_N f_N is upper semicontinuous. Its monotonicity supplies the reverse inequality along p_j decreasing to p, hence right continuity. The uniform delta passes to p_c by this limit.",
+      "assumptions": ["Nearest-neighbor FK model on Z^d", "Fixed real cluster weight q>=1", "p in (0,1)", "Standard wired infinite-volume limit and FK boundary-condition comparison"],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w457:c0048-right-continuity-20261010", "url": "file:///~/brain_workers/w457/ATTEMPT.md", "revision": "author-derived-2026-10-10-referee-w458-KEEP", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "uniform-gap-guard",
+      "namespace": "probability.statmech",
+      "logical_name": "potts-c0048-unproved-uniform-critical-gap-input",
+      "kind": "concept",
+      "title": "C0048 proof gap: uniform critical wired ordering",
+      "statement": "UNPROVED INPUT FOR C0048. To deduce discontinuity of the nearest-neighbor q-state Potts model on Z^d at beta_c via the wired FK order parameter, one may prove that there are delta,epsilon>0 such that theta_w(p)>=delta for all p_c<p<p_c+epsilon. This must be uniform both in p-p_c and, when proved through finite boxes, in the box size. Showing only theta_w(p)>0 for each p>p_c, or a positive finite-volume cubic coefficient, leaves the critical statement open; q=d=3 is the first hard case. Current general openness is unverified as of 2026-10-10.",
+      "proof_text": null,
+      "assumptions": ["Nearest-neighbor zero-field Potts model", "Integer q,d>=3", "p=1-exp(-beta)", "This card records a proposed sufficient input, not an established bound"],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w458:c0048-reviewed-gap-20261010", "url": "file:///~/brain_workers/w458/REVIEW_PACKET.md", "revision": "referee-scope-2026-10-10", "license": "owner-own-work", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "fk-magnetization", "to_existing_logical": "math:probability.statmech:open-problem-c0048-discontinuity-of-the-potts-phase-transition-on-z-d-for-q-3-d-3", "kind": "semantic_association", "rationale": "The existing C0048 conjecture asks for positive critical Potts magnetization; the finite-volume identity identifies its FK wired order parameter under the exact delta-spin assumptions."},
+    {"from_key": "wired-right-continuity", "to_existing_logical": "math:probability.statmech:open-problem-c0048-discontinuity-of-the-potts-phase-transition-on-z-d-for-q-3-d-3", "kind": "semantic_association", "rationale": "The existing C0048 conjecture asks for positive critical magnetization; the right-continuity lemma passes a uniform supercritical wired FK lower bound to the critical point."},
+    {"from_key": "uniform-gap-guard", "to_key": "wired-right-continuity", "kind": "depends_on", "rationale": "The guard states the unproved uniform lower bound sufficient for C0048, while the right-continuity lemma is the precise limit step that would use that bound."}
+  ]
+}

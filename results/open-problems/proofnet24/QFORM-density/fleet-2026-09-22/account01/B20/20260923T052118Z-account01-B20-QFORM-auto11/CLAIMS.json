@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T052118Z-account01-B20-QFORM-auto11",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target": "OPEN",
+  "continuity": "OPEN",
+  "partner_source": {
+    "account": "account02",
+    "slot": "B20",
+    "run": "20260923T035847Z-account02-B20-QFORM-r24",
+    "canonical_commit": "0da7f3ef78f89efa33d2014211323fcda3d3214b",
+    "applied_inequality": "W+E>1/165888 with r>1/48 and s_3(C)>1/6"
+  },
+  "claims": [
+    {
+      "id": "QFORM-STAR-WEDGE-ALIGNMENT-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "If max_j m_j^2<=h||m||^2, then inf_{mu,D diagonal} ||B-mu mm^T-D||_F^2 <= (1+5/(1-h)) W/||m||^2. In particular the constant is 11 for h=1/2."
+    },
+    {
+      "id": "QFORM-STAR-ROWWISE-WEDGE-TWIST-IDENTITY-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "For the rowwise best projection c_j, E_j=[m_j^2/(r^2-m_j^2)]W_j+(r^2-m_j^2)(B_jj-c_j m_j)^2."
+    },
+    {
+      "id": "QFORM-O3-SMALLW-DIFFUSESTAR-ANCHOR-COLLAPSE-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "On the account02/B20 r24 star packet, if W<(1/165888)/88 and max_j m_j^2<=r^2/2, then B=mu mm^T+D+R with D diagonal, ||R||_F<1/24, max_j|D_j|>1/8, and for some physical leaf j, E_j>1/663552."
+    },
+    {
+      "id": "QFORM-O3-NOTSMALLW-CROSS-COMPILER-v2",
+      "status": "PROVED_BY_THIS_RUN_PLUS_PRIOR_REVIEWED_INPUTS",
+      "statement": "If W>=(1/165888)/88, a disjoint physical cross block N has e_2(NN^T)>1/98537472; it is then routed to a <1/64 rank-two tube, the reviewed diffuse e_3 density exit (<2653.368), or a nested two-anchor packet of mass >1/14529941471232."
+    },
+    {
+      "id": "QFORM-O3-HEAVY-ARM-OR-ANCHORED-OVERLAP-PAYMENT-v1",
+      "status": "OPEN",
+      "statement": "Pay either a physical arm |m_j|>1/(48sqrt(2)) or a fixed physical anchored-overlap row E_j>1/663552 while retaining arbitrary same-bank curvature and outside couplings."
+    }
+  ],
+  "forbidden_shortcuts_not_used": [
+    "uniform pointwise quadratic oscillatory decay",
+    "post-rotation independence",
+    "arbitrary-joint coarea",
+    "conditional spectral-density cap",
+    "one-good-minor extraction"
+  ]
+}

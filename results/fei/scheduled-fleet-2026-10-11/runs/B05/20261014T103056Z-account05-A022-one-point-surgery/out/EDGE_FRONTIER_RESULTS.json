@@ -1,0 +1,231 @@
+{
+  "verdict": "PASS",
+  "root_cases": 14,
+  "diagnostic_cases": 2,
+  "checks": 78,
+  "runtime_seconds": 0.01120459999947343,
+  "method": "direct natural Boolean edges; no Walsh/log helper",
+  "roots": [
+    {
+      "case": 0,
+      "direct_influences": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    },
+    {
+      "case": 1,
+      "direct_influences": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    },
+    {
+      "case": 2,
+      "direct_influences": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/8",
+        "1/8",
+        "1/8"
+      ]
+    },
+    {
+      "case": 3,
+      "direct_influences": [
+        "9/16",
+        "1/2",
+        "5/8",
+        "5/8",
+        "1/16",
+        "1/16",
+        "0"
+      ]
+    },
+    {
+      "case": 4,
+      "direct_influences": [
+        "9/16",
+        "1/2",
+        "7/8",
+        "7/8",
+        "1/16",
+        "1/16",
+        "0"
+      ]
+    },
+    {
+      "case": 5,
+      "direct_influences": [
+        "15/16",
+        "7/8",
+        "7/8",
+        "7/8",
+        "1/16",
+        "1/16",
+        "0"
+      ]
+    },
+    {
+      "case": 6,
+      "direct_influences": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    },
+    {
+      "case": 7,
+      "direct_influences": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    },
+    {
+      "case": 8,
+      "direct_influences": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "5/8",
+        "5/8",
+        "1/16",
+        "1/16",
+        "0"
+      ]
+    },
+    {
+      "case": 9,
+      "direct_influences": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    },
+    {
+      "case": 10,
+      "direct_influences": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    },
+    {
+      "case": 11,
+      "direct_influences": [
+        "1/2",
+        "1/2",
+        "3/4",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    },
+    {
+      "case": 12,
+      "direct_influences": [
+        "3/4",
+        "3/4",
+        "3/4",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    },
+    {
+      "case": 13,
+      "direct_influences": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "kind": "dense_leaf_character_cancellation",
+      "vertices": [
+        3,
+        11,
+        35,
+        43
+      ],
+      "first_pair_bits": [
+        1,
+        0,
+        0
+      ],
+      "raw_I": "1",
+      "actual_I": "0",
+      "p": "1/16",
+      "root_I": "11/4",
+      "scope": "refutes raw-to-character leaf influence monotonicity without its support guard, not FEI"
+    },
+    {
+      "kind": "low_influence_ambient_capacity_failure",
+      "k": 8,
+      "seed": "x0 with seven dummy bits",
+      "p": "0",
+      "I_data": "1",
+      "ambient_capacity": "8",
+      "rate7_capacity_gap": "-1",
+      "scope": "ambient k budget cannot be paid at rate7 without seed capacity; actual H=0, no FEI refutation"
+    }
+  ]
+}

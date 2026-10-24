@@ -1,0 +1,44 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w335",
+  "bundle_slug": "w335-c0073-20261010",
+  "entries": [
+    {
+      "key": "c0073-speed-measure-obstruction",
+      "namespace": "probability.random-walks",
+      "logical_name": "dangling-leaf-conductance-constant-speed-diffusion-normalization",
+      "kind": "lemma",
+      "title": "Walk clocks change the conductivity-to-diffusion comparison [draft; pending w347]",
+      "statement": "On the integer spine with unit conductances and a conductance-a dangling leaf at each site, a>0, project both vertices in a cell to its integer coordinate. The rate-one constant-speed walk has variance growth D_CS=1/(1+a), whereas the edge-rate variable-speed walk has D_VS=1. Electrical conductivity per cell is one for every a. The speed masses are respectively 2+2a and 2, so increasing leaf conductance slows the constant-speed walk despite nondecreasing conductivity. This is a periodic-network normalization example, not a counterexample to iid high-dimensional percolation monotonicity or its proposed critical exponent.",
+      "proof_text": "For the continuous-time constant-speed walk (total jump rate one), the transitions from a spine vertex are left and right at rate 1/(2+a) each and to its leaf at rate a/(2+a); from a leaf the return rate is one. The two-type stationary spine probability is (2+a)/(2+2a), by balance. The projected coordinate is a martingale and its quadratic-variation rate is 2/(2+a) at a spine vertex and zero at a leaf. Thus\n\n    D_CS = [(2+a)/(2+2a)] * [2/(2+a)] = 1/(1+a).\n\nIn stationary type, the variance identity holds exactly for every t. Ergodicity of the two-state type chain gives the same limiting growth from any initial type, and bounded martingale jumps yield the invariance-principle variance by the martingale central-limit argument.\n\nFor the variable-speed walk with each edge jump rate equal to its conductance, the spine-to-leaf and leaf-to-spine rates are both a. The stationary spine fraction is 1/2 and the projected quadratic-variation rate there is two, hence D_VS=1 for every a>0.\n\nThe electrical conductivity per spatial cell is kappa=1: all macroscopic current uses the spine and no current flows into a dangling leaf. The constant-speed speed-measure mass per cell is m_CS=2+2a, while the variable-speed counting mass is two. Therefore D_CS=2*kappa/m_CS and D_VS=2*kappa/2. Increasing a leaves kappa unchanged and strictly decreases D_CS. Rayleigh monotonicity of conductivity cannot, without a separate speed-measure argument, imply monotonicity of a normalized walk diffusion coefficient.",
+      "assumptions": [
+        "Periodic decorated integer spine",
+        "Positive dangling conductance a",
+        "Diffusion means coordinate variance growth per unit time",
+        "Specified constant-speed or edge-rate clock"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w335:c0073-speed-measure-obstruction",
+        "url": "file:///~/brain_workers/w335/C0073_proof.md",
+        "revision": "author-checked-20261010-pending-independent-w347",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "c0073-speed-measure-obstruction",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0073-critical-exponent-of-the-diffusion-constant-of-random-walk-on-the-supe",
+      "kind": "analogous_to",
+      "rationale": "New card: \"This is a periodic-network normalization example\"; existing card: \"For random walk on the infinite percolation cluster in sufficiently high dimension, show that the diffusion constant satisfies sigma(p)^2 ~ (p - p_c)^2 as p decreases to p_c; even monotonicity of p -> sigma^2(p) is not known\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    },
+    {
+      "from_key": "c0073-speed-measure-obstruction",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0073-critical-exponent-of-the-diffusion-constant-of-random-walk-on-the-supe",
+      "kind": "cites",
+      "rationale": "New card: \"increasing leaf conductance slows the constant-speed walk\"; existing card: \"For random walk on the infinite percolation cluster in sufficiently high dimension, show that the diffusion constant satisfies sigma(p)^2 ~ (p - p_c)^2 as p decreases to p_c; even monotonicity of p -> sigma^2(p) is not known\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    }
+  ]
+}

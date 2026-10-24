@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260923T105150Z-qform-B18-a01-r30",
+  "source_control_commit_at_start": "3cc27b38b563c913e04210dea574a5511e2f6cfe",
+  "source_control_commit_before_handoff": "3d727e91d7ffae1e672660ef70d19b7f374bac20",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "71628e3f8b8580b8639d6c9407d6db64b0641482",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260923T105150Z-qform-B18-a01-r30/REPORT.md",
+  "handoff_commit": "7e13ab8b45c8b79c8101e4ed52291a5a0357312f",
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B18",
+    "commit": "b0fe7c60d4fb400917fb53d2435d5262fdcfea97",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260923T081256Z-account02-B18-QFORM-r26/REPORT.md",
+    "claim": "QFORM-SHEAR-CROSSVOLUME-MSS-BARRIER-v1"
+  },
+  "new_claim": "QFORM-MSS-BALANCED-HUB-DETERMINANT-v1",
+  "new_result_summary": "For the partner's exact-rank-three Schur-isotropic residual Parseval branch, MSS q=2 plus exact determinant accounting gives Z >= |detD|^2(c_delta a_delta)^3(1+2r^2), where a_delta=1/2+sqrt(2delta)+delta and c_delta=1-a_delta. The D/D' row gate extends the branch to delta<(39-6sqrt30)/98. The density is bounded by 6sqrt(e)F_delta(c_delta a_delta)^(-1/2)s^(-1)[(1+r^2)^2/(1+2r^2)]^(1/6). At delta=1/18 this is 27sqrt(e/2)s^(-1)[(1+r^2)^2/(1+2r^2)]^(1/6), at most 0.353553 times the partner r26 certificate. D/D' Fourier decay also gives a continuous C0 density on this branch.",
+  "primary_source_transfer": "Livshyts-Paouris-Pivovarov implies ||p_LX||inf<=2^(k/2)/sqrt(det(LL^T)) for any full-row-rank linear map L of a cap-one product source; applied here, ||p_(Y+rnX0)||inf<=2sqrt2/sqrt(1+r^2). This is not combined with the refuted arbitrary-joint coarea inequality.",
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "unresolved_implication": "QFORM-NONPLANAR-ONEPLUS2-AGGREGATE-v1: construct a product-preserving asymmetric 1+2 aggregate seeing r^2|det D|, or route failure to an already-paid branch; current certificate still grows like r^(1/3).",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED"
+}

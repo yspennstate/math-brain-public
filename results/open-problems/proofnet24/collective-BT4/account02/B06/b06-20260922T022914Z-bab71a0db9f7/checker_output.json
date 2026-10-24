@@ -1,0 +1,286 @@
+{
+  "candidate_refuted": "fresh same-pair off-pivot witnesses force neutral-orbit termination",
+  "digon_contraction_boundary": {
+    "contract_and_suppress_duplicates_minimum_outdegree": 6,
+    "digon": [
+      "d0",
+      "d1"
+    ],
+    "example": "complete bidirected K8",
+    "minimum_outdegree_before": 7,
+    "repair": "Use digon deletion plus the proved k=3 threshold-five theorem; do not contract and continue at threshold seven."
+  },
+  "graph": {
+    "arcs": 112,
+    "every_arc_dominated": true,
+    "exact_outdegree": 7,
+    "explicit_four_pack": [
+      [
+        "A0",
+        "R1",
+        "R5"
+      ],
+      [
+        "B0",
+        "R3",
+        "Z2"
+      ],
+      [
+        "A1",
+        "R4",
+        "R6"
+      ],
+      [
+        "R0",
+        "R2",
+        "Z1"
+      ]
+    ],
+    "fixed_cycles": [
+      [
+        "A0",
+        "A1",
+        "A2"
+      ],
+      [
+        "B0",
+        "B1",
+        "B2"
+      ]
+    ],
+    "fixed_pair_residual_W": [
+      "Z0",
+      "Z1",
+      "Z2"
+    ],
+    "fixed_pair_residual_degrees": {
+      "R0": 3,
+      "R1": 7,
+      "R2": 6,
+      "R3": 5,
+      "R4": 5,
+      "R5": 3,
+      "R6": 3,
+      "Z0": 2,
+      "Z1": 2,
+      "Z2": 2
+    },
+    "oriented": true,
+    "strong_after_any_at_most_two_vertex_deletions": true,
+    "three_state_neutral_orbit": [
+      {
+        "anchor_arc": [
+          "R0",
+          "R2"
+        ],
+        "cross_pair_data": {
+          "C1": {
+            "degree_two_count": 0,
+            "low_vertices": [],
+            "minimum_residual_outdegree": 3,
+            "two_disjoint_cycle_certificate": [
+              [
+                "B0",
+                "R1",
+                "R4"
+              ],
+              [
+                "B1",
+                "B2",
+                "R5"
+              ]
+            ]
+          },
+          "C2": {
+            "degree_two_count": 1,
+            "low_vertices": [
+              [
+                "Z2",
+                2
+              ]
+            ],
+            "minimum_residual_outdegree": 2,
+            "two_disjoint_cycle_certificate": [
+              [
+                "A0",
+                "A1",
+                "Z1"
+              ],
+              [
+                "A2",
+                "R1",
+                "R5"
+              ]
+            ]
+          }
+        },
+        "fresh_off_pivot_W": [
+          "Z1",
+          "Z2"
+        ],
+        "neutral_pivot_to_state": 1,
+        "pivot_insert": "Z1",
+        "pivot_remove": "Z0",
+        "remainder": [
+          "R1",
+          "R3",
+          "R4",
+          "R5",
+          "R6",
+          "Z1",
+          "Z2"
+        ],
+        "state": 0,
+        "support_triangle": [
+          "R0",
+          "R2",
+          "Z0"
+        ]
+      },
+      {
+        "anchor_arc": [
+          "R0",
+          "R2"
+        ],
+        "cross_pair_data": {
+          "C1": {
+            "degree_two_count": 0,
+            "low_vertices": [],
+            "minimum_residual_outdegree": 3,
+            "two_disjoint_cycle_certificate": [
+              [
+                "B0",
+                "R1",
+                "R4"
+              ],
+              [
+                "B1",
+                "B2",
+                "R5"
+              ]
+            ]
+          },
+          "C2": {
+            "degree_two_count": 1,
+            "low_vertices": [
+              [
+                "Z0",
+                2
+              ]
+            ],
+            "minimum_residual_outdegree": 2,
+            "two_disjoint_cycle_certificate": [
+              [
+                "A0",
+                "R1",
+                "R3"
+              ],
+              [
+                "A1",
+                "A2",
+                "Z2"
+              ]
+            ]
+          }
+        },
+        "fresh_off_pivot_W": [
+          "Z0",
+          "Z2"
+        ],
+        "neutral_pivot_to_state": 2,
+        "pivot_insert": "Z2",
+        "pivot_remove": "Z1",
+        "remainder": [
+          "R1",
+          "R3",
+          "R4",
+          "R5",
+          "R6",
+          "Z0",
+          "Z2"
+        ],
+        "state": 1,
+        "support_triangle": [
+          "R0",
+          "R2",
+          "Z1"
+        ]
+      },
+      {
+        "anchor_arc": [
+          "R0",
+          "R2"
+        ],
+        "cross_pair_data": {
+          "C1": {
+            "degree_two_count": 0,
+            "low_vertices": [],
+            "minimum_residual_outdegree": 3,
+            "two_disjoint_cycle_certificate": [
+              [
+                "B0",
+                "R1",
+                "R4"
+              ],
+              [
+                "B1",
+                "B2",
+                "R5"
+              ]
+            ]
+          },
+          "C2": {
+            "degree_two_count": 1,
+            "low_vertices": [
+              [
+                "Z1",
+                2
+              ]
+            ],
+            "minimum_residual_outdegree": 2,
+            "two_disjoint_cycle_certificate": [
+              [
+                "A0",
+                "A1",
+                "Z1"
+              ],
+              [
+                "A2",
+                "R1",
+                "R5"
+              ]
+            ]
+          }
+        },
+        "fresh_off_pivot_W": [
+          "Z0",
+          "Z1"
+        ],
+        "neutral_pivot_to_state": 0,
+        "pivot_insert": "Z0",
+        "pivot_remove": "Z2",
+        "remainder": [
+          "R1",
+          "R3",
+          "R4",
+          "R5",
+          "R6",
+          "Z0",
+          "Z1"
+        ],
+        "state": 2,
+        "support_triangle": [
+          "R0",
+          "R2",
+          "Z2"
+        ]
+      }
+    ],
+    "vertices": 16
+  },
+  "repair_lemma_checked_scope": {
+    "statement": "The local 3-state orbit survives same-pair W-regeneration; in a genuine counterexample the known k=2 pair-deletion theorem must be applied to each cross pair. For a 3-slot state, persistent no-six forces at least one degree-two witness outside the three slot vertices for each cross pair.",
+    "why_local_adversary_is_excluded": "Every cross-pair residual in the three states already contains two vertex-disjoint directed cycles; the recorded certificates exhibit them."
+  },
+  "status": "PASS"
+}

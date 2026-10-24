@@ -1,0 +1,19 @@
+{
+ "helper_version":"A082-independent-K5-review-v1",
+ "source_claim":"A071-EXACT-FIVEBIT-ERASURE-SELECTION@1",
+ "family":"every Boolean sign table on the uniform five-bit physical cube",
+ "raw_case_count":2147483648,
+ "raw_domain":"all odd uint32 negative masks, representing a minority side translated to include zero",
+ "covering_filters":"minority size<=16; physical edge influences nondecreasing; minimum odd mask in translation orbit. These cover all tables after output negation and coordinate permutations, without claiming unique orbits.",
+ "expected_filtered_cases":5778648,
+ "pilot_case_count":524288,
+ "batch_size":131072,
+ "arithmetic":"integer popcounts give direct Walsh coefficients, exact physical boundary counts; Fraction atanh remainder gives outward packet log bounds at 2^40; equality checked by prime-log vector and integer products",
+ "memory_estimate_mb":80,
+ "maximum_runtime_seconds":1200,
+ "pilot_maximum_runtime_seconds":55,
+ "one_heavy_job_at_a_time":true,
+ "dimension_escalation":false,
+ "finite_target":"E*(5)=16/3-(3/8)log2(3)-(169/24)log2(13)+(89/24)log2(89)",
+ "all_dimensional_application":"separately prove affine Fourier dimension<=5 and disjoint-product hereditary leaf extension; arbitrary affine dimension is excluded"
+}

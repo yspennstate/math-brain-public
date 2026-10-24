@@ -1,0 +1,514 @@
+{
+ "spec": "mathbrain-draft-v1",
+ "author_agent": "codex-prob1000-breadth-1010",
+ "bundle_slug": "prob1000-breadth-results-005",
+ "entries": [
+  {
+   "key": "i0027-i0027-rate-one-graph-walk",
+   "namespace": "probability.extremal_graph_walks",
+   "logical_name": "i0027-rate-one-kemeny-and-relaxation",
+   "kind": "definition",
+   "title": "Kemeny constant and relaxation time for rate-one graph walk",
+   "statement": "[open-problem result I0027, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For rate-one simple random walk on connected simple n-vertex graphs, τ₂ ≤ τ₀ ≤ n³/54 + (37/8)n^{5/2}, and barbells with cliques of size ⌊n/3⌋ joined by a path of n−2⌊n/3⌋+1 edges have τ₂ ≥ [3a(a−1)ℓ+ℓ²+2]/6 ~ n³/54; hence max τ₀ ~ max τ₂ ~ n³/54.] For a connected simple graph, put P(u,v)=1/d_u on edges and pi_u=d_u/(2|E|). For generator P-I, define tau_0=sum_v pi_v E_u[T_v] and tau_2=1/mu_2, where mu_2 is the smallest positive eigenvalue of I-P.",
+   "assumptions": [
+    "Finite connected simple undirected unweighted graph",
+    "At least two vertices",
+    "Total jump rate one"
+   ],
+   "domain": "Finite reversible Markov chains",
+   "source": {
+    "source_id": "campaign_result:I0027:2026-10-10",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "draft-v1; independent audit pending",
+    "license": "owner-own-work (campaign result, attributed)"
+   },
+   "proof_text": null
+  },
+  {
+   "key": "i0027-i0027-kemeny-resistance-identity",
+   "namespace": "probability.extremal_graph_walks",
+   "logical_name": "i0027-kemeny-resistance-identity",
+   "kind": "lemma",
+   "title": "Spectral and electrical representations of Kemeny's constant",
+   "statement": "[open-problem result I0027, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For rate-one simple random walk on connected simple n-vertex graphs, τ₂ ≤ τ₀ ≤ n³/54 + (37/8)n^{5/2}, and barbells with cliques of size ⌊n/3⌋ joined by a path of n−2⌊n/3⌋+1 edges have τ₂ ≥ [3a(a−1)ℓ+ℓ²+2]/6 ~ n³/54; hence max τ₀ ~ max τ₂ ~ n³/54.] For the rate-one simple walk, tau_0=sum_{i=2}^n 1/mu_i=(1/W)sum_{u<v}d_u d_v R_uv, where W=sum_v d_v and R_uv is unit-edge effective resistance. Consequently tau_2<=tau_0, and R_uv<=dist_G(u,v).",
+   "proof_text": "Let L=diag(d)-Adj, Pi=1 pi^T, and Z=(I-P+Pi)^(-1). Connectedness and f^T L f=sum_edges(f_u-f_v)^2 imply that I-P has one zero eigenvalue and positive remaining eigenvalues mu_i. Its similarity to a symmetric matrix gives a complete eigenbasis. Thus Z has eigenvalues 1 and 1/mu_i. Also Z1=1 and (I-P)Z=I-Pi. For each target v, h_u=(Z_vv-Z_uv)/pi_v has h_v=0 and (I-P)h=1 away from v. These hitting-time equations have a unique solution: the principal submatrix of L deleting v is positive definite, since extending a zero-energy vector with value zero at v forces the entire vector to vanish. Therefore h_u=E_u[T_v]. Summing over targets gives tau_0=tr(Z)-1=sum_{i>=2}1/mu_i, which implies tau_2<=tau_0. The hitting-time vectors satisfy Lh^v=d-W e_v, with the equation at v determined by zero column sums. Hence L(h^v-h^u)=W(e_u-e_v). If L phi=e_u-e_v and R_uv=phi_u-phi_v, this proves E_u[T_v]+E_v[T_u]=W R_uv. Average the random-target identity over starting vertex pi and group unordered pairs to obtain tau_0=(1/W)sum_{u<v}d_u d_v R_uv. Finally orient the edges and let J be the incidence matrix. The flow i=J^T phi has divergence e_u-e_v and energy R_uv. Every other flow j with that divergence satisfies <i,j-i>=<phi,J(j-i)>=0, so ||j||^2>=R_uv. Unit flow along a shortest path has energy dist_G(u,v), establishing the resistance bound.",
+   "assumptions": [
+    "Finite connected simple undirected graph",
+    "Unit edge conductances",
+    "Rate-one simple random walk"
+   ],
+   "domain": "Reversible Markov chains and electrical networks",
+   "source": {
+    "source_id": "campaign_result:I0027:2026-10-10",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "draft-v1; independent audit pending",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0027-i0027-dense-neighborhood-components",
+   "namespace": "probability.extremal_graph_walks",
+   "logical_name": "i0027-dense-neighborhood-components",
+   "kind": "lemma",
+   "title": "Diameter budget for unions of high-degree neighborhoods",
+   "statement": "[open-problem result I0027, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For rate-one simple random walk on connected simple n-vertex graphs, τ₂ ≤ τ₀ ≤ n³/54 + (37/8)n^{5/2}, and barbells with cliques of size ⌊n/3⌋ joined by a path of n−2⌊n/3⌋+1 edges have τ₂ ≥ [3a(a−1)ℓ+ℓ²+2]/6 ~ n³/54; hence max τ₀ ~ max τ₂ ~ n³/54.] For D>0 let H={v:d_v>=D} and S=union_{h in H}N[h]. If the components of G[S] have sizes s_i and intrinsic diameters delta_i, and s=sum_i s_i, then their number k satisfies k<=s/D and sum_i delta_i<=5s/D.",
+   "proof_text": "Every component contains a high-degree vertex and its entire closed neighborhood, so its size is at least D; therefore k<=s/D. In a component C_i, take a geodesic v_0,...,v_delta_i. At indices 0,5,10,... choose high-degree vertices h_j at distance at most one from v_j. Each N[h_j] is contained in C_i. If two selected closed neighborhoods intersect, the corresponding path vertices are joined inside C_i by a walk of length at most four, contradicting geodesicity because their indices differ by at least five. The selected neighborhoods are therefore disjoint and each has at least D vertices. Thus (floor(delta_i/5)+1)D<=s_i, giving delta_i<=5s_i/D. Sum over components. When S is empty both asserted quantities are zero.",
+   "assumptions": [
+    "Finite simple undirected graph",
+    "D is a positive real number",
+    "Diameters measured inside the induced components"
+   ],
+   "domain": "Graph geometry",
+   "source": {
+    "source_id": "campaign_result:I0027:2026-10-10",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "draft-v1; independent audit pending",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0027-i0027-uniform-kemeny-upper-bound",
+   "namespace": "probability.extremal_graph_walks",
+   "logical_name": "i0027-uniform-kemeny-upper-bound",
+   "kind": "theorem",
+   "title": "Sharp leading upper bound for graph Kemeny constant",
+   "statement": "[open-problem result I0027, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For rate-one simple random walk on connected simple n-vertex graphs, τ₂ ≤ τ₀ ≤ n³/54 + (37/8)n^{5/2}, and barbells with cliques of size ⌊n/3⌋ joined by a path of n−2⌊n/3⌋+1 edges have τ₂ ≥ [3a(a−1)ℓ+ℓ²+2]/6 ~ n³/54; hence max τ₀ ~ max τ₂ ~ n³/54.] Every connected simple n-vertex graph, with rate-one simple random walk, satisfies tau_0<=n^3/54+(37/8)n^(5/2).",
+   "proof_text": "Use kemeny_resistance_identity and dense_neighborhood_components, whose proofs are included in this packet. For threshold D>0, form S and its components C_i; write s=|S|, t=n-s, and delta=sum_i diam(G[C_i])<=5s/D. Contract these components, retain outside vertices singly, and choose a quotient spanning tree T. It has at most t+s/D edges and at most n-1 edges. Assign each part weight w_x=sum_{v in part}d_v. Lifting tree paths gives R_uv<=dist_T(q(u),q(v))+delta, so K<=sum_{e in T}W_L(e)W_R(e)/W+W delta/2. Put a_i=2|E(G[C_i])| for components and a_x=0 for outside vertices, and let b_x=w_x-a_x. Their residual total B is at most 2 sum_{v outside S}d_v<=2nD. For a tree cut let A_L,A_R be the sums of a_x. Expanding the product, using A=A_L+A_R and W=A+B, gives W_L W_R/W<=A_L A_R/A+B, interpreting the core term as zero if A=0. Indeed the noncore numerator is at most AB+B^2. If x,y count original component vertices on the two sides, simplicity gives A_L<=x^2 and A_R<=y^2, with x+y=s. Monotonicity of ab/(a+b), followed by (x+y)^2(x^2+y^2)-8x^2y^2=(x-y)^2(x^2+4xy+y^2)>=0, bounds the core term by s^2/8. Consequently K<=(t+s/D)s^2/8+2n^2D+5Ws/(2D). Since W<=n^2 and s<=n, K<=(n-s)s^2/8+(21/8)n^3/D+2n^2D. The maximum of (n-s)s^2 on [0,n] is 4n^3/27. Taking D=sqrt(n) establishes the claimed bound.",
+   "assumptions": [
+    "Connected simple undirected unweighted graph",
+    "n>=2",
+    "Rate-one simple random walk",
+    "The two preceding lemmas"
+   ],
+   "domain": "Extremal graph Markov chains",
+   "source": {
+    "source_id": "campaign_result:I0027:2026-10-10",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "draft-v1; independent audit pending",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0027-i0027-balanced-barbell-lower-bound",
+   "namespace": "probability.extremal_graph_walks",
+   "logical_name": "i0027-balanced-barbell-lower-bound",
+   "kind": "lemma",
+   "title": "Explicit relaxation lower bound for balanced barbells",
+   "statement": "[open-problem result I0027, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For rate-one simple random walk on connected simple n-vertex graphs, τ₂ ≤ τ₀ ≤ n³/54 + (37/8)n^{5/2}, and barbells with cliques of size ⌊n/3⌋ joined by a path of n−2⌊n/3⌋+1 edges have τ₂ ≥ [3a(a−1)ℓ+ℓ²+2]/6 ~ n³/54; hence max τ₀ ~ max τ₂ ~ n³/54.] For two copies of K_a joined between attachment vertices by a path of ell edges, tau_2 >= [3a(a-1)ell+ell^2+2]/6.",
+   "proof_text": "Let f be -1 on one clique, +1 on the other, and -1+2j/ell at internal path position j. Degree-preserving reflection sends f to -f, so sum_v d_v f_v=0. The symmetric normalized-Laplacian variational principle, with vector diag(d)^(1/2)f, gives mu_2<=sum_edges(f_u-f_v)^2/sum_v d_v f_v^2. Its numerator is 4/ell. Each clique contributes a(a-1)+1 to the denominator, and internal vertices have degree two. Expanding and summing squares gives sum_{j=1}^{ell-1}(-1+2j/ell)^2=(ell-1)(ell-2)/(3ell). Therefore the denominator equals 2a(a-1)+2ell/3+4/(3ell). Taking the reciprocal Rayleigh quotient gives a(a-1)ell/2+ell^2/6+1/3, which is the stated bound.",
+   "assumptions": [
+    "a>=2 and ell>=1 are integers",
+    "The cliques are disjoint",
+    "The connecting path has ell-1 new internal vertices",
+    "Rate-one simple random walk"
+   ],
+   "domain": "Spectral graph theory and reversible Markov chains",
+   "source": {
+    "source_id": "campaign_result:I0027:2026-10-10",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "draft-v1; independent audit pending",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0027-i0027-extremal-asymptotics",
+   "namespace": "probability.extremal_graph_walks",
+   "logical_name": "i0027-extremal-kemeny-relaxation-asymptotics",
+   "kind": "theorem",
+   "title": "Extremal Kemeny constant and relaxation time have leading constant 1/54",
+   "statement": "[open-problem result I0027, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For rate-one simple random walk on connected simple n-vertex graphs, τ₂ ≤ τ₀ ≤ n³/54 + (37/8)n^{5/2}, and barbells with cliques of size ⌊n/3⌋ joined by a path of n−2⌊n/3⌋+1 edges have τ₂ ≥ [3a(a−1)ℓ+ℓ²+2]/6 ~ n³/54; hence max τ₀ ~ max τ₂ ~ n³/54.] Over connected simple n-vertex graphs with rate-one simple random walk, max_G tau_0(G) ~ n^3/54 and max_G tau_2(G) ~ n^3/54. Two cliques of size floor(n/3), joined by a path of n-2floor(n/3)+1 edges, attain both leading constants.",
+   "proof_text": "For n>=6 put a=floor(n/3) and ell=n-2a+1. The specified barbell has 2a+ell-1=n vertices. The balanced_barbell_lower_bound gives L_n=[3a(a-1)ell+ell^2+2]/6<=tau_2 of this graph. Since a/n and ell/n tend to 1/3, L_n/n^3 tends to 1/54. The kemeny_resistance_identity gives tau_2<=tau_0 for every graph. The uniform_kemeny_upper_bound therefore yields L_n<=M_2(n)<=M_0(n)<=n^3/54+(37/8)n^(5/2). Dividing by n^3 and applying the squeeze theorem proves both limits. Applying the same inequalities to the displayed barbell proves its asymptotic attainment for both quantities.",
+   "assumptions": [
+    "Connected simple undirected unweighted graphs",
+    "Rate-one simple random walk",
+    "The spectral identity, upper-bound theorem, and barbell lemma proved in this packet"
+   ],
+   "domain": "Probability and extremal spectral graph theory",
+   "source": {
+    "source_id": "campaign_result:I0027:2026-10-10",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "draft-v1; independent audit pending",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0040-i0040-def-nonempty-spectral-size",
+   "namespace": "probability.percolation.fourier",
+   "logical_name": "i0040-conditional-nonempty-spectral-size-law",
+   "kind": "definition",
+   "title": "Nonempty Fourier spectral-size law",
+   "statement": "[open-problem result I0040, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For critical triangular-lattice site percolation crossings (nonempty spectral normalization), given the Garban–Pete–Schramm lower-tail and first-moment estimates and four-arm exponent 5/4: ˜µ([R^{α₁},R^{α₂}]) = R^{−1/2+2α₂/3+o(1)} for α₁<α₂<3/4; it has log-exponent 0 when α₂=3/4; it tends to 1 when α₁<3/4<α₂; and it is O(R^{3/4−α₁+o(1)}) → 0 when α₁>3/4.] For nonconstant f:{-1,1}^N->{-1,1}, let hat_f(S)=E[f(x) product_{i in S} x_i]. Define P(K=k)=sum_{|S|=k} hat_f(S)^2/Var(f), k>=1. Parseval gives total mass 1.",
+   "assumptions": [
+    "Finite N.",
+    "Independent unbiased spins.",
+    "Var(f)>0."
+   ],
+   "domain": "Probability; Boolean Fourier analysis",
+   "source": {
+    "source_id": "I0040_campaign_20261010",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "2026-10-10; draft pending independent audit",
+    "license": "owner-own-work (campaign result, attributed)"
+   },
+   "proof_text": null
+  },
+  {
+   "key": "i0040-i0040-lemma-four-site-crossing-spectrum",
+   "namespace": "probability.percolation.fourier",
+   "logical_name": "i0040-four-site-triangular-rhombus-spectral-law",
+   "kind": "lemma",
+   "title": "Exact spectrum of the four-site triangular rhombus crossing",
+   "statement": "[open-problem result I0040, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For critical triangular-lattice site percolation crossings (nonempty spectral normalization), given the Garban–Pete–Schramm lower-tail and first-moment estimates and four-arm exponent 5/4: ˜µ([R^{α₁},R^{α₂}]) = R^{−1/2+2α₂/3+o(1)} for α₁<α₂<3/4; it has log-exponent 0 when α₂=3/4; it tends to 1 when α₁<3/4<α₂; and it is O(R^{3/4−α₁+o(1)}) → 0 when α₁>3/4.] For independent p=1/2 site states on the graph with edges ab,ac,bc,bd,cd, left boundary {a,c}, and right boundary {b,d}, the conditional nonempty spectral-size law is P(K=1)=5/8, P(K=2)=1/4, P(K=3)=1/8, P(K=4)=0. Its mean is 3/2.",
+   "proof_text": "Denote the open indicators by a,b,c,d in {0,1}. Any left-right path must use an edge between {a,c} and {b,d}; those edges are exactly ab,bc,cd. Conversely, any such edge with both endpoints open supplies a crossing. Thus the crossing event is ab=1 or bc=1 or cd=1. Its complement indicator is (1-ab)(1-bc)(1-cd)=1-ab-bc-cd+abc+bcd, using the idempotence of the indicators. Therefore the crossing spin f=2*1_crossing-1 equals -1+2ab+2bc+2cd-2abc-2bcd. Put A=2a-1, B=2b-1, C=2c-1, D=2d-1. Expansion gives f=(A+D)/4+(B+C)/2+(AB+CD-AC-BD)/4-(ABC+BCD)/4. Products of distinct independent unbiased spins are orthonormal: the expectation of the product of two different characters vanishes because some spin occurs to an odd power. Hence this is the Fourier expansion. There is no constant coefficient. The squared degree-1 coefficients sum to 2/16+2/4=5/8; the squared degree-2 coefficients sum to 4/16=1/4; the squared degree-3 coefficients sum to 2/16=1/8. There are no degree-4 terms. These masses sum to 1 and give the stated conditional law. Its mean is 5/8+2*(1/4)+3*(1/8)=3/2.",
+   "assumptions": [
+    "The stated graph and boundary sets.",
+    "Independent p=1/2 site states.",
+    "Conditional nonempty Fourier normalization."
+   ],
+   "domain": "Probability; exact finite percolation crossings",
+   "source": {
+    "source_id": "I0040_campaign_20261010",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "2026-10-10; complete finite proof, pending independent audit",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0040-i0040-theorem-conditional-exponent-windows",
+   "namespace": "probability.percolation.fourier",
+   "logical_name": "i0040-polynomial-windows-from-four-arm-spectral-estimates",
+   "kind": "theorem",
+   "title": "Polynomial spectral windows from four-arm and lower-tail inputs",
+   "statement": "[open-problem result I0040, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For critical triangular-lattice site percolation crossings (nonempty spectral normalization), given the Garban–Pete–Schramm lower-tail and first-moment estimates and four-arm exponent 5/4: ˜µ([R^{α₁},R^{α₂}]) = R^{−1/2+2α₂/3+o(1)} for α₁<α₂<3/4; it has log-exponent 0 when α₂=3/4; it tends to 1 when α₁<3/4<α₂; and it is O(R^{3/4−α₁+o(1)}) → 0 when α₁>3/4.] Under the explicit assumptions below, for 0<=alpha1<alpha2<=3/4 the window probability equals R^(-1/2+2alpha2/3+o(1)); at alpha2=3/4 this means only logarithmic exponent zero. For alpha1<3/4<alpha2 it tends to 1. For 3/4<alpha1<alpha2 it is at most R^(3/4-alpha1+o(1)) and tends to zero. This is a conditional elementary consequence of published estimates, with no novelty claim.",
+   "proof_text": "Let F_R(t)=P(K_R<=t). For fixed 0<b<1, take r=floor(R^b). The arm assumptions imply r^2 a(r)=R^(3b/4+o(1)) and alpha_4(r,R)=R^(-5(1-b)/4+o(1)). Substituting into the assumed lower-tail estimate gives F_R(r^2 a(r))=R^(-(1-b)/2+o(1)). For 0<alpha<3/4 set b=4alpha/3. Choose epsilon>0 with b-epsilon>0 and b+epsilon<1. The thresholds at r=floor(R^(b-epsilon)) and r=floor(R^(b+epsilon)) eventually lie below and above R^alpha. Monotonicity therefore bounds log F_R(R^alpha)/log R between -1/2+b/2-epsilon/2+o(1) and -1/2+b/2+epsilon/2+o(1). Sending epsilon to zero proves F_R(R^alpha)=R^(-1/2+2alpha/3+o(1)). For alpha=3/4, the scale r=floor(R^(1-epsilon)) has threshold below R^(3/4), giving F_R(R^(3/4))>=R^(-epsilon/2+o(1)). Together with F_R<=1, arbitrary epsilon gives logarithmic exponent zero. If 0<alpha1<alpha2<=3/4, the ratio F_R(R^alpha1)/F_R(R^alpha2) tends to zero, so subtracting the mass below R^alpha1 leaves the same logarithmic exponent. When alpha1=0 there is no lower loss because K_R>=1. This proves the first assertion. For a window straddling 3/4, its lower loss tends to zero by that estimate. The moment assumption gives E[K_R]<=R^(3/4+o(1)); Markov bounds its upper loss by R^(3/4-alpha2+o(1)), which tends to zero. This proves concentration. For a window strictly above 3/4, Markov instead bounds its entire mass by R^(3/4-alpha1+o(1)), proving the final assertion.",
+   "assumptions": [
+    "K_R>=1 has the conditional nonempty spectral law of the stated fixed-shape triangular-lattice crossing.",
+    "a(r)=alpha_4(1,r)=r^(-5/4+o(1)).",
+    "alpha_4(r,R) asymp a(R)/a(r), with constants independent of scale.",
+    "P(K_R<=r^2 a(r)) asymp (R/r)^2 alpha_4(r,R)^2 for intermediate scales, as supplied by the Garban-Pete-Schramm lower-tail theorem.",
+    "E[K_R]<=C R^2 a(R), with C independent of R.",
+    "The percolation estimates are imported literature inputs, not independently proved campaign results."
+   ],
+   "domain": "Probability; critical planar percolation; conditional asymptotic theorem",
+   "source": {
+    "source_id": "I0040_campaign_20261010",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "2026-10-10; conditional proof pending independent audit",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0043-draft-i0043-boundary-interval-v1",
+   "namespace": "probability.sle",
+   "logical_name": "i0043-chordal-sle-boundary-interval-hitting-probability",
+   "kind": "theorem",
+   "title": "Exact boundary-interval hitting probability for 4<κ<8",
+   "statement": "[open-problem result I0043, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For chordal SLE_κ and deterministic compact K ⊂ ℝ: if κ ≤ 4 then P(γ∩K≠∅) = 1_{0∈K}; if 4 < κ < 8 then P(γ hits [a,b]) = B(1−4/κ, 8/κ−1)^(−1) ∫_{a/b}^1 u^(−4/κ)(1−u)^(8/κ−2) du for 0 < a < b, every K with 0 ∉ K and H^(8/κ−1)(K) = 0 is a.s. avoided, and there exist avoided compact K ⊂ [1,2] with dim_H K = 8/κ−1; no sufficient condition for fractal K and nothing for interior K is established.] For chordal SLEκ in H from 0 to infinity, 4<κ<8 and 0<a<b, put β=4/κ and α=8/κ−1. Then P(γ∩[a,b]≠∅)=B(1−β,α)^(−1)∫_(a/b)^1 u^(−β)(1−u)^(α−1)du. In particular, SLE6 hits [1,2] with probability 1/2.",
+   "proof_text": "Use the geometric and diffusion lemmas proved as G and D in this campaign result. Before T_a, X=g_t(a)−W_t and Y=g_t(b)−W_t satisfy the common-noise Loewner SDEs. With D=Y−X and clock dv=dt/D², Z=X/D has generator (κ/2)∂²+2(1/z+1/(z+1))∂. Its scale density is [z(z+1)]^(−4/κ). The finite-exit argument in D establishes that its finite-time zero-hitting probability is its normalized scale tail and equals P(T_a<T_b). Substitution u=z/(1+z) gives the stated beta tail. G bounds interval hitting below by this probability and above by the analogous probability for expanded endpoints a'<a<b<b'. Continuity as the endpoints converge proves equality. At κ=6 the beta density is symmetric about 1/2, proving the exact value.",
+   "assumptions": [
+    "4<κ<8.",
+    "Chordal SLE in H from 0 to infinity with capacity normalization 2t.",
+    "0<a<b.",
+    "Geometric lemma G and diffusion lemma D, fully proved in this same result."
+   ],
+   "domain": "Probability; stochastic Loewner evolution",
+   "source": {
+    "source_id": "I0043_campaign_result_2026-10-10",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "v1; draft; literature and independent audit pending",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0043-draft-i0043-boundary-small-kappa-v1",
+   "namespace": "probability.sle",
+   "logical_name": "i0043-chordal-sle-boundary-compact-sets-kappa-at-most-four",
+   "kind": "theorem",
+   "title": "Boundary compact-set classification for κ≤4",
+   "statement": "[open-problem result I0043, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For chordal SLE_κ and deterministic compact K ⊂ ℝ: if κ ≤ 4 then P(γ∩K≠∅) = 1_{0∈K}; if 4 < κ < 8 then P(γ hits [a,b]) = B(1−4/κ, 8/κ−1)^(−1) ∫_{a/b}^1 u^(−4/κ)(1−u)^(8/κ−2) du for 0 < a < b, every K with 0 ∉ K and H^(8/κ−1)(K) = 0 is a.s. avoided, and there exist avoided compact K ⊂ [1,2] with dim_H K = 8/κ−1; no sufficient condition for fractal K and nothing for interior K is established.] For 0<κ≤4 and deterministic compact K⊂R, P(γ∩K≠∅) is 1 when 0∈K and 0 otherwise.",
+   "proof_text": "For each positive rational q, X=g_t(q)−W_t satisfies dX=2dt/X−√κ dB until collision. An increasing scale function has derivative x^(−4/κ), and tends to minus infinity at 0 when κ≤4. Stopping between ε and M gives lower-exit probability [h(M)−h(q)]/[h(M)−h(ε)], which tends to 0 as ε decreases to 0. A union over integer M excludes any finite collision for q. Any positive real trace contact would swallow or touch a smaller positive rational, by the crosscut argument G, so no such contact exists almost surely. Brownian reflection excludes negative contacts. The trace starts at 0, giving the conclusion.",
+   "assumptions": [
+    "0<κ≤4.",
+    "Chordal SLE in H from 0 to infinity.",
+    "K is a deterministic compact subset of R.",
+    "The defining trace-hull relations stated in this result."
+   ],
+   "domain": "Probability; stochastic Loewner evolution",
+   "source": {
+    "source_id": "I0043_campaign_result_2026-10-10",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "v1; draft; literature and independent audit pending",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0043-draft-i0043-hausdorff-null-v1",
+   "namespace": "probability.sle",
+   "logical_name": "i0043-sle-boundary-hausdorff-null-sets-are-polar",
+   "kind": "theorem",
+   "title": "Hausdorff-null obstruction to boundary hitting",
+   "statement": "[open-problem result I0043, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For chordal SLE_κ and deterministic compact K ⊂ ℝ: if κ ≤ 4 then P(γ∩K≠∅) = 1_{0∈K}; if 4 < κ < 8 then P(γ hits [a,b]) = B(1−4/κ, 8/κ−1)^(−1) ∫_{a/b}^1 u^(−4/κ)(1−u)^(8/κ−2) du for 0 < a < b, every K with 0 ∉ K and H^(8/κ−1)(K) = 0 is a.s. avoided, and there exist avoided compact K ⊂ [1,2] with dim_H K = 8/κ−1; no sufficient condition for fractal K and nothing for interior K is established.] Let 4<κ<8, α=8/κ−1, and K⊂R be deterministic compact with 0∉K. If H^α(K)=0, then P(γ∩K≠∅)=0.",
+   "proof_text": "For nonempty K let δ=dist(K,0)>0. Cover K by same-side intervals of lengths ℓ_j≤δ/2 with total α-cost below η and endpoint distances at least δ/2. The interval theorem bounds each hitting probability by Cδ^(−α)ℓ_j^α, with C=2^(4/κ+α)/[αB(1−4/κ,α)]. Indeed the beta-tail integrand has u^(−4/κ)≤2^(4/κ) because the endpoint ratio is at least 1/2. Reflection treats negative intervals. The union bound gives hitting probability at most Cδ^(−α)η. Let η decrease to 0. The empty set is immediate.",
+   "assumptions": [
+    "4<κ<8.",
+    "K is deterministic, compact, and excludes 0.",
+    "The exact interval theorem proved in this result."
+   ],
+   "domain": "Probability; stochastic Loewner evolution; geometric measure theory",
+   "source": {
+    "source_id": "I0043_campaign_result_2026-10-10",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "v1; draft; literature and independent audit pending",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0043-draft-i0043-critical-cantor-v1",
+   "namespace": "probability.sle",
+   "logical_name": "i0043-avoided-boundary-cantor-set-at-sle-critical-dimension",
+   "kind": "theorem",
+   "title": "An avoided Cantor set at dimension 8/κ−1",
+   "statement": "[open-problem result I0043, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For chordal SLE_κ and deterministic compact K ⊂ ℝ: if κ ≤ 4 then P(γ∩K≠∅) = 1_{0∈K}; if 4 < κ < 8 then P(γ hits [a,b]) = B(1−4/κ, 8/κ−1)^(−1) ∫_{a/b}^1 u^(−4/κ)(1−u)^(8/κ−2) du for 0 < a < b, every K with 0 ∉ K and H^(8/κ−1)(K) = 0 is a.s. avoided, and there exist avoided compact K ⊂ [1,2] with dim_H K = 8/κ−1; no sufficient condition for fractal K and nothing for interior K is established.] For every 4<κ<8, with α=8/κ−1, there is a deterministic compact K⊂[1,2] satisfying dim_H K=α, H^α(K)=0 and P(γ∩K≠∅)=0. Thus dim_H K≥α is not a sufficient hitting condition.",
+   "proof_text": "At level n retain two endpoint children in every parent, each of length L_n=2^(−n/α)(n+1)^(−1/α), starting from [1,2]. The child-to-parent ratio is at most r=2^(−1/α)<1/2. The level-n α-covering cost is 2^nL_n^α=1/(n+1), proving H^α(K)=0 and dimension at most α. Give each level-n interval mass 2^(−n). All level-n gaps are at least (1−2r)L_(n−1), so an interval with L_n≤ℓ<L_(n−1) meets at most N=2+ceil(1/(1−2r)) level-n intervals. For s<α, sup_n 2^(−n)/L_n^s is finite, giving μ(I)≤C_s|I|^s. Summing over covers proves positive H^s measure and dimension at least s. Let s increase to α. The Hausdorff-null obstruction then proves avoidance.",
+   "assumptions": [
+    "4<κ<8.",
+    "Chordal SLE in H from 0 to infinity.",
+    "The Hausdorff-null obstruction proved in this result."
+   ],
+   "domain": "Probability; stochastic Loewner evolution; fractal geometry",
+   "source": {
+    "source_id": "I0043_campaign_result_2026-10-10",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "v1; draft; literature and independent audit pending",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0047-i0047-affine-pa-tree-definition-v1",
+   "namespace": "math.probability.preferential_attachment",
+   "logical_name": "i0047-affine-pa-tree-fpp",
+   "kind": "definition",
+   "title": "First-passage distance on an affine preferential attachment tree",
+   "statement": "[open-problem result I0047, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For the affine preferential attachment tree started from the edge {1,2} with fixed δ > −1, i.i.d. non-negative edge weights independent of the tree, and two independent uniform endpoints, C_n/log n → 2E[W](1+δ)/(2+δ) in L¹ when E[W] < ∞, and C_n/log n → ∞ in probability when E[W] = ∞; for δ = 0, E[C_n] = E[W](1−1/n)(H_n−1/2) exactly. This is only a special case, not a resolution of the general (m ≥ 2) problem.] T_2 consists of the edge {1,2}, rooted at 1. For fixed δ>-1, vertex t+1 attaches to v with probability (deg_t(v)+δ)/((2+δ)t-2). Edges carry IID almost surely finite nonnegative weights, independently of the tree. U_n,V_n are independent uniform vertices, independent of the weights. C_n is the sum of edge weights on their unique simple path.",
+   "assumptions": [
+    "One edge is added per new vertex.",
+    "The initial graph is exactly the edge {1,2}.",
+    "The attachment parameter δ>-1 is fixed."
+   ],
+   "domain": "Probability; random trees; preferential attachment; first-passage percolation",
+   "source": {
+    "source_id": "I0047_campaign_derivation_20261010",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "draft-v1",
+    "license": "owner-own-work (campaign result, attributed)"
+   },
+   "proof_text": null
+  },
+  {
+   "key": "i0047-i0047-affine-pa-tree-depth-v1",
+   "namespace": "math.probability.preferential_attachment",
+   "logical_name": "i0047-affine-pa-tree-depth-marginal-and-lln",
+   "kind": "lemma",
+   "title": "Exact depth marginals and uniform-vertex depth concentration",
+   "statement": "[open-problem result I0047, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For the affine preferential attachment tree started from the edge {1,2} with fixed δ > −1, i.i.d. non-negative edge weights independent of the tree, and two independent uniform endpoints, C_n/log n → 2E[W](1+δ)/(2+δ) in L¹ when E[W] < ∞, and C_n/log n → ∞ in probability when E[W] = ∞; for δ = 0, E[C_n] = E[W](1−1/n)(H_n−1/2) exactly. This is only a special case, not a resolution of the general (m ≥ 2) problem.] In the specified affine attachment tree, set a=2+δ and α=(a-1)/a. For k≥3, h(k) has the distribution of 1+B_0+sum_{j=3}^{k-1}B_j for independent auxiliary Bernoulli variables with parameters 1/2 and (a-1)/(aj-2), respectively. For uniform U_n, E[(h(U_n)-α log n)^2]=O_δ(log n+1), so h(U_n)/log n→α in L2.",
+   "proof_text": "Let A_t(z)=sum_v(deg_t(v)+δ)z^{h(v)} and G_t(z)=E[A_t(z)]/(at-2). Attachment at depth h adds z^h+(a-1)z^{h+1}. Conditional averaging gives E[A_{t+1}(z)|T_t]=A_t(z)[1+(1+(a-1)z)/(at-2)]. Thus G_{t+1}(z)=G_t(z)(1-p_{t+1}+p_{t+1}z), where p_j=(a-1)/(aj-2), and G_2(z)=(1+z)/2. Since the parent of k is sampled by attachment weight, E[z^{h(k)}]=zG_{k-1}(z), proving the Bernoulli representation by equality of probability generating functions. Put c=2/a. Then p_j=α/(j-c)=α/j+O_δ(j^{-2}); hence E[h(k)]=α log k+O_δ(1) and Var(h(k))=O_δ(log k). The deterministic depths h(1)=0 and h(2)=1 satisfy adjusted bounds. Averaging over the uniform label gives E[(h(U_n)-α log n)^2]=(1/n)sum_k[Var(h(k))+(E[h(k)]-α log n)^2]. Bound the squared mean difference using |E[h(k)]-α log n|≤C_δ+α log(n/k). Since log(n/x)^2 decreases on (0,n], its sum over k=1,...,n is at most its integral, which equals 2n. The averaged squared mean difference is bounded, and the averaged variance is O_δ(log n+1). Division by (log n)^2 establishes L2 convergence.",
+   "assumptions": [
+    "The tree and root are as in affine_pa_tree_fpp.",
+    "δ>-1 is fixed.",
+    "The Bernoulli representation is marginal and does not assert independence of actual vertex depths."
+   ],
+   "domain": "Probability; preferential attachment; random-tree depths",
+   "source": {
+    "source_id": "I0047_campaign_derivation_20261010",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "draft-v1",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0047-i0047-affine-pa-tree-shared-ancestry-v1",
+   "namespace": "math.probability.preferential_attachment",
+   "logical_name": "i0047-affine-pa-tree-bounded-shared-ancestry",
+   "kind": "lemma",
+   "title": "Bounded expected shared ancestral depth",
+   "statement": "[open-problem result I0047, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For the affine preferential attachment tree started from the edge {1,2} with fixed δ > −1, i.i.d. non-negative edge weights independent of the tree, and two independent uniform endpoints, C_n/log n → 2E[W](1+δ)/(2+δ) in L¹ when E[W] < ∞, and C_n/log n → ∞ in probability when E[W] = ∞; for δ = 0, E[C_n] = E[W](1−1/n)(H_n−1/2) exactly. This is only a special case, not a resolution of the general (m ≥ 2) problem.] Let M_n be the depth of the lowest common ancestor of two independent uniform vertices in the specified tree. With a=2+δ, d=1/a, α=1-d, c=2d, and J_n=sum_{v=2}^n 1/(v-c), E[M_n]=((α+1)/2)(n-c)(n-1)/n^2 +(1-2α)α(n-c)J_n/n^2 +d^2(n-1)/n^2. In particular E[M_n]→(α+1)/2.",
+   "proof_text": "For nonroot vertex v let S_v(t) be its descendant-subtree size. There are S_v(t)-1 internal edges and one edge to its parent, so its total degree is 2S_v(t)-1 and its attachment weight is aS_v(t)-1. Writing X_v(t)=S_v(t)-d, its increment probability is X_v(t)/(t-c), with initial value X_v(v)=α. Conditional expectation therefore multiplies X_v by 1+1/(t-c) and X_v(X_v+1) by 1+2/(t-c). Telescoping gives E[X_v(n)]=α(n-c)/(v-c) and E[X_v(n)(X_v(n)+1)]=α(α+1)(n-c)(n+1-c)/((v-c)(v+1-c)). Because S_v^2=X_v(X_v+1)+(2d-1)X_v+d^2, this gives its second moment. Each nonroot common ancestor contributes one to M_n. Conditional on the tree, the probability that both independent uniform endpoints lie in v's subtree is S_v(n)^2/n^2. Hence E[M_n]=n^{-2}sum_{v=2}^n E[S_v(n)^2]. The factorial-moment terms telescope using 1/((v-c)(v+1-c))=1/(v-c)-1/(v+1-c); their sum is ((α+1)/2)(n-c)(n-1). The mean terms sum to (1-2α)α(n-c)J_n, and the constant terms to d^2(n-1). Division by n^2 gives the formula. Since c<2 is fixed, J_n=O_δ(log n+1); the latter two normalized terms vanish and the first tends to (α+1)/2.",
+   "assumptions": [
+    "The tree is as in affine_pa_tree_fpp, rooted at vertex 1.",
+    "δ>-1 is fixed.",
+    "Endpoints are independent uniform vertices sampled with replacement."
+   ],
+   "domain": "Probability; preferential attachment; subtree moments; common ancestors",
+   "source": {
+    "source_id": "I0047_campaign_derivation_20261010",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "draft-v1",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0047-i0047-affine-pa-tree-weighted-distance-v1",
+   "namespace": "math.probability.preferential_attachment",
+   "logical_name": "i0047-affine-pa-tree-fpp-logarithmic-law",
+   "kind": "theorem",
+   "title": "First-passage asymptotics on an affine attachment tree",
+   "statement": "[open-problem result I0047, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For the affine preferential attachment tree started from the edge {1,2} with fixed δ > −1, i.i.d. non-negative edge weights independent of the tree, and two independent uniform endpoints, C_n/log n → 2E[W](1+δ)/(2+δ) in L¹ when E[W] < ∞, and C_n/log n → ∞ in probability when E[W] = ∞; for δ = 0, E[C_n] = E[W](1−1/n)(H_n−1/2) exactly. This is only a special case, not a resolution of the general (m ≥ 2) problem.] For the model affine_pa_tree_fpp, if μ=E[W]<infinity then C_n/log n→2μ(1+δ)/(2+δ) in L1. If E[W]=infinity then C_n/log n→infinity in probability.",
+   "proof_text": "Set α=(1+δ)/(2+δ). The included depth lemma proves h(U_n)/log n→α in L2, and the included shared-ancestry lemma proves E[M_n]=O_δ(1). The path identity L_n=h(U_n)+h(V_n)-2M_n and the triangle inequality therefore give L_n/log n→2α in L1, without requiring independence between endpoint depths. Thus E[L_n]/log n→2α. The unique simple path is determined by the tree and endpoints independently of the weights, and nonnegative weights make its weight sum equal to first-passage distance. For K>0 truncate every weight to W^(K)=min(W,K), with mean μ_K, and write C_n^(K) for the resulting sum. Conditional on the path, the summands are IID and their variance is at most K^2, giving E[|C_n^(K)-μ_KL_n|]≤K sqrt(E[L_n]). For finite μ, independence also gives E[C_n-C_n^(K)]=(μ-μ_K)E[L_n]. Consequently E[|C_n-μL_n|]≤K sqrt(E[L_n])+2(μ-μ_K)E[L_n]. After division by log n and passage to the limit in n, the upper limit is at most 4α(μ-μ_K). Monotone convergence gives μ_K↑μ, proving that this upper limit is zero as K increases. Combine with the L1 limit of L_n/log n. If μ=infinity, each truncated law still has finite mean and therefore C_n^(K)/log n→2αμ_K in probability. For a prescribed finite R choose K with 2αμ_K>R. The inequality C_n≥C_n^(K) implies P(C_n/log n≤R)→0, which is the asserted divergence.",
+   "assumptions": [
+    "The tree is as in affine_pa_tree_fpp.",
+    "δ>-1 is fixed.",
+    "Weights are IID, nonnegative, almost surely finite, and independent of the tree and endpoints.",
+    "Endpoints are independent uniform vertices.",
+    "No finite second moment of the weights is assumed."
+   ],
+   "domain": "Probability; preferential attachment; first-passage percolation",
+   "source": {
+    "source_id": "I0047_campaign_derivation_20261010",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "draft-v1",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0047-i0047-degree-proportional-tree-exact-mean-v1",
+   "namespace": "math.probability.preferential_attachment",
+   "logical_name": "i0047-degree-proportional-pa-tree-exact-fpp-mean",
+   "kind": "lemma",
+   "title": "Exact expected distance in the degree-proportional attachment tree",
+   "statement": "[open-problem result I0047, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For the affine preferential attachment tree started from the edge {1,2} with fixed δ > −1, i.i.d. non-negative edge weights independent of the tree, and two independent uniform endpoints, C_n/log n → 2E[W](1+δ)/(2+δ) in L¹ when E[W] < ∞, and C_n/log n → ∞ in probability when E[W] = ∞; for δ = 0, E[C_n] = E[W](1−1/n)(H_n−1/2) exactly. This is only a special case, not a resolution of the general (m ≥ 2) problem.] For affine_pa_tree_fpp with δ=0 and finite mean edge weight μ, E[C_n]=μ(1-1/n)(H_n-1/2) for every n≥2, where H_n=sum_{j=1}^n 1/j.",
+   "proof_text": "Let Q_n=sum_{u<v}dist(u,v) for the unweighted tree. For each vertex v, orient edges away from v. Summing endpoint distances over edges gives sum_p deg(p)dist(p,v)=2sum_p dist(p,v)-(n-1), because every nonroot vertex contributes twice its depth minus one. Summing over v yields sum_{p,v}deg(p)dist(p,v)=4Q_n-n(n-1). Adding a new leaf at parent p increases Q by n+sum_v dist(p,v). Degree-proportional parent selection has denominator 2(n-1), so q_n=E[Q_n] obeys q_{n+1}=((n+1)/(n-1))q_n+n/2, with q_2=1. Dividing by n(n+1) and telescoping gives q_n/[n(n-1)]=1/2+(1/2)sum_{j=3}^n1/j=H_n/2-1/4. Independent uniform endpoints have expected hop distance 2q_n/n^2. Conditional on their path, the expected sum of independent edge weights equals μ times its length. Substitution proves the formula.",
+   "assumptions": [
+    "Initial graph is the edge {1,2}.",
+    "Each new vertex adds one edge with degree-proportional attachment.",
+    "Endpoints are independent uniform vertices sampled with replacement.",
+    "Weights are independent of the graph and endpoints and have finite mean μ."
+   ],
+   "domain": "Probability; preferential attachment; exact expected distances",
+   "source": {
+    "source_id": "I0047_campaign_derivation_20261010",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "draft-v1",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0056-i0056-triangle-inflation-expansion-v1",
+   "namespace": "probability.isoperimetry",
+   "logical_name": "i0056-triangle-inflation-expansion-constants",
+   "kind": "theorem",
+   "title": "Exact ordinary and anchored expansion under cubic triangle inflation",
+   "statement": "[open-problem result I0056, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: Φ_V of every regular co-regular plane tessellation is determined: the Haslegrave–Panagiotis formulas for codegree 3 and 4 (with the \"+\" root), and Φ_V = Φ_E = (d−2)√(1−4/((d−2)(f−2))) for codegree ≥ 5 by an elementary transfer argument. In addition, for any infinite connected cubic H, Φ_E = Φ_V = Φ_E(H)/3 for the triangle inflation T(H), in both ordinary and anchored forms. This gives exact constants (1/3)√((p−6)/(p−2)) for the transitive truncated tessellations with faces 3 and 2p; the general transitive clause remains open.] For every infinite connected simple cubic graph H, replace each vertex by the triangle of its three edge incidences, joining paired incidences across each old edge. The resulting T(H) satisfies Φ_E(T(H))=Φ_V(T(H))=Φ_E(H)/3 and Φ_E*(T(H))=Φ_V*(T(H))=Φ_E*(H)/3. Ordinary infima may be taken over unions of whole triangles.",
+   "proof_text": "If a finite set occupies s∈{1,2} vertices of a triangle, filling its 3−s missing vertices removes s(3−s) crossing triangle edges and adds at most 3−s crossing external edges. Thus its edge boundary cannot increase. Every missing triangle vertex is already an outer boundary vertex; filling removes all 3−s of them and creates at most 3−s external boundary vertices, so its vertex boundary cannot increase either. Fill all touched triangles. If S is their set of base vertices, the resulting set has size 3|S|≥|K|. Both its boundary sizes equal |∂_E^H S|: each crossing base edge produces one external crossing edge and one distinct outside incidence vertex. Writing h=Φ_E(H), both original boundaries are therefore at least h|S|≥h|K|/3. Full-triangle sets over base sets approaching h give the reverse inequality. This proves the ordinary identities for all finite sets, including disconnected ones. For anchored identities, connected root-containing K contracts to connected root-containing S with |S|≥|K|/3. Its ratio is at least one third of the base rooted edge infimum at threshold ceil(|K|/3). Taking thresholds to infinity gives both anchored lower bounds. Conversely full-triangle expansions of connected root-containing base sets are connected, contain the chosen incidence root, and have exactly one third of the base edge ratio. A base sequence approaching its anchored constant proves both reverse bounds.",
+   "assumptions": [
+    "H is infinite, connected, simple and cubic.",
+    "Edges and vertices have unit weight.",
+    "Vertex boundaries are outer boundaries.",
+    "Anchored sets are connected and contain a fixed root."
+   ],
+   "domain": "Graph theory; isoperimetry; probability.",
+   "source": {
+    "source_id": "probability300_20261010_I0056_own_proof",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "2026-10-10-v1",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0056-i0056-truncated-cubic-regular-tessellations-v1",
+   "namespace": "probability.isoperimetry",
+   "logical_name": "i0056-truncated-cubic-regular-tessellation-expansion",
+   "kind": "theorem",
+   "title": "Expansion constants of truncated regular cubic plane tessellations",
+   "statement": "[open-problem result I0056, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: Φ_V of every regular co-regular plane tessellation is determined: the Haslegrave–Panagiotis formulas for codegree 3 and 4 (with the \"+\" root), and Φ_V = Φ_E = (d−2)√(1−4/((d−2)(f−2))) for codegree ≥ 5 by an elementary transfer argument. In addition, for any infinite connected cubic H, Φ_E = Φ_V = Φ_E(H)/3 for the triangle inflation T(H), in both ordinary and anchored forms. This gives exact constants (1/3)√((p−6)/(p−2)) for the transitive truncated tessellations with faces 3 and 2p; the general transitive clause remains open.] For every integer p≥6, the triangle inflation of the regular degree-3, face-degree-p tessellation is a properly embedded cubic vertex-transitive plane graph with face degrees 3 and 2p and locally finite dual. Its ordinary and anchored edge and outer vertex constants all equal (1/3)sqrt((p−6)/(p−2)).",
+   "proof_text": "The published Häggström–Jonasson–Lyons edge formula gives Φ_E(H_{3,p})=sqrt((p−6)/(p−2)). The preceding triangle-inflation theorem divides this value by three for both ordinary constants. The base is vertex-transitive, so Φ_E*=Φ_E; a complete proof of that equality is supplied in proof_or_counterexample.proof.ordinary_equals_anchored_edge_for_transitive_graphs. Applying the anchored inflation identity gives the same value for both anchored constants. Regular-tessellation symmetries act transitively on incidences and induce automorphisms of the inflated graph, proving vertex transitivity. In a proper embedding, replace each vertex star inside a small disjoint disk by its attachment triangle. This preserves properness. Each old vertex produces a triangular face, and each old p-gonal face becomes a 2p-gon because each corner contributes one extra boundary edge. Thus the dual is locally finite. Full-triangle expansions of base edge-minimizing sets attain the constant in the limit; connected rooted base sets give the anchored version.",
+   "assumptions": [
+    "p is an integer at least 6.",
+    "The base is the standard regular Euclidean or hyperbolic tessellation.",
+    "Use the cited regular-tessellation edge theorem.",
+    "Use the triangle-inflation theorem proved in the preceding draft entry."
+   ],
+   "domain": "Plane graphs; transitive graphs; isoperimetry; probability.",
+   "source": {
+    "source_id": "probability300_20261010_I0056_own_corollary",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "2026-10-10-v1",
+    "license": "owner-own-work (campaign result, attributed)"
+   }
+  },
+  {
+   "key": "i0082-probability-free-unimodality-i0082-only-point-masses-draft-20261010",
+   "namespace": "probability.free_probability.unimodality",
+   "logical_name": "i0082-only-point-masses-are-freely-strongly-unimodal",
+   "kind": "theorem",
+   "title": "Draft: every nonconstant law fails free strong unimodality",
+   "statement": "[open-problem result I0082, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For every non-degenerate Borel probability measure μ on ℝ, μ ⊞ ((1/100)δ₀ + (99/100)U[0,L]) is not unimodal for all sufficiently large L, so the freely strongly unimodal probability measures on ℝ are exactly the point masses, with no moment assumption (answer to Problem 3.11: no).] For every non-point-mass Borel probability law mu on R, there exists L_0(mu)<infinity such that mu boxplus [(1/100)delta_0+(99/100)U[0,L]] is not unimodal for every L>L_0(mu). Consequently freely strongly unimodal real probability laws are exactly point masses. No moment assumption is required.",
+   "proof_text": "For a real probability law eta let G_eta(z)=integral (z-s)^(-1) eta(ds) and F_eta=1/G_eta. Cauchy-Schwarz implies Im F_eta(z)>=Im z, strictly for a non-point-mass law. The standard free-additive subordination theorem supplies upper-half-plane omega_lambda,omega_kappa satisfying F_lambda(omega_lambda)=F_kappa(omega_kappa)=F_lambda_boxplus_kappa(z) and omega_lambda+omega_kappa=z+F_lambda_boxplus_kappa(z). These equations have at most one upper-half-plane pair: with h_eta=F_eta-id, omega_kappa is a fixed point of T_z(v)=z+h_lambda(z+h_kappa(v)); this self-map cannot be the identity because its image has imaginary part at least Im z. Schwarz's lemma excludes two distinct interior fixed points.\n\nFix non-point-mass mu and let lambda_epsilon=D_epsilon mu. Dominated convergence gives F_lambda_epsilon->id locally uniformly on the upper half-plane, including derivatives. For any bounded disk D with closure in the lower half-plane, U={1/w:w in closure(D)} is compact in the upper half-plane. Choose a bounded convex V with closure in that half-plane containing U with positive boundary distance. For small epsilon, |F_lambda_epsilon'-1|<1/2 on V, which proves injectivity by integrating along segments. Rouche's theorem on fixed small circles about points of U gives an analytic inverse H_epsilon on a neighborhood of U, with H_epsilon(u)->u uniformly. Therefore R_epsilon(w)=H_epsilon(1/w)-1/w is analytic on D, tends uniformly to zero, and has strictly negative imaginary part by the strict F inequality. No moments or global inverse branch are used.\n\nSet p=1/100, q=99/100 and kappa=p delta_0+q U[0,1], unimodal with mode 0. Put x_1=p, x_2=1/4, c=pi q, g(x)=p/x+q log(x/(1-x)), and w_j=g(x_j)-ic. Its Cauchy transform has local analytic continuation A(z)=p/z+q[Log z-Log(1-z)-i pi] near either point. Take b=g(x_2)-10i, r=99/10, and D={|w-b|<r}. This closed disk lies strictly in the lower half-plane. The bounds 3<pi<4 imply 2.97<c<3.96. Also d=g(x_1)-g(x_2)=24/25-(99/100)log 33 satisfies |d|<3. Hence both w_j belong to D. Write Delta=r^2-(10-c)^2>48.5891. Then 2r/Delta<5/12. Their disk pseudohyperbolic distance satisfies rho=r|d|/|r^2-(w_1-b)conjugate(w_2-b)|<=r|d|/Delta<2/3.\n\nApply the inverse construction on D. Let a_epsilon=Re R_epsilon(w_2), B_epsilon=R_epsilon-a_epsilon and t_epsilon=-Im R_epsilon(w_2)>0. Then t_epsilon->0, B_epsilon maps D into the lower half-plane, and B_epsilon(w_2)=-it_epsilon. Schwarz-Pick applied to (B_epsilon+it_epsilon)/(B_epsilon-it_epsilon) gives uniform O(t_epsilon) bounds for B_epsilon and all fixed-order derivatives on compact subsets of D. With K_epsilon=-Im B_epsilon and real-direction derivative K_epsilon', it gives K_epsilon(w_1)>t_epsilon/5, K_epsilon(w_2)=t_epsilon and |K_epsilon'(w_2)|<=|B_epsilon'(w_2)|<=t_epsilon 2r/Delta<(5/12)t_epsilon. These bounds follow respectively from (1-rho)/(1+rho) and the derivative form of Schwarz-Pick; the factor 2r is retained.\n\nLet lambda_tilde_epsilon be lambda_epsilon translated by -a_epsilon and sigma_epsilon=lambda_tilde_epsilon boxplus kappa. On fixed small complex neighborhoods of x_j, the equation W_epsilon=A(z-B_epsilon(W_epsilon)) has a unique holomorphic solution near A. The O(t_epsilon) bounds make its right side a contraction mapping an O(t_epsilon)-ball about A(z) into itself. Thus W_epsilon=A+O(t_epsilon), uniformly, with values in D. For upper-half-plane z in either neighborhood, put u=1/W_epsilon(z), omega_lambda=H_epsilon(u)-a_epsilon=u+B_epsilon(W_epsilon(z)), and omega_kappa=z-B_epsilon(W_epsilon(z)). Both are in the upper half-plane. They satisfy the subordination equations by the inverse construction and the defining equation for W_epsilon. The uniqueness proved above identifies W_epsilon=G_sigma_epsilon. Consequently Stieltjes inversion gives real-analytic local density f_epsilon=-Im W_epsilon/pi, positive for small epsilon.\n\nTaylor expansion, using the uniform bounds and writing t=t_epsilon, gives W_epsilon(z)=A(z)-A'(z)B_epsilon(A(z))+O(t^2) on fixed complex neighborhoods. Cauchy's estimates give the same error order after differentiation on smaller neighborhoods. Therefore f_epsilon'(x)=-[g''(x)K_epsilon(g(x)-ic)+(g'(x))^2K_epsilon'(g(x)-ic)]/pi+O(t^2), with constants independent of epsilon. Direct differentiation yields g'(x)=(x-p)/(x^2(1-x)), g''(x)=2p/x^3+q[-1/x^2+1/(1-x)^2], hence g'(x_1)=0, g''(x_1)=1000000/99, g'(x_2)=128/25 and g''(x_2)=-64/5. Thus f_epsilon'(x_1)<=-[200000/(99pi)]t+O(t^2)<0, whereas f_epsilon'(x_2)>=[64/5-(128/25)^2(5/12)]t/pi-O(t^2)=[704/(375pi)]t-O(t^2)>0 for sufficiently small epsilon. These signs at x_1<x_2 contradict unimodality: the first forces any mode to lie at or left of x_1, after which the second is impossible.\n\nFinally, set L=1/epsilon and nu_L=p delta_0+q U[0,L]. D_epsilon(mu boxplus nu_L)=lambda_epsilon boxplus kappa, whose translation by -a_epsilon is the nonunimodal sigma_epsilon. Since translation and positive dilation preserve unimodality, mu boxplus nu_L is nonunimodal for every sufficiently large L. Each nu_L is unimodal. Conversely delta_a boxplus nu is a translation of nu, so point masses are freely strongly unimodal. This completes the proof. The argument is an author draft awaiting independent audit and literature verification.",
+   "assumptions": [
+    "mu is a Borel probability measure on R",
+    "Standard unimodality permits an atom at the mode and a monotone density on either side",
+    "Standard analytic subordination theorem for real free additive convolution, stated explicitly in the proof"
+   ],
+   "domain": "free probability; free additive convolution; unimodal probability measures",
+   "source": {
+    "source_id": "PROBABILITY300_20261010_I0082_author_draft",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "2026-10-10-draft-1",
+    "license": "owner-own-work (campaign result, attributed)"
+   },
+   "review_status": "Unreviewed draft; independent model-family audit required before promotion"
+  },
+  {
+   "key": "i0084-i0084-one-sided-kernel-gap-obstruction-v1",
+   "namespace": "probability.stable_processes",
+   "logical_name": "i0084-one-sided-kernel-opposite-support-gap-obstruction",
+   "kind": "lemma",
+   "title": "Opposite support gaps prevent unimodality for one-sided kernels",
+   "statement": "[open-problem result I0084, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For the positive classical strictly 1/2-stable semigroup (Laplace transform e^{-t√λ}), the measure μ = Z⁻¹Σ_{n≥1} 2^{-n²}δ_{-2ⁿ} has all absolute moments finite, yet μ∗S_t is non-unimodal for every t > 0; so Conjecture 5.5 as literally stated (no symmetry assumption) is false, while the symmetric classical, α ≥ 1, and free cases remain open.] Let g be a bounded continuous probability density on R, zero for x<=0 and strictly decreasing on (b,infinity), where b>=0. Suppose a_n increases to infinity, a_n-a_(n-1)->infinity, and p_n>0 with sum p_n=1. Then (sum p_n delta_(-a_n))*g is not unimodal.",
+   "proof_text": "The convolution density q(x)=sum p_j g(x+a_j) is continuous by uniform convergence, and Tonelli's theorem gives integral q=1. Whenever a_n-a_(n-1)>b, the interval I_n=(-a_n+b,-a_(n-1)) is nonempty. For x in I_n, terms with j<n vanish because x+a_j<0; terms with j>=n strictly decrease because x+a_j>b. Hence q(u)>q(v) whenever u<v belong to I_n, with strictness supplied by p_n>0. The right endpoints tend to minus infinity. If the convolution had finite unimodal mode m, its continuous density would be nondecreasing to the left of m: the monotone density in the definition equals q almost everywhere, and continuity transfers monotonicity by approximation from that equality set. A sufficiently large I_n lies entirely left of m, giving a contradiction.",
+   "assumptions": [
+    "Ordinary classical convolution.",
+    "A bounded continuous probability density, zero on the nonpositive half-line and strictly decreasing beyond a finite b.",
+    "Positive probability weights and consecutive gaps tending to infinity."
+   ],
+   "domain": [
+    "probability",
+    "classical convolution",
+    "unimodality"
+   ],
+   "source": {
+    "source_id": "campaign_I0084_counterexample_20261010",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "2026-10-10 v1",
+    "license": "owner-own-work (campaign result, attributed)"
+   },
+   "audit_status": "Unreviewed draft; independent reader required before promotion."
+  },
+  {
+   "key": "i0084-i0084-positive-half-stable-all-moments-counterexample-v1",
+   "namespace": "probability.stable_processes",
+   "logical_name": "i0084-positive-half-stable-all-moments-never-unimodal-convolution",
+   "kind": "theorem",
+   "title": "All finite moments do not ensure eventual positive stable unimodality",
+   "statement": "[open-problem result I0084, 2026-10-10: GPT solver (Codex gpt-6.1-sol, max), Claude referee KEEP, not refereed by a person; established: For the positive classical strictly 1/2-stable semigroup (Laplace transform e^{-t√λ}), the measure μ = Z⁻¹Σ_{n≥1} 2^{-n²}δ_{-2ⁿ} has all absolute moments finite, yet μ∗S_t is non-unimodal for every t > 0; so Conjecture 5.5 as literally stated (no symmetry assumption) is false, while the symmetric classical, α ≥ 1, and free cases remain open.] Let Z=sum_{n>=1}2^(-n^2) and mu=Z^(-1)sum_{n>=1}2^(-n^2)delta_(-2^n). Every positive absolute moment of mu is finite. For the positive classical strictly 1/2-stable semigroup S_t with Laplace transform exp(-t sqrt(lambda)), mu*S_t is not unimodal for any t>0. Consequently Hasebe-Ueda Conjecture 5.5 is false as universally stated.",
+   "proof_text": "The semigroup has density g_t(u)=t exp(-t^2/(4u))/(2 sqrt(pi)u^(3/2)) for u>0 and zero otherwise. To verify its Laplace transform, substitute v=t/(2 sqrt(u)), obtaining (2/sqrt(pi))J(t sqrt(lambda)/2), where J(a)=integral_0^infinity exp(-v^2-a^2/v^2)dv. Differentiation and w=a/v give J'(a)=-2J(a); J(0)=sqrt(pi)/2, so the transform is exp(-t sqrt(lambda)). Thus these densities form a convolution semigroup, with scaling g_t(u)=t^(-2)g_1(u/t^2). They are also the laws of the Brownian hitting-time subordinator inf{s>=0:B_s>t/sqrt(2)}, by reflection and strong Markov, explicitly realizing a classical strictly 1/2-stable process. Since 1/2<=Z<=1, the stated weights define a probability measure. For each r>0 its absolute r-th moment is Z^(-1)sum 2^(-n^2+rn), finite because for n>=2r the terms are bounded by 2^(-n^2/2)<=2^(-n/2). Differentiation gives g_t'(u)=t exp(-t^2/(4u))(t^2/4-3u/2)/(2 sqrt(pi)u^(7/2)), so g_t strictly decreases above b_t=t^2/6 and is bounded and continuous on R. The convolution density q_t(x)=sum p_j g_t(x+2^j) is continuous by uniform convergence and has integral one by Tonelli. For every sufficiently large n, I_n=(-2^n+b_t,-2^(n-1)) is nonempty. On I_n the j<n terms vanish, while the j>=n terms strictly decrease, since their arguments exceed b_t. Consequently q_t strictly decreases there. These intervals have right endpoints tending to minus infinity. A unimodal mode m would require q_t to be nondecreasing to its left: absolute continuity eliminates the permitted mode atom, and the monotone density agrees almost everywhere with continuous q_t, so approximation transfers monotonicity to q_t. Choosing I_n entirely left of m contradicts its strict decrease. This argument applies to every t>0 with the same mu.",
+   "assumptions": [
+    "Classical convolution on R.",
+    "The positive strictly 1/2-stable semigroup normalized by exp(-t sqrt(lambda)).",
+    "Unimodality with a finite real mode, as defined in the source."
+   ],
+   "domain": [
+    "probability",
+    "stable processes",
+    "unimodality"
+   ],
+   "source": {
+    "source_id": "campaign_I0084_counterexample_20261010",
+    "url": "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000",
+    "revision": "2026-10-10 v1",
+    "license": "owner-own-work (campaign result, attributed)"
+   },
+   "audit_status": "Unreviewed draft; independent reader required before promotion."
+  }
+ ],
+ "relations": []
+}

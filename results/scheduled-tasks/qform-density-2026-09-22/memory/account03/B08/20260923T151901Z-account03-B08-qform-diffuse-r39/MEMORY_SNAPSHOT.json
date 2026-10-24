@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B08",
+  "run_id": "20260923T151901Z-account03-B08-qform-diffuse-r39",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "a8b9b6979d965f35f7022e956424b0f213fc16e6",
+  "control_commit_prepublication": "a3aba1241783fd49b15577902e851180b7af9102",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "math_result": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2cd89223b68f32e5c7ad36cf2e3be595c7c76d6b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260923T151901Z-account03-B08-qform-diffuse-r39/REPORT.md",
+    "addendum": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260923T151901Z-account03-B08-qform-diffuse-r39/ADDENDUM_PREPUBLICATION.md",
+    "status": "SUPPORTING_DIFFUSE_SCHUR_RECEIVERS_FULL_TARGET_OPEN"
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-PLUCKER-HALFCUT-RANK2-SCHUR-v1",
+      "statement": "Exact rank-two Schur residual with frame leverage mu<1/2 admits an original-coordinate half-cut with E2 >= (1-2mu)L^4/16; with |a|>=tau L this gives ||p_Q||inf < C_E2[16/(1-2mu)]^(1/8)tau^(-1/2)L^(-1).",
+      "review": "pending"
+    },
+    {
+      "id": "QFORM-NEARRANK2-DIFFUSE-SCHUR-v1",
+      "statement": "If the exact Schur residual top-two leverage is <=1/8 and s3(S)<=eta L<L/4, then ||p_Q||inf < C_E2 tau^(-1/2)(1/4-eta)^(-1/2)L^(-1); at eta=1/15 the constant is <85.114.",
+      "review": "pending"
+    },
+    {
+      "id": "QFORM-DIFFUSE-NEARRANK3-SCHUR-VOLUME-v1",
+      "statement": "With top-three leverage <=1/16, g3=(4-sqrt(3))/8, s3(S)>=beta L and s4(S)<=g3s3(S)/16, c2414 volume stability on a literal physical half-cut plus dependence-safe scalar-square reinsertion gives ||p_Q||inf <25.477 tau^(-1/2)beta^(-1/2)L^(-1).",
+      "review": "pending"
+    }
+  ],
+  "newest_source_application": {
+    "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "application": "Top-three Schur spectral frame is physically half-cut; Gram lower bound g3 and leverage <=(1/16)/g3<1/2 verify the volume-stability hypotheses. The exact post-Schur tail supplies the <=a/16 perturbation gate."
+  },
+  "partner_application": {
+    "source": "yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B08/20260923T091414Z-account04-B08-QFORM-r1/REPORT.md",
+    "application": "Scaled anisotropic localized family has ||p||inf<7.251/L; its residual top-two leverage is one, complementary to the new diffuse Schur gates."
+  },
+  "chronology_dependency": {
+    "source": "yspennstate/math-open-problems@b7556cdf6324f77477282920e1905de61003e86a",
+    "run_id": "20260923T144913Z-account03-B08-qform-diffuse-r40",
+    "application": "Chronologically prior r40 triangle rank-one escape/high-leverage router is preserved and combined with the present diffuse low-rank Schur receivers."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "checks": {
+    "status": "QFORM_B08_R39_CHECK_PASS",
+    "plucker_cases": 400,
+    "plucker_violations": 0,
+    "balance_cases": 400,
+    "balance_violations": 0,
+    "max_e2_identity_abs_error": 8.326672684688674e-16,
+    "exact_mu_quarter_constant": 56.203321077351,
+    "near_rank2_eta_fifteenth_constant": 85.113316667678,
+    "near_rank3_beta1_constant": 25.476352215552
+  },
+  "continuity_status": "FULL_OPEN; c2414 residual branch gives a continuous C0 residual density, but final scalar-square-reinserted output continuity is not proved. Exact/near-rank-two branches prove essential boundedness only.",
+  "remaining_gap": "Small/zero scalar pivot; high-leverage low-rank Schur geometry outside the r40/partner grouped endpoints; substantial multi-direction Schur tail neither a small perturbation of diffuse rank three nor already paid by collective-tail/ridge mechanisms.",
+  "next_action": "Join r40's high-leverage triangle router to the present diffuse Schur half-cut theorem through a quantitative grouped-coordinate interpolation, while separately applying the c2414 PEER_TAIL_EXTENSION to substantial collective tails.",
+  "quiet_delivery": true
+}

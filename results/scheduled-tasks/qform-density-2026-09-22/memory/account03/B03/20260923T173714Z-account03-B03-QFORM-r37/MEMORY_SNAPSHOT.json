@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260923T173714Z-account03-B03-QFORM-r37",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "final_control_commit_observed": "e18fd14b2a334106e051ee34fe51b151630189fb",
+  "owner_request_acknowledged": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "1b55ae3931ec19bd38e915d0bdea26b840e1ee97",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T173714Z-account03-B03-QFORM-r37/REPORT.md",
+  "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T173714Z-account03-B03-QFORM-r37/CHECKS.md",
+  "headline_result": "In the exact near-coloop angular packet, if the normalized strong complementary frame direction has a physical coefficient b_k^2>=1/2, then a second original-coordinate pivot plus the dependence-safe half-Riesz residual gives ||p_Q||inf<16 sqrt(3e/2)/s3(A). Exact coloop was already paid, so this route is reduced to max b_k^2<1/2.",
+  "new_theorem_id": "QFORM-NEARCOLOOP-SECOND-HEAVY-PIVOT-v1",
+  "assigned_time_integral": "For the second-pivot residual R_k, integral |t|^(-1/2)|phi_Rk(t)|^2 dt <=8 sqrt(pi sqrt(e)|h_k|/(|sigma|sqrt(c)|b_k|m)); the independent-copy identity is kept for the whole residual.",
+  "partner": {
+    "slot": "account04/B03",
+    "source_commit": "28681f9af7c2307f80968df86010084019599e38",
+    "result_used": "P(|Y-Y'|<=eps)<=2 eps ||p_Y||_2^2",
+    "actual_application": "P(|Q-Q'|<=eps)<32 sqrt(3e/2) s3(A)^(-1) eps"
+  },
+  "premises": [
+    "account03/B03 r35 scalar-bilinear half-Riesz lemma and square receiver at dc887389947d0e4195eb1e28d6736060e718905c",
+    "account03/B03 r35 scalar-Schur physical-pivot sharpening at dc887389947d0e4195eb1e28d6736060e718905c",
+    "existing exact one-sided-overlap packet and scale |sigma|rho^2/|a|>=s3(A)^2"
+  ],
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FULL_TARGET_AND_NOT_PROVED_ON_NEW_BRANCH",
+  "remaining_implication": "Within the near-coloop route, handle 2/3<c<1 when the normalized strong complementary direction is diffuse: max_{j!=r} b_j^2<1/2, especially under angular cancellation. Use a product-preserving diffuse rank-one affine / projected-crossing or Strichartz splice without conditional sum-difference caps.",
+  "login_note": "The canonical account03/B03 login for 2026-09-23T17Z already existed from run 20260923T170717Z-account03-B03-QFORM-r36 and was not overwritten."
+}

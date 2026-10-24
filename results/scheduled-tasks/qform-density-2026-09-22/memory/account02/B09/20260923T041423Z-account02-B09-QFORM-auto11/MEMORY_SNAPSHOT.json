@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B09",
+  "run_id": "20260923T041423Z-account02-B09-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "source_control_commit_at_start": "b71723f5cfcdfb5d6c88a7f33a81a30b9eae107e",
+  "source_control_commit_after_handoff": "b1773c70c48d1747c189c1d50cb688796ce3fe0c",
+  "status": "ESSENTIAL_STEP_APPLIED_FULL_TARGET_OPEN",
+  "full_target_status": "OPEN",
+  "continuity_full_target": "OPEN",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "new_theorem": {
+    "id": "QFORM-MIXED-HUB-PLUCKER-SMOOTHING-v1",
+    "statement": "For one original-coordinate hub h and leaf block A_II=D+sum lambda_k v_k v_k^T with D diagonal, let c=A[I,h], W=[v_1,...,v_r,c], G=W^T W>0, U=WG^{-1/2}, and rho be the Pluecker probability that two determinant-weighted (r+1)-coordinate bases of U are disjoint. Then ||p_Q||_infinity <= ((r+2)/r) exp((r+1)/(r+2)) [rho det(G) prod |lambda_k|]^(-1/(r+2)), uniformly over arbitrary A_hh,A_hJ,A_IJ,A_JJ and affine terms; same coefficient times |L| for intervals. This branch has a continuous density.",
+    "mechanism": "Use the exact physical-hub Jacobian and Fresnel reduction from newest-Claude Theorem H, whiten the augmented curvature/star frame, replace the natural leverage gate by determinant-weighted entropy Brascamp-Lieb under disjoint Pluecker bases, then integrate the |t|^{-(r+2)/2} characteristic envelope directly.",
+    "no_hidden_assumptions": [
+      "original-coordinate independence only",
+      "no moments",
+      "no support bound",
+      "no log-concavity",
+      "no post-rotation independence",
+      "no probability squaring / square-root small-ball conversion"
+    ]
+  },
+  "strict_n3_application": {
+    "tau": "1/128",
+    "construction": "One hub, star vector c flat on 256 leaves, curvature vector v1 with squared weights 0.6 plus 100 copies 0.004, second curvature vector v2 flat on a disjoint 256-leaf support; diagonal cancellations make every physical diagonal zero; curvature scalings make two positive curvature eigenvalues exactly 1.",
+    "target_spectrum_contains": [1, -1, 1, 1],
+    "old_gate_failure": "mixed row leverage 0.6 > 1/2",
+    "rho": 0.6334222412109375,
+    "density_bound": "<4.746",
+    "physical_pair_determinants": "all <1/128 in magnitude"
+  },
+  "small_rho_output": {
+    "statement": "For d=r+1, some d-coordinate Pluecker basis supports a unit active mixed direction with outside coordinate energy <= rho^(1/d). For r=2 this is a three-physical-coordinate localization witness.",
+    "classification": "structural localization alternative, not itself a density bound"
+  },
+  "designated_partner": {
+    "account": "account03",
+    "slot": "B09",
+    "theorem": "QFORM-GROUPED-TWOSLOPE-ONEFRESNEL-DISJOINT-v1",
+    "canonical_commit": "0ca2df8a2cfb2702f2498ee6924f3a7cee63166a",
+    "application": "Two flat disjoint grouped slopes plus the same heavy one-curvature vector; delta=1, pdet=1, rho=0.6334222412109375, lambda>=1, giving ||p||_infinity<4.964 on a target-valid strict-N3 matrix with spectrum containing +1,-1,+1,-1,+1."
+  },
+  "first_unpaid_implication": "QFORM-HUB-PLUCKER-SMALLRHO-OR-DEGENERATE-G-ROUTING-v1",
+  "first_unpaid_detail": "In the strict no-pivot hub/star survivor, force a universal-scale determinant-balanced mixed-hub certificate; otherwise route small disjointness, nearly singular mixed Gram, or weak curvature product to physical-pair, zero-hubpair wedge, grouped-slope, cross-volume, ridge, or finite-core exits while retaining arbitrary residual curvature and the external third direction.",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c5a57d1be0dc69e47bcb9fb52d5eaac77f4833c6",
+    "blob": "2aa81d1917b2062c1d7258e48c334b3e5fbf641b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T041423Z-account02-B09-QFORM-auto11/REPORT.md"
+  },
+  "early_checkpoint": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "db3abaf37d9f1fff400e296e23343008404b1e7d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T041423Z-account02-B09-QFORM-auto11/CHECKPOINT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "b1773c70c48d1747c189c1d50cb688796ce3fe0c",
+    "blob": "d3508bbc85704346542587a8c268c5a463e949c0",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B09/20260923T041423Z-account02-B09-QFORM-auto11.md"
+  },
+  "source_pins": [
+    {
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "files": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+      "use": "Theorem H exact mixed-hub reduction and correction-aware route state"
+    },
+    {
+      "commit": "32c257209b588141fb60af698f478f1d0ad20b8a",
+      "use": "QFORM-PLUCKER-ENTROPY-BL-v1, general-dimensional determinant-weighted entropy BL and small-disjointness localization"
+    },
+    {
+      "commit": "0ca2df8a2cfb2702f2498ee6924f3a7cee63166a",
+      "use": "latest completed account03/B09 grouped-two-slope/one-Fresnel disjoint theorem, applied to an explicit strict-N3 inequality"
+    }
+  ],
+  "corrections_respected": [
+    "QFORM-POINTWISE-DECAY-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS-v1",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION-v1",
+    "QFORM-WORST-CONDITIONAL-SPECTRAL-DENSITY-MOMENTS-FALSE-v1"
+  ],
+  "review_status": "new theorem not independently reviewed",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

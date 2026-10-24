@@ -1,0 +1,14 @@
+mass affine = (Fraction(1, 1), Fraction(0, 1))
+mean affine = (Fraction(1, 3), Fraction(0, 1))
+rstar = 3/5
+h(0) = [Fraction(0, 1), Fraction(3, 1), Fraction(0, 1)]
+h(3/5) = [Fraction(3, 1), Fraction(3, 5), Fraction(3, 5)]
+mixture affine coefficients = [(Fraction(0, 1), Fraction(5, 1)), (Fraction(3, 1), Fraction(-4, 1)), (Fraction(0, 1), Fraction(1, 1))]
+target affine coefficients = [(Fraction(0, 1), Fraction(5, 1)), (Fraction(3, 1), Fraction(-4, 1)), (Fraction(0, 1), Fraction(1, 1))]
+unimodality differences:
+h2-h1 = 3 - 9 r
+h2-h3 = 3 - 5 r
+h1-h2 = -3 + 9 r
+density range: h2>=0 iff r<=3/4; h1,h3>=0 iff r>=0
+unimodal range within density range: 0<=r<=3/5
+ALL_EXACT_CHECKS_PASS

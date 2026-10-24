@@ -1,0 +1,30 @@
+{
+  "worker": "w390",
+  "target_id": "P0117",
+  "title": "Absence of bi-infinite geodesics in planar iid FPP",
+  "current_openness": "UNKNOWN",
+  "exact_statement_recovered": true,
+  "intake_hypotheses_are_underspecified": true,
+  "source_question": "Question 31. Do geodesic lines exist?",
+  "precise_working_formulation": "On undirected nearest-neighbor Z^2, iid finite nonnegative nonatomic edge weights with E[min(X1,X2,X3,X4)^2]<infinity almost surely admit no injective integer-indexed path whose every finite contiguous segment minimizes ambient passage time.",
+  "working_formulation_scope": "Explicit standard moment version of the planar target. The intake says usual positive-speed regime but gives no exact moment condition. The bare source question itself does not print this moment assumption.",
+  "novelty_claim": false,
+  "sources": [
+    {"role":"dated intake", "path":"~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json", "lines":"2445-2460", "status":"exact target record read; explicitly current-status-unverified"},
+    {"role":"prior attempt", "path":"~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006a04.json", "lines":"2422-2440", "status":"anchoring/escaping-path obstruction; no bigeodesic proof"},
+    {"role":"primary source question", "url":"https://www.math.northwestern.edu/~auffing/FPPSurvey.pdf", "version":"November 8, 2015; 147 PDF pages", "location":"Section 4.5, printed page 86, zero-based PDF page 85", "exact_quote":"Question 31. Do geodesic lines exist?", "status":"source verified; this accessible version differs from intake page locator"},
+    {"role":"recent primary claimed resolution", "url":"https://raw.githubusercontent.com/openai/math/main/preprints/No-bigeodesics-in-planar-first-passage-percolation-September-24-2026/main.pdf", "author":"OPENAI", "date":"2026-09-24", "local_copy":"sources/no_bigeodesics_2026_09_24.pdf", "bytes_downloaded":608208, "pages":39, "location":"Theorem 1.1, page 1; first two pages read", "status":"CLAIMED_RESOLUTION_UNREVIEWED", "scope":"Full nonatomic iid planar result with minimum-of-four second moment; no shape regularity", "independently_verified":false},
+    {"role":"canonical store", "path":"~/math-brain-build/local/population/brain.sqlite3", "access":"sqlite mode=ro only", "evidence":"reports/store_target_baseline.json", "status":"Exact target and prior-attempt logical IDs recovered; no live modification"}
+  ],
+  "prior_work_searches": {
+    "H_I_attempt_directories":"Targeted P0117/bigeodesic grep yielded no additional matching record.",
+    "other_intakes":"Targeted P0117 grep yielded no additional target record in named D/E/F/G/H/I intakes.",
+    "lean_intake":"Ranking annotation only; no identified P0117 theorem or formal-check receipt.",
+    "owner_work":"Targeted filename and relevant-text probes in named Big Open Problem directory found no P0117 proof; this does not establish absence elsewhere.",
+    "team_O":"P0117 remains an unassigned open checkbox on the read board snapshot.",
+    "audit_assignments":"No w390 row found in AUDIT_ASSIGNMENTS.md."
+  },
+  "independent_review":"Pending w392. Statement-only delivery to w391 has receipt msg-359aec8887.",
+  "current_openness_reason":"A recent primary manuscript claims resolution, but its full proof and independent acceptance were not audited. Do not certify the target as currently open or solved.",
+  "next": "Audit the saved mathematical special case; preserve the unrestricted-wandering gap and UNKNOWN novelty."
+}

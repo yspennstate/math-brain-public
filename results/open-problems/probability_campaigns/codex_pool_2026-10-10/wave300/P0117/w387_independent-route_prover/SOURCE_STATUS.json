@@ -1,0 +1,78 @@
+{
+  "target_id": "P0117",
+  "worker": "w387",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "candidate_title": "Absence of bi-infinite geodesics in planar iid FPP",
+  "exact_primary_statement_verified": true,
+  "exact_target": {
+    "graph": "undirected nearest-neighbor Z^2",
+    "law": "iid finite nonnegative edge weights with a common nonatomic probability law",
+    "metric": "T(x,y) is the infimum of total edge-traversal weight over all finite paths/walks between x and y",
+    "bigeodesic": "a simple integer-indexed path every finite subpath of which has weight T between its endpoints",
+    "conclusion_sought": "P(exists any bigeodesic anywhere)=0, simultaneously over paths and random directions",
+    "moment_restricted_version": "add E[min(t1,t2,t3,t4)^2]<infinity, with four independent copies",
+    "not_assumed": [
+      "limit-shape regularity",
+      "fixed end directions",
+      "a path prescribed independently of the weights"
+    ],
+    "warning": "The moment-free target and the moment-restricted claimed theorem are distinct scopes. The intake used the usual positive-speed regime without a complete moment specification."
+  },
+  "owner_solved_retired_check": {
+    "store": "~/math-brain-build/local/population/brain.sqlite3",
+    "access": "sqlite mode=ro",
+    "target_matches": 2,
+    "result": "The old target concept and old unanchored compactness attempt both remain explicitly unverified. No solved certificate was found in these exact target records.",
+    "scope": "Targeted records and named prior-work directories only; not an exhaustive owner solved/retired-registry certification.",
+    "evidence": "STORE_CHECK.json; PRIOR_SOURCES.md"
+  },
+  "source_records": [
+    {
+      "role": "exact intake primary question",
+      "title": "50 years of first passage percolation",
+      "authors": [
+        "Antonio Auffinger",
+        "Michael Damron",
+        "Jack Hanson"
+      ],
+      "version_date": "2015-11-08",
+      "url": "https://www.math.northwestern.edu/~auffing/FPPSurvey.pdf",
+      "location": "Section 4.5, Question 31, printed/PDF page 86 in this edition",
+      "quote": "Question 31. Do geodesic lines exist?",
+      "page_correction": "The intake's page 98 is edition-dependent; the recovered author-hosted 2015 edition has page 86.",
+      "status_scope": "Historical source question, not a current-openness certificate."
+    },
+    {
+      "role": "primary classical conjecture and quantifier boundary",
+      "title": "Absence of backward infinite paths for first-passage percolation in arbitrary dimension",
+      "authors": [
+        "Gerandy Brito",
+        "Michael Damron",
+        "Jack Hanson"
+      ],
+      "url": "https://arxiv.org/html/2003.03367v1",
+      "location": "Introduction Sections 1.1 and 1.2",
+      "checked": "Continuously distributed iid planar conjecture; results for each fixed direction or selected geodesic graph do not exclude every path simultaneously."
+    },
+    {
+      "role": "recent primary claimed resolution",
+      "title": "No bigeodesics in planar first-passage percolation",
+      "authors_as_printed": [
+        "OpenAI"
+      ],
+      "version_date": "2026-09-24",
+      "url": "https://github.com/openai/math/blob/main/preprints/No-bigeodesics-in-planar-first-passage-percolation-September-24-2026/main.pdf",
+      "location": "Theorem 1.1, PDF page 1; introductory scope, pages 1-3",
+      "local_pdf": "sources/claimed_resolution_20260924.pdf",
+      "retrieval_bytes": 608208,
+      "pdf_pages": 39,
+      "claimed_statement": "Simultaneous absence of all bigeodesics for iid nonnegative nonatomic weights under minimum-of-four finite second moment, without limit-shape regularity assumptions.",
+      "mathematical_verification": "NOT INDEPENDENTLY AUDITED",
+      "moment_free_scope": "explicitly not asserted by this manuscript",
+      "novelty_implication": "No novelty or current-openness claim is justified by this packet."
+    }
+  ],
+  "review_state": "w388 KEEP L1-L4; w389 KEEP C01. Main bundle further reviews pending; global proof absent.",
+  "note": "Recent claimed resolution found; its proof has not been independently verified. Neither source retrieval, stored hashes nor these new special-case lemmas establish the full target. Current openness remains UNKNOWN."
+}

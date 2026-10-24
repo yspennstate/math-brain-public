@@ -1,0 +1,116 @@
+{
+  "problem_id": "C0017",
+  "worker": "w414",
+  "checked_date": "2026-10-10",
+  "historical_status": "The 2012 primary lecture notes explicitly describe the square-lattice conformal-invariance problem as open.",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "resolution_claim": false,
+  "precise_target": {
+    "crossing": "For each bounded Jordan domain with four distinct cyclically ordered marked boundary prime ends, critical independent square-lattice bond percolation with properly converging marked lattice approximations has crossing probabilities converging to Cardy's conformally covariant value. A canonical approximation of a fixed domain is an admissible intended case; arbitrary unmarked kernel approximations are not supplied by the source.",
+    "interface": "For a bounded Jordan domain with two distinct correctly converging marked boundary prime ends and specified Dobrushin primal/dual boundary conditions, the critical exploration converges modulo increasing reparametrization to chordal SLE(6). This is a separate target clause, not an equivalence proved by this packet.",
+    "regularity_note": "Jordan regularity and explicit marked approximation conditions are the worker's precise restricted formulation; the historical source states the crossing discussion for bounded simply connected domains and does not spell out all prime-end approximation conventions."
+  },
+  "primary_sources": [
+    {
+      "source_id": "garban_steif_noise_2012",
+      "url": "https://arxiv.org/pdf/1102.5761",
+      "revision": "1102.5761v3, 29 May 2012",
+      "primary_text_examined": true,
+      "locators": [
+        "Chapter II Section 4; printed pp. 23-24; zero-based PDF pages 24-25",
+        "Theorem II.2; printed p. 24; PDF page 25",
+        "Theorem II.1 RSW; printed p. 22; PDF page 23"
+      ],
+      "quote": "Note that, on Z^2 at p_c = 1/2, proving the conformal invariance is still a challenging open problem.",
+      "supports": [
+        "Historical open status",
+        "Conformal crossing target and triangular-lattice calibration",
+        "Uniform positive lower bound for critical square-lattice rectangular crossings"
+      ],
+      "intake_locator_correction": "The intake says Chapter II Section 4 p.26; in the accessed arXiv v3, the explicit open-problem sentence is on printed p.24, zero-based PDF page25. Printed p.26 concerns exponents/quasi-multiplicativity."
+    },
+    {
+      "source_id": "tsai_yam_zhou_1112_2017",
+      "url": "https://arxiv.org/abs/1112.2017v5",
+      "revision": "v5, 10 January 2013",
+      "primary_text_examined": "Metadata, abstract and author comments only; proof not audited",
+      "quote": "We received many critical comments from the participants. We will revise the paper and provide a clean proof",
+      "status": "Claimed proof with author-recorded critical comments; not a certified solution for this worker"
+    },
+    {
+      "source_id": "zhou_2409_03235",
+      "url": "https://arxiv.org/abs/2409.03235v6",
+      "revision": "v6, 17 December 2024",
+      "primary_text_examined": "Metadata and abstract only; experimental HTML fetch failed; proof not audited",
+      "status": "Author claims SLE(6) exploration convergence; no independent certification checked"
+    }
+  ],
+  "local_prior_checks": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+      "line": 17,
+      "result": "Exact C0017 intake record recovered"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "line": 17,
+      "result": "C0017-A001 observable attempt is author-only and stalled; its numerical spin convention is not reused here"
+    },
+    {
+      "path": "~/math-brain-build/export/population/nodes.jsonl",
+      "line": 5279,
+      "logical_id": "math:probability.percolation:open-problem-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+      "result": "Existing node has historical dated status and is unverified"
+    },
+    {
+      "path": "~/math-brain-build/export/population/nodes.jsonl",
+      "line": 272,
+      "result": "Existing attempt node is unverified; not an independently checked proof"
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "result": "No C0017 row in the inspected board; neighboring C0018 belongs to w337 and C0050 to w339"
+    },
+    {
+      "path": "~/brain_workers/teams/PROBABILITY300_20261010/TEAM_BOARD.md",
+      "result": "C0017 assigned to w408-w419; own distinct boundary-prime-end-collapse claim acquired clm-f4591e77ed"
+    },
+    {
+      "paths": [
+        "probability_1000_attempts_H_20260912",
+        "probability_1000_attempts_I_20260914",
+        "prob1000_lean_20260908"
+      ],
+      "result": "Targeted C0017/conformal-square-lattice searches found only the annotated historical ranking in the Lean directory; no new target proof identified"
+    }
+  ],
+  "brain_scars": [
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "kalai_conj8_percolation_entropy_is_o_influence_2026_09_10",
+    "prob1000_proofs_directory_audit_what_is_spent_and_what_is_live_2026_09_08",
+    "fpp_width3_strip_time_constant_solved_2026_07_12"
+  ],
+  "recall_receipt": "~/brain_workers/w414/RECALL.txt",
+  "hardest_gap": "Identify the limiting law for a legitimate nondegenerate correctly marked critical square-lattice domain as Cardy's/SLE(6), including full-sequence uniqueness. None of the boundary counterexamples closes this gap.",
+  "formal_check": null,
+  "proof_check_not_source_check": true,
+  "reviewer": "w416",
+  "review_status": "pending",
+  "ingested": false,
+  "retrievable": false,
+  "live_population_read": {
+    "path": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+    "mode": "ro",
+    "matched_exact_historical_rows": 2,
+    "receipt": "~\\brain_workers\\w414\\STORE_READ_RECEIPT.json",
+    "scope": "Only the known C0017 problem and attempt ids; no bank or test rows queried"
+  },
+  "bundle_submission": {
+    "submitted": true,
+    "path": "~\\math-brain-inbox\\w414\\bundle_001.json",
+    "reviewed": false,
+    "ingestion_verified": false,
+    "retrieval_verified": false
+  }
+}

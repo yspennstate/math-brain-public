@@ -1,0 +1,110 @@
+\section*{Dual-total-correlation endpoint for restriction-critical spectra}
+
+Let $f:\{-1,1\}^n\to\{-1,1\}$ be nonconstant and let the random
+spectral set $S$ have law
+\[
+ \Pr(S=A)=\widehat f(A)^2.
+\]
+Write $X_i=\mathbf 1_{\{i\in S\}}$, $\alpha_i=\Pr(X_i=1)=I_i(f)$,
+$H=H(S)$, $I=\sum_i\alpha_i$, and $R=H/I$.  Put
+\[
+ E_i=H(X_i\mid X_{-i}),\qquad
+ \mathsf D^\vee(S)=H(S)-\sum_iE_i.                         \tag{1}
+\]
+The quantity in (1) is the dual total correlation.  It is nonnegative:
+for every fixed coordinate order, the chain rule and monotonicity under
+conditioning give
+\[
+ \mathsf D^\vee(S)
+ =\sum_i\bigl[H(X_i\mid X_{<i})-H(X_i\mid X_{-i})\bigr]
+ =\sum_i I(X_i;X_{>i}\mid X_{<i})\ge0.                    \tag{2}
+\]
+
+For the physical restrictions of coordinate $i$, write
+\[
+ \Delta_iH=H(f)-\frac{H(f_{i,+})+H(f_{i,-})}{2}.
+\]
+If $a_T=\widehat f(T)$ and $b_T=\widehat f(T\cup\{i\})$, the two
+child spectral laws are $r_\pm(T)=(a_T\pm b_T)^2$ and their midpoint is
+$a_T^2+b_T^2$.  Direct entropy expansion yields
+\[
+ \Delta_iH=E_i+J_i,\qquad J_i=\operatorname{JS}(r_+,r_-),              \tag{3}
+\]
+and the source-pinned scalar inequality gives
+\[
+ 0\le J_i\le {2\over\ln2}\min\{\alpha_i,1-\alpha_i\}.                \tag{4}
+\]
+
+Call $f$ restriction-critical when
+\[
+ \Delta_iH\ge R\alpha_i
+ \quad\hbox{for every relevant coordinate }i.                         \tag{5}
+\]
+Summing (5), using $\sum_i\alpha_i=I$ and (3), gives
+\[
+ H=RI\le\sum_i(E_i+J_i)
+ =H-\mathsf D^\vee(S)+\sum_iJ_i.
+\]
+Consequently
+\[
+ \boxed{
+ 0\le\mathsf D^\vee(S)\le\sum_iJ_i
+ \le {2\over\ln2}\sum_i\min\{\alpha_i,1-\alpha_i\}
+ \le {2\over\ln2}I(f).}                                             \tag{6}
+\]
+
+Equation (6) has two consequences.
+
+First, for every fixed $\varepsilon>0$, every restriction-critical Boolean
+$f$ satisfying
+\[
+ \mathsf D^\vee(S)\ge\varepsilon H(S)
+\]
+obeys the dimension-independent restricted FEI estimate
+\[
+ \boxed{H(f)\le {2\over\varepsilon\ln2}I(f).}                         \tag{7}
+\]
+
+Second, if $R(f_k)\to\infty$ along restriction-critical functions, then
+\[
+ \boxed{
+ {\mathsf D^\vee(S_k)\over H(S_k)}
+ \le {2\over R(f_k)\ln2}\longrightarrow0.}                           \tag{8}
+\]
+Combining (8) with the source-pinned critical-prime descent and critical
+diffusion envelope shows that failure of FEI would force a genuine Boolean
+counterfamily that is simultaneously restriction-critical, tensor-prime,
+exponentially diffuse in every coordinate, and asymptotically zero in
+normalized dual total correlation.
+
+This is not FEI.  The condition in (7) is a real restricted-class
+hypothesis.  It is also different from physical conditional total
+correlation of biased threshold inputs: (1) concerns the uniform Fourier
+spectral law itself.
+
+For the one-point defect $q_n$, put $\delta=2^{-n}$.  Its spectral law has
+mass $a=(1-2\delta)^2$ at the empty set and mass $b=4\delta^2$ at every
+nonempty set.  Thus
+\[
+ H=\phi(a)+(2^n-1)\phi(b)=8n\delta+O(\delta),
+\]
+while
+\[
+ E_i=(a+b)h_2\!\left({b\over a+b}\right)+(2^n-2)b
+     =4\delta+O(n\delta^2).
+\]
+Hence
+\[
+ {\mathsf D^\vee(S)\over H(S)}
+ ={H-nE_i\over H}\longrightarrow\frac12.
+\]
+Sparse defects therefore pass the theorem without entering the vanishing
+dual-correlation regime required of an unbounded-ratio family.
+
+Under disjoint Boolean products, the spectral laws are independent and
+$H$, $I$, and $\mathsf D^\vee$ are all additive.  Therefore (7) does not
+silently admit an arbitrary tensor factor: its normalized dependence
+hypothesis is an entropy-weighted condition on all factors.  Near tensors
+remain a mandatory obstruction to any proposed uniform lower bound on
+$\mathsf D^\vee/H$.
+

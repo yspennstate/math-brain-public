@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_revision": "2026-09-22.15",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "account": "account01",
+  "slot": "B20",
+  "run_id": "20260924T002019Z-account01-B20-QFORM-auto11",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit_at_publication_preparation": "39ca3bebe297a874d8e9abb356c73b8c0b90edee",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "OWNER-CORRECTION-LAW-UNIFORM-POINTWISE-QUADRATIC-OSCILLATORY-DECAY-FALSE"
+  ],
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B20",
+    "run_id": "20260923T233041Z-account02-B20-QFORM-auto11",
+    "brain_handoff_commit": "33af02414c8947e04dd33bfc365f9e52b7f86165",
+    "canonical_math_commit": "8273681c09ca73542cc27a74fdeec554000cfc28",
+    "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B20/20260923T233041Z-account02-B20-QFORM-auto11/REPORT.md",
+    "premises_used": [
+      "A=D+K+E in original coordinates",
+      "rank(K)<=8",
+      "||E||op<1/32",
+      "the r39 aligned branch is an unpaid branch of the full target"
+    ],
+    "actual_inequality": "for |D_j|>3/4, |A_jj|<1/8, P_jj<=1/16: |K_jj|>3/4-1/8-1/32=19/32; hence ||A[j,j^c]||>(19sqrt(15)-1)/32>9/4"
+  },
+  "new_theorem": "QFORM-R39-LIGHT-DIAGSPIKE-PAID-OR-NULLHUB-RANK2-COLLAR-v1",
+  "new_paid_branches": {
+    "scalar_pivot": "essential density <= C_*sqrt(8)<3.936e9; continuity not asserted",
+    "indefinite_pair": "essential density <52.455; continuity not asserted",
+    "physical_E3": "continuous C0 density <91.1"
+  },
+  "new_structural_survivor": {
+    "hub": "literal physical w=A[j,j^c], ||w||>9/4, all |w_k|<1/4 after paid exits, five disjoint source banks each >9/(4sqrt(6))",
+    "light_cut": "literal I,J with ||A[I,J]||F>7/16 and ||w_J||>9/(4sqrt(2))",
+    "collar": "either ||C(I-P_w)||F<1/8 and dist_F(C,rank<=1)<1/8 with hub-aligned row space, or dist_F(C,rank<=2)<2^(-13/2)"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "cb2d1efbcba8c6977376e0ad3d15638a6df8ff58",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260924T002019Z-account01-B20-QFORM-auto11/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260924T002019Z-account01-B20-QFORM-auto11/CHECKS.md",
+    "claims_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260924T002019Z-account01-B20-QFORM-auto11/CLAIMS.json"
+  },
+  "handoff": {
+    "commit": "8e50cd6ebf64f3571240c108f12e07e99b96744b",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B20/20260924T002019Z-account01-B20-QFORM-auto11.md"
+  },
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY_C0_ON_NEW_E3_PAID_BRANCH",
+  "first_unresolved_implication": "QFORM-R39-COLOOP-OR-R8-HEAVYCOORD-OR-NULLHUB-COLLAR-PAYMENT-v1",
+  "next_step": "combine the five disjoint physical hub banks with the physical rank-two collar while retaining both the 2^(-13/2) collar residual and account02's 1/32 tail; alternatively pay the coloop or finite heavy-carrier core",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_configuration": "UNKNOWN",
+  "provider_reasoning_usage": null
+}

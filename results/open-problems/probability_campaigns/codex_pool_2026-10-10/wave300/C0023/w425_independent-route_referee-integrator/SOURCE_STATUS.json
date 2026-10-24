@@ -1,0 +1,34 @@
+{
+  "problem_id": "C0023",
+  "as_of": "2026-10-10",
+  "exact_target": "For independent nearest-neighbour Bernoulli bond percolation on Z^d, d=3,...,10, theta_d(p_c(d))=0, where theta_d(p)=P_p(0 is in an infinite open cluster) and p_c(d)=inf{p:theta_d(p)>0}.",
+  "original_intake": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:23",
+    "source_id": "garban_steif_noise_2012",
+    "locator": "Chapter XI Section 1 p.136",
+    "source_quote": "It is a major open question to prove that this is also the case for intermediate dimensions",
+    "status_at_intake": "attempted_unsolved, 2026-09-07; historical only"
+  },
+  "new_primary_artifacts": [
+    {
+      "title": "Anthropic formal-math pinned percolation project",
+      "url": "https://github.com/anthropics/formal-math/tree/795efb86f191735c5481675763537cfb4ff37e55/percolation",
+      "claim": "README reports a Lean theorem theta(pc)=0 for nearest-neighbour Bernoulli bond percolation on Z^d for all d>=2, by proving Kozma--Nitzan Conjecture 3.",
+      "verification": "Inspected pinned Challenge.lean model/theorem, Solution.lean bridge by Iff.rfl, and AUDIT.md's recorded build, seven theorem axiom lines and successful comparator/nanoda result. These are source-side receipts; I did not independently rebuild or audit the full proof.",
+      "formal_theorem": "BondPercolation.percolation_continuity (d : Nat) (hd : 2 <= d) : PercolationContinuity d",
+      "trusted_axioms_reported": ["propext", "Classical.choice", "Quot.sound"],
+      "receipt_url": "https://github.com/anthropics/formal-math/blob/795efb86f191735c5481675763537cfb4ff37e55/percolation/AUDIT.md"
+    },
+    {
+      "title": "OpenAI math formalization 213 and comparator statement",
+      "url": "https://github.com/openai/math/blob/main/lean/docs/213.md",
+      "statement_url": "https://github.com/openai/math/blob/main/lean/ComparatorChallenges/CriticalPercolation.lean",
+      "claim": "Documentation reports a broader theorem for every infinite connected locally finite quasi-transitive bond graph with pc<1, and a direct Z3 bond/site comparator.",
+      "verification": "Read comparator statements. Their `sorry` lines are statement placeholders, not evidence of a compiled proof; solution link, trusted axioms and comparator receipt remain to verify."
+    }
+  ],
+  "current_openness": "CLAIMED_SOLVED_PENDING_INDEPENDENT_AUDIT",
+  "existing_store_card": "math:probability.percolation:open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10; read-only card evidence in w424/CARD_EVIDENCE.json still quotes 2026-09-07 open-status language",
+  "retirement_decision": "Recommend pausing novel-solution claim and auditing the September formal results; neither artifact has been independently reproduced here.",
+  "remaining_checks": ["Independent rebuild of pinned Lean source and comparator", "Mathematical fidelity audit of conditioned-slack induction", "Independent referee of proof-to-statement bridge and retirement decision"]
+}

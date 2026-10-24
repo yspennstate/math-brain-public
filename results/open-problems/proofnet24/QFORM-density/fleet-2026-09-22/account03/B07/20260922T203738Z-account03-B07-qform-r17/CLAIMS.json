@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B07",
+  "run_id": "20260922T203738Z-account03-B07-qform-r17",
+  "full_target_status": "OPEN",
+  "continuity_status": "NOT_ESTABLISHED_BY_THIS_RUN",
+  "claims": [
+    {
+      "id": "QFORM-RIDGE-HALFRIESZ-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "The completed ridge characteristic-function envelope yields H_{1/2}(R) <= 2 sqrt(e)(2/q)^(1/4) gamma^(-1/2) theta/(theta-q) D^(-1/(4theta)) whenever max ridge leverage <=q/2 and theta>q."
+    },
+    {
+      "id": "QFORM-E2-RIDGE-HALFRIESZ-COLLAR-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "For rank(B)>=3, at the unique ridge scale tr K=2, if either side has max ridge leverage <=23/24 then H_{1/2} <=48 sqrt(e)(24/23)^(1/4) E2(B)^(-1/8). Rank two is paid by 8 E2(B)^(-1/8)."
+    },
+    {
+      "id": "QFORM-TWOSIDED-RIDGE-COLOOP-ANCHOR-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "If both calibrated ridge sides contain a coordinate leverage >23/24, then some physical row i and column j jointly anchor more than half of the total second-compound mass: sum_{k!=i,l!=j} det B[{i,k},{j,l}]^2 > E2(B)/2."
+    },
+    {
+      "id": "QFORM-ANCHORED-E2-EDGE-OR-TWOSTAR-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "The anchored packet equals ||bC-cr^T||_F^2 and forces b^2||C||_F^2>E2/8 or ||r||^2||c||^2>E2/8. For the account02/B19 S0 resource E2>=1/48, the reserve is >1/384."
+    },
+    {
+      "id": "QFORM-S0-ANCHORED-EDGE-OR-TWOSTAR-PAYMENT-v1",
+      "status": "OPEN",
+      "statement": "Convert the two-sided anchored edge-times-bank or disjoint two-star resource into a translation-uniform half-Riesz bound while retaining arbitrary same-bank curvature, or route it into an already-paid pair/pivot/two-cross/ridge/zero-internal/grouped branch."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A047: sharp fixed-child rare-selector debt}
+\maketitle
+All entropies are in bits. Fix Boolean children $g,h$ on a finite product cube,
+with fixed interior data biases. Write $G_T,H_T$ for their coefficients in the
+same orthonormal product basis, $c=\mathbb E[gh]$, and
+$Z=\sum_{G_T=0}H_T^2$. Independently select $g$ at $X=0$ and $h$ at
+$X=1$, where $\Pr(X=1)=p$. The exact squared parent masses are
+\[
+ a_T=((1-p)G_T+pH_T)^2,\quad b_T=p(1-p)(H_T-G_T)^2,
+ \quad q_T=a_T+b_T=(1-p)G_T^2+pH_T^2.
+\]
+Put $M=H((a_T,b_T)_T)-H(q)$ and
+$J=H(q)-(1-p)H(G^2)-pH(H^2)$. Then, as $p\downarrow0$,
+\[
+ J=Zp\log_2(1/p)+O_{g,h}(p),\qquad
+ M=Dp\log_2(1/p)+O_{g,h}(p),\quad
+ D=\sum_{G_T\ne0}(H_T-G_T)^2.
+\]
+For a positive limiting mass the entropy function is smooth. For a zero
+limiting mass of order $p$, its entropy contributes its linear coefficient
+times $p\log_2(1/p)+O(p)$. Masses of order $p^2$ contribute
+$O(p^2\log(1/p))$. These facts, applied to the finite lists above, prove
+the expansions without interchanging an infinite sum and a limit.
+Parseval gives
+\[
+ Z-D=2Z+2c-2\le 2(1-c^2)+2c-2
+ =\tfrac12-2(c-\tfrac12)^2\le\tfrac12.
+\]
+Indeed $c=\sum_{G_T\ne0}G_TH_T$ and Cauchy--Schwarz gives
+$c^2\le1-Z$. Equality in the final bound holds precisely when
+$c=1/2$ and the projection of $H$ to the spectral support of $G$ is $G/2$.
+Take $g=1$ and $h=1-2\mathbf1_{\{Y_1=Y_2=0\}}$ on two fair data bits.
+Then $c=1/2$ and $Z=3/4$, proving sharpness with actual Boolean children.
+Multiplying both children by a fresh fair character preserves $M,J,c,Z$,
+and makes both children balanced; taking $g$ to that character gives a
+dictator example. Consequently any universal tax with fixed-child endpoint
+coefficient strictly below $1/2$ fails, even for balanced children.
+
+If the spectral supports of $g,h$ are disjoint, $c=0,Z=1$.
+Each conditional spectral-selector law has entropy $h_2(p)$, whereas the
+residual label identifies the physical child. Hence exactly
+$M=J=h_2(p)$ for every $p\in(0,1)$. In particular a constant child and
+a balanced child have zero debt at all selector biases, not merely zero
+leading coefficient. Equal children give $M=J=0$; opposite children give
+$J=0$ and $M=h_2(4p(1-p))$.
+
+For the two-bit AND sign $(-1)^{XY}$, with $\Pr(Y=1)=q$, the four masses are
+\[
+ ((1-2pq)^2,4p(1-p)q^2,4p^2q(1-q),4p(1-p)q(1-q)).
+\]
+The fixed-$q$ rare-selector coefficient is $4q(1-2q)$. In the other
+endpoint, $q\downarrow0$ with fixed $p\in(0,1)$,
+\[
+ J-M=4p(1-p)q\log_2\frac{1-p}{p}+O_p(q^2\log(1/q)).
+\]
+To verify this, set $v=4pq(1-q)$. Group the last two parent masses,
+whose conditional selector proportions are $p,1-p$. The second parent
+mass is $O_p(q^2)$, so
+$H(\text{parent})=h_2(v)+v h_2(p)+O_p(q^2\log(1/q))$.
+Also $J-M=2h_2(v)-H(\text{parent})-p h_2(4q(1-q))$.
+Expansion of $h_2(t)=t\log_2(1/t)+t/\ln2+O(t^2)$ gives
+$4pq[\log_2(1/p)-h_2(p)]$; the identity
+$\log_2(1/p)-h_2(p)=(1-p)\log_2((1-p)/p)$ proves the result.
+This is a fixed-$p$ expansion, not a uniform simultaneous-endpoint theorem.
+
+The unproved next line is a finite-$p$, dimension-independent improved
+Boolean tax: the sharp endpoint coefficient does not by itself imply
+$J-M\le\tfrac12[h_2(p)+\log_2\max(p,1-p)]$.
+No assertion here resolves Fourier entropy--influence or transports this tax
+through a nonreusing restriction/composition tree.
+\end{document}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260922T182314Z-account01-B20-QFORM-r15",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "claims": [
+    {
+      "id": "QFORM-PIVOT-RANKONE-DELETION-AMPLIFICATION-v1",
+      "status": "PROVED_THIS_RUN",
+      "scope": "For symmetric A with s_3(A)>=1 and any nonzero physical pivot A_ii, either two complementary physical diagonals have magnitude>=1/2, or the pivot row has an original-coordinate bank of l2 norm>1/(4sqrt(2)), or a physical cross bank disjoint from the pivot has s_1>1/(4sqrt(2))."
+    },
+    {
+      "id": "QFORM-P1-D2-PAYMENT-v1",
+      "status": "PROVED_EXCEPT_COHERENT_TRIANGLE",
+      "scope": "For the account02/B20 P1 pivot |A_ii|>=3501/8000, the two-complementary-diagonal branch is paid unless all three physical diagonals have the same sign and all three mutual cross entries have magnitude>3501/16000. Mixed signs give density<92.928; a same-sign pair with cross <=3501/16000 gives density<8.290."
+    },
+    {
+      "id": "QFORM-P1-RESIDUAL-TRICHOTOMY-v1",
+      "status": "PROVED_THIS_RUN",
+      "scope": "Every unresolved account02/B20 P1 packet reduces to coherent same-sign triangle, strong physical star with row norm>1/(4sqrt(2)) and source-valid marginal projection cap<8, or strong disjoint physical cross bank with s_1>1/(4sqrt(2))."
+    },
+    {
+      "id": "QFORM-FULL",
+      "status": "OPEN"
+    },
+    {
+      "id": "QFORM-CONTINUITY",
+      "status": "OPEN_ON_NEW_RESIDUAL_PACKETS"
+    }
+  ],
+  "designated_partner_applied": {
+    "worker": "account02/B20",
+    "run_id": "20260922T172846Z-account02-B20-QFORM-r14",
+    "main_commit": "6f93c551ec92438379a2b1d6a59fb58683064bf9",
+    "pivot_refinement_commit": "c03349badbdfce229ca3a1548d3de8615d1028c5"
+  },
+  "corrections_respected": [
+    "POINTWISE_OSCILLATORY_DECAY_FALSE",
+    "POST_ROTATION_INDEPENDENCE_FALSE",
+    "GENERIC_CONDITIONAL_CAP_NOT_AVAILABLE",
+    "ONE_GOOD_MINOR_NOT_AVAILABLE",
+    "SAME_SQUARE_ARBITRARY_CURVATURE_ABSORPTION_FALSE",
+    "SCALAR_QPRIME_WORST_LEVEL_CONDITIONAL_HEIGHT_FALSE"
+  ]
+}

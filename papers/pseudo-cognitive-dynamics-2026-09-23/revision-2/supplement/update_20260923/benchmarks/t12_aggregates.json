@@ -1,0 +1,235 @@
+{
+  "audit_date": "2026-09-23",
+  "repository": "<private-repo>",
+  "commit": "9c754d786b3a0ea4943da0585d1490c13cd9ef99",
+  "classification": "retrieval_and_engineering_validation_only",
+  "agent_level_test": {
+    "status": "not_yet_run",
+    "outcome_data_available": false
+  },
+  "evidence_basis": {
+    "t12_query_rows_committed": false,
+    "arithmetic_recomputed_from": "reported aggregate counts in T12 RESULT.md",
+    "independent_row_level_recalculation_possible": false
+  },
+  "comparison": {
+    "reported_queries": 62,
+    "reported_named_subsets_total": 54,
+    "inferred_other_firing_queries": 8,
+    "inferred_other_firing_basis": "62 - 20 non-firing others - 24 held-out film - 10 T11; compare_arms.py selects up to eight firing others",
+    "subsets": {
+      "heldout_film": {
+        "n": 24,
+        "hub_top5_before": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0,
+          "percent": 0
+        },
+        "hub_top5_after": {
+          "numerator": 24,
+          "denominator": 24,
+          "rate": 1,
+          "percent": 100
+        },
+        "delta_percentage_points": 100,
+        "remaining_list_unchanged": {
+          "numerator": 23,
+          "denominator": 24,
+          "rate": 0.9583333333333334,
+          "percent": 95.83333333333333
+        }
+      },
+      "t11_reused_tasks": {
+        "n": 10,
+        "hub_top5_before": {
+          "numerator": 5,
+          "denominator": 10,
+          "rate": 0.5,
+          "percent": 50
+        },
+        "hub_top5_after": {
+          "numerator": 10,
+          "denominator": 10,
+          "rate": 1,
+          "percent": 100
+        },
+        "delta_percentage_points": 50,
+        "remaining_list_unchanged": {
+          "numerator": 10,
+          "denominator": 10,
+          "rate": 1,
+          "percent": 100
+        }
+      },
+      "silent_other_controls": {
+        "n": 20,
+        "selection": "random sample seed 7 conditional on no trigger and query length under 400",
+        "trigger_fire": {
+          "numerator": 0,
+          "denominator": 20,
+          "rate": 0,
+          "percent": 0
+        },
+        "reported_identical_lists": {
+          "numerator": 20,
+          "denominator": 20,
+          "rate": 1,
+          "percent": 100
+        }
+      },
+      "other_firing": {
+        "n": 8,
+        "inferred_n": true,
+        "subgroup_outcomes_reported": false
+      }
+    },
+    "descriptive_combined_film_queries": {
+      "n": 34,
+      "hub_top5_before": {
+        "numerator": 5,
+        "denominator": 34,
+        "rate": 0.14705882352941177,
+        "percent": 14.705882352941176
+      },
+      "hub_top5_after": {
+        "numerator": 34,
+        "denominator": 34,
+        "rate": 1,
+        "percent": 100
+      },
+      "delta_percentage_points": 85.29411764705883,
+      "remaining_list_unchanged": {
+        "numerator": 33,
+        "denominator": 34,
+        "rate": 0.9705882352941176,
+        "percent": 97.05882352941177
+      },
+      "independent_holdout": false
+    }
+  },
+  "ledger_trigger_audit": {
+    "total": 8000,
+    "film_topic": {
+      "n": 1213,
+      "fire": {
+        "numerator": 765,
+        "denominator": 1213,
+        "rate": 0.6306677658697445,
+        "percent": 63.06677658697444
+      },
+      "no_fire": {
+        "numerator": 448,
+        "denominator": 1213,
+        "rate": 0.36933223413025557,
+        "percent": 36.93322341302556
+      }
+    },
+    "other_topic": {
+      "n": 6787,
+      "fire": {
+        "numerator": 65,
+        "denominator": 6787,
+        "rate": 0.009577132753794017,
+        "percent": 0.9577132753794018
+      },
+      "no_fire": {
+        "numerator": 6722,
+        "denominator": 6787,
+        "rate": 0.990422867246206,
+        "percent": 99.0422867246206
+      }
+    },
+    "total_fire": {
+      "numerator": 830,
+      "denominator": 8000,
+      "rate": 0.10375,
+      "percent": 10.375
+    },
+    "film_topic_share_among_fires": {
+      "numerator": 765,
+      "denominator": 830,
+      "rate": 0.9216867469879518,
+      "percent": 92.16867469879519
+    },
+    "precision_warning": "Topic classifications are proxy labels, not adjudicated semantic ground truth; source says nearly all other-topic triggers are misfiled film prompts."
+  },
+  "github_cost_pin": {
+    "reported_prompt_fire_percent_rounded": 4.3,
+    "exact_prompt_numerator": null,
+    "exact_prompt_denominator": null,
+    "negative_controls": {
+      "numerator": 0,
+      "denominator": 5,
+      "rate": 0,
+      "percent": 0
+    },
+    "positive_controls": {
+      "numerator": 6,
+      "denominator": 6,
+      "rate": 1,
+      "percent": 100
+    }
+  },
+  "policy_regression": {
+    "positives_total": 10,
+    "reported_before_failures": 3,
+    "reported_before_failure_rank": 2,
+    "after_rank1": {
+      "numerator": 10,
+      "denominator": 10,
+      "rate": 1,
+      "percent": 100
+    },
+    "negative_controls_absent_top8": {
+      "numerator": 31,
+      "denominator": 31,
+      "rate": 1,
+      "percent": 100
+    },
+    "reported_pass_environments": [
+      "staged",
+      "live"
+    ],
+    "script_accepted_collision_cases": 2,
+    "script_total_probes_including_collisions": 43,
+    "round6_result_rows_available": false,
+    "stale_probe_log": {
+      "date": "2026-08-17",
+      "count": 35,
+      "expected_count": 35,
+      "used_as_round6_evidence": false
+    }
+  },
+  "configuration": {
+    "film_pin": {
+      "alias_keys": 54,
+      "trigger_groups": 35,
+      "blocked_phrases": 0,
+      "landed_configuration_matches_candidate": true
+    },
+    "github_cost_pin": {
+      "alias_keys": 23,
+      "trigger_groups": 15,
+      "blocked_phrases": 0,
+      "landed_configuration_matches_candidate": true
+    }
+  },
+  "discrepancies": [
+    "LANDED says remaining lists unchanged without qualification; detailed RESULT says 23/24 held-out and 10/10 T11.",
+    "pin_measure.py docstring says 16 held-out film prompts; RESULT and comparison accounting say 24. Actual held-out file is uncommitted."
+  ],
+  "sources": {
+    "RESULT.md": "https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_round6/tests/t12/RESULT.md",
+    "compare_arms.py": "https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_round6/tests/t12/compare_arms.py",
+    "make_stage.py": "https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_round6/tests/t12/make_stage.py",
+    "pin_candidate.json": "https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_round6/tests/t12/pin_candidate.json",
+    "pin_measure.py": "https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_round6/tests/t12/pin_measure.py",
+    "pin_push_candidate.json": "https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_round6/tests/t12/pin_push_candidate.json",
+    "LANDED.md": "https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_round6/LANDED.md",
+    "brain.py": "https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/dreaming/brain.py",
+    "recall_policy.json": "https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/dreaming/recall_policy.json",
+    "recall_policy_regression.py": "https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/dreaming/recall_policy_regression.py",
+    "recall_probe_log.json": "https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/dreaming/recall_probe_log.json"
+  }
+}

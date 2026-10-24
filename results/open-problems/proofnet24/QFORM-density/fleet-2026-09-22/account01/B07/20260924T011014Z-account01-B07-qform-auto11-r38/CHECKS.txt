@@ -1,0 +1,25 @@
+account01/B07 r38 deterministic regression checks
+
+Purpose: finite arithmetic/regression checks only. These computations are not used as proof evidence; the report's operator-star inequalities are exact analytic arguments.
+
+Tested 100 pseudorandom real symmetric matrices with dimensions 4 through 8. Each matrix was rescaled so its third-largest absolute eigenvalue equals 1, hence the target spectral threshold is met.
+
+For each instance, formed the full third compound C3(A), split it by overlap h=0,1,2,3, and checked:
+
+1. max_h ||C^[h]||_op >= ||C3(A)||_op/4.
+2. ||C^[2]||_op <= 3 max_H ||S_H||_op for the exact shared-pair star matrices.
+3. ||C^[1]||_op <= 3 max_s ||T_s^star||_op for the exact shared-coordinate star matrices.
+
+Observed violations: 0 / 100 in each test class.
+Minimum observed safety ratios (LHS allowed bound divided by tested quantity):
+- overlap funnel: 1.8998
+- h=2 pair-star inequality: 1.29196
+- h=1 singleton-star inequality: 1.55692
+
+Analytic constants independently recomputed:
+- principal-det branch at |det|>=1/4: 287.3502843672
+- disjoint E3 branch at e3>=1/1024: 33.4946982021
+- h=2 fixed-pair branch at m_H>=1/64, W_H>=1/144: 482.1831968655
+- h=1 scalar/Schur diffuse branch at |a|>=1/64 and E2 marginals<=3/4: 125.4829482094
+
+STATUS=PASS

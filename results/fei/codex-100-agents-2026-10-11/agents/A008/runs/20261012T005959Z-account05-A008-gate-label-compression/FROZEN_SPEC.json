@@ -1,0 +1,12 @@
+{
+  "helper_version": "A008-independent-star-and-heterogeneous-block-v1",
+  "actual_Boolean_family": "Sunflower x0 AND OR(x1,...,xm); OR of disjoint signed conjunctions of arbitrary positive widths",
+  "parameter_domain": {"sunflower_truth_m": [1,2,3,4,5,6,7,8], "all_partition_forests_m": [1,2,3,4,5], "block_width_multisets": "every integer partition of n for 1<=n<=9", "rational_theta_a": ["2/5", "1/2"]},
+  "case_count": "8 sunflower truth tables; every generic assignment/source-SCC forest/attachment/chronological queue trace on m<=5; 96 heterogeneous width multisets with full truth tables; local sampler tables for widths 1..9",
+  "symmetry": "Only block permutations and literal sign flips in disjoint DNFs, justified by variable relabeling and invariance of squared Fourier coefficients/influence. Internal block orders fixed once.",
+  "arithmetic": "integer FWHT, Fractions, formal a-polynomial residual sums, exact sequential queue probabilities at two rational a values, rational fifth-root intervals and atanh log intervals with proved tails",
+  "memory_estimate_MB": 100,
+  "maximum_runtime_seconds": 60,
+  "no_automatic_dimension_escalation": true,
+  "pilot_policy": "Run separate frozen review and block pilot commands; save each immediately; no job >300 MB"
+}

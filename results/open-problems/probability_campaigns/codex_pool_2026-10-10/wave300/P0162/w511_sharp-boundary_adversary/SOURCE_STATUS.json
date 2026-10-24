@@ -1,0 +1,63 @@
+{
+  "problem_id": "P0162",
+  "as_of": "2026-10-10",
+  "exact_statement": "Exists C<infinity such that for every n>=1 and every Boolean f:{-1,1}^n->{-1,1} under uniform input, sum_{S subset [n]} fhat(S)^2 log_2(1/fhat(S)^2) <= C sum_{S subset [n]} |S| fhat(S)^2. Empty coefficient included; 0 log(1/0)=0. Constant C independent of n and f.",
+  "historical_intake_status": "attempted_un; tier 5; dated 2026-09-07",
+  "current_openness": "UNKNOWN",
+  "status_evidence": "Recent primary sources continue to treat full FEI as a conjecture. Targeted owner-work checks remain incomplete; no novelty or exhaustive present-openness certificate is asserted.",
+  "primary_sources": [
+    {
+      "title": "The Fourier Entropy-Influence Conjecture for certain classes of Boolean functions",
+      "authors": "O'Donnell, Wright, Zhou",
+      "url": "https://www.cs.cmu.edu/~jswright/papers/fei.pdf",
+      "scope_read": "Exact conjecture and definitions in introduction",
+      "verified": true
+    },
+    {
+      "title": "Further evidence towards the Fourier Entropy-Influence conjecture",
+      "authors": "Gonzalez, MacManus, Pereyra",
+      "url": "https://arxiv.org/html/2606.00246v1",
+      "version": "v1 2026-05-29",
+      "scope_read": "Introduction, Section 4.2, Appendix B; existential splitting-coordinate quantifier and entropy increment identity",
+      "verified": true
+    },
+    {
+      "title": "On the Fourier Entropy-Influence Conjecture for Boolean Plateaued Functions",
+      "author": "Vladimir N. Potapov",
+      "url": "https://arxiv.org/html/2609.21563v1",
+      "version": "v1 2026-09-18",
+      "scope_read": "Definitions and Theorems 1 and 2; partially bent constant 2, plateaued constant 4",
+      "verified": true
+    },
+    {
+      "title": "A new bound for the Fourier-Entropy-Influence conjecture",
+      "author": "Xiao Han",
+      "url": "https://arxiv.org/abs/2312.08271",
+      "version": "v2 2025-12-10",
+      "scope_read": "Abstract bound with the additional sum_i I_i log(1/I_i) term",
+      "verified": true
+    }
+  ],
+  "brain_scars_read": [
+    "fei_plateaued_constant_four_is_potapovs_theorem_not_ours_2026_09_30",
+    "the_margin_tests_named_family_misses_an_acronyms_expansion_2026_09_30",
+    "kalai_conj8_percolation_entropy_is_o_influence_2026_09_10",
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "fei_opus_wave1_reduction_small_influences_gates_and_ltf_2026_09_23"
+  ],
+  "interpretation_of_prior_work": "The constant-four plateaued bound is prior work, not our novelty. The prior Opus memo already warns about per-coordinate erasure bounds and arbitrary split choice. This lane isolates a distinct explicit bent-plus-point-flip family and the actual entropy increment.",
+  "novelty_of_lane_result": "UNKNOWN; independent derivation, not a priority claim",
+  "complete_source_hash_check": false,
+  "mathematical_proof_status": "C001-C004 independently checked by named referee w512, 4 KEEP verdicts; no formal theorem receipt",
+  "forbidden_material_read": false,
+  "next": "Coordinator validates and ingests reviewed bundle_002; confirm retrieval separately. Openness and novelty remain UNKNOWN.",
+  "local_target_records": {
+    "intake_artifact": "SOURCE_RECORDS.json",
+    "read_only_store_artifact": "TARGET_CARDS.json",
+    "exact_nodes_matched": 2,
+    "open_problem_card": "claim_d7e82bff88909352dff2f23bfcaf7a76446d6bfd14af38c5bda1d5efeb9d9c06",
+    "prior_attempt_card": "claim_06b0c09db7e28efc6febd3962e234332a00c2ba45a17792cc4d83fdbc6752fba",
+    "prior_attempt_scope": "Real-valued singleton-spectrum obstruction; no full FEI solution recorded in this target card"
+  },
+  "owner_status_check_limit": "Named H/I folders had no matching P0162 text. Relevant recalled prior FEI note still reports full FEI open as of September. The referenced math-open-problems checkout was unavailable at the tested local path. No exhaustive current solved/retired check is certified."
+}

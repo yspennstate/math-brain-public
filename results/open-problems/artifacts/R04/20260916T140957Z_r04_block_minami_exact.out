@@ -1,0 +1,10 @@
+SELF-CHECK PASS
+exhaustive_cases_N_le_500 = 62750
+worst_a_inverse_squared = 6
+first_worst_case_(N,W,K,q,lo,hi) = (3, 1, 2, 1, 1, 2)
+exact consequence: a^{-2}=2(2W+1)/q <= 6 on 2W+1<=N
+metric consequence: with PSSS Theorem-3 constant C,
+Y=2*pi*C/a <= 2*pi*sqrt(6)*C,
+E[X^2] <= Y+Y^2 <= 2*pi*sqrt(6)*C + 24*pi^2*C^2.
+NOTE: finite self-check verifies partition/covariance algebra only;
+PSSS Theorem 3 is an external published input, not machine-proved here.

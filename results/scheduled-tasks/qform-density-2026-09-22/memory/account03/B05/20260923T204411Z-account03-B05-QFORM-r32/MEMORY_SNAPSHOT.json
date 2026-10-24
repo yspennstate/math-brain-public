@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B05",
+  "run_id": "20260923T204411Z-account03-B05-QFORM-r32",
+  "execution_context": "scheduled_automation",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "control_start_commit": "9db813c4f626bc3e85821d23012bcc6fba58178c",
+  "control_refresh_commit": "6228614ac861470663b31d997c99f2e49deba8f8",
+  "owner_control_revision": "2026-09-22.15",
+  "owner_request_acknowledged": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "small matrix coefficients are not small random errors without moments/support"
+  ],
+  "premises": [
+    {
+      "name": "ratio-variance packet normal form",
+      "source": "yspennstate/math-open-problems@b0299facc04ea0c03276dddb1a12c027aed5a946:proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T033640Z-account01-B05-QFORM-r26/REPORT.md",
+      "scope": "original-coordinate packet with Schur remainder lambda diag(m,0) and product-projection residual"
+    },
+    {
+      "name": "r31 Pluecker exact-cross exit",
+      "source": "yspennstate/math-open-problems@95f94696393b5ad8b0def71fa0d93082de92bd85:proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260923T193756Z-account03-B05-QFORM-r31/REPORT.md",
+      "scope": "diffuse q_X<1/2 exact-cross branches"
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B05",
+    "source": "yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/account04/B05/20260923T041255Z-account04-B05-dominant-slope-r2/REPORT.md",
+    "theorem": "||p_Q||_inf < 51.6 (mu m_*)^(-1/3)",
+    "actual_application": "For theta=1/8 and standard packet m>=3/20, a heavy row with u_h^2/m>=1/8 gives ||p_Q||_inf < 51.6(160/(3mu))^(1/3) < 194.23 mu^(-1/3)."
+  },
+  "new_result": {
+    "id": "QFORM-HEAVY-ROW-RESIDUAL-DESCENT-v1",
+    "status": "SUPPORTING_STRUCTURAL_QUANTITATIVE_LEMMA",
+    "summary": "If normalized packet leverage q_X>=1/2, then either a heavy row carries exact-slope mass theta m and is paid by the partner theorem, or conditioning that literal original coordinate leaves m'>(1-theta)m and sigma'^2<=(1-q_h+theta)sigma^2. At theta=1/8 this gives m'>7m/8, sigma'^2<=5sigma^2/8 and normalized residual contraction sqrt(5/7)."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0e5ef0d3f80bd0d28c449a6f20b8d780ca894e5d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260923T204411Z-account03-B05-QFORM-r32/REPORT.md",
+    "readback": true
+  },
+  "unresolved_implication": "QFORM-HEAVY-RESIDUAL-TOWER-COMPILER-v1: compile arbitrarily many peeled original coordinates or spend the increasing m^2/sigma^2 currency without exponential mass loss.",
+  "continuity_status": "OPEN_FULL_TARGET; r31 exact-cross exits continuous, partner heavy-row payment only essential-boundedness claimed",
+  "next_step": "Retain the peeled heavy residual coordinates as a literal hub bank and test the grouped projected-crossing receiver against their accumulated residual two-volume before conditioning them away."
+}

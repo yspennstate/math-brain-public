@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260922T041812Z-b02-forest-r11",
+  "target": "FOREST",
+  "status": "CANDIDATE_REFUTED",
+  "status_scope": "current end-to-end proof candidate only; FOREST conjecture not refuted",
+  "observed_utc_start": "2026-09-22T04:18:12Z",
+  "report_snapshot_utc": "2026-09-22T04:42:13Z",
+  "elapsed_seconds_to_snapshot": 1441.096,
+  "control_commit_at_fresh_read": "645f6c19b96d8a39e02f92dfda38dcbc671686d3",
+  "pre_delivery_main_commit": "6ebb7af0dd711c0c521409663452aa39ea26d1b5",
+  "control_revision": "2026-09-22.2",
+  "control_readme_blob": "3d4a9372c87802ab734141a3374d04c8823372e3",
+  "owner_programme": "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z",
+  "owner_message_read": true,
+  "owner_message_sha256": "UNAVAILABLE_FROM_CONNECTOR_THIS_RUN",
+  "readme_sha256": "UNAVAILABLE_FROM_CONNECTOR_THIS_RUN",
+  "execution_context": "scheduled_automation",
+  "research_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "model_self_report_source": "self_report",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_configured_source": "not_exposed",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  },
+  "thinking_proxy": {
+    "observed_utc_start": "2026-09-22T04:18:12Z",
+    "observed_utc_end": "2026-09-22T04:42:13Z",
+    "elapsed_seconds": 1441.096,
+    "scope": "invocation start to report snapshot; includes tool/network time; not pure thinking",
+    "tool_calls_made": "NOT_COUNTED"
+  },
+  "directive_acknowledgments": {
+    "fresh_main_five_control_read": "implemented",
+    "owner_message_and_collective_order": "implemented",
+    "stop_installation_and_benchmark_work": "implemented",
+    "FOREST_B02_switching_scope": "implemented",
+    "latest_complete_lead_consumed": "implemented: FOREST-KN-HERMITE-REDUCTION-v1 blob cad5f1b8546f44f200d441b71095a9fde4a20d4b",
+    "named_OTHER_account_result_consumed": "implemented: account02/B03 r12 report ee00454cbfa035fa8778274340630f3a872b492a",
+    "new_mathematics": "implemented: sharper C2 continued-fraction certificate and exact source correction",
+    "actual_hour_login": "blocked: create-only login write was denied by platform safety checks; no bypass attempted",
+    "unique_start_record": "implemented",
+    "unique_finish_record": "in_progress_at_receipt_creation",
+    "quiet_delivery": "implemented",
+    "public_posting_or_email": "not_applicable; none performed"
+  },
+  "scientific_result": {
+    "candidate_transfer": "refuted_as_source_valid_chain",
+    "reason": "detailed Cocks/Erickson mechanism is class-level and requires all rational gadget-expanded graphs, not the unit point of one fixed K_n",
+    "first_missing_implication": "prove unit NC for all Cocks/Erickson rational gadget expansions of every K_n, or prove weighted I-Rayleigh for K_n directly",
+    "new_bound": "C2=k(k^2+9k+27)/((k+5)(k^2+8k+28)) <= s",
+    "new_gap_certificate": "G_k(C2) has numerator 4k^6+115k^5+1499k^4+10815k^3+46297k^2+111160k+117600 and positive denominator"
+  },
+  "native_test": {
+    "checker_sha256": "242e8592bbea99092fa83cbeafded8dd5071df31beb140211d25025f3198e378",
+    "checker_bytes": 1722,
+    "output_sha256": "fc13de6293864f0901ea5a388081fba7feca4d734e68e6f8b8b598669b669599",
+    "output_bytes": 47,
+    "result": "PASS: brute K3..K6; exact C2/G rational checks n=6..500",
+    "role": "regression only, not all-n proof"
+  },
+  "artifact_blobs": {
+    "start.json": "da150364553405725959a8e2a73f851a4aabb0b4",
+    "attempt_report.md": "07794d469ced157633cd07c57caaaf3e3bbe4066",
+    "c2_checker.py": "98cd06c303f6d3bfb3de171c75440898b11488e0",
+    "c2_checker.out": "f18d6434eb9d9d9f458c814f69725f05a79d3e59"
+  },
+  "unresolved_blockers": [
+    "primary Cocks full proof body was not openly retrievable; detailed independent proof and Oxley give class-level quantification",
+    "weighted K_n / rational gadget-expansion switching remains unproved",
+    "canonical actual-hour login was blocked by platform safety checks"
+  ],
+  "next_action": "build a multiplicity-controlled forest switching for the Cocks/Erickson two-terminal rational gadget expansions of K_n; preserve the unit K_n theorem as the zero-gadget base case",
+  "privacy_review": "PASS",
+  "delivery_status": "report/checker/shared handoff written and read back; finish pending"
+}

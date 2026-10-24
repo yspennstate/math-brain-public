@@ -1,0 +1,25 @@
+{
+  "worker": "w407",
+  "target_id": "P0003",
+  "checked_at": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "reason_current_status_unknown": "Question 2.2 is explicitly posed in the 2022 primary source and bounded checks found no fixed-lattice proof; current literature and owner solved/retired records have not been exhaustively certified.",
+  "exact_source_statement": "Grimmett, Question 2.2: choose uniformly among n-step self-avoiding walks on the hexagonal lattice H that start at the origin. Ask whether, after a suitable spatial rescaling as n tends to infinity, the random path converges weakly to an SLE(8/3) random curve. The source does not specify the rescaling exponent, curve topology, or SLE variant/domain. Those details remain to be fixed before a fully formal theorem can be claimed.",
+  "source_statement_url": "https://arxiv.org/html/2205.07318",
+  "source_locator": "Geoffrey Grimmett, Selected problems in probability theory, Section 2.2, Question 2.2, lines 85-93",
+  "exact_source_quote": "Does a uniformly distributed n-step SAW from the origin of H converge weakly, when suitably rescaled, to the Schramm-Loewner random curve SLE8/3?",
+  "primary_source_scope": [
+    {"url":"https://arxiv.org/html/2205.07318","locator":"Question 2.2, lines 85-93","finding":"This is the source named by the existing P0003 brain card. It asks about uniform fixed-n SAW from the origin. Its displayed connective constant is sqrt(1+sqrt(2)), conflicting with Duminil-Copin--Smirnov's proved sqrt(2+sqrt(2)); the latter is correct."},
+    {"url":"https://arxiv.org/html/1007.0575","locator":"Theorem 1, Lemma 1, Section 4 Conjecture 1","finding":"Connective constant and local parafermionic vertex relation are proved. The paper's related chordal conjecture uses critical length-weighted paths between domain boundary points, a different ensemble from Grimmett's fixed-n origin question. Section 4 says the local relation alone does not yield a limit."},
+    {"url":"https://arxiv.org/html/math/0209343","locator":"Definition 3.1, Proposition 3.3, Theorem 6.1","finding":"Conformal restriction characterizes the continuum trace once its smooth-hull avoidance law and sample-space hypotheses hold; it supplies no lattice partition-ratio limit."},
+    {"url":"https://arxiv.org/abs/1608.00956","locator":"abstract","finding":"Proved SLE(8/3) convergence is for SAW on random quadrangulations with a random metric-measure surface; it does not establish the fixed honeycomb target."}
+  ],
+  "prior_owner_record_checks": [
+    {"path":"~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv","finding":"P0003 dated attempted_un rank, no proof or current-status certificate."},
+    {"path":"~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl","finding":"C0096-A001 notes n=0 critical identification and tightness gaps; not a P0003 proof."},
+    {"path":"~/<private-repo>/06_math_research/Open problem project/solved_register.md","finding":"Targeted P0003/hexagonal/self-avoiding/SLE text search had no match; bounded negative check."},
+    {"path":"~/<private-repo>/06_math_research/Open problem project/solved_so_far.md","finding":"Same targeted search had no match; bounded negative check."}
+  ],
+  "hardest_missing_input": "For the reviewed w405 route, prove a transfer from the critical chordal length-weighted domain ensemble to Grimmett's uniform fixed-n origin ensemble, including spatial scale and endpoint/curve-law control. The chordal route itself still lacks its fixed-buffer partition-ratio estimate and curve tightness.",
+  "draft_delivery": {"submitted":true,"reviewed":false,"ingested":false,"retrievable":false,"receipt":"~/brain_workers/w407/DELIVERY_STATE.json"}
+}

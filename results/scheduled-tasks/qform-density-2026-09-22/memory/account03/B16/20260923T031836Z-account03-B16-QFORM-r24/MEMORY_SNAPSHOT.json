@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260923T031836Z-account03-B16-QFORM-r24",
+  "status": "PROVED_DUPLICATED_SLICE_FRESNEL_AND_TWO_COLOOP_REDUCTION_FULL_TARGET_OPEN",
+  "execution_context": "scheduled_automation_WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "start_commit": "6c1ac812860de7925f42b6bb37315f6b93c78747",
+    "final_refresh_commit": "607cbd98fc474b926d6a0d90f5f644e05b481e8c",
+    "owner_control_revision": "2026-09-22.15",
+    "programme_revision": "2026-09-22.5"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-DUPLICATED-SLICE-FRESNEL-v1",
+      "scope": "exact-rank-three product inputs, one selected original row with c in (0,1), residual duplicated leverage gate h_j+s_j^2/[2(1-c)]<=1/2",
+      "summary": "Continuous C0 density with ||p_Q||_infinity <= 3 e^(5/6)[2c(1-c)]^(-1/6)|det Lambda|^(-1/3), uniformly under affine terms. Proof duplicates the transverse Fourier slice into a five-dimensional BL frame before integrating the shared leakage frequency."
+    },
+    {
+      "id": "QFORM-DOMINANT-STAR-TRANSVERSE-1OVER64-ESCAPE-v1",
+      "scope": "r23 residual dominant-star chamber",
+      "summary": "Any residual transverse leverage h_j>=1/64 forces a uniformly invertible indefinite physical pair and closes with ||p_Q||_infinity<865."
+    },
+    {
+      "id": "QFORM-R23-TWO-COLOOP-REDUCTION-v1",
+      "scope": "r23 exact-rank-three residual chamber after designated partner d<1/64 branch",
+      "summary": "Outside paid branches, either dominant leverage c>63/64 or one residual coordinate carries >31/32 of the remaining longitudinal Parseval mass while h_j<1/64. The formerly diffuse common-source leakage is therefore forced onto at most one additional source atom."
+    }
+  ],
+  "partner": {
+    "id": "QFORM-RULED-PLUECKER-ENDPOINT-v1",
+    "source": "yspennstate/math-open-problems@b111363ff02b67015d14db35482e0150591744cd:proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260922T231542Z-account04-B16-QFORM-r1/REPORT.md",
+    "application": "Used at the actual threshold d>=1/64: ||p_Q||_infinity <=12|det Lambda|^(-1/3)d^(-1/6)<=24. Work then proceeds only on d<1/64; partner one-sheet pi*sqrt(2) bound remains available."
+  },
+  "key_exact_identity": {
+    "statement": "With Lambda=[[alpha,B,0],[B,r,s],[0,s,tau]], the quadratic-root discriminant in the genuine original hub coordinate is D_t=c[(B^2-alpha r)Y^2-2alpha sYZ-alpha tau Z^2+alpha t]; the common leakage T cancels exactly, and det K_alpha=alpha det Lambda.",
+    "warning": "Replacing root-location overlap by the absolute half-Riesz potential loses uniformity as alpha->0; keep product provenance."
+  },
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_report_commit": "3185d21d594f9e06450da809ca97fab2132285a4",
+    "math_check_commit": "eb2d2f450425ee0264a1582dd2ed4b6ac589052f",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T031836Z-account03-B16-QFORM-r24/REPORT.md",
+    "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T031836Z-account03-B16-QFORM-r24/CHECK_OUTPUT.txt",
+    "handoff_commit": "607cbd98fc474b926d6a0d90f5f644e05b481e8c",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B16/20260923T031836Z-account03-B16-QFORM-r24.md"
+  },
+  "unresolved_implication": "QFORM-ONE-TWO-COLOOP-NEAR-NULL-CLOSURE-v1: close the minority-sign density when either c>63/64 or one residual original coordinate carries >31/32 of the remaining longitudinal Parseval mass with transverse leverage <1/64. Preserve exact root-location/product overlap; arbitrary additional spectrum remains separate.",
+  "full_target": "OPEN",
+  "global_continuity": "OPEN",
+  "full_brain_connected": false
+}

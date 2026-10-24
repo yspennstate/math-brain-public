@@ -1,0 +1,113 @@
+% Standalone mathematical interface; complete proofs and source pins in REPORT.md.
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\newcommand{\D}{\Delta}
+\begin{document}
+\section*{A042: corrected bias endpoint interface}
+Let $f:\{0,1\}^n\to\{-1,1\}$ and let $p_i\in(0,1)$ be independent
+input probabilities. Put $w_S=\prod_{i\in S}4p_i(1-p_i)$ and
+\[
+ c_S=2^{-|S|}\mathbb E_{p_{S^c}}\D_S f,
+ \qquad \D_i f=f(x_i=1)-f(x_i=0).
+\]
+Integrating each coordinate gives $\widehat f_p(S)=\sqrt{w_S}c_S$
+and $|c_S|\le1$. Define natural corrected entropy $E=(\ln2)H^+$.
+Then
+\[
+ E=\sum_{S\ne\varnothing}w_Sc_S^2\ln(1/c_S^2),\qquad
+ D=I-\operatorname{Var}(f)=\sum_{|S|\ge2}(|S|-1)w_Sc_S^2.
+\]
+These extend continuously to the closed bias cube; at deterministic
+inputs they equal the values of the contracted Boolean table.
+For an analytic path with $w_S=W_St^r(1+O(t))$ and
+$c_S=b_St^s(1+O(t))$, the atom contributes
+\[
+ E_S=W_Sb_S^2t^{r+2s}\{2s\ln(1/t)-\ln b_S^2\}
+       +O(t^{r+2s+1}(1+\ln(1/t))).
+\]
+Only a zero of $c_S$ creates a logarithm. Identically zero atoms are omitted.
+
+\paragraph{One rare input.}
+Let $\Pr(X=1)=\varepsilon$, $f(0,y)=g(y)$, $f(1,y)=h(y)$, and
+$a_T=\widehat g(T)$, $b_T=\widehat h(T)-\widehat g(T)$.
+Remaining biases are fixed and interior. Exactly,
+\[
+ \widehat f(T)=a_T+\varepsilon b_T,\qquad
+ \widehat f(T\cup\{X\})=\sqrt{\varepsilon(1-\varepsilon)}b_T.
+\]
+Consequently
+\begin{align*}
+ D(f)&=D(g)+\varepsilon L-\varepsilon^2Q,\\
+ L&=2\sum_{T\ne\varnothing}(|T|-1)a_Tb_T+\sum_T|T|b_T^2,
+ &Q&=\sum_{T\ne\varnothing}b_T^2,\\
+ E(f)&=E(g)+\varepsilon K+2\varepsilon^2Z\ln(1/\varepsilon)
+                +O(\varepsilon^2),\\
+ K&=2\sum_{T\ne\varnothing:a_T\ne0}a_Tb_T
+                \{\ln(w_T/a_T^2)-1\}
+        +\sum_Tb_T^2\ln(4w_T/b_T^2),\\
+ Z&=\sum_{T\ne\varnothing:a_T=0}b_T^2.
+\end{align*}
+The last sum in $K$ includes $T=\varnothing$; zero terms are omitted.
+To prove the entropy expansion, use the exact identity
+\[
+ E(f)=\sum_{T\ne\varnothing}(a_T+\varepsilon b_T)^2
+       \ln\frac{w_T}{(a_T+\varepsilon b_T)^2}
+   +\varepsilon(1-\varepsilon)\sum_Tb_T^2\ln\frac{4w_T}{b_T^2}.
+\]
+Taylor expand the nonzero $a_T$ terms and evaluate the zero $a_T$ terms
+exactly. The remainder is not uniform as nonzero $a_T$ tends to zero.
+For a probability tending to one, exchange $g,h$ and use
+$\varepsilon=1-p_X$.
+
+\paragraph{Zero deficit.}
+At interior bias, $D=0$ iff $f$ is a constant or signed literal.
+Indeed $D=0$ makes $f$ affine, and $f^2=1$ forces at most one
+nonzero slope. Such functions have $E=0$.
+If $D(g)=0=L$, nonnegativity forces $Q=0$ and $E(f)=D(f)=0$
+identically. If $D(g)=0<L$, then
+\[
+ \lim_{\varepsilon\downarrow0}\frac{H^+(f)}{D(f)}
+       =\frac K{L\ln2}.
+\]
+If $D(g)>0$, the ratio converges to $H^+(g)/D(g)$.
+These are fixed-dimension statements, not a universal bound on $K/L$.
+
+\paragraph{Unit atoms.}
+After deterministic contraction, $P(U)=1$ implies $f=\pm\phi_U$.
+Booleanity and full support force every coordinate of $U$ to be fair;
+$f$ is a signed parity on $U$. Its corrected entropy is zero;
+$D=|U|-1$ for nonempty $U$ and $D=0$ for the empty atom.
+
+\paragraph{Threshold controls.}
+For $A=\{mX_0+\sum_{j=1}^mX_j\ge m\}$, put $r=q^m$,
+$a=\Pr(X_0=1)$, $z=1-a$, and $g=2\prod_{j=1}^mX_j-1$.
+Then
+\[
+ D_g=4r[m(1-q)-1+r],\quad
+ H_g^+=2D_g+8mr(q-r)\log_2(1/q),\quad
+ D_o=4ar z(1-r),
+\]
+\[
+ H_o^+=8az(1-r)^2\log_2\frac1{1-r}
+      +8r(1-r)z^2\log_2\frac1z+8ar z(1-r).
+\]
+Exactly $D_f=D_o+zD_g$, $H_f^+=H_o^++zH_g^+$.
+For $q=m^{-2}$, $a=(m-1)r/[1+(m-1)r]$ and $m\to\infty$,
+\[
+ H_f^+/D_f=2+O((\ln m)/m^2)+O(r),\quad
+ \alpha\mathrm{TC}(Q)/I=(\ln m+1)/8+O((\ln m)/m),
+\]
+\[
+ \frac{V\ln(1/V)-\sum_i I_i\ln^+(4\rho_i/V)}I
+       =\tfrac12\ln m-\ln2+O((\ln m)/m).
+\]
+TC and pivotal residuals above are in nats; the credit multiplier is
+exactly one. For $a=r/(1+r)$, first take $q\downarrow0$ at fixed $m$:
+\[
+ \frac{\alpha\sum_{k\ne j}I_Q(X_j;X_k)}{I_j}
+       \longrightarrow\frac{m\ln2}{2}\qquad\text{for every }j.
+\]
+Only afterward may $m$ grow. In this fixed-$m$ regime $H_f^+/D_f\to2$
+for $m\ge2$, but the exceptional case $m=1$ has limit $2+4/\ln2$.
+Full FEI and the all-arity weighted-threshold corrected inequality remain open.
+\end{document}

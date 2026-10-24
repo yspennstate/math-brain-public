@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260923T211204Z-account03-B11-QFORM-r42",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_prepublication": "408701f08bdf0bc5cbe4760e132d3b7d9a69e4ad",
+  "control_revision": "2026-09-22.15",
+  "correction_inbox_sha": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8207aee23be9554e960f48d82c2e706eacc50c04",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T211204Z-account03-B11-QFORM-r42/REPORT.md",
+    "verifier": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T211204Z-account03-B11-QFORM-r42/VERIFY.py",
+    "verifier_output": "QFORM_B11_R42_CURVATURE_TRANSFER_CHECK_PASS"
+  },
+  "premises": [
+    {
+      "source": "account03/B11 r41",
+      "commit": "7120df98e7d30de603f45a8823fb02d25564f218",
+      "scope": "exact-rank-three true-near-coloop punctured collar; sigma1*sigma2>kappa_*s^2 and ||(d,alpha)||>beta0*s"
+    },
+    {
+      "source": "account01/B02 aggregate spectral-plane transfer",
+      "commit": "56e56e3c3af5bad72c125079b30eaa38824291de",
+      "scope": "literal original-coordinate cross cut; E3 >= (27/256)x1*x2*W_L"
+    },
+    {
+      "source": "account02/B02 marginal-free physical-E3 receiver",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T200844Z-account02-B02-qform-auto11/REPORT.md",
+      "scope": "||p_Q||_infinity <= 10.345084 E3^{-1/6}, continuous C0 density"
+    },
+    {
+      "source": "account04/B11 designated partner r5",
+      "commit": "50b07997bec888ff7cc6820cd42be8e34d0ffc48",
+      "scope": "exact-rank-three indefinite pair-area compiler ||p|| <=128sqrt2/(s sqrt(g_ij))"
+    }
+  ],
+  "new_results": [
+    "QFORM-INTERNAL-CURVATURE-TRANSFER-IDENTITY-v1: W_H=sum_i(1-q_i)(h dot z_i)^2 exactly, with sum_i(h dot z_i)^2=||h||^2.",
+    "If W_H>=beta0^2 s^2/8, a literal original-coordinate cut has E3>4.909035430513786e-12 s^6 and therefore ||p_Q||_infinity<793.539/s with a continuous C0 density.",
+    "If W_H<beta0^2 s^2/8, at most three physical H-rows have q_i>3/4 and they carry more than half the internal third-curvature energy; one satisfies |h dot z_i|>beta0*s/sqrt(6)=0.0073813661126...s.",
+    "Designated account04/B11 pair-area theorem pays the large-leaf exit: ||w_j||^2>=1/36 implies ||p_Q||_infinity<1094.703/s."
+  ],
+  "corrections_preserved": [
+    "no law-uniform pointwise van-der-Corput decay",
+    "no independence after spectral rotation",
+    "no arbitrary-joint coarea density theorem",
+    "no conditional-density-cap shortcut",
+    "no naive fiber-supremum dimension-free bound",
+    "no small nonzero random-quadratic perturbation deletion",
+    "no mixed L1_W(L2_v) slice bound from r40"
+  ],
+  "remaining_implication": "QFORM-FINITE-HEAVYROW-PUNCTURED-RECEIVER-v1: close the at-most-three high-leverage physical-row collar uniformly in the vanishing third cross singular value; then separately bridge arbitrary additional nonseparable spectrum.",
+  "full_target_status": "OPEN",
+  "continuity_status": "continuous on the new E3 branch only; unrestricted continuity OPEN"
+}

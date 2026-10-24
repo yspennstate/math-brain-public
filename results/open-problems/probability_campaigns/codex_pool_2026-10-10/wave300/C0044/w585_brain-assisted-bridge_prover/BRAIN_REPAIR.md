@@ -1,0 +1,9 @@
+The bounded repair is one explicit conditional bridge card, supported by the other draft concepts and exact internal edges. Its statement names incoming environment densities, subsequential uniform integrability, and the unresolved attempt to obtain that assumption from iid strict ellipticity. It prevents a retrieved general UI theorem from being mistaken for the missing RWRE estimate.
+
+The scoped baseline selected 14 live C0044/Kozlov/martingale-convergence/UI title matches from the population store in 1.393 seconds. No title match for C0044 was present. The de la Vallee-Poussin theorem card requires a uniform superlinear-moment bound; its first-moment normalization counterexample agrees with this packet's rejected route. The retrieved Kesten-Kozlov-Spitzer technique card explicitly assumes dimension one and additional stable-index and moment hypotheses, so it cannot supply a d>=3 bridge. Doob convergence alone identifies neither the escape event nor an environment-density bound; the proof instead uses conditional expectations of 1_A_l with the full environment revealed.
+
+Command: python -X utf8 ~/brain_workers/w585/measure_retrieval.py
+
+Before: 0/3 task queries returned a top-three card stating the density zero-one bridge with its extra UI assumption. After adding exactly one draft criterion card to the same 14-card lexical replay: 3/3, all at rank one; measured replay time 0.031757 seconds. Graph edges and semantic inference were disabled in both arms. The observed failure is missing hypothesis-bearing bridge content in this scoped retrieval, not proof that the global engine is defective. The metric checks content, not the number of nodes.
+
+This is a local proposed repair with an author-only draft. The three queries are task fixtures rather than a blind evaluation. Whole-store retrieval after independent review and coordinator integration remains unmeasured. Submitted, reviewed, ingested and live-retrievable must remain distinct states.

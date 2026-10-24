@@ -1,0 +1,10 @@
+R11 C025 exact self-check
+checks=8388
+N4 alpha=1/2 Delta=1/2 mu=1/10
+N4 shared-parent p13=3/40 p22=11/240 ratio=18/11
+C025-C023 ratio difference=-1/33
+C025-C024 ratio difference=-105/3949
+parent-sharing excess=1-1/N (maximal every generation)
+U009 path-coupling bound <= k*M*(M+1)/(2N)
+with Delta=1/ceil(N^(1/4)), N*Delta^2 -> infinity
+ALL_EXACT_CHECKS_PASS

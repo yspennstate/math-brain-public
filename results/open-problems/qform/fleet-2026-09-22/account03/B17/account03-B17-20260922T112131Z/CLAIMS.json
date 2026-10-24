@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "target": "Quadratic_Form_Bounded_Density_Conjecture",
+  "owner_control_revision": "2026-09-22.4",
+  "run_id": "account03-B17-20260922T112131Z",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "QFORM-NO-UNIFORM-POINTWISE-FRESNEL-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For every s != 0, the supremum over probability densities f with ||f||_infinity <= 1 of |integral exp(i s x^2) f(x) dx| equals 1. Hence no law-uniform pointwise decay envelope tending to 0 exists.",
+      "scope": "one-dimensional arbitrary bounded densities",
+      "implication": "refutes the proposed per-direction law-uniform van der Corput decay step, not the bounded-density conjecture"
+    },
+    {
+      "id": "QFORM-SAME-SIGN-PAIR-PI-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For independent X1,X2 with densities <=1 and same-sign coefficients lambda1,lambda2 with magnitudes >=1, lambda1 X1^2 + lambda2 X2^2 has density bounded by pi/sqrt(|lambda1 lambda2|) <= pi.",
+      "scope": "two independent coordinate-square terms with same sign"
+    },
+    {
+      "id": "QFORM-DIAGONAL-THREE-LARGE-PI-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For Q=sum_j lambda_j X_j^2 diagonal in the original independent coordinates, if at least three |lambda_j|>=1 then Q has density bounded by pi, uniformly in n, laws, signs, repeated eigenvalues and all remaining coefficients.",
+      "scope": "complete coordinate-diagonal subclass",
+      "dependencies": ["QFORM-SAME-SIGN-PAIR-PI-v1"]
+    },
+    {
+      "id": "QFORM-ROTATED-THREE-LARGE",
+      "status": "OPEN",
+      "statement": "Extend the universal density bound to arbitrary orthogonal eigenvectors while preserving a dimension-independent constant.",
+      "next_obligation": "Use product-density structure to average the two-dimensional same-sign coarea bound over the orthogonal complement without paying unnormalized slice volume."
+    }
+  ]
+}

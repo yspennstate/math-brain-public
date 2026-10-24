@@ -1,0 +1,50 @@
+worker: NM13-08
+parent: T07_uniform_forest_pairwise_negative_edge_correlation
+run_date: 2026-09-20
+runtime:
+  model: GPT-5.6 Sol
+  reasoning_effort: UNVERIFIED
+parent_scope:
+  before: OPEN
+  after: OPEN
+  complete_simple_graph_order_before: 9
+  complete_simple_graph_order_after: 9
+  counterexample_order_lower_bound_before: 10
+  counterexample_order_lower_bound_after: 10
+restricted_claim:
+  id: T07-INDEPENDENT-LINEAR-FOREST11-STRIP-18
+  status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+  novelty_priority: UNVERIFIED
+  graph_class: "G=K_{3,N}+H with three independent terminals, H=disjoint union_{l=1}^{11} n_l P_l, n_l>=0"
+  conclusion: "Delta_G(e,f)>=0 for all distinct present edges; strict except G=K_{3,1}"
+mechanism_gain:
+  lemma: T07-RESPONSE-STRIP-PRODUCT-18
+  before: "independent-terminal repeated P7 plus singleton families"
+  after: "arbitrary mixtures of P1,...,P11 via two-dimensional response strip"
+  free_multiplicity_parameters_before: 2
+  free_multiplicity_parameters_after: 11
+certificate:
+  max_path_order: 11
+  local_pair_orbits: 3478
+  regular_bernstein_orbits: 3402
+  exceptional_total: 76
+  zero_constant_tree_orbits: 1
+  discriminant_orbits: 75
+  failed_orbits: 0
+  rho_min: "149517080679839/1247315737970580"
+  rho_max: "1/8"
+  arithmetic: exact_integer_and_rational
+preserved_scope:
+  grimmett_winkler: "all graphs <=8 vertices; 9 vertices with <=18 edges"
+  p14_dense_nine: "complementary 19..36 edges; all simple graphs through 9 in repository continuity"
+  p14_reduction: "vertex-minimal source counterexample may be taken 3-connected"
+  erickson: "stronger weighted Rayleigh/SOS for series-parallel graphs only"
+  tang_zhang_2603_10738: "complete-graph specified ensembles including fixed-component forests, not arbitrary-graph all-forest law"
+residual_obstruction:
+  - "local marked-pair positivity has only been proved through path order 11"
+  - "arbitrary 3-connected graphs need not admit this three-terminal path-layer decomposition"
+next_attack: "derive symbolic path-length/position recurrence for exceptional same-path different-terminal spoke discriminants; seek arbitrary-path proof or exact negative case"
+files:
+  report: 2026-09-20T09-35-17Z__independent-linear-forest11-response-strip-report.md
+  checker: 2026-09-20T09-35-17Z__independent-linear-forest11-response-strip-checker.py
+  output: 2026-09-20T09-35-17Z__independent-linear-forest11-response-strip-checker.out

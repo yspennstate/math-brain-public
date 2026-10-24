@@ -1,0 +1,60 @@
+{
+  "run_id": "20260923T123255Z-account02-B20-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "PASS",
+  "tau": {
+    "exact": "1/2048",
+    "decimal": 0.00048828125,
+    "tau_squared_exact": "1/4194304"
+  },
+  "spectral_window": {
+    "projection_threshold": "1/64",
+    "leverage_threshold": "1/32",
+    "A2_lower_bound_factor": "1/4096",
+    "window_row_energy_exact": "1/131072 = 32*tau^2",
+    "star_energy_lower_bound_exact": "31*tau^2 = 31/4194304"
+  },
+  "pair_exit": {
+    "edge_square_threshold": "2*tau^2",
+    "determinant_lower_bound": "> tau^2",
+    "indefinite": true,
+    "density_constant_formula": "2048*(9.2+log(10000/2048))",
+    "density_constant_decimal": 22089.157398152773
+  },
+  "three_bank_arbitrary_rank": {
+    "bank_threshold_exact": "8*tau^2 = 1/524288",
+    "atom_upper_bound": "<2*tau^2",
+    "first_two_bank_upper_bound_each": "<10*tau^2",
+    "remaining_after_two_lower_bound": ">11*tau^2",
+    "third_bank_exists": true
+  },
+  "partner_r31": {
+    "near_coloop_mass": ">63/64",
+    "core_size": "<=18",
+    "pigeonhole_row_component_square": ">7/128",
+    "exact_rank3_star_energy": ">7/128-tau^2",
+    "amplified_bank_threshold": "1/64",
+    "first_two_amplified_bank_upper_bound_each": "<1/64+2*tau^2",
+    "remaining_after_two": ">3/128-5*tau^2",
+    "remaining_exceeds_one_over_64": true
+  },
+  "pinned_D5": {
+    "Z5_threshold": "1/1024",
+    "bound_formula": "10*sqrt(2e)",
+    "bound_decimal": 23.316439815195284
+  },
+  "half_riesz": {
+    "K_star_decimal": 3.201429564905224,
+    "arbitrary_rank_three_bank_cap_decimal": 86.14626063411399,
+    "r30_packet_cap_decimal": 5.5514877749292095
+  },
+  "corrections": {
+    "no_post_rotation_independence": true,
+    "no_unrestricted_fiber_supremum": true,
+    "no_uniform_pointwise_quadratic_phase_decay": true,
+    "no_small_quadratic_deletion": true,
+    "no_single_good_minor_inference": true
+  },
+  "full_qform_proved": false,
+  "continuity_full_target_proved": false
+}

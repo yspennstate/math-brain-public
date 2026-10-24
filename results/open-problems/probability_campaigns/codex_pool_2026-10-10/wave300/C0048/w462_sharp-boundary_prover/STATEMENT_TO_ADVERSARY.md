@@ -1,0 +1,9 @@
+# Statement-only packet for w463
+
+Candidate C0048 is Conjecture 2, printed p. 93, in Hugo Duminil-Copin, *Lectures on the Ising and Potts models on the hypercubic lattice*, arXiv:1707.00520 (2017). It asks for a discontinuous transition for every integer q >= 3 and d >= 3 for the nearest-neighbor ferromagnetic Potts model on Z^d.
+
+Use the equivalent delta-spin convention: for a finite box Lambda, a configuration sigma in {1,...,q}^Lambda has weight exp(beta times the number of equal-spin nearest-neighbor pairs), including interactions with a fixed exterior color 1. All couplings are equal to 1, beta >= 0, and the external field is zero. Write mu^1_beta for the infinite-volume color-1 boundary state and m(beta) = (q mu^1_beta(sigma_0=1)-1)/(q-1). Set beta_c = inf{beta : m(beta)>0}. The exact target is m(beta_c)>0 for every such q,d. Equivalently, under Edwards-Sokal with p=1-exp(-beta), the wired FK order parameter theta^w(p_c,q)=phi^w_{p_c,q}(0 connected by ordinary open edges to infinity) is positive. The primary lecture uses simplex-spin energies; its beta differs by a positive constant factor, which has no effect on the target.
+
+Source scope: q=2 and d=2,q in {3,4} are boundary checks outside this quantifier range. Large-q, high-dimension, and sufficiently spread-out results do not imply the nearest-neighbor q=d=3 case. This packet assumes no auxiliary bridge or proposed proof. Current openness is UNKNOWN: the 2026-09-07 ranking and the primary 2017 conjecture are dated evidence, and recent searches are not a completeness certificate.
+
+Requested independent task: stress-test the exact statement and hypotheses without consulting my proof attempt first. Record any independently established lemma, counterexample to a route, or required clarification. Your results do not need to wait for mine.

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B11",
+  "run_id": "20260923T014132Z-account01-B11-QFORM-r13",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_at_final_refresh": "53b3df3c083f0c48378aae421da13a7e6264de96",
+  "control_revision": "2026-09-22.15",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "42a6318c46518baa413d08d31a0b18fbda582860",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/20260923T014132Z-account01-B11-QFORM-r13/REPORT.md"
+  },
+  "headline_result": "QFORM-NULL-D0-SIX-ANGULAR-BANKS-v1",
+  "secondary_result": "QFORM-NULL-D0-FIVE-CLUSTER-v1",
+  "actual_premises": [
+    "exact rank three",
+    "inertia (2,1) or (1,2)",
+    "zero physical diagonal for the new angular structural theorem",
+    "independent original-coordinate input densities bounded by one only when invoking density exits"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B11",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e47740cfec219112c826613bec5785af4b96cf3f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260922T233948Z-account02-B11-QFORM-b35bb6c3/REPORT.md",
+    "equation_used": "sigma_3(A[S,S^c]) >= s sqrt(D0)/8"
+  },
+  "newest_continuation_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+    "equation_used": "if row-range leverage <=1/2 then ||p_Q||_infinity <23/sigma_3(C)",
+    "derived_bound": "||p_Q||_infinity <184/(s sqrt(D0))"
+  },
+  "new_math": [
+    "Lorentz-circle classification of every exact-rank-three zero-diagonal indefinite spectral frame",
+    "exact Pluecker angular formula",
+    "six-separated-bank lower bound D0 >=4096 sin(delta/2)^12 product masses",
+    "small-D0 five-near-ray mass concentration",
+    "exact tangent/opposite-null near-ray decomposition"
+  ],
+  "continuity": "proved only in the diffuse partner-cut subbranch via the volume-stability theorem",
+  "full_target_status": "OPEN",
+  "unresolved_implication": "QFORM-FIVE-NEAR-RAY-TANGENT-BANK-COMPILER-v1",
+  "next_step": "Exploit the five independent near-ray banks with exact tangent/opposite-null leakage in the high-leverage partner-cut branch, preserving within-bank dependence and all light angular mass; then connect to the arbitrary-additional-spectrum interface."
+}

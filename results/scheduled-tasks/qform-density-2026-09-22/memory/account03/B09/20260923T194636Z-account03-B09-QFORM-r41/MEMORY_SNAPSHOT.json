@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260923T194636Z-account03-B09-QFORM-r41",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "fresh_control_commit_before_publication": "a01a9a5a6e74a4f9c74a6f4aed08ecaa9b9425fb",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "cb5f7af03bad40481c80db84527c2799b27bd8aa",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T194636Z-account03-B09-QFORM-r41/REPORT.md",
+  "companion_paths": [
+    "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T194636Z-account03-B09-QFORM-r41/NOTATION_CORRECTION.md",
+    "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T194636Z-account03-B09-QFORM-r41/CHECK.py",
+    "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T194636Z-account03-B09-QFORM-r41/CHECK_OUTPUT.txt"
+  ],
+  "result_status": "SUPPORTING_THEOREM_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "result_id": "QFORM-3x2-KERNELSHEAR-L1-v1",
+  "result_statement": "For a literal original-coordinate 3x2 cross block C of rank two, with P the 3x3 same-side physical block, unit null vector n of C^T, Delta=sqrt(det(C^T C)), exact kernel curvature n^T P n=0 and nonzero shear p=(I-nn^T)Pn, the full ambient quadratic form has a continuous density bounded by [5*6^(3/5)/2^(13/10)] Delta^(-2/5)||p||^(-1/5). Equivalently, for w equal to the cross product of the two columns of C, the bound is C_sh (||w||||Pw||)^(-1/5). Arbitrary same-side curvature on the opposite bank, outside couplings, affine terms, signs and extra spectrum are retained.",
+  "proof_mechanism": "Condition outside original coordinates; analytically resolve the 3x2 left kernel; at zero kernel curvature the fiber phase is linear with a moving frequency. Use Hausdorff-Young for an L4-in-time fiber budget, the source-valid two-dimensional slope projection cap and one-dimensional moving-frequency projection cap, then two-dimensional bilinear Plancherel and Holder to obtain an L1 characteristic function.",
+  "source_premises": [
+    {
+      "source": "yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401",
+      "path": "proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+      "use": "orthonormal projection density cap 2^(r/2), Fourier normalization, bilinear Plancherel"
+    },
+    {
+      "source": "yspennstate/math-open-problems@c41a5ae669366b253862aa15277c401b932954ad",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T175727Z-account03-B02-qform-r36/REPORT.md",
+      "use": "completed complementary nonzero kernel-curvature receiver and physical invariant w^T P w"
+    },
+    {
+      "source": "yspennstate/math-open-problems@d5094e2e13951a8b77ebf220a51425474fd4b2f1",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T190518Z-account02-B02-qform-auto11/REPORT.md",
+      "use": "one-index-overlap third-compound identity V1=sum ||P_L(c_r cross c_s)||^2 and identification of the kernel-shear residual"
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B09",
+    "source": "yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B09/20260923T101659Z-account04-B09-dense-self-cross-fourier-r1/REPORT.md",
+    "equation": "On A_tau=A5 direct_sum [[0,tau],[tau,0]], the literal cross block for S={1,2,6}, T={4,5,7} is diag(1,1,tau), so ||p_Q||inf<=3 tau^(-1/3); at tau=1/64 this is 12."
+  },
+  "corrections_consumed": [
+    "bounded density does not imply law-uniform pointwise quadratic-phase decay",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "branch_continuity_status": "PROVED_CONTINUOUS",
+  "unresolved_implication": "QFORM-V1-CURVATURE-SHEAR-INTERPOLATION-AGGREGATE-v1",
+  "notes": "Every individual positive V1 packet now has an exact algebraic receiver in both strata: nonzero kernel curvature uses account03/B02; exact zero curvature with nonzero shear uses this run. No uniform interpolation through small nonzero curvature, and no aggregate V1 payment, is claimed. The notation clarification in NOTATION_CORRECTION.md is part of the canonical bundle. The canonical actual-hour login for 19Z already belonged to r40 and was not overwritten."
+}

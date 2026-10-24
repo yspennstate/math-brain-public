@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260924T074439Z-qform-eigenvalue-r52",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3fa0b38081ce4d0c44c074febf188dede6f6f6ae",
+    "report": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260924T074439Z-qform-eigenvalue-r52/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260924T074439Z-qform-eigenvalue-r52/check_principal_angle_spectrum.py",
+    "check_results": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260924T074439Z-qform-eigenvalue-r52/CHECK_RESULTS.json",
+    "prepublication_refresh": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260924T074439Z-qform-eigenvalue-r52/PREPUBLICATION_REFRESH.md"
+  },
+  "result_ids": [
+    "QFORM-PRINCIPAL-ANGLE-SPECTRUM-SHIELD-v1",
+    "QFORM-RESONANCE-DIMENSION-FIVE-MODE-STABILITY-v1",
+    "QFORM-OVERLAP-ENERGY-COROLLARY-v1"
+  ],
+  "main_result": "For full-column M and arbitrary N, let g=s_m(M) and c_1>=...>=c_m be the canonical correlations between Ran(M) and Ran(N). Then for every q=0,...,m-1, s_(m-q)(M+N)>=g sqrt(1-c_(q+1)^2). This is sharp even when N=GP for a symmetric signed added matrix. Thus q fully resonant/cancelled directions can be spent without any magnitude or rank bound on the remaining added packet.",
+  "qform_stability": "For an ORIGINAL-coordinate carrier H, symmetric A_*, arbitrary symmetric G, additional rank-r carrier packet R0, and symmetric dense tail T with epsilon=||TP_H||, sqrt(lambda_(m-q-r)((A^2)[H,H])) >= [g sqrt(1-c_(q+1)^2)-epsilon]_+, where c_i compare Ran(A_*P_H) and Ran(GP_H). No random remainder is treated as independent noise.",
+  "density_corollary": "If m-q-r>=5 and h=g sqrt(1-c_(q+1)^2)-epsilon>0, the completed five-square-mode compiler gives a continuous C0 density with ||p_Q||infinity<=sqrt(24*pi*m+K3^2)/h, K3=3*2^(4/3)*e^(1/3).",
+  "overlap_energy": "With Omega=tr(Pi_R Pi_S)=sum c_i^2, c_(q+1)^2<=Omega/(q+1), hence s_(m-q)(M+N)>=g sqrt((1-Omega/(q+1))_+). Failure of a five-mode angle-spectrum exit forces high-dimensional near-alignment, not merely one bad direction.",
+  "partner_result_applied": "account04/B12 r8 @bcb9fd2641440a89d6e4967781d755618e163001: at m=8,p=2,ell=6,s2(Lambda)>=4,s6(R)>=2,slope<=1, partner gives s8(P_H A_*)>=sqrt(5)-1. Add one arbitrary-rank arbitrary-magnitude signed G with fourth canonical correlation c4<=1/2 (first three may equal one) and dense local tail <=1/20. Then sqrt(lambda5)>=1.0204662693192699 and continuous ||p_Q||infinity<26.194.",
+  "finite_check": {
+    "seed": 20260924074439,
+    "trials": 10000,
+    "spectrum_violations": 0,
+    "minimum_spectrum_margin": 0.0003015994840604093,
+    "tail_violations": 0,
+    "minimum_tail_margin": 0.0033561501997330396,
+    "status": "sanity_check_only_not_proof"
+  },
+  "source_pins": {
+    "startup_control": "7c6eea7e3719e34b15edc22c77a2106aab535d4f",
+    "prepublication_control": "d2b61102ea8ed3703cb957438f7f38161f60e459",
+    "owner_control_revision": "2026-09-22.15",
+    "programme_revision": "2026-09-22.5",
+    "partner_r8": "bcb9fd2641440a89d6e4967781d755618e163001",
+    "five_mode_compiler": "7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1"
+  },
+  "unresolved_implication": "From bare s3(A)>=1, extract a bounded ORIGINAL-coordinate carrier with five surviving square-energy modes after spending high canonical-correlation directions, or convert systematic high-dimensional near-alignment into an already-paid physical-pair, projected-crossing, grouped-bank, ridge, hub/common-plane, Schur or Pluecker-volume exit.",
+  "next_mechanism": "Exploit the scalar overlap energy and leverage distribution: if c_(m-4) is near one for every candidate carrier, show the large trace overlap must concentrate on physical rows or minors strongly enough to activate a paid physical receiver. Do not return to another absolute perturbation-norm budget.",
+  "continuity_status": "proved for the positive five-mode branch; unrestricted QFORM continuity remains open"
+}

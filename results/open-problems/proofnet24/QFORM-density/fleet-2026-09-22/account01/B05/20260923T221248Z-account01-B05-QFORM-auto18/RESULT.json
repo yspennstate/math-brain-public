@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T221248Z-account01-B05-QFORM-auto18",
+  "account": "account01",
+  "slot": "B05",
+  "status": "SUPPORTING_THEOREM_PROVED_POWER_LOSS_REMOVED_TO_LOG13_FULL_QFORM_OPEN",
+  "full_qform_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "NOT_PROVED_FOR_FULL_TARGET",
+  "new_claims": [
+    {
+      "id": "QFORM-HUB-RETAINED-FOURIER-SHELL-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement_short": "For an independent cap-m hub H and a two-bank projected triple with pair/joint caps K2,K3, the shell probability for H+bP+c+dL+(gamma+V^2)/(2L) has coefficient G_b=K2+K2 sqrt(m log(e/|b|))+sqrt(m K2 K3), with no algebraic b-loss."
+    },
+    {
+      "id": "QFORM-HUB-RETAINED-LOG13-DENSITY-v1",
+      "status": "PROVED_SUPPORTING_COROLLARY",
+      "statement_short": "For Q_b=2HL+2bLP+V^2 under the same two-bank source hypothesis and cap-one H, ||p_Qb||_ess is O_{K2,K3}(log(e/|b|)^(1/3)) for 0<|b|<=1."
+    }
+  ],
+  "exact_target_control": {
+    "quadratic_form": "Q_b=2HL+2bLP+V^2",
+    "spectrum": ["sqrt(1+b^2)", "-sqrt(1+b^2)", "0", "1"],
+    "three_eigenvalues_abs_ge_1_for_all_b": true,
+    "endpoint_b0_partner_bound": "7.761982175235*2^(2/3)=12.321378670326451"
+  },
+  "precise_missing_factor": "middle Fourier annulus |b|<|zeta|<1; separate L2 hub energy and L-infinity bank-energy cap force sqrt(log(1/|b|)) by Cauchy-Schwarz. Uniformity needs extra product-sensitive characteristic-function cancellation or a physical moving-center coarea estimate.",
+  "next_obligation": "QFORM-HUB-BANK-MIDDLE-ANNULUS-CANCELLATION-v1",
+  "partner_applied": {
+    "account": "account02",
+    "slot": "B05",
+    "result": "QFORM-NULL-HUB-TRANSVERSE-SQUARE-v1",
+    "application": "at b=0, M<=2,m=1,c2=1 gives ||p_Q0||_ess<12.322"
+  },
+  "execution_context": "WITHOUT_VERIFIED_BRAIN"
+}

@@ -1,0 +1,227 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\SR}{\operatorname{SR}}
+
+\title{The First Unresolved $n=8$ Layer of Uniform Split Reliability}
+\author{Yitzchak Shmalo\\Einstein Institute of Mathematics, Hebrew University of Jerusalem}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For a connected simple two-terminal graph $G$, its split reliability $\SR_G(p)$ is the probability that independent edge retention with probability $p$ leaves exactly two connected components, one containing each terminal. Romero characterized the locally most split reliable graphs and reduced every possible uniform maximizer to the split-reliability class of a balloon graph with a diameter terminal pair, while leaving a finite range of classes unresolved. We decide the first complete unresolved vertex layer. For $n=8$ and $14\le m\le19$, no uniformly most split reliable graph exists in $T_{8,m}$. For $20\le m\le26$, a diameter-terminal balloon is uniformly most split reliable. The sparse half is certified by explicit two-forest counts from the all-minors Matrix--Tree theorem. The dense half is a complete exact enumeration modulo the terminal-preserving $S_6$ action together with coefficientwise domination of the split-reliability polynomial. Thus all thirteen previously unresolved classes on eight vertices are decided.
+\end{abstract}
+
+\section{Introduction}
+Let $T_{n,m}$ denote the class of connected simple graphs on $n$ vertices and $m$ edges with two distinguished terminals $s,t$, up to two-terminal isomorphism. If every edge is retained independently with probability $p$, the split reliability $\SR_G(p)$ is the probability that the retained spanning subgraph has precisely two connected components and that $s$ and $t$ lie in different components.
+
+Brown and McMullin determined several extremal classes and posed the existence problem for uniformly most split reliable graphs. Romero subsequently characterized all locally most split reliable graphs and proved nonexistence when
+\[
+ n\ge7,\qquad n\le m\le \binom{n-3}{2}+3.
+\]
+In particular, after the classes already settled in earlier work, the first complete unresolved vertex layer is
+\[
+ n=8,\qquad 14\le m\le26.
+\]
+We determine every class in this layer.
+
+We use Romero's recursive balloon $B_{n,m}$. In the dense base regime
+\[
+ \binom{n-1}{2}+2\le m\le \binom n2,
+\]
+it is $K_{n-1}$ together with one additional vertex joined to exactly
+$m-\binom{n-1}{2}$ vertices of the clique. Outside that regime one obtains $B_{n,m}$ from $B_{n-1,m-1}$ by adding one new leaf adjacent to a minimum-degree vertex, with base $B_{4,4}$ equal to a triangle with one pendant vertex. We equip $B_{n,m}$ with terminals at a pair of vertices realizing its diameter.
+
+We use the following consequence of Romero's local characterization.
+
+\begin{lemma}[Romero reduction]\label{lem:romero}
+If a uniformly most split reliable graph exists in $T_{n,m}$, then it is locally most split reliable near $p=1$, and hence its split-reliability polynomial equals that of a diameter-terminal balloon $B_{n,m}$.
+\end{lemma}
+
+Thus to prove nonexistence it suffices to find a graph which beats the balloon for some $p$; to prove existence it suffices to show that the balloon dominates every graph for all $p$.
+
+\begin{theorem}\label{thm:main}
+For the first unresolved eight-vertex layer:
+\begin{enumerate}
+\item if $14\le m\le19$, there is no uniformly most split reliable graph in $T_{8,m}$;
+\item if $20\le m\le26$, a diameter-terminal balloon $B_{8,m}$ is uniformly most split reliable in $T_{8,m}$.
+\end{enumerate}
+\end{theorem}
+
+The proof is exact. The accompanying code uses only integer arithmetic for the decisive comparisons.
+
+\section{Split coefficients and the sparse half}
+For a two-terminal graph $G$ with $m$ edges, let
+\[
+ N_j(G;s,t)
+ =\#\{F\subseteq E(G): |F|=j,\ (V,F)\text{ has exactly two connected components separating }s,t\}.
+\]
+Then
+\begin{equation}\label{eq:bernstein}
+ \SR_G(p)=\sum_{j=0}^m N_j(G;s,t)p^j(1-p)^{m-j}.
+\end{equation}
+On eight vertices, a spanning graph with exactly two connected components has at least six edges. Consequently $N_j=0$ for $j<6$, and $N_6$ counts spanning two-forests separating the terminals.
+
+\begin{lemma}[Two-forest determinant]\label{lem:matrix-tree}
+Let $L_G$ be the Laplacian of $G$. Then
+\[
+ N_6(G;s,t)=\det L_G[V\setminus\{s,t\},V\setminus\{s,t\}].
+\]
+\end{lemma}
+\begin{proof}
+This is the two-root case of the all-minors Matrix--Tree theorem. A six-edge spanning subgraph on eight vertices with exactly two components is necessarily a forest, and the relevant minor counts precisely the spanning forests with one component rooted at $s$ and the other at $t$.
+\end{proof}
+
+For $m=14,\ldots,19$, take the diameter terminal pair shown in Table~\ref{tab:sparse}. The competitor $H_m$ is obtained from $B_{8,m}$ by the displayed edge replacement. For $m=14,15$, replace
+\[
+ \{01,56,67\}\quad\text{by}\quad\{06,16,57\};
+\]
+for the other rows use the one-edge replacement in the table. Exact Bareiss evaluation of the minors in Lemma~\ref{lem:matrix-tree} gives:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c c c c}
+\toprule
+$m$ & terminals & modification & $N_6(B_{8,m})$ & $N_6(H_m)$ & gain\\
+\midrule
+14 & $2,7$ & $\{01,56,67\}\to\{06,16,57\}$ & 840 & 900 & 60\\
+15 & $3,7$ & $\{01,56,67\}\to\{06,16,57\}$ & 1404 & 1440 & 36\\
+16 & $5,7$ & $24\to26$ & 2160 & 2592 & 432\\
+17 & $1,7$ & $01\to46$ & 3024 & 3780 & 756\\
+18 & $2,7$ & $01\to46$ & 5292 & 5880 & 588\\
+19 & $3,7$ & $34\to46$ & 8232 & 8575 & 343\\
+\bottomrule
+\end{tabular}
+\caption{Exact lowest-coefficient witnesses. Here $ij$ denotes edge $\{i,j\}$.}
+\label{tab:sparse}
+\end{table}
+
+\begin{proposition}\label{prop:sparse}
+There is no uniformly most split reliable graph in $T_{8,m}$ for $14\le m\le19$.
+\end{proposition}
+\begin{proof}
+For each row of Table~\ref{tab:sparse}, the balloon and competitor have the same number $m$ of edges, and
+\[
+ N_6(H_m)-N_6(B_{8,m})>0.
+\]
+Since all lower split coefficients vanish, equation~\eqref{eq:bernstein} yields
+\[
+ \SR_{H_m}(p)-\SR_{B_{8,m}}(p)
+ =\bigl(N_6(H_m)-N_6(B_{8,m})\bigr)p^6+O(p^7)
+\]
+as $p\downarrow0$. Hence the competitor strictly beats the balloon for all sufficiently small positive $p$. If a uniform maximizer existed, Lemma~\ref{lem:romero} would force its split-reliability polynomial to equal that of the balloon, contradicting this strict comparison.
+\end{proof}
+
+\section{Connected-spanning-subgraph recurrence}
+The dense half is proved by exact coefficientwise domination. For $S\subseteq V$, let
+\[
+ C_S(z)=\sum_{q\ge0} c_{S,q}z^q
+\]
+be the generating polynomial for connected spanning subgraphs of the induced graph $G[S]$. Fix a root $r\in S$.
+
+\begin{lemma}\label{lem:connected-recurrence}
+For every nonempty $S$,
+\begin{equation}\label{eq:connected-recurrence}
+ C_S(z)=(1+z)^{e(S)}-
+ \sum_{\substack{T\subsetneq S\\r\in T}}
+ C_T(z)(1+z)^{e(S\setminus T)}.
+\end{equation}
+Moreover, if the terminals are $0,1$, then
+\begin{equation}\label{eq:splitpoly}
+ F_G(z):=\sum_j N_j(G;0,1)z^j
+ =\sum_{\substack{S\subseteq V\\0\in S,\ 1\notin S}} C_S(z)C_{V\setminus S}(z).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Every spanning edge set of $G[S]$ has a unique connected component $T$ containing $r$. Its restriction to $T$ is connected, every crossing edge from $T$ to $S\setminus T$ is absent, and the selected edges inside $S\setminus T$ are arbitrary. Partitioning all spanning edge sets by this root component gives
+\[
+ (1+z)^{e(S)}=
+ \sum_{\substack{T\subseteq S\\r\in T}}C_T(z)(1+z)^{e(S\setminus T)},
+\]
+which rearranges to \eqref{eq:connected-recurrence}. For \eqref{eq:splitpoly}, a successful split state has a unique component $S$ containing terminal $0$ and excluding terminal $1$; both induced selected subgraphs must be connected, and every such pair determines one successful state.
+\end{proof}
+
+\section{Complete terminal-fixed orbit enumeration}
+There are $28$ possible edges on eight labeled vertices. Write
+\[
+ k=28-m\in\{2,3,4,5,6,7,8\}
+\]
+for the number of missing edges. Fix terminals $0,1$ and let $S_6$ permute only vertices $2,\ldots,7$. Quotienting by this action is finer than quotienting by full two-terminal isomorphism, so it cannot omit a source graph.
+
+The certificate generates all complement orbits inductively. Starting with the empty complement, from every canonical representative of size $k-1$ it adds every possible new missing edge and canonicalizes under the $720$ terminal-preserving permutations.
+
+\begin{lemma}[Orbit completeness]\label{lem:orbit}
+The inductive construction contains one representative of every terminal-fixed $S_6$ orbit of $k$-edge complements.
+\end{lemma}
+\begin{proof}
+Let $X$ be any $k$-edge complement. Delete an edge $e\in X$. By induction there is a permutation fixing the terminals that sends $X\setminus\{e\}$ to one of the canonical $(k-1)$-representatives. Under the same permutation, $X$ becomes that representative plus one edge, hence appears among the generated children before canonicalization. Canonicalization therefore retains the orbit of $X$.
+\end{proof}
+
+As an independent exact check, for each canonical complement $X$ the program computes its stabilizer in all $720$ permutations. The sum of orbit sizes $720/|\operatorname{Stab}(X)|$ equals $\binom{28}{k}$ for every $k$. The resulting orbit counts are
+\[
+ 13,43,137,419,1189,3021,6860
+\]
+for $k=2,3,4,5,6,7,8$, respectively.
+
+For each connected representative, equations~\eqref{eq:connected-recurrence}--\eqref{eq:splitpoly} compute the complete split coefficient vector exactly. The result is Table~\ref{tab:dense}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c r r r}
+\toprule
+$m$ & $k=28-m$ & connected orbits & vectors tied with balloon & coefficientwise violations\\
+\midrule
+20 & 8 & 6852 & 4 & 0\\
+21 & 7 & 3018 & 2 & 0\\
+22 & 6 & 1189 & 2 & 0\\
+23 & 5 & 419 & 2 & 0\\
+24 & 4 & 137 & 2 & 0\\
+25 & 3 & 43 & 2 & 0\\
+26 & 2 & 13 & 2 & 0\\
+\bottomrule
+\end{tabular}
+\caption{Complete exact terminal-fixed orbit comparison for the dense half.}
+\label{tab:dense}
+\end{table}
+
+\begin{proposition}\label{prop:dense}
+For every $20\le m\le26$, the diameter-terminal balloon $B_{8,m}$ is uniformly most split reliable in $T_{8,m}$.
+\end{proposition}
+\begin{proof}
+By Lemma~\ref{lem:orbit}, every connected labeled two-terminal graph in the source class is represented in the finite orbit list. For each representative $H$, the exact recurrence yields
+\[
+ N_j(B_{8,m})\ge N_j(H)\qquad\text{for every }j.
+\]
+All graphs being compared have the same $m$, so subtracting their expansions in \eqref{eq:bernstein} gives
+\[
+ \SR_{B_{8,m}}(p)-\SR_H(p)
+ =\sum_j\bigl(N_j(B_{8,m})-N_j(H)\bigr)p^j(1-p)^{m-j}\ge0
+\]
+for every $p\in[0,1]$, since every basis function is nonnegative. Thus the balloon dominates every graph uniformly in $p$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Combine Propositions~\ref{prop:sparse} and~\ref{prop:dense}.
+\end{proof}
+
+\section{Exact certificates and scope}
+The sparse certificate is \texttt{check\_sparse.py}; it constructs the balloons and six explicit competitors and evaluates the two-root Laplacian minors using exact Bareiss elimination. The dense certificate is \texttt{check\_dense.c}; it constructs all terminal-fixed complement orbits through $k=8$, verifies orbit--stabilizer totals, filters connected graphs, evaluates the exact recurrence in Lemma~\ref{lem:connected-recurrence}, and checks coefficientwise domination. Its terminal output reports zero violations in each of the seven dense classes.
+
+This theorem decides only the complete $n=8$ layer. The unrestricted existence problem over all larger $n$ remains open. A bounded literature search on 19 September 2026 did not locate a later primary source settling this complete layer; this statement is not a global priority certificate.
+
+\begin{thebibliography}{9}
+\bibitem{Romero2025}
+P. Romero,
+\emph{Characterization of locally most split reliable graphs},
+Theoretical Computer Science 1047 (2025), 115327.
+DOI: 10.1016/j.tcs.2025.115327; arXiv:2503.15453.
+\end{thebibliography}
+
+\end{document}

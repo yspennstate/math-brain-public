@@ -1,0 +1,13 @@
+Check the algebra first: mean 0, variance 1, sup-norm exactly 2, gap 1
+      s        eps         A         B      Var g  ||g||inf      sigma^2   t/tau2
+     10   1.00e-02  0.994885  1.015268  1.0000000  2.000000    2.061e-02       10
+     30   1.11e-03  0.999443  1.001670  1.0000000  2.000000    2.230e-03       30
+    100   1.00e-04  0.999950  1.000150  1.0000000  2.000000    2.001e-04      100
+    300   1.11e-05  0.999994  1.000017  1.0000000  2.000000    2.222e-05      300
+   1000   1.00e-06  0.999999  1.000002  1.0000000  2.000000    2.000e-06     1000
+
+Now simulate S_t = int_0^t g dX with t = s, and compare S_t/(sigma sqrt t) to N(0,1).
+s=   30  t/tau2=   30  sd of normalized S =  1.10156   Kolmogorov distance to N(0,1) = 0.4783
+s=  100  t/tau2=  100  sd of normalized S =  0.96775   Kolmogorov distance to N(0,1) = 0.5054
+s=  300  t/tau2=  300  sd of normalized S =  0.92445   Kolmogorov distance to N(0,1) = 0.5086
+s= 1000  t/tau2= 1000  sd of normalized S =  1.27433   Kolmogorov distance to N(0,1) = 0.5063

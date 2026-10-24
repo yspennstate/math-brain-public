@@ -1,0 +1,1 @@
+Pass 6 complete: exact source lines 1-675 covered. Lemma 2.4 and Lemma 4.3 pass. Continue audit-only with a rotated lens; preserve the recorded local source issues and line-222 disagreement. PDF render equivalence remains unchecked in this run.

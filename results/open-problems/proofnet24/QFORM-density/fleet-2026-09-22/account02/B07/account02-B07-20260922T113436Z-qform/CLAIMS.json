@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "run_id": "account02-B07-20260922T113436Z-qform",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "assignment": "Coordinate minor selection",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "QFORM-EXTERIOR-MINOR-MASS-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For real symmetric A, sum over all 2x2 mixed coordinate minors squared equals sum_{i<j} lambda_i^2 lambda_j^2, and the analogous 3x3 sum equals sum_{i<j<k} lambda_i^2 lambda_j^2 lambda_k^2. Three eigenvalues of magnitude >=1 force respective lower bounds 3 and 1.",
+      "source_section": "REPORT.md#2-exterior-power-determinant-mass-forced-by-three-large-eigenvalues"
+    },
+    {
+      "id": "QFORM-FIXED-PRINCIPAL-BLOCK-SELECTION-NOGO-v1",
+      "status": "REFUTED",
+      "statement": "Three eigenvalues of magnitude >=1 do not force any fixed-size original-coordinate principal block to have a dimension-free positive lower bound on operator norm or quadratic coefficients.",
+      "construction": "Rank-three Walsh projections with spectrum (1,1,1,0,...) and every k x k principal block norm <=3k/n.",
+      "scope": "Refutes this structural bridge only, not the bounded-density conjecture.",
+      "source_section": "REPORT.md#3-exact-delocalized-rank-three-projection-family"
+    },
+    {
+      "id": "QFORM-WALSH-DETERMINANT-DISTRIBUTION-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "In the Walsh family, nonzero 2x2 principal determinants equal 8/n^2 on exactly 3n^2/8 cross-class pairs and sum to 3; nonzero 3x3 principal determinants equal 16/n^3 on exactly n^3/16 distinct-class triples and sum to 1.",
+      "source_section": "REPORT.md#4-exact-principal-determinant-distribution-in-the-walsh-family"
+    },
+    {
+      "id": "QFORM-PD-2BLOCK-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "Two independent variables with density caps K1,K2 and a definite 2x2 quadratic block B, with arbitrary linear perturbation, produce an output density bounded by pi K1 K2 / sqrt(|det B|). The bound survives conditioning on all other original coordinates.",
+      "source_section": "REPORT.md#5-a-definite-two-coordinate-conditioning-lemma"
+    },
+    {
+      "id": "QFORM-WALSH-RANK3-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For the rank-three Walsh projection A_n and arbitrary independent input densities bounded by1, X^T A_n X has density sup norm <=2 sqrt(2) pi uniformly in n.",
+      "dependencies": [
+        "QFORM-PD-2BLOCK-v1",
+        "Livshyts-Paouris-Pivovarov k=1 marginal density bound sqrt(2)",
+        "exact Hadamard aggregate identity M=4I-ss^T"
+      ],
+      "source_section": "REPORT.md#6-high-cardinality-aggregation-closes-the-walsh-stress-family"
+    },
+    {
+      "id": "QFORM-DETWEIGHT-AGGREGATION-v1",
+      "status": "OPEN",
+      "statement": "Convert dimension-free determinant mass from three large spectral directions into a product-preserving high-cardinality aggregation or equivalent nonlinear inequality yielding a quantitatively definite conditional block for generic row directions.",
+      "source_section": "REPORT.md#7-what-is-paid-and-what-remains-unpaid"
+    }
+  ],
+  "peer_sources": [
+    {
+      "account_slot": "account03/B17",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c64fcff680b0a252a3c92002c60eedba02bbb9ec",
+      "path": "qform/fleet-2026-09-22/account03/B17/account03-B17-20260922T112131Z/REPORT.md",
+      "used": "diagonal C=pi theorem and exact pointwise-decay correction"
+    },
+    {
+      "account_slot": "account01/B12",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e423d315ae772630a32bc826c5abb58a5ad09c95",
+      "path": "qform/fleet-2026-09-22/account01/B12/20260922T112049Z-account01-B12-qform-r1/REPORT.md",
+      "used": "non-diagonal conditional block theorem and product-preserving conditioning principle"
+    }
+  ],
+  "partner_status": {
+    "assigned_partner": "account03/B07",
+    "completed_handoff_observed": false,
+    "note": "No completed shared qform handoff was present at final partner check; no partner result was fabricated or awaited."
+  },
+  "external_source": {
+    "title": "On sharp bounds for marginal densities of product measures",
+    "authors": "Galyna Livshyts, Grigoris Paouris, Peter Pivovarov",
+    "arxiv": "1507.07949",
+    "used_scope": "k=1 marginal density bound sqrt(2) only"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w342",
+  "bundle_slug": "w342-c0035-partial-results",
+  "entries": [
+    {
+      "key": "c0035-w342-result-scope",
+      "namespace": "probability.research.attempts",
+      "logical_name": "c0035-w342-result-scope",
+      "kind": "concept",
+      "title": "Result scope and audit status for C0035",
+      "statement": "For a degree-m trigonometric symbol f:T->[0,1], the cached question asks whether its stationary determinantal process is an (m+1)-block iid factor. The phase-sensitive triple and conditional sublattice reduction below do not establish general existence. Degree one is recorded as known in the cached source. All new proofs await w346 KEEP.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:C0035:c0035-w342-result-scope",
+        "url": "file:///~/brain_workers/w342/proofs/C0035.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "degree-two-determinantal-pair-laws-miss-triple-phase",
+      "namespace": "probability.determinantal",
+      "logical_name": "degree-two-determinantal-pair-laws-miss-triple-phase",
+      "kind": "lemma",
+      "title": "Equal pair laws and different determinantal triple laws",
+      "statement": "The two symbols f_+(theta)=1/2+(4/25)cos(theta)+(2/25)cos(2theta) and f_-(theta)=1/2+(4/25)cos(theta)-(2/25)cos(2theta) both lie in [13/50,37/50]. Their stationary determinantal binary processes have equal one- and two-point marginals at every lag, but their probabilities of X_0=X_1=X_2=1 differ by 16/15625. Pair-law matching therefore cannot certify a full block-factor representation.",
+      "proof_text": "# C0035: phase information survives equal two-point marginals\n\nStatus: proof and a refuted route, awaiting w346. General block-factor existence remains unresolved in the cached intake. The earlier sublattice result covers reduced degree one; this result examines a genuine degree-two case instead.\n\nLet the Hermitian Toeplitz kernel have diagonal a, first Fourier coefficient b and second coefficient d. For the associated determinantal binary process,\n\n    E X_i=a,\n    Cov(X_i,X_{i+1})=-|b|^2,\n    Cov(X_i,X_{i+2})=-|d|^2,\n    E[X_0 X_1 X_2]=a^3-a(2|b|^2+|d|^2)+2 Re(b^2 conjugate(d)).\n\nThese follow by expanding the corresponding one-, two- and three-point determinants. The connected third cumulant is exactly 2 Re(b^2 conjugate(d)).\n\nIn particular consider f_plus(theta)=1/2+(4/25)cos(theta)+(2/25)cos(2theta) and f_minus with the last term negated. Both lie in [13/50,37/50], so both define stationary determinantal processes. Their coefficients are a=1/2, b=2/25, d=+/-1/25. Every one- and two-point marginal agrees, including independence at distances greater than two, but their all-one triple probabilities differ by\n\n    4 b^2/25 = 16/15625 = 0.001024.\n\nThus matching all pair marginals cannot certify a proposed block-factor representation. A genuine degree-two construction must also account for the relative Fourier phase. This does not obstruct block-factor existence for either of these symbols.\n\nFor completeness, the earlier valid reduction is: if f(theta)=g(k theta), the kernel vanishes between different residue classes modulo k, making those sublattices independent. If P_g has an r-block iid representation Y_n=h(U_n,...,U_{n+r-1}), then X_i=h(U_i,U_{i+k},...,U_{i+(r-1)k}) represents P_f using a window of length 1+(r-1)k. This is conditional on an already proved representation of g; it is not an induction establishing all degrees.\n\nSource: C0035-A002, intake_claude_20260907/attempts.jsonl, and the cached Lyons Question 5.4. The new determinant computation is campaign work, with no novelty claim.\n",
+      "assumptions": [],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:C0035:degree-two-determinantal-pair-laws-miss-triple-phase",
+        "url": "file:///~/brain_workers/w342/proofs/C0035.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "determinantal-sublattice-block-window-transfer",
+      "namespace": "probability.determinantal",
+      "logical_name": "determinantal-sublattice-block-window-transfer",
+      "kind": "lemma",
+      "title": "Conditional transfer of a block factor through sublattices",
+      "statement": "Let g:T->[0,1] be a trigonometric polynomial and k,r positive integers. If its stationary determinantal process has an r-block representation Y_n=h(U_n,...,U_{n+r-1}) for iid U, then the symbol f(theta)=g(k theta) has the representation X_i=h(U_i,U_{i+k},...,U_{i+(r-1)k}), hence a block window of length 1+(r-1)k. The residue-class copies are independent because the Fourier kernel is block diagonal. This conditional transfer does not establish the unproved reduced-degree case.",
+      "proof_text": "# C0035: phase information survives equal two-point marginals\n\nStatus: proof and a refuted route, awaiting w346. General block-factor existence remains unresolved in the cached intake. The earlier sublattice result covers reduced degree one; this result examines a genuine degree-two case instead.\n\nLet the Hermitian Toeplitz kernel have diagonal a, first Fourier coefficient b and second coefficient d. For the associated determinantal binary process,\n\n    E X_i=a,\n    Cov(X_i,X_{i+1})=-|b|^2,\n    Cov(X_i,X_{i+2})=-|d|^2,\n    E[X_0 X_1 X_2]=a^3-a(2|b|^2+|d|^2)+2 Re(b^2 conjugate(d)).\n\nThese follow by expanding the corresponding one-, two- and three-point determinants. The connected third cumulant is exactly 2 Re(b^2 conjugate(d)).\n\nIn particular consider f_plus(theta)=1/2+(4/25)cos(theta)+(2/25)cos(2theta) and f_minus with the last term negated. Both lie in [13/50,37/50], so both define stationary determinantal processes. Their coefficients are a=1/2, b=2/25, d=+/-1/25. Every one- and two-point marginal agrees, including independence at distances greater than two, but their all-one triple probabilities differ by\n\n    4 b^2/25 = 16/15625 = 0.001024.\n\nThus matching all pair marginals cannot certify a proposed block-factor representation. A genuine degree-two construction must also account for the relative Fourier phase. This does not obstruct block-factor existence for either of these symbols.\n\nFor completeness, the earlier valid reduction is: if f(theta)=g(k theta), the kernel vanishes between different residue classes modulo k, making those sublattices independent. If P_g has an r-block iid representation Y_n=h(U_n,...,U_{n+r-1}), then X_i=h(U_i,U_{i+k},...,U_{i+(r-1)k}) represents P_f using a window of length 1+(r-1)k. This is conditional on an already proved representation of g; it is not an induction establishing all degrees.\n\nSource: C0035-A002, intake_claude_20260907/attempts.jsonl, and the cached Lyons Question 5.4. The new determinant computation is campaign work, with no novelty claim.\n",
+      "assumptions": [
+        "An r-block representation of P_g is already established"
+      ],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:C0035:determinantal-sublattice-block-window-transfer",
+        "url": "file:///~/brain_workers/w342/proofs/C0035.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "c0035-w342-validation-evidence",
+      "namespace": "probability.research.attempts",
+      "logical_name": "c0035-w342-validation-evidence",
+      "kind": "concept",
+      "title": "Finite validation evidence for C0035",
+      "statement": "Measured validation evidence for C0035: {\"command\": \"python -X utf8 verify_structural.py\", \"exact_triple_difference\": \"16/15625\", \"label\": \"exact finite checks; separate written proof awaiting audit\", \"seconds\": 0.021, \"sublattice_determinant_checks\": 256, \"triple_probabilities\": [\"14789/125000\", \"14661/125000\"], \"violations\": 0}. These finite checks support the written proof and do not replace its independent audit or establish the full open problem.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:C0035:c0035-w342-validation-evidence",
+        "url": "file:///~/brain_workers/w342/c0035_measurements.json",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "c0035-w342-result-scope",
+      "kind": "cites",
+      "rationale": "FROM \"For a degree-m trigonometric symbol f:T->[0,1], the cached question asks whether its stationary determinantal process is an (m+1)-block iid factor. The phase-sensitive triple and conditional sublattice reduction below do not establish general existence.\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Let f : T -> [0,1] be a trigonometric polynomial of degree m; the stationary determinantal process P_f on Z is m-dependent. Is P_f an (m+1)-block factor of an i.i.d.\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.determinantal:open-problem-c0035-determinantal-processes-with-trigonometric-polynomial-symbol-as-block"
+    },
+    {
+      "from_key": "degree-two-determinantal-pair-laws-miss-triple-phase",
+      "kind": "cites",
+      "rationale": "FROM \"The two symbols f_+(theta)=1/2+(4/25)cos(theta)+(2/25)cos(2theta) and f_-(theta)=1/2+(4/25)cos(theta)-(2/25)cos(2theta) both lie in [13/50,37/50]. Their stationary determinantal binary processes have equal one- and two-point marginals at every lag, but their\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Let f : T -> [0,1] be a trigonometric polynomial of degree m; the stationary determinantal process P_f on Z is m-dependent. Is P_f an (m+1)-block factor of an i.i.d.\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.determinantal:open-problem-c0035-determinantal-processes-with-trigonometric-polynomial-symbol-as-block"
+    },
+    {
+      "from_key": "degree-two-determinantal-pair-laws-miss-triple-phase",
+      "kind": "cites",
+      "rationale": "FROM \"The two symbols f_+(theta)=1/2+(4/25)cos(theta)+(2/25)cos(2theta) and f_-(theta)=1/2+(4/25)cos(theta)-(2/25)cos(2theta) both lie in [13/50,37/50]. Their stationary determinantal binary processes have equal one- and two-point marginals at every lag, but their\"; TO \"For a degree-m trigonometric symbol f:T->[0,1], the cached question asks whether its stationary determinantal process is an (m+1)-block iid factor. The phase-sensitive triple and conditional sublattice reduction below do not establish general existence.\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "c0035-w342-result-scope"
+    },
+    {
+      "from_key": "determinantal-sublattice-block-window-transfer",
+      "kind": "cites",
+      "rationale": "FROM \"Let g:T->[0,1] be a trigonometric polynomial and k,r positive integers. If its stationary determinantal process has an r-block representation Y_n=h(U_n,...,U_{n+r-1}) for iid U, then the symbol f(theta)=g(k theta) has the representation\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Let f : T -> [0,1] be a trigonometric polynomial of degree m; the stationary determinantal process P_f on Z is m-dependent. Is P_f an (m+1)-block factor of an i.i.d.\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.determinantal:open-problem-c0035-determinantal-processes-with-trigonometric-polynomial-symbol-as-block"
+    },
+    {
+      "from_key": "determinantal-sublattice-block-window-transfer",
+      "kind": "cites",
+      "rationale": "FROM \"Let g:T->[0,1] be a trigonometric polynomial and k,r positive integers. If its stationary determinantal process has an r-block representation Y_n=h(U_n,...,U_{n+r-1}) for iid U, then the symbol f(theta)=g(k theta) has the representation\"; TO \"For a degree-m trigonometric symbol f:T->[0,1], the cached question asks whether its stationary determinantal process is an (m+1)-block iid factor. The phase-sensitive triple and conditional sublattice reduction below do not establish general existence.\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "c0035-w342-result-scope"
+    },
+    {
+      "from_key": "c0035-w342-validation-evidence",
+      "kind": "cites",
+      "rationale": "FROM \"Measured validation evidence for C0035: {\"command\": \"python -X utf8 verify_structural.py\", \"exact_triple_difference\": \"16/15625\", \"label\": \"exact finite checks; separate written proof awaiting audit\", \"seconds\": 0.021, \"sublattice_determinant_checks\": 256,\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Let f : T -> [0,1] be a trigonometric polynomial of degree m; the stationary determinantal process P_f on Z is m-dependent. Is P_f an (m+1)-block factor of an i.i.d.\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.determinantal:open-problem-c0035-determinantal-processes-with-trigonometric-polynomial-symbol-as-block"
+    },
+    {
+      "from_key": "c0035-w342-validation-evidence",
+      "kind": "cites",
+      "rationale": "FROM \"Measured validation evidence for C0035: {\"command\": \"python -X utf8 verify_structural.py\", \"exact_triple_difference\": \"16/15625\", \"label\": \"exact finite checks; separate written proof awaiting audit\", \"seconds\": 0.021, \"sublattice_determinant_checks\": 256,\"; TO \"For a degree-m trigonometric symbol f:T->[0,1], the cached question asks whether its stationary determinantal process is an (m+1)-block iid factor. The phase-sensitive triple and conditional sublattice reduction below do not establish general existence.\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "c0035-w342-result-scope"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260923T091621Z-qform-B18-a01-r28",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_login": "6b04e8e5f60f55d69fc9bbc15c68b1acd095f02d",
+  "control_commit_prepublish": "3778692ca301656b94b3eb1e8985d3432232d993",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "classification": "PROVED_SUPPORTING_TARGET_LEVEL_SHARPENING_PLUS_CERTIFICATE_NO_GO",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260923T091621Z-qform-B18-a01-r28/REPORT.md",
+    "report_commit": "30b2509c741be3cc7f8f6c04fa31ae4e00f26f5b",
+    "report_blob": "ecf5d4f5a4e36296a780cd4f84e709ed311b2304",
+    "bundle_head": "58c9d9bd103e2b22a16b706fafa9d5daaa6d24bc",
+    "verification_script": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260923T091621Z-qform-B18-a01-r28/verify.py"
+  },
+  "partner_result": {
+    "account_slot": "account02/B18",
+    "run_id": "20260923T081256Z-account02-B18-QFORM-r26",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260923T081256Z-account02-B18-QFORM-r26/REPORT.md",
+    "claim": "QFORM-SHEAR-CROSSVOLUME-MSS-BARRIER-v1",
+    "actual_application": "Applied its exact circular Parseval stress-family coefficient/spectrum ledger to derive the continuous bound 3 B_m^(2/3)((1+r^2)/(2r))^(1/3), uniformly in cap-one source laws."
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-NEARCOLOOP-CAPPED-SCORE-CEILING-v1",
+      "statement": "For L=[k e1,diag(t,1,1)V^T], V^TV=I3, k^2+t^2=1, r=k/t>=1, every nonzero-basis law with hub marginal alpha0<=1/2 has determinant-entropy score Z_w<=2kt=2r/(1+r^2).",
+      "status": "PROVED_SUPPORTING_CERTIFICATE_NO_GO"
+    },
+    {
+      "id": "QFORM-CIRCULAR-CAPPED-BASIS-CERTIFICATE-v1",
+      "statement": "For the account02/B18 circular stress family, m>=5 and r>=1, a half hub/nohub conditional-volume basis law is admissible with alpha0=1/2, alpha_j=5/(2m), Z=2r/(1+r^2), and gives a continuous density with ||p_Q||infinity < 7.748274335 ((1+r^2)/(2r))^(1/3).",
+      "status": "PROVED_SUPPORTING_TARGET_LEVEL_SHARPENING"
+    }
+  ],
+  "primary_sources": [
+    "William Beckner, Inequalities in Fourier analysis, Annals of Mathematics 102 (1975), sharp Hausdorff-Young.",
+    "Bennett-Carbery-Christ-Tao, The Brascamp-Lieb inequalities: finiteness, structure, and extremals, GAFA 17 (2008), arXiv:math/0505065, Gaussian exhaustion.",
+    "Ruixiang Zhang, Mixed-norm Brascamp-Lieb inequalities, arXiv:2608.17952 (2026), checked as a hypothesis mismatch for the unpaid 1+2 trace step."
+  ],
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "continuity": "PROVED_FOR_THIS_CIRCULAR_CERTIFICATE_via_L1_characteristic_function; full-target continuity remains OPEN",
+  "unresolved_implication": "QFORM-NONPLANAR-ONEPLUS2-AGGREGATE-v1: construct a product-preserving asymmetric 1+2 aggregate whose determinant scale sees r^2|det D|, or route the near-coloop branch elsewhere. The capped-basis score ceiling, partner single-cut barrier, and prior no-exact-source-split theorem exclude the direct existing interfaces.",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B18/20260923T091621Z-qform-B18-a01-r28.md",
+  "handoff_commit": "ae41328c8f7f1be8b6b8a3f1571811716877ae23"
+}

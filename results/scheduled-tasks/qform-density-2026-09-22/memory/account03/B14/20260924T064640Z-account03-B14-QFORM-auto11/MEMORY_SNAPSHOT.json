@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260924T064640Z-account03-B14-QFORM-auto11",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit_prepublication": "5f21153900232958c2057daec19ec268d81aa381",
+  "correction_blob": "a884b835aba929c5376e6417ae5cfcd44c0f7a76",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null,
+  "reasoning_effort_status": "UNKNOWN_NOT_EXPOSED",
+  "provider_thinking_tokens": null,
+  "provider_thinking_time": null,
+  "same_hour_canonical_login_already_existed": true,
+  "existing_login_path": "scheduled_tasks/status/account03/logins/2026-09-24T06Z/B14.json",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1",
+    "QFORM-TWO-HUB-PLUCKER-ESCAPE-FALSE-v1"
+  ],
+  "result": {
+    "theorem_id": "QFORM-CAP-SATURATION-CONGRUENCE-LOCALIZATION-v1",
+    "status": "SUPPORTING_EXACT_LAW_LOCALIZATION_THEOREM_PROVED_FULL_QFORM_OPEN",
+    "statement": "Every cap-at-most-one target instance is exactly law-equivalent to another target instance in which every marginal density has essential supremum exactly one. If k_i=||f_i||_infinity, D=diag(k_i), Y=DX and B=D^{-1}AD^{-1}, then Y^TBY=X^TAX and expansive congruence preserves separately the counts of eigenvalues above +1 and below -1. Hence the sharp universal constant is unchanged by restricting to saturated marginal caps.",
+    "continuity": "EXACT_OUTPUT_LAW_PRESERVED; THIS REDUCTION PRESERVES ANY CONTINUITY PROPERTY, BUT FULL_TARGET_CONTINUITY_REMAINS OPEN"
+  },
+  "premises": [
+    {
+      "name": "account04/B14 r10 scale-covariant Schur localization",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260924T001624Z-account04-B14-scaled-schur-localization-r10/REPORT.md",
+      "scope_used": "physical invertible 3x3 block gives essential-density bound 6 sqrt(pi)/sigma, uniform over outside curvature, couplings, affine terms, tails and fragments"
+    },
+    {
+      "name": "account01/B15 exact affine homogenization closure",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "cdd0eb22227a505e827a658038a1512897c0ad56",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260922T170451Z-account01-B15-qform-r11/REPORT.md",
+      "scope_used": "source-matched existing exact affine closure; not claimed as new"
+    }
+  ],
+  "partner_application": {
+    "partner": "account04/B14",
+    "general_inequality": "||p_Q||_infinity,ess <= 6 sqrt(pi)/sigma_min(K^{-1} B_0 K^{-1}) for an invertible physical triple B_0 and K=diag(actual selected marginal caps)",
+    "concrete_block": "B_*=I_3-(2/3)11^T with selected caps (1/2,1/2,1)",
+    "scaled_spectrum": ["4", "(-1+sqrt(17))/2", "(-1-sqrt(17))/2"],
+    "constant_exact": "12 sqrt(pi)/(sqrt(17)-1)",
+    "constant_numeric": 6.810351221041301
+  },
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "canonical_commit": "27524c090248516692abfa19911c411adaa62c23",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260924T064640Z-account03-B14-QFORM-auto11/",
+    "report_blob": "7c3b9e88793f5c90e9bb69328bec5935570ff53f",
+    "checks_blob": "4b75cad08229eee151fce51f478cdad004fecbb0"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B14/20260924T064640Z-account03-B14-QFORM-auto11.md",
+    "commit": "6996941b4f235e5ac6d83821dee429f3315a6c11"
+  },
+  "source_search": {
+    "exact_match_found": false,
+    "nearby_existing_results": [
+      "account01/B15 exact affine homogenization closure",
+      "account01/B15 generic countable core",
+      "account03/B14 prior compactification and quantile-gauge reductions"
+    ]
+  },
+  "unresolved_implication": "Use cap-weighted congruence after valid grouped product projection and determine whether the enlarged bank Hessian can pay the punctured-hub/near-coloop loss without a uniformly conditioned physical triple.",
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "full_continuity_status": "OPEN",
+  "scheduler_mutation": false,
+  "email_action": false,
+  "push_notification_action": false,
+  "cross_account_authentication": false,
+  "paid_api_or_codex_action": false,
+  "public_release_action": false,
+  "permissions_changed": false
+}

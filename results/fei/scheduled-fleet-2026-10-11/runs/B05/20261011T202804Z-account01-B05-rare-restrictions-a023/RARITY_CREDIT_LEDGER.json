@@ -1,0 +1,53 @@
+{
+  "schema": "fei-rarity-credit-ledger/1",
+  "run_id": "20261011T202804Z-account01-B05-rare-restrictions-a023",
+  "stream": "B05",
+  "packet_id": "A023",
+  "gap_id": "B05_RARE_REFUNDS",
+  "family": {
+    "parameter": "even k >= 4",
+    "delta": "2^(-k)",
+    "control_count": "r=2k",
+    "activation_probability": "p=delta^2",
+    "selector_influence": "d=p*delta=delta^3",
+    "core": "quadratic bent sign b with the origin flipped to form b'",
+    "parent": "F=1+1_{z=0}(s(y,x)-1)"
+  },
+  "stopping_rule": {
+    "physical": true,
+    "adaptive": true,
+    "finite": true,
+    "steps": [
+      "query controls z_1,...,z_r in order",
+      "at the first nonzero control stop at the constant residual",
+      "if every control is zero, query the fresh selector y",
+      "continue within the selected Boolean core"
+    ]
+  },
+  "credit_ownership": {
+    "activation_event": "owned once when the all-zero control event is resolved",
+    "descendant_reuse": 0,
+    "terminal_entropy_retained": true,
+    "exact_swap_identity": "Delta_y(F)-p Delta_y(s)=C_p(sqrt(delta)-delta)-[C_p(sqrt(delta))+C_p(sqrt(delta)-2delta)]/2"
+  },
+  "selector_debt": {
+    "control_first": "L_CF=p L_core",
+    "selector_first": "L_SF=L_CF+R_k",
+    "correction_bound": "|R_k| <= p delta^2 (3k+7)=d delta (3k+7)",
+    "asymptotic_control_first": "L_CF/d=k+log2(e)+O(sqrt(delta))",
+    "asymptotic_selector_first": "L_SF/d=k+log2(e)+O(sqrt(delta)+delta*k)",
+    "unpaid_term": "d log2(1/delta)=d*k",
+    "status": "GROWS_UNDER_DECLARED_RULE"
+  },
+  "scope": {
+    "refuted_mechanism": "control-first activation revelation plus bounded O(d) one-use rarity credit",
+    "not_refuted": [
+      "data-interleaved adaptive trees",
+      "child-deficit transport",
+      "global potentials with an explicit logarithmic credit",
+      "existential good-coordinate selection",
+      "Fourier Entropy-Influence conjecture"
+    ]
+  }
+}
+

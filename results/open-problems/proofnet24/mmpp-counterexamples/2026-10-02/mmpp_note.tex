@@ -1,0 +1,456 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\CV}{\operatorname{CV}}
+\title{Two counterexamples for\\stationary MMPP arrival times}
+\author{}
+\date{Research note for review\quad---\quad 2 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Conjecture 3.9 of Asanjarani and Nazarathy, published in the ANZIAM
+Journal in 2022, asserts that the time-stationary first-arrival time of
+an irreducible Markov-modulated Poisson process stochastically dominates
+its event-stationary first-arrival time. We exhibit an irreducible
+16-state directed-cycle model with rational transition and arrival
+rates for which the asserted survival inequality is reversed at time
+$12$. A self-contained analytic argument proves a violation exceeding
+$5.5\times10^{-6}$, and a separate exact rational matrix-series
+certificate verifies the sign. The same rational model also answers negatively He's separate question
+whether the time-stationary first-arrival time must have squared
+coefficient of variation at least one. This leaves intact the
+event-stationary squared-coefficient-of-variation result established
+by He. The mathematical verification below does not assert priority;
+independent literature and human review remain necessary before any
+publication claim.
+\end{abstract}
+
+\section{The conjecture and the model}
+We use row-vector conventions for probability distributions. An
+irreducible finite-state Markov-modulated Poisson process (MMPP) consists
+of a continuous-time Markov chain $J$ with generator $Q$, and a Poisson
+arrival process whose conditional instantaneous rate is $d_{J_t}$.
+Write
+\[
+ D=\diag(d_0,\ldots,d_{15}),\qquad C=Q-D,
+ \qquad \pi Q=0,\quad \pi\one=1.
+\]
+The mean arrival rate and the event-stationary state distribution are
+\begin{equation}\label{eq:palm}
+ \overline\lambda=\pi D\one,\qquad
+ \alpha=\frac{\pi D}{\overline\lambda}.
+\end{equation}
+For an MMPP, arrivals do not change the state of $J$, so $\alpha$ is
+also the state distribution immediately after an arrival in the
+stationary arrival process. If $T^\beta$ is the time to the next arrival
+when $J_0$ has distribution $\beta$, its survival function is
+\begin{equation}\label{eq:survival}
+ F_\beta(t)=\PP(T^\beta>t)=\beta e^{tC}\one
+ =\EE_\beta\exp\left(-\int_0^t d_{J_s}\,ds\right).
+\end{equation}
+Conjecture 3.9 of \cite{AN} states $T^\pi\geq_{\rm st}T^\alpha$ for every
+irreducible MMPP, equivalently
+\begin{equation}\label{eq:conjecture}
+ F_\pi(t)\geq F_\alpha(t)\qquad(t\geq0).
+\end{equation}
+Equation \eqref{eq:palm} and the survival inequality are equations
+(2.1) and (2.9), respectively, in that paper. No reversibility of $Q$
+is assumed in its conjecture.
+
+Index the states modulo $16$. Set
+\begin{equation}\label{eq:Q}
+ Q_{i,i}=-1,\qquad Q_{i,i+1}=1,
+ \qquad Q_{i,j}=0\quad(j\notin\{i,i+1\}).
+\end{equation}
+This generator is irreducible, and its stationary distribution is
+$\pi_i=1/16$. Define the integer vector
+\begin{equation}\label{eq:s}
+\begin{split}
+ (s_0,\ldots,s_{15})={}&(1000,924,707,383,0,-383,-707,-924,\\
+ &-1000,-924,-707,-383,0,383,707,924)
+\end{split}
+\end{equation}
+and choose the arrival rates
+\begin{equation}\label{eq:rates}
+ d_i=\frac{10000+s_i}{10^6}
+ =\lambda+\varepsilon g_i,
+ \qquad \lambda=\frac1{100},\quad
+ \varepsilon=\frac1{1000},\quad g_i=\frac{s_i}{1000}.
+\end{equation}
+Since $\sum_i s_i=0$, we have $\overline\lambda=\lambda$ and
+\[
+ \alpha_i=\frac{10000+s_i}{160000}.
+\]
+Every arrival rate lies in $[9/1000,11/1000]$, so the model has strictly
+positive rates. In particular, both $\pi$ and $\alpha$ are probability
+distributions with strictly positive entries.
+
+\begin{theorem}\label{thm:main}
+For the irreducible MMPP \eqref{eq:Q}--\eqref{eq:rates},
+\begin{equation}\label{eq:violation}
+ F_\pi(12)-F_\alpha(12)<-5.544\times10^{-6}.
+\end{equation}
+Thus this model is a counterexample to \eqref{eq:conjecture}.
+\end{theorem}
+
+\section{Survival, hazard, and perturbation identities}
+We first record identities valid for any finite-state stationary MMPP
+with positive arrival rates. Since $\pi C=-\pi D$, differentiating
+\eqref{eq:survival} gives
+\begin{equation}\label{eq:derivative}
+ F_\pi'(t)=\pi C e^{tC}\one
+ =-\pi D e^{tC}\one
+ =-\overline\lambda F_\alpha(t).
+\end{equation}
+This uses the stationary identity $\pi Q=0$, not reversibility. The
+hazard rate from the time-stationary distribution therefore satisfies
+\begin{equation}\label{eq:hazard}
+ h_\pi(t):=-\frac{F_\pi'(t)}{F_\pi(t)}
+ =\overline\lambda\frac{F_\alpha(t)}{F_\pi(t)}.
+\end{equation}
+Consequently, the asserted order \eqref{eq:conjecture} is equivalent to
+$h_\pi(t)\leq\overline\lambda$ for all $t\geq0$.
+
+For the explicit model, take $J_0\sim\pi$ and put
+\begin{equation}\label{eq:H}
+ A_t=\int_0^t g(J_s)\,ds,\qquad
+ H(t)=\EE_\pi e^{-\varepsilon A_t}.
+\end{equation}
+Then $F_\pi(t)=e^{-\lambda t}H(t)$, and
+\eqref{eq:derivative} yields the exact identity
+\begin{equation}\label{eq:difference}
+ F_\pi(t)-F_\alpha(t)=\frac{e^{-\lambda t}}{\lambda}H'(t).
+\end{equation}
+The mean of $g(J_t)$ is zero and $|g(J_t)|\leq1$.
+
+\begin{lemma}\label{lem:expansion}
+For every $t\geq0$,
+\begin{equation}\label{eq:expansion}
+ H'(t)=\varepsilon^2 I_g(t)+R(t),\qquad
+ I_g(t)=\int_0^t\EE_\pi[g(J_0)g(J_s)]\,ds,
+\end{equation}
+where
+\begin{equation}\label{eq:remainder}
+ |R(t)|\leq\frac{\varepsilon^3t^2}{2}e^{\varepsilon t}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For each fixed $t$, the chain has probability zero of jumping at
+exactly $t$. Since $|A_{t+h}-A_t|\leq|h|$, dominated differentiation
+in \eqref{eq:H} is justified and gives
+\[
+ H'(t)=-\varepsilon\EE_\pi[g(J_t)e^{-\varepsilon A_t}].
+\]
+The elementary Taylor formula
+\[
+ e^{-x}=1-x+x^2\int_0^1(1-u)e^{-ux}\,du
+\]
+implies $|e^{-x}-1+x|\leq x^2e^{|x|}/2$ for real $x$.
+Using $\EE_\pi g(J_t)=0$ and $|A_t|\leq t$ therefore gives
+\[
+ H'(t)=\varepsilon^2\EE_\pi[g(J_t)A_t]+R(t)
+\]
+with the bound \eqref{eq:remainder}. By stationarity and Fubini,
+\[
+ \EE_\pi[g(J_t)A_t]
+ =\int_0^t\EE_\pi[g(J_s)g(J_t)]\,ds
+ =\int_0^t\EE_\pi[g(J_0)g(J_{t-s})]\,ds=I_g(t).
+\]
+The equality uses scalar multiplication and a forward time shift;
+no time reversal of the chain is needed.
+\end{proof}
+
+\section{A self-contained analytic certificate}
+Let $\theta=\pi/8$ and $f_i=\cos(i\theta)$. For the directed-cycle
+chain \eqref{eq:Q}, one can write
+$J_t=J_0+N_t\pmod{16}$, where $N_t$ is a rate-one Poisson process
+independent of $J_0$. Averaging over $J_0\sim\pi$ gives
+\[
+ \frac1{16}\sum_{i=0}^{15}\cos(i\theta)\cos((i+n)\theta)
+ =\frac12\cos(n\theta).
+\]
+The Poisson generating function consequently yields
+\begin{equation}\label{eq:covariance}
+ \EE_\pi[f(J_0)f(J_t)]
+ =\frac12 e^{-at}\cos(bt),\qquad
+ a=1-\cos\theta,\quad b=\sin\theta.
+\end{equation}
+Here $a^2+b^2=2a$. Integrating \eqref{eq:covariance} gives
+\begin{equation}\label{eq:integral}
+ I_f(t):=\int_0^t\EE_\pi[f(J_0)f(J_s)]\,ds
+ =\frac{a+e^{-at}[-a\cos(bt)+b\sin(bt)]}{4a}.
+\end{equation}
+
+All terminating decimals below denote exact rational numbers. The
+standard bounds $3.141<\pi<3.142$ and the half-angle formulas give
+\begin{equation}\label{eq:ab}
+ .075<a<.077,\qquad .382<b<.384.
+\end{equation}
+For clarity, these radical estimates need no numerical approximation:
+$1.414^2<2<1.415^2$, and
+\[
+ \cos^2\theta=\frac{2+\sqrt2}{4},\qquad
+ \sin^2\theta=\frac{2-\sqrt2}{4}.
+\]
+Comparison with $.923^2,.925^2$ proves the bounds on $a$;
+comparison with $.382^2,.384^2$ proves the bounds on $b$.
+
+Set $\delta=3\pi/2-12b$. Equation \eqref{eq:ab} gives
+\[
+ .1035<\delta<.129<.13.
+\]
+Thus $\cos(12b)=-\sin\delta\geq-.13$ and
+\[
+ \sin(12b)=-\cos\delta
+ \leq-\left(1-\frac{\delta^2}{2}\right)<-.99.
+\]
+In particular,
+\begin{equation}\label{eq:X}
+ X:=-a\cos(12b)+b\sin(12b)
+ <.077\cdot.13-.382\cdot.99=-.36817.
+\end{equation}
+Since $12a<.924<1$ and $e<3$, we have $e^{-12a}>1/3$.
+The fact that $X$ is negative matters when multiplying inequalities:
+\[
+ a+e^{-12a}X<.077-\frac{.36817}{3}
+ =-\frac{.13717}{3}.
+\]
+Since $4a<.308$, equation \eqref{eq:integral} now gives
+\begin{equation}\label{eq:If}
+ I_f(12)<-\frac{.13717}{.924}<-.148.
+\end{equation}
+The last comparison is exact: $.148\cdot.924=.136752<.13717$.
+The estimate $e<3$ follows, for example, from
+$\sum_{n\geq2}1/n!<\sum_{n\geq2}2^{-(n-1)}=1$.
+
+We next transfer this sign to the rational vector $g$.
+\begin{equation}\label{eq:rounding}
+ \|g-f\|_\infty<\frac1{2000}.
+\end{equation}
+To verify every entry, it suffices by symmetry to consider
+$1,\cos\theta,\cos(\pi/4),\sin\theta,0$.
+The exact square comparisons $1.4142^2<2<1.4143^2$ give
+\[
+ .9235<\cos\theta<.9245,\qquad
+ .7065<\cos(\pi/4)<.7075,\qquad
+ .3825<\sin\theta<.3835.
+\]
+These prove \eqref{eq:rounding} for the entries $.924,.707,.383$
+and hence for all $16$ entries.
+For any two times $u,v$, since $|f|,|g|\leq1$,
+\[
+ |g(J_u)g(J_v)-f(J_u)f(J_v)|
+ \leq |g(J_u)-f(J_u)|\,|g(J_v)|
+      +|f(J_u)|\,|g(J_v)-f(J_v)|<\frac1{1000}.
+\]
+It follows that $|I_g(12)-I_f(12)|<.012$. In conjunction with
+\eqref{eq:If}, this proves
+\begin{equation}\label{eq:Ig}
+ I_g(12)<-.136.
+\end{equation}
+
+Finally, the remainder in Lemma \ref{lem:expansion} satisfies
+\[
+ \frac{|R(12)|}{\varepsilon^2}
+ \leq .072e^{.012}
+ \leq\frac{.072}{1-.012}
+ =\frac{18}{247}<.073.
+\]
+Here $e^x\leq(1-x)^{-1}$ for $0\leq x<1$ follows by comparing their
+power series term by term. Therefore
+\begin{equation}\label{eq:Hnegative}
+ \frac{H'(12)}{\varepsilon^2}<-.136+.073=-.063.
+\end{equation}
+Using $e^{-.12}>1-.12=.88$ in \eqref{eq:difference} gives
+\[
+ F_\pi(12)-F_\alpha(12)
+ <-.063\cdot10^{-6}\cdot\frac{.88}{.01}
+ =-5.544\times10^{-6}.
+\]
+This completes the proof of Theorem \ref{thm:main} without relying
+on floating-point evaluation of a matrix exponential.
+
+\section{An independent exact rational matrix certificate}
+The same sign can be verified directly from the rational model.
+Set $w=\pi-\alpha$, $r=1011/1000$, and
+\[
+ B=12(C+rI).
+\]
+The only nonzero entries of $B$ are
+\[
+ B_{i,i}=12\left(\frac{11}{1000}-d_i\right)\geq0,
+ \qquad B_{i,i+1}=12.
+\]
+Hence $B$ is entrywise nonnegative and
+\[
+ L:=\|B\|_\infty=\frac{1503}{125}=12.024,
+ \qquad\|w\|_1=\frac{1257}{20000}.
+\]
+Define the exact rational numbers
+\begin{equation}\label{eq:series}
+ S_{80}=\sum_{k=0}^{80}\frac{wB^k\one}{k!},\qquad
+ E_{80}=\|w\|_1\frac{L^{81}}{81!}\frac1{1-L/82}.
+\end{equation}
+The matrix norm inequality gives
+$|wB^k\one|\leq\|w\|_1L^k$. For $k\geq81$, consecutive scalar
+terms $L^k/k!$ have ratio at most $L/82<1$. Summing this geometric
+majorant proves
+\begin{equation}\label{eq:tail}
+ |we^B\one-S_{80}|\leq E_{80}.
+\end{equation}
+No cancellation assumption is used in the tail bound.
+
+The companion file \texttt{mmpp\_conjecture39\_check.py} evaluates
+\eqref{eq:series} using Python's standard-library rational type
+\texttt{fractions.Fraction}. It verifies the three exact inequalities
+\begin{equation}\label{eq:checks}
+ E_{80}<10^{-31},\qquad -4<S_{80}-E_{80},\qquad
+ S_{80}+E_{80}<-\frac{39}{10}.
+\end{equation}
+Its sparse recurrence can also be reproduced independently. Start with
+the row vector $u^{(0)}=w$ and, for $k=1,\ldots,80$, set
+\[
+ u^{(k)}_j=
+ \frac{u^{(k-1)}_jB_{j,j}+12u^{(k-1)}_{j-1}}{k}
+ \qquad(j\pmod{16}).
+\]
+Then $u^{(k)}=wB^k/k!$ and
+$S_{80}=\sum_{k=0}^{80}\sum_j u^{(k)}_j$. Every operation is rational.
+For orientation, the exact rational quantities have decimal displays
+\[
+ S_{80}\approx-3.9292649153377824801,
+ \qquad E_{80}\approx3.8718957312181850\times10^{-35}.
+\]
+These decimal displays are not used to certify \eqref{eq:checks}.
+Combining \eqref{eq:tail} and \eqref{eq:checks} gives
+\[
+ -4<we^B\one<-\frac{39}{10},\qquad
+ F_\pi(12)-F_\alpha(12)=e^{-12r}we^B\one<0.
+\]
+For a rational negative bound from this certificate alone, $12r<13$
+and $e<3$ imply
+\[
+ F_\pi(12)-F_\alpha(12)
+ <-\frac{39}{10\cdot3^{13}}
+ =-\frac{13}{5314410}<-2.4\times10^{-6}.
+\]
+An ordinary numerical evaluation gives
+\[
+ F_\pi(12)-F_\alpha(12)\approx-2.1156832900682\times10^{-5}.
+\]
+The analytic and exact rational certificates suffice independently of
+this approximation.
+
+\section{Time-stationary squared coefficient of variation}
+Section 4.3 of \cite{He} also asks whether the time-stationary
+first-arrival time always has squared coefficient of variation at least
+one. The same rational model provides a negative answer.
+
+\begin{proposition}\label{prop:scv}
+For the MMPP \eqref{eq:Q}--\eqref{eq:rates},
+\[
+ 0<\CV(T^\pi)^2<\frac{199999}{200000}<1.
+\]
+\end{proposition}
+\begin{proof}
+Write $R=(D-Q)^{-1}$. Since all arrival rates are at least $9/1000$,
+\eqref{eq:survival} implies that $e^{tC}\one\leq e^{-9t/1000}\one$.
+Thus the matrix integral $\int_0^\infty e^{tC}\,dt$ converges, equals
+$R$, and has nonnegative entries. Integration of the survival function
+and the semigroup identity give the usual phase-type moment formulas
+\[
+ \mu:=\EE_\pi T=\pi R\one,\qquad
+ m_2:=\EE_\pi T^2=2\pi R^2\one.
+\]
+For completeness, the second formula follows from
+$R^2=\int_0^\infty\int_0^\infty e^{(s+t)C}\,ds\,dt
+=\int_0^\infty t e^{tC}\,dt$.
+Let $u=R\one$ and $z=Ru$. Their entries are rational and can be
+computed using the following explicit cyclic recurrence. For any
+rational right-hand side $b$, the system $(D-Q)x=b$ is
+\[
+ a_i x_i-x_{i+1}=b_i,\qquad a_i=1+d_i>1,
+ \qquad i\pmod{16}.
+\]
+Put $P=\prod_{i=0}^{15}a_i$. Since $P>1$, the unique solution starts at
+\[
+ x_0=\frac{\displaystyle\sum_{j=0}^{15}b_j
+                    \prod_{k=j+1}^{15}a_k}{P-1},
+ \qquad x_{i+1}=a_ix_i-b_i.
+\]
+Empty products equal one. Iterating the recurrence gives
+$x_{16}=Px_0-\sum_j b_j\prod_{k=j+1}^{15}a_k=x_0$, verifying the
+cyclic boundary condition. Apply it first to $b=\one$ to obtain $u$,
+and then to $b=u$ to obtain $z$.
+
+The companion exact rational verifier evaluates $\mu=\pi u$ and
+$m_2=2\pi z$ and checks
+\[
+ \mu^2<m_2<\frac{399999}{200000}\mu^2.
+\]
+Dividing by $\mu^2>0$ proves the assertion because
+$\CV(T^\pi)^2=m_2/\mu^2-1$. In addition to the cyclic recurrence,
+independent exact rational Gaussian elimination gives the same values.
+Their approximate decimal displays are
+\[
+ \mu\approx100.0027991122752187,\qquad
+ m_2\approx20001.06092113849143,\qquad
+ \CV(T^\pi)^2\approx .9999941263846573.
+\]
+The strict rational comparisons, rather than these decimal displays,
+are the certificate.
+\end{proof}
+
+\section{Scope and interpretation}
+The sign mechanism is the negative integrated autocovariance of a
+nonreversible cycle. For a small modulation of the rate, this quantity
+is the leading term in $H'(t)$, and therefore determines which side
+of the mean rate the time-stationary hazard occupies. The calculation
+above controls all higher-order terms for an explicit rational model.
+
+Theorem \ref{thm:main} disproves the universal survival-order statement
+of Conjecture 3.9 in \cite{AN}, and Proposition \ref{prop:scv} answers
+negatively the time-stationary variability question in Section 4.3 of
+\cite{He}. Neither result refutes the distinct assertion that the
+event-stationary interarrival time has squared coefficient of variation
+at least one. That assertion is established in \cite{He}; Section 4.3
+there treats the stronger stochastic-order question as a further
+research question. A survival inequality at every time is stronger
+than an inequality between these moments. The directed-cycle example
+also makes no claim about reversible modulating chains.
+
+This is a specific published conjecture from 2019/2022, rather than a
+famous decades-old open problem. The results and their exact certificates
+are presented for review. No claim that this is the first such
+counterexample is made; an independent check of subsequent literature
+and of the argument is appropriate before submission or announcement.
+
+\begin{thebibliography}{9}
+\bibitem{AN}
+A.~Asanjarani and Y.~Nazarathy,
+\emph{Stationary Markovian Arrival Processes: Results and Open Problems},
+The ANZIAM Journal \textbf{64} (2022), 54--68.
+\href{https://doi.org/10.1017/S1446181122000013}{doi:10.1017/S1446181122000013}.
+Preprint: \href{https://arxiv.org/abs/1905.01736}{arXiv:1905.01736} (2019).
+
+\bibitem{He}
+Q.-M.~He,
+\emph{Bounds on the mean and squared coefficient of variation of
+phase-type distributions},
+Journal of Applied Probability \textbf{58} (2021), 880--889.
+\href{https://doi.org/10.1017/jpr.2021.18}{doi:10.1017/jpr.2021.18}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,15 @@
+{
+  "helper_version":"A043-cofactor-v2",
+  "family":"all labeled 0/1 Boolean tables; sign conversion bijective; essential tables factor recursively",
+  "pilot_domain":"n=1,2,3: 276 total tables",
+  "main_domain":"n=1,2,3,4: 65812 total tables",
+  "symmetry":"none",
+  "arithmetic":"exact tuple and integer equality",
+  "memory_estimate_mb":30,
+  "max_runtime_seconds":60,
+  "stop_policy":"check computation time every 256 tables, stop at 50 seconds; save every completed dimension and any partial coverage",
+  "changes":"precompute block index layouts; cache small child certificates; reject a block after its third distinct row; flush progress",
+  "prior_attempt":"v1 terminated via exec-session Ctrl-C with no saved census; no finite result claimed",
+  "pilot_command":"python -X utf8 code/check_primes_v2.py 3",
+  "main_command":"python -X utf8 code/check_primes_v2.py 4"
+}

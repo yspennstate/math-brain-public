@@ -1,0 +1,1 @@
+Pilot v1 failed the proposed positivity at m=4 (n=2). This boundary has negative net first-conversion excess, although the exercised reset can be positive. The new positive-debit theorem is restricted to n>=3; n=2 stays as an explicit checked boundary. No parameter domain was enlarged. Also made log2 of exact powers of two exact, and report the imported module assertion counter.

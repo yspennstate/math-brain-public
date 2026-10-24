@@ -1,0 +1,15 @@
+# P04 I0101 readback receipt
+
+status=COMPLETE_READBACK_VERIFIED
+report_path=proofnet24/P04-closure-local-paley/runs/2026-09-16/2026-09-16T17-41-56Z__run-report.md
+report_creation_commit=f875b3db95dadb36f515ca92a85e1436892d3653
+report_blob=ce7c19fe74c5d0c147b02d479e85e9b1805165be
+terminal_marker=**End of complete run report.**
+checker_path=proofnet24/P04-closure-local-paley/artifacts/2026-09-16T17-41-56Z__p149_exact_dual_checker.py
+checker_creation_commit=771e4a8c9ae951f8b1a5473515e91d3fab19163f
+checker_blob=274918b0ca872a65eb5b6386c59cf9d7328667aa
+output_path=proofnet24/P04-closure-local-paley/artifacts/2026-09-16T17-41-56Z__p149_exact_dual_checker.out
+output_creation_commit=a78e72cadd438cef8ba290fb76a67f4d88a1d0fa
+output_blob=6eacee7ffd6d13a47b1271f569522156b16e1c78
+metric_before=UNMEASURED
+metric_after=149

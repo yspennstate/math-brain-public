@@ -1,0 +1,2 @@
+STATE: A058 stage5 complete: independent rare shared quadratic activations paid H<16I shared-first; arbitrary-order B_tree<=20I with exact terminals; private mass J=2pj; 308 three-bit orbits PASS; v5 review pending, FEI OPEN.
+NEXT: A091/A090 review v5; replace one quadratic phase by a certified rare non-flat phase and pay common-mass logarithmic excess from genuinely unused child surplus with both terminals.

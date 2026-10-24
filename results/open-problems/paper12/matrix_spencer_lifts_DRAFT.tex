@@ -1,0 +1,1187 @@
+% paper12/matrix_spencer_lifts_DRAFT.tex
+% RECEIVED DRAFT (owner-supplied, GPT-assisted rewrite) — to be VERIFIED and REPAIRED.
+% Known mechanical issues to fix in the clean version (matrix_spencer_lifts.tex):
+%   (1) Display-math delimiters arrived as bare [ ... ] (backslashes stripped in transit) -> restore \[ ... \].
+%   (2) Every theorem/lemma/prop uses an identical \label{thm}; all \ref{thm} are therefore broken -> uniquify.
+%   (3) \DeclareMathOperator*{\argmin}{arg,min} should be arg\,min.
+% Mathematical content is preserved verbatim for the verification lane to check.
+%
+\documentclass[11pt]{amsart}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\numberwithin{equation}{section}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\T}{\mathbb T}
+\newcommand{\M}{\mathrm M}
+\newcommand{\Id}{I}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\disc}{\operatorname{disc}}
+\newcommand{\discop}{\operatorname{disc}_{\op}}
+\newcommand{\Ent}{\mathsf E}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\wh}{\widehat}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\mcA}{\mathcal A}
+\newcommand{\mcB}{\mathcal B}
+\newcommand{\mcF}{\mathcal F}
+\newcommand{\lesssimC}{\lesssim}
+
+% NOTE: received as arg,min -- should be arg\,min
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\title[Matrix Spencer bounds from finite-entropy lifts]{Matrix Spencer Bounds from Finite-Entropy Lifts}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{June 2026}
+
+\subjclass[2020]{Primary 15A60, 11K38; Secondary 15B05, 42A05, 46L07, 47B35, 68Q25}
+\keywords{Matrix discrepancy, Matrix Spencer conjecture, finite-dimensional C*-algebras, Toeplitz matrices, Hankel matrices, group convolution, block diagonal matrices}
+
+\begin{document}
+
+\begin{abstract}
+The Matrix Spencer conjecture asks whether every collection of self-adjoint
+$n\times n$ contractions $A_1,\ldots,A_n$ admits signs
+$\eps_i\in\{-1,1\}$ for which
+$\|\sum_i \eps_i A_i\|_{\op}=O(\sqrt n)$. We formulate a reusable
+finite-lift principle for structured instances. Let
+\[
+\mcB=\bigoplus_{\alpha=1}^m \M_{r_\alpha}(\C),\qquad
+h(\mcB)=\max_\alpha r_\alpha,\qquad
+R(\mcB)=\sum_\alpha r_\alpha,
+\]
+and set $\Ent(\mcB)=h(\mcB)R(\mcB)$. If a tuple of matrices has a
+$K$-bounded lift to $\mcB$ through a contraction on the lifted span, then
+\[
+\discop(A_1,\ldots,A_n)
+\le C K \sqrt{n\log\left(e+\frac{\Ent(\mcB)}{n}\right)} .
+\]
+This is a direct consequence of the block-diagonal Matrix Spencer theorem of
+Dadush, Jiang and Reis. The same argument also covers matrix-valued
+multiplier models after sampling on a finite norming set.
+
+The framework gives deterministic Matrix Spencer bounds for scalar Toeplitz
+and Hankel contractions, fixed block-size and fixed-level Toeplitz and Hankel classes,
+matrices in a common finite-dimensional C*-algebra, finite-group convolution
+algebras with controlled irreducible dimensions, and the usual compression and
+bounded-image operations. The paper also records the correct entropy accounting
+for finite sums: for direct sums one has
+$\Ent(\bigoplus_\ell \mcB_\ell)= (\max_\ell h(\mcB_\ell))\sum_\ell R(\mcB_\ell)$,
+not generally $\sum_\ell \Ent(\mcB_\ell)$. Finally, an elementary dimension
+argument shows that any exact finite block lift of the full algebra $\M_D(\C)$
+has entropy at least $D^2$, explaining why this finite-lift mechanism alone
+cannot settle the square case of the full Matrix Spencer conjecture.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+
+Spencer's theorem that ``six standard deviations suffice'' is a central result
+of discrepancy theory \cite{Spencer,Matousek,Chazelle}. In one standard form,
+$n$ vectors in the unit cube of $\R^n$ can be signed so that their signed sum has
+$\ell_\infty$ norm $O(\sqrt n)$. The Matrix Spencer conjecture asks for the
+analogous statement with vectors replaced by self-adjoint matrices and
+$\ell_\infty$ norm replaced by operator norm.
+
+\begin{definition}[Matrix discrepancy]
+For self-adjoint matrices $A_1,\ldots,A_n$, set
+\[
+\disc(A_1,\ldots,A_n)
+= \min_{\eps\in\{-1,1\}^n}
+\norm{\sum_{i=1}^n \eps_i A_i}_{\op} .
+\]
+For arbitrary complex matrices we use the same formula and write
+\[
+\discop(A_1,\ldots,A_n)
+=\min_{\eps\in\{-1,1\}^n}
+\norm{\sum_{i=1}^n\eps_i A_i}_{\op}.
+\]
+\end{definition}
+
+\begin{question}[Matrix Spencer]
+Is there a universal constant $C$ such that every $n$ self-adjoint matrices
+$A_1,\ldots,A_n\in \M_n(\C)$ satisfying $\norm{A_i}_{\op}\le 1$ obey
+\[
+\disc(A_1,\ldots,A_n)\le C\sqrt n?
+\]
+More generally, one asks for the same bound for $d\times d$ matrices with
+$d\le n$, with a constant independent of $d$.
+\end{question}
+
+The general problem remains open. Noncommutative Khintchine inequalities give
+logarithmic losses \cite{LustPisier,Pisier}. Important recent advances include
+the intrinsic-freeness concentration theory of Bandeira, Boedihardjo and van
+Handel \cite{BBvH}; the quantum-communication route of Hopkins, Raghavendra and
+Shetty \cite{HRS}; the polylogarithmic-rank theorem of Bansal, Jiang and Meka
+\cite{BJM}; and the mirror-descent matrix-discrepancy framework of Dadush,
+Jiang and Reis \cite{DJR}. These results do not directly cover many full-rank
+structured families, such as normalized Toeplitz, Hankel, or convolution
+matrices in the square regime.
+
+The point of this paper is to isolate a simple sufficient condition that does
+cover these structured classes. The condition is the existence of a bounded
+finite block lift. If each input matrix is a compression, quotient, or bounded
+linear image of a block-diagonal element whose total block complexity is small,
+one signs the lifted block-diagonal matrices and then maps back.
+
+\subsection{The finite-lift principle}
+
+Let
+\[
+\mcB=\bigoplus_{\alpha=1}^m \M_{r_\alpha}(\C),
+\qquad
+\norm{Y}_{\mcB}=\max_\alpha \norm{Y_\alpha}_{\op}.
+\]
+We write
+\[
+h(\mcB)=\max_\alpha r_\alpha,\qquad
+R(\mcB)=\sum_{\alpha=1}^m r_\alpha,
+\qquad
+\Ent(\mcB)=h(\mcB)R(\mcB).
+\]
+The number $\Ent(\mcB)$ is the entropy dimension seen by block-diagonal Matrix
+Spencer. It is $D$ for a diagonal algebra of dimension $D$, $D^2$ for the full
+matrix algebra $\M_D$, and $bD$ for a block-diagonal algebra on $\C^D$ with
+blocks of size at most $b$.
+
+\begin{theorem}[Finite block-lift Matrix Spencer]\label{thm:main}
+There is a universal constant $C$ with the following property. Let
+$A_1,\ldots,A_n\in \M_D(\C)$ be arbitrary complex matrices with
+$\norm{A_i}_{\op}\le 1$. Suppose there are elements $Y_i\in\mcB$ and a fixed
+linear map
+\[
+\Pi: \Span\{Y_1,\ldots,Y_n\}\longrightarrow \M_D(\C)
+\]
+such that
+\[
+\Pi(Y_i)=A_i,
+\qquad
+\norm{\Pi(Y)}_{\op}\le \Lambda\norm{Y}_{\mcB}
+\quad (Y\in\Span\{Y_1,\ldots,Y_n\}),
+\]
+and
+\[
+\norm{Y_i}_{\mcB}\le K \qquad (1\le i\le n).
+\]
+Then
+\[
+\discop(A_1,\ldots,A_n)
+\le C\Lambda K
+\sqrt{n\log\left(e+\frac{\Ent(\mcB)}{n}\right)} .
+\]
+If the $A_i$ are self-adjoint and the $Y_i$ may be chosen self-adjoint, the
+same estimate holds for $\disc(A_1,\ldots,A_n)$.
+\end{theorem}
+
+Thus every class with uniformly bounded lift loss and $\Ent(\mcB)=O(n)$
+satisfies the conjectured $O(\sqrt n)$ Matrix Spencer bound. Scalar Toeplitz
+matrices are the commutative case: after a bounded finite Toeplitz extension and
+Fourier sampling, the lift algebra is diagonal of dimension $O(D)$. Finite group
+convolution and block Toeplitz matrices are noncommutative variants in which the
+finite lift has bounded block size.
+
+The theorem has a built-in limitation. If the full algebra $\M_D(\C)$ is lifted
+exactly through a finite block algebra, surjectivity forces
+$\sum_\alpha r_\alpha^2\ge D^2$, hence $\Ent(\mcB)\ge D^2$. Therefore this
+mechanism cannot, by itself, turn arbitrary $D\times D$ matrices in the square
+regime $D=n$ into an $O(\sqrt n)$ theorem. It yields instead the usual
+$\sqrt{n\log(e+D^2/n)}$ scale. The point is not that finite lifts are the only
+possible method, but that this particular method succeeds exactly when the
+structured class has small finite-lift entropy.
+
+\subsection{Main deterministic consequences}
+
+The abstract theorem gives the following consequences. Constants are universal
+unless a dependence is displayed in the subscript.
+
+\begin{enumerate}[leftmargin=2em]
+\item \textbf{Scalar Toeplitz and Hankel.} Every collection of arbitrary complex
+$d\times d$ Toeplitz or Hankel contractions satisfies
+\[
+\discop(A_1,\ldots,A_n)
+\le C\sqrt{n\log\left(e+\frac{d}{n}\right)} .
+\]
+In particular, self-adjoint Toeplitz and Hankel matrices satisfy the Matrix
+Spencer bound when $d\le n$.
+
+\item \textbf{Fixed-block and fixed-level Toeplitz/Hankel.} For fixed matrix
+block size $b$ and fixed multilevel order $r$, all $r$-level $b\times b$ block
+Toeplitz and block Hankel contractions of total dimension $D$ satisfy
+\[
+\discop(A_1,\ldots,A_n)
+\le C_{r,b}\sqrt{n\log\left(e+\frac{D}{n}\right)} .
+\]
+
+\item \textbf{Common finite-dimensional C*-algebras.} Suppose the $A_i$ lie in a
+common finite-dimensional C*-algebra represented as
+\[
+\mcA \simeq \bigoplus_{\alpha=1}^m
+\left(\M_{r_\alpha}(\C)\otimes I_{m_\alpha}\right)
+\subseteq \M_D(\C).
+\]
+Then
+\[
+\discop(A_1,\ldots,A_n)
+\le C\sqrt{n\log\left(e+
+\frac{(\max_\alpha r_\alpha)\sum_\alpha r_\alpha}{n}
+\right)} .
+\]
+This includes simultaneous diagonalization, common bounded-block
+diagonalization, and commutative association-scheme algebras.
+
+\item \textbf{Finite group convolution.} For left convolution operators on
+$\ell^2(G)$, where $G$ is finite and $q(G)=\max_{\pi\in\widehat G}\dim\pi$,
+\[
+\discop(L_{f_1},\ldots,L_{f_n})
+\le C\sqrt{n\log\left(e+
+\frac{q(G)\sum_{\pi\in\widehat G}\dim\pi}{n}
+\right)} .
+\]
+For finite abelian groups this becomes
+$C\sqrt{n\log(e+|G|/n)}$.
+
+\item \textbf{Closure operations.} The framework is stable under compression,
+bounded linear images, completely bounded fixed-size tensor amplification, and
+finite sums when the combined direct-sum entropy remains controlled. The last
+condition is important: the entropy of a direct sum is not the sum of the
+individual entropies in general.
+
+\item \textbf{Structured random inputs.} All of the preceding statements are
+pathwise deterministic. They therefore apply to random Toeplitz, Hankel,
+fixed-block multilevel Toeplitz/Hankel, circulant, and group-convolution samples
+after normalization by their realized operator norms.
+\end{enumerate}
+
+\section{Discrepancy inputs}
+
+We use two discrepancy inputs. The first is the rectangular vector Spencer
+theorem. All logarithms are natural.
+
+\begin{theorem}[Vector Spencer]\label{thm:vspencer}
+There is a universal constant $C_S$ such that, for every
+$x_1,\ldots,x_n\in\C^m$ with $\norm{x_i}_\infty\le 1$, there are signs
+$\eps\in\{-1,1\}^n$ satisfying
+\[
+\norm{\sum_{i=1}^n \eps_i x_i}_\infty
+\le C_S \sqrt{n\log\left(e+\frac{m}{n}\right)} .
+\]
+\end{theorem}
+
+The complex case follows from the real theorem by applying it to real and
+imaginary parts and absorbing the harmless factor of two into the constant.
+
+The second input is the block-diagonal theorem of Dadush, Jiang and Reis. We
+state it in the standard form with total matrix dimension $R$ and maximum block
+size $h$.
+
+\begin{theorem}[Block-diagonal Matrix Spencer, Dadush--Jiang--Reis]\label{thm:djr}
+There is a universal constant $C_{BD}$ such that the following holds. Let
+$\C^R=\bigoplus_\alpha \C^{r_\alpha}$ be a fixed block decomposition with
+$h=\max_\alpha r_\alpha$. Let $Y_1,\ldots,Y_n$ be self-adjoint matrices that
+are block diagonal with respect to this decomposition and satisfy
+$\norm{Y_i}_{\op}\le 1$. Then there are signs $\eps\in\{-1,1\}^n$ such that
+\[
+\norm{\sum_{i=1}^n \eps_i Y_i}_{\op}
+\le C_{BD}\sqrt{n\log\left(e+\frac{hR}{n}\right)} .
+\]
+Equivalently, for $\mcB=\bigoplus_\alpha \M_{r_\alpha}(\C)$,
+\[
+\norm{\sum_{i=1}^n \eps_i Y_i}_{\mcB}
+\le C_{BD}\sqrt{n\log\left(e+\frac{\Ent(\mcB)}{n}\right)} .
+\]
+\end{theorem}
+
+\begin{remark}
+Dadush, Jiang and Reis prove this as an application of their partial-coloring
+framework; in their notation the logarithmic factor is of the form
+$\log(hm/n)$ for $m\times m$ block-diagonal matrices with block size at most
+$h$ \cite{DJR}. The displayed version inserts $e+$ to cover all regimes and
+uses $R$ for the total matrix dimension.
+\end{remark}
+
+For non-self-adjoint block-diagonal matrices we use Hermitian dilation. For a
+matrix $Y$, set
+\[
+\mathscr H(Y)=\begin{pmatrix}0&Y\\Y^*&0\end{pmatrix} .
+\]
+Then $\mathscr H(Y)$ is self-adjoint and $\norm{\mathscr H(Y)}_{\op}=\norm{Y}_{\op}$.
+Applying Theorem \ref{thm:djr} to the dilations doubles all block sizes
+and changes only the universal constant.
+
+\begin{corollary}[Non-self-adjoint block diagonal signing]\label{cor:nsa}
+Let $Y_1,\ldots,Y_n\in\mcB$ be arbitrary complex block-diagonal matrices with
+$\norm{Y_i}_{\mcB}\le 1$. Then
+\[
+\min_{\eps\in\{-1,1\}^n}
+\norm{\sum_{i=1}^n \eps_iY_i}_{\mcB}
+\le C\sqrt{n\log\left(e+\frac{\Ent(\mcB)}{n}\right)} .
+\]
+\end{corollary}
+
+\section{Finite block and sampled multiplier lifts}
+
+The lift formulation is tuple-level: for a given input collection it is enough
+to choose bounded lifts of the individual matrices and a contraction on their
+span.
+
+\begin{definition}[Finite block lift]
+Let $A_1,\ldots,A_n\in\M_D(\C)$ and
+$\mcB=\bigoplus_{\alpha=1}^m \M_{r_\alpha}(\C)$. We say that the tuple admits a
+$(K,\Lambda)$-lift to $\mcB$ if there exist elements $Y_i\in\mcB$ and a fixed
+linear map
+\[
+\Pi:\Span\{Y_1,\ldots,Y_n\}\to\M_D(\C)
+\]
+such that
+\[
+\Pi(Y_i)=A_i,
+\qquad
+\norm{\Pi(Y)}_{\op}\le \Lambda\norm{Y}_{\mcB}
+\quad (Y\in\Span\{Y_1,\ldots,Y_n\}),
+\]
+and $\norm{Y_i}_{\mcB}\le K$ for all $i$.
+\end{definition}
+
+The map $\Pi$ is usually a compression, a quotient map, or a fixed bounded
+linear image. Contractive lifts correspond to $\Lambda=1$.
+
+\begin{proof}[Proof of Theorem \ref{thm:main}]
+First assume that the $Y_i$ are self-adjoint. Apply Theorem
+\ref{thm:djr} to $Y_i/K$. There are signs for which
+\[
+\norm{\sum_i \eps_i Y_i}_{\mcB}
+\le C K\sqrt{n\log\left(e+\frac{\Ent(\mcB)}{n}\right)} .
+\]
+Since $\Pi$ is linear and has norm at most $\Lambda$ on the relevant span,
+\[
+\norm{\sum_i \eps_i A_i}_{\op}
+= \norm{\Pi\left(\sum_i \eps_iY_i\right)}_{\op}
+\le \Lambda\norm{\sum_i \eps_iY_i}_{\mcB} .
+\]
+This proves the self-adjoint case. In the arbitrary complex case, replace each
+block $Y_{i,\alpha}$ by its Hermitian dilation. The block sizes and total
+reduced dimension are both doubled, so the entropy changes by a factor of four,
+which is absorbed into the universal constant. The identity
+$\norm{\sum_i\eps_i\mathscr H(Y_i)}=\norm{\sum_i\eps_iY_i}$ gives the stated
+non-self-adjoint bound.
+\end{proof}
+
+\subsection{Sampled multiplier lifts}
+
+Toeplitz arguments naturally produce continuous multiplier lifts rather than
+finite block lifts at the first step. The following sampling principle converts
+them into finite block lifts.
+
+\begin{definition}[Norming set]
+Let $\Omega$ be a compact space and let
+$\mcF\subset C(\Omega;\M_b(\C))$ be a finite-dimensional linear space. A finite
+set $Q\subset\Omega$ is $L_Q$-norming for $\mcF$ if
+\[
+\norm{F}_{L^\infty(\Omega;\M_b)}
+\le L_Q\max_{\omega\in Q}\norm{F(\omega)}_{\op}
+\qquad(F\in\mcF).
+\]
+\end{definition}
+
+\begin{definition}[Sampled multiplier lift]
+A tuple $A_1,\ldots,A_n\in\M_D(\C)$ admits a
+$(K,\Lambda,L_Q,Q,b)$ sampled multiplier lift if there are functions
+$F_i\in\mcF\subset C(\Omega;\M_b(\C))$ and a fixed linear map
+\[
+\Pi:\Span\{F_1,\ldots,F_n\}\to\M_D(\C)
+\]
+such that
+\[
+\Pi(F_i)=A_i,
+\qquad
+\norm{\Pi(F)}_{\op}\le \Lambda\norm{F}_{L^\infty(\Omega;\M_b)},
+\]
+$\norm{F_i}_{L^\infty}\le K$, and $Q$ is $L_Q$-norming for
+$\Span\{F_1,\ldots,F_n\}$.
+\end{definition}
+
+\begin{theorem}[Sampled multiplier Matrix Spencer]\label{thm:sampled}
+If $A_1,\ldots,A_n$ admit a $(K,\Lambda,L_Q,Q,b)$ sampled multiplier lift, then
+\[
+\discop(A_1,\ldots,A_n)
+\le C K\Lambda L_Q
+\sqrt{n\log\left(e+\frac{b^2|Q|}{n}\right)} .
+\]
+For $b=1$ this is the vector-Spencer scale
+$CK\Lambda L_Q\sqrt{n\log(e+|Q|/n)}$.
+\end{theorem}
+
+\begin{proof}
+Evaluate each $F_i$ on $Q$ and form
+\[
+Y_i=\bigoplus_{\omega\in Q}F_i(\omega)
+\in \bigoplus_{\omega\in Q}\M_b(\C).
+\]
+This finite block algebra has $h=b$, $R=b|Q|$, and entropy $b^2|Q|$. By
+Corollary \ref{cor:nsa}, there are signs such that
+\[
+\max_{\omega\in Q}
+\norm{\sum_i\eps_iF_i(\omega)}_{\op}
+\le C K\sqrt{n\log\left(e+\frac{b^2|Q|}{n}\right)} .
+\]
+Since $Q$ is $L_Q$-norming,
+\[
+\norm{\sum_i\eps_iF_i}_{L^\infty}
+\le C K L_Q\sqrt{n\log\left(e+\frac{b^2|Q|}{n}\right)} .
+\]
+Applying $\Pi$ gives the result.
+\end{proof}
+
+\subsection{A grid lemma for trigonometric polynomial lifts}
+
+We shall use the following elementary norming lemma. It is stated for
+matrix-valued trigonometric polynomials because this is the form needed for
+block Toeplitz matrices.
+
+\begin{lemma}[Grid norming]\label{lem:grid}
+Fix $r\ge 1$. Let $P:\T^r\to\M_b(\C)$ be a matrix-valued trigonometric
+polynomial with coordinate degrees at most $N_1,\ldots,N_r$. For each $j$, let
+$G_j$ be a uniform grid in $\T$ of size at least $8rN_j$ when $N_j\ge 1$, and of
+size $1$ when $N_j=0$. Put $G=G_1\times\cdots\times G_r$. Then
+\[
+\norm{P}_{L^\infty(\T^r;\M_b)}
+\le 2\max_{\theta\in G}\norm{P(\theta)}_{\op} .
+\]
+In particular, $|G|=O_r(\prod_{j=1}^r(1+N_j))$.
+\end{lemma}
+
+\begin{proof}
+The Banach-valued Bernstein inequality gives
+$\norm{\partial_j P}_\infty\le N_j\norm{P}_\infty$ for each coordinate. One way
+to see this is to apply the scalar Bernstein inequality to $\varphi(P(\cdot))$
+for norm-one linear functionals $\varphi$ on $\M_b$. Choose $\theta^*$ with
+$\norm{P(\theta^*)}\ge\norm{P}_\infty-\delta$, and choose $\theta\in G$ with
+$|\theta_j-\theta^*_j|\le \pi/|G_j|$ for every $j$. Then
+\[
+\norm{P(\theta^*)-P(\theta)}
+\le \sum_{j=1}^r \frac{\pi}{|G_j|}N_j\norm{P}_\infty
+\le \frac{\pi}{8}\norm{P}_\infty .
+\]
+Letting $\delta\downarrow 0$ gives
+$\norm{P}_\infty\le (1-\pi/8)^{-1}\max_G\norm{P}\le 2\max_G\norm{P}$.
+\end{proof}
+
+\section{Finite-dimensional C*-algebras and group convolution}
+
+The cleanest applications are matrices that already lie in a common
+finite-dimensional C*-algebra.
+
+\begin{theorem}[Common finite-dimensional C*-algebra]\label{thm:cstar}
+Let $\mcA\subset\M_D(\C)$ be a finite-dimensional C*-algebra. Write its
+representation, after unitary conjugacy, as
+\[
+\mcA\simeq \bigoplus_{\alpha=1}^m
+\left(\M_{r_\alpha}(\C)\otimes I_{m_\alpha}\right).
+\]
+Let $h=\max_\alpha r_\alpha$ and $R=\sum_\alpha r_\alpha$. If
+$A_1,\ldots,A_n\in\mcA$ satisfy $\norm{A_i}_{\op}\le 1$, then
+\[
+\discop(A_1,\ldots,A_n)
+\le C\sqrt{n\log\left(e+\frac{hR}{n}\right)} .
+\]
+If the matrices are self-adjoint, this is a self-adjoint discrepancy bound.
+\end{theorem}
+
+\begin{proof}
+An element of $\mcA$ is unitarily equivalent to
+$\bigoplus_\alpha(B_\alpha\otimes I_{m_\alpha})$. Delete the multiplicity
+identities to obtain the reduced algebra
+$\mcB=\bigoplus_\alpha\M_{r_\alpha}(\C)$. The deletion map and the inverse map
+$\bigoplus B_\alpha\mapsto\bigoplus(B_\alpha\otimes I_{m_\alpha})$ are isometric
+for the operator norm. Theorem \ref{thm:main} applies with
+$K=\Lambda=1$.
+\end{proof}
+
+\begin{corollary}[Simultaneous diagonalization]
+If $A_1,\ldots,A_n$ are normal matrices diagonalized by a common unitary and
+$\norm{A_i}_{\op}\le 1$, then
+\[
+\discop(A_1,\ldots,A_n)
+\le C\sqrt{n\log\left(e+\frac{D}{n}\right)} .
+\]
+Thus the conjectured $O(\sqrt n)$ bound holds when $D\le n$.
+\end{corollary}
+
+\begin{corollary}[Common bounded-block diagonalization]
+Suppose all $A_i$ are simultaneously unitarily block diagonal with common block
+sizes at most $b$. Let $D$ be the ambient dimension. Then
+\[
+\discop(A_1,\ldots,A_n)
+\le C\sqrt{n\log\left(e+\frac{bD}{n}\right)} .
+\]
+For fixed $b$ and $D\le n$, this is $O_b(\sqrt n)$.
+\end{corollary}
+
+\begin{corollary}[Commutative association schemes]
+Let $\mcA\subset\M_D(\C)$ be a commutative self-adjoint matrix algebra with $s$
+minimal spectral projections. If $A_1,\ldots,A_n\in\mcA$ are contractions, then
+\[
+\discop(A_1,\ldots,A_n)
+\le C\sqrt{n\log\left(e+\frac{s}{n}\right)} .
+\]
+In particular, any family contained in the Bose--Mesner algebra of a symmetric
+association scheme with $s$ primitive idempotents satisfies the Matrix Spencer
+bound whenever $s=O(n)$, independently of the number of vertices.
+\end{corollary}
+
+\subsection{Finite group convolution}
+
+Let $G$ be a finite group. A left convolution operator on $\ell^2(G)$ has the
+form
+\[
+L_f\xi(x)=\sum_{y\in G} f(xy^{-1})\xi(y).
+\]
+By the finite Fourier transform,
+\[
+L_f \simeq \bigoplus_{\pi\in\widehat G}
+\left(\widehat f(\pi)\otimes I_{d_\pi}\right),
+\qquad d_\pi=\dim\pi,
+\]
+and
+$\norm{L_f}_{\op}=\max_{\pi\in\widehat G}\norm{\widehat f(\pi)}_{\op}$.
+Thus the reduced convolution algebra is
+$\bigoplus_{\pi\in\widehat G}\M_{d_\pi}(\C)$.
+
+\begin{theorem}[Finite group convolution]\label{thm:group}
+Let $G$ be finite, let $q(G)=\max_{\pi\in\widehat G}d_\pi$, and put
+$S(G)=\sum_{\pi\in\widehat G}d_\pi$. If
+$L_{f_1},\ldots,L_{f_n}$ are left convolution operators on $\ell^2(G)$ with
+$\norm{L_{f_i}}_{\op}\le 1$, then
+\[
+\discop(L_{f_1},\ldots,L_{f_n})
+\le C\sqrt{n\log\left(e+\frac{q(G)S(G)}{n}\right)} .
+\]
+Consequently, for finite abelian groups,
+\[
+\discop(L_{f_1},\ldots,L_{f_n})
+\le C\sqrt{n\log\left(e+\frac{|G|}{n}\right)} .
+\]
+For any family of groups with $q(G)\le q$ fixed, arbitrary convolution kernels
+satisfy $O_q(\sqrt n)$ whenever $|G|\le n$.
+\end{theorem}
+
+\begin{proof}
+Apply Theorem \ref{thm:cstar} to the group convolution algebra. In the
+abelian case all irreducible representations have dimension one and
+$S(G)=|G|$. In general $S(G)\le |G|$, and therefore $q(G)S(G)\le q|G|$ on
+bounded-irrep families.
+\end{proof}
+
+\begin{remark}
+Theorem \ref{thm:group} signs arbitrary convolution kernels. This is
+different from the finite-group regular-representation theorem of Bandeira and
+B\"olcskei \cite{BandeiraBolcskei}, which signs the specific list of left-regular
+representation matrices indexed by group elements with a universal
+$C\sqrt{|G|}$ bound for every finite group. The two results are complementary:
+Theorem \ref{thm:group} handles arbitrary kernels but retains a logarithmic
+dependence on the largest irreducible block unless the irreducible dimensions
+are controlled.
+\end{remark}
+
+\section{Toeplitz, Hankel, and multilevel Toeplitz classes}
+
+We now recover and extend the Toeplitz and Hankel endpoint. The full-bandwidth
+scalar result uses bounded finite Toeplitz extension. The banded result uses an
+elementary finite-section estimate and is included with full details.
+
+\subsection{Scalar Toeplitz matrices}
+
+For a finite sequence $(a_k)_{-(d-1)\le k\le d-1}$, write
+\[
+T_d(a)= (a_{r-s})_{0\le r,s<d} .
+\]
+If $\varphi\in L^\infty(\T)$ has Fourier coefficients
+$\widehat\varphi(k)=a_k$ for $|k|<d$, then $\varphi$ induces $T_d(a)$.
+
+\begin{theorem}[Finite Toeplitz extension]\label{thm:text}
+There is an absolute constant $K_T$ such that every complex $d\times d$ Toeplitz
+matrix $A=T_d(a)$ has an inducer $\varphi_A\in L^\infty(\T)$ satisfying
+\[
+\widehat\varphi_A(k)=a_k \quad (|k|<d),
+\qquad
+\norm{\varphi_A}_{L^\infty}\le K_T\norm{A}_{\op} .
+\]
+One may take $K_T\le 3$.
+\end{theorem}
+
+This is the finite Toeplitz extension theorem of Nikolskaya and Farforovskaya
+\cite{NikolskayaFarforovskaya}; Courtney and Sarason record the bound and note
+that the same reasoning applies in the non-self-adjoint case \cite{CourtneySarason}.
+
+We also use a standard de la Vall\'ee Poussin kernel $V_N$ satisfying
+\[
+\widehat V_N(k)=1\quad(|k|\le N),
+\qquad
+\widehat V_N(k)=0\quad(|k|>2N),
+\qquad
+\norm{V_N}_{L^1}\le C_V .
+\]
+
+\begin{theorem}[Arbitrary scalar Toeplitz signing]\label{thm:toep}
+There is a universal constant $C$ such that, for every collection of arbitrary
+complex Toeplitz matrices $A_1,\ldots,A_n\in\M_d(\C)$ with
+$\norm{A_i}_{\op}\le 1$,
+\[
+\discop(A_1,\ldots,A_n)
+\le C\sqrt{n\log\left(e+\frac{d}{n}\right)} .
+\]
+In particular, self-adjoint Toeplitz matrices satisfy Matrix Spencer in the
+regime $d\le n$.
+\end{theorem}
+
+\begin{proof}
+For each $i$, choose an inducer $\varphi_i$ from Theorem
+\ref{thm:text}. Put
+$p_i=\varphi_i*V_{d-1}$. Then $p_i$ is a trigonometric polynomial of degree at
+most $2d-2$, its Fourier coefficients agree with those of $\varphi_i$ for
+$|k|<d$, and
+\[
+\norm{p_i}_{\infty}\le C_VK_T .
+\]
+Hence $T_d(p_i)=A_i$.
+
+Choose a uniform grid $Q\subset\T$ of size $O(d)$ that is $2$-norming for
+trigonometric polynomials of degree at most $2d$ by Lemma \ref{lem:grid}.
+Apply Theorem \ref{thm:sampled} with $b=1$, $K=C_VK_T$, and $\Lambda=1$. There
+are signs for which the signed polynomial $P=\sum_i\eps_i p_i$ satisfies
+\[
+\norm{P}_{\infty}
+\le C\sqrt{n\log\left(e+\frac{d}{n}\right)} .
+\]
+Toeplitz compression is contractive from $L^\infty(\T)$ to operator norm, so
+\[
+\norm{\sum_i\eps_i A_i}_{\op}
+= \norm{T_d(P)}_{\op}
+\le \norm{P}_{\infty} .
+\]
+\end{proof}
+
+\begin{remark}[Circulant-lift interpretation]
+If the grid size is larger than twice the degree of the $p_i$, then the vector
+$(p_i(\theta))_{\theta\in Q}$ defines a circulant matrix whose upper-left
+$d\times d$ block is $A_i$. Thus the preceding proof is a bounded
+circulant-lift proof.
+\end{remark}
+
+\subsection{Scalar Hankel matrices}
+
+Let $J_d$ be the reversal matrix, $(J_dx)_r=x_{d-1-r}$. If $H$ is Hankel, then
+$HJ_d$ is Toeplitz and $\norm{HJ_d}=\norm H$.
+
+\begin{corollary}[Arbitrary scalar Hankel signing]\label{cor:hankel}
+For arbitrary complex Hankel matrices $H_1,\ldots,H_n\in\M_d(\C)$ with
+$\norm{H_i}_{\op}\le 1$,
+\[
+\discop(H_1,\ldots,H_n)
+\le C\sqrt{n\log\left(e+\frac{d}{n}\right)} .
+\]
+Thus self-adjoint Hankel matrices satisfy Matrix Spencer when $d\le n$.
+\end{corollary}
+
+\begin{proof}
+Apply Theorem \ref{thm:toep} to the Toeplitz matrices $H_iJ_d$ and
+observe that
+\[
+\norm{\sum_i\eps_iH_i}
+=\norm{\left(\sum_i\eps_iH_iJ_d\right)J_d}
+=\norm{\sum_i\eps_iH_iJ_d} .
+\]
+\end{proof}
+
+\subsection{Banded Toeplitz matrices}
+
+For bandwidth $w\ll d$, one needs only $O(w)$ Fourier samples. The following
+finite-section lemma replaces the bounded extension theorem in this case.
+
+\begin{lemma}[Finite-section lower bound for banded symbols]\label{lem:band}
+Let $p(e^{it})=\sum_{|k|\le w}a_ke^{ikt}$ and let
+$T_d(p)=(a_{r-s})_{0\le r,s<d}$. If $d>2w$, then
+\[
+\norm{p}_{\infty}
+\le \left(1-\frac{2w}{d}\right)^{-1/2}\norm{T_d(p)}_{\op} .
+\]
+In particular, if $d\ge 4w$, then $\norm{p}_{\infty}\le \sqrt2\norm{T_d(p)}$.
+\end{lemma}
+
+\begin{proof}
+Choose $t_0$ such that $|p(e^{-it_0})|=\norm p_\infty$, and set
+$x_s=d^{-1/2}e^{is t_0}$ for $0\le s<d$. Then $\norm x_2=1$. For every
+interior row $w\le r\le d-1-w$,
+\[
+(T_d(p)x)_r
+= \frac{1}{\sqrt d}\sum_{|k|\le w} a_k e^{i(r-k)t_0}
+= \frac{e^{ir t_0}}{\sqrt d}p(e^{-it_0}).
+\]
+Therefore
+\[
+\norm{T_d(p)}_{\op}^2
+\ge \norm{T_d(p)x}_2^2
+\ge \frac{d-2w}{d}\norm p_\infty^2 .
+\]
+\end{proof}
+
+\begin{theorem}[Banded scalar Toeplitz signing]\label{thm:banded}
+There is a universal constant $C$ such that the following holds. Let
+$A_i=T_d(p_i)$ be arbitrary complex Toeplitz matrices whose symbols have degree
+at most $w$, and assume $\norm{A_i}_{\op}\le 1$. If $d\ge 4w$ and $w\ge 1$,
+then
+\[
+\discop(A_1,\ldots,A_n)
+\le C\sqrt{n\log\left(e+\frac{w}{n}\right)} .
+\]
+For $w=0$ the same statement holds with $w$ replaced by $1$ inside the logarithm.
+\end{theorem}
+
+\begin{proof}
+By Lemma \ref{lem:band}, $\norm{p_i}_\infty\le\sqrt2$ for all $i$.
+Choose an $O(w)$-point uniform grid that is $2$-norming for degree-$w$
+trigonometric polynomials by Lemma \ref{lem:grid}. Apply Theorem
+\ref{thm:sampled} with $b=1$ to obtain signs with
+\[
+\norm{\sum_i\eps_i p_i}_\infty
+\le C\sqrt{n\log\left(e+\frac{w}{n}\right)} .
+\]
+Contractivity of Toeplitz compression gives the same bound for
+$\sum_i\eps_iA_i$.
+\end{proof}
+
+\subsection{Block and multilevel Toeplitz matrices}
+
+An $r$-level $b\times b$ block Toeplitz matrix is indexed by a box
+\[
+\Lambda=\prod_{j=1}^r\{0,\ldots,d_j-1\}
+\]
+and has $b\times b$ blocks depending only on coordinate differences. Its total
+dimension is
+\[
+D=b\prod_{j=1}^r d_j .
+\]
+
+We use the following finite multilevel Toeplitz extension theorem as a black
+box. For $r=1$ this is Theorem \ref{thm:text}. For $r>1$ it is
+the finite discrete form obtained from the multivariable Toeplitz/Nehari
+extension theorem of Carlsson and Perfekt \cite{CarlssonPerfekt}.
+
+% VERIFICATION FLAG: this is the load-bearing claim. The dimension-only constant
+% K_r for r>=2 is exactly where multivariable Nehari/bounded-extension is delicate
+% and may FAIL with comparable constants. Verify or restrict to r=1 + banded multilevel.
+\begin{theorem}[Finite multilevel Toeplitz extension]\label{thm:mltext}
+For every fixed $r\ge 1$ there is a constant $K_r$ such that every scalar
+$r$-level Toeplitz matrix $A$ on the box $\Lambda$ has an inducer
+$\varphi_A\in L^\infty(\T^r)$ satisfying
+\[
+\widehat\varphi_A(k)=a_k
+\quad\text{for all difference indices } k\in\prod_{j=1}^r\{-(d_j-1),\ldots,d_j-1\},
+\]
+and
+\[
+\norm{\varphi_A}_{L^\infty(\T^r)}\le K_r\norm A_{\op} .
+\]
+\end{theorem}
+
+\begin{theorem}[Fixed-level block Toeplitz and Hankel]\label{thm:blocktoep}
+Fix $r\ge 1$ and $b\ge 1$. There is a constant $C_{r,b}$ such that every
+collection of $r$-level $b\times b$ block Toeplitz contractions
+$A_1,\ldots,A_n\in\M_D(\C)$ satisfies
+\[
+\discop(A_1,\ldots,A_n)
+\le C_{r,b}\sqrt{n\log\left(e+\frac{D}{n}\right)} .
+\]
+The same bound holds for the corresponding $r$-level block Hankel class. Hence,
+for fixed $r,b$ and $D\le n$, these classes satisfy the Matrix Spencer bound
+$O_{r,b}(\sqrt n)$.
+\end{theorem}
+
+\begin{proof}
+First consider block Toeplitz matrices. For a fixed pair of block coordinates
+$p,q\in\{1,\ldots,b\}$, the scalar $r$-level Toeplitz matrix formed by the
+$(p,q)$ entries of all blocks is a compression of $A_i$ between coordinate
+subspaces, hence has norm at most $\norm{A_i}_{\op}$. By Theorem
+\ref{thm:mltext}, each scalar entry has an $L^\infty(\T^r)$ inducer
+with norm at most $K_r\norm{A_i}$. Combining the $b^2$ scalar inducers gives a
+matrix-valued inducer $\Phi_i\in L^\infty(\T^r;\M_b)$ with
+\[
+\norm{\Phi_i}_{L^\infty(\T^r;\M_b)}\le bK_r\norm{A_i}_{\op} .
+\]
+
+Convolve $\Phi_i$ with the product de la Vall\'ee Poussin kernel
+$\prod_{j=1}^r V_{d_j-1}$ to obtain a matrix trigonometric polynomial $P_i$.
+Its coordinate degrees are $O(d_j)$, it has the same finite Toeplitz
+coefficients as $A_i$, and
+\[
+\norm{P_i}_{L^\infty(\T^r;\M_b)}\le C_{r,b}\norm{A_i}_{\op} .
+\]
+By Lemma \ref{lem:grid}, there is a $2$-norming grid
+$Q\subset\T^r$ of size
+\[
+|Q|=O_r\left(\prod_{j=1}^r d_j\right)=O_r(D/b).
+\]
+Theorem \ref{thm:sampled}, with block size $b$, gives
+\[
+\discop(A_1,\ldots,A_n)
+\le C_{r,b}\sqrt{n\log\left(e+\frac{b^2|Q|}{n}\right)}
+\le C_{r,b}\sqrt{n\log\left(e+\frac{D}{n}\right)},
+\]
+because $r$ and $b$ are fixed. The block Hankel statement follows by multiplying
+by the appropriate tensor-product reversal matrix, exactly as in Corollary
+\ref{cor:hankel}.
+\end{proof}
+
+\section{Closure operations}
+
+The finite-lift framework is stable under the operations normally used to build
+structured matrices. The entropy accounting in this section is explicit because
+this is a common source of mistakes.
+
+\begin{proposition}[Compressions and bounded images]\label{prop:comp}
+Suppose $B_i$ satisfy a discrepancy bound
+\[
+\discop(B_1,\ldots,B_n)\le \Delta .
+\]
+If $A_i=V^*B_iV$ for a fixed isometry $V$, then
+$\discop(A_1,\ldots,A_n)\le\Delta$. More generally, if
+$A_i=\Phi(B_i)$ for a fixed linear map $\Phi$ with $\norm\Phi\le L$ on the
+relevant span, then
+\[
+\discop(A_1,\ldots,A_n)
+\le L\Delta .
+\]
+\end{proposition}
+
+\begin{proof}
+Use the same signs and the inequality
+$\norm{\sum_i\eps_i\Phi(B_i)}\le L\norm{\sum_i\eps_iB_i}$.
+\end{proof}
+
+\begin{proposition}[Finite sums and direct-sum entropy]\label{prop:sums}
+Suppose
+\[
+A_i=A_i^{(1)}+\cdots+A_i^{(s)} .
+\]
+For each $\ell$, assume the tuple $(A_i^{(\ell)})_{i=1}^n$ has a
+$(K_\ell,\Lambda_\ell)$-lift to
+\[
+\mcB_\ell=\bigoplus_\alpha \M_{r_{\ell,\alpha}}(\C).
+\]
+Put
+\[
+h=\max_{\ell,\alpha} r_{\ell,\alpha},
+\qquad
+R=\sum_{\ell=1}^s\sum_\alpha r_{\ell,\alpha} .
+\]
+Then $(A_i)_{i=1}^n$ has a lift to $\bigoplus_{\ell=1}^s\mcB_\ell$ and
+\[
+\discop(A_1,\ldots,A_n)
+\le C\left(\sum_{\ell=1}^s\Lambda_\ell K_\ell\right)
+\sqrt{n\log\left(e+\frac{hR}{n}\right)} .
+\]
+\end{proposition}
+
+\begin{proof}
+For each component choose lifts $Y_i^{(\ell)}$ in $\mcB_\ell$. If $K_\ell>0$,
+set $Z_i^{(\ell)}=Y_i^{(\ell)}/K_\ell$; zero components may be omitted. Then
+$Z_i=(Z_i^{(1)},\ldots,Z_i^{(s)})$ has norm at most one in
+$\bigoplus_\ell\mcB_\ell$. Define
+\[
+\Theta(Z^{(1)},\ldots,Z^{(s)})
+=\sum_{\ell=1}^s K_\ell\Pi_\ell(Z^{(\ell)}).
+\]
+Then $\Theta(Z_i)=A_i$ and
+$\norm{\Theta}\le\sum_\ell\Lambda_\ell K_\ell$ on the relevant span. Apply
+Theorem \ref{thm:main} to the direct-sum algebra, whose maximum block
+size is $h$ and whose reduced dimension is $R$.
+\end{proof}
+
+\begin{remark}[Direct sums are not additive in entropy]\label{rem:nonadd}
+For $\mcB=\bigoplus_{\ell=1}^s\mcB_\ell$ one has
+\[
+\Ent(\mcB)=\left(\max_\ell h(\mcB_\ell)\right)
+\sum_{\ell=1}^s R(\mcB_\ell),
+\]
+not generally $\sum_\ell\Ent(\mcB_\ell)$. Consequently, a finite sum of classes
+that are individually in the Spencer regime remains in the Spencer regime only
+when this combined entropy is $O(n)$. This condition is automatic, for example,
+for a fixed number of scalar sampled multiplier classes of total sample size
+$O(n)$, and for a fixed number of uniformly bounded-block classes with total
+reduced dimension $O(n)$.
+\end{remark}
+
+\begin{corollary}[Toeplitz plus Hankel with bounded decomposition]
+If $A_i=T_i+H_i$, where $T_i$ is Toeplitz, $H_i$ is Hankel, and
+\[
+\norm{T_i}_{\op}+\norm{H_i}_{\op}\le K
+\qquad(1\le i\le n),
+\]
+then
+\[
+\discop(A_1,\ldots,A_n)
+\le CK\sqrt{n\log\left(e+\frac{d}{n}\right)} .
+\]
+\end{corollary}
+
+\begin{proof}
+Use the scalar Toeplitz and Hankel multiplier lifts from Theorem
+\ref{thm:toep} and Corollary \ref{cor:hankel}. Their sampled lift
+algebras are diagonal with $O(d)$ total samples. The direct sum of the two
+sampled algebras is still diagonal and has $O(d)$ total samples. Proposition
+\ref{prop:sums} gives the result.
+\end{proof}
+
+\begin{proposition}[Completely bounded tensor amplification]\label{prop:cb}
+Let $S\subset\M_D(\C)$ be an operator space and suppose there are linear maps
+\[
+\sigma:S\to\mcB=\bigoplus_\alpha\M_{r_\alpha}(\C),
+\qquad
+\Pi:\sigma(S)\to S,
+\]
+with $\Pi\sigma=\operatorname{id}_S$, $\norm{\sigma}_{cb}\le K$, and
+$\norm{\Pi}_{cb}\le\Lambda$. Then, for each $c\ge1$, the amplified space
+$S\otimes\M_c$ has a $(K,\Lambda)$ lift to
+\[
+\mcB\otimes\M_c\simeq\bigoplus_\alpha\M_{cr_\alpha}(\C).
+\]
+The entropy is multiplied by $c^2$. Hence fixed-size completely bounded tensor
+amplification preserves the Spencer-regime conclusion.
+\end{proposition}
+
+\begin{proof}
+Use the maps $\sigma\otimes\operatorname{id}_{\M_c}$ and
+$\Pi\otimes\operatorname{id}_{\M_c}$. The cb-norm assumptions give the same
+lift constants at matrix level $c$. The new block sizes are $cr_\alpha$, so both
+$h$ and $R$ are multiplied by $c$.
+\end{proof}
+
+\begin{remark}
+The completely bounded hypothesis in Proposition \ref{prop:cb} is necessary
+for this general formulation. For concrete lifts coming from $*$-homomorphisms,
+compressions, or C*-quotient maps it is automatically satisfied with the
+expected constants.
+\end{remark}
+
+\section{Random structured inputs}
+
+The preceding results are deterministic. They therefore apply pathwise to
+random samples from the covered structured classes after normalization.
+
+\begin{corollary}[Pathwise random structured matrices]
+Let $A_1,\ldots,A_n$ be random matrices which, almost surely, lie in one of the
+classes covered above: scalar Toeplitz, scalar Hankel, fixed-level block
+Toeplitz/Hankel, a fixed finite-dimensional C*-algebra of entropy $\Ent$, or a
+finite group convolution algebra. On each realization define
+\[
+\widetilde A_i=
+\begin{cases}
+A_i/\norm{A_i}_{\op},& A_i\ne0,\\
+0,& A_i=0.
+\end{cases}
+\]
+Then the corresponding deterministic bound holds for
+$\widetilde A_1,\ldots,\widetilde A_n$ on that realization.
+\end{corollary}
+
+\begin{remark}
+This pathwise statement is not a deterministic Matrix Spencer theorem for
+generic random matrix realizations. GOE, Wigner, and Wishart matrices typically
+span high-entropy subspaces of the full matrix algebra, and the finite-lift
+method here does not remove the full-algebra logarithmic loss for such generic
+inputs. Average-case matrix discrepancy for these ensembles is a separate line
+of work; see, for example, Kunisky--Zhang \cite{KuniskyZhang}, Maillard
+\cite{Maillard}, and the later combined work of Kunisky, Oertel, Wengiel and
+Zhang \cite{KOWZ}.
+\end{remark}
+
+\section{Boundary of the finite-lift method}
+
+The framework gives a precise limitation for exact finite block lifts.
+
+\begin{proposition}[Entropy obstruction for the full matrix algebra]\label{prop:obstruct}
+Suppose the full algebra $\M_D(\C)$ admits an exact finite block lift through
+$\mcB=\bigoplus_\alpha\M_{r_\alpha}(\C)$ in the sense that there is a linear map
+from $\mcB$ onto $\M_D(\C)$. Then
+\[
+\Ent(\mcB)
+=\left(\max_\alpha r_\alpha\right)\sum_\alpha r_\alpha
+\ge D^2 .
+\]
+Consequently, Theorem \ref{thm:main} cannot yield better than
+$C\sqrt{n\log(e+D^2/n)}$ for arbitrary $D\times D$ matrices through exact finite
+block lifts.
+\end{proposition}
+
+\begin{proof}
+Surjectivity onto the $D^2$-dimensional vector space $\M_D(\C)$ forces
+\[
+\dim\mcB=\sum_\alpha r_\alpha^2\ge D^2 .
+\]
+Since
+\[
+\sum_\alpha r_\alpha^2
+\le \left(\max_\alpha r_\alpha\right)\sum_\alpha r_\alpha
+=\Ent(\mcB),
+\]
+the claim follows.
+\end{proof}
+
+This explains why Toeplitz and Hankel classes are tractable by this method:
+the relevant finite Fourier data has only $O(D)$ scalar degrees of freedom and
+admits a bounded $L^\infty$ extension. It also explains why common block
+diagonalization with bounded blocks is tractable: the reduced noncommutative
+entropy is linear in $D$. Conversely, the full matrix algebra has entropy
+$D^2$.
+
+\begin{question}[Bounded finite-entropy lift problem]
+Classify structured operator systems $S_D\subset\M_D(\C)$ for which every
+contraction in $S_D$ has a uniformly bounded lift either to a finite block
+algebra $\bigoplus_\alpha\M_{r_\alpha}(\C)$ with
+\[
+\left(\max_\alpha r_\alpha\right)\sum_\alpha r_\alpha=O(D),
+\]
+or to a matrix-valued multiplier model with an $O(D)$-size norming set and
+bounded block size. Every such class satisfies Matrix Spencer in the regime
+$D\le n$.
+\end{question}
+
+The Toeplitz, Hankel, fixed-level multilevel Toeplitz, finite abelian
+convolution, bounded-irrep convolution, simultaneous diagonalization,
+bounded-block diagonalization, and commutative association-scheme examples are
+instances of this program. Solving the full Matrix Spencer conjecture will
+require either a way to beat the entropy obstruction for generic matrix algebras
+or a method not reducible to exact finite block lifts.
+
+\section*{Acknowledgements and disclosure}
+The author is responsible for all mathematical claims and bibliographic
+information. Generative AI tools were used to accelerate drafting and revision;
+all arguments and references should be independently checked before submission.
+
+\begin{thebibliography}{99}
+
+\bibitem{BBvH}
+A.~S. Bandeira, M.~T. Boedihardjo, and R. van Handel,
+\emph{Matrix concentration inequalities and free probability},
+Invent. Math. \textbf{234} (2023), 419--487.
+
+\bibitem{BandeiraBolcskei}
+A.~S. Bandeira and H. B\"olcskei,
+\emph{Matrix discrepancy for representations of finite groups},
+arXiv:2606.12181, 2026.
+
+\bibitem{BJM}
+N. Bansal, H. Jiang, and R. Meka,
+\emph{Resolving Matrix Spencer conjecture up to poly-logarithmic rank},
+SIAM J. Comput., Special Section STOC 2023,
+DOI: 10.1137/23M1592201.
+
+\bibitem{BottcherGrudsky}
+A. B\"ottcher and S.~M. Grudsky,
+\emph{Spectral Properties of Banded Toeplitz Matrices},
+SIAM, Philadelphia, 2005.
+
+\bibitem{CarlssonPerfekt}
+M. Carlsson and K.-M. Perfekt,
+\emph{Nehari's theorem for convex domain Hankel and Toeplitz operators},
+Int. Math. Res. Not. IMRN \textbf{2021}, no.~5, 3331--3371.
+
+\bibitem{Chazelle}
+B. Chazelle,
+\emph{The Discrepancy Method: Randomness and Complexity},
+Cambridge University Press, 2000.
+
+\bibitem{CourtneySarason}
+D. Courtney and D. Sarason,
+\emph{A mini-max problem for self-adjoint Toeplitz matrices},
+Math. Scand. \textbf{110} (2012), 82--98.
+
+\bibitem{DJR}
+D. Dadush, H. Jiang, and V. Reis,
+\emph{A new framework for matrix discrepancy: partial coloring bounds via mirror descent},
+Proceedings of the 54th Annual ACM SIGACT Symposium on Theory of Computing
+(STOC), 2022, 649--658; arXiv:2111.03171.
+
+\bibitem{Gluskin}
+E.~D. Gluskin,
+\emph{Extremal properties of orthogonal parallelepipeds and their applications to the geometry of Banach spaces},
+Math. USSR-Sb. \textbf{64} (1989), 85--96.
+
+\bibitem{HRS}
+S.~B. Hopkins, P. Raghavendra, and A. Shetty,
+\emph{Matrix discrepancy from quantum communication},
+Proceedings of the 54th Annual ACM SIGACT Symposium on Theory of Computing
+(STOC), 2022, 637--648.
+
+\bibitem{KuniskyZhang}
+D. Kunisky and P. Zhang,
+\emph{Average-case matrix discrepancy: asymptotics and online algorithms},
+arXiv:2307.10055, 2024.
+
+\bibitem{LustPisier}
+F. Lust-Piquard and G. Pisier,
+\emph{Non-commutative Khintchine and Paley inequalities},
+Ark. Mat. \textbf{29} (1991), 241--260.
+
+\bibitem{Maillard}
+A. Maillard,
+\emph{Average-case matrix discrepancy: satisfiability bounds},
+arXiv:2410.17887, 2024.
+
+\bibitem{Matousek}
+J. Matou\v{s}ek,
+\emph{Geometric Discrepancy: An Illustrated Guide},
+Springer, 1999.
+
+\bibitem{NikolskayaFarforovskaya}
+L.~N. Nikolskaya and Yu.~B. Farforovskaya,
+\emph{Toeplitz and Hankel matrices as Hadamard--Schur multipliers},
+Algebra i Analiz \textbf{15} (2003), no.~6, 141--160.
+
+\bibitem{Pisier}
+G. Pisier,
+\emph{Introduction to Operator Space Theory},
+Cambridge University Press, 2003.
+
+\bibitem{Spencer}
+J. Spencer,
+\emph{Six standard deviations suffice},
+Trans. Amer. Math. Soc. \textbf{289} (1985), 679--706.
+
+\bibitem{KOWZ}
+D. Kunisky, T. Oertel, N. Wengiel, and P. Zhang,
+\emph{Asymptotic bounds and online algorithms for average-case matrix discrepancy},
+arXiv:2410.23915v2, 2025.
+
+\end{thebibliography}
+
+\end{document}

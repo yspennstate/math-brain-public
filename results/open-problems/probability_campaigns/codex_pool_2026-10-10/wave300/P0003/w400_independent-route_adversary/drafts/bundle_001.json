@@ -1,0 +1,122 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w400",
+  "bundle_slug": "p0003-conditional-transfer-obstructions-w400-001",
+  "entries": [
+    {
+      "namespace": "probability.self_avoiding_walk",
+      "kind": "concept",
+      "proof_text": null,
+      "domain": "probability / self-avoiding walk scaling limits",
+      "key": "ensemble-guard",
+      "logical_name": "saw-fixed-length-and-chordal-ensemble-transfer-guard",
+      "title": "Fixed-length SAW needs an explicit ensemble transfer",
+      "statement": "A proof for the critical variable-length boundary-to-boundary SAW law does not by itself prove convergence for the uniform n-step honeycomb walk rooted at the origin with a free endpoint. In a fixed finite path collection, conditioning fugacity weights x^L on L=n gives uniform n-step weights, but a shrinking conditioning probability can invalidate transfer from a weak mixture limit. A conditional local limit with relative error, as well as endpoint and domain transfer, is an additional premise. This campaign concept is a draft; it is not an SLE convergence proof.",
+      "assumptions": [
+        "P0003 exact source is Grimmett Question 2.2 (arXiv:2205.07318)",
+        "Related chordal source is Duminil-Copin--Smirnov Conjecture 1 (arXiv:1007.0575)"
+      ],
+      "source": {
+        "source_id": "owner-own-work:P0003-w400:ensemble-guard",
+        "url": "urn:owner-own-work:P0003:w400:ensemble-guard",
+        "revision": "2026-10-10 author-derived draft; w401 check pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "namespace": "probability.self_avoiding_walk",
+      "kind": "concept",
+      "proof_text": null,
+      "domain": "probability / self-avoiding walk scaling limits",
+      "key": "rare-atom",
+      "logical_name": "weak-joint-limit-does-not-determine-rare-length-conditioning",
+      "title": "Rare prescribed-length conditioning is not determined by a joint weak limit",
+      "statement": "A weak joint shape/length limit does not determine conditional shape at a prescribed lattice length. For even n, let L_n be uniform on {1/n,2/n,...,1} and let X_n=0 except at L_n=1/2. Choose X_n=+1 there in one sequence and -1 in another. Both joint laws tend to (0,U), where U is uniform on [0,1], and have identical length marginals. Their conditional features at L_n=1/2 are respectively +1 and -1; that atom has mass 1/n. Thus the required transfer must control relative conditional errors, not just a weak mixture limit. Author-derived explicit counterexample; independent review pending.",
+      "assumptions": [
+        "n even",
+        "The two finite joint laws are exactly the ones stated",
+        "No claim that these laws model actual critical SAW"
+      ],
+      "source": {
+        "source_id": "owner-own-work:P0003-w400:rare-atom",
+        "url": "urn:owner-own-work:P0003:w400:rare-atom",
+        "revision": "2026-10-10 author-derived draft; w401 check pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "namespace": "probability.self_avoiding_walk",
+      "kind": "concept",
+      "proof_text": null,
+      "domain": "probability / self-avoiding walk scaling limits",
+      "key": "exponent-guard",
+      "logical_name": "loewner-probe-small-raw-drift-needs-positive-exponent-limit",
+      "title": "Loewner probe errors require exponent normalization",
+      "statement": "Small raw drift of derivative-power Loewner probes does not identify a Brownian variance if their positive exponents tend to zero. With deterministic driver W=0 and alpha_n=1/n, on a local interval with bounded derivative jets and h-prime bounded away from zero, (h-prime)^alpha_n tends uniformly to 1. For slit probes (x,s)=(1,1),(-1,1),(1,3), the initial raw relative drifts are alpha_n times (9/8,9/8,33/32), yet the variance rate is zero. At n=128 the maximum raw drift is 9/1024<1/100, while division by alpha_n leaves 9/8. Require a fixed positive common limiting exponent or exponent-normalized error control. Author-derived obstruction; independent review pending.",
+      "assumptions": [
+        "Half-plane capacity equation dg_t/dt=2/(g_t-W_t)",
+        "Driver W=0",
+        "Stop before a Loewner hull meets a probe",
+        "The jets and inverse first derivative are locally bounded"
+      ],
+      "source": {
+        "source_id": "owner-own-work:P0003-w400:exponent-guard",
+        "url": "urn:owner-own-work:P0003:w400:exponent-guard",
+        "revision": "2026-10-10 author-derived draft; w401 check pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "namespace": "probability.self_avoiding_walk",
+      "kind": "concept",
+      "proof_text": null,
+      "domain": "probability / self-avoiding walk scaling limits",
+      "key": "relative-transfer",
+      "logical_name": "relative-local-limit-suffices-for-fixed-length-conditioning",
+      "title": "Relative local limits suffice for fixed-length transfer",
+      "statement": "A relative local limit is a sufficient fixed-length transfer premise. Let Gamma_delta be curves in a common metric space and let L_delta be an integer length. Suppose Q is a probability law, h_delta>0 tends to zero and rho>0. For every bounded continuous f, assume E[f(Gamma_delta) 1_{L_delta=n_delta}]=h_delta rho Q(f)+o(h_delta), and P(L_delta=n_delta)=h_delta rho+o(h_delta). The conditional laws given L_delta=n_delta then converge weakly to Q, by dividing these asymptotics. This criterion is conditional draft material; its SAW hypotheses are not proved here and independent review is pending.",
+      "assumptions": [
+        "The common curve space is metric",
+        "Q is a Borel probability law",
+        "The specified relative asymptotics hold for every bounded continuous test function",
+        "rho>0"
+      ],
+      "source": {
+        "source_id": "owner-own-work:P0003-w400:relative-transfer",
+        "url": "urn:owner-own-work:P0003:w400:relative-transfer",
+        "revision": "2026-10-10 author-derived draft; w401 check pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "ensemble-guard",
+      "to_key": "rare-atom",
+      "kind": "depends_on",
+      "rationale": "The guard says a shrinking length condition can invalidate weak-limit transfer; the rare-atom card exhibits identical weak limits and length marginals with opposite conditional features."
+    },
+    {
+      "from_key": "relative-transfer",
+      "to_key": "rare-atom",
+      "kind": "semantic_association",
+      "rationale": "Relative local asymptotics control exactly the selected conditional numerator and denominator that the rare-atom counterexample leaves undetermined."
+    },
+    {
+      "from_key": "ensemble-guard",
+      "to_key": "exponent-guard",
+      "kind": "semantic_association",
+      "rationale": "The ensemble guard needs relative conditioning error; the exponent guard needs error after division by alpha. Both explicitly prevent an absolute error from being used after a vanishing normalization."
+    },
+    {
+      "from_key": "ensemble-guard",
+      "to_existing_logical": "math:probability.core:open-problem-p0003-hexagonal-self-avoiding-walk-scaling-limit",
+      "kind": "cites",
+      "rationale": "The read-only store P0003 statement concerns uniform n-step walks from the honeycomb origin; the guard preserves that exact target when reviewing a related chordal-fugacity argument."
+    }
+  ]
+}

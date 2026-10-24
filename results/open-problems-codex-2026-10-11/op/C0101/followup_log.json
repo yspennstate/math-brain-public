@@ -1,0 +1,80 @@
+[
+  {
+    "date": "2026-10-12",
+    "service": "crossref_source",
+    "url": "https://api.crossref.org/works",
+    "query": {
+      "query.title": "Laplacian growth sandpiles and scaling limits",
+      "rows": 3
+    },
+    "status": 200,
+    "request_url": "https://api.crossref.org/works?query.title=Laplacian+growth+sandpiles+and+scaling+limits&rows=3"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "openalex_retry",
+    "url": "https://api.openalex.org/works",
+    "query": {
+      "search": "\"integer superharmonic\"",
+      "per_page": 25
+    },
+    "status": 429,
+    "request_url": "https://api.openalex.org/works?search=%22integer+superharmonic%22&per_page=25"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "openalex_source",
+    "url": "https://api.openalex.org/works/https://doi.org/10.1090/bull/1553",
+    "query": {},
+    "status": 429,
+    "request_url": "https://api.openalex.org/works/https://doi.org/10.1090/bull/1553"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "semantic_bulk",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/search/bulk",
+    "query": {
+      "query": "\"integer superharmonic\"",
+      "fields": "title,year,authors,externalIds,abstract"
+    },
+    "status": 200,
+    "request_url": "https://api.semanticscholar.org/graph/v1/paper/search/bulk?query=%22integer+superharmonic%22&fields=title%2Cyear%2Cauthors%2CexternalIds%2Cabstract"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "semantic_source",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1611.00411/citations",
+    "query": {
+      "limit": 100,
+      "fields": "title,year,authors,externalIds,abstract"
+    },
+    "status": 200,
+    "request_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1611.00411/citations?limit=100&fields=title%2Cyear%2Cauthors%2CexternalIds%2Cabstract"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "arxiv_higher",
+    "url": "https://export.arxiv.org/api/query",
+    "query": {
+      "search_query": "all:sandpile AND (all:\"higher dimensions\" OR all:\"maximal matrices\")",
+      "max_results": 60
+    },
+    "status": 200,
+    "request_url": "https://export.arxiv.org/api/query?search_query=all%3Asandpile+AND+%28all%3A%22higher+dimensions%22+OR+all%3A%22maximal+matrices%22%29&max_results=60"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "f_lattice",
+    "url": "https://arxiv.org/pdf/2110.07556",
+    "query": {},
+    "error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "solitons",
+    "url": "https://arxiv.org/pdf/2212.03717",
+    "query": {},
+    "status": 200,
+    "request_url": "https://arxiv.org/pdf/2212.03717"
+  }
+]

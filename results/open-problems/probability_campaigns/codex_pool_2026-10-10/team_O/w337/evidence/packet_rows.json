@@ -1,0 +1,553 @@
+[
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 22,
+    "ids": [
+      "C0022"
+    ],
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0022",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Chapter X Section 2, p. 111",
+      "problem_id": "C0022",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "garban_steif_noise_2012",
+      "statement": "Prove that the scaling limits of (1/n) S_{f_n} (spectral sample) and (1/n) P_{f_n} (pivotal set) of the crossing event are singular random compact sets, and in particular that the spectral sample has a scaling limit.",
+      "status_search": "Garban-Pete-Schramm (2013) constructed the scaling limit of the pivotal MEASURE; the notes' statement is about the sets and about the spectral sample. Not verified further.",
+      "title": "Singularity of the scaling limits of the spectral sample and of the pivotal set",
+      "verification": "unreviewed",
+      "review_note": "CORRECTION 2026-09-07 (Codex review): existence of the scaling limits of the spectral and pivotal measures is known (Garban-Steif book, Chapter XIII.3); the open content is only their mutual singularity.",
+      "review_note_at": "2026-09-07T09:49:37Z"
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 76,
+    "ids": [
+      "C0076"
+    ],
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0076",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Open Problem 15.2, p. 219",
+      "problem_id": "C0076",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "heydenreich_hofstad_highd_2017",
+      "statement": "Show that for d > 6 there are gamma, v such that the measure-valued process X^{(n)}_{nt} = n^{-gamma} sum over vertices at intrinsic distance nt of delta at x/sqrt(vn), under n^gamma P_{p_c}, converges to the canonical measure of super-Brownian motion.",
+      "status_search": "",
+      "title": "Super-Brownian motion limit of critical percolation clusters in high dimensions",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 117,
+    "ids": [
+      "C0117"
+    ],
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0117",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Question 5.2, p. 51",
+      "problem_id": "C0117",
+      "recorded_at": "2026-09-07T07:01:07Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "ding_lee_peres_cover_2012",
+      "statement": "Is the standard deviation of the cover time tau_cov bounded by the maximal hitting time t_hit for every graph, and does (tau_cov - t_cov)/t_hit have an exponentially decaying tail with a universal rate?",
+      "status_search": "",
+      "title": "Concentration of the cover time at the scale of the maximal hitting time",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 130,
+    "ids": [
+      "C0130"
+    ],
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0130",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Problem 3.12, p. 13",
+      "problem_id": "C0130",
+      "recorded_at": "2026-09-07T07:09:31Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "kosygina_zerner_erw_2012",
+      "statement": "Compute, for a transient excited random walk on Z, the probability P_0(X_n not 0 for all n >= 1) of never returning to the starting point.",
+      "status_search": "",
+      "title": "Escape probability of a transient one-dimensional excited random walk",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 21,
+    "ids": [
+      "C0022"
+    ],
+    "record": {
+      "attempt_id": "C0022-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Compare the two-point functions of the two random sets.",
+      "obstruction": "One needs an almost-sure local statistic separating the two sets; only distributional differences are known.",
+      "problem_id": "C0022",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "The pivotal set and the spectral sample have the same one-point intensity (alpha_4 at each point) and the same two-point function up to constants (both are asymp alpha_4(|x-y|) alpha_4(|x-y|, n) ...), so any singularity must come from higher-order structure. The known difference is in the third moment: E|S|^3 and E|P|^3 differ, and more precisely the conditional law of S given a point x in S has a strictly different clustering structure (spectral sample is 'more clustered'). A proof of mutual singularity of the limiting sets would follow from a law-of-large-numbers statistic that separates them, e.g. the number of points at distance < eps of a typical point normalised by eps^{-3/4}; the limits of these normalised counts are random variables whose laws differ, but singularity needs an a.s. separating statistic, not one in law. Reduction recorded, no proof.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 64,
+    "ids": [
+      "C0076"
+    ],
+    "record": {
+      "attempt_id": "C0076-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Identify gamma and v from known exponents and locate the missing joint convergence.",
+      "obstruction": "Intrinsic-distance r-point functions not lace-expanded for unoriented percolation.",
+      "problem_id": "C0076",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result": "gamma = 1: the intrinsic one-arm probability is of order 1/n (Kozma-Nachmias), so n P_{p_c}(intrinsic radius >= n) is bounded, matching the canonical measure normalisation; v is the variance per intrinsic step of the spatial displacement, given by the lace expansion two-point function through the intrinsic-distance two-point function (C0079). The finite-dimensional distributions of the process in t are the intrinsic r-point functions with fixed intrinsic distances, which are the objects of C0079 (Open Problem 15.5) at the level of r = 2; the source's Theorem 15.4 handles the number-of-pivotals two-point function, and the intrinsic distance version is the missing step. Given the intrinsic r-point functions, convergence of finite-dimensional distributions to SBM follows as in the oriented case (Hofstad-Slade), and tightness follows from the one-arm bound and a modulus-of-continuity estimate for the intrinsic exploration. So the problem reduces to Open Problem 15.5 extended to r-point functions.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 65,
+    "ids": [
+      "C0076"
+    ],
+    "record": {
+      "attempt_id": "C0077-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Derive the IIC statement from the critical-cluster statement via the h-transform structure.",
+      "obstruction": "Same as C0076 plus the sharp one-arm constant.",
+      "problem_id": "C0077",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result": "The IIC is the limit of the critical cluster conditioned on reaching intrinsic distance n (or on |C| large), which at the level of the branching-process comparison is the Doob h-transform of the critical branching process with h = survival, giving the Kesten tree (a spine plus critical trees); at the continuum level the canonical measure of SBM conditioned on survival to time t and then t -> infinity gives SBM with an immortal particle. So C0077 follows from C0076 plus the commutation of the conditioning with the scaling limit, which requires the convergence in C0076 to hold under conditioning on the intrinsic radius exceeding n, i.e. a statement about the conditioned law, which is obtained from the unconditioned one by dividing by the one-arm probability (order 1/n) and thus needs the one-arm asymptotics at the level of the exact constant (C0066). Reduction chain: C0077 <= C0076 + C0066.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 96,
+    "ids": [
+      "C0117"
+    ],
+    "record": {
+      "attempt_id": "C0117-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "Via the second Ray-Knight isomorphism, concentration of tau_cov at scale t_hit corresponds to tightness of the GFF maximum on the graph at the corresponding scale.",
+      "method": "Test the claim on the extreme families and derive the one-sided bound from Matthews-type arguments.",
+      "obstruction": "Tightness of the GFF maximum on general graphs is not known.",
+      "problem_id": "C0117",
+      "recorded_at": "2026-09-07T07:01:07Z",
+      "result": "Upper tail: for any graph, P(tau_cov > t_cov + s t_hit) <= e^{-cs}? The standard argument: after time 2 t_hit... using the Markov property at multiples of the 'maximal hitting time' scale, the probability that a fixed uncovered vertex remains uncovered for another 2 t_hit is at most 1/2 by Markov's inequality on hitting times, but the union over uncovered vertices costs the number of uncovered vertices, so the naive bound gives only P(tau_cov > t_cov + s t_hit) <= n 2^{-s}, i.e. exponential decay after a log n shift, not at scale t_hit from the mean unless t_cov - t_cov... For the complete graph, tau_cov is a coupon-collector time with standard deviation of order n ~ t_hit, and the centred cover time divided by t_hit converges to a Gumbel, which has exponential tails: consistent. For the cycle Z_n, t_hit ≍ n^2 ≍ t_cov and tau_cov/n^2 converges to a non-degenerate law with exponential tail (the cover time of the cycle is the time for the range to reach n, a functional of Brownian motion with Gaussian-type tails): consistent, and the standard deviation is of order n^2 = t_hit: consistent. For the two-dimensional torus, t_hit ≍ n^2 log n... t_cov ≍ n^2 (log n)^2, and the cover time fluctuations are known to be of order n^2 log n (Belius-Kistler / Abe: the cover time of the 2D torus has fluctuations of order t_hit... the second-order term is of order n^2 log n times a random variable), consistent with the question. So the conjecture passes all the standard test cases; the general lower-tail statement (tau_cov not much smaller than t_cov) is the hard side because early coverage requires all vertices to be hit quickly, which involves correlations of hitting times; via the GFF isomorphism (Ding-Lee-Peres) the cover time corresponds to the level at which the GFF maximum exceeds a threshold, and concentration of the cover time at scale t_hit corresponds to tightness of the GFF maximum at scale sqrt(t_hit/|E|), which is tightness of the maximum of the Gaussian free field on the graph in the correct units; tightness of the GFF maximum is known for the 2D torus and trees but not for general graphs. Reduction: the question is essentially equivalent to tightness of the graph GFF maximum in units of the maximal hitting time.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 106,
+    "ids": [
+      "C0130"
+    ],
+    "record": {
+      "attempt_id": "C0130-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Express the escape probability through the branching-process representation for the one-cookie deterministic case.",
+      "obstruction": "No closed form beyond special cases; the reduction gives a numerical procedure only.",
+      "problem_id": "C0130",
+      "recorded_at": "2026-09-07T07:09:31Z",
+      "result": "In the deterministic environment with one cookie of strength p at each site (M = 1, delta = 2p - 1... transient iff delta > 1 which needs more than one cookie; take M = 2 cookies of strength p each, delta = 2(2p - 1) > 1 iff p > 3/4). The event of never returning to 0 after the first step: the walk must never come back, which in the branching-process picture (right excursions counted by the number of down-crossings of each edge) means the branching process with migration started from the edge (0,1) never produces a down-crossing of (0,1) into 0... the escape probability equals the probability that the total number of down-crossings of the edge (0,1) is zero, which is P(the branching process with migration started at 1 individual at level 1 has zero descendants at level 0) - not directly a standard extinction probability but a hitting probability of the time-reversed process. For the source's example [Zer05, Th. 18] the closed form exists; for general bounded stacks the escape probability is the solution of a finite-dimensional fixed-point equation obtained by conditioning on the first cookie stack at sites 1, 2, ...: define q_k = P(never return to 0 | walk currently at k, all cookies at sites >= k intact, cookies at sites < k in their post-visit states); the states of the sites already visited matter only through the remaining cookie counts, which for M bounded is a finite vector, and the walk's returns to 0 require descending through all visited sites; the escape probability then equals the probability of survival of a Markov chain on finite cookie-count vectors, computable numerically for given (M, p) but with no closed form in general. Recorded: reduction to a finite-state escape problem; closed form only in special cases.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 9,
+    "ids": [
+      "P0009"
+    ],
+    "record": {
+      "schema": "probability-problem.v1",
+      "problem_id": "P0009",
+      "title": "Manhattan pinball localization",
+      "source_id": "grimmett_2022_selected",
+      "locator": "Question 3.5, PDF page 7; model Figure 3.2",
+      "statement": "Does every positive mirror density localize the Manhattan-oriented pinball trajectory?",
+      "historical_status": "source_says_open",
+      "current_status": "unverified",
+      "admitted": true,
+      "dedup_key": "manhattan_pinball_all_positive_density_localization",
+      "result_status": "not_started",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 38,
+    "ids": [
+      "P0035"
+    ],
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "cayley_radial_biased_walk_speed_1_to_growth",
+      "historical_status": "source_says_open",
+      "locator": "Question 3.11, printed p.91",
+      "problem_id": "P0035",
+      "recorded_at": "2026-09-06T16:41:32Z",
+      "result_status": "not_started",
+      "schema": "probability-problem.v1",
+      "source_id": "lyons_peres_20260819",
+      "statement": "For a Cayley graph of exponential growth rate b and 1<lambda<b, does the distance from the identity divided by time for RW_lambda converge almost surely to a strictly positive speed?",
+      "statement_caveat": "RW_lambda uses the source's radial conductances, favoring motion toward the identity for lambda>1. The case lambda=1 may have zero speed and is excluded.",
+      "title": "Positive speed of inward-biased walks below the Cayley growth rate",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 96,
+    "ids": [
+      "P0088"
+    ],
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "matching_local_limits_of_bernoulli_and_poisson-outdegree_attachment",
+      "historical_status": "source_says_open",
+      "locator": "OpenProblem23, PDF p.21",
+      "problem_id": "P0088",
+      "recorded_at": "2026-09-06T18:46:28Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "reinforcement_matrix_2023",
+      "statement": "Relate the local weak limit of the Dereich-Morters Bernoulli preferential-attachment model, whose older vertices are chosen independently with probability f(in_degree)/(n-1), to an appropriately matched model with iid Poisson outgoing degree and attachment based on in-degree.",
+      "statement_caveat": "The matching of the affine rule and Poisson parameter is part of the question. Early probabilities exceeding1 need a consistent initialization or cap.",
+      "title": "Matching local limits of Bernoulli and Poisson-outdegree attachment",
+      "verification": "primary_statement_checked"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 111,
+    "ids": [
+      "P0009"
+    ],
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "manhattan_pinball_all_positive_density_localization",
+      "historical_status": "source_says_open",
+      "locator": "Question 3.5, PDF page 7; model Figure 3.2",
+      "problem_id": "P0009",
+      "recorded_at": "2026-09-06T19:17:12Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "grimmett_2022_selected",
+      "statement": "Does every positive mirror density localize the Manhattan-oriented pinball trajectory?",
+      "title": "Manhattan pinball localization",
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 135,
+    "ids": [
+      "P0035"
+    ],
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "cayley_radial_biased_walk_speed_1_to_growth",
+      "historical_status": "source_says_open",
+      "locator": "Question 3.11, printed p.91",
+      "problem_id": "P0035",
+      "recorded_at": "2026-09-06T19:17:12Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "lyons_peres_20260819",
+      "statement": "For a Cayley graph of exponential growth rate b and 1<lambda<b, does the distance from the identity divided by time for RW_lambda converge almost surely to a strictly positive speed?",
+      "statement_caveat": "RW_lambda uses the source's radial conductances, favoring motion toward the identity for lambda>1. The case lambda=1 may have zero speed and is excluded.",
+      "title": "Positive speed of inward-biased walks below the Cayley growth rate",
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 280,
+    "ids": [
+      "P0209"
+    ],
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "uniform_stationary_normal_approximation_from_gap_and_bounded_observable",
+      "historical_status": "source_says_open",
+      "locator": "Open Problem4.30, PDFp137; continuous ratesp26",
+      "problem_id": "P0209",
+      "proof_path": "proofs/P0209_uniform_clt_counterexample_candidate.md",
+      "recorded_at": "2026-09-06T22:32:05Z",
+      "result_status": "candidate_complete_counterexample",
+      "schema": "probability-problem.v1",
+      "source_id": "aldous_fill_2014",
+      "source_statement_date": "1994;2002manuscript;2014recompilation",
+      "statement": "For stationary finite reversible continuous-time chains and Epi g=0,Epi g^2=1, does a universal normal-approximation error bound psi(||g||infinity,t/tau2) tend to0 at fixed first argument?",
+      "statement_caveat": "The source uses asymptotic variance normalization, permits arbitrary continuous transition rates, and starts in stationarity. The counterexample fixes ||g||infinity exactly2 and also survives uniformizing rates to at most1.",
+      "status_search": "Focused primary searches2026-09-06 found source question and related established results, but no verified later disposition. Absence from search is not proof of current openness or novelty.",
+      "title": "Uniform stationary normal approximation from gap and bounded observable",
+      "verification": "author_checked_not_independently_reviewed"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 372,
+    "ids": [
+      "P0209"
+    ],
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "uniform_stationary_normal_approximation_from_gap_and_bounded_observable",
+      "historical_status": "source_says_open",
+      "locator": "Open Problem4.30, PDFp137; continuous ratesp26",
+      "problem_id": "P0209",
+      "proof_file": "proofs/P0209_uniform_clt_counterexample_candidate.md",
+      "proof_path": "proofs/P0209_uniform_clt_counterexample_candidate.md",
+      "recorded_at": "2026-09-07T00:19:46Z",
+      "result_status": "candidate_full_solution",
+      "schema": "probability-problem.v1",
+      "source_id": "aldous_fill_2014",
+      "source_statement_date": "1994;2002manuscript;2014recompilation",
+      "statement": "For stationary finite reversible continuous-time chains and Epi g=0,Epi g^2=1, does a universal normal-approximation error bound psi(||g||infinity,t/tau2) tend to0 at fixed first argument?",
+      "statement_caveat": "The source uses asymptotic variance normalization, permits arbitrary continuous transition rates, and starts in stationarity. The counterexample fixes ||g||infinity exactly2 and also survives uniformizing rates to at most1.",
+      "status_search": "Focused primary searches2026-09-06 found source question and related established results, but no verified later disposition. Absence from search is not proof of current openness or novelty.",
+      "title": "Uniform stationary normal approximation from gap and bounded observable",
+      "verification": "author_checked_not_independently_reviewed"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 432,
+    "ids": [
+      "P0336"
+    ],
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "selected_limit_of_empirical_euclidean_transport_between_separated_rectangles",
+      "historical_status": "source_says_open",
+      "locator": "Problem4,PDF29-30",
+      "problem_id": "P0336",
+      "recorded_at": "2026-09-07T01:57:16Z",
+      "result_status": "unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "ot_limit_survey_2026",
+      "source_statement_date": "2026-07-13",
+      "statement": "For independent uniform samples from [0,1]^2 and [2,3]x[0,1], find the limiting empirical optimal transport plan for Euclidean distance as sample size tends to infinity.",
+      "statement_caveat": "The empirical plan is almost surely a map, but the population problem has many optimal couplings. The task is to identify the plan selected by empirical optimization, not merely its limiting cost2.",
+      "title": "Selected limit of empirical Euclidean transport between separated rectangles"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 559,
+    "ids": [
+      "P0459"
+    ],
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "simultaneous_concentration_of_bilateral_preference_degrees",
+      "historical_status": "source_says_open",
+      "locator": "Open Problems; PDF3 second additional question",
+      "problem_id": "P0459",
+      "proof_path": "proofs/Bilateral_degree_fluctuations_partial.md",
+      "recorded_at": "2026-09-07T07:49:20Z",
+      "result_status": "candidate_partial_counterexample",
+      "schema": "probability-problem.v1",
+      "source_id": "bilateral_connectivity_2025",
+      "source_statement_date": "2025-07-08",
+      "statement": "Find growth conditions and quantitative bounds for LK(n,k) degrees to concentrate simultaneously around their mean.",
+      "statement_caveat": "The source asks for concentration conditions. The private packet supplies a sufficient superlogarithmic regime using the source existing ER-sandwich method, with no optimality or novelty claim.",
+      "status_search": "2026-09-07 bounded primary searches for EWT, La-Kabkab and bilateral preference degree results; 2025 connectivity theorem credited. No current-open or novelty certification.",
+      "title": "Simultaneous concentration of bilateral preference degrees"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 11,
+    "ids": [
+      "P0009"
+    ],
+    "record": {
+      "attempt_id": "P0009-A001",
+      "depth": "first_pass",
+      "full_problem_solved": false,
+      "independent_check": "The finite-run probability agrees with independence and has the correct q=0 endpoint. Adding a mirror changes routing rather than merely deleting traversable states, so an edgewise percolation monotonicity proof has not been supplied.",
+      "independent_review": "none",
+      "method": "Small-density straight paths and lack of an order argument",
+      "novelty": "not_claimed",
+      "obstruction": "The known localization interval near and above one-half cannot be extended to every q>0 using this finite-run bound or an unproved monotonicity assumption.",
+      "problem_id": "P0009",
+      "recorded_at": "2026-09-06T17:37:31Z",
+      "result": "At q=0 a ray moves indefinitely along its Manhattan street. The event that its first N potential collisions contain no mirror has probability (1-q)^N. This only controls a finite initial flight and gives no positive lower bound as N increases at fixed q.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 35,
+    "ids": [
+      "P0035"
+    ],
+    "record": {
+      "attempt_id": "P0035-A001",
+      "depth": "first_pass",
+      "full_problem_solved": false,
+      "independent_check": "The speed tends to zero at lambda=b and to one at lambda=0, checking the normalization.",
+      "independent_review": "none",
+      "method": "Exact radial speed on a regular tree",
+      "novelty": "not_claimed",
+      "obstruction": "General Cayley graphs have dead ends and nonuniform distance-level neighborhoods. Transience alone does not control time spent in traps.",
+      "problem_id": "P0035",
+      "recorded_at": "2026-09-06T17:47:59Z",
+      "result": "On the (b+1)-regular rooted tree, away from the root the radial walk steps out with probability b/(b+lambda) and in with probability lambda/(b+lambda). For lambda<b its speed is (b-lambda)/(b+lambda)>0: the root is visited finitely often and the bounded-difference martingale law of large numbers applies to the radial drift.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 89,
+    "ids": [
+      "P0088"
+    ],
+    "record": {
+      "attempt_id": "P0088-A001",
+      "depth": "first_pass",
+      "full_problem_solved": false,
+      "independent_check": "Use sum p_i^2<=max p_i sum p_i. This verifies the count approximation only; the vertex targets retain degree-dependent marks.",
+      "independent_review": "none",
+      "method": "Matching local limits of Bernoulli and Poisson-outdegree attachment structural argument",
+      "novelty": "not_claimed",
+      "obstruction": "A matching outgoing count does not prove local graph convergence. Target choices, ancestor types, and dependencies across successive births must be coupled over an explored neighborhood.",
+      "problem_id": "P0088",
+      "recorded_at": "2026-09-06T18:46:28Z",
+      "result": "Conditional on current degrees, the Bernoulli outgoing count has mean Lambda_n=sum_i p_ni. Its total variation distance to Poisson(Lambda_n) is at most sum_i p_ni^2 by the elementary independent Bernoulli-to-Poisson coupling. If max_i p_ni->0 and Lambda_n stays bounded, this error tends to0.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 210,
+    "ids": [
+      "P0209"
+    ],
+    "record": {
+      "attempt_id": "P0209-A001",
+      "depth": "complete_candidate",
+      "full_problem_solved": false,
+      "independent_check": "The product generator has eigenvalues0,-1,-R,-(R+1). Exact covariance integration verifies sigma and confirms finite-time variance divided by sigma^2*s tends to1 despite distributional collapse: rare events destroy uniform integrability. Scaling Q to Q/R and time to R*s leaves the standardized law and time/gap ratio unchanged, and bounds outgoing rates by1.",
+      "independent_review": "none",
+      "method": "Uniform stationary normal approximation from gap and bounded observable explicit counterexample",
+      "novelty": "unverified",
+      "obstruction": "No gap identified in the written quantifier and normalization checks. Current literature and independent review remain unverified; no original full-solution promotion.",
+      "problem_id": "P0209",
+      "proof_path": "proofs/P0209_uniform_clt_counterexample_candidate.md",
+      "recorded_at": "2026-09-06T22:32:05Z",
+      "result": "Let epsilon=s^-2,R=s^4, Y have rates0to1=epsilon,1to0=1-epsilon, and independently let fair sign Z flip at R/2. Gap=1. Set A=2*epsilon+sqrt((1-epsilon)*(1-4*epsilon)),B=(2-A)/(1-epsilon),g=A*Z+B*(Y-epsilon). Then mean0,variance1,supnorm2 exactly and sigma^2=2*A^2/R+2*B^2*epsilon*(1-epsilon). By time s the chance ever Y=1 is at most epsilon*(s+1); off that event the slow integral is negligible after sigma*sqrt(s) normalization. The fast normalized variance is at most A^2/[R*B^2*epsilon*(1-epsilon)] tending0. Thus the normalized integral tends in probability to0, with normal Kolmogorov distance liminf at least1/2, although s/tau2 tends to infinity.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_complete_candidate"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 329,
+    "ids": [
+      "P0336"
+    ],
+    "record": {
+      "attempt_id": "P0336-A001",
+      "candidate_full_solution": false,
+      "depth": "individual_analytic_attempt",
+      "full_problem_solved": false,
+      "independent_check": "The mean horizontal displacement under any coupling of the two fixed uniform marginals is2. The displayed denominator bounds are uniform on d in[1,3],|h|<=1, so the conclusion follows by integrating the positive excess. For empirical marginals the mean horizontal displacement converges to2 by the law of large numbers, giving the same conclusion along empirical optimal plans whose costs converge to2.",
+      "independent_review": "none",
+      "method": "Explicit model calculation or source-specific limiting obstruction",
+      "novelty": "not_claimed",
+      "obstruction": "Any subsequential limit is thus supported on equal vertical coordinates, as expected, but the horizontal coupling remains undetermined. Every such population coupling costs2. Resolving the lower-order empirical selection mechanism remains open here.",
+      "problem_id": "P0336",
+      "recorded_at": "2026-09-07T01:57:16Z",
+      "result": "Write a horizontal displacement d=y1-x1 in[1,3] and vertical displacement h=y2-x2. The excess Euclidean cost over horizontal displacement is sqrt(d^2+h^2)-d=h^2/(sqrt(d^2+h^2)+d). Since |h|<=1, this lies between h^2/(sqrt(10)+3) and h^2/2. Therefore any sequence of couplings with cost tending to2 must have mean squared vertical displacement tending to0.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_partial"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 445,
+    "ids": [
+      "P0459"
+    ],
+    "record": {
+      "attempt_id": "P0459-A001",
+      "depth": "individual_analytic_attempt",
+      "full_problem_solved": false,
+      "independent_check": "Upper and lower Chernoff exponents are at least delta^2/(2*k)=3*log(n), followed by a union over n vertices. The deterministic threshold inclusion follows directly from having at most k incident edges below t at each endpoint.",
+      "independent_review": "none",
+      "method": "Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics",
+      "novelty": "not_claimed",
+      "obstruction": "A sufficient-condition partial only. Sharp tails and the logarithmic boundary are not determined; below connectivity isolated vertices rule out concentration of every degree near k.",
+      "problem_id": "P0459",
+      "recorded_at": "2026-09-07T07:49:20Z",
+      "result": "Put delta=sqrt(6*k*log(n)) and assume k>2*delta. Threshold edge weights at t=(k-delta)/(n-1). Each threshold degree B_v is binomial with mean k-delta. Chernoff and a union bound give k-2*delta<=B_v<=k for all vertices with probability at least 1-2/n^2. On that event every threshold edge is preferred at both endpoints, so k-2*delta<=D_v<=k simultaneously. Thus k/log(n)->infinity suffices for relative concentration. The argument uses independence of the underlying edge weights, and never independence of vertex degrees.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_partial"
+    }
+  }
+]

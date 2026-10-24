@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B14",
+  "run_id": "20260923T193835Z-account02-B14-QFORM-auto11",
+  "source_control_commit_initial": "68c4ff79ca676e18ce02dc370fdd9db14b48116f",
+  "source_control_commit_prepublication": "4c80cfff0aae4c7717bbf7b6d8194e6b85409469",
+  "control_revision": "2026-09-22.15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-ACTIVE-FRAGMENT-NORMALIZATION-LOSS"
+  ],
+  "mathematical_premises": [
+    {
+      "source": "yspennstate/math-open-problems@4a65677d185d35154dc3dfae320c5df9f939b8a2",
+      "scope": "projected Fisher-information QFORM theorem and cap-improved bound under sqrt(f_i) in H1"
+    },
+    {
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "scope": "RESULTS/FOURIER_ROUTE_REPORT/COUNTEREXAMPLE_SEARCH; completed Theorem A applied to A=I3 on the fragmented exact-target family"
+    },
+    {
+      "source": "yspennstate/math-open-problems@78e87f9d9fe723b40aa38e71426458283366f8a5",
+      "scope": "newest compatible account03/B14 rough-hub L3 core plus disjoint translated-square compiler"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-PROJECTED-FISHER-SUBPROBABILITY-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_LOCALIZATION_THEOREM",
+      "statement": "For Fisher action J(rho)=integral |rho'|^2/rho, J(mf)=m I(f), translations preserve J, and J(sum rho_j)<=sum J(rho_j). Hence projected Fisher information of reassembled original-coordinate marginals is controlled by the mass-weighted component information, and arbitrary countable translation mixtures of a fixed finite-information shape have zero fragment/location/support/moment tax."
+    },
+    {
+      "id": "QFORM-FISHER-FRAGMENT-SCALE-BARRIER-v1",
+      "status": "PROVED_PROOF_INTERFACE_OBSTRUCTION",
+      "statement": "For g=cos^2(pi x/2)1_[-1,1] and f_N=sum_j g(N(x-a_j)) over disjoint centers, f_N is a cap-one Fisher-regular probability law with I(f_N)=N^2 pi^2 exactly. The cap-improved Fisher certificate for A=I3 grows as 11.6933312691+5.3714186617 N, while fixed-source Theorem A gives ||p_Q||_inf<=6sqrt(pi) uniformly in N and fragment locations."
+    },
+    {
+      "id": "QFORM-FISHER-SCALE-HOMOGENEITY-v1",
+      "status": "PROVED_SUPPORTING_IDENTITY",
+      "statement": "For rho_{m,a,b}(x)=m a^{-1}g((x-b)/a), the exact Fisher action is J(rho)=m a^{-2} I(g); center is free but mass-scale fragments a=m cost I(g)/m."
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account03/B14",
+    "source": "yspennstate/math-open-problems@78e87f9d9fe723b40aa38e71426458283366f8a5",
+    "actual_application": "Apply the partner exact-target rough-hub plus translated-square bound 27.32872992777147 to all six marginals equal to f_N. The partner bound stays independent of N while the selected three-direction projected Fisher budget is 3 pi^2 N^2 and its Fisher certificate grows linearly."
+  },
+  "canonical_math_commit": "b2d5f5354dfe179e18e366cf49c485e5326e9288",
+  "canonical_math_root": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T193835Z-account02-B14-QFORM-auto11/",
+  "controlling_files": ["EARLY.md", "REPORT.md"],
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B14/20260923T193835Z-account02-B14-QFORM-auto11.md",
+  "handoff_commit": "ffcace7132f9419211769c3e58297d47b910d6ef",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "FULL_CONTINUITY_OPEN_SEPARATE",
+  "unresolved_implication": "QFORM-SIGNED-SCORE-AGGREGATION-OR-WHOLE-ACTIVE-EXIT-v1",
+  "next_step": "Bound the Fisher vector-field signed score term by a cancellation/product estimate that sees the full reassembled cap-one marginal before absolute Fisher payment, or force an existing whole-law D'/D5/ridge/hub/pair/rough-core certificate before active scale normalization."
+}

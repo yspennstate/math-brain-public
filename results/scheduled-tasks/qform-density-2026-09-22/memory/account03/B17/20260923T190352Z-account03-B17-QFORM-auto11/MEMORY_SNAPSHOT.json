@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260923T190352Z-account03-B17-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_initial": "a0b0d54da2a2203f119f9acb676d489ef94f5fdd",
+  "control_commit_refreshed": "00e693fe9763b1ea235c5647ac6de841bdfc712f",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "scientific_commit": "0b4294a426049e36163b091b0900a585565099fc",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T190352Z-account03-B17-QFORM-auto11/REPORT.md",
+  "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T190352Z-account03-B17-QFORM-auto11/check.py",
+  "check_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T190352Z-account03-B17-QFORM-auto11/CHECK_OUTPUT.txt",
+  "partner_result_applied": {
+    "worker": "account04/B17",
+    "commit": "8c57f6e8fd6fe7ea16e6acbe7f199be22f1daf58",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B17/20260923T171805Z-account04-B17-QFORM-r5/REPORT.md",
+    "application": "exact central-cell contribution (1-eta)^4 p_*"
+  },
+  "base_witness_source": {
+    "worker": "account01/B17",
+    "commit": "e83d0cc194d791acf31d6c86245204887cfd8171",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260923T144233Z-account01-B17-QFORM-auto11/REPORT.md",
+    "value": "p_*=4.06307061680603726012548..."
+  },
+  "proved": [
+    "For y=(1,1,4+3sqrt2), y^T(I-(2/3)11^T)y=0 exactly.",
+    "The corresponding six-coordinate remote center is an exact irrational nonzero null-cone center.",
+    "Every nonempty remote-choice subset has three-bank center norm at least 1/2.",
+    "For every R>=12 and 0<eta<1, (1-eta)^4 p_* <= p_Q(0) <= (1-eta)^4 p_* + 252 sqrt(6)/R.",
+    "For every R>=3600 the explicit family satisfies p_Q(0)<3sqrt2, uniformly in eta.",
+    "Any fixed finite collection of non-kernel remote rectangular cells has O(1/R) cone-tip contribution in this exact matrix geometry, even if a leading center lies exactly on the real null cone."
+  ],
+  "unresolved": [
+    "Leading kernel-cancellation cells Tc^S=0 can retain O(1) contribution and are not covered by the derivative suppression lemma.",
+    "Fragment counts growing with R are not covered by the fixed-finite-cell estimate.",
+    "Off-zero density peaks are not controlled by this cone-tip argument.",
+    "Full QFORM and full-target continuity remain open."
+  ],
+  "next_step": "Analyze kernel-cancelling finite fragmentation in the same dense Householder matrix: classify which matched bank-center cancellations can preserve O(1) cone-tip mass and derive a sharp product-law upper bound, then compare with 3sqrt2.",
+  "status": "FULL_TARGET_OPEN_IRRATIONAL_NULL_REMOTE_CELL_SUPPRESSED"
+}

@@ -1,0 +1,151 @@
+{
+  "checks": [
+    {
+      "name": "moderate_even",
+      "spikes": [
+        32,
+        34,
+        36
+      ],
+      "N": 1020041,
+      "results": [
+        {
+          "m": 1,
+          "q": 3,
+          "A": 32,
+          "next_even_q": 197,
+          "K": 4,
+          "block_failures": 0,
+          "profile_variance": 0.6666666666666666,
+          "baseline_checked": false
+        },
+        {
+          "m": 2,
+          "q": 197,
+          "A": 34,
+          "next_even_q": 13787,
+          "K": 4,
+          "block_failures": 0,
+          "profile_variance": 22.75415496405473,
+          "baseline_checked": true
+        },
+        {
+          "m": 3,
+          "q": 13787,
+          "A": 36,
+          "next_even_q": 1020041,
+          "K": 4,
+          "block_failures": 0,
+          "profile_variance": 48.45833932309273,
+          "baseline_checked": true
+        }
+      ]
+    },
+    {
+      "name": "mixed_parity",
+      "spikes": [
+        33,
+        35,
+        37
+      ],
+      "N": 1110385,
+      "results": [
+        {
+          "m": 1,
+          "q": 3,
+          "A": 33,
+          "next_even_q": 203,
+          "K": 4,
+          "block_failures": 0,
+          "profile_variance": 0.6666666666666666,
+          "baseline_checked": false
+        },
+        {
+          "m": 2,
+          "q": 203,
+          "A": 35,
+          "next_even_q": 14613,
+          "K": 4,
+          "block_failures": 0,
+          "profile_variance": 24.133805722051008,
+          "baseline_checked": true
+        },
+        {
+          "m": 3,
+          "q": 14613,
+          "A": 37,
+          "next_even_q": 1110385,
+          "K": 4,
+          "block_failures": 0,
+          "profile_variance": 51.31896465618074,
+          "baseline_checked": true
+        }
+      ]
+    },
+    {
+      "name": "nonmonotone_spikes",
+      "spikes": [
+        128,
+        32,
+        33
+      ],
+      "N": 2000000,
+      "results": [
+        {
+          "m": 1,
+          "q": 3,
+          "A": 128,
+          "next_even_q": 773,
+          "K": 16,
+          "block_failures": 0,
+          "profile_variance": 0.6666666666666666,
+          "baseline_checked": false
+        },
+        {
+          "m": 2,
+          "q": 773,
+          "A": 32,
+          "next_even_q": 51015,
+          "K": 4,
+          "block_failures": 0,
+          "profile_variance": 346.0718960920725,
+          "baseline_checked": true
+        },
+        {
+          "m": 3,
+          "q": 51015,
+          "A": 33,
+          "next_even_q": 3468247,
+          "K": 4,
+          "block_failures": 0,
+          "profile_variance": 368.933020632258,
+          "baseline_checked": true
+        }
+      ]
+    },
+    {
+      "name": "prior_gap",
+      "spikes": [
+        3,
+        17,
+        513
+      ],
+      "N": 848077,
+      "results": [
+        {
+          "m": 3,
+          "q": 825,
+          "A": 513,
+          "next_even_q": 848077,
+          "K": 64,
+          "block_failures": 0,
+          "profile_variance": 7.49954233241506,
+          "baseline_checked": false
+        }
+      ]
+    }
+  ],
+  "signed_boundary_cases": 3252,
+  "seconds": 128.01267569989432,
+  "note": "Exact integer coding of a long rational approximant; finite tests only. Infinite-angle proof is in ATTEMPT.md."
+}

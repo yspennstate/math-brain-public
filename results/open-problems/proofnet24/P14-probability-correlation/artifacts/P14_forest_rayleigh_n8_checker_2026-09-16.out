@@ -1,0 +1,29 @@
+Compilation:
+cc -O3 -std=c11 -Wall -Wextra -pedantic P14_forest_rayleigh_n8_checker_2026-09-16.c -o P14_forest_rayleigh_n8_checker
+Compiler note: only -Wpedantic warning is use of GCC/Clang __int128 for extra-wide exact gap arithmetic.
+
+Execution on full 12,346-line graph6 catalog:
+STATUS PASS
+graphs=12346
+edge_pairs_tested=1181246
+zero_gaps=80642
+max_forest_count=561948 g6=G~~~~{
+min_positive_gap=2 g6=G???GK edge_indices=0,1
+max_gap=3613955472 g6=G~~~~{ edge_indices=0,1
+elapsed_cpu_seconds=1.185243
+progress graphs=2000 pairs=85688
+progress graphs=4000 pairs=218145
+progress graphs=6000 pairs=381837
+progress graphs=8000 pairs=577422
+progress graphs=10000 pairs=811542
+progress graphs=12000 pairs=1107627
+wall_seconds=1.18
+
+Independent K8 brute-force self-check:
+Enumerating all edge subsets of size at most 7 and testing acyclicity gives
+Z(K8)=561948
+Z_e=125292
+Z_f=125292
+Z_ef=21504
+Delta=Z_e*Z_f-Z*Z_ef=3613955472
+This matches the C checker on graph6 G~~~~{.

@@ -1,0 +1,11 @@
+PASS
+
+Finite sanity checker `verify_overlap_link.py` was executed for:
+- random exact-rank-three symmetric matrices in dimensions 6, 7, and 8;
+- four signed spectra per dimension;
+- every non-negligible physical pivot;
+- exact numerical comparison M_{1,i}=a_i^2 * disjoint-Schur-minor-energy;
+- exhaustive Bernoulli-cut averaging against the factor 1/16;
+- the family A_m=[1] direct_sum J_m/m direct_sum (-J_m/m), m=2,...,7, including the balanced-cut singular-product formula.
+
+All assertions passed. These finite floating-point checks are sanity tests only; the mathematical proof is the exact determinant/Cauchy-Binet argument in REPORT.md.

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260923T014852Z-account01-B02-qform-r19",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuous_full_target_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "fresh_control": {
+    "repository": "yspennstate/math-research-brain",
+    "prepublication_main_commit": "87630581e34d4781b33a6dee2acc47c5cd154f64",
+    "owner_control_revision": "2026-09-22.15",
+    "readme_sha": "fca13a89d221115332ce5e60d49554ee0e213efa"
+  },
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY refutation",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "no small-tail coefficient perturbation under arbitrary fragmented laws"
+  ],
+  "partner_applied": {
+    "account": "account02",
+    "slot": "B02",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "49c80441f24d6c697350119fac09426077b7e313",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260922T231047Z-account02-B02-qform-r16-6c4f9a1e/REPORT.md",
+    "actual_use": "Applied the partner k=2 sharp-Hausdorff-Young volume/Jensen characteristic-function envelope to integrate |phi|^r for q<r<2, then inverse Hausdorff-Young."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-E2-LR-FOURIER-v1",
+      "statement": "For Z2=e2(M^T M)>0 and natural e2 row marginals alpha_i<=q/2 with 1<=q<r<2, int |phi_R|^r <= [2 pi r/(r-q)] [B_beta prod H_q(alpha_i)]^(1/2) Z2^(-1/4), hence p_R lies in L^{r/(r-1)} with the explicit norm in the report."
+    },
+    {
+      "id": "QFORM-E2-SQUARE-LIFT-v2",
+      "statement": "If an original-coordinate nonzero pivot a is completed exactly and its Schur residual has such an e2 block, then ||p_Q||_inf <= K(q,r)|a|^(-1/2)Z2^(-1/8), K(q,r)=4 sqrt(e)q^(-1/4)(2-r)^((r-3)/2)r^((1-r)/2)(r-q)^(-1/2). Essential boundedness only; continuity not proved."
+    },
+    {
+      "id": "QFORM-E2-COLOOP-IDENTITY-v1",
+      "statement": "For natural e2 marginal alpha_i, (1-alpha_i)Z2=e2(M[-i,:]^T M[-i,:]); alpha_i=1 forces the other rows to have rank at most one, i.e. exact hub plus rank-one bank."
+    }
+  ],
+  "application": "Combining account02/B01 r31 e2(N)>=alpha Z/||u||^2 with the new square lift pays the diffuse-e2-after-coheavy branch whenever an outer nonzero scalar pivot exists and the residual natural e2 law is not an exact coloop.",
+  "global_fourier_status": "OPEN_NOT_REFUTED",
+  "continuity_this_run": "Residual R has L^p density p>2; lifted Q only essentially bounded by this method.",
+  "first_unpaid_implication": "QFORM-E2-NEAR-COLOOP-OR-ZERO-PIVOT-CLOSURE-v2",
+  "next_step": "Exploit the exact/near hub-plus-rank-one geometry when the natural e2 marginal approaches one, or replace a zero/small outer scalar pivot by a product-preserving pair/ridge/grouped-square/grouped-bilinear smoother before paying a local minor.",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "2c64efc8863bc0d519090613ba29fb113c3b7ddc",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T014852Z-account01-B02-qform-r19/REPORT.md",
+    "report_blob": "4fa1a55bc777c7f97b1b8d7b35fd6454107ba39b",
+    "coloop_addendum_commit": "b1db1ea1fefa5eb5bf440be1e6bdcbaca27ec18b",
+    "coloop_addendum_blob": "ea8665a62782ff9032e5ece1198bef07dd4df767"
+  },
+  "handoff": {
+    "commit": "d794da15b42a1f0145fcdc87602ba4abda511ac8",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B02/20260923T014852Z-account01-B02-qform-r19.md",
+    "blob": "a4a94fec0e460e66fc39f23160b5e4ece16412fc"
+  }
+}

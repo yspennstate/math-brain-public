@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "account03-B17-20260922T140220Z-r11",
+  "control_revision": "2026-09-22.5",
+  "control_commit_prewrite": "3244bd53a0a59ae0c6bdf8eb8dc6dfd54834a1cb",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "partner_status": {
+    "assigned_partner": "account04/B17",
+    "completed_qform_artifact_visible": false,
+    "compatible_completed_result_applied": "account04/B18 Schur-pivot square smoothing",
+    "compatible_commit": "441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3"
+  },
+  "additional_premises": [
+    {
+      "source": "account02/B17",
+      "commit": "cdd32fd16a694a5f8acc7ba758e0db6596a3e4a1",
+      "claim": "sharp centered Gaussian three-mode envelope 1/(2 sqrt(2) s)"
+    },
+    {
+      "source": "interactive regularized determinant theorem",
+      "commit": "a302aab3477c64757b511e80d3907f982e04873a",
+      "claim": "q=1 three-cross-direction density bound under range leverage <=1/2"
+    }
+  ],
+  "new_results": [
+    "Noncentral Gaussian quadratic forms obey the same sharp three-mode density envelope as centered Gaussian forms; arbitrary Gaussian mean cannot increase the 3 sqrt(2) diffuse ceiling under covariance >= I/12.",
+    "Fully mixed Walsh rank-three family has spectrum {1,1,-1,0}, all positive physical diagonals, n^3/16 nonsingular physical triples each with determinant modulus 16/n^3 and aggregate determinant mass 1; every such triple lies in the all-majority-pivot branch.",
+    "A balanced fourth-Walsh cut has three cross singular values 1/2 and range leverage 6/n, so the regularized determinant theorem gives density <=3 sqrt(2) e for all independent density-one inputs when n>=16.",
+    "Shifted unit-interval inputs along the Walsh frame converge to arbitrary-mean Gaussian stresses; centered case gives C>=3 sqrt(2) by weak convergence and interval bounds."
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3d0926c161ba4cbea4016bff63d89e34f87cb0e6",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/account03-B17-20260922T140220Z-r11/REPORT.md",
+    "blob": "76fabd183884699b793c372f99059fe84b436f88"
+  },
+  "unresolved_implication": "Either produce a genuinely non-Gaussian/mesoscopic density-one product witness with peak >3 sqrt(2), or prove an exhaustive mixed/heavy-leverage aggregate smoothing reduction for the full target.",
+  "next_step": "Stress mixed-leverage Walsh/block hybrids or derive a heavy/light aggregate cross-block inequality that avoids reciprocal single-minor payment.",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

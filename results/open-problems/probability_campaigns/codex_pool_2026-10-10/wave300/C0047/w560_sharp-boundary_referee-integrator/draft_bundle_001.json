@@ -1,0 +1,51 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w560",
+  "bundle_slug": "c0047-spectral-scope-correction-001",
+  "entries": [
+    {
+      "key": "correct-spectral-sufficient-condition",
+      "namespace": "probability.percolation",
+      "logical_name": "benjamini-schramm-spectral-sufficient-condition-degree-factor",
+      "kind": "concept",
+      "title": "Spectral sufficient condition: include the Cayley degree",
+      "statement": "For Bernoulli bond percolation on a Cayley graph from a finite symmetric generating set S of size D, let rho be the operator norm of the normalized simple random walk. The published spectral sufficient hypothesis is D*rho*p_c<1, which implies p_c<p_u. Writing p_c<1/rho omits D; when rho<1 and p_c<=1 it is automatic and cannot establish nonuniqueness. The criterion is sufficient, not necessary.",
+      "proof_text": null,
+      "assumptions": ["infinite connected Cayley graph", "finite symmetric simple generating set S", "independent Bernoulli bond percolation", "rho normalized by D=|S|"],
+      "domain": "probability percolation on Cayley graphs",
+      "source": {
+        "source_id": "owner-own-work:w560:C0047-SOURCE-CORRECTION-1",
+        "url": "https://arxiv.org/html/1206.2183v3",
+        "revision": "source read 2026-10-10; campaign correction text in w560/REVIEW_PACKET.md",
+        "license": "owner-own-work (original correction text; mathematical formula cited to Juschenko-Nagnibeda)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "triangle-block-spectral-obstruction",
+      "namespace": "probability.percolation",
+      "logical_name": "triangle-block-cayley-counterexample-to-universal-spectral-bridge",
+      "kind": "lemma",
+      "title": "Triangle-block Cayley graph defeats the universal spectral bridge",
+      "statement": "Let G=Cay(C_2*C_3,{a,b,b^{-1}}), where a^2=b^3=1, with iid Bernoulli bond percolation. Its degree is 3, p_c=q is the unique root in (0,1) of 2q^2+2q^3-2q^4=1, p_u=1, and its normalized random-walk spectral radius rho obeys 3*rho*q>=2q>1.26. Thus this nonamenable Cayley graph satisfies p_c<p_u although the spectral sufficient condition D*rho*p_c<1 fails. This refutes universality or necessity of that auxiliary condition, not the Benjamini-Schramm conjecture.",
+      "proof_text": "The b-edges form disjoint triangles joined by a-edge bridges; contracting triangles gives a 3-regular tree. Enter a triangle through one open bridge and let K count its other vertices connected to the entry by open internal edges. Direct three-edge enumeration gives E[K]=2(p+p^2-p^3). Each such vertex has one independent fresh outward bridge, so the independent offspring mean is 2p^2+2p^3-2p^4. This is strictly increasing, crosses 1 once at q, and critical extinction holds. For q<p<1, independent closed bridges isolate infinitely many surviving off-ray branch clusters, while p=1 gives one cluster; hence p_u=1. Substitution gives q>0.63. The indicator of a single triangle has adjacency Rayleigh quotient 2, so 3*rho=||A||>=2 and 3*rho*q>1.26.",
+      "assumptions": ["group C_2*C_3 with the displayed simple symmetric generators", "iid common-parameter Bernoulli bond percolation", "rho is normalized l2 random-walk norm", "fixed-p almost-sure uniqueness assertion"],
+      "domain": "probability percolation on Cayley graphs",
+      "source": {
+        "source_id": "owner-own-work:w559-C0047-special-001:w560-review",
+        "url": "https://arxiv.org/html/math/0611668",
+        "revision": "author packet w559/ATTEMPT.md SHA256 DF0DD85C512A52C307C704D1909E879E4551EE34F05DD5EA292BCB6B5137EB58; reviewed 2026-10-10",
+        "license": "owner-own-work (campaign proof and referee audit; no novelty claim)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "triangle-block-spectral-obstruction",
+      "to_key": "correct-spectral-sufficient-condition",
+      "kind": "semantic_association",
+      "rationale": "The triangle-block graph has p_c<p_u while violating D*rho*p_c<1, showing the cited sufficient hypothesis is not necessary."
+    }
+  ]
+}

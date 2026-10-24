@@ -1,0 +1,42 @@
+QFORM account03/B02 r15 deterministic algebra checks
+
+Run: 20260922T210429Z-account03-B02-qform-r15
+The checks below verify only arithmetic/algebraic constants used in REPORT.md; they are not a numerical proof of the theorem.
+
+1. Scalar physical-square L3 constant
+   (2*sqrt(2))^(2/3) = 2 exactly.
+   Hence Hausdorff-Young gives 2*(2*pi)^(1/3) = 3.6905402972880568 before |d|^(-1/3).
+
+2. Tail Holder exponent
+   int_{|t|>T}|t|^(-3/2)dt = 4*T^(-1/2).
+   Raising to 2/3 gives 4^(2/3)*T^(-1/3).
+
+3. Main high-frequency coefficient
+   pi * [2*(2*pi)^(1/3)] * 4^(2/3)
+   = 2^(8/3)*pi^(4/3).
+
+4. Optimization of 2*T + H*T^(-1/3)
+   Stationarity: 2=(H/3)T^(-4/3), so T=(H/6)^(3/4).
+   At this T the value is 8*(H/6)^(3/4).
+   After division by 2*pi and substitution of H,
+   C_Fourier=16/6^(3/4)=4.173558880195433.
+
+5. Product-projection general-bank specialization M_L,M_R<=2
+   (M_L*M_R)^(3/8)<=4^(3/8)=2^(3/4).
+   C_general=C_Fourier*2^(3/4)=7.019061402413293.
+
+6. Partner L2 low-frequency coefficient
+   If int |phi|^2 <=6*pi*2^(2/3)*D^(-1/3), then
+   int_{|t|<=T}|phi| <= sqrt(2*T)*||phi||_2
+   <=2^(1/3)*sqrt(12*pi)*D^(-1/6)*T^(1/2).
+
+7. Optimization of A*T^(1/2)+H*T^(-1/3)
+   Stationarity gives T=(2H/(3A))^(6/5).
+   Minimum=(5/2)*(2/3)^(3/5)*A^(2/5)*H^(3/5).
+   After division by 2*pi and substitution,
+   C_hybrid=5*2^(11/15)*3^(-2/5)=5.356447252966969.
+
+8. Partner direct branch constant
+   3*2^(2/3)=4.762203155904598.
+
+STATUS=PASS

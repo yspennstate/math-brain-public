@@ -1,0 +1,181 @@
+{
+  "problem_id": "I0038",
+  "source_checks": {
+    "method": "Literature status from memory only; no web search, browsing, or child agents.",
+    "known_literature": [
+      {
+        "authors": [
+          "Christian Beneš",
+          "Fredrik Johansson Viklund",
+          "Michael J. Kozdron"
+        ],
+        "year": 2013,
+        "title": "On the rate of convergence of loop-erased random walk to SLE_2",
+        "scope": "Model-specific quantitative convergence results for loop-erased random walk.",
+        "verification": "Recalled from memory; not independently checked during this task."
+      }
+    ],
+    "provided_source": {
+      "source_id": "schramm_2006_v2",
+      "location": "Problem 3.2",
+      "verification": "Statement supplied by the user; original source not inspected."
+    },
+    "status_assessment": "I know model-specific progress, but do not know a resolution covering the full intended scope. This is not a current-openness certificate.",
+    "novelty_asserted": false,
+    "independent_model_family_audit": "Pending. All proposed nodes remain drafts; none was admitted."
+  },
+  "exact_statement": {
+    "recorded_problem_3_2": "Obtain reasonable estimates for the speed of convergence of the discrete processes which are known to converge to SLE.",
+    "proved_special_case": "For a Gaussian random-walk-driven slit-map approximation, prove an explicit order h mean-square bound for interior SLE map observations and exact optimal estimation rates for the second coefficient at infinity. Here h is a capacity-time mesh, not a spatial lattice mesh.",
+    "adjacent_problem_3_3": "The shortest critical-percolation crossing exponent alpha is not addressed."
+  },
+  "answer": "partial",
+  "proof_or_counterexample": {
+    "label": "proof",
+    "setup": "Let T>0, kappa>=0, N be a positive integer, h=T/N, and t_j=jh. Let B be standard real Brownian motion and U_t=sqrt(kappa)B_t. Define the chordal SLE maps by g_0(z)=z and d g_t(z)/dt=2/(g_t(z)-U_t). Let U^h_t=U_{t_j} on [t_j,t_{j+1}), and let g^h solve the same equation with U^h. At grid times, G_j=g^h_{t_j} satisfies G_0(z)=z and G_{j+1}(z)=U_{t_j}+sqrt((G_j(z)-U_{t_j})^2+4h), using the branch determined by the upper-half-plane Loewner flow. The grid increments of U are independent normal variables with variance kappa*h.",
+    "interior_map_bound": {
+      "statement": "Fix z with y_0=Im(z)>2sqrt(T), and put eta=sqrt(y_0^2-4T). Then (E max_{0<=j<=N}|g_{t_j}(z)-G_j(z)|^2)^(1/2)<=C h, where C=exp(2T/eta^2)*[((|kappa-2|+2)T/eta^3)+4sqrt(kappa*T/3)/eta^2].",
+      "proof": [
+        "For either driver, write y_t=Im g_t(z). The Loewner equation gives (y_t^2)'=-4y_t^2/|g_t(z)-U_t|^2>=-4. Consequently y_t>=eta throughout [0,T]. The same calculation applies interval by interval to g^h. This positive lower bound keeps both solutions away from their poles, and their bounded drift ensures existence through T.",
+        "Put b(w)=2/w and Z_t=g_t(z)-U_t. Then dZ_t=b(Z_t)dt-sqrt(kappa)dB_t. Ito's formula, applied to real and imaginary parts, gives db(Z_t)=A(Z_t)dt+H(Z_t)dB_t, where A(w)=2(kappa-2)/w^3 and H(w)=2sqrt(kappa)/w^2. Indeed, b'b=-4/w^3 and (kappa/2)b''=2kappa/w^3. Thus |A(Z_t)|<=A_0=2|kappa-2|/eta^3 and |H(Z_t)|<=H_0=2sqrt(kappa)/eta^2.",
+        "Define R_n=g_{t_n}(z)-z-h sum_{j<n}b(Z_{t_j}). For s in [t_j,t_{j+1}), put w_h(s)=t_{j+1}-s. Integrating the preceding Ito identity on every interval and interchanging integrations yields R_n=integral_0^{t_n}w_h(s)A(Z_s)ds+integral_0^{t_n}w_h(s)H(Z_s)dB_s. Stochastic Fubini is justified by bounded integrands on a finite interval. Direct integration gives integral_0^T w_h ds=T h/2 and integral_0^T w_h^2 ds=T h^2/3. The drift's maximum absolute value is at most A_0 T h/2. Ito isometry and Doob's L2 inequality, viewing the complex martingale as a two dimensional real martingale, bound the maximum martingale L2 norm by 2H_0 h sqrt(T/3). Therefore ||max_n|R_n|||_2<=h[A_0 T/2+2H_0 sqrt(T/3)].",
+        "Define S_n=G_n-z-h sum_{j<n}b(G_j-U_{t_j}). Within interval j, W_s=g^h_s(z)-U_{t_j} satisfies dW_s=b(W_s)ds. Consequently d b(W_s)/ds=-4/W_s^3, giving |b(W_s)-b(W_{t_j})|<=4(s-t_j)/eta^3. Integration over each interval and summation give max_n|S_n|<=2T h/eta^3.",
+        "For e_n=g_{t_n}(z)-G_n, subtract the two decompositions to obtain e_n=h sum_{j<n}[b(Z_{t_j})-b(G_j-U_{t_j})]+R_n-S_n. Since |b(v)-b(w)|=2|v-w|/(|v||w|), the Lipschitz constant here is L=2/eta^2. With F=max_n|R_n-S_n|, induction in |e_n|<=F+Lh sum_{j<n}|e_j| gives max_n|e_n|<=F(1+Lh)^N<=F exp(LT). Applying the L2 triangle inequality and substituting the remainder bounds gives exactly the stated C."
+      ]
+    },
+    "coefficient_rate_and_lower_bound": {
+      "statement": "Define a_2=lim_{y->infinity}(iy)^2[g_T(iy)-iy-2T/(iy)], and define a_2^h similarly using g^h_T. Then a_2=2 integral_0^T U_s ds and a_2^h=2h sum_{j<N}U_{t_j}. Their difference is centered normal with variance 4kappa*T*h^2/3. For F_N=sigma(B_{t_j}:0<=j<=N), every square integrable real F_N-measurable estimator Q satisfies E|a_2-Q|^2>=kappa*T*h^2/3. Equality is attained by Q_*=h sum_{j<N}(U_{t_j}+U_{t_{j+1}}).",
+      "proof": [
+        "Each driver is bounded on [0,T] almost surely. For z=iy with y large, the imaginary-part bound gives |g_t(z)-z|<=2T/sqrt(y^2-4T)=O(1/y), uniformly in t. Set q_t=g_t(z)-z-U_t. The exact identity 2/(z+q)=2/z-2q/z^2+2q^2/[z^2(z+q)], together with |q_t|<=sup|U|+O(1/y) and |z+q_t|>=sqrt(y^2-4T), gives 2/(g_t(z)-U_t)=2/z+2U_t/z^2+O(1/y^3), uniformly in t with finite path-dependent constants. Integration proves existence of the defining limit and a_2=2 integral U_s ds. Applying the same argument to the step driver gives a_2^h=2h sum_{j<N}U_{t_j}.",
+        "On interval j define Delta_j=B_{t_{j+1}}-B_{t_j} and beta_j(s)=B_{t_j+s}-B_{t_j}-(s/h)Delta_j for 0<=s<=h. Brownian covariance Cov(B_s,B_t)=min(s,t) gives Cov(beta_j(s),B_{t_k})=0 for every grid point. Joint Gaussianity implies independence from all grid observations. Bridges on different intervals are independent because their Brownian increments are independent. Their within-interval covariance is min(s,r)-sr/h.",
+        "Hence J_j=integral_0^h beta_j(s)ds are independent centered normal variables, independent of F_N, with variance integral_0^h integral_0^h[min(s,r)-sr/h]ds dr=h^3/3-h^3/4=h^3/12. Also integral_{t_j}^{t_{j+1}} B_s ds=h B_{t_j}+(h/2)Delta_j+J_j.",
+        "It follows that a_2=Q_*+V, where Q_*=sqrt(kappa)h sum_{j<N}(B_{t_j}+B_{t_{j+1}}) and V=2sqrt(kappa)sum_j J_j. The variable V is independent of F_N, centered normal, and has variance 4kappa*N*h^3/12=kappa*T*h^2/3. Thus E|a_2-Q|^2=E|V|^2+E|Q_*-Q|^2 for every stated estimator Q. This proves the minimum error and its equality case.",
+        "Finally Q_*-a_2^h=sqrt(kappa)h sum_j Delta_j=sqrt(kappa)h B_T. This is independent of V and has variance kappa*T*h^2. Adding the independent Gaussian variables proves that a_2-a_2^h has variance 4kappa*T*h^2/3. When kappa=0 both coefficients vanish."
+      ]
+    },
+    "exact_small_cases": {
+      "label": "exact computation",
+      "parameters": {
+        "T": 1,
+        "kappa": 2
+      },
+      "rows": [
+        {
+          "N": 1,
+          "slit_coefficient_mean_square_error": "8/3",
+          "minimum_grid_estimator_mean_square_error": "2/3"
+        },
+        {
+          "N": 2,
+          "slit_coefficient_mean_square_error": "2/3",
+          "minimum_grid_estimator_mean_square_error": "1/6"
+        },
+        {
+          "N": 4,
+          "slit_coefficient_mean_square_error": "1/6",
+          "minimum_grid_estimator_mean_square_error": "1/24"
+        },
+        {
+          "N": 8,
+          "slit_coefficient_mean_square_error": "1/24",
+          "minimum_grid_estimator_mean_square_error": "1/96"
+        },
+        {
+          "N": 16,
+          "slit_coefficient_mean_square_error": "1/96",
+          "minimum_grid_estimator_mean_square_error": "1/384"
+        }
+      ],
+      "independent_check": "Python Fraction arithmetic recomputed these errors from covariance matrices. Var(a_2)=4kappa*T^3/3. For an estimator sum_j c_j U_{t_j}, its variance is kappa sum_{i,j}c_i c_j min(t_i,t_j), and its covariance with a_2 is 2kappa sum_j c_j(t_j T-t_j^2/2). Substitution of the left-sum or trapezoidal weights reproduced every displayed fraction.",
+      "one_step_map_case": {
+        "parameters": "kappa=2, T=1, z=3i",
+        "expected_SLE_map": "7i/3",
+        "slit_map": "i sqrt(5)",
+        "absolute_bias": "7/3-sqrt(5)",
+        "proof": "At kappa=2 the drift A in the Ito identity vanishes. Since b(Z_t) is bounded, it is a true martingale with E b(Z_t)=b(z). Therefore E g_T(z)=z+2T/z=7i/3. The one-step slit map is sqrt(z^2+4T)=i sqrt(5)."
+      },
+      "deterministic_case": "For kappa=0 the driver is zero and G_N(z)=g_T(z)=sqrt(z^2+4T) for every N."
+    },
+    "limiting_family": "For fixed T and kappa>0, N(a_2-a_2^h) has exactly the centered normal distribution with variance 4kappa*T^3/3 for every N. The optimal residual multiplied by N has variance kappa*T^3/3. Thus the coefficient has matching upper and lower root mean square order N^(-1). This optimality statement concerns the coefficient, not trace distance.",
+    "conjecture": null,
+    "numerical_evidence": null,
+    "sketch": null
+  },
+  "hardest_remaining_gap": "Extend quantitative model-specific results to the intended lattice curves in a specified metric and parametrization. The proved interior estimate requires eta>0, and its constant diverges as eta approaches zero; it supplies no tip or boundary control. This calculation establishes neither general lattice-curve rates nor the adjacent shortest-crossing exponent. Literature status and novelty await the separate reader.",
+  "evidence_status": "partial",
+  "draft_brain_nodes": [
+    {
+      "key": "I0038.gaussian_slit_scheme.draft.v1",
+      "namespace": "probability.sle.quantitative",
+      "logical_name": "gaussian_slit_loewner_scheme",
+      "kind": "definition",
+      "title": "Gaussian slit-map approximation in capacity time",
+      "statement": "Let B be standard real Brownian motion, U_t=sqrt(kappa)B_t, T>0, N>=1, h=T/N and t_j=jh. Define U^h_t=U_{t_j} on [t_j,t_{j+1}). The maps g^h solve d g^h_t(z)/dt=2/(g^h_t(z)-U^h_t), starting from z. At grid times G_0(z)=z and G_{j+1}(z)=U_{t_j}+sqrt((G_j(z)-U_{t_j})^2+4h), using the upper-half-plane Loewner branch. The driving increments are independent normal variables of variance kappa*h.",
+      "assumptions": [
+        "kappa>=0; T>0; N is a positive integer.",
+        "Maps are evaluated at points surviving through the required time."
+      ],
+      "domain": [
+        "probability",
+        "Schramm-Loewner evolution",
+        "stochastic numerical analysis"
+      ],
+      "source": {
+        "source_id": "I0038_campaign_2026-10-10",
+        "url": null,
+        "revision": "draft-v1; independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0038.interior_slit_map_rate.draft.v1",
+      "namespace": "probability.sle.quantitative",
+      "logical_name": "interior_gaussian_slit_map_L2_rate",
+      "kind": "theorem",
+      "title": "Explicit order h bound for interior SLE map observations",
+      "statement": "Let U_t=sqrt(kappa)B_t for standard Brownian motion, T>0, kappa>=0, h=T/N and t_j=jh. Let g solve d g_t(z)/dt=2/(g_t(z)-U_t), and let G_j be the slit scheme G_0=z, G_{j+1}=U_{t_j}+sqrt((G_j-U_{t_j})^2+4h), using the Loewner branch. For fixed z with Im(z)>2sqrt(T), put eta=sqrt(Im(z)^2-4T). Then (E max_{j<=N}|g_{t_j}(z)-G_j(z)|^2)^(1/2)<=h exp(2T/eta^2)*[((|kappa-2|+2)T/eta^3)+4sqrt(kappa*T/3)/eta^2].",
+      "proof_text": "For both real drivers the imaginary coordinate satisfies (y_t^2)'=-4y_t^2/|g_t-U_t|^2>=-4, so it stays at least eta, ensuring existence through T. Write b(w)=2/w and Z_t=g_t-U_t. Ito's formula gives db(Z_t)=A(Z_t)dt+H(Z_t)dB_t, with A(w)=2(kappa-2)/w^3 and H(w)=2sqrt(kappa)/w^2, because b'b=-4/w^3 and (kappa/2)b''=2kappa/w^3. Therefore |A|<=A_0=2|kappa-2|/eta^3 and |H|<=H_0=2sqrt(kappa)/eta^2. Set R_n=g_{t_n}-z-h sum_{j<n}b(Z_{t_j}). For w_h(s)=t_{j+1}-s on interval j, integration and stochastic Fubini yield R_n=integral_0^{t_n}w_h A(Z_s)ds+integral_0^{t_n}w_h H(Z_s)dB_s. Bounded integrands justify Fubini. Since integral_0^T w_h ds=T h/2 and integral_0^T w_h^2 ds=T h^2/3, Ito isometry and Doob's L2 inequality give ||max_n|R_n|||_2<=h[A_0 T/2+2H_0 sqrt(T/3)]. For the continuous slit flow put S_n=G_n-z-h sum_{j<n}b(G_j-U_{t_j}). Inside interval j, W_s=g^h_s-U_{t_j} satisfies dW_s=b(W_s)ds, hence d b(W_s)/ds=-4/W_s^3. Integrating |b(W_s)-b(W_{t_j})|<=4(s-t_j)/eta^3 gives max_n|S_n|<=2T h/eta^3. Subtraction gives e_n=h sum_{j<n}[b(Z_{t_j})-b(G_j-U_{t_j})]+R_n-S_n. The identity |b(v)-b(w)|=2|v-w|/(|v||w|) bounds the drift difference by L|e_j|, with L=2/eta^2. If F=max_n|R_n-S_n|, induction gives max_n|e_n|<=F(1+Lh)^N<=F exp(LT). The L2 triangle inequality and substitution of A_0,H_0,L prove the displayed constant.",
+      "assumptions": [
+        "The Brownian coupling and slit scheme specified in the statement.",
+        "A fixed observation point with Im(z)>2sqrt(T).",
+        "Both processes are compared at identical capacity times."
+      ],
+      "domain": [
+        "probability",
+        "Schramm-Loewner evolution",
+        "stochastic numerical analysis"
+      ],
+      "source": {
+        "source_id": "I0038_campaign_2026-10-10",
+        "url": null,
+        "revision": "draft-v1; independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0038.second_coefficient_optimal_rate.draft.v1",
+      "namespace": "probability.sle.quantitative",
+      "logical_name": "second_loewner_coefficient_grid_estimation_rate",
+      "kind": "theorem",
+      "title": "Exact slit coefficient error and optimal Brownian grid estimation",
+      "statement": "Let U_t=sqrt(kappa)B_t, T>0, h=T/N, and t_j=jh. Let g be its chordal Loewner flow and g^h the flow driven by U_{t_j} on interval j. Define a_2=lim_{y->infinity}(iy)^2[g_T(iy)-iy-2T/(iy)] and a_2^h analogously. Then a_2=2 integral_0^T U_s ds, a_2^h=2h sum_{j<N}U_{t_j}, and a_2-a_2^h is centered normal with variance 4kappa*T*h^2/3. Every square integrable real estimator measurable with respect to all Brownian grid samples has mean-square error at least kappa*T*h^2/3. Equality is attained by h sum_{j<N}(U_{t_j}+U_{t_{j+1}}).",
+      "proof_text": "The drivers are bounded on [0,T] almost surely. For z=iy with y large, (Im g_t(z))^2>=y^2-4T and |g_t(z)-z|<=2T/sqrt(y^2-4T)=O(1/y), uniformly in t. With q=g_t(z)-z-U_t, use 2/(z+q)=2/z-2q/z^2+2q^2/[z^2(z+q)]. Since q is bounded and |z+q|>=sqrt(y^2-4T), this gives 2/(g_t(z)-U_t)=2/z+2U_t/z^2+O(1/y^3), uniformly in t. Integration proves the coefficient formula; the same argument applies to the step driver. On interval j put Delta_j=B_{t_{j+1}}-B_{t_j} and beta_j(s)=B_{t_j+s}-B_{t_j}-(s/h)Delta_j. The covariance min(s,t) of Brownian motion gives zero covariance of each beta_j(s) with every grid observation. Joint Gaussianity implies independence from the grid. Bridges on distinct intervals are independent by independent Brownian increments, and their within-interval covariance is min(s,r)-sr/h. Thus J_j=integral_0^h beta_j(s)ds are independent centered normal variables, independent of the grid, with variance h^3/3-h^3/4=h^3/12. The interval integral of B is h B_{t_j}+(h/2)Delta_j+J_j. Consequently a_2=Q_*+V, where Q_*=sqrt(kappa)h sum_j(B_{t_j}+B_{t_{j+1}}) and V=2sqrt(kappa)sum_j J_j. The residual V is independent of the grid and has variance kappa*T*h^2/3. For any stated estimator Q, orthogonality gives E|a_2-Q|^2=kappa*T*h^2/3+E|Q_*-Q|^2, proving optimality. Finally Q_*-a_2^h=sqrt(kappa)h B_T, independent of V and of variance kappa*T*h^2. Their sum is centered normal with variance 4kappa*T*h^2/3. For kappa=0 the coefficients vanish.",
+      "assumptions": [
+        "Standard Brownian motion; kappa>=0; T>0; N a positive integer.",
+        "Estimators are square integrable and measurable with respect to all Brownian grid samples.",
+        "The nonzero optimal-order assertion assumes kappa>0."
+      ],
+      "domain": [
+        "probability",
+        "Schramm-Loewner evolution",
+        "Gaussian estimation"
+      ],
+      "source": {
+        "source_id": "I0038_campaign_2026-10-10",
+        "url": null,
+        "revision": "draft-v1; independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    }
+  ]
+}

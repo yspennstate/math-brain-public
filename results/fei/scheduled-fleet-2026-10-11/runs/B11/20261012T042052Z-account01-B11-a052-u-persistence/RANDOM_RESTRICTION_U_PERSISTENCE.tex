@@ -1,0 +1,117 @@
+\section*{Upward-potential persistence under critical random restrictions}
+
+All entropies are in bits.  For a Boolean function $g$, write
+\[
+ R(g)=\frac{H(g)}{I(g)},\qquad
+ U(g)=\sum_S \widehat g(S)^2\log_2\frac{\pi_g(S)}{\widehat g(S)^2},
+ \quad \pi_g(S)=\sum_{T\supseteq S}\widehat g(T)^2.
+\]
+Terms with zero Fourier mass vanish.  Set
+\[
+ b(g)=(1-\operatorname{Var}(g))
+       \log_2\frac1{1-\operatorname{Var}(g)},
+\]
+with the endpoint value $0\log_2(1/0)=0$.
+
+\begin{theorem}[deficit-to-$U$ conversion]
+Let $f$ be nonconstant and let $R$ dominate the ratio of every nonconstant
+physical restriction of $f$.  For any probability distribution on physical
+restrictions $g$ of $f$, put
+\[
+ \overline I=\mathbb E I(g),\quad
+ \overline\delta=\mathbb E[RI(g)-H(g)].
+\]
+Then
+\[
+ \boxed{\quad
+ \mathbb E U(g)\ge
+ \frac{R-2}{2}\,\overline I-rac12\overline\delta
+ +\mathbb E\operatorname{Var}(g)+\frac12\mathbb E b(g).
+ \quad}                                                   \tag{1}
+\]
+All constant children contribute zero to every term.
+\end{theorem}
+
+\begin{proof}
+The full form of the proved upward-potential inequality is
+\[
+ H(g)\le2(I(g)-\operatorname{Var}(g))+2U(g)-b(g).
+\]
+Since $H(g)=RI(g)-\delta(g)$, rearrangement gives
+\[
+ U(g)\ge \frac{R-2}{2}I(g)-\frac12\delta(g)
+          +\operatorname{Var}(g)+\frac12b(g).
+\]
+Average.  No sign is discarded, and the normalization term $b(g)$ and
+terminal variance are retained.  The domination hypothesis makes
+$\delta(g)\ge0$, but that sign is not needed for the algebra.  \qed
+\end{proof}
+
+\paragraph{One-coordinate specialization.}
+Let $f_i^\pm$ be the physical children of a descendant-critical $f$, put
+$\overline I_i=(I(f_i^+)+I(f_i^-))/2$, and let
+\[
+ s_i=\Delta_iH-RI_i(f).
+\]
+The A052 critical-slack identity says exactly
+\[
+ s_i=\frac12\sum_{\sigma=\pm}
+       \bigl(RI(f_i^\sigma)-H(f_i^\sigma)\bigr).
+\]
+Thus (1) gives
+\[
+ \frac{U(f_i^+)+U(f_i^-)}2\ge
+ \frac{R-2}{2}\overline I_i-\frac{s_i}{2}
+ +\frac12\sum_\sigma\operatorname{Var}(f_i^\sigma)
+ +\frac14\sum_\sigma b(f_i^\sigma).                       \tag{2}
+\]
+This is the exact paid bridge from the existing critical slack to $U$.
+
+\begin{corollary}[random-restriction persistence]
+Let $f$ attain $c_n=H(f)/I(f)$, let $J$ include each coordinate independently
+with probability $t\in(0,1]$, and condition the coordinates outside $J$ by a
+uniform assignment $X$.  Put $g=f_{J,X}$ and
+$\delta(g)=c_nI(g)-H(g)$.  Then
+\[
+\begin{split}
+ \mathbb E U(g)
+ &\ge \frac{c_n-2}{2}\,tI(f)-\frac12\mathbb E\delta(g)
+       +\mathbb E\operatorname{Var}(g)+\frac12\mathbb E b(g)             \tag{3}\\
+ &\ge \left[\frac{c_n-2}{2}t-rac{1-t}{\ln2}\right]I(f)
+       +\mathbb E\operatorname{Var}(g)+\frac12\mathbb E b(g).           \tag{4}
+\end{split}
+\]
+\end{corollary}
+
+\begin{proof}
+Theorem C gives ratio domination, $\mathbb E I(g)=tI(f)$, and the
+source-complete deficit estimate
+\[
+ \mathbb E\delta(g)\le\frac{2}{\ln2}(1-t)I(f).
+\]
+Insert these into (1).  \qed
+\end{proof}
+
+\paragraph{Quantitative survival mass.}
+Ignore the two nonnegative terminal terms only for this consequence and set
+\[
+ a_t=\frac{c_n-2}{2}-\frac{1-t}{t\ln2}.
+\]
+Bias the random-restriction law by $I(g)$; its normalization is $tI(f)$.
+Since $0\le U(g)\le H(g)\le c_nI(g)$, for every $0\le\theta<a_t$,
+\[
+ \Pr_{I\text{-biased}}\left[\frac{U(g)}{I(g)}\ge\theta\right]
+ \ge\frac{a_t-\theta}{c_n-\theta}.                         \tag{5}
+\]
+In particular, whenever $a_t>0$, a positive influence-weighted fraction of
+the restriction frontier remains $U$-hard.  This is a stopping-frontier
+constraint, not a bound $U(f)\le KI(f)$.
+
+\paragraph{Scope and unpaid step.}
+Equations (1)--(5) are necessary structure for finite-dimensional maximizers.
+They do not prove a dimension-independent upper bound on $U/I$: their direction
+is persistence, not payment.  The remaining universal step is to combine this
+persistence with an independent upper-set asymmetry or pivotal-height budget
+that forces a contradiction when $c_n$ is large.  Without such a budget, a
+high-$U$ descendant frontier is compatible with all displayed inequalities.
+

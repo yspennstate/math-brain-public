@@ -1,0 +1,51 @@
+{
+  "worker": "NM13-10",
+  "date": "2026-09-20",
+  "source": "Agresti-Veraar arXiv:2501.18561 Problem 3",
+  "runtime_model": "GPT-5.6 Sol",
+  "reasoning_level": "UNVERIFIED",
+  "frozen_pair": {
+    "X0": "H^{-1}(T)",
+    "Xhalf": "L^2(T)",
+    "X1": "H^1(T)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "noise": "one real Brownian driver"
+  },
+  "fixed_before": {
+    "strong_endpoint": "r_*=3, endpoint excluded",
+    "exact_subcritical_norm": "C_p^g=1/(sqrt(2/(p-1))-1), 2<=p<3",
+    "critical_rearrangement_bracket": "2/3 <= alpha_*(T) <= 1",
+    "conditional_alpha_2_3_lower_constant": "4/9",
+    "latest_successor": "full-spectrum little Z_{3,1} endpoint plus best-N spectral approximation"
+  },
+  "fixed_after": {
+    "strong_endpoint": "r_*=3, endpoint excluded",
+    "critical_rearrangement_bracket": "2/3 <= alpha_*(T) <= 1",
+    "conditional_alpha_2_3_lower_constant": "4/9"
+  },
+  "new_theorem": {
+    "name": "NM10-AVP3-SPECTRAL-VARIANCE-STABILITY-15",
+    "status": "CANDIDATE_FULL / SELF-CHECKED / PENDING INDEPENDENT REVIEW",
+    "summary": "Exact stability identity for the sharp semigroup Hessian contraction. The defect is p(p-2) times an integrated spectral variance of sqrt(A); it enters the stochastic maximal-regularity inequality as an additional positive gap. This yields a data-dependent extrapolation bound and quantitative rigidity: near-sharp subcritical responses concentrate, in weighted spacetime average, inside three adjacent dyadic spectral blocks.",
+    "key_identity": "(p-1)||z||^p-D2Psi_p(z)[A^(1/2)z,A^(1/2)z] = p(p-2) int Var_{mu_{z,s}}(sqrt(lambda)) ||e^{-sA}z||^p ds",
+    "effective_gap_inequality": "(delta+kappa_p/2) R_p(Y)^2 <= (p-1)R_p(Y)+(p-1)/2",
+    "quantile_refinement": "for ell=log(T/s)>=6, p=3-3/ell: s^(1/3)F*(s) <= 8 ell/(3+kappa_p ell) ||Y||_3",
+    "packet_rigidity": "for 5/2<=p<3, weighted distance^2 to the best three-adjacent-dyadic-block packet is <= (2/c_*) kappa_p, c_*=5(3-2sqrt(2))/24",
+    "half_sharp_corollary": "if R_p(Y)>=R_p^*/2 then weighted packet leakage <=70(3-p)"
+  },
+  "source_level_movement": "none: strong endpoint and full critical exponent bracket unchanged",
+  "demonstrated_mechanism_gain": "The exact blow-up mechanism is now stable: the only way to remain near the sharp (3-p)^(-1) subcritical norm is to have vanishing integrated spectral variance and hence local concentration in a three-block comparable spectral packet. Conversely, any variance-rich branch with kappa_p >= c ell^(-2/3) already satisfies the critical ell^(2/3) quantile scale. Together with the preceding finite-band and Hellinger results, the unresolved mechanism is reduced to adaptive migration of narrow spectral packets across unboundedly many dyadic scales while forcing is active.",
+  "failed_or_nonclosing_routes": [
+    "The variance refinement alone does not close alpha=2/3 because exact one-shell states have zero defect; the already-proved shell endpoint must be combined with a packet-migration estimate.",
+    "A uniform best-N decay for arbitrary L^3 inputs is impossible without using dynamics, so the previous N-term remainder cannot be improved by approximation theory alone."
+  ],
+  "next_attack": "Prove an active packet-migration Carleson estimate: charge changes of the three-block packet center using the critical Hellinger/decoherence kernel and cubic input energy. A summable migration charge would combine the variance-rich branch with the comparable-band endpoint and close the full Z_{3,2/3} bound.",
+  "checker": {
+    "code": "2026-09-20T16-15-24+0300__spectral_variance_stability_check.py",
+    "output": "2026-09-20T16-15-24+0300__spectral_variance_stability_check.out",
+    "result": "CHECK_PASS"
+  },
+  "literature_check": "Bounded current search: Agresti-Veraar Problem 3 remains the source; 2026 Lorist-van Neerven-Veraar concerns necessary Banach-geometry conditions; discrete SMR work concerns numerical/discrete extrapolation. No source-matching resolution found in the bounded search."
+}

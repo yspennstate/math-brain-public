@@ -1,0 +1,90 @@
+{
+  "problem_id": "C0048",
+  "worker": "w456",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "reason": "Historical primary conjecture confirmed. Bounded literature/owner-record searches found no certified complete proof; absence of a found proof does not establish current openness.",
+  "primary_statement": {
+    "author": "Hugo Duminil-Copin",
+    "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+    "url": "https://arxiv.org/abs/1707.00520",
+    "locator": "Conjecture 2, printed p.93 / PDF index 92",
+    "local_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:48",
+    "checked_directly": true,
+    "normalization_locator": "Proposition 1.3 and Corollary 1.4, pp.9-10",
+    "short_quote": "with d >= 3) is discontinuous for any q >= 3."
+  },
+  "corroborating_primary": {
+    "url": "https://www.ihes.fr/~duminil/publi/2015%20Currents%20developments%20in%20mathematics.pdf",
+    "locator": "Conjecture 1, printed p.32 / PDF p.6",
+    "checked": true,
+    "short_quote": "We will say that the phase transition is continuous if m*(beta_c,q) = 0, and discontinuous otherwise."
+  },
+  "prior_attempt": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl:38",
+    "id": "C0048-A001",
+    "status": "attempted_unsolved",
+    "gap": "Uncontrolled contour entropy at q=3,d=3; no 3D transfer-matrix substitute.",
+    "quantitative_constants_checked": false
+  },
+  "recall": {
+    "query": "C0048 Potts discontinuity proof mistakes perceptron_proof_open_gaps_fleet_2026_07_12",
+    "timeout_seconds": 60,
+    "result": "timeout",
+    "fallback_slug": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "fallback_read_pending": false,
+    "fallback_used": "perceptron_proof_open_gaps_fleet_2026_07_12"
+  },
+  "served_model_evidence": {
+    "author": "Unavailable: requested model settings are not evidence of served identity.",
+    "referee": "Unavailable according to w458/REVIEW_PACKET.md; no response-side attestation."
+  },
+  "bounded_recent_primary_checks": [
+    {
+      "url": "https://arxiv.org/abs/math/0207242",
+      "scope": "sufficiently high dimensions or sufficiently strong mean-field first-order transition"
+    },
+    {
+      "url": "https://arxiv.org/abs/2501.14320",
+      "scope": "quantum fuzzy-sphere finite-size study; not a proof of the nearest-neighbour classical target"
+    },
+    {
+      "url": "https://arxiv.org/abs/1611.09877",
+      "scope": "planar q>4 discontinuity"
+    },
+    {
+      "url": "https://arxiv.org/abs/1505.04159",
+      "scope": "planar q=2,3,4 continuity; control against a bare cubic-sign argument"
+    }
+  ],
+  "owner_prior_lookup": {
+    "scope": "Targeted C0048/Potts queries in the named intakes, H/I attempts, Lean annotations, Team O board and owner notes/research; no complete C0048 proof receipt found. Quantitative historical assertions remain unaudited.",
+    "canonical_store_receipt": "store_target_lookup.json",
+    "limitations": "Not an exhaustive owner-work or literature review; openness UNKNOWN."
+  },
+  "review_state": {
+    "state": "SCOPED MATHEMATICAL KEEP from w457 and w458; served-model admission gates pending",
+    "peers": [
+      {
+        "agent": "w457",
+        "evidence": "~/brain_workers/w457/AUDIT_w456.md"
+      },
+      {
+        "agent": "w458",
+        "evidence": "~\\brain_workers\\w458\\REVIEW_PACKET.md"
+      }
+    ],
+    "scope": "finite free zero-field identities, local Legendre/exclusion statements, L5 conditional implication; scalar q=3 constants checked; SP and C0048 excluded",
+    "served_model_evidence": "UNKNOWN",
+    "theorem_promotion": "not authorized by this packet"
+  },
+  "canonical_target_check": {
+    "receipt": "store_target_lookup.json",
+    "read_only": true,
+    "nodes": [
+      "claim_38c945c83e6d9f9dc77b20f936b660e811e528c284f76bd513990e6ed06ecc6a",
+      "claim_9830d2b5c32b82afa88de780611e6b0fe5e81b7d425ff5fabff71dad19cc6930"
+    ],
+    "observed_status": "both concept/unverified; prior attempt reports no result"
+  }
+}

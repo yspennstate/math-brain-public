@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account03",
+  "slot": "B19",
+  "run_id": "20260922T160316Z-account03-B19-QFORM-r14",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "source_control_commit": "fefb32aad70a6d18bddce419b0886670fdbfb511",
+  "correction_inbox_blob": "7f181e495e359f3ec5037c4e40fa5bd5e6d3a21b",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "mathematical_premises": [
+    {
+      "result": "Prior B19 quarter-kernel and Schur critical-value reduction",
+      "source": "yspennstate/math-open-problems@0e6d1715955458010d43193cab3dafc293c0e28c",
+      "scope": "Opposite-sign physical pivot pair; exact original-coordinate Schur complement."
+    },
+    {
+      "result": "QFORM-RIDGE-DENSITY-v1 characteristic envelope",
+      "source": "yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7",
+      "scope": "Original-coordinate cross block; source supplies complete analytic proof; requested independent review pending."
+    }
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B19",
+    "result": "QFORM-FINITE-UNION-CORE-v1",
+    "source": "yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4",
+    "actual_application": "Transfer of the definite physical-section P(Q in I)<=100*pi*|I| inequality from the finite-union core to arbitrary independent cap-one densities."
+  },
+  "new_results": [
+    "QFORM-HOLDER-QUARTER-SPLICE-v1: any critical-value small-ball exponent alpha>1/4 closes the opposite-sign pivot branch.",
+    "QFORM-MIXED-COORDINATE-3OVER8-v1: a nonzero physical mixed coefficient yields P(|q-t|<=r)<=2(2r/|c|)^(3/8).",
+    "Fixed-s1 Schur cross-bank closure: low ridge dimension either has a diffuse side giving ridge-Hölder exponent 2/5 or localizes to a physical mixed coefficient.",
+    "QFORM-OFFDIAG-S2-3OVER20-CLOSURE-v1: under the full target hypotheses, s2(A-diag A)<=3/20 implies an essentially bounded density with branch constant <700."
+  ],
+  "exact_outputs": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7291482e652c4cb47efc44c1656c0af46fa0f45e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260922T160316Z-account03-B19-QFORM-r14/",
+    "checker_terminator": "QFORM_B19_S2_3OVER20_CLOSURE_CHECK_PASS"
+  },
+  "status": "TARGET_LEVEL_BRANCH_PROVED_FULL_CONJECTURE_OPEN",
+  "continuity_status": "OPEN_GLOBALLY_AND_NOT_PROVED_IN_NEW_QUARTER_SPLICE_BRANCHES",
+  "unresolved_implication": "QFORM-TWO-OFFDIAGONAL-RESOURCE-EXTRACTION-3OVER20-v1",
+  "next_step": "Use original-coordinate random sign cuts and Ky-Fan aggregate singular-value mass to force one already-paid cross/aggregate branch from s2(A-diag A)>3/20, without one-minor reciprocal selection."
+}

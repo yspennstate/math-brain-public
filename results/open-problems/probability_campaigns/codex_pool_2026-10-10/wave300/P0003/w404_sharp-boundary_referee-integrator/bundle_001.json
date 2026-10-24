@@ -1,0 +1,123 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w404",
+  "bundle_slug": "p0003-source-scope-and-sharp-boundaries-001",
+  "entries": [
+    {
+      "key": "grimmett-p0003-fixed-length",
+      "namespace": "probability.self_avoiding_walk",
+      "logical_name": "grimmett-p0003-fixed-length-honeycomb-sle-question",
+      "kind": "concept",
+      "title": "P0003: fixed-length honeycomb SAW scaling question",
+      "statement": "Grimmett's Question 2.2 asks whether a uniformly chosen n-step self-avoiding walk from the origin on the infinite hexagonal lattice, with a free endpoint, converges weakly after suitable rescaling to an SLE(8/3) random curve. The question does not specify the scaling exponent, SLE geometry or stopping rule, parametrization, or curve topology. This source question is distinct from the critical-fugacity boundary-to-boundary chordal SAW conjecture; no transfer between them is asserted here.",
+      "proof_text": null,
+      "assumptions": ["The source is Grimmett's Question 2.2, not an assertion of a present-day proof or current-open certificate."],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:2205.07318:question-2.2",
+        "url": "https://arxiv.org/pdf/2205.07318",
+        "revision": "v1 checked 2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "Does a uniformly distributed n-step SAW from the origin of H converge weakly"
+      }
+    },
+    {
+      "key": "critical-o1-is-ising",
+      "namespace": "probability.loop_models",
+      "logical_name": "critical-honeycomb-o1-interface-is-ising-sle3",
+      "kind": "concept",
+      "title": "Critical honeycomb O(1) interface is Ising/SLE(3)",
+      "statement": "In the honeycomb O(n) loop model with one boundary interface, n=1 and critical edge weight z=1/sqrt(3) correspond to the Ising case, whose interface has a proved SLE(3) limit. A related existing C0096 card calls that n=1 critical case site percolation; the primary source identifies it as Ising. This correction does not imply the n=0 SAW scaling limit.",
+      "proof_text": null,
+      "assumptions": ["n=1", "z=1/sqrt(3)", "boundary interface and boundary conditions as in BDGS Section 3.4"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1206.2092:section-3.4",
+        "url": "https://arxiv.org/html/1206.2092",
+        "revision": "as read 2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "For n=1 and z=1/sqrt(3), it has been proved that the interface converges to SLE_3"
+      }
+    },
+    {
+      "key": "midpoint-cycle-kernel",
+      "namespace": "probability.self_avoiding_walk",
+      "logical_name": "finite-honeycomb-midpoint-relation-cycle-kernel",
+      "kind": "lemma",
+      "title": "Cycle kernel of the honeycomb midpoint relation",
+      "statement": "On a finite straight-edge graph with nonzero edge displacements, impose at every vertex v the homogeneous midpoint equations sum over incident edges e of (p_e-v)F(p_e)=0, with boundary midpoint values fixed to zero. The complex solution space on internal edges has dimension |E|-|V|+c, where c is the number of connected components. For a connected plane patch this equals the number of bounded faces. This is an abstract linear-algebra statement about fields, not a characterization of the SAW partition observable.",
+      "proof_text": "Orient each internal edge e=(u,v), let d_e=v-u and J_e=(d_e/2)F(p_e). At u the contribution is J_e and at v it is -J_e, so the equations are BJ=0 for the oriented incidence matrix B. Every d_e is nonzero, making this change of variables invertible. On each connected component a spanning-tree minor gives rank |V_i|-1, while the rows sum to zero. Thus rank B=|V|-c and nullity |E|-|V|+c. Euler's formula gives the bounded-face count for a connected plane graph.",
+      "assumptions": ["finite straight-edge graph", "nonzero edge displacement for each internal edge", "edge variables distinguished even if geometric midpoints coincide", "all vertex equations imposed", "prescribed boundary midpoint values are zero"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w402-cycle-kernel-reviewed-w404-20261010",
+        "url": "https://arxiv.org/pdf/1007.0575",
+        "revision": "w402 ATTEMPT.md checked by w404 2026-10-10; upstream local relation in cited paper",
+        "license": "owner-own-work (original finite-graph proof; upstream relation attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bounded-fields-no-compactness",
+      "namespace": "probability.self_avoiding_walk",
+      "logical_name": "bounded-honeycomb-local-fields-can-oscillate-with-fixed-boundary-data",
+      "kind": "lemma",
+      "title": "Bounded local-relation fields can oscillate at one face",
+      "statement": "For shrinking honeycomb patches containing a complete face near a fixed interior point, there are complex midpoint fields satisfying every local vertex equation, with every boundary midpoint value equal to 1 and sup norm at most 2, yet with no locally uniform subsequence converging to a continuous function near that point. These are abstract fields and are not asserted to equal SAW observables.",
+      "proof_text": "The constant field 1 solves each honeycomb vertex equation because its three incident midpoint displacements sum to zero. On a counterclockwise interior face with edge e_j=v_j to v_(j+1), put H(p_j)=delta/(v_(j+1)-v_j) on the six face midpoints and H=0 elsewhere. At each face vertex, incoming and outgoing contributions are -delta/2 and +delta/2, hence cancel; all boundary values of H are zero and |H|<=1. For F=1+H, a face-edge midpoint and the third-edge midpoint at one face vertex differ in value by exactly 1 while their positions are sqrt(3)delta/2 apart and approach the fixed interior point. A continuous locally uniform limit is impossible.",
+      "assumptions": ["regular honeycomb mesh delta tending to zero", "a complete interior face tends to a fixed interior point", "all three incident midpoints included at every patch vertex", "fields are arbitrary complex functions subject only to the stated equations and boundary values"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w402-face-mode-reviewed-w404-20261010",
+        "url": "https://arxiv.org/pdf/1007.0575",
+        "revision": "w402 ATTEMPT.md independently checked by w404 2026-10-10",
+        "license": "owner-own-work (original face-mode proof; upstream relation attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "simple-paths-nonsimple-limit",
+      "namespace": "probability.self_avoiding_walk",
+      "logical_name": "simple-honeycomb-paths-can-have-macroscopic-loop-limit",
+      "kind": "lemma",
+      "title": "Simple honeycomb paths can have a nonsimple uniform limit",
+      "statement": "There are self-avoiding paths in one fixed planar domain on honeycomb meshes 1/N, with two distinct fixed limiting boundary endpoints and a uniformly bounded-speed parametrization, that converge uniformly to a path whose trace contains the boundary of a positive-area rectangle. Hence even uniform convergence of simple discrete paths does not alone imply a simple limit. The constructed paths are deterministic, not distributed as the target critical SAW.",
+      "proof_text": "Use the regular honeycomb embedding H(i,j)=(sqrt(3)i/2, 3j/2-((i+j) mod 2)/2). For even N, concatenate seven lattice routes: row 0 from (-4N,0) to (-4,0); a two-column climb to row 2N near column -4; row 2N to column 2N-1; a two-column descent to row 0 near column 2N; row 0 to column 3; a two-column descent to row -N near column 4; and row -N to column 4N. The routes have disjoint vertex regions except consecutive corners, and the parity rule gives valid honeycomb edges. They have 22N-12 edges. Assign each route time 1/7; maximum speed is below 28. Vertical-route progress differs from linear time by at most one row, giving vertical coordinate error at most 2/N; horizontal error is at most 2sqrt(3)/N. Thus the uniform error is at most 4/N. The limiting anchors are (-2sqrt(3),0),(0,0),(0,3),(sqrt(3),3),(sqrt(3),0),(0,0),(0,-3/2),(2sqrt(3),-3/2), so the trace contains a rectangle boundary and cannot be an injective arc.",
+      "assumptions": ["even N at least 8", "honeycomb graph and seven routes as specified", "piecewise-linear interpolation", "each route allotted time 1/7", "fixed domain containing all route interiors"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w403-honeycomb-pinch-reviewed-w404-20261010",
+        "url": "https://arxiv.org/pdf/2205.07318",
+        "revision": "w403 INDEPENDENT.md; w404 exact-rational reproduction 2026-10-10",
+        "license": "owner-own-work (original constructive counterexample)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "bounded-fields-no-compactness",
+      "to_key": "midpoint-cycle-kernel",
+      "kind": "semantic_association",
+      "rationale": "The bounded-fields card constructs a six-face midpoint mode; the cycle-kernel card identifies the full finite-graph space containing such modes. Both concern abstract local-relation fields, not physical SAW observables."
+    },
+    {
+      "from_key": "simple-paths-nonsimple-limit",
+      "to_key": "grimmett-p0003-fixed-length",
+      "kind": "semantic_association",
+      "rationale": "The simple-paths card warns that simple lattice paths can have a nonsimple trace limit; the P0003 card asks about a weak scaling limit of uniform fixed-length honeycomb paths. The counterexample does not use P0003's law."
+    },
+    {
+      "from_key": "critical-o1-is-ising",
+      "to_key": "grimmett-p0003-fixed-length",
+      "kind": "semantic_association",
+      "rationale": "The O(1) card is the proved critical Ising/SLE(3) interface; the P0003 card concerns O(0) self-avoiding walks and SLE(8/3). Their loop parameters and ensembles differ."
+    },
+    {
+      "from_key": "midpoint-cycle-kernel",
+      "to_key": "grimmett-p0003-fixed-length",
+      "kind": "semantic_association",
+      "rationale": "The kernel card describes an obstruction to inferring observable convergence from a local identity; the P0003 card asks for a fixed-length SAW scaling limit. No equivalence between the observable's chordal ensemble and P0003 is asserted."
+    }
+  ]
+}

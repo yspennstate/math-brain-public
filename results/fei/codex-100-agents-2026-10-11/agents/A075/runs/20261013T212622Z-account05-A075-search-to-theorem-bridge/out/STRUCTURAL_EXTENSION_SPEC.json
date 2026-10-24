@@ -1,0 +1,12 @@
+{
+  "helper_version": "A075-matching-v1 plus A075-sparse-structural-v1",
+  "families": ["Radius-one Hamming ball plus arbitrary graph edges (weight-two points)", "Padded monotone path A={0,e0,e0+e1,...,e0+...+e_(m-1)} on n physical bits"],
+  "domain": {"graph": "all labelled simple graphs on n=0,...,5", "path": "all 0<=m<=n<=9"},
+  "case_count": "1100 graph tables plus 55 path tables, no physical descendant census",
+  "symmetry": "None in validation; all labelled graphs in the stated domain. Analytic graph selection chooses a minimum-degree physical coordinate.",
+  "arithmetic": "Integer Walsh/physical edges; rational exact coefficients and outward entropy intervals; no float sign verdicts",
+  "memory_estimate_mb": 50,
+  "maximum_runtime_seconds": 60,
+  "purpose": "Validate analytic polynomial-sparsity cutoff, not discover a new finite maximum. Graph E<=2+o(1) uniformly with graph-independent bound for n>4; path E<=2+o(1) uniformly for n>=10. No larger truth-table enumeration follows automatically.",
+  "randomness": "None"
+}

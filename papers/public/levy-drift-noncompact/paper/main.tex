@@ -1,0 +1,229 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\essbot}{\lambda_{\mathrm{ess}}}
+
+\hypersetup{pdftitle={A Levy random drift destroys compactness for every confining power},pdfauthor={Yitzchak Shmalo}}
+
+\title[Random drift destroys compactness for every power]{A L\'evy random drift destroys compactness\\ for every confining power}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+
+\subjclass[2020]{60J60, 47A10, 60G51, 60K37}
+\keywords{Brox diffusion, essential spectrum, compact semigroup, semi-selfsimilar L\'evy process, random environment, Hardy inequality}
+
+\begin{document}
+
+\begin{abstract}
+Let $V$ be a two-sided semi-selfsimilar L\'evy process of index $\alpha\in(0,2)$ on $\R$ and let $L^{w+V}=\frac12(\Delta-\nabla(w+V)\cdot\nabla)$ act on $L^2(\R;e^{-(w+V)}\,dx)$. For $w_1=|x|^\delta$ and $w_2=-|x|^\delta$ the unperturbed semigroups are compact exactly when $\delta>1$. Shiozawa and Wang proved that the perturbed semigroups are noncompact, with bottom of the essential spectrum equal to $0$, when $\delta\le 1/\alpha$, and asked what happens when $\delta>1/\alpha$. We show that for $\delta>1/\alpha$ the bottom of the essential spectrum of $-L^{w_1+V}$ is $0$ almost surely as soon as the L\'evy measure of $V$ on one of the two half-lines charges $(-\infty,0)$, and that the same holds for $-L^{w_2+V}$ as soon as one of them charges $(0,\infty)$. In particular, when $V$ changes sign and either $\alpha<1$ or the jumps of $V$ go both ways, both semigroups are noncompact for every $\delta>0$. The mechanism is local: a jump of size $m$ at distance $\tau$ from the origin lowers a Rayleigh quotient by a factor $e^{-m/2}$, while the confining power costs only a factor $\tau^{2\delta-2}$, and an $\alpha$-semi-selfsimilar process has jumps of size of order $\tau^{1/\alpha}$ at every scale.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+\subsection*{Setting}
+We work in the one-dimensional setting of Shiozawa and Wang~\cite[Sections~4.1 and~5]{SW}. Let $V_+=\{V_+(x)\}_{x\ge0}$ be a real L\'evy process with $V_+(0)=0$, not identically zero, and suppose that there are $c>0$, $c\ne1$, and $\alpha\in(0,2)$ with
+\begin{equation}\label{eq:ss}
+\{V_+(cx)\}_{x\ge0}\overset{d}{=}\{c^{1/\alpha}V_+(x)\}_{x\ge0}.
+\end{equation}
+Let $V_-$ be a L\'evy process independent of $V_+$ with the same property for the same $\alpha$ (in~\cite{SW} the two processes also share the smallest scaling ratio $r_0$; the proofs below use only that each of $V_\pm$ satisfies~\eqref{eq:ss} for some $c\ne1$), and set $V(x)=V_+(x)$ for $x\ge0$ and $V(x)=V_-(-x)$ for $x<0$. The law of $V$ is denoted by $\Q$, and $\nu_\pm$ denotes the L\'evy measure of $V_\pm$.
+
+For a locally bounded measurable function $u$ on $\R$ let $\mu^u(dx)=e^{-u(x)}\,dx$ and
+\[
+\cE^u(f,f)=\frac12\int_\R f'(x)^2\,e^{-u(x)}\,dx .
+\]
+The form $(\cE^u,C_c^\infty(\R))$ is closable on $L^2(\R;\mu^u)$; let $(\cE^u,\cF^u)$ be its closure, $L^u$ the associated self-adjoint operator, formally $L^u=\frac12(\frac{d^2}{dx^2}-u'\frac{d}{dx})$, and $\essbot^u=\inf\sigma_{\rm ess}(-L^u)\in[0,\infty]$, with $\inf\emptyset=\infty$. The semigroup $e^{tL^u}$ is compact for one (equivalently every) $t>0$ if and only if $\sigma_{\rm ess}(-L^u)=\emptyset$. Since $V$ is right-continuous with left limits on $[0,\infty)$ and left-continuous with right limits on $(-\infty,0]$, $u=w+V$ is locally bounded whenever $w$ is.
+
+For $\delta>0$ put $w_1(x)=|x|^\delta$ and $w_2(x)=-|x|^\delta$. Without the drift, $L^{w_k}$ generates a compact semigroup if and only if $\delta>1$~\cite[Section~2]{SW}. Shiozawa and Wang proved that the random drift can destroy this: under the hypothesis that $V_+(1)$ takes both signs with positive probability, $\essbot^{w_k+V}=0$ $\Q$-a.s.\ for $k=1,2$ whenever $\delta\le1/\alpha$~\cite[Proposition~5.2]{SW}. Their argument uses that both integrals $\int^\infty e^{w_k+V}$ and $\int^\infty e^{-(w_k+V)}$ diverge, which fails for $\delta>1/\alpha$, and they leave that range open~\cite[Remark~5.3(ii)]{SW}: for $\delta>1/\alpha$ it is not known whether $L^{w_1+V}$ or $L^{w_2+V}$ generates a compact semigroup.
+
+\subsection*{Results}
+
+\begin{theorem}\label{thm:main}
+Let $\delta>1/\alpha$.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item If $\nu_+((-\infty,0))>0$ or $\nu_-((-\infty,0))>0$, then $\essbot^{w_1+V}=0$ $\Q$-a.s.
+\item If $\nu_+((0,\infty))>0$ or $\nu_-((0,\infty))>0$, then $\essbot^{w_2+V}=0$ $\Q$-a.s.
+\end{enumerate}
+In either case the corresponding semigroup is noncompact $\Q$-a.s.
+\end{theorem}
+
+The theorem does not use the sign hypothesis of~\cite[Proposition~5.2]{SW}. Combined with that proposition it gives the following.
+
+\begin{corollary}\label{cor:both}
+Suppose that $\Q(V_+(1)>0)>0$ and $\Q(V_+(1)<0)>0$, and that $\alpha<1$ or $\nu_+$ charges both $(-\infty,0)$ and $(0,\infty)$; the latter holds in particular when $V_+$ is symmetric. Then for every $\delta>0$, $\essbot^{w_1+V}=\essbot^{w_2+V}=0$ $\Q$-a.s., and neither $L^{w_1+V}$ nor $L^{w_2+V}$ generates a compact semigroup.
+\end{corollary}
+
+So, for the operators of~\cite[Remark~5.3(ii)]{SW}, the random drift destroys compactness for every confining power, not only for $\delta\le1/\alpha$, as soon as the environment changes sign and its jumps go both ways. The sign of the jump matters, and it is different for the two operators: $w_1+V$ is a well that confines, and a downward jump of $V$ at $\tau$ is a ledge just behind which almost all the mass to the right of $\tau$ sits, while the energy needed to climb to it is small; for $w_2+V$ the roles of mass and energy are exchanged and an upward jump plays the same role.
+
+\begin{remark}\label{rem:open}
+The theorem leaves one case: $\alpha\in[1,2)$, $\delta>1/\alpha$, and $\nu_+$, $\nu_-$ both concentrated on the same half-line. For $\alpha\in(1,2)$ this case is not empty under the sign hypothesis, since a spectrally positive strictly $\alpha$-stable process takes both signs. Then one of the two operators is covered by the theorem and we do not decide the other.
+\end{remark}
+
+The proof is in Section~\ref{sec:proof}. It builds, along a sequence of large jumps of $V$, test functions with disjoint supports and Rayleigh quotients tending to $0$; Section~\ref{sec:prelim} collects what is needed about $V$, and Section~\ref{sec:checks} describes the computations that accompany the paper.
+
+\section{Preliminaries}\label{sec:prelim}
+
+\begin{lemma}\label{lem:minmax}
+Let $u$ be locally bounded and measurable on $\R$. Suppose that there are nonzero compactly supported Lipschitz functions $f_1,f_2,\dots$ with pairwise disjoint supports and
+\[
+\cE^u(f_n,f_n)\le\varepsilon_n\,\|f_n\|^2_{L^2(\mu^u)},\qquad\varepsilon_n\to0 .
+\]
+Then $\essbot^u=0$; in particular $e^{tL^u}$ is not compact.
+\end{lemma}
+
+\begin{proof}
+A compactly supported Lipschitz function $f$ lies in $\cF^u$: if $\rho_\epsilon$ is a mollifier, $f*\rho_\epsilon\in C_c^\infty$ is supported in a fixed compact $K$ for $\epsilon\le1$, converges to $f$ uniformly, and $(f*\rho_\epsilon)'=f'*\rho_\epsilon\to f'$ in $L^2(K,dx)$; since $e^{-u}$ is bounded on $K$, the convergence holds in the norm $(\cE^u(\cdot,\cdot)+\|\cdot\|^2_{L^2(\mu^u)})^{1/2}$.
+
+Since the supports are disjoint, $f_nf_m=0$ and $f_n'f_m'=0$ a.e.\ for $n\ne m$, so the $f_n$ are orthogonal both in $L^2(\mu^u)$ and for $\cE^u$. Fix $\varepsilon>0$ and $N$ with $\varepsilon_n<\varepsilon$ for $n\ge N$. Every $g\ne0$ in the span $S$ of $\{f_n\}_{n\ge N}$ satisfies $\cE^u(g,g)<\varepsilon\|g\|^2$. Let $P$ be the spectral projection of $-L^u$ for $[0,\varepsilon]$. If $P$ had finite rank, some $g\ne0$ in the infinite-dimensional space $S$ would be orthogonal to its range; the spectral measure of $g$ would live on $(\varepsilon,\infty)$, giving $\cE^u(g,g)\ge\varepsilon\|g\|^2$, a contradiction. So $P$ has infinite rank. If $\sigma_{\rm ess}(-L^u)\cap[0,\varepsilon]$ were empty, $\sigma(-L^u)\cap[0,\varepsilon]$ would consist of finitely many eigenvalues of finite multiplicity and $P$ would have finite rank. Hence $\essbot^u\le\varepsilon$ for every $\varepsilon>0$.
+\end{proof}
+
+In the rest of this section $X$ is a L\'evy process with $X(0)=0$, L\'evy measure $\nu$, and $\{X(cx)\}_{x\ge0}\overset d=\{c^{1/\alpha}X(x)\}_{x\ge0}$ for some $c\ne1$, $\alpha\in(0,2)$. Replacing $x$ by $x/c$ shows that the same relation holds with $c^{-1}$ in place of $c$, so we take $c>1$.
+
+\begin{lemma}\label{lem:nu}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item $\nu(c^{1/\alpha}B)=c^{-1}\nu(B)$ for every Borel set $B\subset\R\setminus\{0\}$.
+\item For $t>0$, $\nu(\{|x|>t\})\le c\,\nu(\{|x|>1\})\,t^{-\alpha}$. Consequently $\int_{|x|>1}|x|^p\,\nu(dx)<\infty$ for $0<p<\alpha$, and $\int_{0<|x|\le1}|x|\,\nu(dx)<\infty$ if $\alpha<1$.
+\item The Gaussian coefficient of $X$ is $0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The process $x\mapsto X(cx)$ is a L\'evy process with characteristic exponent $c\psi$, where $\psi$ is that of $X$, so its Gaussian coefficient is $cA$ and its L\'evy measure is $c\nu$. The process $c^{1/\alpha}X$ has Gaussian coefficient $c^{2/\alpha}A$ and L\'evy measure $B\mapsto\nu(c^{-1/\alpha}B)$. By uniqueness of the L\'evy--Khintchine triplet, $cA=c^{2/\alpha}A$, so $A=0$ as $\alpha\ne2$, which is (c); and $c\nu(B)=\nu(c^{-1/\alpha}B)$, which is (a) after replacing $B$ by $c^{1/\alpha}B$.
+
+For (b), let $k\in\mathbb Z$ with $c^{k/\alpha}\le t<c^{(k+1)/\alpha}$. By (a), $\nu(\{|x|>t\})\le\nu(\{|x|>c^{k/\alpha}\})=c^{-k}\nu(\{|x|>1\})\le c\,t^{-\alpha}\nu(\{|x|>1\})$. The two integrals are $\int_0^\infty pt^{p-1}\nu(\{|x|>\max(t,1)\})\,dt$ and at most $\int_0^1\nu(\{|x|>t\})\,dt$, both finite by the bound.
+\end{proof}
+
+\begin{lemma}\label{lem:sup}
+For every $\varepsilon>0$, almost surely $\sup_{0\le y\le x}|X(y)|\le x^{1/\alpha+\varepsilon}$ for all sufficiently large $x$.
+\end{lemma}
+
+\begin{proof}
+Let $S=\sup_{0\le y\le1}|X(y)|$ and fix $p\in(0,\alpha)$. The function $g(r)=\max(1,r)^p$ is increasing, continuous and submultiplicative, and $\int_{|x|>1}g(|x|)\,\nu(dx)<\infty$ by Lemma~\ref{lem:nu}(b). By~\cite[Theorem~25.3]{Sato}, $\E g(|X(1)|)<\infty$, and by~\cite[Theorem~25.18]{Sato}, $\E g(S)<\infty$. Applying the scaling relation $n$ times, $\{X(c^ny)\}_{y\ge0}\overset d=\{c^{n/\alpha}X(y)\}_{y\ge0}$; as the paths are right-continuous, the supremum over $[0,1]$ is a supremum over rationals, so $\sup_{0\le y\le c^n}|X(y)|\overset d=c^{n/\alpha}S$. By Markov's inequality,
+\[
+\Pr\Big(\sup_{0\le y\le c^n}|X(y)|>c^{n(1/\alpha+\varepsilon/2)}\Big)\le\E g(S)\,c^{-np\varepsilon/2},
+\]
+which is summable in $n$. By the Borel--Cantelli lemma, almost surely $\sup_{[0,c^n]}|X|\le c^{n(1/\alpha+\varepsilon/2)}$ for all large $n$. For $c^{n-1}\le x\le c^n$ this gives $\sup_{[0,x]}|X|\le c^{1/\alpha+\varepsilon/2}x^{1/\alpha+\varepsilon/2}\le x^{1/\alpha+\varepsilon}$ once $x$ is large.
+\end{proof}
+
+\section{Large jumps with quiet surroundings, and test functions}
+
+\begin{lemma}\label{lem:jumps}
+Let $X$ be as in Section~\ref{sec:prelim} with $c>1$, suppose $\nu((-\infty,0))>0$, choose $t_0>0$ with $\nu((-\infty,-t_0])>0$, and put $m_n=t_0c^{n/\alpha}$. For $\eta\in(0,(c-1)/4)$ let $E_n(\eta)$ be the event that there is $\tau\in(c^n,c^{n+1})$ with $[\tau-\eta c^n,\tau+\eta c^n]\subset(c^n,c^{n+1})$ and
+\begin{align*}
+&X(\tau)-X(\tau-)\le-m_n,\\
+&|X(y)-X(\tau-)|\le m_n/4\quad\text{for }y\in[\tau-\eta c^n,\tau),\\
+&|X(y)-X(\tau)|\le m_n/4\quad\text{for }y\in[\tau,\tau+\eta c^n].
+\end{align*}
+Then there is $\eta$ such that almost surely $E_n(\eta)$ occurs for infinitely many $n\ge1$. The same holds with the inequality for the jump replaced by $X(\tau)-X(\tau-)\ge m_n$ if $\nu((0,\infty))>0$ and $t_0$ is chosen with $\nu([t_0,\infty))>0$.
+\end{lemma}
+
+\begin{proof}
+Put $X^{(n)}(y)=c^{-n/\alpha}X(c^ny)$. Then $E_n(\eta)$ is the event $E_0(\eta)$ written for $X^{(n)}$ in place of $X$ (with $\tau/c^n$ in place of $\tau$). Since $X^{(n)}$ and $X$ have the same law as processes with right-continuous paths, $\Pr(E_n(\eta))=\Pr(E_0(\eta))=:p(\eta)$ for all $n$. As $\eta$ decreases, $E_0(\eta)$ increases. If $X$ has a jump $X(\tau)-X(\tau-)\le-t_0$ at some $\tau\in(1,c)$, then by the existence of the left limit at $\tau$ and right-continuity at $\tau$, $E_0(\eta)$ holds for all small $\eta$. The number of such jumps is Poisson with mean $(c-1)\nu((-\infty,-t_0])>0$~\cite[Theorem~19.2]{Sato}, so $\lim_{\eta\downarrow0}p(\eta)\ge1-\exp(-(c-1)\nu((-\infty,-t_0]))>0$, and we fix $\eta$ with $p(\eta)>0$.
+
+Every condition in $E_n(\eta)$ concerns differences $X(y)-X(y')$ with $y,y'\in(c^n,c^{n+1})$ and the jumps in that interval, so $E_n(\eta)$ is measurable with respect to the increments of $X$ on $[c^n,c^{n+1}]$. These intervals have disjoint interiors, so the events $E_n(\eta)$, $n\ge1$, are independent, each of probability $p(\eta)>0$, and the second Borel--Cantelli lemma finishes the proof. The case of upward jumps is the same.
+\end{proof}
+
+For the rest of the section $u$ is a locally bounded measurable function on $[0,\infty)$, $s(y)=\int_0^ye^{u(z)}\,dz$ is its scale function and $\mu(dy)=e^{-u(y)}\,dy$. For a compactly supported Lipschitz function $f$ on $(0,\infty)$, extended by $0$ to $\R$, we write $\cE(f)=\frac12\int f'^2\,d\mu$ and $\|f\|^2=\int f^2\,d\mu$.
+
+\begin{lemma}\label{lem:test}
+Let $0<h$ and $\tau-h>1$.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item For $R\ge\tau+h$ let $f$ equal $(s(y)-s(\tau-h))/(s(\tau)-s(\tau-h))$ on $[\tau-h,\tau]$, $1$ on $[\tau,R]$, $R+1-y$ on $[R,R+1]$, and $0$ elsewhere. Then
+\[
+\frac{\cE(f)}{\|f\|^2}\le\frac{1}{2\,(s(\tau)-s(\tau-h))\,\mu([\tau,\tau+h])}+\frac{\mu([R,R+1])}{2\,\mu([\tau,\tau+h])}.
+\]
+\item For $1< L\le\tau-h$ let $f$ equal $y-L+1$ on $[L-1,L]$, $1$ on $[L,\tau]$, $(s(\tau+h)-s(y))/(s(\tau+h)-s(\tau))$ on $[\tau,\tau+h]$, and $0$ elsewhere. Then
+\[
+\frac{\cE(f)}{\|f\|^2}\le\frac{1}{2\,(s(\tau+h)-s(\tau))\,\mu([\tau-h,\tau])}+\frac{\mu([L-1,L])}{2\,\mu([\tau-h,\tau])}.
+\]
+\item $(s(\tau)-s(\tau-h))\,\mu([\tau,\tau+h])\ge h^2\exp\big(\inf_{[\tau-h,\tau)}u-\sup_{[\tau,\tau+h]}u\big)$ and $(s(\tau+h)-s(\tau))\,\mu([\tau-h,\tau])\ge h^2\exp\big(\inf_{[\tau,\tau+h]}u-\sup_{[\tau-h,\tau)}u\big)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Since $s'=e^u$ is bounded on compacts, both functions are Lipschitz with compact support in $(0,\infty)$. In (i), on $[\tau-h,\tau]$ we have $f'=e^u/\Delta$ with $\Delta=s(\tau)-s(\tau-h)$, so $\frac12\int_{\tau-h}^\tau f'^2e^{-u}=\frac12\int_{\tau-h}^\tau e^{u}/\Delta^2=1/(2\Delta)$; on $[R,R+1]$, $f'=-1$ contributes $\frac12\mu([R,R+1])$; elsewhere $f'=0$. Also $\|f\|^2\ge\mu([\tau,R])\ge\mu([\tau,\tau+h])$. Part (ii) is the same computation with the roles of the two sides exchanged. For (iii), $s(\tau)-s(\tau-h)=\int_{\tau-h}^\tau e^u\ge he^{\inf_{[\tau-h,\tau)}u}$ and $\mu([\tau,\tau+h])\ge he^{-\sup_{[\tau,\tau+h]}u}$, and similarly for the second product.
+\end{proof}
+
+\section{Proofs}\label{sec:proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Fix $\varepsilon>0$ with $1/\alpha+\varepsilon<\delta$.
+
+\emph{(a), with $\nu_+((-\infty,0))>0$.} Take $c>1$ in~\eqref{eq:ss} and apply Lemmas~\ref{lem:sup} and~\ref{lem:jumps} to $X=V_+$; let $\eta$ be as in Lemma~\ref{lem:jumps}. Almost surely the conclusions of both lemmas hold; fix such a path. On $(0,\infty)$ the potential is $u(y)=y^\delta+V_+(y)$. Let $n$ be large, with $\eta c^n\ge1$, $c^n\ge4$ and $\sup_{[0,x]}|V_+|\le x^{1/\alpha+\varepsilon}$ for $x\ge c^n$, and such that $E_n(\eta)$ holds with jump time $\tau\in(c^n,c^{n+1})$. Put
+\[
+h=h_n=\min\{1,(2c^{n+1})^{1-\delta}\},\qquad R=R_n=2c^{n+1}.
+\]
+For $|y-\tau|\le h$ the mean value theorem gives $|y^\delta-\tau^\delta|\le\delta h\xi^{\delta-1}$ for some $\xi\in[c^n-1,c^{n+1}+1]\subset[1,2c^{n+1}]$, which is at most $\delta$ in both cases $\delta\ge1$ and $\delta<1$. Since $h\le\eta c^n$, the event $E_n(\eta)$ gives, writing $v=V_+(\tau-)$,
+\[
+\inf_{[\tau-h,\tau)}u\ge\tau^\delta-\delta+v-\tfrac{m_n}4,\qquad\sup_{[\tau,\tau+h]}u\le\tau^\delta+\delta+V_+(\tau)+\tfrac{m_n}4\le\tau^\delta+\delta+v-\tfrac{3m_n}4,
+\]
+so by Lemma~\ref{lem:test}(iii) the first term in Lemma~\ref{lem:test}(i) is at most $\frac12h_n^{-2}e^{2\delta-m_n/2}$. For the second term, $\tau+h\le c^{n+1}+1$, so
+\[
+\mu([R,R+1])\le\exp\Big(-R^\delta+\sup_{[0,R+1]}|V_+|\Big),\qquad\mu([\tau,\tau+h])\ge h\exp\Big(-(c^{n+1}+1)^\delta-\sup_{[0,R]}|V_+|\Big),
+\]
+and the second term is at most $\frac12h_n^{-1}\exp\big((c^{n+1}+1)^\delta-(2c^{n+1})^\delta+2(2c^{n+1}+1)^{1/\alpha+\varepsilon}\big)$. Now $\log(1/h_n)\le\max(\delta-1,0)\log(2c^{n+1})$ grows linearly in $n$, while $m_n=t_0c^{n/\alpha}$ and $(2c^{n+1})^\delta-(c^{n+1}+1)^\delta\ge\frac12(2^\delta-1)c^{(n+1)\delta}$ (for large $n$) grow exponentially, the latter faster than $(2c^{n+1}+1)^{1/\alpha+\varepsilon}$. Hence the Rayleigh quotient $\varepsilon_n$ of the function $f_n$ of Lemma~\ref{lem:test}(i) tends to $0$ along the $n$ for which $E_n(\eta)$ holds. The support of $f_n$ lies in $[c^n-1,2c^{n+1}+1]$. Choosing such $n_1<n_2<\cdots$ with $c^{n_{j+1}}-1>2c^{n_j+1}+1$ gives functions with disjoint supports, and Lemma~\ref{lem:minmax} gives $\essbot^{w_1+V}=0$.
+
+\emph{(b), with $\nu_+((0,\infty))>0$.} Now $u(y)=-y^\delta+V_+(y)$ on $(0,\infty)$, and we use the upward version of Lemma~\ref{lem:jumps}, so that $V_+(\tau)\ge V_+(\tau-)+m_n$. With $h$ as before,
+\[
+\inf_{[\tau,\tau+h]}u\ge-\tau^\delta-\delta+v+\tfrac{3m_n}4,\qquad\sup_{[\tau-h,\tau)}u\le-\tau^\delta+\delta+v+\tfrac{m_n}4,
+\]
+so the first term in Lemma~\ref{lem:test}(ii) is at most $\frac12h_n^{-2}e^{2\delta-m_n/2}$. Take $L=c^n/2$, which satisfies $1<L\le\tau-h$. Then $\mu([L-1,L])=\int_{L-1}^Le^{y^\delta-V_+(y)}\,dy\le\exp(L^\delta+\sup_{[0,L]}|V_+|)$ and $\mu([\tau-h,\tau])\ge h\exp((c^n-1)^\delta-\sup_{[0,c^{n+1}]}|V_+|)$, so the second term is at most $\frac12h_n^{-1}\exp\big((c^n/2)^\delta-(c^n-1)^\delta+2c^{(n+1)(1/\alpha+\varepsilon)}\big)$, which tends to $0$ as before. The supports lie in $[c^n/2-1,c^{n+1}+1]$, and Lemma~\ref{lem:minmax} applies to a sparse subsequence.
+
+\emph{The negative half-line.} If $\nu_-$ carries the jumps, let $g(x)=f(-x)$, where $f$ is built as above on $(0,\infty)$ from $\tilde u(y)=w_k(y)+V_-(y)=w_k(-y)+V(-y)$, $y>0$. The substitution $x=-y$ gives $\cE^{w_k+V}(g,g)=\cE^{\tilde u}(f,f)$ and $\|g\|_{L^2(\mu^{w_k+V})}=\|f\|_{L^2(\mu^{\tilde u})}$, and the argument above applies to $V_-$ verbatim.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:both}]
+For $\delta\le1/\alpha$ this is~\cite[Proposition~5.2]{SW}, and for $\delta>1/\alpha$ it follows from Theorem~\ref{thm:main} once $\nu_+$ charges both half-lines. If $V_+$ is symmetric, so is $\nu_+$, and $\nu_+\ne0$: otherwise, by Lemma~\ref{lem:nu}(c), $V_+(x)=bx$, and symmetry forces $b=0$, contradicting $V_+\not\equiv0$.
+
+Let $\alpha<1$. By Lemma~\ref{lem:nu}(b),(c), $V_+$ has no Gaussian part and $\int_{0<|x|\le1}|x|\,\nu_+(dx)<\infty$, so its paths have bounded variation~\cite[Theorem~21.9]{Sato} and its characteristic exponent is $\psi(\theta)=i\gamma_0\theta+J(\theta)$ with $J(\theta)=\int(e^{i\theta x}-1)\,\nu_+(dx)$, where $V_+(x)=\gamma_0x+\sum_{0<y\le x}(V_+(y)-V_+(y-))$. The scaling relation~\eqref{eq:ss} reads $c\psi(\theta)=\psi(c^{1/\alpha}\theta)$, and Lemma~\ref{lem:nu}(a) gives $J(c^{1/\alpha}\theta)=cJ(\theta)$. Hence $c\gamma_0=c^{1/\alpha}\gamma_0$, and $\gamma_0=0$ since $\alpha\ne1$ and $c\ne1$. So $V_+(1)$ is the sum of the jumps of $V_+$ on $(0,1]$. If $\nu_+((-\infty,0))=0$, then $V_+(1)\ge0$ a.s., and if $\nu_+((0,\infty))=0$, then $V_+(1)\le0$ a.s.; both contradict the sign hypothesis.
+\end{proof}
+
+\section{Computations}\label{sec:checks}
+
+The script \texttt{code/checks.py} in~\cite{code}, with its output \texttt{code/checks\_output.txt}, accompanies the paper; none of the proofs depends on it. It checks the energy identity in the proof of Lemma~\ref{lem:test} on random step potentials. For $V=0$ it computes the bottom Dirichlet eigenvalue of $-L^{|x|^\delta}$ on $[x,2x]$, $x=10,40,160$, through the ground state transform: the values grow for $\delta=2$ (up to $12854$ at $x=160$), approach $1/8$ for $\delta=1$, and decrease to $0$ for $\delta=\frac12$, as they must since the unperturbed semigroup is compact exactly when $\delta>1$. For $\delta=2$ it plants a jump of size $m\in\{4,8,12\}$ at $\tau=6$ in the drift and solves the Dirichlet problem on $[\tau-1,\tau+1]$ with finite elements: for $w_1$ and a downward jump, and for $w_2$ and an upward jump, the bottom eigenvalue lies below the Rayleigh quotient of the test function of Lemma~\ref{lem:test} and falls by more than $e^{-2}$ each time $m$ grows by $4$, while a jump of the other sign does not lower it. Finally, for symmetric $\alpha$-stable environments with $\alpha=\frac12$ and $\alpha=\frac32$ and $\delta=3$ it draws the largest downward jump in the blocks $[2^n,2^{n+1}]$, $n=2,5,\dots,20$, simulates the environment around it, and evaluates the first term of the bound in Lemma~\ref{lem:test}(i), which is below $10^{-3}$ in the last three blocks in both cases.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. On 14 September 2026 a Claude agent (Anthropic), working in Claude Code, found that a downward jump of the environment lifts the Hardy quotient of $L^{w_1+V}$ by the exponential of its size, that the two operators are broken by jumps of opposite signs, and the resulting answer to~\cite[Remark~5.3(ii)]{SW}. On 20 October 2026 Claude Opus~5.5, working in Claude Code, wrote the proofs in the form given here, the computer checks and the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/levy-drift-noncompact}.
+
+\begin{thebibliography}{9}
+\bibitem{Sato} K.~Sato, \emph{L\'evy Processes and Infinitely Divisible Distributions}, Cambridge Studies in Advanced Mathematics~68, Cambridge University Press, Cambridge, 1999.
+\bibitem{SW} Y.~Shiozawa and J.~Wang, \emph{Essential spectrum for Brox-type diffusion processes}, arXiv:2607.07410 (2026).
+\bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/levy-drift-noncompact}.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,114 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "LYONS-CONJ2.6-X095",
+  "category": "HARD_OUTSIDE",
+  "report_kind": "STUCK_THINKING",
+  "input_snapshot_sha": "19ebc71bf2d8a3749eff6c7eb4e01119979ce8a4",
+  "pre_delivery_master_sha": "c5c3ec1f23c8b46025a17b6de7a7177cf4e86ad9",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/runs/2026-09-16/2026-09-16T20-52-00Z__report.md",
+    "creation_commit": "d9f9a65e1634fd35097f8b585f8e53d5b3b2bf1a",
+    "observed_blob": "d58cc0f6005f16a08fa24310dec2c028d879c19e",
+    "receipt_commit": "0856b8792ad1d81319e5fedd7e91d7e5932b4821"
+  },
+  "neighbor": {
+    "task": "P11",
+    "path": "proofnet24/P11-lyons-entropy/runs/2026-09-16/2026-09-16T19-11-51Z__run-report.md",
+    "creation_commit": "24019c1f103fcfdb4d3478bbe3c1de98d7fb668b",
+    "coordination": "P11 is on rare-site/perfect-correlation boundary architecture; this run stayed on the distinct conditional real-transverse compensation route"
+  },
+  "source": {
+    "author": "Russell Lyons",
+    "year": 2014,
+    "locator": "arXiv:1406.2707, Conjecture 2.6",
+    "checked_date_utc": "2026-09-16",
+    "original_current_version_check": "arXiv record remains the 2014-06-10 submission; ICM text states the full-subset Shannon entropy midpoint inequality for all positive contractions",
+    "later_author_check": "Andras Meszaros arXiv:1905.11459 / Annals of Probability 2020 treats limiting/invariant determinantal entropy and sofic approximation, not the universal finite-kernel conjecture",
+    "citing_literature_check": "bounded fresh exact-title/Conjecture-2.6/determinantal-entropy/positive-contraction search found no later universal finite-kernel proof or refutation; this search miss is not a novelty proof",
+    "intake_recovery": "bounded exact-arXiv search under probability_1000_intake_* returned no canonical row; recorded as HISTORY_GAP rather than nonexistent history"
+  },
+  "frozen_metric": {
+    "name": "B_Phi",
+    "before": "UNMEASURED",
+    "after": "UNMEASURED",
+    "movement": "no global movement",
+    "unchanged_count": "UNKNOWN; at least three consecutive durable own reports (18:45, 19:59, 20:52 UTC) visibly record UNMEASURED -> UNMEASURED"
+  },
+  "stuck_protocol": {
+    "trigger_basis": "at least three consecutive durable visible no-movement reports; complete historical count remains UNKNOWN",
+    "recovery_ordinal": "UNKNOWN; not invented",
+    "exact_blocker": "For strict ordered rank-one two-site pairs C0-C1=rho e11 and real transverse u, prove (1/(c(1-c)))<W,(c S0^-1+(1-c) S1^-1)^-1 W> - 2 u^T G u >= 0.",
+    "what_is_missing": "a finite-separation coupled inequality for the weighted parallel sum of the two complete two-site Hessian metrics exploiting the exact rank-one endpoint relation; endpointwise L coercivity is too strong and infinitesimal positivity does not glue globally",
+    "simplest_unproved_case": "c=1/2 real-transverse compensation for arbitrary strict real-gauged C1, feasible rho>0 with C0=C1+rho e11 strict, and arbitrary real u",
+    "nearest_solved": [
+      "worker 036 fixed-cross-vector-direction theorem",
+      "previous PROB20-16 complete imaginary-transverse compensation theorem"
+    ],
+    "chosen_next_action": "prove the simplest unproved c=1/2 special case",
+    "next_methods": [
+      8,
+      14,
+      23
+    ]
+  },
+  "methods_tried": [
+    1,
+    6,
+    15
+  ],
+  "outcomes": {
+    "B1": "reparameterized every strict real two-site DPP as a classical binary channel using conditional probabilities u=x+s/(1-y), v=x-s/y; H2=h(y)+(1-y)h(u)+y h(v) and L=logit(u)-logit(v). This clarifies prior endpoint monotonicity but does not control shorting through y in the parallel sum.",
+    "B6": "expanded the exact real-transverse compensation at rho=0; exact symbolic self-check gives det R_loc = 36 r^2 y(1-y)/(p00 p10 p01 p11)>0 in the generic strict domain. This rules out a first-order local bifurcation but supplies no finite-rho monotonicity theorem.",
+    "B15": "refuted the invented auxiliary endpoint coercivity S_C(U)>=2 L beta^2 by an exact rational witness x=y=4/5, r=9999/50000, U=[[-1,1],[1,-1]], with det U=0, FI<52/3<2L. This is route failure only, not a Lyons counterexample."
+  },
+  "new_claims": [],
+  "route_analysis_only": [
+    "conditional Bernoulli coordinate identities",
+    "exact infinitesimal rho->0 determinant factorization",
+    "exact counterexample to an invented stronger endpoint coercivity inequality"
+  ],
+  "mathematical_status": "PARTIAL",
+  "closure": false,
+  "audit_refs": {
+    "new_source_claims": "NONE",
+    "required_for_closure": "actual P26 plus a distinct qualified OTHER-task audit"
+  },
+  "interval_repair": {
+    "status": "already adopted; not rerun",
+    "corrected_source_sha256": "c7041ccc556e6bee8e64afb43f506693f8fc6962e7cedc4ad12fd3d3c6bc9e7c"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/runs/2026-09-16/2026-09-16T22-24-00Z__report.md",
+    "creation_commit": "8e13acc52266273d04b7905c3634a43164b4fb3d",
+    "blob": "17b223bc4899a1265ab445dbf55a63ce2896f5ad",
+    "readback": "VERIFIED",
+    "correction": {
+      "canonical_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/artifacts/2026-09-16T22-24-00Z__notation_correction_v2.md",
+      "creation_commit": "1c6bd933c515989c40591f73c07ae0672f7961f8",
+      "blob": "7246a77e785ac2407b0985eee1f17aafa7731fbc",
+      "readback": "VERIFIED",
+      "note": "supersedes an earlier correction artifact whose displayed formulas repeated two notation typos; historical files were not overwritten"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/artifacts/2026-09-16T22-24-00Z__stuck_real_sector_check.py",
+      "creation_commit": "f8e0f1e010f70d87d35a9bfcf58076d7a07a64a3",
+      "blob": "d5ace99457d8d0c9d347da6dc4f3652daa260ee9",
+      "readback": "VERIFIED"
+    },
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/artifacts/2026-09-16T22-24-00Z__stuck_real_sector_output.txt",
+      "creation_commit": "2969a7d0b2395e5dea931ce35bf592cfabf07dd7",
+      "blob": "91e7de3fdd984d12b019e73bfb68a76653166e2d",
+      "readback": "VERIFIED",
+      "execution": "exit_code=0; unrelated spreadsheet-runtime warmup traceback retained on stderr and not used as evidence"
+    }
+  ],
+  "model": "GPT-5.6 Sol",
+  "reasoning": "UNVERIFIED",
+  "requested_model": "GPT-6",
+  "requested_reasoning": "maximum",
+  "scheduler_model_selector_exposed": false,
+  "scheduler_reasoning_selector_exposed": false
+}

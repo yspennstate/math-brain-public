@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260923T111138Z-account01-B01-qform-auto11",
+  "source_control_commit": "6ffff05dccec5720a487b4933264125d0a15e947",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@91dbcb0e8b3f6faa4af9629aaaff2f69d385695a",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260923T100534Z-account02-B01-qform/REPORT.md",
+      "scope": "scalar product-preserving L4 square-phase bound int |E exp(it(aX^2+ell X))|^4 <=27pi/(2|a|), uniform in affine term"
+    },
+    {
+      "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/",
+      "scope": "two-large-cross-singular-directions plus collective-tail exit; exact rank-two case has T2=0 and is not paid by that theorem"
+    },
+    {
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+      "scope": "product-projection/Fourier mechanisms and D5 context; D5 has zero currency on exact-rank-two cross blocks"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-RANK2-CROSS-KERNEL-CURVATURE-L4-v1",
+    "status": "PROVED_SUPPORTING_TARGET_LEVEL_ANALYTIC_THEOREM_PENDING_INDEPENDENT_REVIEW",
+    "statement": "For three original physical rows H and disjoint original bank J, if M=A[H,J] has rank two, n spans its physical left kernel, V2=e2(MM^T), and kappa0=|n^T A[H,H]n|>0, then the full ambient quadratic form has a continuous C0 density satisfying ||p_Q||inf <= ((15/4)12^(1/5)) [V2*kappa0]^(-1/5), retaining arbitrary signs, same-bank curvature, outside couplings and affine terms.",
+    "constant": 6.164069360689597,
+    "continuity": "PROVED_IN_SCOPE",
+    "full_target": "OPEN"
+  },
+  "structural_identity": "Writing M=[K;alpha^T K], v=(-alpha,1), n=v/||v|| and a_eff=v^T A[H,H]v, one has det(KK^T)|a_eff|=e2(MM^T)|n^T A[H,H]n|.",
+  "partner_application": {
+    "partner": "account02/B01",
+    "source_commit": "91dbcb0e8b3f6faa4af9629aaaff2f69d385695a",
+    "application": "On its strict-N3 Hadamard family, choose H=(U1,U2,Z1) and condition on Z2: V2=epsilon^-2, kappa0=epsilon, so ||p_Q||inf <=6.1641 epsilon^(1/5)<=6.1641 for 0<epsilon<=1. This shows one source-disjoint scalar square already suffices with the rank-two cross packet."
+  },
+  "outputs": {
+    "main_report_commit": "08fb05b46cdab5913d268dc42ca656a16c88a313",
+    "bundle_tip_commit": "801b2f68707a0e95185bc800c6d7fd26a2b829d0",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T111138Z-account01-B01-qform-auto11/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T111138Z-account01-B01-qform-auto11/CHECK_OUTPUT.txt",
+    "checker_status": "PASS",
+    "read_back": true
+  },
+  "unresolved_implication": "QFORM-RANK2-CROSS-NEAR-NULL-KERNEL-ROUTING-v1",
+  "next_step": "Route exact-rank-two cross survivors with zero or very small physical kernel curvature to exact-null/near-null coloop, grouped-square, hub/star, ridge, pair, or higher-volume exits without selecting a tiny local minor.",
+  "independent_review_status": "NOT_YET_REVIEWED_END_TO_END"
+}

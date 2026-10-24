@@ -1,0 +1,9 @@
+# Saved derivation checkpoint
+
+Use the overlap mask C=A(z0)*(A(z1) OR A(z2)). Its mean alpha=3/8, physical indicator influence I(C)=5/4, and L=I(C)/2=5/8. F selects b or its flip at zero only where C=1. Let delta=2^-k, s=sqrt(delta), a=1-s+delta. The selector root has d=alpha*delta, odd-face debit Q_root=alpha*delta*(k+5/3). Root erasure satisfies B_root=alpha*delta*(k+log2 e+o(1)); spectral posterior J_root=h2(d)-B_root=alpha*delta*log2(8/3)+o(delta). Thus J_root/B_root~log2(8/3)/k and Q_root/J_root~k/log2(8/3). Both are positive for all sufficiently large even k. The normalized root odd-face debit is Q_root/I(F)~2delta.
+
+The selector-first stopping tree queries the three physical controls once on each relevant path. After selector restriction, each core is b or b_prime, and the A023 exposure criterion applies: a_child>=3/4 for k>=4, residual competing event probability 1/2, hence a_child*(1-q)>=3/8>e/8. Common and final-exclusive nodes have a constant child and are strictly K=4 good. The first-exclusive nodes are strictly good by the empty-remaining-control-fiber exposure argument. Only the root can be bad. This is to be reconstructed independently and exactly validated, not accepted from a floating table.
+
+Resources: I(F)=alpha*(k/2+(k+1)delta)+a*L; queried influence D=alpha*delta+a*L; leaf influence I_leaf=alpha*(k/2+kdelta). Chosen terminal uniform references have CE_leaf=alpha*k, and H_leaf=alpha*(H(b)+H(b_prime))/2. Terminal KL=CE_leaf-H_leaf, nonnegative. CE_leaf<=2I_leaf. All leaf entropy is retained. Root posterior J_root and terminal reference KL live on different spaces and are not pooled.
+
+Next verification: exact Walsh entropy log vectors at every actual tree node, exact K=4 badness signs, Q_bad, influence ownership, cumulative posterior/JS/Gamma credit conservation, terminal CE and root positive-credit signs. No universal odd-face payment is asserted.

@@ -1,0 +1,50 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "stream": "B05",
+  "run_id": "20261014T063255Z-account01-B05-reused-character-equivalence-a023",
+  "primary_packet_id": "A023",
+  "packet_id": "A023",
+  "packet_ids": ["A023"],
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "gap_ids": ["GU-ASYMMETRY-MISMATCH", "B05_RARE_REFUNDS"],
+  "attempt_id": "B05-A023-REUSED-CHARACTER-EQUIVALENCE-03",
+  "method": "Replace the fresh balancing character by one existing coordinate, derive the full character-multiplication slice charge, and test whether the former half-contraction survives.",
+  "source_control_revision": "GU-LASER-20261014 / 2026-10-14.1",
+  "source_control_blob": "9448198701fbfe0cceb72bda7a6837ebd59704f9",
+  "assignment_blob": "05447e6d999437bb82a266b427bd76a4b37266b6",
+  "claim_versions_used": [
+    "B05-A023-ACTIVATION-SMR-v1",
+    "B05-A023-BALANCED-PRECONDITIONED-ACTIVATION-v1"
+  ],
+  "claims_created_or_changed": ["B05-A023-REUSED-CHARACTER-EQUIVALENCE-v1"],
+  "source_artifacts": [
+    "GU focus blob 9448198701fbfe0cceb72bda7a6837ebd59704f9",
+    "B05 assignment blob 05447e6d999437bb82a266b427bd76a4b37266b6",
+    "Execution protocol blob 457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "Activation proof blob 08fc36890c086e7f1c16729d5c04aa0fdbf3e6f7",
+    "Balanced transfer proof/report blobs e442b1812a1b7e9b73c698fd8d823b81d7c2b9a0 and f832a87da87d1813ea3b37742d16055c17712dce"
+  ],
+  "prior_status": "Two fresh coordinates gave L(T(q))<=L(q)/2 for c>=3/2+eta. Reusing the balancing coordinate was the next open hypothesis removal.",
+  "mathematical_delta": "Proved that direct reuse is exactly ordinary unbalanced activation under a Boolean involution, so its arbitrary-core restriction closure is already universal. Derived the exact whole-slice surcharge in PROOF.md equation (8). Refuted the inherited half-contraction for every c>0 using q=chi_x, while preserving cone preservation and universal GU as open.",
+  "deliverable_status": "SOURCE_COMPLETE_ROUTE_OBSTRUCTION_PENDING_INDEPENDENT_REVIEW",
+  "mathematical_status": "PROVED_EQUIVALENCE_AND_TEMPLATE_REFUTATION; UNIVERSAL_GU_OPEN",
+  "acceptance_evidence": ["PROOF.md", "CHECK.py", "CHECK.out", "CLAIM_STATEMENT.txt"],
+  "remaining_obstacle": "The exact signed whole-slice expression in equation (8) lacks a nonreusing bound. Direct arbitrary-core reuse is universal, so the next theorem must either preserve the L<=0 cone on a genuinely restricted class or introduce a new physical-query reserve.",
+  "next_consumers": ["A087", "A094", "B01", "B06", "B19", "B20"],
+  "reviewer_targets": ["A087", "A094"],
+  "next_action": "Freeze the cone-preserving inequality L(A(chi_xq))<=0 under L(q)<=0 and test it analytically on the smallest nontrivial restriction-closed class containing the A025 overlap family, retaining W_x and D_xW rather than a singleton surrogate.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [],
+  "delivery_status": {
+    "state": "DELIVERED_AND_EXACT_READBACK_VERIFIED",
+    "canonical_bundle_head_observed": "aa366d8d1b84663914bc4d2d5f3395bd28d0ec11",
+    "brain_bundle_head_observed": "a3e883b371fd3d70fb9c685ff79baf9df353b146",
+    "verified_files_before_status_update": 11,
+    "canonical_native_ingestion": "NOT_CLAIMED",
+    "brain_native_ingestion": "NOT_CLAIMED"
+  },
+  "model": "Codex",
+  "reasoning_effort": "UNKNOWN",
+  "full_fei_status": "OPEN"
+}

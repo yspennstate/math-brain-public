@@ -1,0 +1,15 @@
+{
+  "helper_version": "A029-depth2-v1",
+  "family": "All Boolean sign truth tables on uniform cubes n=1,2,3,4, including irrelevant variables",
+  "domain": "masks 0..2^(2^n)-1; bit x means f(x)=+1, unset means -1; coordinate zero is least significant",
+  "case_count": 65812,
+  "symmetry": "None; output complement and input signed-permutation equivalents all retained",
+  "trees": "One relevant root query; independently stop or query one remaining relevant coordinate in each physical child; depth at most two. Root-only trees included.",
+  "metrics": "r1=min_i Delta_i H/Inf_i; r2=min_T (H-E_leaf H)/(I-E_leaf I); maximize r1-r2",
+  "arithmetic": "integer FWHT, exact integer influence; outward rational atanh log bounds rounded to fixed point 2^80; all ratio/gap comparisons cross-multiplied integers",
+  "memory_estimate_mb": 100,
+  "pilot_max_seconds": 60,
+  "max_runtime_seconds": 1800,
+  "dimension_escalation": false,
+  "certificate": "Global maximum upper bound plus attained witness lower bound; exact ties handled by intervals, never floats"
+}

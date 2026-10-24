@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260923T200355Z-account01-B01-qform-auto11",
+  "control_commit_at_start": "4c80cfff0aae4c7717bbf7b6d8194e6b85409469",
+  "control_commit_before_publication": "f9e600d050cfd7ee6d08fc8e5d074f83577dd110",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "continuity_full_target": "OPEN",
+  "result_status": "PROVED_TWO_SUPPORTING_THEOREMS_PENDING_INDEPENDENT_REVIEW",
+  "result_ids": [
+    "QFORM-ONEHUB-TWOBANK-GENERAL-BILINEAR-SCHUR-L4-v1",
+    "QFORM-SCALAR-SQUARE-PLUS-E2-v1"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "main_proof_commit": "a6d895e2a3c418a5b331ce9b54908725b49f1629",
+    "main_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T200355Z-account01-B01-qform-auto11/REPORT.md",
+    "e2_synthesis_commit": "0bbbd2e99a4d26b7a4380a9827d92596daeaf2a6",
+    "e2_synthesis_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T200355Z-account01-B01-qform-auto11/E2_SQUARE_SYNTHESIS.md",
+    "check_bundle_tip": "16248c53a46ee3c7a8080dad37342e863300c2b3",
+    "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T200355Z-account01-B01-qform-auto11/CHECKS.txt"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B01/20260923T200355Z-account01-B01-qform-auto11.md",
+    "commit": "315995a9d70a8fe29115060eae4a653b8f717033"
+  },
+  "main_theorem_summary": "For mutually independent scalar X and R2 banks U,V with caps 1,M_U,M_V, arbitrary symmetric A,C, arbitrary invertible 2x2 B, p,q and a, Q=aX^2+2Xp^TU+2Xq^TV+U^TAU+2U^TBV+V^TCV+affine has phi_Q in L1 and continuous C0 density whenever d_B=a-2p^TB^{-T}q+q^TB^{-1}AB^{-T}q is nonzero, with ||p_Q||inf <= C0(M_U M_V)^(2/5)|det B|^(-2/5)|d_B|^(-1/5), C0=4.67149102355819. The reverse orientation uses d_B^(V)=a-2q^TB^{-1}p+p^TB^{-T}CB^{-1}p. The proof uses the exact slope r=B^TU+qX, account02/B01 scalar L4 square-phase theorem, and 2D original-bank Plancherel; no pointwise scalar decay is used.",
+  "e2_synthesis_summary": "If Q=a(X0+h(Y))^2+R(Y), a!=0, and R has a residual original-bank cross block with Z=e_2(M^TM)>0, then the row-gate-free E2 half-Riesz theorem plus the exact square-density kernel gives ||p_Q||inf <= 8e^(1/4)|a|^(-1/2)Z^(-1/8). Essential boundedness only; continuity not claimed by this synthesis.",
+  "strict_target_checks": "Main theorem stress family has spectral eigenvalues approximately {-2.34017297,-2,1.37778437,2,4.96238861}, all five with modulus>=1, while physical diagonal/pair pivots vanish as O(1/m); theorem gives 3.540328167355882. E2 synthesis stress family with a=epsilon and two residual cross singular values epsilon^-1 gives uniform 8e^(1/4)=10.2722033335 while physical pivots can be arbitrarily small.",
+  "designated_partner_applied": {
+    "account_slot": "account02/B01",
+    "theorem": "QFORM-ONEHUB-Z1-NOMARGINAL-HALFRIESZ-v1",
+    "canonical_commit": "339c1fdf3bc65a79f5be126e730dd3b251320e66",
+    "actual_inequality": "8 epsilon^(-1/2)(epsilon^(-2))^(-1/4)=8; heavy-row subbranch 2^(11/4)=6.727171322...",
+    "additional_dependency": "account02/B01 scalar square-phase L4 theorem at 91dbcb0e8b3f6faa4af9629aaaff2f69d385695a is used directly in the main proof"
+  },
+  "new_peer_result_consumed": "account02/B06 row-gate-free E2 half-Riesz theorem at math-open-problems@c2ce876df8b5483a00802170001d4144bb4cdbfa, combined into QFORM-SCALAR-SQUARE-PLUS-E2-v1",
+  "new_fleet_context": "Interactive exact-rank-three heavy-two-direction theorem at math-open-problems@08c736d590fd14e0af7952f2a965b37a352dd086 pays bounded heavy sets capturing two robust spectral directions; the near-coloop one-direction branch remains.",
+  "phase_aligned_counterexample": "PRESERVED; no law-uniform pointwise quadratic Fresnel decay is asserted",
+  "first_unpaid_implication": "QFORM-TWOBANK-SIMULTANEOUS-ZEROKERNEL-OR-NEARSINGULAR-CROSS-ROUTING-v2",
+  "next_step": "In the remaining one-direction near-coloop and full-matrix tail states, force either scalar-square+E2 currency, an invertible two-bank cross block with nonzero kernel curvature in one product-preserving orientation, or an existing pair/projected-crossing/grouped/ridge/volume receiver. The simultaneous singular-cross plus double-zero-kernel-curvature endpoint remains unpaid.",
+  "independent_review": "PENDING",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED"
+}

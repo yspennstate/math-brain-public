@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "arithmetic": "Integer Walsh coefficients, exact entropy signatures and binary matrix ranks.",
+  "compression_obstruction": {
+    "negative_points_before": [1, 6, 10, 12],
+    "negative_points_after": [0, 6, 10, 12],
+    "H_before": "3",
+    "H_after": "2",
+    "individual_influences_before": ["1/2", "1/2", "1/2", "1/2"],
+    "individual_influences_after": ["1/2", "1/2", "1/2", "1/2"],
+    "walsh_numerators_before": [8, -4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, -8, -4],
+    "walsh_numerators_after": [8, -8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -8, -8],
+    "conclusion": "No finite C bounds this entropy loss by C times the influence decrease."
+  },
+  "local_rank_potential_obstruction": {
+    "negative_points": [1, 2, 4, 8],
+    "R": "1/2",
+    "Q": "19/16",
+    "coordinates": [
+      {"coordinate": 0, "R_decrease": "0", "Q_decrease": "0", "entropy_decrease": "(9/8) log2(3) - 1 > 783/1000"},
+      {"coordinate": 1, "R_decrease": "0", "Q_decrease": "0", "entropy_decrease": "(9/8) log2(3) - 1 > 783/1000"},
+      {"coordinate": 2, "R_decrease": "0", "Q_decrease": "0", "entropy_decrease": "(9/8) log2(3) - 1 > 783/1000"},
+      {"coordinate": 3, "R_decrease": "0", "Q_decrease": "0", "entropy_decrease": "(9/8) log2(3) - 1 > 783/1000"}
+    ]
+  },
+  "rank_monotonicity": {
+    "Boolean_tables_checked": 278,
+    "pointwise_restriction_comparisons": 6280
+  },
+  "curvature_composition": {
+    "function_parameter_cases": 22760,
+    "pointwise_rank_and_flag_checks": 269824,
+    "coverage": "Exhaustive binary outer/one- or two-bit children for dimensions (1,1),(1,2),(2,2); exhaustive ternary outer/one-bit children; 1000 sampled ternary outer/two-bit children.",
+    "scope": "Exact composition identity only. No universal Fourier-entropy bound by curvature rank is proved."
+  },
+  "full_FEI_status": "UNPROVED"
+}

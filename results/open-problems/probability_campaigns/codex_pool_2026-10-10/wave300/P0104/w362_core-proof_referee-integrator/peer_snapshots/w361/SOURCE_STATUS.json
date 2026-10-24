@@ -1,0 +1,54 @@
+{
+  "target": "P0104",
+  "worker": "w361",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "reason": "A current solution was not established by the checked primary sources. An April 2026 source describes lattice polynomial subdiffusivity as open; that is dated evidence, not exhaustive October certification.",
+  "recovered_intake_statement": "Under suitable nondegenerate iid passage-time assumptions, prove a fluctuation exponent strictly below 1/2, identify the planar exponent as 1/3, and establish a positive exponent in a suitable dimension.",
+  "intake_evidence": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json",
+    "key": "op-p0104",
+    "cited_primary": "Auffinger, Damron and Hanson, 50 years of first-passage percolation, Questions 13 and 15, Section 3, cited PDF pages 34 and 40",
+    "exact_primary_question_check": "pending targeted read; intake does not specify a universal set of suitable assumptions"
+  },
+  "primary_sources_checked": [
+    {
+      "url": "https://arxiv.org/abs/2604.01214",
+      "version": "v1, 2026-04-01",
+      "title": "Rotationally invariant first passage percolation: Breaking the n/log n variance barrier",
+      "scope": "Theorem 1: a specified isotropic Riemannian model on R^2 has variance at most n^(1-epsilon); does not identify chi=1/3 for iid lattice FPP.",
+      "locator": "https://arxiv.org/html/2604.01214v1, Introduction and Theorem 1",
+      "checked": "abstract and targeted introduction/model sections, not full proof"
+    },
+    {
+      "url": "https://annals.math.princeton.edu/2013/177-2/p07",
+      "title": "The universal relation between scaling exponents in first-passage percolation",
+      "scope": "chi=2xi-1 is proved subject to the paper's exponent-existence assumptions; an identity does not pin chi to 1/3.",
+      "checked": "primary abstract; full hypothesis audit not claimed"
+    },
+    {
+      "url": "https://www.math.northwestern.edu/~auffing/FPPSurvey.pdf",
+      "title": "50 years of first passage percolation",
+      "version": "November 8, 2015; 147-page PDF",
+      "checked": "model definition and contents; targeted Questions 13/15 check pending"
+    }
+  ],
+  "prior_attempt": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006a04.json",
+    "key": "at-p0104",
+    "finding": "n/log n variance does not imply a fluctuation exponent below 1/2; polynomial saving and a matching lower bound remain needed. No repeat claim or novelty asserted."
+  },
+  "owner_solved_work": {
+    "memory_slug": "fpp_width3_strip_time_constant_solved_2026_07_12",
+    "scope": "Exact directed width-three strip time constant; distinct from full-lattice fluctuation exponents."
+  },
+  "scars_used": [
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "proof_steps_need_derived_joint_structure_2026_09_09",
+    "fpp_wall_is_the_variance_ratio_three_routes_2026_08_10",
+    "fpp_gap_event_is_the_overlap_event_2026_08_22"
+  ],
+  "independent_first": "INDEPENDENT_OBSTRUCTION.md and CLAIMS.jsonl row w361-C001 saved before requesting or reading w360 ATTEMPT.md",
+  "formal_check": null,
+  "full_target_proved": false
+}

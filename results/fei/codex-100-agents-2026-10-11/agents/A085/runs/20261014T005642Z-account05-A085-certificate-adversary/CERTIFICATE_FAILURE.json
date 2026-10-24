@@ -1,0 +1,20 @@
+{
+  "verdict": "COMPLETED_SCOPE_CHECK; EXISTING_SOURCE_STATEMENTS_SURVIVE",
+  "source_versions": ["A090-PARITY-TAIL-LOW-INFLUENCE-COMPLETENESS@1", "A096-TERMINAL-KL-REFUND-AUDIT@1"],
+  "failed_extension": "Replace s(N)=o(N) with arbitrary finite nonnegative s(N) in the loss-free optimal higher-tail constant equality",
+  "cutoff": "s_*(N)=N-1-log2(N), N>=1",
+  "influence_threshold_exact": "N*2^(1-N)",
+  "actual_Boolean_family": "one-point defects and output complements in every N; at N=2 also four signed dictators",
+  "retained_tail_supremum": 2,
+  "oriented_tail_supremum": 1,
+  "unrestricted_constants_strict_lower_bounds": {"K_E": "107/40", "K_M": "47/40"},
+  "strict_lower_bound_witness": {"n": 5, "negative_vertices": [5,12,13]},
+  "finite_endpoint_exception_counts": {"N1": 2, "N2": 12, "N3": 16},
+  "empty_class_negative_control": "s(N)=N; already N=1 has minimum I=1 greater than threshold 1/2",
+  "scope": "All N>=1 and every fixed ell>=2, analytic proof; no claim at growing ell or arbitrary terminal-payment bound",
+  "first_unsupported_universal_line": "A finite all-dimensional K_E, equivalently the complete retained terminal-core KL payment",
+  "proof": "PROOF.md",
+  "validation": "out/audit.json",
+  "existing_claim_refuted": false,
+  "full_FEI": "OPEN"
+}

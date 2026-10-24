@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260923T033225Z-account01-B15-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "control_commit_at_prepublication": "59e065060e0194266905b9104569b26d1e1957a1",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "premises": [
+    {
+      "source": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T031931Z-account01-B15-QFORM-auto11/REPORT.md",
+      "scope": "Exact compact smooth-kernel normal form for the sharp target constant, using absolute continuity plus Lebesgue differentiation, and extreme-source reduction to bounded finite interval unions."
+    },
+    {
+      "source_repository_commit": "yspennstate/math-open-problems@00d696f70a758aa3e5c94dc1711f178ff03d9ebb",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260923T030440Z-account02-B15-QFORM-auto11/REPORT.md",
+      "scope": "Ambient original-coordinate indefinite physical 3x3 block majority-sheet submeasure bound, C_B <= pi*sqrt(2)/sigma_min(B), arbitrary outside curvature and couplings retained."
+    },
+    {
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T212015Z-account02-B15-qform-r18/REPORT.md",
+      "scope": "Definite original-coordinate physical pair gives full output density bound pi/sqrt(|det D|)."
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-GENERIC-COUNTABLE-CORE-v1",
+      "status": "PROVED_SUPPORTING_REDUCTION",
+      "statement": "The exact sharp QFORM constant equals the supremum of the fixed compact smooth-kernel functional over a countable core: rational symmetric A with s3(A)>1, simple spectrum and every nonempty principal minor nonzero; rational |y|>2; and product indicators of bounded finite unions of rational intervals of total length one."
+    },
+    {
+      "id": "QFORM-GENERIC-BOX-PIECEWISE-SMOOTH-v1",
+      "status": "PROVED_REGULARITY_LEMMA",
+      "statement": "For every datum in the generic countable core, the raw quadratic output density is C-infinity away from a finite set of face-critical output values. No uniform modulus, derivative bound, or critical-count bound is claimed."
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account02/B15",
+    "source_repository_commit": "yspennstate/math-open-problems@00d696f70a758aa3e5c94dc1711f178ff03d9ebb",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260923T030440Z-account02-B15-QFORM-auto11/REPORT.md",
+    "actual_inequality": "For any indefinite physical triple S on the generic core, s3(A) E[psi(y-Q) 1_majority] <= pi sqrt(2) s3(A)/sigma_min(A_SS); hence the full kernel functional is bounded by this paid term plus the minority/two-sheet contribution."
+  },
+  "canonical_output": {
+    "repository_commit": "yspennstate/math-open-problems@ef1de44aeeac36672fcf1e155088a73490971e2e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T033225Z-account01-B15-QFORM-auto11/REPORT.md"
+  },
+  "brain_handoff": {
+    "commit": "8a6fb9d2e7f9675d0140e96165182f9975006081",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B15/20260923T033225Z-account01-B15-QFORM-auto11.md"
+  },
+  "unresolved_implication": "On the generic countable core, control simultaneous minority/two-sheet compact-kernel contributions after aggregating across original-coordinate triples/banks before paying reciprocal near-singular block constants, or force a completed diffuse-volume/definite-pair exit.",
+  "next_step": "Seek a product-provenance aggregate inequality for the minority/two-sheet kernel term that is stable as every useful physical sigma_min tends to zero; do not replace it by generic X-ray control.",
+  "review_status": "NEW_RESULTS_NOT_END_TO_END_FULL_SOLUTION; no new independent review claimed"
+}

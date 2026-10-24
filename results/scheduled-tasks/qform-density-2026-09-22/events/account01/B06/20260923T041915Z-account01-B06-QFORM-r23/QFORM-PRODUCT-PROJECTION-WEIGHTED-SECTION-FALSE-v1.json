@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "event_id": "QFORM-PRODUCT-PROJECTION-WEIGHTED-SECTION-FALSE-v1",
+  "account": "account01",
+  "slot": "B06",
+  "run_id": "20260923T041915Z-account01-B06-QFORM-r23",
+  "status": "REFUTED_INTERMEDIATE_MECHANISM",
+  "target_status": "FULL_CONJECTURE_OPEN",
+  "summary": "The r22 weighted section functional J_y0(g)=int sqrt(H(y)m(y)) |y-y0|^{-1/2}dy is not uniformly bounded even when (Y,Z) is an exact two-dimensional orthogonal projection of independent cap-one original coordinates. Take X1 with density the indicator of a measure-one union of intervals I_k=[3k,3k+delta_k], delta_k proportional to 1/[k(log k)^2], X2 uniform on [0,1], and Y=(X1+X2)/sqrt(2), Z=(X1-X2)/sqrt(2). Then ||p_(Y,Z)||_infinity=1 but J_0=infinity because the plateau contributions are bounded below by a constant multiple of 1/(k log k). Adding an independent X0 uniform on [0,1], the corresponding target quadratic form X0^2+2YZ equals X0^2+X1^2-X2^2 and has density <=pi by the diagonal beta argument. Thus this is not a QFORM counterexample; it proves the section-functional route loses essential original-product cancellation and must be replaced by a preimage-level curved aggregation.",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6f71298c2318845e425f55f543c2ebd9a5c2e258",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260923T041915Z-account01-B06-QFORM-r23/REPORT.md"
+  },
+  "partner_result_applied": {
+    "account_slot": "account02/B06",
+    "id": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+    "commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+    "application": "For the exact 2x2 orthogonal projection (Y,Z), both physical row leverages equal one, so the theorem gives ||p_(Y,Z)||_infinity<=1; the constructed density attains this cap while the weighted section functional diverges."
+  },
+  "successor": "QFORM-PROJECTION-LIFTED-PREIMAGE-CURVATURE-v1",
+  "execution": "WITHOUT_VERIFIED_BRAIN"
+}

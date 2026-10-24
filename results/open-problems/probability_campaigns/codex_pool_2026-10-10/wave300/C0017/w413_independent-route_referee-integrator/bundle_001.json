@@ -1,0 +1,48 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w413",
+  "bundle_slug": "c0017-source-and-reviewed-partial-lemmas-20261010",
+  "entries": [
+    {
+      "key": "c0017-source-guard",
+      "namespace": "probability.percolation",
+      "logical_name": "c0017-square-bond-source-status-guard-20261010",
+      "kind": "concept",
+      "title": "C0017 square-bond conformal-invariance source and status guard",
+      "statement": "The historical Garban-Steif target asks for conformal invariance of critical p=1/2 bond percolation on Z^2. Their Chapter II section 4 explicitly calls it open in its 2012 context. The intake strengthens this into Cardy crossing limits and SLE(6) interface convergence; those are not the wording of the one-sentence historical open-problem note. A 2024 Wang Zhou preprint claims SLE(6) convergence under a technical boundary condition, while a 2026 Duminil-Copin et al. paper establishes large-scale rotational invariance and describes full conformal invariance as a further step. The correctness and acceptance of the 2024 claim were not checked here, so current solved/open status is UNKNOWN. Do not cite this source guard as a proof or a novelty certificate.",
+      "proof_text": null,
+      "assumptions": ["Historical wording is from Garban-Steif arXiv:1102.5761v3, Chapter II section 4, printed page 24.", "2024 claim is arXiv:2409.03235v6, Theorem 2, under Condition C.", "2026 rotational-invariance scope is arXiv:2012.11672v2."],
+      "domain": "planar critical percolation",
+      "source": {"source_id": "owner-own-work:w413:C0017-source-audit-20261010", "url": "urn:owner-own-work:w413:C0017-source-audit-20261010", "revision": "2026-10-10; SOURCE_STATUS.json and CLAIMS.jsonl in w413", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "finite-terminal-obstruction",
+      "namespace": "probability.percolation",
+      "logical_name": "independent-bond-gadget-intermediate-terminal-partition",
+      "kind": "lemma",
+      "title": "An independent-edge gadget with both extreme terminal partitions has an intermediate partition",
+      "statement": "Let G be a finite undirected graph with k>=3 distinct terminals. Its edges are independently open with probabilities in [0,1]. If the terminal partition is all separated with positive probability and all connected with positive probability, then some strictly intermediate terminal partition has positive probability. If its m optional-edge probabilities lie in [epsilon,1-epsilon], 0<epsilon<=1/2, its partition law has total-variation distance at least min(q,1-q,epsilon^m) from the selector law assigning probability q to all connected and 1-q to all separated, for 0<q<1.",
+      "proof_text": "Delete surely closed edges and contract surely open components. Positivity of the all-separated event makes the terminals lie in distinct contracted components. Positivity of the all-connected event gives a terminal-spanning connected subgraph using optional edges. Choose an edge-minimal such subgraph; every edge is needed to connect at least two terminal groups. Open exactly its edges except one and close all other optional edges. The removed edge separates two groups each containing a terminal, while within at least one group two terminals remain connected because k>=3. Thus the induced partition is strictly intermediate and the exact configuration has positive probability. With m optional probabilities in [epsilon,1-epsilon], that configuration has probability at least epsilon^m. The selector assigns zero to all intermediate partitions, giving the TV bound. If either extreme has zero probability under the gadget, test that extreme against its selector mass q or 1-q instead.",
+      "assumptions": ["Finite undirected graph; k>=3 distinct terminals.", "Independent Bernoulli edge states.", "Quantitative bound additionally assumes all m optional probabilities in [epsilon,1-epsilon].", "No conclusion uniform in growing m."],
+      "domain": "finite percolation connectivity",
+      "source": {"source_id": "owner-own-work:w411:C0017-L2-reviewed-w413-20261010", "url": "urn:owner-own-work:w411:C0017-L2", "revision": "2026-10-10; w411 ATTEMPT.md and w413 REVIEW_PACKET.md", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "two-cardy-martingales",
+      "namespace": "probability.percolation",
+      "logical_name": "two-cardy-ratio-martingales-identify-sle6-driver-conditional",
+      "kind": "lemma",
+      "title": "Two conditional Cardy ratio martingales identify a Brownian Loewner driver",
+      "statement": "Let W be a continuous adapted real chordal Loewner driver with deterministic W(0), using dg_t(z)=2/(g_t(z)-W_t)dt. For three ordered deterministic marks W(0)<x1<x2<x3, set Xi(t)=g_t(xi)-W_t and localize before any mark is swallowed, so 0<X1<X2<X3. Let C(u) be the normalized integral from 0 to u of [s(1-s)]^(-2/3)ds. If both C(X1/X2) and C(X1/X3) are continuous local martingales in the same usual filtration on that localized lifetime, then W-W(0) is a continuous local martingale with quadratic variation 6t on that lifetime, hence is locally a sqrt(6)-Brownian driver. This conditional statement does not assert that square-lattice crossing observables satisfy its premise or that an interface trace converges.",
+      "proof_text": "The first ratio u=C^{-1}(M12) is a continuous semimartingale after localization since C is smooth and strictly increasing. The difference D=g_t(x2)-g_t(x1)>0 has finite variation and X2=D/(1-u); hence X2 and W=g_t(x2)-X2 are semimartingales. Write W=W(0)+M+A with V=<M>. For any pair X<Y, Ito's formula for C(X/Y), using dX=2/X dt-dW and dY=2/Y dt-dW, gives the vanishing finite-variation condition dA=(1/X+1/Y)(2dt-dV/3). Apply it to (X1,X2) and (X1,X3). Subtraction gives (1/X2-1/X3)(2dt-dV/3)=0 as signed measures. The coefficient is strictly positive with locally bounded reciprocal before swallowing, so dV=6dt and then dA=0. Levy's characterization gives the Brownian driver up to the localized lifetime.",
+      "assumptions": ["Usual filtration; W continuous adapted, W(0) deterministic.", "Capacity convention dg_t(z)=2/(g_t(z)-W_t)dt.", "Three distinct ordered marks remain unswallowed.", "Both Cardy-ratio processes are local martingales in the same filtration.", "Conclusion is restricted to the lifetime where those premises hold."],
+      "domain": "stochastic Loewner evolution",
+      "source": {"source_id": "owner-own-work:w412:C0017-L1-reviewed-w413-20261010", "url": "urn:owner-own-work:w412:C0017-L1", "revision": "2026-10-10; w412 ATTEMPT.md and w413 REVIEW_PACKET.md", "license": "owner-own-work", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "finite-terminal-obstruction", "to_key": "c0017-source-guard", "kind": "semantic_association", "rationale": "The finite gadget lemma blocks an exact all-or-none independent-edge replacement proposed as a route toward C0017, but does not refute its conformal limit."},
+    {"from_key": "two-cardy-martingales", "to_key": "c0017-source-guard", "kind": "semantic_association", "rationale": "The conditional Loewner lemma identifies a possible interface limit only if two square-lattice conditional Cardy observables are proved, which remains the gap."},
+    {"from_key": "c0017-source-guard", "to_existing_logical": "math:probability.percolation:open-problem-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic", "kind": "semantic_association", "rationale": "This source-status guard corrects the historical/current status distinction for the existing C0017 target card."}
+  ]
+}

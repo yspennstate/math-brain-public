@@ -1,0 +1,365 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newcommand{\I}{\operatorname{I}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\HH}{\operatorname{H}}
+\begin{document}
+\title{A076: exact threshold, tribes and threshold-composition controls}
+\author{A076, stream B16}\date{12 October 2026}\maketitle
+
+All physical coordinates are independent uniform bits, identified with signs
+by $x_i=(-1)^{b_i}$. Put $P(S)=\widehat f(S)^2$,
+$\HH(f)=\sum_S P(S)\log_2(1/P(S))$, and
+$\I(f)=\sum_S |S|P(S)$. Zero terms contribute zero. Write
+$\phi(u)=u\log_2(1/u)$ and $h_2(u)=\phi(u)+\phi(1-u)$.
+The entropy of the cardinality $D=|S|$ is denoted $\HH(D)$, not $\HH(f)$.
+The marginal description cost is
+$M(f)=\sum_i h_2(\operatorname{Inf}_i(f))$.
+These two costs are tested separately: an upper bound $\HH(f)\le M(f)$
+does not establish $M(f)=O(\I(f))$.
+
+\section*{1. Every symmetric threshold: finite exact spectrum}
+For $n\ge1$ and integer $0\le r\le n+1$, let
+$f_{n,r}(b)=2\mathbf1_{\{|b|\ge r\}}-1$.
+For every set $S$ of size $k$, its coefficient is
+\[
+ a_k=2^{-n}\sum_{j=0}^k\sum_{\ell=0}^{n-k}
+ (2\mathbf1_{j+\ell\ge r}-1)(-1)^j
+ {k\choose j}{n-k\choose\ell}.                         \tag{1}
+\]
+There are exactly ${n\choose k}$ such coefficients. Consequently
+\[
+ \HH(f_{n,r})=\sum_{k=0}^n {n\choose k}\phi(a_k^2),\qquad
+ \I(f_{n,r})=\begin{cases}
+ n2^{-(n-1)}{n-1\choose r-1},&1\le r\le n,\\
+ 0,&r=0\text{ or }r=n+1.
+ \end{cases}                                                   \tag{2}
+\]
+Proof of (1): partition assignments by the number $j$ of ones in $S$
+and the number $\ell$ in its complement. Every member has character
+$(-1)^j$. Proof of (2): a coordinate is pivotal precisely when the
+other $n-1$ bits have $r-1$ ones. This also proves that all physical
+variables, including those used to balance an output, are counted.
+
+For odd majority $n=2m+1,r=m+1$, all even coefficients vanish,
+and for $0\le j\le m$,
+\[
+ a_{2j+1}=-(-1)^j\frac{{2m\choose m}}{2^{2m}}
+                  \frac{{m\choose j}}{{2m\choose 2j}}.           \tag{3}
+\]
+For completeness, in the usual sign orientation in which majority
+is positive on a positive sum, the first minus sign is absent.
+The derivative at a coordinate is the indicator of the central
+slice of the other $2m$ signs. On that slice the character sums have
+generating polynomial $(1-z)^m(1+z)^m=(1-z^2)^m$.
+Since all subsets of the same size have identical slice averages,
+division by ${2m\choose 2j}$ gives (3), including the orientation
+sign. Thus no asymptotic theorem for general thresholds is used.
+For example, majority three has four squared coefficients $1/4$,
+$\HH=2$, $\I=3/2$. Majority five has six squared coefficients $9/64$
+and ten $1/64$, so
+\[
+ \HH(\mathrm{Maj}_5)=\frac{27}{32}\log_2(64/9)+\frac{15}{16},
+ \qquad\I(\mathrm{Maj}_5)=15/8.                                 \tag{4}
+\]
+
+\section*{2. Disjoint equal-width tribes: exact law}
+Partition $tw$ physical bits into $t$ blocks of width $w\ge1$.
+Let $A_j$ be the indicator that block $j$ is all zero, set
+$q=2^{-w}$, $b=1-q$, $a=b^t$, and define
+\[
+ f_{w,t}=1-2\prod_{j=1}^t(1-A_j).
+\]
+This is $+1$ if at least one tribe is active and $-1$ otherwise.
+Each coefficient of $A_j$ equals $q$. Hence the empty coefficient
+is $1-2a$. If a nonempty Fourier set meets exactly $k$ blocks,
+its coefficient equals $-2(-q)^k b^{t-k}$. There are
+\[
+ N_k={t\choose k}(2^w-1)^k                                    \tag{5}
+\]
+such sets, each with squared coefficient $4q^{2k}b^{2(t-k)}$.
+This proves exact multiplicities for every $w,t\ge1$.
+Writing $K$ for the number of blocks met, the exact law is
+\[
+ P(K=0)=(1-2a)^2,\quad
+ P(K=k)=4{t\choose k}(qb)^k b^{2(t-k)}\quad(1\le k\le t).       \tag{6}
+\]
+The nonempty mass is $V=4(a-a^2)=\Var(f)$.
+Conditional on the active blocks, each active block's subset is
+independently uniform among its $2^w-1$ nonempty subsets.
+The size generating polynomial of the full spectrum is
+\[
+ R(z)=(1-2a)^2+
+ 4\left[\left(b^2+q^2((1+z)^w-1)\right)^t-b^{2t}\right].       \tag{7}
+\]
+The coefficient of $z^d$ is exactly $P(D=d)$; this is also a
+compact exact certificate for the degree distribution.
+
+Every physical coordinate is pivotal when the other $w-1$ bits
+of its block are zero and no other tribe is active. Thus
+\[
+ \beta=\operatorname{Inf}_i(f)=2q b^{t-1},\qquad
+ \I(f)=2twq b^{t-1},\qquad M(f)=tw h_2(\beta).                 \tag{8}
+\]
+To obtain entropy, sum the surprisal of each individual set,
+not merely the probabilities in (6). The two binomial identities
+\[
+ \sum_{k=1}^t {t\choose k}(qb)^k b^{2(t-k)}=a-a^2,
+ \quad
+ \sum_{k=1}^t k{t\choose k}(qb)^k b^{2(t-k)}=tqa
+\]
+give the exact formula
+\[
+ \boxed{\HH(f)=\phi((1-2a)^2)+8wtqa
+     -8t(ba-a^2)\log_2 b-8(a-a^2).}                           \tag{9}
+\]
+In particular, the entropy decomposition is exactly
+\[
+ \HH(f)=\HH(K)+\mathbb E\log_2{t\choose K}
+                  +\mathbb E K\log_2(2^w-1),\qquad
+ \mathbb E K=4tqa.                                            \tag{10}
+\]
+The binomial choice and within-block subset terms cannot be
+replaced by $\HH(K)$ alone.
+
+\section*{3. Rigorous tribes limit and error}
+Fix $\lambda>0$ and take $t=\lfloor\lambda/q\rfloor$.
+All statements below concern sufficiently large integer $w$ so that
+$q\le\min(1/2,\lambda/2)$, and hence $t\ge1$.
+This is a choice of the number of uniform-input blocks, not a
+product bias on the original physical inputs.
+Put $a_0=e^{-\lambda}$ and $A=1+\lambda+\lambda^2$.
+Since
+\[
+ 0\le-\ln(1-q)-q\le\frac{q^2}{2(1-q)},\qquad |tq-\lambda|\le q,
+\]
+we have $|\ln a+\lambda|\le(1+\lambda)q$.
+The exponential map has derivative at most one on the negative
+half-line, so $|a-a_0|\le(1+\lambda)q$, and
+$|tqa-\lambda a_0|\le A q$.
+Substitution in (8)--(9) proves the explicit bounds
+\[
+ \left|\I(f)-2\lambda e^{-\lambda}w\right|
+       \le4(A+\lambda)wq,                                    \tag{11}
+\]
+\[
+ \left|\HH(f)-8\lambda e^{-\lambda}w\right|
+       \le8Awq+3+\frac{16\lambda}{\ln2}.                      \tag{12}
+\]
+For (12), use $\phi(u)\le1/(e\ln2)<1$,
+$|a-a^2|\le1/4$, $|ba-a^2|\le1$,
+and $-\log_2 b\le q/(b\ln2)$. These inequalities bound all
+the nonleading terms of (9). Equations (11)--(12), with
+$wq\le1/2$, yield
+\[
+ \HH(f)=8\lambda e^{-\lambda}w+O_\lambda(1),\quad
+ \I(f)=2\lambda e^{-\lambda}w+O_\lambda(w2^{-w}),\quad
+ \HH(f)/\I(f)\longrightarrow4.                              \tag{13}
+\]
+For $\lambda=\ln2$, the output is asymptotically balanced:
+$\Var(f)\to1$, $\I(f)=(\ln2)w+o(1)$ and
+$\HH(f)=4(\ln2)w+O(1)$.
+
+The entropy of a nonnegative integer random variable of mean $\mu$
+is bounded by that of the geometric law with the same mean:
+\[
+ \HH(D)\le(\mu+1)\log_2(\mu+1)-\mu\log_2\mu
+       \le\log_2(\mu+1)+\log_2 e.                            \tag{14}
+\]
+Indeed, nonnegativity of KL divergence against
+$Q(d)=\frac1{\mu+1}(\frac{\mu}{\mu+1})^d$ gives the first
+inequality. For $\mu=0$, use the deterministic law. The second
+inequality uses $\ln(1+1/\mu)\le1/\mu$.
+Apply (14) with $\mu=\I(f)$ to (13):
+\[
+ \HH(D)=O_\lambda(\log w),\qquad
+ \frac{\HH(S\mid D)}{\I(f)}\longrightarrow4.                 \tag{15}
+\]
+Thus no fixed $C$ can bound $\HH(f)$ by
+$C[\HH(D)+\Var(f)]$ universally, even within these tribes.
+
+For $0<u<1$ the elementary logarithmic bounds give
+\[
+ \log_2(1/u)+(1-u)\log_2 e
+ \le\frac{h_2(u)}u\le\log_2(1/u)+\log_2 e.                  \tag{16}
+\]
+Also $\log_2(1/\beta)=w-1-(t-1)\log_2 b
+=w-1+\lambda\log_2e+O_\lambda(q)$. Therefore
+\[
+ \frac{M(f)}{\I(f)}=w-1+(\lambda+1)\log_2e+O_\lambda(q),
+ \qquad \frac{M(f)}{\HH(f)}\sim\frac w4.                    \tag{17}
+\]
+This refutes the claimed linear influence payment of the
+coordinatewise independent marginal code. Its validity as an
+entropy upper bound is unchanged.
+
+\section*{4. Balanced disjoint threshold composition}
+Let $g$ be a Boolean gate and $f_i$ balanced Boolean functions on
+mutually disjoint physical blocks. For each physical Fourier set $S$,
+let $A$ be the indices of its nonempty block intersections $T_i$.
+Expansion gives the exact unique-product formula
+\[
+ \widehat{g(f_1,\ldots,f_m)}(S)
+ =\widehat g(A)\prod_{i\in A}\widehat f_i(T_i).               \tag{18}
+\]
+There is no sum over multiple decompositions: balancing removes
+all child empty coefficients, and disjoint blocks determine $A$.
+Thus sample $A$ from the gate spectrum and, for each $i\in A$,
+independently sample a child Fourier set. The union determines
+all choices. The entropy chain rule and expected cardinality give
+\[
+ \HH(F)=\HH(g)+\sum_i\operatorname{Inf}_i(g)\HH(f_i),\qquad
+ \I(F)=\sum_i\operatorname{Inf}_i(g)\I(f_i).                 \tag{19}
+\]
+This is the balanced special case of the already established
+composition interface (threshold manuscript, Proposition 7.1 and
+Corollary 7.8). The present derivation does not assume any weighted
+product-biased threshold theorem.
+
+Define $F_0$ to be a literal and $F_\ell$ to be majority of three
+fresh copies of $F_{\ell-1}$. All $3^\ell$ inputs are physical,
+independent and uniform. Every output is balanced by oddness.
+Using majority three's four masses $1/4$ in (19), with $r=3/2$,
+\[
+ \I(F_\ell)=r^\ell,\qquad
+ \HH(F_\ell)=2\sum_{j=0}^{\ell-1}r^j
+             =4(r^\ell-1),\qquad\Var(F_\ell)=1.             \tag{20}
+\]
+The exact cardinality generating polynomial satisfies
+\[
+ R_0(z)=z,\qquad R_\ell(z)=\tfrac34R_{\ell-1}(z)
+                             +\tfrac14R_{\ell-1}(z)^3.        \tag{21}
+\]
+Equivalently each active internal gate chooses one of its three
+singletons or the triple, each with probability $1/4$.
+Each nonempty leaf support determines every internal choice,
+so a support with $N$ active internal gates has squared
+coefficient $4^{-N}$. This supplies an exact spectrum without
+enumerating all $2^{3^\ell}$ truth-table entries.
+The spectral inclusion probability of every leaf is $2^{-\ell}$;
+hence
+\[
+ M(F_\ell)=3^\ell h_2(2^{-\ell}),\quad
+ \frac{M(F_\ell)}{\I(F_\ell)}
+       =\ell+\log_2 e+O(2^{-\ell}),\quad
+ \HH(|S|)\le\log_2(r^\ell+1)+\log_2 e=O(\ell).             \tag{22}
+\]
+This is an exactly balanced second obstruction to both shortcut
+payments. Yet $\HH/\I\to4$ and
+$\HH/(\I-\Var)=4$ exactly for every $\ell\ge1$.
+
+As an additional mixed control, majority three of three disjoint
+majority-five blocks has fifteen physical inputs and
+\[
+ \I=45/16,\qquad
+ \HH=2+\tfrac32\left[\tfrac{27}{32}\log_2(64/9)+\tfrac{15}{16}\right].
+                                                                    \tag{23}
+\]
+Equations (3) and (18) give every coefficient, not just its entropy.
+
+\section*{5. The actual frozen A046/B09 potential on a whole tribe}
+The source intake is A046's \texttt{FROZEN\_POTENTIAL.json}, version
+\texttt{A046-1}, candidate \texttt{B09-BIASED-BLOCK-UNCERTAINTY@1}.
+It defines $M_A=\HH(S\cap A\mid S\cap B)$,
+$J_A=I(Z;T)$ for the physical restriction channel, and
+$P_A=M_A+\Delta_A$. For uniform physical inputs $\Delta_A=0$.
+Take $A$ to be all $w$ bits of the first tribe; $B$ is the remaining
+$(t-1)w$ physical bits. Put
+\[
+ c=1-4a+4a^2/b,\quad d=4qa^2/b,\quad u=d/c,\quad L_w=2^w-1.
+\]
+Here $c=P(S\cap B=\varnothing)>0$ and
+$d=P(S\cap A\ne\varnothing,S\cap B=\varnothing)$.
+When the residual Fourier set is nonempty, the conditional block
+law has mass $b$ at the empty subset and mass $q^2/b$ at each
+nonempty subset. Its total nonempty mass is $q$. When the residual
+set is empty, its nonempty conditional mass is $u$, uniformly split
+among the $L_w$ possibilities. Therefore the exact potential is
+\[
+ \boxed{M_A=c h_2(u)+(1-c)h_2(q)+4qa\log_2 L_w.}             \tag{24}
+\]
+In particular the averaged nonempty block mass is
+$cu+(1-c)q=4qa$. These conditional laws follow directly by dividing
+the exact coefficients in (5) by the residual marginal mass;
+they do not invoke the unreviewed B09 helper.
+
+The physical restriction at the first tribe's all-zero assignment
+is constant, with probability $q$. Every other assignment leaves
+exactly $f_{w,t-1}$, with probability $b$. Hence
+\[
+ L_A=\HH(f_{w,t})-b\HH(f_{w,t-1}),\quad
+ J_A=L_A-M_A,\quad I_A=2wq b^{t-1}.                          \tag{25}
+\]
+The $t=1$ case uses the constant zero-tribe child of entropy zero.
+The identity for $J_A$ is the exact entropy chain rule: the residual
+spectral marginal equals the average child spectrum by Parseval on
+the restricted coordinates. Thus $J_A$ is an actual mutual
+information, not an invented credit.
+
+For the same $t=\lfloor\lambda/q\rfloor$ as above,
+write $a_0=e^{-\lambda}$. Subtracting the two exact formulas (9)
+gives
+\[
+ L_A=\phi((1-2a)^2)-b\phi((1-2a/b)^2)+8wqa
+ -8\left[ba+\frac{a^2(tq-1)}b\right]\log_2 b-\frac{8a^2q}b.
+                                                                    \tag{26}
+\]
+The final two terms are $O_\lambda(q)$ because $tq\le\lambda$,
+$b\ge1/2$ and $-\log_2 b\le2q/\ln2$.
+If $a_0\ne1/2$, the function $\phi((1-2x)^2)$ has bounded derivative
+on a fixed neighborhood of $a_0$, so its difference in (26) is
+$O_\lambda(q)$. If $a_0=1/2$, both its arguments before squaring
+are $O_\lambda(q)$, and the two terms are
+$O_\lambda(q^2\log(1/q))=O_\lambda(wq^2)$.
+Together with $a=a_0+O_\lambda(q)$, this proves
+\[
+ L_A=8a_0wq+O_\lambda(q+wq^2),\qquad
+ I_A=2a_0wq+O_\lambda(wq^2).                                \tag{27}
+\]
+
+For $a_0\ne1/2$, $c\to(1-2a_0)^2>0$,
+$u=(4a_0^2/(1-2a_0)^2)q+O_\lambda(q^2)$ and
+$1-c\to4(a_0-a_0^2)$. Equation (16) applied to $q$ and $u$,
+and $\log_2L_w=w+\log_2 b$, show that the three terms in (24)
+have leading coefficients $4a_0^2$, $4(a_0-a_0^2)$ and $4a_0$
+times $wq$, respectively. Their errors are
+$O_\lambda(q+wq^2)$. Therefore
+\[
+ \frac{P_A}{I_A}=\frac{M_A}{I_A}\longrightarrow4,\qquad
+ \frac{J_A}{I_A}\longrightarrow0\quad(\lambda\ne\ln2).      \tag{28}
+\]
+For $\lambda=\ln2$, $a=1/2+O(q)$, $c=q+O(q^2)$,
+and $1-u=(1-2a)^2/c=O(q)$.
+For small enough $q$, $a\ge1/4$ gives $c\ge q/4$, while
+$|1-2a|\le2(1+\lambda)q$ gives
+$1-u\le16(1+\lambda)^2q$. Using (16) and monotonicity of
+$h_2$ near zero proves $c h_2(u)=O(wq^2)$.
+The remaining terms in (24) equal $wq+O(q+wq^2)$ and
+$2wq+O(wq^2)$. Consequently
+\[
+ \frac{P_A}{I_A}\longrightarrow3,\qquad
+ \frac{J_A}{I_A}\longrightarrow1,\qquad
+ \frac{L_A}{I_A}\longrightarrow4\quad(\lambda=\ln2).        \tag{29}
+\]
+Every error above is controlled by the displayed scalar bounds;
+no floating-point limit is used as proof.
+Thus any universal payment $M_A\le K I_A$ must have $K\ge4$,
+and any universal payment $L_A\le K I_A$ must also have $K\ge4$.
+These are necessary constants only, not sufficient universal
+inequalities. The controls do not refute $J_A\le M_A+\Delta_A$:
+they have asymptotic ratio $J_A/M_A=1/3$ in the balanced case
+and zero in the other fixed-$\lambda$ cases. No B09 pending
+theorem is assumed or accepted here.
+
+\section*{6. Conclusions and boundaries}
+Both unbounded families distinguish a valid whole-set entropy
+payment from an independent-coordinate overpayment and from a
+cardinality-only underpayment. They require a conditional entropy
+term within size levels; equations (15) and (22) show that this
+unpaid term is asymptotically all of the entropy.
+These examples have bounded Shannon entropy-to-influence ratios.
+They do not disprove FEI, do not resolve arbitrary weighted
+product-biased thresholds, and do not pay the universal posterior
+witness cost. No novelty assertion is made for the standard spectra
+or composition identities. Independent campaign review is pending.
+\end{document}

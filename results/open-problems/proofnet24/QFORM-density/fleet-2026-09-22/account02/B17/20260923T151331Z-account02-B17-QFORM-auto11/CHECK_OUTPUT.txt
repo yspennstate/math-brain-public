@@ -1,0 +1,24 @@
+PASS QFORM-UNEQUAL-BANK-GLOBAL-BARRIER-v1
+
+Exact structural checks:
+- ||a||_2=||b||_2=1 implies spectrum(diag(alpha,lambda aa^T,-mu bb^T)) has nonzero part {alpha,lambda,-mu}.
+- For Z=(S_a-S_a')/sqrt(2), coefficient vector (a,-a)/sqrt(2) has squared Euclidean norm 1.
+- p_Z(0)=sqrt(2)*int h_a(t)^2 dt; Ball cube slicing p_Z(0)<=sqrt(2) gives ||h_a||_2^2<=1.
+- Positive-side polar Jacobian contributes exactly 1/2.
+- Fourfold angular symmetry gives 4*int_0^1 J(u)/sqrt(1-u^2)du.
+- Negative-side square substitution gives k(-x^2)=int_R h_+(y)h_-(sqrt(x^2+y^2))/sqrt(x^2+y^2)dy.
+
+Constant check:
+K_star = (pi/2)(sqrt(2)+2^(1/4))
+K_star = 4.089443637123813
+target  = 3sqrt(2) = 4.242640687119286
+gap     = 0.15319704999547223
+pi*sqrt(2) = 4.442882938158366
+pi*sqrt(2)-K_star = 0.3534393010345527
+
+Elementary strict certificate:
+pi < 22/7,
+2^(-1/4) < 10/11 because (10/11)^4=10000/14641 > 1/2, equivalently 14641<20000.
+Therefore K_star/sqrt(2) < (11/7)(1+10/11)=3.
+
+No numerical quadrature is used in the proof.

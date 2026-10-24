@@ -1,0 +1,41 @@
+[
+  {
+    "claim_id": "A052-CRITICAL-BOOLEAN-PHASE-EXCLUSION",
+    "version": 1,
+    "exact_statement": "Let K>=0 and let f be a least-essential-dimension Boolean violation D_K(f)=H(f)-K I(f)>0 of uniform-cube FEI(K). For every nonempty proper physical block A of a coordinates, let w_t be the retained child Fourier row, q_t=E w_t^2, z_t=w_t^2/q_t on positive rows, c_t=E(z_t-1)^2, C_A=sum_t q_t c_t and Gamma_A=sum_t q_t log2(1+c_t). Then C_A>0: identical squared spectra of all physical children are impossible. More quantitatively set h_t=sign(w_t), sign(0)=1, eta_t=min(1,||w_t/sqrt(q_t)-h_t||_2), eta=sum_t q_t eta_t. With psi_a(s)=h2(s)+s log2(2^a-1) up to s=1-2^-a and psi_a(s)=a thereafter, D_K(f)<=Gamma_A+psi_a(eta)+K a eta. Since eta<=sqrt(C_A), if C_A<=1/4 then D_K(f)<=log2(1+C_A)+h2(sqrt(C_A))+sqrt(C_A) log2(2^a-1)+K a sqrt(C_A). This uses FEI(K) on actual Boolean row phases of smaller dimension, not an assumption that phases are physical descendants. Nonstrict physical-descendant ratio criticality alone does not imply C_A>0, as witnessed by a product of two quadratic two-bit signs. No uniform K or FEI resolution follows.",
+    "hypotheses": [
+      "All functions are actual Boolean signs on finite uniform cubes; entropy in bits",
+      "Dimension minimality is among all Boolean K-violators, measured in essential coordinates",
+      "A is nonempty and proper; zero-q rows omitted; K>=0",
+      "For the quantitative square-root bound only, C_A<=1/4",
+      "No full FEI theorem, all-dimensional optimizer or physical realization of row phases is assumed"
+    ],
+    "statement_sha256": "93c471e2aded98b016b7f073170f93eba47bd36f5d93d8f194fddce35e383a22",
+    "contributors": [
+      "account05/A052"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A052\\runs\\20261013T221539Z-account05-A052-critical-source-structure\\CRITICAL_PHASE_PROOF.md",
+      "sha256": "f898a00c1a3c4f7838b4cad9053f7fcf5d805dad8c13921168a7cf455119df88",
+      "locator": "Sections 1--3"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPED_APPLICATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "A least-essential-dimension fixed-threshold FEI violator can have an isospectral proper block"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "claude/B11",
+      "A051",
+      "A053",
+      "A055",
+      "A018",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

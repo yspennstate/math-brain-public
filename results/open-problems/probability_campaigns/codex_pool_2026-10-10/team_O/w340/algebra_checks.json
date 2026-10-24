@@ -1,0 +1,23 @@
+{
+  "command": "python -X utf8 check_algebra.py",
+  "lean_status": "UNAVAILABLE_COMPUTE_ADMISSION; no Lean claim",
+  "symbolic_checks": {
+    "tool": "SymPy",
+    "atom_product_difference": "0",
+    "queue_wait_difference": "0",
+    "busy_fraction_difference": "0",
+    "conditions": [
+      "lambda != 0",
+      "mu != 0",
+      "mu-lambda != 0",
+      "1+lambda*tau*p != 0"
+    ]
+  },
+  "polynomial_convention": {
+    "optimizer_checks": 720,
+    "max_error": 1.7763568394002505e-15,
+    "odd_and_even_degrees": true,
+    "mixed_sign_cases": true,
+    "norm_comparison_factor": "at most 2^(1/q) <= 2"
+  }
+}

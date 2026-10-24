@@ -1,0 +1,184 @@
+[
+  {
+    "claim_id": "A057-COHERENT-ERASURE-SPLIT",
+    "version": 1,
+    "exact_statement": "For any disjoint balanced Boolean composition F=g(h_1,...,h_m), g=a+y_j b, q=Inf_j(g), alpha=hat h_j({i}), x=alpha^2: B_i(F)=q B_i(h_j)+L_j(x), D_i(F)=q D_i(h_j)+L_j(x)+J_j(x), where L_j=sum_T(a_T^2+x b_T^2) h_nat(x b_T^2/(a_T^2+x b_T^2)), J_j=E(a^2+x b^2)-(Eraw(a+alpha b)+Eraw(a-alpha b))/2. One has 0<=L_j<=x B_j(g)+qx ln(1/x), 0<=J_j<=2qx, so 0<=R<=x B_j(g)+qx ln(1/x)+2qx. Consequently B(F)<=sum_j q_j B(h_j)+sum_j W_1(h_j)B_j(g)+(2/e)I(F) in nats.",
+    "hypotheses": [
+      "All input cubes uniform; Boolean sign functions; Fourier coefficients normalized; all entropy formulas in natural units unless converted explicitly.",
+      "Disjoint balanced composition required for the exact coherent/erasure identities; no restriction-closure assumption."
+    ],
+    "statement_sha256": "9a9ec7982237434f502098c0a47266b97a0477d2ba0b5461529fe16d169c59f7",
+    "contributors": [
+      "A057"
+    ],
+    "proof_source": {
+      "author_run": "20261011T220314Z-account05-A057-coherent-restriction-remainder",
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A057\\runs\\20261011T220314Z-account05-A057-coherent-restriction-remainder\\COHERENT_REMAINDER_PAYMENT.tex"
+    },
+    "proof_dependencies": [
+      {
+        "source": "out/source_proof.md",
+        "git_blob": "37626caf9f1564342f8b6edfff54b3a3491fff35",
+        "role": "exact baseline coherent formula; its algebra is reconstructed in the new proof"
+      },
+      "Elementary entropy concavity and proved JS-Hellinger scalar bound; physical influence telescope"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A059",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "out/A059_REVIEW_A057.md",
+        "method": "Independent analytic reconstruction; no source repair and no claim of rerunning original census"
+      }
+    ],
+    "status": "ACCEPTED_LOCAL_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A058",
+      "A059",
+      "A091",
+      "A090",
+      "A097",
+      "A026",
+      "A064"
+    ]
+  },
+  {
+    "claim_id": "A057-NONREUSING-ALPHA-LOG-PAYMENT",
+    "version": 1,
+    "exact_statement": "On any finite adaptive physical-coordinate restriction tree of Boolean root f, at any subset of nodes admitting disjoint balanced composition representations, sum_v w_v q_v alpha_v^2 ln(1/alpha_v^2)<=(2/e)sum_v w_v Inf_{i_v}(f_v)<=(2/e)I(f). Also sum_v w_v R_v<=sum_v w_v alpha_v^2 B_{j_v}(g_v)+(2+2/e)sum_v w_v Inf_{i_v}(f_v). In bits divide each entropy and its constants by ln(2).",
+    "hypotheses": [
+      "All input cubes uniform; Boolean sign functions; Fourier coefficients normalized; all entropy formulas in natural units unless converted explicitly.",
+      "Disjoint balanced composition required for the exact coherent/erasure identities; no restriction-closure assumption.",
+      "Each represented node is independently certified for its actual restricted Boolean function; w_v is its physical reach probability. Queried coordinates are removed on the branch. Other nodes may be omitted."
+    ],
+    "statement_sha256": "2af0fb23614bea69478bcf1f3d2639903f611a182e831c53bab224102ce8a6e9",
+    "contributors": [
+      "A057"
+    ],
+    "proof_source": {
+      "author_run": "20261011T220314Z-account05-A057-coherent-restriction-remainder",
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A057\\runs\\20261011T220314Z-account05-A057-coherent-restriction-remainder\\COHERENT_REMAINDER_PAYMENT.tex"
+    },
+    "proof_dependencies": [
+      {
+        "source": "out/source_proof.md",
+        "git_blob": "37626caf9f1564342f8b6edfff54b3a3491fff35",
+        "role": "exact baseline coherent formula; its algebra is reconstructed in the new proof"
+      },
+      "Elementary entropy concavity and proved JS-Hellinger scalar bound; physical influence telescope"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A059",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "out/A059_REVIEW_A057.md",
+        "method": "Independent analytic reconstruction; no source repair and no claim of rerunning original census"
+      }
+    ],
+    "status": "ACCEPTED_LOCAL_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A058",
+      "A059",
+      "A091",
+      "A090",
+      "A097",
+      "A026",
+      "A064"
+    ]
+  },
+  {
+    "claim_id": "A057-CAPPED-RECENTERED-ACTIVATION-TREE-BANK",
+    "version": 1,
+    "exact_statement": "For every Boolean sign core u on a finite uniform cube, r>=1 fresh point-control bits, p=2^(-r), a=1-Eu, and F=1+A_r(u-1), any complete adaptive physical core-first tree followed by the complete control suffix has total capped current biased outer-erasure bank <=(4+2/(e ln2))p I(u)+5rp a<=(4+2/(e ln2))I(F), in bits. At a core node m=Eu_v, beta=hat u_v({i}), v=1-m^2, t=beta^2, the cap is min{M(v),(t/v)M(v)+pt log2(v/t)}, M(s)=Phi((1-p+pm)^2,p^2s)+p(1-p)Phi((1-m)^2,s), Phi(s,t)=(s+t)h2(t/(s+t)); zero-variance and zero-t caps are zero. More precisely any partial core-tree prefix costs <=[4p(1-p)+p^2/ln2+2p/(e ln2)]Pi_I(u)+2rp^2[Var(u)-E Var(u_leaf)]. The nonempty inner-decrement cost and terminal entropy are not asserted to be universally paid.",
+    "hypotheses": [
+      "Boolean +/-1 core; uniform independent physical signs; A_r indicator of one control assignment; r>=1; controls disjoint from core.",
+      "At each reached node recompute actual core mean and variance; no restriction-balancedness assumption.",
+      "Complete theorem queries core to constant leaves then controls; partial-prefix formula retains actual activated terminal functions.",
+      "Entropy units bits; influence uniform total flip influence."
+    ],
+    "statement_sha256": "ae13aaacdfe0d312200cf2ea0d9d8cfc3d0bd0d9f8dcf123ced0b3b9b11a15b3",
+    "contributors": [
+      "A057"
+    ],
+    "proof_source": {
+      "run": "20261012T003930Z-account05-A057-coherent-restriction-remainder",
+      "path": "PROOF.md"
+    },
+    "proof_dependencies": [
+      "A056 biased positive-sector split/envelope, independently reconstructed in REVIEW_A056.md",
+      "Elementary packet bound, Boolean singleton bound, physical influence and mean-variance telescopes; all price estimates proved in PROOF.md"
+    ],
+    "review_records": [],
+    "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A056",
+      "A059",
+      "A091",
+      "A090",
+      "A024",
+      "A064",
+      "A097"
+    ]
+  },
+  {
+    "claim_id": "A056-DISJOINT-COMPOSITION",
+    "version": 2,
+    "exact_statement": "For every disjoint Boolean substitution F=h(g_1,...,g_k) on independent uniform physical blocks and coordinate i in child j, write h=A+y_j B in the current other-output normalized product basis, m=E g_j, v=1-m^2, beta=g_jhat({i}), t=beta^2, C_T=a_T+m b_T, q=sum b_T^2. With e(s,t)=phi(s)+phi(t)-phi(s+t), d(a,b)=phi(a^2)+phi(b^2)-(phi((a+b)^2)+phi((a-b)^2))/2, phi(s)=s log2(1/s), M(t)=sum e(C_T^2,t b_T^2), N(t)=sum[d(C_T,beta b_T)-e(C_T^2,t b_T^2)], B_i(F)=q[B_i(g_j)-e(m^2,t)]+M(t) and D_i(F)=q[D_i(g_j)-d(m,beta)]+M(t)+N(t). For v>0, 0<=t<=v, M(t)<=min{M(v),(t/v)M(v)+q t log2(v/t)}, M(v)=B_j^mu(h), and 0<=N(t)<=(2/ln2)qt. The log and N terms cost at most [(2+2/e)/ln2] times consumed physical query influence in any represented stopping tree. Constants are absorbed at v=0. The corrected residual M(t)-q e(m^2,t) may be negative; AND2(OR2,OR2) gives 1/4-(9/8)log2(3)+(5/8)log2(5)<0.",
+    "hypotheses": [
+      "Boolean sign functions",
+      "independent uniform physical inputs",
+      "mutually disjoint child blocks",
+      "current means and normalized output product basis",
+      "entropy in bits",
+      "physical coordinate query; deterministic outputs fixed before division"
+    ],
+    "statement_sha256": "08a83b745958e7c7bc78cf9d95ce3a83ed1107d173e012b9e45ed5c5aafa251c",
+    "contributors": [
+      "account05/A056"
+    ],
+    "proof_source": {
+      "author_run": "20261011T233147Z-account05-A056-balanced-composition",
+      "source": "out/A056_REPORT.md",
+      "review": "REVIEW_A056.md"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A057",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "REVIEW_A056.md",
+        "method": "Independent physical-pair reconstruction and exact activation-domain implementation; no source repair"
+      }
+    ],
+    "status": "ACCEPTED_LOCAL_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A056-DISJOINT-COMPOSITION",
+        "version": 1,
+        "scope": "Extends the adopted coefficient/mean interface; earlier identities remain valid"
+      }
+    ],
+    "refutes": [
+      "Extending the balanced nonnegative erasure correction to arbitrary biased children without its subtracted empty pair"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A057",
+      "A059",
+      "A060",
+      "A024",
+      "A091",
+      "A090",
+      "B20"
+    ]
+  }
+]

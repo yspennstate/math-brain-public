@@ -1,0 +1,108 @@
+[
+  {
+    "claim_id": "A076-STRUCTURED-SPECTRA",
+    "version": 3,
+    "exact_statement": "On independent uniform physical bits, threshold f_(n,r)=2*1_{|b|>=r}-1 has coefficient a_k=2^-n sum_(j=0..k,l=0..n-k)(2*1_{j+l>=r}-1)(-1)^j binom(k,j)binom(n-k,l), with multiplicity binom(n,k), and I=n*2^-(n-1)*binom(n-1,r-1) for 1<=r<=n (zero for constant endpoints). For disjoint t tribes of width w, q=2^-w,b=1-q,a=b^t, f=1-2 prod(1-A_j), the empty coefficient is 1-2a and a nonempty set meeting k tribes has coefficient -2*(-q)^k*b^(t-k), with multiplicity binom(t,k)*(2^w-1)^k. I=2twq*b^(t-1) and H=phi((1-2a)^2)+8wtqa-8t(ba-a^2)log2(b)-8(a-a^2). Balanced disjoint substitution has H(F)=H(g)+sum_i Inf_i(g)H(f_i), I(F)=sum_i Inf_i(g)I(f_i). Recursive majority3 depth ell has I=(3/2)^ell, H=4*((3/2)^ell-1), and degree PGF R_ell=(3/4)R_(ell-1)+(1/4)R_(ell-1)^3, R_0=z. Stage-2 extension: For every even m>=2, alpha=binom(m,m/2)/2^m, and every Boolean core G on disjoint uniform inputs (not necessarily balanced), F=Maj_(m+1)(x_1,...,x_m,G(y))=g(x)+c(x)G(y), where g=sign(sum x), g=0 on ties, c=1_{sum x=0}. The g and c Fourier supports have odd and even x-cardinality. Fhat(X,Y)=ghat(X)1_{Y=empty}+chat(X)Ghat(Y); H(F)=H(Maj_(m+1))+alpha H(G), I(F)=alpha(m+I(G)), and at every data split (B_i,M_i,Q_i,JS_i)(F)=alpha*(B_i,M_i,Q_i,JS_i)(G). If G is balanced, all x erasures vanish and B(F)=alpha B(G). For m=2, H=2+H(G)/2,I=1+I(G)/2,B(F)=B(G)/2+(1+mu^2)h2(mu^2/(1+mu^2)),mu=E G, and both children at every data split have kappa=3/4. For m=2 tribes q=2^-w,b=1-q,beta=2q*b^(t-1), the exact y-first Lambda is (beta/2)sum_(j=0..t-1,u=1..w)log2(1+(3/4)*2^(u-1)*b^-(t-j-1)); symmetric-threshold stopping subtracts (beta/2)log2(7/4), has E Ileaf=1+beta/2 and E Hleaf=2. Stage-3 extension: Let W_+=(1+x)/2+(1-x)G/2 and W_-=-(1-x)/2+(1+x)G/2 for any Boolean core G on disjoint uniform inputs. With mu=E G,a=Ghat({i}),d=Inf_i(G),Phi(p,q)=(p+q)h2(q/(p+q)), the exact data erasure is B_i(W_+)=B_i(W_-)=B_i(G)/2+D(mu,a), where D=[Phi((1+mu)^2,a^2)+Phi((1-mu)^2,a^2)]/4-Phi(mu^2,a^2)/2. It satisfies -|mu a|<=D<=|a|<=d; the upper coefficient 1 is sharp at G=y_i. Inf_i(W)=d/2. H(W)=H(G)/2+R(mu), with R=1-mu^2+phi((1+mu)^2/4)+phi((1-mu)^2/4)-phi(mu^2)/2. B_x(W)=Phi((1+mu)^2,(1-mu)^2)/4+(1-mu^2)/2<=1-mu^2<=4Inf_x(W).",
+    "hypotheses": [
+      "n>=1,0<=r<=n+1 integers; w,t>=1 integers; ell>=0 integer",
+      "entropy in bits; phi(u)=u log2(1/u), phi(0)=0",
+      "original inputs uniform; all composing physical blocks disjoint; child outputs balanced for balanced substitution",
+      "Stage-2 original inputs all independent uniform physical signs; m even; core block disjoint from x",
+      "For divergence: w even>=16,t=2^w; y queries contiguous within successive tribes; no arbitrary adaptive-y-order conclusion",
+      "Lambda is LOG_ALLOCATION section 5 exact j log2(1+kappa_min/(2j)); all terminal influence retained",
+      "Stage-3 arbitrary biased Boolean core on independent uniform signs; fresh single control; core-only adaptive prefix, any stopping leaves, optional terminal control query; bits."
+    ],
+    "statement_sha256": "5c0db672103665ce2d582dddf22459a5347628682f319ddc06a9cea22436e64d",
+    "contributors": [
+      "A076"
+    ],
+    "proof_source": {
+      "stage1": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261011T214703Z-account05-A076-threshold-and-tribes-controls\\STRUCTURED_CONTROLS.tex",
+      "stage2": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261011T233829Z-account05-A076-threshold-and-tribes-controls\\MIXED_TREE_PROOF.md",
+      "summary": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261011T233829Z-account05-A076-threshold-and-tribes-controls\\STRUCTURED_CONTROLS.tex",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261011T233829Z-account05-A076-threshold-and-tribes-controls\\out\\VALIDATION.json",
+      "locator": "(1)-(8b)",
+      "stage3": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261013T220051Z-account05-A076-threshold-and-tribes-controls\\SHIFTED_ROW_PROOF.md",
+      "stage3_validation": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261013T220051Z-account05-A076-threshold-and-tribes-controls\\out\\VALIDATION.json",
+      "stage3_locator": "sections 1-3, equations (1)-(8)"
+    },
+    "proof_dependencies": [
+      "A076-STRUCTURED-SPECTRA@1",
+      "A076-STRUCTURED-SPECTRA@2"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      "A076-STRUCTURED-SPECTRA@2"
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A057",
+      "A078",
+      "A077",
+      "A092",
+      "A088",
+      "B16",
+      "B12",
+      "B06",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A076-TRIBES-PAYMENT-DISCRIMINATION",
+    "version": 3,
+    "exact_statement": "Fix lambda>0, q=2^-w,t=floor(lambda/q),a=(1-q)^t and use the preceding uniform tribes. H=8lambda*exp(-lambda)*w+O_lambda(1), I=2lambda*exp(-lambda)*w+O_lambda(wq), hence H/I->4. For A one entire tribe, c=1-4a+4a^2/(1-q),u=4qa^2/((1-q)c), M_A=c*h2(u)+(1-c)*h2(q)+4qa*log2(2^w-1), I_A=2wq*(1-q)^(t-1), L_A=H_(w,t)-(1-q)H_(w,t-1), J_A=L_A-M_A and Delta_A=0. If lambda!=ln2, M_A/I_A->4,J_A/I_A->0,L_A/I_A->4. If lambda=ln2, M_A/I_A->3,J_A/I_A->1,L_A/I_A->4. Thus universal M_A<=K I_A or L_A<=K I_A requires K>=4. Additionally the marginal code M=sum_i h2(Inf_i) obeys M/I=w-1+(lambda+1)log2(e)+O_lambda(q), whereas H(|S|)=O_lambda(log w) and H(S||S|)/I->4. Recursive majority3 gives M/I=ell+log2(e)+O(2^-ell), H(|S|)=O(ell), H/I->4 and H/(I-Var)=4 for ell>=1. These refute only a dimension-free payment of the independent-marginal code and any universal H<=C[H(|S|)+Var], not FEI or the B09 helper. Stage-2 extension: For even w>=16,t=2^w,G=uniform disjoint tribes(w,t),F=Maj3(x1,x2,G), and any fixed interleaving of the two x queries with the contiguous block-by-block y order, both constant-only and symmetric-threshold stopping trees satisfy Lambda_T/I(F)>=w/64, including after exact-zero-erasure skipping. The y-first tree has Lambda_T/I(F)=w/2+O(1), also with the same symmetric leaf certificate. At the identical trees, B_T+9 E Ileaf<=14 I(F), because H(G)<=5 I(G) and H(F)<=5 I(F). The lower bound counts actual queried influence; no physical spectator tensor is present since F is monotone and all inputs are relevant. These refute only a universal scalar Lambda payment for the specified schedules/leaf class, not arbitrary adaptive y orders, LOG_ALLOCATION local bound, C019 or FEI. Finally, for fixed even m, the supremum of B/I over central-majority compositions with arbitrary balanced cores equals the unrestricted supremum: cores G=z product_(a=1..k)h_a have H(G)=kH(h),I(G)=1+kI(h),B(G)=kB(h), giving B(F)/I(F)->B(h)/I(h) and H(F)/I(F)->H(h)/I(h). Stage-3 extension: For every finite adaptive partial physical core tree T lifted to either one-control wrapper with x unqueried, B_T(W)=B_T(G)/2+D_T, |D_T|<=Pi_I(G)=I(G)-E I(G_leaf), and Pi_I(W)=Pi_I(G)/2. The terminal entropy is exactly E H(W_leaf)=E H(G_leaf)/2+E R(mu_leaf). Querying x at every leaf adds erasure at most 4Inf_x(W_root), giving B_(T;x)(W)<=B_T(G)/2+Pi_I(G)+4Inf_x(W_root). The signed correction may be negative: the three-bit point core G=+1 only at (+++) gives D(-3/4,1/4)<0 by a rational interval certificate. These results pay the shifted-empty-row correction alone; inherited core erasure and arbitrary terminal entropy remain unpriced. No conclusion of full FEI or a universal shared-coordinate ownership rule is claimed.",
+    "hypotheses": [
+      "lambda fixed positive, w->infinity integers; t=floor(lambda*2^w)>=1",
+      "original inputs uniform and all tribes disjoint",
+      "M_A denotes conditional spectral block entropy, J_A actual physical-restriction mutual information; H(S||S|) means H(S conditional on |S|)",
+      "all influence includes every physical input",
+      "Stage-2 original inputs all independent uniform physical signs; m even; core block disjoint from x",
+      "For divergence: w even>=16,t=2^w; y queries contiguous within successive tribes; no arbitrary adaptive-y-order conclusion",
+      "Lambda is LOG_ALLOCATION section 5 exact j log2(1+kappa_min/(2j)); all terminal influence retained",
+      "Stage-3 arbitrary biased Boolean core on independent uniform signs; fresh single control; core-only adaptive prefix, any stopping leaves, optional terminal control query; bits."
+    ],
+    "statement_sha256": "158b4beac1c279977a1a0524c638e22786a6bc2f766ad72a41e4f011c9de4c2f",
+    "contributors": [
+      "A076"
+    ],
+    "proof_source": {
+      "stage1": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261011T214703Z-account05-A076-threshold-and-tribes-controls\\STRUCTURED_CONTROLS.tex",
+      "stage2": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261011T233829Z-account05-A076-threshold-and-tribes-controls\\MIXED_TREE_PROOF.md",
+      "summary": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261011T233829Z-account05-A076-threshold-and-tribes-controls\\STRUCTURED_CONTROLS.tex",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261011T233829Z-account05-A076-threshold-and-tribes-controls\\out\\VALIDATION.json",
+      "locator": "(9)-(17)",
+      "stage3": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261013T220051Z-account05-A076-threshold-and-tribes-controls\\SHIFTED_ROW_PROOF.md",
+      "stage3_validation": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261013T220051Z-account05-A076-threshold-and-tribes-controls\\out\\VALIDATION.json",
+      "stage3_locator": "sections 1-3, equations (1)-(8)"
+    },
+    "proof_dependencies": [
+      "A076-STRUCTURED-SPECTRA@2",
+      "threshold_paper_38pp Theorem A, symmetric-threshold specialization C_reg<9",
+      "A076-TRIBES-PAYMENT-DISCRIMINATION@2"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      "A076-TRIBES-PAYMENT-DISCRIMINATION@2"
+    ],
+    "refutes": [
+      "M(f)<=K I(f) for a universal finite K, with M=sum_i h2(Inf_i(f))",
+      "H(f)<=C[H(|S|)+Var(f)] for a universal finite C",
+      "There exists finite K such that for every even w>=16 one of x-first, y-first or alternating-x-y schedules with symmetric-threshold leaves pays Lambda_T+9 E Ileaf<=K I(Maj3(x1,x2,Tribes_(w,2^w))), even after exact-zero-erasure skipping."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A057",
+      "A078",
+      "A077",
+      "A092",
+      "A088",
+      "B16",
+      "B12",
+      "B06",
+      "B20"
+    ]
+  }
+]

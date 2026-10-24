@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B17",
+  "run_id": "QFORM-B17-20260923T013558Z-r11",
+  "source_control_commit_start": "2631f4294b25cd284ddb167df5083630b6f3e334",
+  "source_control_commit_prepublication": "0b63b13827de8211c2f264f6b31b12051b3b786b",
+  "owner_control_revision": "2026-09-22.15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "SUPPORTING_SHARP-WITNESS_THEOREM",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "OPEN_SEPARATE",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "partner_result": {
+    "worker": "account02/B17",
+    "commit": "84ffc0f291ae192f4d82742ae6909943f6710bc7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260922T235536Z-r12-symmetric-unimodal/REPORT.md",
+    "applied_to": "global-mode identity for the exact finite and Gaussian-completion separated symmetric-unimodal three-bank families"
+  },
+  "new_result": {
+    "id": "QFORM-POSITIVE-COLLINEAR-LAPLACE-4/9-v1",
+    "headline": "For a finite normalized positive-direction collinear heavy bank with max leverage square <=4/9, the Gaussian-completion central peak is <3sqrt(2) for arbitrary cap-one heavy laws; for centered interval laws the partner theorem upgrades this to the global peak, and exact finite source-valid bank matrices converge uniformly in density to that limit.",
+    "key_inequality": "E exp[-c(sum a_i V_i)^2] <= (1+2c)^(-1/2) for c>=1/2, V_i~Unif[-sqrt(3),sqrt(3)]",
+    "mechanism": "Fourier inversion + Holder exponents q_i=K/a_i^2 + Koenig-Koldobsky sinc inequality, then K0 positive-mixture integration",
+    "scope_limit": "positive-direction collinear heavy bank; leverage-square threshold 4/9; arbitrary cap-one laws only central in the Gaussian-completion model; global finite statement uses centered intervals/symmetric-unimodality"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "00a476f462cda16bfd33affdf28cccf9fe586f53",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260923T013558Z-r11/",
+    "report": "REPORT.md",
+    "local_limit_addendum": "LOCAL_LIMIT_ADDENDUM.md",
+    "checker": "CHECK.py",
+    "checker_output": "CHECK_OUTPUT.txt",
+    "checker_status": "PASS"
+  },
+  "unpaid_implication": "No universal sharpness of 3sqrt(2) for arbitrary A. Remaining witness frontier includes unequal non-collinear shared-coordinate heavy rows, positive collinear leverage above 4/9 outside solved special cases, coupled spectral tails, finite/mesoscopic non-Gaussian residuals, and asymmetric/fragmented off-zero mechanisms.",
+  "next_step": "Attack the remaining positive-collinear leverage window above 4/9 using a one-heavy-plus-residual K0 inequality, or move to unequal non-collinear two-heavy rows if that window stalls."
+}

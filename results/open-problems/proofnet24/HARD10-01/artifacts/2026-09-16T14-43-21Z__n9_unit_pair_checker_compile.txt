@@ -1,0 +1,17 @@
+compile_exit=0
+/mnt/data/hard10_n9_checker.c:14:9: warning: ISO C does not support '__int128' types [-Wpedantic]
+   14 | typedef __int128 i128;
+      |         ^~~~~~~~
+/mnt/data/hard10_n9_checker.c: In function 'tree_data':
+/mnt/data/hard10_n9_checker.c:30:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   30 |  if(k==0)return 0;if(k==1)return 1;int root=verts[k-1],d=k-1;
+      |  ^~
+/mnt/data/hard10_n9_checker.c:30:19: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   30 |  if(k==0)return 0;if(k==1)return 1;int root=verts[k-1],d=k-1;
+      |                   ^~
+/mnt/data/hard10_n9_checker.c:34:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   34 |  if(sign<0)det=modnorm(-det);if(det<=0||det>4782969){fprintf(stderr,"bad tau %lld\n",det);exit(3);}uint32_t tau=(uint32_t)det;
+      |  ^~
+/mnt/data/hard10_n9_checker.c:34:30: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   34 |  if(sign<0)det=modnorm(-det);if(det<=0||det>4782969){fprintf(stderr,"bad tau %lld\n",det);exit(3);}uint32_t tau=(uint32_t)det;
+      |                              ^~

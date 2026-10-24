@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260923T134051Z-account01-B08-qform-r30",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_prepublication": "dfb2f9025f9784740a971ee107e5d59534d93e62",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "claim_ids": [
+    "QFORM-DIFFUSE-WINDOW-FRONTIER-v1",
+    "QFORM-DIFFUSE-CORE-SPECTRAL-LEAKAGE-v1"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "small matrix operator norm is not a uniformly small random quadratic perturbation"
+  ],
+  "premises": [
+    {
+      "name": "QFORM-RIDGE-DENSITY-v1 and ridge-leverage perturbation",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "9c1167db05c7b0f520f060796fde921ed769a4e7",
+      "path": "proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md",
+      "scope_used": "actual original-coordinate cross block; arbitrary self blocks/outside couplings retained"
+    },
+    {
+      "name": "account02/B08 r27 diffuse family and certified spectral/range data",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "41ee49f6e9c3383e4c3a322bdc52779768a17eb7",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/20260923T130941Z-account02-B08-qform-diffuse-r27/REPORT.md",
+      "scope_used": "A_m^diff has nonzero spectrum {-1,-1,1,1,1,1} and physical range leverage 3/m"
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account02/B08",
+    "run_id": "20260923T130941Z-account02-B08-qform-diffuse-r27",
+    "scientific_commit": "41ee49f6e9c3383e4c3a322bdc52779768a17eb7",
+    "actual_application": "For m>=128, scale partner A_m^diff by L and add arbitrary symmetric E with ||E||<=L/1024. Spectral-projector leakage plus the diffuse-window frontier yields ||p_Q||inf<119.754/L and p_Q in C_0."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a1d0e741df249e95bc204b7e7896449393bff3cb",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T134051Z-account01-B08-qform-r30/REPORT.md",
+    "checkpoint_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T134051Z-account01-B08-qform-r30/PARTIAL.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T134051Z-account01-B08-qform-r30/CHECKS.py",
+    "check_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T134051Z-account01-B08-qform-r30/CHECKS.txt",
+    "check_terminal": "QFORM_B08_R30_CHECK_PASS"
+  },
+  "key_quantitative_outputs": {
+    "exact_range_leverage_1_over_18_density_constant": 115.65459483907176,
+    "exact_range_leverage_1_over_16_density_constant_upper": 54394,
+    "spectral_window_tau_1_over_128_leverage_1_over_20_density_constant_upper": 211.795,
+    "partner_dense_tail_density_constant_upper": 119.754
+  },
+  "unresolved_implication": "QFORM-HIGHWINDOW-HEAVY-LOWRANK-AGGREGATE-COMPILER-v1",
+  "next_step": "Convert failure of all admissible diffuse spectral-window points into a product-preserving low-rank/grouped-anchor payment without bounded scalar-pivot selection and with the full complementary spectrum retained.",
+  "independent_review": "NOT_PERFORMED_IN_THIS_RUN"
+}

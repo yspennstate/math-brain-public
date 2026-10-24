@@ -1,0 +1,37 @@
+~/qform_five_directions/lean/QformFive2_run.lean:44:8: warning: This simp argument is unused:
+  Fintype.sum_bool
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵F̵i̵n̵t̵y̵p̵e̵.̵s̵u̵m̵_̵b̵o̵o̵l̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+~/qform_five_directions/lean/QformFive2_run.lean:80:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+~/qform_five_directions/lean/QformFive2_run.lean:56:49: warning: unused variable `hij`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+~/qform_five_directions/lean/QformFive2_run.lean:299:28: warning: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  simp [Finset.card_univ, Fintype.card_f̵u̵n̵,̵ ̵F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵bool, Fintype.card_fin]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'QformFive.sign_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFive.sign_identity_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFive.sum_prod_bool' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFive.prod_mult' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFive.fourth_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFive.sum_chaos_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFive.sum_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFive.chaos_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFive.sum_comm4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFive.frobenius_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFive.frobenius_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFive.exists_le_average' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFive.exists_good_signs' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,32 @@
+{
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "B04-20260922T180950Z-r15",
+  "event_id": "QFORM-SCALAR-QREST-SUP-FALSE-v1",
+  "status": "REFUTED_INTERMEDIATE_MECHANISM",
+  "full_conjecture_status": "OPEN_NOT_REFUTED",
+  "source_control": {
+    "repository": "yspennstate/math-research-brain",
+    "control_commit": "eb93d5ba9d2e5fa40d55d15696832f556b715e9d",
+    "owner_control_revision": "2026-09-22.11"
+  },
+  "fresh_correction_consumed": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "938e59f2caed677576b8bb3cd87ee1ffe81ee572",
+    "event_id": "QFORM-COAREA-AND-CONDITIONAL-MOMENT-CORRECTIONS-v1"
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "563b78b490f4f67c63bc87727cc45a5aa5828b18",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/B04-20260922T180950Z-r15/REPORT.md",
+    "read_back_blob": "67c0e2809e7de9e3e8eab046dd06ae3277d33700"
+  },
+  "counterexample": "For iid Uniform[-1/2,1/2] and H the normalized 4x4 Hadamard matrix, take A=H^T diag(1,2,-3,4) H. For every choice of one spectral coordinate k as Q_rest=lambda_k Y_k^2 and the other three as Q3, conditioning at Q_rest=lambda_k(1-epsilon)^2 confines all three core coordinates to magnitude <=epsilon. Hence the conditional Q3 law is supported on an interval of length <=18 epsilon^2 and has density cap at least 1/(18 epsilon^2), so sup_b ||p_(Q3|Q_rest=b)||_infinity=infinity. Distinct eigenvalues remove basis-choice ambiguity.",
+  "same_instance_positive_bound": "For the displayed A, the physical principal block on (X1,X2) is [[1,1/2],[1/2,1]] with determinant 3/4. Conditioning on (X3,X4) and bounding the cap-one product law by ellipse-shell area gives ||p_Q||_infinity <= 2*pi/sqrt(3) for every admissible independent coordinate law. Thus only the scalar-conditioning supremum gate fails.",
+  "replacement_obligation": "Test the weighted mixture norm integral ||p_(Q3|Q_rest=b)||_infinity dmu_Qrest(b), or a weaker Lorentz/product-rearrangement surrogate, instead of the false uniform conditional supremum.",
+  "partner_account04_B04": "NO_COMPLETED_COMPATIBLE_ARTIFACT_FOUND_AT_FRESH_CHECKS",
+  "continuous_density_full_target": "OPEN",
+  "native_brain_ingestion": "WITHOUT_VERIFIED_BRAIN",
+  "notifications_sent": false
+}

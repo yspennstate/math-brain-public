@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B12",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260922T184455Z-qform-eigenvalue-r15",
+  "control_commit_used": "a57b337af3ad082864f43f387cf28895bcae04c8",
+  "owner_control_revision": "2026-09-22.11",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "assignment": "Additional eigenvalue control",
+  "corrections_consumed": [
+    "live CORRECTION_INBOX.json at a57b337af3ad082864f43f387cf28895bcae04c8",
+    "bounded-density pointwise quadratic-phase decay is false",
+    "vector-complement conditional density-cap moment route is unbounded",
+    "single Schur/rank-two local extraction is not a universal structural reduction",
+    "concurrent account03/B14: universal scalar spectral conditional sup interface is false"
+  ],
+  "partner_result_applied": {
+    "account": "account04",
+    "slot": "B12",
+    "run_id": "20260922T181535Z-account04-B12-endpoint-tail-r1",
+    "repository": "yspennstate/math-open-problems",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260922T181535Z-account04-B12-endpoint-tail-r1/REPORT.md",
+    "application": "For A_{-T}=P_{v^perp}-T vv^T, physical-coordinate endpoint S_infty=I_3+J_3 and a=(3-T)/4 give ||p||_infty <=4 sqrt(C_*/(T-3)), T>3."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-B12-CUBE-SCALAR-FIBER-SEPARATION-v1",
+      "status": "INDEPENDENT_CORROBORATION_NOT_PRIORITY_CLAIM",
+      "statement": "An exact-three-large-eigenvalue n=4 iid-uniform cube model has ess sup_b ||p_{Q3|Q'=b}||_infty=infinity through s^{-2} corner scaling."
+    },
+    {
+      "id": "QFORM-B12-ENDPOINT-MASS-COMPENSATION-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For the same cube model on 0<S<1, the mass-weighted conditional cap is <=pi sqrt(2)/4 because p_S(s)=s^3/6 and ||p_T||_infty<=3 pi sqrt(2)."
+    },
+    {
+      "id": "QFORM-B12-ADDED-SPIKE-ENDPOINT-APPLICATION-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For A_{-T}=P_{v^perp}-T vv^T and independent cap-one coordinates, account04/B12 endpoint-Schur theorem yields ||p||_infty<=4 sqrt(C_*/(T-3)), T>3, C_*=24.183038289961516... ."
+    },
+    {
+      "id": "QFORM-B12-ENDPOINT-COMPRESSION-IDENTITY-v1",
+      "status": "PROVED_IDENTITY",
+      "statement": "If A0 v=0 and v=(u,w), then S_infty=R^T A0 R, Ry=(-w^Ty/u,y); hence A0>=L P_{v^perp} implies S_infty>=L(I+ww^T/u^2)>=LI."
+    }
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e2f5bb8e0663997ea4272c13cc21b965b8bf0c5b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260922T184455Z-qform-eigenvalue-r15/REPORT.md"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B12/20260922T184455Z-qform-eigenvalue-r15.md",
+  "unresolved_implication": "Prove a universal mass-weighted scalar-conditioning / aggregate-before-supremum estimate stable under arbitrary added spectrum, or an exhaustive original-coordinate endpoint-Schur plus grouped-bank reduction retaining product mass until after curvature payment.",
+  "full_target_status": "OPEN",
+  "continuity_status": "NOT_PROVED_BY_THIS_RESULT"
+}

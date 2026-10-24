@@ -1,0 +1,751 @@
+{
+  "schema": "fei-claim-registry/2",
+  "revision": "2026-10-12-a097-rankone-critical",
+  "snapshot_at": "2026-10-12T02:24:31Z",
+  "owner": "B20",
+  "full_fei_status": "OPEN",
+  "interpretation": "Navigation to immutable proofs and reviews. Status changes are not mathematical certificates.",
+  "claims": [
+    {
+      "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+      "version": 1,
+      "source_claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO-v1",
+      "exact_statement": "For every finite K,A,B >= 0 there is a genuine Boolean physical split with L > K*d + A*V_post + B*M_inf, where q_W=(Ghat(W)^2+Hhat(W)^2)/2, e_W=(Ghat(W)-Hhat(W))^2/4, theta_W=e_W/q_W, d=sum e_W, L=sum q_W*h2(theta_W), V_post=sum q_W*(theta_W-d)^2, and M_inf=sum_i(Inf_i(G)-Inf_i(H))^2.",
+      "hypotheses": [
+        "uniform physical cube",
+        "genuine Boolean sign children G,H",
+        "entropy in bits",
+        "zero-q packets contribute zero",
+        "fixed finite nonnegative K,A,B"
+      ],
+      "statement_sha256": "331eeffbfcb3e4cec0f5a1db9d76852528ecfee2918d3f440ba420f284a20149",
+      "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED",
+      "contributors": [
+        "account01/B05 original run"
+      ],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "80cc2e5027efa56d79c4ecdf7d4949759ef2068b",
+        "path": "reports/fei-2026-10-11/runs/B05/20261011T193057Z-account01-B05-rare-restrictions/REPORT.md"
+      },
+      "proof_dependencies": [],
+      "review_records": [
+        {
+          "reviewer": "account01/B19",
+          "verdict": "ACCEPT_AT_STATED_SCOPE",
+          "source": {
+            "repository": "yspennstate/math-open-problems",
+            "commit": "7955d427222392911dc6af2e4ee3aa8aab67ac8c",
+            "path": "reports/fei-2026-10-11/runs/B19/20261011T195038Z-account01-B19-independent-review/REPORT.md",
+            "blob_sha": "dcec4cb77233a7b233b4798b25aab5f2dd5c82b6"
+          },
+          "method": "Independent all-even-k algebraic reconstruction plus full k=4 truth tables, integer FWHT and Fraction packet checks; 80-digit Decimal entropy is numerical support, not an interval certificate.",
+          "saved_assertions": 16404,
+          "analytic_proof_supplies_all_k_sign": true
+        },
+        {
+          "reviewer": "recovery fei_audit",
+          "verdict": "NO_GAP_FOUND_AT_STATED_SCOPE",
+          "source": {
+            "path": "verification/plan_mathematical_audit_2026-10-11.md"
+          },
+          "method": "Independent analytic reconstruction; original floating-point checker not rerun."
+        }
+      ],
+      "scope_exclusions": [
+        "Does not refute existential good-coordinate selection.",
+        "Does not refute every adaptive stopping tree or nonlocal transport.",
+        "Does not disprove FEI."
+      ],
+      "refutes": [
+        "universal all-coordinate fixed-price L <= K*d + A*V_post + B*M_inf"
+      ],
+      "supersedes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "B05",
+        "B06",
+        "B08",
+        "B10",
+        "B13",
+        "B20"
+      ],
+      "next_action": "Compare control-first and selector-first actual restriction trees, including terminal entropy and creation/spending of logarithmic credit."
+    },
+    {
+      "claim_id": "B09-BIASED-BLOCK-UNCERTAINTY",
+      "version": 1,
+      "exact_statement": "For every Boolean sign under an interior product bias p and a physical block A, the exact entropy decrement L_A=M_A+J_A obeys 0<=J_A<=M_A+Delta_A, where M_A=H(S_A|S_B), J_A=I(Z;S_B) for the actual physical-child/spectral experiment, and Delta_A=sum_i_in_A[h2(p_i)+log2(max(p_i,1-p_i))].",
+      "hypotheses": [
+        "genuine Boolean sign",
+        "independent physical inputs",
+        "all p_i in (0,1)",
+        "biased orthonormal Fourier basis",
+        "entropy in bits"
+      ],
+      "statement_sha256": "988abea63a1906de7c54826cb36bb40c443bc1f346d25715d0826d3740985695",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "adb671ffcda143fa68347806bb96e8c305621a7d",
+        "path": "reports/fei-2026-10-11/runs/B09/20261011T195500Z-account01-B09-biased-restriction-uncertainty/REPORT.md",
+        "blob_sha": "71b68e4decf9658a42fef6bb2668e19f25bd214a"
+      },
+      "review_records": [],
+      "review_obligations": [
+        "Independently check the exact biased physical restriction identity and Maassen-Uffink transform.",
+        "Use the independent repaired certificate at a1ff93577685acd461b154b04e0c1aa0c65645c8/verification/B09_interval_repair_20261011; the original negative-log interval division is faulty. Check stronger consequences separately.",
+        "Report section 5(4): the asymptotic of the displayed upper bound does not by itself prove that every O(p) replacement is impossible; require a lower-bound family or narrow the claim.",
+        "Distinguish additive disjoint tensor products from any broader composition statement."
+      ],
+      "proof_dependencies": [
+        "Maassen-Uffink entropic uncertainty; primary source to be read at review"
+      ],
+      "next_consumers": [
+        "B09",
+        "B12",
+        "B13",
+        "B18",
+        "B19",
+        "B20"
+      ],
+      "first_unproved_line": "Uniform influence payment and any claimed asymptotic optimality of the tax remain unproved.",
+      "supersedes": [],
+      "refutes": []
+    },
+    {
+      "claim_id": "B09-TAXFREE-AND-COUNTEREXAMPLE-REPAIRED",
+      "version": 1,
+      "exact_statement": "For g(X,Y)=(-1)^(XY), independent P(X=1)=1/8 and P(Y=1)=1/4, with physical block A={X}, J_A-M_A>1195/10000 bits. Thus universal tax-free J_A<=M_A under arbitrary product biases is false.",
+      "hypotheses": [
+        "two-bit actual Boolean sign",
+        "specified interior independent biases",
+        "biased orthonormal Fourier basis",
+        "entropy in bits"
+      ],
+      "statement_sha256": "3654bf6460ad26235f25803c92c8bad40c0da83b37b5744104c7bbed64b0ec4c",
+      "status": "FINITE_COUNTEREXAMPLE_CERTIFIED_WITH_INDEPENDENT_REPAIR",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "a1ff93577685acd461b154b04e0c1aa0c65645c8",
+        "path": "reports/fei-2026-10-11/verification/B09_interval_repair_20261011/REPORT.md"
+      },
+      "contributors": [
+        "B09 original construction",
+        "concurrent interactive certificate repair"
+      ],
+      "review_records": [],
+      "proof_dependencies": [],
+      "scope_exclusions": [
+        "Not a proof of full FEI or its failure.",
+        "Does not accept the complete B09 auxiliary theorem.",
+        "Does not prove that every O(p) endpoint correction is impossible."
+      ],
+      "repair": "Original signed logarithm interval division had wrong denominator ordering for negative numerators; corrected by extrema over all four corner quotients.",
+      "supersedes": [
+        "original B09 interval implementation as a rigorous certificate"
+      ],
+      "refutes": [
+        "universal arbitrary-product-bias J_A<=M_A"
+      ],
+      "next_consumers": [
+        "B09",
+        "B17",
+        "B18",
+        "B19",
+        "B20"
+      ],
+      "first_unproved_line": null
+    },
+    {
+      "claim_id": "B01-A005-DOWNWARD-JOINT-HARDNESS",
+      "version": 1,
+      "exact_statement": "For every eta>0, let C_eta be the class of nonconstant genuine Boolean functions with full Walsh support, I(F)<=eta, max_i I_i(F)/I(F)<=eta, and Pr(F=-1)<=eta. Then sup_{F in C_eta} L(F)/I(F)=C_L, where C_L is the unrestricted optimal constant for the complete signed downward functional. For every nonconstant seed g, the explicit one-point-surgery plus r_m=ceil(sqrt(m)) sparse-activation sequence satisfies L(F_m)/I(F_m)->L(g)/I(g).",
+      "hypotheses": [
+        "uniform physical Boolean cube",
+        "nonconstant genuine sign-valued seed",
+        "complete signed downward functional L",
+        "entropy in bits"
+      ],
+      "status": "AUTHOR_PROVED_AND_DETERMINISTICALLY_CHECKED_PENDING_INDEPENDENT_REVIEW",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "69fdc6d41576bc4921ba44a8acce696103bf6a81",
+        "path": "reports/fei-2026-10-11/runs/B01/20261011T230353Z-account01-B01-endpoint-admission-a005/REPORT.md",
+        "brain_commit": "b3c4cd4c11bdb9c6fccd8a5ea54fdf9825fa7470"
+      },
+      "review_records": [],
+      "review_obligations": [
+        "A086 or A094 reconstruct the one-point L continuity bound, activation ledger, and asymptotic."
+      ],
+      "next_consumers": [
+        "A012",
+        "A034",
+        "A036",
+        "A043",
+        "A050",
+        "A051",
+        "A079",
+        "A086",
+        "A094",
+        "B20"
+      ],
+      "first_unproved_line": "No bound on C_L or full FEI follows.",
+      "supersedes": [],
+      "refutes": [
+        "The joint full-support rare-output diffuse-influence class has a smaller optimal downward constant."
+      ],
+      "statement_sha256": "9828a66b13dd09d3d6fe5774d1cc4a13ea4d341e291f8db8af0ce9c002e2da00"
+    },
+    {
+      "claim_id": "B01-A005-ACTIVATION-CONTROL-STEP-CAP",
+      "version": 1,
+      "exact_statement": "For F_r=1+A_r(g-1), p=2^-r, q=1-Eg, every activation control z has I_z=pq and the exact entropy decrement displayed in the source. Along the A002 joint-hardness sequence, E u_m->0 and p_m->0, so Delta_z H(F_m)/I_z(F_m)->4. Hence that explicit embedding does not preserve arbitrary seed STEP statistics.",
+      "hypotheses": [
+        "uniform physical Boolean cube",
+        "fresh activation controls",
+        "nonconstant seed",
+        "entropy in bits"
+      ],
+      "status": "AUTHOR_PROVED_AND_DETERMINISTICALLY_CHECKED_PENDING_INDEPENDENT_REVIEW",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "69fdc6d41576bc4921ba44a8acce696103bf6a81",
+        "path": "reports/fei-2026-10-11/runs/B01/20261011T230353Z-account01-B01-endpoint-admission-a005/REPORT.md",
+        "brain_commit": "b3c4cd4c11bdb9c6fccd8a5ea54fdf9825fa7470"
+      },
+      "review_records": [],
+      "review_obligations": [
+        "A086 or A094 independently verify the exact control decrement and limit."
+      ],
+      "next_consumers": [
+        "A026",
+        "A051",
+        "A055",
+        "A086",
+        "A094",
+        "A096",
+        "A097"
+      ],
+      "first_unproved_line": "Whether another transformation preserves high STEP criticality remains open.",
+      "supersedes": [],
+      "refutes": [
+        "The A002 sparse-activation embedding preserves arbitrary seed restriction-step criticality."
+      ],
+      "statement_sha256": "b5d0fd2a046a96102b68a68a2aec6ab244dd99a460ac7b2e95e47da199e878ad"
+    },
+    {
+      "claim_id": "B11-A052-CRITICAL-TENSOR-PURITY",
+      "version": 1,
+      "exact_statement": "For every finite nonconstant Boolean source, a maximum-ratio physical descendant is critical. If a disjoint tensor product F of nonconstant Boolean factors is eta-critical under every physical descendant and w_j=I(f_j)/I(F), then R(F)-(1-w_j)eta/w_j <= R(f_j) <= R(F)+eta and every descendant u of f_j has R(u)<=R(f_j)+eta/w_j. Consequently an exact critical tensor product is precisely a product of equal-ratio critical factors.",
+      "hypotheses": [
+        "uniform cube and genuine Boolean functions",
+        "disjoint physical tensor blocks",
+        "eta-criticality under every nonconstant physical descendant",
+        "entropy in bits"
+      ],
+      "status": "AUTHOR_PROVED_WITH_EXACT_FINITE_CHECK_PENDING_INDEPENDENT_REVIEW",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "dd6b1c57f3f567e93986918ca11acc0103ab2913",
+        "path": "reports/fei-2026-10-11/runs/B11/20261011T231223Z-account01-B11-a052-critical-source/REPORT.md",
+        "brain_commit": "0a70f4f0530c87b7e3743e86b8a50381821e0644"
+      },
+      "review_records": [],
+      "review_obligations": [
+        "A090 or A094 reconstruct finite critical reduction, tensor purity, and surgery scope."
+      ],
+      "next_consumers": [
+        "A054",
+        "A055",
+        "A096",
+        "A097",
+        "B20"
+      ],
+      "first_unproved_line": "No bounded ratio for prime critical sources or quantitative near-tensor interface is proved.",
+      "supersedes": [],
+      "refutes": [
+        "Criticality alone defines an easier-than-FEI class.",
+        "Qualitative nonfactorization controls arbitrary hidden cores."
+      ],
+      "statement_sha256": "804b15d2ce785c320b249a7772a2553faf2a743bbf380cbbfdcd86a47f034c42"
+    },
+    {
+      "claim_id": "B20-A096-TERMINAL-COMPENSATION",
+      "version": 1,
+      "exact_statement": "If D_n is the complete physical L+Q packet for the genuine one-point-defect q_n and Gamma_n^D=D_n-D_{n-1}/2, then for every N>=3, D_N=2^{-(N-2)}D_2+sum_{n=3}^N 2^{-(N-n)} Gamma_n^D. Using the contributor-proved B19 signs, every internal summand is negative, so the positive weighted terminal packet is indispensable.",
+      "hypotheses": [
+        "all integers N>=3",
+        "canonical physical restriction chain of genuine Boolean one-point defects",
+        "entropy in bits"
+      ],
+      "status": "AUTHOR_PROVED_CONDITIONAL_ON_B19_FULL_SIGN_PENDING_INDEPENDENT_REVIEW",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "75ee5d5a4915f08134141abd129b01bd38add60e",
+        "path": "reports/fei-2026-10-11/runs/B20/20261011T225831Z-account01-B20-a096-terminal-credit-ledger/REPORT.md",
+        "brain_commit": "0594e18f81e44e194281882b493c63d20c265f83"
+      },
+      "review_records": [],
+      "review_obligations": [
+        "Review exact telescoping identity and independently review the B19 full-credit sign."
+      ],
+      "next_consumers": [
+        "A027",
+        "A028",
+        "A029",
+        "A087",
+        "A090",
+        "A097"
+      ],
+      "first_unproved_line": "Universal nonreusing terminal-budget inequality remains open.",
+      "supersedes": [],
+      "refutes": [
+        "Negative internal credits alone refute every global restriction-tree route."
+      ],
+      "statement_sha256": "a90c1e6c9d17ae1f8660a5ada107723dcaa8cfd56bd575bd30058e547e2bb205"
+    },
+    {
+      "claim_id": "B20-A096-CRITICAL-PRUNING",
+      "version": 1,
+      "exact_statement": "For every nonconstant Boolean f and relevant coordinate i, with R=H(f)/I(f), child averages Hbar,Ibar, d_i=I_i(f), and Delta_iH=H(f)-Hbar, one has Hbar-R Ibar=R d_i-Delta_iH. Hence Delta_iH/d_i<R exposes a nonconstant physical child of ratio greater than R. Every descendant-critical f satisfies Delta_iH>=R I_i(f) for all i. A minimum-dimensional counterexample to H<=C I is tensor-prime and satisfies Delta_iH-CI_i(f)>=H(f)-CI(f)>0 for every i.",
+      "hypotheses": [
+        "finite uniform cube",
+        "genuine Boolean source",
+        "physical coordinate restrictions",
+        "entropy in bits"
+      ],
+      "status": "AUTHOR_PROVED_WITH_EXACT_FINITE_CHECK_PENDING_INDEPENDENT_REVIEW",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "8abe0f3cbe1924a957af6de47e9a89901f365615",
+        "path": "reports/fei-2026-10-11/runs/B20/20261011T232144Z-account01-B20-a096-critical-pruning/REPORT.md",
+        "brain_commit": "17ec097cedd5fe280e3fccd7b51189166e113215"
+      },
+      "review_records": [],
+      "review_obligations": [
+        "A090 or A094 reconstruct the split identity, critical implication, and fixed-C tensor-prime reduction."
+      ],
+      "next_consumers": [
+        "A026",
+        "A027",
+        "A051",
+        "A052",
+        "A055",
+        "A087",
+        "A090",
+        "A097"
+      ],
+      "first_unproved_line": "No universal upper bound for the minimum step ratio on critical tensor-prime sources is known.",
+      "supersedes": [],
+      "refutes": [
+        "A high-ratio sparse activation with control step below its global ratio can itself be descendant-critical."
+      ],
+      "statement_sha256": "77e0000fcd87cbae7373cb1b816afd200046ac25b87558fe6cd1353176003eb2"
+    },
+    {
+      "claim_id": "B20-A096-FIXED-ROOT-TREE-SLACK",
+      "version": 1,
+      "exact_statement": "Let f be a nonconstant genuine Boolean function, R=H(f)/I(f), D_R(g)=R I(g)-H(g) for physical descendants, and s_R(g,i)=Delta_i H(g)-R I_i(g). For every finite physical restriction tree T rooted at f, with reach weights w_v, sum over leaves w_l D_R(f_l) equals sum over internal nodes w_v s_R(f_v,i(v)). If f is descendant-critical, this sum is nonnegative. At any node with D_R=0 each local slack is nonnegative, with equality exactly when all nonconstant children retain ratio R. For a tree continued to constants the total signed slack is exactly zero.",
+      "hypotheses": [
+        "finite uniform cube",
+        "genuine Boolean root",
+        "physical coordinate restriction tree",
+        "fixed root ratio throughout",
+        "entropy in bits"
+      ],
+      "status": "AUTHOR_PROVED_WITH_DETERMINISTIC_FINITE_CHECK_PENDING_INDEPENDENT_REVIEW",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "2a0314c9d15df52c4c191d8c9e67c8c6344ebaa9",
+        "path": "reports/fei-2026-10-11/runs/B20/20261012T002310Z-account01-B20-a096-tree-slack/REPORT.md",
+        "brain_commit": "b3b894f6e91089addcf119592f9523e5a63a0b6d"
+      },
+      "review_records": [],
+      "review_obligations": [
+        "A090 or A094 reconstruct the edge identity, tree cancellation, descendant-critical corollary, and complete-tree zero-sum endpoint."
+      ],
+      "next_consumers": [
+        "A027",
+        "A028",
+        "A029",
+        "A052",
+        "A054",
+        "A055",
+        "A087",
+        "A090",
+        "A094",
+        "A097",
+        "A100"
+      ],
+      "first_unproved_line": "No noncircular compensator or universal bounded coordinate step is known for descendant-critical tensor-prime sources.",
+      "supersedes": [],
+      "refutes": [
+        "Descendant-criticality makes every descendant local slack nonnegative.",
+        "Positive root slack can accumulate through a complete physical tree without signed cancellation."
+      ],
+      "statement_sha256": "aa8c611b785eff455381c555a34b0b5f21d45b2b878e9bebfd688201f279e537"
+    },
+    {
+      "claim_id": "B03-A014-RANK-ONE-SIGNED-OVERLAP",
+      "version": 1,
+      "exact_statement": "For uniform equal-mean balanced Boolean selector branches, rank one of the branch-by-data-frequency Fourier matrix forces every branch to be a signed copy of one Boolean core. Thus F(a,x)=sigma(a)g(x), H(F)=H(sigma)+H(g), and I(F)=I(sigma)+I(g).",
+      "hypotheses": [
+        "finite uniform address and data cubes",
+        "genuine balanced Boolean branches",
+        "exact spectral rank one"
+      ],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "32c09a14d540e3abda42660df5e435660b7b3c93",
+        "path": "reports/fei-2026-10-11/runs/B03/20261012T014110Z-account01-B03-a014-rank-one-overlap/REPORT.md",
+        "blob_sha": "b3bfea82cb0f54377d92efdd217c3206e9030e64"
+      },
+      "review_records": [],
+      "next_consumers": [
+        "A009",
+        "A068",
+        "A086",
+        "A097",
+        "B20"
+      ],
+      "first_unproved_line": "No stable payment is known for spectral rank greater than one or approximate rank one.",
+      "supersedes": [],
+      "refutes": []
+    },
+    {
+      "claim_id": "B03-A014-ONE-DEFECT-MAJ3-SEPARATION",
+      "version": 1,
+      "exact_statement": "For F_t(a,x)=h_t(a)Maj_3(x), the literal branch cover has worst read 2^t, fractional congestion one, spectral rank one, expected controller-root cost 2-2^(1-t)<2, and H(F_t)<4I(F_t) for every t>=1.",
+      "hypotheses": [
+        "every integer t>=1",
+        "uniform cube",
+        "genuine Boolean h_t and Maj_3"
+      ],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "32c09a14d540e3abda42660df5e435660b7b3c93",
+        "path": "reports/fei-2026-10-11/runs/B03/20261012T014110Z-account01-B03-a014-rank-one-overlap/REPORT.md"
+      },
+      "review_records": [],
+      "next_consumers": [
+        "A009",
+        "A068",
+        "A086",
+        "A097",
+        "B20"
+      ],
+      "first_unproved_line": "No rank greater than one or near-rank-one theorem follows.",
+      "supersedes": [],
+      "refutes": [
+        "worst-case read is an unavoidable payment for this representation family"
+      ]
+    },
+    {
+      "claim_id": "B20-A097-RANKONE-CRITICAL-CLASSIFICATION",
+      "version": 1,
+      "exact_statement": "Every descendant-critical balanced Boolean selector with exact rank-one branch Fourier matrix factors as sigma*g with descendant-critical factors satisfying R(sigma)=R(g)=R(F); conversely equal-ratio critical factors give a critical product. Eta-criticality gives |R(sigma)-R(g)|<=eta/min(w_sigma,w_g). No nontrivial such product is a strict critical core.",
+      "hypotheses": [
+        "finite uniform address and data cubes",
+        "genuine balanced Boolean branches",
+        "exact spectral rank one",
+        "actual physical descendant criticality"
+      ],
+      "status": "AUTHOR_PROVED_AND_EXACT_SYMBOLICALLY_CHECKED_PENDING_INDEPENDENT_REVIEW",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "7a70d9f55535a71179cf24bd9e6c379e0e440896",
+        "path": "reports/fei-2026-10-11/runs/B20/20261012T022431Z-account01-B20-a097-rankone-critical/REPORT.md",
+        "brain_commit": "db78417bd3753fee8dfdca14a1a2b9ab50336661"
+      },
+      "review_records": [],
+      "next_consumers": [
+        "A052",
+        "A054",
+        "A055",
+        "A086",
+        "A090",
+        "A094",
+        "A099",
+        "B20"
+      ],
+      "first_unproved_line": "Rank at least two, approximate rank one, unbalanced branches, and the prime critical remainder remain open.",
+      "supersedes": [],
+      "refutes": [
+        "an exact nontrivial rank-one balanced selector can be a strict critical endpoint"
+      ]
+    },
+    {
+      "claim_id": "B20-A097-ONEDEFECT-NONCRITICAL",
+      "version": 1,
+      "exact_statement": "For F_t=h_t Maj_3 and every t>=2, eta-criticality requires eta >= [(3/2)/(t2^(1-t)+3/2)] [R(h_t)-4/3], whose right side tends to 8/3.",
+      "hypotheses": [
+        "every integer t>=2",
+        "uniform cube",
+        "h_t is negative at exactly one address"
+      ],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "7a70d9f55535a71179cf24bd9e6c379e0e440896",
+        "path": "reports/fei-2026-10-11/runs/B20/20261012T022431Z-account01-B20-a097-rankone-critical/REPORT.md",
+        "brain_commit": "db78417bd3753fee8dfdca14a1a2b9ab50336661"
+      },
+      "review_records": [],
+      "next_consumers": [
+        "A014",
+        "A052",
+        "A055",
+        "A099",
+        "B20"
+      ],
+      "first_unproved_line": "No conclusion for rank at least two follows.",
+      "supersedes": [],
+      "refutes": []
+    }
+  ],
+  "gaps": [
+    {
+      "gap_id": "G-J-COST",
+      "title": "Complete conditioned posterior witness cost",
+      "lead_packet": "A006",
+      "consumer_streams": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B08"
+      ],
+      "exact_open_obligation": "Prove R_f <= K I(f) universally for a fixed finite K, including normalizers, roots, ranks, labels and posterior entropy; or a new explicit broad class.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-R-SELECT",
+      "title": "Existential coordinate or proper-block selection",
+      "lead_packet": "A026",
+      "consumer_streams": [
+        "B05",
+        "B06",
+        "B13"
+      ],
+      "exact_open_obligation": "Prove an actual physical selection rule with universally paid total entropy decrease; a local all-coordinate bound is not available.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-R-MISMATCH",
+      "title": "Nonlocal mismatch/KL tree payment",
+      "lead_packet": "A064",
+      "consumer_streams": [
+        "B05",
+        "B06",
+        "B08",
+        "B13"
+      ],
+      "exact_open_obligation": "Pay the full tree sum of mismatch logarithms minus KL credit, PLUS terminal entropy, without reusing physical influence.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-BOOLEANITY",
+      "title": "Full signed Booleanity entropy mechanism",
+      "lead_packet": "A031",
+      "consumer_streams": [
+        "B01",
+        "B07",
+        "B08",
+        "B14"
+      ],
+      "exact_open_obligation": "Use a consequence of full signed Booleanity absent from the already refuted finite-prefix relaxations to bound a precise entropy term.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-PHASE-COND",
+      "title": "Conditional spectral entropy after phase marginal control",
+      "lead_packet": "A034",
+      "consumer_streams": [
+        "B07",
+        "B14",
+        "B16"
+      ],
+      "exact_open_obligation": "Bound the unpaid conditional spectral entropy under a proved structural condition that does not silently contain an arbitrary tensor factor.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-BIASED-LTF",
+      "title": "Arity-uniform corrected FEI+ for weighted biased thresholds",
+      "lead_packet": "A041",
+      "consumer_streams": [
+        "B09",
+        "B12",
+        "B14"
+      ],
+      "exact_open_obligation": "Find a replacement inequality surviving all three weighted-threshold controls, with all biases and variance-deficit normalization explicit.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-LOWSEL-COLLISION",
+      "title": "Low-energy or reused-selector collision payment",
+      "lead_packet": "A019",
+      "consumer_streams": [
+        "B03",
+        "B04",
+        "B06",
+        "B12"
+      ],
+      "exact_open_obligation": "Derive a genuinely new unbounded selector class or pay complete collision cost where I_sel/a tends to zero; the positive-energy corollary is already proved.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-BIASED-TAX",
+      "title": "Biased restriction tax: review and global payment",
+      "lead_packet": "A041",
+      "consumer_streams": [
+        "B09",
+        "B12",
+        "B13",
+        "B19"
+      ],
+      "exact_open_obligation": "Review B09 core lemma and fixed counterexample; distinguish an available tax from an optimal or necessary tax, then pay a valid term without repeated charges.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-CRITICAL-STEP",
+      "title": "Critical-source local step bound",
+      "lead_packet": "A096",
+      "consumer_streams": [
+        "B01",
+        "B06",
+        "B11",
+        "B18",
+        "B20"
+      ],
+      "exact_open_obligation": "After excluding exact nontrivial rank-one balanced selectors, bound min_i Delta_iH/I_i(f) on strict critical prime sources, extend the exclusion stably to rank>=2/near-rank-one, or construct a genuine critical family with unbounded minimum step ratio.",
+      "status": "OPEN",
+      "attempt_history": [
+        {
+          "attempt_id": "A096-CRITICAL-PRUNING-2",
+          "result": "Exact necessary condition and activation-pruning consequence proved; universal upper bound remains open."
+        },
+        {
+          "attempt_id": "A096-CRITICAL-TREE-TRANSFER-3",
+          "result": "Exact fixed-root deficit telescope proved. Stopped total slack is nonnegative for critical roots, but complete-tree total slack is zero; a noncircular compensator or bounded coordinate step remains open."
+        },
+        {
+          "attempt_id": "A097-RANKONE-CRITICAL-TRANSFER-1",
+          "result": "Exact rank-one balanced selector endpoints classified; nontrivial strict cores excluded. Rank>=2/near-rank-one and prime critical remainders remain open."
+        }
+      ],
+      "stagnant_substantive_attempts": 0
+    }
+  ],
+  "baseline_sources": [
+    {
+      "repository": "yspennstate/fourier-entropy-threshold-functions",
+      "commit": "cd27aa96a5bb670a5b3ae5451095b7020db8e9d4",
+      "path": "paper/main.tex",
+      "sha256": "5cff9d1b91c92883a6d35ec7674ff5953365cadc85299747e4047d9deb150dac"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "bfb1d10b25cb5cb2e09112357cd24b21b5b1fe5e",
+      "path": "research_pushes/2026-10-11-full-fei-100-agents/SEED_LEMMAS.md",
+      "blob_sha": "c575d18146a9a9d2bdee006dc3856947565442bc"
+    },
+    {
+      "path": "verification/plan_mathematical_audit_2026-10-11.md",
+      "role": "audited source map; follow its immutable originals for proofs"
+    }
+  ],
+  "propagation_events": [
+    {
+      "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+      "version": 1,
+      "event": "NARROW_LOCAL_HELPER_REFUTED",
+      "consumers": [
+        "B05",
+        "B06",
+        "B08",
+        "B10",
+        "B13",
+        "B20"
+      ],
+      "delivery_state": "Plan revision prepared; actual schedule deployment recorded separately.",
+      "downstream_mathematical_use": "NOT_INFERRED_FROM_RECEIPTS"
+    },
+    {
+      "claim_id": "B01-A005-ACTIVATION-CONTROL-STEP-CAP",
+      "version": 1,
+      "event": "ACTIVATION_STEP_PRESERVATION_REFUTED",
+      "consumers": [
+        "A026",
+        "A051",
+        "A055",
+        "A086",
+        "A094",
+        "A096",
+        "A097"
+      ],
+      "delivery_state": "Complete canonical and Brain author package; independent review pending.",
+      "downstream_mathematical_use": "Use exact asymptotic price 4; do not call the controls merely cheap."
+    },
+    {
+      "claim_id": "B20-A096-CRITICAL-PRUNING",
+      "version": 1,
+      "event": "CRITICAL_SOURCE_NECESSARY_CONDITION",
+      "consumers": [
+        "A026",
+        "A027",
+        "A051",
+        "A052",
+        "A055",
+        "A087",
+        "A090",
+        "A097"
+      ],
+      "delivery_state": "Complete canonical and Brain author package; independent review pending.",
+      "downstream_mathematical_use": "Any proposed critical endpoint must satisfy every-coordinate local step ratio at least its global ratio."
+    },
+    {
+      "claim_id": "B20-A096-FIXED-ROOT-TREE-SLACK",
+      "version": 1,
+      "event": "SIGNED_CRITICAL_TREE_ACCOUNTING",
+      "consumers": [
+        "A027",
+        "A028",
+        "A029",
+        "A052",
+        "A087",
+        "A090",
+        "A094",
+        "A097",
+        "A100"
+      ],
+      "delivery_state": "Complete canonical and Brain author package exactly read back; independent review pending.",
+      "downstream_mathematical_use": "Use the exact signed telescope and retain terminal deficits; do not assume nodewise slack positivity or identify this potential with the B05-B19 L+Q credit."
+    }
+  ],
+  "statement_hash_convention": "SHA256 of UTF-8 json.dumps({statement: exact_statement, hypotheses: hypotheses}, sort_keys=True, separators=(comma, colon)); strings stored as written.",
+  "current_public_release": {
+    "commit": "b38ba0ab49618ccbe6d1518a34c141dcec9f247c",
+    "source_sha256": "85e9c4f36026eb5890be5686d03bf5264e524144686ee203ed799e3d41ac7017",
+    "pdf_sha256": "e7c8c3d7f2324f0a0720368f08ba8cbd2eeadad015bacbef4564080fd534f490",
+    "change": "Data availability paragraph only; audited mathematical baseline remains pinned separately."
+  }
+}

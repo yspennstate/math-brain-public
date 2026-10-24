@@ -1,0 +1,226 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\title{Degree-Four Vector-Coordinate Sum-of-Squares Cannot Exclude Seven MUBs in $\C^6$\\\large Verification note and exact certificate package}
+\author{ProofNet24 P21 verification track}
+\date{16 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Randomstrasse101 Open Problem 23 asks whether degree-four Sum-of-Squares (SoS) can prove that seven mutually unbiased bases do not exist in $\C^6$.  For the two vector-coordinate encodings explicitly described on the source page, the answer is no.  This was proved by Sarkar in 2026.  We give a self-contained verification tailored to the source statement, resolve a normalization typo on the source page, and provide an exact rational/algebraic checker for the finite moment and localizer cores.  In the quartic equality formulation, the tracked 21 labeled cross-basis blocks are all simultaneously feasible under the degree-four Haar pseudoexpectation, so the number of exactly eliminated blocks is $0/21$.  This note does not address the unrestricted conjecture $\operatorname{MUB}(6)<7$ or stronger projector/noncommutative formulations.
+\end{abstract}
+
+\section{Source question and normalization}
+Two orthonormal bases $\{v_i\}_{i=1}^d$ and $\{w_j\}_{j=1}^d$ are mutually unbiased when
+\[
+  |\ip{v_i}{w_j}|=\frac1{\sqrt d}\qquad\text{for all }i,j.
+\]
+Hence in dimension six the squared-overlap condition is
+\[
+  \boxed{|\ip{v_i}{w_j}|^2=\frac16.}
+\]
+The Randomstrasse101 page displays $1/\sqrt6$ inside one already-squared cross-overlap equation.  That display conflicts with the definition immediately above it and with the subsequent $2\times2$ LMI threshold $1/\sqrt6$.  Sarkar explicitly records the same typographical issue.  Throughout this note the quartic equality therefore uses $1/6$, while the amplitude/LMI threshold uses $1/\sqrt6$.
+
+Fix $m=7$ labeled bases $B_k=(v_1^{(k)},\ldots,v_6^{(k)})$.  There are
+\[
+  \binom72=21
+\]
+labeled unordered cross-basis blocks and $6^2=36$ cross-overlap equations in each block, for $756$ quartic cross equations in total.
+
+\section{What ``degree four'' means}
+Work over the real polynomial ring in the real and imaginary parts of all vector coordinates.  A degree-four pseudoexpectation is a real linear functional
+\[
+ \widetilde\E:\R[x]_{\le4}\to\R
+\]
+such that $\widetilde\E[1]=1$ and
+\[
+ \widetilde\E[p^2]\ge0\qquad(\deg p\le2).
+\]
+For an equality $q=0$, the degree-four constraint is
+\[
+ \widetilde\E[hq]=0\quad\text{whenever }\deg(hq)\le4.
+\]
+Thus a quadratic same-basis orthonormality equation may be multiplied by a polynomial of degree at most two, whereas a quartic cross-unbiasedness equation may be multiplied only by a constant.
+
+For a Hermitian matrix polynomial $M(x)\succeq0$ of degree at most two, degree-four localizing positivity requires
+\[
+ \widetilde\E[g(x)^*M(x)g(x)]\ge0
+\]
+for affine-linear vector polynomials $g$.  This is the convention used below for the source's $2\times2$ LMI encoding.
+
+\section{Quartic equality formulation}
+\begin{theorem}[Haar degree-four pseudoexpectation]
+For every $d\ge2$ and every $m\ge1$, the direct vector-coordinate quartic equality formulation of $m$ mutually unbiased bases in $\C^d$ has a feasible degree-four pseudoexpectation.  Consequently it has no degree-four SoS refutation.
+\end{theorem}
+
+\begin{proof}
+Let $U_1,\ldots,U_m$ be independent Haar-random unitary matrices in $U(d)$ and take $v_i^{(k)}=U_ke_i$.  For every real polynomial $p$ of degree at most four in the vector coordinates define
+\[
+ \widetilde\E[p]=\E[p(U_1,\ldots,U_m)].
+\]
+This is an actual expectation, so positivity on squares of degree at most two is automatic.
+
+Within each basis, all orthonormality equations hold pointwise.  Therefore every allowed multiplier of a same-basis quadratic equality also has zero pseudoexpectation.
+
+If $k\ne\ell$, then $x=v_i^{(k)}$ and $y=v_j^{(\ell)}$ are independent Haar unit vectors.  Unitary invariance gives
+\[
+ \E|\ip{x}{y}|^2=\frac1d.
+\]
+Hence
+\[
+ \widetilde\E\left[|\ip{v_i^{(k)}}{v_j^{(\ell)}}|^2-\frac1d\right]=0.
+\]
+The bracket is already quartic in the real vector coordinates, so at degree four it admits only constant multipliers.  Thus all degree-four constraints are satisfied.
+
+If a degree-four SoS refutation existed, applying $\widetilde\E$ to the refutation identity would make every square term nonnegative and every equality multiple vanish, while the left side would equal $-1$, a contradiction.
+\end{proof}
+
+For $d=6,m=7$, this same pseudoexpectation satisfies all $756$ cross equations simultaneously.  Therefore the frozen metric is
+\[
+ \boxed{\text{exactly eliminated labeled cross-basis blocks}=0/21.}
+\]
+This is a nonexistence result for a degree-four refutation, not a failed search.
+
+\section{Exact rational Gram certificate for one cross pair}
+For one independent Haar pair $x,y\in\C^6$, identify each complex unit vector with a real vector on $S^{11}$.  Let $D=12$.  The exact real-sphere moments through degree four are
+\[
+ \E X_aX_b=\frac{\delta_{ab}}D,
+\]
+and
+\[
+ \E X_aX_bX_cX_e
+ =\frac{\delta_{ab}\delta_{ce}+\delta_{ac}\delta_{be}+\delta_{ae}\delta_{bc}}{D(D+2)}.
+\]
+The checker accompanying this note builds the $325\times325$ moment Gram matrix for the degree-$\le2$ real monomial basis in $(x,y)$ and reconstructs it as a sum of $433$ positive rational weighted squares.  Entrywise equality is checked over \texttt{fractions.Fraction}.  It also verifies exactly
+\[
+ \E(\Re\ip{x}{y})^2=\frac1{12},\qquad
+ \E(\Im\ip{x}{y})^2=\frac1{12},\qquad
+ \E|\ip{x}{y}|^2=\frac16.
+\]
+The finite certificate is only a checker for the algebraic core; the theorem above follows from the full Haar expectation argument.
+
+\section{The $2\times2$ Hermitian LMI formulation}
+The source also proposes, for a cross pair $x,y$, the Hermitian constraint
+\[
+ M(z)=
+ \begin{pmatrix}
+ c&z\\ \bar z&c
+ \end{pmatrix}\succeq0,
+ \qquad z=\ip{x}{y},\qquad c=\frac1{\sqrt d}.
+\]
+Classically, together with orthonormality, the inequalities $|\ip{x}{y}|\le1/\sqrt d$ force equality of all squared overlaps because the $d$ squared overlaps of a unit vector with an orthonormal basis sum to one.
+
+\begin{lemma}[Exact affine Haar compression]
+Let $x,y$ be columns from two independent Haar bases and let $H$ be the complexified affine coordinate space generated by the constant and all entries and conjugate entries of all proposed Haar bases, with the $L^2$ inner product.  Define $T:H\to H$ by
+\[
+ \ip{f}{Tg}_{L^2}=\E[\bar f\,\ip{x}{y}\,g].
+\]
+Then
+\[
+ \|T\|_{\mathrm{op}}=\frac1d,
+ \qquad \operatorname{rank}T=2d.
+\]
+\end{lemma}
+
+\begin{proof}
+Normalize affine coordinate modes by $\sqrt d$.  Write $z=\sum_{r=1}^d\bar x_r y_r$.  Haar second moments and independence give
+\[
+ T(\sqrt d\,\bar y_r)=\frac1d\sqrt d\,\bar x_r,
+ \qquad
+ T(\sqrt d\,x_r)=\frac1d\sqrt d\,y_r.
+\]
+All other affine modes vanish after projection.  Indeed, the constant channel has $\E z=0$; unmatched conjugation patterns are killed by independent column phases; coordinates belonging to other columns have a zero Kronecker-delta second moment; and coordinates from a third independent basis factor through a zero first moment.  The displayed $2d$ input modes and $2d$ output modes are orthonormal, so $T$ is exactly $1/d$ times a rank-$2d$ partial isometry.
+\end{proof}
+
+\begin{theorem}[Degree-four LMI feasibility]
+The same Haar pseudoexpectation satisfies every degree-four localizing constraint for the source's $2\times2$ Hermitian vector-coordinate formulation.  Consequently this formulation also has no degree-four SoS refutation.
+\end{theorem}
+
+\begin{proof}
+For affine-linear complex polynomials $p,q\in H$,
+\[
+\begin{aligned}
+ \widetilde\E
+ \begin{bmatrix}\bar p&\bar q\end{bmatrix}
+ M(z)
+ \begin{bmatrix}p\\q\end{bmatrix}
+ &=c(\|p\|_2^2+\|q\|_2^2)+2\Re\ip{p}{Tq}_{L^2}\\
+ &\ge c(\|p\|_2^2+\|q\|_2^2)-\frac2d\|p\|_2\|q\|_2\\
+ &\ge\left(c-\frac1d\right)(\|p\|_2^2+\|q\|_2^2)\ge0,
+\end{aligned}
+\]
+because $c=1/\sqrt d\ge1/d$.  Hence all degree-four localizers are positive.  Applying the pseudoexpectation to a putative mixed equality/LMI degree-four refutation again yields a contradiction.
+\end{proof}
+
+For $d=6,m=7$, the complex affine space has dimension
+\[
+ 1+2md^2=505,
+\]
+so the localizer acts on a $1010$-dimensional space.  Since $T$ has rank $12$ and every nonzero singular value is $1/6$, a singular-vector basis reduces the localizer to twelve copies of
+\[
+ B=\begin{pmatrix}\sqrt6/6&1/6\\1/6&\sqrt6/6\end{pmatrix}
+\]
+and $986$ positive scalar directions.  Exactly,
+\[
+ \det B=\frac5{36}>0,
+\]
+and
+\[
+ B=
+ \begin{pmatrix}1&0\\\sqrt6/6&1\end{pmatrix}
+ \begin{pmatrix}\sqrt6/6&0\\0&5\sqrt6/36\end{pmatrix}
+ \begin{pmatrix}1&\sqrt6/6\\0&1\end{pmatrix}.
+\]
+The checker verifies this factorization in exact arithmetic over $\mathbb Q(\sqrt6)$.
+
+\section{Scope and literature status}
+The conclusion is representation-sensitive.  In vector coordinates, cross-unbiasedness is quartic and degree four only tests its expectation.  In projector coordinates $P=vv^*$, the same relation becomes quadratic, so degree four can test substantially more.  Sarkar shows that a centered projector-coordinate degree-four Gram system recovers the elementary bound $m\le d+1$; for $d=6,m=7$ that bound is exactly tight and does not decide the unrestricted dimension-six MUB conjecture.
+
+Accordingly, the result proved here is precisely:
+\begin{quote}
+For the two direct vector-coordinate degree-four formulations explicitly described in Randomstrasse101 Open Problem 23, there is no degree-four SoS refutation of seven proposed MUBs in $\C^6$.
+\end{quote}
+It does not prove that seven actual MUBs exist, and it does not rule out stronger projector, lifted, noncommutative, or higher-degree certificates.
+
+The same source-matching theorem is already known from Shreyhaan Sarkar, \emph{Degree-Four Vector-Coordinate SoS Cannot Detect the MUB Upper Bound}, arXiv:2606.13903 (2026).  This document is therefore a verification/certificate package, not a claim of novelty.
+
+\section{Reproducibility}
+Run
+\begin{verbatim}
+python exact_checker.py
+\end{verbatim}
+from this folder.  The archived \texttt{exact\_checker.out} ends with
+\begin{verbatim}
+ALL_EXACT_CHECKS_PASS
+\end{verbatim}
+and records the exact metric $0/21$, the $325\times325$ rational moment-Gram identity, and the $\mathbb Q(\sqrt6)$ LMI block certificate.
+
+\begin{thebibliography}{9}
+\bibitem{Bandeira2025}
+A. S. Bandeira, ``Mutually Unbiased Bases, ETFs, and Zauner's Conjecture (problems 22--24),'' Randomstrasse101, posted 14 December 2025, updated 18 December 2025.
+
+\bibitem{Sarkar2026}
+S. Sarkar, ``Degree-Four Vector-Coordinate SoS Cannot Detect the MUB Upper Bound,'' arXiv:2606.13903, 2026.
+
+\bibitem{BDK2022}
+A. S. Bandeira, N. Doppelbauer, and D. Kunisky, ``Dual bounds for the positive definite functions approach to mutually unbiased bases,'' Sampling Theory, Signal Processing, and Data Analysis 20 (2022), 18.
+
+\bibitem{GP2024}
+S. Gribling and S. Polak, ``Mutually unbiased bases: polynomial optimization and symmetry,'' Quantum 8 (2024), 1318.
+
+\bibitem{MW2026}
+D. McNulty and S. Weigert, ``Mutually Unbiased Bases in Composite Dimensions -- A Review,'' Quantum 10 (2026), 2051.
+\end{thebibliography}
+
+\end{document}

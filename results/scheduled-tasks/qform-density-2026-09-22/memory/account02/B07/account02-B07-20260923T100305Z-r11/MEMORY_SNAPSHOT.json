@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B07",
+  "run_id": "account02-B07-20260923T100305Z-r11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_start": "b6e14315c387982135fb075d936a39ff56c3d533",
+  "latest_control_commit_observed_before_handoff": "8e232364ec51d68ec06ab3d3d7de3a50c90e7370",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "status": "ESSENTIAL_STEP_APPLIED + CANDIDATE_REFUTED(intermediate E2-through-Schur / bounded-core extraction) / FULL_TARGET_OPEN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ae2ffe0d8d96965c41173a05a76b6be1115fd657",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/account02-B07-20260923T100305Z-r11/REPORT.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B07/account02-B07-20260923T100305Z-r11.md",
+  "required_source_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+    "results_used": [
+      "general D_k decoupling-volume estimate with Jensen exponent q=2",
+      "Fourier-to-fractional-potential lemma",
+      "Theorem F at rank four with affine terms allowed"
+    ]
+  },
+  "partner_result_applied": {
+    "account": "account03",
+    "slot": "B07",
+    "run": "20260923T090613Z-account03-B07-qform-r30",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "466a8413b3d1ec6ce723633be0fe14eafaa7175d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260923T090613Z-account03-B07-qform-r30/REPORT.md",
+    "resource": "G3^(i,a)(N)>gamma F^6 with gamma=1/113246208^2; edge-E2 or four-bank compression"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-DK-FRACTIONAL-POTENTIAL-v1",
+      "statement": "For disjoint original-coordinate I,J, Z_k=e_k(A[I,J]^T A[I,J])>0, and 0<alpha<k/4, H_alpha(Q)<=C_(k,alpha) Z_k^(-alpha/(2k)) with C_(k,alpha)=c_alpha*k/[2 alpha(k/4-alpha)]*(pi sqrt(2e))^alpha. Arbitrary self-blocks, outside couplings and affine terms are retained. In particular H_1/4<=3.929131771 Z_2^-1/16 and H_1/2<=12.956788440 Z_3^-1/12, with no volume-marginal gate.",
+      "application": "On account03/B07 r30 anchored H3, H_1/2(Q)<284.994 F^-1/2; on its E2-edge branch, after conditioning anchors, H_1/4(Q_far|anchors)<43.519 F^-1/4 uniformly in anchor values."
+    },
+    {
+      "id": "QFORM-ANCHOR-H3-SCHUR-E2-COLLAPSE-v1",
+      "statement": "There is an exact standard-N3 family A_m with four eigenvalues of modulus >=1, anchored G3=1 and |b|sqrt(E2(D))=1, but completing the physical zero-diagonal anchor pair makes the far Schur cross block rank one and E2=0. No bounded-cardinality physical core has s3 bounded below uniformly.",
+      "construction": "For even m>=12: N0=m^2, b=1/m, S=sqrt(m), a=m^-1/4; flat orthonormal p,u and q,v; A_xy=b, A_xU=a p^T, A_yV=a q^T, A_UV=S(pq^T+uv^T), all other entries zero. Nonzero spectrum is +/-(S+b), +/-S. Every physical pair determinant is <=1/m^2<1/128.",
+      "scope": "Refutes only E2-through-Schur and bounded-core extraction from the anchored determinant resource; not QFORM.",
+      "paid_by": "Condition x,y and apply e5 Theorem F to the far rank-four block: ||p_Q||_infinity<=8/sqrt(m)<=8."
+    }
+  ],
+  "corrections_consumed": [
+    "no law-uniform pointwise scalar quadratic-phase envelope",
+    "no arbitrary-joint rank-three coarea bound",
+    "no post-rotation independence",
+    "no deletion of small nonzero random quadratic remainder",
+    "no universally good single physical minor"
+  ],
+  "first_unpaid_implication": {
+    "id": "QFORM-ANCHOR-H3-CURVATURE-COMPATIBLE-UPGRADE-v1",
+    "statement": "Upgrade the curvature-safe H_1/2 or conditional H_1/4 estimates from the anchored-H3/edge-E2 packet to an essential density bound without assuming pre-completion E2 survives anchor-pair Schur completion. A valid receiver must be stable under the demonstrated rank-one loss or force another already-paid physical branch before completion."
+  },
+  "sibling_debts": [
+    "account03/B07 r30 rank-one core tube",
+    "account03/B07 r30 six-bank nested E2 packet",
+    "account03/B07 r30 four-star BICORE packet"
+  ],
+  "checks": {
+    "status": "PASS",
+    "terminal_marker": "QFORM_B07_ANCHORED_SCHUR_COLLAPSE_CHECK_PASS",
+    "scope": "finite regression only, not proof evidence"
+  },
+  "full_qform_status": "OPEN / not proved / not disproved",
+  "continuity_status": "OPEN at full target",
+  "independent_review_status": "pending",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time_seconds": null
+}

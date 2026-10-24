@@ -1,0 +1,83 @@
+{
+  "helper_version": "A077-geometric-mark-v1",
+  "mode": "pilot",
+  "roots": 1,
+  "restriction_states": 243,
+  "local_queries": 405,
+  "eligible_private_rows": 2,
+  "sharp_contraction_rows": 2,
+  "assertions": 1621,
+  "elapsed_seconds": 0.2483302000000549,
+  "records": [
+    {
+      "k": 2,
+      "r": 1,
+      "states": 243,
+      "queries": 405,
+      "eligible_private_rows": 2,
+      "sharp_contraction_rows": 2,
+      "policies": [
+        {
+          "policy": "first",
+          "consumed_data": "5/8",
+          "consumed_selector": "3/16",
+          "remaining_data": "0",
+          "remaining_selector": "0",
+          "retained_bank": "0",
+          "terminal_entropy": {}
+        },
+        {
+          "policy": "last",
+          "consumed_data": "5/8",
+          "consumed_selector": "3/16",
+          "remaining_data": "0",
+          "remaining_selector": "0",
+          "retained_bank": "0",
+          "terminal_entropy": {}
+        },
+        {
+          "policy": "bad",
+          "consumed_data": "5/8",
+          "consumed_selector": "3/16",
+          "remaining_data": "0",
+          "remaining_selector": "0",
+          "retained_bank": "0",
+          "terminal_entropy": {}
+        },
+        {
+          "policy": "max",
+          "consumed_data": "5/8",
+          "consumed_selector": "3/16",
+          "remaining_data": "0",
+          "remaining_selector": "0",
+          "retained_bank": "0",
+          "terminal_entropy": {}
+        },
+        {
+          "policy": "stop2",
+          "consumed_data": "3/8",
+          "consumed_selector": "0",
+          "remaining_data": "1/4",
+          "remaining_selector": "3/16",
+          "retained_bank": "15/8",
+          "terminal_entropy": {
+            "2": "3/2",
+            "3": "-9/32"
+          }
+        },
+        {
+          "policy": "stop3",
+          "consumed_data": "1/4",
+          "consumed_selector": "3/16",
+          "remaining_data": "3/8",
+          "remaining_selector": "0",
+          "retained_bank": "0",
+          "terminal_entropy": {
+            "2": "3/4"
+          }
+        }
+      ]
+    }
+  ],
+  "arithmetic": "exact rational FWHT/edge counts and bank releases; prime-log equalities and certified rational sign intervals"
+}

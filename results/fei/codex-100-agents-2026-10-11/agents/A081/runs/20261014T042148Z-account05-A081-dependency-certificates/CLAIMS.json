@@ -1,0 +1,148 @@
+[
+  {
+    "claim_id": "A090-ARBITRARY-GATE-SIGNED-REFUND-PARTITION",
+    "version": 1,
+    "exact_statement": "For every even d>=4 and every Boolean sign g on r>=1 disjoint physical bits, let b(y)=(-1)^(sum_j y_(2j-1)y_(2j)), delta=2^-d, t=2^(-d/2), and F=b(y)+1[y=0](g(x)-1). Write hat b(R)=sigma_R t and a_V=hat g(V). For each relevant gate query i, retaining the residual gate mask V and sigma_R preserves the complete normalized derivative/reference KL exactly. Retaining only V loses influence-weighted KL L_i=delta a_i^2 D0_i, where D0_i=sum_sigma N_sigma delta log2(rho_i/c_(i,sigma)), N_sigma=(2^d+sigma 2^(d/2))/2, rho_i=1-delta+delta(a_empty^2+a_i^2), c_(i,sigma)=(sigma+t(a_empty-1))^2+delta a_i^2. The combined gate-row losses satisfy 0<=sum_i L_i<=2delta sum_i a_i^2<=2delta <=Inf_(y_1)(F)/4, and Inf_(y_j)(F)=1/2+delta(1-a_empty). This is a dedicated single reserve for precisely these quotient losses; no other charge, universal terminal payment, non-flat-core extension or full FEI conclusion is asserted.",
+    "hypotheses": [
+      "Uniform finite physical Boolean cube; entropy and KL in bits",
+      "Even d>=4; specified quadratic bent core; any r>=1 and any Boolean gate on disjoint bits",
+      "Complete row laws mu_i(T)=p_(T+i)/e_i and r_i(T)=p_T+p_(T+i); irrelevant queries omitted",
+      "If a_i=0 the exceptional derivative cell has zero weight; no conditioning of reference on derivative support",
+      "The reserved quarter of Inf_(y_1) is dedicated only to the sum of the specified quotient losses"
+    ],
+    "statement_sha256": "aa9f2ffec7988741dcbb1cadbf3e37e8b2a1563bab5520c7a4476a6a285e240d",
+    "contributors": [
+      "A090"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A090\\runs\\20261014T034626Z-account05-A090-independent-reconstruction\\DERIVATION.md",
+      "locator": "Signed conditional partition for arbitrary gates; complete derivation and single physical reserve"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A081",
+        "timestamp": "2026-10-14T04:31:36.073119+00:00",
+        "verdict": "ACCEPT_AT_ENTIRE_ORIGINAL_STATED_SCOPE",
+        "method": "Independent likelihood/physical-edge proof and direct-character exact certificate",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261014T042148Z-account05-A081-dependency-certificates\\REVIEW.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261014T042148Z-account05-A081-dependency-certificates\\out\\EXACT_SIGNED_PARTITION.json",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_ENTIRE_STATED_SCOPE_BY_A081",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A001",
+      "A073",
+      "A098",
+      "A099",
+      "B18",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A081-LOCAL-RESERVE-DOES-NOT-CERTIFY-CHILD-SLACK",
+    "version": 1,
+    "exact_statement": "There exists an actual six-bit bent-core point-edit Boolean sign F with d=4 and gate positive exactly on 0,1,2, split on physical y_1, whose children have influences 21/16 and 2. Complete leaf subprobability references Q_l=P_l 2^(H_l-12 I_l) are positive on true support and satisfy CE_l=12 I_l, so their unused child surpluses are both zero. Each gate-mask quotient loss is strictly positive; row 1 has L=(1/64)log2(31)-(5/256)log2(5)-(3/512)log2(41). Yet the A090 bound sum L_i<=Inf_(y_1)(F)/4 holds with Inf_(y_1)=17/32. Thus child CE<=C I alone does not certify any positive unused child capacity to pay these quotient losses. This does not rule out better chosen references or the existing terminal KL correction.",
+    "hypotheses": [
+      "Actual six-bit sign and physical y_1 split; information in bits",
+      "Complete leaf subprobability laws are allowed, fixed before spectral sampling, and positive on true support",
+      "Unused child surplus means C I(f_l)-CE(P_l,Q_l), not D(P_l||Q_l) or a different signed correction"
+    ],
+    "statement_sha256": "11dcc9fbc5b207dd60329d65a77ac7a2095f451bda3a903bac0e988e866f4dc6",
+    "contributors": [
+      "A081"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261014T042148Z-account05-A081-dependency-certificates\\REVIEW.md",
+      "locator": "Section 3",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261014T042148Z-account05-A081-dependency-certificates\\out\\EXACT_SIGNED_PARTITION.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_key": "A090-ARBITRARY-GATE-SIGNED-REFUND-PARTITION@1",
+        "statement_sha256": "1641ae80be8e4950ce90d3895b8adbf5d5ab084faf6b0cb233ee783397833368",
+        "hypothesis_instantiation": "d=4, r=2 gate with coefficients a_empty=a_i=1/2; conditional laws unequal, dedicated quarter bound holds",
+        "unit_conversion": null
+      },
+      {
+        "claim_key": "A097-COMPATIBLE-LEAF-REFERENCE-TRANSFER@1",
+        "statement_sha256": "3d4f0cb8e494de226944ab227188bef2b4c8e9247afd0ff3b82c00ec83f62a5e",
+        "hypothesis_instantiation": "Only its complete subprobability leaf-reference hypotheses; no unproved payment consequence invoked",
+        "unit_conversion": null
+      }
+    ],
+    "review_records": [],
+    "status": "EXACT_LOCAL_LEDGER_TEST_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "PROPOSED-LOCAL-RESERVE-IMPLIES-CHILD-SLACK@1"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A090",
+      "A001",
+      "A096",
+      "A097",
+      "A099",
+      "A094",
+      "A085",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A081-VERSIONED-DEPENDENCY-CERTIFICATE",
+    "version": 5,
+    "exact_statement": "A081 stage-5 dependency certificate has 65 exact nodes and 110 source byte pins, an acyclic graph, and 10 FEI routes with unresolved leaves. It independently accepts A090 arbitrary-gate signed refund partition v1 at its entire original scope, retains its single dedicated quarter-core reserve, and certifies an actual six-bit zero-child-slack witness separating local loss bounds from available child capacity. It passes 15566 exact checks and ten declared ledger/graph rejection fixtures. Full FEI remains OPEN; no universal constant or non-flat terminal payment is obtained.",
+    "hypotheses": [
+      "Exact source versions, canonical internal statement hashes and immutable source pins",
+      "All-dimensional review is analytic; finite checks are corroboration",
+      "Structural and ledger declaration checks do not automate inference validity; integrated review remains pending"
+    ],
+    "statement_sha256": "ac7339f87c050465ee3fa9308435048c188ed2564c7ae83520c3ccbbf390f5d7",
+    "contributors": [
+      "A081"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261014T042148Z-account05-A081-dependency-certificates\\PROOF_DEPENDENCIES.json",
+      "files": [
+        "REVIEW.md",
+        "out/GRAPH_VALIDATION.json",
+        "out/MUTATION_AUDIT.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_key": "A090-ARBITRARY-GATE-SIGNED-REFUND-PARTITION@1",
+        "statement_sha256": "1641ae80be8e4950ce90d3895b8adbf5d5ab084faf6b0cb233ee783397833368",
+        "hypothesis_instantiation": "Entire independent review",
+        "unit_conversion": null
+      },
+      {
+        "claim_key": "A081-LOCAL-RESERVE-DOES-NOT-CERTIFY-CHILD-SLACK@1",
+        "statement_sha256": "11dcc9fbc5b207dd60329d65a77ac7a2095f451bda3a903bac0e988e866f4dc6",
+        "hypothesis_instantiation": "Exact local capacity test",
+        "unit_conversion": null
+      }
+    ],
+    "review_records": [],
+    "status": "EXACTLY_VALIDATED_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A081-VERSIONED-DEPENDENCY-CERTIFICATE",
+        "version": 4
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A085",
+      "A094",
+      "B20"
+    ]
+  }
+]

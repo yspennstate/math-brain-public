@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260922T223030Z-auto12",
+  "control": {
+    "prepublication_commit": "006e33d8cd65803611d50ce535deee8a4f627301",
+    "revision": "2026-09-22.15",
+    "sole_target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES"
+  },
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": {
+    "title": "Oscillatory replacement",
+    "pathway": "FOURIER",
+    "partner": "account04/B01"
+  },
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "fractional-volume-sampling-template-rank3",
+      "source": "yspennstate/math-open-problems@e8dbbf2d994e8a3878110b6eb405cdce0bc3e5e4:proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260922T222136Z-account01-B20-QFORM-r21/REPORT.md",
+      "scope": "fractional volume-sampling Brascamp-Lieb determinant interpolation for actual original-coordinate cross blocks"
+    },
+    {
+      "id": "balanced-hub-wedge-packet",
+      "source": "yspennstate/math-open-problems@e8dbbf2d994e8a3878110b6eb405cdce0bc3e5e4:proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260922T202251Z-account01-B20-QFORM-r12/REPORT.md",
+      "scope": "retained original physical pivot |a|>=3501/8000, balanced hub arms, and E2(N_U)>=r_U^2 D_U^2"
+    },
+    {
+      "id": "signed-Fejer-equivalence",
+      "source": "yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79:proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md",
+      "scope": "exact equality of bounded-density norm with supremum of signed Fejer means"
+    },
+    {
+      "id": "dependence-safe-physical-square-smoothing",
+      "scope": "if residual density is in L3 and the completed original-coordinate square has conditional density cap one, then ||p_Q||_inf<=4|a|^-1/2||p_R||_3^(3/4)"
+    }
+  ],
+  "proved": [
+    {
+      "id": "QFORM-FRACTIONAL-E2-BL-L3-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For E=e_2(M^TM)>0 and exact squared-2x2-minor row marginals alpha_i, if 2/3<theta<1 and theta alpha_i<=1/2, then arbitrary same-side quadratic curvature is retained and ||p_R||_3 <= [e*(3theta/(3theta-2))*K_theta^(-1/(4theta))]^(2/3) E^(-1/6)."
+    },
+    {
+      "id": "QFORM-FRACTIONAL-E2-BL-SQUARE-v1",
+      "status": "PROVED_TARGET_LEVEL_BRANCH",
+      "statement": "One nonzero original-coordinate physical scalar pivot upgrades the preceding L3 bound to ||p_Q||_inf <=4[e*(3theta/(3theta-2))]^(1/2)K_theta^(-1/(8theta))|a|^-1/2E^-1/8. At theta=3/4 the constant is 18.014628561278105."
+    },
+    {
+      "id": "QFORM-E2-VOLUME-TWOANCHOR-LOCALIZATION-v1",
+      "status": "PROVED_SUPPORTING_REDUCTION",
+      "statement": "In the retained balanced-hub wedge-active branch D_U>=1/64, either the full density is <141.261 or both second-volume orientations have a physical inclusion marginal >2/3. In the unpaid case a genuine physical row/column anchor pair jointly carries >1/3 of E2 and absolute squared-minor mass >1/1572864."
+    }
+  ],
+  "partner_applied": {
+    "account": "account04",
+    "slot": "B01",
+    "result": "QFORM-SIGNED-FEJER-EQUIVALENCE-v1",
+    "application": "Converted the new target-level density estimate exactly to sup_{T,y} D_T law(Q) with no constant loss; at theta=3/4 the coefficient is 18.014629 and the balanced-hub application is <141.261."
+  },
+  "outputs": {
+    "canonical_math_repository": "yspennstate/math-open-problems",
+    "canonical_directory_commit": "ae53a672bb855b66e657c33139e63c2077a5c25b",
+    "directory": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260922T223030Z-auto12/",
+    "report_commit": "3642c75fb0909326c54c407eff8362f124f6bed7",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260922T223030Z-auto12/REPORT.md",
+    "claims_commit": "ae53a672bb855b66e657c33139e63c2077a5c25b",
+    "handoff_commit": "3c51631a334da2761aeb2bbbf9bd79124a7af602",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B01/account03-B01-20260922T223030Z-auto12.md"
+  },
+  "unresolved": {
+    "id": "QFORM-ANCHORED-E2-FEJER-PAYMENT-v1",
+    "status": "OPEN",
+    "statement": "Spend the two-sided physical anchored second-compound mass before selecting one reciprocal 2x2 minor, forcing a quantitative second Schur pivot or an already-paid grouped-star/rank-two-cross packet."
+  },
+  "full_target_status": "OPEN",
+  "continuity_status": "NOT_PROVED_BY_NEW_BRANCH",
+  "next_step": "Split the anchored mass according to whether the heavy column anchor is the physical hub p or lies in the opposite bank, then derive a signed-Fejer/product inequality that averages all anchored minors before reciprocal determinant payment."
+}

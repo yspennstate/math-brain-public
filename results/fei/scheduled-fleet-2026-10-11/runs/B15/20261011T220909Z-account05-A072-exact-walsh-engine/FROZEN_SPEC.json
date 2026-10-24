@@ -1,0 +1,13 @@
+{
+  "helper_version": "B09-BIASED-BLOCK-UNCERTAINTY@1; A072-exact-walsh/1",
+  "family": "A071 three-bit grid, plus every sign table on n=0,1,2,3 for uniform engine validation",
+  "domain": {"codes": [0,127], "bias_numerators_over_8": [1,2,4], "physical_block_masks": [1,2,3,4,5,6]},
+  "case_count": {"uniform_tables":278,"biased_parents":3456,"physical_blocks":20736,"physical_child_occurrences":62208},
+  "symmetry": "Reuse A071 output complement and paired input/bias reflection covering reduction. No new reduction.",
+  "arithmetic": "Integer Walsh; Fraction polynomial expansion, inverse, spectra, edge-pivotal probabilities and physical mixture identities. No logarithms or entropy comparisons.",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds": 120,
+  "pilot": {"uniform_tables":278,"biased_parents":128,"physical_blocks":768,"max_runtime_seconds":55},
+  "no_automatic_dimension_escalation": true,
+  "frozen_before_execution": true
+}

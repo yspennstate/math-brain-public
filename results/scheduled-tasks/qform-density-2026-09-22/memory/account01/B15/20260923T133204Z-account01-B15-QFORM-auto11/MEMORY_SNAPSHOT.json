@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260923T133204Z-account01-B15-QFORM-auto11",
+  "status": "ESSENTIAL_STEP_APPLIED_FIXED_TENT_EXACT_NORMAL_FORM_FULL_QFORM_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit_at_start": "353657ef5662ea075df58ab4d5ea475759eacbcf",
+  "source_control_commit_final_refresh": "0cdc732db5de9f7573ef7fa36d1f8c01d3184e67",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "mathematical_premises": [
+    "Target class is s_3(A)>=1 and is closed under A -> A/r for 0<r<=s_3(A).",
+    "For tau(u)=(1-|u|)_+, tau is a nonnegative integral-one bounded 1-Lipschitz compact kernel.",
+    "Weak convergence of probability laws is convergence in bounded-Lipschitz metric on R.",
+    "Completed account02/B15 ruled theorem controls the majority/one-sheet output submeasure for an invertible indefinite original-coordinate physical 3x3 block by C_B dx, C_B<=pi sqrt(2)/sigma_min(B), uniformly under outside original-coordinate conditioning and affine translation."
+  ],
+  "new_results": [
+    "Exact sharp equality: sup_target s_3(A) D_infinity(mu_Q) = sup_target,y s_3(A) E(1-|Q-y|)_+ as extended real numbers, without assuming a density or raw continuity.",
+    "For every probability law mu, H_mu=tau*mu is in C_0, is bounded by 1, is 1-Lipschitz and attains its maximum.",
+    "Fixed-tent weak stability: sup_y |H_mu-H_nu| <= d_BL(mu,nu), so weak output convergence gives uniform fixed-tent-profile convergence.",
+    "Exact cap-preserving smooth compact source reduction for the sharp target constant at fixed tent scale.",
+    "Qualitative absolute continuity: any nonzero symmetric A pushes any absolutely continuous joint input law to an absolutely continuous quadratic output.",
+    "Partner application: s E tau(Q-y) <= pi sqrt(2) s/kappa + s E[tau(Q-y) 1_minority] for an indefinite original-coordinate physical triple with kappa=sigma_min(B)."
+  ],
+  "partner_result_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "46c33d97490f78f8c3de0435f63d573958d81180",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260923T130525Z-account02-B15-qform-auto11/REPORT.md",
+    "scope": "rough-product majority/one-sheet interval domination and positive-tent inequality for indefinite original-coordinate physical triples"
+  },
+  "newest_claude_source_read": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md"
+  },
+  "canonical_scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "492a26cabf412aed83ba07388c64458e8462e469",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T133204Z-account01-B15-QFORM-auto11/REPORT.md",
+    "blob": "ee77d3d823c3bfba26aa16fe0d1c531029f83f11"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "e4fa1c257d4338fa9a9871c17be60dd683665083",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B15/20260923T133204Z-account01-B15-QFORM-auto11.md"
+  },
+  "unresolved_implication": "Prove one universal bound on sup_target,y s_3(A) E tau(X^TAX-y). On a well-conditioned indefinite physical triple the majority side is paid; the product-sensitive minority/two-sheet tent and no-good-minor/high-leverage aggregate-before-inversion classes remain.",
+  "next_step": "Combine the fixed-tent exact normal form with original-coordinate bank/ridge/volume certificates to control the minority/two-sheet fixed-tent contribution, preserving product provenance; use weak fixed-tent stability for rough-law closure only after the uniform fixed-scale estimate is proved.",
+  "raw_continuity_status": "Separate stronger conclusion; canonical shared CLAIMS still records full continuous-representative statement OPEN. This run does not promote it.",
+  "canonical_hour_login_note": "The account01/B15 13Z login record already belonged to a distinct actual run and was not overwritten.",
+  "schedule_or_notification_changes": false
+}

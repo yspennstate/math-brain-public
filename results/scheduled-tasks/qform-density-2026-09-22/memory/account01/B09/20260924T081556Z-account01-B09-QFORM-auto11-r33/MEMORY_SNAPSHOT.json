@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B09",
+  "run_id": "20260924T081556Z-account01-B09-QFORM-auto11-r33",
+  "control_commit_at_late_refresh": "5bc6f70a6b833f2f0a1249c28cf6eb1c4c01a1c5",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "full_qform_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity": "OPEN",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "POINTWISE-OSCILLATORY-DECAY-REFUTED"
+  ],
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "174f2ac95a7e63dc88172bc6fcf5b319e8613d44",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260924T081556Z-account01-B09-QFORM-auto11-r33/REPORT.md",
+  "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260924T081556Z-account01-B09-QFORM-auto11-r33/CHECKS.md",
+  "prepublication_refresh_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260924T081556Z-account01-B09-QFORM-auto11-r33/PREPUBLICATION_REFRESH.md",
+  "main_result": {
+    "id": "QFORM-TRIANGLE-CYCLIC-CROSSING-v1",
+    "status": "PROVED_SUPPORTING_STRUCTURAL_LEMMA",
+    "statement": "For the fixed-hub rank-one leaf packet A_LL=D+lambda vv^T and c=A[L,h]=mu v+theta z with v,z orthonormal, if a literal triangle S has Pluecker mass t=det(sum_{i in S}u_i u_i^T) and max triangle row leverage at most eta<t, then the cyclic physical 2x2 crossing determinants obey sum_i |det C_i|^2 >= lambda^2 theta^2 t(t-eta), hence one has |det C_i| >= |lambda theta| sqrt(t(t-eta)/3).",
+    "scope": "Original independent coordinates; arbitrary physical diagonal D and hub scalar; structural crossing certificate only, not a standalone Linfinity density theorem."
+  },
+  "compiled_branch": {
+    "source_dependency": "QFORM-WEIGHTED-EKR-2FRAME-STABILITY-v1",
+    "source_commit": "8b902bf20457a12c8ad394ece3808c9a0130a95b",
+    "threshold": "rho<1/512",
+    "conclusion": "Either high literal row leverage, or a triangle with t>=0.8879070551...; if triangle row leverage <=3/4, some literal 2x2 crossing determinant is >=0.202030... |lambda theta|."
+  },
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B09",
+    "id": "QFORM-TWOHUB-DOUBLE-RETENTION-v1",
+    "application": "Q_*=2(U+V)^2+2UY0+2VY1+4((Z1+Z2)/sqrt(2))^2",
+    "target_certificate": "active spectrum {2+sqrt(5),2-sqrt(5),1,-1,4}",
+    "density_bound": "||p_Q*||_infinity <= 6*4^(-1/3)=3.7797631497...<3.780",
+    "interval_bound": "P{Q_* in I}<3.780|I|",
+    "continuity": true
+  },
+  "late_partner_source_observed": {
+    "id": "QFORM-JOINT-HUB-CAP-MIXEDFRAME-v1",
+    "commit": "2cce202879f9b0fa629f4fd1b464e271b11895c0",
+    "use": "Compatible future receiver for hub-only determinant-one shears; not a premise of the main triangle theorem."
+  },
+  "unresolved_implication": "QFORM-TRIANGLE-CROSSING-PIVOT-CANCELLATION-OR-HIGHLEVERAGE-EXIT-v1",
+  "next_step": "Preserve a macroscopic cyclic rank-two crossing through a third source-coordinate pivot/curvature resource, or route pivot cancellation/high leverage to an already-paid singular-pair, finite-core, grouped-crossing, or retained-hub receiver.",
+  "handoff_commit": "2201b8812d8813156ec5a6fe4dae7c08d23c237a",
+  "full_brain_connected": false,
+  "repository_receiver_use_verified": true,
+  "native_learned_memory_ingestion_verified": false
+}

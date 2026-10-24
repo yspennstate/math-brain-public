@@ -1,0 +1,7 @@
+The packet covers C0056's spectral branch only. Review the independent L01-L03 in ATTEMPT.md before using CORE_AUDIT.md. Check the Fatou/pathwise subsequence quantifier, positivity and local measure identification, countable basis transfer, cavity conditioning sigma-field, pi factors and resonance boundary |a|+b<=lambda. Confirm normalization from uniform[-1,1] to the primary variance-one law. The zero-hopping counterexample refutes a route, not the target.
+
+The frozen w483 direct-audit snapshot is review/w483_ATTEMPT_snapshot.md (SHA256 4f99ebdf4c964aacc446b9399db3eab0b6edcecf85ad00534470ccd9c9867338). Its pair inequality is assumed, never proved. The conditional route is kept; no parent theorem or GOE inference is kept.
+
+SOURCE_STATUS.json records historical sources, the recent unaudited public proof claim and formalization scope. CLAIMS.jsonl gives statements, assumptions, sources, proof/counterexample, reviewer state and gaps. MEASUREMENTS.json records deterministic arithmetic controls only. DRAFT_BUNDLE.json contains four concepts, zero theorem/lemma entries and three supported relations. SUBMISSION_RECEIPT.json separates submitted, reviewed, ingested and retrievable. Neither requested model settings nor file hashes establish mathematical correctness or served model identity.
+
+NEXT: Independently check L01-L03 and return item-specific verdicts with response-side served-model evidence where available; then retain the inverse-cavity estimate as an unresolved proof obligation.

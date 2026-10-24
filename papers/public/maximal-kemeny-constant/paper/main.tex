@@ -1,0 +1,274 @@
+\documentclass[11pt]{amsart}
+\usepackage[a4paper,margin=1.05in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={The maximal Kemeny constant of an n-vertex graph},pdfauthor={Yitzchak Shmalo}}
+\setlength{\emergencystretch}{1.5em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\trel}{\tau_{\mathrm{rel}}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\diam}{\operatorname{diam}}
+\title[The maximal Kemeny constant]{The maximal Kemeny constant of an $n$-vertex graph}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{10 October 2026}
+\subjclass[2020]{Primary 60J10, 05C81; Secondary 05C35, 05C50}
+\keywords{Kemeny's constant, random walk, effective resistance, extremal graph, barbell graph, Tur\'an graph}
+\begin{document}
+\begin{abstract}
+For simple random walk on a connected simple graph with $n$ vertices, Kemeny's constant is at most $n^3/54+\frac{37}{8}n^{5/2}$. Balanced barbells show that the leading term is sharp, so the maximum of Kemeny's constant over such graphs is asymptotic to $n^3/54$. This proves the Kemeny-constant assertion of Aldous--Fill Open Problem~6.13. Since the relaxation time never exceeds Kemeny's constant, the same bound gives the relaxation-time assertion of that problem, which was proved by Aksoy, Chung, Tait and Tobin. The proof is elementary. It combines the effective-resistance formula for Kemeny's constant with a contraction of the neighbourhoods of high-degree vertices and a two-mass inequality on the edges of a spanning tree. The same argument shows that among $K_{r+1}$-free graphs, and among graphs of chromatic number at most $r$, both maxima equal $(1-1/r)n^3/54+O(n^{5/2})$. In particular the triangle-free and the bipartite constants are $1/108$.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+Let $G$ be a connected simple graph with vertex set $V$, $|V|=n\ge2$, degrees $d_v$, and $W=\sum_vd_v=2|E(G)|$. Simple random walk $(X_t)$ on $G$ has transition probabilities $P(u,v)=1/d_u$ when $uv\in E(G)$ and $P(u,v)=0$ otherwise, and stationary distribution $\pi_v=d_v/W$. The eigenvalues of $P$ are real, $1=\lambda_1>\lambda_2\ge\cdots\ge\lambda_n\ge-1$, and we write
+\begin{equation}\label{eq:Kdef}
+K(G)=\sum_{j=2}^n\frac1{1-\lambda_j},\qquad \trel(G)=\frac1{1-\lambda_2}.
+\end{equation}
+With $T_v=\min\{t\ge0:X_t=v\}$, Kemeny's constant $K(G)$ equals $\sum_v\pi_v\E_uT_v$ for every starting vertex $u$ (Lemma~\ref{lem:formulas}). In the notation of Aldous and Fill, $K(G)=\tau_0$ and $\trel(G)=\tau_2$ for the walk run in continuous time with unit jump rate, whose mean hitting times are those of the discrete-time walk. Every term of the sum in \eqref{eq:Kdef} is positive, so $\trel(G)\le K(G)$.
+
+Aldous and Fill \cite[Chapter~6, Open Problem~6.13]{AF} ask for proofs of
+\begin{equation}\label{eq:AF}
+\max_GK(G)\sim\frac{n^3}{54},\qquad \max_G\trel(G)\sim\frac{n^3}{54},
+\end{equation}
+the maxima being over connected simple graphs on $n$ vertices. Aksoy, Chung, Tait and Tobin \cite{ACTT} proved the second assertion. The first is proved here, with an explicit error term.
+
+\begin{theorem}\label{thm:main}
+Every connected simple graph $G$ on $n\ge2$ vertices satisfies
+\begin{equation}\label{eq:upper}
+\trel(G)\le K(G)\le\frac{n^3}{54}+\frac{37}{8}\,n^{5/2}.
+\end{equation}
+For every $n\ge6$ there is a connected simple graph $B_n$ on $n$ vertices, formed by two complete graphs of order $\lfloor n/3\rfloor$ joined by a path, with
+\begin{equation}\label{eq:lower}
+K(B_n)\ge\trel(B_n)\ge\frac{n^3}{54}-\frac{n^2}{18}-\frac{5n}{54}.
+\end{equation}
+Consequently $\max_GK(G)\sim\max_G\trel(G)\sim n^3/54$.
+\end{theorem}
+
+The upper bound uses only how many edges a set of vertices can span, and so it improves under restrictions of that kind.
+
+\begin{theorem}\label{thm:clique}
+Fix an integer $r\ge2$. Every connected $K_{r+1}$-free graph $G$ on $n\ge2$ vertices satisfies
+\begin{equation}\label{eq:clique-upper}
+\trel(G)\le K(G)\le\Bigl(1-\frac1r\Bigr)\frac{n^3}{54}+\frac{37}{8}\,n^{5/2}.
+\end{equation}
+For every $n\ge6r$ there is a connected graph of chromatic number at most $r$ on $n$ vertices with
+\begin{equation}\label{eq:clique-lower}
+K(G)\ge\trel(G)\ge\Bigl(1-\frac1r\Bigr)\frac{n^3}{54}-\frac{(r-1)n^2}{9}.
+\end{equation}
+Hence, over connected $K_{r+1}$-free graphs and over connected graphs of chromatic number at most $r$, the maxima of $K$ and of $\trel$ are both $(1-1/r)n^3/54+O(n^{5/2})$. In particular, over triangle-free graphs and over bipartite graphs both maxima are $n^3/108+O(n^{5/2})$.
+\end{theorem}
+
+The lower bounds come from barbells, two copies of a dense graph joined by a long path. Exact formulas for the Kemeny constant of barbells are given in \cite{Breen,Faught}. The content of Theorem~\ref{thm:main} is the upper bound over all graphs.
+
+The constant $1/54$ has a simple source. By the resistance formula of Lemma~\ref{lem:formulas}, $K(G)$ is a degree-weighted average of effective resistances. In a barbell whose two blocks have $a$ vertices each and whose path has length $\ell$, two masses of degree sum about $a^2$ sit at resistance about $\ell$ from each other, so $K$ is about $a^2\cdot a^2\cdot\ell/(2a^2)=a^2\ell/2$. Under $2a+\ell\approx n$ this is largest at $a=\ell=n/3$, where it equals $n^3/54$. The proof turns this heuristic into an inequality. The vertices of degree at least $\sqrt n$, together with their neighbours, form clusters of small total diameter (Lemma~\ref{lem:clusters}). After the clusters are contracted, the graph is compared with a spanning tree, and each tree edge separates two masses whose contribution is at most $s^2/8$, where $s$ is the number of clustered vertices (Lemma~\ref{lem:twomass}). The tree has about $n-s$ edges, and $(n-s)s^2/8\le n^3/54$.
+
+\section{Kemeny's constant and effective resistance}\label{sec:resistance}
+Let $L=\operatorname{diag}(d)-A$ be the Laplacian of $G$, where $A$ is the adjacency matrix, and let $e_u$ denote the coordinate vectors. For distinct $u,v\in V$ the equation $L\varphi=e_u-e_v$ has a solution, unique up to an additive constant, and the effective resistance is $R_{uv}=\varphi_u-\varphi_v$. Put $R_{uu}=0$.
+
+\begin{lemma}\label{lem:formulas}
+Let $G$ be a connected simple graph and $u,v\in V$. Then
+\begin{enumerate}
+\item[(a)] $K(G)=\sum_{x}\pi_x\E_uT_x$;
+\item[(b)] $\E_uT_v+\E_vT_u=WR_{uv}$;
+\item[(c)] $K(G)=\frac1W\sum_{\{x,y\}}d_xd_yR_{xy}$, the sum running over unordered pairs of distinct vertices;
+\item[(d)] $R_{uv}\le\dist_G(u,v)$.
+\end{enumerate}
+\end{lemma}
+
+These facts are standard \cite[Chapter~3]{AF}; we include short proofs.
+
+\begin{proof}
+The matrix $P$ is self-adjoint on $\ell^2(\pi)$, and
+\begin{equation}\label{eq:dirichlet}
+\sum_x\pi_xf_x\bigl((I-P)f\bigr)_x=\frac1W\sum_{xy\in E(G)}(f_x-f_y)^2 .
+\end{equation}
+Since $G$ is connected, the eigenvalue $1$ of $P$ is simple and its eigenvectors are the constants. Put $\Pi=\mathbf 1\pi^{\mathsf T}$ and $Z=(I-P+\Pi)^{-1}$. The matrix $I-P+\Pi$ maps $\mathbf 1$ to itself and acts as $I-P$ on the functions with $\pi^{\mathsf T}f=0$, so it has eigenvalues $1$ and $1-\lambda_j$ for $j\ge2$. Thus $Z$ exists, $\operatorname{tr}Z=1+K(G)$, $Z\mathbf 1=\mathbf 1$, and, since $\Pi Z=\Pi$, also $(I-P)Z=I-\Pi$.
+
+(a) Fix $v$ and let $h_x=(Z_{vv}-Z_{xv})/\pi_v$. Then $h_v=0$, and for $x\ne v$ we get $((I-P)h)_x=-((I-P)Z)_{xv}/\pi_v=\pi_v/\pi_v=1$. The function $x\mapsto\E_xT_v$ satisfies the same equations by first-step analysis, and the difference of the two functions vanishes at $v$ and is harmonic for $P$ elsewhere, so it is zero by the maximum principle. Hence $\E_uT_v=(Z_{vv}-Z_{uv})/\pi_v$, and $\sum_v\pi_v\E_uT_v=\operatorname{tr}Z-\sum_vZ_{uv}=\operatorname{tr}Z-1=K(G)$.
+
+(b) Let $g^v_x=\E_xT_v$. For $x\ne v$ we have $(Lg^v)_x=d_x((I-P)g^v)_x=d_x$. The column sums of $L$ vanish, so $(Lg^v)_v=-\sum_{x\ne v}d_x=d_v-W$. Thus $Lg^v=d-We_v$, and $L(g^v-g^u)=W(e_u-e_v)$. Taking $\varphi=(g^v-g^u)/W$ gives $R_{uv}=\varphi_u-\varphi_v=(\E_uT_v+\E_vT_u)/W$.
+
+(c) Averaging (a) over $u$ with weights $\pi_u$ and using (b),
+\[
+K(G)=\sum_{x,y}\pi_x\pi_y\E_xT_y=\frac12\sum_{x,y}\pi_x\pi_y\bigl(\E_xT_y+\E_yT_x\bigr)=\frac W2\sum_{x,y}\pi_x\pi_yR_{xy}=\frac1W\sum_{\{x,y\}}d_xd_yR_{xy}.
+\]
+
+(d) Orient each edge and let $J$ be the vertex-edge incidence matrix, with entry $1$ at the tail and $-1$ at the head of each edge, so that $L=JJ^{\mathsf T}$. If $L\varphi=e_u-e_v$, the edge vector $i=J^{\mathsf T}\varphi$ satisfies $Ji=e_u-e_v$ and $\|i\|^2=\varphi^{\mathsf T}L\varphi=R_{uv}$. If $j$ is any other edge vector with $Jj=e_u-e_v$, then $\langle i,j-i\rangle=\langle\varphi,J(j-i)\rangle=0$, so $\|j\|^2=\|i\|^2+\|j-i\|^2\ge R_{uv}$. The unit flow along a shortest path from $u$ to $v$ has $\|j\|^2=\dist_G(u,v)$.
+\end{proof}
+
+\section{The upper bound}\label{sec:upper}
+We prove the upper bounds of Theorems~\ref{thm:main} and~\ref{thm:clique} in the following form.
+
+\begin{theorem}\label{thm:capacity}
+Let $0<\gamma\le1$ and let $G$ be a connected simple graph on $n\ge2$ vertices such that
+\begin{equation}\label{eq:capacity}
+2|E(G[U])|\le\gamma|U|^2\qquad\text{for every }U\subseteq V.
+\end{equation}
+Then
+\[
+K(G)\le\frac{\gamma n^3}{54}+\frac{37}{8}\,n^{5/2}.
+\]
+\end{theorem}
+
+Every simple graph satisfies \eqref{eq:capacity} with $\gamma=1$. By Tur\'an's theorem (see \cite{MS}), a $K_{r+1}$-free graph on $m$ vertices has at most $(1-1/r)m^2/2$ edges, and induced subgraphs of a $K_{r+1}$-free graph are $K_{r+1}$-free; hence every $K_{r+1}$-free graph satisfies \eqref{eq:capacity} with $\gamma=1-1/r$.
+
+For a vertex $h$ write $N[h]$ for its closed neighbourhood, $h$ together with its neighbours.
+
+\begin{lemma}\label{lem:clusters}
+Let $G$ be a finite simple graph and $D>0$. Let $H=\{v:d_v\ge D\}$, $S=\bigcup_{h\in H}N[h]$, and let $C_1,\dots,C_k$ be the vertex sets of the connected components of $G[S]$. Put $s_i=|C_i|$, $s=|S|=\sum_is_i$ and $\delta_i=\diam G[C_i]$. Then
+\[
+k\le\frac sD\qquad\text{and}\qquad\sum_{i=1}^k\delta_i\le\frac{5s}D.
+\]
+\end{lemma}
+
+\begin{proof}
+Let $v\in C_i$, and choose $h\in H$ with $v\in N[h]$. The set $N[h]$ lies in $S$ and induces a connected subgraph, and it contains $v$, so $N[h]\subseteq C_i$. In particular every $C_i$ contains a set $N[h]$ with $h\in H$, so $s_i\ge d_h+1>D$, and therefore $k<s/D$ when $k\ge1$.
+
+Fix $i$ and a shortest path $v_0,v_1,\dots,v_{\delta_i}$ in $G[C_i]$. For each index $j\in\{0,5,10,\dots\}$ with $j\le\delta_i$ choose $h_j\in H$ with $v_j\in N[h_j]$; as above, $N[h_j]\subseteq C_i$. If $N[h_j]$ and $N[h_l]$ meet for two such indices $j<l$, then $G[C_i]$ contains a walk from $v_j$ through $h_j$, a common vertex of the two neighbourhoods and $h_l$ to $v_l$ of length at most $4$, which is impossible because $\dist_{G[C_i]}(v_j,v_l)=l-j\ge5$. So these $\lfloor\delta_i/5\rfloor+1$ sets are disjoint subsets of $C_i$, each with more than $D$ vertices. Hence $(\delta_i/5)D<(\lfloor\delta_i/5\rfloor+1)D<s_i$, so $\delta_i<5s_i/D$. Summing over $i$ gives the second inequality.
+\end{proof}
+
+\begin{lemma}\label{lem:twomass}
+Let $\gamma>0$, let $x,y\ge0$ with $x+y=s$, and let $0\le\alpha\le\gamma x^2$ and $0\le\beta\le\gamma y^2$. Then
+\[
+\alpha\beta\le\frac{\gamma s^2}8\,(\alpha+\beta).
+\]
+\end{lemma}
+
+\begin{proof}
+If $\alpha\beta=0$ there is nothing to prove, so let $\alpha,\beta>0$; then $x,y>0$. The function $(\alpha,\beta)\mapsto\alpha\beta/(\alpha+\beta)$ is nondecreasing in each variable on $(0,\infty)^2$, its partial derivative in $\alpha$ being $\beta^2/(\alpha+\beta)^2$. Hence
+\[
+\frac{\alpha\beta}{\alpha+\beta}\le\frac{\gamma^2x^2y^2}{\gamma x^2+\gamma y^2}=\frac{\gamma x^2y^2}{x^2+y^2}\le\frac{\gamma(x+y)^2}8,
+\]
+where the last step is the identity $(x+y)^2(x^2+y^2)-8x^2y^2=(x-y)^2(x^2+4xy+y^2)$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:capacity}]
+Fix $D>0$ and let $H$, $S$, $C_1,\dots,C_k$, $s$ and $\delta_i$ be as in Lemma~\ref{lem:clusters}. Put $\delta=\sum_i\delta_i$ and $t=n-s$.
+
+\emph{A quotient tree.} Partition $V$ into the parts $C_1,\dots,C_k$ and the singletons $\{v\}$ with $v\notin S$, and write $q(u)$ for the part containing $u$. Let $Q$ be the graph on these $k+t$ parts in which two parts are adjacent when an edge of $G$ joins them. Then $Q$ is connected; let $T$ be a spanning tree of $Q$. By Lemma~\ref{lem:clusters}, $T$ has $k+t-1\le t+s/D$ edges, and it has at most $n-1$ edges.
+
+We claim that $\dist_G(u,v)\le\dist_T(q(u),q(v))+\delta$ for all $u,v\in V$. Let $q(u)=y_0,y_1,\dots,y_m=q(v)$ be the path in $T$, and for each $l$ choose an edge of $G$ from a vertex $p_l\in y_{l-1}$ to a vertex $p_l'\in y_l$. Join $u$ to $p_1$ inside $y_0$, each $p_l'$ to $p_{l+1}$ inside $y_l$, and $p_m'$ to $v$ inside $y_m$. Inside a part $C_i$ such a connection has length at most $\delta_i$, and inside a singleton it has length $0$. The tree path visits each part at most once, so the resulting walk has length at most $m+\delta$. If $q(u)=q(v)$ the bound $\dist_G(u,v)\le\delta$ holds directly.
+
+For a part $y$ let $w_y=\sum_{u\in y}d_u$. Lemma~\ref{lem:formulas}(c),(d) and $\sum_{\{u,v\}}d_ud_v\le W^2/2$ give
+\[
+K(G)\le\frac1W\sum_{\{u,v\}}d_ud_v\bigl(\dist_T(q(u),q(v))+\delta\bigr)\le\frac1W\sum_{\{y,z\}}w_yw_z\dist_T(y,z)+\frac{W\delta}2 .
+\]
+An edge $e$ of $T$ lies on the tree path between $y$ and $z$ exactly when $e$ separates $y$ from $z$. Writing $W_e^-$ and $W_e^+$ for the sums of $w_y$ over the two components of $T-e$, we obtain
+\begin{equation}\label{eq:treesum}
+K(G)\le\sum_{e\in E(T)}\frac{W_e^-W_e^+}{W}+\frac{W\delta}2 .
+\end{equation}
+
+\emph{One tree edge.} For a part $y=C_i$ put $a_y=2|E(G[C_i])|$, and for a singleton put $a_y=0$. Then $b_y=w_y-a_y$ is the number of edges of $G$ with exactly one end in $y$. Distinct components of $G[S]$ are not joined by edges, so every edge between two different parts has an end outside $S$, and every vertex outside $S$ has degree less than $D$. Hence
+\[
+B:=\sum_yb_y\le2\sum_{v\notin S}d_v\le2tD\le2nD .
+\]
+Fix $e\in E(T)$, let $\alpha$ and $\beta$ be the sums of $a_y$ over the two sides of $e$, let $b^-$ and $b^+$ be the corresponding sums of $b_y$, and put $A=\alpha+\beta$, so that $W=A+B$. Then
+\[
+W_e^-W_e^+=(\alpha+b^-)(\beta+b^+)\le\alpha\beta+AB+B^2=\alpha\beta+BW .
+\]
+Let $x^-$ and $x^+$ be the numbers of vertices of $S$ on the two sides of $e$, so $x^-+x^+=s$. By \eqref{eq:capacity} and $\sum s_i^2\le(\sum s_i)^2$, taken over the clusters on one side, we have $\alpha\le\gamma(x^-)^2$ and $\beta\le\gamma(x^+)^2$. Lemma~\ref{lem:twomass} gives $\alpha\beta\le\gamma s^2A/8\le\gamma s^2W/8$, and therefore
+\[
+\frac{W_e^-W_e^+}W\le\frac{\gamma s^2}8+B .
+\]
+
+\emph{Summation.} Insert this into \eqref{eq:treesum}, count the terms $\gamma s^2/8$ with the bound $t+s/D$ on the number of tree edges and the terms $B$ with the bound $n-1$, and use $\delta\le5s/D$:
+\[
+K(G)\le\frac{\gamma(n-s)s^2}8+\frac{\gamma s^3}{8D}+2n^2D+\frac{5Ws}{2D}.
+\]
+Now $\gamma\le1$, $s\le n$ and $W<n^2$, and $\max_{0\le s\le n}(n-s)s^2=4n^3/27$, attained at $s=2n/3$. Hence
+\[
+K(G)\le\frac{\gamma n^3}{54}+\frac{21}{8}\cdot\frac{n^3}D+2n^2D .
+\]
+The choice $D=\sqrt n$ completes the proof.
+\end{proof}
+
+\section{Barbells}\label{sec:barbells}
+Let $F$ be a connected graph with a distinguished vertex $o$, and let $\ell\ge1$ be an integer. The barbell $B(F,\ell)$ consists of two disjoint copies of $F$ whose copies of $o$ are joined by a path with $\ell$ edges and $\ell-1$ new internal vertices. It has $2|V(F)|+\ell-1$ vertices.
+
+\begin{lemma}\label{lem:barbell}
+For every connected graph $F$ and every $\ell\ge1$,
+\[
+\trel\bigl(B(F,\ell)\bigr)\ge|E(F)|\,\ell+\frac{\ell^2}6+\frac13 .
+\]
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:dirichlet} and the self-adjointness of $P$ on $\ell^2(\pi)$, every nonzero $f$ with $\sum_vd_vf_v=0$ satisfies
+\[
+1-\lambda_2\le\frac{\sum_{uv\in E}(f_u-f_v)^2}{\sum_vd_vf_v^2}.
+\]
+Let $f=-1$ on the first copy of $F$, $f=1$ on the second, and $f=-1+2j/\ell$ at the $j$-th internal vertex of the path, counted from the first copy. The automorphism exchanging the two copies and reversing the path preserves degrees and changes $f$ into $-f$, so $\sum_vd_vf_v=0$. Only the $\ell$ path edges contribute to the numerator, each with $(2/\ell)^2$, so the numerator is $4/\ell$. In the denominator each copy of $F$ contributes its degree sum $2|E(F)|+1$, the copy of $o$ having gained one edge, and the internal vertices have degree $2$ and contribute
+\[
+2\sum_{j=1}^{\ell-1}\Bigl(1-\frac{2j}\ell\Bigr)^2=\frac{2(\ell-1)(\ell-2)}{3\ell}.
+\]
+Therefore
+\[
+\trel\ge\frac\ell4\Bigl(4|E(F)|+2+\frac{2(\ell-1)(\ell-2)}{3\ell}\Bigr)=|E(F)|\,\ell+\frac{\ell^2}6+\frac13 .\qedhere
+\]
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The upper bound is Theorem~\ref{thm:capacity} with $\gamma=1$, together with $\trel\le K$. For the lower bound let $n\ge6$, $a=\lfloor n/3\rfloor\ge2$, $\ell=n-2a+1$, and $B_n=B(K_a,\ell)$, which has $n$ vertices. Since $(n-2)/3\le a\le n/3$, we have $a-1\ge(n-5)/3>0$ and $\ell\ge n/3+1$. Lemma~\ref{lem:barbell} gives
+\[
+\trel(B_n)\ge\frac{a(a-1)\ell}2+\frac{\ell^2}6+\frac13\ge\frac{(n-2)(n-5)(n+3)}{54}+\frac{(n+3)^2}{54}+\frac13=\frac{n^3-3n^2-5n+57}{54},
+\]
+which implies \eqref{eq:lower}. Since $K\ge\trel$, the upper and lower bounds together give $\max_GK(G)\sim\max_G\trel(G)\sim n^3/54$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:clique}]
+The upper bound is Theorem~\ref{thm:capacity} with $\gamma=1-1/r$. For the lower bound let $n\ge6r$, $m=\lfloor n/(3r)\rfloor\ge2$, $a=rm$, $\ell=n-2a+1$, and let $F$ be the complete $r$-partite graph with $r$ parts of size $m$, which is connected and has $(1-1/r)a^2/2$ edges. The barbell $B(F,\ell)$ has $n$ vertices. Its chromatic number is at most $r$: colour the first copy of $F$ properly with $r$ colours, colour the path alternately with the colour of its first vertex and one other colour, and colour the second copy of $F$ properly so that its copy of $o$ receives the colour already given to the last vertex of the path, which is possible after permuting the colours. Since $a\ge n/3-r$ and $\ell\ge n/3+1$, Lemma~\ref{lem:barbell} gives
+\[
+\trel\bigl(B(F,\ell)\bigr)\ge\Bigl(1-\frac1r\Bigr)\frac{a^2\ell}2\ge\Bigl(1-\frac1r\Bigr)\frac12\Bigl(\frac{n^2}9-\frac{2rn}3\Bigr)\frac n3=\Bigl(1-\frac1r\Bigr)\frac{n^3}{54}-\frac{(r-1)n^2}9,
+\]
+where we used $(n/3-r)^2\ge n^2/9-2rn/3\ge0$ for $n\ge6r$. A graph of chromatic number at most $r$ is $K_{r+1}$-free, so the upper bound applies to both classes, and the statements about the maxima follow. For $r=2$ the $K_3$-free graphs are the triangle-free graphs, and the graphs of chromatic number at most $2$ are the bipartite graphs.
+\end{proof}
+
+\begin{remark}\label{rem:scope}
+Theorem~\ref{thm:main} determines the leading constant, not the extremal graphs for each $n$. The error term $O(n^{5/2})$ comes from the threshold $D=\sqrt n$ and has not been optimized.
+\end{remark}
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The argument of Section~\ref{sec:upper} in the case $\gamma=1$ and the lower bound of Theorem~\ref{thm:main} were produced by OpenAI's GPT-6.1 model, run through the Codex agent. The capacity formulation and the multipartite barbells were produced earlier with OpenAI's GPT-5.6. Anthropic's Claude Opus~5.5 checked the arguments independently, re-derived every step, extended the upper-bound argument to the capacity condition~\eqref{eq:capacity}, and wrote the manuscript. These checks are not peer review. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used.
+
+\begin{thebibliography}{9}
+\bibitem{AF}
+D.~Aldous and J.~A.~Fill, \emph{Reversible Markov Chains and Random Walks on Graphs}, unfinished monograph, 2002; recompiled 2014. \url{https://www.stat.berkeley.edu/~aldous/RWG/book.html}.
+\bibitem{ACTT}
+S.~G.~Aksoy, F.~Chung, M.~Tait and J.~Tobin, \emph{The maximum relaxation time of a random walk}, Adv. in Appl. Math. \textbf{101} (2018), 1--14. \href{https://doi.org/10.1016/j.aam.2018.07.002}{doi:10.1016/j.aam.2018.07.002}.
+\bibitem{Breen}
+J.~Breen, S.~Butler, N.~Day, C.~DeArmond, K.~Lorenzen, H.~Qian and J.~Riesen, \emph{Computing Kemeny's constant for a barbell graph}, Electron. J. Linear Algebra \textbf{35} (2019), 583--598. \href{https://doi.org/10.13001/ela.2019.5175}{doi:10.13001/ela.2019.5175}.
+\bibitem{Faught}
+N.~Faught, M.~Kempton and A.~Knudson, \emph{A 1-separation formula for the graph Kemeny constant and Braess edges}, J. Math. Chem. \textbf{60} (2022), 49--69. \href{https://doi.org/10.1007/s10910-021-01294-8}{doi:10.1007/s10910-021-01294-8}.
+\bibitem{MS}
+T.~S.~Motzkin and E.~G.~Straus, \emph{Maxima for graphs and a new proof of a theorem of Tur\'an}, Canad. J. Math. \textbf{17} (1965), 533--540. \href{https://doi.org/10.4153/CJM-1965-053-6}{doi:10.4153/CJM-1965-053-6}.
+\end{thebibliography}
+\end{document}

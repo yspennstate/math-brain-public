@@ -1,0 +1,118 @@
+--- a/math-brain-inbox/w376/bundle_001.json
++++ b/math-brain-inbox/w376/bundle_001.json
+@@ -0,0 +1,115 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w376",
++  "bundle_slug": "p0110-exponent-premise-audit-w376-001",
++  "entries": [
++    {
++      "key": "oscillation-obstruction",
++      "namespace": "probability.fpp",
++      "logical_name": "oscillating-kpz-balance-does-not-imply-strong-exponent-existence",
++      "kind": "concept",
++      "title": "Draft: exact KPZ balances can coexist with unequal exponent thresholds",
++      "statement": "DRAFT, independent review pending. For integers n>=2, let a_n=1/4 on even n and 1/3 on odd n. Set X_n=n^(a_n) Z for a symmetric random sign Z, and D_n=n^((1+a_n)/2). Define chi_a as the infimum of q with some alpha>0 such that sup_n E exp(alpha |X_n|/n^q)<infinity; define chi_b as the supremum of q with some N such that inf_{n>=N} Var(X_n)/n^(2q)>0. Define xi_a and xi_b in the same way using D_n for upper moments and E D_n for lower bounds. Then chi_a=1/3, chi_b=1/4, xi_a=2/3, xi_b=5/8. At every scale sqrt(Var(X_n))=D_n^2/n; both endpoint identities chi_a=2xi_a-1 and chi_b=2xi_b-1 hold, but the threshold gaps are 1/12 and 1/24. This refutes an abstract inference from scale balances to common strong exponents. These observables are NOT an iid FPP model; no FPP nonexistence or exponent theorem follows.",
++      "proof_text": null,
++      "assumptions": [
++        "Abstract integer-indexed observables, not FPP passage times or geodesics",
++        "Upper bounds are uniform exponential moments; lower bounds allow a finite index cutoff",
++        "The odd and even subsequences are both unbounded"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w376-20261010:oscillation-obstruction",
++        "url": "urn:probability-research:20261010:w376:oscillation-obstruction",
++        "revision": "unreviewed-draft-v1",
++        "license": "owner-own-work (w376 original audit; independent review pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "finite-endpoint-obstruction",
++      "namespace": "probability.fpp",
++      "logical_name": "fpp-lower-wandering-premise-needs-its-finite-cutoff",
++      "kind": "concept",
++      "title": "Draft: all-endpoint wandering lower bounds fail for a bounded positive iid law",
++      "statement": "DRAFT, independent review pending. In nearest-neighbor undirected FPP on Z^d, d>=2, with iid Uniform[1,2] edge weights, the unique geodesic from 0 to e1 is the direct edge in every environment: its cost is at most 2, while every other self-avoiding path has odd length at least 3 and cost at least 3. Hence D(0,e1)=0, where D is maximum Euclidean deviation of the geodesic set from the joining segment. For every real r, inf_{v!=0} E D(0,v)/|v|^r=0. This is a finite-endpoint obstruction, not a statement about asymptotic wandering. The all-endpoint lower infimum printed in Auffinger-Damron equation (2.2), https://arxiv.org/pdf/1109.0523, differs from the tail-cutoff lower premise in Chatterjee Theorem 1.1, https://annals.math.princeton.edu/wp-content/uploads/annals-v177-n2-p07-p.pdf. Preserve that distinction when invoking either theorem; changing a cited premise needs justification.",
++      "proof_text": null,
++      "assumptions": [
++        "Nearest-neighbor undirected Z^d with d>=2",
++        "Every edge weight lies in [1,2]",
++        "The lower infimum includes the endpoint e1"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w376-20261010:finite-endpoint-obstruction",
++        "url": "urn:probability-research:20261010:w376:finite-endpoint-obstruction",
++        "revision": "unreviewed-draft-v1",
++        "license": "owner-own-work (w376 original audit; independent review pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "raw-coupling-drift-obstruction",
++      "namespace": "probability.fpp",
++      "logical_name": "separated-fpp-marginal-drifts-obstruct-every-raw-sublinear-coupling",
++      "kind": "concept",
++      "title": "Draft: changing a coupling cannot erase a raw linear FPP drift gap",
++      "statement": "DRAFT, independent review pending. Suppose U_n/n has almost-sure limsup at most mu-c under its marginal sequence law, while V_n/n tends almost surely to mu under its marginal sequence law, for a deterministic c>0. Under any joint coupling at each n and any 0<epsilon<c/2, P((V_n-U_n)/n>=c-2epsilon) is at least 1-P(U_n/n>mu-c+epsilon)-P(V_n/n<mu-epsilon), and this tends to 1. No independence is required, and the coupling may vary with n. In bounded positive nondegenerate iid FPP, w375's audited connector-separated detour construction supplies this drift gap between unrestricted and directed axial passage times. For the Uniform[1,2] low=[1,5/4], high=[7/4,2], k=6 witness, the certified saving is at least 1/3758096384. A different coupling alone therefore cannot give a raw o_P(n) approximation. This does not exclude different deterministic centering or equality of centered fluctuation universality classes. The mathematical argument and exact input assumptions are in w376 ATTEMPT.md and PEER_AUDIT.md; novelty and target solution are not claimed.",
++      "proof_text": null,
++      "assumptions": [
++        "Deterministic marginal drift separation c>0",
++        "Original marginal sequence laws supply the stated almost-sure limits; arbitrary new couplings preserve each n's marginals",
++        "The FPP application requires the exact bounded positive iid hypotheses of w375 L2, independently reviewed by w376 but awaiting final referee w377"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w376-20261010:raw-coupling-drift-obstruction",
++        "url": "urn:probability-research:20261010:w376:raw-coupling-drift-obstruction",
++        "revision": "unreviewed-draft-v1",
++        "license": "owner-own-work (w376 original audit; independent review pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "conditional-kpz-premise-audit",
++      "namespace": "probability.fpp",
++      "logical_name": "p0110-conditional-kpz-relation-needs-an-exponent-existence-certificate",
++      "kind": "concept",
++      "title": "Draft: P0110 law certificates must verify exponent existence",
++      "statement": "DRAFT source-audit guidance, independent review pending. P0110 asks for a nondegenerate iid undirected lattice FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1; equation (4.19) and Question 22 of Auffinger-Damron-Hanson, https://arxiv.org/pdf/1511.03262, do not settle exponent existence or mandate only one definition. A proposed solution must state its exponent definition and prove existence for the exhibited law. If it uses Chatterjee Theorem 1.1, https://annals.math.princeton.edu/wp-content/uploads/annals-v177-n2-p07-p.pdf, it must check iid nearest-neighbor weights on Z^d, d>=2, a nearly-gamma law, finite moment generating function near zero, the uniform upper exponential-moment and tail-uniform lower variance/mean-deviation premises, and chi_a=chi_b plus xi_a=xi_b. A scale balance or conditional theorem citation alone supplies none of the two coincidence certificates. Keep tail cutoffs and all-endpoint infima distinct. Directed-model transfers must account for deterministic centering and an error on the fluctuation scale; changing the coupling alone cannot erase separated raw marginal drifts. Current openness is UNKNOWN; this draft certifies no solved target or novelty.",
++      "proof_text": null,
++      "assumptions": [
++        "The campaign's P0110 target is the survey's Question 22 in ordinary iid undirected lattice FPP",
++        "Conditional-theorem hypotheses must be verified for the actual exhibited law",
++        "Own audit concepts have not yet passed independent review"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w376-20261010:conditional-kpz-premise-audit",
++        "url": "urn:probability-research:20261010:w376:conditional-kpz-premise-audit",
++        "revision": "unreviewed-draft-v1",
++        "license": "owner-own-work (w376 original audit; independent review pending)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "conditional-kpz-premise-audit",
++      "to_key": "oscillation-obstruction",
++      "kind": "depends_on",
++      "rationale": "The explicit oscillating observables show why exact balances cannot replace the two exponent-coincidence certificates demanded by the audit guidance."
++    },
++    {
++      "from_key": "conditional-kpz-premise-audit",
++      "to_key": "finite-endpoint-obstruction",
++      "kind": "cites",
++      "rationale": "The guidance cites the Uniform[1,2] endpoint example to require accurate lower-infimum cutoffs when applying a primary theorem."
++    },
++    {
++      "from_key": "conditional-kpz-premise-audit",
++      "to_key": "raw-coupling-drift-obstruction",
++      "kind": "cites",
++      "rationale": "The guidance cites the coupling-independent raw drift separation to require correct deterministic centering before a directed-model fluctuation transfer."
++    }
++  ]
++}

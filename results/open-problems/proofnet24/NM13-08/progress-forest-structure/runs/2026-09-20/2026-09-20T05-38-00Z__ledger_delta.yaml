@@ -1,0 +1,29 @@
+ledger_delta:
+  slot: NM13-08
+  parent: T07_uniform_forest_pairwise_negative_edge_correlation
+  source_status_before: OPEN
+  source_status_after: OPEN
+  parent_complete_order_before: 9
+  parent_complete_order_after: 9
+  counterexample_order_lower_bound_before: 10
+  counterexample_order_lower_bound_after: 10
+  restricted_claim: T07-RIGHT-P4-FOREST-PNC-11
+  restricted_status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+  new_class: "F_{p,r}=K_{3,4p+r} + (p P4 disjoint_union r K1), all p,r>=0"
+  new_sign_lemma: T07-P4-SHIFTED-QUADRANT-SIGN-11
+  orbit_count: 40
+  positive_newton_orbits: 39
+  exceptional_orbits: 1
+  exceptional_shift_regions: 5
+  exceptional_boundary_points_checked_exactly: 30
+  mechanism_before: "positive Newton cone for right components of order <=3"
+  mechanism_after: "P4 controlled by 39 Newton-positive orbits plus one exact shifted-quadrant staircase certificate"
+  exact_checker_result: ALL_EXACT_CHECKS_PASS
+  literature_scope:
+    grimmett_winkler: "all <=8 vertices and 9 vertices with <=18 edges; all-forest law"
+    p14_repository: "dense 9-vertex complement; complete order 9; minimal counterexample may be 3-connected"
+    erickson: "series-parallel all-positive-weight SOS/Rayleigh theorem"
+    tang_zhang_2603_10738: "complete-graph specified ensembles; fixed-component forests, not arbitrary all-forest law"
+  residual_obstruction: "marked-layer sign control for P5 and arbitrary internal right graphs"
+  next_attack: "P5 refutation-first marked-orbit scan, then bounded staircase certificate if no negative point"
+  parent_closed: false

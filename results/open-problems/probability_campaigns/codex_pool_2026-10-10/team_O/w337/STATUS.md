@@ -1,0 +1,10 @@
+STATE: NEEDS_REVIEW
+NEXT: w347 blind-checks AUDIT_REQUEST_w347.json; manager applies kept material after the full P0209 proof check.
+
+2026-10-10: Started the assigned ten-problem round. All edits and measurements will stay in this worker folder; shared delivery will be packaged for the reviewer.
+2026-10-10: Saved S1.w337.001 within the first twenty turns, then inspected the P0209 construction. Saved a complete probability bound in P0209.md and corrected a variance-versus-probability-limit inference. No solution is counted without w347 KEEP.
+2026-10-10: P0209 exact checks passed at six scales; the normal-distance lower bound reaches 0.49974999995. Lean admission refused with "Compute status is distressed or unknown"; no Lean certification claimed. Saved P0459 proof with an exact mean-deficit identity and bound.
+2026-10-10: P0459 passed 78 exact mean-bound cases and 15,120 threshold cases over 720 edge orders. C0130 finite-interval upper bounds decreased from 0.8 to 0.6621560871 (L=2 to 8); fair-cookie controls equal 1/L exactly. Saved P0088 marked-kernel proof and its adaptive coupling hypotheses.
+2026-10-10: P0088 passed 25 full marked-vector checks; equal count laws can have marked distance 1/2. P0336 exhausted 720 matchings: 36 Euclidean optimizers versus one optimizer for each opposite tilt. Saved the C0022 separator criterion and C0076 tightness obstruction, with full problems still unresolved.
+2026-10-10: C0022 exact examples distinguish moments from singularity; C0076's six scales retain unit-height path oscillations while fixed-time hits vanish. C0117 checked 200 exact cover-time cases and 800 cumulants, explicitly distinguishing discrete and continuous clocks. P0009 has an exact period-12 versus unbounded-ray mirror certificate. Saved the product-of-trees speed proof for P0035.
+2026-10-10: Completed ten reports, twenty typed nodes, thirty-four quoted edges and two local hook proposals. All mathematical checks and handoff validation passed; blinded review and deployment remain pending. REPORT.md, RUN_RECEIPT.json and both live-path diffs are saved.

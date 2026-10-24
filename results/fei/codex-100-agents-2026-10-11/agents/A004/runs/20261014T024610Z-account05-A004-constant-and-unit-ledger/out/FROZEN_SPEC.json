@@ -1,0 +1,50 @@
+{
+  "helper_version": "A004-KL-shadow-owner-v1",
+  "family": "all uniform Boolean seeds up to three bits, disjoint parity pairs, Maj3/partner unlocking trees, quadratic bent/flip controls",
+  "domain": {
+    "all_truth_tables_n": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "parity_subsets": "every J",
+    "unlocking_outer_n": [
+      1,
+      2
+    ],
+    "unlocking_n3_masks": [
+      0,
+      1,
+      7,
+      15,
+      105,
+      150,
+      232,
+      255
+    ],
+    "unlocking_coordinate": "every seed coordinate including irrelevant",
+    "encoder": "Maj3",
+    "orders": [
+      "forward",
+      "adaptive_reverse"
+    ],
+    "bent_d": [
+      2,
+      4,
+      6,
+      8
+    ]
+  },
+  "case_count": {
+    "seeds": 278,
+    "partial_parity_substitutions": 2122,
+    "unlocking_compositions": 60,
+    "unlocking_trees": 120,
+    "bent_controls": 4
+  },
+  "symmetry": "none on seeds, J or distinguished coordinate; two explicitly prescribed physical encoder policies; no dimension escalation",
+  "arithmetic": "integer Walsh, direct flips, Fraction, canonical prime-log identities; rational atanh sign certificates; analytic all-dimensional proof separate",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": 60
+}

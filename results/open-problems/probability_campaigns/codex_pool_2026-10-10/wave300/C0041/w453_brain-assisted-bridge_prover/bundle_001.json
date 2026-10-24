@@ -1,0 +1,175 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w453",
+  "bundle_slug": "c0041-range-clock-conditional-bridge-001",
+  "entries": [
+    {
+      "key": "def-range",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "spatial-range-of-a-random-path-clock",
+      "kind": "definition",
+      "title": "Spatial range of a random path clock",
+      "statement": "For a path X_n in Z^d started at 0 and a time T in N union {infinity}, define R_T=sup_{0<=n<=T}||X_n||_infinity. This is a path functional; neither T nor R_T needs to be a stopping time.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w453:c0041-range-clock-20261010",
+        "url": "file:///~/brain_workers/w453/LEMMAS.md",
+        "revision": "draft-2026-10-10-conditional-normalization-v2",
+        "license": "owner-own-work (independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "lem-clock",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "uniform-ellipticity-range-to-clock-bound-with-conditioning",
+      "kind": "lemma",
+      "title": "Uniform ellipticity: spatial range to clock, with conditioning",
+      "statement": "Let X be a nearest-neighbor walk on Z^d, d>=1, started at 0, in a static environment with all transition probabilities at least kappa>0 under its original quenched or annealed law P. For any random time T in N union {infinity}, define R_T=sup_{0<=n<=T}||X_n||_infinity. For integers r,t>=0, m=r+1, P(T>t)<=P(R_T>r)+(1-kappa^m)^floor(t/m). For any event A with alpha=P(A)>0, P(T>t|A)<=P(R_T>r|A)+alpha^(-1)(1-kappa^m)^floor(t/m). The conditional walk is not asserted to retain uniform ellipticity.",
+      "proof_text": "Let sigma_r be the first exit from [-r,r]^d. From any point x inside the box, take consecutive steps along coordinate 1 in the sign of x_1 (positive when x_1=0). This exits in r+1-|x_1|<=m steps with conditional probability at least kappa^m. At each deterministic time jm, conditional on the path up to jm in the fixed environment, the chance of exiting in the next m steps is at least kappa^m on {sigma_r>jm}. Iterated conditional expectation gives P_(0,omega)(sigma_r>jm)<=(1-kappa^m)^j. This is a conditional bound at successive blocks, not multiplication of independent events. The pathwise inclusion {T>t,R_T<=r} subset {sigma_r>t} gives the result. Integrate over the environment for the annealed version. For the conditional form, intersect that same inclusion with A, drop A only from the box-exit term, and divide the resulting probability bound by alpha. No Markov or fresh-environment property under P(.|A) is invoked. Notice that no stopping property of T was used.",
+      "assumptions": [
+        "d is an integer >=1; X starts at 0 on Z^d",
+        "nearest-neighbor transitions in a fixed or randomly sampled static environment",
+        "every transition probability is at least a deterministic kappa in (0,1/(2d)] under the original law P",
+        "T takes values in N union {infinity}; it need not be a stopping time",
+        "For the conditional statement, A has positive original-law probability alpha"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w453:c0041-range-clock-20261010",
+        "url": "file:///~/brain_workers/w453/LEMMAS.md",
+        "revision": "draft-2026-10-10-conditional-normalization-v2",
+        "license": "owner-own-work (independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "lem-mean",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "fast-exponential-range-tail-gives-finite-random-clock-mean",
+      "kind": "lemma",
+      "title": "A fast exponential spatial tail gives a finite mean clock",
+      "statement": "Let X be a nearest-neighbor walk on Z^d, d>=1, started at 0, in a static environment with all transition probabilities at least kappa>0 under its original quenched or annealed law P. Let T in N union {infinity} be any random time and R_T=sup_{0<=n<=T}||X_n||_infinity. Let Q=P or Q=P(.|A) for a specified event A with P(A)>0. If Q(R_T>r)<=C exp(-lambda r) for every integer r>=0, with C finite and lambda>log(1/kappa), then E_Q[T]<infinity. This is a sufficient condition; no necessity or implication from directional transience is asserted.",
+      "proof_text": "Choose a with 1/lambda<a<1/log(1/kappa), and put r=floor(a log(t+1)). The range term is at most C exp(lambda)(t+1)^(-lambda a), a summable sequence. For sufficiently large t, floor(t/(r+1))>=t/(2(r+1)); and kappa^(r+1)>=kappa(t+1)^(-a log(1/kappa)). Thus the remaining term in L1 is at most exp(-c t^(1-a log(1/kappa))/log(t+1)) for some c>0, also summable. In the conditional case multiply only that summable box term by the finite constant alpha^(-1). Finally use the tail-sum identity under the relevant law by Tonelli. All constants are explicit except the harmless finite initial segment.",
+      "assumptions": [
+        "d is an integer >=1; X starts at 0 on Z^d",
+        "nearest-neighbor transitions in a fixed or randomly sampled static environment",
+        "every transition probability is at least a deterministic kappa in (0,1/(2d)] under the original law P",
+        "T takes values in N union {infinity}; it need not be a stopping time",
+        "Q is P or a conditioning on an event of positive P-probability",
+        "Q(R_T>r)<=C exp(-lambda r) for all integer r>=0",
+        "C is finite and lambda>log(1/kappa)"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w453:c0041-range-clock-20261010",
+        "url": "file:///~/brain_workers/w453/LEMMAS.md",
+        "revision": "draft-2026-10-10-conditional-normalization-v2",
+        "license": "owner-own-work (independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "lem-counter",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "exponential-range-infinite-mean-inward-drift-random-box",
+      "kind": "lemma",
+      "title": "Countermodel: exponential range with an infinite mean clock",
+      "statement": "On Z, set omega(x,+1)=1/4 for x>0, 3/4 for x<0, and 1/2 at x=0, with complementary left-step probabilities. Independently choose a positive integer R with P(R=r)=2^(-r), r>=1. Start the walk at 0 and let T be its first exit from [-R,R]. Then T is finite almost surely, R_T=sup_{n<=T}|X_n|=R+1 has an exponential tail and every polynomial moment, but E[T]=infinity. For fixed radius r, E[T|R=r]=(3/2)(3^(r+1)-1)-2(r+1). This is not a counterexample to directional-transience ballisticity for d>=2 iid environments: the construction is one-dimensional, non-iid, and not directionally transient.",
+      "proof_text": "For a fixed r, |X| is a birth-death chain on {0,...,r+1}: from zero it moves to one, and at positive states it moves outward with probability 1/4 and inward with probability 3/4. Let u_i be the finite mean hitting time of r+1 from i (finiteness follows directly from L1's box bound), and delta_i=u_i-u_(i+1). The first-step equations give delta_0=1 and delta_i=4+3 delta_(i-1), whence delta_i=3^(i+1)-2. Thus\n\n  E[T | R=r] = u_0 = (3/2)(3^(r+1)-1)-2(r+1).\n\nSumming against 2^(-r) diverges. Meanwhile R_T=R+1, so P(R_T>r)=2^(1-r) for integers r>=1 and P(R_T>0)=1. This proves the assertion.",
+      "assumptions": [
+        "one-dimensional deterministic inward-drift environment described in the statement",
+        "independent R with P(R=r)=2^(-r)",
+        "T is random-box exit, not a directional regeneration time"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w453:c0041-range-clock-20261010",
+        "url": "file:///~/brain_workers/w453/LEMMAS.md",
+        "revision": "draft-2026-10-10-conditional-normalization-v2",
+        "license": "owner-own-work (independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "route-refuted",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "refuted-unspecified-exponential-range-to-clock-implication",
+      "kind": "concept",
+      "title": "REFUTED route: unspecified exponential range rate",
+      "statement": "REFUTED PROPOSAL, not a theorem: the proposed universal implication says that any uniformly elliptic nearest-neighbor walk and any almost-surely finite path clock with some exponential spatial-range tail must have a finite mean clock. The random-radius inward-drift countermodel refutes this implication. This does not refute the distinct iid directional-transience ballisticity statement.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w453:c0041-range-clock-20261010",
+        "url": "file:///~/brain_workers/w453/LEMMAS.md",
+        "revision": "draft-2026-10-10-conditional-normalization-v2",
+        "license": "owner-own-work (independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "c0041-range-clock-bridge-gap-with-original-law-normalization",
+      "kind": "concept",
+      "title": "C0041: the remaining range-to-clock input",
+      "statement": "DRAFT conditional proof route for C0041. In d>=2 iid uniformly elliptic nearest-neighbor environments, the input is annealed almost-sure transience in one fixed direction l; the target is almost-sure liminf positive speed in that direction. For the standard first regeneration time tau_1 and D=inf{n>=0:X_n.l<0}, the range-to-clock route would establish E_0[tau_1|D=infinity]<infinity from an exponential range bound under P_0(.|D=infinity) of rate lambda>log(1/kappa). Such a quantitative range bound has not been derived here from the target's qualitative premise. Conditioning requires the original-law estimate divided by P_0(D=infinity)>0, not ellipticity of the conditioned walk. A September 2026 external preprint claims the exact target; its proof is a separate review, so no current openness or novelty claim is made by this draft.",
+      "proof_text": null,
+      "assumptions": [
+        "Exact C0041 input: d>=2, iid site rows, uniform ellipticity, annealed almost-sure directional transience",
+        "standard regeneration construction with P_0(D=infinity)>0",
+        "No exponential range bound is part of the given input"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w453:c0041-range-clock-20261010",
+        "url": "file:///~/brain_workers/w453/LEMMAS.md",
+        "revision": "draft-2026-10-10-conditional-normalization-v2",
+        "license": "owner-own-work (independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "lem-clock",
+      "to_key": "def-range",
+      "kind": "depends_on",
+      "rationale": "The bound uses 'R_T=sup_{0<=n<=T}||X_n||_infinity', which the definition states as exactly that path functional."
+    },
+    {
+      "from_key": "lem-mean",
+      "to_key": "lem-clock",
+      "kind": "depends_on",
+      "rationale": "The hypothesis 'lambda>log(1/kappa)' makes both terms of 'P(T>t|A)<=P(R_T>r|A)+alpha^(-1)(1-kappa^m)^floor(t/m)' summable with r=floor(a log(t+1))."
+    },
+    {
+      "from_key": "lem-counter",
+      "to_key": "def-range",
+      "kind": "depends_on",
+      "rationale": "The countermodel's 'R_T=sup_{n<=T}|X_n|=R+1' instantiates the defined spatial range in dimension one."
+    },
+    {
+      "from_key": "lem-counter",
+      "to_key": "route-refuted",
+      "kind": "refutes",
+      "rationale": "The countermodel has 'an exponential tail and every polynomial moment, but E[T]=infinity', contradicting the proposed conclusion 'must have a finite mean clock' for precisely the abstract hypotheses stated by the route."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "lem-mean",
+      "kind": "semantic_association",
+      "rationale": "The gap explicitly lacks 'rate lambda>log(1/kappa)' for the regeneration range; the conditional lemma explicitly requires that additional range-tail rate. The edge records a sufficient route, not an equivalence or a solution."
+    },
+    {
+      "from_key": "gap",
+      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0041-transience-in-a-direction-implies-ballisticity-for-uniformly-elliptic",
+      "kind": "cites",
+      "rationale": "The gap concerns the exact C0041 input and target recovered from Open Question 2.20. The existing target card's historical September 7 open-status note does not certify current openness."
+    }
+  ]
+}

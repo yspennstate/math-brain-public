@@ -1,0 +1,35 @@
+[
+  {
+    "claim_id": "A005-SAME-K-ACTIVATION-WITNESS-TRANSPORT-REFUTATION",
+    "version": 1,
+    "exact_statement": "The pointwise same-K activation-witness transport assertion is false: let f be +1 except at one point of the uniform three-cube, and F=1+A_8(f^tensor16-1) on 56 independent uniform bits. At lambda=0,K=5/2 every seed coordinate and every one of the 48 data coordinates of F has B_i/Inf_i>5/2, while every one of the eight controls has B_i/Inf_i<5/2. The maximum influence of F is 4251920575/1099511627776<1/256. Thus a K-witness in this activated image need not yield a K-witness in its seed. This refutes pointwise witness transport only, not the universally quantified localized endpoint or FEI.",
+    "hypotheses": [
+      "Uniform independent physical bits",
+      "Boolean sign output",
+      "Entropy in bits",
+      "B_i=H(S_i|S_-i)",
+      "Point activation of the unbalanced tensor core; no auxiliary balancing literal"
+    ],
+    "statement_sha256": "96ecba356ce0acfbe24865619dacccc3657c25d46f3533e8c8257d660428a876",
+    "contributors": [
+      "account05/A005"
+    ],
+    "proof_source": "REPORT.md section 4; code/witness.py; out/WITNESS_CERTIFICATE.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SCOPED_REFUTATION_CERTIFIED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "LOCAL-POINTWISE-SAME-K-ACTIVATION-WITNESS-TRANSPORT (assertion stated explicitly in REPORT.md section 4)"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B01",
+      "A002",
+      "A003",
+      "A055",
+      "A094",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B19",
+  "run_id": "20260922T165145Z-b19-qform-r11",
+  "control_revision": "2026-09-22.8",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "partner_applied": {
+    "source": "account02/B19 r15 plus ridge addendum",
+    "canonical_math_commit": "48841f2d72a1faf741d5a75f6569107537221e7e",
+    "claim": "QFORM-RIDGE-OR-PHYSICAL-RESOURCE-v1",
+    "application": "After the spectral-window diffuse branch fails, retain the partner's physical resource |A_ii|>=1/512 or ||A_i,-i||>1/512. The new low-offdiagonal theorem closes every such form when s2(A-diag A)<=3/10, so the partner resource remains only in the high-offdiagonal residual."
+  },
+  "peer_results_applied": [
+    {
+      "source": "account03/B19",
+      "canonical_math_commit": "7291482e652c4cb47efc44c1656c0af46fa0f45e",
+      "claim": "physical indefinite two-coordinate quarter-kernel"
+    },
+    {
+      "source": "account03/B11",
+      "canonical_source_commit": "841766055688a7534c8621fc06eb99d227e58aca",
+      "claim": "QFORM-ONE-EIGEN-QUARTER-RIESZ-v1 with constant 25"
+    },
+    {
+      "source": "account03/B07",
+      "canonical_math_commit": "685929d9daee92a164dbf6ba6f9305d2e6550826",
+      "claim": "QFORM-THIRD-COMPOUND-OVERLAP-REDUCTION-v1 and O0 diffuse ridge payment"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-OPPOSITE-DIAGONAL-PAIR-v1",
+      "status": "PROVED_IN_STATED_SCOPE_PENDING_INDEPENDENT_REVIEW",
+      "statement": "If two physical diagonal entries have opposite signs and magnitudes at least m>0 under the full three-large-eigenvalue target, then ||p_Q||_infinity <=50 m^(-3/4)."
+    },
+    {
+      "id": "QFORM-LOW-OFFDIAG-ONE-THIRD-BARRIER-v1",
+      "status": "PROVED_TARGET_LEVEL_BRANCH_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every fixed 0<=tau<1/3, if s2(A-diag A)<=tau then ||p_Q||_infinity <=max(50(1-tau)^(-3/4), pi/sqrt((1-tau)^2-4tau^2)). In particular tau=3/10 gives ||p_Q||_infinity<66."
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "46d99d0364a9bf15376b5c8875cdd321373ba75c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B19/20260922T165145Z-b19-qform-r11/REPORT.md",
+    "report_blob": "f87589a3ba990377a697a651c7528c53d8403843",
+    "checker_commit": "2276a2e5d8692070ef813346eec12126a5bea242",
+    "check_results_commit": "46d99d0364a9bf15376b5c8875cdd321373ba75c",
+    "checker_terminator": "QFORM_LOW_OFFDIAG_3OVER10_CHECK_PASS"
+  },
+  "source_pinned_handoff_commit": "9c730418d60637c8aeba0e72a99e4fdb2cec8541",
+  "unresolved_implication": "QFORM-HIGH-OFFDIAG-OVERLAP-PAYMENT-v1: in the residual s2(A-diag A)>3/10 branch, with spectral-window diffuse failure and the partner physical resource, convert O0-heavy/O1/O2/O3 aggregate determinant mass to a product-preserving grouped-coordinate or ridge payment without selecting a reciprocal tiny minor.",
+  "continuity_status": "NOT_PROVED_IN_NEW_LOW-OFFDIAGONAL_BRANCH; ridge diffuse branch has continuity separately",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

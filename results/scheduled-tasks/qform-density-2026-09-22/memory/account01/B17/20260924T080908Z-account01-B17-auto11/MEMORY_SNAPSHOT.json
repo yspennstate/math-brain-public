@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B17",
+  "run_id": "20260924T080908Z-account01-B17-auto11",
+  "utc_start": "2026-09-24T08:09:08.126268Z",
+  "utc_finish": "2026-09-24T08:21:19.764416Z",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control_commits_observed": {
+    "initial": "4567274b153807911570e7fdffd89f9099cc38fd",
+    "prepublication": "f570e7949a4914b5e475ddd8f6ec64d790c7e0f1",
+    "pre_handoff": "448b091d71c4d13cff20f153d11a12093c4afc8b"
+  },
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_SEPARATE",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "new_result": {
+    "id": "QFORM-INF-TARRAY-GAUSSIAN-FLOOR-v1",
+    "status": "SUPPORTING_ANALYTIC_THEOREM_SUPPLIED",
+    "statement": "For an infinitesimal triangular array of rank-three Parseval-frame increments r_mi(X_mi-b_mi), with independent scalar densities bounded by one and a convergent latent sum, the Gaussian covariance in the infinitely-divisible limit satisfies Sigma_G >= I_3/12.",
+    "key_lemma": "Every subprobability density 0<=g<=1 of mass q obeys int (x-a)^2 g(x) dx >= q^3/12; applying this to truncated scalar projections and summing by Parseval yields the Gaussian covariance floor.",
+    "scope_limit": "Exact-rank-three infinitesimal spectral-frame limits with a convergent recentered latent law; does not cover macroscopic non-infinitesimal physical rows, non-tight interactions, or additional active spectrum before aggregation."
+  },
+  "sharp_witness": {
+    "description": "Fully mixed tetrahedral Parseval synthesis R0 with dense Householder reflection B and iid unit-interval physical laws.",
+    "spectrum": "{1,1,-1,0,...,0}",
+    "physical_entry_bound": "max |A_ij|=3/(4m)",
+    "principal_block_constraint": "Every physical principal block of size <=m has operator norm <=3/4<1.",
+    "density_limit": "3sqrt(2)",
+    "implication": "C_univ >= 3sqrt(2) in a fully mixed rotated frame, not merely disjoint banks or a diagonal control."
+  },
+  "partner_result_applied": {
+    "partner": "account02/B17",
+    "theorem": "QFORM-RANDOM-LOCATION-GAUSSIAN-INDEFINITE-BARRIER-v1",
+    "source": "yspennstate/math-open-problems@97d91254e56ad2f8c79b121a0ce8bf66472a11d9:proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T074629Z-account02-B17-QFORM-auto11/REPORT.md",
+    "actual_family": "Same fully mixed dense A_m, but every physical marginal has a central interval of mass 1-1/m and a root-m satellite interval of mass 1/m.",
+    "limit": "G+M with G~N(0,I_3/12), M=sum_{alpha=1}^4 N_alpha r_alpha, N_alpha iid Poisson(1).",
+    "inequality": "limsup ||p_Qm||_infty <= 2.942775602943225... < pi < 3sqrt(2)."
+  },
+  "other_dependencies": [
+    "yspennstate/math-open-problems@e6dfe24dd09057f92549593fd763444bc930ab99:proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260924T070819Z-account03-B17-QFORM-auto11/REPORT.md",
+    "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md"
+  ],
+  "immutable_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "548b30c4b57ab3159a3c42ef44d101c1a11b2236",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260924T080908Z-account01-B17-auto11/",
+    "checker": "QFORM_B17_INF_TARRAY_MIXED_FRAME_CHECK_PASS"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B17/20260924T080908Z-account01-B17-auto11.md",
+  "unresolved_next_step": "Stress the remaining non-infinitesimal/macroscopic-row and extra-active-spectrum chambers. Seek either an overshoot above 3sqrt(2) there or a reduction that separates macroscopic coordinates and applies the Gaussian-floor theorem to the infinitesimal remainder without losing product provenance."
+}

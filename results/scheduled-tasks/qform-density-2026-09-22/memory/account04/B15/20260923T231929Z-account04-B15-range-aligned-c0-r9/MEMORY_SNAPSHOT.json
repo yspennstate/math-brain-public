@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account04",
+  "slot": "B15",
+  "run_id": "20260923T231929Z-account04-B15-range-aligned-c0-r9",
+  "recorded_at_utc": "2026-09-23T23:26:44Z",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit": "a05302d52d58e6fa6d55dee11dc356c85c477dab",
+  "scientific_commit": "ae87801238cf5756c153d27fed0bb6524d88ee17",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260923T231929Z-account04-B15-range-aligned-c0-r9/REPORT.md",
+  "handoff_commit": "f7afa079aa947006ce14d3d0c217621e7aa6b8cf",
+  "status": "SUPPORTING_TARGET_CLASS_THEOREM_PROVED_FULL_QFORM_OPEN",
+  "premises": [
+    {
+      "source": "math-open-problems@fc9d06c78e03b4e1ad924f49fb9ab0f03018d2cd",
+      "scope": "rank-two semidefinite physical 3-block with range-aligned cross coupling gives interval density constant 2pi/sqrt(lambda1 lambda2)"
+    },
+    {
+      "source": "math-open-problems@a1654d5fe319f483999583921d127819e40bc868",
+      "scope": "for fixed rank-at-least-three QFORM instances, a paid interval bound upgrades to a C0 density with the same height"
+    },
+    {
+      "source": "math-open-problems@7a0ffb7d9c4c6074cc6e13375db70828740e1bd4",
+      "scope": "collective rank-one Schur repair and obstruction to a determinant-only grouped receiver with arbitrary leaf curvature"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "proved": {
+    "family": "A=[[aI2,0,R],[0,0,0],[R^T,0,-aIm]], m>=1, a>=1, arbitrary real 2xm R",
+    "spectral_gate": "all m+2 nonzero eigenvalues have modulus at least a because H^2=diag(a^2I2+RR^T,a^2Im+R^TR)",
+    "interval_bound": "P(Q in E)<=2pi/a |E|",
+    "regularity": "canonical p_Q in C0(R) with ||p_Q||_infinity<=2pi/a"
+  },
+  "unresolved": "The bare s3(A)>=1 condition does not force the range-aligned semidefinite core or opposite-scalar cancellation; higher-rank/sign-indefinite Schur remainders remain open.",
+  "next_step": "Test broader anticommuting block-sign structures and deterministic perturbation gates without treating matrix-small terms as small random quadratic errors.",
+  "model": "UNKNOWN",
+  "thinking": "UNKNOWN"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "account01-B07-20260923T070624Z-r19",
+  "control_revision": "2026-09-22.15",
+  "final_control_head_observed": "d05a95d64c6cea5bb3dc3755bca1a2e888f09ff7",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_refreshed_before_publication": true,
+  "correction_boundaries": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "canonical_main_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d98ec05905698cdb01f334c7da741ed7bb7aef37",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T070624Z-r19/REPORT.md",
+    "status": "ESSENTIAL_STEP_APPLIED_NEW_COARSE_ROLE_COLORING_CORE_OR_DIFFUSE_FULL_TARGET_OPEN"
+  },
+  "new_addendum": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0db2d15be28713a9ab9bb2013af7b53e145a2c13",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T070624Z-r19/SCALAR_ANCHOR_ADDENDUM.md",
+    "theorem": "QFORM-SCALAR-ANCHOR-LOWTAIL-OR-VOLUME-v1",
+    "statement": "For B=[[b,u^T],[v,N]], b!=0, S=N-vu^T/b and any m>=1, delta>0, either dist_F(N,rank<=m+1)<=delta||N||_F or E_{m+2}(B)>b^2 delta^(2m+2)||N||_F^(2m+2)/(m+1)!.",
+    "m3_delta_quarter": "Either dist_F(N,rank<=4)<=||N||_F/4 or E5(B)>b^2||N||_F^8/(3*2^19).",
+    "paid_branch": "D5 gives continuous full-form density <48.563 |b|^(-1/5)||N||_F^(-4/5).",
+    "exact_rank3_partner_payment": "If H3>0,H4=0 and dist_F(N,rank<=2)>delta||N||_F, completed account02/B07 cross-fiber Plancherel gives ||p_Q||inf <3e*2^(1/6)*delta^(-2/3)|b|^(-1/3)||N||_F^(-2/3), continuous."
+  },
+  "designated_partner_completed_result_applied": {
+    "theorem": "QFORM-CROSS-FIBER-PLANCHEREL-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5266d24ea98d9bb5902c51a92eca0e3e38112e39",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260922T193347Z-b07-639234ec/REPORT.md"
+  },
+  "newest_partner_checkpoint_consumed": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b72066231eb52c325a794f45135f9fb090ee9567",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/account02-B07-20260923T063044Z-r11/CHECKPOINT.md"
+  },
+  "handoffs": [
+    "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B07/account01-B07-20260923T070624Z-r19.md",
+    "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B07/account01-B07-20260923T070624Z-r19-scalar-anchor-addendum.md"
+  ],
+  "unresolved_implications": [
+    "QFORM-COARSE-DIFFUSE-ROLE-RECEIVER-v1",
+    "QFORM-SCALAR-ANCHOR-RANK4-TUBE-RECEIVER-v1"
+  ],
+  "continuity_status": "OPEN globally; continuous on the D5 paid branch and the exact-rank-three cross-fiber partner branch.",
+  "full_target_status": "OPEN",
+  "next_step": "Retain the literal scalar anchor and original product structure and pay the nonzero relative rank-four Schur tube, or sharpen it until a completed stability/Plancherel receiver applies; in parallel, route the coarse diffuse determinant packet without reciprocal minor selection."
+}

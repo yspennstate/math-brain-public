@@ -1,0 +1,120 @@
+\section*{A fixed half-restriction criterion for full Fourier entropy--influence}
+
+All logarithms are base two.  Let
+\[
+ p_S=\widehat f(S)^2,\qquad
+ I(f)=\sum_S|S|p_S,\qquad
+ H(f)=\sum_Sp_S\log_2\frac1{p_S},
+\]
+and
+\[
+ \pi_f(S)=\sum_{T\supseteq S}p_T,\qquad
+ U(f)=\sum_Sp_S\log_2\frac{\pi_f(S)}{p_S}.
+\]
+Zero-mass terms vanish.  The empty set is included.  For each $n$, let
+\[
+ c_n=\max_{f:\{-1,1\}^n\to\{-1,1\},\ I(f)>0}\frac{H(f)}{I(f)}.
+\]
+
+Given a Boolean $f$ on $n$ coordinates, choose a live set $J$ by retaining
+each coordinate independently with probability $1/2$, assign the complement
+uniformly by $X$, and write $f_{J,X}$ for the resulting physical restriction.
+
+\begin{definition}[critical half-restriction bound $\mathrm{CHR}_U(K)$]
+For every $n\ge2$ and every maximizer $f$ attaining $c_n$,
+\[
+ \boxed{\quad
+ \mathbb E_{J,X}U(f_{J,X})\le
+ K\,\mathbb E_{J,X}I(f_{J,X})=\frac K2 I(f).
+ \quad}                                                   \tag{CHR}
+\]
+\end{definition}
+
+\begin{theorem}[fixed-scale equivalence]
+Full FEI holds if and only if $\mathrm{CHR}_U(K)$ holds for some finite
+absolute $K$.  Quantitatively,
+\[
+ \mathrm{CHR}_U(K)\quad\Longrightarrow\quad
+ H(f)\le\left(2+2K+\frac2{\ln2}\right)I(f)               \tag{1}
+\]
+for every Boolean $f$.  Conversely, FEI with constant $C$ implies
+$\mathrm{CHR}_U(C)$.
+\end{theorem}
+
+\begin{proof}
+The converse is immediate from $U(g)\le H(g)\le C I(g)$ for every physical
+restriction $g$, followed by averaging.
+
+For the forward implication, fix an $n$-dimensional maximizer $f$, put
+$c=c_n$, and let $g=f_{J,X}$.  Every nonconstant restriction has
+$H(g)\le cI(g)$.  Define its nonnegative critical deficit
+\[
+ \delta(g)=cI(g)-H(g).
+\]
+The audited random-restriction deficit estimate gives
+\[
+ \mathbb E\delta(g)\le\frac1{\ln2}I(f),                  \tag{2}
+\]
+at retention probability $1/2$, while exact physical influence transport
+gives
+\[
+ \mathbb E I(g)=\frac12I(f).                             \tag{3}
+\]
+
+Retain the complete terminal form of the proved upward-potential inequality:
+\[
+ H(g)\le2\bigl(I(g)-\operatorname{Var}(g)\bigr)+2U(g)-b(g),\qquad
+ b(g)=(1-\operatorname{Var}(g))\log_2\frac1{1-\operatorname{Var}(g)}.
+\]
+Substituting $H(g)=cI(g)-\delta(g)$ and averaging yields
+\[
+ \mathbb E U(g)\ge
+ \frac{c-2}{4}I(f)-\frac12\mathbb E\delta(g)
+ +\mathbb E\operatorname{Var}(g)+\frac12\mathbb E b(g). \tag{4}
+\]
+Combine (2), (4), and $\mathrm{CHR}_U(K)$:
+\[
+ \frac K2I(f)\ge
+ \left(\frac{c-2}{4}-\frac1{2\ln2}\right)I(f)
+ +\mathbb E\operatorname{Var}(g)+\frac12\mathbb E b(g).
+\]
+Therefore the sharper finite-dimensional estimate
+\[
+ c_n\le2+2K+\frac2{\ln2}
+ -\frac{4\mathbb E\operatorname{Var}(g)+2\mathbb E b(g)}{I(f)}             \tag{5}
+\]
+holds, and dropping only the displayed nonnegative terminal correction gives
+(1).  The bound is uniform in $n$, so FEI follows.  \qed
+\end{proof}
+
+\paragraph{General fixed retention scale.}
+For any one fixed $t\in(0,1)$, the same proof shows that
+\[
+ \mathbb E U(f_{J_t,X})\le KtI(f)
+\]
+for every $c_n$-maximizer implies
+\[
+ c_n\le2+2K+\frac{2(1-t)}{t\ln2}
+ -\frac{4\mathbb E\operatorname{Var}(f_{J_t,X})
+        +2\mathbb E b(f_{J_t,X})}{tI(f)}.                \tag{6}
+\]
+The half-scale formulation removes the free parameter and fixes every
+normalizer.
+
+\paragraph{Why this is a smaller unpaid inequality.}
+The original universal target $U(g)\le KI(g)$ quantifies over every Boolean
+function.  $(\mathrm{CHR})$ asks only for an average over one fixed physical
+restriction scale, only for finite-dimensional $H/I$ maximizers.  No bound is
+required for individual children, noncritical sources, arbitrary biases, or
+all values of $t$.  Nevertheless, (1) proves that this narrow statement is
+already sufficient.
+
+\paragraph{Exact remaining gap.}
+No dimension-independent $K$ in $(\mathrm{CHR})$ is currently proved.  Finite
+survival, class theorems, rectangle payment, and criticality conditions do not
+supply it.  The next derivation should bound the averaged upper-set asymmetry
+and KL mismatch of the half-restriction frontier, while the countersearch
+should attack $(\mathrm{CHR})$ directly on prime critical near-tensors and
+high-arity compositions.  Independent reviewers must reconstruct (2), the
+full terminal form of the upward inequality, and the constants in (5).
+

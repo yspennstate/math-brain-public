@@ -1,0 +1,2 @@
+STATE: A017 stage6 complete locally: genericD<=5 K4 coordinate; D6 five-edge B<639/1024; <=11 edits H<=K(I-1),K=4+2/ln2, zero bad bill/full terminals; four-edge affine-plane cases scoped; FEI OPEN, review pending.
+NEXT: A091/A090 review v4; prove one affine-column intrusion payment in bent-plane four-edge rows, then affine-span-three disagreement, preserving the same physical terminal/data owner.

@@ -1,0 +1,264 @@
+PDF PAGE 2
+We may also consider site or bond percolation on a periodic two dimensional lattice (see Kesten (1982)
+Chapters 1-3 for a precise description of terminology). It has been proved (see chapter 3 in Kesten (1982))
+that for site percolation on the triangular lattice
+pc = 0.5.
+(1.1)
+We denote the cluster distribution by
+θn(p) = Pp(|C(0)| = n).
+By analogy with the Ising model, we introduce the magnetization function as
+M(p, h) = 1 −
+∞
+X
+n=0
+θn(p)e−nh for h ≥0.
+By setting h = 0 in the magnetization function,
+M(p, 0) = θ(p).
+Using term-by-term diﬀerentiation, we also have
+lim
+h→0+
+∂M(p, h)
+∂h
+= Ep(|C(0)|; |C(0)| < ∞) = χf(p).
+χf(p) is called the mean cluster size. The free energy F(p, h) is deﬁned by
+F(p, h) = h(1 −θ0(p)) +
+∞
+X
+n=1
+1
+nθn(p)e−hn for h > 0.
+If we diﬀerentiate with respect to h, we ﬁnd
+∂F(p, h)
+∂h
+= M(p, h).
+For h > 0, the free energy is inﬁnitely diﬀerentiable with respect to p. The zero-ﬁeld free energy F(p, 0)
+is a more interesting subject of study. By our deﬁnition,
+F(p, 0) = Ep(|C(0)|−1; |C(0)| > 0).
+(1.2)
+Grimmett (1981) discovered that the zero-ﬁeld free energy also coincides with the number of clusters
+per vertex.
+Let us deﬁne the number of clusters per vertex as follows.
+Note that any two vertices
+x, y ∈B(n) = [−n, n]2 are said to be connected in B(n) if either x = y or there exists an occupied path γ
+in B(n) connecting x and y. Let Mn be the number of occupied clusters in B(n). By a standard ergodic
+theorem (see Theorem 4.2 in Grimmett (1999)), the limit
+lim
+n→∞
+1
+|B(n)|Mn = κ(p) a.s. and L1
+(1.3)
+exists for all 0 ≤p ≤1. Let Kn = Ep(Mn). Thus,
+lim
+n→∞
+1
+|B(n)|Kn(p) = κ(p).
+2
+
+PDF PAGE 3
+κ(p) is called the number of clusters per vertex. Grimmett (1981) proved that
+κ(p) = F(p, 0).
+(1.4)
+Sykes and Essam were perhaps the ﬁrst to introduce the number of clusters per vertex in 1964, and
+they tried to use it to compute pc. They explored a beautiful geometric argument in their paper to show
+κ(p) −κ(1 −p) = p −3p2 + 2p3.
+(1.5)
+Sykes and Essam argued that phase transition in percolation must be manifested by a singularity at
+the critical value pc. If pc is indeed the only singularity of κ(p), then (1.5) implies that pc = 0.5. For
+many years, the singularity criterion of Sykes and Essam has oﬀered a tantalizing approach to the famous
+problem that pc = 0.5. Kesten used another method in 1980 to show that pc = 0.5 (see Kesten (1982)).
+However, until the present paper, there was no proof of a singularity at pc for the free energy function.
+We would like to mention some progress for κ(p) throughout the years. It has been ruled out that
+κ(p) has another singularity on p for p ̸= pc. In other words, κ(p) is analytic for p ̸= pc (see chapter 9 in
+Kesten (1982)). On the other hand, it has also been proved (see chapter 9 in Kesten (1982)) that κ(p)
+is twice diﬀerentiable at pc. This tells us that κ(p) is a very smooth function. Indeed, the smoothness
+of κ(pc) might tell us why the singularity at pc is diﬃcult to prove. The main result obtained here is to
+understand the behavior of κ at the critical point. If pc is indeed a singularity of κ(p), then it is natural
+to ask about the behavior of the singularity. Physicists believe that the zero-ﬁeld free energy is not third
+diﬀerentiable. It is believed that the behavior of percolation functions can be described in terms of critical
+exponents as p approaches pc. For κ(p), it is conjectured that there exists an exponent α such that
+κ′′′(p) ≈|p −pc|−1−α.
+(1.6)
+It is not known how strong one expects such an asymptotic “ ≈” relation to be, and it is for this reason
+that we shall use the logarithmic relation. More precisely, f(p) ≈g(p) or fn ≈gn means
+log g(p)/ log f(p) →1 or g(p) = f 1+o(1)(p) as p →pc, or log fn/ log gn →1 or fn = g1+o(1)
+n
+as n →∞.
+The exponent α is called the heat exponent, and (1.6) is called the power law for the free energy.
+Numerical computations indicate α = −2/3. In addition to this power law, it is also widely believed that
+the exponents satisfy the following so-called scaling laws. To be more speciﬁc, we need to introduce all
+the other critical exponents and power laws. We denote the correlation length by
+ξ−1(p) = lim
+n→∞{−1
+n log Pp(0 →∂B(n), |C(0)| < ∞)} if p ̸= pc,
+and the probability on the tail of |C(0)| at pc by
+π(n) = Ppc(n ≤|C(0)| < ∞),
+where ∂B(n) is the surface of the box B(n) and A →B means that there exists an occupied path from
+some vertex of A to some vertex of B for any sets A and B.
+The power laws are introduced as follows:
+θ(p) ≈(p −pc)β for p > pc,
+3
+
+PDF PAGE 4
+χf(p) ≈(pc −p)−γ for p ̸= pc,
+ξ(p) ≈|pc −p|−ν for p ̸= pc,
+(1.7)
+π(n) ≈n−1/ρ for n ≥1,
+(1.8)
+κ′′′(p) ≈|p −pc|−1−α for p ̸= pc.
+(1.9)
+Numerical computations indicate that
+β = 5
+36, γ = 43
+18, ν = 4
+3, ρ = 91
+5 .
+In addition to the power laws, it is also widely believed that the exponents satisfy the following
+so-called scaling laws:
+α = 2 −2ν,
+(1.10)
+β =
+2ν
+ρ + 1,
+(1.11)
+γ = 2ν ρ −1
+ρ + 1.
+(1.12)
+In particular, (1.10) is called a hyper scaling relation. Moreover, let us introduce k-arm paths. Consider
+the annulus
+A(m, n) = {B(n) \ B(m)} ∪{∂B(m)} for m < n.
+Let Qk(b, m, n) be the event that there exist i disjoint occupied paths and j disjoint vacant paths with
+i + j = k for all i, j ≥1 from b + ∂B(m) to b + ∂B(n) inside b + A(m, n). We call them k-arm paths.
+For simplicity, let Qk(m, n) = Qk(0, m, n). If b ∈B(n), let Qk(b, n) be the k-arm paths from b to ∂B(n).
+Let Q4(n) = Q4(0, n) for simplicity. It is believed by Aizenman, Dulpantier, and Alharony (1999) that
+P0.5(Qk(m, n)) =
+m
+n
+(k2−1)/12+o(1)
+(1.13)
+for ﬁxed m as n →∞and for k > 1. In fact, it is more important to show (1.13) when k = 1 and k = 4.
+Fortunately, by using the Schramm-Loewner evolution (SLE) argument and Smirnov’s scaling limit on
+the triangular lattice (2001), (1.13) was proved (see Lawler, Schramm, and Werner (2001) and Smirnov
+and Werner’s Theorem 4 (2001)) for k = 1 and k = 4. More precisely, on the triangular lattice,
+P0.5(Q4(m, n)) =
+m
+n
+5/4+o(1)
+and P0.5(Q1(m, n)) =
+m
+n
+5/48+o(1)
+.
+(1.14)
+For the other two-dimensional lattices, it has been shown that there exists δ > 0 such that
+P0.5(Q4(m, n)) ≤
+m
+n
+1+δ
+and P0.5(Q1(m, n)) ≤
+m
+n
+δ
+.
+(1.15)
+In particular, Kesten, Sidoravicius, and Zhang (1998) showed that (1.14) holds for k = 5 for all the
+two-dimensional lattices without using an SLE approach. Indeed, they showed that there exist C1 and
+C2 such that
+C1
+m
+n
+2
+≤P0.5(Q5(m, n)) ≤C2
+m
+n
+2
+.
+(1.16)
+4
+
+PDF PAGE 5
+In this paper, C and Ci are positive constants independent of n, m, and k and p. They also change from
+appearance to appearance. We sometimes use O(n) for C1n ≤O(n) ≤C2n. When we need to indicate
+that C depends on a particular parameter, for example, α, we will write C = C(α).
+It is interesting to point out that (k2 −1)/12 is always a positive integer if k ≥5 is a prime number.
+However, not only prime number k satisﬁes that (k2 −1)/12 is an integer. For example, if k = 35, then
+(k2 −1)/12 is an integer. It might be easier to show (1.13) when (k2 −1)/12 is an integer as Kesten,
+Sidoravicius, and Zhang did in (1.16). Note that if k ≥6, then the critical exponent is larger than 2.
+Thus, we can barely see the six arm paths in [−n, n]2 for large n. On the other hand, two-arm path and
+three-arm path power laws in the half space are well understood. Let Hk(m, n) be the event that there
+are i-disjoint occupied paths and j disjoint vacant paths in the upper half space with i + j = k from
+∂B(m) to ∂B(n) for i, j ≥1. It is believed that
+P0.5(Hk(m, n)) =
+m
+n
+k(k+1)/6+o(1)
+.
+(1.17)
+It has been proved (see Higuchi, Takei, and Zhang (2012)) that (1.17) holds for k = 2 and k = 3 and for all
+the two-dimensional lattices. We know that (1.14) together with an argument of Kesten (see Corollaries
+1 and 2 in Kesten (1987)) imply that all the power laws and scaling relations hold except possibly for
+(1.6). Here we will give the following theorem to discuss the power laws concerning for the free energy
+function.
+Theorem. For percolation on the triangular lattice,
+|κ′′′(p)| ≤|p −pc|−1/3+o(1) if p ̸= pc.
+Furthermore, we show that there is a sequence ǫn ↓0 such that
+|κ′′′(pc ± ǫn)| ≥ǫ−1/3+o(1)
+n
+.
+Remarks. 1. For percolation on the triangular lattice, the last inequality of the Theorem implies
+that κ(p) is not third diﬀerentiable. This answers aﬃrmatively a conjecture, asked by Sykes and Essam
+in 1964, whether κ(p) has a singularity at the criticality for the triangular lattice.
+2. (1.13) for k = 4 was only shown to hold for the triangular lattice. If one can show (1.13) for the
+other lattices, then the Theorem will work on those lattices. In fact, the topology of the derivatives for
+κ(p) in the site or bond percolation for the square lattice is easy to handle, since there are four neighbors
+for each vertex rather than six neighbors. We are unable to prove the lower bound in the Theorem for
+any sequence ǫn ↓0.
+Acknowledgments. The author would like to thank Harry Kesten for many fruitful conversations,
+and he would also like to thank Geoﬀrey Grimmett for his many comments.
+2
+Preliminaries.
+In this section, we introduce a few basic properties and estimates of site percolation in the triangular
+lattice. Most results are obtained from Kesten (1982) and (1987). For any u = (u1, u2) ∈Z2, let ∥u∥be
+5
+
+PDF PAGE 6
+the distance from the origin to u. For u, v ∈Z2, let d(u, v) = ∥u −v∥. For any two vertex sets A and B,
+we denote the distance of them by
+d(A, B) =
+min
+x∈A,y∈B ∥x −y∥.
+We can also deﬁne the distance of two edge sets if we consider the vertices of them.
+Given a ﬁnite
+connected graph G, as we deﬁned in section 1, a vertex u ̸∈G but adjacent to G is called the boundary
+vertex of G. We denote by ∂G the boundary vertices of G. If a vertex v ∈∂G, and there is an inﬁnite
+path from v without using G, then v is called the exterior boundary vertex. We denote by ∆G all the
+exterior boundary vertices of G. We introduce a topology result (see Lemma 2.23 in Kesten (1982) or
+Proposition 11.2 in Grimmett (1999)).
+Lemma 2.1. If G is a ﬁnite cluster, then ∆(G) is a circuit containing G in its interior. Furthermore,
+∆(G) is the smallest vacant circuit containing G in its interior if G is occupied.
+Now we deﬁne occupied and vacant crossings in a box. A left-right (respectively, top-bottom) occupied
+crossing of B(n) is an occupied path in B(n) that joins some vertex on the left (respectively upper) side
+of B(n) to some vertex on the right (respectively, lower) side of B(n) but uses no vertices in the boundary
+of B(n). Similarly, we may deﬁne a vacant crossing on B(n). We denote the occupied and the vacant
+crossing probabilities of B(n) by
+σ(p, n) = Pp(∃a left-right occupied crossing of B(n)) and
+σ∗(p, n) = Pp(∃a top-bottom vacant crossing of B(n)).
+We need to show that the vacant crossing and occupied crossing probabilities of squares are bounded
+away from zero when p is near pc. To make this precise, we ﬁrst deﬁne (see (1.21) in Kesten (1987))
+L(p) = min{n : σ(p, n) ≥1 −ǫ0} for p > pc and L(p) = min{n : σ∗(p, n) ≥ǫ0} for p < pc,
+(2.1)
+where ǫ0 is some small but strictly positive number whose precise value is not important. The important
+property is that ǫ0 can be chosen such that there exists a constant δ for which
+σ(p, n) ≥δ and σ∗(p, n) ≥δ
+uniformly in n ≤L(p). L(p) is also called the correlation length, and it is proved (see Corollary 2 in
+Kesten (1987)) that
+L(p) ≍ξ(p),
+(2.2)
+where f(p) ≍g(p) or fn ≍gn means
+f(p)/g(p) = O(1) and fn/gn = O(1).
+By (1.14) and Kesten’s Corollaries 1 and 2, for all p ̸= 0.5,
+L(p) ≍ξ(p) ≈|0.5 −p|−4/3.
+(2.3)
+On the other hand, it is known (see chapter 11 in Grimmett (1999)) that for any n there exists C > 0
+such that
+σ(0.5, n) ≍σ∗(0.5, n) ≍C.
+6

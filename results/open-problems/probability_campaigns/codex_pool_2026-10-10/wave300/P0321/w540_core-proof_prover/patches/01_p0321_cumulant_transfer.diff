@@ -1,0 +1,192 @@
+--- a/~/math-brain-inbox/w540/bundle_001.json
++++ b/~/math-brain-inbox/w540/bundle_001.json
+@@ -0,0 +1,189 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w540",
++  "bundle_slug": "p0321-cumulant-transfer-001",
++  "entries": [
++    {
++      "key": "l1",
++      "namespace": "probability.statisticalmechanics",
++      "logical_name": "absolute-cumulant-bounds-give-algebraic-vertex-order",
++      "kind": "concept",
++      "title": "DRAFT: Conditional cumulant-to-vertex bounds",
++      "statement": "DRAFT concept material, not a full P0321 proof. Fix q,a>0 and D,B>=0. If real X_{L,r}, 2<=r<=L/4, has E exp(q|X|)<infinity, |kappa_2(X)-a log r|<=D and sum_{n>=3}q^n|kappa_n(X)|/n!<=B uniformly in L,r, then with eta=q^2 a/2 and H=q^2 D/2+B, exp(-H)r^(-eta)<=|E exp(iqX)|<=exp(H)r^(-eta). Independent designated-referee review is pending.",
++      "proof_text": null,
++      "assumptions": [
++        "Real random variables with the stated exponential integrability",
++        "Cumulants are Taylor coefficients of the local logarithm of the moment-generating function",
++        "Uniform variance and absolute higher-cumulant bounds"
++      ],
++      "domain": "probability theory and statistical mechanics",
++      "source": {
++        "source_id": "owner:w540:P0321-transfer-20261010:l1",
++        "url": null,
++        "revision": "author-proof-w541-audit-fix-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null,
++        "local_path": "~/brain_workers/w540/ATTEMPT.md"
++      },
++      "review_status": "w541 checked; designated referee w542 pending",
++      "remaining_gap": "No demonstration of these cumulant hypotheses for microscopic Riesz bond angles; full target still requires M."
++    },
++    {
++      "key": "l2",
++      "namespace": "probability.statisticalmechanics",
++      "logical_name": "anchored-mixed-cumulant-summation",
++      "kind": "concept",
++      "title": "DRAFT: Connected scale cumulants without independence",
++      "statement": "DRAFT concept material, not a full P0321 proof. For X=sum_{j=0}^J Z_j with E exp(q sum_j|Z_j|)<infinity, if sum_{j_2,...,j_n}|cum(Z_j,Z_{j_2},...,Z_{j_n})|<=n! b_n y_j for every n>=3,j, sum_j y_j<=Y and sum_{n>=3}q^n b_n<infinity uniformly, then sum_{n>=3}q^n|kappa_n(X)|/n!<=Y sum_{n>=3}q^n b_n. Independence is unnecessary. Independent designated-referee review is pending.",
++      "proof_text": null,
++      "assumptions": [
++        "Finite sum and stated joint exponential moments",
++        "Absolute anchored connected-cumulant and summability bounds"
++      ],
++      "domain": "probability theory and statistical mechanics",
++      "source": {
++        "source_id": "owner:w540:P0321-transfer-20261010:l2",
++        "url": null,
++        "revision": "author-proof-w541-audit-fix-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null,
++        "local_path": "~/brain_workers/w540/ATTEMPT.md"
++      },
++      "review_status": "w541 checked; designated referee w542 pending",
++      "remaining_gap": "Microscopic connected-defect bounds and the separate logarithmic variance estimate remain unproved."
++    },
++    {
++      "key": "l3",
++      "namespace": "probability.statisticalmechanics",
++      "logical_name": "nonzero-bond-amplitude-correlation-transfer",
++      "kind": "concept",
++      "title": "DRAFT: Transfer to a microscopic bond observable with explicit limit order",
++      "statement": "DRAFT concept material, not a full P0321 proof. Assume L1 with q=6, and C_{6,L}(r)=A_{L,r}E exp(i6X_{L,r})+epsilon_{L,r}, with 0<A_-<=|A|<=A_+, |epsilon|<=E_0 r^(-eta-delta), delta>0 uniformly. For r>=max(2,(2E_0 exp(H)/A_-)^(1/delta)) and r<=L/4, (A_- exp(-H)/2)r^(-eta)<=|C_{6,L}(r)|<=(A_+ exp(H)+E_0)r^(-eta). The bounds pass to any existing fixed-r thermodynamic limit. Alternatively, retain L1 and the amplitude bounds, assume epsilon_{L,r}->0 at every fixed r and existence of the fixed-r limit of C_{6,L}; taking L->infinity before r->infinity yields A_- exp(-H)r^(-eta)<=|C_6(r)|<=A_+ exp(H)r^(-eta). No joint distance/volume rate is asserted by this alternative. Independent designated-referee review is pending.",
++      "proof_text": null,
++      "assumptions": [
++        "All L1 hypotheses",
++        "Nonzero uniform microscopic projection amplitude",
++        "Stated scale-decaying insertion error",
++        "A correlation limit must exist to assert an infinite-state bound",
++        "Either the original uniform scale-decaying error or the stated fixed-r vanishing-error alternative; limit order is explicit."
++      ],
++      "domain": "probability theory and statistical mechanics",
++      "source": {
++        "source_id": "owner:w540:P0321-transfer-20261010:l3",
++        "url": null,
++        "revision": "author-proof-w541-audit-fix-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null,
++        "local_path": "~/brain_workers/w540/ATTEMPT.md"
++      },
++      "review_status": "w541 checked; designated referee w542 pending",
++      "remaining_gap": "Representation, amplitude, Gibbs limit, defect-sector control, and positional disorder are not supplied for the Riesz gas."
++    },
++    {
++      "key": "c1",
++      "namespace": "probability.statisticalmechanics",
++      "logical_name": "logarithmic-variance-does-not-imply-algebraic-vertex-order",
++      "kind": "concept",
++      "title": "DRAFT: Logarithmic variance can have zero vertex correlation",
++      "statement": "DRAFT concept material, not a full P0321 proof. For any q>0 and independent fair signs epsilon_j, X_J=(pi/(2q))sum_{j=1}^J epsilon_j has variance (pi/(2q))^2 log(r)/log(2) at r=2^J, but E exp(iqX_J)=0 for every J>=1. Logarithmic variance alone cannot imply positive algebraic vertex bounds. Independent designated-referee review is pending.",
++      "proof_text": null,
++      "assumptions": [
++        "Independent fair signs only in this constructed counterexample",
++        "Dyadic radii r=2^J"
++      ],
++      "domain": "probability theory and statistical mechanics",
++      "source": {
++        "source_id": "owner:w540:P0321-transfer-20261010:c1",
++        "url": null,
++        "revision": "author-proof-w541-audit-fix-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null,
++        "local_path": "~/brain_workers/w540/ATTEMPT.md"
++      },
++      "review_status": "w541 checked; designated referee w542 pending",
++      "remaining_gap": "Refutes only variance-only correlation transfer; it is not a Riesz process counterexample."
++    },
++    {
++      "key": "c2",
++      "namespace": "probability.statisticalmechanics",
++      "logical_name": "wrapped-gaussian-vertex-cancellation-at-correlation-scale",
++      "kind": "concept",
++      "title": "DRAFT: Positive wrapped-Gaussian perturbation cancels the leading vertex",
++      "statement": "DRAFT concept material, not a full P0321 proof. Let a=r^(-eta)<=1/4, eta>0. The wrapped centered Gaussian of variance 2eta log r has density p=(1+2sum_{n>=1}a^(n^2)cos(nphi))/(2pi) and first vertex coefficient a. The positive density q=p-a cos(phi)/pi has zero first vertex coefficient and d_TV(P,Q)=2a/pi, using d_TV=sup_A|P(A)-Q(A)|. Thus even O(r^(-eta)) approximation error can erase the full algebraic correlation; o(r^(-eta)) controls it by |E_P f-E_Q f|<=2d_TV for |f|<=1. Independent designated-referee review is pending.",
++      "proof_text": null,
++      "assumptions": [
++        "Circular pair law; a<=1/4",
++        "No assertion that the pair laws form a stationary microscopic field"
++      ],
++      "domain": "probability theory and statistical mechanics",
++      "source": {
++        "source_id": "owner:w540:P0321-transfer-20261010:c2",
++        "url": null,
++        "revision": "author-proof-w541-audit-fix-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null,
++        "local_path": "~/brain_workers/w540/ATTEMPT.md"
++      },
++      "review_status": "w541 checked; designated referee w542 pending",
++      "remaining_gap": "Provides a necessary error scale for the route, not a microscopic hexatic state."
++    },
++    {
++      "key": "m",
++      "namespace": "probability.statisticalmechanics",
++      "logical_name": "p0321-microscopic-connected-defect-gap",
++      "kind": "concept",
++      "title": "DRAFT: Unproved microscopic input for the Riesz hexatic route",
++      "statement": "DRAFT concept material, not a full P0321 proof. For classical density-one s=1 Riesz jellium there is a nonempty open beta interval with equilibrium limiting states, a physical sixfold bond observable admitting the L1-L3 connected-cumulant representation and nonzero amplitude, and loss of crystalline positional quasi-long-range order while dislocations screen and disclinations remain controlled. Independent designated-referee review is pending.",
++      "proof_text": null,
++      "assumptions": [
++        "Specified neutralizing background and thermodynamic limit",
++        "Explicit phase observables still must be fixed"
++      ],
++      "domain": "probability theory and statistical mechanics",
++      "source": {
++        "source_id": "owner:w540:P0321-transfer-20261010:m",
++        "url": null,
++        "revision": "author-proof-w541-audit-fix-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null,
++        "local_path": "~/brain_workers/w540/ATTEMPT.md"
++      },
++      "review_status": "w541 checked; designated referee w542 pending",
++      "remaining_gap": "M is the single unproved bottleneck. Conditional reductions and toy counterexamples do not close it."
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "l3",
++      "to_key": "l1",
++      "kind": "depends_on",
++      "rationale": "L3 begins 'Assume L1 with q=6'; L1 supplies exp(-H)r^(-eta)<=|E exp(iqX)|<=exp(H)r^(-eta), the exact leading bounds used by the two triangle inequalities."
++    },
++    {
++      "from_key": "l2",
++      "to_key": "l1",
++      "kind": "semantic_association",
++      "rationale": "L2 supplies sum_{n>=3}q^n|kappa_n(X)|/n!<=Y sum q^n b_n. L1 requires this same higher-cumulant bound plus a separate logarithmic variance estimate; L2 does not prove the missing variance input."
++    },
++    {
++      "from_key": "c1",
++      "to_key": "l1",
++      "kind": "semantic_association",
++      "rationale": "C1 has exact logarithmic variance but E exp(iqX)=0. L1 has a positive lower bound only under absolute all-order cumulant summability, which C1 cannot satisfy at that q."
++    },
++    {
++      "from_key": "c2",
++      "to_key": "l3",
++      "kind": "semantic_association",
++      "rationale": "C2 cancels a wrapped-Gaussian correlation a=r^(-eta) at TV distance 2a/pi. L3 requires an insertion error below the leading correlation scale, or an error that disappears in the fixed-r limit; C2 has neither guarantee."
++    },
++    {
++      "from_key": "m",
++      "to_existing_logical": "math:probability.core:open-problem-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases",
++      "kind": "cites",
++      "rationale": "The existing card asks for an intermediate hexatic phase with orientational order and absent crystalline positional order. M is the explicitly unproved microscopic defect/insertion and positional-disorder input needed by this conditional angular route."
++    }
++  ],
++  "bundle_state": "DRAFT",
++  "review_packet": "~/brain_workers/w540/REVIEW_PACKET.md"
++}

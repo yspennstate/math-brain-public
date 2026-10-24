@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "execution_scope": "standard-library current-run checker; algebraic falsification/sanity only, not an FEI proof",
+  "exhaustive": {
+    "h=1": {"odd_subsets_checked": 2, "distinct_q_sequences": 1},
+    "h=2": {"odd_subsets_checked": 8, "distinct_q_sequences": 2},
+    "h=3": {"odd_subsets_checked": 128, "distinct_q_sequences": 6},
+    "h=4": {"odd_subsets_checked": 32768, "distinct_q_sequences": 30}
+  },
+  "deterministic_random_seed": 20260921,
+  "sampled": {
+    "h=5": {"samples": 2000, "max_final_q": 25, "max_single_level_q_jump": 20},
+    "h=6": {"samples": 2000, "max_final_q": 49, "max_single_level_q_jump": 42},
+    "h=8": {"samples": 2000, "max_final_q": 155, "max_single_level_q_jump": 94}
+  },
+  "slow_refinement_turnover_for_unit_coefficient": {
+    "m=3": {"l1_one_way_turnover": 0.6666666666666666, "quadratic_variation": 0.6666666666666666},
+    "m=5": {"l1_one_way_turnover": 1.0666666666666667, "quadratic_variation": 0.8},
+    "m=17": {"l1_one_way_turnover": 2.161247902424373, "quadratic_variation": 0.9411764705882353},
+    "m=65": {"l1_one_way_turnover": 3.4600558427442487, "quadratic_variation": 0.9846153846153847},
+    "m=257": {"l1_one_way_turnover": 4.823324934212703, "quadratic_variation": 0.9961089494163424},
+    "m=1025": {"l1_one_way_turnover": 6.2037860295187395, "quadratic_variation": 0.9990243902439024}
+  }
+}

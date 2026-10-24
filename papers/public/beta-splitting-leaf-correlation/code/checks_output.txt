@@ -1,0 +1,61 @@
+A. drift and bracket of the potential, all 1 <= j <= m <= 400, and m = 2^10..2^14 at j = 1..64 and j = m/2
+PASS A1 at k = 1 the drift and bracket vanish: max |d|,|v| = 0.0e+00
+PASS A2 e_1, e_2 >= 0 for k >= 2: min = 0.00e+00
+PASS A3 e_p k / (1 + log^p(k+1)) bounded: max over the grid: p=1 1.1657, p=2 2.1302
+PASS A4 at m = 2^14, j = 2^13 the errors are within the bounds of A3: d = 1.643664 (zeta(2) = 1.644934), v = 2.391446 (2 zeta(3) = 2.404114)
+B. common-clade chain by enumeration of starts and cuts, exact rationals, 1 <= r < m <= 26
+PASS B1 a_r(m,k) = m(k-r)/((m-r)k(m-k))
+PASS B2 kappa_r(m) as in (3.2), and total rate h_{m-1}
+PASS B3 start rank uniform in the retained child
+PASS B4 separating cut (j,a) has rate lambda_m(j+a-1)/s
+C. drift of g = log(m/r) for the killed chain, 1 <= r < m <= 600
+PASS C1 identity (3.3) for the drift: max error 1.4e-14
+PASS C2 0 <= zeta(2) - d0(m) <= 2(1 + log m)/m
+PASS C3 (3.5) for m >= 2r: |d - zeta(2)| / [(1+log m)/m + (r/m)(1+log^2(m/r))] bounded: max ratio 0.5998
+PASS C4 0 <= d <= zeta(2) + 1 for r < m < 2r: max d = 1.2994
+D. exit and killing rates
+PASS D1 floor(k/2)/(2(k-1)) >= 1/4 for 2 <= k <= 10^6
+PASS D2 kappa_r(m) > 1/4 for r < m < 4r, r <= 300: min 0.7467
+PASS D3 exit rate of the bin [L, 2L), L = 4r 2^q, at least 1/8: min 0.3066
+E. E S_r(n) - log(n/r)/zeta(2) and E D_n - log(n)/zeta(2), exact recursion in double precision
+   n       r    E S - log(n/r)/zeta(2)
+   512      1   +0.1944
+  2048      1   +0.1894
+  8192      1   +0.1879
+   512      4   -0.0625
+  2048      4   -0.0774
+  8192      4   -0.0824
+   512     16   -0.0812
+  2048     16   -0.1225
+  8192     16   -0.1374
+   512     64   +0.0037
+  2048     64   -0.0957
+  8192     64   -0.1369
+   512    256   +0.1842
+  2048    256   +0.0001
+  8192    256   -0.0993
+  2048   1024   +0.1832
+  8192   1024   -0.0008
+  8192   4096   +0.1830
+PASS E1 E S - log(n/r)/zeta(2) bounded on the grid: range [-0.1374, 0.1944]
+   E D_n - log(n)/zeta(2) at n = 2^9, 2^11, 2^13: 0.7946 0.7950 0.7951 (c0 = 0.7952)
+PASS E2 E D_n - log(n)/zeta(2) close to c0 = zeta(3)/zeta(2)^2 + gamma/zeta(2): 0.795118 vs 0.795156
+F. E_w G^2 on the rectangle 1 <= j <= s, 1 <= a <= r, weight 1/(i(m-i)), i = j+a-1, m = s+r
+   E_w G^2 at r = s: 1:0.000 2:0.047 3:0.179 5:0.494 10:1.139 30:2.336 100:3.423 300:4.063 1000:4.455 3000:4.635
+   E_w G^2 at r = 1, 30, 3000 with s = 3000: 0.000 2.778 4.635
+PASS F1 E_w G^2 bounded over r, s in {1,...,3000} grid: max 4.6352
+PASS F2 symmetric under (j,s) <-> (a,r): max asymmetry 8.9e-16
+PASS F3 negative control: E_w log^2(a) grows with r (no cancellation): 2.748 13.729 35.029 48.933
+G. Monte Carlo: J uniform on [n], partner J + r mod n, 40000 trees per row, seed 20261014
+   log2 n  r          alpha   E S-log(n/r)/z2  Cov-s2 log(n/r)  Var-s2 log n   rho     1-alpha
+   20             32  0.25   -0.162           -0.779           +0.921        0.575   0.75
+   20           1024  0.50   -0.172           -0.665           +0.973        0.364   0.50
+   20          32768  0.75   -0.166           -0.728           +0.968        0.135   0.25
+   40           1024  0.25   -0.177           -0.740           +0.898        0.661   0.75
+   40        1048576  0.50   -0.185           -0.676           +0.997        0.426   0.50
+   40     1073741824  0.75   -0.167           -0.851           +0.974        0.181   0.25
+PASS G1 correlations ordered by alpha and below 1 - alpha by O(1/log n)
+   n = 2^20: rho at offset 1 = 0.890, at oriented offset n - 1 = 0.893
+PASS G2 control: the oriented offset n - 1 gives the law of offset 1, far from 1 - alpha = 0
+
+ALL CHECKS PASS

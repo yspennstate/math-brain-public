@@ -1,0 +1,343 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\symm}{\operatorname{symm}}
+\DeclareMathOperator{\Real}{Re}
+
+\hypersetup{pdftitle={On a contractivity question of Neri and Pinto for generalized Polya urns},pdfauthor={Yitzchak Shmalo}}
+
+\title[A contractivity question for generalized P\'olya urns]{On a contractivity question of Neri and Pinto\\ for generalized P\'olya urns}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+
+\subjclass[2020]{60F15, 62L20, 15A18, 15B48}
+\keywords{generalized P\'olya urn, stochastic approximation, rate of convergence, Lyapunov equation, Perron--Frobenius}
+
+\begin{document}
+
+\begin{abstract}
+Let $R$ be the replacement matrix of a balanced $d$-colour generalized P\'olya urn with balance $\lambda$. Neri and Pinto obtained quantitative rates in the strong law $U(n)/T(n)\to u$ whenever the quadratic form $w\mapsto\langle w(R-\lambda I),w\rangle$, restricted to vectors with coordinate sum zero, is negative definite for the Euclidean inner product on all $d$ coordinates or on the first $d-1$ of them, and they asked whether this holds for every tenable irreducible urn. We show that it holds for every irreducible urn with two colours and fails for some urn with nonnegative integer entries for every $d\ge 3$, simultaneously for both inner products and for every ordering of the colours. One of the examples has all non-principal eigenvalues of real part below $\lambda/2$. On the other hand, the Lyapunov equation on the sum-zero hyperplane gives, for every tenable irreducible urn, an inner product in which the form is negative definite, and the best constant obtainable in this way is $\lambda-\gamma$, where $\gamma$ is the largest real part of a non-principal eigenvalue of $R$. Consequently the general rate theorem of Neri and Pinto applies to every tenable irreducible urn, and their fast-rate theorem applies with such an inner product exactly when $\gamma<\lambda/2$.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+\subsection*{Setting}
+A $d$-colour generalized P\'olya urn is a Markov chain $U(n)=(U_0(n),\dots,U_{d-1}(n))\in\mathbb N^d$: at each step a ball is drawn uniformly at random and, if its colour is $i$, the row $R_i$ of an integer replacement matrix $R=(R_{ij})_{0\le i,j\le d-1}$ is added to the composition. We assume throughout that the urn is balanced, $\sum_j R_{ij}=\lambda$ for every $i$, with $\lambda\in\{1,2,\dots\}$, and that the off-diagonal entries of $R$ are nonnegative, as in the classical setting of Athreya and Karlin~\cite{AK} and Janson~\cite{Janson}; only diagonal entries may be negative, subject to the tenability condition of~\cite[p.~2]{NP}. We call $R$ irreducible if the directed graph with an edge $i\to j$ whenever $i\ne j$ and $R_{ij}>0$ is strongly connected. Vectors are row vectors, $T(n)=\sum_i U_i(n)$ is deterministic, and for a tenable urn with irreducible $R$ the normalised composition $\widehat U(n)=U(n)/T(n)$ converges almost surely to the left eigenvector $u$ of $R$ with eigenvalue $\lambda$ and coordinate sum $1$~\cite{AK,Janson}; see~\cite[Theorem~1.1]{NP}.
+
+Neri and Pinto~\cite{NP} obtain explicit rates for this convergence, in $L^2$ and almost surely, by viewing the urn as a stochastic approximation scheme with mean field $F(x)=x(R-\lambda I)$. For a symmetric positive semidefinite $d\times d$ matrix $P$ write $\langle x,y\rangle_P=xPy^{\top}$ and $\|x\|_P^2=\langle x,x\rangle_P$. Their Theorem~3.2~\cite[p.~10]{NP} gives rates in $\|\cdot\|_P$ as soon as
+\begin{equation}\label{eq:hyp}
+\big\langle F(\widehat U(n)),\,\widehat U(n)-u\big\rangle_P\le -A\,\|\widehat U(n)-u\|_P^2\qquad(n\ge 0)
+\end{equation}
+for some $A>0$, and their Theorem~3.3~\cite[p.~12]{NP} gives faster rates when~\eqref{eq:hyp} holds with $A>\lambda/2$. Since $u(R-\lambda I)=0$ we have $F(\widehat U(n))=w(R-\lambda I)$ with $w=\widehat U(n)-u$, and $w$ lies in the hyperplane
+\[
+H=\Big\{w\in\R^d:\ \textstyle\sum_{i}w_i=0\Big\}.
+\]
+So~\eqref{eq:hyp} follows from the inequality $\langle w(R-\lambda I),w\rangle_P\le-A\|w\|_P^2$ for all $w\in H$.
+
+For $1\le p\le d$ let $J_p=\operatorname{diag}(1,\dots,1,0,\dots,0)$ with $p$ ones, and write $\langle\cdot,\cdot\rangle_p$, $\|\cdot\|_p$ for $\langle\cdot,\cdot\rangle_{J_p}$, $\|\cdot\|_{J_p}$. Proposition~3.6 of~\cite[p.~13]{NP} gives the constant $A=-\Lambda_p(R)$ for $P=J_p$, $p\in\{d,d-1\}$, where
+\[
+\Lambda_p(R)=\lambda_{\max}\big(\symm(C_pJ_p(R^{\top}-\lambda I)C_p^{\top})\big),\qquad C_d=I_d,\quad C_{d-1}=(I_{d-1},-\one^{\top}),
+\]
+and $\symm(M)=(M+M^{\top})/2$. The following question is stated in~\cite[Remark~3.7, p.~14]{NP}.
+
+\begin{quote}
+\emph{Is $\Lambda_p(R)<0$ for $p=d$ or $p=d-1$, for every tenable irreducible generalized P\'olya urn?}
+\end{quote}
+
+\noindent A positive answer would give a quantitative form of the strong law for every such urn. As we recall in Section~\ref{sec:readings}, $\Lambda_d(R)\ge 0$ for every balanced urn, because $\Lambda_d$ is a maximum over all of $\R^d$ and the vector $\one$ gives the value $0$. The quantity that enters the proof of~\cite[Theorem~1.2]{NP} is the maximum over $H$ only,
+\[
+\Lambda_H(R)=\max\big\{\langle w(R-\lambda I),w\rangle:\ w\in H,\ |w|=1\big\},
+\]
+and $\Lambda_{d-1}(R)$ is a maximum over $H$ as well. Both depend on the urn, and $\Lambda_{d-1}$ also on which colour is listed last. We answer the question for each of these readings and for every ordering of the colours.
+
+\subsection*{Results}
+For a permutation $\sigma$ of $\{0,\dots,d-1\}$ write $R^\sigma=(R_{\sigma(i)\sigma(j)})_{i,j}$ for the same urn with its colours listed in another order.
+
+\begin{theorem}\label{thm:two}
+Let $d=2$. Then $\Lambda_H(R)=\Lambda_1(R)=-(R_{01}+R_{10})$, and the same holds for $R^\sigma$. In particular $\Lambda_H(R)<0$ and $\Lambda_1(R^\sigma)<0$ for every irreducible two-colour urn and both orderings.
+\end{theorem}
+
+\begin{theorem}\label{thm:neg}
+For every $d\ge 3$ there is a $d$-colour urn with balance $\lambda$, whose replacement matrix $R$ is irreducible and has nonnegative integer entries (so the urn is tenable), such that
+\[
+\Lambda_H(R)>0\quad\text{and}\quad\Lambda_{d-1}(R^\sigma)>0\ \text{ for every permutation }\sigma .
+\]
+Moreover $\Lambda_d(R^\sigma)\ge 0$ for every $\sigma$. One may take $\lambda=6$ for every $d\ge 4$ and $\lambda=100$ for $d=3$, and there is such an urn with $d=6$ and $\lambda=6$ in which every eigenvalue of $R$ other than $\lambda$ has real part less than $\lambda/2$.
+\end{theorem}
+
+So the answer to the question is negative in each of its readings once $d\ge3$. The obstruction is the Euclidean inner product, not the urn. Let
+\[
+\gamma=\gamma(R)=\max\{\Real\mu:\ \mu \text{ an eigenvalue of } R,\ \text{counted after removing one copy of }\lambda\}.
+\]
+
+\begin{theorem}\label{thm:adapted}
+Let $R$ be irreducible with balance $\lambda$ and nonnegative off-diagonal entries. Then $\gamma<\lambda$, and for every $A<\lambda-\gamma$ there is a symmetric positive semidefinite $d\times d$ matrix $P$, positive definite on $H$, such that
+\begin{equation}\label{eq:adapted}
+\langle w(R-\lambda I),w\rangle_P\le -A\|w\|_P^2\qquad\text{for all }w\in H.
+\end{equation}
+Conversely, if a symmetric positive semidefinite $P$ that is positive definite on $H$ satisfies~\eqref{eq:adapted}, then $A\le\lambda-\gamma$.
+\end{theorem}
+
+\begin{corollary}\label{cor:rates}
+For every tenable urn with irreducible replacement matrix $R$ there are $A>0$ and a matrix $P$ as in Theorem~\ref{thm:adapted} for which~\eqref{eq:hyp} holds, so~\cite[Theorem~3.2]{NP} gives rates of convergence of $\widehat U(n)$ to $u$ in $L^2$ and almost surely in $\|\cdot\|_P$, a norm on $H$ equivalent to the Euclidean norm. A matrix $P$ positive definite on $H$ satisfying~\eqref{eq:adapted} with some $A>\lambda/2$, so that~\cite[Theorem~3.3]{NP} applies, exists if and only if $\gamma<\lambda/2$. In particular, when $\gamma\ge\lambda/2$ neither choice of $p$ in~\cite[Proposition~3.6]{NP} gives a constant $A>\lambda/2$.
+\end{corollary}
+
+The urns of Theorem~\ref{thm:neg} for $d\ge 3$ have $\gamma/\lambda$ between $0.95$ and $0.99$ (Section~\ref{sec:comp}). The six-colour urn of Example~\ref{ex:small} has $\gamma/\lambda\approx 0.473$: for it~\cite[Theorem~3.3]{NP} applies with an adapted inner product, although every Euclidean reading of~\cite[Proposition~3.6]{NP} fails. Theorem~\ref{thm:two} is the case $d=2$ of the same picture: there $\gamma=\lambda-R_{01}-R_{10}$, so the Euclidean constant is already the optimal constant $\lambda-\gamma$.
+
+\section{The readings}\label{sec:readings}
+
+For $S\subseteq\{0,\dots,d-1\}$ and $w\in\R^d$ put
+\[
+Q_S(w)=\sum_{i\in S}w_i\big((wR)_i-\lambda w_i\big),
+\]
+and write $Q=Q_{\{0,\dots,d-1\}}$ and $Q_{(k)}=Q_{\{0,\dots,d-1\}\setminus\{k\}}$. Thus $Q(w)=\langle w(R-\lambda I),w\rangle$ and $Q_{(d-1)}(w)=\langle w(R-\lambda I),w\rangle_{d-1}$.
+
+\begin{lemma}\label{lem:readings}
+For every balanced $R$:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item $\Lambda_d(R)=\max_{|v|=1}Q(v)\ge 0$, the maximum taken over all $v\in\R^d$;
+\item $\Lambda_H(R)>0$ if and only if $Q(w)>0$ for some $w\in H$;
+\item $\Lambda_{d-1}(R)=\max\{Q_{(d-1)}(w):\ w\in H,\ \|w\|_{d-1}=1\}$, and $\Lambda_{d-1}(R)>0$ if and only if $Q_{(d-1)}(w)>0$ for some $w\in H$;
+\item for every permutation $\sigma$, $\Lambda_H(R^\sigma)=\Lambda_H(R)$, $\Lambda_d(R^\sigma)=\Lambda_d(R)$, and $\Lambda_{d-1}(R^\sigma)>0$ if and only if $Q_{(\sigma(d-1))}(w)>0$ for some $w\in H$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) For $v\in\R^d$, $v\,(R^{\top}-\lambda I)v^{\top}=v(R-\lambda I)v^{\top}=Q(v)$, so $\Lambda_d(R)$ is the largest value of $Q$ on the unit sphere. For $v=\one$, $Q(\one)=\sum_i\big(\sum_jR_{ji}-\lambda\big)=\sum_{i,j}R_{ij}-d\lambda=0$.
+
+(ii) $Q$ is homogeneous of degree two.
+
+(iii) The map $v\mapsto vC_{d-1}$ is a bijection from $\R^{d-1}$ onto $H$ with inverse $w\mapsto(w_0,\dots,w_{d-2})$, and $\|vC_{d-1}\|_{d-1}=|v|$. For $w=vC_{d-1}$ one has $wJ_{d-1}(R^{\top}-\lambda I)w^{\top}=Q_{(d-1)}(w)$, as in the proof of~\cite[Proposition~3.6]{NP}; hence $v\,C_{d-1}J_{d-1}(R^{\top}-\lambda I)C_{d-1}^{\top}v^{\top}=Q_{(d-1)}(w)$, which gives the formula. The second statement follows because $\|w\|_{d-1}>0$ for $w\in H\setminus\{0\}$.
+
+(iv) Put $w^\sigma_i=w_{\sigma(i)}$. Then $(w^\sigma R^\sigma)_j=\sum_iw_{\sigma(i)}R_{\sigma(i)\sigma(j)}=(wR)_{\sigma(j)}$, so the form $Q_S$ of $R^\sigma$ at $w^\sigma$ equals the form $Q_{\sigma(S)}$ of $R$ at $w$. The map $w\mapsto w^\sigma$ preserves $H$, $\R^d$ and the Euclidean norm, and $\sigma(\{0,\dots,d-2\})=\{0,\dots,d-1\}\setminus\{\sigma(d-1)\}$. Now apply (i)--(iii).
+\end{proof}
+
+\begin{remark}\label{rem:thm12}
+By Lemma~\ref{lem:readings}(i) the hypothesis $\lambda_{\max}(\symm(R-\lambda I))<-\lambda/2$ of~\cite[Theorem~1.2, p.~2]{NP} is not satisfied by any balanced urn. The proof of that theorem applies~\cite[Proposition~3.6]{NP} only to vectors in $H$, and goes through verbatim with $\Lambda_H(R)<-\lambda/2$ as the hypothesis and $A=-\Lambda_H(R)$. By Lemma~\ref{lem:readings}(iii) the case $p=d-1$ of~\cite[Proposition~3.6]{NP} is already a statement on $H$.
+\end{remark}
+
+By Lemma~\ref{lem:readings}, Theorem~\ref{thm:neg} amounts to finding, for one urn, vectors $w\in H$ with $Q(w)>0$ and with $Q_{(k)}(w)>0$ for each colour $k$.
+
+\section{Two colours, and a family for \texorpdfstring{$d\ge 4$}{d >= 4}}\label{sec:family}
+
+\begin{proof}[Proof of Theorem~\ref{thm:two}]
+Write $r=R_{01}$ and $s=R_{10}$, so $R_{00}=\lambda-r$ and $R_{11}=\lambda-s$. Every $w\in H$ is $w=(t,-t)$, and
+\[
+(wR)_0-\lambda w_0=t(\lambda-r)-ts-\lambda t=-t(r+s),\qquad (wR)_1-\lambda w_1=tr-t(\lambda-s)+\lambda t=t(r+s).
+\]
+Hence $Q(w)=-2t^2(r+s)=-(r+s)|w|^2$ and $Q_{(1)}(w)=-(r+s)t^2=-(r+s)\|w\|_1^2$. The first identity gives $\Lambda_H(R)=-(r+s)$, and the second together with Lemma~\ref{lem:readings}(iii) gives $\Lambda_1(R)=-(r+s)$. For the transposition $\sigma$, $R^\sigma$ is a two-colour urn with off-diagonal entries $s$ and $r$, so the same identities hold for it. An irreducible two-colour urn has $r,s>0$.
+\end{proof}
+
+The trace of $R$ is $2\lambda-r-s$, so its second eigenvalue is $\gamma=\lambda-(r+s)$ and the constant $A=r+s$ of Theorem~\ref{thm:two} equals $\lambda-\gamma$.
+
+For $d\ge 4$ let $R=R^{(d)}$ be the matrix with balance $6$ whose nonzero entries are
+\[
+\begin{gathered}
+R_{00}=5,\ R_{01}=1,\qquad R_{10}=5,\ R_{12}=1,\\
+R_{d-1,d-1}=5,\ R_{d-1,d-2}=1,\qquad R_{d-2,d-1}=5,\ R_{d-2,d-3}=1,\\
+R_{i,i-1}=R_{i,i+1}=3\quad(2\le i\le d-3).
+\end{gathered}
+\]
+For $d=4$ the last line is empty and
+\[
+R^{(4)}=\begin{pmatrix}5&1&0&0\\5&0&1&0\\0&1&0&5\\0&0&1&5\end{pmatrix}.
+\]
+The entries are nonnegative integers, every row sums to $6$, and $R^{(d)}$ is irreducible: it contains the edges $i\to i+1$ for $0\le i\le d-2$ and $i\to i-1$ for $1\le i\le d-1$. The reflection $i\mapsto d-1-i$ maps $R^{(d)}$ to itself.
+
+\begin{lemma}\label{lem:split}
+Let $d\ge4$, let $f(x,y)=-x^2+6xy-6y^2$, and let $w\in\R^d$ vanish outside the colours $0,1,d-2,d-1$, with $(w_0,w_1,w_{d-2},w_{d-1})=(a,b,c,e)$. Put $\epsilon=1$ if $d=4$ and $\epsilon=0$ if $d\ge5$. Then, for $R=R^{(d)}$,
+\begin{align*}
+Q(w)&=f(a,b)+f(e,c)+2\epsilon bc, & Q_{(0)}(w)&=b(a-6b)+f(e,c)+2\epsilon bc,\\
+Q_{(1)}(w)&=a(5b-a)+f(e,c)+\epsilon bc, & Q_{(d-1)}(w)&=f(a,b)+c(e-6c)+2\epsilon bc,\\
+Q_{(d-2)}(w)&=f(a,b)+e(5c-e)+\epsilon bc, & Q_{(k)}(w)&=Q(w)\quad(2\le k\le d-3).
+\end{align*}
+\end{lemma}
+
+\begin{proof}
+Only the rows $0,1,d-2,d-1$ of $R$ meet the support of $w$, so
+\[
+(wR)_0=5a+5b,\quad (wR)_1=a+\epsilon c,\quad (wR)_{d-2}=e+\epsilon b,\quad (wR)_{d-1}=5c+5e;
+\]
+for $d=4$ the entry $R_{12}=1$ lies in column $d-2$ and the entry $R_{d-2,d-3}=1$ lies in column $1$, which is the source of the terms with $\epsilon$. The four summands of $Q(w)$ are therefore
+\[
+a(5b-a),\qquad b(a-6b)+\epsilon bc,\qquad c(e-6c)+\epsilon bc,\qquad e(5c-e).
+\]
+The first two add up to $f(a,b)$ apart from $\epsilon bc$, and the last two to $f(e,c)$ apart from $\epsilon bc$. Each $Q_{(k)}$ drops the summand of colour $k$, and for $2\le k\le d-3$ that summand is $0$.
+\end{proof}
+
+\begin{proposition}\label{prop:family}
+For every $d\ge 4$ and every permutation $\sigma$, $\Lambda_H(R^{(d)})>0$ and $\Lambda_{d-1}((R^{(d)})^\sigma)>0$.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:readings} it suffices to give $w\in H$ with $Q(w)>0$ and, for each colour $k$, $w\in H$ with $Q_{(k)}(w)>0$. The vectors below are of the form in Lemma~\ref{lem:split}, their four entries sum to $0$, and the values follow from Lemma~\ref{lem:split}:
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lccc}
+form & $(a,b,c,e)$ & value for $d\ge5$ & value for $d=4$\\ \hline
+$Q$ and $Q_{(k)}$, $2\le k\le d-3$ & $(2,1,-1,-2)$ & $2+2=4$ & $4-2=2$\\
+$Q_{(0)}$ & $(-3,0,1,2)$ & $0+2=2$ & $2$\\
+$Q_{(1)}$ & $(-1,-1,1,1)$ & $4-1=3$ & $3-1=2$\\
+$Q_{(d-2)}$ & $(-1,-1,1,1)$ & $-1+4=3$ & $3-1=2$\\
+$Q_{(d-1)}$ & $(-2,-1,0,3)$ & $2+0=2$ & $2$
+\end{tabular}
+\end{center}
+For instance, for $Q_{(1)}$ and $(a,b,c,e)=(-1,-1,1,1)$ one has $a(5b-a)=4$ and $f(e,c)=f(1,1)=-1$.
+\end{proof}
+
+\begin{remark}
+The form $f(x,y)=3y^2-(x-3y)^2$ is indefinite, and on $H$ the two halves of $R^{(d)}$ can be loaded independently: with $a=3b$, $e=3c$ and $c=-b$ one gets $Q(w)=6b^2$ for $d\ge5$. The numerical values of $\Lambda_H$ and of the readings $\Lambda_{d-1}$ for $4\le d\le 10$ are listed in Section~\ref{sec:comp}; for $d=4$, $\Lambda_H(R^{(4)})\approx 0.24264$, which agrees with $3\sqrt2-4$ to the printed accuracy.
+\end{remark}
+
+\section{Three colours and a small urn}\label{sec:examples}
+
+\begin{example}\label{ex:three}
+Let $d=3$, $\lambda=100$ and
+\[
+R=\begin{pmatrix}0&1&99\\1&99&0\\36&0&64\end{pmatrix}.
+\]
+The rows sum to $100$, the entries are nonnegative integers and $R$ is irreducible (edges $0\to1\to0$ and $0\to2\to0$). The vectors $(-1,3,-2)$, $(-1,2,-1)$ and $(-1,5,-4)$ lie in $H$, and
+\[
+Q(-1,3,-2)=11,\quad Q_{(0)}(-1,2,-1)=57,\quad Q_{(1)}(-1,3,-2)=23,\quad Q_{(2)}(-1,5,-4)=9.
+\]
+For instance, for $w=(-1,3,-2)$ one has $wR=(-69,296,-227)$, so $w(R-\lambda I)=(31,-4,-27)$, and $Q(w)=-31-12+54=11$ while $Q_{(1)}(w)=-31+54=23$. By Lemma~\ref{lem:readings} this urn satisfies the conclusion of Theorem~\ref{thm:neg} for $d=3$.
+\end{example}
+
+\begin{proof}[Proof of Theorem~\ref{thm:neg}]
+For $d=3$ take Example~\ref{ex:three}, and for $d\ge 4$ take $R^{(d)}$ (Proposition~\ref{prop:family}). The statement about $\Lambda_d$ is Lemma~\ref{lem:readings}(i), and the six-colour urn with $\gamma<\lambda/2$ is Example~\ref{ex:small}.
+\end{proof}
+
+\begin{example}\label{ex:small}
+Let $d=6$, $\lambda=6$ and
+\[
+R=\begin{pmatrix}
+0&1&0&5&0&0\\
+0&0&0&6&0&0\\
+1&0&5&0&0&0\\
+0&0&0&5&1&0\\
+0&0&5&0&0&1\\
+0&0&6&0&0&0
+\end{pmatrix}.
+\]
+The rows sum to $6$, the entries are nonnegative integers, and $R$ is irreducible: it contains the cycle $0\to1\to3\to4\to5\to2\to0$. The following vectors lie in $H$:
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lcc}
+form & $w$ & value\\ \hline
+$Q$ & $(0,-1,2,-2,0,1)$ & $4$\\
+$Q_{(0)}$ & $(-1,0,1,-1,0,1)$ & $3$\\
+$Q_{(1)}$ & $(0,-1,1,-1,0,1)$ & $4$\\
+$Q_{(2)}$ & $(0,-1,3,-2,0,0)$ & $2$\\
+$Q_{(3)}$ & $(0,0,-2,3,0,-1)$ & $2$\\
+$Q_{(4)}$ & $(-1,0,1,-1,1,0)$ & $1$\\
+$Q_{(5)}$ & $(-1,0,1,-1,0,1)$ & $2$
+\end{tabular}
+\end{center}
+For instance, for $w=(0,-1,2,-2,0,1)$ one has $w(R-\lambda I)=(2,6,4,-4,-2,-6)$ and $Q(w)=-6+8+8-6=4$. So $\Lambda_H(R)>0$ and $\Lambda_5(R^\sigma)>0$ for every $\sigma$. The characteristic polynomial of $R$ is
+\[
+(x-6)(x^2+x+1)(x^3-5x^2+5x+6).
+\]
+The roots of $x^2+x+1$ have real part $-1/2$. Substituting $x=y+3$ in the cubic gives $y^3+4y^2+2y+3$, whose coefficients are positive with $4\cdot2>3$; by the Routh--Hurwitz criterion~\cite[Ch.~XV]{Gantmacher} its roots have negative real part. Hence every eigenvalue of $R$ other than $6$ has real part less than $3=\lambda/2$, that is $\gamma<\lambda/2$; numerically $\gamma\approx2.8390$ and $\gamma/\lambda\approx0.4732$.
+\end{example}
+
+\section{An adapted inner product}\label{sec:adapted}
+
+\begin{proof}[Proof of Theorem~\ref{thm:adapted}]
+Since the rows of $R$ sum to $\lambda$, the map $L(w)=w(R-\lambda I)$ sends $H$ into $H$, and on the quotient $\R^d/H$ the map $w\mapsto wR$ acts as multiplication by $\lambda$. Hence the eigenvalues of $L|_H$ are the numbers $\mu-\lambda$, where $\mu$ runs through the eigenvalues of $R$ with one copy of $\lambda$ removed, and $\max\Real\operatorname{spec}(L|_H)=\gamma-\lambda$.
+
+\emph{$\gamma<\lambda$.} Choose $c>0$ with $c>-R_{ii}$ for all $i$. Then $R+cI$ is nonnegative and irreducible, and $(R+cI)\one^{\top}=(\lambda+c)\one^{\top}$ with $\one^{\top}$ positive. By the Perron--Frobenius theorem for irreducible nonnegative matrices~\cite[Section~8.4]{HJ}, the spectral radius of $R+cI$ is an algebraically simple eigenvalue and is the only eigenvalue with a positive eigenvector; hence $\lambda+c$ is the spectral radius and a simple eigenvalue. If $\mu$ is one of the remaining eigenvalues of $R$ and $\Real\mu\ge\lambda$, then $\lambda+c\ge|\mu+c|\ge\Real(\mu+c)\ge\lambda+c$, which forces $\mu=\lambda$ and contradicts simplicity. So $\gamma<\lambda$.
+
+\emph{Existence.} Let $A<\lambda-\gamma$. Identify $H$ with $\R^{d-1}$ through $v\mapsto vC_{d-1}$, and let $K$ be the $(d-1)\times(d-1)$ matrix with $L(vC_{d-1})+A\,vC_{d-1}=(vK)C_{d-1}$. The eigenvalues of $K$ have real parts at most $\gamma-\lambda+A<0$, so the integral
+\[
+G=\int_0^\infty e^{tK}e^{tK^{\top}}\,dt
+\]
+converges, $G$ is symmetric positive definite, and $KG+GK^{\top}=-I$ (differentiate $e^{tK}e^{tK^{\top}}$ and integrate; this is Lyapunov's theorem~\cite[Section~2.2]{HJTopics}). Let $E$ be the $d\times(d-1)$ matrix $\binom{I_{d-1}}{0}$ and $P=EGE^{\top}$. Then $P$ is symmetric positive semidefinite and $wPw^{\top}=vGv^{\top}$ for $w=vC_{d-1}$, since $w_i=v_i$ for $i\le d-2$; in particular $P$ is positive definite on $H$. For $w=vC_{d-1}\in H$,
+\[
+\langle L(w)+Aw,\,w\rangle_P=vKGv^{\top}=\tfrac12\,v(KG+GK^{\top})v^{\top}=-\tfrac12|v|^2\le 0,
+\]
+which is~\eqref{eq:adapted}.
+
+\emph{Optimality.} Let $P$ be symmetric positive semidefinite, positive definite on $H$, and satisfy~\eqref{eq:adapted}. Let $\mu$ be an eigenvalue of $L|_H$ with $\Real\mu=\gamma-\lambda$ and $z=x+iy\in H+iH$ a corresponding eigenvector, $L(z)=\mu z$. Since $P$ is real symmetric,
+\[
+\langle L(x),x\rangle_P+\langle L(y),y\rangle_P=\Real\big(L(z)P\bar z^{\top}\big)=\Real(\mu)\,zP\bar z^{\top}=(\gamma-\lambda)\big(\|x\|_P^2+\|y\|_P^2\big).
+\]
+By~\eqref{eq:adapted} the left side is at most $-A(\|x\|_P^2+\|y\|_P^2)$, and $\|x\|_P^2+\|y\|_P^2>0$ because $z\ne0$ and $P$ is positive definite on $H$. Hence $A\le\lambda-\gamma$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:rates}]
+By Theorem~\ref{thm:adapted} we may choose $0<A<\lambda-\gamma$ and the corresponding $P$. Since $\widehat U(n)$ and $u$ both have coordinate sum $1$, $w=\widehat U(n)-u\in H$ and $F(\widehat U(n))=w(R-\lambda I)$, so~\eqref{eq:adapted} gives~\eqref{eq:hyp} for every $n$, and~\cite[Theorem~3.2]{NP} applies. On $H$, $\|\cdot\|_P$ is a norm, hence equivalent to the Euclidean norm. If $\gamma<\lambda/2$ we may take $A\in(\lambda/2,\lambda-\gamma)$ and apply~\cite[Theorem~3.3]{NP}. If $\gamma\ge\lambda/2$, the optimality part of Theorem~\ref{thm:adapted} shows that no $P$ positive definite on $H$ satisfies~\eqref{eq:adapted} with $A>\lambda/2$. The matrices $J_d$ and $J_{d-1}$ are positive definite on $H$ (a vector of $H$ whose first $d-1$ coordinates vanish is $0$), so this applies to the constants of~\cite[Proposition~3.6]{NP}.
+\end{proof}
+
+\begin{remark}
+In the same way, $-\Lambda_H(R)\le\lambda-\gamma$ and $-\Lambda_{d-1}(R^\sigma)\le\lambda-\gamma$ for every $\sigma$: the Euclidean constants never exceed the adapted one. The urns $R^{(d)}$ and Example~\ref{ex:three} have $\gamma$ close to $\lambda$; Example~\ref{ex:small} shows that a small value of $\gamma/\lambda$ does not make the Euclidean readings negative.
+\end{remark}
+
+\section{Computations}\label{sec:comp}
+
+The script \texttt{code/checks.py} in~\cite{code}, with its output \texttt{code/checks\_output.txt}, checks the algebraic statements of this paper in exact arithmetic. It verifies symbolically that $Q(\one)=0$ for a general balanced matrix with $2\le d\le6$, the identities in the proof of Theorem~\ref{thm:two}, and the identities of Lemma~\ref{lem:split} for $4\le d\le 9$ and the omitted colours $0$, $1$ and $2\le k\le d-3$ (the colours $d-2$ and $d-1$ follow by the reflection); it checks in integer arithmetic, for $4\le d\le60$, that $R^{(d)}$ is irreducible with nonnegative entries and rows summing to $6$, and that every reading has a vector in $H$ with a positive value; it checks the vectors and values of Examples~\ref{ex:three} and~\ref{ex:small}, the factorisation of the characteristic polynomial in Example~\ref{ex:small} and the shifted cubic; and it checks Lemma~\ref{lem:readings}(iv) on $200$ random permutations for $d=6$. In floating point it records the following values, where the last two columns are the smallest and the largest of the $d$ numbers $\max\{Q_{(k)}(w):w\in H,\ \sum_{i\ne k}w_i^2=1\}$, $0\le k\le d-1$:
+\begin{center}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{rcccc}
+$d$ & $\Lambda_d(R^{(d)})$ & $\Lambda_H(R^{(d)})$ & $\min_k$ & $\max_k$\\ \hline
+4 & 0.60555 & 0.24264 & 0.41300 & 1.50759\\
+5 & 0.65168 & 0.40512 & 0.40512 & 2.10165\\
+6 & 0.62859 & 0.48448 & 0.61071 & 2.52419\\
+7 & 0.61189 & 0.52292 & 0.64153 & 2.96979\\
+8 & 0.60012 & 0.54383 & 0.66069 & 3.42249\\
+9 & 0.59199 & 0.55596 & 0.67415 & 3.86364\\
+10 & 0.58646 & 0.56326 & 0.68468 & 4.28622
+\end{tabular}
+\end{center}
+For Example~\ref{ex:three} these are $6.73803$, $1.15630$, and $14.70006$, $5.96644$, $1.10783$ for $k=0,1,2$. Finally, for $R^{(4)}$, $R^{(5)}$, $R^{(8)}$ and Examples~\ref{ex:three} and~\ref{ex:small}, it computes $\gamma$, solves the Lyapunov equation of the proof of Theorem~\ref{thm:adapted} with $A=0.999(\lambda-\gamma)$ and checks~\eqref{eq:adapted}. The values of $\gamma$ are $5.7417$, $5.8541$, $5.9381$ (with $\lambda=6$), $98.7402$ (with $\lambda=100$) and $2.8390$ (with $\lambda=6$), so $\gamma/\lambda$ is $0.9569$, $0.9757$, $0.9897$, $0.9874$ and $0.4732$.
+
+The file \texttt{lean/UrnContractivity.lean} in~\cite{code} is a Lean~4 file without external libraries. It defines $Q$ and $Q_{(k)}$ for integer matrices and vectors and proves, by kernel evaluation, that its definition of $R^{(d)}$ gives the matrix $R^{(4)}$ displayed in Section~\ref{sec:family}, that $R^{(5)}$, $R^{(6)}$ and the matrices of Examples~\ref{ex:three} and~\ref{ex:small} have rows summing to $\lambda$, that the latter two have nonnegative entries, and that each vector of Proposition~\ref{prop:family} (for $d=4,5,6$) and of Examples~\ref{ex:three} and~\ref{ex:small} lies in $H$ and gives the stated value. None of the proofs above depends on either file.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. On 14 September 2026 a Claude agent (Anthropic), working in Claude Code, observed that the case $p=d$ of~\cite[Remark~3.7]{NP} fails for every balanced urn and found a five-colour urn for which the case $p=d-1$ fails. On 20 October 2026 Claude Opus~5.5, working in Claude Code, found the examples and the results of the present paper, wrote the proofs, the computer checks, the Lean file and the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/urn-euclidean-contractivity}.
+
+\begin{thebibliography}{9}
+\bibitem{AK} K.~B.~Athreya and S.~Karlin, \emph{Embedding of urn schemes into continuous time Markov branching processes and related limit theorems}, Ann. Math. Statist. \textbf{39} (1968), 1801--1817.
+\bibitem{Gantmacher} F.~R.~Gantmacher, \emph{The Theory of Matrices}, Vol.~2, Chelsea, New York, 1959.
+\bibitem{HJ} R.~A.~Horn and C.~R.~Johnson, \emph{Matrix Analysis}, 2nd ed., Cambridge University Press, Cambridge, 2013.
+\bibitem{HJTopics} R.~A.~Horn and C.~R.~Johnson, \emph{Topics in Matrix Analysis}, Cambridge University Press, Cambridge, 1991.
+\bibitem{Janson} S.~Janson, \emph{Functional limit theorems for multitype branching processes and generalized P\'olya urns}, Stochastic Process. Appl. \textbf{110} (2004), 177--245.
+\bibitem{NP} M.~Neri and P.~Pinto, \emph{Quantitative limit theorems for generalized P\'olya urns with applications to random tree models}, arXiv:2607.07309 (2026).
+\bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/urn-euclidean-contractivity}.
+\end{thebibliography}
+
+\end{document}

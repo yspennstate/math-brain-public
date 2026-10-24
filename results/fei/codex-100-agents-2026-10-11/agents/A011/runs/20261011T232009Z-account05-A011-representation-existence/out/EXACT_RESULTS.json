@@ -1,0 +1,60 @@
+{
+  "helper_version": "a011-comb-output-v1",
+  "comb_cases": 1020,
+  "tensor_cases": 448,
+  "recurrence_cases": 64,
+  "exact_assertions": 711791,
+  "runtime_seconds": 24.0823129999917,
+  "low_boundary_combs": [
+    {
+      "a": 1,
+      "I_selector": "1/2",
+      "expected_depth": "1",
+      "raw_witness_cost": "2"
+    },
+    {
+      "a": 2,
+      "I_selector": "1/2",
+      "expected_depth": "3/2",
+      "raw_witness_cost": "3"
+    },
+    {
+      "a": 3,
+      "I_selector": "3/8",
+      "expected_depth": "7/4",
+      "raw_witness_cost": "7/2"
+    },
+    {
+      "a": 4,
+      "I_selector": "1/4",
+      "expected_depth": "15/8",
+      "raw_witness_cost": "15/4"
+    },
+    {
+      "a": 5,
+      "I_selector": "5/32",
+      "expected_depth": "31/16",
+      "raw_witness_cost": "31/8"
+    },
+    {
+      "a": 6,
+      "I_selector": "3/32",
+      "expected_depth": "63/32",
+      "raw_witness_cost": "63/16"
+    },
+    {
+      "a": 7,
+      "I_selector": "7/128",
+      "expected_depth": "127/64",
+      "raw_witness_cost": "127/32"
+    },
+    {
+      "a": 8,
+      "I_selector": "1/32",
+      "expected_depth": "255/128",
+      "raw_witness_cost": "255/64"
+    }
+  ],
+  "certificate_count": 5,
+  "arithmetic": "integer FWHT, Fraction, outward rational atanh intervals"
+}

@@ -1,0 +1,15 @@
+{
+  "helper_version": "A021-nonflat-two-edit-v1",
+  "family": "arbitrary Boolean seed and two distinct point flips, balanced by fresh z; two nested fresh point blocks",
+  "domain": "all16 two-bit Boolean seeds, all6 unordered edit pairs, r,s=1,2; all256 three-bit seeds, u=0,v=1 or3, r,s=1,2",
+  "case_count": 2432,
+  "direct_fixtures": "all384 two-bit-seed cases, using full integer Walsh; compressed formula used on every case",
+  "symmetry": "no quotient of the seed domain; three-bit edit selection is a declared subset, not a general symmetry claim",
+  "arithmetic": "integer Walsh, Fraction masses/influences, rational28-term log enclosures with explicit tail and192-bit outward rounding",
+  "memory_estimate_mb": 150,
+  "pilot_cases": 96,
+  "pilot_max_seconds": 60,
+  "full_max_seconds": 180,
+  "automatic_domain_growth": false,
+  "claims_tested": "complete entropy sector identity, row variance and concentration, JS<=2c IC, final D<=Rstar+10IC and I=IC+IT; no arbitrary-seed lower bound asserted"
+}

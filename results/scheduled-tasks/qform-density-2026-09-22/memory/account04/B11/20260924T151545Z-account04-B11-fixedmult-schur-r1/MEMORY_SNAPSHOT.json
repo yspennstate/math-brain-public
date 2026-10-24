@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "active_objective": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "account": "account04",
+  "slot": "B11",
+  "run_id": "20260924T151545Z-account04-B11-fixedmult-schur-r1",
+  "execution_context": "GITHUB_CONNECTOR_SOURCE_PINNED",
+  "new_result": {
+    "status": "AUDIT_PASS_AND_SHARPNESS_THEOREM",
+    "statement": "For every symmetric block matrix with invertible k-by-k pivot B, including singular ambient A, the Schur complement S satisfies N_S(t)>=N_A(t)-k and s_j(S)>=s_{j+k}(A). The loss k is uniformly sharp for every pivot signature even when ||B|| tends to zero and A is singular.",
+    "audit_commit": "f2eff4a23cd0335908dde0c5f376c0216c11888a",
+    "audit_path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/audits/account04/B11/20260924T151545Z-account04-B11-fixedmult-schur-r1/AUDIT.md",
+    "improvement_commit": "4a818c0cd169a3a52aac71de48e45ef338cd94fb",
+    "improvement_path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/account04/B11/20260924T151545Z-account04-B11-fixedmult-schur-r1/SCHUR_SHARPNESS_FAMILY.md"
+  },
+  "exact_family": {
+    "data": "J=diag(I_p,-I_q), B=eps J, C=sqrt(eps) I_k, D=J",
+    "consequence": "S=0; A has p eigenvalues 1+eps, q eigenvalues -(1+eps), and k zeros. Thus N_A(1)=k and N_S(1)=0 while ||B||=eps."
+  },
+  "compiler_interface": {
+    "statement": "In the reviewed s9 compiler, all Schur branches require fewer than nine ambient large directions; nine is imposed by the no-pivot Fourier endpoint.",
+    "next_obligation": "Any s9-to-s8 improvement must repair the no-pivot endpoint rather than seek a Schur-count refund."
+  },
+  "retained_corrections": [
+    "After zero-weight rows are omitted in the projection lemma, sum_i(1-b_i)<=d, not equality.",
+    "The notation A/B should be explicitly defined as the Schur complement."
+  ],
+  "continuity_status": "Not audited as part of this lens; unrestricted continuity remains open.",
+  "source_pins": {
+    "baseline_commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+    "manuscript_blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "owner_recorded_sha256": "9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69",
+    "sha256_recomputed": false,
+    "login_commit": "f5507a01d32e4126c7658fc68eb678195d55d53b",
+    "handoff_commit": "1b14579bd591346cf169580f2601d342dd820dc8"
+  },
+  "open_status": "The s8 endpoint and the unrestricted three-eigenvalue conjecture remain open."
+}

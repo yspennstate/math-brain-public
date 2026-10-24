@@ -1,0 +1,10 @@
+QFORM r33 deterministic regression check
+
+Checked on random finite coefficient pairs (u,t), n=3..19, 100 samples each:
+1. det(G_K) = m_K sigma_K^2/(m_0 sigma_0^2)
+2. det(G_{K\{h}}) = det(G_K)(1-q_h^K)
+3. det(G_K)-det(G_{K\{h}}) = sum_{i in K\{h}} det(g_h,g_i)^2
+
+Maximum absolute floating residual across the combined checks: 7.771561172376096e-16.
+
+This is a regression check only. The proof in REPORT.md is exact algebra and Cauchy-Binet / matrix determinant lemma.

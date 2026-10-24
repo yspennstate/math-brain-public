@@ -1,0 +1,13 @@
+{
+  "helper_version": "A085-audit-v1; B09-BIASED-BLOCK-UNCERTAINTY@1, A071 finite grid@1, A042 endpoint@1, A047 endpoint@1",
+  "family": "Actual three-bit Boolean signs and product-biased physical restriction blocks; weighted OR-of-conjunction controls; actual fixed Boolean child pairs",
+  "domain": "A071: n=3, codes 0..127, biases {1,2,4}/8 cubed, masks 1..6. A042: weighted m in {2,3,4,8,16,32}. A047: 15 saved fixed-child cases plus five unequal AND cases. Deterministic contractions X=0,1; endpoint minimality n=0,1.",
+  "case_count": {"pilot":768,"full_grid":20736,"raw_coverage_mapping":32000,"A042_ratios":18,"A047_finite":20,"endpoint_minimality_pairs":20},
+  "symmetry": "Output complement and input flip paired with bias reflection only; no permutations or parity quotient. Explicit raw-to-representative coverage map.",
+  "arithmetic": "Fraction centered tensor transform, exact zero prime-log identities, independent positive range-reduced atanh interval logs: 28 terms at fixed scale 2^96, divide positive ln(r) before adding exact exponent. No floating sign decisions.",
+  "memory_estimate_mb": 150,
+  "max_runtime_seconds": {"pilot":55,"grid":180,"finite":55},
+  "no_dimension_escalation": true,
+  "script": "code/audit.py",
+  "frozen_before_search": true
+}

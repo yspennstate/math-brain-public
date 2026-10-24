@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T105133Z-account03-B11-fei",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "id": "A03-B11-TWO-SIDED-SUPPORT-HODGE-20260922",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Every finite Boolean function after character-centering; every unordered coordinate pair.",
+      "statement": "p_ij=p_ji, zeta_ij=p_ij-c_{i<-j}-c_{j<-i} is nonnegative, xi_ij=zeta_ij+4o_ij is nonnegative, and omega_{i<-j}=xi_ij+c_{j<-i}-c_{i<-j}; hence the pair-average ordered hidden remainder equals xi_ij.",
+      "dependencies": [
+        "account04/B18 visible-hidden curvature split: 2c<=p and kappa=p+4o",
+        "mixed-derivative commutation kappa_ij=kappa_ji"
+      ],
+      "verification": "analytic proof plus exact finite regression checker"
+    },
+    {
+      "id": "A03-B11-NONROBUST-VISIBLE-COMMONSOURCE-DICHOTOMY-20260922",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Every derivative row; applied to the complement of the relative-1/16 robust regime.",
+      "statement": "With beta_i=sum_j p_ij, V_i=sum_j(c_{i<-j}+c_{j<-i}), Z_i=sum_j zeta_ij, beta_i=V_i+Z_i and beta_i>=2q_i log2(1/q_i). Therefore either V_i>=q_i log2(1/q_i) or Z_i>=q_i log2(1/q_i).",
+      "dependencies": [
+        "A03-B11-TWO-SIDED-SUPPORT-HODGE-20260922",
+        "classical edge-isoperimetric inequality on the discrete cube"
+      ],
+      "verification": "analytic proof"
+    },
+    {
+      "id": "A03-B11-SYMMETRIC-U4-DECOMPOSITION-20260922",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Centered F/J-critical core with rho>4 for the quantitative crossing-budget corollary; algebraic decomposition itself is universal.",
+      "statement": "U4=sum_{i<j}(w_i+w_j)xi_ij + sum_{i<j}(w_i-w_j)(c_{j<-i}-c_{i<-j}); on a rho>4 critical core its difference from the symmetric xi-bank has magnitude < 7/(22 ln 2) times [P-DTC(X)].",
+      "dependencies": [
+        "A03-B11-TWO-SIDED-SUPPORT-HODGE-20260922",
+        "account04/B18 critical crossing budget",
+        "account04/B18 q<1/6 and j'(q)>16/7 on rho>4 critical cores"
+      ],
+      "verification": "analytic proof"
+    }
+  ],
+  "explicit_nonclaims": [
+    "Full FEI is not proved.",
+    "Raw U4=O(J) is not claimed.",
+    "Raw sum d_i=O(J) is not claimed.",
+    "No compatible completed account04/B11 FEI partner artifact was available at the run's fresh partner check."
+  ]
+}

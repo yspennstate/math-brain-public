@@ -1,0 +1,854 @@
+PDF PAGE 1
+Universal features of cluster numbers in percolation
+Stephan Mertens 1, Iwan Jensen 2, and Robert M. Zi ﬀ3
+1 Institut f ¨ ur Theoretische Physik, Otto-von-Guericke Universit¨ at, PF 4120, 39016 Magdeburg, Germany
+Santa Fe Institute, 1399 Hyde Park Rd., Santa Fe, NM 87501, USA
+2 School of Mathematics & Statistics, University of Melbourne, Victoria 3010, Australia
+3 Center for the Study of Complex Systems and Department of Chemical Engineering,
+University of Michigan, Ann Arbor, Michigan 48109-2136, USA
+The number of clusters per site n(p) in percolation at the critical point p = pc is not itself a universal
+quantity—it depends upon the lattice and percolation type (site or bond). However, many of its
+properties, including ﬁnite-size corrections, scaling behavior with p, and amplitude ratios, show
+various degrees of universal behavior. Some of these are universal in the sense that the behavior
+depends upon the shape of the system, but not lattice type. Here, we elucidate the various levels of
+universality for elements of n(p) both theoretically and by carrying out extensive studies on several
+two- and three-dimensional systems, by high-order series analysis, Monte-Carlo simulation, and exact
+enumeration. We ﬁnd many new results, including precise values forn(pc) for several systems, a clear
+demonstration of the singularity in n′′(p), and metric scale factors. We make use of the matching
+polynomial of Sykes and Essam to ﬁnd exact relations between properties for lattices and matching
+lattices. We propose a criterion for an absolute metric factorb based upon the singular behavior of the
+scaling function, rather than a relative deﬁnition of the metric that has previously been used.
+PACS numbers: 64.60.ah, 64.60.De, 05.70.Jk, 05.70.+q
+I. INTRODUCTION
+Percolation is the study of connectivity in random sys-
+tems, particularly of the transition that occurs when the
+connectivity ﬁrst becomes long-ranged [1]. Examples
+are the formation of gels in polymer systems [2], conduc-
+tivity in random conductor /insulator mixtures [3], and
+ﬂow of ﬂuids in random porous materials [4]. The per-
+colation model has been of immense theoretical interest
+in the ﬁeld of statistical mechanics, being a particularly
+simple example of a system that undergoes a non-trivial
+phase transition. It is directly related to the Ising model
+through the Fortuin-Kasteleyn [5] representation of the
+Potts model. Variations that have received attention re-
+cently including k-core or bootstrap percolation [6], in-
+vasion percolation and watersheds [7, 8], and explosive
+percolation [8, 9]. Percolation has also been intensely
+studied in the mathematical ﬁeld in recent years [10–12].
+In the basic model of random percolation, one consid-
+ers a lattice of sites (vertices) and bonds (edges), and one
+randomly occupies a fraction p of either sites or bonds,
+creating clusters of connected components. Of particu-
+lar interest is the behavior near the critical threshold pc
+where an inﬁnite cluster ﬁrst appears. The study of this
+model has encompassed a wide variety of approaches,
+including experimental measurements [3], asymptotic
+analysis of exact series expansions [13], theoretical meth-
+ods [14], conformal invariance [15], Schramm Loewner
+Evolution theory [10, 11], and numerous types of com-
+puter simulation [16–24]. For some classes of 2d models,
+thresholds can be found exactly [25–27], and recently
+methods have been developed to ﬁnd approximate 2d
+values to extremely high precision [28–31].
+Universality has played a central role in the under-
+standing of the critical behavior of the percolation pro-
+cess (and in statistical mechanics in general). First of all
+there are universal exponents such as α (related to the
+number of clusters),β (the percolation probability P∞),σ
+(the inverse of the exponent for the divergence of the typ-
+ical cluster size),ν (the correlation length) etc.[1]. For all
+systems of a given dimensionality, these exponents have
+universal values, such as α = 2/3,β = 5/36,σ = 36/91
+and ν = 4/3 in two dimensions (2d), independent of
+the system (lattice, non-lattice, etc) and the shape of the
+boundary. This is the strongest form of universality.
+Secondly, there are quantities, such as the number of
+clusters of sizes, ns∼ s−τ f1(b(p−pc)sσ), whose the scaling
+function f1(z) is universal, identical for all systems of a
+given dimensionality, although in order for this univer-
+sality to be realized, the metric factorb must be adjusted
+for each system. One usually assumes b = 1 for one sys-
+tem, such as bond percolation on the square lattice, and
+then chooses b for the other systems to get the behaviors
+to match. The metric factor compensates for the roles
+of L and p for the diﬀerent systems. Here the system is
+assumed to be inﬁnite, and the scaling function f1(z) is
+independent of the system shape that was used in the
+limiting process to inﬁnity.
+Thirdly, there are properties that are universal in the
+sense of being independent of the lattice and percolation
+type, but still dependent upon the shape of the system,
+even in the limit that the system size becomes inﬁnite.
+For example, the ﬁnite-size scaling of P∞ is given by
+P∞(p, L)∼ L−β/ν f2(b(p− pc)L1/ν) (1)
+where the scaling function f2(z) is universal only when
+comparing di ﬀerent systems of the same shape and
+boundary condition. (Again, b has to be adjusted to
+make the di ﬀerent systems coincide, and will be the
+same b as in f1(b(p− pc)sσ).) The reason that shape mat-
+arXiv:1602.00644v2  [cond-mat.stat-mech]  15 Nov 2017
+
+PDF PAGE 2
+2
+ters here is that, for p close to pc, the correlation length
+diverges, and the boundaries of the system are seen.
+Note P∞ = smax/Ld is just the size of the maximum clus-
+ter divided by the area or volume of the system, and the
+properties of the maximum cluster will depend upon the
+boundary of a system. Another well-known example of
+a shape-dependent quantity is the percolation crossing
+probability, where for a rectangular system Cardy de-
+rived his well-known formula for the crossing of a rect-
+angular system of any aspect ratio.[15]. Here the system
+is made inﬁnite but with the boundary shape ﬁxed in the
+limiting process.
+The reference to system shape may seem irrelevant,
+since usually percolation is related to just connectivity.
+However, there are ﬁnite-size eﬀects that depend upon
+the large clusters of a system, and for those clusters there
+is a unique representation of a lattice in space that makes
+the cluster growth isotropically. For example, the trian-
+gular lattice can be deformed into a square lattice with
+diagonals in one directions, but in that representation
+the clusters would grow unequally in the two diagonal
+directions. To properly characterize the shape of the
+system, the triangles must be represented equilaterally.
+One of the earliest and most fundamental quantities to
+be studied in percolation is simply the number of clusters
+per site n(p) as a function of the occupation probability
+p [25, 32]; this quantity corresponds to the free energy of
+the percolating system [5]. In an inﬁnite system and for
+p near pc, n(p) behaves as
+n(p) = A0+B0(p−pc)+C0(p−pc)2+A±|p−pc|2−α+... . (2)
+where the ﬁrst three terms represent the analytical part
+af n(p), and the last term represents the singular part.
+A± is the amplitude above (+) and below (−) the critical
+point pc. In two dimensions, the critical exponent α
+has the universal value α =−2/3 [13] and A+ =A−.
+However, the value of A±, as well as those of A0, B0
+and C0, are nonuniversal. The subscript 0 indicates an
+inﬁnite system. The singularity is a weak one and n(p)
+becomes inﬁnite atpc in the third derivative. In terms of
+the correlation lengthξ∼| p− pc|−ν where dν = 2−α, the
+singularity in n(p) is proportional to ξ−d, where d is the
+number of dimensions.
+In 1976, Domb and Pearce [13], using series analysis,
+found values of the coeﬃcients A0, B0, C0 andA± for two
+systems: site percolation on the triangular lattice, and
+bond percolation on the square lattice (see Table I). They
+used their results to conjecture that α = −2/3, which
+proved correct. However, there has been little further
+determination or discussion of these quantities, other
+than A0, since then. One exception is the ﬁnite-size cor-
+rection to n(pc), the so-called excess cluster number [33],
+where measurements have been made and the shape de-
+pendence has been quantiﬁed theoretically. However,
+other correction quantities, and especially the strength
+of the singularity, have not been studied.
+In the present paper, we report several new high-
+precision results for the quantities in (2), and also dis-
+cuss, for the ﬁrst time we believe, many aspects of the
+ﬁnite-size scaling corrections, with a focus on universal-
+ity. We determine the metric factors b using the same
+convention as Hu et al., that b = 1 for bond percolation
+on the square lattice, but then also propose an “absolute”
+deﬁnite of b by using a fully universal property of the
+scaling function—the coeﬃcient of the singular behavior,
+which we can take as equal to unity. We determine this
+absolute b for site percolation on the triangular, square,
+honeycomb, and union-jack lattices, and for bond per-
+colation on the square lattice, where b is no longer equal
+to 1.
+II. FINITE-SIZE CORRECTIONS AND SCALING
+THEORY
+The leading amplitudeA0 in (2) gives the critical num-
+ber of clusters per site n(pc), and has been found exactly
+in only two cases: bond percolation on the square lattice,
+where the number of clusters per bond is [14, 33]
+n(pc) = A0 = 24
+√
+3− 41
+32 = 0.017788106... (3)
+and bond percolation on the dual triangular and hon-
+eycomb lattices, where n(pc) = (1/3)[35/4− 3/pTR
+c − (1−
+pTR
+c )6] = 0.01150783... and n(pc) = (1/3)[35/4− 3/pTR
+c −
+(pTR
+c )3] = 0.02331840... bond clusters per bond, respec-
+tively, with pTR
+c = 2 sinπ/18 [33, 34].
+The next amplitude B0 is known exactly for some sys-
+tems. Sykes and Essam [25] showed that for site perco-
+lation on inﬁnite planar lattices,
+n(p)− ˜n(1− p) =φ(p) (4)
+where ˜n represents the number of clusters on the match-
+ing lattice in which the vertices in every face of the orig-
+inal lattice are completely connected, and φ(p) is the
+matching polynomial or Euler characteristic [35] corre-
+sponding to the speciﬁc lattice. For all fully triangulated
+lattices, such as the triangular and union-jack lattices, as
+well as the square-bond covering lattice, the matching
+lattice is identical to the original lattice, pc = 1/2, and
+φ(p) = p− 3p2 + 2p3 [25], implying
+n′(pc) = B0 =φ′(1/2)/2 =−1/4. (5)
+For other lattices, we can ﬁnd exact results if we include
+the matching lattice. For example, for a square (SQ)
+lattice (site percolation),φ(p) = p−2p2+p4, and it follows
+from (4) that the following combinations of quantities are
+known exactly in terms of pc:
+ASQ
+0 − ANNSQ
+0 = pc− 2p2
+c + p4
+c = 0.01349562262604(1),
+BSQ
+0 + BNNSQ
+0 = 1− 4pc + 4p3
+c =−0.537943928141750(5),
+CSQ
+0 − CNNSQ
+0 =−4 + 12p2
+c = 0.2161745687555(3)
+(6)
+
+PDF PAGE 3
+3
+using pc from [31], where NNSQ represents the square
+lattice with next-nearest-neighbor connections, which is
+the matching lattice of the square lattice.
+Next we consider the behavior for ﬁnite systems. For
+systems of length scale L, (2) is replaced by [36]
+nL(p) = A0 + B0(p− pc) + C0(p− pc)2 + L−d f (z) +... , (7)
+where f (z) is the leading scaling function. Here z =
+b(p− pc)L1/ν and b is a metric factor depending on the
+lattice and percolation type, but not on the shape of the
+boundary of the system. The subscript L on nL(p) indi-
+cates a ﬁnite system. We assume that the boundary con-
+ditions are periodic, so there are no surface correction
+terms. We do not consider higher-order corrections-to-
+scaling terms, such as L−2dg(z), here.
+The scaling function f (z) depends upon the system’s
+shape, boundary conditions and dimensionality, but is
+universal for all percolation types, including di ﬀerent
+lattices with site or bond percolation, continuum sys-
+tems, etc., for systems of the same shape. It is analytic
+around the origin, allowing us make a Taylor expansion
+about z = 0:
+nL(p)∼ A + B(p− pc) + C(p− pc)2 +... (8)
+with
+A = A0 + A1L−d +... (9a)
+B = B0 + B1L−d+1/ν +... (9b)
+C = C0 + C1L−d+2/ν +... (9c)
+and A1 = f (0), B1 = b f′(0), C1 = b2 f′′(0)/2. The metric
+factor b cancels out in the dimensionless ratio
+R = A1C1
+B2
+1
+= f (0) f′′(0)
+2 f′(0)2 (10)
+which is predicted to be universal for systems of a given
+shape. By including A1 in this ratio, we also account for
+diﬀerent deﬁnitions of the unit area of the system inn(p),
+such as using clusters per bond rather than per site for
+the square-bond system.
+For|z|≫ 1, f (z)∼ ˆA±|z|2−α, where 2−α = dν,ν = 4/3
+in 2d and 0.8762 [20] in 3d, and the amplitudes ˆA± are
+universal for a given deﬁnition of f (z). For large z, the
+behavior is not shape dependent, because z∝ (L/ξ)1/ν
+so for|z|≫ 1, ξ≪ L and the boundaries are not seen.
+Substituting z = b(p− pc)L1/ν into f (z), we ﬁnd for z≫
+1 that L−d f (z) ∼ ˆA±b2−α|p− pc|2−α, which implies the
+singular term in (2) with
+A± = b2−α ˆA± (11)
+This equation shows the scaling between the universal
+( ˆA±) and non-universal coeﬃcients (A±) for the diﬀerent
+systems. Note that this impliesB1/(−A±)1/(2−α) is another
+universal ratio along with R. We discuss these universal
+ratios below.
+The correction term A1 in (9) is the excess cluster
+number [33]. It is the di ﬀerence between the actual
+cluster number L2n(pc) and the expected number L2A0,
+and for compact shapes it is of order 1. Using results
+from conformal ﬁeld theory,A1 can be calculated exactly
+[37], with A1 = 0.883576308... for a square torus, and
+0.878290117... for a 60◦ periodic rhombus [38], which
+is equivalent to a rectangle of aspect ratio
+√
+3/2 with a
+twist of 1/2. This rhombus is a natural system bound-
+ary shape for triangular, hexagonal, and related systems
+and is conjectured to give the lowest value of A1 for any
+repeatable shape of a periodic system [37].
+III. MEASUREMENTS
+In order to study these quantities, we carried out ex-
+tensive studies using several diﬀerent methods. Details
+will be given in another paper [38]. Many of the results
+are summarized in Table I, where previous values are
+also listed.
+First of all, we extended the series analysis of n(p)
+for the triangular lattice to 69th order. In 1976, Domb
+and Pearce [13] used a 19th-order analysis to ﬁnd α =
+−0.668(4), and they also found accurate values of A0,
+B0, C0 andA±. Using Domb and Pearce’s powerful
+substitution u = p(1− p) on B(u) =φ(p)/2 + n(p) [13] in
+our series, we ﬁnd the very precise result.
+n(pc) = A0 = 0.017625277368(2) (12)
+and also to high accuracy the exponent α =
+−0.6666669(4), an unusually precise test of a critical ex-
+ponent. We also checked the result (3) for A0 of the
+square bond lattice, and found agreement using a 72-
+order series (see Table I), although the convergence here
+was slower than for the triangular lattice.
+Secondly, we found exact results forn(p) for smallL×L
+systems using the Newman-Ziﬀ (NZ) method [24]. The
+NZ method computes n(p) by occupying the sites (or
+bonds) one by one in random order. The cluster struc-
+ture can be updated very eﬃciently because the changes
+in the cluster structure are triggered by local events. For
+exhaustive enumerations, we have to loop over all 2 L×L
+conﬁgurations and record the cluster structure for each.
+If you do this in the obvious fashion (binary counting or
+gray code), many consecutive conﬁgurations di ﬀer by
+many occupied sites. In particular many sites change
+their status from occupied to empty from one conﬁgura-
+tion to the next. This is something the NZ method cannot
+handle, and you need to compute the next cluster struc-
+ture from the empty lattice. There is, however, a clever
+way to loop through all 2L×L conﬁgurations by adding an
+occupied site most of the time, while the number of tran-
+sitions that require a restart grows only like O(2L). With
+this method, exact computation of nL(p) is possible for
+L≤ 7 [38]. For the square lattice with periodic boundary
+
+PDF PAGE 4
+4
+Table I: Values of the coe ﬃcients A0, B0, C0, A1, B1, and C1 in
+(8) and (9) for 2D and 3D systems found in previous papers
+as cited, and in this work by microcanonical MC simulations
+(m), series analysis (s), conformal ﬁeld invariance (c), or duality
+(d). Numbers in parentheses give errors in the last digit(s). All
+are for site percolation except for the square-bond case. In the
+latter case, the results are per bond rather than per site on the
+lattice, accounting for a factor of two decrease in A1 from the
+other square-boundary cases SQ and UJ.
+Lattice X X 0 X1
+Square A 0.0275981(3)[33] 0.8835(5)[33]
+0.02759791(5)[19] 0.883576308...[37]
+0.02759800(5)[39]
+0.02759803(2)m 0.8834(1)m
+B−0.3205738(7)m 0.8708(2)m
+C 1.9669(3)m −3.286(3)m
+Honeycomb A 0.03530709(1)m 0.9468(1)m
+0.946883263... c
+B−0.4109549(6)m 0.8260(1)m
+C 2.3082(2)m −3.898(1)m
+Triangular A 0.0168(2)[13]
+0.017630(2)[40]
+0.017626(1)[41]
+0.0176255(5)[33] 0.878(1)[33]
+0.017625277(4)m 0.87839(7)m
+0.017625277368(2)s 0.878290117... c
+B−0.2500006(3)m 0.8807(1)m
+−1/4d
+C 1.5(2)[13]
+1.91392(9)m −3.2909(8)m
+1.91391790(5)s
+Union-Jack A 0.025662605(6)m 0.88345(8)m
+0.883576308...[37]
+B−0.2500005(3)m 0.76074(5)m
+−1/4d
+C 1.41334(5)m −2.5206(3)m
+Square (bond) A 0.0173(3)[13]
+0.017788096(3)m 0.44183(1)m
+0.017788106(1)s 0.441783154... [37]
+0.01778810567665...
+= (24
+√
+3− 41)/32[14, 33]
+B−0.2499995(4)m 0.55504(7)m
+−1/4d
+C 1.4(3)[13]
+1.87706(4)m −2.6882(5)m
+1.87714(2)s
+Cubic A 0.0524387(3)[19]
+0.052438218(3)[42] 0.6746(3)[42]
+0.052438223(3)m 0.6748(2)m
+B−0.4107249(5)m 1.7147(4)m
+C 0.4405(6)m −1.004(7)m
+0.4
+0.5 0.6 0.7 0.8 p
+-1
+0
+1
+2
+3
+4
+n
+L
+"
+( p ) 
+Figure 1: Second derivative of the cluster density nL(p) for
+square lattices of size L× L for L = 8, 16,..., 1024. Error bars
+are much smaller than the linewidth. The vertical dashed line
+marks the percolation threshold pc.
+conditions and L = 3, for example, the polynomial is
+n3(p) =9pq8 + 54p2q7 + 132p3q6 + 171p4q5
++ 135p5q4 + 84p6q3 + 36p7q2 + 9p8q + p9,
+(13)
+where q = 1− p. We considered several systems with
+L up to 7, and the resulting polynomials of order L2 are
+posted on [43].
+Thirdly, we carried out Monte-Carlo (MC) simulations
+using the NZ method, which generates the microcanon-
+ical weights—essentially approximations for the coe ﬃ-
+cients in polynomials such as (13), but for much larger
+systems. In this method, occupied sites are added one at
+a time, and an e ﬃcient union-ﬁnd procedure is used to
+update the cluster connectivity. Once the microcanonical
+weights Ni,L (number of clusters of size i in a system of
+length L) are found, the canonical p-dependent expres-
+sions are found through a convolution with the binomial
+distribution:
+nL(p) = 1
+N
+N∑
+i=0
+Ni,L
+(
+N
+i
+)
+pi(1− p)N−i (14)
+Derivatives n[k]
+L (p) can be found by a similar convolution
+n[k]
+L (p) = 1
+N
+N∑
+i=0
+Ni,LDk,i
+(
+N
+i
+)
+pi(1− p)N−i (15)
+withD1,i = (i− pN)/[p(1− p)] andD2,i = [i2− (1 + 2(N−
+1)p)i + N(N− 1)p2]/[p(1− p)]2 for the ﬁrst and second
+derivatives respectively.
+In the MC work we considered L× L systems with
+L up to 1024 for site percolation (s) on the SQ, NNSQ,
+triangular (TR), honeycomb (HC), and union-jack (UJ)
+
+PDF PAGE 5
+5
+0
+0.1 0.2 0.3 0.4 0.5 L
+-1/2
+0
+1
+2
+3
+4
+n
+L
+"
+( p c
+)
+exact
+Monte-Carlo
+Figure 2: An example of a plot of the MC and exact-
+enumeration data, used to ﬁnd coe ﬃcients given in Table I:
+n′′
+L (pc) = 2C for site percolation on square lattices vs. L−1/2. The
+line is a ﬁt of (9c) which yields values forC0 and C1. Error bars
+of the MC data are much smaller than the size of the symbols.
+lattices, the 3d cubic lattice, and bond percolation (b) on
+the SQ lattice. For the TR lattice, we used a periodic
+square lattice with diagonal bonds, so the system shape
+was eﬀectively a 60◦ rhombus. For the HC lattice, we
+also used a square lattice but with half the vertical bonds
+missing in a brick pattern, so the e ﬀective shapes was a
+rectangle with aspect ratio
+√
+3. For each size and lattice
+type we computed up to 1010 samples. Fig. 1 shows n′′
+L (p)
+for the square-site problem, clearly demonstrating the
+development of the branch-point singularity, something
+not calculated before. (Note that peaked plots of closely
+related “speciﬁc heat” functions were given by [44] and
+more recently by [45].)
+Finally, we carried out a Monte-Carlo simulation at
+ﬁxedp = pc, counting clusters and keeping track of⟨Nc⟩,
+⟨Ns⟩ and⟨NcNs⟩, where Nc is the number of clusters and
+Ns is the number of occupied sites in each sample, with
+⟨Ns⟩/L2 = p. These allow B0 = n′(pc) to be calculated
+from
+n′(p) =⟨NsNc⟩−⟨ Ns⟩⟨Nc⟩
+L2p(1− p) (16)
+which follows from (15) fork = 1. We carried this out for
+site percolation simultaneously on the matching SQ and
+NNSQ lattices, identifying nearest-neighbor clusters on
+the black sites (occupied with probability p) and next-
+nearest neighbor clusters on the white sites (occupied
+with probability 1−p) for each sample. We conﬁrmed our
+values of B0 and also veriﬁed that the matching relation
+(6) holds to a high degree of accuracy.
+Analyzing these results [38], we ﬁnd the values of
+the amplitudes listed in Table I. Agreement with exact
+results and with previous values is generally good. The
+early results of Domb and Pearce [13] have been vastly
+Table II: Values of shape-dependent universal quantities R =
+A1C1/B2
+1, B1/b = B1/(−A±)3/8 and C2/b2 = C2/(−A±)3/4, using
+b[A±]abs. from Table III.
+System Shape R B1/b C 1/b2
+SQ,b square −3.855(2) 0 .4995(1) −1.0884(2)
+SQ,s square −3.829(4) 0 .5002(1) −1.084(1)
+UJ,s square −3.8484(5) 0.4999(2) −1.088(1)
+TR,s rhomb. −3.726(2) 0 .5064(1) −1.0883(2)
+HC,s
+√
+3 rect. −5.410(3) 0 .4393(1)−1.1024(10)
+improved. Plots of the data of nL(p), n′
+L(p) and n′′
+L (p)
+veriﬁed that the scaling predicted by (9) is correct; for
+example, the plot for n′′
+L (p) for site percolation on the
+square lattice is given in Fig. 2.
+Calculating the quantity R of (10) we ﬁnd the values
+given in table II. The three square-boundary systems
+give similar values consistent with a common value of
+R =−3.844(10), while for TR and HC systems, simu-
+lated on a rhombus and rectangle respectively, the value
+is diﬀerent. This conﬁrms our expectations about the
+shape-dependent but otherwise universal behavior ofR.
+Relative metric factors b can be calculated fromB1 and
+C1 for systems of the same shape by the equations below
+(9), which imply
+b/b′ = B′
+1/B1 (17)
+b/b′ = (C′
+1/C1)1/2 (18)
+where the prime indicates a reference system. The rela-
+tive b’s can also be calculated from theA±, which is not
+shape-dependent and therefore can be used for all 2d
+systems we consider, irrespective of the shape that was
+used in the simulations:
+b/b′ = [A±/(A±)′]3/8 (19)
+from (11). We can choose a convention such as that of
+Hu et al. [46, 47] that b′ = 1 for bond percolation on
+the square lattice; this yields the values of b given in the
+ﬁrst four columns of Table III. Note, in order to use this
+system for a reference, we have to multiply the quantities
+for the square-bond model by 2 to account for the fact
+that they represent the number of clusters per bond, not
+per site, and there are two bonds per site on the square
+lattice.
+The quantityA± can be diﬃcult to measure because,
+for a ﬁnite-size system, it represents the behavior for
+suﬃciently large|p− pc| so thatξ≪ L, yet still within the
+scaling region. Our 2d results forA± are given in Table
+IV. We also show the values of ˆA±, the and for the cases
+we have measured values of b, we ﬁnd good evidence
+of universality of that quantity for systems of di ﬀerent
+shapes.
+
+PDF PAGE 6
+6
+Table III: Metric factor b calculated from B1 of (17), C1 of (18),
+andA± of (19), normalized to those of the SQ,b system (with
+a factor of two in the coe ﬃcients of the SQ,b system because
+there are two bonds per lattice site). Results for b from Hu et
+al. [46, 47] are also shown. In the last column are the values b
+based upon the convention ˆA± =−1, calculated from (20).
+Lattice b[B1] b[C1] b[A±] b[Hu] b[A±]abs.
+SQ,b 1 1 1 1 2.22254(8)
+SQ,s 0.7847(3) 0.7818(4) 0.7810(10) 0.79 1.7410(6)
+UJ,s 0.6854(1) 0.6847(1) 0.6815(11) - 1.522(6)
+TR,s - - 0.780(2) 0.79 1.73897548(3)
+HC,s - - 0.8435(14) 0.86 1.8804(7)
+Table IV: The non-universal amplitudeA± for 2d lattices, with
+our series (s) and MC (m) results, along with results from Domb
+and Pearce [13]. The ﬁnal column shows ˆA± = b−8/3A±, using
+our values of b given in the ﬁrst two columns of Table III,
+representing the SQ,b, SQ,s and UJ systems with the same
+square boundary. The results for our measurements on the
+SQ,b, SQ,s and UJ,s systems gives a fairly consistent value of
+8.42. For the last two cases, the HC and TR lattices, we use the
+values of b from [46] to ﬁnd ˆA± from theA± , and ﬁnd less
+consistent values of ˆA±. For the square-bond system, we have
+to double the value of ˆA± because of the diﬀerent basis used.
+These values of ˆA± are based upon the convention that b = 1
+for bond percolation on the square lattice.
+Lattice −A± − ˆA±
+SQ,b 4 .240(15)[13], 4.211(1)m, 4.2063(2)s, 8.41
+SQ,s 4 .3867(4)m 8.45
+UJ,s 3 .064(3)m 8.40
+TR,s 4 .370(15)[13], 4.379(2)m, 4.3730310(2)s 8.20
+HC,s 5 .387(5)m 8.05
+IV . ABSOLUTE V ALUE OF THE METRIC FACTOR b
+Having veriﬁed universality of ˆA±, we can turn it
+around and can use it to propose a deﬁnition of b that
+is not based upon a reference lattice but instead is based
+upon the universal behavior off (z). Because the quantity
+ˆA± is independent of both the lattice type and the system
+shape, it is a good quantity to use. There is a freedom
+to choose an arbitrary overall scale factor for z in f (z),
+and we can assume that that scale factor is chosen so
+that ˆA± =−1. By (11), this choice implies that b can be
+calculated from
+b = (−A±)3/8 (20)
+which leads to the values of b given in the last column
+of Table III. We call these “absolute” values of b because
+we are not assuming b = 1 for any particular system.
+Using these values for the absolute metric factorb, we
+can ﬁnd the shape-dependent but otherwise universal
+behavior of f (z):
+f (z) = f (0) + z f′(0) + z2 f′′(0)/2 + ˆA±|z|8/3 (21)
+= A1 + z(B1/b) + z2(C1/b2)−| z|8/3 (22)
+For our three systems with the square boundary, we ﬁnd
+very good consistency in these coeﬃcients (see Table II)
+yielding
+f (z) = 0.883576 + 0.5000(2)z− 1.088(1)z2−| z|8/3 (23)
+with the intriguing result thatB1/b = B1/(−A±)3/8 seems
+to equal exactly 1/2 for the square boundary. We have
+no explanation for this value.
+For the systems with other boundary shapes, we have
+one system for each. For a system with a rhombus
+boundary or equivalently a rectangle of aspect ratio√
+3/2 with a twist of 1 /2 (which we used for the TR
+lattice), we ﬁnd
+f (z) = 0.878290 + 0.5064(1)z− 1.0883(2)z2−| z|8/3 (24)
+For the HC system, where we used a rectangular bound-
+ary of aspect ratio
+√
+3, we ﬁnd
+f (z) = 0.946883 + 0.4393(1)z− 1.1024(10)z2−| z|8/3 (25)
+Thus, we see, as predicted, that systems of di ﬀerent
+shapes have diﬀerent forms of f (z) for small z. Interest-
+ing, it seems that C1/b2 is the same for the 60◦ rhombus
+(the TR system) as for the three square systems. How-
+ever, for the
+√
+3 rectangle (the HC system), it is somewhat
+diﬀerent. We have no explanation for this behavior.
+Clearly, an interesting area for future study would be
+to ﬁnd f (z) for systems of more shapes, and to also verify
+universality by considering di ﬀerent lattices of a given
+shape.
+V . THE FUNCTION ML(p).
+We also analyzed the function ML(p) = L2[nSQ
+L (p)−
+nNNSQ
+L (1− p)−φ(p)], where φ(p) = p− 2p2 + p4 is the
+matching polynomial (4) for the square lattice. Note
+that ML(p)/L2→ 0 as L→∞ , but ML(p) converges to a
+step function independent of L that jumps from−1 to +1
+at p = pc; see Fig. 3. At pc, ML appears to go to zero as
+ML(pc)∼ L−4 as L→∞ , which implies that ﬁnding where
+ML(p) = 0 is a very sensitive criterion for ﬁnding pc. In
+fact, this is identical to the criterion used by Jacobsen
+and Scullard [28, 29, 31] whose studies yielded the most
+precise estimates of percolation thresholds to date. We
+discuss ML(p) more in Ref. [48], where it is also shown
+that ML(p) is related to the probability of the existence of
+wrapping clusters on the lattice and matching lattice.
+In the inset to Fig. 3 we show a plot of ML(p) as a
+function of (p−pc)L1/ν for the square-site system. Because
+
+PDF PAGE 7
+7
+0
+0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 p
+-1.0
+-0.5
+0.0
+0.5
+1.0
+M
+L
+(p)
+-1
+0 1 (p-p
+c
+) L
+3/4
+-1
+0
+1
+Figure 3: ML(p) = L2[nSQ(p)− nNNSQ(1− p)−φ(p)] vs. p from
+exact enumeration results for L = 3, 4, 5, 6, 7 (solid lines) and
+L = 8, 12, 16, 24, 32, 48 from MC (dashed lines), plotted as a
+function of p, and (inset) as a function of the scaling variable
+(p− pc)L1/ν, yielding f (z)− f (−z). In the limit L→∞ , ML(p)
+becomes a step function.
+of the relations (6), it follows that in the scaling limit
+ML(p) = f (z)− f (−z), all the terms proportional to L2
+having cancelled out. If we had plotted the inset to the
+ﬁgure vs. z = b(p− pc)L−1/ν with b equal to its absolute
+value b = 1.741, then by (23) the slope at z = 0 would be
+exactly 1.
+Finally, we also carried out simulations for site perco-
+lation on a cubic lattice in three dimensions, and these
+results are shown in Table I. The behavior was found to
+be consistent with the scaling predictions of equation (9).
+VI. CONCLUSIONS
+In this paper, we have found many new results con-
+cerning the function n(p), including
+• A discussion of the ﬁnite-size corrections to A, B,
+and C, including a derivation of the scaling of those
+terms.
+• The veriﬁcation of that scaling on several diﬀerent
+system types.
+• A discussion of the use of the coeﬃcientA± of the
+singular term in n(p) to deﬁne an absolute, rather
+than relative, value of the metric factor b.
+• A visualization of the formation of a cusp inn′′(p),
+Fig. 1.
+• The extension of previous work on metric factors
+[46] to a new system, the union-jack lattice. This
+system is interesting to study because it is fully tri-
+angulated, so has a site threshold of 1/2, but can be
+made into a perfect square, so is useful to compar-
+ing to other square systems.
+• A discussion of shape-dependent universality [36,
+37], as summarized in Table V.
+• Application of the Sykes-Essam matching polyno-
+mial to ﬁnd relations for A, B, and C between a
+lattice and its matching lattice.
+• Development of new algorithms for carrying out
+the simulations and series analyses.
+• The determination of many precise values concern-
+ing n(p), including a very precise determination of
+n(pc) for site percolation on the triangular lattice,
+using a much extended series expansion for that
+system.
+• A discussion ofML(z) which directly yields an anti-
+symmetrized version of the the scaling function
+f (z).
+• The derivation of universal expressions for f (z) for
+systems of three diﬀerent shapes (23,24,25), based
+upon our standard deﬁnition of b. Note that f (z)
+is a subtle function to observe as it corresponds to
+ﬁnite-size corrections ton(p).
+Table V: Universality properties of various quantities related
+to n(p). A check in the ﬁrst column means that the quantity
+depends upon the shape of the boundary of the system (with
+periodic b. c.); a check in the second column means that the
+quantity depends upon the lattice and percolation type (site or
+bond). The ﬁnal column shows the dependence on dimension-
+ality, which applies to all of the quantities here.
+Quantity Shape Lattice Dimensionality
+α,ν... D
+ˆA± = bα−2A± D
+A0, B0, C0 D D
+b D D
+f (z) D D
+A1, b−1B1, b−2C1, R D D
+B1, C1 D D D
+Future work is suggested to study n(p) and f (z) for
+diﬀerent lattices and boundary shapes, as well as the be-
+havior in higher dimensions. Perhaps new exact results
+for some of these quantities can also be found, such as
+n(pc) for site percolation on the triangular lattice, where
+we found the precise value (12). The dependence ofB1/b
+and C1/b2 as a function of the system shape seems also
+interesting, since they are related to the scaling function
+f (z).
+Acknowledgments: IJ was supported under the Aus-
+tralian Research Council’s Discovery Projects funding
+
+PDF PAGE 8
+8
+scheme by the grant DP140101110 and IJ’s computational
+work was undertaken with the assistance of resources
+and services from the National Computational Infras-
+tructure (NCI), which is supported by the Australian
+Government. The authors thank Peter Kleban for help
+in calculating the conformal excess number A1 for the
+three diﬀerent system shapes.
+[1] D. Stau ﬀer and A. Aharony,Introduction to Percolation The-
+ory (Taylor & Francis, London, 1994), 2nd ed.
+[2] P . J. Flory, J. Am. Chem. Soc.63, 3083 (1941).
+[3] H. Ottavi, J. Clerc, G. Giraud, J. Roussenq, E. Guyon, and
+C. D. Mitescu, J. Phys. C: Solid State 11, 1311 (1978).
+[4] R. Larson, L. Scriven, and H. Davis, Chemical Engineering
+Science 36, 57 (1981).
+[5] C. M. Fortuin and P . W. Kasteleyn, Physica57, 536 (1972).
+[6] S. N. Dorogovtsev, A. V . Goltsev, and J. F. F. Mendes, Phys.
+Rev. Lett. 96, 040601 (2006).
+[7] C. L. Knecht, W. Trump, D. ben Avraham, and R. M. Zi ﬀ,
+Phys. Rev. Lett. 108, 045703 (2012).
+[8] N. A. M. Ara ´ujo, J. S. Andrade, R. M. Zi ﬀ, and H. J. Her-
+rmann, Phys. Rev. Lett. 106, 095703 (2011).
+[9] D. Achlioptas, R. M. D’Souza, and J. Spencer, Science 323,
+1453 (2009).
+[10] S. Smirnov and W. Werner, Math. Res. Lett. 8, 729 (2001).
+[11] O. Schramm, S. Smirnov, and C. Garban, Annals of Prob-
+ability 39, 1768 (2011).
+[12] S. M. Flores, P . Kleban, and R. M. Ziﬀ, J. Phys. A: Math.Th.
+45, 505002 (2012).
+[13] C. Domb and C. J. Pearce, J. Phys. A: Math. Gen. 9, L137
+(1976).
+[14] H. N. V . Temperley and E. H. Lieb, Proc. R. Soc. London
+A 322, 251 (1971).
+[15] J. Cardy, J. Phys. A 25, L201 (1992).
+[16] V . A. Vyssotsky, S. B. Gordon, H. L. Frisch, and J. M.
+Hammersley, Phys. Rev.123, 1566 (1961).
+[17] P . Dean, Proc. Camb. Phil. Soc.63, 477 (1967).
+[18] P . J. Reynolds, H. E. Stanley, and W. Klein, Phys. Rev. B21,
+1223 (1980).
+[19] D. Tiggemann, Int. J. Mod. Phys. C 12, 871 (2001).
+[20] X. Xu, J. Wang, J.-P . Lv, and Y. Deng, Frontiers of Physics
+9, 113 (2014).
+[21] P . L. Leath, Phys. Rev. B14, 5046 (1976).
+[22] J. Hoshen and R. Kopelman, Phys. Rev. B 14, 3438 (1976).
+[23] M. E. J. Newman and R. M. Zi ﬀ, Phys. Rev. Lett. 85, 4104
+(2000).
+[24] M. E. J. Newman and R. M. Zi ﬀ, Phys. Rev. E 64, 016706
+(2001).
+[25] M. F. Sykes and J. W. Essam, J. Math. Phys. 5, 1117 (1964).
+[26] C. R. Scullard and R. M. Zi ﬀ, Phys. Rev. E 73, 045102(R)
+(2006).
+[27] G. R. Grimmett and I. Manolescu, Probability Theory and
+Related Fields 159, 273 (2014).
+[28] C. R. Scullard and J. L. Jacobsen, J. Phys. A: Math. Th. 45,
+494004 (2012).
+[29] J. L. Jacobsen, J. Phys. A: Math. Th. 47, 135001 (2014).
+[30] Y. Yang, S. Zhou, and Y. Li, Entertainment Computing 4,
+105 (2013).
+[31] J. L. Jacobsen, J. Phys. A: Math. Th. 48, 454003 (2015).
+[32] M. E. Fisher and J. W. Essam, J. Math. Phys. 2, 609 (1961).
+[33] R. M. Ziﬀ, S. R. Finch, and V . S. Adamchik, Phys. Rev. Lett.
+79, 3447 (1997).
+[34] R. J. Baxter, H. N. V . Temperley, and S. E. Ashley, Proc. R.
+Soc. London A 358, 535 (1978).
+[35] R. A. Neher, K. Mecke, and H. Wagner, J. Stat. Mech.: Th.
+Exp. 2008, P01011 (2008).
+[36] A. Aharony and D. Stau ﬀer, J. Phys. A: Math. Gen. 30,
+L301 (1997).
+[37] R. M. Zi ﬀ, C. D. Lorenz, and P . Kleban, Physica A266, 17
+(1999).
+[38] S. Mertens, I. Jensen, and R. M. Ziﬀ, in preparation (2016).
+[39] H. Hu, H. W. J. Bl ¨ote, and Y. Deng, J. Phys. A: Math. Th.
+45, 494006 (2012).
+[40] A. Margolina, H. Nakanishi, D. Stauﬀer, and H. E. Stanley,
+J. Phys. A: Math. Gen. 17, 1683 (1984).
+[41] D. C. Rapaport, J. Phys. A: Math. Gen. 19, 291 (1986).
+[42] J. Wang, Z. Zhou, W. Zhang, T. M. Garoni, and Y. Deng,
+Phys. Rev. E 87, 052107 (2013).
+[43] S. Mertens (2016), URL http: //www.ovgu.de/mertens/
+research/percolation/.
+[44] S. Kirkpatrick, Phys. Rev. Lett. 36, 69 (1976).
+[45] H. Hu, H. W. J. Bl¨ote, R. M. Ziﬀ, and Y. Deng, Phys. Rev. E
+90, 042106 (2014).
+[46] C.-K. Hu, C.-Y. Lin, and J.-A. Chen, Phys. Rev. Lett. 75,
+2786 (1995).
+[47] C.-K. Hu, C.-Y. Lin, and J.-A. Chen, Physica A 221, 80
+(1995).
+[48] S. Mertens and R. M. Zi ﬀ, Phys. Rev. E 94, 062152 (2016).

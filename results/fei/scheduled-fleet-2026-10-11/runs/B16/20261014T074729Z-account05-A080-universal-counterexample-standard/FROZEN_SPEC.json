@@ -1,0 +1,13 @@
+{
+ "helper_version":"A080-tensor-activation-localization-v1",
+ "family":"all 14 nonconstant two-bit Boolean seeds; sign tensor t copies, then fresh k-bit point activation",
+ "domain":{"t":[1,2,3],"k":[1,2,3],"pilot_seed_masks":[1,6],"pilot_t":[1],"pilot_k":[1,2]},
+ "case_count":126,
+ "pilot_case_count":4,
+ "symmetry":"none; every labeled nonconstant two-bit seed included",
+ "arithmetic":"integer Walsh and edges; exact rational squared masses; 32-term positive atanh log series with rational remainder and outward rounding",
+ "memory_estimate_MB":50,
+ "maximum_runtime_seconds":60,
+ "maximum_physical_dimension":9,
+ "analytic_domain":"all finite Boolean seeds, all positive integers k,t; asymptotic t=ceil(k^2/I(seed)), k>=max(1,I(seed))"
+}

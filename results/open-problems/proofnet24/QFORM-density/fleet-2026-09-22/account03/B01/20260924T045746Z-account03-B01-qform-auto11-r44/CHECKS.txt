@@ -1,0 +1,10 @@
+C_2 = 2.9999999999999996
+q=2, r=2, exponent=0.000e+00, C_r=3.000000000000000
+q=3, r=1.5, exponent=0.000e+00, C_r=3.827170367691972
+q=4, r=1.33333333333, exponent=0.000e+00, C_r=4.832955112329408
+stress eigenvalues = -1.7709120513, -1.1361294935, -0.2410733605, 0.7092097741, 1.4970214963, 1.9418836348
+number |lambda|>=1 = 4
+max characteristic-polynomial coefficient error < 1e-13
+STATUS=PASS
+
+Checks performed: exact r=2 compiler constant; q=2,3,4 reciprocal-scale cancellation; source-disjoint constants inherited unchanged under the new conditional compiler; target-valid stress matrix spectrum and characteristic polynomial. The analytic inequalities themselves are proved in REPORT.md rather than inferred from these finite computations.

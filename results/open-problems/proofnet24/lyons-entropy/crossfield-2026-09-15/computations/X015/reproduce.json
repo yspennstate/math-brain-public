@@ -1,0 +1,211 @@
+{
+  "generic_complex_conditional_determinant_exact": true,
+  "scalar_logconvex_identity_exact": true,
+  "exponential_lower_bound": "68771/19208",
+  "sigma_display": 0.23065922053242402,
+  "rational_example": {
+    "K": "Matrix([[1/5, 1/10, 1/20], [1/10, 3/5, 1/10], [1/20, 1/10, 4/5]])",
+    "A": "Matrix([[1, 1/5, -1/10], [1/5, 2, 1/20], [-1/10, 1/20, 1]])",
+    "atoms_mask_order": [
+      "13/250",
+      "9/500",
+      "211/2000",
+      "49/2000",
+      "129/500",
+      "9/125",
+      "769/2000",
+      "171/2000"
+    ],
+    "pair_log_ratios": [
+      "27219/19994",
+      "129/104",
+      "1899/1274"
+    ],
+    "triple_log_ratio": "3918824/4654449",
+    "tau_display": -0.1720319275827552,
+    "K_leading_minors": [
+      "1/5",
+      "11/100",
+      "171/2000"
+    ],
+    "IminusK_leading_minors": [
+      "4/5",
+      "31/100",
+      "13/250"
+    ],
+    "A_leading_minors": [
+      "1",
+      "49/25",
+      "3871/2000"
+    ],
+    "commutator": "Matrix([[0, 13/400, 9/200], [-13/400, 0, -13/100], [-9/200, 13/100, 0]])",
+    "fisher": "6192851875008577/194559642111744",
+    "D": "175/6",
+    "fisher_at_least_D": true,
+    "ambient_log_coefficient_identity_exact": true,
+    "conditional_probability_and_score_identities_exact": true,
+    "conditional_adjugate_identities_exact": true,
+    "score_chain_exact": true,
+    "branches": [
+      {
+        "pivot": 0,
+        "branch": 0,
+        "omega": "(79976 + 727*sqrt(19994))/39988",
+        "fisher": "3581088758297/139319471616",
+        "det_velocity": "2617/1280",
+        "fisher_margin_display": 7.014196375164158
+      },
+      {
+        "pivot": 0,
+        "branch": 1,
+        "omega": "(684 + 193*sqrt(19))/342",
+        "fisher": "53805503/2145024",
+        "det_velocity": "9/4",
+        "fisher_margin_display": 5.014560764811512
+      },
+      {
+        "pivot": 1,
+        "branch": 0,
+        "omega": "(52 + 23*sqrt(26))/26",
+        "fisher": "47484877/2575872",
+        "det_velocity": "8967/6400",
+        "fisher_margin_display": 0.19036506734439443
+      },
+      {
+        "pivot": 1,
+        "branch": 1,
+        "omega": "2*(12027 + 409*sqrt(4009))/12027",
+        "fisher": "52952690113/4078704483",
+        "det_velocity": "14687/14400",
+        "fisher_margin_display": 0.11854979174832822
+      },
+      {
+        "pivot": 2,
+        "branch": 0,
+        "omega": "(56 + 19*sqrt(26))/28",
+        "fisher": "4889325713/154836864",
+        "det_velocity": "575/256",
+        "fisher_margin_display": 7.049707962900429
+      },
+      {
+        "pivot": 2,
+        "branch": 1,
+        "omega": "(29412 + 913*sqrt(2451))/14706",
+        "fisher": "139431784741/5790163968",
+        "det_velocity": "40731/20480",
+        "fisher_margin_display": 3.8998483284098975
+      }
+    ],
+    "matrix_comparison_eigenvalues_display": [
+      3.602244393814029,
+      4.423986498625167,
+      6.408400050623395
+    ],
+    "H_second_display": -29.476061793568988,
+    "strong_upper_bound_display": -13.532596317497365,
+    "upper_bound_slack_display": 15.943465476071625
+  },
+  "rational_complex_example": {
+    "K": "Matrix([[1/4, 1/20 + I/20, 1/30 - I/15], [1/20 - I/20, 1/2, 2/25 + I/25], [1/30 + I/15, 2/25 - I/25, 3/4]])",
+    "A": "Matrix([[1, 1/10 + I/5, 1/10 - I/10], [1/10 - I/5, 2, 1/10 - 3*I/20], [1/10 + I/10, 1/10 + 3*I/20, 3]])",
+    "atoms_mask_order": [
+      "1519/18000",
+      "587/18000",
+      "439/4500",
+      "319/9000",
+      "5141/18000",
+      "1753/18000",
+      "1271/4500",
+      "761/9000"
+    ],
+    "pair_log_ratios": [
+      "2256899/1930649",
+      "3017767/2662807",
+      "515386/484561"
+    ],
+    "triple_log_ratio": "1079632435343/1008172581593",
+    "tau_display": 0.06848127867084769,
+    "K_leading_minors": [
+      "1/4",
+      "3/25",
+      "761/9000"
+    ],
+    "IminusK_leading_minors": [
+      "3/4",
+      "37/100",
+      "1519/18000"
+    ],
+    "A_leading_minors": [
+      "1",
+      "39/20",
+      "11569/2000"
+    ],
+    "commutator": "Matrix([[-(1/20 - I/20)*(1/10 + I/5) + (1/20 + I/20)*(1/10 - I/5) - (1/30 + I/15)*(1/10 - I/10) + (1/30 - I/15)*(1/10 + I/10), 1/40 + (1/30 - I/15)*(1/10 + 3*I/20) - (2/25 - I/25)*(1/10 - I/10), 1/60 - I/12 - (2/25 + I/25)*(1/10 + I/5) + (1/20 + I/20)*(1/10 - 3*I/20)], [-1/40 - (1/30 + I/15)*(1/10 - 3*I/20) + (2/25 + I/25)*(1/10 + I/10), -(1/20 + I/20)*(1/10 - I/5) + (1/20 - I/20)*(1/10 + I/5) - (2/25 - I/25)*(1/10 - 3*I/20) + (2/25 + I/25)*(1/10 + 3*I/20), 11/200 + (1/20 - I/20)*(1/10 - I/10) - (1/30 - I/15)*(1/10 - I/5) + 31*I/400], [-1/60 - I/12 + (2/25 - I/25)*(1/10 - I/5) - (1/20 - I/20)*(1/10 + 3*I/20), -11/200 - (1/20 + I/20)*(1/10 + I/10) + (1/30 + I/15)*(1/10 + I/5) + 31*I/400, -(2/25 + I/25)*(1/10 + 3*I/20) + (2/25 - I/25)*(1/10 - 3*I/20) - (1/30 - I/15)*(1/10 + I/10) + (1/30 + I/15)*(1/10 - I/10)]])",
+    "fisher": "102737146699605939998011411/1404459121950051567021160",
+    "D": "208/3",
+    "fisher_at_least_D": true,
+    "ambient_log_coefficient_identity_exact": true,
+    "conditional_probability_and_score_identities_exact": true,
+    "conditional_adjugate_identities_exact": true,
+    "score_chain_exact": true,
+    "branches": [
+      {
+        "pivot": 0,
+        "branch": 0,
+        "omega": "(35588 + 6897*sqrt(41))/17794",
+        "fisher": "4369491399657793/63250835769450",
+        "det_velocity": "185353/30000",
+        "fisher_margin_display": 13.700117719277761
+      },
+      {
+        "pivot": 0,
+        "branch": 1,
+        "omega": "(1786828 + 2391*sqrt(893414))/893414",
+        "fisher": "399829703862708/6245042033725",
+        "det_velocity": "58659/10000",
+        "fisher_margin_display": 10.88308756342503
+      },
+      {
+        "pivot": 1,
+        "branch": 0,
+        "omega": "2*(380401 + 2864*sqrt(54343))/380401",
+        "fisher": "300715545802377708/5022331932480625",
+        "det_velocity": "335903/100000",
+        "fisher_margin_display": 22.857756293367785
+      },
+      {
+        "pivot": 1,
+        "branch": 1,
+        "omega": "(1336316 + 2861*sqrt(668158))/668158",
+        "fisher": "18430170448696137/338629991177500",
+        "det_velocity": "297903/100000",
+        "fisher_margin_display": 21.65586752084254
+      },
+      {
+        "pivot": 2,
+        "branch": 0,
+        "omega": "(25172 + 213*sqrt(19778))/12586",
+        "fisher": "2041192501711577/62433988886500",
+        "det_velocity": "178471/56250",
+        "fisher_margin_display": 4.899514248151073
+      },
+      {
+        "pivot": 2,
+        "branch": 1,
+        "omega": "(295268 + 129*sqrt(7824602))/147634",
+        "fisher": "295976952443345963/13075279654444500",
+        "det_velocity": "1014571/506250",
+        "fisher_margin_display": 4.823266825174492
+      }
+    ],
+    "matrix_comparison_eigenvalues_display": [
+      3.8036494326956296,
+      4.159427985109066,
+      5.0706251227776855
+    ],
+    "H_second_display": -69.71037395360007,
+    "strong_upper_bound_display": -31.695969571469874,
+    "upper_bound_slack_display": 38.0144043821302
+  },
+  "scope": "Universal theorem proved analytically in X015.md; numerical eigenvalues are displays only."
+}

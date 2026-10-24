@@ -1,0 +1,68 @@
+{
+  "schema": "fei-a001-gap-map/1",
+  "packet_id": "A001",
+  "full_fei_status": "OPEN",
+  "target": {
+    "quantifiers": "There exists one finite C such that for every n>=0 and every genuine Boolean sign f on the uniform n-cube, H(f)<=C I(f).",
+    "constant_case": "H=I=0; no ratio is formed",
+    "nonconstant_ratio": "C_FEI=sup H/I"
+  },
+  "routes": [
+    {
+      "route_id": "PUBLIC-REGULAR-COMPOSITION",
+      "classification": "PROVED_CLASS_THEOREMS",
+      "proved_scope": "regular functions; stated m-combinations; read-k/M compositions; product-biased symmetric thresholds; read-once threshold formulas",
+      "first_open_implication": "A dimension-independent-cost representation of every Boolean function in these classes, with all log m, log k, log M, label and overlap costs paid by O(I).",
+      "circular_edge_rejected": "Arbitrary Boolean functions are not declared regular or bounded-read by FEI itself.",
+      "source": {"repository": "yspennstate/fourier-entropy-threshold-functions", "commit": "b38ba0ab49618ccbe6d1518a34c141dcec9f247c", "path": "paper/main.tex", "blob": "1a9af8c62a32566a6ad1b7323a84d103a8375e93"}
+    },
+    {
+      "route_id": "PUBLIC-JOINT-WITNESS",
+      "classification": "EXACT_INTERFACE_PLUS_RESTRICTED_ADDRESSING_BOUND",
+      "proved_scope": "Variational witness reference bound for each admissible finite witness; addressing expected cost <10 I.",
+      "first_open_implication": "Uniform O(I) expected joint-witness cost for every Boolean function, retaining normalization, rank and sparse-root terms.",
+      "circular_edge_rejected": "Gibbs/reference coding alone does not bound expected description cost.",
+      "source": {"repository": "yspennstate/fourier-entropy-threshold-functions", "commit": "b38ba0ab49618ccbe6d1518a34c141dcec9f247c", "path": "paper/main.tex", "blob": "1a9af8c62a32566a6ad1b7323a84d103a8375e93"}
+    },
+    {
+      "route_id": "RECOVERED-POSTERIOR-FOREST",
+      "classification": "SUFFICIENT_ONE_WAY",
+      "proved_scope": "If every Boolean f admits a complete admissible package with J_f<=K I(f), FEI holds with 2+K_ref+K.",
+      "first_open_implication": "Universal admissible construction and J_f<=K I(f).",
+      "circular_edge_rejected": "No converse is assumed; FEI cannot be used to pay J_f.",
+      "source": {"repository": "yspennstate/math-open-problems", "path": "reports/fei-2026-10-11/source_material/reductions/paper/forests.tex", "blob": "3fd08d81a2bcd96acaaa268757c7f343e71e8249"}
+    },
+    {
+      "route_id": "GOOD-COORDINATE",
+      "classification": "EQUIVALENT_IN_FINITENESS",
+      "proved_scope": "C_FEI<=C_step<=C_FEI+2/ln2; same finiteness equivalence after restriction to critical tensor-prime descendants.",
+      "first_open_implication": "A direct finite bound on min_i Delta_iH/I_i for every restriction-critical tensor-prime Boolean function.",
+      "circular_edge_rejected": "The upper sandwich direction contains C_FEI and is not an independent bound.",
+      "source": {"repository": "yspennstate/math-open-problems", "commit": "87f7c6267e56e7a0eb5b8dfd572a6eaaecae6907", "path": "reports/fei-2026-10-11/runs/B01/20261011T210729Z-account01-B01-minimal-target-a003/", "report_blob": "85308728bbfffe5cd3afd554cae783110fc57035"}
+    },
+    {
+      "route_id": "SIGNED-DOWNWARD",
+      "classification": "EQUIVALENT_IN_FINITENESS",
+      "proved_scope": "C_L<=C_FEI<=C_L+3/ln2 under complete Boolean autocorrelation constraints.",
+      "first_open_implication": "A universal Boolean bound L(f)<=K I(f), or a genuinely stronger existential/nonlocal refinement.",
+      "circular_edge_rejected": "Non-Boolean prefix laws show constraint insufficiency, not Boolean realizability; FEI cannot be imported to bound L.",
+      "source": {"repository": "yspennstate/math-open-problems", "commit": "87f7c6267e56e7a0eb5b8dfd572a6eaaecae6907", "path": "reports/fei-2026-10-11/runs/B01/20261011T210729Z-account01-B01-minimal-target-a003/", "report_blob": "85308728bbfffe5cd3afd554cae783110fc57035"}
+    },
+    {
+      "route_id": "FIXED-CYCLIC-CONDITIONAL",
+      "classification": "FEI_STRENGTH",
+      "proved_scope": "A seed-uniform additive-overhead conditional estimate for every arbitrary core and all tensor orders implies FEI by division by tensor order.",
+      "first_open_implication": "Prove such a conditional estimate without assuming FEI on the arbitrary core.",
+      "circular_edge_rejected": "Bounded fiber support is a restricted theorem and grows exponentially under arbitrary tensor cores.",
+      "source": {"repository": "yspennstate/math-open-problems", "path": "reports/fei-2026-10-11/runs/B07/20261011T213754Z-account01-B07-a034-fiber-phase/PHASE_SCOPE.md", "blob": "b9fe5f9cb171420581997c20819b718378c125a5"}
+    }
+  ],
+  "new_normal_form": {
+    "claim_version": "B01-A001-CRITICAL-PRIME-NORMAL-FORM-v1",
+    "status": "AUTHOR_PROVED_PENDING_REVIEW",
+    "statement": "Every nonconstant Boolean f has a restriction-critical tensor-prime descendant h with H(h)/I(h)>=H(f)/I(f); hence C_FEI is exactly the supremum on that class.",
+    "movement": "Eliminates noncritical restrictions and disjoint tensor products from the unresolved universal coordinate estimate without assuming FEI.",
+    "remaining_gap": "G-R-SELECT"
+  },
+  "optimal_constant_warning": "No equality of optimal constants among C_FEI, C_step, C_L, posterior residual slopes, or fixed-cyclic conditional slopes is claimed beyond the explicit sandwiches."
+}

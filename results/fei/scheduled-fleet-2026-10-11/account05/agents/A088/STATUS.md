@@ -1,0 +1,2 @@
+STATE: A088 stage5 complete locally: A067 no-cap four-branch final reference HOLDS;22528 cases/354655 exact predicates; post-core conditional flag local price refuted withH/I<=3; new obstruction review pending; FEI OPEN.
+NEXT: Price residual conditional flag from one unused signed child surplus/selected tree bank; retain both terminals and informativew; A094/A070 review G_m obstruction, A067/A038/A039 consume.

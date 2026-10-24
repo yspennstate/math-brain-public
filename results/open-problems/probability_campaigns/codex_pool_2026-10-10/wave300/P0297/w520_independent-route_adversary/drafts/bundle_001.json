@@ -1,0 +1,87 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w520",
+  "bundle_slug": "p0297-metric-exponent-obstructions-w520-001",
+  "entries": [
+    {
+      "key": "lqg-gap",
+      "namespace": "probability.lqg",
+      "logical_name": "lqg-metric-dimension-exponent-identifiability-gap",
+      "kind": "concept",
+      "title": "LQG exact metric dimension: the unidentified exponent",
+      "statement": "DRAFT research synthesis, pending w521 review. For 0<gamma<2, let h be a whole-plane GFF and D_h its canonical gamma-LQG metric. The target is the deterministic number d_gamma=dim_H(C,D_h). Set xi=gamma/d_gamma and Q=2/gamma+gamma/2. The median a_epsilon of left-right crossing length in the unit square for heat-kernel-mollified LFPP satisfies a_epsilon=epsilon^(1-xi*Q(xi)+o(1)), and Q(gamma/d_gamma)=Q. The exact function xi -> Q(xi) is the missing input. Scalar scaling, KPZ identities or a subpower change of normalization alone do not evaluate it. The sqrt(8/3) case has d_gamma=4; a primary survey published 13 July 2026 reports general d_gamma as unknown, while current openness on 10 October is not certified by this packet. Sources: Ding-Dubedat-Gwynne arXiv:2109.01252v2 equations (2.3)-(2.5), Problem 5.1; Holden-Sun DOI 10.1137/25M181012X, Section 2.",
+      "proof_text": null,
+      "assumptions": ["0<gamma<2", "Canonical subcritical LQG metric and standard GFF normalization", "No present-day novelty or solution claim"],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w520:p0297-target-reduction",
+        "url": "file:///~/brain_workers/w520/SOURCE_STATUS.json",
+        "revision": "w520-2026-10-10-draft",
+        "license": "owner-own-work (campaign research synthesis; published results attributed in the statement)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "thick-point-tautology",
+      "namespace": "probability.lqg",
+      "logical_name": "lqg-thick-point-profile-completed-square-obstruction",
+      "kind": "concept",
+      "title": "Draft obstruction: thick-point optimization leaves xi unknown",
+      "statement": "DRAFT elementary derivation, awaiting w521's independent check. Let 0<gamma<2, xi>0, Q=2/gamma+gamma/2, and -2<=alpha<=2. For F(alpha)=(2-alpha^2/2)/(xi*(Q-alpha)), the denominator is positive and gamma/xi-F(alpha)=(alpha-gamma)^2/(2*xi*(Q-alpha)). Hence the unique maximum is gamma/xi at alpha=gamma. In the LQG parametrization xi=gamma/d_gamma, this maximization does not evaluate xi: it returns d_gamma. The formula is a deterministic algebraic identity; it does not exchange 'for each alpha almost surely' with one event for all alpha, or compute the dimension of an uncountable union. The critical endpoint gamma=2,alpha=2 is excluded. Context: Gwynne-Pfeffer arXiv:1905.11790v3 Theorem 1.5, equation (1.12), requires a deterministic or field-independent random Borel set for the thick-point dimension formula.",
+      "proof_text": null,
+      "assumptions": ["0<gamma<2", "xi>0", "-2<=alpha<=2", "Algebraic profile only; no unproved simultaneous probability assertion"],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w520:p0297-thick-point-obstruction",
+        "url": "file:///~/brain_workers/w520/INDEPENDENT_DERIVATION.md",
+        "revision": "w520-2026-10-10-draft",
+        "license": "owner-own-work (elementary campaign derivation; independently unchecked)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "snowflake-scope",
+      "namespace": "analysis.metric",
+      "logical_name": "metric-snowflake-scalar-covariance-dimension-obstruction",
+      "kind": "concept",
+      "title": "Draft obstruction: scalar covariance permits snowflaking",
+      "statement": "DRAFT elementary obstruction, awaiting w521's independent check. For any metric D on X and 0<a<1, D^a is a metric with the same topology and dim_H(X,D^a)=dim_H(X,D)/a, because every covering diameter becomes its a-th power. If D_{h+c}=exp(xi*c)D_h for constant c, then D_h^a has coefficient a*xi. Thus scalar covariance preserves xi*d=gamma while changing d to d/a. Pointwise coordinate-change equalities are also preserved by taking powers. This targets derivations from reduced scalar hypotheses only: every continuous path from 0 to 1 in the snowflaked interval hits successive levels k/n, giving partition length at least n^(1-a). All such paths have infinite length, although the endpoint distance is 1, so this is not a length space. No second canonical LQG metric and no violation of full pathwise Weyl scaling or uniqueness is asserted.",
+      "proof_text": null,
+      "assumptions": ["D is a metric", "0<a<1", "The candidate inference uses only scalar covariance, not the full length-space and pathwise Weyl axioms"],
+      "domain": "analysis",
+      "source": {
+        "source_id": "owner-own-work:w520:p0297-snowflake-obstruction",
+        "url": "file:///~/brain_workers/w520/ATTEMPT.md",
+        "revision": "w520-2026-10-10-draft",
+        "license": "owner-own-work (elementary campaign derivation; independently unchecked)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "thick-point-tautology",
+      "to_key": "lqg-gap",
+      "kind": "semantic_association",
+      "rationale": "The profile card says 'this maximization does not evaluate xi'; the gap card says 'The exact function xi -> Q(xi) is the missing input'. The completed-square calculation explains why this proposed route does not supply that input."
+    },
+    {
+      "from_key": "snowflake-scope",
+      "to_key": "lqg-gap",
+      "kind": "semantic_association",
+      "rationale": "The snowflake card says 'scalar covariance preserves xi*d=gamma while changing d to d/a'; the gap card says 'Scalar scaling, KPZ identities or a subpower change of normalization alone do not evaluate it'. Both statements concern the insufficiency of reduced scalar data to identify the metric exponent."
+    },
+    {
+      "from_key": "lqg-gap",
+      "to_existing_logical": "math:probability.core:open-problem-p0297-exact-hausdorff-dimension-of-liouville-quantum-gravity",
+      "kind": "semantic_association",
+      "rationale": "The new gap card states 'The target is the deterministic number d_gamma=dim_H(C,D_h)'. The existing P0297 card states 'Determine the almost sure Hausdorff dimension d_gamma of the gamma-LQG metric for general gamma in (0,2)'. The new card identifies the unresolved normalization input for that exact target; existing endpoint verified by a read-only store query, recorded in reports/context_receipt.json."
+    },
+    {
+      "from_key": "snowflake-scope",
+      "to_existing_logical": "math:probability.core:attempt-p0297-exact-hausdorff-dimension-of-liouville-quantum-gravity",
+      "kind": "semantic_association",
+      "rationale": "The new snowflake card states 'scalar covariance preserves xi*d=gamma while changing d to d/a'. The existing attempt states 'It does not calculate xi for other parameters'. The countermodel explains the prior scalar obstruction by preserving the same product while changing metric dimension; it adds a cover argument and an explicit failure of the length axiom. Existing endpoint verified by a read-only store query, recorded in reports/context_receipt.json."
+    }
+  ]
+}

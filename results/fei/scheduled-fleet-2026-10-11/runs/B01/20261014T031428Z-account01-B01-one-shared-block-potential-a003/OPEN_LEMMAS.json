@@ -1,0 +1,25 @@
+{
+  "schema": "fei-open-lemmas/2",
+  "primary_packet_id": "A003",
+  "proved_bridge": {
+    "claim_id": "B01-ONE-SHARED-BLOCK-POTENTIAL-v1",
+    "statement": "For Boolean f(x,u), g(x,v) with disjoint private blocks, Phi(fg)<=Lambda_x(f)+Lambda_x(g), and E_x Phi(f|x)<=Lambda_x(f).",
+    "constant": 1,
+    "hypotheses": ["exactly one shared physical coordinate x", "otherwise disjoint private blocks"],
+    "tensor_admission": "Arbitrary private Boolean tensor factors are admitted without changing the constant.",
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW"
+  },
+  "refuted_weaker_route": {
+    "claim_id": "B05-OVERLAP-SINGLETON-PAYMENT-v1",
+    "statement": "Replace Lambda_x by Phi plus a fixed shared-pivotal multiplier.",
+    "status": "REFUTED_AND_INDEPENDENTLY_REVIEWED"
+  },
+  "minimal_open_lemma": {
+    "claim_id": "B01-NESTED-BLOCK-FIRST-REVELATION-v1",
+    "statement": "In every finite adaptive restriction hierarchy, assign each x-block to its first physical revelation so that the complete signed mismatch/KL plus block charge is at most A I+bU with absolute A and b<1, without reuse across descendants.",
+    "status": "OPEN",
+    "why_stronger_than_restatement": "It specifies a physical ownership rule, the exact local block, and a no-reuse condition; it implies GU' by a proved telescope.",
+    "mandatory_tests": ["rare shared majority gate", "addressing", "near tensor", "prime Boolean gates", "two nested reused coordinates"]
+  },
+  "full_fei_status": "OPEN"
+}

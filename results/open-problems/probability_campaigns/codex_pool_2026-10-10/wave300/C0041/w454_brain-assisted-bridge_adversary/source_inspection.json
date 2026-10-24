@@ -1,0 +1,183 @@
+{
+  "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl": [
+    "41:{\"admitted\": true, \"current_status\": \"no_resolution_found_in_documented_search\", \"dedup_key\": \"C0041\", \"historical_status\": \"source_says_open\", \"intake\": \"claude_20260907\", \"locator\": \"Open question 2.20, p. 24\", \"problem_id\": \"C0041\", \"recorded_at\": \"2026-09-07T06:38:45Z\", \"result_status\": \"attempted_unsolved\", \"schema\": \"probability-problem.v1\", \"source_id\": \"drewitz_ramirez_rwre_2014\", \"statement\": \"Let d >= 2 and the RWRE satisfy (UE) and (IID) and be transient in direction l. Is the walk necessarily ballistic in direction l?\", \"status_search\": \"Bounded search 2026-09-07: Guerra and Ramirez (arXiv 1809.02011, 'A proof of Sznitman's conjecture about ballistic RWRE') proved the equivalence of conditions (T) and (T'), which is Open question 3.28 of the source, NOT this question; no proof that transience implies ballisticity in d >= 2 was found.\", \"title\": \"Transience in a direction implies ballisticity for uniformly elliptic i.i.d. RWRE in d >= 2\", \"verification\": \"unreviewed\"}"
+  ],
+  "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl": [
+    "32:{\"attempt_id\": \"C0041-A001\", \"author\": \"claude-probability-1000-continue-0907\", \"independent_check\": \"\", \"key_identity\": \"\", \"method\": \"Try the d = 2 special structure: directional 0-1 law (Zerner-Merkl) plus the renewal structure.\", \"obstruction\": \"Integrability of the regeneration time is not implied by transience without a quantitative condition.\", \"problem_id\": \"C0041\", \"recorded_at\": \"2026-09-07T06:38:45Z\", \"result\": \"Under (IID)+(UE), transience in direction l gives the regeneration structure of Sznitman-Zerner with regeneration times tau_1; ballisticity is equivalent to E[tau_1 | D = infinity] < infinity. Transience only gives tau_1 < infinity a.s. The counterexamples to ballisticity under mere ellipticity (example 2.18 of the source, traps of Bolthausen-Sznitman-Zeitouni type) use environments with non-uniform ellipticity where the walk spends long times in traps; under (UE) the trap holding time in a region of diameter r is at most exponential in r, so a sub-ballistic walk would need traps of logarithmic size at density n^{-1} along its path, which for i.i.d. environments requires the local environment near a regeneration to have an atypical configuration of probability about e^{-c log n}... i.e. polynomially rare, and polynomially rare traps of logarithmic size are compatible with i.i.d. environments (they exist at density n^{-c}). So the obstruction is quantitative: whether the tail P(tau_1 > n) is at most n^{-1-eps} (integrable) or can be n^{-1+eps}. I could not exclude the heavy tail; the polynomial condition (P)_M of Berger-Drewitz-Ramirez is exactly the quantitative statement that rules it out, and the question is whether (P)_M follows from transience under (UE).\", \"schema\": \"probability-attempt.v1\", \"substantive\": true}"
+  ],
+  "store_tables": [
+    [
+      "schema_meta"
+    ],
+    [
+      "bundle_manifests"
+    ],
+    [
+      "nodes"
+    ],
+    [
+      "claims"
+    ],
+    [
+      "evidence"
+    ],
+    [
+      "evidence_receipts"
+    ],
+    [
+      "mistakes"
+    ],
+    [
+      "reflexes"
+    ],
+    [
+      "reflex_sources"
+    ],
+    [
+      "verification_events"
+    ],
+    [
+      "verification_event_evidence"
+    ],
+    [
+      "edges"
+    ],
+    [
+      "bundle_members"
+    ],
+    [
+      "claim_provenance"
+    ],
+    [
+      "edge_retractions"
+    ]
+  ],
+  "store_schema": {
+    "nodes": [
+      [
+        0,
+        "id",
+        "TEXT",
+        0,
+        null,
+        1
+      ],
+      [
+        1,
+        "kind",
+        "TEXT",
+        1,
+        null,
+        0
+      ],
+      [
+        2,
+        "title",
+        "TEXT",
+        1,
+        null,
+        0
+      ],
+      [
+        3,
+        "body",
+        "TEXT",
+        1,
+        null,
+        0
+      ],
+      [
+        4,
+        "metadata_json",
+        "TEXT",
+        1,
+        null,
+        0
+      ],
+      [
+        5,
+        "digest",
+        "TEXT",
+        1,
+        null,
+        0
+      ],
+      [
+        6,
+        "created_at",
+        "TEXT",
+        1,
+        null,
+        0
+      ]
+    ]
+  },
+  "new_preprint.pdf": {
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Directional-transience-implies-ballisticity-September-23-2026/paper.pdf",
+    "bytes": 709037
+  },
+  "DirectionalBallisticity.lean": {
+    "url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalBallisticity.lean",
+    "bytes": 3946
+  },
+  "DirectionalBallisticity.json": {
+    "url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalBallisticity.json",
+    "bytes": 370
+  },
+  "preprint_pages": 58,
+  "preprint_term_matches": [
+    {
+      "page": 3,
+      "terms": [
+        "Theorem 1.1",
+        "finite mean"
+      ]
+    },
+    {
+      "page": 4,
+      "terms": [
+        "Theorem 1.1",
+        "finite mean"
+      ]
+    },
+    {
+      "page": 5,
+      "terms": [
+        "Theorem 1.1"
+      ]
+    },
+    {
+      "page": 7,
+      "terms": [
+        "finite mean"
+      ]
+    },
+    {
+      "page": 12,
+      "terms": [
+        "integrability"
+      ]
+    },
+    {
+      "page": 50,
+      "terms": [
+        "integrability"
+      ]
+    },
+    {
+      "page": 57,
+      "terms": [
+        "Theorem 1.1",
+        "finite mean"
+      ]
+    }
+  ],
+  "selected_preprint_pages": [
+    "1",
+    "3",
+    "4",
+    "5",
+    "7",
+    "12"
+  ]
+}

@@ -1,0 +1,11 @@
+# P0110 statement for the independent adversary
+
+Primary source: Auffinger, Damron and Hanson, *50 years of first passage percolation*, arXiv:1511.03262v2, Question 22, printed p. 88 (PDF p. 89), following equation (4.19). The problem asks for an iid undirected nearest-neighbor FPP passage-time distribution for which the KPZ exponent relation is established. The campaign adds that the law is nondegenerate and the exponents are well-defined. This is an existence request for a law; it does not require proving the two-dimensional values 1/3 and 2/3 for every law.
+
+Precise sufficient interpretation: choose d >= 2 and a nondegenerate nonnegative iid edge law on Z^d satisfying the hypotheses of Chatterjee's Theorem 1.1 (arXiv:1105.4566v3). Let T(0,v) be the unrestricted undirected passage time and D(0,v) the largest Euclidean distance of the unique geodesic from the segment [0,v]. For a continuous law the geodesic is unique almost surely. All endpoint suprema and infima below range over ALL nonzero lattice v, with |v| Euclidean, not just v = n e_1.
+
+Define chi_a as the threshold such that for each a > chi_a some alpha > 0 gives sup_v E exp(alpha |T(0,v)-ET(0,v)| / |v|^a) < infinity. Define xi_a using D(0,v) in place of the absolute centered passage time. Define chi_b as the threshold such that for every b < chi_b, Var T(0,v) >= c_b |v|^(2b) for all sufficiently large |v|. Define xi_b by ED(0,v) >= c_b |v|^b on the same endpoint range. The large-endpoint cutoff follows Chatterjee's original definition; it avoids imposing positivity at finitely many special short endpoints.
+
+The sufficient completion is to prove chi_a = chi_b = chi and xi_a = xi_b = xi for ONE qualifying law. Chatterjee's existing conditional theorem then yields chi = 2 xi - 1. It does not supply the two equalities. A proposed concrete law for further work is Uniform[1,2], which is continuous, nondegenerate, nearly gamma, and has all exponential moments.
+
+Current openness as of 2026-10-10: UNKNOWN. The historical source calls it open; the recent continuum variance result arXiv:2604.01214 does not establish this iid lattice existence target. No novelty or success claim is made. This packet contains only the target and definitions so the adversary can start independently.

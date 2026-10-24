@@ -1,0 +1,65 @@
+{
+  "target": "P0003",
+  "worker": "w406",
+  "current_openness": "UNKNOWN",
+  "exact_source_question_recovered": true,
+  "operational_theorem_statement_complete": false,
+  "primary_target": {
+    "author": "Geoffrey R. Grimmett",
+    "title": "Selected problems in probability theory",
+    "url": "https://arxiv.org/abs/2205.07318",
+    "author_pdf": "https://www.statslab.cam.ac.uk/~grg/papers/cb2.pdf",
+    "locator": "Question 2.2, PDF p. 3",
+    "statement_in_own_words": "Does a suitable rescaling of a uniform n-step self-avoiding walk rooted at the origin of the hexagonal lattice converge weakly to SLE(8/3) as n tends to infinity?",
+    "quote": "uniformly distributed n-step SAW from the origin",
+    "specified": [
+      "deterministic hexagonal lattice",
+      "root at origin",
+      "uniform fixed number of steps",
+      "weak convergence",
+      "SLE parameter 8/3"
+    ],
+    "unspecified": [
+      "rescaling constants and path representation",
+      "path topology and time parameter",
+      "precise finite-length SLE variant"
+    ]
+  },
+  "related_chordal_variant": {
+    "url": "https://arxiv.org/abs/1007.0575",
+    "revision": "v2, 2011-06-27",
+    "locator": "Section 4, Conjectures 1--2; Definition 1 and Lemma 1",
+    "ensemble": "critical fugacity, paths between two prescribed boundary endpoints in a domain",
+    "relation_to_original": "Related formulation; no ensemble/endpoint-conditioning transfer theorem established here"
+  },
+  "source_checks": [
+    {
+      "url": "https://arxiv.org/abs/1608.00956",
+      "scope": "Random quadrangulations and LQG; different geometry from deterministic honeycomb target"
+    },
+    {
+      "url": "https://arxiv.org/html/2606.00945v1",
+      "scope": "2026 survey says SAW conformal invariance unknown; its proved Ising/percolation transfers do not certify this SAW limit"
+    }
+  ],
+  "owner_solved_retired_check": {
+    "complete": false,
+    "bounded_reads": [
+      "2026-09-07 ranking P0003 attempted_un",
+      "raw rank-sheet P0003 finite-prefix attempt",
+      "Lean annotated P0003 row",
+      "targeted H/I exact-ID text search",
+      "canonical P0003 prior-attempt and open-problem cards"
+    ],
+    "conclusion": "No proof found in these specific reads; not an exhaustive owner-work audit"
+  },
+  "paired_proof_read": true,
+  "independent_artifact_before_paired_proof": "INDEPENDENT_OBSTRUCTION.md",
+  "brain_nodes": {
+    "target": "math:probability.core:open-problem-p0003-hexagonal-self-avoiding-walk-scaling-limit",
+    "prior_attempt": "math:probability.core:attempt-p0003-hexagonal-self-avoiding-walk-scaling-limit",
+    "observable_attempt": "math:probability.percolation:attempt-c0095-convergence-of-the-holomorphic-observable-of-the-honeycomb-self-avoidi"
+  },
+  "reviewer": "w407 pending",
+  "novelty_claim": false
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "claim_id": "A080-F6-HIGH-ERASURE-RARE-ADMISSION-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "Let h be the Boolean sign gate on six uniform physical inputs negative at binary indices {0,1,2,4,8,16,32,6,17,40}, with zero bits encoding +1. Define g0=h, g1=h(g0^6), g2=h((-g1)^6), and g3=h(g2^6), each substitution on six identical disjoint copies. Then g3 is an actual 1296-bit transitive Boolean function with 0<p_min(g3)<1/16 and E(g3)>669/200, where E is the minimum relevant-coordinate conditional Fourier erasure entropy divided by its physical influence, in bits. Both 7776-bit children h(g3^6) and h((-g3)^6) have E<669/200, and both corresponding signed recentered reserves are strictly negative at every physical coordinate. Hence common-sign six-bit admission does not preserve the fixed threshold 669/200 even on high-E actual cores. Moreover, for any actual core with minority probability 0<s<=1/16, either common output orientation in this substitution gives 0<s_next<=12s^2<=(3/4)s, so this rare bias sector is absorbing under every future sign sequence.",
+    "hypotheses": [
+      "Uniform independent physical inputs; actual sign outputs; entropies in bits",
+      "Six identical disjoint copies at each substitution; only one common output sign chosen for all six copies",
+      "All relevant physical coordinates included; E excludes zero-influence coordinates",
+      "No asserted unbounded H/I, arbitrary-block-sign policy, larger fixed-threshold failure, or all-depth entropy payment"
+    ],
+    "statement_sha256": "0130f9b215cfedda0bc326a24c33ba62fcf80e3ccb99177b659c36492acc704b",
+    "contributors": [
+      "A080"
+    ],
+    "proof_source": [
+      "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T005622Z-account05-A080-universal-counterexample-standard\\DERIVATION.md",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T005622Z-account05-A080-universal-counterexample-standard\\code\\check.py",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T005622Z-account05-A080-universal-counterexample-standard\\out\\VALIDATION.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T005622Z-account05-A080-universal-counterexample-standard\\out\\CERTIFICATE_SUMMARY.json"
+    ],
+    "proof_dependencies": [
+      "Integer Walsh/edge identities for the actual h truth table",
+      "Signed paired-row disjoint composition and full hierarchical entropy identity (independently derived here)",
+      "Positive atanh-series logarithm remainder and exact rational endpoint comparisons",
+      "Explicit alpha polynomial and elementary rare-sector bounds"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A080 (self)",
+        "kind": "Analytic reconstruction plus actual conditional-section/physical-edge arithmetic; exact finite circuit certificate, pilot and full pass",
+        "result": "PASS; external independent review pending"
+      },
+      {
+        "reviewer": "A074",
+        "kind": "Independent binary multilinear Moebius representation, different positive logarithm series, direct seed character/edge sums,48 exact automorphisms and analytic absorbing-map proof",
+        "result": "ACCEPT at original scope:503 exact checks; all6 actual circuit states and terminal entropy/Cp reproduced; full FEI remains OPEN",
+        "artifacts": [
+          "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261014T030615Z-account05-A074-independent-reproducer\\INDEPENDENT_PROOF.md",
+          "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261014T030615Z-account05-A074-independent-reproducer\\out\\VALIDATION.json",
+          "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261014T030615Z-account05-A074-independent-reproducer\\out\\SOURCE_COMPARISON.json"
+        ],
+        "reviewed_at": "2026-10-14T03:18:16.762962+00:00"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED",
+    "supersedes": [],
+    "refutes": [
+      "Candidate extension: for every actual high-E core E(g)>=K6 some common output sign makes E(h(g^6))>=E(g)",
+      "Candidate fixed-threshold implication at K=669/200: E(g)>K implies E(h((sigma*g)^6))>K for some common sigma",
+      "Candidate exclusion: every actual core with E>=K6 has p_min>=1/16"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A071",
+      "A072",
+      "A075",
+      "A084",
+      "A089",
+      "A074",
+      "A092",
+      "B16 lead",
+      "B20"
+    ]
+  }
+]

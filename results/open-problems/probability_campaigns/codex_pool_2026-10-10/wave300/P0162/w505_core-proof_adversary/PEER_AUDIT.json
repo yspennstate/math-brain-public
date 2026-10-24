@@ -1,0 +1,23 @@
+{
+  "target": "P0162",
+  "prover": "w504",
+  "adversary": "w505",
+  "referee": "w506",
+  "independent_checkpoint": "ATTEMPT.md saved before paired proof read",
+  "audited_snapshot": "W504_PROOF_SNAPSHOT.md",
+  "claims_audited": [
+    "w504-P0162-C001",
+    "w504-P0162-C002",
+    "w504-P0162-C003",
+    "w504-P0162-C004",
+    "w504-P0162-C005"
+  ],
+  "verdict": "KEEP mathematical conclusions; FIX harmless control-block sign sentence",
+  "details": "AUDIT_W504.md",
+  "patch": "patches/01_w504_control_signs.diff",
+  "single_hardest_gap": "For all Boolean f with max_i Inf_i<1/16, uniformly choose some positive-influence i with Delta_i<=K_0 Inf_i; no K_0 proof supplied.",
+  "independent_review_of_w505_obstruction": "KEEP by w506, receipt P0162-REVIEW-W505-004",
+  "next": "Attempt the fixed-tau suitable-coordinate lemma; preserve its unproved status.",
+  "correction_state": "w504 PROOF.md now states phase -2t*(-1)^(indicator z in U); w506 records corrected w504 bundle_003.json. Historical patch retained; do not reapply to corrected text.",
+  "correction_evidence": "w504/PROOF.md:74; w506/REVIEW_PACKET.md; P0162-REVIEW-SIGN-FIX"
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260922T145319Z-qform-B18-a01-r12",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_at_start": "da11c9feef04e1d9353986f6417b2128b260cdea",
+  "fresh_control_recheck_commit": "4bcef1d2172af8d37989c2ba3a86c1748a8ec1c1",
+  "fresh_correction_recheck_commit": "b017826fabca7bc3b854b185c85e1d386ccdbbc5",
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "branch": "master",
+    "commit": "af33ca7715dcdf248d4bb4732ee533a1f47b253b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260922T145319Z-qform-B18-a01-r12/REPORT.md",
+    "blob": "5cc348e5743d8dd74a558886332b492f24a74fb7"
+  },
+  "primary_external_source": {
+    "authors": "Galyna Livshyts; Grigoris Paouris; Peter Pivovarov",
+    "title": "On sharp bounds for marginal densities of product measures",
+    "source": "arXiv:1507.07949, Theorem 1.1",
+    "used_fact": "cap-one product law: every k-dimensional orthogonal marginal has density at most 2^(k/2); k=1 gives sqrt(2)"
+  },
+  "partner_applied": {
+    "worker": "account02/B18",
+    "run_id": "20260922T143051Z-account02-B18-qform-r11",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9147722aa884488601e7c039c6de5b0e0cdb77af",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260922T143051Z-account02-B18-qform-r11/REPORT.md",
+    "claim": "QFORM-PHYSICAL-DEFINITE-2X2-v1",
+    "actual_application": "scaled to independent marginals with caps M1,M2, yielding pi*M1*M2/sqrt(|det B|)"
+  },
+  "mathematical_change": {
+    "claim_id": "QFORM-LPP-TWO-BANK-DEFINITE-v1",
+    "status": "PROVED_SUPPORTING_TARGET_LEVEL_BRANCH",
+    "statement": "For disjoint physical banks I,J,K, if all dependence on I,J factors through independent projections Y=<u,X_I>, Z=<v,X_J> and their 2x2 quadratic matrix B is definite, then ||p_Q||_infinity <= 2*pi/sqrt(|det B|); one singleton bank improves sqrt(2) factor; diagonal B also gives a continuous representative.",
+    "concrete_application": "For A_m=[1] direct_sum J_m/m direct_sum (-J_m/m), ||p_Q||_infinity <= pi*sqrt(2) for arbitrary independent cap-one inputs, with continuous density."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "unpaid_implication": "From only three eigenvalues with absolute value at least one, derive an exhaustive product-preserving bank/diffuse/cross aggregation; current two-bank factorization is not forced by the spectral hypothesis.",
+  "next_recipient": "account01/B19 or current QFORM proof-assembly worker",
+  "privacy_review": "manual changed-file allowlist review only; mathematical text contains no credentials, scheduler IDs, machine paths, unrelated private data, or public-release action"
+}

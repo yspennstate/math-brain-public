@@ -1,0 +1,77 @@
+{
+  "worker": "w400",
+  "target": "P0003",
+  "checked_date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "primary_statement": {
+    "source_id": "arxiv:2205.07318v1",
+    "url": "https://arxiv.org/pdf/2205.07318",
+    "author": "Geoffrey R. Grimmett",
+    "title": "Selected problems in probability theory",
+    "locator": "Question 2.2, printed page 3 (PDF index 2)",
+    "statement_in_own_words": "Choose uniformly among n-step vertex-self-avoiding paths on the hexagonal lattice starting at the origin, with no prescribed endpoint. The question asks whether their suitably rescaled curves converge weakly to SLE with parameter 8/3.",
+    "short_source_quote": "a uniformly distributed n-step SAW from the origin",
+    "unspecified_in_source": [
+      "Exact spatial normalization",
+      "Parametrization or curve topology",
+      "Which SLE variant and stopping rule represent the finite free-endpoint curve"
+    ],
+    "scope_decision": "Do not silently substitute the critical variable-length boundary-to-boundary conjecture. The present work proves elementary conditional identities and explicit obstructions to that substitution, not the full scaling conjecture.",
+    "proof_status": "question in the primary source; current openness UNKNOWN"
+  },
+  "established_source_results": [
+    {
+      "source_id": "arxiv:1007.0575v2",
+      "locator": "Theorem 1",
+      "result": "The honeycomb connective constant is sqrt(2+sqrt(2)); this identifies x_c, not a scaling-limit theorem."
+    },
+    {
+      "source_id": "arxiv:math/0209343v2",
+      "url": "https://arxiv.org/pdf/math/0209343",
+      "locator": "Introduction and Theorem 6.1",
+      "result": "SLE(8/3) has chordal restriction with avoidance exponent 5/8; within the chordal restriction framework it is the only random simple restriction curve. The SAW limit must first meet the framework's support and restriction assumptions."
+    }
+  ],
+  "current_status_checks": [
+    {
+      "source": "https://arxiv.org/abs/2606.00945",
+      "checked": "Latest v2 title and abstract",
+      "finding": "The June 2026 revision concerns Ising and percolation and says the SAW discussion was removed; it does not verify a honeycomb SAW scaling-limit proof."
+    },
+    {
+      "source": "https://raw.githubusercontent.com/openai/math/main/lean/docs/237.md",
+      "checked": "Current primary repository scope document",
+      "finding": "The document reports recent supporting summability, free-energy and strip-mass results. No actual theorem receipt or trusted-axiom audit was performed here. It does not itself establish convergence of full planar SAW traces to SLE(8/3)."
+    }
+  ],
+  "local_recovery": {
+    "ranking": "RANKING_2026-09-07.csv line 547: tier 5, attempted_un; not a current-status receipt.",
+    "team_o": "Targeted TEAM_BOARD grep found related C0095/C0096 lanes, not an exact P0003 row.",
+    "prior_attempts": "Read the exact prior P0003 attempt from the live store in read-only mode: finite-domain conditional law with the tip retained, explicitly no tightness or conformal-invariance conclusion, and fixed remaining length distinguished. Exact P0003 grep in named H/I attempt directories returned no match; this is not evidence that no owner solution exists.",
+    "lean": "The named annotated ranking repeats attempted_un; no actual P0003 theorem/axiom receipt recovered.",
+    "math_store": "STORE_BEFORE.json records the exact live P0003 problem and prior-attempt rows from a read-only connection. The problem statement agrees with Grimmett Question 2.2.",
+    "paired_proof": "Read w399 STATEMENT_FOR_ADVERSARY.md, APPROACH_DISTINCT.md and three named lemma files after independent derivations were saved. Audited actual derivations, not another review.",
+    "owner_solved_retired": "No verified complete owner solution/retirement receipt recovered by the authorized targeted checks; current openness therefore remains UNKNOWN."
+  },
+  "formal_check_receipt": null,
+  "independent_review": "Requested w401 by mesh msg-36273611b9; pending independent proof check.",
+  "related_chordal_statement": {
+    "source_id": "arxiv:1007.0575v2",
+    "url": "https://arxiv.org/pdf/1007.0575",
+    "authors": [
+      "Hugo Duminil-Copin",
+      "Stanislav Smirnov"
+    ],
+    "locator": "Section 4, Conjecture 1, printed page 9; preceding ensemble definition",
+    "statement_in_own_words": "In a proper simply connected planar domain Omega with distinct marked boundary points a,b, approximate by the mesh-delta honeycomb domain and marked endpoints. Give each a-to-b self-avoiding path staying in the discrete domain weight x_c raised to its length, normalized by the partition function. The conjecture asserts that these curve laws converge to chordal SLE with kappa=8/3 from a to b as delta tends to zero.",
+    "fugacity": "x_c=1/sqrt(2+sqrt(2))",
+    "length_convention": "The source introduces mid-edge walks with length equal to the number of visited honeycomb vertices; its conjecture describes closest discrete boundary endpoints. Any vertex/edge conversion must fix the endpoint convention explicitly.",
+    "source_generalities_not_resolved": [
+      "A largest finite subdomain of an unbounded domain is not literal without an exhaustion convention.",
+      "The cited conjecture does not spell out convergence topology or the boundary approximation needed for all nonsmooth domains."
+    ],
+    "working_scope": "For the present audit use a bounded Jordan domain, boundary smooth near the distinct marked endpoints, consistent honeycomb boundary ports and polygonal traces. Use the usual uniform curve metric modulo increasing reparametrizations. This is an explicit working convention, not a claimed verbatim theorem from the source.",
+    "proof_status": "conjecture in this primary source"
+  }
+}

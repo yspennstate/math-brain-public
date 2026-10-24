@@ -1,0 +1,17 @@
+# C0041 independent route, w447
+
+2026-10-10. Initial route committed before reading peer proofs or the newly found full claimed solution. Source statement is in STATEMENT_FOR_ADVERSARY.md. Current openness is UNKNOWN; no novelty claim.
+
+Proposed method: deterministic escape geometry followed by a regeneration-clock decomposition. For a uniformly elliptic nearest-neighbor kernel, an arbitrary set with escape radius r has a conditional chance at least kappa^r of exit in the next r steps. Prove the resulting tail by the tower property over actual stopping-time blocks. No independence of path segments is needed. Convert finite cardinality into an upper bound for escape radius using lattice balls, and record the resulting minimum volume for a set whose quenched exit time is large.
+
+Then separate long regeneration intervals into localized residence and travel/return between regions. The target is an integrable annealed tail for the regeneration clock, rather than a renormalization proof of (T), (T'), or a polynomial slab criterion. The initial estimate controls continuous residence only. It does not control total occupation after repeated returns, and iid site rows do not remain unconditioned after discovery or regeneration conditioning.
+
+Hardest remaining gap, recorded at the start: derive a summable bound for time spent traveling and repeatedly returning between traps, or a justified iid cost bound for the adaptively selected regions, from directional transience alone. Uniform ellipticity and finite escape estimates cannot by themselves supply this bound.
+
+Prior-attempt digest: C0041-A001 in the September 7 intake used the two-dimensional zero-one law and regeneration structure. It stopped at finite-mean regeneration and mentioned exponential finite-trap exit times. This route does not repeat that zero-one calculation or attempt to prove a slab criterion. Its main additional reduction is the clock-to-exit-count equivalence for NON-stopping regeneration horizons, proved in LEMMA_CLOCK_TO_COUNT.md. Escape radius replaces a vague diameter assertion, and LEMMA_RETURN_OBSTRUCTION.md demonstrates why residence bounds do not give uniform occupation bounds even within the full C0041 hypotheses. Targeted searches of the named H/I attempt folders and Lean folder will be logged separately; absence of an exact-ID match is not a global solved-status check.
+
+Substantive attempt and current boundary: choose fixed-size balls centered at successive stopping-time exits, apply ER to obtain a uniform conditional exponential moment for each residence episode, and apply the tower property to the sum. CC shows finite mean of the regeneration clock is equivalent to finite mean of its number of ball-exit episodes, even under a global no-backtracking conditioning event. This avoids pretending regeneration is a stopping time. The skeleton can return to previously visited balls; its environments are overlapping and biased by discovery. An iid-renewal assertion for those episodes would be unsupported.
+
+Single hardest remaining gap, sharpened: from spatial iid, uniform ellipticity and almost-sure directional transience, prove E[K_tau | no backtracking]<infinity for this ball-exit skeleton. No proof of that estimate has been found in this attempt. Almost-sure K_tau<infinity is insufficient. GO rules out a uniform shortcut based on bounded single-residence times.
+
+Review status: no independent keep; proposed results will be saved separately and sent to w449.

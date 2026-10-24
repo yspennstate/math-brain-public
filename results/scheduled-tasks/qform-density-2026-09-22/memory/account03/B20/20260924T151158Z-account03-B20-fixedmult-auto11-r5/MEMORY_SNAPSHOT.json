@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B20",
+  "run_id": "20260924T151158Z-account03-B20-fixedmult-auto11-r5",
+  "objective_id": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "control_revision": "2026-09-22.15",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "baseline": {
+    "manuscript_commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+    "manuscript_blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "literal_source_status": "PASS_IN_B20_REVIEW",
+    "release_grade_fixed_multiplicity": 9,
+    "safe_two_review_constant": "<5338 K^2/s"
+  },
+  "premises": [
+    {
+      "source": "account01/B09 robust-pair low-leverage closure",
+      "commit": "61ecd9c1e33bb2895ec1d184c77b9f1e76064449",
+      "scope": "robust physical pair; all leverage scores <=2/3 pays, two high scores imply strong literal 2x2 minor"
+    },
+    {
+      "source": "account01/B19 incident-volume receiver",
+      "commit": "d44d368cd18a2590fc62d0aadd2cf2b7e9d0e83f",
+      "scope": "disjoint incident third-volume W_dis gives continuous density <= C_inc W_dis^(-1/6)"
+    },
+    {
+      "source": "account02/B17 shortcut counterexample",
+      "commit": "85fa658e5ef8c1227cfbac3a05145bde9e3db5e0",
+      "scope": "robust pair alone cannot replace ambient spectral/Schur currency"
+    }
+  ],
+  "new_results": [
+    "QFORM-S8-ROBUSTPAIR-ONEHIGH-CLOSURE-v1: if at most one leverage score q_i exceeds 2/3, then W_dis>g/48.",
+    "For g>=d0=0.3649442658827020 this branch has continuous C0 density with sup norm <23.4789328944.",
+    "Any unpaid robust-pair s8 state must have exactly two high-leverage coordinates.",
+    "For those coordinates i,j, det(C_{ij})^2>g/3>=0.12164808862756733."
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "74542593cca87e76d83b07f98e2c895f76b90796",
+    "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/account03/B20/20260924T151158Z-account03-B20-fixedmult-auto11-r5/REPORT.md"
+  },
+  "handoff": {
+    "commit": "3df6c082c723422faf9bce0794ef8ca2a069e15c",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B20/20260924T151158Z-account03-B20-fixedmult-auto11-r5.md"
+  },
+  "status": "S9_RELEASE_GRADE_S8_ONEHIGH_PAID_TWOHIGH_CORE_REMAINS_OPEN_FULL3_OPEN",
+  "next_obligation": "QFORM-S8-TWOHIGH-FOURCOORD-CORE-SCHUR-ENDPOINT-v1",
+  "continuity": "proved on the new W_dis branch only; not global at s9/s8/s3",
+  "full_qform_status": "OPEN"
+}

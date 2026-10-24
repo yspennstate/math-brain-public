@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B04",
+  "run_id": "20260922T191836Z-account02-B04-qform-r12",
+  "source_control_commit_start": "998fa139f9b6e06491c532274d45de25c1d8fd39",
+  "source_control_commit_refresh": "966c8e4c717695f573fe4742b10d3575577fb952",
+  "owner_control_revision": "2026-09-22.13",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "mathematical_result": {
+    "id": "QFORM-ONE-SIDED-BILINEAR-SQUARE-LP-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "statement": "If disjoint original-coordinate groups satisfy Q=a(Z+d(X_I,W))^2+r(X_I,W)+2 X_I^T B X_J+b(W)^T X_J+c(W), with a and B nonzero, no X_J quadratic self-term, and no Z-X_J coupling, then for every p>2, ||p_Q||_infinity <= 2p((p-1)/(p-2))^((p-1)/p)|a|^(-1/p)||B||_op^(-(p-1)/p).",
+    "p3_partner_endpoint": "||p_Q||_infinity <= 6*2^(2/3)|a|^(-1/3)||B||_op^(-2/3)",
+    "p11_over_4_endpoint": "||p_Q||_infinity <= (11/2)(7/3)^(7/11)|a|^(-4/11)||B||_op^(-7/11)",
+    "continuity_proved": false,
+    "full_target_proved": false
+  },
+  "new_auxiliary_result": {
+    "id": "QFORM-BILINEAR-BANK-LP-OPNORM-v1",
+    "statement": "For H=r(X_I)+2 X_I^T B X_J+b^T X_J and p>1, ||p_H||_p <= p*2^((p-1)/p)||B||_op^(-(p-1)/p), allowing arbitrary rank B and arbitrary measurable r on the conditioned bank."
+  },
+  "partner": {
+    "assigned": "account03/B04",
+    "result_applied": "QFORM-SQUARE-L32-v1 and one-dimensional product-projection density cap",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3fd5603c1e86cc028fb4330392f471c2f450cf39",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/B04-20260922T185416Z-r16/REPORT.md"
+  },
+  "explicit_example": {
+    "dimension": 9,
+    "form": "A=[[1,0,0],[0,C,B],[0,B,0]] with Walsh-diagonal B spectrum (6/5,3/5,1/20,1/50) and C spectrum (1/10,-1/12,1/20,-1/25)",
+    "target_certificate": "eigenvalues include (1+sqrt(577))/20, 1, (1-sqrt(577))/20, hence at least three have modulus >=1",
+    "density_bound": "(11/2)(35/18)^(7/11)=8.397338672007386"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "branch": "master",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260922T191836Z-account02-B04-qform-r12/REPORT.md",
+    "report_commit": "643e1fe8ee3abbe9af7e154d485947e3e4ea055d",
+    "report_blob": "adb62fd38806f59b64ea1abd303bfe2719e8712e",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260922T191836Z-account02-B04-qform-r12/CHECK.py",
+    "checker_commit": "f6b9fc0576b6b24790dfe18ba4b0b02cfae5c018",
+    "output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260922T191836Z-account02-B04-qform-r12/CHECK_OUTPUT.txt",
+    "output_commit": "7ccd7cc6da62d510e5e9d47adfccc1c2a4c489bd",
+    "output_blob": "278994bc8e6a8216adf580f9bc82716d5d364aaa",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B04/20260922T191836Z-account02-B04-qform-r12.md",
+    "handoff_commit": "966c8e4c717695f573fe4742b10d3575577fb952",
+    "handoff_blob": "bf779708e7b38cb86d26307e74aae48507501525"
+  },
+  "unresolved_implication": "QFORM-TWO-SIDED-QUADRATIC-LEAKAGE-ROUTING-v1: expose a quantitatively nontrivial product-preserving cross bank with one quadratically clean side, or absorb/aggregate essential quadratic leakage on both sides without a vanishing local-minor payment and without discarding extra spectrum.",
+  "next_step": "Attack two-sided quadratic leakage by random/product-preserving bank partition and Schur/ridge alternatives; use the new operator-norm endpoint rather than selecting a rank-one or single-entry cross packet.",
+  "full_target_status": "OPEN"
+}

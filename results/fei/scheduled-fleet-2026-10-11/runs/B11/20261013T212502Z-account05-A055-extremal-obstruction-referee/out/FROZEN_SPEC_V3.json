@@ -1,0 +1,52 @@
+{
+  "helper_version": "A055-rare-descent-v3",
+  "family": "All labelled nonconstant Boolean cores through n=3; two fixed balanced cores z*(3-bit point defect)^m, m=1,2; activations on r identical fresh point controls; symbolic balanced tensor sequence for m=1,2,4,8,16,32",
+  "domain": {
+    "small_n": [
+      1,
+      2,
+      3
+    ],
+    "balanced_fixture_m": [
+      1,
+      2
+    ],
+    "symbolic_m": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "small_core_r": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "balanced_fixture_r": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      16,
+      32
+    ]
+  },
+  "case_count": {
+    "small_nonconstant_cores": 270,
+    "balanced_fixtures": 2,
+    "compressed_roots": 1096,
+    "symbolic_sequence_records": 6
+  },
+  "symmetry": "Every core block is labelled; control blocks reduced only by permutation symmetry of the fresh point-activation controls, hence represented by their cardinality k. Full physical block excluded.",
+  "arithmetic": "Integer FWHT and independent physical edges; Fraction coefficients, logarithms retained as exact rational arguments; 24-term range-reduced rational atanh enclosures with proved error; finite phi enclosed by minimum of all candidate intervals, no floating ordering used as a proof. Powers of two collected exactly before enclosing rational residual log arguments near one; see REPAIR_NOTE.md.",
+  "memory_estimate_MB": 90,
+  "max_runtime_seconds": 600,
+  "pilot": "Two explicit cores (3-bit point defect and its fresh-sign balancing), r=1,2,4; at most 55 helper seconds. Full domain fixed in advance; no automatic n increase.",
+  "direct_replay": "All 270 nonconstant cores at r=1,2; direct child entropy for every physical block and spectrum/physical-edge singleton pairing; plus both fixed balanced cores at r=1. Separate frozen checker version and no added dimensions.",
+  "reason_for_manual_domain_change": "The v2 sweep was explicitly stopped after mixed-bias exact interval denominators grew; analytic all-r proof already saved. Preserve bounded coverage, omit repeated large-r checks on all small cores."
+}

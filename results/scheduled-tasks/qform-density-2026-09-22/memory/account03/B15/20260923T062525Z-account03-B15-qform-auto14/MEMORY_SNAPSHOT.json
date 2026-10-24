@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260923T062525Z-account03-B15-qform-auto14",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "source_control": {
+    "initial_commit": "8e1b3d91be9d84da04ad420059b68c464dc65a1b",
+    "prepublication_commit": "5d515c276421ebeaf01a00e5adf30337e521a424",
+    "owner_control_revision": "2026-09-22.15",
+    "sole_target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES",
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ad7e5daa036cc8330b1432285ad40fec611d37dd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T211430Z-account04-B15-heat-regularity-r4/REPORT.md",
+    "result": "For every probability law mu, sup_{epsilon>0,y}(mu*gamma_epsilon)(y) equals the extended L-infinity density height.",
+    "actual_application": "Combined with scalar homogeneity to prove C_* = sup_{rank A>=3} s3(A) sup_y E gamma_1(Q_A-y) = sup_A s3(A)||p_{Q_A+G}||_infinity."
+  },
+  "new_result": {
+    "status": "ESSENTIAL_STEP_APPLIED_EXACT_ONE_SCALE_KERNEL_NORMAL_FORM_FULL_TARGET_OPEN",
+    "statement": "For every bounded nonnegative probability density K, the optimal target constant C_* equals sup_{rank(A)>=3} s3(A) sup_y E K(y-X^T A X), in the extended sense.",
+    "unit_interval_equivalence": "C_* = sup_A s3(A) sup_a P(X^T A X in [a,a+1]).",
+    "tent_equivalence": "C_* = sup_A s3(A) sup_y E(1-|X^T A X-y|)_+, with absolutely integrable sinc-squared Fourier multiplier.",
+    "counterexample_normal_form": "If C_*=infinity, a fixed-unit-window witness sequence exists with s3(A_m)->infinity.",
+    "absolute_continuity_implication": "A universal unit-window bound C/s3(A) scales to P(Q_A in I)<=C|I|/s3(A) for every interval, hence yields a bounded density without continuity assumptions."
+  },
+  "regularity_separation": {
+    "central_height": "Open; exactly equivalent to one fixed-kernel spectral-gain inequality.",
+    "raw_continuity": "Separate stronger issue; shared CLAIMS currently remains OPEN.",
+    "source_reported_fixed_matrix_C0": {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "9b8bb7e84811978a2c46c7bb5ec50f2570dbc056",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T200544Z-account02-B15-qform-r11/REPORT.md"
+    },
+    "unit_gaussian_observable": "Always analytic with law-uniform derivative bounds; exact conjecture is its 1/s3(A) height decay."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d675c22df402975472964de0013f482046c44299",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T062525Z-account03-B15-qform-auto14/REPORT.md",
+    "read_back": true
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B15/20260923T062525Z-account03-B15-qform-auto14.md",
+  "unresolved_implication": "For one fixed proof-friendly probability kernel K, prove sup_y E K(X^TAX-y) <= C/s3(A) uniformly over all rank>=3 symmetric A and all cap-one independent product laws.",
+  "next_step": "Attack the fixed-scale smoothed expectation using original-coordinate grouped/ridge product structure, extracting the linear spectral gain without reciprocal tiny-minor costs or pointwise phase decay.",
+  "permissions_and_delivery": {
+    "scheduler_mutation": false,
+    "notification_mutation": false,
+    "email": false,
+    "public_release": false,
+    "cross_account_authentication": false,
+    "paid_model_or_api": false
+  }
+}

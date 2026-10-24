@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260924T071843Z-account03-B06-qform-r53",
+  "control_commit_start": "1ad7e714584d8283e6ebb5a848092c9c31ec75df",
+  "control_commit_final_refresh": "05b9b37ec6fa105e9dcc1aab8e008c41284489d5",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "correction_inbox_sha": "ba7aeac3d879f59da5ec8a12daad74ea85714465",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1",
+    "QFORM-HUBSTAR-FIBERL2-MIXEDNORM-UNIVERSAL-FALSE-v1"
+  ],
+  "predecessor": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8e9f088eb1496f376287e67731b7906818ccd703",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T062005Z-account03-B06-qform-r52/REPORT.md",
+    "premises_used": [
+      "QFORM-NORMAL-INNOVATION-COMPENSATED-CROSS-VOLUME-v1",
+      "QFORM-NORMAL-TANGENTIAL-ADJUGATE-SPLIT-v1",
+      "64/65 tangential collar description"
+    ]
+  },
+  "fresh_peer_input": {
+    "worker": "account02/B06",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/account02-B06-20260924T065158Z-auto11-r14/EARLY_CALC.md",
+    "application": "Consumed as a route obstruction: chi can tend to zero with fixed layer-0/1/2 mass; its strict target family instead has a uniformly invertible literal three-hub block and is paid by the existing physical-three determinant receiver."
+  },
+  "partner": {
+    "worker": "account04/B06",
+    "theorem": "QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b",
+    "application": "On the exact tangential diffuse two-frame subface at r=1/64, obtain ||g_off||_infinity<=256/|lambda_*| in the theorem's continuous C0 two-output off-fold scope."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-THREEHUB-FOURMINOR-DIAGONAL-COMPENSATION-v1",
+      "status": "PROVED_EXACT_ALGEBRAIC_IDENTITY",
+      "statement": "For A=[I_3 Z]^T B[I_3 Z]+diag(D_H,delta), F=B+D_H, the three-hub-plus-tail block satisfies det M_j=delta_j det F+z_j^T[(det F)D_H-D_H adj(F)D_H]z_j."
+    },
+    {
+      "id": "QFORM-HUBSINGULAR-FOURMINOR-BANK-v1",
+      "status": "PROVED_STRUCTURAL_BANK_IDENTITY",
+      "statement": "If det F=0 and rank F=2, with unit v in ker F, kappa_F=|pdet_*(F)| and omega=Z^T D_H v, then det M_j=-(pdet_*(F))omega_j^2 and sum_j|det M_j|=kappa_F||omega||^2; omega=0 iff (v,0) is a full-matrix null vector."
+    },
+    {
+      "id": "QFORM-HUBSINGULAR-HEAVY-FOURMINOR-PAYMENT-v1",
+      "status": "PROVED_SCOPED_FULL_SCALAR_DENSITY_BRANCH",
+      "statement": "If some omega_j^2>=||omega||^2/64, then ||p_Q||_infinity<263.043723[kappa_F||omega||^2]^(-1/4) by the completed physical-four determinant receiver."
+    },
+    {
+      "id": "QFORM-HUBSINGULAR-DIFFUSE-FRESH-SMOOTHER-v1",
+      "status": "PROVED_SUPPORTING_PRODUCT_RESOURCE",
+      "statement": "If max_j omega_j^2<||omega||^2/64, the normalized fresh tail statistic W_omega has a continuous C0 density with ||p_W||_infinity<=2 by one-dimensional product Fourier/Brascamp--Lieb."
+    }
+  ],
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5659cc902d288c63efcd6774ca8c9510d10c8a42",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T071843Z-account03-B06-qform-r53/",
+    "checker": "check_r53.py",
+    "checks": "CHECKS.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "082ae92d9cdb00791ea90c4316ed10919f0e32eb",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B06/20260924T071843Z-account03-B06-qform-r53.md"
+  },
+  "unresolved": [
+    "QFORM-HUBSINGULAR-DIFFUSE-BILINEAR-CURVED-RECEIVER-v1",
+    "near-singular but nonzero det F transition",
+    "rank F<=1 endpoint",
+    "zero actual physical pivot endpoint",
+    "rank Z<=1 lower-rank endpoint"
+  ],
+  "full_conjecture_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "GLOBAL_OPEN; HEAVY_FOURMINOR_SCALAR_BRANCH ESSENTIAL_BOUNDEDNESS_ONLY; DIFFUSE_FRESH_SMOOTHER AND PARTNER_TANGENTIAL_TWOOUTPUT BRANCH CONTINUOUS_C0",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "fei-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "focus_revision": "2026-10-14.1/GU-LASER-20261014",
+  "run_id": "20261014T054525Z-account01-B19-balanced-preconditioned-review-a094",
+  "stream": "B19",
+  "packet_id": "A094",
+  "packet_ids": ["A094"],
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "attempt_id": "B19-A094-B05-BALANCED-PRECONDITIONED-REVIEW-v1",
+  "method": "Independent source-level reconstruction of balancing relabelling, signed activation recurrence substitution, scalar calculus, physical restrictions, and disjoint-product closure.",
+  "bounded_objective": "Decide whether B05-A023-BALANCED-PRECONDITIONED-ACTIVATION-v1 yields the claimed dimension-free fresh/disjoint transfer and GU(15/4,3/4) proper-class endpoint without double-spent credit or circular leaves.",
+  "prior_status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+  "mathematical_delta": "Accepted the transfer without repair at its declared proper-class scope. The balancing character removes bias and arbitrary internal core structure with no dimension or depth loss. The class is not restriction-closed and does not yield universal GU.",
+  "deliverable_status": "COMPLETE_REVIEW_PACKAGE_DELIVERED_AND_VERIFIED",
+  "mathematical_status": "ONE_INDEPENDENT_ACCEPTANCE_PROPER_CLASS; UNIVERSAL_GU_OPEN; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "B05-A023-BALANCED-PRECONDITIONED-ACTIVATION-v1",
+    "B05-A023-ACTIVATION-SMR-v1 exact recurrence",
+    "U-universal blob 3b0636c653c7818368eeb204011c3e1ff21c234e"
+  ],
+  "claims_created_or_changed": [
+    "B19-A094-B05-BALANCED-PRECONDITIONED-REVIEW-v1"
+  ],
+  "source_artifacts": [
+    "B05 source bundle commit 6570405cfb7af9ff8510a545afbec601614b4729",
+    "B19 prior recurrence review commit 1eeac56ab636b111d2551f1f58c54fe8378dc8fa",
+    "GU focus blob 9448198701fbfe0cceb72bda7a6837ebd59704f9",
+    "U-universal blob 3b0636c653c7818368eeb204011c3e1ff21c234e"
+  ],
+  "verification": {
+    "command": "python3 REPRODUCE.py",
+    "status": "PASS",
+    "scalar_checks": 500001,
+    "boolean_cores_checked": 1302,
+    "transfer_identity_checks": 1302,
+    "physical_restriction_checks": 12404,
+    "product_additivity_checks": 256,
+    "arithmetic_scope": "Exact rational Walsh masses with binary64 logarithms; analytic theorem proved separately."
+  },
+  "retained_hypotheses": [
+    "Two fresh uniform inputs per activation",
+    "Disjoint product blocks",
+    "Already-paid child residual",
+    "No restriction closure through the balancing input"
+  ],
+  "next_consumers": ["A087", "A090", "A095", "A099", "B01", "B05", "B20"],
+  "next_action": "Independently test a reused-coordinate replacement against the accepted A025 degree-shift family, keeping the signed slice charge and both balancing descendants.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "No dimension-independent control for reused or overlapping balancing coordinates.",
+    "The y-restrictions A(q) and A(-q) leave the proved class."
+  ],
+  "delivery_status": {
+    "state": "DELIVERED_AND_EXACT_READBACK_VERIFIED",
+    "canonical": {
+      "bundle_head_observed": "cf2ac7ad3e9aad0d8a493763b84f6923ab916c3f",
+      "exact_files_verified": 10
+    },
+    "brain_mirror": {
+      "bundle_head_observed": "a61d4545b87e017fb1d65ed6a4d973aa33cbc34b",
+      "exact_files_verified": 10
+    },
+    "independent_review": "THIS_RUN_IS_FIRST_INDEPENDENT_REVIEW",
+    "native_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN",
+  "model": "Codex",
+  "reasoning_effort": "UNKNOWN"
+}

@@ -1,0 +1,16 @@
+PASS: exact polynomial identities and both allocation constants
+PASS: 120 exact Gaussian-rational determinant atom/derivative checks
+Supplementary floating-point diagnostics; these are not universal proofs.
+  diagonal                  max(H eig)= 8.81978287e-18 min(H eig)=-4 identity-error=8.82e-18 singular M
+  single_edge               max(H eig)= 2.02084855e-16 min(H eig)=-11.7047817 identity-error=1.78e-15 singular M
+  unequal_path              max(H eig)=-0.619726809 min(H eig)=-7.79220608 identity-error=8.88e-16 four-feature=2.49280550906
+  unequal_triangle          max(H eig)=-0.308998 min(H eig)=-4.15075908 identity-error=4.44e-16 four-feature=2.72520775317
+  equal_triangle            max(H eig)=-3.81332995 min(H eig)=-100.666695 identity-error=1.42e-14 four-feature=2.43751945709
+  near_boundary_unequal     max(H eig)=-0.000201984546 min(H eig)=-10016.034 identity-error=9.09e-13 four-feature=2.9965992266
+  near_boundary_path        max(H eig)=-3.90558955 min(H eig)=-62511.3255 identity-error=1.68e-12 four-feature=2.29271543197
+  near_boundary_balanced    max(H eig)=-3.98620734 min(H eig)=-500011.535 identity-error=1.46e-11 four-feature=2.24302208524
+  20,000 fixed-seed inputs: largest unequal budget = 0.353705226959
+    ordered masses = [0.01724749 0.12401101 0.12598919 0.23275231]
+  20,000 fixed-seed inputs: smallest four-feature value = 2.33910051422
+    r = [0.07911588 0.07212296 0.09861183]
+PASS: numerical diagnostics; analytic proof remains Sections 2–6 of the report

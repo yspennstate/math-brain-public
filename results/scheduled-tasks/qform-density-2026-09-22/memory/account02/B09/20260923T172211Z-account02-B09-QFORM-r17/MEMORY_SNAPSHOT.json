@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B09",
+  "run_id": "20260923T172211Z-account02-B09-QFORM-r17",
+  "status": "ESSENTIAL_STEP_APPLIED_GSTAR_ALIGNMENT_FULL_TARGET_OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e10b0ec769445d0f9baf57b0969c4dd4bf91ffe5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T172211Z-account02-B09-QFORM-r17/REPORT.md",
+    "blob": "3aa62ad53c957620325021a2048fdfeeaebededf"
+  },
+  "early_blob": "34788ee08bd5e57b915c0881664c80407986d663",
+  "handoff": {
+    "commit": "c02c09bd0fc2e09f4b89dd63a25ff57ca12f8024",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B09/20260923T172211Z-account02-B09-QFORM-r17.md",
+    "blob": "5da9bf10880809304d9eed41b08f908028ab9cbb"
+  },
+  "source_pins": {
+    "required_e5f": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "projected_crossing": "829192412f2a2d84e72b4bed91115fc5fab68401",
+    "partner_report_blob": "459b74538b549dc334eef21b09cb3d80257cc1d7"
+  },
+  "new_theorem": {
+    "id": "QFORM-RANK2-HUBSTAR-GSTAR-ALIGNMENT-v1",
+    "statement": "For rank-two physical hub/star A[H,I]=P C^T with P^TP=I2, G=C^TC, Z=C G^{-1/2}, row leverages ell_k, and partner aggregate G_*, if max ell_k<=1-delta then D=A[I,I]=Lambda+Z R Z^T+T with Lambda diagonal, R symmetric 2x2, and ||T||_F<=4 sqrt(G_*/(delta det G)). If max ell_k<1, G_*=0 iff T=0, i.e. D is diagonal plus aligned rank two.",
+    "row_identity": "Gamma_k^2=det(G)(1-ell_k)||e_k||^2",
+    "coloop_note": "ell_k=1 iff deleting physical row k drops the rank-two partner plane; at most two such rows."
+  },
+  "obstruction": {
+    "id": "QFORM-GSTAR-NOT-FORCED-BY-3EIG-v1",
+    "statement": "With two literal hubs, flat orthonormal u,v, cross scale 2, and D=uu^T-vv^T, all four active eigenvalues have modulus >1 while every whitened leaf leverage is 2/m and G_*=0. Adding hub edge epsilon preserves |lambda|>1 for |epsilon|<=1/2 by Weyl. This refutes only the structural implication that the target forces positive/universal G_*, not QFORM."
+  },
+  "applied_results": {
+    "mixed_hub": "For 2Xa<u,Y>+2Xb<v,Y>+lambda<w,Y>^2 with flat orthonormal u,v,w, pinned Theorem H gives ||p||_infty <= (5/3)2^(6/5)|lambda|^(-1/5) and the same linear interval bound.",
+    "partner": "For D=uu^T-vv^T+lambda ww^T at cross scale 2, G_*=16 lambda^2(1-3/m); for Walsh m>=32 the latest account03/B09 diffuse gate applies and gives ||p||_infty <5.278 |lambda|^(-1/3)(1-3/m)^(-1/6)."
+  },
+  "first_unpaid_implication": "QFORM-GSTARZERO-ALIGNED-HUBCORE-INTERPOLATION-v1",
+  "full_qform_status": "OPEN",
+  "valid_full_target_counterexample_found": false,
+  "telemetry": {
+    "reasoning_effort": "UNKNOWN",
+    "provider_thinking_usage": null,
+    "provider_thinking_seconds": null
+  }
+}

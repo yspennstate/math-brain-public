@@ -1,0 +1,68 @@
+--- a/~/math-brain-inbox/w392/bundle_001.json
++++ b/~/math-brain-inbox/w392/bundle_001.json
+@@ -0,0 +1,65 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w392",
++  "bundle_slug": "p0117-referee-scope-20261010",
++  "entries": [
++    {
++      "key": "p0117-thin-tube-referee-scope",
++      "namespace": "probability.fpp",
++      "logical_name": "p0117-thin-tube-referee-scope-2026-10-10",
++      "kind": "concept",
++      "title": "P0117 referee scope: independent thin-tube obstruction",
++      "statement": "Independent referee check on 2026-10-10: for iid finite nonnegative nonconstant nearest-neighbor edge weights on Z^2, w390's explicit high-slab and cheap-bypass construction proves that no injective ambient geodesic ray can eventually stay in a deterministic axis-aligned tube |y-y0|<=w(|x|) when w is nondecreasing and limsup w(n)/sqrt(log n)<1/sqrt(C), with C determined by two positive-probability weight thresholds as in the source proof. This is a partial theorem about confined rays. It does not exclude an unrestricted bigeodesic, since no valid step confines every bigeodesic to such a tube.",
++      "proof_text": null,
++      "assumptions": [
++        "iid finite nonnegative nonconstant edge weights on undirected nearest-neighbor Z^2",
++        "injective ambient geodesic rays",
++        "fixed deterministic nondecreasing tube width and integer center",
++        "C=2K log(1/p_h)+(K+4)log(1/p_l), K=1+4l/(h-l), p_l=P(t<=l)>0, p_h=P(t>=h)>0, 0<=l<h"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w392-p0117-referee-20261010:thin-tube-scope",
++        "url": "urn:owner-work:w392:p0117-referee-20261010",
++        "revision": "2026-10-10-review-packet-v1",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0117-source-status-2026",
++      "namespace": "probability.fpp",
++      "logical_name": "p0117-2026-primary-preprint-claim-unreviewed",
++      "kind": "concept",
++      "title": "P0117 source status: 2026 primary preprint claim",
++      "statement": "The 2015 Auffinger-Damron-Hanson survey asks in Question 31 whether geodesic lines exist. A September 24, 2026 primary preprint titled No bigeodesics in planar first-passage percolation explicitly claims simultaneous absence of all bigeodesics for iid nonnegative nonatomic Z^2 edge weights when the minimum of four independent weights has finite second moment. The theorem statement was checked on 2026-10-10, but its full proof was not audited in this referee packet. Therefore the 2026-09-07 attempted-unsolved ledger tag is stale as an openness claim; current proof acceptance remains unverified here.",
++      "proof_text": null,
++      "assumptions": [
++        "historical source-status record as of 2026-10-10",
++        "the preprint theorem statement has been read, not independently proved"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-w392-p0117-referee-20261010:source-status",
++        "url": "urn:owner-work:w392:p0117-source-status-20261010",
++        "revision": "2026-10-10-review-packet-v1",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "p0117-thin-tube-referee-scope",
++      "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
++      "kind": "semantic_association",
++      "rationale": "The reviewed thin-tube theorem is a partial, explicitly scoped result on the same FPP bigeodesic target; it does not prove that target."
++    },
++    {
++      "from_key": "p0117-source-status-2026",
++      "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
++      "kind": "semantic_association",
++      "rationale": "The historical preprint-status record corrects the dated target's implied current-open label without asserting proof acceptance."
++    }
++  ]
++}

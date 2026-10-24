@@ -1,0 +1,219 @@
+{
+  "META": {
+    "range": "1-45",
+    "hypotheses": "none",
+    "dependencies": "none",
+    "derivation": "LaTeX metadata/structure is nonmathematical except the abstract at L41.",
+    "downstream": "none"
+  },
+  "INTRO": {
+    "range": "46-77",
+    "hypotheses": "independent real coordinates with density cap K; A real symmetric; b,c arbitrary",
+    "dependencies": "definitions of singular values and scaling",
+    "derivation": "Checked theorem quantifiers, singular-value/eigenvalue equivalence for symmetric A, counterexamples for 1/2 directions, pivot outline and crossing-volume definitions.",
+    "downstream": "sets theorem scope and proof case split"
+  },
+  "F1": {
+    "range": "78-105",
+    "hypotheses": "standard Fourier convention; f in stated Lp classes",
+    "dependencies": "Plancherel, Fourier inversion, Gaussian integral",
+    "derivation": "Verified Fourier normalization, Gaussian representation/Fubini domination, power-envelope integral 2ap/(p-1), and density factor 1/(2π).",
+    "downstream": "all Fourier density estimates"
+  },
+  "F2": {
+    "range": "106-128",
+    "hypotheses": "Z arbitrary real random variable",
+    "dependencies": "F1 Gaussian identity; Gamma integral; Tonelli",
+    "derivation": "Recomputed Laplace representation of |z|^-1/2 and v-integral, obtaining 1/sqrt(2π); integrated min(1,u/|t|) against |t|^-1/2 to get 8 sqrt(u).",
+    "downstream": "negative half moments"
+  },
+  "COND": {
+    "range": "129-139",
+    "hypotheses": "U,V independent; conditional domination by g",
+    "dependencies": "Tonelli; Radon-Nikodym absolute continuity",
+    "derivation": "Integrated the conditional measure inequality over V; null Borel sets remain null and yield a density dominated a.e. by E g; integrated nonnegative test functions.",
+    "downstream": "all pivot conditional envelopes"
+  },
+  "WEYL": {
+    "range": "140-150",
+    "hypotheses": "matching matrix sizes; indicated rank/orthonormal columns",
+    "dependencies": "SVD best rank-j approximation",
+    "derivation": "Checked approximation-number proof of Lipschitz singular values, low-rank shift and orthogonal compression; L148 'Both' is grammar only.",
+    "downstream": "Schur limiting step and Section 6"
+  },
+  "SCHUR": {
+    "range": "151-162",
+    "hypotheses": "A symmetric block matrix; B invertible",
+    "dependencies": "block inverse; Cauchy interlacing; WEYL continuity",
+    "derivation": "For invertible A, lower-right block of A^-1 is S^-1 and interlacing compares eigenvalues outside ±1/t; perturb A,B by εI and pass ε→0 for singular A.",
+    "downstream": "spectral loss under pivots"
+  },
+  "GRAM": {
+    "range": "163-174",
+    "hypotheses": "finite matrices; Θ(H)>0 in part b",
+    "dependencies": "det(I+zMM^T); Cauchy-Binet; Gram Schur complement",
+    "derivation": "Verified elementary-symmetric/Gram-minor identity and residual Gram determinant after orthogonal projection.",
+    "downstream": "crossing-volume compiler"
+  },
+  "BL": {
+    "range": "175-207",
+    "hypotheses": "geometric frame sum c_i u_i u_i^T=I; c_i>0",
+    "dependencies": "heat equation; integration by parts; Fatou/monotone/dominated convergence",
+    "derivation": "Recomputed heat-flow differential identity, contraction inequality, Gaussian tail domination, τ→∞ normalization, τ↓0 Fatou step, and truncation to general h_i.",
+    "downstream": "product projection density"
+  },
+  "PROJ": {
+    "range": "208-230",
+    "hypotheses": "independent coordinates, each density ≤1; U orthonormal columns or B full row rank",
+    "dependencies": "BL; orthogonal coordinate change; linear Jacobian",
+    "derivation": "Derived U^T X density integral, β_i=|w_i|^2 frame, BL entropy bound e^{d/2}, and SVD scaling. L222 contains a false zero-β count; dropping all zero-β factors repairs it without changing the frame or constant.",
+    "downstream": "linear-form caps, decay compiler, pivot estimates"
+  },
+  "FPOWER": {
+    "range": "231-242",
+    "hypotheses": "probability density f≤1; p≥2",
+    "dependencies": "PROJ; Plancherel/Fourier inversion",
+    "derivation": "Checked difference density cap 1, m=floor(p/2) reduction, integrability, sum-of-differences characteristic function and projection bound, yielding 2πsqrt(2e)/sqrt p.",
+    "downstream": "Hölder exponents in hub lemma"
+  },
+  "DECAYDEF": {
+    "range": "243-259",
+    "hypotheses": "product cap-one laws; fixed physical partition I∪J",
+    "dependencies": "GRAM",
+    "derivation": "Checked crossing-volume definitions and exact E_l=e_l(MM^T)=sum squared minors.",
+    "downstream": "Theorem 4.1"
+  },
+  "ENTROPY": {
+    "range": "260-270",
+    "hypotheses": "probability distribution on m-subsets",
+    "dependencies": "concavity of log; multinomial expansion",
+    "derivation": "Expanded marginals, applied Jensen/concavity, bounded distinct-index monomials by (sum α)^m/m!, and used sum α=m.",
+    "downstream": "hub lemma constant"
+  },
+  "HUB": {
+    "range": "271-371",
+    "hypotheses": "Θ_l(H)>0; diffuse marginals ≤1/2 when k<l; original-coordinate independence",
+    "dependencies": "GRAM, PROJ, FPOWER, ENTROPY, Plancherel, Cauchy-Schwarz/Hölder, mollifier L2 convergence",
+    "derivation": "Reconstructed k=0 decoupling and k≥1 physical-hub Plancherel route, complex measure domination, mollification, weighted Hölder, joint projection Jacobian, scalar Fourier powers and entropy. L319-321 omits |E F|^2≤E|F|^2; inserting Jensen/Cauchy is constant-neutral.",
+    "downstream": "Theorem 4.1"
+  },
+  "DECAYTHM": {
+    "range": "372-379",
+    "hypotheses": "E_l(M)>0",
+    "dependencies": "HUB",
+    "derivation": "Verified greedy hub promotion, Θ_l(H)≥2^-k E_l, diffuse stopping, monotonic a_k via ω(m)/ω(m-1)≥1, and final constant.",
+    "downstream": "Corollary 4.4"
+  },
+  "DECAYCOR": {
+    "range": "380-392",
+    "hypotheses": "E_l>0 for relevant l",
+    "dependencies": "DECAYTHM, F1 envelope, F2 halfmoment",
+    "derivation": "Took square roots of |φ|^2 decay and independently recomputed l=3 density, l=2 halfmoment and l=1 characteristic-function constants.",
+    "downstream": "no-pivot and concentration branches"
+  },
+  "SQUARE": {
+    "range": "393-406",
+    "hypotheses": "one cap-one density; nonzero quadratic coefficient",
+    "dependencies": "one-dimensional change of variables",
+    "derivation": "Checked two inverse branches, Jacobian 2sqrt(|a||z-v|), density envelope and interval preimage length ≤2sqrt(2ρ/|a|).",
+    "downstream": "diagonal pivots and concentration"
+  },
+  "DEFINITE": {
+    "range": "407-414",
+    "hypotheses": "W in R^2 has density ≤L; quadratic matrix definite",
+    "dependencies": "2D change of variables",
+    "derivation": "Completed square, diagonalized deterministically, computed polar Jacobian 1/(2sqrt(det B)); L412's literal global-diffeomorphism claim is false at angular seam, repaired by deleting one null ray/a.e. chart.",
+    "downstream": "definite pair branch"
+  },
+  "HYPERBOLA": {
+    "range": "415-443",
+    "hypotheses": "two original coordinates independent with densities ≤1; B nondegenerate indefinite",
+    "dependencies": "2D hyperbolic change of variables; original-coordinate density caps",
+    "derivation": "Verified branch parametrization/Jacobian, separate positive-tail i and negative-tail i' choices, monotone original-coordinate substitutions, cutoff bound and AM-GM determinant scaling. L441 must explicitly exclude an atom at critical level; zero level is two affine lines and hence null under joint density.",
+    "downstream": "indefinite pair density and pair halfmoment"
+  },
+  "CONCENTRATION": {
+    "range": "444-472",
+    "hypotheses": "S symmetric nonzero; product cap-one coordinates",
+    "dependencies": "SQUARE, DECAYCOR(c), Gaussian identity",
+    "derivation": "Checked diagonal case, random-cut Frobenius expectation ||O||_F^2/4, selected crossing norm ≥L/4, Gaussian smoothing integral and <19 constant; layer cake gives L0=2+2log19 and excludes atoms.",
+    "downstream": "diagonal/pair pivots"
+  },
+  "KERNELS": {
+    "range": "473-492",
+    "hypotheses": "d≠0; even nonincreasing kernels",
+    "dependencies": "elementary antiderivatives; layer cake/rearrangement",
+    "derivation": "Recomputed J(d), split d≤1/d>1, product bound ≤4, and centered-interval rearrangement by superlevel intersections.",
+    "downstream": "halfpotential"
+  },
+  "PAIRHALF": {
+    "range": "493-511",
+    "hypotheses": "two independent cap-one variables; det B≠0",
+    "dependencies": "DEFINITE, HYPERBOLA, KERNELS",
+    "derivation": "Checked bounded-density halfmoment identity 2sqrt(2M), definite constant, indefinite scaling, δ=1/64 truncation and rearranged integral 4+5log2; total <16D^-1/4.",
+    "downstream": "s3 halfpotential pair pivot"
+  },
+  "SIGNPARAM": {
+    "range": "513-528",
+    "hypotheses": "no pivot at η=1/12, ζ=1/256",
+    "dependencies": "algebra",
+    "derivation": "Verified η^2+ζ=(5/48)^2 and no-pivot diagonal/off-diagonal entry bounds.",
+    "downstream": "Section 6"
+  },
+  "CROSS": {
+    "range": "529-540",
+    "hypotheses": "physical sign partition",
+    "dependencies": "block matrix SVD",
+    "derivation": "Checked A-DAD=2C entrywise and block dilation singular-value duplication.",
+    "downstream": "random-sign spectral conversion"
+  },
+  "SIGNS": {
+    "range": "541-559",
+    "hypotheses": "zero-diagonal symmetric O; independent Rademacher signs",
+    "dependencies": "fourth-moment pairing; Frobenius inner product",
+    "derivation": "Expanded ||Qε||_F^2; only ordered-pair matches survive; bounded dot products and entries to get 2a^2(sum|φ_i|^2)^2.",
+    "downstream": "Proposition 6.4"
+  },
+  "PROPSIGNS": {
+    "range": "560-581",
+    "hypotheses": "m∈{1,2,3}; no pivot; s_{2m-1}(A)≥1",
+    "dependencies": "Section 6 machine-checked facts per current owner instruction; WEYL, CROSS, SIGNS",
+    "derivation": "Independently checked textual interfaces: eigenframe trace k, good-sign Frobenius/operator bound, compressed identity, perturbation margin γ_m, compression, block duplication and E_m lower bound. Machine-checked spectral facts treated completed as instructed.",
+    "downstream": "no-pivot branches"
+  },
+  "NOPIVOT": {
+    "range": "582-597",
+    "hypotheses": "no pivot; s5≥1 or s3≥1",
+    "dependencies": "PROPSIGNS, DECAYCOR",
+    "derivation": "Applied m=3/m=2 crossing-volume lower bounds; independently recomputed C3/γ3<167 and C2/sqrt(γ2)<26.",
+    "downstream": "main theorem; s3 halfpotential"
+  },
+  "HALFPOTENTIAL": {
+    "range": "598-617",
+    "hypotheses": "s3(A)≥1",
+    "dependencies": "NOPIVOT, PAIRHALF, SQUARE, COND, SCHUR, CONCENTRATION, KERNELS",
+    "derivation": "Checked exhaustive no-pivot/pair/diagonal alternatives; pair ≤64; diagonal Schur loses one spectral direction, J-kernel near part <76 and far part ≤1, total <77.",
+    "downstream": "diagonal branch of main theorem and scaled s3 halfmoment"
+  },
+  "MAIN": {
+    "range": "618-640",
+    "hypotheses": "first K=s=1, s5(A)≥1; then K,s>0 scaling",
+    "dependencies": "NOPIVOT, HALFPOTENTIAL, SCHUR, SQUARE, COND, DEFINITE, HYPERBOLA, CONCENTRATION",
+    "derivation": "Checked exhaustive cases: no pivot <167; diagonal pivot sqrt12*77<267; definite pair 16π<51; indefinite Schur has ≥3 large eigenvalues and log envelope <269. Verified Y=KX scaling gives K^2/s.",
+    "downstream": "Theorem 1.1"
+  },
+  "REMARK": {
+    "range": "641-648",
+    "hypotheses": "as stated",
+    "dependencies": "main scaling; explicit star block algebra",
+    "derivation": "Checked s3 halfmoment scaling and one-direction divergence; checked two-star spectrum ±1 twice, no pivot for N>256 and cross-block rank≤2. These are scope/method remarks, not a lower-threshold project.",
+    "downstream": "scope only"
+  },
+  "BIB": {
+    "range": "649-676",
+    "hypotheses": "none",
+    "dependencies": "external bibliographic metadata",
+    "derivation": "Bibliographic attributions were not needed for the proof and are left UNCHECKED except source structure.",
+    "downstream": "none"
+  }
+}

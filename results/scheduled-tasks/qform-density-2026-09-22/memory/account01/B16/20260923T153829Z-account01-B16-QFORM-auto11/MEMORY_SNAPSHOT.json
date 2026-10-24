@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B16",
+  "run_id": "20260923T153829Z-account01-B16-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "control_commit_observed_before_significant_write": "6813768f3eea5dc8bb27eb52134283d74e5a603d",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "sources": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "used_for": "2D product-projection density cap <=2; twisted Fourier Lp bound; geometric Brascamp-Lieb"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "b84dffeb117523831ee7871e8ebee3630c14f372",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/account02-B16-20260923T142923Z-auto11/REPORT.md",
+      "used_for": "designated partner Theorem A/B and actual null-side inequality application"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-CAPACITATED-BL-RANK2-DIAGONAL-SIDE-v1",
+    "status": "SUPPORTING_THEOREM_PROVED_THIS_RUN",
+    "statement_short": "For rank-two cross M=U diag(s1,s2)V^T and an original-coordinate diagonal J side, if the normalized right-row directions admit weights 0<omega_j<=1/2 with sum omega_j e_j e_j^T=I2, then the full form has continuous density bounded by 4 sqrt(2) (s1 s2)^(-1/2) product (omega_j/c_j)^(omega_j/4), with arbitrary other blocks/couplings.",
+    "canonical_report_commit": "adafb333db74e8d3a6ce14c5334df9d4acab34d0",
+    "canonical_report_blob": "7bdd42b023e67c9f20384edc1689c319f8c2d419",
+    "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B16/20260923T153829Z-account01-B16-QFORM-auto11/REPORT.md"
+  },
+  "partner_result_applied": {
+    "source_commit": "b84dffeb117523831ee7871e8ebee3630c14f372",
+    "theorem": "QFORM-NULL-SIDE-CROSS2-PROJECTION-v1",
+    "actual_inequality": "For A_ext=[[0,M,G],[M^T,0,H],[G^T,H^T,S]] with M=CE^T from two balanced m x 2 Parseval banks, ||p_(X^T A_ext X)||_infinity <= 2 sqrt(pi) for arbitrary outside G,H,S; the full matrix has at least four eigenvalues of modulus >=1 by principal-submatrix interlacing."
+  },
+  "strict_extension_example": "Right singular leverages (3/5,2/5,1/2,1/2) fail the partner canonical gate, but omega=(1/2,1/2,1/2,1/2) gives a target-valid six-dimensional core with density <=2 sqrt(2)(25/24)^(1/8)<2.843, stable under arbitrary outside cross couplings.",
+  "unresolved_implication": "QFORM-SUPERDIFFUSE-CAPPED-ISOTROPIC-OR-CURVATURE-CLUSTER-v1",
+  "next_step": "On the near-coloop superdiffuse survivor, prove a capped isotropic decomposition for one useful diagonal-side rank-two bank cut, or convert failure into a bounded heavy doubled-angle source cluster and pay its non-diagonal same-side curvature source-first.",
+  "handoff_commit": "5dde82b0a931a85cddfceaade9e2c31f831c9a17",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B16/20260923T153829Z-account01-B16-QFORM-auto11.md"
+}

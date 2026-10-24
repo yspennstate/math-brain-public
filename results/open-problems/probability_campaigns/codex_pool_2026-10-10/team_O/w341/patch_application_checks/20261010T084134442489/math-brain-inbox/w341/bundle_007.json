@@ -1,0 +1,99 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w341",
+  "bundle_slug": "w341-c0082-checked-results-20261010",
+  "entries": [
+    {
+      "key": "degree-matched-square-six-cycle-counts",
+      "namespace": "probability.percolation",
+      "logical_name": "c0082-degree-matched-square-six-cycle-counts",
+      "kind": "lemma",
+      "title": "Exact square and six-cycle counts at equal lattice/cube degree [audit pending w347]",
+      "statement": "Let D=2d. Unoriented simple cycles through a fixed vertex in Z^d have square count 4*binomial(d,2) and six-cycle count 12*binomial(d,2)+96*binomial(d,3). In Q_D the corresponding counts are binomial(D,2) and 12*binomial(D,3). Thus lattice-minus-cube differences are -D/2 for squares and -(9/2)D(D-2) for six-cycles. The graphs are compared at the same degree, not the same dimension.",
+      "proof_text": "# C0082: count at equal degree before inferring coefficients\n\nStatus: proof of short-cycle counts and a route correction, pending w347. Heydenreich and van der Hofstad's cached high-dimensional percolation text, Open Problem 15.9, lines 14708-14713, says the critical-probability expansion coefficients a_1,a_2,a_3 agree and asks for the first difference. Neither that coefficient nor a later literature resolution is established here.\n\nCompare Z^d with Q_{2d}, so both have degree D=2d. Count unoriented simple cycles through a specified vertex (count each cycle once, not once per traversal direction). The square counts are 4*binomial(d,2)=D(D-2)/2 for the lattice and binomial(D,2)=D(D-1)/2 for the cube. A lattice square selects two axes and one sign in each; a cube square selects two coordinates. They already differ by D/2.\n\nThe lattice six-cycle count is 12*binomial(d,2)+96*binomial(d,3). With two axes a simple six-cycle must be a 2-by-1 rectangle: two choices of long axis and six positions for the root give twelve per axis pair. With three axes every coordinate is traversed once each way, so the cycle lies in a unique unit three-cube. There are eight sign choices for that cube around the root and twelve six-cycles through its corner, giving ninety-six per axis triple.\n\nFor Q_D every simple six-cycle uses exactly three coordinates; two coordinates have only four vertices. Its count is 12*binomial(D,3). To see the factor twelve, a three-cube has sixteen simple six-cycles, each missing one vertex of each parity. There is one such cycle for each of the sixteen missing opposite-parity pairs; those pairs have distance one or three, and either case has a unique six-cycle. By vertex symmetry, 16*6/8=12 cycles contain a given vertex.\n\nAt equal degree the difference lattice-minus-cube in six-cycle counts is -(9/2)D(D-2). Thus the existence of lattice rectangles does not imply that the lattice has more total six-cycles after degree matching. Exhaustive simple-cycle traversal independently verified four degree-matched pairs D=2,4,6,8. At D=4 the square counts are 4 versus 6 and the six-cycle counts 12 versus 48; at D=8 the six-cycle counts are 456 versus 672.\n\nThese combinatorial facts do not determine a coefficient of p_c. Lace diagrams have weights and cancellation, and the finite cube's critical parameter has its own definition. The original prediction a_4 based only on extra rectangles remains a heuristic; it must not be served as a proved coefficient or as an exhaustive diagram calculation. Audit the equal-degree convention, cycle rooting and orientation, classification of six-cycles and the final polynomial difference.\n",
+      "assumptions": [
+        "d positive integer",
+        "Q_D is the D-dimensional hypercube",
+        "cycles simple and unoriented",
+        "fixed root vertex",
+        "D=2d"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:c0082-degree-matched-square-six-cycle-counts",
+        "url": "file:///~/brain_workers/w341/proofs/C0082_cycle_counts.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "cycle-counts-do-not-certify-critical-coefficient",
+      "namespace": "probability.percolation",
+      "logical_name": "c0082-cycle-counts-do-not-certify-critical-coefficient",
+      "kind": "concept",
+      "title": "The rectangle heuristic does not identify a critical expansion coefficient [audit pending w347]",
+      "statement": "Lattice two-axis rectangles are absent from a hypercube, but at equal degree the hypercube has more total six-cycles. Therefore a comparison that counts only the extra lattice rectangles omits other subleading cycle-count changes. These exact counts do not identify the first distinct coefficient of the critical-probability expansions: lace-diagram weights, cancellation and the cube critical-parameter convention still require analysis. The earlier a_4 prediction remains a heuristic.",
+      "proof_text": null,
+      "assumptions": [
+        "bond-percolation critical expansion comparison",
+        "equal-degree cycle counting"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:c0082-cycle-counts-do-not-certify-critical-coefficient",
+        "url": "file:///~/brain_workers/w341/proofs/C0082_cycle_counts.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-limited-status-20261010",
+      "namespace": "probability.percolation",
+      "logical_name": "c0082-source-limited-status-20261010",
+      "kind": "concept",
+      "title": "Source-limited status and scope for C0082 [audit pending w347]",
+      "statement": "Heydenreich-van der Hofstad, Open Problem 15.9, asks for the first difference between lattice and cube critical-probability expansion coefficients after the first three agree. Exact short-cycle counts here correct an earlier heuristic but do not determine that index; later literature status is unverified.",
+      "proof_text": null,
+      "assumptions": [
+        "only the supplied local caches and prior records were consulted",
+        "independent review pending"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:c0082-source-limited-status-20261010",
+        "url": "file:///~/brain_workers/w341/proofs/C0082_cycle_counts.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "cycle-counts-do-not-certify-critical-coefficient",
+      "to_key": "degree-matched-square-six-cycle-counts",
+      "kind": "cites",
+      "rationale": "From: \"Lattice two-axis rectangles are absent from a hypercube, but at equal degree the hypercube has more total six-cycles. Therefore a comparison that counts only the extra lattice rectangles omits other subleading cycle-count changes. These exact counts do not identify the first distinct coefficient of the critical-probability expansions: lace-diagram weights, cancellation and the cube critical-parameter convention still require analysis. The earlier a_4 prediction remains a heuristic.\" To: \"Let D=2d. Unoriented simple cycles through a fixed vertex in Z^d have square count 4*binomial(d,2) and six-cycle count 12*binomial(d,2)+96*binomial(d,3). In Q_D the corresponding counts are binomial(D,2) and 12*binomial(D,3). Thus lattice-minus-cube differences are -D/2 for squares and -(9/2)D(D-2) for six-cycles. The graphs are compared at the same degree, not the same dimension.\"."
+    },
+    {
+      "from_key": "degree-matched-square-six-cycle-counts",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"Let D=2d. Unoriented simple cycles through a fixed vertex in Z^d have square count 4*binomial(d,2) and six-cycle count 12*binomial(d,2)+96*binomial(d,3). In Q_D the corresponding counts are binomial(D,2) and 12*binomial(D,3). Thus lattice-minus-cube differences are -D/2 for squares and -(9/2)D(D-2) for six-cycles. The graphs are compared at the same degree, not the same dimension.\" To: \"Heydenreich-van der Hofstad, Open Problem 15.9, asks for the first difference between lattice and cube critical-probability expansion coefficients after the first three agree. Exact short-cycle counts here correct an earlier heuristic but do not determine that index; later literature status is unverified.\"."
+    },
+    {
+      "from_key": "cycle-counts-do-not-certify-critical-coefficient",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"Lattice two-axis rectangles are absent from a hypercube, but at equal degree the hypercube has more total six-cycles. Therefore a comparison that counts only the extra lattice rectangles omits other subleading cycle-count changes. These exact counts do not identify the first distinct coefficient of the critical-probability expansions: lace-diagram weights, cancellation and the cube critical-parameter convention still require analysis. The earlier a_4 prediction remains a heuristic.\" To: \"Heydenreich-van der Hofstad, Open Problem 15.9, asks for the first difference between lattice and cube critical-probability expansion coefficients after the first three agree. Exact short-cycle counts here correct an earlier heuristic but do not determine that index; later literature status is unverified.\"."
+    },
+    {
+      "from_key": "source-limited-status-20261010",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0082-first-coefficient-where-the-1-d-expansions-of-p-c-on-z-d-and-on-the-hy",
+      "kind": "cites",
+      "rationale": "From: \"Heydenreich-van der Hofstad, Open Problem 15.9, asks for the first difference between lattice and cube critical-probability expansion coefficients after the first three agree. Exact short-cycle counts here correct an earlier heuristic but do not determine that index; later literature status is unverified.\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Extend the expansion of the critical value to the hypercube {0,1}^d and find the first index i for which the coefficients a_i for Z^d and for the hypercube are distinct (they agree for i = 1, 2, 3). Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 15.9, p. 232.\". "
+    }
+  ]
+}

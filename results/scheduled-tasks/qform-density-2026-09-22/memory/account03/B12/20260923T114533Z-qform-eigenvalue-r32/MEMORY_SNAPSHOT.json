@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260923T114533Z-qform-eigenvalue-r32",
+  "source_control_commit_start": "ebf71ec2b7b758e13c2a5c07ce60fb60f39da908",
+  "source_control_commit_prepublication": "8eb43713f0d60bb250c47cad0a8a8ac4b32f9ce2",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "result_ids": [
+    "QFORM-SINGULAR-RESERVE-TAIL-STABILITY-v1",
+    "QFORM-PHYSICAL-RESERVE-TAIL-COMPILER-v1",
+    "QFORM-PARTNER-SCHUR-PLUS-SECOND-SPECTRAL-PACKET-v1",
+    "QFORM-SPECTRAL-TAIL-CROSS-VOLUME-COROLLARY-v1"
+  ],
+  "main_result": "For symmetric B,R and j+r<=m, s_j(B+R)>=s_{j+r}(B)-s_{r+1}(R). Thus a bounded physical core with r+3 reserve singular modes at scale mu survives r arbitrarily large signed added eigenvalues plus arbitrary dense residual spectrum whose (r+1)-st singular value is <=delta<mu.",
+  "partner_result_applied": {
+    "source": "yspennstate/math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260923T081758Z-account04-B12-complementary-schur-shield-r4/REPORT.md",
+    "application": "Partner congruence factorization with r+3 protected complementary modes gives s_{r+3}(H0)>=ell(rho)^2 mu; new reserve theorem then gives s3(H0+R)>=ell(rho)^2 mu-s_{r+1}(R)."
+  },
+  "newest_volume_result_applied": {
+    "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+    "application": "If the top-r spectral packet has zero footprint across a protected original-coordinate cut and s_{r+1}(R)<=a/16, then the actual cross perturbation has op norm <=a/16 and the volume theorem yields continuous density <23/a."
+  },
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "e25e41c0ef49da042d5969a2949e5c8fc5faf95b",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T114533Z-qform-eigenvalue-r32/REPORT.md",
+  "checks": {
+    "main_random_trials": 10000,
+    "main_violations": 0,
+    "partner_random_trials": 5000,
+    "partner_violations": 0,
+    "sharpness_abs_error": 0.0,
+    "scope": "consistency only"
+  },
+  "unresolved_implication": "The bare global hypothesis s3(A)>=1 gives only three large modes and does not automatically provide the r+3 reserve required to absorb an arbitrary rank-r hostile packet. A universal proof must force a bounded physical reserve core, a protected compression/cut with small hostile footprint, or an already-paid grouped-bank/hub/ridge/pair mechanism.",
+  "next_mechanism": "Use the reserve-tail inequality as a compiler inside an aggregate grouped-coordinate reduction: try to show that after extracting a small number of hostile spectral spikes, the residual matrix must either have a paid diffuse cross-volume certificate or leave enough physical reserve modes on a bounded carrier.",
+  "full_target_status": "OPEN",
+  "continuity_status": "RESERVE_BRANCH_ESSENTIAL_LINF_ONLY; VOLUME_BRANCH_CONTINUOUS_C0",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

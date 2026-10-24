@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "event_id": "QFORM-MIXED-SKELETON-DETERMINANT-ONLY-L1-FALSE-v1",
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260923T000148Z-account03-B02-QFORM-r18",
+  "status": "REFUTED_INTERMEDIATE_MECHANISM",
+  "canonical_report_commit": "99fb7a9461b77e83cc900042eefa33d4f2ef9913",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T000148Z-account03-B02-QFORM-r18/REPORT.md",
+  "claim_refuted": "A quantitatively nonzero determinant of the span-aligned mixed five-dimensional skeleton, by itself and while arbitrary same-bank quadratic curvature is ignored, forces an unweighted L1 characteristic-function bound for that packet.",
+  "counterexample": "Set B=I_2, d=1, a=b=e_1 and choose same-bank quadratic terms so q_active=(z+x1+y1)^2+(x2+y2)^2. Then the mixed skeleton determinant is -1 but the full active quadratic matrix has rank two. For iid standard Gaussian original coordinates (admissible density cap <1), |phi_active(t)|=(1+36t^2)^(-1/4)(1+16t^2)^(-1/4)~1/(sqrt(24)|t|), so its unweighted L1 norm diverges.",
+  "scope_note": "This is NOT a counterexample to QFORM and NOT a counterexample to the target-wide L1 criterion: the active packet has only two nonzero eigenvalues. Adding an independent +w^2 direction produces target eigenvalues 3,2,1 and restores an L1 third-square factor. The correction says the global third-direction resource must be aggregated before absolute-value/time integration.",
+  "replacement_obligation": "In the critical aligned branch, combine a genuine third spectral/grouped-coordinate resource with the packet before taking absolute values; do not spend the mixed-skeleton determinant after discarding same-bank curvature.",
+  "execution": "WITHOUT_VERIFIED_BRAIN"
+}

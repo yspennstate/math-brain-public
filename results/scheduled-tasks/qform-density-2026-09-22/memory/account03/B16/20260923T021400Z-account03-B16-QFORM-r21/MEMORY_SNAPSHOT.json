@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260923T021400Z-account03-B16-QFORM-r21",
+  "control_commit_at_math_start": "94b4debdef11b95db019db3f7406e3781bb517ad",
+  "control_commit_prepublication_refresh": "49df5eb5776f0b67411476301491309b63791d4d",
+  "control_revision": "2026-09-22.15",
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "Projection-product interaction",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "result_id": "QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v2",
+  "secondary_result_id": "QFORM-EXACT-SPECTRAL-COLOOP-34-v1",
+  "result_status": "PROVED_SUPPORTING_THEOREMS_FULL_TARGET_OPEN",
+  "statement": "For an independent cap-one scalar X, a possibly dependent 2D receiver Y of joint density cap M, and an invertible 3x3 quadratic coefficient B with transverse resource P=beta^2|e|>0 after receiver-plane rotation, ||p_Q||_infinity <= 3*2^(8/3) M^(2/3)(|det B|P)^(-1/6). Applying the exact-coloop spectral resource and the universal rank-two half-Riesz theorem yields ||p_Q||_infinity<34 for every exact-rank-three leverage-one spectral coloop with |lambda_j|>=1.",
+  "new_constant": {
+    "cross_transverse": 19.048812623618392,
+    "exact_coloop_near_tau_3_7": 33.19410130244372,
+    "exact_coloop_far_tau_3_7": 33.25727608401318,
+    "exact_coloop_certificate": 34
+  },
+  "partner_result_applied": {
+    "worker": "account04/B16",
+    "result": "QFORM-RULED-PLUECKER-ENDPOINT-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b111363ff02b67015d14db35482e0150591744cd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260922T231542Z-account04-B16-QFORM-r1/REPORT.md",
+    "application": "Its d=0 structural endpoint is exactly a leverage-one spectral coloop plus rank-two plane. The new coloop theorem pays the partner's formerly unpaid opposite two-sheet side by <34, while the partner retains pi*sqrt(2) on the one-sheet side."
+  },
+  "analytic_source_applied": {
+    "worker": "account03/B05",
+    "result": "QFORM-RANK2-LOCALIZED-HALF-RIESZ-v1 and QFORM-RANK2-HALF-RIESZ-UNIVERSAL-v1",
+    "commit": "4f0070b8741a9d793b10c56313b89057abec3959",
+    "application": "The actual-two-coordinate d=1 bound 16*sqrt(2)|det K|^(-1/4) sharpens the near-slope trace; the universal C2=16*2^(3/4) rank-two half-Riesz theorem pays the non-small coloop pivot."
+  },
+  "canonical_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "17aad5a8f650fb40bbc9f0178e8c507ccdb264b5",
+  "canonical_bundle_commit": "715e0a1445a9cd363b2793e6d982633fbc1c3362",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T021400Z-account03-B16-QFORM-r21/REPORT.md",
+  "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T021400Z-account03-B16-QFORM-r21/CHECK_OUTPUT.txt",
+  "handoff_commit": "46fbcb30925a3e4828315f05db6a9ec39952bbfc",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B16/20260923T021400Z-account03-B16-QFORM-r21.md",
+  "unresolved_implication": "Approximate-coloop/isotropic-leakage routing for leverage c in (1/2,1) with small first Rayleigh pivot: aggregate the residual 1-c spectral leakage with a genuine product-projection bank before reciprocal pivot payment, then separately splice exact-rank-three mechanisms into arbitrary additional spectrum.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "GLOBAL_OPEN_NEW_RESULTS_ESSENTIAL_BOUND_ONLY"
+}

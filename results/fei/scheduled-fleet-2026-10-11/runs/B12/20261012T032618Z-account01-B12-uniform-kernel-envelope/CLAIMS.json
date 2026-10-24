@@ -1,0 +1,88 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T032618Z-account01-B12-uniform-kernel-envelope",
+  "stream": "B12",
+  "primary_packet_id": "A057",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "B12-A057-SCALAR-KERNEL-ENVELOPE",
+      "version": "v1",
+      "status": "PROVED",
+      "scope": "For k(r)=K(r,1), k is even, nonnegative and increasing, 2 ln(1+|r|)-1 <= k(r) <= 2 ln(1+|r|)+3, and k(r)-k(s) <= 4+2 ln(1+|r-s|) for all real r,s.",
+      "hypotheses": [
+        "natural logarithms",
+        "psi(0)=0",
+        "no Boolean realizability assumption is needed for this scalar lemma"
+      ],
+      "proof_dependencies": [
+        {
+          "claim": "exact scaling K(lambda x,lambda y)=lambda^2 K(x,y)",
+          "evidence": "quadratic logarithmic scale terms cancel; proved in UNIFORM_KERNEL_PAYMENT.tex"
+        },
+        {
+          "claim": "centered second-difference integral for x^2 ln x",
+          "evidence": "proved and bounded in UNIFORM_KERNEL_PAYMENT.tex"
+        }
+      ],
+      "review_status": "CONTRIBUTOR_CHECK_ONLY",
+      "independent_reviewers_requested": ["A091", "A090"]
+    },
+    {
+      "claim_id": "B12-A057-NEAR-SEPARATED-SPLIT",
+      "version": "v1",
+      "status": "PROVED",
+      "scope": "For every genuine Boolean disjoint splice, every c>0, and every child node, the near region |a_T+mu b_T|<=c|alpha b_T| has the signed upper bound alpha^2 sum b_T^2[k(c)-k(|mu|/|alpha|)], while every separated coefficient obeys the uniform bound alpha^2 b_T^2[4+2 ln(1+|a_T|/(|alpha b_T|))].",
+      "proof_dependencies": [
+        {
+          "claim": "exact biased coefficientwise kernel identity",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4fa89c32748c17c91aeca56c55c7a054b760ba6e",
+          "path": "reports/fei-2026-10-11/runs/B12/20261012T022322Z-account01-B12-biased-coherent-hierarchy/BIASED_COHERENT_IDENTITY.tex",
+          "blob": "bdd2a39e8882b66f2917261df28b3b2432ff3ad3"
+        },
+        {
+          "claim": "B12-A057-SCALAR-KERNEL-ENVELOPE-v1",
+          "evidence": "UNIFORM_KERNEL_PAYMENT.tex"
+        }
+      ],
+      "review_status": "CONTRIBUTOR_CHECK_ONLY"
+    },
+    {
+      "claim_id": "B12-A057-FIXED-SOURCE-COMPLETE-PAYMENT",
+      "version": "v1",
+      "status": "PROVED",
+      "scope": "For a fixed Boolean outer pair a±b and any Boolean child h with any adaptive nonreusing physical restriction tree, sum_v w_v R_{mu_v}(alpha_v) <= [M(a,b)+(4+2 ln2+2/e)q] I(h), where q=sum b_T^2 and M=2 sum b_T^2 ln_+(|a_T|/|b_T|).",
+      "hypotheses": [
+        "outer pair a+b,a-b consists of genuine Boolean signs",
+        "the child block is disjoint from the outer block",
+        "the same outer pair is used throughout the child restriction tree",
+        "each physical child coordinate is queried at most once per root-leaf path",
+        "exact uniform reach weights"
+      ],
+      "proof_dependencies": [
+        {
+          "claim": "B12-A057-ADAPTIVE-LOG-PAYMENT-v2",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4fa89c32748c17c91aeca56c55c7a054b760ba6e",
+          "path": "reports/fei-2026-10-11/runs/B12/20261012T022322Z-account01-B12-biased-coherent-hierarchy/ADAPTIVE_LOG_PAYMENT.tex",
+          "blob": "8aca47d80e7298f510b2f543eaff384e99e70656"
+        },
+        {
+          "claim": "B12-A057-NEAR-SEPARATED-SPLIT-v1",
+          "evidence": "UNIFORM_KERNEL_PAYMENT.tex"
+        }
+      ],
+      "review_status": "CONTRIBUTOR_CHECK_ONLY",
+      "independent_reviewers_requested": ["A091", "A090"]
+    },
+    {
+      "claim_id": "B12-A057-COHERENT-HIERARCHY",
+      "version": "v3",
+      "status": "OPEN",
+      "scope": "Dimension-free payment of the complete biased coherent remainder when the outer activation witness itself changes coherently through the hierarchy.",
+      "exact_obstruction": "The fixed-source remainder is paid. The remaining source/terminal obligation is a nonreused bound for sum_v w_v alpha_v^2 M(a_v,b_v), or a sharper use of the retained signed near-collision refund that cancels it. No universal bound for this changing reserve is proved."
+    }
+  ]
+}
+

@@ -1,0 +1,11 @@
+# Primary sources and scope
+
+- Garban--Steif, arXiv:1102.5761v3 (29 May 2012), Chapter II section 4, printed pp. 23-24, PDF pages 24-25: https://arxiv.org/pdf/1102.5761v3. The dated source calls square-bond conformal invariance an open problem. It states the triangular-site fixed-domain crossing theorem and describes the SLE(6) interface limit. It does not certify current openness. The intake's locator 'p. 26' is not the location of this passage in the inspected v3.
+- Schramm, arXiv:math/0602151v2, Problem 2.11, printed p. 18 / PDF page 18: https://arxiv.org/pdf/math/0602151v2. Exact problem: 'Prove Smirnov's theorem for critical bond percolation on Z^2.' This is a dated primary open-problem statement.
+- Smirnov, arXiv:0909.4499v1, Theorem 1 and Corollary 2: https://arxiv.org/html/0909.4499v1. The underlying preprint is dated 2001, uploaded in 2009. It establishes triangular-site conformal crossing limits. Lemma 2.2's estimates have domain-dependent constants.
+- Cardy, arXiv:hep-th/9111026v1, equation (8), PDF page 7: https://arxiv.org/pdf/hep-th/9111026v1. Its crossing function is the normalized incomplete beta function B_x(1/3,1/3)/B(1/3,1/3). This supplies the comparison function, not a proved square-bond scaling limit. The next page uses a different elliptic cross-ratio parameter; the explicit Schwarz--Christoffel derivation in ATTEMPT.md fixes our convention independently.
+- NIST DLMF 19.8.11--19.8.12: https://dlmf.nist.gov/19.8#ii. Descending Landen transformation; DLMF's K takes the modulus, while ATTEMPT.md's K takes its square, the parameter.
+- Tsai--Yam--Zhou, arXiv:1112.2017v5, abstract and author comment: https://arxiv.org/abs/1112.2017v5. The authors call this a preliminary version and report critical comments. No correctness/acceptance audit is claimed here.
+- Zhou, arXiv:2409.03235v6 (17 December 2024), abstract and version history: https://arxiv.org/abs/2409.03235v6. It claims square-bond exploration convergence. Its 115-page proof has not been audited here; no accepted-resolution conclusion follows from metadata.
+
+The named memory scar perceptron_proof_open_gaps_fleet_2026_07_12 was read after a 60-second recall timeout. Its lesson is applied here: the hardest unchecked piece is scaling-limit identification, and successful arithmetic checks do not certify a solution.

@@ -1,0 +1,61 @@
+{
+ "helper_version": "B04-lead-verify2-v1",
+ "node_boundary_lemma_and_second_moment": {
+  "n1": {
+   "functions": 4,
+   "node_lemma_holds_all_i": true,
+   "max_node_ratio": 0.0,
+   "near_tight_nodes": 0,
+   "second_moment_bound_holds": true,
+   "max_H_over_second_moment_bound": 0.0
+  },
+  "n2": {
+   "functions": 16,
+   "node_lemma_holds_all_i": true,
+   "max_node_ratio": 0.7507387565906345,
+   "near_tight_nodes": 0,
+   "second_moment_bound_holds": true,
+   "max_H_over_second_moment_bound": 0.41424290359140553
+  },
+  "n3": {
+   "functions": 256,
+   "node_lemma_holds_all_i": true,
+   "max_node_ratio": 0.7692166986374829,
+   "near_tight_nodes": 0,
+   "second_moment_bound_holds": true,
+   "max_H_over_second_moment_bound": 0.5547752173996939
+  },
+  "n4": {
+   "functions": 65536,
+   "node_lemma_holds_all_i": true,
+   "max_node_ratio": 0.8080942949222033,
+   "near_tight_nodes": 0,
+   "second_moment_bound_holds": true,
+   "max_H_over_second_moment_bound": 0.5838067700771052
+  }
+ },
+ "bent_splice_node_lemma_ratio": {
+  "4": {
+   "Delta_over_bound": 0.9642089062741372
+  },
+  "8": {
+   "Delta_over_bound": 0.9985487743542533
+  },
+  "12": {
+   "Delta_over_bound": 0.999931679696914
+  },
+  "16": {
+   "Delta_over_bound": 0.9999965707058142
+  },
+  "20": {
+   "Delta_over_bound": 0.9999998209108442
+  }
+ },
+ "A019_independent": {
+  "cases": 400,
+  "failures": 0,
+  "max_abs_entropy_error": 1.7763568394002505e-15,
+  "note": "H(F)=H(g)+sum rho_j E_kj; I_W=sum rho_j 2k_j 2^-k_j exact; I_data=I(g) exact; B_W<=4 I_W"
+ },
+ "runtime_seconds": 0.83
+}

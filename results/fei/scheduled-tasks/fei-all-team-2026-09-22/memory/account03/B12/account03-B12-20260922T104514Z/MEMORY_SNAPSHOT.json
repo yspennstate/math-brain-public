@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "state_revision": "FEI-20260922T1000Z-v1",
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "account03-B12-20260922T104514Z",
+  "repository_memory": "loaded_and_updated",
+  "native_memory": "unverified",
+  "full_brain_connected": false,
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "startup_control_commit": "30b01adf1c66898080798468bd3a787c5af4b2fa",
+  "prepublication_control_commit": "bbf7348f3a72f1401f947fd6ff04738f64d8deac",
+  "control_revision": "2026-09-22.3",
+  "correction_watermark": {
+    "required_correction_ids_consumed_through": "FEI-DELTA-20260922-14-SAFE-CONE-SELECTOR-GAP",
+    "inbox_revision": "FEI-INBOX-20260922T1000Z-v1",
+    "pending_inbox_events": []
+  },
+  "assignment": {
+    "id": "FEI-20260922-account03-B12",
+    "title": "Descendant refund retention",
+    "pathway": "C",
+    "target_status_before_run": "OPEN_TARGET_NOT_ESTABLISHED"
+  },
+  "consumed_partner": {
+    "account_slot": "account04/B12",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a1b2a93210fe7cc871cd10c5bbbf43b1b983a254",
+    "path": "proofnet24/P03-fei/fleet-2026-09-21/account04/B12/20260922T094436Z-robust-row-codimension-staircase/REPORT.md",
+    "blob": "06a4c1d51bb5d53d0783e567e6176511a68b1167",
+    "applied_result": "For every trigger k in F_i of a relative-eta robust row i, q_k >= (1-2 eta) q_i. Applied to the actual elimination block A_i={i} union F_i."
+  },
+  "new_claims": [
+    {
+      "id": "PATHWISE-REFUND-RETENTION-v1",
+      "status": "PROVED_IN_SOURCE",
+      "summary": "Exact adaptive-tree identities retain crossing W, selector slack S and reflected-curvature remainder R through descendant recentering."
+    },
+    {
+      "id": "ROBUST-PHYSICAL-DECREMENT-v1",
+      "status": "PROVED_IN_SOURCE",
+      "summary": "D_{A_i} >= [1+(1-2 eta)r_i]q_i for A_i={i} union F_i."
+    },
+    {
+      "id": "SEQUENTIAL-ROBUST-NONREUSE-v1",
+      "status": "PROVED_IN_SOURCE",
+      "summary": "Across the adaptive robust-row compiler, sum pi_v[1+(1-2 eta)r_v]q_v <= J(root); at eta=1/16, sum pi_v r_vq_v <= 8J/7."
+    },
+    {
+      "id": "ROBUST-DESCENDANT-ENTROPY-v1",
+      "status": "PROVED_IN_SOURCE",
+      "summary": "Selected robust-row binary entropy over all generations is <=C_eta J(root), with C_{1/16}=1.3494175371409616...<1.35."
+    },
+    {
+      "id": "ROBUST-SELECTOR-DEBIT-v1",
+      "status": "CONDITIONAL_IN_SOURCE",
+      "summary": "Using the cited selector-debit theorem, selected robust-coordinate selector debit is <=2.8882922474225223... J(root) at eta=1/16; does not price all trigger-coordinate debits."
+    },
+    {
+      "id": "SIMULTANEOUS-ROBUST-ADDRESS-SUM-v0",
+      "status": "REFUTED",
+      "summary": "AND_n gives exact-subcube rows whose simultaneous fixed-state address sum is nJ; sequential physical removal avoids this reuse."
+    }
+  ],
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "c6e0f3df3424a27d4a05aec2460ecc52085ea1e3",
+    "report_path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B12/account03-B12-20260922T104514Z/REPORT.md",
+    "report_blob": "5be463a87c8ed06f29aca9f045a912d871e33157",
+    "claims_commit": "6aef2e2fc671163c34e2a093ca1507dd05026ab2",
+    "claims_path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B12/account03-B12-20260922T104514Z/CLAIMS.json",
+    "claims_blob": "123bcf05590b5a3e2624b567d69e576f809905de"
+  },
+  "handoff": {
+    "recipient": "account01/B19",
+    "secondary_consumer": "account04/B12",
+    "commit": "ba411057293f3a5742b455307199ef35ac01389a",
+    "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/handoffs/account03/B12/account03-B12-20260922T104514Z.md"
+  },
+  "remaining_implication": "Control nonrobust positive-defect rows or prove that the first nonrobust entry is paid by retained S+R or a signed co-pair/orientation statistic. Do not revert to raw U4=O(J).",
+  "next_derivation": "Use first-entry stopping into the nonrobust set: either the robust compiler spends a definite fraction of J while paying selected robust entropy, or the first nonrobust transition has quantitatively large retained selector/curvature slack or signed orientation credit.",
+  "full_fei_status": "OPEN_NOT_PROVED"
+}

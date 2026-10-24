@@ -1,0 +1,46 @@
+\chapter{Introduction}
+
+This survey is based on a course presented by the first author at the Research School in Marseille, March 6-10, 2017. 
+The school was organized by the chair holders, Kostya Khanin and Senya Shlosman, of the Jean-Morlet chair 2017 of CIRM,
+\begin{quotation}
+Random Structures in Statistical Mechanics and Mathematical Physics.
+\end{quotation}
+The model is a space-time continuous directed polymer in random environment. 
+In this regard, it is one of the most basic such model and it plays a fundamental
+role. % by its simplicity. 
+Directed polymers are described by random paths, which are influenced by randomly located impurities which may be attractive or repellent.
+Such models have been widely considered in statistical physics, disordered systems and stochastic processes. 
+%; see   \cite{CStFlour} for a recent review in the discrete setup.
+
+\medskip
+
+
+As an informal definition we model the polymer by a random path $\bx=(\bx(t); t \geq 0)$ taking values in $\rd$ and interacting with time-space Poisson points $(t_i, x_i)$ called environment. The path sees such a point if at time $t_i$ it is located within a fixed distance $r$ from $x_i$. Denoting by $\#_t(\bx)= \sum_{i: t_i\leq t}  {\bf 1}_{|\bx(t_i)-x_i|\leq r}$ the number of  Poisson points seen by the path $\bx$ up to time $t$,
+the model with time horizon $t$ at inverse-temperature parameter $\b$ is associated to the Hamiltonian 
+$$
+-\frac 12 \int_0^t |\dot \bx (s)|^2 ds + \b \#_t(\bx)\;.
+$$
+
+
+In this model where the path is Brownian and the medium is Poissonian,  we benefit from nice formulas and strong tools from stochastic calculus for
+Gaussian or Poisson measure and martingale techniques. 
+\medskip
+
+
+The notes are essentially based on references \cite{CY05, CYkokyuroku, CYBMPO2,CoscoIntermediate}, gathering and unifying the matter scattered in these references, and containing novel contributions and perspectives as emphasized below. It also parallels the book \cite{CStFlour} which deals similar models in the  discrete framework, and we warn the reader of the existence of many results available for one 
+%of these particular models . 
+particular model but  not for the others. We do not reproduce all details or computations, but we rather try to give the general picture and the essential arguments. 
+\medskip
+
+Let us mention the main highlights in this survey and also the new results:
+ \begin{enumerate}
+ \item We establish in section \ref{ch:3} a fine continuity estimate under spatial shifts for the limit of the martingale. This is achieved by a smart use of mirror coupling. 
+\item Section \ref{ch:dir} contains a nice original account on directional free energy. We develop a full approach of
+disorder strength based on directional free energy.
+\item In section \ref{ch:CM} we develop an original approach to diffusivity at weak disorder, based on Camer\'on-Martin transformation (see theorem \ref{prop:diff}).
+\item Section \ref{sec:IR} is dedicated to the intermediate disorder regime and KPZ equation. We give a synthetic account with all the central ideas. 
+\end{enumerate}
+
+The detailed matter and the organization appear most clearly in the table of contents,
+which is a useful source to follow the line all through the notes. 
+

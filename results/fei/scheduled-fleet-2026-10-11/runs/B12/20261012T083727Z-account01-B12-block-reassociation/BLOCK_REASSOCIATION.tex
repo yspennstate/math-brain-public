@@ -1,0 +1,187 @@
+\section*{Block channelization and exact reassociation transfer}
+
+All logarithms are natural.  For a real function $c$ on a finite cube put
+\[
+ \mathcal E(c)=\sum_U \widehat c(U)^2
+          \log\frac1{\widehat c(U)^2},
+\]
+where zero summands are omitted.  Let $B$ be a block of $m$ physical
+coordinates.  Every $f$ has the unique expansion
+\[
+ f=\sum_{\gamma\subseteq B}\chi_\gamma f_\gamma,
+\tag{1}
+\]
+with the $f_\gamma$ functions on the complementary cube.  Define the block
+entropy decrement
+\[
+ D_B(f)=\sum_{\gamma\subseteq B}\mathcal E(f_\gamma)
+ -2^{-m}\sum_{\varepsilon\in\{-1,1\}^{B}}
+       \mathcal E\!\left(\sum_{\gamma\subseteq B}
+                    \varepsilon^\gamma f_\gamma\right).
+\tag{2}
+\]
+Thus $D_B(f)=\mathcal E(f)-\mathbb E_\varepsilon
+\mathcal E(f|_{x_B=\varepsilon})$.
+
+Let $g_+,g_-,h$ be Boolean signs on the same cube and set
+\[
+ a=(g_++g_-)/2,\qquad b=(g_+-g_-)/2,\qquad F=a+hb.
+\tag{3}
+\]
+Expand $a,b,h$ as in (1).  Physical multiplication gives the exact block
+convolution
+\[
+ F_\gamma=a_\gamma+\sum_{\alpha\subseteq B}
+                 h_\alpha b_{\gamma\triangle\alpha}.
+\tag{4}
+\]
+All products in (4) are pointwise products on the complementary cube.
+Separate the zero selector frequency by putting
+\[
+ A_\gamma=a_\gamma+h_\varnothing b_\gamma,
+ \qquad C^\alpha_\gamma=h_\alpha b_{\gamma\triangle\alpha}
+       \quad(\alpha\ne\varnothing).
+\tag{5}
+\]
+Let $A$ and $C^\alpha$ denote the physical functions with these block
+coefficients, and let $q=\lVert b\rVert_2^2$.  Define
+\[
+ S_B=D_B(A),\qquad X_{B,\alpha}=D_B(C^\alpha),
+\tag{6}
+\]
+\[
+ \Omega_B=D_B(F)-S_B-\sum_{\alpha\ne\varnothing}X_{B,\alpha},
+ \qquad R_B^{\rm sh}=\Omega_B-qD_B(h).
+\tag{7}
+\]
+
+\subsection*{Theorem 1 (exact block-channel identity; proved)}
+
+For every finite cube, every Boolean triple $(g_+,g_-,h)$, and every
+physical block $B$,
+\[
+ \boxed{D_B(F)=S_B+\sum_{\alpha\ne\varnothing}X_{B,\alpha}
+                 +qD_B(h)+R_B^{\rm sh}.}
+\tag{8}
+\]
+No disjointness, orthogonality, bias floor, or collision-separation
+hypothesis is present.
+
+\paragraph{Proof.}
+Equation (4) and (5) give
+$F=A+\sum_{\alpha\ne\varnothing}C^\alpha$.  Substitute the definitions
+(6)--(7). \(\square\)
+
+For $|B|=1$, (5) gives exactly the source and crossed functions
+$(A,B)$ and $(C,D)$ in the preceding four-channel theorem.  Hence (8)
+strictly extends that result.  If the selector is independent of $B$, all
+$C^\alpha$ vanish and $R_B^{\rm sh}=0$.  If the source is independent of
+$B$, the source block decrement vanishes but the nonzero selector channels
+remain, retaining all coherent collisions.
+
+\subsection*{Theorem 2 (sequential/block reassociation; proved)}
+
+Fix an ordering $\pi=(i_1,\dots,i_m)$ of $B$.  At every node of the induced
+restriction tree, apply the one-coordinate four-channel identity and weight
+the node at depth $t-1$ by $2^{-(t-1)}$.  Let $L_\pi$ be the weighted sum of
+the local source-plus-crossed channels, and let $M_\pi$ be the weighted sum
+of the local $qD_i(h)+R_i^{\rm sh}$ channels.  Put
+\[
+ L_B=S_B+\sum_{\alpha\ne\varnothing}X_{B,\alpha},\qquad
+ M_B=qD_B(h)+R_B^{\rm sh},
+\tag{9}
+\]
+and define the reassociation transfer
+\[
+ T_\pi=L_\pi-L_B.
+\tag{10}
+\]
+Then
+\[
+ D_B(F)=L_\pi+M_\pi=L_B+M_B,
+ \qquad M_\pi=M_B-T_\pi.
+\tag{11}
+\]
+
+\paragraph{Proof.}
+For any real $f$, iterating the definition of the one-coordinate decrement
+and cancelling intermediate restricted entropies gives
+\[
+ D_B(f)=\sum_{t=1}^m2^{-(t-1)}
+   \sum_{\varepsilon\in\{-1,1\}^{t-1}}
+   D_{i_t}(f|_{x_{i_s}=\varepsilon_s,\,s<t}).
+\tag{12}
+\]
+Apply the exact one-coordinate four-channel identity at every term in (12).
+This proves the first equality in (11).  Theorem 1 proves the second.
+Subtracting the two and using (10) proves the last equality. \(\square\)
+
+The transfer $T_\pi$ is therefore not an error term: it is the exact amount
+by which sequential restriction assigns coherent collision entropy to a
+different channel family than the simultaneous block expansion.  It need
+not vanish and need not be invariant under the order $\pi$.
+
+\subsection*{A two-bit activation-irreducible witness}
+
+In zero-based lexicographic order take
+\[
+ g_+=(-1,-1,-1,-1),\qquad
+ g_-=(-1,-1,1,1),\qquad
+ h=(-1,-1,-1,1).
+\tag{13}
+\]
+The disagreement support is $\{2,3\}$ and the selector signs there are
+$-1,+1$, so both branches are physically selected on disagreement points.
+The output is $F=(-1,-1,1,-1)$.
+
+For $B=\{0,1\}$ exact Walsh arithmetic gives
+\[
+\begin{aligned}
+ S_B&=\frac94\log2-\frac98\log3,\\
+ X_{B,\alpha}&=\frac14\log2\quad
+       (\alpha\in\{\{0\},\{1\},\{0,1\}\}),\\
+ D_B(h)&=2\log2,\qquad q=\frac12,\\
+ R_B^{\rm sh}&=\tau:=-2\log2+\frac98\log3,\\
+ D_B(F)&=2\log2.
+\end{aligned}
+\tag{14}
+\]
+The sign is rigorous:
+\[
+ \tau=\frac18\log\frac{3^9}{2^{16}}<0
+ \quad\text{because}\quad 3^9=19683<65536=2^{16}.
+\tag{15}
+\]
+
+For the order $(0,1)$ the sequential ledger is
+\[
+ L_{(0,1)}=\log2,\qquad
+ \sum q_vD_{i_v}(h_v)=\log2,\qquad
+ \sum R_{i_v}^{\rm sh}=0,
+\tag{16}
+\]
+so $T_{(0,1)}=\tau$.  For the reversed order,
+\[
+ L_{(1,0)}=L_B=3\log2-\frac98\log3,\qquad
+ \sum q_vD_{i_v}(h_v)=\log2,\qquad
+ \sum R_{i_v}^{\rm sh}=\tau,
+\tag{17}
+\]
+so $T_{(1,0)}=0$.  The total decrement is $2\log2$ in both orders.  Thus
+the same signed coherent term is classified as block remainder, sequential
+remainder, or source/crossed transfer depending on grouping and query order.
+
+\subsection*{Consequence for the open hierarchy payment}
+
+The two-query experiment does not produce the hoped-for termwise
+cancellation of internal $S/X$ channels.  It proves the correct replacement:
+the complete decrement telescopes, while its channel allocation changes by
+the signed transfer $T_\pi$.  Any valid adaptive hierarchy proof must either
+carry $T_\pi$ explicitly or use an order-independent aggregate gauge.
+
+The exact block expansion has $2^m-1$ nonzero selector-frequency channels.
+This is an algebraic identity, not a dimension-free estimate: separately
+enveloping those channels would risk an exponential block-size loss.  The
+remaining universal problem is to compress or pay their aggregate, together
+with $R_B^{\rm sh}$ and activation weights, from one source-influence or
+terminal-reserve budget.  Nothing here proves full FEI.

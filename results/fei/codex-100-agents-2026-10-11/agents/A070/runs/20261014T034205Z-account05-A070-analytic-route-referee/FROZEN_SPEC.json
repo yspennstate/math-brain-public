@@ -1,0 +1,13 @@
+{
+ "helper_version":"A070-partial-privacy-v1",
+ "family":"Boolean compatible overlapping masks with common/exclusive/core blocks; unequal retained Boolean cores; sources seeing one exclusive coordinate; actual rare-core cancellation family; normalized real zero-amplitude control",
+ "domain":{"review_one_bit_core_pairs":"all16 ordered pairs, four block tuples, all56 total mask assignments","review_two_bit_core_pairs":"all256 ordered pairs, four block tuples, one fixed assignment each","review_common_sources":"all256 Boolean sources on C2,Y1, fixed assignment","partial_privacy":"(C,U,V,Y)=(1,2,1,1),(1,1,2,1); all256 Boolean sources on visible common/private/core bits; all16 assignments each","boundary_widths":[4,5,6,7,8,9,10,11,12,13,14,15,16,32,64],"expanded_boundary_truth_tables":[4,5],"real_control":1},
+ "case_count":{"full":10384,"pilot":26},
+ "symmetry":"none for full first/core and partial-privacy domains; fixed assignment for second/core/common-source domains is a stated selected domain, not an exhaustive symmetry quotient",
+ "arithmetic":"integer Walsh transforms, exact physical edges and Fraction rational arithmetic; compressed product-mask formulas with analytic proof; no floating entropy sign",
+ "memory_estimate_MB":64,
+ "max_runtime_seconds":{"pilot":60,"full":180},
+ "guard_seconds":{"pilot":55,"full":175},
+ "automatic_dimension_escalation":false,
+ "commands":["python -X utf8 code/check.py pilot","python -X utf8 code/check.py full"]
+}

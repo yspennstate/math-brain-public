@@ -1,0 +1,63 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w521",
+  "bundle_slug": "p0297-primary-source-and-watabiki-scar-001",
+  "entries": [
+    {
+      "key": "p0297-primary-problem",
+      "namespace": "probability.lqg",
+      "logical_name": "subcritical-lqg-metric-hausdorff-dimension-problem",
+      "kind": "concept",
+      "title": "P0297: compute the Hausdorff dimension of the subcritical LQG metric",
+      "statement": "For each gamma in (0,2), the canonical gamma-LQG metric D_h on the complex plane has an almost-sure deterministic Hausdorff dimension d_gamma. Problem 7.1 asks for the exact function gamma -> d_gamma. Its metric-scaling parameter is xi_gamma=gamma/d_gamma. The special value d_{sqrt(8/3)}=4 is known; it does not determine d_gamma at other gamma.",
+      "proof_text": null,
+      "assumptions": ["gamma in (0,2)", "h is a whole-plane Gaussian free field plus a continuous function", "D_h is the gamma-LQG metric of Gwynne and Miller"],
+      "domain": "probability theory; Liouville quantum gravity",
+      "source": {
+        "source_id": "doi:10.1007/s00222-020-00991-6:problem-7.1",
+        "url": "https://link.springer.com/article/10.1007/s00222-020-00991-6",
+        "revision": "published-online-2020-08-05; read-2026-10-10",
+        "license": "cc-by-4.0",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "watabiki-small-gamma-obstruction",
+      "namespace": "probability.lqg",
+      "logical_name": "watabiki-dimension-prediction-fails-small-gamma",
+      "kind": "concept",
+      "title": "The Watabiki formula is not the general LQG metric dimension",
+      "statement": "The historical Watabiki prediction d_gamma=1+gamma^2/4+(1/4)*sqrt((4+gamma^2)^2+16*gamma^2) is false for sufficiently small gamma. Gwynne and Miller's Problem 7.1 explicitly notes this, citing the rigorous Ding--Goswami bound. A proof route that produces this expression for every gamma in (0,2) has a gap or an incorrect hypothesis.",
+      "proof_text": null,
+      "assumptions": ["gamma in (0,2)", "d_gamma means Hausdorff dimension for the gamma-LQG metric, not Euclidean dimension"],
+      "domain": "probability theory; Liouville quantum gravity",
+      "source": {
+        "source_id": "doi:10.1007/s00222-020-00991-6:problem-7.1-watabiki-discussion",
+        "url": "https://link.springer.com/article/10.1007/s00222-020-00991-6",
+        "revision": "published-online-2020-08-05; read-2026-10-10",
+        "license": "cc-by-4.0",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "watabiki-small-gamma-obstruction",
+      "to_key": "p0297-primary-problem",
+      "kind": "semantic_association",
+      "rationale": "The obstruction card says the Watabiki expression is false for small gamma; the problem card asks for the true exact d_gamma. Gwynne--Miller Problem 7.1 states both ends together."
+    },
+    {
+      "from_key": "p0297-primary-problem",
+      "to_existing_logical": "math:probability.core:open-problem-p0297-exact-hausdorff-dimension-of-liouville-quantum-gravity",
+      "kind": "semantic_association",
+      "rationale": "The new card asks to compute d_gamma for gamma in (0,2), and the existing card says determine the almost sure Hausdorff dimension d_gamma for general gamma in (0,2). Primary Problem 7.1 backs the precise statement."
+    },
+    {
+      "from_key": "p0297-primary-problem",
+      "to_existing_logical": "math:probability.core:attempt-p0297-exact-hausdorff-dimension-of-liouville-quantum-gravity",
+      "kind": "semantic_association",
+      "rationale": "The problem card asks for d_gamma, while the existing attempt card says xi*d=gamma does not calculate xi for other parameters. The link records an unresolved route, not a solution."
+    }
+  ]
+}

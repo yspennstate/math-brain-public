@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260923T044614Z-qform-eigenvalue-r25",
+  "source_control_commit_initial": "030c984720bd7cd3943334aa007aec833aa8d517",
+  "source_control_commit_prepublication": "296b6b37985ed001fd81d8d39f7b6d656e6405eb",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "target_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-VOLUME-STABILITY",
+      "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "scope": "original-coordinate cross block, q=4/3 fractional three-volume Fourier estimate, near-diffuse perturbation gate"
+    },
+    {
+      "id": "QFORM-COLLECTIVE-TAIL-EXTENSION",
+      "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md",
+      "scope": "two substantial cross singular directions plus collective squared tail under projection gate"
+    },
+    {
+      "id": "QFORM-MIXED-NORM-SHEAR",
+      "source": "yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e:proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260922T192552Z-account04-B12-mixed-shear-r1/REPORT.md",
+      "scope": "density cap and mixed translation modulus survive arbitrary measurable dependent scalar shear"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-FOURIER-9OVER8-HOLDER-MODULUS-v1",
+      "statement": "If |phi(t)|<=min(1,K|t|^-9/8) and T=K^(8/9), then ||p(.+d)-p||inf <= [135/(7pi)] T min(1,(T|d|)^(1/8))."
+    },
+    {
+      "id": "QFORM-CROSS-FOOTPRINT-SHEAR-HOLDER-STABILITY-v1",
+      "statement": "If a protected original-coordinate cross block M0 has s3>=a, leverage<=1/2 and the final cross block differs in operator norm by <=a/16, then the full ambient quadratic form has density <=24sqrt(3)e/(5a)<23/a and an explicit uniform Holder-1/8 modulus, while every other matrix block is arbitrary."
+    },
+    {
+      "id": "QFORM-COLLECTIVE-TAIL-SHEAR-HOLDER-v1",
+      "statement": "Under the completed collective-tail projection gate, with G=[s1^2 s2^2 T2]^(1/6), the final density after arbitrary dependent outside shear has cap (9sqrt(3)e)/(2G) and explicit Holder-1/8 modulus [135e sqrt(3)/(14G)] min(1,[(e pi sqrt(3)/(2G))|d|]^(1/8))."
+    }
+  ],
+  "partner_result_applied": "account04/B12 20260922T192552Z-account04-B12-mixed-shear-r1, applied to h(u,z)=p_Z(z)p_(U|Z=z)(u) at equations (4.3)-(4.6) of the canonical report",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "14af147fb1b24d3d1d7ab7da813df19070884057",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T044614Z-qform-eigenvalue-r25/REPORT.md",
+    "read_back": true
+  },
+  "checker": {
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T044614Z-qform-eigenvalue-r25/CHECK.py",
+    "result_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T044614Z-qform-eigenvalue-r25/CHECK_RESULT.json",
+    "status": "PASS",
+    "role": "arithmetic sanity only"
+  },
+  "continuity_status": "PROVED_IN_THE_STATED_CROSS-FOOTPRINT_AND_COLLECTIVE-TAIL_BRANCHES; FULL_TARGET_OPEN",
+  "unresolved_implication": "From the bare three-large-eigenvalue hypothesis, derive an exhaustive grouped-coordinate alternative producing either a protected cross-volume/collective-tail certificate or a completed low-cross-rank/hub/bank branch, especially inside the low-pivot/high-spectral-window-leverage residual.",
+  "next_mechanism": "structural grouped-coordinate extraction; do not repeat perturbative estimates unless a new matrix certificate appears"
+}

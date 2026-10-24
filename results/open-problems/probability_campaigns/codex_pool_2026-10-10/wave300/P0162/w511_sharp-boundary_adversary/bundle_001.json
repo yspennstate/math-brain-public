@@ -1,0 +1,205 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w511",
+  "bundle_slug": "fei-coordinate-restriction-sharp-boundary-20261010",
+  "entries": [
+    {
+      "key": "split-profile",
+      "namespace": "analysis.boolean_functions",
+      "logical_name": "boolean-coordinate-split-binary-entropy-profile",
+      "kind": "concept",
+      "title": "Draft: Boolean coordinate split entropy profile",
+      "statement": "DRAFT: independent mathematical referee review pending; no novelty claim. For Boolean f and a specified coordinate i, write f^+ and f^- for its two restrictions, Delta_i=H(f)-(H(f^+)+H(f^-))/2 and delta=I_i(f). Then Delta_i<=h_2(delta)+(2/ln 2)delta, where h_2 is binary entropy. This upper bound is known prior work, independently rederived here. Its binary-entropy term cannot be replaced by a universal constant times delta at every coordinate.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform Boolean cube",
+        "Base-2 Fourier entropy including the empty coefficient",
+        "0 log(1/0)=0"
+      ],
+      "domain": "Fourier analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:fei-restriction-profile-boundary",
+        "url": "urn:probability-research:fei-restriction-profile-boundary",
+        "revision": "independent-campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bad-bridge",
+      "namespace": "analysis.boolean_functions",
+      "logical_name": "false-universal-coordinate-split-linear-entropy-charge",
+      "kind": "concept",
+      "title": "Draft: false universal coordinate split charge",
+      "statement": "DRAFT: independent mathematical referee review pending; no novelty claim. The stronger assertion that there exists a finite universal K such that Delta_i H(f)<=K I_i(f) for every Boolean f and every specified coordinate i is false. This assertion quantifies over every coordinate and is stronger than an induction that chooses a suitable coordinate depending on f.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform Boolean cube",
+        "Base-2 Fourier entropy including the empty coefficient",
+        "0 log(1/0)=0"
+      ],
+      "domain": "Fourier analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:fei-restriction-profile-boundary",
+        "url": "urn:probability-research:fei-restriction-profile-boundary",
+        "revision": "independent-campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "point-flip",
+      "namespace": "analysis.boolean_functions",
+      "logical_name": "quadratic-bent-point-flip-selector-obstruction",
+      "kind": "concept",
+      "title": "Draft: quadratic bent point-flip selector",
+      "statement": "DRAFT: independent mathematical referee review pending; no novelty claim. For even n>=2, t in F_2^n, let g(t)=(-1)^(sum_{j=1}^{n/2} t_{2j-1}t_{2j}), h(t)=g(t)-2*1_{t=0}, and F(t,+1)=g(t), F(t,-1)=h(t). Both restrictions and F are Boolean. With p=2^-n, I_z(F)=p and Delta_z H(F)/p>=n-4/ln 2. Also I(F)=n/2+(n+1)p and H(F)/I(F) tends to 2. Thus this family refutes an every-coordinate linear charge, without refuting full FEI.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform Boolean cube",
+        "Base-2 Fourier entropy including the empty coefficient",
+        "0 log(1/0)=0",
+        "Even n>=2",
+        "Specified selector coordinate z"
+      ],
+      "domain": "Fourier analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:fei-restriction-profile-boundary",
+        "url": "urn:probability-research:fei-restriction-profile-boundary",
+        "revision": "independent-campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "profile-sharpness",
+      "namespace": "analysis.boolean_functions",
+      "logical_name": "boolean-coordinate-split-profile-sharp-additive-constant",
+      "kind": "concept",
+      "title": "Draft: sharp additive constant in the split profile",
+      "statement": "DRAFT: independent mathematical referee review pending; no novelty claim. For even n>=2 use g(t)=(-1)^(sum_j t_{2j-1}t_{2j}), h=g-2*1_{t=0} and selector F(t,+1)=g(t), F(t,-1)=h(t). For p=2^-n, Delta_z H(F)/p=n+3/ln 2+O(p), whereas h_2(p)/p=n+1/ln 2+O(p). Hence [Delta_z H(F)-h_2(p)]/p tends to 2/ln 2, making the additive coefficient in Delta_i<=h_2(I_i)+(2/ln 2)I_i optimal. Multiplication by an independent dictator balances F and both restrictions while preserving their entropies and selector influence.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform Boolean cube",
+        "Base-2 Fourier entropy including the empty coefficient",
+        "0 log(1/0)=0",
+        "Even n tending to infinity",
+        "Specified selector coordinate"
+      ],
+      "domain": "Fourier analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:fei-restriction-profile-boundary",
+        "url": "urn:probability-research:fei-restriction-profile-boundary",
+        "revision": "independent-campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "absolute-two",
+      "namespace": "analysis.boolean_functions",
+      "logical_name": "boolean-coordinate-split-entropy-two-bit-bound",
+      "kind": "concept",
+      "title": "Draft: sharp two-bit split increment bound",
+      "statement": "DRAFT: independent mathematical referee review pending; no novelty claim. For every Boolean f and every coordinate i, 0<=H(f)-(H(f^+)+H(f^-))/2<=2 bits. The upper bound is attained by f(z,x,y)=((1+z)x+(1-z)y)/2: it has four squared Fourier coefficients equal to 1/4, restricted entropies zero, and selector influence 1/2.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform Boolean cube",
+        "Base-2 Fourier entropy including the empty coefficient",
+        "0 log(1/0)=0"
+      ],
+      "domain": "Fourier analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:fei-restriction-profile-boundary",
+        "url": "urn:probability-research:fei-restriction-profile-boundary",
+        "revision": "independent-campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "spectrum-l1",
+      "namespace": "analysis.boolean_functions",
+      "logical_name": "bent-point-flip-squared-spectrum-l1-charge-obstruction",
+      "kind": "concept",
+      "title": "Draft: squared-spectrum charge obstruction",
+      "statement": "DRAFT: independent mathematical referee review pending; no novelty claim. For even n>=2, let g(t)=(-1)^(sum_j t_{2j-1}t_{2j}), h=g-2*1_{t=0} and let F join g,h across a selector z. Put p=2^-n. Then sum_S |ghat(S)^2-hhat(S)^2|/I_z(F)=4(1-p)/sqrt(p). This disproves a universal squared-spectrum L1 charge by influence at every specified split.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform Boolean cube",
+        "Base-2 Fourier entropy including the empty coefficient",
+        "0 log(1/0)=0",
+        "Explicit even-dimensional quadratic bent family"
+      ],
+      "domain": "Fourier analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:fei-restriction-profile-boundary",
+        "url": "urn:probability-research:fei-restriction-profile-boundary",
+        "revision": "independent-campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "coordinate-choice",
+      "namespace": "analysis.boolean_functions",
+      "logical_name": "fei-restriction-induction-existential-coordinate-premise",
+      "kind": "concept",
+      "title": "Draft: retain the coordinate quantifier in FEI induction",
+      "statement": "DRAFT: independent mathematical referee review pending; no novelty claim. A restriction induction for a Boolean class closed under restrictions needs a uniform K and, for every f in the class, existence of a coordinate i with Delta_i H(f)<=K I_i(f). The quadratic bent point-flip selector has a bad selector coordinate, but each original coordinate has influence 1/2+2^-n and split increment at most 2, so its split ratio is below 4. A specified bad coordinate cannot refute this existential premise.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform Boolean cube",
+        "Base-2 Fourier entropy including the empty coefficient",
+        "0 log(1/0)=0",
+        "Class closed under restrictions for the proposed induction"
+      ],
+      "domain": "Fourier analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:fei-restriction-profile-boundary",
+        "url": "urn:probability-research:fei-restriction-profile-boundary",
+        "revision": "independent-campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "point-flip",
+      "to_key": "bad-bridge",
+      "kind": "refutes",
+      "rationale": "The Boolean specified-split ratio exceeds every fixed K as even n grows."
+    },
+    {
+      "from_key": "profile-sharpness",
+      "to_key": "point-flip",
+      "kind": "depends_on",
+      "rationale": "The sharpness limit uses the exact Boolean selector family."
+    },
+    {
+      "from_key": "profile-sharpness",
+      "to_key": "split-profile",
+      "kind": "semantic_association",
+      "rationale": "The family approaches the additive constant in the stated upper profile."
+    },
+    {
+      "from_key": "spectrum-l1",
+      "to_key": "point-flip",
+      "kind": "depends_on",
+      "rationale": "The squared-spectrum obstruction is computed on the same explicitly defined family."
+    },
+    {
+      "from_key": "coordinate-choice",
+      "to_key": "point-flip",
+      "kind": "depends_on",
+      "rationale": "Its specified bad coordinate leaves all original coordinate ratios below 4."
+    },
+    {
+      "from_key": "coordinate-choice",
+      "to_key": "absolute-two",
+      "kind": "depends_on",
+      "rationale": "The two-bit bound supplies the good-coordinate ratio bound."
+    }
+  ]
+}

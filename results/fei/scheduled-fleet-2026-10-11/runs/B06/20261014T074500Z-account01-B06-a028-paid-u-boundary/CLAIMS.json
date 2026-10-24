@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "stream_id": "B06",
+  "primary_packet_id": "A028",
+  "claims": [
+    {
+      "claim_id": "B06-A028-PAID-U-BOUNDARY-v1",
+      "version": 1,
+      "gap_id": "G-GU-STOPPING-RESIDUAL",
+      "exact_statement": "Let T be a finite physical restriction tree for Boolean f. If every leaf satisfies U<=kappa I and sum_v p_v(Delta_i U-K_i^(0)) <= A sum_v p_v Inf_i + b U(f), for fixed A,kappa>=0 and b<1, then U(f) <= [max(A,kappa) I(f)+(2/ln2)Var(f)]/(1-b), hence H(f) <= [2+2(max(A,kappa)+2/ln2)/(1-b)] I(f). The statement permits the same physical coordinate at incomparable nodes.",
+      "hypotheses": ["finite uniform Boolean cube", "finite physical restriction tree", "genuine Boolean restrictions", "absolute A,kappa and b<1"],
+      "contributors": ["account01/B06", "account01/B07 for adaptive root-row input"],
+      "proof_source": "PAID_U_BOUNDARY.tex",
+      "proof_dependencies": ["B07-A031-ADAPTIVE-ROOT-NONREUSE-v1", "U-universal NOTES.md blob 3b0636c653c7818368eeb204011c3e1ff21c234e"],
+      "review_records": [],
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW_CONDITIONAL_STOPPING_THEOREM",
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": "For every Boolean f, construct a finite physical tree with fixed terminal kappa and prove the aggregate signed residual bound with fixed A and b<1.",
+      "next_consumers": ["A029", "A030", "A087", "A094", "A099"]
+    }
+  ]
+}

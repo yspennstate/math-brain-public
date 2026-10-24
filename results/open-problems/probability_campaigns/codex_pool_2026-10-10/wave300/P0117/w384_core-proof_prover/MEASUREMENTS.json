@@ -1,0 +1,22 @@
+{
+  "status": "HELD",
+  "reason": "Governor distress or unknown status holds this check",
+  "type": "RuntimeError",
+  "scope": "Gate held the first launch before graph computation; no numerical mathematical result.",
+  "executed_graph_checks": 0,
+  "command": "python -X utf8 verify_threshold.py --gate ~/.claude/compute/compute_state.json",
+  "process_exit_code": 1,
+  "observed_fresh_gate": {
+    "ts": "2026-10-10 08:22:43",
+    "status": "distress",
+    "mode": "throttle",
+    "reasons": [
+      "memory_physical_pressure",
+      "process_critical"
+    ],
+    "mem_avail_mb": 1419,
+    "commit_avail_mb": 7176,
+    "disk_free_gb": 44.4,
+    "hung_windows": 0
+  }
+}

@@ -1,0 +1,11 @@
+I found a precise obstruction to the independent route for P0043: finite ray energy on a host graph does not pass to a surviving critical cluster. A dyadic-burst tree has maximum degree 9, p_c=1/2, critical root survival at least 4/5, and host ray energy 5/4; every surviving critical component nevertheless has thinning threshold 1. The tree is not quasi-transitive, so it does not refute the intended conjecture.
+
+I saved a self-contained second-moment derivation before reading w435's original proof, then independently checked its four auxiliary statements. Those receive KEEP; the route's completion premise receives FIX. It still needs a consequence of quasi-transitivity constructing finite ray energy on the critical component, with a separate argument for recurrent classes.
+
+The command python -X utf8 verify_arithmetic.py checked 4,095 generations and four exact identities per generation with zero assertion failures in 0.229612 seconds. It accounts for the omitted infinite tail and independently reproduces w435's square-block constant. These are auxiliary arithmetic checks. No improvement to live recall performance or solution of P0043 is claimed.
+
+The exact historical source is recovered, and a primary preprint dated September 24 states the full target as Theorem 1.1. Its statement is verified; its proof is not verified here. The linked comparator contains an admitted placeholder and supplies no proof receipt. SOURCE_STATUS.json therefore records current openness as UNKNOWN.
+
+Three concept-only cards and three supported relations are prepared, with both endpoints quoted in EDGE_EVIDENCE.jsonl. Integration and retrieval are separate, unverified states. The assigned independent reviewer is w437; REVIEW_PACKET.md names the checks needed. The supervisor can apply the draft through the normal validating coordinator after review, and apply patches/01_critical_graph_hypotheses_hook.diff as an add-only proposed hook if its pair audit keeps it. Shared hook/progress writes are staged because this worker's permitted output locations are restricted; the task explicitly authorizes its own math-brain inbox draft.
+
+NEXT: Referee-check C1/C2 and the relation endpoints, integrate the accurately labeled draft, and verify retrieval.

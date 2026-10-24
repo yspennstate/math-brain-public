@@ -1,0 +1,57 @@
+\section*{Updated overlap interface}
+
+Let
+\[
+ q(y)=y\log_2(1/y)+\frac{2y}{\ln2},\qquad
+ \Phi(f)=\sum_i q(\widehat f(\{i\})^2).
+\]
+For a distinguished physical coordinate $x$, define
+\[
+ \Lambda_x(f)=q(\widehat f(\emptyset)^2+\widehat f(\{x\})^2)
+ +\sum_{i\ne x}q(\widehat f(\{i\})^2+
+                         \widehat f(\{i,x\})^2).
+\]
+
+The following arrows are proved:
+\[
+ \begin{array}{c}
+ f(x,u),g(x,v),\ u\cap v=\emptyset
+ \\
+ \Downarrow\quad\text{one shared physical coordinate}
+ \\
+ \Phi(fg)\le\Lambda_x(f)+\Lambda_x(g),
+ \qquad
+ \mathbb E_{x}\Phi(f\mid x)\le\Lambda_x(f).
+ \end{array}
+\]
+The first arrow is stable under arbitrary private tensor factors because the
+private blocks $u,v$ are unrestricted Boolean systems; no rank, bias,
+dimension, symmetry, or rarity hypothesis is used.
+
+The B05/A025 counterfamily proves that replacing $\Lambda_x(f)$ by
+$\Phi(f)+C\operatorname{Inf}_x(f)$ is impossible at fixed $C$. Thus the block
+term is genuinely stronger information, not a restatement of the failed
+scalar payment.
+
+The next arrow is open:
+\[
+ \left.
+ \begin{array}{c}
+ \text{adaptive hierarchy with reused coordinates}\cr
+ \text{each }\Lambda_x\text{ owned at first physical revelation}
+ \end{array}
+ \right\}
+ \stackrel{\rm OPEN}{\Longrightarrow}
+ \sum_{\rm nodes}\text{signed overlap charge}
+ \le A I(f)+bU(f),\qquad b<1.
+\]
+If this open arrow holds with absolute $A$ and $b<1$, the existing restriction
+induction gives
+\[
+ U(f)\le\frac{A}{1-b}I(f),\qquad
+ H(f)\le\left(2+\frac{2A}{1-b}\right)I(f).
+\]
+
+The open arrow must retain the exact mismatch/KL term and prevent one Fourier
+block from being charged by multiple ancestors. A fixed multiplier on each
+shared pivotal edge is already refuted.

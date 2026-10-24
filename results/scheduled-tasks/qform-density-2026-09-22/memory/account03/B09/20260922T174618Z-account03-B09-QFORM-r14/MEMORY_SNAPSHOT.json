@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260922T174618Z-account03-B09-QFORM-r14",
+  "source_control_commit": "892313a5af6f92495cc15afe7d10d8463835fa46",
+  "control_revision": "2026-09-22.10",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "new_result": {
+    "id": "QFORM-CONDITIONAL-THREEPROJ-2OVER3-MOMENT-FALSE-v1",
+    "status": "REFUTED_INTERMEDIATE_MECHANISM",
+    "statement": "For the three-block unit-cube family, E_Z ||rho_{Y|Z}||_infinity^(2/3) equals I_m^3 with I_m=Gamma(4/3)m^(2/3)Gamma(m)/Gamma(m+1/3), hence is at least e^(-3)m and is not universally bounded. The construction embeds in a full-rank target matrix with spectrum {1,1,-1,1/2,...,1/2}.",
+    "not_a_target_counterexample": true
+  },
+  "actual_peer_result_applied": {
+    "worker": "account02/B06",
+    "id": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+    "application": "On the same three block-constant eigendirections, ||rho_Y||_infinity <= (1-1/m)^(-3(m-1)/2) <= exp(3/2), while the weighted conditional 2/3 moment diverges."
+  },
+  "designated_partner": {
+    "worker": "account04/B09",
+    "status": "NO_COMPLETED_CURRENT_QFORM_ARTIFACT_FOUND_AT_FRESH_CHECK"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "60b3f717b1a0e336406bc2acdfc1eaf951906fca",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260922T174618Z-account03-B09-QFORM-r14/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260922T174618Z-account03-B09-QFORM-r14/verify.py"
+  },
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "first_unresolved_implication": "QFORM-WEIGHTED-CONDITIONAL-COAREA-WITHOUT-FIBER-SUP-v1",
+  "next_step": "Keep original product density, residual spectral variables and rank-three curved integration inside one joint inequality; any candidate must remain uniformly controlled on the exact three-block cube fibers."
+}

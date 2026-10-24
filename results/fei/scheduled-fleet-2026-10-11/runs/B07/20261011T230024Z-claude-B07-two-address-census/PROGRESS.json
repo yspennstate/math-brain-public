@@ -1,0 +1,52 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T230024Z-claude-B07-two-address-census",
+ "stream": "B07",
+ "packet_id": "A034",
+ "gap_id": "G-PHASE-COND",
+ "attempt_id": "20261011T230024Z-claude-B07-two-address-census-1",
+ "method": "exact exhaustive census of two-address conditional-product Boolean functions (N<=5) with integer certificate; generic probability inequality; independent re-derivation of A031/A032 results",
+ "mathematical_delta": "Best known lower bound on the two-address constant raised from 40/17 to 16/3-(3/2)log2 3 = 2.9559 (three-variable point defect, vacuous one-coordinate conditionals); exact maximum for N<=5 certified; A031 point-defect calibration shown generic; A032 ten-atom obstruction and n=4 counts confirmed.",
+ "deliverable_status": "COMPLETE_WITH_SAVE_BLOCKER",
+ "mathematical_status": "PARTIAL: lower bound and small-N exact maximum; finiteness of C_2 OPEN",
+ "claim_versions_used": [
+  "A031-SIGNED-ENTROPY-ANCHOR v1",
+  "A031-ANCHOR-POSITIVE-PAYMENT-NOGO v1",
+  "A032-EXACT-PHASE-ADMISSION v1",
+  "C016",
+  "C031",
+  "X008"
+ ],
+ "claims_created_or_changed": [
+  "B07L-TWO-ADDRESS-POINT-DEFECT v1",
+  "B07L-TWO-ADDRESS-CENSUS-N5 v1",
+  "B07L-GENERIC-MINENTROPY-CALIBRATION v1",
+  "B07L-REVIEW-A032-TEN-ATOM v1"
+ ],
+ "source_artifacts": [
+  "out/P1_ten_atom.json",
+  "out/P2_affine_even.json",
+  "out/P3_generic_minentropy.json",
+  "out/P4_census.json",
+  "out/P4_certificate_cstar.json",
+  "out/P4_bruteforce_n4.json"
+ ],
+ "next_consumers": [
+  "A034",
+  "A032",
+  "A031",
+  "A035",
+  "F12",
+  "A088",
+  "A094"
+ ],
+ "next_action": "Search N=6 two-address functions for H/I > 16/3-(3/2)log2 3, beginning with pure configurations (four {0,+-1} slices with disjoint supports and product spectra).",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "REPORT.md not written: the subagent harness refused the write (Write tool: 'Subagents should return findings as text, not write report files'). The full report (seven protocol fields and the Universal bridge) is in the final StructuredOutput and the proofs are in CLAIMS.json.",
+  "Process deviation: P3 float illustration built dense Hadamard matrices up to 16384x16384 (several GB, about three minutes), above the 1 GB per-job limit."
+ ],
+ "packet_ids": [
+  "A034"
+ ]
+}

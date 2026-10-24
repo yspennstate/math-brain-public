@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T035147Z-b11-pos3-r14-931012ae",
+  "account": "account02",
+  "slot": "B11",
+  "utc_receipt": "2026-09-22T04:02:39.354252+00:00",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "target_status": "OPEN_NOT_PROVED",
+  "directive_acknowledged": "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z",
+  "assignment_acknowledged": "minimal-counterexample/ordinal-decomposition reduction preserving width at most three",
+  "control": {
+    "entry_main": "a944a1b16986e1ba0d6930d2f7d7ad425abd85d5",
+    "terminal_main_observed_before_receipt": "93cc1aace1c7999d82b8a586b28528ef9ac8376e",
+    "owner_revision": "2026-09-22.2",
+    "readme_git_blob": "3d4a9372c87802ab734141a3374d04c8823372e3",
+    "readme_sha256": null,
+    "owner_message_sha256": null,
+    "sha256_null_reason": "authorized connector exposed parsed content and Git blob identity but no lossless raw-byte bridge to the local hasher",
+    "later_stop_found": false
+  },
+  "sources_consumed": [
+    {
+      "role": "campaign_lead_latest_complete",
+      "path": "proofnet24/collective-POS3/account04/B10/20260922T034709Z-B10-POS3-r12/REPORT.md",
+      "blob": "4759a4ecb5f2963a3d190f66fc6728459bb1a46e"
+    },
+    {
+      "role": "named_partner",
+      "path": "proofnet24/collective-POS3/account03/B19/20260922T0332Z-b19-pos3-r11-reverse-branching/REPORT.md",
+      "blob": "7da837e669bec270ce633fc9d9612cea0293a2b3"
+    },
+    {
+      "role": "endpoint_exchange",
+      "path": "proofnet24/collective-POS3/account01/B11/20260922T021210Z-b11-pos3-exchange-r11/REPORT.md",
+      "blob": "5fdf6f70d35fee1011b67c217b9e177fb197e81a"
+    }
+  ],
+  "measured_changes": {
+    "new_arbitrary_size_theorems": 1,
+    "new_corollaries_or_structural_reductions": 2,
+    "decisive_local_shortcut_counterexamples": 1,
+    "finite_nested_endpoint_orientations_checked": 33051,
+    "strict_nested_endpoint_orientations_checked": 15651,
+    "finite_assertion_failures": 0,
+    "full_POS3_proof_claimed": false
+  },
+  "artifacts": {
+    "login_git_blob": "9be103d5a15b65d6fc91a9b48cd50482192f673e",
+    "start_git_blob": "30c136ba3e8fb2eb3da3f8d8a557705681eb85ae",
+    "report_git_blob": "0d3bc896c83f0f37c8cc46bb46e61799ebfdd49a",
+    "report_sha256": "ebb710bdabf743178bf640faee6f9302133c53150ac2b7064cd46986cb67109d",
+    "verifier_git_blob": "d15145e691b77500edc89fe66d9d552b38f510fd",
+    "verifier_sha256": "e2946e7a40a561ffd07d46894e741adb8e9e57a1f8a8cbbfa82590ce1ef0fcb0",
+    "verifier_output_git_blob": "142cfac840fafaa322853639559f18e764a31f6c",
+    "verifier_output_sha256": "9a71734e334973f15d26fd5963e1a4876535562d7ce7b3895a9afe6090f1c41d",
+    "shared_handoff_git_blob": "83d2207df38bd9460bb419e517c711345f7d432a"
+  },
+  "privacy_secret_review": {
+    "scope": ["REPORT.md", "verifier source", "captured verifier stdout", "shared handoff"],
+    "machine_paths": 0,
+    "credential_material": 0,
+    "email_addresses": 0,
+    "scheduler_identifiers": 0,
+    "benchmark_gold_or_answers": 0,
+    "raw_private_transcripts": 0
+  },
+  "inventory": {
+    "account02_managed_slots_observed": 20,
+    "enabled": 20,
+    "hourly_valid": 20,
+    "deficits_for_B20": 0,
+    "B11_scheduler_mutations": 0,
+    "task_notifications_enabled": false,
+    "task_email_enabled": false,
+    "account_level_notification_preference": "NOT_EXPOSED"
+  },
+  "model": {
+    "self_report": "GPT-5.6 Sol",
+    "reasoning_effort_requested": "maximum actually supported",
+    "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+    "reasoning_effort_self_report": "UNKNOWN_NOT_EXPOSED",
+    "provider_reasoning_usage": null
+  },
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "elapsed_execution_seconds_at_receipt": 652.153418,
+  "elapsed_is_pure_thinking": false,
+  "notes": [
+    "The canonical login was created after fresh control and dependency reads; this ordering miss is stated honestly and no backdated login was fabricated.",
+    "Finite enumeration is regression evidence only and is not used as arbitrary-size closure.",
+    "Old installation and benchmark artifacts were untouched."
+  ]
+}

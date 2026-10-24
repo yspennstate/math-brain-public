@@ -1,0 +1,59 @@
+{
+  "worker": "NM13-13",
+  "parent": "T04",
+  "date": "2026-09-20",
+  "runtime_model": "GPT-5.6 Sol",
+  "runtime_reasoning": "UNVERIFIED",
+  "status": "OPEN/PARTIAL; CANDIDATE_FULL pending later independent review",
+  "source_model": "classical iid proper random 3-SAT with m=floor(alpha*n), three distinct variables per clause, independent fair literal signs",
+  "source_threshold": {
+    "published_explicit_decimal_before": [3.52, 4.4898],
+    "published_explicit_decimal_after": [3.52, 4.4898],
+    "published_explicit_decimal_movement": "none",
+    "literature_symbolic_frontier": "3.52 <= liminf c_n <= limsup c_n <= U_1RSB(3); the literature-reported physics decimal near alpha=4.267 was not independently interval-certified by this track",
+    "project_candidate_before": [3.52, 4.38890],
+    "project_candidate_after": [3.52, 4.3888762],
+    "project_candidate_width_before": 0.86890,
+    "project_candidate_width_after": 0.8688762,
+    "project_upper_endpoint_gain": 0.0000238
+  },
+  "new_mechanism": {
+    "name": "four-node Gaussian/Hankel Hausdorff-moment tail lower envelope",
+    "statement": "For the Q^K-tilted law, four-node Gaussian quadrature is exact through degree 7; degree-7 Hermite interpolation and nonnegative eighth derivative of q^t give g_t <= m_t for all t>=8, hence A <= A_K - mu_K^2 sum_{t=1}^T g_t^2/(K+t).",
+    "alpha": "21944381/5000000 = 4.3888762",
+    "survey_support": ["33/5000", "49/625", "1/2", "576/625", "4967/5000"],
+    "survey_weights": ["139/2500", "1831/10000", "2613/5000", "1831/10000", "139/2500"],
+    "K": 2300,
+    "T": 60000,
+    "interval_dps": 1500,
+    "A_K": "4.92073599425890175360450198455e-5 (positive)",
+    "finite_gauss4_tail_lower_bound": "4.92234232467918600965197452327e-5",
+    "A_upper": "<= -1.60633042028425604747e-8",
+    "certificate": "CERTIFIED_STRUCTURAL_CHECKS=True; CERTIFIED_A_NEGATIVE=True"
+  },
+  "candidate_theorem": "Pr[Phi_{n,floor(4.3888762 n)} is SAT] -> 0 for the exact proper iid source model, subject to later independent review of the inherited interpolation/source-transfer argument",
+  "predecessor_handoff": "three-node Gaussian tail candidate 4.38890; prior failed routes preserved; companion NM13-06 remains on constructive majority-repair/global-compatibility route",
+  "prior_failures_preserved": [
+    "rescue stars fail composition",
+    "anchored degree-one matching lacks full Diaz-polytope reoptimization",
+    "positive local second moments hit identical-pair barrier log(2)/log(5/4)",
+    "sublinear solution-ball quotienting gives only exp(o(n))",
+    "whole-component quotienting leaves uncontrolled overlap",
+    "whitening/core counting lacks uniform exponential multiplicity theorem",
+    "q-binomial radius-two route only reached about 4.5923",
+    "equal-weight two-support hard-field family stalls near 4.4178"
+  ],
+  "literature_checks": [
+    "Hajiaghayi-Sorkin arXiv math/0310193: lower 3.52",
+    "Diaz-Kirousis-Mitsche-Perez-Gimenez arXiv 0807.3600: upper 4.4898",
+    "Chatterjee et al. CPC 2026: small fixed k>=3 uniform threshold remains open; interpolation gives rigorous 1RSB upper mechanism",
+    "Carenini ECCC TR26-145, Aug 2026: O(n/log n) scaling window, not threshold location"
+  ],
+  "next_attack": "Markov-Stieltjes/continued-fraction or rational Pade lower envelope for the complete infinite tail functional from a finite Hankel moment matrix; only then reoptimize a richer survey if it moves the endpoint",
+  "report": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/2026-09-20T09-53-37Z__t04_four_node_gaussian_tail_43888762.md",
+  "report_commit": "72623e774cf7068f8034a68db0b2402c01658bdf",
+  "code": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T09-53-37Z__gauss4_tail_43888762_interval.py",
+  "code_commit": "fcfd839512bc0eb9b41c17da6b77436b3bb6707a",
+  "output": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T09-53-37Z__gauss4_tail_43888762_interval.out",
+  "output_commit": "bfc9a37af197606b65586255deace64e435820b9"
+}

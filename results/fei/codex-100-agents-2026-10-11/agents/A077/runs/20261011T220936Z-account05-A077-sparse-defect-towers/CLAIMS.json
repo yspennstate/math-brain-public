@@ -1,0 +1,39 @@
+[
+  {
+    "claim_id": "A077-MULTISCALE-MINORITY-KL-LEDGER",
+    "version": 1,
+    "exact_statement": "For every n>=1 and every fresh disjoint block partition of n, the nested constant-seed activation tower is the Boolean point defect f_n=1-2*1{x=0}, with I=2n*2^(-n), H<=4I and H/I tending to 4. Every complete one-coordinate restriction tree, with irrelevant queries skipped, has blind exact-minority surcharge R=2^(-n)n(n-1), hence R/I=(n-1)/2. Retaining the exact base-two KL rebate gives Q<=2I and, for n>=2, 1-1/n<=Q/I<=1+3/n, hence Q/I tends to 1. For disjoint products and sequential factor trees, H,I,R,Q add.",
+    "hypotheses": [
+      "uniform independent physical bits",
+      "Boolean sign outputs",
+      "fresh disjoint activation blocks and constant negative seed",
+      "entropy and KL in bits",
+      "M is the sum of smaller parent spectral masses in each residual fiber",
+      "full one-coordinate physical restriction tree; zero-M terms vanish",
+      "tensor extension uses disjoint variable blocks and sequential factor trees"
+    ],
+    "statement_sha256": "decfd3e22d7ba36cb6f39733c9be7d11a886a4643d329a7fa10f3cb981bd9ec2",
+    "contributors": [
+      "A077/account05"
+    ],
+    "proof_source": "REPORT.md; SPARSE_DEFECT_TOWERS.tex; code/check.py; out/validation.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACT_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "blind universal sum_v w_v M_v log2(1/M_v)<=K I(f), for any absolute finite K, even after optimizing complete coordinate order"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A022",
+      "A023",
+      "A064",
+      "A075",
+      "A080",
+      "A092",
+      "A088",
+      "B20"
+    ]
+  }
+]

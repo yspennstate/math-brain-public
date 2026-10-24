@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T215937Z-account02-B20-QFORM-r20",
+  "classification": [
+    "ESSENTIAL_STEP_APPLIED",
+    "PARTNER-R17-TWOANCHOR-OBLIGATION-REFUTED",
+    "LOCALIZED-HIGHWINDOW-BRANCH-CLOSED",
+    "FULL_TARGET_OPEN"
+  ],
+  "claims": [
+    {
+      "id": "QFORM-LOCALIZED-HIGHWINDOW-COMPLETE-PAYMENT-v1",
+      "status": "proved_by_source_compatible_case_split",
+      "hypotheses": {
+        "source": "independent original physical coordinates with one-dimensional densities <= 1",
+        "matrix": "real symmetric A with s_3(A)>=1",
+        "outer_pivot": "physical pivot coefficient |a|>=tau>=1/4",
+        "selected_highwindow_coordinate": "physical j in the exact Schur complement with row data (d,c) satisfying max(|d|,||c||_2)>tau/9"
+      },
+      "conclusion": "essential supremum of the full ambient quadratic-form density is <5262",
+      "proof_partition": [
+        "if ||c||_2>|d|, apply account04/B20 r3 QFORM-CROSSDOM-TWO-PHYSICAL-PIVOT-CLOSURE-v1",
+        "if |d|>=||c||_2, apply account01/B20 r13 diagonal-dominated localized-row closure"
+      ],
+      "source_pins": [
+        "yspennstate/math-open-problems@25ad8faaac5064b6814d51ae63d894fe97c1eac4",
+        "yspennstate/math-open-problems@f45187170f0d940c8bdc61d095564f92fb749092"
+      ],
+      "guards": [
+        "no post-rotation independence",
+        "no unrestricted fiber supremum",
+        "no arbitrary-joint 3D coarea",
+        "no universal conditional projected-density moment"
+      ]
+    },
+    {
+      "id": "QFORM-PARTNER-R17-TWOANCHOR-UNPAID-STATUS-CORRECTION-v1",
+      "status": "source_compatibility_correction",
+      "statement": "Under the exact r13/r3 localized high-window hypotheses imported by account03/B20 r17, the branch is paid before the balanced-hub identity p=j versus p!=j matters. Therefore no source-compatible unpaid p!=j two-anchor state remains under those same hypotheses.",
+      "partner_source": "account03/B20 20260922T204947Z-account03-B20-QFORM-r17",
+      "partner_math_pin": "yspennstate/math-open-problems@ff81131d3199d8a7dc66b51fa28229ecb5af19ce"
+    },
+    {
+      "id": "QFORM-UPSTREAM-OUTER-STRUCTURAL-EXHAUSTION-v1",
+      "status": "first_unpaid_universal_implication",
+      "statement": "From the full target hypotheses alone, source-preservingly force every still-unpaid matrix into the paid localized high-window state or another already-paid physical packet, or directly pay the complementary upstream outer-pivot near-zero/cross-dominated geometry with a universal linear small-ball/density bound.",
+      "full_target_connection": "A universal source-valid exhaustion into already-paid endpoints would close the remaining conditional proof chain; this run does not establish that exhaustion."
+    }
+  ],
+  "full_target_status": "OPEN",
+  "continuity_status": "NOT_CLOSED_BY_THIS_RUN"
+}

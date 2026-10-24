@@ -1,0 +1,38 @@
+[
+  {
+    "date": "2026-10-12",
+    "service": "levelp",
+    "url": "https://arxiv.org/pdf/2302.02473",
+    "status": "OK 733879 bytes"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "worstcase",
+    "url": "https://arxiv.org/pdf/1309.7565",
+    "status": "OK 1365755 bytes"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "arxiv_revealment",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3Arevealment+AND+%28all%3Amajority+OR+all%3Arecursive%29&max_results=40",
+    "status": "OK 86106 bytes"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "openalex_retry",
+    "url": "https://api.openalex.org/works?search=iterated+majority+revealment&per_page=15",
+    "status": "<HTTPError 429: 'Too Many Requests'>"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "openalex_arxiv",
+    "url": "https://api.openalex.org/works/https://arxiv.org/abs/1102.5761",
+    "status": "<HTTPError 429: 'Too Many Requests'>"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "semantic_retry",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1102.5761?fields=title,citations.title,citations.year,citations.externalIds",
+    "status": "<HTTPError 429: ''>"
+  }
+]

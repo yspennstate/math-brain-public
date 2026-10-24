@@ -1,0 +1,30 @@
+status=PASS
+conditional_bernoulli_coordinates=PASS
+local_compensation_determinant=36*r^2*y*(1-y)/(p00*p10*p01*p11)
+local_compensation_identity=PASS
+naive_coercivity_counterexample=PASS
+counterexample_x=4/5
+counterexample_y=4/5
+counterexample_r=9999/50000
+counterexample_direction=[[-1,1],[1,-1]]
+counterexample_atoms= 19999/2500000000,499980001/2500000000,499980001/2500000000,1500019999/2500000000
+counterexample_FI= 4999550015000000000/299983000300009999
+counterexample_odds= 249980001399960001/29998899960001
+exact_odds_margin_over_8192= 4229012927631809/29998899960001
+exact_52_over_3_minus_FI= 600465970600519948/899949000900029997
+conclusion=For this direction det(U)=0 and b=1, so S_C(U)=FI<2L; the auxiliary bound S_C(U)>=2L*b^2 is false.
+global_X095_metric_certified=False
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+
+exit_code=0

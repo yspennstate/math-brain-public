@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B11",
+  "run_id": "20260923T153909Z-account01-B11-QFORM-auto11",
+  "status": "ESSENTIAL_STEP_APPLIED_PROVED_SUPPORTING_THEOREM_FULL_TARGET_OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "repository": "yspennstate/math-research-brain",
+    "branch": "main",
+    "prepublication_commit": "c0f74a12d63c365ff97503c17167b5d932a5d8b5",
+    "owner_control_revision": "2026-09-22.15",
+    "sole_target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES"
+  },
+  "corrections": {
+    "live_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+    "consumed_principles": [
+      "QFORM-POINTWISE-DECAY-FALSE",
+      "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+      "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+      "no universally good single physical minor",
+      "small matrix norm is not a uniformly small random quadratic perturbation"
+    ]
+  },
+  "new_theorem": {
+    "id": "QFORM-SCALAR-SCHUR-DENSITY-TRANSFER-v1",
+    "statement": "For Q=a X0^2+2 X0 b^T Z+Z^T D Z+ell0 X0+ell^T Z+c with a!=0 and independent cap-one original variables, if the exact scalar Schur remainder R(Z) has density cap K, then Q has density cap at most 2 sqrt(2K/|a|). The translated square may be arbitrarily correlated with R through Z.",
+    "continuity": "NOT_PROVED",
+    "full_target": "OPEN"
+  },
+  "premises_actually_used": [
+    {
+      "type": "newest_volume_stability",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "scope": "Original-coordinate cross block M=M0+E, s3(M0)>=c0, range leverage<=1/2, ||E||op<=c0/16; continuous Schur density <=24 sqrt(3)e/(5c0)."
+    },
+    {
+      "type": "designated_partner_account02_B11",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "15189fa11c0c752c1d9022c60e253a9e8d457df8",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260923T124731Z-account02-B11-QFORM-r31/REPORT.md",
+      "scope": "Explicit six-coordinate indefinite family with nonzero spectrum {1,1,-1}; continuous density cap 12 from one-sided null-sum Fresnel-BL compiler."
+    }
+  ],
+  "actual_applications": [
+    {
+      "id": "SCALAR_PIVOT_PLUS_VOLUME_SCHUR",
+      "result": "For a scalar pivot a and volume-stability Schur scale c0, ||p_Q||inf <=2 sqrt(48 sqrt(3)e/(5|a|c0)) <13.447/sqrt(|a|c0). A concrete cross-coupled target-valid family has bound 6.7230009273."
+    },
+    {
+      "id": "PARTNER_CROSSCOUPLED_EXTENSION",
+      "result": "Scaling the account02/B11 family by two gives remainder cap 6; arbitrary scalar cross coupling through tilde A_b yields ||p||inf<=2 sqrt(6)=4.8989794856 for ||b||<=1/4, with at least three eigenvalues >1 in modulus."
+    }
+  ],
+  "rank_two_control": "For centered unit uniforms, p_{2XY}(t)=log(1/(2|t|)) on 0<|t|<1/2. The third direction is used through a product-safe rank-three remainder mechanism; the theorem does not declare the saddle itself bounded.",
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "62bf9a3c15f2ea361255510928bb1f3fd48c3d24",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/20260923T153909Z-account01-B11-QFORM-auto11/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/20260923T153909Z-account01-B11-QFORM-auto11/CHECK.txt",
+    "checker_status": "QFORM_B11_SCHUR_SQUARE_CHECK_PASS"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "018bede3cca99c3d6b9acd09e7092170731e021b",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B11/20260923T153909Z-account01-B11-QFORM-auto11.md"
+  },
+  "unresolved_implication": "QFORM-INDEFINITE-SMALL-PIVOT-SCHUR-ALTERNATIVE-v1",
+  "next_step": "Prove an exhaustive product-preserving no-pivot alternative: either obtain a scalar pivot together with a bounded-density Schur remainder at a dimension-free combined scale, or force an already-paid pair/null-sum-Fresnel/volume/ridge/ruled/grouped-bank exit while retaining arbitrary additional spectrum.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

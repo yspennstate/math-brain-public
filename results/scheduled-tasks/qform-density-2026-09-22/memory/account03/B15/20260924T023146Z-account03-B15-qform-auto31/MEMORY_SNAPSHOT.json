@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260924T023146Z-account03-B15-qform-auto31",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "startup_control_commit": "9e4334a75f4dff73bbbe1176e3009311c7f6acdc",
+  "publication_refresh_commit": "34b51c4be399e03956281d1a66753c8a41ed5afb",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-B15-NONZERO-SQUARE-AFFINE-SLOPE-RESCUE-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "A03-B15-AUTO27-INDEFINITE-PAIR",
+      "source": "yspennstate/math-open-problems@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c:proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T222614Z-account03-B15-qform-auto27/REPORT.md",
+      "scope": "finite matrix-dependent height for any nonsingular physical 2x2 pair in rank>=3; indefinite via Schur small-ball, definite via ellipse shell"
+    },
+    {
+      "id": "A04-B15-SAME-CONSTANT-C0",
+      "source": "yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e:proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260923T221909Z-account04-B15-ruled-trace-c0-r8/REPORT.md",
+      "scope": "rank>=3 plus an independently paid interval bound M implies canonical p in C0 with identical height M"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-PRODUCT-INTERVAL-LOG-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "For independent cap-one U,V and any interval J of length ell<1/2, P(UV in J)<=2 ell[1+log(1/(2ell))]."
+    },
+    {
+      "id": "QFORM-AFFINE-BILINEAR-HALF-RIESZ-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "For independent inputs with density caps a,b, sup_t E(t-[cUV+alpha U+beta V+gamma])_+^(-1/2)<=4sqrt(2)sqrt(ab/|c|)."
+    },
+    {
+      "id": "QFORM-ZERO-PAIR-MINORS-TRIPLE-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "If an invertible physical 3x3 block B has all 2x2 principal determinants zero, then ||p_Q||inf<=4(|det B|max_i|B_ii|)^(-1/4), uniformly over affine terms/outside conditioning."
+    },
+    {
+      "id": "QFORM-FIXED-MATRIX-2OR3-CLOSURE-v1",
+      "status": "PROVED_THIS_RUN_USING_AUTO27",
+      "statement": "Every fixed real symmetric A of rank>=3 admits a finite explicit physical-entry L-infinity certificate: either a nonsingular principal pair is paid by auto27 or, if all pair determinants vanish, a frustrated-sign principal triple is paid by the new theorem."
+    }
+  ],
+  "partner_applied": {
+    "partner": "account04/B15",
+    "result": "same-constant C0 compiler",
+    "actual_inequality": "||p_Q||inf<=4(|det B|max_i|B_ii|)^(-1/4)",
+    "conclusion": "p_Q in C0 with the same constant"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bea3c88b8ba5df9f7fbed3bf0676709971a1e9da",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260924T023146Z-account03-B15-qform-auto31/REPORT.md",
+    "blob_sha": "a02180c5396487141a6fe7135256b6df68ea8250"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B15/20260924T023146Z-account03-B15-qform-auto31.md",
+  "full_target_status": "OPEN",
+  "unresolved_implication": "Convert the spectral condition s_3(A)>=1 into a dimension-free aggregate payment when all raw physical pair/triple certificates are small; exact zero pair-minor endpoint is now paid but quantitative near-zero stability/aggregation remains.",
+  "next_step": "Develop a quantitative stability version of the principal 2-or-3 dichotomy with aggregation across many frustrated triangles or route the collapse chamber into existing diffuse/grouped/ridge exits."
+}

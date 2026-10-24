@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "B17-20260922T232912Z-r11-partial-heavy",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "e491d3747b73c1531b0df25ef4bc4f3ae991a205",
+  "control_commit_prepublication": "4c2d187145615e43331c0c6df526b6761bf6a750",
+  "protected_control_change_since_start": false,
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "status": "PARTIAL_HEAVY_CENTRAL_QUADRATIC_BARRIER_FULL_TARGET_OPEN",
+  "full_brain_connected": false,
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "headline": "For an exact source-valid three-heavy-plus-three-diffuse-bank frame with leverage ell in each active direction, the limiting central density is 3sqrt(2)[1-c(u)ell^2+O(ell^3)] uniformly in orientation, with 69/320<=c(u)<=41/160. Thus qualitative nonzero heavy leverage carries no fixed or linear sharp-density penalty near the diffuse obstruction.",
+  "theorem": {
+    "id": "QFORM-PARTIAL-HEAVY-QUADRATIC-BARRIER-v1",
+    "scope": "Exact finite matrices with nonzero spectrum {1,1,-1}; independent centered unit-interval physical inputs; fixed partial leverage ell with Gaussian diffuse-bank limit; central density asymptotic as ell tends to zero.",
+    "formula": "p_{ell,u}(0)=3sqrt(2)[1-c(u)ell^2+O(ell^3)], c(u)=[177-39 sum u_j^4]/640=69/320+(39/1280)sum_{i<j}(B_u)_{ij}^2",
+    "uniformity": "The O(ell^3) remainder can be taken uniform over u in S^2; hence there is an absolute ell_0 with p_{ell,u}(0)<3sqrt(2) for all orientations and 0<ell<=ell_0.",
+    "fully_coupled_exact_coefficient": "53990741/240540480 for u=(10,10,49)/51"
+  },
+  "partner_applied": [
+    {
+      "worker": "account03/B17",
+      "source_commit": "63f692146f592bc250af369056573dc5e3720a8e",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T221945Z-account03-B17-QFORM-r19/REPORT.md",
+      "application": "Used the exact orientation coefficient c(u) from the completed diffuse uniform-bank Edgeworth theorem, then independently rederived its cone contraction and identified ell^2 as the replacement for 1/m via the source characteristic function."
+    },
+    {
+      "worker": "account03/B17",
+      "source_commit": "66087bde81ba096d5d65ac5347e94a6322a47215",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T230117Z-account03-B17-QFORM-auto11/REPORT.md",
+      "application": "Compared the local contiguous-heavy perturbation with the completed rare-fragment barrier: remote m^-2 fragments worsen the first-order deficit, while local heavy leverage has no linear term and starts at ell^2."
+    }
+  ],
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5bacaa5dde0c746d1173052db0422d5182fcc85a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260922T232912Z-r11-partial-heavy/",
+    "report_blob": "67c7ae801bb92786ae5c96f7f1ea0fcf4fc92c3b",
+    "verify_blob": "91ac38ae1eaf2b63640a6b6c1089fd222f3756aa",
+    "verify_status": "PASS QFORM-PARTIAL-HEAVY-QUADRATIC-BARRIER-v1"
+  },
+  "correction_status": "No refuted arbitrary-joint coarea, conditional-density cap/moment, pointwise oscillatory decay, post-rotation independence, or single-minor extraction premise is used. Live correction inbox was reread at the prepublication control commit and did not require retraction.",
+  "unresolved_implication": "The theorem is central-peak and small-leverage only. It does not exclude an off-zero density maximum above 3sqrt(2) at intermediate leverage, nor prove the full universal upper bound.",
+  "next_step": "Determine the global output maximum as a function of intermediate leverage ell for genuinely coupled orientations, or construct a finite/mesoscopic off-zero overshoot; this is the bridge between diffuse and saturated endpoint exclusions."
+}

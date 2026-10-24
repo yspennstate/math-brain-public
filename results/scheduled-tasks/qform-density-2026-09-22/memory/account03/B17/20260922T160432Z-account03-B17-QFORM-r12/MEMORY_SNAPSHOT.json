@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260922T160432Z-account03-B17-QFORM-r12",
+  "source_control_commit": "de7d99446a7d84daa89699fafaccb03a0bffbbd0",
+  "prepublication_control_commit": "a60c9fb6aedabe542d8bb8d140e72d9d1d324127",
+  "control_revision": "2026-09-22.5",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "new_mathematics": {
+    "theorem_id": "QFORM-DISJOINT-THREE-BANK-2PI-v1",
+    "status": "PROVED_SUPPORTING_LEMMA",
+    "scope": "Three unit spectral directions with pairwise disjoint physical supports, |lambda_j|>=1, plus arbitrary quadratic term on disjoint outside coordinates; arbitrary independent coordinate densities <=1.",
+    "conclusion": "The quadratic output is absolutely continuous with essential-density norm <=2*pi. Continuity is not proved for arbitrary measurable inputs.",
+    "finite_m_implication": "For A_m=diag(J_m/m,J_m/m,-J_m/m), all finite m and all admissible physical input laws satisfy ||p_Q||_infinity<=2*pi, closing the prior hidden finite-m spike gap.",
+    "rotated_witness": "For six iid Uniform[-1/2,1/2] coordinates, Q=Y3^2-2Y1Y2 with Yj pair sums /sqrt(2) has spectrum {1,1,-1,0,0,0} and exact p_Q(0)=91/36+(13/6)log2=4.0295966689909926... ."
+  },
+  "premises": [
+    {
+      "source": "Livshyts-Paouris-Pivovarov arXiv:1507.07949",
+      "scope": "one-dimensional marginal of a product of cap-one probability densities",
+      "claim": "projection density cap sqrt(2)"
+    },
+    {
+      "source": "account04/B18 math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+      "scope": "physical 3x3 block with nonzero pivot and definite Schur complement",
+      "claim": "2 sqrt(pi)/|a det B|^(1/4) density bound"
+    }
+  ],
+  "partner_result_applied": {
+    "designated_partner": "account04/B17",
+    "designated_partner_completed_artifact_visible": false,
+    "compatible_partner": "account04/B18",
+    "application": "On one triple of A_m=diag(J_m/m,J_m/m,-J_m/m), the completed Schur-pivot theorem gives 2 sqrt(pi) m, while bank aggregation gives 2 pi, exposing the reciprocal-local-minor scale loss."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d53ca1d541b2b2dbf861ec39fda699209b267158",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T160432Z-account03-B17-QFORM-r12/REPORT.md",
+    "report_blob": "71d59127c7399d75adfa0ba03d83894f0bfdf823",
+    "check_output_blob": "5e6bd0637b52869bce49f168a0c8e8cb030d5112"
+  },
+  "unresolved_implication": "Disjoint-bank rank-three geometry is now uniformly bounded; the next sharp-witness regime is a shared-coordinate active frame where physical coordinates load multiple active directions, preferably with multiscale fragmented extreme-product laws.",
+  "next_step": "Construct and analytically evaluate minimal shared-coordinate rank-three stress families and test whether their exact density peaks can exceed 3sqrt(2), while preserving the original product law."
+}

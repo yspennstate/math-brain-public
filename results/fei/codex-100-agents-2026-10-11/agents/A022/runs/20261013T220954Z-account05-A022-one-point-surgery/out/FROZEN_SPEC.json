@@ -1,0 +1,19 @@
+{
+  "helper_version": "paired-access-v1",
+  "family": "actual quadratic bent b, fair selector b/b(1-2 1_D), point activation on r fresh controls",
+  "policy": "controls, one coordinate from each quadratic pair, selector; STOP with all partner bits retained",
+  "pilot_domain": "k=4, all D with sizes 1,2; r=0,2; sparse leaf m=0,1,2 every E of size<=4 and every character",
+  "pilot_case_count": 272,
+  "pilot_leaf_character_cases": 74,
+  "full_domain": "k=4 all D sizes1..4 (2516); k=6 all D sizes1,2 and three explicit larger patterns (2083); k=8 seven explicit patterns; r=0,2 in each; leaf m=0..4 every E<=4 and every character",
+  "full_case_count": 9212,
+  "full_leaf_character_cases": 41650,
+  "symmetry": "none; labelled vertices and characters exhausted on declared domains",
+  "arithmetic": "signed integer Walsh and rational exact prime-log forms; 50-term atanh series remainder; outward 80-bit bounds; no floating sign decision",
+  "memory_estimate_MB": 180,
+  "pilot_max_seconds": 60,
+  "full_max_seconds": 1800,
+  "automatic_dimension_increase": false,
+  "kernel_source": "immutable A022 stage2 code/oddface_surgery.py prefix preceding maxima initialization",
+  "notes": "Finite new stopping policy certifies access/terminal partition; prior four complete orders are not repeated. Float runtime only. No memok needed below300MB estimate."
+}

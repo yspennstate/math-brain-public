@@ -1,0 +1,27 @@
+P26 independent exact recheck — R16-BF-03
+Date: 2026-09-17
+Scope: exact finite core only; analytic theorem is proved separately in the P26 run report.
+Arithmetic: Python Fraction / exact integers; no floating point used for certified claims.
+
+R_t := 6 * t! / t^t * sum_{r=0}^{t-1} t^r/r!
+R_alt(t) := 6 * sum_{r=0}^{t-1} (t-1)! / ((t-1-r)! t^r)
+
+exact_R_equals_R_alt_t_1_200=PASS
+exact_R_monotone_t_1_200=PASS
+first_integerized_variation_improvement_over_2t_minus_3=16
+R_16=7944785883214161/281474976710656
+R_16_decimal_for_navigation_only=28.22554948243607
+ceil(R_16)-1=28
+2*16-3=29
+
+Independent exhaustive exact reproduction of the R16 small-instance search (m=4, n<=6, column support<=t; column multisets; all signings):
+t=1 worst_discrepancy=1 checked_multisets=209
+t=2 worst_discrepancy=2 checked_multisets=8007
+t=3 worst_discrepancy=2 checked_multisets=38759
+t=4 worst_discrepancy=2 checked_multisets=54263
+
+The t=2,3,4 extremal witness recovered by the canonical search is the three-column system
+(0,0,1,1)^T, (0,1,0,1)^T, (0,1,1,0)^T,
+with discrepancy 2.
+
+P26-R16-BF03-EXACT-RECHECK: PASS

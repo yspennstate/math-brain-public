@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B07",
+  "run_id": "20260924T073847Z-account02-B07-qform-r50",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "PAIRBLOCK_RANK_CANCELLATION_CORE / H62_R4_OPTAIL / LATEST_PARTNER_R54_OPTAIL / SHARP_26_DIRECTION_TARGET_REGRESSION / PINNED_E5_F_APPLIED / FULL_QFORM_OPEN",
+  "full_qform_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity_status": "OPEN",
+  "brain_status": "VERIFIED_BRAIN_RETRIEVAL_AND_RECEIVER_USE",
+  "latest_completed_partner": {
+    "account": "account03",
+    "slot": "B07",
+    "run_id": "20260924T074025Z-account03-B07-qform-r50",
+    "result": "PAIRBLOCK_RANKTAIL_PHYSICAL_CORE_AND_R54_OPTAIL_NORMALFORM",
+    "checks": "PASS"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-PAIRBLOCK-RANK-CANCELLATION-CORE-v1",
+      "statement": "If A[C,C]=B+R+E on a union of literal physical pairs, B is symmetric 2x2-pair block diagonal, rank(R)<=r, ||E||op<=eta, and B has at least r+3 singular values >=d, then some union C0 of at most r+3 physical pairs has s3(A[C0,C0])>=d-eta. Hence for d>eta the completed physical-fiber theorem gives ||p_Q||infinity<=2 sqrt(12 pi (r+3))/(d-eta). No single minor is selected."
+    },
+    {
+      "id": "QFORM-R49-H62-R4-OPTAIL-COMPILER-v1",
+      "statement": "For the r49/r50 moderate-energy survivor with D0=5.438340267613160e-4, if the 27-direction payment fails at d=2D0, there is a physical H subset S with |H|<=62 such that dist_op(A[S\\H,S\\H],rank<=4)<3D0=0.001631502080283948. This uses the finer R24=R4+Rexc decomposition and retains all H couplings rather than deleting them analytically."
+    },
+    {
+      "id": "QFORM-R49-26-DIRECTIONS-SHARP-TARGET-REGRESSION",
+      "statement": "There is an exact owner-target family with an exact rank-two physical separator, all displayed r49 stability inequalities, E_star=0, 26 pair-block singular directions at threshold, rank-24 exact cancellation, and sup_{|C|<=L0} s3(A[C,C])->0 for every fixed L0. Thus the r+3 threshold is sharp under rank-r cancellation and a bounded-cardinality three-eigenvalue core cannot be inferred on the unpaid branch."
+    }
+  ],
+  "partner_integrated_result": {
+    "id": "QFORM-PAIRBLOCK-R50-OPTAIL-NORMALFORM-v1",
+    "statement": "On failure of the same 27-direction payment, account03/B07 r50 gives A[S,S]=H50+G_S with rank(H50)<=50 and ||G_S||op<0.001631502080286; combining the live rank-two physical separator gives A=diag(A[T,T],0)+P54+G with rank(P54)<=54 and ||G||op<0.0016467608693485, with arbitrary A[T,T] retained exactly."
+  },
+  "pinned_source_application": {
+    "source_commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "result": "Theorem F general-rank Fresnel-Brascamp-Lieb",
+    "application": "On the exact 26-direction target-valid regression, put the two residual d entries in the arbitrary diagonal twist. The rank-four bipartite part has eigenvalues (+sqrt(2),+sqrt(2),-sqrt(2),-sqrt(2)), absolute product 4, and physical leverage 2/N<=1/2, hence ||p_Q||infinity<=4 sqrt(2)=5.65685424949..., with continuity."
+  },
+  "constants": {
+    "D0": 0.000543834026761316,
+    "two_D0": 0.001087668053522632,
+    "three_D0": 0.001631502080283948,
+    "bounded_core_max_coordinates": 54,
+    "bounded_core_density_bound_at_two_D0": 117330.53743,
+    "localized_exception_max_coordinates": 62,
+    "latest_partner_global_rank_bound": 54,
+    "latest_partner_global_operator_tail": 0.0016467608693485,
+    "pinned_regression_density_bound": 5.656854249492381
+  },
+  "first_unpaid_implication": {
+    "id": "QFORM-R50-R54-OR-H62-R4-RECEIVER-v1",
+    "statement": "Consume either the no-deletion latest-partner form A=diag(A[T,T],0)+P54+G, rank(P54)<=54, ||G||op<0.0016467608693485, or exploit the complementary |H|<=62 localization with dist_op(A[S\\H,S\\H],rank<=4)<0.001631502080283948, while retaining the physical T|S separator, its true nonzero 2^-16 crossing tail, arbitrary A[T,T], all H and outside couplings, and every additional spectral direction. The E_star>1 same-bank-star-energy branch remains separate and unpaid."
+  },
+  "canonical_report_commit": "09dc85f76cccfd0668da416f6f0d4ded36e6dcf9",
+  "source_refresh_addendum_commit": "d2dab4035cc3df2405f67bf7b586d050bd14086b",
+  "checks_commit": "9b17230e7e7a707379bf5ff781e96ec4fa511df7",
+  "handoff_commit": "9facf7b09210cc7fe92f44934f1acece9df87e76",
+  "notes": "The canonical report was written before account03/B07 r50 appeared; the immutable ADDENDUM.md supersedes only its stale latest-partner sentence and integrates the completed r50 result. Full QFORM and full-target continuity remain open."
+}

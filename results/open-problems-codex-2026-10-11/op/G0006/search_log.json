@@ -1,0 +1,47 @@
+[
+  {
+    "service": "source_pdf",
+    "url": "https://arxiv.org/pdf/2609.09972",
+    "status": 200,
+    "bytes": 241284,
+    "file": "source_pdf.pdf"
+  },
+  {
+    "service": "source_abs",
+    "url": "https://arxiv.org/abs/2609.09972",
+    "status": 200,
+    "bytes": 40272,
+    "file": "source_abs.txt"
+  },
+  {
+    "service": "arxiv",
+    "url": "https://export.arxiv.org/api/query?search_query=all:contact%20AND%20all:percolation&sortBy=submittedDate&sortOrder=descending&max_results=40",
+    "status": 200,
+    "bytes": 86452,
+    "file": "arxiv.txt"
+  },
+  {
+    "service": "openalex",
+    "url": "https://api.openalex.org/works?search=Percolation%20of%20the%20contact%20process%20on%20the%20regular%20tree&per-page=20",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "crossref",
+    "url": "https://api.crossref.org/works?query=contact%20process%20upper%20invariant%20measure%20percolation&rows=20",
+    "status": 200,
+    "bytes": 158823,
+    "file": "crossref.txt"
+  },
+  {
+    "service": "semantic",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2609.09972?fields=title,authors,year,abstract,citations.title,citations.year,citations.externalIds",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "service": "github",
+    "url": "https://api.github.com/search/repositories?q=contact+process+percolation",
+    "status": 200,
+    "bytes": 6684,
+    "file": "github.txt"
+  }
+]

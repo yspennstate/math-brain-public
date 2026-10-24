@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260922T140225Z-account01-B15-QFORM-r11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "fresh_control_commit_before_delivery": "601529a3eef09a74d1ccfada54a955e85e38a48c",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "classification": "ESSENTIAL_STEP_APPLIED_EXACT_REGULARITY_REDUCTION",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "account_slot": "account02/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b1d930ff0fbc625393aebcd4a59f9ba1ead465ed",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T130201Z-account02-B15-qform-r2/REPORT.md",
+    "use": "Exact Choquet representation of each admissible marginal as a probability barycenter of measure-one indicator densities, inserted directly into the regularized interval inequality."
+  },
+  "later_supporting_result_consumed": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a302aab3477c64757b511e80d3907f982e04873a",
+    "brain_handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/interactive/20260922T131746Z-regularized-determinant.md",
+    "scope_used": "Compatibility check only: the diffuse-range theorem permits arbitrary coordinate-separable phases, so the auxiliary epsilon Z^2 regularizer does not spoil its <27 branch when treated as a separable phase."
+  },
+  "new_mathematical_result": {
+    "id": "QFORM-LIPSCHITZ-REGULARIZATION-EQUIVALENCE-v1",
+    "statement": "For every finite C, full QFORM with universal density constant C is equivalent, with exactly the same C, to the target-admissible family Q_epsilon=X^TAX+epsilon Z^2 for all 0<epsilon<1, where Z has fixed admissible triangular density rho(z)=(1-|z-2|)_+. Every Q_epsilon has a globally Lipschitz density. Using the partner Choquet theorem, one may simultaneously reduce the input laws to arbitrary measure-one indicator products without loss of C.",
+    "key_constants": {
+      "kernel_sup": "1/(4 epsilon)",
+      "kernel_lipschitz": "1/(4 epsilon^2)",
+      "constant_loss_in_equivalence": 0
+    }
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "4af910062a0895ec85463c185686c49625d7df11",
+    "claims_commit": "1b96b4fc3013997bba1c02c435bb7c8617e18ac9",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260922T140225Z-account01-B15-QFORM-r11/REPORT.md",
+    "brain_handoff_commit": "ab15902224ca50316132f834d7935bf933b69a00"
+  },
+  "unresolved_implication": "Prove a density/small-ball bound uniform in epsilon for X_E^T A X_E + epsilon Z^2 over the full three-large-eigenvalue matrix class and arbitrary measure-one indicator marginals. Original-output continuity remains separate.",
+  "next_step": "Exploit the free pointwise/Lipschitz representative only in estimates whose constants can be kept independent of epsilon; combine with the regularized-determinant diffuse branch where applicable and attack the heavy-coordinate/nonseparable remainder without invalid conditional-cap or single-minor reductions.",
+  "native_brain_ingestion": "NOT_VERIFIED",
+  "repository_synchronization": true
+}

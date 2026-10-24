@@ -1,0 +1,107 @@
+{
+  "worker": "w430",
+  "target": "C0023",
+  "as_of": "2026-10-10",
+  "model_scope": "Independent homogeneous nearest-neighbour Bernoulli bond percolation on Z^d; each undirected nearest-neighbour edge is open with probability p independently.",
+  "exact_target": "For every integer d with 3<=d<=10, let theta_d(p)=P_p(|C(0)|=infinity) and p_c(d)=inf{p in [0,1]:theta_d(p)>0}. Show theta_d(p_c(d))=0. Equivalently, P_(p_c)(there exists any infinite open cluster)=0, by translation invariance and countability.",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "formal_check_receipt": null,
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1502.03051",
+      "authors": "Hugo Duminil-Copin and Vincent Tassion",
+      "locator": "Theorem 1.1; finite-set threshold definition; remark 3",
+      "verified_scope": "Nearest-neighbour Bernoulli bond percolation on Z^d, d>=2; exponential decay separately for each p<p_c with c=c(p)>0; p_tilde_c=p_c. No critical upper one-arm bound supplied.",
+      "verification": "Primary theorem text read; not a formal verification."
+    },
+    {
+      "url": "https://arxiv.org/html/2401.12397",
+      "authors": "Gady Kozma and Shahaf Nitzan",
+      "locator": "Conjecture 3 and Theorem 6",
+      "verified_scope": "A graph-uniform high-probability connection inequality is a conjectural sufficient premise for critical nonpercolation in every d>=2. Theorem 6 is conditional on that conjecture.",
+      "verification": "Primary exact quantifiers and conditional conclusion read."
+    },
+    {
+      "url": "https://arxiv.org/abs/1506.07977",
+      "authors": "Robert Fitzner and Remco van der Hofstad",
+      "locator": "Abstract, version 2, 2017-03-23",
+      "verified_scope": "Nearest-neighbour mean-field result for d>=11, outside the target dimension interval."
+    },
+    {
+      "url": "https://nitromannitol.github.io/ai-mathematics.html",
+      "locator": "Kozma-Nitzan card; page dated 2026-09-25",
+      "verified_scope": "Author reports Lean verification of all-dimensional bond critical nonpercolation, citing anthropics/formal-math. This worker has not checked the cited formal theorem, definitions, assumptions or axioms.",
+      "verification": "Claim observed; not accepted as an independently checked proof."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/formal-math/main/README.md",
+      "locator": "Project table as read 2026-10-10",
+      "verified_scope": "Current main README lists zeta23 and 3sum-apsp projects, and supplies no percolation theorem receipt. This does not rule out an older release or another artifact.",
+      "verification": "A current README check cannot establish or refute the claimed mathematical proof."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1712.04651",
+      "authors": "Hugo Duminil-Copin",
+      "locator": "Conjecture 1, page 3; model definition pages 1-2",
+      "verified_scope": "Primary historical bond conjecture theta(p_c)=0 on Z^d for d>=3. Exact nearest-neighbour product model read; not a current openness certificate."
+    },
+    {
+      "url": "https://arxiv.org/html/2304.12110",
+      "authors": "Hugo Vanneuville",
+      "locator": "Theorem 2, magnetization and volume-tail definitions; Theorem 1",
+      "verified_scope": "Comparison at q=p(1-m_h(p)), p in (0,1), h>0; exact changed parameter and green-mark definitions read. It does not directly supply a critical tail bound."
+    }
+  ],
+  "prior_work": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+      "locator": "line 23, C0023",
+      "status": "Unreviewed dated historical intake, not a current openness certificate; cites Garban-Steif arXiv:1102.5761 XI.1 p136 and Duminil-Copin arXiv:1712.04651 Conjecture 1 p3."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "locator": "line 22, C0023-A001",
+      "status": "Read the half-space restriction/gluing obstruction. Full-space cluster restrictions can be unions of finite half-space clusters; no certified bridge."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_G_20260910/attempts.jsonl",
+      "locator": "line 1, G0001-A001",
+      "status": "Read the alias C0023: tail reformulation is not an independent solution; explicitly concerns site percolation, outside this bond lane."
+    },
+    {
+      "paths": [
+        "~/<private-repo>/06_math_research/probability_1000_attempts_H_20260912",
+        "~/<private-repo>/06_math_research/probability_1000_attempts_I_20260914"
+      ],
+      "status": "Targeted text search found no C0023 record; no full-directory read."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md",
+      "locator": "line 589",
+      "status": "Historical attempted_unsolved row; no proof receipt read."
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "status": "No exact C0023 assignment found by targeted search."
+    },
+    {
+      "path": "~/Big Open problem in probability theory/README.md",
+      "locator": "lines 10-28",
+      "status": "Different target: nonamenable Benjamini-Schramm nonuniqueness; points to solved_register.md. Not evidence for or against C0023."
+    }
+  ],
+  "independence_order": "Independent obstructions saved in ATTEMPT.md and CLAIMS.jsonl before first reading w429/ATTEMPT.md; coarsening criterion separately derived after reading that original proof.",
+  "remaining_mathematical_gap": "Construct, from hypothetical theta_d(p_c)>0, fixed local compatible blocks whose actual bad marginal delta and setwise dependence range r satisfy a justified sufficient percolation criterion. No such construction is established here.",
+  "math_brain_card_evidence": {
+    "file": "~\\brain_workers\\w430\\MATH_BRAIN_CARDS.json",
+    "returned_claims": 4,
+    "empty_structured_assumptions": 4,
+    "without_fidelity_review": 3,
+    "note": "Theorem 1 has an existing statement-fidelity repair. This worker neither reviewed that review nor overwrote it; only the current statement was used."
+  },
+  "solved_register_check": {
+    "path": "~/Open problem project/solved_register.md",
+    "result": "Targeted percolation/C0023/critical search returned no match. No whole-register read; absence of a match is not a proof of openness."
+  }
+}

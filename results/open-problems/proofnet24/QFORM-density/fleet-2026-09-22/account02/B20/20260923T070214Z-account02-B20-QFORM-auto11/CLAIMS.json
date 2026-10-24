@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T070214Z-account02-B20-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "full_target_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-RANK3-RANK2CROSS-BANK-VOLUME-IDENTITY-v1",
+      "status": "PROVED",
+      "statement": "For exact-rank-three A=R Lambda R^T, a full original-coordinate partition with rank(R_I)=3 and rank(A_IJ)=2 satisfies (s1 s2)^2 ||A_II r||^2 = det(Lambda)^2 det(R_I^T R_I) pdet(R_J^T R_J), where r is the unit direction in range(R_I) orthogonal to range(A_IJ)."
+    },
+    {
+      "id": "QFORM-RANK3-RANK2CROSS-BANK-VOLUME-COLLAPSE-v1",
+      "status": "PROVED",
+      "statement": "Under the target spectral scale min |lambda_j|>=1, det(G) pdet(I-G) <= ||A_II r||^2."
+    },
+    {
+      "id": "QFORM-RANK3-RANK2CROSS-NEARCOLOOP-v1",
+      "status": "PROVED",
+      "statement": "Applying account03/B20 r27's survivor ||A_II r||<sqrt(2)/64 forces one nontrivial eigenvalue gamma of G=R_I^T R_I to satisfy min(gamma,1-gamma)<0.0226082184537313; equivalently one spectral unit direction has more than 0.977391781546 of its squared physical mass on one bank."
+    },
+    {
+      "id": "QFORM-EXACTRANK3-DIFFUSE-LEVERAGE-EXIT-v1",
+      "status": "SOURCE_APPLIED",
+      "statement": "Pinned newest-Claude Theorem F gives ||p_Q||_infinity<=12 whenever all exact-rank-three physical leverage scores ||R_i||^2 are <=1/2; hence every unpaid exact-rank-three survivor has a physical row of leverage >1/2."
+    },
+    {
+      "id": "QFORM-NEARCOLOOP-HIGHLEVERAGE-PAYMENT-v1",
+      "status": "OPEN",
+      "statement": "Pay the simultaneous original-product packet consisting of a >0.9773917815 bank-local spectral direction and a physical row leverage >1/2, retaining arbitrary same-side and ambient couplings, or reduce it source-preservingly to an already-paid grouped/ridge/Theorem-H/physical-pair packet."
+    }
+  ]
+}

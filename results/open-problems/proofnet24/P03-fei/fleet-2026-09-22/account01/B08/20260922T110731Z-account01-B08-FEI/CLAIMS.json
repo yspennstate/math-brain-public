@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T110731Z-account01-B08-FEI",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "B08-MULTISHIFT-DV-CERT-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Every finite uniform-cube Boolean Walsh source, every full-support reference Q, and every finite disjoint collection of signed-shift cells satisfying the stated orbit construction.",
+      "statement": "If ell_j is the signed-shift Cauchy lower mass and q_j=Q(H_j), then sup_{t_j>=0}{sum_j t_j ell_j-log2(q0+sum_j q_j 2^{t_j})} <= D_2(P||Q). For Q=Q_r it is a no-double-spending lower certificate for K_occ.",
+      "dependencies": [
+        {
+          "mode": "premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "section": "Theorems 2.1, 3.1 and equations (4.4)-(4.6)"
+        },
+        {
+          "mode": "partner_result_extended",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "a83d4009cc98aeb739af4f40b1c2cfa8be7269d0",
+          "path": "proofnet24/P03-fei/fleet-2026-09-22/account02/B08/B08-20260922T103745Z-0f440e/REPORT.md",
+          "section": "Sections 1-2"
+        }
+      ],
+      "verification": "analytic proof in REPORT.md; independent review not yet recorded"
+    },
+    {
+      "id": "B08-SPARSE-OI-LOSS-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "The genuine sparse suspension F_m=y(1-2 1_{x=0}), m>=4, with p=2^{1-m} and its exact occurrence I-projection.",
+      "statement": "The explicit multilevel/singleton-shift certificate C_m is <= K_occ and satisfies K_occ-C_m=(1/ln 2+o(1)) I(g_m), hence C_m/K_occ -> 1.",
+      "dependencies": [
+        {
+          "mode": "premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "7ec649dfb3d1ab2f92855f2069590fca2ac956dd",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md",
+          "section": "Sections 1-3, especially sparse-source coefficients, Q_m and K_occ asymptotics"
+        },
+        {
+          "mode": "uses_claim",
+          "claim_id": "B08-MULTISHIFT-DV-CERT-v1"
+        }
+      ],
+      "verification": "analytic binomial calculation in REPORT.md; independent review not yet recorded"
+    },
+    {
+      "id": "B08-HIERARCHICAL-MULTISHIFT-PARTITION-v1",
+      "status": "OPEN",
+      "scope": "All balanced Boolean functions in arbitrary dimension.",
+      "statement": "Construct a hierarchy-aware source-valid multishift partition whose single variational certificate pays the exact Bellman deficit for one finite dimension-independent C while retaining recursive-majority high-scale information and without repeated KL credit.",
+      "dependencies": [
+        {
+          "mode": "must_respect_refutation",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "bff0d7b6c21485f386841c42582eb04f32705046",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md",
+          "section": "Theorem 2.1"
+        },
+        {
+          "mode": "uses_claim",
+          "claim_id": "B08-MULTISHIFT-DV-CERT-v1"
+        }
+      ],
+      "verification": "unpaid implication; not claimed proved"
+    }
+  ]
+}

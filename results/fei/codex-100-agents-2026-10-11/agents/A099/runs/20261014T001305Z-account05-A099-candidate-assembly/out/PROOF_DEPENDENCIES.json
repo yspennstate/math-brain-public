@@ -1,0 +1,216 @@
+{
+  "nodes": [
+    {
+      "claim_id": "C005",
+      "version": "supplement-2026-10-11",
+      "proof_dependencies": [],
+      "tex_label": "lem:single",
+      "statement_sha256": null
+    },
+    {
+      "claim_id": "LSI",
+      "version": "retained-assembly-lemma",
+      "proof_dependencies": [],
+      "tex_label": "lem:lsi",
+      "statement_sha256": null
+    },
+    {
+      "claim_id": "C006",
+      "version": "supplement-2026-10-11",
+      "proof_dependencies": [
+        "LSI"
+      ],
+      "tex_label": "lem:block",
+      "statement_sha256": null
+    },
+    {
+      "claim_id": "DOWNWARD",
+      "version": "supplement-2026-10-11",
+      "proof_dependencies": [],
+      "tex_label": "lem:downward",
+      "statement_sha256": null
+    },
+    {
+      "claim_id": "C018",
+      "version": "supplement-2026-10-11",
+      "proof_dependencies": [
+        "C005",
+        "DOWNWARD"
+      ],
+      "tex_label": "thm:erasure",
+      "statement_sha256": null
+    },
+    {
+      "claim_id": "B06-LEAD-R1-BLOCK-TO-SINGLETON",
+      "version": 1,
+      "proof_dependencies": [
+        "C005",
+        "C006"
+      ],
+      "tex_label": "lem:r1",
+      "statement_sha256": "677784abb9f3b57a2c6d453780f76488ad6be1ac9547aa3f2f7ffee37d3ed7e5"
+    },
+    {
+      "claim_id": "C019",
+      "version": "assembled-conditional-theorem",
+      "proof_dependencies": [
+        "C006"
+      ],
+      "tex_label": "thm:tree",
+      "statement_sha256": null
+    },
+    {
+      "claim_id": "B06-LEAD-R2-LEAF-PARTITION-INVARIANCE",
+      "version": 1,
+      "proof_dependencies": [
+        "C019"
+      ],
+      "tex_label": "lem:r2",
+      "statement_sha256": "62f33e70d50121096b43aebfab38a5a4c09eb9e393186cfa58bb6e8dd39171e2"
+    },
+    {
+      "claim_id": "B20-ROOT-BIAS-ERASURE-PAID",
+      "version": 1,
+      "proof_dependencies": [],
+      "tex_label": "lem:root",
+      "statement_sha256": "036d1cd72383f787b60c1e3fbf353148a9255f90d867596be086c0921046b978"
+    },
+    {
+      "claim_id": "A096-UNIVERSAL-LEVEL12-ERASURE",
+      "version": 1,
+      "proof_dependencies": [],
+      "tex_label": "thm:level12",
+      "statement_sha256": "5083b93ed95b2ec27859e733a86e242b7b652ab71dbc48563c8653cdeb7b7bd8"
+    },
+    {
+      "claim_id": "B20-ERASURE-TENSOR-ADDITIVE",
+      "version": 1,
+      "proof_dependencies": [],
+      "tex_label": null,
+      "statement_sha256": "3df667565b3d8a1811408e02376f733e9ff43176b5a3d785ff61c58ebae35fe9"
+    },
+    {
+      "claim_id": "B20-ACTIVATION-ERASURE-FORMULA",
+      "version": 1,
+      "proof_dependencies": [],
+      "tex_label": null,
+      "statement_sha256": "474250ee4cc99312d8b12f207a9bd79517c2012e48a2dec41f1602e29666384b"
+    },
+    {
+      "claim_id": "B20-ERASURE-LOW-INFLUENCE-COMPLETE",
+      "version": 2,
+      "proof_dependencies": [
+        "B20-ERASURE-TENSOR-ADDITIVE",
+        "B20-ACTIVATION-ERASURE-FORMULA",
+        "C018"
+      ],
+      "tex_label": "thm:low",
+      "statement_sha256": "522cb5ec2ed00fe5dfb5b485ea9e77d5eceb0eb3db2dd343f8627442e65b708a"
+    },
+    {
+      "claim_id": "COMPLETE",
+      "version": "A097-v1",
+      "proof_dependencies": [],
+      "tex_label": "lem:complete",
+      "statement_sha256": null
+    },
+    {
+      "claim_id": "A097-COMPATIBLE-LEAF-REFERENCE-TRANSFER",
+      "version": 1,
+      "proof_dependencies": [
+        "C006",
+        "COMPLETE"
+      ],
+      "tex_label": "thm:reference",
+      "statement_sha256": "408ea90dea600f4f8f1b9ffa66c29e34cc87a87a518ec3f87273d2905bef9246"
+    },
+    {
+      "claim_id": "B05-CERTIFIED-BASE-CASES",
+      "version": "A097-results-sha256",
+      "proof_dependencies": [],
+      "tex_label": null,
+      "statement_sha256": null
+    },
+    {
+      "claim_id": "A097-B05-COMPATIBLE-REFERENCE-CERTIFICATE",
+      "version": 1,
+      "proof_dependencies": [
+        "A097-COMPATIBLE-LEAF-REFERENCE-TRANSFER",
+        "B20-ACTIVATION-ERASURE-FORMULA",
+        "B05-CERTIFIED-BASE-CASES"
+      ],
+      "tex_label": "prop:b05ref",
+      "statement_sha256": "f8f13619251d53d65152b031a706c2c34b35210f329adf7706ba95f971cf5a81"
+    },
+    {
+      "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+      "version": 1,
+      "proof_dependencies": [],
+      "tex_label": "prop:b05",
+      "statement_sha256": null
+    },
+    {
+      "claim_id": "A090-PARITY-TAIL-LOW-INFLUENCE-COMPLETENESS",
+      "version": 1,
+      "proof_dependencies": [],
+      "tex_label": "thm:tail",
+      "statement_sha256": "d9386e23e2a5c761555757d617c1309fdc64ccd1ca705dcdbd9723b3ad4be0f7"
+    },
+    {
+      "claim_id": "NORMALIZED-DERIVATIVE-REFERENCE",
+      "version": "retained-C018-identity",
+      "proof_dependencies": [
+        "DOWNWARD"
+      ],
+      "tex_label": "eq:refundbaseline"
+    },
+    {
+      "claim_id": "A096-TERMINAL-KL-REFUND-AUDIT",
+      "version": 1,
+      "proof_dependencies": [
+        "NORMALIZED-DERIVATIVE-REFERENCE",
+        "A090-PARITY-TAIL-LOW-INFLUENCE-COMPLETENESS"
+      ],
+      "tex_label": "prop:refund",
+      "statement_sha256": "cb4a8a64144952a20f8810bc491b7a4202ec07d7381b7f8e361484fd3dfcbfce"
+    },
+    {
+      "claim_id": "A097-ONE-SHARED-DATA-COLLISION-TRANSFER",
+      "version": 1,
+      "proof_dependencies": [
+        "C005",
+        "A097-COMPATIBLE-LEAF-REFERENCE-TRANSFER"
+      ],
+      "tex_label": "sec:shared",
+      "statement_sha256": "a0b36345e9b8eb02731703c849109a548a1738428547c88e303ece41c8419b3b",
+      "scope": "Needed packet lemma reconstructed; whole external A086 interface not assumed"
+    }
+  ],
+  "open_leaves": [
+    {
+      "id": "OPEN-C018-HIGHER",
+      "quantifiers": "exists finite K; all Boolean f in every finite dimension",
+      "first_unproved_line": "R_ge2(f)<=K I(f)",
+      "conditional_constant": "K+2/ln2, by exact optimal higher-tail equality",
+      "optimal_constant": "K_E exactly, even for every fixed higher-tail/sublinear low-influence cutoff; finiteness still open",
+      "prior_valid_but_weaker_conditional_constant": "K+c_root+16700/2187+2/ln2"
+    },
+    {
+      "id": "OPEN-C019-TREE",
+      "quantifiers": "exists finite K,C_leaf and certified leaf class; each Boolean f has actual finite stopping tree",
+      "first_unproved_line": "sum pi B_h<=K I_removed plus all terminal entropies paid"
+    },
+    {
+      "id": "OPEN-REF-TRANSFER",
+      "quantifiers": "exists finite K,C_leaf; each Boolean f has physical tree and complete compatible terminal references",
+      "first_unproved_line": "sum pi(B_h-kappa_h)<=K I_removed plus CE(P_l,Q_l)<=C_leaf I(f_l)"
+    },
+    {
+      "id": "OPEN-C024-HISTORY",
+      "quantifiers": "exists finite K; all Boolean f; explicit translated biased-spectrum Q_bias integral in nats",
+      "first_unproved_line": "Q_bias(f)<=K I(f); historical external comparison not imported"
+    }
+  ],
+  "conditional_FEI_only": true,
+  "scope_guard": "Variant-equivalence map describes finiteness and does not identify all optimal constants."
+}

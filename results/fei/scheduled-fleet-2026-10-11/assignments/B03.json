@@ -1,0 +1,376 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B03",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A011",
+      "stream": "B03",
+      "topic": "Representation existence",
+      "target_statement": "Construct structured gate covers for broad Boolean classes and bound their total joint description cost. An arbitrary DNF representation is only a starting point; prove the quantitative cost of its use.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A011-D1",
+          "description": "STRUCTURED_COVER.tex: constructive representation theorem for a named class",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A011-D2",
+          "description": "COVER_COST.md: every support, order, root, and gate-label term",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Give an algorithm or existence proof constructing admissible gates for every member of the declared class.",
+        "Prove the full quantitative joint cost; an arbitrary exponential DNF is not itself a constant-cost representation.",
+        "State how the new class extends the published structured classes, and keep any assertion that every Boolean function belongs to it explicitly open."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A008",
+          "interface": "whole-set encoding interface"
+        },
+        {
+          "agent_id": "A015",
+          "interface": "minterm barriers"
+        },
+        {
+          "agent_id": "A012",
+          "interface": "hidden-core admission controls"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A008",
+          "interface_use": "proposed structured gate covers"
+        },
+        {
+          "agent_id": "A009",
+          "interface_use": "representations and support incidences"
+        },
+        {
+          "agent_id": "A013",
+          "interface_use": "useful ordered cover"
+        },
+        {
+          "agent_id": "A014",
+          "interface_use": "structured representations"
+        },
+        {
+          "agent_id": "A068",
+          "interface_use": "structured gate geometries"
+        },
+        {
+          "agent_id": "A069",
+          "interface_use": "candidate nongeometric class"
+        },
+        {
+          "agent_id": "A086",
+          "interface_use": "representation theorem"
+        }
+      ],
+      "independent_reviewers": [
+        "A086",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A quantitatively useful cover for a genuinely broader class, or a rigorous barrier to that proposed cover, supports renewal.",
+      "source_ids": [
+        "reductions_forests",
+        "threshold_source",
+        "seed_lemmas",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F02",
+        "F10",
+        "F11",
+        "F14"
+      ]
+    },
+    {
+      "agent_id": "A012",
+      "stream": "B03",
+      "topic": "Sparse activation accounting",
+      "target_statement": "Use the exact activation formula to test whether a rare outer gate hides an arbitrary difficult core. Identify a structural admission condition that is proved, survives needed operations, and excludes this hidden-core construction.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A012-D1",
+          "description": "ACTIVATION_ADMISSION.tex: proved structural condition and closure properties",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A012-D2",
+          "description": "HIDDEN_CORE_TEST.md: seed embedding under the candidate condition",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Use the exact activation H and I formulas, including the entropy term created by the rare selector, before simplifying.",
+        "If the condition excludes hidden arbitrary cores, prove the exclusion and specify the remaining class rather than calling it universal.",
+        "Verify only the closure operations actually used downstream; do not assume restriction/tensor stability from a root-level property."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A002",
+          "interface": "hardness-preserving activation"
+        },
+        {
+          "agent_id": "A021",
+          "interface": "exact rare-core ledger"
+        },
+        {
+          "agent_id": "A005",
+          "interface": "arbitrary-seed admission test"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A011",
+          "interface_use": "hidden-core admission controls"
+        }
+      ],
+      "independent_reviewers": [
+        "A086",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A nonvacuous admission condition with a complete class theorem or an embedding that rules it out is a meaningful increment.",
+      "source_ids": [
+        "reductions_forests",
+        "threshold_source",
+        "seed_lemmas",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F02",
+        "F10",
+        "F11",
+        "F14"
+      ]
+    },
+    {
+      "agent_id": "A013",
+      "stream": "B03",
+      "topic": "Representation stability",
+      "target_statement": "Study how a useful ordered cover changes under a physical restriction, tensor product, or multiplexer composition. Bound the extra gates, label entropy, and changes in root probabilities explicitly.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A013-D1",
+          "description": "COVER_STABILITY.tex: restriction, tensor, and multiplexer transformation bounds",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A013-D2",
+          "description": "STABILITY_LEDGER.json: gate-count, name-entropy, and root-probability changes",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Define the transformed cover on each physical child and prove it represents that actual child.",
+        "Track selector variables already present in branches; a fresh independent selector hypothesis cannot be asserted after variable reuse.",
+        "Show the cumulative overhead under iteration, with explicit examples where an operation fails to preserve the useful class."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A011",
+          "interface": "useful ordered cover"
+        },
+        {
+          "agent_id": "A017",
+          "interface": "recursive addressing construction"
+        },
+        {
+          "agent_id": "A056",
+          "interface": "disjoint substitution baseline"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A017",
+          "interface_use": "composition stability"
+        },
+        {
+          "agent_id": "A028",
+          "interface_use": "terminal-class stability"
+        },
+        {
+          "agent_id": "A058",
+          "interface_use": "reuse stability"
+        }
+      ],
+      "independent_reviewers": [
+        "A086",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "One nontrivial stability theorem with a summable cost, or a parameterized stability obstruction, is delivered.",
+      "source_ids": [
+        "reductions_forests",
+        "threshold_source",
+        "seed_lemmas",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F02",
+        "F10",
+        "F11",
+        "F14"
+      ]
+    },
+    {
+      "agent_id": "A014",
+      "stream": "B03",
+      "topic": "Overlap beyond worst-case read",
+      "target_statement": "Replace maximum read k by a spectral or fractional congestion quantity. Prove a theorem where k grows but the new quantity remains bounded, and supply an explicit unbounded-overlap example.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A014-D1",
+          "description": "CONGESTION_REFINEMENT.tex: new parameter and FEI theorem",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A014-D2",
+          "description": "UNBOUNDED_READ_EXAMPLE.md: explicit family separating new and old parameters",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Define the spectral/fractional congestion without using H itself or an assumed universal FEI bound as an input.",
+        "Exhibit k→∞ while the new quantity remains bounded, and prove all other terms in the theorem remain uniformly controlled.",
+        "Compare the resulting H/I bound against the existing logarithmic-k theorem on that same family, including root and rank costs.",
+        "Use the recovered K_eff refinement as a baseline where its structural hypotheses hold. Prove the complete expected-cost improvement, including the remaining reference normalizers and Σ_i I_i ln K_eff,i, rather than reprove the multiplier estimate."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A009",
+          "interface": "global fractional incidence certificate"
+        },
+        {
+          "agent_id": "A007",
+          "interface": "root normalization"
+        },
+        {
+          "agent_id": "A011",
+          "interface": "structured representations"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A009",
+          "interface_use": "spectral congestion candidate"
+        },
+        {
+          "agent_id": "A068",
+          "interface_use": "desired congestion improvement"
+        },
+        {
+          "agent_id": "A086",
+          "interface_use": "congestion theorem"
+        },
+        {
+          "agent_id": "A097",
+          "interface_use": "congestion theorem"
+        }
+      ],
+      "independent_reviewers": [
+        "A086",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A strict, rigorously demonstrated improvement beyond worst-case read is required to continue this packet.",
+      "source_ids": [
+        "reductions_forests",
+        "threshold_source",
+        "seed_lemmas",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F02",
+        "F10",
+        "F11",
+        "F14"
+      ]
+    },
+    {
+      "agent_id": "A015",
+      "stream": "B03",
+      "topic": "Minterm barrier analysis",
+      "target_statement": "Quantify the dimension term in naive minterm coding on majority, tribes, and sparse activated cores. Prove which compression feature is missing before proposing a universal representation lemma.",
+      "work_type": "interface_derivation",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A015-D1",
+          "description": "MINTERM_BARRIERS.tex: majority, tribes, and activated-core dimension costs",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A015-D2",
+          "description": "COMPRESSION_REQUIREMENTS.md: exact information absent from naive descriptions",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Derive the order of the minterm name/subset cost separately from the actual Fourier entropy and influence.",
+        "Compare at least majority, a parameterized tribes family, and a rare activated arbitrary core with correct normalization.",
+        "A missing compression feature is stated as a precise unpaid term; failure of one code is not promoted to failure of all representations."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A016",
+          "interface": "one-root addressing contrast"
+        },
+        {
+          "agent_id": "A076",
+          "interface": "threshold and tribes control formulas"
+        },
+        {
+          "agent_id": "A021",
+          "interface": "sparse activated core"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A011",
+          "interface_use": "minterm barriers"
+        }
+      ],
+      "independent_reviewers": [
+        "A086",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "Freeze the three calibrated barriers and hand one specific missing compression target to A008/A011.",
+      "source_ids": [
+        "reductions_forests",
+        "threshold_source",
+        "seed_lemmas",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F02",
+        "F10",
+        "F11",
+        "F14"
+      ]
+    }
+  ]
+}

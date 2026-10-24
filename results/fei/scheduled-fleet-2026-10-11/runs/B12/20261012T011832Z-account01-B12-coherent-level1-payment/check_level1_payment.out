@@ -1,0 +1,15 @@
+Command:
+python 20261012T011832Z-account01-B12-coherent-level1-payment/check_level1_payment.py
+
+Output:
+scope=all balanced Boolean truth tables n<=4
+arithmetic=exact Fraction for Walsh/influence; float64 only for logs
+seed=none (exhaustive deterministic enumeration)
+n=1 cases=2 max_L_over_I=0.0000000000000000 alpha=['-1'] I=1 L_nats=0.0000000000000000 negative_indices=(0,)
+n=2 cases=6 max_L_over_I=0.0000000000000000 alpha=['0', '-1'] I=1 L_nats=0.0000000000000000 negative_indices=(0, 1)
+n=3 cases=70 max_L_over_I=0.6931471805599453 alpha=['-1/2', '-1/2', '-1/2'] I=3/2 L_nats=1.0397207708399179 negative_indices=(0, 1, 2, 4)
+n=4 cases=12870 max_L_over_I=0.6931471805599453 alpha=['0', '-1/2', '-1/2', '-1/2'] I=3/2 L_nats=1.0397207708399179 negative_indices=(0, 1, 2, 3, 4, 5, 8, 9)
+analytic_bound_2_over_e=0.7357588823428847
+result=PASS
+
+Scope limitation: finite exhaustive control only; the theorem is proved analytically in `COHERENT_REMAINDER_PAYMENT.tex`.

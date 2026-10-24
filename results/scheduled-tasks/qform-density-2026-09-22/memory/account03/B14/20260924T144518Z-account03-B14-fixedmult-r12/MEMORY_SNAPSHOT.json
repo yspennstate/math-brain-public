@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260924T144518Z-account03-B14-fixedmult-r12",
+  "objective": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_final_refresh": "0a9c49a4124379268d949ba78f180faa137a8db2",
+  "current_objective_blob": "7f4f8a699703674bc3475e6737bf08309794dc7b",
+  "correction_inbox_blob": "ba7aeac3d879f59da5ec8a12daad74ea85714465",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "native_receiver_use_observed": false,
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "4335ca25ed47bbaf02045553f59b8d52d9322228",
+  "canonical_report_path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/account03/B14/20260924T144518Z-account03-B14-fixedmult-r12/REPORT.md",
+  "checks_path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/account03/B14/20260924T144518Z-account03-B14-fixedmult-r12/CHECKS.json",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B14/20260924T144518Z-account03-B14-fixedmult-r12.md",
+  "handoff_commit": "ee0dc2acd4963402d16e47024068b4fef8c03792",
+  "result_ids": [
+    "QFORM-NINE-FEJER-2506-v1"
+  ],
+  "result_status": "NEW_CONSTANT_SHARPENING_PENDING_INDEPENDENT_REVIEW",
+  "main_result": "For independent coordinate densities <=K and arbitrary affine terms, s_9(A)>=s>0 implies a canonical C_0 density with height <2506 K^2/s.",
+  "new_mathematical_premises": [
+    "min(1,4 sqrt(u)) <= 2 u^(1/4)",
+    "sin(3/5)>24703107/43750000 by alternating Taylor series",
+    "e<27183/10000 by finite series plus geometric tail",
+    "cross Fejer coefficient satisfies log C_F<69/50 by an exact order-16 exponential partial-sum certificate"
+  ],
+  "partner_applied": {
+    "account": "account04",
+    "slot": "B14",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260922T171953Z-account04-B14-QFORM-r2/REPORT.md",
+    "application": "zero-loss cap-preserving compact completion gives sup_t ||p_((X+t)^TA(X+t))||_infinity <2506 K^2/s with no support/moment/fragment tax"
+  },
+  "dependencies": [
+    "baseline fixed-multiplicity manuscript blob 183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "account01/B10 Fejer 2511 source blob 8ea4eeb1ed6a72d3c15afe1fd697a68a072f3587",
+    "account03/B15 fixed-instance affine C0 theorem commit 26ef4e7b08ecc3336e8ee7fcfdf0445e868745c5"
+  ],
+  "corrections_respected": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "unresolved": [
+    "multiplicity 8 lacks a product-preserving endpoint receiver in the no-pivot collar",
+    "full three-eigenvalue conjecture remains open",
+    "full-target continuous-density conclusion remains open",
+    "new 2506 constant awaits independent review"
+  ],
+  "next_step": "Independently review the 2506 diagonal/Fejer interpolation and then attack the s_8 terminal collar without reciprocal tiny seed-determinant payment.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261011T235100Z-account01-B19-b05-signed-chain-review-a094",
+  "claims": [
+    {
+      "claim_id": "B19-A094-QN-SIGNED-REFUND-ALGEBRA-REVIEW",
+      "version": 1,
+      "label": "INDEPENDENTLY_REVIEWED_AT_ALGEBRAIC_SCOPE",
+      "exact_statement": "For arbitrary real packet values D_2,...,D_n, define Gamma_m=D_m-D_(m-1)/2 and C_m=2^m D_m. Then for every 2<=t<n, sum_(m=t+1)^n 2^(m-n)(-Gamma_m)=2^-n(C_t-C_n), and D_n plus this signed sum equals 2^(t-n)D_t=2^-n C_t. For the genuine Boolean q_n packet, C_n tends to 4 and C_2 has the exact formula displayed in the report with 4.8676<C_2<4.8677.",
+      "hypotheses": [
+        "exact signed packet recurrence",
+        "physical q_n restriction chain for the endpoint statement",
+        "complete D=L+Q packet",
+        "entropy in bits"
+      ],
+      "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED",
+      "stable_gap_id": "B05_RARE_REFUNDS",
+      "contributors": ["account01/B05"],
+      "reviewer": "account01/B19",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "path": "reports/fei-2026-10-11/runs/B19/20261011T235100Z-account01-B19-b05-signed-chain-review-a094/REPORT.md"
+      },
+      "does_not_depend_on": ["the sign of Gamma_m"],
+      "does_not_prove": [
+        "nonnegativity of the reached signed sum",
+        "a universal Boolean terminal payment",
+        "full FEI"
+      ]
+    },
+    {
+      "claim_id": "B19-A094-QN-SIGNED-REFUND-CONDITIONAL-BOUNDS",
+      "version": 1,
+      "label": "CONDITIONAL_PENDING_NONCONTRIBUTOR_REVIEW",
+      "exact_statement": "If Gamma_n^D<0 for every n>=3 for the complete physical q_n packet, then C_n strictly decreases to 4, the reached signed sum is nonnegative, it is less than 0.8677*2^-n, and its ratio to the terminal packet is less than 0.1783.",
+      "hypotheses": [
+        "B19-A094-FULL-ORDER-SWAP-CREDIT-BOUNDARY-v1",
+        "all hypotheses of the reviewed q_n packet"
+      ],
+      "status": "PROVED_CONDITIONAL_ON_PENDING_DEPENDENCY",
+      "stable_gap_id": "B05_RARE_REFUNDS",
+      "reviewer_recusal": "B19 materially contributed the phase-sign dependency and cannot provide fresh end-to-end independent review",
+      "required_next_review": ["A087", "A090", "another noncontributor"],
+      "target_claim_status": "B05-A023-QN-SIGNED-TERMINAL-REFUND-v1 remains PROVED_PENDING_FRESH_INDEPENDENT_REVIEW"
+    }
+  ],
+  "full_fei_status": "OPEN",
+  "independent_review": "ALGEBRAIC_CORE_COMPLETE; END_TO_END_PENDING_NONCONTRIBUTOR"
+}

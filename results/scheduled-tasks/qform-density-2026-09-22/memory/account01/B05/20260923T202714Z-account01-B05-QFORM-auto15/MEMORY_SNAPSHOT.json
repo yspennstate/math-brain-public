@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B05",
+  "run_id": "20260923T202714Z-account01-B05-QFORM-auto15",
+  "control_commit_final_refresh": "3a010941e2e583f766f7f4bae324f669decaf4d9",
+  "control_revision": "2026-09-22.15",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5d682a223d27d345f28f6b0d3a8460c3899dfebb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T202714Z-account01-B05-QFORM-auto15/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T202714Z-account01-B05-QFORM-auto15/CHECKS.json",
+    "source_refresh_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T202714Z-account01-B05-QFORM-auto15/SOURCE_REFRESH.md"
+  },
+  "status": "SUPPORTING_COROLLARY_AND_INTERMEDIATE_MECHANISM_OBSTRUCTION_FULL_QFORM_OPEN",
+  "proved": [
+    {
+      "id": "QFORM-PHYSICAL-SQUARE-EXTRACTION-v1",
+      "statement": "For Q=2tHL+2LP+lambda V^2+alpha L^2+beta L+gamma with H,L and the physical X_j mutually independent cap-one, V=sum v_j X_j normalized, P=sum p_j X_j, q=max v_j^2, the essential density is <= C_* |t|^(-2/3)|lambda|^(-1/3)q^(-1/3), C_*=7.761982175235..., by conditioning all X_i except a maximal-square coordinate and applying account02/B05 QFORM-NULL-HUB-TRANSVERSE-SQUARE-v1."
+    },
+    {
+      "id": "QFORM-SLICE-FIRST-MIXED-RENYI-BOUND-v1",
+      "statement": "For a compressed joint density rho(l,v,p)<=M, the L^(3/2)/Minkowski coarea route produces the exact sufficient cost 2^(1/3)M^(2/3)|lambda|^(-1/3) int int |l|^(-2/3)m(l,p)^(1/3) dl dp, where m=int rho dv."
+    },
+    {
+      "id": "QFORM-SLICE-FIRST-MIXED-RENYI-NOT-UNIFORM-v1",
+      "statement": "An explicit cap-one product projection with V=(X1-X2)/sqrt2, P=(X1+X2)/sqrt2 and fragmented supports has joint (L,V,P) density cap exactly one but mixed-Renyi cost (9/2)(1-2^(-1/3))N^(2/3). The associated target-valid Q_N=2HL+2LP+V^2 has spectrum {sqrt2,-sqrt2,1,0} and is nevertheless uniformly bounded by <9.780 using the partner null-hub theorem after conditioning X2. This refutes only the slice-first certificate mechanism, not QFORM."
+    }
+  ],
+  "partner_results_applied": [
+    {
+      "source": "yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349",
+      "result": "QFORM-NULL-HUB-TRANSVERSE-SQUARE-v1",
+      "actual_inequality": "||p_QN||_infinity,ess <= 7.761982175235*2^(1/3)=9.7794847314..."
+    },
+    {
+      "source": "yspennstate/math-open-problems@5b7cf251ab2c7533eed306b2c9eb8859f52ff6f0",
+      "result": "QFORM-TWOBANK-HUB-DENSITY-v1",
+      "actual_inequality": "For Q_tb=2HL+2LP+V^2 with L=(X1+X4)/sqrt2, V=(X2+X5)/sqrt2, P=(X3+X6)/sqrt2, ||p_Qtb||_infinity,ess <= (3/2) max{1,C_T(3+2sqrt2)/2}^{2/3}."
+    }
+  ],
+  "corrections_retained": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "interval-to-Borel promotion invalid without a direct Borel estimate",
+    "absolute twisted-Wiener shortcut not universal for rough product laws"
+  ],
+  "unresolved": {
+    "id": "QFORM-AGGREGATED-SAME-SOURCE-SQUARE-CURRENCY-v1",
+    "statement": "Spend total transverse square energy before inverting max_j v_j^2 or a mixed-Renyi slice mass, uniformly as max_j v_j^2->0 and through the punctured overlapping coupling b->0, preserving original-coordinate product provenance."
+  },
+  "regularity": "Supporting branches prove essential boundedness only unless separately stated; unrestricted continuity remains open.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED"
+}

@@ -1,0 +1,20 @@
+{
+  "problem_id": "C0052",
+  "checked_at": "2026-10-10",
+  "historical_source": {
+    "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+    "author": "Hugo Duminil-Copin",
+    "url": "https://www.ihes.fr/~/duminil/publi/2017PIMS.pdf",
+    "locator": "PDF p. 93, printed p. 94, Section 7, Conjecture 6 and equation (7.1)",
+    "verbatim_short_quote": "Prove that the three-dimensional Ising model is non-trivial",
+    "definition_quote": "If g(beta) tends to 0 as beta approaches beta_c, the field is said to be trivial. Otherwise, it is said to be non-trivial.",
+    "exact_math_interpretation": "The notes define g(beta) as the spatial sum of the four-point Ursell function U4(0,x2,x3,x4) divided by chi(beta)^2 xi(beta)^d, and ask that g(beta) not tend to zero as beta increases to beta_c for the nearest-neighbor Ising model on Z^3. They also describe this in terms of failure of Wick factorization in the spin-field scaling limit.",
+    "caveat": "PDF extraction drops the final word after 'the four-dimensional Ising model is'; the 3D clause is intact. The source defines g without a minus sign although U4 is nonpositive, so nonvanishing is the convention-free property."
+  },
+  "intake_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:52",
+  "ranking": "Tier 5, attempted_un in RANKING_2026-09-07.csv:542; this is historical, not proof of current openness.",
+  "current_openness": "UNKNOWN",
+  "status_reason": "2017 source states the conjecture; bounded 2026-10-10 public search found no primary rigorous proof of its 3D clause, but an absence of search results is not a definitive novelty audit. The similarly titled 2017 Rychkov-Simmons-Duffin-Zan paper uses conformal-bootstrap input rather than a lattice-to-scaling-limit proof.",
+  "distinct_related_result": "Aizenman and Duminil-Copin, Annals of Mathematics 194 (2021), proves the 4D triviality clause, not the 3D nontriviality clause.",
+  "independent_route_relation": "The finite-volume Lee-Yang criterion in CLAIMS.jsonl is not yet a reduction to the exact g(beta) statement."
+}

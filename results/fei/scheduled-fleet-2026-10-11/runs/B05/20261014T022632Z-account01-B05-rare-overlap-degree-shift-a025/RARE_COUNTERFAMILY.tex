@@ -1,0 +1,102 @@
+\section*{Rare shared-coordinate degree-shift counterfamily}
+
+Put
+\[
+ \phi(t)=2t^2\left(\log_2\frac1t+\frac1{\ln2}\right),\qquad
+ \Phi(F)=\sum_j\phi(|\widehat F(\{j\})|).
+\]
+The accepted disjoint-variable argument uses
+$\Phi(BF)\leq \Phi(F)+M I(B)$.  The following genuine Boolean family
+shows that no shared-variable version with a bounded charge on the shared
+physical edge can hold.
+
+Let $n=2m+1$, let $K_n$ be majority on $n$ signs $u_1,\ldots,u_n$, and
+write
+\[
+ c_m=\widehat K_n(\{u_i\})={\binom{2m}{m}\over 4^m}.
+\]
+Let $x$ be one further sign, let $v=(v_1,\ldots,v_r)$, let $E(v)$ be one
+fixed point of the $r$-cube, and put $\epsilon=2^{-r}$.  Define
+\[
+ f(x,u)=xK_n(u),\qquad
+ g(x,v)=\begin{cases}x,&E(v),\\1,&\neg E(v),\end{cases}\qquad h=fg.
+\]
+All three functions are sign-valued.  The two factors share only the
+physical coordinate $x$.
+
+\subsection*{Exact Fourier and influence ledger}
+Balancedness of $K_n$ gives
+\[
+ \Phi(f)=0,qquad \Phi(g)=(r+1)\phi(\epsilon),qquad
+ \Phi(h)=n\phi(\epsilon c_m).
+\]
+Indeed multiplication by $x$ moves every singleton coefficient of $K_n$
+to the pair $\{x,u_i\}$, while the rare factor moves an $\epsilon$ fraction
+back to $\{u_i\}$.  The relevant physical influences are
+\[
+ \operatorname{Inf}_x(f)=1,quad \operatorname{Inf}_x(g)=\epsilon,quad
+ \operatorname{Inf}_x(h)=1-\epsilon,quad I(g)=(r+1)\epsilon.
+\]
+Thus the exact overlap saving on the shared edge is $2\epsilon$.
+
+For completeness, if two Boolean factors share only $x$ and have independent
+private variables, writing $D_xF=(F_+-F_-)/2$ and
+$\bar F=(F_++F_-)/2$, the pointwise Boolean identity
+$D_xF\,\bar F=0$ gives
+\[
+ \operatorname{Inf}_x(FG)=p(1-q)+(1-p)q=p+q-2pq.
+\]
+For a private coordinate $u_i$ of $F$ the singleton convolution formula is
+\[
+ \widehat{FG}(\{u_i\})
+ =\widehat F(\{u_i\})\widehat G(\emptyset)
+  +\widehat F(\{u_i,x\})\widehat G(\{x\}).
+\]
+The second term is the degree-shift mechanism absent in the disjoint proof.
+
+\subsection*{Rigorous divergence}
+The elementary induction bounds
+\[
+ {1\over2\sqrt m}\le c_m\le {1\over\sqrt{m+1}}
+\]
+follow from $c_{m+1}/c_m=(2m+1)/(2m+2)$.  Consequently
+\[
+ \Phi(h)\ge {\epsilon^2\over2}\log_2(m+1).
+\]
+Therefore, for every $r\ge1$ and every finite $C$, every $m$ satisfying
+\[
+ {\epsilon^2\over2}\log_2(m+1)>
+ (r+1)\phi(\epsilon)+C(1+\epsilon)
+\]
+violates
+\[
+ \Phi(fg)\le\Phi(f)+\Phi(g)+C
+ \bigl(\operatorname{Inf}_x(f)+\operatorname{Inf}_x(g)\bigr).
+\]
+The same family violates $\Phi(fg)\le\Phi(f)+M I(g)$ for every fixed
+finite $M$ by replacing the last term by $M(r+1)\epsilon$.  In particular,
+neither the rare first-revelation pivotal mass nor the total shared-edge mass
+can pay the newly exposed singleton potential with an absolute multiplier.
+
+\subsection*{Reveal-order comparison}
+This is a local product-law obstruction, not a restriction-tree no-go.
+After fully revealing the controls $v$ but not $x$, the expected singleton
+potential is exactly
+\[
+ \epsilon\Phi(K_n).
+\]
+If instead $x$ is revealed first, the two children are $K_n$ and
+$K_nQ_r$, where $Q_r=2\mathbf1_E-1$ and
+$|\mathbb E Q_r|=1-2\epsilon$.  Hence the expected intermediate potential is
+\[
+ {n\over2}\{\phi(c_m)+\phi((1-2\epsilon)c_m)\}.
+\]
+After both $x$ and all controls are revealed, the terminal potential is
+always $\Phi(K_n)$.  Thus the total signed potential telescope is
+order-independent, but the location of its large negative refund is not.
+Any viable physical stopping ledger must carry this signed degree-shift
+balance across nodes; a nonnegative shared-pivotal account loses it.
+
+This family does not refute the exact mismatch/KL identity, existential
+coordinate selection, an optimized globally chosen tree, or FEI.  It only
+refutes the stated overlap-stable singleton-potential/product payments.

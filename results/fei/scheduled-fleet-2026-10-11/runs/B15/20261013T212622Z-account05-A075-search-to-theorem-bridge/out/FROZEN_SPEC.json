@@ -1,0 +1,17 @@
+{
+  "helper_version": "A075-matching-v1",
+  "actual_Boolean_family": "f_(k,l)=1-2*1_A on r=2k+l bits; A={0, all unit vectors, the k disjoint matched pairs}. Includes original six-bit witness at (k,l)=(3,0), up to coordinate permutation.",
+  "parameter_domain": {
+    "direct_truth_table_checks": "all k,l>=0 with 2k+l<=9 (30 parameter pairs), plus all one-coordinate physical children",
+    "compressed_perfect_matching": "k=2,...,32, l=0; dimensions 4,...,64 fixed in advance",
+    "hereditary_small_dimension_certificate": "all k,l>=0 with 1<=2k+l<=9, every relevant coordinate orbit; point defects on 1,...,9 bits"
+  },
+  "case_count": "30 direct parameter pairs including dimension zero; 31 compressed matching roots; 9 point-defect roots; up to two coordinate orbits per root and two actual children per queried coordinate",
+  "justified_symmetry": "Permutations of intact matched pairs, swaps within each pair, and permutations of isolated coordinates preserve A. At most paired and isolated coordinate orbits; no affine variable mixing.",
+  "arithmetic": "Integer Walsh and direct physical edge counts; Fraction coefficients and exact rational linear forms in log2 primes; rational atanh-series outward enclosures for sign decisions. Float displays only.",
+  "memory_estimate_mb": 50,
+  "maximum_runtime_seconds": 60,
+  "pilot": "The entire bounded compressed/direct domain is the sub-60-second pilot; no extension is authorized automatically.",
+  "randomness": "None",
+  "constraints": "No GPU; one serial process; no job expected over 300MB. No large truth tables beyond dimension 9."
+}

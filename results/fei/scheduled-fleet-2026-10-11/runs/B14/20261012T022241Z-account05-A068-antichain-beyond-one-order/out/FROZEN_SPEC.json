@@ -1,0 +1,15 @@
+{
+  "helper_version": "check_edit.py v2; v1 pilot passed 2 edits in 48.754 seconds; v2 adds outward 64-bit dyadic rounding to avoid denominator growth, unchanged family",
+  "actual_Boolean_family": "Cyclic quadratic-controlled odd majority F_q and exactly one truth-table flip of a padded F_q",
+  "parameter_domain": "q=5,7; padding d=0,2,4; x0 in {0,all-ones,1,low floor(q/2) bits}; z0 in {0,all-ones,1,even-index mask}; padding edit assignment all zero",
+  "case_count": 96,
+  "base_case_count": 2,
+  "pilot_domain": "q=5,d=0,first two declared edit locations",
+  "pilot_case_count": 2,
+  "symmetry": "No reduction asserted: a fixed 96-case targeted validation, not exhaustive edit enumeration. All-location theorem supplied by analysis.",
+  "arithmetic": "Integer FWHT; independent quadratic packet construction and F2 rank elimination; exact Fraction edges/reference normalization; rational atanh logarithm intervals with 22 terms and proved remainder, rounded outward to denominator 2^64; no floating entropy certificate",
+  "memory_estimate_MB": 40,
+  "pilot_max_runtime_seconds": 60,
+  "max_runtime_seconds": 180,
+  "automatic_dimension_increase": false
+}

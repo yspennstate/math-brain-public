@@ -1,0 +1,40 @@
+[
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 100,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0100",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Open problems (3), p. 27",
+      "problem_id": "C0100",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "levine_peres_sandpiles_2017",
+      "statement": "Refine the Pegden-Smart weak-* convergence of the rescaled sandpile s_n by showing that for any ball B and integer j the fraction of sites in B with exactly j particles converges as the lattice spacing tends to zero; also determine the scaling limit of the sandpile identity element.",
+      "status_search": "",
+      "title": "Convergence of height-fraction statistics in the sandpile scaling limit",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 88,
+    "record": {
+      "attempt_id": "C0100-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "Inside a patch with Hessian A the height-j frequency is the frequency of j in the A-pattern; the gasket of boundaries has area zero, so convergence reduces to o(n) transition layers.",
+      "method": "Use the Apollonian structure of the limit to predict the local statistics in each patch.",
+      "obstruction": "Transition-layer width between patches not confirmed; identity element limit open.",
+      "problem_id": "C0100",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result": "The Pegden-Smart limit is a piecewise-quadratic function whose Hessian takes values in the set Gamma of integer superharmonic matrices; inside a patch where the Hessian is a fixed matrix A in Gamma, the sandpile is (Levine-Pegden-Smart) a periodic pattern determined by A, so the height-j fraction in a patch converges to the frequency of height j in that periodic pattern, which is a computable rational number. Hence the refinement holds in the interior of every patch; the question reduces to the boundary set between patches (the Apollonian gasket of patch boundaries), which has Lebesgue measure zero in the limit but whose discrete neighbourhood might carry a positive fraction of sites at scale n if the boundary layers have width of order n^{alpha}, alpha > 0... the patches are of all sizes (Apollonian), and the total area of patches of diameter < eps tends to zero as eps -> 0 (the gasket has Hausdorff dimension < 2), so for any delta the fraction of sites within the small patches is < delta for eps small, and within large patches the convergence holds; therefore the height-j fraction converges PROVIDED the discrete configuration inside a large patch is exactly the periodic pattern except in a boundary layer of o(n) width, which is the content of the Levine-Pegden-Smart 'Apollonian structure in the abelian sandpile' theorem (they prove the patterns appear; the width of the transition layers is what I could not confirm from memory). Conditional resolution recorded: the height-fraction convergence follows from the patch-pattern theorem plus an o(n) transition-layer bound plus the measure-zero gasket; the identity-element scaling limit remains open beyond the Caracciolo-Paoletti-Sportiello special case.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "B17-20260922T181037Z-r11",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.11",
+  "source_control_commit_start": "99b5c53603ff0f8d0ae6e8dab890f4fe94ba7688",
+  "source_control_commit_prepublication": "9e10373109024e3c617b95df3d9ab0434fb33076",
+  "assignment": "Sharp constant and witnesses",
+  "target_status": "OPEN_NOT_PROVED",
+  "result_status": "PROVED_SUPPORTING_MIXED_LEVERAGE_LIMIT_THEOREM",
+  "result_id": "QFORM-ONE-HEAVY-DIFFUSE-NOESCAPE-v1",
+  "result_scope": "For the exact rank-three frame with one arbitrary cap-one non-infinitesimal physical coordinate of leverage ell in [0,1] and three orthogonal centered-uniform diffuse banks completing covariance I_3, for every spectral orientation u the zero-density converges to a limit at most 3sqrt(2). The proof uses cap-one square-Laplace domination and an exact completely-monotone Gaussian cone kernel. This is not a finite-row uniform bound, does not rule out finite-m overshoot, and is not the full QFORM theorem.",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fbf14cd80c31d2100cf849494016bb4703aefdd7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260922T181037Z-r11/REPORT.md",
+    "report_blob": "58d11e744ec88b46e38e15cd21418a6d7b14b823",
+    "checker_output_blob": "1e760742548e8e9f1d6e155de829909ac8006903",
+    "checker_status": "PASS_SANITY_ONLY_ANALYTIC_PROOF_IN_REPORT"
+  },
+  "exact_control": {
+    "id": "QFORM-TWO-HEAVY-COLLINEAR-CONTROL-v1",
+    "statement": "Two equal heavy centered-unit-interval rows on the negative eigendirection with two diffuse positive banks have limiting zero-density -2+2e^-3+2sqrt(3pi)erf(sqrt(3))=4.1516968595129935...<3sqrt(2).",
+    "scope": "one exact two-heavy geometry only"
+  },
+  "partner_result_applied": {
+    "worker": "account03/B17",
+    "run_id": "20260922T180732Z-account03-B17-QFORM-r14",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0fe842ad60b590ca774ecfd71cf2bb9d15639f90",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T180732Z-account03-B17-QFORM-r14/REPORT.md",
+    "use": "Its exact six-variable peak 4.063070616806037... is the finite benchmark, and its one-coordinate fragmentation barrier rules out repeating a single-coordinate fragment optimization around the cross geometry; this run attacks the complementary mixed-leverage mechanism."
+  },
+  "prior_worker_result_extended": {
+    "run_id": "20260922T174510Z-account02-B17-QFORM-r12",
+    "result_id": "QFORM-VECTOR-INFINITESIMAL-SHARED-FRAME-NOESCAPE-v1",
+    "source": "yspennstate/math-open-problems@8cd8692e80ceffc93ae5679a323bbc4f11f89cb1",
+    "relation": "The prior theorem excludes probabilistically infinitesimal growing shared frames; the new theorem treats a canonical non-infinitesimal one-row macroscopic core plus diffuse residual, exactly the prior next-step branch."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SCALAR-QREST-SUP-FALSE-v1",
+    "QFORM-SCALAR-CONDITIONED-CORE-SUP-FALSE-v1",
+    "QFORM-SCALAR-QREST-WORST-FIBER-FALSE-v1"
+  ],
+  "critical_premises": [
+    "Bathtub rearrangement for a symmetric decreasing one-dimensional kernel under density cap one.",
+    "Elementary erf envelope proved by derivative comparison using log(1+t)<=t.",
+    "Exact Gaussian cone delta representation for q=z1^2+z2^2-z3^2.",
+    "Standard local CLT for normalized sums of centered unit intervals, used only in the explicit diffuse banks."
+  ],
+  "unresolved_implication": "Determine whether two or more non-collinear macroscopic rows with coordinated cap-one laws can exceed 3sqrt(2), or prove a multivariate analogue of the square-Laplace/cone-kernel domination. Finite-m overshoot, growing nonorthogonal patterns, additional spectral directions, and off-zero peaks remain open.",
+  "next_step": "Build a two-heavy non-collinear exact rank-three frame with diffuse covariance completion; derive the conditional cone kernel as a positive transform of the two heavy coordinates and optimize over cap-one product laws, using the partner finite benchmark as a control.",
+  "full_brain_connected": false,
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN"
+}

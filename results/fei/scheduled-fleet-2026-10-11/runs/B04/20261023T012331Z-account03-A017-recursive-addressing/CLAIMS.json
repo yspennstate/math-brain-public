@@ -1,0 +1,53 @@
+[
+  {
+    "claim_id": "A017-FOUR-EDGE-COMPATIBILITY",
+    "version": 2,
+    "exact_statement": "For every n, quadratic q on the uniform binary cube, linear address M, independent physical sign data y_z, and E of at most twelve vertices in one fiber of M, F(x,y)=(-1)^q(x)(1-2*1_E(x))*y_(Mx) satisfies H(F)<=(4+2/ln(2))*(I(F)-1). Moreover, for a quadratic polar matrix Q, Q_i nonzero, P={partial_i q=1}, and g=(-1)^q*(1-2*1_E), every original physical j!=i with Q_ij=0 and Q_j outside span(Q_i) satisfies Inf_j(g)>=1/4-2*|E intersect P^c|/2^n. If E is contained in P and a physical set J consists of such j with Q_jk=0 for every j,k in J, querying all J in any fixed order is K4-good on every history and gives H(g)<=K*sum_j Inf_j(g)+average_a H(g|J=a) and I(g)=sum_j Inf_j(g)+average_a I(g|J=a), K=4+2/ln(2).",
+    "hypotheses": [
+      "Uniform cube; base-two entropy; actual Boolean phases and original physical influence.",
+      "Twelve-edit theorem: edits in one linear-address fiber, independent physical data labels.",
+      "One tangent step: nonzero Q_i, Q_ij=0, Q_j not in span(Q_i); e_out<=2^n/32 suffices for K4 payment.",
+      "Whole tangent block: E subset P and pairwise Q_jk=0; full residual leaf entropies remain unpaid."
+    ],
+    "statement_sha256": "86e61c1c9f852628c9e40b22f424a36e48a519c803f2161bc6a09c9c1f16b979",
+    "contributors": [
+      "A017"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "INHERITED_STAGE17_PROOF.md",
+      "INHERITED_STAGE6_PROOF.md",
+      "code/",
+      "out/"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A017-FOUR-EDGE-COMPATIBILITY",
+        "version": 1,
+        "status": "AUTHOR_CHECKED_PENDING_INDEPENDENT_REVIEW",
+        "used_for": "Planar four-pair case and twelve-edit terminal bound."
+      },
+      {
+        "claim_id": "A017-TWO-EDIT-SHARED-ADDRESS-STOPPING",
+        "version": 4,
+        "status": "AUTHOR_CHECKED_PENDING_INDEPENDENT_REVIEW",
+        "used_for": "Physical stopping ledger, five-control certificate, odd five-pair case and JS bound."
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_CHECKED_PROOF_AND_EXACT_CERTIFICATES_PENDING_REVIEW",
+    "supersedes": [
+      "A017-FOUR-EDGE-COMPATIBILITY@1"
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A018",
+      "A020",
+      "A030",
+      "A090",
+      "A091",
+      "B04"
+    ]
+  }
+]

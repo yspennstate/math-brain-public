@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B12",
+  "run_id": "20260922T185427Z-account02-B12-QFORM-r11",
+  "target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES",
+  "status": "ESSENTIAL_SUPPORTING_REDUCTION_FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "final_commit": "ee9d00b72aec45d9b3df87b6018ab907463093af",
+    "owner_control_revision": "2026-09-22.12"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SCALAR-QREST-WORST-FIBER-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "name": "account03/B12 signed Schur extra-eigenvalue recurrence and heavy-row certificate",
+      "source": "yspennstate/math-open-problems@c10963494049ba2708f33e8533198ac38fc2ba31",
+      "scope": "signed Schur threshold counts; high-leverage row norm rho=1/(156 sqrt(2)) at spectral-window failure"
+    },
+    {
+      "name": "QFORM-DEPENDENT-SQUARE-SMOOTHING-v1",
+      "source": "yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+      "scope": "density cap 2 sqrt(M/|a|) for a physical completed square with conditional translate density cap one"
+    }
+  ],
+  "new_results": [
+    "For A=[[B,E],[E^T,C]] with invertible physical r-block B and Schur S=C-E^T B^{-1}E, s_j(S)>=s_{j+r}(A).",
+    "A scalar Schur peel therefore removes at most one absolute-large eigenvalue and incurs no spectral-scale loss.",
+    "If each peeled pivot has |a|>=delta ell, the normalized density recurrence T_delta(B)=2 sqrt(B/delta) has fixed point 4/delta and arbitrary depth stays below max(B_terminal,4/delta).",
+    "With partner heavy-row rho=1/(156 sqrt(2)) and threshold theta, heavy-pivot fixed point is 624 sqrt(2)/theta; the complementary bank satisfies ||b||>rho sqrt(1-theta^2) ell.",
+    "At theta=1/2 the lossless fixed point is 1248 sqrt(2)=1764.9385258416228..., improving the partner signed/shear recurrence constant by factor 4.79128784747792 when only absolute eigenvalue counts are required."
+  ],
+  "canonical_outputs": {
+    "math_bundle_tip": "4b8eb43e9d001d41de6190b587fefe8fdea2006b",
+    "report_commit": "e626309efe978c5afa3be7784d9882723ec22cb1",
+    "checker_commit": "ec851e38611e7102671eae5596bbaf1bdda5695f",
+    "checker_output_commit": "d2824f5a353b4b9739a45336c7ea9d035093fb21",
+    "handoff_commit": "44dbda8bca437326325939925e4f3494a175a346"
+  },
+  "checker": {
+    "status": "PASS",
+    "singular_value_comparisons": 6480,
+    "minimum_observed_numerical_gap": 3.881671893635197e-08,
+    "recurrence_max_relative_error": 2.541883660633515e-16
+  },
+  "unresolved_implication": "Close the exact-three/terminal and cross-dominated aggregate branch using original-coordinate product structure; do not select one reciprocal tiny coefficient/minor or assume post-rotation independence.",
+  "next_step": "Combine the tunable theta heavy/cross dichotomy with a product-preserving one-strong-cross or grouped-bank half-Riesz estimate, optimizing theta only after the cross-bank constant is known."
+}

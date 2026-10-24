@@ -1,0 +1,120 @@
+== star a=1 b=1
+  star11 times=[0.0, 1.0, 2.0] c1=0.25 c2=0.5: max(E2-E1)=+2.776e-17 OK 
+  star11 times=[0.0, 1.0, 2.0] c1=0.5 c2=1: max(E2-E1)=+4.163e-17 OK 
+  star11 times=[0.0, 1.0, 2.0] c1=1 c2=2: max(E2-E1)=+2.082e-17 OK 
+  star11 times=[0.0, 1.0, 2.0] c1=2 c2=4: max(E2-E1)=-4.857e-17 OK 
+  star11 times=[0.0, 1.0, 2.0] c1=4 c2=8: max(E2-E1)=-8.389e-12 OK 
+== star a=1 b=3
+  star13 times=[0.0, 1.0, 2.0] c1=0.25 c2=0.5: max(E2-E1)=+3.955e-16 OK 
+  star13 times=[0.0, 1.0, 2.0] c1=0.5 c2=1: max(E2-E1)=+1.405e-16 OK 
+  star13 times=[0.0, 1.0, 2.0] c1=1 c2=2: max(E2-E1)=-3.608e-16 OK 
+  star13 times=[0.0, 1.0, 2.0] c1=2 c2=4: max(E2-E1)=+1.221e-15 OK 
+  star13 times=[0.0, 1.0, 2.0] c1=4 c2=8: max(E2-E1)=+2.534e-15 OK 
+== star a=3 b=1
+  star31 times=[0.0, 1.0, 2.0] c1=0.25 c2=0.5: max(E2-E1)=+2.498e-16 OK 
+  star31 times=[0.0, 1.0, 2.0] c1=0.5 c2=1: max(E2-E1)=+1.110e-16 OK 
+  star31 times=[0.0, 1.0, 2.0] c1=1 c2=2: max(E2-E1)=+3.053e-16 OK 
+  star31 times=[0.0, 1.0, 2.0] c1=2 c2=4: max(E2-E1)=-5.818e-08 OK 
+  star31 times=[0.0, 1.0, 2.0] c1=4 c2=8: max(E2-E1)=-4.859e-14 OK 
+== CONTROL cycle (should violate)
+  cycle times=[0.0, 1.0, 2.0] c1=0.25 c2=0.5: max(E2-E1)=-4.163e-17 OK 
+  cycle times=[0.0, 1.0, 2.0] c1=0.5 c2=1: max(E2-E1)=+2.522e-02 VIOLATION
+  cycle times=[0.0, 1.0, 2.0] c1=1 c2=2: max(E2-E1)=+4.569e-02 VIOLATION
+  cycle times=[0.0, 1.0, 2.0] c1=2 c2=4: max(E2-E1)=+4.199e-02 VIOLATION
+  cycle times=[0.0, 1.0, 2.0] c1=4 c2=8: max(E2-E1)=+2.443e-03 VIOLATION
+== CONTROL birth-death (must pass)
+  bd times=[0.0, 1.0, 2.0] c1=0.25 c2=0.5: max(E2-E1)=+5.551e-17 OK 
+  bd times=[0.0, 1.0, 2.0] c1=0.5 c2=1: max(E2-E1)=-6.939e-17 OK 
+  bd times=[0.0, 1.0, 2.0] c1=1 c2=2: max(E2-E1)=+5.725e-17 OK 
+  bd times=[0.0, 1.0, 2.0] c1=2 c2=4: max(E2-E1)=-3.339e-17 OK 
+  bd times=[0.0, 1.0, 2.0] c1=4 c2=8: max(E2-E1)=+4.901e-17 OK 
+== star a=1 b=1
+  star11 times=[0.0, 0.3, 1.0] c1=0.25 c2=0.5: max(E2-E1)=+1.665e-16 OK 
+  star11 times=[0.0, 0.3, 1.0] c1=0.5 c2=1: max(E2-E1)=-3.469e-17 OK 
+  star11 times=[0.0, 0.3, 1.0] c1=1 c2=2: max(E2-E1)=+4.163e-17 OK 
+  star11 times=[0.0, 0.3, 1.0] c1=2 c2=4: max(E2-E1)=-9.021e-17 OK 
+  star11 times=[0.0, 0.3, 1.0] c1=4 c2=8: max(E2-E1)=+9.714e-17 OK 
+== star a=1 b=3
+  star13 times=[0.0, 0.3, 1.0] c1=0.25 c2=0.5: max(E2-E1)=+1.457e-16 OK 
+  star13 times=[0.0, 0.3, 1.0] c1=0.5 c2=1: max(E2-E1)=-6.349e-16 OK 
+  star13 times=[0.0, 0.3, 1.0] c1=1 c2=2: max(E2-E1)=+1.561e-17 OK 
+  star13 times=[0.0, 0.3, 1.0] c1=2 c2=4: max(E2-E1)=+3.764e-16 OK 
+  star13 times=[0.0, 0.3, 1.0] c1=4 c2=8: max(E2-E1)=-4.947e-10 OK 
+== star a=3 b=1
+  star31 times=[0.0, 0.3, 1.0] c1=0.25 c2=0.5: max(E2-E1)=-6.245e-17 OK 
+  star31 times=[0.0, 0.3, 1.0] c1=0.5 c2=1: max(E2-E1)=-2.776e-17 OK 
+  star31 times=[0.0, 0.3, 1.0] c1=1 c2=2: max(E2-E1)=+8.327e-17 OK 
+  star31 times=[0.0, 0.3, 1.0] c1=2 c2=4: max(E2-E1)=+2.776e-17 OK 
+  star31 times=[0.0, 0.3, 1.0] c1=4 c2=8: max(E2-E1)=-3.765e-10 OK 
+== CONTROL cycle (should violate)
+  cycle times=[0.0, 0.3, 1.0] c1=0.25 c2=0.5: max(E2-E1)=+4.163e-17 OK 
+  cycle times=[0.0, 0.3, 1.0] c1=0.5 c2=1: max(E2-E1)=-2.776e-17 OK 
+  cycle times=[0.0, 0.3, 1.0] c1=1 c2=2: max(E2-E1)=+2.522e-02 VIOLATION
+  cycle times=[0.0, 0.3, 1.0] c1=2 c2=4: max(E2-E1)=+5.658e-02 VIOLATION
+  cycle times=[0.0, 0.3, 1.0] c1=4 c2=8: max(E2-E1)=+4.817e-02 VIOLATION
+== CONTROL birth-death (must pass)
+  bd times=[0.0, 0.3, 1.0] c1=0.25 c2=0.5: max(E2-E1)=-1.388e-17 OK 
+  bd times=[0.0, 0.3, 1.0] c1=0.5 c2=1: max(E2-E1)=+9.714e-17 OK 
+  bd times=[0.0, 0.3, 1.0] c1=1 c2=2: max(E2-E1)=-3.816e-17 OK 
+  bd times=[0.0, 0.3, 1.0] c1=2 c2=4: max(E2-E1)=+4.857e-17 OK 
+  bd times=[0.0, 0.3, 1.0] c1=4 c2=8: max(E2-E1)=-3.231e-16 OK 
+== star a=1 b=1
+  star11 times=[0.0, 1.0, 1.5, 3.0] c1=0.25 c2=0.5: max(E2-E1)=-2.776e-17 OK 
+  star11 times=[0.0, 1.0, 1.5, 3.0] c1=0.5 c2=1: max(E2-E1)=-1.527e-16 OK 
+  star11 times=[0.0, 1.0, 1.5, 3.0] c1=1 c2=2: max(E2-E1)=-1.180e-16 OK 
+  star11 times=[0.0, 1.0, 1.5, 3.0] c1=2 c2=4: max(E2-E1)=+1.353e-16 OK 
+  star11 times=[0.0, 1.0, 1.5, 3.0] c1=4 c2=8: max(E2-E1)=-1.475e-16 OK 
+== star a=1 b=3
+  star13 times=[0.0, 1.0, 1.5, 3.0] c1=0.25 c2=0.5: max(E2-E1)=-6.592e-17 OK 
+  star13 times=[0.0, 1.0, 1.5, 3.0] c1=0.5 c2=1: max(E2-E1)=+1.908e-17 OK 
+  star13 times=[0.0, 1.0, 1.5, 3.0] c1=1 c2=2: max(E2-E1)=-6.722e-18 OK 
+  star13 times=[0.0, 1.0, 1.5, 3.0] c1=2 c2=4: max(E2-E1)=-9.894e-10 OK 
+  star13 times=[0.0, 1.0, 1.5, 3.0] c1=4 c2=8: max(E2-E1)=-1.145e-16 OK 
+== star a=3 b=1
+  star31 times=[0.0, 1.0, 1.5, 3.0] c1=0.25 c2=0.5: max(E2-E1)=+1.388e-16 OK 
+  star31 times=[0.0, 1.0, 1.5, 3.0] c1=0.5 c2=1: max(E2-E1)=+1.388e-17 OK 
+  star31 times=[0.0, 1.0, 1.5, 3.0] c1=1 c2=2: max(E2-E1)=+1.943e-16 OK 
+  star31 times=[0.0, 1.0, 1.5, 3.0] c1=2 c2=4: max(E2-E1)=-1.693e-13 OK 
+  star31 times=[0.0, 1.0, 1.5, 3.0] c1=4 c2=8: max(E2-E1)=-1.370e-16 OK 
+== CONTROL cycle (should violate)
+  cycle times=[0.0, 1.0, 1.5, 3.0] c1=0.25 c2=0.5: max(E2-E1)=+9.714e-17 OK 
+  cycle times=[0.0, 1.0, 1.5, 3.0] c1=0.5 c2=1: max(E2-E1)=+5.694e-02 VIOLATION
+  cycle times=[0.0, 1.0, 1.5, 3.0] c1=1 c2=2: max(E2-E1)=+6.132e-02 VIOLATION
+  cycle times=[0.0, 1.0, 1.5, 3.0] c1=2 c2=4: max(E2-E1)=+4.094e-02 VIOLATION
+  cycle times=[0.0, 1.0, 1.5, 3.0] c1=4 c2=8: max(E2-E1)=+4.094e-02 VIOLATION
+== CONTROL birth-death (must pass)
+  bd times=[0.0, 1.0, 1.5, 3.0] c1=0.25 c2=0.5: max(E2-E1)=-1.006e-16 OK 
+  bd times=[0.0, 1.0, 1.5, 3.0] c1=0.5 c2=1: max(E2-E1)=-7.459e-17 OK 
+  bd times=[0.0, 1.0, 1.5, 3.0] c1=1 c2=2: max(E2-E1)=-1.648e-16 OK 
+  bd times=[0.0, 1.0, 1.5, 3.0] c1=2 c2=4: max(E2-E1)=-1.598e-16 OK 
+  bd times=[0.0, 1.0, 1.5, 3.0] c1=4 c2=8: max(E2-E1)=-1.386e-09 OK 
+== star a=1 b=1
+  star11 times=[0.0, 0.5, 1.0, 1.5] c1=0.25 c2=0.5: max(E2-E1)=+1.388e-17 OK 
+  star11 times=[0.0, 0.5, 1.0, 1.5] c1=0.5 c2=1: max(E2-E1)=+1.388e-17 OK 
+  star11 times=[0.0, 0.5, 1.0, 1.5] c1=1 c2=2: max(E2-E1)=-5.551e-17 OK 
+  star11 times=[0.0, 0.5, 1.0, 1.5] c1=2 c2=4: max(E2-E1)=+5.204e-17 OK 
+  star11 times=[0.0, 0.5, 1.0, 1.5] c1=4 c2=8: max(E2-E1)=-1.214e-17 OK 
+== star a=1 b=3
+  star13 times=[0.0, 0.5, 1.0, 1.5] c1=0.25 c2=0.5: max(E2-E1)=-4.163e-17 OK 
+  star13 times=[0.0, 0.5, 1.0, 1.5] c1=0.5 c2=1: max(E2-E1)=+5.551e-16 OK 
+  star13 times=[0.0, 0.5, 1.0, 1.5] c1=1 c2=2: max(E2-E1)=-1.023e-16 OK 
+  star13 times=[0.0, 0.5, 1.0, 1.5] c1=2 c2=4: max(E2-E1)=+5.475e-16 OK 
+  star13 times=[0.0, 0.5, 1.0, 1.5] c1=4 c2=8: max(E2-E1)=+1.861e-15 OK 
+== star a=3 b=1
+  star31 times=[0.0, 0.5, 1.0, 1.5] c1=0.25 c2=0.5: max(E2-E1)=-2.359e-16 OK 
+  star31 times=[0.0, 0.5, 1.0, 1.5] c1=0.5 c2=1: max(E2-E1)=-2.498e-16 OK 
+  star31 times=[0.0, 0.5, 1.0, 1.5] c1=1 c2=2: max(E2-E1)=+1.804e-16 OK 
+  star31 times=[0.0, 0.5, 1.0, 1.5] c1=2 c2=4: max(E2-E1)=+4.718e-16 OK 
+  star31 times=[0.0, 0.5, 1.0, 1.5] c1=4 c2=8: max(E2-E1)=-1.247e-08 OK 
+== CONTROL cycle (should violate)
+  cycle times=[0.0, 0.5, 1.0, 1.5] c1=0.25 c2=0.5: max(E2-E1)=-1.249e-16 OK 
+  cycle times=[0.0, 0.5, 1.0, 1.5] c1=0.5 c2=1: max(E2-E1)=-1.388e-17 OK 
+  cycle times=[0.0, 0.5, 1.0, 1.5] c1=1 c2=2: max(E2-E1)=+5.694e-02 VIOLATION
+  cycle times=[0.0, 0.5, 1.0, 1.5] c1=2 c2=4: max(E2-E1)=+4.569e-02 VIOLATION
+  cycle times=[0.0, 0.5, 1.0, 1.5] c1=4 c2=8: max(E2-E1)=+4.199e-02 VIOLATION
+== CONTROL birth-death (must pass)
+  bd times=[0.0, 0.5, 1.0, 1.5] c1=0.25 c2=0.5: max(E2-E1)=+4.857e-17 OK 
+  bd times=[0.0, 0.5, 1.0, 1.5] c1=0.5 c2=1: max(E2-E1)=+9.194e-16 OK 
+  bd times=[0.0, 0.5, 1.0, 1.5] c1=1 c2=2: max(E2-E1)=-1.110e-16 OK 
+  bd times=[0.0, 0.5, 1.0, 1.5] c1=2 c2=4: max(E2-E1)=-1.557e-16 OK 
+  bd times=[0.0, 0.5, 1.0, 1.5] c1=4 c2=8: max(E2-E1)=+2.250e-17 OK 

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.11",
+  "account": "account02",
+  "slot": "B20",
+  "run_id": "20260922T182735Z-account02-B20-QFORM-r16",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_initial": "fb48babff3d0a2b078a9df38923eb2f45bc3f3fa",
+  "source_control_refresh": "7e287cc17eaa1a9dd7fb5e653022882ffe77e75e",
+  "partner": {
+    "worker": "account03/B20",
+    "run_id": "20260922T175041Z-account03-B20-QFORM-r14",
+    "canonical_commit": "e0d5eb88a5c953ca0fce31b386a35e7faea8389e",
+    "use": "Applied the exact half-barrier packet s_2(C)>=499/8000."
+  },
+  "supporting_source": {
+    "worker": "account02/B06",
+    "claim": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+    "canonical_commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+    "use": "Applied k=1 cap sqrt(e) and k=2 cap e to original-coordinate differences."
+  },
+  "new_result": {
+    "claim": "QFORM-RANK2-CROSS-SQRT-CONCENTRATION-v1",
+    "statement": "If an original-coordinate cross block C has s_2(C)>=beta, then with arbitrary self blocks and outside couplings P(X^TAX in I)<=min(1,sqrt(2 e sqrt(pi)/beta)|I|^(1/2)).",
+    "partner_threshold_application": "beta=499/8000 gives sqrt(16000 e sqrt(pi)/499)<12.43.",
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_commit": "4bc44879d92221288f5055d31318e9ecb25f4650",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B20/20260922T182735Z-account02-B20-QFORM-r16/REPORT.md"
+  },
+  "route_counterexample": {
+    "statement": "For iid U[0,1], Q=(X1-Y1)(X2-Y2) has s_2(cross)=1/2 but unbounded density p_Q(t)>=(1/4)log(1/(4t)); its matrix spectrum is {1,-1,0,0}, so it refutes only free rank-two-bank payment, not the three-eigenvalue target."
+  },
+  "first_unpaid_implication": "QFORM-THIRD-DIRECTION-UPGRADE-v1: under s_3(A)>=1 plus s_2(A[L,R])>=499/8000, use the third spectral direction source-validly to upgrade the proved h^(1/2) concentration to a universal linear concentration bound.",
+  "classification": "ESSENTIAL_STEP_APPLIED / QUANTITATIVE_REPLACEMENT_PROVED / FULL_TARGET_OPEN",
+  "full_target_status": "OPEN",
+  "continuity_status": "NO_NEW_CLAIM"
+}

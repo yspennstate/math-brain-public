@@ -1,0 +1,347 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem,booktabs}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\dd}{\,\mathrm d}
+
+\hypersetup{pdftitle={Correlation of leaf heights at mesoscopic separation in the critical beta-splitting tree},pdfauthor={Yitzchak Shmalo}}
+
+\title[Leaf heights at mesoscopic separation]{Correlation of leaf heights at mesoscopic separation in the critical beta-splitting tree}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{15 October 2026}
+\subjclass[2020]{60J80, 60C05, 05C05}
+\keywords{critical beta-splitting tree, leaf height, fragmentation, correlation, martingale}
+
+\begin{document}
+\begin{abstract}
+In the critical beta-splitting random tree on $n$ leaves, in its interval-splitting form with the interval closed into a cycle, let $D^{(1)}_n$ and $D^{(2)}_n$ be the continuous heights of a uniformly random leaf and of the leaf $r$ places further round the cycle. We show that, uniformly in $1\le r\le n/2$,
+\[
+\Cov\bigl(D^{(1)}_n,D^{(2)}_n\bigr)=\sigma^2\log(n/r)+O\bigl(\sqrt{\log n}\bigr),\qquad \Var(D_n)=\sigma^2\log n+O\bigl(\sqrt{\log n}\bigr),
+\]
+with $\sigma^2=2\zeta(3)/\zeta(2)^3$. Hence the correlation coefficient equals $1-\log r/\log n+O((\log n)^{-1/2})$, and it tends to $1-\alpha$ whenever $\log r_n/\log n\to\alpha\in[0,1]$. This answers Open Problem~1 of Aldous and Janson. The proof follows a positional potential of each leaf, which decreases at rate $\zeta(2)$ up to errors that are square integrable along the whole path, and compares the two martingales it produces through their bracket up to the separation of the two leaves.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+The critical beta-splitting tree is the case $\beta=-1$ of Aldous's beta-splitting model of phylogenetic trees. Its continuous-time version $\mathrm{CTCS}(n)$ has the following interval-splitting description \cite{AJ,AP}. An interval of $m\ge2$ leaves, labelled $1,\dots,m$ from left to right, is cut between $i$ and $i+1$ at rate
+\begin{equation}\label{eq:rate}
+\lambda_m(i)=\frac{m}{2i(m-i)},\qquad 1\le i\le m-1,
+\end{equation}
+so that it waits an exponential time of rate $h_{m-1}=\sum_{i=1}^{m-1}\lambda_m(i)=\sum_{q=1}^{m-1}1/q$ and then splits into the intervals $\{1,\dots,i\}$ and $\{i+1,\dots,m\}$, which evolve independently and are relabelled $1,\dots,i$ and $1,\dots,m-i$. An interval of one leaf does not split. Starting from the interval $\{1,\dots,n\}$, the height $H_j$ of leaf $j$ is the time at which $j$ becomes a singleton, and $D_n=H_J$ for $J$ uniform on $\{1,\dots,n\}$ and independent of the tree. The height $D_n$ is known in detail: $\E D_n=\zeta(2)^{-1}\log n+O(1)$ and $\Var D_n\sim\sigma^2\log n$ with
+\[
+\sigma^2=\frac{2\zeta(3)}{\zeta(2)^3},
+\]
+see Aldous and Pittel \cite[Theorem~1.1]{AP}; the constant terms are found by Aldous and Janson \cite{AJ4}, and Kolesnik \cite{Kol} proves a central limit theorem.
+
+Aldous and Janson \cite[Section~3.9]{AJ} ask how the heights of two leaves of one tree are related. They close the interval into a cycle and consider two leaves at distance $r_n$ on it. Concretely, let $J$ be uniform on $\{1,\dots,n\}$, let $J'\in\{1,\dots,n\}$ be congruent to $J+r$ modulo $n$, and put $D^{(1)}_n=H_J$, $D^{(2)}_n=H_{J'}$. Each of the two is distributed as $D_n$, and
+\[
+\rho(n,r)=\frac{\E[D^{(1)}_nD^{(2)}_n]-(\E D_n)^2}{\Var D_n}
+\]
+is their correlation coefficient. A Brownian approximation of the two lineages suggests that $\rho(n,r_n)$ should be close to $(\log n-\log r_n)/\log n$, and Aldous and Janson state:
+
+\medskip\noindent\textbf{Open Problem 1} (\cite[Section~3.9]{AJ}). Prove that, for $\log r_n/\log n\to\alpha\in[0,1]$, we have $\rho(n,r_n)\to1-\alpha$.
+\medskip
+
+They add that the case $\alpha=1$ is essentially the result of Aldous and Pittel on two uniformly random leaves, cited in \cite{AJ} as Theorem~2.6 of the published version of \cite{AP}. The distance between two leaves of a cycle of length $n$ is at most $n/2$, and we take $1\le r_n\le n/2$ throughout; Remark~\ref{rem:oriented} treats an arbitrary offset.
+
+\begin{theorem}\label{thm:main}
+There is an absolute constant $C$ such that for all $n\ge2$ and all integers $1\le r\le n/2$,
+\begin{align}
+\Bigl|\Cov\bigl(D^{(1)}_n,D^{(2)}_n\bigr)-\sigma^2\log\frac nr\Bigr|&\le C\sqrt{\log n},\label{eq:cov}\\
+\bigl|\Var D_n-\sigma^2\log n\bigr|&\le C\sqrt{\log n}.\label{eq:var}
+\end{align}
+\end{theorem}
+
+\begin{corollary}\label{cor:rho}
+Uniformly in $1\le r\le n/2$, $\rho(n,r)=1-\log r/\log n+O((\log n)^{-1/2})$. In particular $\rho(n,r_n)\to1-\alpha$ whenever $\log r_n/\log n\to\alpha\in[0,1]$.
+\end{corollary}
+
+\begin{proof}
+Since $|\rho|\le1$, it suffices to take $n$ large. By \eqref{eq:var}, $\Var D_n\ge\sigma^2\log n/2$ for $n\ge n_0$. Dividing \eqref{eq:cov} by \eqref{eq:var} gives $\rho(n,r)=(\log(n/r)+O(\sqrt{\log n}))/(\log n+O(\sqrt{\log n}))=1-\log r/\log n+O((\log n)^{-1/2})$, since $0\le\log(n/r)\le\log n$.
+\end{proof}
+
+\begin{remark}\label{rem:oriented}
+The proof gives, for every $1\le r\le n-1$, the estimate \eqref{eq:cov} with $\log(n/r)$ replaced by $\log(n/\min(r,n-r))$; see the end of Section~\ref{sec:proof}. The leaf at offset $n-1$ is the left neighbour of $J$, so for an offset measured in one direction only the statement of Open Problem~1 needs $r_n\le n/2$, or $\min(r_n,n-r_n)$ in place of $r_n$.
+\end{remark}
+
+\begin{remark}
+Theorem~\ref{thm:main} also identifies the covariance with the mean time the two leaves spend in a common clade: if $S$ is the time of the cut that separates $J$ from $J'$, then $\E S=\zeta(2)^{-1}\log(n/r)+O(1)$ (Proposition~\ref{prop:sep} and \eqref{eq:ES}), and $\Cov(D^{(1)}_n,D^{(2)}_n)=2\zeta(3)\zeta(2)^{-2}\,\E S+O(\sqrt{\log n})$ by \eqref{eq:covS}. The error $O(\sqrt{\log n})$ comes from the Cauchy--Schwarz inequality in Section~\ref{sec:proof}; the simulations of Section~\ref{sec:numerics} suggest that the true error in \eqref{eq:cov} and \eqref{eq:var} is $O(1)$, and hence that $\rho(n,r)-(1-\log r/\log n)$ is of order $1/\log n$.
+\end{remark}
+
+\subsection*{Idea of the proof}
+For a leaf at position $j$ in a clade of $m$ leaves, the quantity $F(m,j)=\log(j(m+1-j)/m)$ lies between $0$ and $\log m$ and vanishes at a singleton. Under the dynamics it decreases with drift $\zeta(2)$ and with bracket rate $2\zeta(3)$, up to errors that are small unless the leaf is close to an end of its clade (Lemma~\ref{lem:drift}), and the time the leaf spends close to an end is controlled in $L^2$ (Lemma~\ref{lem:errors}). Thus $\zeta(2)D=F(n,J)+M+O_{L^2}(1)$ for a martingale $M$ (Lemma~\ref{lem:mart}). The heights of the two leaves are then compared through their martingales $M^{(1)},M^{(2)}$: before the two leaves separate their potentials move together, and the difference $M^{(1)}-M^{(2)}$ at the separating cut is bounded in $L^2$ (Lemma~\ref{lem:rect}). Polarization of the brackets shows that the cross bracket accumulated before separation is $2\zeta(3)\E S+O(1)$, and after separation the two martingales have no common jumps. The mean separation time $\E S$ is computed from an exact description of the common clade of the two leaves (Lemma~\ref{lem:pair}, Proposition~\ref{prop:sep}).
+
+\subsection*{Notation}
+All logarithms are natural, $h_q=\sum_{t=1}^q1/t$ with $h_0=0$, and $c_1=\zeta(2)$, $c_2=2\zeta(3)$, so that $\sigma^2=c_2/c_1^3$. The letter $C$ denotes an absolute constant whose value may change from line to line. For a random variable $X$, $\|X\|_2=(\E X^2)^{1/2}$.
+
+\section{The positional potential of one leaf}\label{sec:potential}
+
+Consider a tagged leaf at position $j$ in a clade of $m$ leaves, and put
+\[
+a=j,\qquad b=m+1-j,\qquad k=\min(a,b),\qquad F(m,j)=\log\frac{ab}{m}.
+\]
+Since $a+b=m+1$ we have $ab-m=(a-1)(b-1)\ge0$, so $0\le F(m,j)\le\log m$, and $F(m,j)=0$ exactly when $k=1$. A cut at $i<a$ removes $l=i$ leaves on the left of the tag and moves it to position $j-l$ in a clade of $m-l$ leaves; a cut at $i\ge a$ removes $l=m-i$ leaves on the right, $1\le l\le b-1$. In both cases the rate of the cut is $\lambda_m(l)=m/(2l(m-l))$, the two families together are all $m-1$ cuts, and the loss $F(\text{before})-F(\text{after})$ is
+\begin{equation}\label{eq:loss}
+\Delta_{m,a}(l)=\log\frac{a(m-l)}{m(a-l)}\quad(1\le l<a),\qquad \Delta_{m,b}(l)=\log\frac{b(m-l)}{m(b-l)}\quad(1\le l<b),
+\end{equation}
+which is nonnegative. For $p=1,2$ put
+\[
+d_p(m,j)=\sum_{l=1}^{a-1}\lambda_m(l)\Delta_{m,a}(l)^p+\sum_{l=1}^{b-1}\lambda_m(l)\Delta_{m,b}(l)^p .
+\]
+
+\begin{lemma}\label{lem:drift}
+For all $m\ge1$ and $1\le j\le m$, $d_p(m,j)=c_p-e_p(m,j)$ with
+\[
+0\le e_p(m,j)\le C\,\frac{1+\log^p(k+1)}{k},\qquad p=1,2.
+\]
+If $k=1$, then $d_1=d_2=0$.
+\end{lemma}
+
+\begin{proof}
+If $k=1$, say $a=1$, then $b=m$ and every loss $\Delta_{m,m}(l)=\log\frac{m(m-l)}{m(m-l)}$ vanishes; so $d_p=0$ and $e_p=c_p$, which is within the bound. Let $k\ge2$, so $2\le a\le m-1$. For $0<x<a$ put
+\[
+f_p(x)=\frac{m}{2x(m-x)}\Bigl(\log\frac{a(m-x)}{m(a-x)}\Bigr)^p .
+\]
+The substitution $t=x(m-a)/(a(m-x))$ maps $(0,a)$ onto $(0,1)$, with $1-t=m(a-x)/(a(m-x))$ and $\dd t/t=m\dd x/(x(m-x))$. Hence
+\begin{equation}\label{eq:int}
+\int_0^af_p(x)\dd x=\frac12\int_0^1\bigl(-\log(1-t)\bigr)^p\frac{\dd t}{t}=\frac{c_p}2 ,
+\end{equation}
+because $\int_0^1(-\log(1-t))t^{-1}\dd t=\sum_{q\ge1}q^{-2}=\zeta(2)$ and $\int_0^1\log^2(1-t)\,t^{-1}\dd t=\int_0^1\log^2u\,(1-u)^{-1}\dd u=\sum_{q\ge0}2/(q+1)^3=2\zeta(3)$, the series having nonnegative terms.
+
+The function $f_p$ is increasing on $(0,a)$. Indeed $\log\frac{a(m-x)}{m(a-x)}=\log(1-x/m)-\log(1-x/a)=\sum_{q\ge1}(a^{-q}-m^{-q})x^q/q$ has nonnegative coefficients and no constant term, so its $p$-th power is $x^p$ times a power series with nonnegative coefficients, and $m/(2x(m-x))=(2x)^{-1}\sum_{q\ge0}(x/m)^q$. Comparing $f_p(l)$ with the integral of $f_p$ over $[l-1,l]$ and over $[l,l+1]$ gives
+\[
+0\le\int_0^af_p-\sum_{l=1}^{a-1}f_p(l)\le\int_{a-1}^af_p .
+\]
+Write $d'=m-a\ge1$ and $q=\min(a,d')$. For $x=a-u$ with $0<u<1$ we have $\frac{m}{2x(m-x)}=\frac12(\frac1x+\frac1{m-x})\le\frac1a+\frac1{d'}\le\frac2q$ (using $x>a-1\ge a/2$), and $\frac{a(m-x)}{m}\le\min(a,m-x)\le\min(a,d'+1)\le q+1$, so the logarithm in $f_p$ is at most $\log((q+1)/u)$. Therefore
+\[
+\int_{a-1}^af_p\le\frac2q\int_0^1\log^p\frac{q+1}u\dd u\le C\,\frac{1+\log^p(q+1)}{q}.
+\]
+The sum over left cuts in $d_p$ is $\sum_{l=1}^{a-1}f_p(l)$, and the same argument with $a$ replaced by $b$ applies to the right cuts. Adding, $e_p=c_p-d_p$ is nonnegative and at most the sum of the two bounds, where $q=\min(a,b-1)$ on the left and $q=\min(b,a-1)$ on the right. Both are at least $k-1\ge k/2$. The function $x\mapsto(1+\log^p(x+1))/x$ is decreasing on $(0,\infty)$ (for $p=2$ the numerator of its derivative is at most $2\ell-1-\ell^2\le0$ with $\ell=\log(x+1)$), so each bound is at most its value at $k/2$, which is at most $2(1+\log^p(k+1))/k$ times the constant.
+\end{proof}
+
+Let $(m_t,j_t)$ be the clade size and the position of the tagged leaf at time $t$, started from $(m,j)$, and let $D$ be the time at which $m_t=1$. Write $F_t=F(m_t,j_t)$, $k_t=\min(j_t,m_t+1-j_t)$ and $e_p(t)=e_p(m_t,j_t)$.
+
+\begin{lemma}\label{lem:errors}
+For $p=1,2$ and every stopping time $\tau\le D$, $\bigl\|\int_0^\tau e_p(t)\dd t\bigr\|_2\le C$, uniformly in $m$ and $j$.
+\end{lemma}
+
+\begin{proof}
+Since $e_p\ge0$ it suffices to take $\tau=D$. A cut never increases $k_t$: a left cut replaces $a$ by $a-l$ and keeps $b$, and a right cut does the opposite. For $q\ge1$ let $T_q$ be the time spent with $k_t\in[2^q,2^{q+1})$ and let $T_0$ be the time spent with $k_t=1$ before $D$. While $k_t=k\in[L,2L)$, $L=2^q$, say with $k=a\le b$, each of the $\lfloor k/2\rfloor$ cuts removing $l\in[\lceil k/2\rceil,k-1]$ leaves on the near side has rate $\lambda_m(l)\ge1/(2l)\ge1/(2(k-1))$ and brings $k_t$ to at most $\lfloor k/2\rfloor<L$, after which $k_t$ never returns to $[L,2L)$. Their total rate is at least $\lfloor k/2\rfloor/(2(k-1))\ge1/4$. Hence, whatever happens inside the range, $\Pp(T_q>s)\le e^{-s/4}$, and $\|T_q\|_2\le\sqrt{32}$. While $k_t=1$ and $m_t\ge2$, the cut that isolates the tag has rate $\lambda_m(1)\ge1/2$, so $\|T_0\|_2\le\sqrt8$. On $[2^q,2^{q+1})$, Lemma~\ref{lem:drift} bounds $e_p$ by $C(1+(q+2)^p)2^{-q}$, and $e_p\le c_p$ when $k_t=1$. By Minkowski's inequality,
+\[
+\Bigl\|\int_0^De_p(t)\dd t\Bigr\|_2\le c_p\|T_0\|_2+\sum_{q\ge1}C(1+(q+2)^p)2^{-q}\|T_q\|_2\le C .\qedhere
+\]
+\end{proof}
+
+\begin{lemma}\label{lem:mart}
+The process $M_t=F_t-F_0+\int_0^{t\wedge D}d_1(m_u,j_u)\dd u$ is a square-integrable martingale with predictable quadratic variation $\int_0^{t\wedge D}d_2(m_u,j_u)\dd u$, and
+\begin{equation}\label{eq:mart}
+c_1D=F(m,j)+M_D+\int_0^De_1(t)\dd t,\qquad \E M_D^2=c_2\E D-\E\int_0^De_2(t)\dd t .
+\end{equation}
+In particular $\E D=F(m,j)/c_1+O(1)$ and $\E M_D^2\le C(1+\log m)$.
+\end{lemma}
+
+\begin{proof}
+The pair $(m_t,j_t)$ is a Markov chain on a finite set, and by \eqref{eq:loss} its generator applied to $(m',j')\mapsto F(m',j')$ equals $-d_1(m',j')$, while the jump rates weighted by the squared jumps of $F$ give $d_2(m',j')$. Hence $M$ is a martingale with the stated predictable quadratic variation. The chain makes at most $m-1$ jumps and every holding rate is $h_{m'-1}\ge1$, so $D$ is dominated by a sum of $m-1$ independent standard exponential variables and has moments of all orders; together with $|F|\le\log m$ this justifies optional stopping at $D$ and the isometry $\E M_D^2=\E\int_0^Dd_2$. Since $F_D=0$ and $d_p=c_p-e_p$, this is \eqref{eq:mart}. Taking expectations and using Lemma~\ref{lem:errors} gives $\E D=F(m,j)/c_1+O(1)$, and then $\E M_D^2\le c_2\E D\le C(1+\log m)$.
+\end{proof}
+
+\section{The common clade of two leaves}\label{sec:pair}
+
+Fix $1\le r<n$ and consider two tagged leaves at positions $j$ and $j+r$ of $\{1,\dots,n\}$, where $j$ is uniform on $\{1,\dots,n-r\}$. Let $S$ be the time of the cut that separates them, and for $t<S$ let $Q_t>r$ be the size of the clade containing both, and $j_t$ the position of the left one in it.
+
+\begin{lemma}\label{lem:pair}
+Up to time $S$, $(Q_t)$ is a Markov chain that jumps from $m$ to $k$, $r<k<m$, at rate
+\begin{equation}\label{eq:arate}
+a_r(m,k)=\frac{m(k-r)}{(m-r)k(m-k)},\qquad\text{and}\qquad \frac1{m-k}-a_r(m,k)=\frac{r}{(m-r)k},
+\end{equation}
+and is killed (the leaves separate) at rate
+\begin{equation}\label{eq:kill}
+\kappa_r(m)=h_{m-1}-h_{m-r-1}+\frac r{m-r}\,(h_{m-1}-h_r).
+\end{equation}
+Given $(Q_u)_{u\le t}$ and $t<S$, $j_t$ is uniform on $\{1,\dots,Q_t-r\}$. Given $Q_{S-}=m$ and the past of $Q$, the separating cut is $i=j_{S-}+\theta-1$, and the pair $(j_{S-},\theta)$ has law proportional to $1/(i(m-i))$ on $\{1,\dots,m-r\}\times\{1,\dots,r\}$.
+\end{lemma}
+
+\begin{proof}
+Suppose $Q_t=m$ and $j_t$ is uniform on $\{1,\dots,m-r\}$. The cut at $i$ keeps both leaves in the left child $\{1,\dots,i\}$ when $j_t\le i-r$, which happens for $(i-r)_+$ values of $j_t$, and keeps both in the right child when $j_t\ge i+1$, for $(m-r-i)_+$ values; in the right child the position becomes $j_t-i$. In either case the retained values of $j_t$ are in bijection with the positions $1,\dots,k-r$ of the new clade of size $k$, so the new position is again uniform. A clade of size $k$ arises from the cut $i=k$ (left child) and from the cut $i=m-k$ (right child), each of rate $m/(2k(m-k))$ and each retaining $k-r$ of the $m-r$ positions; this gives $a_r(m,k)$ (when $k=m-k$ the single cut $i=k$ retains $k-r$ positions on each side, with the same total). The identity in \eqref{eq:arate} is algebra. The holding rate $h_{m-1}$ and the cut rates do not depend on $j_t$, so conditioning on the holding times and on the new size keeps the position uniform, and induction over the jumps gives the uniformity. The killing rate is $h_{m-1}-\sum_{k=r+1}^{m-1}a_r(m,k)$; by \eqref{eq:arate}, $\sum_{k=r+1}^{m-1}a_r(m,k)=h_{m-r-1}-\frac r{m-r}(h_{m-1}-h_r)$, which is \eqref{eq:kill}. Finally the separating cuts are $i=j_t+\theta-1$ with $1\le\theta\le r$; each value of $j_t$ has probability $1/(m-r)$ and each cut has rate $\lambda_m(i)=m/(2i(m-i))$, which gives the last statement.
+\end{proof}
+
+\begin{proposition}\label{prop:sep}
+Uniformly in $1\le r<n$, $\E S=\zeta(2)^{-1}\log(n/r)+O(1)$.
+\end{proposition}
+
+\begin{proof}
+Let $g(m)=\log(m/r)$ for $m>r$ and $g=0$ after killing. Its expected rate of decrease at $Q_t=m$ is
+\[
+\delta_r(m)=\sum_{k=r+1}^{m-1}a_r(m,k)\log\frac mk+\kappa_r(m)\log\frac mr .
+\]
+Write $a_r(m,k)=\frac1{m-k}-\frac r{(m-r)k}$ and $\kappa_r(m)=\sum_{k=1}^r\frac1{m-k}+\frac r{m-r}\sum_{k=r+1}^{m-1}\frac1k$. Collecting terms,
+\begin{equation}\label{eq:drift2}
+\delta_r(m)=\delta_0(m)-\sum_{k=1}^r\frac{\log(r/k)}{m-k}+\frac r{m-r}\sum_{k=r+1}^{m-1}\frac{\log(k/r)}k,\qquad \delta_0(m)=\sum_{k=1}^{m-1}\frac{\log(m/k)}{m-k}.
+\end{equation}
+The function $\phi(x)=-\log x/(1-x)$ is decreasing on $(0,1)$, since $\phi'(x)$ has the sign of $1-1/x-\log x\le0$; it has $\phi(1-)=1$ and $\int_0^1\phi=\sum_{q\ge1}q^{-2}=\zeta(2)$. As $\delta_0(m)=\frac1m\sum_{k=1}^{m-1}\phi(k/m)$, comparing with the integral over the intervals to the left and to the right of each grid point gives
+\begin{equation}\label{eq:d0}
+0\le\zeta(2)-\delta_0(m)\le\int_0^{1/m}\phi\le\frac{2(1+\log m)}m .
+\end{equation}
+For $m\ge2r$, $\sum_{k\le r}\log(r/k)=r\log r-\log r!\le r$ and $m-k\ge m/2$ bound the first correction by $2r/m$, and $\log(k/r)\le\log(m/r)$, $\sum_{k=r+1}^{m-1}1/k\le\log(m/r)$ bound the second by $(2r/m)\log^2(m/r)$. Hence
+\begin{equation}\label{eq:drift-bound}
+|\delta_r(m)-\zeta(2)|\le C\Bigl[\frac{1+\log m}m+\frac rm\Bigl(1+\log^2\frac mr\Bigr)\Bigr],\qquad m\ge2r.
+\end{equation}
+For $r<m<2r$, $\delta_r(m)\ge0$ because every jump decreases $g$, and the second correction is at most $\frac1{m-r}\sum_{k=r+1}^{m-1}\frac{k-r}k<1$, using $\log(k/r)\le(k-r)/r$; so $0\le\delta_r(m)\le\zeta(2)+1$. Together with \eqref{eq:drift-bound}, $|\delta_r-\zeta(2)|\le C$ for $r<m<4r$.
+
+The size $Q_t$ only decreases. While $r<Q_t<4r$ the killing rate is at least $\sum_{k=1}^r1/(m-k)\ge r/(m-1)>1/4$, so the time spent there has mean at most $4$. For $q\ge0$ and $L=4r2^q$, while $Q_t=m\in[L,2L)$ every target $k\in[\lceil L/2\rceil,L-1]$ satisfies $k\ge2r$, so $a_r(m,k)\ge(k-r)/(k(m-k))\ge1/(2(m-k))>1/(4L)$; there are at least $L/2$ such targets, the exit rate from $[L,2L)$ is at least $1/8$, and the mean time spent there is at most $8$. On $[L,2L)$ the right side of \eqref{eq:drift-bound} is at most $C[(1+\log r+q)/(r2^q)+(1+q^2)2^{-q}]$, which is summable in $q$ with a sum bounded uniformly in $r$. Therefore $\E\int_0^S|\delta_r(Q_t)-\zeta(2)|\dd t\le C$. Since $Q$ has finitely many states and $\E S<\infty$, Dynkin's formula gives $\log(n/r)=g(n)=\E\int_0^S\delta_r(Q_t)\dd t=\zeta(2)\E S+O(1)$.
+\end{proof}
+
+\section{The separating cut}\label{sec:cut}
+
+Let $r,s\ge1$, $m=s+r$, and on the rectangle $R=\{1,\dots,s\}\times\{1,\dots,r\}$ consider the probability $w$ proportional to $1/(i(m-i))$, where $i=j+\theta-1$ for $(j,\theta)\in R$. Put $b=r+1-\theta$, $h=s+1-j$ and
+\[
+G(j,\theta)=\log\frac{j\,\theta\,(m-i)}{i\,b\,h}.
+\]
+The left leaf of Section~\ref{sec:pair}, at position $j$ of a clade of $m$ leaves, is sent by the cut $i=j+\theta-1$ to position $j$ of a clade of $i$ leaves, where $j+\theta-1=i$ means that its two ranks are $j$ and $\theta$; the right leaf, at $j+r$, goes to position $j+r-i=b$ of a clade of $m-i$ leaves, where its rank from the right is $m-i+1-b=h$. So $G(j,\theta)$ is the difference of the potentials of the two leaves just after the separating cut.
+
+\begin{lemma}\label{lem:rect}
+$\E_wG^2\le C$, uniformly in $r,s\ge1$.
+\end{lemma}
+
+\begin{proof}
+The weight and $G$ are unchanged when $(j,s)$ and $(\theta,r)$ are exchanged, so we may assume $s\ge r$. The reflection $(j,\theta)\mapsto(h,b)$ maps $R$ onto itself, sends $i$ to $m-i$, preserves $w$ and changes the sign of $G$. Since $1/(i(m-i))=(1/i+1/(m-i))/m$, the total mass is $\frac2m Z$ with $Z=\sum_R1/i$, and for every reflection-invariant $Q$, $\E_wQ=Z^{-1}\sum_RQ/i$.
+
+Let $L=\log(1+s/r)\ge\log2$ and $H(\theta)=\sum_{j=1}^s1/(j+\theta-1)$. Comparing with integrals,
+\[
+L\le\log\frac{s+\theta}\theta\le H(\theta)\le1+\log\frac{s+r}\theta=1+L+\log\frac r\theta,\qquad Z=\sum_{\theta=1}^rH(\theta)\ge rL .
+\]
+Write $G=P-A+B$ with $P=\log(\theta/b)$, $A=\log(i/j)$, $B=\log((m-i)/h)$. The reflection changes the sign of $P$ and exchanges $A$ and $B$, so $\E_wB^2=\E_wA^2$, and $\E_wG^2\le3\E_wP^2+6\E_wA^2$.
+
+For a decreasing $\psi\ge0$ on $(0,1]$, $\frac1r\sum_{\theta=1}^r\psi(\theta/r)\le\int_0^1\psi$; with $\psi=\log^p(1/x)$ this gives $\frac1r\sum_\theta\log^p(r/\theta)\le p!$, and the same for $\log^p(r/b)$, since $b$ also runs over $1,\dots,r$. As $|P|\le\log(r/\theta)+\log(r/b)$ and $xy^2\le(x^3+2y^3)/3$ for $x,y\ge0$,
+\[
+\sum_{\theta=1}^rH(\theta)P^2\le\sum_{\theta=1}^r\Bigl(1+L+\log\frac r\theta\Bigr)\cdot2\Bigl(\log^2\frac r\theta+\log^2\frac rb\Bigr)\le Cr(1+L),
+\]
+so $\E_wP^2=Z^{-1}\sum_\theta H(\theta)P^2\le C(1+L)/L\le C$.
+
+Next, $0\le A=\log(1+(\theta-1)/j)\le\log(1+\theta/j)$ and $\E_wA^2=(2Z)^{-1}\sum_RA^2(1/i+1/(m-i))$. For the first part, $i\ge(j+\theta)/2$, and $x\mapsto\log^2(1+\theta/x)/(x+\theta)$ is decreasing, so
+\[
+\sum_R\frac{A^2}i\le2\sum_{\theta=1}^r\int_0^\infty\frac{\log^2(1+\theta/x)}{x+\theta}\dd x=2r\int_0^\infty\frac{\log^2(1+1/u)}{1+u}\dd u\le Cr ,
+\]
+the last integral being finite (it behaves like $\log^2u$ near $0$ and like $u^{-3}$ at infinity). For the second part, $m-i=s-j+b$. If $j\le s/2$ then $m-i\ge s/2$ and $\sum_{j\ge1}\log^2(1+\theta/j)\le\theta\int_0^\infty\log^2(1+1/u)\dd u\le C\theta$, which contributes at most $C\sum_\theta\theta/s\le Cr^2/s$. If $j>s/2$ then $A\le\theta/j\le2\theta/s$ and $\sum_{j>s/2}1/(s-j+b)\le1+\log(1+s/b)\le1+L+\log(r/b)$, which contributes at most $\sum_\theta\frac{4\theta^2}{s^2}(1+L+\log\frac rb)\le C\frac{r^3}{s^2}(1+L)$. With $r\le s$ both contributions are at most $Cr(1+L)$, and $\E_wA^2\le C(1+L)/L\le C$.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+Run $\mathrm{CTCS}(n)$ with the two leaves $J$ and $J'$ of Section~\ref{sec:intro}, and let $\mathcal F_t$ be generated by $J$, $J'$ and the cuts made up to time $t$. For $\nu=1,2$ let $(m^{(\nu)}_t,j^{(\nu)}_t)$ be the clade size and the position of the $\nu$-th leaf, $D_\nu$ its height, $F^{(\nu)}_t$ its potential, $e^{(\nu)}_p(t)$ its error terms and
+\[
+M^{(\nu)}_t=F^{(\nu)}_t-F^{(\nu)}_0+\int_0^{t\wedge D_\nu}d_1\bigl(m^{(\nu)}_u,j^{(\nu)}_u\bigr)\dd u .
+\]
+The clade containing a given leaf is cut at the rates \eqref{eq:rate} whatever the rest of the tree does, so the proof of Lemma~\ref{lem:mart} applies in the filtration $(\mathcal F_t)$: each $M^{(\nu)}$ is an $(\mathcal F_t)$-martingale with predictable quadratic variation $\int d_2(m^{(\nu)}_u,j^{(\nu)}_u)\dd u$, and \eqref{eq:mart} holds for it. Lemma~\ref{lem:errors} holds for each leaf separately.
+
+\emph{The initial potentials.} With $J$ uniform, $F(n,J)-\log n=\log(J/n)+\log((n+1-J)/n)$, and $\E\log^2(n/J)\le\int_0^1\log^2x\dd x=2$ by the comparison used in Lemma~\ref{lem:rect}; the same holds for $n+1-J$ and for $J'$. Hence $\|F^{(\nu)}_0-\log n\|_2\le C$.
+
+\emph{Reduction to the separation time.} Let $S$ be the time of the cut that separates the two leaves. If $J\le n-r$, an event of probability $(n-r)/n$, the leaves are $J<J'=J+r$ and, given this event, $J$ is uniform on $\{1,\dots,n-r\}$; otherwise they are $J'=J+r-n<J$, at linear distance $n-r$, and $J'$ is uniform on $\{1,\dots,r\}$. In both cases Section~\ref{sec:pair} applies to the ordered pair, so by Proposition~\ref{prop:sep}
+\begin{equation}\label{eq:ES}
+\E S=\frac1{\zeta(2)}\Bigl[\frac{n-r}n\log\frac nr+\frac rn\log\frac n{n-r}\Bigr]+O(1)=\frac{\log(n/r)}{\zeta(2)}+O(1),
+\end{equation}
+using $r\le n/2$, $\frac rn\log\frac nr\le1$ and $\log\frac n{n-r}\le\log2$.
+
+\emph{The difference at separation.} From here on $\nu=1$ is the left leaf of the ordered pair and $\nu=2$ the right one. The bound $\|F^{(\nu)}_0-\log n\|_2\le C$ still holds, since $(F^{(1)}_0-\log n)^2+(F^{(2)}_0-\log n)^2$ is the same sum for the original labels. Let $N_t=M^{(1)}_{t\wedge S}-M^{(2)}_{t\wedge S}$. Before $S$ both leaves have $d_1=c_1-e_1$, so
+\[
+N_S=\bigl(F^{(1)}_S-F^{(2)}_S\bigr)-\bigl(F^{(1)}_0-F^{(2)}_0\bigr)-\int_0^Se^{(1)}_1(t)\dd t+\int_0^Se^{(2)}_1(t)\dd t .
+\]
+By Lemma~\ref{lem:pair}, given the separation from a clade of size $m$, the cut and the position of the left leaf have the law $w$ of Section~\ref{sec:cut} with $s=m-r$ (or $m-(n-r)$), and $F^{(1)}_S-F^{(2)}_S=G$; hence $\E(F^{(1)}_S-F^{(2)}_S)^2\le C$ by Lemma~\ref{lem:rect}, after averaging over $m$. With the initial bound and Lemma~\ref{lem:errors},
+\begin{equation}\label{eq:NS}
+\E N_S^2\le C .
+\end{equation}
+
+\emph{Polarization.} While the two leaves share a clade, every cut of that clade moves both potentials; let $\beta_t$ be the sum over these cuts of the rate times the product of the two losses, so that the predictable covariation of $M^{(1)}$ and $M^{(2)}$ is $\int_0^{t\wedge S}\beta_u\dd u$. After $S$ the two leaves lie in disjoint clades, which are cut by independent exponential clocks, so $M^{(1)}$ and $M^{(2)}$ have no common jumps and their covariation does not grow. The martingale $N$ is square integrable, and $\E N_S^2$ equals the expected predictable quadratic variation of $N$ up to $S$:
+\[
+\E N_S^2=\E\int_0^S\Bigl(d_2\bigl(m^{(1)}_t,j^{(1)}_t\bigr)+d_2\bigl(m^{(2)}_t,j^{(2)}_t\bigr)-2\beta_t\Bigr)\dd t .
+\]
+Since $d_2=c_2-e_2$, Lemma~\ref{lem:errors} and \eqref{eq:NS} give $\E\int_0^S\beta_t\dd t=c_2\E S+O(1)$. The product $M^{(1)}M^{(2)}$ minus their predictable covariation is a martingale, uniformly integrable because the chain is finite and both heights have all moments, so
+\begin{equation}\label{eq:EMM}
+\E\bigl[M^{(1)}_{D_1}M^{(2)}_{D_2}\bigr]=\E\int_0^S\beta_t\dd t=c_2\E S+O(1).
+\end{equation}
+
+\emph{The covariance.} By \eqref{eq:mart}, $D_\nu=c_1^{-1}\log n+c_1^{-1}M^{(\nu)}_{D_\nu}+R_\nu$ with $R_\nu=c_1^{-1}\bigl(F^{(\nu)}_0-\log n+\int_0^{D_\nu}e^{(\nu)}_1\bigr)$, so $\|R_\nu\|_2\le C$, and $\|M^{(\nu)}_{D_\nu}\|_2\le C\sqrt{\log n}$ by Lemma~\ref{lem:mart}. As $\E M^{(\nu)}_{D_\nu}=0$, the Cauchy--Schwarz inequality and \eqref{eq:EMM} give
+\begin{equation}\label{eq:covS}
+\Cov(D_1,D_2)=c_1^{-2}\E\bigl[M^{(1)}_{D_1}M^{(2)}_{D_2}\bigr]+O\bigl(\sqrt{\log n}\bigr)=\frac{c_2}{c_1^2}\,\E S+O\bigl(\sqrt{\log n}\bigr),
+\end{equation}
+and \eqref{eq:ES} turns this into \eqref{eq:cov}, as $c_2/c_1^3=\sigma^2$. This is the covariance of the ordered pair, and it equals that of $D^{(1)}_n$ and $D^{(2)}_n$. Indeed $D_1D_2$ is the product of the two original heights, so it remains to see that $\E D_1=\E D_2$, both then being $\E D_n$. Since $\lambda_m(i)=\lambda_m(m-i)$, the reflection $i\mapsto n+1-i$ of the leaf labels preserves the law of the tree; it maps a pair at linear distance $g$ with left leaf $a$ to the pair at linear distance $g$ with left leaf $n+1-a-g$, which is again uniform on $\{1,\dots,n-g\}$, and it exchanges the roles of the left and the right leaf. Hence, given either of the two events above, $(D_1,D_2)$ and $(D_2,D_1)$ have the same law. In the same way, for one leaf, $\Var D_n=c_1^{-2}\E M_D^2+O(\sqrt{\log n})$, and $\E M_D^2=c_2\E D_n+O(1)=c_2c_1^{-1}\log n+O(1)$ by \eqref{eq:mart} and Lemmas~\ref{lem:errors} and~\ref{lem:mart}. This is \eqref{eq:var}.
+
+For an offset $n/2<r\le n-1$ the argument is unchanged up to \eqref{eq:ES}, whose bracket now differs from $\log(n/(n-r))$ by $O(1)$; this gives Remark~\ref{rem:oriented}. \qed
+
+\section{Numerical checks}\label{sec:numerics}
+
+The script \texttt{code/checks.py} in the repository below checks the finite statements of the paper and reports 22 passed checks; its output is \texttt{code/checks\_output.txt}. Exact rational arithmetic, by enumeration of all starting positions and cuts for $1\le r<m\le26$, confirms the rates \eqref{eq:arate} and \eqref{eq:kill}, the uniformity of the position in Lemma~\ref{lem:pair}, and the law of the separating cut. In double precision it confirms Lemma~\ref{lem:drift} for all $1\le j\le m\le400$ (the largest values of $e_pk/(1+\log^p(k+1))$ are $1.166$ for $p=1$ and $2.130$ for $p=2$), the identity \eqref{eq:drift2} for $r<m\le600$, the bounds \eqref{eq:d0} and \eqref{eq:drift-bound}, and the rates used in the proofs of Lemma~\ref{lem:errors} and Proposition~\ref{prop:sep}. The exact recursion for the killed chain gives $\E S-\zeta(2)^{-1}\log(n/r)\in[-0.1374,0.1945]$ for $n\in\{2^9,2^{11},2^{13}\}$ and $r\in\{1,4,\dots,4^6\}$ with $r<n$, and $\E D_n-\zeta(2)^{-1}\log n=0.79512$ at $n=2^{13}$, close to the constant $\zeta(3)/\zeta(2)^2+\gamma/\zeta(2)=0.79516$ of \cite{AJ4}. On a grid of $r,s\le3000$ the moment $\E_wG^2$ of Lemma~\ref{lem:rect} is at most $4.64$, while $\E_w\log^2\theta$ grows with $r$.
+
+A direct simulation of the two lineages, which uses none of the potentials, with $40\,000$ trees per row, gives:
+\begin{center}
+\begin{tabular}{rrcccc}
+\toprule
+$n$ & $r$ & $\Cov-\sigma^2\log(n/r)$ & $\Var-\sigma^2\log n$ & $\rho(n,r)$ & $1-\alpha$\\
+\midrule
+$2^{20}$ & $2^{5}$ & $-0.78$ & $0.92$ & $0.575$ & $0.75$\\
+$2^{20}$ & $2^{10}$ & $-0.67$ & $0.97$ & $0.364$ & $0.50$\\
+$2^{20}$ & $2^{15}$ & $-0.73$ & $0.97$ & $0.135$ & $0.25$\\
+$2^{40}$ & $2^{10}$ & $-0.74$ & $0.90$ & $0.661$ & $0.75$\\
+$2^{40}$ & $2^{20}$ & $-0.68$ & $1.00$ & $0.426$ & $0.50$\\
+$2^{40}$ & $2^{30}$ & $-0.85$ & $0.97$ & $0.181$ & $0.25$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The offsets in the third and fourth columns show no growth between $n=2^{20}$ and $n=2^{40}$. This is consistent with an $O(1)$ error, which would make $\rho(n,r)$ approach $1-\alpha$ at rate $1/\log n$; Theorem~\ref{thm:main} proves the rate $(\log n)^{-1/2}$. At $n=2^{20}$ the offsets $1$ and $n-1$ give $\rho=0.890$ and $0.893$.
+
+The Lean~4 file \texttt{lean/PairIdentities.lean} (with Mathlib) checks the algebraic identities behind \eqref{eq:loss}, \eqref{eq:int} and \eqref{eq:arate}, the decomposition of the weight in Lemma~\ref{lem:rect}, the ranks after the separating cut, the counting inequalities used for the exit rates, the inequality $xy^2\le(x^3+2y^3)/3$ and the polarization identity.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. On 11 October 2026 an agent running in OpenAI's Codex (GPT-6.1 Sol) obtained Theorem~\ref{thm:main} and its proof; another Codex agent and a Claude agent (Anthropic) checked the proof, the latter with an independent simulation. On 14 and 15 October 2026 Claude Opus~5.5, working in Claude Code, checked the proof line by line, wrote the computer checks, the Lean file and the paper in its present form. Two further Codex agents (GPT-6.1 Sol) read the proofs and repeated the computations independently. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code and the Lean file are available at\\ \url{https://github.com/yspennstate/beta-splitting-leaf-correlation}.
+
+\begin{thebibliography}{9}
+
+\bibitem{AJ}
+D.~J. Aldous and S.~Janson, The critical beta-splitting random tree II: overview and open problems, arXiv:2303.02529v3 (2025).
+
+\bibitem{AJ4}
+D.~J. Aldous and S.~Janson, The critical beta-splitting random tree IV: Mellin analysis of leaf height, \emph{Electron. J. Probab.} \textbf{30} (2025), Paper No.~69, 39~pp.
+
+\bibitem{AP}
+D.~J. Aldous and B.~Pittel, The critical beta-splitting random tree I: heights and related results, \emph{Ann. Appl. Probab.} \textbf{35} (2025), 158--195. Theorem~1.1 is cited in the numbering of arXiv:2302.05066v4.
+
+\bibitem{Kol}
+B.~Kolesnik, Critical beta-splitting, via contraction, \emph{Electron. Commun. Probab.} \textbf{30} (2025), Paper No.~10, 14~pp.
+
+\end{thebibliography}
+\end{document}

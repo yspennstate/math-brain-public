@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260923T032147Z-account01-B02-qform-auto11-r21",
+  "owner_control_revision": "2026-09-22.15",
+  "publication_control_commit": "596342d30ed63884beae0b03ec3031d1b55f6e9a",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "continuous_density_full_target": "OPEN",
+  "global_L1_fourier_status": "OPEN_NOT_REFUTED",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "941c738e26b7d39898595b407790da3e8ae51945",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T032147Z-account01-B02-qform-auto11-r21/REPORT.md"
+  },
+  "partner_applied": {
+    "worker": "account02/B02",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f7a221e0f40362a1ccad48cf81812f2143f3cc92",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T020523Z-account02-B02-QFORM-auto11-c1a7e2f4/REPORT.md",
+    "application": "Use J3>=Z3/2 in the double-heavy third-volume collar, then apply QFORM-VOLUME-STABILITY-OPTIMAL-Q-v1 to the new low-rank physical decomposition M=M0+E."
+  },
+  "new_results": [
+    "QFORM-ANCHORED-COMPOUND-NORMAL-FORM-v1: for M=[[a,r^T],[c,N]], anchored compounds satisfy J_{k+1}=a^2 e_k((N-cr^T/a)^T(N-cr^T/a)) when a!=0; when a=0, J_{k+1}=||c||^2||r||^2 e_{k-1}(K^T K), K=P_{c^perp}NP_{r^perp}.",
+    "QFORM-COMPOUND-GAP-RANK-COLLAPSE-v1: e_{m+2}/e_m >= x_{m+1}x_{m+2}/binom(m+2,2) for decreasing nonnegative x with e_m>0.",
+    "QFORM-JOINT-STAR-D5-LOWRANK-v1: double-heavy third-volume plus weak fifth volume gives s4(S)<=(12Z5/Z3)^(1/4) for a!=0, or s3(K)<=(6Z5/Z3)^(1/4) for a=0.",
+    "If the resulting physical low-rank core M0 has leverage<=1/2 and s3(M0)>=16||M-M0||op, account02/B02 stability yields integral|phi_Q|<95.799/s3(M0) and ||p_Q||inf<15.247/s3(M0), with continuous density."
+  ],
+  "corrections_respected": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE"
+  ],
+  "unresolved_implication": "QFORM-JOINT-STAR-HIGH-LEVERAGE-OR-THIRD-SINGULAR-CLOSURE-v1: route the high-leverage core or core with s3 at the tail scale into existing original-coordinate pair/triple, hub, ridge, grouped-bank, mixed-bilinear, or scalar-Schur mechanisms.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {"reasoning_tokens": null, "provider_thinking_seconds": null, "source": "not_exposed", "coverage": "unavailable"}
+}

@@ -1,0 +1,369 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem,booktabs}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\N}{\mathbb N}
+
+\hypersetup{pdftitle={The stationary law of the leftmost particles in Aldous's drift-jump process},pdfauthor={Yitzchak Shmalo}}
+
+\title[The leftmost particles of a drift-jump process]{The stationary law of the leftmost particles\\ in Aldous's drift-jump process}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{16 October 2026}
+\subjclass[2020]{60K35, 60C05, 05E10, 05A05}
+\keywords{Hammersley process, patience sorting, longest increasing subsequence, Robinson--Schensted correspondence, Plancherel growth, stationary distribution, Bessel determinant}
+
+\begin{document}
+\begin{abstract}
+In Aldous's drift-jump process, $k$ particles $0<X_1<\dots<X_k$ move to the right with velocity equal to their position, and at the events of a rate-one space-time Poisson process the nearest particle to the right of the event jumps to it. Aldous asked for a fairly explicit description of the stationary distribution. We give a self-contained proof that the stationary distribution is unique and that in stationarity $X_i=\Gamma_{\tau_i}$, where $\Gamma_1<\Gamma_2<\dots$ are the points of a rate-one Poisson process and, independently, $\tau_i$ is the first $n$ for which the longest increasing subsequence of $n$ independent uniform variables has length $i$; this is a form of a representation of Aldous and Diaconis. Equivalently, $\Pp(X_{k_1}>s_1,\dots,X_{k_r}>s_r)$ is the probability that the Poissonized longest increasing subsequence stays below $k_a$ at the times $s_a$. We evaluate every such probability as $e^{-s_r}$ times a finite determinant with Bessel-function entries, of size at most $k(k-1)$ for the first $k$ particles. For a single particle this is Gessel's Toeplitz determinant. As a consequence $\E(X_i-X_{i-1})$ is the constant $c(i)$ of Aldous and Diaconis in the logarithmic growth of the $i$-th pile in patience sorting.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Hammersley's process \cite{Ham72,AD95} has particles on $(0,\infty)$ which are moved by the events of a rate-one space-time Poisson process on $(0,\infty)\times(0,\infty)$: when an event occurs at $(x_0,t_0)$, the closest particle to the right of $x_0$ is moved to $x_0$. Aldous \cite{Ald18} poses the following problem about a variant that keeps track of the leftmost particles. There are $k$ particles at positions $0<X_1(t)<\dots<X_k(t)$. Events occur as a rate-one space-time Poisson process on $(0,\infty)\times(0,\infty)$; when an event occurs at $(x_0,t_0)$, the closest particle (if any) to the right of $x_0$ is moved to $x_0$. Between events the particles move to the right according to
+\[
+\frac{\mathrm dX_i(t)}{\mathrm dt}=X_i(t).
+\]
+The process arises from patience sorting by looking at the first $k$ piles \cite[Section~5.2]{AD99}, and it has a unique stationary distribution. The problem \cite{Ald18} reads: \emph{Give some (fairly explicit) description of the stationary distribution.} In their 1993 notes \cite[Section~4.1]{AD93}, Aldous and Diaconis show that the stationary law is that of $(\Gamma(B(1)),\dots,\Gamma(B(k)))$, where $\Gamma$ is an independent Poisson process and $B(i)$ is the limiting label of the top card of the $i$-th pile in patience sorting, and they remark that they cannot write down a characterization of the law of $(B(i))$.
+
+Throughout, $\Gamma_1<\Gamma_2<\cdots$ are the points of a rate-one Poisson process on $(0,\infty)$, $N(s)=\#\{n:\Gamma_n\le s\}$, and $U_1,U_2,\dots$ are independent uniform variables on $(0,1)$, independent of $\Gamma$. Let $\ell_n$ be the length of the longest increasing subsequence of $(U_1,\dots,U_n)$, with $\ell_0=0$, and
+\[
+\tau_i=\min\{n\ge0:\ell_n\ge i\},\qquad i\ge1 .
+\]
+By the Robinson--Schensted correspondence, $\ell_n$ is the length of the first row of the shape $\lambda(n)$ of the tableaux of $(U_1,\dots,U_n)$, and $(\lambda(n))_{n\ge0}$ is the Plancherel growth process; so $\tau_i$ is the step at which the first row of the Plancherel growth process reaches length $i$.
+
+\begin{theorem}\label{thm:rep}
+The drift-jump process with $k$ particles has a unique stationary distribution, and the law of the process at time $t$ converges to it in total variation from every initial configuration. Under it,
+\begin{equation}\label{eq:rep}
+(X_1,\dots,X_k)\overset{d}{=}(\Gamma_{\tau_1},\dots,\Gamma_{\tau_k}).
+\end{equation}
+Equivalently, with $L(s)=\ell_{N(s)}$ the Poissonized longest increasing subsequence, for $s_1,\dots,s_r\ge0$ and $k_1,\dots,k_r\in\{1,\dots,k\}$,
+\begin{equation}\label{eq:surv}
+\Pp\bigl(X_{k_a}>s_a,\ a=1,\dots,r\bigr)=\Pp\bigl(L(s_a)\le k_a-1,\ a=1,\dots,r\bigr).
+\end{equation}
+The stationary laws for different $k$ are consistent, and \eqref{eq:rep} with $k=\infty$ describes the infinite particle process.
+\end{theorem}
+
+The representation \eqref{eq:rep} is equivalent to \cite[(42)]{AD93}: the two descriptions agree because exchanging the two coordinates of the Poisson process in the plane exchanges the insertion and the recording tableau (Remark~\ref{rem:AD93}). The form \eqref{eq:surv} reduces every joint survival probability to the joint law of the first row of the Poissonized Plancherel growth process at finitely many times. The second result evaluates these probabilities in finite terms. For integers $a,b\ge0$ and $u\ge0$ put
+\begin{equation}\label{eq:E}
+p_u(a,b)=\frac{u^{a-b}}{(a-b)!}\ (a\ge b),\quad p_u(a,b)=0\ (a<b),\qquad E_u(a,b)=\sum_{n\ge\max(0,b-a)}\frac{u^n}{n!\,(a+n-b)!},
+\end{equation}
+with $p_0(a,b)=\mathbf 1\{a=b\}$. For $u>0$, $E_u(a,b)=u^{(b-a)/2}I_{a-b}(2\sqrt u)$, where $I_\nu$ is the modified Bessel function and $I_{-\nu}=I_\nu$.
+
+\begin{theorem}\label{thm:det}
+Let $0<s_1<\dots<s_r=T$ and $1\le k_1\le\dots\le k_r$ be integers. Put $m_a=k_a-1$ and $d=m_r$. If $d=0$ then $\Pp(X_{k_a}>s_a\ \forall a)=e^{-T}$. If $d\ge1$, let
+\[
+J=\bigl\{(s_a,z):\ 1\le a<r,\ 0\le z\le d-m_a-1\bigr\},
+\]
+list its elements as $(\sigma_\alpha,z_\alpha)$, $\alpha=1,\dots,q$, in nondecreasing order of $\sigma_\alpha$, and define the matrices
+\[
+A_{ij}=E_T(i,j),\quad F_{i\alpha}=p_{\sigma_\alpha}(z_\alpha,i),\quad G_{\alpha j}=E_{T-\sigma_\alpha}(z_\alpha,j),\quad Q_{\alpha\beta}=\mathbf 1\{\sigma_\alpha<\sigma_\beta\}\,p_{\sigma_\beta-\sigma_\alpha}(z_\beta,z_\alpha),
+\]
+for $0\le i,j\le d-1$ and $1\le\alpha,\beta\le q$. Then
+\begin{equation}\label{eq:det}
+\Pp\bigl(X_{k_a}>s_a,\ a=1,\dots,r\bigr)=e^{-T}\det\begin{pmatrix}A&F\\-G&-Q\end{pmatrix}.
+\end{equation}
+The matrix has size $d+q\le rd$.
+\end{theorem}
+
+Every finite family of conditions $X_{k}>s$ reduces to the form of Theorem~\ref{thm:det}. Conditions with $s=0$ always hold; of several conditions at the same $s$ only the one with the smallest $k$ matters; and since $L$ is nondecreasing, the condition $L(s_b)\le m_b$ implies $L(s_a)\le m_b$ for $a<b$, so in \eqref{eq:surv} each $k_a$ may be replaced by $\min_{b\ge a}k_b$ without changing the event, after which a condition is implied by any later one with the same $k$ and may be dropped. For the first $k$ particles at most $k$ thresholds remain and $d\le k-1$, so the determinant has size at most $k(k-1)$. Joint survival functions determine a law on $(0,\infty)^k$, so Theorem~\ref{thm:det} determines the stationary distribution.
+
+\begin{corollary}\label{cor:small}
+For $T>0$ and $d\ge1$,
+\begin{equation}\label{eq:gessel}
+\Pp(X_{d+1}>T)=e^{-T}\det\bigl[I_{i-j}(2\sqrt T)\bigr]_{i,j=1}^{d},
+\end{equation}
+and for $0\le s\le T$,
+\begin{equation}\label{eq:two}
+\Pp(X_2>T)=e^{-T}I_0(2\sqrt T),\qquad \Pp(X_1>s,\ X_2>T)=e^{-T}I_0\bigl(2\sqrt{T-s}\bigr).
+\end{equation}
+\end{corollary}
+
+By \eqref{eq:surv}, the identity \eqref{eq:gessel} is Gessel's formula for the Poissonized longest increasing subsequence \cite{Ges90}, which is the starting point of \cite{BDJ99}.
+
+\begin{corollary}\label{cor:c}
+For $i\ge1$, with $X_0=0$,
+\[
+\E(X_i-X_{i-1})=\E(\tau_i-\tau_{i-1})=\sum_{n\ge0}\Pp(\ell_n=i-1)=c(i),
+\]
+where $c(i)$ is the constant of \cite[Proposition~9]{AD99}, $\E S_n(i)=c(i)\log n+O(1)$ for the number $S_n(i)$ of cards in the $i$-th pile of patience sorting. In particular $\E X_2=e$, and $\E X_i=\int_0^\infty e^{-s}\det[I_{a-b}(2\sqrt s)]_{a,b=1}^{i-1}\dd s$ for $i\ge2$.
+\end{corollary}
+
+In \cite[(44)]{AD93} the stationary mean gap $\E(X_i-X_{i-1})$ appears as the rate of jumps of $X_i$, and the notes ask (p.~38) for a direct reason why this constant is the same as the one obtained from exact formulas. Corollary~\ref{cor:c} gives it: the mean gap is the expected number of steps the longest increasing subsequence spends at length $i-1$.
+
+\begin{remark}\label{rem:schur}
+The shapes $\lambda(N(s_1))\subseteq\dots\subseteq\lambda(N(s_r))$ of the Poissonized Plancherel growth process form an ascending Schur process with Plancherel specializations \cite{OR03}, and the one-time law is the Poissonized Plancherel measure \cite{BOO00}. The modified Frobenius coordinates of such a process form a determinantal point process, so the probabilities in \eqref{eq:surv} are also Fredholm determinants of an extended discrete Bessel kernel. Theorem~\ref{thm:det} gives instead a determinant whose size depends only on the indices $k_a$, which is convenient for exact evaluation. Its proof uses the Robinson--Schensted correspondence, Aitken's determinant for skew tableaux, and the Cauchy--Binet formula.
+\end{remark}
+
+Section~\ref{sec:rep} proves Theorem~\ref{thm:rep}, Section~\ref{sec:shapes} computes the joint law of the shapes, Section~\ref{sec:det} proves Theorem~\ref{thm:det}, Section~\ref{sec:cor} proves the corollaries, and Section~\ref{sec:comp} records the computer checks.
+
+\section{The representation}\label{sec:rep}
+
+\subsection{Static coordinates}
+For the process run for $t\ge t_0$, put
+\[
+y=x e^{-t},\qquad u=e^{t}.
+\]
+Between events a particle has constant $y$-coordinate, since $\mathrm d(X_ie^{-t})/\mathrm dt=0$. The map $(x,t)\mapsto(xe^{-t},e^t)$ is a bijection of $(0,\infty)\times(t_0,\infty)$ onto $(0,\infty)\times(e^{t_0},\infty)$ with Jacobian determinant $e^{-t}\cdot e^{t}=1$, so it carries the rate-one Poisson process of events to a rate-one Poisson process $\Pi$ on $(0,\infty)\times(e^{t_0},\infty)$. It is increasing in $x$ at fixed $t$, so it preserves which particle is nearest to the right of an event. In the coordinates $(y,u)$ the drift disappears: the particles $Y_i(u)=X_i(\log u)/u$ stand still, and at a point $(v,u)$ of $\Pi$ the closest particle to the right of $v$, if any, jumps to $v$. We call this the static process.
+
+A chain of length $\ell$ in a set of points of the plane is a sequence of $\ell$ of its points in which both coordinates strictly increase. Almost surely no two points of $\Pi$ share a coordinate. For $0\le c<y$ and $0\le b<u$ let $\mathcal L((c,y]\times(b,u])$ be the length of the longest chain of $\Pi$ in that rectangle.
+
+\begin{lemma}\label{lem:cells}
+Let $\Pi$ be a rate-one Poisson process on a rectangle $(c,c+y]\times(b,b+w]$. For every integer $m\ge j\ge1$,
+\[
+\Pp\bigl(\mathcal L((c,c+y]\times(b,b+w])\le j-1\bigr)\le\binom{m}{m-j+1}e^{-(m-j+1)yw/m^2}.
+\]
+\end{lemma}
+
+\begin{proof}
+Cut the rectangle into an $m\times m$ grid and consider the $m$ diagonal cells, the $i$-th of which has both coordinates in the $i$-th of the $m$ equal subintervals. One point from each nonempty diagonal cell forms a chain. If the longest chain has length at most $j-1$, at least $m-j+1$ diagonal cells are empty. The cells are disjoint with area $yw/m^2$, so a given set of $m-j+1$ of them is empty with probability $e^{-(m-j+1)yw/m^2}$, and the union bound gives the claim.
+\end{proof}
+
+\subsection{Patience sorting}
+Patience sorting \cite{AD99} places a sequence of distinct real numbers, one at a time, on piles: a number is put on the leftmost pile whose top is larger than it, and if no top is larger it starts a new pile on the right. The tops increase from left to right, and after the whole sequence has been placed the number of piles equals the length of its longest increasing subsequence \cite[Lemma~1]{AD99}.
+
+Fix $y>0$ and apply the following rule to a set $R\subset(0,y]$ and a number $v\in(0,y]$: if $R$ contains an element larger than $v$, replace the smallest such element by $v$; otherwise add $v$ to $R$. This is the effect of placing $v$ in patience sorting on the set of pile tops, so starting from $R=\emptyset$ and applying the rule to the numbers $v_1,v_2,\dots,v_n\in(0,y]$ in turn produces the set of pile tops of $(v_1,\dots,v_n)$, which has as many elements as the longest increasing subsequence of $(v_1,\dots,v_n)$. If $v_1,\dots,v_n$ are the first coordinates of the points of $\Pi$ in $(0,y]\times(b,u]$, listed in increasing order of the second coordinate, that length is $\mathcal L((0,y]\times(b,u])$.
+
+\subsection{The stationary process}
+Let $\Pi$ be a rate-one Poisson process on $(0,\infty)^2$. For $u>0$ and $y>0$ let $R^y_u$ be the set obtained by applying the rule above, with this $y$, to the finitely many points of $\Pi$ in $(0,y]\times(0,u]$ in increasing order of the second coordinate. If $y<y'$ then $R^{y'}_u\cap(0,y]=R^y_u$: the points with first coordinate in $(y,y']$ change only elements larger than $y$, and a point $v\le y$ changes the part in $(0,y]$ of a set in the same way whether or not the set has elements above $y$ (if no element of $(v,y]$ is present, the part in $(0,y]$ gains $v$ in both cases). Hence $S_u=\bigcup_yR^y_u$ is well defined and
+\begin{equation}\label{eq:count}
+\#\bigl(S_u\cap(0,y]\bigr)=\mathcal L((0,y]\times(0,u])\qquad\text{for all }y>0 .
+\end{equation}
+By Lemma~\ref{lem:cells} the right side tends to infinity as $y\to\infty$ almost surely, and it is finite for each $y$. So $S_u$ is an infinite discrete set; let $Y_1(u)<Y_2(u)<\cdots$ be its elements. By \eqref{eq:count},
+\begin{equation}\label{eq:Yi}
+Y_i(u)=\inf\{y>0:\mathcal L((0,y]\times(0,u])\ge i\}.
+\end{equation}
+The set $S_u$ is constant in $u$ between points of $\Pi$, and at a point $(v,u)$ the smallest element of $S_u$ larger than $v$ is replaced by $v$. If $v<Y_k$ that element is among $Y_1,\dots,Y_k$, and it is the one nearest to the right of $v$; if $v>Y_k$ the first $k$ elements do not change. So $(Y_1(u),\dots,Y_k(u))$ is the static process. Define
+\[
+X_i(t)=e^{t}\,Y_i(e^t),\qquad t\in\mathbb R .
+\]
+By the change of coordinates, $(X_1(t),\dots,X_k(t))_{t\in\mathbb R}$ is the drift-jump process driven by the events $\{(ve^{\log u},\log u):(v,u)\in\Pi\}=\{(vu,\log u)\}$, which form a rate-one Poisson process on $(0,\infty)\times\mathbb R$.
+
+\begin{lemma}\label{lem:stat}
+The process $(X(t))_{t\in\mathbb R}$ is stationary, and $X_i(0)=\inf\{y>0:\mathcal L((0,y]\times(0,1])\ge i\}$.
+\end{lemma}
+
+\begin{proof}
+For $c\in\mathbb R$ the map $\varphi(y,u)=(e^{c}y,e^{-c}u)$ preserves Lebesgue measure on $(0,\infty)^2$ and is increasing in each coordinate, so $\Pi'=\varphi(\Pi)$ is again a rate-one Poisson process and its chains are the images of the chains of $\Pi$. Hence $\mathcal L_{\Pi'}((0,y]\times(0,u])=\mathcal L_{\Pi}((0,e^{-c}y]\times(0,e^{c}u])$, and by \eqref{eq:Yi} $Y_i'(u)=e^cY_i(e^cu)$. The process built from $\Pi'$ is therefore $X_i'(t)=e^tY_i'(e^t)=e^{t+c}Y_i(e^{t+c})=X_i(t+c)$. Since $\Pi'$ has the law of $\Pi$, $(X(t+c))_t$ has the law of $(X(t))_t$. The formula for $X_i(0)$ is \eqref{eq:Yi} at $u=1$.
+\end{proof}
+
+\subsection{Convergence}
+\begin{proposition}\label{prop:conv}
+Let $x=(x_1<\dots<x_k)$ be any initial configuration and $\pi$ the law of $X(0)$ in Lemma~\ref{lem:stat}. For $t>0$ and $0<A<x_1e^{t}$, the law $\mu_t$ of the drift-jump process at time $t$ started from $x$ at time $0$ satisfies
+\[
+\|\mu_t-\pi\|_{\mathrm{TV}}\le Ae^{-t}+\Pp_\pi(X_k>A).
+\]
+\end{proposition}
+
+\begin{proof}
+Use static coordinates with $u=e^t$, and let $\Pi$ be the rate-one Poisson process on $(0,\infty)^2$ of the stationary construction; the started process uses its points with second coordinate in $(1,\infty)$, and starts from $Y(1)=x$. Put $y_*=A/u<x_1$. For $y\le y_*$ let $R'_u$ be the set of particles of the started process in $(0,y]$ at time $u$, and $T_u=R^y$ the set obtained by applying the rule to the points of $\Pi$ in $(0,y]\times(1,u]$. We claim that $R'_u$ consists of the smallest $\min(k,\#T_u)$ elements of $T_u$. At $u=1$ both are empty, since $y<x_1$. At a point $(v,u)$ with $v\le y$: if $\#T<k$ then $R'=T$, and some particle lies to the right of $y$, so the started process and the rule act on $(0,y]$ in the same way. If $\#T\ge k$ and $v$ is smaller than the $k$-th element of $T$, both replace the same element by $v$. If $v$ is larger than the $k$-th element of $T$, all $k$ particles lie to the left of $v$ and nothing moves, while the rule changes only elements of $T$ beyond the $k$-th. Points with $v>y$ change neither set. This proves the claim.
+
+Let $D$ be the event that $\Pi$ has no point in $(0,y_*]\times(0,1]$. On $D$, for $y\le y_*$, the points of $\Pi$ in $(0,y]\times(0,u]$ and in $(0,y]\times(1,u]$ coincide, so $T_u=S_u\cap(0,y]$. If moreover $Y_k(u)\le y_*$, then at $y=y_*$ the set $T_u$ has at least $k$ elements, the started process has all $k$ particles in $(0,y_*]$, and they are $Y_1(u),\dots,Y_k(u)$. So the two processes agree at time $u$ outside an event of probability at most $\Pp(D^c)+\Pp(Y_k(u)>y_*)=(1-e^{-y_*})+\Pp(X_k(t)>A)\le Ae^{-t}+\Pp_\pi(X_k>A)$, using $uY_k(u)=X_k(t)$ and stationarity.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:rep}]
+By Lemma~\ref{lem:cells}, $\Pp_\pi(X_k>A)\to0$ as $A\to\infty$. Taking $A=e^{t/2}$ in Proposition~\ref{prop:conv}, $\mu_t\to\pi$ in total variation from every deterministic initial configuration, and by dominated convergence from every random one. A stationary law $\nu$ satisfies $\nu=\nu P_t\to\pi$, so $\nu=\pi$.
+
+By Lemma~\ref{lem:stat}, under $\pi$, $X_i=\inf\{y:\mathcal L((0,y]\times(0,1])\ge i\}$. Write the points of $\Pi$ in $(0,\infty)\times(0,1]$ as $(\Gamma_n,U_n)$ with $\Gamma_1<\Gamma_2<\cdots$; then $(\Gamma_n)$ is a rate-one Poisson process and $(U_n)$ is an independent sequence of independent uniform variables on $(0,1)$. A chain in $(0,y]\times(0,1]$ is an increasing subsequence of $(U_1,\dots,U_{N(y)})$, so $\mathcal L((0,y]\times(0,1])=\ell_{N(y)}=L(y)$, and $L(y)\ge i$ exactly when $N(y)\ge\tau_i$, that is, when $y\ge\Gamma_{\tau_i}$. Hence $X_i=\Gamma_{\tau_i}$, and $X_k>s$ if and only if $L(s)\le k-1$; this is \eqref{eq:rep} and \eqref{eq:surv}. The construction defines all $X_i$, $i\ge1$, at once, which gives consistency in $k$.
+\end{proof}
+
+\begin{remark}\label{rem:AD93}
+In \cite{AD93} the cards are labelled by their values and $B(i)$ is the limiting value-rank of the top of the $i$-th pile. In the plane this corresponds to reading the points of $\Pi$ in $(0,\infty)\times(0,1]$ in the order of the second coordinate, as in \eqref{eq:Yi}, while \eqref{eq:rep} reads them in the order of the first coordinate. Both read the same chains, which is why $\#\{i:B(i)\le n\}$ has the law of $\ell_n$ jointly in $n$; for a permutation this is the symmetry between $\pi$ and $\pi^{-1}$, that is, between the insertion and the recording tableau.
+\end{remark}
+
+\section{The joint law of the shapes}\label{sec:shapes}
+
+For a partition $\lambda$ let $f^\lambda$ be the number of standard Young tableaux of shape $\lambda$, and for $\nu\subseteq\lambda$ let $f^{\lambda/\nu}$ be the number of standard fillings of the skew shape $\lambda/\nu$, with $f^{\lambda/\lambda}=1$. The Robinson--Schensted correspondence is a bijection between permutations of $\{1,\dots,n\}$ and pairs $(P,Q)$ of standard tableaux of a common shape with $n$ boxes; the length of the first row of the shape is the length of the longest increasing subsequence \cite{Sch61}, and the recording tableau of the first $n'$ letters is the restriction of $Q$ to the entries $1,\dots,n'$. We apply it to the relative order of $(U_1,\dots,U_n)$ and write $\lambda(n)$ for the shape; so $\lambda(1)\subseteq\lambda(2)\subseteq\cdots$ and $\lambda_1(n)=\ell_n$.
+
+\begin{lemma}\label{lem:weight}
+Let $0=s_0<s_1<\dots<s_r=T$, $\Delta_a=s_a-s_{a-1}$, and let $\emptyset=\lambda^0\subseteq\lambda^1\subseteq\dots\subseteq\lambda^r$ be partitions, $n_a=|\lambda^a|$ and $h_a=n_a-n_{a-1}$. Then
+\[
+\Pp\bigl(\lambda(N(s_a))=\lambda^a,\ a=1,\dots,r\bigr)=e^{-T}\,\frac{f^{\lambda^r}}{n_r!}\,\prod_{a=1}^r f^{\lambda^a/\lambda^{a-1}}\frac{\Delta_a^{h_a}}{h_a!}.
+\]
+\end{lemma}
+
+\begin{proof}
+The increments $N(s_a)-N(s_{a-1})$ are independent Poisson variables with means $\Delta_a$, so $N(s_a)=n_a$ for all $a$ with probability $e^{-T}\prod_a\Delta_a^{h_a}/h_a!$. They are independent of $(U_n)$, whose first $n_r$ terms are in uniformly random relative order. Under the correspondence the shapes $\lambda(n_a)$ are the shapes of the restrictions of $Q$ to the entries at most $n_a$. The tableaux $Q$ of shape $\lambda^r$ whose restrictions have the shapes $\lambda^a$ are obtained by filling each $\lambda^a/\lambda^{a-1}$ with the entries $n_{a-1}+1,\dots,n_a$ as a standard skew tableau, so there are $\prod_af^{\lambda^a/\lambda^{a-1}}$ of them, and each is paired with $f^{\lambda^r}$ tableaux $P$. Dividing by $n_r!$ gives the claim.
+\end{proof}
+
+We pass to conjugate partitions $\mu=\lambda'$; transposing fillings shows $f^{\mu}=f^{\lambda}$ and $f^{\mu/\nu}=f^{\lambda/\nu'}$ for $\nu\subseteq\mu$. The condition $\lambda_1\le m$ becomes $\mu$ having at most $m$ nonzero parts. Fix $d\ge1$. A partition $\mu$ with at most $d$ parts is encoded by the set of $d$ distinct nonnegative integers
+\[
+\mathrm{Pos}(\mu)=\{\mu_i+d-i:\ 1\le i\le d\},
+\]
+and every $d$-element subset of $\{0,1,2,\dots\}$ arises from exactly one such $\mu$. The empty partition has $\mathrm{Pos}(\emptyset)=\{0,\dots,d-1\}$.
+
+\begin{lemma}\label{lem:occ}
+For $0\le m\le d$, $\mu$ has at most $m$ nonzero parts if and only if $\{0,1,\dots,d-m-1\}\subseteq\mathrm{Pos}(\mu)$.
+\end{lemma}
+
+\begin{proof}
+If $\mu_i=0$ for $i>m$, the positions $\mu_i+d-i$ for $i=m+1,\dots,d$ are $d-m-1,\dots,0$. Conversely, the $d-m$ smallest positions are $\mu_i+d-i$, $i=m+1,\dots,d$; if $0,\dots,d-m-1$ are positions they are these, and since $\mu_i+d-i\ge d-i$ with the $d-m$ values distinct, $\mu_i+d-i=d-i$, so $\mu_i=0$.
+\end{proof}
+
+\begin{lemma}\label{lem:aitken}
+Let $\nu,\mu$ be partitions with at most $d$ parts, with positions $z_1<\dots<z_d$ and $y_1<\dots<y_d$, and $u\ge0$. Then $\det[p_u(y_i,z_j)]_{i,j=1}^d$ equals $f^{\mu/\nu}u^h/h!$ with $h=|\mu|-|\nu|$ if $\nu\subseteq\mu$, and $0$ otherwise.
+\end{lemma}
+
+\begin{proof}
+Reversing the order of both the rows and the columns does not change the determinant, so we may use the positions $y_i=\mu_i+d-i$, $z_j=\nu_j+d-j$ in decreasing order. Every nonzero term of the expansion is $\pm\prod_iu^{y_i-z_{\pi(i)}}/(y_i-z_{\pi(i)})!$, and $\sum_i(y_i-z_{\pi(i)})=h$, so the determinant is $u^h\det[1/(\mu_i-\nu_j-i+j)!]$ with $1/n!=0$ for $n<0$. If $\nu\subseteq\mu$ the latter is $f^{\mu/\nu}/h!$ by Aitken's formula \cite{Ait43}, \cite[Section~7.16]{Sta99}. If $\nu_i>\mu_i$ for some $i$, then for $i'\ge i\ge j$ we have $\mu_{i'}-\nu_j-i'+j\le\mu_i-\nu_i<0$, so the rows $i,\dots,d$ vanish in the columns $1,\dots,i$, and the determinant is $0$.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:det}}\label{sec:det}
+
+By Theorem~\ref{thm:rep} the probability in question is $\Pp(\lambda_1(N(s_a))\le m_a\ \forall a)$. If $d=0$ the condition at $T$ forces $\lambda(N(T))=\emptyset$, that is $N(T)=0$, which has probability $e^{-T}$. Let $d\ge1$. Since $m_a\le d$ for all $a$, every shape on the event has first row at most $d$, so its conjugate has at most $d$ parts. By Lemmas~\ref{lem:weight} and~\ref{lem:aitken} with $b=(0,1,\dots,d-1)$ the positions of $\emptyset$, the probability of a chain $\lambda^1\subseteq\dots\subseteq\lambda^r$ with $\lambda_1^r\le d$ is
+\begin{equation}\label{eq:chainw}
+e^{-T}\det\bigl[p_1(y^r_i,b_j)\bigr]\prod_{a=1}^r\det\bigl[p_{\Delta_a}(y^a_i,y^{a-1}_j)\bigr],
+\end{equation}
+where $y^a_1<\dots<y^a_d$ are the positions of $(\lambda^a)'$ and $y^0=b$; the first factor is $f^{\lambda^r}/n_r!$. Conversely, by Lemma~\ref{lem:aitken}, a sequence of $d$-element sets $y^1,\dots,y^r$ for which \eqref{eq:chainw} is nonzero comes from such a chain. By Lemma~\ref{lem:occ} the event is that every marker $(\sigma_\alpha,z_\alpha)\in J$ has $z_\alpha\in y^{a}$, where $s_a=\sigma_\alpha$.
+
+\emph{A generating function with a cutoff.} Fix an integer $\Lambda\ge d$ and let all matrices below be indexed by $\{0,\dots,\Lambda\}$. Let $P_u=[p_u(y,z)]_{y,z=0}^\Lambda$; it is lower triangular, and $P_uP_v=P_{u+v}$ by the binomial theorem, since only intermediate indices between the two endpoints contribute. Introduce variables $w=(w_\alpha)_{\alpha\le q}$ and, for $a<r$, the diagonal matrix
+\[
+D_a=I+\sum_{\alpha:\ \sigma_\alpha=s_a}w_\alpha\,e_{z_\alpha}e_{z_\alpha}^{\top},
+\]
+and put $K=P_{\Delta_r}D_{r-1}P_{\Delta_{r-1}}\cdots D_1P_{\Delta_1}$. Define the $d\times d$ matrix
+\[
+\mathcal M_{ij}=\sum_{y=0}^{\Lambda}p_1(y,b_i)\,K(y,b_j),\qquad 0\le i,j\le d-1 .
+\]
+By the Cauchy--Binet formula applied to the product $P_1[\cdot,b]^{\top}\,P_{\Delta_r}D_{r-1}\cdots D_1P_{\Delta_1}[\cdot,b]$, $\det\mathcal M$ is the sum over $d$-element subsets $y^1,\dots,y^r$ of $\{0,\dots,\Lambda\}$ of \eqref{eq:chainw} without the factor $e^{-T}$, multiplied by $\prod_{a<r}\prod_{\alpha:\sigma_\alpha=s_a}(1+w_\alpha\mathbf 1\{z_\alpha\in y^a\})$; a principal minor of a diagonal matrix is the product of its entries, and its other minors vanish. Hence the coefficient of $\prod_\alpha w_\alpha$ in $e^{-T}\det\mathcal M$ is the probability of the event intersected with $\{\max y^r\le\Lambda\}$. (Along a chain the positions increase coordinatewise, so $\max y^a\le\max y^r$.)
+
+\emph{Expansion.} Since $e_ze_z^{\top}e_{z'}e_{z'}^{\top}=0$ for $z\ne z'$, expanding the product $K$ and merging consecutive factors $P$ with the semigroup property gives
+\begin{multline*}
+K=P_T+\sum_{l\ge1}\ \sum_{\substack{\alpha_1,\dots,\alpha_l\\ \sigma_{\alpha_1}<\dots<\sigma_{\alpha_l}}}w_{\alpha_1}\cdots w_{\alpha_l}\,P_{T-\sigma_{\alpha_l}}e_{z_{\alpha_l}}\\
+\times p_{\sigma_{\alpha_l}-\sigma_{\alpha_{l-1}}}(z_{\alpha_l},z_{\alpha_{l-1}})\cdots p_{\sigma_{\alpha_2}-\sigma_{\alpha_1}}(z_{\alpha_2},z_{\alpha_1})\,e_{z_{\alpha_1}}^{\top}P_{\sigma_{\alpha_1}}.
+\end{multline*}
+Let $\tilde A$, $\tilde G$, $\tilde F$, $\tilde Q$ be the matrices with entries
+\[
+\tilde A_{ij}=\sum_{y\le\Lambda}p_1(y,i)p_T(y,j),\quad \tilde G_{i\alpha}=\sum_{y\le\Lambda}p_1(y,i)p_{T-\sigma_\alpha}(y,z_\alpha),\quad \tilde F_{\alpha j}=p_{\sigma_\alpha}(z_\alpha,j),\quad \tilde Q_{\beta\alpha}=Q_{\alpha\beta},
+\]
+and $W=\mathrm{diag}(w_\alpha)$. Then
+\[
+\mathcal M=\tilde A+\tilde GW\sum_{n\ge0}(\tilde QW)^n\tilde F=\tilde A+\tilde GW(I-\tilde QW)^{-1}\tilde F,
+\]
+where $\tilde Q$ is strictly lower triangular in the order of the markers, so the series is finite.
+
+\emph{Extraction.} The matrix $\tilde A$ is invertible: $\tilde A\,\mathrm{diag}(T^{j})_{j<d}$ has entries $\sum_{y\le\Lambda}T^y\,v_i(y)v_j(y)$ with $v_i(y)=1/(y-i)!$, a Gram matrix of $d$ vectors that are linearly independent because $v_i(y)=0$ for $y<i$ and $v_i(i)=1$. Write $\tilde K=\tilde F\tilde A^{-1}\tilde G$. Using $\det(I+XY)=\det(I+YX)$ and $W(I-\tilde QW)^{-1}=(I-W\tilde Q)^{-1}W$,
+\[
+\det\mathcal M=\det\tilde A\,\det\bigl(I+(I-W\tilde Q)^{-1}W\tilde K\bigr)=\det\tilde A\,\det\bigl(I+W(\tilde K-\tilde Q)\bigr),
+\]
+because $\det(I-W\tilde Q)=1$, $W\tilde Q$ being strictly lower triangular. These are identities between polynomials in $w$. Row $\alpha$ of $I+W(\tilde K-\tilde Q)$ is $e_\alpha^{\top}+w_\alpha(\tilde K-\tilde Q)_{\alpha\cdot}$, so by multilinearity in the rows the coefficient of $\prod_\alpha w_\alpha$ is $\det(\tilde K-\tilde Q)$. By the Schur complement formula
+\[
+\det\tilde A\,\det\bigl(\tilde F\tilde A^{-1}\tilde G-\tilde Q\bigr)=\det\begin{pmatrix}\tilde A&\tilde G\\-\tilde F&-\tilde Q\end{pmatrix}.
+\]
+
+\emph{Removing the cutoff.} As $\Lambda\to\infty$ the events $\{\max y^r\le\Lambda\}$ increase to the whole space, so the probabilities increase to the probability of the event. With $y=i+n$, $\sum_yp_1(y,i)p_T(y,j)=\sum_{n}T^{i+n-j}/(n!(i+n-j)!)=E_T(j,i)$, and similarly $\sum_yp_1(y,i)p_{u}(y,z)=E_u(z,i)$; the series converge, so $\tilde A\to A^{\top}$ and $\tilde G\to G^{\top}$, while $\tilde F=F^{\top}$ and $\tilde Q=Q^{\top}$. The determinant has finitely many entries, so it converges to
+\[
+\det\begin{pmatrix}A^{\top}&G^{\top}\\-F^{\top}&-Q^{\top}\end{pmatrix}=\det\begin{pmatrix}A&F\\-G&-Q\end{pmatrix}^{\top}=\det\begin{pmatrix}A&F\\-G&-Q\end{pmatrix}.
+\]
+This proves \eqref{eq:det}. Finally, for $u>0$ and $a\ge b$, $E_u(a,b)=\sum_nu^n/(n!(n+a-b)!)=u^{-(a-b)/2}I_{a-b}(2\sqrt u)$ by the series $I_\nu(x)=\sum_n(x/2)^{2n+\nu}/(n!(n+\nu)!)$; for $a<b$ substitute $n=n'+b-a$. \qed
+
+\section{Proofs of the corollaries}\label{sec:cor}
+
+\begin{proof}[Proof of Corollary~\ref{cor:small}]
+For $r=1$ and $k_1=d+1$ there are no markers, and
+\[
+\det A=\det\bigl[T^{(j-i)/2}I_{i-j}(2\sqrt T)\bigr]_{i,j<d}=\det\bigl[I_{i-j}(2\sqrt T)\bigr]_{i,j<d},
+\]
+the powers of $T$ cancelling under conjugation by $\mathrm{diag}(T^{i/2})$. For $d=1$ this is $\Pp(X_2>T)=e^{-T}I_0(2\sqrt T)$. For $0<s<T$ and $(k_1,k_2)=(1,2)$ we have $d=1$ and one marker $(s,0)$, so the matrix is
+\[
+\begin{pmatrix}I_0(2\sqrt T)&1\\-I_0(2\sqrt{T-s})&0\end{pmatrix},
+\]
+with determinant $I_0(2\sqrt{T-s})$. The cases $s=0$ and $s=T$ follow by the reductions after Theorem~\ref{thm:det}. Directly: $X_1>s$ and $X_2>T$ mean that $\Pi$ has no point in $(0,s]\times(0,1]$ and its points in $(s,T]\times(0,1]$ form a decreasing sequence, which has probability $e^{-s}\sum_n e^{-(T-s)}(T-s)^n/(n!)^2$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:c}]
+By \eqref{eq:rep}, $X_i-X_{i-1}=\Gamma_{\tau_i}-\Gamma_{\tau_{i-1}}$ (with $\tau_0=0$, $\Gamma_0=0$) is a sum of $\tau_i-\tau_{i-1}$ independent standard exponential variables, independent of $\tau$, so $\E(X_i-X_{i-1})=\E(\tau_i-\tau_{i-1})$. Since $\ell_n$ increases by at most one at each step, $\tau_i-\tau_{i-1}=\#\{n\ge0:\ell_n=i-1\}$, whose mean is $\sum_n\Pp(\ell_n=i-1)$; this is $c(i)=\sum_{k\ge i}\Pp(L_{k-1}=i-1)$ of \cite[Proposition~9]{AD99}, where $L_n$ is the longest increasing subsequence of a uniform random permutation of $n$, and $c(1)=1$, $c(2)=e-1$ there. The sum is finite: $\Pp(\ell_n\le i-1)$ decays geometrically in $n$ by Lemma~\ref{lem:cells} after Poissonization, or directly. Finally $\E X_i=\int_0^\infty\Pp(X_i>s)\dd s$, and \eqref{eq:gessel} gives the integrand.
+\end{proof}
+
+\section{Computations}\label{sec:comp}
+
+The script \texttt{code/checks.py} evaluates \eqref{eq:det} in 40-digit arithmetic and compares it with three independent computations; its output is \texttt{code/checks\_output.txt}, and every number below is taken from it.
+
+\emph{Exhaustive enumeration.} Conditioned on $N(T)=n$, the first coordinates of the $n$ points in $(0,T]\times(0,1]$ are independent and uniform on $(0,T]$, so the counts in the intervals $(s_{a-1},s_a]$ are multinomial and the relative order of the $U$'s is uniform. Summing over all permutations of $n\le9$ letters and all compositions of $n$ gives $\Pp(\text{event},\,N(T)\le9)$ exactly, which differs from the probability by at most $\Pp(N(T)>9)$. For twelve families of conditions, with up to five thresholds and determinants of size up to $14$, the determinant exceeds the enumeration by at most $1.8\cdot10^{-8}$, in each case between $0$ and $\Pp(N(T)>9)\le1.2\cdot10^{-7}$. For example $\Pp(X_1>0.2,\ X_2>0.6,\ X_3>1)=0.787308289691$ from a determinant of size five.
+
+\emph{Closed forms.} For twelve pairs $(s,T)$ the determinant agrees with \eqref{eq:two} to 20 digits, for instance $\Pp(X_1>1.75,\ X_2>3.5)$ is
+$0.11118605883134702936$; and for $(d,T)$ equal to $(2,1.5)$, $(3,2)$ and $(4,3)$ it agrees with the Toeplitz determinant \eqref{eq:gessel} to 20 digits, for instance $\Pp(X_5>3)=0.99273657984081763563$.
+
+\emph{Means.} Integrating $\Pp(X_i>s)$ over $s\in[0,400]$, with the tail beyond $400$ bounded by Lemma~\ref{lem:cells} by $8.1\cdot10^{-13}$, gives $\E X_1,\dots,\E X_4=1$, $2.71828182846$, $5.09067872932$, $8.08650858474$, hence $c(2)=1.71828182846=e-1$, $c(3)=2.37239690086$, equal to the series $\sum_{k\ge1}(\binom{2k}{k}\frac1{k+1}-1)/k!$ of \cite[Proposition~9]{AD99}, and $c(4)=2.99582985543$.
+
+\emph{Simulation of the dynamics.} An exact event-by-event simulation of the drift-jump process with $k=4$, run for a burn-in time of $30$ and then sampled $120\,000$ times at spacing $2$, reproduces the determinant for nine families of conditions within $0.9$ estimated standard errors (computed from $50$ batches), for example $0.41776$ against $0.41667$ for $\Pp(X_1>0.5,X_2>1.5,X_3>3,X_4>5)$. This checks Theorem~\ref{thm:rep} against the dynamics themselves.
+
+The Lean~4 file \texttt{lean/GeneralBlockCertificate.lean} (with Mathlib) proves the block determinant identity $\det\begin{pmatrix}A&F\\-G&-Q\end{pmatrix}=\det A\,\det(GA^{-1}F-Q)$ for invertible $A$ over any commutative ring, which is the sign bookkeeping in the extraction step.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. On 11 October 2026 an agent running in OpenAI's Codex (GPT-6.1 Sol) obtained Theorem~\ref{thm:det} and its proof; two further Codex agents checked the proof, and a Claude agent (Anthropic) checked the one- and two-particle cases with a simulation. On 16 October 2026 Claude Opus~5.5, working in Claude Code, checked the proof line by line, wrote the proofs of Theorem~\ref{thm:rep} and Proposition~\ref{prop:conv} in the form given here, and wrote the computer checks, the Lean file and the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code and the Lean file are available at\\ \url{https://github.com/yspennstate/drift-jump-leftmost-particles}.
+
+\begin{thebibliography}{99}
+
+\bibitem{Ait43}
+A.~C. Aitken, The monomial expansion of determinantal symmetric functions, \emph{Proc. Roy. Soc. Edinburgh Sect. A} \textbf{61} (1943), 300--310.
+
+\bibitem{Ald18}
+D.~J. Aldous, A one-dimensional drift-jump particle process, open problem, posted February 2018, \url{https://www.stat.berkeley.edu/~aldous/Research/OP/left_Hamm.html}.
+
+\bibitem{AD93}
+D.~Aldous and P.~Diaconis, Patience sorting, longest increasing subsequences and a continuous space analog of the simple asymmetric exclusion process, unpublished notes, 8 July 1993, \url{https://www.stat.berkeley.edu/~aldous/Research/OP/patience.pdf}.
+
+\bibitem{AD95}
+D.~Aldous and P.~Diaconis, Hammersley's interacting particle process and longest increasing subsequences, \emph{Probab. Theory Related Fields} \textbf{103} (1995), 199--213.
+
+\bibitem{AD99}
+D.~Aldous and P.~Diaconis, Longest increasing subsequences: from patience sorting to the Baik--Deift--Johansson theorem, \emph{Bull. Amer. Math. Soc. (N.S.)} \textbf{36} (1999), 413--432.
+
+\bibitem{BDJ99}
+J.~Baik, P.~Deift and K.~Johansson, On the distribution of the length of the longest increasing subsequence of random permutations, \emph{J. Amer. Math. Soc.} \textbf{12} (1999), 1119--1178.
+
+\bibitem{BOO00}
+A.~Borodin, A.~Okounkov and G.~Olshanski, Asymptotics of Plancherel measures for symmetric groups, \emph{J. Amer. Math. Soc.} \textbf{13} (2000), 481--515.
+
+\bibitem{Ges90}
+I.~M. Gessel, Symmetric functions and P-recursiveness, \emph{J. Combin. Theory Ser. A} \textbf{53} (1990), 257--285.
+
+\bibitem{Ham72}
+J.~M. Hammersley, A few seedlings of research, in \emph{Proc. Sixth Berkeley Symp. Math. Statist. Probab.}, Vol.~1, Univ. California Press, 1972, 345--394.
+
+\bibitem{OR03}
+A.~Okounkov and N.~Reshetikhin, Correlation function of Schur process with application to local geometry of a random 3-dimensional Young diagram, \emph{J. Amer. Math. Soc.} \textbf{16} (2003), 581--603.
+
+\bibitem{Sch61}
+C.~Schensted, Longest increasing and decreasing subsequences, \emph{Canad. J. Math.} \textbf{13} (1961), 179--191.
+
+\bibitem{Sta99}
+R.~P. Stanley, \emph{Enumerative Combinatorics, Vol.~2}, Cambridge University Press, 1999.
+
+\end{thebibliography}
+\end{document}

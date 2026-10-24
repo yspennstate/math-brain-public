@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_prepublication": "0b39df26b6064a557bcc09e06a4fb1e0bdd43384",
+  "account": "account02",
+  "slot": "B02",
+  "run_id": "20260922T130957Z-account02-B02-qform-r11",
+  "assignment": "Integrated Fourier estimate",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account03/B02",
+    "run_id": "20260922T121820Z-account03-B02-QFORM-r11",
+    "theorem": "QFORM-RANK2-PLUS-PIVOT-FOURIER-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ac57190328fc109873ebe3b17122d835abbc2c3a",
+    "blob": "cf1b7abb4f9bd91f991db6e54c0c36e92ad6125f",
+    "application": "Replaced the partner's exact decoupled third pivot by a coupled null-direction square transform in L^3_t(L^2_y), retaining the partner rank-two Plancherel credit."
+  },
+  "new_result": {
+    "id": "QFORM-COUPLED-2x3-MIXED-FOURIER-v1",
+    "scope": "Disjoint original coordinate sets |I|=2, |J|=3; rank(A[I,J])=2 with singular product Delta>0; null vector n has delta=n^T A[J,J] n !=0; arbitrary outside couplings/eigenvalues and arbitrary independent densities <=1.",
+    "characteristic_function_bound": "||phi_Q||_1 <= pi*2^(175/48)*3^(-1/4)*Delta^(-3/8)*|delta|^(-1/4)",
+    "density_bound": "||p_Q||_infinity <= 2^(127/48)*3^(-1/4)*Delta^(-3/8)*|delta|^(-1/4) < 5*Delta^(-3/8)*|delta|^(-1/4)",
+    "regularity": "continuous representative vanishing at infinity"
+  },
+  "external_source_applied": {
+    "citation": "Livshyts--Paouris--Pivovarov, On sharp bounds for marginal densities of product measures, arXiv:1507.07949",
+    "used_statement": "Any k-dimensional marginal of a product probability density with one-dimensional factors bounded by one has density at most 2^(k/2); k=1 was used after an affine shear."
+  },
+  "math_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "737bea92d3c3b9db39d751e558bbd3309f292c3e",
+    "blob": "37d9fcd02e073495291cbef6b18184b34813a7f5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260922T130957Z-account02-B02-qform-r11/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "56b48e86af1d96cb6270b020f43c419a9c52a27c",
+    "blob": "7b64479f9b4477e5794d511564297823f19d11de",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B02/20260922T130957Z-account02-B02-qform-r11.md"
+  },
+  "unresolved_implication": "From only three eigenvalues |lambda|>=1, aggregate either a rank-three cross-block resource or a coupled 2x3 resource with Delta^3 delta^2 bounded below at dimension-free scale, or extend the mixed-norm theorem to a high-cardinality aggregate null direction. Additional eigendirections remain able to cancel a three-mode cross block.",
+  "next_step": "Seek an exterior-algebra/random-cut identity for the combined rank-two cross-volume times null-direction curvature, paying the reciprocal constant only after aggregation; test on Walsh/Hadamard and hard-saddle families.",
+  "target_wide_fourier_criterion": "OPEN; no counterexample to uniform target-wide L1 characteristic-function control found in this run."
+}

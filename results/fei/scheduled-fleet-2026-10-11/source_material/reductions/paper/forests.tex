@@ -1,0 +1,326 @@
+\section{Conditioned witness forests}\label{sec:forests}
+
+We refine the queue reference of~\cite{Threshold} by retaining whole-forest costs, conditioning on nonempty roots, and subtracting the entropy of interchangeable witnesses. The forest bound itself uses ordered covers of gate supports; the subsequent fractional estimate uses the signed noise bounds for regular gates from~\cite{Threshold}.
+
+\subsection{Ordered covers and a reference law}
+
+Write $f=h_1\vee\cdots\vee h_N$, with a union true when at least one component equals $1$. Remove constant-false gates. A constant-true gate makes $f$ constant, so suppose every remaining gate is nonconstant. Let $R_l$ be its relevant support. Cover $R_l$ by $M_l\ge1$ ordered subsets $R_{l,t}\subseteq R_l$. For $i\in R_{l,t}$ let $r_{l,t}(i)$ be its rank and let $U_i^{l,t}$ be its strict predecessors. Put
+\[
+ \gamma=\frac65,\quad p_l=\P(h_l=1),\quad
+ \pi_l=\min(p_l,1/2),\quad b_l=\log(1/\pi_l).
+\]
+Choose positive weights satisfying the fractional incidence constraints
+\begin{equation}\label{eq:forestpacking}
+ \sum_{l:j\in R_l}\lambda_l\le1\qquad(j\in[n]),
+\end{equation}
+and write
+\begin{equation}\label{eq:forestrootconstants}
+ L_l=\log(1/\lambda_l),\qquad
+ \Lambda=\sum_l\log(1+\lambda_l\pi_l),\qquad
+ Z=1-2^{-\Lambda}.
+\end{equation}
+Each $\lambda_l\le1$. For $s\ge1$ and $i\in R_l$, define
+\[
+ \theta_s^l(i)=\max_{t:i\in R_{l,t}}
+       \min\{1,(s/r_{l,t}(i))^\gamma\},\qquad
+ Z_s^l=e_s\bigl((\theta_s^l(i))_{i\in R_l}\bigr),
+\]
+where $e_s$ is the elementary symmetric polynomial of degree $s$.
+
+\begin{lemma}[Subset normalizer]\label{lem:forestnormalizer}
+For $1\le s\le|R_l|$,
+\[
+ \sum_{i\in R_l}\theta_s^l(i)\le6M_ls,
+ \qquad Z_s^l\le(6eM_l)^s.
+\]
+\end{lemma}
+\begin{proof}
+For one ordered subset, the sum of its weights is at most
+\[
+ s+s^\gamma\int_s^\infty t^{-\gamma}\,dt
+ =\frac{\gamma}{\gamma-1}s=6s.
+\]
+Bound the maximum defining $\theta$ by the sum over its $M_l$ orders. Finally $e_s(w)\le(\sum_iw_i)^s/s!$ and $s!\ge(s/e)^s$, proving the claim.
+\end{proof}
+
+Define the following random queue.
+\begin{enumerate}[label=(\roman*)]
+\item Independently activate gate $l$ as a root with probability $\lambda_l\pi_l/(1+\lambda_l\pi_l)$, and queue the roots in a fixed order.
+\item At each visit to $l$, choose $s\ge1$ with probability $1/[s(s+1)]$. An invalid size fails. Otherwise choose an $s$-subset $B\subseteq R_l$ with probability $\prod_{i\in B}\theta_s^l(i)/Z_s^l$.
+\item Choose $c\ge0$ with probability $1/[(c+1)(c+2)]$, then choose a multiset of $c$ elements of $B$ uniformly. Order its occurrences deterministically. For each occurrence of $j$, select gate $l'$ with probability $\lambda_{l'}$ whenever $j\in R_{l'}$, and append it to the queue. The remaining probability is failure; it is nonnegative by~\eqref{eq:forestpacking}.
+\item If the queue empties, output the union of the selected subsets. Failed or infinite runs contribute no output mass.
+\end{enumerate}
+Let $Q_1(A)$ be the output subprobability. No root is activated with probability $2^{-\Lambda}$. Every finite run with a root outputs a nonempty set. Consequently
+\begin{equation}\label{eq:forestconditioning}
+ \sum_{A\ne\varnothing}Q_1(A)\le Z,
+ \qquad Q_*(A)=Q_1(A)/Z\quad(A\ne\varnothing)
+\end{equation}
+is a subprobability law. Conditioning on a nonempty initial root set therefore remains valid without any assumption of almost sure termination.
+
+\subsection{Partition forests and their costs}
+
+Fix a nonempty Fourier set $A$ with $P_f(A)>0$. Every $j\in A$ belongs to some $R_l$. Choose an assignment $\tau(j)$ to such a gate, and put
+\[
+ A_l=\{j\in A:\tau(j)=l\},\quad s_l=|A_l|,
+ \quad\mathcal F=\{l:s_l>0\},\quad\kappa_l=|A\cap R_l|.
+\]
+On $\mathcal F$ draw an edge $l\to l'$ if $l\ne l'$ and $A_l\cap R_{l'}\ne\varnothing$. Choose one root in each source strongly connected component and a directed spanning forest from these roots. Choose a connecting variable in $A_l\cap R_{l'}$ for each parent--child edge. These choices prescribe a finite queue run that visits every gate in $\mathcal F$ once, selects $B_l=A_l$, and outputs $A$. We call such a run a \emph{partition forest}. Its selected subsets partition $A$; arbitrary once-per-gate runs with overlapping selected subsets are not included in this definition.
+
+For $j\in A\cap R_l$, define
+\[
+ F_l^j(A)=\min_{t:j\in R_{l,t}}
+ \ln\frac{r_{l,t}(j)}{|A\cap U_j^{l,t}|+1}.
+\]
+These quantities are nonnegative. For a partition forest $r$ with root set $\mathcal R$, set
+\begin{align}
+ B_\lambda(A;r)={}&
+ \sum_{l\in\mathcal F}\left[
+ L_l+s_l\log M_l+\gamma s_l\log\frac{\kappa_l}{s_l}\right]
+ +\sum_{l\in\mathcal R}b_l\notag\\
+ &+\frac{\gamma}{\ln2}\sum_{j\in A}F_{\tau(j)}^j(A).\label{eq:forestcost}
+\end{align}
+Put $B_\lambda(A)=\min_r B_\lambda(A;r)$ and $B_\lambda(\varnothing)=0$. There are finitely many partition forests for each $A$.
+
+\begin{lemma}[Root disjointness]\label{lem:forestrootdisjoint}
+The sets $A\cap R_l$ for distinct roots of a partition forest are pairwise disjoint.
+\end{lemma}
+\begin{proof}
+If $j$ lies in two such intersections, its assigned gate $\tau(j)$ has an edge to both roots, except for a possible edge within its own component. A source component cannot receive an edge from a different component. Thus $\tau(j)$ would belong to both source components, a contradiction.
+\end{proof}
+
+\begin{theorem}[Conditioned posterior forest bound]\label{thm:posteriorforest}
+Put $v=\Var(f)$ and
+\[
+ K_{\rm ref}=3+2\log3+\log(6e).
+\]
+For every nonempty spectral $A$, let $\mathcal P_A$ be a probability distribution on distinct actual partition-forest runs producing $A$. Then
+\begin{align}
+ \HH(f)\le{}&h_2(v)+v(\Lambda+\log Z)+K_{\rm ref}\I(f)\notag\\
+ &+\sum_{A\ne\varnothing}P_f(A)
+ \left[\E_{r\sim\mathcal P_A}B_\lambda(A;r)
+       -\HH(\mathcal P_A)\right].\label{eq:posteriorforest}
+\end{align}
+In particular,
+\begin{equation}\label{eq:minforest}
+ \HH(f)\le h_2(v)+v(\Lambda+\log Z)
+             +K_{\rm ref}\I(f)+\E B_\lambda(A).
+\end{equation}
+Here $h_2$ is binary entropy, and the expectation in~\eqref{eq:minforest} is under $P_f$.
+\end{theorem}
+\begin{proof}
+For a specified root set, its selection probability is
+\[
+ 2^{-\Lambda}\prod_{l\in\mathcal R}\lambda_l\pi_l.
+\]
+Root and child gate names together therefore cost $\sum_{l\in\mathcal F}L_l$: every visited gate is a root or exactly one child. The root rarity cost is $\sum_{l\in\mathcal R}b_l$.
+
+For $i\in A_l$, choose an inner order attaining $F_l^i(A)$. Since $|A\cap U_i^{l,t}|+1\le\kappa_l$,
+\[
+ \ln^+\frac{r_{l,t}(i)}{s_l}
+ \le F_l^i(A)+\ln\frac{\kappa_l}{s_l}.
+\]
+Lemma~\ref{lem:forestnormalizer} bounds the subset-choice costs by
+\[
+ |A|\log(6e)+\sum_l s_l\log M_l
+ +\gamma\sum_l s_l\log(\kappa_l/s_l)
+ +\frac{\gamma}{\ln2}\sum_{j\in A}F_{\tau(j)}^j(A).
+\]
+The size choices cost at most $|A|\log3$, using $s(s+1)\le3^s$. If $c_l$ is the number of children, then
+\[
+ |\mathcal R|+\sum_lc_l=|\mathcal F|\le|A|.
+\]
+The choices of $c_l$ cost at most $|A|(1+\log3)$, since $(c+1)(c+2)\le2\,3^c$. The multiset choices cost at most $2|A|$, using $\binom{s+c-1}{c}\le2^{s+c}$. Thus the probability $q_1(r)$ of this actual run satisfies
+\[
+ -\log q_1(r)\le\Lambda+K_{\rm ref}|A|+B_\lambda(A;r).
+\]
+After conditioning on a nonempty root set, $q(r)=q_1(r)/Z$, so its negative logarithm gains $\log Z$.
+
+For a probability law $\mathcal P_A$ on the indicated runs, log-sum gives
+\[
+ -\log Q_*(A)\le
+ \E_{\mathcal P_A}\log\frac1{q(r)}-\HH(\mathcal P_A).
+\]
+Indeed, normalizing $q$ within this finite collection gives the same inequality with its total mass in place of $Q_*(A)$, and that mass is at most $Q_*(A)$. Count an actual run only once if it has several abstract descriptions. Finally use the subprobability reference with mass $1-v$ at the empty set and mass $vQ_*(A)$ at nonempty $A$. Gibbs' inequality proves~\eqref{eq:posteriorforest}. A point mass at a minimizing forest proves~\eqref{eq:minforest}.
+\end{proof}
+
+\begin{lemma}[Weighted activation bound]\label{lem:forestpath}
+The quantities above satisfy
+\[
+ v\Lambda\le(\log e)\I(f).
+\]
+\end{lemma}
+\begin{proof}
+Put $p_0=\P(f=-1)$. Independently resample all coordinates of $R_l$ in a fixed order. The initial event $f=-1$ and the final event $h_l=1$ are independent and have joint probability $p_0p_l$. A path between them contains a false-to-true transition. Resampling coordinate $j$ makes such a transition with probability $\I_j(f)/4$, since every intermediate input is uniform. Weight the resulting union bound by $\lambda_l$ and sum:
+\[
+ p_0\sum_l\lambda_lp_l
+ \le\frac14\sum_j\I_j(f)\sum_{l:j\in R_l}\lambda_l
+ \le\I(f)/4.
+\]
+Now $v\le4p_0$, $\pi_l\le p_l$, and $\log(1+x)\le x\log e$ give the result.
+\end{proof}
+
+The standard level-entropy estimate, obtained from the edge-isoperimetric inequality, gives $h_2(v)\le2\I(f)$; see~\cite{OWZ11,Threshold}. The conditioning term has a distinct role. For one conjunction of width $n$ with $\lambda=1$, one has
+\[
+ \Lambda+\log Z=\log\pi=-n,
+\]
+which cancels its root rarity cost exactly.
+
+\subsection{A fractional bound using pivotal witness distributions}
+
+For this subsection suppose $h_l$ is a Boolean function of $M_l$ regular gates, and take their relevant supports and desirability orders as the ordered cover. A regular gate here means a gate which, after complementing some input coordinates, is monotone and admits a total desirability order: replacing $(x_i,x_j)=(-1,1)$ by $(1,-1)$ cannot decrease its value whenever $i$ precedes $j$. Different gates may use different orders and input orientations.
+
+We use two signed-piece estimates from~\cite{Threshold}. Put $\beta=120/11$. If $d\in\{0,\pm1\}$ is supported on the $j$-pivotal set of one regular inner gate, its normalized Fourier law $\nu$ satisfies
+\begin{equation}\label{eq:forestrankinput}
+ \nu(F_l^j>u)\le\sqrt{2e}\,e^{-u/2}\qquad(u\ge0).
+\end{equation}
+If $d$ is supported on the $j$-pivotal set of $h_l$, then
+\begin{equation}\label{eq:forestrareinput}
+ \nu(\kappa_l<b_l/\beta)
+ \le2^{3/5}2^{-5b_l/12}.
+\end{equation}
+Both statistics are evaluated at $A=T\cup\{j\}$ under the Fourier law of $d$. Arbitrary signs of $d$ are permitted. In~\eqref{eq:forestrareinput}, the density estimate is applied on fibers fixing only coordinates outside $R_l$; it does not assume that the original gate probability survives restrictions inside $R_l$.
+
+For every $j$ with $\alpha_j:=\I_j(f)>0$, split $\D_jf$ pointwise among pivotal outer gates and then among pivotal regular inner gates, with fixed tie rules. Let $d_{j,l,t}$ be the resulting disjoint signed pieces, and put
+\[
+ q_{j,l,t}=\frac{\|d_{j,l,t}\|_2^2}{\alpha_j},\qquad
+ \sum_{l,t}q_{j,l,t}=1,
+ \qquad
+ S_j(\lambda)=\sum_{l,t}\sqrt{q_{j,l,t}}\,
+ M_l^{5/48}\lambda_l^{-11/48}.
+\]
+Zero pieces are omitted. A pivotal outer gate has a pivotal inner gate, so this decomposition exists.
+
+\begin{theorem}[Fractional pivotal-witness bound]\label{thm:fractionalforest}
+With the preceding hypotheses,
+\begin{equation}\label{eq:fractionalforest}
+ \HH(f)\le C_0\I(f)+\frac{48}{5}
+       \sum_j\alpha_j\log S_j(\lambda)+v\log Z,
+\end{equation}
+where
+\begin{align*}
+ C_0={}&2+\log e+K_{\rm ref}+\frac{120}{11}\\
+ &+\frac{24}{5}\left[\log(\sqrt{2e}+2^{3/5})+\log e\right]
+ =40.80487605924\ldots<41.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Call $l$ dense at $A$ if $\kappa_l\ge b_l/\beta$, and set
+\[
+ G_j(l)=\frac{\gamma}{\ln2}F_l^j(A)
+       +b_l1_{\{l\text{ not dense}\}},\qquad
+ C_j(A)=\min_{l:j\in R_l}\left[G_j(l)+\frac{11}{5}L_l+\log M_l\right].
+\]
+Choose $\tau$ attaining these minima. Lemma~\ref{lem:forestrootdisjoint} pays the rarity of dense roots by $\beta|A|$. Each nondense root owns at least one coordinate, so its rarity can be charged to the corresponding sum of $G_j$'s. Also
+\[
+ \sum_l\lambda_l\kappa_l\le|A|.
+\]
+The log-sum inequality therefore gives
+\[
+ \sum_l s_l\log(\kappa_l/s_l)\le\sum_l s_lL_l.
+\]
+Since $\sum_{l\in\mathcal F}L_l\le\sum_ls_lL_l$, the forest cost satisfies
+\begin{equation}\label{eq:forestcoarsening}
+ B_\lambda(A)\le\beta|A|+\sum_{j\in A}C_j(A).
+\end{equation}
+
+Let $\nu_{j,l,t}$ be a piece's normalized Fourier law. Splitting the rank and rarity costs at $u/2$ in~\eqref{eq:forestrankinput}--\eqref{eq:forestrareinput} gives
+\[
+ \nu_{j,l,t}(G_j(l)>u)\le C_*2^{-\delta u},\qquad
+ C_*=\sqrt{2e}+2^{3/5},\quad\delta=5/24.
+\]
+For $u<0$ the right side exceeds $1$, so the inequality remains valid. For any Fourier event $E$, Minkowski's inequality gives
+\[
+ \nu_j(E)^{1/2}\le\sum_{l,t}\sqrt{q_{j,l,t}}\,
+                                  \nu_{j,l,t}(E)^{1/2},
+\]
+where $\nu_j(T)=\wh{\D_jf}(T)^2/\alpha_j$. On $E=\{C_j>u\}$, each piece satisfies $G_j(l)>u-(11/5)L_l-\log M_l$. Hence
+\[
+ \nu_j(C_j>u)\le\min\{1,C_*S_j(\lambda)^2 2^{-\delta u}\}.
+\]
+The exponents are $\delta/2=5/48$ and $\delta(11/5)/2=11/48$. Since $S_j\ge1$, integration yields
+\[
+ \E_{\nu_j}C_j\le\frac{24}{5}(\log C_*+\log e)
+                       +\frac{48}{5}\log S_j.
+\]
+Finally $P_f(A)=\alpha_j\nu_j(A\setminus\{j\})$ for $j\in A$. Sum, then apply~\eqref{eq:minforest},~\eqref{eq:forestcoarsening}, Lemma~\ref{lem:forestpath}, and $h_2(v)\le2\I(f)$.
+\end{proof}
+
+If the read number is $k$ and $M_l\le M$, choose $\lambda_l=1/k$. There are at most $kM$ nonzero pieces at each coordinate, so $S_j\le k^{35/48}M^{29/48}$. Dropping the nonpositive conditioning term recovers
+\[
+ \HH(f)\le\left(41+7\log k+\frac{29}{5}\log M\right)\I(f).
+\]
+Keeping only the outer witness probabilities $q_{j,l}=\sum_tq_{j,l,t}$ gives the intermediate bound
+\begin{equation}\label{eq:outerfractional}
+ \HH(f)\le\left(41+\frac{29}{5}\log M\right)\I(f)
+ +\frac{48}{5}\sum_j\alpha_j
+       \log\sum_l\sqrt{q_{j,l}}\lambda_l^{-11/48}.
+\end{equation}
+For uniform weights, its last term is $(11/5)\I(f)\log k+(24/5)\sum_j\alpha_j\HH_{1/2}(q_j)$, where $\HH_{1/2}(q)=2\log\sum_l\sqrt{q_l}$.
+
+\subsection{Addressing and the cost of repeated labels}
+
+Let $a\ge1$, $N=2^a$, and $f(x,y)=y_x$, with one data bit $y_b$ per selector word $b$. Its canonical DNF has the gates $h_b=[x=b\text{ and }y_b=1]$. Each has probability $1/(2N)$ and support consisting of all selectors and its own data bit. The expansion
+\[
+ f=\sum_b1_{\{x=b\}}y_b
+\]
+has $N^2$ coefficients of magnitude $1/N$, giving
+\begin{equation}\label{eq:addressingHI}
+ \HH(f)=2a,\qquad\I(f)=1+a/2.
+\end{equation}
+Each selector has influence $1/2$; each data bit has influence $1/N$.
+
+\begin{proposition}[Coordinatewise obstruction and one-root repair]\label{prop:addressforest}
+For this DNF, the nonnegative pressure term in~\eqref{eq:outerfractional}, minimized over fractional incidence weights, is exactly
+\begin{equation}\label{eq:addresspressure}
+ \frac72a^2+\frac{11}{5}a.
+\end{equation}
+Nevertheless, the conditioned whole-forest bound admits witnesses satisfying
+\begin{equation}\label{eq:addressforestpayment}
+ \E B_\lambda(A)+\log Z\le a+\frac65\I(f).
+\end{equation}
+\end{proposition}
+\begin{proof}
+For a selector derivative, a pivotal input has one true endpoint and one false endpoint. The true endpoint satisfies exactly one gate, so its witness is forced. Each gate's piece has density $1/(2N)$, giving $q_{j,b}=1/N$. A data derivative has a deterministic witness. All selector incidence constraints reduce to $\sum_b\lambda_b\le1$.
+
+For a selector, the sum in~\eqref{eq:outerfractional} is $N^{-1/2}\sum_b\lambda_b^{-11/48}$. Convexity makes it minimal at $\lambda_b=1/N$, with value $N^{35/48}$. The data contribution is minimized at the same weights by concavity of $\log$. The $a$ selectors, each of influence $1/2$, contribute $(7/2)a^2$, and the data coordinates contribute $(11/5)a$. This proves~\eqref{eq:addresspressure}.
+
+For a spectral set $A=\{y_b\}\cup S$, assign every coordinate to gate $b$. There is one root, no children, and $s_b=\kappa_b=|S|+1$, so the allocation cost vanishes. Choose $\lambda_b=1/N$, and order each clause's selectors first in their common order, with its data variable last. The label costs $a$ and the root rarity costs $a+1$.
+
+Conditional on a selector of rank $r$ being selected, its predecessor count is $\operatorname{Bin}(r-1,1/2)$. The exact identity
+\[
+ \E\frac1{1+\operatorname{Bin}(r-1,1/2)}
+ =\frac{2(1-2^{-r})}{r}\le\frac2r
+\]
+and Jensen's inequality bound its expected $F$-cost by $\ln2$. The same argument with $r=a+1$ applies to the always-present data coordinate. Consequently
+\[
+ \E\sum_{j\in A}F_b^j(A)\le\I(f)\ln2,
+ \qquad \E B_\lambda(A)\le2a+1+\frac65\I(f).
+\]
+Finally $Z\le\sum_b\lambda_b\pi_b=1/(2N)$, proving~\eqref{eq:addressforestpayment}.
+\end{proof}
+
+Thus the quadratic loss in~\eqref{eq:addresspressure} is caused by charging a shared label separately at many Fourier coordinates. It is absent from the whole-forest construction.
+
+\subsection{Posterior label erasure and the remaining condition}
+
+A simple identity illustrates the entropy subtraction in Theorem~\ref{thm:posteriorforest}. Choose uniformly a $w$-subset of $[n]$, and then uniformly an $s$-subset of it, with $s\le w$. The probability of any specified $s$-set $A$ is
+\[
+ \frac{\binom{n-s}{w-s}}{\binom nw\binom ws}
+ =\frac1{\binom ns}.
+\]
+The posterior root entropy is $\log\binom{n-s}{w-s}$; it subtracts the latent label cost exactly. A single chosen witness would miss this saving.
+
+Theorem~\ref{thm:posteriorforest} leaves the following concrete sufficient condition for unrestricted FEI: a universal finite $K$ and, for every Boolean $f$, ordered gate representations, fractional weights, and realizable partition-forest distributions satisfying
+\begin{equation}\label{eq:foresttarget}
+ \boxed{\quad
+ v(\Lambda+\log Z)+
+ \sum_{A\ne\varnothing}P_f(A)
+ \left[\E_{r\sim\mathcal P_A}B_\lambda(A;r)-\HH(\mathcal P_A)\right]
+ \le K\I(f).
+ \quad}
+\end{equation}
+This would give the FEI constant $2+K_{\rm ref}+K$. The condition remains open. If all successful runs are permitted, successively larger finite collections identify the variational infimum with the cross-entropy of the output reference. This does not bound that cross-entropy. Nor does a generic minterm representation suffice: the uniform reference on nonempty subsets gives only
+\[
+ \HH(f)\le h_2(v)+v\log(2^n-1)\le2\I(f)+nv.
+\]
+For balanced odd majority, $v=1$ while $\I(f)\le\sqrt n$, so this dimension term cannot be absorbed universally. An estimate such as~\eqref{eq:foresttarget} must account for the sharing and erasure of witnesses using additional structure of Boolean spectra.

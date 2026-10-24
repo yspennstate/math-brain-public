@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B11",
+  "run_id": "20260923T211633Z-account01-B11-QFORM-auto11",
+  "source_control_commit_start": "62da6422f0b0746dbba3c510189066ef2ed5fe4f",
+  "source_control_commit_prepublication": "c6b6d6cc4c411447f57daa129b87439d8ac15ec4",
+  "control_revision": "2026-09-22.15",
+  "correction_inbox_sha": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "status": "NEW_SUPPORTING_THEOREMS_FULL_QFORM_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "premises": [
+    "account03/B11 r42 finite-heavy-row reduction at math-open-problems@8207aee23be9554e960f48d82c2e706eacc50c04",
+    "account02/B11 fixed-puncture theorem: density <= 6 |det C_cross|^{-1/3} and r41 numerical crossing bound",
+    "completed rank-three scalar-pivot / affine half-Riesz theorem",
+    "account01/B10 r15 two-heavy near-null physical-pair theorem",
+    "completed pair-log theorem with third spectral scale"
+  ],
+  "results": [
+    {
+      "id": "QFORM-NEARCOLOOP-CONDITIONABLE-COCIRCUIT-ALLPIVOT-v1",
+      "scope": "true near-coloop exact-rank-three chamber with an exact retained graph after conditioning an ORIGINAL-coordinate cocircuit and transverse Gram floor g",
+      "conclusion": "essential density bound <170/(g s); pays defect carrier of at most two leaves after the large-leaf exit"
+    },
+    {
+      "id": "QFORM-R42-FINITE-HEAVY-TO-UNIQUE-NEARISOTROPIC-v1",
+      "scope": "account03/B11 r42 low-aggregate finite-heavy branch",
+      "conclusion": "after fixed-puncture, pivot and two-heavy exits, J is a singleton i with q_i>3/4, |A_ii|<mu q_i/16, |h.z_i|>beta0 s/sqrt2 and ||A_H[H\\{i},i]||_2>(sqrt765/32)mu"
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account02/B11",
+    "application": "fixed-puncture theorem applied to |sigma3|>=beta0 s/8, giving ||p_Q||_inf<447.392/s continuously; canonical report also applied it at sigma3>=s/288 giving <388/s"
+  },
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f344e3c652d2c92a7871e846872843ea96e0029a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/20260923T211633Z-account01-B11-QFORM-auto11/",
+    "files": ["REPORT.md", "R42_HEAVY_ADDENDUM.md", "CHECK_R42_HEAVY.py", "CHECK_R42_HEAVY_OUTPUT.txt"]
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "904c2b34596cda8267b391b38f15d74974e75049",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B11/20260923T211633Z-account01-B11-QFORM-auto11.md"
+  },
+  "unresolved_implication": "QFORM-UNIQUE-NEARISOTROPIC-HEAVYROW-AGGREGATE-RECEIVER-v1: turn the unique original scalar plus fixed aggregate off-diagonal row energy and internal-curvature incidence into a density bound uniform through sigma3->0 without same-bank conditional-cap assumptions or one-good-entry selection.",
+  "continuity": "OPEN in the final surviving branch; proved only on the cited fixed-puncture/cocircuit subbranches where stated",
+  "full_solution": false
+}

@@ -1,0 +1,11 @@
+{
+  "helper_version": "A029-independent-verify-v1",
+  "family": "All Boolean truth tables n=0..4; 65814 tables, 65804 nonconstant",
+  "case_count": 65814,
+  "domain": "Every mask, no symmetry reduction",
+  "arithmetic": "Direct Walsh character sums, exact boundary influences; independently implemented -ln(1-t) rational series 160 terms; 2^72 fixed point; Fraction min-cost DP checks all depth<=2 trees implicitly",
+  "memory_estimate_mb": 30,
+  "max_runtime_seconds": 1800,
+  "pilot": "Primary n<=3 census finished in 0.019 seconds; this verifier shares its bounded domain but uses independent mathematical implementation",
+  "purpose": "Certify upper bound gap<=2 and classify exact equality; different implementation is not independent-agent review"
+}

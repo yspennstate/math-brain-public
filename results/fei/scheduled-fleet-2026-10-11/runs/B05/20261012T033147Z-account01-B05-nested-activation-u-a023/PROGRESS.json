@@ -1,0 +1,96 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "control_revision": "2026-10-12.1",
+  "run_id": "20261012T033147Z-account01-B05-nested-activation-u-a023",
+  "stream": "B05",
+  "packet_id": "A023",
+  "packet_ids": ["A023"],
+  "gap_id": "B05_RARE_REFUNDS",
+  "attempt_id": "A023-B05-RR-09",
+  "attempt_counter": 9,
+  "method": "Exact product-spectrum factorization for a fresh point activation, followed by a signed physical restriction telescope retaining the arbitrary terminal U packet.",
+  "prior_status": "An independently accepted constant-24 L+Q payment existed for disjoint point-defect products, and the U source proved one-node rare-log cancellation; no arbitrary-terminal-core, all-depth retained-U theorem was available.",
+  "mathematical_delta": "For every arbitrary Boolean terminal core g behind d fresh nested point controls, proved sum_v w_v Delta U = U(F)-2^-d U(g) <= C_* I_ctl(F), C_*=1+2(1+e^-1)/ln2<4.947, independently of d, activation probability, terminal dimension/spectrum, active point, and control order.",
+  "deliverable_status": "SAVED_AND_EXACT_BLOB_READBACK_VERIFIED",
+  "mathematical_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "claim_versions_used": [
+    {
+      "claim_id": "U-LOC",
+      "version": "source blob 5797e9cc38598cbee391cc99d4b1abcd554b662e",
+      "status": "SOURCE_PROVED",
+      "role": "Delta_i U=B_i-Gamma_i+KL_i convention and exact local identity"
+    },
+    {
+      "claim_id": "B05-A023-POINT-DEFECT-POSITIVE-CREDIT-BOUND",
+      "version": 1,
+      "status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_SCOPE",
+      "review_commit": "34a9fd4b50f25c67c132c663f4b5edfd11027589",
+      "role": "retired prior restricted baseline and scope boundary"
+    }
+  ],
+  "claims_created_or_changed": [
+    {
+      "claim_id": "B05-A023-FRESH-NESTED-ACTIVATION-U",
+      "version": 1,
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement_sha256": "67a90ff9f83c8b0e692985b43130cfe45187a02a80eb66d521ee2f97251db65a"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/math-research-brain",
+      "commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+      "paths": [
+        "scheduled_tasks/work/shared/full-fei-only-2026-10-12/ORDER.md",
+        "scheduled_tasks/work/shared/full-fei-only-2026-10-12/CASE_TARGETS.json"
+      ]
+    },
+    {
+      "repository": "<private-repo>",
+      "ref": "main",
+      "path": "12_cognitive_architecture/math/fei_campaign_2026_10/opus/U-universal/NOTES.md",
+      "blob_sha": "5797e9cc38598cbee391cc99d4b1abcd554b662e"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "34a9fd4b50f25c67c132c663f4b5edfd11027589",
+      "path": "reports/fei-2026-10-11/runs/B19/20261012T025018Z-account01-B19-positive-credit-review-a094/REPORT.md"
+    }
+  ],
+  "verification": {
+    "command": "python3 verify_nested_activation.py",
+    "arithmetic": "direct floating Walsh computation used only as a transcription audit; theorem is analytic",
+    "scope": "all Boolean terminal cores through n=3, 37 deterministic structured n=4 terminals, depths 1..5",
+    "assertions": 6275,
+    "result": "PASS",
+    "max_observed_ratio": 2.23495553121423,
+    "proved_constant": 4.946865772624014,
+    "random_seed": null
+  },
+  "case_extension": {
+    "starting_class": "disjoint point-defect products with complete L+Q packet",
+    "new_class": "arbitrary Boolean terminal core behind a fresh point activation of arbitrary depth",
+    "unpaid_parameter": "coherent core changes or shared physical coordinates across ancestors"
+  },
+  "acceptance_evidence": "Complete analytic proof and deterministic transcription checker; independent A087/A094 reconstruction remains required.",
+  "exact_remaining_obstacle": "For two or more distinct ancestor-dependent cores, nonempty Fourier pairs no longer factor through one terminal q; the coherent cross term has no proved single-use physical owner.",
+  "next_consumers": ["A027", "A028", "A064", "A087", "A094", "B20"],
+  "reviewer_targets": ["A087", "A094"],
+  "next_action": "Derive the exact two-core nested formula, isolate its coherent cross term, and test whether one fresh branch reserve pays it without reusing terminal U.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [],
+  "delivery": {
+    "canonical": "SAVED_AND_EXACT_BLOB_READBACK_VERIFIED_AT_406d75766f55ed8348353894953eccab08f6f1a3",
+    "brain_mirror": "SAVED_AND_EXACT_BLOB_READBACK_VERIFIED_AT_3f4377a83936afbfcfd389a677b50a9605159c20",
+    "native_brain_ingestion": "NOT_CLAIMED",
+    "independent_review": "PENDING"
+  },
+  "full_fei_status": "OPEN",
+  "model_metadata": {
+    "model": "Codex as exposed by runtime",
+    "version": "UNKNOWN",
+    "reasoning_effort": "UNKNOWN",
+    "subagents": 0
+  }
+}

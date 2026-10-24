@@ -1,0 +1,661 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\N}{\mathbb N}
+\newcommand{\R}{\mathbb R}
+
+\title{Degree Fluctuations in Bilateral Preference Random Graphs}
+\author{Yitzchak Shmalo}
+\date{September 19, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $LK(n,k)$ be the bilateral preference random graph obtained by placing independent continuous scores on the edges of $K_n$, letting each vertex prefer its $k$ incident edges of smallest score, and retaining an edge precisely when both endpoints prefer it. Dabirian and Subramanian asked for the limiting distribution of the standardized degree $(D-\E D)/\sqrt{\Var D}$ and observed that even $\Var D$ is difficult because of the dependence between edge-retention events. We characterize the degree fluctuations in all asymptotic regimes. If $k\to\infty$ and $n-k\to\infty$, then, with
+\[
+s_n^2=\frac{k(n-k)}n,
+\qquad g(z)=\phi(z)+z\Phi(z),
+\]
+we prove
+\[
+\frac{k-D}{s_n}\Longrightarrow g(Z)
+\]
+with convergence of the first two moments. Hence
+\[
+\E D=k-\frac{s_n}{\sqrt\pi}+o(s_n),
+\qquad
+\Var(D)=\left(\frac13+\frac{\sqrt3-2}{2\pi}\right)s_n^2+o(s_n^2),
+\]
+and the standardized degree converges to an explicit non-Gaussian law. At the opposite dense boundary, if $r=n-1-k\ge1$ is fixed, then $k-D$ converges to an explicit Gamma-mixed Poisson variable. These boundary laws vary with $r$, while as $r\to\infty$ they converge after standardization to the same interior non-Gaussian law. Fixed finite $k$ is reconciled with the previously known Erlang-weighted-tree local limit. Thus there is a universal interior law but no single standardized law for arbitrary switching sequences $k(n)$.
+\end{abstract}
+
+\section{Model and source question}
+
+Assign independent $U_{ij}=U_{ji}\sim\mathrm{Unif}(0,1)$ to the edges of $K_n$. Vertex $i$ prefers the $k$ incident edges of smallest score. The graph $LK(n,k)$ retains $(i,j)$ if and only if both $i$ and $j$ prefer that edge. Since only score ranks matter, this is equivalent to the score orientation used in the source literature.
+
+Fix a root vertex $0$ and write $D=D_{n,k}$ for its degree. Dabirian and Subramanian ask for the limiting distribution of
+\[
+\frac{D-\E D}{\sqrt{\Var D}},
+\]
+and note that even computing $\Var D$ is difficult because the bilateral decisions are dependent. Their sharp mean-degree theorem is stated in the growing sparse regime $k\to\infty$, $k=o(n^{1/3})$. Our first theorem strictly contains that regime and, in fact, covers every interior sequence $k\to\infty$, $n-k\to\infty$.
+
+Put
+\[
+H:=k-D,
+\qquad
+s_n^2:=\frac{k(n-k)}n,
+\qquad
+p_n:=\frac kn,
+\qquad
+\sigma_n:=\frac{s_n}{n}.
+\]
+Thus $H$ counts root-preferred edges rejected by their opposite endpoints.
+
+Let $\phi$ and $\Phi$ denote the standard normal density and distribution function, and define
+\[
+g(z):=\phi(z)+z\Phi(z)=\E[(z-Z')_+],
+\]
+where $Z'\sim N(0,1)$. Finally let
+\[
+v:=\Var(g(Z))=\frac13+\frac{\sqrt3-2}{2\pi}.
+\]
+
+\section{Interior growing regime}
+
+\begin{theorem}[Universal interior law]\label{thm:interior}
+Suppose
+\[
+k=k(n)\to\infty,
+\qquad
+n-k\to\infty.
+\]
+Then
+\[
+\frac{H}{s_n}\Longrightarrow g(Z)
+\]
+and the first two moments converge. Consequently,
+\[
+\E D=k-\frac{s_n}{\sqrt\pi}+o(s_n),
+\]
+\[
+\Var(D)=v s_n^2+o(s_n^2),
+\]
+and
+\[
+\frac{D-\E D}{\sqrt{\Var D}}
+\Longrightarrow
+L_\infty:=\frac{\pi^{-1/2}-g(Z)}{\sqrt v}.
+\]
+\end{theorem}
+
+\subsection{Exact order-statistic representation}
+
+Let $S$ be the set of the root's $k$ preferred neighbors and let $X$ be the $(k+1)$st smallest among the $n-1$ root-edge scores. Conditional on $(X,S)$, the selected root-edge scores $(U_i)_{i\in S}$ are i.i.d. $\mathrm{Unif}(0,X)$, and all non-root edge scores remain independent uniforms.
+
+For $i\in S$, let $T_i$ be the $k$th smallest among the $n-2$ scores incident to $i$ other than $(0,i)$. Then
+\[
+T_i\sim \mathrm{Beta}(k,n-k-1),
+\]
+and the root edge $(0,i)$ is rejected by $i$ exactly when $U_i\ge T_i$. If $T$ is an independent $\mathrm{Beta}(k,n-k-1)$ variable, define
+\[
+q_n(x):=\frac1x\E[(x-T)_+].
+\]
+With $R_i:=\1_{\{U_i\ge T_i\}}$ we therefore have the exact identity
+\[
+\E[H\mid X]=kq_n(X).
+\tag{2.1}
+\]
+
+\subsection{The dependence localizes to one shared edge}
+
+The key point is that the dependence between two indicators $R_i$ and $R_j$ is one-dimensional.
+
+\begin{lemma}[One-edge covariance bound]\label{lem:cov}
+For distinct $i,j\in S$,
+\[
+\Cov(R_i,R_j\mid X)
+\le
+\frac{1}{4(n-2)^2X^2}.
+\]
+\end{lemma}
+
+\begin{proof}
+The non-root stars of $i$ and $j$ share exactly one edge, $(i,j)$; call its score $W$. Conditional on $(X,W)$, the two indicators depend on disjoint remaining edge sets and independent root-edge scores, so they are conditionally independent. Hence
+\[
+\Cov(R_i,R_j\mid X)=\Var(p_X(W)\mid X),
+\]
+where $p_X(w)=\Pp(R_i=1\mid X,W=w)$.
+
+Condition further on the root-edge score $U_i=u$. After deleting $W$, let
+\[
+B_u\sim\mathrm{Bin}(n-3,u)
+\]
+count the remaining competitors below $u$. Rejection means
+\[
+B_u+\1_{\{w<u\}}\ge k.
+\]
+Thus, for $0\le w<X$,
+\[
+p_X(w)=b_X+\frac1X\int_w^X
+\Pp(\mathrm{Bin}(n-3,u)=k-1)\,du,
+\]
+where $b_X$ does not depend on $w$. Therefore
+\[
+\operatorname{osc}(p_X)
+\le \frac1X\int_0^1
+\binom{n-3}{k-1}u^{k-1}(1-u)^{n-k-2}\,du.
+\]
+The beta integral is exactly $1/(n-2)$, hence
+\[
+\operatorname{osc}(p_X)\le \frac{1}{(n-2)X}.
+\]
+Popoviciu's inequality gives the claimed conditional variance bound.
+\end{proof}
+
+Since $\Var(R_i\mid X)\le q_n(X)$, Lemma~\ref{lem:cov} yields
+\[
+\Var(H\mid X)
+\le kq_n(X)+\frac{k(k-1)}{4(n-2)^2X^2}.
+\tag{2.2}
+\]
+
+Let
+\[
+G_n:=\left\{X\ge \frac{k}{2n}\right\}.
+\]
+Since $X$ is the $(k+1)$st order statistic among $n-1$ uniforms,
+\[
+\Pp(G_n^c)
+=
+\Pp\left(\mathrm{Bin}\left(n-1,\frac{k}{2n}\right)\ge k+1\right)
+\le e^{-c k}
+\tag{2.3}
+\]
+for the universal constant $c=\log 2-1/2>0$.
+
+On $G_n$ the covariance contribution in (2.2) is $O(1)$. Moreover,
+\[
+kq_n(X)
+\le 2n\E(|X-T|\mid X),
+\]
+so, by Cauchy--Schwarz and the beta variance formulas,
+\[
+\E[kq_n(X);G_n]=O(s_n+1).
+\]
+On $G_n^c$ we use $0\le H\le k$ and the exponential bound (2.3). Since $s_n\to\infty$, we obtain
+\[
+\E\Var(H\mid X)=o(s_n^2).
+\]
+Equivalently,
+\[
+\frac{H-kq_n(X)}{s_n}\longrightarrow0
+\quad\text{in }L^2.
+\tag{2.4}
+\]
+
+\subsection{Asymptotics of the conditional mean}
+
+Set
+\[
+U_n:=\frac{X-p_n}{\sigma_n},
+\qquad
+V_n:=\frac{T-p_n}{\sigma_n}.
+\]
+Here
+\[
+X\sim\mathrm{Beta}(k+1,n-k-1),
+\qquad
+T\sim\mathrm{Beta}(k,n-k-1),
+\]
+independently. Because both beta shape parameters tend to infinity,
+\[
+U_n\Longrightarrow Z,
+\qquad
+V_n\Longrightarrow Z',
+\]
+with independent standard-normal limits. Direct beta moment formulas give uniformly bounded fourth moments.
+
+Define
+\[
+g_n(u):=\E[(u-V_n)_+].
+\]
+The convergence $V_n\Rightarrow Z'$ plus uniform integrability implies convergence in Wasserstein distance $W_1$, and since $x\mapsto(u-x)_+$ is $1$-Lipschitz uniformly in $u$,
+\[
+\sup_{u\in\R}|g_n(u)-g(u)|\to0.
+\tag{2.5}
+\]
+The exact conditional mean rescales as
+\[
+\frac{kq_n(X)}{s_n}
+=
+\frac{k}{nX}\,g_n(U_n).
+\tag{2.6}
+\]
+Also $k/(nX)=p_n/X\to1$ in probability. Combining (2.5)--(2.6),
+\[
+\frac{kq_n(X)}{s_n}\Longrightarrow g(Z).
+\tag{2.7}
+\]
+The good-event estimate $k/(nX)\le2$ on $G_n$, the fourth-moment bounds for $U_n,V_n$, and the exponentially small complement $G_n^c$ give uniform integrability of the square of the left side of (2.7). Thus the first two moments converge.
+
+Combining (2.4) and (2.7) proves
+\[
+H/s_n\Rightarrow g(Z)
+\]
+with first-two-moment convergence.
+
+It remains only to identify the constants. With $Z,Z_1,Z_2$ i.i.d. standard normal,
+\[
+\E g(Z)=\E[(Z-Z_1)_+]=\frac1{\sqrt\pi},
+\]
+and
+\[
+\E g(Z)^2
+=
+\E[(Z-Z_1)_+(Z-Z_2)_+]
+=
+\frac13+\frac{\sqrt3}{2\pi}.
+\]
+Hence
+\[
+v=\frac13+\frac{\sqrt3-2}{2\pi}.
+\]
+Theorem~\ref{thm:interior} follows.
+
+\begin{corollary}[Direct answer in the source's mean-theorem regime]\label{cor:source}
+If $k\to\infty$ and $k=o(n^{1/3})$, then
+\[
+\frac{D-\E D}{\sqrt{\Var D}}\Longrightarrow L_\infty.
+\]
+In particular, the limiting standardized degree in the regime surrounding the source's Theorem 8 is non-Gaussian.
+\end{corollary}
+
+\begin{proof}
+The hypotheses imply $n-k\to\infty$, so Theorem~\ref{thm:interior} applies directly.
+\end{proof}
+
+\section{An explicit form of the interior limiting law}
+
+Since
+\[
+g'(z)=\Phi(z)>0,
+\]
+$g$ is strictly increasing from $(0,\infty)$ as $z$ runs from $-\infty$ to $\infty$. Put
+\[
+m:=\pi^{-1/2}.
+\]
+The support of
+\[
+L_\infty=\frac{m-g(Z)}{\sqrt v}
+\]
+is $(-\infty,m/\sqrt v)$. For $x<m/\sqrt v$, let
+\[
+y_x:=g^{-1}(m-\sqrt v\,x).
+\]
+Then
+\[
+\Pp(L_\infty\le x)=1-\Phi(y_x),
+\tag{3.1}
+\]
+while the distribution function equals $1$ for $x\ge m/\sqrt v$. Differentiating (3.1) gives the density
+\[
+f_\infty(x)
+=
+\frac{\sqrt v\,\phi(y_x)}{\Phi(y_x)},
+\qquad x<m/\sqrt v.
+\tag{3.2}
+\]
+This gives a completely explicit one-dimensional characterization of the source's limiting law: the only inversion required is that of the smooth strictly increasing function $g$.
+
+The bounded upper support already rules out Gaussianity.
+
+\section{Fixed-complement boundary}
+
+We now let
+\[
+r:=n-1-k
+\]
+remain fixed. Thus every vertex rejects exactly its $r$ largest incident scores.
+
+For the root-edge $(0,i)$ define the upper-tail coordinate
+\[
+Y_i^{(n)}:=n(1-U_{0i}).
+\]
+Let $A_{n,r}$ be the $r$th smallest among the $n-1$ coordinates $Y_i^{(n)}$. The root proposes $(0,i)$ exactly when
+\[
+Y_i^{(n)}>A_{n,r}.
+\]
+Let $J_i^{(n)}$ indicate that vertex $i$ rejects the root edge. Conditional on $Y_i^{(n)}=y$,
+\[
+\Pp(J_i^{(n)}=1\mid Y_i^{(n)}=y)
+=b_{n,r}(y)
+:=
+\Pp(\mathrm{Bin}(n-2,y/n)\le r-1).
+\tag{4.1}
+\]
+Therefore
+\[
+H_n
+=
+\sum_{i\ne0}
+\1_{\{Y_i^{(n)}>A_{n,r}\}}J_i^{(n)}.
+\tag{4.2}
+\]
+
+\subsection{Marked Poisson convergence}
+
+The point process
+\[
+\Pi_n:=\sum_{i\ne0}\delta_{Y_i^{(n)}}
+\]
+converges to a rate-one Poisson point process $\Pi$ on $(0,\infty)$. Hence
+\[
+A_{n,r}\Longrightarrow A_r,
+\qquad
+A_r\sim\Gamma(r,1).
+\tag{4.3}
+\]
+For fixed $y$,
+\[
+b_{n,r}(y)\to p_r(y)
+:=
+ e^{-y}\sum_{j=0}^{r-1}\frac{y^j}{j!}
+=\Pp(\Gamma(r,1)>y).
+\tag{4.4}
+\]
+
+The marks are not exactly independent because two candidate vertices share one edge. The next lemma shows that this dependence disappears on every bounded upper-tail window.
+
+\begin{lemma}[Asymptotic independent marking]\label{lem:marking}
+Fix $L<\infty$ and distinct labels $i_1,\ldots,i_m$. Conditional on
+\[
+Y_{i_a}^{(n)}=y_a\in[0,L],\qquad 1\le a\le m,
+\]
+the mark vector $(J_{i_1}^{(n)},\ldots,J_{i_m}^{(n)})$ converges uniformly on $[0,L]^m$ to independent Bernoulli variables with success probabilities $p_r(y_1),\ldots,p_r(y_m)$.
+\end{lemma}
+
+\begin{proof}
+Delete the $\binom m2$ edges joining two candidate vertices. For candidate $i_a$, the number of remaining non-root incident edges larger than its root-edge score is
+\[
+C_a^{(n)}\sim\mathrm{Bin}(n-m-1,y_a/n),
+\]
+and these variables are independent across $a$. Uniformly for $y_a\in[0,L]$, they converge to independent $\mathrm{Poisson}(y_a)$ variables.
+
+A deleted candidate--candidate edge can change a mark only if its score exceeds at least one of the relevant root-edge thresholds. For one such internal edge that probability is at most $L/n$. A union bound therefore gives an error at most
+\[
+\binom m2\frac Ln=o(1).
+\]
+On the complementary event, candidate $i_a$ rejects the root edge exactly when $C_a^{(n)}\le r-1$. This proves the uniform factorization and the stated Bernoulli limits.
+\end{proof}
+
+To remove the compact cutoff, note that for fixed $r$ and all sufficiently large $n$,
+\[
+b_{n,r}(y)
+\le
+ e^{-y/2}\sum_{j=0}^{r-1}\frac{y^j}{j!},
+\qquad 0\le y\le n.
+\tag{4.5}
+\]
+The right side is integrable on $[0,\infty)$. Thus marked points beyond $L$ contribute an expected amount tending uniformly to zero as $L\to\infty$. The same envelope, applied to two marks after conditioning on their unique shared edge, controls the second factorial moment as well. Hence distribution, mean and variance all converge.
+
+\begin{theorem}[Fixed-complement mixed-Poisson law]\label{thm:fixedr}
+Fix an integer $r\ge1$ and put $k=n-1-r$. Then
+\[
+H_n\Longrightarrow H_r
+\]
+with convergence of the first two moments, where
+\[
+A_r\sim\Gamma(r,1),
+\qquad
+H_r\mid A_r=a
+\sim\mathrm{Poisson}(\Lambda_r(a)),
+\]
+and
+\[
+\Lambda_r(a)
+=
+\int_a^\infty p_r(y)\,dy
+=
+ e^{-a}\sum_{\ell=0}^{r-1}(r-\ell)\frac{a^\ell}{\ell!}.
+\tag{4.6}
+\]
+Equivalently,
+\[
+\E[s^{H_r}]
+=
+\frac1{(r-1)!}
+\int_0^\infty
+ a^{r-1}e^{-a}
+\exp\!\bigl(-(1-s)\Lambda_r(a)\bigr)\,da,
+\qquad 0\le s\le1.
+\tag{4.7}
+\]
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:marking}, on compact windows the limiting root point process is independently marked with location-dependent mark probability $p_r(y)$. Conditional on $A_r=a$, the points of $\Pi$ after $a$ form an independent rate-one Poisson process on $(a,\infty)$. Independent thinning gives a Poisson number of accepted marks with mean $\int_a^\infty p_r(y)\,dy$. The incomplete-gamma identity gives (4.6). The integrable envelope (4.5), together with the corresponding two-point bound, removes the truncation and yields first-two-moment convergence. Formula (4.7) is the probability generating function of the resulting mixed-Poisson variable.
+\end{proof}
+
+\subsection{Exact moments and an independent beta--gamma derivation}
+
+Let
+\[
+\mu_r:=\E H_r,
+\qquad
+\nu_r:=\Var(H_r).
+\]
+Since $H_r\mid A_r$ is Poisson,
+\[
+\mu_r=\E\Lambda_r(A_r),
+\qquad
+\nu_r=\mu_r+\Var(\Lambda_r(A_r)).
+\tag{4.8}
+\]
+A direct finite-sum evaluation gives
+\[
+\mu_r
+=r\frac{\binom{2r}{r}}{4^r}
+=
+\frac{\Gamma(r+1/2)}{\sqrt\pi\,\Gamma(r)}.
+\tag{4.9}
+\]
+There is also a useful independent derivation. Let $A_r,G_r$ be i.i.d. $\Gamma(r,1)$. Then
+\[
+\Lambda_r(A_r)=\E[(G_r-A_r)_+\mid A_r],
+\]
+so
+\[
+\mu_r=\E[(G_r-A_r)_+]=\frac12\E|G_r-A_r|.
+\tag{4.10}
+\]
+Write
+\[
+S=A_r+G_r,
+\qquad
+B=\frac{A_r}{A_r+G_r}.
+\]
+By beta--gamma algebra, $S\sim\Gamma(2r,1)$ and $B\sim\mathrm{Beta}(r,r)$ are independent. Since
+\[
+(G_r-A_r)_+=S(1-2B)_+,
+\]
+we get
+\[
+\mu_r
+=2r\,\E[(1-2B)_+]
+=2r\frac{1}{B(r,r)}\int_0^{1/2}(1-2b)b^{r-1}(1-b)^{r-1}\,db,
+\]
+which evaluates to (4.9). This provides a second check on the moment formula without using the polynomial expression (4.6).
+
+For the variance, put
+\[
+M_{2,r}:=\E[\Lambda_r(A_r)^2].
+\]
+Expanding (4.6) and integrating against the $\Gamma(r,1)$ density gives the exact finite sum
+\[
+M_{2,r}
+=
+\frac1{(r-1)!}
+\sum_{\ell,m=0}^{r-1}
+\frac{(r-\ell)(r-m)(r+\ell+m-1)!}
+{\ell!\,m!\,3^{r+\ell+m}}.
+\tag{4.11}
+\]
+Hence
+\[
+\nu_r=\mu_r+M_{2,r}-\mu_r^2>0.
+\tag{4.12}
+\]
+Moment convergence in Theorem~\ref{thm:fixedr} yields
+\[
+\E D=k-\mu_r+o(1),
+\qquad
+\Var(D)=\nu_r+o(1),
+\]
+and therefore
+\[
+\frac{D-\E D}{\sqrt{\Var D}}
+\Longrightarrow
+L_r:=\frac{\mu_r-H_r}{\sqrt{\nu_r}}.
+\tag{4.13}
+\]
+
+For example,
+\[
+r=1:\qquad \mu_1=\frac12,\qquad \nu_1=\frac7{12},
+\]
+while
+\[
+r=2:\qquad \mu_2=\frac34,\qquad \nu_2=\frac{433}{432}.
+\]
+Since $\Pp(H_r=0)>0$, the upper endpoint of $L_r$ is $\mu_r/\sqrt{\nu_r}$. Its square is $3/7$ for $r=1$ and $243/433$ for $r=2$, so $L_1$ and $L_2$ are distinct.
+
+\section{Boundary-to-interior gluing}
+
+The finite-complement family joins continuously to the interior law.
+
+\begin{theorem}[Gluing]\label{thm:glue}
+As $r\to\infty$,
+\[
+\frac{H_r}{\sqrt r}\Longrightarrow g(Z)
+\]
+with convergence of the first two moments. Consequently,
+\[
+\frac{\mu_r}{\sqrt r}\to\frac1{\sqrt\pi},
+\qquad
+\frac{\nu_r}{r}\to v,
+\qquad
+L_r\Longrightarrow L_\infty.
+\]
+\end{theorem}
+
+\begin{proof}
+Let $A_r,G_r$ be i.i.d. $\Gamma(r,1)$. From (4.10), conditionally on $A_r$,
+\[
+\Lambda_r(A_r)=\E[(G_r-A_r)_+\mid A_r].
+\]
+Set
+\[
+U_r:=\frac{A_r-r}{\sqrt r},
+\qquad
+V_r:=\frac{G_r-r}{\sqrt r}.
+\]
+The gamma CLT gives $U_r,V_r\Rightarrow N(0,1)$, and their second moments are uniformly bounded. Hence the law of $V_r$ converges to $N(0,1)$ in $W_1$. Therefore
+\[
+\frac{\Lambda_r(A_r)}{\sqrt r}
+=
+\E[(V_r-U_r)_+\mid U_r]
+\Longrightarrow g(Z)
+\]
+in distribution, after replacing $Z$ by $-Z$ if desired; the two have the same law.
+
+The conditional Poisson noise is negligible on the $\sqrt r$ scale:
+\[
+\frac1r\E[(H_r-\Lambda_r(A_r))^2]
+=
+\frac{\mu_r}{r}\to0,
+\]
+where $\mu_r\asymp\sqrt r$ by (4.9). Thus $H_r/\sqrt r\Rightarrow g(Z)$. The same estimates and the exact moment formulas give first-two-moment convergence, so standardization yields $L_r\Rightarrow L_\infty$.
+\end{proof}
+
+\section{Regime-complete interpretation}
+
+The remaining asymptotic regime is fixed finite $k$. Moharrami, Subramanian, Liu and Sundaresan prove local weak convergence of the finite bilateral-preference model, with fixed potential degree distribution, to the Erlang weighted tree and explicitly identify the root-degree law. Specializing the potential degree distribution to a point mass at a fixed integer $k=\kappa$ gives the fixed-$\kappa$ degree limit relevant here. Since $0\le D\le\kappa$, local weak convergence automatically gives convergence of the first two moments as well.
+
+We can therefore summarize all subsequential degree limits.
+
+\begin{theorem}[Regime classification]\label{thm:classification}
+Let $k=k(n)$ with $1\le k\le n-1$, and consider any subsequence along which the standardized degree is defined. After passing to a further subsequence, exactly one of the following descriptions applies:
+\begin{enumerate}[label=(\roman*)]
+\item $k\equiv\kappa<\infty$: the standardized limit is the standardized root-degree law of the fixed-$\kappa$ Erlang weighted tree;
+\item $k\to\infty$ and $n-k\to\infty$: the standardized limit is $L_\infty$ from Theorem~\ref{thm:interior};
+\item $r=n-1-k\equiv r_0\ge1$: the standardized limit is $L_{r_0}$ from Theorem~\ref{thm:fixedr};
+\item $k=n-1$: the graph is complete, $D=n-1$ deterministically, and standardization is undefined because $\Var D=0$.
+\end{enumerate}
+In particular, there is no single standardized limiting law valid for arbitrary switching sequences $k(n)$.
+\end{theorem}
+
+\begin{proof}
+Every integer sequence $k(n)$ admits a further subsequence on which either $k$ is bounded or $k\to\infty$. In the bounded case, a further subsequence makes $k$ constant, giving (i). In the growing case, either $n-k\to\infty$ along a further subsequence, giving (ii), or $n-k$ is bounded. In the latter case, since $n-1-k$ is integer and nonnegative, a further subsequence makes it constant, giving (iii) or (iv).
+
+To see that a universal law cannot exist without assumptions on $k(n)$, alternate between complements $r=1$ and $r=2$. The standardized subsequential limits are $L_1$ and $L_2$, which are distinct because their upper support endpoints differ.
+\end{proof}
+
+\section{Why the dependence is tractable}
+
+The source correctly identifies dependence as the main obstacle. The proofs show that there are two distinct mechanisms, each local after the right conditioning.
+
+In the interior regime, conditioning on the root cutoff $X$ leaves the root-retention indicators dependent only through one shared non-root edge per pair. The exact beta integral in Lemma~\ref{lem:cov} makes the total pair-covariance contribution $O(1)$ on the high-probability event $X\asymp k/n$. Thus all conditional edge noise is lower order than the random cutoff fluctuation.
+
+At fixed complement, the correct scale is not Gaussian around $k/n$ but the endpoint point process $n(1-U)$. On every bounded window, the finitely many candidate vertices share only finitely many internal edges, each of which matters with probability $O(1/n)$. The dependence therefore vanishes in the marked-Poisson limit.
+
+These are the same structural statement at two different scales: bilateral dependence is global in appearance but pairwise-local after conditioning on the root's order statistic.
+
+\section{Prior-art scope}
+
+Dabirian and Subramanian prove connectivity results and a sharp asymptotic expansion for the mean degree, and explicitly leave the standardized degree distribution as an open question. Moharrami, Subramanian, Liu and Sundaresan analyze the fixed-potential-degree local weak limit through the Erlang weighted tree and characterize its root-degree law; that fixed-$k$ result is therefore treated here as prior art, not as a new theorem.
+
+A bounded literature check dated September 19, 2026 found the final Cambridge version of the source, the Erlang weighted tree paper, the original La--Kabkab model paper, and no later indexed paper giving either the interior law of Theorem~\ref{thm:interior} or the fixed-complement mixed-Poisson law of Theorem~\ref{thm:fixedr}. Cambridge currently reports zero Crossref citations for the source article. This is only bounded negative evidence and is not a novelty certificate.
+
+\section{Conclusion}
+
+The standardized degree question has a clean but non-Gaussian answer. Throughout the entire interior growing regime, the deficit $k-D$ is asymptotically the positive-part Gaussian smoothing $g(Z)$ at scale $\sqrt{k(n-k)/n}$. At finite complement the limit becomes an explicit mixed-Poisson variable, and those boundary laws converge back to the same interior distribution as the complement grows. Together with known fixed-$k$ local weak limits, this yields a regime-complete description and explains precisely how the complicated bilateral dependence disappears after the appropriate order-statistic conditioning.
+
+\begin{thebibliography}{9}
+
+\bibitem{DS}
+H. Dabirian and V. Subramanian,
+\emph{Connectivity of a family of bilateral preference random graphs},
+Journal of Applied Probability 63 (2026), no.~2, 552--579.
+DOI: \href{https://doi.org/10.1017/jpr.2025.10051}{10.1017/jpr.2025.10051}.
+
+\bibitem{EWT}
+M. Moharrami, V. Subramanian, M. Liu, and R. Sundaresan,
+\emph{The Erlang weighted tree, a new branching process},
+Random Structures \& Algorithms 64 (2024), 537--624.
+DOI: \href{https://doi.org/10.1002/rsa.21180}{10.1002/rsa.21180}.
+
+\bibitem{LK}
+R. J. La and M. Kabkab,
+\emph{A new random graph model with self-optimizing nodes: Connectivity and diameter},
+Internet Mathematics 11 (2015), 528--554.
+
+\end{thebibliography}
+
+\end{document}

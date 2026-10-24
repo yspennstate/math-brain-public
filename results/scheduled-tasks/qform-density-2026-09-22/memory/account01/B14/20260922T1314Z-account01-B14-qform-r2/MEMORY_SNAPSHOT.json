@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B14",
+  "run_id": "20260922T1314Z-account01-B14-qform-r2",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_prepublication": "3746c5b787166d4892765b904f063fbbdf903d43",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE"
+  ],
+  "partner_applied": {
+    "worker": "account02/B14",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ea6b7ae2aba8b38748214a4d38f47fa6f790b8e0",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260922T120110Z-b14-qform-localization-r13/REPORT.md",
+    "scope_used": "Tail-free compactification and exact small-ball bang-bang localization preserve constants for arbitrary supports, translations and fragment separation."
+  },
+  "additional_dependency": {
+    "worker": "account02/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d5392d73398e2811f58b612fb8f191aa79d8ee5e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T110507Z-account02-B15-qform-pivot-r1/REPORT.md",
+    "scope_used": "Predecessor affine physical-principal-triple theorem with O(kappa^-1) price."
+  },
+  "mathematical_change": {
+    "claim_id": "QFORM-ANISOTROPIC-PRINCIPAL-TRIPLE-v1",
+    "classification": "ESSENTIAL_STEP_APPLIED / TARGET-SUPPORTING THEOREM",
+    "statement": "For an invertible original-coordinate symmetric 3x3 principal block B, kappa=sigma_min(B), D=|det B|, arbitrary independent coordinate densities <=1 and arbitrary affine conditional drift, the output density is bounded by 2*sqrt(6*pi*sqrt(3))*(kappa*D)^(-1/4).",
+    "mechanism": "Split at |By|=R; near-region volume after |B|^(1/2) costs 2*pi*R/(sqrt(kappa)*sqrt(D)); far-region original-coordinate derivative cover costs 3*sqrt(3)/R; optimize R.",
+    "quantitative_gain": "For singular values s1>=s2>=kappa, price is K3*(s1*s2)^(-1/4)*kappa^(-1/2), improving the preceding O(kappa^-1) weak-direction loss when s1,s2 are controlled below away from zero."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3ffae097852c1fb9ce66d077f7c151da2fe365dc",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260922T1314Z-account01-B14-qform-r2/REPORT.md"
+  },
+  "unresolved_implication": "Prove a dimension-free original-coordinate extraction/aggregation dichotomy from the three-large-eigenvalue hypothesis: either a physical triple has controlled kappa*|det B|, or the complementary delocalized mass enters an already-proved aggregate smoother without first paying reciprocal tiny minors.",
+  "next_step": "Combine the improved square-root weak-direction price with singular-spectrum/diffuse-frame resources to quantify the extraction threshold.",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

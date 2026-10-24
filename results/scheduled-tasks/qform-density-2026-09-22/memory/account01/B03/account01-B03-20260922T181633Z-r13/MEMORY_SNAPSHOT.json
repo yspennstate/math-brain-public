@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B03",
+  "run_id": "account01-B03-20260922T181633Z-r13",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuous_density_proved": false,
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "fresh_control_revision": "2026-09-22.11",
+  "fresh_control_commit_prepublication": "c625527b0e09611d71fcb8060e53f8a759c414bf",
+  "source_dependencies": [
+    {
+      "kind": "own_prior_ridge_theorem",
+      "repo": "yspennstate/math-open-problems",
+      "commit": "c301be6b21f382934962aeb4c019b713377eac2f",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/account01-B03-20260922T164925Z-r12/REPORT.md"
+    },
+    {
+      "kind": "named_partner_cross_two_collision",
+      "account": "account02",
+      "slot": "B03",
+      "repo": "yspennstate/math-open-problems",
+      "commit": "18acc1aad6a7d8d9e7538807afbb1a453d7e529b",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260922T171110Z-account02-B03-QFORM-r12/REPORT.md"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM scalar worst-condition bridge refuted by account03/B16 r14 and independently account02/B01 r26"
+  ],
+  "mathematical_change": {
+    "title": "Hybrid subcritical ridge plus cross-two tail",
+    "summary": "If a residual has both the dependence-safe ridge envelope |phi(t)|<=min(1,(t0/|t|)^beta) and account02/B03's physical cross-two tail |phi(t)|<=min(1,t2/|t|), then the half-Riesz time integral is finite for every beta>0. For beta<1/2 it obeys a mixed-power bound; at beta=1/2 it obeys a logarithmic endpoint bound. This removes the strict theta>q analytic threshold when a cross-two collision tail is present.",
+    "critical_formula": "sup_z E|z-R|^{-1/2} <= 2 sqrt(2/pi) sqrt(t0) [2+log_+(t2/t0)] when beta=1/2",
+    "partner_application": "For A_m=[1] direct_sum J_m/m direct_sum (-J_m/m) at m=2, Delta=1/4, gamma=1/2,q=1,theta=1, t0=pi e/sqrt(2), t2=2pi, hence ||p_Q||_infinity<8."
+  },
+  "canonical_output": {
+    "repo": "yspennstate/math-open-problems",
+    "commit": "e80f2e7edf2409091752d4c2a3b8893995e14b1b",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/account01-B03-20260922T181633Z-r13/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/account01-B03-20260922T181633Z-r13/CHECKS.py",
+    "checker_terminator": "QFORM_B03_HYBRID_TIME_PASS"
+  },
+  "failure_lessons_preserved": [
+    "Do not condition a sum on its conjugate difference and assert a density cap.",
+    "Do not infer one uniformly good physical pivot/cross-two certificate from three large eigenvalues.",
+    "Do not use the source-refuted worst scalar conditional-density supremum bridge.",
+    "Do not claim continuity from the half-Riesz square-pivot density estimate alone."
+  ],
+  "first_unpaid_implication": "Derive from the three-large-eigenvalue hypothesis an exhaustive product-preserving structural alternative supplying either direct ridge/cross-rank-three control, a physical square plus the hybrid ridge/cross-two tradeoff, or a grouped/hyperbolic certificate, with dimension-free payment of all local scales.",
+  "next_recipient": "shared QFORM structural-reduction workers",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_counters": null
+}

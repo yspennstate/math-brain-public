@@ -1,0 +1,13 @@
+{
+  "helper_version": "A045-tax-deficit-audit-v2",
+  "actual_boolean_family": "all symmetric thresholds n=1..6, t=1..n; address gates with a=1,2 (arity 3,6); explicit AND2 endpoint sequence",
+  "parameter_domain": "p_m=1-(1-2^-m)^2 for m=5,6,8,10,14, and p=1/2; thresholds all inputs p; addressing uses (selector,data)=(p,p),(1/2,p),(p,1/2), deduplicate fair endpoint",
+  "case_count": "126 threshold cases and 32 address cases; 5 binary endpoint certificates; direct/cofactor and mixed-difference cross-checks at n<=4",
+  "symmetry_reduction": "all labeled threshold t and all dimensions retained; equal input biases make subset coefficients depend only on size but full truth tables are still transformed; no general Boolean census",
+  "arithmetic": "Fraction truth-table tensor transform and spectra; exact rational atanh log intervals with proved remainder; sharp tax has rational half-angle arguments on this domain",
+  "memory_estimate_mb": 70,
+  "pilot_max_runtime_seconds": 60,
+  "main_max_runtime_seconds": 180,
+  "no_automatic_dimension_escalation": true,
+  "notes": "tau*(1/2)=0; at p_m<=1/16 scalar minimum is the previously reconstructed convex midpoint. Sum-input tax, stopped-query tax, actual J-M and corrected entropy are distinct ledgers."
+}

@@ -1,0 +1,270 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w339/check_math.py",
+  "scope": "local proof controls and numerical diagnostics; no independent audit",
+  "checks": {
+    "P0267": {
+      "ito_cubic_drift": "-1",
+      "ito_diffusion_squared": "2",
+      "critical_energy_coefficient": 0,
+      "quadrature_cases": 9,
+      "max_relative_error": 1.9729558868175893e-13,
+      "squared_maximum_tail_coefficient_logs_T1_a1overn": {
+        "1": -0.07825882137483282,
+        "10": -12.431052323471373,
+        "100": -791.7985541203044
+      },
+      "note": "log coefficients remain finite when ordinary floating point underflows; divergence uses the analytic tail limit"
+    },
+    "C0031": {
+      "diagonal_controls": [
+        {
+          "n": 100,
+          "small_fraction": 0.21,
+          "minimum": 0.01,
+          "normalized_negative_log": 0.9670857390574993
+        },
+        {
+          "n": 1000,
+          "small_fraction": 0.144,
+          "minimum": 0.001,
+          "normalized_negative_log": 0.9947167601734277
+        },
+        {
+          "n": 10000,
+          "small_fraction": 0.1085,
+          "minimum": 0.0001,
+          "normalized_negative_log": 0.999321930359416
+        },
+        {
+          "n": 1000000,
+          "small_fraction": 0.072382,
+          "minimum": 1e-06,
+          "normalized_negative_log": 0.9999942852065701
+        }
+      ],
+      "limit_negative_log": 1,
+      "full_sequence_promotion": "not established; almost-sure subsequence proved analytically"
+    },
+    "C0134": {
+      "constant_cookie_probability": 0.6,
+      "steps": 100000,
+      "observed_speed": 0.20476,
+      "proved_liminf_lower_bound": 0.2,
+      "total_cookie_drift": "infinity",
+      "finite_delta_ballisticity_criterion": "unproved"
+    },
+    "P0092": {
+      "dependency_controls": [
+        {
+          "b": 2,
+          "reset_probability": 0.6,
+          "dependency_mean": 0.8,
+          "level": 100,
+          "survival_to_level": 4.8409479403561175e-11
+        },
+        {
+          "b": 3,
+          "reset_probability": 0.8,
+          "dependency_mean": 0.5999999999999999,
+          "level": 100,
+          "survival_to_level": 1.4125693027176977e-23
+        },
+        {
+          "b": 2,
+          "reset_probability": 0.5,
+          "dependency_mean": 1.0,
+          "level": 10000,
+          "survival_to_level": 0.00019978065319831292
+        },
+        {
+          "b": 2,
+          "reset_probability": 0.25,
+          "dependency_mean": 1.5,
+          "level": 100,
+          "survival_to_level": 0.6666666666666667
+        }
+      ],
+      "critical_claim": "a.s. extinction by generating-function proof; numeric recursion is a control only"
+    },
+    "P0439": {
+      "convolution_cases": 12,
+      "max_convolution_error": 7.28583859910259e-17,
+      "arrival_rate": 2,
+      "service_rate": 1,
+      "deadline": 4,
+      "target_miss_probability": 0.03,
+      "waiting_only_staffing_count_before": 3,
+      "response_staffing_count_after": 4,
+      "response_tail_c3": 0.05087677469092827,
+      "response_tail_c4": 0.02144262606453099,
+      "service_floor": 0.01831563888873418,
+      "quantile_capacity_integral": "99/1000",
+      "two_size_selector_controls": 103,
+      "scope": "minimum among stable FCFS M/M/c staffing choices only"
+    },
+    "C0040": {
+      "rational_adjoint_identities": 8,
+      "periodic_examples": [
+        {
+          "period": 1,
+          "Z": "2",
+          "mean_drift": "1/2"
+        },
+        {
+          "period": 2,
+          "Z": "15/7",
+          "mean_drift": "7/15"
+        },
+        {
+          "period": 3,
+          "Z": "145/69",
+          "mean_drift": "69/145"
+        },
+        {
+          "period": 2,
+          "Z": "10/3",
+          "mean_drift": "3/10"
+        }
+      ],
+      "literature_forward_half": "Drewitz-Ramirez Corollary 2.15 checked directly; converse only in cached open question"
+    },
+    "C0079": {
+      "connected_subgraph_endpoint_controls": 371,
+      "old_plus_one_counterexample": {
+        "distance": 1,
+        "bond_pivotal_count": 1
+      },
+      "correct_tail_direction": "pivotal-tail event is contained in intrinsic-tail event"
+    },
+    "C0122": {
+      "samples_per_control": 50000,
+      "deficit_controls": [
+        {
+          "rho": 0.1,
+          "observed_mean_deficit": 0.7133017569004445,
+          "predicted": 0.7180961047225789,
+          "standard_error": 0.00494037625314516
+        },
+        {
+          "rho": 0.5,
+          "observed_mean_deficit": 0.4053536715413959,
+          "predicted": 0.3989422804014327,
+          "standard_error": 0.0035782110471513774
+        },
+        {
+          "rho": 0.95,
+          "observed_mean_deficit": 0.041641660158759135,
+          "predicted": 0.03989422804014331,
+          "standard_error": 0.0007323030147638361
+        }
+      ],
+      "signed_overlap_time": 4,
+      "mean": 0.00128,
+      "predicted_mean": 0.011660749879723558,
+      "second_moment": 1,
+      "positive_tail_probability": 0.50064,
+      "short_noise_original_problem": "not settled"
+    },
+    "P0011": {
+      "contact_schedule_controls": 8,
+      "baseline_infected_count": 4,
+      "longer_lifetime_infected_count": 3,
+      "exponential_lifetime_box_probability": 2.117432364717196e-08,
+      "Brownian_contact_realization": "not proved"
+    },
+    "P0037": {
+      "exact_event_pair_weight_checks": 114640,
+      "enumeration": [
+        {
+          "ground_set_size": 2,
+          "monotone_events": 6,
+          "omission_profiles": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "event_pair_weight_checks": 144
+        },
+        {
+          "ground_set_size": 3,
+          "monotone_events": 20,
+          "omission_profiles": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              4
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ],
+          "event_pair_weight_checks": 1600
+        },
+        {
+          "ground_set_size": 4,
+          "monotone_events": 168,
+          "omission_profiles": [
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              4,
+              8
+            ],
+            [
+              0,
+              2,
+              3,
+              4
+            ]
+          ],
+          "event_pair_weight_checks": 112896
+        }
+      ],
+      "violations": 0,
+      "nonincreasing_negative_control": {
+        "disjoint_probability": "1/3",
+        "product": "2/9"
+      },
+      "scope": "co-singleton laws; weighted connected unicyclic graphs; not arbitrary UST"
+    }
+  },
+  "elapsed_seconds": 1.9166624000063166,
+  "completed": true
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "claim_id": "A036-POINT-DEFECT-TENSOR-NORMALIZED-PAYMENT-RECOVERY",
+    "version": 1,
+    "exact_statement": "For every finite disjoint tensor product of Boolean one-point defects f_m=1-2*1_point, m>=2, including physical translations, global sign, character multiplication, fresh character coordinates and irrelevant coordinates, let P=fhat^2, Q be the product of its actual spectral coordinate marginals, B=sum_i h2(P(i in S)), K=D2(P||Q), b=sign(fhat)*sqrt(Q) on the common support and zero off it, v_U=(sum_S b_S b_{S xor U})^2, Z=sum_U v_U, T=H(v/Z)-log2 Z, I=sum_i P(i in S). Then K>=max(0,B-4I), K>=T/4-8I, and B<=T/4+8I. In particular the latter two separately proved inequalities imply H(P)<=16I, while the direct factor entropy bound gives H(P)<=4I. All entropy and divergence quantities are in bits.",
+    "hypotheses": [
+      "Genuine Boolean sign on uniform finite cube",
+      "Disjoint point-defect tensor factorization as stated",
+      "Actual product-marginal reference Q, same-sign amplitude b",
+      "Product-compatible actual phases; support terms retained",
+      "All logarithms base two"
+    ],
+    "statement_sha256": "ca9f2080e0aeb78801b76d6e631ec2dd47cf1d2b3fd1a0f5f048723e36c7cdd4",
+    "contributors": [
+      "A036"
+    ],
+    "proof_source": "REPORT.md, Sections 1-7; code/check.py; out/verification.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "ANALYTICALLY_PROVED_LOCALLY_EXACTLY_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A037",
+      "A038",
+      "A039",
+      "A040",
+      "A048",
+      "A066",
+      "A088",
+      "A094",
+      "B20"
+    ]
+  }
+]

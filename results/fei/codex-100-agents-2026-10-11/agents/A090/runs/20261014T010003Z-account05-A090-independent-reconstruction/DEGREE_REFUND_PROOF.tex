@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}
+For the Boolean OR of $m=2^w$ disjoint width-$w$ point conjunctions, $w\ge4$, let $\mu_i(T)=p_{T+i}/\epsilon_i$ and $r_i(T)=p_T+p_{T+i}$ be normalized derivative/reference rows. If $\bar\mu_i,\bar r_i$ retain only $|T|$, then
+\[
+D_2(\bar\mu_i\Vert\bar r_i)\le3+\log_2(w+1/2),\qquad
+\frac{M_{\rm degree}}I\ge w-4-\log_2(w+1/2).
+\]
+For $w\ge32$, the latter is at least $w/2$, while the full retained cost obeys $0\le M\le H\le6I$.
+\end{theorem}
+\begin{proof}
+Put $p=2^{-w}$, $\beta=1-p$, $n=mw$. The normalized factor spectrum chooses an active block with probability $p$ and then a uniform nonempty subset. Its product degree law is $\nu$ with active count $L\sim\operatorname{Bin}(m,p)$. The actual Boolean spectrum has $W_0=(1-2\beta^m)^2$ and $W_t=4\beta^m\nu_t$ for $t\ge1$. Coordinate transitivity implies
+\[
+\bar\mu(t)=\frac{(t+1)W_{t+1}}I,\qquad
+\bar r(t)=(1-t/n)W_t+\frac{t+1}{n}W_{t+1}.
+\]
+The derivative forces the selected coordinate's block; its remaining degree is $U\sim\operatorname{Bin}(w-1,1/2)$ plus $m-1$ independent normalized factor degrees. Its mean is exactly $w-1/2$ and $\bar\mu(0)=\epsilon=2p\beta^{m-1}$.
+The zero-$U$ component is dominated by $(2p/\beta)\nu$. For $U>0$, its degree sublaw is at most $2\beta$ times the uniform nonempty subset degree law. Forcing one active block multiplies the binomial count law by $L/(mp)=L\le t$. Thus $\bar\mu(t)\le(2p/\beta+2\beta t)\nu_t$.
+Elementary logs give $1/4\le\beta^m<3/8$ and $e^{-1}\le\beta^{m-1}\le1/2$. Therefore the degree-zero KL summand is nonpositive. On $1\le t\le n/2$, $\bar\mu(t)/\bar r(t)\le4(t+1)$; Jensen bounds the head by $2+\log_2(w+1/2)$. Markov bounds the tail probability by $2/m$. Since $\bar r\ge\epsilon\bar\mu$ and $\log_2(1/\epsilon)<w+1/2$, the tail contribution is at most $2(w+1/2)/2^w\le9/16<1$.
+This proves the divergence bound and the rarity estimate gives the retained-price bound. The explicit Boolean product atom formula yields $H\le8w\beta^m+13\beta^m+1$ and $I=2w\beta^{m-1}$, whence $H/I\le4+8/w\le6$.
+\end{proof}
+The KL chain rule shows the lost refund equals $\sum_i\epsilon_i\sum_t\bar\mu_i(t)D_2(\mu_i(\cdot\mid t)\Vert r_i(\cdot\mid t))$. All cutoff details, exact generating-function certificates and scope are in REPORT.md. This is an author-proved mechanism obstruction pending independent review, not a counterexample to FEI.
+\end{document}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B03",
+  "run_id": "20260922T231550Z-account02-B03-QFORM-r13",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "78f318e2c65263b0de840aaf014f28f4d6ef0f20",
+  "control_commit_pre_handoff": "f06cee30677a0754fcec4a65ab5c12a87c652eb3",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "status": "ESSENTIAL_STEP_APPLIED_REFUTED_INTERMEDIATE_STRUCTURAL_GATE_FULL_TARGET_OPEN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e9edee72f4272f7bc84c7a914f3a087f614f9c60",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260922T231550Z-account02-B03-QFORM-r13/REPORT.md"
+  },
+  "checker": {
+    "source_commit": "a3fc1b854dc44435c80615943e8ecaec97e88724",
+    "output_commit": "f0ef4d3a3badbbf17abeca56aef0976e8f7c1cdc",
+    "result": "STATUS=PASS",
+    "scope": "exact finite symbolic verification of the 5x3 Parseval witness and all 3^7 residual cuts for the Walsh boundary family"
+  },
+  "partner_result_applied": {
+    "worker": "account03/B03",
+    "run_id": "20260922T225606Z-account03-B03-QFORM-r21",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bbf30c1b2b9495570c8ef2a3f0436c94062892a8",
+    "theorem": "QFORM-PIVOT-EK-AGGREGATE-HALF-RIESZ-v1",
+    "application": "derived original-matrix overlap-one minor-bank transducer by block determinant identity and random residual cut"
+  },
+  "newest_owner_required_source_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "directory": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "results": [
+      "D' applied to exact 8x8 bipartite target with five row marginals exactly 3/5, yielding density <=10 sqrt(5e/6)",
+      "Theorem F applied to A_t=tI+(1-t)P, yielding density <=12/(1-t)<=24"
+    ]
+  },
+  "new_mathematics": [
+    "For d=A_ii!=0 and M_{i,k}=sum over ordered disjoint I,J of |det A[{i} union I,{i} union J]|^2, partner r21 implies ||p_Q||_infinity <=sqrt(2) C_k |d|^{-(k-1)/(2k)} M_{i,k}^{-1/(4k)} for k>=3.",
+    "At k=3 the explicit constant is 13.9167889868 and the physical exponent is |d|^-1/3.",
+    "For A_t=tI_8+(1-t)P with P the first-three-Walsh-column projector, spectrum is {1,1,1,t,t,t,t,t} but max over every physical pivot and residual cut of |d|^6 E_3 equals t^2(1-t)^6(5t+3)^4/2^20 ->0.",
+    "The same family has M_{i,3}=7t^2(1-t)^6/128 for every pivot, so a universal pivot-E3 structural reduction is false, while Theorem F controls the outputs uniformly by 24."
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "new_correction_event": {
+    "id": "QFORM-PIVOT-E3-UNIFORM-CERTIFICATE-FALSE-v1",
+    "commit": "29ed455421718e41b14472f223a8a7de1b891fa7"
+  },
+  "unresolved_implication": "Prove an exhaustive product-preserving structural OR from s_3(A)>=1: diffuse/diagonal-plus-low-rank Fresnel (D'/F) OR localized overlap-one pivot bank/paid local branch OR grouped/ridge/hybrid branch. Pivot-E3 alone cannot be forced at universal scale.",
+  "next_step": "Stress the OR on hybrid matrices with a heavy localized coordinate plus a diffuse rank-two bank and a dense nonseparable small tail; seek a quantitative threshold matching D' marginal h<3/4 to overlap-one minor-bank mass without assuming one good fixed minor.",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN"
+}

@@ -1,0 +1,454 @@
+{
+  "result": "PASS",
+  "helper_version": "phase-controls-star-v1",
+  "assertions": 1531,
+  "runtime_seconds": 13.733053600066341,
+  "direct_star_cases": 16,
+  "formula_cases": 40,
+  "tensor_cases": 556,
+  "psi_controls": [
+    {
+      "N": 4,
+      "amplitude_exact": "1/2",
+      "H_exact_bits": 2,
+      "I_exact": 1,
+      "all_plus_value": 2,
+      "nonzero_square_convolution_at_pair": "1/2",
+      "fails_kappa2": false,
+      "pivotal_square_exact": "1/4"
+    },
+    {
+      "N": 16,
+      "amplitude_exact": "1/4",
+      "H_exact_bits": 4,
+      "I_exact": 1,
+      "all_plus_value": 4,
+      "nonzero_square_convolution_at_pair": "1/8",
+      "fails_kappa2": true,
+      "pivotal_square_exact": "1/16"
+    },
+    {
+      "N": 64,
+      "amplitude_exact": "1/8",
+      "H_exact_bits": 6,
+      "I_exact": 1,
+      "all_plus_value": 8,
+      "nonzero_square_convolution_at_pair": "1/32",
+      "fails_kappa2": true,
+      "pivotal_square_exact": "1/64"
+    }
+  ],
+  "point_defect": {
+    "phase_degree": 3,
+    "directional_degree": 2,
+    "H": "4-(9/8)log2(3)",
+    "I": "3/4",
+    "H_over_I": "16/3-(3/2)log2(3)",
+    "kappa2_margin": "2-(9/8)log2(3)",
+    "exact_margin_certificate": "3^9<2^16"
+  },
+  "stars": [
+    {
+      "m": 1,
+      "quadratic": "paired",
+      "constant": 0,
+      "beta": "1/2",
+      "I_X": "1/2",
+      "I_selector": "1/4",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 1,
+      "quadratic": "paired",
+      "constant": 1,
+      "beta": "-1/2",
+      "I_X": "1/2",
+      "I_selector": "3/4",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 1,
+      "quadratic": "complete_graph",
+      "constant": 0,
+      "beta": "1/2",
+      "I_X": "1/2",
+      "I_selector": "1/4",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 1,
+      "quadratic": "complete_graph",
+      "constant": 1,
+      "beta": "-1/2",
+      "I_X": "1/2",
+      "I_selector": "3/4",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 2,
+      "quadratic": "paired",
+      "constant": 0,
+      "beta": "1/4",
+      "I_X": "1",
+      "I_selector": "3/8",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 2,
+      "quadratic": "paired",
+      "constant": 1,
+      "beta": "-1/4",
+      "I_X": "1",
+      "I_selector": "5/8",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 2,
+      "quadratic": "complete_graph",
+      "constant": 0,
+      "beta": "-1/4",
+      "I_X": "1",
+      "I_selector": "5/8",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 2,
+      "quadratic": "complete_graph",
+      "constant": 1,
+      "beta": "1/4",
+      "I_X": "1",
+      "I_selector": "3/8",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 3,
+      "quadratic": "paired",
+      "constant": 0,
+      "beta": "1/8",
+      "I_X": "3/2",
+      "I_selector": "7/16",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 3,
+      "quadratic": "paired",
+      "constant": 1,
+      "beta": "-1/8",
+      "I_X": "3/2",
+      "I_selector": "9/16",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 3,
+      "quadratic": "complete_graph",
+      "constant": 0,
+      "beta": "-1/8",
+      "I_X": "3/2",
+      "I_selector": "9/16",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 3,
+      "quadratic": "complete_graph",
+      "constant": 1,
+      "beta": "1/8",
+      "I_X": "3/2",
+      "I_selector": "7/16",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 4,
+      "quadratic": "paired",
+      "constant": 0,
+      "beta": "1/16",
+      "I_X": "2",
+      "I_selector": "15/32",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 4,
+      "quadratic": "paired",
+      "constant": 1,
+      "beta": "-1/16",
+      "I_X": "2",
+      "I_selector": "17/32",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 4,
+      "quadratic": "complete_graph",
+      "constant": 0,
+      "beta": "1/16",
+      "I_X": "2",
+      "I_selector": "15/32",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    },
+    {
+      "m": 4,
+      "quadratic": "complete_graph",
+      "constant": 1,
+      "beta": "-1/16",
+      "I_X": "2",
+      "I_selector": "17/32",
+      "conditional_bound": "exact integer-product PASS",
+      "full_H_bound": "exact integer-product PASS"
+    }
+  ],
+  "formula": [
+    {
+      "m": 1,
+      "beta": "1/2",
+      "tail_mass": "3/8",
+      "I_X": "1/2"
+    },
+    {
+      "m": 2,
+      "beta": "1/4",
+      "tail_mass": "15/32",
+      "I_X": "1"
+    },
+    {
+      "m": 3,
+      "beta": "1/8",
+      "tail_mass": "63/128",
+      "I_X": "3/2"
+    },
+    {
+      "m": 4,
+      "beta": "1/16",
+      "tail_mass": "255/512",
+      "I_X": "2"
+    },
+    {
+      "m": 5,
+      "beta": "1/32",
+      "tail_mass": "1023/2048",
+      "I_X": "5/2"
+    },
+    {
+      "m": 6,
+      "beta": "1/64",
+      "tail_mass": "4095/8192",
+      "I_X": "3"
+    },
+    {
+      "m": 7,
+      "beta": "1/128",
+      "tail_mass": "16383/32768",
+      "I_X": "7/2"
+    },
+    {
+      "m": 8,
+      "beta": "1/256",
+      "tail_mass": "65535/131072",
+      "I_X": "4"
+    },
+    {
+      "m": 9,
+      "beta": "1/512",
+      "tail_mass": "262143/524288",
+      "I_X": "9/2"
+    },
+    {
+      "m": 10,
+      "beta": "1/1024",
+      "tail_mass": "1048575/2097152",
+      "I_X": "5"
+    },
+    {
+      "m": 11,
+      "beta": "1/2048",
+      "tail_mass": "4194303/8388608",
+      "I_X": "11/2"
+    },
+    {
+      "m": 12,
+      "beta": "1/4096",
+      "tail_mass": "16777215/33554432",
+      "I_X": "6"
+    },
+    {
+      "m": 13,
+      "beta": "1/8192",
+      "tail_mass": "67108863/134217728",
+      "I_X": "13/2"
+    },
+    {
+      "m": 14,
+      "beta": "1/16384",
+      "tail_mass": "268435455/536870912",
+      "I_X": "7"
+    },
+    {
+      "m": 15,
+      "beta": "1/32768",
+      "tail_mass": "1073741823/2147483648",
+      "I_X": "15/2"
+    },
+    {
+      "m": 16,
+      "beta": "1/65536",
+      "tail_mass": "4294967295/8589934592",
+      "I_X": "8"
+    },
+    {
+      "m": 17,
+      "beta": "1/131072",
+      "tail_mass": "17179869183/34359738368",
+      "I_X": "17/2"
+    },
+    {
+      "m": 18,
+      "beta": "1/262144",
+      "tail_mass": "68719476735/137438953472",
+      "I_X": "9"
+    },
+    {
+      "m": 19,
+      "beta": "1/524288",
+      "tail_mass": "274877906943/549755813888",
+      "I_X": "19/2"
+    },
+    {
+      "m": 20,
+      "beta": "1/1048576",
+      "tail_mass": "1099511627775/2199023255552",
+      "I_X": "10"
+    },
+    {
+      "m": 21,
+      "beta": "1/2097152",
+      "tail_mass": "4398046511103/8796093022208",
+      "I_X": "21/2"
+    },
+    {
+      "m": 22,
+      "beta": "1/4194304",
+      "tail_mass": "17592186044415/35184372088832",
+      "I_X": "11"
+    },
+    {
+      "m": 23,
+      "beta": "1/8388608",
+      "tail_mass": "70368744177663/140737488355328",
+      "I_X": "23/2"
+    },
+    {
+      "m": 24,
+      "beta": "1/16777216",
+      "tail_mass": "281474976710655/562949953421312",
+      "I_X": "12"
+    },
+    {
+      "m": 25,
+      "beta": "1/33554432",
+      "tail_mass": "1125899906842623/2251799813685248",
+      "I_X": "25/2"
+    },
+    {
+      "m": 26,
+      "beta": "1/67108864",
+      "tail_mass": "4503599627370495/9007199254740992",
+      "I_X": "13"
+    },
+    {
+      "m": 27,
+      "beta": "1/134217728",
+      "tail_mass": "18014398509481983/36028797018963968",
+      "I_X": "27/2"
+    },
+    {
+      "m": 28,
+      "beta": "1/268435456",
+      "tail_mass": "72057594037927935/144115188075855872",
+      "I_X": "14"
+    },
+    {
+      "m": 29,
+      "beta": "1/536870912",
+      "tail_mass": "288230376151711743/576460752303423488",
+      "I_X": "29/2"
+    },
+    {
+      "m": 30,
+      "beta": "1/1073741824",
+      "tail_mass": "1152921504606846975/2305843009213693952",
+      "I_X": "15"
+    },
+    {
+      "m": 31,
+      "beta": "1/2147483648",
+      "tail_mass": "4611686018427387903/9223372036854775808",
+      "I_X": "31/2"
+    },
+    {
+      "m": 32,
+      "beta": "1/4294967296",
+      "tail_mass": "18446744073709551615/36893488147419103232",
+      "I_X": "16"
+    },
+    {
+      "m": 33,
+      "beta": "1/8589934592",
+      "tail_mass": "73786976294838206463/147573952589676412928",
+      "I_X": "33/2"
+    },
+    {
+      "m": 34,
+      "beta": "1/17179869184",
+      "tail_mass": "295147905179352825855/590295810358705651712",
+      "I_X": "17"
+    },
+    {
+      "m": 35,
+      "beta": "1/34359738368",
+      "tail_mass": "1180591620717411303423/2361183241434822606848",
+      "I_X": "35/2"
+    },
+    {
+      "m": 36,
+      "beta": "1/68719476736",
+      "tail_mass": "4722366482869645213695/9444732965739290427392",
+      "I_X": "18"
+    },
+    {
+      "m": 37,
+      "beta": "1/137438953472",
+      "tail_mass": "18889465931478580854783/37778931862957161709568",
+      "I_X": "37/2"
+    },
+    {
+      "m": 38,
+      "beta": "1/274877906944",
+      "tail_mass": "75557863725914323419135/151115727451828646838272",
+      "I_X": "19"
+    },
+    {
+      "m": 39,
+      "beta": "1/549755813888",
+      "tail_mass": "302231454903657293676543/604462909807314587353088",
+      "I_X": "39/2"
+    },
+    {
+      "m": 40,
+      "beta": "1/1099511627776",
+      "tail_mass": "1208925819614629174706175/2417851639229258349412352",
+      "I_X": "20"
+    }
+  ]
+}

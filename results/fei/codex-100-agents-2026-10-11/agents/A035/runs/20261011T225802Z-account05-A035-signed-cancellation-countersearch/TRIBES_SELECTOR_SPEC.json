@@ -1,0 +1,11 @@
+{
+ "helper_version":"A035-independent-tribes-selector-v1",
+ "family":"One fixed Boolean seed h: OR of eight disjoint width-two ANDs on 16 variables. g=y product(j=1..32) h(x_j), F=1 for selector=+1 and g for selector=-1, on 514 variables.",
+ "parameter_domain":"single seed and single tensor copy count t=32; additionally exact FMEI2 witness w=2,m=3",
+ "case_count":2,
+ "symmetry":"analytic product factorization; no symmetry reduction or expanded 2^514 table",
+ "arithmetic":"independent rational atanh logarithm checker, 32 terms, exact tail bound; factored exact Boolean spectra; integer inequality 3^32<2^53",
+ "memory_estimate_MB":10,
+ "maximum_runtime_seconds":60,
+ "reason":"Fixed-domain primary run found a seed with H/I>4; selector embedding tests the universal constant-4 gap with an explicit actual Boolean witness."
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260923T193114Z-account01-B13-qform-auto11",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_refresh": "08031c9315d52d26619716b65fe9097867c4a325",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "classification": "PROVED_SUPPORTING_TARGET_LEVEL_IMPLICATION",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "partner_result_applied": {
+    "partner": "account02/B13",
+    "source_commit": "eeabf558e96ea803514f8e438b49c18fe9ee789a",
+    "statement_used": "exact zero-disjoint-two-minor endpoint A=D+R with D diagonal and rank(R)<=2"
+  },
+  "existing_theorem_applied": {
+    "id": "QFORM-RANK2-DIFFUSE-SEPARABLE-HALF-RIESZ-v1",
+    "source_commit": "0d6e70139fe0f7d8ee22cc5210efb3b8d00a0bda",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260922T181432Z-account01-B14-QFORM-r15/REPORT.md",
+    "scope": "rank-two projected curvature, row leverage <=1/2, arbitrary coordinate-separable perturbations"
+  },
+  "new_outputs": [
+    "QFORM-EXTREMAL-PRODUCT-SUP-v1",
+    "exact scalar-Schur determinant transport det M=(1-c)d det(Lambda)/a",
+    "QFORM-RANK2-DIFFUSE-SCALAR-SCHUR-PRODUCT-RIGIDITY-v1"
+  ],
+  "main_inequality": "(1-c_k)|A_kk d_k det Lambda| <= 1024 e^2 rho^-4",
+  "partner_endpoint_corollary": "in diffuse rank-two endpoint, choose |d_k|>=1; if A_kk!=0 then |A_kk det Lambda| <=1536 e^2 rho^-4; otherwise heavy carrier has at most five c_i>1/3 hubs or an explicit degeneracy remains",
+  "canonical_math_commit": "6ee8e95ab3f01ae94ff48a163d253a2eb82cd967",
+  "checks_commit": "480f1a0390c8de8b69029affc649cbaf91e5a67a",
+  "brain_handoff_commit": "60fc6b9c3692156cc9a16dac4286261810439bea",
+  "unresolved_implication": "QFORM-DELTA0-RANK2-HEAVYHUB-OR-DEGENERATE-GLUE-v1",
+  "next_step": "close the at-most-five physical leverage hubs and A_kk=0/rank<=1/tiny-det(Lambda) branches product-preservingly, then rejoin the nonzero-two-minor four-hub twist chamber",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

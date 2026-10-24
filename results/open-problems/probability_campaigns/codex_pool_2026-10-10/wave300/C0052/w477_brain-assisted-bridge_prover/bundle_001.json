@@ -1,0 +1,309 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w477",
+  "bundle_slug": "c0052-source-coupling-conditional-bridge-20261010",
+  "entries": [
+    {
+      "key": "source-target",
+      "namespace": "probability.statmech",
+      "logical_name": "c0052-source-subcritical-coupling-target",
+      "kind": "concept",
+      "title": "C0052 exact source target: subcritical renormalized coupling",
+      "statement": "HISTORICAL CONJECTURE; current openness UNKNOWN. For the free zero-field nearest-neighbour Ising state on Z^3 at 0<beta<beta_c, let G_beta(x)=E[sigma_0 sigma_x], chi=sum_x G_beta(x), xi=[lim_n -(1/n) log G_beta(n e1)]^{-1}, and U4 be the four-spin expectation minus its three Wick pairings. With the source convention g(beta)=sum_{x,y,z}U4(0,x,y,z)/(chi^2 xi^3)<=0, prove that g(beta) does not tend to zero as beta increases to beta_c. This is PIMS 2017, arXiv:1707.00520v1, equations 7.1-7.2 and Conjecture 6, printed p94. Critical smeared-field cumulants use a different normalization; no equivalence is assumed here.",
+      "proof_text": null,
+      "assumptions": [
+        "nearest-neighbour ferromagnetic Ising model on Z^3",
+        "free zero-field subcritical state",
+        "chi and exponential xi finite at each beta<beta_c",
+        "historical statement only; not solved here"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w477:C0052:conditional-bridge-20261010",
+        "url": "~/brain_workers/w477/ATTEMPT.md",
+        "revision": "author-checked-unreviewed-2026-10-10",
+        "license": "owner-own-work (campaign deductions; classical inputs attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "current-input",
+      "namespace": "probability.statmech",
+      "logical_name": "original-current-ursell-identity-scope",
+      "kind": "concept",
+      "title": "Scope and direction of the original-current Ursell identity",
+      "statement": "ATTRIBUTED INPUT: for a finite free zero-field ferromagnetic Ising model, U4(x,y,z,t)=-2 G(x,y)G(z,t) P^{xy,zt}(x connected to z in n+m), where n and m are independent single currents, source labels cancel modulo two, and connectivity to oneself is permitted. The infinite-volume version at beta<=beta_c uses the no-infinite-path/continuity input in Aizenman-Duminil-Copin arXiv:1912.07973v4 section 3.2. Its equation 3.13 compares this probability from ABOVE by the overlap probability of independently enlarged clusters after adding sourceless currents. A lower bound on that enlarged-cluster probability alone is insufficient for a lower bound on the original probability.",
+      "proof_text": null,
+      "assumptions": [
+        "free zero-field ferromagnetic Ising model",
+        "current weights proportional to product J_e^n_e/n_e!",
+        "independent currents with specified parity source sets",
+        "infinite-volume extension requires the primary source's additional input"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w477:C0052:conditional-bridge-20261010",
+        "url": "~/brain_workers/w477/ATTEMPT.md",
+        "revision": "author-checked-unreviewed-2026-10-10",
+        "license": "owner-own-work (campaign deductions; classical inputs attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "L001",
+      "namespace": "probability.statmech",
+      "logical_name": "fourth-moment-deficit-excludes-gaussian-limit",
+      "kind": "lemma",
+      "title": "Conditional fourth-moment deficit witness",
+      "statement": "Let X_n converge in law to X, E X_n=0, E X_n^2=1, and let |X_n|^4 be uniformly integrable. If liminf_n(3-E X_n^4)>=epsilon>0, then E X=0, E X^2=1, E X^4<=3-epsilon, and X is non-Gaussian.",
+      "proof_text": "Truncate the first, second and fourth powers continuously. Weak convergence handles bounded truncations, and uniform integrability controls tails for the sequence and its limit. Thus all three moments converge. A centered variance-one Gaussian has fourth moment three, contrary to the positive deficit.",
+      "assumptions": [
+        "distributional convergence",
+        "centered variance-one variables",
+        "uniform integrability of fourth powers",
+        "positive liminf deficit"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w477:C0052:conditional-bridge-20261010",
+        "url": "~/brain_workers/w477/ATTEMPT.md",
+        "revision": "author-checked-unreviewed-2026-10-10",
+        "license": "owner-own-work (campaign deductions; classical inputs attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "L002",
+      "namespace": "probability.statmech",
+      "logical_name": "variance-weighted-annealed-current-cumulant-identity",
+      "kind": "lemma",
+      "title": "Exact block cumulant under variance-weighted sources",
+      "statement": "In a finite connected free zero-field ferromagnetic Ising model with positive edge couplings, choose nonzero nonnegative weights a, M=sum_x a_x sigma_x, V=E M^2, and ordered endpoints with rho(x,y)=a_x a_y G(x,y)/V. Independently draw two endpoint pairs (X,Y),(Z,T) from rho and single currents n,m sourced at the respective pairs, cancelling repeated labels modulo two. Then 3-E[(M/sqrt(V))^4]=2 P(X connected to Z in n+m), including repeated endpoints.",
+      "proof_text": "Expand the fourth cumulant as a finite weighted sum of U4. Each Wick pairing sums to V^2. Insert the original-current identity and divide by V^2; the coefficient becomes rho(x,y)rho(z,t). Keep every repeated-label term using parity source cancellation.",
+      "assumptions": [
+        "finite connected graph with positive ferromagnetic couplings",
+        "free zero-field state",
+        "finite nonnegative weights not all zero",
+        "independent pair draws and currents",
+        "original-current Ursell identity with parity cancellation"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w477:C0052:conditional-bridge-20261010",
+        "url": "~/brain_workers/w477/ATTEMPT.md",
+        "revision": "author-checked-unreviewed-2026-10-10",
+        "license": "owner-own-work (campaign deductions; classical inputs attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "L003",
+      "namespace": "probability.statmech",
+      "logical_name": "single-current-source-cluster-overlap-second-moment-criterion",
+      "kind": "lemma",
+      "title": "A sufficient second moment for single-current source overlap",
+      "statement": "Under the endpoint law of the variance-weighted cumulant identity, let C and C' be the independent SINGLE-current source clusters, W a finite vertex set, I=|W intersect C intersect C'|, q(v)=P(v in C), q(v,w)=P(v,w in C), A=sum_{v in W}q(v)^2>0, and B=sum_{v,w in W}q(v,w)^2. Then 3-E[(M/sqrt(V))^4]>=2A^2/B. A uniform upper bound B/A^2<=K would therefore provide a uniform deficit of at least 2/K. The ratio bound is an unproved extra input for critical 3D Ising.",
+      "proof_text": "Independence of the two clusters gives E I=A and E I^2=B. A common vertex connects the two source roots in the union current. Cauchy-Schwarz gives P(I>0)>=A^2/B; combine with the exact cumulant identity.",
+      "assumptions": [
+        "all hypotheses and sampling conventions of the variance-weighted identity",
+        "independence between the two marked SINGLE currents",
+        "finite W and A>0",
+        "no independence of two occupancies within one current"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w477:C0052:conditional-bridge-20261010",
+        "url": "~/brain_workers/w477/ATTEMPT.md",
+        "revision": "author-checked-unreviewed-2026-10-10",
+        "license": "owner-own-work (campaign deductions; classical inputs attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "L004",
+      "namespace": "probability.statmech",
+      "logical_name": "independent-nonempty-sets-divergent-mean-overlap-rare-intersection",
+      "kind": "lemma",
+      "title": "Divergent mean overlap with vanishing intersection probability",
+      "statement": "For integer K>=2 and N=K^3 vertices, independently draw C,C' to be the whole set with probability 1/K and otherwise one uniform vertex. They are independent, identically distributed and nonempty. For I=|C intersect C'|, P(I>0)=2/K-1/K^2+(1-1/K)^2/K^3 ->0, E I=K+2(1-1/K)/K+(1-1/K)^2/K^3 ->infinity, and E I^2=K^4+2(1-1/K)/K+(1-1/K)^2/K^3. Hence E I^2/(E I)^2 is asymptotic to K^2. This refutes a general first-moment inference, not the Ising conjecture.",
+      "proof_text": "Both sets full has probability 1/K^2 and gives I=N. Exactly one full has probability 2(1-1/K)/K and gives I=1. With both singleton, agreement has probability 1/N. The formulas follow by summing these disjoint cases.",
+      "assumptions": [
+        "integer K>=2",
+        "two independent random sets with the stated mixture law"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w477:C0052:conditional-bridge-20261010",
+        "url": "~/brain_workers/w477/ATTEMPT.md",
+        "revision": "author-checked-unreviewed-2026-10-10",
+        "license": "owner-own-work (campaign deductions; classical inputs attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "L005",
+      "namespace": "probability.statmech",
+      "logical_name": "switching-gaussian-even-moment-bound-positive-ising-weights",
+      "kind": "lemma",
+      "title": "Switching supplies Gaussian even-moment domination",
+      "statement": "For a free zero-field ferromagnetic Ising model on a finite graph, or its free infinite-volume limit with finitely supported nonnegative weights, let M=sum_x a_x sigma_x with a_x>=0 and V=E M^2>0. For every integer k>=1, E M^{2k}<=(2k-1)!! V^k and E exp(t M/sqrt(V))<=exp(t^2/2). In particular E(M/sqrt(V))^6<=15 and E[(M/sqrt(V))^4 1_{|M/sqrt(V)|>R}]<=15/R^2. Signed weights are not included.",
+      "proof_text": "In currents with sources equal to the parity set of a list of 2k spin labels and empty, the first label is connected to at least one other label: a repeated label gives a certain event, otherwise parity forces another source in its component. Switching identifies each event times the 2k-spin correlation with G(first,j) times the remaining-spin correlation. The union bound and induction give the Wick upper bound. Summing with nonnegative weights gives (2k-1)!! V^k. Spin-flip symmetry removes odd powers from the exponential; finite-volume passage proves the stated infinite-volume version. The sixth-moment tail inequality is pointwise.",
+      "assumptions": [
+        "free zero-field ferromagnetic Ising model",
+        "finite graph or free infinite-volume spin-correlation limit",
+        "finitely supported nonnegative weights",
+        "V>0",
+        "switching lemma for even parity source sets"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w477:C0052:conditional-bridge-20261010",
+        "url": "~/brain_workers/w477/ATTEMPT.md",
+        "revision": "author-checked-unreviewed-2026-10-10",
+        "license": "owner-own-work (campaign deductions; classical inputs attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "L006",
+      "namespace": "probability.statmech",
+      "logical_name": "positive-covariance-lattice-field-coarse-sobolev-tightness",
+      "kind": "lemma",
+      "title": "Coarse H^-2 local tightness after a smooth variance normalization",
+      "statement": "Let sigma be a stationary centered bounded spin field on Z^3 with nonnegative pair correlations and positive box-sum variances. Fix smooth f0 with 0<=f0<=1, f0=1 on [-1,1]^3 and support in [-2,2]^3. Let V0,L=Var(sum_x f0(x/L)sigma_x) and Phi_L=V0,L^{-1/2} sum_x sigma_x delta_{x/L} for integer L>=1. Then Phi_L is tight in H^{-2}_loc(R^3). If E[Phi_L(f0)^6]<=15 also holds, every subsequential limit Phi has E[Phi(f0)^2]=1 and is nonzero. No uniqueness, conformal invariance or sharp regularity is asserted.",
+      "proof_text": "Nonnegative correlations give V0,L>=Sigma_L, the variance of the radius-L box sum. Cover any fixed compact by a fixed number N of translated radius-L lattice boxes. Stationarity and Cauchy-Schwarz bound the sum-over-cover variance by N^2 Sigma_L; positive correlations then bound every bounded complex coefficient sum on that compact. Thus every Fourier coefficient of a smooth cutoff of Phi_L has a uniform second-moment bound. Summing with Sobolev weights of exponent 7/4 gives a bounded expected H^{-7/4} norm. Compact embedding into H^{-2}, Markov and a countable cutoff exhaustion give local tightness. Evaluation at f0 is continuous; the sixth-moment bound supplies uniform integrability, so variance one passes to each limit.",
+      "assumptions": [
+        "stationary centered bounded lattice field in dimension three",
+        "nonnegative pair correlations",
+        "positive box-sum variance",
+        "specified smooth f0 and its own variance normalization",
+        "sixth-moment bound only for the nonzero-limit conclusion"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w477:C0052:conditional-bridge-20261010",
+        "url": "~/brain_workers/w477/ATTEMPT.md",
+        "revision": "author-checked-unreviewed-2026-10-10",
+        "license": "owner-own-work (campaign deductions; classical inputs attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "L007",
+      "namespace": "probability.statmech",
+      "logical_name": "c0052-subcritical-coupling-random-root-overlap-criterion",
+      "kind": "lemma",
+      "title": "Source-faithful subcritical coupling from a random-root overlap",
+      "statement": "In the free zero-field nearest-neighbour Ising state on Z^3 at 0<beta<beta_c, write chi=sum_x G_beta(0,x)<infinity, xi>0 for the exponential correlation length and g=sum_{x,y,z}U4(0,x,y,z)/(chi^2 xi^3). Independently sample X,R with probability G_beta(0,x)/chi and single currents n,m sourced at {0,X},{0,R}, cancelling repeated labels. Put p_y=P(0 connected to y in n+tau_y m). Then -g=(2/xi^3)sum_y p_y. Let H={0,...,ceil(xi)-1}^3, N=|H|, Y uniform on H independently, W any finite set containing 0, I=|W intersect C(n,0) intersect (Y+C(m,0))|, A=E I and B=E I^2. Then A>=1/N>0 and -g>=2N A^2/(xi^3 B)>=2/(B/A^2). A bounded B/A^2 along some beta_j increasing to beta_c is therefore sufficient for the source's non-triviality definition. No such bound is proved here.",
+      "proof_text": "In the summed Ursell identity set z=y+r. Stationarity replaces G(y,y+r) with G(0,r). Dividing the x,r sum by chi^2 gives the two independent susceptibility endpoint draws, and nonnegative summands justify Tonelli. This proves the exact identity for -g. Restrict its root sum to H and average over Y. Single-current cluster overlap implies the original union-current connection. Cauchy-Schwarz bounds P(I>0) below by A^2/B. At Y=0 both clusters contain 0, so A>=1/N. Finally N=ceil(xi)^3>=xi^3. The ratio condition remains unproved.",
+      "assumptions": [
+        "free stationary zero-field nearest-neighbour subcritical Ising state on Z^3",
+        "finite susceptibility and positive finite exponential correlation length",
+        "primary infinite-volume switching/Ursell identity",
+        "two independent susceptibility-weighted marked SINGLE currents",
+        "independent uniform root Y on the specified cube",
+        "finite W containing 0",
+        "the ratio bound is a separate unresolved input"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w477:C0052:conditional-bridge-20261010",
+        "url": "~/brain_workers/w477/ATTEMPT.md",
+        "revision": "author-checked-unreviewed-2026-10-10",
+        "license": "owner-own-work (campaign deductions; classical inputs attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "ratio-gap",
+      "namespace": "probability.statmech",
+      "logical_name": "c0052-susceptibility-current-random-root-second-moment-gap",
+      "kind": "concept",
+      "title": "C0052 remaining gap: susceptibility-current overlap ratio",
+      "statement": "UNPROVED INPUT: in the sampling scheme of the source-faithful subcritical random-root criterion, find beta_j increasing to beta_c and K<infinity such that E I_beta_j^2/(E I_beta_j)^2<=K. Here the endpoints use G_beta(0,x)/chi(beta), the root shift is uniform on a cube of side ceil(xi(beta)), and the overlap uses SINGLE currents inside a finite correlation-length-scale box containing 0. Spin two-point estimates, divergent expected overlap and a lower bound for clusters enlarged with sourceless currents do not establish this bound. The critical variance-weighted block ratio is a different quantity.",
+      "proof_text": null,
+      "assumptions": [
+        "same objects, weights and normalization as the subcritical random-root criterion",
+        "clearly conjectural proof input"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w477:C0052:conditional-bridge-20261010",
+        "url": "~/brain_workers/w477/ATTEMPT.md",
+        "revision": "author-checked-unreviewed-2026-10-10",
+        "license": "owner-own-work (campaign deductions; classical inputs attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bad-shortcut",
+      "namespace": "probability.statmech",
+      "logical_name": "divergent-mean-overlap-uniform-hit-inference-invalid",
+      "kind": "concept",
+      "title": "Rejected route: a divergent overlap mean alone",
+      "statement": "INVALID GENERAL INFERENCE: two independent identically distributed nonempty random sets with divergent expected overlap must have intersection probability bounded away from zero. The rare-full-set mixture counterexample disproves this inference; a relative second-moment or other anti-concentration estimate is required before using it for an Ising non-Gaussianity argument.",
+      "proof_text": null,
+      "assumptions": [
+        "this entry records a refuted probabilistic inference, not a conjectured Ising counterexample"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w477:C0052:conditional-bridge-20261010",
+        "url": "~/brain_workers/w477/ATTEMPT.md",
+        "revision": "author-checked-unreviewed-2026-10-10",
+        "license": "owner-own-work (campaign deductions; classical inputs attributed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "L002",
+      "to_key": "current-input",
+      "kind": "depends_on",
+      "rationale": "The variance-weighted identity inserts the stated original-current Ursell identity with its original cluster event."
+    },
+    {
+      "from_key": "L003",
+      "to_key": "L002",
+      "kind": "depends_on",
+      "rationale": "The overlap lower bound is converted to the exact block fourth-cumulant deficit in L002."
+    },
+    {
+      "from_key": "L004",
+      "to_key": "bad-shortcut",
+      "kind": "refutes",
+      "rationale": "L004 has independent nonempty sets, E I tending to infinity, and P(I>0) tending to zero, which negates the asserted implication."
+    },
+    {
+      "from_key": "L007",
+      "to_key": "current-input",
+      "kind": "depends_on",
+      "rationale": "L007 uses the original infinite-volume current event and stationarity; the enlarged-cluster upper bound is excluded."
+    },
+    {
+      "from_key": "L007",
+      "to_key": "source-target",
+      "kind": "semantic_association",
+      "rationale": "L007 gives a conditional lower bound for exactly -sum U4/(chi^2 xi^3); it does not prove the unproved ratio condition or C0052."
+    },
+    {
+      "from_key": "ratio-gap",
+      "to_key": "L007",
+      "kind": "depends_on",
+      "rationale": "The gap specifies the exact root, endpoint and normalization hypotheses whose missing ratio bound would activate L007."
+    },
+    {
+      "from_key": "L006",
+      "to_key": "L005",
+      "kind": "semantic_association",
+      "rationale": "For the Ising application only, L005 supplies the sixth-moment assumption needed for L006's nonzero-limit conclusion; L006's tightness argument itself only uses stationary nonnegative covariance."
+    },
+    {
+      "from_key": "source-target",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0052-non-triviality-of-the-scaling-limit-of-the-three-dimensional-ising-mod",
+      "kind": "semantic_association",
+      "rationale": "The existing card says 'the renormalised coupling constant does not vanish'; this source-faithful concept spells out g(beta)=sum U4/(chi^2 xi^3) and the approach from beta<beta_c, preserving UNKNOWN current status."
+    }
+  ]
+}

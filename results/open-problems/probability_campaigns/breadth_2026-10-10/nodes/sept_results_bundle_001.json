@@ -1,0 +1,820 @@
+{
+ "spec": "mathbrain-draft-v1",
+ "author_agent": "codex-prob1000-nodes-1010",
+ "bundle_slug": "probability-campaign-results-20260914-001",
+ "entries": [
+  {
+   "key": "janson-problem-18-39-condensation-rate-reduction",
+   "namespace": "probability.allocations",
+   "logical_name": "janson-problem-18-39-condensation-rate-reduction",
+   "kind": "concept",
+   "title": "Janson 18.39: proposed condensation-rate reduction",
+   "statement": "[campaign result 2026-09-14, author_checked; reduction plus asserted conditional, not a solution] Svante Janson's Problem 18.39 in Simply generated trees, conditioned Galton-Watson trees, random allocations and condensation, Probability Surveys 9 (2012), arXiv:1112.0510, asks whether Y_(1)/n -> 0 in probability is possible in the condensation regime 0 < nu < lambda. Janson conjectures that it is not possible for the full sequence and, more strongly, that there are always epsilon > 0 and a subsequence along which Y_(1) >= epsilon n w.h.p. (Example 18.36 gives Y_(1)/n -> 0 in probability along a subsequence.) Setting: let w_k >= 0 with w_0 > 0, let Phi(z) = sum_k w_k z^k have radius rho in (0,infinity) with Phi(rho) < infinity, and put pi_k = w_k rho^k/Phi(rho), a law with generating-function radius one and finite mean nu > 0. Let m_n/n -> lambda > nu. (Y_1,...,Y_n) is n i.i.d. pi variables conditioned on sum m_n, Y_(1) = max_i Y_i, and M = (lambda-nu)n. Heuristic rate: carrying M in r = M/a boxes of size a has class weight binomial(n,r) pi_a^r up to the bulk's fluctuation, giving log P = M Lambda(a) + o(M) with Lambda(a) = [log pi_a + log(a/(lambda-nu)) + 1]/a. For pi_k ~ c k^(-beta) and for pi_a = exp(-a^gamma), 0<gamma<1, Lambda increases on large a, so the optimum is a = M (one box), matching the known condensation picture. Since limsup_a Lambda(a) = 0 and Lambda < 0 for large a, Lambda has infinitely many upper records a_1 < a_2 < ... (Lambda(a_j) > Lambda(a) for all a < a_j). The record asserts, as author-checked and with no proof given beyond reference to an analogous step for Problem 18.40 in a companion memo, the following Proposition: if for some epsilon > 0 and every C, along infinitely many records, Lambda(a_j) - max_{a <= epsilon a_j} Lambda(a) > C a_j^(-1/2), then along n_j = a_j/(lambda-nu), P(Y_(1) >= ((lambda-nu)/2) n_j) -> 1, so the conjecture holds. Caveat: the only derivation offered is the heuristic rate with an o(M) error, which is coarser than the order sqrt(a_j) resolution this hypothesis requires, so the record does not establish the Proposition. The record poses the open Question whether, for every law pi on Z_{>=0} with radius one and finite mean, [log pi_a + log a]/a has infinitely many records with gap exceeding a_j^(-1/2) below max_{a <= epsilon a_j} for some fixed epsilon > 0. This is not a proved equivalence with the conjecture. A negative answer would only give a candidate counterexample, still requiring proof that the allocation spreads. The Question's normalisation and fixed threshold also differ from the Proposition's hypothesis. The problem remains open. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "The allocations are defined along sizes with positive conditioning probability.",
+    "0 < nu < lambda and the boundary-tilted law pi has generating-function radius one."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:1112.0510",
+    "url": "https://arxiv.org/abs/1112.0510",
+    "revision": "problem source: Probability Surveys 9 (2012); own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "janson-conjecture-20-1-fixed-level-moment-convergence",
+   "namespace": "probability.trees",
+   "logical_name": "janson-conjecture-20-1-fixed-level-moment-convergence",
+   "kind": "theorem",
+   "title": "Janson 20.1: uniform integrability at a fixed level",
+   "statement": "[campaign result 2026-09-14, author checked, no independent read] This is the finite-moment part of Svante Janson's Conjecture 20.1 in Simply generated trees, conditioned Galton-Watson trees, random allocations and condensation, Probability Surveys 9 (2012), arXiv:1112.0510. Let pi = (pi_j)_{j>=0} be a nondegenerate offspring law on the nonnegative integers with pi_0 > 0, sum j pi_j = 1, and variance sigma^2 in (0,infinity). Let xi have law pi, let T be the ordered Galton-Watson tree in which all vertices independently have pi-distributed numbers of children, and let T_n have the law of T conditional on its total number of vertices being n, along admissible n for which that event has positive probability. For a rooted tree A define ell_k(A) as its number of vertices at graph distance k from the root. Define the Kesten tree T_hat by an infinite distinguished spine: a spine vertex has j children with probability j pi_j, one uniformly selected child continues the spine, and every other child starts an independent ordinary pi Galton-Watson tree. Fix an integer k >= 1. If r >= 1 is real and E[xi^(r+1)] < infinity, then the family {ell_k(T_n)^r}_n is uniformly integrable and E[ell_k(T_n)^r] -> E[ell_k(T_hat)^r] < infinity. Here uniform integrability means lim_{K->infinity} sup_n E[ell_k(T_n)^r; ell_k(T_n)^r > K] = 0. For 0 < r < 1 the same conclusion follows under the displayed finite-variance assumption. The critical infinite-variance case with 0 < r < 1 is not settled by this result. This is an unrefereed campaign result.",
+   "proof_text": "Write $n$ for the tree sizes along which $T_n$ is defined ($n \\equiv 1 \\pmod{\\text{span}}$) and $S_M$ for the sum of $M$ i.i.d. copies of $\\xi \\sim \\pi$, so $\\mathbb{E}\\xi = 1$ and $\\sigma^2 < \\infty$. Two facts about $S_M$: by the local limit theorem for lattice laws with finite variance,\n$$\\mathbb{P}(S_n = n - 1) \\ge c\\,n^{-1/2} \\quad\\text{for all admissible } n, \\qquad \\sup_j \\mathbb{P}(S_M = j) \\le C\\,M^{-1/2} \\quad\\text{for all } M \\ge 1, \\tag{1}$$\nwith $c, C > 0$ depending on $\\pi$ only (the second holds for large $M$ by the same theorem and for the remaining $M$ trivially).\n\n*The weight of a truncated tree.* Let $t$ be a finite plane tree whose vertices of depth less than $k$ have prescribed outdegrees and whose vertices at depth $k$ are leaves of $t$ with unspecified subtrees; call the former the interior $I(t)$, put $N = |I(t)| = 1 + \\ell_1(t) + \\dots + \\ell_{k-1}(t)$ and $\\ell = \\ell_k(t)$. Let $T^{(k)}$ denote a tree truncated at depth $k$. For $\\ell \\ge 1$ and $n > N$, Lemma 14.9 of the survey (with the interior vertices as $v_1, \\dots, v_N$ in depth-first order, $\\sum_{i \\le N} d_i = N - 1 + \\ell$) gives\n$$\\mathbb{P}\\big(T_n^{(k)} = t\\big) = \\ell\\,\\frac{n}{n - N}\\,\\mathbb{P}(Y_i = d_i,\\ i \\le N),$$\nwhere $(Y_1, \\dots, Y_n)$ is the allocation $B_{n-1,n}$, i.e. $n$ i.i.d. copies of $\\xi$ conditioned on $S_n = n - 1$; so\n$$\\mathbb{P}\\big(T_n^{(k)} = t\\big) = \\mathbb{P}_{\\mathrm{GW}}\\big(T^{(k)} = t\\big)\\;W_n(t), \\qquad W_n(t) := \\frac{n\\,\\ell\\;\\mathbb{P}(S_{n-N} = n - N - \\ell)}{(n - N)\\;\\mathbb{P}(S_n = n - 1)}, \\tag{2}$$\nwith $\\mathbb{P}_{\\mathrm{GW}}(T^{(k)} = t) = \\prod_{v \\in I(t)}\\pi_{d(v)}$ the probability that the first $k$ generations of the unconditioned Galton–Watson tree $T$ are $t$. (The formula is also the cycle lemma applied to the forest of $\\ell$ subtrees with $n - N$ vertices in total; the survey proves it from Lemma 14.3.) If $\\ell = 0$ then $t$ is a whole tree and contributes nothing to any expectation of $\\ell_k^r$ on $\\{\\ell_k \\ge 1\\}$, so it can be ignored.\n\nTwo bounds follow from (1) and (2). First,\n$$W_n(t) \\le \\frac{n\\,\\ell\\,C (n-N)^{-1/2}}{(n-N)\\,c\\,n^{-1/2}} = C'\\,\\ell\\Big(\\frac{n}{n-N}\\Big)^{3/2}, \\qquad C' = C/c. \\tag{3}$$\nSecond, since the $\\ell$ vertices at depth $k$ are among the $n - N$ vertices outside the interior, $n - N \\ge \\ell$, and so\n$$W_n(t) \\le C'\\,n^{3/2}\\,\\ell^{-1/2}. \\tag{4}$$\n\n*Moments of generation sizes of the unconditioned tree.* For $s \\ge 1$ and $Z_j := \\ell_j(T)$: given $Z_{j-1} = m$, $Z_j$ is a sum of $m$ i.i.d. copies of $\\xi$, so by Minkowski $\\mathbb{E}[Z_j^s \\mid Z_{j-1} = m] \\le m^s\\,\\mathbb{E}\\xi^s$, hence $\\mathbb{E} Z_j^s \\le (\\mathbb{E}\\xi^s)^j < \\infty$ when $\\mathbb{E}\\xi^s < \\infty$. Likewise $\\mathbb{E}[Z_k^s \\mid Z_j = m] \\le m^s(\\mathbb{E}\\xi^s)^{k-j}$ for $s \\ge 1$, and for $0 < s < 1$ by Jensen $\\mathbb{E}[Z_k^s \\mid Z_j = m] \\le (\\mathbb{E}[Z_k \\mid Z_j = m])^s = m^s$ (mean one). So in all cases, for $0 < s \\le r + 1$,\n$$\\mathbb{E}[Z_k^s \\mid Z_j = m] \\le C_s\\,m^s. \\tag{5}$$\n\n*Uniform integrability.* Fix $K > 1$. By (2),\n$$\\mathbb{E}\\big[\\ell_k(T_n)^r;\\ \\ell_k(T_n) > K\\big] = \\mathbb{E}_{\\mathrm{GW}}\\big[Z_k^r\\,W_n(T^{(k)});\\ Z_k > K\\big],$$\nwhere on the right $N = N_k := 1 + Z_1 + \\dots + Z_{k-1}$ is the number of vertices of $T$ of depth less than $k$. Split according to $N_k \\le n/2$ or $N_k > n/2$.\n\nOn $\\{N_k \\le n/2\\}$, (3) gives $W_n \\le 2^{3/2}C' Z_k$, so this part is at most\n$$2^{3/2}C'\\;\\mathbb{E}_{\\mathrm{GW}}\\big[Z_k^{r+1};\\ Z_k > K\\big],$$\nwhich does not depend on $n$ and tends to $0$ as $K \\to \\infty$ because $\\mathbb{E} Z_k^{r+1} \\le (\\mathbb{E}\\xi^{r+1})^k < \\infty$.\n\nOn $\\{N_k > n/2\\}$, (4) gives $Z_k^r W_n \\le C' n^{3/2} Z_k^{r - 1/2}$, and $N_k > n/2$ forces $Z_j > n/(2k)$ for some $1 \\le j \\le k - 1$ when $n > 2k$ (the root alone cannot do it). So this part is at most\n$$C' n^{3/2}\\sum_{j=1}^{k-1}\\mathbb{E}_{\\mathrm{GW}}\\big[Z_k^{r-1/2};\\ Z_j > n/(2k)\\big] \\le C' C_{r-1/2}\\,n^{3/2}\\sum_{j=1}^{k-1}\\mathbb{E}_{\\mathrm{GW}}\\big[Z_j^{r-1/2};\\ Z_j > n/(2k)\\big]$$\nby (5) with $s = r - 1/2 \\in [1/2, r+1]$, and on $\\{Z_j > n/(2k)\\}$ we have $Z_j^{r-1/2} \\le (2k/n)^{3/2} Z_j^{r+1}$, so the whole thing is at most\n$$C' C_{r-1/2}\\,(2k)^{3/2}\\sum_{j=1}^{k-1}\\mathbb{E}_{\\mathrm{GW}}\\big[Z_j^{r+1};\\ Z_j > n/(2k)\\big] \\longrightarrow 0 \\quad (n \\to \\infty),$$\nagain because $\\mathbb{E} Z_j^{r+1} < \\infty$. This part does not depend on $K$ at all.\n\nHence $\\limsup_{n}\\mathbb{E}[\\ell_k(T_n)^r; \\ell_k(T_n) > K] \\le 2^{3/2}C'\\,\\mathbb{E}_{\\mathrm{GW}}[Z_k^{r+1}; Z_k > K] \\to 0$ as $K \\to \\infty$, and since each $\\mathbb{E}\\,\\ell_k(T_n)^r$ is finite (a finite tree), the family $\\{\\ell_k(T_n)^r\\}$ is uniformly integrable. Together with $\\ell_k(T_n) \\to_d \\ell_k(\\widehat T)$, (20.1) of the survey, this gives $\\mathbb{E}\\,\\ell_k(T_n)^r \\to \\mathbb{E}\\,\\ell_k(\\widehat T)^r$, and the limit is finite because the moments are bounded. $\\square$\n\nConsequently Conjecture 20.1 holds for every integer $r \\ge 1$ and, more generally, for every real $r \\ge 1$; for $0 < r < 1$ it holds whenever $\\sigma^2 < \\infty$ (then $\\ell_k(T_n)$ itself is uniformly integrable by the case $r = 1$, and so is any smaller power). The one case the theorem leaves open is $0 < r < 1$, $\\nu = 1$, $\\sigma^2 = \\infty$, $\\mathbb{E}\\xi^{r+1} < \\infty$.",
+   "assumptions": [
+    "pi is critical, nondegenerate, and pi_0 > 0.",
+    "k is fixed and positive; conditioning sizes are admissible.",
+    "For r >= 1, E[xi^(r+1)] < infinity; for 0 < r < 1, Var(xi) < infinity."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:1112.0510",
+    "url": "https://arxiv.org/abs/1112.0510",
+    "revision": "problem source: Probability Surveys 9 (2012); own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "janson-problem-20-3-conditioned-box-count-gaussian-limit",
+   "namespace": "probability.allocations",
+   "logical_name": "janson-problem-20-3-conditioned-box-count-gaussian-limit",
+   "kind": "theorem",
+   "title": "Janson 20.3: box-count Gaussian limit at a finite-variance mean",
+   "statement": "[campaign result 2026-09-14, author checked] This is a proved mean-conditioning case of Svante Janson's Problem 20.3 in Simply generated trees, conditioned Galton-Watson trees, random allocations and condensation, Probability Surveys 9 (2012), arXiv:1112.0510. Let w_j >= 0, w_0 > 0, Phi(z) = sum_{j>=0} w_j z^j, and rho be its radius of convergence. Choose a fixed tau in (0,rho], with Phi(tau) < infinity, and define pi_j = w_j tau^j/Phi(tau), mu = sum j pi_j > 0, and sigma^2 = sum (j-mu)^2 pi_j in (0,infinity). Allow either tau < rho, or tau = rho with finite sigma^2. Let integers m_n satisfy m_n - n mu = O(1), and restrict to feasible sizes. Draw (Y_1,...,Y_n) with probability proportional to product_i w_{Y_i}, conditional on sum_i Y_i = m_n, and put N_d = number of i with Y_i = d. For any fixed finite set D of nonnegative integers, ((N_d-n pi_d)/sqrt(n))_{d in D} converges in distribution to a centered multivariate Gaussian vector. Its diagonal covariance is V_dd = pi_d(1-pi_d) - (d-mu)^2 pi_d^2/sigma^2; for distinct d,e its covariance is V_de = -pi_d pi_e - (d-mu)(e-mu)pi_d pi_e/sigma^2. Degenerate Gaussian coordinates are allowed. In Janson's parameters, Psi(t) = t Phi'(t)/Phi(t), lambda = mu, and nu = lim_{t upward to rho} Psi(t), so the two cases are 0 < lambda < nu and lambda = nu with finite variance. The stronger O(1) centering hypothesis is explicit here; mere convergence m_n/n -> lambda is not being asserted to justify centering by the fixed law pi. This is an unrefereed campaign result.",
+   "proof_text": "*(a) $0 \\le \\lambda < \\nu$.* Yes, with no extra hypothesis, and Janson's guess is right. Choose $\\tau_n$ with $n\\Psi(\\tau_n) = m + O(1)$, so the allocation is $n$ i.i.d. copies of $\\xi \\sim \\pi^{(n)}$ conditioned on $S_n = m$ with $m - n\\mu = O(1)$. Since $\\tau < \\rho$, the tilted law has a finite exponential moment, so for any finite set of degrees the vector $\\big(\\sum_i \\mathbf 1\\{\\xi_i = d\\}\\big)_{d \\in D}$ together with $S_n$ obeys a multivariate local limit theorem; conditioning the limiting Gaussian on its last coordinate gives\n$$\\frac{N_d - n\\pi_d}{\\sqrt n} \\longrightarrow N\\big(0,\\ \\sigma_d^2\\big), \\qquad \\sigma_d^2 = \\pi_d(1-\\pi_d) - \\frac{(d-\\mu)^2\\pi_d^2}{\\sigma^2},$$\njointly in $d$, with $\\mathrm{Cov} = -\\pi_d\\pi_e - (d-\\mu)(e-\\mu)\\pi_d\\pi_e/\\sigma^2$ for $d \\ne e$. At $\\mu = 1$ this is Kolchin's (20.6) and Janson's (20.7), so the tree case is the special case $\\lambda = \\mu = 1$.\n\n*(b) $\\lambda = \\nu$, $\\sigma^2 < \\infty$.* Yes, by the same argument: the tilted law at $\\tau = \\rho$ need not have an exponential moment, but a finite covariance matrix is all the lattice local limit theorem needs.",
+   "assumptions": [
+    "The tilt is fixed, mu > 0, and 0 < sigma^2 < infinity.",
+    "m_n-n mu = O(1), with positive conditioning probability.",
+    "D is finite; tau is interior or is the finite-variance boundary tilt."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:1112.0510",
+    "url": "https://arxiv.org/abs/1112.0510",
+    "revision": "problem source: Probability Surveys 9 (2012); own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "janson-problem-20-3-irregular-tail-nonnormality",
+   "namespace": "probability.allocations",
+   "logical_name": "janson-problem-20-3-irregular-tail-nonnormality",
+   "kind": "concept",
+   "title": "Janson 20.3: irregular-tail obstruction to a universal box-count CLT",
+   "statement": "[campaign result 2026-09-14, author checked; depends on the companion memo on Problem 20.2] This is the boundary and condensation part of the answer recorded for Svante Janson's Problem 20.3 in Simply generated trees, conditioned Galton-Watson trees, random allocations and condensation, Probability Surveys 9 (2012), arXiv:1112.0510. Use Janson's balls-in-boxes setting with weights w_j, generating function Phi, radius rho, Psi(t) = t Phi'(t)/Phi(t), nu = lim_{t up to rho} Psi(t), m/n -> lambda, pi the tilted law at tau = rho when lambda >= nu, and N_d the number of boxes with d balls. In the two regimes not covered by the finite-variance mean-conditioning theorem, (c) lambda = nu with sigma^2 = infinity and (d) lambda > nu, the natural analogue of the Gaussian limit has variance sigma_d^2 = pi_d(1-pi_d). In (d) the constraint is absorbed by the condensate rather than by the bulk. The record asserts that this analogue holds under regular variation of the tail, by the argument of Thevenin's Theorem 6.7 in case (d), and fails in general. The failure rests on two constructions, Theorems A and B of the companion memo on Problem 20.2. Theorem A is a subcritical law conditioned at lambda = 1 > nu, that is, sum of the xi_i equal to n-1, for which (N_1 - n pi_1)/sqrt(n) converges to a non-degenerate two-point law. Theorem B is a law with nu = 1 and sigma^2 = infinity, conditioned at lambda = 1, for which (N_1 - n pi_1)/sqrt(n) converges to a mixture of two Gaussians. Assuming those two theorems, a Gaussian limit for the box counts in regimes (c) and (d) does not hold without a further regularity condition on the tail. The record identifies local flatness of the tail at the scale the conditioning must supply as the dividing line. This is an unrefereed campaign result, and the counterexamples are proved in the companion memo, not in this record.",
+   "proof_text": null,
+   "assumptions": [
+    "The conditioning events have positive probability.",
+    "The counterexample construction is reported, rather than proved within this record."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:1112.0510",
+    "url": "https://arxiv.org/abs/1112.0510",
+    "revision": "problem source: Probability Surveys 9 (2012); own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "janson-problem-20-4-single-vertex-fringe-count-reduction",
+   "namespace": "probability.trees",
+   "logical_name": "janson-problem-20-4-single-vertex-fringe-count-reduction",
+   "kind": "concept",
+   "title": "Janson 20.4: reduction through the leaf count",
+   "statement": "[campaign result 2026-09-14, author checked; depends on the companion memo on Problem 20.2] This is the negative part of the answer recorded for Svante Janson's Problem 20.4 in Simply generated trees, conditioned Galton-Watson trees, random allocations and condensation, Probability Surveys 9 (2012), arXiv:1112.0510. Problem 20.4 asks for a Gaussian extension of Theorem 7.12, the law of large numbers for fringe-subtree counts. Let T_n be the simply generated tree, equivalently the conditioned Galton-Watson tree, with n vertices. Let N_T be the number of vertices whose fringe subtree equals a fixed finite ordered rooted tree T, and let N_d be the number of vertices with d children. For the one-vertex tree bullet, N_bullet = N_0 exactly, since its occurrences are precisely the leaves. In both constructions of the companion memo on Problem 20.2, the subcritical law of its Theorem A (nu < 1) and the critical infinite-variance law of its Theorem B (nu = 1, sigma^2 = infinity), the bulk of the vertices has degree 0 or 1. Hence N_0 = n - N_1 + O(1), and N_bullet inherits the non-Gaussian limit of (N_1 - n pi_1)/sqrt(n): a two-point law in the first construction and a mixture of two Gaussians in the second. Assuming those two theorems, fringe-subtree counts are not asymptotically normal in general when nu < 1, nor when nu = 1 with sigma^2 = infinity. The finite-variance critical case is resolved in the literature by Janson (Random Structures Algorithms 48, 2016, Theorem 1.5) and is not included here as own work. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "T_n is an ordered rooted tree, and its one-vertex fringe subtrees are leaves."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:1112.0510",
+    "url": "https://arxiv.org/abs/1112.0510",
+    "revision": "problem source: Probability Surveys 9 (2012); own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "shiozawa-wang-remark-5-3-downward-jump-hardy-bound",
+   "namespace": "probability.diffusions",
+   "logical_name": "shiozawa-wang-remark-5-3-downward-jump-hardy-bound",
+   "kind": "concept",
+   "title": "Shiozawa-Wang 5.3(ii): a downward jump raises the Hardy product",
+   "statement": "[campaign result 2026-09-14, author_checked_criterion_controlled_against_the_papers_own_deterministic_benchmark] This is a local estimate used in the campaign answer to the first case (w_1 = |x|^delta) of the open question in Remark 5.3(ii) of arXiv:2607.07410. Fix delta > 1 and x_0 > 0. Let V be a real, locally bounded, cadlag function on (0,infinity), and set B_l(x) = (integral_{x_0}^x exp(y^delta+V(y)) dy)(integral_x^infinity exp(-y^delta-V(y)) dy), allowing an infinite product. Suppose V has a downward jump of size m > 0 at a sufficiently large time tau, so V(tau-) - V(tau) = m. Put h = min(tau^(1-delta),1), assume tau-h > x_0, and define O_1 = sup_{tau-h<=y<tau}|V(y)-V(tau-)| and O_2 = sup_{tau<=y<=tau+h}|V(y)-V(tau)|. Then B_l(tau) >= exp(-4 delta) tau^(2-2 delta) exp(m-O_1-O_2). So the logarithmic cost of a quiet well at tau is (2 delta-2) log tau, while its jump depth contributes m. The bound uses only the integrals over [tau-h,tau] and [tau,tau+h], so it holds with x_0 replaced by any R < tau-h. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "delta > 1; tau is sufficiently large and tau-h > x_0.",
+    "V is locally bounded and cadlag, with the stated downward jump."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:2607.07410",
+    "url": "https://arxiv.org/abs/2607.07410",
+    "revision": "problem source as identified in campaign record dated 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "shiozawa-wang-remark-5-3-confining-diffusion-noncompact",
+   "namespace": "probability.diffusions",
+   "logical_name": "shiozawa-wang-remark-5-3-confining-diffusion-noncompact",
+   "kind": "concept",
+   "title": "Shiozawa-Wang 5.3(ii): negative jumps defeat polynomial confinement",
+   "statement": "[campaign result 2026-09-14, author_checked_criterion_controlled_against_the_papers_own_deterministic_benchmark] This is the proved range of the campaign answer to the first case (w_1 = |x|^delta) of the open question in Remark 5.3(ii) of arXiv:2607.07410. Let Q denote the law of a two-sided, nontrivial, (r_0,alpha)-semi-selfsimilar Levy process V with cadlag paths and V(0)=0, where alpha is in (0,2), Q(V(1)>0)>0 and Q(V(1)<0)>0. Strictly alpha-stable processes are included. Let nu be its Levy measure and suppose nu((-infinity,0)) > 0. Let delta > 1. Put w(x) = |x|^delta + V(x) and mu^w(dx) = exp(-w(x))dx. Let L^w be the self-adjoint operator associated with the closure on L^2(R,mu^w) of E^w(f,f) = (1/2) integral_R |f'(x)|^2 exp(-w(x))dx, f in C_c^infinity(R). For any fixed x_0 > 0 define B_l(x) = (integral_{x_0}^x exp(w(y))dy)(integral_x^infinity exp(-w(y))dy). Then, Q-almost surely: limsup_{x->infinity} B_l(x) = infinity, and this holds with x_0 replaced by any R; the bottom lambda_ess of the essential spectrum of -L^w is 0; and the semigroup exp(tL^w) is noncompact. For 0 < delta <= 1/alpha the same conclusion is the paper's Proposition 5.2. The record's claim for alpha in (1,2) and 1/alpha < delta <= 1 is not covered by the written proof. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "alpha-semi-selfsimilar Levy process satisfying both sign-probability hypotheses.",
+    "nu has negative jumps and delta > max(1,1/alpha)."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:2607.07410",
+    "url": "https://arxiv.org/abs/2607.07410",
+    "revision": "problem source as identified in campaign record dated 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "shiozawa-wang-remark-5-3-outward-diffusion-noncompact",
+   "namespace": "probability.diffusions",
+   "logical_name": "shiozawa-wang-remark-5-3-outward-diffusion-noncompact",
+   "kind": "concept",
+   "title": "Shiozawa-Wang 5.3(ii): positive jumps destroy compactness for the outward potential",
+   "statement": "[campaign result 2026-09-14, author_checked_criterion_controlled_against_the_papers_own_deterministic_benchmark] This is the proved range of the campaign answer to the second case (w_2 = -|x|^delta) of the open question in Remark 5.3(ii) of arXiv:2607.07410. Let Q denote the law of a two-sided, nontrivial, (r_0,alpha)-semi-selfsimilar Levy process V with cadlag paths and V(0)=0, where alpha is in (0,2), Q(V(1)>0)>0 and Q(V(1)<0)>0. Strictly alpha-stable processes are included. Let nu be its Levy measure and suppose nu((0,infinity)) > 0. Let delta > 1. Put w(x) = -|x|^delta + V(x) and mu^w(dx) = exp(-w(x))dx. Let L^w be the self-adjoint operator associated with the closure on L^2(R,mu^w) of E^w(f,f) = (1/2) integral_R |f'(x)|^2 exp(-w(x))dx, f in C_c^infinity(R). For fixed x_0 > 0 set B_r(x) = (integral_x^infinity exp(w(y))dy)(integral_{x_0}^x exp(-w(y))dy). Then, Q-almost surely: limsup_{x->infinity} B_r(x) = infinity; lambda_ess(-L^w) = 0; and exp(tL^w) is noncompact. The proof is the negative-jump calculation applied to -V, with the two Hardy factors interchanged. For 0 < delta <= 1/alpha the same conclusion is the paper's Proposition 5.2. The record's claim for alpha in (1,2) and 1/alpha < delta <= 1 is not covered by the written proof. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "alpha-semi-selfsimilar Levy process satisfying both sign-probability hypotheses.",
+    "nu has positive jumps and delta > max(1,1/alpha)."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:2607.07410",
+    "url": "https://arxiv.org/abs/2607.07410",
+    "revision": "problem source as identified in campaign record dated 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "shiozawa-wang-remark-5-3-jump-sign-dichotomy-sketch",
+   "namespace": "probability.diffusions",
+   "logical_name": "shiozawa-wang-remark-5-3-jump-sign-dichotomy-sketch",
+   "kind": "concept",
+   "title": "Shiozawa-Wang 5.3(ii): broader sign dichotomy and an unfinished converse",
+   "statement": "[campaign result 2026-09-14, author_checked_criterion_controlled_against_the_papers_own_deterministic_benchmark] This is the broader partial answer reported for both cases of the open question in Remark 5.3(ii) of arXiv:2607.07410. Let V be a two-sided (r_0,alpha)-semi-selfsimilar Levy process with alpha in (0,2), whose value at time one has positive probability of each sign, and let nu be its Levy measure. For delta > 0 consider the two diffusion forms with reference densities exp(-|x|^delta - V(x)) and exp(|x|^delta - V(x)), each with energy (1/2) integral |f'|^2 times the corresponding density. The record claims noncompactness, with essential-spectrum bottom zero, for every delta, when nu has negative jumps in the first case or positive jumps in the second. The written quiet-window proof covers delta > 1; the paper's Proposition 5.2 covers 0 < delta <= 1/alpha. Together these give all delta when alpha <= 1, which includes alpha < 1, where nu must charge both half-lines. For alpha in (1,2) and 1/alpha < delta <= 1 the claim is not established by the written argument. For alpha > 1, delta > 1 and no negative jumps, the record also sketches compactness at the +infinity end of the first diffusion via the bound B_l(x) <= C^2 x^(2-2delta). Here B_l is the integral of the reciprocal density from a fixed positive x_0 to x times the integral of the density from x to infinity, and C is a finite path-dependent constant. The record explicitly leaves the uniform near-field estimate unwritten, so this converse is a sketch. Compactness at one end does not by itself establish compactness of the full two-sided operator. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "The converse is explicitly a sketch, with a missing uniform estimate.",
+    "The claimed converse concerns the positive-infinity end only."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:2607.07410",
+    "url": "https://arxiv.org/abs/2607.07410",
+    "revision": "problem source as identified in campaign record dated 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "stepanyants-krapivsky-hartle-krioukov-layer-pwit-identity",
+   "namespace": "probability.trees",
+   "logical_name": "stepanyants-krapivsky-hartle-krioukov-layer-pwit-identity",
+   "kind": "concept",
+   "title": "Recursive-tree layers as exponential moments of the PWIT minimum",
+   "statement": "[campaign result 2026-09-14, author checked; tested by direct Monte Carlo simulation of the Poisson-weighted infinite tree (4000 replicates, k=2,5,10,12), agreeing with the recursion within about 1.5 standard errors] This is the campaign's branching-walk identification behind Conjecture 1 of H. Stepanyants, P. L. Krapivsky, H. Hartle and D. Krioukov, The rank and layer distributions in random recursive trees, arXiv:2608.04303. Let the Poisson-weighted infinite tree have root position zero, with children of each vertex at the points of an independent rate-one Poisson process on (0,infinity), translated by their parent's position. Let M_k be the minimum position of generation k, and set M_0=0. Define s_0(y)=1 for y>=0 and s_k(y)=1-exp(-integral_0^y s_{k-1}(z)dz) for k>=1. Put bar_ell_k=integral_0^infinity s_k(y)exp(-y)dy and ell_k=bar_ell_k-bar_ell_{k+1}. In the source, ell_k is the limiting fraction of vertices in layer k of a random recursive tree, formed by joining each new vertex j uniformly to one of vertices 1,...,j-1. Layer zero consists of the initial leaves, and subsequent layers are obtained by successive leaf removals. For every k>=0 and y>=0, s_k(y)=P(M_k<=y). Consequently bar_ell_k=E[exp(-M_k)] and ell_k=E[exp(-M_k)-exp(-M_{k+1})]. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "Independent rate-one Poisson offspring displacement processes.",
+    "The layer-tail recursion is the one stated in the source paper."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:2608.04303",
+    "url": "https://arxiv.org/abs/2608.04303",
+    "revision": "problem source as identified in campaign record dated 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "stepanyants-krapivsky-hartle-krioukov-layer-tail-limit",
+   "namespace": "probability.trees",
+   "logical_name": "stepanyants-krapivsky-hartle-krioukov-layer-tail-limit",
+   "kind": "theorem",
+   "title": "Conjecture 1: recursive-tree layer tails have a positive limiting constant",
+   "statement": "[campaign result 2026-09-14, author checked; the recursion is integrated exactly against two published closed-form values as a control] This is the campaign answer to Conjecture 1 of H. Stepanyants, P. L. Krapivsky, H. Hartle and D. Krioukov, The rank and layer distributions in random recursive trees, arXiv:2608.04303. Let the Poisson-weighted infinite tree have root position zero, with children of each vertex at the points of an independent rate-one Poisson process on (0,infinity), translated by their parent's position. Let M_k be the minimum position of generation k, and set M_0=0. Define s_0(y)=1 for y>=0 and s_k(y)=1-exp(-integral_0^y s_{k-1}(z)dz) for k>=1. Put bar_ell_k=integral_0^infinity s_k(y)exp(-y)dy and ell_k=bar_ell_k-bar_ell_{k+1}. In the source, ell_k is the limiting fraction of vertices in layer k of a random recursive tree, formed by joining each new vertex j uniformly to one of vertices 1,...,j-1; layer zero consists of the initial leaves, and subsequent layers are obtained by successive leaf removals. Let e be the base of the natural logarithm. There is a constant C_star in (0,infinity) such that bar_ell_k exp(k/e) k^(3/(2e)) -> C_star and ell_k exp(k/e) k^(3/(2e)) -> (1-exp(-1/e)) C_star. More precisely, if M_star denotes the distributional limit of M_k-[k/e+(3/(2e))log k] furnished by the cited branching-random-walk minimum theorem, then C_star=E[exp(-M_star)]. In particular both tails have order exp(-k/e) k^(-3/(2e)). The proof uses Addario-Berry and Ford's Poisson-Dirichlet branching random walks, Annals of Applied Probability 23 (2013), Theorems 1.1-1.2, and Aidekon's Convergence in law of the minimum of a branching random walk, Annals of Probability 41 (2013), as stated in the record. This is an unrefereed campaign result.",
+   "proof_text": "So the travelling wave of Appendix A is the front of a branching random walk, the waveform is the distribution function of $M_k$, and the \"selected velocity\" is the speed of its minimum. That walk is not a generic one. It is the walk whose displacement vector has *exponential steps* (the $j$-th child sits at the sum of $j$ independent exponentials), which is exactly the class treated by Addario-Berry and Ford, *Poisson–Dirichlet branching random walks*, Ann. Appl. Probab. 23 (2013) 283–307. Their Theorem 1.1 states, for this class,\n$$\\widetilde M_n := \\mathrm{median}(M_n) = \\frac ne + \\frac{3}{2e}\\log n + O(1), \\tag{2}$$\nuniformly over the class, and their Theorem 1.2 gives uniform exponential tails: for every $c_1 < e$ and $c_2 < 1$,\n$$\\mathbb{P}\\big(M_n \\le \\widetilde M_n - x\\big) \\ll_{c_1} e^{-c_1 x}, \\qquad \\mathbb{P}\\big(M_n \\ge \\widetilde M_n + x\\big) \\ll_{c_2} e^{-c_2 x} \\qquad (n \\ge 1,\\ x \\ge 0). \\tag{3}$$\nEquation (2) is precisely the conjectured (A12), velocity selection included.\n\n## Conjecture 1 is a theorem\n\n**Theorem 2.** There are absolute constants $0 < c < C < \\infty$ with\n$$c \\le \\bar\\ell_k\\,e^{k/e}\\,k^{3/(2e)} \\le C \\qquad (k \\ge 1),$$\nthat is, $\\bar\\ell_k = \\exp[-k/e - \\tfrac{3}{2e}\\log k - O(1)]$. The same holds for $\\ell_k$, so Conjecture 1 holds as stated.\n\n*Proof.* Write $D_k = M_k - \\widetilde M_k$, so $\\bar\\ell_k = e^{-\\widetilde M_k}\\,\\mathbb{E}[e^{-D_k}]$ by Theorem 1. For the upper bound take $c_1 = 2$ in (3), which is legitimate since $2 < e$: with $K$ the implied constant,\n$$\\mathbb{E}[e^{-D_k}] \\le 1 + \\sum_{j\\ge 0} e^{\\,j+1}\\,\\mathbb{P}(D_k \\le -j) \\le 1 + eK\\sum_{j \\ge 0}e^{-j} < \\infty,$$\nuniformly in $k$. For the lower bound, $\\mathbb{E}[e^{-D_k}] \\ge \\mathbb{P}(D_k \\le 0) \\ge 1/2$ by the definition of the median. Now insert (2). For $\\ell_k$: the upper bound is immediate from $\\ell_k \\le \\bar\\ell_k$, and the lower bound follows from Theorem 3 below; unconditionally it already follows for a positive density of $k$, since summing the telescoping identity $\\sum_{k=j}^{j+L-1}\\ell_k = \\bar\\ell_j - \\bar\\ell_{j+L}$ and choosing $L$ with $e^{-L/e} \\le c/(2C)$ gives some $k \\in [j, j+L)$ with $\\ell_k \\ge (c/2L)\\,e^{-j/e}j^{-3/(2e)}$. $\\square$\n\n**Theorem 3.** $\\bar\\ell_k\\,e^{k/e}k^{3/(2e)} \\to C^* \\in (0,\\infty)$ and $\\ell_k\\,e^{k/e}k^{3/(2e)} \\to (1 - e^{-1/e})\\,C^*$.\n\n*Proof.* Aïdékon, *Convergence in law of the minimum of a branching random walk*, Ann. Probab. 41 (2013), gives $M_k - (k/e + \\tfrac{3}{2e}\\log k) \\Rightarrow M^*$ for a class of walks that includes this one (Addario-Berry and Ford say so explicitly in their Remark 2). The family $e^{-(M_k - \\widetilde M_k)}$ is uniformly integrable by the computation above with $c_1 = 2 > 1$, so the exponential moments converge: $\\bar\\ell_k e^{k/e}k^{3/(2e)} \\to C^* := \\mathbb{E}[e^{-M^*}] \\in (0,\\infty)$. Then $\\bar\\ell_{k+1}/\\bar\\ell_k \\to e^{-1/e}$ and $\\ell_k = \\bar\\ell_k - \\bar\\ell_{k+1}$. $\\square$",
+   "assumptions": [
+    "The stated published minimum-location, tail, and limit theorems apply to this Poisson branching walk."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:2608.04303",
+    "url": "https://arxiv.org/abs/2608.04303",
+    "revision": "problem source as identified in campaign record dated 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "stepanyants-krapivsky-hartle-krioukov-maximum-layer-asymptotics",
+   "namespace": "probability.trees",
+   "logical_name": "stepanyants-krapivsky-hartle-krioukov-maximum-layer-asymptotics",
+   "kind": "concept",
+   "title": "Conjecture 2: the maximum-layer asymptotics of a recursive tree",
+   "statement": "[campaign result 2026-09-14, author checked; the combinatorial identities (layer = second-largest branch height, maximum layer = floor(diam/2) <= height) were verified by brute-force leaf stripping on 40 random recursive trees of sizes 6 to 120 (480 vertices), with the 5-vertex path as a control] This is the layer part of the campaign answer to Conjecture 2 of H. Stepanyants, P. L. Krapivsky, H. Hartle and D. Krioukov, The rank and layer distributions in random recursive trees, arXiv:2608.04303. For each integer n>=3, let T_n be a random recursive tree on vertices 1,...,n, in which each vertex j>=2 chooses its parent independently and uniformly from 1,...,j-1. Repeatedly remove all vertices of degree at most one, assigning layer zero to the first removed set and successively increasing the layer. Let L_n be the maximum layer. As n tends to infinity, L_n=e log n-(3/2)log log n+O_P(1), where logarithms are natural and O_P(1) means that the centered sequence is bounded in probability. Under this removal rule, L_n=floor(diameter(T_n)/2); other conventions for the last vertex left standing change the maximum by at most one. The proof uses the recursive-tree height estimate of Addario-Berry and Ford (Corollary 1.3) and the fact that the root's normalized subtree sizes have a stick-breaking limit whose second-largest term is positive almost surely. The maximum-rank part of Conjecture 2 is not addressed. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "Rate-independent random recursive tree attachment.",
+    "The cited recursive-tree height estimate and standard root-subtree size limit."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:2608.04303",
+    "url": "https://arxiv.org/abs/2608.04303",
+    "revision": "problem source as identified in campaign record dated 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "neri-pinto-remark-3-7-full-space-contractivity-obstruction",
+   "namespace": "probability.urns",
+   "logical_name": "neri-pinto-remark-3-7-full-space-contractivity-obstruction",
+   "kind": "concept",
+   "title": "Neri-Pinto 3.7: full-space strict contractivity fails for every balanced urn",
+   "statement": "[campaign result 2026-09-14, author_checked_exact_integer_arithmetic_no_independent_read] This refutes the literal p=d condition in M. Neri and P. Pinto's Remark 3.7 in Quantitative limit theorems for generalized Polya urns with applications to random tree models, arXiv:2607.07309. Let R be a real d-by-d replacement matrix with each row sum equal to lambda, let I_d be the identity matrix, and define symm(A)=(A+A^T)/2. Set C_d=J_d=I_d. The real symmetric matrix G=symm(C_d J_d(R^T-lambda I_d) C_d^T)=symm(R^T-lambda I_d) has largest eigenvalue at least zero. Thus the strict inequality lambda_max(G)<0 cannot hold on the full d-dimensional space for any balanced replacement matrix. This statement concerns the full-space matrix in the remark; it does not assert failure of every possible restriction to mean-zero vectors. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "All row sums of R equal lambda; d>=1."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:2607.07309",
+    "url": "https://arxiv.org/abs/2607.07309",
+    "revision": "problem source as identified in campaign record dated 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "neri-pinto-remark-3-7-five-colour-contractivity-counterexample",
+   "namespace": "probability.urns",
+   "logical_name": "neri-pinto-remark-3-7-five-colour-contractivity-counterexample",
+   "kind": "concept",
+   "title": "Neri-Pinto 3.7: an exact five-colour counterexample to truncated contractivity",
+   "statement": "[campaign result 2026-09-14, author_checked_exact_integer_arithmetic_no_independent_read] This refutes universality of the p=d-1 condition in M. Neri and P. Pinto's Remark 3.7 in Quantitative limit theorems for generalized Polya urns with applications to random tree models, arXiv:2607.07309. Take five colours, with the colours in the displayed order, and replacement matrix R=[[0,0,4,0,2],[2,4,0,0,0],[0,0,3,3,0],[2,0,0,4,0],[0,6,0,0,0]]. All row sums are lambda=6. All entries are nonnegative, so the urn is tenable from any initial composition. Its positive off-diagonal directed graph is strongly connected, so it is irreducible. Let J_4=diag(1,1,1,1,0), let C_4=[I_4|-1_4], where 1_4 is the all-ones column, and let symm(A)=(A+A^T)/2. The matrix G=symm(C_4 J_4(R^T-6I_5)C_4^T)=[[-6,-2,2,1],[-2,-8,-3,-3],[2,-3,-3,3/2],[1,-3,3/2,-2]] satisfies z^T G z=6 for z=(-1,1,-1,-1)^T. Hence lambda_max(G)>0, so no A>0 exists, and the strict negative contractivity condition of Remark 3.7 with p=d-1 fails for this tenable irreducible urn under this ordering of colours. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "The matrix, ordering of colours, and p=4 truncation are exactly those displayed."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "arxiv:2607.07309",
+    "url": "https://arxiv.org/abs/2607.07309",
+    "revision": "problem source as identified in campaign record dated 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "aldous-fill-problem-3-44-rational-flow-lp-obstruction",
+   "namespace": "probability.markov",
+   "logical_name": "aldous-fill-problem-3-44-rational-flow-lp-obstruction",
+   "kind": "concept",
+   "title": "Aldous-Fill 3.44: rational flow linear programs cannot equal relaxation time",
+   "statement": "[campaign result 2026-09-14, Author-checked only, no independent read.] This is a restricted negative answer to the question in Chapter 4 of David Aldous and James Allen Fill's Reversible Markov Chains and Random Walks on Graphs, unfinished monograph (2002, recompiled 2014; official source https://www.stat.berkeley.edu/~aldous/RWG/book.html), recorded as intake row I0024. The question asks whether the relaxation time can be characterized exactly as an infimum over flows, that is, whether one of the chapter's flow inequalities (Sinclair's bound, the Diaconis-Stroock bound) can be made an identity. For a finite irreducible reversible transition matrix P, let its eigenvalues be 1=lambda_1>lambda_2>=... and define the relaxation time tau_2=1/(1-lambda_2), equivalently the inverse spectral gap of the rate-one continuous-time generator P-I. Suppose Q(P) is the finite attained optimum of a finite linear program in flow variables whose objective and constraint coefficients are well-defined rational functions, with rational coefficients, of the entries of P. If P has rational entries, then Q(P) is rational. Such a rule cannot equal tau_2 for every rational reversible P. The witness is the simple walk on the path P_6 with vertices 0,...,5, which moves deterministically at the endpoints and with probability 1/2 to each neighbor in the interior. It has lambda_2=cos(pi/5)=(1+sqrt(5))/4 and tau_2=3+sqrt(5), which is irrational. A genuinely nonlinear flow characterization is not excluded. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "The flow optimization is finite, feasible, has finite optimum, and has rational data on rational P.",
+    "tau_2 uses the second-largest eigenvalue, not the absolute spectral radius."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "aldous_fill_2014",
+    "url": "https://www.stat.berkeley.edu/~aldous/RWG/book.html",
+    "revision": "problem source: unfinished monograph, 2002, recompiled 2014; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "aldous-fill-problem-3-44-rational-minimum-energy-flow-obstruction",
+   "namespace": "probability.markov",
+   "logical_name": "aldous-fill-problem-3-44-rational-minimum-energy-flow-obstruction",
+   "kind": "concept",
+   "title": "Aldous-Fill 3.44: rational minimum-energy flows have rational values",
+   "statement": "[campaign result 2026-09-14, Author-checked only, no independent read.] This is the energy-flow extension of the restricted negative answer to the question in Chapter 4 of David Aldous and James Allen Fill's Reversible Markov Chains and Random Walks on Graphs, unfinished monograph (2002, recompiled 2014; official source https://www.stat.berkeley.edu/~aldous/RWG/book.html), recorded as intake row I0024. That question asks whether the relaxation time can be characterized exactly as an infimum over flows. Let G be a finite connected undirected graph with positive rational conductances c_e on its edges and distinct vertices a,b. Orient the edges arbitrarily and minimize E(f)=sum_e f_e^2/c_e over real flows f with divergence +1 at a, -1 at b, and zero at all other vertices. The minimum is the effective resistance R_eff(a,b). It is rational, because the electrical-flow optimality equations are a rational linear system. More generally, the same rationality conclusion holds for attained convex quadratic flow programs with rational data whose optimizing point is determined by a rational linear system. Therefore these minimum-energy constructions cannot universally return the relaxation time tau_2=1/(1-lambda_2) on rational reversible chains, since the simple random walk on the six-vertex path has tau_2=3+sqrt(5). This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "Positive rational conductances and a finite connected graph.",
+    "For the stated extension, the optimizer is determined by a rational linear system."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "aldous_fill_2014",
+    "url": "https://www.stat.berkeley.edu/~aldous/RWG/book.html",
+    "revision": "problem source: unfinished monograph, 2002, recompiled 2014; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "aldous-fill-problem-3-44-negative-type-optimization-concept",
+   "namespace": "probability.markov",
+   "logical_name": "aldous-fill-problem-3-44-negative-type-optimization-concept",
+   "kind": "concept",
+   "title": "Aldous-Fill 3.44: the squared-distance optimization viewpoint",
+   "statement": "[campaign result 2026-09-14, Author-checked only, no independent read.] This is a complementary characterization reported in the campaign note on the Chapter 4 question of David Aldous and James Allen Fill's Reversible Markov Chains and Random Walks on Graphs, unfinished monograph (2002, recompiled 2014; official source https://www.stat.berkeley.edu/~aldous/RWG/book.html), recorded as intake row I0024. That question asks whether the relaxation time can be characterized exactly as an infimum over flows. The note attributes the characterization to its companion note on Open Problem 4.49. Let P be a finite irreducible reversible transition matrix on V with stationary probabilities pi_i, and let tau_2=1/(1-lambda_2), where lambda_2 is the second-largest eigenvalue. For an unordered edge e={i,j} with i!=j and p_ij>0, put c_e=pi_i p_ij=pi_j p_ji. Call a symmetric array d(a,b) of negative type here if d(a,a)=0 and d is a squared Euclidean distance array, d(a,b)=||v_a-v_b||^2 for some finite-dimensional real vectors v_a. Triangle inequalities for d are not imposed. The record reports 2 tau_2 = max {sum_{a,b in V} pi_a pi_b d(a,b) : d is such a squared-distance array, sum_e c_e d(i,j)=1}, where the first sum is over ordered pairs and the second over unordered edges. It contrasts this with the dual of the flow-congestion program of Open Problem 4.49, which is the same objective and normalization taken over the cone of metrics. The squared-distance cone is not polyhedral and the program is semidefinite, so the rational-linear-program obstruction does not extend to this formulation. Its variables are vectors, not flows. The record refers to the companion note for the variational derivation rather than supplying a complete proof. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "The chain has at least two states and is irreducible and reversible.",
+    "The squared-distance cone is used, without an additional triangle-inequality constraint."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "aldous_fill_2014",
+    "url": "https://www.stat.berkeley.edu/~aldous/RWG/book.html",
+    "revision": "problem source: unfinished monograph, 2002, recompiled 2014; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "aldous-fill-problem-7-31-intersection-array-hitting-time-identity",
+   "namespace": "probability.markov",
+   "logical_name": "aldous-fill-problem-7-31-intersection-array-hitting-time-identity",
+   "kind": "lemma",
+   "title": "Aldous-Fill 7.31: exact hitting times from the intersection array",
+   "statement": "[campaign result 2026-09-14, author checked against a direct linear-algebra solve on twelve graphs, with the complete graph and the cycle as independent controls at the two extremes.] This is the proved identity behind the campaign reduction of Open Problem 7.31 in David Aldous and James Allen Fill's Reversible Markov Chains and Random Walks on Graphs, unfinished monograph (2002, recompiled 2014; official source https://www.stat.berkeley.edu/~aldous/RWG/book.html). Let G be a finite connected simple distance-regular graph with n>=2 vertices, valency k, and diameter d: for vertices at distance i, the numbers of neighbors one step closer to or farther from the target are constants c_i and b_i depending only on i. Use c_1=1, b_0=k, b_d=0. Let k_i be the number of vertices at distance i from a fixed vertex, so k_0=1, k_1=k, k_{i+1} c_{i+1}=k_i b_i, and n=sum_{i=0}^d k_i. For the simple random walk, let T_y be the first hitting time of y, measured in steps, and define tau_0=max_{x,y} E_x[T_y]; here tau_0 is the maximum mean hitting time, not the spectral Kemeny sum. Then tau_0=k sum_{i=1}^d (k_i+k_{i+1}+...+k_d)/(k_i c_i). In particular tau_0>=n-1, with equality exactly for complete graphs. The distance to a fixed target is a birth-and-death chain with downward probability c_i/k, upward probability b_i/k, and stationary mass k_i/n, so the formula requires only the intersection array. This is an unrefereed campaign result.",
+   "proof_text": "In a distance-regular graph the hitting time $\\mathbb{E}_iT_j$ depends only on $d(i,j)$, so the distance\nto a fixed target is a birth-and-death chain on $\\{0,\\dots,d\\}$: from distance $i$ it steps down with\nprobability $c_i/k$ and up with $b_i/k$. Its stationary measure is $k_i/n$, with $k_0=1$ and\n$k_{i+1} = k_ib_i/c_{i+1}$. The birth-and-death formula for a downward step,\n$\\mathbb{E}_iT_{i-1} = \\big(\\sum_{j\\ge i}\\pi_j\\big)\\big/\\big(\\pi_i \\cdot \\text{down-rate}\\big)$, gives\n$$\\boxed{\\ \\tau_0 \\ = \\ \\mathbb{E}_dT_0 \\ = \\ k\\sum_{i=1}^{d}\\frac{k_i+k_{i+1}+\\dots+k_d}{k_i\\,c_i}\\ }$$\nand $\\tau_0$ is the largest hitting time because in a birth-and-death chain $\\mathbb{E}_iT_0$ increases\nwith $i$. So Open Problem 7.31 is a statement about intersection arrays alone.\n\nTwo things fall out at once. The $i=1$ term is\n$$k\\cdot\\frac{k_1+\\dots+k_d}{k_1c_1} = k\\cdot\\frac{n-1}{k\\cdot 1} = n-1,$$\nso **every** distance-regular graph has $\\tau_0 \\ge n-1$, with equality exactly when $d=1$, the complete\ngraph. The conjecture is therefore that the remaining terms add no more than a bounded multiple:\n$$\\tau_0 = (n-1) + k\\sum_{i=2}^{d}\\frac{k_i+\\dots+k_d}{k_ic_i}.$$",
+   "assumptions": [
+    "G is finite, connected, simple, distance-regular, and n>=2."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "aldous_fill_2014",
+    "url": "https://www.stat.berkeley.edu/~aldous/RWG/book.html",
+    "revision": "problem source: unfinished monograph, 2002, recompiled 2014; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "aldous-fill-problem-7-31-intersection-ratio-product-reduction",
+   "namespace": "probability.markov",
+   "logical_name": "aldous-fill-problem-7-31-intersection-ratio-product-reduction",
+   "kind": "concept",
+   "title": "Aldous-Fill 7.31: a sufficient intersection-ratio bound",
+   "statement": "[campaign result 2026-09-14, author checked against a direct linear-algebra solve on twelve graphs, with the complete graph and the cycle as independent controls at the two extremes.] This is a sufficient-condition reduction of Open Problem 7.31 in David Aldous and James Allen Fill's Reversible Markov Chains and Random Walks on Graphs, unfinished monograph (2002, recompiled 2014; official source https://www.stat.berkeley.edu/~aldous/RWG/book.html), which asks for tau_0=O(n) uniformly over distance-regular graphs other than cycles. Let G be a finite connected simple distance-regular graph with n>=2 vertices, valency k, and diameter d: for vertices at distance i, the numbers of neighbors one step closer to or farther from the target are constants c_i and b_i depending only on i. Use c_1=1, b_0=k, b_d=0. Let k_i be the number of vertices at distance i from a fixed vertex, so k_0=1, k_1=k, k_{i+1} c_{i+1}=k_i b_i, and n=sum_{i=0}^d k_i. For the simple random walk, let T_y be the first hitting time of y, measured in steps, and define tau_0=max_{x,y} E_x[T_y]; here tau_0 is the maximum mean hitting time, not the spectral Kemeny sum. Define the tail count T_i=sum_{j=i}^d k_j and u_i=k/(k_i c_i). The intersection recurrence gives u_1=1 and u_{i+1}=u_i c_i/b_i for 1<=i<d, hence tau_0/n=sum_{i=1}^d (T_i/n) product_{j=1}^{i-1}(c_j/b_j) <= sum_{i=1}^d product_{j=1}^{i-1}(c_j/b_j), where an empty product is one. A uniform bound on the last sum over noncycle distance-regular graphs would prove the requested O(n) estimate. The campaign does not prove this uniform bound, and the sufficient criterion is not asserted to be necessary. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "The graph and intersection numbers satisfy the preceding definitions.",
+    "Only indices j<d occur in denominators b_j."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "aldous_fill_2014",
+    "url": "https://www.stat.berkeley.edu/~aldous/RWG/book.html",
+    "revision": "problem source: unfinished monograph, 2002, recompiled 2014; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "aldous-fill-problem-7-31-cubic-maximum-computational-result",
+   "namespace": "probability.markov",
+   "logical_name": "aldous-fill-problem-7-31-cubic-maximum-computational-result",
+   "kind": "concept",
+   "title": "Aldous-Fill 7.31: the reported maximum over the thirteen cubic graphs",
+   "statement": "[campaign result 2026-09-14; values computed exactly from the intersection-array identity tau_0 = k sum_{i=1}^d (k_i+...+k_d)/(k_i c_i). That identity was checked against a direct linear-algebra solve on twelve graphs, among them the cubic graphs K_{3,3}, Q_3, Petersen, Heawood, Pappus, Desargues and the dodecahedron, with the complete graph and the cycle as independent controls.] This is the cubic case of Open Problem 7.31 in David Aldous and James Allen Fill's Reversible Markov Chains and Random Walks on Graphs, unfinished monograph (2002, recompiled 2014; official source https://www.stat.berkeley.edu/~aldous/RWG/book.html). For a finite connected simple distance-regular graph G with n vertices, let tau_0 = max_{x,y} E_x[T_y] for simple random walk. By the known classification, there are exactly thirteen cubic (valency-three) distance-regular graphs. Their (n, tau_0) values are: K_4 (4, 3); K_{3,3} (6, 6); cube Q_3 (8, 10); Petersen (10, 12); Heawood (14, 19); Pappus (18, 27); Desargues (20, 65/2); dodecahedron (20, 35); Coxeter (28, 45); Tutte-Coxeter (30, 48); Foster (90, 675/4); Biggs-Smith (102, 195); Tutte 12-cage (126, 234). Hence, given the classification, the maximum of tau_0/(n-1) over all cubic distance-regular graphs is 195/101 (about 1.9307), attained uniquely by the Biggs-Smith graph. This reproduces exactly the value Aldous and Fill attribute to Biggs and settles, for valency three, Biggs's outlined claim that it is the largest. The general O(n) conjecture over non-cycle distance-regular graphs is not settled by this computation. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "The standard thirteen-graph cubic distance-regular classification.",
+    "The values are reported computations from the campaign record."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "aldous_fill_2014",
+    "url": "https://www.stat.berkeley.edu/~aldous/RWG/book.html",
+    "revision": "problem source: unfinished monograph, 2002, recompiled 2014; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "aldous-fill-problem-14-12-cycle-coalescence-exact-mean",
+   "namespace": "probability.markov",
+   "logical_name": "aldous-fill-problem-14-12-cycle-coalescence-exact-mean",
+   "kind": "theorem",
+   "title": "Aldous-Fill 14.12: exact coalescence time on a cycle",
+   "statement": "[campaign result 2026-09-14, Author-checked, no independent read.] This is an exactly solved adjacent case of Open Problem 14.12 in David Aldous and James Allen Fill's Reversible Markov Chains and Random Walks on Graphs, unfinished monograph (2002, recompiled 2014; official source https://www.stat.berkeley.edu/~aldous/RWG/book.html). For n>=3 let C_n be the simple cycle on n vertices. Start a particle at every vertex. Each particle independently jumps at rate one to a uniformly chosen neighbor, and particles merge on meeting. Let T_coal be the first time only one particle remains. Then E[T_coal]=(n^2-1)/6. If P is the cycle's discrete-time simple-walk matrix, define its mean spectral hitting-time quantity K=sum_{j=2}^n 1/(1-lambda_j(P)); then K=(n^2-1)/6 also. Thus E[T_coal]=K exactly. Its relaxation time tau_2=1/(1-cos(2pi/n)) satisfies tau_2/K -> 3/pi^2, so this family has the equality conclusion even though the small-relaxation-time hypothesis in the source problem fails. In the extracted optional-stopping proof, EC in a stopping-time subscript denotes the random coalescence time; the final displayed EC denotes its expectation. This is an unrefereed campaign result.",
+   "proof_text": "Work in continuous time: each particle waits an exponential of rate one and steps to a uniform\nneighbour, and particles at the same vertex merge.\n\nLabel the $k$ particles round the cycle and let $g_1,\\dots,g_k \\ge 1$ be the gaps between consecutive\nparticles, so $\\sum_i g_i = n$. Put\n$$M \\;=\\; \\sum_{i=1}^k g_i^3 .$$\n\nTake a particle with gap $a$ on its left and $b$ on its right. It steps right at rate $1/2$, sending\n$(a,b) \\mapsto (a+1,b-1)$, and left at rate $1/2$, sending $(a,b) \\mapsto (a-1,b+1)$. The two\nincrements of $M$ are\n$$(3a^2+3a+1) + (-3b^2+3b-1) = 3(a^2-b^2) + 3(a+b),$$\n$$(-3a^2+3a-1) + (3b^2+3b+1) = -3(a^2-b^2) + 3(a+b),$$\nand the quadratic parts cancel in the average, leaving $3(a+b)$. Each particle jumps at rate one, so\nsumming over the particles,\n$$\\mathcal L M \\;=\\; \\sum_{i} 3\\,(g_{i-1} + g_i) \\;=\\; 3\\,(n+n) \\;=\\; 6n,$$\nindependent of the configuration and of the number of particles. That last point is what makes the\nargument work: the drift does not care how far along the coalescence is.\n\nWhen two particles merge, the gap between them has just become zero and is deleted. Since $0^3 = 0$,\n$M$ does not jump at a coalescence, so it is continuous through the whole process.\n\nHence $M_t - 6nt$ is a martingale. $M$ is bounded by $n^3$ and $EC$ has finite mean, so optional\nstopping applies. At time zero all $n$ gaps equal one and $M_0 = n$; at time $EC$ there is one particle\nand one gap of size $n$, so $M_{EC} = n^3$. Therefore\n$$n^3 - n \\;=\\; 6n\\cdot EC, \\qquad EC \\;=\\; \\frac{n^2-1}{6}. \\qquad\\square$$\n\nThat $\\tau_0(C_n) = \\sum_{m=1}^{n-1} 1/(1-\\cos(2\\pi m/n)) = (n^2-1)/6$ is classical, and is checked\nbelow.",
+   "assumptions": [
+    "Continuous-time rate-one simple walks; one initial particle per vertex.",
+    "n>=3 and coalescence occurs on occupying the same vertex."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "aldous_fill_2014",
+    "url": "https://www.stat.berkeley.edu/~aldous/RWG/book.html",
+    "revision": "problem source: unfinished monograph, 2002, recompiled 2014; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "aldous-fill-problem-14-12-complete-graph-coalescence-exact-mean",
+   "namespace": "probability.markov",
+   "logical_name": "aldous-fill-problem-14-12-complete-graph-coalescence-exact-mean",
+   "kind": "lemma",
+   "title": "Aldous-Fill 14.12: exact coalescence time on the complete graph",
+   "statement": "[campaign result 2026-09-14, Author-checked, no independent read.] This is an elementary special case recorded alongside Open Problem 14.12 in David Aldous and James Allen Fill's Reversible Markov Chains and Random Walks on Graphs, unfinished monograph (2002, recompiled 2014; official source https://www.stat.berkeley.edu/~aldous/RWG/book.html). Let K_n be the complete simple graph with n>=2 vertices and start one particle per vertex. Each particle jumps independently at rate one to a uniformly chosen different vertex; particles merge on meeting. If T_coal is the time until one particle remains, then E[T_coal]=sum_{k=2}^n (n-1)/(k(k-1))=(n-1)^2/n. The discrete-time simple-walk matrix has n-1 nonconstant eigenvalues all equal to -1/(n-1), so its spectral mean hitting-time sum K=sum_{j=2}^n 1/(1-lambda_j) is also (n-1)^2/n. This is an unrefereed campaign result.",
+   "proof_text": "**The complete graph is the other exact case,** and it is elementary. From $k$ particles each jumps at\nrate one and lands on an occupied vertex with probability $(k-1)/(n-1)$, so coalescences happen at rate\n$k(k-1)/(n-1)$ and\n$$EC(K_n) = \\sum_{k=2}^{n} \\frac{n-1}{k(k-1)} = (n-1)\\Big(1-\\frac1n\\Big) = \\frac{(n-1)^2}{n},$$\nwhile every non-trivial walk eigenvalue is $-1/(n-1)$, giving $\\tau_0 = (n-1)^2/n$ as well.",
+   "assumptions": [
+    "Complete graph; rate-one simple walks; one initial particle at every vertex."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "aldous_fill_2014",
+    "url": "https://www.stat.berkeley.edu/~aldous/RWG/book.html",
+    "revision": "problem source: unfinished monograph, 2002, recompiled 2014; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "hasebe-ueda-problem-3-11-cauchy-free-classical-convolution-identity",
+   "namespace": "probability.free",
+   "logical_name": "hasebe-ueda-problem-3-11-cauchy-free-classical-convolution-identity",
+   "kind": "lemma",
+   "title": "Hasebe-Ueda 3.11: Cauchy free convolution is classical convolution",
+   "statement": "[campaign result 2026-09-14, author checked] This is the supporting identity used in the campaign partial answer to Problem 3.11 of Takahiro Hasebe and Yuki Ueda's Large time unimodality for classical and free Brownian motions with initial distributions, ALEA 15 (2018), 353-374, DOI:10.30757/ALEA.v15-15 (arXiv:1710.08240). A probability measure is unimodal if, for some mode m, it is an atom at m plus an absolutely continuous measure whose density is nondecreasing to the left of m and nonincreasing to the right. Write boxplus for additive free convolution, the distribution of a sum of freely independent self-adjoint variables with the indicated laws, and * for classical convolution of independent real variables. For t>0 let C_t have density t/[pi(t^2+x^2)] on the real line. For every probability measure mu on R, mu boxplus C_t = mu * C_t. In transform notation, G_mu(z)=integral_R (z-x)^(-1) mu(dx) for Im(z)>0, and G_{mu boxplus C_t}(z)=G_mu(z+i t), where i^2=-1. The record explicitly treats the identity as classical rather than claiming novelty for it. This is an unrefereed campaign result.",
+   "proof_text": "Write $C_t$ for the Cauchy law of scale $t$, with density $t/(\\pi(t^2+x^2))$.\n\nThe whole point is an identity that is special to the Cauchy family. Its Cauchy transform is\n$G_{C_t}(z) = 1/(z+it)$ on the upper half plane, so $K_{C_t}(w) = 1/w - it$ and the $R$-transform is the\nconstant $R_{C_t}(w) = -it$. Free convolution adds $R$-transforms, so for any $\\mu$,\n$$K_{\\mu\\boxplus C_t}(w) = K_\\mu(w) - it \\quad\\Longrightarrow\\quad G_{\\mu\\boxplus C_t}(z) = G_\\mu(z+it).$$\nOn the other side, the density of $\\mu * C_t$ at $x$ is the Poisson integral\n$\\tfrac1\\pi\\int t\\,d\\mu(y)/((x-y)^2+t^2) = -\\tfrac1\\pi\\operatorname{Im}G_\\mu(x+it)$, so\n$G_{\\mu*C_t}(z) = G_\\mu(z+it)$ as well. Hence\n$$\\mu \\boxplus C_t \\ = \\ \\mu * C_t \\qquad\\text{for every } \\mu \\text{ and every } t>0,$$\nthe free and classical convolutions with a Cauchy law coinciding.",
+   "assumptions": [
+    "t>0 and mu is any probability measure on R."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "doi:10.30757/ALEA.v15-15",
+    "url": "https://alea.math.cnrs.fr/articles/v15/15-15.pdf",
+    "revision": "problem source: ALEA 15 (2018), 353-374; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "hasebe-ueda-problem-3-11-cauchy-not-freely-strongly-unimodal",
+   "namespace": "probability.free",
+   "logical_name": "hasebe-ueda-problem-3-11-cauchy-not-freely-strongly-unimodal",
+   "kind": "theorem",
+   "title": "Hasebe-Ueda 3.11: Cauchy laws are not freely strongly unimodal",
+   "statement": "[campaign result 2026-09-14, author checked] This is a proved special case of Problem 3.11 of Takahiro Hasebe and Yuki Ueda's Large time unimodality for classical and free Brownian motions with initial distributions, ALEA 15 (2018), 353-374, DOI:10.30757/ALEA.v15-15 (arXiv:1710.08240). A probability measure is unimodal if, for some mode m, it is an atom at m plus an absolutely continuous measure whose density is nondecreasing to the left of m and nonincreasing to the right. Write boxplus for additive free convolution, the distribution of a sum of freely independent self-adjoint variables with the indicated laws, and * for classical convolution of independent real variables. Call lambda freely strongly unimodal if lambda boxplus nu is unimodal for every unimodal probability measure nu. For every t>0 the centered Cauchy distribution C_t with density t/[pi(t^2+x^2)] is not freely strongly unimodal: some unimodal nu makes nu boxplus C_t nonunimodal. The proof combines the Cauchy convolution identity with Ibragimov's characterization of classical strong unimodality by log-concavity of the density; the Cauchy density is not log-concave. This is an unrefereed campaign result.",
+   "proof_text": "Write $C_t$ for the Cauchy law of scale $t$, with density $t/(\\pi(t^2+x^2))$.\n\nThe whole point is an identity that is special to the Cauchy family. Its Cauchy transform is\n$G_{C_t}(z) = 1/(z+it)$ on the upper half plane, so $K_{C_t}(w) = 1/w - it$ and the $R$-transform is the\nconstant $R_{C_t}(w) = -it$. Free convolution adds $R$-transforms, so for any $\\mu$,\n$$K_{\\mu\\boxplus C_t}(w) = K_\\mu(w) - it \\quad\\Longrightarrow\\quad G_{\\mu\\boxplus C_t}(z) = G_\\mu(z+it).$$\nOn the other side, the density of $\\mu * C_t$ at $x$ is the Poisson integral\n$\\tfrac1\\pi\\int t\\,d\\mu(y)/((x-y)^2+t^2) = -\\tfrac1\\pi\\operatorname{Im}G_\\mu(x+it)$, so\n$G_{\\mu*C_t}(z) = G_\\mu(z+it)$ as well. Hence\n$$\\mu \\boxplus C_t \\ = \\ \\mu * C_t \\qquad\\text{for every } \\mu \\text{ and every } t>0,$$\nthe free and classical convolutions with a Cauchy law coinciding.\n\nNow the Proposition. The Cauchy density is not log-concave, so by Ibragimov's characterisation of\nclassically strongly unimodal laws, $C_t$ is not strongly unimodal: there is a unimodal $\\nu$ with\n$\\nu * C_t$ not unimodal. By the identity, $\\nu \\boxplus C_t = \\nu * C_t$ is not unimodal either, and\n$\\nu$ is unimodal, so $C_t$ is not freely strongly unimodal. $\\blacksquare$",
+   "assumptions": [
+    "t>0.",
+    "The classical Ibragimov characterization for nondegenerate absolutely continuous laws."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "doi:10.30757/ALEA.v15-15",
+    "url": "https://alea.math.cnrs.fr/articles/v15/15-15.pdf",
+    "revision": "problem source: ALEA 15 (2018), 353-374; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "hasebe-ueda-problem-3-11-cauchy-attraction-obstruction",
+   "namespace": "probability.free",
+   "logical_name": "hasebe-ueda-problem-3-11-cauchy-attraction-obstruction",
+   "kind": "theorem",
+   "title": "Hasebe-Ueda 3.11: a Cauchy attraction limit rules out free strong unimodality",
+   "statement": "[campaign result 2026-09-14, author checked] This is the proved attraction-domain extension of the partial answer to Problem 3.11 of Takahiro Hasebe and Yuki Ueda's Large time unimodality for classical and free Brownian motions with initial distributions, ALEA 15 (2018), 353-374, DOI:10.30757/ALEA.v15-15 (arXiv:1710.08240). A probability measure is unimodal if, for some mode m, it is an atom at m plus an absolutely continuous measure whose density is nondecreasing to the left of m and nonincreasing to the right. Write boxplus for additive free convolution, the distribution of a sum of freely independent self-adjoint variables with the indicated laws, and * for classical convolution of independent real variables. A law lambda is freely strongly unimodal when lambda boxplus nu is unimodal for every unimodal nu. Let lambda be a nondelta probability law on R and suppose there are b_n>0 and a_n in R such that the image of lambda^{boxplus n} under x -> x/b_n+a_n converges weakly to C_1, the Cauchy law with density 1/[pi(1+x^2)]. Here lambda^{boxplus n} is its n-fold additive free convolution. Then lambda is not freely strongly unimodal. For the proof, D_c(mu) denotes the image of mu under x -> c x; unimodal measures are preserved by positive dilations and translations and are closed under weak convergence. This is an unrefereed campaign result.",
+   "proof_text": "Suppose $\\lambda$ is freely strongly unimodal. Then so is $\\lambda^{\\boxplus n}$ for every $n$, by\ninduction: $\\lambda^{\\boxplus n}\\boxplus\\nu = \\lambda\\boxplus(\\lambda^{\\boxplus n-1}\\boxplus \\nu)$, and\nthe inner measure is unimodal by the inductive hypothesis. Let $\\nu$ be unimodal with\n$\\nu\\boxplus C_1$ not unimodal, which the Proposition provides.\n\nLet $b_n>0$ and $a_n\\in\\mathbb{R}$ be such that $D_{1/b_n}(\\lambda^{\\boxplus n})$ shifted by $a_n$\nconverges weakly to $C_1$, which is what membership of the free domain of attraction means. Since\n$D_{b_n}(\\nu)$ is unimodal, the hypothesis makes $D_{b_n}(\\nu)\\boxplus\\lambda^{\\boxplus n}$ unimodal.\nDilations pass through free convolution, $D_c(\\alpha\\boxplus\\beta) = D_c\\alpha\\boxplus D_c\\beta$, so\napplying $D_{1/b_n}$ and the shift leaves\n$$\\nu \\boxplus \\big(D_{1/b_n}(\\lambda^{\\boxplus n})\\ \\text{shifted by } a_n\\big)$$\nunimodal for every $n$. Free convolution is continuous in the weak topology and the unimodal measures are\nweakly closed, so the limit $\\nu\\boxplus C_1$ is unimodal, contradicting the choice of $\\nu$.\n$\\blacksquare$",
+   "assumptions": [
+    "The affine-scaled free convolution powers converge weakly to C_1.",
+    "Free convolution is weakly continuous, and unimodal measures are weakly closed."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "doi:10.30757/ALEA.v15-15",
+    "url": "https://alea.math.cnrs.fr/articles/v15/15-15.pdf",
+    "revision": "problem source: ALEA 15 (2018), 353-374; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "hasebe-ueda-problem-3-11-stable-limit-candidate-reduction",
+   "namespace": "probability.free",
+   "logical_name": "hasebe-ueda-problem-3-11-stable-limit-candidate-reduction",
+   "kind": "concept",
+   "title": "Hasebe-Ueda 3.11: candidate reduction through attracting laws",
+   "statement": "[campaign result 2026-09-14, author checked] This is the remaining-problem reduction in the partial answer to Problem 3.11 of Takahiro Hasebe and Yuki Ueda's Large time unimodality for classical and free Brownian motions with initial distributions, ALEA 15 (2018), 353-374, DOI:10.30757/ALEA.v15-15 (arXiv:1710.08240). A probability measure is unimodal if, for some mode m, it is an atom at m plus an absolutely continuous measure whose density is nondecreasing to the left of m and nonincreasing to the right. Write boxplus for additive free convolution. A law lambda is freely strongly unimodal if lambda boxplus nu is unimodal for every unimodal nu. The source's Theorem 1.4 shows that no nondelta law of finite variance (equivalently, in the free domain of attraction of the semicircle) is freely strongly unimodal. The record's proved Cauchy obstruction excludes every nondelta lambda in the free domain of attraction of a Cauchy law. The same closure argument shows, more generally, that a nondelta lambda is not freely strongly unimodal whenever it lies in the free domain of attraction of a free stable law that is itself not freely strongly unimodal. Problem 3.11 therefore reduces to two questions. (1) Is some free stable law of index alpha in (0,2), alpha != 1, freely strongly unimodal? (The index-1 case is settled by the Cauchy identity, and index 2 by the source's Lemma 3.1.) (2) Is some measure lying in no free domain of attraction freely strongly unimodal? Numerically, for the free stable laws lambda_alpha with K(w)=1/w - i(iw)^{alpha-1}, the unimodal witness nu = (1/10)U[0,0.05] + (9/10)U[0,16] gives lambda_alpha boxplus nu two interior maxima at alpha = 1.95, 1.8, 1.6, 1.4, 1.2, 1.0, 0.9, 0.8, 0.7. This was computed by Belinschi-Bercovici subordination and calibrated against the exact Cauchy case at alpha=1. So those laws, and the laws attracted to them, are excluded numerically; only alpha=1 is a theorem. For alpha = 0.6 down to 0.3 the same nu, and three other one-sided uniform mixtures tried at alpha=0.5, give a single maximum. This is not evidence that those laws are freely strongly unimodal. The case alpha below about 0.65 remains open. This does not answer the existence question. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "This is a reduction of candidates, not a classification or a numerical proof for every stable index."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "doi:10.30757/ALEA.v15-15",
+    "url": "https://alea.math.cnrs.fr/articles/v15/15-15.pdf",
+    "revision": "problem source: ALEA 15 (2018), 353-374; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "hasebe-ueda-problem-3-3-stationary-cauchy-kernel-lower-bound",
+   "namespace": "probability.free",
+   "logical_name": "hasebe-ueda-problem-3-3-stationary-cauchy-kernel-lower-bound",
+   "kind": "lemma",
+   "title": "Hasebe-Ueda 3.3: a unit-diameter kernel minimum is at least one",
+   "statement": "[campaign result 2026-09-14, author checked; the criterion reproduces the source's worked example, and every algebraic step was confirmed symbolically] This is the proved kernel inequality used for the campaign answer to Problem 3.3 of Takahiro Hasebe and Yuki Ueda's Large time unimodality for classical and free Brownian motions with initial distributions, ALEA 15 (2018), 353-374, DOI:10.30757/ALEA.v15-15 (arXiv:1710.08240). Let mu be a probability measure on R whose support has diameter at most one, and for R>0 define xi_R(u)=the integral over x in the real line of [(x-u)^2+R^2]^(-1) mu(dx). If xi_R'(u_0)=0 and xi_R''(u_0)>=0, then xi_R(u_0)>=1. Equality forces R^2=3/4 and mu=(delta_{u_0-1/2}+delta_{u_0+1/2})/2, where delta_a denotes a unit point mass at a. The proof decomposes the mean-zero-derivative constraint into one- and two-atom extreme measures and checks the two polynomial inequalities written out in the record. This is an unrefereed campaign result.",
+   "proof_text": "Translate so that $u_0 = 0$ and write $s = R^2$ and $\\varphi(d) = 1/(d^2+s)$. The three quantities in\nplay are\n$$F = \\int \\varphi \\, d\\mu = \\xi_R(0), \\qquad G = \\int \\frac{d}{(d^2+s)^2}\\,d\\mu = -\\tfrac12 \\xi_R'(0),\n\\qquad H = \\int \\frac{3d^2-s}{(d^2+s)^3}\\,d\\mu = \\tfrac12\\xi_R''(0),$$\nand the hypotheses are $G = 0$ and $H \\ge 0$. All three are linear in $\\mu$.\n\nConsider the set $K$ of probability measures $\\nu$ on $\\operatorname{supp}\\mu$ with $G(\\nu)=0$. It is\nconvex and weak-* compact, and its extreme points carry at most two atoms, since a measure subject to\nnormalisation and one further linear constraint can be perturbed inside $K$ as soon as its support has\nthree points. By Choquet's theorem $\\mu$ is a barycentre of extreme points, and $F$, $G$ and $H$\nintegrate accordingly. An extreme point with a single atom must be $\\delta_0$, because $G(\\delta_x)=0$\nforces $x=0$. So it is enough to understand a *pair*: atoms at $-a$ and $b$ with $a,b>0$ and\n$a+b \\le 1$.\n\nFor such a pair the condition $G=0$ determines the two weights, and writing $A = a^2+s$, $B = b^2+s$ and\n$\\Delta = bA^2+aB^2 > 0$,\n$$F - 1 = \\frac{\\Phi}{\\Delta}, \\qquad H = \\frac{\\Psi}{\\Delta AB}, \\qquad\n\\Phi = bA(1-A) + aB(1-B), \\qquad \\Psi = bB(3a^2-s) + aA(3b^2-s).$$\nIn terms of $D = a+b$ and $m = ab$ both collapse:\n$$\\frac{\\Psi}{D} = 3m^2 + s(6m - D^2) - s^2, \\qquad\n\\frac{\\Phi}{D} = 3m^2 + m(1-D^2) + s(1-2m) - s^2 .$$\n\n**Lemma A.** *If $\\Psi \\ge 0$ then $s \\le \\tfrac34 D^2$.* The quantity $\\Psi/D$ is increasing in $m$, so\nit is largest at $m = D^2/4$, where it equals $(3D^2-4s)(D^2+4s)/16$. For that to be nonnegative,\n$s \\le \\tfrac34 D^2$.\n\n**Lemma B.** *If $0 \\le s \\le \\tfrac34$ and $D \\le 1$ then $\\Phi \\ge 0$.* The quantity $\\Phi/D$ is\nconcave in $s$, so on $[0,\\tfrac34]$ it is least at an endpoint. At $s=0$ it is $m(1+3m-D^2) \\ge 0$. At\n$s = \\tfrac34$ it is a convex function of $m$ whose derivative at $m = D^2/4$ is $(D^2-1)/2 \\le 0$, so it\ndecreases on $(0, D^2/4]$ and is least at $m = D^2/4$, where it equals $(1-D^2)(D^2+3)/16 \\ge 0$.\n\n## Putting it together\n\nLet $\\mu$, $R$ and $u_0$ be as in the proposition, and decompose $\\mu$ into extreme points as above.\n\nSince $H(\\mu) \\ge 0$, some extreme point $\\kappa$ has $H(\\kappa) \\ge 0$. It cannot be $\\delta_0$, for\nwhich $H = -1/s^2 < 0$. So $\\kappa$ is a pair, and Lemma A gives $s \\le \\tfrac34 D_\\kappa^2 \\le \\tfrac34$.\n\nNow every extreme point has $F \\ge 1$. For $\\delta_0$ this is $F = 1/s \\ge 4/3$. For a pair it is Lemma\nB, which needs only $s \\le \\tfrac34$ and diameter at most one, and in particular does not care about the\nsign of that pair's own $H$. Averaging, $F(\\mu) \\ge 1$, which is the proposition.\n\nEquality is rigid. Lemma B is an equality only at $D=1$, $m=D^2/4$ and $s = \\tfrac34$, that is, two atoms\nof equal weight at $\\pm\\tfrac12$ with $R^2 = \\tfrac34$: the symmetric Bernoulli law at its critical\nradius, rescaled. So the symmetric Bernoulli is the unique extremal measure, which is why the constant it\nproduces is the answer.",
+   "assumptions": [
+    "mu is a probability measure with support diameter at most one.",
+    "R>0; u_0 is stationary with nonnegative second derivative."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "doi:10.30757/ALEA.v15-15",
+    "url": "https://alea.math.cnrs.fr/articles/v15/15-15.pdf",
+    "revision": "problem source: ALEA 15 (2018), 353-374; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "hasebe-ueda-problem-3-3-free-brownian-unimodality-above-diameter-squared",
+   "namespace": "probability.free",
+   "logical_name": "hasebe-ueda-problem-3-3-free-brownian-unimodality-above-diameter-squared",
+   "kind": "concept",
+   "title": "Hasebe-Ueda 3.3: unimodality above the squared support diameter",
+   "statement": "[campaign result 2026-09-14, author checked; the criterion reproduces the source's worked example, and every algebraic step was confirmed symbolically] This is the upper bound in the campaign answer to Problem 3.3 of Takahiro Hasebe and Yuki Ueda's Large time unimodality for classical and free Brownian motions with initial distributions, ALEA 15 (2018), 353-374, DOI:10.30757/ALEA.v15-15 (arXiv:1710.08240). A probability measure is unimodal if, for some mode m, it is an atom at m plus an absolutely continuous measure whose density is nondecreasing to the left of m and nonincreasing to the right. Write boxplus for additive free convolution. For t>0 let S(0,t) be the centered semicircle law of variance t, with density sqrt(4t-x^2)/(2pi t) on |x|<=2sqrt(t). Let mu be compactly supported with positive diameter D=sup{|x-y|: x,y in supp(mu)}. Then mu boxplus S(0,t) is unimodal for every t>=D^2. Proof route: by the source's Lemma 3.1 (Biane's description), non-unimodality at time t gives some R>0 and a separating local minimum u_0 of xi_R with xi_R(u_0)<=1/t. The stationary-kernel lower bound, rescaled to diameter D, gives xi_R(u_0)>=1/D^2, so t<=D^2. At t=D^2, equality would hold in that lower bound. This forces mu to be the symmetric two-point law with atoms at u_0±D/2 and R^2=3D^2/4, which is unimodal at t=D^2 by the source's Example 2.1. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "mu has compact support of positive diameter D.",
+    "t>D^2.",
+    "The source's kernel-level criterion for free Brownian unimodality."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "doi:10.30757/ALEA.v15-15",
+    "url": "https://alea.math.cnrs.fr/articles/v15/15-15.pdf",
+    "revision": "problem source: ALEA 15 (2018), 353-374; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "hasebe-ueda-problem-3-3-sharp-endpoint-and-rigidity-claim",
+   "namespace": "probability.free",
+   "logical_name": "hasebe-ueda-problem-3-3-sharp-endpoint-and-rigidity-claim",
+   "kind": "concept",
+   "title": "Hasebe-Ueda 3.3: the reported sharp endpoint and extremal measure",
+   "statement": "[campaign result 2026-09-14, author checked; the criterion reproduces the source's worked example, and every algebraic step was confirmed symbolically] Problem 3.3 of Takahiro Hasebe and Yuki Ueda's Large time unimodality for classical and free Brownian motions with initial distributions, ALEA 15 (2018), 353-374, DOI:10.30757/ALEA.v15-15 (arXiv:1710.08240), asks for the optimal universal C>0 such that mu boxplus S(0,t) is unimodal for every t>=C D_mu^2 and every compactly supported probability measure mu. Here D_mu=sup{|x-y|: x,y in supp(mu)}, S(0,t) is the centered semicircle law of variance t, and boxplus is additive free convolution. The source proves C<=4. The record answers C=1. Sufficiency is the proved bound that mu boxplus S(0,t) is unimodal for all t>=D_mu^2. Optimality is the source's Example 2.1: mu=(delta_{-1}+delta_1)/2, with D_mu=2, is not unimodal for any t<4=D_mu^2. Let t*(mu) be the least t_0 such that mu boxplus S(0,t) is unimodal for every t>=t_0. Then t*(mu)<=D_mu^2, and equality holds for every symmetric two-point law (equal weights at two points) by Example 2.1 and scaling. The record further claims (Corollary) that equality holds only for symmetric two-point laws. That direction rests on the record's unproved assertion that t*(mu)=D_mu^2 requires a separating local minimum of value exactly 1/D_mu^2, a limiting step not written out. It is retained here as a claim, not certified. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "D_mu>0.",
+    "This concept records the endpoint and threshold-rigidity claims without certifying missing limiting steps."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "doi:10.30757/ALEA.v15-15",
+    "url": "https://alea.math.cnrs.fr/articles/v15/15-15.pdf",
+    "revision": "problem source: ALEA 15 (2018), 353-374; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "bandeira-randomstrasse-problem-11-complement-closed-covering-code-reduction",
+   "namespace": "probability.discrepancy",
+   "logical_name": "bandeira-randomstrasse-problem-11-complement-closed-covering-code-reduction",
+   "kind": "lemma",
+   "title": "Randomstrasse 11: sign discrepancy is a complement-closed covering problem",
+   "statement": "[campaign result 2026-09-14, author checked] This is the proved elementary covering-code reduction for Afonso S. Bandeira's Open Problem 11, How many deviations are needed afterall?, in Did just a couple of deviations suffice all along? (problems 10-14), Randomstrasse 101 (19 December 2024; https://randomstrasse101.math.ethz.ch/posts/HowManyDeviations/). For an n-by-n matrix A with entries in {+1,-1}, define disc(A)=min_{x in {+1,-1}^n} ||Ax||_infinity, where ||y||_infinity=max_i |y_i|, and let D_n=max_{A in {+1,-1}^{n-by-n}} disc(A). For r,x in {+1,-1}^n let d_H(r,x) be the number of differing coordinates and let the complement of r be -r. For an integer v in [0,n] with the same parity as n, |r dot x|>=v exactly when d_H(r,x)<=(n-v)/2 or d_H(-r,x)<=(n-v)/2. Thus disc(A)>=v exactly when the rows of A and their complements cover the sign cube within radius (n-v)/2. For a complement-closed nonempty code C contained in {+1,-1}^n, define its covering radius rad(C)=max_x min_{c in C} d_H(x,c), and define rho_n as the minimum of rad(C) over such C with at most 2n codewords. Then D_n=n-2rho_n. If K(n,R) is the least number of unrestricted binary codewords of length n covering the cube within an integer radius R, K(n,R)<=n certifies D_n>=n-2R, while K(n,R)>2n rules out D_n>=n-2R. This is an unrefereed campaign result.",
+   "proof_text": "Since $r\\cdot x = n - 2\\,d(r,x)$ in terms of Hamming distance,\n$$|r\\cdot x| \\ge v \\iff d(r,x) \\le \\tfrac{n-v}2 \\ \\text{ or }\\ d(\\bar r, x) \\le \\tfrac{n-v}2 .$$\nSo $\\operatorname{disc}(A) \\ge v$ says exactly that the $n$ rows of $A$ *together with their\ncomplements* cover the whole cube within radius $(n-v)/2$. Hence\n$$\\max_{A \\in \\{\\pm1\\}^{n\\times n}} \\operatorname{disc}(A)\n= n - 2\\min\\{\\,R : \\text{some complement-closed binary code of length } n \\text{ and size } 2n\n\\text{ has covering radius } R\\,\\},$$\nand the quantity is read off the tables of $K(n,R)$, the least size of a binary covering code of length\n$n$ with radius $R$: if $K(n,R) \\le n$ the radius is achievable, and if $K(n,R) > 2n$ it is not.",
+   "assumptions": [
+    "Integer n>=1; the threshold v has the same parity as n.",
+    "Codes may have at most 2n distinct codewords; repeated matrix rows are allowed."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "randomstrasse_2024_v1",
+    "url": "https://randomstrasse101.math.ethz.ch/posts/HowManyDeviations/",
+    "revision": "problem source: Bandeira, Randomstrasse 101, 2024-12-19; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "bandeira-randomstrasse-problem-11-six-by-six-extremal-sign-matrix",
+   "namespace": "probability.discrepancy",
+   "logical_name": "bandeira-randomstrasse-problem-11-six-by-six-extremal-sign-matrix",
+   "kind": "lemma",
+   "title": "Randomstrasse 11: an exact six-by-six maximum of four",
+   "statement": "[campaign result 2026-09-14, author checked] This is a proved finite special case of Afonso S. Bandeira's Open Problem 11, How many deviations are needed afterall?, in Did just a couple of deviations suffice all along? (problems 10-14), Randomstrasse 101 (19 December 2024; https://randomstrasse101.math.ethz.ch/posts/HowManyDeviations/). For an n-by-n matrix A with entries in {+1,-1}, define disc(A)=min_{x in {+1,-1}^n} ||Ax||_infinity, where ||y||_infinity=max_i |y_i|, and let D_n=max_{A in {+1,-1}^{n-by-n}} disc(A). One has D_6=4. An attaining matrix is specified by its six rows --++++; +--+++; +++-++; +-++-+; -+-+-+; -----+, with each character + interpreted as +1 and each - as -1. Its discrepancy is four, yielding normalized discrepancy 4/sqrt(6). The exhaustive witness check and the next-level counting obstruction are the proof methods recorded in the memo. This is an unrefereed campaign result.",
+   "proof_text": "At $n=6$ the extremal matrix is\n```\n--++++   +--+++   +++-++   +-++-+   -+-+-+   -----+\n```\nwith $\\operatorname{disc} = 4$ and ratio $4/\\sqrt6 = 1.633$.\n\nNot by trusting a solver. Each entry has two halves and each half was verified on its own terms.\n\n*Achievable.* The witness matrix is written out and its discrepancy recomputed by brute force over all\n$2^{n-1}$ sign vectors. That is the table's top row.\n\n*Not more.* For every $n \\le 11$ except one, the next level up is ruled out by counting alone: a single\nrow covers $\\sum_{j \\le (n-v)/2}\\binom nj$ sign vectors up to global sign, and $n$ times that falls short\nof $2^{n-1}$. The exception is $n=10$ at level $6$, which the counting bound permits. That one case is\nsettled twice over: the integer programme returns a proved infeasibility rather than a time limit, and\nindependently $K(10,2) = 30 > 20$ in the covering-code tables forbids it. The two agree.",
+   "assumptions": [
+    "All entries are signs; discrepancy uses all sign colourings."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "randomstrasse_2024_v1",
+    "url": "https://randomstrasse101.math.ethz.ch/posts/HowManyDeviations/",
+    "revision": "problem source: Bandeira, Randomstrasse 101, 2024-12-19; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "bandeira-randomstrasse-problem-11-nine-by-nine-five-thirds-lower-bound",
+   "namespace": "probability.discrepancy",
+   "logical_name": "bandeira-randomstrasse-problem-11-nine-by-nine-five-thirds-lower-bound",
+   "kind": "theorem",
+   "title": "Randomstrasse 11: an exact nine-by-nine maximum and a five-thirds lower bound",
+   "statement": "[campaign result 2026-09-14, author checked] This is a proved finite special case and lower bound for Afonso S. Bandeira's Open Problem 11, How many deviations are needed afterall?, in Did just a couple of deviations suffice all along? (problems 10-14), Randomstrasse 101 (19 December 2024; https://randomstrasse101.math.ethz.ch/posts/HowManyDeviations/). For an n-by-n matrix A with entries in {+1,-1}, define disc(A)=min_{x in {+1,-1}^n} ||Ax||_infinity, where ||y||_infinity=max_i |y_i|, and let D_n=max_{A in {+1,-1}^{n-by-n}} disc(A). One has D_9=5. An attaining matrix is specified by its nine rows ---++++++; -+---++++; +---++-++; +++++--++; +-+----++; ++--+++-+; +--+-++-+; -+-+-+--+; --+-+---+, with + meaning +1 and - meaning -1. Every sign colouring has some row dot product of absolute value at least five; the next possible discrepancy level is excluded by the counting bound. Therefore sup_{n>=1} D_n/sqrt(n)>=5/3, attained as a finite-size lower bound by this matrix. This result does not determine the supremum over all n. This is an unrefereed campaign result.",
+   "proof_text": "The extremal matrix at $n=9$, with rows written as signs:\n```\n---++++++   -+---++++   +---++-++   +++++--++   +-+----++\n++--+++-+   +--+-++-+   -+-+-+--+   --+-+---+\n```\nEvery one of the $512$ sign vectors $x$ has some row with $|r\\cdot x| \\ge 5$, so\n$\\operatorname{disc} = 5$ and the ratio is $5/3$.\n\nNot by trusting a solver. Each entry has two halves and each half was verified on its own terms.\n\n*Achievable.* The witness matrix is written out and its discrepancy recomputed by brute force over all\n$2^{n-1}$ sign vectors. That is the table's top row.\n\n*Not more.* For every $n \\le 11$ except one, the next level up is ruled out by counting alone: a single\nrow covers $\\sum_{j \\le (n-v)/2}\\binom nj$ sign vectors up to global sign, and $n$ times that falls short\nof $2^{n-1}$. The exception is $n=10$ at level $6$, which the counting bound permits. That one case is\nsettled twice over: the integer programme returns a proved infeasibility rather than a time limit, and\nindependently $K(10,2) = 30 > 20$ in the covering-code tables forbids it. The two agree.",
+   "assumptions": [
+    "All entries are signs; discrepancy uses all sign colourings."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "randomstrasse_2024_v1",
+    "url": "https://randomstrasse101.math.ethz.ch/posts/HowManyDeviations/",
+    "revision": "problem source: Bandeira, Randomstrasse 101, 2024-12-19; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "bandeira-randomstrasse-problem-11-exact-small-size-computations",
+   "namespace": "probability.discrepancy",
+   "logical_name": "bandeira-randomstrasse-problem-11-exact-small-size-computations",
+   "kind": "concept",
+   "title": "Randomstrasse 11: reported exact maxima through size eleven",
+   "statement": "[campaign result 2026-09-14, author checked] This is the computed finite table in the campaign partial answer to Afonso S. Bandeira's Open Problem 11, How many deviations are needed afterall?, in Did just a couple of deviations suffice all along? (problems 10-14), Randomstrasse 101 (19 December 2024; https://randomstrasse101.math.ethz.ch/posts/HowManyDeviations/). For an n-by-n matrix A with entries in {+1,-1}, define disc(A)=min_{x in {+1,-1}^n} ||Ax||_infinity, where ||y||_infinity=max_i |y_i|, and let D_n=max_{A in {+1,-1}^{n-by-n}} disc(A). The record reports (n,D_n)=(2,2),(3,1),(4,2),(5,3),(6,4),(7,3),(8,4),(9,5),(10,4),(11,5). Achievability was checked by exhaustive sign-colouring enumeration of computed witness matrices; for each next possible level the sign-cube covering count is insufficient, except at n=10 and level six. At that exception the record invokes both a solver's proved infeasibility and the published binary covering-code minimum K(10,2)=30>20, where K(n,R) is the least number of binary codewords covering all binary vectors of length n within Hamming radius R. Only the size-six and size-nine matrices are written out in the listed record and retained as explicit proved entries here; the rest of this table remains a reported exact computation without all its witness certificates in this bundle. The record leaves n=12 and the unrestricted supremum undecided. This is an unrefereed campaign result.",
+   "proof_text": null,
+   "assumptions": [
+    "The finite table is a reported computation, with complete explicit witnesses in the record only at n=6 and n=9."
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "randomstrasse_2024_v1",
+    "url": "https://randomstrasse101.math.ethz.ch/posts/HowManyDeviations/",
+    "revision": "problem source: Bandeira, Randomstrasse 101, 2024-12-19; own campaign record: 2026-09-14",
+    "license": "owner-own-work (campaign result, attributed)",
+    "excerpt": null
+   }
+  }
+ ],
+ "relations": [
+  {
+   "from_key": "janson-problem-20-4-single-vertex-fringe-count-reduction",
+   "to_key": "janson-problem-20-3-irregular-tail-nonnormality",
+   "kind": "depends_on",
+   "rationale": "The record's proposed fringe-count obstruction invokes the same companion degree-count counterexamples reported in the box-count concept."
+  },
+  {
+   "from_key": "shiozawa-wang-remark-5-3-confining-diffusion-noncompact",
+   "to_key": "shiozawa-wang-remark-5-3-downward-jump-hardy-bound",
+   "kind": "depends_on",
+   "rationale": "The well construction uses the local exponential lower bound at a downward jump."
+  },
+  {
+   "from_key": "shiozawa-wang-remark-5-3-outward-diffusion-noncompact",
+   "to_key": "shiozawa-wang-remark-5-3-confining-diffusion-noncompact",
+   "kind": "depends_on",
+   "rationale": "The second case is the first proof applied to -V, with the Hardy factors interchanged."
+  },
+  {
+   "from_key": "shiozawa-wang-remark-5-3-jump-sign-dichotomy-sketch",
+   "to_key": "shiozawa-wang-remark-5-3-confining-diffusion-noncompact",
+   "kind": "depends_on",
+   "rationale": "The partial dichotomy incorporates the proved negative-jump direction."
+  },
+  {
+   "from_key": "shiozawa-wang-remark-5-3-jump-sign-dichotomy-sketch",
+   "to_key": "shiozawa-wang-remark-5-3-outward-diffusion-noncompact",
+   "kind": "depends_on",
+   "rationale": "The partial dichotomy incorporates the proved positive-jump direction."
+  },
+  {
+   "from_key": "stepanyants-krapivsky-hartle-krioukov-layer-tail-limit",
+   "to_key": "stepanyants-krapivsky-hartle-krioukov-layer-pwit-identity",
+   "kind": "depends_on",
+   "rationale": "The tail theorem identifies the layer tails with the exponential moment of the branching-walk minimum."
+  },
+  {
+   "from_key": "aldous-fill-problem-3-44-rational-minimum-energy-flow-obstruction",
+   "to_key": "aldous-fill-problem-3-44-rational-flow-lp-obstruction",
+   "kind": "depends_on",
+   "rationale": "The energy extension reuses the irrational six-vertex-path relaxation-time witness."
+  },
+  {
+   "from_key": "aldous-fill-problem-3-44-negative-type-optimization-concept",
+   "to_key": "aldous-fill-problem-3-44-rational-flow-lp-obstruction",
+   "kind": "semantic_association",
+   "rationale": "The nonpolyhedral squared-distance cone explains the scope boundary of the rational LP obstruction."
+  },
+  {
+   "from_key": "aldous-fill-problem-7-31-intersection-ratio-product-reduction",
+   "to_key": "aldous-fill-problem-7-31-intersection-array-hitting-time-identity",
+   "kind": "depends_on",
+   "rationale": "The sufficient product bound is obtained by rewriting the exact intersection-array identity."
+  },
+  {
+   "from_key": "aldous-fill-problem-7-31-cubic-maximum-computational-result",
+   "to_key": "aldous-fill-problem-7-31-intersection-array-hitting-time-identity",
+   "kind": "depends_on",
+   "rationale": "The thirteen reported hitting times were computed using the identity."
+  },
+  {
+   "from_key": "hasebe-ueda-problem-3-11-cauchy-not-freely-strongly-unimodal",
+   "to_key": "hasebe-ueda-problem-3-11-cauchy-free-classical-convolution-identity",
+   "kind": "depends_on",
+   "rationale": "The classical nonunimodal Cauchy convolution witness transfers by the identity."
+  },
+  {
+   "from_key": "hasebe-ueda-problem-3-11-cauchy-attraction-obstruction",
+   "to_key": "hasebe-ueda-problem-3-11-cauchy-not-freely-strongly-unimodal",
+   "kind": "depends_on",
+   "rationale": "The closure argument uses a unimodal measure whose Cauchy free convolution is nonunimodal."
+  },
+  {
+   "from_key": "hasebe-ueda-problem-3-11-stable-limit-candidate-reduction",
+   "to_key": "hasebe-ueda-problem-3-11-cauchy-attraction-obstruction",
+   "kind": "depends_on",
+   "rationale": "The remaining-candidate discussion removes the proved Cauchy attraction class."
+  },
+  {
+   "from_key": "hasebe-ueda-problem-3-3-free-brownian-unimodality-above-diameter-squared",
+   "to_key": "hasebe-ueda-problem-3-3-stationary-cauchy-kernel-lower-bound",
+   "kind": "depends_on",
+   "rationale": "A nonunimodal kernel level would force a stationary minimum below the proved bound."
+  },
+  {
+   "from_key": "hasebe-ueda-problem-3-3-sharp-endpoint-and-rigidity-claim",
+   "to_key": "hasebe-ueda-problem-3-3-stationary-cauchy-kernel-lower-bound",
+   "kind": "depends_on",
+   "rationale": "The record's sharpness and uniqueness argument relies on the equality analysis of the kernel bound."
+  },
+  {
+   "from_key": "hasebe-ueda-problem-3-3-sharp-endpoint-and-rigidity-claim",
+   "to_key": "hasebe-ueda-problem-3-3-free-brownian-unimodality-above-diameter-squared",
+   "kind": "depends_on",
+   "rationale": "The broader reported endpoint claim extends the retained strict-time theorem."
+  },
+  {
+   "from_key": "bandeira-randomstrasse-problem-11-six-by-six-extremal-sign-matrix",
+   "to_key": "bandeira-randomstrasse-problem-11-complement-closed-covering-code-reduction",
+   "kind": "depends_on",
+   "rationale": "The general covering-count bound supplies the next-level upper obstruction."
+  },
+  {
+   "from_key": "bandeira-randomstrasse-problem-11-nine-by-nine-five-thirds-lower-bound",
+   "to_key": "bandeira-randomstrasse-problem-11-complement-closed-covering-code-reduction",
+   "kind": "depends_on",
+   "rationale": "The general covering-count bound excludes the next level above the explicit nine-row witness."
+  },
+  {
+   "from_key": "bandeira-randomstrasse-problem-11-exact-small-size-computations",
+   "to_key": "bandeira-randomstrasse-problem-11-complement-closed-covering-code-reduction",
+   "kind": "depends_on",
+   "rationale": "The covering formulation explains both the counting certificates and the special n=10 obstruction."
+  },
+  {
+   "from_key": "bandeira-randomstrasse-problem-11-exact-small-size-computations",
+   "to_key": "bandeira-randomstrasse-problem-11-six-by-six-extremal-sign-matrix",
+   "kind": "depends_on",
+   "rationale": "The finite table includes the explicitly retained size-six result."
+  },
+  {
+   "from_key": "bandeira-randomstrasse-problem-11-exact-small-size-computations",
+   "to_key": "bandeira-randomstrasse-problem-11-nine-by-nine-five-thirds-lower-bound",
+   "kind": "depends_on",
+   "rationale": "The finite table includes the explicitly retained size-nine result."
+  }
+ ]
+}

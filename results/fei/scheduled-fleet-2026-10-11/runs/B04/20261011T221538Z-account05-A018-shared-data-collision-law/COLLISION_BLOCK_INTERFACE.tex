@@ -1,0 +1,69 @@
+% A018 source-complete normalized interface. Full proof: REPORT.md sections 1--5.
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\begin{document}
+\section*{Arbitrary overlapping Boolean branches: block collision interface}
+Let $F(b,y)=g_b(y)$, where $b\in\mathbb F_2^a$ is a fresh uniform
+physical selector and the Boolean branches share one uniform data cube.
+Set $N=2^a$, $c_T(b)=\widehat g_b(T)$, and
+\[
+ R_T=N^{-1}\sum_b c_T(b)^2,\qquad
+ r_T(b)=\frac{c_T(b)^2}{NR_T},\qquad
+ \nu_T(A)=\frac{(N^{-1}\sum_b(-1)^{A\cdot b}c_T(b))^2}{R_T}.
+\]
+Omit only rows with $R_T=0$. Entropies use $\log_2$.
+\begin{theorem}
+With $B_W=\sum_T R_TH(\nu_T)$ and
+$M_W=a-\sum_T R_TH(r_T)$,
+\[
+ H(F)-N^{-1}\sum_b H(g_b)=B_W+M_W,\qquad
+ 0\le M_W\le\frac{2}{\ln2}I_W(F),\qquad
+ I_W(F)=\sum_T R_T\sum_A |A|\nu_T(A).
+\]
+Also $I_{\rm data}(F)=N^{-1}\sum_b I(g_b)$.
+The posterior term $M_W$ vanishes exactly when all branch squared spectra
+coincide. The whole increment vanishes exactly when every nonzero row
+$c_T(b)$ is a scalar multiple of a Walsh character of $b$.
+\end{theorem}
+\begin{proof}
+Walsh Parseval makes $R$ the parent data-set marginal and $\nu_T$ its
+conditional selector-set law. The auxiliary law
+$P(b,T)=c_T(b)^2/N$ has uniform branch marginal and posterior $r_T$.
+Its entropy chain rule proves the displayed identity.
+
+For $\phi_T=c_T/\sqrt{R_T}$, one has
+\[
+ a-H(r_T)=\frac{\operatorname{Ent}(\phi_T^2)}{\ln2}
+ \le\frac{2}{\ln2}\sum_i\mathbb E(D_i\phi_T)^2
+ =\frac{2}{\ln2}\sum_A|A|\nu_T(A).
+\]
+The inequality follows from product entropy tensorization and
+$\operatorname{Ent}_{\{0,1\}}((s,t)^2)\le(s-t)^2/2$;
+both are proved directly in REPORT.md, section 2. Average with $R_T$.
+Uniform posterior rows characterize $M_W=0$. Point-mass $\nu_T$ rows
+characterize $B_W=0$ by inverse Walsh and automatically imply $M_W=0$.
+\end{proof}
+\begin{corollary}
+For common squared spectra write $c_T(b)=\alpha_T h_T(b)$ with Boolean
+selector phases $h_T$. Then
+\[
+ M_W=0,\qquad B_W=\sum_T\alpha_T^2 H(h_T),\qquad
+ I_W=\sum_T\alpha_T^2 I(h_T).
+\]
+The remaining conditional entropy is not paid by posterior cancellation.
+\end{corollary}
+For the quadratic bent source on even $m\ge2$ data bits spliced with
+its one-point flip, $I_W=2^{-m}$ and $B_W\ge(m-1)2^{-m}$.
+Thus no universal selector-only linear payment is possible.
+
+For a finite physical block stopping tree,
+\[
+ H(\text{root})=\sum_v\pi_v(B_{W_v}+M_{W_v})+
+ \sum_\ell\pi_\ell H(\ell),\qquad
+ I(\text{root})=\sum_v\pi_v I_{W_v}+\sum_\ell\pi_\ell I(\ell).
+\]
+All posterior terms are paid at constant $2/\ln2$ without reuse;
+the conditional entropies and terminal entropy remain obligations.
+\end{document}

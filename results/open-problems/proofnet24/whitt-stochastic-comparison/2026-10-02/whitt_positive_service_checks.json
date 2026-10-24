@@ -1,0 +1,76 @@
+{
+  "arithmetic": "exact Fraction; displayed decimals are not used to decide assertions",
+  "models": [
+    {
+      "model": "base_positive_H2",
+      "arrival": "11/10",
+      "probabilities": [
+        "3/7",
+        "4/7"
+      ],
+      "rates": [
+        "5",
+        "5/8"
+      ],
+      "maximum_count": 80,
+      "busy_phases": 3,
+      "slow_queue_tail_upper_display": "0.0000338819650833609985499114781245524662539399519",
+      "delay_lower_display": "0.392872619378512420636667195074272856376960069",
+      "delay_upper_display": "0.392893190047224051767481936119644070736353095",
+      "entry_phase_ratios_display": [
+        "0.392872619378512420636667195074272856376960069",
+        "0.392872619378512551147270442595899501760923521",
+        "0.392872619378512682111233685707139020345817183"
+      ],
+      "checks": [
+        "all generator rows",
+        "exact backward equations",
+        "positive occupations",
+        "slow exponential service domination",
+        "stationary incoming flux / occupation identity"
+      ]
+    },
+    {
+      "model": "spread_positive_H3",
+      "arrival": "11/10",
+      "probabilities": [
+        "3/14",
+        "3/14",
+        "4/7"
+      ],
+      "rates": [
+        "1000",
+        "1000/399",
+        "5/8"
+      ],
+      "maximum_count": 80,
+      "busy_phases": 6,
+      "slow_queue_tail_upper_display": "0.0000338819650833609985499114781245524662539399519",
+      "delay_lower_display": "0.391723695390425373128659150881545857645186696",
+      "delay_upper_display": "0.391744304986939526115032326588501813484907617",
+      "entry_phase_ratios_display": [
+        "0.391723695390425373128659150881545857645186696",
+        "0.391723695390425416789946623368059812005188171",
+        "0.391723695390425544021707054891182674419787128",
+        "0.391723695390425451264615383442093726979213202",
+        "0.391723695390425578203228812439070048448810511",
+        "0.391723695390425708660081743439972955759685857"
+      ],
+      "checks": [
+        "all generator rows",
+        "exact backward equations",
+        "positive occupations",
+        "slow exponential service domination",
+        "stationary incoming flux / occupation identity"
+      ]
+    }
+  ],
+  "gap_lower_display": "0.00112831439157289452163486848577104289205245201",
+  "exact_assertions": [
+    ".39287<P_delay(base)<.39290",
+    ".39172<P_delay(spread)<.39175",
+    "P_delay(base)-P_delay(spread)>11/10000"
+  ],
+  "service_distributions": "strictly positive exponential mixtures",
+  "convex_order": "on short branch replace .2E by .001E or .399E with probability 1/2 each; unchanged long branch"
+}

@@ -1,0 +1,16 @@
+{
+  "helper_version": "A040-separator-independent-review-v1",
+  "target": "Independent review of A023 overlap version 2 single-reserve extension; no multi-bit transport census (assigned to A046)",
+  "family": "A = X*(U OR V) OR W*U*V; independent fair X; positive-literal point blocks U,V,W; F=1+A*(g-1)",
+  "domain": {"dictator_core": "all L,R,T in {1,2,3}, 27 roots", "balanced_bent_core": "L,R,T in {1,2}, k in {2,4}, g=z*b_k, 16 roots", "balanced_bent_flip_selector_core": "L,R,T in {1,2}, k=4, g=z*select_y(b4,b4 flipped at zero), 8 roots", "analytic_checks": "exact rational inequalities and explicitly stated all-width reconstruction"},
+  "case_count": 51,
+  "pilot": "first dictator root (L,R,T)=(1,1,1), <=60 seconds",
+  "symmetry": "none for root enumeration; control Fourier erasure homogeneity reconstructed for arbitrary balanced cores, checked against actual truth tables",
+  "arithmetic": "integer truth tables and Walsh coefficients; Fraction influences; prime-log entropy vectors with rigorous rational logarithm intervals; no floating sign decisions",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds": 55,
+  "max_truth_table_dimension": 14,
+  "no_automatic_dimension_escalation": true,
+  "source_review_scope": "all-width descendant goodness, exact root face boundary ownership, retained terminal entropy and single-use reserve; earlier version 1 scope is preserved but not re-reviewed",
+  "saved_before_search": true
+}

@@ -1,0 +1,94 @@
+{
+  "prepared": true,
+  "prepared_on": "2026-10-10T06:46:29.445058+00:00",
+  "bundle_local": "~\\brain_workers\\w447\\drafts\\bundle_001.json",
+  "bundle_submission_path": "~/math-brain-inbox/w447/bundle_001.json",
+  "submitted": true,
+  "referee_handoff_sent": true,
+  "reviewed": true,
+  "independent_keeps": [
+    {
+      "id": "w448-audit-w447-ER",
+      "verdict": "KEEP",
+      "scope": "P(T_S>mr)<=(1-kappa^r)^m and E T_S<=r kappa^(-r) when escape radius<=r.",
+      "source": "~\\brain_workers\\w447\\LEMMA_ESCAPE_RADIUS.md",
+      "why": "Tower iteration is justified at actual quenched stopping/block times; no path independence needed.",
+      "reviewer": "w448",
+      "parent_problem_keep": false,
+      "remaining_gap": "E[K_tau|B]<infinity for the actual regeneration horizon; unknown from original hypotheses."
+    },
+    {
+      "id": "w448-audit-w447-FV",
+      "verdict": "KEEP",
+      "scope": "Finite S with cardinality N has r(S)^d<=d!N.",
+      "source": "~\\brain_workers\\w447\\LEMMA_ESCAPE_RADIUS.md",
+      "why": "Count the contained coordinate simplex; this is geometry only, not a trap-occurrence probability.",
+      "reviewer": "w448",
+      "parent_problem_keep": false,
+      "remaining_gap": "E[K_tau|B]<infinity for the actual regeneration horizon; unknown from original hypotheses."
+    },
+    {
+      "id": "w448-audit-w447-CC",
+      "verdict": "KEEP",
+      "scope": "E[tau|B]<infinity iff E[K_tau|B]<infinity for arbitrary positive integer horizon finite on B.",
+      "source": "~\\brain_workers\\w447\\LEMMA_CLOCK_TO_COUNT.md",
+      "why": "Conditional mgf product has the required measurability; Chernoff conditioning divides by P(B) once; K_tau<=tau pathwise.",
+      "reviewer": "w448",
+      "parent_problem_keep": false,
+      "remaining_gap": "E[K_tau|B]<infinity for the actual regeneration horizon; unknown from original hypotheses."
+    },
+    {
+      "id": "w448-audit-w447-GO",
+      "verdict": "KEEP",
+      "scope": "Fixed-kappa homogeneous ballistic two-dimensional laws have unbounded origin Green function across biases approaching zero, despite singleton exit time one.",
+      "source": "~\\brain_workers\\w447\\LEMMA_RETURN_OBSTRUCTION.md",
+      "why": "Independent transformed fair-sign walks give the harmonic lower bound; a fixed positive bias has a summable Chernoff upper bound.",
+      "reviewer": "w448",
+      "parent_problem_keep": false,
+      "remaining_gap": "E[K_tau|B]<infinity for the actual regeneration horizon; unknown from original hypotheses."
+    }
+  ],
+  "ingested": false,
+  "retrievable": false,
+  "served_model_gate_satisfied": false,
+  "parent_problem_solved_claim": false,
+  "submitted_on": "2026-10-10T06:56:00.220236+00:00",
+  "integration_contact_handoff_sent": true,
+  "handoff_receipts": [
+    {
+      "to": "w449",
+      "message_id": "msg-dd602307cb"
+    },
+    {
+      "to": "w448",
+      "message_id": "msg-e4e4874787"
+    },
+    {
+      "to": "codex-01a12190",
+      "message_id": "msg-d721e321ca"
+    },
+    {
+      "to": "w444",
+      "message_id": "msg-955a61c49e"
+    }
+  ],
+  "handoff_on": "2026-10-10T07:01:50.355438+00:00",
+  "review_scope": "w448 peer scopes only; required w449 review pending",
+  "required_referee_reviewed": false,
+  "ingestion_receipt": null,
+  "retrieval_receipt": null,
+  "byte_frozen_audit_binding_received": false,
+  "final_packet_sha256": "1e1a50f06e7ffc36c83f464e9b1620f2b895400f37b2fcc49d6f7ea46256351f",
+  "final_handoffs": [
+    {
+      "to": "w449",
+      "message_id": "msg-865e2c9336",
+      "packet_sha256": "1e1a50f06e7ffc36c83f464e9b1620f2b895400f37b2fcc49d6f7ea46256351f"
+    },
+    {
+      "to": "codex-01a12190",
+      "message_id": "msg-eba0677a9d",
+      "packet_sha256": "1e1a50f06e7ffc36c83f464e9b1620f2b895400f37b2fcc49d6f7ea46256351f"
+    }
+  ]
+}

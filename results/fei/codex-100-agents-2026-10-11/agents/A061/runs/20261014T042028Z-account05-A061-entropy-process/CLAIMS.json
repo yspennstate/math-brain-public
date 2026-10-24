@@ -1,0 +1,82 @@
+[
+  {
+    "claim_id": "A064-REPEATED-FALLBACK-PRIORITY-GLOBAL-DEBT",
+    "version": 1,
+    "exact_statement": "For every finite uniform point override F=A*u+(1-A)*G, with A a live fresh point indicator, u independent of the entire physical fallback G, and G any exclusive controller selecting independent disjoint Boolean cores or constant signs, the actual queried point-control debt satisfies D-kappa<=(8+2/ln2)d<11d, where kappa is the release of R=sum phi(q_j)Var(core_j). The fallback is the same physical core/function on both children. No nonnegativity of D-kappa is asserted. For any finite ordered priority list of disjoint point events selecting distinct independent data cores with constant fallback, expose point controls in priority order while adaptively interleaving prescribed own-history core trees. If nonnegative core reserves r_j have C-priced drift, C>=0, then Q=sum q_j*r_j+sum phi(q_j)Var(core_j) is nonnegative and has data price C+11/2 and controller price11. Q0<=sum q_j*r_j(root)+2I_ctrl(root); at every finite adaptive stop E Q_terminal<=Q0+C Pi_data and H(root)<=(C+11/2)Pi_data+11Pi_ctrl+Q0+E[H(actual terminal)-Q_terminal]. Controller-resolved boundaries retain H(selected core)-r_selected; complete-data boundaries retain actual controller entropy even when Q=0; full controller-and-data boundaries have H=Q=0 when core leaf reserves vanish. At alpha=max(C+11/2,11), finite Bellman induction dominates the least nonnegative reserve of the declared full policy by Q. Explicit initial weighted core bound<=K I_data yields H<=max(C+11/2+K,13)I. The two-core priority with a shared X followed by ordered private point controls is covered for either orientation and all private widths using the separately reviewed shared-X rate. No universal core certification or representation is asserted.",
+    "hypotheses": [
+      "Finite uniform physical cubes, genuine Boolean signs, normalized Fourier coefficients, entropy and KL in bits",
+      "Distinct independent disjoint data cores and disjoint point-control blocks; constant fallback; duplicate descriptions of one physical core merged",
+      "Local point override uses actual identical fallback on both children; fallback controls and cores arbitrary but disjoint from u and A",
+      "Priority controller queries resolve earliest live event before later events; arbitrary adaptive data queries respect fixed own-history core trees; independent seed fixed initially",
+      "C>=0, nonnegative declared core reserves; zero reserves at complete core leaves required for full zero boundary; arbitrary finite stops retain actual terminal terms",
+      "No initial linear arbitrary-core reserve bound is assumed; optional K certificate supplied explicitly; shared-X extension only its reviewed constant/live or independent-child geometries"
+    ],
+    "statement_sha256": "c50753a9411d10417d6f80b2878cc2556c38503fa0cc70858922f501ec3cb364",
+    "contributors": [
+      "A064; A087 shared-X boundary geometry and prior A064-v2 data lift credited"
+    ],
+    "proof_source": {
+      "run_id": "20261014T030103Z-account05-A064-global-debt-potential",
+      "paths": [
+        "DERIVATION.md",
+        "GLOBAL_DEBT_POTENTIAL.tex"
+      ],
+      "validation": [
+        "out/PILOT.json",
+        "out/VALIDATION.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A064-TERMINAL-CORRECTED-GLOBAL-DEBT",
+        "version": 2,
+        "scope": "Only additional data-node lift and root rarity ownership; independently accepted at this scope by A087 stage4"
+      },
+      {
+        "claim_id": "A087-OWNED-CONTROLLER-REVEAL-AND-RESOLVED-CONTINUATION",
+        "version": 1,
+        "scope": "Shared-X one-sided/disjoint-child extension only; independently reconstructed in REVIEW_A087.md"
+      },
+      {
+        "source": "A091 POINT_CONTROL_PAYMENT.md",
+        "scope": "b(z)<=3z and physical JS inequality; independently reconstructed in DERIVATION.md"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A061",
+        "at": "2026-10-14T04:27:20.039960+00:00",
+        "verdict": "INDEPENDENT_NEW_CONTROLLER_CLAUSE_AND_GLOBAL_ASSEMBLY_HOLDS",
+        "scope": "Full new repeated-fallback controller derivation and ordered-priority Bellman assembly reconstructed; data-node price/root ownership imported only at additional A064-v2 scope already independently reviewed by A087; shared-X uses exact A087 clause reviewed by A064. No older bundled v1 acceptance or universal core payment.",
+        "method": "Different standalone labelled truth-table/Walsh implementation; same fallback on both children; complete physical branches and actual partial terminal ledger; analytic arbitrary-width sector proof",
+        "source_run": "20261014T042028Z-account05-A061-entropy-process",
+        "proof_source": [
+          "REVIEW.md",
+          "code/check_priority.py",
+          "out/LOCAL_CHECK.json",
+          "out/TREES_CHECK.json"
+        ],
+        "substantive_repair": false,
+        "dependency_status": "CONDITIONAL_ON_EXACT_REVIEWED_ADDITIONAL_V2_DATA_LIFT_AND_SHARED_X_CLAUSES"
+      }
+    ],
+    "status": "INDEPENDENT_NEW_CONTROLLER_CLAUSE_AND_GLOBAL_ASSEMBLY_HOLDS_BY_A061",
+    "supersedes": [],
+    "refutes": [
+      "Replacing a repeated physical fallback core by independent child copies in the mismatch influence calculation"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A087",
+      "A091",
+      "A057",
+      "A062",
+      "A065",
+      "A028",
+      "A038",
+      "A039",
+      "A094",
+      "B20"
+    ]
+  }
+]

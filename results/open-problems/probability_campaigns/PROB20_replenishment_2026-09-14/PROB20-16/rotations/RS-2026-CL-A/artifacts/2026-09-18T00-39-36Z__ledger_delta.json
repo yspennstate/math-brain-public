@@ -1,0 +1,67 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "RS-2026-CL-A",
+  "report_kind": "research_progress_robust_positive_primitive_activity_boundary",
+  "input_snapshot_sha": "7578fb6bc235056f9d5b9f820d3087af9cc18c48",
+  "previous_report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T23-59-06Z__report.md",
+  "previous_report_creation_commit": "968169993e6b27d7132fc6e103bd462614dc0870",
+  "previous_report_blob": "15e3430c1a5fd846ab893291a32c3d7924405458",
+  "report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-18/2026-09-18T00-39-36Z__report.md",
+  "report_creation_commit": "f5347ce5b98c42add1e958ce0b4e44ac59ade81f",
+  "report_blob": "38adc4120f5347c6fe871540859f9ceee2fdd471",
+  "source": "Anastasia Kireeva, Randomstrasse 101, posted 2026-06-05, first displayed Open Problem 35",
+  "fixed_metric": "E_framework in {0,1}",
+  "metric_before": 1,
+  "metric_after": 1,
+  "remaining_obligation_moved": true,
+  "remaining_obligation_stagnation_count_before": 0,
+  "remaining_obligation_stagnation_count_after": 0,
+  "hard_recovery_cycles_consumed": 1,
+  "methods": [
+    {
+      "id": 11,
+      "name": "DUALIZE",
+      "reuse": "deliberate_nonconsecutive",
+      "status": "SUCCESS",
+      "outcome": "positive factorization yields a coefficientwise compound-Poisson majorant with primitive profile C_r<=b_r"
+    },
+    {
+      "id": 30,
+      "name": "DO ONE SCALE ONE DIRECTION AT A TIME",
+      "reuse": "deliberate_nonconsecutive",
+      "status": "SUCCESS",
+      "outcome": "proved a banded primitive-activity theorem in which noise pays q^(kD) against activity in the kth degree band"
+    },
+    {
+      "id": 2,
+      "name": "ATTACK THE NEGATION FIRST",
+      "reuse": "deliberate_nonconsecutive",
+      "status": "SUCCESS",
+      "outcome": "independent parity blocks show q^(D+1) H_D is an essentially sharp obstruction scale and sharpen the structural diagnosis of Mao"
+    }
+  ],
+  "new_core_results": [
+    "For any positive factorization F=prod_l(1+sum_r c_{l,r}z^r), with C_r=sum_l c_{l,r} and H_D=sum_{r>D}C_r, 1+chi2(T_sqrt(q)P||Q)<=exp(q Adv^{<=D}(P,Q)^2+q^{D+1}H_D).",
+    "If D_n=(log n)^{1+Omega(1)}, bounded LDA and log^+ H_{n,D_n}=o(D_n), then every fixed q<1 gives uniformly bounded full noised chi-square and a uniform TV gap against all measurable tests.",
+    "Band refinement: high primitive activity H_k^(D) in degrees (kD,(k+1)D] contributes at most q^(kD+1) H_k^(D) to log F(q).",
+    "Independent parity blocks of degree D+1 have zero LDA through D and become strongly distinguishable when the noise-scaled primitive activity ma q^(D+1) diverges, establishing near-sharpness.",
+    "For Mao's zero-LDA family and every positive factorization of its spectral-energy polynomial, q^(D_n+1) H_{n,D_n}->infinity at every fixed surviving-noise q; hence the high primitive activity is necessarily superpolynomial at the source scale.",
+    "Heterogeneous tensor-product planted/null pairs give an exact product factorization of spectral-energy polynomials and satisfy the robust criterion whenever the number of blocks and individual block chi-square divergences are polynomially bounded."
+  ],
+  "prior_art": {
+    "positive_factorization": "KNOWN: Briggs/Klich; Klich arXiv:2607.14409",
+    "compound_poisson_and_component_limits": "KNOWN classical probability and decomposable combinatorial structures; no novelty claim",
+    "low_degree_positive_comparators": "Hsieh et al. arXiv:2601.05850; Chen-Li arXiv:2608.06279",
+    "mandatory_counterexample": "Mao arXiv:2607.20318",
+    "robust_likelihood_ratio_primitive_activity_translation": "NOVELTY_UNVERIFIED"
+  },
+  "mathematical_status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / ROBUST_POSITIVE_PRIMITIVE_ACTIVITY_BOUNDARY",
+  "audit_count": "0/2",
+  "audit_refs": [],
+  "history_gaps": [
+    "No canonical probability_1000_intake row recovered for this later Randomstrasse source; target entered through queue/claim admission.",
+    "Visible-fleet predecessor title is operationally stale relative to the later exclusive CL-A claim."
+  ],
+  "artifact_refs": [],
+  "next_methods": [5, 14, 21]
+}

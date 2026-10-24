@@ -1,0 +1,41 @@
+{
+  "run_id": "20260923T205353Z-account01-B04-QFORM-auto11-r19",
+  "theorem": "QFORM-OVERLAP1-SCHUR-COMPOUND-RANKFREE-v1",
+  "symbolic_checks": {
+    "second_compound_stress_identity": "D_e=(4/9)(e^4+60e^2+16e+144)",
+    "stress_schur_singular_values": ["2", "2", "e"],
+    "full_bottom_block": "S_e+(1/2)bb^T",
+    "pivot": "a=2",
+    "b": "e*1_6",
+    "schur_complement": "S_e exactly",
+    "overlap_energy": "M_1=4D_e",
+    "new_family_bound": "sqrt(3)*2^(23/8)*D_e^(-1/8)",
+    "uniform_e_to_zero_bound": "sqrt(3)*2^(17/8)",
+    "partner_cross_singular_values_after_pivot_conditioning": ["2", "2", "e+(3/2)e^2"],
+    "partner_E3": "16(e+(3/2)e^2)^2",
+    "partner_bound": "6*2^(-2/3)*(e+(3/2)e^2)^(-1/3)"
+  },
+  "epsilon": 0.01,
+  "delta": 0.01,
+  "numeric_checks": {
+    "D_e": 64.07377778222222,
+    "D_e_exact": "14416600001/225000000",
+    "new_bound": 7.554171209535741,
+    "uniform_limit_bound": 7.55525919609186,
+    "perturbation_frobenius_upper_bound": 0.03464231516512717,
+    "weyl_large_eigenvalue_modulus_lower_bound": 1.9653576848348728,
+    "partner_small_singular_value": 0.01015,
+    "partner_E3": 0.00164836,
+    "partner_bound": 17.457252994674807,
+    "partner_over_new_factor": 2.3109421947755515
+  },
+  "logic_checks": {
+    "full_target_claimed": false,
+    "continuity_claimed_for_new_overlap_theorem": false,
+    "essential_bounded_density_claimed": true,
+    "post_rotation_independence_used": false,
+    "pointwise_scalar_quadratic_phase_decay_used": false,
+    "moments_or_support_assumptions_used": false,
+    "designated_partner_applied_to_actual_inequality": true
+  }
+}

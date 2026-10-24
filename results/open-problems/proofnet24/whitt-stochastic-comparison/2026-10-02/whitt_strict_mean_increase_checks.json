@@ -1,0 +1,77 @@
+{
+  "arithmetic": "exact Fraction; decimal strings only display",
+  "service_scale": "10001/10000",
+  "service_means": {
+    "base": "1",
+    "target": "10001/10000"
+  },
+  "models": [
+    {
+      "model": "base_positive_H2_mean_1",
+      "arrival": "11/10",
+      "probabilities": [
+        "3/7",
+        "4/7"
+      ],
+      "rates": [
+        "5",
+        "5/8"
+      ],
+      "maximum_count": 80,
+      "busy_phases": 3,
+      "slow_queue_tail_upper_display": "0.0000338819650833609985499114781245524662539399519",
+      "delay_lower_display": "0.392872619378512420636667195074272856376960069",
+      "delay_upper_display": "0.392893190047224051767481936119644070736353095",
+      "entry_phase_ratios_display": [
+        "0.392872619378512420636667195074272856376960069",
+        "0.392872619378512551147270442595899501760923521",
+        "0.392872619378512682111233685707139020345817183"
+      ],
+      "checks": [
+        "all generator rows",
+        "exact backward equations",
+        "positive occupations",
+        "slow exponential service domination",
+        "stationary incoming flux / occupation identity"
+      ]
+    },
+    {
+      "model": "strictly_larger_mean_positive_H2",
+      "arrival": "11/10",
+      "probabilities": [
+        "200/533",
+        "333/533"
+      ],
+      "rates": [
+        "10000000/10001",
+        "6250/10001"
+      ],
+      "maximum_count": 80,
+      "busy_phases": 3,
+      "slow_queue_tail_upper_display": "0.0000341559108853419173324846239211152257956192159",
+      "delay_lower_display": "0.390410096117185791387574639641234581498903014",
+      "delay_upper_display": "0.390430917215620454641334703875825867348498238",
+      "entry_phase_ratios_display": [
+        "0.390410096117185791387574639641234581498903014",
+        "0.390410096117186317342144517750297430340788879",
+        "0.390410096117186829129833513021621990026299055"
+      ],
+      "checks": [
+        "all generator rows",
+        "exact backward equations",
+        "positive occupations",
+        "slow exponential service domination",
+        "stationary incoming flux / occupation identity"
+      ]
+    }
+  ],
+  "delay_gap_lower_display": "0.00244170216289196599533249119844698902846183087",
+  "positive_waiting_threshold": "1/100000",
+  "waiting_tail_gap_lower_display": "0.00234170216289196599533249119844698902846183087",
+  "exact_assertions": [
+    "E[target service]=10001/10000>E[base service]=1",
+    "P(W_base>0)-P(W_target>0)>12/5000",
+    "P(W_base>1/100000)-P(W_target>1/100000)>23/10000"
+  ],
+  "strict_increasing_convex_order": "The existing equal-mean martingale coupling gives S<=cx T; target=(10001/10000)T. Its stop-loss strictly exceeds S at every finite threshold t>=0, including t=0."
+}

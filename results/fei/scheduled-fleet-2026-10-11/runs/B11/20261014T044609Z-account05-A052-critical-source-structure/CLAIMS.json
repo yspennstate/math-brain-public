@@ -1,0 +1,63 @@
+[
+  {
+    "claim_id": "A052-CRITICAL-WEAK-INFLUENCE-GIBBS-BANK",
+    "version": 1,
+    "exact_statement": "For every nonconstant finite uniform-cube Boolean sign f with positive ratio R=H(f)/I(f) and every physical descendant ratio at most R, max_i Inf_i(f)<exp(3)*2^-R. For any least-essential-dimension FEI(K) violator, K>=0, deficit D>0 and actual child reserves S_i>=0, likewise max_i Inf_i<exp(3)*2^-K. For singleton minority Fourier rows e_t,q_t,c_t=4e_t(1-e_t), any lambda>=2/ln2 and any real K, define rho=(1+2^(K-lambda))^-1, r=log2(1+2^(lambda-K)), Lambda_i=sum q_t KL_2(Ber(e_t)||Ber(rho)), A_i=sum q_t[lambda e_t-j(c_t)] and O_i=Inf_i-beta_i. The exact identity D_K(f)+S_i+K O_i+Lambda_i+A_i=r holds on arbitrary roots with actual signed S_i. For a physical pair, complete product-reference row KL G_ij and conditional spectral mutual information Z_ij satisfy Lambda_i+Lambda_j+(K-lambda)(O_i+O_j)=G_ij+Z_ij, hence 2D_K+S_i+S_j+lambda(O_i+O_j)+G_ij+Z_ij+A_i+A_j=2r. The complete pair bank also obeys D_K+S_ij+G_ij+lambda I_ij-J_ij=2r, with nonnegative final channel gap; the analogous block identity has a*r. On critical witnesses all these residuals are nonnegative and minority tail mass at e_t>=u>rho is bounded by (r-D-S_i-K O_i)/(r+(K-lambda)u-h2(u)). Every proper pair of a minimal K-witness has C_ij<12 exp(3)*2^-K. These are weighted structural restrictions and exact reserve identities, not a selected-block theorem or universal FEI resolution.",
+    "hypotheses": [
+      "Actual Boolean signs on finite uniform cubes; all entropies and KL in bits; zero Fourier rows omitted",
+      "Physical-descendant ratio criticality requires nonconstant f and R>0; constants have zero deficit",
+      "Threshold reserve positivity requires least essential dimension among all Boolean K-violators, K>=0, and proper cuts",
+      "Gibbs equalities use the same K,lambda,rho at both coordinates; arbitrary roots retain actual signed child reserves",
+      "lambda>=2/ln2; minority tail denominator asserted positive only for u>rho; identities permit full cuts but critical use requires proper cuts",
+      "No sharp Boolean exp(3) coefficient, dimension-independent selected pair, deficit lower bound or global optimizer is assumed"
+    ],
+    "statement_sha256": "071f8d6e4c03af52dd754d3e2581a11f2b41074e518a160c60988b4a6f7402f0",
+    "contributors": [
+      "account05/A052"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A052\\runs\\20261014T044609Z-account05-A052-critical-source-structure\\WEAK_CRITICAL_PROOF.md",
+      "sha256": "3ea08d15d6ab3eb0fda3a7f8d378e4d3509017d5224df287e5cad5e89fd2ffce",
+      "locator": "Sections1--4"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A051-TWO-BIT-CRITICAL-PHASE-RESERVE",
+        "version": 1,
+        "statement_sha256": "25d00942803b7fd8918a198dc313101701674dc04a88f5919f6624bf28288e09",
+        "reviewer": "A052",
+        "verdict": "HOLDS_AT_COMPLETE_ANALYTIC_SCOPE_WITH_INDEPENDENT_FINITE_REPLAY",
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A052\\runs\\20261014T015635Z-account05-A052-critical-source-structure\\DEPENDENCY_REVIEW.md",
+        "review_sha256": "8f02957a650fc2872a5974f61e0bcbf0bb201ad91cd375a630170b3bec4090c2",
+        "contributor_conflict": false,
+        "registry_adoption": "PENDING"
+      },
+      {
+        "claim_id": "A055-SINGLETON-CRITICAL-RESERVE",
+        "version": 1,
+        "statement_sha256": "bfc2c09293d9446e7301b5c562668288de096d6758459530ec93bf1db80c09bf",
+        "reviewer": "A052",
+        "verdict": "HOLDS_AT_COMPLETE_ANALYTIC_SCOPE_WITH_INDEPENDENT_FINITE_REPLAY",
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A052\\runs\\20261014T015635Z-account05-A052-critical-source-structure\\DEPENDENCY_REVIEW.md",
+        "review_sha256": "8f02957a650fc2872a5974f61e0bcbf0bb201ad91cd375a630170b3bec4090c2",
+        "contributor_conflict": false,
+        "registry_adoption": "PENDING"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPED_STRUCTURAL_APPLICATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "claude/B11",
+      "A051",
+      "A053",
+      "A055",
+      "A002",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

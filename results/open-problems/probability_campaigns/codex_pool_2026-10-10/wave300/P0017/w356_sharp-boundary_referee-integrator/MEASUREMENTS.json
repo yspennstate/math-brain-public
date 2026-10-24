@@ -1,0 +1,74 @@
+{
+  "command": "python -B -X utf8 reproduce_simplex.py",
+  "result": "PASS",
+  "exact_dimensions": 11,
+  "growth_dimensions": 5,
+  "interval_checks": [
+    {
+      "length": 1.0,
+      "rayleigh_quotient": 0.10132118364233778,
+      "relative_error": 0.0
+    },
+    {
+      "length": 2.0,
+      "rayleigh_quotient": 0.4052847345693511,
+      "relative_error": 0.0
+    },
+    {
+      "length": 143.54093492798492,
+      "rayleigh_quotient": 2087.6216677667276,
+      "relative_error": 0.0
+    }
+  ],
+  "weighted_energy_checks": [
+    {
+      "n": 100,
+      "k": 1,
+      "quotient": 1.2158542037249584,
+      "mean_cp": 1.2158542037080533,
+      "quotient_over_mean": 1.000000000013904,
+      "relative_error": 1.390398907119561e-11,
+      "method": "composite Simpson; n=100 endpoint integrands vanish",
+      "panels": 16384
+    },
+    {
+      "n": 100,
+      "k": 2,
+      "quotient": 3.8977252945913796,
+      "mean_cp": 1.2158542037080533,
+      "quotient_over_mean": 3.2057505601446996,
+      "relative_error": 7.863043549605209e-12,
+      "method": "composite Simpson; n=100 endpoint integrands vanish",
+      "panels": 16384
+    },
+    {
+      "n": 100,
+      "k": 10,
+      "quotient": 61.40063728725668,
+      "mean_cp": 1.2158542037080533,
+      "quotient_over_mean": 50.499999999999986,
+      "relative_error": 2.220446049250313e-16,
+      "method": "composite Simpson; n=100 endpoint integrands vanish",
+      "panels": 16384
+    }
+  ],
+  "polynomial_triangle_check": {
+    "peer_claim": "w354-P0017-004",
+    "method": "exact raw triangle monomial integration",
+    "variance": "1/2",
+    "directional_energy": "1/3",
+    "full_gradient_energy": "13/27",
+    "full_gradient_quotient": "27/26"
+  },
+  "at_n_100": {
+    "essential_sup_fiber_cp": 2087.6216677667276,
+    "mean_fiber_cp": 1.2158542037080533,
+    "ratio": 1717
+  },
+  "at_n_1000": {
+    "sup_over_mean": 167167
+  },
+  "cpu_seconds": 0.0625,
+  "elapsed_seconds": 0.06164189998526126,
+  "limitation": "Checks arithmetic and an eigenfunction; does not replace the general proof or independent review."
+}

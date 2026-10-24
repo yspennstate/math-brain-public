@@ -1,0 +1,53 @@
+{
+  "run_id": "20260924T153814Z-account03-B14-fixedmult-r13",
+  "source_commit": "eeb752c8943536541b34b42b8bf48e924f4d3d2f",
+  "source_blob": "19fb119877426b640b2c0dae19ec2f78a399fe11",
+  "candidate": "QFORM-NINE-EIGENVALUES-361-v1",
+  "parameters": {
+    "d": "3/40",
+    "p": "57/20000",
+    "h": "823/10000",
+    "kappa": "(823/10000)^2",
+    "offdiag_upper_used": "921/10000"
+  },
+  "exact_certificates": {
+    "offdiag_square_slack": "741/100000000",
+    "r1_diagonal_dominance_margin": "5037/10000",
+    "r2_diagonal_dominance_margin": "1/10000",
+    "sqrt2_upper": "283/200",
+    "e_upper": "2719/1000",
+    "sixth_root_9_over_2_upper": "257/200",
+    "C3_upper": "593266767/40000000",
+    "no_pivot_density_upper": "593266767/1646000",
+    "no_pivot_margin_to_361": "939233/1646000",
+    "pair_half_potential_threshold_slack": "5785/32",
+    "log2_upper": "347/500",
+    "log5_upper": "161/100",
+    "J0_plus_2L0_upper": "23449/875",
+    "scalar_scalar_density_upper": "379027/1050",
+    "scalar_scalar_margin_to_361": "23/1050",
+    "sqrt_1_over_p_upper": "937/50",
+    "log10_upper": "2303/1000",
+    "indefinite_pair_density_upper": "9010197/25000",
+    "indefinite_pair_margin_to_361": "14803/25000"
+  },
+  "taylor_certificates": {
+    "exp_347_over_500_degree4_minus_2": "289173281/1500000000000",
+    "exp_161_over_100_degree7_minus_5": "11628664174467/8000000000000000",
+    "exp_2303_over_1000_degree9_minus_10": "139703700879629880300092908769/51840000000000000000000000000000"
+  },
+  "floating_diagnostics_only": {
+    "no_pivot_using_exact_C3": 360.10541100469015,
+    "scalar_scalar_using_exact_constants": 360.84727938739945,
+    "indefinite_pair_using_exact_constants": 360.2105240021293,
+    "note": "Floating values are diagnostics only; theorem uses the exact rational upper certificates above."
+  },
+  "partner_application": {
+    "source": "yspennstate/math-open-problems@430065de1a8e478dc6156f6b489aa46a63681c09",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260922T171953Z-account04-B14-QFORM-r2/REPORT.md",
+    "result": "cap-preserving compact completion; total-variation pushforward transfer with zero constant loss",
+    "translation_identity": "(X+t)^T A (X+t)=X^TAX+2(At)^TX+t^TAt"
+  },
+  "status": "PASS_EXACT_ARITHMETIC_FOR_RETUNING",
+  "limitations": "This check bundle certifies the retuned arithmetic and reuses the pinned manuscript's proved analytic lemmas. It is not formal verification and does not prove multiplicity eight or the unrestricted three-eigenvalue conjecture."
+}

@@ -1,0 +1,12 @@
+PASS QFORM_B17_DENSE_SIX_WITNESS
+
+Independent exact-symbolic reproduction for the committed CHECK.py formulas:
+- n_M^T n_M = 1 exactly.
+- B_M^2 = I_3 exactly, hence spec(B_M)={1,1,-1}.
+- All six independent B_M entries in REPORT.md agree with the Householder formula and are nonzero for M=100000.
+- For A_leaf=[[0,4,1],[4,0,0],[1,0,4]], leading principal minors of A_leaf^2-I are [16,240,3344], hence A_leaf^2-I is positive definite.
+- Exact aligned cone-tip integral: p_J(0)=2*pi-7/3.
+- Certified dense rotated lower bound at M=100000: 3.948819541148534957832422836800366619389 > 3.9488.
+- Actual partner-theorem target bound: (2+log 4)/4 = 0.8465735902799726547086160607290882840377.
+
+Checker scope: algebra, exact integrals, matrix identities, and numerical inequalities in REPORT.md. It does not prove the unrestricted QFORM conjecture.

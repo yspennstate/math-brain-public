@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B03",
+  "run_id": "20260923T184716Z-account02-B03-QFORM-auto11",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit_start": "a18a0e7d6be444f72af154e5c9337c00fb8b9a1f",
+  "control_refresh_before_memory": "595524c0eaa265dfb90e1119be455e523cc43ef1",
+  "control_revision": "2026-09-22.15",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "df738b7f0821d9af56dfd992cab10ecc6704e3fb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260923T184716Z-account02-B03-QFORM-auto11/REPORT.md",
+    "early_commit": "a416623158af1a5458950c39f2b8386dc0355df2",
+    "early_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260923T184716Z-account02-B03-QFORM-auto11/EARLY.md"
+  },
+  "claim_id": "QFORM-Z3-CROSSING-MARGINAL-FREE-v1",
+  "claim_status": "SUPPORTING_THEOREM_PROVED_FULL_TARGET_OPEN",
+  "result": {
+    "hypothesis": "For disjoint original-coordinate sets I,J, Z3=e_3(A[I,J]A[I,J]^T)>0; all same-side curvature, additional spectrum and affine terms arbitrary.",
+    "density_bound": "||p_Q||_infty <= 3*2^(4/3)*e^(1/3) Z3^(-1/6) = 10.5501688311648... Z3^(-1/6)",
+    "linear_small_ball": "P(Q in B) <= 10.5501688311648... Z3^(-1/6)|B| for every interval B",
+    "time_half_riesz": "int |t|^(-1/2)|phi_Q(t)|^2 dt <= (24/5)2^(2/3)sqrt(pi)e^(1/6) Z3^(-1/12) = 15.9545754135557... Z3^(-1/12)",
+    "whole_copy_half_riesz": "E|Q-Q'|^(-1/2) <= (24/5)(2e)^(1/6) Z3^(-1/12) = 6.36495469832054... Z3^(-1/12)",
+    "collision_linear": "P(|Q-Q'|<=eps) <= 10.5501688311648... Z3^(-1/6) eps",
+    "continuity_scope": "Continuous C0 density on this Z3>0 branch; unrestricted continuity remains open."
+  },
+  "auxiliary_claim": {
+    "claim_id": "QFORM-ONEHUB-Z2-MARGINAL-FREE-v1",
+    "density_bound": "C0 M_H^(1/3) S^(-1/3) Z2^(-1/6), C0=3*2^(7/6)e^(1/3)=9.39913188784886...",
+    "key_promotion_identity": "For heavy projected row c_i, alpha_i Z2=||c_i||^2 sum_{j!=i}||P_{c_i^perp}c_j||^2."
+  },
+  "key_outer_identity": "For heavy 3-volume row m=M_i with marginal alpha_i, ||m||^2 e_2(M_{I\\{i},J}(I-P_m)[...]^T)=alpha_i Z3>Z3/2.",
+  "sources": [
+    {
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "paths": [
+        "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+        "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+        "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+      ],
+      "used": "Pinned Theorem D applied on spread 3-volume marginal branch: ||p_Q||_infty <=6sqrt(e)Z3^(-1/6)."
+    },
+    {
+      "source": "yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401",
+      "path": "proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+      "used": "Grouped projected crossing (k,ell)=(1,2),(2,1) and exact-rank-three arbitrary-internal-function crossing."
+    },
+    {
+      "source": "designated partner account03/B03",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T181128Z-account03-B03-QFORM-r36/REPORT.md",
+      "used": "Effective-dimension Riesz compiler applied to actual d=3 envelopes, yielding the stated time integral and collision inequality while retaining Q-Q' as a whole."
+    },
+    {
+      "source": "yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae",
+      "path": "proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md and single_hub_core/REPORT.md",
+      "used": "Current hub scope/corrections only; proposed SP not assumed."
+    }
+  ],
+  "stress_family": "A_eps=[[0,B_eps],[B_eps^T,0]], B_eps rows v1,v2,v3,eps v4 with four flat orthonormal vectors. Spectrum ±1 three pairs plus ±eps; Z3=1+3eps^2; strong 3-volume marginals >3/4 for eps<1, so D/D' gates fail while new theorem gives <=10.5501688312 uniformly.",
+  "corrections_preserved": [
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "arbitrary-joint coarea cap false",
+    "no post-rotation independence",
+    "no law-uniform pointwise quadratic-phase decay"
+  ],
+  "unresolved_implication": "From bare s3(A)>=1 in the remaining no-pivot/hub regime, either produce an original-coordinate cut with Z3>=c>0 or reduce product-preservingly to a paid genuinely rank<=2/grouped-hub/ridge/exact-coloop/square-plus-critical-crossing receiver. The known rank<=2 cross-cut family prevents a universal Z3-cut conclusion.",
+  "full_qform": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "global_continuity": "OPEN",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B03/20260923T184716Z-account02-B03-QFORM-auto11.md",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_seconds": null,
+  "unknown_telemetry": "UNKNOWN"
+}

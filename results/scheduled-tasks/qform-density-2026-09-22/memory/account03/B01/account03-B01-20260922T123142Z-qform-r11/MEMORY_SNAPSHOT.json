@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260922T123142Z-qform-r11",
+  "control_revision": "2026-09-22.5",
+  "control_commit_initial": "efdf8110d4942c97ea347ef563f7545d4a66ae6d",
+  "control_commit_final_refresh": "299ce85e4470389c1ea185ea0e0452f0abd9c1f6",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "assignment": "Oscillatory replacement",
+  "corrections_consumed": ["QFORM-POINTWISE-DECAY-FALSE","QFORM-FIBER-SUP-DIMENSION-LOSS","QFORM-NO-INDEPENDENCE-AFTER-ROTATION","QFORM-CROSSMINOR-ALONE-FALSE","QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH","QFORM-TWOSHEET-XRAY-ONLY-FALSE"],
+  "premises": [
+    {"id":"QFORM-DIFFUSE-SEPARABLE-PHASE-v1","source_repository":"yspennstate/math-open-problems","source_commit":"773b7fb6f0e6a8142066f0bac08d228dfc164fdb","scope":"leverage<=1/2 complex-amplitude characteristic-function envelope"},
+    {"id":"ACCOUNT01-B11-BINARY-INDEFINITE-L3","source_repository":"yspennstate/math-open-problems","source_commit":"2279571f59ade7a9ec478af1e4818f6c117ac224","scope":"determinant-scale L3 for physical binary indefinite quadratics"}
+  ],
+  "new_results": [
+    {"id":"QFORM-DIFFUSE-AVERAGED-LP-v1","status":"PROVED_SUPPORTING_THEOREM","statement":"For r>=2, leverage<=1/2, q in [1,2], rq>2: ||p_T||_p <= [rq/(rq-2)]^(1/q) B(U)^(2/(rq)) |det Lambda|^(-1/(rq)), p=q/(q-1)."},
+    {"id":"QFORM-DIFFUSE-RANK2-L3-v1","status":"PROVED_SUPPORTING_THEOREM","statement":"For r=2: ||p_T||_3 <= (3B(U))^(2/3)|det Lambda|^-1/3 <= (3e)^(2/3)|det Lambda|^-1/3 <4.052|det Lambda|^-1/3."},
+    {"id":"QFORM-DIFFUSE-RANK2-PLUS-SQUARE-v1","status":"PROVED_SCOPED_BOUNDED_DENSITY","statement":"Diffuse rank-two component plus an independent original-coordinate square has continuous density <8.103(|det Lambda||d|)^-1/3."}
+  ],
+  "canonical_outputs": {"report_repository":"yspennstate/math-open-problems","report_commit":"d54e3a5d40a1d9837d39a1e525781fcf44ec0d9d","report_path":"proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260922T123142Z-qform-r11/REPORT.md","report_blob":"a4066af284dbd0ddd2f6efa0f8a964327f8e6e5e","addendum_commit":"c854cf98c5f63656c60e8f4d0aaf573bc59a1f8a","addendum_blob":"8eb3773fe7ae0ff3ad5a3cf552da4f2f80c5b961","handoff_commit":"c7aeb65d83716f941b89d93a9be22512bcc6a8ac"},
+  "named_partner": {"worker":"account04/B01","completed_compatible_result_available_at_final_check":false,"evidence":"fresh QFORM login observed but no completed QFORM mathematical handoff/report available"},
+  "compatible_peer_applied":"account01/B11",
+  "unresolved_implication":"determinant-scale L3 control for mixed-leverage rotated rank-two frames, then dependence-preserving coupling to the third spectral direction",
+  "full_target_status":"OPEN",
+  "continuous_representative_full_target_status":"OPEN"
+}

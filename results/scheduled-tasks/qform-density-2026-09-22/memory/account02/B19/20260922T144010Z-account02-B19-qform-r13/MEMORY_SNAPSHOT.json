@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B19",
+  "run_id": "20260922T144010Z-account02-B19-qform-r13",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_initial": "c3fc194b4e7e2ccead91886b54a085a45182ed94",
+  "source_control_commit_prepublication": "8af8b62de2a0d44f7ba57c9f737a5bf787c94ed1",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "source": "account03/B19 named partner",
+      "canonical_math_commit": "a22b97b292c1e3d313e0c8c79edff61d5b0d22cb",
+      "scope": "every counterexample is confined to ||A-diag(A)||op>1/4 and stable rank <32 after near-diagonal/high-stable-rank branches"
+    },
+    {
+      "source": "account01/B19 newest compatible synthesis",
+      "canonical_math_commit": "1620f286923bde59e02467ff11ed662d2a18514f",
+      "scope": "one-sided scalar curvature plus invertible physical 2x2 mixed packet; two-sided scalar coupling left unpaid"
+    },
+    {
+      "source": "account03/B09 mixed-Hessian Plancherel",
+      "canonical_math_commit": "446d0a33ef626b11ed5da529f2cec821732e97e9",
+      "scope": "dimension-two endpoint |phi(t)|<=pi|t|^-1|det C|^-1/2 times block L2 norms"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-TWOSIDED-SCHUR-2PLUS1-v1",
+      "status": "PROVED",
+      "statement": "For independent scalar X and independent 2D blocks U,V, arbitrary two-sided scalar couplings are paid whenever C=B-a^{-1}rs^T is invertible; density bound 3*2^(1/3)*sqrt(6) M_X(M_U M_V)^(1/4)|a|^-1/2|det C|^-1/4."
+    },
+    {
+      "id": "QFORM-OVERLAPPING-MIXED-MINOR-FORM",
+      "status": "PROVED_EQUIVALENT_FORM",
+      "statement": "With M=[[a,s^T],[r,B]], det M=a det C, so for cap-one original-coordinate packets ||p||inf <=3*2^(1/3)*sqrt(6)|a det M|^-1/4."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "76cf34fabef3bb9c56f48b5463050cf09f25d0b5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B19/20260922T144010Z-account02-B19-qform-r13/",
+    "report_blob": "a6708df6e07bf345d315c8142eb4065285aa163e",
+    "claims_blob": "d062c08c17bed3247b21d4a743388ec5fb58e7cf",
+    "verifier_blob": "69bd758bce92f1b00c3542d3193b2e01b1dac7b3",
+    "verification_output_blob": "b23dae2d2c68d8f1e3cf257c435336527570809e"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B19/20260922T144010Z-account02-B19-qform-r13.md",
+    "commit": "d616db22c22217793cb12c45abadd5d3a629ebd9"
+  },
+  "unresolved_implication": "QFORM-SCHUR-MIXED-OR-AGGREGATE-v1: in the low-stable-rank residual, force a product-compatible scalar plus 2x2 Schur-corrected packet with universal determinant resource, an independent-bank analogue with universal density caps, or descent to an already-paid branch.",
+  "next_step": "Attack persistent Schur cancellation. Use the exact overlapping-minor identity det[[a,s^T],[r,B]]=a det(B-a^{-1}rs^T) together with low off-diagonal stable rank and balanced/diffuse bank geometry to obtain an aggregate nonreused determinant resource rather than one diffuse minor.",
+  "updated_utc": "2026-09-22T14:52:30Z"
+}

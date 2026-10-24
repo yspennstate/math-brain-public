@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "20260924T054220Z-account02-B17-QFORM-auto11",
+  "source_control_commit_start": "255c3ff9a396e025142872507ae7eb26330a5305",
+  "source_control_commit_prepublication": "e95661375172bf8eacecab29dee8ebea83bc292e",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "execution_context": "AUTHENTICATED_REPOSITORY_RETRIEVAL_RECEIVER_USE",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN / NOT PROVED / NOT DISPROVED",
+  "full_target_continuity": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "result": {
+    "id": "QFORM-SYMMETRIC-SATELLITE-DIFFUSIVE-GLOBAL-BARRIER-v1",
+    "statement": "For the exact dense three-bank family A_m=T_m[I-(2+1/m)nn^T]T_m^T, n=(1,2,3)/sqrt(14), and bankwise symmetric cap-one three-interval laws with eps_j=L_j/m, L_j->infinity, L_j=o(m), R_j->infinity and eps_j R_j^2->tau_j<infinity, the full output densities converge uniformly to the centered Gaussian quadratic-form density with bank variances v_j=1/12+tau_j. Its global maximum is at zero and at most 3sqrt(2), with equality only when all tau_j=0. If all tau_j=tau then ||p_Qm||infinity -> 3sqrt(2)/(1+12tau).",
+    "actual_matrix_spectrum": ["1", "1", "-(1+1/m)"],
+    "source_laws": "independent original physical coordinate densities of height one on one central and two symmetric satellite intervals, total support length one",
+    "continuity_scope": "continuous densities for this explicit family via the uniform integrable characteristic-function envelope; no unrestricted continuity claim"
+  },
+  "partner_applied": {
+    "worker": "account03/B17",
+    "run_id": "20260924T053018Z-account03-B17-QFORM-auto11",
+    "commit": "7a64594fceb49b99698431a4d57b6658b49ebc28",
+    "result": "QFORM-SYMMETRIC-SATELLITE-NEAR-DIFFUSIVE-SHARP-WITNESS-v1",
+    "receiver_use": "Used its exact variance and third-absolute-moment formulas to prove the finite-tax triangular Lyapunov CLT at eps R^2 -> tau."
+  },
+  "required_source_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "result": "Fresnel-Brascamp-Lieb Theorem F",
+    "receiver_inequality": "For the actual physical eigenframe, row leverage=1/m, Gram=I_3 and residual=0, hence |Psi_m(t)|<=min(1,(4pi)^(3/2)(1+1/m)^(-1/2)|t|^(-3/2)); the common majorant has mass 24pi and upgrades weak convergence to global uniform output-density convergence."
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5a583c1b2926d0ebfceb016de9e26e244c42a78b",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T054220Z-account02-B17-QFORM-auto11/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T054220Z-account02-B17-QFORM-auto11/CHECKS.json",
+    "checks_status": "PASS"
+  },
+  "handoff": {
+    "commit": "cdfbe3ed593d9cbc5673128a8bbadd41adc43803",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B17/20260924T054220Z-account02-B17-QFORM-auto11.md"
+  },
+  "unresolved_implication": "The finite-tax symmetric fragmented three-bank basin cannot exceed 3sqrt(2). Remaining source-valid sharp-witness mechanisms require non-Gaussian multiscale arrays that evade triangular CLT behavior, macroscopic non-collinear shared rows not collapsing to three independent banks, or additional active spectrum surviving aggregation.",
+  "next_step": "Stress a genuinely non-Gaussian multiscale rough-law construction at dimension-growing no-pivot/hub geometry while preserving cap-one product provenance and exact spectral threshold; distinguish a finite >3sqrt(2) sharp-constant witness from a true unbounded-density QFORM counterexample."
+}

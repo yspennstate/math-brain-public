@@ -1,0 +1,199 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w507",
+  "bundle_slug": "p0162-bent-splice-restriction-obstruction-w507-001",
+  "entries": [
+    {
+      "key": "delta",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "fourier-restriction-entropy-increment",
+      "kind": "definition",
+      "title": "Fourier restriction entropy increment",
+      "statement": "For Boolean f on a uniform cube with base-2 spectral entropy H(f)=sum_S hat(f)(S)^2 log_2(1/hat(f)(S)^2), define Delta_i(f)=H(f)-(H(f|x_i=+1)+H(f|x_i=-1))/2. Total influence is I(f)=sum_S |S|hat(f)(S)^2 and coordinate influence I_i(f)=sum_{S containing i}hat(f)(S)^2. Zero entropy terms vanish.",
+      "proof_text": null,
+      "assumptions": [
+        "finite uniform product cube",
+        "f takes values -1,+1"
+      ],
+      "domain": "probability theory; analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-work:w507:P0162:delta",
+        "url": "urn:owner-work:w507:P0162:delta",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; campaign derivation, independent review pending",
+        "excerpt": null
+      },
+      "draft_review_status": "pending-w509",
+      "proof_artifact": "~/brain_workers/w507/ATTEMPT.md L1"
+    },
+    {
+      "key": "ledger",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "fourier-restriction-entropy-js-ledger-draft-w507",
+      "kind": "concept",
+      "title": "Draft exact entropy ledger for a Boolean restriction",
+      "statement": "DRAFT derivation, independent review pending. For g=f|i=+1, h=f|i=-1, coefficients u_T,v_T, r_T=(u_T^2+v_T^2)/2 and q_T=(u_T-v_T)^2/[2(u_T^2+v_T^2)], Delta_i(f)=JS(u^2,v^2)+sum_T r_T b(q_T)>=0. Here b is binary entropy and JS=H(r)-(H(u^2)+H(v^2))/2. Zero r terms vanish. Also I(f)=(I(g)+I(h))/2+I_i(f). The identity is established territory, including arXiv:2606.00246v2 Eq.32.",
+      "proof_text": null,
+      "assumptions": [
+        "uniform cube",
+        "Boolean restrictions",
+        "base-2 entropy"
+      ],
+      "domain": "probability theory; analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-work:w507:P0162:ledger",
+        "url": "urn:owner-work:w507:P0162:ledger",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; campaign derivation, independent review pending",
+        "excerpt": null
+      },
+      "draft_review_status": "pending-w509",
+      "proof_artifact": "~/brain_workers/w507/ATTEMPT.md L1"
+    },
+    {
+      "key": "bad-charge",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "fourier-every-coordinate-entropy-charge-failed-strengthening",
+      "kind": "concept",
+      "title": "Failed strengthening: charge every restriction by its influence",
+      "statement": "The proposed strengthening would demand one finite C with Delta_i(f)<=C I_i(f) for every Boolean f on every finite uniform cube and every coordinate i. The draft bent-splice argument refutes this strengthening, and also refutes choosing the least influential relevant coordinate without an additional argument. It does not refute FEI or a condition requiring just some good coordinate.",
+      "proof_text": null,
+      "assumptions": [
+        "universal constant C",
+        "every coordinate, not an existential choice"
+      ],
+      "domain": "probability theory; analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-work:w507:P0162:bad-charge",
+        "url": "urn:owner-work:w507:P0162:bad-charge",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; campaign derivation, independent review pending",
+        "excerpt": null
+      },
+      "draft_review_status": "pending-w509",
+      "proof_artifact": "~/brain_workers/w507/ATTEMPT.md L2-L4"
+    },
+    {
+      "key": "bent-splice",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "bent-point-splice-minimum-influence-obstruction-draft-w507",
+      "kind": "concept",
+      "title": "Draft bent splice obstruction to minimum-influence entropy induction",
+      "statement": "DRAFT author-derived special case, independent review pending. Let m>=4 be even, N=2^m, g:{0,1}^m->{-1,1} have |hat(g)(T)|=1/sqrt(N) for all T, and a be any vertex. Set h=g-2g(a)1_{z=a}, F(z,+1)=g(z), F(z,-1)=h(z). Then I_y(F)=1/N; each other influence is 1/2 plus or minus 1/N, so y is the unique minimum-influence coordinate. Delta_y(F)/I_y(F)>=log_2(N-2sqrt(N)+2), unbounded with m. Nevertheless H(F)<=3 I(F). Spectral entropies and the selector ratio depend only on m. This is a proof-method obstruction, not a general FEI solution or counterexample.",
+      "proof_text": null,
+      "assumptions": [
+        "uniform product input",
+        "base-2 spectral entropy",
+        "even m>=4",
+        "flat Boolean Walsh spectrum",
+        "exactly one flipped vertex on one selector branch"
+      ],
+      "domain": "probability theory; analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-work:w507:P0162:bent-splice",
+        "url": "urn:owner-work:w507:P0162:bent-splice",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; campaign derivation, independent review pending",
+        "excerpt": null
+      },
+      "draft_review_status": "pending-w509",
+      "proof_artifact": "~/brain_workers/w507/ATTEMPT.md L4"
+    },
+    {
+      "key": "good-coordinate",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "fourier-good-restriction-coordinate-principle-open",
+      "kind": "concept",
+      "title": "Unproved good-coordinate principle sufficient for FEI",
+      "statement": "UNPROVED selection principle: there is a finite universal C such that every nonconstant Boolean f on a uniform cube has some relevant coordinate i satisfying Delta_i(f)<=C I_i(f). If true, the exact influence decomposition and induction on dimension give H(f)<=C I(f). The bent-splice obstruction does not decide this existential principle. This sufficient route is also stated in arXiv:2606.00246v2 Eq.21.",
+      "proof_text": null,
+      "assumptions": [
+        "C independent of f and dimension",
+        "existence of some relevant coordinate",
+        "uniform product measure"
+      ],
+      "domain": "probability theory; analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-work:w507:P0162:good-coordinate",
+        "url": "urn:owner-work:w507:P0162:good-coordinate",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; campaign derivation, independent review pending",
+        "excerpt": null
+      },
+      "draft_review_status": "pending-w509",
+      "proof_artifact": "~/brain_workers/w507/ATTEMPT.md Single hardest remaining gap"
+    },
+    {
+      "key": "guard",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "fourier-induction-coordinate-charge-guard-draft-w507",
+      "kind": "concept",
+      "title": "Draft proof guard for Fourier entropy induction",
+      "statement": "Before using a restriction-entropy induction, distinguish a proved charge for the chosen split from a bound merely asserted for all splits or for the minimum-influence split. A bent base with a single-vertex selector splice has minimum-coordinate Delta/I growing with dimension while itself satisfying FEI. A valid class-specific charge or an explicitly unresolved selection gap should remain unaffected. Supporting local hook proposal and measurements are in the w507 review packet.",
+      "proof_text": null,
+      "assumptions": [
+        "applicable when a proof attempts restriction-entropy induction"
+      ],
+      "domain": "probability theory; analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-work:w507:P0162:guard",
+        "url": "urn:owner-work:w507:P0162:guard",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; campaign derivation, independent review pending",
+        "excerpt": null
+      },
+      "draft_review_status": "pending-w509",
+      "proof_artifact": "~/brain_workers/w507/ATTEMPT.md L2-L4"
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "ledger",
+      "to_key": "delta",
+      "kind": "depends_on",
+      "rationale": "The identity uses the defined entropy increment and influences."
+    },
+    {
+      "from_key": "bad-charge",
+      "to_key": "delta",
+      "kind": "depends_on",
+      "rationale": "The failed strengthening is an inequality for that increment."
+    },
+    {
+      "from_key": "bent-splice",
+      "to_key": "bad-charge",
+      "kind": "refutes",
+      "rationale": "The lower bound diverges for genuine Boolean functions and for their unique minimum-influence coordinate."
+    },
+    {
+      "from_key": "bent-splice",
+      "to_key": "ledger",
+      "kind": "depends_on",
+      "rationale": "Nonnegative JS and binary conditional entropy give the exact lower bound."
+    },
+    {
+      "from_key": "good-coordinate",
+      "to_key": "delta",
+      "kind": "depends_on",
+      "rationale": "The existential principle charges the same increment."
+    },
+    {
+      "from_key": "guard",
+      "to_key": "bent-splice",
+      "kind": "cites",
+      "rationale": "This exact family supports the fire case; it refutes the strengthened route, not FEI."
+    },
+    {
+      "from_key": "good-coordinate",
+      "to_existing_logical": "math:probability.core:open-problem-p0162-fourier-entropy-versus-total-influence",
+      "kind": "semantic_association",
+      "rationale": "It is an unproved sufficient route to the exact FEI target, not a solution."
+    },
+    {
+      "from_key": "guard",
+      "to_existing_logical": "math:probability.core:attempt-p0162-fourier-entropy-versus-total-influence",
+      "kind": "analogous_to",
+      "rationale": "The older attempt rules out forgetting Booleanity; this obstruction retains Booleanity but rules out an unjustified stronger local charge."
+    }
+  ]
+}

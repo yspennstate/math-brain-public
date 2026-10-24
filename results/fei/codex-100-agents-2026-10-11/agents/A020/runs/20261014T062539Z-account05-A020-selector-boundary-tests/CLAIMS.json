@@ -1,0 +1,135 @@
+[
+  {
+    "claim_id": "A019-PRIVATE-QUERY-ZERO-ROW-TRANSFER",
+    "version": 1,
+    "exact_statement": "For any Boolean private core h(q,u), nonlinear two-bit sign mask s with mean sigma=+-1/2, and F=1 at x0 and h*s at x1 on independent uniform physical bits, the actual private-query profile curvature Psi(beta*sigma)-average_b Psi(beta_b*sigma) lies between0 and A*d, sharply A=9/8 log2(3)-1, d=Pr(h0!=h1). With supplied normalized complete finite-cost child core references Q_b and the SAME mask reference Q_s, and incoming parent core reference fixed as its actual queried-frequency conditional lift of average Q_b, the physical-activation references have exact CE insertion Delta CE_F=Delta H_core/2+curvature+Lambda, Lambda=average_b D_b-D_parent-D_core/2, D_core=average child core KL-parent core KL>=0 and D_v the exact binary physical-label posterior refund. If both actual core children are balanced and the lift assigns absent queried frequency on zero true data rows before sampling, Lambda<=0, hence Delta CE_F<=Delta H_core/2 uniformly as d tends to0, retaining all supplied complete terminals. If zero true data rows instead split equally, no universal Lambda<=K*d exists: h0=chi_u, h1=chi_u times the sign of a k-bit point activation, Q_b=(P_b+delta_empty)/2, and a true-reference two-bit point mask give d=2^-k, D_core=0, Lambda=1/2 log2(18/17)>0 for every k>=1. Parent and child core references are all rate4 eligible with at least3 bits unused slack. The absent-query convention makes Lambda=0 on that same family. No general biased-child slack supply or FEI conclusion is asserted.",
+    "hypotheses": [
+      "uniform independent physical bits; Boolean signs; all entropy, KL and complete CE in bits",
+      "one private physical core query; two fresh mask bits and a fresh gate; nonlinear mask mean+-1/2",
+      "same supplied normalized finite-cost mask reference at parent and children; supplied complete child core references",
+      "incoming parent core reference is fixed consistently with the stated actual conditional child-mixture lift; arbitrary unrelated incoming references cannot be reset",
+      "support-aware nonpositive Lambda clause assumes both actual children balanced and absent queried frequency on zero true data rows",
+      "equal-split no-go uses the specified actual Boolean family and supplied references; no FEI refutation",
+      "point-phase rate4 eligibility consumes the earlier independently accepted A019 point-phase certificate"
+    ],
+    "statement_sha256": "44b12f41883a5d5aa4b7e99df6db51a5f83e9b3a1105a8e8d8e742ef59b258a1",
+    "contributors": [
+      "A019"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A019\\runs\\20261014T055119Z-account05-A019-orthogonality-extensions\\REPORT.md",
+      "locators": [
+        "complete derivation sections1-5"
+      ],
+      "proof_checkpoints": [
+        "out/CURVATURE_PROOF.md",
+        "out/ZERO_ROW_PROOF.md"
+      ],
+      "certificates": [
+        "out/EXPOSURE_CHECK.json",
+        "out/REFUND_CHECK.json",
+        "out/SPARSE_CHECK.json",
+        "out/REPAIR_CHECK.json"
+      ]
+    },
+    "proof_dependencies": [
+      "A018-JOINT-CONSTANT-BRANCH-REFERENCE@1 exact CE/refund clause independently reconstructed (not sharp Gamma)",
+      "A019-RARE-TRANSLATION-COLLISION@1 (sparse-family rate4 certificate only; stream-lead independent acceptance)"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A019",
+        "independent": false,
+        "verdict": "AUTHOR_PROOF_AND_EXACT_VALIDATION",
+        "primary_cases": 3688,
+        "primary_assertions": 182910,
+        "additional_exact_sign_census_cases": 804
+      },
+      {
+        "reviewer": "A020",
+        "independent": true,
+        "verdict": "PARTIAL_HOLDS_REFERENCE_INSERTION_BALANCED_REPAIR_AND_EQUAL_SPLIT_NOGO",
+        "scope": "All-dimensional independent tagged-KL/conditional-mixture reconstruction, exact signed insertion, arbitrary supplied two-balanced-child repair, source equal-split Boolean family. Excludes sharp curvature optimum and source sparse-family full rate4 eligibility proof.",
+        "source_statement_sha256": "44b12f41883a5d5aa4b7e99df6db51a5f83e9b3a1105a8e8d8e742ef59b258a1",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A020\\runs\\20261014T062539Z-account05-A020-selector-boundary-tests\\REPORT.md",
+        "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A020\\runs\\20261014T062539Z-account05-A020-selector-boundary-tests\\out\\CHECK.json",
+        "substantive_repair": false,
+        "finite_source_guard_parameters": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "status": "PARTIAL_A020_REFERENCE_AND_BALANCED_REPAIR_HOLDS; OTHER_SOURCE_CLAUSES_NOT_ACCEPTED_BY_THIS_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Universal Lambda<=K*d for the specified equal-split zero-true-row conditional-mixture transport, even with rate4-certified actual Boolean parent/child cores and an essential query"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A018",
+      "A020",
+      "A090",
+      "A091",
+      "A092",
+      "A095",
+      "A097",
+      "B04-lead",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A020-BIASED-CHILD-FORCED-ROW-TRANSPORT-NOGO",
+    "version": 1,
+    "exact_statement": "For every k>=3, delta=2^-k, private A=1_(v=0), h(q,u,v)=chi_u*(1-A)+chi_q*A has nonconstant children of means +/-delta, identical spectra, query disagreement delta and core entropy decrement zero. Supply Q_b=(P_b+delta_empty)/2 and construct incoming Q_h by actual queried-frequency conditional lift of average Q_b, using absent queried frequency only on zero true rows. The positive empty UNQUERIED row has mass delta^2 exclusively at queried frequency present and forces Q_h(empty)=0; child empty references equal (1+delta^2)/2. With a fresh gate F=1 at x0 and h*s at x1 and SAME exact two-bit point-mask reference (mean1/2), the net insertion term Lambda=average child physical-label KL refund-parent refund-core KL refund/2 equals [a log2(a/t)+(1+a)log2((1+t)/(1+a))]/2, a=delta^2/4,t=(1+delta^2)/8, lies between1/32 and1/2 and tends to1/2 log2(9/8). Core KL refund and parent activation refund are zero. Thus Lambda/query disagreement is unbounded despite the support-aware zero-row convention. All parent/child core AND full activation references are rate4 eligible. Actual F query erasure is (1+a)/2*h2(a/(1+a))<delta/2=Inf_q(F), hence K1-good. One unused averaged child private half-reserve>=1 pays curvature+Lambda<5/8 once with >3/8 remaining. This refutes only a balanced-child-free query-price extension of the specified reference rule; no source theorem or FEI is refuted and no recursive reserve renewal is asserted.",
+    "hypotheses": [
+      "Uniform independent physical bits, Boolean signs, CE/KL/entropy in bits",
+      "k>=3; distinct fresh private query q,private u and k-bit private v block; fresh gate x and two shared mask bits",
+      "Specified normalized finite-cost child references and consistent incoming actual conditional lift; no reset of arbitrary unrelated reference",
+      "Same exact mask reference at parent and both children; s a positive-mean two-bit sign point defect",
+      "Absent-frequency convention applies only to zero true unqueried rows; positive true row conditional fixed by actual spectrum",
+      "Payment is one named single insertion, not universal existence or recursive conservation of terminal slack"
+    ],
+    "statement_sha256": "3a3331c4de57fb38fdbf63176cf63ff3151d89325263e00131030f3569470e9f",
+    "contributors": [
+      "A020"
+    ],
+    "proof_source": "REPORT.md sections2-6; code/check.py; out/CHECK.json",
+    "proof_dependencies": [
+      "Self-contained Boolean spectra, physical edges, tagged KL and conditional-reference calculation",
+      "A019-PRIVATE-QUERY-ZERO-ROW-TRANSFER@1 exact reference interface independently reconstructed; source balanced-child theorem retained only at its hypotheses"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A020",
+        "independent": false,
+        "verdict": "AUTHOR_ANALYTIC_ALL_K_PROOF_AND_EXACT_CERTIFICATES",
+        "actual_cases": 6,
+        "source_balanced_guards": 12,
+        "maximum_dimension": 13
+      }
+    ],
+    "status": "SCOPED_MECHANISM_FALSIFIER_AUTHOR_PROVED_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "A020 diagnostic balanced-child-free extension: Lambda<=K*Pr(h0!=h1) for an absolute K under the stated support-aware core conditional lift, even with rate4 eligible references",
+      "A020 diagnostic: absent queried-frequency convention on zero true rows suffices for a query-price bound under arbitrarily small nonzero child biases"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A018",
+      "A019",
+      "A090",
+      "A091",
+      "A092",
+      "A095",
+      "A097",
+      "B04-lead",
+      "B20"
+    ]
+  }
+]

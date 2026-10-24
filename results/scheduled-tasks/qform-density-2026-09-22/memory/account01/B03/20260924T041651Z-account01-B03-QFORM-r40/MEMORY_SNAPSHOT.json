@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B03",
+  "run_id": "20260924T041651Z-account01-B03-QFORM-r40",
+  "classification": "NEW_SUPPORTING_THEOREM_DETERMINANT_ONLY_INVERTIBLE_PAIR_OVERLAP2",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "startup_control_commit": "cf3311b8d70c35da560dfd1ba15ba0ee484679b4",
+  "prepublication_main_observed": "e4412a977f810cc06db945abaec64c932ba4838c",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-BIINDEPENDENT-SPECTRAL-MODES-NOT-CROSS-VOLUME-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-ROW-MARGINAL-FREE-1VOLUME-HALFFROSTMAN-v1",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "6882d64088e54bc7f979ae8eb4a5ea9d06d1896f",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260923T185317Z-account01-B03-QFORM-r31/REPORT.md",
+      "scope": "physical original-coordinate cut; arbitrary internal quadratic-plus-affine curvature; cap-one independent inputs"
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account02/B03",
+    "id": "QFORM-DISJOINT-EXTERIOR-MASS-EXIT-v1",
+    "handoff_commit": "c2cf502ba91445ad3119cfb9991131ec7d32d725",
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_commit": "5e5366b98337d13ba24bf666f4e42155553de7c2",
+    "application": "On the actual global overlap fork E0>=1/4, partner gives ||p_Q||inf<=16.9060424511 E0^(-1/6)<21.301."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-INVERTIBLE-PHYSICAL-PAIR-THIRDRIESZ-v1",
+      "statement": "For every invertible symmetric physical 2x2 pair B, D=|det B|, and independent cap-one X,Y with arbitrary translations, p_{(X+a,Y+b)^T B(X+a,Y+b)}(t) <= (2+2pi)D^(-1/3)|t|^(-1/3) for a.e. t!=0; if B is indefinite, constant 6 suffices."
+    },
+    {
+      "id": "QFORM-HALFFROSTMAN-TO-THIRDRIESZ-v1",
+      "statement": "If sup_z P(|R-z|<rho)<=min(1,H sqrt(rho)), then sup_z E|R-z|^(-1/3)<=3H^(2/3)."
+    },
+    {
+      "id": "QFORM-OVERLAP2-INVERTIBLE-PAIR-DET-CANCEL-v1",
+      "statement": "For a physical pair S with invertible A[S,S] and localized overlap-two mass J2(S)>0, ||p_Q||inf<=129.924435862525374 J2(S)^(-1/6), with 94.1119371673922894 in the indefinite case; determinant and condition number cancel."
+    },
+    {
+      "id": "QFORM-OVERLAP2-WHOLECOPY-RIESZ-v1",
+      "statement": "In the same all-signature branch, int |t|^(-1/2)|phi_Q(t)|^2 dt <=114.28660859120921 J2(S)^(-1/12), derived posteriorly from the one-copy density bound and the whole-output independent-copy identity."
+    }
+  ],
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_bundle_commit": "a3b7f8899b5e8f95a62811bb4b78885ace2f9c4d",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260924T041651Z-account01-B03-QFORM-r40/REPORT.md",
+  "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260924T041651Z-account01-B03-QFORM-r40/CHECKS.md",
+  "handoff_commit": "df13741b031b85ab658885ba613d6e5351191f7d",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B03/20260924T041651Z-account01-B03-QFORM-r40.md",
+  "unresolved_implication": "Aggregate overlap-two exterior mass may be spread over singular physical pairs; the spectral hypothesis does not yet force one invertible pair with dimension-free J2. Overlap-one and principal-overlap sectors also remain globally unpaid.",
+  "next_step": "Aggregate the singular-pair E2 mass before reciprocal selection, or prove a product-preserving routing from singular pair support into grouped-hub/rank-one/diagonal/principal receivers.",
+  "continuity": "The new pair-plus-residual mixture proves absolute continuity and an essential L-infinity bound in its scope; continuity is not proved by this compiler."
+}

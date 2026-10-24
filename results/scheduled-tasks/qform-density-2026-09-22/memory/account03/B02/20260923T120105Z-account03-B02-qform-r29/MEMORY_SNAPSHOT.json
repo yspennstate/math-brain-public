@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260923T120105Z-account03-B02-qform-r29",
+  "control_commit_initial_observed": "975945c8fde917f24d6358f05287278634b414d3",
+  "control_commit_prepublication_observed": "8134da4cfd589d62b295282a0e48a6d394bea819",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "Integrated Fourier estimate",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "premises": [
+    {
+      "id": "FRACTIONAL_VOLUME_STABILITY",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "scope": "physical cross block M=M0+E with s3(M0)>=a, range leverage<=1/2, ||E||op<=a/16; continuous density <23/a and L1 Fourier"
+    },
+    {
+      "id": "ACCOUNT02_B02_BANKWISE_SCHUR_GROUPED_L1",
+      "repository": "yspennstate/math-open-problems",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T110948Z-account02-B02-QFORM-r11/REPORT.md",
+      "scope": "bankwise Schur shear grouped projection L1 Fourier theorem for invertible physical pivot P and finite-rank cross-Schur residual"
+    },
+    {
+      "id": "ACCOUNT01_B02_NESTED_NEARCOLOOP",
+      "repository": "yspennstate/math-open-problems",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260923T111916Z-account01-B02-qform-auto11-r28/REPORT.md",
+      "scope": "simultaneous singleton endpoint gives literal residual 2x2 minor squared >7E2/64"
+    },
+    {
+      "id": "PARTNER_ACCOUNT04_B02",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "0b11995430ce407a8852ac3bc5651491f2ee64f7",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B02/20260922T193108Z-account04-B02-QFORM-r2/REPORT.md",
+      "scope": "zero-diagonal physical-triple continuous density and L2 Fourier estimate"
+    }
+  ],
+  "new_results": [
+    "QFORM-DOMINANT2-SHEAR-CONTROL-v1",
+    "QFORM-DOMINANT2-NEARRANK1-VOLUME-RECEIVER-v1",
+    "QFORM-DOMINANT2-RANK2-COLLAR-COMPILER-v1",
+    "QFORM-VOLUME-PARTNER-L2-HYBRID-v1"
+  ],
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "e28bdce394cdb3d096de191390ea5cca0b3cdef9",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T120105Z-account03-B02-qform-r29/REPORT.md",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B02/20260923T120105Z-account03-B02-qform-r29.md",
+  "main_new_bound": "if D^2>=theta E2 for a physical 2x2 pivot, s2(S)<=m*/[16(1+sqrt(theta^-1-1))^2], and either range side of the rank-three base N0 has leverage<=1/2, then ||p_Q||inf <=(24sqrt(3)e/5)(1+sqrt(theta^-1-1))^2/m* with phi_Q in L1",
+  "live_theta_7_64_application": "near-rank-one threshold s2(S)<=m*/237.599928 and density <335.600555/m* unless both base range sides have physical leverage >1/2; non-small exact-rank2 tail is paid by grouped Schur L1 with coefficient 12.946096 D^-1/4 m*^-1/2",
+  "partner_application": "on perturbative branch and zero-diagonal physical triple H0: ||p_Q||inf<=21.989604|detH0|^-1/30 s3(N)^-9/10 <=264.239012|detH0|^-1/30 m*^-9/10 at theta=7/64",
+  "full_target_status": "OPEN",
+  "full_continuity_status": "OPEN",
+  "target_wide_unweighted_L1_fourier_status": "OPEN_NOT_REFUTED",
+  "independent_review": "PENDING",
+  "unresolved_implication": "simultaneous two-sided physical range leverage >1/2 in the dominant-pivot near-rank-one rank-three base, plus broader branches outside the nested certificate",
+  "next": "QFORM-DOMINANT2-DOUBLERANGE-HUBLEVERAGE-v1",
+  "scheduler_mutation": false,
+  "notification_mutation": false,
+  "email_sent": false
+}

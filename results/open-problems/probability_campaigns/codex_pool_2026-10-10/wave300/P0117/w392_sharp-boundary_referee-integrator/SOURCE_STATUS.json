@@ -1,0 +1,40 @@
+{
+  "worker": "w392",
+  "target_id": "P0117",
+  "checked_date": "2026-10-10",
+  "dated_intake": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json",
+    "key": "op-p0117",
+    "quote": "For nondegenerate continuous iid planar passage-time laws in the usual positive-speed regime, determine whether a bi-infinite geodesic exists.",
+    "prior_status": "attempted_unsolved on 2026-09-07; not current-status evidence",
+    "scope_issue": "The intake does not spell out a moment assumption."
+  },
+  "original_primary_source": {
+    "authors": "Antonio Auffinger, Michael Damron, Jack Hanson",
+    "title": "50 years of first passage percolation",
+    "url": "https://sites.math.northwestern.edu/~auffing/FPPSurvey.pdf",
+    "version": "2015-11-08, 147 PDF pages",
+    "location": "section 4.5, printed p. 86, zero-based PDF p. 85, lines 4829-4832",
+    "exact_question": "Question 31. Do geodesic lines exist?",
+    "scope_issue": "The bare question is broader than the explicit planar moment formulation used below; the intake's PDF p.98 locator is not correct for this accessible version."
+  },
+  "recent_primary_claim": {
+    "authors": "OPENAI",
+    "title": "No bigeodesics in planar first-passage percolation",
+    "date": "2026-09-24",
+    "url": "https://github.com/openai/math/blob/main/preprints/No-bigeodesics-in-planar-first-passage-percolation-September-24-2026/main.pdf",
+    "location": "Theorem 1.1, PDF p. 1",
+    "statement_in_own_words": "For iid nonnegative nonatomic edge weights on undirected nearest-neighbor Z^2, if E[min(X1,X2,X3,X4)^2] is finite, almost surely there is no injective doubly infinite path all of whose finite segments minimize ambient passage time. The conclusion quantifies simultaneously over all paths, including paths chosen from the environment.",
+    "status": "CLAIMED_RESOLUTION_UNAUDITED",
+    "proof_audit": "Only theorem statement and introductory scope were verified against the primary PDF; its 39-page proof was not independently audited in this packet."
+  },
+  "prior_attempt": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006a04.json",
+    "key": "at-p0117",
+    "result": "Finite geodesics between opposing endpoints may escape every fixed ball; compactness alone does not anchor a bigeodesic. No full-target proof in this record."
+  },
+  "working_target": "The explicit planar iid nonatomic nonnegative minimum-of-four second-moment formulation of the recent primary theorem; this is a specialization of the survey's broad question.",
+  "current_openness": "UNKNOWN; a primary preprint claims resolution, but its proof acceptance is not certified here.",
+  "novelty_claim": false,
+  "review_scope": "w390's independent thin-tube special case and w391's constant-law boundary, not the 39-page preprint."
+}

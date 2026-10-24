@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-270-REPAIRED-AUDIT-20260925",
+  "account": "account02",
+  "slot": "B15",
+  "run_id": "20260925T110434Z-account02-B15-repaired-r02",
+  "source": {
+    "commit": "4e530247ec0ef4101a6e5ecf621bd35a969c42aa",
+    "blob": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+    "sha256": "90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb",
+    "lines": 683,
+    "proofs": 26
+  },
+  "findings": [
+    {
+      "line": 62,
+      "status": "FALSE_DESCRIPTIVE",
+      "issue": "The phrase 'whatever constant multiplies A' literally includes scalar 0; at multiplier 0 the illustrative pure quadratic is constant/atomic rather than having the stated logarithmic density singularity.",
+      "repair": "Replace with 'under every nonzero scalar rescaling of A'.",
+      "downstream": "Introduction only; no theorem dependency.",
+      "independence": "Surfaced during required fresh peer reconciliation after the source reconstruction; independently falsified on the pinned source using multiplier 0."
+    },
+    {
+      "line": 435,
+      "status": "GAP_REPAIRABLE_LOCAL",
+      "issue": "For branch epsilon the signed determinant is epsilon/(2 sqrt(D)); the change-of-variables factor is its absolute value. The source says 'Jacobian 1/(2 sqrt(D))' without 'absolute'.",
+      "repair": "Say 'absolute Jacobian 1/(2 sqrt(D))'.",
+      "downstream": "Line 437 already uses the correct positive factor; no constant or theorem impact.",
+      "independence": "Surfaced during required fresh peer reconciliation; independently derived directly from the displayed branch parametrization."
+    }
+  ],
+  "line511": {
+    "status": "PASS",
+    "reason": "The layer-cake integral is over positive s; the endpoint s=0 is a measure-zero endpoint and does not require a value for s^{-2}."
+  },
+  "theorem_status": "PASS_AFTER_TWO_LOCAL_NON_THEOREM_REPAIRS",
+  "rendered_pdf": "UNCHECKED_REFERENCE_PDF_NOT_AVAILABLE_TO_RENDERER",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

@@ -1,0 +1,13 @@
+{
+  "helper_version": "A094-stage4-independent-point-edge-bank-v1",
+  "actual_Boolean_family": "Quadratic bent signs on even k active binary bits with m dummy bits, an actual sign flip at one cube vertex, and a fresh fair selector; arbitrary independent terminal products and fresh point activations",
+  "parameter_domain": {"compressed_k": [4,6,8,10,12], "compressed_m": "0..24", "direct_k": [4,6], "direct_m": [0,1,2], "direct_flip_vertices": "all labelled vertices", "composition_k": 4, "composition_m": [0,1], "composition_flip": "all active bits one, all padding zero", "terminal_q_bits": 2, "terminal_q_tables": "all 16", "reference_variants": 3, "activation_r": [1,2]},
+  "case_count": {"compressed_zero_flip_cases": 125, "all_vertex_truth_table_cases": 560, "terminal_tensors": 32, "tensor_reference_cases": 96, "activation_reference_cases": 192, "price_two_n22_witness": 1},
+  "symmetry": "No quotient for actual flip vertices or terminal truth tables; compressed formulas justified by tensor Fourier signs and exact pivotal-edge counts, verified against every vertex in the direct domain",
+  "arithmetic": "Integer Hadamard transforms, independent physical edges, Fraction normalization and exact log-prime CE/KL identities; 36-term outward rational atanh log bounds with binary range reduction and remainder 2*z^73/[73*(1-z^2)], rounded outward to 2^-100",
+  "memory_estimate_MB": 100,
+  "maximum_runtime_seconds_per_job": 55,
+  "internal_cutoff": "Each completed case checks monotonic elapsed time, saving its completed checkpoint before an exit if 55 seconds reached; no result beyond the saved checkpoint counted",
+  "jobs": ["python -X utf8 code/check.py compressed", "python -X utf8 code/check.py vertices", "python -X utf8 code/check.py composition"],
+  "new_candidate_test": "Compare all-vertex influence-paid ratio against the exact four-active-bit all-pivotal flip ratio and the analytic large-domain bound 34/15; do not assert a sharp constant unless those exact signs and the full analytic tail proof hold"
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "claim_id": "A026-EXCLUSIVE-DATA-SHADOW-RESERVE",
+    "version": 1,
+    "exact_statement": "For every disjoint Boolean F(x,r)=A(r)+h(x)D(r), put g+=A+D,g-=A-D,p=g+g-, q=Pr[h=1],v=4q(1-q),W=v I(p), and X=q Aex+(1-q)Bex, where Aex,Bex are total exclusive branch pivotal probabilities. Then B_z(A+zD)<=h2(I_z)<=I(p), W<=4max(q,1-q)X<=4 I_data(F), sharply at every interior realizable bias. For any adaptive physical stopping tree with fixed encoder/data partition, Q+G+L+E W_leaf=W_root, where Q=sum_encoder w gamma^2 B_z, G=sum_encoder w gamma^2[I(p)-B_z]>=0, L=sum_data w v I_j(p)>=0. Also sum_data w exclusive_query_I+E X_leaf=X_root. Complete terminal entropy, inherited encoder erasure and data erasure remain separate debts. This is a conserved scoped reserve, not universal FEI or a coordinate-selection theorem.",
+    "hypotheses": [
+      "Finite uniform independent physical sign cubes; entropy in bits.",
+      "Actual restricted Boolean functions and fair physical reach weights; the encoder/data partition is fixed throughout.",
+      "Exclusive edges mean exactly one of the two actual branches is pivotal. No allocation of this same physical capacity twice."
+    ],
+    "statement_sha256": "7a7c15c1a604974f59b379a3d49d26bcefa93653642b76f35d480560f4275495",
+    "contributors": [
+      "A026"
+    ],
+    "proof_source": {
+      "run_id": "20261014T040156Z-account05-A026-good-coordinate-erasure",
+      "path": "PROOF.md",
+      "locator": "sections1-4",
+      "validation": [
+        "out/main_bounds_summary.json",
+        "out/main_trees.json",
+        "out/physical_bias_controls.json"
+      ]
+    },
+    "proof_dependencies": [
+      "A026-SIGNED-ROW-UNIFORM-SHADOW-TRANSFER@1 only for entropy corollary PROOF section4; conditional pending independent review",
+      "B06 R2 physical influence/entropy telescopes; elementary entropy tensorization"
+    ],
+    "review_records": [],
+    "status": "SCOPED_AUTHOR_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A003",
+      "A004",
+      "A087",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T102740Z-b17-fei-r17",
+  "account": "account04",
+  "slot": "B17",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "control_revision": "2026-09-22.3",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "claims": [
+    {
+      "id": "B17-SUSPENSION-TRANSPORT-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Every finite uniform-cube Boolean function after median character gauge",
+      "statement": "For g=chi_T f with folded marginals q_i<=1/2, J=sum q_i, P=sum j(q_i), Fcal=H-P, the balanced suspension F(y,x)=y g(x) has canonical nonempty I-projection dependence KL K_susp=sum h2(q_i)-H(g), and Fcal-rho J = B_rho(q)-K_susp for every real rho.",
+      "dependencies": ["IPROJ", "FOLDED_GAUGE"]
+    },
+    {
+      "id": "B17-CONSTANT-REFERENCE-SPLIT-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Same setting, with natural degenerate boundary conventions",
+      "statement": "K_susp = d2(v||c0) + v K_anchor + v D(Qplus||Rqplus), exactly preserving the old constant Fourier atom, anchored nonempty dependence KL, and reference mismatch.",
+      "dependencies": ["B17-SUSPENSION-TRANSPORT-v1", "IPROJ"]
+    },
+    {
+      "id": "B17-PACKET-TO-CRITICAL-CORE-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Whenever the account01/B17 signed-convolution packet lower bound applies to the balanced suspension radial reference",
+      "statement": "Fcal-4J <= log2((1+z)^d-1) -(1+J)log2(z) -P -4J -L_pkt(d,z,s).",
+      "dependencies": ["B17-SUSPENSION-TRANSPORT-v1", "ACCOUNT01-B17-SIGNED-CONVOLUTION-PACKET"]
+    },
+    {
+      "id": "B17-RM3-MULTISCALE-PREFLIGHT-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Depth-m recursive ternary majority",
+      "statement": "K_susp >= (m-4)(3/2)^m+4 while Fcal-4J=-4-3^m j(2^-m)<0, so the transport retains the rare-event logarithm and does not inherit the refuted low-level-projection failure.",
+      "dependencies": ["RM3-LOWLEVEL-BARRIER-v1", "B17-SUSPENSION-TRANSPORT-v1"]
+    }
+  ],
+  "unpaid_implication": "Show that the exact total dependence payment reaches B_4(q), or that packet plus further multiscale credits make the right side of the packet-to-critical-core inequality nonpositive, for every hypothetical ratio>4 critical core.",
+  "checker": {
+    "path": "check_cross_path_transport.py",
+    "sha256": "0ac398bfa01367889a7a6b52ce35a22bd18d9ef7f48606000d6acd4814ff0d04",
+    "clean_output_path": "check_cross_path_transport.out",
+    "clean_output_sha256": "097b52846f7dbc22cacfed7b42075d492a3bfd1c8cf9f636da74bb0753a0498f",
+    "scope": "Finite sanity check through n=4 plus recursive-majority formulas through m=12; not the proof of the analytic claims."
+  }
+}

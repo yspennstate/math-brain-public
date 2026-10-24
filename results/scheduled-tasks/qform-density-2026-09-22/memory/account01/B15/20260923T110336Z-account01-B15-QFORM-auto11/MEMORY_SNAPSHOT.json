@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260923T110336Z-account01-B15-QFORM-auto11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "start_commit": "1876ebbc08db36ea47d9efab0ff9515c3dc11a0f",
+    "prepublication_commit": "9ba827800e5a0449ae0699cf25b00495c423de30",
+    "owner_control_revision": "2026-09-22.15",
+    "programme_revision": "2026-09-22.5"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4a7b432e38619707420962a272805f9646ad7e59",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260923T090720Z-account02-B15-QFORM-auto11/REPORT.md",
+    "equation_used": "M nu(G_S) <= C_S for each rough-product physical indefinite three-block"
+  },
+  "newest_volume_result_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md",
+    "equation_used": "s_3(A)||mu_Q*gamma_1||_inf <= (9 sqrt(3)e/2)s_3(A)[s1(M)^2 s2(M)^2 T2]^(-1/6) under the stated volume/tail gate"
+  },
+  "result": {
+    "status": "ESSENTIAL_STEP_APPLIED / GRADIENT-CONE-COMPILER / FULL_TARGET_OPEN",
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_commit": "cae30fd7e11d9f50f64b68c0e33f41bbff8ddfd8",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T110336Z-account01-B15-QFORM-auto11/REPORT.md",
+    "handoff_commit": "9ddfb4f0f424dbce96a83f4ed703afa40f302ed0",
+    "core_new_identity": "For B=A_SS invertible, Q-c_S(W)=(1/4)(grad Q)_S^T B^{-1}(grad Q)_S; for indefinite 3x3 B the majority event is exactly {-sign(det B)(grad Q)_S^T B^{-1}(grad Q)_S>=0}.",
+    "compiler": "For weights w on physical indefinite triples, M E_nu Gamma_w(grad Q)<=sum w_j C_j. If delta_w=inf_{g in range(A)}Gamma_w(g)>0 then M<=(sum w_j C_j)/delta_w.",
+    "algebraic_identity": "sum_{|S|=3} E_S adj(A_SS)E_S^T=A^2-(tr A)A+e_2(A)I. On the nonsingular-principal-triple core, determinant-weighted signed conditional gaps sum to -(1/4)g^T[A^2-(tr A)A+e_2(A)I]g."
+  },
+  "regularity_scope": {
+    "absolute_continuity": "Any nonzero symmetric A and any absolutely continuous joint source; no product assumption needed.",
+    "fixed_instance_C0": "Completed account02/B15 plus independent account03/B15 review: rank>=3 product target has an individually bounded C0 density, with matrix-dependent constant.",
+    "universal_height": "OPEN; continuity is not used in the new compiler."
+  },
+  "unresolved_implication": "Outside paid volume/tail/ridge/definite branches, prove a cost-controlled bank of invertible indefinite physical triples has a universal gradient-cone coverage fraction on range(A), or prove that failure of such coverage forces a paid structural exit.",
+  "next_step": "Quantify the principal-adjugate signed identity into cost-weighted cone coverage, especially in low-total-tail/high-leverage N3 survivors; test whether common minority-cone directions imply a ridge/grouped-coordinate certificate."
+}

@@ -1,0 +1,67 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w545",
+  "bundle_slug": "p0321-reviewed-gaussian-density-obstruction-001",
+  "entries": [
+    {
+      "key": "gaussian-negative-infinite",
+      "namespace": "probability.gaussian_processes",
+      "logical_name": "decorrelating-stationary-gaussian-crosses-fixed-threshold-infinitely-often",
+      "kind": "lemma",
+      "title": "A decorrelating stationary Gaussian sequence crosses every fixed threshold infinitely often",
+      "statement": "Let (X_n)_{n>=1} be a stationary centered real Gaussian sequence with variance sigma^2 in (0,infinity) and Cov(X_1,X_{1+h}) tending to zero as h tends to infinity. For every finite rho>0, P(rho+X_n<0 for infinitely many n)=1. The one-point negative probability is Phi(-rho/sigma)>0. No independence of the full sequence is assumed.",
+      "proof_text": "Put I_n=1_{X_n<-rho} and p=E I_n=Phi(-rho/sigma)>0. The joint normal law of (X_1,X_{1+h}) tends to two independent normals as its correlation tends to zero; because the threshold boundary has zero Gaussian mass, c_h=Cov(I_1,I_{1+h}) tends to zero. For A_N=N^{-1} sum_{n=1}^N I_n, stationarity gives Var(A_N)=p(1-p)/N+2 N^{-2} sum_{h=1}^{N-1}(N-h)c_h, which tends to zero by splitting at a fixed H and then sending H to infinity. If every I_n on a fixed tail were zero, the corresponding average would be zero; Chebyshev bounds that event by Var(A_N)/p^2 and makes its probability zero. The countable union over starting tails is the event of finitely many crossings, hence also has probability zero.",
+      "assumptions": [
+        "Joint Gaussianity, stationarity, and zero mean",
+        "Variance sigma^2 is finite and strictly positive",
+        "Cov(X_1,X_{1+h}) tends to zero",
+        "rho is fixed and finite"
+      ],
+      "domain": "probability theory; Gaussian processes",
+      "source": {
+        "source_id": "owner-probability-campaign:w544-P0321-N01-reviewed-w545",
+        "url": "urn:math-research:P0321:w544:N01",
+        "revision": "w545-symbolic-audit-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "linear-density-not-positive-particle-law",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "linear-gaussian-elastic-density-cannot-equal-positive-particle-density",
+      "kind": "lemma",
+      "title": "An additive Gaussian elastic density cannot equal a nonnegative smoothed particle density",
+      "statement": "Fix beta,a,b,Lambda,rho>0 and 0<s<2. In the stipulated planar Gaussian displacement-increment model with Fourier covariance beta^{-1}1_{0<|k|<=Lambda}[P_L(k)/(a|k|^s)+P_T(k)/(b|k|^2)] and inverse Fourier measure d^2k/(2pi)^2, let delta rho=-rho div u. Then Var(delta rho(0))=rho^2 Lambda^{4-s}/[2pi beta a(4-s)]>0; rho+delta rho is negative infinitely often on any fixed equally spaced ray almost surely. Therefore it cannot have the exact one-point law of a finite smoothing sum of any locally finite point configuration with a nonnegative kernel. This concerns only the auxiliary Gaussian model, not an actual Riesz Gibbs law or a controlled approximation.",
+      "proof_text": "The divergence multiplier annihilates P_T and contracts P_L to |k|^2, so the density spectral function is f(k)=rho^2 |k|^{2-s}1_{|k|<=Lambda}/(beta a). Integrating in polar coordinates yields the stated positive variance. Since f is integrable, its covariance tends to zero by the Riemann-Lebesgue lemma. Values along an equally spaced ray form a stationary nondegenerate Gaussian sequence, so the preceding threshold-crossing lemma applies. A finite smoothing sum of nonnegative kernel values is pointwise nonnegative, whereas this additive Gaussian has a strictly positive negative one-point tail.",
+      "assumptions": [
+        "Gaussian covariance is stipulated, not derived from Riesz particles",
+        "beta,a,b,Lambda,rho are strictly positive and 0<s<2",
+        "The comparison particle smoothing kernel is nonnegative and its sum is finite",
+        "Equality means exact equality of one-point laws, not an approximation"
+      ],
+      "domain": "probability theory; statistical mechanics",
+      "source": {
+        "source_id": "owner-probability-campaign:w544-P0321-N02-reviewed-w545",
+        "url": "urn:math-research:P0321:w544:N02",
+        "revision": "w545-symbolic-audit-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "linear-density-not-positive-particle-law",
+      "to_key": "gaussian-negative-infinite",
+      "kind": "depends_on",
+      "rationale": "The almost-sure negative-density conclusion applies the stationary-Gaussian threshold lemma after verifying covariance decay."
+    },
+    {
+      "from_key": "linear-density-not-positive-particle-law",
+      "to_existing_logical": "math:probability.core:open-problem-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases",
+      "kind": "semantic_association",
+      "rationale": "This reviewed auxiliary obstruction concerns a proposed exact density identification used in approaches to P0321; it neither proves nor refutes the open-problem card."
+    }
+  ]
+}

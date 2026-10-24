@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "theorem_id": "FOREST-PATH-RECONNECTION-FLOW-v1",
+  "scope": "all finite simple graphs on at most 5 vertices and all unordered marked pairs of present edges",
+  "marked_pair_instances": 11766,
+  "exact_arithmetic": true,
+  "checks": {
+    "common_path_to_Q_edgewise_failures": 0,
+    "exclusive_e_to_10_edgewise_failures": 0,
+    "exclusive_f_to_01_edgewise_failures": 0,
+    "summed_common_multiplicity_failures": 0,
+    "overlap_bound_failures": 0
+  },
+  "refuted_shortcuts": [
+    {
+      "claim": "|Omega00_cap| <= q",
+      "counterexample": {
+        "graph": "K4",
+        "marked_edges": ["01", "23"],
+        "Omega00_cap": 4,
+        "q": 2,
+        "common_flow_total_multiplicity": 4
+      }
+    },
+    {
+      "claim": "|Omega00_cap|*n11 <= N*q",
+      "counterexample": {
+        "vertices": 5,
+        "edges": ["01", "02", "03", "04", "12", "14", "23"],
+        "marked_edges": ["03", "04"],
+        "N": 28,
+        "counts_n00_n10_n01_n11": [3, 5, 5, 15],
+        "q": 1,
+        "Omega00_cap": 2,
+        "shortcut_lhs": 30,
+        "shortcut_rhs": 28,
+        "forest_target_gap": 8
+      }
+    }
+  ],
+  "interpretation": "Finite regression validates the stated reconnection identities in this scope and refutes two stronger proof shortcuts. It is not a proof of the full FOREST conjecture."
+}

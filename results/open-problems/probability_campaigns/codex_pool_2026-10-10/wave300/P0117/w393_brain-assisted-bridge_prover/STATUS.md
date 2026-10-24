@@ -1,0 +1,7 @@
+STATE: WORKING
+NEXT: Read w395's newly identified September primary source, preserve its exact moment scope, then finish the bounded checks and referee submission.
+
+2026-10-10 — Session started. Read PRIMARY_DIRECTIVE.md. Workspace initially empty. Current openness UNKNOWN; no novelty or proof claim. Work is confined to w393 except the explicitly named peer communication and draft inbox output.
+2026-10-10 — Saved first source-status claim. Brain recall completed in 8.562 s with zero P0117 hits among three results; targeted math-export lookup recovered the target and prior anchoring obstruction. Saved L1 finite measurable exhaustion, L2 conditional supermartingale bridge, L3 summable ring lower bounds, and the single hardest gap in LEMMAS.md. Read the perceptron proof-gap scar; author proofs remain unaudited.
+2026-10-10 — Exact-ID fallback recovered both unverified P0117 cards. Statement-only message delivered to w394 as msg-af5b0fef65 after team_comm rejected unregistered team routing. The source survey's Question 31 and (4.25) were read directly. w394 independently reports scoped KEEP verdicts for L1/L2/L3/C1; w395 identified a September source claiming a moment-qualified resolution, whose validity is still under audit.
+STUCK: PowerShell stripped quoted Python -c string arguments in the schema probe; repeating that approach for the compute gate was a mistake. All subsequent Python operations use files in w393, avoiding nested command quoting.

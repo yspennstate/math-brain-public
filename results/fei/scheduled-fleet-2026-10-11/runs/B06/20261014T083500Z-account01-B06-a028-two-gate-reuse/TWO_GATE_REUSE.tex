@@ -1,0 +1,102 @@
+\section*{The first branch-reused stopping block with a nonzero terminal core}
+
+Let \(q:\{-1,1\}^2\to\{-1,1\}\) and let
+\(h:\{-1,1\}^m\to\{-1,1\}\) be arbitrary genuine Boolean functions on
+disjoint coordinates.  Put
+\[
+ F(x_1,x_2,y)=q(x_1,x_2)h(y).                         \tag{1}
+\]
+Query \(x_1\) at the root and query the same physical coordinate \(x_2\)
+on both children.  Thus \(x_2\) is reused on incomparable branches but
+never twice along one path.  The four leaves are \(\pm h\).
+
+For a physical restriction tree \(\mathcal T\), retain the paid-boundary
+notation
+\[
+ \rho_i(g)=\Delta_iU(g)-K_i^{(0)}(g),\qquad
+ \mathcal R(\mathcal T)=\sum_vp_v\rho_{i_v}(f_v),
+ \qquad
+ \Pi_I(\mathcal T)=\sum_vp_v\operatorname{Inf}_{i_v}(f_v).             \tag{2}
+\]
+
+\paragraph{Theorem 1 (first reused-coordinate residual).}
+For every \(m\), every two-bit Boolean \(q\), and every Boolean core \(h\),
+the above depth-two tree satisfies
+\[
+ \boxed{\mathcal R(\mathcal T)\le\Pi_I(\mathcal T)=I(q).}             \tag{3}
+\]
+Moreover
+\[
+ \mathbb E_\ell U(F_\ell)=U(h),\qquad
+ \mathbb E_\ell I(F_\ell)=I(h),                                     \tag{4}
+\]
+so the terminal \(U\) and influence are both retained exactly.
+
+\paragraph{Proof.}
+Tensor factorization of upper-set masses gives
+\[
+ U(F)=U(q)+U(h),\qquad I(F)=I(q)+I(h).                                \tag{5}
+\]
+The exact tree telescopes and (4) therefore give
+\[
+ \sum_vp_v\Delta_{i_v}U(F_v)=U(q),qquad
+ \Pi_I(\mathcal T)=I(q).                                               \tag{6}
+\]
+Every root-row KL contribution is nonnegative, hence
+\[
+ \mathcal R(\mathcal T)
+ =U(q)-\sum_vp_vK_{i_v}^{(0)}(F_v)le U(q).                            \tag{7}
+\]
+It remains only to note that every two-bit Boolean function is, up to input
+and output signs and coordinate permutations, a constant, a dictator,
+parity, or a one-point defect.  The corresponding \((U,I)\) pairs are
+\((0,0),(0,1),(0,2),(1,1)\).  Thus \(U(q)\le I(q)\), proving (3).
+
+The same proof is independent of which resolving physical tree is used on
+the two gate coordinates: the telescopes depend only on the terminal
+functions and all subtracted root KL rows remain nonnegative.  Hence within
+this product family the result does not require a prescribed query order or
+a nonreuse assumption; any finite tree that resolves \(q\) has (3).
+
+\paragraph{Terminal closure.}
+If a terminal class \(\mathcal C\) satisfies \(U(h)\le\kappa I(h)\), then
+(3)--(4) verify the paid-boundary hypotheses with
+\[
+ A=1,\qquad b=0,qquad\hbox{terminal constant }\kappa.                 \tag{8}
+\]
+The reviewed stopping theorem consequently gives, at this restricted
+product scope,
+\[
+ U(F)\le\bigl(\max\{1,\kappa\}+2/\ln2\bigr)I(F),                      \tag{9}
+\]
+with no dimension, bias, or core-complexity dependence.  Direct tensor
+additivity gives the sharper class bound
+\(U(F)\le\max\{1,\kappa\}I(F)\); (9) is recorded to verify compatibility
+with the universal stopping ledger rather than to optimize the constant.
+
+\paragraph{Exact GU inheritance.}
+The restriction functional is tensor additive as well:
+\[
+ G(F)=G(q)+G(h).                                                        \tag{10}
+\]
+The same four-class enumeration gives, for every \(0\le b<1\),
+\[
+ G(q)\le(2-b)I(q)+bU(q),                                               \tag{11}
+\]
+with equality for a one-point defect.  Therefore if the arbitrary core
+obeys \(G(h)\le aI(h)+bU(h)\), then
+\[
+ \boxed{G(F)\le\max\{a,2-b\}I(F)+bU(F).}                              \tag{12}
+\]
+This is the displayed implication to the universal GU target: adjoining a
+disjoint two-bit branch-reused gate preserves every admissible \(b<1\) and
+changes only the finite influence coefficient.
+
+\paragraph{First unsupported extension.}
+The proof uses the exact factorization in (5) and (10).  If the two gate
+branches share or alter the core data, the leaves are no longer copies of
+one \(h\), and \(U(F)-\mathbb E U(F_\ell)\) need not equal \(U(q)\).
+The next open line is therefore a genuinely shared-data collision bound
+that replaces (5) while retaining the signed \(-\Gamma_i\) refund and the
+actual nonzero terminal \(U\).  No claim for that extension, universal GU,
+or full FEI is made.

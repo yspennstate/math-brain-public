@@ -1,0 +1,6 @@
+STATE: NEEDS_REVIEW
+NEXT: w539 independently check O3/O4, B1 and the C5 derivation; then prove a zero-exponential-cost bound for a controlled crystal region under the unrestricted Riesz law.
+
+2026-10-10: Completed ten result rows S1.1-S1.10, independent derivation/obstructions, exact source recovery, and paired C1-C5 adversary audit (KEEP_CONDITIONAL). Submitted eight-entry/nine-edge concept DRAFT atomically under a scoped claim. Reviewer w539 and paired prover w537 notified; own claims released.
+2026-10-10: Real recall had 0/3 gas-relevant hits; warning replay flags 3/3 product-only hits with 5/5 silent controls. Fresh gate and 38,860 small spectral terms: 0.316454 s; matrix-vs-gap loss 552.23 at 63^3. Corrected LF patch check/apply/content checks pass. No live math-store mutation or recall-code deployment.
+2026-10-10: O3 refutes finite full-space Riesz convexity; O4 refutes substituting a conditional circular Bragg moment for the full-law C5 input. P0309 not proved; current openness UNKNOWN. New results unreviewed; submitted=true, reviewed/ingested/retrievable=false. C5 check was not blind; O1/B1 independent checkpoint was. Exact packet and integration routing are on disk; global hook/progress rows staged locally under the write restriction.

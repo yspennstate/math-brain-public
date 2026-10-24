@@ -1,0 +1,41 @@
+[
+  {
+    "claim_id": "A037-EXERCISED-RARE-RESET-ORIGINAL-BANK",
+    "version": 1,
+    "exact_statement": "For every integer n>=3, let F(x,a,b,z)=(-1)^a on x=0 and 1-2*1[b=1,z=0] on x=1, with independent fair physical bits. Starting with the FULL product of root Fourier marginals, query a and actually reset both Bayes references to their actual products. With m=n+2,d=2^(1-m), the uncovered first-conversion excess is D_m=h2(d)+H(point_(m-1))/2-H(point_m), and 0<D_m<h2(d)<3/5 bits. After any adaptive sequence and stopping rule querying only distinct private z bits and actually resetting to actual products at every queried node, all subsequent signed product resets are nonpositive (at active dimension l>=6, sigma_l<=-2*2^(1-l)). A single original global allocation of one bit from the a=1 child S4=4I-H pays an explicitly booked prior global debit 1/4 and the first actual excess, carrying conditional debit 1/2+2D_m unchanged into every descendant; every stopping frontier retains at least 3/20 global bit of this allocation. Both branches retain full terminal H, influence and current reference KL. The n=2 boundary has negative D_4 and is covered using [D_4]_+=0. This is a source-specific exercised-reset ledger, not a universal FEI or occupancy-reference theorem.",
+    "hypotheses": [
+      "Actual uniform-cube Boolean family as stated, bits x,b remain unqueried after a; only private z data are revealed",
+      "One original full product source; every later reference replacement is explicitly exercised and included in its signed reset",
+      "Prior debit 1/4 is a declared actual ledger booking against the same original a=1 allocation; no upstream operation is thereby certified",
+      "All physical branches, terminal entropy and reference-only probabilities are retained; supported finite KL costs"
+    ],
+    "statement_sha256": "2e2ddee03b3b862545a8116a3e3141846f4042186ce94a9debdf9300e6cfa068",
+    "contributors": [
+      "A037"
+    ],
+    "proof_source": {
+      "run_id": "20261021T220645Z-account03-A037-conditional-credit-ledger",
+      "files": [
+        "PROOF.md",
+        "code/check.py",
+        "code/audit.py",
+        "out/CHECK.json",
+        "out/AUDIT.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_CERTIFIED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A036",
+      "A038",
+      "A039",
+      "A050",
+      "A088",
+      "A094"
+    ]
+  }
+]

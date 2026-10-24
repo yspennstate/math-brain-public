@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T003326Z-account01-B05-QFORM-auto20",
+  "checks": [
+    {
+      "id": "triple_determinant_symbolic",
+      "method": "sympy exact symbolic expansion",
+      "matrix": "[[0,lj,lk],[lj,alpha*lj^2+2*beta*lj*vj+lambda*vj^2,alpha*lj*lk+beta*(lj*vk+vj*lk)+lambda*vj*vk],[lk,same_cross,alpha*lk^2+2*beta*lk*vk+lambda*vk^2]]",
+      "result": "-lambda*(lj*vk-lk*vj)^2",
+      "status": "PASS"
+    },
+    {
+      "id": "aggregate_constant",
+      "expression": "7.761982175235*2^(2/3)",
+      "value": 12.3213786703265,
+      "status": "PASS"
+    },
+    {
+      "id": "target_high_leverage_constant",
+      "expression": "12.3213786703265*2^(1/3)",
+      "value": 15.52396435047,
+      "status": "PASS"
+    },
+    {
+      "id": "ratio_packet_heavy_scalar_constant",
+      "expression": "12.3213786703265*(80/9)^(1/3)",
+      "value": 25.5235922150699,
+      "status": "PASS"
+    },
+    {
+      "id": "previous_overlap_isotropic_shear",
+      "data": "C_delta=diag(1,-delta^-2,1), l_delta=(delta,1,0), w_delta=C_delta^-1 l_delta=(delta,-delta^2,0)",
+      "identity": "w_delta^T C_delta w_delta=delta^2-delta^2=0",
+      "status": "PASS"
+    }
+  ],
+  "scope_note": "These checks verify the exact determinant cancellation and numerical constants used in REPORT.md. They do not constitute an independent end-to-end review of the full QFORM conjecture."
+}

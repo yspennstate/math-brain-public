@@ -1,0 +1,21 @@
+P0282 ninth-tenths-window exact self-check
+bounded_star_word_pattern_counts=PASS
+j=1 partitions=1 EC4=0 ECS5=0 ES2S4=0 ES3sq=0 ninth_tenths_threshold_n=21 old_eight_ninths_threshold_n=21 source_margin_positive=True
+j=2 partitions=2 EC4=1 ECS5=1 ES2S4=1 ES3sq=1 ninth_tenths_threshold_n=32 old_eight_ninths_threshold_n=33 source_margin_positive=True
+j=3 partitions=3 EC4=27 ECS5=33 ES2S4=31 ES3sq=27 ninth_tenths_threshold_n=44 old_eight_ninths_threshold_n=46 source_margin_positive=True
+j=4 partitions=5 EC4=120 ECS5=186 ES2S4=196 ES3sq=156 ninth_tenths_threshold_n=56 old_eight_ninths_threshold_n=59 source_margin_positive=True
+j=5 partitions=7 EC4=340 ECS5=610 ES2S4=720 ES3sq=520 ninth_tenths_threshold_n=69 old_eight_ninths_threshold_n=72 source_margin_positive=True
+j=6 partitions=11 EC4=765 ECS5=1515 ES2S4=1985 ES3sq=1305 ninth_tenths_threshold_n=82 old_eight_ninths_threshold_n=85 source_margin_positive=True
+j=7 partitions=15 EC4=1491 ECS5=3171 ES2S4=4571 ES3sq=2751 ninth_tenths_threshold_n=95 old_eight_ninths_threshold_n=99 source_margin_positive=True
+j=8 partitions=22 EC4=2632 ECS5=5908 ES2S4=9296 ES3sq=5152 ninth_tenths_threshold_n=108 old_eight_ninths_threshold_n=113 source_margin_positive=True
+j=9 partitions=30 EC4=4320 ECS5=10116 ES2S4=17256 ES3sq=8856 ninth_tenths_threshold_n=121 old_eight_ninths_threshold_n=127 source_margin_positive=True
+j=10 partitions=42 EC4=6705 ECS5=16245 ES2S4=29865 ES3sq=14265 ninth_tenths_threshold_n=134 old_eight_ninths_threshold_n=142 source_margin_positive=True
+j=11 partitions=56 EC4=9955 ECS5=24805 ES2S4=48895 ES3sq=21835 ninth_tenths_threshold_n=148 old_eight_ninths_threshold_n=156 source_margin_positive=True
+j=12 partitions=77 EC4=14256 ECS5=36366 ES2S4=76516 ES3sq=32076 ninth_tenths_threshold_n=162 old_eight_ninths_threshold_n=171 source_margin_positive=True
+D8_discrete_curvature_identity=PASS
+D8_shifted_positive_coefficients=PASS
+analytic_tail_claim_used_in_report=tail_after_order8 < 2^26*j^9/n^9 for n>=12j
+chen_second_difference_tail_bound=<2^28*(j+1)^9/n^9
+theorem_threshold_used_in_report=n^9 >= 2^29*(j+1)^10
+simple_corollary=j+1 <= n^(9/10)/8
+ALL_EXACT_CHECKS_PASS

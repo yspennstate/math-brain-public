@@ -1,0 +1,180 @@
+[
+  {
+    "claim_id": "A071-B09-THREEBIT-GRID-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f on {0,1}^3, every product-bias vector p in {1/8,1/4,1/2,3/4,7/8}^3, and every nonempty proper physical block A, J_A <= M_A + Delta_A(p), with M_A=H(S_A|S_B), J_A=H(S_B)-E_Z H(mu_Z), Delta_A=sum_i_in_A[h2(p_i)+log2(max(p_i,1-p_i))], and mu_Z the inherited biased squared Fourier law of the actual restriction. Entropy is in bits.",
+    "hypotheses": [
+      "Actual Boolean truth table, not arbitrary real amplitudes",
+      "Independent physical coordinates at the specified finite bias grid",
+      "Inherited normalized product Fourier basis",
+      "Zero spectral masses contribute zero entropy"
+    ],
+    "statement_sha256": "5efb03f6210bfac4a3f7e79e26f42c6b767ff0dab7fede1da1cf0e056cc102ec",
+    "contributors": [
+      "account05/A071"
+    ],
+    "proof_source": {
+      "original_run": "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T214639Z-account05-A071-search-space-design",
+      "original_proof_source": [
+        "REPORT.md",
+        "code/search.py",
+        "code/resolve_zeros.py",
+        "out/search.json",
+        "out/zero_certificates.json"
+      ],
+      "independent_review": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261011T231324Z-account05-A085-certificate-adversary\\REPORT.md",
+      "independent_code": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261011T231324Z-account05-A085-certificate-adversary\\code\\audit.py"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A085/account05",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "at_utc": "2026-10-11T23:41:37.578359+00:00",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261011T231324Z-account05-A085-certificate-adversary\\REPORT.md",
+        "method": "Different centered tensor transform, positive range-reduced rational log engine, explicit raw-grid mapping and exact zero cancellation for complete 20736-case census",
+        "contributor_to_original": false,
+        "scope_exclusions": [
+          "No all-dimensional finite-to-universal inference",
+          "No moving-basis uniform Taylor remainder inferred"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A072",
+      "A073",
+      "A074",
+      "A085",
+      "A092",
+      "B09",
+      "B20",
+      "A090",
+      "A094",
+      "B17"
+    ]
+  },
+  {
+    "claim_id": "A042-BIAS-ENDPOINT-INTERFACE",
+    "version": 1,
+    "exact_statement": "For every fixed finite Boolean sign table under independent Bernoulli inputs, the normalized mixed-difference polynomials c_S=2^(-|S|) E Delta_S f give P(S)=w_S c_S^2, natural corrected entropy E=sum_nonempty w_S c_S^2 ln(1/c_S^2), and D=I-Var=sum_|S|>=2 (|S|-1)w_S c_S^2, with path-independent deterministic contraction. For one rare probability e and fixed interior remaining biases, E=E(g)+e K+2e^2 Z ln(1/e)+O(e^2) and D=D(g)+e L-e^2 Q, with K,Z,L,Q as in REPORT.md. If D(g)=0, either L=Q=0 and E=D=0 identically, or L>0 and Hplus/D tends to K/(L ln2). Zero-deficit interior Boolean tables are exactly constants and signed literals; a unit spectral atom after contraction is a signed parity on fair occupied coordinates.",
+    "hypotheses": [
+      "finite genuine Boolean sign table",
+      "independent Bernoulli inputs",
+      "fixed interior biases on uncontracted coordinates for the one-coordinate Taylor remainder",
+      "E uses natural logarithms and Hplus=E/ln2",
+      "zero masses contribute zero; do not divide by identically zero D",
+      "no dimension-uniform Taylor remainder is asserted"
+    ],
+    "statement_sha256": "7c2fae4055ba9e3bf195fcebe01cb6e66fde427ca4d8d8c3f48902754514dc60",
+    "contributors": [
+      "A042/account05"
+    ],
+    "proof_source": {
+      "original_run": "~\\brain_workers\\FEI100_20261011\\agents\\A042\\runs\\20261011T220136Z-account05-A042-bias-endpoint-certificates",
+      "original_proof_source": {
+        "run_id": "20261011T220136Z-account05-A042-bias-endpoint-certificates",
+        "path": "REPORT.md",
+        "companion": "BIASED_ENDPOINT_SERIES.tex",
+        "validation": "out/CHECK_OUTPUT.json"
+      },
+      "independent_review": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261011T231324Z-account05-A085-certificate-adversary\\REPORT.md",
+      "independent_code": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261011T231324Z-account05-A085-certificate-adversary\\code\\audit.py"
+    },
+    "proof_dependencies": [
+      "elementary mixed-difference integration",
+      "Parseval",
+      "Taylor expansion at nonzero coefficients",
+      "full Boolean identity f^2=1"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A085/account05",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "at_utc": "2026-10-11T23:41:37.578359+00:00",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261011T231324Z-account05-A085-certificate-adversary\\REPORT.md",
+        "method": "Independent endpoint polynomial/Taylor/zero-deficit reconstruction plus compressed-spectrum finite ratio interval containment",
+        "contributor_to_original": false,
+        "scope_exclusions": [
+          "No all-dimensional finite-to-universal inference",
+          "No moving-basis uniform Taylor remainder inferred"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A024",
+      "A041",
+      "A044",
+      "A045",
+      "A047",
+      "A084",
+      "A090",
+      "A091",
+      "A094",
+      "B17",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A047-SHARP-FIXED-CHILD-RARE-SELECTOR",
+    "version": 1,
+    "exact_statement": "For every fixed finite pair of Boolean children g,h in a fixed product-biased Fourier basis, lim_{p->0}(J_X-M_X)/(p log2(1/p))=2Z+2E(gh)-2<=1/2-2(E(gh)-1/2)^2<=1/2, where Z=sum_{G_T=0}H_T^2. Equality 1/2 is attained by constant/quarter-defect children and by balanced children after fresh-character multiplication. If child Fourier supports are disjoint then M_X=J_X=h2(p) for every p in (0,1).",
+    "hypotheses": [
+      "finite Boolean sign children",
+      "common fixed orthonormal product Fourier basis",
+      "fixed interior data biases",
+      "independent selector with p down to zero",
+      "entropy in bits"
+    ],
+    "statement_sha256": "a7c1f6e2b4813f92ed2d1166200b84c078aa44f1d3d124226777bf7f13e0b84f",
+    "contributors": [
+      "A047"
+    ],
+    "proof_source": {
+      "original_run": "~\\brain_workers\\FEI100_20261011\\agents\\A047\\runs\\20261011T220210Z-account05-A047-boundary-search",
+      "original_proof_source": "REPORT.md complete derivation; BOUNDARY_ASYMPTOTICS.tex",
+      "independent_review": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261011T231324Z-account05-A085-certificate-adversary\\REPORT.md",
+      "independent_code": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261011T231324Z-account05-A085-certificate-adversary\\code\\audit.py"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A085/account05",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "at_utc": "2026-10-11T23:41:37.578359+00:00",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261011T231324Z-account05-A085-certificate-adversary\\REPORT.md",
+        "method": "Independent support-mass endpoint reconstruction and full parent transform with 44-term rational interval containment for all 20 finite cases",
+        "contributor_to_original": false,
+        "scope_exclusions": [
+          "No all-dimensional finite-to-universal inference",
+          "No moving-basis uniform Taylor remainder inferred"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      "Endpoint repaired tax coefficient strictly below 1/2"
+    ],
+    "first_unproved_line": "Uniform finite-p half-tax bound and nonreusing stopping-tree transport remain unproved.",
+    "next_consumers": [
+      "A092",
+      "A087",
+      "A049",
+      "A050",
+      "A042",
+      "A071",
+      "A090",
+      "A094",
+      "B17",
+      "B20"
+    ]
+  }
+]

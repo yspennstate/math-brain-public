@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260922T233323Z-account01-B02-qform-r16",
+  "utc_start": "2026-09-22T23:33:23Z",
+  "control_revision": "2026-09-22.15",
+  "start_control_commit": "28da0563b07215c374490fee72c3e61618f5dd40",
+  "prepublication_control_commit": "d085b2687172bf5d22a1aa90fc2a18be96e20f15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "partner_result": {
+    "account": "account02",
+    "slot": "B02",
+    "run_id": "20260922T221114Z-account02-B02-qform-r11-2ea3913a",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c726a32fa4d8e1e8ab246d48560b89cf1d4c4857",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260922T221114Z-account02-B02-qform-r11-2ea3913a/REPORT.md",
+    "applied_input": "regularized determinant characteristic-function bound with q-dependent leverage condition and q=2 unconditional endpoint"
+  },
+  "new_result": {
+    "id": "QFORM-GAP-STABLERANK-L1-FOURIER-v1",
+    "status": "ESSENTIAL_STEP_APPLIED",
+    "statement": "If the partner regularized determinant bound holds at q, k is an integer with k>2q, 0<delta<=1, and sr(B)>=k-1+delta, then integral |phi_Q| <= A(q,k,delta)/||B||_F, with A=[pi e/(k sqrt(2q))] Beta(1/(2k),1/(4q)-1/(2k)) sqrt(k-1+delta) delta^(-1/(2k)).",
+    "continuity": true,
+    "deterministic_lemma": "Under max x_j<=S/(k-1+delta), e_k(x)>=delta S^k/(k-1+delta)^k, sharp by the packed capped-simplex vector."
+  },
+  "quantitative_branches": [
+    "leverage<=1/2 and sr>=5/2: integral|phi|<=63.069/F, density<=10.038/F",
+    "leverage<=3/4 and sr>=7/2: integral|phi|<=79.858/F, density<=12.710/F",
+    "no leverage and sr>=9/2: integral|phi|<=96.714/F, density<=15.393/F"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c0761078aebb6a2677d419a2c811e85f21ea8677",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260922T233323Z-account01-B02-qform-r16/REPORT.md",
+    "blob": "21554f7e69a71d72634f4ded002f0de010140efe"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B02/20260922T233323Z-account01-B02-qform-r16.md",
+    "commit": "d9b80bb0ebb1de857f2560ad2fa8eb3d7dfa2b5f"
+  },
+  "full_target_status": "OPEN",
+  "global_L1_status": "OPEN_NO_COUNTEREXAMPLE",
+  "unresolved_implication": "Cross the critical stable-rank surfaces 2,3,4 uniformly by coupling the direct Fourier estimate to pair/rank-two, ridge, one-sided-square, grouped-bank, or near-coloop mechanisms without fixed-minor or post-rotation-independence shortcuts.",
+  "next_step": "Exploit high physical range leverage in the delta-to-zero critical collars to expose a genuine original-coordinate pivot or independent packet before applying a fractional-trace transducer."
+}

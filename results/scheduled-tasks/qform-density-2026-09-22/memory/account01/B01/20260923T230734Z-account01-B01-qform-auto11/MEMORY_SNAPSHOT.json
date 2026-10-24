@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260923T230734Z-account01-B01-qform-auto11",
+  "control_revision": "2026-09-22.15",
+  "fresh_control_head_observed_before_publication": "171d269816bdfe0511c926fd3c8b3b78046c055d",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "correction_inbox_blob": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-HYPERBOLIC-TWOSIDED-HALFRIESZ-UNIFORM-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-RANK1-SAMEBANK-SUBCRITICAL-RIESZ-v1",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "7eb915c055ec899017e7b3cd409a826eea7c7212",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T220810Z-account01-B01-qform-auto11/REPORT.md",
+      "scope": "For arbitrary same-bank phases on two disjoint original banks, every H_beta with 0<beta<1/2 is bounded at rank-one cross scale kappa; beta=1/2 is false."
+    },
+    {
+      "id": "QFORM-RANK1-LATENT-TRANSVERSE-WEDGE-v1",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "8a05b72743a9dc1ffa5afd22be6a7fa66d59b8ba",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260923T220140Z-account02-B01-QFORM-auto11/REPORT.md",
+      "scope": "In exact W2=0 diagonal-plus-rank-two geometry, positive latent triple currency re-cuts to rank two; zero triple currency with opposite-bank latent rank two localizes the transverse latent vector to at most two literal coordinates."
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-SQUARE-FRACTIONAL-UPGRADE-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "If H_beta(R)<infinity for 0<beta<1/2 and Z is a source-disjoint scalar with density cap M, then S=R+b(Z+m)^2 satisfies H_(beta+1/2)(S)<=M|b|^-1/2 J_beta H_beta(R), with explicit beta-function J_beta, uniformly for measurable shifts m depending on the base variables."
+    },
+    {
+      "id": "QFORM-TWOSQUARE-RANK1-SUBCRITICAL-LIFT-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "A contaminated exact rank-one two-bank packet plus two literal source-disjoint scalar square coordinates has a universal density bound. At beta=1/4: ||p_Q||inf<=13.1843165864 M0 M1^(2/3)|a|^-1/2|b|^-1/3 kappa^-1/6, allowing both square shifts to reuse remaining variables. Essential boundedness only; continuity not claimed."
+    },
+    {
+      "id": "QFORM-FINITELEAK-SCHUR-CROSS-IDENTITY-v1",
+      "status": "PROVED_EXACT_STRUCTURAL_IDENTITY",
+      "statement": "In the partner latent rank-one normal form H=D+UCU^T with U_I=[u,0], U_J=[v,w], scalar completion at j preserves rank-one cross exactly. For every k with w_k=0, r^(j)_k=((alpha d_j-r_j^2)/d_j)v_k=((alpha D_j+(det C)w_j^2)/d_j)v_k. If supp(w)={j} and alpha d_j-r_j^2=0, then H/j is exactly diagonal."
+    }
+  ],
+  "target_valid_stress": {
+    "quadratic_form": "(X+Y/2)^2+(W+Z/2)^2-(Y-Z)^2",
+    "spectrum": ["0", "5/4", "(-3+sqrt(137))/8", "(-3-sqrt(137))/8"],
+    "target_check": "three nonzero eigenvalues have modulus >1",
+    "bound": "||p_Q||inf<=13.1843165864 for every cap-one product law",
+    "note": "both square shifts overlap the parabolic rank-one packet"
+  },
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B01",
+    "theorem": "QFORM-RANK1-LATENT-TRANSVERSE-WEDGE-v1",
+    "canonical_commit": "8a05b72743a9dc1ffa5afd22be6a7fa66d59b8ba",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260923T220140Z-account02-B01-QFORM-auto11/REPORT.md",
+    "actual_application": "On its exact-W2 family Q_cond=x0^2+2xy+(w dot Y)^2, partner Delta=1/2 gives ||p_Q||inf<=8*2^(1/4)=9.5136569200. The new two-square lift independently gives <=16.6111979957 using ||p_(w dot Y)||inf<=sqrt(2) and kappa=1."
+  },
+  "canonical_outputs": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "d827daa3503625fa8ae0c01efacaf41e00cbedcc",
+    "directory": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T230734Z-account01-B01-qform-auto11/",
+    "main_report_commit": "ac701eebc8f6e82937f5a281b0075c93f19002db",
+    "checks_script_commit": "fbd7b8ab05371d17a967bbd992c82ddead4db792",
+    "checks_output_commit": "0c3b5265a1ed3a0b1dd8c76e2687ab07d17125f5",
+    "finite_leak_identity_commit": "8c52275df2e3a5ff11a694689d1d6c89d86b2269",
+    "finite_leak_checks_commit": "d827daa3503625fa8ae0c01efacaf41e00cbedcc"
+  },
+  "handoff_commit": "a14d3089d19333c67d189a2ec9bc5979710d90c4",
+  "first_unpaid_implication": "QFORM-W2ZERO-FINITELEAK-ZEROPIVOT-OR-CANCELLATION-COLLAR-v2",
+  "next_step": "Inside the partner zero-Zeta_3 support-at-most-two endpoint, route zero/tiny localized scalar pivots and the exact cancellation core (now localized to at most one transverse physical coordinate) into a hyperbolic-pair, grouped/zero-diagonal, rank-two-recut or aggregate-E2 receiver; separately retain and pay the nonzero collar 0<s2<1/256.",
+  "scope_notes": "No law-uniform scalar quadratic pointwise decay is used. No small nonzero tail is deleted. The new two-square theorem proves essential boundedness but does not establish continuity for arbitrary measurable input densities."
+}

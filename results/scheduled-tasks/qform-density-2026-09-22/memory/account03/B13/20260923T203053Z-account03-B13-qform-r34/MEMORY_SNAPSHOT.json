@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260923T203053Z-account03-B13-qform-r34",
+  "source_control_initial_commit": "77fe4a7f70c14c189f91a24a2daff2fee18e8295",
+  "source_control_prepublication_commit": "9e082e796b525fd257fe16163c4d4ce320593dec",
+  "owner_control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_qform_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "partner_result_applied": {
+    "account_slot": "account04/B13",
+    "source": "yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e:proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260923T201653Z-account04-B13-extremal-slab-dichotomy-r1/REPORT.md",
+    "result": "optimizer-free cap-one product reduction plus diffuse exact-rank-two slab dichotomy",
+    "application": "for the selected diffuse pivot, combine |A_kk det Lambda|<=1536 e^2 rho^-4 with the new leave-one-out DPP disjointness floor delta_k>=1/512 when A_kk!=0; A_kk=0 is already the near-null branch"
+  },
+  "premises": [
+    "account01/B13 Schur normalization: after a nonzero physical pivot k in A=D+U Lambda U^T, the normalized leave-one-out rank-two frame has leverage tilde c_i<=c_i/(1-c_k)",
+    "Cauchy-Binet for a rank-two Parseval frame: q_ij=det(w_i,w_j)^2 is a probability law",
+    "elementary weighted-edge disjointness counting"
+  ],
+  "new_result_ids": [
+    "QFORM-WEIGHTED-PAIR-STAR-TRIANGLE-STABILITY-v1",
+    "QFORM-RANK2-DPP-STAR-TRIANGLE-STABILITY-v1",
+    "QFORM-RANK2-DPP-DIFFUSE-DISJOINTNESS-FLOOR-v1"
+  ],
+  "new_result_summary": "For any probability law on physical pairs with disjointness delta, either a star or a triangle carries at least 1-2 delta^(1/3) mass. For a rank-two Parseval frame this forces either a near-coloop with s2 after deletion <=sqrt(2) delta^(1/6), or three-coordinate concentration with outside Frobenius-square <=4 delta^(1/3). If maximum leverage <=q0<=2/3 then delta >=(2-3q0)^3/64; in particular leverage <=1/2 gives delta>=1/512. Applied to account04/B13's diffuse exact-rank-two slab endpoint, every nonzero selected pivot has delta_k>=1/512 while |A_kk det Lambda|<=1536 e^2 rho^-4.",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "7ebaff80e4d6d1c5c45a561d1ff17a87cfd7a052",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T203053Z-account03-B13-qform-r34/REPORT.md",
+  "clarification_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T203053Z-account03-B13-qform-r34/ADDENDUM.md",
+  "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T203053Z-account03-B13-qform-r34/CHECK_OUTPUT.txt",
+  "check_terminal": "QFORM_B13_R34_PAIR_VOLUME_STABILITY_CHECK_PASS",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B13/20260923T203053Z-account03-B13-qform-r34.md",
+  "unresolved_implication": "QFORM-STABLE-DPP-OR-FINITE-CENTER-TWIST-GLUE-v1",
+  "next_step": "Combine r33's at-most-four-hub diagonal-plus-symmetric-rank-two-plus-E normal form, with rho||E||F->0, with the new DPP stability: diffuse carrier gives uniform disjointness, collapsed disjointness gives one-coloop or three-coordinate carrier. Retain E inside a product-preserving receiver rather than deleting it on rough unbounded supports."
+}

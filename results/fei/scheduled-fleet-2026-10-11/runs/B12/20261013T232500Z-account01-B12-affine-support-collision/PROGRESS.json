@@ -1,0 +1,66 @@
+{
+  "schema": "fei-progress/2",
+  "run_id": "20261013T232500Z-account01-B12-affine-support-collision",
+  "stream": "B12",
+  "account": "account01",
+  "primary_packet_id": "A058",
+  "packet_ids": ["A058"],
+  "attempt_id": "A058-AFFINE-SUPPORT-COLLISION-03",
+  "attempt_counter": 3,
+  "gap_id": "B12-A058-SHARED-COORDINATE-OVERLAP",
+  "prior_status": "The natural signed endpoint potential and every fixed query grouping were refuted by a non-affine signed-support tensor family; a joint support/sign correction was required.",
+  "new_status": "AFFINE_SUPPORT_COLLISION_AND_SHARP_TRANSVERSE_SOURCE_PAYMENT_PROVED; UNIVERSAL_UNSIGNED_SUPPORT_CORRECTION_REFUTED; GENERAL_OVERLAP_OPEN",
+  "mathematical_delta": "Proved annihilator-coset entropy payment E(Fq)<=H(F)+E(q) for every affine support; proved exact signed-support entropy formula and sharp E(b)<=4I(b) when all coordinates are transverse. Reconstructed X007 to refute the unrestricted correction exactly.",
+  "claim_versions": [
+    "B12-A058-AFFINE-SUPPORT-COLLISION-v1",
+    "B12-A058-TRANSVERSE-AFFINE-SOURCE-FEI-v1",
+    "B12-A058-UNSIGNED-SUPPORT-CORRECTION-v1",
+    "B12-A058-SHARED-COORDINATE-OVERLAP-v4"
+  ],
+  "source_pins": {
+    "owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "preceding_canonical_delivery": "619b406af35b14bdaf34386193d70a48467025cb",
+    "preceding_brain_delivery": "24a5edf4256acfbdde994bf65d1105b993d2a2c8",
+    "x007_corrected_package_commit": "67c4459ae0e8ae85a228c7a5c2629f003910139b",
+    "x007_witness_blob": "41c3dba9c8330576fa327eb28ddd64f2cafa1b0e",
+    "current_open_problems_head_inspected": "0be4846c7c492605845b82593fb8feca792be343",
+    "current_brain_head_inspected": "110bcaf0f319df30bcb62dcdca48f8b0fe6bbda9"
+  },
+  "case_extension": {
+    "previous_positive_class": "character-only shared cores",
+    "new_positive_class": "arbitrary signings on restriction-hereditary affine disagreement supports, with sharp constant 4 when every physical coordinate is transverse",
+    "previous_general_bound": "none; natural potential negative",
+    "new_bound": "E(Fq)<=H(F)+2r2^{-r}; E(b)=2r2^{-r}+2^{-r}H(rho); E(b)<=4I(b) under transversality",
+    "parameter_dependence": "none in dimension, codimension, density, overlap multiplicity, restriction depth or internal signing"
+  },
+  "verification": {
+    "status": "PASS",
+    "method": "exact rational Walsh transforms, exhaustive small cases, deterministic full-overlap signings, exact prime-exponent reconstruction of X007",
+    "counts": {
+      "affine_collision_cases": 328762,
+      "signed_affine_formula_cases": 131936,
+      "transverse_parity_signing_cases": 1792
+    },
+    "minimum_affine_collision_gap": 0,
+    "largest_sampled_transverse_E_over_I": 4,
+    "sharp_transverse_constant": 4,
+    "x007_support_correction_gap": -0.1226176949919271,
+    "x007_minimum_activation_coefficient": 0.29468213628142254,
+    "output_artifact": "CHECK.out"
+  },
+  "failed_or_refuted_approaches": [
+    "Replacing E(b) by E(|b|) repairs the saved six-point witness but is not universally valid; corrected X007 gives a strict seven-bit falsifier.",
+    "Random survival through six variables was not used as evidence once the structured obstruction registry identified X007.",
+    "A correction cH(2q-1) cannot use c<0.294682136281410 on the exact X007 witness."
+  ],
+  "remaining_obstacle": "Decompose arbitrary disagreement supports into affine pieces with a posterior mixture cost paid once, or derive a non-recharged activation credit surviving X007 and the preceding signed-mask tensor family.",
+  "next_action": "After three A058 mechanisms, pivot within the same gap: formulate an affine-piece posterior decomposition and test whether its label entropy is bounded by one physical boundary-influence budget rather than by affine-piece count or hierarchy depth.",
+  "consumer_targets": ["A057", "A059", "A060", "B09", "B18", "B19", "B20"],
+  "reviewer_targets": ["A091", "A090", "A094"],
+  "independent_review": "NONE_OBSERVED",
+  "canonical_delivery": "8940313e3b3d42fe03defa9f1d763ffd7af1b298; 10_OF_10_FILES_NONEMPTY_AND_EXACT",
+  "brain_handoff_delivery": "72d1e1749a5b578479cfc3b32ebd22e05192666a; 10_OF_10_FILES_NONEMPTY_AND_EXACT",
+  "native_ingestion": "NOT_OBSERVED",
+  "packet_completion_status": "IN_PROGRESS",
+  "full_fei_status": "OPEN"
+}

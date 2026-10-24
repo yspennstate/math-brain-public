@@ -1,0 +1,13 @@
+# FINISH
+account: account04
+slot: B14
+run: 20260922T232942Z-account04-B14-schur-threshold-r5
+finished_at_utc: 2026-09-22T23:42:35Z
+outcome: LOCALIZED_CORE_THEOREM_PROVED
+full_target: OPEN_NOT_PROVED
+continuity: SEPARATE_FIXED_INSTANCE_C0_ONLY
+math_commit: bf4eb19f766bcd656e4b29b086c70734559ce083
+math_blob: 7d2046b4d88f0ff7fb9275bb7dc14d72cc016019
+execution: WITHOUT_VERIFIED_BRAIN
+scheduler_mutation: none
+notification_mutation: none

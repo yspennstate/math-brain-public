@@ -1,0 +1,12 @@
+{
+  "helper_version": "occupancy_check.py v1 (independent truth-table restriction and Walsh implementation)",
+  "family": "A092 F_m shared AND controller, parity/AND/constant arms on shared u,v; baseline controller-first and data-first u then controller tree",
+  "domain": "pilot m=1; main actual tables m=1,...,6; formula-only KL certificates m=10,16,24,40,80",
+  "case_count": "pilot 2 trees; main 12 actual trees plus 5 scalar formula certificates",
+  "symmetry": "none",
+  "arithmetic": "integer Walsh transforms, Fraction probabilities, rational 64-term atanh bounds with proved tail; no floating sign",
+  "memory_estimate_MB": 80,
+  "maximum_runtime_seconds": 60,
+  "dimension_escalation": false,
+  "notes": "formula-only parameters do not construct truth tables; infinite extension proved separately"
+}

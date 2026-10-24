@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B08",
+  "run_id": "B08-20260922T153820Z-r12",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit": "a024fc6d01d9af0a0503bd76732e41014c3166a4",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "result_id": "QFORM-DIFFUSE-APPROX-BLOCK-STABILITY-v1",
+  "full_target_status": "OPEN",
+  "corrections_consumed": {
+    "inbox_blob": "2ee621225465e603dfd118f6bd86b1ddc853f40e",
+    "required": [
+      "QFORM-POINTWISE-DECAY-FALSE",
+      "QFORM-FIBER-SUP-DIMENSION-LOSS",
+      "QFORM-NO-INDEPENDENCE-AFTER-ROTATION"
+    ]
+  },
+  "mathematical_premises": [
+    {
+      "name": "account03/B08 QFORM-DIFFUSE-BLOCK-REMAINDER-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "55d185b63ba44f172d9342b5d89e0875e850e17a",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260922T122924Z-account03-B08-qform-diffuse-v2/REPORT.md",
+      "scope_used": "whole-block coloring of a Parseval selected frame with Gram lower bound alpha=(1-sqrt(3mu))/2"
+    },
+    {
+      "name": "QFORM-RIDGE-DENSITY-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "9c1167db05c7b0f520f060796fde921ed769a4e7",
+      "path": "proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md",
+      "scope_used": "ridge-leverage perturbation inequality and three-singular-value density bound"
+    },
+    {
+      "name": "account03/B08 QFORM-FULLRANGE-DIFFUSE-OPTIMIZED-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f6bc73f719d1e9dbcaeb06df49913bb84dd274b6",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260922T142426Z-account03-B08-qform-diffuse-v3/REPORT.md",
+      "scope_used": "comparison only: explicit full-rank family lies outside full-range leverage hypothesis"
+    }
+  ],
+  "new_result": {
+    "statement": "After conditioning original coordinates H and whitening the surviving selected rank-three frame, if the spectral remainder compression is block diagonal up to operator perturbation E with parameters eta, mu, tau satisfying rho=alpha(1-eta)-tau>0 and (sqrt(mu/alpha)+sqrt(6)tau/rho)^2<=1/2, alpha=(1-sqrt(3mu))/2, then ||p_Q||inf<=9sqrt(3e)/(2rho) and the density is continuous C0.",
+    "clean_corollary": "eta<=1/4, mu<=1/48, tau<=1/40 implies ||p_Q||inf<(720/41)sqrt(3e)<51.",
+    "explicit_family": "n=256 Hadamard selected frame, Lambda=diag(1,1,-1), C=(1/40)(I-RR^T), gives full-rank dense remainder and ||p_Q||inf<(720/61)sqrt(3e)<34.",
+    "canonical_math_commit": "c1c6ffe8c742cbba7611b5a3f1d73cf71019f47b",
+    "report_blob": "c1371008364fec2e5703440827b3be6e2d88d07a",
+    "checker_commit": "f19e67dfda23900a1e0f47320fcd7aaaafed0f77",
+    "checker_output_commit": "391c94fdca1f2972938a94ccc573514306b143ed"
+  },
+  "unresolved_implication": "QFORM-DIFFUSE-APPROX-BLOCK-EXTRACTION-v1: extract such an approximate block decomposition after bounded selected-mass conditioning, or derive a direct aggregate ridge/cross-block certificate from failure of every such decomposition.",
+  "next_step": "Analyze arbitrary spectral remainder C through approximate block decompositions in operator norm; quantify whether no low-mass block approximation forces a cut with ridge effective dimension >2 and controlled ridge diagonal.",
+  "handoff_commit": "2be915656a75aa5807983d2652cf5af443ff33bf"
+}

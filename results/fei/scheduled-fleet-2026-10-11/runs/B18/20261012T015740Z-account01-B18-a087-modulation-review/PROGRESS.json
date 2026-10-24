@@ -1,0 +1,47 @@
+{
+  "schema": "fei-run-progress/2",
+  "run_id": "20261012T015740Z-account01-B18-a087-modulation-review",
+  "stream": "B18",
+  "primary_packet_id": "A087",
+  "packet_ids": ["A087"],
+  "attempt_id": "A087-MODULATION-REVIEW-2",
+  "attempt_counter": 2,
+  "claim_versions": [
+    "B06-A027-MODULATION-BLOCK-HIERARCHY@1",
+    "B18-A087-POINT-DEFECT-CONSTANT-4@1"
+  ],
+  "gap_versions": ["G-ADAPTIVE-BLOCK-PAYMENT@1"],
+  "source_versions": {
+    "contract_blob": "e6e014bc066a2f8b0454a1944ef6e03b969a5690",
+    "protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "packet_status_blob": "1beba565780ac4c3c1f28a00b20ca4d5e4e59ebb",
+    "claim_registry_blob": "bceaed2294e4dab574d363750858c6d3866137f8",
+    "obstruction_registry_blob": "e111933338dff1d7798c5e59b43700bbf30f7b96",
+    "B06_report_blob": "b60891374b632476414b559358d6581fef43804a",
+    "B06_proof_blob": "9927e481b42d747006b834a68f070ed208180019",
+    "B06_checker_blob": "2cbb1ea3a91e06c951889ccc76a3c034b9750dbd"
+  },
+  "prior_status": "B06 contributor-proved a finite-depth modulation-block hierarchy with point-defect auxiliary constant 9/2; independent review pending.",
+  "new_status": "The modulation theorem is independently accepted at its exact restricted scope. A new contributor proof sharpens the point-defect constant to the asymptotically sharp value 4; that sharpening awaits fresh review.",
+  "mathematical_delta": "Reconstructed the full physical-child and influence ledger, certified noncircular finite-depth closure, and improved the nonlinear hierarchy constant from 9/2 to 4.",
+  "acceptance_evidence": [
+    "RESTRICTION_REVIEW.md",
+    "RESTRICTION_GAPS.json",
+    "POINT_DEFECT_SHARPENING.tex",
+    "independent_modulation_review.py",
+    "CHECK.out"
+  ],
+  "remaining_obstacle": "No universal proper block or compensator controls the nonzero mixing term when branch squared spectra differ; bent splices and shared-sign FEI-hardness remain active.",
+  "consumers": ["A028", "A029", "A065", "A089", "A094", "A096", "A097"],
+  "reviewers": ["A094", "A085"],
+  "next_action": "A089 should repair the first unequal-branch block with a paid mixing/terminal compensator; A094 or A085 should independently review the new constant-4 sharpening.",
+  "delivery": {
+    "canonical_saved": true,
+    "brain_mirrored": true,
+    "readback_verified": true,
+    "independent_review": "B06_TARGET_ACCEPTED; B18_SHARPENING_PENDING_FRESH_REVIEW",
+    "native_ingestion": false
+  },
+  "full_fei_status": "OPEN"
+}

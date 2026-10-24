@@ -1,0 +1,184 @@
+\chapter{Formulas for variance and concentration}
+In this chapter, we introduce the  critical exponents of the model and relations between them. The starting points are precise formulas for  fluctuations  of the partition function (variance and large deviations).
+%%
+\section{The critical exponents}
+ There are different ways of defining the critical exponents, see for example \cite{Chatterjee-scaling,LiceaNewPiza}. We will not enter the finest details, and we stay at an intuitive level.
+ Although it is not clear that these definitions are all equivalent, the main idea is that the critical exponents are two reals $\xi^{\perp}$ and $\xi^{\parallel}$ such that
+\begin{equation}
+\sup_{0\leq s \leq t} |B_s| \approx t^{\xi^{\perp}(d)} \quad \text{and} \quad \ln Z_t - \IP[\ln Z_t] \approx t^{\xi^{\parallel}(d)} \quad \text{as} \  t\to\infty.
+\end{equation}
+The "wandering exponent" $\xi^{\perp}$ is the exponent for the asympotic transversal (or "perpendicular") fluctuations of the path, with respect to the time axis.
+%Under the P2P measure, it measures the deviation of the polymer path from the 
+ The polymer is said to be \emph{diffusive} when $\xi^{\perp} = 1/2$ (as for the brownian motion), and it is said to be \emph{super-diffusive} when $\xi^{\perp} > 1/2$. One of the conjectures in polymers is that diffusivity should occure in weak disorder, while super-diffusivity should take place in the strong disorder setting. The number $\xi^{\parallel}$ denotes the critical exponent for the longitudinal fluctuation of the free energy.
+
+The study of these exponents goes beyond the polymer framework. 
+The reason is that they are expected to take the same value in many different  statistical physics models describing growth phenomena.  In dimension $d=1$ 
+this family is called the KPZ universality class (see Section \ref{sec:IR}). It is conjectured in the physics literature \cite{KrugSpohn} that the two exponents should depend on one other, in the way that
+\begin{equation}
+\xi^{\parallel}(d) = 2 \xi^{\perp}(d) - 1, \forall d\geq 1
+\end{equation}
+Under a certain definition of the exponents, the relation was proved by Chaterjee \cite{Chatterjee-scaling} for first-passage percolation. Auffinger and Damron were able to simplify Chatterjee's proof and extend the result to directed polymers \cite{AuffingerDamron-sc,AuffingerDamron13}.
+
+In dimension $d=1$, it is conjectured that $\xi^{\perp}=2/3$ and $\xi^{\parallel}=1/3$ for any positive $\b$. For now, this has only been proven for solvable models of polymers: Sepp\"al\"ainen's discrete log-gamma polymer \cite{Sepp12}, O'Connell-Yor semi-discrete polymer \cite{MorenoSeppValko,SeppValko10}, and also for the the KPZ polymer \cite{BalaszQuastelSeppalainen11}. 
+
+
+In dimension $d \geq 2$, essentially nothing is known. Let's simply mention the (rough) bounds
+$$
+0 \leq \xi^\parallel \leq 1/2\,,\quad 1/2 \leq \xi^\perp \leq 3/4\,,
+$$
+where the last one will be proved in section \ref{ch:CM}.
+
+A way to approach $\xi^{\parallel}$ is to consider the variance of  $\ln Z_t$.
+In what follows, we give a formula to express the variance of $\ln Z_t$ in terms of a stochastic integral, which is obtained through a Clark-Ocone type martingale representation.
+
+\section{The Clark-Ocone representation}
+It is a consequence of It\^o's work on iterated stochastic integrals \cite{ito1951multiple} any that square-integrable functionals of the Brownian motion can be written as the sum of a constant and an It\^o integral. In \cite{clark1970representation}, Clark extended this result to a wider range of functionals, and showed that any martingale that is measurable with respect to the Brownian motion filtration, could be represented as a stochastic integral martingale. Clark was also able to compute the integrand of the representation, for a special class of functionals. Ocone then showed \cite{ocone1984malliavin} that this computation was linked to Malliavin's calculus, and generalised this idea to a larger class of functionals.
+
+Such representations - called Clark-Ocone representations - also exist in the framework of functionals of a Poisson processes. 
+%Starting in the end of the 90's, several papers
+%\cite{picard1996formules,wu2000new,ane2000logarithmic}
+% showed that this was the case for particular choices of Poisson processes. In \cite{LAST20111588}, Last and Penrose proved a Clark-Ocone type martingale representation formula for general Poisson processes. In their paper, they also treated the particular case of a Poisson process $\om$ on $\mathbb{R}_+\times \mathbb{R}^d$. 
+Denote by $\om_{s-}$ the restriction of $\om$ on $[0,s)\times\mathbb{R}^d$, and consider the derivative operator
+\begin{equation}
+D_{(s,x)}F(\om) := F(\om + \delta_{s,x}) - F(\om).
+\end{equation}
+We have:
+\begin{theorem} \textup{\cite[theorem 3.1]{LAST20111588}}
+Let $F=F(\om)$ be a functional of the Poisson process, such that $\IP[F^2]<\infty$. Then,
+\begin{equation}
+\IP \int \IP[D_{(s,x)}F(\om)|\om_{s-}]^2 \rmd s \rmd x < \infty,
+\end{equation}
+and we have for all $u\geq 0$, that $\IP$-a.s.
+\begin{equation}
+\IP[F(\om)|\om_u] = \IP[F(\om)] + \int_{[0,u]\times \mathbb{R}^d} \IP[D_{(s,x)} F(\om) | \om_{s-}] \bar \om (\rmd s \rmd x).
+\end{equation}
+\end{theorem}
+This proves that the square integrable martingale $(\IP[F(\om)|\om_u])_{u\geq 0}$ admits a stochastic integral martingale representation, with predictable integrand $\IP[D_{(s,x)} F(\om) | \om_{s-}]$.
+
+\section{The variance formula}
+To lighten the writing, we will denote by $\mathcal{G}_{s-}$ the sigma-field generated by $\om_{s-}$ and $\IP^{\mathcal{G}_{s-}}$ will stand for the expectation knowing $\mathcal{G}_{s-}$.
+
+Using Jensen's inequality and Tonelli's theorem, it is easy to check that $\ln Z_t$ is a square integrable function of $\om$. Hence, the process $\big(\IP[\ln Z_t|\om_u]\big)_{u\in[0,t]}$ is a martingale which admits a Clark-Ocone type representation:
+\begin{equation} \label{eq:ClarKRepresentationLogZt}
+\IP[\ln Z_t|\om_u] = \IP\left[\ln Z_t\right] + \int_{[0,u]\times\mathbb{R}^d} \IP^{\mathcal{G}_{s-}}\left[D_{(s,x)}\ln Z_t\right] \bar{\om}(\rmd s \rmd x),
+\end{equation}
+where
+\[D_{(s,x)}F(\om) = \ln \frac{P\left[e^{\b\om(V_t)}e^{\b \chi_{s,x}}\right]}{Z_t}  = \ln \left(1+\lambda \gibbs[\chi_{s,x}]\right).\]
+As a consequence, one can express the variance of $\ln Z_t$ via \eqref{eq:ClarKRepresentationLogZt}, using the formula for the variance of a Poisson integral \eqref{eq:MartingaleVarianceFormula}, and find that
+\begin{equation} \label{eq:varFormula}
+\mathrm{Var} (\ln Z_t) = \IP \int_{[0,t]\times\mathbb{R}^d} \IP^{\mathcal{G}_{s-}}\left[\ln \left(1+\lambda \gibbs[\chi_{s,x}]\right)\right]^2 \nu \hspace{0.5mm} \rmd s \rmd x.
+\end{equation}
+
+This variance formula leads us to the following theorem:
+\begin{theorem} \label{th:var}
+\begin{enumerate}[label=(\roman*)]
+  \item The following lower and upper bounds on the variance hold:
+  \begin{align}
+\mathrm{Var} (\ln Z_t) &\geq c_-^2 \IP \int_{[0,t]\times\mathbb{R}^d} \IP^{\mathcal{G}_{s-}}\big[ \gibbs [\chi_{s,x}] \big]^2 \, \nu \hspace{0.5mm} \rmd s \rmd x,\\
+\mathrm{Var} (\ln Z_t) &\leq c_+^2 \IP \int_{[0,t]\times\mathbb{R}^d} \IP^{\mathcal{G}_{s-}}\big[ \gibbs [\chi_{s,x}] \big]^2 \, \nu \hspace{0.5mm} \rmd s \rmd x, \label{eq:IneqVar}
+  \end{align}
+where $c_- = 1 - e^{-|\b|}$ and $c_+ = e^{|\b|}-1$.
+
+In particular,
+  \begin{equation}
+  \mathrm{Var} (\ln Z_t) \leq c_+^2 \, t \nu \, \IP[J_t]. \label{eq:var_bound}
+  \end{equation} 
+  \item Letting $c=\nu c_+^2 \exp(c_+)$, the following concentration estimate holds:
+  \begin{equation} \label{eq:concentrationlogZt}
+  \IP\left(\big|\ln Z_t - \IP[\ln Z_t]\big| > u\right) \leq 2\exp\left(-\frac{1}{2}(u\wedge\frac{u^2}{ct})\right).
+  \end{equation}
+\end{enumerate}
+\end{theorem}
+\begin{remark} Recalling Theorem \ref{th:asymptOfJt}, the inequality \eqref{eq:var_bound} suggests that the variance should be smaller in weak disorder than in strong disorder. It also shows that for all $d\geq 1$, we have $\xi^{\parallel}(d)\leq 1/2$.
+\end{remark}
+\begin{proof}
+The two first bounds on the variance are a consequence of the fact that, for all $u\in [0,1]$, we have 
+\begin{equation}\label{eq:LogBound}
+c_- u \leq |\ln(1+\lambda u)| \leq c_+ u.\end{equation} Then, apply Jensen's inequality to the conditional expectation in the right-hand side of \eqref{eq:IneqVar} and use Fubini's theorem such that
+\begin{align*}
+\mathrm{Var} (\ln Z_t) &\leq c_+^2 \IP \int_{[0,t]\times\mathbb{R}^d} \IP^{\mathcal{G}_{s-}}\big[ \gibbs [\chi_{s,x}] \big]^2 \, \nu \hspace{0.5mm} \rmd s \rmd x \\
+&\leq c_+^2 \IP \int_{[0,t]\times\mathbb{R}^d} \gibbs [\chi_{s,x}]^2 \, \nu \hspace{0.5mm} \rmd s \rmd x \\
+& = c_+^2 t \nu \, \IP[J_t],
+\end{align*}
+by definition of $J_t$. This completes the proof of (i).
+To prove \eqref{eq:concentrationlogZt}, we first denote by $Y_{t,u}$ the mean-zero martingale part appearing in \eqref{eq:ClarKRepresentationLogZt}, i.e.
+\[Y_{t,u} := \int_{[0,u]\times\mathbb{R}^d} \IP^{\mathcal{G}_{s-}}\ln \left(1+\lambda \gibbs[\chi_{s,x}]\right) \bar{\om}(\rmd s \rmd x).\]
+Then, letting $\varphi(v)=e^v - v - 1$ and $a\in [-1,1]$, we define $(M_{t,u})_{u\in[0,t]}$ as the exponential martingale associated to $(Y_{t,u})_{u\in[0,t]}$:
+\[M_{t,u}=\exp\left(aY_{t,u}-\int_{[0,u]\times \mathbb{R}^d}  \varphi\left(a \cdot\IP^{\mathcal{G}_{s-}}\ln \big(1+\lambda \gibbs[\chi_{s,x}]\big)\right) \, \nu \hspace{0.5mm} \rmd s \rmd x\right).\]
+By \eqref{eq:LogBound} and the observations that $\chi$ is less than $1$ and that $|\varphi(v)|\leq e^{|v|} v^2/2$ for all $v$, we have for $a\in[-1,1]$
+\begin{align*}\left| \int_{[0,t]\times \mathbb{R}^d}  \varphi\left(a \cdot\IP^{\mathcal{G}_{s-}}\ln \left(1+\lambda \gibbs[\chi_{s,x}]\right)\right) \, \nu \, \rmd s \rmd x \right| 
+&\leq e^{c_+} \frac{c_+^2 a^2}{2} \int_{[0,t]\times\mathbb{R}^d} \IP^{\mathcal{G}_{s-}}\big[ \gibbs [\chi_{s,x}] \big]^2 \, \nu \hspace{0.5mm} \rmd s \rmd x\\
+&\leq c \frac{a^2}{2} \int_{[0,t]\times\mathbb{R}^d} \IP^{\mathcal{G}_{s-}}\big[ \gibbs [\chi_{s,x}] \big] \, \rmd s \rmd x\\
+&= c \frac{a^2}{2}t,
+\end{align*}
+where $c = \nu c_+^2 e^{c_+}$ and where the second inequality was obtained using Jensen's inequality. 
+
+If one denotes by $b_{t,u}$ the integral term in the definition of $M_{t,u}$, we just showed that $b_{t,t} \leq c a^2t/2$, so by Markov's inequality and the martingale property, we obtain that
+\begin{equation}
+\IP\big(\ln Z_t - \IP[Z_t] > u\big) = \IP\big(M_{t,t} > \exp(au-b_{t,t})\big)
+\leq \exp(c a^2t/2 - au).
+\end{equation}
+This implies \eqref{eq:concentrationlogZt} after minimizing the bound for $a\in[-1,1]$, and repeating the same procedure for the lower deviation.
+\end{proof}
+
+From the concentration estimate, one can derive the following almost sure behavior:
+\begin{corollary} \label{cor:var1}
+For all $\varepsilon>0$ and as $t\to \infty$,
+\begin{equation} \label{eq:OrderOfCenteredlogZt}
+\ln Z_t - \IP[\ln Z_t] = \mathcal{O}\left(t^{\frac{1+\varepsilon}{2}}\right), \quad \IP\text{-a.s.} 
+\end{equation}
+\end{corollary}
+\begin{proof}
+Equation \eqref{eq:concentrationlogZt} implies that for large enough $k\in\mathbb{N}$,
+\begin{equation}
+\IP\left[|\ln Z_k - \IP \ln Z_k|> k^{\frac{1+\varepsilon}{2}}\right] \leq 2\exp\big(-\frac{t^{\varepsilon}}{2c}\big),
+\end{equation}
+which is summable. By Borel-Cantelli lemma, we obtain that,  $\IP$-almost surely,
+$$|\ln Z_k - \IP[\ln Z_k]| \leq k^{\frac{1+\varepsilon}{2}}\qquad {\rm for\ } k {\rm \ large\ enough.}
+$$ 
+To extend this to any $t\geq 0$ and prove \eqref{eq:OrderOfCenteredlogZt}, it suffices to apply the next lemma.
+\end{proof}
+\begin{lemma} Let $h>0$. For all $0\leq s \leq h$,
+\begin{equation} \label{eq:BoundOnZt+s-Zt}
+-c_+ \delta_t(h) \leq \ln Z_{t+s} - \ln Z_t \leq c_+\delta_t(h),
+\end{equation}
+where
+\[\delta_t(h)=\int_{[t,t+h]\times\mathbb{R}^d} P_{s-}^{\b,\om}[\chi_{s,x}] \om(\rmd s \rmd x),\]
+is such that for any $\varepsilon > 0$,
+\begin{equation}\label{eq:deltah}\delta_t(h)=\mathcal{O}\big(t^{\frac{1+\varepsilon}{2}}\big), \quad \IP\text{-a.s.}\end{equation}
+\end{lemma}
+\begin{proof} We get from the integral writing of $\ln Z_t$ \eqref{eq:logZtIntRepresentation} that
+\[\ln Z_{t+s} - \ln Z_t = \int_{[t,t+h]\times\mathbb{R}^d} \om(\rmd s \rmd x) \ln \big(1+\lambda P_{s-}^{\b,\om} [\chi_{s,x}]\big).\]
+Hence, \eqref{eq:BoundOnZt+s-Zt} is simply obtained with \eqref{eq:LogBound}.
+
+Now, introduce the martingale
+\[M_t = \int_0^t \om(\rmd s \rmd x) P_{s-}^{\b,\om}[\chi_{s,x}] - \nu r^dt,\]
+which has bracket ${\langle M \rangle_t}=\nu\int_0^t I_s \rmd s \leq \nu r^d t$. Note that $\delta_t(h) = M_{t+h}-M_t + h$, so that \eqref{eq:deltah} is thus a consequence of the martingale properties
+\eqref{eq:BracketImpliesCV} and
+\eqref{eq:InfiniteBracket}, since in the case where $\langle M \rangle_\infty$ is infinite, then $|M_t| = o\big(\langle M \rangle_t^{\frac{1+\varepsilon}{2}}\big)$ as $t\to\infty$.
+\end{proof}
+%%%
+%[??? corollaire a garder? remarque a supprimer]
+In order to illustrate the general strategy, we now mention a consequence of theorem \ref{th:var} (i). 
+
+
+\begin{corollary} \label{cor:var2} Let $\b\neq 0$, $\xi$ and $C>0$. There exists a constant $c_1 = c_1(d,C)\in(0,\infty)$, such that 
+\begin{align*} \liminf_{t\to\infty}t^{-(1-d\xi)}\mathrm{Var}(\ln Z_t) &\geq c_1 \liminf_{t\to\infty} \inf_{0\leq s \leq t} \left(\IP \gibbs\left(|B_s|\leq C + Ct^\xi\right)\right)^2\\
+&\geq c_1 \liminf_{t\to\infty} \left(\IP \gibbs\left(\sup_{0\leq s \leq t} |B_s| \leq C + Ct^\xi\right) \right)^2.
+\end{align*}
+\end{corollary}
+The result suggests that 
+$$
+\chi(d) \geq \frac{1-d\xi(d)}{2}.
+$$
+For more details on the result and the proof, we refer the reader to Corollary 2.4.3 in \cite{CY05}.
+%\begin{remark}
+%This suggests in particular that for $\b\neq 0$,
+%\begin{equation}\nn
+%\chi(d) \geq \frac{1-d\xi(d)}{2}.
+%\end{equation}
+%Note that it is not the case when $\b = 0$ [??? since $\chi(d)=-\infty$] , and that the expected relation  would be [??? ref relation entre exposants, lien entre les deux?]
+%\end{remark}
+%\begin{proof}
+%
+%\end{proof}

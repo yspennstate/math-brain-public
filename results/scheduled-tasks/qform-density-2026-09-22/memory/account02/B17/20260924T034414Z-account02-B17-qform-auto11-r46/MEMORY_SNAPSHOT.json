@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "20260924T034414Z-account02-B17-qform-auto11-r46",
+  "execution_context": "authenticated_repository_retrieval_and_receiver_use; native learned-memory ingestion not claimed",
+  "source_control": {
+    "initial_brain_main": "69b4fbda3260d8fd5a8b7e406d7eac393f575360",
+    "prepublication_brain_main": "d84f7b6aa0e2012139c1bfea4a0cdf9216bde659",
+    "pinned_math_source": "e5f71d79eff325201dd0274053d20268ce65b837"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "new_claim": {
+    "id": "QFORM-ZEROPIVOT-THREEVAR-SHARP-BARRIER-v1",
+    "status": "SUPPORTING_TARGET_LEVEL_THEOREM_PROVED_IN_WORKER_REPORT_PENDING_INDEPENDENT_REVIEW",
+    "statement": "For arbitrary independent cap-one X,Y,Z and any symmetric 3x3 A with all three eigenvalue magnitudes >=1 and at least one zero physical diagonal entry, ||p_(X^TAX)||_infinity <= sqrt(2)[2+log(sqrt(2)+1/3)] = 3.617859563383761... < 3sqrt(2). Arbitrary affine terms cost nothing. Scaling gives C0/s for a three-coordinate block with spectral floor s.",
+    "mechanism": "Align the two physical hub edges by an orthogonal integration change in the two nonpivot coordinates without asserting independence; retain the joint cap and a sqrt(2) marginal cap. Root-integrate the original independent zero-pivot coordinate, combine a marginal-mass bound with a parabola-preimage bound, optimize by exact one-dimensional water filling, then pay L>=1 and |kappa|>=L^-2 directly from the target spectrum."
+  },
+  "explicit_witness_obstruction": {
+    "matrix": "[[0,1,1],[1,0,1],[1,1,0]]",
+    "spectrum": "{2,-1,-1}",
+    "global_arbitrary_product_bound": "2+log(7/3)=2.847297860387203...<3sqrt(2)"
+  },
+  "required_source_applied": {
+    "source": "math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 COUNTEREXAMPLE_SEARCH.md Theorem C",
+    "application": "Apply to -A_triangle with (+,+,-) magnitudes (1,1,2): p_(-Q)(s)<=2pi/sqrt(3)=3.627598728...<3sqrt(2) for s>=0."
+  },
+  "partner_result_applied": {
+    "partner": "account03/B17",
+    "run": "20260924T030119Z-account03-B17-QFORM-auto11",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260924T030119Z-account03-B17-QFORM-auto11/REPORT.md",
+    "application": "Its centered-Gaussian strict determinant-slack theorem at v0=1/12,s=1,delta=1 gives the exact comparator peak 2sqrt(3)=3.464101615...<3sqrt(2) for -A_triangle. Comparator scope only; no Gaussian physical-input assumption."
+  },
+  "output_sources": {
+    "math_bundle_commit": "71d4012875c48666917b38bd0754cad18a844f0f",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T034414Z-account02-B17-qform-auto11-r46/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T034414Z-account02-B17-qform-auto11-r46/CHECKS.json",
+    "handoff_commit": "26ab84d74783bdaf5d82e1780e98b3eb53843c8f",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B17/20260924T034414Z-account02-B17-qform-auto11-r46.md"
+  },
+  "unresolved_implication": {
+    "id": "QFORM-GENERIC-ALL-NONZERO-PIVOT-SHARP-WITNESS-v1",
+    "status": "OPEN",
+    "statement": "Within three physical coordinates, attack a generic target-valid all-nonzero-diagonal matrix, especially a near-zero but nonzero pivot with unequal hub edges and independent transverse curvature where no original-coordinate leaf is affine. Higher-dimensional multiscale/shared-row and extra-active-spectrum mechanisms also remain open."
+  },
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_GLOBALLY; NOT_CLAIMED_FOR_ARBITRARY_ROUGH_INPUTS_IN_NEW_BRANCH",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

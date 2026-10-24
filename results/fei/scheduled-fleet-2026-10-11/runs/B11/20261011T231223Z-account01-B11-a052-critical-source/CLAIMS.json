@@ -1,0 +1,30 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B11-A052-CRITICAL-TENSOR-PURITY",
+      "version": 1,
+      "packet_id": "A052",
+      "attempt_id": "A052-CRITICAL-TENSOR-PURITY-1",
+      "gap_id": "G-CRITICAL-SOURCE",
+      "status": "PROVED_STRUCTURAL_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every finite nonconstant Boolean source, a maximum-ratio physical descendant is critical. If a disjoint tensor product F of nonconstant Boolean factors is eta-critical under every physical descendant and w_j=I(f_j)/I(F), then R(F)-(1-w_j)eta/w_j <= R(f_j) <= R(F)+eta and every descendant u of f_j has R(u)<=R(f_j)+eta/w_j. Consequently an exact critical tensor product is precisely a product of equal-ratio critical factors. A one-point surgery of an arbitrary lifted core is nonfactorable across the old/new split while its H, I, and H/I converge to those of the core.",
+      "quantifiers": "All finite uniform Boolean cubes; every nonconstant Boolean source; all finite disjoint tensor factorizations; every eta>=0; all nonconstant physical coordinate restrictions.",
+      "units": "bits for entropy; dimensionless ratio",
+      "hypotheses": [
+        "Uniform cube and genuine {-1,1}-valued functions",
+        "Tensor blocks are disjoint physical coordinate blocks",
+        "Eta-criticality compares with every nonconstant physical descendant"
+      ],
+      "scope_exclusions": [
+        "Not full FEI",
+        "No bounded ratio for prime critical sources",
+        "No claim that one-point surgery preserves criticality",
+        "No pruning of abstract connected support components",
+        "Independent review pending"
+      ],
+      "next_consumers": ["A054", "A055", "A096", "B20"],
+      "independent_reviewers": ["A090", "A094"]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "review_verdicts": [
+    {
+      "source_claim": "A056-DISJOINT-COMPOSITION",
+      "version": 1,
+      "verdict": "ACCEPT_AT_STATED_SCOPE"
+    },
+    {
+      "source_claim": "A056-PHYSICAL-RESTRICTION-SCOPE",
+      "version": 1,
+      "verdict": "ACCEPT_AT_STATED_SCOPE"
+    },
+    {
+      "source": "threshold manuscript Prop 7.1/Cor 7.2",
+      "verdict": "CLOSURE_DERIVATION_ACCEPTED; leaf/gate estimates cited premises"
+    },
+    {
+      "source": "threshold manuscript Prop 8.6/Cor 8.7-8.8",
+      "verdict": "CLOSURE_DERIVATION_ACCEPTED; regular-leaf estimate cited premise"
+    },
+    {
+      "source": "B09 Section 5",
+      "verdict": "NARROW_TENSOR_ADDITIVITY; endpoint necessity requires separate proof"
+    }
+  ],
+  "disjoint_substitution": {
+    "physical_inputs": "independent product laws",
+    "child_blocks": "pairwise disjoint",
+    "induced_probabilities": "q_i=(1+E f_i)/2, exact at every node/restriction",
+    "weights": "I_i^nu(g)/(1-(E f_i)^2), after removing zero-variance children",
+    "invariant": "corrected Hplus <= C (I-Var)",
+    "gate_admission": [
+      {
+        "gate": "symmetric threshold",
+        "input_biases": "all product biases, deterministic coordinates deleted",
+        "constant": "80+460/ln2",
+        "premise": "Theorem 6.6"
+      },
+      {
+        "gate": "parity",
+        "input_biases": "all product biases",
+        "constant": "2/ln2",
+        "premise": "Lemma 7.5"
+      },
+      {
+        "gate": "weighted LTF/regular",
+        "input_biases": "uniform; all nonconstant child outputs balanced",
+        "constant": "4 C_reg",
+        "premise": "Theorem A + D_char<=4(I-Var)"
+      },
+      {
+        "gate": "fixed arbitrary gate basis",
+        "input_biases": "only those covered by separate all-bias gate theorem",
+        "constant": "maximum of separately established constants"
+      }
+    ]
+  },
+  "shared_data": {
+    "physical_inputs": "fresh uniform selector independent of common uniform branch data",
+    "overlap": "arbitrary data overlap admitted, including Fourier support overlap",
+    "correlation": "neighbor correlations zero is sufficient; actual I_sel>=c*a suffices",
+    "constant": "max(4,C) or max(2/c,C); recursive regular leaves C_reg",
+    "forbidden_inference": "current selector reuse without a new identity, arbitrary biased selectors via the uniform formula, uncharged low-energy collision term"
+  },
+  "terminals": {
+    "constant": "H=I=delta=0; freeze/remove before division",
+    "biased_literal": "corrected Hplus=delta=0; raw H=h2(4p(1-p)) is not zero",
+    "uniform_balanced_I_equal_1": "signed dictator, H=0; do not divide by I-1",
+    "zero_current_selector_energy": "all branches identical; use branch directly",
+    "spectral_erasure_zero": "not an entropy terminal; bent splice and parity embeddings retain entropy"
+  },
+  "open": [
+    "all-arity weighted threshold product-bias Hplus estimate",
+    "all-bias prime-gate payment",
+    "signed collision payment at I_sel/a ->0",
+    "controlled current-selector reuse",
+    "B09 endpoint-tax necessary lower bound"
+  ],
+  "full_fei": "OPEN"
+}

@@ -1,0 +1,67 @@
+ledger_delta:
+  native_task_id: "6aa7b4b639a08191b893e2b7dd6cdf59"
+  target_id: "RS-2026-CL-A"
+  report_kind: "RESEARCH"
+  input_snapshot_sha: "1aac5097fd669e57f8f3225abc36b15042fcf35e"
+  exact_source: "Anastasia Kireeva, Randomstrasse 101, Low-degree hardness of finding the largest clique in Erdos-Renyi graph (problems 36-38), posted 2026-06-05, first displayed Open Problem 35"
+  source_url: "https://randomstrasse101.math.ethz.ch/posts/clique-low-degree/"
+  canonical_claim_path: "operations/claims/RS-2026-CL-A.md"
+  canonical_claim_blob: "72d30cb23d145faea9a2654951c7aac41bf21c5d"
+  previous_report_path: "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T11-44-01Z__report.md"
+  previous_report_commit: "77506ff5d3f98e12ece046a22c7365dcc8527213"
+  report_path: "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T12-38-08Z__report.md"
+  report_creation_commit: "ba407ee89bf67608643b12221833c4eb09ede63e"
+  report_readback_blob: "62edc463c97d8e2f62b698624cc320f2e0d573bd"
+  model_requested: "GPT-6"
+  reasoning_requested: "maximum"
+  model_actually_exposed: "GPT-5.6 Sol"
+  reasoning_actually_exposed: "UNVERIFIED"
+  frozen_metric_name: "E_framework"
+  frozen_metric_before: 0
+  frozen_metric_after: 0
+  unchanged_count_before: 1
+  unchanged_count_after: 2
+  stuck_recovery_cycle: 0
+  methods:
+    - id: "B11"
+      name: "DUALIZE"
+      outcome: "Proved a dual high-pass smoothing theorem: for a specified statistic map Phi, sqrt(chi2 of the noised observed law) is at most low-degree advantage plus Gamma_D = ||C_Phi T(I-Pi_D)R_G||_{L1->L2}; this removes the prior run's global pre-noise chi-square budget and makes the extra condition independent of P."
+    - id: "B20"
+      name: "FIND WHY THE ALGORITHM FAILS"
+      outcome: "Showed exactly that Mao forces Gamma_D(identity) to diverge whenever noisy total variation tends to one despite zero low-degree advantage. Also isolated the quantifier pathology that unrestricted measurable postprocessing of an arbitrary low-degree polynomial is too broad because a degree-one polynomial can injectively encode a finite Boolean input."
+    - id: "B4"
+      name: "PROVE SOMETHING WEAKER COMPLETELY"
+      outcome: "Gave a complete graph-specialized criterion for any fixed vector of vertex-relabeling-invariant polynomial statistics: bounded source advantage plus bounded Gamma_D prevents strong distinguishing by every measurable test of that statistic vector; both terms tending to zero imply TV convergence of the statistic law."
+  new_theorem:
+    name: "dual high-pass smoothing criterion"
+    statement_summary: "For P<<Q invariant under G, Q-reversible self-adjoint Markov T, degree projection Pi_D and statistic Phi, sqrt(chi2(Phi#(TP)||Phi#Q)) <= Adv^{<=D}(P,Q) + ||C_Phi T(I-Pi_D)R_G||_{L1(Q)->L2(Phi#Q)}."
+    proof_status: "FULL_PROOF_ON_PAGE"
+    novelty_status: "UNVERIFIED_MAY_OVERLAP_OPERATOR_SMOOTHING_FOLKLORE"
+  finite_structural_result:
+    name: "maximum-column formula"
+    statement_summary: "On a finite full-support null space, Gamma_D equals the maximum L2 norm of the high-pass smoothed observation kernel applied to a point-mass density."
+    proof_status: "FULL_PROOF_ON_PAGE"
+  mathematical_status: "PARTIAL"
+  source_status: "OPEN_IN_BOUNDED_2026-09-17_CHECK"
+  frozen_metric_reason_no_move: "The operator criterion is explicit and non-tautological but has not yet been derived from a broad recognizable structural hypothesis or verified for a materially new graph/hypergraph class beyond existing structured positive regimes; identity observation is provably impossible by Mao."
+  current_literature_checks:
+    - "Kireeva live Randomstrasse source rechecked 2026-09-17; framework box still displayed as open."
+    - "Hsieh-Kane-Kothari-Li-Mohanty-Tiegel, arXiv:2601.05850 / STOC 2026, structured positive implications."
+    - "Songtao Mao, arXiv:2607.20318, submitted 2026-07-22, polynomial-time rank-test counterexample after fixed noise."
+    - "Xuan Chen and Shuangping Li, arXiv:2608.06279, submitted 2026-08-06, planted-subgraph noise/treewidth positive theorem."
+    - "Bounded 2026-09-17 follow-up search recovered no source-complete general characterization; negative search is not a novelty certificate."
+  failed_routes:
+    - "Reuse the global Renyi-2 budget as the main answer: already proved and too strong."
+    - "Identity observation with only symmetry/noise: exactly defeated by Mao; Gamma_D(identity) must diverge."
+    - "Arbitrary postprocessing of arbitrary low-degree polynomial: too broad due injective degree-one encodings on finite Boolean cubes."
+    - "Treewidth as the full framework answer: positive but model-specific."
+    - "Promote bounded Gamma_D immediately to source closure: withheld pending structural verification in broad intended classes."
+  checker_status: "NOT_APPLICABLE_NO_NEW_FINITE_NUMERICAL_CLAIM"
+  audits: []
+  artifact_refs:
+    - "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T12-38-08Z__report.md@ba407ee89bf67608643b12221833c4eb09ede63e"
+  next_methods:
+    - "B14"
+    - "B6"
+    - "B24"
+  next_obligation: "Derive a recognizable representation-theoretic/combinatorial hypothesis implying Gamma_D=O(1) or o(1) for a source-relevant graph/hypergraph polynomial-statistic class beyond already-published special cases, and stress-test it against Mao/Buhai."

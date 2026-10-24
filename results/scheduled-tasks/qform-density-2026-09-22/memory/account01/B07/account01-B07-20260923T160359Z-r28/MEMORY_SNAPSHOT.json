@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "account01-B07-20260923T160359Z-r28",
+  "source_control_commit_start": "04e87941cf9af94419d11e0c4357f0d596d699a9",
+  "source_control_commit_prepublication": "bd44d005fd630b684b3723d4df64f879c3a543c9",
+  "control_revision": "2026-09-22.15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "target_status": "OPEN",
+  "continuity_status": "OPEN_GLOBAL",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-QUADRATIC-HUB-SQRT-SLICE-ONLY-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "ACCOUNT02-B07-STAR-E2-COMPILER",
+      "source": "yspennstate/math-open-problems@5ff9d960bffec400a9d6db422401e4c4df98ce6d",
+      "scope": "physical star/E2 block; dist_F(K,rank<=2) <= (2G_*/S^2)^(1/4)"
+    },
+    {
+      "id": "QFORM-PAIRTAIL-CURVATURE-RECEIVER-v1",
+      "source": "yspennstate/math-open-problems@3e36370502df5afeb00457b74d05cdbfd87168b0",
+      "scope": "actual original-coordinate invertible indefinite principal pair plus disjoint far physical cross tail; essential boundedness"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-RANK2-TUBE-PLUCKER-TV-v1",
+      "statement": "For the complete squared-2x2-minor law W of physical K and product Plucker law W0 of the best rank-two truncation, delta=E2(K)-sigma1^2 sigma2^2 <= ||K||_F^2 T2(K), and TV(W,W0) <= 0.5 sqrt(rho)(1+sqrt(1-rho))+rho/2 <= sqrt(rho)+rho/2, rho=delta/E2(K).",
+      "status": "ANALYTIC_PROOF_SUPPLIED"
+    },
+    {
+      "id": "QFORM-NEARRANK2-DOUBLEHEAVY-MACROMINOR-v1",
+      "statement": "If two physical rows and two physical columns each have top-two singular-plane leverage >=h>1/2, then one fixed physical 2x2 minor has squared determinant >=E2(K)[(2h-1)^2-TV(W,W0)]_+. At h=3/4 and rho<=9/4-sqrt(5), this is >=E2(K)/8.",
+      "status": "ANALYTIC_PROOF_SUPPLIED"
+    },
+    {
+      "id": "PARTNER-APPLICATION",
+      "statement": "The account02/B07 star/E2 compiler implies rho <= (E/Omega)sqrt(2G_*/S^2). Hence G_* <= (rho0^2/2)S^2 Omega^2/E^2 plus double-heavy left/right top-two planes forces a physical 2x2 minor >=Omega/8; otherwise G_* exceeds that explicit scale.",
+      "status": "DESIGNATED_PARTNER_APPLIED_TO_ACTUAL_INEQUALITY"
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "45934a636682207f422de4ab3f94c658030ba1ac",
+    "folder_tip_after_checks": "a2544f4e4387bc08f2bdf85ebad723fc8320db89",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T160359Z-r28/REPORT.md"
+  },
+  "handoff_commit": "a74558745292d529a2136ed0378332e4d3b877c5",
+  "checks": {
+    "status": "PASS_REGRESSION_ONLY",
+    "generic_cases": 1200,
+    "targeted_macro_cases": 1000,
+    "violations": 0
+  },
+  "unresolved_implication": "QFORM-PLUCKER-ONEHUB-OR-MACROEDGE-RANK2-STABILITY-v1",
+  "next_step": "Use the near-product Plucker law. If double-heavy fails, isolate the at-most-one-heavy-coordinate side and feed its determinant-weighted E2 mass into the existing E2-to-E1 shadow / mixed-order half-Riesz receiver; retain the large-diagonal and nonzero rank-two-tail branches explicitly."
+}

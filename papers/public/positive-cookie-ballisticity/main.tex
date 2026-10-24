@@ -1,0 +1,533 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\cx}{\le_{\mathrm{cx}}}
+\newcommand{\icx}{\le_{\mathrm{icx}}}
+\newcommand{\ind}{\mathbf 1}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+\hypersetup{pdftitle={Ballisticity for positive excited random walks without bounded cookie stacks},pdfauthor={Yitzchak Shmalo}}
+\title[Ballisticity without bounded cookie stacks]{Ballisticity for positive excited random walks without bounded cookie stacks}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{13 October 2026}
+\subjclass[2020]{Primary 60K37; Secondary 60J80, 60J10, 60E15}
+\keywords{Excited random walk, cookie environment, ballisticity, branching process, emigration, convex order}
+
+\begin{document}
+\begin{abstract}
+We consider a nearest-neighbour excited random walk on the integers in an iid cookie environment. Every cookie has nonnegative drift, and the environment satisfies weak ellipticity. If $\delta$ is the expected total drift at one site, then the limiting speed is zero for $\delta\le2$ and strictly positive for $\delta>2$. No bound on the number or positions of the non-neutral cookies, and no decay assumption on the stack depth, is required. This answers Problem~5.3 of Kosygina and Zerner. The proof at $\delta=2$ represents each cookie as a mixture of a deterministic right step and a fair step, then moves the deterministic steps to the front of the stack. The resulting branching chain has arbitrary integrable mean-two emigration, with positive probability of no emigration. A convex-order comparison with a three-point emigration law shows that its stationary mean is infinite. For the three-point law, this follows from a generating-function identity. A direct downcrossing argument then gives zero speed.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+An excited random walk changes its transition probabilities according to the number of previous visits to its present site. In one dimension, an environment is an array
+\[
+ p=(p_{x,i})_{x\in\Z,\,i\ge1}.
+\]
+On the $i$th visit to $x$, the walk steps to $x+1$ with probability $p_{x,i}$ and to $x-1$ otherwise. We start the walk at $X_0=0$. Write $\Pp$ for the joint law of the environment and the walk, and $\E$ for expectation under this law.
+
+We assume that the stacks $(p_{x,i})_{i\ge1}$ are iid as $x$ varies and that
+\begin{equation}\label{eq:positive}
+ \frac12\le p_{x,i}\le1\qquad\text{almost surely for every }x,i.
+\end{equation}
+There is no independence assumption between cookies in the same stack. In this setting, the weak-ellipticity condition of Kosygina and Zerner is
+\begin{equation}\label{eq:wel}
+ \Pp\bigl(p_{0,i}<1\text{ for every }i\ge1\bigr)>0.
+\end{equation}
+The right-direction part of weak ellipticity is automatic from~\eqref{eq:positive}. In particular, cookies of strength one are permitted, provided~\eqref{eq:wel} holds.
+
+The drift parameter is
+\begin{equation}\label{eq:delta}
+ \delta=\E\sum_{i\ge1}(2p_{0,i}-1)\in[0,\infty].
+\end{equation}
+The law of large numbers for positive cookie environments gives a deterministic $v\in[0,1]$ such that
+\begin{equation}\label{eq:lln}
+ \frac{X_n}{n}\longrightarrow v\qquad\Pp\text{-almost surely};
+\end{equation}
+see Zerner~\cite[Theorem~13]{Zerner05} and Kosygina--Zerner~\cite[Theorem~4.1]{KZ13}. These results allow infinite stacks.
+
+\begin{theorem}\label{thm:main}
+Under the iid assumption, positivity~\eqref{eq:positive}, and weak ellipticity~\eqref{eq:wel},
+\[
+ v=0\quad\text{if }\delta\le2,
+ \qquad
+ v>0\quad\text{if }\delta>2.
+\]
+The second assertion includes $\delta=\infty$.
+\end{theorem}
+
+For spatially uniform deterministic positive stacks of finite depth, the criterion was established by Basdevant and Singh~\cite{BS08}. Kosygina and Zerner~\cite[Theorem~2]{KZ08} extended it to iid bounded stacks under weak ellipticity, allowing cookies of either sign. Problem~5.3 of~\cite{KZ13} asks whether the bounded-stack assumption in that criterion can be replaced by positivity of every cookie. Theorem~\ref{thm:main} gives an affirmative answer.
+
+Kosygina and Peterson~\cite{KP17} established ballisticity criteria for finite-state Markovian cookie stacks, a class that includes stacks of geometric height. Chakhtoun~\cite{Chakhtoun19} studied environments with unboundedly many excitations under a tail-decay assumption on their number. Theorem~\ref{thm:main} allows arbitrary dependence within a stack and infinitely many non-neutral cookies at a site. For example, consider the deterministic stack
+\begin{equation}\label{eq:example}
+ p_{x,i}=\frac12+\frac{c}{2(i+1)(i+2)},\qquad 0\le c<6.
+\end{equation}
+It satisfies~\eqref{eq:wel}, and $\delta=c/2$. Its speed is therefore zero for $c\le4$ and positive for $4<c<6$.
+
+The critical value $\delta=2$ is the main part of the proof. We first prove an infinite-mean result for a branching chain with arbitrary integrable mean-two emigration. The comparison law is supported on $\{0,2,3\}$, and its stationary generating function yields a short proof of divergence of the mean. This argument uses neither a moment of the emigration law above order one nor a tail estimate for its stationary distribution. Branching processes with geometric emigration arise in the related work of Carper~\cite{Carper26}; the emigration law below is unrestricted subject to its mean and a positive mass at zero.
+
+We then represent each positive cookie as a mixture of a forced right step and a fair step. Moving the forced steps to the front decreases all failure counts. Such comparisons are part of the arrow-system approach of Holmes and Salisbury~\cite{HS12}; the elementary comparison needed here is proved in Section~\ref{sec:walk}. The downcrossing representation, used for cookie walks by Basdevant and Singh~\cite{BS08}, transfers the infinite stationary mean into a hitting-time lower bound. The two remaining drift regimes follow from speed monotonicity and finite modifications of the stacks.
+
+\begin{remark}\label{rem:wel}
+Weak ellipticity cannot be omitted. If the first two cookies at every site have strength one and all subsequent cookies are fair, then $\delta=2$, but $X_n=n$ for every $n$.
+\end{remark}
+
+\section{A branching chain with mean-two emigration}\label{sec:emigration}
+
+Let $N$ be a nonnegative integer-valued random variable satisfying
+\begin{equation}\label{eq:N}
+ \E N=2,\qquad p_0:=\Pp(N=0)>0.
+\end{equation}
+Let $(N_n)_{n\ge0}$ be iid copies of $N$. Independently, let $(\xi_{n,j})_{n\ge0,\,j\ge1}$ be iid with
+\begin{equation}\label{eq:geom}
+ \Pp(\xi_{n,j}=k)=2^{-(k+1)},\qquad k\ge0.
+\end{equation}
+Thus $\E\xi_{n,j}=1$. Define a chain on $\Z_+=\{0,1,\ldots\}$ by
+\begin{equation}\label{eq:chain}
+ Z_{n+1}=\sum_{j=1}^{(Z_n+1-N_n)_+}\xi_{n,j},
+\end{equation}
+where an empty sum is zero.
+
+\begin{theorem}\label{thm:emigration}
+The chain~\eqref{eq:chain} is irreducible, aperiodic and positive recurrent. Its unique invariant law $\pi_N$ satisfies
+\begin{equation}\label{eq:infinite}
+ \sum_{z\ge0}z\pi_N(z)=\infty.
+\end{equation}
+\end{theorem}
+
+\subsection{Positive recurrence}
+
+\begin{lemma}\label{lem:recurrence}
+The recurrence assertions of Theorem~\ref{thm:emigration} hold. Moreover, the transition kernel is stochastically increasing in the current state, and $\E_0Z_n\le n$ for every $n$.
+\end{lemma}
+
+\begin{proof}
+Using the same $N_n$ and the same sequence of offspring variables couples the transition from $x$ below the transition from $y$ whenever $x\le y$. Also,
+\[
+ \E[Z_{n+1}\mid Z_n=z]=\E(z+1-N)_+\le z+1,
+\]
+which gives the finite-time mean bound by induction.
+
+From zero, the event $N_n=0$ followed by one geometric variable gives positive probability of reaching every state. From any state $z$, the probability of reaching zero in one step is at least $2^{-(z+1)}$. Thus the chain is irreducible and zero has a self-loop.
+
+The drift is
+\begin{equation}\label{eq:drift}
+ \E[Z_{n+1}-Z_n\mid Z_n=z]
+ =-1+\E(N-z-1)_+.
+\end{equation}
+Since $N$ is integrable, choose an integer $b\ge0$ so that this is at most $-1/2$ when $z>b$. Put $C=\{0,\ldots,b\}$ and let $\tau_C$ be its hitting time. For a chain started at $z\notin C$, the stopped drift inequality gives
+\[
+ \E_z Z_{n\wedge\tau_C}+\frac12\E_z(n\wedge\tau_C)\le z.
+\]
+Letting $n\to\infty$ yields $\E_z\tau_C\le2z$.
+
+For completeness, this also gives a finite expected return time to zero. Starting from any state in $C$, take one step and, if necessary, wait until the next visit to $C$. This takes expected time at most $1+2(b+1)$, uniformly over the starting state. The probability that the first step of such a trial reaches zero is at least $q=2^{-(b+1)}$. At successive visits to $C$, the conditional probability that another trial is needed is at most $1-q$. Summing the expected trial lengths therefore bounds the expected time to zero by $(1+2(b+1))/q$. Applied from zero to its first positive return time, this proves positive recurrence.
+\end{proof}
+
+\subsection{A three-point comparison law}
+
+For integrable nonnegative random variables, $U\cx W$ denotes convex order and $U\icx W$ denotes increasing convex order. It is enough to test these orders on convex, respectively increasing convex, functions of at most linear growth. We use only that class of test functions below.
+
+Set
+\begin{equation}\label{eq:a}
+ a=\min\{p_0/2,1/6\}>0,
+\end{equation}
+and let $N_*$ have distribution
+\begin{equation}\label{eq:Nstar}
+ \Pp(N_*=0)=a,\qquad
+ \Pp(N_*=2)=1-3a,\qquad
+ \Pp(N_*=3)=2a.
+\end{equation}
+Its mean is two. Let $D$ denote the chain~\eqref{eq:chain} with $N_*$ in place of $N$.
+
+\begin{lemma}\label{lem:convexorder}
+One has $N_*\cx N$.
+\end{lemma}
+
+\begin{proof}
+For integer-valued variables of equal finite mean, it suffices to compare the quantities $\E(U-k)_+$ for integers $k\ge0$. Indeed, a convex function on $\Z_+$ is an affine function plus a nonnegative linear combination of these hinges, by its discrete second differences.
+
+At $k=0$, both expectations are two. At $k=1$,
+\[
+ \E(N-1)_+=1+p_0\ge1+a=\E(N_*-1)_+.
+\]
+At $k=2$, equality of the mean to two gives
+\[
+ \E(N-2)_+=\E(2-N)_+
+ =2p_0+\Pp(N=1)\ge2a=\E(N_*-2)_+.
+\]
+For $k\ge3$, the hinge expectation of $N_*$ is zero. These inequalities prove the assertion.
+\end{proof}
+
+\begin{lemma}\label{lem:kernels}
+If $D_0=Z_0=0$, then $D_n\icx Z_n$ for every $n\ge0$. In particular,
+\begin{equation}\label{eq:meancompare}
+ \E_0D_n\le\E_0Z_n.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let $S_r=\xi_1+\cdots+\xi_r$, with $S_0=0$, and let $\varphi$ be increasing and convex with at most linear growth. The function
+\[
+ h(r)=\E\varphi(S_r),\qquad r\in\Z_+,
+\]
+is finite, increasing and of at most linear growth. It is also convex. To see this, put
+\[
+ g(s)=\E\bigl[\varphi(s+\xi)-\varphi(s)\bigr].
+\]
+The finite increments of a convex function are increasing in $s$, so $g$ is increasing. Consequently
+\[
+ h(r+1)-h(r)=\E g(S_r)
+\]
+is increasing in $r$, by the coupling $S_{r+1}\ge S_r$.
+
+For a nonnegative integer-valued emigration variable $L$, write
+\[
+ (K_L\varphi)(x)=\E h((x+1-L)_+).
+\]
+Extend $h$ by linear interpolation between consecutive integers. It remains convex and increasing. For fixed $x$, the function $l\mapsto h((x+1-l)_+)$ is convex. Lemma~\ref{lem:convexorder} therefore gives
+\begin{equation}\label{eq:kernelcompare}
+ K_{N_*}\varphi(x)\le K_N\varphi(x).
+\end{equation}
+For fixed $l$, the function $x\mapsto h((x+1-l)_+)$ is increasing and convex. Averaging over $L$ shows that $K_L\varphi$ has these properties as well. Since $(x+1-L)_+\le x+1$, it has at most linear growth.
+
+Now suppose $D_n\icx Z_n$. Then
+\begin{align*}
+ \E\varphi(D_{n+1})
+ &=\E(K_{N_*}\varphi)(D_n)\\
+ &\le\E(K_N\varphi)(D_n)
+ \le\E(K_N\varphi)(Z_n)
+ =\E\varphi(Z_{n+1}).
+\end{align*}
+All expectations are finite by Lemma~\ref{lem:recurrence}. Induction, starting from the common value zero, proves the claim.
+\end{proof}
+
+\subsection{The invariant mean of the three-point chain}
+
+\begin{lemma}\label{lem:pgf}
+Let $\pi_*$ be the invariant law of $D$. Then $\E_{\pi_*}D=\infty$.
+\end{lemma}
+
+\begin{proof}
+Write $\pi_j=\pi_*(j)$ and
+\[
+ F(s)=\sum_{j\ge0}\pi_js^j,\qquad 0\le s\le1.
+\]
+The offspring generating function is $f(s)=(2-s)^{-1}$. Conditioning on $N_*$ in the stationary equation gives, with $t=f(s)$,
+\begin{align}\label{eq:pgfraw}
+ F(s)={}&\bigl(at+(1-3a)t^{-1}+2at^{-2}\bigr)F(t)\notag\\
+ &+(1-3a)(1-t^{-1})\pi_0
+   +2a(1-t^{-2})\pi_0
+   +2a(1-t^{-1})\pi_1.
+\end{align}
+For example, the term for $N_*=2$ is
+\[
+ \sum_{j\ge0}\pi_jt^{(j-1)_+}
+ =t^{-1}F(t)+(1-t^{-1})\pi_0,
+\]
+and the term for $N_*=3$ accounts for both boundary corrections in~\eqref{eq:pgfraw}.
+
+Put $s=1-u$, so $t=(1+u)^{-1}$, and set
+\[
+ B=(1+a)\pi_0+2a\pi_1.
+\]
+Equation~\eqref{eq:pgfraw} becomes
+\begin{equation}\label{eq:pgfu}
+ F(1-u)=\left(1+u+\frac{au^2(3+2u)}{1+u}\right)
+ F\left(\frac1{1+u}\right)-Bu-2a\pi_0u^2.
+\end{equation}
+
+Suppose that $\mu=\E_{\pi_*}D<\infty$. Then
+\[
+ F(1-u)=1-\mu u+o(u),\qquad
+ F\left(\frac1{1+u}\right)=1-\mu u+o(u)
+\]
+as $u\downarrow0$. The first-order terms in~\eqref{eq:pgfu} give $B=1$.
+
+Define
+\[
+ H(u)=\frac{1-F(1-u)}u,\qquad 0<u<1.
+\]
+Under the finite-mean assumption, $0\le H(u)\le\mu$ and $H(u)\to\mu$ as $u\downarrow0$. Since $1-(1+u)^{-1}=u/(1+u)$, substituting $B=1$ in~\eqref{eq:pgfu} yields the exact identity
+\begin{equation}\label{eq:hidentity}
+ H\left(\frac{u}{1+u}\right)-H(u)
+ =au\left[\frac{3+2u}{1+u}F\left(\frac1{1+u}\right)-2\pi_0\right].
+\end{equation}
+The expression in brackets tends to $3-2\pi_0\ge1$. Choose $u_0\in(0,1)$ so small that it is at least $1/2$ for $0<u\le u_0$. For
+\[
+ u_j=\frac1{j+u_0^{-1}},\qquad j\ge0,
+\]
+one has $u_{j+1}=u_j/(1+u_j)$. Iterating~\eqref{eq:hidentity} gives
+\[
+ H(u_m)-H(u_0)\ge\frac a2\sum_{j=0}^{m-1}u_j\longrightarrow\infty.
+\]
+This contradicts $H(u_m)\le\mu$ and proves the lemma.
+\end{proof}
+
+\subsection{Transfer to arbitrary integrable emigration}
+
+\begin{proof}[Proof of Theorem~\ref{thm:emigration}]
+Lemma~\ref{lem:recurrence} proves irreducibility, aperiodicity and positive recurrence. For the three-point chain, convergence to equilibrium and Lemma~\ref{lem:pgf} give
+\begin{equation}\label{eq:divergingD}
+ \E_0D_n\longrightarrow\infty.
+\end{equation}
+Indeed, for every integer $R\ge1$,
+\[
+ \E_0(D_n\wedge R)\longrightarrow\E_{\pi_*}(D\wedge R),
+\]
+and the expression on the right tends to infinity as $R\to\infty$.
+
+If $\E_{\pi_N}Z$ were finite, couple $Z$ started at zero below a stationary copy, using the monotone transitions from Lemma~\ref{lem:recurrence}. Then
+\[
+ \E_0Z_n\le\E_{\pi_N}Z\qquad\text{for all }n.
+\]
+This contradicts~\eqref{eq:meancompare} and~\eqref{eq:divergingD}. Hence the invariant mean is infinite.
+\end{proof}
+
+\begin{corollary}\label{cor:timeaverage}
+For the chain~\eqref{eq:chain} started at zero,
+\[
+ \frac1n\sum_{j=1}^nZ_j\longrightarrow\infty\qquad\text{almost surely}.
+\]
+\end{corollary}
+
+\begin{proof}
+For each integer $R\ge1$, the ergodic theorem for an irreducible positive recurrent chain gives
+\[
+ \frac1n\sum_{j=1}^n(Z_j\wedge R)
+ \longrightarrow\E_{\pi_N}(Z\wedge R)\qquad\text{almost surely}.
+\]
+Intersect these probability-one events over $R$. The lower limit of the untruncated averages is at least every expectation on the right, and these expectations increase to infinity by Theorem~\ref{thm:emigration}.
+\end{proof}
+
+\section{The critical cookie environment}\label{sec:walk}
+
+We now assume that $\delta=2$. Conditional on the environment, the steps from the successive visits to each site can be sampled in advance as independent Bernoulli variables. We will compare two such arrays at the level of their failure counts.
+
+\subsection{Separating forced and fair steps}
+
+At one site, write $d_i=2p_i-1$. Conditional on the stack, take independent marks
+\[
+ A_i\sim\operatorname{Bernoulli}(d_i),\qquad i\ge1,
+\]
+and, independently of both the marks and the stack, take iid fair Bernoulli variables $C_i$. Define
+\begin{equation}\label{eq:mixture}
+ B_i=A_i+(1-A_i)C_i.
+\end{equation}
+Then, conditional on the stack, the $B_i$ are independent and
+\[
+ \Pp(B_i=1\mid(p_j)_{j\ge1})=d_i+\frac{1-d_i}{2}=p_i.
+\]
+Thus~\eqref{eq:mixture} has the same coin-sequence law as the original walk. Make these constructions independently at all sites.
+
+\begin{lemma}\label{lem:marks}
+The number $N=\sum_{i\ge1}A_i$ is finite almost surely and satisfies
+\[
+ \E N=2,\qquad\Pp(N=0)>0.
+\]
+\end{lemma}
+
+\begin{proof}
+Tonelli's theorem gives $\E N=\E\sum_i d_i=2$, so $N$ is finite almost surely. Also $\sum_i d_i<\infty$ almost surely. On the positive-probability event in~\eqref{eq:wel}, every $d_i<1$. On its intersection with $\{\sum_i d_i<\infty\}$,
+\[
+ \prod_{i\ge1}(1-d_i)>0.
+\]
+To verify positivity, discard finitely many terms so that $d_i\le1/2$ in the remaining tail and use $\log(1-d_i)\ge-2d_i$. The finite initial product is positive as well. Conditional independence of the marks gives
+\[
+ \Pp(N=0\mid(p_i)_{i\ge1})=\prod_{i\ge1}(1-d_i).
+\]
+Averaging proves the second assertion.
+\end{proof}
+
+For a fixed coin sequence, let $F(m)$ be the number of failures before the $m$th success, and set $F(0)=0$. All these counts are finite almost surely: positivity of the cookies allows the successes to dominate an iid fair sequence.
+
+Move the $N$ marked successes to the beginning of the sequence while preserving the relative order of the unmarked fair coins. Only finitely many positions are changed, because the number of marked positions is finite. This operation can be performed by finitely many adjacent swaps
+\[
+ (\text{unmarked coin},1)\longmapsto(1,\text{unmarked coin}).
+\]
+Each swap weakly increases the number of successes in every prefix. If $F^{\mathrm f}$ denotes the failure counts after this operation, then
+\begin{equation}\label{eq:frontload}
+ F^{\mathrm f}(m)\le F(m)\qquad\text{for every }m\ge0.
+\end{equation}
+
+Conditional on the stack and the marks, the remaining unmarked coins are still iid fair coins. Their conditional law does not depend on the stack or the marks, so this fair tail is independent of $N$. Consequently, at each site,
+\begin{equation}\label{eq:frontmap}
+ F^{\mathrm f}(m)=\sum_{j=1}^{(m-N)_+}\xi_j,
+\end{equation}
+where the $\xi_j$ are independent geometric variables with law~\eqref{eq:geom}, independent of $N$. The complete maps $F^{\mathrm f}$, together with their original counterparts $F$, are iid across sites.
+
+\subsection{Downcrossings and hitting times}
+
+Put
+\[
+ T_n=\inf\{t\ge0:X_t=n\},\qquad n\ge1.
+\]
+These hitting times are finite almost surely. Indeed, using independent uniform variables at successive times couples the walk with a simple symmetric random walk $S$ started at zero so that every increment of $X$ is at least the corresponding increment of $S$. Thus $X_t\ge S_t$ for all $t$, and the nearest-neighbour walk $X$ reaches every positive integer.
+
+Let $D_n(x)$ be the number of steps from $x$ to $x-1$ before $T_n$. For $0\le x<n$, the number of right steps from $x$ before $T_n$ is $D_n(x+1)+1$. The last departure from $x$ before $T_n$ is to the right. Hence the preassigned coin sequences give the pathwise recursion
+\begin{equation}\label{eq:downcross}
+ D_n(n)=0,\qquad D_n(x)=F_x(D_n(x+1)+1),\quad 0\le x<n.
+\end{equation}
+Since the maps $F_x$ are iid, the vector
+\[
+ (D_n(n),D_n(n-1),\ldots,D_n(0))
+\]
+has the law of $(V_0,V_1,\ldots,V_n)$, where $V_0=0$ and
+\begin{equation}\label{eq:backward}
+ V_{j+1}=F_j(V_j+1)
+\end{equation}
+uses fresh independent maps with the one-site law at each step.
+
+Couple this chain with
+\[
+ Z_0=0,\qquad Z_{j+1}=F_j^{\mathrm f}(Z_j+1).
+\]
+The failure maps are increasing in their argument. Thus~\eqref{eq:frontload} gives, by induction,
+\begin{equation}\label{eq:chainorder}
+ Z_j\le V_j\qquad\text{for every }j\ge0.
+\end{equation}
+By~\eqref{eq:frontmap} and Lemma~\ref{lem:marks}, $Z$ is exactly the chain of Theorem~\ref{thm:emigration}.
+
+Every left step before $T_n$ must be balanced by a right step, in addition to the $n$ net right steps. Therefore
+\begin{equation}\label{eq:hittinglower}
+ T_n=n+2\sum_{x\in\Z}D_n(x)
+ \ge n+2\sum_{x=0}^{n-1}D_n(x).
+\end{equation}
+The sum over all sites is finite for each realized path. We use only the displayed lower bound, so no estimate of the negative-site contribution is needed.
+
+\begin{proposition}\label{prop:critical}
+Under the assumptions of Theorem~\ref{thm:main}, if $\delta=2$, then $v=0$.
+\end{proposition}
+
+\begin{proof}
+For every finite $L$, equations~\eqref{eq:downcross}--\eqref{eq:hittinglower} imply
+\begin{equation}\label{eq:probcompare}
+ \Pp\left(\frac{T_n}{n}\le L\right)
+ \le\Pp\left(1+\frac2n\sum_{j=1}^nZ_j\le L\right).
+\end{equation}
+The right-hand side tends to zero by Corollary~\ref{cor:timeaverage}. Hence $T_n/n\to\infty$ in probability. On the other hand, $T_n\ge n$ and $X_{T_n}=n$, so the law of large numbers~\eqref{eq:lln}, evaluated along the hitting times, gives
+\[
+ \frac{n}{T_n}\longrightarrow v\qquad\text{almost surely}.
+\]
+The hitting-time bound also gives $n/T_n\to0$ in probability. It follows that $v=0$.
+\end{proof}
+
+\section{The remaining drift regimes}\label{sec:remaining}
+
+We use the following two facts about excited random walks. First, speed is monotone under coordinatewise strengthening of the cookies. In the form needed here, if iid pairs of stacks satisfy $p_{x,i}\le\widetilde p_{x,i}$ almost surely for every $x,i$, then their deterministic speeds satisfy $v\le\widetilde v$; see~\cite[Proposition~4.2]{KZ13}, following~\cite[Theorem~17]{Zerner05}. Both laws of large numbers are supplied by positivity, without a bounded-stack assumption.
+
+Second, an iid weakly elliptic environment with a deterministic finite stack-depth bound has positive speed when its expected total drift exceeds two, by~\cite[Theorem~2]{KZ08}. That theorem permits strength-one cookies. In its finite-stack notation, the ellipticity assumptions are positivity of the expectations of the products of the first $M$ right and left probabilities. The right product is at least $2^{-M}$ here; the left product has positive expectation by~\eqref{eq:wel}. Thus the theorem applies to the finite truncations below.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The case $\delta=2$ is Proposition~\ref{prop:critical}.
+
+Suppose first that $\delta>2$, allowing $\delta=\infty$. By monotone convergence,
+\[
+ \delta_M:=\E\sum_{i=1}^M(2p_{0,i}-1)\uparrow\delta.
+\]
+Choose a finite $M$ with $\delta_M>2$, and replace every cookie after depth $M$ by a fair cookie. The resulting environment is iid, positive and weakly elliptic, and it satisfies the bounded-stack condition. Its speed $v_M$ is strictly positive by the bounded theorem. Since its cookies are coordinatewise no stronger than the original cookies, speed monotonicity gives $v\ge v_M>0$.
+
+Now let $\delta<2$, and again put $d_i=2p_{0,i}-1$. Finiteness of $\sum_i\E d_i$ implies $\E d_i\to0$, so
+\[
+ S_M:=\sum_{i=1}^M\E(1-d_i)\longrightarrow\infty.
+\]
+Choose $M$ such that $S_M\ge2(2-\delta)$, and set
+\[
+ b=\frac{2-\delta}{S_M}\in(0,1/2].
+\]
+At every site, strengthen its first $M$ cookies by
+\begin{equation}\label{eq:strengthen}
+ p_{x,i}^+=p_{x,i}+b(1-p_{x,i}),\qquad 1\le i\le M,
+\end{equation}
+and leave the remaining cookies unchanged. The new stacks are iid and positive. They preserve weak ellipticity because
+\[
+ 1-p_{x,i}^+=(1-b)(1-p_{x,i})
+\]
+at every changed coordinate, and $b<1$. Their drift parameter is
+\[
+ \delta^+=\delta+b\sum_{i=1}^M\E(1-d_i)=2.
+\]
+Proposition~\ref{prop:critical} gives $v^+=0$. Monotonicity and the nonnegativity of the speed now yield $0\le v\le v^+=0$.
+\end{proof}
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25). Computational resources were provided in part by Google Cloud through its education credits program (credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. An initial proof was recorded in that project in September 2026. In October 2026, OpenAI's GPT-6 Astra model was used to review and revise the argument, derive the generating-function proof and the direct hitting-time comparison, check references, and prepare the manuscript. Separate instances and a separately tasked AI agent reviewed the mathematical arguments. These checks are not peer review. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The manuscript and LaTeX source are available at\par
+\noindent\url{https://github.com/yspennstate/positive-cookie-ballisticity}.
+
+\begin{thebibliography}{9}
+
+\bibitem{BS08}
+A.-L. Basdevant and A. Singh,
+\emph{On the speed of a cookie random walk},
+Probability Theory and Related Fields \textbf{141} (2008), 625--645.
+\href{https://doi.org/10.1007/s00440-007-0096-8}{doi:10.1007/s00440-007-0096-8}.
+
+\bibitem{Carper26}
+P. Carper,
+\emph{A branching process with geometric emigration and the ``have your cookie and eat it'' random walk},
+arXiv:2609.06311 (2026).
+\url{https://arxiv.org/abs/2609.06311}.
+
+\bibitem{Chakhtoun19}
+O. Chakhtoun,
+\emph{One-Dimensional Excited Random Walk with Unboundedly Many Excitations Per Site},
+Ph.D. dissertation, The Graduate Center, City University of New York, 2019.
+\url{https://academicworks.cuny.edu/gc_etds/3030/}.
+
+\bibitem{HS12}
+M. Holmes and T. S. Salisbury,
+\emph{A combinatorial result with applications to self-interacting random walks},
+Journal of Combinatorial Theory, Series A \textbf{119} (2012), 460--475.
+\href{https://doi.org/10.1016/j.jcta.2011.10.004}{doi:10.1016/j.jcta.2011.10.004}.
+
+\bibitem{KP17}
+E. Kosygina and J. Peterson,
+\emph{Excited random walks with Markovian cookie stacks},
+Annales de l'Institut Henri Poincar\'e, Probabilit\'es et Statistiques \textbf{53} (2017), 1458--1497.
+\href{https://doi.org/10.1214/16-AIHP761}{doi:10.1214/16-AIHP761}.
+
+\bibitem{KZ08}
+E. Kosygina and M. P. W. Zerner,
+\emph{Positively and negatively excited random walks on integers, with branching processes},
+Electronic Journal of Probability \textbf{13} (2008), no.~64, 1952--1979.
+\href{https://doi.org/10.1214/EJP.v13-572}{doi:10.1214/EJP.v13-572}.
+
+\bibitem{KZ13}
+E. Kosygina and M. P. W. Zerner,
+\emph{Excited random walks: results, methods, open problems},
+Bulletin of the Institute of Mathematics, Academia Sinica (New Series) \textbf{8} (2013), 105--157.
+\url{https://arxiv.org/abs/1204.1895}.
+
+\bibitem{Zerner05}
+M. P. W. Zerner,
+\emph{Multi-excited random walks on integers},
+Probability Theory and Related Fields \textbf{133} (2005), 98--122.
+\href{https://doi.org/10.1007/s00440-004-0417-0}{doi:10.1007/s00440-004-0417-0}.
+
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260923T021243Z-account03-B11-QFORM-r22",
+  "control_at_start": {
+    "commit": "e83382e04b0966b933d698cdf95e0388dbc97312",
+    "revision": "2026-09-22.15"
+  },
+  "control_before_publication": {
+    "commit": "c879be429836a2c8e149f39d1f34e009d1800d82",
+    "revision": "2026-09-22.15"
+  },
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "mathematical_status": "ESSENTIAL_STEP_APPLIED_TWO_SUPPORTING_THEOREMS_PARTNER_RESULT_APPLIED_FULL_TARGET_OPEN",
+  "new_results": [
+    {
+      "id": "QFORM-OPPOSITE-DIAGONAL-PAIR-EXIT-v1",
+      "scope": "arbitrary rank/full matrix with s3(A)>=1 and two original physical diagonals of opposite signs at magnitude >=eta",
+      "conclusion": "||p_Q||inf <= eta^-1 [9.2 + log_+(10000 eta)]",
+      "regularity": "essential boundedness"
+    },
+    {
+      "id": "QFORM-MINORITY-PHYSICAL-PIVOT-TWOSHEET-v1",
+      "scope": "exact rank three signature (2,1), or (1,2) by reflection, with one original physical diagonal of the minority spectral sign",
+      "conclusion": "minority-side ess sup <= 8 sqrt(pi e) (L/c)^2; if c>=eta L, full bound <= max(pi sqrt(2),8 sqrt(pi e) eta^-2)",
+      "regularity": "essential boundedness; continuity not proved by this theorem"
+    }
+  ],
+  "partner_applied": {
+    "partner": "account04/B11",
+    "source_commit": "4110bbfd21beffa0260a017d468b0a486af56db1",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260922T222040Z-account04-B11-cone-envelope-r3/REPORT.md",
+    "actual_inequality": "For H0=[[0,0,1],[0,1,0],[1,0,0]], Q=2X1X3+X2^2, ||p_Q||inf <= 3*2^(2/3)=4.7622031559..."
+  },
+  "current_owner_required_result_applied": {
+    "source_commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "source_path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+    "application": "Every original-coordinate near-diffuse rank-three cross certificate of scale a exits with continuous density <23/a; remaining B11 residual is restricted to failure of such certificates plus near-null minority diagonals."
+  },
+  "other_premises": [
+    {
+      "source_commit": "ac50e5d5f2c3030c4bd87d5188117d92ceaf55a1",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260922T233555Z-qform-r19-b06/REPORT.md",
+      "used": "curvature-weighted physical-fibre cone cover and M_i<=e"
+    },
+    {
+      "source_commit": "472b70df7d1edbb3afac23269bc2e4368ae0e371",
+      "source_path": "proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md",
+      "used": "determinant-only arbitrary-rank physical-pair theorem"
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3a8e3494dac898f3b7180d5b80a8c5eb974a8412",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T021243Z-account03-B11-QFORM-r22/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T021243Z-account03-B11-QFORM-r22/VERIFY.py",
+    "checker_output": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T021243Z-account03-B11-QFORM-r22/VERIFY_OUTPUT.txt",
+    "checker_status": "QFORM_B11_R22_CHECK_PASS"
+  },
+  "unresolved_implication": "Aggregate the near-null one-sign / low-cross-rank hub-star residual before inversion while retaining original-coordinate product provenance. Do not replace independence by a conditional density cap and do not discard small matrix coefficients as small random errors.",
+  "next_step": "Seek a bank-level Lorentz-null aggregation dichotomy: either create an opposite-sign determinant pair, a current near-diffuse cross-volume certificate, or a product-preserving null-scalar/pair bank; otherwise derive a quantitative hub/star normal form and apply a completed hub theorem.",
+  "continuity_status": "Current volume-stability exit is C0; new pair/cone theorems here are recorded only as essential-boundedness results.",
+  "full_solution": false,
+  "independent_review_status": "not requested as a full candidate; full target remains open"
+}

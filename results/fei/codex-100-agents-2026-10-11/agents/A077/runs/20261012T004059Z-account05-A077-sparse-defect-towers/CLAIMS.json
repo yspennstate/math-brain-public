@@ -1,0 +1,38 @@
+[
+  {
+    "claim_id": "A077-MAJORITY-SCALAR-LAMBDA-DIVERGENCE",
+    "version": 1,
+    "exact_statement": "For every odd n>=511 and every complete adaptive single-coordinate restriction tree of uniform Maj_n, its scalar child-defect bill Lambda=sum_v w_v*j_v*log2(1+kappa_min,v/(2*j_v)) satisfies Lambda/I >= (n+1)/(4n)*log2(1+sqrt(3n+1)/20) >= log2(n)/8-1. Deleting all exactly isospectral active splits leaves Lambda_noniso/I >= (n+1)/(8n)*log2(1+sqrt(3n+1)/20) >= log2(n)/16-1/2. For every odd n>=3, Lambda_noniso<=Lambda<=I*(n-1)/n*log2(1/a_n)<=I*log2(2(n-1))/2, where a_n=2^(-(n-1))*binom(n-1,(n-1)/2). The good first-half nodes s^2<=n-d carry weighted j mass at least I/4 and child kappa_min>=1/5; good nonisospectral nodes carry at least I/8. Thus both scalar bills/I diverge with order log n.",
+    "hypotheses": [
+      "odd uniform majority; all physical coordinates are independent fair signs",
+      "entropy and logarithms in bits",
+      "complete adaptive coordinate tree stops on constants and queries fresh coordinates only",
+      "j=min(disagreement,agreement); zero-j summands zero",
+      "kappa_min is the smaller actual maximum-Fourier-coefficient child defect",
+      "noniso means deletion of isospectral summands while restrictions continue, not granting leaf certificates"
+    ],
+    "statement_sha256": "87de5ca6190073abef50fe8097e57b464feeb8eccec856053dfa5b1ed4254730",
+    "contributors": [
+      "A077/account05"
+    ],
+    "proof_source": "REPORT.md Sections 1-6; SPARSE_DEFECT_TOWERS.tex; code/check.py; out/full.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACT_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "absolute finite K paying the LOG_ALLOCATION scalar Lambda by K I on complete majority restriction trees, even after deleting all exact-isospectral-node summands"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "claude/B16",
+      "A076",
+      "A078",
+      "A092",
+      "A088",
+      "A064",
+      "A075",
+      "B20"
+    ]
+  }
+]

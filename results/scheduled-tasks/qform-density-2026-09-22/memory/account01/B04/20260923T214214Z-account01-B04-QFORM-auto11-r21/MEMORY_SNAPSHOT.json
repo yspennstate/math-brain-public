@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260923T214214Z-account01-B04-QFORM-auto11-r21",
+  "source_control_commit_start": "4382f1d6955a0bc02bdea62e6f9f5a9ae4b379d8",
+  "source_control_commit_refresh": "ac1e17689ec766fd729dc7e656ab0c6b9208d957",
+  "control_revision": "2026-09-22.15",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f7f0fedb2d93b46824f96cac1164af6f8a55626f",
+      "path": "proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md",
+      "scope": "invertible indefinite original-coordinate pair; logarithmic conditional density envelope with arbitrary shifts"
+    },
+    {
+      "id": "QFORM-CLEANBANK-TOPTWO-REARRANGEMENT-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "dfe442ee899867f5677e5ced85a196eca922fe64",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T211520Z-account02-B04-qform/REPORT.md",
+      "scope": "clean Y-bank, arbitrary X-bank function, top-two crossing singular values"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-PAIRLOG-BOUNDED-REMAINDER-OPT-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "summary": "If the exact Schur remainder after an invertible indefinite physical pair has density cap K, then eta=8KD/kappa gives the exact piecewise bounds 6 D^(-1/6)(K/kappa)^(1/3) for eta<=1 and D^(-1/2)[3+log eta] for eta>=1."
+    },
+    {
+      "id": "QFORM-CLEANBANK-PROJECTIONCAP-REFINEMENT-v1",
+      "status": "PROVED_SUPPORTING_REFINEMENT",
+      "summary": "If the top-two left coefficient projection in the account02/B04 clean-bank theorem has joint density cap L, then the remainder density cap is sqrt(2*pi*L)(s1*s2)^(-1/2)."
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account02/B04",
+    "source_commit": "dfe442ee899867f5677e5ced85a196eca922fe64",
+    "equation_use": "K_partner=sqrt(pi) for the explicit Schur remainder; inserted into the new pair-log compiler to obtain density cap 2.488344417343258 before the L=1 refinement"
+  },
+  "explicit_application": {
+    "matrix_label": "A_* fully dense 7x7 indefinite Schur-completion test",
+    "spectral_certificate": "at least three positive and three negative eigenvalues have modulus >=1.68325589636042",
+    "all_product_density_bound": 2.36581214940969,
+    "continuity_proved": false
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "eb5d7bd98c4cdb1e88955abe49d86ed7d5464e07",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T214214Z-account01-B04-QFORM-auto11-r21/REPORT.md",
+    "bundle_tail_commit": "e24fe04882af3f528bb564752dbad80448b8b1cd"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "991508040a5e7cb8b3ebff89dac83fe111ecb585",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B04/20260923T214214Z-account01-B04-QFORM-auto11-r21.md"
+  },
+  "outcome": "SUPPORTING_THEOREM_PROVED / PARTNER_APPLIED / EXPLICIT_DENSE_INDEFINITE_BOUND / FULL_TARGET_OPEN",
+  "full_target_proved": false,
+  "full_target_disproved": false,
+  "continuity_full_target_proved": false,
+  "continuity_supporting_branch_proved": false,
+  "first_unproved_step": "QFORM-PAIRLOG-DENSITY-REMAINDER-OR-ROUGH-CURVATURE-ROUTING-v1",
+  "next_step": "Aggregate overlap-two mass before selecting an indefinite physical pair; obtain a target-scale clean-bank Schur-remainder density cap or route rough same-bank curvature into completed compound/ridge/definite/grouped endpoints without vanishing-minor payment."
+}

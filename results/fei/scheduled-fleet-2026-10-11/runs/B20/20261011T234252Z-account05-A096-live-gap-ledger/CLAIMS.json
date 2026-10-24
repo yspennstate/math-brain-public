@@ -1,0 +1,97 @@
+[
+  {
+    "claim_id": "A096-UNIVERSAL-LEVEL12-ERASURE",
+    "version": 1,
+    "exact_statement": "For every finite n>=0 and every Boolean sign f on the uniform {-1,1}^n cube, let a_S=hat f(S), epsilon_i=Inf_i(f), I=sum_i epsilon_i, H2=sum_{i<j}a_{ij}^2 log2(1/a_{ij}^2), and T12=sum_i sum_{j!=i}phi(a_i^2,a_{ij}^2), where phi(x,y)=(x+y)h2(y/(x+y)) with zero terms by continuity and entropy in bits. Then H2<=(155600/50301)I and T12<=(16700/2187)I<8I whenever I>0; all quantities vanish for constants. The self-contained Boolean derivative estimate sum_{j!=i}a_{ij}^2<=2 epsilon_i^2 ln(2/epsilon_i) and the subprobability pair reference Q({i,j})=2 epsilon_i epsilon_j/I^2 establish the bound. Normalized real spectral vectors without full Booleanity admit T12/I_spectral growing without bound; no claim on erasure edges starting at levels >=2 is made.",
+    "hypotheses": [
+      "Finite uniform cube, every dimension",
+      "Actual Boolean sign, equivalently full signed Boolean convolution identities",
+      "Ordinary physical flip influence",
+      "Entropy in bits; natural logarithms explicitly denoted ln",
+      "Zero masses contribute zero"
+    ],
+    "statement_sha256": "5083b93ed95b2ec27859e733a86e242b7b652ab71dbc48563c8653cdeb7b7bd8",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261011T234252Z-account05-A096-live-gap-ledger\\REPORT.md",
+      "locator": "complete derivation, equations (1)-(7)"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Dimension-independent level-one-to-two payment claimed for all norm-one real spectral vectors without Booleanity"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B20",
+      "A031",
+      "A033",
+      "A057",
+      "A064",
+      "A088",
+      "A090",
+      "A094",
+      "A099"
+    ]
+  },
+  {
+    "claim_id": "A096-UNIFORM-SINGLETON-HALF-TAX",
+    "version": 1,
+    "exact_statement": "For every finite Boolean sign under any interior product measure, any singleton physical block X with bias p, and Shannon entropy in bits, let M_X=H(S_X|S_residual), J_X=I(X;T) in the actual physical-child/spectral experiment, r=min(p,1-p), and delta=1-sqrt(1-r). Then J_X-M_X<=h2(r)-h2(delta). The bound is uniform in dimension, residual biases and Boolean children. Consequently lim_{p->0} sup_{all finite actual Boolean signs and all interior residual product biases}(J_X-M_X)/(p log2(1/p))=1/2. The tax expansion is (r/2)log2(1/r)+((log2(e)-1)/2)r+O(r^2 log(1/r)); exact optimal tax at arbitrary nonzero p and influence/composition payment remain unproved.",
+    "hypotheses": [
+      "Finite genuine Boolean sign",
+      "Interior physical product biases",
+      "Actual singleton physical restriction",
+      "Entropy in bits"
+    ],
+    "statement_sha256": "46b2dfffab89d38099891f3cdd1ac775334834e0acd1192002a54f434fa1103f",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261011T215017Z-account05-A096-live-gap-ledger\\REPORT.md",
+      "locator": "Uniform singleton tax, equations (5)-(9)"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A096-SHARP-FIXED-PAIR-BIASED-ENDPOINT",
+        "version": 1,
+        "acceptance": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+        "used_for": "Matching lower endpoint coefficient; upper bound is self-contained"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A090",
+        "timestamp": "2026-10-11T23:30:49.966653+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "independent_method": "Statement-only quadratic-form reconstruction and character-sum packet audit; exact Fraction geometry and symbolic log dictionaries",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A090\\runs\\20261011T231429Z-account05-A090-independent-reconstruction\\REPORT.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A090\\runs\\20261011T231429Z-account05-A090-independent-reconstruction\\out\\CHECK.json",
+        "scope_guard": "Full FEI OPEN; arbitrary terminal core entropy and universal cumulative influence payment retained",
+        "source_recorded_statement_sha256": "46b2dfffab89d38099891f3cdd1ac775334834e0acd1192002a54f434fa1103f",
+        "dependency_note": "Singleton endpoint lower coefficient reproduced from explicit Boolean pair; general fixed-pair source theorem not assumed"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A090",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A042",
+      "A046",
+      "A050",
+      "A057",
+      "A084",
+      "A087",
+      "A094",
+      "B09",
+      "B10",
+      "B20"
+    ]
+  }
+]

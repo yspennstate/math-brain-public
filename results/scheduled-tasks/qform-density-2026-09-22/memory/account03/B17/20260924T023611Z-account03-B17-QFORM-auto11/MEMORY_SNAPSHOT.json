@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260924T023611Z-account03-B17-QFORM-auto11",
+  "source_control_commit": "c1f31aa1415f249d6f24957883117c9c19059365",
+  "owner_control_revision": "2026-09-22.15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "OPEN_FOR_FULL_TARGET; CONTINUOUS_FOR_FINITE_WEIGHTED_BANK_CLASS",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "new_claim": {
+    "id": "QFORM-WEIGHTED-BANK-GLOBAL-TIP-RIGIDITY-v1",
+    "status": "PROVED_SUPPORTING_SHARP_WITNESS_THEOREM",
+    "scope": "Three disjoint original-coordinate weighted uniform banks. Exact global tip maximality for aligned signature; one-sheet tip maximality for arbitrary spectral rotation. Two-parameter one-heavy-plus-diffuse Edgeworth expansion in the joint diffuse limit.",
+    "key_exact_result": "For aligned Q=Y1^2+Y2^2-Y3^2 and arbitrary finite bank leverage weights summing to one, ||p_Q||_inf=p_Q(0).",
+    "partial_heavy_expansion": "||p_{m,ell}||_inf=3sqrt(2)[1-(69/320)(ell^2+(1-ell)^2/m)+O(T+S^2)] with T=ell^3+(1-ell)^3/m^2.",
+    "leverage_rigidity": "S=1/(m+1)+(((m+1)ell-1)^2)/(m(m+1)); equal leverage ell=1/(m+1) uniquely minimizes the first non-Gaussian deficit.",
+    "rotated_stress": "u=(10,10,49)/51 gives entrywise-nonzero B=I-2uu^T and c(u)=53990741/240540480; all s>=0 are tip-dominated."
+  },
+  "partner_result_applied": {
+    "worker": "account04/B17",
+    "source_commit": "2156b76156ad5956c214a881fcfd6d977d6f3b9f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B17/20260922T211900Z-account04-B17-QFORM-r3/REPORT.md",
+    "result": "weighted local Edgeworth/coarea theorem",
+    "application": "Applied to the exact one-heavy-plus-diffuse bank characteristic function to obtain the actual inequality |p(0)/(3sqrt2)-(1-c(u)S)| <= C(T+S^2); in the aligned case exact tip maximality turns this into a global-norm expansion."
+  },
+  "scientific_repository": "yspennstate/math-open-problems",
+  "scientific_commit": "bcaf6a59bb37223f1b1248326a1d12a26bae2adc",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260924T023611Z-account03-B17-QFORM-auto11/REPORT.md",
+  "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260924T023611Z-account03-B17-QFORM-auto11/CHECK.py",
+  "checker_status": "PASS QFORM_WEIGHTED_BANK_GLOBAL_TIP_RIGIDITY",
+  "unresolved_implication": "For non-aligned weighted banks, the negative two-sheet side can still in principle contain an off-tip peak; the bare target also allows rough non-log-concave laws, non-collinear heavy rows, and arbitrary additional spectrum.",
+  "next_action": "Attack the negative two-sheet side for the rational fully coupled weighted-bank stress family, or derive a source-valid off-tip upper bound stable under several non-collinear macroscopic rows.",
+  "login_note": "Canonical account03/B17 login for UTC hour 2026-09-24T02Z already existed with run_id 20260924T020549Z-account03-B17-QFORM-auto11 and was preserved without overwrite."
+}

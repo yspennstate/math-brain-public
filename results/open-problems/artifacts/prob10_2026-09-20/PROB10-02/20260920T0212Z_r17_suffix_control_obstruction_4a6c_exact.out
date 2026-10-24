@@ -1,0 +1,39 @@
+C_DOMINATION_PASS k=1 cases=16
+C_DOMINATION_PASS k=2 cases=64
+C_DOMINATION_PASS k=3 cases=256
+C_DOMINATION_PASS k=4 cases=1024
+C_DOMINATION_PASS k=5 cases=4096
+C_DOMINATION_PASS k=6 cases=16384
+C_DOMINATION_PASS k=7 cases=65536
+G_MONOTONICITY_PASS k=1 ordered_cases=24
+G_MONOTONICITY_PASS k=2 ordered_cases=144
+G_MONOTONICITY_PASS k=3 ordered_cases=864
+G_MONOTONICITY_PASS k=4 ordered_cases=5184
+G_MONOTONICITY_PASS k=5 ordered_cases=31104
+G_MONOTONICITY_PASS k=6 ordered_cases=186624
+G_MONOTONICITY_PASS k=7 ordered_cases=1119744
+ZERO_CONTROL_RESET_PASS k=1 states=4 length=2
+ZERO_CONTROL_RESET_PASS k=2 states=16 length=4
+ZERO_CONTROL_RESET_PASS k=3 states=64 length=6
+ZERO_CONTROL_RESET_PASS k=4 states=256 length=8
+ZERO_CONTROL_RESET_PASS k=5 states=1024 length=10
+ZERO_CONTROL_RESET_PASS k=6 states=4096 length=12
+ZERO_CONTROL_RESET_PASS k=7 states=16384 length=14
+PAIR_TRANSDUCER_NONMARKOV_PASS
+ old_summary= ((0, 0), (0, 0))  input= (0, 0, 1)
+ A_next= ((0, 0), (1, 0))  A_summary= ((1, 1), (0, 0))
+ B_next= ((0, 0), (0, 0))  B_summary= ((1, 1), (0, 1))
+CANONICAL_CONGRUENCE_PASS r=1 raw=4 quotient=3 formula=3
+CANONICAL_CONGRUENCE_PASS r=2 raw=16 quotient=11 formula=11
+CANONICAL_CONGRUENCE_PASS r=3 raw=64 quotient=43 formula=43
+CANONICAL_CONGRUENCE_PASS r=4 raw=256 quotient=171 formula=171
+CANONICAL_CONGRUENCE_PASS r=5 raw=1024 quotient=683 formula=683
+CANONICAL_CONGRUENCE_PASS r=6 raw=4096 quotient=2731 formula=2731
+CANONICAL_CONGRUENCE_PASS r=7 raw=16384 quotient=10923 formula=10923
+MOORE_MIN_PASS r=1 raw=4 classes=3 formula=3 dist={1: 2, 2: 1} refinements=[3, 3]
+MOORE_MIN_PASS r=2 raw=16 classes=11 formula=11 dist={1: 8, 2: 2, 4: 1} refinements=[6, 11, 11]
+MOORE_MIN_PASS r=3 raw=64 classes=43 formula=43 dist={1: 32, 2: 8, 4: 2, 8: 1} refinements=[6, 23, 39, 43, 43]
+MOORE_MIN_PASS r=4 raw=256 classes=171 formula=171 dist={1: 128, 2: 32, 4: 8, 8: 2, 16: 1} refinements=[6, 33, 101, 153, 167, 171, 171]
+MOORE_MIN_PASS r=5 raw=1024 classes=683 formula=683 dist={1: 512, 2: 128, 4: 32, 8: 8, 16: 2, 32: 1} refinements=[6, 33, 215, 447, 593, 659, 679, 683, 683]
+MOORE_MIN_PASS r=6 raw=4096 classes=2731 formula=2731 dist={1: 2048, 2: 512, 4: 128, 8: 32, 16: 8, 32: 2, 64: 1} refinements=[6, 33, 312, 1109, 1861, 2365, 2603, 2693, 2731, 2731]
+ALL_EXACT_CHECKS_PASS

@@ -1,0 +1,170 @@
+[
+  {
+    "claim_id": "A024-MIXED-FACE-ORDER-OBSTRUCTION",
+    "version": 2,
+    "exact_statement": "For disjoint uniform physical Boolean blocks F=g(f_1,...,f_k), let a_i=E(D_i g)^2 and gamma_ij be the probability, over other induced outputs, that the i,j gate face has corner product -1. With Q(f)=2^(1-n)N_odd(f), Q(F)=sum_i a_i Q(f_i)+(1/2)sum_{i<j}gamma_ij I(f_i)I(f_j). A query x in child h of F=A+B h has q_x(F)=t q_x(h)+(Inf_x(h)/2)I(1-2B^2), t=E B^2. For the explicit five-bit bent/point-flip selector c of DERIVATION.md, d=1/16,m=3/16,I(c)=37/16 and B_s(c)-Lbin(m,d)>1/4; hence its queried selector remains K=4 bad in every nontrivial disjoint outer composition. For F_LN=1-(1+P_N)(1-product_{j=1}^L c_j)/2, L,N>=1, I=[37L/16+(1-(3/16)^L)N]/2. A complete selectors-first tree spends at least L(4+N)/32 bad odd-face credit; for N=L^2 its ratio to I is at least L/53. A complete parity-first tree spends exactly L/8, ratio at most 4/37. The selectors-first signed mean residual bank is between zero and L(2L+4)16^(-(L+1)); it contains beta^2 log(1/M^2)/2+O(beta^2) at beta=-M/3. Thus at fixed K=4 every-tree O(I) credit is false, while this family satisfies a some-tree bound and has H/I tending to zero when N=L^2. No universal some-tree bound is asserted. Extension at version 2: for arbitrary disjoint Boolean controller w and untouched Boolean core h, F=1-(1-w)(1-h)/2, r=Pr(h=-1),t=Pr(w=-1),a=Ew and beta=(Ew_0-Ew_1)/2, a controller query has d_F=r d_w, q_F=r q_w+(I(h)/2)d_w and B_F=r B_w+R_r(a,beta), where R_r=L(1-r+r a,r beta)+r(1-r)L(1-a,beta)-r L(a,beta). For any complete controller tree and its LIFTED K4-bad set E, its bad prefix bill is r sum_E p_v q_w+(I(h)/2)sum_E p_v d_w. Its actual terminals retain t H(h),t I(h),t Q(h). Let w=-G_L,h=G_M with the fixed five-bit modules above. The controller selectors-first tree individually costs exactly (4/37)I(w), as does the core selectors-first tree. Nevertheless its lifted prefix bill is at least r L/4+(37/16)LM/32. For M=L, I(F)=37L/16 and the prefix ratio is at least L/32+4r/37, unbounded. Its total signed selector mean residual is between zero and L(2L+4)16^(-(L+1)). This refutes transferring arbitrary already-paid K4 controller trees solely from their own bad-face bill. H(F_LL)/I(F_LL)<=160/37. At K7, every complete controller-first tree in this fixed-module family has ZERO bad credit for all L,M>=1, certified by 13^13*499^499>2^4517 and physical influence granularity. No all-parameter K4 data-first assertion, universal policy or FEI proof is claimed.",
+    "hypotheses": [
+      "finite Boolean signs on independent uniform physical blocks",
+      "bits for all entropy units",
+      "fair singleton restrictions; induced child output laws, not biased physical inputs",
+      "L,N positive integers; c and two complete orders exactly as in DERIVATION.md",
+      "bad means erasure B_v>4 Inf_query; expected node credit q_v=I(f_v0 f_v1)/2",
+      "event influence I(1-2W), not Fourier energy of a 0/1 indicator",
+      "Version-2 arbitrary-controller formulas require the core h to remain physically unqueried during the controller prefix",
+      "The tensor witness uses w=-G_L,h=G_M and positive L,M; terminal h is retained before continuation",
+      "The K7 repair is only for the declared fixed five-bit module family, not arbitrary controller module dimension"
+    ],
+    "statement_sha256": "27475256bf6d3c626664ef5f8f0ed1e7371011fa422290cc3160f56e9c807a8c",
+    "contributors": [
+      "account05/A024"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A024\\runs\\20261014T055140Z-account05-A024-biased-child-stability\\DERIVATION.md",
+      "prior_unchanged_parts": "~\\brain_workers\\FEI100_20261011\\agents\\A024\\runs\\20261014T025222Z-account05-A024-biased-child-stability\\DERIVATION.md",
+      "locators": "equations (1)-(7), proportional mean limits, Exact K7 repair; prior complete parity and seed derivation",
+      "certificates": [
+        "out/VALIDATION.json",
+        "out/DIRECT_VALIDATION.json",
+        "out/TENSOR_PREFIXES.json",
+        "out/SIGN_CERTIFICATES.json",
+        "out/INTEGER_CERTIFICATE.json",
+        "out/K7_INTEGER_CERTIFICATE.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A024-BIASED-CHILD-TRANSPORT",
+        "version": 1,
+        "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW; used erasure clause reconstructed self-contained here"
+      },
+      {
+        "claim_id": "B05-ODDFACE-TELESCOPE",
+        "version": 1,
+        "status": "lead author-proved; direct face-count reconstruction here"
+      },
+      {
+        "claim_id": "A024-MIXED-FACE-ORDER-OBSTRUCTION",
+        "version": 1,
+        "statement_sha256": "cbc08a970f6f2e4b6b9c63c79c89de9fe276e5da970afe1e670c7c8aa32a0350",
+        "status": "PROVED_LOCALLY_PENDING_REVIEW; unchanged base theorem, source retained",
+        "scope": "Prior parity-family theorem and robust nonempty seed erasure certificate; reconstructed used seed clause here"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A024",
+        "scope": "distinct implementation replay, not independent agent review",
+        "artifact": "out/REPLAY.json",
+        "verdict": "PASS_LOCAL_REPLAY"
+      },
+      {
+        "reviewer": "A024",
+        "scope": "Version-2 distinct implementation: explicit physical F spectra and complete controller prefix edges, not independent agent acceptance",
+        "verdict": "PASS_LOCAL_REPRESENTATION_REPLAY",
+        "artifact": "out/DIRECT_VALIDATION.json"
+      }
+    ],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A024-MIXED-FACE-ORDER-OBSTRUCTION",
+        "version": 1,
+        "scope": "Extension of existing candidate with arbitrary controller ledger, precise false transfer, retained terminals and K7 repair; no correction to v1 statement"
+      }
+    ],
+    "refutes": [
+      "Unregistered EVERY-tree K=4 bad-node odd-face O(I) strengthening; not B05-ODDFACE-LOCALIZED-BRIDGE",
+      "Unregistered extension: an arbitrary controller tree with own K4 Q_bad<=K I(w) lifts over an untouched certified core to O(I(F)) prefix credit solely from that own bill"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B05",
+      "A021",
+      "A023",
+      "A025",
+      "A028",
+      "A039",
+      "A046",
+      "A057",
+      "A062",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A046-SEPARATOR-LAYER-CUTOFF-RESERVE",
+    "version": 2,
+    "exact_statement": "Let S,W,U,V be independent compatible point indicators on disjoint uniform blocks of positive widths s,L,R,T, and let g be an independent balanced Boolean sign. Set F=1+[WUV OR S(U OR V)](g-1), q=2^-R,r=2^-T,eta=2^-(L+R+T),e=q+r-qr-eta,alpha=2^-s,JB=(L+R+T)eta,JC=R q(1-r)+T r(1-q),JD=JB+JC,pi=eta+alpha e. Query S until failure or completion, then resolve WUV or U OR V and stop at a constant or the actual g. For e<=1/8 every live separator query has B_i/Inf_i<1781/480<4. In particular min(R,T)>=4 gives zero localized strict-K4 bad-control-prefix bill for every s,L. Otherwise define m_*=ceil(log2(min(R,T)+2))+2<=5; in the rare regime define m_*=0. The reserve at live layer j is W_j=2^-j[M_j JD+e M_j(M_j-1)/2+M_j e I(g)], M_j=min(j,m_*), and is zero after separator failure. Its physical drift equals the actual child-product face price c_j=2^-j[JD+(j-1)e+e I(g)] at j<=m_* and zero otherwise. Every possible bad-layer debit is bounded by this drift. With I_sep=s alpha e,I_other=(1-alpha)JB+alpha JC,I_terminal=pi I(g), the entire controller-prefix bad bill obeys Q_bad<=W_s<=5 I_other+2 I_sep+5 I_terminal<=5 I(F), uniformly in all widths and core dimension. Terminal entropy remains pi H(g). Moreover H(F)<=(4+2/ln2)(I_sep+I_other)+W_s+pi H(g); with a separately proved terminal rate C0, H(F)<=max(9+2/ln2,C0+5)I(F). No prescribed-witness funding, arbitrary unbalanced-core K4 bound or general nested-selector reserve is asserted.",
+    "hypotheses": [
+      "Actual uniform Boolean signs; entropy and logarithms in bits; physical pivotal influences and history reaches",
+      "Independent balanced core g and disjoint compatible positive point blocks of the specified widths",
+      "Exactly the declared control-first stopping prefix; each physical coordinate queried at most once along a path",
+      "Q_bad is strict-K4 bad-node face price, not the unfiltered old V envelope or bad nodes inside the stopped core",
+      "All terminal pi H(g) is retained; any C0 is a separately certified inherited core rate; no spectral reference bank is assumed free"
+    ],
+    "statement_sha256": "bd27ee5a2c778775819779bfeceee08d76d1f3f64f9e9667a7dc13e941bf547f",
+    "contributors": [
+      "A046"
+    ],
+    "proof_source": {
+      "run_id": "20261014T041928Z-account05-A046-current-candidate-intake",
+      "files": [
+        "PROOF.md",
+        "REPORT.md",
+        "code/check.py",
+        "code/accounts.py",
+        "code/direct.py",
+        "out/SPECTRAL_CHECK.json",
+        "out/ACCOUNT_CHECK.json",
+        "out/DIRECT_CHECK.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A046-SEPARATOR-LAYER-CUTOFF-RESERVE",
+        "version": 1,
+        "statement_sha256": "c4f09ea5b2a552f438fe64c85737ae4570e03f57453c63683f124dd3a245f2af",
+        "status": "INDEPENDENTLY_ACCEPTED_BY_A040_WITHOUT_REPAIR",
+        "scope": "Original cutoff and physical reserve/account theorem, including descendant-good and retained terminal scope"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A024",
+        "verdict": "HOLDS_AT_NAMED_CLAUSE",
+        "scope": "Only full constant/nonconstant moment identities and B_i/Inf_i<1781/480 for e<=1/8, all compatible widths and independent balanced core dimensions",
+        "excluded": "Cutoff and reserve summation, descendants-good theorem, entire <=5I ledger, reference/witness conversion, general unbalanced cores and interleaved histories",
+        "repair_supplied": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A024\\runs\\20261014T055140Z-account05-A024-biased-child-stability\\REVIEW_NOTE.md",
+        "source_claims_sha256": "a8d3e815a1bb7fb4fdc6ecd4f6f9716a6a7ffb996de8009297cda4e7f43036b0",
+        "source_statement_identifier_preserved": "bd27ee5a2c778775819779bfeceee08d76d1f3f64f9e9667a7dc13e941bf547f",
+        "raw_statement_utf8_sha256": "5ca0e76126232323af56b5488a4430d637aa5b09eb775c3de19241f009227766",
+        "rational_validation_assertions": 3269,
+        "source_statement_hash_convention": "SHA256 of canonical JSON {statement,hypotheses}; verified separately; raw text digest is auxiliary, not a correction"
+      }
+    ],
+    "status": "PARTIAL_INDEPENDENT_REVIEW_HOLDS; FULL_V2_REVIEW_PENDING",
+    "supersedes": [
+      {
+        "claim_id": "A046-SEPARATOR-LAYER-CUTOFF-RESERVE",
+        "version": 1,
+        "scope": "Improved actual-bad-node payment interface; original V envelope remains valid and its obstruction is preserved"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A040",
+      "A021",
+      "A023",
+      "A025",
+      "A050",
+      "A064",
+      "A087",
+      "A092",
+      "B10",
+      "B20"
+    ]
+  }
+]

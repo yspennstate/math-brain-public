@@ -1,0 +1,33 @@
+{
+  "run_id": "20260922T222136Z-account01-B20-QFORM-r21",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "claims": [
+    {
+      "id": "QFORM-FRACTIONAL-VOLUME-BL-v1",
+      "status": "PROVED_IN_RUN",
+      "scope": "Full ambient QFORM quadratic polynomial with an original-coordinate cross block M, Z=e3(M^T M)>0, volume row marginals alpha, fixed 2/3<theta<1, and theta*max(alpha)<=1/2. Arbitrary same-side blocks, affine terms and outside couplings retained.",
+      "conclusion": "bounded continuous density with ||p_Q||_inf <= C_theta Z^(-1/6), C_theta=e*(3theta/(3theta-2))*[theta^(-theta)(1-theta)^(-(1-theta))]^(-1/(6theta))."
+    },
+    {
+      "id": "QFORM-O0-VOLUME-TWOTHIRDS-PAYMENT-v1",
+      "status": "PROVED_IN_RUN",
+      "scope": "account02/B20 O0 cross block Z>=1/256; either row or column volume-sampling inclusion marginals have maximum <=2/3.",
+      "conclusion": "||p_Q||_inf <54.406; density continuous on this branch."
+    },
+    {
+      "id": "QFORM-O0-TWOANCHOR-PACKET-v1",
+      "status": "PROVED_IN_RUN",
+      "scope": "O0 cross block Z>=1/256 not paid by the theta=3/4 theorem in either orientation.",
+      "conclusion": "There exist physical row/column anchors i,a with alpha_i,beta_a>2/3 and physical partitions L1,L2,R1,R2 carrying squared 3x3-minor packet >1/3072; one of six explicit three-energy matching products exceeds 1/110592."
+    },
+    {
+      "id": "QFORM-FULL",
+      "status": "OPEN"
+    },
+    {
+      "id": "QFORM-CONTINUOUS-REPRESENTATIVE",
+      "status": "OPEN_GLOBALLY",
+      "note": "Continuity proved only on the fractional-volume-BL branch by absolute Fourier integrability."
+    }
+  ]
+}

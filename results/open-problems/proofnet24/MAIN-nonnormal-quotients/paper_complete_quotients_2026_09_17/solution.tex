@@ -1,0 +1,230 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Cay}{Cay}
+\DeclareMathOperator{\Stab}{Stab}
+\title{Complete non-normal orbit quotients of every order at least three}
+\author{Main-agent research note for the math-open-problems repository}
+\date{17 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For every integer $m\geq3$, we construct by an existence theorem an infinite,
+connected, locally finite, simple transitive graph $X$ with a freely acting,
+non-normal subgroup $B\leq\Aut(X)$ such that $X_B\cong K_m$, while no normal
+subgroup of any transitive subgroup of $\Aut(X)$ has an isomorphic orbit
+quotient. The key input is the generating-set-preserving graphical regular
+representation construction of Leemann and de la Salle. This extends the
+repository's earlier three-vertex candidate. It addresses the literal
+formulation of Grimmett--Li Question 4.5 using finite quotient graphs, not an
+additional infinite-quotient requirement. Independent audits and publication
+novelty review remain pending.
+\end{abstract}
+
+\section{Source, attribution, and scope}
+Grimmett and Li \cite[Section 4.2, Question 4.5]{GL} ask whether a non-normal
+subgroup of a transitive automorphism group can have a transitive simple
+orbit quotient that is not obtainable from a normal subgroup of any
+transitive automorphism subgroup of the same graph. They additionally ask
+about free actions. We use exactly their simple undirected orbit convention:
+distinct orbits are adjacent when some representatives are adjacent.
+Loops and parallel edges are suppressed.
+
+The ambient graph below is infinite. Its quotient is finite. The displayed
+Question 4.5 does not impose infinitude of the quotient. Thus the result gives
+a YES answer with that literal scope; it does not settle the variant where
+the quotient must also be infinite, nor their separate Question 4.6 about
+connective constants.
+
+The first repository candidate is P20-D0072-NONNORMAL-QUOTIENT-WITNESS-01,
+using $S_3*A_5$ and $K_3$, in the P20 report dated
+2026-09-17T16-18-23Z, creation commit
+\texttt{92b25a56025b3e0905274c554a4104d4acbc0685}.
+This note credits that candidate and supplies a uniform extension; it does
+not claim to have originated its GRR mechanism. Classical finite-group facts
+used below include generation of alternating groups by three-cycles and
+simplicity of $A_m$ for $m\geq5$; see \cite[Chapter 4]{Milne}.
+
+\section{The published input}
+\begin{lemma}[Relative GRR input]
+Let $\Lambda$ be a finitely generated group that is not virtually abelian,
+and let $S_0\subseteq\Lambda\setminus\{1\}$ be a finite symmetric generating
+set. There is a finite symmetric set $S\supseteq S_0$, not containing the
+identity, such that $\Aut(\Cay(\Lambda,S))=\Lambda_L$, the left-regular action.
+\end{lemma}
+\begin{proof}
+This is the construction in the proof of Theorem 1.1 of \cite{LdS}, not
+merely a claim about its abstract. That proof begins with an arbitrary
+$S_0$, sets $S_1=(S_0\cup S_0^2\cup S_0^3)\setminus\{1\}$, and applies
+Proposition 3.2 to obtain $S\supseteq S_1$. Its automorphisms preserve the
+$S_1$-colours; Theorem 3.1 then makes each one a left translation.
+In particular, all prescribed edges from $S_0$ remain present.
+\end{proof}
+
+\section{A finite-template criterion}
+\begin{lemma}\label{lem:template}
+Suppose a finite group $F$ has a faithful transitive action on a set of
+$m\geq3$ points, has a nontrivial point stabilizer $H$, and every homomorphism
+from $F$ to any group of order $m$ is trivial. Then there is an infinite,
+connected, locally finite, simple transitive graph $X$ and a non-normal,
+freely acting subgroup $B\leq\Aut(X)$ with $X_B\cong K_m$, but
+$X_N\not\cong K_m$ whenever $N\lhd\Gamma'$ and
+$\Gamma'\leq\Aut(X)$ acts transitively.
+\end{lemma}
+\begin{proof}
+Take $\Lambda=F^{(1)}*F^{(2)}$, the free product of two copies of $F$.
+Let $\pi:\Lambda\to F$ be the identity on the first factor and trivial on
+the second, and put $B=\pi^{-1}(H)$. Since $\pi$ is onto,
+$[\Lambda:B]=[F:H]=m$.
+
+We verify the hypotheses of the relative GRR input. The group $\Lambda$ is
+finitely generated. Choose distinct nonidentity elements $a,b$ of the first
+factor and a nonidentity element $c$ of the second. There are $2^k$ distinct
+reduced words $x_1c\cdots x_kc$ with $x_i\in\{a,b\}$, all of length $2k$
+in the generating set consisting of the nonidentity elements of the two
+factors. The free-product normal form proves their distinctness, so
+$\Lambda$ is infinite and has exponential growth. A finitely generated
+virtually abelian group has polynomial growth: pass to a finite-index
+normal abelian subgroup, choose finitely many coset representatives, and
+rewrite a word of length $r$ as one representative followed by at most $r$
+factors in a fixed finite set of the abelian subgroup. Their exponent
+vectors have at most polynomially many possibilities. Thus $\Lambda$ is
+not virtually abelian.
+
+Set
+\[
+ S_0=(F^{(1)}\setminus\{1\})\cup(F^{(2)}\setminus\{1\}).
+\]
+Choose $S\supseteq S_0$ by the relative GRR input, and let
+$X=\Cay(\Lambda,S)$, with an edge from $g$ to $gs$ for $s\in S$.
+The graph is infinite and simple because $1\notin S$, locally finite
+because $S$ is finite, connected because $S$ generates, and transitive
+under left translations. Its full automorphism group is $\Lambda_L$.
+We identify $B$ with the corresponding subgroup of left translations.
+
+The point stabilizer $H$ is non-normal. Indeed, if it were normal, an
+element fixing the chosen point would, by conjugation and transitivity,
+fix every point. Faithfulness would imply $H=\{1\}$, contrary to the
+hypothesis. Surjectivity of $\pi$ now implies that $B$ is non-normal in
+$\Lambda$. Its vertex action is free: $bg=g$ implies $b=1$.
+
+The $B$-orbits are $Bg$, which are \emph{right cosets} despite arising from
+left multiplication. The map $Bg\mapsto H\pi(g)$ is a bijection onto the
+$m$ right cosets of $H$ in $F$. To see the injective part explicitly,
+$H\pi(g)=H\pi(g')$ implies $\pi(g'g^{-1})\in H$, and hence
+$g'g^{-1}\in B$, so $Bg=Bg'$. Surjectivity follows from that of $\pi$.
+For distinct cosets choose representatives $r,t$ in the first copy of $F$.
+Then $r^{-1}t\neq1$ belongs to $S_0$, so $r$ and $t$ are adjacent in $X$.
+Every two distinct quotient vertices are therefore adjacent. The simple
+orbit convention gives $X_B\cong K_m$.
+
+It remains to handle \emph{every} transitive automorphism subgroup, not
+only a nominated one. If $\Gamma'\leq\Lambda_L$ is transitive, its orbit
+of the identity contains every element of $\Lambda$. Regularity means
+that the unique left translation sending $1$ to $g$ must belong to
+$\Gamma'$ for each $g$. Thus $\Gamma'=\Lambda_L$.
+
+Suppose $N\lhd\Gamma'$ and $X_N\cong K_m$. Under this regular
+identification, $N$ corresponds to a normal subgroup $N_0\lhd\Lambda$,
+and the number of quotient vertices is $[\Lambda:N_0]=m$.
+Consequently $Q=\Lambda/N_0$ is a group of order $m$.
+The quotient homomorphism restricted to either free factor is trivial by
+the hypothesis on $F$. Since these factors generate $\Lambda$, the whole
+quotient homomorphism is trivial. It cannot surject onto a group of order
+$m\geq3$. This contradiction proves the asserted universal exclusion.
+\end{proof}
+
+\section{All quotient orders $m\geq3$}
+\begin{theorem}\label{thm:all}
+For every integer $m\geq3$, the conclusion of Lemma~\ref{lem:template}
+holds. In particular, the literal Grimmett--Li Question 4.5 has a YES
+answer even when the non-normal subgroup must act freely.
+\end{theorem}
+\begin{proof}
+Use the natural faithful transitive action on $m$ letters and take
+\[
+ F=\begin{cases}S_3,&m=3,\\ A_m,&m\geq4.\end{cases}
+\]
+The point stabilizer has order $2$ for $m=3$ and $(m-1)!/2$ for $m\geq4$,
+so is nontrivial in every case. Transitivity is immediate for $S_3$;
+for $A_m$, a three-cycle sends any chosen letter to any other, using a
+third letter.
+
+Let $Q$ be any group of order $m$. For $m=3$, every transposition in
+$S_3$ must map to the identity, since $Q$ has no element of order $2$.
+Transpositions generate $S_3$, so every homomorphism is trivial.
+For $m=4$, every three-cycle in $A_4$ must map to the identity, since
+$Q$ has no element of order $3$. Three-cycles generate $A_4$, so again
+all homomorphisms are trivial.
+For $m\geq5$, simplicity of $A_m$ makes any nontrivial homomorphism
+injective. But $|A_m|=m!/2>m=|Q|$, which rules out injectivity.
+Thus the last hypothesis of Lemma~\ref{lem:template} holds in all cases,
+and that lemma gives the result.
+\end{proof}
+
+\begin{corollary}[An explicit, non-optimal degree bound]
+Write $f=|F|$, $a=f-1$, and $t=2(a+a^2+a^3)$. The graph supplied above
+may be chosen of degree at most $2t(t+14)$.
+\end{corollary}
+\begin{proof}
+By the free-product normal form there are exactly $2a^j$ reduced words
+of length $j\geq1$ in the full factor generating set $S_0$.
+Consequently $|S_1|=2(a+a^2+a^3)=t$.
+Proposition 3.2 of \cite{LdS} gives $|S|\leq2|S_1|(|S_1|+14)$.
+Since the graph is a simple Cayley graph with $1\notin S$, its degree
+is $|S|$, proving the bound.
+\end{proof}
+For $m=3$, this bound is $200880$; it is not an optimality claim and it
+does not amount to listing the final generators of a GRR.
+
+\section{Verification, failed route, and limitations}
+The accompanying standard-library Python checker uses exact permutation
+composition. It checks the $S_3,A_4,A_5$ templates: group orders, point
+stabilizers, non-normality, coset partitions, complete quotient adjacency,
+and the entire normal-subgroup lattice of each finite group. It verifies
+that a homomorphic image whose order divides $m$ must be trivial. The
+normal-subgroup search is exhaustive because every normal subgroup is
+a union of conjugacy classes and is reached by successively adjoining
+those classes. The archived run ends \texttt{ALL\_EXACT\_CHECKS\_PASS}.
+This is a self-check, not an independent audit or a machine verification
+of the infinite GRR input or of all alternating groups.
+
+A tempting replacement $F=S_m$ for all $m$ does not support this proof:
+when $m$ is even, the sign maps allow $S_m*S_m$ to map onto a group of
+order $m$ generated by two involutions (dihedral, with the order-four
+case given by the Klein group). Thus abelianization alone does not
+exclude normal index-$m$ subgroups. The alternating-group choice avoids
+this obstruction; it does not follow from a computation on a few values
+of $m$.
+
+The source statement and the relative-GRR proof were checked in their
+primary PDFs on 17 September 2026. Bounded searches for the exact question,
+non-normal quotients with GRRs, and complete orbit quotients did not locate
+an explicit prior resolution. That is not a proof of novelty or continuing
+worldwide openness. Related Schreier-graph literature requires further
+review. The GRR theorem and the finite-group facts are published inputs,
+not new results here. No claim is made to solve Sidorenko, graph
+reconstruction, or another headline conjecture. This note is not campaign
+closure until the required two distinct OTHER-track audits are recorded;
+this run creates no such audit votes.
+
+\begin{thebibliography}{9}
+\bibitem{GL} G. R. Grimmett and Z. Li,
+\emph{Self-avoiding walks and connective constants},
+arXiv:1704.05884v2, 2019, Section 4.2, Question 4.5, pp. 16--17.
+\url{https://arxiv.org/abs/1704.05884}.
+\bibitem{LdS} P.-H. Leemann and M. de la Salle,
+\emph{Cayley graphs with few automorphisms: the case of infinite groups},
+Annales Henri Lebesgue \textbf{5} (2022), 73--92.
+Theorem 1.1, Theorem 3.1, Proposition 3.2, and Section 5.
+\url{https://doi.org/10.5802/ahl.118}.
+\bibitem{Milne} J. S. Milne, \emph{Group Theory}, version 4.01 (2025),
+Chapter 4, permutation groups.
+\url{https://www.jmilne.org/math/CourseNotes/GT.pdf}.
+\end{thebibliography}
+\end{document}

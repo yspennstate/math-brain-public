@@ -1,0 +1,44 @@
+QFORM account03/B07 r19 deterministic checks
+run_id=20260922T224159Z-account03-B07-qform-r19
+
+1. Coefficient-plane layer cake
+For joint density cap K and R=max(|L1|,|L2|):
+P(R<=r)<=min(1,4*K*r^2).
+Thus
+E[1/R] <= int_0^(2*sqrt(K)) 1 dt + int_(2*sqrt(K))^inf 4*K/t^2 dt
+       = 2*sqrt(K)+2*sqrt(K)
+       = 4*sqrt(K).
+Conditional anchor density cap is 1/(2R), hence ||p||_inf<=2*sqrt(K).
+
+2. Two-dimensional source projection
+K<=2/Delta2(D), Delta2(D)=sqrt(E2(D)).
+Hence
+||p||_inf<=2*sqrt(2)*E2(D)^(-1/4).
+H_1/2<=2*sqrt(2*||p||_inf)=2^(9/4)*E2(D)^(-1/8).
+
+3. Current O0 wedge gate
+P>1/200 and E2(D)>=P/16 imply E2(D)>1/3200.
+Density constant:
+2*sqrt(2)*3200^(1/4)=21.273183587779954...
+Half-Riesz constant:
+2^(11/4)*200^(1/8)=13.045515271626478...
+
+4. Large-row selector
+beta_i>=||r||, beta_j>=||c||, so beta_i*beta_j>=sqrt(P).
+Therefore max(beta_i,beta_j)>=P^(1/4)>200^(-1/4).
+
+5. Quantitative nonzero-pivot discriminant collar
+For |d|>=1/16 and ||T||>=1:
+96*|d|^(-3/8)*||T||^(-1/8)
+<=96*16^(3/8)
+=271.5290039756343...
+
+6. account04/B18 sharpened zero-pivot projection cap
+If selected outside-row norm is beta, the linear coefficient W has Euclidean coefficient norm >=2*beta.
+Ball/Rogozin: ||p_W||_inf<=sqrt(2)/(2*beta)=1/(sqrt(2)*beta).
+Then
+H_1/2 <= 2*sqrt(2) * [2*sqrt(2/(sqrt(2)*beta))]
+        =2^(11/4)*beta^(-1/2).
+At beta>P^(1/4), P>1/200, this is <13.045515271626478...
+
+STATUS=PASS

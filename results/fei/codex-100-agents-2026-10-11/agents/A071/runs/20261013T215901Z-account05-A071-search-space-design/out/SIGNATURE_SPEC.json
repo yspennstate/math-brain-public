@@ -1,0 +1,15 @@
+{
+ "helper_version":"A071-f6-signature-v1",
+ "actual_Boolean_family":"Six-bit core with M negative points: (M+d)/2 lex-first points in coordinate-zero half and (M-d)/2 lex-first points in coordinate-one half. Compose six disjoint copies into h.",
+ "parameter_domain":"M=1..63, d=0..min(M,64-M), d congruent M modulo2; |singleton|=d/32. Exact core truth tables supplied, not abstract spectral vectors.",
+ "case_count":559,
+ "minority_orientation_case_count":288,
+ "pilot_domain":"M=1,2,3,4,32:25 cases",
+ "symmetry":"Sign of singleton may be quotiented for reserve only (squares); output complements kept since bias changes. No quotient of other spectra.",
+ "completeness":"All achievable (p,beta_i^2) signatures for any six-bit Boolean table and any chosen coordinate; exactly complete for this signed reserve since it depends only on these two scalars. Does not enumerate all E minima or arbitrary higher-dimensional cores.",
+ "arithmetic":"Integer negative half counts, exact Fractions, rigorous96-bit logarithm intervals from search.py; symbolic beta=0 equality",
+ "memory_estimate_MB":120,
+ "pilot_max_runtime_seconds":55,
+ "maximum_runtime_seconds":600,
+ "why_this_family":"Tests the smallest sign-aware repair after the bias-blind reserve failed: orient g so P(g=-1)<=1/2 without changing its E,H,I. Projection completeness avoids an n=6 truth-table census."
+}

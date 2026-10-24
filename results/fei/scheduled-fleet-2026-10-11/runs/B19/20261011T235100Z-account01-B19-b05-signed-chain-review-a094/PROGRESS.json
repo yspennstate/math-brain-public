@@ -1,0 +1,102 @@
+{
+  "schema": "fei-run-progress/2",
+  "run_id": "20261011T235100Z-account01-B19-b05-signed-chain-review-a094",
+  "stream": "B19",
+  "packet_id": "A094",
+  "packet_ids": ["A094"],
+  "review_target_packet_id": "A023",
+  "gap_id": "B05_RARE_REFUNDS",
+  "attempt_id": "A094-B05-SIGNED-CHAIN-REVIEW-4",
+  "prior_status": "B05 proved a q_n signed terminal telescope pending independent review, relying on a full L+Q sign theorem to which B19 materially contributed.",
+  "bounded_objective": "Reconstruct the exact reached-credit telescope, endpoint limit, constants, and asymptotic; determine which portions B19 can independently accept without violating reviewer recusal.",
+  "method": "Source-level algebraic expansion, exact formal packet-basis cancellation, independent Boolean Walsh/restriction reconstruction, rigorous rational log intervals, and primary-source scope comparison.",
+  "mathematical_delta": "The signed telescope and endpoint limit are independently accepted. The debt bounds are correct conditional on all-n full-credit negativity, but B19 is recused from end-to-end acceptance because it contributed the phase proof. One harmless TeX multiplication typo was located.",
+  "deliverable_status": {
+    "A094-D1": "COMPLETE_FOR_TARGET_CLAIM_WITH_RECUSAL-SAFE_SPLIT",
+    "A094-D2": "COMPLETE_SCOPE_AND_DEPENDENCY_RECORD"
+  },
+  "mathematical_status": "ALGEBRAIC_CORE_INDEPENDENTLY_REVIEWED; CONDITIONAL_BOUNDS_PROVED; FRESH_PHASE_REVIEW_PENDING; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "B05-A023-QN-SIGNED-TERMINAL-REFUND-v1",
+    "B19-A094-FULL-ORDER-SWAP-CREDIT-BOUNDARY-v1"
+  ],
+  "claims_created_or_changed": [
+    "B19-A094-QN-SIGNED-REFUND-ALGEBRA-REVIEW-v1",
+    "B19-A094-QN-SIGNED-REFUND-CONDITIONAL-BOUNDS-v1"
+  ],
+  "source_plan": {
+    "stream_contract_blob": "ee688080aba90acd2daed1b26e809e38285dcb85",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "campaign_status_blob": "74f6ae761739455083804505ba0e0fd7aaf2f3e2"
+  },
+  "immutable_inputs": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f36335b340a4fbebabaee041c96fbdc6005b5565",
+      "path": "reports/fei-2026-10-11/runs/B05/20261011T232707Z-account01-B05-signed-chain-a023/REPORT.md",
+      "blob_sha": "21a73a3d68e9b3e3dbb47464b803340047ccad1c"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "aa80187df752adcf9ff221823df9815c6b0960b9",
+      "path": "reports/fei-2026-10-11/runs/B19/20261011T225023Z-account01-B19-b05-credit-boundary-review-a094/REPORT.md",
+      "blob_sha": "8281ad83ec178bd98a8a9cbfac192959d7d996bd"
+    }
+  ],
+  "primary_literature_checked": [
+    {
+      "source": "Gonzalez--MacManus--Pereyra, Further evidence towards the Fourier Entropy-Influence conjecture",
+      "url": "https://arxiv.org/abs/2606.00246",
+      "retrieved": "2026-10-11",
+      "scope": "stopping trees and wrong-versus-well-chosen split variables"
+    },
+    {
+      "source": "Wan--Wright--Wu, Decision Trees, Protocols, and the Fourier Entropy-Influence Conjecture",
+      "url": "https://arxiv.org/abs/1312.3003",
+      "retrieved": "2026-10-11",
+      "scope": "decision-tree communication framework"
+    },
+    {
+      "source": "O'Donnell--Tan, A composition theorem for the Fourier Entropy-Influence conjecture",
+      "url": "https://arxiv.org/abs/1304.1347",
+      "retrieved": "2026-10-11",
+      "scope": "disjoint biased composition"
+    }
+  ],
+  "validation": {
+    "command": "python3 independent_refund_review.py",
+    "observed_runtime_seconds": 1.71,
+    "random_seed": null,
+    "formal_and_rigorous_checks": 6014,
+    "failures": 0,
+    "script_sha256": "7982fd269eaa0dc4026a802d6a28c754b74107f203b8223eab09d7ce0fd90cbb",
+    "output_sha256": "0bcb0ec7e7a0b4eb22d43ab6c6b258371afae559fa062137e8060a5fa10d9587",
+    "arithmetic": "exact formal Fraction telescope, exact integer Walsh arithmetic, and rigorous rational atanh-series intervals"
+  },
+  "attempt_counter": 4,
+  "remaining_obstacle": "A noncontributor must accept the all-dimension phase/full-packet sign before the nonnegative-debt theorem receives end-to-end independent status. Universal branching and influence payment remain open beyond q_n.",
+  "next_action": "Route the phase identity and scalar j(t) bounds to A087 or A090; after acceptance, test the terminal potential on q_a tensor q_b in both factor orders.",
+  "next_consumers": ["A023", "A027", "A028", "A064", "A087", "A090", "B20"],
+  "suggested_independent_reviewers": ["A087", "A090"],
+  "delivery_status": {
+    "canonical": {
+      "status": "SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "bb2e97315a0a761761b8cbffd438e211bd3bc673",
+      "path": "reports/fei-2026-10-11/runs/B19/20261011T235100Z-account01-B19-b05-signed-chain-review-a094/",
+      "verified_files": 7,
+      "report_blob": "84dfa890b1788f0903800582f415eb5c6c4efb13"
+    },
+    "brain_mirror": {
+      "status": "SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-research-brain",
+      "commit": "c85c7ef74448cb153452392f0e178436124c1e1e",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B19/20261011T235100Z-account01-B19-b05-signed-chain-review-a094/",
+      "verified_files": 7,
+      "report_blob": "84dfa890b1788f0903800582f415eb5c6c4efb13"
+    },
+    "independent_review": "ALGEBRAIC_CORE_COMPLETE; END_TO_END_PENDING_NONCONTRIBUTOR",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  }
+}

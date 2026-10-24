@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T093525Z-account03-B19-QFORM-r28",
+  "claim": "QFORM-TRIANGLE-PAIR-CROSS-IDENTITY-v1",
+  "exact_inputs": {
+    "rho0_squared": "29/3072",
+    "q0": "377/448",
+    "d0": "377/1344",
+    "Delta0_squared": "(29/3072)*(377/1344)"
+  },
+  "numerical_values": {
+    "rho0": 0.09716019846967515,
+    "q0": 0.8415178571428571,
+    "d0": 0.2805059523809524,
+    "Delta0": 0.05145877388595875,
+    "small_ball_constant": 25.606571623544564,
+    "half_riesz_constant": 45.53271725291665
+  },
+  "symbolic_identity": "For every physical pair T in the normalized rank-two receiver frame, Delta_T^2 = det(A[T,I]A[I,T]) = d_T*rho^2.",
+  "triangle_consequence": "q_S>377/448 over three pairs implies some d_T>377/1344 and hence Delta_T>Delta0.",
+  "analytic_dependency": "account03/B19 r24 QFORM-TWO-PHYSICAL-GRADIENT-2OVER3-SMALLBALL-v1 @ 2c88af5e0ac6a4faf8d923a621c7d7006d544ffe",
+  "partner_application": "account04/B19 exact-null-coloop: e^-8<=D_res<=1 => ||p_Q||inf<102",
+  "finite_check_role": "decimal evaluation only; proof is symbolic",
+  "terminal": "QFORM_B19_TRIANGLE_CROSSPACKET_CHECK_PASS"
+}

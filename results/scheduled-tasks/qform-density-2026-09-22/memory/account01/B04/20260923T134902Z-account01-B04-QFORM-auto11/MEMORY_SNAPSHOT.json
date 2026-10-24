@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260923T134902Z-account01-B04-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_start_commit": "5e95a8742d11ae5d756ca5112b50a7b35187cb98",
+  "publication_refresh_main_commit": "6f54c228609a81448c8e00325ed7972f32240a05",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_proved": false,
+  "full_target_disproved": false,
+  "continuity_full_target_proved": false,
+  "continuity_supporting_branch_proved": true,
+  "outcome": "ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREM_PROVED / PARTNER_APPLIED / EXPLICIT_TARGET_ESTIMATES / FULL_TARGET_OPEN",
+  "new_claims": [
+    {
+      "claim_id": "QFORM-FOURTHVOLUME-ENTROPY-FLOW-DICHOTOMY-v1",
+      "status": "supporting_theorem_proved_independent_review_pending",
+      "statement": "For every original-coordinate cross block M with E4(M)>0, either an entropy-biased fourth-volume deletion flow produces triple marginals <=2/3 and ||p_Q||inf <= (9 sqrt(3)e/2)(E4/||M||F^2)^(-1/6), or one physical four-row packet U has d_U>(2/3)E4 and account02/B04 plus E3(M_U)>=4d_U^(3/4) gives ||p_Q||inf<6((2/3)E4)^(-1/8). Both branches give C0 densities."
+    },
+    {
+      "claim_id": "QFORM-BIASED-DELETION-CURRENCY-IDENTITY-v1",
+      "status": "supporting_identity_proved",
+      "statement": "For arbitrary deletion kernel kappa from canonical fourth-volume bases, with induced triple law mu and uniform-deletion law mu0, G(mu)=4E4 exp(-KL(mu||mu0))/tau_geo(mu), and KL(mu||mu0)<=E_R KL(kappa_R||Unif4)."
+    },
+    {
+      "claim_id": "QFORM-E4-FRACTIONAL-HALL-HUB-v1",
+      "status": "supporting_structural_lemma_proved",
+      "statement": "A deletion kernel with all induced triple row marginals <=2/3 exists iff sum_{i in U}(rho_i-2/3)_+ <= P(R intersects U) for every U; if it fails, some four-row U has P(R=U)>2/3."
+    }
+  ],
+  "premises": [
+    {
+      "name": "QFORM-ENTROPY-WEIGHTED-THREE-VOLUME-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "1d2dd52680ec729f28b7289e74a6f3752a379127",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T021315Z-account01-B04-QFORM-auto11/REPORT.md",
+      "scope": "arbitrary probability weight on supported physical 3x3 minors; original-coordinate product banks; arbitrary same-bank curvature/outside conditioning; q<3/2; C0 conclusion"
+    },
+    {
+      "name": "current Claude fractional three-volume theorem",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "scope": "canonical third-volume law; alpha_i<=q/2, 1<=q<3/2; bound 3e/((3-2q)sqrt(q)) E3^-1/6; C0"
+    },
+    {
+      "name": "QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "febf0c97f0f85e802b6bc2ab4a475c15109de013",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/account02-B04-20260923T111930Z-qform/REPORT.md",
+      "scope": "if E3(N)>0 and no supported minor law has all constrained row marginals strictly below 3/4, then C0 density and bound 6*4^(1/6)E3(N)^(-1/6)"
+    }
+  ],
+  "partner_result_actually_applied": {
+    "partner": "account02/B04",
+    "claim": "QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1",
+    "application": "In the heavy four-row packet branch, N=M_U,* has exactly four physical rows, so every triple law has some marginal >=3/4. Applying the partner theorem and E3(N)>=4d_U^(3/4) yields ||p_Q||inf<=6d_U^(-1/8)<6((2/3)E4)^(-1/8). Also applied to dense H4/2 endpoint, giving bound 6."
+  },
+  "correction_inbox_refreshed": true,
+  "corrections_respected": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "explicit_test": {
+    "matrix": "M_eps=R_eps(H4/2), rows R_eps=e1,e2,e3,e4,e1+eps(e2+e3+e4), eps=1/4; A=[[0,M],[M^T,0]]",
+    "spectrum": "{+sqrt(35)/4,-sqrt(35)/4,+1x3,-1x3,0}",
+    "all_cross_entries_nonzero": true,
+    "biased_q": "134/105",
+    "biased_G": 6.51646198699383,
+    "biased_bound": 11.799966755236218,
+    "current_claude_canonical_bound_same_matrix": 22.13763159356066,
+    "uniform_fourth_face_bound_same_matrix": 56.58176234879258
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_tail_commit": "41b84d3f2294a957d09f204bc1d1ffaf9dbc78cd",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T134902Z-account01-B04-QFORM-auto11/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T134902Z-account01-B04-QFORM-auto11/CHECKS.json",
+    "publication_refresh_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T134902Z-account01-B04-QFORM-auto11/PUBLICATION_REFRESH.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "9dd1cb6e0187a1da89a88977294c495faa4fbd6e",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B04/20260923T134902Z-account01-B04-QFORM-auto11.md"
+  },
+  "unresolved_implication": "QFORM-E4-SCALE-OR-LOWRANK-ROUTING-v1: from only three large eigenvalues of the full symmetric A, force an original-coordinate cut with target-scale E4/||M||F^2 or target-scale E4, or route failure into already-paid exact-rank-three, pair-log, ridge, grouped-hub, aggregate-square or low-cross-rank mechanisms.",
+  "next_step": "Try to convert failure of target-scale E4 currency across all cuts into a quantitative low-cross-rank/compound-hub decomposition, using exterior-power cut identities rather than another local minor extraction.",
+  "scheduler_mutated": false,
+  "email_or_push_enabled": false,
+  "public_release": false,
+  "paid_model_or_api_used": false,
+  "cross_account_auth_used": false
+}

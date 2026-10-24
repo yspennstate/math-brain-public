@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260924T062916Z-account01-B15-QFORM-auto11-r1",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit_start": "383e502da2c274ec98ef27b3d30e0f12cd03fe48",
+  "control_commit_prewrite": "300d4bad3b98487521edfdd6bd47eac9b069d9b4",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "partner_result": {
+    "account": "account02",
+    "slot": "B15",
+    "commit": "45779cb1dca5f453ac620431b380ad015a052e70",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260924T050354Z-account02-B15-QFORM-auto11-r1/REPORT.md",
+    "used_scope": "majority-sheet interval height pi*sqrt(2), cap-one subdensity height 20*sqrt(2)*sqrt(m), and resulting one-coordinate L1-to-output-Linf stability exponent 1/2"
+  },
+  "new_claim": {
+    "id": "QFORM-RULED-MAJORITY-HALFLINE-C0-v1",
+    "status": "SUPPORTING_THEOREM_PROVED",
+    "statement": "For q(X)=Y_1^2+Y_2^2-Y_3^2 with Y=R^T X and R^T R=I_3, arbitrary independent cap-one original-coordinate inputs have a majority-sheet output density with a canonical C_0([0,infinity)) representative and ||r^+||_infinity<=pi*sqrt(2). Continuity is compiled from submass stability plus original-coordinate Gaussian mollification, with no additional height loss.",
+    "quantitative_modulus": "|r^+(s)-r^+(t)| <= 80*sum_j sqrt(delta_j(eta)) + exp(-1/2)/(2*sqrt(2)*eta^3)*|sqrt(s)-sqrt(t)|, delta_j(eta)=||f_j-f_j*phi_eta||_1"
+  },
+  "actual_target_application": {
+    "quadratic": "Q=2XY+Z^2",
+    "spectrum": [1,-1,1],
+    "inequality": "Pr{Q in I, Q>=0}<=pi*sqrt(2)|I| and p_Q on [0,infinity) has a C_0 representative with the same height bound"
+  },
+  "canonical_report_commit": "df6fbc2dd0134b18b4169e496e68b28217414838",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260924T062916Z-account01-B15-QFORM-auto11-r1/REPORT.md",
+  "handoff_commit": "d4cc237209c75f0321d281982fbdf9612999d02d",
+  "unresolved": "Complementary two-sheet/convex-side submass estimate remains unpaid; an analogous sqrt(m) bound would compile to continuity on the negative half-line. Full arbitrary-matrix universal density height remains open.",
+  "next_step": "Seek a product-preserving cap-one submass theorem for the two-sheet side, or route that side through an existing grouped/Schur receiver before taking worst fibers.",
+  "operational_state_changed": false
+}

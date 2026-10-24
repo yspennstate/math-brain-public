@@ -1,0 +1,15 @@
+{
+  "helper_version": "A027-partial-core-transport-v2",
+  "actual_boolean_family": "Every Boolean truth table on core dimensions m=2,3 activated by r=1,2,3 fresh point controls",
+  "domain": {"m": [2,3], "r": [1,2,3]},
+  "case_count": {"proper_nonempty_fixed_core_subsets": 4704, "adaptive_core_policies": 6912, "total": 11616, "pilot": 96},
+  "adaptive_policy": "m=3 root coordinate 0; independently on each child stop or query coordinate 1 or 2, then stop; 9 policies; all leaves retain at least one core coordinate",
+  "symmetry_reduction": "None; all tables, signs and declared physical partitions",
+  "arithmetic": "Integer normalized Walsh coefficients, exact Fraction pivotal counts and leaf weights, 22-term rational atanh-series logarithm enclosures; all decisive comparisons certified",
+  "memory_estimate_mb": 100,
+  "pilot_maximum_runtime_seconds": 60,
+  "full_maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "checks": ["exact arbitrary-bias activation correction", "actual core versus lifted leaf partition", "entropy transfer error <=24 times queried influence", "expected terminal influence reserve", "fixed-block conditional entropy with remaining-core fibers", "regular-leaf preservation for admitted small cores"],
+  "symbolic_family_validation": "t=1,2,3 and s=1,2,4,8,16,32 point-defect core formulas, with r=1,2,4,8,16; no truth-table enumeration at large parameters"
+}

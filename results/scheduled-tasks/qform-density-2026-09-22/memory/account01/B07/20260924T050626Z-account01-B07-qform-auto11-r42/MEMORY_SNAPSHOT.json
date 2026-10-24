@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "20260924T050626Z-account01-B07-qform-auto11-r42",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "full_brain_connected": false,
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "75c225389c931a99c6fc9004fccc432cbb2d5215",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/20260924T050626Z-account01-B07-qform-auto11-r42/REPORT.md",
+    "addendum": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/20260924T050626Z-account01-B07-qform-auto11-r42/PHYSICAL_SHEAR_ADDENDUM.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "dfa898c7517a571e52c36688a90f5dbe97a119c5",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B07/20260924T050626Z-account01-B07-qform-auto11-r42.md"
+  },
+  "supporting_theorems": [
+    "QFORM-EXACTSINGULAR-RENORMALIZED-PLUCKER-FRAME-v1",
+    "QFORM-PLUCKER-3HUB-OR-BALANCED-2BANK-v1",
+    "QFORM-EXACTSINGULAR-PHYSICAL-SHEAR-E2-OR-SLOPE-MISMATCH-v1"
+  ],
+  "new_invariants": {
+    "tau_cancelled_frame": "K=[sqrt(|tau|)q,z] has s2(K)>sqrt(7/96) and E2(K)=|tau|E2(U)>6727/393216",
+    "hub_or_cut": "at most three determinant hubs mu_i>=2/5, otherwise a physical cut balances both K directions and retains tau-weighted cross Pluecker mass plus bordered star",
+    "unit_shear": "choose literal h with |a|>=|tau|/2; w=v-(c/a)u; physical pair source shear (x,y)->(x+(c/a)y,y) has Jacobian one and D_H=-a w w^T",
+    "physical_cut": "3/20<||w_R||^2/||w||^2<17/20, |a|E_RS>137423/77070336, ||D_H[R,S]||op>7sqrt(51)/1920",
+    "bank_dichotomy": "either |a|E2(A[R,H]) or |a|E2(A[S,H]) >137423/1310195712, or |a|(alpha_R-alpha_S)^2||w_R||^2||w_S||^2>137423/231211008"
+  },
+  "partner_application": {
+    "source": "yspennstate/math-open-problems@ec29bb4321feffe020e5cb0185d148f2f6de847e",
+    "theorem": "QFORM-E2-BOUNDED-SUPPORT-BALANCE-v1",
+    "actual_inequality": "on an internal bank branch sqrt(|a|) s2(K_bank)||K_bank||F >0.0102414541653",
+    "bounded_core_corollary": "if an m-row subcore carries >=half internal E2 and entries <=L0, s2(core)>0.00512072708/(sqrt(m|a|)L0)"
+  },
+  "next_debt": "QFORM-PHYSICAL-SHEAR-INTERNAL-E2-OR-MISMATCH-RECEIVER-v1",
+  "warnings": [
+    "Structural results do not yet prove a universal density bound on this branch.",
+    "Do not use post-rotation independence or a non-unit coefficient renormalization as a source-density-preserving map.",
+    "Do not invert a tiny pair determinant.",
+    "Do not delete arbitrary same-bank or between-bank quadratic curvature.",
+    "Do not infer bounded support from aggregate E2 alone."
+  ],
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED"
+}

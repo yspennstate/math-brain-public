@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260924T091522Z-account03-B11-QFORM-r54",
+  "control_revision": "2026-09-22.15",
+  "fresh_control_commit_observed_before_publication": "a155acabbd7c4a3df14d65a900267c7393ac7ca1",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "target_status": "FULL_CONJECTURE_OPEN",
+  "continuity_status": "OPEN",
+  "assignment": "Indefinite signatures (+,+,-) and (+,-,-): identify a uniform third-direction smoothing mechanism while preserving product provenance and the opposite-sign rank-two logarithmic control.",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-NONZERO-PUNCTURE-FIBERWISE-TMINUS1-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "B11-r53-Schur-difference-flattening",
+      "source": "yspennstate/math-open-problems@76badd15bb5b007835da3c731f56430bb7eb19b6:proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260924T081221Z-account03-B11-QFORM-r53/REPORT.md",
+      "scope": "Exact-rank-three nonzero physical pivot; authentic independent-copy difference product; 2D Schur frequency density cap 2/Delta_2."
+    },
+    {
+      "id": "QFORM-SPECTRAL-SCHUR-PSEUDODET-v1",
+      "source": "yspennstate/math-open-problems@28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c:proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260924T041708Z-account04-B11-schur-pseudodet-r1/REPORT.md",
+      "scope": "Designated partner exact-rank-three identity Delta_2(S_h)=q|det M|/|A_hh|."
+    },
+    {
+      "id": "QFORM-SAMEBANK-PAIR-HYPERBOLIC-SQUARE-v1",
+      "source": "yspennstate/math-open-problems@6d920f5ad706016d41d3072a2dc6e71a64bc0296",
+      "scope": "Fresh account03/B03 supporting theorem; dependent same-bank pair plus genuinely independent hyperbolic scalar. Used only as comparison; it does not absorb the B11 same-bank puncture translation."
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-SCHUR-DIFFERENCE-NEGATIVE-MOMENTS-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "If ||p_Z||_infinity<=K in R^2, then for every 0<gamma<2 and every z0, E||Z-z0||^{-gamma} <= [2/(2-gamma)](pi K)^{gamma/2}. In the B11 collar this is <=[2/(2-gamma)](2pi/63)^{gamma/2}s^{-gamma}."
+    },
+    {
+      "id": "QFORM-NONZERO-PUNCTURE-FIBERWISE-TMINUS1-FALSE-v1",
+      "status": "REFUTED_INTERMEDIATE_MECHANISM",
+      "statement": "For every nonzero puncture delta and every t>0 there is a cap-one hub density for which the punctured shared-hub L2 operator norm is >=sqrt(pi/(8t|delta|)); the universal upper scale is <=sqrt(pi/(t|delta|)). Therefore the exact zero-puncture t^{-1} gain cannot be continued by a law-uniform fiberwise perturbation argument."
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B11",
+    "theorem": "QFORM-SPECTRAL-SCHUR-PSEUDODET-v1",
+    "actual_inequality": "q>=63/64, |A_hh|<=s/64, |det M|>=s^3 imply Delta_2(S_h)>=63s^2, hence ||p_Z||_infinity<=2/(63s^2) and E||Z-z0||^{-3/2}<=0.7098874207331786 s^{-3/2}."
+  },
+  "rank_two_control": "For independent centered unit uniforms, p_(2XY)(x)=log(1/(2|x|)) on 0<|x|<1/2.",
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6100316f90ea842e3becb0c4c9ab297d81d1db69",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260924T091522Z-account03-B11-QFORM-r54/REPORT.md",
+    "verifier_marker": "QFORM_B11_R54_NEGMOMENT_PUNCTURE_CHECK_PASS"
+  },
+  "correction_event": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account03/B11/20260924T091522Z-account03-B11-QFORM-r54/QFORM-NONZERO-PUNCTURE-FIBERWISE-TMINUS1-FALSE-v1.json",
+  "unresolved_implication": "QFORM-SCHUR-DIFFERENCE-AVERAGE-FIRST-COMPILER-v1: retain the original-coordinate U integration and Schur frequency Z until the nonzero puncture is averaged; a final random cost C||Z||^{-gamma} for any fixed gamma<2 is sufficient in the exact-rank-three collar.",
+  "separate_bridge": "Arbitrary additional nonseparable spectrum beyond exact rank three remains unpaid."
+}

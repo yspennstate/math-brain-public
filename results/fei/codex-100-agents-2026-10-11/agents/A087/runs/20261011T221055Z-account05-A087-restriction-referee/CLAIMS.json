@@ -1,0 +1,635 @@
+[
+  {
+    "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+    "version": 1,
+    "exact_statement": "For every balanced Boolean b, integers t,k>=1, q=2^-k and c=1/ln2, F=1+A_k(product_{j=1}^t b_j-1) has H(F)=q[tH(b)+4k+2c]-q^2(2k+3c)+R(q), I(F)=q[tI(b)+k], and -2cq^3/[3(1-q)]<=R(q)<=0. The exact entropy is q t H(b)+(4q-2q^2)k-2(1-q)^2 log2(1-q); variance is 2q-q^2 and minority probability q/2. If k=o(t) and 2^-k t->0 for a fixed seed, H(F)/I(F)->H(b)/I(b) with influence tending to zero.",
+    "hypotheses": [
+      "uniform physical cube",
+      "Boolean sign seed with mean zero",
+      "disjoint independent seed copies and fresh point controls",
+      "bit entropy"
+    ],
+    "statement_sha256": "96d6b579feecbca75e161d36eb77236421b420d88429aad9656ba288a64055de",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T214020Z-account05-A021-rare-core-asymptotics\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "cf143df5920601dcec3c3e11e0a14be3e6e217e964f3acd2250215079116d382",
+        "local_UTF8_exact_statement_sha256": "96d6b579feecbca75e161d36eb77236421b420d88429aad9656ba288a64055de"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A002",
+      "A007",
+      "A012",
+      "A015",
+      "A023",
+      "A025",
+      "A026",
+      "A036",
+      "A040",
+      "A047",
+      "A048",
+      "A077",
+      "B20",
+      "A094"
+    ]
+  },
+  {
+    "claim_id": "A021-CONTROL-FIRST-KL-LEDGER",
+    "version": 1,
+    "exact_statement": "For the same family, a control-first stopping tree has terminal entropy 2^-k t H(b), queried influence k2^-k, and exact magnitude-mismatch/KL debt J_tree=2^-k(k+A_k). Here A_k=sum_{s=1}^k 2^-s[2s-1+log2(1-2^(1-s)+2^(1-2s))] and there exists A in [0,3] with 0<=A-A_k<=(2k+3)2^-k. Hence J_tree<=2^-k(k+3)<=4k2^-k uniformly in tensor count. The blind rarity sum before KL subtraction is 2^-k k(k+1)/2. At each active node s, mu=2^-s and J_s=mu-mu^2+mu^2 log2((1-2mu+2mu^2)/mu^2).",
+    "hypotheses": [
+      "hypotheses of A021-UNIFORM-RARE-CORE-EXPANSION, reproved directly in REPORT.md",
+      "controls queried first, stopping on first inactive control",
+      "mismatch defined using absolute child Fourier coefficients",
+      "complete terminal entropy retained"
+    ],
+    "statement_sha256": "2981146f37a6b34aad4a8873bf5337429ffb2f00340cf98c55a41ab79d4cc8f9",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T214020Z-account05-A021-rare-core-asymptotics\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "6afe9b93a0b13174a5b51e23c0357056d3a334ff52b3dbb4d7003459eae91aea",
+        "local_UTF8_exact_statement_sha256": "2981146f37a6b34aad4a8873bf5337429ffb2f00340cf98c55a41ab79d4cc8f9"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A002",
+      "A007",
+      "A012",
+      "A015",
+      "A023",
+      "A025",
+      "A026",
+      "A036",
+      "A040",
+      "A047",
+      "A048",
+      "A077",
+      "B20",
+      "A094"
+    ]
+  },
+  {
+    "claim_id": "A022-SIGNED-SURGERY-TENSOR-LOG-LEDGER",
+    "version": 1,
+    "exact_statement": "For every Boolean seed h on m>=1 uniform bits, every tensor power t>=1, and every flipped tensor vertex, write W_T=2^m hhat(T), M=#{T:W_T!=0}, rho=M/2^m, lambda=M^-1 sum_(W_T!=0) log2|W_T|, delta_t=2^-mt. For the actual fair selector between h^tensor(t) and its one-point flip, its conditional selector entropy L_t satisfies |L_t/delta_t-2(1-rho^t)-rho^t(2t lambda+log2 e)|<=12(rho/2)^t. Hence L_t/delta_t tends to 2 when rho<1 and grows as 2t lambda+log2 e+O(2^-t) when rho=1. For arbitrary finite actual flip sets D, coefficient half-difference t_S=2^-n sum_(v in D) f(v)chi_S(v), q_S=(fhat(S)-t_S)^2+t_S^2, e_S=t_S^2, mu=|D|2^-n; L=mu[log2(1/mu)-D2(e/mu||q)]+R, 0<=R<=mu/ln2. For one point e is the minority fiber mass in every packet. Adjacent flips have e_S=2 delta^2[1+epsilon(-1)^(j in S)], so mismatch occupies exactly one Fourier half-cube; the common flipped edge contributes zero to influence change.",
+    "hypotheses": [
+      "Actual Boolean signs, uniform cube",
+      "m>=1, integer t>=1; fixed tensor seed for limiting dichotomy",
+      "Entropy and KL in bits",
+      "Zero packets omitted; mu=0 interpreted as zero",
+      "Selector-local cost, not total FEI ratio"
+    ],
+    "statement_sha256": "13e691e476793bfed16ff3a588b2394e66df48415f955fb8d50fc1e9fe4606f5",
+    "contributors": [
+      "A022"
+    ],
+    "proof_source": {
+      "run_id": "20261011T215800Z-account05-A022-one-point-surgery",
+      "path": "POINT_SURGERY.tex",
+      "certificate": "SURGERY_LOG_CERTIFICATE.md",
+      "verifier": "code/check_surgery.py",
+      "output": "out/EXACT_CHECK.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "13e691e476793bfed16ff3a588b2394e66df48415f955fb8d50fc1e9fe4606f5",
+        "local_UTF8_exact_statement_sha256": "13e691e476793bfed16ff3a588b2394e66df48415f955fb8d50fc1e9fe4606f5"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": [],
+    "refutes": [
+      "Universal selector-local fixed price L<=K*mu on full-support tensor-seed point surgeries; existing bent control is not claimed new"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A020",
+      "A021",
+      "A023",
+      "A028",
+      "A053",
+      "A064",
+      "A077",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A026-AFFINE4-GOOD-COORDINATE",
+    "version": 1,
+    "exact_statement": "Every nonconstant uniform-cube Boolean sign function with nonzero Fourier support of affine F2 dimension at most four, and every disjoint product of such factors, has a relevant physical coordinate i with B_i <= (7/2) I_i. This class is closed under physical restrictions and satisfies H <= (7/2+2/ln 2) I.",
+    "hypotheses": [
+      "Uniform finite cube; Boolean sign outputs; bit entropy; factors use disjoint physical variable sets; each factor support has affine F2 dimension <=4."
+    ],
+    "statement_sha256": "92242934a4ebeaa98a26a8578438959c5820b01186542b2122f011019fa64dd0",
+    "contributors": [
+      "A026"
+    ],
+    "proof_source": "GOOD_COORDINATE_TARGET.tex; code/edge_pilot.py; code/independent_check.py; out/edge_pilot.json; out/independent_check.json",
+    "proof_dependencies": [
+      "Recovered exact physical decrement and influence identities: ERASURE_REDUCTION.md sections 1-4; reconstructed in GOOD_COORDINATE_TARGET.tex."
+    ],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "441e9a88fb64a474673b512cb01b9bf06a6b5535fcc47be8bc610f471889e6f7",
+        "local_UTF8_exact_statement_sha256": "92242934a4ebeaa98a26a8578438959c5820b01186542b2122f011019fa64dd0"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A003",
+      "A087",
+      "A094",
+      "A027",
+      "A061",
+      "A096",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A026-AMPLITUDE-K4-THRESHOLD-NOGO",
+    "version": 1,
+    "exact_statement": "For f=+1 exactly at Hamming weights >=24 on 32 uniform sign bits, every coordinate has edge amplitude proxy A_i=2 sum_T |fhat(T) fhat(T+i)| with A_i/I_i=2220940451/536870912>4. Thus existential proxy selection with K=4 is false. No true-erasure violation or unbounded-ratio family is claimed.",
+    "hypotheses": [
+      "Uniform 32-bit cube; coordinate signs identified with 0/1 bits; threshold is Hamming weight >=24; proxy A_i is not child Hellinger affinity."
+    ],
+    "statement_sha256": "a456bb7780df49d38c243414e6fe94d9bc8b65113b9e6a2fc36c619f9c228aba",
+    "contributors": [
+      "A026"
+    ],
+    "proof_source": "code/symmetric_pilot.py; code/independent_check.py; out/symmetric_pilot.json; out/independent_check.json",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "99a547e3430467b97c2092643f49eb7365f5dc560518386b87b9f3d2e38f5d7d",
+        "local_UTF8_exact_statement_sha256": "a456bb7780df49d38c243414e6fe94d9bc8b65113b9e6a2fc36c619f9c228aba"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": [],
+    "refutes": [
+      "Existential edge-amplitude proxy A_i<=4 I_i for every Boolean function."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A003",
+      "A087",
+      "A094",
+      "A046",
+      "A075",
+      "A096",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A027-DATA-FIRST-PROPER-BLOCK",
+    "version": 1,
+    "exact_statement": "For every Boolean u on m>=1 uniform core bits, r>=1 fresh control bits, p=2^(-r), d=1-Eu, and F=1+A_r(u-1), the proper core block W satisfies B_W(F)<=p(2dm+2)<=6pm. I_W(F)=pI(u), expected terminal influence=rpd, and all leaves are constants or point defects satisfying H<=4I. For each fixed eta>0, I(u)>=eta*m implies H(F)<=max(6/eta+2/ln(2),4)*I(F) by a single-use physical stopping ledger.",
+    "hypotheses": [
+      "Uniform normalized Boolean Fourier spectrum; entropy in bits",
+      "Explicit core/control activation representation",
+      "For the constant bound only: fixed eta>0 and I(u)>=eta*m"
+    ],
+    "statement_sha256": "9f07bfbcad6bdbc37ddc431b188837a5f6b2c607322567b894938e5cf474be1e",
+    "contributors": [
+      "A027"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A027\\runs\\20261011T215911Z-account05-A027-block-selection\\ADAPTIVE_BLOCK_SELECTION.tex",
+    "proof_dependencies": [
+      "C006@recovered-BLOCK_RESTRICTION_IDENTITY-sections-1-3",
+      "threshold-paper@context-38pp-Proposition-8.6"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "9f07bfbcad6bdbc37ddc431b188837a5f6b2c607322567b894938e5cf474be1e",
+        "local_UTF8_exact_statement_sha256": "9f07bfbcad6bdbc37ddc431b188837a5f6b2c607322567b894938e5cf474be1e"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": null,
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A065",
+      "A087",
+      "A094",
+      "A097",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A027-CORE-BLOCK-HARDNESS",
+    "version": 1,
+    "exact_statement": "For every Boolean core u with Eu>=0, delta=(1-Eu)/2, v=1-(Eu)^2, p=2^(-r), R0=1-4p*delta+4p^2*delta, and L the entropy of the nonempty conditional core spectrum, B_W(1+A_r(u-1))/p=v*L+4*delta*(1-p)*h2(delta)+(R0/p)*h2(p^2*v/R0). Continuous zero-mass conventions apply. A uniform core-block bound B_W<=K*p*I(u) for all such cores and r>=1 implies full FEI with constant K+2. Conversely FEI with constant C implies this block bound with constant C+5.",
+    "hypotheses": [
+      "Uniform normalized Boolean Fourier spectrum; entropy in bits",
+      "Core mean nonnegative for the quantitative equivalence",
+      "Fresh point-indicator controls; W consists of all core coordinates but is proper in the full cube"
+    ],
+    "statement_sha256": "77678060db6c63d420d4c2df32186612dcb5bfbb334517329f28742cedc814be",
+    "contributors": [
+      "A027"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A027\\runs\\20261011T215911Z-account05-A027-block-selection\\ADAPTIVE_BLOCK_SELECTION.tex",
+    "proof_dependencies": [
+      "C006@recovered-BLOCK_RESTRICTION_IDENTITY-sections-1-3",
+      "threshold-paper@context-38pp-Proposition-8.6"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "77678060db6c63d420d4c2df32186612dcb5bfbb334517329f28742cedc814be",
+        "local_UTF8_exact_statement_sha256": "77678060db6c63d420d4c2df32186612dcb5bfbb334517329f28742cedc814be"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": null,
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A065",
+      "A087",
+      "A094",
+      "A097",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A061-FAIR-TREE-PROCESS",
+    "version": 1,
+    "exact_statement": "For every finite-dimensional uniform Boolean sign and fair adaptive physical restriction policy querying each coordinate at most once, with filtration given by past physical observations and an independent policy seed, H(g_t)+sum_{s<t}D_s and I(g_t)+sum_{s<t}d_s are stopped martingales, where D_s=B_s+J_s is the conditional spectral erasure plus the actual physical-child/spectral mutual information and d_s is queried influence. For tau<=n, H(f)=E H(g_tau)+E sum_{s<tau}D_s and I(f)=E I(g_tau)+E sum_{s<tau}d_s.",
+    "hypotheses": [
+      "Boolean sign output",
+      "uniform finite input cube",
+      "fair physical queries selected using past only",
+      "no coordinate queried twice",
+      "entropy in bits",
+      "tau<=n"
+    ],
+    "statement_sha256": "4e02b9ad2605cf9a54527516ad0780434f92c3cd972d20a4f9c593c3e3f6412d",
+    "contributors": [
+      "A061"
+    ],
+    "proof_source": {
+      "run_id": "20261011T214516Z-account05-A061-entropy-process",
+      "path": "REPORT.md",
+      "sections": "1--2"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "a6ed9651bbd575cb1b797d599a66da234612a25e76102a26ecaba32dc58c4ac1",
+        "local_UTF8_exact_statement_sha256": "4e02b9ad2605cf9a54527516ad0780434f92c3cd972d20a4f9c593c3e3f6412d"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A026",
+      "A028",
+      "A029",
+      "A037",
+      "A062",
+      "A063",
+      "A064",
+      "A066",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A061-LOG-COMPENSATION",
+    "version": 1,
+    "exact_statement": "On every such fair finite tree, lambda_t=sum_{T:b_T^2>0}b_T^2 log2((a_T^2+b_T^2)/b_T^2) satisfies D_t<=lambda_t+(3/ln(2))d_t. Therefore (3/ln(2))I(g_t)-H(g_t)-sum_{s<t}lambda_s is a supermartingale. If at every live node every positive b_T^2/(a_T^2+b_T^2)>=epsilon for fixed epsilon in (0,1], then C I(g_t)-H(g_t) is a supermartingale for C=log2(1/epsilon)+3/ln(2); hence H(f)<=C I(f)+E[H(g_tau)-C I(g_tau)].",
+    "hypotheses": [
+      "same fair finite tree as A061-FAIR-TREE-PROCESS v1",
+      "entropy in bits",
+      "a_T and b_T are actual parent Fourier coefficients without and with queried coordinate",
+      "density bound required only for second supermartingale",
+      "no universal density or logarithmic payment hypothesis claimed"
+    ],
+    "statement_sha256": "3e091511bb88cb4198f00efccbaf6921e7c650e1d81c97d25ca4a6a9245c93ed",
+    "contributors": [
+      "A061"
+    ],
+    "proof_source": {
+      "run_id": "20261011T214516Z-account05-A061-entropy-process",
+      "path": "REPORT.md",
+      "sections": "3--4"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A061-FAIR-TREE-PROCESS",
+        "version": 1
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "77b18edf07bc74da4e46da12bd76189748f2966483ed25cfc3dba26d67ecef95",
+        "local_UTF8_exact_statement_sha256": "3e091511bb88cb4198f00efccbaf6921e7c650e1d81c97d25ca4a6a9245c93ed"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A026",
+      "A028",
+      "A029",
+      "A037",
+      "A062",
+      "A063",
+      "A064",
+      "A066",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A062-INFLUENCE-STOPPING-INTERFACE",
+    "version": 1,
+    "exact_statement": "For every finite uniform-cube Boolean f and every fair adaptive fresh-coordinate/block restriction tree, including independently randomized policies and stopping, I(f)=E sum_{t<tau} I_{A_t}(g_t)+E I(g_tau), and the same physical tree obeys H(f)=E sum_{t<tau} delta_{A_t}(g_t)+E H(g_tau). Each original coordinate separately conserves its expected queried cost plus terminal influence. These identities hold for arbitrary waiting/stopping at fixed dimension by bounded convergence. For a genuinely unbounded nonnegative process with the stated drift and integrable initial budget, cumulative costs are integrable, Fatou gives only the terminal inequality, and uniform integrability of residual influence (separately entropy) suffices for equality.",
+    "hypotheses": [
+      "Boolean signs on the uniform finite cube for the concrete tree theorem",
+      "decisions measurable in independent auxiliary randomness and revealed physical history",
+      "selected input coordinates are fresh and unrevealed signs stay fair",
+      "entropy in bits; ordinary influence",
+      "infinite-time terminal restriction at fixed n is the eventual stabilized restriction",
+      "abstract unbounded extension assumes its one-step drift and finite initial expected budget; limit identification is not asserted"
+    ],
+    "statement_sha256": "1bf0ccbb4b3316922c2cc1e5cfe8abf12148ca8639bb695ba0aab67dc7af7862",
+    "contributors": [
+      "A062"
+    ],
+    "proof_source": [
+      "FAIR_TREE_INFLUENCE_PROCESS.tex",
+      "STOPPING_JUSTIFICATION.md",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "4cfb77e62376329a2db301ed1f10a611e4f6ffeae1af17e2f0e0297cd8be515c",
+        "local_UTF8_exact_statement_sha256": "1bf0ccbb4b3316922c2cc1e5cfe8abf12148ca8639bb695ba0aab67dc7af7862"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A026",
+      "A027",
+      "A028",
+      "A029",
+      "A037",
+      "A064",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A062-BOOLEAN-DIMENSION-LIMIT-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "There is an actual Boolean activation family F_k=1+A_k(g_k-1), with k fair controls, p_k=2^{-k}, and balanced g_k=y_0 times 2^{k-1} quadratic bent two-bit factors, for which I(F_k)=1/2+(k+1)2^{-k}<=3/2. Stopping after control revelation gives terminal influence (2^{k-1}+1)1_{A_k} and terminal entropy 2^k 1_{A_k}; on coupled infinite fair controls they converge to zero almost surely but their expectations tend to 1/2 and equal 1. Thus bounded root influence does not imply dimension-uniform terminal uniform integrability or allow exchanging these terminal expectations with almost-sure limits. Also an activated two-bit parity has root influence 3/2 and a child of influence 2, so residual influence need not decrease pathwise.",
+    "hypotheses": [
+      "k is a positive integer",
+      "all control/data inputs are independent uniform signs",
+      "controls are revealed in order and the tree stops at the first inactive control or after all k controls",
+      "entropy is in bits",
+      "dimension-limit comparison is across F_k, not unbounded stopping for one fixed finite-dimensional function"
+    ],
+    "statement_sha256": "2648256c0019e36ade1d9733f392e9390b2c90ba0107ad57771b33815019fc3f",
+    "contributors": [
+      "A062"
+    ],
+    "proof_source": [
+      "STOPPING_JUSTIFICATION.md",
+      "out/LIMIT_CHECK.json",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "775a5fd1f27ee272565549b847aecd647c564726a33ca20729235d40db104908",
+        "local_UTF8_exact_statement_sha256": "2648256c0019e36ade1d9733f392e9390b2c90ba0107ad57771b33815019fc3f"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": [],
+    "refutes": [
+      "bounded root budgets alone justify terminal expectation exchange across dimension limits",
+      "residual physical influence always decreases on each restriction branch"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A026",
+      "A027",
+      "A028",
+      "A029",
+      "A037",
+      "A064",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A087-CONTROL-TREE-LAMBDA-KL-IDENTITY",
+    "version": 1,
+    "exact_statement": "For every balanced Boolean core g on a finite uniform cube and k>=1 fresh fair point controls, let q=2^-k and F=1+A_k(g-1). On the physical control-first tree stopped at the first inactive control or at g, A061 one-sided logarithmic charge lambda_s equals the exact magnitude-mismatch KL residual at every active node s: lambda_s=u-u^2+u^2 log2((1-2u+2u^2)/u^2), u=2^-s. Its physically weighted sum is q(k+A_k)<=4kq with A_k=sum_(s=1..k)2^-s[2s-1+log2(1-2^(1-s)+2^(1-2s))]. Queried influence is kq, terminal influence qI(g), and terminal entropy qH(g); no terminal bound on arbitrary cores is implied.",
+    "hypotheses": [
+      "Uniform finite cube, Boolean balanced core",
+      "Fresh disjoint point controls, k>=1",
+      "Control-first stopping and fair physical branch probabilities",
+      "Bit entropy; signed/magnitude equality only for these actual children"
+    ],
+    "statement_sha256": "e2cf0d63701d6fe930a8e7a8bd5629e5dc1bacb5321eb3377bbcd5b6dbf510aa",
+    "contributors": [
+      "A087"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A021",
+      "A023",
+      "A028",
+      "A061",
+      "A064",
+      "A094",
+      "B20"
+    ]
+  }
+]

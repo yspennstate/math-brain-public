@@ -1,0 +1,46 @@
+{
+  "problem_id": "P0043",
+  "checked_on": "2026-10-10",
+  "status": "claimed_solved_by_public_2026_preprint_with_lean_solution; independent_full_proof_check_pending",
+  "exact_statement": "For independent Bernoulli bond percolation on any infinite connected locally finite undirected quasi-transitive graph G with p_c(G)<1, P_{p_c(G)}(there exists an infinite open cluster)=0.",
+  "threshold_definition": "p_c(G)=inf{p in [0,1]:P_p(there exists an infinite open cluster)>0}.",
+  "rows": [
+    {
+      "kind": "ranking_record",
+      "date": "2026-09-07",
+      "exact_row": "5,P0043,Absence of infinite clusters at critical percolation,attempted_un,theta(p_c)=0 on quasi-transitive graphs",
+      "source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:549",
+      "interpretation": "Historical ranking only; shorthand omits p_c<1, the bond model and graph regularity."
+    },
+    {
+      "kind": "original_conjecture_and_special_case",
+      "date": "2016",
+      "source": "https://comptes-rendus.academie-sciences.fr/mathematique/item/10.1016/j.crma.2016.07.013.pdf",
+      "locator": "Hutchcroft, introduction Conjecture 1.1 and Theorem 1.2",
+      "checked": "Conjecture includes p_c<1; Theorem 1.2 handles exponential-growth quasi-transitive graphs only."
+    },
+    {
+      "kind": "subsequent_full_scope_claim",
+      "date": "2026-09-24",
+      "source": "https://github.com/openai/math/blob/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf",
+      "locator": "Theorem 1.1, page 2; proof completion, page 39",
+      "checked": "Exact bond statement above; proof divides the subexponential case by growth, after citing Hutchcroft for exponential growth.",
+      "verification_limit": "Manuscript checked for scope and proof route, not fully refereed by w443."
+    },
+    {
+      "kind": "formal_check_receipt_scope",
+      "source": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/CriticalPercolation.json",
+      "solution": "https://raw.githubusercontent.com/openai/math/main/lean/OAI/Probability/CriticalPercolation/Main.lean",
+      "challenge": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/CriticalPercolation.lean",
+      "theorem": "OAI.CriticalPercolation.BondGraph.no_percolation_at_criticality",
+      "assumptions": ["Infinite V", "fullGraph.Connected", "LocallyFinite counts incident bonds", "QuasiTransitive", "criticalProbability < 1"],
+      "conclusion": "G.law G.criticalProbability G.percolates = 0",
+      "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+      "checked": "Comparator challenge has intentional sorry; separate solution module has a theorem body and no sorry in its main theorem.",
+      "verification_limit": "No local comparator build; imported modules and actual axiom closure were not checked. This is a public proof artifact, not a local formal verification receipt."
+    }
+  ],
+  "owner_solved_retired_check": "No P0043 hit in the named September H/I attempt directories or W0300_O board; dated ranking and later duplicate H0016 were found. Bounded local check only.",
+  "novelty_claim": false,
+  "next": "Review w441/w442 claims, compare exact retrieved cards, and submit only independently checked draft relations."
+}

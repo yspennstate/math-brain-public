@@ -1,0 +1,225 @@
+[
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 17,
+    "record": {
+      "admitted": true,
+      "current_status": "no_resolution_found_in_documented_search",
+      "dedup_key": "conformal_invariance_Z2_bond_percolation",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Chapter II Section 4, p. 26",
+      "problem_id": "C0017",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "garban_steif_noise_2012",
+      "statement": "Prove that critical bond percolation on Z^2 at p = 1/2 is conformally invariant in the scaling limit (Cardy's formula and convergence of interfaces to SLE(6)), as is known on the triangular lattice by Smirnov.",
+      "status_search": "Bounded search 2026-09-07: no proof of conformal invariance on Z^2 found; the problem is listed as open in Duminil-Copin's ICM 2018 survey as well (dedup with that source).",
+      "title": "Conformal invariance of critical bond percolation on the square lattice",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 17,
+    "record": {
+      "attempt_id": "C0017-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Look for a discrete holomorphic observable on the square lattice analogous to Smirnov's on the triangular lattice.",
+      "obstruction": "Only the weak (contour) half of discrete holomorphicity holds for the q=1 parafermion on the square lattice.",
+      "problem_id": "C0017",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "Smirnov's argument needs the three-arm colour-switching symmetry, which on the triangular lattice comes from site self-duality; on Z^2 bond percolation the dual is the shifted square lattice and the exploration interface lives on the medial lattice, where the parafermionic observable F(z) = E[e^{i sigma W(z)} 1_{z on interface}] with spin sigma = ... satisfies only half of the discrete Cauchy-Riemann relations (the contour-integral relations, as for FK models with q not 2). A concrete check: for the q=1 FK model the parafermionic observable has spin sigma = 2/3 and the relation sum over edges around a face vanishes, which gives crossing exponent bounds but not holomorphicity; the missing half is what conformal invariance needs. No new observable found.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 18,
+    "record": {
+      "attempt_id": "C0018-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "correction_note": "The existence-of-exponent claim assumed alpha_4(rho,R) depends on R/rho only up to constants (scale invariance up to constants), which is unproved on Z^2; see C0018-A002.",
+      "independent_check": "The de Bruijn-Erdos approximate subadditivity lemma requires |f(xy)-f(x)-f(y)| bounded, which is exactly the quasi-multiplicativity statement with r=1 scaled; no gap found.",
+      "key_identity": "Quasi-multiplicativity => approximate subadditivity of -log alpha_4 in log R => the limit exponent exists on Z^2.",
+      "method": "Subadditivity of arm probabilities under quasi-multiplicativity.",
+      "obstruction": "The value 5/4 requires conformal invariance on Z^2.",
+      "problem_id": "C0018",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "Quasi-multiplicativity alpha_4(r,R) asymp alpha_4(r,rho) alpha_4(rho,R) holds on Z^2 by RSW, which makes -log alpha_4(1,R) approximately subadditive in log R up to additive constants; Fekete's lemma then gives existence of the limit of -log alpha_4(1,R)/log R PROVIDED the additive constant is bounded, which it is, so the exponent xi_4 EXISTS on Z^2 as a limit in the sense lim -log alpha_4(R)/log R. Checked: quasi-multiplicativity with constants C^{-1} <= alpha(r,R)/(alpha(r,rho) alpha(rho,R)) <= C gives |f(R) - f(r) - f(R/r)| <= log C for f = -log alpha_4, and a function with this property has f(R)/log R convergent (approximate subadditivity, de Bruijn-Erdos). So existence of the exponent is not the open part; the open part is the value 5/4, which depends on conformal invariance (C0017) or an independent computation. The universal bounds available are xi_4 in (1, 2) from the 5-arm exponent 2 and the monotone-coupling comparison alpha_4 <= alpha_2 ... giving xi_4 > xi_2 >= ... ; I did not improve them.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "superseded_by": "C0018-A002"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 39,
+    "record": {
+      "attempt_id": "C0049-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Check which ingredients of the q = 2 proof are available for other q.",
+      "obstruction": "Discrete holomorphicity is only half-satisfied for q not 2.",
+      "problem_id": "C0049",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "The q = 2 proof uses (i) the parafermionic observable being discretely holomorphic (full Cauchy-Riemann), (ii) RSW-type crossing estimates for tightness, (iii) identification of the limit via the martingale observable. For q in (1,4) not 2: (ii) is available (Duminil-Copin-Sidoravicius-Tassion 2017 for q in [1,4]); (iii) would follow from (i); (i) fails: for general q the observable satisfies only the contour relations (half of the Cauchy-Riemann equations), the same obstruction as in C0017. So the conjecture is reduced, for q in [1,4], exactly to finding an additional discrete relation for the parafermionic observable; the count of unknowns versus equations (one complex relation per face versus two needed) is the precise deficit. For q < 1 even RSW is unavailable. No new relation found.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\brain_bundle_C004.json",
+    "record": {
+      "key": "op-c0017",
+      "namespace": "probability.percolation",
+      "logical_name": "open-problem-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+      "kind": "concept",
+      "title": "Open problem: Conformal invariance of critical bond percolation on the square lattice",
+      "statement": "OPEN PROBLEM (source_says_open; current status no_resolution_found_in_documented_search; result status attempted_unsolved). Prove that critical bond percolation on Z^2 at p = 1/2 is conformally invariant in the scaling limit (Cardy's formula and convergence of interfaces to SLE(6)), as is known on the triangular lattice by Smirnov. Source: Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems, Chapter II Section 4, p. 26. Status notes: Bounded search 2026-09-07: no proof of conformal invariance on Z^2 found; the problem is listed as open in Duminil-Copin's ICM 2018 survey as well (dedup with that source).",
+      "proof_text": null,
+      "assumptions": [
+        "Posed in Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems",
+        "Current status no_resolution_found_in_documented_search as of 2026-09-07"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:op-c0017",
+        "url": "urn:probability-research:20260907:claude-intake:op-c0017",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\brain_bundle_C004.json",
+    "record": {
+      "key": "at-c0017",
+      "namespace": "probability.percolation",
+      "logical_name": "attempt-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+      "kind": "concept",
+      "title": "Attempt on Conformal invariance of critical bond percolation on the square lattice",
+      "statement": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Look for a discrete holomorphic observable on the square lattice analogous to Smirnov's on the triangular lattice. Result: Smirnov's argument needs the three-arm colour-switching symmetry, which on the triangular lattice comes from site self-duality; on Z^2 bond percolation the dual is the shifted square lattice and the exploration interface lives on the medial lattice, where the parafermionic observable F(z) = E[e^{i sigma W(z)} 1_{z on interface}] with spin sigma = ... satisfies only half of the discrete Cauchy-Riemann relations (the contour-integral relations, as for FK models with q not 2). A concrete check: for the q=1 FK model the parafermionic observable has spin sigma = 2/3 and the relation sum over edges around a face vanishes, which gives crossing exponent bounds but not holomorphicity; the missing half is what conformal invariance needs. No new observable found. Obstruction: Only the weak (contour) half of discrete holomorphicity holds for the q=1 parafermion on the square lattice.",
+      "proof_text": null,
+      "assumptions": [
+        "Refers to the open problem node open-problem-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+        "No independent review; result status attempted_unsolved"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:at-c0017",
+        "url": "urn:probability-research:20260907:claude-intake:at-c0017",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\brain_bundle_C004.json",
+    "record": {
+      "key": "at-c0049",
+      "namespace": "probability.statmech",
+      "logical_name": "attempt-c0049-convergence-of-random-cluster-interfaces-to-sle-kappa-for-q-in-0-4-q-n",
+      "kind": "concept",
+      "title": "Attempt on Convergence of random-cluster interfaces to SLE(kappa) for q in (0,4], q not 2",
+      "statement": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Check which ingredients of the q = 2 proof are available for other q. Result: The q = 2 proof uses (i) the parafermionic observable being discretely holomorphic (full Cauchy-Riemann), (ii) RSW-type crossing estimates for tightness, (iii) identification of the limit via the martingale observable. For q in (1,4) not 2: (ii) is available (Duminil-Copin-Sidoravicius-Tassion 2017 for q in [1,4]); (iii) would follow from (i); (i) fails: for general q the observable satisfies only the contour relations (half of the Cauchy-Riemann equations), the same obstruction as in C0017. So the conjecture is reduced, for q in [1,4], exactly to finding an additional discrete relation for the parafermionic observable; the count of unknowns versus equations (one complex relation per face versus two needed) is the precise deficit. For q < 1 even RSW is unavailable. No new relation found. Obstruction: Discrete holomorphicity is only half-satisfied for q not 2.",
+      "proof_text": null,
+      "assumptions": [
+        "Refers to the open problem node open-problem-c0049-convergence-of-random-cluster-interfaces-to-sle-kappa-for-q-in-0-4-q-n",
+        "No independent review; result status attempted_unsolved"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:at-c0049",
+        "url": "urn:probability-research:20260907:claude-intake:at-c0049",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\brain_bundle_C004a.json",
+    "record": {
+      "key": "op-c0017",
+      "namespace": "probability.percolation",
+      "logical_name": "open-problem-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+      "kind": "concept",
+      "title": "Open problem: Conformal invariance of critical bond percolation on the square lattice",
+      "statement": "OPEN PROBLEM (source_says_open; current status no_resolution_found_in_documented_search; result status attempted_unsolved). Prove that critical bond percolation on Z^2 at p = 1/2 is conformally invariant in the scaling limit (Cardy's formula and convergence of interfaces to SLE(6)), as is known on the triangular lattice by Smirnov. Source: Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems, Chapter II Section 4, p. 26. Status notes: Bounded search 2026-09-07: no proof of conformal invariance on Z^2 found; the problem is listed as open in Duminil-Copin's ICM 2018 survey as well (dedup with that source).",
+      "proof_text": null,
+      "assumptions": [
+        "Posed in Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems",
+        "Current status no_resolution_found_in_documented_search as of 2026-09-07"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:op-c0017",
+        "url": "urn:probability-research:20260907:claude-intake:op-c0017",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\brain_bundle_C004b.json",
+    "record": {
+      "key": "at-c0017",
+      "namespace": "probability.percolation",
+      "logical_name": "attempt-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+      "kind": "concept",
+      "title": "Attempt on Conformal invariance of critical bond percolation on the square lattice",
+      "statement": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Look for a discrete holomorphic observable on the square lattice analogous to Smirnov's on the triangular lattice. Result: Smirnov's argument needs the three-arm colour-switching symmetry, which on the triangular lattice comes from site self-duality; on Z^2 bond percolation the dual is the shifted square lattice and the exploration interface lives on the medial lattice, where the parafermionic observable F(z) = E[e^{i sigma W(z)} 1_{z on interface}] with spin sigma = ... satisfies only half of the discrete Cauchy-Riemann relations (the contour-integral relations, as for FK models with q not 2). A concrete check: for the q=1 FK model the parafermionic observable has spin sigma = 2/3 and the relation sum over edges around a face vanishes, which gives crossing exponent bounds but not holomorphicity; the missing half is what conformal invariance needs. No new observable found. Obstruction: Only the weak (contour) half of discrete holomorphicity holds for the q=1 parafermion on the square lattice.",
+      "proof_text": null,
+      "assumptions": [
+        "Refers to the open problem node open-problem-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+        "No independent review; result status attempted_unsolved"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:at-c0017",
+        "url": "urn:probability-research:20260907:claude-intake:at-c0017",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\brain_bundle_C004b.json",
+    "record": {
+      "key": "at-c0049",
+      "namespace": "probability.statmech",
+      "logical_name": "attempt-c0049-convergence-of-random-cluster-interfaces-to-sle-kappa-for-q-in-0-4-q-n",
+      "kind": "concept",
+      "title": "Attempt on Convergence of random-cluster interfaces to SLE(kappa) for q in (0,4], q not 2",
+      "statement": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Check which ingredients of the q = 2 proof are available for other q. Result: The q = 2 proof uses (i) the parafermionic observable being discretely holomorphic (full Cauchy-Riemann), (ii) RSW-type crossing estimates for tightness, (iii) identification of the limit via the martingale observable. For q in (1,4) not 2: (ii) is available (Duminil-Copin-Sidoravicius-Tassion 2017 for q in [1,4]); (iii) would follow from (i); (i) fails: for general q the observable satisfies only the contour relations (half of the Cauchy-Riemann equations), the same obstruction as in C0017. So the conjecture is reduced, for q in [1,4], exactly to finding an additional discrete relation for the parafermionic observable; the count of unknowns versus equations (one complex relation per face versus two needed) is the precise deficit. For q < 1 even RSW is unavailable. No new relation found. Obstruction: Discrete holomorphicity is only half-satisfied for q not 2.",
+      "proof_text": null,
+      "assumptions": [
+        "Refers to the open problem node open-problem-c0049-convergence-of-random-cluster-interfaces-to-sle-kappa-for-q-in-0-4-q-n",
+        "No independent review; result status attempted_unsolved"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:at-c0049",
+        "url": "urn:probability-research:20260907:claude-intake:at-c0049",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\prob1000_lean_20260908\\RANKED_LIST_2026-09-07_annotated.md",
+    "line": 588,
+    "text": "| C0017 | Conformal invariance of critical bond percolation on the square lattice | attempted_un | conformal invariance on Z^2 |"
+  }
+]

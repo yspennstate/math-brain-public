@@ -1,0 +1,116 @@
+[
+  {
+    "claim_id": "A091-POINT-CONTROLLER-RESIDUAL-AND-BOUNDARY",
+    "version": 1,
+    "exact_statement": "For every finite uniform Boolean core u and r>=1 fresh point controls, F=1+A_r(u-1), every actual controller query in any finite adaptive physical restriction tree satisfies 0<=D_control-kappa<=(3+2/ln2)Inf_control, where kappa=R-E R_child and R=q log2(1/q)(1-m^2) for the live residual point activation. Thus the actual stopped sum of controller residuals costs at most (3+2/ln2)Pi_control. For every exclusive controller with independent disjoint Boolean cores, U=sum q_j[H(u_j)-eta(m_j^2)] and R=sum eta(q_j)V_j satisfy H(F)-U-R=Eraw(ghat^2)+sum_{q_j>0}q_j V_j H(Chat_j^2/q_j)>=0, g=sum m_j C_j. At any actual controller-resolved leaf this quantity is eta(m_j^2)<=I(F_leaf)/ln2. Combining the reviewed interleaved DATA identity gives H(F_root)<=U_root+R_root+(3/ln2)T_data+(3+2/ln2)Pi_control+E[H_leaf-U_leaf-R_leaf] for point activations, and the last term is <=E I_leaf/ln2 if its actual controller states are resolved. Arbitrary inherited core entropy and unresolved-controller payment are not asserted.",
+    "hypotheses": [
+      "Finite uniform independent physical cube; genuine Boolean signs; point controls fresh and disjoint from the core for the controller price.",
+      "Adaptive finite singleton physical trees query only unrevealed coordinates, with actual physical reach probabilities and actual stopping functions.",
+      "For the profile identity, exclusive controller indicators partition assignments and each Boolean core occupies its own independent data cube; constants allowed.",
+      "Entropy and KL units bits; eta(x)=x log2(1/x), Eraw is raw squared-amplitude entropy without mean-profile renormalization; zero terms omitted.",
+      "Controller-resolved means its actual remaining selector label is constant, even if irrelevant controller coordinates remain; no boundary price is asserted at unresolved-controller leaves."
+    ],
+    "statement_sha256": "e342cd958b1d03627fe6208b97a4a64ef4c9c264dd09b612b7dae59bbce67a9d",
+    "contributors": [
+      "A091"
+    ],
+    "proof_source": {
+      "run_id": "~\\brain_workers\\FEI100_20261011\\agents\\A091\\runs\\20261014T013816Z-account05-A091-composition-referee",
+      "path": "POINT_CONTROL_PAYMENT.md",
+      "local_review": "REVIEW_A091.md"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A059-INTERLEAVED-BIASED-STOPPING-RESERVE",
+        "version": 1,
+        "status": "Independently reconstructed and accepted in this run"
+      },
+      {
+        "source": "Closed C005 two-point physical channel bound; A019 b(z)<=3z scalar packet bound",
+        "scope": "Both scalar derivations reconstructed directly in POINT_CONTROL_PAYMENT.md, no source optimization or full theorem assumed"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A060",
+        "run_id": "20261014T033739Z-account05-A060-composition-sharpness",
+        "verdict": "ACCEPT_AT_STATED_SCOPE_NO_SUBSTANTIVE_REPAIR",
+        "scope": "All source point-controller, exact terminal profile and stopped/resolved-boundary assertions at fresh-point/disjoint-core scope; inherited U and unresolved controller entropy remain unpaid.",
+        "proof": "REVIEW_A091.md",
+        "source_statement_sha256": "e342cd958b1d03627fe6208b97a4a64ef4c9c264dd09b612b7dae59bbce67a9d",
+        "source_file_sha256": "409f3efb8850f4b9e683fcc072511d2f5ff4c4ade19794df66b2aae5d355376d",
+        "validation": "Complete integer Walsh spectra, direct character reproduction, exact gate decrement and fine/coarse release; original scalar price and terminal profile independently reconstructed."
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_ACCEPTED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A059",
+      "A057",
+      "A064",
+      "A024",
+      "A050",
+      "A090",
+      "A085",
+      "B12",
+      "B19",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A060-SHARP-POINT-CONTROLLER-LEDGER-CONSTANTS",
+    "version": 1,
+    "exact_statement": "For every actual live fresh point activation F=1+A_r(u-1), r>=1, uniform Boolean core u on a disjoint cube and entropy in bits, the single-core controller residual obeys 0<=D-kappa_coarse<=K_pt Inf, with EXACT optimal K_pt=12-(9/2)log2(3). Here q=2^-r, m=Eu, kappa_coarse=q(1-m^2); equality is attained by r=3,u=-1. For activation of an internal exclusive independent-core controller P, using its original fine-state reserve instead gives D-kappa_fine<=Gamma Inf, with EXACT optimal Gamma=max_(0<z<=1)[4-4z+Ppair(z)/z], Ppair(z)=eta((1-z)^2)+eta(z^2)-eta((1-2z)^2)/2. Its unique maximizing z lies in (1/8,1/4), satisfies Gprime(z)=0, and Gamma has certified rational enclosure in (4.872,4.873). The actual six-bit controller P negative on five-bit indices 0,...,6 and activated by one fresh point bit has z=7/32, kappa_fine=0 and residual ratio G(7/32)>K_pt, so the coarse sharp constant cannot be substituted into the fine-state ledger without its qL correction. Actual terminal Fourier entropy and influence are retained. Under tensor-closed additive per-factor ledger rules no fixed additive slack lowers either sharp constant or repairs this fine/coarse substitution.",
+    "hypotheses": [
+      "Finite uniform physical cube; actual Boolean signs; every live remaining point block is fresh and disjoint from the actual remaining core/inner-controller cube; r>=1. Failed point branches are constant +1.",
+      "Coarse reserve uses the entire current core variance. Fine reserve uses actual exclusive-state probabilities and variances of disjoint independent Boolean data cores, constants allowed; internal controller entropy is not assumed paid.",
+      "D is actual Fourier entropy decrement across the queried physical gate bit, Inf its physical flip probability. eta(x)=x log2(1/x), zero terms omitted; z=0 is handled without division.",
+      "Sharp fine constant is a supremum over actual finite Boolean functions: dyadic internal negative measures approximate the unique continuum maximizer. Tensor statements require additive per-factor ledgers and tensor-closed hypotheses, not a different canonical single-core representation."
+    ],
+    "statement_sha256": "f60a5edea73abf2d89bf9fb8429ff3cc36feb83d2ec46a9c0c056ec82301eff1",
+    "contributors": [
+      "A060"
+    ],
+    "proof_source": {
+      "run": "20261014T033739Z-account05-A060-composition-sharpness",
+      "path": "PROOF.md",
+      "validation": [
+        "out/CHECK_main.json",
+        "out/CHECK_reproduce.json",
+        "out/CONTINUUM_CERTIFICATE.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A091-POINT-CONTROLLER-RESIDUAL-AND-BOUNDARY",
+        "version": 1,
+        "scope": "Point residual and terminal interface independently accepted here; exact optimization self-contained."
+      },
+      {
+        "source": "A059 20261014T025828Z PROOF.md equations (1),(5)",
+        "scope": "Fine/coarse reserve convention and retained terminal difference independently reconstructed; no dependence on ordered-priority payment theorem."
+      },
+      "Elementary entropy packets, exact Walsh/edge identities, logarithm derivative concavity and integer/rational sign certificates."
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unversioned proposed substitution of single-core K_pt into the fine exclusive-state outer-point residual without the qL correction; actual six-bit witness.",
+      "Unversioned fixed-additive improvement of these sharp constants on tensor-closed additive-ledger rules."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A091",
+      "A090",
+      "A059",
+      "A057",
+      "A087",
+      "A064",
+      "B12",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,340 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\emp}{\bar\mu_N}
+\newcommand{\vol}{\operatorname{vol}}
+
+\title{The logarithm is necessary: exact critical scaling of the\\
+uniform doubling condition on the ball}
+\author{Yitzchak Shmalo\\
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In two companion papers we proved that $N$ independent uniform samples from a
+convex body satisfy the uniform doubling condition of
+[Shmalo, \emph{Ann.\ Math.\ Artif.\ Intell.} (2024)] with high probability, and
+that for untruncated slabs over a body with an interior rolling ball the scaling
+factor can be taken $\ell_N=O\bigl((\log N/N)^{2/(n+1)}\bigr)$, while single
+gap configurations force $\ell_N\ge cN^{-2/(n+1)}$ with probability bounded
+below.  Two questions remained: whether the failure probability can be driven
+to $1$, and whether the logarithm is an artifact of the Vapnik--Chervonenkis
+union bound.  We answer both for the unit ball, $n\ge2$: with probability
+tending to one, among $\asymp(N/\log N)^{(n-1)/(n+1)}$ disjoint boundary caps
+at least one contains a single, isolated, extremal sample point whose
+surrounding slabs stall at empirical mass $1/N$ through a full grid step at
+width scale $(\varepsilon\log N/N)^{2/(n+1)}$.  Consequently the uniform
+doubling condition for pure slabs fails, with probability $1-o(1)$, for every
+scaling factor $\ell\le c(\kappa)\,(\log N/N)^{2/(n+1)}$.  Combined with the
+companion upper bound, the critical scaling of the uniform doubling condition
+on the ball is
+\[
+\ell_N\;\asymp\;\Bigl(\frac{\log N}{N}\Bigr)^{2/(n+1)},
+\]
+exactly, logarithm included.  The proof is a second-moment argument over the
+cap family; the only geometric input is the two-sided spherical cap-volume
+asymptotic.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+Let $K=B^n\subset\R^n$ be the closed unit ball, $n\ge2$, let
+$\mu$ be the uniform probability measure on $K$, and let
+$T=\{X_1,\dots,X_N\}$ be i.i.d.\ samples with empirical measure $\emp$.  For a
+unit vector $u$, a center $s$, and a width $w$, write
+$S_w=S_w(u,s)=\{x\in\R^n:|\langle x-s,u\rangle|\le w/2\}$ for the (pure,
+untruncated) slab.  The uniform doubling condition (UDC) of
+\cite{ShmaloUDC} with constants $(\kappa,\delta,\sigma,\beta,\ell)$ requires
+\[
+\emp(S_{\ell\kappa^{i+1}})\;\ge\;
+\min\bigl\{\delta,\ (1+\sigma)\,\emp(S_{\ell\kappa^{i}})\bigr\}
+\]
+for every slab and every $i\in\mathbb N_0$ with $\ell\kappa^i<\beta$; it is the
+hypothesis of the stability-of-accuracy theorems of \cite{BJS,ShmaloUDC}.  In
+\cite{companion2} we showed that i.i.d.\ samples satisfy the UDC with
+probability $1-\frac1N$ and scaling factor
+$\ell_N=O((\log N/N)^{1/n})$, for all uniformly thick truncated-slab families
+at once; in \cite{companion3} we showed that for \emph{pure} slabs over a body
+with an interior rolling ball the scaling factor improves to
+\[
+\ell_N\;=\;O\Bigl(\Bigl(\frac{\log N}{N}\Bigr)^{2/(n+1)}\Bigr),
+\]
+that this exponent is dictated by the spherical cap volume, and that
+truncations genuinely shift the critical exponent to $\frac1n$.  The
+lower-bound constructions in both papers produce a \emph{single} violating
+configuration, hence only a failure probability bounded below by a constant,
+and at scale $N^{-2/(n+1)}$ --- without the logarithm.  This left
+\cite[Problem 5.1]{companion3}:
+
+\begin{quote}
+\emph{Does the UDC for pure slabs on the ball hold at scaling
+$\ell\asymp N^{-2/(n+1)}$, or is the logarithmic factor necessary?}
+\end{quote}
+
+We prove that the logarithm is necessary, and that the failure below the
+logarithmic scale is overwhelming rather than merely non-negligible.
+
+\begin{theorem}\label{thm:main}
+Let $n\ge2$, let $\mu$ be uniform on the unit ball, and fix
+$\kappa>1$, $\sigma>0$, $\beta>0$, and $\delta\ge\frac3N$.  There are
+constants $\varepsilon_0=\varepsilon_0(n,\kappa)>0$ and
+$c=c(n,\kappa)>0$ such that, with probability $1-o(1)$ as
+$N\to\infty$, the doubling inequality fails for some pure slab at every grid
+scale below $c\,(\log N/N)^{2/(n+1)}$.  Consequently, with probability
+$1-o(1)$, the sample satisfies the UDC for pure slabs with \emph{no} scaling
+factor
+\[
+\ell\;\le\;c\,\Bigl(\frac{\log N}{N}\Bigr)^{2/(n+1)} .
+\]
+Together with the upper bound of \cite{companion3}, the critical scaling of
+the uniform doubling condition for pure slabs on the ball is
+$\Theta\bigl((\log N/N)^{2/(n+1)}\bigr)$: both the exponent and the logarithm
+are exact.
+\end{theorem}
+
+The interpretation is pleasingly sharp.  The scaling factor $\ell$ is the
+resolution below which the doubling condition does not look; the theorem says
+that for i.i.d.\ data this resolution cannot be chosen finer than the scale at
+which the \emph{most isolated boundary point} of the sample sits alone --- and
+on the ball, among the $\asymp(N/\log N)^{(n-1)/(n+1)}$ essentially
+independent boundary caps, the most isolated one is isolated to depth
+$\asymp(\log N/N)^{2/(n+1)}$, a factor $(\log N)^{2/(n+1)}$ deeper than a
+typical extreme point.  The companion upper bound shows this is the only
+obstruction.
+
+\section{Preliminaries}\label{sec:prelim}
+
+Throughout, $c_4(n)\le c_5(n)$ denote the spherical cap-volume constants: for
+the cap $C(u,h):=\{x\in B^n:\langle x,u\rangle>1-h\}$,
+\begin{equation}\label{eq:cap}
+c_4\,h^{\frac{n+1}2}\;\le\;\Lambda(h):=\mu\bigl(C(u,h)\bigr)\;\le\;
+c_5\,h^{\frac{n+1}2},
+\qquad 0<h\le\tfrac12,
+\end{equation}
+by the standard computation
+$\Lambda(h)=\frac{1}{\vol(B^n)}\int_{1-h}^1\omega_{n-1}(1-t^2)^{\frac{n-1}2}dt$
+and $1-t^2\asymp(1-t)$ on $[\frac12,1]$.
+
+We also record the violating-slab mechanism from
+\cite[Theorem 1.3]{companion3}, specialized to pure slabs on the ball.
+
+\begin{lemma}[Stalled slab]\label{lem:stall}
+Fix $\kappa>1$, $\sigma>0$, $\delta\ge\frac3N$.  Let $u$ be a unit vector,
+$0<h<H\le\frac12$ with $h\le\frac H{4}$, and suppose the sample satisfies:
+exactly one point $X^*\in C(u,H)$, and moreover $X^*\in C(u,h)$.  Then for
+every $w\le H/\kappa$, the slab $S_w(u,X^*)$ satisfies
+\[
+\emp\bigl(S_w(u,X^*)\bigr)=\emp\bigl(S_{\kappa w}(u,X^*)\bigr)=\frac1N
+\;<\;\min\Bigl\{\delta,\ (1+\sigma)\,\emp\bigl(S_w(u,X^*)\bigr)\Bigr\},
+\]
+i.e.\ the doubling inequality fails at every scale $w\le H/\kappa$.
+Consequently, if some grid scale $\ell\kappa^i$ ($i\in\mathbb N_0$,
+$\ell\kappa^i<\beta$) lies in $(0,H/\kappa]$ --- which happens whenever
+$\ell\le H/\kappa^2$ and $N$ is large --- the UDC with scaling factor $\ell$
+fails.
+\end{lemma}
+
+\begin{proof}
+Write $\tau(x)=\langle x,u\rangle$ and $\tau^*=\tau(X^*)\ge1-h$.  For
+$w'\le H$,
+\[
+S_{w'}(u,X^*)\cap B^n\;\subseteq\;\{x\in B^n:\ \tau(x)\ge\tau^*-\tfrac{w'}2\}
+\;\subseteq\;C\Bigl(u,\ h+\tfrac{w'}2\Bigr)\;\subseteq\;C(u,H),
+\]
+since $h+\frac{w'}2\le\frac H4+\frac H2<H$.  By hypothesis $C(u,H)$ contains
+only the sample point $X^*$, which lies in every $S_{w'}(u,X^*)$; hence the
+empirical masses of $S_w$ and $S_{\kappa w}$ both equal $\frac1N$ for
+$w\le H/\kappa$.  Since $\delta\ge\frac3N>\frac1N$ and $\sigma>0$,
+$\min\{\delta,(1+\sigma)\frac1N\}>\frac1N$, and the doubling inequality fails.
+\end{proof}
+
+\section{Proof of Theorem \ref{thm:main}}\label{sec:proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:main}]
+Fix $\kappa,\sigma,\beta,\delta\ge\frac3N$ as in the statement, and set
+\[
+q:=\bigl(4\kappa^2\bigr)^{\frac{n+1}2},
+\qquad
+\varepsilon_0:=\frac{n-1}{2(n+1)}\cdot\frac{c_4}{c_5\,q},
+\qquad
+\tau_N:=\varepsilon_0\log N .
+\]
+Define the inner depth $h_N$ by $\Lambda(h_N)=\frac{\tau_N}{N}$ --- by
+\eqref{eq:cap}, $h_N\asymp(\tau_N/N)^{2/(n+1)}$ --- and the outer depth
+$H_N:=4\kappa^2h_N$, so that by \eqref{eq:cap},
+\begin{equation}\label{eq:outer}
+\Lambda(H_N)\;\le\;c_5(4\kappa^2)^{\frac{n+1}2}h_N^{\frac{n+1}2}
+\;\le\;\frac{c_5\,q}{c_4}\cdot\frac{\tau_N}{N}
+\;=:\;\frac{Q\tau_N}{N}.
+\end{equation}
+
+\emph{The cap family.}  The spherical cap $C(u,H_N)$ has angular radius
+$\arccos(1-H_N)\le2\sqrt{H_N}$.  Choose a maximal family of unit vectors
+$u_1,\dots,u_M$ with pairwise angles at least $8\sqrt{H_N}$; then the caps
+$C(u_j,H_N)$ are pairwise disjoint, and a standard volumetric packing bound on
+the sphere gives
+\begin{equation}\label{eq:M}
+M\;\ge\;c_6(n)\,H_N^{-\frac{n-1}2}
+\;\ge\;c_7(n,\kappa)\Bigl(\frac{N}{\tau_N}\Bigr)^{\frac{n-1}{n+1}} .
+\end{equation}
+
+\emph{Per-cap events.}  Let
+\[
+E_j:=\Bigl\{\#\bigl(T\cap C(u_j,H_N)\bigr)=1\ \text{ and }\
+T\cap C(u_j,H_N)\subseteq C(u_j,h_N)\Bigr\},
+\]
+the event that the $j$-th outer cap contains exactly one sample point and that
+this point is $h_N$-deep.  Then
+\begin{equation}\label{eq:p}
+p:=\PP(E_j)=N\,\Lambda(h_N)\bigl(1-\Lambda(H_N)\bigr)^{N-1}
+\;\ge\;\tau_N\,e^{-2Q\tau_N}
+\;=\;\tau_N\,N^{-2Q\varepsilon_0},
+\end{equation}
+for large $N$, using $1-x\ge e^{-2x}$ for $0\le x\le\frac12$ and
+\eqref{eq:outer}.
+
+\emph{First moment.}  Let $X:=\sum_{j\le M}\mathbf 1_{E_j}$.  By
+\eqref{eq:M} and \eqref{eq:p},
+\[
+\E X\;=\;Mp\;\ge\;c_7\Bigl(\frac{N}{\tau_N}\Bigr)^{\frac{n-1}{n+1}}
+\tau_N\,N^{-2Q\varepsilon_0}
+\;\ge\;c_7\,N^{\frac{n-1}{n+1}-2Q\varepsilon_0}\,
+\tau_N^{\,1-\frac{n-1}{n+1}} .
+\]
+By the choice of $\varepsilon_0$,
+$2Q\varepsilon_0=\frac{n-1}{n+1}\cdot\frac{c_4}{c_5}\le\frac{n-1}{n+1}$, with
+strict inequality unless $c_4=c_5$; to be safe replace $\varepsilon_0$ by
+$\varepsilon_0/2$, so that
+$2Q\varepsilon_0\le\frac{n-1}{2(n+1)}$ and
+\begin{equation}\label{eq:EX}
+\E X\;\ge\;c_7\,N^{\frac{n-1}{2(n+1)}}\;\longrightarrow\;\infty .
+\end{equation}
+
+\emph{Second moment.}  For $i\ne j$ the caps are disjoint, and
+\[
+\PP(E_i\cap E_j)
+=N(N-1)\,\Lambda(h_N)^2\bigl(1-2\Lambda(H_N)\bigr)^{N-2}.
+\]
+Hence
+\[
+\frac{\PP(E_i\cap E_j)}{p^2}
+=\frac{N-1}{N}\cdot
+\frac{\bigl(1-2\Lambda(H_N)\bigr)^{N-2}}{\bigl(1-\Lambda(H_N)\bigr)^{2N-2}}
+\;\le\;\exp\Bigl(C\,N\,\Lambda(H_N)^2\Bigr)
+\;=\;\exp\Bigl(O\Bigl(\frac{(\log N)^2}{N}\Bigr)\Bigr)
+\;=\;1+o(1),
+\]
+uniformly in $i\ne j$, since
+$\log\frac{(1-2x)}{(1-x)^2}=O(x^2)$ for $0\le x\le\frac14$.  Therefore
+\[
+\operatorname{Var}(X)\;=\;\E X+\sum_{i\ne j}\bigl(\PP(E_i\cap E_j)-p^2\bigr)
+\;\le\;\E X+o(1)\,(\E X)^2,
+\]
+and by Chebyshev's inequality,
+\[
+\PP(X=0)\;\le\;\frac{\operatorname{Var}(X)}{(\E X)^2}
+\;\le\;\frac1{\E X}+o(1)\;=\;o(1)
+\]
+by \eqref{eq:EX}.
+
+\emph{Conclusion.}  With probability $1-o(1)$ some $E_j$ occurs.  On $E_j$,
+Lemma~\ref{lem:stall} (with $u=u_j$, $h=h_N$, $H=H_N$; note
+$h_N=H_N/(4\kappa^2)\le H_N/4$) shows the doubling inequality fails at every
+scale $w\le H_N/\kappa$, so the UDC fails for every scaling factor
+$\ell\le H_N/\kappa^2=4h_N$.  Since
+$h_N\ge(c_5^{-1}\tau_N/N)^{2/(n+1)}\ge c(n,\kappa)(\log N/N)^{2/(n+1)}$, the
+theorem follows.
+\end{proof}
+
+\begin{remark}[General rolling-ball bodies]
+The proof used the ball only through the two-sided cap asymptotic
+\eqref{eq:cap} and the packing bound \eqref{eq:M}.  Both hold, with constants
+depending on the curvature bounds, for any convex body with $C^2$ boundary and
+principal curvatures bounded between two positive constants: caps satisfy
+$\Lambda(h)\asymp h^{(n+1)/2}$ uniformly in the direction, and a maximal
+separated family of boundary directions provides
+$\asymp H^{-(n-1)/2}$ disjoint caps.  Theorem~\ref{thm:main} therefore extends
+verbatim to this class, and with the upper bound of \cite{companion3} the
+critical scaling $\Theta((\log N/N)^{2/(n+1)})$ holds for all such bodies.
+Densities bounded above and below change only the constants.
+\end{remark}
+
+\begin{remark}[The truncated case]
+The multiplication-of-configurations mechanism should also upgrade the
+truncated lower bound of \cite{companion3} from constant probability at scale
+$N^{-1/n}$ to probability $1-o(1)$ at scale $(\log N/N)^{1/n}$, matching the
+upper bound of \cite{companion2} exactly: since the UDC is quantified over all
+truncation sets of a given size, one may place
+$\asymp h_N^{-(n-1)/2}$ rotated copies of a thick conical truncation region
+with apices along the boundary of a smooth body and run the same second-moment
+argument over the resulting cone caps, whose masses scale as $h^{n}$.  The
+geometric bookkeeping (uniform thickness of the rotated regions and
+disjointness of the cone caps) is routine but not carried out here.
+\end{remark}
+
+\begin{problem}
+Determine the exact constant: does
+$\ell_N^{\mathrm{crit}}/(\log N/N)^{2/(n+1)}$ converge, and to what, as
+$N\to\infty$?  The upper route loses a factor through the VC bound, the lower
+route through the choice $H=4\kappa^2h$; we expect a clean extremal constant
+expressible through the cap-volume constant $c_4=c_4(n)$ and $\kappa$ alone.
+\end{problem}
+
+\subsection*{Acknowledgments}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and innovation
+programme (grant agreement No.\ 101041711), by the Israel Science Foundation
+(grant number 2258/19) and by the Israel Science Foundation (ISF Grant
+4101/25).
+
+\subsection*{Declaration on generative AI}
+During the preparation of this work the author used generative AI tools to
+accelerate drafting and revision.  All mathematical claims, proofs, and
+bibliographic information were subsequently reviewed and edited by the author,
+who takes full responsibility for the content of the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{BJS}
+L.~Berlyand, P.-E.~Jabin and C.~A.~Safsten,
+\emph{Stability for the training of deep neural networks and other
+classifiers},
+Math.\ Models Methods Appl.\ Sci.\ \textbf{31} (2021), no.~11, 2345--2390.
+
+\bibitem{ShmaloUDC}
+Y.~Shmalo,
+\emph{Stability of accuracy for the training of DNNs via the uniform doubling
+condition},
+Ann.\ Math.\ Artif.\ Intell.\ (2024), DOI 10.1007/s10472-023-09919-1.
+
+\bibitem{companion2}
+Y.~Shmalo,
+\emph{The uniform doubling condition holds with high probability for
+independent samples},
+manuscript, 2026.
+
+\bibitem{companion3}
+Y.~Shmalo,
+\emph{The critical scaling of the uniform doubling condition: smooth bodies
+versus truncations},
+manuscript, 2026.
+
+\end{thebibliography}
+
+\end{document}

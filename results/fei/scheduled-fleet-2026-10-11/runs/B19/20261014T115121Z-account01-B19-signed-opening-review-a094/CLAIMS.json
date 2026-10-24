@@ -1,0 +1,21 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261014T115121Z-account01-B19-signed-opening-review-a094",
+  "claims": [
+    {
+      "claim_id": "B19-A094-SIGNED-OPENING-HISTORY-TRANSFER-REVIEW",
+      "version": "v1",
+      "target_claim": "B05-A023-SIGNED-OPENING-HISTORY-TRANSFER-v1",
+      "status": "INDEPENDENTLY_ACCEPTED_AT_CLARIFIED_SCOPE",
+      "exact_statement": "For c*=29/2+4/ln(2), every finite-cube Boolean core f, every core-coordinate block X, every 0<eta<=1, and fresh fair activation F=A(f), a selector-root node with empty inherited block, opened block X union {z}, and core-child block X satisfies Delta_z L_c*,eta(F)+2(R-O)<=Phi(f)-Theta_X(f)<=0. If f already has a complete inherited-X SOLD tree, prepending this node gives a complete empty-history tree for F.",
+      "scope_clarification": "The result opens X at an outer empty-history selector and transfers X to the core child. It does not pay arbitrary pre-existing inherited history at an internal node, prove existence of the core SOLD tree, remove terminal reserves from stopped trees, or cover biased/nonfresh selectors.",
+      "reviewer": "account01/B19",
+      "material_repair": false,
+      "evidence": ["REVIEW_PROOF.md", "INDEPENDENT_CHECK.py", "INDEPENDENT_CHECK.out"],
+      "first_unproved_line": "Every Boolean core and inherited block X admit a complete adapted physical restriction tree satisfying SOLD, or an equivalent universal aggregate bound retaining terminal reserves.",
+      "universal_gu": "OPEN",
+      "full_fei": "OPEN",
+      "next_consumers": ["A023", "A087", "B20"]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "problem_id": "I0061",
+  "source_checks": {
+    "method": "Memory and local files only; no browsing and no child agents.",
+    "memory_status": "I did not know a paper that I could confidently certify as resolving both existence and convexity under all the recorded assumptions.",
+    "known_related_paper": {
+      "authors": ["Riddhipratim Basu", "Shirshendu Ganguly", "Allan Sly"],
+      "title": "Upper tail large deviations in first passage percolation",
+      "year": 2017,
+      "publication_form": "arXiv preprint",
+      "url": "https://arxiv.org/abs/1712.01255",
+      "assessment": "The local ledger records existence under stronger distribution assumptions, without certifying the full convexity claim. I did not inspect the paper in this session."
+    },
+    "local_source_checked": "~/<private-repo>/06_math_research/probability_1000_intake_I_20260914/problems.jsonl",
+    "source_limitation": "The original survey PDF was not inspected. Its printed sign, domain, and definition of p_n^u are therefore not certified here.",
+    "current_literature_status": "Uncertified; no novelty or current-openness claim."
+  },
+  "exact_statement": {
+    "recorded_formula": "lim_{n→∞} n^{-d} log p_n^u(ε) = I_u(ε), with I_u convex.",
+    "precise_interpretation_used": "On the undirected nearest-neighbor lattice Z^d, assign independent identically distributed nonnegative edge weights. Let T_n=T(0,n e_1), μ=lim T_n/n, and p_n^u(ε)=P(T_n≥n(μ+ε)). Consider 0<ε<b−μ, where b is the essential upper bound.",
+    "proved_correction": "With the positive logarithm sign as recorded, the asserted convexity is false, even for a continuous bounded density and every d≥2.",
+    "conventional_problem": "The conventional nonnegative rate uses −n^{-d} log p_n^u(ε). Its general existence and convexity are not settled by this response.",
+    "strict_inequality": "The counterexample also works when the upper-tail event uses >."
+  },
+  "answer": "partial",
+  "proof_or_counterexample": {
+    "label": "proof",
+    "scope": "Complete counterexample to the recorded plus-sign claim, conditional on the standard upper-tail interpretation above. This is not a certified refutation of the survey's intended question.",
+    "counterexample_distribution": "Take τ_e=1+Z_e, where Z_e has density 30 z^2(1−z)^2 on [0,1]. This is a nondegenerate continuous distribution supported on [1,2].",
+    "complete_argument": [
+      "The auxiliary lemmas used here are proved completely in draft nodes I0061.L1, I0061.L2, and I0061.L3 below.",
+      "For this distribution, μ exists and 1≤μ≤3/2. Lemma I0061.L1 gives, for 0<ε≤1/8, liminf n^{-d} log p_n^u(ε)≥−C_d ε^2, where C_d=640 d 4^d.",
+      "Set x=7/4−μ. Then 0<x<2−μ. Lemma I0061.L2 gives limsup n^{-d} log p_n^u(x)≤−c_d, where c_d=1/[32(16(d−1))^{d−1}]>0.",
+      "Lemma I0061.L3 makes the logarithmic liminf finite at every interior threshold. Consequently, any proposed limit L is real-valued there.",
+      "Suppose the recorded limits exist and define a convex function L. Since probabilities are at most one, L≤0. The quadratic lower bound implies −C_d ε^2≤L(ε)≤0 near zero, so L(ε)→0 as ε↓0.",
+      "Fix 0<t<min(x,1/8). For 0<δ<t, convexity gives L(t)≤[(x−t)/(x−δ)]L(δ)+[(t−δ)/(x−δ)]L(x). Letting δ↓0 gives L(t)≤(t/x)L(x). Hence L(x)≥(x/t)L(t)≥−C_d x t.",
+      "Letting t↓0 yields L(x)≥0. This contradicts L(x)≤−c_d<0. Therefore no convex function can satisfy the recorded plus-sign formula for this bounded continuous distribution."
+    ],
+    "exact_small_cases": {
+      "label": "exact calculation with proof",
+      "model": "Z^2, with each edge weight independently equal to 1 or 2 with probability 1/2.",
+      "event": "T(0,n e_1)≥17n/10. Since μ≤3/2, this is an upper-tail threshold.",
+      "values": [
+        {"n": 1, "probability": "1/2"},
+        {"n": 2, "probability": "1/4"},
+        {"n": 3, "probability": "961/8192"},
+        {"n": 4, "probability": "38943/131072"}
+      ],
+      "proof": [
+        "Positive weights allow loop erasure. Every path costs at least its number of edges. For n=1,2, only the straight path can cost less than 17n/10, giving the first two values.",
+        "For n=3,4, a potentially cheaper nonstraight simple path has length n+2. Such a path leaves the axis, follows a contiguous interval on the neighboring row above or below, and returns. A path confined to the axis with a backward step would repeat a vertex.",
+        "For n=3, the straight path must have all three weights equal to 2. A violating detour must span all three axis edges and have its five edges equal to 1. The upper and lower detours use disjoint edges. Thus the probability is (1/8)(31/32)^2=961/8192.",
+        "For n=4, the straight path must cost at least 7. If all four weights are 2, or the unique weight 1 is at either middle position, only a full-span detour can violate the event. These are three axis configurations, each of probability 1/16; their conditional survival probability is (63/64)^2.",
+        "If the unique weight 1 is at an endpoint, either a full-span six-edge detour or a five-edge detour bypassing the other three axis edges can violate the event. On each side their probabilities are 1/64 and 1/32, and their intersection has probability 1/128 because their union contains seven edges. Survival on that side is 123/128. The two sides are independent.",
+        "Therefore the fourth probability is (3/16)(63/64)^2+(2/16)(123/128)^2=38943/131072."
+      ],
+      "independent_computational_check": "Depth-first enumeration found all 1, 1, 13, and 21 relevant simple paths respectively. Exact enumeration of the remaining binary edge assignments reproduced all four fractions."
+    },
+    "limiting_family": {
+      "label": "proved construction",
+      "description": "Force high weights in two disjoint lattice balls around the endpoints. At fixed forcing level and fixed total radius, an equal split minimizes the leading number of forced edges.",
+      "scope": "Optimal within this two-ball construction only; global optimality is not asserted.",
+      "proved_bound": "For weights in [a,b], a<v<c≤b, and q_c=P(τ_e≥c)>0: liminf n^{-d} log P(T_n≥vn)≥[2/(d−1)!]((v−a)/(c−a))^d log q_c.",
+      "proof_location": "Draft node I0061.L3."
+    },
+    "numerical_evidence": {
+      "label": "numerical evidence, not proof",
+      "experiment": "Composite Simpson quadrature with 20,000 subintervals checked the relative-entropy expression used in Lemma I0061.L1.",
+      "examples": [
+        {"s": 0.01, "computed_entropy": 0.0006947437321190228},
+        {"s": 0.1, "computed_entropy": 0.054442622573528776}
+      ],
+      "interpretation": "These checks agree with the proved quadratic entropy bound. The counterexample relies on the analytic proof, not quadrature."
+    },
+    "conjectures": [],
+    "sketches": []
+  },
+  "hardest_remaining_gap": "First verify the original source's sign and definition. For the conventional nonnegative rate −lim n^{-d} log p_n^u(ε), these arguments do not establish general existence or convexity. A current literature check is also required before classifying that question as open or resolved.",
+  "evidence_status": "partial",
+  "draft_review_status": "Drafts only. Independent review by a different model family and verification of the source formula remain pending; no nodes were admitted.",
+  "draft_brain_nodes": [
+    {
+      "key": "I0061.L1",
+      "namespace": "probability.first_passage_percolation",
+      "logical_name": "i0061_shifted_beta_quadratic_upper_tail_cost",
+      "kind": "lemma",
+      "title": "A quadratic upper-tail cost bound for shifted Beta weights",
+      "statement": "For independent edge weights τ_e=1+Z_e on Z^d, where Z_e has density 30z^2(1−z)^2 on [0,1], the time constant μ exists almost surely and in expectation, with 1≤μ≤3/2. For every 0<ε≤1/8, liminf_{n→∞} n^{-d} log P(T(0,n e_1)≥n(μ+ε))≥−640 d 4^d ε^2.",
+      "proof_text": "The density integrates to one and is symmetric about 1/2, so Eτ_e=3/2. Write T_n=T(0,n e_1). A straight path costs at most 2n, while a path with more than 2n edges costs more than 2n. Thus T_n is a function of the edges in B_n=[−2n,2n]^d∩Z^d and has a minimizing simple path γ of length at most 2n. The number of edges in B_n is N_n=d(4n)(4n+1)^{d−1}.\n\nWe first prove Var(T_n)≤4n. Resample one edge e independently, obtaining T_n^{(e)}. Using the original minimizing path shows (T_n^{(e)}−T_n)_+^2≤1_{e∈γ}, since edge weights differ by at most one. Exchangeability of the original and replacement weights gives E(T_n^{(e)}−T_n)^2≤2P(e∈γ). To justify the variance inequality directly, reveal the N_n independent weights successively. If M_i is the conditional expectation of T_n after i revelations, its orthogonal increments satisfy Var(T_n)=Σ E(M_i−M_{i−1})^2. Conditional expectation of T_n−T_n^{(i)} given the first i weights equals M_i−M_{i−1}. Jensen therefore bounds each increment's second moment by E(T_n−T_n^{(i)})^2. Summing gives Var(T_n)≤2E|γ|≤4n.\n\nLet h_n=ET_n and h_0=0. Concatenation and translation invariance give h_{m+n}≤h_m+h_n. Put μ=inf_{k≥1}h_k/k. For n=qk+r, 0≤r<k, h_n≤qh_k+h_r, so h_n/n→μ. Also n≤h_n≤3n/2. Chebyshev implies P(T_n<(μ−η)n)≤4/(η^2 n). For completeness, Chebyshev on n=k^2 is summable for each fixed positive error. Borel–Cantelli gives T_{k^2}/k^2→μ almost surely. The deterministic inequality |T_n−T_m|≤2|n−m| extends convergence from squares to every n.\n\nFor 0<s≤1/2, transform each weight to τ_e^{(s)}=2s+(1−s)τ_e. Its distribution Q_s remains supported on [1,2]. Every path from 0 to n e_1 has at least n edges, hence under this coupling T_n^{(s)}≥2sn+(1−s)T_n.\n\nCompute the one-edge relative entropy H_s=H(Q_s|P). In coordinates Z=τ−1, write Y=s+(1−s)Z and h=s/(1−s). The original density is f(y)=30y^2(1−y)^2; the transformed density is g_s(y)=30(y−s)^2(1−y)^2/(1−s)^5 on s<y<1. Therefore H_s=−5log(1−s)−2Elog(1+h/Z). Direct integration gives E(1/Z)=5/2 and E(1/Z^2)=10. For u≥0, log(1+u)≥u−u^2/2: the derivative of the difference is u^2/(1+u)≥0. It follows that H_s≤−5log(1−s)−5h+10h^2≤10h^2≤40s^2, using −log(1−s)≤s/(1−s)=h.\n\nFix 0<ε≤1/8 and choose s=4ε. If T_n≥(μ−ε)n, then T_n^{(s)}≥n[μ+s(2−μ)−(1−s)ε]≥n(μ+ε+4ε^2), because μ≤3/2. Consequently q_n=Q_s^{⊗N_n}(T_n≥n(μ+ε)) tends to one; explicitly q_n≥1−4/(ε^2 n).\n\nLet p_n=P^{⊗N_n}(T_n≥n(μ+ε)). Jensen applied separately on the event and its complement gives the binary entropy bound N_nH_s≥q_nlog(q_n/p_n)+(1−q_n)log((1−q_n)/(1−p_n))≥q_nlog(1/p_n)−log2. Thus log p_n≥−(N_nH_s+log2)/q_n. Since N_n/n^d→d4^d and H_s≤40(4ε)^2=640ε^2, the asserted liminf bound follows. The coupling has a strict positive margin, so the same argument covers the event with >.",
+      "assumptions": [
+        "Independent identically distributed weights on undirected nearest-neighbor edges of Z^d.",
+        "τ_e=1+Z_e with Z_e distributed as Beta(3,3).",
+        "d is a fixed positive integer."
+      ],
+      "domain": ["probability", "first-passage percolation", "relative entropy"],
+      "source": {
+        "source_id": "I0061_owner_campaign_proof_20261010",
+        "url": null,
+        "revision": "draft-1, 2026-10-10, independently written proof",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0061.L2",
+      "namespace": "probability.first_passage_percolation",
+      "logical_name": "i0061_parallel_rows_volume_upper_bound",
+      "kind": "lemma",
+      "title": "A volume-scale upper bound from independent horizontal rows",
+      "statement": "For independent identically distributed edge weights in [1,2] with mean 3/2 on Z^d, d≥2, limsup_{n→∞} n^{-d} log P(T(0,n e_1)≥7n/4)≤−1/[32(16(d−1))^{d−1}].",
+      "proof_text": "Put R_n=floor(n/[32(d−1)]). For each y∈{−R_n,…,R_n}^{d−1}, use a path going transversely from 0 to (0,y), horizontally to (n,y), and transversely to (n,0). The two transverse portions cost at most 4|y|_1≤n/8. Let H_y be the horizontal portion's cost. If T(0,n e_1)≥7n/4, then every such H_y is at least 13n/8. The horizontal edge sets for distinct y are disjoint, so these sums are independent.\n\nFor θ≥0, convexity of the exponential on [1,2] and Eτ=3/2 give Eexp(θ(τ−3/2))≤cosh(θ/2)≤exp(θ^2/8). The last inequality follows by integrating tanh u≤u. Markov's inequality with θ=1/2 yields P(H_y≥13n/8)≤exp[n(−θ/8+θ^2/8)]=exp(−n/32). There are (2R_n+1)^{d−1} independent rows. Thus the target probability is at most exp[−n(2R_n+1)^{d−1}/32]. Dividing its logarithm by n^d and taking limsup proves the claim. A strict upper-tail event obeys the same bound.",
+      "assumptions": [
+        "Independent identically distributed undirected edge weights.",
+        "1≤τ_e≤2 almost surely and Eτ_e=3/2.",
+        "Fixed dimension d≥2."
+      ],
+      "domain": ["probability", "first-passage percolation", "large deviations"],
+      "source": {
+        "source_id": "I0061_owner_campaign_proof_20261010",
+        "url": null,
+        "revision": "draft-1, 2026-10-10, independently written proof",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0061.L3",
+      "namespace": "probability.first_passage_percolation",
+      "logical_name": "i0061_two_ball_volume_lower_bound",
+      "kind": "lemma",
+      "title": "An optimized two-ball lower bound for upper-tail probabilities",
+      "statement": "Suppose independent identically distributed nonnegative weights satisfy a≤τ_e≤b, where 0≤a<b. Fix a<v<c≤b with q_c=P(τ_e≥c)>0. For d≥2, liminf n^{-d} log P(T(0,n e_1)≥vn)≥[2/(d−1)!]((v−a)/(c−a))^d log q_c. Equal radii minimize the leading forced-edge count among two-ball constructions with fixed c and fixed total radius.",
+      "proof_text": "Let ρ=(v−a)/(c−a), so 0<ρ<1, and let r_n=ceil(ρn/2). Around each endpoint, force every edge having at least one endpoint in the ℓ1 ball of radius r_n−1 to have weight at least c. For all sufficiently large n, 2r_n<n, so the two forced edge sets are disjoint.\n\nAny finite path between the endpoints must traverse at least r_n forced edges before leaving the first ball and at least r_n forced edges while approaching the second endpoint. These portions cannot overlap because the balls, including their outer radius-r_n layers, are disjoint. If L is the path length and H the number of its forced-edge traversals, then L≥n and H≥2r_n. Its cost is therefore at least aL+(c−a)H≥an+2(c−a)r_n≥vn. Thus the forcing event implies the upper-tail event, even when the unrestricted passage-time infimum is not attained.\n\nWrite M_d(r) for the number of edges incident to the ℓ1 ball of radius r−1. The ball has V_d(r−1)=Σ_{j=0}^d 2^j binom(d,j) binom(r−1,j) vertices, where binomial coefficients outside their range are zero. This count follows by choosing the nonzero coordinates, their signs, and positive coordinate magnitudes with total at most r−1. Hence V_d(r−1)=(2^d/d!)r^d+O(r^{d−1}). The number of outgoing boundary edges is O(r^{d−1}), since each starts on the outer vertex layer. Counting degrees gives M_d(r)=dV_d(r−1)+half the number of outgoing edges, and consequently M_d(r)=[2^d/(d−1)!]r^d+O(r^{d−1}).\n\nIndependence makes the forcing probability q_c^{2M_d(r_n)}. Therefore its logarithm divided by n^d converges to [2/(d−1)!]ρ^d log q_c, establishing the lower bound.\n\nFor unequal radii with r_0/n→α and r_1/n→β, α+β=ρ, the leading forced-edge count is [2^d/(d−1)!](α^d+β^d)n^d. Convexity of t^d minimizes this expression at α=β=ρ/2. This proves optimality only within the stated two-ball family.",
+      "assumptions": [
+        "Independent identically distributed weights on undirected nearest-neighbor edges.",
+        "0≤a≤τ_e≤b almost surely.",
+        "a<v<c≤b and P(τ_e≥c)>0.",
+        "Fixed dimension d≥2."
+      ],
+      "domain": ["probability", "first-passage percolation", "large deviations"],
+      "source": {
+        "source_id": "I0061_owner_campaign_proof_20261010",
+        "url": null,
+        "revision": "draft-1, 2026-10-10, independently written proof",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0061.T1",
+      "namespace": "probability.first_passage_percolation",
+      "logical_name": "i0061_positive_log_convexity_counterexample",
+      "kind": "theorem",
+      "title": "The recorded positive-logarithm convexity claim fails in every dimension d≥2",
+      "statement": "For independent weights τ_e=1+Z_e with Z_e distributed as Beta(3,3), and any fixed d≥2, there is no convex function L on (0,2−μ) satisfying lim_{n→∞} n^{-d} log P(T(0,n e_1)≥n(μ+ε))=L(ε) for every ε in that interval. This theorem concerns the positive logarithm sign and makes no nonconvexity claim about the conventional nonnegative rate.",
+      "proof_text": "Use the three auxiliary lemmas proved in this same draft packet: I0061.L1, I0061.L2, and I0061.L3. Lemma L1 supplies μ∈[1,3/2] and the lower bound −C_d ε^2 for the logarithmic liminf when 0<ε≤1/8. Lemma L3, with a=1, b=2, and any forcing level c between μ+ε and 2, supplies a finite logarithmic liminf at every ε∈(0,2−μ).\n\nSuppose the limits exist and define a convex L. All its values are real and nonpositive. Near zero, −C_d ε^2≤L(ε)≤0, so L(ε)→0. Fix any x in the domain and 0<t<min(x,1/8). Convexity between δ and x, for 0<δ<t, gives L(t)≤[(x−t)/(x−δ)]L(δ)+[(t−δ)/(x−δ)]L(x). Let δ↓0 to obtain L(t)≤(t/x)L(x). Thus L(x)≥(x/t)L(t)≥−C_dxt. Let t↓0. This proves L(x)≥0, and therefore L(x)=0 everywhere in the domain.\n\nBut x=7/4−μ belongs to that domain, and Lemma L2 gives L(x)≤−1/[32(16(d−1))^{d−1}]<0. This contradiction proves the theorem. The strict-event versions of L1 and L2, together with finiteness obtained by applying L3 at a slightly larger interior threshold, prove the same conclusion with >.",
+      "assumptions": [
+        "Independent identically distributed undirected nearest-neighbor edge weights on Z^d.",
+        "τ_e=1+Z_e with Z_e distributed as Beta(3,3).",
+        "Fixed dimension d≥2.",
+        "The logarithm has the positive sign printed in the supplied record."
+      ],
+      "domain": ["probability", "first-passage percolation", "convexity", "large deviations"],
+      "source": {
+        "source_id": "I0061_owner_campaign_proof_20261010",
+        "url": null,
+        "revision": "draft-1, 2026-10-10, source-sign verification and independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w341",
+  "bundle_slug": "w341-p0042-checked-results-20261010",
+  "entries": [
+    {
+      "key": "tree4-two-neighbor-bootstrap-critical-boundary",
+      "namespace": "probability.bootstrap",
+      "logical_name": "p0042-tree4-two-neighbor-bootstrap-critical-boundary",
+      "kind": "lemma",
+      "title": "Two-neighbor bootstrap on the four-regular tree: infimum and boundary [audit pending w347]",
+      "statement": "For Bernoulli initial infection probability p on the four-regular tree, two-neighbor bootstrap has complete occupation almost surely for p>1/9 and fails almost surely for p<=1/9. Thus the complete-occupation critical infimum is 1/9. At p=1/9 the probability a specified root remains vacant is 21/32. Directed vacancy messages converge to the largest solution x=q(3x^2-2x^3), q=1-p; the critical largest solution is x=3/4 at q=8/9. This is a tree special case, not the general group characterization.",
+      "proof_text": "# P0042: four-regular tree and its critical boundary\n\nStatus: proof of a standard tree special case and explicit boundary probabilities, pending w347. The target is Lyons and Peres, *Probability on Trees and Networks*, cached electronic version 19 August 2026, Question 7.42: characterize amenable groups by endpoint-only bootstrap thresholds on every Cayley graph. The earlier campaign checked the line and the three-regular tree. We continue with the four-regular tree, a Cayley graph of the nonamenable free group F_2. No group characterization is proved, and no novelty is claimed.\n\nStart with independent infected density p and vacant density q=1-p. Under k-neighbor bootstrap on a d-regular tree, the final vacant set is the maximal (d-k+1)-core of the initial vacant graph: repeatedly remove vacant vertices with fewer than d-k+1 vacant neighbors. A directed branch survives, with its parent held vacant, precisely when its initial vertex is vacant and at least d-k of its d-1 child branches survive. Independence of branches gives the monotone message iteration\n\nx_0=q; x_{t+1}=q*P(Binomial(d-1,x_t)>=d-k).\n\nIt decreases to the largest fixed point x_* in [0,1]. This follows by monotonicity and by bounding any fixed point by every iterate. Gluing surviving branches at the root gives final vacant probability q*P(Binomial(d,x_*)>=d-k+1). These messages can be obtained from finite-depth trees with vacant outer boundary and then decreasing the boundary influence; their limiting stable core is the maximal one. The invariant complete-occupation event has probability zero or one under the ergodic Bernoulli group action.\n\nFor d=4,k=2 the equation is x=q(3x^2-2x^3). A positive fixed point requires 1=q(3x-2x^2). The quadratic satisfies 3x-2x^2=9/8-2(x-3/4)^2. Thus there is no positive fixed point for q<8/9, while q=8/9 has largest fixed point x_*=3/4 and larger q has a positive largest root. Complete occupation is almost sure when p>1/9 and fails almost surely when p<=1/9. Consequently its critical probability, defined as an infimum, is 1/9; the event need not hold at that infimum.\n\nAt p=1/9 the final vacant probability at a fixed root is\n\n(8/9)[4*(3/4)^3*(1/4)+(3/4)^4]=21/32.\n\nAt q=9/10 the largest branch fixed point is 5/6 and the vacant root probability is 25/32. By contrast, for d=3,k=2, x=q(2x-x^2) has a positive fixed point only for q>1/2, so complete occupation holds at p=1/2. At q=3/4 its branch value is 2/3 and root vacancy is 5/9. This illustrates why a threshold's endpoint must be checked, rather than inferred from its numerical value.\n\nAll displayed fixed points, tangency derivative, and root probabilities were checked in exact fractions. Iterating the recursion 2,000 times was only numerical calibration: at critical q=8/9 it approaches 3/4 slowly and remains about 0.75037. Audit the directed message convention, maximal-core limit, largest-versus-smallest fixed point, Bernoulli ergodicity, and the critical endpoint. This is a tractable special case of a still-unresolved general question in the cached source.\n",
+      "assumptions": [
+        "four-regular infinite tree",
+        "two-neighbor bootstrap",
+        "independent Bernoulli initial infections",
+        "complete occupation on the infinite graph"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:p0042-tree4-two-neighbor-bootstrap-critical-boundary",
+        "url": "file:///~/brain_workers/w341/proofs/P0042_tree4.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bootstrap-critical-endpoint-comparison",
+      "namespace": "probability.bootstrap",
+      "logical_name": "p0042-bootstrap-critical-endpoint-comparison",
+      "kind": "concept",
+      "title": "Tree bootstrap infima need their own endpoint check [audit pending w347]",
+      "statement": "Two-neighbor bootstrap on the three-regular tree completes almost surely at its critical infimum p=1/2, whereas on the four-regular tree it fails at its critical infimum p=1/9. The latter has positive critical residual vacancy 21/32 at the root. A critical threshold specified as an infimum therefore does not automatically assert occupation at the threshold itself.",
+      "proof_text": null,
+      "assumptions": [
+        "the three- and four-regular tree Bernoulli models"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:p0042-bootstrap-critical-endpoint-comparison",
+        "url": "file:///~/brain_workers/w341/proofs/P0042_tree4.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-limited-status-20261010",
+      "namespace": "probability.bootstrap",
+      "logical_name": "p0042-source-limited-status-20261010",
+      "kind": "concept",
+      "title": "Source-limited status and scope for P0042 [audit pending w347]",
+      "statement": "Lyons-Peres (19 August 2026 cached version), Question 7.42, asks whether endpoint-only bootstrap thresholds for every finite generating set characterize amenable groups. Four-regular-tree calculations here are standard special cases with explicit critical vacancy. They do not settle all generating sets or the group characterization.",
+      "proof_text": null,
+      "assumptions": [
+        "only the supplied local caches and prior records were consulted",
+        "independent review pending"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:p0042-source-limited-status-20261010",
+        "url": "file:///~/brain_workers/w341/proofs/P0042_tree4.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "bootstrap-critical-endpoint-comparison",
+      "to_key": "tree4-two-neighbor-bootstrap-critical-boundary",
+      "kind": "cites",
+      "rationale": "From: \"Two-neighbor bootstrap on the three-regular tree completes almost surely at its critical infimum p=1/2, whereas on the four-regular tree it fails at its critical infimum p=1/9. The latter has positive critical residual vacancy 21/32 at the root. A critical threshold specified as an infimum therefore does not automatically assert occupation at the threshold itself.\" To: \"For Bernoulli initial infection probability p on the four-regular tree, two-neighbor bootstrap has complete occupation almost surely for p>1/9 and fails almost surely for p<=1/9. Thus the complete-occupation critical infimum is 1/9. At p=1/9 the probability a specified root remains vacant is 21/32. Directed vacancy messages converge to the largest solution x=q(3x^2-2x^3), q=1-p; the critical largest solution is x=3/4 at q=8/9. This is a tree special case, not the general group characterization.\"."
+    },
+    {
+      "from_key": "tree4-two-neighbor-bootstrap-critical-boundary",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"For Bernoulli initial infection probability p on the four-regular tree, two-neighbor bootstrap has complete occupation almost surely for p>1/9 and fails almost surely for p<=1/9. Thus the complete-occupation critical infimum is 1/9. At p=1/9 the probability a specified root remains vacant is 21/32. Directed vacancy messages converge to the largest solution x=q(3x^2-2x^3), q=1-p; the critical largest solution is x=3/4 at q=8/9. This is a tree special case, not the general group characterization.\" To: \"Lyons-Peres (19 August 2026 cached version), Question 7.42, asks whether endpoint-only bootstrap thresholds for every finite generating set characterize amenable groups. Four-regular-tree calculations here are standard special cases with explicit critical vacancy. They do not settle all generating sets or the group characterization.\"."
+    },
+    {
+      "from_key": "bootstrap-critical-endpoint-comparison",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"Two-neighbor bootstrap on the three-regular tree completes almost surely at its critical infimum p=1/2, whereas on the four-regular tree it fails at its critical infimum p=1/9. The latter has positive critical residual vacancy 21/32 at the root. A critical threshold specified as an infimum therefore does not automatically assert occupation at the threshold itself.\" To: \"Lyons-Peres (19 August 2026 cached version), Question 7.42, asks whether endpoint-only bootstrap thresholds for every finite generating set characterize amenable groups. Four-regular-tree calculations here are standard special cases with explicit critical vacancy. They do not settle all generating sets or the group characterization.\"."
+    },
+    {
+      "from_key": "source-limited-status-20261010",
+      "to_existing_logical": "math:probability.core:open-problem-p0042-bootstrap-thresholds-as-a-characterization-of-amenable-groups",
+      "kind": "cites",
+      "rationale": "From: \"Lyons-Peres (19 August 2026 cached version), Question 7.42, asks whether endpoint-only bootstrap thresholds for every finite generating set characterize amenable groups. Four-regular-tree calculations here are standard special cases with explicit critical vacancy. They do not settle all generating sets or the group characterization.\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Is a finitely generated group amenable exactly when every Cayley graph from every finite generating set has bootstrap complete-occupation critical probability p(G,k) in {0,1} for every threshold k? Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 7.42, printed p.266.\". "
+    }
+  ]
+}

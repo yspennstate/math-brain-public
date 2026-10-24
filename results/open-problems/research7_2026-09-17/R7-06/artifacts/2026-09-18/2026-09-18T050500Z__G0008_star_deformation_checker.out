@@ -1,0 +1,18 @@
+NONCROSSING_PARTITIONS=14
+ORBIT_SIZES sigma=1 alpha=4 beta=2 gamma=2 delta=4 epsilon=1
+sigma: D_coefficient = -r*(t - 1)
+alpha: D_coefficient = 2*(t - 1)*(2*r*v - 2*r - v)
+beta: D_coefficient = -(2*r - 1)*(t - 1)
+gamma: D_coefficient = -2*(t - 1)*(v - 1)*(r*v - r - v)
+delta: D_coefficient = -(t - 1)*(2*r*v**2 - 6*r*v + 4*r - v**2 + 4*v - 2)
+epsilon: D_coefficient = -(r - 1)*(t - 1)*(v - 1)**2
+FACTORIZATION_PASS: D(r,t,v)=(1-t)Q(r,v)
+dQ/dr sigma: 1
+dQ/dr alpha: -4*(v - 1)
+dQ/dr beta: 2
+dQ/dr gamma: 2*(v - 1)**2
+dQ/dr delta: 2*(v - 2)*(v - 1)
+dQ/dr epsilon: (v - 1)**2
+MONOTONIC_NEAR_EDGE_PASS: all dQ/dr orbit coefficients are >=0 on v in [0,1]
+HOMOGENEOUS_SPECIALIZATION_PASS
+ALL_EXACT_CHECKS_PASS

@@ -1,0 +1,59 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w362",
+  "bundle_slug": "p0104-first-order-correction-20261010",
+  "entries": [
+    {
+      "key": "first-order-floor",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "independent-refresh-unweighted-energy-first-order-floor",
+      "kind": "lemma",
+      "title": "Unweighted refresh energy has a first-order spectral floor",
+      "statement": "For a square-integrable function f of finitely many independent coordinates, let f_S be its orthogonal coordinate-average product projections. Refresh each coordinate independently at rate one, and set C_f(t)=Cov(f(W),f(W^t)), E_f(t)=-C_f'(t), and H_f(t)=exp(t)E_f(t). Then L=sum_{|S|=1}||f_S||_2^2 is the limit of H_f(t), R_f(t)=H_f(t)-L=sum_{|S|>=2}|S|exp(-(|S|-1)t)||f_S||_2^2 is nonnegative, and Var(f)=L+integral_0^infinity exp(-t)R_f(t)dt. If L>0, no bound H_f(t)<=A F(Bt) for all t>=0 can hold with finite positive A,B and a nonnegative integrable F. The weighted energy E_f itself tends to zero; the floor concerns the unweighted convention only.",
+      "proof_text": "The independent refresh operator multiplies each f_S by exp(-|S|t), and orthogonality gives C_f(t)=sum_{S nonempty}exp(-|S|t)||f_S||^2. Differentiate the finite sum, multiply by exp(t), and separate |S|=1. Integrating the remaining terms gives their squared norms. If the proposed envelope held with L>0, then F(s)>=L/A for all s>=0, contradicting integrability. Independently rederived by w362; its exact square reproduction has L=1/4 and variance 23/64.",
+      "assumptions": [
+        "finite independent product coordinates",
+        "f in L2",
+        "independent rate-one refresh",
+        "L>0 for the impossible-envelope assertion"
+      ],
+      "domain": "probability, resampling, first-passage-percolation proof auditing",
+      "source": {
+        "source_id": "owner-own-work:w361:p0104:first-order-correction",
+        "url": "file:///~/brain_workers/w361/ATTEMPT.md",
+        "revision": "as-checked-2026-10-10-first-order-corrected",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "corrected-crossover",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "planar-fpp-first-order-separated-crossover-unproved-input-route",
+      "kind": "concept",
+      "title": "DRAFT: separate first-order energy in the FPP crossover route",
+      "statement": "For iid Uniform[1,2] undirected nearest-neighbor Z^2 FPP, T_n=T(0,n e1), let the UNWEIGHTED refresh kernel be H_n(t)=exp(t)(-C_n'(t)), L_n its first-order spectral limit, and R_n=H_n-L_n. A sufficient conditional route to variance comparable to n^(2/3) is: L_n<=C n^(2/3); R_n(t)<=C n F(n^(1/3)t) for every t>=0 with one nonnegative integrable F; and H_n(t)>=c n for 0<=t<=c' n^(-1/3). Constants are independent of n. The separated variance identity gives upper bound C n^(2/3)(1+integral F) and lower bound c c' exp(-c') n^(2/3). ALL THREE quantitative inputs remain unproved. The earlier all-time integrable envelope on the full unweighted H_n ignores a positive first-order floor and is infeasible; do not promote this corrected conditional route into a proof of its inputs or a solution of P0104.",
+      "proof_text": null,
+      "assumptions": [
+        "the specified bounded planar FPP model",
+        "all three unproved crossover inputs with uniform constants"
+      ],
+      "domain": "probability, first-passage percolation, draft conditional proof route",
+      "source": {
+        "source_id": "owner-own-work:w361:p0104:first-order-correction",
+        "url": "file:///~/brain_workers/w361/ATTEMPT.md",
+        "revision": "as-checked-2026-10-10-first-order-corrected",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "corrected-crossover",
+      "to_key": "first-order-floor",
+      "kind": "depends_on",
+      "rationale": "The route explicitly uses 'L_n its first-order spectral limit, and R_n=H_n-L_n'; the lemma supplies 'Var(f)=L+integral_0^infinity exp(-t)R_f(t)dt'. This separation repairs the impossible full-unweighted-kernel envelope; the quantitative inputs remain unproved."
+    }
+  ]
+}

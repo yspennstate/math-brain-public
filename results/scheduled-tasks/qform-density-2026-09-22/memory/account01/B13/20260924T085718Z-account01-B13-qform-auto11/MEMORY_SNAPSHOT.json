@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260924T085718Z-account01-B13-qform-auto11",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_initial": "b888aca01e194c4ab6d4509501444898e75668cd",
+  "control_commit_prepublication": "508e080ef479f541bb183c9f8c63237933127dea",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B13",
+    "run_id": "20260924T065522Z-account02-B13-qform-r11",
+    "theorem": "QFORM-TRANSLATION-INVARIANT-DIAMETER-ESCAPE-v1",
+    "math_commit": "c8bbb166c448ccd194451b47524b13d5de3eaed5",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260924T065522Z-account02-B13-qform-r11/REPORT.md"
+  },
+  "proved_results": [
+    {
+      "id": "QFORM-FINITE-CERTIFICATE-PRODUCT-PURIFICATION-v1",
+      "scope": "bounded-support cap-one product laws; exact preservation of any finite family of bounded integral certificates via coordinatewise Lyapunov purification"
+    },
+    {
+      "id": "QFORM-AFFINE-CORE-SLAB-TAIL-PROFILE-v1",
+      "scope": "abstract Q=Q0+R with density(Q0)<=C; exact slab-tail profile and q-moment hierarchy"
+    },
+    {
+      "id": "QFORM-DOUBLESLAB-CONDITIONAL-COVARIANCE-ESCAPE-v1",
+      "scope": "A=M+F where all translated affine M-forms have density <= C_M; forces conditional slab covariance from high ratio"
+    }
+  ],
+  "actual_partner_inequality": "For the account02/B13 endpoint, C_D V_tail,S + rho |lambda2| V_w,S >= rho^2 |J|/(32 C_M), so either V_tail,S >= rho^2 |J|/(64 C_M C_D) or V_w,S >= rho |J|/(64 C_M |lambda2|) >= rho^(13/6)|J|/(64 C_M K_ent).",
+  "constants": {
+    "C_M": 65302.90114768759,
+    "C_D": 19.41625912555699,
+    "64_C_M_C_D": 81148035.22138466
+  },
+  "canonical_math_commit": "705771189774fc466f24570232f4ea94fc5057b5",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260924T085718Z-account01-B13-qform-auto11/REPORT.md",
+  "brain_handoff_commit": "fa294f36e3e45d9ebe9601172e8eaa3045a5dcee",
+  "brain_handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B13/20260924T085718Z-account01-B13-qform-auto11.md",
+  "unresolved_implication": "QFORM-CONDITIONAL-COVARIANCE-BANK-TO-BILINEAR-SMOOTHING-v1",
+  "next_step": "Use the forced conditional slab variance together with |(X-X')^T A (X+X')|<=|J| and the ambient independent cap-one difference provenance to prove a dimension-free smoothing/small-ball receiver while retaining E_sep and the secondary rank-one carrier.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

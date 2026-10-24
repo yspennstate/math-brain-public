@@ -1,0 +1,103 @@
+{
+  "at": "2026-10-11T22:00:41.726589+00:00",
+  "files": [
+    {
+      "path": "CLAIMS.json",
+      "bytes": 2615,
+      "sha256": "c06e4db66ab1d7cdfea745a212098077ab247f409ae1832f864029c93b94febf"
+    },
+    {
+      "path": "code\\edge_pilot.py",
+      "bytes": 1706,
+      "sha256": "338bed27f2da731d99abb4a3a28f23e1b408c980a1753402869ca0d36aae16fb"
+    },
+    {
+      "path": "code\\independent_check.py",
+      "bytes": 2364,
+      "sha256": "da7cbdad03058b70ffea6511655fd7a4de7ebb7f9c2b69dcc4f36faad2d89fb7"
+    },
+    {
+      "path": "code\\save_stage.py",
+      "bytes": 17057,
+      "sha256": "a8e06dce3511e3afaf7e8bf7ba75cac46ad0d009313c559e55ad0a6655fbbd3e"
+    },
+    {
+      "path": "code\\symmetric_pilot.py",
+      "bytes": 1180,
+      "sha256": "3ff43d2df32253c81a28a51eb705427dc476a41059447df68d6c112de7f923dc"
+    },
+    {
+      "path": "FROZEN_SPEC.json",
+      "bytes": 644,
+      "sha256": "c294d458ca91778ead767e70bcbeca06c412b0241a1b8cdf60c29227d9f005d0"
+    },
+    {
+      "path": "GOOD_COORDINATE_TARGET.tex",
+      "bytes": 4925,
+      "sha256": "422c4ec87924b27618f89e6058dc13a9e2f5047a035e14fa0940e315f23135ce"
+    },
+    {
+      "path": "out\\edge_pilot.json",
+      "bytes": 2039,
+      "sha256": "5e4c9c52ab41fd96453341e8a77aebbe52ffdc0635a09441de25b75c198942dc"
+    },
+    {
+      "path": "out\\gray_selections.bin",
+      "bytes": 32906,
+      "sha256": "79bb98464414bacb67962d9488aa10dec3782e18cf43084a981c9d9723ad0c59"
+    },
+    {
+      "path": "out\\independent_check.json",
+      "bytes": 739,
+      "sha256": "6bf0051b1869923b651c41955e5163f33337bae2bcbad1d6cb05a6b055d63d66"
+    },
+    {
+      "path": "out\\source_receipts.json",
+      "bytes": 12008,
+      "sha256": "b031494e0ad8ba8391316a37d89fc4d81b7290c7610c30f452c9fe3bcba10787"
+    },
+    {
+      "path": "out\\symmetric_pilot.json",
+      "bytes": 15135,
+      "sha256": "8162c9cd440d2ab4782c45033297bdb6ef51fb9f04c5341a4c404d3427fe2eb0"
+    },
+    {
+      "path": "PACKET_DELTA.json",
+      "bytes": 2380,
+      "sha256": "37dd4269510a9f91c57e706be1a0ddbc66f43abfcaa978448ca97366b874770c"
+    },
+    {
+      "path": "PROGRESS.json",
+      "bytes": 2380,
+      "sha256": "37dd4269510a9f91c57e706be1a0ddbc66f43abfcaa978448ca97366b874770c"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 6873,
+      "sha256": "2571122d7d180ad0b60beba0d2285f8f462151293793da7076f2575bd4c76de2"
+    },
+    {
+      "path": "REPRODUCTION_SPEC.json",
+      "bytes": 761,
+      "sha256": "bd0117bed56a73bdc01d9b86a2f674a5ebf09bbeec086266b6e40128324c1504"
+    },
+    {
+      "path": "SELECTION_SCOPE.md",
+      "bytes": 2373,
+      "sha256": "e0c0775f2eee3e67f282ad8152cce5767a05a2176f2192a6a9eb04d5508299a5"
+    },
+    {
+      "path": "SPEC_CORRECTIONS.md",
+      "bytes": 1272,
+      "sha256": "4b150ef3a8518fd9d51088980acbcfc8bf21893cbfc1594fcb77a39ebd4a0e44"
+    },
+    {
+      "path": "SYMMETRIC_SPEC.json",
+      "bytes": 576,
+      "sha256": "d0e6d89041e62cd69fbb468457ff05f076d3325efc3bbe5b1e8647b555131dbe"
+    }
+  ],
+  "schema_check": "PASS exact report/claim field sets; progress packet_ids annotation normalized as expressly required by user",
+  "regenerate": "python -X utf8 code/edge_pilot.py; python -X utf8 code/symmetric_pilot.py; python -X utf8 code/independent_check.py; python -X utf8 code/save_stage.py (from run directory; separate commands)",
+  "scope": "Local save only; no supervisor mirror receipt"
+}

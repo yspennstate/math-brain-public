@@ -1,0 +1,212 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem}
+\usepackage[margin=1in]{geometry}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\E}{\mathbb E}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cI}{\mathcal I}
+\newcommand{\TV}{d_{\mathrm{TV}}}
+\newcommand{\astar}{a_*}
+\newcommand{\asympc}{\asymp}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\hypersetup{pdftitle={Entropy and singularity of spectral and pivotal sets in planar percolation},pdfauthor={Yitzchak Shmalo}}
+\title[Entropy and singularity in percolation]{Entropy and singularity of spectral and pivotal sets in planar percolation}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\date{}
+\subjclass[2020]{60K35, 42C10, 60G57}
+\keywords{Planar percolation, Fourier entropy, pivotal set, spectral sample, singularity}
+\setlist{itemsep=3pt,topsep=5pt}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+\begin{document}
+\begin{abstract}
+The spectral sample and pivotal set of a percolation crossing have the same one- and two-coordinate inclusion probabilities under the uniform product measure. We prove that both Shannon entropies are comparable to total influence for critical square-lattice bond and triangular-lattice site crossings, with matching estimates at every retained nonroot spatial resolution. The triangular entropy bounds are uniform over a class of inhomogeneous near-critical product measures. For critical triangular-site square crossings, the two laws are asymptotically mutually singular: an elementary triangular face is forbidden in the pivotal set and occurs with positive density in a large spectral sample. Every fixed face density below an explicit threshold has nonempty spectral probability comparable to $R^2\alpha_4(R)^2$, while the nonempty overlap of the two laws has decay exponent $11/12$. Their minimum expected symmetric-difference distance over all couplings is comparable to total influence. Geometric separation persists after independent thinning whenever the retention probability $\rho_R$ satisfies $\rho_R^3R^2\alpha_4(R)\to\infty$; the face detector fails when this quantity tends to zero. The proofs combine spatial encoding, arm estimates, local Fourier cancellation, and an exact six-cycle coercivity inequality preserved under exterior conditioning.
+\end{abstract}
+\maketitle
+\enlargethispage{4pt}
+\section{Introduction}
+
+The spectral sample and the pivotal set are two random subsets associated with a Boolean crossing function. At the uniform product measure they have the same one- and two-coordinate inclusion probabilities \cite[equation~(2.13)]{GPS}. We prove that their Shannon entropies are also comparable to the same influence scale, with matching comparisons at each retained nonroot spatial resolution. For critical triangular-lattice square crossings, we further prove that their laws are asymptotically mutually singular. The distinction is detected by elementary triangular faces, which occur in a large spectral sample and are forbidden in a pivotal set.
+
+The entropy estimate answers the square-crossing question in \cite[Section~11, Question~1]{GPS}. Its pivotal counterpart gives the other square-crossing bound in \cite[Conjecture~8]{Kalai}. The singularity theorem answers the discrete triangular-site case of \cite[Section~11, Question~5]{GPS}. Both questions appeared in the 2008 preprint of \cite{GPS}, published in 2010. The spectral entropy bound is a percolation instance of the Fourier entropy--influence conjecture of Friedgut and Kalai \cite{FK}; no assertion for arbitrary Boolean functions is made here. Likewise, the singularity result concerns discrete laws. It does not establish mutual singularity of their continuum limits or the square-lattice bond analogue.
+
+\subsection{The random sets and their entropy}
+
+Let $f:\{0,1\}^V\to\{-1,1\}$ be an increasing Boolean function under independent coordinate parameters $p_i\in(0,1)$. Use the normalized product characters
+\[
+ \chi_A(X)=\prod_{i\in A}\frac{X_i-p_i}{\sqrt{p_i(1-p_i)}},
+ \qquad \widehat f(A)=\E[f\chi_A].
+\]
+The spectral sample $\cS_f$ has law
+\begin{equation}\label{eq:spectral}
+ \Prob(\cS_f=A)=\widehat f(A)^2.
+\end{equation}
+It has total mass one by Parseval. The pivotal set $\cP_f$ consists of the coordinates whose reversal changes $f$. Write
+\[
+ \iota_i(f)=\Prob(i\in\cP_f),\qquad
+ I(f)=\E|\cP_f|,\qquad
+ J(f)=\E|\cS_f|=\sum_i4p_i(1-p_i)\iota_i(f).
+\]
+The last identity is proved in \eqref{eq:biasedinfluence}. At the uniform measure, $I(f)=J(f)$ and
+\begin{equation}\label{eq:jointmarginals}
+ \Prob(i\in\cS_f)=\Prob(i\in\cP_f),\qquad
+ \Prob(i,j\in\cS_f)=\Prob(i,j\in\cP_f)\quad(i\ne j).
+\end{equation}
+The two-coordinate identity is recalled in Lemma~\ref{lem:biasedpair}. For fair coordinates we also write $\omega_i=2X_i-1$, so $\chi_A=\prod_{i\in A}\omega_i$.
+
+Shannon entropy $H$ and binary entropy $h_2$ are measured in bits. We write $\log_2$ for base-two logarithms and $\ln$ for natural logarithms. Let $Q$ be a rectangle with horizontal and vertical sides, larger side $R$, and aspect ratio at most a fixed $\kappa$. Its crossing function is
+\[
+ f=2\one_{\{Q\text{ has an open left--right crossing}\}}-1.
+\]
+We use the geometric tile convention of \cite[Section~2.1]{GPS}; coordinates are the random tiles meeting $Q$. Fix an admissible microscopic inner radius $r_0$ and put
+\[
+ m(t)=t^2\alpha_4(t),\qquad \alpha_4(t)=\alpha_4(r_0,t),
+\]
+where $\alpha_4$ is the critical alternating four-arm probability of the model. On the triangular lattice, $\alpha_4(R)=R^{-5/4+o(1)}$ \cite{SW}.
+
+\begin{theorem}[Crossing entropy]\label{thm:main}
+Fix $0<p_0\le1/2$, $\varepsilon\in(0,1/2)$, and $\kappa\ge1$.
+Consider either of the following models, in the embeddings of
+Section~\ref{sec:inputs}:
+\begin{enumerate}[label=(\roman*)]
+\item critical bond percolation on the square lattice;
+\item triangular-lattice site percolation with independent parameters
+\[
+ p_x\in[p_*,1-p_*],\qquad p_*\in[p_0,1/2],\qquad
+ R\le L_\varepsilon(p_*).
+\]
+Here $L_\varepsilon$ is the characteristic length
+of~\cite[Section~3.1]{Nolin}, with $L_\varepsilon(1/2)=\infty$.
+\end{enumerate}
+There are constants $c,C,R_0>0$, depending only on these fixed
+parameters and the lattice conventions, such that for every such
+rectangle with $R\ge R_0$,
+\begin{equation}\label{eq:mainentropy}
+ cI(f)\le H(\cP_f)\le CI(f),\qquad
+ cJ(f)\le H(\cS_f)\le CJ(f),\qquad
+ I(f)\asymp J(f)\asymp m(R).
+\end{equation}
+The constants are uniform in the rectangle's location and the
+admissible parameter profile.
+\end{theorem}
+
+To measure spatial entropy, project the tile centers coordinatewise
+onto $Q$ and repeatedly bisect both sides of the rectangle. For
+$s=R2^{-k}$, let $Z_s(A)$ record the depth-$k$ cells occupied by a set
+$A$ of coordinates. The boundary convention and a fixed lattice
+cutoff $s_*$ are specified in Section~\ref{sec:upper}. Scales
+$s\ge s_*$ are called retained scales.
+
+\begin{theorem}[Entropy at each resolution]\label{thm:scales}
+Under the hypotheses of Theorem~\ref{thm:main}, for every retained
+nonroot dyadic scale $s_*\le s=R2^{-k}\le R/2$ and
+$A\in\{\cS_f,\cP_f\}$,
+\begin{equation}\label{eq:maincoarse}
+ H(Z_s(A))\asymp\E|Z_s(A)|\asymp\frac{m(R)}{m(s)}.
+\end{equation}
+At the root, $H(Z_R(\cP_f))\asymp1$, whereas
+\begin{equation}\label{eq:rootexact}
+ H(Z_R(\cS_f))=h_2\bigl((\E f)^2\bigr).
+\end{equation}
+For any deterministic offset of an axis-parallel square grid, the
+entropy upper bound also holds at every $s_*\le s\le R$, using the
+same projected centers.
+\end{theorem}
+
+Thus, away from the root, entropy is comparable to the expected number
+of occupied cells. For standard critical square crossings,
+$\E f_R\to0$~\cite[Section~1.3]{GPS}, so the spectral root entropy tends
+to zero. Formula~\eqref{eq:rootexact} records this dependence on the
+crossing probability.
+
+\subsection{Local faces and singularity}
+
+For the singularity statements, let $R$ be a positive integer and let $f_R$ be the critical triangular-site crossing sign of $[0,R]^2$. Write $\mu_R$ and $\nu_R$ for the laws of $\cS_R$ and $\cP_R$, and set
+\[
+ \epsilon_R=(\E f_R)^2=\mu_R(\varnothing).
+\]
+Let $V_R$ be the sites whose tiles meet the square, and let $K_R(A)$ count the elementary triangular faces contained in $A$ whose three tiles lie wholly inside the square. Let $V_R^\circ$ be the sites whose full seven-site wheel lies a fixed positive lattice distance inside the square, and put $X_R=|\cS_R\cap V_R^\circ|$. Every tested center is nonterminal and has all six ring neighbors. The fixed boundary collar may be enlarged without affecting the asymptotic conclusions.
+
+\begin{theorem}[Discrete singularity]\label{thm:discrete}
+For critical triangular-site square crossings,
+\[
+ \nu_R(K_R>0)=0,\qquad \mu_R(K_R>0)\longrightarrow1,
+ \qquad \TV(\mu_R,\nu_R)\longrightarrow1,
+\]
+where total variation is normalized to lie in $[0,1]$.
+\end{theorem}
+
+In this model, Theorems~\ref{thm:main}, \ref{thm:scales}, and \ref{thm:discrete} therefore give
+\[
+ H(\cS_R)\asymp H(\cP_R)\asymp m(R),\qquad
+ H(Z_s(\cS_R))\asymp H(Z_s(\cP_R))\asymp\frac{m(R)}{m(s)},
+\]
+at the retained nonroot scales, together with asymptotic singularity of the full laws. Equal first and second inclusion statistics and comparable entropy do not determine the typical local geometry.
+
+Set
+\begin{equation}\label{eq:astar}
+ \astar=\frac{8-\sqrt{53}}{16}>\frac1{32},
+\end{equation}
+and define the binary relative entropy in natural units, for $0<a<1$, by
+\[
+ D(\theta\Vert a)=\theta\ln\frac{\theta}{a}
+ +(1-\theta)\ln\frac{1-\theta}{1-a},
+\]
+with the usual zero-term conventions at $\theta=0,1$.
+
+\begin{theorem}[Finite face bounds]\label{thm:finite}
+For every $R$, $m>0$, and $0\le\theta<\astar$,
+\begin{equation}\label{eq:density}
+ \Prob\left(K_R(\cS_R)\le\frac{\theta}{3}X_R,\ X_R\ge m\right)
+ \le\exp\left\{-\frac{m}{7}D(\theta\Vert\astar)\right\}.
+\end{equation}
+In particular,
+\begin{equation}\label{eq:noface}
+ \Prob(K_R(\cS_R)=0,\ X_R\ge m)\le(1-\astar)^{m/7}.
+\end{equation}
+These bounds hold for every fair site-connection function on a finite triangular-lattice domain, with the same complete nonterminal-wheel convention.
+\end{theorem}
+
+\begin{theorem}[Triangle-free mass]\label{thm:rate}
+For critical triangular-site square crossings,
+\begin{equation}\label{eq:rate}
+ \mu_R(K_R=0,\ S\ne\varnothing)
+ \asymp R^2\alpha_4(R)^2=R^{-1/2+o(1)}.
+\end{equation}
+Consequently $\mu_R(K_R=0)=\epsilon_R+R^{-1/2+o(1)}$.
+\end{theorem}
+
+The same sharp scale holds for every fixed $0\le\delta<\astar/3$: Theorem~\ref{thm:lowdensity} proves
+\[
+ \mu_R\bigl(S\ne\varnothing,\ K_R(S)\le\delta|S|\bigr)
+ \asymp_\delta R^2\alpha_4(R)^2.
+\]
+Conditional on such low face density and nonemptiness, the spectral size has an exponentially decaying tail up to a vanishing boundary error.
+
+\begin{theorem}[Total variation deficit]\label{thm:TVrate}
+For the same square crossings,
+\[
+ 1-\TV(\mu_R,\nu_R)=\epsilon_R+R^{-11/12+o(1)}.
+\]
+The second term is the overlap on nonempty supports.
+\end{theorem}
+
+The conformal crossing limit gives $\epsilon_R\to0$ \cite{Smirnov}. No rate for the empty atom is asserted. Theorem~\ref{thm:quads} extends discrete singularity to every fixed Jordan quad after conditioning the spectral sample to be nonempty; the corresponding unconditioned conclusion retains the common empty atom. Proposition~\ref{prop:biased} extends the finite face bounds to product measures with uniformly bounded ring parameters. Those finite bounds alone do not supply a near-critical asymptotic singularity theorem.
+
+\subsection{The two uses of local irrelevance}
+

@@ -1,0 +1,312 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem,booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\DTCS}{\mathrm{DTCS}}
+\hypersetup{pdftitle={The drawn length of the critical beta-splitting tree grows linearly},pdfauthor={Yitzchak Shmalo}}
+\title[The drawn length of the critical beta-splitting tree]{The drawn length of the critical\\ beta-splitting tree grows linearly}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{12 October 2026}
+\subjclass[2020]{60C05, 05C05, 60J10, 92B10}
+\keywords{Critical beta-splitting tree, cladogram, drawn length, harmonic descent chain, occupation measure}
+
+\begin{document}
+\begin{abstract}
+In the critical beta-splitting model of a random binary tree with $n$ leaves, a clade of $m$ leaves splits into clades of $i$ and $m-i$ leaves with probability proportional to $1/(i(m-i))$. Aldous and Janson asked for a proof that the expected drawn length $L_n$ of the cladogram of this tree grows roughly like $n\log^4 n$. We show that $L_n/n$ converges to the finite constant $\lambda=\sum_{m\ge2}a(m)c_m/m$, where $a(m)=6h_{m-1}/(\pi^2(m-1))$ is the limiting probability that a uniformly chosen leaf lies in a clade of exactly $m$ leaves and $c_m$ is the expected contribution of the root of a tree with $m$ leaves to the drawn length. Numerically $\lambda\approx4.88$, and $4.80<\lambda<5.38$. The proof combines an exponential moment bound for the height with a bound, uniform in $n$, on the time the harmonic descent chain spends in a dyadic block. A deterministic comparison with the sum of the leaf depths gives the weaker bound $L_n=O(n\log^2n)$ directly. The prediction $n\log^4n$ comes from a heuristic in which the expected number of clades of size $m$ is taken to be $na(n,m)$ instead of $(n/m)a(n,m)$.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $h_k=\sum_{j=1}^k1/j$ denote the harmonic numbers. The critical beta-splitting tree $T_n$, denoted $\DTCS(n)$ in \cite{AJ23}, is the random rooted binary tree with $n$ leaves constructed as follows. The root clade is the set of all $n$ leaves. A clade of $m\ge2$ leaves is split into a left clade of $i$ leaves and a right clade of $m-i$ leaves with probability
+\begin{equation}\label{eq:q}
+ q(m,i)=\frac{m}{2h_{m-1}\,i(m-i)},\qquad 1\le i\le m-1,
+\end{equation}
+independently of all other splits, and a clade of one leaf is a leaf of the tree. This is the case $\beta=-1$ of the beta-splitting family of Aldous \cite{Ald96}, and its structure has been studied in detail in recent years \cite{AP25,AJ23,AJL24,BCM25,Ma26}.
+
+For a finite rooted binary tree $T$ we write $h(T)$ for its height, the largest number of edges on a path from the root to a leaf, so that a single leaf has height $0$, and $T_v$ for the subtree consisting of a vertex $v$ and its descendants. In the usual drawing of $T$ as a cladogram, the leaves sit at level $0$, an internal vertex $v$ sits at level $h(T_v)$, and $v$ is joined to each of its two children by a vertical line. The \emph{drawn length} $\ell(T)$ is the total length of these vertical lines. If $T_L$ and $T_R$ are the subtrees of the two children of the root, then $h(T)=1+\max(h(T_L),h(T_R))$ and
+\begin{equation}\label{eq:drawn}
+ \ell(T)=\ell(T_L)+\ell(T_R)+2+|h(T_L)-h(T_R)|,
+\end{equation}
+with $\ell(T)=0$ for a single leaf; this is the recursion (73) of \cite{AJ23}. Put
+\[
+ L_n=\E\,\ell(T_n),\qquad H_n=\E\,h(T_n).
+\]
+In \cite[Section 6.1.1]{AJ23} Aldous and Janson give a heuristic argument that $L_n$ is of order $n\log^4n$ and pose the following problem.
+
+\begin{quote}
+\textbf{Open Problem 14 of \cite{AJ23}.} Prove that $L_n$ grows roughly like $n\log^4n$.
+\end{quote}
+
+The order is in fact $n$. For $m\ge2$ let
+\begin{equation}\label{eq:cm}
+ c_m=\E\bigl[2+|h(T_L)-h(T_R)|\bigr],
+\end{equation}
+where $T_L$ and $T_R$ are the subtrees of the two children of the root of $T_m$, and let
+\begin{equation}\label{eq:am}
+ a(m)=\frac{6h_{m-1}}{\pi^2(m-1)},\qquad m\ge2.
+\end{equation}
+
+\begin{theorem}\label{thm:main}
+As $n\to\infty$,
+\[
+ \frac{L_n}{n}\longrightarrow\lambda:=\sum_{m=2}^\infty\frac{a(m)\,c_m}{m}.
+\]
+The series converges, and $2<\lambda<\infty$. Numerically $4.800<\lambda<5.372$, and $\lambda\approx4.88$.
+\end{theorem}
+
+The numerical statements are explained in Section~\ref{sec:numerics}. A weaker upper bound, which already rules out the order $n\log^4n$, follows from a deterministic comparison. Let $S(T)$ be the sum of the depths of the leaves of $T$ (the Sackin index of $T$).
+
+\begin{proposition}\label{prop:sackin}
+For every finite rooted binary tree $T$ with $n$ leaves, $2(n-1)\le\ell(T)\le S(T)$. Consequently
+\[
+ 2(n-1)\le L_n\le n\,\E D_n=\Bigl(\frac3{\pi^2}+o(1)\Bigr)n\log^2n,
+\]
+where $D_n$ is the depth of a uniformly chosen leaf of $T_n$.
+\end{proposition}
+
+The first statement is part of Lemma~\ref{lem:det} below, $\E S(T_n)=n\E D_n$ holds by averaging over the leaves, and $\E D_n\sim(3/\pi^2)\log^2n$ is proved by Aldous and Pittel \cite{AP25} (see also \cite[Theorem 3]{AJ23}).
+
+The heuristic of \cite[(75)]{AJ23} starts from the expected number of clades of size $m$ in $T_n$, which is $(n/m)a(n,m)$, where $a(n,m)$ is the probability that a uniformly chosen leaf lies in a clade of exactly $m$ leaves; this identity is stated in \cite[Section 4.8]{AJ23}, and we prove it in Lemma~\ref{lem:clades}. The first line of (75) uses $n\,a(n,m)$ instead. The two counts differ in total: $\sum_{m=2}^n(n/m)a(n,m)=n-1$ is the number of internal vertices of $T_n$, while $\sum_{m=2}^n n\,a(n,m)=n\E D_n$. With the factor $1/m$ in place, the same computation leads to the convergent series of Theorem~\ref{thm:main}.
+
+The proof of Theorem~\ref{thm:main} rests on two elementary estimates. Lemma~\ref{lem:height} bounds $H_n\le4h_{n-1}\log n$ through an exponential moment of $D_n$, and Lemma~\ref{lem:block} bounds the expected number of visits of the harmonic descent chain to a block $\{b+1,\dots,2b\}$ by $2h_{2b-1}$, uniformly in the starting point. Together with the convergence $a(n,m)\to a(m)$ for each fixed $m$, which is Theorem~18 of \cite{AJ23}, they give the convergence of $L_n/n=\sum_ma(n,m)c_m/m$ by dominated convergence. The convergence of $\sum_ma(n,m)f(m)$ to $\sum_ma(m)f(m)$ for nonnegative $f$ with $f(m)=O(m^{-\varepsilon})$ is a case of Ansatz~20 of \cite{AJ23} stated by Brandenberger, Chin and Mossel \cite[Section 1.1]{BCM25}, who also obtain rates for $a(n,m)\to a(m)$. Since $c_m/m=O(m^{-1/2})$ by Lemma~\ref{lem:height}, Theorem~\ref{thm:main} also follows from their statement; the argument given here uses only the convergence $a(n,m)\to a(m)$. Ma \cite{Ma26} proved that $h(T_n)/\log^2n$ converges almost surely and in $L^p$ to an explicit constant $C_{\mathrm{ht}}\approx0.976$, which answers Open Problem~4 of \cite{AJ23}; the cruder Lemma~\ref{lem:height} is all that is needed here. Additive shape parameters with explicit tolls, such as the Sackin and Colless indices, are studied across the beta-splitting family in \cite{Son26}.
+
+Theorem~\ref{thm:main} is a statement about the mean. Whether $\ell(T_n)/n$ converges to $\lambda$ in probability, and what the fluctuations are, we leave open, as well as Open Problem~15 of \cite{AJ23} on the profile of the drawn width.
+
+Section~\ref{sec:identities} collects the identities, Section~\ref{sec:estimates} proves the two estimates, Section~\ref{sec:proof} proves Theorem~\ref{thm:main}, and Section~\ref{sec:numerics} describes the computations, including a Lean proof of Lemma~\ref{lem:det}.
+
+\section{Identities}\label{sec:identities}
+
+For a finite rooted binary tree $T$ let $n(T)$ be its number of leaves and $I(T)$ its set of internal vertices, so that $|I(T)|=n(T)-1$.
+
+\begin{lemma}\label{lem:det}
+Let $T$ be a finite rooted binary tree with $n$ leaves. Then
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item $\ell(T)=\sum_{v\in I(T)}h(T_v)+h(T)$;
+\item $S(T)=\sum_{v\in I(T)}n(T_v)$;
+\item $h(T)\le n-1$;
+\item $2(n-1)\le\ell(T)\le S(T)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) The vertical line from an internal vertex $v$ to a child $u$ has length $h(T_v)-h(T_u)$. In the sum over all vertical lines, every internal vertex appears twice as a parent, every vertex other than the root appears once as a child, and leaves have height $0$. Hence $\ell(T)=2\sum_{v\in I(T)}h(T_v)-\sum_{v\in I(T)\setminus\{\mathrm{root}\}}h(T_v)$, which is (a).
+(b) The depth of a leaf is the number of its internal ancestors, so each $v\in I(T)$ is counted once for each of the $n(T_v)$ leaves below it.
+(c) By induction, $h(T)=1+\max(h(T_L),h(T_R))\le\max(n(T_L),n(T_R))\le n-1$.
+(d) By \eqref{eq:drawn} every internal vertex contributes at least $2$ to $\ell(T)$, which gives the lower bound. By (a), (c) applied to each $T_v$, and (b),
+\[
+ \ell(T)\le\sum_{v\in I(T)}\bigl(n(T_v)-1\bigr)+(n-1)=S(T)-|I(T)|+(n-1)=S(T).\qedhere
+\]
+\end{proof}
+
+Fix $n$ and let $V$ be a leaf of $T_n$ chosen uniformly at random. The sizes of the clades containing $V$, read from the root down, form a decreasing sequence $n=J_0>J_1>\dots>J_{D_n}=1$, where $D_n$ is the depth of $V$. Given $J_t=k\ge2$, the clade of size $k$ splits as in \eqref{eq:q} and $V$, being uniform in it, falls into a part of size $j$ with probability $j/k$; since $q(k,j)=q(k,k-j)$,
+\begin{equation}\label{eq:hd}
+ \Pp(J_{t+1}=j\mid J_t=k)=2q(k,j)\frac jk=\frac1{h_{k-1}(k-j)},\qquad 1\le j\le k-1.
+\end{equation}
+So $(J_t)$ is the harmonic descent chain of \cite{AJL24} started at $n$ and stopped at $1$ (see also \cite[Section 3.1]{AJ23}). For $1\le m\le n$ let $a(n,m)$ be the probability that this chain visits $m$, and put $a(n,m)=0$ for $m>n$. Then $\E D_n=\sum_{m=2}^na(n,m)$.
+
+\begin{lemma}\label{lem:clades}
+Let $N_n(m)$ be the number of internal vertices $v$ of $T_n$ with $n(T_v)=m$. Then $\E N_n(m)=(n/m)\,a(n,m)$ for $2\le m\le n$.
+\end{lemma}
+
+\begin{proof}
+Two clades of the same size are either equal or disjoint, so given $T_n$ the probability that $V$ lies in a clade of size $m$ is $mN_n(m)/n$. Taking expectations gives $a(n,m)=m\E N_n(m)/n$.
+\end{proof}
+
+\begin{lemma}\label{lem:mean}
+For $n\ge2$,
+\begin{align}
+ L_n&=\sum_{m=2}^n\E N_n(m)\,c_m=n\sum_{m=2}^n\frac{a(n,m)\,c_m}{m},\label{eq:Lc}\\
+ L_n&=n\sum_{m=2}^n\frac{a(n,m)\,H_m}{m}+H_n.\label{eq:LH}
+\end{align}
+Moreover $c_m=2H_m-2\sum_{i=1}^{m-1}q(m,i)H_i$ and $2\le c_m\le1+H_m$ for $m\ge2$.
+\end{lemma}
+
+\begin{proof}
+Unrolling \eqref{eq:drawn} gives $\ell(T)=\sum_{v\in I(T)}g(T_v)$ with $g(T')=2+|h(T'_L)-h(T'_R)|$. Conditionally on the splits outside it, the subtree below a clade of size $m$ is distributed as $T_m$. Hence $\E\sum_{v\in I(T_n)}g(T_v)=\sum_m\E N_n(m)\,\E g(T_m)=\sum_m\E N_n(m)c_m$, and Lemma~\ref{lem:clades} gives \eqref{eq:Lc}. The same argument applied to Lemma~\ref{lem:det}(a) gives \eqref{eq:LH}. For the formula for $c_m$ use $|x-y|=2\max(x,y)-x-y$, $\E\max(h(T_L),h(T_R))=H_m-1$, and $\E h(T_L)=\E h(T_R)=\sum_iq(m,i)H_i$, which holds because $q(m,i)=q(m,m-i)$. The lower bound $c_m\ge2$ is clear, and $|x-y|\le\max(x,y)$ for $x,y\ge0$ gives $c_m\le2+H_m-1$.
+\end{proof}
+
+Since $\sum_{m=2}^n\E N_n(m)=n-1$, Lemma~\ref{lem:clades} also gives
+\begin{equation}\label{eq:mass}
+ \sum_{m=2}^n\frac{a(n,m)}m=\frac{n-1}n.
+\end{equation}
+
+\section{Two estimates}\label{sec:estimates}
+
+\begin{lemma}\label{lem:height}
+For $n\ge2$, $H_n\le4h_{n-1}\log n$. Consequently $c_m\le1+4h_{m-1}\log m$ for $m\ge2$.
+\end{lemma}
+
+\begin{proof}
+Let $\theta=1/(2h_{n-1})$. For $1\le k\le n$ let $F(k)=\E_k e^{\theta D}$, where $D$ is the number of steps the chain \eqref{eq:hd} started at $k$ needs to reach $1$. We show $F(k)\le k$ by induction. Clearly $F(1)=1$. Let $2\le k\le n$ and assume $F(j)\le j$ for $j<k$. Since
+\[
+ \sum_{j=1}^{k-1}\frac{j}{h_{k-1}(k-j)}=\sum_{r=1}^{k-1}\frac{k-r}{h_{k-1}\,r}=k-\frac{k-1}{h_{k-1}},
+\]
+we get $F(k)\le e^\theta\sum_{j<k}\Pp(J_1=j\mid J_0=k)\,j=e^\theta k(1-x_k)$ with $x_k=(k-1)/(kh_{k-1})$. Now $x_k\ge1/(2h_{k-1})\ge\theta$ and $x_k<1$, so $e^\theta\le1/(1-\theta)\le1/(1-x_k)$ and $F(k)\le k$.
+
+Pointwise $e^{\theta h(T_n)}$ is at most the sum of $e^{\theta d(v)}$ over the leaves $v$, where $d(v)$ is the depth of $v$, and the expectation of this sum is $n\E e^{\theta D_n}=nF(n)\le n^2$. By Jensen's inequality $e^{\theta H_n}\le\E e^{\theta h(T_n)}\le n^2$, that is, $H_n\le2\log n/\theta=4h_{n-1}\log n$. The bound on $c_m$ follows from Lemma~\ref{lem:mean}.
+\end{proof}
+
+\begin{lemma}\label{lem:block}
+For all $n\ge2$ and $b\ge1$,
+\[
+ \sum_{m=b+1}^{2b}a(n,m)\le2h_{2b-1}.
+\]
+\end{lemma}
+
+\begin{proof}
+The sum is the expected number of visits of the chain \eqref{eq:hd} started at $n$ to $B=\{b+1,\dots,2b\}$. The chain is strictly decreasing, so its visits to $B$ are consecutive. From any $k\in B$ it jumps to $\{1,\dots,b\}$ with probability
+\[
+ \sum_{j=1}^b\frac1{h_{k-1}(k-j)}\ge\frac{b}{h_{k-1}(k-1)}\ge\frac{b}{(2b-1)h_{2b-1}}\ge\frac1{2h_{2b-1}}.
+\]
+Hence the number of visits to $B$ is stochastically dominated by a geometric random variable with mean $2h_{2b-1}$.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+Let $f(m)=c_m/m$. For $b\ge1$ and $b<m\le2b$, Lemma~\ref{lem:height} gives $f(m)\le(1+4h_{2b-1}\log(2b))/b$, and with Lemma~\ref{lem:block}, for every $n$,
+\begin{equation}\label{eq:blockbound}
+ \sum_{m=b+1}^{2b}a(n,m)f(m)\le\beta_b:=\frac{2h_{2b-1}\bigl(1+4h_{2b-1}\log(2b)\bigr)}{b}.
+\end{equation}
+Since $h_{2^{k+1}-1}\le1+(k+1)\log2$, the numbers $\beta_{2^k}$ are of order $k^3 2^{-k}$, and $\varepsilon_K:=\sum_{k\ge K}\beta_{2^k}$ is finite and tends to $0$ as $K\to\infty$. The blocks $\{2^k+1,\dots,2^{k+1}\}$, $k\ge0$, partition $\{2,3,\dots\}$, so \eqref{eq:blockbound} gives
+\begin{equation}\label{eq:tail}
+ \sum_{m>2^K}a(n,m)f(m)\le\varepsilon_K\qquad\text{for all }n\text{ and }K.
+\end{equation}
+Each block sum in \eqref{eq:blockbound} has finitely many terms, so letting $n\to\infty$ and using $a(n,m)\to a(m)$ \cite[Theorem 18]{AJ23} gives $\sum_{b<m\le2b}a(m)f(m)\le\beta_b$, and hence $\sum_{m>2^K}a(m)f(m)\le\varepsilon_K$. In particular $\lambda=\sum_ma(m)f(m)<\infty$. By \eqref{eq:Lc} and \eqref{eq:tail},
+\[
+ \Bigl|\frac{L_n}n-\lambda\Bigr|\le\sum_{m=2}^{2^K}|a(n,m)-a(m)|\,f(m)+2\varepsilon_K.
+\]
+The finite sum tends to $0$ as $n\to\infty$, and then $\varepsilon_K\to0$ as $K\to\infty$. Hence $L_n/n\to\lambda$.
+
+For the lower bound, \eqref{eq:Lc} and \eqref{eq:mass} give
+\[
+ \frac{L_n}n=\frac{2(n-1)}n+\sum_{m=2}^n\frac{a(n,m)(c_m-2)}m.
+\]
+Since $0\le(c_m-2)/m\le f(m)$, the argument above applies to the last sum, and therefore $\lambda=2+\sum_{m\ge2}a(m)(c_m-2)/m\ge2+a(4)(c_4-2)/4$. A tree with $4$ leaves splits into parts of sizes $1$ and $3$ with probability $8/11$, and then $|h(T_L)-h(T_R)|=2$; otherwise both parts have height $1$. So $c_4=2+16/11$ and $\lambda>2$. The numerical bounds are proved in Section~\ref{sec:numerics}.\qed
+
+\begin{remark}\label{rem:H}
+By \eqref{eq:LH}, Lemma~\ref{lem:height}, which gives $H_n/n\to0$, and the same argument with $H_m/m$ in place of $f(m)$, also
+\[
+ \lambda=\sum_{m=2}^\infty\frac{a(m)\,H_m}{m}.
+\]
+The two series for $\lambda$ have different terms; their sums agree because $c_m=2H_m-2\sum_iq(m,i)H_i$ and $\sum_{m>i}a(m)q(m,i)/m=a(i)/(2i)$, the limit form of the recursion $\E N_n(i)=\mathbf 1\{i=n\}+2\sum_{m>i}\E N_n(m)q(m,i)$.
+\end{remark}
+
+\section{Numerical values}\label{sec:numerics}
+
+The script \texttt{code/check.py} in the repository of the paper computes the distribution of $h(T_m)$ for $m\le4000$ from the recursion
+\[
+ \Pp(h(T_m)\le x)=\sum_{i=1}^{m-1}q(m,i)\,\Pp(h(T_i)\le x-1)\,\Pp(h(T_{m-i})\le x-1),
+\]
+truncated at $x=400$, beyond which the remaining probability for $m=4000$ is below $10^{-12}$. From it, it computes $H_m$, then $c_m$ by Lemma~\ref{lem:mean}, and $L_m$ by the recursion $L_m=2\sum_iq(m,i)L_i+c_m$, which follows from \eqref{eq:drawn} and the branching property. For $n\in\{10,100,1000,2000,4000\}$ it also computes the expected clade counts from the recursion $\E N_n(m)=\mathbf 1\{m=n\}+2\sum_{k>m}\E N_n(k)q(k,m)$ and the probabilities $a(n,m)$ from the chain \eqref{eq:hd}, and checks Lemma~\ref{lem:clades}, which holds to a relative error below $3\cdot10^{-15}$, and \eqref{eq:Lc}: the two computations of $L_n/n$ agree to within $10^{-9}$. In exact rational arithmetic, the script computes the joint law of $(h(T_m),\ell(T_m))$ for $m\le8$ by conditioning on the first split and checks Lemma~\ref{lem:clades} for $n\le12$ and \eqref{eq:Lc} for $n\le8$; Lemma~\ref{lem:det} is checked on all $6918$ ordered binary trees with at most $10$ leaves. Lemma~\ref{lem:height} holds for $n\le4000$ with largest ratio $H_n/(4h_{n-1}\log n)$ equal to $0.361$, and Lemma~\ref{lem:block} holds for $n=4000$ and every $b\le2000$ with largest ratio $0.407$. Tables~\ref{tab:exact} and~\ref{tab:float} show some of the values.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rcccccc}
+\toprule
+$m$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$\\
+\midrule
+$H_m$ & $1$ & $2$ & $\tfrac{30}{11}$ & $\tfrac{189}{55}$ & $\tfrac{30093}{7535}$ & $\tfrac{239091}{52745}$\\[2pt]
+$L_m$ & $2$ & $5$ & $\tfrac{90}{11}$ & $\tfrac{646}{55}$ & $\tfrac{2103}{137}$ & $\tfrac{201977}{10549}$\\
+\bottomrule
+\end{tabular}
+\medskip
+\caption{Exact mean height and mean drawn length of $T_m$.}\label{tab:exact}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrr}
+\toprule
+$n$ & $H_n$ & $L_n/n$\\
+\midrule
+$10$ & $5.8603$ & $3.0988$\\
+$100$ & $18.5362$ & $4.4286$\\
+$1000$ & $39.1932$ & $4.7877$\\
+$2000$ & $47.1006$ & $4.8239$\\
+$4000$ & $55.8147$ & $4.8458$\\
+\bottomrule
+\end{tabular}
+\medskip
+\caption{Mean height and mean drawn length per leaf.}\label{tab:float}
+\end{table}
+
+\subsection*{The constant \texorpdfstring{$\lambda$}{lambda}}
+All terms of the series for $\lambda$ are positive, so the partial sum $\sum_{m=2}^{4000}a(m)c_m/m=4.80059$ is a lower bound. For $m>4000$ we use $c_m\le1+4h_m\log m$ from Lemma~\ref{lem:height}; the resulting series is summed numerically up to $m=10^8$ and bounded by an integral beyond, and its value is less than $0.5712$. Hence $4.800<\lambda<5.372$. For $1000\le m\le4000$ the values $c_m$ are fitted by $0.5756\log^2m-0.5604\log m+4.7753$ with largest error $6\cdot10^{-4}$, and using this fit for $m>4000$ gives $\lambda\approx4.877$. The series of Remark~\ref{rem:H}, with $H_m$ fitted in the same way, gives $4.877$ as well, although its partial sum ($4.7686$) and its estimated remainder ($0.1085$) are different. The values of $L_n/n$ in Table~\ref{tab:float} increase slowly towards $\lambda$; by Lemma~\ref{lem:height} the remainder $\sum_{m>n}a(m)c_m/m$ is at most of order $(\log n)^3/n$.
+
+\subsection*{Lean}
+The file \texttt{lean/DrawnLength.lean} proves Lemma~\ref{lem:det} for all finite rooted binary trees in Lean~4, using the core library only. The theorems depend on the axioms \texttt{propext} and \texttt{Quot.sound}. The probabilistic statements are not formalized.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. Open Problem~14 of \cite{AJ23} was one of the open problems in probability on which the project's agents worked in September 2026. On 6 September 2026 an OpenAI Codex agent wrote the comparison of Proposition~\ref{prop:sackin}, observed that the heuristic (75) of \cite{AJ23} omits the factor $1/m$, and gave an argument for the linear limit in the form of Remark~\ref{rem:H}, based on a height bound through halving steps and the block estimate of Lemma~\ref{lem:block}. On 8 September 2026 a Claude agent (Anthropic) wrote a Lean proof of the inequality $\ell(T)\le S(T)$ and estimated $L_n/n$ by simulation. On 10 October 2026 an OpenAI Codex agent checked the argument again. On 12 October 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, gave the exponential moment proof of Lemma~\ref{lem:height}, wrote the proofs in their present form, searched the literature, and wrote the computer checks, the Lean file of Section~\ref{sec:numerics} and the manuscript. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code and the Lean file are available at \url{https://github.com/yspennstate/beta-splitting-drawn-length}.
+
+\begin{thebibliography}{99}
+
+\bibitem{Ald96}
+D.~Aldous,
+Probability distributions on cladograms,
+in: \emph{Random Discrete Structures} (D.~Aldous and R.~Pemantle, eds.),
+IMA Vol. Math. Appl. \textbf{76}, Springer, New York, 1996, pp.~1--18.
+
+\bibitem{AJ23}
+D.~J.~Aldous and S.~Janson,
+The critical beta-splitting random tree II: overview and open problems,
+arXiv:2303.02529v3, 2025.
+
+\bibitem{AJL24}
+D.~J.~Aldous, S.~Janson and X.~Li,
+The harmonic descent chain,
+\emph{Electron. Commun. Probab.} \textbf{29} (2024), 1--10.
+
+\bibitem{AP25}
+D.~J.~Aldous and B.~Pittel,
+The critical beta-splitting random tree: heights and related results,
+\emph{Ann. Appl. Probab.} \textbf{35} (2025), 158--195.
+
+\bibitem{BCM25}
+A.~Brandenberger, B.~Chin and E.~Mossel,
+Asymptotics for the harmonic descent chain and applications to critical beta-splitting trees,
+arXiv:2505.24821v3.
+
+\bibitem{Ma26}
+H.~Ma,
+The height of discrete-time critical beta-splitting trees,
+arXiv:2609.14329v2, 2026.
+
+\bibitem{Son26}
+H.~Song,
+Asymptotic transfer, variances and limit laws for Aldous's beta-splitting trees,
+preprint, 2026; verification code at \url{https://doi.org/10.5281/zenodo.23188439}.
+
+\end{thebibliography}
+\end{document}

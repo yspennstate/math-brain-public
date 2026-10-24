@@ -1,0 +1,94 @@
+[
+  {
+    "claim_id": "A100-BINARY-REMAINDER-JENSEN-BOUND",
+    "version": 1,
+    "exact_statement": "For every even d>=2 let delta=2^-d, b(y)=(-1)^(sum_j y_(2j-1)y_(2j)), q(u,v)=-1 only at (1,1), and F_d=b(y)+1_(y=0)(q(u,v)-1). For either i in {u,v}, with complete normalized laws mu_i(T)=p_(T+i)/e_i and r_i(T)=p_T+p_(T+i), retaining only the other pair coordinate gives influence-weighted lost conditional KL L_i=e_i[D(mu_i||r_i)-D(Cmu_i||Cr_i)], where e_i=delta/2. Put R(delta)=(1+delta-3delta^2/4)/(1+delta^2/4). Then 0<L_i/e_i<=log2(R(delta))/2<=log2(77/65)/2<1/8. Their combined loss satisfies L_u+L_v<=delta log2(R(delta))/2<delta^2/(2ln2), and also L_u+L_v<delta/8<=Inf_(y1)/20. The same row divergences and remainders hold after tensoring with any common Boolean spectator on independent fresh coordinates. These allowances pay only the two discarded conditional KL remainders; retained M_i/e_i>d/2+3/4 remains unpaid, and no globally available or repeatedly reusable terminal reserve is asserted.",
+    "hypotheses": [
+      "Actual finite uniform Boolean signs in the displayed family; d even and >=2; bits and ordinary physical influence",
+      "Complete residual reference is marginalized, not conditioned on derivative support; KL zero terms continuous",
+      "Common spectator is independent on fresh physical coordinates; both row laws share its same normalized spectrum",
+      "Dedicated physical reserve, if used, is exclusive to these two remainder bills; no universal core payment assumed"
+    ],
+    "statement_sha256": "80502ef87dba2f2e9ee6cb86e5774884a7c0cbfd2cf3cc6fce0bbdf5da23f474",
+    "contributors": [
+      "A100/account05; explicit boundary family credited to A073"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\REVIEW.md",
+      "locator": "New quantitative refinement: Jensen bound",
+      "checker": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\code\\check_binary.py",
+      "output": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\out\\INDEPENDENT_CHECK.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A073-NONZERO-ERASURE-BINARY-REMAINDER",
+        "version": 1,
+        "usage": "Unchanged family/signed row identities independently reconstructed above; original lemma accepted by A098 and separately A100"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A066/account05",
+        "verdict": "ACCEPT_AT_FULL_STATED_SCOPE_NO_REPAIR",
+        "contributor_conflict": false,
+        "material_repair_to_reviewed_version": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261014T042048Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+        "locator": "Section 4 independent specialization/Jensen reconstruction",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261014T042048Z-account05-A066-semigroup-dissipation\\out\\CHECK_FULL.json",
+        "independent_method": "Direct truth tables/physical edges, own exact prime-log complete row and quotient identities, all labeled 2-bit independent spectators; analytic monotonicity and integer margin.",
+        "scope": "Entire original explicit-family Jensen theorem and spectator/debit guards; no acceptance of arbitrary-core payment.",
+        "source_claims_sha256": "7ca7b3a0b4134a08f46de102e00194fae8f644157ef41ef8685a1f179da84641"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_FULL_STATED_SCOPE_BY_A066",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A073",
+      "A096",
+      "A001",
+      "A098",
+      "A099",
+      "A085",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A066-ARBITRARY-GATE-CONDITIONAL-REFUND-DEBIT",
+    "version": 1,
+    "exact_statement": "For any r>=1 Boolean control gate q, any even quadratic bent core dimension d>=4, delta=2^-d and F(z,y)=b_d(y)+1_{y=0}(q(z)-1), write a=qhat(empty), alpha=1-a, beta_i=qhat({i}), e_i=Inf_i(q). For a relevant control i, Inf_i(F)=delta e_i. In its complete normalized Fourier residual/derivative laws r_i and mu_i, retain every residual control subset U and discard only core T. The only nonzero conditional KL loss cell is U=empty. Put c_sigma=1-2alpha sigma sqrt(delta)+delta(alpha^2+beta_i^2), R_i=1+delta(a^2+beta_i^2-1), D0_i=sum_sigma(1+sigma sqrt(delta))/2 ln(R_i/c_sigma). Then lost weighted KL L_i=delta beta_i^2 D0_i, sum_i L_i<=(256/9)delta^2 W1(q)<=(256/9)delta I_controls(F). Actual full quotient row price is M_i^C=delta sum_(U nonempty)qhat(U+i)^2 ln((qhat(U)^2+qhat(U+i)^2)/qhat(U+i)^2)+delta beta_i^2 ln(R_i/(delta beta_i^2))=M_i(F)+L_i. Every finite adaptive control-only singleton stopping tree obeys sum_v w_v L_i(F_v)<=(256/9)delta[I(F_root)-E I(F_leaf)], retaining all leaf entropy. For one first paired-core query in original d>=6, the edited child G=b_(d-2)(Y)+1_{w=0,Y=0}(q-1) has delta0=2^(-(d-2)), theta=1/2 and point mass delta_p=theta delta0. Retaining residual U and the dummy w Fourier occupancy W gives sum_i L_i(G)<=(256/9)theta^2 delta_p I_controls(G), also hereditary under control-only stopping. For negative-AND q, deleting W as well adds exact binary conditional KL with extra local rate at least ln(7/(4delta0))/4, unbounded as d grows. These are narrow lost-refund payments only; complete retained row prices, informative flag costs and actual core/gate leaf entropy are not declared paid, and no arbitrary non-flat-core or universal FEI bound is asserted.",
+    "hypotheses": [
+      "Finite uniform actual Boolean q, any control arity; quadratic bent base at specified all-zero point",
+      "Natural-log lost KL; complete reference marginalized, never conditioned on derivative support",
+      "Base d>=4; first paired-core exposure original d>=6; no arbitrary data-query heredity asserted",
+      "Stopping trees query only controls after the specified possible first exposure; actual terminal functions and costs retained"
+    ],
+    "statement_sha256": "ed3175c9a01e5ad114b4cdc9d0c777e11b38b74a60237f6b32badfabe15f915c",
+    "contributors": [
+      "account05/A066; prior two-bit boundary family credited to A073; consumed A100 Jensen interface"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261014T042048Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "NARROW_CONDITIONAL_INTERFACE_AUTHOR_PROVED_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "The same core-discarding quotient retains a uniformly small local loss after an arbitrary first physical core query, without keeping new informative occupancy"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A070",
+      "A073",
+      "A096",
+      "A100",
+      "A001",
+      "A085",
+      "A094",
+      "B14",
+      "B20"
+    ]
+  }
+]

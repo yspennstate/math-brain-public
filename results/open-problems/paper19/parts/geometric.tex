@@ -1,0 +1,2093 @@
+The entropy/small-ball principle of Section~\ref{sec:principle} separates the
+combinatorial entropy of a submatrix family from the one-matrix small-ball
+exponent of the singular value being tracked.  Changing the shape of the
+submatrices, or the index of the singular value, moves one of these two inputs
+in a controlled way.  We treat three such changes: tall submatrices with fixed
+excess, the \(k\)-th smallest singular value, and submatrices chosen on both
+sides.  In each case the union-bound lower side is unconditional once the
+relevant one-matrix tail is available, while the matching exact value needs the
+same second-moment/pair-correlation input as the square row-submatrix theorem of
+Section~\ref{sec:universality}.  We label each statement accordingly.
+
+\subsection{Rectangular submatrices with fixed excess}
+
+Fix an integer \(r\ge0\) and let \(A_m\in\F^{N_m\times m}\) have independent
+standard Gaussian entries with \(N_m/m\to\gamma>1\).  For a row set
+\(T\subset[N_m]\) with \(|T|=m+r\), write \(A_{m,T}\in\F^{(m+r)\times m}\) for the
+tall submatrix on those rows and \(\smin(A_{m,T})\) for its smallest singular
+value.  Put
+\[
+  M_m^{(r)}=\min_{\substack{T\subset[N_m]\\ |T|=m+r}}\smin(A_{m,T}).
+\]
+For \(r=0\) this is the square quantity \(M_m\) of the source theorem.
+
+The relevant one-matrix input is the tall hard edge.  For a single
+\((m+r)\times m\) matrix \(G\) with iid \(\F\)-Gaussian entries, \(\smin(G)^2\) is
+the smallest eigenvalue of the Laguerre matrix \(G^*G\), whose density near the
+origin carries the factor \(\lambda^{d_\F(r+1)/2-1}\); equivalently
+\[
+  \PP\{\smin(G)\le t\}\asymp t^{\,d_\F(r+1)},\qquad t\to0,
+\]
+see \cite{Edelman1988,Forrester2010}.  In the real case (\(d_\F=1\)) the smallest
+Wishart eigenvalue has density of order \(\lambda^{(r-1)/2}\) at zero, so
+\(\PP\{\smin\le t\}\asymp t^{r+1}\); the complex case (\(d_\F=2\)) replaces the
+exponent by \(2(r+1)\).  The exponent \(d_\F(r+1)\) reduces to \(d_\F\) at
+\(r=0\).
+
+For the lower side we need a non-asymptotic upper form of this tail, uniform in
+\(t\) and with only polynomial loss in \(m\).  The square case is
+Proposition~\ref{prop:bd-tail}; the tall case follows from the same
+negative-second-moment identity, applied to the columns rather than the rows.
+
+\begin{lemma}[Tall one-matrix tail]\label{rect:tall-tail}
+Let \(G\in\F^{\ell\times m}\) have independent standard Gaussian entries with
+\(\ell\ge m\), and set \(p=\ell-m+1\).  Then for all \(m\ge1\) and all \(t>0\),
+\[
+  \PP\{\smin(G)\le t\}\le m^{\,1+d_\F p/2}\,t^{\,d_\F p}.
+\]
+\end{lemma}
+
+\begin{proof}
+Let \(C_1,\dots,C_m\in\F^{\ell}\) be the columns of \(G\), let
+\(H_i=\spn_\F\{C_j:j\ne i\}\), and set \(d_i=\dist(C_i,H_i)\).  Almost surely
+\(G\) has full column rank, and the negative second-moment identity for the
+columns reads
+\[
+  \sum_{j=1}^m \sigma_j(G)^{-2}=\sum_{i=1}^m d_i^{-2},
+\]
+because the \(i\)-th diagonal entry of \((G^*G)^{-1}\) equals \(d_i^{-2}\).  If
+\(\smin(G)\le t\), the left side is at least \(t^{-2}\), so some \(i\) satisfies
+\(d_i\le\sqrt m\,t\).
+
+Condition on \(\{C_j:j\ne i\}\).  Then \(\dim_\F H_i\le m-1\), so its orthogonal
+complement in \(\F^{\ell}\) has \(\F\)-dimension at least \(\ell-(m-1)=p\), that
+is real dimension at least \(d_\F p\).  The distance \(d_i=\|P_{H_i^\perp}C_i\|\)
+is the norm of the projection of a standard \(\F\)-Gaussian vector onto a
+subspace of real dimension at least \(d_\F p\); it therefore stochastically
+dominates the norm of a standard Gaussian vector \(g\) in real dimension
+\(d_\F p\).  Comparing the volume of a ball with the maximal value of the density
+gives
+\[
+  \PP\{\|g\|\le u\}\le u^{\,d_\F p},\qquad u>0.
+\]
+Taking \(u=\sqrt m\,t\) and a union bound over the \(m\) columns yields
+\(\PP\{\smin(G)\le t\}\le m\,(\sqrt m\,t)^{d_\F p}=m^{1+d_\F p/2}t^{d_\F p}\).
+\end{proof}
+
+\begin{lemma}[Fixed-excess bounded-density tail]\label{rect:bd-tail}
+Fix \(r\ge0\) and set \(p=r+1\).  Let
+\(G\in\F^{(m+r)\times m}\), \(\F\in\{\R,\C\}\), have independent entries whose
+\(d_\F\)-dimensional scalar densities are bounded by \(K_m\ge1\).  Then, for all
+\(t>0\),
+\[
+  \PP\{\smin(G)\le t\}
+  \le C_{\F,r}K_m^{p}m^{\,1+d_\F p}t^{\,d_\F p}.
+\]
+\end{lemma}
+
+\begin{proof}
+Let \(\ell=m+r\), and let \(C_1,\ldots,C_m\in\F^\ell\) be the columns.  As in
+Lemma~\ref{rect:tall-tail}, \(\smin(G)\le t\) implies that for some \(i\),
+\[
+  \dist(C_i,\spn\{C_j:j\ne i\})\le\sqrt m\,t .
+\]
+Condition on all columns except \(C_i\), write \(H=\spn\{C_j:j\ne i\}\), and
+choose a \(p\)-dimensional \(\F\)-subspace \(L\subset H^\perp\).  Let
+\(Q:\F^\ell\to\F^p\) have orthonormal rows spanning \(L\).  By Cauchy--Binet,
+some \(p\)-coordinate set \(S\subset[\ell]\) has
+\[
+  |\det_\F Q_S|\ge \binom{\ell}{p}^{-1/2}.
+\]
+Condition on the coordinates of \(C_i\) outside \(S\).  Then
+\[
+  QC_i=Q_S(C_i)_S+c
+\]
+for a fixed vector \(c\).  The joint density of \((C_i)_S\) is at most \(K_m^p\),
+so the density of \(QC_i\) on \(\F^p\simeq\R^{d_\F p}\) is at most
+\[
+  K_m^p|\det_\F Q_S|^{-d_\F}
+  \le K_m^p\binom{\ell}{p}^{d_\F/2}.
+\]
+Consequently, with \(\tau=\sqrt m\,t\),
+\[
+  \PP\{\|QC_i\|\le\tau\mid H\}
+  \le C_{\F,p}K_m^p\binom{\ell}{p}^{d_\F/2}\tau^{d_\F p}.
+\]
+Since \(L\subset H^\perp\), the event
+\(\dist(C_i,H)\le\tau\) is contained in \(\{\|QC_i\|\le\tau\}\).  A union bound
+over \(i=1,\ldots,m\), together with fixed \(p\), gives the stated estimate.
+\end{proof}
+
+\begin{theorem}[Fixed-excess lower side]\label{rect:lower}
+With the notation above, for every fixed \(r\ge0\) and every \(\varepsilon>0\),
+\[
+  \PP\left\{M_m^{(r)}\le
+     \exp\!\left[-\left(\frac{h(\gamma)}{d_\F(r+1)}+\varepsilon\right)m\right]\right\}
+  \longrightarrow0.
+\]
+Equivalently, \(\liminf_m\frac1m\log M_m^{(r)}\ge-\dfrac{h(\gamma)}{d_\F(r+1)}\)
+in probability.
+\end{theorem}
+
+\begin{proof}
+Apply Corollary~\ref{cor:poly-smallball} to the family
+\(\mathcal T_m=\{T:|T|=m+r\}\) with \(Y_{m,T}=\smin(A_{m,T})\).  Since \(r\) is
+fixed, \(\binom{N_m}{m+r}=\binom{N_m}{m}(\gamma-1+o(1))^{r}\), so
+\[
+  \frac1m\log|\mathcal T_m|=\frac1m\log\binom{N_m}{m+r}\to h(\gamma),
+\]
+and the entropy is \(H=h(\gamma)\).  Lemma~\ref{rect:tall-tail} with \(p=r+1\)
+supplies the uniform small-ball bound with exponent \(a=d_\F(r+1)\).  The
+corollary gives the conclusion with base \(H/a=h(\gamma)/(d_\F(r+1))\).
+\end{proof}
+
+\begin{theorem}[Fixed-excess bounded-density lower side]\label{rect:bd-lower}
+Let \(\F\in\{\R,\C\}\), let \(A_m\in\F^{N_m\times m}\) have independent entries
+whose \(d_\F\)-dimensional scalar densities are bounded by \(K_m\ge1\), uniformly
+in their position, and assume \(N_m/m\to\gamma>1\).  Put
+\[
+  \kappa=\limsup_{m\to\infty}\frac1m\log K_m<\infty .
+\]
+For every fixed \(r\ge0\), with
+\[
+  M_m^{(r)}=\min_{\substack{T\subset[N_m]\\ |T|=m+r}}\smin(A_{m,T}),
+\]
+and every \(\varepsilon>0\),
+\[
+  \PP\left\{M_m^{(r)}\le
+     \exp\!\left[-\left(\frac{h(\gamma)}{d_\F(r+1)}
+       +\frac{\kappa}{d_\F}+\varepsilon\right)m\right]\right\}
+  \longrightarrow0.
+\]
+In particular, if \(K_m=e^{o(m)}\), the Gaussian fixed-excess lower-side base
+\(h(\gamma)/(d_\F(r+1))\) remains valid.
+\end{theorem}
+
+\begin{proof}
+Apply Lemma~\ref{rect:bd-tail} to every selected \((m+r)\times m\) submatrix,
+with \(p=r+1\).  For \(t=e^{-sm}\),
+\[
+  \PP\{M_m^{(r)}\le t\}
+  \le \binom{N_m}{m+r} C_{\F,r}K_m^{r+1}
+     m^{1+d_\F(r+1)}t^{d_\F(r+1)} .
+\]
+The logarithmic limsup divided by \(m\) is at most
+\[
+  h(\gamma)+(r+1)\kappa-d_\F(r+1)s.
+\]
+This is negative when
+\[
+  s>\frac{h(\gamma)}{d_\F(r+1)}+\frac{\kappa}{d_\F},
+\]
+which is exactly the claimed lower side.
+\end{proof}
+
+\begin{corollary}[Finite-entropy fixed-excess lower side]\label{rect:finite-entropy}
+Let \(r\ge0\) be fixed and set \(p=r+1\).  Let \(N_m\ge m+r\), and let
+\(A_m\in\F^{N_m\times m}\), \(\F\in\{\R,\C\}\), have independent entries whose
+\(d_\F\)-dimensional scalar densities are bounded by \(K_m\ge1\), uniformly in
+their position.  Put
+\[
+  L_m^{(r)}=\log\binom{N_m}{m+r},\qquad
+  M_{m}^{(r)}=\min_{|T|=m+r}\smin(A_{m,T}).
+\]
+Then, for every \(u_m>0\),
+\[
+  \PP\left\{
+  M_m^{(r)}
+  \le
+  \exp\left[-\frac{L_m^{(r)}+p\log K_m+(1+d_\F p)\log m+O_{\F,r}(1)+u_m}
+  {d_\F p}\right]
+  \right\}
+  \le e^{-u_m}.
+\]
+In particular, taking \(u_m=d_\F p\,\varepsilon m\) gives the corresponding
+convergence-in-probability lower side at the finite entropy budget
+\((L_m^{(r)}+p\log K_m)/(d_\F p)\), with any fixed exponential slack.
+If the matrices are coupled for all \(m\) and \(\sum_m e^{-u_m}<\infty\), then
+the displayed bad event occurs only finitely often almost surely, with the
+\(O_{\F,r}(1)\) interpreted as one fixed constant.
+\end{corollary}
+
+\begin{proof}
+Apply Lemma~\ref{rect:bd-tail} and Corollary~\ref{cor:finite-budget} with
+\[
+  |\mathcal T_m|=\binom{N_m}{m+r},\qquad
+  C_m=C_{\F,r}K_m^p m^{1+d_\F p},\qquad
+  a_m=d_\F p.
+\]
+\end{proof}
+
+\begin{lemma}[A fixed-excess row-block certificate]\label{rect:row-block-certificate}
+Let \(B\in\F^{(m+r)\times m}\), put \(p=r+1\), and assume \(B\) has full column
+rank.  Then there is a row set \(U\subset[m+r]\) with \(|U|=m-1\) and a unit
+normal \(u_U\in\F^m\) to the span of the rows indexed by \(U\) such that
+\[
+  \left(\sum_{i\notin U}|\langle R_i,u_U\rangle|^2\right)^{1/2}
+  \le \sqrt m\,\smin(B),
+\]
+where \(R_i\) are the rows of \(B\).  Equivalently, if
+\(\smin(B)\le t\), then for some \(U\) with \(|U|=m-1\),
+\[
+  \left(\sum_{i\notin U}|\langle R_i,u_U\rangle|^2\right)^{1/2}
+  \le \sqrt m\,t .
+\]
+\end{lemma}
+
+\begin{proof}
+For a row set \(U\) with \(|U|=m-1\), let
+\(\Delta_U=\det(B_UB_U^*)\), and ignore sets with \(\Delta_U=0\).  If
+\(\Delta_U>0\), let \(u_U\) be a unit normal to the span of the rows of \(B_U\).
+By exterior algebra, or equivalently by the cofactor formula, for each
+\(i\notin U\),
+\[
+  \Delta_U|\langle R_i,u_U\rangle|^2
+  =\det(B_{U\cup\{i\}}B_{U\cup\{i\}}^*) .
+\]
+Summing over \(U\) and \(i\notin U\), every \(m\)-row minor is counted \(m\)
+times.  Hence Cauchy--Binet gives
+\[
+  \sum_{|U|=m-1}\Delta_U\sum_{i\notin U}|\langle R_i,u_U\rangle|^2
+  =
+  m\det(B^*B).
+\]
+Another Cauchy--Binet identity gives
+\[
+  \sum_{|U|=m-1}\Delta_U
+  = e_{m-1}(\sigma_1(B)^2,\ldots,\sigma_m(B)^2)
+  =
+  \det(B^*B)\sum_{j=1}^m\sigma_j(B)^{-2}.
+\]
+Therefore the weighted average of
+\(\sum_{i\notin U}|\langle R_i,u_U\rangle|^2\) is
+\[
+  \frac{m}{\sum_j\sigma_j(B)^{-2}}
+  \le m\,\smin(B)^2 .
+\]
+At least one \(U\) is no larger than this average.
+\end{proof}
+
+\begin{corollary}[Fixed-excess directional row lower side]\label{rect:directional-row-fixed-excess}
+Let \(r\ge0\) be fixed and set \(p=r+1\).  Let \(N_m\ge m+r\), let
+\(\F\in\{\R,\C\}\), and let \(A_m\in\F^{N_m\times m}\) have independent rows
+\(R_{m,i}\).  Assume that there are deterministic numbers \(L_{m,i}\ge1\) such
+that, for every unit vector \(u\in\F^m\), every \(z\in\F\), and every
+\(0<\rho\le1\),
+\[
+  \PP\{|\langle R_{m,i},u\rangle-z|\le\rho\}\le L_{m,i}\rho^{d_\F}.
+\]
+Put
+\[
+  \mathcal B_{m,r}^{\rm dir}
+  =
+  \sum_{\substack{T\subset[N_m]\\ |T|=m+r}}
+  \sum_{\substack{S\subset T\\ |S|=p}}\prod_{i\in S}L_{m,i}
+  =
+  \binom{N_m-p}{m-1}
+  \sum_{\substack{S\subset[N_m]\\ |S|=p}}\prod_{i\in S}L_{m,i}.
+\]
+Then, for every \(u_m>0\),
+\[
+  \PP\left\{
+  M_m^{(r)}\le
+  \exp\left[-\frac{\log \mathcal B_{m,r}^{\rm dir}
+    +\frac{d_\F p}{2}\log m+u_m}{d_\F p}\right]\right\}
+  \le e^{-u_m}.
+\]
+Moreover, on any common coupling, if \(\sum_m e^{-u_m}<\infty\), then the
+displayed bad event occurs only finitely often almost surely.
+Consequently, if \(N_m/m\to\gamma>1\) and
+\[
+  \beta_r^{\rm dir}
+  =
+  \limsup_{m\to\infty}\frac1m
+  \log\left(\sum_{\substack{S\subset[N_m]\\ |S|=p}}
+       \prod_{i\in S}L_{m,i}\right)<\infty ,
+\]
+then for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  M_m^{(r)}
+  \le \exp\left[-\left(
+  \frac{h(\gamma)+\beta_r^{\rm dir}}{d_\F(r+1)}
+  +\varepsilon\right)m\right]\right\}\to0 .
+\]
+\end{corollary}
+
+\begin{proof}
+Fix a selected row set \(T\) with \(|T|=m+r\).  The small-ball assumption
+implies that every \(m-1\) selected rows have rank \(m-1\) almost surely, by
+conditioning sequentially and using the absence of atoms on affine hyperplanes.
+On this full-probability event, Lemma~\ref{rect:row-block-certificate} shows
+that \(\smin(A_{m,T})\le t\) implies the existence of a set
+\(U\subset T\), \(|U|=m-1\), with \(S=T\setminus U\), \(|S|=p\), and
+\[
+  \left(\sum_{i\in S}|\langle R_{m,i},u_U\rangle|^2\right)^{1/2}
+  \le \sqrt m\,t ,
+\]
+where \(u_U\) is a measurable unit normal to the rows indexed by \(U\).
+Condition on the rows in \(U\).  The remaining rows are independent of
+\(u_U\), and the displayed event implies
+\(|\langle R_{m,i},u_U\rangle|\le\sqrt m\,t\) for every \(i\in S\).  Since
+the bound is trivial when \(\sqrt m\,t>1\), for all \(t>0\),
+\[
+  \PP\{\smin(A_{m,T})\le t\}
+  \le m^{d_\F p/2}t^{d_\F p}
+  \sum_{\substack{S\subset T\\ |S|=p}}\prod_{i\in S}L_{m,i}.
+\]
+Summing this nonuniform budget over \(T\) and applying
+Corollary~\ref{cor:nonuniform-finite-budget} gives the finite-budget estimate,
+and Corollary~\ref{cor:as-nonuniform-finite-budget} gives the almost-sure
+upgrade.  The fixed-aspect statement follows by taking
+\(u_m=d_\F p\,\varepsilon m\), since
+\[
+  \frac1m\log\binom{N_m-p}{m-1}\to h(\gamma)
+\]
+and the polynomial term is \(o(m)\).
+\end{proof}
+
+\begin{corollary}[Fixed-excess heterogeneous row-density budget]\label{rect:heterogeneous-row-density}
+Let \(r\ge0\) be fixed and set \(p=r+1\).  Let \(N_m\ge m+r\), and let
+\(A_m\in\F^{N_m\times m}\), \(\F\in\{\R,\C\}\), have independent entries.
+Assume that for each row \(i\in[N_m]\) there is a deterministic number
+\(K_{m,i}\ge1\) such that every entry in row \(i\) has \(d_\F\)-dimensional
+Lebesgue density bounded by \(K_{m,i}\).  For each selected row set \(T\), put
+\[
+  \kappa_T^{(r)}
+  =
+  \max_{\substack{S\subset T\\ |S|=p}}\prod_{i\in S}K_{m,i},
+  \qquad
+  \Theta_{m,r}=\sum_{\substack{T\subset[N_m]\\ |T|=m+r}}\kappa_T^{(r)} .
+\]
+Then, for every \(u_m>0\),
+\[
+  \PP\left\{
+  M_m^{(r)}\le
+  \exp\left[-\frac{\log\Theta_{m,r}+(1+d_\F p)\log m+O_{\F,r}(1)+u_m}
+  {d_\F p}\right]\right\}
+  \le e^{-u_m}.
+\]
+Moreover, on any common coupling, if \(\sum_m e^{-u_m}<\infty\), then the
+displayed bad event occurs only finitely often almost surely, with the
+\(O_{\F,r}(1)\) interpreted as one fixed constant.
+Consequently, if
+\[
+  \theta_r=\limsup_{m\to\infty}\frac1m\log\Theta_{m,r}<\infty,
+\]
+then for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  M_m^{(r)}
+  \le \exp\left[-\left(\frac{\theta_r}{d_\F(r+1)}+\varepsilon\right)m\right]
+  \right\}\to0 .
+\]
+\end{corollary}
+
+\begin{proof}
+Repeat the proof of Lemma~\ref{rect:bd-tail} for one selected row set \(T\).
+After conditioning on all columns except \(C_q\), choose a \(p\)-row coordinate
+block \(S\subset T\) supplied by Cauchy--Binet.  Conditioning on all other
+coordinates of \(C_q\), the density of the projected \(p\)-coordinate vector is
+bounded by
+\[
+  \left(\prod_{a\in S}K_{m,a}\right)\binom{m+r}{p}^{d_\F/2}.
+\]
+Taking the worst such \(S\) gives, for \(0<t\le1\),
+\[
+  \PP\{\smin(A_{m,T})\le t\}
+  \le C_{\F,r}\kappa_T^{(r)}m^{1+d_\F p}t^{d_\F p}.
+\]
+Summing this bound over \(T\) and applying
+Corollary~\ref{cor:nonuniform-finite-budget} gives the finite-budget estimate.
+Corollary~\ref{cor:as-nonuniform-finite-budget} gives the almost-sure upgrade.
+The exponential-scale statement follows by taking \(u_m=d_\F p\,\varepsilon m\);
+the logarithmic polynomial and constant terms are \(o(m)\).
+\end{proof}
+
+\begin{corollary}[Fixed-excess entrywise heterogeneous finite budget]\label{rect:entrywise-heterogeneous-fixed-excess}
+Let \(r\ge0\) be fixed and set \(p=r+1\).  Let \(N_m\ge m+r\), and let
+\(A_m\in\F^{N_m\times m}\), \(\F\in\{\R,\C\}\), have independent entries.
+Assume that entry \((a,q)\) has \(d_\F\)-dimensional Lebesgue density bounded
+by a deterministic number \(K_{m,a,q}\ge1\).  For \(T\subset[N_m]\),
+\(|T|=m+r\), and \(q\in[m]\), put
+\[
+  \kappa_{T,q}^{(r)}
+  =
+  \max_{\substack{S\subset T\\ |S|=p}}
+  \prod_{a\in S}K_{m,a,q},
+  \qquad
+  \Xi_{m,r}
+  =
+  \sum_{\substack{T\subset[N_m]\\ |T|=m+r}}
+  \sum_{q=1}^{m}\kappa_{T,q}^{(r)} .
+\]
+Then, for every \(u_m>0\),
+\[
+  \PP\left\{
+  M_m^{(r)}\le
+  \exp\left[-\frac{\log\Xi_{m,r}+d_\F p\log m+O_{\F,r}(1)+u_m}
+  {d_\F p}\right]\right\}
+  \le e^{-u_m}.
+\]
+Moreover, on any common coupling, if \(\sum_m e^{-u_m}<\infty\), then the
+displayed bad event occurs only finitely often almost surely, with the
+\(O_{\F,r}(1)\) interpreted as one fixed constant.
+Consequently, if
+\[
+  \xi_r=\limsup_{m\to\infty}\frac1m\log\Xi_{m,r}<\infty,
+\]
+then for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  M_m^{(r)}
+  \le \exp\left[-\left(\frac{\xi_r}{d_\F(r+1)}+\varepsilon\right)m\right]
+  \right\}\to0 .
+\]
+If \(K_{m,a,q}=K_{m,a}\) is row-wise and column-uniform, this recovers
+Corollary~\ref{rect:heterogeneous-row-density}; if all \(K_{m,a,q}=K_m\), it
+recovers Corollary~\ref{rect:finite-entropy}.
+\end{corollary}
+
+\begin{proof}
+Fix a row set \(T\) and a column \(q\).  The column negative second-moment
+identity implies that \(\smin(A_{m,T})\le t\) forces some column distance to be
+at most \(\sqrt m\,t\).  Conditioning on all columns except column \(q\), choose
+a \(p\)-dimensional \(\F\)-subspace of the orthogonal complement and then a
+\(p\)-row coordinate block \(S\subset T\) by Cauchy--Binet, exactly as in
+Lemma~\ref{rect:bd-tail}.  Conditioning on the coordinates of column \(q\)
+outside \(S\), the projected \(p\)-coordinate density is bounded by
+\[
+  \left(\prod_{a\in S}K_{m,a,q}\right)\binom{m+r}{p}^{d_\F/2}.
+\]
+Taking the worst such \(S\), and then summing over the possible bad column
+\(q\), gives
+\[
+  \PP\{\smin(A_{m,T})\le t\}
+  \le
+  C_{\F,r}m^{d_\F p}t^{d_\F p}
+  \sum_{q=1}^{m}\kappa_{T,q}^{(r)},\qquad 0<t\le1.
+\]
+Summing these constants over \(T\) and applying
+Corollary~\ref{cor:nonuniform-finite-budget} gives the finite-budget estimate.
+Corollary~\ref{cor:as-nonuniform-finite-budget} gives the almost-sure upgrade.
+The exponential-scale statement follows by taking
+\(u_m=d_\F p\,\varepsilon m\).  The two specializations follow from
+\(\Xi_{m,r}=m\Theta_{m,r}\) in the row-wise case and
+\(\Xi_{m,r}=mK_m^p\binom{N_m}{m+r}\) in the uniform case.
+\end{proof}
+
+\begin{conjecture}[Fixed-excess base]\label{rect:exact}
+For each fixed \(r\ge0\),
+\[
+  \frac1m\log M_m^{(r)}\xrightarrow{\PP}-\frac{h(\gamma)}{d_\F(r+1)}.
+\]
+\end{conjecture}
+
+For Gaussian entries the lower bound is Theorem~\ref{rect:lower}; for
+bounded-density entries with subexponential density growth it is
+Theorem~\ref{rect:bd-lower}.  The matching upper bound would
+follow from Theorem~\ref{thm:principle} once the pair-correlation condition of
+Section~\ref{sec:universality} is established for the tall family: one must show
+that
+\[
+  Z_m(s)=\sum_{|T|=m+r}\mathbf{1}_{\{\smin(A_{m,T})\le e^{-sm}\}}
+\]
+has \(\Var Z_m(s)/(\EE Z_m(s))^2\to0\) for every \(s<h(\gamma)/(d_\F(r+1))\).
+For Gaussian entries this is the \((r+1)\)-codimensional analogue of the
+hyperplane second moment of \cite{ShmaloExtremal2026}, with one fixed row
+replaced by \(r+1\) fixed rows defining a codimension-\((r+1)\) small-ball event;
+it is not carried out here.  The lower side is thus proven for every fixed
+\(r\), while the exact base remains conditional on this second-moment input.
+
+\subsection{Proportional excess: the exponential regime is exactly fixed excess}
+
+If the excess grows with \(m\), the exponential scale disappears.
+
+\begin{proposition}[Proportional excess]\label{rect:proportional}
+Let \(A_m\in\F^{N_m\times m}\) have iid standard Gaussian entries,
+\(N_m/m\to\gamma>1\), and let \(\ell_m\) be integers with
+\(\ell_m/m\to\zeta\in(1,\gamma)\).  Then
+\[
+  \frac1m\log\min_{|T|=\ell_m}\smin(A_{m,T})\xrightarrow{\PP}0.
+\]
+\end{proposition}
+
+\begin{proof}
+Write \(M=\min_{|T|=\ell_m}\smin(A_{m,T})\) and \(p_m=\ell_m-m+1\), so
+\(p_m/m\to\zeta-1>0\).  For the upper bound, fix one admissible \(T_0\); then
+\(\smin(A_{m,T_0})^2\le\frac1m\tr(A_{m,T_0}^*A_{m,T_0})\), whose mean is
+\(\ell_m\), so \(M\le\smin(A_{m,T_0})=O_\PP(\sqrt m)\) and
+\(\limsup_m\frac1m\log M\le0\).
+
+For the lower bound, fix \(\varepsilon>0\).  By Lemma~\ref{rect:tall-tail} with
+\(p=p_m\),
+\[
+  \sup_{|T|=\ell_m}\PP\{\smin(A_{m,T})\le e^{-\varepsilon m}\}
+  \le m^{1+d_\F p_m/2}e^{-d_\F p_m\varepsilon m}
+  =\exp\{-d_\F(\zeta-1)\varepsilon m^2(1+o(1))\}.
+\]
+A union bound over the at most \(2^{N_m}=e^{O(m)}\) row sets gives
+\(\PP\{M\le e^{-\varepsilon m}\}\to0\), hence
+\(\liminf_m\frac1m\log M\ge-\varepsilon\).  Let \(\varepsilon\downarrow0\).
+\end{proof}
+
+Thus the exponentially small regime is precisely that of fixed excess \(r\):
+there the one-matrix exponent \(d_\F(r+1)\) stays bounded, the entropy survives
+at \(h(\gamma)\), and the competition produces an exponential base.  Once the
+excess is proportional, the one-matrix exponent grows linearly in \(m\) and
+overwhelms the entropy.
+
+\begin{proposition}[Proportional-excess density-rate lower side]\label{rect:proportional-density-rate}
+Let \(\F\in\{\R,\C\}\), and let \(A_m\in\F^{N_m\times m}\) have independent
+entries whose \(d_\F\)-dimensional scalar densities are bounded by deterministic
+\(K_m\ge1\), uniformly in their position.  Assume \(N_m/m\to\gamma>1\),
+\(\ell_m/m\to\zeta\in(1,\gamma)\), and
+\[
+  \kappa=\limsup_{m\to\infty}\frac1m\log K_m<\infty .
+\]
+Put
+\[
+  M_m^{(\ell)}=\min_{\substack{T\subset[N_m]\\ |T|=\ell_m}}\smin(A_{m,T}).
+\]
+Then for every \(\varepsilon>0\),
+\[
+  \PP\left\{M_m^{(\ell)}\le
+  \exp\!\left[-\left(\frac{\kappa}{d_\F}+\varepsilon\right)m\right]\right\}\to0.
+\]
+In particular, if \(K_m=e^{o(m)}\), then
+\(\liminf_m m^{-1}\log M_m^{(\ell)}\ge0\) in probability.
+\end{proposition}
+
+\begin{proof}
+It suffices to keep the dependence on \(p_m=\ell_m-m+1\), which now satisfies
+\(p_m/m\to\zeta-1\).  For one selected \(\ell_m\times m\) submatrix \(G\), the
+proof of Lemma~\ref{rect:bd-tail} gives, for \(t>0\),
+\[
+  \PP\{\smin(G)\le t\}
+  \le
+  m K_m^{p_m}\binom{\ell_m}{p_m}^{d_\F/2}
+  v_{d_\F p_m}(\sqrt m\,t)^{d_\F p_m},
+\]
+where \(v_q\) is the Euclidean unit-ball volume in \(\R^q\).  Stirling's formula
+gives
+\[
+  \log v_{d_\F p_m}+\frac{d_\F p_m}{2}\log m=O(m),
+  \qquad
+  \log\binom{\ell_m}{p_m}=O(m).
+\]
+With \(t=e^{-sm}\), the logarithm of the one-submatrix probability is therefore
+at most
+\[
+  p_m\log K_m-d_\F p_m s m+o(m^2)
+  \le \bigl((\zeta-1)\kappa-d_\F(\zeta-1)s+o(1)\bigr)m^2.
+\]
+The union over all row sets contributes only
+\(\log\binom{N_m}{\ell_m}=O(m)\).  Hence the probability tends to zero whenever
+\(s>\kappa/d_\F\), proving the claim.
+\end{proof}
+
+\begin{corollary}[Moving-excess rectangular finite budget]\label{rect:moving-excess-finite-budget}
+Let \(m\le\ell_m\le N_m\), set \(p_m=\ell_m-m+1\), and let
+\(A_m\in\F^{N_m\times m}\), \(\F\in\{\R,\C\}\), have independent entries whose
+\(d_\F\)-dimensional scalar densities are bounded by a deterministic
+\(K_m\ge1\), uniformly in their position.  Put
+\[
+  M_m^{(\ell)}=\min_{\substack{T\subset[N_m]\\ |T|=\ell_m}}\smin(A_{m,T}),
+  \qquad q_m=d_\F p_m,
+\]
+and let \(v_q\) denote the Euclidean unit-ball volume in \(\R^q\).  Define
+\[
+  B_m
+  =
+  1\vee
+  \left[
+  \binom{N_m}{\ell_m}
+  mK_m^{p_m}
+  \binom{\ell_m}{p_m}^{d_\F/2}
+  v_{q_m}m^{q_m/2}
+  \right].
+\]
+Then, for every \(u_m>0\),
+\[
+  \PP\left\{
+  M_m^{(\ell)}
+  \le
+  \exp\left[-\frac{\log B_m+u_m}{d_\F p_m}\right]
+  \right\}
+  \le e^{-u_m}.
+\]
+On any common coupling, if \(\sum_m e^{-u_m}<\infty\), then the displayed bad
+event occurs only finitely often almost surely.
+\end{corollary}
+
+\begin{proof}
+For one fixed row set \(T\), repeat the proof of Lemma~\ref{rect:bd-tail}
+without treating \(p_m\) as fixed.  The same Cauchy--Binet coordinate-minor
+argument gives, for \(t>0\),
+\[
+  \PP\{\smin(A_{m,T})\le t\}
+  \le
+  mK_m^{p_m}\binom{\ell_m}{p_m}^{d_\F/2}
+  v_{d_\F p_m}(\sqrt m\,t)^{d_\F p_m}.
+\]
+Summing over the \(\binom{N_m}{\ell_m}\) possible row sets and applying
+Corollary~\ref{cor:nonuniform-finite-budget} with exponent \(d_\F p_m\) and
+the deterministic budget \(B_m\) gives the finite-budget bound.  The
+almost-sure statement is Corollary~\ref{cor:as-nonuniform-finite-budget}.
+\end{proof}
+
+\begin{corollary}[Random-prefix proportional-excess lower sides]\label{rect:random-prefix-proportional-density-rate}
+Let \(\F\in\{\R,\C\}\).  For each \(m\), let
+\((R_{im})_{i\ge1}\) be independent \(\F^m\)-valued rows with independent
+scalar entries whose \(d_\F\)-dimensional Lebesgue densities are bounded by a
+deterministic \(K_m\ge1\), uniformly in the row and column positions.  Assume
+\[
+  \kappa=\limsup_{m\to\infty}\frac1m\log K_m<\infty .
+\]
+Let \(\ell_m/m\to\zeta\in(1,\gamma)\), and let \(\mathcal N_m\) be
+integer-valued, possibly dependent on the row array, with
+\(\mathcal N_m/m\to\gamma>1\) in probability.  For finite
+\(T\subset\mathbb N\), let \(A_{m,T}\) be the matrix with rows
+\((R_{im})_{i\in T}\), and put
+\[
+  M_m^{(\ell)}(\mathcal N_m)
+  =
+  \min_{\substack{T\subset[\mathcal N_m]\\ |T|=\ell_m}}\smin(A_{m,T}),
+  \qquad
+  \Lambda_m^{(\ell)}(\mathcal N_m)
+  =
+  \min_{\substack{T\subset[\mathcal N_m]\\ |T|=\ell_m}}
+  \lambda_{\min}\!\left(\ell_m^{-1}A_{m,T}^*A_{m,T}\right),
+\]
+with the convention that both minima are \(+\infty\) when
+\(\mathcal N_m<\ell_m\).  Then for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  M_m^{(\ell)}(\mathcal N_m)\le
+  \exp\!\left[-\left(\frac{\kappa}{d_\F}+\varepsilon\right)m\right]
+  \right\}\to0
+\]
+and
+\[
+  \PP\left\{
+  \Lambda_m^{(\ell)}(\mathcal N_m)\le
+  \exp\!\left[-\left(\frac{2\kappa}{d_\F}+\varepsilon\right)m\right]
+  \right\}\to0 .
+\]
+If the row arrays are realized on a common probability space and
+\(\mathcal N_m/m\to\gamma\) almost surely, then
+\[
+  \liminf_{m\to\infty}\frac1m\log M_m^{(\ell)}(\mathcal N_m)
+  \ge-\frac{\kappa}{d_\F},
+  \qquad
+  \liminf_{m\to\infty}\frac1m\log \Lambda_m^{(\ell)}(\mathcal N_m)
+  \ge-\frac{2\kappa}{d_\F}
+  \quad\hbox{almost surely}.
+\]
+In particular, for \(K_m=e^{o(m)}\), the random-prefix proportional-excess
+singular and normalized column-Gram lower envelopes have exponential-scale base
+\(0\).  For iid standard Gaussian rows, the fixed-block upper bound also gives
+\(m^{-1}\log M_m^{(\ell)}(\mathcal N_m)\to0\) in probability.  This is an
+exponential-scale lower-side transfer only; it does not identify the
+\(\sqrt m\) Wishart edge, the left-tail large-deviation constant, or any
+upper/exact proportional-edge law.
+\end{corollary}
+
+\begin{proof}
+Fix \(\gamma_+>\gamma\) and set \(n_m^+=\lceil\gamma_+m\rceil\).  Since
+\(\zeta<\gamma<\gamma_+\), the deterministic-count
+Proposition~\ref{rect:proportional-density-rate} applies to the first
+\(n_m^+\) rows.  Write \(M_m^{(\ell)}(n)\) for the same minimum with
+\(n\) in place of \(\mathcal N_m\).  On the event
+\(\{\mathcal N_m\le n_m^+\}\), monotonicity in the
+available prefix gives
+\[
+  M_m^{(\ell)}(\mathcal N_m)\ge M_m^{(\ell)}(n_m^+),
+\]
+where the \(+\infty\) convention covers the infeasible case.  Hence
+\[
+  \PP\left\{M_m^{(\ell)}(\mathcal N_m)\le e^{-sm}\right\}
+  \le
+  \PP\{\mathcal N_m>n_m^+\}
+  +
+  \PP\left\{M_m^{(\ell)}(n_m^+)\le e^{-sm}\right\}.
+\]
+Taking \(s=\kappa/d_\F+\varepsilon\) proves the singular-value convergence in
+probability.  The same deterministic upper bracket is eventually valid almost
+surely under a.s. convergence of \(\mathcal N_m/m\), and
+Corollary~\ref{rect:moving-excess-finite-budget}, applied to the deterministic
+prefix \(n_m^+\) with a summable error budget, gives the corresponding a.s.
+lower envelope.
+
+Finally,
+\[
+  \Lambda_m^{(\ell)}(\mathcal N_m)
+  =
+  \ell_m^{-1}\bigl(M_m^{(\ell)}(\mathcal N_m)\bigr)^2
+\]
+pathwise.  Since \(\log\ell_m=o(m)\), the normalized column-Gram bounds follow
+from the singular-value bounds with the exponent doubled.  In the Gaussian
+case, on \(\{\mathcal N_m\ge\ell_m\}\), the fixed set
+\(\{1,\ldots,\ell_m\}\) is admissible and
+\(\smin(A_{m,\{1,\ldots,\ell_m\}})=O_\PP(\sqrt m)\), giving the displayed
+upper exponential scale.
+\end{proof}
+
+\begin{corollary}[Random-prefix proportional-excess conditioning transfer]\label{rect:random-prefix-proportional-conditioning-transfer}
+In the setting of Corollary~\ref{rect:random-prefix-proportional-density-rate},
+let \(d_{im}>0\), \(i\ge1\), be finite real row weights, and let
+\(S_m\in GL_m(\F)\) be one global all-column right factor.  The weights and
+\(S_m\) may be random and dependent on \(\mathcal N_m\) and on the row array.
+Assume
+\[
+  \Delta_m^{\rm propcond}
+  =
+  \max_{1\le i\le\mathcal N_m}|\log d_{im}|
+  +\bigl|\log\smin(S_m)\bigr|+\bigl|\log\|S_m\|\bigr|
+  =o_\PP(m),
+\]
+omitting the row-weight term when row weights are absent.  For
+\(\mathcal N_m\ge\ell_m\) and \(T\subset[\mathcal N_m]\), \(|T|=\ell_m\), set
+\[
+  B_{m,T}=\operatorname{diag}(d_{im}:i\in T)\,A_{m,T}S_m
+\]
+and define
+\[
+  M_{m,B}^{(\ell)}
+  =
+  \min_{\substack{T\subset[\mathcal N_m]\\ |T|=\ell_m}}\smin(B_{m,T}),
+  \qquad
+  \Lambda_{m,B}^{(\ell)}
+  =
+  \min_{\substack{T\subset[\mathcal N_m]\\ |T|=\ell_m}}
+  \lambda_{\min}\!\left(\ell_m^{-1}B_{m,T}^*B_{m,T}\right),
+\]
+with the convention that both minima are \(+\infty\) on
+\(\{\mathcal N_m<\ell_m\}\).  Then for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  M_{m,B}^{(\ell)}\le
+  \exp\!\left[-\left(\frac{\kappa}{d_\F}+\varepsilon\right)m\right]
+  \right\}\to0
+\]
+and
+\[
+  \PP\left\{
+  \Lambda_{m,B}^{(\ell)}\le
+  \exp\!\left[-\left(\frac{2\kappa}{d_\F}+\varepsilon\right)m\right]
+  \right\}\to0 .
+\]
+On a common coupling, if \(\mathcal N_m/m\to\gamma\) almost surely and
+\(\Delta_m^{\rm propcond}=o(m)\) almost surely, then
+\[
+  \liminf_{m\to\infty}\frac1m\log M_{m,B}^{(\ell)}
+  \ge-\frac{\kappa}{d_\F},
+  \qquad
+  \liminf_{m\to\infty}\frac1m\log \Lambda_{m,B}^{(\ell)}
+  \ge-\frac{2\kappa}{d_\F}
+  \quad\hbox{almost surely}.
+\]
+Positive column diagonals are included by taking \(S_m\) diagonal.  Full-column
+covariance and whitening factors are included only through the absolute
+singular-scale hypothesis above.  For Gaussian row arrays, row normalization
+over the realized prefix and full-prefix column normalization are included when
+their logarithmic norm extrema are absorbed into
+\(\Delta_m^{\rm propcond}\).
+\end{corollary}
+
+\begin{proof}
+Write \(A_m(n)\) for the first \(n\) unweighted rows and let
+\[
+  M_{m,A}^{(\ell)}(n)
+  =
+  \min_{\substack{T\subset[n]\\ |T|=\ell_m}}\smin(A_{m,T}),
+  \qquad
+  \Lambda_{m,A}^{(\ell)}(n)
+  =
+  \min_{\substack{T\subset[n]\\ |T|=\ell_m}}
+  \lambda_{\min}\!\left(\ell_m^{-1}A_{m,T}^*A_{m,T}\right),
+\]
+again with the \(+\infty\) convention on infeasible prefixes.  Fix
+\(\gamma_+>\gamma\) and set \(n_m^+=\lceil\gamma_+m\rceil\).  On the event
+\(\mathcal N_m\le n_m^+\), the min--max singular-value sandwich gives, for
+every feasible \(T\subset[\mathcal N_m]\),
+\[
+  \smin(B_{m,T})
+  \ge e^{-\Delta_m^{\rm propcond}}\smin(A_{m,T}).
+\]
+Therefore
+\[
+  M_{m,B}^{(\ell)}
+  \ge e^{-\Delta_m^{\rm propcond}}M_{m,A}^{(\ell)}(n_m^+).
+\]
+With \(c=\kappa/d_\F\),
+\[
+\begin{aligned}
+  \PP\{M_{m,B}^{(\ell)}\le e^{-(c+\varepsilon)m}\}
+  &\le
+  \PP\{\Delta_m^{\rm propcond}>\varepsilon m/2\}
+  +\PP\{\mathcal N_m>n_m^+\} \\
+  &\quad
+  +\PP\{M_{m,A}^{(\ell)}(n_m^+)\le e^{-(c+\varepsilon/2)m}\}.
+\end{aligned}
+\]
+The first term tends to zero by hypothesis, the second by
+\(\mathcal N_m/m\to\gamma\) in probability, and the third by
+Proposition~\ref{rect:proportional-density-rate} applied to the deterministic
+prefix \(n_m^+\).  This proves the singular lower side.
+
+The normalized column-Gram comparison is the squared sandwich:
+\[
+  \Lambda_{m,B}^{(\ell)}
+  \ge
+  e^{-2\Delta_m^{\rm propcond}}\Lambda_{m,A}^{(\ell)}(n_m^+)
+\]
+on \(\{\mathcal N_m\le n_m^+\}\).  Hence the same argument, with
+\(\varepsilon m/4\) in the \(\Delta_m^{\rm propcond}\) event and the doubled
+threshold from Corollary~\ref{rect:random-prefix-proportional-density-rate},
+gives the displayed Gram lower side.  The almost-sure lower envelopes follow
+from the eventual deterministic prefix bracket, the a.s. lower envelope in
+Corollary~\ref{rect:random-prefix-proportional-density-rate}, and
+\(\Delta_m^{\rm propcond}=o(m)\).
+
+This is only a pathwise conditioning transfer from the independent-entry base
+array.  It does not assert that the weighted or right-multiplied matrices
+satisfy the density hypothesis.  A condition-number bound alone is not enough,
+because a scalar factor can shift the exponential scale.  The statement does
+not assert a quaternion extension, value-dependent row-selection theorem,
+selected-column covariance transfer, selected-submatrix column normalization,
+row-Gram result, proportional Wishart-edge or LDP constant, upper side, or exact
+proportional-edge law.
+\end{proof}
+
+\begin{remark}[Finer scale at proportional excess]\label{rect:mp-edge}
+At proportional excess the right normalization is \(\sqrt m\), not exponential.
+The least singular value of one \(\ell_m\times m\) Gaussian matrix concentrates
+at the lower Marchenko--Pastur edge on the unnormalized singular-value scale,
+\(\sqrt{\ell_m}-\sqrt m\sim(\sqrt\zeta-1)\sqrt m\)
+\cite{MarchenkoPastur1967,Forrester2010}.  Minimizing over the
+\(\exp\{H_{\mathrm{row}}(\gamma,\zeta)m+o(m)\}\) submatrices, where
+\[
+  H_{\mathrm{row}}(\gamma,\zeta)
+  =\gamma\log\gamma-\zeta\log\zeta-(\gamma-\zeta)\log(\gamma-\zeta),
+  \qquad 1<\zeta<\gamma,
+\]
+pulls the minimum below the edge to a value \(x_*\sqrt m\) with
+\(x_*\in(0,\sqrt\zeta-1)\) determined by balancing \(H_{\mathrm{row}}(\gamma,\zeta)\)
+against the left-tail large-deviation rate for \(\smin(A_{m,T})/\sqrt m\).
+Identifying \(x_*\) is a different problem from the hard-edge theorem and is not
+pursued here.
+\end{remark}
+
+\subsection{The \texorpdfstring{\(k\)}{k}-th smallest singular value}
+
+Keep the submatrices square but track a higher singular value.  For
+\(A_m\in\F^{N_m\times m}\) with iid standard Gaussian entries and
+\(N_m/m\to\gamma>1\), order the singular values of each square submatrix as
+\(\sigma_1(A_{m,T})\ge\cdots\ge\sigma_m(A_{m,T})\), and for a fixed integer
+\(k\ge1\) put
+\[
+  M_m[k]=\min_{\substack{T\subset[N_m]\\ |T|=m}}\sigma_{m-k+1}(A_{m,T}).
+\]
+Here \(\sigma_{m-k+1}\) is the \(k\)-th smallest singular value, and
+\(M_m[1]=M_m\).
+
+The one-matrix input is the hard-edge small-ball exponent of the \(k\)-th
+smallest singular value of a single \(m\times m\) \(\F\)-Gaussian matrix \(G\).
+Let \(\lambda_{(1)}\le\cdots\le\lambda_{(m)}\) be the eigenvalues of \(G^*G\), the
+square Laguerre ensemble at rectangular excess \(r=0\); near the origin the
+joint density carries the Vandermonde repulsion
+\(\prod_{i<j}|\lambda_i-\lambda_j|^{d_\F}\) and the weight
+\(\prod_i\lambda_i^{d_\F/2-1}\).  Rescaling the \(k\) smallest eigenvalues by
+\(\delta\) collects a power \(d_\F\binom k2\) from the repulsion among them,
+\(k(d_\F/2-1)\) from the weight, and \(k\) from the measure, for a total exponent
+\(d_\F k^2/2\).  Hence \(\PP\{\lambda_{(k)}\le\delta\}\asymp\delta^{\,d_\F k^2/2}\),
+and since \(\sigma_{m-k+1}=\sqrt{\lambda_{(k)}}\),
+\[
+  \PP\{\sigma_{m-k+1}(G)\le t\}\asymp t^{\,e_k},\qquad e_k=d_\F k^2,
+\]
+as \(t\to0\); see \cite{Forrester2010}.  At \(k=1\) this is \(e_1=d_\F\),
+recovering the least-singular-value exponent.
+
+The exponent computation alone is not the finite-budget input.  The lower side
+below uses the following uniform finite-\(m\), polynomial-loss version, obtained
+from the Laguerre--Selberg normalization formula.
+
+\begin{lemma}[Fixed-\(k\) Gaussian Laguerre tail]\label{kth:laguerre-tail}
+Fix \(k\ge1\) and \(\F\in\{\R,\C\}\).  There are constants
+\(C_{\F,k}\ge1\) and \(B_{\F,k}\ge0\) such that, for every \(m\ge k\), every
+\(m\times m\) matrix \(G\) with iid standard \(\F\)-Gaussian entries, and every
+\(0<t\le1\),
+\[
+  \PP\{\sigma_{m-k+1}(G)\le t\}
+  \le C_{\F,k}m^{B_{\F,k}}t^{\,d_\F k^2}.
+\]
+\end{lemma}
+
+\begin{proof}
+Put \(b=d_\F\in\{1,2\}\), \(q=b/2\), and \(\delta=t^2\).  In ordered
+coordinates \(0\le\lambda_1\le\cdots\le\lambda_m\), the eigenvalues of \(G^*G\)
+have Laguerre density
+\[
+  \frac{m!}{Z_m(q)}
+  e^{-\eta\sum_i\lambda_i}
+  \prod_{i=1}^m \lambda_i^{q-1}
+  \prod_{i<j}(\lambda_j-\lambda_i)^b,
+\]
+where \(\eta=1/2\) in the real normalization and \(\eta=1\) in the complex
+normalization.  This is the standard Laguerre ensemble density; we use the
+Laguerre--Selberg product formula for \(Z_m(q)\), see
+\cite[Chs.~3--4]{Forrester2010}.
+
+On the event \(\lambda_k\le\delta\), write \(x_i=\lambda_i\) for
+\(1\le i\le k\) and \(y_j=\lambda_{k+j}\) for \(1\le j\le m-k\).  Since
+\(0\le x_i\le y_j\),
+\[
+  \prod_{i\le k<j}(\lambda_j-\lambda_i)^b
+  \le \prod_{j=1}^{m-k} y_j^{bk}.
+\]
+The integral over the first \(k\) variables contributes
+\[
+  \int_{[0,\delta]^k}\prod_i x_i^{q-1}
+        \prod_{i<j}|x_i-x_j|^b\,dx
+  = C_{b,k}\delta^{kq+b\binom{k}{2}}
+  = C_{b,k}\delta^{bk^2/2}.
+\]
+The remaining variables are bounded by a Laguerre--Selberg integral with
+parameter \(q+bk\).  Thus
+\[
+  \PP\{\lambda_k\le\delta\}
+  \le
+  C_{b,k}\delta^{bk^2/2}
+  \frac{m!}{(m-k)!}\frac{Z_{m-k}(q+bk)}{Z_m(q)} .
+\]
+For fixed \(k\), the product formula for \(Z_n(a)\) and Stirling's formula
+give
+\[
+  \frac{m!}{(m-k)!}\frac{Z_{m-k}(q+bk)}{Z_m(q)}
+  \le C_{b,k}m^{B_{b,k}},
+\]
+after absorbing the finitely many cases \(m<2k\) into the constant.  Therefore
+\[
+  \PP\{\lambda_k\le\delta\}
+  \le C_{\F,k}m^{B_{\F,k}}\delta^{d_\F k^2/2}.
+\]
+Since \(\sigma_{m-k+1}(G)=\sqrt{\lambda_k}\), taking \(\delta=t^2\) gives the
+claimed bound.
+\end{proof}
+
+\begin{lemma}[Fixed-excess fixed-\(k\) Gaussian Laguerre tail]\label{rect-kth:laguerre-tail}
+Fix \(r\ge0\), \(k\ge1\), and \(\F\in\{\R,\C\}\).  There are constants
+\(C_{\F,r,k}\ge1\) and \(B_{\F,r,k}\ge0\) such that, for every \(m\ge k\),
+every \(G\in\F^{(m+r)\times m}\) with iid standard \(\F\)-Gaussian entries,
+and every \(0<t\le1\),
+\[
+  \PP\{\sigma_{m-k+1}(G)\le t\}
+  \le C_{\F,r,k}m^{B_{\F,r,k}}t^{\,d_\F k(k+r)}.
+\]
+\end{lemma}
+
+\begin{proof}
+Put \(b=d_\F\in\{1,2\}\), \(q=b(r+1)/2\), and \(\delta=t^2\).  In ordered
+coordinates \(0\le\lambda_1\le\cdots\le\lambda_m\), the eigenvalues of \(G^*G\)
+have Laguerre density
+\[
+  \frac{m!}{Z_m(q)}
+  e^{-\eta\sum_i\lambda_i}
+  \prod_{i=1}^m \lambda_i^{q-1}
+  \prod_{i<j}(\lambda_j-\lambda_i)^b,
+\]
+with the same real/complex value of \(\eta\) as above.  On
+\(\lambda_k\le\delta\), write \(x_i=\lambda_i\) for \(1\le i\le k\) and
+\(y_j=\lambda_{k+j}\) for \(1\le j\le m-k\).  Since \(0\le x_i\le y_j\),
+\[
+  \prod_{i\le k<j}(\lambda_j-\lambda_i)^b
+  \le \prod_{j=1}^{m-k} y_j^{bk}.
+\]
+The first \(k\) variables contribute
+\[
+  \int_{[0,\delta]^k}\prod_i x_i^{q-1}
+        \prod_{i<j}|x_i-x_j|^b\,dx
+  =
+  C_{b,r,k}\delta^{kq+b\binom{k}{2}}
+  =
+  C_{b,r,k}\delta^{bk(k+r)/2}.
+\]
+The remaining variables are bounded by a Laguerre--Selberg integral with
+parameter \(q+bk\).  Hence, with \(Z_0=1\),
+\[
+  \PP\{\lambda_k\le\delta\}
+  \le
+  C_{b,r,k}\delta^{bk(k+r)/2}
+  \frac{m!}{(m-k)!}\frac{Z_{m-k}(q+bk)}{Z_m(q)} .
+\]
+For fixed \(r,k\), the Laguerre--Selberg product and Stirling's formula give
+\[
+  \frac{m!}{(m-k)!}\frac{Z_{m-k}(q+bk)}{Z_m(q)}
+  \le C_{b,r,k}m^{B_{b,r,k}},
+\]
+after absorbing the finitely many small \(m\) into the constant.  Taking
+\(\delta=t^2\) proves the displayed singular-value tail.
+\end{proof}
+
+\begin{theorem}[Fixed-excess fixed-\(k\) Gaussian finite-budget lower side]\label{rect-kth:lower}
+Fix \(r\ge0\), \(k\ge1\), let \(\F\in\{\R,\C\}\), let \(N_m\ge m+r\), and let
+\(A_m\in\F^{N_m\times m}\) have iid standard \(\F\)-Gaussian entries.  Put
+\[
+  M_m^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}
+  \sigma_{m-k+1}(A_{m,T}).
+\]
+Then \(M_m^{(r)}[1]=M_m^{(r)}\) and \(M_m^{(0)}[k]=M_m[k]\).  There are constants
+\(C_{\F,r,k}\ge1\) and \(B_{\F,r,k}\ge0\) such that, for every \(u_m>0\),
+\[
+  \PP\left\{
+  M_m^{(r)}[k]\le
+  \exp\left[-\frac{\log\binom{N_m}{m+r}
+    +B_{\F,r,k}\log m+\log C_{\F,r,k}+u_m}
+  {d_\F k(k+r)}\right]\right\}
+  \le e^{-u_m}.
+\]
+\end{theorem}
+
+\begin{proof}
+Apply Lemma~\ref{rect-kth:laguerre-tail} to every selected
+\((m+r)\)-row submatrix.  For \(0<t\le1\),
+\[
+  \PP\{M_m^{(r)}[k]\le t\}
+  \le \binom{N_m}{m+r}C_{\F,r,k}m^{B_{\F,r,k}}t^{d_\F k(k+r)} .
+\]
+Substituting the displayed finite-budget threshold gives the result.
+\end{proof}
+
+\begin{corollary}[Fixed-excess fixed-\(k\) Gaussian lower side]\label{rect-kth:fixed-aspect-lower}
+Under the hypotheses of Theorem~\ref{rect-kth:lower}, if
+\(N_m/m\to\gamma>1\), then for every \(\varepsilon>0\),
+\[
+  \PP\left\{M_m^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{h(\gamma)}{d_\F k(k+r)}+\varepsilon\right)m\right]\right\}
+  \longrightarrow0.
+\]
+Equivalently,
+\[
+  \liminf_{m\to\infty}\frac1m\log M_m^{(r)}[k]
+  \ge -\frac{h(\gamma)}{d_\F k(k+r)}
+  \qquad\hbox{in probability}.
+\]
+\end{corollary}
+
+\begin{proof}
+Use \(m^{-1}\log\binom{N_m}{m+r}\to h(\gamma)\) and take
+\(u_m=d_\F k(k+r)\varepsilon m\), absorbing the logarithmic terms into the
+slack.
+\end{proof}
+
+\begin{corollary}[Fixed-excess fixed-\(k\) Gram eigenvalue lower side]\label{rect-kth:gram-lower}
+Under the hypotheses of Theorem~\ref{rect-kth:lower}, write
+\[
+  0\le\lambda_{(1)}(C)\le\cdots\le\lambda_{(m)}(C)
+\]
+for the eigenvalues of a positive semidefinite \(m\times m\) matrix, and put
+\[
+  \Lambda_m^{(r)}[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m+r}}
+  \lambda_{(k)}\!\left((m+r)^{-1}A_{m,T}^*A_{m,T}\right).
+\]
+With the constants \(C_{\F,r,k},B_{\F,r,k}\) of
+Theorem~\ref{rect-kth:lower}, for every \(u_m>0\),
+\[
+  \PP\left\{
+  \Lambda_m^{(r)}[k]\le
+  (m+r)^{-1}\exp\left[
+  -\frac{2\bigl(\log\binom{N_m}{m+r}
+    +B_{\F,r,k}\log m+\log C_{\F,r,k}+u_m\bigr)}
+  {d_\F k(k+r)}\right]\right\}
+  \le e^{-u_m}.
+\]
+Consequently, if \(N_m/m\to\gamma>1\), then for every \(\varepsilon>0\),
+\[
+  \PP\left\{\Lambda_m^{(r)}[k]\le
+  \exp\!\left[-\left(\frac{2h(\gamma)}{d_\F k(k+r)}
+    +\varepsilon\right)m\right]\right\}
+  \longrightarrow0,
+\]
+or equivalently
+\[
+  \liminf_{m\to\infty}\frac1m\log\Lambda_m^{(r)}[k]
+  \ge -\frac{2h(\gamma)}{d_\F k(k+r)}
+  \qquad\hbox{in probability}.
+\]
+\end{corollary}
+
+\begin{proof}
+For each row set \(T\), the eigenvalues of \(A_{m,T}^*A_{m,T}\) are the squared
+singular values in increasing order:
+\[
+  \lambda_{(k)}(A_{m,T}^*A_{m,T})
+  =
+  \sigma_{m-k+1}(A_{m,T})^2 .
+\]
+Therefore, pathwise,
+\[
+  \Lambda_m^{(r)}[k]=(m+r)^{-1}\bigl(M_m^{(r)}[k]\bigr)^2 .
+\]
+The finite-budget estimate follows from Theorem~\ref{rect-kth:lower} by
+squaring the singular-value threshold and multiplying by \((m+r)^{-1}\).  The
+fixed-aspect statement follows because \(m^{-1}\log(m+r)\to0\).
+\end{proof}
+
+\begin{remark}
+These fixed-excess fixed-\(k\) singular-value and Gram eigenvalue statements are
+only lower-side statements.  The matching convergence
+\[
+  \frac1m\log M_m^{(r)}[k]
+  \xrightarrow{\PP}
+  -\frac{h(\gamma)}{d_\F k(k+r)}
+\]
+would require a fixed-\(r\), fixed-\(k\) pair-correlation or second-moment
+theorem for overlapping \((m+r)\)-row submatrices.  That input is not proved
+here, so no exact law or almost-sure exact law is asserted.
+\end{remark}
+
+\begin{theorem}[Fixed-\(k\) Gaussian finite-budget lower side]\label{kth:lower}
+Fix \(k\ge1\), let \(N_m\ge m\), and let \(A_m\in\F^{N_m\times m}\) have iid
+standard \(\F\)-Gaussian entries.  There are constants
+\(C_{\F,k}\ge1\) and \(B_{\F,k}\ge0\) such that, for every \(u_m>0\),
+\[
+  \PP\left\{
+  M_m[k]\le
+  \exp\left[-\frac{\log\binom{N_m}{m}+B_{\F,k}\log m+\log C_{\F,k}+u_m}
+  {d_\F k^2}\right]\right\}
+  \le e^{-u_m}.
+\]
+Consequently, if \(N_m/m\to\gamma>1\), then for every \(\varepsilon>0\),
+\[
+  \PP\left\{M_m[k]\le
+     \exp\!\left[-\left(\frac{h(\gamma)}{d_\F k^2}+\varepsilon\right)m\right]\right\}
+  \longrightarrow0.
+\]
+Equivalently,
+\[
+  \liminf_{m\to\infty}\frac1m\log M_m[k]
+  \ge -\frac{h(\gamma)}{d_\F k^2}
+  \qquad\hbox{in probability}.
+\]
+\end{theorem}
+
+\begin{proof}
+Apply Lemma~\ref{kth:laguerre-tail} to each selected square row submatrix.  For
+\(0<t\le1\),
+\[
+  \PP\{M_m[k]\le t\}
+  \le \binom{N_m}{m}C_{\F,k}m^{B_{\F,k}}t^{d_\F k^2}.
+\]
+Substituting the displayed finite-budget threshold gives the \(e^{-u_m}\) bound.
+If \(N_m/m\to\gamma>1\), then
+\(m^{-1}\log\binom{N_m}{m}\to h(\gamma)\), and taking
+\(u_m=d_\F k^2\varepsilon m\) gives the fixed-aspect lower side after absorbing
+the logarithmic terms into the slack.
+\end{proof}
+
+\begin{corollary}[Fixed-\(k\) Gram eigenvalue lower side]\label{kth:gram-lower}
+Fix \(k\ge1\), let \(\F\in\{\R,\C\}\), let \(N_m\ge m\), and let
+\(A_m\in\F^{N_m\times m}\) have iid standard \(\F\)-Gaussian entries.  For a
+positive semidefinite \(m\times m\) matrix \(C\), write its eigenvalues as
+\[
+  0\le\lambda_{(1)}(C)\le\cdots\le\lambda_{(m)}(C).
+\]
+Put
+\[
+  \Lambda_m[k]
+  =
+  \min_{\substack{T\subset[N_m]\\ |T|=m}}
+  \lambda_{(k)}\!\left(m^{-1}A_{m,T}^*A_{m,T}\right).
+\]
+With the constants \(C_{\F,k},B_{\F,k}\) of Theorem~\ref{kth:lower}, for every
+\(u_m>0\),
+\[
+  \PP\left\{
+  \Lambda_m[k]\le
+  m^{-1}\exp\left[
+  -\frac{2\bigl(\log\binom{N_m}{m}+B_{\F,k}\log m+\log C_{\F,k}+u_m\bigr)}
+  {d_\F k^2}\right]\right\}
+  \le e^{-u_m}.
+\]
+Consequently, if \(N_m/m\to\gamma>1\), then for every \(\varepsilon>0\),
+\[
+  \PP\left\{\Lambda_m[k]\le
+     \exp\!\left[-\left(\frac{2h(\gamma)}{d_\F k^2}+\varepsilon\right)m\right]\right\}
+  \longrightarrow0,
+\]
+or equivalently
+\[
+  \liminf_{m\to\infty}\frac1m\log\Lambda_m[k]
+  \ge -\frac{2h(\gamma)}{d_\F k^2}
+  \qquad\hbox{in probability}.
+\]
+\end{corollary}
+
+\begin{proof}
+For each row set \(T\), the ordered eigenvalues of
+\(A_{m,T}^*A_{m,T}\) are the squared singular values in increasing order:
+\[
+  \lambda_{(k)}(A_{m,T}^*A_{m,T})
+  =
+  \sigma_{m-k+1}(A_{m,T})^2 .
+\]
+Hence, pathwise,
+\[
+  \Lambda_m[k]=m^{-1}M_m[k]^2.
+\]
+Substitute the finite-budget threshold of Theorem~\ref{kth:lower} and square
+it.  The fixed-aspect lower side follows because \(m^{-1}\log m\to0\).
+\end{proof}
+
+\begin{conjecture}[Extremal \texorpdfstring{\(k\)}{k}-th hard edge]\label{kth:extremal}
+For each fixed \(k\ge1\),
+\[
+  \frac1m\log M_m[k]\xrightarrow{\PP}-\frac{h(\gamma)}{d_\F k^2}.
+\]
+\end{conjecture}
+
+The lower side is Theorem~\ref{kth:lower}.  The upper side needs a
+\(k\)-dimensional analogue of the hyperplane second moment of
+Section~\ref{sec:universality}: one fixes \(k\) rows and compares the resulting
+codimension-\(k\) small-ball events across overlapping row sets.  This
+pair-correlation step is not carried out here, so the exact extremal base remains
+conjectural.
+
+\subsection{Two-sided submatrices}
+
+Finally, choose submatrices on both sides.  Let \(A\in\F^{N\times n}\) have iid
+standard Gaussian entries with \(N/k\to\gamma_R>1\) and \(n/k\to\gamma_C>1\), and
+for \(R\subset[N]\), \(C\subset[n]\) with \(|R|=|C|=k\) write
+\(A_{R,C}\in\F^{k\times k}\) for the square submatrix on those rows and columns.
+Put
+\[
+  M=\min_{\substack{R\subset[N],\,|R|=k\\ C\subset[n],\,|C|=k}}\smin(A_{R,C}).
+\]
+The scaling parameter is the submatrix size \(k\).
+
+Because the choices on the two sides are independent, the entropy adds:
+\[
+  \frac1k\log\!\left(\binom Nk\binom nk\right)
+  =\frac1k\log\binom Nk+\frac1k\log\binom nk
+  \longrightarrow h(\gamma_R)+h(\gamma_C),
+\]
+by Stirling's formula applied to each factor.  Each \(A_{R,C}\) is a square
+\(k\times k\) \(\F\)-Gaussian matrix, so the one-matrix exponent is \(d_\F\), as
+in Proposition~\ref{prop:bd-tail}.
+
+\begin{theorem}[Two-sided lower side]\label{two:lower}
+With \(H=h(\gamma_R)+h(\gamma_C)\), for every \(\varepsilon>0\),
+\[
+  \PP\left\{M\le\exp\!\left[-\left(\frac{H}{d_\F}+\varepsilon\right)k\right]\right\}
+  \longrightarrow0,
+\]
+so \(\liminf_k\frac1k\log M\ge-\dfrac{h(\gamma_R)+h(\gamma_C)}{d_\F}\) in
+probability.
+\end{theorem}
+
+\begin{proof}
+Apply Corollary~\ref{cor:poly-smallball}, with the scaling index \(m\) there
+taken to be \(k\), to the family \(\mathcal T=\{(R,C):|R|=|C|=k\}\) and
+\(Y_{R,C}=\smin(A_{R,C})\).  The entropy bound is the display above.  The uniform
+small-ball bound \(\PP\{\smin(A_{R,C})\le t\}\le C_\F k^{1+d_\F}t^{d_\F}\) is
+Proposition~\ref{prop:bd-tail}.  Hence the base is \(H/d_\F\).
+\end{proof}
+
+\begin{theorem}[Two-sided density-rate lower side]\label{two:density-rate-lower}
+In the two-sided setup above, replace the Gaussian entries by independent
+entries whose \(d_\F\)-dimensional scalar densities are bounded by deterministic
+\(K_k\ge1\), uniformly in their position, and put
+\[
+  \kappa=\limsup_{k\to\infty}\frac1k\log K_k<\infty .
+\]
+With \(H=h(\gamma_R)+h(\gamma_C)\), for every \(\varepsilon>0\),
+\[
+  \PP\left\{M\le
+  \exp\!\left[-\left(\frac{H+\kappa}{d_\F}+\varepsilon\right)k\right]\right\}
+  \longrightarrow0.
+\]
+In particular, \(K_k=e^{o(k)}\) preserves the Gaussian two-sided lower-side
+base \(H/d_\F\).
+\end{theorem}
+
+\begin{proof}
+For one selected \(k\times k\) minor, the proof of
+Proposition~\ref{prop:bd-tail} gives
+\[
+  \PP\{\smin(A_{R,C})\le t\}\le C_\F K_k k^{d_\F+1}t^{d_\F},\qquad 0<t\le1.
+\]
+Thus, at \(t=e^{-sk}\),
+\[
+  \PP\{M\le e^{-sk}\}
+  \le \binom{N}{k}\binom{n}{k}
+       C_\F K_k k^{d_\F+1}e^{-d_\F sk}.
+\]
+The logarithmic limsup divided by \(k\) is at most \(H+\kappa-d_\F s\), which is
+negative for \(s>(H+\kappa)/d_\F\).
+\end{proof}
+
+\begin{corollary}[Finite-entropy two-sided lower side]\label{two:finite-entropy}
+Let \(N_k,n_k\ge k\), and let \(A_k\in\F^{N_k\times n_k}\),
+\(\F\in\{\R,\C\}\), have independent entries whose \(d_\F\)-dimensional scalar
+densities are bounded by \(K_k\ge1\), uniformly in their position.  Put
+\[
+  L_k^{\rm two}=\log\binom{N_k}{k}+\log\binom{n_k}{k},
+  \qquad
+  M_k^{\rm two}
+  =
+  \min_{\substack{R\subset[N_k],\, |R|=k\\ C\subset[n_k],\, |C|=k}}
+  \smin((A_k)_{R,C}).
+\]
+Then, for every \(u_k>0\),
+\[
+  \PP\left\{
+  M_k^{\rm two}\le
+  \exp\left[-\frac{
+  L_k^{\rm two}+\log K_k+(d_\F+1)\log k+O_\F(1)+u_k
+  }{d_\F}\right]
+  \right\}
+  \le e^{-u_k}.
+\]
+In particular, taking \(u_k=d_\F\varepsilon k\) gives the
+convergence-in-probability lower side at the finite two-sided entropy budget
+\((L_k^{\rm two}+\log K_k)/d_\F\), with any fixed exponential slack.
+If the matrices are coupled for all \(k\) and \(\sum_k e^{-u_k}<\infty\), then
+the displayed bad event occurs only finitely often almost surely, with the
+\(O_\F(1)\) interpreted as one fixed constant.  This almost-sure finite-budget
+upgrade still uses only the union bound; overlap between row-column minors is
+irrelevant for this lower-side statement.
+\end{corollary}
+
+\begin{proof}
+For one selected \(k\times k\) minor, the proof of
+Proposition~\ref{prop:bd-tail} gives
+\[
+  \PP\{\smin((A_k)_{R,C})\le t\}
+  \le C_\F K_k k^{d_\F+1}t^{d_\F},\qquad 0<t\le1.
+\]
+Apply Corollary~\ref{cor:finite-budget} to the family of row-column pairs.
+Only a union bound is used; overlap between two tested minors is irrelevant for
+this lower-side estimate.
+\end{proof}
+
+\begin{corollary}[Heterogeneous-density two-sided finite budget]\label{two:heterogeneous-finite-budget}
+Let \(N_k,n_k\ge k\), and let \(A_k\in\F^{N_k\times n_k}\),
+\(\F\in\{\R,\C\}\), have independent entries.  Assume that entry \((i,j)\)
+has a \(d_\F\)-dimensional Lebesgue density bounded by a deterministic number
+\(K_{k,i,j}\ge1\).  For \(C\subset[n_k]\), \(|C|=k\), put
+\[
+  K_{k,i,C}=\max_{j\in C}K_{k,i,j},
+\]
+and define
+\[
+  \Lambda_k^{\rm two,het}
+  =
+  \log\binom{N_k-1}{k-1}
+  +\log\left(
+      \sum_{i=1}^{N_k}\sum_{\substack{C\subset[n_k]\\ |C|=k}}K_{k,i,C}
+    \right).
+\]
+For
+\[
+  M_k^{\rm two}
+  =
+  \min_{\substack{R\subset[N_k],\, |R|=k\\ C\subset[n_k],\, |C|=k}}
+  \smin((A_k)_{R,C}),
+\]
+every \(u_k>0\) satisfies
+\[
+  \PP\left\{
+  M_k^{\rm two}\le
+  \exp\left[-\frac{
+  \Lambda_k^{\rm two,het}+d_\F\log k+O_\F(1)+u_k
+  }{d_\F}\right]
+  \right\}
+  \le e^{-u_k}.
+\]
+If the matrices are coupled for all \(k\) and \(\sum_k e^{-u_k}<\infty\), then
+the displayed bad event occurs only finitely often almost surely, with the
+\(O_\F(1)\) interpreted as one fixed constant.  In the uniform case
+\(K_{k,i,j}=K_k\), this recovers Corollary~\ref{two:finite-entropy}.
+\end{corollary}
+
+\begin{proof}
+Fix \(R,C\) with \(|R|=|C|=k\).  As in the proof of
+Proposition~\ref{prop:bd-tail}, the negative second-moment identity implies
+that \(\smin((A_k)_{R,C})\le t\) forces, for some \(i\in R\), the \(i\)-th row
+distance to be at most
+\(\sqrt k\,t\).  Conditioning on the other rows of the minor and on all but one
+coordinate of the chosen row, select a coordinate \(j\in C\) of the unit normal
+with modulus at least \(k^{-1/2}\).  The remaining scalar density is bounded by
+\(K_{k,i,j}k^{d_\F/2}\le K_{k,i,C}k^{d_\F/2}\), so for \(0<t\le1\),
+\[
+  \PP\{\smin((A_k)_{R,C})\le t\}
+  \le C_\F k^{d_\F}t^{d_\F}\sum_{i\in R}K_{k,i,C}.
+\]
+Summing these one-minor constants over all row-column choices gives
+\[
+  C_\F k^{d_\F}
+  \sum_{\substack{|R|=k\\ |C|=k}}\sum_{i\in R}K_{k,i,C}
+  =
+  C_\F k^{d_\F}\binom{N_k-1}{k-1}
+  \sum_{i=1}^{N_k}\sum_{\substack{C\subset[n_k]\\ |C|=k}}K_{k,i,C}.
+\]
+Apply Corollary~\ref{cor:nonuniform-finite-budget} with exponent \(d_\F\).
+Corollary~\ref{cor:as-nonuniform-finite-budget} gives the stated almost-sure
+upgrade when \(\sum_k e^{-u_k}<\infty\).
+When \(K_{k,i,j}=K_k\), the last budget equals
+\(C_\F K_k k^{d_\F+1}\binom{N_k}{k}\binom{n_k}{k}\), which is precisely the
+uniform finite-entropy budget up to the \(O_\F(1)\) constant.
+\end{proof}
+
+\begin{corollary}[Two-sided smoothed deterministic lower side]\label{two:smoothed-lower}
+Let \(F_k\in\F^{N_k\times n_k}\) be arbitrary deterministic matrices, let
+\(G_k\) have iid standard \(\F\)-Gaussian entries, and set
+\(A_k=F_k+\sigma_kG_k\).  Assume \(N_k/k\to\gamma_R>1\),
+\(n_k/k\to\gamma_C>1\), and
+\[
+  \eta=\limsup_{k\to\infty}\frac1k\log\sigma_k^{-1}<\infty .
+\]
+For
+\[
+  M_{\sigma,k}^{\rm two}
+  =\min_{\substack{R\subset[N_k],\, |R|=k\\ C\subset[n_k],\, |C|=k}}
+    \smin((A_k)_{R,C}),
+\]
+and \(H=h(\gamma_R)+h(\gamma_C)\), every \(\varepsilon>0\) satisfies
+\[
+  \PP\left\{M_{\sigma,k}^{\rm two}\le
+  \exp\!\left[-\left(\frac{H}{d_\F}+\eta+\varepsilon\right)k\right]\right\}
+  \longrightarrow0.
+\]
+Here \(F_k\) is the deterministic background and \(\sigma_kG_k\) the Gaussian
+perturbation of the observed matrix \(A_k=F_k+\sigma_kG_k\).
+\end{corollary}
+
+\begin{proof}
+Translation by \(F_k\) does not change density suprema.  Scaling a standard
+\(\F\)-Gaussian scalar by \(\sigma_k\) gives a \(d_\F\)-dimensional density
+bounded by \(C_\F\sigma_k^{-d_\F}\).  Apply
+Theorem~\ref{two:density-rate-lower}.
+\end{proof}
+
+\begin{corollary}[Random-prefix two-sided density-rate lower side]\label{two:random-prefix-density-rate-lower}
+Let \(\F\in\{\R,\C\}\).  For each \(k\), let
+\((a_{ij}^{(k)})_{i,j\ge1}\) be an infinite array whose scalar entries are
+independent and whose \(d_\F\)-dimensional densities are bounded by a
+deterministic \(K_k\ge1\), uniformly in \(i,j\).  Put
+\[
+  \kappa=\limsup_{k\to\infty}\frac1k\log K_k<\infty .
+\]
+Let \(N_k^{R}\) and \(N_k^{C}\) be integer-valued prefix counts, possibly
+dependent on the entry array and on each other, with
+\[
+  \frac{N_k^{R}}k\xrightarrow{\PP}\gamma_R>1,\qquad
+  \frac{N_k^{C}}k\xrightarrow{\PP}\gamma_C>1 .
+\]
+For row sets \(R\) and column sets \(C\), write \(A_{R,C}^{(k)}\) for the
+corresponding finite submatrix of the array, and define
+\[
+  M_k^{\rm rpref,two}
+  =
+  \min_{\substack{R\subset[N_k^{R}],\, |R|=k\\
+                  C\subset[N_k^{C}],\, |C|=k}}
+  \smin(A_{R,C}^{(k)}),
+\]
+with the convention \(M_k^{\rm rpref,two}=+\infty\) if either prefix has size
+less than \(k\).  Then, for every \(\varepsilon>0\),
+\[
+  \PP\left\{
+  M_k^{\rm rpref,two}\le
+  \exp\!\left[-\left(
+  \frac{h(\gamma_R)+h(\gamma_C)+\kappa}{d_\F}+\varepsilon
+  \right)k\right]\right\}\to0.
+\]
+If the arrays and counts are realized on a common probability space and both
+prefix counts converge almost surely, then
+\[
+  \liminf_{k\to\infty}\frac1k\log M_k^{\rm rpref,two}
+  \ge
+  -\frac{h(\gamma_R)+h(\gamma_C)+\kappa}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+\end{corollary}
+
+\begin{proof}
+Fix \(\gamma_R^+>\gamma_R\), \(\gamma_C^+>\gamma_C\), and set
+\[
+  N_k^+=\lceil\gamma_R^+k\rceil,\qquad
+  n_k^+=\lceil\gamma_C^+k\rceil .
+\]
+Let \(M_k^{\rm two}(N,n)\) denote the two-sided minimum formed from the
+deterministic prefixes \([N]\) and \([n]\), again with the \(+\infty\)
+convention.  On the event
+\(\{N_k^R\le N_k^+,\, N_k^C\le n_k^+\}\), the random-prefix tested family is a
+subfamily of the deterministic-prefix family, so
+\[
+  M_k^{\rm rpref,two}\ge M_k^{\rm two}(N_k^+,n_k^+).
+\]
+The probability of the complementary count event tends to zero.  Applying
+Theorem~\ref{two:density-rate-lower} to the deterministic prefixes gives, for
+every fixed \(\gamma_R^+,\gamma_C^+\),
+\[
+  \PP\left\{
+  M_k^{\rm two}(N_k^+,n_k^+)\le
+  \exp\!\left[-\left(
+  \frac{h(\gamma_R^+)+h(\gamma_C^+)+\kappa}{d_\F}+\varepsilon
+  \right)k\right]\right\}\to0.
+\]
+Letting \(\gamma_R^+\downarrow\gamma_R\) and
+\(\gamma_C^+\downarrow\gamma_C\), and using continuity of \(h\), proves the
+convergence-in-probability statement.
+
+For the almost-sure lower envelope, take countable decreasing bracket sequences
+\(\gamma_{R,j}^+\downarrow\gamma_R\) and
+\(\gamma_{C,j}^+\downarrow\gamma_C\).  For each fixed pair of brackets,
+Corollary~\ref{two:finite-entropy} with a summable error budget gives the
+deterministic-prefix lower envelope almost surely.  On the event of a.s. count
+convergence, the prefix counts are eventually bounded by those deterministic
+brackets.  Intersecting over the countable bracket pairs and then sending
+\(j\to\infty\) gives the displayed liminf.
+
+This is a lower-side transfer for ordered prefixes only.  It does not assert an
+upper side, exact two-sided law, pair-correlation estimate, quaternion
+extension, value-dependent thinning or reindexing theorem, selected-column
+covariance transfer, non-diagonal right-factor transfer, or
+upper/exact Gram/sample-covariance law.  Diagonal row/column weighting is
+recorded separately in
+Corollary~\ref{two:random-prefix-diagonal-conditioning-transfer}; the
+deterministic selected-minor normalized Gram lower-side transfer is recorded
+separately in Corollary~\ref{two:random-prefix-normalized-gram-transfer}.
+\end{proof}
+
+\begin{corollary}[Random-prefix two-sided diagonal conditioning transfer]\label{two:random-prefix-diagonal-conditioning-transfer}
+In the setting of Corollary~\ref{two:random-prefix-density-rate-lower}, let
+\(d_{i,k}>0\), \(i\ge1\), and \(e_{j,k}>0\), \(j\ge1\), be finite real row and
+column weights.  The weights may be random and dependent on the entry array and
+on both prefix counts.  Assume
+\[
+  \Delta_k^{\rm twodiag}
+  =
+  \max_{1\le i\le N_k^R}|\log d_{i,k}|
+  +\max_{1\le j\le N_k^C}|\log e_{j,k}|
+  =o_\PP(k),
+\]
+omitting a maximum when the corresponding weights are absent.  For feasible
+\(R\subset[N_k^R]\), \(C\subset[N_k^C]\), \(|R|=|C|=k\), set
+\[
+  B_{R,C}^{(k)}
+  =
+  \operatorname{diag}(d_{i,k}:i\in R)\,
+  A_{R,C}^{(k)}\,
+  \operatorname{diag}(e_{j,k}:j\in C)
+\]
+and define
+\[
+  M_{k,B}^{\rm rpref,twodiag}
+  =
+  \min_{\substack{R\subset[N_k^{R}],\, |R|=k\\
+                  C\subset[N_k^{C}],\, |C|=k}}
+  \smin(B_{R,C}^{(k)}),
+\]
+with value \(+\infty\) if either prefix is infeasible.  Then, for every
+\(\varepsilon>0\),
+\[
+  \PP\left\{
+  M_{k,B}^{\rm rpref,twodiag}\le
+  \exp\!\left[-\left(
+  \frac{h(\gamma_R)+h(\gamma_C)+\kappa}{d_\F}+\varepsilon
+  \right)k\right]\right\}\to0.
+\]
+On a common coupling, if both prefix counts converge almost surely and
+\(\Delta_k^{\rm twodiag}=o(k)\) almost surely, then
+\[
+  \liminf_{k\to\infty}\frac1k\log M_{k,B}^{\rm rpref,twodiag}
+  \ge
+  -\frac{h(\gamma_R)+h(\gamma_C)+\kappa}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+\end{corollary}
+
+\begin{proof}
+For every feasible pair \((R,C)\), the diagonal min--max sandwich gives
+\[
+  \smin(B_{R,C}^{(k)})
+  \ge
+  \exp(-\Delta_k^{\rm twodiag})\,\smin(A_{R,C}^{(k)}).
+\]
+Consequently
+\[
+  M_{k,B}^{\rm rpref,twodiag}
+  \ge
+  \exp(-\Delta_k^{\rm twodiag})\,M_k^{\rm rpref,two}.
+\]
+With
+\[
+  c=\frac{h(\gamma_R)+h(\gamma_C)+\kappa}{d_\F},
+\]
+we have
+\[
+\begin{aligned}
+  \PP\{M_{k,B}^{\rm rpref,twodiag}\le e^{-(c+\varepsilon)k}\}
+  &\le
+  \PP\{\Delta_k^{\rm twodiag}>\varepsilon k/2\}  \\
+  &\quad+
+  \PP\{M_k^{\rm rpref,two}\le e^{-(c+\varepsilon/2)k}\}.
+\end{aligned}
+\]
+The first term tends to zero by hypothesis and the second by
+Corollary~\ref{two:random-prefix-density-rate-lower}.  The almost-sure lower
+envelope follows from the same pathwise inequality, the a.s. lower envelope in
+Corollary~\ref{two:random-prefix-density-rate-lower}, and
+\(\Delta_k^{\rm twodiag}=o(k)\).
+
+This is only a pathwise transfer from the unweighted independent-entry base
+array.  It does not assert that the diagonally weighted matrix satisfies the
+density hypothesis.  Non-diagonal column covariance or right-factor
+conditioning does not commute with column selection and is not included.  A
+condition-number bound alone is insufficient because a scalar row or column
+factor can shift the exponential scale.  The statement does not assert an upper
+side, exact two-sided law, pair-correlation theorem, quaternion extension,
+value-dependent thinning or reindexing theorem, selected-submatrix
+renormalization theorem, row/column weighting beyond fixed global prefix
+diagonals, upper/exact Gram/sample-covariance law, or Wishart-edge/LDP
+statement.  The deterministic selected-minor normalized Gram lower-side
+transfer is recorded separately in
+Corollary~\ref{two:random-prefix-normalized-gram-transfer}.
+\end{proof}
+
+\begin{corollary}[Gaussian random-prefix two-sided full-prefix normalization]\label{two:random-prefix-gaussian-full-prefix-normalization}
+Let \(\F\in\{\R,\C\}\).  For each \(k\), let
+\((g_{ij}^{(k)})_{i,j\ge1}\) be an infinite iid standard \(\F\)-Gaussian array,
+and let \(N_k^R,N_k^C\) be integer-valued prefix counts, possibly dependent on
+the array, such that
+\[
+  \frac{N_k^R}{k}\xrightarrow{\PP}\gamma_R>1,\qquad
+  \frac{N_k^C}{k}\xrightarrow{\PP}\gamma_C>1.
+\]
+On feasible prefixes define the full-prefix row and column norms
+\[
+  \rho_{i,k}
+  =
+  \left(\sum_{j=1}^{N_k^C}|g_{ij}^{(k)}|^2\right)^{1/2},
+  \qquad 1\le i\le N_k^R,
+\]
+and
+\[
+  \chi_{j,k}
+  =
+  \left(\sum_{i=1}^{N_k^R}|g_{ij}^{(k)}|^2\right)^{1/2},
+  \qquad 1\le j\le N_k^C.
+\]
+Choose \(\alpha_R,\alpha_C\in\{0,1\}\).  For
+\(R\subset[N_k^R]\), \(C\subset[N_k^C]\), \(|R|=|C|=k\), set
+\[
+  B_{R,C}^{(k)}
+  =
+  \operatorname{diag}(\rho_{i,k}^{-\alpha_R}:i\in R)\,
+  G_{R,C}^{(k)}\,
+  \operatorname{diag}(\chi_{j,k}^{-\alpha_C}:j\in C),
+\]
+where \(G_{R,C}^{(k)}=(g_{ij}^{(k)})_{i\in R,j\in C}\), and define
+\[
+  M_{k,B}^{\rm rpref,norm}
+  =
+  \min_{\substack{R\subset[N_k^R],\, |R|=k\\
+                  C\subset[N_k^C],\, |C|=k}}
+  \smin(B_{R,C}^{(k)}),
+\]
+with value \(+\infty\) if either prefix is infeasible.  Then, for every
+\(\varepsilon>0\),
+\[
+  \PP\left\{
+  M_{k,B}^{\rm rpref,norm}\le
+  \exp\!\left[-\left(
+  \frac{h(\gamma_R)+h(\gamma_C)}{d_\F}+\varepsilon
+  \right)k\right]\right\}\to0.
+\]
+On a common coupling, if both prefix counts converge almost surely, then
+\[
+  \liminf_{k\to\infty}\frac1k\log M_{k,B}^{\rm rpref,norm}
+  \ge
+  -\frac{h(\gamma_R)+h(\gamma_C)}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+\end{corollary}
+
+\begin{proof}
+The row and column norm factors are computed once from the raw realized prefix
+before any row or column subsets are selected, and are then frozen.  On feasible
+prefixes Gaussian rows and columns are nonzero almost surely.  Thus this is a
+special case of Corollary~\ref{two:random-prefix-diagonal-conditioning-transfer}
+with \(\kappa=0\), once we prove
+\[
+  \Delta_k^{\rm norm}
+  =
+  \alpha_R\max_{i\le N_k^R}|\log\rho_{i,k}|
+  +\alpha_C\max_{j\le N_k^C}|\log\chi_{j,k}|
+  =
+  o_\PP(k),
+\]
+and, under a.s. count convergence, \(\Delta_k^{\rm norm}=o(k)\) almost surely.
+
+We verify the norm extrema by deterministic prefix brackets; this avoids
+conditioning on the possibly entry-dependent realized counts.  Fix
+\(C_0>\max\{\gamma_R,\gamma_C\}\).  With probability tending to one, and
+eventually almost surely under a.s. count convergence,
+\[
+  k\le N_k^R,N_k^C\le C_0k .
+\]
+On this event every realized row norm is at most the norm of the first
+\(\lceil C_0k\rceil\) coordinates of the same row and at least the norm of the
+first \(k\) coordinates of that row.  Therefore, for every \(\delta>0\),
+Markov's inequality gives the summable upper-tail bound
+\[
+  \PP\left\{
+  \max_{i\le C_0k}
+  \left(\sum_{j=1}^{\lceil C_0k\rceil}|g_{ij}^{(k)}|^2\right)^{1/2}
+  >e^{\delta k}\right\}
+  \le O(k^2e^{-2\delta k}),
+\]
+and the ball-volume estimate in real dimension \(d_\F k\) gives the summable
+lower-tail bound
+\[
+  \PP\left\{
+  \min_{i\le C_0k}
+  \left(\sum_{j=1}^{k}|g_{ij}^{(k)}|^2\right)^{1/2}
+  <e^{-\delta k}\right\}
+  \le
+  \exp\{-d_\F\delta k^2+O(k\log k)\}.
+\]
+The same two estimates, with rows and columns interchanged, control the
+full-prefix column norms \(\chi_{j,k}\).  Hence the displayed
+\(\Delta_k^{\rm norm}\) is \(o_\PP(k)\), and Borel--Cantelli gives
+\(o(k)\) almost surely on any common coupling with a.s. count convergence.
+
+This is a one-shot full-prefix diagonal normalization of the raw Gaussian
+array.  It does not include per-minor normalization, such as normalizing a
+selected minor using only its selected rows or columns, nor any iterative
+balancing.  When both row and column factors are applied, the resulting matrix
+is only the one-shot diagonally scaled matrix; it is not asserted to have both
+unit row norms and unit column norms, and no Sinkhorn-type property is claimed.
+The normalized entries are dependent and need not satisfy an independent-entry
+density hypothesis.  No non-Gaussian normalization theorem, non-diagonal
+covariance/right-factor transfer, value-dependent thinning or reindexing,
+selected-submatrix renormalization theorem, upper side, exact two-sided law,
+quaternion extension, or upper/exact Gram/sample-covariance law is asserted.
+The deterministic selected-minor normalized Gram lower-side transfer is
+recorded separately in
+Corollary~\ref{two:random-prefix-normalized-gram-transfer}.
+\end{proof}
+
+\begin{corollary}[Random-prefix two-sided normalized Gram/sample-covariance transfer]\label{two:random-prefix-normalized-gram-transfer}
+In the setting of
+Corollary~\ref{two:random-prefix-diagonal-conditioning-transfer}, define
+\[
+  \Lambda_{k,B}^{\rm rpref,twodiag}
+  =
+  \min_{\substack{R\subset[N_k^R],\, |R|=k\\
+                  C\subset[N_k^C],\, |C|=k}}
+  \lambda_{\min}\!\left(k^{-1}(B_{R,C}^{(k)})^*B_{R,C}^{(k)}\right),
+\]
+with value \(+\infty\) if either prefix is infeasible.  Then, for every
+\(\varepsilon>0\),
+\[
+  \PP\left\{
+  \Lambda_{k,B}^{\rm rpref,twodiag}\le
+  \exp\!\left[-\left(
+  \frac{2(h(\gamma_R)+h(\gamma_C)+\kappa)}{d_\F}
+  +\varepsilon
+  \right)k\right]\right\}\to0.
+\]
+On a common coupling, if both prefix counts converge almost surely and
+\(\Delta_k^{\rm twodiag}=o(k)\) almost surely, then
+\[
+  \liminf_{k\to\infty}\frac1k\log \Lambda_{k,B}^{\rm rpref,twodiag}
+  \ge
+  -\frac{2(h(\gamma_R)+h(\gamma_C)+\kappa)}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+The same conclusion applies to the Gaussian full-prefix-normalized matrices of
+Corollary~\ref{two:random-prefix-gaussian-full-prefix-normalization}, with
+\(\kappa=0\) and \(B_{R,C}^{(k)}\) interpreted as in that corollary.
+\end{corollary}
+
+\begin{proof}
+For every feasible \(R,C\),
+\[
+  \lambda_{\min}\!\left(k^{-1}(B_{R,C}^{(k)})^*B_{R,C}^{(k)}\right)
+  =
+  k^{-1}\smin(B_{R,C}^{(k)})^2.
+\]
+Taking minima over the same feasible family gives the pathwise identity
+\[
+  \Lambda_{k,B}^{\rm rpref,twodiag}
+  =
+  k^{-1}\bigl(M_{k,B}^{\rm rpref,twodiag}\bigr)^2 .
+\]
+Let \(c=(h(\gamma_R)+h(\gamma_C)+\kappa)/d_\F\).  If
+\(\Lambda_{k,B}^{\rm rpref,twodiag}\le e^{-(2c+\varepsilon)k}\), then
+\[
+  M_{k,B}^{\rm rpref,twodiag}
+  \le
+  k^{1/2}e^{-(c+\varepsilon/2)k}
+  \le
+  e^{-(c+\varepsilon/4)k}
+\]
+for all large \(k\), since \((\log k)/k\to0\).  The probability statement
+therefore follows from
+Corollary~\ref{two:random-prefix-diagonal-conditioning-transfer}.  The
+almost-sure lower envelope follows from
+\[
+  \frac1k\log \Lambda_{k,B}^{\rm rpref,twodiag}
+  =
+  2\,\frac1k\log M_{k,B}^{\rm rpref,twodiag}
+  -\frac{\log k}{k}
+\]
+and the a.s. lower envelope in the same corollary.
+
+This is only deterministic squaring for already selected \(k\times k\) minors
+with the selected-minor normalization \(k^{-1}\).  It is not an upper or exact
+two-sided Gram/sample-covariance law, a Wishart-edge or LDP theorem, a
+pair-correlation theorem, a non-diagonal covariance or right-factor transfer, a
+row-Gram result for rectangular matrices, a per-minor normalization theorem, a
+value-dependent selection theorem, or a quaternion statement.
+\end{proof}
+
+\begin{corollary}[Almost-sure geometric lower envelopes]\label{cor:as-geometric-lower-envelopes}
+Assume the corresponding matrices for all dimensions are realized on a common
+probability space.
+
+For fixed excess \(r\ge0\), the Gaussian lower side of
+Theorem~\ref{rect:lower} strengthens to
+\[
+  \liminf_{m\to\infty}\frac1m\log M_m^{(r)}
+  \ge -\frac{h(\gamma)}{d_\F(r+1)}
+  \qquad\hbox{almost surely}.
+\]
+Under the bounded-density rate hypotheses of Theorem~\ref{rect:bd-lower},
+\[
+  \liminf_{m\to\infty}\frac1m\log M_m^{(r)}
+  \ge -\frac{h(\gamma)}{d_\F(r+1)}-\frac{\kappa}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+Under the directional row hypotheses of
+Corollary~\ref{rect:directional-row-fixed-excess},
+\[
+  \liminf_{m\to\infty}\frac1m\log M_m^{(r)}
+  \ge -\frac{h(\gamma)+\beta_r^{\rm dir}}{d_\F(r+1)}
+  \qquad\hbox{almost surely}.
+\]
+
+In the proportional-excess setting of
+Proposition~\ref{rect:proportional-density-rate},
+\[
+  \liminf_{m\to\infty}\frac1m\log M_m^{(\ell)}
+  \ge -\frac{\kappa}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+
+For the fixed-\(k\) Gaussian square-row setting of Theorem~\ref{kth:lower},
+\[
+  \liminf_{m\to\infty}\frac1m\log M_m[k]
+  \ge -\frac{h(\gamma)}{d_\F k^2}
+  \qquad\hbox{almost surely}.
+\]
+For the fixed-excess fixed-\(k\) Gaussian setting of
+Corollary~\ref{rect-kth:fixed-aspect-lower},
+\[
+  \liminf_{m\to\infty}\frac1m\log M_m^{(r)}[k]
+  \ge -\frac{h(\gamma)}{d_\F k(k+r)}
+  \qquad\hbox{almost surely}.
+\]
+For the normalized Gram eigenvalue statistic of
+Corollary~\ref{kth:gram-lower},
+\[
+  \liminf_{m\to\infty}\frac1m\log \Lambda_m[k]
+  \ge -\frac{2h(\gamma)}{d_\F k^2}
+  \qquad\hbox{almost surely}.
+\]
+For the normalized fixed-excess fixed-\(k\) Gram statistic of
+Corollary~\ref{rect-kth:gram-lower},
+\[
+  \liminf_{m\to\infty}\frac1m\log \Lambda_m^{(r)}[k]
+  \ge -\frac{2h(\gamma)}{d_\F k(k+r)}
+  \qquad\hbox{almost surely}.
+\]
+
+For two-sided minors, with \(H=h(\gamma_R)+h(\gamma_C)\),
+Theorem~\ref{two:lower} gives
+\[
+  \liminf_{k\to\infty}\frac1k\log M
+  \ge -\frac{H}{d_\F}
+  \qquad\hbox{almost surely},
+\]
+Theorem~\ref{two:density-rate-lower} gives
+\[
+  \liminf_{k\to\infty}\frac1k\log M
+  \ge -\frac{H+\kappa}{d_\F}
+  \qquad\hbox{almost surely},
+\]
+and Corollary~\ref{two:smoothed-lower} gives
+\[
+  \liminf_{k\to\infty}\frac1k\log M_{\sigma,k}^{\rm two}
+  \ge -\frac{H}{d_\F}-\eta
+  \qquad\hbox{almost surely}.
+\]
+\end{corollary}
+
+\begin{proof}
+The fixed-excess and two-sided proofs give exponentially summable bad-event
+probabilities at any threshold larger than the displayed constant, so
+Corollary~\ref{cor:as-lower-envelope} applies.  The directional fixed-excess
+statement uses the finite-budget estimate in
+Corollary~\ref{rect:directional-row-fixed-excess} with summable \(e^{-u_m}\).
+The fixed-\(k\) statement uses the finite-budget estimate in
+Theorem~\ref{kth:lower} with summable \(e^{-u_m}\); the fixed-excess
+fixed-\(k\) statement uses Theorem~\ref{rect-kth:lower} in the same way; the
+Gram statements follow from
+\(\Lambda_m[k]=m^{-1}M_m[k]^2\) and
+\(\Lambda_m^{(r)}[k]=(m+r)^{-1}(M_m^{(r)}[k])^2\).  In the
+proportional-excess case, the
+one-matrix exponent is proportional to \(m\), so the bad-event probability is
+\(\exp(-c_\varepsilon m^2+O(m))\) at every threshold
+\(\kappa/d_\F+\varepsilon\), which is also summable.
+
+For the two-sided smoothed statement, use the scaling
+\[
+  F_k+\sigma_kG_k=\sigma_k(\sigma_k^{-1}F_k+G_k)
+\]
+and the two-sided Gaussian lower envelope for the shifted standard Gaussian
+matrix inside the parentheses, exactly as in
+Corollary~\ref{cor:as-square-lower-envelope}.
+\end{proof}
+
+\begin{conjecture}[Two-sided base, conditional]\label{two:exact}
+For iid Gaussian entries under the hypotheses of Theorem~\ref{two:lower},
+\[
+  \frac1k\log M\xrightarrow{\PP}-\frac{h(\gamma_R)+h(\gamma_C)}{d_\F},
+\]
+conditional on the two-sided pair-correlation input below.
+\end{conjecture}
+
+The Gaussian lower bound is Theorem~\ref{two:lower}.  The density-rate and
+smoothed statements above are lower-side estimates only.  The Gaussian upper
+bound is again the second-moment half of Theorem~\ref{thm:principle}: one needs
+\[
+  \frac{\Var Z(s)}{(\EE Z(s))^2}\to0,
+  \qquad
+  Z(s)=\sum_{|R|=|C|=k}\mathbf{1}_{\{\smin(A_{R,C})\le e^{-sk}\}},
+\]
+for every \(s<(h(\gamma_R)+h(\gamma_C))/d_\F\).  The new feature relative to
+Section~\ref{sec:universality} is that two submatrices can overlap in their rows,
+in their columns, or in both, so the pair-correlation analysis runs over the
+two-parameter family of overlaps \((|R\cap R'|,|C\cap C'|)\) and must control the
+joint small-ball behaviour of two \(k\times k\) Gaussian minors that share a
+sub-block.  We do not establish this estimate; the two-sided base is therefore
+conditional on it, exactly as the square base of Section~\ref{sec:universality}
+is conditional on the one-sided pair-correlation condition.
+
+\subsection{Endpoint aspect asymptotics}\label{sec:aspect-asymptotics}
+
+The aspect ratio enters every fixed-shape row-submatrix estimate through the
+Stirling entropy
+\[
+  h(\gamma)=\gamma\log\gamma-(\gamma-1)\log(\gamma-1),
+  \qquad
+  c_\gamma=e^{h(\gamma)}
+  =\frac{\gamma^\gamma}{(\gamma-1)^{\gamma-1}},
+  \qquad \gamma>1 .
+\]
+The following calculation is deterministic.  It calibrates the fixed-aspect
+formulas above; it is not a uniform moving-aspect random-matrix theorem.
+
+\begin{proposition}[Endpoint asymptotics of the entropy base]\label{prop:h-asymptotics}
+The function \(h\) is increasing and concave on \((1,\infty)\).  As
+\(\gamma=1+\delta\downarrow1\), with \(L=\log(1/\delta)\),
+\[
+  h(1+\delta)
+  =\delta L+\delta+\frac{\delta^2}{2}-\frac{\delta^3}{6}
+    +O(\delta^4),
+\]
+and
+\[
+  c_{1+\delta}
+  =1+\delta(L+1)
+   +\frac{\delta^2}{2}\bigl((L+1)^2+1\bigr)
+   +O(\delta^3L^3).
+\]
+In particular \(h(1+\delta)\sim\delta\log(1/\delta)\) and
+\(c_{1+\delta}\to1\).  As \(\gamma\to\infty\),
+\[
+  h(\gamma)
+  =\log\gamma+1-\frac{1}{2\gamma}
+   -\frac{1}{6\gamma^2}
+   -\frac{1}{12\gamma^3}
+   +O(\gamma^{-4}),
+\]
+and
+\[
+  c_\gamma
+  =e\gamma\left(
+    1-\frac{1}{2\gamma}
+     -\frac{1}{24\gamma^2}
+     -\frac{1}{48\gamma^3}
+     +O(\gamma^{-4})
+  \right).
+\]
+\end{proposition}
+
+\begin{proof}
+The derivatives are
+\[
+  h'(\gamma)=\log\frac{\gamma}{\gamma-1},
+  \qquad
+  h''(\gamma)=-\frac{1}{\gamma(\gamma-1)}.
+\]
+Thus \(h\) is increasing and concave.  For \(\gamma=1+\delta\),
+\[
+  h(1+\delta)=(1+\delta)\log(1+\delta)-\delta\log\delta,
+\]
+and the Taylor expansion of \((1+\delta)\log(1+\delta)\) gives the first
+asymptotic display.  Exponentiating gives the expansion of \(c_{1+\delta}\).
+
+For large \(\gamma\),
+\[
+  h(\gamma)=\log\gamma-(\gamma-1)\log(1-\gamma^{-1})
+  =\log\gamma+1-\sum_{j\ge1}\frac{1}{j(j+1)\gamma^j}.
+\]
+Expanding the exponential of the first three correction terms gives the stated
+formula for \(c_\gamma\).
+\end{proof}
+
+\begin{remark}[Interpretation and moving aspects]\label{rem:moving-aspect}
+For fixed selected excess \(r\), the proved lower threshold and the conjectural
+exact fixed-excess base involve
+\[
+  B_{r,\F}(\gamma)=\frac{h(\gamma)}{d_\F(r+1)}.
+\]
+Thus barely overcomplete row pools have \(B_{r,\F}(1+\delta)\sim
+\delta\log(1/\delta)/(d_\F(r+1))\), while very large fixed aspect ratios increase
+the exponent only like \(\log\gamma/(d_\F(r+1))\).  The complex exponent is half
+the real exponent.
+
+The preceding asymptotics are pointwise in \(\gamma\).  Matching exact bases are
+proved or conjectured above for \(N_m/m\to\gamma>1\) with fixed limiting
+\(\gamma\).  If \(\gamma_m=N_m/m\) tends to \(1\) or to infinity with \(m\), an
+exact moving-aspect law would need uniform small-ball and pair-correlation input.
+The lower side is less rigid: Corollaries~\ref{cor:finite-entropy-square},
+\ref{rect:finite-entropy}, and \ref{two:finite-entropy} keep the finite binomial
+entropy budget instead of passing to a fixed \(h(\gamma)\).
+The entropy identity itself gives, for \(N_m=m+r_m\) with \(r_m=o(m)\),
+\[
+  m h(N_m/m)=r_m\log(m/r_m)+r_m+O(r_m^2/m),
+\]
+but this is only an entropy-scale statement.  When this entropy is comparable
+to \(\log m\), polynomial hard-edge factors and Stirling constants can affect
+the actual scale.
+\end{remark}

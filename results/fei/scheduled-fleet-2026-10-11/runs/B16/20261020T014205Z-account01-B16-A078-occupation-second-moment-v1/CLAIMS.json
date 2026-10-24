@@ -1,0 +1,31 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261020T014205Z-account01-B16-A078-occupation-second-moment-v1",
+  "stream": "B16",
+  "primary_packet": "A078",
+  "stable_gap": "G-A078-BOOLEAN-CODING-PADDING",
+  "target": "For every genuine Boolean sign on every finite uniform cube, prove or refute existence of one absolute a>=0 and 0<=b<1 such that G(f)<=a I(f)+b U(f).",
+  "candidate": "F_n(x,y)=(-1)^(phi_n^{-1}(x) dot y), where phi_n is the median-threshold triangular bijection; physical dimension 2n.",
+  "exact_normalization": {"H": "2n", "I": "n", "U": "n"},
+  "analytic_claim": {
+    "statement": "G_y(F_n)>=n+n^2/1142400 for every n>=131072, conditional on the analytic occupation-time and extension-tail proof.",
+    "status": "CONDITIONAL",
+    "scope": "GU only; not an FEI counterexample"
+  },
+  "all_parameter_witness": {
+    "N": "max(131072, floor(1142400*(a+b+2))+1)",
+    "residual": "(G(F_N)-a I(F_N)-b U(F_N))/I(F_N)>3",
+    "quantifiers": "For every fixed finite a>=0 and 0<=b<1"
+  },
+  "frozen_pair": {
+    "a": "4",
+    "b": "3/4",
+    "N": 7711201,
+    "physical_dimension": 15422402,
+    "residual_lower_bound": "3+1/1142400"
+  },
+  "ratios": {"G_over_I": "tends to infinity conditionally", "U_over_I": "1 exactly", "H_over_I": "2 exactly"},
+  "reduction": "The source-reviewed one-way GU-to-FEI implication is H<=(2+2a/(1-b))I; it is not used to infer the GU obstruction.",
+  "review_status": {"A092": "pending", "A088": "pending", "A080": "pending scope audit", "independent_end_to_end_reviews": 0},
+  "full_fei_status": "OPEN"
+}

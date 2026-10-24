@@ -1,0 +1,178 @@
+{
+  "auditor": "w347",
+  "manager": "claude-4a88bc43",
+  "bundle": "drafts/bundle_001.json",
+  "method": "Independent check of statements, hypotheses and proof; no expected verdict supplied.",
+  "result_packets": [
+    {
+      "key": "p0340-tree",
+      "problem_id": "P0340",
+      "statement": "For a finite rooted full binary tree T with n leaves and edge height h(T), define l(leaf)=0 and l(T)=l(L)+l(R)+2+|h(L)-h(R)|. If D(T) is the sum of leaf depths, then l(T)=sum over internal vertices v of h(T_v)+h(T), and 2(n-1)<=l(T)<=D(T). This is a deterministic lemma; independent audit is pending.",
+      "label": "proof",
+      "proof_file": "P0340_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "p0340-height",
+      "problem_id": "P0340",
+      "statement": "Let T_n be the independent recursive binary splitting tree with q_m(i)=m/[2H_(m-1)i(m-i)], where H_k=sum_(j=1)^k 1/j. For n>=2 put p=1/(2H_(n-1)), b=ceil(log_2 n), and theta=-log(1-p/2). Its expected edge height is at most (log n+b log 2)/theta <=4H_(n-1)(2 log n+log 2). Each tagged leaf depth is bounded by a sum of b geometric(p) waiting times, whose exponential moment at theta is 2^b. No independence among leaf depths is required. Author proof; independent audit pending.",
+      "label": "proof",
+      "proof_file": "P0340_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "p0340-linear",
+      "problem_id": "P0340",
+      "statement": "For T_n with independent recursive splits q_m(i)=m/[2H_(m-1)i(m-i)] and drawn-length recursion l(T)=l(L)+l(R)+2+|h(L)-h(R)|, with leaf height and length zero, put h_m=E h(T_m). Then E l(T_n)/n tends to c=(6/pi^2) sum_(m=2)^infinity H_(m-1)h_m/[m(m-1)], where 2<=c<infinity. The proof uses the published tagged-clade occupation limit a(n,m)->6H_(m-1)/[pi^2(m-1)] and the uniform block estimate sum_(j=b+1)^(2b) a(n,j)<=2H_(2b-1). This is an author-checked proof candidate; no independently certified open-problem solution or law of large numbers is claimed.",
+      "label": "proof",
+      "proof_file": "P0340_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "p0340-numeric",
+      "problem_id": "P0340",
+      "statement": "The local check_p0340.py run checked 6918 ordered full binary trees through ten leaves with no tree-identity or depth-bound failures. A float64 height-distribution recursion agrees with weighted tree enumeration through n=10 and gives E l(T_128)/128=4.496140445692661. At n=128 the earlier proof's height upper bound is 587.772776 and the tightened upper bound is 205.700923, a 65.00% reduction in that bound. These are finite numerical checks, not a proof of the limiting constant. Current Lean setup was refused by the compute governor; no new Lean verification is claimed.",
+      "label": "numerical evidence",
+      "proof_file": "measurement_p0340.json",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "c0036-two",
+      "problem_id": "C0036",
+      "statement": "For a Hermitian positive contraction Q=[[a,z],[conj(z),a]], put p=sqrt(a^2-|z|^2) and q=1-sqrt((1-a)^2-|z|^2). Its determinantal law stochastically dominates iid Bernoulli(p) and is stochastically dominated by iid Bernoulli(q). Both parameters are optimal, including when Q or I-Q is singular. This proves only the two-site case of the general equivariant conjecture; independent audit pending.",
+      "label": "proof",
+      "proof_file": "C0036_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "c0036-necessary",
+      "problem_id": "C0036",
+      "statement": "For a determinantal probability law with positive-contraction kernel Q on N>=1 sites, iid lower stochastic domination at density b implies b<=det(Q)^(1/N); iid upper stochastic domination at density c implies c>=1-det(I-Q)^(1/N). The all-present and all-absent events prove these inequalities. For a finite transitive equivariant kernel these roots are the normalized Fuglede-Kadison determinants. Necessity does not imply the conjectured general sufficiency; independent audit pending.",
+      "label": "proof",
+      "proof_file": "C0036_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "c0036-conditioning",
+      "problem_id": "C0036",
+      "statement": "For Q=[[1/2,1/4],[1/4,1/2]], the minimum presence probability conditioned on the other site is 3/8, while the sharp iid lower domination density is sqrt(3)/4. Thus a worst-full-rest-conditional lower-bound method does not certify the geometric-mean density. The relevant Schur complement is odds s; its presence probability is s/(1+s), not s. Independent audit pending.",
+      "label": "proof",
+      "proof_file": "C0036_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "p0013-defects",
+      "problem_id": "P0013",
+      "statement": "For a complement-invariant random graph G on n>=1 vertices, let X=theta(G)/sqrt(n), Y=theta(complement G)/sqrt(n), R=sqrt(XY), and Z=(log X-log Y)/2. Using theta(G)theta(complement G)>=n, E theta(G)/sqrt(n)-1=E(R-1)+E[R(cosh Z-1)], with both terms nonnegative. Therefore the expectation asymptotic at sqrt(n) is equivalent to both defect expectations tending to zero. No defect estimate for G(n,1/2) is proved here. Independent audit pending.",
+      "label": "proof",
+      "proof_file": "P0013_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "p0150-whisker",
+      "problem_id": "P0150",
+      "statement": "Attach floor(sqrt(m)) new path vertices to the center of an m-vertex star, give all vertices uniform probability mass, and rescale graph distance by m^(-1/4). Every fixed iid sampled distance matrix tends in probability to zero, since the path mass tends to zero and star distances are at most 2m^(-1/4). The rescaled diameter is (floor(sqrt(m))+1)m^(-1/4), which diverges. Thus Gromov-weak convergence to a point need not imply GH tightness even for uniform full-support finite graphs. This family is not a heavy-tailed critical configuration model; independent audit pending.",
+      "label": "proof",
+      "proof_file": "P0150_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "p0150-mass",
+      "problem_id": "P0150",
+      "statement": "Finite sampled distance matrices can miss low-mass appendages. A route to compact metric convergence must separately control the mass of every fixed-radius ball (or obtain an equivalent tightness estimate). The star-plus-path construction illustrates this requirement; it does not show that the requested critical configuration-model degree assumptions are insufficient. Their minimal-assumption lower-mass estimate remains unproved in this pass.",
+      "label": "scope guard",
+      "proof_file": "P0150_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "c0003-tail",
+      "problem_id": "C0003",
+      "statement": "For a in [0,1], let W_a>=0 have survival probability 1/e on [0,e) and 1/[t(log t)^a] for t>=e. For s>0, E W_a^s is finite exactly when s<1. As lambda decreases to zero, 1-E exp(-lambda W_a) is asymptotic to lambda[log(1/lambda)]^(1-a)/(1-a) for a<1, and to lambda log log(1/lambda) for a=1. Thus the moment threshold alone does not imply a positive finite lambda log(1/lambda) coefficient. These scalar laws are not asserted to satisfy the DGFF Gibbs-Markov or conformal axioms; independent audit pending.",
+      "label": "proof",
+      "proof_file": "C0003_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "c0060-fiber",
+      "problem_id": "C0060",
+      "statement": "Let c be a cut vertex of a connected graph G and let a,b lie on opposite sides. Any finite set F contained in {c} x Z can be bypassed in G x Z by moving to a height not used by F, crossing via c there, and returning along the other side. For the three-vertex path a-c-b, removing (c,z) for |z|<=H leaves a shortest a_0-to-b_0 path of length 2H+4. Hitting a corner region alone is not a proof of separation. This does not determine the vacant-set threshold of an infinite interlacement trace; independent audit pending.",
+      "label": "proof",
+      "proof_file": "C0060_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "c0085-sublevel",
+      "problem_id": "C0085",
+      "statement": "On a connected countable locally finite infinite weighted graph, invasion starts at o and repeatedly adds the other endpoint of a minimum-weight boundary edge. If the ordinary weight-at-most-p root cluster C_p(o) is finite, invasion explores all of it before selecting its first edge with weight greater than p. Hence, under iid uniform weights and almost-sure finiteness of C_pc(o), P(x in IPC)>=P_pc(o connected to x). This compares with an ordinary critical cluster, not the incipient infinite cluster; it does not yield the target invasion exponent d-4. Independent audit pending.",
+      "label": "proof",
+      "proof_file": "C0085_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "c0131-pathwise",
+      "problem_id": "C0131",
+      "statement": "For an adapted nearest-neighbor walk on a connected countable graph, suppose each neighbor transition has conditional probability at least kappa>0 given the complete past. Almost surely, either every vertex is visited infinitely often or every vertex is visited only finitely often. If u has infinitely many visits, the chance of missing a fixed neighbor at k successive opportunities is at most (1-kappa)^k; propagation along finite paths proves the claim. On Z^d the second alternative leaves every finite ball eventually. This does not make the first alternative's annealed probability zero or one. Independent audit pending.",
+      "label": "proof",
+      "proof_file": "C0131_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "c0131-mixture",
+      "problem_id": "C0131",
+      "statement": "A fair global coin selecting either simple random walk on Z^2 or a constant-kernel walk with directional probabilities (3/8,1/8,1/4,1/4) yields a uniformly elliptic walk with recurrent-alternative probability 1/2. The simple-random-walk branch is recurrent; the biased branch has drift 1/4 and is transient by the strong law. This global mixture is not an iid cookie environment and is not a counterexample to the iid excited-walk question. Independent audit pending.",
+      "label": "proof",
+      "proof_file": "C0131_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "p0016-literature",
+      "problem_id": "P0016",
+      "statement": "The cached LITERATURE_P2.md receipt attributes an answer to Yitzchak Shmalo, Extreme least singular values of Gaussian row submatrices and a phase retrieval stability problem, arXiv:2607.06249 (7 July 2026), Theorem 1.1 and Corollary 1.2. For standard real Gaussian (2m-1)-by-m frames it reports omega(A_m)=4^(-m+o_P(m)), equivalently m^(-1)log omega(A_m)->-log 4 in probability. This matches Randomstrasse101 Open Problem 21; the old attempted_unsolved ranking is stale according to that receipt. The primary paper and its full proof were not newly checked here; confirm the citation and normalization before admitting the status correction. This is a literature record, not an original solution.",
+      "label": "literature answer from cached receipt",
+      "proof_file": "P0016_literature.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "p0016-numeric",
+      "problem_id": "P0016",
+      "statement": "With NumPy RNG seed 343, the local check minimizes the smallest singular value over every m-row subset of 64 standard real Gaussian frames for each m=1,...,6: 384 frames and 40,768 minors. At m=6 the median of 4^m omega is 2.5933238602603175. At m=1 the exact omega law is |N(0,1)|. These finite samples check the row-subframe convention and provide numerical evidence only; they do not establish the asymptotic or an exponential limit law.",
+      "label": "numerical evidence",
+      "proof_file": "measurement_p0016.json",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "p0046-interfaces",
+      "problem_id": "P0046",
+      "statement": "Let F be a random spanning forest on a connected countable locally finite graph G. Join F-components when infinitely many G-edges run between them. If this component graph is almost surely connected, then F united with independent Bernoulli(delta) G-edges is almost surely connected for every 0<delta<1. If F is invariant, the union is invariant and P(e in union minus F)<=delta for each edge. Each infinite interface receives an edge almost surely, and countably many such assertions hold simultaneously. The interface assumption is not proved for a general FUSF; independent audit pending.",
+      "label": "proof",
+      "proof_file": "P0046_proof.md",
+      "audit_status": "PENDING"
+    },
+    {
+      "key": "p0046-columns",
+      "problem_id": "P0046",
+      "statement": "In Z^2 let F consist of all vertical edges. Every 0<delta<1 independent edge sprinkling connects its columns almost surely. In a rectangular window of q>=1 columns and r>=1 horizontal levels, retaining its vertical forest, the exact connectivity probability is [1-(1-delta)^r]^(q-1). Adjacent column pairs have disjoint r-edge interfaces. This example is a spanning forest, not an assertion about the FUSF law; independent audit pending.",
+      "label": "proof",
+      "proof_file": "P0046_proof.md",
+      "audit_status": "PENDING"
+    }
+  ],
+  "review_points": [
+    "P0340: check split-law size bias, conditional subtree law, dyadic tail, pointwise occupation source and geometric coupling.",
+    "C0036: enumerate every increasing event, check complements and singular endpoints; distinguish odds from probability.",
+    "P0013: use complement-invariant law and the inequality, not exact theta product for general graphs.",
+    "P0150/C0003/C0060: distinguish generic route counterexamples from instances of the original stochastic hypotheses.",
+    "C0085: require finite ordinary sublevel root cluster; do not silently substitute IIC.",
+    "C0131: distinguish a pathwise alternative from annealed zero-one law; global mixture is not iid cookies.",
+    "P0016: inspect the primary Shmalo paper and normalization; local receipt and numerics are not its proof.",
+    "P0046: require connected infinite-interface graph; this has not been proved for arbitrary FUSF.",
+    "No current Lean verification: lean_current_receipt.json records setup refusal."
+  ],
+  "verdict_schema": {
+    "key": "entry key",
+    "verdict": "KEEP|FIX|DROP",
+    "why": "independent reasons",
+    "full_proof_check": "true only if the complete applicable proof and cited hypotheses were checked"
+  },
+  "new_solution_certified": false
+}

@@ -1,0 +1,232 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w516",
+  "bundle_slug": "lqg-gaussian-minimum-response-w516-001",
+  "entries": [
+    {
+      "key": "finite-model",
+      "namespace": "probability.lqg",
+      "logical_name": "finite-gaussian-exponential-path-response-model",
+      "kind": "definition",
+      "title": "Finite Gaussian exponential path response model",
+      "statement": "Let X be a centered finite Gaussian vector with covariance C, and let a_p be finitely many nonnegative nonzero coefficient vectors. For xi>0 set l_p=sum_i a_pi exp(xi X_i), f_p=log l_p, w_pi=a_pi exp(xi X_i)/l_p. For beta>0 define pi_p=exp(-beta f_p)/sum_q exp(-beta f_q) and F_beta=-log sum_p exp(-beta f_p)/beta. These definitions represent finite candidate path lengths, not an identification with an LQG metric.",
+      "proof_text": null,
+      "assumptions": [
+        "C positive semidefinite; finite path family"
+      ],
+      "domain": "probability theory; Gaussian optimization; LQG",
+      "source": {
+        "source_id": "owner-probability-campaign-w516-P0297-20261010:model",
+        "url": "file:///~/brain_workers/w516/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-pending-w518",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l1",
+      "namespace": "probability.lqg",
+      "logical_name": "gaussian-optimized-length-response-with-switching",
+      "kind": "concept",
+      "title": "Gaussian optimized-length response includes switching",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending: For a centered finite Gaussian vector X with covariance C, finite nonnegative nonzero coefficient vectors a_p, xi,beta>0, let f_p=log sum_i a_pi exp(xi X_i), w_pi=a_pi exp(xi X_i)/exp(f_p), pi_p=exp(-beta f_p)/sum_q exp(-beta f_q), bar_w=sum_p pi_p w_p, A=sum_p pi_p[sum_i C_ii w_pi-w_p^T C w_p], and B=sum_p pi_p w_p^T C w_p-bar_w^T C bar_w. Then d/dxi E[-log sum_p exp(-beta f_p)/beta]=xi E[A-beta B], B>=0, and 0<=A<=max_i C_ii.",
+      "proof_text": null,
+      "assumptions": [
+        "X centered Gaussian; C positive semidefinite",
+        "Finitely many coefficient vectors, nonnegative and each nonzero",
+        "xi,beta>0"
+      ],
+      "domain": "probability theory; Gaussian optimization; LQG",
+      "source": {
+        "source_id": "owner-probability-campaign-w516-P0297-20261010:L1",
+        "url": "file:///~/brain_workers/w516/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-pending-w518",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l2",
+      "namespace": "probability.lqg",
+      "logical_name": "finite-geodesic-switching-zero-temperature-limit",
+      "kind": "concept",
+      "title": "Finite zero-temperature switching limit",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending: Let X be a centered finite Gaussian vector with positive definite covariance C, and let a_p be finitely many distinct nonnegative nonzero coefficient vectors. For xi>0 let f_p=log sum_i a_pi exp(xi X_i), w_pi=a_pi exp(xi X_i)/exp(f_p), and pi_p=exp(-beta f_p)/sum_q exp(-beta f_q). Put B_beta=sum_p pi_p w_p^T C w_p-(sum_p pi_p w_p)^T C(sum_p pi_p w_p). At each fixed xi>0 the minimizer p_* is unique almost surely, S=lim_beta beta E B_beta exists, is finite and nonnegative, and d/dxi E min_p f_p=xi(E[sum_i C_ii w_{p_*i}-w_{p_*}^T C w_{p_*}]-S)<=xi max_i C_ii. The beta limit is taken at fixed finite model; no uniform scale limit follows.",
+      "proof_text": null,
+      "assumptions": [
+        "L1 assumptions",
+        "C positive definite",
+        "Duplicate coefficient vectors removed",
+        "Fixed xi>0; beta limit taken before any scale limit"
+      ],
+      "domain": "probability theory; Gaussian optimization; LQG",
+      "source": {
+        "source_id": "owner-probability-campaign-w516-P0297-20261010:L2",
+        "url": "file:///~/brain_workers/w516/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-pending-w518",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l3",
+      "namespace": "probability.lqg",
+      "logical_name": "two-parallel-gaussian-edges-switching-obstruction",
+      "kind": "concept",
+      "title": "Two Gaussian edges refute omitted switching",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending: For two parallel edges of base length one and independent standard normal X_1,X_2, F=log min(exp(xi X_1),exp(xi X_2))=xi min(X_1,X_2). Its expected xi derivative is -1/sqrt(pi), the within-path covariance term is zero, and the switching term is S=1/(xi sqrt(pi)). Omitting switching therefore has absolute derivative error 1/sqrt(pi).",
+      "proof_text": null,
+      "assumptions": [
+        "xi>0",
+        "Two independent standard normal costs and two single-edge candidate paths"
+      ],
+      "domain": "probability theory; Gaussian optimization; LQG",
+      "source": {
+        "source_id": "owner-probability-campaign-w516-P0297-20261010:L3",
+        "url": "file:///~/brain_workers/w516/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-pending-w518",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l4",
+      "namespace": "probability.lqg",
+      "logical_name": "gaussian-minimum-log-length-mean-median-bridge",
+      "kind": "concept",
+      "title": "Gaussian minimum log-length mean-median bridge",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending: Let X be a centered finite Gaussian vector with covariance C, a_p finitely many nonnegative nonzero coefficient vectors, xi>0, and F=min_p log sum_i a_pi exp(xi X_i). With V=max_i C_ii one has Var(F)<=xi^2 V and, for every median M of F, |E F-M|<=xi sqrt(2V). For smooth regularized GFF crossing log lengths with T=log(1/epsilon), variance diagonal T+O(1), finite L2 field supremum and the cited median exponent a_epsilon=epsilon^(1-xi Q(xi)+o(1)), finite polygonal-path/quadrature approximants with uniform-on-compact-xi L2 error <=1/n satisfy E F_n/T_n ->xi Q(xi)-1 pointwise. Such finite approximants exist; no identification with a fixed-direction lattice metric is assumed.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite Gaussian gradient bound and Gaussian Poincare inequality",
+        "For the LQG extension: smooth regularized GFF with finite L2 supremum, diagonal variance T+O(1), and cited median exponent",
+        "Finite approximants have uniform-in-xi L2 error <=1/n; tiny auxiliary noise makes their covariances positive definite"
+      ],
+      "domain": "probability theory; Gaussian optimization; LQG",
+      "source": {
+        "source_id": "owner-probability-campaign-w516-P0297-20261010:L4",
+        "url": "file:///~/brain_workers/w516/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-pending-w518",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l5",
+      "namespace": "probability.lqg",
+      "logical_name": "lqg-response-defect-measure-reduction",
+      "kind": "concept",
+      "title": "LQG response-defect measure reduction",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending: Let X_n be centered finite Gaussian vectors with positive definite covariances C_n, and let F_n(xi)=min_p log sum_i a_{n,pi} exp(xi X_{n,i}) for finite nonnegative nonzero coefficient vectors. Put V_n=max_i C_{n,ii}. Suppose T_n->infinity, V_n/T_n->1, and E F_n(xi)/T_n converges pointwise on an interval to the continuous function g(xi)=xi Q(xi)-1. Then Psi_n=(V_n/T_n)xi^2/2-E F_n/T_n are nondecreasing; their nonnegative Stieltjes measures converge weakly on compact interior intervals to mu=d[xi^2/2-g(xi)]. If xi_*=1/sqrt(6) is in the interval and g(xi_*)=-1/6, then for xi>xi_* one has g(xi)=-1/6+(xi^2-1/6)/2-mu((xi_*,xi]); for xi<xi_* add mu((xi,xi_*]) instead. This identity does not compute mu or Q and does not assume a density.",
+      "proof_text": null,
+      "assumptions": [
+        "L1-L4",
+        "Continuity of cited Q and the Brownian anchor",
+        "V_n/T_n ->1",
+        "No absolute continuity or differentiated scale limit is assumed"
+      ],
+      "domain": "probability theory; Gaussian optimization; LQG",
+      "source": {
+        "source_id": "owner-probability-campaign-w516-P0297-20261010:L5",
+        "url": "file:///~/brain_workers/w516/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-pending-w518",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l6",
+      "namespace": "probability.lqg",
+      "logical_name": "two-route-weighted-near-tie-response-density",
+      "kind": "concept",
+      "title": "Two-route response from weighted near-tie density",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending: Let X be a centered finite Gaussian vector with covariance C, a_1,a_2 two nonnegative nonzero coefficient vectors, and xi>0 fixed. Set f_p=log sum_i a_pi exp(xi X_i), w_pi=a_pi exp(xi X_i)/exp(f_p), pi_p=exp(-beta f_p)/sum_{q=1,2} exp(-beta f_q), Delta=f_1-f_2, and D=(w_1-w_2)^T C(w_1-w_2). If nu(E)=E[D 1_{Delta in E}] has a density r continuous at zero on a neighborhood of zero, then lim_beta beta E[pi_1 pi_2 D]=r(0). No independence between D and Delta is assumed. This is a conditional finite-model statement; the weighted density assumption is not established uniformly for LFPP.",
+      "proof_text": null,
+      "assumptions": [
+        "L1 with two paths",
+        "xi fixed positive",
+        "Weighted gap density exists near zero and is continuous at zero",
+        "No independence between Delta and D"
+      ],
+      "domain": "probability theory; Gaussian optimization; LQG",
+      "source": {
+        "source_id": "owner-probability-campaign-w516-P0297-20261010:L6",
+        "url": "file:///~/brain_workers/w516/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-pending-w518",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "h",
+      "namespace": "probability.lqg",
+      "logical_name": "lqg-response-defect-measure-open-input",
+      "kind": "concept",
+      "title": "Open input: evaluate LQG response-defect measure",
+      "statement": "OPEN INPUT, not a theorem: For subcritical LFPP, let Q be the continuum crossing-median exponent a_epsilon=epsilon^(1-xi Q(xi)+o(1)) and let mu=d[xi^2/2-(xi Q(xi)-1)], a nonnegative Stieltjes measure furnished by the Gaussian response reduction. Explicitly evaluating mu interval masses from finite-scale geodesic covariance and near-tie statistics would determine Q and then d_gamma=gamma/xi through Q=2/gamma+gamma/2. No such evaluation, absolute continuity, exact generic dimension formula or scale-uniform near-tie estimate is supplied.",
+      "proof_text": null,
+      "assumptions": [
+        "Cited LFPP-to-LQG exponent identification",
+        "L1-L5 finite response/measure reduction"
+      ],
+      "domain": "probability theory; Gaussian optimization; LQG",
+      "source": {
+        "source_id": "owner-probability-campaign-w516-P0297-20261010:H",
+        "url": "file:///~/brain_workers/w516/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-pending-w518",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "l1",
+      "to_key": "finite-model",
+      "kind": "depends_on",
+      "rationale": "The response identity differentiates exactly the finite-model log lengths and Gibbs weights stated at the target end."
+    },
+    {
+      "from_key": "l2",
+      "to_key": "l1",
+      "kind": "depends_on",
+      "rationale": "The zero-temperature existence proof rearranges the exact finite-beta identity before taking beta to infinity."
+    },
+    {
+      "from_key": "l3",
+      "to_key": "l1",
+      "kind": "specializes",
+      "rationale": "With two single-edge paths and identity covariance, the within-path term vanishes and switching supplies the whole response."
+    },
+    {
+      "from_key": "l6",
+      "to_key": "l1",
+      "kind": "specializes",
+      "rationale": "For two routes, the path covariance equals a logistic near-tie kernel times their squared covariance distance."
+    },
+    {
+      "from_key": "l5",
+      "to_key": "l2",
+      "kind": "depends_on",
+      "rationale": "The finite-scale measure density is the response inequality integrated against xi; the scale bridge is proved separately in ATTEMPT.md L4."
+    },
+    {
+      "from_key": "l5",
+      "to_key": "l4",
+      "kind": "depends_on",
+      "rationale": "The mean-median and finite approximation bridge supplies the scale-normalized pointwise convergence required by the Stieltjes-measure reduction."
+    },
+    {
+      "from_key": "h",
+      "to_key": "l5",
+      "kind": "depends_on",
+      "rationale": "The unresolved input is precisely evaluation of the interval masses in the proved measure reduction."
+    },
+    {
+      "from_key": "h",
+      "to_existing_logical": "math:probability.core:open-problem-p0297-exact-hausdorff-dimension-of-liouville-quantum-gravity",
+      "kind": "semantic_association",
+      "rationale": "The source target asks for d_gamma of the gamma-LQG metric. The H entry asks to evaluate mu; L5 plus the sourced Q=2/gamma+gamma/2 and d_gamma=gamma/xi bridge would compute that exact dimension. No solution is asserted."
+    }
+  ]
+}

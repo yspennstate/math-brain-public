@@ -1,0 +1,65 @@
+{
+  "analytical_divergence": "B(U)/V(U) > log_2(M)/10 for every M=2^k with even k>=2; large matrices are not enumerated",
+  "arithmetic": "exact integer matrix products, exact rational influences, exact prime-log entropy identities",
+  "checker_sha256": "83ba1f91a42fed4dbfe228dc404f5eb85b7471625e38c9d0363b7074f7e1e895",
+  "classical_FEI_counterexample": false,
+  "construction": "real symmetric orthogonal involutions; not Walsh-diagonal convolution matrices",
+  "formal_verification": false,
+  "full_matrix": {
+    "M": 4,
+    "column_pair_terms_checked": 12288,
+    "dimension": 64,
+    "physical_bits": 6,
+    "scaled_matrix_square": 16,
+    "scaled_matrix_symmetric": true,
+    "target_bits": 2,
+    "target_trace_norm_checks": [
+      {
+        "normalized_trace_cost": "1/16",
+        "physical_bit": 4,
+        "rank": 4
+      },
+      {
+        "normalized_trace_cost": "1/16",
+        "physical_bit": 5,
+        "rank": 4
+      }
+    ],
+    "total_erasure_lower": "3097340979266819013840790129/13729194366926868337785367792",
+    "total_erasure_upper": "774335244816704753460197533/3432298591731717084446341944",
+    "zero_ancillary_erasure_bits": 4
+  },
+  "independent_audit": false,
+  "operator_relaxation_refuted": true,
+  "status": "PASS",
+  "walsh_pattern_checks": [
+    {
+      "A0_nonzero_magnitude": "1/2",
+      "M": 4,
+      "nonzero_entries_per_A0_column": 2,
+      "rank_one_branch_entry_magnitude": "1/4",
+      "walsh_rows": 4
+    },
+    {
+      "A0_nonzero_magnitude": "1/4",
+      "M": 16,
+      "nonzero_entries_per_A0_column": 8,
+      "rank_one_branch_entry_magnitude": "1/16",
+      "walsh_rows": 16
+    },
+    {
+      "A0_nonzero_magnitude": "1/8",
+      "M": 64,
+      "nonzero_entries_per_A0_column": 32,
+      "rank_one_branch_entry_magnitude": "1/64",
+      "walsh_rows": 64
+    },
+    {
+      "A0_nonzero_magnitude": "1/16",
+      "M": 256,
+      "nonzero_entries_per_A0_column": 128,
+      "rank_one_branch_entry_magnitude": "1/256",
+      "walsh_rows": 256
+    }
+  ]
+}

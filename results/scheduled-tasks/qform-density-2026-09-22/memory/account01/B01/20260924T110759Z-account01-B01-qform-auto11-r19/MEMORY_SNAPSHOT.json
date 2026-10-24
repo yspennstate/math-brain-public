@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260924T110759Z-account01-B01-qform-auto11-r19",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_observed_commit": "d34e2697e9bfca2c81b4a80297b6040379314e60",
+  "control_readme_blob": "14046b5138615be52bb1c49a998122a7c84e200e",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "outcome": "PROVED_RANDOM_MODULATION_CURVATURE_UNIFORM_SMOOTHING_AND_TWOPIVOT_COMPILER_PENDING_INDEPENDENT_REVIEW",
+  "claims": [
+    {
+      "id": "QFORM-RANDOM-MODULATION-FOURIER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For R=aH^2+2HL+T with H cap-one and independent of the later bank, L density cap M, arbitrary correlated T, and arbitrary real a, |phi_R(t)|<=min(1,sqrt(pi M/|t|))."
+    },
+    {
+      "id": "QFORM-RANDOM-MODULATION-SUBHALF-RIESZ-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every 0<gamma<1/2, H_gamma(R)<=C_gamma M^gamma uniformly in a; at gamma=1/4 the constant is 3.179662567631707."
+    },
+    {
+      "id": "QFORM-TWOPIVOT-DIFFUSEROW-LINF-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "Two source-disjoint literal scalar squares plus the random-modulation residual give ||p_Q||_infinity<=11.745890746379832 |b0|^-1/2 |b1|^-1/3 M^1/6; for original-coordinate linear modulation row norm c, <=12.444337756165789 |b0|^-1/2 |b1|^-1/3 c^-1/6."
+    },
+    {
+      "id": "QFORM-RANDOM-MODULATION-HALFRIESZ-ENDPOINT-FAILS-v1",
+      "status": "REFUTED_INTERMEDIATE_EXTENSION",
+      "statement": "Under random modulation alone, gamma=1/2 is false: iid H,Y uniform[-1/2,1/2], a=1, L=Y, T=Y^2 gives R=(H+Y)^2 and E|R|^-1/2=infinity. This is rank one and not a QFORM counterexample."
+    }
+  ],
+  "preserved_corrections": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION"
+  ],
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B01",
+    "theorem": "QFORM-TWOLEVEL-PIVOT-HALFRIESZ-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f2bb4e5d3f65c19715e6cbad2e79d7c071d6b174",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260924T091804Z-account02-B01-qform-auto11/REPORT.md",
+    "application": "For Q_(epsilon,m)=X0^2+Z^2+epsilon H^2+2H m^-1/2 sum_jY_j, after peeling X0^2 the residual has literal Z pivot one and s2>=1, so ||p_Q||_infinity<=8+32sqrt(5)4^-1/8=68.1696494893823 uniformly in m and epsilon."
+  },
+  "strict_target_application": {
+    "family": "Q_(epsilon,m)=X0^2+Z^2+epsilon H^2+2H m^-1/2 sum_jY_j",
+    "spectral_reason": "two literal eigenvalues one plus the star 2x2 eigenvalues have product -1, so at least one star eigenvalue has modulus at least one",
+    "new_bound": "||p_Q||_infinity<12.445 uniformly in m, epsilon, and all admissible product laws"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a67d2d2f4ea90c7089463d7e6a0b5262442e828b",
+    "proof_first_commit": "dd9bdc8f347ef1849cb1647964d19d014843f877",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260924T110759Z-account01-B01-qform-auto11-r19/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "3858fc8ebd0f692479b388b62dbe7a7240985b03",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B01/20260924T110759Z-account01-B01-qform-auto11-r19.md"
+  },
+  "first_unpaid_implication": "QFORM-PUNCTURE-SECOND-SPECTRAL-DIRECTION-TO-HALFRIESZ-v2",
+  "next_step": "In the one-outer-pivot diffuse-row survivor with s2>=1, use the inherited second spectral direction to upgrade the curvature-uniform H_gamma, gamma<1/2, to H_1/2 without demanding a second literal square and without conditioning away product provenance.",
+  "phase_aligned_counterexample_preserved": true,
+  "schedule_or_notification_mutations": 0,
+  "email_sent": false,
+  "public_release": false,
+  "cross_account_authentication": false
+}

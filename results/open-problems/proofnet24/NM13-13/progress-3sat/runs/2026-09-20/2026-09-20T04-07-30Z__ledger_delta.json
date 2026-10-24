@@ -1,0 +1,57 @@
+{
+  "ledger_delta": {
+    "worker": "NM13-13",
+    "role": "T04_cluster_aware_3SAT_variational",
+    "target": "T04",
+    "status": "OPEN/PARTIAL; CANDIDATE_FULL for the explicit 4.39539 upper endpoint pending later independent review",
+    "runtime_model": "GPT-5.6 Sol",
+    "runtime_reasoning": "UNVERIFIED",
+    "source_model": "classical iid proper random 3-CNF: m=floor(alpha*n), three distinct variables per clause, independent uniform literal signs",
+    "literature_supported_symbolic_frontier_before": "3.52 <= liminf c_n <= limsup c_n <= U_1RSB(3); 2026 literature reports the physics numerical value near alpha=4.267 but this track has not interval-certified the full U_1RSB(3) numerical evaluation",
+    "literature_supported_symbolic_frontier_after": "unchanged",
+    "explicit_decimal_candidate_upper_before": 4.418,
+    "explicit_decimal_candidate_upper_after": 4.39539,
+    "explicit_decimal_bracket_before": [3.52, 4.418],
+    "explicit_decimal_bracket_after": [3.52, 4.39539],
+    "explicit_width_before": 0.898,
+    "explicit_width_after": 0.87539,
+    "threshold_endpoint_gain": 0.02261,
+    "new_claim_id": "NM13-13-T04-THREE-SUPPORT-439539-UPPER-02",
+    "new_claim": "For the exact fixed-count proper iid random 3-SAT model, Pr[Phi_{n,floor(4.39539 n)} is SAT] -> 0, conditional only on later independent review of the complete interpolation transfer recorded in the report.",
+    "order_parameter": {
+      "support": ["47/800", "1/2", "753/800"],
+      "weights": ["4179/20000", "5821/10000", "4179/20000"],
+      "alpha": "439539/100000",
+      "series_truncation_K": 300
+    },
+    "certified_variational_core": "A <= A_300 < -8.039964442772009e-7 by outward mpmath interval arithmetic at 280 decimal digits",
+    "mechanism_gain": "Adding a central R=1/2 atom to the symmetric hard-field survey law changes the compound-warning distribution enough to move the finite-support rigorous interpolation certificate from the inherited 4.4178 density to 4.39539. At alpha=4.39539 the inherited equal-weight two-support law R in {0.22,0.78} has A_300 approximately +0.00271034, while the certified three-support law has A_300 < -8.04e-7; this comparison is diagnostic for the mechanism, not a proof of global optimality within all two-support laws.",
+    "new_transfer_lemma": "Linear minimum violated-clause energy in the proper Poisson-thinned model de-Poissonizes at the same density, without positive density slack: M'-floor(alpha n)=O_p(sqrt(n)), and deleting O_p(sqrt(n)) clauses changes minimum energy by at most O_p(sqrt(n)).",
+    "predecessor_handoff": "The prior run established a two-support hard-field certificate at Poisson density 4.4178 and transferred it with 0.0002 slack to a fixed-count 4.418 candidate upper bound. Earlier anchored rescue matching remains a valid local cluster-counting mechanism but was globally unreoptimized.",
+    "prior_failures_preserved": [
+      "arbitrary rescue stars do not compose because two individually rescued children can jointly falsify another clause",
+      "anchored degree-one matching gives a strict local exponent penalty but still lacks full Diaz-polytope global reoptimization",
+      "positive clause-local multiplicative second moments hit the identical-pair barrier alpha<=log(2)/log(5/4)=3.1062837...",
+      "solution-graph quotienting by radius o(n/log n) yields only exp(o(n)) count reduction",
+      "full-component quotienting leaves an uncontrolled cross-component overlap moment",
+      "whitening/core history counting lacks a proved uniform exponential cluster multiplicity lower bound",
+      "q-binomial radius-two certificate reaches only about 4.5923",
+      "the inherited equal-weight two-support survey family crosses only near 4.41779 and is not sufficient for the present density"
+    ],
+    "literature_notes": [
+      "Hajiaghayi-Sorkin proves satisfiability w.h.p. below 3.52",
+      "Diaz-Kirousis-Mitsche-Perez-Gimenez proves UNSAT w.h.p. at density at least 4.4898",
+      "Franz-Leone gives rigorous replica/interpolation bounds for random K-SAT; Franz-Leone-Ricci-Tersenghi-Zecchina's earlier factorized physics ansatz reported about 4.3962",
+      "Chatterjee et al. 2026 states that fixed small-k threshold convergence remains open and that interpolation yields a rigorous upper variational functional matching the 1RSB prediction; its table reports d_sat(3) about 12.801 (alpha about 4.267) as the physics value"
+    ],
+    "companion_status": "NM13-06 is pursuing the constructive lower-bound side; its latest report shows the static blocked-majority hypergraph remains subcritical through 4.4898 and identifies dynamic promotion as its current obstruction.",
+    "residual_obstruction": "Approach the stronger U_1RSB(3) frontier with richer finite-support survey laws and certified global numerical evaluation; the present three-support law is only one explicit trial.",
+    "next_attack": "Optimize a five-support symmetric survey law and certify a density below 4.39539, while retaining the same finite-temperature interpolation and same-density de-Poissonization proof; if that family stalls, reconstruct a finite-support approximation to the full U_1RSB(3) order parameter.",
+    "artifacts": {
+      "code": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T04-07-30Z__three_support_439539_interval.py",
+      "code_commit": "1ace56599b5b797827b5e7ed42dfda1040e2d1db",
+      "output": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T04-07-30Z__three_support_439539_interval.out",
+      "output_commit": "469ffab33874c86b76b28f71857c7f9c03db0c03"
+    }
+  }
+}

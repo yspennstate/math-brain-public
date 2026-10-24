@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B09",
+  "run_id": "20260923T154445Z-account02-B09-QFORM-r15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "control_commit_initial": "636e14635a089ffc9fa09d88ebda195a83ead277",
+  "control_commit_prepublication": "bbcb18c911de20e8fd28011f43328d0331f1e057",
+  "assignment": {
+    "title": "Bilinear block mechanism",
+    "pathway": "GEOMETRY",
+    "method": "complementary constructions and source-valid counterexamples",
+    "partner": "account03/B09"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "source_results_applied": [
+    {
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "result": "Theorem H mixed-hub Fresnel/Brascamp-Lieb",
+      "actual_use": "specialized to two literal physical hubs and integrated exactly to a continuous-density / linear-small-ball estimate uniform in the entire physical 2x2 hub core"
+    },
+    {
+      "source": "yspennstate/math-open-problems@82f6ea83f0e981f756fd18080ffdd11a447b60a8",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T144532Z-account03-B09-QFORM-r35/REPORT.md",
+      "result": "QFORM-LOCALIZED-HUBPAIR-EXACT-CORE-ROUTING-v1",
+      "actual_use": "its pair-anchored volume V_ab(S) was converted exactly to mixed-frame Gram determinant for rank-one leaf curvature and its exact-core bounds were evaluated on the same target-valid delta-family"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-TWOHUB-MIXEDFRAME-UNIFORMCORE-v1",
+      "status": "SUPPORTING_THEOREM_PROVED_FROM_COMPLETED_SOURCE",
+      "statement": "For two literal physical hubs and a disjoint leaf bank with diagonal-plus-rank-r curvature, positive mixed Gram G and all normalized mixed leverages <=1/2, the full quadratic law has continuous density bounded by C_r [det(G) prod|lambda_k|]^(-1/(r+4)), C_r=4(r+4)/(r+2)2^(-4/(r+4)), uniformly in the arbitrary physical 2x2 hub core and arbitrary conditioned outside blocks; the same coefficient gives a linear interval estimate."
+    },
+    {
+      "id": "QFORM-RANKONE-LEAF-ANCHORED-VOLUME-IDENTITY-v1",
+      "status": "EXACT_IDENTITY_PROVED",
+      "statement": "If the S union T leaf block is diagonal plus epsilon q q^T, then for the literal hub pair a,b the partner anchored physical third volume satisfies V_ab(S)=||q_S||_2^2 det Gram(q_T,A[T,a],A[T,b])."
+    },
+    {
+      "id": "QFORM-LOCALIZED-HUBPAIR-MIXEDHUB-INTERPOLATION-v1",
+      "status": "SUPPORTING_THEOREM_PROVED",
+      "statement": "Under the rank-one-plus-diagonal leaf hypothesis and mixed-frame leverage gate, ||p_Q||inf <=(5/3)2^(6/5) det(G_T)^(-1/5)=(5/3)2^(6/5)(||q_S||^2/V_ab(S))^(1/5), independently of the physical pair core, hence uniformly across its rank/sign strata."
+    }
+  ],
+  "actual_target_application": {
+    "family": "Q_delta=X_a^2+delta X_b^2+2X_a<c1,X_T>+2X_b<c2,X_T>+<q,X_{S union T}>^2, with m=2^k>=8 and flat orthonormal Sylvester-Walsh c1,c2,w on T, q=(s+w)/sqrt(2)",
+    "spectrum": "{(1+sqrt5)/2,(1-sqrt5)/2,(delta+sqrt(delta^2+4))/2,(delta-sqrt(delta^2+4))/2,1}",
+    "target_validity": "at least three eigenvalues have modulus >=1 for every real delta",
+    "mixed_data": "det G_T=1/2; mixed leverage=3/m<=3/8; Delta_T=1; V_ab(S)=1/4",
+    "bound": "||p_Q||inf <=(5/3)2^(7/5)=4.398359702576314... uniformly in delta; continuous density; P(Q in L)<=4.399|L|",
+    "partner_comparison": "r35 gives 10.272203... at delta=0, pi delta^(-1/2) for 0<delta<=1, and <12.286|delta|^(-1/2) for -1<=delta<0; mixed-hub smoothing removes this proof blow-up on the subclass"
+  },
+  "mandatory_scope_correction": {
+    "issue": "early checkpoint/report shorthand stated flat Walsh triple for every m>=6",
+    "correction": "use explicit Sylvester-Walsh sizes m=2^k>=8 (or any size with an explicitly available flat orthonormal triple)",
+    "effect": "example scope only; theorem, proof, constants unchanged",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T154445Z-account02-B09-QFORM-r15/CORRECTION.md"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c27ff5b752bf25d2933cbdfac5a870b0dcf71181",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T154445Z-account02-B09-QFORM-r15/REPORT.md",
+    "report_blob": "0a2943f5802fa56f1f0750027250753ef0bfab42",
+    "correction_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T154445Z-account02-B09-QFORM-r15/CORRECTION.md",
+    "correction_blob": "c7faef2ce36ebdfb38035ac9f81cf33aff08a83e",
+    "checkpoint_commit": "294df5de27f038f11eb9d9c34dea9d55bd98f17a",
+    "checkpoint_blob": "5100687dd295292f64f9ae42dae5464738b65c86"
+  },
+  "handoff": {
+    "commit": "bd431308573ab38e9cd1e8168dad4585b675bfaa",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B09/20260923T154445Z-account02-B09-QFORM-r15.md",
+    "blob": "89e57c9c2f3f6b621d98b10fe66969bcfaa9aac0"
+  },
+  "unresolved_implication": "QFORM-LOCALIZED-HUBPAIR-GENERAL-LEAFCURVATURE-ROUTING-v1",
+  "next_step": "Starting from the partner fixed pair and V_ab(S)>=27G_*/400, force a disjoint diagonal-plus-low-rank transverse mixed-frame packet with a universal leverage/determinant gate, or prove a phase-sensitive general-leaf-curvature estimate that spends the anchored volume before any reciprocal near-singular pair-core payment.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  }
+}

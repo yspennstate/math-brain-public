@@ -1,0 +1,15 @@
+{
+  "helper_version": "B09-BIASED-BLOCK-UNCERTAINTY v1; separately scoped endpoint necessity target",
+  "checker_version": "A046 exact_check.py v1",
+  "family": "g(X,Y)=(-1)^(XY), actual 4-entry truth table; A={X}",
+  "parameter_domain": {"p": ["1/8","1/16","1/32","1/64"], "q": "1/4"},
+  "case_count": 4,
+  "symmetry": "none; each listed case checked directly",
+  "arithmetic": "integer truth table; Fraction unnormalized centered-basis Fourier sums and squared norms; rational range-reduced atanh logarithm intervals, 24 terms; four-corner signed interval division",
+  "memory_estimate_bytes": 20000000,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "randomness": "NONE",
+  "purpose": "Independent finite certificate and sanity check; all-p endpoint proof remains analytic; not a broad search and not a full-FEI experiment",
+  "stop_rule": "Stop after four cases with rigorously positive excess and the known p=1/8 lower bound, or report the first failed assertion."
+}

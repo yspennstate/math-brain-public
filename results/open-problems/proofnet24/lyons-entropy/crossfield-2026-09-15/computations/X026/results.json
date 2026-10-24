@@ -1,0 +1,54 @@
+[
+  {
+    "name": "positive_tau_independent_phase",
+    "Z": "Matrix([[1/4, 1/4], [1/4, I/4]])",
+    "det_K": "1/128",
+    "tau_log_argument": "5764801/1896129",
+    "tau_decimal": "1.11195619498519674918179081642",
+    "eta": "20/17",
+    "eta_decimal": "1.17647058823529411764705882353",
+    "loop_product": "I/256",
+    "cross_block": {
+      "fisher": "0.276343070531396627277452053640",
+      "frozen": "-0.221933546089844491414161871840",
+      "hessian": "-0.498276616621241118691613925480"
+    },
+    "missing_edges": {
+      "fisher": "0.0773786292882820382709227135887",
+      "frozen": "-0.118806514850545393660257667403",
+      "hessian": "-0.196185144138827431931180380992"
+    },
+    "combined": {
+      "fisher": "0.353721699819678665548374767229",
+      "frozen": "-0.340740060940389885074419539243",
+      "hessian": "-0.694461760760068550622794306472"
+    },
+    "exact_checks": "atom jets; even/odd score split; centered polynomial; determinant acceleration; mixed block cancellation; eta inequality; event Fisher bound; negative-tau squares; feasibility and tau sign: PASS"
+  },
+  {
+    "name": "negative_tau_large_coherence",
+    "Z": "Matrix([[2/5, 1/5], [-1/5 + I/100, 39/100]])",
+    "det_K": "287/100000",
+    "tau_log_argument": "229004162661383046144/31574351039397096111769",
+    "tau_decimal": "-4.92636021306960636738556803428",
+    "eta": "34978/19897",
+    "eta_decimal": "1.75795346032065135447554907775",
+    "loop_product": "-39/6250 - 39*I/125000",
+    "cross_block": {
+      "fisher": "1.56718303350222480522718841587",
+      "frozen": "-0.624417696061944416111252033661",
+      "hessian": "-2.19160072956416922133844044953"
+    },
+    "missing_edges": {
+      "fisher": "0.284737391644061592200279379307",
+      "frozen": "-0.175237853748655930852969812453",
+      "hessian": "-0.459975245392717523053249191760"
+    },
+    "combined": {
+      "fisher": "1.85192042514628639742746779518",
+      "frozen": "-0.799655549810600346964221846115",
+      "hessian": "-2.65157597495688674439168964129"
+    },
+    "exact_checks": "atom jets; even/odd score split; centered polynomial; determinant acceleration; mixed block cancellation; eta inequality; event Fisher bound; negative-tau squares; feasibility and tau sign: PASS"
+  }
+]

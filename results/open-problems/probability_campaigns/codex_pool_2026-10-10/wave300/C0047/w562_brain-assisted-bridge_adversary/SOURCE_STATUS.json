@@ -1,0 +1,57 @@
+{
+  "target": "C0047",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "status_reason": "A September 24, 2026 primary manuscript claims the full bond nonuniqueness theorem; its main argument has not yet been audited here.",
+  "exact_fixed_graph_need": "For every infinite finitely generated nonamenable group Gamma and every finite symmetric generating set S, its simple undirected Cayley graph G=Cay(Gamma,S) has p_c^bond(G)<p_u^bond(G). The analogous site formulation must be tracked separately.",
+  "original_source": {
+    "title": "Percolation beyond Z^d, many questions and a few answers",
+    "authors": [
+      "Itai Benjamini",
+      "Oded Schramm"
+    ],
+    "year": 1996,
+    "url": "https://emis.de/ft/41630",
+    "location": "Conjecture 6, page 76; definitions pages 72-73",
+    "statement": "Every connected locally finite almost-transitive graph with positive vertex Cheeger constant has p_c(G)<p_u(G).",
+    "model_note": "Paper treats site percolation, and states nonplanar results/questions extend with minor modifications to bond percolation."
+  },
+  "spectral_source": {
+    "url": "https://emis.de/ft/41630",
+    "location": "Theorem 4, pages 76-77",
+    "full_hypotheses": [
+      "connected almost-transitive graph",
+      "finite maximal degree k",
+      "theta_v(p)>0 for some vertex",
+      "rho(G)*k*p<1"
+    ],
+    "conclusion": "Almost surely infinitely many infinite clusters; in particular rho(G)*k*p_c(G)<1 implies p_c<p_u."
+  },
+  "recent_claim": {
+    "url": "https://github.com/openai/math/blob/main/preprints/Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive-graphs-September-24-2026/paper.pdf",
+    "claimed_scope": "Bernoulli bond percolation on every infinite connected locally finite nonamenable quasi-transitive graph",
+    "statement_verified": true,
+    "proof_verified": false,
+    "exact_location": "Theorem 1.1 pp.3-4; Corollary 1.2 p.4; critical-bound argument Section 9 pp.45-47",
+    "pdf_sha256": "46a78d044d2713e48cb3faa9b0b9d22da9480193e2202fe63d8e0daa7d8a3dbb",
+    "full_hypotheses": [
+      "Infinite connected locally finite undirected graph",
+      "Quasi-transitive",
+      "Positive vertex Cheeger constant",
+      "iid Bernoulli bond percolation",
+      "Counting measure l2"
+    ],
+    "critical_claim": "sup_{0<=p<p_c}||T_p||=||T_{p_c}||<infinity and p_c<p_{2->2}<=p_u",
+    "validation_scope": "Statement, strategy, final conditional passage and endpoint lemma read; Sections 3-8 not fully referee-checked. A public claim does not alone prove or retire the problem."
+  },
+  "owner_solved_retired_check": "Exact C0047 and percolation/nonamenability searches in named H/I prior-attempt folders returned no additional target record. September intake/Lean annotation remains attempted_un. Owner-folder filename search for percolation/Benjamini/Schramm/C0047 returned no matching path. Bounded search, not a complete retirement audit.",
+  "novelty_claim": false,
+  "intake_primary": {
+    "url": "https://arxiv.org/pdf/1712.04651",
+    "title": "Sixty years of percolation",
+    "location": "Conjecture 2, page 4",
+    "model": "Bernoulli bond",
+    "local_extract": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/raw/duminil_copin_icm_2018_statements.txt",
+    "statement_verified": true
+  }
+}

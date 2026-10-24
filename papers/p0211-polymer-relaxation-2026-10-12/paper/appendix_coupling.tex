@@ -1,0 +1,117 @@
+\section{An independent coupling proof of the square-root bound}
+\label{proof:app:coupling}
+
+This appendix proves Proposition~\ref{proof:prop:squareroot} for the
+cut chain without the harmonic decomposition. It provides a
+probabilistic verification of the square-root estimate. The constants
+in the resulting total-variation bounds may depend on $n$ and
+$\beta$; only their exponential rate is used.
+
+Assume $n\geq8$, $4/n^2\leq\beta\leq1/16$, and put
+$a=n\sqrt\beta\in[2,n/4]$. Start two copies of the cut process from
+adjacent nonempty sets. Until they meet, the coupling has two stages.
+After meeting, run the copies identically.
+
+\subsection*{Stage I: one set contains the other}
+Suppose $X\subset Y$, $Y\setminus X$ consists of one bond, and
+$|X|=k$. Add every common vacant bond to both sets at rate $\beta$.
+For each common occupied bond, remove it from both sets at rate
+$(k-1)/n$, and remove it from $Y$ alone at rate $1/n$. At the unique
+bond in $Y\setminus X$, add it to $X$ at rate $\beta$ and remove it
+from $Y$ at rate $k/n$.
+
+The first marginal has birth rate $\beta$ per vacant bond and death
+rate $(k-1)/n$ per occupied bond. The second has birth rate $\beta$
+per vacant bond and death rate $k/n$ per occupied bond. Hence both
+marginals agree with~\eqref{proof:eq:LB}. The last two events couple
+the copies; a removal from $Y$ alone at a common bond starts
+Stage II. Until one of these exits, $k$ increases at rate
+$\beta(n-k-1)$ and decreases at rate $k(k-1)/n$. The total exit rate
+is $\beta+2k/n$. Thus the killed internal generator is exactly
+$\mathcal A$ in~\eqref{proof:eq:derivativegenerator}.
+
+\subsection*{Stage II: equal sizes and one exclusive bond each}
+Write $|X|=|Y|=r+1$, so the intersection contains $r$ bonds. Add
+each common vacant bond to both sets at rate $\beta$, and remove
+each common occupied bond from both at rate $r/n$. At rate
+$\beta$, simultaneously add to each set the bond exclusive to the
+other set, so both become their union. At rate $r/n$,
+simultaneously remove each set's exclusive bond, so both become
+their intersection. When $r=0$, the latter event has rate zero and
+does not create the empty set.
+
+Each simultaneous absorption event produces one jump in each
+marginal. Accordingly the total absorption rate is $\beta+r/n$.
+The internal coordinate $r\in\{0,\ldots,n-2\}$ has killed generator
+\begin{align}
+ (\mathcal Bh)(r)
+ ={}&\beta(n-r-2)(h(r+1)-h(r))
+     +\frac{r^2}{n}(h(r-1)-h(r))\notag\\
+ &-\left(\beta+\frac rn\right)h(r).
+ \label{proof:eq:stageII}
+\end{align}
+The marginal birth and death rates are again those
+of~\eqref{proof:eq:LB}.
+
+\subsection*{Positive certificates and coupling time}
+For both stages use $h(z)=1/(z+a)$. For Stage I,
+\eqref{proof:eq:countreciprocal} gives
+$-(\mathcal Ah)(k)/h(k)\geq\sqrt\beta/5$. For Stage II, exact
+cancellation yields
+\begin{equation}\label{proof:eq:stageIIcertificate}
+ \frac{-(\mathcal Bh)(r)}{h(r)}
+ =\frac{\beta(n-r-2)}{r+a+1}+\beta
+  +\frac{r(a-1)}{n(r+a-1)}.
+\end{equation}
+If $r\leq a$, then $n-r-2\geq n/2$ and $r+a+1\leq5a/2$, so
+the first term is at least $\sqrt\beta/5$. If $r\geq a$, then
+$r/(r+a-1)\geq1/2$ and $a-1\geq a/2$, so the last term is at
+least $a/(4n)=\sqrt\beta/4$. Consequently, with
+$c=\sqrt\beta/5$, both killed generators satisfy $Ah\leq-ch$.
+
+For completeness, any finite matrix $A$ with nonnegative
+off-diagonal entries generates a positivity-preserving semigroup:
+add a sufficiently large scalar multiple of the identity to make
+the whole matrix nonnegative and use the exponential series. If
+$h>0$ and $Ah\leq-ch$, differentiation gives
+\[
+ \frac{d}{dt}\bigl(e^{t(A+cI)}h\bigr)
+ =e^{t(A+cI)}(A+cI)h\leq0,
+\]
+and hence $e^{tA}h\leq e^{-ct}h$. The survival time $T_i$ of each
+stage therefore satisfies, uniformly over its starting states,
+\[
+ \mathbb P(T_i>t)\leq C_i e^{-ct},
+ \qquad
+ C_i=\frac{\max h}{\min h}<\infty.
+\]
+For every $0<\theta<c$, integration of this tail bound shows that
+\[
+ \mathbb E e^{\theta T_i}
+ \leq1+\frac{\theta C_i}{c-\theta}.
+\]
+The strong Markov property at entry to Stage II, using its uniform
+bound over initial states, gives a finite exponential moment at
+rate $\theta$ for the total coupling time. Stage II has duration
+zero if Stage I couples directly. Thus the total coupling time has
+tail $O(e^{-\theta t})$.
+
+The coupling inequality gives this rate for total variation between
+chains started at any adjacent nonempty sets. Any two nonempty
+sets are connected by a finite path through their union, using
+single-bond additions and deletions and never visiting the empty
+set. The triangle inequality gives the same rate for any two
+initial states.
+
+Finally, let $f$ be a nonconstant eigenfunction of $L_B$ with
+eigenvalue $-\lambda$, and choose $x,y$ with $f(x)\neq f(y)$. Then
+\[
+ e^{-\lambda t}|f(x)-f(y)|
+ =|\mathbb E_x f(B_t)-\mathbb E_y f(B_t)|
+ \leq2\|f\|_\infty\,
+       \|P_t(x,\cdot)-P_t(y,\cdot)\|_{\mathrm{TV}}.
+\]
+The established exponential bound forces $\lambda\geq\theta$.
+Since this holds for every $\theta<c$, it follows that
+$\gamma_B\geq\sqrt\beta/5$. Proposition~\ref{proof:prop:comparison}
+then gives the polymer bound.

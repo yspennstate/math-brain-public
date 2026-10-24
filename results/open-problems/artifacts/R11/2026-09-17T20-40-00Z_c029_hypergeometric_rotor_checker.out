@@ -1,0 +1,18 @@
+R11 C029 deterministic hypergeometric-rotor exact self-check
+CHECKS=149477
+Model: Delta_N=N^-2; rotor phases s=1,...,N-1; exactly s occupied sites among N.
+At activation, block labels are uniformly injected without replacement into the N sites.
+Exact specified-support phase law:
+  h_N,s(i,j)=((s)_i (N-s)_j + (s)_j (N-s)_i)/(N)_(i+j).
+Harmonic weights w_N,s=N/[2s(N-s)], c_N,s=(N-1)w_N,s.
+Exact finite-N identity for every N>=i+j:
+  sum_s w_N,s h_N,s(i,j) = B(i,j).
+This is Chu/Vandermonde convolution in falling-factorial form; no Riemann approximation is used.
+Uniform visible first-order exit bound: c_N,s * P(nonmonochromatic b-sample) <= b.
+N=4 finite root witness, starting rotor phase 1:
+  activation=(1/8,3/32,1/8)
+  P(particular 1|3 first root)=153/836
+  P(particular 2|2 first root)=56/627
+  ratio=459/224 ~= 2.049107142857
+  ratio differs exactly from every retained binary witness through C028.
+ALL_EXACT_CHECKS_PASS

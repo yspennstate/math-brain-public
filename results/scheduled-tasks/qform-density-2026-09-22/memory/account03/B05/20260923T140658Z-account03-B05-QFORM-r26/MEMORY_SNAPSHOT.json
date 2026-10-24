@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B05",
+  "run_id": "20260923T140658Z-account03-B05-QFORM-r26",
+  "source_control_commit_start": "6f54c228609a81448c8e00325ed7972f32240a05",
+  "source_control_commit_refresh": "cf729603eb8a8d2022155fa78f58634ec098265e",
+  "owner_control_revision": "2026-09-22.15",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "new_correction": "QFORM-2D-PRODUCT-PROJECTION-CONDITIONAL-CAP-MOMENTS-FALSE-v1",
+  "main_result": "For every alpha>0, positive moments of the conditional density cap ||p_{S|R}||_infinity can be unbounded even when (S,R) is an orthonormal projection of two independent cap-one original variables and the joint density cap is <=1. For 0<alpha<2 the explicit N-fragment construction gives E L(R)^alpha >= [2^(1-alpha/2)/(2-alpha)](N-1)N^(alpha-1); for alpha>=2 the moment is infinite.",
+  "target_valid_stress_test": "With independent Y,Z~Uniform[0,1], Q_N=S^2+Y^2-Z^2 has original-coordinate spectrum {1,1,-1,0} and ||p_Q_N||_infinity<=pi/sqrt(2) uniformly in N, despite the exploding conditional-cap moments.",
+  "partner_result_applied": {
+    "source": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account04/B05/20260923T041255Z-account04-B05-dominant-slope-r2.md",
+    "application": "For the stress family mu=1 and exact-slope mass m_*=1, so the partner theorem yields ||p_Q_N||_infinity<51.6 uniformly in N."
+  },
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "46031b27c94a26ff588b987cf94ecafe5995452e",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260923T140658Z-account03-B05-QFORM-r26/REPORT.md",
+  "unresolved_implication": "QFORM-UNCONDITIONAL-NEAR-PARALLEL-PRODUCT-TRACE-v1",
+  "next_step": "Prove the live ratio-packet small-interval/coarea estimate in the original independent coordinates with the residual projection kept inside the same unconditional integral; no conditioning on R and no arbitrary-joint replacement.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "FULL_CONTINUITY_OPEN"
+}

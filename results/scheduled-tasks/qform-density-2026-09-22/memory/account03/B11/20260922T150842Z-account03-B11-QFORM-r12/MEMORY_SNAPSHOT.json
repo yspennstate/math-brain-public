@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_initial": "7105e77595b3f1796a3d21e9d3d90d83d7fc8acd",
+  "source_control_commit_refresh_before_publication": "10f25c3f51b197e59b0e1e019d1bb4e41873364a",
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260922T150842Z-account03-B11-QFORM-r12",
+  "assignment": "Indefinite signatures",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "telemetry": {"model": "UNKNOWN", "thinking_counters": null},
+  "corrections_consumed": [
+    "baseline CURRENT_RESEARCH: QFORM pointwise quadratic-decay false",
+    "baseline CURRENT_RESEARCH: no independence after spectral rotation",
+    "baseline CURRENT_RESEARCH: fiber-sup dimension loss",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@cdf0bb83a38fee4d20cd3fe29b6a4d03e89394bc",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260922T115006Z-account02-B11-qform-r18-7c1e/REPORT.md",
+      "scope": "Completed compatible same-slot semi-cross theorem: for [[alpha,a,0],[a,0,0],[0,0,d]], density <=6|a|^(-2/3)|d|^(-1/3), with continuity in that subclass. Applied as a literal minimum with the new cofactor bound."
+    },
+    {
+      "source": "yspennstate/math-research-brain@10f25c3f51b197e59b0e1e019d1bb4e41873364a",
+      "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/CURRENT_RESEARCH.md",
+      "scope": "Full conjecture remains open; physical-coordinate product structure must be retained; deterministic/fiberwise shortcuts are not enough."
+    }
+  ],
+  "partner_status": {
+    "designated_partner": "account04/B11",
+    "completed_qform_handoff_found": false,
+    "completed_qform_archive_found": false,
+    "compatible_completed_peer_applied": "account02/B11"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-3X3-GRADIENT-SHELL-COFACTOR-v1",
+      "status": "proved_in_worker_report",
+      "scope": "For independent 3D product inputs with marginal densities <=1 and arbitrary invertible symmetric physical B, affine terms allowed, ||p||_inf <=16|det B|^(-1/2) sum_i sqrt(sum_j|B_ij|)."
+    },
+    {
+      "id": "QFORM-3X3-SPECTRAL-COROLLARY-v1",
+      "status": "proved_in_worker_report",
+      "scope": "If singular values are 0<s1<=s2<=s3, then ||p||_inf <=48*3^(1/4)/sqrt(s1*s2); hence the complete n=3 target has universal bound <63.172."
+    },
+    {
+      "id": "QFORM-THIRD-DIRECTION-DYADIC-SUMMABILITY-v1",
+      "status": "proved_mechanism",
+      "scope": "On gradient shells of radius r, transversality costs O(r^-1) while the two-coordinate physical projection has area O(r^2), leaving O(r) and a convergent small-scale dyadic sum; in rank two the O(r) projection leaves O(1) per shell and logarithmic divergence."
+    },
+    {
+      "id": "QFORM-FULLN-PHYSICAL-TRIPLE-CONDITIONAL-v1",
+      "status": "proved_conditional_implication",
+      "scope": "For any invertible physical principal triple A[I,I], conditioning all other original coordinates gives the same cofactor/spectral local bound uniformly in induced affine terms and arbitrary outside couplings."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "117c1568f8f458706c1123327f893efd750053c5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260922T150842Z-account03-B11-QFORM-r12/REPORT.md",
+    "blob": "205c701c618cd60552dfb0de7bbabeeb2d868303"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "1bc33cf29de52b31b33a63b62d657b894faa86fd",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B11/20260922T150842Z-account03-B11-QFORM-r12.md"
+  },
+  "continuity_status": "NOT_PROVED_BY_NEW_GENERAL_THEOREM; essential bounded density and absolute continuity proved. Compatible peer proves continuity only in semi-cross subclass.",
+  "unresolved_implication": "Convert the global hypothesis of at least three full-matrix eigenvalue magnitudes >=1 into a dimension-free output-density bound without selecting one uniformly good physical triple; aggregate physical coordinate banks/minors before reciprocal determinant or singular-value costs are paid.",
+  "next_step": "Attack a minor-weighted/coarea aggregation inequality that sums the new shell projection geometry across physical triples while preserving product structure; do not use a deterministic good-triple selector, which fresh corrections refute.",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

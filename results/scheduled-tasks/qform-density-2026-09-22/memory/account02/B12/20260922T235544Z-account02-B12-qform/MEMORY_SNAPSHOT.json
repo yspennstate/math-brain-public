@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B12",
+  "run_id": "20260922T235544Z-account02-B12-qform",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "brain_control_commit_at_start": "13e0b97b9191cd3a09a04b477384ab446a313e1b",
+  "brain_control_commit_prepublication": "09ed13c985198e07d098b44764e3fa209f400747",
+  "full_problem_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3afc8473206ce82f5f6b19b9e88f8c9fa32ff058",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260922T235544Z-account02-B12-qform/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "d4571c07cd9ab4557eff8db2c8e40a73c33ded3a",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B12/20260922T235544Z-account02-B12-qform.md"
+  },
+  "required_sources_applied": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "scope": "volume-sampling D/D-prime and physical-coordinate Fourier tools"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "scope": "D-prime marginal threshold h<3/4 and dense-noise robustness of volume packets"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md",
+      "scope": "physical-coordinate three-variable estimates and no-counterexample stress search"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "472b70df7d1edbb3afac23269bc2e4368ae0e371",
+      "path": "proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md",
+      "scope": "dimension-three projected-gradient cap 6sqrt(pi)/sigma for the actual physical block with arbitrary affine terms"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "472b70df7d1edbb3afac23269bc2e4368ae0e371",
+      "path": "proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md",
+      "scope": "full-conjecture reduction to the single no-pivot class N3(tau)"
+    }
+  ],
+  "partner_result_applied": {
+    "account": "account03",
+    "slot": "B12",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "287541ac87d8fa9d977eb1214c8b61e69858bb47",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260922T234350Z-qform-eigenvalue-r20/REPORT.md",
+    "claim": "QFORM-LOCAL-FOOTPRINT-HYBRID-STABILITY-v1",
+    "application": "weighted D-prime determinant packet remains valid for A=A0+T+sum tau_r v_r v_r^T when dense-tail norm plus supported spike cross-footprint is below the baseline minor gap; yields C(h)/(gap) on the actual final form"
+  },
+  "new_claims": [
+    {
+      "claim_id": "QFORM-LOCALIZED-CORE-SPECTRAL-FOOTPRINT-STABILITY-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "If a physical baseline triple has singular gap kappa and A=A0+T+L with ||T||op<=delta and local spectral footprint ||L[S,S]||op=eta, delta+eta<kappa, then ||p||inf<=6sqrt(pi)/(kappa-delta-eta). For L=sum tau_r v_r v_r^T, eta<=sum |tau_r|||v_r,S||^2."
+    },
+    {
+      "claim_id": "QFORM-WEIGHTED-PACKET-SPECTRAL-FOOTPRINT-COROLLARY-v1",
+      "status": "PROVED_BY_PARTNER_APPLICATION",
+      "statement": "For a weighted 3x3 cross-minor packet with I-row marginals h<3/4 and baseline minor gap kappa, dense-tail norm plus maximal supported spike cross-footprint Delta_V<kappa yields ||p||inf<=C(h)/(kappa-Delta_V), with continuity."
+    },
+    {
+      "claim_id": "QFORM-NOPIVOT-DENSE-TAIL-STABILITY-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "If B is no-tau-pivot and ||E||op<=delta then B+E is no-hat_tau for any hat_tau above max(tau+delta, tau+2delta(tau+sqrt(tau+tau^2))+2delta^2), and s3(B+E)>=s3(B)-delta."
+    }
+  ],
+  "exact_target_class_witness": "For n>=12, Astar=2u1u1^T+2u2u2^T-2u3u3^T+tau vv^T with u1=(e1-e4)/sqrt2, u2=(e2-e5)/sqrt2, u3=(e3-e6)/sqrt2, v=1/sqrt(n)(1,...,1) has spectrum {2,2,-2,tau,0,...}. After any dense symmetric T with ||T||op<=1/4 and |tau|<=n/12, s3>=7/4 and ||p||inf<=12sqrt(pi); tau=+-n/12 is an unbounded fourth eigenvalue family.",
+  "dense_tail_nopivot_example": "tau=1/16, delta=1/64: a no-1/16-pivot B with s3(B)>=65/64 plus any symmetric ||E||op<=1/64 becomes a no-1/8-pivot target matrix.",
+  "forbidden_shortcut_checked": "Small operator norm was never interpreted as X^TEX uniformly small. Example E=delta e1e1^T and X1 uniform [R,R+1] gives X^TEX>=delta R^2. No post-rotation independence or independent convolution used.",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "first_unpaid_implication": "From bare s3(A)>=1, derive either a protected physical triple, a protected weighted three-volume packet with I-row marginal <3/4, or prove N3 directly. In N3, combine entry bounds and exterior-cube mass before paying reciprocal local curvature; do not select one minor or assume a rank-three cut.",
+  "next_step": "Analyze exterior-cube mass in N3, especially overlap-two mixed minors, and attempt a grouped original-coordinate packet estimate compatible with D-prime or a direct grouped two-bank bound.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

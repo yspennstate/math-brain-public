@@ -1,0 +1,17 @@
+(a) the flip coordinate z of F_n: Inf_z, B_z/Inf_z, Delta_z/Inf_z, and the largest influence of a y-coordinate
+  n  3: Inf_z = 1.250e-01  B_z/Inf_z = 3.5231  Delta_z/Inf_z = 5.9218  max_j Inf_yj = 0.6250
+  n  5: Inf_z = 3.125e-02  B_z/Inf_z = 4.2427  Delta_z/Inf_z = 6.6596  max_j Inf_yj = 0.4062
+  n  7: Inf_z = 7.812e-03  B_z/Inf_z = 4.9888  Delta_z/Inf_z = 7.4244  max_j Inf_yj = 0.3203
+  n  9: Inf_z = 1.953e-03  B_z/Inf_z = 5.7834  Delta_z/Inf_z = 8.2239  max_j Inf_yj = 0.2754
+  n 11: Inf_z = 4.883e-04  B_z/Inf_z = 6.6185  Delta_z/Inf_z = 9.0605  max_j Inf_yj = 0.2466
+  n 13: Inf_z = 1.221e-04  B_z/Inf_z = 7.4829  Delta_z/Inf_z = 9.9254  max_j Inf_yj = 0.2257
+  n 15: Inf_z = 3.052e-05  B_z/Inf_z = 8.3685  Delta_z/Inf_z = 10.8112  max_j Inf_yj = 0.2095
+(b) brute-force composition check, n = 3, each y_j replaced by Maj_3 of fresh variables (10 variables)
+  F_3:        Inf_z 0.125000  B_z 0.440389  Delta_z 0.740223
+  composed:   Inf_z 0.125000  B_z 0.440389  Delta_z 0.740223
+  largest leaf influence in the composition 0.312500 (= Inf_yj(F_3) * iota_3 = 0.312500)
+(c) Maj_k size at which z becomes the unique maximal-influence coordinate
+  n 11: any odd k > 1.62e+05 suffices; then Delta_z/Inf_z >= B_z/Inf_z >= 0.31 at the maximal-influence coordinate
+  n 15: any odd k > 3e+07 suffices; then Delta_z/Inf_z >= B_z/Inf_z >= 1.64 at the maximal-influence coordinate
+  n 21: any odd k > 8.69e+10 suffices; then Delta_z/Inf_z >= B_z/Inf_z >= 3.91 at the maximal-influence coordinate
+  n 31: any odd k > 6.13e+16 suffices; then Delta_z/Inf_z >= B_z/Inf_z >= 8.07 at the maximal-influence coordinate

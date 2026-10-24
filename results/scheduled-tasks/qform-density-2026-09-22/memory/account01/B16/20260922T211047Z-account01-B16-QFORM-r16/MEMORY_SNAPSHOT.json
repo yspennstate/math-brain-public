@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B16",
+  "run_id": "20260922T211047Z-account01-B16-QFORM-r16",
+  "source_control_start": "b02969f5b8e9c9313119bc8cc62bb41a4d09983d",
+  "source_control_refresh": "4b9e16afc8d1cbd72e438e6468b065451b2c437b",
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM scalar residual conditional-sup correction",
+    "QFORM-MIXED-AMBIGUITY-BL-BANK-BARRIER-v1"
+  ],
+  "partner_applied": {
+    "worker": "account02/B16",
+    "run": "20260922T203148Z-account02-B16-QFORM-auto11",
+    "report_commit": "484069f14f49a3303befbe62863d950e67c809e1",
+    "result": "coordinatewise mixed-BL barrier Theta<=4 on A_m, plus grouped-bank bound ||p_Qm||_infinity<=pi sqrt(2)"
+  },
+  "new_result": {
+    "id": "QFORM-GROUPED-L2-FRESNEL-v1",
+    "status": "SUPPORTING_THEOREM",
+    "statement": "Independent original-coordinate groups with an L2 geometric BL Fourier product bound and total bank dimension 6 yield |phi_Q(t)|<=K|t|^-3/2 and a bounded continuous quadratic output density. Two full R3 banks give ||p_Q||_infinity<=6 |det Lambda|^-1/3(det S_I det S_J)^-1/6, stable under arbitrary block-separable perturbations."
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e4c589aa572f7d140c78a832af2d554eed97fde4",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B16/20260922T211047Z-account01-B16-QFORM-r16/REPORT.md",
+    "blob": "1bb03f9f3dd07a5a6970b74238ec8e2b91205347"
+  },
+  "unresolved_implication": "QFORM-GROUPED-L2-FRESNEL-CROSSBLOCK-v1: retain enough two-bank L2 Fourier budget in the presence of an arbitrary cross-block residual 2 X_I^T C X_J, or force a previously paid structural branch.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "PROVED_ONLY_IN_NEW_SUBCLASS",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "login_write_status": "BLOCKED_BY_PLATFORM_SAFETY_CHECK; not retried"
+}

@@ -1,0 +1,128 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w505",
+  "bundle_slug": "p0162-restriction-quantifier-obstruction-w505-002",
+  "entries": [
+    {
+      "key": "fei-target",
+      "logical_name": "fourier-entropy-influence-conjecture-uniform-boolean-cube",
+      "kind": "concept",
+      "title": "Fourier entropy-influence conjecture: exact uniform Boolean scope",
+      "statement": "CONJECTURE: there exists a finite universal C such that for every n and every f:{-1,1}^n->{-1,1}, with fhat(S)=E[f(X) product_{j in S} X_j] under uniform independent signs, H_2(f)=sum_{S subset [n]} fhat(S)^2 log_2(1/fhat(S)^2) <= C I(f), where I(f)=sum_S |S| fhat(S)^2 and zero summands are zero. The dated intake P0162 ranking is historical; current global openness was not certified by w505.",
+      "assumptions": [
+        "Uniform cube",
+        "Boolean +/-1 output",
+        "all dimensions; dimension-independent C"
+      ],
+      "source": {
+        "source_id": "arxiv:2606.00246",
+        "url": "https://arxiv.org/html/2606.00246v1",
+        "revision": "v1-2026-05-29",
+        "license": "arxiv-nonexclusive",
+        "excerpt": null
+      },
+      "namespace": "combinatorics.boolean_analysis",
+      "proof_text": null,
+      "domain": "Boolean Fourier analysis"
+    },
+    {
+      "key": "restriction-deficit",
+      "logical_name": "boolean-fourier-entropy-restriction-deficit",
+      "kind": "definition",
+      "title": "Boolean Fourier entropy restriction deficit",
+      "statement": "For f:{-1,1}^n->{-1,1}, normalized uniform Walsh coefficients and base-2 Fourier spectral entropy H_2(f), define f_+ and f_- by fixing coordinate i to +1 and -1, and Delta_i(f)=H_2(f)-(H_2(f_+)+H_2(f_-))/2. The coordinate influence is I_i(f)=sum_{S containing i} fhat(S)^2. The deficit ratio Delta_i/I_i is defined only when I_i>0.",
+      "assumptions": [
+        "Uniform cube",
+        "Boolean +/-1 output",
+        "base-2 spectral entropy"
+      ],
+      "source": {
+        "source_id": "owner-own-work:w505:P0162:definition",
+        "url": "file:///~/brain_workers/w505/ATTEMPT.md",
+        "revision": "draft-2026-10-10-pending-independent-review",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "namespace": "combinatorics.boolean_analysis",
+      "proof_text": null,
+      "domain": "Boolean Fourier analysis"
+    },
+    {
+      "key": "coordinate-obstruction",
+      "logical_name": "bent-point-flip-obstruction-to-all-coordinate-fei-induction",
+      "kind": "lemma",
+      "title": "Explicit Boolean obstruction to all-coordinate FEI restriction induction",
+      "statement": "For every m>=1, let N=2^(2m), u,v be independent uniform vectors in F_2^m, y an independent uniform sign, and F_m(u,v,y)=(-1)^(u dot v)-(1-y)1{u=v=0}. Then F_m is Boolean, its selector influence is I_y=1/N, and its base-2 Fourier restriction deficit satisfies Delta_y(F_m)/I_y>=log_2((2^m-1)^2+1). Consequently there is no finite universal C with Delta_i(f)<=C I_i(f) for every uniform-cube Boolean f and every coordinate i. This does not refute the full FEI conjecture or its sufficient exists-coordinate input; no novelty is claimed.",
+      "assumptions": [
+        "m is an integer >=1",
+        "uniform independent inputs",
+        "normalized Walsh coefficients",
+        "base-2 Fourier spectral entropy; 0 log 0=0"
+      ],
+      "source": {
+        "source_id": "owner-own-work:w505:P0162:obstruction",
+        "url": "file:///~/brain_workers/w505/ATTEMPT.md",
+        "revision": "2026-10-10-independent-KEEP-w506-P0162-REVIEW-W505-004",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "namespace": "combinatorics.boolean_analysis",
+      "proof_text": "Write B(u,v)=(-1)^(u dot v), d=1{u=v=0}, and F=(B-d)+y d. At the exceptional point F=y; elsewhere F=B, proving Booleanity. Summing characters over v first gives Bhat(alpha,beta)=2^-m(-1)^(alpha dot beta), while dhat=1/N. For a= Bhat-1/N, b=1/N, r=a^2+b^2, the exact entropy difference of each Fourier pair is r[h_2(b^2/r)+J(2ab/r)], where J(t)=1-h_2((1+t)/2)>=0. This is at least b^2 log_2(r/b^2). For every pair, r/b^2=(sigma 2^m-1)^2+1>=(2^m-1)^2+1. Summing N equal b^2 terms yields I_y=1/N and the claimed deficit lower bound. The lower bound tends to infinity. Independent referee w506 re-derived the Walsh identity and entropy lower bound and filed KEEP in P0162-REVIEW-W505-004; the truth-table check was separate corroboration.",
+      "domain": "Boolean Fourier analysis"
+    },
+    {
+      "key": "missing-coordinate-input",
+      "logical_name": "suitable-coordinate-input-for-fei-restriction-induction",
+      "kind": "concept",
+      "title": "Unproved suitable-coordinate input for full FEI",
+      "statement": "UNPROVED INPUT: a universal finite C such that every nonconstant Boolean uniform-cube function has some positive-influence coordinate i satisfying Delta_i(f)<=C I_i(f), with the same C for all dimensions and all restrictions. Together with I(f)=I_i(f)+(I(f_+)+I(f_-))/2, it would prove FEI by induction from constants. The all-coordinate strengthening fails in the draft explicit witness; choosing a coordinate of maximal influence is not justified by this packet and prior owner work reports it fails. The missing work is a valid coordinate choice or a noncircular structural estimate in the small-influence regime.",
+      "assumptions": [
+        "All Boolean functions and dimensions",
+        "uniform cube",
+        "same universal C at every inductive step"
+      ],
+      "source": {
+        "source_id": "owner-own-work:w505:P0162:missing-input",
+        "url": "file:///~/brain_workers/w505/ATTEMPT.md",
+        "revision": "draft-2026-10-10-pending-independent-review",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "namespace": "combinatorics.boolean_analysis",
+      "proof_text": null,
+      "domain": "Boolean Fourier analysis"
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "coordinate-obstruction",
+      "to_key": "restriction-deficit",
+      "kind": "depends_on",
+      "rationale": "The witness uses exactly the defined Delta_y and I_y, with base-2 uniform Fourier normalization."
+    },
+    {
+      "from_key": "missing-coordinate-input",
+      "to_key": "restriction-deficit",
+      "kind": "depends_on",
+      "rationale": "The unproved local input quantifies over Delta_i/I_i as defined, not H/I."
+    },
+    {
+      "from_key": "missing-coordinate-input",
+      "to_key": "fei-target",
+      "kind": "semantic_association",
+      "rationale": "The exact influence recursion makes the clearly unproved local coordinate premise sufficient for the stated full FEI target."
+    },
+    {
+      "from_key": "coordinate-obstruction",
+      "to_existing_logical": "math:probability.core:open-problem-p0162-fourier-entropy-versus-total-influence",
+      "kind": "semantic_association",
+      "rationale": "The checked witness rules out an all-coordinate sufficient route to the exact FEI target; it does not refute the target itself."
+    },
+    {
+      "from_key": "coordinate-obstruction",
+      "to_existing_logical": "math:probability.core:attempt-p0162-fourier-entropy-versus-total-influence",
+      "kind": "semantic_association",
+      "rationale": "The original P0162 attempt shows the Boolean constraint cannot be dropped; this witness retains Booleanity and pinpoints a different inadequate proof input, arbitrary-coordinate restriction induction."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+STATE: DONE
+NEXT: Optional external proof review and historical-priority comparison of the finite-determinant formula; no mathematical gap remains in the presented evaluation.
+VERDICT: SOLVED
+
+2026-10-11: Fetched and verified Aldous's exact process and problem statement. Retrieved the 1993 and 1999 sources. Searched arXiv, OpenAlex, Crossref, Semantic Scholar (including 100 citations of the verified 1999 DOI), and GitHub; no exact solution theorem verified. OpenAlex and some Semantic Scholar requests were rate-limited.
+2026-10-11: Read research-brain hints and prior internal Bessel/Schur work without modifying shared stores or repositories. Established representations are credited as prior work and not counted as a newly solved problem.
+2026-10-11: Proved that the actual continuous stationary triple has X_3 not conditionally independent of X_1 given X_2. Consecutive gaps are dependent, with boundary mixed log-density derivative -1/80. Full proofs and precise remaining gap are in ATTEMPT.md. Novelty is unverified.
+2026-10-11: Exhaustive exact permutation counts passed. FiniteCertificate.lean passed using decide +kernel and kernel-checked rational proofs, no sorry/native_decide. An additional exact rational-tail interior witness passed. lean_check.txt records exit 0 and 76.74 seconds. All required artifacts saved locally.
+
+2026-10-11 continuation: Reopened on explicit user request. Read ATTEMPT.md and recalled Schur/Eynard-Mehta machinery for the remaining joint-law gap.
+2026-10-11 continuation completed: Derived and fully proved an ordinary finite block determinant for every stationary joint survival event, of dimension at most k(k-1) for the first k particles. This evaluates the old representation and goes beyond merely restating it. A closed triple survival function and density follow. FINITE_DETERMINANT.md and the continuation in ATTEMPT.md contain all proofs; REFEREE.md records self-review.
+2026-10-11 continuation checks: 15 exact permutation/formal-series cases through degree 7 pass, including nonmonotone constraints tested without shared preprocessing; 7 positive growth numerical cases pass within the analytic Poisson cutoff tail; 15 triple-density coefficients pass. GeneralBlockCertificate.lean passes kernel checking, exit 0. No full formalization or historical novelty claim is made.
+2026-10-11 final verdict: SOLVED by the finite determinant evaluation proof, not SOLVED_IN_LITERATURE. The source representation and classical Eynard-Mehta/RSK tools are established inputs. Historical priority of the source-specific composition is unverified.

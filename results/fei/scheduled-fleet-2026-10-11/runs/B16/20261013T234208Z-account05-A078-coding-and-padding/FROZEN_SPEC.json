@@ -1,0 +1,12 @@
+{
+ "helper_version":"shared-bent-spike-v1",
+ "actual_Boolean_family":"G(s,x)=1-2*1{s=0,x=0}; H(s)=(-1)^(sum paired s bits); F chooses G or H by fresh z. Separate independent A077 review uses every ordered pair of two-bit cores sharing one bit.",
+ "domain":{"even_shared_k":[2,4,6,8,10,12,32,64],"full_truth_table_k":[2,4,6],"pilot_k":[2,4],"review_core_pairs":256},
+ "case_count":"8 analytically specified actual Boolean families; full signed spectra/physical edges on3 fixed dimensions. Independent review:256 roots,768 data splits.",
+ "symmetry":"No review quotient. Bent sign magnitudes collapse to two common-frequency packet types; analytic signed formula is proved, not assumed from a spectral law.",
+ "arithmetic":"Integer FWHT/edge counts; Fraction; prime-log exact identities for small review tables; 40-term rational atanh log intervals with proved tail after binary range reduction.",
+ "memory_estimate_MB":80,
+ "max_runtime_seconds":60,
+ "hard_guard_seconds":55,
+ "commands":["python -X utf8 code/check.py --pilot","python -X utf8 code/check.py"]
+}

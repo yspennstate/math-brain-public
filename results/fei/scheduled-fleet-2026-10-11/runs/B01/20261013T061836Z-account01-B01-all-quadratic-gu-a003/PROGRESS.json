@@ -1,0 +1,110 @@
+{
+    "schema": "fei-run-progress/2",
+    "protocol_revision": "2026-10-11-execution-v2 plus owner control 2026-10-12.1",
+    "run_id": "20261013T061836Z-account01-B01-all-quadratic-gu-a003",
+    "stream": "B01",
+    "packet_id": "A003",
+    "packet_ids": [
+        "A003"
+    ],
+    "gap_id": "G-UPPER-SET-ASYMMETRY",
+    "related_gap_ids": [
+        "BENT_SELECTOR",
+        "OVERLAP_PRODUCT"
+    ],
+    "attempt_id": "A003-GUP-ALL-QUADRATIC-6",
+    "attempt_counter": 6,
+    "bounded_objective": "Replace the prior single parity-hyperplane calculation by a coherent union of two affine plateaued cosets and determine whether the 3I GU payment survives without double charging upper cones.",
+    "method": "Classify the two physical restrictions of a quadratic phase as character translates; prove an affine equal-fiber coset-merge lemma; split coincident and disjoint support cases; exact exhaustive convention check through n=5.",
+    "prior_status": "GU'(3,0) was proved only for the restriction-closed clique-quadratic tensor class; arbitrary changing plateaued supports were unpaid.",
+    "new_status": "GU_PRIME_3_0_PROVED_FOR_ALL_QUADRATIC_BOOLEAN_PHASES_PENDING_INDEPENDENT_REVIEW; U_LE_I_AND_H_LE_2I_ON_CLASS; UNIVERSAL_GU_OPEN; FULL_FEI_OPEN",
+    "mathematical_status": "STRICT_RESTRICTION_CLOSED_CLASS_EXTENSION; UNIVERSAL_TARGET_OPEN",
+    "mathematical_delta": "Every quadratic phase of arbitrary rank and affine shift obeys the coordinatewise Delta_i U<=3 Inf_i bound, hence G<=3I. The proof replaces a coherent union of two translated plateaued cosets by one equal-fiber merge bit. The constant 3 is the sharp supremum. Also U<=I and H<=2I on the class.",
+    "case_extension": {
+        "starting_class": "Finite products of clique-quadratic blocks and, separately, individual bent quadratic phases.",
+        "new_class": "All quadratic Boolean phases, equivalently arbitrary alternating polar matrices of every rank with arbitrary affine terms; closed under every physical restriction and disjoint product.",
+        "quantifiers": "Every dimension, rank, affine shift, quadratic graph/overlap pattern and physical coordinate.",
+        "previous_bound": "GU'(3,0) only on the clique subclass; G/I<3 formula only for nonsingular polar matrices.",
+        "new_bound": "Coordinatewise Delta_i U<=3 Inf_i and globally GU'(3,0) on the whole quadratic class; U<=I and H<=2I.",
+        "parameter_dependence": "None in dimension, rank, active-row count, overlap, support size or restriction depth.",
+        "proof_status": "AUTHOR_PROVED_PENDING_A086_A094_REVIEW",
+        "universal_gap": "Degree>=3 restrictions need not be flat translated cosets, so cross/within upper-fiber ratios are not empty-or-equal."
+    },
+    "claim_versions_used": [
+        "B01-A003-CLIQUE-QUADRATIC-GU-v1 and B01-A003-QUADRATIC-BENT-GU-FORMULA-v1 at final receipt bbb845720442decff5b478033fe992153b295590",
+        "B05 retained-difference telescope final 31e667c3af7f8441f14ab4615c13f21590cf7264, consulted but not imported",
+        "B19 acceptance of B05 final f832645b91bf1128824e8ee99749ae4a68c39a6c"
+    ],
+    "claims_created_or_changed": [
+        "B01-A003-ALL-QUADRATIC-GU-v1",
+        "B01-A003-ALL-QUADRATIC-U-FEI-v1"
+    ],
+    "source_artifacts": {
+        "owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+        "assignment_blob": "ac038a028831d59ad053dd56b2b527e2a71ffdee",
+        "prior_b01_final_receipt": "bbb845720442decff5b478033fe992153b295590",
+        "canonical_head_at_research": "f832645b91bf1128824e8ee99749ae4a68c39a6c",
+        "brain_head_at_research": "12d1e2c226dda5f2847ad2b4ca6ed643e029749a"
+    },
+    "acceptance_evidence": [
+        "REPORT.md sections 2--5: complete affine-coset and coordinate proof",
+        "COSET_MERGE_THEOREM.md: compact proof kernel",
+        "CHECK_ALL_QUADRATIC_GU.py and .out: exact exhaustive 33,866-case verification through n=5"
+    ],
+    "remaining_obstacle": "For higher-degree Boolean functions the child spectra are not uniform on equal-size translates of one affine subspace. The cross upper fiber can have a nonbinary size ratio, so the one-bit merge payment fails without a new stable cross/within logarithm bound. Universal GU' and full FEI remain open.",
+    "next_consumers": [
+        "A005",
+        "A063",
+        "A068",
+        "A086",
+        "A094",
+        "B20"
+    ],
+    "independent_reviewers": [
+        "A086",
+        "A094"
+    ],
+    "next_action": "Prove or falsify an approximate coset-merge inequality for equal-energy translated plateaued pieces with a remainder bounded by physical influence plus bU for one fixed b<1; test cubic phases and the saved coherent-collision controls.",
+    "stagnant_substantive_attempts": 0,
+    "blockers": [
+        "Equal linear-projection fibers are special to affine-flat spectral pieces.",
+        "No universal aggregate upper-set asymmetry payment is proved.",
+        "Full FEI remains open."
+    ],
+    "validation": {
+        "command": "python CHECK_ALL_QUADRATIC_GU.py",
+        "arithmetic": "Integer Walsh transforms, exact Fraction arithmetic, and integer logarithms after power-of-two assertions.",
+        "scope": "All 33,866 quadratic/linear coefficient choices through n=5, quotienting output sign only.",
+        "status": "PASS",
+        "limitation": "Finite check validates conventions; the analytic equal-fiber proof is all-dimensional."
+    },
+    "literature": {
+        "primary_sources_checked": [
+            "campaign U definitions and prior quadratic proof at canonical package 4b5c51804df04c0f4d5fecc679f49367297112db"
+        ],
+        "novelty_claim": "NONE; campaign-internal source-bound class theorem."
+    },
+    "delivery_status": {
+        "canonical": {
+            "status": "SEVEN_FILE_SUBSTANTIVE_CORE_CREATED_AND_EXACTLY_READ_BACK",
+            "package_commit": "19dcf1ea5aa7dbe1a9a58780bc6bd06a08361729",
+            "verified_files": 7,
+            "report_blob": "460a47083324f194bb431650ab912c126f9894f2"
+        },
+        "brain_mirror": {
+            "status": "SEVEN_FILE_SUBSTANTIVE_CORE_CREATED_AND_EXACTLY_READ_BACK",
+            "package_commit": "0dc377fe71eb6a0c15166812468e73dd140580b1",
+            "verified_files": 7,
+            "report_blob": "460a47083324f194bb431650ab912c126f9894f2"
+        },
+        "independent_review": "PENDING_A086_A094",
+        "native_brain_ingestion": "NOT_CLAIMED"
+    },
+    "configuration": {
+        "model": "Codex as exposed by runtime instructions",
+        "reasoning_effort": "not exposed",
+        "subagents": 0,
+        "scheduler_or_graph_mutation": false
+    },
+    "full_fei_status": "OPEN"
+}

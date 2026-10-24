@@ -1,0 +1,8 @@
+{
+  "worker":"w489",
+  "date":"2026-10-10",
+  "memory_recall":{"query":"C0056 Anderson weak disorder resolvent spectral continuity proof mistakes","timeout_cutoff_seconds":60,"result":"subprocess.TimeoutExpired; no cards returned before cutoff","fallback":"memory index rg then exact perceptron_proof_open_gaps_fleet_2026_07_12.md read"},
+  "math_store_query":{"store":"~/math-brain-build/local/population/brain.sqlite3","connection":"SQLite mode=ro, PRAGMA query_only=ON","query":"SELECT id,kind,title,body,metadata_json FROM nodes WHERE lower(title) LIKE '%anderson%' OR lower(title) LIKE '%spectral averaging%' LIMIT 8","progress_deadline_seconds":5,"result":"sqlite3.OperationalError: interrupted; zero usable returned rows","elapsed_seconds_exact":null},
+  "bounded_proposed_repair":"Use export/population/nodes.jsonl with targeted rg matching only the requested bridge terms; at most four returned rows per query, at most five queries, 45-second cutoff per query. Save source node IDs and full selected card bodies, then check their exact hypotheses. This is a local read-only fallback proposal, not a deployed change or a proof of retrieval speedup.",
+  "deployment_status":"proposal; no live recall controls changed"
+}

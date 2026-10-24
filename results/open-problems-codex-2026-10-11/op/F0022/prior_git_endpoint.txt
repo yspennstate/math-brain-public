@@ -1,0 +1,136 @@
+Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is **not GPT-6 at maximum**; no authenticated runtime model/effort telemetry or binding selector is exposed.
+
+# R7-01 admission screen — F0022 literal endpoint versus intended percolation singularity
+
+Date checked: 2026-09-19 UTC  
+Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Worker: `R7-01`  
+Native ID: `6aabe777361481919c9e614646464772`  
+Canonical candidate: `F0022`  
+Shard check: `sum(ord(c) for c in "F0022") = 252`, hence `252 mod 7 = 0`.
+
+## 1. Exact outside source
+
+Authors: Vincent Beffara and Hugo Duminil-Copin.  
+Title: *Planar percolation with a glimpse of Schramm–Loewner Evolution*.  
+Original arXiv version: arXiv:1107.0158, first submitted 2011-07-01; v2 dated 2011-11-02.  
+Journal version: *Probability Surveys* 10 (2013), 1–50, DOI `10.1214/11-PS186`.  
+Source URL: https://arxiv.org/abs/1107.0158  
+Exact locator in the v2 text checked today: Section 5, Question 1, printed p. 41 (the repository intake records `PDF p. 44`, apparently an extraction/page-offset convention).
+
+The printed source says, for site percolation on the triangular lattice,
+
+> “Prove that the mean number of clusters per site κ(p) = E_p(|C|^{-1}) behaves like |1/2-p|^{2+α+o(1)}, where C is the cluster at the origin and α=-2/3.”
+
+The source itself introduces this as a quantity whose behavior “remains unproved.” The absolute value makes the displayed endpoint naturally two-sided as `p -> 1/2`.
+
+## 2. Existing intake and prior attempt
+
+The canonical intake row is `beffara_dc_planar_percolation_2011::question_1`. It repeats the printed formula literally. Its older attempt, however, silently changes the mathematics in two incompatible ways:
+
+1. it says `2+alpha = 8/3`, although with the source's `alpha=-2/3` the literal arithmetic is `2+alpha = 4/3`;
+2. it then analyzes a *different* statement, namely a singular remainder after subtracting a second-order Taylor polynomial and an exponent `2-alpha=8/3`.
+
+That older attempt contains useful heuristic information about the intended critical singularity, but it is not a proof of the literal printed Question 1 and must not be inherited as though the scopes were identical.
+
+A bounded repository ownership search on 2026-09-19 found no canonical `operations/claims/F0022.md`; a neighboring admission screen likewise classified F0022 as asymptotic/HARD rather than claiming it. Absence of a claim alone is not admission evidence.
+
+## 3. Literal printed endpoint is false by a one-cluster event
+
+This is the decisive source-scope check.
+
+Let `A_p` be the event that the origin is open and all six of its nearest neighbors in the triangular lattice are closed. On `A_p`, the open cluster `C` of the origin consists of exactly one vertex, so `|C|^{-1}=1`. Independence gives
+
+`P_p(A_p) = p(1-p)^6`.
+
+Therefore, under the standard convention that an infinite cluster contributes `1/|C|=0` (and regardless of how a closed origin is encoded),
+
+`κ(p) = E_p(|C|^{-1}) >= p(1-p)^6`.
+
+Taking `p -> 1/2` gives the completely explicit obstruction
+
+`liminf_{p -> 1/2} κ(p) >= (1/2)(1/2)^6 = 1/128 > 0`.
+
+But the literal right-hand side in the source is
+
+`|1/2-p|^{2+alpha+o(1)} = |1/2-p|^{4/3+o(1)} -> 0`.
+
+Hence the displayed source statement cannot be true as a literal asymptotic equivalence/order statement for `κ(p)` itself.
+
+This is not a numerical observation and uses no unproved percolation input. It is an exact elementary certificate from a single local event.
+
+### Frozen source-matching diagnostic
+
+For this admission screen, define
+
+`c_lit := liminf_{p -> 1/2} κ(p)`.
+
+Before reading the source carefully: `UNKNOWN/UNMEASURED`.  
+After the exact singleton-cluster certificate: `c_lit >= 1/128`.
+
+This is genuine mathematical movement in *admission diagnosis*, but it is **not** a successor research metric because F0022 is not admitted below.
+
+## 4. Why this does not solve the intended famous percolation problem
+
+The standard critical-phenomena formulation contains an analytic background. A current reference entry for Bernoulli percolation (John C. Wierman, *Percolation Theory*, Wiley StatsRef, current web copy checked 2026-09-19) lists the expected law for the mean number of clusters per vertex as
+
+`κ'''(p) ≈ |p-p_c|^{-1-alpha}`.
+
+With the two-dimensional value `alpha=-2/3`, this predicts a third-derivative singularity of order `|p-p_c|^{-1/3}` and, after removing the regular Taylor background, a singular term of order `|p-p_c|^{2-alpha}=|p-p_c|^{8/3}`. This is consistent with the usual hyperscaling relation `2-alpha=d nu`, with `d=2` and `nu=4/3`.
+
+Thus the natural intended mathematical problem is plausibly about the **singular part** of `κ`, not the impossible literal vanishing of `κ` itself; moreover, the source's printed `2+alpha` conflicts with the conventional `2-alpha` exponent. I do **not** assert an authorial correction without an explicit erratum. I record only the logically safe distinction:
+
+- literal printed endpoint: exactly refuted by `κ(p) >= p(1-p)^6`;
+- intended singular-background-subtracted endpoint: a different, genuinely hard percolation problem and not solved here.
+
+A bounded search dated 2026-09-19 recovered the original arXiv/journal source, Grimmett's differentiability work on clusters per vertex, and the standard reference formulation above, but no explicit erratum to DOI `10.1214/11-PS186` and no later primary theorem that turns the intended singular-part statement into a short closed theorem. Search misses are not a worldwide openness certificate.
+
+## 5. Admission decision
+
+**Disposition: `NOT_ADMITTED / LITERAL_SOURCE_ENDPOINT_REFUTED_BUT_INTENDED_SCOPE_AMBIGUOUS_AND_HARD`.**
+
+Rationale:
+
+- F0022 is in R7-01's exact residue-zero shard and appears unclaimed in the bounded current repository search.
+- The exact printed statement is not an honest open problem: it is false for the elementary reason above.
+- Claiming a “solution” to the famous intended problem would be misleading because the likely intended singular remainder is a different statement and remains hard.
+- Rewriting the target to `κ - Taylor_2(κ)` with exponent `8/3` would silently alter the source quantifier/formula and is forbidden by the owner's source-faithfulness rule.
+
+Accordingly no `operations/claims/F0022.md` is created. R7-01 remains `PENDING_ADMISSION`; its successor metric remains `UNKNOWN/UNMEASURED`; successor stagnation remains `NOT_STARTED`; and B2/B24/B11 are not charged to F0022.
+
+## 6. Durable correction for future workers
+
+Future workers should not:
+
+- repeat the intake attempt's arithmetic `2+alpha=8/3`;
+- cite F0022's literal printed formula as a live unresolved theorem without addressing the positive local lower bound;
+- claim that the singleton lower bound proves the intended `8/3` singularity;
+- silently replace the source with a background-subtracted statement and keep the same source-level closure label.
+
+A coordinator may later decide to split the ledger into a `KNOWN_FALSE_AS_PRINTED` literal row and a separately sourced/conventionally formulated hard singular-part problem. This worker does not edit shared ledgers.
+
+## ledger_delta
+
+```yaml
+slot: R7-01
+native_task_id: 6aabe777361481919c9e614646464772
+candidate_id: F0022
+canonical_key: beffara_dc_planar_percolation_2011::question_1
+shard_residue: 0
+source_status:
+  literal_printed_endpoint: REFUTED_BY_LOCAL_EVENT
+  intended_singular_part: HARD_NOT_SOLVED_HERE
+ownership: NO_CANONICAL_CLAIM_FOUND_BOUNDED_SEARCH
+admission: NOT_ADMITTED
+admission_metric:
+  name: c_lit_liminf_kappa_at_half
+  before: UNKNOWN/UNMEASURED
+  after: ">=1/128"
+successor_metric_before: UNKNOWN/UNMEASURED
+successor_metric_after: UNKNOWN/UNMEASURED
+successor_stagnation: NOT_STARTED
+methods_charged_to_successor: []
+claim_created: false
+shared_ledgers_edited: false
+next_action: continue_residue0_admission_screen_without_rewriting_F0022_scope
+```

@@ -1,0 +1,12 @@
+{
+  "helper_version": "A009-matching-v1",
+  "actual_Boolean_family": "positive complete-graph edge DNFs K_n, fixed both-endpoint ordered covers",
+  "parameter_domain": {"pilot_n": [4,5], "full_n": [4,5,6,7,8], "scalar_n": [4,5,6,7,8,9,10,11,12,16,32,64,128]},
+  "case_count": {"pilot_functions": 2, "full_functions": 5, "truth_inputs_full": 496, "finite_scalar_certificates": 13},
+  "symmetry": "No truth-table reduction; selected run probabilities depend only on cardinality by proved permutation invariance of both-order covers. Direct matching enumeration verifies counts for n<=8.",
+  "arithmetic": "integer FWHT and physical pivotal edges; Fraction queue masses/KKT; rational log intervals by 30-term atanh range reduction; analytic all-n proof separate",
+  "memory_estimate_MB": 60,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "outputs": "out/PILOT.json, out/CHECK.json, out/MATCHING_COUNTS.json"
+}

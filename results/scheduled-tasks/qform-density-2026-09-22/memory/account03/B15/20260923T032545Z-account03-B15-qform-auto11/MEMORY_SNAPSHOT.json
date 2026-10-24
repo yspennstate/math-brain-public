@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260923T032545Z-account03-B15-qform-auto11",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "initial_main_commit": "073e60f945becbc9a6cbdfc584b1529eb32200e4",
+    "prepublication_main_commit": "cc53a86507772063a9c55a2f7c3d19e6eadaaa44",
+    "owner_control_revision": "2026-09-22.15"
+  },
+  "assignment": "Absolute continuity and regularity: separate qualitative continuity from the universal L-infinity bound and seek a target-level regularity lemma.",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ad7e5daa036cc8330b1432285ad40fec611d37dd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T211430Z-account04-B15-heat-regularity-r4/REPORT.md",
+    "result": "For every probability law mu, sup_{epsilon>0,y} (mu*gamma_epsilon)(y)=||p_mu||_infinity in the extended sense.",
+    "actual_application": "For target Q, define A_epsilon(y)=E[((Q-y)^2/epsilon^2)gamma_epsilon(Q-y)]. Since partial_epsilon[epsilon H_epsilon(y)]=A_epsilon(y) and Q is atomless, H_epsilon(y)=epsilon^{-1} integral_0^epsilon A_r(y)dr. Therefore A_r(y)<=C uniformly implies H_epsilon(y)<=C, and the partner theorem yields ||p_Q||_infinity<=C."
+  },
+  "new_results": [
+    "For every probability law mu, ||p_mu||_infinity = sup_{r>0,y} P(r<|Z-y|<2r)/(2r), with +infinity if there is no bounded density.",
+    "For kappa(u)=u^2 gamma_1(u), ||p_mu||_infinity = sup_{epsilon>0,y} E[((Z-y)^2/epsilon^2)gamma_epsilon(Z-y)].",
+    "For every target QFORM law, Q is atomless and H_epsilon(y)=epsilon^{-1} integral_0^epsilon A_r(y)dr.",
+    "The annular Gaussian Fourier multiplier is (1-epsilon^2 t^2)exp(-epsilon^2 t^2/2), giving an absolutely convergent damped Fourier representation without pointwise characteristic-function decay."
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a86bb095aac440bd79e2b2c26b23228ac952d2ab",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T032545Z-account03-B15-qform-auto11/REPORT.md",
+    "blob": "d1e14383855c59b4f86fb6c82c10ffdd815c0e06"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "7723af93c31a0bae00a08e69c1e6d515f30fd61d",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B15/20260923T032545Z-account03-B15-qform-auto11.md"
+  },
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "SEPARATE_FROM_THIS_LEMMA; no continuity conclusion is inferred from annular height control alone",
+  "unresolved_implication": "Prove a universal bound on A_r(y), equivalently the compact annular shell probability, uniformly over all admissible matrices and cap-one product laws.",
+  "next_step": "Attempt a product-preserving shell or annular-Gaussian estimate that aggregates grouped original-coordinate/ridge geometry before any reciprocal tiny-minor or worst conditional-density payment."
+}

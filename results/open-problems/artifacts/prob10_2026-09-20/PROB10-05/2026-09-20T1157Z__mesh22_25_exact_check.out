@@ -1,0 +1,22 @@
+Exact runtime recomputation of the new-operator finite Gaussian moments plus exact covariance/HGR/spectral synthesis.
+The repository checker additionally verifies immutable base/witness Git blobs before reproducing these calculations.
+
+r,c,s = 22/25 936901/1000000 936901/940000
+mu interval = (0.9155053441383891, 0.9155053441753636)
+eps2 interval = (2.7015210485756084e-05, 2.70153120376748e-05)
+mu coarse = 9155053441/10000000000 4577526721/5000000000
+eps2 coarse upper = 135077/5000000000 2.70154e-05
+covariance squared margins k=1,2 = [0.0001334296986263307, 2.3302146180526656e-07]
+tail derivative margin = 0.3153972754773333
+tail endpoint upper = 0.9254920420235069
+tail endpoint c-margin = 0.011408957976493094
+rho_adj,rho_opp,kappa = 0.9888381888470195 0.9808133523279724 0.9984163199272427
+trace HGR upper < 1.1505277875359627
+trace cap/margin = 1.15053 2.2124640372023133e-06
+theta,x,beta = 0.172052 0.9157825 0.817754
+spectral-tail margin = 5.1330927938527255e-06
+Temple margin = 7.695197511078e-08
+incoming lower/width = 0.171884 0.078116
+new lower/width = 0.172052 0.077948
+repository gain = 0.000168
+ALL_EXACT_CHECKS_PASS = True

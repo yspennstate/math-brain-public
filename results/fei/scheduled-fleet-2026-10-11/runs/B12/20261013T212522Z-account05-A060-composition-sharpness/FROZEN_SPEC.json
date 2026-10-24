@@ -1,0 +1,13 @@
+{
+ "helper_version": "A060 stage2 singleton/cap v1",
+ "family": ["all balanced Boolean functions on uniform n-bit cubes for n=1,2,3,4", "all antipodally odd Boolean functions on n=5", "selector-character swapped quadratic bent point splice, composed with Maj3 or a fixed balanced dyadic-coefficient inner"],
+ "domain": {"balanced_n": [1,2,3,4], "odd_n": [5], "swapped_gate_m": [2,4,6,8], "exact_cap_x": ["1/4","1/16","9/16"], "physical_composition_m": [2,4,6]},
+ "case_count": "78 balanced functions in n<=3; 12870 balanced n=4; 65536 odd n=5; 12 cap examples; 3 Maj3 compositions",
+ "symmetry": "no symmetry quotient; antipodal condition constructs each odd table once; certificate signature caching only reuses identical integer inequalities",
+ "arithmetic": "integer FWHT and exact boundary count; rational singleton squares; prime-exponent integer-product sign certificates for Lambda_bits<=3(I-1); rational prime-log equality and certified logarithm intervals for cap controls",
+ "memory_estimate_MB": 90,
+ "max_runtime_seconds": {"pilot":60,"main":180},
+ "pilot": "n<=3 balanced plus first 512 n=5 odd masks; cap m=2,4",
+ "heavy_job": false,
+ "notes": "Dimensions are frozen; finite census is not an all-dimensional theorem. Review of pending L1 and source-bound A057 acceptance precede any broad new claim."
+}

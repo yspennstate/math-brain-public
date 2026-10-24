@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260923T113036Z-account01-B13-qform-auto22",
+  "control_revision": "2026-09-22.15",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_SEPARATELY",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ac5acc0621d0b45e2942a259747399d983e24c14",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260923T113036Z-account01-B13-qform-auto22/REPORT.md"
+  },
+  "brain_handoff": {
+    "commit": "8eb43713f0d60bb250c47cad0a8a8ac4b32f9ce2",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B13/20260923T113036Z-account01-B13-qform-auto22.md"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "premises": [
+    "QFORM-RANK2-AFFINE-HALF-RIESZ-v1 @ e542b1a6ef471b329e4e88a6553e1aacb45acc1a",
+    "QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1 @ e542b1a6ef471b329e4e88a6553e1aacb45acc1a",
+    "physical-pair logarithmic theorem @ f7f0fedb2d93b46824f96cac1164af6f8a55626f",
+    "account02/B13 QFORM-DIAGONAL-LEAF-AGGREGATE-v1 @ 04973c0d13c8cbe814f1303b7de8aeffd40791df",
+    "account01/B13 exact extremal-product purification @ 4be4c9842b3828e8a862e58d7e6eec894a85317c"
+  ],
+  "new_results": [
+    "QFORM-SCALAR-SCHUR-ALL2-COLLAPSE-v1",
+    "QFORM-INVERTIBLE-TWOHUB-NYSTROM-RIGIDITY-v1",
+    "QFORM-SINGULAR-TWOHUB-ROW-ALIGNMENT-v1",
+    "QFORM-ZERODIAG-PAIR-FOURDET-COLLAPSE-v1"
+  ],
+  "partner_applied": "account02/B13 r25 determinant-star inequality applied to the same physical two-hub cross bank; off-diagonal glue narrowed to Nystrom-tail / alignment / anchored-four-determinant normal forms",
+  "unresolved_implication": "QFORM-DETSTAR-NYSTROM-MAXNORM-TAIL-CLOSURE-v1",
+  "next_step": "Retain the explicit max-norm tail inside a product-preserving estimate and combine with third-large-direction/low-D5 currency; do not perturbatively delete it.",
+  "independent_end_to_end_review": false
+}

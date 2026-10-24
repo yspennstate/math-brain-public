@@ -1,0 +1,67 @@
+account03/B01 account03-B01-20260923T163050Z-auto11
+QFORM-NEARNULL-LEAKAGE-FEJER-LOG-v1 deterministic checks
+
+1. Partner leakage conversion
+   L(ell)=sum_{k!=l} ell_k^2 ell_l^2 >= W2/(4a^2).
+   Since L(ell)<=||ell||_2^4,
+   ||ell||_2 >= W2^(1/4)/(sqrt(2)|a|^(1/2)).
+   PASS.
+
+2. Product-slope cap and residual Fourier constant
+   K<=sqrt(2)/||ell||_2.
+   Random-slope Plancherel coefficient is sqrt(pi)*sqrt(K).
+   Combining the preceding lower bound gives
+   sqrt(pi)*sqrt(K)<=sqrt(2pi)|a|^(1/4)W2^(-1/8).
+   PASS.
+
+3. Residual small-ball constant
+   P(|R-u|<=rho)<=4 sqrt(K rho)
+   <=4 sqrt(2)|a|^(1/4)W2^(-1/8) sqrt(rho).
+   For an interval of length q, rho=q/2, so
+   P(R in I)<=4|a|^(1/4)W2^(-1/8)sqrt(q).
+   PASS.
+
+4. Residual Fejer integration
+   int_0^T (1-t/T)t^(-1/2)dt=(4/3)sqrt(T).
+   After symmetry and 1/(2pi), multiplier is 4/(3pi).
+   With A0=sqrt(2pi)|a|^(1/4)W2^(-1/8), numeric prefactor
+   4sqrt(2)/(3sqrt(pi)) = 1.0638460810704873.
+   PASS.
+
+5. Square-Fejer kernel lemma constants
+   K_1(x)<=min(1/(2pi),2/(pi x^2)).
+   For |z|<=2, bound 8/(3pi)=0.8488263631567752.
+   For z>=2, the coefficient after converting z^(-3/2) terms to z^(-1/2) is
+   4sqrt(2)/pi + sqrt(2) + (6/pi)(3/2)^(-3/2)
+   =4.254441929665543 <5.
+   For z<=-2, beta integral gives <=|z|^(-3/2).
+   Thus J_T(s)<=5 min(sqrt(T),|s|^(-1/2)).
+   PASS.
+
+6. Layer-cake compiler
+   If P(|R-y|<=rho)<=min(1,H sqrt(rho)), then
+   E min(S,|R-y|^(-1/2))
+   <= integral_0^S min(1,H/s) ds
+   = S for S<=H,
+     H[1+log(S/H)] for S>H.
+   PASS.
+
+7. Whole-Q constants
+   H0=4sqrt(2)|a|^(1/4)W2^(-1/8).
+   5|a|^(-1/2)H0=20sqrt(2)|a|^(-1/4)W2^(-1/8).
+   Numeric 20sqrt(2)=28.284271247461902.
+   s0=4sin(1/2)^2=0.9193953882637206.
+   Interval-majorant crude prefactor 20sqrt(2)pi/s0=96.6479274286715.
+   PASS.
+
+8. Scaling
+   A -> lambda A gives a -> lambda a and W2 -> lambda^6 W2.
+   Hence |a|^(-1/4)W2^(-1/8) -> |lambda|^(-1) times itself.
+   H0 -> |lambda|^(-1/2) H0, matching sqrt(frequency) scaling.
+   PASS.
+
+9. Scope guard
+   No claim that O(log T) Fejer growth is uniform in T; therefore no bounded-density conclusion is inferred from Theorem 4.1. Continuity is not claimed.
+   PASS.
+
+STATUS=PASS

@@ -1,0 +1,26 @@
+{
+  "source": "A095-RANK-KL-EQUIVALENCE@3 new linear-tax clause; DERIVATION sections 1-4",
+  "missing_target": "S_K>=Delta-Kd on a non-flat collision row, with retained seed costs and one-use recursive transport",
+  "substitution": {
+    "t": "n=k+m",
+    "d_star": "delta=2^-n",
+    "shared_block": "all n data coordinates",
+    "private_blocks": "empty",
+    "selector": "one fresh physical z",
+    "K": "17/8",
+    "source_tax": "(n+2+3/ln2)delta",
+    "certified_seed_bank": "k/16+(17/8)n delta-[H(H)-k]/2",
+    "bank_lower": "k/16-(k+7/2)2^(-k-1)+(17/8)n delta",
+    "excess_upper": "(n+35/8)delta",
+    "strict_bank_margin": ">1/64"
+  },
+  "reference_debt": "G,H exact structural references; q arbitrary supplied full R_q retained exactly as c_q, tensor KL=D_q",
+  "recursive_source": "A095 retained v2 activation: full normalized Q_F and CE<=p CE_gcal+6rp(1-mu)",
+  "exclusive_accounts": [
+    "p c_q",
+    "(17/8)p I(M)",
+    "6rp(1-mu)"
+  ],
+  "failed_shortcut": "Price2 bank fails k=4,m>=18; exact n22 lower certificate in out/PRICE_TWO_CERTIFICATE.json",
+  "universal_gap": "No source-owned replacement for k/16 and the specific nonpivotal point-edge increment on arbitrary overlapping cores"
+}

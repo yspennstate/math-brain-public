@@ -1,0 +1,183 @@
+{
+  "method": "exact Fraction atom checks and deterministic minimizer checks",
+  "random_trials": 0,
+  "proof_dependency": "The analytic proof in agents/016.md is independent of this script.",
+  "examples": [
+    {
+      "name": "uniform_sharp",
+      "exact_probabilities": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "exact_first_derivatives": [
+        "-1",
+        "0",
+        "0",
+        "1"
+      ],
+      "exact_det_direction": "1",
+      "exact_fisher": "8",
+      "exact_endpoint_fisher": "8",
+      "log_odds": 0.0,
+      "hessian": -8.0,
+      "endpoint_minimum_at_det_one": 8.0,
+      "constructed_minimizer_error": 0.0
+    },
+    {
+      "name": "symmetric_real",
+      "exact_probabilities": [
+        "3/16",
+        "5/16",
+        "5/16",
+        "3/16"
+      ],
+      "exact_first_derivatives": [
+        "-1",
+        "0",
+        "0",
+        "1"
+      ],
+      "exact_det_direction": "1",
+      "exact_fisher": "32/3",
+      "exact_endpoint_fisher": "32/3",
+      "log_odds": 1.0216512475319812,
+      "hessian": -8.623364171602704,
+      "endpoint_minimum_at_det_one": 10.666666666666668,
+      "constructed_minimizer_error": 1.7763568394002505e-15
+    },
+    {
+      "name": "complex_transverse",
+      "exact_probabilities": [
+        "4/25",
+        "17/50",
+        "17/50",
+        "4/25"
+      ],
+      "exact_first_derivatives": [
+        "-5/4",
+        "0",
+        "0",
+        "5/4"
+      ],
+      "exact_det_direction": "1",
+      "exact_fisher": "625/32",
+      "exact_endpoint_fisher": "625/32",
+      "log_odds": 1.5075436047527604,
+      "hessian": -16.51616279049448,
+      "endpoint_minimum_at_det_one": 12.5,
+      "constructed_minimizer_error": 0.0
+    },
+    {
+      "name": "asymmetric_complex",
+      "exact_probabilities": [
+        "13/60",
+        "11/60",
+        "9/20",
+        "3/20"
+      ],
+      "exact_first_derivatives": [
+        "-49/30",
+        "23/60",
+        "23/60",
+        "13/15"
+      ],
+      "exact_det_direction": "1",
+      "exact_fisher": "427373/23166",
+      "exact_endpoint_fisher": "30397/1755",
+      "log_odds": 0.9315582040049435,
+      "hessian": -16.58516987360973,
+      "endpoint_minimum_at_det_one": 11.026202485519569,
+      "constructed_minimizer_error": 5.329070518200751e-15
+    },
+    {
+      "name": "near_empty",
+      "exact_probabilities": [
+        "155227/160000",
+        "1573/160000",
+        "3173/160000",
+        "27/160000"
+      ],
+      "exact_first_derivatives": [
+        "-491/200",
+        "391/200",
+        "91/200",
+        "9/200"
+      ],
+      "exact_det_direction": "1",
+      "exact_fisher": "323395256000000/774757981283",
+      "exact_endpoint_fisher": "2827048/155227",
+      "log_odds": 0.1746919879645882,
+      "hessian": -417.0651684556019,
+      "endpoint_minimum_at_det_one": 8.636520831651517,
+      "constructed_minimizer_error": 1.7763568394002505e-15
+    },
+    {
+      "name": "indefinite_complex",
+      "exact_probabilities": [
+        "13/60",
+        "11/60",
+        "9/20",
+        "3/20"
+      ],
+      "exact_first_derivatives": [
+        "1/10",
+        "9/10",
+        "-11/10",
+        "1/10"
+      ],
+      "exact_det_direction": "-169/144",
+      "exact_fisher": "9292/1287",
+      "exact_endpoint_fisher": "22/195",
+      "log_odds": 0.9315582040049435,
+      "hessian": -9.406465337625045,
+      "endpoint_minimum_at_det_one": 11.026202485519569,
+      "constructed_minimizer_error": 5.329070518200751e-15
+    },
+    {
+      "name": "rank_one_complex",
+      "exact_probabilities": [
+        "13/60",
+        "11/60",
+        "9/20",
+        "3/20"
+      ],
+      "exact_first_derivatives": [
+        "-113/75",
+        "38/75",
+        "38/75",
+        "37/75"
+      ],
+      "exact_det_direction": "0",
+      "exact_fisher": "4074424/289575",
+      "exact_endpoint_fisher": "530872/43875",
+      "log_odds": 0.9315582040049435,
+      "hessian": -14.070358283691617,
+      "endpoint_minimum_at_det_one": 11.026202485519569,
+      "constructed_minimizer_error": 5.329070518200751e-15
+    },
+    {
+      "name": "diagonal_pure_transverse",
+      "exact_probabilities": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "exact_first_derivatives": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "exact_det_direction": "-1",
+      "exact_fisher": "0",
+      "exact_endpoint_fisher": "0",
+      "log_odds": 0.0,
+      "hessian": -0.0,
+      "endpoint_minimum_at_det_one": 8.0,
+      "constructed_minimizer_error": 0.0
+    }
+  ]
+}

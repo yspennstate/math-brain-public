@@ -1,0 +1,96 @@
+\section*{A060: exact selector-tax sharpness for a Boolean point defect}
+
+All Fourier coefficients are normalized on the uniform cube and all
+logarithms are base two.  Define the genuine Boolean functions
+\[
+ D(z_1,z_2)=1-2\mathbf 1_{\{z_1=z_2=-1\}},\qquad
+ K(x,z_1,z_2)=1-2\mathbf 1_{\{x=z_1=z_2=-1\}}.
+\]
+Equivalently, with the fresh selector convention (x=+1) for the first
+branch,
+\[
+ K(+1,z)=1,\qquad K(-1,z)=D(z).
+\]
+
+\paragraph{Proposition (PROVED, exact finite witness).}
+For the splice above,
+\[
+ \frac{H(K)-\tfrac12 H(D)}{I_x(K)}
+ =12-\frac94\log_2 9
+ \in(4.867,4.868).
+\]
+Consequently, every proposed inequality valid for all constant-versus-Boolean
+one-bit splices of the form
+\[
+ H(K)\leq \frac12 H(D)+c I_x(K)
+\]
+must have (c\geq 12-\frac94\log_2 9).  In particular (c=4) is false,
+already for a genuine three-bit Boolean function.  This is a lower bound on
+this local scalar selector tax, not a lower bound of the same size on the
+universal FEI constant.
+
+\paragraph{Proof.}
+Direct expansion gives
+\[
+ D=\frac12+\frac12z_1+\frac12z_2-\frac12z_1z_2.
+\]
+Thus its four squared Fourier masses are all (1/4), whence
+\[
+ H(D)=2,\qquad I(D)=1,\qquad \mathbb E D=\frac12.
+\]
+The three-bit point defect (K) has constant Fourier coefficient (3/4)
+and each of its seven nonconstant Fourier coefficients has magnitude (1/4).
+Therefore
+\[
+ H(K)=\frac9{16}\log_2\frac{16}{9}+\frac74,
+ \qquad I(K)=\frac34.
+\]
+Exactly four of the seven nonconstant characters contain (x), so
+\[
+ I_x(K)=4\cdot\frac1{16}=\frac14.
+\]
+It follows that
+\begin{align*}
+ \frac{H(K)-\tfrac12H(D)}{I_x(K)}
+ &=4\left(\frac9{16}\log_2\frac{16}{9}+\frac34\right)\\
+ &=12-\frac94\log_2 9.
+\end{align*}
+The attached rational-interval certificate proves that this number lies in
+((4.867,4.868)), without floating-point assumptions.  This proves the
+claim. \qed
+
+\paragraph{Actual FEI ratio and tensor scope.}
+The same exact ledger yields
+\[
+ \frac{H(K)}{I(K)}
+ =\frac{16}{3}-\frac34\log_2 9
+ \in(2.955,2.956).
+\]
+For the disjoint tensor product (K^{\otimes m}), the squared Fourier law is
+the (m)-fold product law.  Hence Shannon entropy and total influence are
+both additive:
+\[
+ H(K^{\otimes m})=mH(K),\qquad
+ I(K^{\otimes m})=mI(K).
+\]
+The tensor family therefore preserves the smaller ratio
+(16/3-(3/4)\log_2 9); it does not promote the local tax coefficient
+(12-(9/4)\log_2 9) into an FEI lower bound.
+
+\paragraph{Correlation and hypothesis audit.}
+The two branches are the constant (1) and (D), so their Fourier inner
+product is (\langle 1,D\rangle=\mathbb E D=1/2).  The example uses a fresh
+selector but is not neighboring-orthogonal.  It has no reused selector and no
+shared data inputs between separate children.  It is therefore a sharpness
+test for the nonorthogonal scalar overhead in a fresh-selector splice, not an
+overlapping-input theorem.  All gates are Boolean; there is no weighted or
+non-Boolean relaxation.
+
+\paragraph{Endpoint and guard checks.}
+The witness is not a parity-zero erasure: both branch means and the branch
+correlation are explicit.  There is no rare-event asymptotic or hidden
+dimension limit.  The disjoint tensor statement uses only exact product
+factorization and does not assert a shared-variable product law.  The result
+neither contradicts disjoint additivity nor repairs the registered
+\texttt{OVERLAP\_PRODUCT} obstruction.
+

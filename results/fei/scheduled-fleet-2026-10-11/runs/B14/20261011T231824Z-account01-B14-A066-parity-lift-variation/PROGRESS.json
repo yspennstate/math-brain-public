@@ -1,0 +1,65 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T231824Z-account01-B14-A066-parity-lift-variation",
+  "stream": "B14",
+  "packet_id": "A066",
+  "packet_ids": [
+    "A066"
+  ],
+  "gap_id": "G-A066-SEMI-VARIATION",
+  "attempt_id": "A066-attempt-03-parity-lift-boundary",
+  "method": "Exact Fourier map for the physical parity lift, analytic semigroup derivative on parity-shifted point defects, monotonicity proofs for uniform spectra and ground-heavy point defects, and exhaustive integer-Walsh validation.",
+  "mathematical_delta": "Proved that even-only Fourier support does not restore semigroup entropy monotonicity: an explicit genuine Boolean parity lift has H'(0)>0 in every dimension r>=3. Proved the restricted V_- target is full-FEI-hard within factor two and established exact V_-/I<4 controls for parity-lifted addressing and point defects.",
+  "deliverable_status": "A066_BOUNDARY_PACKAGE_AUTHOR_COMPLETE_PENDING_REVIEW",
+  "mathematical_status": "AUTHOR_PROVED_BOUNDARY_THEOREM_PENDING_INDEPENDENT_REVIEW",
+  "claim_versions_used": [
+    "X001 at COUNTEREXAMPLES.md blob 4c393aa5507b67198127bae61f71f1a7fdb328ac",
+    "A066 local semigroup derivative run 20261011T201026Z-account01-B14-semigroup-entropy-variation"
+  ],
+  "claims_created_or_changed": [
+    "B14-A066-PARITY-LIFT-SEMI-v1"
+  ],
+  "source_versions": {
+    "current_status_blob": "74f6ae761739455083804505ba0e0fd7aaf2f3e2",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "assignment_blob": "c1457da582b357efb51b39eb3bda0cff56437219",
+    "protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "packet_status_blob": "66a78ef3249a89d481a47320f990dc2aec002ccb",
+    "claim_registry_blob": "bef50513c8309b0e601aec42470bc09162f26ea8",
+    "obstruction_registry_blob": "d9c8b8632d019aa9e4d5c7394001d116fd21d94e"
+  },
+  "next_consumers": [
+    "A067",
+    "A070",
+    "A088",
+    "A094",
+    "B20"
+  ],
+  "next_action": "Independent reconstruction by A088/A094; then A067 should seek a Boolean-specific analytic hypothesis stronger than parity-zero erasure/even spectral support, because that restriction is now both full-FEI-hard and nonmonotone.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "The universal V_-<=C I inequality remains open and is FEI-hard even on parity lifts.",
+    "The reported later B05 semigroup-payment folder was unavailable locally and returned 404 at its authorized repository path; no claim here relies on it.",
+    "Independent review by A088 and A094 is absent."
+  ],
+  "validation": {
+    "arithmetic": "integer Walsh transform and fractions.Fraction; logarithms only for reported entropy/sign diagnostics",
+    "random_seed": null,
+    "boolean_source_tables_exhausted": 32906,
+    "maximum_source_dimension_exhausted": 4,
+    "defect_dimensions_checked": "2 through 10",
+    "addressing_parameters_checked": "1 through 3",
+    "aggregate_assertions_passed": 164599,
+    "assertions_failed": 0,
+    "command": "python CHECK.py"
+  },
+  "delivery": {
+    "local_staging": "COMPLETE",
+    "open_problems_repository": "SAVED_ALL_FILES_BASE_COMMIT_cc0e288ae5359fefb38d1573d7fc57a0172e222b",
+    "brain_mirror": "SAVED_ALL_FILES_BASE_COMMIT_c53c11d67d5474c4284e6dee7b3df73eb12db95d",
+    "independent_review": "NOT_RUN",
+    "native_brain_ingestion": "NOT_RUN"
+  },
+  "full_fei_status": "OPEN"
+}

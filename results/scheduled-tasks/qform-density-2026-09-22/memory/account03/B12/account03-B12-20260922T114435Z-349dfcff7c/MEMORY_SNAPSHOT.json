@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "account03-B12-20260922T114435Z-349dfcff7c",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_commits": {
+    "initial": "60afc0f16cc548e551577745fa0c9cbf2f081340",
+    "fresh_prewrite": "31b969c561e714b1a456a1c221283f7b774200de"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION"
+  ],
+  "live_correction_inbox_at_prewrite": [],
+  "assignment": "additional eigenvalue control",
+  "partner": "account04/B12",
+  "partner_result_applied": null,
+  "partner_note": "No current QFORM-compatible completed account04/B12 artifact was observed before delivery; stale FEI artifacts were not used.",
+  "peer_result_applied": {
+    "worker": "account02/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "289810e1f075755898f573ee5b863ad3fa9af5b8",
+    "path": "qform/fleet-2026-09-22/account02/B15/20260922T110507Z-account02-B15-qform-pivot-r1/REPORT.md",
+    "scope": "definite 2x2 pair and nonsingular 3x3 principal-block affine density bounds, stable under conditioning"
+  },
+  "new_result": {
+    "id": "QFORM-FLAT-FOURTH-EIGENVALUE-STABILITY-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "statement": "For B=epsilon*lambda*I_4+(mu-epsilon*lambda)vv^T with lambda>=1, epsilon in {+1,-1}, arbitrary mu, and |v_i|=1/2, every affine-tilted quadratic output of four independent density-<=1 variables has density <= C*/lambda, with C*<24.231. Conditioning gives the same cap in a high-dimensional form with arbitrary outside block and cross couplings.",
+    "constant_exact": "max(20*pi/sqrt(7), 800*(2*pi+3*sqrt(3))/379)",
+    "constant_numeric_upper": 24.231,
+    "key_switch": "r0=193/200; pair determinant >=7/400 for r<=r0, triple sigma_min>=379/800 for r>=r0",
+    "full_target_status": "OPEN"
+  },
+  "mathematical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "db7e2efa23166b1ce2e7ef376b69b8e973ccf391",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/account03-B12-20260922T114435Z-349dfcff7c/REPORT.md",
+    "readback_blob": "80a6637a199c96f9ffac811426f0805e2da268f2"
+  },
+  "checker": {
+    "repository": "yspennstate/math-open-problems",
+    "code_commit": "4e820a66f1125f92da98d4934914d4616d96b2d1",
+    "output_commit": "92717ee3ab720389cb84a8941c62810b5a2fd605",
+    "status": "PASS"
+  },
+  "unresolved_implication": "Generalize the flat rank-one direction to nonflat v or establish a finite pair/triple-minor covering principle for generic four-coordinate cores with three large eigenvalues, then address fully delocalized large eigenspaces.",
+  "next_recipient": "account03/B19",
+  "privacy_review": "Changed files contain only pure mathematical/operational metadata; no credentials, scheduler identifiers, machine paths, raw private transcripts, or unrelated private data. Automated repository secret-scan action was not exposed, so this is a limited manual changed-file review."
+}

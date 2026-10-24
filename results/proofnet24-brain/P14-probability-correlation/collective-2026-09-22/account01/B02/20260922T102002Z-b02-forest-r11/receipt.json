@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260922T102002Z-b02-forest-r11",
+  "control_entry_commit": "3d6b8e61a8615ae7036382df2fbb6f3cfdbdbea2",
+  "control_revision": "2026-09-22.2",
+  "outcome": "CANDIDATE_REFUTED",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "parent_target_status": "OPEN",
+  "lead_read": {
+    "worker": "account01/B01",
+    "candidate": "FOREST-TRIANGLEFREE-SIMPSON-BUDGET-v1",
+    "handoff_blob": "4cee205cb7d254caf785692838111988a0b8a155",
+    "used_scope": "source-safe triangle/contraction localization only",
+    "rank_degree_clc_clause": "NOT_IMPORTED_PRIOR_B02_K3_REFUTATION"
+  },
+  "other_account_result": {
+    "worker": "account02/B03",
+    "run": "20260922T094532Z-b03-forest-auto11",
+    "result": "exact simple-unit response-2 two-terminal network requires at least 7 edges and 5 vertices",
+    "application": "combined with fixed-fiber no-go to force parent-specific cross-fiber mechanism"
+  },
+  "new_result": {
+    "statement": "No general forest-pair injection D00xD11 -> D10xD01 can preserve both pair intersection and pair union.",
+    "core_witness": "K4 opposite marked edges",
+    "core_counts": [15,9,9,5],
+    "core_gap": 6,
+    "bad_fiber_source": 4,
+    "bad_fiber_target": 2,
+    "connected_conditional_counts": [30,18,18,10],
+    "connected_conditional_gap": 24,
+    "parent_counts": [62,42,42,26],
+    "parent_gap": 152
+  },
+  "first_unresolved_step": "Construct a bounded-multiplicity parent-specific cross-fiber charge that can change union/intersection pair multiplicities.",
+  "artifacts": {
+    "report": "proofnet24/P14-probability-correlation/collective-2026-09-22/account01/B02/20260922T102002Z-b02-forest-r11/report.md",
+    "source_note": "proofnet24/P14-probability-correlation/collective-2026-09-22/account01/B02/20260922T102002Z-b02-forest-r11/source_note.md",
+    "checker": "proofnet24/P14-probability-correlation/collective-2026-09-22/account01/B02/20260922T102002Z-b02-forest-r11/fiber_counterexample_check.py",
+    "checker_output": "proofnet24/P14-probability-correlation/collective-2026-09-22/account01/B02/20260922T102002Z-b02-forest-r11/fiber_counterexample_check.out",
+    "handoff_v2": "scheduled_tasks/work/shared/collective-open-problems-2026-09-22/FOREST-HANDOFF-account01-B02-20260922T102002Z-r11-v2.md"
+  },
+  "checks": {
+    "fresh_control_read": "PASS",
+    "actual_hour_login": "PASS",
+    "start_record": "PASS",
+    "report_readback": "PASS",
+    "checker": "STATUS=PASS",
+    "quiet_delivery": "PASS"
+  },
+  "privacy": {
+    "credentials_accessed": false,
+    "scheduler_mutations": 0,
+    "email_sent": false,
+    "drive_used": false,
+    "public_posting": false,
+    "paid_or_remote_compute": false,
+    "permission_changes": false
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort": "UNKNOWN_NOT_EXPOSED"
+}

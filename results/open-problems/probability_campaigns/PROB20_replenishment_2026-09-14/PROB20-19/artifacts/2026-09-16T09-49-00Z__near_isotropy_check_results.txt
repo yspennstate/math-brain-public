@@ -1,0 +1,14 @@
+PROB20-19 near-isotropy self-check
+seed 20260916
+density_t2_symbolic_residual 0
+tensor_reduction_symbolic_residual 0
+pair_D_second_derivative -4*(hi - hj)**2
+delta_4_2_mc 1.1890412399833366 se 0.05744867479254657 z 20.69745288776624
+spectral_shape_D_eig 2.89
+spectral_shape_D_mix 0.06250000000000003
+paired_KL_minus_mixed_gap 0.00039389235098357756 se 6.818698393513706e-05 z 5.776650150097093
+gap_over_t2_Dgap 0.1547862662279507
+delta_over_8_mc 0.14863015499791707
+balanced_hessian_lambda_0.9_mc 0.004098477811678033 se 0.0007138849969448691 z 5.741089712233501
+
+Interpretation: the two symbolic residuals vanish exactly; the pairwise orbit Hessian identity matches -4(hi-hj)^2. The Monte Carlo estimate of Delta_{4,2} is strongly positive. For the fixed spectral shape H=diag(-1,-0.2,0.4,1.3) at t=0.03, the eigenbasis beats a strongly mixed Hadamard orientation in a common-random paired estimate, and the normalized gap 0.1548 is close to the independently estimated Delta/8 = 0.1486, as predicted by the t^2 theorem. The balanced p=4,d=2 negative-spike Hessian at lambda=0.9 is sampled positive, consistent with the analytic near-isotropy local-minimum corollary. Monte Carlo lines are self-review evidence only, not proof or independent verification.

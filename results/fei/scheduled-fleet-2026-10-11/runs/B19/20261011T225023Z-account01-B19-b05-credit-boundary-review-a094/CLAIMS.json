@@ -1,0 +1,90 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261011T225023Z-account01-B19-b05-credit-boundary-review-a094",
+  "claims": [
+    {
+      "claim_id": "B05-A023-ORDER-SWAP-CREDIT-BOUNDARY-L-NARROW",
+      "version": 1,
+      "exact_statement": "For the genuine Boolean one-point-defect gate q_n that is +1 at one point and -1 elsewhere, every coordinate conditional-label credit Gamma_n^L defined in the B05 source is strictly negative for every n>=3. For the genuine near tensor q_4 tensor q_5, the two factor-coordinate classes also have strictly negative Gamma^L. This statement concerns L only and does not by itself determine the complete physical L+Q order-swap credit.",
+      "hypotheses": [
+        "uniform physical Boolean cube",
+        "genuine q_n one-point-defect gate",
+        "n>=3",
+        "entropy in bits",
+        "B05 conditional-label L packet"
+      ],
+      "contributors": ["account01/B05"],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "f8af483622a55611c7933f7d8252fe3c94e4c06e",
+        "path": "reports/fei-2026-10-11/runs/B05/20261011T222410Z-account01-B05-credit-boundary-a023/REPORT.md",
+        "blob_sha": "0f097b74548e4be301b39a918774c4465638b2df"
+      },
+      "review_records": [
+        {
+          "reviewer": "account01/B19",
+          "packet": "A094",
+          "verdict": "ACCEPT_EXPLICIT_L_SCOPE; REQUIRE_SCOPE_QUALIFIER_FOR_PHYSICAL_ORDER_SWAP",
+          "method": "Independent formula reconstruction, endpoint and asymptotic audit, and separate exact-rational/outward-interval reproduction.",
+          "source": "REPORT.md sections 1-3 and 6"
+        }
+      ],
+      "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED_AT_EXPLICIT_L_SCOPE",
+      "supersedes": [],
+      "refutes": [
+        "A universal nodewise nonnegative conditional-label credit at unchanged hypotheses"
+      ],
+      "first_unproved_line": "The B05 author proof does not determine the omitted phase credit Gamma_n^Q.",
+      "scope_exclusions": [
+        "No claim about L+Q without the separate B19 repair.",
+        "No universal tree or stopping-rule theorem.",
+        "No counterexample to FEI."
+      ],
+      "next_consumers": ["A023", "A024", "A087", "A090", "B05", "B18", "B20"]
+    },
+    {
+      "claim_id": "B19-A094-FULL-ORDER-SWAP-CREDIT-BOUNDARY",
+      "version": 1,
+      "exact_statement": "Let q_n be the genuine Boolean gate that is +1 at one point and -1 elsewhere. For every n>=3 and every coordinate, the complete physical selector/data order-swap credit Gamma_n^(L+Q) is strictly negative. More precisely, with delta=2^(-n), P(x)=Q(1-x,x), and Q(a,v)=(a^2+v^2) j(v^2/(a^2+v^2)), one has Gamma_n^Q=P(delta)-P(2delta)/2+2delta^2<0 and Gamma_n^L<0. The two factor-coordinate classes of q_4 tensor q_5 likewise have strictly negative L, Q, and L+Q credits.",
+      "hypotheses": [
+        "uniform physical Boolean cube",
+        "genuine q_n one-point-defect gate",
+        "n>=3",
+        "entropy in bits",
+        "complete physical packet D=L+Q"
+      ],
+      "contributors": ["account01/B05", "account01/B19"],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "path": "reports/fei-2026-10-11/runs/B19/20261011T225023Z-account01-B19-b05-credit-boundary-review-a094/REPORT.md",
+        "locator": "sections 4-6"
+      },
+      "proof_dependencies": [
+        {
+          "claim_id": "B05-A023-ORDER-SWAP-CREDIT-BOUNDARY-L-NARROW",
+          "version": 1,
+          "role": "conditional-label L sign"
+        },
+        {
+          "result": "2t(1-t)/ln(2) <= j(t) <= 2t/ln(2) for 0<=t<=1/2",
+          "role": "phase-credit sign",
+          "proof": "REPORT.md section 5"
+        }
+      ],
+      "review_records": [],
+      "status": "ANALYTICALLY_PROVED_WITH_EXACT_FINITE_CERTIFICATE_PENDING_FRESH_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "A universal nodewise nonnegative complete physical first-credit at unchanged hypotheses"
+      ],
+      "first_unproved_line": "No theorem here rules out signed multistep cancellation, a globally chosen restriction tree, or a nonlocal stopping-time payment.",
+      "scope_exclusions": [
+        "No universal sign claim across Boolean cores; the bent control has the opposite sign.",
+        "No full-FEI implication.",
+        "No unbounded H/I counterfamily."
+      ],
+      "next_consumers": ["A023", "A024", "A087", "A090", "B05", "B18", "B20"]
+    }
+  ]
+}
+

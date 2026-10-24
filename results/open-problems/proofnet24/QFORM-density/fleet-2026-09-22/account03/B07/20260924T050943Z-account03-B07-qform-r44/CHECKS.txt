@@ -1,0 +1,22 @@
+QFORM-MATCHING-IMAGE-TO-PHYSICAL-R2-LIFT-v1
+T0=264.258064516129025
+tau=0.015625000000000
+z0=12.929187291442911
+xstar=264.160211780280690
+D_hi=0.104290717275523
+D_lo=0.104290717275523
+Dstar=0.104290717275523
+sqrt2_Dstar=0.147489346800663
+nondegenerate_product_floor=1.198769938843201
+exact_packet_checks=12
+high_Z_regressions=500
+low_Z_regressions=500
+max_alpha_sum_error=2.931e-14
+max_heavy_count=2
+min_packet_slack_float=-3.767e-09
+min_low_heavy_slack=6.783956
+max_tail_ratio=0.029031
+max_observed_dist_over_Dstar=0.008622
+STATUS=PASS
+
+Notes: the 12 Cauchy-Binet/Newton packet inequalities were checked exactly over integer matrices with SymPy. Floating-point regressions use explicit tolerances and are sanity checks only; the proof is algebraic and appears in REPORT.md. The small negative printed floating packet slack is roundoff and lies far inside the scripted tolerance; exact integer packet checks are nonnegative.

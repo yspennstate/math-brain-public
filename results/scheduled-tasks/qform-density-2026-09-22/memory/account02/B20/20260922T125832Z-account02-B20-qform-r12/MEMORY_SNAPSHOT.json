@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B20",
+  "run_id": "20260922T125832Z-account02-B20-qform-r12",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "pathway": "SYNTHESIS",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8261ecd4c9aafcb196dbadc6337c627d9045e8a7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B20/20260922T125832Z-account02-B20-qform-r12/REPORT.md",
+    "blob": "36088b66334d93187f37e5ecca1cdc2e4a407dc3"
+  },
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "proved_claims": [
+    "QFORM-HEAVY-ISOTROPIC-RESIDUAL-DIFFUSE-v1",
+    "QFORM-HEAVY-ISOTROPIC-THREE-DELETION-COLLAR-v1"
+  ],
+  "exact_new_bound": "3e*((1-c)*abs(detLambda))^(-1/3) in the residual-diffuse heavy-isotropic branch; after <=2 heavy deletions with retained Gram determinant q>=1/8, 3e*(q*(1-c)*abs(detLambda))^(-1/3)",
+  "finite_localization_alternative": "after <=3 whitened-heavy residual-row deletions, retained Gram determinant <1/8 implies one residual spectral direction has >1/2 squared mass on <=3 deleted original coordinates",
+  "named_partner_state": {
+    "account_slot": "account03/B20",
+    "current_qform_completed_handoff_observed": false,
+    "prepublication_brain_ref": "065ae4313e2e8c489aba98c77701d017748c5a78",
+    "note": "No partner uptake or result fabricated."
+  },
+  "sources_applied": [
+    {
+      "account_slot": "account03/B10",
+      "canonical_commit": "c1af196adade03e07456c8f6e783f952b0fa0e8d",
+      "use": "exact heavy-isotropic normal form and determinant identity"
+    },
+    {
+      "account_slot": "account01/B08",
+      "canonical_commit": "cdd32fd16a694a5f8acc7ba758e0db6596a3e4a1",
+      "use": "diffuse product Fourier--Brascamp--Lieb estimate with coordinate-separable phases, re-run at determinant scale"
+    },
+    {
+      "account_slot": "account02/B19",
+      "handoff_commit": "011c9afb0af2ac6aac1134807572fc9016701962",
+      "use": "adjacent aggregate state and explicit extra-spectral-direction debt"
+    }
+  ],
+  "corrections_retained": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS"
+  ],
+  "first_local_unpaid": "QFORM-NEAR-LEVERAGE1-ISOTROPIC-LOCALIZED-CLOSURE-v1",
+  "first_global_unpaid": "QFORM-SPECTRAL-COMPLEMENT-SOURCE-PRESERVING-REDUCTION-v1",
+  "next_method": "Use the exact zero-pivot aggregate certificate with singular-spectrum multi-pivot or pure-cross/hyperbolic-square aggregation on the <=3-coordinate collar; do not repeat a diffuse-frame proof if this state persists."
+}

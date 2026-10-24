@@ -1,0 +1,27 @@
+~\<private-repo>\06_math_research\prob1000_lean_20260908\ultracode_20260909\E0065\verify_all.py:85: RuntimeWarning: invalid value encountered in subtract
+  maxres=max(maxres,abs(V(P,x)-x).max())
+=== m=3 and m=4 swap construction: explicit 2-cycle, alpha below (1-1/sqrt(m+1))/(2m)
+m=3 alpha=0.08 (thr=0.08333) minP=0.0800 x=[0.45061 0.2336  0.31579] V(x)=[0.2336  0.45061 0.31579] |V^2(x)-x|=0.0e+00 x1!=x2: 0.2170
+   fsolve found period-2 points: [array([0.2336 , 0.45061, 0.31579]), array([0.45061, 0.2336 , 0.31579])]
+   iteration tail: [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+m=3 alpha=0.083 (thr=0.08333) minP=0.0830 x=[0.36864 0.29981 0.33156] V(x)=[0.29981 0.36864 0.33156] |V^2(x)-x|=1.1e-16 x1!=x2: 0.0688
+   fsolve found period-2 points: [array([0.36864, 0.29981, 0.33156]), array([0.29981, 0.36864, 0.33156])]
+   iteration tail: [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+m=4 alpha=0.066 (thr=0.06910) minP=0.0660 x=[0.4353  0.20601 0.17935 0.17935] V(x)=[0.20601 0.4353  0.17935 0.17935] |V^2(x)-x|=8.3e-17 x1!=x2: 0.2293
+   fsolve found period-2 points: [array([0.4353 , 0.20601, 0.17935, 0.17935]), array([0.20601, 0.4353 , 0.17935, 0.17935])]
+   iteration tail: [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
+m=4 alpha=0.069 (thr=0.06910) minP=0.0690 x=[0.32988 0.28891 0.19061 0.19061] V(x)=[0.28891 0.32988 0.19061 0.19061] |V^2(x)-x|=2.2e-16 x1!=x2: 0.0410
+   fsolve found period-2 points: [array([0.32988, 0.28891, 0.19061, 0.19061]), array([0.28891, 0.32988, 0.19061, 0.19061])]
+   iteration tail: [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
+m=5 alpha=0.058 (thr=0.05918) minP=0.0580 x=[0.37188 0.21967 0.13615 0.13615 0.13615] V(x)=[0.21967 0.37188 0.13615 0.13615 0.13615] |V^2(x)-x|=1.1e-16 x1!=x2: 0.1522
+   fsolve found period-2 points: [array([0.21967, 0.37188, 0.13615, 0.13615, 0.13615]), array([0.37188, 0.21967, 0.13615, 0.13615, 0.13615])]
+   iteration tail: [array([inf, inf, inf, inf, inf]), array([inf, inf, inf, inf, inf]), array([inf, inf, inf, inf, inf]), array([inf, inf, inf, inf, inf])]
+=== m=2: a=b=alpha, c=1-alpha at alpha=0.08 (<(3-sqrt7)/4=0.08856): 2-cycle?
+   iteration tail: [0.225004, 0.58452, 0.225004]
+=== m=2 random search: min P > (3-sqrt7)/4 => every fixed point has f'(p) > -1 ?
+   most negative f'(p) seen: -0.9506516619450627
+=== upper bound: contraction factor 2(1-alpha)(1-m alpha) on D={x_i>=alpha}, random test
+   m=3 alpha=0.1: max observed ||V(x)-V(y)||/||x-y|| = 1.1076  bound kappa=1.2600
+   m=4 alpha=0.1: max observed ||V(x)-V(y)||/||x-y|| = 0.7804  bound kappa=1.0800
+=== regularity check just above the new upper bound, m=3, alpha=0.14 (bound 0.13962): random QSOs converge?
+   max |V(x)-x| after 400 iterations over 300 random operators: 0

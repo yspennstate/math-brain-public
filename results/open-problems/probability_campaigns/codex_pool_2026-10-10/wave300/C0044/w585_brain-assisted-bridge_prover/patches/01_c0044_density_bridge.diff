@@ -1,0 +1,204 @@
+--- a/~/math-brain-inbox/w585/bundle_001.json
++++ b/~/math-brain-inbox/w585/bundle_001.json
+@@ -0,0 +1,201 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w585",
++  "bundle_slug": "c0044-density-bridge-20261010",
++  "entries": [
++    {
++      "key": "posterior",
++      "namespace": "probability.randomenvironment",
++      "logical_name": "rwre-directional-escape-full-environment-posterior",
++      "kind": "concept",
++      "title": "DRAFT RWRE directional escape posterior martingale",
++      "statement": "For a static nearest-neighbor RWRE and fixed nonzero l, define A_l={X_n dot l tends to +infinity}, q(omega)=P_0^omega(A_l), and tau_x omega(y,e)=omega(x+y,e). If F_n reveals the full environment and the first n steps, then q(tau_Xn omega)=P_0(A_l|F_n), converging almost surely and in L1 to 1_A_l. DRAFT deduction; independent review pending.",
++      "proof_text": null,
++      "assumptions": [
++        "static nearest-neighbor Markov RWRE",
++        "fixed deterministic nonzero direction",
++        "full environment belongs to F_n"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w585:C0044-density-bridge-20261010",
++        "url": "urn:owner-campaign:w585:C0044-density-bridge-20261010",
++        "revision": "2026-10-10-author-only-independent-review-pending",
++        "license": "owner-own-work; DRAFT, no theorem promotion or novelty claim",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "positivity",
++      "namespace": "probability.randomenvironment",
++      "logical_name": "rwre-quenched-escape-positivity-does-not-imply-one",
++      "kind": "concept",
++      "title": "DRAFT RWRE quenched positivity is weaker than zero-one",
++      "statement": "For stationary ergodic strictly elliptic static nearest-neighbor RWRE, p=P_0(A_l)>0 implies q(omega)=P_0^omega(A_l)>0 almost surely; p<1 implies q<1 almost surely. Thus a mixed p would have 0<q<1 almost surely. Positivity alone does not prove p=1: the zeros of q and 1-q propagate by harmonicity, while their values need not be translation invariant. DRAFT deduction; independent review pending.",
++      "proof_text": null,
++      "assumptions": [
++        "stationary ergodic environment law",
++        "strict ellipticity",
++        "static nearest-neighbor RWRE",
++        "fixed deterministic direction"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w585:C0044-density-bridge-20261010",
++        "url": "urn:owner-campaign:w585:C0044-density-bridge-20261010",
++        "revision": "2026-10-10-author-only-independent-review-pending",
++        "license": "owner-own-work; DRAFT, no theorem promotion or novelty claim",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "density",
++      "namespace": "probability.randomenvironment",
++      "logical_name": "rwre-environment-seen-incoming-finite-time-density",
++      "kind": "concept",
++      "title": "DRAFT incoming density of the environment seen from a RWRE",
++      "statement": "Let P be a translation-stationary law of static nearest-neighbor environments on Z^d, tau_x omega(y,e)=omega(x+y,e), and mu_n the annealed law of tau_Xn omega from 0. For every n>=0, d mu_n/dP=f_n, where f_n(omega)=sum_{|x|_1<=n} P_{-x}^omega(X_n=0); f_n>=0 and E_P f_n=1. The formula gives finite-time absolute continuity, not a stationary law or uniform integrability. DRAFT deduction; independent review pending.",
++      "proof_text": null,
++      "assumptions": [
++        "translation-stationary environment law",
++        "static nearest-neighbor RWRE",
++        "integer n>=0"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w585:C0044-density-bridge-20261010",
++        "url": "urn:owner-campaign:w585:C0044-density-bridge-20261010",
++        "revision": "2026-10-10-author-only-independent-review-pending",
++        "license": "owner-own-work; DRAFT, no theorem promotion or novelty claim",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "concentration",
++      "namespace": "probability.randomenvironment",
++      "logical_name": "mixed-directional-transience-forces-incoming-density-concentration",
++      "kind": "concept",
++      "title": "DRAFT mixed directional transience forces density concentration",
++      "statement": "In stationary ergodic strictly elliptic static nearest-neighbor RWRE let q=P_0^omega(A_l), p=E_P q, and f_n=d Law(tau_Xn omega)/dP. If 0<p<1, then B_epsilon={q<=epsilon or q>=1-epsilon} has b_epsilon=P(B_epsilon)->0 as epsilon decreases to zero, while a_n=integral_B_epsilon f_n dP->1. For r>1, E_P f_n^r>=a_n^r/b_epsilon^(r-1) whenever b_epsilon>0. Hence E_P f_n^r->infinity. No time-diverging subsequence of f_n or its Cesaro averages is uniformly integrable. DRAFT deduction; independent review pending.",
++      "proof_text": null,
++      "assumptions": [
++        "stationary ergodic strict-elliptic static nearest-neighbor RWRE",
++        "fixed deterministic direction",
++        "0<P_0(A_l)<1"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w585:C0044-density-bridge-20261010",
++        "url": "urn:owner-campaign:w585:C0044-density-bridge-20261010",
++        "revision": "2026-10-10-author-only-independent-review-pending",
++        "license": "owner-own-work; DRAFT, no theorem promotion or novelty claim",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "criterion",
++      "namespace": "probability.randomenvironment",
++      "logical_name": "directional-rwre-zero-one-subsequential-density-uniform-integrability",
++      "kind": "concept",
++      "title": "DRAFT directional zero-one bridge from incoming-density uniform integrability",
++      "statement": "For stationary ergodic strictly elliptic static nearest-neighbor RWRE on Z^d, define f_n(omega)=sum_{|x|_1<=n}P_{-x}^omega(X_n=0) and F_N=(1/N)sum_{n<N}f_n. EXTRA ASSUMPTION: either {f_nj} or {F_Nj} is uniformly integrable for a deterministic sequence n_j or N_j tending to infinity. Then P_0(X_n dot l tends to +infinity) is zero or one for every fixed nonzero l. A uniform L^r bound, r>1, on that subsequence is sufficient. IID and strict positivity alone do not discharge the extra assumption in this packet. DRAFT conditional proof; independent review pending; C0044 remains unresolved here.",
++      "proof_text": null,
++      "assumptions": [
++        "stationary ergodic environment law",
++        "strict ellipticity",
++        "static nearest-neighbor RWRE",
++        "subsequential uniform integrability of incoming densities or their Cesaro averages"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w585:C0044-density-bridge-20261010",
++        "url": "urn:owner-campaign:w585:C0044-density-bridge-20261010",
++        "revision": "2026-10-10-author-only-independent-review-pending",
++        "license": "owner-own-work; DRAFT, no theorem promotion or novelty claim",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "counterexample",
++      "namespace": "probability.randomenvironment",
++      "logical_name": "normalized-densities-need-not-be-uniformly-integrable",
++      "kind": "concept",
++      "title": "DRAFT refutation: normalized densities need not be uniformly integrable",
++      "statement": "On ([0,1],Lebesgue), g_m=m times indicator_[0,1/m] is a nonnegative probability density for each m. If m>K, its mass above K equals one, so the family is not uniformly integrable; integral g_m^r=m^(r-1) for r>1. Thus first-moment normalization and individual absolute continuity cannot justify a uniform integrability bridge. This family is not claimed to be an RWRE realization or a counterexample to C0044. DRAFT exact counterexample; independent review pending.",
++      "proof_text": null,
++      "assumptions": [
++        "Lebesgue probability measure on [0,1]",
++        "positive integers m"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w585:C0044-density-bridge-20261010",
++        "url": "urn:owner-campaign:w585:C0044-density-bridge-20261010",
++        "revision": "2026-10-10-author-only-independent-review-pending",
++        "license": "owner-own-work; DRAFT, no theorem promotion or novelty claim",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "gap",
++      "namespace": "probability.randomenvironment",
++      "logical_name": "c0044-missing-incoming-density-uniform-integrability-bridge",
++      "kind": "concept",
++      "title": "DRAFT C0044 missing incoming-density bridge",
++      "statement": "C0044 asks for P_0(A_l) in {0,1} in a static iid strictly elliptic nearest-neighbor environment on Z^d, d>=3. The conditional incoming-density argument requires subsequential uniform integrability of f_n=sum_{|x|_1<=n}P_{-x}^omega(X_n=0), or its Cesaro averages. The elementary bound f_n=O(n^d) and E_P f_n=1 do not prove that condition. Shared sites and adaptive path selection prevent treating incoming probabilities as independent factors. Current openness is UNKNOWN because a September 23, 2026 primary preprint claims resolution but has not been independently checked in this packet. This is a gap record, not a theorem.",
++      "proof_text": null,
++      "assumptions": [
++        "static iid strictly elliptic nearest-neighbor RWRE",
++        "d>=3",
++        "fixed deterministic nonzero direction",
++        "external claimed resolution unverified here"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w585:C0044-density-bridge-20261010",
++        "url": "urn:owner-campaign:w585:C0044-density-bridge-20261010",
++        "revision": "2026-10-10-author-only-independent-review-pending",
++        "license": "owner-own-work; DRAFT, no theorem promotion or novelty claim",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "concentration",
++      "to_key": "posterior",
++      "kind": "depends_on",
++      "rationale": "The conditional posterior tends to an indicator, so the walk-sampled mass near the endpoint values tends to one. Supporting from-card: \"In stationary ergodic strictly elliptic static nearest-neighbor RWRE let q=P_0^omega(A_l), p=E_P q, and f_n=d Law(tau_Xn omega)/dP. If 0<p<1, then B_epsilon={q<=epsilon or q>=1-epsilon} has b_epsilon=P(B_epsilon)->0 as epsilon decreases to zero, while a_n=integral_B_epsilon f_n dP->1. For r>1, E_P f_n^r>=a_n^r/b_epsilon^(r-1) whenever b_epsilon>0. Hence E_P f_n^r->infinity. No time-diverging subsequence of f_n or its Cesaro averages is uniformly integrable. DRAFT deduction; independent review pending.\" Supporting to-card: \"For a static nearest-neighbor RWRE and fixed nonzero l, define A_l={X_n dot l tends to +infinity}, q(omega)=P_0^omega(A_l), and tau_x omega(y,e)=omega(x+y,e). If F_n reveals the full environment and the first n steps, then q(tau_Xn omega)=P_0(A_l|F_n), converging almost surely and in L1 to 1_A_l. DRAFT deduction; independent review pending.\""
++    },
++    {
++      "from_key": "concentration",
++      "to_key": "positivity",
++      "kind": "depends_on",
++      "rationale": "Strict interior quenched probabilities make the original mass near zero and one tend to zero. Supporting from-card: \"In stationary ergodic strictly elliptic static nearest-neighbor RWRE let q=P_0^omega(A_l), p=E_P q, and f_n=d Law(tau_Xn omega)/dP. If 0<p<1, then B_epsilon={q<=epsilon or q>=1-epsilon} has b_epsilon=P(B_epsilon)->0 as epsilon decreases to zero, while a_n=integral_B_epsilon f_n dP->1. For r>1, E_P f_n^r>=a_n^r/b_epsilon^(r-1) whenever b_epsilon>0. Hence E_P f_n^r->infinity. No time-diverging subsequence of f_n or its Cesaro averages is uniformly integrable. DRAFT deduction; independent review pending.\" Supporting to-card: \"For stationary ergodic strictly elliptic static nearest-neighbor RWRE, p=P_0(A_l)>0 implies q(omega)=P_0^omega(A_l)>0 almost surely; p<1 implies q<1 almost surely. Thus a mixed p would have 0<q<1 almost surely. Positivity alone does not prove p=1: the zeros of q and 1-q propagate by harmonicity, while their values need not be translation invariant. DRAFT deduction; independent review pending.\""
++    },
++    {
++      "from_key": "concentration",
++      "to_key": "density",
++      "kind": "depends_on",
++      "rationale": "The change of measure identifies the integrals to which Holder applies. Supporting from-card: \"In stationary ergodic strictly elliptic static nearest-neighbor RWRE let q=P_0^omega(A_l), p=E_P q, and f_n=d Law(tau_Xn omega)/dP. If 0<p<1, then B_epsilon={q<=epsilon or q>=1-epsilon} has b_epsilon=P(B_epsilon)->0 as epsilon decreases to zero, while a_n=integral_B_epsilon f_n dP->1. For r>1, E_P f_n^r>=a_n^r/b_epsilon^(r-1) whenever b_epsilon>0. Hence E_P f_n^r->infinity. No time-diverging subsequence of f_n or its Cesaro averages is uniformly integrable. DRAFT deduction; independent review pending.\" Supporting to-card: \"Let P be a translation-stationary law of static nearest-neighbor environments on Z^d, tau_x omega(y,e)=omega(x+y,e), and mu_n the annealed law of tau_Xn omega from 0. For every n>=0, d mu_n/dP=f_n, where f_n(omega)=sum_{|x|_1<=n} P_{-x}^omega(X_n=0); f_n>=0 and E_P f_n=1. The formula gives finite-time absolute continuity, not a stationary law or uniform integrability. DRAFT deduction; independent review pending.\""
++    },
++    {
++      "from_key": "criterion",
++      "to_key": "concentration",
++      "kind": "depends_on",
++      "rationale": "Uniform absolute continuity contradicts the concentration forced by a mixed escape probability. Supporting from-card: \"For stationary ergodic strictly elliptic static nearest-neighbor RWRE on Z^d, define f_n(omega)=sum_{|x|_1<=n}P_{-x}^omega(X_n=0) and F_N=(1/N)sum_{n<N}f_n. EXTRA ASSUMPTION: either {f_nj} or {F_Nj} is uniformly integrable for a deterministic sequence n_j or N_j tending to infinity. Then P_0(X_n dot l tends to +infinity) is zero or one for every fixed nonzero l. A uniform L^r bound, r>1, on that subsequence is sufficient. IID and strict positivity alone do not discharge the extra assumption in this packet. DRAFT conditional proof; independent review pending; C0044 remains unresolved here.\" Supporting to-card: \"In stationary ergodic strictly elliptic static nearest-neighbor RWRE let q=P_0^omega(A_l), p=E_P q, and f_n=d Law(tau_Xn omega)/dP. If 0<p<1, then B_epsilon={q<=epsilon or q>=1-epsilon} has b_epsilon=P(B_epsilon)->0 as epsilon decreases to zero, while a_n=integral_B_epsilon f_n dP->1. For r>1, E_P f_n^r>=a_n^r/b_epsilon^(r-1) whenever b_epsilon>0. Hence E_P f_n^r->infinity. No time-diverging subsequence of f_n or its Cesaro averages is uniformly integrable. DRAFT deduction; independent review pending.\""
++    },
++    {
++      "from_key": "gap",
++      "to_key": "criterion",
++      "kind": "cites",
++      "rationale": "The sufficient criterion names the exact additional density assumption still missing. Supporting from-card: \"C0044 asks for P_0(A_l) in {0,1} in a static iid strictly elliptic nearest-neighbor environment on Z^d, d>=3. The conditional incoming-density argument requires subsequential uniform integrability of f_n=sum_{|x|_1<=n}P_{-x}^omega(X_n=0), or its Cesaro averages. The elementary bound f_n=O(n^d) and E_P f_n=1 do not prove that condition. Shared sites and adaptive path selection prevent treating incoming probabilities as independent factors. Current openness is UNKNOWN because a September 23, 2026 primary preprint claims resolution but has not been independently checked in this packet. This is a gap record, not a theorem.\" Supporting to-card: \"For stationary ergodic strictly elliptic static nearest-neighbor RWRE on Z^d, define f_n(omega)=sum_{|x|_1<=n}P_{-x}^omega(X_n=0) and F_N=(1/N)sum_{n<N}f_n. EXTRA ASSUMPTION: either {f_nj} or {F_Nj} is uniformly integrable for a deterministic sequence n_j or N_j tending to infinity. Then P_0(X_n dot l tends to +infinity) is zero or one for every fixed nonzero l. A uniform L^r bound, r>1, on that subsequence is sufficient. IID and strict positivity alone do not discharge the extra assumption in this packet. DRAFT conditional proof; independent review pending; C0044 remains unresolved here.\""
++    },
++    {
++      "from_key": "gap",
++      "to_key": "counterexample",
++      "kind": "cites",
++      "rationale": "The exact normalized-density example rejects normalization as a substitute for the missing condition. Supporting from-card: \"C0044 asks for P_0(A_l) in {0,1} in a static iid strictly elliptic nearest-neighbor environment on Z^d, d>=3. The conditional incoming-density argument requires subsequential uniform integrability of f_n=sum_{|x|_1<=n}P_{-x}^omega(X_n=0), or its Cesaro averages. The elementary bound f_n=O(n^d) and E_P f_n=1 do not prove that condition. Shared sites and adaptive path selection prevent treating incoming probabilities as independent factors. Current openness is UNKNOWN because a September 23, 2026 primary preprint claims resolution but has not been independently checked in this packet. This is a gap record, not a theorem.\" Supporting to-card: \"On ([0,1],Lebesgue), g_m=m times indicator_[0,1/m] is a nonnegative probability density for each m. If m>K, its mass above K equals one, so the family is not uniformly integrable; integral g_m^r=m^(r-1) for r>1. Thus first-moment normalization and individual absolute continuity cannot justify a uniform integrability bridge. This family is not claimed to be an RWRE realization or a counterexample to C0044. DRAFT exact counterexample; independent review pending.\""
++    }
++  ]
++}

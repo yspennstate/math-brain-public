@@ -1,0 +1,31 @@
+{
+  "schema": "fei-claims/1",
+  "stream": "B18",
+  "packet": "A086",
+  "claim_version": "B18-A086-DEGREE-TWO-REVIEW-v1",
+  "reviewed_claim": "B11-A052-DEGREE-TWO-EXTREMAL-v1",
+  "claims": [
+    {
+      "id": "degree-two-gu-review",
+      "statement": "Every Boolean function of Fourier degree at most two satisfies G(f) <= 2 I(f) in every dimension.",
+      "verdict": "PASS_AT_STATED_SCOPE",
+      "material_repair": false
+    },
+    {
+      "id": "degree-two-fei-review",
+      "statement": "Every Boolean function of Fourier degree at most two satisfies H(f) <= 2 I(f), sharply.",
+      "verdict": "PASS_AT_STATED_SCOPE",
+      "material_repair": false
+    },
+    {
+      "id": "minimal-source-degree-review",
+      "statement": "A dimension-minimal positive-residual counterexample to G <= 4 I + 3 U / 4 must have Fourier degree at least three.",
+      "verdict": "PASS_CONDITIONAL_ON_COUNTEREXAMPLE_EXISTENCE",
+      "material_repair": false
+    }
+  ],
+  "first_unsupported_line": "quantitative signed row cut for tensor-prime positive-residual degree-at-least-three functions",
+  "universal_GU": "OPEN",
+  "full_FEI": "OPEN"
+}
+

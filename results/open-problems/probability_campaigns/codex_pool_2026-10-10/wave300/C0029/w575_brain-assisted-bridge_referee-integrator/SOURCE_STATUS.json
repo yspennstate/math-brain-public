@@ -1,0 +1,17 @@
+{
+  "problem_id": "C0029",
+  "ranking_source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:428",
+  "ranking_quote": "4,C0029,Spielman-Teng conjecture on the least singular value of Bernoulli matrices,attempted_un,Spielman-Teng constant one",
+  "exact_statement": "For B_n with mutually independent uniform {-1,+1} entries, find c in (0,1) such that P(s_min(B_n) <= epsilon/sqrt(n)) <= epsilon + c^n for every epsilon >= 0 (asymptotically in n).",
+  "original_primary_source": "Spielman and Teng, Smoothed Analysis of Algorithms, ICM 2002, Conjecture 2, printed p.605 (arXiv:math/0212413v1, PDF p.9): https://arxiv.org/pdf/math/0212413",
+  "original_primary_scope": "For a d-by-d matrix of independent uniform signs, P(||A^{-1}||>T) <= sqrt(d)/T + alpha^n for an absolute alpha<1 (the paper prints n in the exponent although it calls the dimension d). The singular event is included by the T=infinity remark. The modern smallest-singular-value formulation uses continuity from above to handle <= thresholds.",
+  "statement_source": "Sah, Sahasrabudhe, Sawhney, On the Spielman-Teng Conjecture, arXiv:2405.20308v2 (2025), Introduction equations (1)-(2): https://arxiv.org/html/2405.20308",
+  "statement_source_quote": "they conjectured that ... P(sigma_n(B) <= epsilon n^{-1/2}) <= epsilon + e^{-Omega(n)}, for all epsilon >= 0",
+  "earlier_source": "Bordenave and Chafai, Around the circular law, arXiv:1109.3343v4, p.53: https://arxiv.org/pdf/1109.3343",
+  "earlier_source_quote": "there exists a constant 0 < c < 1 such that P(sqrt(n) s_n(X) <= t) <= t + c^n for n >> 1 and any small enough t >= 0",
+  "strongest_verified_prior_theorem": "Sah-Sahasrabudhe-Sawhney Theorem 1.1: for iid mean-zero variance-one subgaussian entries and all epsilon>=0, upper bound (1+o(1))epsilon+e^{-Omega_xi(n)}, with o(1) decaying as C_xi(log n)^(-1/16). Theorem 1.2 compares to the finite-n Gaussian probability with the same relative error and an exponential additive term.",
+  "owner_attempt": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl:23 (C0029-A001); result explicitly says no improvement obtained; contains an incorrect finite-n Gaussian exact-law claim, corrected in CLAIMS.jsonl.",
+  "owner_solved_or_retired_status": "No C0029 or Spielman-Teng entry found in the two local solved registers; no C0029 row in scoped H/I attempts search; broader status remains unverified.",
+  "current_open_status": "UNKNOWN: the inspected 2025 primary theorem stops at 1+o(1); no complete 2026 literature verification has been done.",
+  "checked_at_local_date": "2026-10-10"
+}

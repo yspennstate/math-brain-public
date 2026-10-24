@@ -1,0 +1,92 @@
+\section{Operator-norm brackets and the gate constants}\label{app:brackets}
+
+This appendix proves the operator-norm brackets of \Cref{sec:rmt} and the order-statistic and
+convex-hull facts used by the network estimates. Throughout, a Gaussian matrix has entry variance
+$1/q$ where $q$ is the number of columns, unless a different normalization is stated.
+
+\subsection{The order-statistic law}
+\begin{lemma}[Order statistics of squared Gaussians]\label{lem:order}
+Let $X_1,\dots,X_p$ be i.i.d.\ nonnegative integrable with continuous law and let $X^{\downarrow}_{1}\ge\cdots\ge X^{\downarrow}_p$
+be the decreasing rearrangement. If $q/p\to\alpha\in(0,1]$ then, almost surely and in $L^1$,
+\[
+  \frac1p\sum_{j=1}^q X^{\downarrow}_j\ \to\ \EE[X\one\{X\ge\tau(\alpha)\}],\qquad
+  \frac1p\sum_{j=p-q+1}^p X^{\downarrow}_j\ \to\ \EE[X\one\{X\le\tau'(\alpha)\}],
+\]
+where $\PP(X\ge\tau(\alpha))=\alpha$ and $\PP(X\le\tau'(\alpha))=\alpha$. Applied to $X_i=Z_i^2$ with
+$Z_i\sim N(0,1)$ these limits are $\kappa(\alpha)$ and $\kcheck(\alpha)$ of \eqref{eq:kappa}--\eqref{eq:kcheck};
+the deviation probability at any fixed threshold is $e^{-cp}$ by bounded-differences concentration.
+\end{lemma}
+\begin{proof}
+Use the variational identity $\sum_{j\le q}X^{\downarrow}_j=\min_{\lambda\ge0}\bigl(q\lambda+\sum_i(X_i-\lambda)_+\bigr)$.
+The empirical mean $p^{-1}\sum_i(X_i-\lambda)_+\to\EE(X-\lambda)_+$ uniformly in $\lambda$ on compacts by
+the law of large numbers and monotonicity, and $q/p\to\alpha$; the minimizer is $\lambda=\tau(\alpha)$
+(the $\alpha$-quantile), giving $\alpha\tau(\alpha)+\EE(X-\tau(\alpha))_+=\EE[X\one\{X\ge\tau(\alpha)\}]$.
+The bottom sum is $\sum_j X^{\downarrow}_j-\sum_{j\le p-q}X^{\downarrow}_j$, the same law with $1-\alpha$.
+Concentration: each summand changes the statistic by a bounded amount after truncation, so McDiarmid
+applies with the exponential rate.
+\end{proof}
+
+\subsection{Operator-norm brackets}
+\begin{proof}[Proof of \Cref{prop:A2}]
+Write $M_1(\alpha)=\max_{|S|=|T|=\alpha N}\|P_TAP_S\|_\op=\sup\{\langle y,Ax\rangle:\|x\|=\|y\|=1,\ |\supp x|\le\alpha N,\ |\supp y|\le\alpha N\}$.
+The two index sets are $\alpha N$-sparse unit spheres $\Sigma_{\mathrm{in}},\Sigma_{\mathrm{out}}$, whose
+Gaussian widths are, by \Cref{lem:order}, $w(\Sigma_{\mathrm{in}})=\EE\sup_{x\in\Sigma_{\mathrm{in}}}\langle g,x\rangle=\sqrt{N\kappa(\alpha)}(1+o(1))$
+and likewise $\sqrt{N\kappa(\alpha)}$ for the output. Chevet's inequality bounds
+$\EE M_1(\alpha)\le\mathrm{rad}(\Sigma_{\mathrm{out}})\,w(\Sigma_{\mathrm{in}})/\sqrt N+\mathrm{rad}(\Sigma_{\mathrm{in}})\,w(\Sigma_{\mathrm{out}})/\sqrt N=2\sqrt{\kappa(\alpha)}$
+with unit radii and entry variance $1/N$, and Gaussian concentration ($M_1$ is $1$-Lipschitz in the
+Frobenius norm, variance $1/N$) removes the expectation, giving the upper bound $2\sqrt{\kappa(\alpha)}+o(1)$.
+For the lower bounds, a fixed $\alpha N\times\alpha N$ submatrix already has $\|P_TAP_S\|_\op\to2\sqrt\alpha$
+(Bai--Yin), and for a fixed unit $x_0$ on $S$, $Ax_0\sim N(0,I/N)$, whose top $\alpha N$ coordinates have
+norm $\sqrt{\kappa(\alpha)}+o(1)$ by \Cref{lem:order}, so $\max_T\|P_TAx_0\|\ge\sqrt{\kappa(\alpha)}$.
+\end{proof}
+
+\begin{proof}[Proof of \Cref{prop:A4}]
+Upper: submultiplicativity $\|M\|_\op\le\prod_j\|F_j\|_\op$ and then relax the shared supports to
+independent per-factor maxima, each bounded by $2\sqrt{\kappa(\alpha)}+o(1)$ from \Cref{prop:A2}. Lower:
+sequential planting. Fix a unit $x_0$ on $S_0$; at step $j$, $x_{j-1}$ is a fixed vector,
+$A_jx_{j-1}\sim N(0,I/N)$, and choosing $S_j$ the top $\alpha N$ coordinates gains
+$\sqrt{\kappa(\alpha)}$, with $x_j$ its normalization, a function of $A_1,\dots,A_j$ only, so the next
+step is independent; this gives the greedy lower bound $\kappa(\alpha)^{k/2}\cdot(\ge\sqrt{\kappa(\alpha)})$.
+Boosting the first step by a fixed submatrix top singular pair ($2\sqrt\alpha$ by Bai--Yin) and keeping
+its left singular vector gives the $\max\{2\sqrt\alpha,\sqrt{\kappa(\alpha)}\}\kappa(\alpha)^{(k-1)/2}$
+form; only one end can be boosted, since boosting fixes the adjacent output direction.
+\end{proof}
+
+\begin{proof}[Proof of \Cref{prop:contract}]
+From \Cref{prop:A4}, $\max_{S_\bullet}\|M\|_\op\le(2\sqrt{\kappa(\alpha)})^k$, which tends to $0$ iff
+$2\sqrt{\kappa(\alpha)}<1$, i.e.\ $\kappa(\alpha)<1/4$; the root of $\kappa(\alpha^*)=1/4$ is
+$\alpha^*=0.042672$ numerically. The fixed-support threshold is the Fuss--Catalan edge
+$\alpha^{k/2}\sqrt{(k+1)^{k+1}/k^k}<1$, i.e.\ $\alpha<(k^k/(k+1)^{k+1})^{1/k}$.
+\end{proof}
+
+\subsection{The subgaussian operator norm}
+\begin{lemma}[Subgaussian bracket]\label{lem:subg}
+Let $A$ be $N\times N$ with i.i.d.\ mean-zero, variance-$1/N$ entries of subgaussian norm $\|\sqrt N A_{ij}\|_{\psi_2}\le K$.
+Then $\limsup_N M_1(\alpha)\le C_0K(\sqrt{\kappa(\alpha)}+\sqrt{\kappa(\alpha)})=2C_0K\sqrt{\kappa(\alpha)}$
+w.h.p., with $C_0$ absolute. The lower bracket $\max\{2\sqrt\alpha,\sqrt{\kappa(\alpha)}\}$ is unchanged
+and universal.
+\end{lemma}
+\begin{proof}
+Write $M_1(\alpha)=\sup_{x\in\Sigma_{\mathrm{in}},y\in\Sigma_{\mathrm{out}}}\langle y,Ax\rangle$ and apply
+the subgaussian bilinear comparison (a Chevet inequality for subgaussian matrices, e.g.\ via a
+chaining/generic-chaining bound on the sparse spheres): $\EE\sup\langle y,Ax\rangle\le C_0K(\mathrm{rad}(\Sigma_{\mathrm{out}})w(\Sigma_{\mathrm{in}})+\mathrm{rad}(\Sigma_{\mathrm{in}})w(\Sigma_{\mathrm{out}}))/\sqrt N$,
+with the same widths $\sqrt{N\kappa(\alpha)}$. Bousquet-type concentration for suprema of subgaussian
+processes removes the expectation. The lower bound is a fixed submatrix and a fixed direction, both of
+which only use the variance.
+\end{proof}
+
+\subsection{The convex-hull reduction}
+\begin{lemma}[Gates in the hull]\label{lem:hull}
+Let $W$ be a fixed matrix and $\mathcal D_\pi$ the set of diagonal matrices with entries in $[0,1]$ and
+support pattern $\pi$. Then $\sup_{D\in\mathcal D_\pi}\|DWx\|=\max_{D\in\{0,1\}^\pi}\|DWx\|$ for every $x$,
+and $\inf_{D\in\mathcal D_\pi,\,D\succeq D_0}\smin(DW)\ge\smin(D_0W)$ for $D_0\in\{0,1\}^\pi$. Consequently
+every operator-norm upper bound and least-singular-value lower bound proved for $0/1$ gates holds for any
+$[0,1]$-slope activation with the same support pattern.
+\end{lemma}
+\begin{proof}
+$D\mapsto\|DWx\|^2=\sum_i D_{ii}^2(Wx)_i^2$ is convex in the diagonal entries, hence maximized at a vertex
+$D\in\{0,1\}^\pi$; and $D\mapsto\smin(DW)$ is monotone on the order interval (increasing a nonnegative
+diagonal entry cannot decrease any singular value, by the min--max characterization applied to $W^*D^2W$),
+so the least singular value over $D\succeq D_0$ is at least $\smin(D_0W)$. The forward-pass and
+gradient-lower-bound estimates use exactly these two extremal facts.
+\end{proof}

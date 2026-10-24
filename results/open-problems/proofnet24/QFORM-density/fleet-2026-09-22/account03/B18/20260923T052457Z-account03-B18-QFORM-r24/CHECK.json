@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T052457Z-account03-B18-QFORM-r24",
+  "theorem": "QFORM-SOURCE-SEPARATED-HIGHSHEAR-v1",
+  "status": "PASS",
+  "checks": {
+    "parseval_longitudinal": "source separation + sum v_j v_j^T=I implies sum_{i in I}(n.v_i)^2=1",
+    "parseval_transverse": "source separation + sum v_j v_j^T=I implies sum_{j in J} w_j w_j^T=I_2",
+    "genuine_independence": "W=S+rX0 uses only {0} union I; T uses only J; original coordinates are independent",
+    "scalar_density_cap": "||p_W||inf <= ||p_{rX0}||inf <=1/r by convolution",
+    "pair_density_cap": "LPP k=2 orthogonal marginal theorem gives ||p_T||inf<=2",
+    "partner_scaled_bound": "rescaling scalar density cap N gives 6(MN)^(2/3)|det H|^(-1/3)",
+    "target_determinant": "L^T L=I+r^2 nn^T, det=1+r^2; pseudodeterminant(A)=det(D)det(L^T L)",
+    "r_ge_1_constant": 12.0,
+    "r_ge_2_constant": 10.25985568006018,
+    "r_to_infinity_constant": 9.524406311809196,
+    "continuity": "inherited from completed zero-pivot theorem after scalar rescaling",
+    "correction_guard": "no conditional-cap-for-independence substitution; source separation supplies actual independence"
+  },
+  "full_target": "OPEN_NOT_PROVED",
+  "full_target_continuity": "OPEN"
+}

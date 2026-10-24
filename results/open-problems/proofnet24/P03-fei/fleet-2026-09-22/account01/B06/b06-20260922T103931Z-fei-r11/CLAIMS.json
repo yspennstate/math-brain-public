@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "run_id": "b06-20260922T103931Z-fei-r11",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "control_revision": "2026-09-22.3",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "25304d0bfe9e904b826623da21c73e4259877686",
+    "path": "proofnet24/P03-fei/fleet-2026-09-22/account01/B06/b06-20260922T103931Z-fei-r11/REPORT.md"
+  },
+  "claims": [
+    {
+      "id": "FEI-B06-BALANCED-EXTREMAL-SUSPENSION-LEDGER-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Balanced uniform parent F with a genuine disjoint Boolean composition into arbitrary nonconstant possibly biased children; rho=H(F)/(I(F)-1).",
+      "statement": "With child variance v_i, outer nonempty occurrence weight alpha_i, and suspension slack T_i=rho I(f_i)-H(f_i), sum_i alpha_i/v_i [T_i+h2(v_i)] = H(P0)+rho. If every child suspension has ratio at most rho, then sum_i alpha_i h2(v_i)/v_i <= H(P0)+rho, and each essential child obtains the corresponding positive variance floor.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "source": "yspennstate/math-open-problems@2bf247373576eb406ca91bb3ea5f3ce5e5ab8588:proofnet24/P03-fei/fleet-2026-09-21/account04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md",
+          "result": "Exact disjoint spectral-source factorization and entropy/influence hierarchy."
+        }
+      ],
+      "verification": "analytic proof in source report; not independently reviewed"
+    },
+    {
+      "id": "FEI-B06-BALANCED-FACTOR-COEXTREMALITY-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Balanced disjoint composition with balanced outer gate and balanced children.",
+      "statement": "S_rho(F)=S_rho(G)+sum_i Inf_i(G) S_rho(f_i). Hence a minimum-dimensional balanced rho-extremizer cannot have a nontrivial balanced disjoint decomposition into smaller essential non-dictator factors.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "claim_id": "FEI-B06-BALANCED-EXTREMAL-SUSPENSION-LEDGER-v1"
+        }
+      ],
+      "verification": "analytic proof in source report; not independently reviewed"
+    },
+    {
+      "id": "FEI-B06-BALANCED-SPLIT-DISAGREEMENT-CAP-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Balanced uniform F and a physical coordinate whose two raw restrictions are themselves balanced, under rho-extremality relative to those children.",
+      "statement": "If d=Inf_i(F), s_+- and s_- are the two child balanced slacks, and Phi(d)=h2(d)+(2/ln2)min(d,1-d), then Delta_i H=rho d+(s_++s_-)/2 and 0 <= (s_++s_-)/2 <= Phi(d)-rho d. Thus d <= delta(rho), the unique root of Phi(d)=rho d; equality forces both children co-extremal.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "source": "yspennstate/math-open-problems@4ccd51ad517f425a529daa52c3352905b86ea69d:proofnet24/P03-fei/fleet-2026-09-21/account02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md",
+          "scope_note": "Sections 2-4 selector-debit theorem only; superseded Section 5 candidate is not used."
+        },
+        {
+          "mode": "uses_premise",
+          "source": "yspennstate/math-open-problems@92c75e9bcd2fe9c5dc2bedc8a032b31b4afb5484:proofnet24/P03-fei/fleet-2026-09-21/account01/B12/20260922T090347Z-folded-js-shannon/REPORT.md",
+          "result": "Exact nonnegative conditional spectral-entropy increment."
+        }
+      ],
+      "verification": "analytic proof in source report; numerical delta(4) is illustrative only"
+    },
+    {
+      "id": "FEI-B06-RAW-RESTRICTION-SUSPENSION-LEDGER-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Balanced parent, arbitrary possibly biased raw restrictions, compared through character suspension.",
+      "statement": "For t_±=rho I(F_±)-H(F_±), (t_++t_-)/2 = Delta_i H + rho(1-d), hence rho(1-d) <= average suspension slack <= rho(1-d)+Phi(d). The term rho(1-d) is the exact denominator-conversion loss.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "claim_id": "FEI-B06-BALANCED-SPLIT-DISAGREEMENT-CAP-v1",
+          "scope_note": "Uses only the selector-entropy inequality, not the balanced-child hypothesis."
+        }
+      ],
+      "verification": "analytic proof in source report; not independently reviewed"
+    },
+    {
+      "id": "FEI-B06-RAW-BALANCED-SLACK-OVERREACH-COUNTEREXAMPLE-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Counterexample to the intermediate claim that arbitrary raw restrictions of a balanced extremizer may be assigned balanced slack rho(I-1)-H.",
+      "statement": "Let g=AND_2 and F(y,x)=y g(x). Then F is balanced with H=2, I=2, rho=2. Restricting y gives biased children ±g with d=1, H(g)=2, I(g)=1 and zero suspension slack 2I-H=0. Treating g as balanced would falsely demand H(g)<=2(I(g)-1)=0.",
+      "dependencies": [],
+      "verification": "exact Fourier calculation in source report; this refutes only the stated intermediate descent, not FEI"
+    },
+    {
+      "id": "FEI-B06-ZEROKL-RATIO-TWO-BOUND-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Balanced uniform K_occ=0 functions classified by the cited equality theorem.",
+      "statement": "Every non-dictator balanced K_occ=0 function has H/(I-1)<=2. Hence any balanced rho-extremal object with rho>2 has K_occ>0.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "source": "yspennstate/math-open-problems@84c69136ca6b008badb76f15bf1071d029c927aa:proofnet24/P03-fei/fleet-2026-09-21/account03/B15/20260922T085625Z-product-equality-rigidity/REPORT.md",
+          "result": "Exact balanced K_occ=0 classification as character times bent."
+        }
+      ],
+      "verification": "direct algebra from source classification; not independent review of the dependency"
+    }
+  ],
+  "next_unpaid_implication": "Control the biased raw-restriction branch without deleting the exact rho(1-d) suspension loss: use child variance, hierarchy KL, signed Boolean structure, or a genuine balancing conversion to recover enough slack or reduce to the balanced branches already closed here.",
+  "partner_status": {
+    "partner": "account02/B06",
+    "latest_current_programme_deliverable_observed": "not present at source check",
+    "action": "continued asynchronously as authorized; consumed completed account04/B15 HIERARCHY theorem as the named OTHER-account result"
+  }
+}

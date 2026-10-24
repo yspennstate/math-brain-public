@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A033: complete hierarchy and directional phase granularity}
+Let $f=\sum_S a_S\chi_S$ on a finite uniform cube. Exact Booleanity is
+\[
+\sum_S a_Sa_{S\triangle U}=\mathbf1_{\{U=\varnothing\}}\quad(\text{every }U),
+\]
+equivalently $\mathbb E[f^2\mid x_A=t]=1$ for every physical face.
+For $A_i=(f_++f_-)/2$ and $B_i=(f_+-f_-)/2$, the additional pointwise pair
+identities are $A_iB_i=0$ and $A_i^2+B_i^2=1$. They imply
+$A_i,B_i\in\{0,\pm1\}$. Ternary derivatives alone are insufficient.
+Writing $f(z)=(-1)^{P(z)}$ over $\mathbb F_2$, the exact pivotal indicator is
+\[
+Q_i=B_i^2=\frac{1-f(z)f(z\oplus e_i)}2=\partial_iP(z).
+\]
+If a nonconstant $Q_i$ has degree at most $d_i$, its weight and its complement
+are at least $2^{-d_i}$. Define $J_i=\min(\operatorname{Inf}_i,1-\operatorname{Inf}_i)$
+and $\kappa(d)=h_2(2^{-d})/2^{-d}<d+1/\ln2$ for $d\ge1$, $\kappa(0)=0$.
+For a physical partition $X\sqcup Y=[n]$,
+\[
+H(\mathcal S_X\mid\mathcal S_Y)
+\le\sum_{i\in X:d_i\ge1}\kappa(d_i)J_i-\mathrm{TC}(\mathcal S_X)
+-I(\mathcal S_X;\mathcal S_Y).
+\]
+Here the degree condition is on each $\partial_iP$ as a polynomial on all
+remaining physical variables. Uniformly $d_i\le d$ gives
+$H(\mathcal S_X\mid\mathcal S_Y)\le\kappa(d)\sum_{i\in X}J_i$.
+Together with the imported physical block-channel bound it gives
+\[
+H(f)-\mathbb E_tH(f_t)\le(\kappa(d)+2/\ln2)I_X(f).
+\]
+All terminal $Y$ entropy remains unpaid. For point defects the raw degree bill
+is $\kappa(n-1)I$, while $H/I\to4$; a growing correlation rebate is essential.
+Complete proofs and exact validation are in NEW\_FULL\_BOOLEANITY\_CONSEQUENCE.md
+and out/validation.json. Archived prefix obstructions and the original
+atom-cap provenance gap are recorded in IMPORTED\_CONTROLS.md.
+\end{document}

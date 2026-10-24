@@ -1,0 +1,133 @@
+[
+  {
+    "claim_id": "A009-ARBITRARY-CORE-PRIVATE-LEAF-COMPLETE-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every finite simple core graph H on r>=1 hubs, including isolated hubs, and every integer vector m_i>=1, attach m_i degree-one private leaves to hub i and retain all core edges. For the uniform Boolean positive edge DNF f_G, fix precisely its positive edge primes, both endpoint orders, rarity pi=1/4, private-edge weights lambda=1/(2m_i) and core-edge weights lambda_ij=1/[2 max(d_H(i),d_H(j))]. These strictly positive weights satisfy every coordinate packing constraint. In the original conditioned forest queue, the private-block star event family has exact nonempty output subprobability Q_PL(A)=product_i U_(h_i)(t_i)/D, D=product_all_edges(1+lambda_e/4)-1, U_0(t)=(lambda_private/32)^t, U_1(0)=1/64, U_1(t)=t! lambda_private^t/[24*8^(t-1)*t^2*(t+1)] for t>=1. It is positive on every nonempty A and its complete nonempty spectral cross-entropy C_PL=sum_(A nonempty) fhat_G(A)^2*(-log2 Q_PL(A)) satisfies C_PL<=[log2(96)+9/4+9/(8 ln2)]I(f_G)<(843/80)I(f_G)<11I(f_G). All core-gate absent-root, subset, count, attachment and chronology factors are retained. This proves a dimension-independent complete reference payment on arbitrary cores with private leaves; it asserts no universal graph payment, optimal weights, or free transfer to the original core function.",
+    "hypotheses": [
+      "Uniform independent physical signs; entropy and costs in bits",
+      "Finite positive simple graph edge DNF; every hub has at least one genuine degree-one private leaf",
+      "Same full prime table and both endpoint orders fixed before the Fourier set is sampled",
+      "Original once-per-gate source-SCC conditioned queue and ideal reference costs; no free prefix rounding",
+      "Expected cost uses the actual Boolean squared Fourier spectrum and physical total influence"
+    ],
+    "statement_sha256": "cd8869084544f2c5c76e5421dbb16060f797fe3188fc2fcc61f9705b273663a2",
+    "contributors": [
+      "A009"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T054349Z-account05-A009-fractional-incidence-optimization\\PRIVATE_LEAF_PAYMENT.md",
+      "code": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T054349Z-account05-A009-fractional-incidence-optimization\\code\\check.py",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T054349Z-account05-A009-fractional-incidence-optimization\\code\\verify.py"
+      ],
+      "certificates": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T054349Z-account05-A009-fractional-incidence-optimization\\out\\CHECK.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T054349Z-account05-A009-fractional-incidence-optimization\\out\\VERIFY.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locators": [
+          "original conditioned queue",
+          "eq:forestcost",
+          "eq:forestconditioning",
+          "eq:foresttarget"
+        ],
+        "status": "SOURCE_BASELINE_RECONSTRUCTED; NO UNIVERSAL PAYMENT ASSUMED"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A009",
+        "verdict": "AUTHOR_ANALYTIC_PROOF_AND_SEPARATE_QUEUE_IMPLEMENTATION_CHECK; NOT INDEPENDENT_AGENT_ACCEPTANCE",
+        "method": "Pure Python original Bernoulli conditioning and chronological queue replay independent of FWHT checker; 22392 distinct traces; physical payment proved for all dimensions",
+        "reviewer_supplied_substantive_repair": false
+      }
+    ],
+    "status": "ANALYTICALLY_PROVED_EXACT_CHECKED_PENDING_INDEPENDENT_AGENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A010",
+      "A014",
+      "A086",
+      "B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A008-CONNECTED-GRAPH-TWO-SCALE-QUANTIFIER-SEPARATION",
+    "version": 1,
+    "exact_statement": "For every integer m>=2 let f_m be the uniform Boolean positive edge DNF on connected graph edges {h,x_i} (i=1,...,m), {h,y}, {y,z}. These are exactly its positive prime implicants. Fix both endpoint orders and pi=1/4. Its influence is I_m=5/4+m*2^(-m-1)<=3/2 and P_f({z})=1/16. For globally fixed uniform weights lambda=1/(m+1), with the posterior optimized over all original once-per-gate source-SCC partition events, the complete nonempty cross-entropy C_part/I_m>(1/24)log2(m+1), and the surrogate residual R/I_m>(1/24)log2(m+1)-log2(72). Hence the actual finite Boolean sequence m=2^(24t) has unbounded uniform-scale residual. On the SAME primes and orders, the globally fixed positive feasible vector lambda_(h,x_i)=1/(2m), lambda_(h,y)=lambda_(y,z)=1/2 has complete maximal-matching star cross-entropy C_MS<(53/5)I_m and therefore R<=C_MS<(53/5)I_m. Its global conditioned normalizer is D_rep=(1+1/(8m))^m*(9/8)^2-1<25/56. The repair uses a single original reference and physical overlap, not disconnected-component factorization or sampled-set table choice. This separates uniform-scale failure from the all-weight infimum on connected graphs; it does not refute PI-J or FEI or assert an arbitrary-graph cost theorem.",
+    "hypotheses": [
+      "all integer m>=2, independent uniform physical signs, entropy/costs in bits and gamma=6/5",
+      "positive connected simple graph edge primes only, both full endpoint orders and rarity1/4 fixed before sampling A",
+      "strictly positive packing-feasible global weight vectors as explicitly specified",
+      "original queue including all root, label, size, subset, count, multiset and final-output ambiguity factors",
+      "C_part uses all once-per-gate source-SCC partition events; C_MS is the maximal-matching star subfamily",
+      "R is the original surrogate forest residual including signed log D but excluding h2(variance) and K_ref I",
+      "ideal reference costs only, no free prefix rounding or auxiliary reference selector"
+    ],
+    "statement_sha256": "cf0f06a75dabf85738b3cbfcfabc9142aa5cbbb9c62add74dfe300bcc59321f5",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261014T050954Z-account05-A008-gate-label-compression\\CONNECTED_SCALES.md",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261014T050954Z-account05-A008-gate-label-compression\\out\\FAMILY_CERTIFICATES.json",
+      "code": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261014T050954Z-account05-A008-gate-label-compression\\code\\check.py"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A010-WIDTH2-UNIFORM-SCALE-VERSUS-INFIMUM",
+        "version": 1,
+        "statement_sha256": "dc2afe0ebe6b0d91ce63f02ef8d72c86f00455a1fca00e61b7a451b835da07ae",
+        "use": "all-graph pointwise complete/surrogate guard only",
+        "status": "WHOLE_INDEPENDENTLY_ACCEPTED_LOCALLY_BY_A008"
+      },
+      {
+        "claim_id": "A006-MAXIMAL-MATCHING-STAR-COMPLETE-MASS",
+        "version": 1,
+        "statement_sha256": "57407f2dc1875e64d1bf5bdfd7ef15b5486b08f36bd1fe3e7bb5c7c1ad36bab5",
+        "use": "complete arbitrary-graph maximal-matching lower mass",
+        "status": "WHOLE_INDEPENDENTLY_ACCEPTED_LOCALLY_BY_A008_PREVIOUS_STAGE"
+      },
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "status": "SOURCE_COMPLETE_BASELINE_READ"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A009",
+        "verdict": "HOLDS_AT_WHOLE_ORIGINAL_SCOPE_NO_REPAIR",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T054349Z-account05-A009-fractional-incidence-optimization\\REVIEW_CONNECTED.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T054349Z-account05-A009-fractional-incidence-optimization\\out\\VERIFY.json",
+        "method": "Independent full all-m physical spectrum, uniform-scale lower bound, needed complete/surrogate guard and sharper maximal-matching repair reconstructed directly; finite character-sum checks supplement the analytic proof",
+        "reviewer_supplied_substantive_repair": false,
+        "timestamp_utc": "2026-10-14T06:02:16.180341+00:00"
+      }
+    ],
+    "status": "WHOLE_INDEPENDENT_RECONSTRUCTION_BY_A009_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "A uniform max-degree weight scale pays full posterior partition cost on every connected graph prime table"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A009",
+      "A010",
+      "A014",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  }
+]

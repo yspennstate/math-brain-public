@@ -1,0 +1,13 @@
+{
+  "helper_version": "A100-stage2-independent-certificate-v1",
+  "family": "A097 explicit activated selector between quadratic bent b_k and its zero-point flip; plus A021 one-control activated dictator",
+  "parameter_domain": "A097 even k in {2,4,6,8}; r=2k; exact and uniform complete leaf references. Direct integer-Walsh root reconstruction only k=2,4. A021 q=1/2,t=1,k=1,balanced dictator seed.",
+  "case_count": "8 prescribed-reference cases, 2 direct root tables, 1 A021 actual Boolean sign witness",
+  "symmetry": "Compressed bent sign multiplicities proved analytically; direct k=2,4 tables have no quotient. No search or dimension escalation.",
+  "arithmetic": "Fraction, integer FWHT, rigorously range-reduced 24-term atanh-series rational logarithm bounds; analytic proofs supply all-even-k and remainder sign",
+  "memory_estimate_MB": 40,
+  "pilot_max_runtime_seconds": 60,
+  "max_runtime_seconds": 60,
+  "critical_claims": ["A097 B_tree<=3 I_removed finite base cases", "A097 chi-square(P_bprime,uniform)=16delta(1-delta)", "mode-specific posterior residual intervals", "A021 v1 R<=0 refuted by a two-bit actual Boolean sign"],
+  "independence": "New implementation from direct spectra and separate rational log enclosures; no upstream checker import or execution. Only previously saved output intervals are compared after computing fresh bounds."
+}

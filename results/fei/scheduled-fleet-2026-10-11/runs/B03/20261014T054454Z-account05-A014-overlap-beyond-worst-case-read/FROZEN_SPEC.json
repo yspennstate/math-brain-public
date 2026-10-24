@@ -1,0 +1,12 @@
+{
+ "helper_version":"A014-occupation-separator-v1",
+ "actual_boolean_family":"Connected labelled graph DNFs with a cut vertex; least cut vertex splits independent-set blocker into first component and remaining components",
+ "parameter_domain":"Pilot n=3; full n=3,4,5; no dimension escalation",
+ "case_count":"Pilot 8 candidate graphs; full 8+64+1024=1096 candidates, filtered by connectedness and a cut vertex",
+ "symmetry":"None",
+ "references":"lambda_e=1/maximum_degree fixed per graph; corrected complete occupation law; exact-component product blocker law; fixed half-half nonempty mixture",
+ "arithmetic":"Integer FWHT, exact Fraction probabilities; occupation convolution versus independent neighbor enumeration; 18-term atanh log enclosure with proved tail",
+ "memory_estimate":"Below 100 MB",
+ "maximum_runtime_seconds":{"pilot":60,"full":300},
+ "goals":"Complete normalization and same-spectrum matching, product excess<=2I, pointwise mixture surcharge; exact cost intervals, no general occupation payment assertion"
+}

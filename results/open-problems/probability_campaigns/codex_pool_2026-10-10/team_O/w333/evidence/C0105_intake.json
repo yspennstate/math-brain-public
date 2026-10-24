@@ -1,0 +1,40 @@
+[
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 105,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0105",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Section 4.1 discussion, p. 25-26",
+      "problem_id": "C0105",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "arguin_logcorrelated_2016",
+      "statement": "Exhibit a rigorous multiscale (branching-random-walk-like) decomposition of log|zeta(1/2+i(tau+h))|, h in [0,1], whose increments are self-similar with the dichotomy (50) and asymptotically independent, sufficient to run the branching-random-walk machinery on zeta itself rather than on the random Euler-product model.",
+      "status_search": "The ABR papers realised a version of this decomposition sufficient for the subleading order (C0102); whether a decomposition with the full self-similar independent structure exists as stated is not a theorem as far as this session could determine; admitted as the structural question the source poses.",
+      "title": "Multiscale decomposition of the actual zeta function with self-similar increments",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 91,
+    "record": {
+      "attempt_id": "C0105-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "Fixed-order joint moments of dyadic prime blocks match independent phases; the failure is at moment order growing with the number of scales.",
+      "method": "Analyse the covariance of the dyadic prime-block increments and the failure of independence.",
+      "obstruction": "High-moment dependence of the last blocks.",
+      "problem_id": "C0105",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result": "The increments Y_h(l) = sum over primes with log p in (2^{l-1}, 2^l] of Re(p^{-i(tau+h)}) p^{-1/2} have, for tau uniform on [0,T], exact joint moments given by counting solutions of multiplicative equations among primes (Montgomery-Vaughan), so their joint law is asymptotically that of independent uniform phases as long as the number of primes involved is o(log T / log log T) in the moment order; this gives asymptotic independence of any FIXED number of increments at fixed moment order, but the branching-random-walk machinery needs exponential moments of sums of all n = log log T increments simultaneously, i.e. moments of order growing with n, where the multiplicative counting develops correlations from products of primes exceeding T. The dichotomy (50) for the covariance holds exactly for the random model and up to O(1/log T) errors for zeta by the prime number theorem in short intervals. So the decomposition EXISTS with the right covariance structure; what fails is independence at high moment order, precisely for the finest 1/log log T fraction of scales. Reduction: the structural question is equivalent to controlling exponential moments of the full prime sum truncated at T^{1-eps} (which is the ABR approach for the upper bound) and separately handling the last block, and the honest status is that the decomposition is available for all but the last O(1) scales, which is why the O(1) term (C0103) is where the difficulty concentrates.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  }
+]

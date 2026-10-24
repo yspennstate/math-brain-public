@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-BOUNDED-DENSITY-20260922",
+  "run_id": "20260922T112652Z-b15-qform-r1",
+  "claims": [
+    {
+      "claim_id": "QFORM-PHYSICAL-ELLIPTIC-PAIR-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "If a physical 2x2 principal block B of a real symmetric quadratic-form matrix is definite, then for independent coordinate densities bounded by one the quadratic form has density at most pi/sqrt(|det B|).",
+      "scope": "All dimensions, arbitrary outside couplings and eigenvalues, positive or negative definite B."
+    },
+    {
+      "claim_id": "QFORM-HADAMARD-NO-ELLIPTIC-PAIR-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For every n a power of two there is a matrix with eigenvalues 1,1,-1,0,...,0 and no definite physical 2x2 principal block.",
+      "consequence": "A fixed physical-pair conditioning proof is not forced by the target spectral hypothesis."
+    },
+    {
+      "claim_id": "QFORM-SINGLE-PHYSICAL-PAIR-EXTRACTION",
+      "status": "REFUTED",
+      "statement": "Three eigenvalues of magnitude at least one force a physical definite 2x2 principal block with dimension-free determinant lower bound.",
+      "refutation": "The Hadamard family has every physical pair determinant nonpositive."
+    }
+  ],
+  "dependencies": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c64fcff680b0a252a3c92002c60eedba02bbb9ec",
+      "path": "qform/fleet-2026-09-22/account03/B17/account03-B17-20260922T112131Z/REPORT.md",
+      "used_result": "Same-sign diagonal pi lemma and pointwise-decay correction."
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "aa81e06a1ea739fc6ec7895469ce9f8551b7d840",
+      "path": "proofnet24/quadratic-form-bounded-density/account01/B08/20260922T110731Z-account01-B08/REPORT.md",
+      "used_result": "Rotated product-measure coupling identified as the open crux; duplicate diagonal/L3 work not republished."
+    }
+  ],
+  "full_target_status": "OPEN_NOT_PROVED"
+}

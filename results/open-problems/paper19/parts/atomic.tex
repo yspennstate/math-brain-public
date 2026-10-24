@@ -1,0 +1,142 @@
+The bounded-density hypothesis in Proposition~\ref{prop:bd-tail} is not a
+cosmetic assumption.  Atomic entries create exact singularity events that are
+invisible in the continuous hard-edge picture.
+
+\begin{proposition}[First-moment atomic obstruction]\label{prop:atomic-firstmoment}
+Let \(A\in\{\pm1\}^{N\times m}\) have iid Rademacher entries and let
+\[
+  X_m=\#\{T\subset[N]: |T|=m,\ A_T\hbox{ is singular}\}.
+\]
+If \(N/m\to\gamma>1\), then
+\[
+  \EE X_m\ge
+  \exp\{(h(\gamma)-\log2+o(1))m\}.
+\]
+In particular, at the real phase-retrieval threshold \(N=2m-1\),
+\[
+  \EE X_m\ge \exp\{(\log2+o(1))m\}.
+\]
+\end{proposition}
+
+\begin{proof}
+For a fixed \(T\) of size \(m\), the first two rows of \(A_T\) are equal with
+probability \(2^{-m}\).  On that event \(A_T\) is singular.  Therefore
+\[
+  \PP\{A_T\hbox{ is singular}\}\ge 2^{-m}.
+\]
+Summing over all \(T\) and using Stirling's formula gives
+\[
+  \EE X_m\ge \binom{N}{m}2^{-m}
+  =\exp\{(h(\gamma)-\log2+o(1))m\}.
+\]
+\end{proof}
+
+\begin{remark}[Why this is not yet a high-probability theorem]
+The proof above is intentionally only a first-moment obstruction.  It cannot by
+itself prove that \(X_m>0\) with high probability.  The equal-row event is very
+clustered: a single equal pair of rows in the full \(N\times m\) matrix belongs
+to many \(m\)-row submatrices.  For \(N=O(m)\), the probability that the full
+Rademacher matrix contains an equal pair of rows is at most \(N^2 2^{-m}\),
+which tends to zero.  Thus the equal-row mechanism explains why continuity is
+necessary for the clean small-ball estimate, but it does not settle full-spark
+failure for random sign frames.
+\end{remark}
+
+\begin{proposition}[Deterministic finite-alphabet projective-pair obstruction]\label{prop:finite-alphabet-obstruction}
+Let \(\mathbb K\in\{\R,\C\}\), let \(\varnothing\ne S\subset\mathbb K\) be
+finite, and put
+\[
+  \Pi(S)=
+  \{[a:b]\in\mathbb P^1(\mathbb K): a,b\in S,\ (a,b)\ne(0,0)\}.
+\]
+If \(A\in S^{N\times m}\), \(m\ge2\), and either \(S=\{0\}\) with \(N\ge m\),
+or \(S\ne\{0\}\) with
+\[
+  N\ge |\Pi(S)|(m-1)+1,
+\]
+then some \(m\times m\) row submatrix of \(A\) is singular over \(\mathbb K\).
+When \(0\notin S\), \(|\Pi(S)|=|S/S|\), so this recovers the quotient
+obstruction.
+\end{proposition}
+
+\begin{proof}
+If \(S=\{0\}\), then every \(m\)-row submatrix is the zero matrix, provided
+\(N\ge m\).  Assume henceforth that \(S\ne\{0\}\), and write
+\(L=|\Pi(S)|\ge1\).
+
+For each row \(i\), inspect the pair
+\[
+  v_i=(A_{i1},A_{i2})\in S^2.
+\]
+Let \(z\) be the number of rows with \(v_i=(0,0)\).  For each projective class
+\(\pi=[u:v]\in\Pi(S)\), let \(n_\pi\) be the number of rows with
+\(v_i\ne(0,0)\) and \([A_{i1}:A_{i2}]=\pi\).
+
+If \(z+n_\pi\ge m\) for some \(\pi=[u:v]\), select \(m\) rows from the union of
+the zero-zero rows and the rows in that class.  On every selected row,
+\[
+  vA_{i1}-uA_{i2}=0,
+\]
+where zero-zero rows satisfy this relation for every \([u:v]\).  Thus the first
+two columns \(C_1,C_2\) of the selected square submatrix obey the nontrivial
+linear relation \(vC_1-uC_2=0\), and the determinant is zero.
+
+It remains to show that such a class must exist.  If \(z+n_\pi\le m-1\) for
+every \(\pi\), then
+\[
+  N=z+\sum_{\pi\in\Pi(S)}n_\pi
+  \le z+L(m-1-z)
+  =L(m-1)-(L-1)z
+  \le L(m-1),
+\]
+contradicting \(N\ge L(m-1)+1\).  Hence some \(z+n_\pi\) is at least \(m\),
+and the preceding paragraph applies.
+\end{proof}
+
+\begin{proposition}[Deterministic sign obstruction at the critical threshold]\label{prop:sign-critical}
+Let \(A\in\{\pm1\}^{N\times m}\) with \(m\ge2\) and \(N\ge2m-1\).  Then some
+\(m\times m\) row submatrix of \(A\) is singular.  In particular every real
+sign frame with \(N=2m-1\) fails the full-spark condition required for critical
+real phase retrieval.
+\end{proposition}
+
+\begin{proof}
+Apply Proposition~\ref{prop:finite-alphabet-obstruction} with
+\(S=\{\pm1\}\).  Then
+\(\Pi(S)=\{[1:1],[1:-1]\}\), so the threshold is \(2m-1\).
+\end{proof}
+
+\begin{corollary}[Critical Rademacher phase retrieval fails surely]\label{cor:rademacher-pr-fail}
+Let \(A_m\in\{\pm1\}^{(2m-1)\times m}\) be random or deterministic, \(m\ge2\).
+Then
+\[
+  \min_{|T|=m}\smin(A_{m,T})=0.
+\]
+At \(N=2m-1\), failure of full spark is equivalent to failure of the complement
+property, hence to non-injectivity, by
+\cite{BalanCasazzaEdidin2006,BandeiraCahillMixonNelson2014}.
+Consequently iid Rademacher critical frames fail real phase-retrieval
+injectivity with probability one.
+\end{corollary}
+
+The projective-pair obstruction is deterministic finite-alphabet bookkeeping;
+in the sign case it lands exactly at the critical count \(N=2m-1\).  It should
+not be confused with a general atomic dichotomy or with an optimal threshold
+for all finite alphabets.  Allowing zero only changes the two-column
+bookkeeping; it does not turn the result into a high-probability threshold below
+the deterministic row count.  For a general discrete law, the singularity
+exponent of one square matrix is law-dependent and is not simply
+\(\log(1/p_*)\), where \(p_*\) is the largest atom.
+
+\begin{problem}[Discrete extremal hard edge below the exact-singularity threshold]
+For iid entries with a nontrivial atom but with
+\[
+  \PP\{\exists\,T,\ |T|=m,\ A_T\hbox{ singular}\}\to0,
+\]
+determine the exponential scale of
+\[
+  \min_{|T|=m}\smin(A_T).
+\]
+The answer should depend both on the continuous small-ball exponent away from
+atoms and on the arithmetic structure of the atom set.
+\end{problem}

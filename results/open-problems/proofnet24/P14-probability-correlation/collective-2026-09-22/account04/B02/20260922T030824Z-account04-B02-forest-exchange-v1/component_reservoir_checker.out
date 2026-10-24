@@ -1,0 +1,17 @@
+FOREST component-reservoir exact checker
+All arithmetic integer/rational; no randomization.
+
+[adjacent]
+n=3 states=(0, 0, 0, 2, 1) full=(Z=7,E=3,J=1) q_component=1 q_hermite=1 gap=2
+n=4 states=(3, 1, 1, 9, 5) full=(Z=38,E=14,J=4) q_component=5 q_hermite=5 gap=44
+n=5 states=(46, 12, 12, 58, 35) full=(Z=291,E=93,J=23) q_component=35 q_hermite=35 gap=1956
+n=6 states=(678, 144, 144, 500, 322) full=(Z=2932,E=822,J=178) q_component=322 q_hermite=322 gap=153788
+
+[disjoint]
+n=4 states=(4, 2, 2, 7, 2) full=(Z=38,E=14,J=5) q_component=2 q_hermite=2 gap=6
+n=5 states=(49, 21, 21, 43, 14) full=(Z=291,E=93,J=29) q_component=14 q_hermite=14 gap=210
+n=6 states=(676, 242, 242, 354, 128) full=(Z=2932,E=822,J=226) q_component=128 q_hermite=128 gap=13052
+
+FORMULA_CROSSCHECK_PASS adjacent n=3..20; disjoint n=4..20
+BRUTE_PARTNER_RECONSTRUCTION_PASS adjacent n=3..6; disjoint n=4..6
+ALL_EXACT_CHECKS_PASS

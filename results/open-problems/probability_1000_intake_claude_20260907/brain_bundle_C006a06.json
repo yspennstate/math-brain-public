@@ -1,0 +1,1791 @@
+{
+ "spec": "mathbrain-draft-v1",
+ "author_agent": "claude-probability-1000-continue-0907",
+ "bundle_slug": "probability-codex-ledger-attempts-c006-06",
+ "entries": [
+  {
+   "key": "at-p0403",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0403-optimal-scheduling-for-correlated-redundancy-systems",
+   "kind": "concept",
+   "title": "Attempt on Optimal scheduling for correlated redundancy systems",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Transform asymptotics, exact special case, coupling reduction or identifiability check Result: Take two servers and two simultaneously present jobs with identical replica durations a<=b across servers. Replicating the shorter job on both servers first gives completion times a and a+b, with mean a+b/2. Assigning one job to each server immediately gives completion times a and b, with mean (a+b)/2. The second policy improves the mean by a/2. Therefore a proof based on always assigning every free server to the currently shortest job cannot be valid across the correlated-copy model class. Check: List the two completion epochs directly; at a=b=1 the means are 3/2 versus 1. This is a two-job scheduling example, not a stationary optimality theorem. Obstruction: Need a dynamic rule and a stochastic comparison or control proof for the full arriving system. Finite-workload preference need not identify a steady-state optimizer.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0403-optimal-scheduling-for-correlated-redundancy-systems",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0403",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0403",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0404",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0404-tractable-concurrent-replica-policies-with-broad-stability-guarantees",
+   "kind": "concept",
+   "title": "Attempt on Tractable concurrent-replica policies with broad stability guarantees",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Transform asymptotics, exact special case, coupling reduction or identifiability check Result: A conservative construction uses independent primary routing and serves extra replicas only on otherwise idle servers, with instantaneous preemption of an extra whenever a primary needs that server. Couple each primary to the same job and primary service requirement in the no-replication system. An extra completion can only remove work earlier, and an extra never consumes primary capacity, so each primary workload is no larger than its baseline counterpart. Under iid uniform primary routing, the ordinary M/G/1 load condition lambda*E B_primary<1 supplies a baseline stability benchmark. Check: At primary arrivals add the same work in both coupled systems; between arrivals the proposed primary workload has at least the baseline service opportunity; cancellation subtracts nonnegative work. The comparison requires zero preemption/cancellation overhead and no hidden primary slowdown. Obstruction: This comparison does not prove maximality or quantify response gains, and is not claimed as a new policy. For general service laws redundancy can alter achievable capacity; a universal baseline argument is insufficient.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0404-tractable-concurrent-replica-policies-with-broad-stability-guarantees",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0404",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0404",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0405",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0405-characterizing-optimality-of-max-h-in-multiclass-queues",
+   "kind": "concept",
+   "title": "Attempt on Characterizing optimality of MAX-H in multiclass queues",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Transform asymptotics, exact special case, coupling reduction or identifiability check Result: For one class and attained service a, the index is the supremum over b>a of the Fbar-weighted average of h_c(y)=c(y)h(y) on [a,b]. Its value G(a) therefore satisfies H(a)<=G(a)<=U(a), where H is the weighted average over [a,infinity) and U(a)=sup_{y>=a}h_c(y). A sufficient statewise certificate for the MAX-H chosen job i is H_i(a_i)>=max_{j!=i} U_j(a_j). Then G_i>=H_i>=U_j>=G_j, so that choice is Gittins-optimal. This supplies an explicit conservative certificate computable from service and cost laws. Check: The upper bound follows because an average cannot exceed its integrand supremum; the lower bound follows by sending the stopping threshold b to infinity under the source integrability assumptions. The ordering chain is valid for ties as well. Obstruction: The certificate is often too strong or vacuous when U is infinite, and checking it on every reachable state is itself hard. It does not give the missing necessity characterization or improve the paper uniformly.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0405-characterizing-optimality-of-max-h-in-multiclass-queues",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0405",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0405",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0406",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0406-finite-system-performance-of-size-based-scheduling-with-impatience-and",
+   "kind": "concept",
+   "title": "Attempt on Finite-system performance of size-based scheduling with impatience and noisy sizes",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Transform asymptotics, exact special case, coupling reduction or identifiability check Result: The relevant ranking variable need not be the raw prediction. Let two prediction classes be z1<z2, but their true service times be deterministically 10 and 1. With one free server, no further arrivals and infinite patience for this local check, raw-prediction order has completion times 10,11 and mean 10.5; ordering by the conditional mean service times gives 1,11 and mean 6. Thus calibration monotonicity E[B|Z=z] increasing in z is a substantive assumption, not a consequence of having a prediction. Posterior service and patience information must enter a general performance model. Check: The completion sums are 21 and 12, respectively. The example is deliberately outside the later paper calibration hypothesis, so it cannot refute that theorem. Obstruction: Need a finite-server state description and quantitative waiting/abandonment analysis under stated prediction and patience laws. This local misranking example provides neither an error bound nor a general optimizer.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0406-finite-system-performance-of-size-based-scheduling-with-impatience-and",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0406",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0406",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0408",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0408-recovering-an-ideal-voronoi-tessellation-from-vertices-or-its-dual",
+   "kind": "concept",
+   "title": "Attempt on Recovering an ideal Voronoi tessellation from vertices or its dual",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: A sufficient reconstruction route is quantitative local decoding. Suppose for every rational test ball and every accuracy epsilon there is a measurable decoder from the observed vertex set in radius R whose answer about the tessellation in that ball fails with probability epsilon_R tending to zero. Choose R_k with epsilon_Rk<=2^(-k). Borel-Cantelli then recovers all countably many test answers almost surely, yielding the complete random closed tessellation. This turns injectivity into a concrete conditional-uncertainty estimate. Check: The first Borel-Cantelli lemma requires no independence. A countable family of closed-set hit tests determines a random closed-set law and its realized closed sets under the standard Fell Borel structure. Obstruction: No such decoder or vanishing-error estimate is constructed. Vertex coordinates alone do not supply adjacency automatically, and the dual-map question needs its own decoding argument.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0408-recovering-an-ideal-voronoi-tessellation-from-vertices-or-its-dual",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0408",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0408",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0409",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0409-joint-law-of-neighboring-ideal-voronoi-vertices",
+   "kind": "concept",
+   "title": "Attempt on Joint law of neighboring ideal Voronoi vertices",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: The vertex graph has constant degree d+1. Under its stationary Palm law, rerooting at a uniformly selected neighbor preserves the marked-vertex marginal by mass transport: send f of the receiving marked vertex along every directed edge with weight 1/(d+1). Outgoing expectation is the neighbor average and incoming mass is f at the root. Thus the separation mark of a uniformly chosen neighbor also has the source Gamma(d+1) marginal. Any proposed joint neighbor formula must reproduce this law, not the Exp(1) law for a volume-typical point. Check: Constant degree makes the incoming weights sum to one. Without constant degree the stationary neighbor-rooted law would instead be degree-biased. The mass transport applies to the full marked configuration. Obstruction: Marginal preservation does not determine dependence between neighboring separation marks, lengths or angles. A joint Palm/Mecke calculation remains missing.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0409-joint-law-of-neighboring-ideal-voronoi-vertices",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0409",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0409",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0410",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0410-hole-probabilities-for-lower-dimensional-ideal-voronoi-faces",
+   "kind": "concept",
+   "title": "Attempt on Hole probabilities for lower-dimensional ideal Voronoi faces",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: For vertices, let N_B count those in a ball B and let alpha^(2) be the second factorial moment measure. Bonferroni gives 1-E N_B <= P(N_B=0) <= 1-E N_B+(1/2)*E[N_B(N_B-1)], with the lower bound truncated at zero if needed. The known intensity determines E N_B=I_d,0*vol(B), while the next term is alpha^(2)(B times B). Hence the new mean-density formulas identify only the first term of a small-ball expansion; a second-order joint-vertex calculation is already required for a quantitative remainder. Check: For each nonnegative integer n, 1-n<=1{n=0}<=1-n+n*(n-1)/2. Taking expectations proves the bounds without assuming Poisson vertices. Obstruction: The factorial moment measures and a controlled inclusion-exclusion remainder are unavailable here. Treating the vertex process as Poisson merely because the nuclei are Poisson would be unjustified.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0410-hole-probabilities-for-lower-dimensional-ideal-voronoi-faces",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0410",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0410",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0411",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0411-boundary-hole-monotonicity-and-coefficient-positivity-for-ideal-cells",
+   "kind": "concept",
+   "title": "Attempt on Boundary-hole monotonicity and coefficient positivity for ideal cells",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: Put n=d-1 and J=1/H, where H is the boundary-hole probability. The exact source integral, after x=e^(-u)z and q=e^(2u), gives e^(-nu)J=c_d^(-1) integral [sqrt((q+1)^2/4+|z|^2)-(q-1)/2]^(-2n) dz. The bracket strictly decreases with q for z nonzero, so e^(nu)H strictly decreases. When n=2m, a separate radial substitution gives J=e^(2mu)*p_m(e^(2u)), where p_m has degree m and strictly positive rational coefficients, written explicitly as integer-argument beta integrals in the proof packet. Subsequent exact calculation: in dimension two the required f(u)=exp(-u)/H_2(u) has coefficient [u^6]f=61/240-4/(5*pi)<0, since pi<22/7. This is a candidate counterexample to the positive Maclaurin-coefficient clause in the displayed distance variable. Check: Two independent exact coefficient calculations agree for m=1 through20, with every coefficient positive and p_m(1)=1. Twenty high-precision comparisons with the original angular integral agree below 1e-45 relative error. The known d=3 formula is recovered. These checks supplement, not replace, the written argument. Sixth coefficient checked by exact reciprocal-cosh recurrence, direct high-precision differentiation, and Cauchy extraction from the original angular integral; agreement within 5.5e-62. Obstruction: No independent review or novelty certification. The literal even-dimensional power-series clause has a candidate counterexample; a different intended variable would require source clarification. Even-dimensional decreasing-density/median claims beyond the source-known d=2 case are not proved here. The grouped entry remains partial.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0411-boundary-hole-monotonicity-and-coefficient-positivity-for-ideal-cells",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0411",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0411",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0412",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0412-a-general-transfer-theorem-between-horospherical-and-hyperbolic-typica",
+   "kind": "concept",
+   "title": "Attempt on A general transfer theorem between horospherical and hyperbolic typical values",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: A change of Palm sampling usually introduces a weight. If random measure tau is w times sigma, then the Campbell identity gives E_tau^0 f=E_sigma^0(w*f)/E_sigma^0 w, provided the intensities are finite and positive. As a diagnostic, equal-probability marks of weights one and two become probabilities 1/3 and 2/3 under weighted sampling. A transfer theorem must therefore identify why the actual geometric weight cancels for the invariant functionals under consideration. Check: Integrate f against tau=w*sigma and apply the Campbell formula on a unit-volume window; division by the new intensity gives the displayed identity. The finite two-mark example checks the normalization. Obstruction: The actual horospherical-to-hyperbolic Palm weight, and the class of functionals for which it cancels, are not identified. Matching a few moments does not remove this obligation.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0412-a-general-transfer-theorem-between-horospherical-and-hyperbolic-typica",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0412",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0412",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0413",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0413-low-intensity-variance-of-typical-hyperbolic-voronoi-cell-volume",
+   "kind": "concept",
+   "title": "Attempt on Low-intensity variance of typical hyperbolic Voronoi cell volume",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: Let V be typical-cell volume and V0 the zero-cell volume. Volume bias gives E V0=E V^2/E V, while mass conservation gives E V=1/lambda. Therefore E V0-E V=lambda*Var(V) exactly whenever these moments are finite. If a finite-intensity coupling produces a nonnegative excess D_lambda converging in law to the proposed ideal-cell excess D, then Fatou gives only E D<=liminf E D_lambda. A uniform bound on E D_lambda^(1+epsilon) would supply the missing uniform integrability and hence the desired equality of limits. Check: Substituting E V=1/lambda into the variance decomposition cancels the squared mean term exactly. Nonnegative variables equal to n with probability 1/n and zero otherwise show why weak convergence alone cannot pass the expected excess to the limit. Obstruction: Neither a suitable finite-intensity excess coupling nor uniform integrability is proved. The algebraic variance identity is known Palm calculus and is not claimed as a solution.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0413-low-intensity-variance-of-typical-hyperbolic-voronoi-cell-volume",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0413",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0413",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0414",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0414-hausdorff-dimension-of-exceptional-rays-in-the-planar-ideal-voronoi-tr",
+   "kind": "concept",
+   "title": "Attempt on Hausdorff dimension of exceptional rays in the planar ideal Voronoi tree",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: A first-moment route would use a uniform large-deviation bound for all rooted length-n paths. If each such path has probability at most exp(-n*I) of a prescribed average deviation, there are 3*2^(n-1) paths in the 3-regular tree, so the expected number of bad prefixes is at most (3/2)*exp(n*(log(2)-I)). In a visual metric where a depth-n cylinder has diameter theta^n, this implies the limsup bad-ray set has dimension at most max(0,(log(2)-I)/log(1/theta)); if I>log2 it is empty by Borel-Cantelli. Check: Sum the s-powers of cylinder diameters and use Tonelli. The expected total is summable whenever log2-I+s*log(theta)<0. Independence between distinct paths is unnecessary for this upper bound. Obstruction: No uniform deviation rate along arbitrary rays is proved, and a matching lower bound would require a correlated branching construction. One-vertex Gamma marginals are insufficient.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0414-hausdorff-dimension-of-exceptional-rays-in-the-planar-ideal-voronoi-tr",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0414",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0414",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0415",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0415-canonical-intensity-and-typical-cell-laws-for-unbounded-hyperbolic-cel",
+   "kind": "concept",
+   "title": "Attempt on Canonical intensity and typical-cell laws for unbounded hyperbolic cells",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: The bounded-cell Palm relation already exposes the obstruction to simply retaining the old normalization. If finite cell intensity gamma and a probability-valued typical-cell law satisfied gamma*E[volume(C_typ)]=1, assigning positive typical probability to infinite-volume cells would make the left side infinite for every gamma>0. Thus a putative extension must change the sampling measure, allow a sigma-finite object, or restrict the observables. A boundary- or horosphere-based sampling scheme is a possible route, but needs its own invariance statement. Check: The identity is obtained by assigning each location to its cell and integrating its unit mass via Campbell. The divergence conclusion follows from nonnegative integration and is not repaired by merely choosing another finite center. Obstruction: No canonical replacement measure or uniqueness principle is constructed. The contradiction applies to preserving the usual finite-intensity volume Palm identity, not to every conceivable generalized notion.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0415-canonical-intensity-and-typical-cell-laws-for-unbounded-hyperbolic-cel",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0415",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0415",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0416",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0416-amenability-of-ideal-bernoulli-voronoi-relations-on-nonexact-groups",
+   "kind": "concept",
+   "title": "Attempt on Amenability of ideal Bernoulli Voronoi relations on nonexact groups",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: Uniform probability measures on finite approximating cells do not automatically pass to invariant probability kernels on the limiting classes. The elementary sequence uniform[-n,n] on Z has mass 1/(2n+1) at each included point; every coordinate tends to zero, so its pointwise limit is the zero measure, not a probability measure. For the Voronoi limit, a proof must retain an appropriate Reiter or hyperfinite approximation with a uniform error bound, rather than taking an unqualified limit of the finite-cell averages. Check: Sum each finite kernel to obtain one, but sum its pointwise limit to obtain zero. This directly demonstrates failure of the needed exchange of infinite summation and limit. Obstruction: No Voronoi-specific uniform amenability estimate is proved. Conversely, the known arbitrary finite-relation counterexamples need not arise from low-density Voronoi cells.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0416-amenability-of-ideal-bernoulli-voronoi-relations-on-nonexact-groups",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0416",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0416",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0417",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0417-regular-exponential-volume-growth-without-full-graph-ipvt-convergence",
+   "kind": "concept",
+   "title": "Attempt on Regular exponential volume growth without full graph IPVT convergence",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: Write nu_n for the uniform ball measure in the horocompactification and sigma_n for the uniform sphere measure. If F(n-1)/F(n)->1/p, then nu_n is asymptotically (1-1/p)*sigma_n+(1/p)*nu_(n-1). Alternating sphere limits alpha,beta would therefore produce ball subsequential limits (p*alpha+beta)/(p+1) and (alpha+p*beta)/(p+1), which differ whenever alpha differs from beta. This isolates the required mechanism: stable volume ratios can coexist algebraically with oscillating directional mass. Check: Solve the two linear equations a=(1-1/p)*alpha+b/p and b=(1-1/p)*beta+a/p. Direct substitution gives the stated two-cycle. Obstruction: The missing step is realizing such directional oscillation in a transitive or Cayley graph with the prescribed volume growth. An abstract sequence of sphere measures is not such a graph.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0417-regular-exponential-volume-growth-without-full-graph-ipvt-convergence",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0417",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0417",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0418",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0418-non-poisson-low-intensity-ideal-voronoi-diagrams",
+   "kind": "concept",
+   "title": "Attempt on Non-Poisson low-intensity ideal Voronoi diagrams",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: A simple global Cox mixture cannot achieve the target when the underlying Poisson model has a unique intensity-independent limit. Let Z be any positive finite random variable and, conditionally on Z, take a Poisson nuclei process of intensity lambda*Z. For every bounded continuous diagram test f, conditional convergence at each fixed Z=z gives E[f(V_lambda)|Z=z]->E[f(V_IPVT)]. Dominated convergence then yields the same unconditional IPVT law. Randomizing the global intensity changes finite-scale counts but not this unique limit. Check: The conditional intensity tends to zero for every 0<z<infinity, and boundedness of f supplies domination. An atom at Z=0 would add the trivial empty-nuclei case, which is excluded by the stated assumptions. Obstruction: Need spatial dependence that survives the boundary-and-delay limit. The Cox comparison does not analyze the determinantal candidate or construct a distinct nontrivial limit.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0418-non-poisson-low-intensity-ideal-voronoi-diagrams",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0418",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0418",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0419",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0419-equal-growth-l1-products-beyond-the-divergent-tilted-volume-condition",
+   "kind": "concept",
+   "title": "Attempt on Equal-growth L1 products beyond the divergent tilted-volume condition",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: Consider two equal radial densities proportional at large r to exp(b*r)*(1+r)^(-a), a>1. On a large L1 sphere, the split at radius s has weight proportional to (1+s)^(-a)*(1+R-s)^(-a). The contribution from epsilon*R<=s<=(1-epsilon)*R is O(R^(1-2a)), whereas either fixed endpoint region contributes order R^(-a). Their ratio tends to zero because a>1. Thus equal exponential growth alone need not force both factor radii to diverge; endpoint concentration can replace the tensor product of two boundary laws. Check: In the middle interval both denominators are bounded below by constants times R^a and its length is at most R. Near an endpoint, one denominator remains bounded while the other has order R^a. These independent upper and lower estimates establish the comparison. Obstruction: The model is not asserted to be a homogeneous geometric counterexample. A general theorem needs precise radial regularity, the endpoint mixture weights, and nondegeneracy of the resulting ideal diagram.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0419-equal-growth-l1-products-beyond-the-divergent-tilted-volume-condition",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0419",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0419",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0420",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0420-low-intensity-voronoi-limits-for-products-with-the-l2-metric",
+   "kind": "concept",
+   "title": "Attempt on Low-intensity Voronoi limits for products with the L2 metric",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: If radial shell densities have leading exponents b*r1 and bprime*r2 with both positive, their product on r1^2+r2^2=R^2 is governed by maximizing b*r1+bprime*r2. Cauchy-Schwarz gives the unique maximum B*R at (r1,r2)=R*(b,bprime)/B, B=sqrt(b^2+bprime^2). Taylor expansion of the product distance then suggests the limiting horofunction (b*h1+bprime*h2)/B. The second derivative in r1 at the maximizer is -B^3/(bprime^2*R), so the radial split fluctuates on the sqrt(R) scale under regular Laplace asymptotics. Check: The maximum follows independently from a Lagrange multiplier. Differentiate b*s+bprime*sqrt(R^2-s^2) twice to verify the curvature. Zero growth exponents require separate endpoint analysis. Obstruction: Need uniform asymptotics for shell measures and angular laws, control of the saddle-point tails, and convergence of the boundary measures. Exponential rates alone do not justify these steps.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0420-low-intensity-voronoi-limits-for-products-with-the-l2-metric",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0420",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0420",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0421",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0421-convergence-of-edge-measured-product-graph-voronoi-diagrams",
+   "kind": "concept",
+   "title": "Attempt on Convergence of edge-measured product-graph Voronoi diagrams",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: For a finite weighted edge set, choosing an edge proportionally to its weight and then a uniform endpoint samples vertices with probability proportional to weighted degree. Thus a uniform-vertex limit need not equal the endpoint limit when degrees or weights vary. Even knowledge of both endpoint marginals does not identify their joint boundary law: an equal mixture of pairs (0,0),(1,1) and an equal mixture of (0,1),(1,0) have the same marginals but disjoint supports. Product-edge convergence must retain the endpoint-pair measure and horizontal/vertical edge weights. Check: Each incident edge contributes half its sampling weight to a vertex, proving the degree bias. The two binary pair laws both have Bernoulli(1/2) marginals, checking the independent loss of correlation information. Obstruction: No convergence estimate for the actual product-graph endpoint measure is proved. The pair-law example is an information diagnostic, not a constructed graph counterexample.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0421-convergence-of-edge-measured-product-graph-voronoi-diagrams",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0421",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0421",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0422",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0422-more-than-two-distinguishable-types-of-group-ipvt-cells",
+   "kind": "concept",
+   "title": "Attempt on More than two distinguishable types of group IPVT cells",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact integral manipulation, Palm calculus, mass transport, limiting obstruction or conditional construction Result: A sufficient construction route is an equivariant recoverable nucleus mark. Suppose the limiting boundary decomposes into invariant measurable sets A1,...,Ak of positive intensity, nuclei in every Ai produce nonempty cells, and the associated boundary label can be reconstructed measurably from each cell and its diagram. Then selecting cells whose label is Ai is an equivariant rule, so these classes are distinguishable. Independent restrictions of the boundary Poisson process preserve all k label populations, but geometric visibility of those nuclei remains an additional requirement. Check: Equivariance of the recovered label implies invariance of each selection rule. Positive intensity alone is not enough: nuclei with empty cells would not provide a cell type, which is why nonemptiness was explicitly assumed. Obstruction: No group with the required boundary decomposition and visibility properties is constructed. The criterion gives at least k distinguishable classes, not exactly k; within-class indistinguishability still requires proof.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0422-more-than-two-distinguishable-types-of-group-ipvt-cells",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0422",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0422",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0425",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0425-optimal-parallel-allocation-with-unknown-nonexponential-job-sizes",
+   "kind": "concept",
+   "title": "Attempt on Optimal parallel allocation with unknown nonexponential job sizes",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: For an absolutely continuous size law with hazard h, a job at attained service a allocated b servers completes at instantaneous rate h(a)*s(b), while its age advances at rate s(b). A formal controlled generator therefore has both an age-drift term s(b)*partial_a V and a completion term h(a)*s(b)*(V_after_departure-V). Maximizing the departure rate alone drops the learning and continuation terms. The common exponential case removes age learning but does not justify that omission for a general size law. Check: Conditional survival over work da is 1-h(a)*da+o(da); substituting da=s(b)*dt derives both generator terms from the same clock. A nonexponential two-point law instead requires jump boundary conditions, so the density formula is explicitly limited. Obstruction: No solution of the infinite-state average-cost control equation or verification theorem is supplied.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0425-optimal-parallel-allocation-with-unknown-nonexponential-job-sizes",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0425",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0425",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0426",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0426-optimal-known-size-parallel-allocation-with-poisson-arrivals",
+   "kind": "concept",
+   "title": "Attempt on Optimal known-size parallel allocation with Poisson arrivals",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: With remaining-work vector x, arrival rate lambda, and relative value V, the formal average-cost equation is g=m+lambda*E[V(x appended with S)-V(x)]-max_{sum b_i<=n} sum_i s(b_i)*partial_i V(x). Interior allocations must satisfy s_prime(b_i)*partial_i V=nu. Thus the offline allocation can persist only if the stochastic value gradients preserve the required ratios; arrivals explicitly couple all coordinates through the appended-state term. Check: Between arrivals the residual of job i decreases at rate s(b_i), giving the minus sign. For linear speedup the maximization concentrates resources on the largest value gradient; this is consistent with a priority rule, not proof of which priority. Obstruction: The value gradients, boundary conditions at completion, recurrence assumptions and optimality verification remain unknown.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0426-optimal-known-size-parallel-allocation-with-poisson-arrivals",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0426",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0426",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0427",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0427-optimal-allocation-between-two-exponential-parallelism-classes",
+   "kind": "concept",
+   "title": "Attempt on Optimal allocation between two exponential parallelism classes",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: Even with two jobs and no arrivals, continuation values change the allocation. Take four divisible servers and independent Exp(1) inherent job sizes. Use normalized concave speedups s1(b)=min(b,sqrt(b)) and s2(b)=min(b,b^(3/4)), including linear fractional-server behavior below one server. Allocate b to class one and 4-b to class two until the first completion, then all four to the survivor. Expected sum of completion times is V(b)=[2+s1(b)/(2*sqrt(2))+s2(4-b)/2]/[s1(b)+s2(4-b)]. The throughput maximizer is b=1: total rate increases below one and decreases above it. Yet V(81/64)<V(1). The slower departure rate improves the continuation state. Check: The first-completion time has mean 1/(r1+r2) and incurs holding cost two; survivor means are 1/(2*sqrt(2)) and 1/2. Independently, the sign of the right derivative V_prime(1) is the sign of 3^(3/4)*(3/(2*sqrt(2))+1/2)-4, which is negative by the rational bounds 3^(3/4)<23/10 and 1/(2*sqrt(2))<9/25. Obstruction: The no-arrival diagnostic does not determine a stationary optimal policy with Poisson arrivals, nor prove a universal allocation formula.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0427-optimal-allocation-between-two-exponential-parallelism-classes",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0427",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0427",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0428",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0428-mean-response-optimization-for-stochastically-arriving-dag-jobs",
+   "kind": "concept",
+   "title": "Attempt on Mean-response optimization for stochastically arriving DAG jobs",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: Total work does not identify a job duration. Two independent Exp(mu) tasks in parallel have mean completion time 3/(2*mu), while the same two tasks in a serial chain have mean 2/mu; both have mean total work 2/mu. For general DAGs a Markov state must retain the completed downward-closed vertex set and currently served eligible tasks. Lower bounds are the expected critical-path duration and expected total work divided by server count, but neither retains inter-job interference. Check: For two exponential tasks, E[max]=E[X]+E[Y]-E[min]=2/mu-1/(2*mu). A chain requires the sum. These two exact laws independently isolate the precedence information lost by a work-only state. Obstruction: No optimal stochastic DAG allocation or stationary response formula is derived. Worst-case offline guarantees are not substituted for the stochastic objective.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0428-mean-response-optimization-for-stochastically-arriving-dag-jobs",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0428",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0428",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0429",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0429-largest-growing-fork-join-batch-compatible-with-asymptotic-independenc",
+   "kind": "concept",
+   "title": "Attempt on Largest growing fork-join batch compatible with asymptotic independence",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: A finite-horizon input coupling suggests a cubic collision scale. Fix k tagged servers. Jobs arrive at rate Lambda=lambda*n/k and choose a uniform k-subset. If N is the number of tagged servers hit by an arrival, E[N(N-1)]=k*(k-1)*k*(k-1)/(n*(n-1)). Remove arrivals that hit at least two tagged queues and restore their lost marginal rates by independent Poisson streams. A union bound on removed events and added events is at most (3/2)*Lambda*T*E[N(N-1)], hence at most 3*lambda*T*k*(k-1)^2/(2*(n-1)). The resulting streams are independent with the correct marginal rates. With independent task marks and queues initially empty, this also bounds total variation of their workload paths on [0,T]. Extending the credited source coupling to stationary starts gives TV<=2*k*r(T)+3*lambda*T*k*(k-1)^2/(2*(n-1)), where r(T) is the stationary marginal emptying tail. With independent exponential service of rate mu>lambda, a stopped generator calculation gives r(T)<=(1+sqrt(lambda/mu))*exp(-(sqrt(mu)-sqrt(lambda))^2*T). Taking T=2*log(n)/(sqrt(mu)-sqrt(lambda))^2 gives sufficient k=o((n/log(n))^(1/3)). A conditional polynomial tail r(T)<=C*T^(-p) gives sufficient exponent p/(3*p+1). Check: The hypergeometric factorial moment follows by summing ordered pairs of tagged-server indicators. On N>=2, both 1<=N(N-1)/2 and N<=N(N-1), giving the factor 3/2. Small subset enumeration checks the moment exactly. Separate exact checks cover 77 hypergeometric/restoration cases, 81 generator identities, nine geometric exponential moments and five polynomial balancing identities. The complete packet explicitly checks stationary coupling, marginal rate restoration, PASTA and heavy-traffic limits; these are author checks, not independent review. Obstruction: Partial exponential-service sufficient regime only. No optimal threshold, boundary k of order n^(1/3), general-service improvement, correlated-mark result, uniform heavy-traffic result or novelty certification. The basic source coupling is credited.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0429-largest-growing-fork-join-batch-compatible-with-asymptotic-independenc",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0429",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0429",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0430",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0430-response-laws-for-limited-fork-join-shortest-queue-dispatching",
+   "kind": "concept",
+   "title": "Attempt on Response laws for limited fork-join shortest-queue dispatching",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: For queue-length vector q and a simultaneous unit increment on selected set A of size k, the quadratic potential changes by 2*sum_{i in A}q_i+k. Selecting the k shortest queues minimizes this one-step drift over all distinct-server choices. Uniform selection instead gives mean increment 2*k*sum_i q_i/n+k. This establishes a local balancing property, but the response of the job is the maximum of its task sojourn times, which also depends on residual service and the joint selected-state law. Check: Expand (q_i+1)^2-q_i^2 separately at each selected coordinate. A pairwise exchange replacing a selected larger queue by an unselected smaller queue decreases the drift, proving the minimizer. Obstruction: No stationary maximum-sojourn law or optimality for mean job response follows from the quadratic drift inequality.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0430-response-laws-for-limited-fork-join-shortest-queue-dispatching",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0430",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0430",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0431",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0431-straggler-replication-in-queued-limited-fork-join-systems",
+   "kind": "concept",
+   "title": "Attempt on Straggler replication in queued limited fork-join systems",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: In the no-queue, independent exponential diagnostic, two simultaneous replicas each at rate mu complete after Exp(2*mu), while expected total server effort is 2/(2*mu)=1/mu, equal to one original. With a deterministic overhead c followed by Exp(mu), cancellation at first completion instead consumes mean effort 2*c+1/mu versus c+1/mu without replication. Thus a service-time shift can reverse the apparent free speedup before any waiting is considered. In a k-task job this replication helps only if the replicated task controls the maximum. Check: The minimum of independent exponential variables has the sum of their rates. Both replicas execute the common deterministic startup interval before either can complete, proving the extra effort c. Obstruction: The diagnostic does not quantify queue feedback, correlation, delayed starts or the stationary fork-join response distribution.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0431-straggler-replication-in-queued-limited-fork-join-systems",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0431",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0431",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0432",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0432-optimal-known-size-multiserver-scheduling-beyond-srpt",
+   "kind": "concept",
+   "title": "Attempt on Optimal known-size multiserver scheduling beyond SRPT",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: A first-arrival decomposition explains why no-arrival optimality is insufficient. For two policies coupled until a selected state, assume their cost difference through recoupling is integrable and let D(t) be its conditional expectation given that the next arrival occurs at time t, including their specified continuation rules. Under a Poisson rate lambda, the expected difference is integral_0^infinity lambda*exp(-lambda*t)*D(t) dt. The sign of D on an intermediate interval can outweigh both early-arrival harm and a favorable no-arrival endpoint. A global comparison must also bound the cost until recoupling; comparing only the first completed job misses that term. Check: Condition on the exponential next-arrival time to derive the integral. Conditional continuations still include all later arrivals; replacing them by a no-further-arrivals trajectory would invalidate the identity. Obstruction: No new policy comparison or sharp universal lower bound is proved. The later source resolves the improvement-existence subquestion, not full optimal control.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0432-optimal-known-size-multiserver-scheduling-beyond-srpt",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0432",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0432",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0433",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0433-optimal-dispatching-to-srpt-queues-outside-heavy-traffic",
+   "kind": "concept",
+   "title": "Attempt on Optimal dispatching to SRPT queues outside heavy traffic",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: Consider two unit-speed SRPT queues with no future arrivals: queue one holds one job of residual size 100; queue two holds ten jobs of residual size 0.1 each. A new job of size 0.05 preempts either queue and finishes in 0.05. Sending it to queue one delays one existing completion by 0.05; sending it to queue two delays ten existing completions by 0.05 each. Thus the total incremental completion cost is 0.10 versus 0.55, although queue two has much less workload. Least workload is not the correct one-step objective for this size-aware setting. Check: The newcomer is shorter than every existing residual, so every existing completion at the chosen queue shifts by exactly 0.05. Adding its own completion time gives the two displayed costs. Obstruction: Future arrivals and the stationary distribution of dispatcher states are omitted. The example is a diagnostic against a proposed greedy criterion, not the optimal dispatcher.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0433-optimal-dispatching-to-srpt-queues-outside-heavy-traffic",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0433",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0433",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0434",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0434-sharp-approximation-ratio-for-simple-alternatives-to-gittins",
+   "kind": "concept",
+   "title": "Attempt on Sharp approximation ratio for simple alternatives to Gittins",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: A two-job calculation isolates the value of probing. Job A has size 0.01 with probability 0.9 and 100 with probability 0.1; job B has known size 2. SERPT initially selects B because E[A]=10.009. Completing B before A gives expected sum of completion times 14.009. Serving A for 0.01, then serving B if A survives, gives 0.9*(0.01+2.01)+0.1*(102+2.01)=12.219. The Gittins stopping ratio at probe duration 0.01 is 0.01/0.9, smaller than B rank 2. Any approximation proof based only on expected residual size loses this probing advantage. Check: In the long-A branch, total A completion time is 102 after the intervening two units for B; omitting those two units would give a false larger improvement. Both strategies are enumerated by the two possible A sizes. Obstruction: This finite instance does not establish a stationary approximation factor, nor distinguish the full worst-case ratios of SERPT and M-SERPT.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0434-sharp-approximation-ratio-for-simple-alternatives-to-gittins",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0434",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0434",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0435",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0435-optimal-nonasymptotic-scheduling-with-unknown-sizes-in-m-g-k",
+   "kind": "concept",
+   "title": "Attempt on Optimal nonasymptotic scheduling with unknown sizes in M/G/k",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: For exponential sizes with a common rate mu, every nonidling policy has the same queue-count death rate mu*min(m,k), so scheduling is immaterial for that special law. With nonexponential sizes the departure intensity becomes sum_i h(a_i) over served jobs, and the age vector has policy-dependent drift. Thus queue count ceases to close: two states with equal m but different service ages can have different next-departure laws. A proposed extension of the exponential argument must retain this age information and its effect on future capacity. Check: Independent exponential residuals survive conditioning unchanged, deriving the special-case death rate. For a deterministic size, an age just below completion and age zero have distinct completion times despite the same queue count, checking failure of closure. Obstruction: No optimal age-vector control is constructed. The reduction supplies a known special case and an obstruction to extending its proof.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0435-optimal-nonasymptotic-scheduling-with-unknown-sizes-in-m-g-k",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0435",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0435",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0436",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0436-optimal-finite-deadline-success-scheduling",
+   "kind": "concept",
+   "title": "Attempt on Optimal finite-deadline success scheduling",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: A deadline-success value must carry remaining slack as well as remaining work. For a job arriving at a with size x, slack at t is a+D-t-x_remaining. Two equal-work jobs can have opposite feasibility depending on arrival age. Moreover an admission rule using only current feasibility ignores the opportunity cost of accepted work: a size close to D may be feasible now but block many later short jobs. In a finite-horizon control equation the immediate reward is a unit success at completion before the deadline, rather than the running holding cost used for mean response. Check: Check two residual-size 0.2 jobs with slacks 0.1 and -0.1: the latter cannot succeed even with immediate exclusive service. This separates a feasibility state from a workload-only state without assuming an optimal policy. Obstruction: The stationary success-maximizing policy, admissible preemption/drop rules and its verification remain unresolved.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0436-optimal-finite-deadline-success-scheduling",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0436",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0436",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0437",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0437-dropping-probability-and-optimality-gap-of-dtlh",
+   "kind": "concept",
+   "title": "Attempt on Dropping probability and optimality gap of DTLH",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: Total workload alone does not determine the next admission outcome. Let the in-service residual be 0.1, the waiting workload be 0.8, D=1, and the new job have size 0.5. If the waiting line is one size-0.8 job, removing it makes the newcomer feasible. If the waiting line is two size-0.4 jobs, neither is larger than the newcomer, so the newcomer is dropped. Both states have total workload 0.9. A Markov analysis needs the ordered waiting-size/slack state, not just a reflected scalar workload. Check: Before replacement the prospective completion delay is 1.4. Removing 0.8 leaves delay 0.6. In the two-job state no waiting size exceeds 0.5. The in-service job is explicitly excluded from the removal candidates. Obstruction: No stationary ordered-state law or approximation ratio is obtained; the example diagnoses insufficient state information.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0437-dropping-probability-and-optimality-gap-of-dtlh",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0437",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0437",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0438",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0438-feasibility-of-class-specific-response-quantiles",
+   "kind": "concept",
+   "title": "Attempt on Feasibility of class-specific response quantiles",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: For class i with nonparallel intrinsic service S_i and deadline D_i, every policy obeys P(T_i>D_i)>=P(S_i>D_i). Also an aggregate miss rate is a weighted average sum_i p_i*m_i and does not bound each m_i: if a rare class has probability 0.005 and all its jobs miss while the rest succeed, aggregate misses are 0.005 but that class has miss rate one. Thus aggregate feasibility and even workload stability leave separate unavoidable class constraints. Check: Response time contains service time pathwise. The rare-class example follows by total probability and does not rely on simulated queue data. Obstruction: These necessary conditions are not sufficient; no policy is proved to attain the feasible vector of quantiles.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0438-feasibility-of-class-specific-response-quantiles",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0438",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0438",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0439",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0439-server-provisioning-for-a-finite-response-time-slo",
+   "kind": "concept",
+   "title": "Attempt on Server provisioning for a finite response-time SLO",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: For the stable M/M/k FCFS benchmark with total arrival rate Lambda and service rate mu per server, let C be Erlang-C and a=k*mu-Lambda. Waiting time is zero with probability 1-C and otherwise Exp(a), independent of the tagged Exp(mu) service. For a!=mu this gives P(T>t)=(1-C)*exp(-mu*t)+C*[mu*exp(-a*t)-a*exp(-mu*t)]/(mu-a). At a=mu the bracket is exp(-mu*t)*(1+mu*t). This gives a reproducible benchmark for each k; simply using the waiting-time tail as the response-time tail would omit service. Check: Convolve the two exponential distributions, and take the continuous limit a->mu to obtain the Erlang-two tail. At t=0 the expression equals one, and at C=0 it reduces to the service tail. Obstruction: The benchmark neither proves the minimum k over all policies nor transfers to M/G/k. No new general staffing rule is established.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0439-server-provisioning-for-a-finite-response-time-slo",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0439",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0439",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0440",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0440-waiting-time-tails-with-deterministic-multiserver-setup",
+   "kind": "concept",
+   "title": "Attempt on Waiting-time tails with deterministic multiserver setup",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: For a state with m jobs and z busy servers, the count part of the generator applied to exp(theta*m) is [Lambda*(exp(theta)-1)+mu*z*(exp(-theta)-1)]*exp(theta*m). It is negative when z is sufficiently large, but positive when every server is in setup. Thus a one-step exponential drift estimate cannot hold uniformly on large-m states using m alone. A useful Lyapunov function must include residual setup times, or the proof must use a time interval long enough for setup completion while controlling cancellations. Check: Each arrival multiplies the test function by exp(theta); each completion multiplies it by exp(-theta). Deterministic setup progress does not change m immediately, which is precisely the missing generator term in a count-only test. Obstruction: No tail exponent or higher-moment bound with verified constants is obtained. Mean bounds alone do not certify the tail.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0440-waiting-time-tails-with-deterministic-multiserver-setup",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0440",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0440",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0441",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0441-deterministic-delayedoff-waiting-power-tradeoff",
+   "kind": "concept",
+   "title": "Attempt on Deterministic DelayedOff waiting-power tradeoff",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: A single idle-gap diagnostic is exact: for next-arrival gap G~Exp(Lambda), the chance the server becomes cold is exp(-Lambda*gamma), and expected on-idle duration is E[min(G,gamma)]=(1-exp(-Lambda*gamma))/Lambda. If a cold arrival triggers deterministic setup beta, that arrival incurs beta*exp(-Lambda*gamma) expected setup delay. The local marginal tradeoff follows by differentiation, but a full renewal cycle also includes later arrivals during setup, active service and possible setup cancellation. Check: Integrate P(G>t)=exp(-Lambda*t) over [0,gamma]. Separately condition on G>gamma for the cold-arrival delay. Both formulas have correct gamma=0 and gamma->infinity limits. Obstruction: The idle-gap calculation is not a stationary many-server mean or a globally optimal grace period.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0441-deterministic-delayedoff-waiting-power-tradeoff",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0441",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0441",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0442",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0442-optimal-waiting-power-pareto-frontier-with-deterministic-setup",
+   "kind": "concept",
+   "title": "Attempt on Optimal waiting-power Pareto frontier with deterministic setup",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: Let a stationary occupation measure record active, idle-on, setting-up and off servers. Average power is a linear functional of that measure, while mean waiting equals E[Q]/Lambda by Little law when finite. Minimizing E[Q]/Lambda+eta*E[power] for eta>=0 produces supported frontier points. If policies share a common regenerative empty/reset state and have finite cycle moments, randomizing between them at those epochs produces convex mixtures of cycle reward rates. The mixing weight is cycle-length biased; averaging policy labels without that correction gives the wrong frontier. Check: If a cycle uses policy A with probability p, its reward rate is [p*E[R_A]+(1-p)*E[R_B]]/[p*E[L_A]+(1-p)*E[L_B]], directly from renewal reward. The coefficient of A rate is p*E[L_A] divided by the same denominator. Obstruction: No feasible occupation-measure characterization, optimal control solution, or proof that DelayedOff spans the frontier is supplied.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0442-optimal-waiting-power-pareto-frontier-with-deterministic-setup",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0442",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0442",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0443",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0443-closed-form-performance-bounds-for-general-setup-distributions",
+   "kind": "concept",
+   "title": "Attempt on Closed-form performance bounds for general setup distributions",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: The mean setup time alone loses a basic renewal quantity. If setup durations B are sampled independently with finite second moment and a time observer samples a stationary setup interval, the residual mean is E[B^2]/(2*E[B]). Deterministic B=beta gives beta/2, while Exp(mean beta) gives beta. But an arrival that initiates a setup samples the original B, not this length-biased residual. Therefore neither substituting the same mean nor blindly inserting the residual-life formula yields a correct multiserver approximation. Check: Renewal reward integrates the residual triangular area B^2/2 in each interval and divides by E[B]. The initiation observer is an independent endpoint observer, distinguishing its sampling law. Obstruction: The inspection-paradox calculation is a diagnostic only. Actual queue-coupled setup intervals and cancellation can violate its independent renewal assumptions.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0443-closed-form-performance-bounds-for-general-setup-distributions",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0443",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0443",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0444",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0444-computational-complexity-of-the-multiserver-job-stability-threshold",
+   "kind": "concept",
+   "title": "Attempt on Computational complexity of the multiserver-job stability threshold",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: For the special case where every job needs b servers, put c=floor(s/b). The saturated system is a c-machine list schedule. Its maximum completion time after n jobs is at least total service/c and at most total service/c+(1-1/c)*max_{j<=n}S_j. For iid finite-mean service, total service/n->E[S] and max S_j/n->0 almost surely, so gamma=E[S]/c. Heterogeneous demands break this scalar packing reduction. In the general estimator, a small difference between consecutive sample means does not bound the distance from their limiting value. Check: The list-scheduling upper bound is obtained by looking just before the job that finishes last starts: all c machine loads are at least its start time, and its own service accounts for the remaining gap. Divide by n and use the finite-mean iid maximal-term law. Obstruction: No general finite-sample certificate or computational complexity bound is derived; the equal-demand case is a credited classical scheduling reduction.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0444-computational-complexity-of-the-multiserver-job-stability-threshold",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0444",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0444",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0445",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0445-monotone-workload-recurrences-beyond-fcfs-multiserver-jobs",
+   "kind": "concept",
+   "title": "Attempt on Monotone workload recurrences beyond FCFS multiserver jobs",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: Compositions of coordinatewise isotone primitive maps remain isotone: if x<=y, first F(x)<=F(y), then G(F(x))<=G(F(y)). Consequently, a policy using an exogenously fixed sequence of the same monotone primitives inherits the comparison. An adaptive scheduler instead selects F_{a(x)} at state x and F_{a(y)} at y; isotonicity of each separate F_a gives no comparison between those two values. In one dimension, F0(x)=x and F1(x)=x+10 are both increasing, but selecting F1 below threshold one and F0 above it makes the chosen map decrease at the threshold. Check: The scalar pair x=0.9,y=1.1 yields outputs 10.9 and 1.1. This disproves the proposed generic inference from branchwise isotonicity, not monotonicity of any named queue discipline. Obstruction: No new non-FCFS discipline is proved monotone. A queue-specific comparison requires controlling policy switches and the admissible arrival order.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0445-monotone-workload-recurrences-beyond-fcfs-multiserver-jobs",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0445",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0445",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0446",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0446-perfect-multiserver-job-samples-with-a-stability-matching-upper-bound",
+   "kind": "concept",
+   "title": "Attempt on Perfect multiserver-job samples with a stability-matching upper bound",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: Serializing every job yields a simple potential dominating workload but may destroy the needed stability region. With two servers, single-server-demand iid service of mean one, and arrival rate 1.5, the actual M/G/2 has load 0.75, while an all-jobs-serialized M/G/1 has load 1.5 and no finite stationary workload. Thus this upper-bound construction cannot support perfect sampling throughout the true stable region. Nor does observing a lower sequence remain constant over a finite number of lookback extensions certify that it will never jump later. Check: The respective work capacities are two and one units per unit time. A deterministic nondecreasing sequence that stays zero for N steps and then becomes one independently demonstrates the logical failure of finite plateau certification. Obstruction: No stability-matching dominating chain or detectable coalescence criterion is constructed.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0446-perfect-multiserver-job-samples-with-a-stability-matching-upper-bound",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0446",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0446",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0447",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0447-finite-size-response-characterization-for-classical-fork-join-queues",
+   "kind": "concept",
+   "title": "Attempt on Finite-size response characterization for classical fork-join queues",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: In a stable exponential-service fork-join model with common Poisson arrivals, independent task services alone give E[T_job]>=H_n/mu, where H_n is the nth harmonic sum, because waiting times are nonnegative. An independence approximation applied to stationary task sojourns would give H_n/(mu-Lambda), but shared arrivals make those sojourns dependent. Computing each marginal M/M/1 law therefore does not identify the maximum. The gap between these two scales also warns against replacing a finite-n maximum by its asymptotic centering without a remainder bound. Check: For iid Exp(mu) service requirements, integrate 1-(1-exp(-mu*t))^n to obtain H_n/mu. The actual lower bound is pathwise since each task sojourn exceeds its own service. Obstruction: No finite-n joint transform or sharp error bound is obtained. The independent-sojourn expression is explicitly an approximation unless a separate association comparison is invoked.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0447-finite-size-response-characterization-for-classical-fork-join-queues",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0447",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0447",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0450",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0450-conditional-generation-limits-for-the-erlang-weighted-tree",
+   "kind": "concept",
+   "title": "Attempt on Conditional generation limits for the Erlang weighted tree",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics Result: An exact classical branching diagnostic shows why the critical normalization matters. For geometric offspring with pgf f(s)=1/(2-s), iteration gives f_l(s)=(l-(l-1)*s)/(l+1-l*s). Thus survival has probability 1/(l+1), and the conditional positive population is geometric with success 1/(l+1). Its mass on {1,...,M} tends to zero for each fixed M, while Z_l/l conditioned on survival converges to Exp(1). This is a single-type diagnostic, not the EWT. For EWT a possible route uses the positive right eigenfunction to form a size-biased spine, but convergence under survival conditioning requires a separate comparison to that bias. Check: Direct substitution verifies f(f_l(s))=f_(l+1)(s); subtract f_l(0), divide by survival probability and expand the geometric series. The conditional tail at floor(l*x) is (l/(l+1))^floor(l*x), tending to exp(-x). Obstruction: No EWT Yaglom or Q-process theorem is proved. A size-biased spine law is not automatically the law conditioned on nonextinction.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0450-conditional-generation-limits-for-the-erlang-weighted-tree",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0450",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0450",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0451",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0451-unimodularity-and-reversibility-of-the-erlang-branching-spine",
+   "kind": "concept",
+   "title": "Attempt on Unimodularity and reversibility of the Erlang branching spine",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics Result: For the displayed kernel p(x,y)=min(x,y)*g2(y)*f0(y)/(beta0*f0(x)), the measure with density pi(x)=g2(x)*f0(x)^2 has symmetric pair flow pi(x)p(x,y)=min(x,y)*g2(x)*g2(y)*f0(x)*f0(y)/beta0. This recovers the credited reversibility by inspection. The obstacle to identifying it with ordinary unimodular rerooting is the reproductive f0 bias: unimodularity is a mass-transport identity for the root law, while the spine favors descendants through the right eigenfunction. One must construct and normalize a two-sided marked spine with the appropriate Radon-Nikodym factor before claiming an equivalence. Check: Cancel exactly one factor of f0(x), then exchange x and y. For an ordinary unimodular graph, stationary simple-random-walk rerooting instead uses degree bias, exposing the missing identification. Obstruction: No general equivalence, converse, or root-bias formula beyond this explicit kernel calculation is proved.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0451-unimodularity-and-reversibility-of-the-erlang-branching-spine",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0451",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0451",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0452",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0452-giant-component-density-from-erlang-weighted-tree-survival",
+   "kind": "concept",
+   "title": "Attempt on Giant-component density from Erlang weighted-tree survival",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics Result: The local-limit argument controls the fraction of vertices in components above a fixed size; it does not put those vertices in one component. To break that inference, compare one cycle of size n with a disjoint union of cycles of length floor(sqrt(n)), adjusting a negligible remainder. Both local weak limits are the bi-infinite path, which is infinite with probability one. The largest component fractions instead tend to one and zero. Thus the missing step for La-Kabkab is a genuine uniqueness/coalescence or sprinkling argument controlling dependencies among mutually preferred edges; local convergence alone cannot provide it. Check: For any fixed radius r, all vertices except a vanishing remainder in both examples have the same radius-r rooted path neighborhood once cycle lengths exceed 2r+1. The largest block sizes are n and O(sqrt(n)). Obstruction: This is a counterexample to a proposed proof implication on general graph sequences, not a counterexample within the La-Kabkab model.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0452-giant-component-density-from-erlang-weighted-tree-survival",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0452",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0452",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0453",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0453-weaker-degree-tail-hypotheses-for-erlang-weighted-tree-growth",
+   "kind": "concept",
+   "title": "Attempt on Weaker degree-tail hypotheses for Erlang weighted-tree growth",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics Result: One spectral step only needs finite mean. Put g2(x)=exp(-x)*sum_(j>=2)P(j)*x^(j-2)/(j-2)!, and consider Kf(x)=integral min(x,y)*f(y)*g2(y)dy on L2(g2 dx). Tonelli gives integral x*g2(x)dx=sum_(j>=2)(j-1)P(j)=E[K_degree]-1. Since min(x,y)^2<=x*y, the squared Hilbert-Schmidt norm is at most (E[K_degree]-1)^2. Thus finite mean already makes this symmetric integral operator compact. The kernel is also positive semidefinite because min(x,y)=integral_0^infinity 1_(t<x)*1_(t<y)dt. This removes an exponential moment from the compactness step, while leaving the stronger population conclusions untouched. Check: The gamma integral of x^(j-1)*exp(-x)/(j-2)! equals j-1. For compactly supported test functions, Fubini expresses the quadratic form as integral (integral_(x>t) f(x)g2(x)dx)^2 dt; continuity extends positivity to L2. Obstruction: No assertion that every source growth/extinction theorem survives under finite mean. Identifying the branching eigenfunctions, integrability of the spine, and uniform integrability of martingales still require proof.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0453-weaker-degree-tail-hypotheses-for-erlang-weighted-tree-growth",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0453",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0453",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0456",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0456-the-fine-connectivity-window-for-bilateral-preference-graphs",
+   "kind": "concept",
+   "title": "Attempt on The fine connectivity window for bilateral preference graphs",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics Result: At k=log(n)+a*sqrt(log(n)), the known mean-degree expansion gives E[D]=log(n)+(a-1/sqrt(pi))*sqrt(log(n))+lower-order terms. Matching this mean to log(n) therefore suggests an apparent positive shift, but it does not derive a connectivity threshold: isolated-vertex probabilities depend on the far lower tail of D, not its mean. Even the candidate central fluctuation law in the separate packet probes deficits of order sqrt(k); isolation requires deficit k, a moving far-tail event outside that limit. An actual sharp-window proof must analyze the relevant order-statistic large deviation and then exclude nontrivial small components. Check: Substitute the proposed k into sqrt(k/pi) and divide the remainder by sqrt(log(n)). Separately, weak convergence at fixed scaled thresholds gives no estimate at a threshold diverging like sqrt(k). Obstruction: No connectivity shift, window width or limiting probability is established; the mean-matching calculation is explicitly a failed inference to test.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0456-the-fine-connectivity-window-for-bilateral-preference-graphs",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0456",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0456",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0457",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0457-diameter-near-the-newly-established-bilateral-connectivity-threshold",
+   "kind": "concept",
+   "title": "Attempt on Diameter near the newly established bilateral connectivity threshold",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics Result: Any connected graph with maximum degree k>=3 has at most 1+k*((k-1)^r-1)/(k-2) vertices within radius r. Hence its diameter d satisfies n<=1+k*((k-1)^d-1)/(k-2), giving a deterministic lower bound of logarithmic order log(n)/log(k). For LK this uses its exact degree cap and requires no independence. A matching upper bound needs expansion of balls grown through mutual rankings; the Erdős-Rényi subgraph used by a coarse coupling may itself be disconnected in the newly covered range and then offers no diameter bound. Check: Count at most k first neighbors and at most k-1 new choices on each later level. This also distinguishes graph distance from a count of path walks with arbitrary backtracking. Obstruction: No matching upper bound or limiting constant is proved. The tree-volume inequality is classical and credited as a diagnostic.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0457-diameter-near-the-newly-established-bilateral-connectivity-threshold",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0457",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0457",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0458",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0458-the-standardized-degree-law-in-growing-bilateral-preference-graphs",
+   "kind": "concept",
+   "title": "Attempt on The standardized degree law in growing bilateral preference graphs",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics Result: The packet uses the exact root (k+1)st order statistic X~Beta(k+1,n-k-1). Ignoring internal edges among the root preferred neighbors gives D0|X~Bin(k,1-q(X)), where q(X)=E[(X-T)+]/X and T~Beta(k,n-2k). The actual error satisfies E[(D0-D)^2/k]=O(k^2/n+k^5/n^2). Beta central limits and explicit moment controls then give (k-D)/sqrt(k)->g(Z), g(z)=phi(z)+z*Phi(z), with convergence of its first two moments. The variance constant is v=1/3+(sqrt(3)-2)/(2*pi), and the standardized degree limit is (1/sqrt(pi)-g(Z))/sqrt(v), which is non-Gaussian. Check: All 720 rank permutations on four vertices for k=1,2 satisfy D<=D0<=D+2J; degree means 3/5 and 8/5 agree with independent two-endpoint rank probabilities. The separate fixed-k EWT root mixture followed by a gamma limit yields the same g(Z). Exact conditioning, L2 comparison, uniform integrability and a polar calculation of v are detailed in the packet. Obstruction: Author-only partial candidate for the broader source question. No independent review, current-openness or novelty certificate, and no assertion for every k regime.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0458-the-standardized-degree-law-in-growing-bilateral-preference-graphs",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0458",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0458",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0459",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0459-simultaneous-concentration-of-bilateral-preference-degrees",
+   "kind": "concept",
+   "title": "Attempt on Simultaneous concentration of bilateral preference degrees",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics Result: Put delta=sqrt(6*k*log(n)) and assume k>2*delta. Threshold edge weights at t=(k-delta)/(n-1). Each threshold degree B_v is binomial with mean k-delta. Chernoff and a union bound give k-2*delta<=B_v<=k for all vertices with probability at least 1-2/n^2. On that event every threshold edge is preferred at both endpoints, so k-2*delta<=D_v<=k simultaneously. Thus k/log(n)->infinity suffices for relative concentration. The argument uses independence of the underlying edge weights, and never independence of vertex degrees. Check: Upper and lower Chernoff exponents are at least delta^2/(2*k)=3*log(n), followed by a union over n vertices. The deterministic threshold inclusion follows directly from having at most k incident edges below t at each endpoint. Obstruction: A sufficient-condition partial only. Sharp tails and the logarithmic boundary are not determined; below connectivity isolated vertices rule out concentration of every degree near k.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0459-simultaneous-concentration-of-bilateral-preference-degrees",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0459",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0459",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0461",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0461-entropy-concavity-for-determinantal-kernels",
+   "kind": "concept",
+   "title": "Attempt on Entropy concavity for determinantal kernels",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact special-case argument and failure analysis after checking the incoming source Result: The coordinate-diagonal case is a sum of binary entropies, whose second derivatives are -1/[q(1-q)]. There is also an explicit non-diagonal line: for Q(c)=[[1/2,c],[c,1/2]], |c|<1/2, the empty and doubleton probabilities are a=1/4-c^2 and the two singleton probabilities are b=1/4+c^2. Hence H(c)=-2*a*log(a)-2*b*log(b), and Hsecond(c)=4*log(a/b)-8*c^2*(1/a+1/b)<=0. Continuity includes c=+-1/2. This verifies concavity on this affine kernel line. In general the determinant probabilities depend nonlinearly on Q, so concavity of Shannon entropy in a probability vector cannot be applied directly to an arithmetic kernel midpoint. Check: Inclusion-exclusion gives p11=det(Q), p10=Q11-det(Q), p01=Q22-det(Q), p00=det(I-Q); these are a,b,b,a and sum to one. Differentiating H first gives 4*c*log(a/b), independently confirming the second derivative and its sign. Obstruction: No joint concavity proof, no extension to arbitrary off-diagonal or noncommuting kernels, and no numerical trials treated as certification.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0461-entropy-concavity-for-determinantal-kernels",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0461",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0461",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0462",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0462-disjoint-coupling-of-orthogonal-projection-processes",
+   "kind": "concept",
+   "title": "Attempt on Disjoint coupling of orthogonal projection processes",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact special-case argument and failure analysis after checking the incoming source Result: If H2 is spanned by a unit vector u and H1 has finite rank, monotone-couple A with law P_H1 inside C with law P_H. Their deterministic sizes differ by one, so C minus A is a singleton B. At any coordinate e, P(B={e})=P(e in C)-P(e in A)=(P_H)ee-(P_H1)ee=|u(e)|^2. Thus B has precisely P_H2 and (A,B) gives the required coupling in this special case. For higher rank, the same subtraction determines only one-point intensities of C minus A; its higher inclusion probabilities are not fixed. The finite problem can be written as nonnegative weights w(A,B) on disjoint pairs with the three required marginals, but setting up this transportation problem does not prove it feasible. Check: The rank-one masses sum to ||u||^2=1 and each difference indicator equals 1_(e in C)-1_(e in A). A random pair of same-size subsets can have matching one-point intensities yet different two-point probabilities, showing why the rank-one calculation does not generalize by intensity matching alone. Obstruction: No general coupling construction. Earlier floating-point LP claims are retained only in the frozen incoming record, not counted as exact certificates.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0462-disjoint-coupling-of-orthogonal-projection-processes",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0462",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0462",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0463",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0463-block-factors-for-finite-range-determinantal-symbols",
+   "kind": "concept",
+   "title": "Attempt on Block factors for finite-range determinantal symbols",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact special-case argument and failure analysis after checking the incoming source Result: Let f(theta)=g(k*theta). Its Fourier coefficients vanish at lags not divisible by k, so the determinantal kernel is block diagonal on the k residue classes. Determinant factorization proves that these restrictions are independent copies of P_g. If P_g can be represented as F(U_j,...,U_(j+r)) with iid U, define Y_i=F(U_i,U_(i+k),...,U_(i+r*k)). This is a shift-equivariant function of the window U_i,...,U_(i+r*k), so is an (r*k+1)-block factor. The residue-class families use disjoint iid coordinates and have the correct laws. In particular any single-harmonic symbol a+b*cos(k*theta)+c*sin(k*theta) with range in [0,1] inherits the known degree-one construction and is a (k+1)-block factor. Check: For cylinder events on distinct residue classes, all mixed kernel entries vanish and every required inclusion determinant factors. Inclusion-exclusion upgrades those identities to independence of the complete finite-dimensional distributions. The proposed coding depends only on positions at distances k, making its full window length exactly r*k+1. Obstruction: General mixed-harmonic symbols remain untreated. Finite dependence by itself does not imply a block-factor representation.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0463-block-factors-for-finite-range-determinantal-symbols",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0463",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0463",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0464",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0464-geometric-mean-product-bounds-for-equivariant-determinantal-laws",
+   "kind": "concept",
+   "title": "Attempt on Geometric-mean product bounds for equivariant determinantal laws",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact special-case argument and failure analysis after checking the incoming source Result: Put J=Q(I-Q)^(-1). Given the occupied set B outside e, the conditional odds of presence are s_B=J_ee-J_eB*(J_BB)^(-1)*J_Be. Schur-complement minimization makes s_B decrease as B increases. Its minimum is s_all=1/(J^(-1))ee=1/[(Q^(-1))ee-1]. The conditional probability, however, is s_all/(1+s_all)=1/(Q^(-1))ee. Equivariance makes (Q^(-1))ee=tr(Q^(-1)), with normalized trace, so this probability is the harmonic mean h of all eigenvalues counted with multiplicity. Sequential sampling with common independent uniforms couples the process above iid Bernoulli(h), since every conditional probability given a partial reveal is also at least h. Applying the same argument to the complement gives the upper density 1-HM(I-Q). AM-GM applied to the reciprocals gives HM(Q)<=FK(Q), exposing the exact remaining gap. Check: For a scalar Q=qI, s_all=q/(1-q) but the conditional probability is q; this catches the odds/probability confusion in the incoming record. In a finite group, equal inverse diagonal entries average to the full matrix trace divided by |Gamma|, irrespective of whether the group is abelian. No sum over one-dimensional characters is substituted for the nonabelian spectrum. Obstruction: No geometric-mean domination theorem or sharpness certificate. Numerical coupling feasibility is not exact proof, and the infinite-group extension of this particular calculation is not asserted.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0464-geometric-mean-product-bounds-for-equivariant-determinantal-laws",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0464",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0464",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0465",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0465-linear-coupling-distance-for-noncommuting-equivariant-kernels",
+   "kind": "concept",
+   "title": "Attempt on Linear coupling distance for noncommuting equivariant kernels",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact special-case argument and failure analysis after checking the incoming source Result: Write D=Q-Qprime. A tempting common upper kernel is R=Qprime+Dplus=(Q+Qprime+|D|)/2. It dominates both in operator order, but need not be a contraction. In dimension two take Q=diag(1,0) and Qprime=(1/2)*[[1,1],[1,1]]. Then D^2=I/2 and |D|=I/sqrt(2). The largest eigenvalue of Q+Qprime is 1+1/sqrt(2), giving lambda_max(R)=1/2+1/sqrt(2)>1. Thus R is not an admissible determinantal kernel and one cannot apply monotone-coupling bounds through it. This same obstruction can be placed in the two-dimensional irreducible block of the right group algebra of S3, with zeros on the other blocks; the resulting operators commute with left translations but not with one another. Check: Direct multiplication gives D=[[1/2,-1/2],[-1/2,-1/2]] and D^2=I/2. The right regular representation of S3 contains its two-dimensional irreducible representation, and equivariant operators can independently specify a matrix in that block. On abelian groups the equivariant convolution algebra is commutative, so that setting cannot test this obstruction. Obstruction: Failure of a common-upper-kernel construction does not refute the desired distance inequality. No claim of having executed a nonabelian coupling LP.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0465-linear-coupling-distance-for-noncommuting-equivariant-kernels",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0465",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0465",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0466",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0466-joint-intermediate-level-set-limits-from-one-continuum-field",
+   "kind": "concept",
+   "title": "Attempt on Joint intermediate level-set limits from one continuum field",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact restricted calculation or proof-obstruction analysis after primary-source comparison Result: For any countable sequence lambda_j, marginal tightness already gives tightness in the countable product: choose compact K_j carrying probability at least 1-epsilon*2^(-j) uniformly in N, and apply a union bound and compactness of the product. A diagonal subsequence therefore yields a joint law at those levels. This does not identify that law as the chaos family of a common CGFF. For uncountably many levels a topology and stochastic continuity or another separability argument are still needed. The known marginal laws allow many couplings, just as (X,X) and (X,Y) with independent equal-law coordinates have identical individual marginals. Check: Finite unions of failure events cost at most epsilon; monotone convergence extends the bound to all j. The product compact set proves tightness, without invoking unavailable high moments. Obstruction: No identification of cross-level dependencies or all-lambda convergence; no subcritical use of the critical Seneta-Heyde normalization.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0466-joint-intermediate-level-set-limits-from-one-continuum-field",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0466",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0466",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0467",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0467-fluctuations-and-deviation-scales-of-intermediate-dgff-counts",
+   "kind": "concept",
+   "title": "Attempt on Fluctuations and deviation scales of intermediate DGFF counts",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact restricted calculation or proof-obstruction analysis after primary-source comparison Result: For an interior bulk region A and a threshold 2*sqrt(g)*lambda*log(N), the diagonal variance expansion is g*log(N)+c0+g*log(r_D(x))+o(1). The Gaussian Mills ratio gives the exceedance probability asymptotic N^(-2*lambda^2)*exp(2*lambda^2*c0/g)*r_D(x)^(2*lambda^2)/(2*lambda*sqrt(2*pi*log(N))). Summing over a regular bulk region produces a mean proportional to N^(2-2*lambda^2)/sqrt(log(N)), with the displayed conformal-radius integral as its coefficient. This recovers the indispensable square-root logarithmic divisor. It only fixes the first-moment scale: correlated two-point events and the random limiting mass prevent an iid variance or deterministic-centered CLT inference. Check: Write z=threshold/sqrt(variance) in phi(z)/z. Expanding z^2/2 gives 2*lambda^2*log(N)-2*lambda^2*(c0/g+log(r_D(x)))+o(1), while 1/z contributes 1/(2*lambda*sqrt(log(N))). The same scale KN is explicitly recorded in the later near-maxima paper, equation1.6. Obstruction: No fluctuation law, convergence rate or sharp deviation theorem. The incoming claim omitting sqrt(log(N)) is discarded.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0467-fluctuations-and-deviation-scales-of-intermediate-dgff-counts",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0467",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0467",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0468",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0468-recovering-the-critical-chaos-tail-from-gibbs-markov-axioms",
+   "kind": "concept",
+   "title": "Attempt on Recovering the critical chaos tail from Gibbs-Markov axioms",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact restricted calculation or proof-obstruction analysis after primary-source comparison Result: Partitioning a domain gives independent fine measures multiplied by an independent, spatially varying Gaussian binding field. On each compact subdomain, the weighted mass lies between exp(alpha*inf(Phi)) times its fine total mass and exp(alpha*sup(Phi)) times that mass. These inequalities explain a possible smoothing-transform route, but the weights are functions of position rather than single scalar multipliers of identically distributed masses. Replacing each field by one value creates an oscillation error that must be controlled on the critical tail scale. Multiplying the entire family by a deterministic c>0 preserves the four premises, so the best possible conclusion must allow its tail constant to change by c. Check: Apply the elementary integral bound inf(w)*mu(A)<=integral_A w dmu<=sup(w)*mu(A). Under deterministic scaling, E[c*Z(A)*exp(-s*c*Z(D))]/log(1/s) has c times the old limit because log(1/(sc))/log(1/s)->1. Obstruction: No scalar smoothing-transform theorem has been applied without checking these errors. No finite-mean or moment-threshold consequence is asserted from the four axioms alone.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0468-recovering-the-critical-chaos-tail-from-gibbs-markov-axioms",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0468",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0468",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0469",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0469-explicit-law-of-the-position-and-height-of-the-dgff-maximum",
+   "kind": "concept",
+   "title": "Attempt on Explicit law of the position and height of the DGFF maximum",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact restricted calculation or proof-obstruction analysis after primary-source comparison Result: Conditional on Z, the extremal leaders form a Poisson process with intensity Z(dx)*exp(-alpha*h)dh. Thus the probability that all heights are at most t is exp(-Z(D)*exp(-alpha*t)/alpha), and the joint maximum density measure is exp(-alpha*t)*E[Z(dx)*exp(-Z(D)*exp(-alpha*t)/alpha)]dt, matching equation12.86. Integrating over t gives the position marginal E[Z(dx)/Z(D)]. This is well-defined although E[Z(D)] is infinite under the source critical-tail law. Consequently a ratio of expectations is unavailable. More generally, a random total mass alone does not forbid equality of such ratios: Z=W*nu for a fixed probability measure nu and integrable positive W is a counterexample to that proposed obstruction. Check: Substitute u=exp(-alpha*t)/alpha when integrating the conditional joint density: the height integral equals Z(dx)/Z(D). Taking A=D in the logarithmic Laplace-tail law and using monotone convergence proves E[Z(D)]=infinity. Obstruction: The exact Cox-process representation is credited to the source. It is not an explicit solution for rho_D or a closed PDE.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0469-explicit-law-of-the-position-and-height-of-the-dgff-maximum",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0469",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0469",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0470",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0470-the-size-of-deep-dgff-extremal-level-sets",
+   "kind": "concept",
+   "title": "Attempt on The size of deep DGFF extremal level sets",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact restricted calculation or proof-obstruction analysis after primary-source comparison Result: In the limiting decorated Poisson process, restrict leader heights to [-t,H] and let F_s be the number of sites in one cluster within depth s. Conditional on Z, Campbell's formula gives expected truncated count Z(A)*exp(alpha*t)*integral_0^(t+H) exp(-alpha*s)*E[F_s] ds. If E[F_s] is asymptotic to c*exp(alpha*s), this is asymptotic to c*Z(A)*t*exp(alpha*t) when H=o(t), explaining the conjectured t factor. The conditional variance, when finite, is Z(A)*exp(alpha*t)*integral_0^(t+H) exp(-alpha*s)*E[F_s^2] ds. Its negligibility after division by t^2*exp(2*alpha*t), and control of high leaders and finite-N approximation, are additional requirements, not consequences of the first-moment formula. Check: The change of variables s=t+h transforms the leader intensity exp(-alpha*h)dh to exp(alpha*t)*exp(-alpha*s)ds. For bounded cluster truncations, both Poisson moment formulas follow directly from independent increments; monotone convergence gives the expectation identity with possibly infinite values. Obstruction: No second-moment, Laplace remainder or uniform-integrability bound sufficient for the full target has been proved. The incoming claimed equivalence with Conjecture16.6 is discarded.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0470-the-size-of-deep-dgff-extremal-level-sets",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0470",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0470",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0471",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0471-the-mean-number-of-sites-deep-in-an-extremal-dgff-cluster",
+   "kind": "concept",
+   "title": "Attempt on The mean number of sites deep in an extremal DGFF cluster",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact restricted calculation or proof-obstruction analysis after primary-source comparison Result: Tonelli yields E[F_h]=sum_z P(phi_z<=h). For beta>alpha it also gives G(beta):=sum_z E[exp(-beta*phi_z)]=beta*integral_0^infinity exp(-beta*h)*E[F_h] dh, allowing infinite values. If the desired limit is c, the Abelian implication is (beta-alpha)*G(beta)->alpha*c as beta decreases to alpha. The converse needs more information: the increasing function f(h)=exp(alpha*h)*(1+epsilon*sin(h)), with 0<epsilon<alpha/sqrt(alpha^2+1), has the same leading Laplace pole but exp(-alpha*h)*f(h) has no limit. Thus proving a pole alone would not settle the pointwise cluster asymptotic. Check: Integrate exp(-beta*h)*1{phi_z<=h} from phi_z to infinity to obtain exp(-beta*phi_z)/beta. For the counterdiagnostic, fprime has bracket alpha+epsilon*(alpha*sin(h)+cos(h))>0, and the oscillatory Laplace term remains bounded at beta=alpha. Obstruction: No asymptotic for the actual cluster transform or a valid Tauberian remainder is established. The oscillatory function diagnoses an implication, not the DGFF conjecture.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0471-the-mean-number-of-sites-deep-in-an-extremal-dgff-cluster",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0471",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0471",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0473",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0473-universality-of-two-dimensional-log-correlated-level-set-processes",
+   "kind": "concept",
+   "title": "Attempt on Universality of two-dimensional log-correlated level-set processes",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact restricted calculation or proof-obstruction analysis after primary-source comparison Result: To test a naive bounded-perturbation argument, add one independent Gaussian W to every DGFF site. The covariance changes by the bounded constant Var(W), yet the centered maximum changes exactly by W. Intermediate threshold counts are also shifted in height, giving a random multiplicative change of their limiting spatial intensity rather than an identical limit. This does not refute the stated conjecture: the added constant changes the macroscopic covariance and so violates its prescribed continuum Green limit. It does show why comparison inequalities using only a uniform covariance error cannot identify the same extremal law. Microscopic perturbations can likewise change cluster decorations even when macroscopic behavior agrees. Check: For every sample, max_x(h_x+W)=max_x h_x+W. Conditional on W, an exceedance at threshold a is exactly an original exceedance at a-W. These exact identities require no asymptotic covariance comparison. Obstruction: No general comparison theorem proving the full source process convergence; the restricted rapidly decaying Gaussian perturbation case is already discussed in the source.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0473-universality-of-two-dimensional-log-correlated-level-set-processes",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0473",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0473",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0474",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0474-intermediate-level-set-limits-for-uniformly-convex-gradient-fields",
+   "kind": "concept",
+   "title": "Attempt on Intermediate level-set limits for uniformly convex gradient fields",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact restricted calculation or proof-obstruction analysis after primary-source comparison Result: For a quadratic potential equal to kappa times the DGFF quadratic potential, the full field is exactly kappa^(-1/2) times the reference DGFF. Thus its logarithmic variance constant is g/kappa and the intermediate level 2*sqrt(g/kappa)*lambda*log(N) reduces exactly to the known DGFF level after multiplication by sqrt(kappa). This checks the necessary stiffness normalization. For general uniformly convex potentials, Gaussian exponential-moment comparison can give upper tails on the logarithmic scale, but does not automatically recover the Mills prefactor or the mixed high-point moments that determine the chaos limit. A field-level central limit statement cannot be inserted into an N-dependent indicator of a rare logarithmic-height event. Check: Changing variables h=kappa^(-1/2)*h0 in the finite-volume Gibbs density converts its quadratic Hamiltonian exactly to the reference one; the Jacobian is absorbed by normalization. This checks both covariance and threshold scaling independently. Obstruction: No extension from quadratic to general uniformly convex potentials. No moment convergence at moving rare-event thresholds is assumed.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0474-intermediate-level-set-limits-for-uniformly-convex-gradient-fields",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0474",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0474",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0477",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0477-a-typical-displacement-upper-bound-in-a-dgff-landscape",
+   "kind": "concept",
+   "title": "Attempt on A typical-displacement upper bound in a DGFF landscape",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact restricted calculation or proof-obstruction analysis after primary-source comparison Result: A commute-time identity controls the sum of opposite hitting times, not a lower bound of comparable size for each direction. A unit-conductance star with n vertices gives a concrete check: from a leaf a to its center b the hitting time is1, while the reverse mean is2*n-3; their sum is2*n-2=2*|E|*R(a,b). Thus a large commute time cannot be assigned to the outward hitting time. Even a genuine large expectation need not give a lower-tail bound: a nonnegative variable equal to n^2 with probability1/n and zero otherwise has mean n but is zero with probability tending to one. A displacement upper bound therefore needs a genuine lower-tail control on exit times or a suitable heat-kernel estimate, beyond these expectation identities. Check: First-step conditioning at the star center gives m=(1/(n-1))*1+((n-2)/(n-1))*(2+m), hence m=2*n-3. The one-way/commute discrepancy is exact. Obstruction: No claim that exit-time concentration fails in the DGFF model. The examples invalidate proposed proof implications, not the requested estimate.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0477-a-typical-displacement-upper-bound-in-a-dgff-landscape",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0477",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0477",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0478",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0478-a-joint-continuum-limit-for-liouville-langevin-motion",
+   "kind": "concept",
+   "title": "Attempt on A joint continuum limit for Liouville Langevin motion",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact restricted calculation or proof-obstruction analysis after primary-source comparison Result: For smooth h, L=Delta+beta*grad(h) dot grad equals exp(-beta*h)*div(exp(beta*h)*grad). Integration by parts on compactly supported smooth functions gives E_h(f,g)=integral grad(f) dot grad(g)*exp(beta*h)dx on L2(exp(beta*h)dx). The random weight therefore enters both the speed measure and the energy. Weak convergence of the speed measures alone does not determine the limiting form. As a one-dimensional diagnostic, rapidly alternating conductivities1 and2 have arithmetic-mean speed density3/2 but harmonic-mean effective energy coefficient4/3; a constant conductivity3/2 has the same speed density and energy coefficient3/2. The two resulting effective generators differ. Thus a chaos-measure limit cannot by itself identify the Langevin path limit. Check: The integration-by-parts identity follows by expanding div(exp(beta*h)*grad(g)). For the one-dimensional comparison, the minimum energy between fixed endpoint values is their squared difference divided by integral(1/a); alternation makes that integral tend to3/4, giving coefficient4/3. Obstruction: No joint tightness, form convergence or renormalized drift construction is proved. The incoming field-independent energy and consequent Brownian-time-change identification are discarded.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0478-a-joint-continuum-limit-for-liouville-langevin-motion",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0478",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0478",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "at-p0479",
+   "namespace": "probability.core",
+   "logical_name": "attempt-p0479-scaling-law-of-effective-resistance-in-dgff-conductances",
+   "kind": "concept",
+   "title": "Attempt on Scaling law of effective resistance in DGFF conductances",
+   "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Integrator-authored exact restricted calculation or proof-obstruction analysis after primary-source comparison Result: For conductances c_xy=exp(beta*(h_x+h_y)), adding a constant a to the field multiplies every conductance by exp(2*beta*a) and every effective resistance by exp(-2*beta*a). This gives an exact normalization check. If m<=h_x<=M on the finite network, Rayleigh monotonicity gives exp(-2*beta*M)*R_unit<=R_h<=exp(-2*beta*m)*R_unit. Since the DGFF extrema are of logarithmic order, these elementary bounds leave a window of order log(N) in log resistance, far larger than the proposed sqrt(log(N)) scale. They cannot justify a Brownian maximum/minimum sandwich or a CGFF limit. The missing work is control of multiscale flows and cutsets that exploits cancellation and typical field structure. Check: Thomson's variational formula scales linearly with resistances, proving the constant-shift identity. Applying conductance monotonicity to the two constant networks gives the same bounds with the correct reversed signs. Obstruction: No tightness or limiting resistance field is identified; the incoming asserted Brownian-functional bounds are not retained.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-p0479-scaling-law-of-effective-resistance-in-dgff-conductances",
+    "No independent review"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0479",
+    "url": "urn:probability-research:20260906:codex-campaign:at-p0479",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+    "excerpt": null
+   }
+  }
+ ],
+ "relations": [
+  {
+   "from_key": "at-p0403",
+   "to_existing_logical": "math:probability.core:open-problem-p0403-optimal-scheduling-for-correlated-redundancy-systems",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0404",
+   "to_existing_logical": "math:probability.core:open-problem-p0404-tractable-concurrent-replica-policies-with-broad-stability-guarantees",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0405",
+   "to_existing_logical": "math:probability.core:open-problem-p0405-characterizing-optimality-of-max-h-in-multiclass-queues",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0406",
+   "to_existing_logical": "math:probability.core:open-problem-p0406-finite-system-performance-of-size-based-scheduling-with-impatience-and",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0408",
+   "to_existing_logical": "math:probability.core:open-problem-p0408-recovering-an-ideal-voronoi-tessellation-from-vertices-or-its-dual",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0409",
+   "to_existing_logical": "math:probability.core:open-problem-p0409-joint-law-of-neighboring-ideal-voronoi-vertices",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0410",
+   "to_existing_logical": "math:probability.core:open-problem-p0410-hole-probabilities-for-lower-dimensional-ideal-voronoi-faces",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0411",
+   "to_existing_logical": "math:probability.core:open-problem-p0411-boundary-hole-monotonicity-and-coefficient-positivity-for-ideal-cells",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0412",
+   "to_existing_logical": "math:probability.core:open-problem-p0412-a-general-transfer-theorem-between-horospherical-and-hyperbolic-typica",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0413",
+   "to_existing_logical": "math:probability.core:open-problem-p0413-low-intensity-variance-of-typical-hyperbolic-voronoi-cell-volume",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0414",
+   "to_existing_logical": "math:probability.core:open-problem-p0414-hausdorff-dimension-of-exceptional-rays-in-the-planar-ideal-voronoi-tr",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0415",
+   "to_existing_logical": "math:probability.core:open-problem-p0415-canonical-intensity-and-typical-cell-laws-for-unbounded-hyperbolic-cel",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0416",
+   "to_existing_logical": "math:probability.core:open-problem-p0416-amenability-of-ideal-bernoulli-voronoi-relations-on-nonexact-groups",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0417",
+   "to_existing_logical": "math:probability.core:open-problem-p0417-regular-exponential-volume-growth-without-full-graph-ipvt-convergence",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0418",
+   "to_existing_logical": "math:probability.core:open-problem-p0418-non-poisson-low-intensity-ideal-voronoi-diagrams",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0419",
+   "to_existing_logical": "math:probability.core:open-problem-p0419-equal-growth-l1-products-beyond-the-divergent-tilted-volume-condition",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0420",
+   "to_existing_logical": "math:probability.core:open-problem-p0420-low-intensity-voronoi-limits-for-products-with-the-l2-metric",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0421",
+   "to_existing_logical": "math:probability.core:open-problem-p0421-convergence-of-edge-measured-product-graph-voronoi-diagrams",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0422",
+   "to_existing_logical": "math:probability.core:open-problem-p0422-more-than-two-distinguishable-types-of-group-ipvt-cells",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0425",
+   "to_existing_logical": "math:probability.core:open-problem-p0425-optimal-parallel-allocation-with-unknown-nonexponential-job-sizes",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0426",
+   "to_existing_logical": "math:probability.core:open-problem-p0426-optimal-known-size-parallel-allocation-with-poisson-arrivals",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0427",
+   "to_existing_logical": "math:probability.core:open-problem-p0427-optimal-allocation-between-two-exponential-parallelism-classes",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0428",
+   "to_existing_logical": "math:probability.core:open-problem-p0428-mean-response-optimization-for-stochastically-arriving-dag-jobs",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0429",
+   "to_existing_logical": "math:probability.core:open-problem-p0429-largest-growing-fork-join-batch-compatible-with-asymptotic-independenc",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0430",
+   "to_existing_logical": "math:probability.core:open-problem-p0430-response-laws-for-limited-fork-join-shortest-queue-dispatching",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0431",
+   "to_existing_logical": "math:probability.core:open-problem-p0431-straggler-replication-in-queued-limited-fork-join-systems",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0432",
+   "to_existing_logical": "math:probability.core:open-problem-p0432-optimal-known-size-multiserver-scheduling-beyond-srpt",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0433",
+   "to_existing_logical": "math:probability.core:open-problem-p0433-optimal-dispatching-to-srpt-queues-outside-heavy-traffic",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0434",
+   "to_existing_logical": "math:probability.core:open-problem-p0434-sharp-approximation-ratio-for-simple-alternatives-to-gittins",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0435",
+   "to_existing_logical": "math:probability.core:open-problem-p0435-optimal-nonasymptotic-scheduling-with-unknown-sizes-in-m-g-k",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0436",
+   "to_existing_logical": "math:probability.core:open-problem-p0436-optimal-finite-deadline-success-scheduling",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0437",
+   "to_existing_logical": "math:probability.core:open-problem-p0437-dropping-probability-and-optimality-gap-of-dtlh",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0438",
+   "to_existing_logical": "math:probability.core:open-problem-p0438-feasibility-of-class-specific-response-quantiles",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0439",
+   "to_existing_logical": "math:probability.core:open-problem-p0439-server-provisioning-for-a-finite-response-time-slo",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0440",
+   "to_existing_logical": "math:probability.core:open-problem-p0440-waiting-time-tails-with-deterministic-multiserver-setup",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0441",
+   "to_existing_logical": "math:probability.core:open-problem-p0441-deterministic-delayedoff-waiting-power-tradeoff",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0442",
+   "to_existing_logical": "math:probability.core:open-problem-p0442-optimal-waiting-power-pareto-frontier-with-deterministic-setup",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0443",
+   "to_existing_logical": "math:probability.core:open-problem-p0443-closed-form-performance-bounds-for-general-setup-distributions",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0444",
+   "to_existing_logical": "math:probability.core:open-problem-p0444-computational-complexity-of-the-multiserver-job-stability-threshold",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0445",
+   "to_existing_logical": "math:probability.core:open-problem-p0445-monotone-workload-recurrences-beyond-fcfs-multiserver-jobs",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0446",
+   "to_existing_logical": "math:probability.core:open-problem-p0446-perfect-multiserver-job-samples-with-a-stability-matching-upper-bound",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0447",
+   "to_existing_logical": "math:probability.core:open-problem-p0447-finite-size-response-characterization-for-classical-fork-join-queues",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0450",
+   "to_existing_logical": "math:probability.core:open-problem-p0450-conditional-generation-limits-for-the-erlang-weighted-tree",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0451",
+   "to_existing_logical": "math:probability.core:open-problem-p0451-unimodularity-and-reversibility-of-the-erlang-branching-spine",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0452",
+   "to_existing_logical": "math:probability.core:open-problem-p0452-giant-component-density-from-erlang-weighted-tree-survival",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0453",
+   "to_existing_logical": "math:probability.core:open-problem-p0453-weaker-degree-tail-hypotheses-for-erlang-weighted-tree-growth",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0456",
+   "to_existing_logical": "math:probability.core:open-problem-p0456-the-fine-connectivity-window-for-bilateral-preference-graphs",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0457",
+   "to_existing_logical": "math:probability.core:open-problem-p0457-diameter-near-the-newly-established-bilateral-connectivity-threshold",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0458",
+   "to_existing_logical": "math:probability.core:open-problem-p0458-the-standardized-degree-law-in-growing-bilateral-preference-graphs",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0459",
+   "to_existing_logical": "math:probability.core:open-problem-p0459-simultaneous-concentration-of-bilateral-preference-degrees",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0461",
+   "to_existing_logical": "math:probability.core:open-problem-p0461-entropy-concavity-for-determinantal-kernels",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0462",
+   "to_existing_logical": "math:probability.core:open-problem-p0462-disjoint-coupling-of-orthogonal-projection-processes",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0463",
+   "to_existing_logical": "math:probability.core:open-problem-p0463-block-factors-for-finite-range-determinantal-symbols",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0464",
+   "to_existing_logical": "math:probability.core:open-problem-p0464-geometric-mean-product-bounds-for-equivariant-determinantal-laws",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0465",
+   "to_existing_logical": "math:probability.core:open-problem-p0465-linear-coupling-distance-for-noncommuting-equivariant-kernels",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0466",
+   "to_existing_logical": "math:probability.core:open-problem-p0466-joint-intermediate-level-set-limits-from-one-continuum-field",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0467",
+   "to_existing_logical": "math:probability.core:open-problem-p0467-fluctuations-and-deviation-scales-of-intermediate-dgff-counts",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0468",
+   "to_existing_logical": "math:probability.core:open-problem-p0468-recovering-the-critical-chaos-tail-from-gibbs-markov-axioms",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0469",
+   "to_existing_logical": "math:probability.core:open-problem-p0469-explicit-law-of-the-position-and-height-of-the-dgff-maximum",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0470",
+   "to_existing_logical": "math:probability.core:open-problem-p0470-the-size-of-deep-dgff-extremal-level-sets",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0471",
+   "to_existing_logical": "math:probability.core:open-problem-p0471-the-mean-number-of-sites-deep-in-an-extremal-dgff-cluster",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0473",
+   "to_existing_logical": "math:probability.core:open-problem-p0473-universality-of-two-dimensional-log-correlated-level-set-processes",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0474",
+   "to_existing_logical": "math:probability.core:open-problem-p0474-intermediate-level-set-limits-for-uniformly-convex-gradient-fields",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0477",
+   "to_existing_logical": "math:probability.core:open-problem-p0477-a-typical-displacement-upper-bound-in-a-dgff-landscape",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0478",
+   "to_existing_logical": "math:probability.core:open-problem-p0478-a-joint-continuum-limit-for-liouville-langevin-motion",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  },
+  {
+   "from_key": "at-p0479",
+   "to_existing_logical": "math:probability.core:open-problem-p0479-scaling-law-of-effective-resistance-in-dgff-conductances",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem and inherits its hypotheses"
+  }
+ ]
+}

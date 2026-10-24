@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "campaign": "FOREST",
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260922T011837Z-account01-B02-forest-r11",
+  "utc_start": "2026-09-22T01:18:37Z",
+  "utc_end": "2026-09-22T01:37:00Z",
+  "control_commit_start": "2e771f25de4513448af43b479fa36b4f2a83e934",
+  "control_commit_recheck": "16fa3092c71592026a055a16c083a50c9f95ce3b",
+  "control_revision": "2026-09-22.2",
+  "candidate": "FOREST-DEG3-STAR-ID-v1",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "parent_target_status": "OPEN",
+  "result": "Exact positive signed/counting identity proves nonpositive forest-edge covariance for any adjacent marked pair whose common endpoint has degree at most three. Combined with account04/B02, any adjacent violation in a lexicographically minimal counterexample must be an induced open wedge centered at degree at least four. A source-realizable degree-four base-pair term refutes the naive coefficientwise-positive extension.",
+  "named_other_account_result": "account04/B02/20260922T000916Z-account04-B02-r46 report blob 47f7f2ae8703696df361ce78033b50c51212fa23",
+  "additional_other_account_constraint": "account03/B03/20260922T005605Z-b03-forest-r11b report blob 0246ec8c670c47ed632dfc2de0b7a6fdb3f8443f",
+  "assigned_partner_status": "account02/B03 had no completed collective FOREST directory at bounded final check",
+  "report_path": "report.md",
+  "checker_path": "deg3_star_checker.py",
+  "checker_sha256": "d504b254a9530664e0f30a2064a9f9aeb71fb7c8637dbe293229b568c507230d",
+  "checker_output_path": "deg3_star_checker.out",
+  "checker_output_sha256": "f10e8bfc0d2bad8d5e628c710d194215cb03f99f6259670906a9a781cfe156e8",
+  "regression": {
+    "outside_graphs_exhausted_n4_to_n6": 1096,
+    "identity_failures": 0,
+    "degree4_sep_join_cross_coefficient": -4
+  },
+  "first_remaining_implication": "For an induced violating open wedge b-a-c with deg(a)>=4 in a minimal 3-connected counterexample, construct a cross-base-forest switch that compensates the genuinely negative star-conditioned pair terms, preferably using the lead's simultaneous negative covariance constraints with every other star edge.",
+  "brain_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_proof_candidate": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  },
+  "elapsed_execution_seconds_observed": 1103.645,
+  "status": "FINISHED"
+}

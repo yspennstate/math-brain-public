@@ -1,0 +1,160 @@
+{
+  "to": "A074",
+  "status": "SAVED_LOCAL_NOT_SENT",
+  "task": "Independently reproduce finite maximum and target signs; source-bound full rerun optional",
+  "full_case_count": 1052928,
+  "symmetry": "Global output negation only; first output +1",
+  "witness": {
+    "residual_bits": 2,
+    "truth_mask": 37683,
+    "truth_table": [
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "truth_index": "z1+2*z2+4*residual_index",
+    "biases": [
+      "1/8",
+      "1/2"
+    ],
+    "integer_child_Walsh": [
+      [
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        2,
+        -2
+      ],
+      [
+        -4,
+        0,
+        0,
+        0
+      ],
+      [
+        -2,
+        -2,
+        -2,
+        2
+      ]
+    ],
+    "squared_parent_spectrum": [
+      "0",
+      "0",
+      "225/256",
+      "7/256",
+      "0",
+      "0",
+      "1/256",
+      "7/256",
+      "0",
+      "0",
+      "1/256",
+      "7/256",
+      "0",
+      "0",
+      "1/256",
+      "7/256"
+    ],
+    "parent_order": "residual frequency major, block frequency minor (0,1,2,3)",
+    "residual_marginal": [
+      "29/32",
+      "1/32",
+      "1/32",
+      "1/32"
+    ],
+    "physical_child_weights": [
+      "7/16",
+      "1/16",
+      "7/16",
+      "1/16"
+    ],
+    "child_spectra": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    ],
+    "debt_prime_log_vector": {
+      "2": "7/4",
+      "3": "225/128",
+      "5": "225/128",
+      "7": "7/64",
+      "29": "-29/16"
+    },
+    "debt_bounds_lattice": [
+      131441135161,
+      131441135162
+    ],
+    "both_revealed_coordinates_essential": true,
+    "exact_circuit": "(-1)^X2 * (1-2*X1*U*V)",
+    "global_ratio_prime_log_formula": "[224+225 log2(3)+225 log2(5)+14 log2(7)-232 log2(29)]/[8 log2(7)]",
+    "global_ratio_rational_bounds": [
+      "6813247/10000000",
+      "68132471/100000000"
+    ],
+    "positive_debt_integer_comparison": "2^224*3^225*5^225*7^14 > 29^232",
+    "minimality_in_frozen_domain": "m<=1 has exact maximum 0 for every specified bias pair; therefore 4 total bits are necessary for positive block debt in this searched domain",
+    "target_violation": false
+  },
+  "bias_pairs_attaining_global_ratio": [
+    [
+      "1/8",
+      "1/2"
+    ],
+    [
+      "1/2",
+      "1/8"
+    ]
+  ],
+  "required_checks": [
+    "Direct actual Boolean spectra and physical child marginals",
+    "Rational log sign bounds; zero debt via prime-log cancellation",
+    "Output-negation coverage; exact tied candidate vectors and exclusion margins",
+    "All m<=1 maxima zero; four-bit minimum only in searched domain",
+    "Do not interpret a finite pass as all-dimensional additivity or FEI"
+  ],
+  "commands": [
+    "python -X utf8 code/census.py --max-m 1",
+    "python -X utf8 code/census.py --max-m 2",
+    "python -X utf8 code/verify.py"
+  ]
+}

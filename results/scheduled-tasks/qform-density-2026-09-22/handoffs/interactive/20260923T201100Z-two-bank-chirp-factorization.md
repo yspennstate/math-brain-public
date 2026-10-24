@@ -1,0 +1,15 @@
+# Two-bank chirp factorization and a structural split obstruction
+
+23 September 2026, interactive handoff. Full unrestricted cap-one quadratic-density conjecture remains open.
+
+Proved report: https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T200935Z-two-bank-chirp-factorization/REPORT.md . Commit 918f93be39c81beec25b45241af301d92ceecada.
+
+Key theorem: for independent scalar hub H with density cap K_H and independent light banks X±, if each bank's (L±,V±) joint density is capped by M±, then Q=F(H)+G+(X+)+G−(X−)+2κH(L++L−)+λ(V++V−)^2 has density cap 3(K_H² M+ M−/(κ²|λ|))^(1/3). F and G± may be arbitrary measurable self functions. Proof: Fresnel for the square, change hub variable into Fourier frequency for L, and use Plancherel+Cauchy on the product of bank Fourier transforms. Uniform arbitrary affine terms and arbitrary hub self square are included.
+
+Explicit family with hub h and m=4k leaves: w_j=1/√m, v_j=√[12/(m(m²−1))](j−(m+1)/2), p_j=s_j/√m, s=(+,-,-,+) repeated; ε=m^-3. The quadratic A=e_h wᵀ+w e_hᵀ+vvᵀ+ε(wpᵀ+pwᵀ) has exactly three nonzero eigenvalues ±√(1+ε²),1. Every fixed-size principal 3-core has s3→0, every physical cross block has s3≤ε and Z3≤(1+ε²)²ε², and every light principal pair minor is nonzero. Thus no exact separated rank-one square bank has coefficient bounded below: singleton coefficients tend to zero. This defeats the proposed matrix-only trichotomy (core/cross3/separated square), but not the density conjecture.
+
+The family is uniformly SOLVED because grouping leaves by sign s gives P=L+−L−, hence LP=L+²−L−². The chirp is bank-separable. Two-dimensional bank Gram matrices are diag(1/2,(1±d)/2), d=12/(m²−1)≤4/5. LPP gives M+M−≤80/3; the density cap is 3(80/3)^(1/3)<9 for all m, all ε, arbitrary cap-one product laws and arbitrary affine/hub self terms.
+
+For a two-valued ratio p_j/w_j=α,β on two banks, LP=αL+²+βL−²+(α+β)L+L−. The bank-separable mechanism requires α+β=0. In an orthonormal two-bank L,P frame with bank L energies a,b, α=√(b/a), β=−√(a/b), so α+β=(b−a)/√(ab). Unequal bank energies leave a cross chirp. Small ε alone does not bound the phase uniformly over unbounded coordinate supports. A useful next lemma would bound the unconditioned twisted (L,V) Fourier L1 norm for a genuine product frame with a cross-bank L+L− chirp. Do not replace this with a conditional-P absolute slice norm or projection-cap-only abstract law; prior counterexamples invalidate those replacements.
+
+The archived arbitrary-rank s2 half-power potential theorem was independently rechecked: s2(M)≥σ implies sup_s E|Q_M−s|^-1/2 ≤(1+44·10^7.5)/√σ for all signs, dimensions and affine terms. It yields a separated rank-one-square receiver only when the square variable is independent of the Schur residual. An existing stronger finite-dimensional theorem in the assembled manuscript (structure.tex Thm projected-gradient-slicing) gives 2√(6πn)/σ for s3(A)≥σ and arbitrary rank/affine, so no O(n) pivot corollary needs publishing.

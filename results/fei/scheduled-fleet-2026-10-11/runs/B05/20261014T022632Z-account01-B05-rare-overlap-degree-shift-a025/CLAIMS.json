@@ -1,0 +1,28 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B05",
+  "primary_packet_id": "A025",
+  "claims": [
+    {
+      "claim_id": "B05-OVERLAP-SINGLETON-PAYMENT-v1",
+      "status": "AUTHOR_PROVED_COUNTERFAMILY_PENDING_INDEPENDENT_REVIEW",
+      "statement": "No finite absolute C gives Phi(fg)<=Phi(f)+Phi(g)+C(Inf_x(f)+Inf_x(g)) for all Boolean factors sharing only x.",
+      "quantifiers": "For every finite C and every r>=1, all sufficiently large odd n in the explicit majority/one-point-gate family violate the inequality.",
+      "evidence": ["RARE_COUNTERFAMILY.tex", "REFUTED_STATEMENT.json", "CHECK.py", "CHECK.out"],
+      "guard_ids": ["OVERLAP_PRODUCT", "B05_RARE_REFUNDS"]
+    },
+    {
+      "claim_id": "B05-ONE-SHARED-INFLUENCE-v1",
+      "status": "PROVED",
+      "statement": "For Boolean factors sharing only x with independent private variables, Inf_x(FG)=p+q-2pq.",
+      "evidence": ["RARE_COUNTERFAMILY.tex"]
+    },
+    {
+      "claim_id": "B05-REVEAL-ORDER-REFUND-v1",
+      "status": "PROVED_FOR_EXPLICIT_FAMILY",
+      "statement": "Controls-first and x-first expose different intermediate singleton balances, while the final signed potential telescope is identical and ends at Phi(K_n).",
+      "evidence": ["RARE_COUNTERFAMILY.tex", "CHECK.py", "CHECK.out"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

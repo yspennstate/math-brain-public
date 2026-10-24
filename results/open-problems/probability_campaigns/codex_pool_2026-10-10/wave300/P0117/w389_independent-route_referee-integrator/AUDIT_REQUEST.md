@@ -1,0 +1,1 @@
+Completed designated audit: w392 kept C02/C03 and kept all five relations subject to one wording fix. Receipt IDs and exact statements are in AUDIT_RECEIPTS.jsonl. The requested fix is applied in drafts/bundle_002.json and the separately queued bundle_002.json. No parent proof, independent-login quorum, ingestion or retrievability is claimed.

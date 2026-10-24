@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "20260925T104358Z-account02-B09-r11",
+  "pass": "02",
+  "source": {
+    "commit": "4e530247ec0ef4101a6e5ecf621bd35a969c42aa",
+    "blob": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+    "sha256": "90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb",
+    "bytes": 61567,
+    "lines": 683,
+    "proof_environments": 26
+  },
+  "correction_of_prior_own_finding": {
+    "prior_run": "20260925T094431Z-account02-B09-repaired-r01",
+    "line": 511,
+    "prior_status": "GAP",
+    "current_status": "PASS",
+    "reason": "The identity is a Lebesgue/layer-cake integral whose integrand need only be specified almost everywhere. For every s>0, |Z-a|^{-1/2}>s iff |Z-a|<s^{-2}; the single endpoint s=0 is null and its value is immaterial. This is the same standard convention under which an integrable function may be undefined at an endpoint. No source repair is required.",
+    "downstream": "No change to Lemma 5.6, constants, or theorem."
+  },
+  "independence_note": "Derived in this pass before treating prior B09 label as authoritative."
+}

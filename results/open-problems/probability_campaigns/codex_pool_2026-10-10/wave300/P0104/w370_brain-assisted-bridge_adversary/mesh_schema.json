@@ -1,0 +1,14 @@
+[
+  [
+    "agents",
+    "CREATE TABLE agents (\n                agent_id TEXT PRIMARY KEY,\n                runtime TEXT NOT NULL,\n                session_key TEXT,\n                parent_agent TEXT,\n                campaign_id TEXT REFERENCES campaigns(campaign_id),\n                cwd TEXT,\n                task TEXT,\n                status TEXT NOT NULL,\n                started_at TEXT NOT NULL,\n                last_seen TEXT NOT NULL,\n                lease_until TEXT NOT NULL,\n                ttl_seconds INTEGER NOT NULL,\n                metadata_json TEXT NOT NULL DEFAULT '{}'\n            )"
+  ],
+  [
+    "messages",
+    "CREATE TABLE messages (\n                message_id TEXT PRIMARY KEY,\n                sender_agent TEXT NOT NULL,\n                recipient TEXT NOT NULL,\n                topic TEXT NOT NULL,\n                kind TEXT NOT NULL,\n                body TEXT NOT NULL,\n                created_at TEXT NOT NULL,\n                delivered_at TEXT,\n                acked_at TEXT\n            , requires_ack INTEGER NOT NULL DEFAULT 0 CHECK(requires_ack IN (0,1)), idempotency_key TEXT)"
+  ],
+  [
+    "claims",
+    "CREATE TABLE claims (\n                        claim_id TEXT PRIMARY KEY,\n                        agent_id TEXT NOT NULL REFERENCES agents(agent_id) ON DELETE CASCADE,\n                        resource TEXT NOT NULL,\n                        canonical_resource TEXT NOT NULL,\n                        resource_kind TEXT NOT NULL,\n                        mode TEXT NOT NULL,\n                        purpose TEXT,\n                        acquired_at TEXT NOT NULL,\n                        renewed_at TEXT NOT NULL,\n                        expires_at TEXT NOT NULL,\n                        ttl_seconds INTEGER NOT NULL,\n                        released_at TEXT\n                    )"
+  ]
+]

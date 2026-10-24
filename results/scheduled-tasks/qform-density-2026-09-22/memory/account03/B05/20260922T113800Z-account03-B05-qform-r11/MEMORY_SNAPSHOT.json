@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_at_state_read": "89884ca4fbf7c407c5683f31e56be24f34166e36",
+  "account": "account03",
+  "slot": "B05",
+  "run_id": "20260922T113800Z-account03-B05-qform-r11",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": ["QFORM-POINTWISE-DECAY-FALSE","QFORM-FIBER-SUP-DIMENSION-LOSS","QFORM-NO-INDEPENDENCE-AFTER-ROTATION"],
+  "partner": "account04/B05",
+  "partner_result_applied": null,
+  "partner_note": "No completed current-qform artifact from account04/B05 was visible on fresh read; stale BT4 artifacts were not substituted.",
+  "peer_results_applied": [
+    {"source":"account02/B05","commit":"e88f1fe38a73b03361ebd00825ab2d4367b73b6f","use":"fiber-supremum dimension-loss counterexample and product-averaging requirement"},
+    {"source":"account02/B07","use":"rank-three Walsh delocalized stress family"},
+    {"source":"account03/B17","commit":"5a060b9340b64e27474a5d95d7b4782cfb894382","use":"pointwise Fresnel correction and diagonal control context"}
+  ],
+  "external_source": {"authors":"Mark Rudelson and Roman Vershynin","title":"Small Ball Probabilities for Linear Images of High-Dimensional Distributions","scope_used":"Proposition 5.1 proof, equations (5.1)-(5.4): small-leverage product projection has characteristic-function L1 norm bounded by B^r"},
+  "new_result": {
+    "id": "QFORM-DELOCALIZED-FRESNEL-BL-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "statement": "For A=R^T Lambda R of rank r>=3 with RR^T=I, max_j ||R^TR e_j||_2<=1/2 and D=(prod |lambda_k|)^(1/r)>0, independent input densities <=1 give a continuous Q-density with ||p_Q||_inf <= B^2 r/(4 pi^2 D (r-2)); if D>=1 this is <=3B^2/(4pi^2).",
+    "stress_test": "For the rank-three Walsh projection, ||P e_j||=sqrt(3/n), so every Walsh size n>=16 is covered uniformly."
+  },
+  "canonical_output": {"repository":"yspennstate/math-open-problems","commit":"c828d2ee2f8acef5eb96892bc8a9a25594db0f51","path":"proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260922T113800Z-account03-B05-qform-r11/REPORT.md"},
+  "handoff_commit": "d29fc71d32cb4551c8e3339174a487e2ad67c26d",
+  "unresolved_implication": "QFORM-SPECTRAL-TRUNCATION-WIENER-v1: retain the three-large-mode Wiener/Fresnel gain in the presence of arbitrarily many small complementary eigenvalues, without replacing the dependent complementary phase by an arbitrary bounded multiplier.",
+  "full_target_status": "OPEN"
+}

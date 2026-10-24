@@ -1,0 +1,33 @@
+account01/B15 20260924T000413Z algebra/constant checks
+
+1. Lp square compiler constants:
+   p'=p/(p-1), alpha=1/2-1/p.
+   int_0^L s^(-p'/2) ds = L^(1-p'/2)/(1-p'/2).
+   A_p=[2(p-1)/(p-2)]^((p-1)/p).
+   Choosing L=(A_p M)^(-p/(p-1)) makes near=far=(A_p M)^(p/(2(p-1))).
+   Hence C_p=2*sqrt(2(p-1)/(p-2)); at p=3, C_3=4.
+
+2. Pair logarithmic Lp integral:
+   int_R log_+(C/|u|)^p du = 2 C Gamma(p+1).
+   With C=2 rho^2/kappa this is 4 rho^2 Gamma(p+1)/kappa.
+   For p=3, optimized pair norm = 4*3^(1/6) D^(-1/4) kappa^(-1/6).
+
+3. Coupled-pivot p=3 constant:
+   4*[4*3^(1/6)]^(3/4) = 8*sqrt(2)*3^(1/8).
+
+4. Exact target matrix B_*:
+   diagonal d=5/4, common off-diagonal c=-9/8.
+   eigenvalues: d-c=19/8 (multiplicity 2), d+2c=-1.
+   every 2x2 physical principal pair has eigenvalues d-c=19/8 and d+c=1/8, hence is positive definite.
+   pivot b=5/4, a=(-9/8,-9/8).
+   Schur complement S=C-aa^T/b has diagonal 19/80 and off-diagonal -171/80.
+   eigenvalues(S)=19/8,-19/10.
+   |det S|=361/80; sigma_min(S)=19/10.
+   new bound = 8*sqrt(2)*3^(1/8)*(5/4)^(-1/2)*(361/80)^(-3/16)*(19/10)^(-1/8)
+             = 8.076862829218934 < 8.077.
+
+5. Scaling sanity:
+   Under B -> s B, b->s b, det(S)->s^2 det(S), kappa(S)->s kappa(S).
+   The coupled-pivot bound scales as s^(-1/2-3/8-1/8)=s^(-1), as required for a density-height bound.
+
+STATUS: symbolic identities and numerical constant consistent.

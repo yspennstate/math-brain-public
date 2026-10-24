@@ -1,0 +1,186 @@
+\section*{Aggregate selector-channel influence and the exact collision credit}
+
+Let $B$ be a finite block of physical coordinates and let $Y$ denote the
+remaining coordinates.  Write the partial Fourier expansions
+\[
+ h(x,y)=\sum_{\alpha\subseteq B}\chi_\alpha(x)h_\alpha(y),
+ \qquad
+ b(x,y)=\sum_{\beta\subseteq B}\chi_\beta(x)b_\beta(y).
+\tag{1}
+\]
+As in the preceding block-channel identity, for every nonzero selector
+frequency $\alpha$ define
+\[
+ C^\alpha_\gamma(y)=h_\alpha(y)b_{\gamma\triangle\alpha}(y).
+\tag{2}
+\]
+Equivalently, in physical coordinates,
+\[
+ C^\alpha(x,y)=\chi_\alpha(x)h_\alpha(y)b(x,y).
+\tag{3}
+\]
+
+For a real function $u=\sum_{\gamma\subseteq B}\chi_\gamma u_\gamma$
+put
+\[
+ \mathbf I_B(u)=\sum_{\gamma\subseteq B}|\gamma|
+                         \lVert u_\gamma\rVert_2^2.
+\tag{4}
+\]
+For each fixed $y$ introduce
+\[
+\begin{aligned}
+ V_h(y)&=\sum_{\alpha\ne\varnothing}h_\alpha(y)^2,\\
+ J_h(y)&=\sum_{\alpha\ne\varnothing}|\alpha|h_\alpha(y)^2,\\
+ p_b(y)&=\sum_\beta b_\beta(y)^2,\\
+ J_b(y)&=\sum_\beta|\beta|b_\beta(y)^2,\\
+ \mathsf O_B(y)&=\sum_{\alpha\ne\varnothing,\beta}
+       |\alpha\cap\beta|h_\alpha(y)^2b_\beta(y)^2.
+\end{aligned}
+\tag{5}
+\]
+
+\subsection*{Theorem 1 (exact aggregate collision credit; proved)}
+
+For every Boolean selector $h$, every Boolean source pair $g_+,g_-$, and
+$b=(g_+-g_-)/2$, the entire family of nonzero selector-frequency channels
+satisfies
+\[
+ \sum_{\alpha\ne\varnothing}\lVert C^\alpha\rVert_2^2
+   =\mathbb E_y[V_h(y)p_b(y)]\le \lVert b\rVert_2^2,
+\tag{6}
+\]
+and
+\[
+ \boxed{
+ \sum_{\alpha\ne\varnothing}\mathbf I_B(C^\alpha)
+ =\mathbb E_y\!left[
+      V_hJ_b+p_bJ_h-2\mathsf O_B\right].}
+\tag{7}
+\]
+Consequently,
+\[
+ \sum_{\alpha\ne\varnothing}\mathbf I_B(C^\alpha)
+ \le \mathbf I_B(b)+\mathbf I_B(h).
+\tag{8}
+\]
+The last term of (7) is an exact nonnegative overlap refund; discarding it
+can lose the entire gross budget.
+
+\paragraph{Proof.}
+Equation (3) and Parseval in the $B$ variables give
+\[
+ \lVert C^\alpha\rVert_2^2
+ =\mathbb E_y\left[h_\alpha(y)^2p_b(y)\right],
+\]
+and summing proves the equality in (6).  Since $h$ is Boolean,
+$V_h=1-h_\varnothing^2\le1$; since $b\in\{0,\pm1\}$, $p_b\le1$.  This proves
+the inequality in (6).
+
+From (2),
+\[
+ \mathbf I_B(C^\alpha)
+ =\mathbb E_y h_\alpha(y)^2
+       \sum_\beta|\beta\triangle\alpha|b_\beta(y)^2.
+\]
+Use
+$|\beta\triangle\alpha|=|\beta|+|\alpha|-2|\alpha\cap\beta|$
+and sum over $\alpha\ne\varnothing$ to obtain (7).  Finally
+$V_h\le1$, $p_b\le1$, and $\mathsf O_B\ge0$, while
+$\mathbb E_yJ_b=\mathbf I_B(b)$ and
+$\mathbb E_yJ_h=\mathbf I_B(h)$.  This proves (8). \(\square\)
+
+\subsection*{Theorem 2 (adaptive nonreusing hierarchy budget; proved)}
+
+Let an adaptive physical restriction hierarchy query a block $B_v$ at node
+$v$, with reach probability $w_v$, and assume no physical coordinate is
+queried twice on a root-to-leaf path.  Let $b_v,h_v$ be the actual
+restrictions at $v$ and let $C_v^\alpha$ be their selector-frequency
+channels.  Then
+\[
+ \boxed{
+ \sum_vw_v\sum_{\alpha\ne\varnothing}
+        \mathbf I_{B_v}(C_v^\alpha)
+ \le \mathbf I(b)+\mathbf I(h).}
+\tag{9}
+\]
+More precisely, the left side is the weighted sum of the exact activated
+gross terms and overlap refunds in (7).
+
+\paragraph{Proof.}
+Apply (8) at each node.  For any real function $f$, the physical derivative
+form of influence gives
+\[
+ \sum_vw_v\mathbf I_{B_v}(f_v)\le\mathbf I(f).
+\tag{10}
+\]
+Indeed, for a fixed coordinate $i$, the events that the hierarchy reaches a
+node which queries $i$ are disjoint along a full input path, depend only on
+previously revealed coordinates, and therefore select disjoint portions of
+the squared physical derivative in direction $i$.  Their integral is at
+most $\operatorname{Inf}_i(f)$.  Sum over $i$, first for $b$ and then for
+$h$, to prove (9). \(\square\)
+
+Thus the $2^{|B|}-1$ channel count from the block expansion causes no loss at
+the influence level and no depth loss in an actual adaptive hierarchy.
+
+\subsection*{Parity-zero erasure is the overlap refund}
+
+Take on two bits
+\[
+ g_+=(-1,-1,1,1),\quad g_-=(1,1,-1,-1),\quad
+ h=(-1,-1,1,1).
+\tag{11}
+\]
+Then $a=0$, $b=h$ is one character, and the composed output is constant.
+For the full block,
+\[
+ V_h=J_h=p_b=J_b=\mathsf O_B=1.
+\]
+The gross influence in (7) is $2$, the collision refund is $2$, and the
+unique selector channel is constant, hence has block influence zero.  This
+is exactly the mandatory parity-zero-erasure control, not an exceptional
+convention.
+
+\subsection*{The channel-entropy payment is already full FEI}
+
+The influence aggregation (9) does not by itself pay the channel entropy
+decrements $X_{B,\alpha}=D_B(C^\alpha)$.  In fact the tempting standalone
+estimate
+\[
+ \sum_{\alpha\ne\varnothing}D_B(C^\alpha)
+ \le C\sum_{\alpha\ne\varnothing}\mathbf I_B(C^\alpha)
+\tag{12}
+\]
+for one universal $C$ is not a smaller auxiliary lemma: it contains full FEI
+exactly.
+
+To see this, let $k$ be an arbitrary Boolean function on a cube $Z$ and add
+one fresh coordinate $x$.  Set
+\[
+ h(x,z)=x,\qquad g_+(x,z)=xk(z),\qquad
+ g_-(x,z)=-xk(z).
+\tag{13}
+\]
+Then $a=0$, $b=xk$, and $F=a+hb=k$.  For the full block
+$B=\{x\}\cup Z$, the selector has exactly one nonzero frequency
+$\alpha=\{x\}$ and
+\[
+ C^\alpha=\chi_\alpha b=x^2k=k.
+\tag{14}
+\]
+All other channels and the block remainder vanish.  Hence
+\[
+ D_B(C^\alpha)=\mathbf H_{\rm nat}(k),\qquad
+ \mathbf I_B(C^\alpha)=\mathbf I(k).
+\tag{15}
+\]
+Applied to (13), (12) is precisely FEI in natural-log units.  Conversely,
+full FEI applied to Boolean channels would give this special case.  The
+fresh selector coordinate contributes two units to the gross right side of
+(7), and the overlap refund removes both, leaving exactly $\mathbf I(k)$.
+
+Therefore the new collision credit eliminates exponential bookkeeping but
+does not license a separate channel-by-channel entropy bound.  Progress must
+come from coupling the channel entropies to the signed block remainder,
+source channel, or terminal reserve before applying FEI-type control.

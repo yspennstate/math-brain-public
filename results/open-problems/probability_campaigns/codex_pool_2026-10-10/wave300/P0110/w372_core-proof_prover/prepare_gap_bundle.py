@@ -1,0 +1,63 @@
+"""Publish one additional draft counterexample; never ingest or overwrite drafts."""
+import datetime
+import json
+import pathlib
+
+ROOT = pathlib.Path(__file__).resolve().parent
+INBOX = pathlib.Path("~/math-brain-inbox/w372")
+statement = (
+    "For n>=64 let R_n be symmetric +/-1 and B_n an independent Bernoulli variable "
+    "with p_n=exp(-sqrt(n)). Set X_n=n^{1/3}R_n+(n/4)(B_n-p_n), Y_n=3n/2+X_n. "
+    "Then EX_n=0, n<=Y_n<=2n, and Var X_n=n^{2/3}+(n^2/16)p_n(1-p_n)~n^{2/3}. "
+    "For this family define chi_a=inf{a: for some alpha>0, sup_n E exp(alpha|X_n|/n^a)<infinity} "
+    "and chi_b=sup{b: for some c>0,N, Var X_n>=c n^{2b} for all n>=N}. "
+    "One has chi_a=1/2 and chi_b=1/3. Thus a pure variance power law and uniform square-root "
+    "exponential concentration do not by themselves identify the two fluctuation thresholds. "
+    "Indexing by lattice endpoints with n=ceil(|v|) preserves the gap. This is an abstract "
+    "random-variable family, not an FPP metric or iid-edge construction, and it does not refute P0110."
+)
+proof = (
+    "Independence of R_n and B_n gives the exact variance, whose extra term is negligible "
+    "relative to n^{2/3}. Since |B_n-p_n|<=B_n+p_n, "
+    "E exp(|X_n|/sqrt(n))<=exp(n^{-1/6}+(sqrt(n)/4)p_n) "
+    "[1-p_n+p_n exp(sqrt(n)/4)]. This is uniformly bounded because sqrt(n)p_n<=1/e "
+    "and p_n exp(sqrt(n)/4)=exp(-3sqrt(n)/4). On B_n=1 one has X_n>=n/8 for n>=64: "
+    "n^{1/3}<=n/16 and p_n<=1/4. For every a<1/2 and alpha>0 the exponential moment "
+    "is at least exp(-sqrt(n)+(alpha/8)n^{1-a}), which diverges. Hence the upper threshold "
+    "is exactly 1/2. The variance asymptotic gives the lower threshold 1/3. Finally "
+    "|X_n|<=n^{1/3}+n/4<=n/2 establishes the bounded passage-time-like range. "
+    "Ceil(|v|) and |v| are asymptotically comparable, so the same uniform endpoint thresholds persist."
+)
+entry = {"key": "rare-tail-gap", "namespace": "probability.concentration",
+         "logical_name": "variance-power-law-does-not-match-exponential-fluctuation-threshold",
+         "kind": "lemma", "title": "A rare tail separates variance and exponential fluctuation thresholds",
+         "statement": statement, "proof_text": proof,
+         "assumptions": ["n>=64", "R_n is symmetric +/-1", "B_n~Bernoulli(exp(-sqrt(n))) independent of R_n", "abstract family; no FPP representation asserted"],
+         "domain": "probability theory",
+         "source": {"source_id": "owner-own-work:w372:p0110-rare-tail-gap:2026-10-10",
+                    "url": "urn:owner-own-work:w372:p0110-rare-tail-gap:2026-10-10",
+                    "revision": "draft-2026-10-10-v1-pending-w374",
+                    "license": "owner-own-work; campaign refuted route, novelty unverified, independent review pending",
+                    "excerpt": None},
+         "review_status": "pending-w374", "parent_problem_solved": False}
+bundle = {"spec": "mathbrain-draft-v1", "author_agent": "w372",
+          "bundle_slug": "p0110-rare-tail-marginal-bound-obstruction-002", "entries": [entry], "relations": []}
+
+if __name__ == "__main__":
+    assert entry["proof_text"] and entry["source"]["license"].startswith("owner-own-work")
+    destination = INBOX / "bundle_002.json"
+    temporary = INBOX / "bundle_002.json.part"
+    if destination.exists() or temporary.exists():
+        raise SystemExit("existing companion draft preserved")
+    text = json.dumps(bundle, indent=2, ensure_ascii=False)+"\n"
+    (ROOT / "bundle_002.json").write_text(text, encoding="utf-8")
+    with temporary.open("x", encoding="utf-8") as f:
+        f.write(text)
+    temporary.rename(destination)
+    state = json.loads((ROOT / "BUNDLE_STATE.json").read_text(encoding="utf-8"))
+    state["submitted"]["additional_paths"] = [str(destination)]
+    state["submitted"]["companion_at"] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    state["structural_validation"]["entries"] += 1
+    state["structural_validation"]["bundles"] = 2
+    (ROOT / "BUNDLE_STATE.json").write_text(json.dumps(state, indent=2)+"\n", encoding="utf-8")
+    print(json.dumps({"companion_submitted": str(destination), "entry_count": 1, "reviewed": False, "ingested_by_worker": False}))

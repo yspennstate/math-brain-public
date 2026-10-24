@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B17",
+  "run_id": "20260924T014150Z-account01-B17-QFORM-auto11",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control_branch": "main",
+  "control_commit_start": "5ee768e7473edd8cad0933fce6e519d4322075c2",
+  "control_commit_refreshed": "8c0d74879e876f11f18859c6e74170e244bbf905",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "branch": "master",
+    "commit": "b7ebac043f11c4fcaf4d327c25f60d8284fd7938",
+    "root": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260924T014150Z-account01-B17-QFORM-auto11/",
+    "report": "REPORT.md",
+    "validated_checker": "CHECK_v2.py",
+    "checks": "CHECKS.txt",
+    "precision_note": "ERRATA.md"
+  },
+  "status": "PROVED_SUPPORTING_TARGET_CLASS_BARRIER",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "SEPARATE_FULL_TARGET_OPEN; PARTNER_BRANCH_ONLY",
+  "headline": "Every 3x3 one-null-leaf target A=[[r,a,c],[a,0,0],[c,0,b]] whose entire spectrum satisfies |lambda|>=1 has global cap-one product density norm <=2+log4=3.38629..., a fixed 0.85635... below the source-valid 3sqrt2 obstruction. Near-maximal partner certificates rigidly collapse to the hyperbolic-pair-plus-square block.",
+  "proved_implications": [
+    "For the scoped 3x3 target, A^2-I is PSD, hence |a|,|b|>=1, c^2<=(a^2-1)(b^2-1) in absolute-value notation, and r^2<=(a^2-1)(a^2+c^2-1).",
+    "Applying account02/B17 gives ||p||_infty<=2+log4 for arbitrary independent density-cap-one inputs.",
+    "If the partner certificate approaches 2+log4, then |a|,|b|->1 and r,c->0.",
+    "For A_delta=[[delta,1+delta,delta],[1+delta,0,0],[delta,0,1+delta]], all eigenvalue magnitudes exceed one and ||p||_infty<=(2+log4)/(1+delta).",
+    "For iid centered unit intervals, Q=2xXY+yZ^2 has exact global norm (2+log(2x/y))/x for y<=2x and 2sqrt2/sqrt(xy) for y>=2x; target maximum is 2+log2."
+  ],
+  "partner_result_applied": {
+    "partner": "account02/B17",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5358d1f4f32d64254b0234463015b42f1d36bc13",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T004826Z-account02-B17-QFORM-7c2f/REPORT.md",
+    "application": "Global inequality ||p_{X^T A_delta X}||_infty <= (2+log4)/(1+delta), including delta=0.1 bound 3.078449419199901..."
+  },
+  "lower_bound_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8624982153e5a2154e4ae8922d2fe4dc77080efc",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md",
+    "claim": "C_univ>=3sqrt(2)"
+  },
+  "corrections_preserved": [
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "scope_guard": "A^2-I>=0 is used only for a 3x3 matrix whose entire spectrum is outside (-1,1); it is not inferred from the ambient at-least-three-large-eigenvalues hypothesis.",
+  "unresolved_next": "Attack the first class that destroys the exact null leaf: add Y^2 or YZ, or treat several shared/intermediate-leverage rows; keep high-dimensional diffuse/multiscale and off-zero two-sheet mechanisms live.",
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B17/20260924T014150Z-account01-B17-QFORM-auto11.md"
+}

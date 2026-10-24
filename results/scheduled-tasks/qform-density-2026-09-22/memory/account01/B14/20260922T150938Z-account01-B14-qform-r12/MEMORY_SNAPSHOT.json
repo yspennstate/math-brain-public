@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B14",
+  "run_id": "20260922T150938Z-account01-B14-qform-r12",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_before_scientific_write": "143158f9cac70bca95f553d1abd9da0bfa496eb1",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "assignment": "Translations and localization",
+  "status": "ESSENTIAL_STEP_APPLIED_SUPPORTING_LOCALIZATION_THEOREM_FULL_QFORM_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B14",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d358b89ba78735cee238c01e83c2c3ca9ec66352",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260922T140126Z-b14-qform-localization-r13/REPORT.md",
+    "used_fact": "one-coordinate subcritical fragment packing plus exact two-cycle divergence at total exponent >=1"
+  },
+  "secondary_dependency_checked": {
+    "worker": "account03/B14",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2208c3f666582999f1fbc7e55921a4530cbe2789",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260922T133524Z-account03-B14-qform-r11/REPORT.md",
+    "used_scope": "exact cap-preserving localization compatibility and select-before-localize state"
+  },
+  "mathematical_change": [
+    "self-contained exact bathtub reduction preserves the QFORM small-ball constant from arbitrary cap-one product densities to bounded finite unions of intervals, with no uniform diameter or fragment-count bound",
+    "arbitrary mutually cyclic anchors with total exponent Theta<1 satisfy sum W <= K 2^Theta/(1-Theta) by generalized Holder and the partner one-coordinate packing theorem",
+    "for two cyclic coordinates this threshold is sharp using the partner's divergence construction",
+    "dependency-graph SCC compiler: if every strongly connected component C has Theta_C<1, then sum W <= K product_C 2^Theta_C/(1-Theta_C)",
+    "concrete 1/4-1/4 two-cycle feeding a 1/2 acyclic coordinate costs exactly factor 8"
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "79b0e3d268280ec3c406c5be5c60499036003f9a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260922T150938Z-account01-B14-qform-r12/REPORT.md",
+    "readback": true
+  },
+  "unresolved_implication": "derive a source-valid heavy/localized quadratic shell or coarea estimate and expose its actual fragment-center dependency graph; SCCs with total singular exponent below one are now localization-safe, while critical/supercritical cycles require additional cancellation or aggregation",
+  "next_step": "apply the SCC compiler to the first available heavy/localized active-block shell estimate rather than demanding a globally triangular elimination order",
+  "full_qform_proved": false
+}

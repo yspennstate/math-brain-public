@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260923T231333Z-account03-B11-QFORM-r44",
+  "source_control_commit_at_start": "68eb8dc1352b5b227a43ff4dcc306a77d3ecf761",
+  "source_control_commit_prepublication": "2d1283ce51c85471974e907e0289a5e6cee1dfa3",
+  "owner_control_revision": "2026-09-22.15",
+  "correction_inbox_blob": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "new_result": "QFORM-ANYPIVOT-RANKONE-SHAREDHUB-TENSOR-L1-v1",
+  "new_result_scope": "physical shared hub i plus two source-disjoint original-coordinate banks L,R; c=A[L,i], r=A[i,R] nonzero; residual crossing N=A[L,R] rank one; T=||c||^2||r||^2||P_cNP_r||_F^2>0; arbitrary physical pivot A_ii and arbitrary same-bank/outside affine phases retained",
+  "new_bound": "continuous C0 density with ||p_Q||_infinity <= 3*2^(2/3)*T^(-1/6)",
+  "r43_application": "if the two r43 star banks satisfy rank N=1 and ||P_cNP_r||_F>=nu*s, then ||p_Q||_infinity <120.992*nu^(-1/3)/s, continuous",
+  "partner_applied": {
+    "worker": "account04/B11",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "30555c1ca97752e10f5089ccd95f8514c704be5a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260923T131400Z-account04-B11-extension-mass-r6/REPORT.md",
+    "actual_inequality": "g_ij>beta0^2/2 implies ||p_Q||_infinity<256/(beta0*s)=14158.83737024.../s"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "388ba1f1ccf6a89dad0ca0a0fdb71d281ad6239b",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T231333Z-account03-B11-QFORM-r44/REPORT.md",
+    "verify_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T231333Z-account03-B11-QFORM-r44/VERIFY.py",
+    "verify_output": "QFORM_B11_R44_ANYPIVOT_RANKONE_TENSOR_CHECK_PASS"
+  },
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "PROVED_IN_NEW_RANKONE_BRANCH_FULL_TARGET_OPEN",
+  "remaining_implication": "QFORM-R43-NONRANKONE-OR-ALIGNED-SHAREDHUB-CURVATURE-v1: extend the receiver to rank-two-or-higher interbank crossing uniformly as extra singular values vanish, or spend same-bank internal curvature when P_cNP_r is small/aligned; then bridge arbitrary additional nonseparable spectrum",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

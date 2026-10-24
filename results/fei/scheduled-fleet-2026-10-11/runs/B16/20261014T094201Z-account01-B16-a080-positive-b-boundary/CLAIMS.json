@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "stream_id": "B16",
+  "primary_packet_id": "A080",
+  "claims": [
+    {
+      "claim_id": "B16-A080-POSITIVE-B-BOUNDARY-v1",
+      "gap_id": "GU-UNIVERSAL-PAIR-BOUNDARY",
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "scope": "OR of floor(lambda*2^r) disjoint r-bit point defects, for every fixed lambda>0 as r tends to infinity.",
+      "statement": "U-I tends to an explicit strictly positive Psi(lambda), G-I tends to zero (including lambda=ln 2), and hence G-(1-b)I-bU tends to -b Psi(lambda) for every fixed b in (0,1).",
+      "frozen_pair_consequence": "The residual for (a,b)=(3/4,1/4) tends to -Psi(lambda)/4<0.",
+      "not_claimed": [
+        "universal validity of (3/4,1/4)",
+        "uniformity as b tends to zero or lambda tends to 0 or infinity",
+        "unbounded G/I, U/I, or H/I",
+        "failure of GU",
+        "full FEI",
+        "independent review acceptance"
+      ],
+      "review_targets": ["A090", "A092", "A094"]
+    }
+  ]
+}

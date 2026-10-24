@@ -1,0 +1,38 @@
+{
+  "run_id": "20260923T151700Z-account04-B19-QFORM-r4",
+  "account": "account04",
+  "slot": "B19",
+  "status": "ESSENTIAL_STEP_APPLIED_FULL_TARGET_OPEN",
+  "brain_source": "5b65776ffe5e68aebc70fbcad412ccc30e58b95f",
+  "math_source": "ac55b70485c4108c7073a75365127e00be3bc097",
+  "theorem": "QFORM-MOVING-RIDGE-JOINT-CAP-BARRIER-v1",
+  "result": {
+    "polynomial": "4XY+Z^2-YW",
+    "assumptions": "X independent of (Y,Z,W); p_X<=1; joint p_(Y,Z,W)<=1",
+    "lower_bound": "||p_T||_infinity >= 1/(9 epsilon)",
+    "matrix_spectrum": [
+      "1",
+      "0",
+      "sqrt(17)/2",
+      "-sqrt(17)/2"
+    ],
+    "target_counterexample": false,
+    "reason": "Y,Z,W are dependent"
+  },
+  "applied_partner": {
+    "commit": "c2421f60310808603fb459131584028ec1502d0c",
+    "theorem": "QFORM-STAR-TAIL-OR-DOUBLE-ANCHOR-v1",
+    "paid_constants": [
+      199.413,
+      340.32,
+      1018.124
+    ]
+  },
+  "remaining": [
+    "product-preserving moving-ridge/BL theorem on STAR low-rank/double-anchor packet",
+    "TRIANGLE third-source coupling",
+    "arbitrary-extra-spectrum/global glue"
+  ],
+  "checker": "QFORM_B19_MOVING_RIDGE_BARRIER_CHECK_PASS",
+  "execution": "WITHOUT_VERIFIED_BRAIN"
+}

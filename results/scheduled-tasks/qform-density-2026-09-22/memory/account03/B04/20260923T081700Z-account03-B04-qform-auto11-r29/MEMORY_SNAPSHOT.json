@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260923T081700Z-account03-B04-qform-auto11-r29",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_at_publication_refresh": "86cc4b36ffa392e92c768305075a1dad1480eb92",
+  "control_revision": "2026-09-22.15",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-THIRDCOMPOUND-RANDOMCUT-GATE-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "With E3(A)=sum_{|I|=|J|=3}det(A[I,J])^2, disjoint fraction omega=D0/E3, and a selected physical cut whose canonical row/column triple disjointness maximum is delta>0, the full product-input quadratic form has continuous C0 density bounded by 6e omega^(-1/6) delta^(-1/12) E3(A)^(-1/6). Under the target spectrum E3(A)>=1."
+    },
+    {
+      "id": "QFORM-THIRDCOMPOUND-TRIPLEHUB-ALTERNATIVE-v1",
+      "status": "PROVED_STRUCTURAL_ALTERNATIVE",
+      "statement": "For thresholds eta,tau, either omega<eta, or the Fourier gate fires with delta>=tau, or a cut with E3>=omega E3(A)/64 has >1-2tau of its canonical cross third-volume on minors whose row triple meets one fixed row triple and whose column triple meets one fixed column triple."
+    }
+  ],
+  "peer_result_applied": {
+    "designated_partner": "account04/B04",
+    "designated_partner_completed_current_qform_result_visible": false,
+    "actual_sources": [
+      {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "00c845c9d1dad964da3c22f7e516db277a516db3",
+        "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T043653Z-account03-B02-qform-r20/REPORT.md",
+        "use": "global E3 disjointness product-Fourier theorem and residual-volume identity"
+      },
+      {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "00c845c9d1dad964da3c22f7e516db277a516db3",
+        "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T055035Z-account01-B04-QFORM-auto13/REPORT.md",
+        "use": "KL-halving improvement from delta^(-1/6) to delta^(-1/12)"
+      }
+    ]
+  },
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "8d4f2c874309ca2d9e19e799a63bcb799c27d4f9",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T081700Z-account03-B04-qform-auto11-r29/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T081700Z-account03-B04-qform-auto11-r29/CHECKS.json",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B04/20260923T081700Z-account03-B04-qform-auto11-r29.md",
+    "handoff_commit": "1c653069975f42b65dbf4b4d0874800c4d9d1de6"
+  },
+  "explicit_rotated_family": {
+    "description": "A_m=[[0,U_m R U_m^T],[U_m R U_m^T,0]], R=I-(2/3)11^T, m>=2",
+    "spectrum_nonzero": [-1,-1,-1,1,1,1],
+    "density_bound": "3e(1-1/m)^(-1/4) <= 3e*2^(1/4)=9.697800272958307",
+    "regularity": "continuous_C0"
+  },
+  "unresolved_implication": "QFORM-THIRDCOMPOUND-OVERLAP-OR-TRIPLEHUB-TO-PAID-ENDPOINT-v1",
+  "next_step": "Route global third-compound overlap or the fixed three-row/three-column compound-hub residue into existing scalar/pair/star/grouped/ridge/local-3block endpoints without selecting a vanishing local minor, or derive a stronger compound-order Fourier gate.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

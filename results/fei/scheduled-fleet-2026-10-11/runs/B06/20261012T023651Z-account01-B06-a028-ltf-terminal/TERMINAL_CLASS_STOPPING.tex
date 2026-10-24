@@ -1,0 +1,95 @@
+\section*{A physical stopping theorem for point-defect modulation hierarchies}
+
+All Fourier transforms below use the uniform probability measure on a
+Boolean cube, all logarithms are base two, and $0\log(1/0)=0$.
+
+\paragraph{Definition.}
+Let $f_0:\{-1,1\}^{n_0}\to\{-1,1\}$ be a linear threshold function.
+Inductively, suppose $f_{\ell-1}$ is a Boolean function of $N_{\ell-1}$
+variables.  Introduce a fresh block $Z_\ell\in\{-1,1\}^{m_\ell}$ and put
+\[
+ f_\ell(u,z)=f_{\ell-1}
+ \bigl(u_1q_{m_\ell}(z),\ldots,
+       u_{N_{\ell-1}}q_{m_\ell}(z)\bigr),
+\]
+where $q_m$ equals $-1$ at one point of the $m$-cube and $+1$ elsewhere.
+Blocks and old variables are physically disjoint.
+
+\paragraph{Theorem.}
+For every depth $L$ and every positive block dimensions $m_1,\ldots,m_L$,
+there is a physical restriction tree which queries $Z_L,Z_{L-1},\ldots,Z_1$
+in that order and has the following properties.
+\begin{enumerate}
+\item Every leaf is obtained from $f_0$ by input sign flips and hence is an
+LTF with the same squared Fourier spectrum as $f_0$.
+\item If $P_\ell$ is the Fourier mass of $f_{\ell-1}$ on odd-cardinality
+sets, then
+\[
+ H(f_L)=H(f_0)+\sum_{\ell=1}^L P_\ell H(q_{m_\ell}),\qquad
+ I(f_L)=I(f_0)+\sum_{\ell=1}^L P_\ell I(q_{m_\ell}).
+\]
+The summands on the right are precisely the reach-weighted path entropy and
+queried influence payments at level $\ell$; no variable or influence is used
+twice.
+\item For every $m\ge1$, $H(q_m)<4I(q_m)$.  Consequently, if
+$H(f_0)\le C_{\rm LTF}I(f_0)$, then
+\[
+ H(f_L)\le \max\{4,C_{\rm LTF}\}I(f_L).
+\]
+Using the published all-LTF constant
+$C_{\rm LTF}=\log_2(4+e)+2\log_2(e\pi)<8.937$, the hierarchy has the same
+dimension- and depth-independent constant.
+\end{enumerate}
+
+\paragraph{Proof.}
+For a Boolean $g$ on $N$ variables and Boolean $h$ on a fresh block, set
+$F(u,z)=g(u_1h(z),\ldots,u_Nh(z))$.  Expanding $g$ gives
+\[
+ F(u,z)=\sum_{S\subseteq[N]}\widehat g(S)\chi_S(u)h(z)^{|S|}.
+\]
+Thus even $S$ retain the constant modulator and odd $S$ acquire $h$.
+Orthogonality between the $u$-characters yields
+\[
+ H(F)=H(g)+P_{\rm odd}(g)H(h),\qquad
+ I(F)=I(g)+P_{\rm odd}(g)I(h).
+\]
+The influence identity includes all old-coordinate influence in $I(g)$ and
+all fresh-block influence in the second term.  Iteration proves the two
+displayed telescopes.
+
+After fixing $z$, $F(u,z)$ is $g$ with either all input signs retained or all
+flipped.  Querying the newest block first therefore leaves another hierarchy
+of depth one less, up to input sign flips.  Continuing reaches an input-sign
+flip of $f_0$.  LTFs are closed under such flips (negate the corresponding
+weights), proving terminal membership rather than merely assigning a label
+to the leaves.
+
+It remains to bound the path charge.  Write $N=2^m$ and $r=2/N$.  The empty
+Fourier coefficient of $q_m$ is $1-r$, while each nonempty coefficient has
+magnitude $r$.  Hence
+\[
+ I(q_m)=mr,
+\]
+and
+\[
+ H(q_m)=-(1-r)^2\log_2(1-r)^2
+       +r(2-r)(2m-2).
+\]
+Using $-\log(1-r)\le r/(1-r)$,
+\[
+ -(1-r)^2\log_2(1-r)^2
+ \le {2r(1-r)\over\ln2}<4r.
+\]
+Also
+\[
+ 4mr-r(2-r)(2m-2)=4r+r^2(2m-2)>4r.
+\]
+Therefore $H(q_m)<4mr=4I(q_m)$.  Multiplying by $P_\ell\ge0$, summing, and
+combining with the terminal LTF estimate proves the theorem.\qed
+
+\paragraph{Scope.}
+The theorem is all-dimensional and permits arbitrary depth and block sizes,
+but it is not a universal stopping theorem.  Its decisive hypothesis is the
+common modulator, which makes every physical branch an input-sign flip of the
+same predecessor.  Bent splices and general unequal-square-spectrum branches
+remain outside the result.  Full FEI remains open.

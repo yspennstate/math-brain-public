@@ -1,0 +1,61 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "stream": "B01",
+  "run_id": "20261014T051405Z-account01-B01-balanced-smr-reduction-a003",
+  "primary_packet_id": "A003",
+  "packet_id": "A003",
+  "packet_ids": ["A003"],
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "gap_ids": ["GU-ASYMMETRY-MISMATCH"],
+  "attempt_id": "B01-A003-BALANCED-SUBLINEAR-SMR-02",
+  "method": "Fresh-character balancing after disjoint tensor amplification; exact U/G/B/M transformation ledger and sublinear-terminal limit.",
+  "source_control_revision": "GU-LASER-20261014 / 2026-10-14.1",
+  "source_control_blob": "9448198701fbfe0cceb72bda7a6837ebd59704f9",
+  "assignment_blob": "ac038a028831d59ad053dd56b2b527e2a71ffdee",
+  "claim_versions_used": [
+    "B01-A003-SIGNED-MISMATCH-REFUND-v1",
+    "B05-A023-ACTIVATION-SMR-v1",
+    "B19-A092-ACTIVATION-SMR-REVIEW-v1"
+  ],
+  "claims_created_or_changed": [
+    "B01-A003-BALANCED-SUBLINEAR-SMR-v1"
+  ],
+  "source_artifacts": [
+    "GU focus blob 9448198701fbfe0cceb72bda7a6837ebd59704f9",
+    "A002 transformation report blob 4515e73e0e666b09613273084928674393375161",
+    "A003 report/proof blobs 2d6d6e5e4fed0587e4a5a99c8df5abb8d508a0b2 and 5c780ff6eff39f81166a1d50cf28d3a069490c9c",
+    "B05 report blob b9e7e9976efb46eb32a4676967de5c205996e96c",
+    "B19 review blob a7cf3a357cd754a417e9f0043d023e9d1500bf48"
+  ],
+  "prior_status": "General exact SMR reduction proved, but the sharp pair c=2, eta=1/4 was independently refuted; no replacement absolute pair known.",
+  "mathematical_delta": "Proved that universal SMR is equivalent to balanced-only SMR even when the balanced estimate has an arbitrary o(N) additive terminal. The fresh-character lift preserves U,G,B,M exactly and adds one to I; tensor amplification deletes both balancing cost and every sublinear terminal. The independently certified five-bit witness yields a balanced positive-density counterfamily to c=2, eta=1/4 and forces c>=2.067158948727793 at eta=1/4 within this route.",
+  "deliverable_status": "SOURCE_COMPLETE_PROOF_PACKAGE_PENDING_INDEPENDENT_REVIEW",
+  "mathematical_status": "PROVED_REDUCTION; UNIVERSAL_GU_OPEN",
+  "acceptance_evidence": [
+    "PROOF.md",
+    "CHECK_BALANCED_REDUCTION.py",
+    "CHECK_BALANCED_REDUCTION.out",
+    "ACTIVATION_CHAIN_PILOT.py",
+    "ACTIVATION_CHAIN_PILOT.out"
+  ],
+  "remaining_obstacle": "No absolute c, eta and sublinear terminal are proved for balanced Boolean spectra. The signed aggregate mismatch still lacks a dimension-independent payment.",
+  "next_consumers": ["A005", "A086", "A094", "B05", "B19", "B20"],
+  "reviewer_targets": ["A086", "A094"],
+  "next_action": "On balanced spectra (p_empty=0), derive a cone-transport bound for M+(1+eta)U with an O(log N) or other o(N) terminal; test first on yF^{tensor t}, where F is the certified activation witness.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [],
+  "delivery_status": {
+    "state": "DELIVERED_AND_EXACT_READBACK_VERIFIED",
+    "canonical_repository": "yspennstate/math-open-problems",
+    "brain_repository": "yspennstate/math-research-brain",
+    "canonical_bundle_head_observed": "241cdcd66a1e694e08d0038a4d41bcb5bfaa0217",
+    "brain_bundle_head_observed": "05892e0647efbcedba414e1c8865118b5277dbba",
+    "verified_files_before_status_update": 12,
+    "canonical_native_ingestion": "NOT_CLAIMED",
+    "brain_native_ingestion": "NOT_CLAIMED"
+  },
+  "model": "Codex",
+  "reasoning_effort": "UNKNOWN",
+  "full_fei_status": "OPEN"
+}

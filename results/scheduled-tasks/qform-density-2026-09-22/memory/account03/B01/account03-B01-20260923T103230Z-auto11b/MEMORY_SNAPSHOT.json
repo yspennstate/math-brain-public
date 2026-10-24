@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260923T103230Z-auto11b",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "control_commit_prepublication": "7eb1b266950ae32a5c209b6f0f923f9b5e86892e",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "new_claim": {
+    "id": "QFORM-RANK2-CROSS-BOUNDED-REMAINDER-L2-v1",
+    "status": "PROVED_SUPPORTING_ANALYTIC_THEOREM",
+    "statement": "For disjoint original-coordinate banks I,J,D,W, conditional form F_w(X_I)+G_w(X_J)+2 X_I^T K X_J+R_w(X_D)+c(w), exact rank(K)=2 with Delta=kappa1*kappa2, and conditional density cap M(w) for R_w, if E sqrt(M(W))<infinity then p_Q is continuous C0 and ||p_Q||_infinity <= 2 Delta^(-1/4) E sqrt(M(W)).",
+    "continuity": true
+  },
+  "partner_application": {
+    "partner": "account04/B01",
+    "grouped_square_source": "yspennstate/math-open-problems@88003dc06af684cc4bc178a7dfe8e7cbebb0f987:proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260922T234537Z-account04-B01-grouped-square-fejer-r2/REPORT.md",
+    "signed_fejer_source": "yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79:proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md",
+    "applied_inequality": "||p_Q||_infinity <= 2 sqrt(2pi) Delta^(-1/4) (sigma_j sigma_k)^(-1/2) |lambda_j lambda_k|^(-1/4) for any same-sign grouped-square pair j,k; identical constant bounds signed Fejer averages."
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b967ff246e7e5b480b098c17f01cd0fc93072991",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260923T103230Z-auto11b/REPORT.md",
+    "checker_status": "PASS"
+  },
+  "target_status": "FULL_QFORM_OPEN",
+  "unresolved_implication": "QFORM-RANK2-BICORE-BOUNDED-REMAINDER-ROUTING-v1",
+  "next_step": "Route remaining strict-N3/high-leverage/low-cross-rank states into a quantitatively strong rank-two bicore plus source-disjoint bounded-density remainder after aggregation, or use an overlap-safe receiver when source separation fails.",
+  "phase_aligned_counterexample_preserved": true
+}

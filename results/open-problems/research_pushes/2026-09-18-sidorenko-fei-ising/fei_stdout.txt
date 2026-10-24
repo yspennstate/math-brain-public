@@ -1,0 +1,85 @@
+{
+  "status": "ALL_EXACT_CHECKS_PASS",
+  "codes": [
+    {
+      "k": 1,
+      "message_dimension": 3,
+      "parity_bits": 1,
+      "columns": [
+        1,
+        1,
+        1
+      ],
+      "minimum_distance": 2
+    },
+    {
+      "k": 2,
+      "message_dimension": 3,
+      "parity_bits": 3,
+      "columns": [
+        3,
+        5,
+        6
+      ],
+      "minimum_distance": 3
+    },
+    {
+      "k": 3,
+      "message_dimension": 3,
+      "parity_bits": 4,
+      "columns": [
+        7,
+        11,
+        13
+      ],
+      "minimum_distance": 4
+    }
+  ],
+  "boolean_function_lifts_checked": 768,
+  "Fourier_coefficient_equalities": 53248,
+  "full_code_erasure_block_checks": 88,
+  "exact_union_bound_tests": [
+    {
+      "N": 1000,
+      "k": 1,
+      "r": 33,
+      "union_bound_strictly_below_one": true,
+      "numerator": "1000",
+      "denominator_power_two": 33
+    },
+    {
+      "N": 1000,
+      "k": 2,
+      "r": 66,
+      "union_bound_strictly_below_one": true,
+      "numerator": "566500",
+      "denominator_power_two": 66
+    },
+    {
+      "N": 1000,
+      "k": 5,
+      "r": 165,
+      "union_bound_strictly_below_one": true,
+      "numerator": "17805917368700",
+      "denominator_power_two": 165
+    },
+    {
+      "N": 10000,
+      "k": 20,
+      "r": 900,
+      "union_bound_strictly_below_one": true,
+      "numerator": "226792911078479689485278080146500197441945484632872529866702000",
+      "denominator_power_two": 900
+    }
+  ],
+  "pointwise_counterexample": {
+    "physical_variables": 265,
+    "nonzero_Fourier_coefficients": 65536,
+    "entropy_bits": 16,
+    "influence": "11/2",
+    "erasure_entropy": 0,
+    "ln2_lower_bound": "56/81",
+    "H_times_lower_minus_2I": "5/81"
+  },
+  "scope": "Coding identities and rigorous counterexample; no proof or disproof of FEI."
+}

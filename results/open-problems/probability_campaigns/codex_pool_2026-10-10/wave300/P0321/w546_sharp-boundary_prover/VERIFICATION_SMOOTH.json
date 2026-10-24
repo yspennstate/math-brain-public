@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "claim_id": "P0321-w546-L05",
+  "command": "python -X utf8 verify_smooth.py",
+  "gate": {
+    "agent": "w546",
+    "created": "2026-10-10",
+    "scope": "one deterministic direct-integral versus Fourier-series check of L05, no particle simulation or training",
+    "max_cpu_seconds": 15,
+    "max_wall_seconds": 120,
+    "max_resident_megabytes": 256,
+    "threads": 1,
+    "allowed_command": "python -X utf8 verify_smooth.py",
+    "outputs": [
+      "VERIFICATION_SMOOTH.json"
+    ]
+  },
+  "cpu_seconds": 1.703125,
+  "wall_seconds": 19.181883699959144,
+  "smooth_map_derivative_lower_bound": 0.5,
+  "variance_error_bound": 0.006944444444444444,
+  "orientational_plateau": 0.05869400558416215,
+  "coefficient_direct_error": 8.326672684688674e-17,
+  "correlation_max_direct_series_error": 1.457167719820518e-16,
+  "rows": [
+    {
+      "gaussian_increment_variance": 0.1,
+      "smooth_increment_variance": 0.10579653549846121,
+      "variance_change": 0.005796535498461208,
+      "sixfold_direct_integral": 0.20447560971526668,
+      "sixfold_fourier_series": 0.20447560971526668,
+      "gaussian_prediction_using_smooth_variance": 0.14892124959375477,
+      "direct_minus_series": 0.0,
+      "actual_to_gaussian_prediction": 1.373045218684773
+    },
+    {
+      "gaussian_increment_variance": 1.0,
+      "smooth_increment_variance": 1.0069444443386808,
+      "variance_change": 0.0069444443386808,
+      "sixfold_direct_integral": 0.05869401901185936,
+      "sixfold_fourier_series": 0.05869401901185939,
+      "gaussian_prediction_using_smooth_variance": 1.3440409976722155e-08,
+      "direct_minus_series": -2.7755575615628914e-17,
+      "actual_to_gaussian_prediction": 4366981.298450961
+    },
+    {
+      "gaussian_increment_variance": 10.0,
+      "smooth_increment_variance": 10.006944444444445,
+      "variance_change": 0.006944444444444642,
+      "sixfold_direct_integral": 0.05869400558416231,
+      "sixfold_fourier_series": 0.058694005584162164,
+      "gaussian_prediction_using_smooth_variance": 5.925246837728888e-79,
+      "direct_minus_series": 1.457167719820518e-16,
+      "actual_to_gaussian_prediction": 9.90574860281422e+76
+    }
+  ],
+  "scope": "auxiliary counterexample only; not a microscopic Gibbs phase or formal check"
+}

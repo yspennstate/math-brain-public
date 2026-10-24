@@ -1,0 +1,962 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\emp}{\bar\mu_N}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\cone}{\operatorname{cone}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\nor}{\nu_K}
+
+\title{The interpolation law for the uniform doubling condition\\
+in general position}
+\author{Yitzchak Shmalo\\
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The companion paper \cite{companion11} determined the critical scaling of the
+uniform doubling condition (UDC) of \cite{ShmaloUDC} for the orthogonal model
+$B^n\cap\{x_1\le0,\dots,x_k\le0\}$, where a round ball is cut by mutually
+orthogonal half-spaces through the origin.  Here we remove both idealizations.
+We treat an admissible configuration: a $C^2$ strictly convex body $K$ with
+principal curvatures in a fixed band $[\lambda_{\min},\lambda_{\max}]$,
+truncated by $k$ half-spaces $\langle x,a_i\rangle\le c_i$ in general
+position, meaning that at each point $p$ of the boundary stratum
+$E=\partial K\cap\bigcap_i\{\langle x,a_i\rangle=c_i\}$ the outer normal
+$\nor(p)$ and the truncating normals $a_1,\dots,a_k$ are linearly independent
+with pairwise angles in $[\theta_0,\pi-\theta_0]$.  The stratum $E$ is then a
+$j$-manifold with $j=n-1-k$.  We prove that the critical scaling factor is
+\[
+\ell_N\;\asymp\;\Bigl(\frac{\log N}{N}\Bigr)^{2/(2n-j)}
+\;=\;\Bigl(\frac{\log N}{N}\Bigr)^{2/(n+1+k)},
+\]
+exponent and logarithm exact, with constants depending only on $n$, $k$,
+$\theta_0$ and the curvature band.  The mechanism that replaces the
+orthogonal model's axis-parallel windows and its exact reflection fraction
+$2^{-k}$ is the \emph{conjugate frame}: the dual basis $f_1,\dots,f_k$ to the
+truncating normals inside their span, chosen tangent to $K$ at $p$, in which
+the $k$ constraints become the diagonal slab $\{s_i\le0\}$ and the cap
+exponent $(n+1+k)/2$ is exposed as angle-independent.  The reflection fraction
+is replaced by the normalized solid angle $\omega$ of the normal cone
+$N(G,p)=\cone\{\nor(p),a_1,\dots,a_k\}$, which is positive precisely because
+the configuration is in general position.  We note that the natural
+attempt to reduce to the orthogonal model by a John-position rounding is
+provably blocked --- no single linear map can keep $B^n$ spherical and
+orthogonalize non-orthogonal normals --- so the conjugate-frame argument is
+intrinsic by necessity.  This completes the flat-transversal part of the program
+of \cite{companion11,companion6,companion7}.  The curved companion
+\cite{companion15curved} proves the same exponent law for each fixed curved
+truncation family and isolates the remaining curvature-band-uniform lower/slab
+constant problem.
+\end{abstract}
+
+\section{Setting and main results}\label{sec:intro}
+
+\subsection{The configuration}
+
+Let $n\ge2$.  Let $K\subset\R^n$ be a compact convex body with $C^2$
+boundary whose principal curvatures lie in a fixed band
+$0<\lambda_{\min}\le\lambda_{\max}<\infty$; in particular $K$ is strictly
+convex, the Gauss map $\nor:\partial K\to S^{n-1}$ is a diffeomorphism, and at
+each $p\in\partial K$ the second fundamental form $\mathrm{I\!I}_p$ satisfies
+$\lambda_{\min}\,|v|^2\le\mathrm{I\!I}_p(v,v)\le\lambda_{\max}\,|v|^2$ for
+tangent $v$.  Let $\mu$ be the normalized Lebesgue measure on $K$.
+
+Fix unit vectors $a_1,\dots,a_k\in S^{n-1}$ and reals $c_1,\dots,c_k$ with
+$1\le k\le n-1$ (the case $k=0$ is the smooth body, treated in
+\cite{companion3}), and set the \emph{truncation region}
+\[
+G\;:=\;K\cap\bigcap_{i=1}^{k}\{x:\ \langle x,a_i\rangle\le c_i\}.
+\]
+We call $a_i$ the truncating normals and $h_k:=\{(a_1,c_1),\dots,(a_k,c_k)\}$
+the truncation set.  The boundary of $G$ is stratified by the active
+constraint set: for $S\subseteq\{1,\dots,k\}$ the stratum is
+$\partial K\cap\bigcap_{i\in S}\{\langle x,a_i\rangle=c_i\}
+\cap\bigcap_{i\notin S}\{\langle x,a_i\rangle<c_i\}$ together with the curved
+face $\{x\in\mathrm{int}\,K:\,\langle x,a_i\rangle=c_i\ (i\in S)\}$.  The
+lowest transversal stratum is
+\[
+E\;:=\;\partial K\cap\bigcap_{i=1}^{k}\{x:\ \langle x,a_i\rangle=c_i\}.
+\]
+
+\begin{definition}[Admissible / general position]\label{def:adm}
+The configuration $(K,h_k)$ is \emph{admissible}, or the truncation is in
+\emph{general position}, if there is $\theta_0\in(0,\pi/2)$ such that
+$E\ne\emptyset$ and at every point $p\in E$:
+\begin{enumerate}
+\item[(GP1)] the active normals $\nor(p),a_1,\dots,a_k$ are linearly
+independent;
+\item[(GP2)] all pairwise angles among $\nor(p),a_1,\dots,a_k$ lie in
+$[\theta_0,\pi-\theta_0]$; equivalently, the Gram matrix of the unit active
+normals has smallest eigenvalue $\ge g_0=g_0(\theta_0,k)>0$.
+\end{enumerate}
+\end{definition}
+
+Under (GP1)--(GP2) the map
+$x\mapsto(\langle x,a_1\rangle,\dots,\langle x,a_k\rangle)$ is a submersion of
+$\partial K$ near $E$, so $E$ is a compact $C^2$ submanifold of $\partial K$
+of dimension
+\[
+j\;:=\;n-1-k\;\ge\;0 .
+\]
+Throughout we keep $0\le j\le n-1$; for $j=0$ (i.e.\ $k=n-1$) the stratum $E$
+is a finite set of conical points and the exponent is the conical $1/n$ of
+\cite{companion3,companion5}, so the interesting range is $1\le j\le n-1$,
+i.e.\ $1\le k\le n-2$.  The orthogonal model of \cite{companion11} is the
+special case $K=B^n$, $a_i=e_i$, $c_i=0$, for which $E=\{x\in S^{n-1}:x_1=\dots
+=x_k=0\}$, $\nor(p)=p$, all active normals orthogonal, and any
+$\theta_0\le\pi/2$ admissible.
+
+We assume, as in all the companion papers, that $G$ has nonempty interior and
+is uniformly thick at scale $r_0=r_0(K,h_k,\theta_0)>0$: there is a ball
+$B(c^-,r_0)\subseteq G$.  Such a ball exists for any admissible configuration
+because $E$ is a transversal intersection, so $G$ contains a fixed cone-cap
+neighborhood pointing into $\bigcap_i\{\langle x,a_i\rangle<c_i\}$; we record
+this as a standing hypothesis and absorb $r_0$ into the constants.
+
+\subsection{The conjugate frame}
+
+Fix $p\in E$.  The truncating normals $a_1,\dots,a_k$ are linearly
+independent and, by (GP1), independent from $\nor(p)$.  We will need to write
+the $k$ constraints in coordinates that diagonalize them while respecting the
+tangent geometry at $p$.
+
+\begin{definition}[Conjugate frame]\label{def:conj}
+Let $V:=\mathrm{span}\{a_1,\dots,a_k\}$ and let
+$\Pi:\R^n\to T_p\partial K=\nor(p)^\perp$ be the orthogonal projection onto the
+tangent space at $p$.  Because $\nor(p)\notin V$ by (GP1), $\Pi|_V:V\to\Pi V$
+is injective, so $\bar a_i:=\Pi a_i$ are linearly independent tangent vectors.
+The \emph{conjugate frame} $f_1,\dots,f_k$ is the basis of $\Pi V\subseteq
+T_p\partial K$ dual to $(\bar a_1,\dots,\bar a_k)$:
+\[
+\langle f_i,a_j\rangle=\delta_{ij},\qquad \langle f_i,\nor(p)\rangle=0
+\qquad(1\le i,j\le k).
+\]
+\end{definition}
+
+The two displayed conditions determine $f_1,\dots,f_k$ uniquely: they force
+$f_i\in T_p\partial K$, and on $T_p\partial K$ the functional
+$v\mapsto\langle v,a_j\rangle=\langle v,\bar a_j\rangle$ has the matrix
+$\bar G=(\langle\bar a_i,\bar a_j\rangle)$, so $f_i=\sum_m(\bar G^{-1})_{im}
+\bar a_m$.  By (GP2) the Gram matrix of $a_i$ has eigenvalues in
+$[g_0,k]$, and the tangential projection along $\nor(p)$ changes lengths by a
+factor bounded in terms of $\theta_0$ only, so
+\begin{equation}\label{eq:fbound}
+g_1(\theta_0,k)\;\le\;|f_i|\;\le\;g_2(\theta_0,k),
+\qquad
+|\langle f_i,f_j\rangle|\le g_2^2 ,
+\end{equation}
+with $g_1>0$.  In the new linear coordinates
+\[
+s_i\;:=\;\langle x-p,a_i\rangle\qquad(1\le i\le k),
+\]
+the truncation constraints $\langle x,a_i\rangle\le c_i$ read exactly
+$s_i\le0$, since $\langle p,a_i\rangle=c_i$ for $p\in E$.  Thus the conjugate
+frame diagonalizes the truncation: the $k$ half-spaces become the standard
+orthant $\{s_1\le0,\dots,s_k\le0\}$, and $f_i$ is the direction in which only
+$s_i$ moves (to first order, tangentially).  This is the device that replaces
+the relation $\langle w,\tilde u\rangle=0$ used in the orthogonal model: there
+$a_i=e_i$ is self-dual, $f_i=e_i$, and the windows are axis-parallel; in
+general position the windows are spanned by the conjugate frame instead.
+
+The invariant content we use repeatedly is the splitting of $T_p\partial K$
+into the $k$-dimensional conjugate span $\Pi V$ and its $j$-dimensional
+orthogonal complement
+\[
+T_pE\;=\;\{v\in T_p\partial K:\ \langle v,a_i\rangle=0\ \ \forall i\},
+\qquad \dim T_pE=m:=j=n-1-k,
+\]
+the tangent space to the stratum; concrete orthonormal coordinates on each
+factor are introduced as needed in \S\ref{ss:floor}.
+
+\subsection{Main results}
+
+The first result isolates the exponent.  For $p\in E$ let
+\[
+N(G,p)\;:=\;\cone\{\nor(p),a_1,\dots,a_k\}
+\]
+be the (closed, convex, simplicial, full in its $(k+1)$-dimensional span)
+normal cone of $G$ at $p$, and for a unit vector $u$ in the relative interior
+of $N(G,p)$ define the directional cap
+\[
+C_p^u(h)\;:=\;\{x\in G:\ \langle x,u\rangle\ \ge\ \langle p,u\rangle-h\}.
+\]
+
+\begin{proposition}[Universal cap exponent]\label{prop:exp}
+Let $(K,h_k)$ be admissible and $p\in E$.  For every unit $u$ in the relative
+interior of $N(G,p)$ there are $0<\gamma_1\le\gamma_2$ and $h_*>0$, depending
+on $n,k,\theta_0$, the curvature band, and the angular distance of $u$ to
+$\partial N(G,p)$, such that
+\[
+\gamma_1\,h^{\frac{n+1+k}2}\ \le\ \vol_n\!\bigl(C_p^u(h)\bigr)\ \le\
+\gamma_2\,h^{\frac{n+1+k}2}
+\qquad(0<h\le h_*),
+\qquad \frac{n+1+k}2=\frac{2n-j}2 .
+\]
+The exponent is independent of the angles $\theta_0$ and of $u$ within the
+cone.
+\end{proposition}
+
+\begin{theorem}[Section lemma, general position]\label{thm:A}
+Let $(K,h_k)$ be admissible.  There are $a>0$ and $h_0>0$, depending only on
+$n,k,\theta_0$ and the curvature band, such that for every unit vector $u$ and
+every $0<h\le h_0$, writing $\tau_{\max}:=\max_{x\in G}\langle x,u\rangle$ and
+$A_u(h):=\vol_{n-1}(G\cap\{\langle x,u\rangle=\tau_{\max}-h\})$,
+\[
+A_u(h)\ \ge\ a\,h^{\frac{n-1+k}2}.
+\]
+Consequently the UDC for the truncation set $h_k$ holds, with probability at
+least $1-\frac1N$ for $N\ge N_0(n,k,\theta_0,K)$, at scaling factor
+\[
+\ell_N\;=\;C\,\Bigl(\frac{\log N}{N}\Bigr)^{2/(n+1+k)} .
+\]
+\end{theorem}
+
+\begin{theorem}[Lower bound, general position]\label{thm:B}
+Let $(K,h_k)$ be admissible.  There is $c>0$ such that with probability
+$1-o(1)$ the doubling inequality fails for some slab truncated by $h_k$ at
+every grid scale below $c\,(\log N/N)^{2/(n+1+k)}$; hence the UDC requires
+$\ell\ge c\,(\log N/N)^{2/(n+1+k)}$.  The only configuration-dependent input
+is the two-sided cap bound
+\[
+c_1\,h^{\frac{n+1+k}2}\ \le\ \mu\bigl(C_p(h)\bigr)\ \le\
+c_2\,h^{\frac{n+1+k}2},
+\qquad c_1=\omega(N_p)\cdot\kappa_{\mathrm{geom}}>0,
+\]
+where $\omega(N_p)$ is the normalized solid angle of the normal cone
+$N(G,p)$ and $\kappa_{\mathrm{geom}}>0$ collects the curvature and
+conjugate-frame constants.
+\end{theorem}
+
+\begin{corollary}[The interpolation law in general position]\label{cor:C}
+Let $K$ be a $C^2$ strictly convex body with curvatures in
+$[\lambda_{\min},\lambda_{\max}]$ and let $h_k$ be a general-position
+simplicial truncation with dihedral angles bounded below by $\theta_0$, whose
+lowest stratum $E$ has dimension $j=n-1-k$.  Then the critical scaling of the
+uniform doubling condition is
+\[
+\ell_N\;=\;\Theta\!\Bigl(\bigl(\log N/N\bigr)^{2/(2n-j)}\Bigr),
+\qquad 1\le j\le n-1,
+\]
+with exponent and logarithm exact and all constants depending only on
+$n,k,\theta_0$ and the curvature band.  For $j=0$ (simplicial cones, $k=n-1$)
+the conical scaling $\Theta((\log N/N)^{1/n})$ of \cite{companion3,companion5}
+applies.  In particular the law holds for every simplicial cone and for every
+nonsingular affine image of the orthogonal model.
+\end{corollary}
+
+Corollary~\ref{cor:C} is the general-position completion of
+\cite[Theorem 1.1]{companion11}: it removes the roundness of the ball and the
+orthogonality of the cuts, the only two special features of the model, while
+keeping both halves of the bound and the constant in the logarithm.  The route
+that does \emph{not} work --- straightening the configuration to the model by a
+linear change of variables --- is discussed in \S\ref{sec:john}; the obstruction
+there is what forces the intrinsic conjugate-frame argument of
+\S\S\ref{sec:caps}--\ref{sec:upper}.
+
+\paragraph{Organization.}
+Section~\ref{sec:caps} sets up depth coordinates at the stratum and proves the
+universal exponent (Proposition~\ref{prop:exp}) and the two-sided cap bound
+(Lemma~\ref{lem:capmass}).  Section~\ref{sec:lower} proves
+Theorem~\ref{thm:B}.  Section~\ref{sec:section} proves the section lemma
+(Theorem~\ref{thm:A}) in general position, by induction on $k$ through the
+slicing closure of the admissible class.  Section~\ref{sec:upper} assembles the
+slab bound and the upper half of Theorem~\ref{thm:A}.  Section~\ref{sec:john}
+records the John-position obstruction and the residual open case.
+
+\section{Depth coordinates and the cap exponent}\label{sec:caps}
+
+\subsection{Floor coordinates at a stratum point}\label{ss:floor}
+
+Fix $p\in E$ and a unit vector $u$ in the relative interior of $N(G,p)$.  We
+build coordinates adapted to $u$ in which the convex floor of $G$ near $p$ is
+explicit.
+
+Let $T:=T_p\partial K=\nor(p)^\perp$, split as $T=\Pi V\oplus T_pE$ with
+$\Pi V=\mathrm{span}\{\bar a_1,\dots,\bar a_k\}$ (dimension $k$) and
+$T_pE=\{v\in T:\langle v,a_i\rangle=0\}$ (dimension $m:=j=n-1-k$).  Write
+$u=u^\nu\,\nor(p)+u^V+u^E$ with $u^\nu=\langle u,\nor(p)\rangle$,
+$u^V\in\Pi V$, $u^E\in T_pE$.  Because $u\in\mathrm{relint}\,N(G,p)$ and
+$N(G,p)=\cone\{\nor(p),a_1,\dots,a_k\}$, the expansion
+$u=\beta_0\nor(p)+\sum_i\beta_ia_i$ has all $\beta_i>0$; since $u^E$ is the
+component of $u$ orthogonal to $\nor(p)$ and to every $a_i$, and the $a_i$ span
+$V\supseteq\Pi V$, one checks $u^E=0$.  Thus $u$ lies in the
+$(k+1)$-plane $\mathrm{span}\{\nor(p)\}\oplus\Pi V$, the span of the cone, as it
+must.
+
+Choose orthonormal coordinates on $\R^n$ as follows.  The first coordinate is
+$z:=\langle p-x,\nor(p)\rangle\ge0$, the depth below the tangent plane at $p$
+(nonnegative on $K$ near $p$ by convexity).  On $T_pE$ choose an orthonormal
+basis $\eta_1,\dots,\eta_m$ and set $y_a:=\langle x-p,\eta_a\rangle$.  On
+$\Pi V$ we use the conjugate coordinates
+$s_i:=\langle x-p,a_i\rangle$ of Definition~\ref{def:conj}; by
+\eqref{eq:fbound} the change of basis between $(s_1,\dots,s_k)$ and an
+orthonormal basis of $\Pi V$ has condition number bounded by
+$g_2/g_1=:\Gamma(\theta_0,k)$, and we will only ever need this two-sided
+comparison.  Thus $(z,y,s)\in\R\times\R^m\times\R^k$ is a system of
+\emph{bounded-distortion} coordinates centered at $p$, with Jacobian bounded
+above and below by constants depending on $\theta_0,k$.
+
+\begin{lemma}[Convex floor]\label{lem:floor}
+In the coordinates $(z,y,s)$ there are $r,L>0$ depending on $n,k,\theta_0$ and
+the curvature band such that for $|y|,|s|\le r$, the boundary $\partial K$ is
+the graph
+\[
+z\;=\;\Phi_0(y,s)\;:=\;\tfrac12\,Q(y,s)\;+\;O\!\bigl((|y|+|s|)^3\bigr),
+\qquad
+\lambda_{\min}\,(|y|^2+|s|^2)\ \le\ Q(y,s)\ \le\ \lambda_{\max}\,(|y|^2+|s|^2),
+\]
+where $Q$ is the second fundamental form $\mathrm{I\!I}_p$ read in these
+coordinates, and the $O$-term has $C^0$ norm $\le L(|y|+|s|)^3$.  Moreover
+$G\cap\{|y|,|s|\le r\}=\{z\ge\Phi_0(y,s)\}\cap\{s_1\le0,\dots,s_k\le0\}$ within
+$\{|y|,|s|\le r\}$.
+\end{lemma}
+
+\begin{proof}
+Since $\nor(p)$ is the outer normal, $\partial K$ is locally the graph of a
+$C^2$ function $z=\phi(y,s)$ over $T$ with $\phi(0)=0$, $\nabla\phi(0)=0$, and
+Hessian $\mathrm{I\!I}_p$, whose eigenvalues are the principal curvatures in
+$[\lambda_{\min},\lambda_{\max}]$.  Taylor expansion gives $\Phi_0$ with the
+stated quadratic bounds and a $C^2$ remainder, uniformly because the curvatures
+are bounded and $K$ is $C^2$ with a modulus controlled on the compact stratum.
+The constraint description holds because $\langle x-p,a_i\rangle=s_i$ exactly
+and the curved faces $\{\langle x,a_i\rangle=c_i\}$ do not enter the
+\emph{interior} normal stratum within the small box (they bound $G$ only where
+some $s_i=0$, already included).
+\end{proof}
+
+We separate the directions of $u$ by whether the floor is flat or curved along
+them.  By the previous paragraph $u=u^\nu\nor(p)+u^V$ with $u^\nu>0$ (else $u$
+is tangent and not interior to the cone).  Write the slab depth
+$\langle p-x,u\rangle$, i.e.\ the cap function, in coordinates.  Using
+$x-p=-z\,\nor(p)+\sum_a y_a\eta_a+\Pi(x-p)$ and that $u^E=0$,
+\begin{align}
+\langle p-x,u\rangle
+&=u^\nu z-\langle x-p,u^V\rangle \notag\\
+&=u^\nu z-\sum_{i=1}^k\beta_i\,\langle x-p,a_i\rangle
+\;=\;u^\nu z-\sum_{i=1}^k\beta_i\,s_i,
+\label{eq:capfun}
+\end{align}
+because $u^V=\sum_i\beta_i\bar a_i$ pairs with $x-p$ through
+$\langle\cdot,a_i\rangle=s_i$ on $T$ (the $\nor(p)$-component of $x-p$ is
+orthogonal to $\Pi V$).  Here $\beta_i>0$ are the cone coefficients of $u$, and
+by (GP2) and \eqref{eq:fbound} they obey $\beta_i\in[\beta_-,\beta_+]$ with
+$\beta_->0$ depending on the angular distance of $u$ to $\partial N(G,p)$.
+
+\subsection{Proof of Proposition~\ref{prop:exp}}
+
+\begin{proof}
+On $C_p^u(h)$ we have $\langle p-x,u\rangle\le h$, $s_i\le0$, and
+$z\ge\Phi_0(y,s)$.  Substitute \eqref{eq:capfun}: with $\sigma_i:=-s_i\ge0$,
+\begin{equation}\label{eq:capset}
+C_p^u(h)\cap\{|y|,|s|\le r\}
+=\Bigl\{(y,\sigma,z):\ \sigma_i\ge0,\ z\ge\Phi_0(y,-\sigma),\
+u^\nu z+\sum_i\beta_i\sigma_i\le h\Bigr\}.
+\end{equation}
+The cap is contained in this box for $h\le h_*$ small, because the cap radius
+is $O(\sqrt h)$ (shown below) and then $\Phi_0\ge\lambda_{\min}(|y|^2+|s|^2)/2$
+forces $|y|,|s|\le r$.
+
+\emph{Rescaling.}  Put $y=\sqrt h\,Y$, $\sigma=h\,S$ (note: linear in $h$ for
+the truncated directions, square-root for the tangent-to-stratum directions),
+and $z=h\,Z$.  Then $dy\,d\sigma\,dz=h^{m/2}\cdot h^{k}\cdot h\;dY\,dS\,dZ$, and
+\[
+\Phi_0(y,-\sigma)=\tfrac12 Q(\sqrt h Y,-hS)+O(h^{3/2})
+=\tfrac{h}{2}Q(Y,0)+O(h^{3/2}),
+\]
+because $Q(\sqrt h Y,-hS)=h\,Q(Y,0)-h^{3/2}(\text{cross})+h^2Q(0,S)$ and the
+last two terms are $o(h)$.  Hence after dividing the cap inequality by $h$,
+\begin{equation}\label{eq:rescaled}
+C_p^u(h)\ \longleftrightarrow\
+\Bigl\{(Y,S,Z):\ S_i\ge0,\
+Z\ \ge\ \tfrac12 Q(Y,0)+o(1),\
+u^\nu Z+\sum_i\beta_i S_i\ \le\ 1+o(1)\Bigr\}.
+\end{equation}
+The limiting region (as $h\to0$) is
+\[
+R:=\Bigl\{(Y,S,Z):\ S\ge0,\ Z\ge\tfrac12 Q(Y,0),\
+u^\nu Z+\textstyle\sum_i\beta_iS_i\le1\Bigr\},
+\]
+a fixed set of finite, positive $n$-volume:
+finiteness because $Q(Y,0)\ge\lambda_{\min}|Y|^2$ confines $Y$ to
+$|Y|\le\sqrt{2/(u^\nu\lambda_{\min})}$ and then $Z\le1/u^\nu$, $S_i\le
+1/\beta_i$; positivity because the relative interior is nonempty (take $Y=0$,
+small $S_i>0$, $Z$ slightly above $0$).  The $o(1)$ perturbations are uniform
+on compact sets and the regions are nested up to $1\pm o(1)$ dilations, so by
+dominated convergence
+\[
+\vol_n\!\bigl(C_p^u(h)\bigr)
+=h^{\,1+k+m/2}\bigl(\vol_n(R)+o(1)\bigr),
+\qquad 1+k+\tfrac m2=\frac{(n-1)+1+k}2=\frac{n+1+k}2 .
+\]
+The exponent counts $1$ for the depth $z$ (length $h$), $1$ for each truncated
+direction $s_i$ (length $h$, a \emph{linear} floor $\beta_i\sigma_i$), and
+$\tfrac12$ for each of the $m=j$ stratum directions $y_a$ (length $\sqrt h$, a
+\emph{quadratic} floor $\tfrac12 Q$).  None of these scalings sees the angles,
+only the dichotomy linear-vs-quadratic floor; this proves the
+angle-independence and gives $\gamma_1,\gamma_2$ as $\vol_n(R)(1\mp o(1))$.
+Finally the cap-radius claim: on $R$, $|Y|,|S|,|Z|=O(1)$, so on $C_p^u(h)$,
+$|y|=O(\sqrt h)$, $|s|=O(h)$, $z=O(h)$, hence $|x-p|=O(\sqrt h)$, justifying the
+box confinement for $h\le h_*$.
+\end{proof}
+
+\begin{remark}\label{rem:why}
+Proposition~\ref{prop:exp} is the conceptual core.  In the orthogonal model
+the same computation has $a_i=e_i$, $\beta_i$ the positive coordinates of $u$,
+and $Q=\mathrm{Id}$ (the round sphere), so the floor is
+$\tfrac12|Y|^2+\sum\beta_i\sigma_i$ and one reads off $(n+1+k)/2$ directly.
+General position changes $Q$ to an anisotropic but uniformly elliptic form and
+changes the truncated directions from coordinate axes $e_i$ to the conjugate
+directions $f_i$; neither change touches the count of linear versus quadratic
+floor directions, which is all the exponent records.  This is why no rounding
+of $K$ or orthogonalization of the $a_i$ is needed for the exponent --- and,
+as \S\ref{sec:john} shows, no such rounding exists.
+\end{remark}
+
+\subsection{The stratum cap and its mass}\label{ss:capmass}
+
+For the lower bound we need a canonical cap at each $p\in E$ and its mass with
+the correct constant.  Let
+\[
+u_p\;:=\;\frac{\nor(p)+\sum_{i=1}^k a_i}{\bigl|\nor(p)+\sum_i a_i\bigr|},
+\qquad
+C_p(h)\;:=\;C_p^{u_p}(h)
+=\{x\in G:\ \langle x,u_p\rangle\ge\langle p,u_p\rangle-h\}.
+\]
+By (GP1)--(GP2) the vector $\nor(p)+\sum_i a_i$ is a fixed positive combination
+of the cone generators, hence $u_p\in\mathrm{relint}\,N(G,p)$ with angular
+distance to $\partial N(G,p)$ bounded below by a function of $\theta_0,k$;
+$\langle p,u_p\rangle=\max_{x\in G}\langle x,u_p\rangle$ because $u_p\in
+N(G,p)$ (supporting at $p$).  So $C_p(h)$ is a cap of the type in
+Proposition~\ref{prop:exp}, uniformly over $E$.
+
+\begin{lemma}[Stratum cap mass and footprint]\label{lem:capmass}
+There are $0<c_1\le c_2$ and $h_1>0$ depending on $n,k,\theta_0$ and the
+curvature band, and $c_3=c_3(\theta_0,k)$, such that for all $p\in E$ and
+$0<h\le h_1$,
+\[
+c_1\,h^{\frac{n+1+k}2}\ \le\ \mu\bigl(C_p(h)\bigr)\ \le\
+c_2\,h^{\frac{n+1+k}2},
+\qquad
+C_p(h)\subseteq\{x:\ |x-p|\le c_3\sqrt h\}.
+\]
+Moreover one may take $c_1=\omega(N_p)\cdot\kappa_{\mathrm{geom}}$, where
+$\omega(N_p)\in(0,1]$ is the normalized solid angle of $N(G,p)$ and
+$\kappa_{\mathrm{geom}}>0$ depends only on the curvature band and
+$\theta_0,k$.
+\end{lemma}
+
+\begin{proof}
+Apply Proposition~\ref{prop:exp} with $u=u_p$: it gives
+$\vol_n(C_p(h))=h^{(n+1+k)/2}(\vol_n(R_p)+o(1))$ and the footprint
+$|x-p|\le c_3\sqrt h$, and dividing by $\vol_n(K)$ gives the measure bound with
+$c_2=2\vol_n(R_p)/\vol_n(K)$, $c_1=\tfrac12\vol_n(R_p)/\vol_n(K)$ for
+$h\le h_1$, the constants uniform in $p$ because $R_p$ depends continuously on
+the compact data $(\nor(p),a_i,\mathrm{I\!I}_p)$ and is bounded away from
+degenerate.
+
+For the solid-angle form of $c_1$, compute $\vol_n(R_p)$ from below by the
+cone factorization.  In \eqref{eq:capset}, drop the curvature in $Z$
+(i.e.\ restrict to $Z\ge0$ but allow $Z\ge\tfrac12Q(Y,0)$); the region $R_p$
+contains the product slab
+\[
+\{Y:\tfrac12 Q(Y,0)\le\tfrac1{2u^\nu}\}\times
+\{(S,Z):\ S\ge0,\ Z\ge0,\ u^\nu Z+\textstyle\sum_i\beta_i S_i\le\tfrac12\},
+\]
+whose $Y$-factor has volume
+$\ge\det(\mathrm{I\!I}_p)^{-1/2}\,\vol_m(\{|\cdot|\le\rho\})\ge
+\lambda_{\max}^{-m/2}\,\omega_m\rho^m$ (an ellipsoid with semi-axes
+$\ge(u^\nu\lambda_{\max})^{-1/2}$), and whose $(S,Z)$-factor is the simplex
+$\{S\ge0,Z\ge0,\ u^\nu Z+\sum\beta_iS_i\le\tfrac12\}$ of volume
+$\tfrac1{(k+1)!}\,(\tfrac12)^{k+1}/(u^\nu\prod_i\beta_i)$.  Now
+$u^\nu\prod_i\beta_i$ is, up to the bounded Gram determinant of the cone
+generators, exactly the reciprocal of the normalized solid angle of
+$N(G,p)=\cone\{\nor(p),a_i\}$ at unit radius: indeed the simplex
+$\{\beta_0\ge0,\beta_i\ge0,\ \beta_0u^\nu+\sum\beta_i\beta_i\le\tfrac12\}$ in
+cone-coordinates has Euclidean volume proportional to
+$\sqrt{\det \mathrm{Gram}(\nor(p),a_i)}$, and that determinant is bounded in
+$[g_0^{(k+1)/2}, (k+1)^{(k+1)/2}]$ by (GP2).  Collecting the bounded curvature
+and Gram factors into $\kappa_{\mathrm{geom}}$ yields
+$\vol_n(R_p)\ge\omega(N_p)\,\kappa_{\mathrm{geom}}\,\vol_n(K)$, hence
+$c_1=\omega(N_p)\kappa_{\mathrm{geom}}>0$.  Positivity of $\omega(N_p)$ is
+exactly (GP1): a degenerate (lower-dimensional, $\omega=0$) cone would mean
+$\nor(p),a_i$ linearly dependent.
+\end{proof}
+
+\begin{remark}\label{rem:reflfrac}
+This is where the orthogonal model's exact fraction $2^{-k}$ is replaced.
+There, $N(G,p)=\cone\{p,e_1,\dots,e_k\}$ is a right-angled corner, its
+normalized solid angle is exactly $2^{-k}$ of the half-space solid angle, and
+the all-negative orthant keeps that fraction by reflection symmetry
+(\cite[Lemma 2.2]{companion11}).  In general position the corner is oblique,
+the reflection symmetry is gone, and the surviving fraction of the cap is the
+genuine normalized solid angle $\omega(N_p)$ of the oblique cone --- still a
+fixed positive number by (GP2), but no longer a clean power of two.  Only
+positivity, not the exact value, is needed downstream.
+\end{remark}
+
+\begin{lemma}[Stall]\label{lem:stall}
+Fix $\kappa>1$, $\sigma>0$, $\delta\ge\frac3N$, $p\in E$ and
+$0<h\le\frac H4$, $H\le h_1$.  If exactly one sample point lies in $C_p(H)$ and
+it lies in $C_p(h)$, then for every $w\le H/\kappa$ the slab with direction
+$u_p$, center that sample point, and truncation set $h_k$ violates the doubling
+inequality; hence the UDC fails for every $\ell\le H/\kappa^2$.
+\end{lemma}
+
+\begin{proof}
+Verbatim the companion stall lemma \cite[Lemma 2.4]{companion11}: for
+$w'\le H$ the slab is contained in $C_p(h+\frac{w'}2)\subseteq C_p(H)$, so the
+empirical masses of $S_w$ and $S_{\kappa w}$ both equal $\frac1N<
+\min\{\delta,(1+\sigma)\frac1N\}$.  Nothing in the argument uses orthogonality
+or roundness; it uses only that caps are nested and that $C_p(H)$ holds a
+single point.
+\end{proof}
+
+\section{The lower bound}\label{sec:lower}
+
+\begin{proof}[Proof of Theorem~\ref{thm:B}]
+This is the second-moment scheme of \cite{companion7,companion11} verbatim,
+fed by Lemma~\ref{lem:capmass}.  Set
+$q:=(4\kappa^2)^{(n+1+k)/2}\,c_2/c_1$,
+$\varepsilon_3:=\frac{j}{4q(2n-j)}$, $\tau_N:=\varepsilon_3\log N$.  Define
+$h_N$ by $\mu(C_p(h_N))=\tau_N/N$; this is well defined and, by
+Lemma~\ref{lem:capmass}, $h_N\asymp(\tau_N/N)^{2/(n+1+k)}$ uniformly in $p$
+(the constants $c_1,c_2$ are $p$-independent).  Put $H_N:=4\kappa^2h_N$, so
+$\mu(C_p(H_N))\le q\,\tau_N/N$.
+
+By the footprint bound the caps have radius $\le c_3\sqrt{H_N}$ around their
+centers $p\in E$.  Since $E$ is a compact $C^2$ $j$-manifold, a maximal
+$2c_3\sqrt{H_N}$-separated family $p_1,\dots,p_M\in E$ has
+\[
+M\ \ge\ c\,\bigl(\sqrt{H_N}\bigr)^{-j}\ \ge\
+c'\,(N/\tau_N)^{\frac{j}{n+1+k}},
+\qquad \frac{j}{n+1+k}=\frac{j}{2n-j},
+\]
+because the $j$-dimensional volume of $E$ is a fixed positive constant and a
+metric ball of radius $\rho$ in $E$ has volume $\asymp\rho^j$ (curvatures of
+$E$ are bounded, by admissibility).  The outer caps $C_{p_\alpha}(H_N)$ are
+pairwise disjoint: if $x\in C_{p_\alpha}(H_N)\cap C_{p_\beta}(H_N)$ then
+$|x-p_\alpha|,|x-p_\beta|\le c_3\sqrt{H_N}$, so
+$|p_\alpha-p_\beta|\le2c_3\sqrt{H_N}$, contradicting separation.
+
+Let $E_\alpha$ be the event that $C_{p_\alpha}(H_N)$ contains exactly one
+sample point and that point lies in $C_{p_\alpha}(h_N)$, and
+$X:=\sum_\alpha\mathbf1_{E_\alpha}$.  Exactly as in the companion,
+\[
+\PP(E_\alpha)=N\,\mu(C_{p_\alpha}(h_N))\,(1-\mu(C_{p_\alpha}(H_N)))^{N-1}
+\ge\tau_N\,N^{-2q\varepsilon_3},
+\]
+\[
+\E X=\sum_\alpha\PP(E_\alpha)\ge c'\,N^{\frac j{2n-j}-2q\varepsilon_3}\,
+\tau_N^{\,1-\frac j{2n-j}}\ \ge\ c'\,N^{\frac{j}{2(2n-j)}}\to\infty,
+\]
+using $2q\varepsilon_3=\frac{j}{2(2n-j)}$.  The outer caps being disjoint, the
+events $E_\alpha$ are negatively associated up to the standard correction, and
+the variance ratio is $\exp(O(N\,\mu(C(H_N))^2))=1+o(1)$; Chebyshev gives
+$\PP(X=0)\le(\E X)^{-1}+o(1)=o(1)$.  On $\{X\ge1\}$, Lemma~\ref{lem:stall}
+forces $\ell>H_N/\kappa^2=4h_N\ge c\,(\log N/N)^{2/(n+1+k)}$.
+\end{proof}
+
+\section{The section lemma in general position}\label{sec:section}
+
+We prove Theorem~\ref{thm:A}.  As in \cite{companion11} it is equivalent, and
+more convenient, to prove the cap-mass lower bound
+\begin{equation}\label{eq:capgoal}
+\Lambda_u(h):=\mu\bigl(\{x\in G:\ \langle x,u\rangle\ge\tau_{\max}-h\}\bigr)
+\ \ge\ b\,h^{\frac{n+1+k}2}
+\qquad(0<h\le h_0)
+\end{equation}
+for every unit $u$, together with a bulk anchor; the conversion to sections is
+identical to the model and is recalled at the end.  The proof is by induction
+on the number $k$ of truncations.  The induction is legitimate because the
+admissible class is closed under the slicing used below
+(Lemma~\ref{lem:slice}).
+
+\subsection{Closure under slicing}
+
+\begin{lemma}[Slices of admissible configurations are admissible]\label{lem:slice}
+Let $(K,h_k)$ be admissible with $k\ge1$, fix $i_0\in\{1,\dots,k\}$ and a
+level $s\in\R$ near $c_{i_0}$, and set
+\[
+K_s\;:=\;K\cap\{\langle x,a_{i_0}\rangle=s\},
+\qquad
+h_{k-1}^{(s)}\;:=\;\{(a_i,c_i):i\ne i_0\}\big|_{K_s}.
+\]
+For $s$ in a one-sided neighborhood of $c_{i_0}$ on which $K_s\ne\emptyset$,
+the pair $(K_s,h_{k-1}^{(s)})$ is an admissible $(n-1,k-1)$ configuration with
+the same angular constant $\theta_0'\ge\theta_0/2$ and curvature band
+$[\lambda_{\min},\lambda_{\max}']$, $\lambda_{\max}'\le\lambda_{\max}/\sin
+\theta_0$, and its stratum $E_s=E\cap\{\langle x,a_{i_0}\rangle=s\}$ has
+dimension $j$ (one less ambient dimension, one fewer constraint).
+\end{lemma}
+
+\begin{proof}
+$K_s$ is the intersection of the $C^2$ strictly convex body $K$ with an affine
+hyperplane $\{\langle\cdot,a_{i_0}\rangle=s\}$ transversal to $\partial K$ near
+$E$ (transversality is (GP1): $a_{i_0}$ is independent of $\nor$ along $E$, so
+the hyperplane is not tangent).  A transversal hyperplane section of a $C^2$
+strictly convex body is a $C^2$ strictly convex body in the hyperplane, with
+principal curvatures bounded below by $\lambda_{\min}$ and above by
+$\lambda_{\max}/\sin\theta(a_{i_0},\nor)\le\lambda_{\max}/\sin\theta_0$
+(the section curvature is the normal curvature divided by the sine of the
+incidence angle).  The remaining normals $a_i$ ($i\ne i_0$), projected into the
+hyperplane $a_{i_0}^\perp$, are the truncating normals of the slice; their
+mutual angles and their angles to the section normal stay in $[\theta_0/2,\pi
+-\theta_0/2]$ because projecting along $a_{i_0}$ (which makes angle $\ge\theta_0$
+with each of them and with $\nor$) distorts angles by at most $\theta_0/2$ for
+$s$ close enough to $c_{i_0}$.  Linear independence (GP1) of
+$\{\nu_{K_s},a_i:i\ne i_0\}$ in the hyperplane follows from (GP1) for the full
+list minus $a_{i_0}$.  The stratum identity is immediate.
+\end{proof}
+
+\begin{remark}
+Lemma~\ref{lem:slice} is the general-position analogue of the fact, used freely
+in \cite{companion11}, that a coordinate slice of the orthogonal model
+$B^n\cap\{x_i\le0\}$ is the orthogonal model $B^{n-1}\cap\{x_i\le0\}$ in one
+lower dimension.  There the slice is again a round ball cut by coordinate
+half-spaces; here it is an oblique section, a $C^2$ convex body cut by oblique
+half-spaces, but still admissible.  This closure is what lets the induction run
+without ever leaving the class.
+\end{remark}
+
+\subsection{Proof of the cap-mass bound \eqref{eq:capgoal}}
+
+\begin{proof}
+We induct on $k$.  The base case $k=0$ is the smooth strictly convex body: by
+Lemma~\ref{lem:floor} with no constraints, the cap of depth $h$ in direction
+$u=\nor(p_u)$ (with $p_u$ the unique boundary maximizer of $\langle\cdot,u
+\rangle$) has, after the rescaling $y=\sqrt h Y$, $z=hZ$,
+$\mu(C(h))\ge c(n,\lambda_{\max})h^{(n+1)/2}$, the standard cap bound for a
+body with bounded curvature \cite{companion3}.  Assume \eqref{eq:capgoal} for
+all admissible $(n-1,k-1)$ configurations.
+
+Fix an admissible $(K,h_k)$ and a unit $u$.  Let
+$p_u\in\partial K$ maximize $\langle\cdot,u\rangle$ over $G$; by convex duality
+$p_u$ lies in the stratum whose normal cone contains $u$.  Let $S\subseteq
+\{1,\dots,k\}$ be the active set at $p_u$, i.e.\ the constraints with
+$\langle p_u,a_i\rangle=c_i$.  We distinguish three cases by the position of
+$u$ relative to the normal cone $N(G,p_u)=\cone\{\nor(p_u),a_i:i\in S\}$.
+
+\medskip
+\emph{Case 1 ($u$ interior to the full normal cone; $S=\{1,\dots,k\}$ and $u\in
+\mathrm{relint}\,N(G,p_u)$).}
+Then $p_u\in E$ and Proposition~\ref{prop:exp} (via Lemma~\ref{lem:capmass}'s
+proof, which only used interiority and admissibility) gives directly
+\[
+\Lambda_u(h)=\mu(C_{p_u}^u(h))\ \ge\ \gamma_1\,h^{(n+1+k)/2},
+\]
+with $\gamma_1>0$ depending on the angular distance of $u$ to
+$\partial N(G,p_u)$, hence on $\theta_0,k$ uniformly.  This is
+\eqref{eq:capgoal}.
+
+\medskip
+\emph{Case 2 (some constraints inactive at $p_u$; $S\subsetneq\{1,\dots,k\}$).}
+Then near $p_u$ the constraints $\{i\notin S\}$ are slack:
+$\langle p_u,a_i\rangle<c_i$ for $i\notin S$, so there is $\rho>0$ with
+$\langle x,a_i\rangle<c_i$ for all $i\notin S$ and all $x$ with
+$|x-p_u|\le\rho$.  For $h\le h_0(\rho)$ the cap $C^u(h)$ has radius
+$\le c_3\sqrt h\le\rho$ (footprint bound), hence lies in
+$\{x:\langle x,a_i\rangle<c_i,\ i\notin S\}$, where $G$ agrees with the
+sub-configuration $G_S:=K\cap\bigcap_{i\in S}\{\langle x,a_i\rangle\le c_i\}$.
+Now $(K,h_{|S|})$ with truncation set $\{(a_i,c_i):i\in S\}$ is an admissible
+$(n,|S|)$ configuration with $|S|\le k$ active constraints and the \emph{same}
+$\theta_0$ (a sub-list of admissible normals is admissible), and $u\in
+\mathrm{relint}\,N(G_S,p_u)$ with $p_u$ on \emph{its} lowest stratum
+$E_S\supseteq E$.  If $|S|<k$ apply the induction hypothesis in the form
+already proved for fewer constraints (Case 1 for $G_S$ when $u$ is interior to
+$N(G_S,p_u)$, else recurse into Case 2/3 for $G_S$); the exponent it yields is
+$(n+1+|S|)/2\le(n+1+k)/2$, and since $h\le1$,
+\[
+\Lambda_u(h)=\mu(C^u(h)\cap G_S)\ \ge\ b_S\,h^{(n+1+|S|)/2}\ \ge\
+b_S\,h^{(n+1+k)/2}.
+\]
+The bound $h\le1$ only helps; we lose nothing because the larger exponent is
+the worst case and it is achieved exactly when all $k$ constraints are active,
+i.e.\ in Cases 1 and 3.
+
+\medskip
+\emph{Case 3 ($u$ near-tangent to an active facet; $S=\{1,\dots,k\}$ but $u\in
+\partial N(G,p_u)$ or just inside, near the wall $\{\beta_{i_0}\to0\}$).}
+This is the inductive heart.  Suppose $u$ is within angle $\theta_0/4$ of the
+facet of $N(G,p_u)$ opposite the generator $a_{i_0}$, i.e.\ the cone
+coefficient $\beta_{i_0}$ of $u$ is the smallest and may be near $0$.  We slice
+out $a_{i_0}$.  For $s\in[\,c_{i_0}-\tfrac{h}{2|u^{(i_0)}|},\,c_{i_0}]$ ---
+an interval of length $\tfrac{h}{2|u^{(i_0)}|}\ge\tfrac h2$, where
+$u^{(i_0)}:=\langle u,a_{i_0}\rangle$ is bounded below by a constant times
+$\beta_{i_0}$ but the interval length uses only $|u^{(i_0)}|\le1$ --- consider
+the slice
+\[
+K_s=K\cap\{\langle x,a_{i_0}\rangle=s\},
+\qquad
+G_s=G\cap\{\langle x,a_{i_0}\rangle=s\}
+=K_s\cap\bigcap_{i\ne i_0}\{\langle x,a_i\rangle\le c_i\}.
+\]
+By Lemma~\ref{lem:slice}, $(K_s,h_{k-1}^{(s)})$ is admissible of type
+$(n-1,k-1)$.  On the slice, write
+$\langle x,u\rangle=u^{(i_0)}s+\langle x,u_\perp\rangle$, where
+$u_\perp$ is the orthogonal projection of $u$ onto $a_{i_0}^\perp$,
+$|u_\perp|\le1$.  The unit direction $u_\perp/|u_\perp|$ is admissible for the
+slice (it is some unit vector in the hyperplane), and the maximizer of
+$\langle\cdot,u_\perp\rangle$ over $G_s$ approaches $p_u$ as $s\to c_{i_0}$; the
+maximum value $\tau_{\max}^{(s)}$ differs from $\tau_{\max}-u^{(i_0)}s$ by at
+most $O(h)$ for $s$ within $O(h)$ of $c_{i_0}$, by the $C^2$ dependence of the
+section on $s$ (curvatures bounded via Lemma~\ref{lem:slice}).  Hence the cap
+of depth $h$ for $(G,u)$ contains, over each such $s$, the image of the cap of
+depth $h_*:=h/(4|u_\perp|)\ge h/4$ for $(G_s,u_\perp/|u_\perp|)$, once we budget
+the $\le2h$ of depth spent on the $s$-displacement and the section drift within
+a total depth $4h$ (and then replace $h$ by $h/4$ throughout, which only changes
+constants).  By the induction hypothesis on $(n-1,k-1)$ at depth
+$\min(h_*,h_0)$ --- if $h_*>h_0$ use monotonicity $\Lambda(h_*)\ge\Lambda(h_0)
+\ge b\,h_0^{(n+k-1)/2}\ge b'h^{(n+k-1)/2}$ --- the slice cap has
+$(n-1)$-mass $\ge b(n-1,k-1)\,h^{((n-1)+1+(k-1))/2}=b\,h^{(n+k-1)/2}$.
+Integrating over the $s$-interval of length $\ge h/2$ (the co-area factor
+$|\nabla\langle\cdot,a_{i_0}\rangle|=1$ is constant) by Fubini,
+\[
+\Lambda_u(h)\ \ge\ \frac h2\cdot b(n-1,k-1)\,h^{\frac{n+k-1}2}
+\;=\;b'\,h^{1+\frac{n+k-1}2}\;=\;b'\,h^{\frac{n+1+k}2}.
+\]
+This proves \eqref{eq:capgoal} in Case 3 and closes the induction.
+
+\medskip
+The three cases are exhaustive: either all $k$ constraints are active at $p_u$
+(Cases 1 and 3, split by whether $u$ is interior or near-tangent to the cone)
+or some are inactive (Case 2).  In every case
+$\Lambda_u(h)\ge b\,h^{(n+1+k)/2}$ with $b=b(n,k,\theta_0,\lambda_{\min},
+\lambda_{\max})>0$, proving \eqref{eq:capgoal}.
+\end{proof}
+
+\subsection{Conversion to sections}
+
+Exactly as in \cite[\S4]{companion11}.  By Brunn--Minkowski the section area
+$A_u(\cdot)$ is unimodal in the depth.  The thickness ball $B(c^-,r_0)\subseteq
+G$ provides a bulk depth $h^\dagger\ge c(\theta_0,k)>0$ at which
+$A_u(h^\dagger)\ge a_1>0$ (its $\langle\cdot,u\rangle$-range is an interval of
+length $2r_0$ inside the range of $G$, with central sections of radius
+$\ge\frac{\sqrt3}2 r_0$).  For $h\le h_0\le h^\dagger$: below the mode of
+$A_u$, $A_u$ is nondecreasing on $[0,h]$ and $A_u(h)\ge\Lambda_u(h)/h\ge
+b\,h^{(n-1+k)/2}$ by \eqref{eq:capgoal}; above the mode, unimodality gives
+$A_u(h)\ge A_u(h^\dagger)\ge a_1\ge a_1h^{(n-1+k)/2}$.  Either way
+$A_u(h)\ge a\,h^{(n-1+k)/2}$, which is Theorem~\ref{thm:A}.
+
+\begin{remark}\label{rem:device}
+The witness in Case 1 is the conjugate-frame box: take $Y$, $S$ in the limiting
+region $R$ of Proposition~\ref{prop:exp} and pull back to a box in $x$ whose
+$f_i$-edges have length $\asymp h$ (truncated directions) and whose
+$\eta_a$-edges have length $\asymp\sqrt h$ (stratum directions), capped by the
+fibre of length $\asymp h$ in the $u$-direction.  The orthogonal model's box
+\cite[\S4]{companion11} is the special case $f_i=e_i$; the only structural
+change is that the truncated edges point along the conjugate directions
+$f_i\in\mathrm{span}\{a_i\}$ rather than the coordinate axes, which is forced
+because the constraints are diagonalized by $s_i=\langle x-p,a_i\rangle$, not by
+the standard coordinates.  Case 3 is the mechanism by which face strata inherit
+the law from lower-dimensional admissible models, one truncation per dimension,
+through the slicing closure of Lemma~\ref{lem:slice}.
+\end{remark}
+
+\section{Slab bound and the upper bound}\label{sec:upper}
+
+\begin{theorem}[Slab volume]\label{thm:slab}
+There are $c>0$ and $L_0>0$, depending only on $n,k,\theta_0$ and the curvature
+band, with
+\[
+\vol_n\Bigl(G\cap\{|\langle y-x,u\rangle|\le L\}\Bigr)\ \ge\
+c\,L^{\frac{n+1+k}2}
+\qquad(x\in G,\ u\in S^{n-1},\ 0<L\le L_0).
+\]
+\end{theorem}
+
+\begin{proof}
+Anchor--unimodality as in \cite{companion3,companion11}.  Apply
+Theorem~\ref{thm:A} to $u$ and to $-u$: there are anchors at depth $L/4$ from
+each $u$-extreme of $G$ with section value $\ge a\,(L/4)^{(n-1+k)/2}$.  By
+Brunn--Minkowski unimodality the section area exceeds the smaller anchor value
+throughout the middle of the $\langle\cdot,u\rangle$-range, whose complement has
+length $L/2$; the range has length $\ge2r_0\ge2L$ by thickness; and the slab
+keeps length $\ge L$ inside the range, of which $\ge L/2$ is in the middle.
+Integrating the section area over that middle length gives
+$\ge\frac L2\cdot a(L/4)^{(n-1+k)/2}=c\,L^{(n+1+k)/2}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:A}, upper bound]
+Insert Theorem~\ref{thm:slab} into the high-probability skeleton of
+\cite{companion2,companion3}, identical to \cite[\S5]{companion11}.  The
+population dichotomy holds with thickness radius $r_0$; the VC relative-deviation
+bounds apply to slabs cut by the $k$ half-spaces of $h_k$ (a slab truncated by
+$h_k$ is an intersection of $k+2$ half-spaces, VC dimension $O(nk)$, so the
+uniform deviation $u_N\asymp\log N/N$ controls all of them simultaneously); and
+a sample point in $S_w$ yields $\mu(S_{\kappa w})\ge32u_N$ for every
+$w\ge\ell_N:=C\,(u_N)^{2/(n+1+k)}\asymp(\log N/N)^{2/(n+1+k)}$, by
+Theorem~\ref{thm:slab} with $L=\kappa w$.  This proves the UDC at scaling
+$\ell_N$ with probability $\ge1-\frac1N$.
+\end{proof}
+
+\noindent Theorems~\ref{thm:A} and \ref{thm:B} together give
+Corollary~\ref{cor:C}.
+
+\section{Why rounding fails, and the open case}\label{sec:john}
+
+\subsection{The John-position obstruction}
+
+The shortest conceivable proof of Corollary~\ref{cor:C} would map the admissible
+configuration to the orthogonal model by a single affine change of variables
+and quote \cite{companion11}.  This is provably impossible already at the
+linear level, and the obstruction is instructive.
+
+\begin{proposition}[No simultaneous rounding and orthogonalization]\label{prop:john}
+Let $a_1,\dots,a_k\in S^{n-1}$ ($k\ge2$) be unit normals, not pairwise
+orthogonal.  There is no invertible linear map $A\in GL_n(\R)$ such that
+$A(B^n)$ is a ball and $Aa_1,\dots,Aa_k$ are pairwise orthogonal.
+\end{proposition}
+
+\begin{proof}
+$A(B^n)$ is a ball iff $A^{\mathsf T}A=\lambda I$ for some $\lambda>0$ (then
+$A=\sqrt\lambda\,O$, $O$ orthogonal).  But then for all $i,j$,
+\[
+\langle Aa_i,Aa_j\rangle=\langle A^{\mathsf T}Aa_i,a_j\rangle
+=\lambda\,\langle a_i,a_j\rangle,
+\]
+so the inner products are scaled by the common factor $\lambda$, and the
+\emph{angles} between the $a_i$ are preserved.  In particular $Aa_i\perp Aa_j$
+forces $a_i\perp a_j$.  If some pair $a_i,a_j$ is non-orthogonal, no such $A$
+orthogonalizes it while rounding the ball.
+\end{proof}
+
+Thus one cannot have both: any linear map that orthogonalizes the cuts
+distorts $B^n$ into a genuine ellipsoid (and, for a general $K$, distorts the
+curvature band in a direction-dependent way), and any linear map that keeps the
+body a ball preserves all the cut angles.  Affinely, $K$ and the half-spaces are
+\emph{jointly} rigid up to a similarity: the configuration carries a true
+modulus, the angles, that no volume-preserving or shape-preserving map can
+delete.  The argument of \S\S\ref{sec:caps}--\ref{sec:upper} is therefore
+intrinsic of necessity: the conjugate frame diagonalizes the constraints
+\emph{without} touching $K$, paying for the obliqueness with the anisotropic but
+uniformly elliptic floor $Q$ of Lemma~\ref{lem:floor} and the solid angle
+$\omega(N_p)$ of Lemma~\ref{lem:capmass}, rather than reducing to a right-angled
+model.  This is also why the exponent, which depends only on the
+linear-versus-quadratic floor dichotomy (Remark~\ref{rem:why}), survives
+unchanged while the constants acquire $\theta_0$-dependence.
+
+\begin{remark}
+For $k=1$ a single cut can always be orthogonalized trivially, and indeed a
+similarity reduces one oblique cut of a ball to the model; the obstruction is
+genuinely a $k\ge2$ phenomenon, the first place where two angles must coexist.
+This matches the fact that the orthogonal-model induction of
+\cite{companion11} and of \S\ref{sec:section} only becomes nontrivial at
+$k\ge2$.
+\end{remark}
+
+\subsection{Curved truncating surfaces and the companion}
+
+Admissibility (Definition~\ref{def:adm}) keeps the truncating boundaries
+\emph{flat} (half-spaces $\langle x,a_i\rangle\le c_i$).  The curved companion
+\cite{companion15curved} treats the next case, where each flat constraint is
+replaced by a \(C^2\) truncating surface \(g_i(x)\le0\), under the same
+transversality philosophy.  For each fixed curved configuration it proves that
+the exponent survives:
+\[
+\ell_N\;\asymp\;\Bigl(\frac{\log N}{N}\Bigr)^{2/(2n-j)}.
+\]
+The remaining issue is not the exponent but uniformity of the constants across
+all curvature-bounded families.  With curved truncations the second fundamental
+forms of the truncating walls enter the same rescaled floor block as the
+stratum form, so the flat factorization
+\(c_1=\omega(N_p)\,\kappa_{\mathrm{geom}}\) no longer follows formally.  The
+open problem left to \cite{companion15curved} is whether the lower slab/cap
+constants can be made uniform near multiply-tangent normal directions, or
+whether one must keep constants depending on the fixed curved configuration.
+
+\subsection{Summary of the completed program}
+
+Combining the present paper with its companions, for a $C^2$ strictly convex
+body cut by half-spaces in general position the critical scaling of the uniform
+doubling condition is, at every transversal stratum of dimension $j$,
+\[
+\ell_N\;\asymp\;\Bigl(\frac{\log N}{N}\Bigr)^{2/(2n-j)}
+\quad(1\le j\le n-1),
+\qquad
+\ell_N\;\asymp\;\Bigl(\frac{\log N}{N}\Bigr)^{1/n}
+\quad(j=0),
+\]
+exponents and logarithms exact, with constants depending only on the dimension,
+the number of cuts, the dihedral-angle lower bound $\theta_0$, and the
+curvature band.  The orthogonal model of \cite{companion11} is recovered as the
+right-angled, round, flat case $\omega(N_p)=2^{-k}$, $Q=\mathrm{Id}$,
+$f_i=e_i$.  The finest resolution at which i.i.d.\ data can certify the
+doubling condition is again set by the most isolated extremal sample point of
+the worst boundary stratum of the activation geometry, and the explicit
+exponent ladder $\tfrac2{n+1},\tfrac2{n+2},\dots,\tfrac1n$ governs the
+transition from smooth to conical truncation regardless of the angles at which
+the cuts meet.  For curved truncating surfaces, \cite{companion15curved}
+settles the fixed-family exponent law and leaves the curvature-band-uniform
+lower/slab and factorized-constant problems isolated above.
+
+\subsection*{Acknowledgments}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and innovation
+programme (grant agreement No.\ 101041711), by the Israel Science Foundation
+(grant number 2258/19) and by the Israel Science Foundation (ISF Grant
+4101/25).
+
+\subsection*{Declaration on generative AI}
+During the preparation of this work the author used generative AI tools to
+accelerate drafting and revision.  All mathematical claims, proofs, and
+bibliographic information were subsequently reviewed and edited by the author,
+who takes full responsibility for the content of the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{ShmaloUDC}
+Y.~Shmalo,
+\emph{Stability of accuracy for the training of DNNs via the uniform doubling
+condition}, Ann.\ Math.\ Artif.\ Intell.\ (2024),
+DOI 10.1007/s10472-023-09919-1.
+
+\bibitem{companion2}
+Y.~Shmalo, \emph{The uniform doubling condition holds with high probability
+for independent samples}, manuscript, 2026.
+
+\bibitem{companion3}
+Y.~Shmalo, \emph{The critical scaling of the uniform doubling condition:
+smooth bodies versus truncations}, manuscript, 2026.
+
+\bibitem{companion5}
+Y.~Shmalo, \emph{The exact critical scaling of the uniform doubling
+condition with truncations}, manuscript, 2026.
+
+\bibitem{companion6}
+Y.~Shmalo, \emph{The edge exponent of the uniform doubling condition and an
+interpolation conjecture}, manuscript, 2026.
+
+\bibitem{companion7}
+Y.~Shmalo, \emph{The edge exponent of the uniform doubling condition, II:
+the matching upper bound}, manuscript, 2026.
+
+\bibitem{companion11}
+Y.~Shmalo, \emph{The interpolation law for the critical scaling of the uniform
+doubling condition}, manuscript, 2026.
+
+\bibitem{companion15curved}
+Y.~Shmalo, \emph{The curved-truncation companion to the UDC interpolation law},
+manuscript, 2026.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,33 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w539",
+  "bundle_slug": "p0309-source-scope-correction-003",
+  "entries": [
+    {
+      "key": "p0309-source-scope",
+      "namespace": "probability.riesz-gases",
+      "logical_name": "p0309-source-scope-and-unverified-openness",
+      "kind": "concept",
+      "title": "P0309 source scope: a schematic low-temperature crystal target",
+      "statement": "The P0309 campaign intake asks for existence of a positive-temperature crystalline Gibbs phase for a three-dimensional Coulomb or Riesz gas in the regimes predicted by Lewin's 2022 review. That intake leaves the exponent s, ensemble, precise Gibbs specification, and crystal order parameter unspecified. In Lewin, Section VI.B, the 3D BCC/FCC solid phase diagram is reported as a numerical expectation; Theorem 46 proves uniqueness of an isometry-invariant fluid only for short-range s>d at sufficiently small activity. Neither statement establishes a low-temperature 3D crystal. The intake's 2026-09-07 unsolved label is dated; current openness is unverified.",
+      "proof_text": null,
+      "assumptions": ["Read as a source-scope correction, not a theorem or novelty claim", "Original intake entry op-p0309 in campaign bundle_010.json", "Lewin arXiv:2202.09240v2, Theorem 46 and Section VI.B"],
+      "domain": "probability and equilibrium statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w539-P0309-source-scope-audit-20261010",
+        "url": "urn:owner-own-work:P0309:w539:source-scope:20261010",
+        "revision": "2026-10-10-source-check-draft",
+        "license": "owner-own-work (source audit, primary review attributed)",
+        "excerpt": "For larger values of Υ, it is believed to form a solid."
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0309-source-scope",
+      "to_existing_logical": "math:probability.core:open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "semantic_association",
+      "rationale": "The existing card asks for a 3D crystalline Gibbs phase 'in the regimes predicted in the review'; this source note records which quantifiers remain unstated and distinguishes Lewin's low-activity uniqueness theorem from the predicted solid regime."
+    }
+  ]
+}

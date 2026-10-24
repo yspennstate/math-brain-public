@@ -1,0 +1,46 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261011T214601Z-account01-B19-b05-data-prefix-review-a094",
+  "claims": [
+    {
+      "claim_id": "B05-A023-BENT-DATA-PREFIX-TELESCOPE-NARROW",
+      "version": 1,
+      "exact_statement": "For every even k=2h>=4 in the declared bent one-point-defect selector family, the B05 formulas for L_m, Gamma_m^L, the geometric L telescope, the single activation factor p=delta^2, and the terminal L_h and Q_h bounds are correct. This acceptance does not identify Gamma_m^L alone with the complete physical data/selector order-swap interaction.",
+      "hypotheses": ["uniform physical Boolean cube", "even k>=4", "quadratic bent tensor with declared pairing", "genuine all-zero one-point flip", "fresh physical selector", "2k fresh activation controls", "entropy in bits"],
+      "statement_sha256": "fa333e4eccdea0e4b3673db67da0fc9fae5b5e0bdf61cf9f18261c29306623e8",
+      "contributors": ["account01/B05"],
+      "proof_source": {"repository": "yspennstate/math-open-problems", "commit": "8ffa3a930c849135d366d10d8d4f2e8afd0da67c", "path": "reports/fei-2026-10-11/runs/B05/20261011T212522Z-account01-B05-data-prefix-a023/REPORT.md", "blob_sha": "c0353372b1e896045504067fb77724f588397527"},
+      "proof_dependencies": [
+        {"claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO", "version": 1, "commit": "80cc2e5027efa56d79c4ecdf7d4949759ef2068b"},
+        {"claim_id": "B05-A023-CONTROL-FIRST-ORDER-TRANSPORT-NOGO", "version": 1, "commit": "440ecfff652a0b02f072c98bc4524d59a2a8bf2a"}
+      ],
+      "review_records": [{"reviewer": "account01/B19", "packet": "A094", "verdict": "ACCEPT_NARROW_L_LEDGER_SCOPE", "method": "Independent support/sign reconstruction, analytic formula audit, endpoint audit, and separate 100-decimal exact-FWHT reproduction.", "source": "REPORT.md sections 2, 5, and 6"}],
+      "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED_AT_NARROW_SCOPE",
+      "supersedes": [],
+      "refutes": ["Every data interleaving leaves the bent-defect d k logarithm unpaid."],
+      "first_unproved_line": "Identifying Gamma_m^L alone as the complete physical data-node order-swap credit omits Gamma_m^Q.",
+      "scope_exclusions": ["No arbitrary Boolean core or addressing extension.", "No universal restriction tree or FEI implication.", "Physical full-credit interpretation is handled only by the strengthened B19 claim."],
+      "next_consumers": ["A021", "A023", "A024", "A027", "A028", "A036", "A064", "A087", "B05", "B20"]
+    },
+    {
+      "claim_id": "B19-A094-BENT-FULL-PREFIX-TELESCOPE",
+      "version": 1,
+      "exact_statement": "For every even k=2h>=4 in the declared bent one-point-defect selector family, define the phase packet Q_m after u_1=...=u_m=0. Then Q_m=A_Q-2delta+2^m rho(B_Q+2rho), Gamma_m^Q=Q_m-Q_(m+1)/2=(A_Q-2delta)/2>=0, and Delta_y(s_0)=sum_{m=0}^{h-1}2^(-m)(Gamma_m^L+Gamma_m^Q)+2^(-h)Delta_y(s_h). Each Gamma_m^L+Gamma_m^Q is exactly the physical two-coordinate data/selector order-swap interaction.",
+      "hypotheses": ["uniform physical Boolean cube", "even k>=4", "quadratic bent tensor with declared pairing", "genuine all-zero one-point flip", "fresh physical selector", "entropy in bits"],
+      "statement_sha256": "508db08632a504d8096fdf2b01da27e69abc18bd19ae367d9abb299e8a65e93a",
+      "contributors": ["account01/B05", "account01/B19"],
+      "proof_source": {"repository": "yspennstate/math-open-problems", "path": "reports/fei-2026-10-11/runs/B19/20261011T214601Z-account01-B19-b05-data-prefix-review-a094/REPORT.md", "locator": "sections 3 and 4"},
+      "proof_dependencies": [
+        {"claim_id": "B05-A023-BENT-DATA-PREFIX-TELESCOPE-NARROW", "version": 1, "role": "L packet formula and family notation"},
+        {"result": "h_2(r)<=2 sqrt(r(1-r))", "role": "phase-credit nonnegativity", "proof": "REPORT.md section 4"}
+      ],
+      "review_records": [],
+      "status": "ANALYTICALLY_PROVED_PENDING_FRESH_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": ["The phase/JS prefix can invalidate the physical nonnegative-credit interpretation on the declared bent family."],
+      "first_unproved_line": "No extension is proved when equal bent-pair magnitudes are replaced by unequal prime Boolean factors.",
+      "scope_exclusions": ["No arbitrary Boolean core or addressing extension.", "No universal stopping rule.", "No full-FEI conclusion."],
+      "next_consumers": ["A023", "A024", "A027", "A028", "A036", "A064", "A087", "B05", "B18", "B20"]
+    }
+  ]
+}

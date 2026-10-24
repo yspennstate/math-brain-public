@@ -1,0 +1,116 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w403",
+  "bundle_slug": "p0003-honeycomb-pinch-obstruction-w403-20261010",
+  "entries": [
+    {
+      "key": "macroscopic-return-event",
+      "namespace": "probability.self-avoiding-walk",
+      "logical_name": "macroscopic-self-return-event",
+      "kind": "definition",
+      "title": "Macroscopic near-return event for a continuous curve",
+      "statement": "For a continuous curve gamma:[0,1]->C and r>=0,q>0, E(r,q) is the event that there exist s<t with |gamma(s)-gamma(t)|<=r and diameter(gamma([s,t]))>=q. A nonconstant self-return is equality gamma(s)=gamma(t) with a positive-diameter intervening subcurve. Constant waiting intervals are not nonconstant self-returns.",
+      "proof_text": null,
+      "assumptions": [
+        "gamma is continuous on the compact interval [0,1]"
+      ],
+      "domain": "probability theory; topology of scaling limits",
+      "source": {
+        "source_id": "owner-probability-w403-p0003-pinch-20261010",
+        "url": "urn:probability-research:20261010:w403:p0003-pinch",
+        "revision": "author-proof-exact-reproduction-20261010-v1",
+        "license": "owner-own-work; draft campaign counterexample and criterion, no novelty claim",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "rejected-simple-limit-bridge",
+      "namespace": "probability.self-avoiding-walk",
+      "logical_name": "rejected-self-avoidance-tightness-simple-limit-bridge",
+      "kind": "concept",
+      "title": "Rejected bridge: discrete self-avoidance and tightness force a simple trace",
+      "statement": "DRAFT ROUTE AUDIT. The auxiliary implication that tight laws on simple honeycomb paths with distinct fixed endpoints in a fixed simply connected domain must have simple limiting traces is false. There are deterministic such laws converging uniformly, with speed bounded by 28, whose limiting trace contains a closed rectangle. This refutes only the auxiliary implication; it supplies no claim about the uniform fixed-length or critical-fugacity SAW law.",
+      "proof_text": null,
+      "assumptions": [
+        "Draft campaign mathematics; independent mathematical review pending",
+        "No conclusion about the actual SAW sampling law or the P0003 SLE conjecture"
+      ],
+      "domain": "probability theory; topology of scaling limits",
+      "source": {
+        "source_id": "owner-probability-w403-p0003-pinch-20261010",
+        "url": "urn:probability-research:20261010:w403:p0003-pinch",
+        "revision": "author-proof-exact-reproduction-20261010-v1",
+        "license": "owner-own-work; draft campaign counterexample and criterion, no novelty claim",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "honeycomb-loop-pinch",
+      "namespace": "probability.self-avoiding-walk",
+      "logical_name": "honeycomb-simple-paths-uniform-limit-closed-loop",
+      "kind": "concept",
+      "title": "Honeycomb simple paths can pinch into a macroscopic loop",
+      "statement": "DRAFT AUTHOR PROOF; independent review pending. For even N>=8 let the regular honeycomb vertices be H(i,j)=(sqrt(3)i/2,3j/2-((i+j) mod 2)/2), with horizontal nearest neighbors and upward vertical edges at even i+j, and scale by 1/N. Concatenate: row 0 from (-4N,0) to (-4,0); ascent to (-3,2N) alternating columns -4,-3; row 2N to (2N-1,2N); descent to (2N,0) alternating columns 2N-1,2N; row 0 to (3,0); descent to (4,-N) alternating columns 3,4; row -N to (4N,-N). Each ascent/descent takes the available vertical edge then switches columns after every vertical step except the last. Shared corners are counted once. The path is vertex-simple with 22N-12 edges. Giving each of seven routes time 1/7 yields speed <=28 and uniform error <=5/N relative to the polygon with anchors (-2sqrt(3),0),(0,0),(0,3),(sqrt(3),3),(sqrt(3),0),(0,0),(0,-3/2),(2sqrt(3),-3/2). All interior vertices lie in D=(-2sqrt(3),2sqrt(3))x(-2,4); endpoints are fixed distinct smooth boundary points. The limit contains the boundary of [0,sqrt(3)]x[0,3] and is not a simple arc. The neck anchors have distance sqrt(37)/N while the excursion diameter tends to 2sqrt(3). The laws here are point masses, not the actual SAW sampling law.",
+      "proof_text": null,
+      "assumptions": [
+        "Draft campaign mathematics; independent mathematical review pending",
+        "No conclusion about the actual SAW sampling law or the P0003 SLE conjecture"
+      ],
+      "domain": "probability theory; topology of scaling limits",
+      "source": {
+        "source_id": "owner-probability-w403-p0003-pinch-20261010",
+        "url": "urn:probability-research:20261010:w403:p0003-pinch",
+        "revision": "author-proof-exact-reproduction-20261010-v1",
+        "license": "owner-own-work; draft campaign counterexample and criterion, no novelty claim",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "self-return-criterion",
+      "namespace": "probability.self-avoiding-walk",
+      "logical_name": "uniform-weak-limit-macroscopic-self-return-criterion",
+      "kind": "concept",
+      "title": "Criterion for excluding nonconstant returns in a uniform weak limit",
+      "statement": "DRAFT AUTHOR PROOF; independent review pending. Suppose P_n converges weakly to P on C([0,1],C) with the uniform metric. For r>=0,q>0, let E(r,q) be the curves for which some s<t have |gamma(s)-gamma(t)|<=r and diameter(gamma([s,t]))>=q. Then P gives probability zero to every nonconstant self-return if and only if, for every q>0, lim_{r down to 0} limsup_{n to infinity} P_n(E(r,q))=0. Constant waiting intervals are permitted. No boundary avoidance, conformal invariance, Loewner or SLE conclusion is included.",
+      "proof_text": null,
+      "assumptions": [
+        "Draft campaign mathematics; independent mathematical review pending",
+        "No conclusion about the actual SAW sampling law or the P0003 SLE conjecture"
+      ],
+      "domain": "probability theory; topology of scaling limits",
+      "source": {
+        "source_id": "owner-probability-w403-p0003-pinch-20261010",
+        "url": "urn:probability-research:20261010:w403:p0003-pinch",
+        "revision": "author-proof-exact-reproduction-20261010-v1",
+        "license": "owner-own-work; draft campaign counterexample and criterion, no novelty claim",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "honeycomb-loop-pinch",
+      "to_key": "rejected-simple-limit-bridge",
+      "kind": "refutes",
+      "rationale": "The explicit vertex-simple paths converge uniformly to a trace containing a closed rectangle, defeating the claimed sufficiency of tightness and self-avoidance."
+    },
+    {
+      "from_key": "self-return-criterion",
+      "to_key": "macroscopic-return-event",
+      "kind": "depends_on",
+      "rationale": "The criterion is stated using this exact macroscopic near-return event."
+    },
+    {
+      "from_key": "honeycomb-loop-pinch",
+      "to_key": "self-return-criterion",
+      "kind": "semantic_association",
+      "rationale": "For the deterministic paths E(r,1) has eventual probability one for every r>0; the criterion identifies the omitted probability estimate."
+    },
+    {
+      "from_key": "honeycomb-loop-pinch",
+      "to_existing_logical": "math:probability.core:open-problem-p0003-hexagonal-self-avoiding-walk-scaling-limit",
+      "kind": "semantic_association",
+      "rationale": "A topology obstruction to a stronger SAW scaling-limit bridge; not a refutation or solution of the fixed-length SLE question."
+    }
+  ]
+}

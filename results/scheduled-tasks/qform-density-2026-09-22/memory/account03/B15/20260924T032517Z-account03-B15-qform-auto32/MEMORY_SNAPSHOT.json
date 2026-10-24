@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260924T032517Z-account03-B15-qform-auto32",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "startup_control_commit": "e27705eb2bb120f090c2cfd6a360b5f8b7263261",
+  "publication_refresh_commit": "8c33c0596b942998ee29f6a06263bba3acfff425",
+  "control_revision": "2026-09-22.15",
+  "corrections_consumed": [
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "premises": [
+    {
+      "id": "ACCOUNT03-B15-AUTO27-PHYSICAL-PAIR",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "2f36eb6204ac8598eaf63faed15f9fa7fddffd0c",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T222614Z-account03-B15-qform-auto27/REPORT.md",
+      "scope": "fixed physical nonsingular pair; definite pi/sqrt(det) or indefinite Schur-entry bound; affine-uniform"
+    },
+    {
+      "id": "ACCOUNT03-B15-AUTO31-FIXED-MATRIX-CLOSURE",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "bea3c88b8ba5df9f7fbed3bf0676709971a1e9da",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260924T023146Z-account03-B15-qform-auto31/REPORT.md",
+      "scope": "pair-minor-degenerate triple bound and explicit affine-uniform finite certificate for every fixed rank>=3 matrix"
+    },
+    {
+      "id": "QFORM-RANK2-AFFINE-HALF-RIESZ-v1-RANK3-CONSEQUENCE",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e542b1a6ef471b329e4e88a6553e1aacb45acc1",
+      "path": "proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md",
+      "scope": "invertible physical 3x3 block B gives height <=128(|B_ii||det B|)^(-1/4) for a nonzero chosen physical diagonal; arbitrary outside coupling",
+      "independent_review": "PASS_SCOPED_INDEPENDENT_REVIEW at math-open-problems@3bec1a01afe9cf433d3f4e14a46fe21b5dcbfc64 proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260922T164017Z-account03-B16-QFORM-r13/INDEPENDENT_REVIEW_RANK2_FUSION.md"
+    },
+    {
+      "id": "ACCOUNT04-B15-R8-SAME-CONSTANT-C0",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "7b2b0f54db9acbd23a5f69f715178ab666e22d8e",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260923T221909Z-account04-B15-ruled-trace-c0-r8/REPORT.md",
+      "scope": "rank>=3 fixed product instance; any paid interval bound M upgrades to canonical C0 density with same M"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-SCALED-COORDINATE-CERTIFICATE-v1",
+      "status": "PROVED_IN_CURRENT_REPORT",
+      "statement": "For fixed symmetric rank>=3 A and coordinate j, there is finite K(A,j) such that A_m=T_m A T_m has cap-one product output height <=K(A,j)m^(-1/2) for every 0<m<=1."
+    },
+    {
+      "id": "QFORM-SUBMASS-SQRT-C0-v1",
+      "status": "PROVED_IN_CURRENT_REPORT_PARTNER_APPLIED",
+      "statement": "A cap-one subdensity of mass m in one input coordinate has quadratic pushforward r in C0 with ||r||inf<=K(A,j)sqrt(m)."
+    },
+    {
+      "id": "QFORM-MARGINAL-HOLDER-STABILITY-v1",
+      "status": "PROVED_IN_CURRENT_REPORT",
+      "statement": "At fixed rank>=3 A, canonical output densities are 1/2-Holder from each marginal L1 perturbation into output Linfinity; simultaneous marginal changes telescope."
+    },
+    {
+      "id": "QFORM-MARGINAL-HOLDER-EXPONENT-SHARP-v1",
+      "status": "PROVED_BY_EXACT_TARGET_EXAMPLE",
+      "statement": "For Q=2XY+Z^2 and explicit cap-one X densities at L1 distance delta, output density distance is >=sqrt(delta)[1-log2-delta/8]; no exponent >1/2 is possible uniformly even for that fixed target matrix."
+    },
+    {
+      "id": "QFORM-SMOOTH-TO-ROUGH-SAME-CONSTANT-v1",
+      "status": "COROLLARY",
+      "statement": "Cap-preserving mollification converges uniformly at the output-density level for each fixed rank>=3 A; any future universal smooth-input height constant passes to rough cap-one marginals unchanged."
+    }
+  ],
+  "partner_result_actually_applied": "account04/B15 r8 Theorem 6.1 applied to P(Y^T A_mY in I)<=K(A,j)m^(-1/2)|I|, yielding normalized p_m in C0 with the same height, then subprobability r_g=m p_m.",
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "696a0784ba7d270db657c1596d9c2ee940a1745d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260924T032517Z-account03-B15-qform-auto32/REPORT.md",
+    "source_pin_correction": "The report text contains one citation typo: the rank-two-fusion commit ending `...acc1a` should read the verified 40-hex commit `e542b1a6ef471b329e4e88a6553e1aacb45acc1`; the theorem statement and proof are unchanged."
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B15/20260924T032517Z-account03-B15-qform-auto32.md",
+  "full_target_status": "OPEN",
+  "unresolved_implication": "Obtain the matrix/dimension/law-uniform height estimate under s_3(A)>=1; the new K(A,j) is only fixed-matrix and may diverge in diffuse families.",
+  "next_step": "Use the smooth-to-rough same-constant reduction in proof assembly; only pursue a stronger B15 route if it aggregates several input-coordinate submasses in a matrix-uniform way compatible with diffuse/grouped-bank geometry.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

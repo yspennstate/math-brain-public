@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "target": "B_i <= Kstar I_i",
+  "Kstar_symbolic": "4+(5/2)log2(5)-(9/2)log2(3)",
+  "rational_upper_bound": "107/40",
+  "rational_upper_bound_integer_certificate": "2^53 * 5^100 < 3^180",
+  "results": [
+    {
+      "n": 1,
+      "cases": 2,
+      "sharp_cases": 0,
+      "first_sharp_cases": [],
+      "selection_sha256": "ea5dbf9596d187e9500f23e9a680109475341cf4e81f7e043f7d97152c10772f",
+      "elapsed_seconds": 0.0006745000137016177,
+      "exact_checks": 3
+    },
+    {
+      "n": 2,
+      "cases": 8,
+      "sharp_cases": 0,
+      "first_sharp_cases": [],
+      "selection_sha256": "7cd2d463e503fb49d7a165929102a9dd775b031d16879673cea769e2c87856b4",
+      "elapsed_seconds": 0.0007882000645622611,
+      "exact_checks": 20
+    },
+    {
+      "n": 3,
+      "cases": 128,
+      "sharp_cases": 8,
+      "first_sharp_cases": [
+        {
+          "gray_index": 1,
+          "truth_mask": 1
+        },
+        {
+          "gray_index": 3,
+          "truth_mask": 2
+        },
+        {
+          "gray_index": 7,
+          "truth_mask": 4
+        },
+        {
+          "gray_index": 15,
+          "truth_mask": 8
+        },
+        {
+          "gray_index": 31,
+          "truth_mask": 16
+        },
+        {
+          "gray_index": 63,
+          "truth_mask": 32
+        },
+        {
+          "gray_index": 85,
+          "truth_mask": 127
+        },
+        {
+          "gray_index": 127,
+          "truth_mask": 64
+        }
+      ],
+      "selection_sha256": "faf1a5cb1f77ebab674c967a10c844b1e9a0a70c2a3a438948b6b7802869c6a9",
+      "elapsed_seconds": 0.004879399901255965,
+      "exact_checks": 488
+    },
+    {
+      "n": 4,
+      "cases": 32768,
+      "sharp_cases": 32,
+      "first_sharp_cases": [
+        {
+          "gray_index": 4,
+          "truth_mask": 6
+        },
+        {
+          "gray_index": 6,
+          "truth_mask": 5
+        },
+        {
+          "gray_index": 16,
+          "truth_mask": 24
+        },
+        {
+          "gray_index": 30,
+          "truth_mask": 17
+        },
+        {
+          "gray_index": 48,
+          "truth_mask": 40
+        },
+        {
+          "gray_index": 60,
+          "truth_mask": 34
+        },
+        {
+          "gray_index": 64,
+          "truth_mask": 96
+        },
+        {
+          "gray_index": 96,
+          "truth_mask": 80
+        }
+      ],
+      "selection_sha256": "d510238fc573e8b5e4a9f519598b0a3ce2a2a15bd26cb4f2ccec5b61988c156f",
+      "elapsed_seconds": 2.6605729999719188,
+      "exact_checks": 163328
+    }
+  ],
+  "elapsed_seconds": 2.6698805999476463,
+  "domain_exhaustiveness": "All truth tables modulo output negation; no input, character, or affine symmetry reduction.",
+  "total_representatives": 32906,
+  "total_nonconstant": 32902,
+  "units": "bits for entropy, uniform physical influence",
+  "comparison": "Factor 2*N^2*B_i-2*Kstar*D_i into integer prime log coefficients c_p and compare positive and negative integer products.",
+  "certificate_files": [
+    "out/selection_n1.bin",
+    "out/selection_n2.bin",
+    "out/selection_n3.bin",
+    "out/selection_n4.bin"
+  ],
+  "rational_bound_lhs": "71054273576010018587112426757812500000000000000000000000000000000000000000000000000000",
+  "rational_bound_rhs": "76177348045866392339289727720615561750424801402395196724001565744957137343033038019601",
+  "separate_bridge": "EXHAUSTIVENESS_LEMMA.tex, Theorem 2",
+  "independent_reproduction": "out/independent_reproduction.json; distinct implementation by same author, external review pending"
+}

@@ -1,0 +1,33 @@
+# exact target, quantifiers, hypotheses and units
+
+Advance A064 global debt potential through an actual intermediate reset followed by further physical queries, using the SAME previously allocated original reserve. PROOF.md proves the all-width theorem for every l>=2 in the explicit field fixture, with every boundary and initial condition stated. Units bits, fair physical filtration, supporting normalized references including source-zero rows. Full FEI OPEN.
+
+# sources actually read, revisions and theorem locators
+
+Protocol execution-v2 exact schema reread; current BOARD and B13 leadv2 read at stage start. Own STATUS/prior proof and arithmetic resumed. New sources: A061 20261023T002802Z REPORT and PROOF sections1--4; A087 20261023T020220Z REPORT, PROOF full-physical extension and CLAIMS; A062 20261023T015047Z PROOF_SHARP section1--4 considered with its essential conditional nonempty-law hypotheses, not imported as a general arbitrary-reference result. Prior campaign/paper intake inherited unchanged; no outside paper theorem newly asserted. Source pins are in out/SOURCE_RECEIPTS.json. A087 source exact statement/hypotheses/hash unchanged in local review copy.
+
+# complete derivation or exact first unsupported line
+
+PROOF.md sections1--4 reconstruct K+M physical-edge/KL drift and independently accept A087's full original statement. The NEW enlarged policy admits the actual selector/v query followed by actual product replacement, then any adaptive physical continuation and a final product conversion-and-stop. OLD W=m+2 funds the entire signed splice J_H=2M_h-m-log2(r_H)<m+1<W. It funds max(K,TC+M) at the BEFORE-reset cut and TC+M after the reset; both actual child inherited KLs equal incoming core K. No descendant receives renewed capacity. Old unrelated omega<=Sbar/4 stays spent; unchanged W<5Sbar/7 leaves>Sbar/28. If W already allocated the extra owner charge is0; nested smaller theta is topped up only by W-theta. All full terminal H+KL stays; cross-entropy inequality adds expected terminal H to BOTH sides, not an FEI proof.
+
+First unsupported universal line: an eligible unused influence-scale original owner for arbitrary sparse inherited histories. Even in this field family, resetting after an arbitrary earlier adaptive prefix or admitting a second intermediate reset needs a new signed guard; selector-entry K_H cannot be reused there. The theorem permits branchwise choice of old/new mode at selector entry, not arbitrary later mode switching. ADVERSARIAL_REVIEW.md records attempts to break renewal, hidden-cut, entropy and availability claims.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+FROZEN_SPEC.json predates the computations. Own previous helper is copied byte-for-byte to code/exact.py, hash df0ea68352541733093f215e40d386b8b413d347e6140364ed51cedc7a7f7fe3; this shares A064 arithmetic lineage and is not a fresh independent implementation of A064's old result. A087's different implementation was never executed/imported. Commands from this run: `python -B -X utf8 code/check_reset.py --pilot` and `python -B -X utf8 code/check_reset.py`. Final pilot PASS 9485 assertions in 1.719092s, excluded from primary total. Final main PASS 253257 exact assertions in 8.376676s: 32 generic fixtures; 124 query nodes/248 actual query children, including60 field post-reset query nodes at fixed l2,3 (all6 and9 ordinary directions, both carrier outcomes and selector branches). No symmetry quotient, dimension escalation or floating sign. Deterministic unused-u boundaries remain in all actual spectra/physical-edge counts. Analytic proof supplies all-depth and all-width conclusions.
+
+Integer FWHT and separate physical-edge counts; Fraction references/kernels including reference-only rows; exact prime-factor log identities for KL chains and signed bills. Strict signs use96-bit outward rational bounds,32-term atanh and explicit65th-power tail. After adding explicit before-reset boundary assertions, pilot/main were rerun; only final outputs counted. Estimate100MB; each search below55s. No >300MB job, compiler, GPU or detached task started; no formal certification claimed.
+
+# proof dependencies and changed downstream conclusions
+
+One new source-complete scoped theorem, A064-INTERMEDIATE-RESET-CONTINUATION-OLD-CAP@1, pending independent review. A087-FULL-PHYSICAL-MARGINAL-ENVELOPE-LIFT@1 independently HOLDS at unchanged full scope; no repair supplied to that version. New theorem credits A087 envelope and A061 family, and rechecks own previous carrier/reference formulas. This closes the next immediate carrier reset-continuation transaction without repeating closed ordinary/carrier-depth work. Does not imply arbitrary-history reset payment, tensor-reference factorization, or full FEI.
+
+# one next mathematical action and independent reviewer
+
+Insert ONE ordinary core query BEFORE the first intermediate v/product reset; derive its guard from actual inherited K and same diminished original W/omega with both full terminals and post-reset continuation. A087/A094 review current splice and original-cap boundary. This is the shortest local extension toward an adaptive reset rule; another no-reset class check would not address the unpaid line.
+
+# actual persistence receipts or precise save blocker
+
+Four protocol files, proof, adversarial review, frozen spec, code and exact outputs saved in this assigned run. STATUS has two lines; WORKLOG append and LEARNED updated. out/SCHEMA_CHECK.json validates exact schema fields, identical progress/delta, unchanged source payload and coverage. out/PERSISTENCE_RECEIPTS.json hashes saved artifacts (excluding itself), then rereads them; local save only, supervisor/archive/mirror/adoption unobserved. No source tree or other agent folder modified. Brain self-care remains degraded/unverified for stale owner-model/state-of-mind sources; these personal/context notes were not mathematical premises.
+
+**Universal bridge:** C019 stopping-tree payment and C024 history transfer advance from one terminal reset to an ACTUAL intermediate reset followed by arbitrary physical continuation at the paid selector/v location for ALL l>=2, retaining BEFORE-reset inherited KL, all later H+KL, the SAME old full-M cap and old quarter expenditure. Additional owner charge0 if W already booked, residual>Sbar/28. Remaining is signed payment at adaptively chosen reset locations and influence-scale original-owner eligibility beyond this fixture. NEXT inserts one actual prefix query while preserving these accounts, directly testing reset-rule transport toward full FEI instead of repeating an isolated no-reset case.

@@ -1,0 +1,57 @@
+[
+  {
+    "claim_id": "A043-PRIME-GRID-AND-BOUNDARY",
+    "version": 1,
+    "exact_statement": "For every essential prime sign gate of arity 2,3,4 at every product law with each input probability in {1/4,1/2,3/4}, the exact maximum corrected Hplus/(I-Var) is 26-12log2(3), attained by sign OR2 at (1/4,1/4). The complete certificate covers 458356 symmetry representatives of 4639338 labeled gate/bias cases. For the essential prime sign majority3 at probabilities (1-q^3,q,q), the ratio tends to 2+4/ln(2) as q decreases to zero; at q=1/8 it exceeds 73411827299/10000000000>7. Thus an all-interior-bias corrected constant 7 for nonbinary primes of arities 3 or 4 is false. No all-bias supremum, divergent family, or full FEI result is asserted.",
+    "hypotheses": [
+      "uniform definition of genuine disjoint essential primes from A043 stage 1",
+      "corrected spectral entropy in bits and spectral influence in the normalized product basis",
+      "finite grid probabilities exactly {1/4,1/2,3/4} for the maximum theorem",
+      "output-negation and reflected-bias symmetries preserve the ratio and prime property",
+      "nonbinary boundary statement uses the actual majority3 truth table, q in (0,1/2), r=q^3",
+      "all-prime all-bias universal endpoint remains open"
+    ],
+    "statement_sha256": "21bd9b3e165072f3bf1300db2da715959aab3a5ac055b6a842d13ada5fcddf3a",
+    "contributors": [
+      "A043/account05"
+    ],
+    "proof_source": {
+      "run_id": "20261012T012726Z-account05-A043-prime-gate-decomposition",
+      "paths": [
+        "REPORT.md",
+        "MAJORITY_BOUNDARY.md",
+        "out/grid_certificate.json",
+        "out/exact_winner.json",
+        "out/boundary_certificate.json",
+        "code/certify_grid.py",
+        "code/verify_winner.py",
+        "code/certify_boundary.py"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A043-DISJOINT-PRIME-ENDPOINT",
+        "version": 1,
+        "scope": "essential-prime definition and cofactor criterion only; exact vectorized census also checked",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A043\\runs\\20261011T221757Z-account05-A043-prime-gate-decomposition\\PRIME_GATE_DEFINITION.tex",
+        "status": "SOURCE_COMPLETE_ANALYTIC_INTERFACE_LEAD_RECONSTRUCTION; INDEPENDENT_REVIEW_PENDING"
+      }
+    ],
+    "review_records": [],
+    "status": "FINITE_CERTIFICATE_AND_ANALYTIC_BOUNDARY_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "All interior product biases on nonbinary essential primes of arities three or four satisfy corrected Hplus <= 7(I-Var)."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A042",
+      "A044",
+      "A045",
+      "A091",
+      "A090",
+      "B09",
+      "B20"
+    ]
+  }
+]

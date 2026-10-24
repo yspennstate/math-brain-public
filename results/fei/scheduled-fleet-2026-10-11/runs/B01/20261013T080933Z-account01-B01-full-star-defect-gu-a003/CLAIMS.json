@@ -1,0 +1,39 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261013T080933Z-account01-B01-full-star-defect-gu-a003",
+  "stream": "B01",
+  "primary_packet_id": "A003",
+  "claims": [
+    {
+      "claim_id": "B01-A003-FULL-STAR-DEFECT-GU",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every n>=1, every restriction of F_n(z,x)=(-1)^{z sum_j x_j}(1-2 1_{x=0}), and every product of such a restriction with an arbitrary disjoint affine-quadratic phase, G(f)<=8 I(f).",
+      "quantifiers": "All n>=1; arbitrary disjoint quadratic rank and total dimension; uniform-cube Boolean functions; base-2 units.",
+      "evidence": [
+        "FULL_STAR_DEFECT_GU.md",
+        "CHECK_FULL_STAR_DEFECT_GU.py",
+        "CHECK_FULL_STAR_DEFECT_GU.out"
+      ],
+      "reviewers": ["A086", "A094", "B19"]
+    },
+    {
+      "claim_id": "B01-A003-FULL-STAR-DEFECT-FEI",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "On the same restriction-closed class, U(f)<=8 I(f) and H(f)<=18 I(f).",
+      "dependencies": [
+        "B01-A003-FULL-STAR-DEFECT-GU-v1",
+        "standard inequality H<=2I+2U"
+      ],
+      "scope_note": "Proper expanding class only; this does not settle full FEI."
+    },
+    {
+      "claim_id": "GU-ASYMMETRY-MISMATCH",
+      "version": "v1.1",
+      "status": "OPEN",
+      "statement": "No dimension-independent control of the aggregate upper-set asymmetry mismatch is proved for arbitrary changing coherent cores with reused physical variables.",
+      "delta": "The gap is removed for one full-star point-defect block and disjoint quadratic extensions, but not for arbitrary hierarchies."
+    }
+  ]
+}

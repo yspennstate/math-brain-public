@@ -1,0 +1,2 @@
+STATE: A020 stage5 complete: biased near-identical children force Lambda>1/32 at d=2^-k despite support-aware rule; all refs rate4, actual query K1 good; one paid half-core debit leaves>3/8;6 exact cases PASS; FEI OPEN.
+NEXT: Expose second essential v query with SAME incoming core/activation reference and booked <5/8 debit; retain both terminals and remaining bank; A018/A019/A090/A091/A092 review.

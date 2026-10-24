@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260923T120740Z-account01-B15-QFORM-auto11",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit_at_start": "78eecf78eba2cf88ec3bfdfc219807f7a0772359",
+  "source_control_commit_pre_handoff": "8134da4cfd589d62b295282a0e48a6d394bea819",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "partner": {
+    "account_slot": "account02/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4a7b432e38619707420962a272805f9646ad7e59",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260923T090720Z-account02-B15-QFORM-auto11/REPORT.md",
+    "result_used": "For every invertible indefinite original-coordinate physical triple S, its majority/one-sheet output submeasure is dominated by C_S dx for arbitrary rough cap-one product laws and arbitrary outside couplings; C_S is the exact ruled constant and C_S<=pi*sqrt(2)/sigma_min(A_SS)."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-GAUSSIAN-HEIGHT-CHARACTERIZATION-v1",
+      "statement": "For every probability measure mu on R, D_inf(mu)=sup_{0<eps<=1} ||mu*gamma_eps||_infinity, where D_inf is the least C with mu<=C dx, extended by infinity. No prior absolute continuity or continuity is required."
+    },
+    {
+      "id": "QFORM-GAUSSIAN-C0-CHARACTERIZATION-v1",
+      "statement": "mu has a C_0 density iff mu*gamma_eps converges in L-infinity as eps->0; this cleanly separates continuity from bounded density."
+    },
+    {
+      "id": "QFORM-FIXED-UNIT-GAUSSIAN-NORMAL-FORM-v1",
+      "statement": "With s(A)=s_3(A), sup_target s(A)D_inf(mu_Q)=sup_target s(A)||mu_Q*gamma_1||_infinity, by exact spectral scaling."
+    },
+    {
+      "id": "QFORM-PHYSICAL-GRADIENT-MAJORITY-IDENTITY-v1",
+      "statement": "For an invertible indefinite original-coordinate triple S, Q-c_S(W)=(1/4)g_S^T A_SS^{-1}g_S with g=grad Q, hence the majority event is {g_S^T adj(A_SS)g_S<=0}."
+    },
+    {
+      "id": "QFORM-FRACTIONAL-MAJORITY-CONE-COVER-v1",
+      "statement": "If nonnegative weights a_S on indefinite physical triples satisfy sum_S a_S 1_{g_S^T adj(A_SS)g_S<=0}>=1 for every g in range(A), then mu_Q(E)<=|E| sum_S a_S C_S and ||p_Q||_infinity<=sum_S a_S C_S. At a Gaussian heat posterior nu, H_eps(y) E_nu[sum_S a_S1_GS]<=sum_S a_SC_S."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bf0578b70dfe169d27de4cbab37f4f0aa7bdbd98",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T120740Z-account01-B15-QFORM-auto11/REPORT.md",
+    "blob_sha": "7363dedca4d36e00135096d627992efafb6440c7"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "0685f1da3e681f596cd3e01af08dc87d8360cda8",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B15/20260923T120740Z-account01-B15-QFORM-auto11.md"
+  },
+  "status": {
+    "absolute_continuity": "PROVED_QUALITATIVELY_FOR_ANY_NONZERO_A_AND_ANY_ABSOLUTELY_CONTINUOUS_JOINT_INPUT",
+    "universal_bounded_density": "OPEN",
+    "full_continuity": "OPEN_SEPARATE"
+  },
+  "unresolved_implication": "Combine the cost-efficient original-coordinate majority fractional bank with a genuine minority/ridge/grouped-coordinate certificate, or prove that the simultaneous minority gradient core necessarily lies in an already-paid product-preserving branch. A one-sheet bank alone cannot cover all range directions, e.g. diagonal signature (1,1,-1).",
+  "next_step": "Attack a hybrid fractional cover that includes one-sheet triple certificates plus an existing product-sensitive minority/ridge/grouped receiver, keeping scale cost O(1/s_3(A))."
+}

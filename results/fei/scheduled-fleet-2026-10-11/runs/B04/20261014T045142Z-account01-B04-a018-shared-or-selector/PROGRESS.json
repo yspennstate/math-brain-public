@@ -1,0 +1,20 @@
+{
+  "schema_version": 2,
+  "stream_id": "B04",
+  "primary_packet_id": "A018",
+  "attempt_id": "A018-SHARED-OR-SELECTOR-1",
+  "gap_id": "G-LOW-GAP-SHARED-DATA-COLLISION",
+  "claim_version": "B04-A018-SHARED-OR-SELECTOR-v1",
+  "prior_status": "Gap-free one-step H payment and one-path child reserve were known, but the complete GU increment with all shared data coordinates was not computed.",
+  "new_status": "The exact complete GU increment is derived and evaluated on a vanishing-gap, nonuniform-child shared-data family; it forces a+b>=1.",
+  "mathematical_status": "PROVED_RESTRICTED_PENDING_INDEPENDENT_REVIEW",
+  "acceptance_evidence": ["SHARED_OR_SELECTOR.tex", "verify_shared_or_selector.py", "CHECK.out"],
+  "remaining_obstacle": "Control positive mixed curvature on arbitrary overlapping branches with a nonreused reserve; no universal pair is proved.",
+  "consumers": ["A090", "A091", "A094", "A099"],
+  "reviewers": ["A090", "A091", "A094"],
+  "next_action": "Construct an overlapping shared-coordinate analogue and determine whether normalized mixed curvature has positive limsup, then target a boundary pair with a+b=1.",
+  "full_fei_solved": false,
+  "delivery_status": "LOCAL_CANONICAL_WRITTEN; BRAIN_MIRROR_AND_REMOTE_READBACK_PENDING",
+  "model_metadata": "GPT-5 family; separate reasoning-effort metadata not exposed"
+}
+

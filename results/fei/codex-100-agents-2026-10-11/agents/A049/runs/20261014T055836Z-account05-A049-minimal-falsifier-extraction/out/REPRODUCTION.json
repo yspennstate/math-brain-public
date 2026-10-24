@@ -1,0 +1,108 @@
+{
+  "profiles_for_t_at_most_2": [
+    {
+      "alpha": "1/4",
+      "D_minus_half": {
+        "7": "-49/32",
+        "2": "7/2",
+        "3": "9/16"
+      },
+      "positive_integer_certificate": {
+        "common_denominator": 32,
+        "positive_integer": "2011602187966726743375995239279154580946944",
+        "negative_integer": "256923577521058878088611477224235621321607"
+      }
+    },
+    {
+      "alpha": "1/2",
+      "D_minus_half": {
+        "3": "-9/8",
+        "2": "5/2"
+      },
+      "positive_integer_certificate": {
+        "common_denominator": 8,
+        "positive_integer": "1048576",
+        "negative_integer": "19683"
+      }
+    },
+    {
+      "alpha": "3/4",
+      "D_minus_half": {
+        "5": "-25/32",
+        "2": "7/2",
+        "3": "-9/32"
+      },
+      "positive_integer_certificate": {
+        "common_denominator": 32,
+        "positive_integer": "5192296858534827628530496329220096",
+        "negative_integer": "5865991115570068359375"
+      }
+    },
+    {
+      "alpha": "1",
+      "D_minus_half": {
+        "2": "3/2"
+      },
+      "positive_integer_certificate": {
+        "common_denominator": 2,
+        "positive_integer": "8",
+        "negative_integer": "1"
+      }
+    }
+  ],
+  "scalar_identity": "D(alpha)=phi((1-alpha/2)^2)+3phi(alpha^2/4)-phi((1-alpha)^2)/2-phi(alpha^2)/2+2alpha(1-alpha)",
+  "seed_spectrum_shape_cancels": true,
+  "influence_vector": [
+    "1/16",
+    "1/16",
+    "1/16",
+    "1/16",
+    "1/16",
+    "1"
+  ],
+  "reference_branch_predictions": [
+    "4/113",
+    "109/113"
+  ],
+  "root_KL": {
+    "2": "-3",
+    "3": "225/128",
+    "5": "225/128"
+  },
+  "conditional_erasure_KL": {
+    "3": "225/128",
+    "5": "225/128",
+    "113": "-113/128"
+  },
+  "outcome_KL": {
+    "2": "-2",
+    "109": "-1/2",
+    "113": "1"
+  },
+  "mean_inherited_terminal_KL": {
+    "2": "-1",
+    "109": "1/2",
+    "113": "-15/128"
+  },
+  "mean_chosen_terminal_KL": {
+    "2": "-1",
+    "7": "49/64"
+  },
+  "signed_reset": {
+    "7": "49/64",
+    "109": "-1/2",
+    "113": "15/128"
+  },
+  "root_CE_bits": "5",
+  "mean_chosen_terminal_CE_bits": "2",
+  "full_reference_mean_terminal_K4_surplus": "3",
+  "full_reference_query_excess_over_4d": "11/4",
+  "full_reference_remaining_root_K4_surplus": "1/4",
+  "parity_conditional_KL_bits": "0",
+  "all_terminal_costs_retained": true,
+  "assertions": 98,
+  "runtime_seconds": 0.02667730000030133,
+  "truth_table_sha256": "141ff6a13f2f29817ac0b0c7f5e50aaa6ad868107521d5f980209b5955a20548",
+  "external_review": "pending",
+  "scope": "Internal different-representation reconstruction, not an independent agent review"
+}

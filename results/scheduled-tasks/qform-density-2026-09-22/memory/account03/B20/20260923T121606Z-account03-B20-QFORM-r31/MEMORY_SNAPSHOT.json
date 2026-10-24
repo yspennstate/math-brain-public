@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B20",
+  "run_id": "20260923T121606Z-account03-B20-QFORM-r31",
+  "status": "ESSENTIAL_STEP_APPLIED_EXACT_RANK3_HEAVY_LEVERAGE_FRONTIER_REDUCED_FULL_TARGET_OPEN",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "source_control": {
+    "startup_commit": "975945c8fde917f24d6358f05287278634b414d3",
+    "publication_refresh_commit": "aaaa3b762f4df97516a762e0908112086572e6e7",
+    "owner_control_revision": "2026-09-22.15",
+    "programme_control_revision": "2026-09-22.5"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@2c0131b6830892a77a8faaf3521388d3a51e7514",
+      "scope": "account03/B20 r30 exact-rank-three double-coloop three-packet compiler; mixed residual-row survivor retains a physical leverage>1/2 row"
+    },
+    {
+      "source": "yspennstate/math-open-problems@b42066397eb5ba83a885c6e700e0417a49a1d8ac",
+      "scope": "account01/B18 capped-basis Fresnel theorem; natural volume sampling gives Z=det(LL^T), marginals are leverages, affine terms allowed, continuous density"
+    },
+    {
+      "source": "yspennstate/math-open-problems@1d3bcd6c2a19605a6bdcb3fa572b7f85c19369db",
+      "scope": "account04/B20 moderate-heavy anchor deletion theorem for exact-rank-three c in (1/2,3/4] and all residual deletion-whitened leverages<=1/2"
+    },
+    {
+      "source": "yspennstate/math-open-problems@0a22623e8aa296bfdb618b8952fbd186c670c55c",
+      "scope": "fresh global account01/B20 arbitrary-rank N3 low-leverage annulus-or-star4dir compiler; remains separate and open"
+    }
+  ],
+  "new_claim": {
+    "id": "QFORM-EXACTR3-18ANCHOR-DIFFUSE-OR-NEARCOLOOP-v1",
+    "scope": "exact-rank-three A=RMR^T with R^TR=I3 and s_min(M)>=1; arbitrary independent cap-one original-coordinate densities",
+    "statement": "Either Q has a continuous density with ||p_Q||_infinity<=192e<522, or at most 18 original physical coordinates carry >63/64 of one spectral direction's squared physical mass.",
+    "mechanism": "literal original-coordinate deletion; exact determinant recursion det G_new=det G_old(1-c); diffuse stop paid by volume-sampling capped-basis Fresnel; c>63/64 forces immediate near-coloop; otherwise 18 heavy c>1/2 deletions force det G<(1/64)^3 and hence lambda_min(G)<1/64"
+  },
+  "partner_result_actually_applied": {
+    "source": "yspennstate/math-open-problems@1d3bcd6c2a19605a6bdcb3fa572b7f85c19369db",
+    "claim": "QFORM-MODERATE-HEAVY-ANCHOR-DELETION-v1",
+    "inequality": "for 1/2<c<=3/4 and residual whitened leverages<=1/2, ||p_Q||_infinity<=3e(1-c)^(-1/3)<=3e*4^(1/3)<12.946",
+    "continuity": true
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c6e058c3d4aa36e89ad433c1f4d41b6f82739bf8",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B20/20260923T121606Z-account03-B20-QFORM-r31/REPORT.md",
+    "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B20/20260923T121606Z-account03-B20-QFORM-r31/CHECK_RESULTS.json"
+  },
+  "continuity": {
+    "full_target": "OPEN",
+    "new_paid_diffuse_branch": "PROVED_CONTINUOUS",
+    "partner_overlap": "PROVED_CONTINUOUS"
+  },
+  "unresolved": [
+    "QFORM-EXACTR3-18CORE-NEARCOLOOP-PAYMENT-v1",
+    "QFORM-N3-ANNULUS-OR-STAR4DIR-PAYMENT-v1",
+    "arbitrary-extra-spectrum descent and splice",
+    "two independent end-to-end reviews after a full candidate exists"
+  ],
+  "next_step": "Pay the <=18-coordinate exact-rank-three near-coloop core while retaining arbitrary interactions and the diffuse complement; separately do not conflate this with the fresher arbitrary-rank annulus/star4dir frontier.",
+  "keeper": {
+    "lease_path": "scheduled_tasks/leases/account03/2026-09-23T12Z.json",
+    "managed_tasks": 20,
+    "enabled": 20,
+    "hourly_valid": 20,
+    "quiet": 20,
+    "source_title_prompt_match": 20,
+    "scheduler_mutations": 0
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "current run",
+    "coverage": "unavailable"
+  }
+}

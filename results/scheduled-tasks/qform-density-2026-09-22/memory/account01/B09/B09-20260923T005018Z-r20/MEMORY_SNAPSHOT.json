@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B09",
+  "run_id": "B09-20260923T005018Z-r20",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "status": "ESSENTIAL_STEP_APPLIED_FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5e6ca8c4934835656498420e04269fc2bf5ac1ce",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/B09-20260923T005018Z-r20/REPORT.md",
+    "claims_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/B09-20260923T005018Z-r20/CLAIMS.json"
+  },
+  "new_claims": [
+    "QFORM-DIFFUSE-RANK1-SEPARABLE-BILINEAR-HALFRIESZ-v1",
+    "QFORM-DIFFUSE-RANK1-SEPARABLE-EXTERNAL-SQUARE-v1",
+    "QFORM-B20-HADAMARD-SPIKEDUST-PAID-v1"
+  ],
+  "key_formulae": [
+    "For rank-one B=sigma u v^T with max_i u_i^2<=1/2, arbitrary sum_i W_i(X_i) and arbitrary H(Y): H_1/2(T)<=2^(11/4) B(u)^(1/2) sigma^(-1/2)<=2^(11/4)e^(1/4)sigma^(-1/2).",
+    "With a disjoint square variable of conditional density cap K_Z: ||p_Q||_infinity<=2^(11/4)K_Z B(u)^(1/2)(|a|sigma)^(-1/2).",
+    "For the B20 Hadamard spike/dust family: ||p||_infinity<=8sqrt(2)M^(-1/4)<3.364 for M>=128."
+  ],
+  "partner_application": {
+    "source": "account02/B09 auto11, yspennstate/math-open-problems@74484a59609ced9b80417aab0f22095d307e2174",
+    "claim": "QFORM-ONE-HUB-RANKR-MIXEDFRAME-v1",
+    "actual_inequality": "On Q=2X_h<c,X_I>+<v,X_I>^2 with flat orthogonal unit c,v and m>=129, ||p_Q||_infinity<=3*2^(4/3)<7.560."
+  },
+  "source_match": {
+    "account02_B18": "QFORM-ONE-SIDED-CROSS-HALF-RIESZ-v1 already proves arbitrary-rank one-sided-zero cross half-Riesz; used rather than duplicated to pay the explicit B20 Hadamard spike/dust family.",
+    "account01_B14": "Existing rank-two diffuse separable half-Riesz is a different quadratic-projected scope.",
+    "account01_B09_r16": "Existing zero-physical-scalar one-cross half-Riesz is a different scalar-coefficient-side scope."
+  },
+  "first_unpaid": {
+    "id": "QFORM-N3-OVERLAPPING-SPIKEDUST-NONSEPARABLE-v1",
+    "statement": "Pay the N3 spike/dust or degree-dropped packet after all known exits when the third spectral resource overlaps the spike/dust banks and both candidate coefficient banks have genuinely nonseparable curvature, preserving product provenance and the B20 reserve lambda_1 sum_{j>=3}lambda_j>23/2400."
+  },
+  "continuity": "Not proved for the two new square-transducer endpoints; essential boundedness and linear interval bounds are proved.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "full_brain_connected": false
+}

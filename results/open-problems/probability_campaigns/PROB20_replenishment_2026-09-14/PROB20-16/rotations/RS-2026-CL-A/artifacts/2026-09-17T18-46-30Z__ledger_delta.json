@@ -1,0 +1,50 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "RS-2026-CL-A",
+  "report_kind": "BREADTH_PROGRESS",
+  "input_snapshot_sha": "e2b5f6d74ecbb5051fb8040449c6beb4eb950362",
+  "previous_report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T17-41-58Z__report.md",
+  "previous_report_creation_commit": "c6d36b6d55f6abefbef337faa4674e42fc3b75d6",
+  "previous_report_blob": "d3cd0d789bb29664f9b93a0c60b3edb06ef5b8b1",
+  "source": "Anastasia Kireeva, Randomstrasse 101, 2026-06-05, first displayed open box in Low-degree hardness of finding the largest clique in Erdos-Renyi graph (problems 36-38)",
+  "metric": {
+    "name": "E_framework",
+    "before": 1,
+    "after": 1
+  },
+  "unchanged_count": {
+    "before": 0,
+    "after": 0,
+    "reason": "The remaining obligation changed materially: breadth beyond Chen-Li/easy matching is now discharged by a dense vertex-relabeling graph mixture with an exact primitive-pressure proof, and prior-art checking identifies that instantiation as classical. The remaining work is audit completion plus folklore/cluster-expansion collision testing and, if novelty survives, a genuinely new instantiation."
+  },
+  "stuck_recovery_cycle_consumed": 1,
+  "methods": {
+    "B7": "Derived the exact Eulerian-subgraph partition function for a dense Rademacher two-community graph mixture, reduced it to one-dimensional magnetization pressure, proved a uniform second-moment bound below q=1, and obtained the sharp finite-pressure limit.",
+    "B19": "Turned the proof into an explicit parameter-level certification procedure using c=n*arctanh(rho^2 lambda^2/n), avoiding enumeration of high-degree Eulerian supports.",
+    "B23": "Showed complete low-interface factorization is not necessary: long simple cycles are indecomposable positive atoms but bounded low-degree advantage still implies full statistical hardness; introduced the primitive-pressure plus composite-interface hybrid viewpoint."
+  },
+  "new_mathematical_results": [
+    "Exact Fourier rule for the dense Rademacher two-community graph mixture: coefficients are (lambda/sqrt(n))^|S| exactly on Eulerian edge sets and zero otherwise.",
+    "Exact finite-n pressure identity Z_n(t)=(1-t^2)^{N/2} exp(-n arctanh(t)/2) E exp(arctanh(t) M_n^2/2), with Z_n(q/n) <= (1-n arctanh(q/n))^{-1/2} when the denominator is positive.",
+    "Source-style proposition: if D_n->infinity, D_n=o(sqrt(n)), and low-degree advantage is uniformly bounded through D_n, then limsup lambda_n^2<1; consequently full pre-noise chi-square is uniformly bounded and no measurable strong distinguisher exists.",
+    "Primitive-cycle tail bound R_D <= q^{D+1}/(2(D+1)(1-q)) for q<1.",
+    "Hybrid primitive/composite reassembly lemma recorded as equation (7.2) in the report."
+  ],
+  "failed_routes": [
+    "Complete low-interface factorization is not necessary because a simple cycle has no proper nonempty Eulerian positive sub-atom.",
+    "Naive geometric summation over cycle decompositions loses enough structure that it is non-sharp before the true q=1 dense-SBM threshold.",
+    "The dense-SBM hardness conclusion is not novel; Banerjee and Banerjee-Ma already establish the underlying contiguity/signed-cycle phenomenon."
+  ],
+  "mathematical_status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING",
+  "source_status": "Live Randomstrasse question remained open in the bounded dated 2026-09-17 check.",
+  "audit_status": "0/2 qualifying independent full theorem/source audits recovered",
+  "audit_refs": [],
+  "prior_art_status": "Dense-SBM instantiation is KNOWN in substance via classical contiguity/signed-cycle theory; even-subgraph pressure is classical high-temperature/cluster-expansion material. Abstract leverage/low-interface framework novelty remains UNVERIFIED with serious folklore-collision risk.",
+  "next_methods": ["B11", "B26", "B9"],
+  "artifact_refs": {
+    "report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T18-46-30Z__report.md",
+    "report_creation_commit": "144f9fe485a94066ef9e2d088dda0a481ddf61b7",
+    "report_blob": "b367d8826e71096599e13f471c954f0bcb106e49",
+    "ledger_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-17T18-46-30Z__ledger_delta.json"
+  }
+}

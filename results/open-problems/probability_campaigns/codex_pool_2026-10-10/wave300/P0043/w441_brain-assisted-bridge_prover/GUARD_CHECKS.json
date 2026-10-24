@@ -1,0 +1,128 @@
+{
+  "command": "python -X utf8 validate_guard.py",
+  "seconds": 2.7000089175999165e-05,
+  "scope": "Controlled local applicability fixture, not production recall accuracy. Ungated baseline means accepting every candidate; it is not an observation of the live engine.",
+  "before": {
+    "invalid_candidates_allowed": 3,
+    "valid_controls_allowed": 2
+  },
+  "after": {
+    "invalid_candidates_allowed": 0,
+    "valid_controls_allowed": 2
+  },
+  "unknown_property_control": {
+    "applicable": false,
+    "false_hypotheses": [],
+    "unknown_hypotheses": [
+      "quasi_transitive"
+    ],
+    "note": "This only checks supplied hypotheses; it is not a mathematical verifier."
+  },
+  "rows": [
+    {
+      "case": "Z3-ambient-exp-theorem",
+      "required": [
+        "quasi_transitive",
+        "exponential_growth"
+      ],
+      "established": {
+        "quasi_transitive": true,
+        "exponential_growth": false
+      },
+      "expected_applicable": false,
+      "result": {
+        "applicable": false,
+        "false_hypotheses": [
+          "exponential_growth"
+        ],
+        "unknown_hypotheses": [],
+        "note": "This only checks supplied hypotheses; it is not a mathematical verifier."
+      },
+      "evidence": "Z^3 has polynomial volume growth, so Hutchcroft exponential-growth theorem does not apply."
+    },
+    {
+      "case": "decorated-ray-transfer",
+      "required": [
+        "quasi_transitive",
+        "exponential_growth"
+      ],
+      "established": {
+        "quasi_transitive": false,
+        "exponential_growth": true
+      },
+      "expected_applicable": false,
+      "result": {
+        "applicable": false,
+        "false_hypotheses": [
+          "quasi_transitive"
+        ],
+        "unknown_hypotheses": [],
+        "note": "This only checks supplied hypotheses; it is not a mathematical verifier."
+      },
+      "evidence": "Written L005: maximum degree 3, exponential growth >=sqrt(2), p_c=1; quasi-transitivity is missing."
+    },
+    {
+      "case": "subexponential-cluster-peierls",
+      "required": [
+        "bounded_degree",
+        "positive_anchored_expansion",
+        "fresh_q_bits"
+      ],
+      "established": {
+        "bounded_degree": true,
+        "positive_anchored_expansion": false,
+        "fresh_q_bits": true
+      },
+      "expected_applicable": false,
+      "result": {
+        "applicable": false,
+        "false_hypotheses": [
+          "positive_anchored_expansion"
+        ],
+        "unknown_hypotheses": [],
+        "note": "This only checks supplied hypotheses; it is not a mathematical verifier."
+      },
+      "evidence": "w442 deterministic ball-growth obstruction proves the needed positive expansion cannot hold."
+    },
+    {
+      "case": "regular-tree-exp-control",
+      "required": [
+        "quasi_transitive",
+        "exponential_growth"
+      ],
+      "established": {
+        "quasi_transitive": true,
+        "exponential_growth": true
+      },
+      "expected_applicable": true,
+      "result": {
+        "applicable": true,
+        "false_hypotheses": [],
+        "unknown_hypotheses": [],
+        "note": "This only checks supplied hypotheses; it is not a mathematical verifier."
+      },
+      "evidence": "Regular degree-3 tree meets both graph hypotheses."
+    },
+    {
+      "case": "peierls-tree-control",
+      "required": [
+        "bounded_degree",
+        "positive_anchored_expansion",
+        "fresh_q_bits"
+      ],
+      "established": {
+        "bounded_degree": true,
+        "positive_anchored_expansion": true,
+        "fresh_q_bits": true
+      },
+      "expected_applicable": true,
+      "result": {
+        "applicable": true,
+        "false_hypotheses": [],
+        "unknown_hypotheses": [],
+        "note": "This only checks supplied hypotheses; it is not a mathematical verifier."
+      },
+      "evidence": "Regular degree-3 tree has anchored expansion 1; choose fresh q=19/20 for L004, checked exactly in MATH_CHECKS.json."
+    }
+  ]
+}

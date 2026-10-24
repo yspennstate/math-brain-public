@@ -1,0 +1,16 @@
+PROB10-09 SPECTRAL-CHEEGER COVER EXACT CHECK
+upper_branch_factor=4*(-D + r)*(-D**3 + 2*D**2*r - 3*D**2 - D*r + 4*D - 1)/(D - 1)**2
+r_star=(D**3 + 3*D**2 - 4*D + 1)/(D*(2*D - 1))
+rho_star=(D**3 + 3*D**2 - 4*D + 1)/(D**2*(2*D - 1))
+rho_star_minus_classical_BS_Mohar=(D - 1)/D**2
+rho_star_minus_one_half=(7*D**2 - 8*D + 2)/(2*D**2*(2*D - 1))
+D3_threshold_r=11/3 - 2*sqrt(2)/3
+D4_threshold_r=19/4 - 3*sqrt(3)/4
+genus3_phi_lower=144/11 - 48*sqrt(3)/11
+genus3_pc_upper=528*sqrt(3)/17113 + 1705/17113
+genus3_beta=1 + 2*sqrt(3)
+genus3_pu_lower=-1/11 + 2*sqrt(3)/11
+genus3_gap_lower=-35868/188243 + 28418*sqrt(3)/188243
+genus3_gap_gt_7_over_100_square_margin=173351660999
+finite_D_scan=5..500 PASS
+ALL_EXACT_CHECKS_PASS

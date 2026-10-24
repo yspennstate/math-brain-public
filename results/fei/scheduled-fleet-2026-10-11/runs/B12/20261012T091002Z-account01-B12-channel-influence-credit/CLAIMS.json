@@ -1,0 +1,59 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261012T091002Z-account01-B12-channel-influence-credit",
+  "primary_packet_id": "A057",
+  "claims": [
+    {
+      "claim_id": "B12-A057-CHANNEL-COLLISION-CREDIT-v1",
+      "status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+      "scope": "For every finite shared block B, Boolean selector h and Boolean source pair with b=(g_+-g_-)/2, the nonzero selector-frequency channels C^alpha satisfy the exact energy identity sum ||C^alpha||_2^2=E[V_h p_b] and exact block-influence identity sum I_B(C^alpha)=E[V_h J_b+p_b J_h-2 O_B], hence are bounded by ||b||_2^2 and I_B(b)+I_B(h), respectively.",
+      "hypotheses": [
+        "h, g_+, g_- are genuine Boolean functions on the same cube",
+        "B is any finite physical-coordinate block",
+        "C^alpha_gamma=h_alpha b_(gamma xor alpha)",
+        "all expectations and influences use the uniform physical measure"
+      ],
+      "parameter_dependence": "exact; no dimension, block-size, depth, bias, address-count, or collision-gap factor",
+      "collision_refund": "2 E sum_{alpha!=0,beta}|alpha intersect beta| h_alpha^2 b_beta^2",
+      "proof_artifact": "CHANNEL_INFLUENCE_CREDIT.tex",
+      "verification_artifact": "check_channel_influence_credit.py",
+      "review_status": "PENDING_A091_A090"
+    },
+    {
+      "claim_id": "B12-A057-ADAPTIVE-CHANNEL-INFLUENCE-v1",
+      "status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+      "scope": "For every adaptive nonreusing physical block-restriction hierarchy with reach weights w_v, the total selector-channel block influence satisfies sum_v w_v sum_{alpha!=0} I_{B_v}(C_v^alpha) <= I(b)+I(h).",
+      "hypotheses": [
+        "each physical coordinate is queried at most once on every root-to-leaf path",
+        "node reach depends only on previously revealed physical coordinates",
+        "b_v and h_v are the actual restrictions of the root functions"
+      ],
+      "parameter_dependence": "one-use dimension-free budget; no depth or number-of-channels loss",
+      "proof_artifact": "CHANNEL_INFLUENCE_CREDIT.tex",
+      "verification_artifact": "check_channel_influence_credit.py",
+      "review_status": "PENDING_A091_A090"
+    },
+    {
+      "claim_id": "B12-A057-CHANNEL-UNIVERSALITY-v1",
+      "status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+      "scope": "The selector-channel class is universal: for every Boolean k, one fresh bit x with h=x, g_+=xk and g_-=-xk produces exactly one nonzero selector channel C^{x}=k. Therefore a universal standalone inequality sum D_B(C^alpha)<=C sum I_B(C^alpha) contains full FEI exactly.",
+      "proof_artifact": "CHANNEL_INFLUENCE_CREDIT.tex",
+      "verification_artifact": "check_channel_influence_credit.py",
+      "review_status": "PENDING_A091_A090",
+      "does_not_claim": [
+        "no proof or refutation of full FEI",
+        "no failure of a combined channel-plus-signed-remainder estimate",
+        "no failure of terminal-reserve or KL-associator payments"
+      ]
+    },
+    {
+      "claim_id": "B12-A057-COHERENT-HIERARCHY-v9",
+      "status": "OPEN",
+      "scope": "Dimension-free payment of the combined selector-channel entropy, signed coherent remainder and necessary source channel over arbitrary adaptive physical hierarchies.",
+      "prior_obstruction": "Block channel allocation is order-dependent and has 2^|B|-1 formal selector frequencies.",
+      "new_status": "The channel count is fully compressed at the influence level, but separating channel entropy from the signed remainder is exactly FEI-hard.",
+      "next_action": "Pair the scalar entropy interference associator with the exact overlap refund and test a one-sided combined channel-plus-remainder inequality."
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

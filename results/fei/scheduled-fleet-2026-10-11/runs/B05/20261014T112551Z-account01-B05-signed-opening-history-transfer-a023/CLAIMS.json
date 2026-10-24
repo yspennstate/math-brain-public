@@ -1,0 +1,34 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261014T112551Z-account01-B05-signed-opening-history-transfer-a023",
+  "claims": [
+    {
+      "claim_id": "B05-A023-SIGNED-OPENING-HISTORY-TRANSFER",
+      "version": "v1",
+      "exact_statement": "For c*=29/2+4/ln(2), every finite-cube Boolean core f, every block X of its physical coordinates, every 0<eta<=1, and the fresh fair activation F=A(f), choose at the selector node inherited block empty, active block X union {z}, and query z. Then Delta_z L_c*,eta(F)+2(R-O)<=Phi(f)-Theta_X(f)<=0. Consequently, any complete SOLD tree for f inherited at X extends to a complete empty-history SOLD tree for A(f).",
+      "hypotheses": [
+        "genuine Boolean core on a finite uniform cube",
+        "fresh fair activation selector z",
+        "arbitrary physical-coordinate block X in the core",
+        "signed opening O and reveal R retained",
+        "complete core tree only for the endpoint consequence"
+      ],
+      "statement_sha256": "e6c7f72ffd455c356a7f59f97a74ea204ca6b7457b6b0061ed6367318a6feb92",
+      "contributors": ["account01/B05"],
+      "proof_source": "PROOF.md; CHECK.py; CHECK.out",
+      "proof_dependencies": [
+        "B05-A023-HALF-PACKET-INVARIANT-v1",
+        "B19-A094-HALF-PACKET-REVIEW-v1",
+        "B05-A023-SIGNED-ORBIT-OWNERSHIP-v1",
+        "B19-A094-SIGNED-ORBIT-OWNERSHIP-REVIEW-v1",
+        "U-UNIVERSAL-SIGNED-MISMATCH-REDUCTION"
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": "Existence of a complete adapted SOLD tree for the core starting with inherited block X.",
+      "next_consumers": ["A087", "A094", "B20"]
+    }
+  ]
+}

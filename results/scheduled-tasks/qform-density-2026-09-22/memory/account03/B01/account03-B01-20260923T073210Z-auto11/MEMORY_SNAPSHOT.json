@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260923T073210Z-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_initial": "3d0ac050cdf5cc69a97c5d10b92a20769a9cf1e8",
+  "source_control_commit_prepublication": "e18a3cc908b470a19890593ce1ebb9c7dd1f0349",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "new_result": {
+    "id": "QFORM-RANK2-CROSS-PLUS-SQUARE-L3-v1",
+    "status": "SUPPORTING_TARGET_LEVEL_THEOREM",
+    "statement": "For disjoint original-coordinate banks I,J,D,W, exact-rank-two physical cross matrix K with nonzero singular values kappa1,kappa2, and a source-disjoint scalar square lambda(a^T X_D+h(W))^2 with sigma=||a||_2, arbitrary same-bank measurable phases on I and J are allowed and Q has a continuous C0 density with ||p_Q||_infinity <= (16/3)12^(1/4)(kappa1*kappa2)^(-3/8)(|lambda|sigma^2)^(-1/4).",
+    "continuous_density": true,
+    "full_qform_solved": false
+  },
+  "premises": [
+    "cap-one product inputs on original coordinates",
+    "2D orthogonal projection density cap <=2",
+    "1D linear projection density cap <=sqrt(2)/sigma",
+    "Hausdorff-Young L^(3/2)->L^3 with nonunitary constant (2pi)^(1/3)",
+    "two-bank Plancherel/Cauchy-Schwarz for exact-rank-two physical cross phase"
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B01",
+    "result": "signed-Fejer exact equivalence and product-marginal bounds",
+    "canonical_math_commit": "a3693ed6d50e8e4143b2f33bf997c5de2cb52d79",
+    "application": "Converted the new continuous density inequality to sup_{T,y} D_T law(Q)(y) bounded by the same explicit constant; used the partner-supported one-dimensional projection cap in the scalar-square L3 estimate."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e8c8cc633f1fe33ec6b568f80c5c7f68a105a159",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260923T073210Z-auto11/REPORT.md",
+    "report_blob": "3a88de9b4a985e4a81495ad85f8da2762c5a33c8",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260923T073210Z-auto11/CHECKS.txt"
+  },
+  "unresolved_implication": "Bare N3 does not automatically expose a source-disjoint rank-two-cross plus scalar-square packet with dimension-free lower bounds on both kappa1*kappa2 and rho=|lambda|sigma^2.",
+  "next_step": "Prove a product-preserving routing lemma from remaining strict-N3 states into this receiver or existing grouped-square/diffuse-ridge/pair-log/hub/null-coloop branches; otherwise build an overlapping-third-direction receiver.",
+  "delivery": "quiet; no email, push notification, task mutation, cross-account authentication, public release, paid API/model, or remote workflow"
+}

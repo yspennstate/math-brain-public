@@ -1,0 +1,42 @@
+{
+  "problem_id": "C0045",
+  "command": "python -X utf8 check_remaining.py",
+  "label": "finite checks; independent audit pending",
+  "elapsed_seconds": 9.344578700023703,
+  "homogeneous_first_coordinate_law": {
+    "plus": 0.45,
+    "minus": 0.15,
+    "zero": 0.4
+  },
+  "mean_drift": 0.3,
+  "theta": 0.5493061443340549,
+  "mgf": 0.9196152422706633,
+  "absorption_checks": [
+    {
+      "L": 2,
+      "backward_before_forward_probability": 0.1,
+      "supermartingale_bound": 0.3333333333333333
+    },
+    {
+      "L": 4,
+      "backward_before_forward_probability": 0.012195121951219514,
+      "supermartingale_bound": 0.11111111111111109
+    },
+    {
+      "L": 8,
+      "backward_before_forward_probability": 0.00015239256324291382,
+      "supermartingale_bound": 0.012345679012345675
+    },
+    {
+      "L": 16,
+      "backward_before_forward_probability": 2.3230572585759273e-08,
+      "supermartingale_bound": 0.00015241579027587248
+    },
+    {
+      "L": 32,
+      "backward_before_forward_probability": 5.396595277354295e-16,
+      "supermartingale_bound": 2.323057312541874e-08
+    }
+  ],
+  "scope": "Independent homogeneous increments, not general annealed RWRE increments."
+}

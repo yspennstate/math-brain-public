@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B01",
+  "run_id": "20260925T110630Z-account02-B01-repaired-r03",
+  "source_integrity": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4e530247ec0ef4101a6e5ecf621bd35a969c42aa",
+    "path": "proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/repaired-2026-09-25/paper.tex",
+    "git_blob_observed": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+    "utf8_bytes_observed": 61567,
+    "physical_lines_observed": 683,
+    "sha256_recomputed": "90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb",
+    "expected_match": true
+  },
+  "repair_metadata": {
+    "note": "At the first source commit the metadata files were absent. Fresh research master now contains them and master paper.tex remains the exact audited blob, so these later metadata can be reconciled without changing the source target.",
+    "research_ref": "master",
+    "master_paper_blob_observed": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+    "repairs_md_blob": "ea317bb3884229b7dffb98b049e3da34a99a7f5e",
+    "manifest_json_blob": "2fa9355e487913f3467c0cb50ca44943f24bd6af",
+    "build_sh_blob": "1e0e82ac99ead66220c0471a48ecec86f78e94fe",
+    "reference_pdf": {
+      "pages": 15,
+      "sha256": "2a493f2dd3dc4eb126d965cc1d246c554f9a5c61bc9a4a9bd8ca0ab9e439cd09",
+      "visual_status": "UNCHECKED_THIS_RUN"
+    }
+  },
+  "numerical_regression": {
+    "gamma1": 0.3846763769597346,
+    "gamma2": 0.23736246421253723,
+    "gamma3": 0.09004855146533981,
+    "C3": 14.818337662843,
+    "C2": 12.095072570796486,
+    "C3_over_gamma3": 164.55942290805933,
+    "C2_over_sqrt_gamma2": 24.82575456311178,
+    "diagonal_density_sqrt12_times77": 266.7358243656071,
+    "definite_pair_16pi": 50.26548245743669,
+    "indefinite_pair": 266.95134633033405,
+    "diagonal_halfpotential_truncated": 75.14307501039998,
+    "concentration_coefficient": 18.25531919676703,
+    "inequalities_all_close": true
+  },
+  "exact_constant_certificates": {
+    "C3": "26244*(11/4)^6 < 15^6",
+    "C2": "8388608*(11/4)^4 < (61/5)^8",
+    "concentration": "2048*(68/25)^3*(63/20) < 19^4"
+  },
+  "theorem_quantifier_check": "PASS: arbitrary independent real coordinate densities <=K; real symmetric A; arbitrary n, signature, remaining spectrum, b,c; no iid/moment/support/smoothness/rotated-independence assumption; essential density <=270 K^2/s when s5>=s>0.",
+  "supporting_halfpotential_check": "PASS: s3>=s>0 gives sup_a E|Q-a|^-1/2 <=77 K/sqrt(s); no density theorem claimed from s3.",
+  "mathematical_verdict": "PASS_NO_GAP_OR_FALSE_FOUND_IN_REPAIRED_SOURCE",
+  "external_reference_status": "UNCHECKED",
+  "rendered_pdf_status": "UNCHECKED"
+}

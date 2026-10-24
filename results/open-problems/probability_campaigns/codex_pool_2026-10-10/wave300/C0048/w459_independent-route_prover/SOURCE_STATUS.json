@@ -1,0 +1,113 @@
+{
+  "candidate_id": "C0048",
+  "checked_at": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "openness_reason": "Exact 2017 conjecture verified; bounded 2025-2026 primary-literature searches found no proof of the complete nearest-neighbor all-d/all-q assertion. Absence of a search hit is not verification of current openness.",
+  "primary_statement_verified": true,
+  "exact_target": "For every integer q>=3 and dimension d>=3, the zero-field ferromagnetic nearest-neighbor q-state Potts model on Z^d has positive fixed-color spontaneous magnetization at its critical inverse temperature.",
+  "normalization": "Gibbs weight exp(beta_delta * sum of nearest-neighbor agreements); beta_delta=q*beta_simplex/(q-1); m=(q*Pr(color 1)-1)/(q-1); FK p=1-exp(-beta_delta).",
+  "served_model_settings_verified": false,
+  "served_model_identity": "UNKNOWN; requested settings are not evidence of served settings",
+  "source_checks": [
+    {
+      "source_id": "duminil_copin_ising_potts_2017",
+      "url": "https://www.ihes.fr/~duminil/publi/2017PIMS.pdf",
+      "locator": "Conjecture 2, printed p.93, PDF index 92; definition printed p.5; simplex normalization p.4",
+      "quote": "the phase transition of the nearest-neighbor Potts model on Z^d (with d >= 3) is discontinuous for any q >= 3",
+      "status": "primary text verified; PDF screenshot unavailable (internal error)",
+      "primary_publication_date": "2017-08-18"
+    },
+    {
+      "source_id": "biskup-chayes-2003",
+      "url": "https://arxiv.org/abs/math/0207242",
+      "status": "primary abstract verified",
+      "scope": "fixed q>=3, sufficiently large dimension or sufficiently strong mean-field transition; not all d>=3"
+    },
+    {
+      "source_id": "biskup-chayes-crawford-2006",
+      "url": "https://arxiv.org/abs/math-ph/0501067",
+      "status": "primary abstract verified",
+      "scope": "reflection positive and sufficiently spread-out interactions; not the nearest-neighbor all-d assertion"
+    },
+    {
+      "source_id": "duminil-copin-2015-survey",
+      "url": "https://www.ihes.fr/~duminil/publi/2015%20Currents%20developments%20in%20mathematics.pdf",
+      "locator": "section 4.2, printed pp.59-60",
+      "status": "primary survey text verified",
+      "scope": "large-q/large-d results; explicitly separates a jump at some beta>=beta_c from proof of a jump at beta_c"
+    },
+    {
+      "source_id": "C0048-A001",
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "line": 38,
+      "status": "prior author-only attempt inspected",
+      "scope": "reflection positivity/chessboard/contour constants and planar FK comparison; no result"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_attempts_H_20260912",
+      "status": "targeted C0048/Potts search: no matching record"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_attempts_I_20260914",
+      "status": "targeted C0048/Potts search: no matching record"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md",
+      "line": 591,
+      "status": "attempted_un ranking only; no formal theorem receipt"
+    },
+    {
+      "path": "~/math-brain-build/export/population/nodes.jsonl",
+      "lines": [
+        2053,
+        5500
+      ],
+      "status": "target and old author-only attempt present; current status unverified"
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "status": "targeted C0048 search: no row; use a disjoint entropy lemma lane"
+    },
+    {
+      "path": "~/Big Open problem in probability theory",
+      "status": "targeted C0048/Potts filename search: no hit; no exhaustive status claim"
+    }
+  ],
+  "memory_scars": [
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "proof_steps_need_derived_joint_structure_2026_09_09"
+  ],
+  "recall": "60-second timeout; read the explicitly named relevant memory files instead",
+  "submitted": true,
+  "reviewed": false,
+  "ingested": false,
+  "retrievable": false,
+  "submitted_path": "~/math-brain-inbox/w459/bundle_001.json",
+  "canonical_status_check": {
+    "store": "~/math-brain-build/local/population/brain.sqlite3",
+    "access": "mode=ro; query_only=ON",
+    "canonical_path_evidence": "math-research-brain/src/math_brain/build_signal_cache.py line 24",
+    "target_rows_found": 2,
+    "target_supersedes_proves_refutes_edges_found": 0,
+    "conclusion": "No solved/retired disposition found in the bounded target query; this does not certify current openness."
+  },
+  "numerical_check_state": "DEFERRED_RESOURCE_GATE; experiment did not run",
+  "independent_review_state": "w460 scoped KEEP; designated w461 pending",
+  "scoped_independent_reviews": [
+    {
+      "reviewer": "w460",
+      "verdict": "KEEP",
+      "scope": "L1-L4 in their stated finite or conditional scope",
+      "source_path": "~/brain_workers/w460/AUDIT_W459.md",
+      "source_sha256": "73240795d7f4460cc7cc88497a539e559b0a52d97c112d2aa6fd84d3cf7eae65",
+      "audit_checked_again": false,
+      "independent_route_saved_first": "reported by auditor",
+      "parent_conjecture_proved": false,
+      "novelty_claim": false,
+      "different_model_or_login_verified": false,
+      "served_model_identities": "unavailable",
+      "designated_referee_w461": "pending"
+    }
+  ],
+  "reviewed_means": "designated referee complete packet review; still pending"
+}

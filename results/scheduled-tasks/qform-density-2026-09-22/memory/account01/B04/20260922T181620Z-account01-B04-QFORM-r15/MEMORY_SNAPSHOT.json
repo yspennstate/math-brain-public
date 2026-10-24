@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260922T181620Z-account01-B04-QFORM-r15",
+  "control_commit_initial": "a1485f9f0875c535d2ee077b99619f39ce7ab2a9",
+  "control_commit_prepublication": "fb48babff3d0a2b078a9df38923eb2f45bc3f3fa",
+  "control_revision": "2026-09-22.11",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "account02-B04-hyperbolic-transfer",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "4bea103ece44732c1c7c31368fec4e33b35e1fdd",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/B04-20260922T174702Z-r15/REPORT.md",
+      "scope_used": "translated one-pair logarithmic density envelope and full density-transfer theorem"
+    },
+    {
+      "id": "account02-B04-pure-cross-triple",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "b7168a1b0b52fbf69705170ff9795435efeb849f",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/account02-B04-20260922T122057Z-01c809a1/REPORT.md",
+      "scope_used": "all-zero-diagonal triangle density bound"
+    },
+    {
+      "id": "account01-B04-affine-star-color",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "0c69ee2f962d8fe4e998a69ed41a29c100a742fd",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260922T174812Z-account01-B04-QFORM-r15/REPORT.md",
+      "scope_used": "3-colorable zero-diagonal bank exit"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-HYPERBOLIC-PRODUCT-L2-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "For an arbitrary translated hyperbolic product 2cUV of independent cap-one variables, ||p||_2^2 <= K2/|c| with K2=5.194878272562849..."
+    },
+    {
+      "id": "QFORM-TWO-HYPERBOLIC-PAIR-CONVOLUTION-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "Two disjoint zero-diagonal original-coordinate hyperbolic pairs with arbitrary outside affine contamination have a continuous density bounded by K2/sqrt(|c1 c2|)."
+    },
+    {
+      "id": "QFORM-PIVOT-INDUCED-2K2-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "After scalar pivot a, an induced two-edge matching in an exact zero-diagonal Schur bank gives density <= 2 sqrt(2K2)|a|^-1/2|c1c2|^-1/4."
+    },
+    {
+      "id": "QFORM-ZERODIAG-PATTERN-TRICHOTOMY-v1",
+      "status": "PROVED_STRUCTURAL_REDUCTION",
+      "statement": "Every exact zero-diagonal bank interaction graph exits through a 3-color branch, an all-zero-diagonal triangle, or an induced 2K2; each support pattern has a proved analytic density estimate."
+    }
+  ],
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B04",
+    "result": "QFORM-HYPERBOLIC-PAIR-DENSITY-TRANSFER-v1",
+    "application": "Its translated logarithmic product envelope yields the new L2 bound; its full theorem applied to a third pair over the new two-pair residual gives ||p_Q||inf <= |c0|^-1 + 4K2/sqrt(|c1c2|)."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "efe730532ded82011b532f5ac8b443768f04a086",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260922T181620Z-account01-B04-QFORM-r15/REPORT.md",
+    "checker_source_commit": "7c8b90e699e64ba8fb368a65e6b594ab5ef4e18b",
+    "checker_output_commit": "bab0b6cb18b157caba0060939b89978a6c5514b6"
+  },
+  "handoff": {
+    "commit": "ef37b22d91bc378d666062c305d75e34185bedfc",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B04/20260922T181620Z-account01-B04-QFORM-r15.md"
+  },
+  "outcome": "ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREMS_PROVED / FULL_TARGET_OPEN",
+  "full_target_proved": false,
+  "continuity_full_target_proved": false,
+  "continuity_proved_in_two_pair_scope": true,
+  "unresolved_implication": "QFORM-ZERODIAG-WEIGHTED-PATTERN-AGGREGATION-v1: force dimension-free quantitative center-bank mass, triangle determinant, or induced-matching edge-product currency from the global spectral hypothesis, or route failure into an existing ridge/square/grouped-coordinate branch; separately handle nonzero bank diagonals without perturbative moment assumptions.",
+  "next_step": "Develop weighted rather than support-only graph aggregation, preserving original-coordinate product structure and testing against the known diffuse-bank counterfamilies."
+}

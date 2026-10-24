@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260922T182048Z-account01-B12-QFORM-r15",
+  "control_commit_initial": "ced020f1463b04c309fa1e58559451b84f3c31b3",
+  "control_revision": "2026-09-22.11",
+  "assignment": "Additional eigenvalue control",
+  "brain_mode": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "new_correction": "QFORM-SCALAR-QREST-UNIFORM-CONDITIONAL-CAP-FALSE-v1",
+  "mathematical_change": "An explicit non-diagonal target-class matrix with spectrum {1,1,1,eta} and iid Uniform[0,1] inputs has ess sup_b ||p_(Q3|Qrest=b)||_infinity=infinity. The correct sufficient interface is the unnormalized mixed norm integral ||p_(Q3,Qrest)(.,b)||_infinity db.",
+  "exact_counterexample": {
+    "eta": "1/128 (any 0<eta<1 works)",
+    "transform": "4x4 Hadamard orthogonal matrix divided by 2",
+    "matrix": "A=O^T diag(1,1,1,eta) O",
+    "conditional_scaling": "for Y4=y in (3/2,2), h=4-2y and Q3=h^2 T with T supported on [0,3/4]",
+    "lower_bound": "||p_(Q3|Qrest=b)||_infinity >=4/(3 h(b)^2)"
+  },
+  "replacement_identity": "||p_(Q3+Qrest)||_infinity <= integral ||p_(Q3,Qrest)(.,b)||_infinity db = integral p_Qrest(b)||p_(Q3|Qrest=b)||_infinity db",
+  "partner_applied": {
+    "worker": "account02/B12",
+    "claim": "QFORM-REDUNDANT-MIXED-PACKET-SPIKE-STABILITY-v1",
+    "source": "yspennstate/math-open-problems@262393f45fe00095aa7d64d7ebf894c26279715a:proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260922T175624Z-account02-B12-QFORM-r11/REPORT.md",
+    "applied_inequality": "rank-one spike branch: ||p||_infinity <=3*4^(1/3)/(sigma-delta) for a base physical 4x4 cross packet with s4>=sigma and ||S||op<=delta<sigma"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "75cc1919cc36254668f765d96357f41c4c91bcb6",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260922T182048Z-account01-B12-QFORM-r15/REPORT.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B12/20260922T182048Z-account01-B12-QFORM-r15.md",
+  "event_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account01/B12/20260922T182048Z-account01-B12-QFORM-r15/QFORM-SCALAR-QREST-UNIFORM-CONDITIONAL-CAP-FALSE-v1.json",
+  "full_target_status": "OPEN",
+  "unpaid_implication": "Prove a dimension-free bound on the unnormalized scalar-level mixed norm, or an equivalent product-level-set estimate, and integrate it with ridge/grouped/mixed-packet branches.",
+  "next_step": "Do not normalize rare Qrest slices before paying their level-set mass. Seek a direct original-coordinate bound on integral ||p_(Q3,Qrest)(.,b)||_infinity db."
+}

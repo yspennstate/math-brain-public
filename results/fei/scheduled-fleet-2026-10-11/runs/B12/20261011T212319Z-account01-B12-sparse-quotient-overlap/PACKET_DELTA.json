@@ -1,0 +1,131 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T212319Z-account01-B12-sparse-quotient-overlap",
+  "stream": "B12",
+  "native_stream": "B12",
+  "packet_id": "A058",
+  "packet_ids": [
+    "A058"
+  ],
+  "gap_id": "FEI-B12-A058-SPARSE-QUOTIENT-COLLISION",
+  "attempt_id": "B12-A058-ATTEMPT-002",
+  "method": "Exact Fourier-sector decomposition for a sparse union of quotient cells, support-entropy maximization, and physical cube edge-isoperimetric payment.",
+  "mathematical_delta": {
+    "previous": {
+      "claim": "B12-A058-AFFINE-DEFECT-OVERLAP-v1",
+      "scope": "one affine quotient cell",
+      "constant": "<4",
+      "mathematical_status": "PROOF_CANDIDATE",
+      "review": "A090/A091 pending"
+    },
+    "new": {
+      "claim": "B12-A058-SPARSE-QUOTIENT-OVERLAP-v1",
+      "scope": "every nonempty quotient union with p<=1/4 and log_2(1/p)>=r/2, including non-affine unions of three or more cells",
+      "constant": "<8",
+      "mathematical_status": "PROOF_CANDIDATE",
+      "review": "A090/A091 pending"
+    },
+    "movement": "The permitted quotient-cell count increases from one to as many as 2^(r/2), while arbitrary physical overlap among parity rows is retained. The previously proposed two-cell extension was proved to collapse to the old affine case."
+  },
+  "deliverable_status": "DELIVERED_FOR_REVIEW",
+  "mathematical_status": "PROOF_CANDIDATE",
+  "claim_versions_used": [
+    "B12-A058-AFFINE-DEFECT-OVERLAP-v1",
+    "O-BENT-SPLICE",
+    "O-OVERLAP-PRODUCT",
+    "O-POSITIVE-SELECTOR"
+  ],
+  "claims_created_or_changed": [
+    "B12-A058-SPARSE-QUOTIENT-OVERLAP-v1",
+    "B12-A058-TWO-CELL-COLLAPSE-v1"
+  ],
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/EXECUTION_PROTOCOL.json",
+      "blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/assignments/B12.json",
+      "blob": "40935ac651643a17815d0addf664ec4c1c0313cc"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/runs/B12/20261011T201902Z-account01-B12-affine-defect-overlap/REPORT.md",
+      "commit": "b5f4d89bf4429d287e03df871b95706e54802328",
+      "blob": "421da5bb30fdf6a68ef19697369a21f91997fb69"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/source_material/reductions/paper/restrictions.tex",
+      "blob": "55986205ce92bf93bbb2863b5064af001829844a",
+      "locator": "Proposition prop:bentsplice"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "research_pushes/2026-10-11-full-fei-100-agents/sources/OVERLAPPING_PRODUCT_NOTE.md",
+      "blob": "4d9e18018cce12d361df613b1c6dbc80bb9627f1"
+    }
+  ],
+  "acceptance_evidence": [
+    "Explicit shared-input class outside neighboring orthogonality and uniform positive selector energy",
+    "Complete coefficient and posterior-sector ledger",
+    "Full rare-event logarithmic debt paid by the actual physical edge boundary",
+    "Arbitrary reuse among parity-row physical inputs retained",
+    "Genuine Boolean realization",
+    "Deterministic exhaustive check of 245380 quotient sets through r=5"
+  ],
+  "acceptance_missing": [
+    "Independent full-source reconstruction by A090",
+    "Independent full-source reconstruction by A091",
+    "Literature comparison sufficient for any novelty claim"
+  ],
+  "review_requests": [
+    {
+      "packet": "A090",
+      "request": "Adversarially reconstruct the support entropy maximum, physical influence normalization, two-cell collapse, and separation from C035.",
+      "observed": false
+    },
+    {
+      "packet": "A091",
+      "request": "Independently reconstruct the edge-isoperimetric payment and the optional disjoint tensor corollary.",
+      "observed": false
+    }
+  ],
+  "next_consumers": [
+    "A090",
+    "A091",
+    "B20"
+  ],
+  "next_action": "Do not open a third broad A058 candidate before review. After A090/A091 reconstruction, replace the crude quotient support size 2^r by a proved effective spectral-support or Renyi quantity while retaining the exact physical boundary identity I(K)=p+I(D_A)/2.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Independent review is not available within this stream's authorized capacity.",
+    "The current theorem does not cover dense quotient unions or arbitrary overlapping outer compositions."
+  ],
+  "failed_approaches": [
+    "A two-cell quotient union is not a new class: it is one affine line and reduces to the prior affine-coset theorem.",
+    "A fixed linear payment by selector influence is excluded by the bent-splice obstruction.",
+    "Unrestricted shared-variable product entropy subadditivity is refuted and was not used."
+  ],
+  "artifacts": {
+    "REPORT.md": "774a7c2261da3693ae3e83b942d4cb8f1880f41b31d709c072ab79c4abef10ff",
+    "OVERLAPPING_COMPOSITION_CLASS.tex": "5056583e658f9ba8bb3e40fa5b2da9f20ef60e6e326dcccdfdfc00199b31f310",
+    "OVERLAP_ENTROPY_LEDGER.md": "03bdb6b44d844a69626ec6bdc874fa4fe49dbfc145dff9bfd32fee5203324093",
+    "check_sparse_quotient.py": "9fd76ee9ba3cb9dc0265f2ca4555d8a35430adf305a7617e38383291f7cce292",
+    "check_sparse_quotient.out": "82e967a18c850d0b789ee10df323feb3a818bae7c4ca1eddd9048e5bf37e74d5"
+  },
+  "execution": {
+    "bounded_pilot_seconds_observed": 17.6,
+    "randomness": "NONE",
+    "python": "3.12.14",
+    "model_id": "NOT_EXPOSED",
+    "reasoning_effort": "NOT_EXPOSED",
+    "new_workers": 0,
+    "schedule_changes": 0,
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN"
+}

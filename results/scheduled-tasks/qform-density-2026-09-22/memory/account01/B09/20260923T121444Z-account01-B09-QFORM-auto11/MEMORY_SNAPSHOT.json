@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B09",
+  "run_id": "20260923T121444Z-account01-B09-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_full_target_status": "OPEN",
+  "new_claims": [
+    {
+      "id": "QFORM-N3-THREEHUB-DIAGONAL-COMPLEMENT-v1",
+      "status": "NEW_SUPPORTING_THEOREM_UNREVIEWED",
+      "statement": "In strict N3(1/128), if deleting three original physical coordinates leaves a diagonal principal block, then Q has a continuous density with ||p_Q||_infinity<5.536 and P(Q in I)<5.536|I| for every interval I."
+    },
+    {
+      "id": "QFORM-N3-LEAFSTAR-ELEVATION-CLOSED-v1",
+      "status": "COROLLARY_OF_NEW_SUPPORTING_THEOREM",
+      "statement": "A strict-N3 two-hub packet with arbitrary weighted/signed within-leaf star curvature is paid after elevating the physical star center, provided the remaining complement is diagonal."
+    }
+  ],
+  "mathematical_premises": [
+    "strict N3 at tau=1/128: s3(A)>=1, |Aii|<tau, all physical 2x2 principal determinant magnitudes<tau",
+    "physical off-diagonal cap |Aij|<sqrt(tau+tau^2)",
+    "account02/B09 QFORM-TWOHUB-PLUCKER-SMOOTHING-v1 at bc348aa1a3631b0a0a3a9939cbb6b023578e9abc",
+    "newest volume theorem at c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "singular-value Lipschitz inequality and exact duplicated singular spectrum of a symmetric pure cross block",
+    "Cauchy-Binet/e2 identity for the three 2-column physical Gram determinants"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-MAX-SINGLETON-AUGMENTATION-STABILITY-FALSE-v1"
+  ],
+  "partner_result_actually_applied": {
+    "partner": "account02/B09",
+    "claim": "QFORM-TWOHUB-PLUCKER-SMOOTHING-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bc348aa1a3631b0a0a3a9939cbb6b023578e9abc",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T064043Z-account02-B09-QFORM-r13/REPORT.md",
+    "actual_inequality": "||p_Q||_infinity <=2sqrt(e)[rho det G]^{-1/4} <=5.535027140807026 after selecting a literal physical hub pair with det G>=c^4/3 and rho>=0.8576581713521573"
+  },
+  "newest_volume_result_application": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+    "application": "For the three disjoint flat-cross-bank target family M^T M=I3, Z=1 and alpha_i=1/m; q=1 gives ||p_Q||_infinity<=3e and the same coefficient times interval length."
+  },
+  "newest_peer_correction_consumed": {
+    "source": "account03/B09 r31",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e8b97d9dcd8dd85cacc8fc73c2be4e86fde4b27a",
+    "claim": "QFORM-RANK2-NOAUGMENT-AGGREGATE-STABILITY-v1",
+    "note": "The proof does not use the refuted max-singleton stability shortcut."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "eac837cc8e82a8d647217b2e90c331328b27f925",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T121444Z-account01-B09-QFORM-auto11/REPORT.md",
+    "report_blob": "624697b97d10ca186f23103c84abaf510f64c2ee",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T121444Z-account01-B09-QFORM-auto11/CHECKS.md",
+    "checks_blob": "8b67226f0d88e0419b73c9c83b00c28c6bac881a"
+  },
+  "unresolved_implication": "QFORM-N3-THREEHUB-GENERAL-COMPLEMENT-ROUTING-v1",
+  "next_step": "After elevating the near-coloop physical leaf, route genuinely arbitrary complementary curvature through a low-leverage physical vertex cover, aggregate third-volume packet, determinant-balanced grouped packet, or bounded physical collar/ridge/definite/grouped-square exit without treating small matrix norm as a small random perturbation.",
+  "independent_review_status": "NOT_YET_REVIEWED",
+  "full_brain_connected": false
+}

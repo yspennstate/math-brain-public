@@ -1,0 +1,53 @@
+{
+  "run_id": "20260923T165755Z-account01-B05-QFORM-auto13",
+  "status": "exact symbolic identities checked",
+  "checks": [
+    {
+      "name": "moving_slope_rewrite",
+      "identity": "After V=(L-eta*sqrt(rho)*T)/b and theta=(b^2-eta*alpha)/b^2, H equals (alpha/b^2)L^2+2sqrt(rho)theta LT-eta rho theta T^2+(2delta/b)LW-(2delta eta sqrt(rho)/b)TW+gamma W^2.",
+      "result": "PASS"
+    },
+    {
+      "name": "TW_slice_determinant",
+      "identity": "det([[-eta rho theta,-delta eta sqrt(rho)/b],[-delta eta sqrt(rho)/b,gamma]]) = eta rho det(M)/b^2",
+      "result": "PASS"
+    },
+    {
+      "name": "fixed_T_fiber_determinant",
+      "identity": "det([[c eta,sqrt(c),0],[sqrt(c),alpha/b^2,delta/b],[0,delta/b,gamma]]) = c det(M)/b^2",
+      "result": "PASS"
+    },
+    {
+      "name": "root_discriminant_cancellation",
+      "identity": "L^2+eta(s-H)=eta s+(b^2-eta alpha)V^2-2eta delta VW-eta gamma W^2; all T terms cancel",
+      "result": "PASS"
+    },
+    {
+      "name": "root_discriminant_determinant",
+      "identity": "det([[b^2-eta alpha,-eta delta],[-eta delta,-eta gamma]])=eta det(M)",
+      "result": "PASS"
+    },
+    {
+      "name": "near_null_partner_product_lower_bound",
+      "facts": [
+        "||M^{-1}||op<=1 implies |alpha gamma-delta^2|<=|det M|",
+        "|eta|<=1/2 implies b^2|gamma|<=(3/2)|det M|",
+        "testing z=(delta,0,-b) in ||Mz||>=||z|| gives |gamma|>=1",
+        "therefore |gamma det M|/b^2>=2/3 and |beta^2 gamma det B_fib|>=2c^2/3"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "explicit_total_constant",
+      "identity": "31*(3/2)^(1/6)*2^(1/3)*(2^(5/2)/sqrt(3))^(2/3)=124/6^(1/6)",
+      "numeric": 91.98771057320988,
+      "result": "PASS"
+    },
+    {
+      "name": "hadamard_spread_quasinorm",
+      "identity": "For T=(X1+...+X8)/sqrt(8), X1~Unif[0,R], X2..X8~Unif[0,1], p_T=sqrt(8)/R on [7/sqrt(8),R/sqrt(8)], so integral p_T^(1/3) >= (R-7)/(2 R^(1/3))",
+      "result": "PASS"
+    }
+  ],
+  "note": "These checks verify algebra/constants only. They are not an independent end-to-end proof review of the full QFORM conjecture."
+}

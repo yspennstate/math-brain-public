@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T075805Z-account01-B18-qform-auto11-r50",
+  "status": "PASS",
+  "checks": {
+    "cross_bound_formula": "For B with top-j singular values sigma_i, RV sqrt(2) times LPP-scaled radial bathtub gives [j/(j-1)] v_j^(1/j)/(prod sigma_i)^(1/j).",
+    "j2_constant": 3.5449077018110318,
+    "j2_statement": "2 sqrt(pi)/sqrt(sigma_1 sigma_2)",
+    "flat_cross_constants": {
+      "r2": 5.013256549262001,
+      "r3": 4.188077948623138,
+      "r4": 3.974533571810907,
+      "r5": 3.8963208262364857,
+      "r10": 3.8584626648940823,
+      "analytic_crude_upper": 8.265462708244986
+    },
+    "partner_operator_branch": {
+      "value": 5.656854249492381,
+      "formula": "4 sqrt(2)",
+      "M_HS": 2,
+      "M_op": "2/sqrt(r)",
+      "a": "sqrt(r)",
+      "K_beta": 1
+    },
+    "target_spectrum": "{1,-1,sqrt(r)} union {+1/sqrt(r),-1/sqrt(r)}^r; exactly three abs>=1 for every integer r>=2",
+    "spectrum_numeric_r2": [-1.0,-0.7071067811865475,-0.7071067811865475,0.7071067811865475,0.7071067811865475,1.0,1.4142135623730951],
+    "spectrum_numeric_r3": [-1.0,-0.5773502691896258,-0.5773502691896258,-0.5773502691896258,0.5773502691896258,0.5773502691896258,0.5773502691896258,1.0,1.7320508075688772]
+  },
+  "scope": "Deterministic algebra and numerical constants only; proof is in REPORT.md."
+}

@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "independent": true,
+  "chain_checks": [
+    {
+      "dimension": 1,
+      "functions": 4,
+      "exhaustive": true,
+      "chain_count": 1,
+      "max_variance_residual_integer": 0,
+      "max_n_mean_disagreement_over_influence": 0.0,
+      "max_entropy_over_influence": 0.0,
+      "exceptional_layer_counts_seen": [
+        0
+      ]
+    },
+    {
+      "dimension": 2,
+      "functions": 16,
+      "exhaustive": true,
+      "chain_count": 2,
+      "max_variance_residual_integer": 0,
+      "max_n_mean_disagreement_over_influence": 0.5,
+      "max_entropy_over_influence": 2.0,
+      "exceptional_layer_counts_seen": [
+        0,
+        1
+      ]
+    },
+    {
+      "dimension": 3,
+      "functions": 256,
+      "exhaustive": true,
+      "chain_count": 6,
+      "max_variance_residual_integer": 0,
+      "max_n_mean_disagreement_over_influence": 1.0,
+      "max_entropy_over_influence": 2.955889582251599,
+      "exceptional_layer_counts_seen": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "dimension": 4,
+      "functions": 65536,
+      "exhaustive": true,
+      "chain_count": 24,
+      "max_variance_residual_integer": 0,
+      "max_n_mean_disagreement_over_influence": 1.5,
+      "max_entropy_over_influence": 3.402475551198587,
+      "exceptional_layer_counts_seen": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "dimension": 5,
+      "functions": 2000,
+      "exhaustive": false,
+      "chain_count": 120,
+      "max_variance_residual_integer": 0,
+      "max_n_mean_disagreement_over_influence": 1.2413793103448276,
+      "max_entropy_over_influence": 3.6237403997020836,
+      "exceptional_layer_counts_seen": [
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "dimension": 6,
+      "functions": 2000,
+      "exhaustive": false,
+      "chain_count": 720,
+      "max_variance_residual_integer": 0,
+      "max_n_mean_disagreement_over_influence": 1.1743589743589744,
+      "max_entropy_over_influence": 3.739764017898052,
+      "exceptional_layer_counts_seen": [
+        0,
+        4,
+        5
+      ]
+    }
+  ],
+  "union_checks": [
+    {
+      "dimension": 1,
+      "components": 3,
+      "assignments": 16,
+      "exhaustive": true,
+      "max_entropy_residual": 0.0,
+      "no_joining_edge_cases": 10,
+      "joining_edge_cases": 6
+    },
+    {
+      "dimension": 2,
+      "components": 3,
+      "assignments": 256,
+      "exhaustive": true,
+      "max_entropy_residual": 0.0,
+      "no_joining_edge_cases": 58,
+      "joining_edge_cases": 198
+    },
+    {
+      "dimension": 3,
+      "components": 3,
+      "assignments": 65536,
+      "exhaustive": true,
+      "max_entropy_residual": 0.0,
+      "no_joining_edge_cases": 1582,
+      "joining_edge_cases": 63954
+    },
+    {
+      "dimension": 4,
+      "components": 5,
+      "assignments": 5000,
+      "exhaustive": false,
+      "max_entropy_residual": 0.0,
+      "no_joining_edge_cases": 3,
+      "joining_edge_cases": 4997
+    },
+    {
+      "dimension": 6,
+      "components": 7,
+      "assignments": 5000,
+      "exhaustive": false,
+      "max_entropy_residual": 0.0,
+      "no_joining_edge_cases": 3,
+      "joining_edge_cases": 4997
+    }
+  ],
+  "noncontiguous_adjacency": {
+    "layer_subsets": 16368,
+    "max_adjacency_residual": -1.2246467991473532e-16
+  },
+  "weighted_crossing_layer_checks": {
+    "cases": 3000,
+    "all_crossings_attained": 3000
+  },
+  "limits": "Finite checks support, but do not replace, the analytic audit; novelty is not assessed."
+}

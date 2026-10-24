@@ -1,0 +1,13 @@
+P0282 affine typical-shape pivot exact self-check
+candidate_condition=10000*n>=25661*j ; equivalent k/n>=15661/25661
+good_cutoff=r_s=ceil(s/5+8), s=j-1
+good_factor_shifted_positive_coefficients=PASS
+good_factor_H67_coefficients_low_to_high=2613445988594293406820769336269846,635961200958492136531025720038715628,47998083339451756464423526464705210,1448807241011204484237857757772840,21860695348472604555781611230890,164884320879362824704997287468,497333097456833719576708934
+good_factor_direct_checks=6 PASS
+tilt_normalization_inverse_square_lt_8=PASS
+union_tail_base_cases=5 s=113..117 PASS
+five_step_contraction_shifted_positive_coefficients=PASS
+five_step_contraction_coefficients_low_to_high=4364070480704,6745042481248,275753463840,4550059440,37577860,155118,256
+large_s_tail_conclusion=p_s<1/[5600(s+1)] for all s>=113
+large_s_final_product=(1+1/(695j))*(1-1/(700j))>1 PASS
+ALL_EXACT_CHECKS_PASS

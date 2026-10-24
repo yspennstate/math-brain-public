@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "account02",
+  "slot": "B10",
+  "run_id": "account02-B10-20260925T011508Z-audit-pass3",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "source_sha256": "f4a4f4c6db7f0ad4feffbe04041af3cf1a759fb4cb51f4979b6fd884eba26037",
+  "pdf_blob": "8be3aae36ecad7a9dc9b7c95978aad09499f32d0",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "pdf_bytes": 484310,
+  "pdf_pages": 14,
+  "pass_id": "pass3_exact_constants_adversarial",
+  "coverage": "Every physical source line 1-675 reread. Proof-bearing Sections 2-5 and 7 reconstructed independently. Section 6 read line-by-line; already-formalized spectral facts treated as dependency and not re-proposed.",
+  "page_map": [
+    "1-70:p1",
+    "71-118:p2",
+    "119-162:p3",
+    "163-204:p4",
+    "205-248:p5",
+    "249-305:p6",
+    "306-345:p7",
+    "346-392:p8",
+    "393-436:p9",
+    "437-484:p10",
+    "485-536:p11",
+    "537-576:p12",
+    "577:p12-13",
+    "578-627:p13",
+    "628:p13-14",
+    "629-675:p14"
+  ],
+  "literal_exceptions": [
+    {
+      "lines": "41",
+      "page": "1",
+      "status": "FALSE",
+      "repair": "C04",
+      "impact": "descriptive only"
+    },
+    {
+      "lines": "62",
+      "page": "1",
+      "status": "UNCHECKED",
+      "repair": "C07",
+      "impact": "external current-status claim only"
+    },
+    {
+      "lines": "65",
+      "page": "1",
+      "status": "FALSE",
+      "repair": "C05",
+      "impact": "descriptive only"
+    },
+    {
+      "lines": "74",
+      "page": "2",
+      "status": "UNCHECKED",
+      "impact": "external related-work attribution only"
+    },
+    {
+      "lines": "148",
+      "page": "3",
+      "status": "PASS",
+      "repair": "C06",
+      "impact": "editorial only"
+    },
+    {
+      "lines": "319-322",
+      "page": "7",
+      "status": "GAP",
+      "repair": "C02",
+      "impact": "Theorem 4.1; constant-preserving Jensen repair"
+    },
+    {
+      "lines": "412",
+      "page": "9",
+      "status": "FALSE",
+      "repair": "C01",
+      "impact": "definite-pair lemma; null-ray chart repair"
+    },
+    {
+      "lines": "416,441-442",
+      "page": "9-10",
+      "status": "GAP",
+      "repair": "C03",
+      "impact": "hyperbolic density; null critical-level repair"
+    }
+  ],
+  "proof_verdict_after_C01_C03": "PASS",
+  "theorem_constants": [
+    "270 K^2/s",
+    "77 K/sqrt(s)"
+  ],
+  "detailed_persisted_files": [
+    "coverage_p01.jsonl",
+    "coverage_p02.jsonl",
+    "coverage_p03.jsonl",
+    "coverage_p04.jsonl"
+  ],
+  "persistence_note": "Further detailed pass3 page-file writes were blocked by the platform safety gate. The earlier account02 full line-level coverage remains preserved in its prior run; this manifest records the fresh pass3 exceptions and complete reread.",
+  "independence_note": "Pass3 source proof status was re-derived before comparing with prior account02 artifacts. Prior artifacts were used only for same-source PDF line/page alignment and cross-pass comparison.",
+  "remaining_unchecked": [
+    "fresh PDF visual/raster rendering",
+    "C07 exhaustive literature status",
+    "external bibliography metadata",
+    "fresh Lean recompilation"
+  ]
+}

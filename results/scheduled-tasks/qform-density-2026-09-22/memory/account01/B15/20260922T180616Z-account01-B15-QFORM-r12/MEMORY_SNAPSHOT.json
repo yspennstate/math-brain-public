@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260922T180616Z-account01-B15-QFORM-r12",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "control_revision_consumed": "2026-09-22.11",
+  "source_control_commit": "5091977b475b9784dd84816aa84bfa1e8ec5e2a3",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "partner_applied": {
+    "worker": "account02/B15",
+    "run_id": "20260922T170424Z-account02-B15-qform-r5",
+    "canonical_commit": "42920d321a16b9393856cfb0ed78d8557170ad38",
+    "use": "fixed-target C0 regularity gives pointwise Poisson approximation identity; no-uniform-tail example confirms the reduction cannot rely on compact output location"
+  },
+  "self_dependency": {
+    "run_id": "20260922T170451Z-account01-B15-qform-r11",
+    "canonical_commit": "e4ec163c51bac9e10fd5737e9b1333a410fb7ce7",
+    "use": "exact affine closure C_aff=C_hom for Cauchy-output regularized affine targets"
+  },
+  "mathematical_change": [
+    "For spectral split A=B+C with B the selected rank-three protected core and C nonzero orthogonal residual, (U^T X, X^T C X) has a joint R4 density because the map is a submersion off ker C.",
+    "For S=X^T B X and V=X^T C X, ||p_(S+V)||_infinity <= E ||p_(S|V)||_infinity; the residual-level supremum in the current owner route is unnecessary.",
+    "Combining the rank-three coarea bound gives ||p_Q||_infinity <= K int p_V(v)^(1/3)||G(.,v)||_infinity^(2/3)dv, where G is the joint density of (U^T X,V).",
+    "For every probability law mu, its interval-density seminorm equals sup_(eta,t)(P_eta*mu)(t)=(1/pi)sup_(Im z>0) Im m_mu(z); Poisson heights are monotone as eta downarrow0.",
+    "The sharp QFORM constant equals the sharp constant on Cauchy-output-regularized affine targets, uniformly in eta; dyadic eta suffice."
+  ],
+  "canonical_scientific_commit": "6c9b9c1b7507a487d45c907acc45b6614b42550b",
+  "canonical_scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260922T180616Z-account01-B15-QFORM-r12/REPORT.md",
+  "handoff_commit": "1e67d1dd0f3c25add1bac6b43731de85a9362d8b",
+  "unresolved_implication": "Prove a universal bound on int p_V(v)^(1/3)||G(.,v)||_infinity^(2/3)dv for the spectral core/rest joint density G, using original-coordinate product provenance before conditioning normalization.",
+  "next_step": "Attempt a four-dimensional coarea/Brascamp-Lieb estimate directly on the unnormalized joint density G(y,v), or construct a target-valid family showing this weighted functional can diverge even when p_Q remains bounded.",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

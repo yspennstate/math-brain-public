@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "witt_gap_residual_algebra",
+      "result": "PASS",
+      "detail": "With weighted bank means zero, slope energies are G and G_u. Orthogonality gives G*G_u <= (1-G)(1-G_u), hence G+G_u<=1 and residual_u_energy=1-G_u>=G."
+    },
+    {
+      "id": "bank_collinear_gap_live_frame",
+      "result": "PASS",
+      "detail": "For 0<s<1 and nonzero z-slope gap, the 2x2 equations from u perpendicular v,z have determinant s(1-s)(a_K-a_J), forcing both u slopes zero; a unit u cannot be fully bank-collinear."
+    },
+    {
+      "id": "target_family_spectrum",
+      "result": "PASS",
+      "detail": "For matrix [[0,0,1,0],[0,0,kappa,0],[1,kappa,0,0],[0,0,0,1]], characteristic polynomial is -lambda*(lambda-1)*(kappa^2-lambda^2+1), so nonzero eigenvalues are 1 and +/-sqrt(1+kappa^2)."
+    },
+    {
+      "id": "joint_witness_jacobian",
+      "result": "PASS",
+      "detail": "u=e-w^2/(2*kappa*v) has partial derivative du/de=1; the triangular map (e,v,w)->(u,v,w) has absolute Jacobian one, giving the displayed residual density cap one."
+    },
+    {
+      "id": "joint_witness_output",
+      "result": "PASS",
+      "detail": "Substitution gives 2v(h+kappa u)+w^2=2v(h+kappa e). For 0<kappa<=1 the density of h+kappa e is >=3/4 on [-1/4,1/4], hence p_Q(q)>=(3/4)log(1/(4|q|)) for 0<|q|<1/4."
+    },
+    {
+      "id": "source_disjoint_receiver",
+      "result": "PASS",
+      "detail": "Complete the literal W square; apply QFORM-ZERODIAG-EDGE-HALFRIESZ-v1 to the literal H--V edge in the Schur remainder; then apply the pinned e5f71d79 square peel. Bound: 4*sqrt(2)*|a*delta|^(-1/2)."
+    }
+  ],
+  "full_target_status": "OPEN",
+  "continuity_status": "SEPARATE_OPEN"
+}

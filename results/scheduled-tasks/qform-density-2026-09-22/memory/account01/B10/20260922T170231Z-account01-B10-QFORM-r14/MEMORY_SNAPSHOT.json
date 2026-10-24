@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B10",
+  "run_id": "20260922T170231Z-account01-B10-QFORM-r14",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision_final": "2026-09-22.8",
+  "control_commit_last_observed_before_snapshot": "5a1c6177f86f036ce784f96f49b06b95abbeffce",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "outcome": "ESSENTIAL_STEP_APPLIED_TARGET_BRANCH_CLOSED",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "362ed34566d60b40a56b0a028f9200d5dba6ad3b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B10/20260922T170231Z-account01-B10-QFORM-r14/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "5a1c6177f86f036ce784f96f49b06b95abbeffce",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B10/20260922T170231Z-account01-B10-QFORM-r14.md"
+  },
+  "partner_result_applied": {
+    "account_slot": "account02/B10",
+    "run_id": "20260922T154900Z-account02-B10-QFORM-r13",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9a34dc516006d7eb417687b3d7d409f7dfaf33d9",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B10/20260922T154900Z-account02-B10-QFORM-r13/REPORT.md",
+    "application": "Its arbitrarily long zero-pivot same-null-ray peeling family has total ray mass one, so QFORM-FULL-NULL-RAY-BANK-v1 applies to the entire family at once and gives ||p_Q||_infinity<=6e, continuously."
+  },
+  "supporting_result_applied": {
+    "account_slot": "account01/B11",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "aff1f42f4b68ea31eec27673e7d56b5370f6dec3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/QFORM-B11-20260922T151340Z-r11/REPORT.md",
+    "theorem": "Independent scalar / dependent pair hyperbolic-square smoothing with continuous density and bound 6(MK)^(2/3)|a|^(-2/3)|b|^(-1/3)."
+  },
+  "proved_claims": [
+    {
+      "id": "QFORM-COLLINEAR-SPECTRAL-BANK-COMPRESSION-v1",
+      "scope": "Any exact collinear physical spectral bank; compresses the bank into one genuine independent normalized product-linear scalar with density cap sqrt(e)."
+    },
+    {
+      "id": "QFORM-FULL-NULL-RAY-BANK-v1",
+      "scope": "Exact rank-three target; one null spectral ray is filled to total Parseval mass one by arbitrary many original coordinates; arbitrary transverse Parseval frame.",
+      "bound": "||p_Q||_infinity <= 6 e |det Lambda|^(-1/3) <= 6e",
+      "continuity": true
+    },
+    {
+      "id": "QFORM-SAME-RAY-WHITENING-RECURRENCE-v1",
+      "scope": "After consumed mass s on a spectral ray, a next row alpha v has whitened leverage alpha^2/(1-s); each >1/2 step cuts remaining ray mass by more than half; nullness is invariant under whitening."
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "first_unpaid_implication": {
+    "id": "QFORM-PARTIAL-NULL-RAY-BANK-LEAKAGE-v1",
+    "statement": "For a null-ray bank of mass w in (1/2,1), control the exact overlapping complement leakage of norm sqrt(1-w) using original product provenance and the orthogonality of the normalized residual ray coefficient with the two transverse coefficient vectors; conditional density caps alone are insufficient."
+  },
+  "continuity_status": "PROVED_FOR_FULL_NULL_RAY_BANK_BRANCH_ONLY; FULL_TARGET_CONTINUITY_OPEN",
+  "next_mechanism": "Exploit the exact three-vector orthogonality in the complement before conditioning: either a product-origin curved-trace estimate uniform in rho=1-w, or an exact angular/cross-volume dichotomy. Do not treat small rho perturbatively."
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B04",
+  "run_id": "account02-B04-20260922T132109Z-01cd8406",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "target_status": "QFORM-FULL_OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_commit_initial": "1ecd89f1c1185755a2b3b24418d8b736d00a4041",
+  "control_commit_prepublication": "556bbb0ae467b4f586505010af4da4cd99c5921e",
+  "control_blobs": {
+    "AGENTS.md": "0bd21fad7991aab6bd64f8192c0d3d2287c1cced",
+    "scheduled_tasks/README.md": "433b2d57345823967480245b59a7c47d51019c37",
+    "scheduled_tasks/fleet.json": "078959cb49553ee539c26897ee14541cb3a99196",
+    "scheduled_tasks/roles.json": "5b1dc5c128d03b1de819a4a9cbdb1ed6f374a608",
+    "scheduled_tasks/PROTOCOL.md": "03f1b7b49c13f8a0a694187e3721971c03c3c636"
+  },
+  "programme_blobs": {
+    "MANIFEST.json": "3928383d7be763fd666436a159f1de6d629a7028",
+    "CURRENT_RESEARCH.md": "c8e8cd4d7065799e210a55810a500bbf589cd103",
+    "CLAIMS.json": "1e28cd8da25ecdfc5641b22a90519c5061896862",
+    "DELTAS.json": "4e5aa806ac492c6d3b9f228522f4305b50730d4c",
+    "CORRECTION_INBOX.json": "752bf867375ef2a2ddbd0cf8570e8370c4b38e79",
+    "PATHWAYS.md": "373e8852eb841b9ad684bfa7ff2b2870d8f6d978",
+    "MEMORY_PROTOCOL.md": "0d902d56688f4b5c575f5b921ddf9f6709e88312",
+    "assignment/account02/B04.json": "8d775d68d0abfd966240ed9060adb06d9549e31d"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "named_partner": {
+    "account_slot": "account03/B04",
+    "completed_snapshot_run": "a03-b04-20260922T125025Z-qform-r12",
+    "report_repository": "yspennstate/math-open-problems",
+    "report_commit": "f82e7bb9a6376c69615e136da4d1fc67343d46ef",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/a03-b04-20260922T125025Z-qform-r12/REPORT.md",
+    "report_blob": "b3504f05f6f75a6537327d5c213a235159cb781f",
+    "result_applied": "QFORM-DIFFUSE-SCHUR-PIVOT-v1",
+    "actual_inequality_applied": "||p_Q||inf <=4 sqrt(3e)|a_i|^-1/2 |mu_1 mu_2|^-1/4, with mu_1 mu_2=det(Lambda) r_i/a_i proved in this run, yielding ||p_Q||inf <=4 sqrt(3e)(|det Lambda| r_i |a_i|)^-1/4."
+  },
+  "other_source_applied": {
+    "claim": "QFORM-DIFFUSE-SEPARABLE-PHASE-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "773b7fb6f0e6a8142066f0bac08d228dfc164fdb",
+    "path": "proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md",
+    "blob": "d08d2488c072386e2b8ad818e30b1a6dec79e63a",
+    "scope_used": "Exact rank-three diffuse product-space density estimate applied to the real Fourier-frame family."
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-RANK3-PIVOT-TRANSFER-v1",
+      "status": "SUPPORTING_THEOREM_PROVED_SOURCE_DEPENDENT",
+      "statement": "For rank-three A=U Lambda U^T and physical pivot i with a_i!=0, the Schur complement has nonzero eigenvalue product det(Lambda) r_i/a_i and range leverages c_{j|i}=||u_j||^2-(u_j.u_i)^2/r_i. If max c_{j|i}<=1/2, then the named partner theorem gives ||p||inf<=4 sqrt(3e)(|det Lambda| r_i |a_i|)^-1/4."
+    },
+    {
+      "id": "QFORM-LEVERAGE-HEAVY-5D-v1",
+      "status": "EXPLICIT_TARGET_INSTANCE_PROVED",
+      "statement": "A fully dense 5x5 rank-three matrix with spectrum {1,1,-1,0,0}, all original-frame row leverages >1/2, has density <=8 sqrt(e) for every admissible product law via the pivot-transfer theorem."
+    },
+    {
+      "id": "QFORM-FOURIER-PIVOT-INSTABILITY-v1",
+      "status": "SOURCE_VALID_MECHANISM_COUNTEREXAMPLE",
+      "statement": "For A_{n,delta}=U_n diag(2+delta,-1,-1) U_n^T with real Fourier frame U_n, every physical pivot is delta/n; the scalar-pivot transfer bound grows like sqrt(n) delta^-1/4 while the diffuse product-space theorem stays dimension-free, so a single-pivot lower-bound strategy cannot close the target."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8a62041264ea107d50804ccb748274535b19efac",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/account02-B04-20260922T132109Z-01cd8406/REPORT.md",
+    "blob": "beb93b4224bf618f816c913116067c324fa7e97d"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "b3626e1610868b6ca04b8d30488139a5d567662d",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B04/account02-B04-20260922T132109Z-01cd8406.md",
+    "blob": "794137a17fa2a671e4fb927b67d896d798aed218"
+  },
+  "checkin_commit": "b68908e363f0ce9338a1cdf1996653ae5f699876",
+  "first_unpaid_implication": "QFORM-HIGH-LEVERAGE-AGGREGATION: after a projected leverage failure c_{j|i}>1/2 or a near-isotropic scalar pivot, aggregate the fixed-row wedge budget by a product-space inequality instead of selecting one tiny physical minor.",
+  "next_step": "Develop a two-heavy-row rearrangement inequality for the projected rank-two frame; preserve original-coordinate product provenance and test it against the Fourier-frame and bank-aggregation corrections.",
+  "inventory_observation": {
+    "source": "latest account02 inventory record only; native scheduler not queried by B04",
+    "observed_at_utc": "2026-09-21T09:15:40.433442+00:00",
+    "managed_active_count": 20,
+    "hourly_valid_count": 20,
+    "missing_slots": [],
+    "quiet_task_flags_reported_off": true,
+    "freshness": "STALE_FOR_CURRENT_RUN",
+    "deficits_to_report_to_B20": "NO_NEW_DEFICIT_OBSERVED; CURRENT_NATIVE_INVENTORY_NOT_REVERIFIED_BY_B04",
+    "scheduler_mutations_by_B04": 0
+  },
+  "model_telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_requested": "maximum_actually_supported",
+    "reasoning_effort_self_report": "UNKNOWN",
+    "reasoning_effort_configured": "UNKNOWN",
+    "configured_source": "latest_inventory_field_not_exposed_and_stale",
+    "thinking_usage": {
+      "reasoning_tokens": null,
+      "provider_thinking_seconds": null,
+      "source": "not_exposed",
+      "scope": "unavailable"
+    }
+  },
+  "privacy_review": "Changed files contain only QFORM mathematics, exact public/private repository provenance already authorized by the programme, and operational self-report. No credentials, scheduler identifiers, machine paths, unrelated private data, benchmark gold, email/Drive content, raw transcripts, public release, paid calls, remote workflows, or permission changes."
+}

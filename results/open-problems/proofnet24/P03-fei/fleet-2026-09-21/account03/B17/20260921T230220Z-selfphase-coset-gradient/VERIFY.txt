@@ -1,0 +1,27 @@
+B17 self-phase/coset-gradient targeted checker
+execution: standard-library Python in the scheduled run; no paid or remote compute
+checker_sha256: c73ce159d53a5b8d88a4f669d3785f30e6da7244d1ce551d0846b7525b95000b
+output_sha256: 502fe9b3e2ebc9d6d4dbe65107e59a5934f7c62cb9bfd676718312a8755978f6
+scope: exact RM(1,4) combinatorial moments and boundary cases; floating evaluations only for finite-resolvent logarithmic diagnostics. This is not an exhaustive Boolean sweep and not a proof of FEI.
+
+CASE sign_changing J=3/2 |F|=8 delta2=1/8
+  T=0.125 gamma=-0.012670784628380134 sq_bound=0.09375 ratio=0.00171252035305
+  T=0.25 gamma=-0.013946471957138107 sq_bound=0.1875 ratio=0.00103735509361
+  T=0.5 gamma=-0.012670784628380151 sq_bound=0.375 ratio=0.000428130088263
+  T=2 gamma=-0.0062709592331922082 sq_bound=1.5 ratio=2.62166198029e-05
+CASE one_point J=1/2 |F|=1 delta2=1/64
+  T=0.125 gamma=0.0040532977387685507 sq_bound=0.03125 ratio=0.000525735121891
+  T=0.25 gamma=0.0060906563437964183 sq_bound=0.0625 ratio=0.000593537515172
+  T=0.5 gamma=0.008756830041341597 sq_bound=0.125 ratio=0.000613456578984
+  T=2 gamma=0.014169576247145342 sq_bound=0.5 ratio=0.000401553782047
+CASE character_x0 J=0 |F|=8 delta2=1/8
+  T=0.125 gamma=0 (boundary zero)
+  T=0.25 gamma=0 (boundary zero)
+  T=0.5 gamma=0 (boundary zero)
+  T=2 gamma=0 (boundary zero)
+CASE constant_plus J=0 |F|=0 delta2=0
+  T=0.125 gamma=0 (boundary zero)
+  T=0.25 gamma=0 (boundary zero)
+  T=0.5 gamma=0 (boundary zero)
+  T=2 gamma=0 (boundary zero)
+PASS

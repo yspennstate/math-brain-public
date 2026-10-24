@@ -1,0 +1,97 @@
+{
+  "candidate": "C0023",
+  "as_of": "2026-10-10",
+  "worker": "w423",
+  "exact_model": "Independent nearest-neighbour Bernoulli bond percolation on the full lattice Z^d, integer 3<=d<=10; theta_d(p)=P_p(|C(0)|=infinity), p_c(d)=inf{p:theta_d(p)>0}; target theta_d(p_c(d))=0.",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "historical_primary_statement_verified": true,
+  "primary_sources": [
+    {
+      "source_id": "duminil_copin_icm_2018",
+      "title": "Sixty years of percolation",
+      "author": "Hugo Duminil-Copin",
+      "url": "https://arxiv.org/pdf/1712.04651",
+      "version_observed": "v1, dated December 2017, 21 pages",
+      "locators": [
+        "Section 1.1 pp.1-2: product bond model, nearest-neighbour lattice, theta",
+        "Conjecture 1 p.3",
+        "p.3: historical d>=11 boundary"
+      ],
+      "statement_quote": "Show that theta(p_c) = 0 on Z^d for every d >= 3.",
+      "verification": "Read primary PDF definitions and Conjecture 1 via authorized public-page tool; mathematical notation transcribed to ASCII. This verifies the historical statement, not a current proof or openness claim."
+    },
+    {
+      "source_id": "garban_steif_noise_2012",
+      "url": "https://arxiv.org/pdf/1102.5761",
+      "locator": "Chapter XI Section 1 p.136 (intake locator)",
+      "verification": "Recovered exact C0023 row and source locator from the named intake; underlying book page not independently re-read. The alternative primary Conjecture 1 above supplies the exact model and target."
+    },
+    {
+      "source_id": "fitzner_van_der_hofstad_2017",
+      "url": "https://arxiv.org/abs/1506.07977",
+      "verification": "Read primary arXiv abstract: nearest-neighbour percolation d>=11, infrared bound and triangle condition. Does not resolve 3<=d<=10."
+    }
+  ],
+  "status_search": {
+    "bounded_public_search": "Queries for criticality/continuity on Z^d and 2026, then direct primary-paper and public GitHub raw checks.",
+    "unverified_resolution_lead": "A secondary September 2026 post claims an anthropics/formal-math percolation proof. Public main README as read lists zeta23 only, and attempted raw percolation branch files were unavailable. No theorem statement, assumptions, trusted axioms or independent successful build was verified.",
+    "resolution_lead_primary_url": "https://raw.githubusercontent.com/anthropics/formal-math/main/README.md",
+    "conclusion": "Leave current openness UNKNOWN; neither search absence nor unavailable raw files refutes a possible proof. No novelty claim."
+  },
+  "prior_attempts": [
+    {
+      "id": "C0023-A001",
+      "file": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "line": 22,
+      "method": "Bootstrap half-space nonpercolation using finite energy and uniqueness.",
+      "recorded_gap": "Infinite half-space susceptibility and a gluing lemma through the hyperplane are unproved; a full-space cluster can restrict to many finite half-space pieces.",
+      "reuse": "Digest only. No unverified half-space susceptibility or gluing implication is used in L1-L4."
+    },
+    {
+      "scope": "Named H/I attempt folders and lean folder",
+      "result": "Targeted C0023/P0043/exact-dedup-key search found the lean attempted_un summary; no C0023-specific proof receipt was found in H/I. This is a bounded search result only."
+    },
+    {
+      "scope": "Existing Team O board",
+      "result": "Targeted board search found related percolation problems but no C0023 row; no peer proof read."
+    },
+    {
+      "scope": "Owner Big Open problem in probability theory directory",
+      "result": "Targeted percolation/criticality/C0023/theta search in ~/Open problem project/solved_register.md returned no matching solved target. The named Big Open project selection/status identifies a distinct nonamenable percolation problem and excludes its earlier phase-retrieval/RMT solved work. No C0023-specific retirement/proof receipt found in this bounded check."
+    },
+    {
+      "scope": "Math-brain export and canonical math-research-brain",
+      "result": "Canonical code build_signal_cache.py line 24 names the population SQLite store. Read it with mode=ro and query_only=ON; exact logical-ID queries recovered C0023 and the older half-space reduction, both unverified concepts. Full targeted receipt in PRIOR_CARD_RECEIPT.json; no store mutation."
+    }
+  ],
+  "brain_scar": {
+    "recall": "60-second timeout; no stage held waiting",
+    "fallback_index": "Targeted MEMORY.md grep found no exact match",
+    "fallback_slug": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "application": "Separate source receipts, finite checks and mathematical proofs; name the hardest missing geometric statement; do not count a pipeline success or a conditional implication as a solved target."
+  },
+  "served_model_settings": "Not inferred from requested model/effort/tier.",
+  "canonical_store_check": {
+    "path": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+    "read_only": true,
+    "matched_logical_ids": [
+      "math:probability.percolation:critical-percolation-full-space-from-half-space-needs-infinite-susceptibility-and-gluing",
+      "math:probability.percolation:open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10"
+    ],
+    "truth_statuses": [
+      "unverified",
+      "unverified"
+    ],
+    "receipt_file": "PRIOR_CARD_RECEIPT.json"
+  },
+  "model_evidence": {
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "max",
+    "requested_service_tier": "Fast",
+    "response_side_served_metadata": null,
+    "served_settings_certified": false,
+    "referee_served_evidence": "pending referee; not inferred from requested settings"
+  },
+  "verification_completed_at": "2026-10-10T06:49:36.506402+00:00"
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T011832Z-account01-B12-coherent-level1-payment",
+  "stream": "B12",
+  "primary_packet_id": "A057",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "B12-A057-LEVEL1-LOG-PAYMENT",
+      "version": "v1",
+      "status": "PROVED",
+      "scope": "For every Boolean h:{-1,1}^n->{-1,1}, in natural units, sum_i hat(h,{i})^2 log(1/hat(h,{i})^2) <= (2/e) I(h). For a balanced disjoint substitution F=g(h_1,...,h_m), the q_j-weighted sum of these explicit logarithmic coherent-remainder terms over one nonreusing physical layer is at most (2/e)I(F).",
+      "hypotheses": [
+        "h is a genuine Boolean sign; balance is needed only to invoke the sourced composition interface",
+        "composition child blocks are physically disjoint",
+        "logarithms are natural; divide by ln(2) for bits"
+      ],
+      "proof_dependencies": [
+        {
+          "claim": "reviewed coherent balanced-composition identity",
+          "repository": "yspennstate/math-research-brain",
+          "commit": "5d7a75c0b7ae3aab71df5abdafc31832be81321b",
+          "path": "research_pushes/2026-09-30-fei-current-route-map/ADDENDUM_11_54_BOOLEAN_PHASE_ENERGY_AND_COMPOSITION.md",
+          "blob": "4fa283ff7e3847d3b7b3c2ceead8274498de04c2"
+        },
+        {
+          "claim": "Boolean edge identity |hat h({i})|<=Inf_i(h)",
+          "evidence": "proved directly in COHERENT_REMAINDER_PAYMENT.tex"
+        },
+        {
+          "claim": "scalar envelope u^2 ln(1/u^2)<=(2/e)u",
+          "evidence": "one-variable calculus proof in COHERENT_REMAINDER_PAYMENT.tex"
+        }
+      ],
+      "review_status": "CONTRIBUTOR_CHECK_ONLY",
+      "independent_reviewers_requested": ["A091", "A090"]
+    },
+    {
+      "claim_id": "B12-A057-COEFFICIENTWISE-CANCELLATION",
+      "version": "v1",
+      "status": "PROVED",
+      "scope": "For the sourced coherent remainder, R(alpha)=0 if alpha=0, q=0, or a_T b_T=0 for every neighboring Fourier index T.",
+      "proof_dependencies": [
+        {
+          "claim": "coefficientwise psi representation",
+          "evidence": "algebraic rewrite in COHERENT_REMAINDER_PAYMENT.tex"
+        }
+      ],
+      "review_status": "CONTRIBUTOR_CHECK_ONLY"
+    },
+    {
+      "claim_id": "B12-A057-COHERENT-HIERARCHY",
+      "version": "v1",
+      "status": "OPEN",
+      "scope": "Bound the complete coherent remainder, including its non-logarithmic interference component, through an unbounded physical restriction hierarchy whose children become biased.",
+      "exact_obstruction": "The first-layer alpha-log term is paid, but no summable bound is proved for C_j(alpha), and the balanced-child identity is not restriction-closed."
+    }
+  ]
+}
+

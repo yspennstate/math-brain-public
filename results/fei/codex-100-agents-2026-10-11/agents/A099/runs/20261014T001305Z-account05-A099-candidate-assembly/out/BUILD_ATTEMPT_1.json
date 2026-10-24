@@ -1,0 +1,7 @@
+{
+  "status": "TIMEOUT",
+  "timeout_seconds": 60,
+  "command": "pdflatex --disable-installer -interaction=nonstopmode -halt-on-error -output-directory=out CANDIDATE_MANUSCRIPT.tex",
+  "compiler_cleanup": "subprocess.run timeout context kills and reaps the compiler",
+  "retry": "One bounded retry after log inspection; no package installation or background compiler"
+}

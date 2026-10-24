@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B11",
+  "run_id": "20260924T051340Z-account01-B11-QFORM-r11",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "13001ea7fe105e356d60d1e180ac14dbbbb5d4bf",
+  "control_commit_prepublication": "d62d140eb28f4060f1901bae51cf7eadf76e13e6",
+  "corrections_consumed": [
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "pointwise-law-uniform-quadratic-decay-false",
+    "fiber-sup-dimension-loss"
+  ],
+  "headline_result": "QFORM-NEARCOLOOP-SPECTRAL-DEFECT-LADDER-v1",
+  "result_summary": "For exact rank three and a physical row of leverage q<1, deleting that row leaves residual singular scales s1>=s, s2>=s sqrt(1-q), s3>=s(1-q), with exact residual pseudodeterminant (1-q)|det M|. The result is deterministic, sign-free, and sharp in the powers.",
+  "partner_result_applied": {
+    "worker": "account02/B11",
+    "source_commit": "7a45322747438aa340df490db33a2fb2e1d6d31d",
+    "result": "fixed-transverse-Pluecker null-pivot theorem",
+    "actual_application": "Q_q=2(sqrt(q)H+sqrt(1-q)T)Y+V^2 with a same-bank orthogonal three-leaf frame; omega_*=1/3 and spectrum {1,1,-1}, giving ||p||inf<=6.904434991977456 for q>=63/64."
+  },
+  "source_match_correction": "The interrupted 20260924T031514Z low-residual-rank theorem is subsumed by interactive 20260923T214000Z-all-exact-rank3-physical-coloops and is not counted as new progress.",
+  "secondary_source_match": "The null-pivot near-coloop debt listed by account02/B11 r12 is already paid by account02/B16 QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1, with <7.60/s for q>=63/64 under the live determinant scale.",
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "cff69711ba5f892192d92bd48756ef4823c6ff9d",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/20260924T051340Z-account01-B11-QFORM-r11/REPORT.md",
+  "handoff_commit": "8bcd66e76b35df545a52875c7ed50f19ce832a5c",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B11/20260924T051340Z-account01-B11-QFORM-r11.md",
+  "unresolved_implication": "QFORM-DEFECT-LADDER-TO-VOLUME1-LDL-TRACE-v1: combine the defect ladder with account03/B11 r50 volume-one LDL coordinates and exact product factorization to close the small nonzero majority-sign pivot without the divergent positive-root majorant.",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FULL_TARGET",
+  "full_brain_connected": false,
+  "repository_retrieval_and_receiver_use": true,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED"
+}

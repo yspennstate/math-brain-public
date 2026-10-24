@@ -1,0 +1,2 @@
+Stage8 complete locally: rank lower-funding formula and original pair all-k SAME15/4 payment,4395 checks PASS; arbitrary core/all terminals retained; universal selection and FEI OPEN.
+NEXT: Find one original proper pair on a genuine least-dimensional high-K witness whose quotient-rank increments fund its signed bill from SAME unused S_E,A, retaining mixed T and every terminal; do not sum dependent parity swaps.

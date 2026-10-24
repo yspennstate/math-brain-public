@@ -1,0 +1,138 @@
+{
+  "status": "PASS: numerical identity and asymptotic checks only",
+  "q": [
+    0.5,
+    0.3333333333333333,
+    0.16666666666666666
+  ],
+  "phases": [
+    0.0,
+    0.31,
+    -0.77
+  ],
+  "notes": [
+    "All Hessians are with respect to affine Hermitian K directions.",
+    "The full atom is evaluated analytically, including its derivatives.",
+    "Scaled Hessian negativity is numerically equivalent by congruence to full Hessian negativity.",
+    "Finite numerical checks do not prove the uniform theorem or the general conjecture."
+  ],
+  "cases": [
+    {
+      "case": "isotropic_nonexchangeable",
+      "surviving_eigenvalues": [
+        0.37,
+        0.37
+      ],
+      "minimum_regular_boundary_atom": 0.02281666666666666,
+      "tangent_eigenvalues": [
+        -4.047418318310646,
+        -3.3468622383173168,
+        -1.4283139950742534,
+        -0.2425859716936397
+      ],
+      "limit_eigenvalues": [
+        -4.047418318310646,
+        -3.3468622383173168,
+        -1.4283139950742534,
+        -0.36999999999999994,
+        -0.36999999999999994,
+        -0.36999999999999994,
+        -0.36999999999999994,
+        -0.2425859716936397,
+        -0.1369
+      ],
+      "epsilon_sweep": [
+        {
+          "epsilon": 0.01,
+          "scaled_normal_form_operator_error": 1.4085846306197989,
+          "maximum_scaled_hessian_eigenvalue": -0.14471586279062534,
+          "minimum_regular_atom": 0.024531000000000004
+        },
+        {
+          "epsilon": 0.0001,
+          "scaled_normal_form_operator_error": 0.8866036554683456,
+          "maximum_scaled_hessian_eigenvalue": -0.13701057013122983,
+          "minimum_regular_atom": 0.022833809999999996
+        },
+        {
+          "epsilon": 1e-08,
+          "scaled_normal_form_operator_error": 0.5691727626160472,
+          "maximum_scaled_hessian_eigenvalue": -0.13689992373560964,
+          "minimum_regular_atom": 0.022816668380999994
+        },
+        {
+          "epsilon": 1e-16,
+          "scaled_normal_form_operator_error": 0.37534988708711275,
+          "maximum_scaled_hessian_eigenvalue": -0.13689999999999392,
+          "minimum_regular_atom": 0.022816666666666693
+        },
+        {
+          "epsilon": 1e-32,
+          "scaled_normal_form_operator_error": 0.25250788017461556,
+          "maximum_scaled_hessian_eigenvalue": -0.1369,
+          "minimum_regular_atom": 0.02281666666666666
+        }
+      ],
+      "lambda_q": 0.24258597169364055,
+      "q_product_lower_bound": 0.027777777777777776,
+      "tangent_formula_operator_error": 2.4650411309981553e-15
+    },
+    {
+      "case": "unequal_surviving_eigenvalues",
+      "surviving_eigenvalues": [
+        0.3414589803375033,
+        0.4085410196624969
+      ],
+      "minimum_regular_boundary_atom": 0.02324999999999999,
+      "tangent_eigenvalues": [
+        -4.030184670793735,
+        -3.398425791230922,
+        -1.3982527330718695,
+        -0.2675784580592017
+      ],
+      "limit_eigenvalues": [
+        -4.030184670793735,
+        -3.398425791230922,
+        -1.3982527330718695,
+        -0.40854101966249684,
+        -0.4085410196624968,
+        -0.3414589803375031,
+        -0.34145898033750305,
+        -0.2675784580592017,
+        -0.13949999999999999
+      ],
+      "epsilon_sweep": [
+        {
+          "epsilon": 0.01,
+          "scaled_normal_form_operator_error": 1.3847087986890696,
+          "maximum_scaled_hessian_eigenvalue": -0.1423674434393717,
+          "minimum_regular_atom": 0.024998359433111458
+        },
+        {
+          "epsilon": 0.0001,
+          "scaled_normal_form_operator_error": 0.8726451482463893,
+          "maximum_scaled_hessian_eigenvalue": -0.1396031488044592,
+          "minimum_regular_atom": 0.023267483594331107
+        },
+        {
+          "epsilon": 1e-08,
+          "scaled_normal_form_operator_error": 0.5611268441753309,
+          "maximum_scaled_hessian_eigenvalue": -0.13949991003993614,
+          "minimum_regular_atom": 0.023250001748359415
+        },
+        {
+          "epsilon": 1e-16,
+          "scaled_normal_form_operator_error": 0.37058052455337764,
+          "maximum_scaled_hessian_eigenvalue": -0.1394999999999931,
+          "minimum_regular_atom": 0.02325
+        },
+        {
+          "epsilon": 1e-32,
+          "scaled_normal_form_operator_error": 0.24959638624042804,
+          "maximum_scaled_hessian_eigenvalue": -0.13949999999999996,
+          "minimum_regular_atom": 0.02324999999999999
+        }
+      ]
+    }
+  ]
+}

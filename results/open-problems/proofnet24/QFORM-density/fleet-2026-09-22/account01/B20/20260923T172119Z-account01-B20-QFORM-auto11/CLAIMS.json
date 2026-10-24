@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260923T172119Z-account01-B20-QFORM-auto11",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "theorem": "QFORM-TRANSVERSE-R2-MIXEDE3-OR-COMMON4PLANE-OR-R1-v1",
+  "source_partner": {
+    "account": "account02",
+    "slot": "B20",
+    "brain_handoff_commit": "9410aa30113cc4c2e0e9daf562a5b9e53a007741",
+    "math_commit": "20ec5f8f3ed2028edf27894cd3956d13e4662a9a",
+    "used_inequalities": [
+      "sum_{r>=3} m_r^2 < 1/16384",
+      "m1^2+m2^2 > 4026400769/4398046511104"
+    ]
+  },
+  "inherited_bicore": {
+    "math_commit": "6dfd43d5519df1fc40ea26f7d0bbe300ad32412d",
+    "inequality": "n2^2 > 63(1-2^-20)^2/(256*259)"
+  },
+  "receiver": {
+    "theorem": "QFORM-CROSS-E3-MARGINALFREE-L1-v1",
+    "math_commit": "52cef3abd27c641ae6666d6ee3bbc25d90cb4813",
+    "constant": "3*2^(4/3)*exp(1/3)"
+  },
+  "alternatives": {
+    "rank_one_tube": {
+      "condition": "m2<1/128",
+      "frobenius_error": "||M-M1||F < 1/(64*sqrt(2))",
+      "m1_squared_lower": "3757965313/4398046511104",
+      "m1_squared_decimal_corrected": 0.000854462385404986
+    },
+    "common_four_plane": {
+      "condition": "m2>=1/128 and Tr((PU+PV)P)>7/4",
+      "subspace_gap": "||(I-(PU+PV))[p1 p2]||F^2 < 1/4"
+    },
+    "paid_misaligned_rank_two": {
+      "condition": "m2>=1/128 and 2-Tr((PU+PV)P)>=1/4",
+      "physical_E3_lower": "39843594176681961455625/12007186485361788890976772761321472",
+      "physical_E3_decimal": 3.3183122645139323e-12,
+      "density_bound": 863.854,
+      "continuity": "C0"
+    }
+  },
+  "next_unresolved": "QFORM-TRANSVERSE-R1-OR-COMMON4PLANE-WITH-TAIL-PAYMENT-v1",
+  "separate_unresolved": "in-plane rank<=5 carrier with s3(S0)>0.7985866375852596 and ||A-S0||op<0.201414",
+  "corrections_preserved": [
+    "no law-uniform pointwise quadratic oscillatory decay",
+    "no post-rotation independence",
+    "no arbitrary-joint rank-three coarea shortcut",
+    "no worst-fiber conditional density cap",
+    "no one-good-minor inference from aggregate volume",
+    "no deletion of a nonzero random quadratic tail"
+  ]
+}

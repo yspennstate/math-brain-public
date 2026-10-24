@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260922T164017Z-account03-B16-QFORM-r13",
+  "control_commit_read_before_publication": "92be5594e3582a9e65102238590623311ed1df79",
+  "control_revision": "2026-09-22.7",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-HEAVY-ROW-FORCES-GOOD-SCHUR-PAIR-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B16",
+    "run_id": "20260922T161909Z-account04-B16-QFORM-r2",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "58c23c624db350cf44f0c836daa3582eb7e2d266",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260922T161909Z-account04-B16-QFORM-r2/REPORT.md",
+    "mathematics": "Nested-heavy exact-rank-three identity G_ij=c_0 h>1/4 and fixed-pair determinant-bank scale P_ij=|det Lambda|G_ij."
+  },
+  "additional_peer_premise": {
+    "worker": "account01/B16",
+    "run_id": "20260922T154258Z-account01-B16-QFORM-r12",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "47fe1ce92881fa4b6df0fa8a12b706d6a4eb14c5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B16/20260922T154258Z-account01-B16-QFORM-r12/REPORT.md",
+    "mathematics": "Fixed-pair determinant weights form a normalized original-coordinate bank with density <=2."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-TRANSLATED-PRODUCT-ENVELOPE-v1",
+      "status": "PROVED",
+      "statement": "For independent cap-one U,V and c!=0, p_{cUV}(w)<=1/(|c|r)+(2/|c|)log(1+|c|r/(2|w|)) for every w!=0,r>0, uniformly under deterministic translations."
+    },
+    {
+      "id": "QFORM-LOG-SQUARE-TRACE-v1",
+      "status": "PROVED",
+      "statement": "If ||p_L||_infinity<=M then uniformly in q, E log(1+B/|q-sigma L^2|)<=2 sqrt(2) pi M sqrt(B/|sigma|)."
+    },
+    {
+      "id": "QFORM-ZEROPAIR-CUBIC-BANK-CLOSURE-v1",
+      "status": "PROVED_SCOPED",
+      "statement": "For exact rank-three A and a physical pair A_ii=A_jj=0 with P_ij=|det Lambda|G_ij>0, ||p_Q||_infinity<=3(2pi)^(2/3)P_ij^(-1/3)."
+    },
+    {
+      "id": "QFORM-NESTED-HEAVY-ZEROPAIR-CONSEQUENCE-v1",
+      "status": "PROVED_SCOPED",
+      "statement": "Under the account04/B16 nested-heavy geometry, target normalization gives P_ij>1/4 and hence ||p_Q||_infinity<16.21540614038094 for a zero-diagonal selected pair."
+    }
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8fc46ddbf55d8c697f2f3bf0779b782e9e173c2c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260922T164017Z-account03-B16-QFORM-r13/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "5cbbe38e91e3052b80c1a591f9be074b38aa419e",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B16/20260922T164017Z-account03-B16-QFORM-r13.md"
+  },
+  "unresolved_implication": "QFORM-INDEFINITE-PAIR-PRODUCT-SCHUR-v1: extend the common-envelope Schur argument to arbitrary invertible indefinite physical 2x2 blocks without rotating the independent coordinates; separately stabilize against arbitrary additional spectral components.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "NOT_PROVED_IN_THIS_RUN"
+}

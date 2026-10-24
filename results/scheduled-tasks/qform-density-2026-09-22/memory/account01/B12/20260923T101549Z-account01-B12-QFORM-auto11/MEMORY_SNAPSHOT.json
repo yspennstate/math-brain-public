@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260923T101549Z-account01-B12-QFORM-auto11",
+  "status": "PROVED_SUPPORTING_STABILITY_THEOREM_FULL_TARGET_OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "start_commit": "fa03254e799d6452bd554991e9402ee068c24bfb",
+    "final_refresh_commit": "d496d87720267c27b9728e8d659dc02d2ebeafb2",
+    "owner_control_revision": "2026-09-22.15",
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "partner_result": {
+    "account_slot": "account02/B12",
+    "theorem": "QFORM-D5-CROSS-RANK-RESERVE-HYBRID-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "639e7e151f5d8b83be56a2c6093257fe83deddc3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260923T093023Z-account02-B12-QFORM-auto11/REPORT.md",
+    "actual_application": "r=1, Delta=1/4, kappa=2, m=18 gives density cap 32.331987596039475... on an explicit family with arbitrarily many arbitrary-magnitude signed eigenvalue replacements sharing a rank-one physical footprint"
+  },
+  "new_result": {
+    "id": "QFORM-SPECTRAL-THRESHOLD-LOCAL-RANK-COMPILER-v1",
+    "statement": "For E=sum theta_a v_a v_a^T and any threshold h, define r_H(h)=rank[P_H v_a] over |theta_a|>h. If baseline A0[H,H]=[[C,B],[B^T,D]], ||R||op<=delta, and s_(2r_H(h)+11)(D)>=kappa>2(h+delta), then ||p||inf <= [5sqrt(2e)+2sqrt(6pi|H|)]/[kappa-2(h+delta)]. Large-mode count/sign/magnitudes are free; the small spectral cloud costs only h.",
+    "continuity": "not proved by this branch"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "352c31d2f732169009b19d2331173657689ab366",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260923T101549Z-account01-B12-QFORM-auto11/REPORT.md",
+    "blob": "312869af15bbb2471db5c1b9917e4f44bc3cd5fa"
+  },
+  "handoff": {
+    "commit": "523ba062ba32efd6473171dd0fb257838a77f642",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B12/20260923T101549Z-account01-B12-QFORM-auto11.md"
+  },
+  "unresolved_implication": "Derive from bare s3(A)>=1 a product-preserving physical decomposition and threshold h with low large-mode footprint rank relative to complementary reserve, or force an already-paid D5/ridge/grouped-bank/hub/Schur/aggregate branch.",
+  "next_step": "Study multiscale failure of s_(2r_H(h)+11)(D)>2h across all physical decompositions; try to convert uniform failure into a grouped-bank or ridge leverage certificate rather than a reciprocal local minor bound.",
+  "full_brain_connected": false
+}

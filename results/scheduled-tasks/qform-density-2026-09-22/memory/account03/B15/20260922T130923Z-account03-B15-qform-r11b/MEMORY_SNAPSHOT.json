@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit": "d976d401cc0515af641b96beb5b8f4c91350a158",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260922T130923Z-account03-B15-qform-r11b",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1d658cd8ef6386a8f8ef7e6b9aaf26fdafe68de3",
+    "scope_used": "continuity is separate from interval domination; fixed-instance principal-block L-infinity transfer"
+  },
+  "additional_premises": [
+    {
+      "source": "account01/B15",
+      "commit": "47dc925729bbf269333cc6e1256178a538d2f553",
+      "scope": "invertible principal 3/4 blocks and affine conditional density bounds"
+    },
+    {
+      "source": "account02/B15",
+      "commit": "d5392d73398e2811f58b612fb8f191aa79d8ee5e",
+      "scope": "3-variable affine principal-block bound"
+    },
+    {
+      "source": "account03/B14",
+      "commit": "e6a82375d007069e7e515cb682eaf430d8baa914",
+      "scope": "definite physical 2x2 pair bound with arbitrary outside couplings"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-ROUGH-MARGINAL-STABILITY-v1",
+      "status": "PROVED",
+      "statement": "If coordinate i has a disjoint invertible 3x3/4x4 principal block or a disjoint definite 2x2 principal block, changing only f_i to g_i changes the output density in L-infinity by at most K_i ||f_i-g_i||_1."
+    },
+    {
+      "id": "QFORM-DISJOINT-SMOOTHING-CONTINUITY-v1",
+      "status": "PROVED",
+      "statement": "If every physical coordinate has such a disjoint smoothing block, then for arbitrary measurable independent densities 0<=f_i<=1 the output density has a C_0 representative; no input continuity is required."
+    },
+    {
+      "id": "QFORM-RANK5-CONTINUITY-v1",
+      "status": "PROVED",
+      "statement": "Every rank-at-least-five target matrix yields a bounded uniformly continuous C_0 output density for arbitrary admissible product inputs."
+    }
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d2d6b0b047c7b64525d6111aaf0093d455320c04",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T130923Z-account03-B15-qform-r11b/REPORT.md",
+    "blob": "2cc63695b825c8175718296d95979db0cfa5c5bb"
+  },
+  "central_unresolved_implication": "Prove a dimension-free interval small-ball estimate on the finite-fragment product-extreme class for every target-admissible rotated/indefinite A.",
+  "continuity_unresolved_implication": "Handle rank-three/rank-four matrices having a coordinate deletion that is hyperbolic rank two or rank at most one; in exact rank three deletion failure requires leverage one.",
+  "next_step": "Classify the low-rank leverage-one normal forms and attack them with direct bilinear/two-sheet smoothing; do not repeat the generic approximation mechanism.",
+  "full_target_status": "OPEN"
+}

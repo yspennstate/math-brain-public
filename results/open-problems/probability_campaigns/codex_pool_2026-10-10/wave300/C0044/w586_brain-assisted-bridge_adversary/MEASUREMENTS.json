@@ -1,0 +1,64 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w586/verify_bridges.py",
+  "arithmetic": "exact rational enumeration; no Monte Carlo",
+  "shared_row": {
+    "marginal_x": "1/2",
+    "marginal_y": "1/2",
+    "naive_product": "1/4",
+    "exact_joint": "5/16",
+    "absolute_product_error": "1/16",
+    "conditional_y_given_x": "5/8"
+  },
+  "disjoint_unconditioned_rows": {
+    "marginal_x": "1/2",
+    "marginal_y": "1/2",
+    "naive_product": "1/4",
+    "exact_joint": "1/4",
+    "absolute_product_error": "0",
+    "conditional_y_given_x": "1/2"
+  },
+  "disjoint_rows_joint_conditioning": {
+    "conditioning_probability": "35/36",
+    "conditional_f": "1/7",
+    "conditional_g": "1/7",
+    "conditional_joint": "0",
+    "product_of_conditional_marginals": "1/49",
+    "departure_rows": [
+      "0",
+      "2e1"
+    ],
+    "environment": "deterministic simple symmetric nearest-neighbor law (degenerate iid)"
+  },
+  "cesaro_mass_one_not_ui": [
+    {
+      "N": 16,
+      "K": 16,
+      "mean": "1",
+      "tail_expectation_exact": "2303/4096",
+      "tail_expectation": 0.562255859375
+    },
+    {
+      "N": 64,
+      "K": 16,
+      "mean": "1",
+      "tail_expectation_exact": "56319/65536",
+      "tail_expectation": 0.8593597412109375
+    },
+    {
+      "N": 128,
+      "K": 16,
+      "mean": "1",
+      "tail_expectation_exact": "241663/262144",
+      "tail_expectation": 0.9218711853027344
+    }
+  ],
+  "proposed_repair": {
+    "rule": "Multiply only after certifying disjoint row dependencies and compatible conditioning; otherwise average the quenched joint or retain a proof gap.",
+    "before_unsafe_products": 2,
+    "after_unjustified_products_allowed": 0,
+    "correct_disjoint_control_retained": 1,
+    "scope": "These three constructed cases only; manual hypothesis repair, not a live-engine benchmark or deployment."
+  },
+  "elapsed_arithmetic_s": 0.0042412999318912625,
+  "checks_passed": true
+}

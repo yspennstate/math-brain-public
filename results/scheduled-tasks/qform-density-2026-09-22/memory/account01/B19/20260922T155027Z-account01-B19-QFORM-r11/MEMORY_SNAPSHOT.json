@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B19",
+  "run_id": "20260922T155027Z-account01-B19-QFORM-r11",
+  "source_control_commit_prepublication": "5c2adef0de79b2dad91aa26beedf43e23f52abea",
+  "control_revision": "2026-09-22.5",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_applied": {
+    "source": "yspennstate/math-open-problems@333ffdfd83679ff020bfb45c27257e651cde5130",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B19/20260922T151209Z-account02-B19-qform-r15/REPORT.md",
+    "claim": "QFORM-EXACT-ONE-EFFECTIVE-AGGREGATE-v1 plus exact contaminated normal-form residual",
+    "application": "The new cross-bank quarter-moment theorem pays the partner's same-bank contamination splice."
+  },
+  "peer_applied": {
+    "source": "yspennstate/math-open-problems@0e6d1715955458010d43193cab3dafc293c0e28c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260922T154500Z-account03-B19-QFORM-r13/REPORT.md",
+    "claim": "physical-pivot quarter-kernel plus Schur diagonal-or-cross-cut alternative",
+    "application": "The forced cross cut with s1>27/2240 feeds the new quarter-moment inequality and yields density <46."
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-CROSSBANK-SQRTLOG-v1",
+      "status": "PROVED_IN_STATED_SCOPE_NOT_INDEPENDENTLY_REVIEWED",
+      "statement": "For K=F(X)+2X^TCY+G(Y) on disjoint original-coordinate independent cap-one banks and sigma=s1(C)>0, P(|K-t|<=r)^2 <= (4er/sigma)(1+log(sigma/(4er))) for 0<r<=sigma/(4e)."
+    },
+    {
+      "id": "QFORM-ONE-CROSS-QUARTER-MOMENT-v1",
+      "status": "PROVED_IN_STATED_SCOPE_NOT_INDEPENDENTLY_REVIEWED",
+      "statement": "sup_t E|K-t|^{-1/4} <= (2+sqrt(pi))(4e/sigma)^{1/4}."
+    },
+    {
+      "id": "QFORM-ONE-EFFECTIVE-CONTAMINATION-CLOSED-v1",
+      "status": "PROVED_IN_STATED_SCOPE_NOT_INDEPENDENTLY_REVIEWED",
+      "statement": "Every matrix in the account02/B19 r15 contaminated one-effective normal form has output density essential supremum <46 for arbitrary independent cap-one coordinate laws."
+    }
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2e5d5cdc3bb7121673bc920497fb11cac9eceb46",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B19/20260922T155027Z-account01-B19-QFORM-r11/REPORT.md"
+  },
+  "checker_commits": [
+    "6b38969b293a94716663248e09567f0aa3c3834d",
+    "1b21b87a2ab2fb5ca2166ea9ce23ba1d4b91a1c6"
+  ],
+  "unresolved_implication": "QFORM-TWO-OFFDIAGONAL-RESOURCE-EXTRACTION-v1 in the surviving s2(A-diag A)>1/8 branch.",
+  "next_step": "Derive a product-preserving original-coordinate pivot-plus-Schur-cross, rank-two mixed packet plus scalar curvature, or ridge-certified bank at universal scale without fixed-minor or rank-three-cross-cut shortcuts.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status_new_branch": "NOT_PROVED_TRACKED_SEPARATELY"
+}

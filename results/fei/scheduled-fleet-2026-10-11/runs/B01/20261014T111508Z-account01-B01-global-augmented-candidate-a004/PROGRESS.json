@@ -1,0 +1,48 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2; GU-LASER-20261014 revision 2026-10-14.1",
+  "run_id": "20261014T111508Z-account01-B01-global-augmented-candidate-a004",
+  "stream": "B01",
+  "packet_id": "A004",
+  "packet_ids": ["A004"],
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "attempt_id": "B01-A004-GLOBAL-AUGMENTED-ORBIT-LIFT-20261014-v1",
+  "method": "Freeze the reviewer-strengthened global L+2Phi candidate, test it on actual Boolean spectra, derive the exact whole-orbit activation identity, and certify the smallest reused-coordinate falsifier to the positive lift.",
+  "mathematical_delta": "Derived Theta_{X+z}(Af)=q(J)+Theta_X(f)/2+D_X(f)/2 exactly. Certified that the rank-three point defect violates the positive orbit contraction by more than 0.2459047472 bits. Replaced the false lift by the exact signed SOLD(c_dagger) node criterion, whose complete-tree telescope would prove GU with (a,b)=(33/2+2/ln2,0).",
+  "deliverable_status": "LOCAL_COMPLETE; CANONICAL_AND_BRAIN_PERSISTENCE_PENDING",
+  "mathematical_status": "POSITIVE_ORBIT_LIFT_REFUTED; SOLD_REDUCTION_PROVED_CONDITIONALLY; UNIVERSAL_GU_OPEN; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "B01-A004-COMPLETE-ACTIVATION-CORRECTION-v1",
+    "B05-A023-HALF-PACKET-INVARIANT-v1",
+    "B19-A094-HALF-PACKET-REVIEW-v1",
+    "B05-A023-SIGNED-ORBIT-OWNERSHIP-v1",
+    "B19-A094-SIGNED-ORBIT-OWNERSHIP-REVIEW-v1"
+  ],
+  "claims_created_or_changed": [
+    "B01-A004-POSITIVE-ORBIT-LIFT-NOGO-v1",
+    "B01-A004-SOLD-REDUCTION-v1"
+  ],
+  "source_artifacts": [
+    "SOURCE_PINS.md",
+    "PROOF.md",
+    "CERTIFY_ORBIT_LIFT.py",
+    "CERTIFY_ORBIT_LIFT.out",
+    "CHECK_GLOBAL_AUGMENTED.py",
+    "CHECK_GLOBAL_AUGMENTED.out"
+  ],
+  "acceptance_evidence": [
+    "Exact rational-log lower interval in CERTIFY_ORBIT_LIFT.out",
+    "Analytic derivation in PROOF.md"
+  ],
+  "next_consumers": ["A086", "A090", "B20"],
+  "next_action": "Test SOLD(c_dagger) on the two-level changing-overlap pattern {x,y}->{y,z}, expanding Delta L with the complete signed Delta U=B-Gamma+KL identity and retaining R-O.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "No existence proof for an adapted complete tree satisfying SOLD(c_dagger).",
+    "Global augmented candidate remains unproved outside the fresh/disjoint generated class."
+  ],
+  "review_status": "PENDING_FRESH_INDEPENDENT_REVIEW",
+  "model": "Codex",
+  "reasoning_effort": "UNKNOWN",
+  "full_fei_status": "OPEN"
+}

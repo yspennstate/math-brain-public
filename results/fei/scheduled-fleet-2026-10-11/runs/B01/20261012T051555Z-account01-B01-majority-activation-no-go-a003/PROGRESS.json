@@ -1,0 +1,112 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2 plus owner control 2026-10-12.1",
+  "run_id": "20261012T051555Z-account01-B01-majority-activation-no-go-a003",
+  "stream": "B01",
+  "packet_id": "A003",
+  "packet_ids": ["A003"],
+  "gap_id": "G-UPPER-SET-ASYMMETRY",
+  "related_gap_ids": ["O-ACTIVATION-EQUIV", "B05_RARE_REFUNDS"],
+  "attempt_id": "A003-GUP-MAJORITY-NOGO-2",
+  "bounded_objective": "Determine whether the exact fresh-activation GU' excess can be paid by a depth-free fixed combination of fresh-selector influence and the newly created U increment, eliminating the previous pI(g) child charge.",
+  "method": "Freeze the local transfer LT(A,B); specialize the exact activation identity to one fresh selector and balanced odd majority; isolate the singular -pM term; prove its summed Jensen gap is (1/pi)log_2 n+O(1) while both proposed credits are constant; verify the scalar identity independently by direct Walsh computation.",
+  "prior_status": "A one-layer activation transfer was proved with a K_act pI(g) child charge, K_act<19.530, but naive hierarchy iteration recharged changing coherent cores.",
+  "new_status": "LOCAL_SELECTOR_PLUS_INCREMENT_TRANSFER_REFUTED_BY_GENUINE_BOOLEAN_MAJORITY_FAMILY; PRECISE_FIRSTLEVEL_LOG_MISMATCH_IDENTIFIED; FULL_FEI_OPEN",
+  "mathematical_delta": "For one fresh selector activating balanced odd majority, proved I_ctl=1/2 and U(F)-(1/2)U(g)=1, but G(F)-(1/2)G(g)=(1/pi)log_2 n+O(1). Hence no fixed A,B can pay the local excess using only A I_ctl+B[U(F)-pU(g)]. The unpaid term is (1/2) sum_j a_j^2 log_2(1/a_j^2), exposing a child first-level logarithmic credit that must be retained and debited at most once in any hierarchy proof.",
+  "deliverable_status": {
+    "A003-D1": "ADVANCED_PENDING_INDEPENDENT_REVIEW: implication graph now marks selector-plus-new-U local contraction REFUTED and gives exact surviving GU' arrows",
+    "A003-D2": "ADVANCED_PENDING_INDEPENDENT_REVIEW: majority family isolates a distinct first-level logarithmic mismatch with complete quantifiers",
+    "packet_target": "SUBSTANTIVE_NO_GO_AND_PRECISE_REPAIRED_CREDIT_TARGET"
+  },
+  "claim_versions_used": [
+    "source-pinned upper-set Theorem G: H<=2I+2U",
+    "source-pinned GU' induction interface",
+    "B01-A003-FRESH-ACTIVATION-GUP-TRANSFER-v1 at proof blob fd291e847f0f7a21591398af6b415fa00787cd17"
+  ],
+  "claims_created_or_changed": [
+    "B01-A003-MAJORITY-ACTIVATION-LOCAL-NOGO-v1",
+    "B01-A003-FIRSTLEVEL-LOG-MISMATCH-v1",
+    "B01-A003-MAJORITY-DIRECT-CHECK-v1"
+  ],
+  "source_plan": {
+    "source_head_at_research": "157d4b022d93db52ae1dd6ae6845c7b1cb3e447e",
+    "owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "owner_order_blob": "81b6d6f988aee4489512c6e62543253900620453",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "assignment_path": "reports/fei-2026-10-11/assignments/B01.json",
+    "assignment_blob": "ac038a028831d59ad053dd56b2b527e2a71ffdee",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "current_status_blob": "c416d4b4a83fc67965cb95d06a0cc80c5c29a520",
+    "obstruction_registry_blob": "e111933338dff1d7798c5e59b43700bbf30f7b96"
+  },
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "8344aa4aa688790494e3ebd46bb94b13f659ce18",
+      "path": "reports/fei-2026-10-11/runs/B01/20261012T041121Z-account01-B01-activation-transfer-a003/REPORT.md",
+      "report_blob": "b769561f7df8773b8162ec3e2c18135a87de1ea0",
+      "use": "previous complete B01 report and exact status"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "8344aa4aa688790494e3ebd46bb94b13f659ce18",
+      "path": "reports/fei-2026-10-11/runs/B01/20261012T041121Z-account01-B01-activation-transfer-a003/ACTIVATION_TRANSFER.tex",
+      "blob": "fd291e847f0f7a21591398af6b415fa00787cd17",
+      "use": "exact activation identity independently stress-tested here"
+    }
+  ],
+  "next_consumers": ["A005", "A023", "A063", "A086", "A094", "B20"],
+  "independent_reviewers": ["A086", "A094"],
+  "next_action": "Freeze a repaired local statement carrying p L_1(g), L_1(g)=sum_j (r_{j,+}-r_{j,-})^2 log_2(1/(r_{j,+}-r_{j,-})^2), and seek a hierarchy ledger that debits this child credit once. Test majority, rare surgery, addressing, near tensors and genuine prime gates before summation.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "The selector and new U increment do not pay the majority core's logarithmically divergent data-coordinate mismatch.",
+    "No nonreused hierarchy credit for the first-level logarithmic term is proved.",
+    "Global GU' and dimension-independent aggregate upper-set asymmetry control remain open.",
+    "Full FEI remains open."
+  ],
+  "validation": {
+    "command": "python CHECK.py",
+    "randomness": "none",
+    "arithmetic": "exact Fraction Walsh coefficients and upper masses for direct cases; exact central binomial coefficients; Decimal 80-digit logarithms",
+    "direct_truth_table_cases": 4,
+    "scalar_odd_n_cases": 501,
+    "assertions": 1008,
+    "status": "PASS",
+    "scope_note": "Computation verifies finite normalization and the exact scalar decomposition. The divergence theorem is analytic via Taylor and Stirling estimates."
+  },
+  "literature": {
+    "primary_sources_checked": [
+      "source-pinned upper-set identities and GU' interface",
+      "previous canonical B01 fresh-activation proof"
+    ],
+    "novelty_claim": "NONE; this is a campaign-internal source-bound obstruction theorem."
+  },
+  "delivery_status": {
+    "canonical": {
+      "status": "SEVEN_FILE_SUBSTANTIVE_CORE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-open-problems",
+      "core_complete_commit": "e952849e963b2aa3f3fc792a1e51ef5f7af3b5a8",
+      "path": "reports/fei-2026-10-11/runs/B01/20261012T051555Z-account01-B01-majority-activation-no-go-a003/",
+      "verified_files": 7,
+      "report_blob": "d47fd0740c103128fe1c2a7a80bab5b49b56303d"
+    },
+    "brain_mirror": {
+      "status": "SEVEN_FILE_SUBSTANTIVE_CORE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-research-brain",
+      "core_complete_commit": "4529e3ba47e2b5b7c04cdc291b74c6c01bede400",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B01/20261012T051555Z-account01-B01-majority-activation-no-go-a003/",
+      "verified_files": 7,
+      "report_blob": "d47fd0740c103128fe1c2a7a80bab5b49b56303d"
+    },
+    "independent_review": "NOT YET; A086/A094 requested",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {
+    "model": "GPT-5 Codex as exposed by the runtime instructions",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  }
+}

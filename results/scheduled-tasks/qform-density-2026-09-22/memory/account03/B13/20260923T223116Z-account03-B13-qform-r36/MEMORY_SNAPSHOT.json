@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260923T223116Z-account03-B13-qform-r36",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control_start_commit": "40cf2b4b881150154873c593aaeeb41b601c60d6",
+  "control_publication_refresh_commit": "4ed6d985b5283ed487f25ceebe069f9c45a5128e",
+  "owner_control_revision": "2026-09-22.15",
+  "full_qform_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY",
+  "source_matching_duplicate": {
+    "result": "QFORM-GROUPED-HUB-3LEAF-TRANSVERSE-v1",
+    "source": "yspennstate/math-open-problems@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9",
+    "action": "stopped duplicate derivation and used the stronger source-pinned constant"
+  },
+  "partner_application": {
+    "worker": "account04/B13",
+    "source": "yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e",
+    "result": "optimizer-free product reduction and diffuse exact-rank-two |A_kk det Lambda| slab inequality",
+    "actual_use": "split into near-rank-one versus near-null with determinant floor, then inserted the determinant floor into the new intrinsic L1 transverse-curvature bound"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-DPP-WEIGHTED-TRANSVERSE-L1-v1",
+      "statement": "For the diffuse exact-rank-two partner-selected k, with mu_k({r,s}) proportional q_rs Delta_{krs}, the normalization sum q_rs Delta_{krs} is at least 1/1152 and E_mu|tau| <= 437400000 |det Lambda|^-2 rho^-5. In the partner non-rank-one branch E_mu|tau| < 38538.837 rho^-1, hence at least half the intrinsic pair-volume mass has |tau| <= 77077.674 rho^-1."
+    },
+    {
+      "id": "QFORM-FOURPOINT-TRANSVERSE-CANCELLATION-RIGIDITY-v1",
+      "statement": "On any leaf subset with q_ki>=a and complementary volume Delta_{kij}>=b, all but at most one projective slope lie in an interval of length <=580.948 a^-1 b^-1/2 |det Lambda|^-1 rho^-5/2; in the partner non-rank-one branch the length is <5.454 a^-1 b^-1/2 rho^-1/2."
+    },
+    {
+      "id": "QFORM-TRANSVERSE-ZEROSET-FINITECENTER-v1",
+      "statement": "If all eligible grouped transverse invariants at the diffuse exact-rank-two endpoint vanish, then either a complement determinant zero forces an exact two-bank orthogonal coefficient localization, or all rows lie on at most three coefficient lines with explicit diagonal relations and D=0 on the repeated nonpivot line."
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "a558625206539a6eaee5aa6b2c6d851ccd2f1990",
+    "check_commit": "3c6bc55668e051fefdaaa6fedb25d6cea9389391",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T223116Z-account03-B13-qform-r36/REPORT.md",
+    "check_marker": "QFORM_B13_R36_WEIGHTED_CANCELLATION_CHECK_PASS"
+  },
+  "handoff": {
+    "commit": "cec0e10522d2745474f76b7984964e43e895decc",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B13/20260923T223116Z-account03-B13-qform-r36.md"
+  },
+  "next": "QFORM-MU-CANCELLATION-TO-FINITECENTER-GLUE-v1",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

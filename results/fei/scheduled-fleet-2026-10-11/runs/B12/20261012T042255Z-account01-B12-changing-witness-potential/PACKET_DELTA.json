@@ -1,0 +1,104 @@
+{
+  "schema": "fei-run-progress/2",
+  "run_id": "20261012T042255Z-account01-B12-changing-witness-potential",
+  "stream": "B12",
+  "packet_ids": ["A057"],
+  "primary_packet_id": "A057",
+  "attempt_id": "B12-A057-ATTEMPT-04",
+  "attempt_counter": 4,
+  "bounded_objective": "Freeze the actual parent-child coherence law for changing outer witnesses and prove a one-use telescope for the weighted reverse-collision reserve, or certify its failure.",
+  "source_registry": {
+    "owner_control_revision": "2026-10-12.1",
+    "owner_order_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "owner_order_blob": "81b6d6f988aee4489512c6e62543253900620453",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "current_status_blob": "c416d4b4a83fc67965cb95d06a0cc80c5c29a520",
+    "stream_contract_blob": "40935ac651643a17815d0addf664ec4c1c0313cc",
+    "canonical_source_head_read": "e412fb2e8f85a78d807ff6d6c9c805254377ed88",
+    "brain_source_head_read": "3b442895126b7e4e6da9d2454a5d20671b58c53f"
+  },
+  "input_handoffs_used": [
+    {
+      "description": "author proof of uniform one-node envelope and fixed-source hierarchy",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "80054872e190524ffdea413d8f96e07919c35c62",
+      "path": "reports/fei-2026-10-11/runs/B12/20261012T032618Z-account01-B12-uniform-kernel-envelope/"
+    },
+    {
+      "description": "independent acceptance and exact changing-witness boundary",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e412fb2e8f85a78d807ff6d6c9c805254377ed88",
+      "path": "reports/fei-2026-10-11/runs/B19/20261012T034859Z-account01-B19-b12-envelope-review-a094/",
+      "proof_blobs": {
+        "REPORT.md": "fc09be40dc170838a26a342206595b6337365097",
+        "REVIEW_VERDICT.json": "3086a24f08f4700a4adc9765590d23d55fdddf3e",
+        "CLAIMS.json": "72146ba473bb482342294c4aa0c055a2c38ee2cf"
+      }
+    }
+  ],
+  "claim_versions": ["B12-A057-CHANGING-WITNESS-POTENTIAL-v1"],
+  "gap_id": "B12-A057-COHERENT-HIERARCHY",
+  "gap_version": "v4",
+  "prior_mathematical_status": "PARTIAL_PROVED_AND_INDEPENDENTLY_ACCEPTED: complete remainder paid only when the outer pair stays fixed; node-dependent reserve sum remained unsupported",
+  "new_mathematical_status": "PARTIAL_PROVED: complete remainder paid by one root potential for every adaptive interleaving of coherent source and child restrictions of one disjoint Boolean splice; shared-coordinate covariance and root derivative-entropy payment remain open",
+  "mathematical_delta": "The changing reserve sum no longer recharges under coherent source restrictions. The product potential P=(4+2ln2+2/e)qI(h)+Var(h)E_raw(b) satisfies a local Bellman inequality and telescopes with the full terminal packet retained.",
+  "previous_value": "sum w R <= [M(a,b)+(4+2ln2+2/e)q]I(h) only for one fixed source pair",
+  "new_value": "sum_X w R + sum_leaf w[(4+2ln2+2/e)q_l I(h_l)+Var(h_l)E_raw(b_l)] <= (4+2ln2+2/e)q I(h)+Var(h)E_raw(b) for arbitrary adaptive source/child interleavings",
+  "unchanged_obstruction_count": 0,
+  "case_extension": {
+    "starting_class": "adaptive child-only restrictions with one fixed outer pair",
+    "new_class": "adaptive branch-dependent interleavings of source-block and child-block restrictions of one genuine Boolean splice, allowing q_v, M_v and the whole witness to change and correlate",
+    "exact_quantifiers": "all finite source and child dimensions, all genuine Boolean branch pairs and children, all finite adaptive nonreusing physical trees on the disjoint union",
+    "prior_constant": "fixed-source coefficient M(a,b)+(4+2ln2+2/e)q",
+    "new_constant": "4+2ln2+2/e on qI, plus exactly one root terminal reserve Var(h)E_raw(b)",
+    "parameter_dependence": "independent of dimension, depth, bias, collision ratio, address count and adaptive correlation; retains one explicit root derivative-entropy reserve",
+    "proof_status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+    "universal_gap": "pay the root derivative entropy by source influence/global terminal entropy, or control simultaneous shared-coordinate covariance"
+  },
+  "acceptance": {
+    "A057-D1": "SUBSTANTIALLY_ADVANCED: changing coherent restrictions now have a complete one-use terminal-reserve telescope",
+    "A057-D2": "MET_FOR_ALL_PREVIOUS_TRANSITION_CONTROLS",
+    "criterion_complete_source_remainder": "MET_FOR_INTERLEAVED_DISJOINT_RESTRICTION_CLASS",
+    "criterion_logarithmic_counterexample": "MET",
+    "criterion_nonreusing_physical_hierarchy": "MET_FOR_ONE_ROOT_DISJOINT_SPLICE_WITH_COHERENT_SOURCE_RESTRICTIONS",
+    "packet_complete": false
+  },
+  "finite_check": {
+    "status": "PASS",
+    "scope": [
+      "197136 local source transitions for all ordered Boolean source pairs through three bits",
+      "221904 local child transitions for source pairs through two bits and every Boolean child through three bits",
+      "65536 full adaptive-interleaving roots with all query orders, branch choices, and optional stopping optimized"
+    ],
+    "arithmetic": "exact dyadic Walsh coefficients represented in binary float plus float64 natural logarithms; analytic proof establishes all-dimensional signs",
+    "seed": null,
+    "command": "python3 check_changing_witness.py",
+    "output": "check_changing_witness.out",
+    "limitation": "finite independent development audit, not a substitute for the analytic theorem"
+  },
+  "failed_or_insufficient_approaches": [
+    "M(a_v,b_v) is not itself a supermartingale under source restriction; exhaustive Boolean examples show positive child increments.",
+    "Bounding M by E_raw(b) at each node without a product telescope would still recharge the same root reserve.",
+    "The product potential succeeds because source queries change only E_raw(b) and child queries change only Var(h); a shared coordinate changes both and leaves covariance terms.",
+    "The surviving root E_raw(b) reserve is not asserted to be universally influence-bounded."
+  ],
+  "review": {
+    "previous_claim_review": "B19/A094 independently accepted B12-A057-UNIFORM-COHERENT-KERNEL-ENVELOPE-v1 at fixed-source scope",
+    "contributor_check": "complete",
+    "independent_review": "PENDING_FOR_NEW_CLAIM",
+    "requested_packets": ["A091", "A090"],
+    "observed_reviewer_evidence": []
+  },
+  "routing": {
+    "next_consumers": ["A058", "A059", "A091", "A090", "A097", "B20"],
+    "note": "A058 should use the exact scope boundary: disjoint interleaving is proved; simultaneous shared-coordinate covariance remains open."
+  },
+  "deliverable_status": {
+    "canonical": "INITIAL_SUBSTANTIVE_SAVE_AT_cffca104985d41e50ec249f297832b5fccc7a3ae",
+    "brain_mirror": "INITIAL_SUBSTANTIVE_SAVE_AT_cf3b33abcb495e2ab8fe1641a7e0c7699dbd7eeb",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "next_action": "Derive the exact potential drop when one physical coordinate simultaneously changes source and child, exposing the Delta q Delta I and Delta Var Delta E_raw covariance terms; test whether the retained signed near-collision refund controls them on genuine Boolean overlaps.",
+  "full_fei_status": "OPEN"
+}
+

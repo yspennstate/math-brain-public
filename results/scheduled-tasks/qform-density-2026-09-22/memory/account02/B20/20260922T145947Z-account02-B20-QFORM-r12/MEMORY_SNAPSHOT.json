@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B20",
+  "run_id": "20260922T145947Z-account02-B20-QFORM-r12",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "298793085cb203d47861ace564bcc5f74d647368",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B20/20260922T145947Z-account02-B20-QFORM-r12/REPORT.md",
+    "readback_blob": "2e2bb4c9b583f94b48fbf5952f1183dbff92e17f"
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-SCHUR-THIRD-DIRECTION-RETENTION-v1",
+      "status": "PROVED",
+      "statement": "For a scalar physical pivot with K=||b||/|a| and tau=(1+K)^(-2), if s3(A)>=1 and 0<|a|<tau then the exact Schur residual satisfies s3(S)>=tau."
+    },
+    {
+      "id": "QFORM-HEAVY-DIAGONAL-SCHUR-DESCENT-v1",
+      "status": "PROVED",
+      "statement": "If c_i>=1/64, K<=1 and |a|<tau, then every density cap C>=512sqrt(2) valid for the lower-dimensional target form S/tau is preserved by the parent form; any counterexample to that cap descends in dimension."
+    }
+  ],
+  "partner_used": {
+    "worker": "account03/B20",
+    "run_id": "20260922T141139Z-account03-B20-QFORM-r11",
+    "commit": "7530e8c6ffd7284eb9c8acf1d79f36c335bf4fd6",
+    "exact_expression": "tau=(1+K)^(-2); s2(S)>=tau"
+  },
+  "first_unproved_step": "QFORM-LOW-SR-THREE-WAY-PACKET-EXTRACTION-v1",
+  "residual_collar": "In a minimum-dimensional counterexample with heavy spectral row c_i>=1/64 and diagonal-dominated pivot K<=1, one may assume |a|>=tau>=1/4, s2(S)>=1/4 and max physical row leverage of range(S)>1/32.",
+  "next_method": "Attack the localized large-pivot Schur branch by forcing a source-realizable account02/B19 mixed packet or account04/B20 disjoint aggregate packet before paying any tiny minor; treat the all-large-spectral-row-diffuse branch separately via separator extraction.",
+  "continuity": "SEPARATE_NOT_CLAIMED_FOR_DESCENT",
+  "corrections_retained": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE"
+  ]
+}

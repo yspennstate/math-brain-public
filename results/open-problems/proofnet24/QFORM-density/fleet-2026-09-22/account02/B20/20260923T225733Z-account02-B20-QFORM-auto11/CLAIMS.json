@@ -1,0 +1,53 @@
+{
+  "run_id": "20260923T225733Z-account02-B20-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "full_target_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "designated_partner": {
+    "account": "account03",
+    "slot": "B20",
+    "run_id": "20260923T214857Z-account03-B20-QFORM-r39",
+    "canonical_commit": "5d9892edb6f33beda5ce5e10c4482fcc5fe994a8",
+    "exact_expressions_applied": [
+      "kappa=2^-20, tau=2^-60",
+      "102 tau^(-1/3)=106954752",
+      "epsilon_H=(3+122 sqrt(10))2^-20=0.0003707865472226546",
+      "epsilon_H+1/64=0.015995786547222654",
+      "1-(epsilon_H+1/64)=0.9840042134527773"
+    ]
+  },
+  "new_claims": [
+    {
+      "claim_id": "QFORM-R39-CARRIER-ONLY-PROVENANCE-LOSS-v1",
+      "status": "PROVED_STRUCTURAL_COUNTEREXAMPLE",
+      "statement": "The abbreviated conditions rank(K)<=6, ||E||<0.015996 and s3(diag(0,A_LL)+K)>0.984 do not force nonzero carrier interaction or H-side spectral mass: A=0_H direct_sum B, K=E=0 embeds every target B with s3(B)>=1. This refutes only the over-compressed intermediate inference, not QFORM."
+    },
+    {
+      "claim_id": "QFORM-R39-MAXPAIR-D2-HALFPOTENTIAL-OR-COLOOP-v1",
+      "status": "PROVED_SUPPORTING_IMPLICATION",
+      "hypotheses": [
+        "full original independent cap-one product hypotheses",
+        "literal physical partition H disjoint_union L with |H|<=124",
+        "C=A[H,L] and s1(C)s2(C)>1/480"
+      ],
+      "conclusion": "There is a physical row pair T with S=sqrt(det(C[T,L]C[T,L]^T))>1/(480 sqrt(7626)). For its 2x|L| block M, either all physical column leverages are <=3/4 and the full law obeys H_{1/2}(Q)<265.625 (hence P(|Q-t|<rho)<265.625 sqrt(rho)), or one original light coordinate has leverage >3/4, carries >3/4 of the pair-volume, and deleting it leaves <1/4 of that volume."
+    }
+  ],
+  "pinned_source_application": {
+    "source_commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "result": "D_2 decoupling plus fractional-potential theorem",
+    "equation": "max ell_j<=3/4 => H_{1/2}(Q)<=16 e^(1/4)(3/2)^(-1/4) S^(-1/4)<265.625",
+    "additional_exit": "e5(N^TN)>=1/1024 => ||p_Q||infinity<=10 sqrt(2e)<23.317"
+  },
+  "next_implication": "QFORM-R39-TWODIM-CROSS-HALFPOTENTIAL-TO-DENSITY-OR-COLOOP-PAYMENT-v1",
+  "corrections_preserved": [
+    "no law-uniform pointwise quadratic-phase decay",
+    "no worst-fibre supremum",
+    "no arbitrary-joint coarea substitution",
+    "no conditional projection-cap as independence",
+    "no post-rotation independence",
+    "no deletion of nonzero small coefficient tails",
+    "no one-good-minor inference from aggregate volume"
+  ]
+}

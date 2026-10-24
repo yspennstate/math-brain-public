@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "scope": "exhaustive leaf identity for F with t plus <=2 residual bits; k-arm family k<=5",
+  "exhaustive_base_functions": 276,
+  "sharp_C4_witness": {
+    "truth_mask": 6,
+    "J_F": "3/2",
+    "H_F": 2,
+    "Delta_t_H": 0,
+    "J_attached": 2,
+    "H_attached": 4,
+    "slack_increment_formula": "C/2 - 2"
+  },
+  "arm_family": [
+    {"k":1,"variables":3,"spectral_atoms":4,"H_exact":2,"I_exact":"3/2","ratio_exact":"4/3"},
+    {"k":2,"variables":5,"spectral_atoms":16,"H_exact":4,"I_exact":"5/2","ratio_exact":"8/5"},
+    {"k":3,"variables":7,"spectral_atoms":64,"H_exact":6,"I_exact":"7/2","ratio_exact":"12/7"},
+    {"k":4,"variables":9,"spectral_atoms":256,"H_exact":8,"I_exact":"9/2","ratio_exact":"16/9"},
+    {"k":5,"variables":11,"spectral_atoms":1024,"H_exact":10,"I_exact":"11/2","ratio_exact":"20/11"}
+  ],
+  "cubic_leaf_obstruction": {
+    "base_truth_mask": 1,
+    "base_H_exact": "2",
+    "base_J_exact": "1",
+    "attached_spectral_law": "one atom 9/16 and seven atoms 1/16",
+    "attached_J_exact": "3/4",
+    "attached_H_exact": "4-(9/8)log2(3)",
+    "slack_increment_exact": "(9/8)log2(3)-2-C/4 < 0 for every C>=0"
+  },
+  "full_FEI_status": "OPEN / NOT PROVED; finite checks only"
+}

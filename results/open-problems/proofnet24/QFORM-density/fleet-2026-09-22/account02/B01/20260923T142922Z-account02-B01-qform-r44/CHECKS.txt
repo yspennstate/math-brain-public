@@ -1,0 +1,46 @@
+Finite deterministic regression for REPORT.md (auxiliary only; not a proof certificate)
+
+Threshold h=43/64=0.671875
+q=2h=43/32=1.34375
+3h-2=1/64=0.015625
+Sharp fractional-volume constant:
+  C_D = 3e / ((3-4h)*sqrt(2h))
+      = (48e/5)*sqrt(32/43)
+      = 22.51160585558416...
+Three-hub concentration constant:
+  C_H = 3sqrt(2)*(1/64)^(-1/6)
+      = 6sqrt(2)
+      = 8.48528137423857...
+
+Crossed two-star family:
+  m=k^4
+  M = k e_a u_R^T + k u_L e_b^T + k^(-2)e_c e_d^T
+  singular values: k, k, k^(-2)
+  Z3=(k*k*k^(-2))^2=1
+  full symmetric spectrum: +/-k, +/-k, +/-k^(-2)
+  nonzero physical entry scales: 1/k and 1/k^2
+  max physical 2x2 principal determinant magnitude: 1/k^2
+  left volume marginals: 1,1,1/m,...,1/m
+  right volume marginals: 1,1,1/m,...,1/m
+  top-three marginal sum on either side: 2+1/m
+  best top-three row Gram determinant: 1/m=k^(-4)
+  corresponding Pi_3=k^(-2)
+
+k=4: m=256, singular values numerically 4,4,0.0625; Z3=1; top-three row determinant=0.00390625=1/256; source-H bound=4/k=1.
+k=5: m=625, singular values numerically 5,5,0.04; Z3=1; top-three row determinant=0.0016=1/625; source-H bound=0.8.
+k=8: m=4096, singular values numerically 8,8,0.015625; Z3=1; top-three row determinant=0.000244140625=1/4096; source-H bound=0.5.
+
+Theorem-H packet for hubs {a,b}:
+  leaf Gram G~=diag(k^2,k^2), det G~=k^4,
+  each leaf leverage=1/m=k^(-4),
+  |phi(t)|<=min(1,4*pi^2*k^(-2)*|t|^(-2)),
+  integral envelope=8*pi/k,
+  density bound=4/k.
+
+Newest account03/B01 application using P={a,y1} and V={b,x1}:
+  D=k^(-2), kappa=k^(-1), Pi2=k^(-2),
+  first branch=512*k,
+  second branch=64*k,
+  partner bound=64*k.
+
+STATUS=PASS

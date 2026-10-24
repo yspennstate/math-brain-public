@@ -1,0 +1,93 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w371",
+  "bundle_slug": "p0104-quantile-variance-source-scope-001",
+  "entries": [
+    {
+      "key": "dhhx2019-planar-quantile-theorem",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "damron-hanson-houdre-xu-2019-planar-quantile-separation",
+      "kind": "concept",
+      "title": "Damron-Hanson-Houdré-Xu 2019 Theorem 1: planar quantile separation",
+      "statement": "For iid nonnegative nearest-neighbor edge weights on Z^2 with distribution F, let I be the infimum of the support. Assume F(0)<p_c for two-dimensional bond percolation and, when I>0, F(I)<the two-dimensional oriented bond threshold. For T(0,x), Theorem 1 supplies thresholds A_x<B_x and constants p,q,c>0 such that, for all sufficiently large ||x||, P(T(0,x)<=A_x)>=p, P(T(0,x)>=B_x)>=q, and B_x-A_x>=c sqrt(log ||x||). The theorem is for the full lattice in dimension two; its higher-dimensional discussion concerns thin cylinders with an additional moment condition. It does not assert an n^(1/3) scale.",
+      "proof_text": null,
+      "assumptions": [
+        "iid nonnegative edge weights on nearest-neighbor Z^2",
+        "F(0)<p_c(2)",
+        "If I=inf supp(F)>0, F(I)<oriented p_c(2)"
+      ],
+      "domain": "first-passage percolation",
+      "source": {
+        "source_id": "arxiv:1810.08270v2:Theorem-1",
+        "url": "https://arxiv.org/html/1810.08270v2",
+        "revision": "as-read-2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "two-quantile-variance-lower-bound",
+      "namespace": "probability.concentration",
+      "logical_name": "two-separated-quantiles-imply-variance-lower-bound",
+      "kind": "lemma",
+      "title": "Two separated quantiles force a sharp variance lower bound",
+      "statement": "Let X be a square-integrable real random variable. If a<b, p,q>0, P(X<=a)>=p and P(X>=b)>=q, then Var(X)>=pq(b-a)^2/(p+q). The constant is sharp for fixed p and q.",
+      "proof_text": "The two events are disjoint, so p+q<=1. Put mu=E X. If a<=mu<=b, integrate the squared deviation on the two events and minimize p(mu-a)^2+q(b-mu)^2 over mu; its minimum is pq(b-a)^2/(p+q). If mu<a or mu>b, the opposite tail alone gives at least q(b-a)^2 or p(b-a)^2, which is stronger. Equality is attained by masses p at a, q at b, and 1-p-q at (pa+qb)/(p+q); this law has that middle point as its mean.",
+      "assumptions": [
+        "X real and square-integrable",
+        "a<b",
+        "p,q>0",
+        "P(X<=a)>=p and P(X>=b)>=q"
+      ],
+      "domain": "probability inequalities",
+      "source": {
+        "source_id": "owner-own-work:w369-L1-independently-checked-w371-20261010",
+        "url": "https://arxiv.org/html/1810.08270v2",
+        "revision": "reviewed-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "dhhx-log-variance-corollary",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "damron-hanson-houdre-xu-quantiles-imply-log-variance-lower-bound",
+      "kind": "concept",
+      "title": "Planar FPP quantile separation implies logarithmic variance lower bound",
+      "statement": "Under Damron-Hanson-Houdré-Xu 2019 Theorem 1's exact Z^2 edge-law assumptions, its two fixed-probability quantiles separated by c sqrt(log ||x||) imply Var(T(0,x))>=c' log ||x|| whenever T(0,x) is square-integrable. This corrects the categorical claim that quantitative interval anti-concentration cannot itself lower-bound variance. The conclusion is logarithmic and leaves the P0104 subdiffusive/KPZ exponent target untouched.",
+      "proof_text": null,
+      "assumptions": [
+        "The conditions of arXiv:1810.08270v2 Theorem 1",
+        "T(0,x) square-integrable for the variance conclusion"
+      ],
+      "domain": "first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:w371-primary-source-correction-20261010",
+        "url": "https://arxiv.org/html/1810.08270v2",
+        "revision": "reviewed-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "dhhx-log-variance-corollary",
+      "to_key": "dhhx2019-planar-quantile-theorem",
+      "kind": "depends_on",
+      "rationale": "The source theorem gives the two positive-probability tails and sqrt(log ||x||) separation used by the corollary."
+    },
+    {
+      "from_key": "dhhx-log-variance-corollary",
+      "to_key": "two-quantile-variance-lower-bound",
+      "kind": "depends_on",
+      "rationale": "The abstract lemma turns the source theorem's two tail probabilities and their separation into a variance lower bound."
+    },
+    {
+      "from_key": "dhhx-log-variance-corollary",
+      "to_existing_logical": "math:probability.core:open-problem-p0104-subdiffusive-and-kpz-passage-time-fluctuation-exponents",
+      "kind": "semantic_association",
+      "rationale": "The corollary yields only c log n, while the existing P0104 card asks for a power-law exponent below 1/2 and planar chi=1/3; this is background lower-bound context, not a solution."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B19",
+  "run_id": "20260922T170047Z-account03-B19-QFORM-r15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_revision": "2026-09-22.8",
+  "source_control_commit_prepublication": "787de786a0e8727febf8b687712ad714d2975e06",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "NOT_PROVED_ON_NEW_BRANCH",
+  "mathematical_premises": [
+    {
+      "source": "yspennstate/math-open-problems@46d99d0364a9bf15376b5c8875cdd321373ba75c",
+      "scope": "account01/B19 opposite-sign heavy physical diagonal payment and two-heavy-diagonal rank-one reduction",
+      "used_inequality": "opposite signs with |A_ii|,|A_jj|>=m imply ||p_Q||_infinity<=50 m^(-3/4)"
+    },
+    {
+      "source": "yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4",
+      "scope": "account04/B19 QFORM-FINITE-UNION-CORE-v1",
+      "used_inequality": "same-sign interval concentration pi/sqrt(1-2tau) transfers without loss from finite-union product indicators to every independent cap-one product density"
+    }
+  ],
+  "new_results": [
+    "QFORM-ZERODIAG-TOPMODE-ENTRY-v1: if H has zero diagonal and H=lambda vv^T+R removes a top-modulus eigenmode with ||R||=s_2(H)<=tau, then |H_ij|<=tau for all i!=j.",
+    "QFORM-LOW-OFFDIAG-ONE-HALF-BARRIER-v1: for fixed 0<=tau<1/2, s_2(A-diag A)<=tau implies ||p_Q||_infinity<=max(50(1-tau)^(-3/4),pi/sqrt(1-2tau)).",
+    "At tau=499/1000, s_2(A-diag A)<=499/1000 implies ||p_Q||_infinity<84."
+  ],
+  "corrections_consumed": [
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-CONDITIONAL-3D-PROJECTION-CAP-FALSE-v1",
+    "QFORM-ONEPAIR-NORMALIZED-TTSTAR-FALSE-v1"
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "539d1d9953c616bf0e1ab2dafeef55102f89c2b9",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260922T170047Z-account03-B19-QFORM-r15/",
+    "report_blob": "90231d723593dc995c1197e8aa87892bfb1291be",
+    "check_output_blob": "3bb5a5bbf3d097a29a13caea813f1f440af49f0a",
+    "checker_status": "PASS"
+  },
+  "unresolved_implication": "QFORM-HALF-OFFDIAGONAL-OVERLAP-PAYMENT-v1",
+  "next_step": "Use third-compound O0-heavy/O1/O2/O3 aggregate mass together with the nearly singular same-sign heavy physical pair in the s_2(A-diag A)>499/1000 survivor; force a transverse grouped-coordinate/ridge packet or overlap transfer before reciprocal-minor payment.",
+  "scheduler_mutations": 0,
+  "email_sent": false,
+  "notifications_changed": false,
+  "public_release": false,
+  "telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "configured_reasoning_effort": "UNKNOWN",
+    "reasoning_token_count": null
+  }
+}

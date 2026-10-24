@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "account": "account04",
+  "slot": "B11",
+  "run_id": "20260924T091618Z-account04-B11-source-disjoint-ldl-r2",
+  "utc_start": "2026-09-24T09:16:18Z",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit": "73a958794014fdd97397bf324d6c2fde3490a8d4",
+  "corrections_consumed": [
+    "no post-rotation independence",
+    "no arbitrary-joint coarea",
+    "no density conclusion from half-line or reciprocal-Jacobian estimate alone",
+    "no law-uniform pointwise quadratic decay"
+  ],
+  "partner_result_applied": {
+    "source": "math-open-problems@339d40cb2285b8d51cf07423514354bdd702833f",
+    "theorem": "QFORM-LDL-FULL-TWOJACOBIAN-NONZERO-v1",
+    "application": "P(J2F<=tau)<=min(1,pi*tau^2/(2s^2)); E[1/J2F]<=sqrt(2pi)/s"
+  },
+  "additional_completed_input": {
+    "source": "math-open-problems@4971375a7b03b979ca3bb1c6b31e4af71f7a1276",
+    "theorem": "QFORM-RANK2-INDEPENDENT-SQUARE-BRIDGE-v1"
+  },
+  "output": {
+    "math_commit": "494e4a18bff08cc3fbc9ba668ba14a3983e51da6",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260924T091618Z-account04-B11-source-disjoint-ldl-r2/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260924T091618Z-account04-B11-source-disjoint-ldl-r2/CHECKS.json"
+  },
+  "result": {
+    "theorem": "QFORM-LDL-SOURCE-DISJOINT-THIRD-CURVATURE-v1",
+    "bound_general": "128*sqrt(2)/s",
+    "bound_literal_coordinate": "128/s",
+    "continuity": "C0 on this split-product branch"
+  },
+  "unresolved": "shared-source third curvature; arbitrary additional spectrum; full QFORM; full-target continuity",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "model_metadata": "UNKNOWN_UNEXPOSED",
+  "reasoning_metadata": "UNKNOWN_UNEXPOSED"
+}

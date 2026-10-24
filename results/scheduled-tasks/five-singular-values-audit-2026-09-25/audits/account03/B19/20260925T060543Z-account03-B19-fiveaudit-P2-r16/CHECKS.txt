@@ -1,0 +1,27 @@
+QFORM_B19_P2_R16_CHECKS
+
+Exact identities checked:
+omega(1)=1
+omega(2)=2
+omega(3)=9/2
+beta_2=2^(3/4)*pi*e
+C3=3*sqrt(2)*e*(9/2)^(1/6)=14.818337662843... < 15
+C2=8*sqrt(e)*2^(-1/8)=12.095072570796... < 12.2
+
+Step 4 scaling:
+int |psi_i(2t(z+a))|^(1/alpha_i) dz
+=(2|t|)^(-1) int |psi_i(u)|^(1/alpha_i) du
+<=pi*sqrt(2e*alpha_i)/|t|.
+
+Step 5:
+prod (Theta(H)theta(T'))^(-w/2)
+=Theta_ell(H)^(-1/2) exp(H(w)/2).
+prod prod alpha_i^(w/2)=exp((1/2)sum alpha_i log alpha_i).
+
+Theorem 4.1:
+a_k=(2e)^((ell-k)/2) omega(ell-k)^(1/2) 2^(k/2).
+For m=ell-k>=1,
+a_(k+1)/a_k=e^(-1/2)(omega(m-1)/omega(m))^(1/2)<=e^(-1/2).
+pi^ell e^(ell/2)(2e)^(ell/2)=(sqrt(2)pi e)^ell.
+
+No numerical diagnostic is used as a universal proof; decimals only check exact derived expressions.

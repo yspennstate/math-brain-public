@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "event_id": "QFORM-OVERLAPPING-SQUARE-NOT-EXTERNAL-SMOOTHER-v1",
+  "account": "account02",
+  "slot": "B09",
+  "run_id": "20260922T224256Z-account02-B09-QFORM-r11",
+  "status": "REFUTED_INTERMEDIATE_MECHANISM",
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "f3aafd88be14e01592233b214db0dd424911345c",
+  "canonical_report_blob": "8100c4044766f6e3b9aa13253e85f5ed0426a8ff",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260922T224256Z-account02-B09-QFORM-r11/REPORT.md",
+  "statement_refuted": "An arbitrary nonzero added square curvature, even when it overlaps the variables of an indefinite rank-two lightcone core, automatically supplies a third smoothing direction.",
+  "counterexample": {
+    "law": "U,W1,W2 iid Uniform[-1/2,1/2]",
+    "form": "2U(W1+W2)+W1^2-W2^2+(W1+W2)^2=2(W1+W2)(U+W1)",
+    "density_lower_bound": "p(q)>=(1/2) log(1/(8|q|)) for 0<|q|<1/8",
+    "scope": "Intermediate-mechanism falsifier only. The coefficient matrix has rank at most two, so this is not a counterexample to the three-large-eigenvalue QFORM conjecture."
+  },
+  "repair": "Require a genuinely external product-compatible third direction, or prove a separate product-provenance-sensitive overlapping-curvature estimate."
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "service": "rough_data_curl",
+    "date": "2026-10-12",
+    "query": "https://arxiv.org/pdf/2607.13341",
+    "error": "Command '['curl.exe', '-L', '--max-time', '35', '-sS', '-w', '\\nHTTP_STATUS:%{http_code}', 'https://arxiv.org/pdf/2607.13341']' timed out after 45 seconds"
+  },
+  {
+    "service": "critical_perturbations_curl",
+    "date": "2026-10-12",
+    "query": "https://arxiv.org/pdf/2602.00895",
+    "exit": 0,
+    "http_status": "200",
+    "bytes": 494585,
+    "stderr": ""
+  },
+  {
+    "service": "openalex_citing_doi",
+    "date": "2026-10-12",
+    "query": "https://api.openalex.org/works?filter=cites:https%3A%2F%2Fdoi.org%2F10.1007%2Fs00030-025-01090-2&per-page=100",
+    "exit": 0,
+    "http_status": "429",
+    "bytes": 610,
+    "stderr": ""
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_start": "9c0ba5941ed05ec989c00bd4e4d9d50eeadbc672",
+  "source_control_commit_prepublication": "4ad99b521b28a3b46855c40b141bfe0e57ee7a77",
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260922T153529Z-account03-B17-QFORM-r11",
+  "assignment": "Sharp constant and witnesses",
+  "status": "AUXILIARY_ONLY_MESOSCOPIC_FRAGMENT_NO_ESCAPE_FULL_TARGET_OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "mathematical_premises": [
+    {
+      "source": "account04/B14 extreme-product reduction",
+      "canonical_commit": "8fcc9ba5db68dfd4cd5daeb181a39666ceeda322",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md",
+      "scope": "Fixed-interval small-ball supremum reduces without loss to product indicator marginals of measure-one sets; compact finite unions suffice."
+    },
+    {
+      "source": "account01/B17 QFORM-GAUSSIAN-FULL-NONCENTRAL-C3SQRT2-v1",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260922T120821Z-account01-B17-qform-sharp-constant-v1/ADDENDUM_NONCENTRAL_GAUSSIAN.md",
+      "scope": "For Gaussian G with covariance at least sigma^2 I and any target-spectrum A, the quadratic density is continuous and bounded by 1/(2sqrt(2)sigma^2), sharp; at sigma^2=1/12 this is 3sqrt(2)."
+    }
+  ],
+  "designated_partner": {
+    "partner": "account04/B17",
+    "completed_current_qform_artifact_found": false,
+    "action": "No result invented; compatible account04/B14 theorem applied instead."
+  },
+  "new_result": {
+    "id": "QFORM-RARE-FRAGMENT-CP-NOESCAPE-v1",
+    "scope": "Three independent block-average banks with exact cap-one finite-fragment marginals having total rare mass Theta(1/m) at displacement Theta(sqrt(m)), including arbitrary finite compensated jump measures.",
+    "statement": "The projected banks converge to N(0,1/12)+compound-Poisson shifts. The limiting mixed-sign quadratic law has a bounded continuous density with essential supremum at most 3sqrt(2); the zero-jump endpoint attains 3sqrt(2).",
+    "target_relevance": "Closes a genuine eta_m->0 non-Gaussian mesoscopic extreme-product witness branch left open by prior variance rigidity.",
+    "limitation": "No uniform finite-m density estimate is proved; weak convergence does not exclude narrow finite-m spikes. Full QFORM remains open."
+  },
+  "exact_outputs": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d6150b6de22e898de442e821e42c2ddc09604a0d",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T153529Z-account03-B17-QFORM-r11/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T153529Z-account03-B17-QFORM-r11/check_cf.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T153529Z-account03-B17-QFORM-r11/check_cf.out"
+  },
+  "unresolved_implication": "Upgrade the rare-fragment weak-limit theorem to a local-limit/uniform finite-m bound, or find a multiscale/shared-coordinate fragmented witness that escapes conditional Gaussian smoothing.",
+  "next_step": "Change mechanism to local-limit control of the finite-m block-density characteristic functions, with explicit high-frequency treatment; if that stalls, move to multiscale or shared-coordinate mesoscopic fragmentation rather than another Gaussian/Edgeworth perturbation."
+}

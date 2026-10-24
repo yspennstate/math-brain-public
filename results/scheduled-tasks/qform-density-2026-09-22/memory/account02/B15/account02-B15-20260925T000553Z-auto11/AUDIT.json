@@ -1,0 +1,38 @@
+{
+  "account": "account02",
+  "slot": "B15",
+  "run_id": "account02-B15-20260925T000553Z-auto11",
+  "type": "five_eigenvalue_audit",
+  "source_commit": "5ba2a4d6b689721601cce7ec7e22ffea9fa98f90",
+  "paper_blob": "bbebd6f6c5a27e9f639186a305008ab43a481e70",
+  "paper_sha256": "040d03beea0f9d652992b9ea9dca71e4f2df98cdeef942b291b1c73ec65cdab3",
+  "verdicts": [
+    "lines 103-198 PASS: Fourier/Gaussian/Riesz, conditioning, Weyl-Schur-Gram",
+    "lines 200-266 PASS: heat-flow BL, product projection, scalar Fourier powers",
+    "lines 268-417 PASS: crossing-volume Fourier decay and constants",
+    "lines 418-537 PASS: square/definite/hyperbolic/concentration/kernels/pair-half; patched hyperbolic separate-tail coordinates are correct",
+    "lines 538-606 PASS-FORMALIZED per owner boundary; fresh Lean compile UNCHECKED",
+    "lines 607-670 PASS: no-pivot, s3 half-potential, all s5 branches and scaling",
+    "bibliographic priority UNCHECKED"
+  ],
+  "b15": [
+    "Gaussian identity constant 1/(2 sqrt(pi v)) reproduced for arbitrary output law",
+    "Riesz constant 1/sqrt(2 pi) reproduced; min(1,u/|t|) gives exact weighted integral 8 sqrt(u)",
+    "No rough-law approximation is needed for theorem height; L1 Fourier branches give continuity, while total-variation approximation alone gives only essential height"
+  ],
+  "counterexamples": [
+    "X uniform [1,2], X^2 has bounded density but no continuous representative at the support edge",
+    "R=2UV for independent uniforms [-1/2,1/2] has logarithmic density singularity despite finite negative half moment"
+  ],
+  "correction_note": "paper line 247 is not a gap: 'Factors with beta_i=0 are at most one and are dropped' means each factor is <=1; line 251 explicitly permits multiple zero-beta terms.",
+  "supported_claims": [
+    "s5 density <=270 K^2/s",
+    "s3 half-potential <=77 K/sqrt(s)"
+  ],
+  "false_claims_found": 0,
+  "new_proof_gaps_found": 0,
+  "fresh_python_execution": "UNCHECKED",
+  "fresh_lean_execution": "UNCHECKED",
+  "model": "GPT-5.6 Sol",
+  "effort": "UNKNOWN/not exposed"
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260924T045430Z-account01-B18-QFORM-auto11-r47",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit_observed_at_start": "975ce3b6fde9f48d4fa49dd8e47d21bc35021c61",
+  "math_start_commit": "1d81e62c818d6b592a6a6da78870f12f533d615a",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "primary_sources": [
+    {
+      "source": "Rudelson--Vershynin, arXiv:1402.4492, Theorem 1.2",
+      "scope_used": "unit linear form of independent cap-one original-product bank has density <= sqrt(2)"
+    },
+    {
+      "source": "Livshyts--Paouris--Pivovarov, arXiv:1507.07949",
+      "scope_used": "k-dimensional orthogonal marginal of cap-one product density has joint density <=2^(k/2); no independence inferred"
+    },
+    {
+      "source": "Herry--Malicet--Poly, arXiv:2303.09488",
+      "scope_used": "hypothesis audit only; iid smooth Gaussian-field representation does not match full target"
+    }
+  ],
+  "partner_result": {
+    "account_slot": "account02/B18",
+    "theorem": "QFORM-CONDITIONAL-CROSS-PRIVATEBANK-WEAKL2-v1",
+    "source_commit": "fedbabc70c2245476d15532f38c5c2555a0d6c31",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/account02-B18-20260924T031145Z-auto11/REPORT.md",
+    "actual_application": "singleton W case with M=2 tau u v^T and a=e gives ||p||_inf<=4sqrt(2)/sqrt(|e tau|)"
+  },
+  "proved_result": {
+    "id": "QFORM-RANK1-CROSS-EXACTRANK3-INVERSE-CURRENCY-v1",
+    "status": "PROVED_SUPPORTING_TARGET_LEVEL_BRANCH",
+    "statement": "For retained A_R=tau(uv^T+vu^T)+c vv^T+d(v e_w^T+e_w v^T)+e e_w e_w^T on disjoint original banks I,J and singleton w, if its three nonzero eigenvalues have modulus >=s, then arbitrary cap-one product inputs and arbitrary ambient outside couplings after original-coordinate conditioning satisfy ||p_Q||_inf<=4sqrt(2)/s.",
+    "deterministic_bridge": "H^{-1}_{12}=1/tau and H^{-1}_{33}=1/e; s_min(H)>=s implies |tau|,|e|>=s.",
+    "continuity": "NOT_CLAIMED"
+  },
+  "prior_scope_note": "Interactive Proposition S already controls a narrower literal-original-singleton-hub plus transverse-square case; no qualitative novelty claim is made there.",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "3d940dd1d871377689aee4c4f1545ba561e4e510",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260924T045430Z-account01-B18-QFORM-auto11-r47/REPORT.md",
+  "handoff_commit": "eded43b477d711fcc31dfbabd5ed021bb58941cf",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B18/20260924T045430Z-account01-B18-QFORM-auto11-r47.md",
+  "unresolved_implication": "The bare three-large-eigenvalue hypothesis does not yet force every A into this product-separated rank-one-cross/private-singleton chamber or another paid branch while retaining arbitrary nonzero curvature.",
+  "next_step": "Try to derive a product-preserving structural dichotomy that either exposes the private singleton scalar with zero I-w coupling at spectral scale, or routes its failure to rank-two-cross/grouped-hub/ridge/diffuse branches.",
+  "full_solution_status": "OPEN_NOT_PROVED"
+}

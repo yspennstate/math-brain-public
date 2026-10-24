@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T100048Z-account03-B18-QFORM-r25",
+  "status": "PASS",
+  "checks": {
+    "line_bank_gram_inequality": "G'=G-(alpha/2)ee^T >= G/2 because alpha ee^T <= I <= G",
+    "congruence_singular_value": "s_min(T^T B T) >= s_min(T)^2 s_min(B); G'/G >=1/2 gives s_min(B')>=1/2",
+    "finite_line_constant": 38.83251825111398,
+    "finite_support_constant": 21.269446210866192,
+    "partner_coplanar_null_constant": 9.524406311809196,
+    "coplanar_nonzero_prefactor": 13.454342644059432,
+    "edmonds_rank2_outside_max": 1,
+    "edmonds_rank1_outside_max": 3,
+    "edmonds_rank0_outside_max": 5,
+    "random_generalized_gram_trials": 20000,
+    "random_generalized_gram_min_observed": 0.5001096422981735,
+    "random_generalized_gram_violations_below_half": 0
+  },
+  "notes": [
+    "The random trials are consistency checks only and are not proof evidence.",
+    "The proof of the generalized Gram lower bound is the exact PSD inequality in REPORT.md.",
+    "Continuity is claimed only on the account04/B18 partner-paid plane branches; the finite-dimensional projected-gradient and account03/B16 branches are recorded only as absolute-continuity/L-infinity results."
+  ]
+}

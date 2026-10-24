@@ -1,0 +1,83 @@
+\section{Small outputs}\label{sec:small}
+
+The constructive attack needs the network output to be small relative to the gradient. There are two
+routes to this, and the paper uses both because they cover different regimes. The first is purely
+probabilistic and assumes nothing about the symmetry of the network or the input law: a random linear
+readout makes the output small at every fixed input, and uniformly over inputs in the wide regime.
+The second is the balance-and-concentration mechanism, which needs the classifier's sign to be
+balanced but then applies to arbitrary --- in particular trained --- classifiers on the sphere. We
+state both; the fragility theorem is proved once and fed by either.
+
+\subsection{Random readout}
+\begin{proposition}[Small output from a random readout]\label{prop:readout}
+Let $F(x)=\langle w,h_L(x)\rangle$ with $w\sim N(0,I_{n_L}/n_L)$ independent of the other weights. For
+each fixed $x$ and $\delta\in(0,1)$, with probability at least $1-\delta$ over $w$,
+\[
+  |F(x)|\ \le\ \|h_L(x)\|\,\sqrt{\tfrac{2}{n_L}\log\tfrac2\delta}.
+\]
+In the wide regime $d\log\bar n=o(n_L)$, w.h.p.\ over all the weights this holds simultaneously for
+every $x$ on the sphere of radius $R$ with $\delta$ replaced by an exponentially small quantity, so
+that
+\[
+  |F(x)|\ \le\ C\,\|h_L(x)\|\,\sqrt{\tfrac{d\log \bar n}{n_L}}\ \le\ C'\,\|x\|\,\sqrt{\tfrac{d\log\bar n}{n_L}}
+  \qquad\text{for all }x .
+\]
+\end{proposition}
+
+\begin{proof}
+Conditionally on $h_L(x)$, $F(x)=\langle w,h_L(x)\rangle\sim N(0,\|h_L(x)\|^2/n_L)$, and a Gaussian tail
+gives $\PP(|F(x)|>\|h_L\|\sqrt{2\log(2/\delta)/n_L})\le\delta$, which is the fixed-$x$ statement. For the
+uniform statement, take an $\eps$-net $\mathcal N$ of the input sphere of radius $R$, of size
+$|\mathcal N|\le(3R/\eps)^d$, and choose the threshold $\tau=\|h_L\|_{\max}\sqrt{2(d\log(3R/\eps)+1)/n_L}$
+where $\|h_L\|_{\max}=\sup_x\|h_L(x)\|\le C\|x\|$ by the upper half of \eqref{eq:layerbracket}. The union
+bound gives $\PP(\exists\,x_j\in\mathcal N:|F(x_j)|>\tau)\le(3R/\eps)^d\cdot2e^{-\tau^2n_L/(2\|h_L\|_{\max}^2)}\le2e^{-1}$,
+and iterating the argument with $d\log(3R/\eps)$ replaced by $d\log(3R/\eps)+s$ makes the failure
+probability $e^{-s}$, so w.h.p.\ $|F(x_j)|\le\tau$ for all net points. Finally $F$ is Lipschitz in $x$
+with constant $\|w\|\prod_\ell\|W_\ell\|_\op=O(1)$ at fixed depth, so choosing $\eps=R/n$ extends the
+bound from the net to all $x$ at the cost of $O(\|x\|/n)\ll\tau$, and $\log(3R/\eps)=\log(3n)=O(\log n)$.
+Hence $|F(x)|\le C\|x\|\sqrt{(d\log n)/n_L}$ for all $x$ w.h.p. This is the union over the net at the
+net-cardinality scale, not a single exponentially small $\delta$; the $\sqrt{d\log n}$ factor is the
+price of the union.
+\end{proof}
+
+\Cref{prop:readout} is what removes the oddness and bias-free hypotheses of \cite{advExt}: no symmetry
+of the network is used, the biases are arbitrary, and the activation is any $[0,1]$-slope function.
+The price is that the readout must be random (or, for a trained network, close to a random draw in the
+relevant inner products); the balance route below removes even that, at the cost of a symmetry
+hypothesis on the input law.
+
+\subsection{Balance and spherical concentration}
+The second route is the geometric mechanism of \cite{shmaloAdv,advExt}, which we restate because the
+fragility theorem uses it for the trained-network regime and because the certification results of
+\Cref{sec:certificates} refer to it. Recall the Lévy constant $C_{\mathrm{L}}=\sqrt{\pi/8}$ and set,
+for a $p$-balanced sign (meaning $\min(\mu(F>0),\mu(F<0))\ge p$),
+\[
+  r(p)=\frac{R}{\sqrt{d-1}}\sqrt{2\log(1/p)},\qquad
+  \eps_{\mathrm{adv}}(p,\delta)=r(p)+\frac{R}{\sqrt{d-1}}\sqrt{2\log(2C_{\mathrm{L}}/\delta)}.
+\]
+
+\begin{proposition}[Small output from balance; {\cite[Thm 2.1]{advExt}}]\label{prop:balance}
+Let $f:\Sph^{d-1}(R)\to\R$ be $L$-Lipschitz with $\sgn f$ $p$-balanced. Then for every $\delta\in(0,1)$,
+on a set of $\mu$-measure at least $1-\delta$,
+\[
+  |f(x)|\ \le\ L\,\eps_{\mathrm{adv}}(p,\delta).
+\]
+If $f$ is built from bias-free linear maps, odd activations, and residual additions, then $f(-x)=-f(x)$
+and the sign is exactly $\tfrac12$-balanced under any origin-symmetric input law with $\mu(f=0)=0$.
+\end{proposition}
+
+The two routes are complementary. The random-readout bound is pointwise (every $x$) and needs no
+symmetry, but wants a random readout; the balance bound is measure-theoretic (all but a $\delta$
+fraction) and needs a balanced sign, but then covers any Lipschitz classifier, including one obtained
+by training, and any origin-symmetric input distribution. In the wide random regime both give
+$|F(x)|=O(\|x\|/\sqrt{n})$ up to logarithms and a $\sqrt d$ factor for the uniform version. We use the
+random-readout route for the clean every-$x$ statement in \Cref{sec:fragility} and note the balance
+route as the trained-network version in \Cref{sec:trained}.
+
+\begin{remark}[Why small output is the easy half]\label{rem:easy-half}
+Neither route uses anything about the gradient; both are consequences of a Lipschitz function being
+close to its median (concentration) and the median being near zero (balance, or a random readout with
+mean zero). This is the observation of \cite{advExt} that the ``small output'' half of an adversarial
+argument is generic, and that the architecture-specific work is entirely in the gradient lower bound
+and its stability --- which is exactly what the submatrix theory of \Cref{sec:gains} provides.
+\end{remark}

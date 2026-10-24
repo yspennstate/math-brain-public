@@ -1,0 +1,38 @@
+account01/B07 r44 deterministic constant/algebra checks
+
+These checks are supporting arithmetic only; the proofs are in REPORT.md.
+
+D0 = 0.000543834026761316
+eps_L = 3*D0 = 0.001631502080283948
+sigma = 1/144 = 0.006944444444444444
+cross-five density cap = 5e/(2 sigma) = 360e = 978.5814582452563
+block-tail delta = (eps_L + sqrt(eps_L^2 + 4 sigma^2))/2
+                 = 0.007807943714937772
+1/128            = 0.0078125
+margin            = 0.000004556285062228
+STATUS tail<1/128: PASS
+
+r42 c0 = 137423/77070336 = 0.001783085518142804
+64*c0 = 0.11411747316113946
+4*(64*c0)^(-1/4) = 6.882115463390213
+STATUS diagonal-light bound<6.883: PASS
+
+Rank accounting:
+rank [[0,C4],[C4^T,0]] <= 2 rank(C4) <= 8
+rank diag(0,R4) <= 4
+therefore rank(P12) <= 12.
+
+Block-tail operator bound:
+for unit (x,y), with a=||x|| and b=||y||,
+|2<x,Fy>+<y,Ey>| <= 2 sigma a b + eps_L b^2.
+The maximum over a^2+b^2=1 is the top eigenvalue of
+[[0,sigma],[sigma,eps_L]], namely delta above.
+
+Block-heavy MF density integration:
+if |phi(t)|<=min(1,B|t|^{-b}), b>1, then
+(1/(2pi)) integral_R |phi(t)| dt <= [b/(pi(b-1))] B^(1/b).
+With B=(4pi)^b 2^{-m} det(Gamma)^(-1/2), this equals
+[4b/(b-1)] 2^{-m/b} det(Gamma)^(-1/(2b)).
+For m=2,r=0,b=2 this is 4 det(C^T C)^(-1/4).
+
+STATUS=PASS

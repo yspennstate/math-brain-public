@@ -1,0 +1,27 @@
+{
+  "ts": "2026-10-10 08:21:11",
+  "status": "distress",
+  "mode": "throttle",
+  "reasons": [
+    "process_critical"
+  ],
+  "cpu_pct": 81.9,
+  "mem_avail_mb": 3287,
+  "commit_avail_mb": 10064,
+  "commit_used_pct": 90.4,
+  "commit_eff_avail_mb": 69000,
+  "commit_eff_used_pct": 57.7,
+  "disk_queue": 0,
+  "disk_free_gb": 44.6,
+  "hung_windows": 0,
+  "checked_at_local": "2026-10-10T08:21:29.542776",
+  "age_seconds": 18.542734,
+  "policy": "compute_governor/COMPUTE_DOCTRINE.md: fresh pressure check; owner_present_polite continues scoped work; throttle/distress holds this batch; memory warning floors retained.",
+  "work": "one foreground standard-library CPU batch: 256 exact square assignments, 12 geometry controls; no models, GPU, parallel workers, or sampling",
+  "decision": "HOLD",
+  "holds": [
+    "published pressure holds new batch",
+    "physical/commit memory pressure floor",
+    "explicit/critical reason"
+  ]
+}

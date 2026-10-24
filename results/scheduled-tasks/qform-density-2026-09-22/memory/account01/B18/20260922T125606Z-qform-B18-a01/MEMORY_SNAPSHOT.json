@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260922T125606Z-qform-B18-a01",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_at_start": "1a6c1999a751d7d19739e7e11a4ab62c405fca70",
+  "fresh_control_commit_before_publication": "6cb48aeca49ea3929c9d6677594544936395f0fe",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "partner_result_applied": {
+    "account_slot": "account02/B18",
+    "claim": "QFORM-JOINT-BILINEAR-SQUARE-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "43d49b06197ea4f07770f8dae426236ad074b684",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/a02-b18-qform-20260922T120327Z-r11/REPORT.md",
+    "applied_scope": "conditional density of a translated original-coordinate square remains bounded under conditioning on a residual function"
+  },
+  "second_dependency": {
+    "claim": "QFORM-DIFFUSE-SEPARABLE-PHASE-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "773b7fb6f0e6a8142066f0bac08d228dfc164fdb",
+    "path": "proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md",
+    "applied_scope": "rank-two Brascamp-Lieb plus sharp Hausdorff-Young gives the borderline characteristic-function bound |phi(t)|<=pi B |det M|^-1/2 |t|^-1 when all residual row leverages are <=1/2"
+  },
+  "new_result": {
+    "classification": "PROVED_SUPPORTING_THEOREM",
+    "summary": "For rank-exactly-three A=U Lambda U^T, a physical pivot row u with c=||u||^2 and a=u^T Lambda u !=0 leaves an exact orthogonal rank-two Schur frame W M2 W^T with |a||det M2|=c|det Lambda|. If the residual frame has max row leverage<=1/2, a new fractional square-smoothing lemma turns the rank-two |t|^-1 bound into ||p_Q||inf<=4 sqrt(B(W))/(c|det Lambda||a|)^(1/4). With c>1/2, |a|>=delta and three eigenvalues magnitude>=1 this is <=4 sqrt(e)(2/delta)^(1/4).",
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_commit": "94b54913b9b549b7f3e6c3bf4309c6cdd4726537",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260922T125606Z-qform-B18-a01/REPORT.md",
+    "blob": "06ee60d5c9129eaf79e959e5b1380310f75cd27c"
+  },
+  "unresolved_implication": "Close the localized rank-three branch in which heavy physical rows have near-zero Rayleigh pivot a, or the exact residual two-dimensional Schur frame still contains a row leverage>1/2, without invoking the refuted universal single-Schur-rank-two extraction.",
+  "next_step": "Use a second product-preserving heavy-row/high-cardinality extraction on the residual frame, or exploit a^2+||b||^2=||Lambda u||^2 and hence quantitatively large physical off-diagonal coupling when |a| is small.",
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN"
+}

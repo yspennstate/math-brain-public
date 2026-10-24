@@ -1,0 +1,134 @@
+\section*{A four-bit Boolean obstruction to paying the upper-set KL term by restriction JS}
+
+All logarithms are base two.  Let $f:\{0,1\}^n\to\{-1,1\}$ and, for a
+physical coordinate $i$, pair the Walsh coefficients as
+\[
+ u_T=\widehat f(T),\qquad v_T=\widehat f(T\cup\{i\}),\qquad
+ m_T=u_T^2+v_T^2\quad (i\notin T).
+\]
+Write
+\[
+ \eta_T={2u_Tv_T\over m_T},\quad
+ \Pi(T)=\sum_{Q\supseteq T}\widehat f(Q)^2,\quad
+ C_T=\sum_{Q\supseteq T,\ i\notin Q}\widehat f(Q)\widehat f(Q\cup\{i\}),
+ \quad x_T={2C_T\over\Pi(T)}.
+\]
+Terms with $m_T=0$ are zero.  The exact upper-set restriction formula contains
+\[
+ K_i^U=\sum_{T:i\notin T}m_T
+ D_2\left(\operatorname{Ber}{1+\eta_T\over2}
+ \middle\|\operatorname{Ber}{1+x_T\over2}\right).
+\]
+The ordinary entropy restriction identity contains the Jensen--Shannon term
+\[
+ J_i^H=\sum_{T:i\notin T}m_T
+ \left[1-h_2\left({1+\eta_T\over2}\right)\right].
+\]
+The latter has the known dimension-free influence payment.  We freeze the
+natural proposed bridge
+\[
+ \tag{P}\sum_i K_i^U\leq\sum_iJ_i^H
+\]
+and show that it is false even for a genuine Boolean function on four inputs.
+
+\subsection*{Exact witness}
+
+Let $y=(y_1,y_2,y_3)\in\{0,1\}^3$ and $z\in\{0,1\}$.  Put
+\[
+ f(y,0)=(-1)^{|y|},
+\]
+and obtain $f(y,1)$ from $(-1)^{|y|}$ by flipping only the two values
+$y=000$ and $y=111$.  In lexicographic integer order $(y_1,y_2,y_3,z)$,
+with $z$ the high bit, its truth vector is
+\[
+ (1,-1,-1,1,-1,1,1,-1;\ -1,-1,-1,1,-1,1,1,1).
+\]
+Its only nonzero Walsh coefficients are
+\[
+ \widehat f(1)=\widehat f(2)=\widehat f(3)=-\tfrac14,
+ \qquad \widehat f(123)=\tfrac34,
+\]
+\[
+ \widehat f(1z)=\widehat f(2z)=\widehat f(3z)=\tfrac14,
+ \qquad \widehat f(123z)=\tfrac14.
+\]
+Parseval is immediate.  Its total influence is
+\[
+ I(f)={3+27+6+4\over16}={5\over2}.
+\]
+
+For the selector coordinate $z$, the residual sets $T=1,2,3$ have
+\[
+ (u_T,v_T)=(-\tfrac14,\tfrac14),\quad m_T=\tfrac18,
+ \quad\eta_T=-1,\quad \Pi(T)=\tfrac34,\quad C_T=\tfrac18,
+ \quad x_T=\tfrac13.
+\]
+The residual set $T=123$ has
+\[
+ (u_T,v_T)=(\tfrac34,\tfrac14),\quad m_T=\tfrac58,
+ \quad\eta_T=x_T=\tfrac35.
+\]
+Therefore
+\[
+ K_z^U={3\over8}\log_2 3,
+\]
+while
+\[
+ J_z^H={3\over8}+{5\over8}\left[1-h_2(4/5)\right]
+       =2-{5\over8}\log_2 5.
+\]
+For the other three coordinates each nonzero coefficient is paired with zero,
+so $\eta_T=x_T=0$ and $K_i^U=J_i^H=0$.  Consequently the aggregate defect is
+\[
+ \sum_i(K_i^U-J_i^H)
+ ={3\log_2 3+5\log_2 5\over8}-2
+ ={1\over8}\log_2{3^3 5^5\over2^{16}}>0,\tag{1}
+\]
+because $3^3 5^5=84375>65536=2^{16}$.  Numerically (only for scale),
+the defect is $0.0455659970750\ldots$ bits, or
+$0.0182263988300\ldots I(f)$.  This proves that (P) is false by exact integer
+comparison, without interval or floating-point dependence.
+
+This is not merely an isolated dimension-four point.  If $F=f\otimes g$ is a
+disjoint Boolean product, then its squared spectrum and upper masses factor.
+For a coordinate in the $f$ block, $m_{T,R}=m_T^f p_R^g$ while both $\eta$
+and $x$ equal their $f$-fibre values.  Summing over $R$ shows
+\[
+ K_i^U(F)=K_i^U(f),\qquad J_i^H(F)=J_i^H(f).
+\]
+The analogous statement holds in the $g$ block.  Hence both aggregate
+functionals are additive under disjoint tensor products.  For every $r\ge1$,
+the genuine Boolean function $f^{\otimes r}$ on $4r$ inputs therefore has
+\[
+ \sum_i(K_i^U-J_i^H)=r\delta,
+ \qquad I(f^{\otimes r})={5r\over2},
+ \qquad {\sum_i(K_i^U-J_i^H)\over I}=0.0182263988300\ldots,
+\]
+where $\delta$ is the positive exact quantity in (1).  Thus the newly covered
+counterfamily has unbounded dimension and tensor depth, with constant
+normalized separation.  It remains only a counterfamily to (P), not to FEI.
+
+\subsection*{What the failure isolates}
+
+For every fibre one has the exact algebraic difference
+\[
+ D_2\left(\operatorname{Ber}{1+\eta\over2}\middle\|
+               \operatorname{Ber}{1+x\over2}\right)
+ -D_2\left(\operatorname{Ber}{1+\eta\over2}\middle\|
+               \operatorname{Ber}{1\over2}\right)
+\]
+\[
+ =-{1\over2}\log_2(1-x^2)
+   -{\eta\over2}\log_2{1+x\over1-x}.\tag{2}
+\]
+Thus the obstruction is precisely cap-posterior alignment: the three
+anti-aligned fibres have $\eta=-1$ but $x=1/3$, and their positive excess is
+not canceled by the aligned $T=123$ fibre.  Any repair must retain a signed
+alignment/asymmetry term from (2), or pay it by a separate single-use upper-set
+credit.  Replacing it by the already influence-paid restriction JS discards
+essential information.
+
+This refutes only (P).  It does not refute GU', $U\leq KI$, or FEI.  A
+coefficient $c>1$ in $\sum K_i^U\leq c\sum J_i^H$, an added $bU$ term, or a
+nonlocal signed hierarchy payment remains possible.  No novelty claim outside
+the source-bound campaign is made.

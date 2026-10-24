@@ -1,0 +1,12 @@
+{
+  "helper_version": "A087-direct-character-referee-v1",
+  "actual_Boolean_family": "All Boolean tables on n<=3 for block/tree identities; all tables on n<=4 modulo output sign for amplitude selection; all six balanced two-bit seeds, disjoint t-fold products and fresh k-bit activation; one 32-bit symmetric threshold evaluated by binomial sums",
+  "parameter_domain": {"identity_n": [0,1,2,3], "selection_n": [1,2,3,4], "activation_t": [1,2], "activation_k": [1,2,3,4], "threshold_n": 32, "threshold_weight": 24},
+  "case_count": {"identity_functions": 278, "selection_functions": 32906, "activation_functions": 48, "threshold_functions": 1},
+  "justified_symmetry_reduction": "Selection fixes output at input zero to +1; output negation preserves all tested quantities. No other reduction.",
+  "arithmetic": "Direct integer character sums; rational spectra/influences and rational prime-log coefficient vectors for entropy identities. Integer inequalities only for selection and threshold witness. Infinite-parameter remainders checked analytically, not numerically.",
+  "memory_estimate_MB": 40,
+  "maximum_runtime_seconds": 60,
+  "pilot": "Same fixed domain, halt at 55 seconds with completed-case count and no dimension escalation.",
+  "independence": "No imported code or execution in another agent directory. Direct character matrix rather than butterfly/Gray implementation. Block restriction reconstruction rather than only coordinate process."
+}

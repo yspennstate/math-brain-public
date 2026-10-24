@@ -1,0 +1,11 @@
+# C0048 independent route, written before peer drafts
+
+2026-10-10. Source: Duminil-Copin, *Lectures on the Ising and Potts models on the hypercubic lattice*, Conjecture 2 and definition of (MAG) on printed pp. 3–4, 93, https://arxiv.org/pdf/1707.00520 . The target is positive monochromatic boundary magnetization at the critical inverse temperature for each integer q>=3, d>=3. Current 2026 open status remains UNKNOWN after a bounded literature check.
+
+## Route: two-color merge, worked first at q=3
+
+Use the conventional parameter K>0 with finite-graph Potts weight exp(K sum_{uv in E} 1_{sigma_u=sigma_v}). Fix color 1 on boundary B. Set A={v: sigma_v in {1,2}}, so B subset A; write tau_v=+1 for color 1, -1 for color 2 on A. Conditional on A, tau is exactly a ferromagnetic Ising model on the induced graph G[A], coupling J=K/2, with + boundary B. The complement is entirely color 3. This is an exact identity, not an approximation or a phase-transition theorem. It follows by separating internal A, internal A^c and crossing edges in the Potts energy: sum 1_{same}=|E(A^c)| + |E(A)|/2 + (1/2) sum_{uv in E(A)} tau_u tau_v. The A marginal is proportional to exp(K|E(A^c)|+K|E(A)|/2) Z_Ising(G[A],K/2,+B). Here Z_Ising is the spin sum over A\B only; boundary spins are fixed.
+
+Potential path: derive multiscale controls on the random set A under this exact annealed measure, then compare Ising order on G[A] against a tractable dominating environment. A first-order jump would follow from a uniform positive lower bound on the Potts order parameter in + boxes as K decreases to K_c. The exact conditioning supplies an alternative diagnostic but no such bound. The load-bearing missing claim is a uniform critical lower bound for a *coupled* quantity involving A and Ising + magnetization; separate marginal bounds cannot be multiplied because A and its Ising partition function are dependent. Conditional Ising order on a typical A is not yet proved. The 2017 large-q contour route and the planar six-vertex route do not provide this bound.
+
+This route gives one finite-volume identity. It does not prove any part of C0048 at criticality. Ask w464 to check the identity before any theorem-grade brain promotion.

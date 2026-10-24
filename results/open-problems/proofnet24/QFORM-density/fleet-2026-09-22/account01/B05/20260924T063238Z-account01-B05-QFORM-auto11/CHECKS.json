@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T063238Z-account01-B05-QFORM-auto11",
+  "checks": [
+    {
+      "name": "one_sided_half_riesz_bathtub",
+      "identity": "int_R f(A-B x^2) dx = |B|^{-1/2} int_0^inf f(A-sgn(B)y)y^{-1/2}dy <= 2 sqrt(m)|B|^{-1/2}",
+      "status": "exact"
+    },
+    {
+      "name": "split_optimization",
+      "objective": "4 A sqrt(R)+B/R",
+      "optimizer": "R=(B/(2A))^(2/3)",
+      "minimum_factor": "3*2^(2/3) A^(2/3) B^(1/3)",
+      "status": "symbolically_recomputed"
+    },
+    {
+      "name": "hub_pair_constant",
+      "formula": "3*2^(2/3)",
+      "decimal": 4.762203155904598,
+      "status": "recomputed"
+    },
+    {
+      "name": "longitudinal_tail_gram_floor",
+      "input": "|L|<=3 and each q_j<1/4",
+      "calculation": "lambda_max(G_L)<=tr(G_L)=sum_L q_j<3/4; hence G_T=I-G_L > I/4 and det(G_T)>=1/16",
+      "status": "exact"
+    },
+    {
+      "name": "tail_crossstar_partner_application",
+      "input": "whitened total Pluecker square mass=1 and partner max-cut >=1/2",
+      "calculation": "M_JK(original)=det(G_T) M_JK(whitened)>=1/16*1/2=1/32",
+      "status": "exact"
+    },
+    {
+      "name": "ranktwo_tail_target_constant",
+      "input": "K<=2/sqrt(det G_T)<=8 and S_i=a^2|delta|>=1/2",
+      "formula": "3*2^(2/3)*8^(2/3)*2^(1/3)",
+      "exact": 24,
+      "decimal": 23.999999999999993,
+      "status": "recomputed"
+    },
+    {
+      "name": "partner_source_disjoint_comparator",
+      "partner_bound": "4 sqrt(2)",
+      "partner_decimal": 5.656854249492381,
+      "new_receiver_same_family": "3*2^(2/3)",
+      "new_receiver_decimal": 4.762203155904598,
+      "status": "consistent"
+    }
+  ],
+  "scope": {
+    "full_qform": "OPEN_NOT_PROVED_NOT_DISPROVED",
+    "full_target_continuity": "OPEN",
+    "new_results_continuity": "NOT_CLAIMED",
+    "execution": "WITHOUT_VERIFIED_BRAIN"
+  }
+}

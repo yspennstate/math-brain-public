@@ -1,0 +1,14 @@
+{
+  "helper_version": "A069-stage2-exact-v1",
+  "family": "new padded-addressing one-point edits; requested g2 bases; all n=3 Boolean subcube edits",
+  "parameter_domain": "address a=1,N=3..7 and a=2,N=6..8: all edit vertices; a=3,N=11,12: first eight and last eight vertices; g2 base N=11,12; every 3-bit Boolean table, every nonempty proper control subset, every control assignment",
+  "case_count": 5338,
+  "case_count_breakdown": "728 addressing edits + 2 g2 bases + 4608 subcube edits; ten addressing base calibrations and all-set decoder checks are auxiliary, not additional target cases",
+  "symmetry_reduction": "none; a=3 edit locations are explicitly a bounded subset, not a complete orbit census",
+  "arithmetic": "integer FWHT, fractions.Fraction, direct physical edges, exact subset-code lengths and Kraft; logarithmic comparisons proved symbolically",
+  "memory_estimate_mb": 32,
+  "maximum_runtime_seconds": 60,
+  "runtime_guard_seconds": 55,
+  "prior_certificates_reused": "g2 N=9 all 512 one-point edits and g2 N=10 base; original A069 validation.json, independently accepted by A070",
+  "command": "python -X utf8 code/check.py"
+}

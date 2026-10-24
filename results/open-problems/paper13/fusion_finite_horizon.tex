@@ -1,0 +1,1205 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+
+\newcommand{\Q}{Q_\infty}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\EX}{\mathsf{Ex}}
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\Gcal}{\mathcal{G}}
+\newcommand{\mdim}{\operatorname{mdim}_{\mathrm M}}
+
+\title{Finite-horizon windowed distributional chaos\\
+on the Hilbert cube: a residual theorem and its sharp\\
+finite-certificate obstruction}
+\author{Yitzchak Shmalo\\
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+On the Hilbert cube $\Q=[0,1]^{\mathbb N}$ the companion paper \cite{companion}
+establishes a residual depth hierarchy of margin-stable covering schemes in the full
+non-autonomous mapping space $\F(\Q)=C(\Q,\Q)^{\mathbb N}$, together with an
+empty-interior obstruction showing that no open class can certify exact covering in
+arbitrarily deep coordinates; it leaves open whether the infinite-horizon dynamical
+conclusions of the underlying dense theorem of \cite{Shmalo2026} --- all-tail
+semifactors, windowed distributional chaos of type~1, infinite entropy and infinite
+metric mean dimension --- are residual.  This paper advances that question on its
+\emph{finite-horizon} layer.  First we prove a positive residual theorem: for any
+countable family of dense-open window sequences there is a comeager set
+$\Gcal\subseteq\F(\Q)$ such that every system in $\Gcal$ admits finite-horizon windowed
+DC1 witnesses of every order, at every tail, every rational proximal scale, every
+rational tolerance, and the fixed separation scale --- pairs of orbits proximal on an
+arbitrarily large prescribed time-fraction of arbitrarily long horizons and separated on
+a positive time-fraction, both visiting the prescribed windows up to those horizons.
+The same residual set in fact contains finite scrambled packets of every prescribed
+cardinality: for every \(M\) there are arbitrarily long horizons carrying \(M\) orbits
+which are all mutually proximal on a common large set of times and whose every pair is
+\(t_0\)-separated on a positive fraction of times.  The mechanism is a
+finite-horizon stability lemma whose orbit-tracking modulus does \emph{not} decay with
+coordinate depth, in contrast with the depth obstruction of \cite{companion}, combined
+with the dense windowed-horseshoe theorem of \cite{Shmalo2026}, a block schedule, and a
+binary coding argument across the separation blocks.
+Second we prove that this is sharp at the level of certificates: every finite-horizon
+certified open set --- one whose membership depends only on a bounded window of
+coordinate maps --- that is contained in the class of systems with an
+infinite-metric-mean-dimension tail, or in the corresponding scale-law entropy class from
+\cite{Shmalo2026}, is \emph{empty}.  The proof is an explicit coordinate squeeze
+applied past the certifying window, which stays uniformly close to every system in the
+set yet caps the metric mean dimension of every later tail.  The same squeeze also defeats
+the all-tail symbolic semifactor, while leaving a bare uncountable DC1 set untouched, so
+the certificate obstruction separates the growth-type conclusions from the cardinality
+conclusion.  We record the Banach--Mazur corollary and an honest ledger: this rules out the natural
+finite-certificate method class for the infinite-horizon problem, but does not decide
+whether the full conclusions are comeager; that remains open for methods that are not
+finite-horizon.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+A non-autonomous discrete dynamical system on a compact metric space $(X,\rho)$ is a
+sequence $f=(f_1,f_2,\dots)$ of continuous self-maps acting by composition
+$F^j=f_{j}\circ\cdots\circ f_1$.  The full mapping space
+\[
+\F(X)=C(X,X)^{\mathbb N},
+\qquad
+D_X(f,g)=\sup_{n\ge1}\,\sup_{x\in X}\rho\bigl(f_n(x),g_n(x)\bigr),
+\]
+is complete and hence Baire.  On finite-dimensional cubes and on compact manifolds the
+construction of \cite{Shmalo2026} produces an open dense class of systems with all-tail
+full complexity: after deleting any finite initial segment one still has a compact
+symbolic semifactor onto a full variable-alphabet shift, a continuum-sized scrambled
+set for distributional chaos of type~1 (DC1) visiting prescribed dense open windows at
+prescribed times, infinite topological entropy, and the sharp small-scale entropy
+spectrum.  On the Hilbert cube
+\[
+\Q=[0,1]^{\mathbb N},
+\qquad
+\rho(x,y)=\sum_{j\ge1}2^{-j}\,|x_j-y_j|,
+\]
+the same conclusions hold only \emph{densely}, because coordinate $j$ carries metric
+weight $2^{-j}$ and exact control of arbitrarily deep coordinates is not stable.  The
+companion paper \cite{companion} analyses exactly this gap.  It proves that for every
+depth $N$ the class of systems carrying a margin-stable depth-$N$ covering scheme is
+open dense, with an explicit stability radius of order $2^{-N}$, so that the
+intersection over all depths is residual; that on this residual set one-step covering
+is exact at every finite depth; and, on the negative side, that the dense
+exact-horseshoe class --- indeed any class forcing some image to have full range in
+infinitely many coordinates --- has empty interior.  What \cite{companion} explicitly
+leaves open (its Problem, restated below as Problem~\ref{prob:companion}) is whether the
+\emph{infinite-horizon dynamical} conclusions are themselves residual:
+
+\begin{quotation}
+\noindent``What is missing is exactly a mechanism producing, for a residual set of
+systems, orbits threading infinitely many prescribed bricks --- equivalently, a
+replacement for the backward induction \cite[Lemma~13.1]{Shmalo2026} that consumes only
+finite-depth information per step.''
+\end{quotation}
+
+This open question traces back to Section~14 of \cite{Shmalo2026}, where the
+``dense, not open'' phenomenon on $\Q$ is first recorded and a residual theorem ``by a
+Baire-fusion mechanism'' is requested.
+
+\subsection*{This paper}
+
+We attack the question on the layer where it is tractable: \emph{finite horizons}.  The
+infinite-horizon DC1 conclusion asks for a scrambled pair $(x,y)$ whose orbits are
+proximal along a set of times of upper density~$1$ and separated along a set of upper
+density~$1$, with prescribed window visits at \emph{all} times.  We weaken ``all
+times'' to ``all times below a horizon $N$'' and ``upper density'' to ``a prescribed
+fraction of $\{0,\dots,N-1\}$'', and prove that the resulting finite-horizon witnesses
+exist residually, of every order and at every scale, and then prove that no
+finite-horizon \emph{certificate} can reach the infinite-horizon conclusions.  The two
+results sit on opposite sides of a sharp line.
+
+\begin{theorem}[Residual finite-horizon windowed DC1 witnesses;
+Theorem~\ref{thm:residual} below]\label{thm:A}
+Let $\{W^a_\bullet\}_{a\ge1}$ be any countable family of sequences of dense open subsets
+of $\Q$, and fix a separation scale \(t_0\in(0,1)\).  There is a comeager set
+$\Gcal\subseteq\F(\Q)$ such that every $g\in\Gcal$ has the following property: for every
+index $a$, every tail $r\ge0$, every rational proximal scale $\varepsilon\in(0,1)$, and
+all rational $0<\theta<\eta<1$, for every $N_0\ge1$ there exists $N\ge N_0$ for which
+there are points $x,y\in\Q$ and disjoint sets of times
+$P,S\subseteq\{0,\dots,N-1\}$ with $\#P\ge(1-\eta)N$ and $\#S\ge\theta N$ for which
+\[
+\rho\bigl(G^j_r(x),G^j_r(y)\bigr)<\varepsilon\ \ (j\in P),
+\qquad
+\rho\bigl(G^j_r(x),G^j_r(y)\bigr)>t_0\ \ (j\in S),
+\]
+and $G^j_r(x),G^j_r(y)\in W^a_{r+j+1}$ for every $j<N$, where
+$G^j_r=g_{r+j}\circ\cdots\circ g_{r+1}$ and $G^0_r=\mathrm{id}$.
+\end{theorem}
+
+The witness in Theorem~\ref{thm:A} is the finite-horizon, fixed-tolerance shadow of a
+DC1 scrambled pair: proximal on a $(1-\eta)$-fraction of the horizon, separated at a
+fixed scale on a positive $\theta$-fraction, inside the prescribed windows up to the
+horizon.  Letting $\eta\downarrow0$ and then choosing any smaller $\theta>0$ produces
+arbitrarily long horizons on which the pair is proximal on an arbitrarily large fraction
+of times and still separated at scale $t_0$ on a positive fraction --- the finite-horizon
+content of ``proximal and separated of every order.''
+
+The same construction also gives finite scrambled packets, not only pairs.
+
+\begin{theorem}[Residual finite-horizon scrambled packets]\label{thm:packet-intro}
+Under the hypotheses of Theorem~\ref{thm:A}, possibly after replacing the comeager set
+by a smaller comeager set, every \(g\) has the following stronger property.  For every
+window sequence \(W^a_\bullet\), every tail \(r\ge0\), every integer \(M\ge2\), every
+rational proximal scale \(\varepsilon\in(0,1)\), every rational \(0<\eta<1\), and every
+\(N_0\), there are \(N\ge N_0\), points
+\[
+  x^1,\ldots,x^M\in\Q,
+\]
+a common set \(P\subseteq\{0,\ldots,N-1\}\), and pair-dependent sets
+\(S_{uv}\subseteq\{0,\ldots,N-1\}\), \(1\le u<v\le M\), such that
+\[
+  \#P\ge(1-\eta)N,\qquad
+  \#S_{uv}\ge \frac{\eta}{8}N\quad(1\le u<v\le M),
+\]
+all \(M\) orbit segments visit the prescribed windows up to time \(N\), all pairs are
+\(\varepsilon\)-proximal at every time in \(P\), and the pair \((x^u,x^v)\) is
+\(t_0\)-separated at every time in \(S_{uv}\).
+\end{theorem}
+
+\begin{theorem}[No finite-horizon certificate forces infinite-horizon complexity;
+Theorem~\ref{thm:obstruction} below]\label{thm:B}
+Call an open set $V\subseteq\F(\Q)$ \emph{finite-horizon certified} if there are an
+offset $r\ge0$ and a horizon $N\ge1$ such that membership $g\in V$ depends only on the
+finite window $(g_{r+1},\dots,g_{r+N})$.  If $V$ is finite-horizon certified and
+\[
+V\subseteq\bigl\{\,g\in\F(\Q):\ \mdim(\mathrm{tail}_s g)=\infty
+\ \text{for some }s\ge0\,\bigr\},
+\]
+then $V=\varnothing$.  The same holds if the entropy hypothesis is replaced by the
+scale-law entropy class of \cite{Shmalo2026}: for some tail and every \(q\), for some
+constant \(C_q\), the
+small-scale entropy satisfies
+\[
+h^{(\varepsilon)}_{\mathrm{top}}(\mathrm{tail}_s g)
+\ge q\log(1/\varepsilon)-C_q
+\]
+for all sufficiently small \(\varepsilon\).
+\end{theorem}
+
+Theorem~\ref{thm:B} says the line drawn by Theorem~\ref{thm:A} cannot be crossed by the
+obvious method.  A natural strategy for the infinite-horizon problem is to exhibit a
+countable family of open dense sets, each certified by a bounded window, whose
+intersection forces infinite-horizon complexity, and to invoke Baire.  Theorem~\ref{thm:B}
+shows that every individual set in such a family that already entails an
+infinite-\(\mdim\) tail, or the scale-law entropy tail supplied by the dense theorem, is
+empty, hence not dense: the entailment and finite-horizon certification are
+incompatible.  The infinite-horizon conclusions are genuinely
+non-finite-horizon properties, and any residual proof must read unboundedly many
+coordinate maps to certify a single system.
+
+\subsection*{Why depth and horizon behave oppositely}
+
+The contrast between the two theorems is the engine of the paper, and it is worth
+isolating.  The obstruction of \cite{companion} is about \emph{coordinate depth}: a
+condition that constrains image coordinate $\ell$ has $D$-stability only $O(2^{-\ell})$,
+so margins erode geometrically in depth and no open set survives unbounded depth.  By
+contrast, the finite-horizon witnesses of Theorem~\ref{thm:A} are stable because their
+defining inequalities involve the metric $\rho$ \emph{directly}, not individual deep
+coordinates, and the orbit-tracking modulus over a \emph{fixed} horizon $N$ is finite
+and depth-free: if $D(h,g)<\delta$ then the two $N$-orbits stay within
+$e_N\le\delta+\omega(e_{N-1})$, a quantity that depends on the uniform-continuity moduli
+$\omega$ of the maps and on $N$, but not on how deep the proximity or separation is read
+(Lemma~\ref{lem:fh-stability}).  This is the precise sense in which the finite-horizon
+layer escapes the depth obstruction: horizons are stable while depths are not.  The two
+obstructions are independent, and the present Theorem~\ref{thm:B} is a genuinely
+\emph{horizon} obstruction --- the squeeze acts past a fixed window in time, not past a
+fixed coordinate --- complementary to the depth obstruction of \cite{companion}.
+
+\subsection*{An honest ledger}
+
+We are careful about what is and is not proved.  Theorem~\ref{thm:A} produces witnesses
+that are finite-horizon and carry a \emph{fixed} separation tolerance $t_0$; it does not
+produce a single scrambled pair working at all horizons simultaneously, nor does it
+recover the upper-density-one statements that define DC1 in the limit.  Theorem~\ref{thm:B}
+rules out the natural finite-certificate route to the infinite-horizon problem, but it
+does \emph{not} prove that the infinite-horizon class is non-comeager: a residual set
+need not be a countable intersection of finite-horizon certified open sets.  Thus
+Problem~\ref{prob:companion} (residuality of the full infinite-horizon conclusions)
+remains open; what we add is a residual finite-horizon theorem on one side and, on the
+other, a proof that the most direct method class cannot settle it.  Section~\ref{sec:open}
+states this precisely.
+
+\subsection*{Organization}
+
+Section~\ref{sec:prelim} fixes notation, recalls the Baire property and the inputs we
+import from \cite{Shmalo2026,companion}.  Section~\ref{sec:witness} defines the
+finite-horizon windowed DC1 witness and proves its openness and depth-free stability.
+It also defines finite scrambled packets and proves their openness.  Section~\ref{sec:density}
+proves density via the dense windowed-horseshoe theorem, a block schedule, and a binary
+coding argument across separation times, then assembles Theorems~\ref{thm:A} and
+\ref{thm:packet-intro} by Baire intersection.
+Section~\ref{sec:obstruction} proves the finite-horizon certificate obstruction
+(Theorem~\ref{thm:B}) and its Banach--Mazur corollary.  Section~\ref{sec:open} records
+the ledger and the open problem.
+
+\section{Preliminaries}\label{sec:prelim}
+
+Throughout, $\Q=[0,1]^{\mathbb N}$ carries
+$\rho(x,y)=\sum_{j\ge1}2^{-j}|x_j-y_j|$, which induces the product topology and makes
+$\Q$ compact, with $\diam_\rho(\Q)=1$.  We write $\pi_\ell:\Q\to[0,1]$ for the $\ell$-th
+coordinate projection.  The space $C(\Q,\Q)$ carries the uniform metric
+$d_\infty(u,v)=\sup_x\rho(u(x),v(x))$, and
+\[
+\F(\Q)=C(\Q,\Q)^{\mathbb N},\qquad
+D(f,g)=\sup_{n\ge1}d_\infty(f_n,g_n).
+\]
+For $g\in\F(\Q)$, $r\ge0$ and $j\ge0$ put $G^0_r=\mathrm{id}$ and
+$G^j_r=g_{r+j}\circ\cdots\circ g_{r+1}$; the \emph{tail at $r$} is
+$\mathrm{tail}_rg=(g_{r+1},g_{r+2},\dots)$.
+
+\begin{lemma}[{\cite[Lemma~2.1]{Shmalo2026}}]\label{lem:baire}
+$(\F(\Q),D)$ is a complete metric space, and hence a Baire space.
+\end{lemma}
+
+\begin{proof}
+$C(\Q,\Q)$ is complete because $\Q$ is compact and uniform limits of continuous maps
+are continuous.  If $(f^{(k)})_k$ is $D$-Cauchy, each coordinate sequence
+$(f^{(k)}_n)_k$ is $d_\infty$-Cauchy with a modulus independent of $n$, and the
+coordinate limits assemble to $f\in\F(\Q)$ with $D(f^{(k)},f)\to0$.  Completeness gives
+the Baire property.
+\end{proof}
+
+We use the elementary weight estimate of \cite[Eq.~(2.2)]{companion}: for
+$u,v\in C(\Q,\Q)$ and any coordinate $\ell$,
+\begin{equation}\label{eq:weight}
+\sup_{x\in\Q}\bigl|\pi_\ell u(x)-\pi_\ell v(x)\bigr|\le2^{\ell}\,d_\infty(u,v),
+\qquad
+d_\infty(u,v)\le\sum_{\ell\ge1}2^{-\ell}\sup_x|\pi_\ell u(x)-\pi_\ell v(x)|.
+\end{equation}
+
+\paragraph{Imported dense theorem.}
+The single dynamical input we need from \cite{Shmalo2026} is the exact windowed
+horseshoe theorem on $\Q$, in the windowed-block form, together with the universal block
+schedule.  We state it in the form used below.
+
+\begin{theorem}[{Dense exact windowed horseshoe; \cite[Theorem~3.6 and \S12]{Shmalo2026}}]\label{thm:dense}
+Let $W_\bullet=(W_n)_{n\ge1}$ be a sequence of dense open subsets of $\Q$.  For every
+$f\in\F(\Q)$ and every $\eta_0>0$ there is $g\in\F(\Q)$ with $D(f,g)<\eta_0$ admitting
+an exact $W_\bullet$-windowed Hilbert horseshoe: there are $\alpha\in(0,1/4)$, support
+levels $K_n$, $(\alpha,K_n)$-boxes $J_n$, and finite-support boxes
+$B_{n,1},\dots,B_{n,M_n}\subseteq\operatorname{int}(J_n)\cap W_n$ with
+$\diam_\rho(B_{n,i})<\gamma_n\to0$ and $g_n(B_{n,i})=J_{n+1}$ for all $n,i$, organized on
+a universal block schedule in which every label from the alphabet
+$\{C_a,D_s,E_{q,m}\}$ occurs on infinitely many blocks.  On such a $g$, for every
+$r\ge0$, the tail $\mathrm{tail}_rg$ carries a compact symbolic semifactor onto a full
+variable-alphabet shift; in particular every finite admissible itinerary of bricks from
+time $r+1$ onward is realized by an orbit of $\mathrm{tail}_rg$, with each visited brick
+lying in its prescribed window.
+\end{theorem}
+
+The only facts we use from Theorem~\ref{thm:dense} are: (i) along an exact windowed
+horseshoe, \emph{any} prescribed finite sequence of admissible bricks is followed
+exactly by some orbit (the finite-itinerary realizability built into the symbolic
+semifactor); and (ii) the schedule guarantees, on every long block of times, a
+controllable proportion of ``proximity-type'' bricks $C_a$ that funnel two orbits into a
+common small box and ``separation-type'' bricks $D_s$ that force them apart at the fixed
+scale $t_0$.  We make (ii) quantitative in Section~\ref{sec:density}.
+
+\paragraph{Companion inputs.}
+From \cite{companion} we use only the framework (the metric $D$, the weight
+estimate~\eqref{eq:weight}, the Baire property) and, in Section~\ref{sec:obstruction},
+the empty-interior phenomenon as a point of contrast; the proofs below are otherwise
+self-contained.
+
+\section{The finite-horizon windowed DC1 witness}\label{sec:witness}
+
+Fix a separation scale \(t_0\in(0,1)\) once and for all.
+
+\begin{definition}[Finite-horizon windowed DC1 witness]\label{def:witness}
+Let $W_\bullet=(W_n)$ be a sequence of dense open subsets of $\Q$, let $r\ge0$,
+$\varepsilon\in(0,1)$, \(0<\theta<\eta<1\) and $N\ge1$.  We say $g\in\F(\Q)$ has the
+\emph{finite-horizon windowed DC1 witness}
+$\W_{r,\varepsilon,t_0,\eta,\theta,N}(W_\bullet)$ if there exist $x,y\in\Q$ and disjoint
+$P,S\subseteq\{0,\dots,N-1\}$ with $\#P\ge(1-\eta)N$ and $\#S\ge\theta N$ such that, with
+$G^j_r=g_{r+j}\circ\cdots\circ g_{r+1}$,
+\begin{enumerate}
+\item[(W1)] (\emph{proximity}) $\rho\bigl(G^j_r(x),G^j_r(y)\bigr)<\varepsilon$ for all
+$j\in P$;
+\item[(W2)] (\emph{separation}) $\rho\bigl(G^j_r(x),G^j_r(y)\bigr)>t_0$ for all
+$j\in S$;
+\item[(W3)] (\emph{windows}) $G^j_r(x)\in W_{r+j+1}$ and $G^j_r(y)\in W_{r+j+1}$ for all
+$j$ with $0\le j<N$.
+\end{enumerate}
+Write $\W_{r,\varepsilon,t_0,\eta,\theta,N}(W_\bullet)\subseteq\F(\Q)$ for the set of systems
+with this witness.
+\end{definition}
+
+The point of the next lemma is stability with a modulus that is finite for each $N$ and
+\emph{does not decay with coordinate depth}.  This is the structural difference from the
+depth obstruction of \cite[Remark~3.6]{companion}, where margins shrink like $2^{-N}$ in
+the depth $N$; here $N$ is a \emph{time} horizon and the witness is open with a radius
+that depends only on the horizon length and the uniform-continuity moduli of the
+finitely many maps involved.
+
+\begin{lemma}[Finite-horizon stability: openness]\label{lem:fh-stability}
+Suppose $g$ has the witness \(\W_{r,\varepsilon,t_0,\eta,\theta,N}(W_\bullet)\) \emph{strictly},
+meaning there is $\kappa>0$ such that {\rm(W1)} holds with $\varepsilon-2\kappa$ in
+place of $\varepsilon$ on $P$, {\rm(W2)} holds with $t_0+2\kappa$ on $S$, and each
+window point lies $\rho$-distance $>2\kappa$ inside its window $W_{r+j+1}$.  Then there
+is $\delta>0$ such that every $h\in\F(\Q)$ with $D(h,g)<\delta$ also has the witness
+\(\W_{r,\varepsilon,t_0,\eta,\theta,N}(W_\bullet)\), with the \emph{same} \(x,y,P,S\).  In
+particular \(\W_{r,\varepsilon,t_0,\eta,\theta,N}(W_\bullet)\) is open in \((\F(\Q),D)\).
+\end{lemma}
+
+\begin{proof}
+The maps $g_{r+1},\dots,g_{r+N-1}$ are uniformly continuous; let $\omega$ be a common
+modulus of continuity (with respect to $\rho$) for all of them, so $\omega$ is
+nondecreasing, $\omega(0^+)=0$, and $\rho(g_{r+i}(u),g_{r+i}(v))\le\omega(\rho(u,v))$
+for $1\le i\le N-1$.  Fix $x$ (the same argument applies to $y$) and write
+$X_j=G^j_r(x)$ for the $g$-orbit and $X^h_j=H^j_r(x)$ for the $h$-orbit, where
+$H^j_r=h_{r+j}\circ\cdots\circ h_{r+1}$.  Set $e_j=\rho(X^h_j,X_j)$.  Then $e_0=0$ and,
+for $1\le j<N$,
+\[
+e_j=\rho\bigl(h_{r+j}(X^h_{j-1}),g_{r+j}(X_{j-1})\bigr)
+\le\rho\bigl(h_{r+j}(X^h_{j-1}),g_{r+j}(X^h_{j-1})\bigr)
++\rho\bigl(g_{r+j}(X^h_{j-1}),g_{r+j}(X_{j-1})\bigr)
+\le D(h,g)+\omega(e_{j-1}).
+\]
+Writing $\delta_0=D(h,g)$, the recursion $e_j\le\delta_0+\omega(e_{j-1})$, $e_0=0$,
+gives a bound $e_j\le E_j(\delta_0)$ where
+$E_0=0$, $E_j(\delta_0)=\delta_0+\omega(E_{j-1}(\delta_0))$.  Each $E_j$ is a finite
+composition of the continuous nondecreasing maps $s\mapsto\delta_0+\omega(s)$ evaluated
+at the continuous-in-$\delta_0$ starting value, hence $E_j(\delta_0)\to0$ as
+$\delta_0\to0$ for every fixed $j$.  Choose $\delta>0$ so small that
+$E_{N-1}(\delta)<\kappa$; this is possible because there are only finitely many indices
+$j\le N-1$ and each $E_j$ is continuous at $0$ with $E_j(0)=0$.  Then for $D(h,g)<\delta$
+we have $\rho(X^h_j,X_j)<\kappa$ and, identically, $\rho(Y^h_j,Y_j)<\kappa$, for all
+$j<N$.
+
+It remains to transfer (W1)--(W3).  For $j\in P$,
+\[
+\rho(X^h_j,Y^h_j)\le\rho(X^h_j,X_j)+\rho(X_j,Y_j)+\rho(Y_j,Y^h_j)
+<\kappa+(\varepsilon-2\kappa)+\kappa=\varepsilon,
+\]
+so (W1) holds for $h$.  For $j\in S$,
+\[
+\rho(X^h_j,Y^h_j)\ge\rho(X_j,Y_j)-\rho(X_j,X^h_j)-\rho(Y_j,Y^h_j)
+>(t_0+2\kappa)-\kappa-\kappa=t_0,
+\]
+so (W2) holds.  For (W3), each $g$-orbit point lies $\rho$-distance $>2\kappa>\kappa$
+inside its open window, and $\rho(X^h_j,X_j)<\kappa$, so $X^h_j\in W_{r+j+1}$, and
+likewise for $y$.  Thus $h$ has the witness with the same data, proving openness; the
+strict witness for $g$ is itself an instance, so the open set is nonempty when populated
+as in Section~\ref{sec:density}.
+\end{proof}
+
+\begin{remark}[Depth-freeness, made explicit]\label{rem:depth-free}
+The bound $e_j\le\delta_0+\omega(e_{j-1})$ never refers to a coordinate index: the only
+inputs are the metric distances and the moduli $\omega$ of the finitely many maps
+$g_{r+1},\dots,g_{r+N-1}$.  Consequently the stability radius $\delta$ of
+Lemma~\ref{lem:fh-stability} is governed by the \emph{horizon} $N$ and the maps' moduli,
+not by how deep a coordinate the proximity scale $\varepsilon$ or the separation scale
+$t_0$ resolves.  Contrast \cite[Remark~3.6]{companion}: a covering condition reading
+image coordinate $N$ has stability $\Theta(2^{-N})$ in the \emph{depth} $N$, because by
+\eqref{eq:weight} a $D$-perturbation of size $\delta_0$ moves that coordinate by up to
+$2^{N}\delta_0$.  No such factor enters here, because (W1)--(W3) constrain $\rho$ between
+two orbits rather than a single deep coordinate of one image.  The finite-horizon layer
+is therefore stable precisely where the infinite-depth covering layer is not.
+\end{remark}
+
+\begin{definition}[Finite-horizon scrambled packet]\label{def:packet}
+Let \(M\ge2\), let \(W_\bullet=(W_n)\), let \(r\ge0\),
+\(\varepsilon\in(0,1)\), \(0<\eta<1\), and \(N\ge1\).  We say
+\(g\in\F(\Q)\) has the
+\emph{\((M,r,\varepsilon,\eta,N)\)-finite-horizon scrambled packet} if there
+are points \(x^1,\ldots,x^M\in\Q\), a set
+\(P\subseteq\{0,\ldots,N-1\}\), and sets
+\(S_{uv}\subseteq\{0,\ldots,N-1\}\), \(1\le u<v\le M\), such that, with
+\(G^j_r=g_{r+j}\circ\cdots\circ g_{r+1}\),
+\begin{enumerate}
+\item[(P1)] \(\#P\ge(1-\eta)N\);
+\item[(P2)] \(\#S_{uv}\ge(\eta/8)N\) for every \(1\le u<v\le M\);
+\item[(P3)] \(\rho(G^j_r(x^u),G^j_r(x^v))<\varepsilon\) for every
+  \(j\in P\) and every \(u<v\);
+\item[(P4)] \(\rho(G^j_r(x^u),G^j_r(x^v))>t_0\) for every
+  \(j\in S_{uv}\);
+\item[(P5)] \(G^j_r(x^u)\in W_{r+j+1}\) for every \(u\le M\) and every
+  \(0\le j<N\).
+\end{enumerate}
+Write
+\[
+  \mathcal P_{M,r,\varepsilon,\eta,N}(W_\bullet)\subseteq\F(\Q)
+\]
+for the set of systems with such a packet.
+\end{definition}
+
+\begin{lemma}[Finite-packet stability]\label{lem:packet-stability}
+If \(g\) has the packet of Definition~\ref{def:packet} with all inequalities strict
+by a common margin \(\kappa>0\), then there is \(\delta>0\) such that every
+\(h\in\F(\Q)\) with \(D(h,g)<\delta\) has the same packet, with the same
+points \(x^u\) and the same sets \(P,S_{uv}\).  In particular
+\(\mathcal P_{M,r,\varepsilon,\eta,N}(W_\bullet)\) is open.
+\end{lemma}
+
+\begin{proof}
+The proof is the same orbit-tracking argument as
+Lemma~\ref{lem:fh-stability}.  Let \(\omega\) be a common modulus of continuity
+for the finitely many maps \(g_{r+1},\ldots,g_{r+N-1}\).  For each packet point
+\(x^u\), the orbit error under a perturbation \(h\) obeys
+\[
+  e_j^u\le D(h,g)+\omega(e_{j-1}^u),\qquad e_0^u=0 .
+\]
+Choose \(\delta\) so that all errors are \(<\kappa\) for \(j<N\).  Then every
+proximity inequality loses at most \(2\kappa\), every separation inequality
+loses at most \(2\kappa\), and every window visit remains inside its open
+window.  The counting conditions are unchanged.
+\end{proof}
+
+\begin{lemma}[Binary packet codes]\label{lem:packet-code}
+For every \(M\ge2\) there is \(L_M\) such that for every \(L\ge L_M\) one can
+choose words \(c^1,\ldots,c^M\in\{+,-\}^L\) with pairwise Hamming distance at
+least \(L/4\).
+\end{lemma}
+
+\begin{proof}
+Choose \(M\) independent uniform words of length \(L\).  For a fixed pair, the
+Hamming distance has distribution \(\operatorname{Bin}(L,1/2)\).  By the
+Chernoff bound,
+\[
+  \mathbb P\{d_H(c^u,c^v)<L/4\}\le e^{-L/16}.
+\]
+Thus the probability that some pair violates the \(L/4\) bound is at most
+\(\binom M2 e^{-L/16}\), which is \(<1\) once \(L\) is large enough.  Hence a
+choice with the desired distances exists.
+\end{proof}
+
+\section{Density and the residual theorem}\label{sec:density}
+
+We now show each witness set is dense and assemble Theorem~\ref{thm:A}.  The density
+input is Theorem~\ref{thm:dense}; the new ingredient is a block schedule that places
+enough proximity blocks and separation blocks before a common horizon to realize the
+fraction constraints \(\#P\ge(1-\eta)N\), \(\#S\ge\theta N\), with \(0<\theta<\eta<1\).
+
+\paragraph{Block schedule.}
+On the universal schedule of Theorem~\ref{thm:dense} the time axis $\{1,2,\dots\}$ is
+partitioned into consecutive blocks $\mathbf B_1,\mathbf B_2,\dots$, where block
+$\mathbf B_k$ occupies $L_k$ consecutive times and carries a single label.  We use two
+kinds of labelled bricks supplied by the construction of \cite[\S12]{Shmalo2026}:
+
+\begin{itemize}
+\item a \emph{proximity brick} $C$ of diameter $<\gamma$, with the property that any two
+orbits forced through $C$ at a given time are afterwards $\rho$-distance $<\gamma$ apart
+at that time (orbits entering a common small box are close);
+\item a \emph{separation brick} $D$ consisting of two sub-bricks \(D^{+},D^{-}\) separated
+in the first \(q\) low coordinates, where \(q=q(t_0)\) is any integer with
+\(1-2^{-q}>t_0\): the construction of \cite[\S12]{Shmalo2026} supplies, for each such
+\(q\), sub-bricks placed in opposite corners of the first \(q\) coordinate intervals, so
+that \(|u_i-v_i|=1\) for every coordinate \(i\le q\) whenever \(u\in D^{+}\),
+\(v\in D^{-}\).  Then \(\rho(u,v)\ge\sum_{i\le q}2^{-i}|u_i-v_i|=\sum_{i\le q}2^{-i}=
+1-2^{-q}>t_0\), so routing one orbit into \(D^{+}\) and the other into \(D^{-}\) forces
+\(\rho>t_0\) at that time.
+\end{itemize}
+
+Because every label occurs on infinitely many blocks, for any prescribed long horizon we
+may select, by the finite-itinerary realizability of Theorem~\ref{thm:dense}, an
+admissible itinerary that spends a chosen number of times in proximity bricks and a
+chosen number in separation sub-bricks, all inside the prescribed windows.  The only
+arithmetic we need is that the block lengths can be made a vanishing fraction of the
+horizon, so the fractions \(1-\eta\) and \(\theta\) are attainable with room for the
+slack \(\eta-\theta\).
+
+\begin{lemma}[Schedule arithmetic]\label{lem:schedule}
+Let \(0<\theta<\eta<1\).  There is a sequence of horizons \(N\to\infty\) and, for each
+such \(N\), disjoint sets \(P,S\subseteq\{0,\dots,N-1\}\) with
+\(\#P\ge(1-\eta)N\) and \(\#S\ge\theta N\) such that \(P\) is a union of full proximity
+blocks and \(S\) is a union of full separation blocks of the schedule (each block placed
+at times \(<N\)), provided the block lengths satisfy \(L_k/(L_1+\cdots+L_k)\to0\).
+\end{lemma}
+
+\begin{proof}
+Choose the schedule so that proximity and separation blocks alternate in long runs.
+Write \(T_k=L_1+\cdots+L_k\).  Allocate to \(S\) the separation blocks and to \(P\) the
+proximity blocks among \(\mathbf B_1,\dots,\mathbf B_k\), with the run lengths chosen so
+that the total separation length \(\sigma_k\) satisfies
+\(\theta T_k\le \sigma_k\le\theta T_k+L_k\).  Then
+\[
+\#S\ge\theta T_k,\qquad \#P\ge(1-\theta)T_k-L_k.
+\]
+Setting \(N=T_k\), the separation estimate gives \(\#S\ge\theta N\).  Since
+\(\theta<\eta\) and \(L_k/T_k\to0\), for all sufficiently large \(k\) we also have
+\[
+(1-\theta)N-L_k\ge(1-\eta)N.
+\]
+Thus \(\#P\ge(1-\eta)N\) along \(N=T_k\to\infty\).  Disjointness of \(P,S\) is automatic
+since each is a union of distinct whole blocks.
+\end{proof}
+
+\begin{lemma}[Density of the witness set]\label{lem:density}
+For every \(W_\bullet\), every \(r\ge0\), every \(\varepsilon\in(0,1)\), and every
+\(0<\theta<\eta<1\), there are arbitrarily large horizons \(N\) for which
+\(\W_{r,\varepsilon,t_0,\eta,\theta,N}(W_\bullet)\) is dense in \((\F(\Q),D)\).
+\end{lemma}
+
+\begin{proof}
+Fix $f\in\F(\Q)$ and $\eta_0>0$; we find $g$ with $D(f,g)<\eta_0$ in the witness set.
+Apply Theorem~\ref{thm:dense} to the window sequence $W_\bullet$ to obtain
+$g\in\F(\Q)$, $D(f,g)<\eta_0$, carrying an exact $W_\bullet$-windowed horseshoe on the
+universal schedule, with proximity bricks $C$ of diameter $\gamma<\varepsilon$ and
+separation bricks $D=D^{+}\cup D^{-}$ separated in the first $q=q(t_0)$ coordinates
+(Remark~\ref{rem:t0}).  Fix a tail \(r\ge0\).  By Lemma~\ref{lem:schedule} choose a
+horizon \(N\) and disjoint \(P,S\subseteq\{0,\dots,N-1\}\), with
+\(\#P\ge(1-\eta)N\) and \(\#S\ge\theta N\), such that \(P\) is a union of proximity
+blocks and \(S\) is a union of separation blocks at times \(<N\).
+
+Build the two itineraries from time $r+1$.  Let both orbits visit the \emph{same}
+proximity brick at every time $j\in P$, and let one orbit visit $D^{+}$ and the other
+$D^{-}$ at every time $j\in S$; at the remaining times $j<N$ (within blocks that are
+neither wholly in $P$ nor in $S$, of total length $o(N)$) let both orbits follow any
+common admissible brick, which we also count into the windows but into neither $P$ nor
+$S$.  This is an admissible finite itinerary of bricks, all lying in their prescribed
+windows $W_{r+j+1}$.  By the finite-itinerary realizability of Theorem~\ref{thm:dense}
+there exist $x,y\in\Q$ whose $\mathrm{tail}_r$-orbits follow these itineraries exactly
+for $0\le j<N$; in particular $G^j_r(x),G^j_r(y)\in W_{r+j+1}$ for all $j<N$, giving
+(W3).
+
+For $j\in P$ both orbit points lie in the same proximity brick of diameter
+$\gamma<\varepsilon$, so $\rho(G^j_r(x),G^j_r(y))\le\gamma<\varepsilon$, giving (W1).
+For $j\in S$ the points lie in $D^{+}$ and $D^{-}$ respectively.  These sub-bricks are
+built in \cite[\S12]{Shmalo2026} separated in each of the first $q$ coordinates, so
+$|\pi_iG^j_r(x)-\pi_iG^j_r(y)|=1$ for every coordinate index $i\le q$, and therefore
+$\rho(G^j_r(x),G^j_r(y))\ge\sum_{i\le q}2^{-i}=1-2^{-q}>t_0$, giving (W2).  Thus \(g\) has
+the witness \(\W_{r,\varepsilon,t_0,\eta,\theta,N}(W_\bullet)\) and
+$D(f,g)<\eta_0$.  Since $f,\eta_0$ were arbitrary, the witness set is dense.
+\end{proof}
+
+\begin{remark}[Calibrating $t_0$ to the separation bricks]\label{rem:t0}
+The separation scale $t_0$ in Definition~\ref{def:witness} is fixed in advance.  A single
+first-coordinate gap contributes at most $2^{-1}\cdot1=\tfrac12$ to $\rho$, so separating
+in coordinate $1$ alone caps the achievable separation at $\tfrac12$ and only handles
+$t_0<\tfrac12$.  To reach any $t_0\in(0,1)$ we separate in the first $q$ low coordinates:
+fix an integer $q=q(t_0)$ with $1-2^{-q}>t_0$, and use the separation bricks of
+\cite[\S12]{Shmalo2026} whose sub-bricks $D^{+},D^{-}$ sit in opposite corners of the
+first $q$ coordinate intervals (the $\dist_q$ construction there supplies exactly these),
+so that $\rho\ge\sum_{i\le q}2^{-i}=1-2^{-q}>t_0$ at separation times.  Fully separating
+the first $q$ coordinates reaches $1-2^{-q}$, which exceeds any $t_0<1$ once $q$ is large
+enough.  The strict-witness hypothesis of Lemma~\ref{lem:fh-stability} is met because
+$1-2^{-q}>t_0$ by a positive margin and the proximity diameter is $<\varepsilon$ by a
+positive margin, with window points in the interiors of the (open) windows; one fixes
+$\kappa>0$ smaller than all these margins.
+\end{remark}
+
+\begin{lemma}[Density of finite scrambled packets]\label{lem:packet-density}
+For every \(M\ge2\), every \(W_\bullet\), every \(r\ge0\), every
+\(\varepsilon\in(0,1)\), and every \(0<\eta<1\), there are arbitrarily large
+horizons \(N\) for which
+\(\mathcal P_{M,r,\varepsilon,\eta,N}(W_\bullet)\) is dense in \((\F(\Q),D)\).
+\end{lemma}
+
+\begin{proof}
+Fix \(f\in\F(\Q)\) and \(\eta_0>0\).  Apply Theorem~\ref{thm:dense} to get
+\(g\) with \(D(f,g)<\eta_0\) carrying an exact windowed horseshoe.  Choose the
+proximity bricks with diameter \(\gamma<\varepsilon\), and choose separation
+bricks \(D^+,D^-\) calibrated to \(t_0\) as in Remark~\ref{rem:t0}.
+
+Use Lemma~\ref{lem:schedule} with the pair \((\theta,\eta)\) replaced by
+\((\eta/2,\eta)\).  Along arbitrarily large horizons \(N\) this gives disjoint
+sets \(P,S\subseteq\{0,\ldots,N-1\}\) such that \(P\) is a union of proximity
+blocks, \(S\) is a union of separation blocks,
+\[
+  \#P\ge(1-\eta)N,\qquad \#S\ge(\eta/2)N .
+\]
+Taking \(N\) still larger if necessary, assume \(\#S\ge L_M\), where
+\(L_M\) is from Lemma~\ref{lem:packet-code}.  Choose words
+\[
+  c^1,\ldots,c^M\in\{+,-\}^{S}
+\]
+with pairwise Hamming distance at least \(\#S/4\).
+
+Build \(M\) finite itineraries from time \(r+1\).  At every time \(j\in P\), all
+\(M\) itineraries visit the same proximity brick.  At every separation time
+\(j\in S\), the \(u\)-th itinerary visits \(D^+\) or \(D^-\) according to the
+symbol \(c^u_j\).  At all remaining times below \(N\), all itineraries follow
+any common admissible brick.  Finite-itinerary realizability gives points
+\(x^1,\ldots,x^M\) whose tail-\(r\) orbits follow these itineraries.
+
+All orbit points lie in the prescribed windows.  On \(P\), all points lie in
+the same proximity brick, so all pairwise distances are \(<\varepsilon\).  For
+each pair \(u<v\), let
+\[
+  S_{uv}:=\{j\in S:\ c^u_j\ne c^v_j\}.
+\]
+Then \(\#S_{uv}\ge \#S/4\ge(\eta/8)N\), and at every \(j\in S_{uv}\) the two
+orbits lie in opposite separation sub-bricks, hence are \(t_0\)-separated.
+Thus \(g\in\mathcal P_{M,r,\varepsilon,\eta,N}(W_\bullet)\), proving density.
+\end{proof}
+
+\begin{theorem}[Residual finite-horizon windowed DC1 witnesses]\label{thm:residual}
+Let $\{W^a_\bullet\}_{a\ge1}$ be a countable family of sequences of dense open subsets of
+$\Q$ and let \(t_0\in(0,1)\).  Then
+\[
+\Gcal\;=\;\bigcap_{a\ge1}\ \bigcap_{r\ge0}\ \bigcap_{\substack{\varepsilon\in\mathbb Q\\0<\varepsilon<1}}\ \bigcap_{\substack{\eta,\theta\in\mathbb Q\\0<\theta<\eta<1}}\ \bigcap_{N_0\ge1}\ \bigcup_{N\ge N_0}\W_{r,\varepsilon,t_0,\eta,\theta,N}(W^a_\bullet)
+\]
+is comeager in $(\F(\Q),D)$, and every $g\in\Gcal$ satisfies the conclusion of
+Theorem~\ref{thm:A}.
+\end{theorem}
+
+\begin{proof}
+For fixed \(a,r,\varepsilon,\eta,\theta,N_0\) the set
+\[
+U^{a,r,\varepsilon,\eta,\theta}_{N_0}
+=\bigcup_{N\ge N_0}\W_{r,\varepsilon,t_0,\eta,\theta,N}(W^a_\bullet)
+\]
+is open by Lemma~\ref{lem:fh-stability} (a union of open sets) and dense: by
+Lemma~\ref{lem:density} there are arbitrarily large horizons $N$ for which
+\(\W_{r,\varepsilon,t_0,\eta,\theta,N}(W^a_\bullet)\) is dense, so in particular some
+\(N\ge N_0\) gives a dense subset of \(U^{a,r,\varepsilon,\eta,\theta}_{N_0}\), whence
+the union is dense.  The index set of all \(a,r,N_0\in\mathbb N\), rational
+\(\varepsilon\in(0,1)\), and rational \(0<\theta<\eta<1\) is countable, so \(\Gcal\) is
+a countable intersection of open dense sets, hence comeager
+by Lemma~\ref{lem:baire}.  If $g\in\Gcal$ then for every $a,r$, every rational
+\(\varepsilon\in(0,1)\), and all rational \(0<\theta<\eta<1\), for every \(N_0\) there
+is \(N\ge N_0\) with
+\(g\in\W_{r,\varepsilon,t_0,\eta,\theta,N}(W^a_\bullet)\), i.e.\ there are
+$x,y,P,S$ as in Definition~\ref{def:witness} for that $N$; this is exactly the statement
+of Theorem~\ref{thm:A} (for irrational $\varepsilon$ pass to a smaller rational, which
+only strengthens (W1); the tolerances \(\eta,\theta\) are required rational, as stated).
+\end{proof}
+
+\begin{theorem}[Residual finite-horizon scrambled packets]\label{thm:packet}
+Let $\{W^a_\bullet\}_{a\ge1}$ be a countable family of sequences of dense open subsets
+of $\Q$ and let \(t_0\in(0,1)\).  Then
+\[
+\Gcal_{\rm pkt}
+\;=\;
+\bigcap_{a\ge1}\ \bigcap_{r\ge0}\ \bigcap_{M\ge2}\
+\bigcap_{\substack{\varepsilon\in\mathbb Q\\0<\varepsilon<1}}\
+\bigcap_{\substack{\eta\in\mathbb Q\\0<\eta<1}}\
+\bigcap_{N_0\ge1}\ \bigcup_{N\ge N_0}
+\mathcal P_{M,r,\varepsilon,\eta,N}(W^a_\bullet)
+\]
+is comeager in \((\F(\Q),D)\).  Every \(g\in\Gcal_{\rm pkt}\) satisfies the
+packet conclusion stated in Theorem~\ref{thm:packet-intro}.
+\end{theorem}
+
+\begin{proof}
+For fixed \(a,r,M,\varepsilon,\eta,N_0\), the union over \(N\ge N_0\) is open by
+Lemma~\ref{lem:packet-stability} and dense by Lemma~\ref{lem:packet-density}.
+The displayed intersection is countable, hence comeager.  Membership gives
+arbitrarily large horizons with the packet of Definition~\ref{def:packet}.  Passing
+from rational \(\varepsilon,\eta\) to the stated rational parameters is immediate.
+\end{proof}
+
+\begin{remark}[What the witnesses approximate]\label{rem:approx}
+Fix $g\in\Gcal$, a tail $r$ and a scale $\varepsilon$.  Taking
+\(\eta=1/m\) and \(\theta=1/(2m)\) for \(m=2,3,\dots\) yields, for each \(m\),
+arbitrarily long horizons carrying a pair proximal on a \((1-1/m)\)-fraction of times
+and \(t_0\)-separated on at least a \(1/(2m)\)-fraction.  This
+is the finite-horizon, fixed-tolerance silhouette of a DC1 scrambled pair: the upper
+proximity statistic tends to $1$ and the separation statistic stays positive at the
+fixed scale $t_0$, with all visits inside the prescribed windows up to the horizon.  We
+do not assert a single pair valid for all horizons at once; producing such a pair is the
+infinite-horizon problem (Problem~\ref{prob:companion}), which Section~\ref{sec:obstruction}
+shows no finite-horizon certificate can reach.
+\end{remark}
+
+\begin{remark}[Finite packets are still finite-horizon]\label{rem:packet-honest}
+Theorem~\ref{thm:packet} strengthens the positive side from one pair to
+arbitrarily large finite packets.  It is still a finite-horizon statement: the
+packet points and the code across the separation times may depend on \(N\), and
+the theorem does not produce one uncountable scrambled set, or even one finite
+packet, working along all horizons simultaneously.  The binary coding only says
+that the dense horseshoe's two separation sub-bricks can be reused over many
+separation times to make every pair in a finite list disagree often.
+\end{remark}
+
+\section{The obstruction: no finite-horizon certificate suffices}\label{sec:obstruction}
+
+We now prove Theorem~\ref{thm:B}.  We first recall metric mean dimension, since the
+squeeze argument controls it directly and infinite topological entropy is one of its
+consequences in the relevant direction.
+
+For a non-autonomous system $h$ on $\Q$, a tail $\mathrm{tail}_sh$, scale
+$\varepsilon>0$ and horizon $N$, let $\mathrm{sep}_{s,N}(h,\varepsilon)$ be the maximal
+cardinality of a set $E\subseteq\Q$ that is $(s,N,\varepsilon)$-separated in the Bowen
+metric $\rho^h_{s,N}(x,y)=\max_{0\le j<N}\rho(H^j_s(x),H^j_s(y))$, and put
+\[
+\mdim(\mathrm{tail}_sh)
+=\limsup_{\varepsilon\downarrow0}\ \frac{1}{\log(1/\varepsilon)}\
+\limsup_{N\to\infty}\frac1N\log\mathrm{sep}_{s,N}(h,\varepsilon).
+\]
+The inner double limit is the topological entropy $h_{\mathrm{top}}(\mathrm{tail}_sh)$
+at scale $\varepsilon$; if $h_{\mathrm{top}}(\mathrm{tail}_sh)=\infty$ then
+$\frac1N\log\mathrm{sep}_{s,N}\to\infty$ as $\varepsilon\downarrow0$ along the inner
+limit, and one checks $\mdim$ may still be finite or infinite.  We only use the
+following one-directional bound.
+
+\begin{lemma}[Squeeze cap]\label{lem:cap}
+Let $L\ge1$ and let $h\in\F(\Q)$ satisfy $\pi_j h_n(x)=\tfrac12$ for every $n$, every
+$x\in\Q$, and every coordinate $j>L$ --- that is, every image of every $h_n$ lies in the
+$L$-dimensional slice $Z_L=\{z\in\Q:\ z_j=\tfrac12\ \forall j>L\}$.  Then for every tail
+$s\ge0$ and every fixed scale \(0<\varepsilon\le1\),
+\begin{equation}\label{eq:entscale}
+h_{\mathrm{top}}^{(\varepsilon)}(\mathrm{tail}_sh)
+:=\limsup_{N\to\infty}\frac1N\log\mathrm{sep}_{s,N}(h,\varepsilon)
+\ \le\ L\log(4/\varepsilon),
+\end{equation}
+so the entropy at every fixed scale is finite and $\mdim(\mathrm{tail}_sh)\le L<\infty$.
+\end{lemma}
+
+\begin{proof}
+Fix $s\ge0$.  Since every $h_n$ maps into $Z_L$, for every $i\ge1$ and every $x$ the
+point $H^i_s(x)$ lies in $Z_L$; only the base point $H^0_s(x)=x$ can lie outside $Z_L$.
+The slice $Z_L$ is isometric, in the metric $\rho$ restricted to it, to $[0,1]^L$ with the
+weighted metric $d_L(u,v)=\sum_{j\le L}2^{-j}|u_j-v_j|$, because coordinates $j>L$ are
+constant on $Z_L$.  A grid of mesh $\varepsilon/2$ in each of the first $L$ coordinates
+has $(\lceil 2/\varepsilon\rceil)^{L}$ cells and resolves $d_L$ to within
+$\sum_{j\le L}2^{-j}(\varepsilon/2)<\varepsilon/2<\varepsilon$; hence the $\rho$-covering
+number of $Z_L$ at radius $\varepsilon$ satisfies
+\[
+\mathrm{cov}_\rho(Z_L,\varepsilon)\ \le\ (\lceil 2/\varepsilon\rceil)^{L}\ \le\ (4/\varepsilon)^{L}
+\qquad(\varepsilon\le1).
+\]
+
+Now bound the Bowen separation.  An $(s,N,\varepsilon)$-separated set $E$ is, in
+particular, mapped injectively by $x\mapsto(H^0_s(x),H^1_s(x),\dots,H^{N-1}_s(x))$ to a
+set that is $\varepsilon$-separated in the max-$\rho$ metric on the product
+$\Q\times Z_L\times\cdots\times Z_L$ ($N-1$ copies of $Z_L$).  An $\varepsilon$-separated
+set in a product (max metric) has cardinality at most the product of the factors'
+$\varepsilon$-covering numbers, so
+\[
+\mathrm{sep}_{s,N}(h,\varepsilon)\ \le\ \mathrm{cov}_\rho(\Q,\varepsilon)\cdot
+\mathrm{cov}_\rho(Z_L,\varepsilon)^{\,N-1}
+\ \le\ \mathrm{cov}_\rho(\Q,\varepsilon)\cdot(4/\varepsilon)^{L(N-1)} .
+\]
+The factor $\mathrm{cov}_\rho(\Q,\varepsilon)$ is a finite constant depending only on
+$\varepsilon$ (the Hilbert cube is compact), and crucially it is independent of $N$.
+Therefore
+\[
+\frac1N\log\mathrm{sep}_{s,N}(h,\varepsilon)
+\ \le\ \frac{\log\mathrm{cov}_\rho(\Q,\varepsilon)}{N}
++\frac{N-1}{N}\,L\log(4/\varepsilon)\ \xrightarrow[N\to\infty]{}\ L\log(4/\varepsilon).
+\]
+Thus \eqref{eq:entscale} holds, the right-hand side is finite for each fixed
+\(0<\varepsilon\le1\),
+and dividing by $\log(1/\varepsilon)$ and letting $\varepsilon\downarrow0$,
+\[
+\mdim(\mathrm{tail}_sh)
+=\limsup_{\varepsilon\downarrow0}\frac{h^{(\varepsilon)}_{\mathrm{top}}(\mathrm{tail}_sh)}{\log(1/\varepsilon)}
+\ \le\ \limsup_{\varepsilon\downarrow0}\frac{L\log(4/\varepsilon)}{\log(1/\varepsilon)}=L. \qedhere
+\]
+\end{proof}
+
+\begin{remark}[Why deep coordinates are collapsed, not merely confined]\label{rem:collapse}
+It is essential that the squeeze sends deep coordinates to a single value rather than
+into a proper subinterval.  A perturbation confining coordinates $j>L$ to a band
+$[\frac18,\frac78]$ would leave those coordinates free to vary, and the band
+$\prod_{j>L}[\frac18,\frac78]$ is still an infinite-dimensional Hilbert-cube tail: a map
+into it can have arbitrarily large metric mean dimension, so confinement to a band does
+\emph{not} cap $\mdim$.  Collapsing coordinates $j>L$ to the constant $\frac12$ lands
+every image in the genuinely $L$-dimensional slice $Z_L$, of finite box dimension $L$,
+which is what forces \eqref{eq:entscale}.  The $D$-cost is the same to leading order:
+$\sum_{j>L}2^{-j}|y_j-\frac12|\le\frac12 2^{-L}$.
+\end{remark}
+
+\begin{remark}[Which complexity notion the cap contradicts]\label{rem:notion}
+We phrase the obstruction through metric mean dimension, which is unambiguous across
+non-autonomous entropy conventions: \eqref{eq:entscale} gives
+$\mdim(\mathrm{tail}_sh)\le L<\infty$ for every $s$.  The ``infinite topological
+entropy'' tails produced by \cite{Shmalo2026} satisfy the stronger scale law
+$h^{(\varepsilon)}_{\mathrm{top}}(\mathrm{tail}_sg)\ge q\log(1/\varepsilon)-C_q$ for all
+$q$, equivalently $\mdim=\infty$; that is the property the squeeze defeats, since
+\eqref{eq:entscale} caps the same scale-rate by \(L\log(4/\varepsilon)\), which cannot
+exceed $q\log(1/\varepsilon)-C_q$ for all small $\varepsilon$ once $q>L$.  Thus
+Theorem~\ref{thm:obstruction} is proved for the metric-mean-dimension form, and the
+entropy form follows from the same inequality.
+\end{remark}
+
+\begin{theorem}[Finite-horizon certificate obstruction]\label{thm:obstruction}
+Let $V\subseteq\F(\Q)$ be finite-horizon certified: there are $r\ge0$ and $N\ge1$ such
+that whether $g\in V$ depends only on $(g_{r+1},\dots,g_{r+N})$.  Suppose
+\[
+V\subseteq\bigl\{\,g\in\F(\Q):\ \mdim(\mathrm{tail}_sg)=\infty\ \text{for some }s\ge0\,\bigr\}.
+\]
+Then $V=\varnothing$.  The same conclusion holds if $V$ is contained in the class of
+systems some tail of which has infinite topological entropy in the scale-law sense of
+\cite{Shmalo2026} (i.e.\ $h^{(\varepsilon)}_{\mathrm{top}}\ge q\log(1/\varepsilon)-C_q$
+for all $q$).
+\end{theorem}
+
+\begin{proof}
+Suppose $V\ne\varnothing$ and fix $g\in V$.  Since $V$ is open and finite-horizon
+certified by the window $(g_{r+1},\dots,g_{r+N})$, there is $\delta>0$ such that every
+$h\in\F(\Q)$ with $h_{r+i}=g_{r+i}$ for $1\le i\le N$ and $D(h,g)<\delta$ lies in $V$;
+indeed, membership ignores all coordinates outside the window, so any $h$ agreeing with
+$g$ on the window is in $V$ regardless of its other coordinates, provided it is within
+$D$-distance $\delta$ of $g$ where $\delta$ is the openness radius (which only constrains
+the windowed coordinates, on which $h$ equals $g$, so any such $h$ qualifies).
+
+Choose $L\ge1$ with $2^{-L}<\delta$.  Define the coordinate squeeze $\Phi:\Q\to\Q$,
+collapsing every coordinate past depth $L$ to the constant $\tfrac12$:
+\[
+\Phi(y)_j=
+\begin{cases}
+y_j, & j\le L,\\[2pt]
+\tfrac12, & j>L.
+\end{cases}
+\]
+$\Phi$ is continuous, $\Phi(\Q)=Z_L:=\{z\in\Q:\ z_j=\tfrac12\ \forall j>L\}$, and
+\[
+\rho(\Phi(y),y)=\sum_{j>L}2^{-j}\Bigl|y_j-\tfrac12\Bigr|
+\le\sum_{j>L}2^{-j}\cdot\tfrac12=\tfrac12\,2^{-L}<\delta .
+\]
+Define $h\in\F(\Q)$ by leaving the certifying window untouched and squeezing every other
+map:
+\[
+h_n=\begin{cases}
+g_n, & n\in\{r+1,\dots,r+N\},\\
+\Phi\circ g_n, & \text{otherwise.}
+\end{cases}
+\]
+Then $d_\infty(h_n,g_n)=0$ on the window and
+$d_\infty(h_n,g_n)=\sup_x\rho(\Phi(g_n(x)),g_n(x))<\delta$ off the window, so
+$D(h,g)<\delta$, and $h$ agrees with $g$ on the certifying window; hence $h\in V$.
+
+Now examine an arbitrary tail of $h$.  Fix $s\ge0$ and consider the orbit
+$H^i_s=h_{s+i}\circ\cdots\circ h_{s+1}$.  For $i\ge1$ the outermost map is $h_{s+i}$,
+which is either a squeezed map $\Phi\circ g_{s+i}$ --- in which case $H^i_s(x)\in Z_L$
+for every $x$ --- or, if $s+i\in\{r+1,\dots,r+N\}$, the untouched map $g_{s+i}$.  The
+window is a set of at most $N$ times, so the second case occurs for at most $N$ values of
+$i\ge1$; call this exceptional set $\mathcal E\subseteq\{1,\dots\}$, $\#\mathcal E\le N$.
+For all $i\ge1$ with $i\notin\mathcal E$ we have $H^i_s(x)\in Z_L$ for every $x$.
+
+Bound the Bowen separation exactly as in Lemma~\ref{lem:cap}, isolating the finitely
+many exceptional time-slices.  An $(s,N',\varepsilon)$-separated set injects, via
+$x\mapsto(H^i_s(x))_{0\le i<N'}$, into a set that is $\varepsilon$-separated in the
+max-$\rho$ metric on $\prod_{0\le i<N'}Y_i$, where $Y_i=Z_L$ for $i\ge1$, $i\notin\mathcal E$,
+and $Y_i=\Q$ for $i=0$ or $i\in\mathcal E$.  Hence
+\[
+\mathrm{sep}_{s,N'}(h,\varepsilon)\ \le\ \mathrm{cov}_\rho(\Q,\varepsilon)^{\,1+\#\mathcal E}\cdot
+\mathrm{cov}_\rho(Z_L,\varepsilon)^{\,N'-1-\#\mathcal E}
+\ \le\ \mathrm{cov}_\rho(\Q,\varepsilon)^{\,1+N}\cdot(4/\varepsilon)^{L N'} .
+\]
+The first factor is independent of $N'$ (the window length $N$ is fixed), so dividing by
+$N'$ and letting $N'\to\infty$ gives, as in \eqref{eq:entscale},
+\[
+h^{(\varepsilon)}_{\mathrm{top}}(\mathrm{tail}_sh)\ \le\ L\log(4/\varepsilon),
+\qquad
+\mdim(\mathrm{tail}_sh)\ \le\ L<\infty,
+\]
+for every $s\ge0$.  This contradicts
+$h\in V\subseteq\{\,\mdim(\mathrm{tail}_sg)=\infty\ \text{for some }s\,\}$.  Hence
+$V=\varnothing$.
+
+For the scale-law entropy form, an $h\in V$ would need some tail with
+$h^{(\varepsilon)}_{\mathrm{top}}\ge q\log(1/\varepsilon)-C_q$ for all $q$; but the bound
+$h^{(\varepsilon)}_{\mathrm{top}}(\mathrm{tail}_sh)\le L\log(4/\varepsilon)$ fails this
+for $q>L$ at all small $\varepsilon$.  So $V=\varnothing$ in that case as well.
+\end{proof}
+
+\begin{remark}[A horizon obstruction, complementary to the depth obstruction]\label{rem:horizon}
+The squeeze in Theorem~\ref{thm:obstruction} acts on all maps \emph{outside a fixed
+window of times}, whereas the empty-interior squeeze of \cite[Theorem~6.2]{companion}
+acts on all coordinates \emph{past a fixed depth} of a single map.  The first defeats
+finite-\emph{horizon} certificates of infinite-horizon complexity; the second defeats
+open sets requiring infinite-\emph{depth} covering.  Both rest on the same elementary
+fact --- a coordinate (or time) tail of total $D$-weight $<\delta$ can be overwritten
+without leaving a $\delta$-ball --- but they constrain orthogonal method classes.  Read
+together: no open set can certify infinite depth (depth obstruction), and no
+finite-horizon-certified open set can certify an infinite-\(\mdim\) tail or a scale-law
+entropy tail (horizon obstruction).
+\end{remark}
+
+\begin{corollary}[Banach--Mazur form]\label{cor:bm}
+Let $V$ be finite-horizon certified and contained in one of the complexity classes covered
+by Theorem~\ref{thm:obstruction}.  Then in the Banach--Mazur game on
+$(\F(\Q),D)$, Player~II (the player choosing the even moves) can avoid $V$ entirely:
+after any move of Player~I, Player~II plays a ball produced by the squeeze of
+Theorem~\ref{thm:obstruction}, all of whose points lie outside $V$.  Equivalently,
+$V$ is not residual; being also open, $V$ is empty.  Consequently no countable
+union of finite-horizon-certified open sets, each entailing an infinite-\(\mdim\) tail or
+one of the scale-law entropy tails of Theorem~\ref{thm:obstruction}, can be dense, and the
+Baire strategy through such a family cannot prove Problem~\ref{prob:companion}.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:obstruction}, $V=\varnothing$, so every $D$-ball is disjoint from
+$V$; in particular Player~II has the trivial avoidance strategy, and the open empty set
+is vacuously non-residual.  The final clause follows because a countable union of empty
+sets is empty, hence not dense, so its members cannot serve as the dense-open building
+blocks of a Baire argument.
+\end{proof}
+
+\subsection*{The squeeze also defeats semifactors and confines scrambling}
+
+The cap of Lemma~\ref{lem:cap} is an entropy statement, and Theorem~\ref{thm:obstruction}
+phrases the obstruction through $\mdim$ and the scale-law entropy.  The same squeezed
+system $h$ fails a further growth-type conclusion of the dense theorem outright, with no
+horizon hypothesis: the all-tail symbolic semifactor onto an unbounded-alphabet shift.
+This sharpens what the method defeats and, by contrast, isolates the one conclusion it
+leaves standing.
+
+We use the following operational notion, which is the only feature of a symbolic
+semifactor onto a shift we need.  Say a tail $\mathrm{tail}_sh$ admits a \emph{compact
+symbolic semifactor with branch separation $\varepsilon_*>0$ and block alphabets
+$(M_n)_{n\ge1}$} if for every $n$ the system carries an $(s,n,\varepsilon_*)$-separated
+set of cardinality at least $\prod_{i\le n}M_i$.  This holds whenever $\mathrm{tail}_sh$
+factors onto a one-sided shift whose length-$n$ admissible words number
+$\prod_{i\le n}M_i$ and whose distinct length-$n$ cylinders pull back to orbit segments
+lying in branch boxes pairwise more than $\varepsilon_*$ apart in the depth-$n$ Bowen
+metric $\rho^h_{s,n}$: the factor map sends each length-$n$ Bowen ball into a single
+cylinder, so distinct admissible words are realized by $\varepsilon_*$-separated segments.
+The full variable-alphabet shift of Theorem~\ref{thm:dense}, with $M_n\to\infty$, is the
+case of interest.
+
+\begin{lemma}[Semifactor obstruction]\label{lem:semifactor}
+Let $L\ge1$ and let $h\in\F(\Q)$ have every image of every $h_n$ in the slice
+$Z_L=\{z\in\Q:\ z_j=\tfrac12\ \forall j>L\}$.  Then no tail $\mathrm{tail}_sh$ admits a
+compact symbolic semifactor with any fixed branch separation $\varepsilon_*>0$ and block
+alphabets $M_n\to\infty$; in particular no tail factors onto the full variable-alphabet
+shift of Theorem~\ref{thm:dense}.
+\end{lemma}
+
+\begin{proof}
+Suppose some tail $\mathrm{tail}_sh$ did, with separation $\varepsilon_*$ and alphabets
+$M_n\to\infty$.  By definition the system carries, for each $n$, an
+$(s,n,\varepsilon_*)$-separated set of cardinality at least $\prod_{i\le n}M_i$, so
+\[
+\mathrm{sep}_{s,n}(h,\varepsilon_*)\ \ge\ \prod_{i\le n}M_i,
+\qquad
+\frac{1}{n}\log\mathrm{sep}_{s,n}(h,\varepsilon_*)\ \ge\
+\frac{1}{n}\sum_{i\le n}\log M_i .
+\]
+The right-hand side is the Cesàro mean of the sequence $(\log M_i)_i$, which tends to
+$\infty$ because $M_i\to\infty$; hence
+$h^{(\varepsilon_*)}_{\mathrm{top}}(\mathrm{tail}_sh)
+=\limsup_{N\to\infty}\frac1N\log\mathrm{sep}_{s,N}(h,\varepsilon_*)=\infty$.
+But Lemma~\ref{lem:cap} applies to $h$ verbatim and gives
+$h^{(\varepsilon_*)}_{\mathrm{top}}(\mathrm{tail}_sh)\le L\log(4/\varepsilon_*)<\infty$
+at the fixed scale $\varepsilon_*$, a contradiction.  Hence no such semifactor exists.
+The variable-alphabet shift of Theorem~\ref{thm:dense} has $M_n\to\infty$ and fixed branch
+separation, so it is excluded.
+\end{proof}
+
+In the obstruction proof of Theorem~\ref{thm:obstruction} the squeezed map agrees with
+$g$ on the certifying window and squeezes elsewhere, so only finitely many tail
+time-slices escape $Z_L$.  The finite-exception bookkeeping that turned
+\eqref{eq:entscale} into the in-proof cap applies here too: adjoining the fixed finite set
+$\mathcal E$ of unconstrained Bowen coordinates multiplies $\mathrm{sep}_{s,n}$ by a
+constant $\le\mathrm{cov}_\rho(\Q,\varepsilon_*)^{1+\#\mathcal E}$, which changes
+$\frac1n\log\mathrm{sep}_{s,n}$ by $o(1)$.  So Lemma~\ref{lem:semifactor} holds for that
+$h$ as well, and the squeezed system carries no unbounded-alphabet semifactor on any tail.
+
+\begin{proposition}[Finite-dimensional confinement of scrambling]\label{prop:confine}
+Let $L\ge1$ and let $h\in\F(\Q)$ have every image of every $h_n$ in $Z_L$.  Fix a tail
+$s\ge0$.  For every $x\in\Q$ the orbit $H^i_s(x)$ lies in $Z_L$ for all $i\ge1$;
+consequently every DC1-scrambled set of $\mathrm{tail}_sh$ has its entire post-initial
+orbit data inside the $L$-dimensional slice $Z_L$, and the proximal/distal distributions
+that define scrambling are computed from orbits in $Z_L$.
+\end{proposition}
+
+\begin{proof}
+For $i\ge1$ the outermost map of $H^i_s=h_{s+i}\circ\cdots\circ h_{s+1}$ is $h_{s+i}$,
+whose image lies in $Z_L$; hence $H^i_s(x)\in Z_L$ for every $x$ and every $i\ge1$.  Only
+the base point $H^0_s(x)=x$ can lie outside $Z_L$.  The distributional functions
+$F_{xy}$, $F^*_{xy}$ that define a DC1-scrambled pair are limits of empirical
+distributions of the distances $\rho(H^j_s(x),H^j_s(y))$ over $0\le j<N$ as
+$N\to\infty$; the single term $j=0$ contributes weight $1/N\to0$, so these distributions
+are determined by the $Z_L$-valued part of the orbits.  Thus the scrambling lives in
+$Z_L$.
+\end{proof}
+
+\begin{remark}[The squeeze does \emph{not} kill a bare DC1 set]\label{rem:dc1-honest}
+Proposition~\ref{prop:confine} is a confinement statement, not a destruction statement,
+and it is worth being exact about the difference.  Collapsing coordinates $j>L$ leaves the
+first $L$ coordinates --- in particular coordinate $1$ --- untouched, and the
+$t_0$-separation that drives the horseshoe is read in the low coordinates $i\le q\le L$
+(Remark~\ref{rem:t0}); the squeeze never touches them.  Uncountable DC1 scrambling and
+continuum cardinality are insensitive to ambient dimension: the one-dimensional slice
+$Z_1\cong[0,1]$ already carries perfect (hence continuum-sized) DC1-scrambled sets for
+suitable interval maps, and confining a scrambled set to $Z_L$ neither reduces its
+cardinality nor disturbs its proximal/distal statistics.  So the coordinate squeeze, which
+caps entropy and kills the unbounded-alphabet semifactor, does \emph{not} by itself defeat
+the existence of an uncountable DC1-scrambled set: that conclusion is dimension-stable and
+survives the collapse.  What is proved is only that any such set is finite-dimensionally
+confined after one step.
+\end{remark}
+
+\begin{corollary}[The conjunction fails on the growth conjuncts only]\label{cor:bundle}
+Let $V\subseteq\F(\Q)$ be finite-horizon certified and contained in the class of systems
+some tail of which simultaneously (a) carries an uncountable windowed DC1-scrambled set,
+(b) has infinite topological entropy in the scale-law sense, and (c) admits a compact
+symbolic semifactor onto the full variable-alphabet shift.  Then $V=\varnothing$.  The
+emptiness is forced by conjuncts \emph{(b)} and \emph{(c)} alone: the squeeze of
+Theorem~\ref{thm:obstruction} produces, in every $D$-ball meeting the certifying window, a
+system whose tails violate both (b) (by Lemma~\ref{lem:cap}) and (c) (by
+Lemma~\ref{lem:semifactor}), while leaving conjunct (a) attainable in the confined slice
+$Z_L$ (Proposition~\ref{prop:confine}, Remark~\ref{rem:dc1-honest}).
+\end{corollary}
+
+\begin{proof}
+If $V\ne\varnothing$, pick $g\in V$ and form the squeezed $h$ of
+Theorem~\ref{thm:obstruction}: $h$ agrees with $g$ on the certifying window,
+$D(h,g)<\delta$, so $h\in V$, yet every tail of $h$ has
+$h^{(\varepsilon)}_{\mathrm{top}}\le L\log(4/\varepsilon)$ (Lemma~\ref{lem:cap} with the
+finite-exception bookkeeping of the theorem) and admits no $M_n\to\infty$ semifactor
+(Lemma~\ref{lem:semifactor}, likewise).  Either failure contradicts $h\in V$, since
+membership requires (b) and (c) of some tail.  Hence $V=\varnothing$.  That the
+obstruction does not pass through (a) is Remark~\ref{rem:dc1-honest}: the same $h$ can
+still carry an uncountable scrambled set, now confined to $Z_L$.
+\end{proof}
+
+\section{The ledger and what remains open}\label{sec:open}
+
+We restate the open problem of \cite{companion} (which itself isolates
+\cite[\S14]{Shmalo2026}) and record precisely what the present results add.
+
+\begin{problem}[{Residuality of the infinite-horizon conclusions; \cite[Problem~8.1]{companion}}]\label{prob:companion}
+Let $W_\bullet$ be a sequence of dense open subsets of $\Q$ and let
+$\mathcal C(W_\bullet)$ be the class of $g\in\F(\Q)$ such that for every $r\ge0$ the tail
+$\mathrm{tail}_rg$ admits a compact symbolic semifactor onto a full variable-alphabet
+shift, a continuum-sized DC1-scrambled set visiting $W_{r+j+1}$ at tail time $j$,
+infinite topological entropy, and infinite metric mean dimension.  By
+\cite[Theorem~3.6]{Shmalo2026}, $\mathcal C(W_\bullet)$ is dense.  Is
+$\mathcal C(W_\bullet)$ residual?
+\end{problem}
+
+\paragraph{Ledger.}
+\begin{itemize}
+\item[(i)] \emph{Positive, this paper.}  The finite-horizon windowed DC1 witnesses are
+residual: Theorem~\ref{thm:residual} produces a comeager $\Gcal$ on which, at every
+tail, every rational scale, every rational \(0<\theta<\eta<1\) and the fixed separation scale
+\(t_0\), arbitrarily long witness horizons exist.  This is the finite-horizon shadow of the DC1
+half of $\mathcal C(W_\bullet)$, with $\eta\downarrow0$ recovering the proximity
+statistic and $t_0$ the separation statistic.  Theorem~\ref{thm:packet} strengthens
+this from one pair to arbitrary finite packets: for every \(M\), every tail and every
+proximal scale there are arbitrarily long horizons with \(M\) windowed orbit segments
+which are mutually proximal on a common \(1-\eta\) fraction and whose every pair is
+\(t_0\)-separated on at least an \(\eta/8\) fraction.
+\item[(ii)] \emph{Negative, growth-type conclusions.}  No finite-horizon certificate
+forces the \emph{growth-type} infinite-horizon conclusions.  Theorem~\ref{thm:obstruction}
+shows every finite-horizon-certified open set contained in the infinite-\(\mdim\) class,
+or in the scale-law entropy class from \cite{Shmalo2026}, is empty, and the same squeeze
+also kills the unbounded-alphabet semifactor (Lemma~\ref{lem:semifactor}); the bundled
+Corollary~\ref{cor:bundle} records that the conjunction of entropy, semifactor and DC1
+fails on its entropy and semifactor conjuncts alone, while Corollary~\ref{cor:bm} renders
+the natural Baire strategy through such certificates impossible.
+\item[(ii$'$)] \emph{What the squeeze does \emph{not} defeat.}  The method does not defeat
+the bare existence of an uncountable DC1-scrambled set.  By
+Proposition~\ref{prop:confine} the squeeze only confines scrambling to a finite-dimensional
+slice $Z_L$, and DC1 scrambling with continuum cardinality survives such confinement
+(Remark~\ref{rem:dc1-honest}).  So the coordinate-collapse certificate obstruction
+separates cleanly: it defeats the entropy/mean-dimension/semifactor (growth-rate)
+conclusions, but leaves the DC1 cardinality conclusion open to finite-horizon methods, and
+a different obstruction --- or a positive construction --- would be needed for that
+conjunct.
+\item[(iii)] \emph{Still open.}  Whether $\mathcal C(W_\bullet)$ is residual remains
+open.  Theorem~\ref{thm:obstruction} does \emph{not} prove $\mathcal C(W_\bullet)$
+non-comeager: a comeager set need not be a countable intersection of finite-horizon
+certified open sets, and an infinite-horizon property may be comeager while admitting no
+finite-horizon certificate at all (it would be witnessed by an unbounded, system-dependent
+window).  We make no claim either way.
+\end{itemize}
+
+\paragraph{Where a positive proof must live.}
+Combining (ii) with the depth obstruction of \cite[Theorem~6.2]{companion}: a residual
+proof of Problem~\ref{prob:companion} cannot use open building blocks that certify
+either infinite depth or an infinite-\(\mdim\)/scale-law entropy tail from a bounded
+window of times.  The
+finite-horizon witnesses of Theorem~\ref{thm:residual} are exactly the strongest
+windowed objects that \emph{are} residual, and Theorem~\ref{thm:packet} shows that this
+includes arbitrary finite packet cardinalities.  Upgrading these finite packets to a
+single infinite-horizon scrambled set requires diagonalizing across horizons in a
+system-dependent way, reading unboundedly many maps to pin one system --- precisely the
+``replacement for the backward induction consuming only finite-depth information per
+step'' requested in \cite{companion}, now seen to also need to consume unboundedly many
+\emph{times}.  We formulate the sharpened target.
+
+\begin{problem}[Finite-horizon fusion]\label{prob:fusion}
+Does there exist a comeager set on which a \emph{single} pair $(x,y)$ (depending on the
+system) is DC1-scrambled at every tail with prescribed window visits at all times ---
+equivalently, on which the finite-horizon witnesses of Theorem~\ref{thm:residual} can be
+chosen coherently in $N$ so as to glue into an infinite-horizon scrambled pair?  By
+Theorem~\ref{thm:obstruction} any such gluing cannot be certified by a bounded window of
+times; it must be a genuinely non-finite-horizon (system-dependent, unbounded-window)
+construction.
+\end{problem}
+
+A positive answer to Problem~\ref{prob:fusion} for the DC1 component, together with the
+all-tail semifactor of Theorem~\ref{thm:dense}, would settle the DC1 half of
+Problem~\ref{prob:companion}; the entropy and metric-mean-dimension halves would still
+require their own non-finite-horizon arguments, by Theorem~\ref{thm:obstruction}.  We
+intend to return to this elsewhere.
+
+\subsection*{Acknowledgments}
+The research presented in this paper was supported by the European Research Council
+(ERC) under the European Union's Horizon Europe research and innovation programme
+(grant agreement No.\ 101041711), by the Israel Science Foundation (grant number
+2258/19) and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\subsection*{Declaration on generative AI}
+During the preparation of this work the author used generative AI tools to accelerate
+drafting and revision.  All mathematical claims, proofs, and bibliographic information
+were subsequently reviewed and edited by the author, who takes full responsibility for
+the content of the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{companion}
+Y.~Shmalo,
+\emph{Margin-stable schemes and the Baire category of full complexity in
+non-autonomous dynamics on the Hilbert cube}, companion manuscript, 2026.
+
+\bibitem{Shmalo2026}
+Y.~Shmalo,
+\emph{Strict cubical horseshoes and all-tail full complexity in non-autonomous
+dynamics}, manuscript, submitted, 2026.
+
+\bibitem{Miranda}
+C.~Miranda,
+\emph{Un'osservazione su un teorema di Brouwer},
+Boll.\ Un.\ Mat.\ Ital.\ (2) \textbf{3} (1940--41), 5--7.
+
+\bibitem{Kulpa}
+W.~Kulpa,
+\emph{The Poincar\'e--Miranda theorem},
+Amer.\ Math.\ Monthly \textbf{104} (1997), no.~6, 545--550.
+
+\bibitem{KolyadaSnoha}
+S.~Kolyada and L.~Snoha,
+\emph{Topological entropy of nonautonomous dynamical systems},
+Random Comput.\ Dynam.\ \textbf{4} (1996), 205--233.
+
+\bibitem{BalibreaProblems}
+F.~Balibrea,
+\emph{On problems of topological dynamics in non-autonomous discrete systems},
+Appl.\ Math.\ Nonlinear Sci.\ \textbf{1} (2016), no.~2, 391--404.
+
+\bibitem{Oxtoby}
+J.~C.~Oxtoby,
+\emph{The Banach--Mazur game and Banach category theorem},
+in: Contributions to the Theory of Games, Vol.~III,
+Ann.\ of Math.\ Stud.\ \textbf{39}, Princeton Univ.\ Press, 1957, 159--163.
+
+\bibitem{LindenstraussWeiss}
+E.~Lindenstrauss and B.~Weiss,
+\emph{Mean topological dimension},
+Israel J.\ Math.\ \textbf{115} (2000), 1--24.
+
+\bibitem{SchweizerSmital}
+B.~Schweizer and J.~Sm\'\i tal,
+\emph{Measures of chaos and a spectral decomposition of dynamical systems on the
+interval},
+Trans.\ Amer.\ Math.\ Soc.\ \textbf{344} (1994), no.~2, 737--754.
+
+\end{thebibliography}
+
+\end{document}

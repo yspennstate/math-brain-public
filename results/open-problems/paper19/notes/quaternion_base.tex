@@ -1,0 +1,97 @@
+% Historical sketch for the quaternion Gaussian base case:
+% M_m = c_gamma^{-m/4 + o(m)} over H.
+% The compiled, guardrailed proof is Theorem thm:quaternion-gaussian-base in
+% parts/ensembles.tex.  That proof cites Zhang for quaternion matrix background
+% and keeps quaternion spherical-radial transfer and fixed-excess quaternion laws
+% separate.
+% Verified constant: the Beta(2,2(D-1)) overlap moment
+% E[(1-|rho|^2)^{-2}|D] = (2D-1)(2D-2)/((2D-3)(2D-4)) = 1+2/D+O(D^{-2}).
+
+\begin{theorem}[Quaternion Gaussian extremal hard edge]\label{thm:quaternion-gaussian-base}
+Let $A_m\in\HH^{N_m\times m}$ have i.i.d.\ standard quaternion Gaussian entries
+(each entry $q=q_0+q_1\mathbf i+q_2\mathbf j+q_3\mathbf k$ with $q_0,\dots,q_3$
+i.i.d.\ $N(0,1/4)$, so $\EE|q|^2=1$), and let $N_m/m\to\gamma>1$.  Writing
+$M_m=\min_{|T|=m}\smin(A_{m,T})$ for the smallest least singular value over square
+quaternionic row submatrices (singular values defined via the realification
+$\HH^{m\times m}\hookrightarrow\R^{4m\times 4m}$, equivalently as the right
+$\HH$-linear operator norm of the inverse), one has
+\[
+  \frac1m\log M_m\xrightarrow{\PP}-\frac{h(\gamma)}{4},
+  \qquad M_m=c_\gamma^{-m/4+o_\PP(m)} .
+\]
+The compiled manuscript promotes only this square iid quaternion Gaussian base.
+\end{theorem}
+
+\begin{proof}
+The standard quaternion Gaussian law on $\HH^m$ is invariant under the compact
+symplectic group $\mathrm{Sp}(m)$ (right multiplication by $\HH$-unitary matrices)
+and has i.i.d.\ rows; in particular the rows are rotationally invariant.  The proof
+of the source theorem \cite{ShmaloExtremal2026} uses Gaussianity only through three
+ingredients, each of which we supply over $\HH$.
+
+\emph{1. One-matrix tail (exponent $d_\HH=4$).}  Realification preserves the
+least singular value, with quaternionic singular values repeated four times.
+The quaternionic negative second-moment identity gives that
+$\smin(A_{m,T})\le t$ forces $\dist(a_i,\spn_\HH\{a_j:j\ne i\})\le\sqrt m\,t$ for
+some $i$, and conditionally on the other rows this distance equals
+$|\langle a_i,u\rangle|$ for an $\HH$-unit normal $u$.  The marginal
+$\langle a_1,u\rangle$ is a standard quaternion Gaussian scalar, for which
+$|\langle a_1,u\rangle|^2=\tfrac14\chi^2_4$, so
+$\PP\{|\langle a_1,u\rangle|\le t\}\sim 2\,t^4$ as $t\to0$; a union bound gives
+$\PP\{\smin(A_{m,T})\le t\}\le C\,m^{3}t^{4}$.  With the binomial entropy
+$\binom{N_m}{m}=e^{h(\gamma)m+o(m)}$ this yields the lower side
+$\tfrac1m\log M_m\ge -h(\gamma)/4-\varepsilon$ w.h.p.
+
+\emph{2. Haar normals.}  Fix $x=a_{N_m}$; for an $(m-1)$-set $S$ let $u_S$ be an
+$\HH$-unit normal to $\spn_\HH\{a_i:i\in S\}$, and $Z_t=\sum_S\mathbf
+1\{|\langle x,u_S\rangle|\le t\}$.  For $S\ne T$ with $|S\cap T|=m-D$, conditional on
+the shared rows, the disjoint rows project to i.i.d.\ $\mathrm{Sp}$-invariant
+vectors in $E^\perp=(\spn_\HH\{a_i:i\in S\cap T\})^\perp\cong\HH^D$, so $u_S,u_T$ are
+independent Haar on the unit sphere of $\HH^D$ (this is the normals lemma of
+\cite{ShmaloExtremal2026}, which uses only rotational invariance).
+
+\emph{3. Two-ball estimate and overlap moment.}  Conditional on $u_S,u_T$ with
+$\HH$-overlap $\varrho=\langle u_S,u_T\rangle$, the pair
+$(\langle x,u_S\rangle,\langle x,u_T\rangle)$ is the image of the $\mathrm{Sp}$-invariant
+projection $P_{\spn\{u_S,u_T\}}x$ under coordinates with $\HH$-Gram determinant
+$1-|\varrho|^2$, so (since the quaternion Gaussian projection to a quaternionic line
+is again quaternion Gaussian) the joint density at the origin carries the factor
+$(1-|\varrho|^2)^{-d_\HH/2}=(1-|\varrho|^2)^{-2}$, giving for $D\ge3$
+\[
+  q_D(t):=\PP\{|\langle x,u_S\rangle|\le t,\ |\langle x,u_T\rangle|\le t\}
+  \le (1+o(1))\,p(t)^2\,(1-|\varrho|^2)^{-2},\qquad q_2(t)\le p(t).
+\]
+By step~2, $|\varrho|^2$ is the squared modulus of the first coordinate of a Haar
+unit vector in $\HH^D\cong\R^{4D}$, hence $|\varrho|^2\sim\operatorname{Beta}(2,2(D-1))$,
+and a direct computation gives
+\[
+  \EE\big[(1-|\varrho|^2)^{-2}\,\big|\,D\big]
+  =\frac{B(2(D-1)-2,\,2)}{B(2(D-1),\,2)}
+  =\frac{(2D-1)(2D-2)}{(2D-3)(2D-4)}
+  =1+\frac{2}{D}+O(D^{-2}).
+\]
+(Here $1-|\varrho|^2\sim\operatorname{Beta}(2(D-1),2)$ and $\EE X^{-2}=
+\tfrac{(\alpha+\beta-1)(\alpha+\beta-2)}{(\alpha-1)(\alpha-2)}$ for
+$X\sim\operatorname{Beta}(\alpha,\beta)$, with $\alpha=2(D-1),\ \beta=2$.)  The
+compiled proof writes the overlap law and the divergent $D=2$ split explicitly.
+Therefore, for $t=e^{-sm}$ with
+$s<h(\gamma)/4$,
+\[
+  \frac{\EE Z_t^2}{(\EE Z_t)^2}=\frac1{\EE Z_t}
+  +\EE\!\Big[\tfrac{q_D(t)}{p(t)^2}\Big]
+  \le \frac1{\EE Z_t}+1+\frac{C}{m}+o(1)\to 1,
+\]
+so $\PP\{Z_t=0\}\to0$, giving the upper side $\tfrac1m\log M_m\le-h(\gamma)/4+\varepsilon$
+w.h.p.  Combining the two sides gives the stated convergence and rate.
+\end{proof}
+
+\begin{remark}
+The theorem above is only the square iid quaternion Gaussian base.  The current
+compiled spherical-radial transfer theorem is stated for $\R$ and $\C$, and the
+fixed-excess quaternion exact law is not proved here.  The constant
+$\EE[(1-|\varrho|^2)^{-2}\mid D]=1+2/D+O(D^{-2})$ is the $d_\HH=4$ instance of the
+division-algebra pattern $1+d_\F/(2D)+\cdots$ (real $1+1/(2D)$ via
+$\operatorname{Beta}(\tfrac12,\tfrac{D-1}2)$; complex $1+1/D$ via
+$\operatorname{Beta}(1,D-1)$; quaternion $1+2/D$ via
+$\operatorname{Beta}(2,2(D-1))$).
+\end{remark}

@@ -1,0 +1,15 @@
+{
+ "frozen_utc": "2026-10-11T23:08Z",
+ "run_id": "20261011T225832Z-claude-B12-erasure-ledger-depth",
+ "purpose": "lead replay of A056/A057/A058 finite claims; validation of lead lemmas L1 (monotone erasure), L2 (deficit log bank), R1 (formula-level bank reuse is depth-lossy)",
+ "arithmetic": "identities exact as prime-log vectors; inequalities on exact cases evaluated at 40 digits with margin 1e-30*(1+sum|c_p ln p|); numpy float64 sweeps are EVIDENCE only",
+ "domains": {
+  "V1": "A056 witness AND2(maj3(x,a,b),z), x=+1, AND(u,v)=+1 iff u=v=+1",
+  "V2": "A057 erasure split B_i(F)=q B_i(h_j)+L_j(alpha_i^2): all (g,h) with g balanced on m in {2,3} bits and h balanced on nh in {2,3} bits, the 4900 (m=3,nh=3) pairs subsampled to 600 by random.Random(12); child 0 composite, other children fresh variables; every coordinate; J:=D_i(F)-qD_i(h)-L checked in [0,2q alpha^2] nats; L1 checked on the same exact cases",
+  "V3": "L1 sweep: all balanced g on 3 and 4 bits, every coordinate j, 65-point grid in x: monotone, L(x)<=B_j(g), L(x)<=xB_j(g)+qx ln(1/x), float tol 1e-12",
+  "V4": "L2: Lambda(h)<=(4+6/e)(I(h)-1) nats on all balanced h on 2,3,4 bits (float; best ratio re-evaluated exactly), 30000 random balanced on 5 bits (numpy seed 7), 3x6667 odd LTFs on 5,6,7 bits (seed 8)",
+  "V5": "R1 chain F_{k,d}: g_k=sign((k-1)y+z_1+..+z_k); brute force exact for (k,d) in {(2,1..4),(3,1..3)}; closed form at 30-40 digits, k=2..14, d=2^(k-1)",
+  "V6": "A058 anchored theorem: example f_k for k=1,2,3 exact; 200 random instances m=3, r=2, 2-bit shared gates, random.Random(5)"
+ },
+ "no_automatic_n_increase": true
+}

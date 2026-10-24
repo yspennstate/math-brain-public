@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "PASS_FOR_STATED_ANALYTIC_STRESS_TEST",
+  "full_fei_proved": false,
+  "brain_label": "WITHOUT_VERIFIED_BRAIN",
+  "script_sha256_executed": "5595c46228241543df8a7f903bfed1be9317f2917bc5ad4796fc48648c6563bf",
+  "executed_stdout_sha256": "132884192330a7f7b1de22bd838d49a132f3c5b7ffc7bd8352ab191806b0be50",
+  "finite_example": {
+    "n": 161,
+    "k": 3,
+    "ln_n_over_k": 3.982792076316353,
+    "pc_threshold": 4,
+    "pc_feasible": true,
+    "entropy_over_mean": 6.460255142521727,
+    "ordered_code_U_over_mean": 6.4692627112075645,
+    "hod_beta_reference": 6.4547837,
+    "entropy_minus_beta": 0.0054714425217268214,
+    "U_minus_beta": 0.01447901120756434,
+    "pair_convolution_term_count": 12561,
+    "pair_convolution_term_count_is_odd": true
+  },
+  "unbounded_family_samples": [
+    {"k": 3, "n": 162, "entropy_over_mean": 6.469244158388483, "U_over_mean": 6.478195835977572},
+    {"k": 4, "n": 1612, "entropy_over_mean": 9.507051972559701, "U_over_mean": 9.508395403347679},
+    {"k": 6, "n": 132156, "entropy_over_mean": 15.4298795925922, "U_over_mean": 15.429906884486915},
+    {"k": 10, "n": 656599690, "entropy_over_mean": 27.11133270651205, "U_over_mean": 27.111332716399552}
+  ],
+  "analytic_dependency": "-ln(t) >= 2(1-t)/(1+t) for 0<t<=1",
+  "classification": "REFUTED_RELAXATION_NOT_FEI"
+}

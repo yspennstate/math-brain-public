@@ -1,0 +1,44 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261021T225156Z-account03-A072-exact-walsh-engine",
+  "stream": "B15",
+  "packet_id": "A072",
+  "gap_id": "C019-INHERITED-COMPONENT-ELIGIBILITY",
+  "attempt_id": "A072-stage17-mandatory-donor-v1",
+  "method": "Exact rational log-profile cancellation; independent integer core transforms/edges; optimal donor allocation with independent piecewise-linear boundary minimization.",
+  "mathematical_delta": "Exact mandatory donor formula max(0,mean W-unused parent). Saturation forces all child W to be spent; 60 full queries and 405 rational boundary allocations checked. Reproduces 36 selected-only failures without renewing any bank.",
+  "deliverable_status": "COMPLETE_LOCAL",
+  "mathematical_status": "CONDITIONAL_ACCOUNTING_PROOF_AND_EXACT_FINITE_CERTIFICATE; UNIVERSAL_CHILD_ELIGIBILITY_AND_FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "A071-spent-sibling-v1 (explicit pinned formulas, independently rechecked finite inputs)",
+    "A072-booked-physical-owner-transfer@1 (context only; no new assumption)"
+  ],
+  "claims_created_or_changed": [
+    "A072-SATURATED-DONOR-OPTIMALITY@1"
+  ],
+  "source_artifacts": [
+    "PROOF.md",
+    "FROZEN_SPEC.json",
+    "out/SOURCE_PINS.json",
+    "out/SOURCE_RECEIPTS.json",
+    "out/COMPONENT_VALIDATION.json",
+    "out/COMPONENT_CASES.json",
+    "out/PRIOR_REPRODUCTION_COMPARISON.json"
+  ],
+  "next_consumers": [
+    "A071",
+    "A074",
+    "A089",
+    "A092"
+  ],
+  "next_action": "Derive child positivity and an unused-donor invariant from signed component rows on the now twice-saturated path, counting the entire W as spent; A074/A092 independently review donor optimum and old-label transport.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "No universal noncircular child eligibility theorem.",
+    "Lean compiler admission held; no Lean certification.",
+    "Independent review, supervisor copy and mirror verification unconfirmed."
+  ],
+  "packet_ids": [
+    "A072"
+  ]
+}

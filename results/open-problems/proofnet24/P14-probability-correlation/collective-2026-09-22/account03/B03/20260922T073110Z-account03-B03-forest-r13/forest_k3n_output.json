@@ -1,0 +1,25 @@
+{
+  "brute_force_n": "1..5",
+  "escape_ratio_R_n_definition": "rho_disjoint^2/abs(rho_same_left)",
+  "escape_ratio_denominator_minus_numerator_coefficients_descending": [1107,16941,102441,318247,542740,488300,182960],
+  "escape_ratio_samples_n_3_to_9": {
+    "3": {"decimal": 0.014086184353859419, "denominator": 3593947, "numerator": 50625},
+    "4": {"decimal": 0.010416079073903553, "denominator": 10016149, "numerator": 104329},
+    "5": {"decimal": 0.008003015585531197, "denominator": 665874, "numerator": 5329},
+    "6": {"decimal": 0.006337396184907002, "denominator": 12816778, "numerator": 81225},
+    "7": {"decimal": 0.005141234242904847, "denominator": 100551925, "numerator": 516961},
+    "8": {"decimal": 0.004253919679641843, "denominator": 20457603, "numerator": 87025},
+    "9": {"decimal": 0.0035778160050315973, "denominator": 19925284, "numerator": 71289}
+  },
+  "family": "K_{3,n}",
+  "measure": "uniform over all unrooted forests, all sizes, disconnected and empty included",
+  "rows": [
+    {"Delta_same_right": 0, "Z": 8, "Z_e": 4, "Z_ef_same_right": 2, "n": 1},
+    {"Delta_disjoint": 36, "Delta_same_left": 90, "Delta_same_right": 36, "Z": 54, "Z_e": 24, "Z_ef_disjoint": 10, "Z_ef_same_left": 9, "Z_ef_same_right": 10, "n": 2},
+    {"Delta_disjoint": 900, "Delta_same_left": 2212, "Delta_same_right": 2212, "Z": 328, "Z_e": 134, "Z_ef_disjoint": 52, "Z_ef_same_left": 48, "Z_ef_same_right": 48, "n": 3},
+    {"Delta_disjoint": 20672, "Delta_same_left": 50368, "Delta_same_right": 91200, "Z": 1856, "Z_e": 712, "Z_ef_disjoint": 262, "Z_ef_same_left": 246, "Z_ef_same_right": 224, "n": 4},
+    {"Delta_disjoint": 448512, "Delta_same_left": 1087488, "Delta_same_right": 3084288, "Z": 9984, "Z_e": 3648, "Z_ef_disjoint": 1288, "Z_ef_same_left": 1224, "Z_ef_same_right": 1024, "n": 5}
+  ],
+  "status": "PASS",
+  "structural_check": "R_n<1 for every n>0 because every coefficient of the exact difference polynomial is positive"
+}

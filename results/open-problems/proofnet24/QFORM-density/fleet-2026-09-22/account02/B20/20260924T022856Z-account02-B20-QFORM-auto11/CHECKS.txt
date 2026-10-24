@@ -1,0 +1,43 @@
+QFORM_ACCOUNT02_B20_20260924T022856Z_CHECKS
+
+Input constants:
+c0=((sqrt(766)-4sqrt(3))^2)/16384 = 0.026275654659752182
+z0=(1/4096)*((63/64)*c0-3/4096) = 6.135907148606825e-6
+Lambda=((4/9)/z0)^(1/4) = 16.405318852237478
+
+Finite-rank peel:
+gamma0 = 0.8749992111292801
+eta0 = 7.888707199262311e-7
+a = 1/64
+mmax = 39
+L39=sqrt(2*39)/64 = 0.13799626353637262
+gamma_min=gamma0-L39 = 0.7370029475929075
+eta_max=eta0+L39 = 0.13799705240709254
+sigma_min=(sqrt(3)/8)*gamma_min-eta_max = 0.021568766412774748 > 0
+C3=10.3450832321475
+C3/sigma_min = 479.6325869624289
+2*pi*C3/sigma_min = 3013.6204232468685
+16*42^2 = 28224
+
+Scaled-back active certificate:
+gamma_min/Lambda = 0.04492463415256264
+eta_max/Lambda = 0.008411726321812482
+1/(64*Lambda) = 0.0009524350084709843
+2648.342*Lambda = 43446.89493977231
+
+Curvature flip:
+(63/64)*(961/4096)-3/4096 = 60351/262144 = 0.23022079467773438
+delta=sqrt(z0/(60351/262144)) = 0.005162583810831281
+0.1120996781-delta = 0.10693709428916873
+
+Pinned D5:
+10*sqrt(2*e) = 23.316439...
+
+Algebraic review:
+At each low-action peel Delta_j=K_j-PK_jP has block [[a,b^T],[b,0]], so ||Delta_j||F^2=a^2+2||b||^2 <=2||K_j u_j||^2.
+For i<j, Delta_j is supported inside the lower-right survivor block on which Delta_i is zero, hence Frobenius orthogonality. Therefore the accumulated Frobenius loss is sqrt(sum_j ||Delta_j||F^2), not the sum of norms.
+
+Scope review:
+All cuts and localized supports are literal original-coordinate sets. Carrier/SVD operations are deterministic coefficient geometry only. Every peeled coefficient is retained exactly in E_*. No random tail is deleted. No post-rotation independence is invoked.
+
+CHECK_PASS

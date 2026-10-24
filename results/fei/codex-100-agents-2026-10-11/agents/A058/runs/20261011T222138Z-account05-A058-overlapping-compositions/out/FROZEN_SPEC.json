@@ -1,0 +1,12 @@
+{
+  "helper_version": "A058-integer-walsh-v1",
+  "family": "F(x_i product_j b_j(z_j)^A_ji), uniform Boolean sign tables",
+  "pilot": {"m": 2, "r": 1, "block_sizes": [2], "outer_tables": 16, "gate_tables": 16, "incidence_matrices": 4, "case_count": 1024, "max_runtime_seconds": 60},
+  "main": {"m": 2, "r": 2, "block_sizes": [2,2], "outer_tables": 16, "gate_tables_per_block": 16, "incidence_matrices": 16, "case_count": 65536, "max_runtime_seconds": 180},
+  "symmetry": "none; every truth table and every incidence matrix, including constants and all signs",
+  "arithmetic": "integer FWHT; squared masses exact dyadic integers; rational entropy as linear combination of log2 primes, no floating sign tests",
+  "memory_estimate_bytes": 20000000,
+  "dimension_escalation": "none",
+  "additional_checks": "nonlinear common-block product family at k=1,2,3,4; literal-parity cancellation; exact influence from cube edges; posterior chain identities",
+  "search_spec_frozen_before_execution": true
+}

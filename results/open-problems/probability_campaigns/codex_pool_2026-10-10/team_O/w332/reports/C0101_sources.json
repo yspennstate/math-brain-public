@@ -1,0 +1,59 @@
+{
+  "id": "C0101",
+  "ledger_rows": [
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+      "line": 101,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "C0101",
+        "historical_status": "source_says_open",
+        "intake": "claude_20260907",
+        "locator": "Open problems (4), p. 27",
+        "problem_id": "C0101",
+        "recorded_at": "2026-09-07T06:52:37Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "levine_peres_sandpiles_2017",
+        "statement": "Describe the maximal elements of the set Gamma(Z^d) of integer superharmonic matrices for d >= 3: are they isolated, and do they have rational entries? (In d = 2 they correspond to the circles of the Apollonian band packing and are rational.)",
+        "status_search": "",
+        "title": "Maximal integer superharmonic matrices in dimensions d >= 3",
+        "verification": "unreviewed"
+      }
+    },
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+      "line": 89,
+      "record": {
+        "attempt_id": "C0101-A001",
+        "author": "claude-probability-1000-continue-0907",
+        "independent_check": "",
+        "key_identity": "If the d = 3 maximal elements correspond to a sphere packing generated from integer initial curvatures, Soddy-Gosset integrality gives rational entries.",
+        "method": "Test the d = 3 analogue of the Apollonian structure on the simplest candidates (diagonal matrices).",
+        "obstruction": "No d = 3 analogue of the LPS correspondence between Gamma(Z^d) and packings.",
+        "problem_id": "C0101",
+        "recorded_at": "2026-09-07T06:52:37Z",
+        "result": "Gamma(Z^d) is the set of symmetric matrices A for which there is an integer-valued function on Z^d whose discrete Laplacian is at most the constant ... with quadratic growth A: g(x) = (1/2) x^T A x + (lower order) integer-valued superharmonic. Diagonal A = diag(a_1,...,a_d): g(x) = sum_i (1/2) a_i x_i^2 rounded is integer-valued; the discrete Laplacian of x -> ceil(a x^2 / 2) in one dimension is at most a + 1 ... in one dimension the maximal a with an integer superharmonic quadratic of curvature a is determined by the 1D odometer; for diagonal matrices the problem separates into d one-dimensional problems and the maximal diagonal elements are rational (the 1D maximal curvatures are rational, e.g. the 1D sandpile has only finitely many patterns). This gives rational maximal elements on the diagonal slice, but maximality in Gamma(Z^d) (not just among diagonal matrices) is not implied: a diagonal A might be dominated by a non-diagonal B. In d = 2 the LPS classification shows the maximal elements are dense in the boundary and rational; for d = 3 the analogue of the Apollonian packing would be a packing by spheres of a slab, whose tangency structure has more degrees of freedom (a sphere touching four others is not determined by rational data in general: Descartes-type relations in 3D involve a quadratic form on curvatures with generic irrational solutions unless the initial spheres are chosen integrally). This suggests that rationality may FAIL in d = 3 unless the initial configuration forces integrality via the Soddy-Gosset relation with integer curvatures; the analogue of the band packing in d = 3 has initial curvatures determined by the lattice (integer), and integral Apollonian-type packings in 3D do have all curvatures integral when the initial ones are (Soddy-Gosset gives a quadratic recursion preserving integrality). So rationality is plausible in d = 3 if the correspondence to packings persists, and isolation would be false (packings are dense in the boundary). Recorded as a conjectural picture with the Soddy-Gosset integrality argument as the reason to expect rational entries.",
+        "schema": "probability-attempt.v1",
+        "substantive": true
+      }
+    }
+  ],
+  "store_cards": [
+    {
+      "id": "claim_1e5ba27ab970d0f60b3e3d2c7b3e6e5a97528e86b15f7a76d350412f2331690b",
+      "kind": "claim",
+      "title": "Open problem: Maximal integer superharmonic matrices in dimensions d >= 3",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Describe the maximal elements of the set Gamma(Z^d) of integer superharmonic matrices for d >= 3: are they isolated, and do they have rational entries? (In d = 2 they correspond to the circles of the Apollonian band packing and are rational.) Source: Levine and Peres: Laplacian growth, sandpiles and scaling limits, BAMS 2017, with open problems, Open problems (4), p. 27.\nPosed in Levine and Peres: Laplacian growth, sandpiles and scaling limits, BAMS 2017, with open problems\nCurrent status unverified as of 2026-09-07",
+      "metadata_json": "{\"artifact_digest\":\"sha256:bbc2c7f3ab11ce93b7604bdf445c886a4ec8e7a16cfdfc6488801036f3b49d3f\",\"artifact_path\":\"objects/sha256/bb/bbc2c7f3ab11ce93b7604bdf445c886a4ec8e7a16cfdfc6488801036f3b49d3f.md\",\"bundle_digest\":\"sha256:bee140cfde7d5bf56318732d7b8273e9824005d4b35903e078e74d929a549266\",\"bundle_entry_key\":\"op-c0101\",\"bundle_id\":\"population.probability-intake-claude-bulk-problems-and-exclusions-c004a\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_006.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-c0101-maximal-integer-superharmonic-matrices-in-dimensions-d-3\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:27ce636e4c81aa81a5dbf74798c83425e9bd5ce208c7c2ac89a1b27196ba3791\",\"revision_digest\":\"sha256:1e5ba27ab970d0f60b3e3d2c7b3e6e5a97528e86b15f7a76d350412f2331690b\",\"source_id\":\"owner-probability-intake-claude-20260907:op-c0101\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_51df0c1f73ae14a45639a3f2cd3c255c2b9c6b6721e9290410a922d103f82a24",
+      "kind": "claim",
+      "title": "Attempt on Maximal integer superharmonic matrices in dimensions d >= 3",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Test the d = 3 analogue of the Apollonian structure on the simplest candidates (diagonal matrices). Result: Gamma(Z^d) is the set of symmetric matrices A for which there is an integer-valued function on Z^d whose discrete Laplacian is at most the constant ... with quadratic growth A: g(x) = (1/2) x^T A x + (lower order) integer-valued superharmonic. Diagonal A = diag(a_1,...,a_d): g(x) = sum_i (1/2) a_i x_i^2 rounded is integer-valued; the discrete Laplacian of x -> ceil(a x^2 / 2) in one dimension is at most a + 1 ... in one dimension the maximal a with an integer superharmonic quadratic of curvature a is determined by the 1D odometer; for diagonal matrices the problem separates into d one-dimensional problems and the maximal diagonal elements are rational (the 1D maximal curvatures are rational, e.g. the 1D sandpile has only finitely many patterns). This gives rational maximal elements on the diagonal slice, but maximality in Gamma(Z^d) (not just among diagonal matrices) is not implied: a diagonal A might be dominated by a non-diagonal B. In d = 2 the LPS classification shows the maximal elements are dense in the boundary and rational; for d = 3 the analogue of the Apollonian packing would be a packing by spheres of a slab, whose tangency structure has more degrees of freedom (a sphere touching four others is not determined by rational data in general: Descartes-type relations in 3D involve a quadratic form on curvatures with generic irrational solutions unless the initial spheres are chosen integrally). This suggests that rationality may FAIL in d = 3 unless the initial configuration forces integrality via the Soddy-Gosset relation with integer curvatures; the analogue of the band packing in d = 3 has initial curvatures determined by the lattice (integer), and integral Apollonian-type packings in 3D do have all curvatures integral when the initial ones are (Soddy-Gosset gives a quadratic recursion preserving integrality). So rationality is plausible in d = 3 if the correspondence to packings persists, and isolation would be false (packings are dense in the boundary). Recorded as a conjectural picture with the Soddy-Gosset integrality argument as the reason to expect rational entries. Key identity: If the d = 3 maximal elements correspond to a sphere packing generated from integer initial curvatures, Soddy-Gosset integrality gives rational entries. Obstruction: No d = 3 analogue of the LPS correspondence between Gamma(Z^d) and packings.\nRefers to the open problem node open-problem-c0101-maximal-integer-superharmonic-matrices-in-dimensions-d-3\nNo independent review; result status attempted_unsolved",
+      "metadata_json": "{\"artifact_digest\":\"sha256:b5a56dd75167727883e01efdbcc2f651646f7ba7abfd7d3f982e6d681c44f9fc\",\"artifact_path\":\"objects/sha256/b5/b5a56dd75167727883e01efdbcc2f651646f7ba7abfd7d3f982e6d681c44f9fc.md\",\"bundle_digest\":\"sha256:3afc0553fbedbe5e4a4f8548c9d6f5c8d0ecfb86f127315c266229ee060578ce\",\"bundle_entry_key\":\"at-c0101\",\"bundle_id\":\"population.probability-intake-claude-bulk-attempts-c004b\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_007.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-c0101-maximal-integer-superharmonic-matrices-in-dimensions-d-3\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:d60ad0b3f8346e7b04626eeea85bdd0598b8424cfd19b6d40584ecb68567692f\",\"revision_digest\":\"sha256:51df0c1f73ae14a45639a3f2cd3c255c2b9c6b6721e9290410a922d103f82a24\",\"source_id\":\"owner-probability-intake-claude-20260907:at-c0101\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    }
+  ]
+}

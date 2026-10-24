@@ -1,0 +1,13 @@
+{
+  "helper_version": "A078-paired-overlap-v1",
+  "actual_Boolean_family": "Every uniform shifted equal-weight threshold f_{m,t}(x)=1-2*1{|x|>=t}, and full physical coordinate trees of odd majority",
+  "parameter_domain": "Pilot thresholds m=1..6 and majority roots n=3,5,9,17; full thresholds m=1..129, t=1..m and majority roots n=3,5,9,17,33,65,129",
+  "case_count": {"pilot_thresholds": 21, "full_thresholds": 8385, "full_majority_roots": 7},
+  "symmetry": "Permutation invariance makes each coefficient depend only on Fourier degree. All labelled truth tables m<=6 are reconstructed. Complete fresh-coordinate majority trees have the same fair-binomial history law even for adaptive coordinate choice; proof required.",
+  "arithmetic": "Integer Krawtchouk recurrence and direct integer Walsh; Fraction for influence, overlap and weighted tree budgets. No floating logarithm signs.",
+  "memory_estimate_mb": 100,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "gpu": false,
+  "target": "Exact rational profile overlap L=(3/2)*sum_T |uhat(T)vhat(T)| majorizes retained-KL Q. Test its all-shift node rate and majority complete-tree payment without importing majority FEI."
+}

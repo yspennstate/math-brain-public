@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.14",
+  "source_control_commit": "2a07f73272566942e2ffa8620e16ccf734b29ca2",
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260922T193046Z-account01-B15-QFORM-r14",
+  "status": "ESSENTIAL_STEP_APPLIED_PHYSICAL_PIVOT_COMPENSATION_FULL_TARGET_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-SCALAR-QPRIME-WEIGHTED-23-MOMENT-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B15",
+    "run": "20260922T185309Z-account02-B15-qform-r6",
+    "scientific_commit": "d00907b4362875219cc3525ceb04f90186b8c065",
+    "use": "applied its exact Hadamard fragmented source to a physical-coordinate derivative inequality"
+  },
+  "mathematical_change": "proved support-aware physical monotone-pivot bound ||p_Q||_inf <= E[2/m_i], improved to E[1/m_i] on an injective support branch; on partner r6 exact source, partial_2 Q >=101/4 gives ||p_Q||_inf<=4/101 uniformly in fragment count despite divergent scalar-conditioned spectral height moments",
+  "continuity_dependency": {
+    "worker": "account02/B15",
+    "scientific_commit": "28ddaf28bf6779837fb1212a025d8a8b9d329f8a",
+    "scope": "worker-candidate target-scope C0 regularity for each fixed rank>=3 target"
+  },
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c21f8f1f402beceed9b4d2da4de396b5f366a678",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260922T193046Z-account01-B15-QFORM-r14/REPORT.md"
+  },
+  "unpaid_implication": "cover the complementary near-critical original-coordinate derivative region by source-valid pair/ridge/grouped-coordinate/fractional-trace aggregation without reciprocal tiny-minor loss and before scalar spectral conditional maxima",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

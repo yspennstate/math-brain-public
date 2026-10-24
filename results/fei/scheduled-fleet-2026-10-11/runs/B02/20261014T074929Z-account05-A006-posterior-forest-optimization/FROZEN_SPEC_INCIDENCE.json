@@ -1,0 +1,53 @@
+{
+  "helper_version": "A006-incidence-full-partition-v1; star enumerator optional-edge extension",
+  "family": "all labelled nonempty width-two positive prime graph DNFs, entire original partition event family; both endpoint orders",
+  "parameter_domain": {
+    "pilot_n": 3,
+    "full_n": 4,
+    "base_weights": "1/(2 max degree)",
+    "root_subsets": "all nonempty subsets of table",
+    "packing_dual_prices": [
+      0,
+      "1/2",
+      1
+    ],
+    "packing_primal_weights": [
+      0,
+      "1/2",
+      1
+    ],
+    "A010_independent_matching_star_review_m": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "case_count": {
+    "pilot_graphs": 7,
+    "full_graphs": 63,
+    "full_nonempty_outputs_per_graph_max": 15,
+    "packing_graphs": 63,
+    "LP_cap_subsets_per_graph_max": 63,
+    "review_stars": 7
+  },
+  "symmetry": "none in graph census; chronological actual-run keys deduplicate descriptions",
+  "arithmetic": "Fraction, integer FWHT, exact weak-duality packing certificates and capped LP primal-dual equality",
+  "memory_estimate_MB": 100,
+  "maximum_runtime_seconds": {
+    "pilot": 60,
+    "full": 300
+  },
+  "helper_sha256": {
+    "check.py": "557962c6882f4d83704063a76bd82e29d203a7c413e8fdd6664dd2c15b2c8927",
+    "incidence_caps.py": "44956d2822ccdcb6ee3859c3cbfc9d2410b03a838e215a02299d9e5fb511d6c1",
+    "star_full.py": "954f332e063bba3d206dea35a42d77f0d815c24229cbcb9edda752aa8040a666"
+  },
+  "runtime_guard_seconds": {
+    "pilot": 55,
+    "full": 295
+  }
+}

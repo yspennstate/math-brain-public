@@ -1,0 +1,18 @@
+Shared-bank curved receiver deterministic checks
+
+receiver constant from M=2, N=sqrt(2): 6*(2*sqrt(2))^(2/3) = 12 exactly
+Fresnel/BL diffuse-subcase constant: 12*2^(-1/3) = 9.524406311809198
+pinned ruled one-sheet constant: pi*sqrt(2) = 4.442882938158366
+
+Flat-sign exact target family Q=S^2+2UV:
+m=4:   nonzero spectrum [-1,1,1], det(G)=1, max overlap leverage=0.5, max physical coefficient=0.25
+m=8:   nonzero spectrum [-1,1,1], det(G)=1, max overlap leverage=0.25, max physical coefficient=0.125
+m=16:  nonzero spectrum [-1,1,1], det(G)=1, max overlap leverage=0.125, max physical coefficient=0.0625
+m=64:  nonzero spectrum [-1,1,1], det(G)=1, max overlap leverage=0.03125, max physical coefficient=0.015625
+
+Optimization in the proof:
+min_R [4 B sqrt(R)+A/R] = 3*2^(2/3) A^(1/3) B^(2/3),
+A=N/(2|b|), B=2M sqrt(N/(|ab|)),
+which simplifies to 6(MN)^(2/3)(|a|b^2)^(-1/3).
+
+STATUS=PASS

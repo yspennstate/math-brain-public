@@ -1,0 +1,47 @@
+[
+  {
+    "claim_id": "A011-COMB-OUTPUT-REFERENCE-REPAIR",
+    "version": 1,
+    "exact_statement": "For every integer a>=1 and every first-positive selector comb with arbitrary repeated stopping and terminal labels chosen from two distinct nonempty unsigned characters chi_A,chi_B on an independent uniform data cube (A and B may overlap), the explicit coherent max-index output law Q_F from physical suffix means is normalized and has complete ideal cost CE(P_F,Q_F)=H(F)<=C_* I_sel(F), C_*=4+2/(e ln 2)<41/8, with no boundary-retention admission. A finite output prefix code has expected length at most (41/8) I(F). Passive pushforward of the old uniform-mask Kraft law is insufficient: on the terminal-only switch its common output mass is (1-4^(-a))/3, its cross-entropy has liminf at least log2(3), and I_sel=a2^(-a) tends to zero. For any disjoint Boolean seed h and complete seed reference Q_h, the product reference has cost CE_F+CE(P_h,Q_h), retaining the entire arbitrary seed debt. This is a selector-only cost repair, not an improved total-FEI bound for the comb class, whose raw transcript already costs <4<=4I(F).",
+    "hypotheses": [
+      "uniform independent selector and data cubes, sign Boolean values",
+      "first-positive comb of a>=1 selectors, each coordinate tested once in its fixed order",
+      "arbitrary two-label stopping and terminal strings; two distinct nonempty unsigned data characters",
+      "fixed suffix-derived output reference chosen before any sampled spectral set",
+      "ordinary physical influence; entropy and all ideal costs in bits",
+      "tensor guard uses a disjoint uniform seed block and a complete positive-on-true-support subprobability seed reference"
+    ],
+    "statement_sha256": "49056b5b0f7f836bdfe56273bc855c77266ec0f71c706b569bdeb2420c452bea",
+    "contributors": [
+      "A011/account05"
+    ],
+    "proof_source": {
+      "path": "POSTERIOR_REPAIR.tex",
+      "immediate_derivation": "COMB_QUOTIENT.md",
+      "cost_ledger": "COVER_COST.md",
+      "exact_validation": "out/EXACT_RESULTS.json",
+      "log_certificates": "out/LOG_CERTIFICATES.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_REPAIR_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "absolute selector-influence payment for the passive pushforward of the old uniform-mask comb Kraft reference on terminal-only switches"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A008",
+      "A012",
+      "A013",
+      "A019",
+      "A039",
+      "A058",
+      "A086",
+      "A094",
+      "A097",
+      "B03",
+      "B20"
+    ]
+  }
+]

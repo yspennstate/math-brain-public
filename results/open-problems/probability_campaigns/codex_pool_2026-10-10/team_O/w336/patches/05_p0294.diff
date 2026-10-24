@@ -1,0 +1,45 @@
+--- a/~/math-brain-inbox/w336/bundle_005.json
++++ b/~/math-brain-inbox/w336/bundle_005.json
+@@ -0,0 +1,42 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w336",
++  "bundle_slug": "w336-p0294-checked-attempt-20261010",
++  "audit_status": "PENDING_W346_KEEP; do not promote to audited or solved",
++  "entries": [
++    {
++      "key": "random-routing-workload-exact-zero-finite-population-bias",
++      "namespace": "probability.queueing",
++      "logical_name": "random-routing-workload-exact-zero-finite-population-bias",
++      "kind": "lemma",
++      "title": "Zero finite-N bias for random-routing workloads",
++      "statement": "For N unit-speed servers with Poisson input N*lambda, independent uniformly chosen destinations, and independent nonnegative job sizes S with rho=lambda*E S<1 and E S^2 finite, the product stationary workload law consists of N independent M/G/1 workloads. The stationary mean workload per server is exactly lambda*E S^2/(2*(1-rho)) for every N. Its first-order 1/N bias and remainder are zero, and off-diagonal covariances are zero. This is the d=1 random-routing case; no zero-bias claim is made for workload-dependent least-of-d routing.",
++      "proof_text": "# P0294: a genuine workload benchmark with zero finite-N bias\n\nStatus: proof written; w346 KEEP pending. This is the d=1 random-routing special case, not a result for interacting least-of-d routing with d>=2.\n\nConsider N rate-one workload servers, a Poisson input of rate N*lambda, independent uniformly chosen routing destinations, and i.i.d. nonnegative job sizes S independent of routing. Assume rho=lambda*E[S]<1 and E[S^2]<infinity. The N workload processes are independent M/G/1 workload processes when started in their product stationary law. For every N, the stationary mean of one server (and of the empirical mean workload) is\n\n    lambda*E[S^2]/(2*(1-rho)).\n\nConsequently its expansion in 1/N has exactly zero bias coefficient and zero remainder for this observable; stationary off-diagonal covariances are zero.\n\nProof: marked Poisson thinning produces N independent rate-lambda input processes with independent job marks. Each queue drains at rate one while positive and has upward jumps S. Its stability and stationary construction follow from the negative-drift reflected compound-Poisson input. The stationary idle mass is 1-rho by workload balance. For beta(s)=E[e^(-sS)] and L(s)=E[e^(-sW)], the bounded stationary generator test e^(-sW) gives\n\n    0=s*(L(s)-(1-rho))+lambda*(beta(s)-1)*L(s),\n    L(s)=(1-rho)*s/(s-lambda+lambda*beta(s)), s>0.\n\nThe second-moment assumption gives beta(s)=1-E[S]*s+E[S^2]*s^2/2+o(s^2). Expansion at zero gives L(s)=1-[lambda*E[S^2]/(2*(1-rho))]*s+o(s); the right derivative of a nonnegative variable's Laplace transform identifies its finite mean. Product stationarity proves all finite-N claims. This handles the actual empty-workload boundary, unlike a Gaussian OU control model.\n\nFor exponential service sizes of rate mu>lambda, P(W=0)=1-lambda/mu and P(W>x)=(lambda/mu)*exp(-(mu-lambda)*x) for x>=0, so the mean is lambda/(mu*(mu-lambda)). These formulas are a control for implementations of any proposed first-order correction. They do not justify setting the correction to zero under workload-dependent routing.\n\nChecks: Laplace-transform generator identities, mean calculations for several service parameters, and exact Poisson-thinning algebra. General least-of-d bias remains unverified and unsolved here.\n",
++      "assumptions": [
++        "All hypotheses and scope restrictions in the statement apply."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner:campaign:w336:P0294:random-routing-workload-exact-zero-finite-population-bias",
++        "url": "~\\brain_workers\\w336\\proofs\\P0294.md",
++        "revision": "author-proof-2026-10-10; independent audit w346 pending",
++        "license": "owner-own-work; campaign proof, no novelty claim",
++        "excerpt": "For N unit-speed servers with Poisson input N*lambda, independent uniformly chosen destinations, and independe"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "random-routing-workload-exact-zero-finite-population-bias",
++      "to_existing_logical": "math:probability.core:open-problem-p0294-compute-a-first-order-bias-correction-for-continuous-workload-mean-fie",
++      "kind": "cites",
++      "rationale": "New: \"For N unit-speed servers with Poisson input N*lambda, independent uniformly chosen destinations, and independent nonnegative job sizes S with rho=lambda*E S<1 and E S^2 finite, the\"; existing: \"Develop an effective first-order stationary bias correction for continuous-state mean-field models such as least-loaded-of-d queues, with a justified improved error order.\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
++    },
++    {
++      "from_key": "random-routing-workload-exact-zero-finite-population-bias",
++      "to_existing_logical": "math:probability.core:attempt-p0294-compute-a-first-order-bias-correction-for-continuous-workload-mean-fie",
++      "kind": "cites",
++      "rationale": "New: \"For N unit-speed servers with Poisson input N*lambda, independent uniformly chosen destinations, and independent nonnegative job sizes S with rho=lambda*E S<1 and E S^2 finite, the\"; existing: \"An exactly solvable continuous-state control model shows how covariance enters the correction. Let dX_i=(-a*X_i+b*M_N)dt+sigma*dB_i with a>b>=0 and independent Brownian motions. The empirical mean is an OU process of rate a-b and variance s\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
++    }
++  ]
++}

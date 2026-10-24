@@ -1,0 +1,90 @@
+import copy, hashlib, json
+from datetime import datetime, timezone
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]; AGENT=ROOT.parents[1]
+BASE=Path(r'~\brain_workers\FEI100_20261011')
+PROTO=Path(r'~\mop_fei100\reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=json.loads(PROTO.read_text(encoding='utf-8-sig'))
+def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
+def save(name,data): (ROOT/name).write_text(json.dumps(data,indent=2,ensure_ascii=False),encoding='utf-8')
+check=json.loads((ROOT/'out/CHECK.json').read_text()); pilot=json.loads((ROOT/'out/PILOT.json').read_text()); graph=json.loads((ROOT/'out/GRAPH_CHECK.json').read_text()); review=json.loads((ROOT/'out/REVIEW_CHECK.json').read_text())
+spec=json.loads((ROOT/'REVIEW_FROZEN_SPEC.json').read_text()); spec['case_count']=329; save('REVIEW_FROZEN_SPEC.json',spec)
+src8=BASE/'agents/A008/runs/20261013T222820Z-account05-A008-gate-label-compression'
+src6=BASE/'agents/A006/runs/20261013T214427Z-account05-A006-posterior-forest-optimization'
+baseline=Path(r'~\mop_fei100\reports\fei-2026-10-11\source_material\reductions\paper\forests.tex')
+sources=[PROTO,BASE/'BOARD.md',BASE/'claude/B02/STREAM_NOTES.md',src6/'REPORT.md',src6/'FOREST_MOMENTS.md',src8/'REPORT.md',src8/'COMPLETE_MASS.md',src8/'CLAIMS.json',baseline,AGENT/'runs/20261012T031835Z-account05-A009-fractional-incidence-optimization/CLAIMS.json',AGENT/'runs/20261012T031835Z-account05-A009-fractional-incidence-optimization/PROGRESS.json']
+save('out/SOURCES.json',[{'path':str(p),'sha256':sha(p),'bytes':p.stat().st_size} for p in sources])
+sourceclaim=next(x for x in json.loads((src8/'CLAIMS.json').read_text()) if x['claim_id']=='A008-COMPLETE-QUEUE-DEGREE-WEIGHTED-DETERMINANT-MASS')
+dep={'claim_id':sourceclaim['claim_id'],'version':1,'statement_sha256':sourceclaim['statement_sha256'],'status':'INDEPENDENTLY_RECONSTRUCTED_LOCALLY_BY_A009'}
+statement='For every n>=4, the positive complete-graph edge prime DNF on the uniform cube, with both endpoint orders per gate, pi=1/4 and one globally fixed lambda=1/(n-1), has the explicitly counted actual matching partition-forest output subprobability Q_match(A)=W_|A|/D stated in MATCHING_CERTIFICATE.md. Its complete nonempty spectral cross-entropy, including the off-support sector, is at most 185 I/6<31I. Uniform lambda is a global minimizer over all positive coordinate-incidence-feasible weights for the posterior frozen to the matching family at uniform weights; rational coordinate prices (n-1)(c0-v*rho)/2 certify this exactly. For every simple graph the induced-matching/external-root/internal-child formulas in the companion give exact complete matching-sector mass, which may vanish on positive Fourier mass. No optimum with jointly varying posterior or universal FEI assertion is made.'
+claim={'claim_id':'A009-DENSE-GRAPH-MATCHING-MASS-AND-FIXED-POSTERIOR-KKT','version':1,'exact_statement':statement,'hypotheses':['n>=4 for all-dimensional complete-graph bound and KKT','uniform Boolean cube; bits; gamma=6/5 original queue','each graph edge is one positive conjunction prime gate; both endpoint orders fixed before sampling','global lambda=1/(n-1) on K_n or 1/Delta for general graph mass formula','distinct finite actual runs; matching-family posterior frozen before weight optimization'],'statement_sha256':hashlib.sha256(statement.encode()).hexdigest(),'contributors':['A009'],'proof_source':{'path':str(ROOT/'MATCHING_CERTIFICATE.md'),'certificate':str(ROOT/'out/CHECK.json'),'graph_check':str(ROOT/'out/GRAPH_CHECK.json')},'proof_dependencies':[{'source':str(baseline),'sha256':sha(baseline),'locator':'original generator and eq:forestconditioning','status':'SOURCE_COMPLETE_BASELINE'},dep],'review_records':[],'status':'ANALYTICALLY_PROVED_EXACTLY_CHECKED_PENDING_INDEPENDENT_REVIEW','supersedes':[],'refutes':['matching-sector output mass is positive on every positive-mass spectral set of every graph DNF'],'first_unproved_line':None,'next_consumers':['A006','A008','A010','A014','A086','A094','B02','B03','B20']}
+accepted=copy.deepcopy(sourceclaim); accepted['review_records'].append({'reviewer':'A009','verdict':'HOLDS_AT_ORIGINAL_WHOLE_SCOPE_NO_REPAIR','proof_source':str(ROOT/'REVIEW_A008.md'),'validation':str(ROOT/'out/REVIEW_CHECK.json'),'method':'independent actual-probability ledger, minor multilinearity, beta/simplex moments and coefficient bounds; no author code imported','reviewer_supplied_substantive_repair':False}); accepted['status']='INDEPENDENTLY_RECONSTRUCTED_AT_STATED_SCOPE_LOCAL_ADOPTION_PENDING'
+save('CLAIMS.json',[claim,accepted])
+next_action='Replace zero matching-sector mass by assignment-sensitive rooted forests on unmatched-coordinate components; retain complete N_s factors and certify one globally fixed feasible weight vector. A006/A008 reconstruct matching bijection and KKT; A014/B03 challenge dense graph-to-linear-hypergraph extension.'
+progress={'protocol_revision':protocol['revision'],'run_id':ROOT.name,'stream':'B02','packet_id':'A009','gap_id':'G-J-COST','attempt_id':'A009-dense-matching-complete-mass-v1','method':'distinct matching actual-run mass, both-order subset reference, all-n influence payment, rational fixed-posterior KKT, independent whole A008 reconstruction','mathematical_delta':'Complete-graph edge DNF with unbounded read and density has full cost <=185I/6; uniform weights globally optimal for frozen matching posterior. General graph matching mass exact, zero on 104 positive-mass small cases; star witness 1/64. A008 complete mass v1 independently accepted without repair.','deliverable_status':'COMPLETE_LOCAL_ARTIFACTS_PENDING_SUPERVISOR_COPY','mathematical_status':'RESTRICTED_ALL_DIMENSIONAL_CERTIFICATE_PROVED; UNIVERSAL_PIJ_AND_FULL_FEI_OPEN','claim_versions_used':[dep,{'source':str(baseline),'sha256':sha(baseline),'status':'SOURCE_COMPLETE_BASELINE'}],'claims_created_or_changed':[claim['claim_id']+'@1',sourceclaim['claim_id']+'@1: A009 whole independent review'],'source_artifacts':['REPORT.md','MATCHING_CERTIFICATE.md','REVIEW_A008.md','CLAIMS.json','out/CHECK.json','out/GRAPH_CHECK.json','out/REVIEW_CHECK.json','out/SOURCES.json'],'next_consumers':claim['next_consumers'],'next_action':next_action,'stagnant_substantive_attempts':0,'blockers':['General graphs lack sufficient matching-sector mass on their true spectrum; full rooted-forest payment remains open.','New restricted certificate awaits independent review; supervisor adoption and mirrors unobserved.'],'packet_ids':['A009']}
+save('PROGRESS.json',progress); save('PACKET_DELTA.json',progress)
+total=sum(x['checks'] for x in [check,pilot,graph,review])
+report=f'''# A009 stage 3: dense matching mass and global fractional certificate
+
+## exact target, quantifiers, hypotheses and units
+
+C020 / PI-J; one globally fixed fractional reference. For every n>=4, positive edge DNF of K_n (read n-1, density N/4), use both endpoint orders, pi=1/4 and lambda=1/(n-1). Prove a complete actual-run output cost <=185I/6<31I, and a global fixed-posterior weight optimum with rational coordinate prices. Extend the exact matching-sector mass formula to every simple graph; identify its first positive-spectrum failure. Costs are bits, original gamma=6/5; no decoder subset, count, label, attachment or root term is omitted. The function is already a threshold function: this is a high-read coding/optimization result, not a novel FEI class. Full FEI is OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Stage start read BOARD.md snapshot 2026-10-13 23:49 UTC, B02 STREAM_NOTES v2 dated 2026-10-11 23:35 UTC, and own STATUS. Board opening was revisited at 23:59 UTC; out/SOURCES.json hashes the final on-disk snapshot rather than claiming byte identity with the earlier read. Protocol 2026-10-11-execution-v2 reread completely. A006 stage3 REPORT and FOREST_MOMENTS, A008 stage3 REPORT, COMPLETE_MASS and CLAIMS read completely. Own stage2 claims/progress and durable lessons revisited. Original forests.tex ordered-cover/generator definitions revisited; its complete prior read is retained. No outside paper theorem, brain query, web fact or author code is used for the new derivation. Earlier campaign/paper reads are retained rather than restarted. Stale lead review counts do not override new source-bound A007/A008/A006 reviews; this run supplies a further whole review before any universal candidate.
+
+## complete derivation or exact first unsupported line
+
+MATCHING_CERTIFICATE.md contains the complete proof: exact equal-probability matching runs give W_a/D, including the special odd full-set child factor. Both fixed orders make all size/subset factors rational and symmetric. Matching multiplicity cancels the growing label cost. W_a>=floor(a/2)!/[48(n-1)]^(floor(a/2)+1) bounds every selected-set cost by 37n/4. Exact Boolean spectrum P(A)=4^(1-n)(n+1-2|A|)^2, v=4r(1-r), r=(n+1)2^-n, and I=n(n-1)2^(1-n) then give complete C_match<=185I/6. Its off-support |A|>=3 sector is paid by the same budget, without assuming closeness to the raw sum of gate indicators.
+
+Freezing the actual uniform matching posterior leaves a convex log-weight objective v ln D-sum c_l ln lambda_l plus a fixed constant. Rational root marginals and prices y=(n-1)(c0-v rho)/2 satisfy stationarity and complementarity at uniform weights. Positivity is analytic for n>=12 and checked exactly for n=4,...,11. This is a global optimum for that frozen posterior; posterior/weight joint optimality is not claimed.
+
+For arbitrary graphs, induced perfect-matching counts and external-root/internal-child near-matching counts give the exact matching-sector mass in the companion. It vanishes on some positive-mass sets: the three-leaf star set has P=1/64 and mass zero. General forests still have positive mass, so this is neither a PI-J nor a FEI counterexample. The first unsupported extension is an influence-paid expectation of full Q_part cost on those unmatched-coordinate components for arbitrary fixed prime tables. No universal constant has been proved.
+
+REVIEW_A008.md independently reconstructs the WHOLE unchanged complete queue-mass v1: determinant orientation, actual event bijection, conditioned root odds, all degree-dependent count/attachment factors, beta/exponential/simplex moments, comparison bounds, forced-star separation, final output ambiguity and exact universal boundary. No repair supplied; original statement hash retained.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+All three specifications were frozen before their jobs; no job exceeded a 60 MB estimate or needed memok. Corrected complete-graph pilot n=4,5: {pilot['checks']} assertions, {pilot['elapsed_seconds']:.6f}s. Full n=4,...,8: {check['checks']} assertions, {check['elapsed_seconds']:.6f}s, all 496 truth inputs with integer FWHT, Parseval and independent physical edge influence; direct distinct matching events, exact rational queue masses and subprobability totals, rational log intervals, and rational KKT. Scalar KKT cases n=4,...,12,16,32,64,128 are certificate evaluations, not larger truth-cube searches. Cross-entropy/I interval upper displays are {', '.join(f"{x['display_upper']:.6f}" for x in check['cases'])}; displays are not used for signs. The log routine uses 30-term atanh after binary range reduction, with remainder 2*z^61/[61*(1-z^2)] and outward division by ln2 bounds.
+
+Graph extension: all 63 nonempty edge tables on four named coordinates, no symmetry reduction, all 945 nonempty coordinate sets; {graph['checks']} exact assertions in {graph['elapsed_seconds']:.6f}s. There are 104 positive-spectrum zero-matching-mass sets. Review operator: {review['vectors']} exponent vectors, s=1,...,4 and total c=0,...,6; {review['checks']} rational moment/inequality assertions in {review['elapsed_seconds']:.6f}s. Total {total} passing assertions. Analytic proofs, not finite extrapolation, establish all-n and all-graph statements.
+
+Initial physical pivotal-edge comparison rejected my influence formula by a factor two. It was corrected before any certificate passed; out/PILOT_INITIAL_FAILURE.json records the failure and resulting constant/KKT-range repair. A draft coordinate-price scaling was also corrected algebraically before testing; the final formula uses two endpoints. The review spec's descriptive vector count was corrected to the actual 329; its frozen domain was unchanged. No floating optimum is a proof.
+
+Commands from A009: python -X utf8 runs/{ROOT.name}/code/check.py --pilot; same without --pilot; same with --graphs; python -X utf8 runs/{ROOT.name}/code/review.py. All final outputs are saved. No automatic dimension escalation, heavy job, background process, GPU or window was used.
+
+## proof dependencies and changed downstream conclusions
+
+Original queue interface and the independently reconstructed unchanged A008 complete-mass v1 are the only source dependencies. The selected matching mass and fixed-posterior convex/KKT proof are reconstructed directly; A006 determinant bounds motivate consuming actual mass, not a surrogate substitution. Complete-graph unbounded incidence and arbitrarily large gate density alone do not obstruct full payment. The matching-sector positivity extension to arbitrary graphs is false, and the exact star witness routes the next work to rooted forests on unmatched coordinates. Neither known threshold FEI nor earlier sparse affine-plane payment is rerun as a new theorem.
+
+## one next mathematical action and independent reviewer
+
+{next_action} The missing object is a paid unmatched-component mass estimate, rather than another reference calibration. No messages were sent.
+
+## actual persistence receipts or precise save blocker
+
+All four protocol files, companions, frozen specs, code and exact outputs are persisted locally. out/SOURCES.json pins source bytes; out/RECEIPTS.json verifies sizes/hashes and exact protocol key sets. Rolling files are current only inside A009. All files are below 20 MB. Shared trees, other agents, git and brain were not modified. New independent review, supervisor copying, mirror verification and registry adoption remain unobserved; there is no local save blocker.
+
+## Universal bridge
+
+C020 / PI-J moves by a complete all-density high-read matching cost <=185I/6 and a rational globally optimal incidence vector for its fixed posterior; A008's arbitrary-reference complete mass receives whole independent acceptance without repair. The unknown universal constant is unchanged: matching mass can vanish on actual off-support Fourier sets, and general rooted-forest expected label/subset payment remains unpaid. NEXT adds roots/attachments to the precisely identified unmatched-coordinate components while retaining A008's full mass operator and one global packing vector; this directly addresses the absent universal coverage and payment, rather than opening another isolated known-class FEI result.
+'''
+(ROOT/'REPORT.md').write_text(report,encoding='utf-8')
+stamp=datetime.now(timezone.utc).isoformat()
+(AGENT/'STATUS.md').write_text('STATE: A009 stage3 complete locally: dense K_n complete matching cost <=185I/6; global fixed-posterior KKT; 6727 exact checks; A008 full mass v1 independently HOLDS; FEI OPEN.\nNEXT: A006/A008 review; pay unmatched-coordinate components by complete rooted forests, since matching mass vanishes on 104 positive-spectrum n=4 cases.\n',encoding='utf-8')
+with (AGENT/'WORKLOG.md').open('a',encoding='utf-8') as f: f.write(f'\n{stamp} stage3 {ROOT.name}: consumed determinant/complete queue interfaces; whole A008 review; exact K_n matching full cost and fixed-posterior optimum; graph zero-mass witness. Initial factor-two influence error fixed by physical edges. {total} checks; universal PI-J open.\n')
+with (AGENT/'LEARNED.md').open('a',encoding='utf-8') as f: f.write('\nStage3: both endpoint orders in width-two edge gates make theta=1 and exact t(singleton)=1/4, t(pair)=1/6. Matching actual-run multiplicity pays complete K_n nonempty cost <=185I/6 for all n>=4, despite read n-1 and density N/4. Uniform lambda globally minimizes the frozen matching-posterior convex objective, with rational price (n-1)(c0-v*rho)/2. General induced-matching sector has an exact lower mass but can be zero on positive off-support spectrum (three star leaves P=1/64): use full rooted forests next. Correct threshold influence is n(n-1)2^(1-n), checked by physical edges; no jointly varying posterior optimum or universal FEI asserted. A008 complete mass v1 independently reconstructed whole without repair.\n')
+required=set(x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']); assert set(progress)==required
+for c in [claim,accepted]: assert set(c)==set(protocol['required_per_run']['claim_fields'])
+assert claim['statement_sha256']==hashlib.sha256(claim['exact_statement'].encode()).hexdigest()
+assert accepted['statement_sha256']==hashlib.sha256(json.dumps({'statement':accepted['exact_statement'],'hypotheses':accepted['hypotheses']},sort_keys=True,separators=(',',':')).encode()).hexdigest()
+save('out/HASH_CONVENTIONS.json',{'A009':'SHA256 UTF-8 exact_statement','A008_source_unchanged':'SHA256 canonical JSON of statement and hypotheses, sort_keys=True and separators comma/colon; independently confirmed from source persist.py','initial_receipt_validation':'Assumed identical hash conventions and failed; corrected validator, source claim bytes and hash retained'})
+for heading in protocol['required_per_run']['report_fields']: assert '## '+heading in report
+receipts=[]
+for p in sorted(ROOT.rglob('*')):
+    if p.is_file() and p.name!='RECEIPTS.json':
+        assert p.stat().st_size<20*1024**2
+        receipts.append({'path':str(p.relative_to(ROOT)),'bytes':p.stat().st_size,'sha256':sha(p)})
+save('out/RECEIPTS.json',{'protocol_fields_exact':True,'assertions_passed':total,'artifacts':receipts,'local_save_only':True})
+print(json.dumps({'files':len(receipts),'assertions_passed':total,'schema_valid':True,'largest_bytes':max(x['bytes'] for x in receipts)}))

@@ -1,0 +1,339 @@
+[
+  {
+    "claim_id": "A003-OPTIMIZED-FOREST-DEBT",
+    "version": 1,
+    "exact_statement": "For a Boolean f with v=Var(f)>0, freeze any admissible conditioned-forest representation and globally feasible positive lambda and finite distinct-run sets W_A covering its nonempty spectral support. Put c=Lambda+log2 Z, t_A=sum_(r in W_A)2^(-B_lambda(A;r)), R_*=v c+sum_(A nonempty)p_A(-log2 t_A), Kref=3+2log2 3+log2(6e), and U(A)=2^(-c-Kref|A|)t_A. Then U is a subprobability, min_P(E B-H(P))=-log2 t_A, and h2(v)+Kref I+R_*=H(f)+v D(P^+||U). Consequently universal R_*<=K I implies FEI with C=2+Kref+K. Independently, B<=K I implies good-coordinate B_i<=K alpha_i and FEI(K+2/ln2); full-signed L<=K I implies FEI(K+3/ln2), while FEI(C) implies B<=C I and L<=C I. No reverse admission into the forest reference family is asserted.",
+    "hypotheses": [
+      "uniform finite Boolean cube",
+      "bits",
+      "actual distinct partition-forest runs",
+      "the run lower bound of forests.tex thm:posteriorforest",
+      "one global feasible lambda per representation",
+      "D(P||U) is generalized divergence to a subprobability; P^+=p/v"
+    ],
+    "statement_sha256": "f8dc089a50fe34c4efe3bbcf6aaa0bc9eec9e552a9a074fc71fd4d70ee771716",
+    "contributors": [
+      "account05/A003"
+    ],
+    "proof_source": {
+      "original": {
+        "run_id": "20261011T221324Z-account05-A003-minimal-target-formulation",
+        "path": "REPORT.md",
+        "locator": "sections 1-3"
+      },
+      "original_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A003\\runs\\20261011T221324Z-account05-A003-minimal-target-formulation\\CLAIMS.json",
+      "original_claims_sha256": "e017db562ff9e6a51392e10ef59682bd95970db3676881b867aa9c0f6c8dd6f7",
+      "review": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\JOINT_CODE_REVIEW.md"
+    },
+    "proof_dependencies": [
+      {
+        "source": "source_material/reductions/paper/forests.tex",
+        "locator": "thm:posteriorforest"
+      },
+      {
+        "source": "sources/ERASURE_REDUCTION.md",
+        "locator": "sections 1-6"
+      },
+      {
+        "source": "context/threshold_paper_38pp.txt",
+        "locator": "Lemma 2.1"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A086/account05",
+        "at": "2026-10-12T00:03:14.432490+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\JOINT_CODE_REVIEW.md",
+        "source_sha256": "ba8973d7c6da428e47b95062e6bb0a3dbf42bdb36b71451b9f9a91b2000bef06",
+        "method": "Independent analytic reconstruction of complete originals, independent integer Walsh/Fraction and rigorous rational-log normalizer, prefix, admission and composition checks.",
+        "source_claims_sha256": "e017db562ff9e6a51392e10ef59682bd95970db3676881b867aa9c0f6c8dd6f7",
+        "source_statement_hash_convention": "canonical statement+hypotheses",
+        "canonical_statement_hypotheses_sha256": "f8dc089a50fe34c4efe3bbcf6aaa0bc9eec9e552a9a074fc71fd4d70ee771716",
+        "repair_contribution": false
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A026",
+      "A034",
+      "A005",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A003-PARITY-DEFECT-COMPLETE-RESIDUAL",
+    "version": 1,
+    "exact_statement": "For every n>=2, set N=2^n,d=n+1,g_n(x)=1-2*1_(x=(1,...,1)) and F_n(x,z)=g_n(x_1z,...,x_nz). Then B(F_n)=L(F_n)=0, I(F_n)=2d/N, and the single-gate conditioned forest for -F_n, ordered support 1,...,d, M=1,lambda=1,pi=1/N and the unique partition run on each nonempty A has complete residual R=(6/5)sum_(A nonempty)p_A log2[(product_(j=1..|A|) i_j)/|A|!] <=(12/5)I(F_n). Here i_1<...<i_|A| enumerate A. Its root rarity cancels against v(Lambda+log2 Z) exactly.",
+    "hypotheses": [
+      "uniform Boolean cubes",
+      "n integer >=2",
+      "bits",
+      "arbitrary single gate allowed by the conditioned forest theorem",
+      "no fractional regular-gate estimate invoked"
+    ],
+    "statement_sha256": "6b1b31aaf7ec7746c192fe0c425a3d4a878d43aa04f7a3acf490a27de4fcc729",
+    "contributors": [
+      "account05/A003"
+    ],
+    "proof_source": {
+      "original": {
+        "run_id": "20261011T221324Z-account05-A003-minimal-target-formulation",
+        "path": "REPORT.md",
+        "locator": "section 4"
+      },
+      "original_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A003\\runs\\20261011T221324Z-account05-A003-minimal-target-formulation\\CLAIMS.json",
+      "original_claims_sha256": "e017db562ff9e6a51392e10ef59682bd95970db3676881b867aa9c0f6c8dd6f7",
+      "review": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\JOINT_CODE_REVIEW.md"
+    },
+    "proof_dependencies": [
+      {
+        "source": "source_material/reductions/paper/forests.tex",
+        "locator": "eq:forestcost and thm:posteriorforest"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A086/account05",
+        "at": "2026-10-12T00:03:14.432490+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\JOINT_CODE_REVIEW.md",
+        "source_sha256": "ba8973d7c6da428e47b95062e6bb0a3dbf42bdb36b71451b9f9a91b2000bef06",
+        "method": "Independent analytic reconstruction of complete originals, independent integer Walsh/Fraction and rigorous rational-log normalizer, prefix, admission and composition checks.",
+        "source_claims_sha256": "e017db562ff9e6a51392e10ef59682bd95970db3676881b867aa9c0f6c8dd6f7",
+        "source_statement_hash_convention": "canonical statement+hypotheses",
+        "canonical_statement_hypotheses_sha256": "6b1b31aaf7ec7746c192fe0c425a3d4a878d43aa04f7a3acf490a27de4fcc729",
+        "repair_contribution": false
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A026",
+      "A034",
+      "A005",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A007-SHARED-CORE-ROOT-CANCELLATION",
+    "version": 1,
+    "exact_statement": "For every nonconstant finite Boolean indicator B=OR_l b_l with rho_l=E b_l>0, every r>=1 and every fixed lambda_l>0 with sum lambda_l<=1, let p=2^-r, F=2 A_r B-1 on fresh core coordinates, g=2B-1, v=Var(F), s=sum lambda_l rho_l, D=product(1+p lambda_l rho_l)-1 and delta=log2(D/(p s)). There exist distinct actual partition-forest laws with K=1 when the spectral set meets the core and 1<=K<=|T| otherwise. Their root block equals v log2(s)+v delta+r(E K-v) +E sum_roots log2(1/rho_l), with 0<=r(E K-v)<=p I(g)/2 and v delta<=(log2 e) 2rp E B. Thus normalized common-core rarity overhead is at most (log2 e) I(F), leaving base rarity and all remaining coding costs unpaid. For disjoint private conjunctions rho_l=2^-w_l and Q=product(1-rho_l), E K-v=4p^2 Q(sum rho_l-(1-Q)). All E are unconditioned spectral-weighted sums over nonempty sets; entropy units are bits. A fixed complete-reference scale prior lambda^(j)=2^-j lambda, w_j=1/((j+1)(j+2)) pays v for selecting j=0.",
+    "hypotheses": [
+      "uniform finite cube",
+      "fresh r>=1 conjunction core",
+      "B nonconstant",
+      "rho_l>0",
+      "positive fixed incidence weights with sum<=1",
+      "actual conditioned partition forests",
+      "bits"
+    ],
+    "statement_sha256": "0d08e23fa6995ac6bb05140d5410161cafb3c6ed6233519eacd75e25463a075e",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": {
+      "original": {
+        "path": "REPORT.md",
+        "sections": "Derivation 1-6",
+        "companion": "ROOT_NORMALIZATION.tex"
+      },
+      "original_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261011T215236Z-account05-A007-root-normalization\\CLAIMS.json",
+      "original_claims_sha256": "56aa22843028e08adfd370f9d2d030a5e116d4b942fc4885f8bdc5d9cc644516",
+      "review": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\JOINT_CODE_REVIEW.md"
+    },
+    "proof_dependencies": [
+      {
+        "source": "source_material/reductions/paper/forests.tex",
+        "locator": "thm:posteriorforest and eq:forestconditioning",
+        "status": "source-complete baseline"
+      },
+      {
+        "source": "SEED_LEMMAS.md",
+        "locator": "Section 2",
+        "status": "source-complete elementary mixture interface"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A086/account05",
+        "at": "2026-10-12T00:03:14.432490+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\JOINT_CODE_REVIEW.md",
+        "source_sha256": "ba8973d7c6da428e47b95062e6bb0a3dbf42bdb36b71451b9f9a91b2000bef06",
+        "method": "Independent analytic reconstruction of complete originals, independent integer Walsh/Fraction and rigorous rational-log normalizer, prefix, admission and composition checks.",
+        "source_claims_sha256": "56aa22843028e08adfd370f9d2d030a5e116d4b942fc4885f8bdc5d9cc644516",
+        "source_statement_hash_convention": "statement text only",
+        "canonical_statement_hypotheses_sha256": "8bbce2e85a05ee29c846084a20570cd7b4f85a0d5675e64368e8489c7e07f8aa",
+        "repair_contribution": false
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A014",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "B02-A008-DICTIONARY-QUOTIENT-CODE",
+    "version": 1,
+    "exact_statement": "For every finite fixed rational gate table with nonempty supports, positive normalized dictionary-size and local-subset laws, the dictionary-first generator and its finite output quotient admit computable prefix decoders with each selected gate name occurring once in the record and canonical roots/attachments requiring no extra fields. On the sunflower f_m=x0-(1+x0)*prod_i(1-x_i)/2 for every integer m>=1, the specified normalized output reference has nonempty spectral expected ideal cost <25I(f_m)/4 and full-output prefix expected length <33I(f_m)/4; raw latent-record cost is at least (1-2^-m)^2 log2(m). Ordinary addressing has a dedicated exact 2a-bit code.",
+    "hypotheses": [
+      "uniform sign cube for Boolean application",
+      "all logarithms base two",
+      "fixed rational structural model known to encoder and decoder",
+      "dictionary subset laws positive on all nonempty local subsets",
+      "sample-dependent model selection is paid by a fixed normalized prior",
+      "output quotient need not recover original latent record"
+    ],
+    "statement_sha256": "ea1737df5842d834546a101d59cc86c0824308079accf5039f2261b893586367",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": {
+      "original": {
+        "run_id": "20261011T221357Z-account05-A008-gate-label-compression",
+        "path": "WHOLE_SET_CODEC.tex",
+        "validation": "code/check.py and out/CHECK.json"
+      },
+      "original_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261011T221357Z-account05-A008-gate-label-compression\\CLAIMS.json",
+      "original_claims_sha256": "c4fc6bd502aad208e8cbf9668cc778090812b028aac1bea7fa1508cb7211d281",
+      "review": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\JOINT_CODE_REVIEW.md"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A086/account05",
+        "at": "2026-10-12T00:03:14.432490+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\JOINT_CODE_REVIEW.md",
+        "source_sha256": "ba8973d7c6da428e47b95062e6bb0a3dbf42bdb36b71451b9f9a91b2000bef06",
+        "method": "Independent analytic reconstruction of complete originals, independent integer Walsh/Fraction and rigorous rational-log normalizer, prefix, admission and composition checks.",
+        "source_claims_sha256": "c4fc6bd502aad208e8cbf9668cc778090812b028aac1bea7fa1508cb7211d281",
+        "source_statement_hash_convention": "canonical statement+hypotheses",
+        "canonical_statement_hypotheses_sha256": "ea1737df5842d834546a101d59cc86c0824308079accf5039f2261b893586367",
+        "repair_contribution": false
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A011",
+      "A069",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A012-HEREDITARY-ACTIVATION-ADMISSION",
+    "version": 1,
+    "exact_statement": "For any Boolean function class C containing constants and literals and closed under sign reversal, physical coordinate restrictions, disjoint Boolean products and point activation on fresh controls, for every Boolean f and integers t,r>=1, membership of f in C is equivalent to membership of g_t=z*product_{j=1}^t f(x^(j)) and equivalent to membership of 1+A_r(g_t-1). Furthermore, Let R consist of Boolean signs with finite globally read-once AND/OR/parity/negation formula certificates, literal or constant leaves and no opaque Boolean leaves. R is closed under restrictions, sign reversal, disjoint substitution, disjoint products, balancing and point activation on fresh controls. Every f in R satisfies corrected product-biased E(f)<=C0*(I(f)-Var(f)), C0=2+4/ln(2), and H(f)<=C0*I(f) for uniform original inputs. The balanced three-bit multiplexer M(x,y,z)=(1+x)y/2+(1-x)z/2 and all its activated balanced tensor powers are outside R. Overlapping OR substitution does not preserve R. For the control-first r-bit point activation of a fresh literal y, with p=2^(-r), the expected control depth D=2(1-p), I_sel=rp, I=p(r+1), and the uncompressed two-bits-per-query transcript has cost/I=4(2^r-1)/(r+1), tending to infinity. Every exact finite spectral witness W retaining its physical leaf label satisfies H(W|S)>=D-H(F)>=2(1-p)-4rp-2p*log2(e), whose displayed lower bound tends to two bits.",
+    "hypotheses": [
+      "Uniform cubes of arbitrary finite dimension",
+      "Fresh independent blocks and sign z",
+      "A_r is a single-point indicator on r fresh controls",
+      "All five class hypotheses are required",
+      "Each original input label occurs at most once globally",
+      "Arbitrary finite gate fan-in and depth",
+      "Product inputs for corrected E; uniform inputs for H/I",
+      "Delete deterministic children before dividing by child variance"
+    ],
+    "statement_sha256": "504db88a7c77fd5cc5e70b09a6e3f3bad5897cac0261c68a2e8af4a4ed0ea795",
+    "contributors": [
+      "account05/A012"
+    ],
+    "proof_source": {
+      "original": {
+        "path": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T215648Z-account05-A012-sparse-activation-accounting\\HIDDEN_CORE_TEST.md",
+        "deliverable": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T215648Z-account05-A012-sparse-activation-accounting\\ACTIVATION_ADMISSION.tex"
+      },
+      "original_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T215648Z-account05-A012-sparse-activation-accounting\\CLAIMS.json",
+      "original_claims_sha256": "7b65d7906edf7783937af359a73fe5e9f2bd2aaa8873cb07d4c9da370a1b3721",
+      "review": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\JOINT_CODE_REVIEW.md"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A086/account05",
+        "at": "2026-10-12T00:03:14.432490+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\JOINT_CODE_REVIEW.md",
+        "source_sha256": "ba8973d7c6da428e47b95062e6bb0a3dbf42bdb36b71451b9f9a91b2000bef06",
+        "method": "Independent analytic reconstruction of complete originals, independent integer Walsh/Fraction and rigorous rational-log normalizer, prefix, admission and composition checks.",
+        "source_claims_sha256": "7b65d7906edf7783937af359a73fe5e9f2bd2aaa8873cb07d4c9da370a1b3721",
+        "source_statement_hash_convention": "canonical statement+hypotheses",
+        "canonical_statement_hypotheses_sha256": "504db88a7c77fd5cc5e70b09a6e3f3bad5897cac0261c68a2e8af4a4ed0ea795",
+        "repair_contribution": false
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A011",
+      "A013",
+      "A086",
+      "A094"
+    ]
+  },
+  {
+    "claim_id": "A086-ACTIVATION-REFERENCE-DEBT-PROJECTION",
+    "version": 1,
+    "exact_statement": "For every balanced finite uniform Boolean core g and every r>=1, put p=2^-r,F=1+A_r(g-1),v=p(2-p),Pplus=P_F conditioned on nonempty output. For every subprobability reference Q positive on the support of Pplus, let M=sum Q,q=Q/M,beta=1/(2-p),gamma=q(data spectral set nonempty),and q_g=q(data set | nonempty data). Then vD(Pplus||Q)=-v log2 M+vD_Ber(beta||gamma)+pD(P_g||q_g)+v(1-beta)D(Unif(nonempty control subsets)||q(control | empty data))+p sum_T P_g(T)D(Unif(all control subsets)||q(control | data T)). Consequently vD(Pplus||Q)>=pD(P_g||q_g). Infinite missing-support debt is interpreted in the extended sense. This localizes complete reference debt, without asserting cheap universal references or a lower bound by seed entropy.",
+    "hypotheses": [
+      "balanced actual Boolean core on a finite uniform data cube",
+      "fresh independent r>=1 point controls",
+      "base-two entropy and divergence",
+      "Q is a complete nonempty-output subprobability positive on target support",
+      "conditionals defined in finite-debt case; data reference may have additional support"
+    ],
+    "statement_sha256": "71189c4475892bc8e788be5c988c27e9d0347361a9d5974f4e29bb011b9ac34f",
+    "contributors": [
+      "A086/account05"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\ACTIVATION_DEBT_PROJECTION.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T234041Z-account05-A086-joint-code-referee\\out\\BRIDGE_RESULTS.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A003",
+      "A005",
+      "A007",
+      "A008",
+      "A011",
+      "A012",
+      "A089",
+      "A094",
+      "A096",
+      "B20"
+    ]
+  }
+]

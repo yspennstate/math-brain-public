@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_initial": "2bdcfe0c2e6570f527741ea41473bfddf115d314",
+  "control_commit_before_publication": "c3774154f5921025e267d40de1b02d7947a68baa",
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260924T013355Z-account01-B13-qform-auto11",
+  "status": "SUPPORTING_THEOREMS_PROVED_FULL_TARGET_OPEN",
+  "full_brain_connected": false,
+  "memory_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY-REFUTED",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B13",
+    "run": "20260923T235922Z-account02-B13-qform-r38",
+    "theorem": "QFORM-TAUCLEAN-PHYSICAL-E2-CROSSING-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3da714c7dea66b4f81087bf9637a6eac060b5b6a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260923T235922Z-account02-B13-qform-r38/REPORT.md",
+    "applied_to": "factorization of the actual physical tau-clean crossing into two rank-two frame volumes, followed by a physical-bank threshold split"
+  },
+  "proved_this_run": [
+    {
+      "id": "QFORM-EXACT-WITNESSWISE-PRODUCT-PURIFICATION-v1",
+      "statement": "Every bounded nonnegative product-kernel witness under cap-one mass-one marginals can be replaced coordinatewise by unit-measure indicators with no decrease in the objective; slab witnesses transfer for the same A and interval with zero loss."
+    },
+    {
+      "id": "QFORM-TAUCLEAN-CROSSING-FRAME-BALANCE-v1",
+      "statement": "In partner r38's hard exact-rank-two chamber, its physical crossing satisfies Q_G(C)Q(C^c)>=1/384, hence both physical coefficient Gram matrices have lambda_min>=1/384."
+    },
+    {
+      "id": "QFORM-TAUCLEAN-PHYSICAL-BANK-ONEFIFTH-v1",
+      "statement": "The partner crossing forces either fixed leverage mass within rho^-1/5 of the hub line or a physical transverse bank with lambda_min>1/768 and uniformly normalized tau curvature <=535.261618270 rho^-1/5."
+    }
+  ],
+  "exact_identities": [
+    "sum_{i<j in S} det(u_i,u_j)^2 = det(U_S^T U_S)",
+    "sum_{j!=i} det(u_i,u_j)^2 = ||u_i||^2",
+    "det A[E,F]^2 = (det Lambda)^2 q_E q_F for disjoint physical pairs E,F in A=D+U Lambda U^T",
+    "tau_ij = s_i s_j [d_k(r_i-r_j)^2 + c d_i/s_i + c d_j/s_j] after deterministic coefficient-frame alignment"
+  ],
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b790bbb10ee52867f234af62a7d9aa76b02e7094",
+    "report": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260924T013355Z-account01-B13-qform-auto11/REPORT.md",
+    "diagnostic": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260924T013355Z-account01-B13-qform-auto11/CHECK.py"
+  },
+  "unresolved_implication": "QFORM-PHYSICAL-BANK-15-TO-PRODUCT-RECEIVER-v1",
+  "next_step": "Consume the entire hub-strip or transverse tau-clean bank in an original-coordinate product-preserving small-ball/density receiver, retaining same-bank curvature, outside couplings and the general every-cut s5=O(rho^-1) tail.",
+  "target_status": "OPEN",
+  "continuity_status": "OPEN"
+}

@@ -1,0 +1,67 @@
+{
+  "problem_id": "P0104",
+  "as_read_utc": "2026-10-10T04:54:21.590897+00:00",
+  "historical_ranking_status": "attempted_un (2026-09-07)",
+  "current_openness": "UNKNOWN",
+  "novelty": "UNKNOWN; not claimed",
+  "primary_source_recovered": true,
+  "primary_source": {
+    "title": "50 years of first passage percolation",
+    "authors": [
+      "Antonio Auffinger",
+      "Michael Damron",
+      "Jack Hanson"
+    ],
+    "version": "arXiv:1511.03262v2 (2016-09-23)",
+    "url": "https://arxiv.org/pdf/1511.03262v2#page=37",
+    "locators": "Questions 13 and 15, printed page 37 / zero-based PDF page 36; context printed pages 34-35",
+    "question_13_paraphrase": "For every d>=2 and suitable edge distributions F, prove chi<1/2; in d=2 identify chi=1/3.",
+    "question_15_paraphrase": "Establish a positive fluctuation exponent in appropriate dimensions.",
+    "short_supporting_quote": "under suitable conditions on F",
+    "formalization_limit": "The source does not fix that distribution class or a unique meaning of variance scaling; context discusses several alternatives and the absence of flat edges."
+  },
+  "working_convention_only": "For an audit of variance powers, fix one law and one direction before n tends to infinity, and state explicitly whether chi is a log-variance limit or a liminf/limsup. No existence is assumed from the title.",
+  "supporting_primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1401.0917v2",
+      "locator": "Theorem 1.1 and equations (1.2)-(1.4)",
+      "checked_scope": "Ordinary iid nonnegative lattice FPP, d>=2, atom at zero below bond-percolation criticality; exponential moments give concentration at sqrt(n/log n). Uniform[1,1+epsilon] meets those distribution assumptions."
+    },
+    {
+      "url": "https://arxiv.org/html/1105.4566v3",
+      "locator": "Theorem 1.1, conditions A1-A4",
+      "checked_scope": "The KPZ relation is conditional on matching upper and lower exponent definitions, with nearly-gamma and moment assumptions in this theorem; it does not determine the exponent values."
+    },
+    {
+      "url": "https://arxiv.org/abs/2604.01214v1",
+      "locator": "Abstract; submitted 2026-04-01",
+      "checked_scope": "Polynomial improvement concerns a class of rotationally invariant Riemannian FPP, not the general lattice question."
+    }
+  ],
+  "canonical_live_store": "~/math-brain-build/local/population/brain.sqlite3 (mode=ro)",
+  "canonical_target_node_id": "claim_32684d2ece2943d218971312722a87f42333b030b9c7a29f034d6c11f31f8f1d",
+  "canonical_target_digest_as_stored": "sha256:64bc90a33123127f60c411d995068bc7fb38ffee78b66e91fe18eb3c89071163",
+  "canonical_target_statement_as_stored": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Under suitable nondegenerate iid passage-time assumptions, prove a fluctuation exponent strictly below1/2, identify the planar exponent as1/3, and establish a positive exponent in a suitable dimension. Source: Auffinger, Damron and Hanson: 50 years of first-passage percolation, Questions13 and15, PDF pp.34 and40; Section3.\nPosed in Auffinger, Damron and Hanson: 50 years of first-passage percolation\nStatus as recorded in the campaign ledger on 2026-09-07",
+  "prior_attempt_node_id": "claim_9ffe9930e9d9ed5c9d98ff4d61a32155d942cd754628487fc173a2d2c6493b2f",
+  "prior_attempt_scope": "The stored earlier attempt only separates logarithmic variance improvement from a strict power exponent; its non-FPP sum example is not repeated as new work.",
+  "prior_checks": [
+    "Named H/I attempts and lean reports: id/title-targeted grep found no P0104 result.",
+    "Team O lists P0104 unfinished; this is a board status, not a mathematical verdict.",
+    "Old original Codex worktree path referenced by C-intake README is absent.",
+    "C-intake schema uses C-prefixed ids; recovered P0104 through two id-filtered export rows and exact live-node reads.",
+    "Owner Big Open problem directory README was checked for the named probability scope; no exhaustive solved/retired-work check is claimed.",
+    "The separate math-research-brain checkout was inspected only for its store locator; a separate canonical-store content search is not certified."
+  ],
+  "source_identity_checks": {
+    "live_and_export_digests_agree_for_two_selected_nodes": true,
+    "original_ledger_bytes_verified": false,
+    "primary_pdf_byte_hash_verified": false,
+    "mathematical_proof_from_hashes": false,
+    "legacy_locator_note": "The imported card gives PDF pages 34 and 40 without a source version. Both recovered questions are on printed page 37 in v2; an older-version comparison is pending."
+  },
+  "remaining_target_gap": "A precise admissible fixed-law class, chosen exponent definition and all matching asymptotic bounds remain necessary. No lemma here controls fixed-law unrestricted optimization beyond its finite window.",
+  "formal_check": {
+    "performed": false,
+    "reason": "Written elementary proofs and exact diagnostics only."
+  }
+}

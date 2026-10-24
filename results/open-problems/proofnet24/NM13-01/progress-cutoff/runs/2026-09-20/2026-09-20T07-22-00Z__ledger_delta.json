@@ -1,0 +1,21 @@
+{
+  "slot": "NM13-01",
+  "parent": "T08",
+  "source": "Salez arXiv:2508.21055 Problem 2.3",
+  "source_status_before": "OPEN",
+  "source_status_after": "OPEN",
+  "source_level_gain": "Proved source-convention total-variation cutoff for reversal-augmented symmetrized arc graphs of fixed-degree edge-transitive long-range-expander bases. The output graphs are vertex-transitive spectral expanders outside every fixed long-range-expansion constant. Center: ((2d-1)/(d-2)) log_{d-1} n, equivalently ((2d-1)/(d-2)) log_{d-1}(N/d), with O(sqrt(log N)) window.",
+  "mechanism_gain": "Exact lazy line-graph lumping plus odd Hodge-Green L1 cancellation for the reversal-augmented arc graph; separately, proved uniform exponential concentration of root-stabilizer orbit sizes under stationarity from transitivity plus spectral expansion, and the exact identity V_KL(t)=Var_{nu_t}(log(nu_t/barpi)(Y_t)), eliminating quotient rank/orbit-size terms from the dynamic information variable.",
+  "obstruction_removed": "The previous (log r)^2 stabilizer-quotient rank penalty is an artifact: stationary orbit-size surprisal has O_{d,gamma}(1) variance and orbit sizes cancel exactly from the time-t likelihood ratio. High quotient rank is therefore not itself an information-theoretic obstruction.",
+  "remaining_obstruction": "Control the time-t quotient likelihood-ratio varentropy Var_{nu_t}(log(nu_t/barpi)) from vertex transitivity plus ordinary spectral expansion, without a supplied spherical/product/Hodge factorization.",
+  "continuity": "Preserves the pre-LIVE NM13-01 handoff and all earlier T08 classes. The immediately preceding arc-cover theorem remains valid and untouched; this run changes the graph by adding the reversal matching and weakens the base symmetry assumption from arc-transitive to edge-transitive.",
+  "partner_split": "P26's newest checked route is trimmed Green/spherical transfer with exceptional modes and mixed-distance outputs; this run uses a transitivity/Hodge quotient route and does not duplicate that mechanism.",
+  "checker": "2026-09-20T07-22-00Z__reversal_arc_orbit_checker.py",
+  "checker_output": "2026-09-20T07-22-00Z__reversal_arc_orbit_checker.out",
+  "checker_result": "ALL_EXACT_CHECKS_PASS",
+  "prewrite_master": "265e0acef4a8f3719a23d8327090585f32317807",
+  "publication_novelty": "UNVERIFIED",
+  "runtime_model": "GPT-5.6 Sol",
+  "runtime_reasoning": "UNVERIFIED",
+  "next_attack": "Use the exact quotient-density identity to seek an L1/log-likelihood gradient or occupation-time estimate on stabilizer quotients; stress-test first on high-rank transitive expanders where ambient L2 and raw NBRW trace are misleading."
+}

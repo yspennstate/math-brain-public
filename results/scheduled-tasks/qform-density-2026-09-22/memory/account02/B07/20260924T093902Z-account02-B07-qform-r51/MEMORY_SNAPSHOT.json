@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B07",
+  "run_id": "20260924T093902Z-account02-B07-qform-r51",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "BALANCED_RANKR_PHYSICAL_CUT / E3_VOLUME_MARGINAL_OPTAIL_STABILITY / MARGINALFREE_E3_UPGRADE / PARTNER_R51_GLOBAL_ROUTE / FULL_QFORM_OPEN",
+  "full_qform_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity_status": "OPEN",
+  "brain_status": "VERIFIED_BRAIN_RETRIEVAL_AND_RECEIVER_USE",
+  "latest_completed_partner": {
+    "account": "account03",
+    "slot": "B07",
+    "run_id": "20260924T093712Z-account03-B07-qform-r51",
+    "math_commit": "87ddc6e4974103cb1f992bab5cfeccadee810ddb",
+    "result": "FINITERANK_DIFFUSE_CARRIER_E3_AND_HEAVY_PACKET_ROUTE"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-BALANCED-RANKR-CUT-v1",
+      "statement": "For symmetric rank-r R=U Lambda U^T with delta=max physical range leverage and rho=sqrt(r delta)<1, some literal physical cut I|J has both frame Grams >=(1-rho)I/2 and s_k(R[I,J])>=((1-rho)/2)s_k(R). If delta<=1/(4r), the pinned e5 Theorem-D row-volume gate holds and ||p_Q||infinity<=24 sqrt(e)/s3(R)."
+    },
+    {
+      "id": "QFORM-E3-MARGINAL-OPTAIL-STABILITY-v1",
+      "statement": "If M=M0+E, ||E||op<=eta, s3(M)>=mu, P0 projects onto col(M0), h0=max row leverage of P0, then for any eta<tau<=mu the ACTUAL 3-volume row marginals satisfy alpha_i<=(sqrt(h0)+eta/tau)^2+3(tau/mu)^2. The proof uses 3 e3(x)>=x3 e2(x) and a strong-subspace angle bound."
+    },
+    {
+      "id": "QFORM-BALANCED-CUT-MARGINALFREE-UPGRADE-v1",
+      "statement": "Using the completed marginal-free physical-E3 theorem, if A[L,L]=R+E with rank R=r>=3, ||E||op<=eta, max range leverage delta<=1/(4r), and sigma=s3(R)>4 eta, then a literal physical crossing has s3>=sigma/4-eta and ||p_Q||infinity<=10.5501688311648/(sigma/4-eta), with continuity."
+    }
+  ],
+  "live_application": {
+    "eta_H62": 0.001631502080283948,
+    "rank4_diffuse_leverage_threshold": 0.0625,
+    "rank4_diffuse_s3_payment_threshold": 0.006526008321135792,
+    "statement": "For the r50 physical H with |H|<=62 and L=S\\H, any rank-four approximant to A[L,L] with max physical range leverage<=1/16 and s3>4 eta_H62 is now paid by a literal E3 crossing."
+  },
+  "partner_integrated_result": {
+    "id": "QFORM-FINITERANK-DIFFUSE-CARRIER-E3-v1",
+    "statement": "On the r50 global form A=diag(C,0)+P54+G, if s3(C)<=1/64 then the rank<=56 diffuse carrier branch is paid (<161.751); otherwise a physical heavy set K of size<=895 is forced, and if s3(A[K,K])>=1/64 the physical-core gate pays (<16625.398). The s3(C)>1/64 affine T-side branch remains unpaid."
+  },
+  "pinned_source_application": {
+    "source_commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "result": "Theorem D volume-sampling Brascamp-Lieb",
+    "application": "On an exact low-rank diffuse physical principal block with delta<=1/(4r), the balanced cut has actual I-side 3-volume marginals<=1/r<=1/3 and s3(cross)>=s3(R)/4, yielding ||p_Q||infinity<=24 sqrt(e)/s3(R)."
+  },
+  "first_unpaid_implication": {
+    "id": "QFORM-R51-FINITE-HEAVY-PACKET-OR-TSIDE-THREECURVATURE-PLUS-LOCAL-HEAVYWEAK-RECEIVER-v1",
+    "statement": "Consume either the T-side s3(C)>1/64 branch with arbitrary conditioning-generated affine terms, or the near-rank-two-T heavy packet K<=895 with weak principal third singular value, while simultaneously exploiting that the H62 local rank<=4 approximant must be rank<=3, weak at s3<=0.006526008321135792, or physically heavy (range leverage>1/16). Retain all couplings and the separate E_star>1 branch."
+  },
+  "canonical_math": {
+    "early_commit": "0f8633e165d50f1d67cb037447c9cced15bbb820",
+    "report_commit": "4ef3a5f9b8a3c313df2c9b30bf65076f593b6889",
+    "source_refresh_addendum_commit": "0489be649867dd226d4b6cea9ded74c973f19d46"
+  },
+  "handoff_commit": "31d518c8d1442bb463b3a79f9c1e99d445da2a00",
+  "notes": "Latest partner r51 appeared after the main REPORT and is integrated in SOURCE_REFRESH_ADDENDUM.md and this snapshot. No single-minor inference, spectral rotation independence, hidden moments/support, or deletion of the operator tail is used."
+}

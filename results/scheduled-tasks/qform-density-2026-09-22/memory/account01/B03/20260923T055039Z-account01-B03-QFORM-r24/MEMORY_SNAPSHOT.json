@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B03",
+  "run_id": "20260923T055039Z-account01-B03-QFORM-r24",
+  "control_commit_initial": "9a77456b1de0a4a76705d9f12a9afea1bc625127",
+  "control_commit_prepublication": "832d4c92e0047038b5a48865065172b98aad73e8",
+  "control_revision": "2026-09-22.15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuity_status": "NOT_PROVED_IN_THIS_BRANCH",
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "15b089abfd2861b7fad2d0f7e3e149c02f281c2b",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260923T055039Z-account01-B03-QFORM-r24/REPORT.md",
+  "partner_results_applied": [
+    {
+      "source": "yspennstate/math-open-problems@33cd6fae4e8adb85cf1ee43a244f628e563f1cbf",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260922T161346Z-account02-B03-QFORM-r12/REPORT.md",
+      "result": "translation-uniform half-Riesz bound for every invertible indefinite binary quadratic: sup_t E|t-R|^-1/2 <=16 sqrt(2)|det S|^-1/4"
+    },
+    {
+      "source": "yspennstate/math-open-problems@ab591d183afaaeb8c8accbc9a80c06241f433532",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260923T041654Z-account02-B03-QFORM-auto11/REPORT.md",
+      "result": "physical indefinite-pair logarithmic transducer: residual H sqrt(rho) small-ball implies density <=4 sqrt(2H)(D kappa)^-1/4"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-PHYSICAL-3X3-WELL-CONDITIONED-v1",
+    "statement": "For every symmetric physical 3x3 B with sigma_min(B)>=s>0 and every independent cap-one triple, arbitrary affine perturbations of X^T B X have density sup <= C3/s, C3=16 sqrt(2)(1601/512)^(1/8)=26.093068347867227. The same bound holds for an ambient quadratic form after conditioning outside any such original-coordinate principal triple.",
+    "proof_mechanism": "Diagonal/off-diagonal dichotomy. A large physical diagonal is handled by one square pivot plus either the partner indefinite binary half-Riesz theorem or an elementary definite ellipsoid bound. If all diagonals are small, row norm forces a quantitatively indefinite physical pair; pair completion leaves a scalar square and the partner logarithmic transducer applies. Optimizing the split gives c^2=512/1601.",
+    "time_integral": "Downstream of the density theorem, |phi|^2=phi_(q-q') and Plancherel give int |phi|^2 <=2 pi C3/s without breaking sum/difference dependence.",
+    "target_example": "B0=[[0,1,1],[1,0,1],[1,1,0]] has spectrum {2,-1,-1}; the sharper branch constant is 8."
+  },
+  "unresolved_implication": "The bare three-large-eigenvalue hypothesis does not force a uniformly conditioned physical principal triple. An aggregate-before-inversion product-coordinate compiler is still needed to route every target matrix into this branch or existing ridge/diffuse/grouped-bank/mixed-hub branches.",
+  "full_brain_connected": false,
+  "execution_label": "WITHOUT_VERIFIED_BRAIN"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B09",
+  "run_id": "20260923T084809Z-account01-B09-QFORM-auto13",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "new_claims": [
+    "QFORM-MULTIHUB-PLUCKER-SMOOTHING-v1"
+  ],
+  "new_theorem_summary": "For h literal physical hubs and a leaf block D+sum lambda_k v_kv_k^T, if the augmented source-coordinate coefficient frame W=[v_1,...,v_r,c_1,...,c_h] has positive Gram determinant and positive Pluecker disjointness rho, then Q has a continuous density bounded by ((r+2h)/(r+2h-2))*exp((r+h)/(r+2h))*[rho det(W^TW) prod|lambda_k|]^(-1/(r+2h)); the same constant gives a linear interval bound. The full physical hub core and conditioned outside blocks are arbitrary.",
+  "partner_result_applied": {
+    "account_slot": "account02/B09",
+    "claim": "QFORM-TWOHUB-PLUCKER-SMOOTHING-v1",
+    "source_repository": "yspennstate/math-open-problems",
+    "source_commit": "bc348aa1a3631b0a0a3a9939cbb6b023578e9abc",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T064043Z-account02-B09-QFORM-r13/REPORT.md",
+    "actual_application": "For Q_(2,m)=epsilon(X_1^2+X_2^2)+2X_1<c_1,Y>+2X_2<c_2,Y>+Z^2 with disjoint flat size-m leaf groups, Delta=1 and rho=(1-1/m)^2, so ||p||_infinity<=2sqrt(e)(1-1/m)^(-1/2); at m=16 this is <3.406."
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e59f921c1b2be3de75021cf6bec44a10b40a2662",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T084809Z-account01-B09-QFORM-auto13/REPORT.md",
+    "blob": "8a8aa662a3f9e4cbb6f0ce29cf5d9a6d392ec634",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T084809Z-account01-B09-QFORM-auto13/CHECKS.md"
+  },
+  "source_controls": {
+    "readme_sha": "fca13a89d221115332ce5e60d49554ee0e213efa",
+    "correction_inbox_sha": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+    "assignment_sha": "a0504f7ec03356097c2bfbd8990638d1f46a928c",
+    "memory_protocol_sha": "0d902d56688f4b5c575f5b921ddf9f6709e88312"
+  },
+  "corrections_respected": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "continuity_status": "PROVED_ON_NEW_THEOREM_SCOPE; FULL_TARGET_OPEN",
+  "unresolved_implication": "QFORM-HIGHRANK-LEAF-TO-MULTIHUB-FRAME-v1",
+  "next_step": "Convert small Pluecker disjointness/high-leverage in the two-hub frame into either a genuinely new third physical coupling direction with quantitative augmented determinant/disjointness, or an existing finite-core, pair, ridge, grouped-square, or cross-volume exit, without deleting small random quadratic coefficients."
+}

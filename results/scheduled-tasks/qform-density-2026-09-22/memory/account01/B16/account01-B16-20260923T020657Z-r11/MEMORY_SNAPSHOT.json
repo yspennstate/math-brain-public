@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B16",
+  "run_id": "account01-B16-20260923T020657Z-r11",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "startup_commit": "bcbdd804d75bdff296a15f19cc58eacdf14d4fa5",
+    "final_refresh_commit_before_handoff": "9cacfb6546adc0a8538c1495a0a7e984a9494856",
+    "owner_control_revision": "2026-09-22.15"
+  },
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-PROJECTION-CAP-NONZERO-PIVOT-BARRIER-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-RANK2-AFFINE-HALF-RIESZ-v1",
+      "source": "yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md",
+      "scope_used": "two-dimensional orthonormal product projection with affine term in projected range; half-Riesz constant 16 sqrt(30)|det K|^(-1/4)"
+    },
+    {
+      "id": "QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1",
+      "source": "yspennstate/math-open-problems@80f95e245b7f3418e8da36173ac4eb9d81fb58a7:proofnet24/QFORM-density/fleet-2026-09-22/account01/B16/20260923T003846Z/REPORT.md",
+      "scope_used": "one genuine independent original scalar plus dependent planar receiver of density cap M, with nonzero cross-transverse resource P"
+    },
+    {
+      "id": "QFORM-PROJECTION-CAP-DEFINITE-RECEIVER-CLASSIFICATION-v1",
+      "source": "yspennstate/math-open-problems@80f21f0a650baffd62c8b9e4d21babd30ade95f0:proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260923T012820Z-account02-B16-QFORM-r22/REPORT.md",
+      "scope_used": "definite planar receiver; applied to strict-N3 family to obtain density <=2 pi"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-SCALAR-PAIR-FACTOR-BRIDGE-v1",
+    "status": "PROVED_SUPPORTING_TARGET_LEVEL_BRANCH",
+    "statement": "If after conditioning disjoint outside original coordinates the remaining quadratic factors through one original scalar X0 and a genuine two-dimensional orthonormal product projection Y, with a fixed symmetric 3x3 core B satisfying min_j |lambda_j(B)|>=s>0, then ||p_Q||_infinity <=16 sqrt(30) 2^(1/4)/s <104.217/s. Arbitrary outside quadratic terms/couplings are allowed when they enter the conditioned core only as affine/constant terms.",
+    "canonical_source": "yspennstate/math-open-problems@f3a99499eee97ea09eeebfb3ba0a6b37291364c9:proofnet24/QFORM-density/fleet-2026-09-22/account01/B16/account01-B16-20260923T020657Z-r11/REPORT.md",
+    "continuity": "NOT_CLAIMED"
+  },
+  "partner_application": {
+    "partner": "account02/B16",
+    "source": "yspennstate/math-open-problems@80f21f0a650baffd62c8b9e4d21babd30ade95f0:proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260923T012820Z-account02-B16-QFORM-r22/REPORT.md",
+    "actual_inequality": "For Q_delta=delta X0^2+2 sqrt(2(1+delta)) X0 Y+Y^2+Z^2, delta>-1, condition on X0 and apply the definite receiver theorem to obtain ||p_Qdelta||_infinity<=2 pi uniformly."
+  },
+  "unresolved_implication": "QFORM-N3-SCALAR-PAIR-OR-VOLUME-EXIT-v1: derive from a strict N3/high-leverage survivor either a quantitatively nondegenerate scalar-plus-two-dimensional product factorization or an already-paid volume/ridge/determinant-pair/mixed-Fresnel exit, while retaining arbitrary residual spectrum.",
+  "review_status": "NO_INDEPENDENT_END_TO_END_REVIEW",
+  "full_qform_status": "OPEN",
+  "full_n3_status": "OPEN"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "directive": "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z",
+  "control_revision_seen_at_final_reread_before_handoff": "2026-09-22.2",
+  "campaign": "MOC4",
+  "account": "account04",
+  "slot": "B07",
+  "run_id": "20260922T001257Z-account04-B07-MOC4-r11",
+  "candidate_version": "MOC4-SO6-WEYL-v1",
+  "outcome": "AUXILIARY_ONLY",
+  "parent_target_status": "MOC4_OPEN_NOT_PROVED_NOT_DISPROVED",
+  "assignment": "Attempt a representation-theoretic or exterior-algebra proof of the shared mixed-minor constraint rather than a stronger untested positivity claim.",
+  "named_partner": "account01/B08",
+  "named_partner_snapshot_status": "NO_COMPLETED_ACCOUNT01_B08_MOC4_ARTIFACT_OBSERVED_AT_LAST_BOUNDED_CHECK",
+  "consumed_other_account_results": [
+    {
+      "worker": "account01/B07",
+      "path": "proofnet24/collective-MOC4/account01/B07/20260922T000420Z-b07-moc4-r1/REPORT.md",
+      "blob": "182e1f1b24a290b1a25d1bc0677b6b031e0c088d",
+      "use": "Exact D(P) identity and parity-free mixed assignment reduction MOC4-MIXED-ASSIGNMENT-v1."
+    },
+    {
+      "worker": "account03/B09",
+      "path": "proofnet24/collective-MOC4/account03/B09/20260921T235010Z-b09-moc4-r01/REPORT.md",
+      "blob": "94dc51181d3dbe98c2df07da7f3370c3787e270a",
+      "use": "Complement-pair R,D coordinates and middle-layer reduction."
+    }
+  ],
+  "new_result": {
+    "representation_normal_form": "After harmless phase normalization det(U)=1, Lambda^2 U restricts on the Hodge-real fixed space to O in SO(6), and SU(4)/{+/-I} maps onto SO(6). For the 3x3 array of real 2x2 blocks O_ab, r_ab=(1/2)||O_ab||_F^2 and d_ab=det(O_ab).",
+    "weyl_form": "With G equal to the lower 3x3 block of H C H^T, the mixed assignment objective is g0 + sum_ab[G_ab det(O_ab) + (X_ab/4)||O_ab||_F^2]. The desired 24 permutation endpoints are exactly the W(D3)=W(A3)=S4 Weyl elements.",
+    "cartan_plane_form": "d_ab=-(1/2)tr(J_a O J_b O^T) is an adjoint-Cartan projection coefficient; r_ab=(1/2)tr(Pi_a O Pi_b O^T) is a two-plane overlap coefficient.",
+    "proved_rank_one_sectors": "Every single real rank-one D-sector is Weyl-extremal by compact Kostant convexity/skew trace rearrangement, and every single real rank-one R-sector is Weyl-extremal by symmetric trace rearrangement. The unpaid issue is simultaneous Weyl synchronization of the dependent spectral sectors.",
+    "spectral_decomposition": "X=Re(eta A+ (B+)^T); G=Re(eta[ahat3 bhat^T + ahat bhat3^T + (1/2)A- (B-)^T]), so the full residual is a fixed small sum of rank-one sectors rather than arbitrary G,X.",
+    "refuted_route": "Plain 6x6 Birkhoff/complement-centralizer relaxation is too weak. Exact spectra a=(4,5,-4,2), b=(2,5,-3,3), eta=1 give best S6=best complement-centralizer48=6491/4, best Weyl24=2801/4, gap=1845/2. This refutes only the relaxed proof route, not MOC4.",
+    "remaining_obligation": "MOC4-SO6-WEYL-v1: prove the structured SO(6) quadratic functional is maximized at a D3 Weyl element."
+  },
+  "late_same_account_peer": {
+    "worker": "account04/B08",
+    "candidate": "MOC4-GENERIC-STRICT-SUPPORT-v1",
+    "handoff_blob": "dadbc3f9ca7e7d0ab3fac85a0fd85418dfeaa62f",
+    "integration": "Any failure can be taken on a generic strict-support locus with a unique maximizing permutation. The addendum gives exact SO(6) first- and second-order necessary conditions for a hypothetical non-Weyl local maximizer on that locus."
+  },
+  "scientific_delivery": {
+    "repository": "yspennstate/math-open-problems",
+    "root": "proofnet24/collective-MOC4/account04/B07/20260922T001257Z-account04-B07-MOC4-r11",
+    "report": {"commit": "5729cde68336b481543899d803beb73c1c16c51e", "blob": "2054ffca05aee70d57d3aa6723cc19bf983c7be8"},
+    "late_addendum": {"commit": "6f139f45f1a8067f27dcce30b1a081d1b466c1ac", "blob": "03ec40e4e4075f4f899e2f805ed215edd961a530"},
+    "exact_verifier": {"commit": "2f189d8fb716bba71ddb47d7769f7091e6eb40a3", "blob": "56c35978d5e4134f8c6b410a5565ebc321d13c49"},
+    "verification_output": {"commit": "8bc529a1e578b3c161ebc192696553dd3d30ed6a", "blob": "319308301194a4ece34bdc47adf1eda501b56081"},
+    "readback": "PASS"
+  },
+  "next_action": "On the B08 generic strict-support locus, use the SO(6) stationarity/Hessian equations plus the algebraically dependent rank-one decomposition of G,X to rule out a non-Weyl maximizer above the unique Weyl vertex. Do not revert to the refuted arbitrary S6/Birkhoff or common-marginal-lift routes.",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN_RESEARCH",
+  "full_brain_connected": false,
+  "benchmark_work_after_owner_stop": false,
+  "privacy_review": "SCOPED_MANUAL_PASS_NO_BENCHMARK_GOLD_NO_KEYS_NO_CREDENTIALS_NO_SCHEDULER_IDS_NO_MACHINE_PATHS_NO_UNRELATED_PRIVATE_DATA_NO_EMAIL_NO_DRIVE_NO_PUBLIC_POSTING_NO_PAID_OR_REMOTE_COMPUTE"
+}

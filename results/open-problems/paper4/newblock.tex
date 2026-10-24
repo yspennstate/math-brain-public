@@ -1,0 +1,79 @@
+We first record the horseshoe class and the conditional genericity statement,
+then discuss why the hypothesis of (ii) is delicate.
+
+\begin{definition}\label{def:O-recall}
+$\mathcal O\subseteq\Cs$ is the set of maps carrying a \emph{strict two-branch
+horseshoe}: disjoint nonempty closed intervals $A_1<A_2$ and $\theta>0$ with
+$g(A_i)\supseteq[\min A_1-\theta,\,\max A_2+\theta]\subseteq(0,1)$ for $i=1,2$.
+As in \cite{companion}, $\mathcal O$ is $\rsup$-open (an interval image
+containing an interval with margin $\theta$ persists with margin $\theta/2$
+under $\rsup$-perturbations below $\theta/2$), every $g\in\mathcal O$ has
+topological entropy at least $\log2$, and every map in $\mathcal O$ is DC1 by
+Schweizer--Sm\'\i tal \cite{SS}.
+\end{definition}
+
+\begin{proof}[Proof of Theorem \ref{thm:strata}(ii)]
+By (i) we may work with $\rsup$ and its system metric, and $\mathcal F^\mu$ is a
+complete metric space.  The limit-map function
+$\lm(f_{1,\infty})=\lim_nf_n$ is $1$-Lipschitz from $\mathcal F^\mu$ to
+$(C^\mu_s,\rsup)$, so
+$U:=\lm^{-1}(\mathcal O\cap C^\mu_s)\cap\mathcal F^\mu$ is relatively open.
+It is dense: given $(f_n)\in\mathcal F^\mu$ with limit $f$ and
+$\varepsilon>0$, the hypothesis of (ii) provides
+$h\in\mathcal O\cap C^\mu_s$ with $\rsup(h,f)<\varepsilon/2$; pick $N$ with
+$\rsup(f_n,f)<\varepsilon/2$ for $n>N$ and pass to the system
+$(f_1,\dots,f_N,h,h,\dots)\in\mathcal F^\mu$, which is $\varepsilon$-close and
+has limit $h$.  Every system in $U$ is uniformly convergent (by (i)) to a limit
+map carrying a strict horseshoe, hence of entropy at least $\log2$, hence DC1 by
+\cite{SS}; by \v Stef\'ankov\'a's inheritance theorem \cite{Stefankova} the
+system itself is DC1.  Thus the DC1 systems contain the relatively open dense
+set $U$ and are residual in $\mathcal F^\mu$.
+\end{proof}
+
+\subsection*{The horseshoe-density hypothesis: two obstructions and an open
+problem}
+
+For the supremum stratum --- no modulus constraint --- the density of
+$\mathcal O$ in $\Cs$ was proved in \cite{companion} by implanting a steep
+zigzag near a fixed point.  Inside a stratum $C^\mu_s$ the same strategy meets
+two quantitative obstructions, which we record because they delimit any future
+proof.
+
+\emph{Saturation.}  The implanted map $v$ differs from the base map $u$ by a
+perturbation $\zeta$ supported near the implantation site.  For a pair $(x,y)$
+with $x$ in the site and $y$ far from it,
+$|v(x)-v(y)|\le|u(x)-u(y)|+\|\zeta\|_\infty$, and if $u$ \emph{saturates} its
+modulus along such pairs ($|u(x)-u(y)|=\mu(|x-y|)$, which mollification does not
+destroy), every nonconstant perturbation overruns the budget.  Any density proof
+must therefore first create slack at all scales --- for instance by the
+rescaling $u\mapsto(1-\gamma)u+\gamma/2$ --- and such rescalings destroy
+surjectivity.
+
+\emph{The repair budget.}  Restoring surjectivity after a rescaling by
+$1-\gamma$ requires moving some value back to $0$ (and to $1$).  Within
+$C^\mu$ a correction of height $\gamma/2$ built from the profile
+$c\,\mu(|x-x_0|)$ needs $c\,\mu(\operatorname{radius})\ge\gamma/2$; the modulus
+budget available for corrections is of order $\gamma\mu$, so the correction
+radius must satisfy $\mu(\mathrm{radius})\gtrsim\tfrac12$, i.e.\ the radius is
+of order $\mu^{-1}(\tfrac12)$ --- \emph{not} small.  Large-support corrections
+interact with the implanted horseshoe and with each other, and for moduli with
+$\mu(1)$ close to $1$ they may not fit in $[0,1]$ at all.  The two requirements
+--- slack everywhere, surjectivity at the endpoints --- thus compete for the
+same budget.
+
+These obstructions are quantitative, not absolute: they disappear, for example,
+on strata where every map admits a point of strict sub-saturation at the
+relevant scales.  We do not know the answer in general and consider the
+following the main question left open by this paper.
+
+\begin{problem}\label{prob:strata}
+For which moduli $\mu$ is the strict-horseshoe class $\mathcal O\cap C^\mu_s$
+dense in $(C^\mu_s,\rsup)$ --- equivalently (by
+Theorem~\ref{thm:strata}(ii)), for which strata is DC1 generic in
+$\mathcal F^\mu$?  By Theorem~\ref{thm:strata}(iii) the answer is negative for
+$\mu(t)\le t$.  Is it positive for every non-Lipschitz concave modulus?  For
+Lipschitz strata $\mu(t)=Lt$, is it positive for every $L>1$, with horseshoes
+produced at the level of an iterate (where the Lipschitz budget compounds to
+$L^n$), or supplied by a crookedness dichotomy (maps saturating the budget at
+every scale should already carry horseshoes)?
+\end{problem}

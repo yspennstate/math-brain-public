@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "20260922T164534Z-account02-B17-QFORM-r11",
+  "source_control_commit": "1836efdb710f84dd601889af6e09992e755e1cd1",
+  "control_revision": "2026-09-22.8",
+  "status": "CONDITIONAL_3D_CAP_REFUTED_SHARED_FINITE_WITNESS_IMPROVED_FULL_TARGET_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account03/B17",
+    "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B17/20260922T160432Z-account03-B17-QFORM-r12.md",
+    "canonical_math_commit": "d53ca1d541b2b2dbf861ec39fda699209b267158",
+    "applied_scope": "Disjoint active spectral supports have density <=2*pi; exact six-variable rotated witness 91/36+(13/6)log2 used as the finite stress baseline."
+  },
+  "proved_results": [
+    {
+      "id": "QFORM-CONDITIONAL-3D-PROJECTION-CAP-FALSE-v1",
+      "statement": "For iid cap-one unit intervals under the normalized 4x4 Hadamard transform, Q=Y1^2+Y2^2-Y3^2 has target spectrum {1,1,-1,0}, while for Z=(X1+X2+X3+X4)/2 and z in [1/2,1], ||p_{Y|Z=z}||_infinity=3/[8(1-z)^3], so no universal pointwise conditional 3D projection-density cap exists.",
+      "classification": "REFUTED_INTERMEDIATE_BRIDGE_NOT_TARGET_COUNTEREXAMPLE"
+    },
+    {
+      "id": "QFORM-SHARED-FINITE-WITNESS-4.0630706-v1",
+      "statement": "The six-variable pair-sum source Q=(1/2)S^T(I-2nn^T)S has physical spectrum {1,1,-1,0,0,0} and exact p_Q(0)=4.06307061680603726012548..., exceeding the designated partner finite witness by 0.0334739478... but remaining 0.1795700703... below 3sqrt(2).",
+      "classification": "EXACT_SUPPORTING_WITNESS"
+    }
+  ],
+  "replacement_mechanism": "Carry unnormalized joint slice mass through rank-three curved integration; do not divide by arbitrarily small conditioning mass. This cancellation is exact on the Hadamard source but no universal raw integrated fiber-sup bound is claimed.",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f117a4870969d37706b8d7e62cbcae671cc2d3b0",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260922T164534Z-account02-B17-QFORM-r11/REPORT.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B17/20260922T164534Z-account02-B17-QFORM-r11.md",
+  "unresolved_implication": "Obtain a dimension-free product-preserving rank-three curved-trace/grouped-coordinate inequality that retains unnormalized joint mass, rather than a false pointwise conditional cap or dimension-losing raw fiber supremum.",
+  "next_step": "Stress two-or-more interacting macroscopic rows plus diffuse residual at off-center levels, and use any resulting witness to constrain the grouped/ridge full-target reduction.",
+  "full_brain_connected": false
+}

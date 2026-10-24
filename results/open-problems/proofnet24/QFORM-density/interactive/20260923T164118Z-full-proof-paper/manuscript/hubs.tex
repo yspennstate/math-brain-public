@@ -1,0 +1,2242 @@
+\section{Quadratic forms with hub coordinates}\label{sec:hubs}
+
+Let $X_0,X_1,\ldots,X_m$ be independent real random variables with
+probability densities bounded by one, and write $X'=(X_1,\ldots,X_m)$.
+For orthonormal vectors $w,v\in\mathbb R^m$ put
+$L=\langle w,X'\rangle$ and $V=\langle v,X'\rangle$.
+The basic family in this section is
+\begin{equation}\label{eq:hub-normal}
+ Q=aX_0^2+2X_0(L+\beta)+\lambda V^2
+       +2L\langle q,X'\rangle+\sum_{i=1}^m\phi_i(X_i),
+ \qquad \phi_i(x)=d_ix^2+b_ix+c_i,
+\end{equation}
+where $\lambda\ne0$.  Unless a stronger condition is stated, assume
+\begin{equation}\label{eq:hub-frame}
+ w_i^2+v_i^2\le\tfrac12\qquad(1\le i\le m).
+\end{equation}
+The coefficients of the one-coordinate polynomials are unrestricted.
+We use the Fourier convention
+$\widehat\mu(t)=\int e^{itx}\,\mu(dx)$, and all logarithms are natural.
+
+The one-coordinate term $X_0$ is a hub: its coupling to the remaining
+coordinates is carried by the single linear statistic $L$.  The estimates
+below distinguish the independent hub law from the dependence between
+$L$, $V$, and the other linear statistics of $X'$.
+
+\subsection{Projection and Fourier estimates}
+
+We use the following consequence of the density bound for projections of
+product measures \citep{LPP2016,RV2015}: if $T$ is an $r\times m$
+matrix of rank $r$, then
+\begin{equation}\label{eq:hub-projection}
+ \|p_{TX'}\|_\infty\le
+       \frac{2^{r/2}}{\sqrt{\det(TT^T)}}.
+\end{equation}
+The bound for an orthonormal projection is $2^{r/2}$.  No independence
+between the projected coordinates is asserted.
+
+\begin{lemma}[Modulated frame integral]\label{lem:hub-frame-integral}
+Let $f\le1$ be a probability density and let $g$ be a complex function
+with $|g|\le f$.  For $p\ge2$,
+\begin{equation}\label{eq:hub-scalar-lp}
+ \int_{\mathbb R}|\widehat g(t)|^p\,dt\le\frac{4\pi}{\sqrt p}.
+\end{equation}
+Let $e_1,\ldots,e_r$ be orthonormal vectors in $\mathbb R^m$, set
+$u_i=(e_{1i},\ldots,e_{ri})$, and assume $|u_i|^2\le1/2$.
+For complex functions $g_i$ dominated by the coordinate densities and
+arbitrary real shifts $s_i$,
+\begin{equation}\label{eq:hub-frame-int}
+ \int_{\mathbb R^r}\prod_i
+   |\widehat g_i(\langle u_i,z\rangle+s_i)|\,dz\le(4\pi)^r.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For an integer $k\ge1$, Plancherel and convolution give
+\[
+ \int|\widehat g|^{2k}
+ =2\pi(g*\widetilde g)^{*k}(0)
+ \le2\pi(f*\widetilde f)^{*k}(0),
+ \qquad \widetilde g(x)=\overline{g(-x)}.
+\]
+The density on the right is that of a sum of $2k$ independent variables
+whose densities are bounded by one.  Applying
+\eqref{eq:hub-projection} to this one-dimensional linear map gives a
+bound $1/\sqrt k$ for that density.  Since $|\widehat g|\le1$, choose
+$k=\lfloor p/2\rfloor$.  For $p\ge4$, $k\ge p/4$, and for
+$2\le p<4$ Plancherel gives the required bound directly.
+
+Set $c_i=|u_i|^2$ and omit the zero rows.  The vectors
+$u_i/\sqrt{c_i}$ with weights $c_i$ form geometric
+Brascamp--Lieb data, since $\sum_i u_i u_i^T=I_r$.
+The geometric Brascamp--Lieb inequality
+\citep{BL1976,Ball1986,Barthe1998}, including arbitrary translations of
+the one-dimensional arguments, bounds the integral in
+\eqref{eq:hub-frame-int} by
+\[
+ \prod_i\left(c_i^{-1/2}
+          \int|\widehat g_i(t)|^{1/c_i}\,dt\right)^{c_i}
+ \le(4\pi)^{\sum_i c_i}=(4\pi)^r.
+\]
+Here $1/c_i\ge2$, so \eqref{eq:hub-scalar-lp} applies.
+\end{proof}
+
+For $\ell\in\mathbb R$ define the frozen polynomial
+\[
+ Y_\ell=\lambda V^2+2\ell\langle q,X'\rangle
+                         +\sum_i\phi_i(X_i).
+\]
+For each fixed $\ell_0$, let $\mu_{\ell_0,\ell}$ denote the
+unnormalized slice of the joint law of $(L,Y_{\ell_0})$ at $L=\ell$.
+Its total mass is $\rho_L(\ell)$, not one.
+
+\begin{lemma}[Frozen slices]\label{lem:hub-frozen}
+For every fixed $\ell_0$, for almost every $\ell$, and every $t\ne0$,
+\begin{equation}\label{eq:hub-slice-fourier}
+ |\widehat\mu_{\ell_0,\ell}(t)|
+ \le\min\left\{\rho_L(\ell),
+                   \frac{4\sqrt\pi}{\sqrt{|t\lambda|}}\right\}.
+\end{equation}
+In particular, for every interval $I$,
+\begin{equation}\label{eq:hub-slice-interval}
+ \mu_{\ell_0,\ell}(I)
+       \le2\pi^2\sqrt{\frac{|I|}{|\lambda|}}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Write $Y_{\ell_0}=\lambda V^2+\sum_i(d_iX_i^2+c_i'X_i)+c'$.
+For fixed $t\ne0$ the Fourier transform in $L$ of the complex measure
+$\mathbb E[e^{itY_{\ell_0}};L\in\cdot]$ is
+\[
+ \Psi(z,t)=\mathbb E e^{izL+itY_{\ell_0}}.
+\]
+The Fresnel identity, first with Gaussian damping, gives
+\[
+ |\Psi(z,t)|\le(4\pi|t\lambda|)^{-1/2}
+  \int\prod_i|\widehat g_i(zw_i+uv_i+tc_i')|\,du,
+ \qquad g_i(x)=f_i(x)e^{itd_ix^2}.
+\]
+Lemma~\ref{lem:hub-frame-integral} bounds the integral in $(z,u)$ by
+$(4\pi)^2$.  Fourier inversion in $z$ therefore gives the second term
+in \eqref{eq:hub-slice-fourier}.  The first follows from the total mass
+of the slice.  Disintegration first identifies this transform for almost
+every pair $(\ell,t)$; continuity in $t$ identifies it for every $t$ on
+a common full-measure set of $\ell$.
+
+If $I$ has center $y_0$ and length $2b$, the function
+\[
+ K(y)=\left(\frac{\sin(\pi(y-y_0)/(4b))}
+                         {\pi(y-y_0)/(4b)}\right)^2
+\]
+satisfies $K\ge(8/\pi^2)\mathbf1_I$; its Fourier transform is supported
+on $|t|\le\pi/(2b)$ and has modulus at most $4b$.
+Parseval and \eqref{eq:hub-slice-fourier} give
+\[
+ \mu(I)\le\frac{\pi^2}{8}\frac{4b}{2\pi}
+   \int_{|t|\le\pi/(2b)}\frac{4\sqrt\pi}{\sqrt{|t\lambda|}}\,dt
+ =2\pi^2\sqrt{\frac{2b}{|\lambda|}}.
+\]
+All the Fourier manipulations follow first with a positive Gaussian
+damping; the displayed integrable bounds justify its removal.
+\end{proof}
+
+\begin{remark}[Freezing and exceptional slices]\label{rem:hub-freezing}
+An estimate valid for every fixed $\ell_0$ and almost every $\ell$ cannot
+be substituted on the diagonal $\ell_0=\ell$ without justification.
+We use the following discretization whenever the slice parameter varies.
+Partition the real line into cells $C_j$ of width $h$, choose
+$\ell_j\in C_j$, and replace $Y_L$ by $Y_{\ell_j}$ on
+$\{L\in C_j\}$.  Then
+$Y_{\ell_j}-Y_L=2(\ell_j-L)\langle q,X'\rangle\to0$ almost surely.
+For a bounded kernel $G(\ell,y)$ continuous off the null set
+$\ell=-\beta$, dominated convergence gives
+\begin{equation}\label{eq:hub-freezing-limit}
+ \mathbb E G(L,Y_L)
+ =\lim_{h\downarrow0}\sum_j\int_{C_j}\int
+       G(\ell_j,y)\,\mu_{\ell_j,\ell}(dy)\,d\ell.
+\end{equation}
+For each partition only countably many frozen parameters occur, so the
+slice bounds apply simultaneously.  The analogous construction with
+rectangular cells applies to several hub partners.  Riemann sums used
+below can first be restricted to bounded sets; tails are controlled by
+the total mass.  This also justifies the formulas for arbitrary
+unbounded coordinate laws.
+\end{remark}
+
+\subsection{Real-variable estimates for one hub}
+
+\begin{lemma}[A profile criterion]\label{lem:hub-profile}
+Assume $a=0$.  Suppose that for every fixed $\ell_0$, almost every
+$\ell$, and every Borel set $S$,
+\[
+ \mu_{\ell_0,\ell}(S)\le K|S|^\theta,
+ \qquad 0<\theta\le1.
+\]
+Then
+\begin{equation}\label{eq:hub-profile-bound}
+ \|p_Q\|_\infty\le\frac12+\frac{2^\theta K}{\theta}.
+\end{equation}
+More generally, a concave nondecreasing profile $\omega$ with
+$\omega(0)=0$ gives
+$\|p_Q\|_\infty\le\frac12+\int_0^2\omega(u)\,du/u$ whenever
+that integral is finite.
+\end{lemma}
+
+\begin{proof}
+Fix a level $s$ and a window radius $\delta>0$.  With $t=\ell+\beta$ put
+\[
+ G(\ell,y)=\int f_0(x)
+            \mathbf1_{\{|2tx+y-s|\le\delta\}}\,dx.
+\]
+For $t\ne0$, $0\le G\le\delta/|t|$, and $\int G(\ell,y)\,dy=2\delta$.
+If $M=\delta/|t|$, layer cake and Jensen's inequality give
+\[
+ \int G\,d\mu
+  \le K\int_0^M |\{G>u\}|^\theta\,du
+  \le KM(2\delta/M)^\theta
+  =K\delta\,2^\theta|t|^{\theta-1}.
+\]
+For $|t|\ge1$ use $G\le\delta$ and the slice mass
+$\rho_L(\ell)$, whose integral is one.  Apply
+\eqref{eq:hub-freezing-limit}, integrate the displayed bound over
+$|t|<1$, divide by $2\delta$, and let $\delta\downarrow0$.
+This proves \eqref{eq:hub-profile-bound}.  The same layer-cake argument
+gives $M\omega(2\delta/M)$ for a concave profile and yields the final
+assertion.  The resulting uniform interval bounds imply absolute
+continuity and the stated essential density bound.
+\end{proof}
+
+\begin{theorem}[An interval-supported hub]\label{thm:hub-interval}
+Let $a=0$ and suppose $X_0$ is supported in an interval of length $D$.
+Then every form \eqref{eq:hub-normal} satisfies
+\begin{equation}\label{eq:hub-interval-bound}
+ \|p_Q\|_\infty\le
+ \frac32(4\sqrt2\pi^2)^{2/3}(D/|\lambda|)^{1/3}
+ <22(D/|\lambda|)^{1/3}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Let $J$ be the supporting interval and replace $f_0$ by $\mathbf1_J$.
+For $t=\ell+\beta\ne0$ the resulting window kernel is
+\[
+ G(\ell,y)=\frac{|(s-y+[-\delta,\delta])\cap2tJ|}{2|t|}.
+\]
+Three estimates follow by Fubini and
+Lemma~\ref{lem:hub-frozen}:
+\begin{align*}
+ \int G\,d\mu&\le (\delta/|t|)\rho_L(\ell),\\
+ \int G\,d\mu&\le (\delta/|t|)2\pi^2
+                  \sqrt{(2|t|D+2\delta)/|\lambda|},\\
+ \int G\,d\mu&\le 2\pi^2D\sqrt{2\delta/|\lambda|}.
+\end{align*}
+Use the first on $|t|\ge T$ and the minimum of the other two on
+$|t|<T$, with the freezing procedure of
+Remark~\ref{rem:hub-freezing}.  After division by $2\delta$, the range
+$|t|<\delta$ tends to zero.  On $\delta\le|t|<T$, dominated
+convergence applies with an integrable multiple of $|t|^{-1/2}$.
+It follows that, uniformly in $s$,
+\[
+ \limsup_{\delta\downarrow0}
+ \frac{\mathbb P(|Q-s|\le\delta)}{2\delta}
+ \le\frac1{2T}+4\sqrt2\pi^2\sqrt{DT/|\lambda|}.
+\]
+Choose $T=(4\sqrt2\pi^2)^{-2/3}(D/|\lambda|)^{-1/3}$.
+\end{proof}
+
+The next result needs no spread condition.  Its only use of the product
+law is the two-dimensional projection bound.
+
+\begin{theorem}[A transverse square with an independent hub]
+\label{thm:hub-pure}
+Let $w,v$ be orthonormal and let $v_c,F_c$ be arbitrary measurable
+real functions.  Set
+\[
+ Q=2X_0(L+\beta)+\lambda(V-v_c(L))^2+F_c(L),
+ \qquad \mu=|\lambda|>0.
+\]
+Then
+\begin{equation}\label{eq:hub-pure-bound}
+ \|p_Q\|_\infty\le
+ \begin{cases}
+ 2\sqrt2+\sqrt2\log(1/3+4\sqrt2/\mu),&0<\mu\le6\sqrt2,\\
+ (192/\mu)^{1/3},&\mu\ge6\sqrt2.
+ \end{cases}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For fixed $s$, integrating out $X_0$ gives
+\[
+ p_Q(s)=\int\rho_{L,V}(\ell,v)
+ \frac{f_0((s-\lambda(v-v_c(\ell))^2-F_c(\ell))/(2t))}
+      {2|t|}\,d\ell\,dv,
+ \qquad t=\ell+\beta.
+\]
+Denote the fraction by $K(\ell,v)$.  It is at most $1/(2|t|)$.
+Changing variables on the two branches of the square and using
+$f_0\le1$, $\int f_0=1$, gives
+\[
+ \int K(\ell,v)\,dv\le\sqrt2(\mu|t|)^{-1/2}.
+\]
+Indeed the remaining integral is a one-sided negative half moment of
+$f_0$, bounded by $\int_0^1u^{-1/2}\,du=2$.
+Since $\rho_{L,V}\le2$ and $\rho_L\le\sqrt2$, the contribution at $t$
+is bounded by $g(t)/(2|t|)$ for some nonnegative function satisfying
+\[
+ \int g\le1,\qquad
+ g(t)\le M(t):=\min\{\sqrt2,4\sqrt2\mu^{-1/2}\sqrt{|t|}\}.
+\]
+The weight $1/(2|t|)$ decreases with $|t|$.  Thus its maximal integral
+under these constraints is obtained by taking $g=M$ on
+$[-\tau,\tau]$, where $\int_{-\tau}^{\tau}M=1$.
+The envelope switches at $t_* =\mu/16$, and its mass on
+$[-t_*,t_*]$ is $\sqrt2\mu/12$.
+If this mass is at most one, the inner contribution is $2\sqrt2$ and
+the outer contribution is $\sqrt2\log(\tau/t_*)$, with
+$\tau/t_*=1/3+4\sqrt2/\mu$.
+Otherwise
+$\tau=(3\sqrt\mu/(16\sqrt2))^{2/3}$, and the integral is
+$8\sqrt2\mu^{-1/2}\sqrt\tau=(192/\mu)^{1/3}$.
+The argument can equivalently be applied to interval probabilities,
+so no prior existence of $p_Q$ is required.
+\end{proof}
+
+\subsection{A nonzero transverse cross term}
+
+Write
+\[
+ q=q_ww+q_vv+\varepsilon e,\qquad
+ e\perp w,v,\quad |e|=1,\quad\varepsilon>0,
+\]
+and set $P=\langle e,X'\rangle$.
+
+\begin{theorem}[Nonzero leakage]\label{thm:hub-leak}
+Assume $w_i^2+v_i^2+e_i^2\le1/2$ for every light coordinate.  For
+\eqref{eq:hub-normal}, including an arbitrary hub diagonal $a$,
+\begin{align}
+ |\mathbb E e^{itQ}|&\le
+ 4\sqrt2\pi^{3/2}(\varepsilon|\lambda|)^{-1/2}|t|^{-3/2},
+ \label{eq:hub-leak-fourier}\\
+ \|p_Q\|_\infty&\le
+ 3\,2^{5/3}(\varepsilon|\lambda|)^{-1/3}.
+ \label{eq:hub-leak-density}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+Complete the square in $V$:
+$V'=V+(q_v/\lambda)L$ and
+$\sigma=2q_w-q_v^2/\lambda$.
+After moving $-2\varepsilon\beta P$ into the linear terms, write
+\[
+ Q=aX_0^2+2X_0(L+\beta)+\sigma L^2+
+   2\varepsilon(L+\beta)P+W,
+ \quad
+ W=\lambda V'^2-2\varepsilon\beta P+\sum_i\phi_i(X_i).
+\]
+Let $g(\omega)=\int f_0(x)e^{ita x^2+i\omega x}\,dx$ and
+\[
+ H(\ell,p)=g(2t(\ell+\beta))
+                   e^{it\sigma\ell^2+2it\varepsilon(\ell+\beta)p}.
+\]
+Let $n(\ell,p)$ be the density of
+$\mathbb E[e^{itW};(L,P)\in\cdot]$.  Its Fourier transform is
+integrable by the Fresnel identity and the three-dimensional frame
+integral.  Fourier transformation of $H$ in $p$ pins
+$\ell+\beta=-\gamma/(2t\varepsilon)$; consequently
+\[
+ |\widehat H(z,\gamma)|=
+      \frac{\pi}{|t|\varepsilon}|g(-\gamma/\varepsilon)|.
+\]
+This identity is interpreted with Gaussian damping, or as a tempered
+distribution followed by the indicated integrable pairing.
+Put $G(\gamma)=\int|\widehat n(z,\gamma)|\,dz$.
+Fresnel linearization in $V'$ and translation of the $z$ variable give
+\[
+ \|G\|_\infty\le(4\pi|t\lambda|)^{-1/2}(4\pi)^2,
+ \qquad
+ \|G\|_1\le(4\pi|t\lambda|)^{-1/2}(4\pi)^3.
+\]
+Thus $\|G\|_2\le(4\pi|t\lambda|)^{-1/2}(4\pi)^{5/2}$.
+Plancherel gives
+$\int|g(\gamma/\varepsilon)|^2\,d\gamma\le2\pi\varepsilon$.
+Parseval and Cauchy--Schwarz yield
+\[
+ |\mathbb E e^{itQ}|
+ \le\frac{1}{4\pi|t|\varepsilon}
+       (2\pi\varepsilon)^{1/2}
+       (4\pi|t\lambda|)^{-1/2}(4\pi)^{5/2},
+\]
+which is \eqref{eq:hub-leak-fourier}.
+Finally, $\int_{\mathbb R}\min(1,B|t|^{-3/2})\,dt=6B^{2/3}$.
+Fourier inversion gives \eqref{eq:hub-leak-density}.
+\end{proof}
+
+\begin{example}[A frozen-hub obstruction]\label{ex:hub-frozen-obstruction}
+The nonzero-leakage estimate cannot be made uniform by bounding every
+conditional density obtained on fixing $X_0=x$.  Fix $x=r>0$, let the
+light vector have law $X'=-(r/\varepsilon)e+G$, where the coordinates
+of $G$ are independent standard Gaussians, and take no other terms.
+Then the conditional quadratic form is
+\[
+ \lambda\langle v,G\rangle^2+
+       2\varepsilon\langle w,G\rangle\langle e,G\rangle.
+\]
+For $\lambda>0$, let $Z_1,Z_2,Z_3$ be its three independent standard
+Gaussian coordinates.  The density of $2Z_1Z_2$ is positive and
+continuous on any compact interval avoiding zero.  In the convolution
+formula for $\lambda Z_3^2+2\varepsilon Z_1Z_2$ at zero, restrict
+$\lambda Z_3^2$ to $[\varepsilon,2\varepsilon]$.
+The square density is bounded below by a constant times
+$(\lambda u)^{-1/2}$ there when $\varepsilon\le\lambda$; the second
+density is bounded below by a constant times $\varepsilon^{-1}$.
+Integration gives a lower bound
+$c(\lambda\varepsilon)^{-1/2}$.
+All input densities are bounded by one.  This is an obstruction to
+uniform frozen-hub estimates, not a counterexample to the full quadratic
+form after averaging the independent hub.
+\end{example}
+
+\subsection{Near-linear small-ball bounds and symmetric-window recovery}
+
+\begin{theorem}[Double-logarithmic small balls]\label{thm:hub-loglog-smallball}
+Assume $a=0$ and \eqref{eq:hub-frame}.  No restriction is imposed on
+$q$ beyond \eqref{eq:hub-normal}.  For every $s\in\mathbb R$ and
+$\delta>0$,
+\begin{equation}\label{eq:hub-loglog-smallball}
+ \frac{\mathbb P(|Q-s|\le\delta)}{2\delta}
+ \le A_\delta:=\frac12+2\sqrt2+
+                 \sqrt2\log_+(2B_\delta^2),
+\end{equation}
+where
+\begin{equation}\label{eq:hub-bdelta}
+ B_\delta=\frac{4+\sqrt{4/\pi+32\log_+(|\lambda|/\delta)}}
+                     {2\sqrt{|\lambda|}}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Use the window kernel in the proof of Lemma~\ref{lem:hub-profile}.
+For fixed $t=\ell+\beta\ne0$, it is
+$G(\ell,\cdot)=\mathbf1_{[-\delta,\delta]}*g$, where
+$g(u)=f_0((s-u)/(2t))/(2|t|)$.  Hence
+\[
+ \widehat G(\eta)=\frac{2\sin(\eta\delta)}{\eta}\widehat g(\eta),
+ \qquad \int|\widehat g|^2\le\frac\pi{|t|}.
+\]
+For every applicable frozen slice, Lemma~\ref{lem:hub-frozen} gives
+\[
+ \int_{|\eta|\le1/\delta}|\widehat\mu(\eta)|^2\,d\eta
+ \le\frac{4+32\pi\log_+(|\lambda|/\delta)}{|\lambda|}.
+\]
+To see this, use $|\widehat\mu|^2\le2$ below $1/|\lambda|$
+and $|\widehat\mu|^2\le16\pi/(|\eta\lambda|)$ above it.
+Parseval and Cauchy--Schwarz on the regions below and above
+$1/\delta$ now give
+\begin{align*}
+ \int G\,d\mu
+ &\le\frac1{2\pi}\left(
+ 2\delta\int_{|\eta|\le1/\delta}|\widehat g||\widehat\mu|
+ +\int_{|\eta|>1/\delta}\frac2{|\eta|}
+                          |\widehat g||\widehat\mu|\right)\\
+ &\le\delta(|\lambda t|)^{-1/2}
+          \left(\sqrt{4/\pi+32\log_+(|\lambda|/\delta)}+4\right).
+\end{align*}
+The high-frequency calculation uses
+$\int_{|\eta|>1/\delta}|\eta|^{-3}\,d\eta=\delta^2$.
+The alternative bound is
+$\int G\,d\mu\le\sqrt2\delta/|t|$.
+For $|t|\ge1$ retain the slice mass and obtain a contribution at most
+$\delta$.  Formula~\eqref{eq:hub-freezing-limit} therefore implies
+\[
+ \frac{\mathbb P(|Q-s|\le\delta)}{2\delta}
+ \le\frac12+\int_{|t|<1}
+       \min\left\{\frac{\sqrt2}{2|t|},
+                         B_\delta|t|^{-1/2}\right\}\,dt.
+\]
+If $2B_\delta^2\ge1$, split at
+$|t|=1/(2B_\delta^2)$; the integral is
+$2\sqrt2+\sqrt2\log(2B_\delta^2)$.
+Otherwise it equals $4B_\delta\le2\sqrt2$.
+\end{proof}
+
+\begin{lemma}[Recovery from a symmetric window]\label{lem:hub-window-recovery}
+Suppose a real random variable $Z$ satisfies
+$|\mathbb E e^{itZ}|\le B|t|^{-3/2}$ for $t\ne0$.
+Then it has a continuous bounded density and, for every $h>0$,
+\begin{equation}\label{eq:hub-window-recovery}
+ \|p_Z\|_\infty\le
+ \sup_s\frac{\mathbb P(|Z-s|\le h)}{2h}
+       +\frac{2\sqrt{2\pi}}{3\pi}B\sqrt h.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The integrable characteristic function gives the density by Fourier
+inversion.  Let $U_h=\mathbf1_{[-h,h]}/(2h)$.
+Its Fourier transform is $\sin(ht)/(ht)$, which is at most one.
+Consequently
+\[
+ |p_Z(s)-(p_Z*U_h)(s)|
+ \le\frac{B\sqrt h}{\pi}
+   \int_0^\infty u^{-3/2}\left(1-\frac{\sin u}{u}\right)\,du.
+\]
+Since $\sin u/u=\int_0^1\cos(ru)\,dr$, Tonelli and an integration by
+parts give
+\begin{align*}
+ \int_0^\infty u^{-3/2}\left(1-\frac{\sin u}{u}\right)\,du
+ &=\int_0^1\int_0^\infty u^{-3/2}(1-\cos(ru))\,du\,dr\\
+ &=\sqrt{2\pi}\int_0^1\sqrt r\,dr
+ =\frac23\sqrt{2\pi}.
+\end{align*}
+For completeness, the inner integral at $r=1$ is
+$2\int_0^\infty u^{-1/2}\sin u\,du=\sqrt{2\pi}$;
+this identity follows by exponential damping and the Gamma integral.
+Finally $(p_Z*U_h)(s)=\mathbb P(|Z-s|\le h)/(2h)$.
+\end{proof}
+
+\begin{corollary}[Improved double-logarithmic density estimate]
+\label{cor:hub-loglog-density}
+Under the assumptions of Theorem~\ref{thm:hub-leak}, with $a=0$,
+\begin{equation}\label{eq:hub-loglog-recovery}
+ \|p_Q\|_\infty\le A_h+
+       \frac{16\pi}{3}\sqrt{\frac{h}{\varepsilon|\lambda|}}
+       \qquad(h>0).
+\end{equation}
+In particular,
+\begin{equation}\label{eq:hub-loglog-density}
+ \|p_Q\|_\infty\le\frac12+2\sqrt2+
+       \sqrt2\log_+(2B_\varepsilon^2)
+                +\frac{16\pi}{3\sqrt{|\lambda|}}.
+\end{equation}
+For fixed $|\lambda|\ge1$, this is
+$O(1+\log\log(1/\varepsilon))$ as $\varepsilon\downarrow0$.
+\end{corollary}
+
+\begin{proof}
+Apply Lemma~\ref{lem:hub-window-recovery} with the constant in
+\eqref{eq:hub-leak-fourier}, and then
+Theorem~\ref{thm:hub-loglog-smallball}.
+The recovery constant simplifies to
+$(2\sqrt{2\pi}/(3\pi))4\sqrt2\pi^{3/2}=16\pi/3$.
+\end{proof}
+
+\begin{remark}\label{rem:hub-endpoint-open}
+The estimates above hold for each positive $\varepsilon$.
+Their constants are not bounded as $\varepsilon\downarrow0$.
+Thus they do not establish a uniform three-eigenvalue theorem.
+Even though the family at exactly zero leakage is bounded in several
+important normal forms, continuity for fixed input laws does not supply
+uniformity over all bounded product densities.
+\end{remark}
+
+\subsection{Localization and regularity of the hub law}
+
+\begin{proposition}[A localized leakage direction]\label{prop:hub-localized}
+Consider
+\[
+ Q=aX_0^2+2X_0(L+\beta)+\lambda V^2
+                          +2\varepsilon LP+\sum_i\phi_i(X_i).
+\]
+Suppose the coefficient vector of $P$ is supported on $T$, let
+$I=T^c$, and put
+$G_I=\sum_{i\in I}(w_i,v_i)^T(w_i,v_i)$.
+If $G_I$ is invertible and
+$(w_i,v_i)G_I^{-1}(w_i,v_i)^T\le1/2$ on $I$, then
+\[
+ |\mathbb E e^{itQ}|\le
+ 4\pi^{3/2}(|\lambda|\det G_I)^{-1/2}|t|^{-3/2},
+ \qquad
+ \|p_Q\|_\infty\le
+ 3\,2^{4/3}(|\lambda|\det G_I)^{-1/3}.
+\]
+The estimate is uniform in $\varepsilon$, $a$, and all other displayed
+coefficients.
+\end{proposition}
+
+\begin{proof}
+For fixed $t$, integrating the hub and using $f_0\le1$ bounds the
+characteristic function by $(2|t|)^{-1}\int|\widehat n(z)|\,dz$,
+where $\widehat n(z)$ is the light expectation with the additional
+phase $zL$.  Fresnel linearization of $\lambda V^2$ reduces its
+integral to $(4\pi|t\lambda|)^{-1/2}J$, where
+\[
+ J=\iint\left|\mathbb E e^{izL+iuV+2it\varepsilon LP
+                                     +it\sum_i\phi_i(X_i)}\right|dz\,du.
+\]
+Disintegrate the complex light measure over $P=p$.  On that slice the
+cross term translates $z$ by $2t\varepsilon p$.  The triangle
+inequality followed by this translation bounds $J$ by the averaged
+conditional frame integral.  The coordinates in $I$ are independent
+of those carrying $P$; the latter push forward to a complex measure of
+total variation at most one.  Therefore
+\[
+ J\le\iint\prod_{i\in I}
+        |\widehat g_i(zw_i+uv_i+tb_i)|\,dz\,du
+ \le(4\pi)^2(\det G_I)^{-1/2}.
+\]
+The last inequality follows by the change of variables associated with
+$G_I$ and Lemma~\ref{lem:hub-frame-integral}.
+Multiplication of the three factors proves the characteristic-function
+bound; its integral proves the density estimate.
+\end{proof}
+
+\begin{proposition}[A square on independent coordinates]
+\label{prop:hub-free-square}
+Let $I$ be a set of light coordinates on which $w$ vanishes and let
+$X_R$ denote the others.  Suppose
+\[
+ Q=2X_0(L+\beta)+\lambda V^2+2Vg(X_R)+F(X_R),
+ \qquad \omega=|v_I|>0,
+\]
+where $g,F$ are arbitrary measurable functions.  Then
+\[
+ \|p_Q\|_\infty\le\frac12+
+             \frac{8\sqrt2}{\omega\sqrt{|\lambda|}}.
+\]
+\end{proposition}
+
+\begin{proof}
+Write $V=V_I+V_R$.  The variable $V_I$ is independent of $X_R$ and
+has density at most $\sqrt2/\omega$ by
+\eqref{eq:hub-projection}.  Given $X_R$, the remainder is
+$\lambda(V_I+c_1)^2+c_2$.  For every Borel set $S$,
+\[
+ |\{u:\lambda u^2\in S\}|\le2\sqrt{|S|/|\lambda|},
+\]
+which follows by placing a set of fixed measure at the origin in the
+one-sided density of the square.  Thus the conditional probability is
+at most $2\sqrt2\omega^{-1}\sqrt{|S|/|\lambda|}$.
+Since $L$ is a function of $X_R$ and $\rho_L\le\sqrt2$, its
+unnormalized slices have profile
+$4\omega^{-1}\sqrt{|S|/|\lambda|}$.
+Lemma~\ref{lem:hub-profile} finishes the proof.
+\end{proof}
+
+\begin{proposition}[A block carrying only the hub partner]
+\label{prop:hub-free-partner}
+Assume $a=0$.  Suppose a set $I$ of light coordinates satisfies
+$v_i=d_i=0$, $q_i=\kappa w_i$, and $b_i=\mu w_i$ on $I$.
+Put $\omega=|w_I|>0$.  Then
+\begin{align*}
+ \|p_Q\|_\infty
+ &\le\frac12+\frac{\sqrt2}{\omega}
+ \left[\frac72\left(2+\log(1+4\pi^4/|\lambda|)\right)
+                          +\frac12\log(1+4|\kappa|)\right].
+\end{align*}
+If $\kappa=0$, the sharper bound is
+\[
+ \|p_Q\|_\infty\le\frac12+\frac{\sqrt2}{\omega}
+                        \left(2+\log(1+2\pi^4/|\lambda|)\right).
+\]
+\end{proposition}
+
+\begin{proof}
+Let $R=I^c$, $L_I=\langle w_I,X_I\rangle$ and $L_R=L-L_I$.
+Collecting terms gives
+$Q=2X_0t+2\kappa L^2+2LP+W$, where $t=L+\beta$ and $P,W$
+depend only on $X_R$.  The value of the hub at level $s$ has the form
+\[
+ x_* =\frac{\alpha}{2t}+c_0-\kappa t,
+ \quad
+ \alpha=s-2\kappa\beta^2+2\beta P-W,
+ \quad c_0=2\kappa\beta-P.
+\]
+Conditional on $X_R$, the variable $t$ has density at most
+$\sqrt2/\omega$.  On $|t|\ge1$ its contribution to $p_Q$ is at most
+$1/2$.  Thus the remaining contribution is bounded by
+\[
+ \frac{\sqrt2}{\omega}\mathbb E_{X_R}
+ \int_{0<|t|<1}\widetilde f_0\!\left(\frac\alpha{2t}-\kappa t\right)
+                                          \frac{dt}{2|t|},
+ \qquad\widetilde f_0(x)=f_0(x+c_0).
+\]
+For $\kappa=0$, the substitution $x=\alpha/(2t)$ and the bathtub
+principle bound the inner integral by $\log(1+1/|\alpha|)$.
+For $\kappa\ne0$, set $\sigma=2\kappa$ and
+$\tau=\min(1,\sqrt{|\alpha|/(2|\sigma|)})$.
+For $0<|t|<\tau$, the map
+$x(t)=\alpha/(2t)-\sigma t/2$ is monotone on each half-line,
+its two images are disjoint, $|x(t)|\ge|\alpha|/(4\tau)$, and
+$dt/|t|\le3\,|dx|/|x|$.
+The bathtub principle bounds this part by
+$3\log(1+2\tau/|\alpha|)$; the range $\tau\le|t|<1$ contributes at
+most $\log(1/\tau)$.
+Together these are at most
+\[
+ \frac72\log(1+2/|\alpha|)+\frac12\log(1+2|\sigma|).
+\]
+The variable $\alpha$ is a quadratic polynomial on $X_R$ consisting of
+$-\lambda V^2$ and one-coordinate terms: the $L$-cross terms have
+already been put into $P$.  One-dimensional Fresnel linearization and
+Lemma~\ref{lem:hub-frame-integral} give
+$|\mathbb E e^{it\alpha}|\le2\sqrt{\pi/|t\lambda|}$.
+The kernel in Lemma~\ref{lem:hub-frozen} therefore gives
+$\mathbb P(|\alpha-u|\le r)\le\pi^2\sqrt{2r/|\lambda|}$.
+For $c=2\pi^2/\sqrt{|\lambda|}$, layer cake implies
+\[
+ \mathbb E\log(1+2/|\alpha|)
+ \le\int_0^\infty\min\{1,c(e^u-1)^{-1/2}\}\,du
+ \le\log(1+c^2)+2.
+\]
+Indeed, above $u=\log(1+c^2)$ the integral equals
+$2c\arctan(1/c)<2$.
+Replacing $2$ by $1$ in the logarithm gives
+$2+\log(1+2\pi^4/|\lambda|)$, proving both assertions.
+\end{proof}
+
+\begin{proposition}[A hub density of bounded variation]
+\label{prop:hub-bv}
+Assume $a=0$ and let the total variation of $f_0$ be $V_0<\infty$.
+For $A=4\sqrt{\pi/|\lambda|}$,
+\begin{equation}\label{eq:hub-bv-fourier}
+ |\mathbb E e^{itQ}|\le V_0|t|^{-3/2}
+       \left[A\left(1+\log_+(2|t|^{3/2}/V_0)\right)+\frac12\right].
+\end{equation}
+In particular, for fixed $|\lambda|\ge1$,
+$\|p_Q\|_\infty\le C V_0^{2/3}$ with an absolute constant $C$,
+uniformly in every light diagonal, linear term, and cross term.
+\end{proposition}
+
+\begin{proof}
+Integration by parts against the distributional derivative of $f_0$
+gives $|\widehat f_0(z)|\le\min(1,V_0/|z|)$.
+Freeze $L$ and apply \eqref{eq:hub-slice-fourier}.  With $u=L+\beta$,
+\[
+ |\mathbb E e^{itQ}|\le
+ \int\min\{1,V_0/(2|tu|)\}
+       \min\{\rho_L(u-\beta),A|t|^{-1/2}\}\,du.
+\]
+On $|u|\le T=|t|^{1/2}$, use the second entry in the second minimum.
+The integral of the first minimum is at most
+$(V_0/|t|)(1+\log_+(2|t|T/V_0))$.
+On $|u|>T$, retain $\rho_L$ and use its unit mass, obtaining
+$V_0/(2|t|^{3/2})$.  This proves
+\eqref{eq:hub-bv-fourier}.
+Substitute $t=V_0^{2/3}u$ into the integral of the minimum of one and
+the right side.  The resulting integral is finite and uniformly
+bounded for $A\le4\sqrt\pi$, proving the density estimate.
+No numerical quadrature is needed for the existence of $C$.
+\end{proof}
+
+\subsection{Bounded light supports and a fixed transverse projection}
+
+\begin{proposition}[A maximal-density criterion]
+\label{prop:hub-maximal-projection}
+Let $E$ be a fixed $k$-dimensional subspace orthogonal to $w,v$,
+and write $Z$ for the orthonormal coordinates of the projection of
+$X'$ onto $E$.  Let
+\[
+ Q=2X_0(L+\beta)+\lambda V^2+2Vg(L,Z)+F(L,Z),
+\]
+where $g,F$ are measurable.  Put
+\[
+ M_k=\mathop{\rm ess\,sup}_{\ell}
+            \int_{\mathbb R^k}\mathop{\rm ess\,sup}_u
+                       \rho_{L,V,Z}(\ell,u,z)\,dz.
+\]
+If $M_k<\infty$, then
+\[
+ \|p_Q\|_\infty\le\frac12+8M_k|\lambda|^{-1/2}.
+\]
+This result needs no leverage condition.
+\end{proposition}
+
+\begin{proof}
+On the slice $L=\ell$ complete the square in $V$:
+$\lambda(V-V_0(z))^2+F_0(z)$.
+The slab $|V-V_0(z)|\le r$ has slice mass at most $2rM_k$.
+Outside the slab, the two inverse branches each have derivative
+at most $(2|\lambda|r)^{-1}$ in the output variable, so the
+restricted output density is at most $M_k/(|\lambda|r)$.
+For every Borel set $S$, choose
+$r=\sqrt{|S|/(2|\lambda|)}$ to obtain the profile
+$2\sqrt2M_k\sqrt{|S|/|\lambda|}$.
+Lemma~\ref{lem:hub-profile} gives the result; freezing is unnecessary
+here because the remainder is already a function of $(L,V,Z)$.
+\end{proof}
+
+\begin{proposition}[Bounded light supports]\label{prop:hub-light-intervals}
+Suppose every light coordinate is supported in an interval of length
+at most $K$.  Then the quantity in
+Proposition~\ref{prop:hub-maximal-projection} satisfies
+\[
+ M_k\le2^{(k+2)/2}K^k
+  \int_{\mathbb R^k}e^{-2(|y|-k-2)_+^2}\,dy.
+\]
+Moreover, for \eqref{eq:hub-normal} with $a=d_i=0$, arbitrary $q$
+and arbitrary linear terms,
+\begin{equation}\label{eq:hub-light-interval-bound}
+ \|p_Q\|_\infty\le\frac12+
+ 8\sqrt2\left[2^{3/2}\left(6+\sqrt{\pi/2}\right)
+                         \frac K{|\lambda|}\right]^{1/2}
+ <\frac12+52\sqrt{K/|\lambda|}.
+\end{equation}
+The hub law is arbitrary subject to its density cap.
+\end{proposition}
+
+\begin{proof}
+Tilt the product law by $e^{\langle\theta,Z\rangle}$.
+Each tilted coordinate density is at most $e^{|\theta|K}$ times
+its original cap, because the tilting factor varies by at most
+that amount on its supporting interval.  The $(k+2)$-dimensional
+projection-density bound for the tilted product law is therefore
+$2^{(k+2)/2}e^{(k+2)|\theta|K}$.
+Independence and the bounded-variable estimate of
+\citet{Hoeffding1963} give
+\[
+ \mathbb E e^{\langle\theta,Z-\mathbb EZ\rangle}
+                 \le e^{|\theta|^2K^2/8}.
+\]
+Undoing the tilt and optimizing $\theta$ in the direction
+$z-\mathbb EZ$ yields
+\[
+ \rho_{L,V,Z}(\ell,u,z)
+ \le2^{(k+2)/2}
+  \exp\left[-2\frac{(|z-\mathbb EZ|-(k+2)K)_+^2}{K^2}\right].
+\]
+The optimization uses
+$|\theta|=4(|z-\mathbb EZ|-(k+2)K)_+/K^2$.
+Integration over $z$ proves the first assertion.
+
+For the second assertion freeze $L$ as in
+Remark~\ref{rem:hub-freezing}.  With no light diagonal, every frozen
+remainder has the form
+$\lambda(V-V_0)^2+\gamma B+c$, where $B$ is a unit linear
+projection orthogonal to $w,v$; its direction may depend on the
+frozen parameter.  The preceding tilt bound is uniform in that
+direction and gives
+\[
+ \int\sup_u\rho_{L,V,B}(\ell,u,b)\,db
+ \le M:=2^{3/2}\left(6+\sqrt{\pi/2}\right)K.
+\]
+The slab $|V-V_0|\le r$ has slice mass at most $4r$, using
+$\rho_{L,V}\le2$.  Off the slab the output density is at most
+$M/(|\lambda|r)$.  Optimizing
+$4r+M|S|/(|\lambda|r)$ gives the Borel profile
+$4\sqrt{M|S|/|\lambda|}$.
+Lemma~\ref{lem:hub-profile} proves
+\eqref{eq:hub-light-interval-bound}.  If $\gamma=0$, the direct
+square profile is at least as strong, since $K\ge1$.
+\end{proof}
+
+\begin{corollary}[Window-mixture light laws]\label{cor:hub-window-lights}
+Suppose each light law is of the form $\mathcal U[0,1]*\nu_i$.
+For \eqref{eq:hub-normal} with $a=d_i=0$, every independent cap-one
+hub law satisfies
+\[
+ \|p_Q\|_\infty\le\frac12+52|\lambda|^{-1/2}.
+\]
+\end{corollary}
+
+\begin{proof}
+Represent $X_i=U_i+Z_i$, with independent uniform $U_i$ on $[0,1]$,
+and condition on the shifts $Z_i$.  The light coordinates are now
+supported on unit intervals.  The shifts change only the linear
+coefficients and the constant of the quadratic form, which are
+unrestricted in Proposition~\ref{prop:hub-light-intervals}.
+Apply that proposition and average.
+\end{proof}
+
+\subsection{Several hub coordinates}
+
+\begin{theorem}[Three or more hubs]\label{thm:hub-many}
+Let $X_H\in\mathbb R^k$ and $X'$ be independent, with
+$\int f_H^2\le1$, and suppose $L=MX'\in\mathbb R^k$ has density
+bounded by $D$.  For any real measurable $F,R$ and $\beta\in\mathbb R^k$,
+\[
+ Q=F(X_H)+2\langle X_H,L+\beta\rangle+R(X')
+\]
+satisfies
+\[
+ |\mathbb E e^{itQ}|\le
+       \min\{1,D^{1/2}(\pi/|t|)^{k/2}\}.
+\]
+If $k>2$, then
+\begin{equation}\label{eq:hub-many-density}
+ \|p_Q\|_\infty\le\frac{k}{k-2}D^{1/k}.
+\end{equation}
+For independent cap-one light coordinates and singular values
+$s_1,\ldots,s_k>0$ of $M$, this is at most
+$\frac{k}{k-2}\sqrt2(s_1\cdots s_k)^{-1/k}$.
+\end{theorem}
+
+\begin{proof}
+Let
+$h_t(\ell)=\int f_H(x)e^{itF(x)+2it\langle x,\ell+\beta\rangle}\,dx$.
+Plancherel gives
+\[
+ \int_{\mathbb R^k}|h_t(\ell)|^2\,d\ell
+   =(\pi/|t|)^k\int f_H^2\le(\pi/|t|)^k.
+\]
+After conditioning on $X'$,
+\[
+ |\mathbb E e^{itQ}|\le\mathbb E|h_t(L)|
+ \le\|\rho_L\|_2\|h_t\|_2
+ \le D^{1/2}(\pi/|t|)^{k/2}.
+\]
+Integrating the minimum with one gives
+\eqref{eq:hub-many-density}.  The final assertion follows from
+\eqref{eq:hub-projection}.
+\end{proof}
+
+\begin{theorem}[Two hubs and a transverse square]\label{thm:hub-two-square}
+Let $X_H\in\mathbb R^2$ have density $f_H\le1$ and be independent
+of the cap-one product vector $X'$.  Let $M$ have rank two, singular
+values $s_1,s_2$, and orthonormal row-space basis $e_1,e_2$.
+Suppose $v\perp e_1,e_2$, $|v|=1$, and
+$e_{1i}^2+e_{2i}^2+v_i^2\le1/2$.
+Put $L=MX'$ and $V=\langle v,X'\rangle$.  For every real symmetric
+$2\times2$ matrix $B$, vectors $q_1,q_2$, and coordinate quadratics,
+\[
+ Q=X_H^TBX_H+2\langle X_H,L+\beta\rangle+\lambda V^2
+                   +2\sum_{j=1}^2L_j\langle q_j,X'\rangle
+                   +\sum_i\phi_i(X_i)
+\]
+has
+\[
+ \|p_Q\|_\infty\le
+ 5\,2^{6/5}(s_1s_2)^{-2/5}|\lambda|^{-1/5}
+ <11.5(s_1s_2)^{-2/5}|\lambda|^{-1/5}.
+\]
+\end{theorem}
+
+\begin{proof}
+Freeze the two partners on rectangular cells.  Plancherel gives
+\[
+ \int|h_t(\ell)|^2\,d^2\ell\le\pi^2/t^2
+\]
+for the hub factor.
+Fresnel linearization of the transverse square and the
+three-dimensional frame bound give for the frozen slice
+\[
+ |\widehat\mu_{\ell_0,\ell}(t)|
+ \le\min\left\{\rho_L(\ell),
+            \frac{8\sqrt\pi}{s_1s_2\sqrt{|t\lambda|}}\right\}.
+\]
+The factor $(s_1s_2)^{-1}$ is the Jacobian converting the frequency
+of $L$ to that of its orthonormal row-space coordinates.
+For each fixed $t$, Cauchy--Schwarz on the cells and passage to the
+Riemann-sum limit give
+\[
+ |\mathbb E e^{itQ}|\le K|t|^{-5/4},
+ \quad K=\pi\left(\frac{8\sqrt\pi}{s_1s_2}\right)^{1/2}
+                              |\lambda|^{-1/4}.
+\]
+Indeed, the squared slice factor integrates to at most its displayed
+uniform bound times $\int\rho_L=1$.
+The characteristic function is also at most one.  Its integral is
+$10K^{4/5}$, and division by $2\pi$ gives the stated constant.
+\end{proof}
+
+\begin{theorem}[Two hubs with an interval slice profile]
+\label{thm:hub-two-profile}
+Let $X_H\in\mathbb R^2$ have density at most one, be independent of
+$X'$, and let $L=MX'$ have a density.  Let $Y_\ell$ be a family of
+real functions of $X'$ such that $Y_{\ell'}\to Y_\ell$ pointwise as
+$\ell'\to\ell$.  Suppose its frozen slices satisfy
+\[
+ \mu_{\ell_0,\ell}(I)\le K|I|^b
+ \quad(0<b\le1)
+\]
+for every fixed $\ell_0$, almost every $\ell$, and every interval $I$.
+Then, for every real symmetric $B$ and $\beta\in\mathbb R^2$,
+\[
+ Q=X_H^TBX_H+2\langle X_H,L+\beta\rangle+Y_L
+\]
+has
+\[
+ \|p_Q\|_\infty\le\frac1\pi+
+             \frac{\sqrt{10K}}{1-2^{-b/2}}.
+\]
+\end{theorem}
+
+\begin{proof}
+First restrict the light measure to $\{\rho_L(L)\le N\}$.
+The resulting subprobability measure has bounded partner density, and
+all the assumed slice inequalities persist with the same constants.
+The bounds below are independent of $N$; monotone convergence at the
+end removes the restriction.  Use rectangular cells $C_j$ and frozen
+values $\ell_j$.  Define the
+finite positive measure
+\[
+ \nu_h=\sum_j\int_{C_j}
+          \mu_{\ell_j,\ell}*\widetilde\mu_{\ell_j,\ell}\,d^2\ell.
+\]
+It has nonnegative Fourier transform
+$\widehat\nu_h(t)=\sum_j\int_{C_j}|\widehat\mu_{\ell_j,\ell}(t)|^2
+d^2\ell$ and satisfies
+$\nu_h([-r,r])\le K(2r)^b$, since each slice has mass
+$\rho_L(\ell)$ and $\int\rho_L=1$.
+
+For any positive measure $\nu$ with nonnegative transform and
+$\nu([-r,r])\le K'r^b$, the Fej\'er kernel gives
+\[
+ \int_{-T}^T\widehat\nu(t)\,dt
+ \le4T\int\left(\frac{\sin(Tx)}{Tx}\right)^2\nu(dx)
+ \le20K'T^{1-b}.
+\]
+For the last inequality split at $|x|=1/T$ and into the dyadic shells
+$2^j/T<|x|\le2^{j+1}/T$; use
+$\min(1,(Tx)^{-2})$ and
+$1+2^b/(1-2^{b-2})\le5$.
+
+Let $\Omega_A=\{A\le|t|\le2A\}$.  Cauchy--Schwarz in the partners
+and then in $t$, followed by Fatou and the freezing limit, give
+\[
+ \int_{\Omega_A}|\mathbb E e^{itQ}|\,dt
+ \le \left(\int_{\Omega_A}\int|h_t(\ell)|^2d^2\ell\,dt\right)^{1/2}
+       \liminf_{h\downarrow0}
+         \left(\int_{\Omega_A}\widehat\nu_h(t)dt\right)^{1/2}.
+\]
+This can first be done on finitely many cells and then exhausted; all
+slice-mass estimates remain unchanged.  The first factor is at most
+$\pi A^{-1/2}$ by hub Plancherel, and the second is at most
+$(20\cdot2^bK(2A)^{1-b})^{1/2}$.
+Thus the integral is at most $\pi\sqrt{40K}A^{-b/2}$.
+Sum over $A=2^j$, $j\ge0$, add the bound two on $|t|<1$, and divide
+by $2\pi$.
+\end{proof}
+
+\begin{proposition}[A projected crossing remainder]
+\label{prop:hub-crossing}
+Let $k=1$ or $2$, let $X_H\in\mathbb R^k$ have density at most one,
+and let $X'$ be an independent cap-one product vector.  Consider
+\[
+ Q=X_H^TBX_H+2\langle X_H,MX'+\beta\rangle+R(X'),
+ \qquad R(x)=x^TA_Rx+b^Tx+c.
+\]
+Split the light coordinates as $I\cup J$.  Suppose $M_J$ has rank
+$k$, with product $S$ of its singular values, and put
+\[
+ C=(A_R)_{I,J}(I-\Pi),\qquad F=\|C\|_F>0,
+\]
+where $\Pi$ projects onto the row space of $M_J$.
+If every row $c_i$ of $C$ satisfies $|c_i|^2\le F^2/2$, then
+\begin{equation}\label{eq:hub-crossing-fourier}
+ |\mathbb E e^{itQ}|\le
+ 2^{(k+3)/4}\pi^{(k+1)/2}(SF)^{-1/2}|t|^{-(k+1)/2}.
+\end{equation}
+For $k=2$ this gives
+\[
+ \|p_Q\|_\infty\le3\,2^{5/6}(SF)^{-1/3}<5.35(SF)^{-1/3}.
+\]
+For $k=1$, $S=|w_J|$, it gives
+\[
+ \mathbb P(|Q-s|\le\delta)\le
+ \frac{\pi^2\delta}{\sqrt{SF}}
+ \left(1+\log_+\frac{\sqrt{SF}}{4\delta}\right).
+\]
+\end{proposition}
+
+\begin{proof}
+Let $\mu_t(\ell)$ be the density of
+$\mathbb E[e^{itR(X')};MX'\in d\ell]$.
+The hub factor and Plancherel imply
+\[
+ |\mathbb E e^{itQ}|^2\le(\pi/|t|)^k\int|\mu_t(\ell)|^2d\ell.
+\]
+Convolve $\mu_t$ with an even nonnegative normalized approximate
+identity $k_h$.  Conditional Cauchy--Schwarz in $X_I$, an independent
+copy $X_J^*$, and integration over $\ell$ yield
+\[
+ \int|\mu_t*k_h|^2\le
+ \mathbb E\left[\kappa_h(M_JD_J)
+       \prod_{i\in I}|\widehat f_i(2t\langle a_i,D_J\rangle)|\right],
+\]
+where $D_J=X_J-X_J^*$, $\kappa_h=k_h*k_h$, and $a_i$ is the
+$i$th row of $(A_R)_{I,J}$.  Terms of $R$ internal to $I$ cancel;
+terms internal to $J$ contribute only a phase of modulus one.
+
+Put $\theta_i=|c_i|^2/F^2$ and discard the zero rows, whose factors
+are at most one.  H\"older with weights $\theta_i$ bounds the last
+expectation by
+\[
+ \prod_i\left(\mathbb E\left[\kappa_h(M_JD_J)
+ |\widehat f_i(2t\langle a_i,D_J\rangle)|^{1/\theta_i}\right]
+                                                   \right)^{\theta_i}.
+\]
+The coordinates of $D_J$ are independent with densities bounded by
+one.  Since $c_i\perp\operatorname{row}(M_J)$, the density of
+$(M_JD_J,\langle c_i,D_J\rangle)$ is at most
+$2^{(k+1)/2}/(S|c_i|)$.
+Write $a_i=c_i+\alpha_iM_J$ and translate the last variable for each
+value of $M_JD_J$.  Applying \eqref{eq:hub-scalar-lp} gives a bound
+\[
+ \frac{2^{(k+1)/2}}{S|c_i|}\frac{4\pi\sqrt{\theta_i}}{2|t|}
+ =\frac{2^{(k+3)/2}\pi}{SF|t|}
+\]
+for every factor.  It is independent of $h$.
+Pass to the $L^2$ approximate-identity limit and combine with the
+hub factor to obtain \eqref{eq:hub-crossing-fourier}.
+For $k=2$, integrate its minimum with one.
+For $k=1$, put $K_1=2\pi/\sqrt{SF}$ and apply the kernel used in
+Lemma~\ref{lem:hub-frozen} to
+$\min(1,K_1/|t|)$.  The integral over
+$|t|\le\pi/(2\delta)$ is at most
+$2K_1(1+\log_+(\pi/(2K_1\delta)))$, which gives the assertion.
+\end{proof}
+
+\begin{remark}
+The projected-crossing estimate permits arbitrary terms internal to
+either light block.  Its extension to several volume directions and
+arbitrary-rank crossing matrices is given in
+Theorem~\ref{thm:grouped-crossing}; exact rank of the crossing matrix
+is not needed there.  The nondegeneracy and volume-marginal assumptions
+remain essential hypotheses of that theorem.
+\end{remark}
+
+\begin{corollary}[A logarithmic bound with a hub diagonal]
+\label{cor:hub-diagonal-log}
+Suppose Theorem~\ref{thm:hub-leak} and the $k=1$ case of
+Proposition~\ref{prop:hub-crossing} both apply.  Then
+\[
+ \|p_Q\|_\infty\le
+ \frac{2}{\sqrt{SF}}
+ \left(3+\log_+\frac{4(SF)^{3/2}}{\varepsilon|\lambda|}\right).
+\]
+\end{corollary}
+
+\begin{proof}
+The characteristic function is bounded by
+$\min(1,K_1|t|^{-1},K_2|t|^{-3/2})$, where
+$K_1=2\pi/\sqrt{SF}$ and
+$K_2=4\sqrt2\pi^{3/2}/\sqrt{\varepsilon|\lambda|}$.
+Splitting the positive half-line at $K_1$ and $(K_2/K_1)^2$ gives
+an integral at most
+$K_1[3+\log_+(K_2^2/K_1^3)]$.
+The same bound holds when the latter split precedes the former by
+using just the first and third entries of the minimum.
+Since $K_2^2/K_1^3=4(SF)^{3/2}/(\varepsilon|\lambda|)$,
+division of the two-sided integral by $2\pi$ proves the claim.
+\end{proof}
+
+\begin{proposition}[A spread linear hub]\label{prop:hub-spread}
+Let $X_H$ and $X'$ be independent cap-one product vectors, let
+$U=\langle c,X_H\rangle$, and assume
+$c_h^2\le|c|^2/2$ for every hub coordinate.  For
+\[
+ Q=2U(L+\beta)+\sum_{h\in H}\phi_h(X_h)
+       +\lambda V^2+2L\langle q,X'\rangle+\sum_i\phi_i(X_i),
+\]
+with \eqref{eq:hub-frame},
+\[
+ |\mathbb E e^{itQ}|\le
+ 8\pi^{3/2}|c|^{-1}|\lambda|^{-1/2}|t|^{-3/2},
+ \qquad
+ \|p_Q\|_\infty\le12(|c|^2|\lambda|)^{-1/3}.
+\]
+\end{proposition}
+
+\begin{proof}
+The conditional hub expectation is
+\[
+ H_t(u)=\prod_{h\in H}
+  \widehat g_h(2tuc_h+tb_h),\qquad
+ g_h(x)=f_h(x)e^{itd_hx^2}.
+\]
+H\"older with exponents $p_h=|c|^2/c_h^2\ge2$ and
+\eqref{eq:hub-scalar-lp} gives
+$\int|H_t(u)|\,du\le2\pi/(|t||c|)$.
+Freeze $L$ and pair this factor with the uniform slice-transform bound
+$4\sqrt\pi/\sqrt{|t\lambda|}$ from
+Lemma~\ref{lem:hub-frozen}.  Their product is the claimed
+characteristic-function bound.  Integrating the minimum with one gives
+the density bound.
+\end{proof}
+
+\subsection{An adapted-hub variational formulation}
+
+The entangled case admits a variational formulation in terms of a
+restricted conditional law.  Its dependence structure is absent from
+arbitrary bounded two-dimensional densities.
+
+\begin{proposition}[Adapted-hub variational reduction]
+\label{prop:hub-adapted}
+Let $a=0$ and $q=q_0+\varepsilon e$, where
+$q_0\in\operatorname{span}\{w,v\}$ and $P=\langle e,X'\rangle$.
+Absorb $-2\varepsilon\beta P$ into the light linear terms and write
+\[
+ Q=2Y(L+\beta)+R_0(X'),\qquad Y=X_0+\varepsilon P.
+\]
+Then the conditional density of $Y$ given $X'$ is at most one and
+depends on $X'$ only through $P$.
+For a fixed level $s$, put
+$x_*=(s-R_0(X'))/(2(L+\beta))$.
+If $W_s(x,p)$ is the joint density of $(x_*,P)$ under the
+nonnegative weight $1/(2|L+\beta|)$, then the supremum at $s$ over
+all conditional hub densities $f(y\mid p)\le1$ is
+\begin{equation}\label{eq:hub-adapted-functional}
+ \Phi(s)=\int_{\mathbb R}
+       \sup_{|A|=1}\int_A W_s(x,p)\,dx\,dp.
+\end{equation}
+In particular, $p_Q(s)\le\Phi(s)$ for the independent-hub form.
+The same assertion can be formulated for window probabilities, without
+assuming that the weighted pushforward has a density.
+\end{proposition}
+
+\begin{proof}
+The identity
+$2X_0(L+\beta)+2\varepsilon LP
+ =2(L+\beta)(X_0+\varepsilon P)-2\varepsilon\beta P$
+proves the first assertion.  Its conditional density is
+$f_0(y-\varepsilon P)$.
+Given $X'$, the map from $Y$ to $Q$ is affine with derivative
+$2(L+\beta)$; hence
+\[
+ p_Q(s)=\iint f(x\mid p)W_s(x,p)\,dx\,dp.
+\]
+For each $p$, maximizing a nonnegative linear functional subject to
+$0\le f(\cdot\mid p)\le1$ and $\int f(\cdot\mid p)=1$
+gives the integral over a set of measure one on which $W_s$ is largest.
+Measurable approximate maximizers can be chosen by thresholding
+$W_s$ and filling a level set; monotone approximation then gives
+\eqref{eq:hub-adapted-functional}.  The window version follows by
+applying the same conditional maximization to the nonnegative
+conditional window kernel before taking the density limit.
+\end{proof}
+
+\begin{conjecture}[A sufficient adapted-hub estimate]
+\label{conj:hub-adapted}
+Let $X'$ have independent coordinate densities bounded by one, and let
+$w,v,e$ be orthonormal with $w_i^2+v_i^2+e_i^2\le1/2$.
+Set $L=\langle w,X'\rangle$, $V=\langle v,X'\rangle$, and
+$P=\langle e,X'\rangle$.
+If the conditional density of $Y$ given $X'$ is $g(y\mid P)\le1$
+of unit mass, then $2YL+V^2$ has density bounded by an absolute constant.
+Equivalently, its functional \eqref{eq:hub-adapted-functional} is
+bounded uniformly in the level.
+\end{conjecture}
+
+The conjecture is stronger than the estimate for a translated
+independent hub, because it permits an arbitrary probability density
+depending on $P$.  This conditional estimate remains open.  The
+preceding estimates also do not cover arbitrary quadratic twists on
+the orthogonal complement of $\operatorname{span}\{w,v\}$ or yield an
+exhaustive quantitative reduction of all three-eigenvalue matrices
+to the stated hub configurations.
+
+\subsection{Adapted hubs for Gaussian mixtures}
+
+The adapted-hub estimate can be proved for a class allowing arbitrarily
+small Gaussian component variances.  The resulting theorem concerns the
+entangled core $2YL+\lambda V^2$; it does not assert an estimate for
+arbitrary light diagonal terms.
+
+\begin{lemma}[A conditional Gaussian bound]\label{lem:hub-gaussian}
+Suppose $(L,V,P)$ is a Gaussian vector with covariance matrix at least
+$hI_3$, where $h>0$.  Let the conditional law of $Y$ given $(L,V,P)$
+have density $g(y\mid P)\le1$ and unit integral in $y$.
+For $|\lambda|\ge1$ and arbitrary finite real measurable $B,C$, set
+\[
+ Q=2YL+\lambda V^2+B(Y,P)V+C(Y,P).
+\]
+Then
+\begin{equation}\label{eq:hub-gaussian-bound}
+ \|p_Q\|_\infty\le4(2\pi)^{-3/4}h^{-3/4}.
+\end{equation}
+If $h\ge(2\pi)^{-1}$, the sharper numerical bound is
+$\|p_Q\|_\infty\le3$.
+The means of the Gaussian vector are arbitrary.
+\end{lemma}
+
+\begin{proof}
+Condition on $P$.  The conditional covariance of $(L,V)$ is at least
+$hI_2$.  Indeed, for the full covariance matrix $M\ge hI_3$, its
+Schur complement satisfies
+\[
+ a^TK a=\inf_b(a,b)^TM(a,b)\ge h|a|^2.
+\]
+Regress $L$ on $V$: $L=\mu+\alpha V+W$, where $W$ is an independent
+Gaussian with variance at least $h$, and $V$ also has variance at
+least $h$.  Given $P$, the variable $Y$ is independent of these
+Gaussian residuals.  For fixed $Y=y$, the $W$ factor and the
+one-dimensional quadratic Gaussian integral imply
+\[
+ |\mathbb E[e^{itQ}\mid P,Y=y]|
+ \le e^{-2hy^2t^2}(1+4h^2t^2)^{-1/4}.
+\]
+The added terms change only a linear phase in $V$ and a constant.
+Completing the Gaussian square shows that the modulus contributed by
+the linear phase is at most one, for every conditional mean.
+Using both $g\le1$ and $\int g=1$ gives
+\begin{equation}\label{eq:hub-gaussian-envelope}
+ |\mathbb E e^{itQ}|\le
+ (1+4h^2t^2)^{-1/4}
+       \min\left\{1,\frac{\sqrt\pi}{\sqrt{2h}|t|}\right\}.
+\end{equation}
+This integrable bound is independent of $P$.
+Set $a=\sqrt{2\pi h}$ and $u=2h|t|$.  Fourier inversion gives
+\[
+ \|p_Q\|_\infty\le a^{-2}\int_0^\infty
+             (1+u^2)^{-1/4}\min(1,a/u)\,du.
+\]
+Bound $(1+u^2)^{-1/4}$ by $u^{-1/2}$ and split at $u=a$.
+The integral is at most $4\sqrt a$, proving
+\eqref{eq:hub-gaussian-bound}.
+For $h=(2\pi)^{-1}$, $a=1$; splitting at one and using one below
+that point and $u^{-1/2}$ above it gives the sharper value $1+2=3$.
+The envelope decreases with $h$, so this holds for larger $h$ too.
+\end{proof}
+
+\begin{corollary}[A Gaussian covariance floor]\label{cor:hub-gaussian-floor}
+Let $X'=Z+G$, where $Z$ is an arbitrary random vector and $G$ is an
+independent Gaussian vector with covariance at least $(2\pi)^{-1}I$.
+Let $L,V,P$ be orthonormal linear projections and let $Y$ have a
+conditional density at most one depending on $X'$ only through $P$.
+Then every $Q$ in Lemma~\ref{lem:hub-gaussian} has density at most
+three.  No spread hypothesis on the frame is needed.
+\end{corollary}
+
+\begin{proof}
+Generate the conditional hub after $X'$, using independent auxiliary
+randomness.  Conditional on $Z$, the vector $(L,V,P)$ is Gaussian with
+the required covariance floor and with arbitrary mean.  Its hub kernel
+is still $g(y\mid P)$.  Apply Lemma~\ref{lem:hub-gaussian} and average.
+\end{proof}
+
+\begin{lemma}[A uniform partition of fixed-dimensional frames]
+\label{lem:hub-frame-partition}
+For each positive integer $d$ there is $\eta_d>0$ such that every
+finite family $r_i\in\mathbb R^d$ satisfying
+\[
+ \sum_i r_i r_i^T=I_d,\qquad |r_i|^2\le\tfrac12
+\]
+can be partitioned into $A,B$ with
+\begin{equation}\label{eq:hub-frame-partition}
+ \sum_{i\in A}r_i r_i^T\ge\eta_d I_d,
+ \qquad
+ \sum_{i\in B}r_i r_i^T\ge\eta_d I_d.
+\end{equation}
+The constant does not depend on the number of vectors.
+\end{lemma}
+
+\begin{proof}
+We first recall the finite vector-matroid base-packing criterion:
+a family of rank $d$ contains two disjoint bases if and only if
+$|E\setminus F|\ge2(d-\operatorname{rank}F)$ for every subfamily $F$
+\citep{Edmonds1965}.  In a Parseval frame as above, the energy
+orthogonal to a subspace of codimension $k$ is $k$.
+Since a single vector contributes at most $1/2$, at least $2k$
+vectors lie outside that subspace.  Thus two disjoint bases exist
+for each fixed frame.
+
+Suppose the uniform assertion were false.  Choose frames whose best
+lower bound in \eqref{eq:hub-frame-partition} tends to zero.
+Sort each frame in decreasing order of vector norm, pad with zero
+vectors, and take a diagonal subsequence so that its $i$th vector
+converges to $r_i$ for each fixed $i$.
+Because the total squared norm is $d$, every tail vector beyond
+index $N$ has squared norm at most $d/(N+1)$.
+The limiting atoms satisfy $\sum_i r_i r_i^T\le I_d$.
+Put
+\[
+ S=I_d-\sum_i r_i r_i^T\ge0,\qquad K=\ker S.
+\]
+The projections of the limiting atoms onto $K$ form a Parseval frame
+for $K$, each with squared norm at most $1/2$.
+They contain two disjoint finite bases of $K$.
+To justify this for the possibly infinite family, choose a finite
+initial segment whose covariance on $K$ is at least
+$(1-\epsilon)I_K$, with $\epsilon<1/(2d)$.
+Every codimension-$k$ subspace of $K$ then has outside energy greater
+than $k-1/2$, so the number of outside vectors is at least $2k$.
+The finite base-packing criterion applies to this initial segment.
+
+Let $A_0,B_0$ be the indices of these disjoint bases, taking both
+empty if $K=\{0\}$.  The matrices
+\[
+ H_A=\sum_{i\in A_0}r_i r_i^T+S/2,
+ \qquad
+ H_B=\sum_{i\in B_0}r_i r_i^T+S/2
+\]
+are positive definite.  A null vector would belong to $K$ and be
+orthogonal to a basis of $K$.  Let $\gamma>0$ be the smaller of their
+least eigenvalues.  Choose $N$ containing both bases and large enough
+that $d/(2\sqrt{N+1})<\gamma/4$.
+
+In each approximating frame assign the indicated basis vectors to
+their prescribed sides, and assign the other first $N$ vectors
+arbitrarily.  Partition the tail independently by fair coin flips.
+If $T$ is the tail covariance and $T_A$ its contribution to side $A$,
+\[
+ \mathbb E\|T_A-T/2\|_F^2
+ =\tfrac14\sum_{i>N}|r_i^{\rm app}|^4
+ \le\frac{d^2}{4(N+1)}.
+\]
+There is consequently a tail partition with operator error at most
+$d/(2\sqrt{N+1})$ on both sides.  For fixed $N$, the tail covariance
+converges to $I_d-\sum_{i\le N}r_i r_i^T\ge S$.
+The prescribed basis covariances converge as well.  Thus sufficiently
+late approximating frames have both partition covariances at least
+$\gamma I_d/2$, a contradiction.
+\end{proof}
+
+\begin{theorem}[An adapted hub for Gaussian component mixtures]
+\label{thm:hub-gaussian-mixtures}
+Let
+\[
+ X_i=M_i+\sqrt{T_i}\,G_i,\qquad T_i>0,
+\]
+where the pairs $(M_i,T_i)$ are independent across coordinates and
+the standard Gaussian variables $G_i$ are independent of all these
+pairs.  Suppose
+\begin{equation}\label{eq:hub-mixture-peak}
+ \mathbb E T_i^{-1/2}\le\sqrt{2\pi}\qquad\text{for every }i.
+\end{equation}
+Let $w,v,e$ be orthonormal with
+$w_i^2+v_i^2+e_i^2\le1/2$, put
+$(L,V,P)=(\langle w,X'\rangle,\langle v,X'\rangle,
+\langle e,X'\rangle)$, and let $Y$ have conditional density
+$g(y\mid P)\le1$ of unit mass.
+For $|\lambda|\ge1$ and arbitrary finite real measurable $B,C$,
+\[
+ Q=2YL+\lambda V^2+B(Y,P)V+C(Y,P)
+\]
+has density bounded by
+\begin{equation}\label{eq:hub-mixture-bound}
+ 4\,2^{-3/4}3^{3/2}\eta_3^{-3/4},
+\end{equation}
+where $\eta_3$ is the constant in
+Lemma~\ref{lem:hub-frame-partition}.
+In particular this gives a uniform bound for
+\[
+ aX_0^2+2X_0(L+\beta)+\lambda V^2+2\varepsilon LP
+\]
+for every independent cap-one hub law, every $a,\beta,\varepsilon$,
+and every light law satisfying \eqref{eq:hub-mixture-peak}.
+\end{theorem}
+
+\begin{proof}
+Put $r_i=(w_i,v_i,e_i)^T$ and choose a partition $A,B$ from
+Lemma~\ref{lem:hub-frame-partition}.  Its two covariance sums satisfy
+$S_A\ge\eta_3I_3$ and $S_B\ge\eta_3I_3$.
+Realize $Y$ after $X'$ using fresh auxiliary randomness and the
+prescribed kernel $g(y\mid P)$.  This preserves the joint law relevant
+to $Q$ and ensures that the same kernel remains valid after
+conditioning on the latent mixture variables.
+Conditional on the mixture variables, the covariance of $(L,V,P)$ is
+\[
+ M=\sum_iT_i r_i r_i^T=M_A+M_B.
+\]
+If $h=\lambda_{\min}(M)$, Lemma~\ref{lem:hub-gaussian} bounds the
+conditional density by $4(2\pi)^{-3/4}h^{-3/4}$, uniformly in all
+conditional means and in $P$.  It remains to average this bound.
+
+For side $A$, set $R_A=(S_A^{-1/2}r_i)_{i\in A}$, so that
+$R_AR_A^T=I_3$.  For any positive diagonal matrix $D$, compression
+satisfies
+\begin{equation}\label{eq:hub-compression}
+ (R_ADR_A^T)^{-1/2}\le R_AD^{-1/2}R_A^T.
+\end{equation}
+Indeed the corresponding resolvent inequality follows from a Schur
+complement, and integrating it against
+$\pi^{-1}s^{-1/2}ds$ proves \eqref{eq:hub-compression}, using
+$x^{-1/2}=\pi^{-1}\int_0^\infty s^{-1/2}(x+s)^{-1}\,ds$.
+Since
+$M_A=S_A^{1/2}[R_A\operatorname{diag}(T_i)R_A^T]S_A^{1/2}$,
+taking traces and using \eqref{eq:hub-mixture-peak} gives
+\[
+ \mathbb E\lambda_{\min}(M_A)^{-1/2}
+ \le\eta_3^{-1/2}\sum_{i\in A}
+            |S_A^{-1/2}r_i|^2\mathbb ET_i^{-1/2}
+ \le3\sqrt{2\pi}\eta_3^{-1/2}.
+\]
+The same bound holds for $M_B$.
+The positive random variables
+$a_0=\lambda_{\min}(M_A)$ and $b_0=\lambda_{\min}(M_B)$ are
+independent, and $h\ge a_0+b_0\ge2\sqrt{a_0b_0}$.
+Therefore, by independence and the monotonicity of positive moments,
+\[
+ \mathbb Eh^{-3/4}
+ \le2^{-3/4}(\mathbb Ea_0^{-1/2})^{3/4}
+                 (\mathbb Eb_0^{-1/2})^{3/4}
+ \le2^{-3/4}(3\sqrt{2\pi}\eta_3^{-1/2})^{3/2}.
+\]
+Combining the two inequalities yields
+\eqref{eq:hub-mixture-bound}.
+
+For the final assertion, set $Y=X_0+\varepsilon P$.
+Then its conditional density is $f_0(y-\varepsilon P)\le1$, and
+\[
+ aX_0^2+2X_0(L+\beta)+\lambda V^2+2\varepsilon LP
+ =2YL+\lambda V^2+a(Y-\varepsilon P)^2
+                         +2\beta(Y-\varepsilon P),
+\]
+which is in the stated class with $B=0$.
+\end{proof}
+
+\begin{remark}[Scope of the mixture condition]
+Condition \eqref{eq:hub-mixture-peak} bounds the average peak of the
+Gaussian components and implies that each marginal density is at most
+one.  For centered Gaussian scale mixtures, meaning that each $M_i$
+is deterministic, it is equivalent to the cap-one assumption: the
+maximum is attained at $M_i$ and equals
+$(2\pi)^{-1/2}\mathbb ET_i^{-1/2}$.
+Thus Theorem~\ref{thm:hub-gaussian-mixtures} covers every cap-one
+centered Gaussian scale mixture, even when its component variances
+have no positive lower bound.  A mixture of many narrow components
+separated in location can have a bounded final density while violating
+\eqref{eq:hub-mixture-peak}; such laws are not covered.
+\end{remark}
+
+\begin{corollary}[Laplace light coordinates]\label{cor:hub-laplace}
+Let the light coordinates have independent translated Laplace
+densities $e^{-2|x-m_i|}$.  For the adapted forms of
+Theorem~\ref{thm:hub-gaussian-mixtures}, no spread condition is needed,
+and
+\[
+ \|p_Q\|_\infty\le12\pi^{-3/4}\Gamma(1/4)<19.
+\]
+\end{corollary}
+
+\begin{proof}
+The Laplace law has the representation
+$m_i+\sqrt{T_i}G_i$ with $T_i$ exponential of rate two:
+its characteristic function is
+$\mathbb E e^{-t^2T_i/2}=4/(4+t^2)$.
+For the covariance $M=\sum_iT_i r_i r_i^T$, the same resolvent
+compression argument, now with exponent $3/4$, gives
+\[
+ \mathbb E\lambda_{\min}(M)^{-3/4}
+ \le\mathbb E\operatorname{tr}M^{-3/4}
+ \le\sum_i|r_i|^2\mathbb ET_i^{-3/4}
+ =3\,2^{3/4}\Gamma(1/4).
+\]
+Average \eqref{eq:hub-gaussian-bound}.  No partition of the frame is
+needed because the full negative $3/4$ moment exists here.
+\end{proof}
+
+\subsection{A limitation of density-cap arguments for adapted hubs}
+
+\begin{proposition}[Conditional information is not controlled by marginal caps]
+\label{prop:hub-cap-obstruction}
+For every sufficiently large integer $m$, there is a joint law
+$(L,V,P)$ whose joint density and all its coordinate marginal
+densities are bounded by one, and a conditional hub density
+$g(y\mid P)\le1$ of unit mass, such that
+\[
+ \|p_{2YL+V^2}\|_\infty\ge\frac14\log m-\frac12\log9.
+\]
+Here coordinate marginals include all one- and two-coordinate
+projections of this three-dimensional vector.  The constructed joint
+law is not asserted to be an orthogonal projection of a product law.
+\end{proposition}
+
+\begin{proof}
+Let $\delta=1/m$.  Partition $[0,1]\times[1,2]$ into squares
+\[
+ C_{jk}=[j\delta,(j+1)\delta]\times
+                    [1+k\delta,1+(k+1)\delta],\qquad0\le j,k<m.
+\]
+Assign to each square a distinct disjoint unit interval $I_{jk}$
+on the $P$ axis.  Put joint density one on
+$\bigcup_{j,k}C_{jk}\times I_{jk}$ and zero elsewhere.
+Its total integral is $m^2\delta^2=1$.
+The $(L,V)$ marginal is uniform on the rectangle; the $(L,P)$ and
+$(V,P)$ densities are $\delta$ on their supports; and the $P$ density
+is $\delta^2$.  The one-dimensional $L,V$ densities are one.
+
+Write $(\ell_j,v_k)$ for the center of $C_{jk}$.
+When $P\in I_{jk}$, let $Y$ be uniform on the unit interval centered
+at $-v_k^2/(2\ell_j)$.  This kernel depends only on $P$.
+For cells whose lower $L$ endpoint is at least $8\sqrt\delta$,
+the root $-v^2/(2\ell)$ stays in this unit interval throughout the
+cell.  The mean-value theorem bounds its distance from the center
+root by
+\[
+ \frac\delta{\ell_{\min}}+
+             \frac\delta{\ell_{\min}^2}
+ \le\frac{\sqrt\delta}{8}+\frac1{64}<\frac12.
+\]
+The same remains true for the root $(s-v^2)/(2\ell)$ when
+$|s|\le\sqrt\delta$, since the added displacement is at most
+$1/16$.
+Let $b_m$ be the first grid boundary at least $8\sqrt\delta$;
+then $b_m\le9\sqrt\delta$ for large $m$.
+For every such level $s$, the conditional density formula in $Y$
+therefore gives
+\[
+ p_{2YL+V^2}(s)\ge
+ \int_{b_m}^1\int_1^2\frac{dv\,d\ell}{2\ell}
+ =\frac12\log(1/b_m)
+ \ge\frac14\log m-\frac12\log9.
+\]
+This holds on a nonempty interval of levels, and hence proves an
+essential-supremum lower bound.
+\end{proof}
+
+This example shows why the adapted problem requires more than caps
+on the displayed joint and marginal densities: $P$ can encode a fine
+$(L,V)$ cell and allow the hub to choose a separate center for that
+cell.  It is an obstruction to a reduced proof strategy, not a
+counterexample to the bounded-density conjecture for independent
+coordinates.  The mixture theorem above uses both the conditional
+Gaussian structure and the independence of two frame blocks, and
+therefore retains information absent from this example.
+
+\subsection{Collisions on shells and a logarithmic support dependence}
+
+\begin{lemma}[A shell collision estimate]\label{lem:hub-shell}
+Let $w,v,b$ be orthonormal, put $L=w\cdot X'$, $V=v\cdot X'$,
+$B=b\cdot X'$, and let
+$Y=\lambda(V-v_0)^2+\gamma B$, where $\lambda\ne0$.
+For almost every $\ell$, let $h_\ell$ be the unnormalized density
+of $Y$ on the slice $L=\ell$, restricted to
+$r\le |V-v_0|\le K$, where $0<r<K$.  Then
+\[
+ \int_{\mathbb R}h_\ell(y)^2\,dy
+ \le \frac8{|\lambda|}\log(K/r).
+\]
+No bound on the coordinate leverages is required.
+\end{lemma}
+
+\begin{proof}
+Take an independent copy $(L',V',B')$ and put
+$S=V+V'-2v_0$, $D=V-V'$, $E=B-B'$.
+The square integral is the collision density at $(\ell,\ell,0)$
+of $(L,L',Y-Y')$ for the two restricted measures, and
+$Y-Y'=\lambda SD+\gamma E$.
+First restrict to pairs on the same side of the fold $v_0$.
+Then $2r\le |S|\le2K$.  For fixed $S=s$ put
+$n=(\lambda s,\gamma)/\sqrt{\lambda^2s^2+\gamma^2}$.
+On the product space of the two copies, the coefficient vectors of
+\[
+ L,\quad L',\quad (S+2v_0)/\sqrt2,\quad (n_1D+n_2E)/\sqrt2
+\]
+are orthonormal.  Their joint density is at most four by
+\eqref{eq:hub-projection}.  Undoing the two factors $\sqrt2$ bounds
+the density in the unscaled coordinates by two.  Restrictions of
+the underlying measure can only decrease it.  Thus the contribution
+of the same-side pairs is at most
+\[
+ \int_{2r\le |s|\le2K}
+       \frac{2\,ds}{\sqrt{\lambda^2s^2+\gamma^2}}
+ \le\frac4{|\lambda|}\log(K/r).
+\]
+For opposite-side pairs fix $D=d$ instead.  Now
+$2r\le |D|\le2K$, and the four orthogonal directions are
+$L,L',D/\sqrt2,(n_1S+n_2E)/\sqrt2$, with
+$n=(\lambda d,\gamma)/\sqrt{\lambda^2d^2+\gamma^2}$.
+The same calculation gives the remaining four units.
+These collision identities can first be applied to mollified
+densities and bounded restrictions; disintegration and monotone
+convergence then give the asserted almost-everywhere statement.
+\end{proof}
+
+\begin{theorem}[Logarithmic dependence on bounded light supports]
+\label{thm:hub-shell-support}
+Suppose each light coordinate has density at most one and is
+supported in an interval of length at most $K$.  In the normal form
+at the start of this section suppose $a=0$ and the light diagonal
+coefficients vanish.  Then, uniformly in all cross terms, affine
+terms, and the hub law,
+\[
+ \|p_Q\|_\infty
+ \le \frac12+\frac{C}{\sqrt{|\lambda|}}\,
+              \sqrt{1+\log(1+K^2|\lambda|)}
+\]
+for an absolute constant $C$.
+\end{theorem}
+
+\begin{proof}
+We have $K\ge1$.  On every frozen slice the light polynomial,
+after completing the square, has the form in
+Lemma~\ref{lem:hub-shell}, up to a constant; its direction $b$,
+coefficient $\gamma$, and fold location may depend on the frozen
+value.  A missing $b$ direction can be supplied by an extra,
+independent coordinate whose coefficient in $Y$ is zero.
+The exponential-tilt proof of
+Proposition~\ref{prop:hub-light-intervals}, applied just in direction
+$v$, gives
+\[
+ \rho_{L,V}(\ell,u)
+ \le 2\exp\{-2(|u-\mathbb EV|-2K)_+^2/K^2\}.
+\]
+Consequently the slice mass on
+$|V-\mathbb EV|>2K+t$ is at most
+$\sqrt{2\pi}K e^{-2t^2/K^2}$.
+
+Put $W=2K+t$ and $D_0=|v_0-\mathbb EV|$.
+On the remaining part of the slice and outside the fold slab of
+radius $r\le W$, the values of $|V-v_0|$ lie between
+$\max(r,D_0-W)$ and $D_0+W$.  The ratio of these endpoints is at
+most $3W/r$: if $D_0\le2W$ use the upper bound $3W$, and otherwise
+use the ratio bound three.  The fold slab has slice mass at most
+$4r$, since $\rho_{L,V}\le2$.  Cauchy--Schwarz and
+Lemma~\ref{lem:hub-shell} therefore give, for every Borel set $S$,
+\[
+ \mu_{\ell_0,\ell}(S)
+ \le4r+\sqrt{\frac8{|\lambda|}\log(3W/r)}\,\sqrt{|S|}
+                  +\sqrt{2\pi}K e^{-2t^2/K^2}.
+\]
+Here and below harmless changes in the polynomial's additive
+constant do not affect the estimate.
+
+Write $x=|S|$ and $\mu=|\lambda|$.  If $x<\mu$, take
+\[
+ r=\sqrt{x/\mu},\qquad
+ t=K\sqrt{\tfrac12\log_+
+                       (\sqrt{2\pi}K\sqrt{\mu/x})}.
+\]
+Then $r<1\le K\le W$, and the last term is at most
+$\sqrt{x/\mu}$.  For an absolute $C_0$ this proves
+\[
+ \mu_{\ell_0,\ell}(S)
+ \le\frac{C_0}{\sqrt\mu}
+       \sqrt{x\log\!\left(e+\frac{1+K^2\mu}{x}\right)}.
+\]
+Indeed $\log(3W/r)\le
+C[1+\log(K\sqrt{\mu/x})]$, since the extra square root of a logarithm
+in $W$ contributes at most the same expression.  If $x\ge\mu$,
+the displayed bound follows instead from the total slice mass
+$\rho_L(\ell)\le\sqrt2$, after enlarging $C_0$.
+
+This last displayed expression defines an increasing concave
+profile for all $x>0$, with value zero at zero.
+To check concavity, $x\mapsto x\log(e+A/x)$ is increasing and
+concave for every $A>0$, as direct differentiation shows;
+composition with the increasing concave square root preserves both
+properties.  Finally, substituting $x=2e^{-u}$ shows
+\[
+ \int_0^2\sqrt{x\log(e+A/x)}\,\frac{dx}{x}
+ \le C_1\sqrt{1+\log(1+A)}.
+\]
+For example use
+$\log(e+(A/2)e^u)\le u+\log(e+A/2)$ and integrate
+$e^{-u/2}\sqrt{u+\log(e+A/2)}$.
+Lemma~\ref{lem:hub-profile} proves the theorem.
+\end{proof}
+
+\begin{proposition}[A weighted collision criterion]
+\label{prop:hub-weighted-collision}
+In the notation of Lemma~\ref{lem:hub-shell}, set
+\[
+ G=\sqrt{\lambda^2
+       (|V-v_0|+|V'-v_0|)^2+\gamma^2},
+ \qquad Z=(Y-Y')/G.
+\]
+Suppose that, uniformly in the frozen parameters, the
+disintegrated collision density of $(L,L',Z)$ at
+$(\ell,\ell,0)$ is at most $C_0$ for almost every $\ell$.
+More explicitly, in each of the two branch classes used in the proof
+of Lemma~\ref{lem:hub-shell}, assume that the nonnegative density
+$F_\ell(s)$ in the remaining shell coordinate at $Z=0$
+satisfies $\int F_\ell(s)\,ds\le C_0$.
+Then the density restricted to $|V-v_0|\ge r$ satisfies
+\[
+ \int h_\ell(y)^2\,dy
+ \le\frac8{|\lambda|}
+              \log\!\left(1+\frac{C_0}{8r}\right).
+\]
+In particular, if this hypothesis holds uniformly and
+$|\lambda|\ge1$, the corresponding zero-diagonal one-hub forms
+have uniformly bounded densities, with a constant depending only
+on $C_0$.
+\end{proposition}
+
+\begin{proof}
+In the same-side class use $s=S$ and in the opposite-side class
+use $s=D$.  The orthogonal projection calculation above gives
+$0\le F_\ell(s)\le2$, even though its direction depends on $s$.
+The collision integral in either class is at most
+$|\lambda|^{-1}\int_{|s|\ge2r}F_\ell(s)|s|^{-1}\,ds$.
+The maximum under the constraints $F\le2$ and $\int F\le C_0$
+is obtained by filling the intervals closest to the two endpoints
+$\pm2r$.  Its value is
+$4|\lambda|^{-1}\log(1+C_0/(8r))$.
+Adding the two classes proves the first assertion.
+The fold slab again has mass at most $4r$.  Hence
+\[
+ \mu_{\ell_0,\ell}(S)
+ \le4r+\sqrt{\frac{8|S|}{|\lambda|}
+                           \log(1+C_0/(8r))}.
+\]
+For $|\lambda|\ge1$, choose $r=\sqrt{|S|}$ near zero and use the
+trivial slice mass bound away from zero.  An increasing concave
+majorant is $C(C_0)\sqrt{x\log(e+(1+C_0)^2/x)}$.
+Its integral against $dx/x$ on $(0,2)$ is finite, so
+Lemma~\ref{lem:hub-profile} applies.
+\end{proof}
+
+The weighted collision hypothesis is an additional nonlinear
+condition.  The flat projection density bound proves the
+pointwise bound $F_\ell\le2$ but does not prove its integral
+bound.  Thus the proposition gives a sufficient condition whose
+validity for arbitrary product densities remains open.
+
+\subsection{Averaging the hub quadratic phase}
+
+\begin{lemma}[A parabola extension estimate]\label{lem:hub-strichartz}
+If $0\le f\le1$ and $\int f=1$, and
+$g(s,\tau)=\int f(x)e^{isx^2+i\tau x}\,dx$, then
+\[
+ \iint_{\mathbb R^2}|g(s,\tau)|^6\,ds\,d\tau
+ \le \frac{4\pi^3}{\sqrt3}.
+\]
+The same bound holds if $f$ in the definition of $g$ is replaced
+by a complex function dominated in absolute value by $f$.
+\end{lemma}
+
+\begin{proof}
+The cube $g^3$ is the Fourier transform of the pushforward of
+$f(x_1)f(x_2)f(x_3)\,dx$ under
+$T(x)=(x_1+x_2+x_3,x_1^2+x_2^2+x_3^2)$.
+If $r$ is the distance from $x$ to the line spanned by
+$(1,1,1)$, the coarea Jacobian is $2\sqrt3\,r$.
+Each nonempty regular fiber is a circle of radius $r$.
+Its image density $m$ is consequently at most
+$\pi/\sqrt3$, since the product of the three densities is at
+most one.  It has integral one.  Plancherel gives
+\[
+ \iint |g|^6=(2\pi)^2\int m^2
+ \le(2\pi)^2(\pi/\sqrt3)\int m.
+\]
+For a complex amplitude, the absolute value of its pushforward
+is bounded by the same nonnegative density $m$, so the argument
+is unchanged.  This coarea proof is the elementary
+one-dimensional parabola case of the Fourier extension estimates
+associated with \citet{Strichartz1977,Foschi2007,HZ2006}.
+\end{proof}
+
+\begin{theorem}[A degenerate hub with a quadratic partner]
+\label{thm:hub-degenerate}
+Let $l,u$ be linearly independent, let
+$L=l\cdot X'$, $U=u\cdot X'$, and put
+$G=\operatorname{Gram}(l,u)$.
+Assume $(l_i,u_i)G^{-1}(l_i,u_i)^T\le1/2$ for every $i$.
+For independent coordinates with density at most one, consider
+\[
+ Q=aH^2+2H(L+\beta)+\sigma L^2+\lambda U^2
+                                      +\sum_i\phi_i(X_i),
+\]
+where the $\phi_i$ are arbitrary quadratic polynomials.
+If $\sigma\lambda\ne0$ and $a\sigma\ne1$, define
+\[
+ \begin{split}
+ C_6&=(4\pi^3/\sqrt3)^{1/6},\\
+ B_0&=(4\pi)^{5/6}C_6
+ |\lambda|^{-1/2}|\sigma|^{-1/6}|1-a\sigma|^{-1/6}
+               (\det G)^{-5/12}|u|^{-1/6}.
+ \end{split}
+\]
+Then, for every $T>0$,
+\begin{equation}\label{eq:hub-strichartz-block}
+ \int_T^{2T}|\mathbb E e^{itQ}|\,dt\le B_0T^{-1/6},
+\end{equation}
+and
+\[
+ \|p_Q\|_\infty
+ \le\frac7\pi
+ \left(\frac{B_0}{6(1-2^{-1/6})}\right)^{6/7}.
+\]
+\end{theorem}
+
+\begin{proof}
+The leverage assumption also implies
+$u_i^2/|u|^2\le1/2$.  Absorb all linear hub terms into $\beta$.
+Write $\phi_i(x)=d_ix^2+b_ix+c_i$ and
+$\psi_i^{(t)}(\theta)=\int f_i(x)e^{itd_ix^2+i\theta x}\,dx$.
+For a fixed hub value $x$ use the exact identity
+\[
+ ax^2+2xL+\sigma L^2
+   =\sigma(L+x/\sigma)^2+(a-1/\sigma)x^2.
+\]
+Two Fresnel linearizations, with Gaussian damping followed by
+dominated convergence, therefore give
+\[
+ |\varphi_Q(t)|\le
+ \frac1{4\pi|t|\sqrt{|\sigma\lambda|}}
+ \int_{\mathbb R}
+ |g_H(t(a-1/\sigma),2t\beta+\zeta/\sigma)|K_t(\zeta)\,d\zeta,
+\]
+where
+$K_t(\zeta)=\int\prod_i
+ |\psi_i^{(t)}(\zeta l_i+\xi u_i+tb_i)|\,d\xi$.
+Lemma~\ref{lem:hub-frame-integral}, first in the $u$ direction
+and then in both directions, yields
+\[
+ \|K_t\|_\infty\le4\pi/|u|,
+ \quad \|K_t\|_1\le(4\pi)^2(\det G)^{-1/2},
+ \quad
+ \|K_t\|_{6/5}\le
+ (4\pi)^{11/6}(\det G)^{-5/12}|u|^{-1/6}.
+\]
+Apply H\"older with exponents $6$ and $6/5$ on
+$[T,2T]\times\mathbb R$.  The map
+\[
+ (t,\zeta)\longmapsto
+ (t(a-1/\sigma),\,2t\beta+\zeta/\sigma)
+\]
+has Jacobian $|1-a\sigma|/\sigma^2$.
+Lemma~\ref{lem:hub-strichartz} bounds the first factor by
+$C_6(\sigma^2/|1-a\sigma|)^{1/6}$.
+The second factor is at most
+$T^{5/6}(4\pi)^{11/6}(\det G)^{-5/12}|u|^{-1/6}$.
+Multiplying these factors and $1/(4\pi T\sqrt{|\sigma\lambda|})$
+proves \eqref{eq:hub-strichartz-block}.
+Since $Q$ is real, the negative-frequency bound is identical.
+The full Fourier integral is at most
+\[
+ 2T_0+\frac{2B_0T_0^{-1/6}}{1-2^{-1/6}}.
+\]
+Its minimum occurs at
+$T_0=[B_0/(6(1-2^{-1/6}))]^{6/7}$.
+Fourier inversion proves the density estimate.
+\end{proof}
+
+\begin{theorem}[Uniformity through zero partner curvature]
+\label{thm:hub-degenerate-uniform}
+In Theorem~\ref{thm:hub-degenerate}, assume $a=0$.
+There is a finite bound depending only on
+$|\lambda|$, $\det G$, and $|u|$, uniform in every
+$\sigma\in\mathbb R$, in the affine terms, and in the light
+diagonal terms.  One explicit bound is
+\[
+ \|p_Q\|_\infty\le
+ 1+\frac{13}{4}C_H+
+ C_{\mathrm{av}}|\lambda|^{-1/2}
+                         (\det G)^{-5/12}|u|^{-1/6},
+ \qquad
+ C_H=3\,2^{4/3}(|\lambda|\det G)^{-1/3},
+\]
+where
+\[
+ C_{\mathrm{av}}=
+ \frac{(4\pi)^{5/6}C_6}{\pi}
+ \left\{\frac2{1-2^{-1/6}}
+             +\frac{2}{3(2^{11/6}-1)}\right\}.
+\]
+\end{theorem}
+
+\begin{proof}
+When $\sigma=0$, Proposition~\ref{prop:hub-localized} with empty
+localization set, after changing the two frame coordinates,
+gives the bound $C_H$.  Suppose $\sigma\ne0$.
+Set $Q_1=Q-\sigma L^2$ and
+$Q_2=Q-\sigma(L+\beta)^2$.
+Each has the preceding zero-curvature form and density at most
+$C_H$, since their difference consists only of affine light terms.
+Fix $\delta\ge|\sigma|$ and put
+$\Lambda=\sqrt{\delta/|\sigma|}\ge1$.
+On $|L|\le\Lambda$, comparison with $Q_1$ bounds a window of
+radius $\delta$ by $4C_H\delta$.
+On $|L|>\Lambda$, $|L+\beta|\ge\Lambda/2$, conditioning on
+$X'$ and using the affine hub slope gives probability at most
+$\delta/|L+\beta|\le2\delta$.
+On the remaining event,
+$|Q-Q_2|\le|\sigma|(L+\beta)^2<\delta/4$,
+so comparison with $Q_2$ gives at most $(5/2)C_H\delta$.
+Consequently
+\[
+ \sup_s\frac{\mathbb P(|Q-s|\le\delta)}{2\delta}
+ \le1+\frac{13}{4}C_H.
+\]
+
+To pass to smaller scales, put $h=|\sigma|$.
+The preceding theorem gives an integrable characteristic function.
+For the uniform probability density $U_h$ on $[-h,h]$,
+Fourier inversion and $0\le1-\sin z/z\le\min(2,z^2/6)$ imply
+\[
+ \|p_Q-p_Q*U_h\|_\infty
+ \le\frac1{2\pi}\int |\varphi_Q(t)|
+                       (1-\operatorname{sinc}(ht))\,dt.
+\]
+Use \eqref{eq:hub-strichartz-block} on blocks
+$T=2^j/h$, $j\in\mathbb Z$.
+On such a block the last factor is at most
+$\min(2,(2/3)4^j)$.  The geometric sums over $j\ge0$ and
+$j\le-1$ are respectively bounded by
+$2/(1-2^{-1/6})$ and $2/[3(2^{11/6}-1)]$.
+Thus the error is at most
+$B_0h^{1/6}$ times their sum divided by $\pi$.
+When $a=0$, the factor $|\sigma|^{-1/6}$ in $B_0$
+cancels $h^{1/6}$ exactly.  The estimate for $p_Q*U_h$
+already follows from the window bound at $\delta=h$.
+Adding the two bounds proves the result.
+\end{proof}
+
+\begin{corollary}[A normalized degenerate hub]
+\label{cor:hub-degenerate-normalized}
+If $w,v$ are orthonormal and $w_i^2+v_i^2\le1/2$, then
+\[
+ 4H(w\cdot X')+2(w\cdot X')^2+2(v\cdot X')^2
+                         +\sum_i\phi_i(X_i)+b_HH
+\]
+has density less than $18$, for every choice of the independent
+coordinate laws with density at most one.
+\end{corollary}
+
+\begin{proof}
+Apply Theorem~\ref{thm:hub-degenerate} with $l=2w$, $u=v$,
+$a=0$, $\sigma=1/2$, and $\lambda=2$.
+Then $\det G=4$, $|u|=1$, and the exact expression for $B_0$
+is less than $7.5$.  The resulting exact density bound is
+less than $18$.
+\end{proof}
+
+For a quadratic polynomial confined to $\operatorname{span}(w,v)$,
+completing the square in $V$ produces
+$\lambda'(V+\kappa L+\gamma)^2+\sigma L^2$ and affine terms.
+The replacement $u=v+\kappa w$ preserves
+$\det\operatorname{Gram}(w,u)=1$ and the relative leverage
+$w_i^2+v_i^2$.  Hence the uniform theorem applies whenever the
+transverse coefficient $|\lambda'|$ stays bounded below.
+For $a\ne0$, the bound retains its factors
+$|\sigma|^{-1/6}|1-a\sigma|^{-1/6}$ and diverges as the
+corresponding curvatures vanish.
+
+\subsection{Hub diagonals and square-root profiles with random centers}
+
+Here $H$ is independent of $(t,R)$, has density $f_H\le1$, and
+\[
+ Q=aH^2+2Ht+R.
+\]
+The random variable $t$ may be a shifted linear projection of the
+light coordinates.  We use the following explicitly joint
+hypothesis: there are a random center $C$ coupled with $t$ and
+a constant $K$ such that for every nonnegative Borel function
+$\Phi$,
+\begin{equation}\label{eq:hub-sq}
+ \mathbb E\Phi(t,R)\le
+ K\mathbb E\int_{\mathbb R}
+                         \Phi(t,r)|r-C|^{-1/2}\,dr.
+\end{equation}
+For example, if
+$R=\lambda(V-D_0)^2+C$ and $V$ has conditional density at most
+$\kappa$ given $(t,D_0,C)$, then \eqref{eq:hub-sq} holds with
+$K=\kappa/\sqrt{|\lambda|}$, by the two-root change of variables.
+The auxiliary variables used to represent the right-hand side of
+\eqref{eq:hub-sq} are sampled independently of $H$.
+
+\begin{lemma}[A scalar discriminant bound]\label{lem:hub-sq-scalar}
+For a probability density $0\le f\le1$ and
+$\Delta=t^2+a s\ne0$,
+\[
+ \int_{\mathbb R}f(x)|s-ax^2-2tx|^{-1/2}\,dx
+ \le2^{7/4}|\Delta|^{-1/4}.
+\]
+If $a=0$ and $t\ne0$, the sharper bound is $2|t|^{-1/2}$.
+\end{lemma}
+
+\begin{proof}
+For $a\ne0$, put $A=|a|$, $d=|\Delta|$, and
+$z=A(x+t/a)/\sqrt d$.
+The sublevel condition $|s-ax^2-2tx|<u$ becomes
+$|z^2-\operatorname{sgn}\Delta|<Au/d$.
+If $\Delta>0$, the length of this set in the $z$ variable is
+\[
+ 2\{\sqrt{1+r}-\sqrt{(1-r)_+}\},\qquad r=Au/d,
+\]
+which is at most $2\sqrt2\,r$.  For $r\le1$ rationalize
+the difference and use
+$\sqrt{1+r}+\sqrt{1-r}\ge\sqrt2$; for $r\ge1$ use
+$\sqrt{1+r}\le\sqrt2\,r$.
+If $\Delta<0$, its length is $2\sqrt{(r-1)_+}\le r$,
+so the same bound holds.  After returning to $x$,
+\[
+ |\{x:|s-ax^2-2tx|<u\}|
+                      \le 2\sqrt2\,u/\sqrt d.
+\]
+Layer cake and $f\le1$, $\int f=1$ yield
+\[
+ \int f|s-ax^2-2tx|^{-1/2}
+ \le\int_0^\infty
+       \min(1,2\sqrt2\,v^{-2}/\sqrt d)\,dv
+ =2^{7/4}d^{-1/4}.
+\]
+For $a=0$ the sublevel length is exactly $u/|t|$,
+and the same integral gives $2|t|^{-1/2}$.
+\end{proof}
+
+\begin{theorem}[Composition with a random center]
+\label{thm:hub-sq-composition}
+Under \eqref{eq:hub-sq}, for almost every $s$,
+\begin{equation}\label{eq:hub-sq-composition}
+ p_Q(s)\le1+2^{7/4}K\,
+                    \mathbb E|t^2+a(s-C)|^{-1/4}.
+\end{equation}
+If $C=\sigma_c t^2+\eta_1t+\eta_0+C'$ for deterministic
+$\sigma_c,\eta_1,\eta_0$, and the conditional density of $t$
+given $C'$ is bounded by $D$, then, provided
+$D_H=1-a\sigma_c\ne0$,
+\[
+ \|p_Q\|_\infty
+ \le1+2^{13/4}K\sqrt D\,|D_H|^{-1/4}.
+\]
+At $a=0$ the first bound requires no information about the
+random center beyond \eqref{eq:hub-sq}.
+\end{theorem}
+
+\begin{proof}
+For fixed $(t,r)$ the roots of $ax^2+2tx+r=s$ have derivative
+$2|ax+t|$.  Roots with $|ax+t|\ge1$ contribute at most one
+in total.  Let
+\[
+ \mathcal K_s(t,r)=
+ \sum_{\substack{x:\,ax^2+2tx+r=s\\|ax+t|<1}}
+                         \frac{f_H(x)}{2|ax+t|}.
+\]
+Changing $r$ at fixed $t$ on each monotonicity branch gives
+\[
+ \int \mathcal K_s(t,r)\Psi(r)\,dr
+ =\int f_H(x)\mathbf1_{\{|ax+t|<1\}}
+                    \Psi(s-ax^2-2tx)\,dx.
+\]
+Apply \eqref{eq:hub-sq} to $\mathcal K_s$, use this identity,
+and drop the indicator.  Lemma~\ref{lem:hub-sq-scalar},
+with its level parameter replaced by $s-C$, proves
+\eqref{eq:hub-sq-composition}.
+The formulas also follow by smoothing in $s$, which avoids
+exceptional critical values; Tonelli then justifies all the
+nonnegative integrals.
+
+Conditionally on $C'$, the discriminant in the second assertion
+is a quadratic polynomial in $t$ with leading coefficient $D_H$.
+For real roots, factor it and use Cauchy--Schwarz.
+For conjugate nonreal roots, its absolute value is at least
+$|D_H|(t-r)^2$, where $r$ is their common real part.
+In either case
+\[
+ \mathbb E\bigl(|t^2+a(s-C)|^{-1/4}\mid C'\bigr)
+ \le |D_H|^{-1/4}
+             \sup_r\mathbb E(|t-r|^{-1/2}\mid C')
+ \le2\sqrt2\,\sqrt D\,|D_H|^{-1/4}.
+\]
+The final bound is the bathtub integral over the interval of
+length $1/D$ centered at $r$.  Multiplication of the constants
+proves the result.
+\end{proof}
+
+\begin{proposition}[Randomness at the degenerate center]
+\label{prop:hub-sq-log}
+Assume \eqref{eq:hub-sq}, the center representation, and the
+conditional density cap $D$ in
+Theorem~\ref{thm:hub-sq-composition}, now allowing $D_H=0$.
+Suppose $\sigma_c\ne0$.
+For a random variable $Z$ write
+$\alpha_1(Z)=\sup_{s\in\mathbb R,\,u>0}\mathbb P(|Z-s|\le u)/\sqrt u$.
+With the convention that the second argument below is infinite
+when $D_H=0$, put
+\[
+ A_*=\min\left\{\alpha_1(C'),
+                    2\sqrt2\sqrt{|\sigma_c|/|D_H|}\right\}.
+\]
+If $A_*<\infty$, then
+\[
+ \|p_Q\|_\infty
+ \le1+KD|\sigma_c|^{-1/2}
+       \{12+2\log_+|\sigma_c|+4\log_+ A_*\}.
+\]
+In particular, center randomness with a finite
+$\alpha_1(C')$ gives a finite bound at $D_H=0$.
+\end{proposition}
+
+\begin{proof}
+Retain the indicator in the proof of
+Theorem~\ref{thm:hub-sq-composition}, and condition on $(H,C')$.
+The density cap $D$ reduces the remaining integral to
+\[
+ D\int_{|ax+\tau|<1}
+ |s-c'-\eta_0-ax^2-(2x+\eta_1)\tau-\sigma_c\tau^2|^{-1/2}
+                                                        \,d\tau.
+\]
+The interval has length two.  A quadratic with leading
+coefficient $-\sigma_c$ and critical value $h_c$ has integral
+over any such interval at most
+\begin{equation}\label{eq:hub-quadratic-log-kernel}
+ |\sigma_c|^{-1/2}
+       \{8+2\log_+(|\sigma_c|/|h_c|)\}.
+\end{equation}
+To verify this bound, after translating and dividing by
+$|\sigma_c|$ write the integrand as $|z^2-c|^{-1/2}$.
+On $|z|\le2\sqrt{|c|}$ its integral over the whole region
+is at most $\pi+2\operatorname{arcosh}2<6$.
+Outside that region it is at most $2/(\sqrt3|z|)$.
+On a set of length at most two the integral of this last
+majorant is at most
+$(4/\sqrt3)\log(1+1/(2\sqrt{|c|}))$.
+Since this is at most
+$(4/\sqrt3)\log(3/2)+(2/\sqrt3)\log_+(1/|c|)$,
+\eqref{eq:hub-quadratic-log-kernel} follows.  The case $c=0$
+is interpreted with an infinite right side.
+
+The critical value here is $s-C'-q_c(H)$, where
+\[
+ q_c(x)=\eta_0+ax^2-(x+\eta_1/2)^2/\sigma_c,
+\]
+whose quadratic coefficient is $-D_H/\sigma_c$.
+The variables $C'$ and $H$ are independent.
+Convolution does not increase the concentration function, so
+\[
+ \mathbb P(|C'+q_c(H)-s|\le u)
+ \le\min(1,A_*\sqrt u).
+\]
+For the bound from $q_c(H)$ use the elementary quadratic
+sublevel length $2\sqrt{2u/|D_H/\sigma_c|}$ and $f_H\le1$.
+Layer cake now gives
+\[
+ \mathbb E\log_+\frac1{|s-C'-q_c(H)|}
+ \le\int_0^\infty\min(1,A_*e^{-v/2})\,dv
+ \le2+2\log_+ A_*.
+\]
+Insert this and
+$\log_+(|\sigma_c|/|h_c|)
+\le\log_+|\sigma_c|+\log_+(1/|h_c|)$
+into \eqref{eq:hub-quadratic-log-kernel}.
+The near-root contribution is the asserted expression after
+multiplication by $KD$, and the far roots cost at most one.
+\end{proof}
+
+\begin{corollary}[An independent transverse square]
+\label{cor:hub-sq-independent}
+Suppose $V=v\cdot X_S$ and $t=w\cdot X_T+\beta$ use disjoint
+coordinate sets, and $D_0,C$ are arbitrary functions of $X_T$.
+For
+$Q=aH^2+2Ht+\lambda(V-D_0)^2+C$,
+\[
+ \|p_Q\|_\infty
+ \le\frac{2^{13/4}}{|v|\sqrt{|\lambda|}}\,
+        \alpha_1(t^2-aC)^{1/2}.
+\]
+When $a=0$ one has the unconditional bound
+\[
+ \|p_Q\|_\infty
+ \le 2^{13/4}|\lambda|^{-1/2}|v|^{-1}|w|^{-1/2}.
+\]
+\end{corollary}
+
+\begin{proof}
+Condition first on $(H,X_T)$ and integrate the independent square.
+Since $\|p_V\|_\infty\le\sqrt2/|v|$, the resulting density
+is bounded by
+\[
+ \frac{\sqrt2}{|v|\sqrt{|\lambda|}}\,
+ \mathbb E|s-aH^2-2Ht-C|^{-1/2}.
+\]
+There is no far-root term in this argument.
+The scalar lemma bounds the expectation by
+$2^{7/4}\mathbb E|t^2+a(s-C)|^{-1/4}$.
+For any $Z$ with $\alpha_1(Z)<\infty$, layer cake gives
+$\mathbb E|Z-s|^{-1/4}\le2\alpha_1(Z)^{1/2}$.
+This proves the first displayed bound.
+For $a=0$, use instead the scalar estimate
+$2|t|^{-1/2}$ and the linear density cap
+$\sqrt2/|w|$.  Its bathtub integral is
+$2\sqrt2(\sqrt2/|w|)^{1/2}$, which yields the second bound.
+\end{proof}
+
+The square-root hypothesis is a statement about the joint law
+with the hub partner.  A concentration estimate for the marginal
+law of $R$ alone cannot replace it.  For example, if
+$R=2Yt$ with an additional independent variable $Y$, then at
+$a=0$ the complete form is $2(H+Y)t$; for suitable interval
+laws this product has a logarithmically unbounded density.
+Likewise, at $C=t^2/a$ and opposite signs of $a$ and $\lambda$,
+the form $(aH+t)^2/a+\lambda V^2$ has a hyperbolic
+two-dimensional singularity.  These examples have only two
+effective quadratic directions and explain the determinant
+and center-randomness requirements without contradicting the
+rank-three target.

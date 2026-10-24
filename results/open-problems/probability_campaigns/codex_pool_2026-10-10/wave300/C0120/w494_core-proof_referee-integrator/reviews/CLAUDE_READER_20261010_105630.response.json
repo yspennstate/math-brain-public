@@ -1,0 +1,101 @@
+{
+ "duration_api_ms": 44581,
+ "stop_reason": "end_turn",
+ "session_id": "580085ef-1221-4619-89df-303893a41cba",
+ "total_cost_usd": 0.16945339999999998,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 9367,
+  "cache_read_input_tokens": 2147,
+  "output_tokens": 4704,
+  "output_tokens_details": {
+   "thinking_tokens": 3001
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 9367,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 4704,
+    "cache_read_input_tokens": 2147,
+    "cache_creation_input_tokens": 9367,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 9367
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 4704,
+   "cacheReadInputTokens": 2147,
+   "cacheCreationInputTokens": 9367,
+   "webSearchRequests": 0,
+   "costUSD": 0.16945339999999998,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 3001,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "# Referee report: C0120 statement correction and first-chaos lemma\n\n## The statement correction\n\nI checked it against the supplied Section 8 text.\n\n- **Model.** The model is iid N(0,1) weights on Z₊², and Pₙ is the set of 2ⁿ⁻¹ up/right paths p=(v₀,…,v_{n−1}) with v₀=0. The endpoint is free, M=max_p X_p, and Cov(X_p,X_{p'})=|p∩p'|. Theorem 8.1 gives Var(M)≤Cn/log n.\n- **Open problem.** 12(3) refers to \"the current proof via hypercontractivity\", which is the proof of Theorem 8.1. Problem (2) treats dimensions ≥3 separately.\n- **Conclusion.** The intake's Var(log Z_n) in general dimension is not supported by the cited theorem. The corrected target (1+1 dimensions, ground state Mₙ) matches the source. The n^{1−e} quantification is correctly flagged as the authors' own.\n- **A001 audit.** Marking A001 as mismatched in scope is justified. The KPZ relation χ=2ξ−1 imported from FPP is a separate theorem, not a reduction for this model.\n\n## The supporting derivations\n\nI checked each step:\n\n- **Uniqueness and gradient.**\n  - Distinct 0/1 incidence vectors give Var(X_p−X_{p'})=|pΔp'|>0, so the maximizer is unique almost surely.\n  - Near a strict maximizer, M is locally linear, so ∇M is the path indicator and |∇M|²=n.\n  - Since M is √n-Lipschitz, it lies in W^{1,2}.\n- **Spectral identities.**\n  - E|∇F_k|²=k·a_k, so Σ k·a_k = n.\n  - E⟨∇M(g),∇M(gᵗ)⟩ = Σ e^{−(k−1)t}·k·a_k, and this equals E|P∩Pᵗ|.\n  - Then ∫₀^∞ e^{−t}Q(t)dt = Σ a_k. This is correct, and the termwise exchange is justified because Σ k·a_k < ∞.\n- **Split at K.** Var ≤ D(K) + n/(K+1) and D(K) ≤ K·Var are both correct. With K=⌊n^a⌋ we have K+1 ≥ n^a, so the gain exponent is min(a,b).\n- **First-chaos lemma.**\n  - The coefficient of g_v is E[M·g_v] = E[∂_v M] = p_v, using H₁(x)=x, so D(1)=a₁=Σ p_v².\n  - Vertex v_i lies in layer {x+y=i}, which has i+1 sites, for i=0,…,n−1. So Σ_{L_i} p_v = 1, and Cauchy–Schwarz gives Σ_{L_i} p_v² ≥ 1/(i+1). Summing over layers gives D(1) ≥ H_n.\n  - The limit Q(t)→D(1) follows by dominated convergence, with each term bounded by k·a_k.\n- **Sanity check at n=2.**\n  - p=(1, ½, ½) gives D(1)=3/2=H₂, so the bound is attained with equality.\n  - ∫e^{−t}(3/2 + arcsin(e^{−t})/π)dt = 3/2 + (π/2−1)/π = 2−1/π. This matches Var(g₀+max(g₁,g₂)) = 1 + (1−1/π).\n- **Peer items.**\n  - L3: the bounds e^{−(K−1)t}D(K) ≤ low-degree part and high-degree part ≤ e^{−Kt}n are correct.\n  - 005: Q is decreasing, so (1−e^{−τ})Q(τ) ≤ ∫₀^τ e^{−t}Q dt ≤ Var.\n  - The G1 obstruction holds: K·n/log n > n once K > log n.\n\n## Assessment\n\nI found no missing hypotheses, no undefined or infinite quantities, and no wrong constants. The correction fixes the scope error and does not introduce a new one. The packet keeps G1 and the parent problem explicitly open, which is accurate. My verdict does not depend on any of the absent w492, w493 or w497 files, because each lemma checked here is self-contained.\n\nVERDICT: KEEP\nLINE CHECKED: \"For iid standard Gaussian site weights on the nonnegative quadrant, let P_n range over n-vertex up/right paths from the origin with unrestricted endpoint and put M_n=max sum g_v … Theorem 8.1 proves Var(M_n)<=C n/log n\" (replacing the intake's Var(log Z_n), general dimension), together with the layer Cauchy–Schwarz step Σ_{v∈L_i} p_v² ≥ 1/(i+1) ⇒ D_n(1) ≥ H_n.\nFIX: none",
+ "ttft_ms": 30142,
+ "type": "result",
+ "duration_ms": 44816,
+ "uuid": "b696d991-51de-4a3c-8999-a5ddbee616aa",
+ "ttft_stream_ms": 4277,
+ "time_to_request_ms": 230,
+ "first_content_frame_ms": 4278,
+ "queued_turn_count": 0,
+ "result_index": 0,
+ "_rc": 0,
+ "_wall_s": 48.0
+}

@@ -1,0 +1,43 @@
+{
+  "helper": "A028-general-control-v2",
+  "mode": "full",
+  "cases": 6116,
+  "assertions_passed": 55068,
+  "compute_seconds": 104.69817699992564,
+  "arithmetic": "integer/Fraction/prime-log/rational-atanh-24",
+  "smallest_positive_margin_lower": "2829104944022891/36028797018963968",
+  "coefficient_four_countercertificate": {
+    "control_sign": [
+      1,
+      -1
+    ],
+    "core_sign": [
+      -1,
+      1,
+      1,
+      1
+    ],
+    "p": "1/2",
+    "delta": "1/4",
+    "PiH_prime_log": {
+      "2": "3",
+      "3": "-9/8"
+    },
+    "Q": "1/4",
+    "ratio_prime_log": {
+      "2": "12",
+      "3": "-9/2"
+    },
+    "ratio_gt_4_integer_certificate": {
+      "left": 19683,
+      "right": 65536,
+      "strict": true
+    }
+  },
+  "max_dimensions": {
+    "control": 2,
+    "core": 3
+  },
+  "interval_tail": "2 z^(49)/(49(1-z^2)), z<=1/3; sign-correct division by positive ln2 enclosure, outward floor/ceiling to denominator 2^48",
+  "infinite_scope": "Analytic proofs in REPORT.md; finite checks do not certify all dimensions"
+}

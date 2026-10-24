@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B20",
+  "run_id": "20260923T235011Z-account01-B20-QFORM-auto11d",
+  "full_target": "OPEN",
+  "continuity": "OPEN",
+  "classification": "ESSENTIAL_STEP_APPLIED_R39_RANK8_DIFFUSE_CARRIER_E3",
+  "designated_partner": {
+    "account": "account02",
+    "slot": "B20",
+    "run_id": "20260923T233041Z-account02-B20-QFORM-auto11",
+    "report_commit": "8273681c09ca73542cc27a74fdeec554000cfc28",
+    "claims_commit": "dbb8f48320ce8334a4d23771537a3b68911bb18e",
+    "source_refresh_commit": "2618f34d8e9610ef92dc628baa81c605c38dfd9c",
+    "actual_inequality_consumed": "A=D+K+E, D physical diagonal, rank K<=8, ||E||op<1/32, s3(D+K)>31/32"
+  },
+  "claims": [
+    {
+      "id": "QFORM-R8-DIFFUSE-CARRIER-HALFCUT-v1",
+      "status": "PROVED_SUPPORTING_IMPLICATION",
+      "statement": "For symmetric rank-r K=U Lambda U^T with r<=8 and max_i ||U(i,:)||^2<=1/16, there is a literal physical partition I sqcup J with U_I^T U_I,U_J^T U_J >= g I, g=(1-1/sqrt(2))/2, and hence s_k(K[I,J])>=g s_k(K) for all k<=r."
+    },
+    {
+      "id": "QFORM-R39-ALIGNED-R8-DIFFUSECARRIER-E3-v1",
+      "status": "PROVED_SUPPORTING_IMPLICATION",
+      "statement": "In the completed account02/B20 aligned state A=D+K+E with D physical diagonal, rank K<=8, ||E||op<1/32 and s3(D+K)>31/32, if ||D||op<=3/4 and the carrier projection P of K has max_i P_ii<=1/16, then some literal physical cut N=A[I,J] has s3(N)>gamma=(5-7/sqrt(2))/64. Therefore e3(NN^T)>gamma^6 and the full ambient law has ||p_Q||infinity<13436.354 with a continuous C0 density."
+    },
+    {
+      "id": "QFORM-R39-COLOOP-DIAGSPIKE-HEAVYCOORD-COMPILER-v1",
+      "status": "PROVED_STRUCTURAL_REDUCTION",
+      "statement": "After the newest completed account02/B20 compiler and the new diffuse-carrier payment, every unpaid state has either a physical pair-volume coloop ell_j>3/4, an aligned physical diagonal spike |Delta_j|>3/4, or a carrier-heavy literal coordinate P_jj>1/16. There are at most 127 carrier-heavy coordinates because rank K<=8."
+    }
+  ],
+  "first_unpaid_implication": "QFORM-R39-COLOOP-OR-DIAGSPIKE-OR-R8-HEAVYCOORD-PAYMENT-v1",
+  "corrections_preserved": [
+    "no law-uniform pointwise quadratic-phase decay",
+    "no worst-fibre supremum",
+    "no arbitrary-joint coarea substitution",
+    "no conditional-cap-as-independence",
+    "no post-rotation independence",
+    "no deletion of a nonzero small coefficient tail on unbounded sources",
+    "no one-good-minor inference from aggregate volume"
+  ],
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_configuration": "UNKNOWN",
+  "provider_reasoning_usage": null
+}

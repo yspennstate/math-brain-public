@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T033744Z-account03-B05-QFORM-r39",
+  "checks": [
+    {
+      "name": "three_by_three_schur_minor_identity",
+      "status": "PASS",
+      "identity": "det([[B,e],[e^T,c]]) = det(B)*(c-e^T B^{-1}e)",
+      "symbolic_remainder": "0",
+      "scope": "exact algebra for an invertible symmetric 2x2 pivot"
+    },
+    {
+      "name": "pair_star_schur_sum",
+      "status": "PASS",
+      "identity": "if S=sigma vv^T with ||v||=1, then sum_k |det A[I union {k}]|=|det B||sigma|",
+      "scope": "exact rank-three Schur complement"
+    },
+    {
+      "name": "singular_pair_perturbation_polynomial",
+      "status": "PASS",
+      "identity": "det(B+epsilon G) is quadratic with leading coefficient det(G)>0 when T_I>0, hence invertible for arbitrarily small epsilon outside a finite set",
+      "scope": "rank-preserving spectral perturbation Lambda_epsilon=Lambda+epsilon I_3"
+    },
+    {
+      "name": "constant",
+      "status": "PASS",
+      "formula": "C_star=24*(3+sqrt(2))*10^(2/3)",
+      "value": 491.735145127033,
+      "T_ge_one_eighth_bound": 983.470290254066
+    },
+    {
+      "name": "designated_partner_concrete_bound",
+      "status": "PASS",
+      "assumptions": "definite literal pair and |det C|>=1/16",
+      "formula": "pi/sqrt(|det C|)<=4*pi",
+      "value": 12.566370614359172
+    }
+  ],
+  "note": "The symbolic and numerical checks are diagnostic only; the proof is the exact argument in REPORT.md."
+}

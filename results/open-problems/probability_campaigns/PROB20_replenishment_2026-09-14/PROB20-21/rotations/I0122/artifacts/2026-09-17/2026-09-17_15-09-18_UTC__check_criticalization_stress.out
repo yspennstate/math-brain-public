@@ -1,0 +1,14 @@
+I0122 exact criticalization stress test
+poset=C3 + isolated
+linear_extensions= 4
+extension (0, 1, 2, 3)
+extension (0, 1, 3, 2)
+extension (0, 3, 1, 2)
+extension (3, 0, 1, 2)
+mean_ranks {0: '5/4', 1: '5/2', 2: '15/4', 3: '5/2'}
+balanced_noncritical_pair=(1,3) p(1<3)= 1/2 gap= 0
+critical_pairs [(0, 3), (3, 2)]
+critical (0, 3) p(0<3)= 3/4 expected_rank_gap= 5/4
+critical (3, 2) p(3<2)= 3/4 expected_rank_gap= 5/4
+criticalization (1,3)->(0,3): p 1/2 -> 3/4 gap 0 -> 5/4
+ALL_EXACT_CHECKS_PASS

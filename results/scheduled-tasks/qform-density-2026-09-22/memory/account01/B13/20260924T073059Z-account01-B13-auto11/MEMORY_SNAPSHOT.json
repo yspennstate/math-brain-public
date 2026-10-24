@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260924T073059Z-account01-B13-auto11",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_SEPARATELY",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_math": {
+    "repo": "yspennstate/math-open-problems",
+    "commit": "6dc2abf26a086be84314ec6adb9987daf05a93eb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260924T073059Z-account01-B13-auto11/REPORT.md"
+  },
+  "designated_partner": {
+    "account_slot": "account02/B13",
+    "commit": "c8bbb166c448ccd194451b47524b13d5de3eaed5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260924T065522Z-account02-B13-qform-r11/REPORT.md",
+    "applied_result": "QFORM-TRANSLATION-INVARIANT-DIAMETER-ESCAPE-v1 and affine-uniform rank-one/four-diagonal core"
+  },
+  "result_ids": [
+    "QFORM-ONECOORD-EXACT-PURIFICATION-v2",
+    "QFORM-EXACT-SEQUENTIAL-BATHTUB-PURIFICATION-v2",
+    "QFORM-AFFINE-CORE-ONSLAB-ROUGH-MASS-v1",
+    "QFORM-DOUBLESLAB-DIFFERENCE-BANK-v1"
+  ],
+  "key_statements": [
+    "Exact witnesswise product-indicator purification is valid on the noncompact line with zero loss; the v1 threshold-attainment proof was invalid, but v2 repairs it using common-supremum equality plus an equality-case exchange argument.",
+    "For A=M+F with every affine M-form density <=C_M, slab mass p, length ell, and a=(p-C_M ell)_+, every center m satisfies P{Q in J, |(X-m)^T F(X-m)|>a/(4C_M)}>=a/2.",
+    "In partner r11's M=D_C+lambda_1 vv^T, F=E_sep+lambda_2 ww^T chamber, rho>=2C_M forces positive on-slab mass either at radial scale rho^2 ell/(16 C_M C_D) or projective scale rho ell/(16 C_M |lambda_2|).",
+    "With an independent copy X', conditioned on both copies lying in the slab, at least 1/8 of slab-pair mass has the corresponding large difference-bank separation; simultaneously |(X-X')^T A(X+X')|<=ell. The ambient difference coordinates are independent and have density <=1."
+  ],
+  "constants": {
+    "C_M": 65302.90114768759,
+    "C_D": 19.41625912555699,
+    "sixteen_C_M_C_D": 20287008.805346165
+  },
+  "correction_event": {
+    "id": "QFORM-EXACT-PURIFICATION-V1-PROOF-GAP-REPAIRED-v2",
+    "brain_commit": "d49d5562e8d15b06cb23269fadf6d7fbc8af6756"
+  },
+  "handoff_commit": "c73a64ada7cf504e13d4da0f6a7cfe00acf1d588",
+  "unresolved_implication": "QFORM-DOUBLESLAB-DIFFERENCE-BANK-TO-SMOOTHING-v1",
+  "scope_warnings": [
+    "No global optimizer is claimed.",
+    "No interval, centered-uniform, bounded-diameter, or bounded-fragment extremality is claimed.",
+    "Conditioning on the double slab destroys independence; independence of difference coordinates is ambient before that event and is used only as provenance for future decoupling.",
+    "Full essential-bounded-density theorem remains OPEN; continuity remains separate."
+  ]
+}

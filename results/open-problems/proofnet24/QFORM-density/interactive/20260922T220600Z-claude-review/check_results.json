@@ -1,0 +1,47 @@
+{
+  "scope": "Finite checks only; no universal proof certificate",
+  "status": "PASS",
+  "volume_sampling": {
+    "matrices": 12,
+    "maximum_relative_or_marginal_error": 3.3362207594820685e-15,
+    "gaussian_parameter_checks": 96,
+    "minimum_determinant_over_AMGM_lower_bound": 6.6272519866901725
+  },
+  "original_seed7_interval_inputs": {
+    "first_part": [
+      {"N": 1, "overlapping_adjacent_pairs": 0},
+      {"N": 10, "overlapping_adjacent_pairs": 0},
+      {"N": 40, "overlapping_adjacent_pairs": 0}
+    ],
+    "second_part_bad_coordinate_count": 19,
+    "second_part_overlapping_adjacent_pairs": 21,
+    "second_part_max_leverage": 0.2091443838831951,
+    "finding": "Overlapping intervals make the nominal density-one test violate the input cap."
+  },
+  "original_claim_test_zero_frequency": {
+    "N": 8,
+    "original_formula_at_zero": 8,
+    "required_value": 1,
+    "finding": "The branch base=1 at tau=0 is multiplied by a sum of N phases."
+  },
+  "replacement_input_checks": {
+    "disjoint_supports": true,
+    "unit_mass": true,
+    "density_cap_one": true,
+    "cf_at_zero": 1
+  },
+  "leverage_perturbation": {
+    "epsilon": 0.01,
+    "initial_max_alpha": 0.5000000000000001,
+    "perturbed_max_alpha": 0.5049750012375627,
+    "exact_first_alpha": 0.5049750012375624,
+    "third_singular_value": 0.9999999999999999,
+    "finding": "Theorem D requires the alpha gate to be checked after perturbation."
+  },
+  "density_prefactors": {
+    "claude_D": 9.89232762420077,
+    "sharp_HY_refinement": 8.154845485377136,
+    "relative_reduction": 0.1756393646499359
+  },
+  "full_conjecture_verified": false
+}

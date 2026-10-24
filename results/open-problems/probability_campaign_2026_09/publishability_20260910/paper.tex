@@ -1,0 +1,311 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}\newcommand{\T}{\mathbb T}
+\DeclareMathOperator{\BES}{BES}
+\title{Failure of endpoint maximal energy estimates\protect\\for critical Allen--Cahn noise}
+\author{Research manuscript for review}
+\date{10 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a spatially constant counterexample to endpoint maximal second-moment bounds for the It\^o Allen--Cahn equation with quadratic multiplicative noise. For every positive constant initial condition and every positive finite time horizon, the solution has an infinite expected squared maximum, despite having finite second moments at each deterministic time. The construction is a reciprocal, deterministically time-changed four-dimensional Bessel process. An explicit Gaussian integral and bounded optional stopping yield two-sided inverse-linear bounds for the squared maximum. Consequently the maximal moment is finite precisely below order two, whereas the fixed-time moment is finite precisely below order four. Initial constants tending to zero converge in every subquadratic maximal moment but fail to converge in the endpoint energy space. The example gives negative answers to the general formulations of Problems 4 and 5 in Agresti and Veraar's 2025 survey. The stochastic facts are proved below using classical It\^o calculus; the accompanying Lean file verifies selected measure-theoretic and algebraic components, not the full stochastic construction. Priority and novelty remain subject to literature review.
+\end{abstract}
+
+\section{Introduction and statements}
+Let $\T=\R/\mathbb Z$ have volume one, and let $W$ be one real standard Brownian motion. All stochastic differentials in this paper are in the It\^o convention. Consider
+\begin{equation}\label{eq:spde}
+ du=(\Delta u+u-u^3)\,dt+\sqrt2\,u^2\,dW_t,
+ \qquad u(0,x)=a>0.
+\end{equation}
+The same scalar driver acts at every spatial point. This is not space-time white noise. The question motivating the paper is whether the usual coercivity condition in the critical variational framework implies an expected squared maximal-energy bound, and whether the solution map is continuous in the corresponding endpoint space. These are the general Problems 4 and 5 of \cite{AV25}. The first question explicitly singles out \eqref{eq:spde}.
+
+The mechanism is already present in one dimension. Write $U^a$ for the solution of
+\begin{equation}\label{eq:sde}
+ dU_t=(U_t-U_t^3)\,dt+\sqrt2\,U_t^2\,dW_t,
+ \qquad U_0=a,
+\end{equation}
+and put
+\begin{equation}\label{eq:constants}
+ S_T=\frac{e^{2T}-1}{2},\qquad
+ c_{a,T}=a^2\exp\left(-\frac{1}{4a^2S_T}\right),\qquad
+ K_{a,T}=a^2e^{2T}.
+\end{equation}
+These constants are strictly positive for $a,T>0$.
+
+\begin{theorem}\label{thm:main}
+For every $a>0$, \eqref{eq:sde} has a unique global strong solution, which is positive. For $T>0$, set $Z_T^a=\sup_{0\le t\le T}(U_t^a)^2$. Then $Z_T^a<\infty$ almost surely and, for every $y>K_{a,T}$,
+\begin{equation}\label{eq:tail}
+ \frac{c_{a,T}}{y}\le \Pp(Z_T^a\ge y)\le \frac{K_{a,T}}{y}.
+\end{equation}
+For $0<p<2$,
+\begin{equation}\label{eq:subcritical}
+ \E\sup_{t\le T}|U_t^a|^p\le
+ \frac{a^p e^{pT}}{1-p/2},
+\end{equation}
+whereas this expectation is infinite for every $p\ge2$. At each fixed $t>0$,
+\begin{equation}\label{eq:second}
+ \E (U_t^a)^2=e^{2t}a^2
+ \left(1-\exp\left[-\frac{1}{4a^2S_t}\right]\right).
+\end{equation}
+More generally, for each $p>0$, $\E|U_t^a|^p<\infty$ if and only if $p<4$.
+\end{theorem}
+
+\begin{corollary}\label{cor:spde}
+The solution of \eqref{eq:spde} is $u(t,x)=U_t^a$. For every $T>0$,
+\[
+ \E\sup_{t\le T}\|u(t)\|_{L^2(\T)}^2=\infty.
+\]
+There are deterministic smooth initial conditions $u_0^{(n)}\to0$ in $L^2(\T)$ whose solutions, driven by a common Brownian motion, fail to converge to zero in
+\[
+ L^2\bigl(\Omega;L^2(0,T;H^1(\T))\cap C([0,T];L^2(\T))\bigr).
+\]
+They do converge to zero in $L^p(\Omega;C([0,T];L^2(\T)))$ for every $0<p<2$.
+\end{corollary}
+
+The word ``critical'' concerns the endpoint coercivity and integrability question. We do not claim an absence of global solutions, pathwise blow-up, failure of deterministic-time second moments, or failure of subquadratic continuity. Nor do we address variants of Problem 5 obtained by imposing additional hypotheses in the surrounding discussion of the survey.
+
+\section{A finite-time reciprocal Brownian calculation}
+We give the probabilistic input in detail. Let $B$ be standard Brownian motion in $\R^4$ started at $x\ne0$, set $r=|x|$, and let $R_s=|B_s|$. Away from zero, It\^o's formula gives
+\begin{equation}\label{eq:bessel}
+ dR_s=d\beta_s+\frac{3}{2R_s}\,ds.
+\end{equation}
+Indeed, the gradient of the Euclidean norm has norm one, its Laplacian is $3/|x|$, and the stochastic integral of the radial unit vector against $B$ has quadratic variation $s$. The latter is a real Brownian motion by the continuous-martingale characterization, after localization away from the origin. We justify nonattainment of the origin below, so the localizations extend to all times.
+
+For $0<b<r$, define $\tau_b=\inf\{s\ge0:R_s=b\}$. Direct differentiation gives
+\[
+ \nabla |x|^{-2}=-2x|x|^{-4},\qquad
+ \Delta |x|^{-2}=-8|x|^{-4}+8|x|^2|x|^{-6}=0.
+\]
+Thus $R_{s\wedge\tau_b}^{-2}$ is a local martingale. It is bounded by $b^{-2}$, hence is a true martingale. For completeness, localize also at radii tending to infinity, apply the martingale identity at a bounded time, and pass to the limit using the deterministic bound $b^{-2}$. Brownian paths are bounded on compact intervals, so the outer stopping times eventually exceed that time.
+
+\begin{lemma}\label{lem:stopping}
+For $S>0$ and $0<b<r$,
+\begin{equation}\label{eq:stopping}
+ \frac{\Pp(\tau_b\le S)}{b^2}
+ =\frac1{r^2}-\E[R_S^{-2};\tau_b>S].
+\end{equation}
+In particular, $\Pp(\tau_b\le S)\le b^2/r^2$. Almost surely, $R$ never reaches zero and has a strictly positive minimum on every compact time interval.
+\end{lemma}
+\begin{proof}
+The stopped martingale has expectation $r^{-2}$. On $\{\tau_b\le S\}$ its value at $S$ is $b^{-2}$; on the complementary event it is $R_S^{-2}$. This proves \eqref{eq:stopping}. The second term is nonnegative, proving the upper bound. If a continuous path reaches zero by $S$, it reaches every $b\in(0,r)$ by $S$. Letting $b\downarrow0$ in the upper bound shows that this event has probability zero. Taking a countable union over integer $S$ proves nonattainment for all times. A positive continuous function on a compact interval attains a positive minimum.
+\end{proof}
+
+\begin{lemma}\label{lem:gaussian}
+For $S>0$,
+\begin{equation}\label{eq:gaussian}
+ \E R_S^{-2}=\frac{1-e^{-r^2/(2S)}}{r^2}.
+\end{equation}
+In particular this expectation is finite and strictly less than $r^{-2}$.
+\end{lemma}
+\begin{proof}
+For $z\ne0$, $|z|^{-2}=\int_0^\infty e^{-\lambda|z|^2}\,d\lambda$. The integrand is nonnegative, so Tonelli applies without an integrability assumption. Completing the square in the four-dimensional Gaussian density gives
+\[
+ \E e^{-\lambda|x+B_S-B_0|^2}
+ =(1+2S\lambda)^{-2}
+   \exp\left(-\frac{\lambda r^2}{1+2S\lambda}\right).
+\]
+To check the constants, in each coordinate the Gaussian integral contributes $(1+2S\lambda)^{-1/2}$, and completing the square contributes $-\lambda x_i^2/(1+2S\lambda)$ to the exponent. Multiplication over four coordinates gives the display. Therefore
+\begin{align*}
+ \E R_S^{-2}
+ &=\int_0^\infty(1+2S\lambda)^{-2}
+      e^{-\lambda r^2/(1+2S\lambda)}\,d\lambda\\
+ &=\frac1{2S}\int_0^1
+      e^{-r^2(1-v)/(2S)}\,dv
+ =\frac{1-e^{-r^2/(2S)}}{r^2}.
+\end{align*}
+In the substitution $v=(1+2S\lambda)^{-1}$, one has $d\lambda=-dv/(2Sv^2)$ and $(1+2S\lambda)^{-2}=v^2$. The integration limits reverse. Positivity of the exponential proves strict loss of expectation.
+\end{proof}
+
+\begin{proposition}\label{prop:hitting}
+For $S>0$ and $0<b<r$,
+\begin{equation}\label{eq:hitting}
+ \frac{b^2}{r^2}e^{-r^2/(2S)}
+ \le\Pp(\tau_b\le S)\le\frac{b^2}{r^2}.
+\end{equation}
+Furthermore,
+\begin{equation}\label{eq:hittinglimit}
+ \lim_{b\downarrow0}\frac{\Pp(\tau_b\le S)}{b^2}
+ =\frac{e^{-r^2/(2S)}}{r^2}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+In \eqref{eq:stopping}, bound the expectation of the restricted nonnegative variable between zero and its full expectation \eqref{eq:gaussian}. This gives both inequalities. By Lemma~\ref{lem:stopping}, almost surely $\tau_b>S$ for all sufficiently small $b$. The variables $R_S^{-2}\mathbf1_{\{\tau_b>S\}}$ are dominated by the integrable variable $R_S^{-2}$. Dominated convergence in \eqref{eq:stopping} proves the limit.
+\end{proof}
+
+\begin{remark}
+The finite-time constant in \eqref{eq:hittinglimit} matters. An eventual hitting probability does not establish a positive lower bound before a prescribed small $S$. Formula \eqref{eq:hitting} proves the required finite-time estimate directly, with no such substitution.
+\end{remark}
+
+\section{Construction and maximal moments}
+Set $r=(\sqrt2 a)^{-1}$ and let $R$ be as above with $R_0=r$. Define
+\begin{equation}\label{eq:representation}
+ U_t=\frac{e^t}{\sqrt2 R_{S_t}},\qquad S_t=(e^{2t}-1)/2.
+\end{equation}
+Lemma~\ref{lem:stopping} ensures that this is positive and finite on every compact interval. We check the SDE, including its constants. First let $X_s=(\sqrt2 R_s)^{-1}$. Applying It\^o's formula to \eqref{eq:bessel} gives
+\[
+ dX_s=-\sqrt2 X_s^2\,d\beta_s-X_s^3\,ds.
+\]
+For example the two drift terms in reciprocal radial coordinates are
+$-3/(2\sqrt2 R_s^3)$ and $1/(\sqrt2 R_s^3)$, whose sum is $-X_s^3$. Since $S'_t=e^{2t}$, the deterministic time change gives a Brownian motion $\widetilde W$ satisfying $d\beta_{S_t}=e^t\,d\widetilde W_t$. More explicitly, define
+$\widetilde W_t=\int_0^{S_t}(1+2s)^{-1/2}\,d\beta_s$; its quadratic variation is $\frac12\log(1+2S_t)=t$. Applying the product rule to $U_t=e^tX_{S_t}$ now gives
+\[
+ dU_t=(U_t-U_t^3)\,dt-\sqrt2 U_t^2\,d\widetilde W_t.
+\]
+With $W=-\widetilde W$, this is \eqref{eq:sde}.
+
+This constructs a global weak solution. The drift and diffusion coefficients of \eqref{eq:sde} are locally Lipschitz on $\R$. The standard localization proof of pathwise uniqueness, followed by weak existence plus pathwise uniqueness, gives a unique strong solution for each prescribed Brownian driver, with the law just constructed. Equivalently, truncate both coefficients outside $[-N,N]$, use the globally Lipschitz strong solutions consistently up to their exit times, and use the law of \eqref{eq:representation} to rule out finite explosion. These are the classical SDE existence and uniqueness facts; see \cite{RY}.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+It remains to prove the moment assertions. Set
+\[
+ M_S=\sup_{0\le s\le S}\frac1{2R_s^2}.
+\]
+Since $t\mapsto S_t$ maps $[0,T]$ onto $[0,S_T]$ and $1\le e^{2t}\le e^{2T}$,
+\begin{equation}\label{eq:sandwich}
+ M_{S_T}\le Z_T^a\le e^{2T}M_{S_T}.
+\end{equation}
+For $y>a^2$, the event $M_S\ge y$ is exactly $\tau_{(2y)^{-1/2}}\le S$. Proposition~\ref{prop:hitting}, together with $1/(2r^2)=a^2$, yields
+\[
+ \frac{a^2 e^{-1/(4a^2S)}}{y}
+ \le\Pp(M_S\ge y)\le\frac{a^2}{y}.
+\]
+Apply the lower bound to the first inequality in \eqref{eq:sandwich}, and apply the upper bound with $y e^{-2T}>a^2$ to the second. This is \eqref{eq:tail}.
+
+For $0<q<1$, Tonelli gives the layer-cake identity
+\[
+ \E Z^q=q\int_0^\infty y^{q-1}\Pp(Z>y)\,dy
+\]
+for any nonnegative random variable $Z$, allowing an infinite value. The tail bound implies $\Pp(Z_T^a>y)\le\min(1,K_{a,T}/y)$. Hence
+\[
+ \E(Z_T^a)^q
+ \le q\int_0^{K_{a,T}}y^{q-1}\,dy
+   +qK_{a,T}\int_{K_{a,T}}^\infty y^{q-2}\,dy
+ =\frac{K_{a,T}^{q}}{1-q}.
+\]
+Taking $q=p/2$ proves \eqref{eq:subcritical}. For $q\ge1$, the lower bound implies divergence of the tail integral. The distinction between $\ge$ and $>$ creates no problem: for $z>y>K_{a,T}$, $\Pp(Z_T^a>y)\ge\Pp(Z_T^a\ge z)\ge c_{a,T}/z$; let $z\downarrow y$.
+
+At deterministic time $t>0$, \eqref{eq:representation} and Lemma~\ref{lem:gaussian} give \eqref{eq:second}. More generally, $R_{S_t}$ is the norm of a nondegenerate Gaussian in $\R^4$. Its density is continuous and strictly positive at zero, and is bounded above and below by positive constants on a sufficiently small ball. The integral of $|z|^{-p}$ on that ball is a positive constant times $\int_0^\varepsilon s^{3-p}\,ds$, finite exactly when $p<4$. Outside the ball $|z|^{-p}$ is bounded, so its integral against a probability density is finite. This proves the remaining assertion.
+\end{proof}
+
+\begin{corollary}\label{cor:truncated}
+For $L>K_{a,T}$,
+\[
+ c_{a,T}\log\frac{L}{K_{a,T}}
+ \le\E(Z_T^a\wedge L)
+ \le K_{a,T}\left(1+\log\frac{L}{K_{a,T}}\right).
+\]
+\end{corollary}
+\begin{proof}
+Apply $\E(Z\wedge L)=\int_0^L\Pp(Z>y)\,dy$ and the bounds used in the preceding proof, discarding $[0,K_{a,T}]$ in the lower bound.
+\end{proof}
+
+The truncated estimate explains why a finite Monte Carlo sample can appear to have a stable second maximal moment. The divergence is logarithmic in the cutoff; for small $a$ or small $T$, its lower coefficient is extremely small. No numerical simulation is used as proof in this paper.
+
+\section{The source hypotheses and endpoint continuity}
+We check membership in the framework, rather than inferring it merely from the appearance of the equation. The framework of \cite{AV25} uses a Gelfand triple $V\subseteq H\subseteq V^*$, a coercive linear pair $(A,B)$, a polynomial local Lipschitz condition in interpolation norms with indices satisfying $(2\beta-1)(\rho+1)\le1$, and nonlinear coercivity. We first give a scalar realization and then the stated torus realization.
+
+\subsection{A scalar realization}
+Take $V=H=V^*=\R$, noise space $\R$, and
+\[
+ A v=v,\quad B=0,\quad F(v)=2v-v^3,\quad G(v)=\sqrt2 v^2.
+\]
+Then $du+Au\,dt=F(u)\,dt+G(u)\,dW$ is \eqref{eq:sde}. Linear coercivity holds with $\theta=1,M=0$. For the nonlinear condition,
+\begin{equation}\label{eq:coercivity}
+ v(Av-F(v))-\tfrac12|G(v)|^2=-v^2
+ \ge |v|^2-2|v|^2-2.
+\end{equation}
+Thus one may take $\theta'=1$ and $M'=2$.
+
+For all real $u,v$,
+\begin{align*}
+ |F(u)-F(v)|&\le\bigl(2+\tfrac32(u^2+v^2)\bigr)|u-v|,\\
+ |G(u)-G(v)|&\le\sqrt2(|u|+|v|)|u-v|.
+\end{align*}
+These follow by factoring the differences and using $|uv|\le(u^2+v^2)/2$. Also $|u|+|v|\le1+(u^2+v^2)/2$. All scalar interpolation spaces here equal $\R$ with equivalent norms, so $\rho=2$ and $\beta=2/3$ satisfy the required bound and give $(2\beta-1)(\rho+1)=1$. The scalar example alone therefore refutes the general universal assertions.
+
+\subsection{The torus model}
+Take $V=H^1(\T)$, $H=L^2(\T)$, $A=I-\Delta$, $B=0$, and the same pointwise $F,G$. Integration by parts gives
+\begin{align*}
+ \langle v,Av-F(v)\rangle-\tfrac12\|G(v)\|_2^2
+ &=\|\partial_xv\|_2^2-\|v\|_2^2\\
+ &=\|v\|_{H^1}^2-2\|v\|_2^2.
+\end{align*}
+Linear coercivity follows from $\langle v,(I-\Delta)v\rangle=\|v\|_{H^1}^2$. For the local Lipschitz estimate use
+\[
+ (H^{-1}(\T),H^1(\T))_{2/3,1}
+ \hookrightarrow H^{1/3}(\T)\hookrightarrow L^6(\T).
+\]
+The first embedding follows by monotonicity of the real interpolation summability index from $1$ to $2$; the latter interpolation space is $H^{1/3}$. The second is the one-dimensional Sobolev embedding. Factorization and H\"older then give
+\[
+ \|u^3-v^3\|_{H^{-1}}
+ \le C(\|u\|_6^2+\|v\|_6^2)\|u-v\|_6.
+\]
+Indeed the same bound holds in $L^2$, which embeds continuously in $H^{-1}$. Similarly,
+\[
+ \|u^2-v^2\|_2
+ \le(\|u\|_4+\|v\|_4)\|u-v\|_4,
+\]
+and on the unit torus $L^6\hookrightarrow L^4$. The linear term is bounded in the same norms. Absorbing first powers into $1+$ squares gives $\rho=2,\beta=2/3$ as above. The scalar Brownian diffusion has Hilbert--Schmidt norm equal to the $L^2$ norm of its coefficient. Thus every stated hypothesis is met. The constant process $u(t,x)=U_t^a$ solves the equation in this triple; uniqueness identifies it with the variational solution. On finite intervals its paths belong to $C([0,T];H)$ and $L^2(0,T;V)$ because $U^a$ is continuous and finite there.
+
+\begin{proof}[Proof of Corollary~\ref{cor:spde}]
+The normalized torus gives $\|u(t)\|_{L^2}=|U_t^a|$ and $\|u(t)\|_{H^1}=|U_t^a|$. The maximal-energy conclusion is Theorem~\ref{thm:main}. Now set $a_n=1/n$, $n\ge1$. Strong existence and uniqueness construct the countable family on a common Brownian probability space; a countable intersection gives simultaneous global existence. The zero solution is the unique solution from zero initial data. For each $n$,
+\[
+ \E\|u^{(n)}-0\|_{C([0,T];H)}^2=\infty.
+\]
+The intersection norm dominates the $C([0,T];H)$ norm, so convergence in the claimed $L^2$ intersection space is impossible. In fact the nonzero solutions do not belong to that space. For $0<p<2$, \eqref{eq:subcritical} bounds the corresponding $p$-th moment by $n^{-p}e^{pT}/(1-p/2)$, which tends to zero. For constants, $\|u\|_{L^2(0,T;H^1)}\le\sqrt T\|u\|_{C([0,T];H)}$, so the subquadratic conclusion also holds in the intersection space.
+\end{proof}
+
+\section{An independent route to the divergent maximal moment}
+The tail proof can be checked by a separate dominated-convergence argument. The underlying principle is useful beyond this example.
+
+\begin{lemma}\label{lem:defect}
+Let $F_n,f,M$ be real random variables such that $F_n\to f$ almost surely, $|F_n|\le M$ almost surely, and $\E F_n=c$ for every $n$. Suppose each $F_n$ is measurable and $\E f<c$, where $f$ is integrable. Then $M$ is not integrable.
+\end{lemma}
+\begin{proof}
+If $M$ were integrable, dominated convergence would give $\E f=\lim_n\E F_n=c$, a contradiction.
+\end{proof}
+
+Apply the lemma with $b_n=r/(n+2)$, $F_n=R_{S\wedge\tau_{b_n}}^{-2}$, $f=R_S^{-2}$ and $M=\sup_{s\le S}R_s^{-2}$. The bounded martingale argument gives $\E F_n=r^{-2}$. Nonattainment and compactness give eventual equality $F_n=f$ on almost every path. The variables $F_n$ are bounded by $M$. Lemma~\ref{lem:gaussian} gives the strict expectation defect. Hence $M$ is not integrable, and \eqref{eq:sandwich} proves $\E Z_T^a=\infty$ without using the layer-cake calculation. All variables are measurable: for a continuous process its maximum on a compact interval is the supremum over a countable dense set together with the endpoints. For a nonnegative measurable variable, nonintegrability is equivalent to its extended expectation being infinite.
+
+This also locates the invalid shortcut in a naive energy argument. It\^o's formula gives
+\[
+ d(U_t^2)=2U_t^2\,dt+2\sqrt2 U_t^3\,dW_t.
+\]
+The quartic terms cancel, but the local stochastic integral cannot automatically be replaced by an integrable, mean-zero martingale. The exact deterministic-time moment formula records the strict loss. This observation does not contradict the survey's proven deterministic-time or subquadratic bounds.
+
+\section{Scope of the formal verification}
+The companion \texttt{EndpointCore.lean} contains explicit proofs of the measure-theoretic expectation-defect principle and the transfer of nonintegrability to a larger nonnegative variable. It also checks the scalar coercivity cancellation, interpolation-index arithmetic, reciprocal It\^o coefficient algebra, and elementary consequences of the stopping and Gaussian identities. The target theorem statements, build evidence, and a line-by-line correspondence are supplied separately.
+
+There is an essential boundary: this is \emph{partial formal verification}. The file does not construct Brownian motion as used here, derive It\^o's formula, establish the radial SDE or continuous-time stopping theorem, compute the Gaussian integral from a Gaussian law, or formalize the Sobolev/variational solution framework. These facts are proved or explicitly invoked in the paper. They must not be relabeled as Lean-checked merely because a conditional consequence compiles. A full Lean proof of Theorem~\ref{thm:main} and the source-question correspondence remains unfinished.
+
+\section{Discussion and publication scope}
+The mathematical contribution proposed here is the application of a classical reciprocal Bessel mechanism to the two specific endpoint questions, together with explicit finite-horizon bounds and a sharp distinction between maximal and fixed-time moment thresholds. The Bessel process, harmonic-function martingale, Gaussian integral, and dominated-convergence principle are classical; none is claimed as a new theorem in itself.
+
+The source's critical model is covered exactly, including smooth bounded deterministic data. The failure therefore cannot be removed merely by improving initial-data integrability. The noise and coercivity hypotheses must be strengthened, or the endpoint conclusion weakened. The estimate \eqref{eq:subcritical} exhibits the latter option and is consistent with the known theory.
+
+The present manuscript is suitable for specialist review as a short research note. It does not assert verified priority or guaranteed journal acceptance. A bounded search of the source versions and related literature has not identified a prior resolution of the two numbered questions; that search is not an exhaustive citation review. The separate assessment records the search scope, rival candidates, and the unfinished formalization. No numerical evidence or Lean compilation is used to infer novelty.
+
+\begin{thebibliography}{9}
+\bibitem{AV25} A. Agresti and M. Veraar,
+\emph{Nonlinear SPDEs and Maximal Regularity: An Extended Survey},
+Nonlinear Differential Equations and Applications NoDEA \textbf{32}, article 123 (2025).
+\href{https://doi.org/10.1007/s00030-025-01090-2}{doi:10.1007/s00030-025-01090-2}.
+Source locations: Assumption 6.1, Theorem 6.4, and Problems 4--5, journal page 130.
+Preprint: \href{https://arxiv.org/abs/2501.18561}{arXiv:2501.18561}.
+\bibitem{RY} D. Revuz and M. Yor,
+\emph{Continuous Martingales and Brownian Motion}, third edition,
+Springer, 1999. Classical background on continuous local martingales,
+It\^o calculus, stochastic differential equations, and Bessel processes.
+\href{https://doi.org/10.1007/978-3-662-06400-9}{doi:10.1007/978-3-662-06400-9}.
+\end{thebibliography}
+\end{document}

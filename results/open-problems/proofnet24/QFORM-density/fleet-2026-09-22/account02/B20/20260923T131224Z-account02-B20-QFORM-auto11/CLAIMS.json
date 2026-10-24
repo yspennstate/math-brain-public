@@ -1,0 +1,30 @@
+{
+  "run_id": "20260923T131224Z-account02-B20-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "full_target_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-SPECTRAL-WINDOW-1OVER14-1OVER56-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_SELF_CHECKED",
+      "statement": "If A has at least three eigenvalues of modulus >=1 and P14=1_{|A|>=1/14} satisfies max_i(P14)_ii<=1/56, then for arbitrary independent original-coordinate densities <=1, X^TAX has a continuous C0 density with essential supremum <1127.",
+      "dependencies": [
+        "QFORM-RIDGE-DENSITY-v1 @ yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7",
+        "MSS two-part frame partition and ridge-stability lemma as applied in account01/B20 @5593a06e6c0d8a346375176fc18181171fdc7ed9"
+      ]
+    },
+    {
+      "id": "QFORM-ANNULUS-TO-PHYSICAL-STAR-VARIANCE-v1",
+      "status": "PROVED_ELEMENTARY",
+      "statement": "In N3(1/64), if (P0)_hh<1/60 and (P14)_hh>1/56, then with R14=1_{1/14<=|A|<1}, (R14)_hh>1/840 and sum_{j!=h} A_hj^2 >125/33718272.",
+      "dependencies": ["spectral variance identity"]
+    },
+    {
+      "id": "QFORM-R14-NO-SINGLE-PAIR-EXTRACTION-v1",
+      "status": "EXACT_ROUTE_COUNTEREXAMPLE",
+      "statement": "There is a target-valid N3(1/64) family with P0_hh=0, P14_hh=1/50, all hub-leaf 2x2 determinants zero, and max hub-leaf coefficient ->0 as dimension ->infinity; hence annular leverage does not imply a dimension-free robust physical pair.",
+      "qform_counterexample": false,
+      "stress_family_paid_bound": "Pinned Theorem F gives ||p_Q||_infinity<=12 on the family's fixed physical rank-three block."
+    }
+  ],
+  "first_unpaid_implication": "QFORM-N3-R14-PHYSICAL-STAR-OR-STAR4DIR-PAYMENT-v1"
+}

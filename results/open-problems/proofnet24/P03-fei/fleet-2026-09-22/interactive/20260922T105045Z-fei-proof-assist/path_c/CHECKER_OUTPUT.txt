@@ -1,0 +1,98 @@
+{
+  "exhaustive_gates_n_le_3": 276,
+  "robust_rows_checked": 592,
+  "reciprocal_components_checked": 280,
+  "hierarchy_influences": {
+    "0": "67/512",
+    "1": "1/8",
+    "2": "1/8",
+    "3": "1/8",
+    "4": "1/128",
+    "5": "1/128",
+    "6": "1/128",
+    "7": "1/128",
+    "8": "1/128",
+    "9": "1/128",
+    "10": "1/128"
+  },
+  "hierarchy_components": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  ],
+  "hierarchy_arrows": [
+    [
+      1,
+      0
+    ]
+  ],
+  "fiber_checks": [
+    {
+      "clique": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "core": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "outside_triggers": [],
+      "bad_probability": "1/128",
+      "good_active_probability": "127/128",
+      "parent_clique_influence": "259/512",
+      "point_defect_ratio": 0.6509360549803045,
+      "rho_for_regression": 10.0,
+      "mean_child_slack": 4.674531972509842,
+      "proved_lower_bound": 4.13814768855486
+    },
+    {
+      "clique": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "core": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outside_triggers": [
+        0
+      ],
+      "bad_probability": "0",
+      "good_active_probability": "1/2",
+      "parent_clique_influence": "7/128",
+      "point_defect_ratio": 0.9341856822179082,
+      "rho_for_regression": 10.0,
+      "mean_child_slack": 0.49578672050370814,
+      "proved_lower_bound": 0.43381338044074463
+    }
+  ],
+  "max_point_defect_F_over_J_m_2_through_128": 1.1059020282359633,
+  "result": "PASS"
+}

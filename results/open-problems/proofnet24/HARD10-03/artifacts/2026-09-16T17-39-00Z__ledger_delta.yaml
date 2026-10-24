@@ -1,0 +1,63 @@
+task_id: "6aa7ece840848191b8399f1cd1376eae"
+target_id: "HARD10-03"
+source: "Balint Toth 1993 random-interchange infinite-cycle conjecture on Z^3"
+status: "PARTIAL / OPEN"
+model_actual: "GPT-5.6 Sol"
+reasoning_level_actual: "UNVERIFIED"
+requested_model_effort: "GPT-6 / maximum"
+scheduler_model_selector_exposed: false
+scheduler_reasoning_selector_exposed: false
+snapshot_master_sha: "762ba25f7fb65eff0dce63d38940104619b41537"
+previous_report:
+  path: "proofnet24/HARD10-03/runs/2026-09-16/2026-09-16T16-34-18Z__report.md"
+  commit: "8f0b78082d884d4697d9cdf5ab28d4c28ddabb47"
+  correction_commit: "602433aecd0361eaab5ab115ef436e397001f00d"
+current_report:
+  path: "proofnet24/HARD10-03/runs/2026-09-16/2026-09-16T17-39-00Z__report.md"
+  creation_commit: "f8b047456636e6d8b763d8dce406cfaa187afef3"
+frozen_metric:
+  name: "best proved exponent epsilon in P(bad block at scale L) <= C L^(-epsilon)"
+  event: "same deterministic connected-block visitation/leakage surrogate V(B)"
+  scale_map: "r(L)=max(2326,ceil(log2(L)/500)); k(L)=500r(L)+1"
+  beta_regime: "all beta>0 for which H_beta(B) <= (k-1)/(4e); no new beta interval"
+  before: "epsilon = 1/2 + 1/(16 e log 2) = 0.5331711153389402..."
+  after: "epsilon = 1/2 + 1/(16 e log 2) = 0.5331711153389402..."
+  movement: false
+  unchanged_count_after: 1
+  physical_orbit_propagating_cube_exponent: "UNMEASURED"
+methods:
+  - number: 11
+    name: "dualize"
+    outcome: "variational barrier: current replica/total-heat template optimizes exactly at existing exponent"
+  - number: 24
+    name: "find the extremal object"
+    outcome: "simple cyclic block word has exact cut MGF with same exponential rate as spanning-tree lower moment; connectivity-only improvement refuted"
+  - number: 25
+    name: "count the same thing twice"
+    outcome: "NEW-L102 finite-k strengthening replaces k-1 by k in lower moment, but asymptotic exponent unchanged"
+new_claims:
+  - id: "NEW-L102"
+    status: "PROVED self-contained"
+    claim: "finite-k block-change replica bound P(V)<=exp(-vk/4+(e^v-1)H/4)"
+  - id: "B24-BARRIER"
+    status: "PROVED self-contained"
+    claim: "simple cycle block word gives exact cut MGF 2^-k[(1+t)^k+(1-t)^k], so connectivity alone cannot improve the exponential lower-moment rate"
+  - id: "NEW-L103"
+    status: "PROVED self-contained sharpening of archived HARD10-03-L5"
+    claim: "explicit fixed-K torus/lattice coupling error <=6K exp(-min(R^2/(8 beta),R/2)), R=floor(m/(8(K+1)))"
+source_checks:
+  - "Elboim-Sly arXiv:2211.17023: rate-one edge clocks; displayed Toth conjecture; theorem only d>=5"
+  - "Hammond arXiv:1202.1319 and 1202.1322: tree-specific"
+  - "Bjornberg-Ueltschi arXiv:1608.08473: regular-tree loop/interchange model"
+neighbor_checkpoint:
+  track: "C27-toth-interchange"
+  commit_at_snapshot: "7520087c578e4c1597e5f6bdb8b184c0cc7928f4"
+audits:
+  p26_same_full_claim: "MISSING"
+  other_distinct_same_full_claim: "MISSING"
+  closure_allowed: false
+remaining_obligation: "prove a fixed-beta finite-torus positive vertex mass on a cycle threshold tending to infinity with box size (requested milestone: positive-density macroscopic cycles), with explicit beta_0; physical orbit-propagating block event still missing"
+next_attack:
+  - "prove heat-weight dispersion beyond total H"
+  - "derive geometry-specific independent cut interfaces"
+  - "construct valid physical no-peeking orbit-propagating block event"

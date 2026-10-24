@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T015848Z-account01-B05-QFORM-auto11",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "pair-anchored-star",
+      "statement": "T_ij=c Delta_3(y_j^2+z_j^2)",
+      "derivation": "sum_k (y_j z_k-y_k z_j)^2=y_j^2||z||^2+z_j^2||y||^2-2y_jz_j<y,z>=y_j^2+z_j^2",
+      "result": "PASS"
+    },
+    {
+      "id": "pair-volume",
+      "statement": "det Gram(r_i,r_j)=c(y_j^2+z_j^2)",
+      "derivation": "r_i=(sqrt(c),0,0), r_j=(x_j,y_j,z_j)",
+      "result": "PASS"
+    },
+    {
+      "id": "double-count",
+      "statement": "sum_j T_ij=2S_i",
+      "derivation": "sum_j(y_j^2+z_j^2)=2",
+      "result": "PASS"
+    },
+    {
+      "id": "longitudinal-spike-cardinality",
+      "statement": "At most three j can satisfy x_j^2/(1-c)>1/4",
+      "derivation": "the positive quantities sum to one, so four strict >1/4 terms are impossible",
+      "result": "PASS"
+    }
+  ]
+}

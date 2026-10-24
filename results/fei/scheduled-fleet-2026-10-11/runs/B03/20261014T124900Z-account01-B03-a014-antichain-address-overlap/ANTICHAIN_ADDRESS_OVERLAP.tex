@@ -1,0 +1,79 @@
+\section*{Exact GU accounting for antichain addressing with arbitrary reuse}
+
+All logarithms are base two.  Let $Y=(y_1,\ldots,y_k)$ be selector
+coordinates, let $C$ be a set of common data coordinates, and let
+$\{A_z:z\in\{-1,1\}^k\}$ be an antichain of distinct subsets of the
+remaining physical data coordinates.  No bound is imposed on the sizes,
+pairwise intersections, or congestion of the $A_z$.  Define
+\[
+ F(Y,x)=\chi_C(x)\chi_{A_Y}(x).                       \tag{1}
+\]
+This is a genuine Boolean function and includes full physical reuse.
+
+\paragraph{Theorem.}
+Put $m=2^k$ and, for a data coordinate $i$, set
+\[
+ B_{i,z}=A_z\setminus\{i\},\qquad
+ d_i(z)=\#\{w:B_{i,z}\subseteq B_{i,w}\}.            \tag{2}
+\]
+Then
+\[
+ U(F)=\frac{k}{2},\qquad
+ I(F)=|C|+\frac{k}{2}+\frac1m\sum_z|A_z|,             \tag{3}
+\]
+and the complete signed GU aggregate is
+\[
+ \boxed{G(F)=\frac{k}{2}-\frac1m\sum_{i,z}\log_2 d_i(z).} \tag{4}
+\]
+Consequently this entire all-arity, unbounded-reuse class obeys
+\[
+ \boxed{G(F)\le I(F)}                                 \tag{5}
+\]
+with the dimension-independent restricted GU pair $(a,b)=(1,0)$.
+
+\paragraph{Proof.}
+Writing $1_{\{Y=z\}}=m^{-1}\sum_{R\subseteq[k]}\sigma_z(R)\chi_R(Y)$
+shows that (1) has $m^2$ Fourier coefficients of squared mass $m^{-2}$,
+at supports $C\cup A_z\cup R$.  The antichain assumption makes all these
+supports distinct and prevents cross-branch upper relations.  For fixed
+$(z,R)$ there are $2^{k-|R|}$ upper supersets, hence
+\[
+ \log_2\frac{\pi(C\cup A_z\cup R)}{p(C\cup A_z\cup R)}=k-|R|.
+\]
+Averaging over uniform $R$ proves $U=k/2$.  Averaging support cardinality
+proves the formula for $I$.
+
+Restricting a selector $y_j$ leaves an antichain address on $k-1$
+selectors in either child.  Thus every selector contributes exactly
+$\Delta_{y_j}U=1/2$.  Restricting a coordinate in $C$ only removes a
+common character and contributes zero.
+
+For a remaining data coordinate $i$, antichainness also implies that the
+$B_{i,z}$ are distinct: equality would make two original $A_z$ equal or
+nested.  The restriction signs therefore cannot merge Fourier
+coefficients, so both children have the same squared spectrum.  A
+coefficient indexed by $(z,R)$ now sees exactly $d_i(z)$ eligible branch
+supports and $2^{k-|R|}$ selector supersets.  Hence each child has
+\[
+ U(F_{i,\pm})=\frac{k}{2}+\frac1m\sum_z\log_2d_i(z),
+\]
+and therefore
+\[
+ \Delta_iU=-\frac1m\sum_z\log_2d_i(z).                \tag{6}
+\]
+Summing the $k$ selector increments, the common-coordinate zeros, and
+(6) proves (4).  Since every $d_i(z)\ge1$, (4) gives $G\le k/2\le I$.
+
+\paragraph{Interpretation and scope.}
+Equation (6) is the complete cost of coherent upper-set overlap created
+by reusing a physical input: every new containment is a signed refund,
+with its exact logarithmic multiplicity retained.  No disjointness,
+bounded congestion, cancellation assumption, or correlation gap is
+used.  The theorem extends the previous two-piece collision calculation
+to arbitrary addressing depth and arbitrary antichain overlap.
+
+It does not prove universal GU.  The remaining obstruction is the first
+stage at which the branch Fourier rows are not single characters (or
+where initial branch supports are comparable): Fourier coefficients can
+then merge after restriction, so the signed amplitudes, rather than only
+the containment counts $d_i(z)$, determine the posterior cost.

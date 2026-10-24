@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260922T182857Z-account03-B15-qform-r15",
+  "source_control_commit": "1dabd8516681f9f2c43318ab858b337d8d6f8cae",
+  "publication_refresh_main": "65af032e668951f76c3c60460fd2847f06ec5a31",
+  "control_revision": "2026-09-22.11",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "premises": [
+    {
+      "name": "account04/B15 exact continuous-output envelope",
+      "source": "yspennstate/math-open-problems@07672b7beb8f867c7a7b973aa3157a42ae506460:proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md",
+      "scope": "cap-one smooth compactly supported product inputs have C0 output; C_all=C_C0=C_sm"
+    },
+    {
+      "name": "account01/B15 principal 3/4 block theorem",
+      "source": "yspennstate/math-open-problems@47dc925729bbf269333cc6e1256178a538d2f553:proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260922T120320Z-account01-B15-qform/REPORT.md",
+      "scope": "uniform affine density bound C3/kappa or C4/kappa on a fixed invertible physical principal block; every rank>=3 symmetric matrix has such a block of order 3 or4"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-DISJOINT-BLOCK-L1-LINF-v1",
+      "statement": "If coordinate j has a disjoint invertible physical principal 3/4-block I_j with H_j=C_|I_j|/sigma_min(A[I_j,I_j]), then changing only marginal j changes the quadratic-output density by at most H_j times the L1 distance of that marginal. If every j has such a block, telescope to sum_j H_j||f_j-g_j||_1."
+    },
+    {
+      "id": "QFORM-RANK5-C0-v1",
+      "statement": "For every fixed real symmetric A with rank(A)>=5 and every independent cap-one measurable input densities, X^TAX has a C0(R) density. More generally it suffices that rank(A[j^c,j^c])>=3 for every j."
+    },
+    {
+      "id": "QFORM-ROUGH-CONTINUITY-FOUR-CORE-REDUCTION-v1",
+      "statement": "For every rank>=3 symmetric A, choose one invertible physical principal block I of order 3 or4. All marginals outside I can be smoothed with output-Linfinity convergence while keeping the core marginals fixed, so the remaining rough-input continuity obstruction is confined to at most four physical marginals."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ba582be94819356ca53db35d45c160b89ce15da2",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T182857Z-account03-B15-qform-r15/REPORT.md",
+    "blob": "6047a4141085e840f7f83d5917c5aab3c9d5e52f"
+  },
+  "handoff_commit": "f94cfaad7c7ebccc10590ca010e17e075886f739",
+  "unresolved_implication": "Full universal matrix- and dimension-independent Linfinity bound remains open. Separately, rough-input continuity remains to be closed in the rank-3/rank-4 core-marginal cases or refuted by a valid independent product-law example.",
+  "next_step": "For regularity, derive an L1-to-Linfinity replacement estimate for a core marginal when all available invertible principal 3/4 blocks contain it, perhaps by two-stage conditioning or pair-log smoothing; otherwise seek a genuine rank-3/rank-4 product-law discontinuity. Do not use the matrix-dependent H_j constants as a universal-height argument."
+}

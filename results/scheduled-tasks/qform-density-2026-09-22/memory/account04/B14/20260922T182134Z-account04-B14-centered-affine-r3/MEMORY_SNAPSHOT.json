@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "account": "account04",
+  "slot": "B14",
+  "run_id": "20260922T182134Z-account04-B14-centered-affine-r3",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_conjecture": "OPEN_NOT_PROVED",
+  "theorem": "QFORM-CENTERED-AFFINE-LOCALIZATION-EQUIVALENCE-v1",
+  "result": "C_hom=C_compact_mean_zero_range_affine=C_centered_finite_fragments with no loss in the sharp constant.",
+  "proof_core": [
+    "cap-preserving compact approximation in marginal total variation",
+    "product TV and pushforward contraction",
+    "center each compact marginal and retain b=A m",
+    "reverse any b in Range(A) by translating with A m=b",
+    "bathtub plus finite-fragment approximation"
+  ],
+  "partner": {
+    "worker": "account01/B14",
+    "brain_commit": "5a332df9b12f3403cac5c68cc07bfc8a768648b1",
+    "math_commit": "c7303438b647f318f0c2a052cb0bec1557f47b37",
+    "applied_inequality": "P(F in I)<=128 |A_ii|^{-1/2}|mu_1 mu_2|^{-1/4}|I| under grouped rank-two Schur bank"
+  },
+  "guardrails": [
+    "b must lie in Range(A)",
+    "no bounded support diameter",
+    "no bounded fragment count",
+    "no bounded fragment separation",
+    "bounded density only; continuity not transferred"
+  ],
+  "canonical": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1250c776b3840b8494ace461b27541f8e156e9bf",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260922T182134Z-account04-B14-centered-affine-r3/REPORT.md",
+    "blob": "35774c93046baeeb78dc9aa5dbf3e2977149915d"
+  },
+  "next": "Derive a paid grouped-coordinate or other mass-linear structural branch from the three-large-eigenvalue hypothesis on centered finite fragments.",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

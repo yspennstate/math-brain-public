@@ -1,0 +1,73 @@
+\section*{All-arity structural reduction for the block half-tax}
+
+All entropies are in bits.  For $0\le p\le1$ put
+\[
+ h_2(p)=-p\log_2p-(1-p)\log_2(1-p),\qquad
+ \Delta(p)=h_2(p)+\log_2\max\{p,1-p\},
+\]
+with $0\log 0=0$.  Let
+\[
+ U_p=\begin{pmatrix}\sqrt{1-p}&\sqrt p\\
+                     \sqrt p&-\sqrt{1-p}\end{pmatrix}.
+\]
+
+\paragraph{Frozen input.}
+The scalar input is the one-coordinate uncertainty bound
+\[
+ H(|z|^2)+H(|U_pz|^2)\ge r(p):=h_2(p)-\frac12\Delta(p)       \tag{1}
+\]
+for every unit $z\in\mathbb C^2$ and every $p\in[0,1]$.
+At interior biases this is the source-pinned claim
+\texttt{B10L-ONEBIT-HALF-TAX}; the repaired B17/A084--A085
+certificates cover its scalar continuum realization.  Deterministic
+endpoints follow directly by deleting the one-dimensional factor.
+
+\paragraph{Theorem (no arity tail).}
+For every finite set $A$, every biases $(p_i)_{i\in A}\in[0,1]^A$, and
+every unit vector $w\in\mathbb C^{2^{|A|}}$, if
+$U_A=\bigotimes_{i\in A}U_{p_i}$, then
+\[
+ H(|w|^2)+H(|U_Aw|^2)\ge\sum_{i\in A}r(p_i).                \tag{2}
+\]
+The constant and coefficient $1/2$ are independent of $|A|$.
+
+\paragraph{Proof.}
+Use the computational basis and the $U_{p_i}$-rotated basis as the two
+nondegenerate projective measurements on the $i$th qubit.  Equation (1)
+is their local state-independent linear Shannon-entropy uncertainty
+relation with weights $(1,1)$.  Proposition 1 and Corollary 1 of
+R. Schwonnek, \emph{Additivity of entropic uncertainty relations},
+Quantum 2 (2018), 59, state that the optimal constant for two global
+product projective measurements is the sum of the local optimal constants,
+even over arbitrary (possibly entangled and complex) states.  Iterating the
+proposition gives (2).  Pure states suffice because the measurement
+entropies are concave in the density matrix, and the displayed coefficient
+vector $w$ is already pure.  If $p_i\in\{0,1\}$, $U_{p_i}$ is a signed
+permutation, $r(p_i)=0$, and the factor contributes zero to both sides;
+thus deletion or continuity covers all rare endpoints.  This proves every
+finite arity at once, with no compactness limit in dimension.
+
+\paragraph{Exact block consequence.}
+For a product-biased physical block $A$, the exact child/spectral reduction
+from \texttt{B10L-BLOCK-HALF-TAX-PRODUCT} gives
+\[
+ J_A-M_A\le H(Z_A)-
+ \inf_{\|w\|_2=1}\{H(|w|^2)+H(|U_Aw|^2)\},                 \tag{3}
+\]
+where $H(Z_A)=\sum_i h_2(p_i)$.  Combining (2)--(3),
+\[
+ \boxed{J_A\le M_A+\frac12\sum_{i\in A}\Delta(p_i)}.      \tag{4}
+\]
+This holds for arbitrary normalized coefficient vectors, hence in
+particular for every genuine Boolean child family; Booleanity is not
+relaxed in its application.
+
+\paragraph{GU scope.}
+Equation (4) closes the all-arity uncertainty sublemma only.  It does not
+cancel or pay the $M_A$ terms along a hierarchy.  Indeed the accepted
+growing-rank OR-defect obstruction rules out the naive cancellation that
+would yield $G\le I/2$.  Universal GU still requires a signed telescoping
+potential that retains the nonzero terminal $M$ reserve and charges each
+physical influence once.  Thus (4) is a strict reduction of the unpaid
+line, not a proof of GU or FEI.
+

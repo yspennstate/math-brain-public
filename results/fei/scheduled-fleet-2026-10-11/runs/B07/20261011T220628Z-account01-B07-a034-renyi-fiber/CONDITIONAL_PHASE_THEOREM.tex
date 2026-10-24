@@ -1,0 +1,25 @@
+\begin{theorem}[Soft R\'enyi-half fiber completion]
+Let $f:\{-1,1\}^X\times\{-1,1\}^Y\to\{-1,1\}$ be Boolean under the uniform product law, and assume its $X$-Fourier degree is at most $d\ge1$. Put
+\[
+p_X(R)=\sum_T\widehat f(R,T)^2,\qquad
+q_R(T)=\widehat f(R,T)^2/p_X(R)
+\]
+when $p_X(R)>0$, and
+\[
+\mathcal A_{1/2}(f)=\sum_Rp_X(R)\log_2\left(\sum_T\sqrt{q_R(T)}\right)^2.
+\]
+Then
+\[
+H(f)\le {2\over\ln2}I_Y(f)+2(d-1)-\mathbb E_y\Gamma_d(f_y)+\mathcal A_{1/2}(f).
+\]
+If $\mathcal A_{1/2}(f)\le A$ and $\operatorname{Var}(f)\ge\nu>0$, then
+\[
+H(f)\le\left({2\over\ln2}+{2(d-1)+A\over\nu}\right)I(f)-\mathbb E_y\Gamma_d(f_y).
+\]
+For a fresh tensor factor $g$, $\mathcal A_{1/2}(fg)=\mathcal A_{1/2}(f)+H_{1/2}(\widehat g^2)$.
+\end{theorem}
+
+\begin{proof}
+Use the exact chain rule $H(f)=H(p_X)+\sum_Rp_X(R)H(q_R)$, monotonicity $H(q_R)\le H_{1/2}(q_R)$, and the Boolean-granularity marginal phase bound. The variance consequence follows from $I(f)\ge\operatorname{Var}(f)$. Tensor multiplicativity follows from $q_R^{fg}=q_R^f\otimes\widehat g^2$ and multiplicativity of $\sum\sqrt q$.
+\end{proof}
+

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260922T164010Z-account01-B08-qform-r15",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "source_control_start_commit": "497732ef036c8f9149a5383ba4a470b8bce2f388",
+  "source_control_prepublication_commit": "3d701d545b681ec5c6620fa039da003d3fe266a9",
+  "owner_control_revision_start": "2026-09-22.7",
+  "owner_control_revision_prepublication": "2026-09-22.8",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B08",
+    "theorem": "QFORM-DIFFUSE-APPROX-BLOCK-STABILITY-v1",
+    "canonical_commit": "c1c6ffe8c742cbba7611b5a3f1d73cf71019f47b",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/B08-20260922T153820Z-r12/REPORT.md",
+    "application": "With no conditioning and singleton blocks, delta<=1/48 and ||C-diag(C)||<=1/40 give a continuous density with norm <51; this is branch A of the new trichotomy."
+  },
+  "other_dependency": {
+    "theorem": "QFORM-RIDGE-DENSITY-v1",
+    "canonical_commit": "9c1167db05c7b0f520f060796fde921ed769a4e7",
+    "application": "At gamma=||E||/2, ridge effective dimension >=3 and max ridge diagonal <=1/2 imply a continuous density bound <280 in the high-stable-rank branch."
+  },
+  "new_claims": [
+    "QFORM-DIFFUSE-LARGE-DEFECT-STABLE-RANK-v1: for selected-frame row leverage <=1/48, if tau=||C-diag(C)||>1/40 and stable rank >=30, a physical cut has actual ridge effective dimension >=3; hence either the ridge theorem closes with continuous density <280 or a physical cross row has norm >1/(80 sqrt(2)).",
+    "QFORM-RANK3-COAREA-LINF-ONLY-FALSE-v1: bounded Linfinity norm of an arbitrary 3D density alone cannot uniformly control the pushforward under y1^2+y2^2-y3^2; an exact light-cone slab gives peak >=pi R/2 with density cap one. This refutes only the intermediate Linfinity-only coarea claim, not full QFORM."
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6b3bbc4e57483d47d1dbd7607fee357d9df20e47",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260922T164010Z-account01-B08-qform-r15/REPORT.md",
+    "addendum_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260922T164010Z-account01-B08-qform-r15/ADDENDUM_REV8_COAREA_CORRECTION.md"
+  },
+  "handoff_commit": "cb88a4367ebdc76f2f563d5b9b76625ebb6920e5",
+  "correction_event_commit": "220bf10ccacd9628d8310f0ff0567a196868e710",
+  "unresolved_implication": "QFORM-DIFFUSE-LOW-STABLE-RANK-OR-LOCALIZED-CLOSURE-v1: close stable-rank<30 off-diagonal residuals by grouped-coordinate product structure, or upgrade the fixed-scale localized cross row to a density bound with an independent selected-spectrum/pivot resource.",
+  "continuity_status": "PROVED_ON_SMALL-DEFECT_AND_RIDGE-CLOSED_BRANCHES_ONLY",
+  "full_target_status": "OPEN"
+}

@@ -1,0 +1,118 @@
+\section*{Assembly cut after the complete singleton KL payment}
+
+All logarithms are base two.  For a genuine Boolean function put
+\(p(S)=\widehat f(S)^2\), \(\pi(A)=\sum_{S\supseteq A}p(S)\), and retain
+the exact signed restriction identity
+\[
+ \Delta_iU=B_i-\Gamma_i+\sum_{A\subseteq[n]\setminus\{i\}}K_{i,A}.
+ \tag{1}
+\]
+The KL row \(K_{i,A}\) uses the signed upper-set correlation; no absolute
+value or arbitrary-law relaxation is made.
+
+\subsection*{Frozen candidate and exact accepted inputs}
+
+Freeze
+\[
+ R_{4,3/4}(f)=G(f)-4I(f)-\frac34U(f).
+ \tag{2}
+\]
+The sharp root theorem and the complete singleton-row theorem state
+\[
+ K^{(0)}\le {2\over\ln2}M_1,
+ \qquad
+ K^{(1)}\le {1\over2}V_1+{2\over\ln2}W_2,
+ \tag{3}
+\]
+where
+\[
+ M_1=\sum_i\min\{p(\varnothing),p(\{i\})\},\quad
+ W_2=\sum_{|S|=2}p(S),
+ \tag{4}
+\]
+\[
+ V_1=\sum_{i\ne j}
+ \bigl(p(\{j\})+p(\{i,j\})\bigr)
+ \log_2{\pi(\{j\})\over p(\{j\})+p(\{i,j\})}.
+ \tag{5}
+\]
+The source proof of the second inequality is valid: in each physical child
+\(g=f_{i,\pm}\), Booleanity gives
+\(|\widehat g(\{j\})|\le\operatorname{Inf}_j(g)\).  This is exactly the
+line that controls the signed posterior denominator.  It is not available
+for arbitrary spectral laws.
+
+Let
+\[
+ D_{\ge2}=\sum_i(B_i-\Gamma_i)
+       +\sum_i\sum_{|A|\ge2}K_{i,A}.
+ \tag{6}
+\]
+Since \(M_1+W_2\le I\), substitution of (3) into (1), summed in \(i\),
+gives the all-dimensional theorem
+\[
+ \boxed{G\le D_{\ge2}+{1\over2}V_1+{2\over\ln2}I.}
+ \tag{7}
+\]
+Consequently it is sufficient, only on tensor-prime Boolean functions with
+\(R_{4,3/4}>0\), to prove
+\[
+ \boxed{
+ D_{\ge2}+{1\over2}V_1
+ \le\left(4-{2\over\ln2}\right)I+{3\over4}U.}
+ \tag{GU-cut}
+\]
+This implies \(G\le4I+3U/4\), then \(U\le16I\), and the audited source
+reduction gives \(H\le34I\).  Constants and zero-influence functions are
+handled separately.
+
+\subsection*{Minimal-counterexample structure}
+
+If (2) is positive somewhere, choose a counterexample of minimum dimension
+and pass to a positive-residual tensor-prime factor.  Every proper physical
+child has nonpositive residual.  Therefore every relevant coordinate obeys
+\[
+ \Delta_iG-\frac34\Delta_iU
+ \ge4\operatorname{Inf}_i(f)+R_{4,3/4}(f).
+ \tag{8}
+\]
+No extremizer in unbounded dimension is assumed.  Equation (8) is a valid
+structural hypothesis for attacking (GU-cut), but it does not by itself pay
+either term on its left.
+
+\subsection*{Two transfers that are not available}
+
+First, \(V_1/2\le U\) is false for genuine Boolean spectra.  On four bits,
+take the truth table (lexicographic binary input order)
+\[
+ (1,-1,1,1,1,1,-1,1,-1,-1,-1,1,1,-1,-1,-1).
+ \tag{9}
+\]
+Direct Walsh evaluation gives
+\[
+ U={1\over4},\qquad V_1={7\over4},\qquad {V_1\over U}=7.
+ \tag{10}
+\]
+This witness has negative frozen residual, so it refutes only the proposed
+unconditional transfer, not (GU-cut) on minimal positive-residual sources.
+
+Second, the adaptive-root single-use theorem bounds root rows encountered
+inside one physical read-once restriction tree.  The static sum \(K^{(1)}\)
+contains all ordered pairs \((i,j)\) at the common parent.  No source-pinned
+lemma currently embeds those mutually incompatible first queries into one
+tree without reuse or a terminal remainder.  Hence the adaptive theorem
+cannot replace \(V_1/2\) in (GU-cut) as presently stated.
+
+The A099 amplified-extension inequality is a separate sufficient route to
+FEI on a critical profile; it does not assert the universal GU inequality
+and supplies no algebraic identification of its posterior chain functional
+with \(V_1\) or \(D_{\ge2}\).  It is therefore retained as an independent
+open route, not inserted as a dependency of (GU-cut).
+
+\subsection*{Exact open leaf}
+
+The leading universal-GU chain now has one explicit leaf: prove (GU-cut)
+using (8), or refute that restricted inequality with a genuine Boolean
+tensor-prime positive-residual family.  Every root and singleton KL row is
+already paid; the unpaid KL sum starts at derivative order two, together
+with the explicitly retained reuse functional \(V_1/2\).

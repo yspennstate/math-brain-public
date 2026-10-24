@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260924T051102Z-account01-B01-qform-auto11-r13",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "startup_control_head": "a433fd0ee2ed2d164fc534bc96671676242dd1bf",
+  "publication_refresh_head": "e41daf39f4679e9eb992020d6a02a63fa05f4bc9",
+  "control_readme_blob": "14046b5138615be52bb1c49a998122a7c84e200e",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-STAR-EDGE-TAIL-HALFRIESZ-v1",
+      "source": "yspennstate/math-open-problems@c4b014741e90e63a6890920d3f1f8b17747f6797",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260924T040416Z-account02-B01-qform-auto11-r43/REPORT.md",
+      "scope_used": "grouped-leaf L2 frequency estimate, applied separately to two disjoint leaf groups"
+    },
+    {
+      "id": "QFORM-RANK2-AFFINE-HALF-RIESZ-v1",
+      "source": "yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a",
+      "path": "proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md",
+      "scope_used": "conditional physical 2x2 invertible residual pair"
+    },
+    {
+      "id": "QFORM-ANYSIGN-PAIR-TWOSQUARE-FROSTMAN-v1",
+      "source": "yspennstate/math-open-problems@5a750c5b1188ea297a92c01b9692de5d87ab7f4c",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260924T041020Z-account01-B01-qform-auto11-r12/REPORT.md",
+      "scope_used": "nonzero outer pivot plus a target-scale second literal Schur diagonal"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-STAR-DISPERSION-HALFRIESZ-v1",
+      "statement": "For a diagonal-plus-star residual R with slope vector c, H_1/2(R)<=8 (||c||_2^4-||c||_infinity^4)^(-1/8) whenever the aggregate currency is positive.",
+      "status": "PROVED_SUPPORTING_THEOREM_PENDING_INDEPENDENT_REVIEW"
+    },
+    {
+      "id": "QFORM-OUTER-PIVOT-DIAGONALSTAR-SCALEFREE-v1",
+      "statement": "If s_3(A)>=1, a nonzero original outer pivot a has diagonal-plus-one-star Schur residual, then ||p_Q||_infinity <=128(16/3)^(1/4)|a|^(-1/2)<194.518|a|^(-1/2).",
+      "status": "PROVED_SUPPORTING_THEOREM_PENDING_INDEPENDENT_REVIEW"
+    }
+  ],
+  "partner_result_actually_applied": {
+    "account_slot": "account02/B01",
+    "source": "yspennstate/math-open-problems@c4b014741e90e63a6890920d3f1f8b17747f6797",
+    "application": "used grouped-leaf L2 estimate twice in the balanced star partition; also checked Q_*=X0^2+2H(U+V/2), giving 2^(23/8)=7.33603234563737"
+  },
+  "canonical_math_commit": "6c6b0d78a725b7a1cfa941b0497d17cc6a2223ba",
+  "canonical_math_bundle_commit": "35284202db13cb0cae325f2b0027500742730dcb",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260924T051102Z-account01-B01-qform-auto11-r13/REPORT.md",
+  "handoff_commit": "b45745f46664a94b51b687bc727c5e21db09b509",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B01/20260924T051102Z-account01-B01-qform-auto11-r13.md",
+  "first_unpaid_implication": "QFORM-FINITELEAK-OUTER-PIVOT-AGGREGATION-v2",
+  "next_step": "Remove the |a|^(-1/2) loss when all literal outer pivots are tiny or zero by forcing or aggregating a pair/grouped/cross-volume currency while retaining non-star curvature and every nonzero collar.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

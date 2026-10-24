@@ -1,0 +1,14 @@
+{
+  "helper_version": "A020 verify.py v1",
+  "family": "Every Boolean F(x,y) with low-order selector bits x; branches arbitrary on shared y",
+  "parameter_domain": "a=1,m=0..3 and a=2,m=0..2",
+  "case_count": 131620,
+  "symmetry": "none; all truth tables including global sign",
+  "arithmetic": "Integer Walsh; natural logs rational atanh series 40 terms, rigorous tail; outward fixed-point endpoints scale 2^100. Rational entropy and sign comparisons. Floats only rank exploration.",
+  "memory_estimate_MB": 40,
+  "pilot": "a=1,m=2 and a=2,m=1, 512 cases, under 60 seconds",
+  "maximum_runtime_seconds": 600,
+  "maximum_memory_MB": 200,
+  "moderate_density": "1/4 <= I_sel/a <= 3/4",
+  "no_automatic_dimension_escalation": true
+}

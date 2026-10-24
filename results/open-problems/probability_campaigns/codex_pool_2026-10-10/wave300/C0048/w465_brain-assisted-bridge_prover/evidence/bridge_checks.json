@@ -1,0 +1,84 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w465/verify_bridges.py",
+  "elapsed_seconds": 0.508491599932313,
+  "status": "PASS",
+  "identity_checks_exact": 432,
+  "event_gap_checks_exact": 240,
+  "total_variation_checks_exact": 120,
+  "path_formula_checks_exact": 72,
+  "FK_spin_energy_normalization_checks_exact": 216,
+  "path_measurements": [
+    {
+      "length": 2,
+      "q": 3,
+      "p": "1/2",
+      "gap_exact": "1/12",
+      "gap_decimal": 0.08333333333333333,
+      "naive_positive_gap_claim": true,
+      "corrected_infinite_transition_claim": false,
+      "reason": "exact geometric gap tends to zero; fixed finite-temperature 1D limit is iid Bernoulli(a)"
+    },
+    {
+      "length": 4,
+      "q": 3,
+      "p": "1/2",
+      "gap_exact": "1/172",
+      "gap_decimal": 0.005813953488372093,
+      "naive_positive_gap_claim": true,
+      "corrected_infinite_transition_claim": false,
+      "reason": "exact geometric gap tends to zero; fixed finite-temperature 1D limit is iid Bernoulli(a)"
+    },
+    {
+      "length": 8,
+      "q": 3,
+      "p": "1/2",
+      "gap_exact": "1/43692",
+      "gap_decimal": 2.288748512313467e-05,
+      "naive_positive_gap_claim": true,
+      "corrected_infinite_transition_claim": false,
+      "reason": "exact geometric gap tends to zero; fixed finite-temperature 1D limit is iid Bernoulli(a)"
+    },
+    {
+      "length": 16,
+      "q": 3,
+      "p": "1/2",
+      "gap_exact": "1/2863311532",
+      "gap_decimal": 3.492459653181741e-10,
+      "naive_positive_gap_claim": true,
+      "corrected_infinite_transition_claim": false,
+      "reason": "exact geometric gap tends to zero; fixed finite-temperature 1D limit is iid Bernoulli(a)"
+    },
+    {
+      "length": 32,
+      "q": 3,
+      "p": "1/2",
+      "gap_exact": "1/12297829382473034412",
+      "gap_decimal": 8.131516293641283e-20,
+      "naive_positive_gap_claim": true,
+      "corrected_infinite_transition_claim": false,
+      "reason": "exact geometric gap tends to zero; fixed finite-temperature 1D limit is iid Bernoulli(a)"
+    }
+  ],
+  "narrow_reasoning_regression": {
+    "family": "five endpoint-wired path lengths at q=3,p=1/2",
+    "before_false_transition_claims": 5,
+    "after_false_transition_claims": 0,
+    "improvement_scope": "This exact path family only; no broad recall or proof-solving improvement claimed."
+  },
+  "mean_field": {
+    "normalized_beta_mf": "2.77258872223978123766892848583270627230200053744102101648272",
+    "barrier_exact": "log(3)-(19/12)log(2)",
+    "barrier_decimal": "0.00112925278152961815129437794707947186128201175234529937695",
+    "arithmetic_positivity_witness": [
+      531441,
+      524288
+    ],
+    "minimum_generic_BC_error_d3": "beta_mf/9",
+    "minimum_generic_BC_error_d3_decimal": "0.308065413582197915296547609536967363589111170826780112942524",
+    "error_to_barrier_ratio_lower_bound": "272.804653325636236921271280039821238416898024029061782108342",
+    "warning": "This is a lower bound on the published error allowance, not on the actual physical covariance."
+  },
+  "independent_review": false,
+  "formal_proof": false,
+  "parent_problem_proved": false
+}

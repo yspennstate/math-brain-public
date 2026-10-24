@@ -1,0 +1,971 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalise,nameinlink]{cleveref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\crefname{lemma}{Lemma}{Lemmas}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{corollary}{Corollary}{Corollaries}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{remark}{Remark}{Remarks}
+
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\Pr}{\mathbb{P}}
+\newcommand{\Inf}{\mathrm{Inf}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\bits}{\{0,1\}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\K}{\mathcal K}
+
+\title[Entropy--influence for the clique property]{The Fourier entropy--influence inequality for the clique property}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{24 September 2026}
+
+\begin{document}
+
+\begin{abstract}
+The Fourier entropy--influence conjecture of Friedgut and Kalai would give total influence $\Omega(\log^2n)$ for every
+monotone graph property on $n$ vertices with variance bounded below, and the property that $G(n,\frac12)$ contains a
+clique on about $2\log_2n$ vertices shows that this would be sharp. We prove the conjecture for this property. If
+$\lambda$ is the expected number of cliques on $k$ vertices, then, uniformly over all $k$ with $\lambda\le\Lambda$, the
+spectral entropy is at most $2+\log_2(e(5+4\lambda))+o(1)$ times the total influence as $n\to\infty$. The proof codes
+the set of vertices covered by the spectral sample, which for a graph property costs exactly the entropy of a uniformly
+random set of its size, and then the edges inside it as an arbitrary set of pairs. For monotone graph properties both
+costs are bounded by Parseval identities and the Harris inequality, and for cliques by Janson's inequality. The same argument applies to every increasing property of the graph
+induced on $k$ vertices whose occurrences rarely overlap, with a bounded constant when $k=O(\log n)$, and in
+$G(n,p)$ for every $p\le\frac12$ it gives the biased form of the conjecture proposed by Keller, Mossel and
+Schlank, with a constant that tends to $4$ as $p\to0$.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+For $f\colon\bits^N\to\bits$ let $F=1-2f$, $\chi_T(x)=(-1)^{\sum_{i\in T}x_i}$, $\widehat F(T)=\E[F\chi_T]$ with $x$
+uniform, and $P(T)=\widehat F(T)^2$. By Parseval $P$ is a probability distribution on the subsets of $[N]$, and a
+random set $S$ with law $P$ is the \emph{spectral sample} of $f$. The \emph{spectral entropy} and the \emph{total
+influence} are
+\[
+H(f)=\sum_TP(T)\log_2\frac1{P(T)},\qquad I(f)=\E|S|=\sum_i\Inf_i(f),
+\]
+where $\Inf_i(f)=\Pr[f(x)\ne f(x\oplus e_i)]=\Pr[i\in S]$. Friedgut and Kalai~\cite{FK96} conjectured that
+$H(f)\le C\,I(f)$ for a universal constant $C$. The conjecture is known for symmetric functions and read-once decision
+trees~\cite{OWZ11}, read-once formulas~\cite{OT13}, random linear threshold functions~\cite{CKKLS18}, functions of
+very small influence or very large entropy~\cite{Sha19}, $\delta$-tribes~\cite{GMP26}, read-$k$ DNF formulas and
+regular functions~\cite{Shm26a}, and monotone DNF formulas of bounded width~\cite{Shm26b}; the best general bounds
+lose a factor that grows with the function~\cite{KKLMS20,KMS12,Han25}. It is open for monotone functions.
+
+Take $N=\binom n2$ and identify $x\in\bits^N$ with a graph $G$ on the vertex set $[n]$; for uniform $x$ this is
+$G(n,\frac12)$. A \emph{graph property} is a function invariant under permutations of the vertices. Friedgut and
+Kalai observed that their conjecture would give $I(f)\ge c\log^2n$ for every monotone graph property whose variance
+is bounded below. Bourgain and Kalai~\cite{BK97} proved $I(f)\ge c_\delta\log^{2-\delta}n$, and the best bound known
+is $c\log^2n/(\log\log n)^2$~\cite{KKLMS20}. The example that makes $\log^2n$ sharp is the \emph{clique property}
+\[
+f_{n,k}(G)=\mathbf 1[\,G\text{ contains a complete subgraph on $k$ vertices}\,].
+\]
+Write $m=\binom k2$ and $\lambda=\lambda_{n,k}=\binom nk2^{-m}$ for the expected number of $k$-cliques. At the clique
+number of $G(n,\frac12)$~\cite{BE76,Mat76}, $k=2\log_2n-2\log_2\log_2n+O(1)$ and $\lambda$ is of order one, and
+there $I(f_{n,k})=(1+o(1))\,2\lambda m\,e^{-\lambda}$ (\cref{lem:infl}), which is of order $\log^2n$, while the variance
+is bounded below.
+
+The known bounds do not reach this function with a bounded constant. It is a monotone DNF formula whose $\binom nk$
+terms have $m\sim2\log_2^2n$ variables each, and every variable lies in $\binom{n-2}{k-2}$ terms, so the
+bounded-width theorem of~\cite{Shm26b} gives the constant $m+8.1$ and the read-$k$ theorem of~\cite{Shm26a} a constant
+of order $\log^2n$. The bound $H(f)=O\bigl(I(f)+\sum_AP(A)|A|\log|A|\bigr)$ of~\cite{KKLMS20} has a right-hand side
+of order at least $I\log I$, by Jensen's inequality, which is of order $I\log\log n$ here.
+
+\begin{theorem}\label{thm:main}
+For every $\Lambda>0$,
+\[
+\max_{2\le k\le n:\ \lambda_{n,k}\le\Lambda}\Bigl(\frac{H(f_{n,k})}{I(f_{n,k})}-2-\log_2\bigl(e(5+4\lambda_{n,k})\bigr)\Bigr)\le o(1)
+\qquad(n\to\infty).
+\]
+In particular $\sup\{H(f_{n,k})/I(f_{n,k}):2\le k\le n,\ \lambda_{n,k}\le\Lambda\}<\infty$.
+\end{theorem}
+
+For $n>\Lambda$ the set $\{k\ge1:\lambda_{n,k}\le\Lambda\}$ consists of all $k$ from the clique number, up to an
+additive constant, to $n$ (\cref{lem:range}). It contains the window in which $f_{n,k}$ has variance bounded below, where the
+constant is $6.61+o(1)$ for $\lambda\le1$, and the whole range in which $f_{n,k}$ is close to $0$, where it is
+$5.76+o(1)$ as $\lambda\to0$. The second assertion follows from the first, because the finitely many functions with
+small $n$ each have a finite ratio. Below the clique number $f_{n,k}$ is close to $1$. There a per-coordinate
+estimate of~\cite{Shm26b}, with the symmetry of graph properties and Janson's inequality, gives
+$H\le(8.96+2\log_2\binom k2+o(1))\,I$ uniformly for $3\le k\le(2-\delta)\log_2n$ (\cref{cor:below}). At the values
+of $n$ we computed, the same estimate stays below $8.96+2\log_2\binom k2$ for every $k$ up to three below the clique
+number; at the last one or two values our bound is of order $\log n$ (\cref{sec:below}).
+
+Nothing in the argument needs $p=\frac12$. In \cref{sec:biased} it is carried out in $G(n,p)$ for every $p\le\frac12$,
+where it proves the biased form $H_p(f)\le c\,p\log(1/p)\,I_p(f)$ of the conjecture, proposed by Keller, Mossel
+and Schlank~\cite{KMS12}, for the clique property on the same range of $\lambda$, uniformly in $k$ and $p$
+(\cref{thm:biased,cor:kms}). As $p\to0$ the constant tends to $4$, which is the limit of the ratio for a dictator,
+so it cannot be improved.
+
+The proof does not induct on coordinates. \Cref{prop:coding} bounds the entropy of any function of the edges of $K_n$
+by two costs: that of the set $V(S)$ of vertices covered by the edges of the spectral sample, coded by its size and
+then as one of the sets of that size, and that of $S$ given $V(S)$, coded as an arbitrary set of pairs of $V(S)$. For
+a graph property the first cost cannot be lowered: the spectral distribution is invariant under permutations of the
+vertices, so $V(S)$ is uniformly distributed among the sets of its size and $H(f)\ge\E\log_2\binom n{|V(S)|}$, and
+the two costs characterize the conjecture for graph properties (\cref{prop:graphprop}). For monotone graph properties
+the first cost is bounded through the probability that the spectral sample touches a given vertex, by a Parseval
+identity and the Harris inequality (\cref{lem:touch}), and the second by the number of pairs of vertices that the
+spectral sample covers, which a second-order Parseval identity controls in the same way (\cref{lem:pairs}). For cliques Janson's
+inequality evaluates both. The spectral sample covers about $k$ vertices and carries about $m/2$ of the pairs among
+them, so the vertex set costs about $k\log_2(n/k)\approx m$ bits and the edges a bounded number of bits each. The
+argument uses only that the pattern is dense and that its copies rarely share edges, and \cref{thm:copies} states it
+for copies of an arbitrary graph. \Cref{thm:local} extends it to any increasing property of the graph induced on $k$
+vertices, with the relative influence of the property in place of the number of edges of a copy; the
+edge-isoperimetric inequality bounds that influence from below and shows that the clique property is the extremal
+case, and the proof uses the Harris inequality in place of Janson's.
+
+\section{Vertex coding}
+
+Let $f$ be a Boolean function of the edges of $K_n$, and let $S$ be its spectral sample. Write $V(S)$ for the set of
+endpoints of the edges in $S$, $v=|V(S)|$, and $\eps=\Pr[S\neq\emptyset]=1-\widehat F(\emptyset)^2$. For
+$W\subseteq[n]$ say that $S$ \emph{touches} $W$ if some edge of $S$ has an endpoint in $W$. Let $h$ denote the binary
+entropy function.
+
+\begin{proposition}\label{prop:coding}
+If $f$ is not constant, then
+\[
+H(f)\le A+\E\log_2\binom nv+I\log_2\frac{e\,\E\binom v2}{I},\qquad
+A=h(\eps)+\eps\log_2\frac{e\,\E v}{\eps}+\eps\log_2\frac{eI}{\eps},
+\]
+where $I=I(f)$.
+\end{proposition}
+
+\begin{proof}
+Since $v$ and $V(S)$ are functions of $S$, $H(f)=H(S)=H(v)+H(V(S)\mid v)+H(S\mid V(S))$. A random variable with values
+in $\{1,2,\dots\}$ and mean $\mu$ has entropy at most $\log_2(e\mu)$, the value of the geometric distribution being
+$\log_2\mu+(\mu-1)\log_2\frac\mu{\mu-1}$. The variable $v$ vanishes exactly when $S$ is empty and otherwise has
+conditional mean $\E v/\eps$, so $H(v)\le h(\eps)+\eps\log_2(e\,\E v/\eps)$. Given $v$, the set $V(S)$ is one of
+$\binom nv$ sets, so $H(V(S)\mid v)\le\E\log_2\binom nv$.
+
+Given $V(S)$, the set $S$ is determined by $|S|$ and by its position among the $\binom{\binom v2}{|S|}$ sets of that
+size of pairs of $V(S)$. The variable $|S|$ vanishes exactly when $V(S)$ is empty, so in the same way
+$H(|S|\mid V(S))\le\eps\log_2(eI/\eps)$. With
+$\log_2\binom Ms\le s\log_2(eM/s)$ and Jensen's inequality for the probability weights $P(T)|T|/I$,
+\[
+\sum_{T}P(T)\log_2\binom{\binom{v(T)}2}{|T|}\le\sum_TP(T)|T|\log_2\frac{e\binom{v(T)}2}{|T|}
+\le I\log_2\frac{e\sum_TP(T)\binom{v(T)}2}{I}.
+\qedhere
+\]
+\end{proof}
+
+\section{Two estimates for monotone graph properties}
+
+Let $f$ be a monotone function of the edges of $K_n$, and let $G$ denote the random graph $G(n,\frac12)$. For
+$W\subseteq[n]$ let $G-W$ be $G$ with every edge that has an endpoint in $W$ deleted. A \emph{minterm} of $f$ is a
+minimal graph $M$ with $f(M)=1$; it \emph{touches} $W$ if it has an edge with an endpoint in $W$. For a set $A$ of edges
+let $\E_A$ denote averaging over the edges in $A$.
+
+\begin{lemma}\label{lem:touch}
+For every $W\subseteq[n]$,
+\[
+\Pr[S\text{ touches }W]\le4\,\Pr[f(G-W)=0]\;\Pr[G\text{ contains a minterm of $f$ that touches $W$}].
+\]
+\end{lemma}
+
+\begin{proof}
+Let $A$ be the set of edges with an endpoint in $W$. The functions $\chi_T$ with $T\cap A\ne\emptyset$ span the
+orthogonal complement of the functions that do not depend on the edges in $A$, so
+$\Pr[S\text{ touches }W]=\sum_{T\cap A\ne\emptyset}\widehat F(T)^2=\E\,(F-\E_AF)^2$. Fix the edges outside $A$. If
+$f(G-W)=1$, then $f=1$ for every choice of the edges in $A$, by monotonicity, and $F-\E_AF=0$. Otherwise
+$\E_A(F-\E_AF)^2=4r(1-r)\le4r$, where $r$ is the conditional probability that $f(G)=1$. Therefore
+$\Pr[S\text{ touches }W]\le4\Pr[f(G)=1,\ f(G-W)=0]$. If $f(G)=1$ and $f(G-W)=0$, then a minterm contained in $G$
+is not contained in $G-W$, so it touches $W$. The event that $G$ contains a minterm touching $W$ is increasing and
+$\{f(G-W)=0\}$ is decreasing, and the Harris inequality~\cite{Har60} completes the proof.
+\end{proof}
+
+\begin{lemma}\label{lem:pairs}
+Let $u\neq w$ be vertices, and let $a$, $b$, $c$, $g$ be the indicators that $G$ contains a minterm of $f$ that touches
+$u$ but not $w$, touches $w$ but not $u$, touches both, and touches neither. Then
+\[
+\Pr[u,w\in V(S)]\le\Pr[uw\in S]+8\bigl(\E[ab]+\E c\bigr)\Pr[g=0].
+\]
+\end{lemma}
+
+\begin{proof}
+If $u,w\in V(S)$ and $uw\notin S$, then $S$ meets both $A$ and $B$, where $A$ and $B$ are the sets of edges at $u$ and
+at $w$ other than $uw$. As in the previous proof, the functions $\chi_T$ with $T$ meeting both $A$ and $B$ span the
+range of the commuting projections $(1-\E_A)(1-\E_B)$, so
+$\Pr[S\text{ meets $A$ and $B$}]=\|(1-\E_A)(1-\E_B)F\|_2^2=4\|(1-\E_A)(1-\E_B)f\|_2^2$. Fix the edges outside
+$A\cup B$; they include $uw$, and $g$ depends on them only. If $g=1$ then $f=1$ on the whole fibre. Otherwise
+$f=1-(1-a)(1-b)(1-c)$ on the fibre, $a$ depends on the edges in $A$ only and $b$ on those in $B$ only, and so
+\[
+(1-\E_A)(1-\E_B)f=-(a-\E_Aa)(b-\E_Bb)+(1-\E_A)(1-\E_B)\bigl[(1-a)(1-b)c\bigr].
+\]
+The operator $(1-\E_A)(1-\E_B)$ is a contraction and $\E_A(a-\E_Aa)^2\le\E_Aa$, so the average of the square over the
+fibre is at most $2\E_Aa\,\E_Bb+2\E_{A\cup B}\,c$. Hence
+$\Pr[S\text{ meets $A$ and $B$}]\le8\,\E\bigl[(ab+c)\mathbf 1[g=0]\bigr]$, and the Harris inequality applies to the
+increasing function $ab+c$ and the decreasing event $\{g=0\}$.
+\end{proof}
+
+Both lemmas were checked in exact arithmetic for every clique property on at most seven vertices, for every vertex,
+every pair of vertices, and the vertex sets obtained by halving $[n]$ recursively. The ratio of the two sides is at
+most $1$ in \cref{lem:touch}, where it equals $\Pr[f=0]$ for $W=[n]$, and at most $0.39$ in \cref{lem:pairs}.
+
+\section{Copies of a graph}\label{sec:copies}
+
+Let $\Gamma$ be a graph without isolated vertices, with $s$ vertices and $m$ edges, let $\K$ be the set of subgraphs of
+$K_n$ isomorphic to $\Gamma$ (its \emph{copies}), and let $f(G)=\mathbf 1[G\supseteq K\text{ for some }K\in\K]$. The
+copies are the minterms of $f$. Put
+\[
+\lambda=|\K|\,2^{-m},\qquad \eta=\sum_{L\in\K\setminus\{K\}:\ E(L)\cap E(K)\neq\emptyset}2^{-|E(L)\setminus E(K)|},
+\]
+where $K\in\K$ is fixed; by symmetry $\eta$ does not depend on $K$. Thus $\lambda$ is the expected number of copies in
+$G$, and $\eta$ the expected number of other copies that share an edge with a given copy, conditionally on its
+presence. For a set $U$ of $n'$ vertices the expected number of copies inside $U$ is
+$\mu(n')=\lambda\binom{n'}s/\binom ns$, since the vertex set of a uniformly random copy is a uniformly random $s$-set.
+The sum over ordered pairs of distinct copies inside $U$ that share an edge, of the probability that both are present,
+is at most $\lambda\eta$, and Janson's inequality~\cite{JLR90},~\cite[Theorem~8.1.1]{AS16} gives
+\begin{equation}\label{eq:janson}
+\Pr[G\text{ contains no copy inside }U]\le\exp\bigl(-\mu(n')+\lambda\eta/2\bigr).
+\end{equation}
+Also $1-\binom{n-w}s/\binom ns\le sw/(n-s+1)$, so $\mu(n-w)\ge\lambda\bigl(1-sw/(n-s+1)\bigr)$.
+
+\begin{lemma}\label{lem:infl}
+Let $I_0=2\lambda m\bigl[\exp\bigl(-\lambda/(1-2^{-m})-2\eta\bigr)-\eta/2\bigr]$. Then
+\[
+I_0\le I(f)\le2\lambda m\exp\Bigl(-\lambda+\frac{\lambda m}{\binom n2}+\frac{\lambda\eta}2\Bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+For an edge $e$ let $D$ be the event that $G-e$ contains no copy and, for a copy $K\ni e$, let $A_K$ be the event that
+the edges of $K$ other than $e$ are present. The edge $e$ is pivotal exactly on $D\cap\bigcup_{K\ni e}A_K$. Put
+$\mu_e=\sum_{K\ni e}\Pr[A_K]$; then $\sum_e\mu_e=m|\K|2^{1-m}=2\lambda m$. The events $A_K$ are increasing and $D$ is
+decreasing, so $\Inf_e(f)\le\mu_e\Pr[D]$ by the Harris inequality. The copies not containing $e$ have expected number
+$\lambda(1-m/\binom n2)$, the ordered pairs of them that share an edge have total probability at most $\lambda\eta$, and
+Janson's inequality for this family gives the upper bound. Conditionally on $A_K$ the
+other edges are independent fair coins, and $D$ is the intersection of the decreasing events that $L$ is not
+present, over the copies $L$ not containing $e$. Such an $L$ has $|E(L)\setminus E(K)|\ge1$ edges outside $K$, and it is
+present with conditional probability $p_L=2^{-|E(L)\setminus E(K)|}$. By the Harris inequality and
+$\log(1-p)\ge-p/(1-p)$,
+\[
+\Pr[D\mid A_K]\ge\prod_L(1-p_L)\ge\exp\Bigl(-\frac\lambda{1-2^{-m}}-2\eta\Bigr),
+\]
+using $p_L=2^{-m}$ for the at most $|\K|$ copies sharing no edge with $K$, and $p_L\le\frac12$ for the others, whose
+$p_L$ sum to at most $\eta$. For distinct $K,K'\ni e$ the copy $K'$ shares the edge $e$ with $K$, so
+$\sum_{K'\ne K}\Pr[A_K\cap A_{K'}]\le\Pr[A_K]\,\eta$. By the Bonferroni inequality
+\[
+\Inf_e(f)\ge\sum_{K\ni e}\Pr[A_K]\Pr[D\mid A_K]-\tfrac12\sum_{K\ne K'\ni e}\Pr[A_K\cap A_{K'}]
+\ge\mu_e\Bigl[\exp\Bigl(-\frac\lambda{1-2^{-m}}-2\eta\Bigr)-\frac\eta2\Bigr],
+\]
+and summing over $e$ gives the lower bound.
+\end{proof}
+
+\begin{lemma}\label{lem:vertex}
+$\E v\le4\lambda s\exp\bigl(-\lambda+\lambda s/(n-s+1)+\lambda\eta/2\bigr)$ and $\eps\le\min(1,4\lambda)$.
+\end{lemma}
+
+\begin{proof}
+$\E v=\sum_u\Pr[S\text{ touches }\{u\}]$. By \cref{lem:touch}, with $f(G-u)=0$ meaning that there is no copy inside
+$[n]\setminus\{u\}$, and by~\eqref{eq:janson}, each term is at most $4\,(\lambda s/n)\,e^{-\mu(n-1)+\lambda\eta/2}$,
+because the expected number of copies containing $u$ is $\lambda s/n$; and $\mu(n-1)\ge\lambda(1-s/(n-s+1))$.
+Finally $\eps=4q(1-q)$ with $q=\Pr[f=0]$, and $1-q\le\lambda$.
+\end{proof}
+
+\begin{lemma}\label{lem:pairsum}
+\[
+\E\binom v2\le I(f)+4\bigl(\lambda^2s^2+\lambda s^2\eta+\lambda s(s-1)\bigr)\exp\Bigl(-\lambda+\frac{2\lambda s}{n-s+1}+\frac{\lambda\eta}2\Bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+Sum \cref{lem:pairs} over the ordered pairs $(u,w)$; the terms $\Pr[uw\in S]$ add up to $2I$, and $\E\binom v2$ is half
+the sum. A copy touching both $u$ and $w$ contains both, so $\sum_{u\ne w}\E c\le\lambda s(s-1)$. For $\E[ab]$ count
+pairs $(K,K')$ of copies with $u\in V(K)\setminus V(K')$ and $w\in V(K')\setminus V(K)$. Pairs that share no edge are
+present with probability $4^{-m}$, and they contribute at most
+$\bigl(\lambda s(n-s)/(n(n-1))\bigr)^2$ for each $(u,w)$, hence at most $\lambda^2s^2$ in total. A pair that shares an
+edge is counted for at most $s^2$ pairs $(u,w)$, and the ordered pairs of copies sharing an edge have total
+probability at most $\lambda\eta$. Finally $\{g=0\}$ is the event that there is no copy inside $[n]\setminus\{u,w\}$,
+and~\eqref{eq:janson} applies with $\mu(n-2)\ge\lambda(1-2s/(n-s+1))$.
+\end{proof}
+
+\begin{theorem}\label{thm:copies}
+Let $\Gamma_n$ be graphs without isolated vertices, with $s_n$ vertices and $m_n$ edges, such that $s_n\to\infty$,
+$s_n/n\to0$, $(s_n\log s_n)/m_n\to0$, $\lambda_n\le\Lambda$ and $\eta_n\to0$, and let $\rho_n=\binom{s_n}2/m_n$. Then
+\[
+H(f_n)\le\bigl(2+\log_2\bigl(e(1+4\rho_n(1+\lambda_n))\bigr)+o(1)\bigr)\,I(f_n).
+\]
+The $o(1)$ depends only on $\Lambda$ and on upper bounds for $1/s_n$, $s_n/n$, $(s_n\log s_n)/m_n$ and $\eta_n$.
+\end{theorem}
+
+For dense patterns the third condition is automatic: it holds whenever $\rho_n=o(s_n/\log s_n)$.
+
+\begin{proof}
+Drop the index $n$. Put $x=\log_2|\K|/m$, so that $\log_2(1/\lambda)=m(1-x)$ and $x\le1+\log_2\Lambda/m$. Since
+$|\K|\ge\binom ns\ge(n/s)^s$,
+\begin{equation}\label{eq:entropycount}
+s\log_2(n/s)\le xm.
+\end{equation}
+By \cref{lem:infl}, $I\ge I_0=2\lambda me^{-\lambda}(1-o(1))$. Since $v\ge2$ whenever $v>0$,
+$\log_2\binom nv\le v\log_2(en/2)$, so by \cref{lem:vertex} and~\eqref{eq:entropycount} the vertex term
+$V=\E\log_2\binom nv$ satisfies
+\[
+\frac VI\le\frac{4\lambda s\log_2(en/2)(1+o(1))}{2\lambda m}\le\Bigl(2x+\frac{2s\log_2(es/2)}m\Bigr)(1+o(1))=2x+o(1).
+\]
+
+Consider $A$ from \cref{prop:coding}. Its middle term is small: the map $y\mapsto y\log_2(ec/y)$ increases for $y\le c$,
+$\eps\le\E v$ and $\eps\le\min(1,4\lambda)$, so by \cref{lem:vertex} the term is at most
+$4\lambda\log_2(es\,e^{\lambda\eta/2+o(1)})$, which is $o(I)$ because $I\ge I_0$ and $\log s=o(m)$. Let
+$A_0=h(\eps)+\eps\log_2(eI/\eps)$ be the rest. If $\lambda\ge\frac14$ then $A_0\le2+\log_2(eI)$ and
+$I\ge I_0\to\infty$, so $A_0/I=o(1)$. If $\lambda<\frac14$, then $\eps\le4\lambda<1$ and $h(\eps)\le\eps\log_2(e/\eps)$,
+so $A_0\le\phi(\eps)$ with $\phi(y)=y\log_2(e^2I/y^2)$, which increases for $y\le\sqrt I$; since $I\ge I_0\ge16\lambda^2$,
+$A_0\le\phi(4\lambda)$. The function $I\mapsto\phi(4\lambda)/I$ decreases for $I\ge16\lambda^2/e$, so
+\[
+\frac{A_0}I\le\frac{4\lambda}{I_0}\log_2\frac{e^2I_0}{16\lambda^2}\le\frac{2e^\lambda(1+o(1))}m
+\Bigl(m(1-x)+\log_2\frac{e^2m}8\Bigr)=2e^\lambda(1-x)(1+o(1))+o(1).
+\]
+In both cases $A/I+V/I\le2+2(e^\lambda-1)(1-x)^++o(1)$, and for $\lambda<\frac14$,
+$(e^\lambda-1)(1-x)=(e^\lambda-1)\log_2(1/\lambda)/m\le1/m$. Hence $A/I+V/I\le2+o(1)$.
+
+By \cref{lem:pairsum,lem:infl}, and $s^2/m=2\rho s/(s-1)$,
+\[
+\frac{\E\binom v2}I\le1+\frac{4(\lambda s^2+s^2\eta+s(s-1))(1+o(1))}{2m}\le\bigl(1+4\rho(1+\lambda)\bigr)(1+o(1)).
+\]
+\Cref{prop:coding} now gives the theorem.
+\end{proof}
+
+\section{The clique property}\label{sec:clique}
+
+For $\Gamma=K_k$ we have $s=k$, $m=\binom k2$, $|\K|=\binom nk$ and $\rho=1$, and
+\[
+\eta=\sum_{j=2}^{k-1}t_j,\qquad t_j=\binom kj\binom{n-k}{k-j}2^{-(m-\binom j2)},
+\]
+since a $k$-clique meeting a given one in $j$ vertices shares $\binom j2$ edges with it.
+
+\begin{lemma}\label{lem:range}
+Let $\Lambda>0$. For $n>\Lambda$ the set $\{1\le k\le n:\lambda_{n,k}\le\Lambda\}$ is an interval $\{k_1,\dots,n\}$
+with $k_1=2\log_2n-2\log_2\log_2n+O(1)$. Moreover $\eta_{n,k}\le\eta^*(n)$ for all $k$ in this interval, where
+$\eta^*(n)\to0$.
+\end{lemma}
+
+\begin{proof}
+The ratio $\lambda_{n,k+1}/\lambda_{n,k}=\frac{n-k}{k+1}2^{-k}$ decreases in $k$, so $\lambda_{n,k}$ increases and then
+decreases in $k$, and $\lambda_{n,1}=n>\Lambda$; hence the set is an interval ending at $n$. If $\lambda_{n,k}\le\Lambda$,
+then $(n/k)^k\le\binom nk\le\Lambda2^{k(k-1)/2}$, that is,
+\begin{equation}\label{eq:rangek}
+2^{(k-1)/2}\ge\frac nk\,\Lambda^{-1/k},
+\end{equation}
+which gives $k\ge2\log_2n-2\log_2\log_2n-O(1)$. Conversely $\lambda_{n,k}\le\bigl(e\,n\,2^{-(k-1)/2}/k\bigr)^k$, which is at
+most $\Lambda$ once $2^{(k-1)/2}\ge2en/k$ and $k\ge\log_2(1/\Lambda)$; this holds for
+$k\ge2\log_2n-2\log_2\log_2n+C_\Lambda$.
+
+For $\eta$ split the sum at $j=k/2$. If $j\ge k/2$ write $i=k-j\in[1,k/2]$; then $m-\binom
+j2=i(2k-i-1)/2\ge i(3k/2-1)/2$ and $\binom ki\binom{n-k}i\le(kn)^i$, so $t_{k-i}\le y^i$ with
+$y=\sqrt2\,kn\,2^{-3k/4}$. By~\eqref{eq:rangek}, $y\le2^{-1/4}k^{5/2}\Lambda^{3/(2k)}n^{-1/2}$, and for $k>3\log_2n$
+directly $y\le\sqrt2\,k\,n^{-5/4}$; in both cases $y\to0$ uniformly. If $2\le j\le k/2$, then
+$\binom kj\binom{n-k}{k-j}/\binom nk\le\binom kj\bigl(k/(n-k+1)\bigr)^j$, so
+$t_j\le\lambda\bigl(k^22^{(j-1)/2}/(n-k+1)\bigr)^j/j!$. For $k\le3\log_2n$ this is at most $\Lambda z^j$ with
+$z=2k^2n^{-1/4}\to0$. For $k>3\log_2n$ use instead $\binom kj\le2^k$, $\binom{n-k}{k-j}\le n^{k-j}$ and
+$m-\binom j2=(k-j)(k+j-1)/2\ge(k-j)(k+1)/2$: then $t_j\le2^k(n2^{-(k+1)/2})^{k-j}\le(2n^{-1/4})^k$. Altogether
+$\eta\le y/(1-y)+2\Lambda z^2+k(2n^{-1/4})^k\to0$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:main}]
+By \cref{lem:range}, the $k$ with $\lambda_{n,k}\le\Lambda$ satisfy $k\to\infty$ and $\eta\to0$ uniformly. For
+$k\le n/\log_2n$ the proof of \cref{thm:copies} applies uniformly and gives the bound with $\rho=1$.
+
+Let $k>n/\log_2n$. Then $\lambda\le2^n2^{-k(k-1)/2}$, so $\lambda n\to0$. By \cref{lem:touch} every vertex is touched
+with probability at most $4\lambda k/n$, so $\E v\le4\lambda k$, and $V\le\E v\log_2(en/2)$ gives
+$V/I\le4\log_2(en/2)/(k-1)\,(1+o(1))\to0$. The estimate of $A/I$ in the proof of \cref{thm:copies} used only
+$\eps\le4\lambda$, $\E v=O(\lambda k)$ and $I\ge I_0$, so $A/I\le2+o(1)$. Since $\lambda n\to0$,
+\cref{lem:pairsum,lem:infl} give $\E\binom v2/I\le5+o(1)$. Hence $H/I\le2+\log_2(5e)+o(1)$, which is at most the bound
+claimed.
+\end{proof}
+
+\section{Local properties}\label{sec:local}
+
+The proof of \cref{thm:copies} uses the pattern only through $\lambda$, the overlap $\eta$, and the lower bound
+$I\ge2\lambda me^{-\lambda}(1-o(1))$, where $2m$ is the total influence of a copy divided by its probability. Here
+the copies are replaced by an arbitrary increasing property of the graph induced on a $k$-set. The role of $2m$ is
+taken by the relative influence of that property, which the edge-isoperimetric inequality bounds from below, and the
+probabilities of $\{f=0\}$ enter only as ratios, which the Harris inequality controls, so Janson's inequality is not
+needed.
+
+Let $B$ be an increasing property of graphs on $[k]$, invariant under relabelling, whose minimal elements have no
+isolated vertex. For a $k$-set $W\subseteq[n]$ let $B_W$ be the event that the graph induced by $G$ on $W$ lies in
+$B$, and let $f(G)=\mathbf 1[B_W\text{ for some }W]$. Put
+\[
+\pi=\Pr\bigl[G(k,\tfrac12)\in B\bigr],\qquad\lambda=\binom nk\pi,\qquad\iota=\frac{I(B)}\pi,
+\]
+where $I(B)$ is the total influence of $B$ as a function of the $\binom k2$ edges. For $2\le j\le k-1$ let $\pi_j$ be
+the conditional probability of $B$ given that all edges inside a fixed $j$-subset of $[k]$ are present, and
+\[
+\eta=\sum_{j=2}^{k-1}\binom kj\binom{n-k}{k-j}\pi_j .
+\]
+For $B=\{K_k\}$ we have $\pi=2^{-m}$, $\pi_j=2^{-(m-\binom j2)}$, $\iota=2m$, and $\eta$ is that of
+\cref{sec:clique}. By the edge-isoperimetric inequality of the cube, $I(B)\ge2\pi\log_2(1/\pi)$ for $\pi\le\frac12$, so
+\begin{equation}\label{eq:iota}
+\iota\ge2\log_2\frac1\pi=2\log_2\frac{\binom nk}{\lambda},
+\end{equation}
+with equality for $B=\{K_k\}$, because a subcube attains the edge-isoperimetric inequality.
+
+\begin{theorem}\label{thm:local}
+Let $B_n$ be properties as above, on $k_n$ vertices, with $\lambda_n\le\Lambda$, $\eta_n\to0$ and
+$k_n\log k_n=o(\log(1/\pi_n))$. Then
+\[
+H(f_n)\le\Bigl(2+\log_2\Bigl(e\Bigl(1+\frac{4(1+\lambda_n)k_n^2}{\iota_n}\Bigr)\Bigr)+o(1)\Bigr)I(f_n).
+\]
+\end{theorem}
+
+By~\eqref{eq:iota}, $4k^2/\iota\le2k^2/\log_2(1/\pi)$, so the constant is bounded when $\log_2(1/\pi)$ is of order
+$k^2$. Since $\log_2(1/\pi)=\log_2\binom nk-\log_2\lambda\ge k\log_2(n/k)-\log_2\Lambda$, the bound is at most
+$2+\log_2\bigl(e(1+2(1+\lambda)k/\log_2(n/k))\bigr)+o(1)$ when $\log k=o(\log n)$. The clique property is the extremal
+case: by~\eqref{eq:iota}, at the same $n$, $k$ and $\lambda$ every other $B$ has a larger $\iota$ and a smaller bound.
+For $B=\{K_k\}$ we have $\iota=2m$, $\log_2(1/\pi)=m$ and $\eta\to0$ by \cref{lem:range}, and \cref{thm:local} gives the
+bound of \cref{thm:main} again, with a proof that does not use Janson's inequality. Since $B$ contains the complete
+graph, $\lambda\ge\lambda_{n,k}$, so $k\ge k_1(n)=2\log_2n-O(\log\log n)$ by \cref{lem:range}.
+
+\begin{proof}
+Drop the index $n$, write $q=\Pr[f=0]$ and $L=\log_2(1/\pi)=\log_2\bigl(\binom nk/\lambda\bigr)$, and let $\theta$
+stand for a nonnegative quantity that tends to $0$, not the same at each occurrence. Since $\lambda\ge\lambda_{n,k}$,
+\cref{lem:range} gives $k\to\infty$, so $L\to\infty$ and $k\log k=o(L)$. Moreover $\lambda k/n\to0$ and
+$\lambda k^4/n^2\to0$. This is clear if $k\le n^{1/3}$. Otherwise $\log_2\binom nk\le k\log_2(en/k)\le
+k(2\log_2k+\log_2e)=o(L)$, so $\log_2(1/\lambda)=L-\log_2\binom nk\ge L/2$, while $L/\log_2n\to\infty$.
+
+\emph{Ratios.} For a set $U$ of at most two vertices, $\{f=0\}$ is the intersection of $\{f(G-U)=0\}$ with the event
+that $B_W$ fails for every $W$ meeting $U$. Both events are decreasing, so by the Harris inequality, applied twice,
+\begin{equation}\label{eq:ratio}
+\Pr[f(G-U)=0]\le\frac q{(1-\pi)^{|U|\binom{n-1}{k-1}}}\le q\exp\Bigl(\frac{|U|\lambda k}{n(1-\pi)}\Bigr)=q(1+\theta).
+\end{equation}
+Here we used that $f(G-U)=0$ is the event that $B_W$ fails for every $W$ disjoint from $U$, because a minimal
+element of $B$ has no isolated vertex. For the same reason, the minterms of $f$ that touch a vertex $u$ lie in the
+events $B_W$ with $W\ni u$.
+
+\emph{Influence.} Fix an edge $e$ and a $k$-set $W\ni e$. Let $P_W$ be the event that $e$ is pivotal for $B_W$,
+which depends only on the edges inside $W$ other than $e$, and let $D$ be the event that $f(G-e)=0$. The edge $e$ is
+pivotal for $f$ exactly on $D\cap\bigcup_{W\ni e}P_W$. Condition on a configuration $\xi$ of the edges inside $W$ in
+which $P_W$ holds. The event $D$ is the intersection of the events $\neg B_{W'}$ over the $k$-sets $W'\ne W$ with
+$|W\cap W'|\ge2$ (the near sets) and of the event $D_{\mathrm{far}}$ that $B_{W'}$ fails for every $W'$ with
+$|W\cap W'|\le1$, which does not depend on $\xi$. All these are decreasing in the edges outside $W$, and
+$\Pr[B_{W'}\mid\xi]\le\pi_{|W\cap W'|}$ by monotonicity. Hence, by the Harris inequality and since every
+$\pi_j\le\eta\le\frac12$ for large $n$,
+\[
+\Pr[P_W\cap D]\ge\Pr[P_W]\,e^{-2\eta}\Pr[D_{\mathrm{far}}]\ge\Pr[P_W]\,e^{-2\eta}q .
+\]
+For $W'\ni e$ with $W'\ne W$, in the same way $\Pr[P_W\cap P_{W'}\cap D]\le\Pr[P_W]\,\pi_{|W\cap W'|}\Pr[D_{\mathrm{far}}]$.
+The expected number of near sets $W'$ with $B_{W'}$ is at most $\lambda\binom k2^2/\binom n2=\theta$, so
+$q\ge\Pr[D_{\mathrm{far}}](1-\pi-\theta)$ by the Harris inequality and the union bound, and
+$\Pr[D_{\mathrm{far}}]\le q(1+\theta)$. By the Bonferroni inequality and summation over $e$ and $W$,
+\begin{equation}\label{eq:inflocal}
+I(f)\ge q\binom nkI(B)\Bigl(e^{-2\eta}-\frac\eta2(1+\theta)\Bigr)=q\lambda\iota(1-\theta).
+\end{equation}
+
+\emph{Vertices and pairs.} By \cref{lem:touch} and~\eqref{eq:ratio}, every vertex is touched with probability at
+most $4q(1+\theta)\lambda k/n$, so $\E v\le4q\lambda k(1+\theta)$. By \cref{lem:pairs} and~\eqref{eq:ratio}, and by
+the counting in the proof of \cref{lem:pairsum}, with $\Pr[B_W\cap B_{W'}]\le\pi\,\pi_{|W\cap W'|}$ when
+$|W\cap W'|\ge2$,
+\[
+\E\binom v2\le I+4q(1+\theta)\bigl(\lambda^2k^2+\lambda k^2\eta+\lambda k(k-1)\bigr).
+\]
+With~\eqref{eq:inflocal} this gives $\E\binom v2/I\le\bigl(1+4(1+\lambda)k^2/\iota\bigr)(1+\theta)$.
+
+\emph{The terms $A$ and $V$.} As in the proof of \cref{thm:copies}, $V\le\E v\log_2(en/2)$. Since
+$k\log_2(en/2)=k\log_2(n/k)+k\log_2(ek/2)\le L+\log_2\lambda+k\log_2(ek/2)$, \eqref{eq:inflocal}
+and~\eqref{eq:iota} give
+\[
+\frac VI\le\frac{4k\log_2(en/2)}\iota(1+\theta)\le\frac{2\bigl(L+\log_2\lambda+k\log_2(ek/2)\bigr)}L(1+\theta).
+\]
+The middle term of $A$ is at most $\E v\log_2e$, since $y\log_2(ec/y)\le c\log_2e$, and this is $O(kI/\iota)=o(I)$. If
+$\lambda\ge\frac14$, then $q\ge(1-\pi)^{\binom nk}\ge e^{-2\Lambda}$ by the Harris inequality, so
+$I\ge e^{-2\Lambda}\iota/5\to\infty$ and $A_0/I=o(1)$, while $V/I\le2+\theta$ because $\log_2\lambda\le\log_2\Lambda$
+and $k\log_2(ek/2)=o(L)$. If $\lambda<\frac14$, then $q\ge1-\lambda$,
+and as in the proof of \cref{thm:copies}
+\[
+\frac{A_0}I\le\frac{4\lambda}{I}\log_2\frac{e^2I}{16\lambda^2}\le\frac{4\log_2(1/\lambda)}{\iota}(1+\theta)+\theta ,
+\]
+so that
+\[
+\frac{A_0+V}I\le\frac{2\bigl(\log_2(1/\lambda)+L+\log_2\lambda+k\log_2(ek/2)\bigr)}L(1+\theta)+\theta=2+\theta .
+\]
+\Cref{prop:coding} now gives the theorem.
+\end{proof}
+
+For $t\ge0$ call a set $W$ of vertices \emph{$t$-defective} if every vertex of $W$ is adjacent to all but at most $t$
+of the other vertices of $W$. For $t=0$ these are the cliques; in network analysis they are the $(t+1)$-plexes
+of~\cite{SF78}. Let $f^{(t)}_{n,k}(G)$ be the indicator that $G$ has a $t$-defective set of $k$ vertices, and
+$\lambda^{(t)}_{n,k}$ the expected number of such sets.
+
+\begin{corollary}\label{cor:plex}
+Let $\Lambda>0$ and let $t_n\log\log n=o(\log n)$. Uniformly over $0\le t\le t_n$ and over the $k$ with
+$\lambda^{(t)}_{n,k}\le\Lambda$,
+\[
+H\bigl(f^{(t)}_{n,k}\bigr)\le\Bigl(2+\log_2\bigl(e(5+4\lambda^{(t)}_{n,k})\bigr)+o(1)\Bigr)I\bigl(f^{(t)}_{n,k}\bigr).
+\]
+\end{corollary}
+
+\begin{proof}
+Here $B$ consists of the graphs on $[k]$ whose complement has maximum degree at most $t$. Since
+$\lambda^{(t)}_{n,k}\ge\lambda_{n,k}$, \cref{lem:range} gives $k\ge k_1(n)$, so every graph in $B$ has minimum degree
+$k-1-t\ge1$, and $t\log k=o(k)$. A graph on $[k]$ of maximum degree at most $t$ is determined by the neighbourhoods
+of its vertices, so there are at most $N\le(1+k^t)^k$ of them, and $\pi=2^{-m}N$. Hence
+$\log_2(1/\pi)\ge m-k\log_2(1+k^t)=m(1-\theta)$, and by~\eqref{eq:iota}, $4(1+\lambda)k^2/\iota\le4(1+\lambda)(1+\theta)$.
+It remains to show that $\eta\to0$ uniformly; then \cref{thm:local} gives the bound.
+
+Write $t_j=\binom kj\binom{n-k}{k-j}\pi_j$. For $j\le k/2$ we have $\pi_j\le2^{\binom j2}\pi$, because
+$\pi\ge2^{-\binom j2}\pi_j$. So if $k\le3\log_2n$, the bound for $j\le k/2$ in the proof of \cref{lem:range} holds with
+$\lambda^{(t)}_{n,k}\le\Lambda$ in place of $\lambda$. If $k>3\log_2n$, then $\pi_j\le2^{-(m-\binom j2)}N$ and
+$m-\binom j2\ge3k^2/8-k/2$ give $t_j\le2^kn^k2^{-3k^2/8+k/2}(1+k^t)^k=2^{-\Omega(k^2)}$. For $j=k-i$ with $1\le i\le k/2$,
+a graph of maximum degree at most $t$ with no edge inside a fixed $(k-i)$-set is determined by the neighbourhoods of the
+other $i$ vertices, so $\pi_{k-i}\le2^{-i(2k-i-1)/2}(1+k^t)^i$ and
+\[
+t_{k-i}\le\bigl(kn(1+k^t)2^{-(3k-2)/4}\bigr)^i.
+\]
+If $k\le3\log_2n$, then~\eqref{eq:rangek} holds, because $\lambda_{n,k}\le\lambda^{(t)}_{n,k}\le\Lambda$, and it
+bounds the base by
+\[
+2(1+k^t)\,k^{5/2}\Lambda^{3/(2k)}n^{-1/2},
+\]
+which tends to $0$ because $t\log k=o(\log n)$. If $k>3\log_2n$, the base is at most $8k^{t+1}n\,2^{-3k/4}$,
+which tends to $0$. Hence $\eta\to0$ uniformly.
+\end{proof}
+
+\section{Below the clique number}\label{sec:below}
+
+For $k$ below the clique number, $\lambda\to\infty$ and $f_{n,k}$ is close to $1$. The bound of \cref{thm:copies} then
+grows like $\log_2\lambda$, and its Janson estimates fail once $\lambda\eta$ is large. A bound that grows only like
+$\log k$ follows from the per-coordinate estimate of~\cite{Shm26b}, the symmetry of graph properties, the
+edge-isoperimetric inequality and Janson's inequality. Let $\Psi(r)=\log_2\bigl(e(r+2\sqrt r+2)\bigr)$.
+
+\begin{proposition}\label{prop:downset}
+Let $f$ be a monotone graph property on $n$ vertices, let $N=\binom n2$ and $\mu=\min(\Pr[f=0],\Pr[f=1])>0$. Then
+\[
+H(f)\le\Bigl(4.6355+\Psi\Bigl(\frac{2N}{\log_2(1/\mu)}-2\Bigr)\Bigr)\,I(f).
+\]
+\end{proposition}
+
+\begin{proof}
+By~\cite[Corollary~1.4]{Shm26b}, every monotone $f$ satisfies
+\[
+H(f)\le\sum_e\Inf_e(f)\Bigl(4.6355+\Psi\Bigl(\frac{4\mu}{\Inf_e(f)}-2\Bigr)\Bigr).
+\]
+For a graph property every $\Inf_e(f)$ equals
+$I(f)/N$. By the edge-isoperimetric inequality of the cube, applied to the smaller of the sets $\{f=0\}$ and
+$\{f=1\}$, $I(f)\ge2\mu\log_2(1/\mu)$. Hence $4\mu N/I(f)\le2N/\log_2(1/\mu)$, and $\Psi$ is increasing.
+\end{proof}
+
+\begin{corollary}\label{cor:below}
+For all $3\le k\le n$,
+\[
+\frac{H(f_{n,k})}{I(f_{n,k})}\le4.6355+\Psi\Bigl(4\ln2\cdot\frac{N\max(1,\eta)}{\lambda}-2\Bigr).
+\]
+For every $\delta>0$, uniformly over $3\le k\le(2-\delta)\log_2n$,
+\[
+H(f_{n,k})\le\Bigl(4.6355+\Psi\bigl(8\ln2\,\tbinom k2^2\bigr)+o(1)\Bigr)I(f_{n,k})
+\le\Bigl(8.96+2\log_2\tbinom k2+o(1)\Bigr)I(f_{n,k}).
+\]
+\end{corollary}
+
+\begin{proof}
+Janson's inequality gives $\Pr[f=0]\le\exp(-\lambda+\lambda\eta/2)$, and $\Pr[f=0]\le\exp(-\lambda/(2\eta))$ when
+$\eta\ge1$~\cite[Theorem~8.1.2]{AS16}. In both cases $\ln(1/\mu)\ge\lambda/(2\max(1,\eta))$, and \cref{prop:downset}
+gives the first bound.
+
+For the second, write $t_j=\lambda\rho_j2^{\binom j2}$ with $\rho_j=\binom kj\binom{n-k}{k-j}/\binom nk$. As in the proof
+of \cref{lem:range}, $\rho_j\le\binom kj\bigl(k/(n-k+1)\bigr)^j$, while
+$\rho_2\ge\binom k2\frac{k(k-1)}{n(n-1)}\bigl(1-O(k^2/n)\bigr)$. Since $\binom j2=1+(j-2)(j+1)/2$, this gives, for
+$3\le j\le k-1$,
+\[
+\frac{t_j}{t_2}\le\frac{2(1+o(1))}{j!}\Bigl(\frac k{k-1}\Bigr)^2\Bigl(\frac{k^2\,2^{(j+1)/2}}{n-k+1}\Bigr)^{j-2}\le\frac5{j!}\,z^{j-2},
+\qquad z=\frac{k^2\,2^{k/2}}{n-k+1}\le\frac{\sqrt2\,k^2}{n^{\delta/2}}(1+o(1)),
+\]
+because $2^{(k-1)/2}\le n^{1-\delta/2}$; for $k=3$ there is no such $j$. So $\eta=(1+o(1))t_2$. Moreover $t_2\to\infty$: for $k>8/\delta$,
+$\lambda\ge(n/k)^k2^{-k(k-1)/2}\ge(n^{\delta/2}/k)^k\ge n^{\delta k/4}$ and $t_2\ge\lambda k^2(k-1)^2/(2n^2)$, while for
+bounded $k$ the expected number $t_2$ is of order $n^{k-2}$. Hence $\max(1,\eta)=\eta$ for large $n$ and
+\[
+\frac{N\max(1,\eta)}\lambda=(1+o(1))\,2N\rho_2=(1+o(1))\,2\binom k2^2 .
+\]
+Finally
+$\Psi(8\ln2\,x^2)=\log_2(8e\ln2)+2\log_2x+\log_2\bigl(1+0.85/x+0.37/x^2\bigr)\le3.915+2\log_2x+0.405$ for
+$x=\binom k2\ge3$.
+\end{proof}
+
+The loss $2\log_2\binom k2\approx4\log_2k$ comes from the ratio $N/\log_2(1/\mu)$, that is, from Janson's lower-tail
+exponent $\lambda/(2\eta)$, which is of order $n^2/k^4$. The true value of $\log_2(1/\Pr[f=0])$ is at most
+$(1+o(1))N/(k-1)$, because a $(k-1)$-partite graph has no $K_k$, so this route cannot lose less than
+$\log_2(k-1)$. For fixed $k$ the width bound $\binom k2+8.1$ of~\cite{Shm26b} is better when $k\le4$ and worse from
+$k=5$ on.
+
+The first bound of \cref{cor:below} covers the range between $(2-\delta)\log_2n$ and the clique number as well, with
+a constant that grows as $\lambda$ decreases. Together with \cref{rem:numerics} it gives, for each of
+$n=2^{12},2^{16},2^{20},2^{24},2^{32},2^{40}$ and every $k$ from $3$ to the first $k_1$ with $\lambda_{n,k_1}\le11$, a
+bound for $H/I$. Taking the smallest of the bound of \cref{cor:below}, the computed bound $B(n,k)$ of \cref{rem:numerics}
+and the width bound, the largest value over these $k$ is $23.2$, $25.0$, $31.7$, $33.7$, $38.4$ and $34.0$ respectively. It is
+attained at $k_1-1$ or $k_1-2$. There $\lambda$ lies between $\Lambda$ and a small power of $n$: the factor
+$e^{\lambda\eta/2}$ in~\eqref{eq:janson} is large, so the estimates of \cref{sec:copies} are weak, and
+\cref{cor:below} loses about
+$\log_2(N/\lambda)$. For $6\le k\le k_1-3$ the bound is within $0.08$ of $8.55+2\log_2\binom k2$, its limit when
+$t_2$ dominates $\eta$ and $k\to\infty$, and for $3\le k\le5$ within $0.35$.
+
+\begin{remark}[The pieces of the spectral sample]\label{rem:super}
+The following heuristic suggests that for $\lambda\to\infty$ the loss is in the coding and not in the estimates. As
+long as copies rarely overlap, $1-f$ is close to a product of the factors $1-\mathbf 1[K\subseteq G]$. For a product
+of functions of disjoint sets of variables the normalized spectral distribution is the product of the factors'
+distributions, and for one factor it is the empty set with probability $1-2^{-m}$ and otherwise a uniformly random
+nonempty set of edges of $K$. The spectral sample of $f$, given that it is nonempty, would then be a union of a
+Poisson($\lambda$) number of such pieces, with $\E\binom v2$ about $\lambda^2k^2/2$ and $\E|S|$ about $\lambda k^2/4$
+on that event. Coding $S$ inside $V(S)$ as an arbitrary set of pairs then pays about $\log_2\lambda$ bits per edge,
+where naming the piece of each vertex would cost $\log_2\lambda$ bits per vertex. A proof along these lines needs a
+Fourier-side handle on the pieces, and none is known to us. For fixed $k$ and $n\to\infty$, almost every $K_k$-free
+graph is $(k-1)$-partite~\cite{KPR87}; heuristically the spectral sample of $1-f$ is then a random set of pairs inside
+the parts of a random partition into $k-1$ parts, which covers all vertices and has $\E\binom v2$ of order $kI$.
+\end{remark}
+
+\section{Biased measures}\label{sec:biased}
+
+Let $0<p\le\frac12$ and let $\mu_p$ be the product measure on $\bits^N$ under which each coordinate equals $1$ with
+probability $p$; for $N=\binom n2$ it is the law of $G(n,p)$. Put $\sigma=\sqrt{p(1-p)}$ and
+$\phi_T(x)=\prod_{i\in T}(x_i-p)/\sigma$. These functions form an orthonormal basis of $L^2(\mu_p)$, and
+$\widehat F(T)=\E_{\mu_p}[F\phi_T]$, $P(T)=\widehat F(T)^2$ define a spectral sample $S$, with entropy $H_p(f)$ and
+mean size $I^{\mathrm s}_p(f)=\E|S|$. Conditionally on the other coordinates, $F$ has variance $4p(1-p)$ in a
+coordinate that is pivotal and $0$ in one that is not, so $\Pr[i\in S]=4p(1-p)\Pr_p[i\text{ is pivotal}]$ and
+\[
+I^{\mathrm s}_p(f)=4p(1-p)\,I_p(f),\qquad I_p(f)=\sum_i\Pr_p\bigl[f(x)\ne f(x\oplus e_i)\bigr].
+\]
+Keller, Mossel and Schlank~\cite[Conjecture~1.6]{KMS12} conjectured that $H_p(f)\le c\,p\log(1/p)\,I_p(f)$ for every
+$f$; the ratio of the two sides does not depend on the base of the logarithms. They showed that this follows from the conjecture for the uniform measure, that the property of
+containing $K_r$, for fixed $r$ at its threshold, makes the factor $p\log(1/p)$ necessary, and that the bound holds
+with $\log N$ in place of $\log(1/p)$, which for the clique property settles the case of bounded $k$, with a
+constant depending on $k$.
+
+Sections~2--4 carry over to $\mu_p$, with $I^{\mathrm s}_p$ in place of $I$. \Cref{prop:coding} concerns an
+arbitrary random set of edges. In \cref{lem:touch,lem:pairs} the identities
+$\Pr[S\text{ touches }W]=\E(F-\E_AF)^2$ and $\Pr[S\text{ meets $A$ and $B$}]=\|(1-\E_A)(1-\E_B)F\|_2^2$ hold for any
+product measure, with $\E_A$ the average over the coordinates in $A$ under $\mu_p$, and so does the Harris
+inequality. In \cref{sec:copies} put
+\[
+\lambda=|\K|\,p^m,\qquad \eta=\sum_{L\in\K\setminus\{K\}:\ E(L)\cap E(K)\neq\emptyset}p^{|E(L)\setminus E(K)|}.
+\]
+Janson's inequality~\eqref{eq:janson} holds under $\mu_p$, and so do \cref{lem:vertex,lem:pairsum}, with the same
+proofs. In the proof of \cref{lem:infl} now $\sum_e\mu_e=m|\K|p^{m-1}=\lambda m/p$, the conditional probabilities are
+$p_L=p^{|E(L)\setminus E(K)|}\le p\le\frac12$, and the conclusion becomes
+\begin{equation}\label{eq:inflp}
+4(1-p)\lambda m\Bigl[\exp\Bigl(-\frac\lambda{1-p^m}-2\eta\Bigr)-\frac\eta2\Bigr]\le I^{\mathrm s}_p(f)
+\le4(1-p)\lambda m\exp\Bigl(-\lambda+\frac{\lambda m}{\binom n2}+\frac{\lambda\eta}2\Bigr).
+\end{equation}
+
+\begin{theorem}\label{thm:copiesp}
+Let $\Gamma_n$ satisfy the hypotheses of \cref{thm:copies}, where now $0<p_n\le\frac12$ and $\lambda_n$, $\eta_n$ are
+computed under $\mu_{p_n}$. Then
+\[
+H_{p_n}(f_n)\le\Bigl((1+o(1))\,\frac{\log_2(1/p_n)}{1-p_n}
++\log_2\Bigl(e\Bigl(1+\frac{2\rho_n(1+\lambda_n)}{1-p_n}\Bigr)\Bigr)+o(1)\Bigr)\,I^{\mathrm s}_{p_n}(f_n),
+\]
+where both $o(1)$ terms depend only on $\Lambda$ and on upper bounds for $1/s_n$, $s_n/n$, $(s_n\log s_n)/m_n$ and
+$\eta_n$.
+\end{theorem}
+
+For $p_n=\frac12$ this is \cref{thm:copies}.
+
+\begin{proof}
+We follow the proof of \cref{thm:copies}. Put $\ell=\log_2(1/p)$ and $x=\log_2|\K|/m$, so that now
+$\log_2(1/\lambda)=m(\ell-x)$; \eqref{eq:entropycount} is unchanged. By~\eqref{eq:inflp}, $I\ge I_0=4(1-p)\lambda mE$
+with $E=e^{-\lambda}(1+O(\eta+2^{-m}))$. Let $\theta$ denote a nonnegative quantity of order $s/n+\eta+2^{-m}$, not the
+same at each occurrence. Then
+\[
+\frac VI\le\frac{s\log_2(en/2)}{(1-p)m}(1+\theta)\le\frac{x+s\log_2(es/2)/m}{1-p}\,(1+\theta).
+\]
+The middle term of $A$ is again at most $4\lambda\log_2(es\,e^{\lambda\eta/2+o(1)})=o(I)$. If $\lambda\ge\frac14$ then
+$I\ge I_0\ge(1-p)me^{-\Lambda}(1-o(1))\to\infty$ and $A_0/I=o(1)$. If $\lambda<\frac14$, the argument used for
+\cref{thm:copies} gives
+\[
+\frac{A_0}I\le\frac{4\lambda}{I_0}\log_2\frac{e^2I_0}{16\lambda^2}
+=\frac{m(\ell-x)+\log_2\bigl(e^2(1-p)mE/4\bigr)}{(1-p)mE}\le\frac{e^\lambda(\ell-x)}{1-p}(1+\theta)+o(1).
+\]
+In the first case $x\le\ell+\log_2\Lambda/m$. In the second $x\ge0$, $\ell-x\ge0$ and
+$(e^\lambda-1)(\ell-x)=(e^\lambda-1)\log_2(1/\lambda)/m\le1/m$. In both cases
+$A/I+V/I\le\ell(1+\theta)/(1-p)+o(1)$. Finally, \cref{lem:pairsum} and~\eqref{eq:inflp} give
+$\E\binom v2/I\le\bigl(1+2\rho(1+\lambda)/(1-p)\bigr)(1+o(1))$, and \cref{prop:coding} completes the proof.
+\end{proof}
+
+For cliques, $\lambda_{n,k}(p)=\binom nkp^m$ and $\eta_{n,k}(p)=\sum_{j=2}^{k-1}t_j$ with
+$t_j=\binom kj\binom{n-k}{k-j}p^{m-\binom j2}$.
+
+\begin{lemma}\label{lem:rangep}
+For every $\Lambda>0$ there is $\eta^\dagger(n)\to0$ such that $\eta_{n,k}(p)\le\eta^\dagger(n)$ whenever $3\le k\le n$,
+$0<p\le\frac12$ and $\lambda_{n,k}(p)\le\Lambda$.
+\end{lemma}
+
+\begin{proof}
+Both $\lambda_{n,k}(p)$ and every $t_j$ increase with $p$. If $\lambda_{n,k}(\frac12)\le\Lambda$, then
+$\eta_{n,k}(p)\le\eta_{n,k}(\frac12)\le\eta^*(n)$ by \cref{lem:range}. Otherwise $k<k_1(n)=O(\log n)$ by
+\cref{lem:range}, and it suffices to take $p=p_k$, where $\lambda_{n,k}(p_k)=\Lambda$. From
+$(n/k)^k\le\binom nk\le(en/k)^k$,
+\[
+\Lambda^{1/k}\,\frac k{en}\le p_k^{(k-1)/2}\le\Lambda^{1/k}\,\frac kn .
+\]
+For $j=k-i$ with $1\le i\le k/2$, the bound in the proof of \cref{lem:range} gives
+$t_{k-i}\le\bigl(kn\,p_k^{(3k-2)/4}\bigr)^i\le y^i$ with $y=\Lambda^{3/(2k)}k^{5/2}n^{-1/2}$, since
+$(3k-2)/(2k-2)\ge\frac32$. For $2\le j\le k/2$ we have $j(j-1)/(k-1)\le j/2$, hence
+$p_k^{-\binom j2}\le\bigl(en/(\Lambda^{1/k}k)\bigr)^{j/2}$, and
+\[
+t_j=\lambda\,\frac{\binom kj\binom{n-k}{k-j}}{\binom nk}\,p_k^{-\binom j2}
+\le\Lambda\binom kj\Bigl(\frac k{n-k+1}\Bigr)^jp_k^{-\binom j2}\le\frac\Lambda{j!}\,z^j,\qquad
+z=\frac{k^{3/2}(en)^{1/2}}{\Lambda^{1/(2k)}(n-k+1)}.
+\]
+Since $k=O(\log n)$, both $y$ and $z$ tend to $0$, and $\eta_{n,k}(p_k)\le y/(1-y)+\Lambda z^2$ once $z\le1$.
+\end{proof}
+
+\begin{theorem}\label{thm:biased}
+For every $\Lambda>0$ and $\delta>0$ there are $k_0$ and $n_0$ such that
+\[
+H_p(f_{n,k})\le\Bigl((1+\delta)\,\frac{\log_2(1/p)}{1-p}+\log_2\Bigl(e\Bigl(1+\frac{2(1+\lambda)}{1-p}\Bigr)\Bigr)
++\delta\Bigr)\,I^{\mathrm s}_p(f_{n,k})
+\]
+for all $n\ge n_0$, $k_0\le k\le n$ and $0<p\le\frac12$ with $\lambda=\binom nkp^{\binom k2}\le\Lambda$. In the
+normalization of~\cite{KMS12},
+\[
+H_p(f_{n,k})\le4\Bigl((1+\delta)\log_2\frac1p+\log_2\bigl(e(3+2\lambda)\bigr)+\delta\Bigr)\,p\,I_p(f_{n,k}).
+\]
+\end{theorem}
+
+\begin{proof}
+By \cref{lem:rangep}, $\eta\to0$ uniformly. For $k\le n/\log_2n$, \cref{thm:copiesp} applies uniformly, with $\rho=1$,
+once $k_0$ and $n_0$ are large. For $k>n/\log_2n$ we have $\lambda\le2^n2^{-m}$, so $\lambda n\to0$, and the argument
+at the end of the proof of \cref{thm:main} applies with~\eqref{eq:inflp}: $V/I\to0$,
+$A/I\le\ell(1+\theta)/(1-p)+o(1)$ and $\E\binom v2/I\le1+2/(1-p)+o(1)$. For the second form multiply by
+$I^{\mathrm s}_p=4p(1-p)I_p$, and note that $(1-p)\log_2\bigl(e(1+c/(1-p))\bigr)$ decreases in $p$, so that it is at most
+$\log_2(e(1+c))$ with $c=2(1+\lambda)$.
+\end{proof}
+
+\begin{corollary}\label{cor:kms}
+For every $\Lambda>0$ there is $C_\Lambda$ such that $H_p(f_{n,k})\le C_\Lambda\,p\log_2(1/p)\,I_p(f_{n,k})$ for all
+$3\le k\le n$ and all $0<p\le\frac12$ with $\lambda_{n,k}(p)\le\Lambda$. Moreover, as $p\to0$ and $k\to\infty$ with
+$\lambda\le\Lambda$,
+\[
+\limsup\frac{H_p(f_{n,k})}{p\log_2(1/p)\,I_p(f_{n,k})}\le4,
+\]
+and $4$ cannot be replaced by a smaller constant in the conjecture of~\cite{KMS12}: for $f(x)=x_1$ the ratio equals
+$h(4p(1-p))/(p\log_2(1/p))$, which tends to $4$.
+\end{corollary}
+
+\begin{proof}
+Take $\delta=1$ in \cref{thm:biased}. Since $\log_2(1/p)\ge1$, the ratio is at most $4(3+\log_2(e(3+2\Lambda)))$ when
+$n\ge n_0$ and $k\ge k_0$. In the remaining cases $\log_2N=O_\Lambda(\log_2(1/p))$: if $k<k_0$, then
+$p^{(k-1)/2}\le\Lambda^{1/k}k/n$ gives $\log_2(1/p)\ge\log_2n/k_0$ for $n$ large, and otherwise $n$ is bounded and
+$\log_2(1/p)\ge1$. In these cases~\cite[Claim~2.5]{KMS12}, which states $H_p(f)\le c\,p(1-p)\log N\,I_p(f)$ for every $f$
+of $N$ variables, gives the bound. The upper limit follows from \cref{thm:biased} by letting $\delta\to0$.
+\end{proof}
+
+The local properties of \cref{sec:local} behave in the same way. The edge-isoperimetric inequality is replaced by
+the following biased version for increasing sets.
+
+\begin{lemma}\label{lem:isop}
+Let $0<p<1$ and let $A\subseteq\bits^N$ be increasing, with $\mu=\mu_p(A)>0$. Then $p\,I_p(A)\ge\mu\log_p\mu$, where
+$I_p(A)=\sum_i\Pr_p[\mathbf 1_A(x)\ne\mathbf 1_A(x\oplus e_i)]$, with equality when $A=\{x:x_i=1\text{ for }i\in T\}$.
+\end{lemma}
+
+\begin{proof}
+Induction on $N$. Split $A$ by the last coordinate into increasing sets $A_0\subseteq A_1\subseteq\bits^{N-1}$ with
+measures $a\le b$. Then $\mu=(1-p)a+pb$ and $I_p(A)=(1-p)I_p(A_0)+pI_p(A_1)+(b-a)$. With $\varphi(x)=x\log_px$ and the
+induction hypothesis it suffices to show that
+$D(a,b)=(1-p)\varphi(a)+p\varphi(b)+p(b-a)-\varphi((1-p)a+pb)$ is nonnegative for $0\le a\le b\le1$. This holds because
+$D(a,a)=0$ and $\partial D/\partial b=p\log_p\bigl(pb/((1-p)a+pb)\bigr)\ge0$.
+\end{proof}
+
+\begin{remark}[Local properties under $\mu_p$]\label{rem:localp}
+Let $0<p_n\le\frac12$, let $B_n$ be as in \cref{sec:local} with $\pi_n$, $\lambda_n$, $\eta_n$ computed under
+$\mu_{p_n}$, and put $\iota_n=I_{p_n}(B_n)/\pi_n$. Suppose that $\lambda_n\le\Lambda$, $\eta_n\to0$ and
+$k_n\log k_n+k_n\log_2(1/p_n)=o(\log_2(1/\pi_n))$. Then
+\[
+H_{p_n}(f_n)\le\Bigl((1+o(1))\frac{\log_2(1/p_n)}{1-p_n}
++\log_2\Bigl(e\Bigl(1+\frac{(1+\lambda_n)k_n^2}{p_n(1-p_n)\iota_n}\Bigr)\Bigr)+o(1)\Bigr)I^{\mathrm s}_{p_n}(f_n).
+\]
+The proof is that of \cref{thm:local}. The influence bound~\eqref{eq:inflocal} becomes
+$I^{\mathrm s}_p\ge4p(1-p)q\lambda\iota(1-\theta)$. \Cref{lem:isop} gives $p\,\iota\ge\log_2(1/\pi)/\log_2(1/p)$, which
+turns the estimate for $V/I$ into $V/I^{\mathrm s}_p\le\log_2(1/p)(1+\theta)/(1-p)$. The hypothesis on
+$k\log_2(1/p)$ makes the middle term of $A$ negligible. For $B=\{K_k\}$ we have $p\,\iota=m$, and the bound is that of
+\cref{thm:copiesp}.
+\end{remark}
+
+\begin{remark}[Finite $n$ under $\mu_p$]\label{rem:numericsp}
+The bound $B(n,k,p)$ for $H_p/I^{\mathrm s}_p$ obtained by evaluating the inequalities of this section exactly, as in
+\cref{rem:numerics}, is shown below, together with the bound of \cref{thm:biased} for $\delta=0$ (``limit'') and with $B$ in the
+normalization of~\cite{KMS12}; at $p=\frac12$ the computation reproduces the values of \cref{rem:numerics}. For
+small $k$ the bound stays above the limit, because the terms of order $(\log k)/k$ in the proof do not vanish. For $n\le6$, every $3\le k\le n$ and
+$p\in\{0.5,0.3,0.1,0.03\}$, the spectral entropy was computed exactly under $\mu_p$ (except for six cases in which
+$\Pr[S\neq\emptyset]$ is below double precision): \cref{lem:touch,lem:pairs} hold with ratios at most $1$ and $0.38$,
+$H_p/I^{\mathrm s}_p$ lies below the right-hand side of \cref{prop:coding}, which lies below $B$, and the ratio
+$H_p/(p\log_2(1/p)I_p)$ lies between $4.02$ and $4.08$ at $p=0.03$ and between $4.45$ and $4.63$ at $p=0.1$.
+\begin{center}
+\begin{tabular}{rrrrrrr}
+\toprule
+$p$ & $n$ & $k$ & $\lambda$ & $B(n,k,p)$ & limit & $4(1-p)B/\log_2(1/p)$\\
+\midrule
+$2^{-2}$ & $2^{20}$ & $18$ & $2.813$ & $7.53$ & $7.59$ & $11.29$\\
+$2^{-4}$ & $2^{24}$ & $12$ & $0.035$ & $7.64$ & $7.39$ & $7.17$\\
+$2^{-8}$ & $2^{20}$ & $6$ & $0.0014$ & $11.83$ & $11.06$ & $5.89$\\
+$2^{-16}$ & $2^{40}$ & $6$ & $0.0014$ & $19.79$ & $19.03$ & $4.95$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{remark}
+
+\section{Remarks}
+
+\begin{remark}[Finite $n$]\label{rem:numerics}
+The inequalities of \cref{sec:copies} can be evaluated exactly for given $n$ and $k$: \cref{prop:coding} with
+\cref{lem:touch,lem:pairs}, Janson's inequality with its second form $e^{-\mu^2/(2\Delta)}$ when $\Delta\ge\mu$, the
+lower bound $\prod_K(1-2^{-m})$ for $\Pr[f=0]$, and the Bonferroni and second-moment lower bounds for $\Pr[e\text{ pivotal}]$.
+The resulting upper bound $B(n,k)$ for $H/I$, computed with $60$ significant digits, is shown below for some $n=2^j$.
+For $n=2^j$ with $12\le j\le37$ it is at most $8.8$ at every $k$ with $2^{-12}\le\lambda\le11$; at the three larger
+values of $\lambda$ in this range it is $9.85$ ($n=2^{22}$, $\lambda=25.9$), $11.0$ ($n=2^{31}$, $\lambda=61.2$) and
+$19.9$ ($n=2^{15}$, $\lambda=30.9$). For $n\le2^{11}$ and $\lambda$ above about $2$ the Janson factor and the lower
+bound for $I$ are too weak, and the bound is large. For $n\le7$ the spectral entropy can be computed exactly: over all
+$2\le k\le n\le7$ the ratio $H/I$ lies between $2.90$ (triangles on $4$ vertices) and $4.35$ (triangles on $7$
+vertices), the right-hand side of \cref{prop:coding} is at most $6.47\,I$, and $B(n,k)$ lies above both in every case.
+Far below the threshold the two small terms trade off as in the proof of \cref{thm:copies}: for
+$n=2^{16},2^{20},2^{30},2^{40}$ and every $k$ with $2^{-3600}\le\lambda\le1$, the computed bounds for $A/I$ and $V/I$
+add up to at most $2.14$, decreasing towards $2$ as $k$ grows, and $B(n,k)$ exceeds $2+\log_2(e(5+4\lambda))$ by at
+most $0.16$.
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$n$ & $k$ & $\lambda$ & $B(n,k)$ & $2+\log_2(e(5+4\lambda))$\\
+\midrule
+$2^{12}$ & $19$ & $1.136$ & $8.47$ & $6.70$\\
+$2^{17}$ & $28$ & $1.036$ & $6.75$ & $6.64$\\
+$2^{24}$ & $41$ & $0.699$ & $6.41$ & $6.41$\\
+$2^{33}$ & $58$ & $1.576$ & $6.93$ & $6.94$\\
+$2^{32}$ & $56$ & $10.18$ & $8.75$ & $8.96$\\
+$2^{36}$ & $64$ & $0.0039$ & $5.79$ & $5.77$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The bound can lie below the limit value because at finite $n$ the vertex term $V/I$ is below its limit $2$; at
+$\lambda=10.18$ it is $1.77$.
+\end{remark}
+
+\begin{remark}[Graph properties]\label{prop:graphprop}
+For a graph property $f$ the spectral distribution is invariant under permutations of the vertices, so conditionally
+on $v$ the set $V(S)$ is uniformly distributed among the $v$-subsets of $[n]$, and
+$H(V(S))=H(v)+\E\log_2\binom nv$ exactly. Here $H(v)\le h(\eps)+\eps\log_2(e\,\E v/\eps)$, $\E v\le2I$ because
+$v\le2|S|$, and $h(\eps)=O(I)$ by the edge-isoperimetric inequality, so $H(v)=O(I)$. Hence a class of graph
+properties satisfies the conjecture if and only if
+\[
+\E\log_2\binom nv=O(I)\qquad\text{and}\qquad H\bigl(S\mid V(S)\bigr)=O(I)
+\]
+on the class. The second condition holds when $\E\binom v2=O(I)$, that is, when the spectral sample is dense in its
+vertex set on average, by the proof of \cref{prop:coding}.
+\end{remark}
+
+\begin{remark}[Hypergraphs]\label{rem:hyper}
+For a Boolean function of the $r$-element subsets of $[n]$, \cref{prop:coding} holds with $V(S)$ the union of the
+$r$-sets in $S$ and $\binom vr$ in place of $\binom v2$, and \cref{lem:touch,lem:infl,lem:vertex} hold with the same
+proofs for copies of an $r$-uniform hypergraph, reading hyperedge for edge. \Cref{lem:pairs} has the following
+$r$-set version, proved in the same way. Let $R=\{u_1,\dots,u_r\}$, let $a_J$ ($\emptyset\ne J\subseteq[r]$) be the
+indicator that $G$ contains a minterm touching $u_i$ exactly for $i\in J$, and $g$ that of a minterm touching none of
+them. Then
+\[
+\Pr[R\subseteq V(S)]\le\Pr[R\in S]+4\Bigl(\sum_{\mathcal J}\bigl(\E\bigl[\textstyle\prod_{J\in\mathcal J}a_J\bigr]\Pr[g=0]\bigr)^{1/2}\Bigr)^2,
+\]
+the sum over the families $\mathcal J$ of nonempty subsets of $[r]$ that cover $[r]$: with $A_i$ the hyperedges
+containing $u_i$ other than $R$, the operator $\prod_i(1-\E_{A_i})$ annihilates every product of the $a_J$ that does
+not cover $[r]$, and Minkowski's inequality over the fibres and the Harris inequality finish as before. For $r=3$ this
+was checked in exact arithmetic on the complete $3$-graphs $K^{(3)}_4$ and $K^{(3)}_5$ with $n\le6$, where the ratio of
+the two sides before the Harris step is at most $0.92$. For the complete $r$-graph at its threshold, the products over
+covers with $t\ge3$ members require a bound on the $t$-th factorial moments of the number of copies present, for
+$t<2^r$. With such a bound the proof of \cref{thm:copies} gives $H\le C_r I$ in the window
+$\Lambda^{-1}\le\lambda\le\Lambda$. For $r=2$ only pairs of copies enter, which is why \cref{thm:main} needs no such
+input.
+\end{remark}
+
+\begin{remark}
+The width and read bounds of~\cite{Shm26a,Shm26b} come from an induction on coordinates, in which one variable is
+restricted at a time and the entropy lost is compared with its influence. Here an edge has influence of order
+$(\log n/n)^2$, and its restriction produces a function that is no longer a clique property. The coding of
+\cref{prop:coding} uses the vertices instead. For a general monotone function the analogue would be a small family of
+sets of variables, playing the role of the vertex stars, that covers the spectral sample economically; for the clique
+property the stars are the natural choice because the minterms are determined by their vertex sets.
+\end{remark}
+
+\section*{Funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the European
+Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation
+as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by
+Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation
+(ISF Grant 4101/25). Computational resources were provided in part by Google Cloud through its education credits
+program (credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus
+Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The theorems, proofs and numerical computations in this paper were produced by the AI system Claude (Anthropic),
+working within the author's math-brain project. The author takes full responsibility for the content of the paper.
+
+\begin{thebibliography}{99}
+
+\bibitem{AS16} N.~Alon and J.~H.~Spencer, \emph{The Probabilistic Method}, 4th ed., Wiley, 2016.
+
+\bibitem{BE76} B.~Bollob\'as and P.~Erd\H os, Cliques in random graphs, \emph{Math. Proc. Cambridge Philos. Soc.} 80
+(1976), 419--427.
+
+\bibitem{BK97} J.~Bourgain and G.~Kalai, Influences of variables and threshold intervals under group symmetries,
+\emph{Geom. Funct. Anal.} 7 (1997), 438--461.
+
+\bibitem{CKKLS18} S.~Chakraborty, S.~Karmalkar, S.~Kundu, S.~V.~Lokam and N.~Saurabh, Fourier entropy-influence
+conjecture for random linear threshold functions, \emph{LATIN 2018}, Lecture Notes in Comput. Sci. 10807,
+Springer, 2018, 275--289.
+
+\bibitem{FK96} E.~Friedgut and G.~Kalai, Every monotone graph property has a sharp threshold, \emph{Proc. Amer.
+Math. Soc.} 124 (1996), 2993--3002.
+
+\bibitem{GMP26} M.~J.~Gonz\'alez, P.~MacManus and M.~C.~Pereyra, Further evidence towards the Fourier
+entropy-influence conjecture, arXiv:2606.00246 (2026).
+
+\bibitem{Han25} X.~Han, A new bound for the Fourier-entropy-influence conjecture, \emph{Combinatorica} 45 (2025).
+
+\bibitem{Har60} T.~E.~Harris, A lower bound for the critical probability in a certain percolation process,
+\emph{Proc. Cambridge Philos. Soc.} 56 (1960), 13--20.
+
+\bibitem{JLR90} S.~Janson, T.~\L uczak and A.~Ruci\'nski, An exponential bound for the probability of nonexistence of
+a specified subgraph in a random graph, in \emph{Random Graphs '87}, Wiley, 1990, 73--87.
+
+\bibitem{KKLMS20} E.~Kelman, G.~Kindler, N.~Lifshitz, D.~Minzer and M.~Safra, Towards a proof of the
+Fourier-entropy conjecture?, \emph{Geom. Funct. Anal.} 30 (2020), 1097--1138.
+
+\bibitem{KMS12} N.~Keller, E.~Mossel and T.~Schlank, A note on the entropy/influence conjecture, \emph{Discrete
+Math.} 312 (2012), 3364--3372.
+
+\bibitem{KPR87} Ph.~G.~Kolaitis, H.~J.~Pr\"omel and B.~L.~Rothschild, $K_{\ell+1}$-free graphs: asymptotic structure
+and a $0$-$1$ law, \emph{Trans. Amer. Math. Soc.} 303 (1987), 637--671.
+
+\bibitem{Mat76} D.~W.~Matula, The largest clique size in a random graph, Technical Report CS 7608, Southern Methodist
+University, 1976.
+
+\bibitem{OT13} R.~O'Donnell and L.-Y.~Tan, A composition theorem for the Fourier entropy-influence conjecture,
+\emph{ICALP 2013}, Lecture Notes in Comput. Sci. 7965, Springer, 2013, 780--791.
+
+\bibitem{OWZ11} R.~O'Donnell, J.~Wright and Y.~Zhou, The Fourier entropy-influence conjecture for certain classes of
+Boolean functions, \emph{ICALP 2011}, Lecture Notes in Comput. Sci. 6755, Springer, 2011, 330--341.
+
+\bibitem{SF78} S.~B.~Seidman and B.~L.~Foster, A graph-theoretic generalization of the clique concept, \emph{J.
+Math. Sociol.} 6 (1978), 139--154.
+
+\bibitem{Sha19} G.~Shalev, On the Fourier entropy influence conjecture for extremal classes, arXiv:1806.03646 (2018).
+
+\bibitem{Shm26a} Y.~Shmalo, The Fourier entropy--influence inequality for read-$k$ DNF formulas and regular Boolean
+functions, preprint (2026).
+
+\bibitem{Shm26b} Y.~Shmalo, The Fourier entropy--influence inequality for monotone DNF formulas of bounded width,
+preprint (2026).
+
+\end{thebibliography}
+
+\end{document}

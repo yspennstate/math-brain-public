@@ -1,0 +1,15 @@
+{
+  "helper_version": "A008-block-v5",
+  "domain_change": "NONE: same 96 integer-partition cases through n=9 and same local widths 1..9",
+  "arithmetic_change": "Exact outward rounding of intermediate intervals, including logarithm-series arithmetic, to multiples of 2^-80. The atanh series has 24 terms on 1<=y<=2, remainder at most 9/(196*3^49). Fifth-root enclosure unchanged. Rounded DP normalizer encloses the independent exact subset sums; equality is not demanded after rounding.",
+  "validation_change": "Add independent physical edge counts per coordinate in every Boolean case",
+  "memory_estimate_MB": 100,
+  "pilot_domain": "local width 1 and the single width tuple (1)",
+  "pilot_maximum_runtime_seconds": 60,
+  "full_domain": "original frozen 96 cases with n<=9, unchanged",
+  "maximum_runtime_seconds": 900,
+  "mechanism_change": "Local rank entropy aggregated as 2^(w-1) log(w!) minus sum_s binom(w,s)log(s!); direct Fourier entropy evaluated from the exact probability histogram rather than repeating interval operations for equal masses. All exact truth-table, local normalizer and physical boundary checks retained.",
+  "persistence_change": "Save every completed case to out/BLOCK_PARTIAL.json immediately; final certificates only marked complete when all frozen cases pass",
+  "old_helper_preserved": "code/check_blocks_v1.py",
+  "failure_preserved": "out/PILOT_V1_FAILURE.json"
+}

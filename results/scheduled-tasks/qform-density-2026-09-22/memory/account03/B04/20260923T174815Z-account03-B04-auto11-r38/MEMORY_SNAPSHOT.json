@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260923T174815Z-account03-B04-auto11-r38",
+  "control_commit_final_refresh": "89b9e16d28eea26a58af6a17b374846d1f45219f",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "mathematical_result": {
+    "name": "QFORM-MARGINAL-BALANCED-CURRENCY-DUAL-v1",
+    "status": "SUPPORTING_THEOREM_PROVED_AT_STATED_SCOPE",
+    "statement_short": "The optimized projected-crossing determinant currency over physical ell-minor laws with inclusion marginals <=1/2 has the exact convex dual log Gamma_* = inf_y[max_S(log D_S-sum_{i in S}y_i)+sum_i psi(y_i)], psi(y)=e^(y-1) below the cap transition and (y+log2)/2 above it. Fractional matching mass T>=2 yields Gamma_* >= T^ell exp((1/T)sum x_S log D_S), hence thresholded large minors admit a bounded physical hitting set when Gamma_* is small.",
+    "regularity": "continuous_C0_in_the_projected_crossing_branch",
+    "full_target": "OPEN",
+    "full_target_continuity": "OPEN"
+  },
+  "structural_consequence": {
+    "threshold_hypergraph": "E_delta={S:D_S>=delta}",
+    "fractional_matching_bound": "Gamma_* >= delta*nu_f(E_delta)^ell whenever nu_f>=2",
+    "hitting_set_bound": "|H| <= ell*max(1,(Gamma_*/delta)^(1/ell)) for a physical H hitting every delta-heavy minor",
+    "unpaid_residual": "low-determinant minors are not yet routed to a full-target endpoint"
+  },
+  "explicit_example": {
+    "family": "A_N=[[0,B_N],[B_N^T,0]], B_N = three Walsh-Hadamard columns, N=4m=2^r>=8",
+    "physical_cross_coefficients": "all nonzero, equal magnitude 1/sqrt(N)",
+    "nonzero_spectrum": ["+1","+1","+1","-1","-1","-1"],
+    "optimized_projected_pair_currency": "Gamma_*=3/4",
+    "new_density_bound": "4*3^(2/3)=8.320335292207616...",
+    "regularity": "continuous_C0"
+  },
+  "peer_application": {
+    "source": "yspennstate/math-open-problems@b1b60d0a4fe67c2e41a60bd38fb88668bbb9b378:proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T154425Z-account01-B04-QFORM-auto11-r14/REPORT.md",
+    "result": "QFORM-Q1-EXACT-MARGINAL-FACTOR-v1",
+    "actual_inequality": "||p||_infinity <= 3(1-3/N)^(-(N-3)/6) < 3*sqrt(e)",
+    "regularity": "continuous_C0"
+  },
+  "designated_partner": {
+    "partner": "account04/B04",
+    "completed_current_qform_artifact_found": false,
+    "observed": "current QFORM login/start evidence but no completed canonical report or shared handoff",
+    "action": "did_not_fabricate_or_wait"
+  },
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "af5417e611dcc9731c3fdb8d12b564909ae01671",
+    "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T174815Z-account03-B04-auto11-r38/REPORT.md",
+    "checks_script_commit": "8111c06feac5fa918c33e1c2822ad5e1ad9990b9",
+    "checks_json_commit": "5946275794c25b6edaa89ce2e4ef606fcfe3bc01",
+    "handoff_commit": "434973ca64cc194f0fefe01ec6a4f3bf30cb5264",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B04/20260923T174815Z-account03-B04-auto11-r38.md"
+  },
+  "unresolved_implication": "Starting from only the three-large-eigenvalue hypothesis, use the bounded hitting set forced by small optimized currency plus the low-determinant residual to enter a dimension-free paid endpoint without selecting an arbitrarily small local minor.",
+  "next_step": "QFORM-OPTIMIZED-CURRENCY-HUB-TO-PAID-ENDPOINT-v1",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {"reasoning_tokens": null, "provider_thinking_seconds": null, "source": "not_exposed", "coverage": "unavailable"}
+}

@@ -1,0 +1,404 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B18",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A086",
+      "stream": "B18",
+      "topic": "Joint-code referee",
+      "target_statement": "Read complete proofs from A001-A015 and attempt to reconstruct each code independently. Check finite success, decoding, duplicate witnesses, normalizers, and the final expectation.",
+      "work_type": "independent_proof_review",
+      "priority": "P0",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A086-D1",
+          "description": "JOINT_CODE_REVIEW.md: independent decoder/probability reconstruction",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A086-D2",
+          "description": "JOINT_CODE_GAPS.json: exact failed lines and their effect on the theorem",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Review complete original sources from the relevant A001–A015 chain, not only authors' summaries.",
+        "Reconstruct finite success, decoding, distinct-run multiplicity, global codebook, normalizers, and the expectation paid by influence.",
+        "Any representation-existence or universal residual statement used without proof remains an explicit gap; send one precise repair target to A089."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A006",
+          "interface": "complete posterior forest proof"
+        },
+        {
+          "agent_id": "A008",
+          "interface": "code and decoder"
+        },
+        {
+          "agent_id": "A009",
+          "interface": "incidence certificate"
+        },
+        {
+          "agent_id": "A011",
+          "interface": "representation theorem"
+        },
+        {
+          "agent_id": "A014",
+          "interface": "congestion theorem"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A089",
+          "interface_use": "exact failed code line"
+        },
+        {
+          "agent_id": "A090",
+          "interface_use": "reviewable code candidate locator"
+        },
+        {
+          "agent_id": "A094",
+          "interface_use": "first joint-code review"
+        },
+        {
+          "agent_id": "A096",
+          "interface_use": "complete code-review outcomes"
+        }
+      ],
+      "independent_reviewers": [
+        "A094",
+        "A085"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One reviewable code/representation theorem receives a full proof-chain verdict; the queue cap prevents collecting unread candidates.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_forests",
+        "reductions_restrictions",
+        "brain_route_map",
+        "brain_phase_energy"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F08",
+        "F19",
+        "F20"
+      ]
+    },
+    {
+      "agent_id": "A087",
+      "stream": "B18",
+      "topic": "Restriction referee",
+      "target_statement": "Audit A021-A030 and A061-A065 with exact physical children. Test conditional probabilities, averaging order, boundary costs, and reuse of influence.",
+      "work_type": "independent_proof_review",
+      "priority": "P0",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A087-D1",
+          "description": "RESTRICTION_REVIEW.md: physical-child and expectation reconstruction",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A087-D2",
+          "description": "RESTRICTION_GAPS.json: boundary, averaging, and credit-reuse issues",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Audit the actual A021–A030 and A061–A065 proof chain with exact physical children and the same fair-tree filtration.",
+        "Preserve μ and its KL rebate, distinguish it from block mixing M_W, and check zero-mismatch as well as rare-branch endpoints.",
+        "Verify path probabilities, terminal entropy, and nonreuse of influence/credit; a valid local identity alone does not settle the stopping theorem."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A023",
+          "interface": "rare first-revelation payment"
+        },
+        {
+          "agent_id": "A027",
+          "interface": "block selection"
+        },
+        {
+          "agent_id": "A029",
+          "interface": "child-deficit transport"
+        },
+        {
+          "agent_id": "A064",
+          "interface": "global debt potential"
+        },
+        {
+          "agent_id": "A065",
+          "interface": "policy countertests"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A089",
+          "interface_use": "exact failed restriction line"
+        },
+        {
+          "agent_id": "A090",
+          "interface_use": "reviewable restriction candidate locator"
+        },
+        {
+          "agent_id": "A094",
+          "interface_use": "first restriction review"
+        },
+        {
+          "agent_id": "A096",
+          "interface_use": "complete restriction-review outcomes"
+        }
+      ],
+      "independent_reviewers": [
+        "A094",
+        "A085"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One complete restriction candidate is accepted at its proved scope or returned with the first precise unpaid line.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_forests",
+        "reductions_restrictions",
+        "brain_route_map",
+        "brain_phase_energy"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F08",
+        "F19",
+        "F20"
+      ]
+    },
+    {
+      "agent_id": "A088",
+      "stream": "B18",
+      "topic": "Booleanity referee",
+      "target_statement": "Audit A031-A040 and A066-A070 for a genuine use of Boolean phase constraints. Test each stated theorem on the strongest applicable non-Boolean relaxation as a scope diagnostic.",
+      "work_type": "independent_proof_review",
+      "priority": "P0",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A088-D1",
+          "description": "BOOLEANITY_ANALYTIC_REVIEW.md: signed, conditional, and normalization audit",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A088-D2",
+          "description": "BOOLEANITY_GAPS.json: exact failed hypothesis or unpaid term",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Reconstruct the A031–A040 and A066–A070 chain from full sources and actual Boolean inputs.",
+        "Check all signs and full-Booleanity uses against the fixed-prefix controls, and retain conditional auxiliary entropy.",
+        "Enforce T=H(v/Z)−log₂Z and distinguish raw-L failure, normalized lower payment, and sufficient recovery; verify every needed implication independently."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A031",
+          "interface": "signed weighted inequality"
+        },
+        {
+          "agent_id": "A034",
+          "interface": "conditional phase theorem"
+        },
+        {
+          "agent_id": "A036",
+          "interface": "normalized divergence payment"
+        },
+        {
+          "agent_id": "A066",
+          "interface": "semigroup theorem"
+        },
+        {
+          "agent_id": "A070",
+          "interface": "scope diagnostics"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A089",
+          "interface_use": "exact failed Booleanity/analytic line"
+        },
+        {
+          "agent_id": "A090",
+          "interface_use": "reviewable Booleanity candidate locator"
+        },
+        {
+          "agent_id": "A094",
+          "interface_use": "first Booleanity review"
+        },
+        {
+          "agent_id": "A096",
+          "interface_use": "complete analytic-review outcomes"
+        }
+      ],
+      "independent_reviewers": [
+        "A094",
+        "A085"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One full Booleanity/KL/analytic candidate receives a complete-chain review with honest domain and first-gap reporting.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_forests",
+        "reductions_restrictions",
+        "brain_route_map",
+        "brain_phase_energy"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F08",
+        "F19",
+        "F20"
+      ]
+    },
+    {
+      "agent_id": "A089",
+      "stream": "B18",
+      "topic": "Repair specialist",
+      "target_statement": "Take a specific failed proof step from the first three referees and prove the strongest correct replacement that preserves a useful application. Keep the original failed statement and counterexample visible.",
+      "work_type": "new_math_repair",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A089-D1",
+          "description": "REPAIRED_LEMMA.tex: strongest useful corrected statement and proof",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A089-D2",
+          "description": "REPAIR_HISTORY.md: original failure, changed hypothesis, and retained application",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Choose one concrete failed line and preserve its original statement and counterexample beside the repair.",
+        "Prove the changed statement and explicitly recompute its implication for the intended application.",
+        "As a mathematical contributor to the repair, recuse from approving it; route the revised complete chain to an uninvolved referee."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A086",
+          "interface": "exact failed code line"
+        },
+        {
+          "agent_id": "A087",
+          "interface": "exact failed restriction line"
+        },
+        {
+          "agent_id": "A088",
+          "interface": "exact failed Booleanity/analytic line"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A095",
+          "interface_use": "proved scoped repair"
+        }
+      ],
+      "independent_reviewers": [
+        "A094",
+        "A085"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A complete replacement lemma preserving one useful application, or a proved barrier showing why that application cannot survive.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_forests",
+        "reductions_restrictions",
+        "brain_route_map",
+        "brain_phase_energy"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F08",
+        "F19",
+        "F20"
+      ]
+    },
+    {
+      "agent_id": "A090",
+      "stream": "B18",
+      "topic": "Independent reconstruction",
+      "target_statement": "Reprove a near-complete campaign candidate from its theorem statements and original sources, without relying on the supplied derivation. Report the first unreconstructed implication precisely.",
+      "work_type": "independent_reconstruction",
+      "priority": "P0",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A090-D1",
+          "description": "BLIND_RECONSTRUCTION.tex: proof developed from statements and original inputs",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A090-D2",
+          "description": "RECONSTRUCTION_COMPARISON.md: first unreconstructed implication and final scope",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Start from theorem statements and original baseline sources; do not copy the candidate's supplied derivation into the purported independent proof.",
+        "Record the critical reconstruction before comparing it with the authors' proof and identify genuinely shared unproved assumptions.",
+        "A near-complete universal candidate requires all dimensions, limit passages, terminal cases, and constant independence, not agreement on a summary."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A081",
+          "interface": "exact statement graph and original sources"
+        },
+        {
+          "agent_id": "A086",
+          "interface": "reviewable code candidate locator"
+        },
+        {
+          "agent_id": "A087",
+          "interface": "reviewable restriction candidate locator"
+        },
+        {
+          "agent_id": "A088",
+          "interface": "reviewable Booleanity candidate locator"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A094",
+          "interface_use": "independent reconstruction"
+        },
+        {
+          "agent_id": "A099",
+          "interface_use": "independent reconstruction"
+        }
+      ],
+      "independent_reviewers": [
+        "A094",
+        "A085"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "One full candidate is independently reconstructed or its first irreparable/open implication is precisely identified.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_forests",
+        "reductions_restrictions",
+        "brain_route_map",
+        "brain_phase_energy"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F08",
+        "F19",
+        "F20"
+      ]
+    }
+  ]
+}

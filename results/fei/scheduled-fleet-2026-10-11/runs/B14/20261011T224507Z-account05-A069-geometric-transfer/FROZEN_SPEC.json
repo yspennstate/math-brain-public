@@ -1,0 +1,12 @@
+{
+  "helper_version": "A069-exact-v1",
+  "family": "depth-d complete ternary recursive majority on 3^d bits, padded to N bits, with exactly one truth-table value flipped at x",
+  "parameter_domain": "d=1, N=3..8; d=2, N=9..10; every x in {0,1}^N",
+  "case_count": 2040,
+  "symmetry_reduction": "none; all edit locations retained",
+  "arithmetic": "integer FWHT and fractions.Fraction; analytic entropy inequality, no floating-point entropy certification",
+  "memory_estimate_mb": 12,
+  "maximum_runtime_seconds": 60,
+  "purpose": "check all-set prefix decoding/Kraft, occupancy transfer, rank-one point-flip spectrum against truth-table FWHT, physical influence against spectrum, and influence-paid code costs",
+  "command": "python -X utf8 code/validate.py"
+}

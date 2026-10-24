@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B08",
+  "run_id": "20260924T002530Z-account03-B08-qform-diffuse-r46",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_prepublication": "0282b435ab3980c0e3bfdf42f526eecdf44aabea",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "mathematical_status": "SUPPORTING_THEOREM_FULL_TARGET_OPEN",
+  "new_claims": [
+    {
+      "id": "QFORM-ALIGNED-LARGETWIST-DIFFUSE-SCHUR-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For A=[[B,M],[M^T,M^T R M+D]] with rank M=2, max physical arm leverage <=1/3, and a selected light coordinate j with d_j,a_j=d_j+m_j^T R m_j,det R all nonzero, the full product-law quadratic form has essential density bound 4 sqrt(2e) [|a_j d_j||det R|det(MM^T)(1-ell_j)]^(-1/4).",
+      "continuity": "NOT_CLAIMED"
+    },
+    {
+      "id": "QFORM-TWIST-CANCELLATION-LEVERAGE-ROUTER-v1",
+      "status": "PROVED_DETERMINISTIC_ROUTER",
+      "statement": "With K_R=G^(1/2)RG^(1/2), |a_j|<theta|d_j| forces ell_j >=(1-theta)|d_j|/||K_R||op; a set of such cancellations obeys (1-theta)sum|d_j|<||K_R||_* ."
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-HALFRIESZ-PLUS-BARE-SQUARE-NOT-SUFFICIENT-v1"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@fe5ac898cc159fa879c94a5bd3c71984d6aab834",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260922T181432Z-account01-B14-QFORM-r15/REPORT.md",
+      "claim": "QFORM-SCHUR-DIFFUSE-RANK2-PLUS-SEPARABLE-v1"
+    },
+    {
+      "source": "yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B19/20260923T151334Z-account01-B19-QFORM-auto11/REPORT.md",
+      "claim": "QFORM-LOWRANK5-DIFFUSE-PAVING-v1"
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B08",
+    "source": "yspennstate/math-open-problems@af30108d1fd48a138ef13c683d397a74f8e0228e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B08/20260923T212412Z-account04-B08-QFORM-r2/REPORT.md",
+    "claim": "QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1",
+    "actual_inequality": "If the same selected large-twist coordinate has deletion child with three eigenvalues >=L/64 in modulus and |lambda|>=L/4096 window leverage <=1/32, then ||p_Q||_inf<4096/L and p_Q is C0."
+  },
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "4e3e8cd533ab1faa782cbb5018bfa5ffb5417df7",
+    "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260924T002530Z-account03-B08-qform-diffuse-r46/",
+    "handoff_commit": "91e371bc73527bcab2744cc02c5b7dff5b139f13",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B08/20260924T002530Z-account03-B08-qform-diffuse-r46.md",
+    "regression_status": "QFORM_B08_R46_CHECK_PASS"
+  },
+  "unresolved_implication": "QFORM-ALIGNED-CANCELLED-TWIST-HUGECARRIER-OR-CHILDLOCALIZED-v1: consume zero/tiny a_j with large normalized carrier curvature, det R=0 outside the partner window branch, or deletion-child third-spectral loss/high leverage, while retaining product provenance and arbitrary twists.",
+  "next_action": "Attack the cancelled-twist huge-carrier state with a product-preserving grouped or overlap-two currency before any reciprocal scalar pivot."
+}

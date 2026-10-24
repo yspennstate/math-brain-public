@@ -1,0 +1,18 @@
+{
+  "state": "DRAFT; DO NOT APPLY WITHOUT MATHEMATICAL REVIEW",
+  "store_as_read": "~/math-brain-build/local/population/brain.sqlite3",
+  "target_node_id": "claim_cbd6e1bc44ea67c88a3ad2112abab63bbfcf63f991be2eeccb063fdba514f1fa",
+  "target_logical_id": "math:probability.random-matrices:attempt-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr",
+  "expected_revision_digest": "sha256:cbd6e1bc44ea67c88a3ad2112abab63bbfcf63f991be2eeccb063fdba514f1fa",
+  "original_body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Test whether the constant 1 in front of t is forced by the Gaussian comparison and whether the Bernoulli case can beat it. Result: For the Gaussian matrix Edelman's exact law gives P(sqrt n s_n <= t) = 1 - e^{-t^2/2 - t} ~ t as t -> 0, so the constant 1 is exactly the Gaussian density at zero of sqrt n s_n; the conjecture says Bernoulli matrices are no worse than Gaussian up to the exponentially small singular mass. A sufficient condition would be a local limit theorem for sqrt n s_n at zero uniform in n, which is a universality statement at the hard edge (the smallest singular value) and is known (Tao-Vu 2010 hard-edge universality) only in the form P(sqrt n s_n <= t) = (1 - e^{-t^2/2-t}) + O(n^{-c}) for t in a fixed range, which gives the conjecture for t >= n^{-c'} but not for t between c^n and n^{-c'}. The gap regime is exactly the small-ball regime where the Rudelson-Vershynin constant C appears. No improvement obtained. Key identity: Gaussian case: P(sqrt n s_n <= t) = 1 - exp(-t^2/2 - t), so the conjectured constant is the Gaussian value. Obstruction: Hard-edge universality covers t >= n^{-c}; the conjecture needs the constant 1 down to exponentially small t.\nRefers to the open problem node open-problem-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr\nNo independent review; result status attempted_unsolved",
+  "replacement_body": "ATTEMPT RECORD, corrected draft; mathematical review pending. For real Gaussian G_n, Edelman's limiting law gives P(sqrt(n) s_min(G_n)<=t)=1-exp(-t^2/2-t)+o(1) for each fixed t>=0 as n tends to infinity. Its limiting slope at zero is 1; the finite-n law differs, as already seen at n=1, whose CDF is erf(t/sqrt(2)) and slope is sqrt(2/pi). Tao-Vu 2010 hard-edge universality gives a uniform O(n^-c) distributional error under its moment hypotheses, which can yield coefficient one in a polynomial-size t regime but does not by itself cover exponentially small t. This dated attempt made no improvement. Later source update: Sah-Sahasrabudhe-Sawhney arXiv:2405.20308v2, Theorem 1.1, proves (1+O((log n)^(-1/16)))t+exp(-Omega(n)); this still does not supply the exact coefficient-one target. The parent target remains unsolved by this record. Key identity: Limiting real Gaussian law: for each fixed t>=0, lim_{n->infinity} P(sqrt(n) s_min(G_n)<=t)=1-exp(-t^2/2-t). This is not a finite-n exact law; its limiting slope at zero is 1. Obstruction: Hard-edge universality covers t >= n^{-c}; the conjecture needs the constant 1 down to exponentially small t.\nRefers to the open problem node open-problem-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr\nNo solved claim; result status attempted_unsolved",
+  "reason": "The real Gaussian limit was asserted as a finite-n exact law.",
+  "evidence": [
+    "C0029-w567-C1",
+    "MEASUREMENTS.json",
+    "https://arxiv.org/pdf/0903.0614"
+  ],
+  "keep_attempt_unsolved": true,
+  "independent_review": "PENDING w569",
+  "served_model_evidence": "UNAVAILABLE; no promotion gate passed"
+}

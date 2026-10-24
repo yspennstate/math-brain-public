@@ -1,0 +1,53 @@
+[
+  {
+    "claim_id": "A016-BENT-SPLICE-COMPLETE-CODE-CONTROL",
+    "version": 1,
+    "exact_statement": "For all a>=1 and even m>=2, let F_{a,m} be the disjoint product of a bent/one-point-flip Boolean splices defined in REPORT.md. With delta=2^-m, J=m/2+m*delta and I0=J+delta, I(F)=a*I0 and I_sel=a*delta. The full-set mask costs a(m+1)<=3I(F), and the explicitly conditioned single-root queue reference, including empty-sector entropy and exact elementary-symmetric normalizers, has complete cost <9I(F). For each fixed a as m tends to infinity, mask/I->2, queue/I->2G, mask/Delta~2^m and queue/Delta~G*2^m, with G defined in REPORT.md and 1<=G<=1+(3/5)(1-1/(2ln2)). On the actual selector-first tree stopping after selectors, the expected raw 2I(D_v) boundary charge is a*m*delta+delta*a(a-1)(2J+delta). For every fixed finite bad-node threshold K, choose even m with m-1>K; all selector nodes obey B_v>K Inf_v, but this raw-charge/I ratio grows unboundedly with a. Removing exact independent tensor spectators leaves charge a*m*delta<=I(F)/2. This rejects the specified raw selector-first budget only, not existence of a universal adaptive tree or FEI.",
+    "hypotheses": [
+      "uniform independent binary inputs, Boolean sign outputs",
+      "disjoint tensor blocks",
+      "a>=1, m>=2 even",
+      "bits for entropy and costs",
+      "single-root single-visit reference as specified, not all successful runs optimized",
+      "queue asymptotic fixes a while m grows"
+    ],
+    "statement_sha256": "4da54994e47f7c0dee41fdff6e1e6ee4ba19793269a122fead83f1ee40bb4169",
+    "contributors": [
+      "A016/account05; B04 lead selected existing sharpness family"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261011T232501Z-account05-A016-addressing-benchmark\\REPORT.md",
+      "locators": [
+        "sections 1-6"
+      ],
+      "checker": "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261011T232501Z-account05-A016-addressing-benchmark\\code\\check_bent_codes.py",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261011T232501Z-account05-A016-addressing-benchmark\\out\\CHECK.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A016-ADDRESSING-BASELINE-COST-LEDGER",
+        "version": 1,
+        "status": "AUTHOR_PROOF_PENDING_INDEPENDENT_REVIEW",
+        "use": "Subset-generator coefficient asymptotic; argument restated in this report, addressing label/root terms are not imported"
+      }
+    ],
+    "review_records": [],
+    "status": "SCOPED_MECHANISM_CALIBRATION_AUTHOR_PROVED_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Raw sum of 2I(D_v) on exact-B bad nodes of this selector-first tensor stopping tree is uniformly O(I)"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B04-lead",
+      "A018",
+      "A019",
+      "A020",
+      "A027",
+      "A090",
+      "A091",
+      "B06",
+      "B20"
+    ]
+  }
+]

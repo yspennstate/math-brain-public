@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260923T002425Z-r21",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control": {
+    "start_commit": "57f48e76948c8b179017113c686a18674d1d8351",
+    "prepublication_commit": "9b7dd0ecc4ba4cb6f0f42e38ee71423e8bfbddc8",
+    "revision": "2026-09-22.15",
+    "sole_target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES",
+    "correction_blob_prepublication": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe"
+  },
+  "assignment": {
+    "title": "Oscillatory replacement",
+    "pathway": "FOURIER",
+    "partner": "account04/B01"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+      "source": "yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md",
+      "scope_used": "2D product projection density cap e"
+    },
+    {
+      "id": "QFORM-GROUPED-SQUARE-INNOVATIONS-v1",
+      "source": "yspennstate/math-open-problems@88003dc06af684cc4bc178a7dfe8e7cbebb0f987:proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260922T234537Z-account04-B01-grouped-square-fejer-r2/REPORT.md",
+      "scope_used": "assigned-partner disjoint-bank comparison and exact problem interface"
+    },
+    {
+      "id": "QFORM-SIGNED-FEJER-EXACT-INTERFACE-v1",
+      "source": "yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79:proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md",
+      "scope_used": "exact conversion of new density bound to signed Fejer bound"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-OVERLAP-PROJECTION-CAP-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "For rank-two M and Y=M X_B, ||p_Y||_inf <= e/sqrt(det(MM^T))."
+    },
+    {
+      "id": "QFORM-DEFINITE-OVERLAP-AREA-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "A definite quadratic pushforward of a 2D density cap M0 has density cap pi M0/sqrt(|det H|), uniformly in translation."
+    },
+    {
+      "id": "QFORM-OVERLAPPING-DEFINITE-PAIR-INNOVATIONS-v1",
+      "status": "PROVED_TARGET_LEVEL_BRANCH",
+      "statement": "For disjoint source banks C,B,D and Q=R0(C)+(M X_B+h(C))^T H(M X_B+h(C))+S(D,C), with rank M=2 and H definite, ||p_Q||_inf <= pi e/[sqrt(det(MM^T)) sqrt(|det H|)]. Pair rows may overlap arbitrarily. Continuity holds if the conditional remainder has an L1 density."
+    }
+  ],
+  "partner_application": {
+    "slot": "account04/B01",
+    "actual_inequality": "sup_{T>0,y} D_T law(Q)(y) <= pi e/[sqrt(det(MM^T)) sqrt(|det H|)]",
+    "comparison": "partner's newer disjoint-bank theorem improves pi e to 2 pi when the pair sources are disjoint"
+  },
+  "phase_aligned_counterexample_preserved": true,
+  "full_target_status": "OPEN",
+  "continuity_full_target": "OPEN",
+  "first_unpaid_implication": "QFORM-PAIR-VS-REMAINDER-SOURCE-SEPARATION-v1",
+  "next_step": "Extract a quantitatively nondegenerate definite 2D grouped source bank disjoint from the remaining curvature in the no-pivot/near-unit/balanced-star survivors, or prove a fully three-way overlapping product-provenance replacement.",
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_branch": "master",
+    "report_creation_commit": "abb9e311d4df24f834cdfa4048c31058c912493e",
+    "bundle_tip_commit": "6a63d945b3e2409e5ff5799d2d13c3654bdd27e6",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260923T002425Z-r21/REPORT.md",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B01/account03-B01-20260923T002425Z-r21.md"
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B09",
+  "run_id": "20260923T200016Z-account01-B09-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_head_at_prepublication_refresh": "a7de1d3a056b52ce0e6fefee47063f83dcf44537",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "correction_inbox_blob": "6bdbd9987a4eefeba79d53915cfe7e232263f8ec",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "owner correction: no law-uniform pointwise van-der-Corput decay for arbitrary cap-one densities",
+    "owner correction: no post-rotation independence",
+    "owner correction: no small coefficient matrix may be dropped as a small random quadratic error"
+  ],
+  "actual_mathematical_premises": [
+    {
+      "name": "QFORM-PHYSICAL-D3-NO-MARGINAL-GATE-v1",
+      "source": "yspennstate/math-open-problems@8a4e6d0048174e047fc3b4ae8cabfbabba3cdc3b:proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260923T165154Z-account01-B20-QFORM-auto11/NO_MARGINAL_D3.md",
+      "scope": "Any literal original-coordinate cut I|J with Z3=e3(A[I,J]A[I,J]^T)>0; arbitrary same-side curvature; continuous C0 density; ||p||inf<=C3 Z3^{-1/6}; no row-volume marginal gate."
+    },
+    {
+      "name": "account03/B09 r38 low-rank carrier plus deterministic residual reduction",
+      "source": "yspennstate/math-open-problems:proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T175610Z-account03-B09-QFORM-r38/REPORT.md",
+      "scope": "Structural input A=D0+S+E, rank S<=4, with an explicit operator/Frobenius residual bound; residual was retained rather than discarded."
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-RESIDUAL-STABLE-CARRIER-CROSSING-v1",
+      "status": "NEW_SUPPORTING_THEOREM",
+      "statement": "For A=D+UKU^T+E with D physical diagonal, U orthonormal r-frame, s3(K)>=a, q=max row leverage, rq<1, gamma=(1-sqrt(rq))/2, and ||E||op=b<gamma a, the full law has a continuous C0 density with ||p||inf<=C3/(gamma a-b), C3=3*2^(4/3)e^(1/3), and the same coefficient times interval length.",
+      "scope_notes": "Residual E is retained in the actual physical cross block; no probabilistic small-error deletion."
+    },
+    {
+      "id": "QFORM-TOP3-BALANCE-WEAK-FOURTH-v1",
+      "status": "NEW_SUPPORTING_THEOREM",
+      "statement": "For A=D+W Lambda W^T+kappa zz^T+E with a three-dimensional strong frame of row leverage q3<1/3, min |lambda_j|>=a, z orthogonal unit, and beta=gamma3 a-|kappa|/2-||E||op>0, the density is continuous and ||p||inf<=C3/beta."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "name": "QFORM-STRONG3-WEAK4-ROBUST-CROSS-v1",
+    "source": "yspennstate/math-open-problems@9e1e4143471b51c63460be8d1f536c3da0b4d8c5:proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T195612Z-account02-B09-QFORM-r20/REPORT.md",
+    "actual_inequality": "On the N=4096 Walsh-leaf plus literal-hub family with mu=sqrt(7)/384, the <=576-coordinate localization alternative has mass at most 1728/4096=0.421875<3/4, forcing the paid branch ||p||inf<88.454 and P{Q in L}<88.454|L| with continuity."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "917d02c0c2ef4b879207477e39cbed06927abdd3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T200016Z-account01-B09-QFORM-auto11/REPORT.md",
+    "report_blob": "9b40cde87a4061d7bb218751df416cffaf27d59f",
+    "checks_blob": "0ea4434bad7b10778bdb04f63d9a188945852f01",
+    "late_source_note_blob": "7dd4bdd2ebe94f445911a527296415d8eb0a5941",
+    "prepublication_refresh_blob": "20fce9b04016a683d5768ad6d0c792682b5470ca"
+  },
+  "unresolved_implication": "QFORM-STRONG-LARGE-SUBSPACE-LOCALIZATION-OR-NONSMALL-TAIL-v1",
+  "next_step": "In the remaining r38/dual-zero carrier chamber, route genuine localization of one of the three large spectral directions, or a non-small fourth/residual component, to literal hub/fixed-pair/grouped-square/anchored-volume exits while retaining the tail and original-coordinate independence.",
+  "model_self_report": "GPT-5.6 Sol",
+  "thinking_level": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_tokens": null,
+  "provider_thinking_time": null
+}

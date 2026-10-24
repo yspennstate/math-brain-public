@@ -1,0 +1,58 @@
+\section*{A rigorous compact-core certificate for the two-bit half-tax candidate}
+
+For the AND representative, let
+\[
+ D(p,q)=M_A+\frac12\Delta(p)-J_A,qquad
+ s=4q(1-q),\quad c=4q^2,
+\]
+with
+\[
+ J_A=h_2(sp)-p h_2(s),
+\]
+\[
+ M_A=(1-sp)h_2\!\left(\frac{cp(1-p)}{1-sp}\right)+sp h_2(p),
+ \qquad
+ \Delta(p)=p\log_2\frac{1-p}{p}.
+\]
+
+The accompanying directed-rounding certificate proves
+\[
+ \boxed{D(p,q)>0}
+\]
+throughout the compact rectangle
+\[
+ \frac1{64}\le p\le\frac{49}{100},
+ \qquad
+ \frac1{100}\le q\le\frac{99}{100}.
+\]
+
+The program uses 70-decimal `Decimal` arithmetic with `ROUND_FLOOR` for
+every lower endpoint and `ROUND_CEILING` for every upper endpoint.  Binary
+entropy ranges are enclosed using its concavity: the minimum on an interval
+is at an endpoint, and the maximum is at the endpoint nearest $1/2$ (or is
+exactly one if the interval contains $1/2$).  The functions
+$4q(1-q)$, $4q^2$, $p(1-p)$ and
+$\log_2((1-p)/p)$ are enclosed with their exact monotonicity on the stated
+domain.  All products, quotients, additions and subtractions then use
+outward interval operations.
+
+Adaptive bisection accepts a box only when the resulting lower endpoint for
+$D$ is strictly positive.  `CHECK.out` records the number of boxes, maximum
+depth, smallest certified positive endpoint and a SHA-256 digest of the
+ordered accepted leaves.  Re-running the program reconstructs the entire
+certificate; no floating search value is treated as proof.
+
+This bridges the analytic rare-bias theorem to a large interior region, but
+does not complete the two-bit continuum.  The still-unpaid collars are
+\[
+ 0<p<1/64,
+ \quad 49/100<p\le1/2,
+ \quad q<1/100,
+ \quad q>99/100,
+\]
+including the exact equality corners at $p=1/2$ and $q\in\{0,1/2,1\}$.
+The existing uniform asymptotic theorem proves positivity for sufficiently
+small $p$ without giving an explicit certified cutoff.  Boundary-specific
+factorizations or a second interval chart are required to close these
+collars.  Higher arity and global nonreuse remain separate; full FEI is not
+proved.

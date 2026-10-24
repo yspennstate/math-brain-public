@@ -1,0 +1,37 @@
+[
+  {
+    "claim_id": "A044-EQUAL-MEAN-ADDRESS-NARROW",
+    "version": 1,
+    "exact_statement": "For every integer a>=0, independent Bernoulli address inputs with arbitrary probabilities q_i and independent sign data inputs of one common mean m, the Boolean addressing gate satisfies H_mu^+<=4(I_mu-Var_mu), with sharp constant 4. A disjoint read-once composition whose actual induced data-child means agree at each address node has corrected FEI+ constant max(4,C_leaf), independent of depth and fan-in. Arbitrary unrelated data means are not covered; their deterministic endpoints contain every Boolean function on the address cube.",
+    "hypotheses": [
+      "Corrected entropy in bits, sigma_i^2=4q_i(1-q_i), nonempty atoms only",
+      "All input coordinates independent; distinct data variables",
+      "Common data mean at each gate under the specified actual induced law",
+      "Disjoint physical child blocks for composition",
+      "Deterministic inputs contracted before normalization; endpoints by restriction",
+      "No publication novelty or unrestricted-bias theorem asserted"
+    ],
+    "statement_sha256": "750a0b4246af3ea9e4b2506e5f4bad54fb1aaeca852e2aedb1172f2e57aa1709",
+    "contributors": [
+      "A044"
+    ],
+    "proof_source": "REPORT.md; code/check_address.py; out/CHECK.json",
+    "proof_dependencies": [
+      "Elementary biased orthonormal expansion; independently reconstructed exact disjoint composition (threshold Proposition 7.1; O Donnell-Tan Theorem 1)"
+    ],
+    "review_records": [],
+    "status": "PROVED_NARROW_SCOPE_EXPLORATION_NOT_PROPOSED_FOR_ADOPTION_REVIEW_CAP",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A091",
+      "A090",
+      "A041",
+      "A045",
+      "A059",
+      "A060",
+      "B20"
+    ]
+  }
+]

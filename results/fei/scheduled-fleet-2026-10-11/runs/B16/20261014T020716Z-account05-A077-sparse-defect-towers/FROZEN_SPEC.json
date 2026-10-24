@@ -1,0 +1,12 @@
+{
+  "helper_version": "A077-rare-rare-activation-v1",
+  "family": "Actual common activation of A078 bent/spike selector: G'=1+A_r(G-1), H'=1+A_r(H-1), W selects G'/H'; all physical bits uniform.",
+  "domain": "Pilot k=2,r=1. Full direct (k,r)=(2,1),(2,2),(2,4),(4,1),(4,2),(4,4),(6,1),(6,2). Compressed exact Phi rows k=2,4,6,8 and r=1,2,4. Rational analytic-lower-bound checks even k=4..64, r=1..64.",
+  "case_count": "pilot 1 actual root; full 8 actual roots,12 compressed roots,1984 rational bound pairs",
+  "symmetry": "No quotient; active shared/gate vertex fixed zero as definition; no dimension escalation",
+  "arithmetic": "Integer FWHT and physical edges; Fraction prime-log equalities; 32-term atanh logarithm enclosures with explicit tails; rational inequalities for all-parameter auxiliary checks",
+  "memory_estimate_mb": 150,
+  "max_runtime_seconds": 55,
+  "policies": "Activation-first complete prefix then stop retaining full base core; activation-first then H-relevant quadratic policy then remaining G-relevant bits and final zero-entropy selector reveal; root rare-private-x row",
+  "independence": "New truth-table constructor and physical policy; reused own certified-log primitives only; source authors' checker code not used"
+}

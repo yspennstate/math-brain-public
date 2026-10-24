@@ -1,0 +1,134 @@
+{
+  "target": "C0056",
+  "source_rows": [
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+      "line": 56,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "anderson_delocalization_d3",
+        "historical_status": "source_says_open",
+        "intake": "claude_20260907",
+        "locator": "Section 2.1, p. 7",
+        "problem_id": "C0056",
+        "recorded_at": "2026-09-07T06:38:45Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "bourgade_band_icm_2018",
+        "statement": "Prove existence of absolutely continuous spectrum (delocalised states) for the random Schrodinger operator -Delta + lambda V on Z^3 at small disorder lambda, and GOE local statistics for its finite-volume restriction.",
+        "status_search": "",
+        "title": "Extended states for the three-dimensional Anderson model at weak disorder",
+        "verification": "unreviewed"
+      }
+    },
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+      "line": 45,
+      "record": {
+        "attempt_id": "C0056-A001",
+        "author": "claude-probability-1000-continue-0907",
+        "independent_check": "",
+        "key_identity": "",
+        "method": "Review the failure of perturbation theory and test a restricted version on a tree-like subgraph.",
+        "obstruction": "Absence of a closed self-consistency equation on Z^3; kinetic-regime results stop at finite times.",
+        "problem_id": "C0056",
+        "recorded_at": "2026-09-07T06:38:45Z",
+        "result": "On the Bethe lattice a.c. spectrum is known (Klein; Aizenman-Warzel) because the self-consistent equation for the Green function has a stable solution; on Z^3 the corresponding equation is not closed. A known partial statement is that the disorder-averaged Green function has diffusive behaviour up to times lambda^{-2-delta} (Erdos-Salmhofer-Yau), which is the kinetic regime and does not reach the infinite-time statement. I tested the possibility of transferring the tree result through a spanning tree of Z^3: the operator restricted to a spanning tree is not the operator on Z^3, and removing the edges changes the spectrum non-perturbatively, so no transfer. No result; the problem is recorded as attempted with the explicit obstruction that the only tools proving a.c. spectrum are tree-specific.",
+        "schema": "probability-attempt.v1",
+        "substantive": true
+      }
+    }
+  ],
+  "store_mode": "read-only",
+  "store_schema": [
+    [
+      "nodes",
+      "CREATE TABLE nodes (\n    id TEXT PRIMARY KEY,\n    kind TEXT NOT NULL,\n    title TEXT NOT NULL,\n    body TEXT NOT NULL,\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    ],
+    [
+      "claims",
+      "CREATE TABLE claims (\n    id TEXT PRIMARY KEY REFERENCES nodes(id),\n    payload_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    ],
+    [
+      "claim_provenance",
+      "CREATE TABLE claim_provenance (\n    claim_id       TEXT PRIMARY KEY,\n    evidence_class TEXT NOT NULL,\n    source_kind    TEXT NOT NULL DEFAULT '',\n    source_ref     TEXT NOT NULL DEFAULT '',\n    artifact_path  TEXT NOT NULL DEFAULT '',\n    bundle_id      TEXT NOT NULL DEFAULT '',\n    fire_id        TEXT NOT NULL DEFAULT '',\n    measurement    TEXT NOT NULL DEFAULT '',\n    status         TEXT NOT NULL DEFAULT '',\n    read_from      TEXT NOT NULL DEFAULT '[]',\n    recorded_at    TEXT NOT NULL\n)"
+    ]
+  ],
+  "node_columns": [
+    "id",
+    "kind",
+    "title",
+    "body",
+    "metadata_json",
+    "digest",
+    "created_at"
+  ],
+  "anderson_titles": [
+    {
+      "id": "evidence_850e0ed271324a75a99c1cf147ab6d08",
+      "kind": "evidence",
+      "title": "read by claude-f467f871: sound - definition, inversion formula and continuity theorem read against Anderson, Guionnet and Zeitouni, section 2.4; the iff holds because the limit is a probability measure"
+    },
+    {
+      "id": "claim_09038093d9a000c99aeace01330a48caf661984fe5badf3cd03f77be5582e4db",
+      "kind": "claim",
+      "title": "Open problem: Extended states for the three-dimensional Anderson model at weak disorder"
+    },
+    {
+      "id": "claim_08aec3cbb621052600dbc46ec290b8fc949fbdb302b77505daa2802cf0a47c06",
+      "kind": "claim",
+      "title": "Attempt on Extended states for the three-dimensional Anderson model at weak disorder"
+    },
+    {
+      "id": "claim_1117339555d7cfc5a098e25c67f2db0e",
+      "kind": "claim",
+      "title": "Anderson model (random Schrodinger operators)"
+    }
+  ],
+  "selected_cards": [
+    {
+      "id": "claim_59b71972a03cccd34a3b9f19358b0f2ad82bb2b26ccd049a537b06518a32a52b",
+      "kind": "claim",
+      "title": "Stieltjes Transform, Inversion, and the Continuity Theorem",
+      "body": "For a positive finite Borel measure mu on R, its STIELTJES TRANSFORM (also Cauchy transform) is m_mu(z) = integral (x - z)^{-1} mu(dx) for z in the open upper half plane C^+. It is analytic on C^+, maps C^+ into C^+ when mu is positive, and satisfies the a priori bound |m_mu(z)| <= mu(R)/Im(z). INVERSION: for a < b continuity points of mu, mu( (a,b) ) = (1/pi) lim_{eta decreasing to 0} integral_a^b Im m_mu(x + i eta) dx, so the transform determines the measure. CONTINUITY: a sequence of probability measures mu_n converges weakly to a probability measure mu if and only if m_{mu_n}(z) -> m_mu(z) for every z in C^+; convergence on any set with an accumulation point in C^+ suffices, by analyticity plus a tightness argument. In random matrix theory the transform of the empirical spectral distribution of a Hermitian matrix H is m_n(z) = (1/n) tr ( H - z I )^{-1}, the normalised trace of the RESOLVENT, which is why resolvent methods and Stieltjes-transform methods are the same method. Sign conventions differ across the literature: some authors define the transform with (z - x)^{-1}, which flips the sign of the whole calculus; the convention must be checked before importing a formula. [standard; e.g. Anderson, Guionnet and Zeitouni, An Introduction to Random Matrices, Section 2.4]",
+      "metadata_json": "{\"artifact_digest\":\"sha256:a5db4b2067b36b2665286220e6a3c185837553797931da7748892edeb74dd232\",\"artifact_path\":\"objects/sha256/a5/a5db4b2067b36b2665286220e6a3c185837553797931da7748892edeb74dd232.md\",\"bundle_digest\":\"sha256:2eb00ffb3a0e3f633485db6a705fae7517d9527b59055f15979f0a68468428c5\",\"bundle_entry_key\":\"def-stieltjes-transform\",\"bundle_id\":\"population.percolation-subadditivity-and-gaussian-chaos-001\",\"claim_kind\":\"definition\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-8e06e1f7-M9/bundle_ap03.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.random-matrices:stieltjes-transform-of-a-measure\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:0a10dca57c02792c802de68a722e918c5119beec63f791aa1a02a4d2b2b22ace\",\"revision_digest\":\"sha256:59b71972a03cccd34a3b9f19358b0f2ad82bb2b26ccd049a537b06518a32a52b\",\"source_id\":\"rederived:claude-8e06e1f7-M9\",\"source_revision\":\"standard-definition-2026-08-22; written by the author; the bound |m| <= mu(R)/Im z was verified directly and the sign-convention warning added deliberately; textbook cross-reference in the statement, source not fetched this session\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_930971f2e2958ad4b39127882e7fb8c2f41978d305608de432e06a9933e30a3d",
+      "kind": "claim",
+      "title": "Stieltjes Inversion: a Measure Is Recovered from the Boundary Values of Its Stieltjes Transform",
+      "body": "Let $\\mu$ be a finite positive measure on $\\mathbb{R}$ with Stieltjes transform $m(z) = \\int \\frac{d\\mu(t)}{t - z}$, defined and analytic for $\\operatorname{Im} z > 0$, with $\\operatorname{Im} m(z) > 0$ there. Then for every $a < b$ that are continuity points of $\\mu$, $\\mu((a, b]) = \\lim_{\\eta \\downarrow 0} \\frac{1}{\\pi}\\int_a^b \\operatorname{Im} m(x + i\\eta)\\,dx$, and if $\\mu$ has a continuous density $f$ at $x$ then $f(x) = \\frac{1}{\\pi}\\lim_{\\eta \\downarrow 0} \\operatorname{Im} m(x + i\\eta)$. The real part has the companion limit $\\operatorname{Re} m(x + i\\eta) \\to \\pi H_f(x) := \\mathrm{PV}\\int \\frac{f(t)}{t - x}\\,dt$ wherever $f$ is Hölder continuous, so the boundary value $\\breve m(x) = \\lim_{\\eta\\downarrow0} m(x + i\\eta) = \\pi H_f(x) + i\\pi f(x)$ (Sokhotski-Plemelj). In particular two measures with the same Stieltjes transform on $\\mathbb{C}^+$ coincide, and a sequence of probability measures converges weakly if and only if the Stieltjes transforms converge pointwise on $\\mathbb{C}^+$ (to the transform of a probability measure).\nmu a finite positive Borel measure on the real line\nfor the density statement: mu absolutely continuous with a density continuous at x; for the real-part statement: the density Hölder continuous near x",
+      "metadata_json": "{\"artifact_digest\":\"sha256:b52e4e5c939acb9152a077895c6a97ef6ab11f5e5cbcdb136fe03a9c468ca2f6\",\"artifact_path\":\"objects/sha256/b5/b52e4e5c939acb9152a077895c6a97ef6ab11f5e5cbcdb136fe03a9c468ca2f6.md\",\"bundle_digest\":\"sha256:57cea665b7c7b5eb1997ae7cd7d75ed8ff1000ec267fa0ec9ec86380caf68e67\",\"bundle_entry_key\":\"thm-stieltjes-inversion\",\"bundle_id\":\"population.stieltjes-inversion-silverstein-equation-and-subsampling-consistency-011\",\"claim_kind\":\"theorem\",\"conditions\":[],\"domain\":\"complex analysis / spectral theory / random matrix theory\",\"draft\":\"claude-boxstatus-0904/bundle_rmt_011.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.random-matrices:stieltjes-inversion-formula-density-from-the-boundary-imaginary-part\",\"overlay_schema_version\":1,\"proof_text\":\"For $z = x + i\\\\eta$, $\\\\operatorname{Im}\\\\frac{1}{t - z} = \\\\frac{\\\\eta}{(t - x)^2 + \\\\eta^2} = \\\\pi P_\\\\eta(x - t)$ with $P_\\\\eta(u) = \\\\frac{1}{\\\\pi}\\\\frac{\\\\eta}{u^2 + \\\\eta^2}$ the Poisson (Cauchy) kernel, which is a probability density in $u$ for every $\\\\eta > 0$ and concentrates at $0$ as $\\\\eta \\\\downarrow 0$ (an approximate identity). Hence $\\\\frac{1}{\\\\pi}\\\\operatorname{Im} m(x + i\\\\eta) = (P_\\\\eta * \\\\mu)(x)$, the smoothing of $\\\\mu$ by the Cauchy kernel. Integrating over $(a, b]$ and letting $\\\\eta \\\\downarrow 0$: by Fubini, $\\\\int_a^b (P_\\\\eta * \\\\mu)(x)\\\\,dx = \\\\int \\\\big[\\\\int_a^b P_\\\\eta(x - t)\\\\,dx\\\\big] d\\\\mu(t)$, and the inner integral tends to $1$ for $t \\\\in (a, b)$, to $1/2$ at $t = a$ or $b$, and to $0$ outside $[a, b]$, boundedly; dominated convergence gives $\\\\mu((a, b)) + \\\\tfrac12\\\\mu(\\\\{a\\\\}) + \\\\tfrac12\\\\mu(\\\\{b\\\\})$, which is $\\\\mu((a, b])$ at continuity points. If $\\\\mu$ has a density $f$ continuous at $x$, $(P_\\\\eta * f)(x) \\\\to f(x)$ is the standard approximate-identity limit. For the real part, $\\\\operatorname{Re}\\\\frac{1}{t - z} = \\\\frac{t - x}{(t - x)^2 + \\\\eta^2}$, whose integral against a Hölder-continuous $f$ converges to the principal-value integral $\\\\mathrm{PV}\\\\int f(t)/(t - x)\\\\,dt$ (split the integral at $|t - x| = \\\\delta$: the outer part converges by dominated convergence, the inner part is $\\\\int_{|u|<\\\\delta} \\\\frac{u}{u^2 + \\\\eta^2}(f(x+u) - f(x))\\\\,du$ plus an odd integral of $f(x)$ that vanishes, and the remaining term is $O(\\\\delta^\\\\alpha)$ uniformly in $\\\\eta$). Uniqueness follows from the inversion formula; the equivalence with weak convergence is the standard continuity theorem for the Stieltjes transform (the functions $t \\\\mapsto 1/(t - z)$, $z \\\\in \\\\mathbb{C}^+$, are bounded continuous and separate finite measures).\",\"release_manifest_digest\":\"sha256:44fc88b378e387a8a897fdb196dff2eac8633b617d9117c2e55358b9f21ae6e2\",\"revision_digest\":\"sha256:930971f2e2958ad4b39127882e7fb8c2f41978d305608de432e06a9933e30a3d\",\"source_id\":\"Bai, Silverstein, 'Spectral Analysis of Large Dimensional Random Matrices' (2010), Theorem B.8 and Appendix B; Anderson, Guionnet, Zeitouni (2010) Section 2.4; wikipedia:Stieltjes transformation\",\"source_revision\":\"as-read-2026-09-05\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_09038093d9a000c99aeace01330a48caf661984fe5badf3cd03f77be5582e4db",
+      "kind": "claim",
+      "title": "Open problem: Extended states for the three-dimensional Anderson model at weak disorder",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove existence of absolutely continuous spectrum (delocalised states) for the random Schrodinger operator -Delta + lambda V on Z^3 at small disorder lambda, and GOE local statistics for its finite-volume restriction. Source: Bourgade: Random band matrices, ICM 2018 survey, Section 2.1, p. 7.\nPosed in Bourgade: Random band matrices, ICM 2018 survey\nCurrent status unverified as of 2026-09-07",
+      "metadata_json": "{\"artifact_digest\":\"sha256:d2bd4abae8e90c9c25f1a2c6777a20a4ca2abda80ee5032a7f1bb4b781f3c764\",\"artifact_path\":\"objects/sha256/d2/d2bd4abae8e90c9c25f1a2c6777a20a4ca2abda80ee5032a7f1bb4b781f3c764.md\",\"bundle_digest\":\"sha256:bee140cfde7d5bf56318732d7b8273e9824005d4b35903e078e74d929a549266\",\"bundle_entry_key\":\"op-c0056\",\"bundle_id\":\"population.probability-intake-claude-bulk-problems-and-exclusions-c004a\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_006.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.random-matrices:open-problem-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:27ce636e4c81aa81a5dbf74798c83425e9bd5ce208c7c2ac89a1b27196ba3791\",\"revision_digest\":\"sha256:09038093d9a000c99aeace01330a48caf661984fe5badf3cd03f77be5582e4db\",\"source_id\":\"owner-probability-intake-claude-20260907:op-c0056\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_08aec3cbb621052600dbc46ec290b8fc949fbdb302b77505daa2802cf0a47c06",
+      "kind": "claim",
+      "title": "Attempt on Extended states for the three-dimensional Anderson model at weak disorder",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Review the failure of perturbation theory and test a restricted version on a tree-like subgraph. Result: On the Bethe lattice a.c. spectrum is known (Klein; Aizenman-Warzel) because the self-consistent equation for the Green function has a stable solution; on Z^3 the corresponding equation is not closed. A known partial statement is that the disorder-averaged Green function has diffusive behaviour up to times lambda^{-2-delta} (Erdos-Salmhofer-Yau), which is the kinetic regime and does not reach the infinite-time statement. I tested the possibility of transferring the tree result through a spanning tree of Z^3: the operator restricted to a spanning tree is not the operator on Z^3, and removing the edges changes the spectrum non-perturbatively, so no transfer. No result; the problem is recorded as attempted with the explicit obstruction that the only tools proving a.c. spectrum are tree-specific. Obstruction: Absence of a closed self-consistency equation on Z^3; kinetic-regime results stop at finite times.\nRefers to the open problem node open-problem-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor\nNo independent review; result status attempted_unsolved",
+      "metadata_json": "{\"artifact_digest\":\"sha256:bd9a25346fde0154a3b325e1ba2c74719ce3f5e42f054874c8aae7499e262580\",\"artifact_path\":\"objects/sha256/bd/bd9a25346fde0154a3b325e1ba2c74719ce3f5e42f054874c8aae7499e262580.md\",\"bundle_digest\":\"sha256:3afc0553fbedbe5e4a4f8548c9d6f5c8d0ecfb86f127315c266229ee060578ce\",\"bundle_entry_key\":\"at-c0056\",\"bundle_id\":\"population.probability-intake-claude-bulk-attempts-c004b\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_007.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.random-matrices:attempt-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:d60ad0b3f8346e7b04626eeea85bdd0598b8424cfd19b6d40584ecb68567692f\",\"revision_digest\":\"sha256:08aec3cbb621052600dbc46ec290b8fc949fbdb302b77505daa2802cf0a47c06\",\"source_id\":\"owner-probability-intake-claude-20260907:at-c0056\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_1117339555d7cfc5a098e25c67f2db0e",
+      "kind": "claim",
+      "title": "Anderson model (random Schrodinger operators)",
+      "body": "The random Schrodinger operator $H=-\\Delta+\\lambda V$ on $\\mathbb Z^d$ with i.i.d. potential $V$; it has localization (pure point spectrum with exponentially decaying eigenfunctions) at large disorder and at band edges, while extended states are conjectured for $d\\ge3$ at weak disorder; random band matrices interpolate between it and Wigner matrices.",
+      "metadata_json": "{\"claim_kind\":\"definition\",\"domain\":\"probability theory (vocabulary)\",\"layer\":\"vocabulary\",\"logical_id\":\"vocab.probability.anderson-model\",\"proposal\":\"w14-vocabulary-2026-10-06\",\"provenance\":\"Vocabulary node proposed by worker w14 (claude-opus-5-5) on 6 Oct 2026 for the probability math brain: a standard definition written for the node, not reviewed; it links the cards that define or use the notion.\",\"vocabulary\":{\"area\":\"random operators\",\"generic\":false,\"key\":\"anderson-model\"}}"
+    },
+    {
+      "id": "claim_bcf6c1cc9ea1effc2010dd3e2059f8d4",
+      "kind": "claim",
+      "title": "Stieltjes transform",
+      "body": "$s_\\mu(z)=\\int\\frac{d\\mu(x)}{x-z}$ for $z$ off the support; it determines $\\mu$ (inversion formula), and pointwise convergence on the upper half-plane is equivalent to vague convergence.",
+      "metadata_json": "{\"claim_kind\":\"definition\",\"domain\":\"probability theory (vocabulary)\",\"layer\":\"vocabulary\",\"logical_id\":\"vocab.probability.stieltjes-transform\",\"proposal\":\"w14-vocabulary-2026-10-06\",\"provenance\":\"Vocabulary node proposed by worker w14 (claude-opus-5-5) on 6 Oct 2026 for the probability math brain: a standard definition written for the node, not reviewed; it links the cards that define or use the notion.\",\"vocabulary\":{\"area\":\"random matrices\",\"generic\":false,\"key\":\"stieltjes-transform\"}}"
+    }
+  ],
+  "store_elapsed_seconds": 0.09528600005432963
+}

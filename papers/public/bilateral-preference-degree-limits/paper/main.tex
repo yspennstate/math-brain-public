@@ -1,0 +1,480 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem,booktabs}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Bin}{\operatorname{Bin}}
+\newcommand{\Poi}{\operatorname{Poi}}
+\newcommand{\Bet}{\operatorname{Beta}}
+
+\hypersetup{pdftitle={Degree fluctuations in bilateral preference random graphs},pdfauthor={Yitzchak Shmalo}}
+
+\title[Degree fluctuations in bilateral preference graphs]{Degree fluctuations in bilateral preference random graphs}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{14 October 2026}
+\subjclass[2020]{05C80, 60F05, 60C05}
+\keywords{bilateral preference random graph, degree distribution, mixed Poisson law, order statistics, Erlang weighted tree}
+
+\begin{document}
+\begin{abstract}
+In the bilateral preference random graph $LK(n,k)$ of La and Kabkab, independent uniform scores are placed on the edges of $K_n$, each vertex prefers its $k$ incident edges of smallest score, and an edge is kept when both of its endpoints prefer it. Dabirian and Subramanian asked for the limiting distribution of the standardized degree $(D-\E D)/\sqrt{\Var D}$ of a vertex. We show that if $k\to\infty$ and $n-k\to\infty$, then $(k-D)/s_n$, where $s_n^2=k(n-k)/n$, converges in distribution and in its first two moments to $\phi(Z)+Z\Phi(Z)$ with $Z$ standard normal. Consequently $\E D=k-s_n/\sqrt\pi+o(s_n)$, $\Var D=(1/3+(\sqrt3-2)/(2\pi))s_n^2+o(s_n^2)$, and the standardized degree converges to an explicit law that is bounded above, hence not normal. If instead $r=n-1-k\ge1$ is fixed, then $k-D$ converges in distribution and in all moments to a mixed Poisson variable whose mean is an explicit function of a gamma variable with shape $r$. These limits depend on $r$ and, after standardization, converge to the interior law as $r\to\infty$. Together with the Erlang weighted tree of Moharrami, Subramanian, Liu and Sundaresan for fixed $k$, this identifies every subsequential limit of the standardized degree; no single law serves for all sequences $k(n)$. We also show that $\E(k-D)$ takes the same value at the budgets $k$ and $n-1-k$ for every $n$.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $n\ge3$ and $1\le k\le n-1$. Put independent scores $U_{ij}=U_{ji}$, uniform on $[0,1]$, on the edges of the complete graph $K_n$. Each vertex prefers the $k$ edges at it with the smallest scores, and the graph $LK(n,k)$ keeps an edge if and only if both of its endpoints prefer it. The model is due to La and Kabkab \cite{LK}, who studied its connectivity and diameter. Dabirian and Subramanian \cite{DS} let each vertex prefer its $k$ edges of largest score; the map $U\mapsto1-U$ turns one description into the other, so the two give the same law. Moharrami, Subramanian, Liu and Sundaresan \cite{EWT} study a finite model with independent exponential edge costs in which every vertex is willing to use its $d_i$ cheapest edges; when every $d_i$ equals $k$ this is again $LK(n,k)$, since only the order of the scores matters.
+
+Fix a vertex $0$, the root, and let $D=D_{n,k}$ be its degree. The root keeps only edges it prefers, so $D\le k$. Dabirian and Subramanian show that
+\[
+\E D=k-c_k\bigl(1+O(k^2/n)\bigr),\qquad c_k=\frac{(2k-1)\binom{2k-2}{k-1}}{2^{2k-1}},
+\]
+when $k=o(\sqrt n)$ \cite[Theorem~7]{DS}, and that $\E D=k-\sqrt{k/\pi}+1/(8\sqrt{\pi k})+o(k^{-1/2})$ when $k\to\infty$ with $k=o(n^{1/3})$ \cite[Theorem~8]{DS}. Among their open problems \cite[Section~1.1]{DS} they ask for the limiting distribution of $(D-\E D)/\sqrt{\Var D}$, and they note that even $\Var D$ is hard to compute, because the decisions of different vertices are dependent. For fixed $k$ the answer is contained in \cite{EWT}: the graph converges locally to the Erlang weighted tree \cite[Theorem~2.1]{EWT}, and the law of the root degree of that tree is given in \cite[Theorem~5.1]{EWT}. We treat the remaining regimes.
+
+Write $H=k-D$; it counts the edges preferred by the root and not by their other endpoint. Put
+\begin{gather*}
+s_n^2=\frac{k(n-k)}{n},\qquad g(z)=\phi(z)+z\Phi(z)=\E(z-Z')_+,\\
+v=\Var g(Z)=\frac13+\frac{\sqrt3-2}{2\pi}=0.290688\ldots,
+\end{gather*}
+where $\phi$ and $\Phi$ are the standard normal density and distribution function and $Z,Z'$ are independent standard normal variables. The results are as follows.
+
+\begin{enumerate}[label=(\arabic*),leftmargin=*]
+\item \emph{Interior.} If $k\to\infty$ and $n-k\to\infty$, then $H/s_n\Rightarrow g(Z)$ with convergence of the first two moments (Theorem~\ref{thm:interior}). Hence $\E D=k-s_n/\sqrt\pi+o(s_n)$, $\Var D=vs_n^2+o(s_n^2)$, and $(D-\E D)/\sqrt{\Var D}$ converges in distribution to $L_\infty=(\pi^{-1/2}-g(Z))/\sqrt v$. This law has an explicit density (Section~\ref{sec:law}) and takes values in $(-\infty,1.0464\ldots)$, so it is not normal. In the regime of \cite[Theorem~8]{DS} the formula for $\E D$ agrees with theirs to first order (Remark~\ref{rem:DS}).
+\item \emph{Fixed complement.} If $r=n-1-k\ge1$ is fixed, then $H$ converges in distribution and in all moments to a variable $H_r$ which, given a gamma variable $A_r$ with shape $r$ and scale $1$, is Poisson with mean $\Lambda_r(A_r)=e^{-A_r}\sum_{\ell<r}(r-\ell)A_r^\ell/\ell!$ (Theorem~\ref{thm:fixedr}). Its mean is $r\binom{2r}{r}4^{-r}$ (Proposition~\ref{prop:mu}). The standardized limits for $r=1$ and $r=2$ are different, and as $r\to\infty$ they converge to $L_\infty$ (Theorem~\ref{thm:glue}).
+\item \emph{All sequences.} Along any sequence $k(n)$, every subsequential limit of the standardized degree is one of these laws or a fixed-$k$ law from \cite{EWT}, and no single law serves for all sequences (Theorem~\ref{thm:class}).
+\item \emph{Duality.} For every $n$ and $1\le k\le n-2$, $\E H$ is the same at the budgets $k$ and $n-1-k$ (Proposition~\ref{prop:dual}). As $n\to\infty$ this identifies the constant $c_k$ of \cite[Theorem~7]{DS} with the mean of $H_k$ (Corollary~\ref{cor:ck}).
+\end{enumerate}
+
+The dependence that makes $\Var D$ hard is weak once the root's own cutoff is fixed. Let $X$ be the $(k+1)$st smallest score at the root. Given $X$, two neighbours of the root interact only through the edge between them, and Lemma~\ref{lem:cov} bounds the resulting covariance by $1/(4(n-2)^2X^2)$, which is $O(k^{-2})$ when $X$ is of order $k/n$. Summed over the $k^2$ pairs this is $O(1)$, so $H$ stays within $O(s_n^{1/2})$ of its conditional mean $kq_n(X)$, a function of $X$ alone, and the limit $g(Z)$ is that function seen at the scale of the fluctuations of $X$. Along the way Lemma~\ref{lem:var} gives $\Var D$ exactly for every $n$ and $k$. At a fixed complement the relevant scale is $n(1-U)$ at the top of the root's scores; there the candidates form a Poisson process in the limit, and the finitely many edges among them each matter with probability $O(1/n)$. Section~\ref{sec:comp} describes the computer checks that accompany the paper.
+
+\section{The interior regime}\label{sec:interior}
+
+\begin{theorem}\label{thm:interior}
+Suppose that $k=k(n)\to\infty$ and $n-k\to\infty$. Then $H/s_n\Rightarrow g(Z)$, and
+\[
+\frac{\E H}{s_n}\to\E g(Z)=\frac1{\sqrt\pi},\qquad \frac{\E H^2}{s_n^2}\to\E g(Z)^2=\frac13+\frac{\sqrt3}{2\pi}.
+\]
+Consequently $\E D=k-s_n/\sqrt\pi+o(s_n)$, $\Var D=vs_n^2+o(s_n^2)$, and
+\[
+\frac{D-\E D}{\sqrt{\Var D}}\Longrightarrow L_\infty:=\frac{\pi^{-1/2}-g(Z)}{\sqrt v}.
+\]
+\end{theorem}
+
+\subsection{A representation of \texorpdfstring{$H$}{H}}
+Let $1\le k\le n-2$; for $k=n-1$ every edge is kept and $H=0$. Let $X$ be the $(k+1)$st smallest of the $n-1$ scores at the root and let $S$ be the set of the $k$ vertices $i$ with $U_{0i}<X$. Then $X\sim\Bet(k+1,n-k-1)$. Given $X$ and $S$, the scores $U_{0i}$, $i\in S$, are independent and uniform on $(0,X)$, and they are independent of the scores of the edges not at the root, which are still independent and uniform on $[0,1]$.
+
+For $i\in S$ let $T_i$ be the $k$th smallest of the $n-2$ scores $U_{ij}$, $j\notin\{0,i\}$. Then $T_i\sim\Bet(k,n-k-1)$, and $i$ prefers the edge $\{0,i\}$ if and only if $U_{0i}<T_i$. With $R_i=\1\{U_{0i}>T_i\}$ we have $H=\sum_{i\in S}R_i$. Let $T$ be a $\Bet(k,n-k-1)$ variable independent of $X$, let $F_T$ and $f_T$ be its distribution function and density, and put
+\begin{equation}\label{eq:q}
+q_n(x)=\frac1x\,\E(x-T)_+=\frac1x\int_0^xF_T(u)\,du,\qquad 0<x\le1.
+\end{equation}
+Given $X$, each $U_{0i}$ is uniform on $(0,X)$ and independent of $T_i$, so $\Pp(R_i=1\mid X)=q_n(X)$ and
+\begin{equation}\label{eq:condmean}
+\E[H\mid X]=kq_n(X).
+\end{equation}
+None of these conditional laws depends on $S$.
+
+\subsection{Two neighbours of the root}
+
+\begin{lemma}\label{lem:cov}
+Let $1\le k\le n-2$, let $i,j\in S$ be distinct, and write $W=U_{ij}$. Given $X$ and $W$, the indicators $R_i$ and $R_j$ are independent, and $\Pp(R_i=1\mid X,W)=p_X(W)$, where
+\[
+p_x(w)=b_x+\frac{(F_T(x)-F_T(w))_+}{(n-2)x},\qquad b_x=\frac1x\int_0^x\Pp\bigl(\Bin(n-3,u)\ge k\bigr)\,du.
+\]
+Moreover $\E[p_X(W)\mid X]=q_n(X)$ and
+\[
+0\le\Cov(R_i,R_j\mid X)=\Var\bigl(p_X(W)\mid X\bigr)\le\frac{F_T(X)^2}{4(n-2)^2X^2}\le\frac1{4(n-2)^2X^2}.
+\]
+\end{lemma}
+
+\begin{proof}
+Given $X$, the vertex $i$ decides about $\{0,i\}$ using $U_{0i}$, $W$ and the $n-3$ scores $U_{il}$ with $l\notin\{0,i,j\}$, and $j$ uses $U_{0j}$, $W$ and the scores $U_{jl}$ with $l\notin\{0,i,j\}$. Apart from $W$ these sets of scores are disjoint, and $U_{0i}$, $U_{0j}$ are independent and uniform on $(0,X)$ given $X$ and $S$. So $R_i$ and $R_j$ are independent given $(X,W)$, by symmetry both have conditional probability $p_X(W)$, and since $W$ is independent of $X$, $\Cov(R_i,R_j\mid X)=\Var(p_X(W)\mid X)$.
+
+Fix $U_{0i}=u<X$ and $W=w$, and let $N_u$ be the number of $l\notin\{0,i,j\}$ with $U_{il}<u$, so that $N_u\sim\Bin(n-3,u)$. The vertex $i$ rejects $\{0,i\}$ if and only if at least $k$ of its other $n-2$ scores lie below $u$, that is, $N_u+\1\{w<u\}\ge k$. Hence
+\[
+\Pp(R_i=1\mid U_{0i}=u,\,W=w)=\Pp(N_u\ge k)+\1\{w<u\}\,\Pp(N_u=k-1).
+\]
+Since $\binom{n-3}{k-1}B(k,n-k-1)=1/(n-2)$, we have $\Pp(N_u=k-1)=\binom{n-3}{k-1}u^{k-1}(1-u)^{n-k-2}=f_T(u)/(n-2)$. Averaging over $u$ uniform on $(0,X)$ gives the formula for $p_X(w)$, and averaging $p_X(W)$ over $W$ gives $\Pp(R_i=1\mid X)=q_n(X)$. Finally $p_X(W)-b_X$ takes values in $[0,F_T(X)/((n-2)X)]$, and a random variable with values in an interval of length $\ell$ has variance at most $\ell^2/4$ (Popoviciu's inequality).
+\end{proof}
+
+\begin{lemma}\label{lem:var}
+For $1\le k\le n-2$,
+\[
+\Var H=\E\bigl[kq_n(X)(1-q_n(X))\bigr]+k(k-1)\,\E\bigl[\Var(p_X(W)\mid X)\bigr]+k^2\Var q_n(X).
+\]
+In particular
+\begin{equation}\label{eq:varbound}
+\Var(H\mid X)\le kq_n(X)+\frac{k^2}{4(n-2)^2X^2}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Given $X$, $H$ is a sum of $k$ indicators with mean $q_n(X)$ whose pairwise covariances equal $\Var(p_X(W)\mid X)$ by Lemma~\ref{lem:cov}. So $\Var(H\mid X)=kq_n(X)(1-q_n(X))+k(k-1)\Var(p_X(W)\mid X)$, and the identity follows from $\Var H=\E\Var(H\mid X)+\Var\E[H\mid X]$ and \eqref{eq:condmean}. The bound follows from $q_n(1-q_n)\le q_n$ and Lemma~\ref{lem:cov}.
+\end{proof}
+
+All three terms are explicit integrals against the beta laws of $X$ and $T$, so Lemma~\ref{lem:var} gives $\Var D=\Var H$ in closed form for every $n$ and $k$; Section~\ref{sec:comp} uses it.
+
+\subsection{The variance given \texorpdfstring{$X$}{X} is small}
+
+\begin{lemma}\label{lem:small}
+Let $n\ge4$, $1\le k\le n-2$, $G_n=\{X\ge k/(2n)\}$ and $c=\log2-1/2$. Then $\Pp(G_n^c)\le e^{-ck}$ and
+\[
+\E\bigl[(H-kq_n(X))^2\bigr]=\E\Var(H\mid X)\le6+4s_n+k^2e^{-ck}.
+\]
+If $k\to\infty$ and $n-k\to\infty$, then $\E[(H-kq_n(X))^2]=o(s_n^2)$.
+\end{lemma}
+
+\begin{proof}
+The event $X<k/(2n)$ says that at least $k+1$ of the $n-1$ scores at the root lie below $k/(2n)$, so $\Pp(G_n^c)=\Pp(\Bin(n-1,k/(2n))\ge k+1)$. For a binomial variable $N$ with mean $\mu$ and $t>0$, $\Pp(N\ge m)\le e^{-tm}\E e^{tN}\le\exp(-tm+\mu(e^t-1))$; with $t=\log2$, $m=k+1$ and $\mu\le k/2$ this is at most $2^{-k-1}e^{k/2}\le e^{-ck}$.
+
+On $G_n$ the second term in \eqref{eq:varbound} is at most $n^2/(n-2)^2\le4$. For the first, $(x-t)_+\le|x-t|$ gives $kq_n(X)\le(k/X)\E[|X-T|\mid X]\le2n\,\E[|X-T|\mid X]$ on $G_n$, and therefore
+\[
+\E[kq_n(X);G_n]\le2n\,\E|X-T|\le2n\bigl(\Var X+\Var T+(\E X-\E T)^2\bigr)^{1/2}.
+\]
+The beta moments give $\Var X=(k+1)(n-k-1)/(n^2(n+1))\le2s_n^2/n^2$, $\Var T=k(n-k-1)/((n-1)^2n)\le2s_n^2/n^2$ for $n\ge4$, and $0\le\E X-\E T=(n-1-k)/(n(n-1))\le1/n$. Hence $\E[kq_n(X);G_n]\le2n(4s_n^2/n^2+1/n^2)^{1/2}\le4s_n+2$. On $G_n^c$ we use $\Var(H\mid X)\le k^2$, which holds because $0\le H\le k$. Adding up gives the bound.
+
+For the last claim note that $s_n^2\ge\min(k,n-k)/2\to\infty$, so $(6+4s_n)/s_n^2\to0$. If $k\le n/2$ then $s_n^2\ge k/2$ and $k^2e^{-ck}/s_n^2\le2ke^{-ck}\to0$. If $k>n/2$ then $k^2e^{-ck}\le n^2e^{-cn/2}\to0$ while $s_n^2\ge1/2$.
+\end{proof}
+
+\subsection{The conditional mean}
+
+Put $p_n=k/n$, $\sigma_n=s_n/n$,
+\[
+U_n=\frac{X-p_n}{\sigma_n},\qquad V_n=\frac{T-p_n}{\sigma_n},\qquad g_n(u)=\E(u-V_n)_+.
+\]
+Since $(X-T)_+=\sigma_n(U_n-V_n)_+$ and $k\sigma_n/s_n=k/n$,
+\begin{equation}\label{eq:rescale}
+\frac{kq_n(X)}{s_n}=\frac{k}{nX}\,g_n(U_n).
+\end{equation}
+
+\begin{lemma}\label{lem:condmean}
+If $k\to\infty$ and $n-k\to\infty$, then $kq_n(X)/s_n\Rightarrow g(Z)$, and the squares $(kq_n(X)/s_n)^2$ are uniformly integrable. In particular $\E[kq_n(X)]/s_n\to\E g(Z)$ and $\E[(kq_n(X))^2]/s_n^2\to\E g(Z)^2$.
+\end{lemma}
+
+\begin{proof}
+\emph{Normal limits.} Fix $u\in\R$ and put $\pi_n=p_n+\sigma_nu$. Since $\sigma_n/p_n=s_n/k\le k^{-1/2}$ and $\sigma_n/(1-p_n)=s_n/(n-k)\le(n-k)^{-1/2}$, for large $n$ we have $0<\pi_n<1$ and $(n-1)\pi_n(1-\pi_n)=s_n^2(1+o(1))\to\infty$. Now $\Pp(U_n\le u)=\Pp(X\le\pi_n)=\Pp(\Bin(n-1,\pi_n)\ge k+1)$, and this binomial variable has mean $k+s_nu+O(1+|u|)$. By the central limit theorem for binomial variables whose variance tends to infinity, $\Pp(U_n\le u)\to\Pp(Z\ge-u)=\Phi(u)$. In the same way $\Pp(V_n\le u)=\Pp(\Bin(n-2,\pi_n)\ge k)\to\Phi(u)$. So $U_n\Rightarrow Z$ and $V_n\Rightarrow Z'$.
+
+\emph{Fourth moments.} For a $\Bet(a,b)$ variable the fourth central moment is $3+\kappa$ times the squared variance, where
+\[
+\kappa=\frac{6\bigl[(a-b)^2(a+b+1)-ab(a+b+2)\bigr]}{ab(a+b+2)(a+b+3)},\qquad |\kappa|\le\frac6a+\frac6b+\frac6{a+b}.
+\]
+For $(a,b)=(k+1,n-k-1)$ and $(k,n-k-1)$ this tends to $0$. Moreover $\Var X/\sigma_n^2\to1$, $\Var T/\sigma_n^2\to1$, $(\E X-p_n)/\sigma_n=1/s_n\to0$ and $(\E T-p_n)/\sigma_n=k/((n-1)s_n)\to0$. Hence $\E U_n^4\to3$ and $\E V_n^4\to3$.
+
+\emph{Uniform convergence of $g_n$.} By the Skorokhod representation we may take $V_n\to Z'$ almost surely. The variables $|V_n-Z'|$ are uniformly integrable because $\sup_n\E V_n^2<\infty$, and $x\mapsto(u-x)_+$ is $1$-Lipschitz, so $\sup_u|g_n(u)-g(u)|\le\E|V_n-Z'|\to0$.
+
+\emph{Convergence in law.} Since $X/p_n=1+(\sigma_n/p_n)U_n$ and $U_n$ is tight, $k/(nX)=p_n/X\to1$ in probability. As $g$ is continuous, $g(U_n)\Rightarrow g(Z)$, and with the uniform convergence of $g_n$, \eqref{eq:rescale} and Slutsky's lemma, $kq_n(X)/s_n\Rightarrow g(Z)$.
+
+\emph{Uniform integrability.} On $G_n$ we have $k/(nX)\le2$, and $g_n(u)\le|u|+\E|V_n|\le|u|+2$ for large $n$, so $(kq_n(X)/s_n)^2\le4(|U_n|+2)^2$; these bounds are uniformly integrable because $\sup_n\E U_n^4<\infty$. On $G_n^c$ we have $kq_n(X)\le k$, so $\E[(kq_n(X)/s_n)^2;G_n^c]\le k^2e^{-ck}/s_n^2\to0$, as in the proof of Lemma~\ref{lem:small}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:interior}]
+By Lemma~\ref{lem:small}, $(H-kq_n(X))/s_n\to0$ in $L^2$. With Lemma~\ref{lem:condmean} this gives $H/s_n\Rightarrow g(Z)$, and since the $L^2$ norms of $H/s_n$ and $kq_n(X)/s_n$ differ by $o(1)$, also $\E H/s_n\to\E g(Z)$ and $\E H^2/s_n^2\to\E g(Z)^2$.
+
+For the constants, $Z-Z'$ is normal with variance $2$, so $\E g(Z)=\E(Z-Z')_+=1/\sqrt\pi$. With $Z_1,Z_2$ independent copies of $Z'$, $g(Z)^2=\E[(Z-Z_1)_+(Z-Z_2)_+\mid Z]$, and $(Z-Z_1,Z-Z_2)/\sqrt2$ is a standard normal pair with correlation $1/2$. For a standard normal pair $(\xi,\eta)$ with correlation $\rho$,
+\[
+\E[\xi_+\eta_+]=\frac{\sqrt{1-\rho^2}+\rho(\pi/2+\arcsin\rho)}{2\pi},
+\]
+which is $1/6+\sqrt3/(4\pi)$ at $\rho=1/2$. Hence $\E g(Z)^2=1/3+\sqrt3/(2\pi)$ and $\Var g(Z)=\E g(Z)^2-1/\pi=v$. Since $D=k-H$, we get $\E D=k-s_n/\sqrt\pi+o(s_n)$ and $\Var D=\Var H=vs_n^2+o(s_n^2)$, and
+\[
+\frac{D-\E D}{\sqrt{\Var D}}=\frac{\E H/s_n-H/s_n}{\sqrt{\Var H/s_n^2}}\Longrightarrow\frac{\pi^{-1/2}-g(Z)}{\sqrt v}.\qedhere
+\]
+\end{proof}
+
+\begin{remark}\label{rem:DS}
+If $k\to\infty$ and $k=o(n^{1/3})$, the regime of \cite[Theorem~8]{DS}, then $0\le\sqrt k-s_n\le\sqrt k\cdot k/n=k^{3/2}/n\to0$, so Theorem~\ref{thm:interior} gives $\E D=k-\sqrt{k/\pi}+o(\sqrt k)$, the first two terms of \cite[Theorem~8]{DS}, and the standardized degree converges to $L_\infty$ in that regime as well.
+\end{remark}
+
+\section{The interior limit law}\label{sec:law}
+
+Since $g'=\Phi>0$, $g(z)\to0$ as $z\to-\infty$ and $g(z)-z\to0$ as $z\to\infty$, the function $g$ increases strictly from $0$ to $\infty$. Let $m=\pi^{-1/2}$. The variable $L_\infty=(m-g(Z))/\sqrt v$ has mean $0$ and variance $1$ and takes values in $(-\infty,m/\sqrt v)$, where $m/\sqrt v=1.04643\ldots$. For $x<m/\sqrt v$ let $y_x=g^{-1}(m-\sqrt v\,x)$. Then
+\begin{equation}\label{eq:Lcdf}
+\Pp(L_\infty\le x)=\Pp(Z\ge y_x)=1-\Phi(y_x),
+\end{equation}
+and differentiating with $g'=\Phi$ gives the density
+\begin{equation}\label{eq:Ldens}
+f_\infty(x)=\frac{\sqrt v\,\phi(y_x)}{\Phi(y_x)},\qquad x<\frac m{\sqrt v}.
+\end{equation}
+As $x\to-\infty$ we have $y_x=m-\sqrt v\,x+o(1)$, so the lower tail is Gaussian. As $x$ increases to $m/\sqrt v$, $y_x\to-\infty$ and $f_\infty(x)\sim\sqrt v\,|y_x|\to\infty$. The law is bounded above, so it is not normal.
+
+\section{The fixed complement}\label{sec:fixedr}
+
+Fix $r\ge1$ and let $k=n-1-r$, so that every vertex rejects exactly its $r$ edges of largest score. For $i\ne0$ put $Y_i=n(1-U_{0i})$; these are independent and uniform on $(0,n)$. Let $A_{n,r}$ be the $r$th smallest of $Y_1,\dots,Y_{n-1}$. The root prefers $\{0,i\}$ if and only if $Y_i>A_{n,r}$. Let $J_i$ be the indicator that $i$ rejects $\{0,i\}$, which happens if and only if fewer than $r$ of the other $n-2$ scores at $i$ exceed $U_{0i}$. Then $H=\sum_{i\ne0}\1\{Y_i>A_{n,r}\}J_i$ and
+\[
+\Pp(J_i=1\mid Y_i=y)=\Pp\bigl(\Bin(n-2,y/n)\le r-1\bigr)\to p_r(y):=e^{-y}\sum_{\ell<r}\frac{y^\ell}{\ell!}=\Pp(G>y),
+\]
+where $G$ has the gamma law with shape $r$ and scale $1$, written $\Gamma(r,1)$.
+
+In the limit the points $Y_i$ form a Poisson process of rate $1$ on $(0,\infty)$, the root rejects the lowest $r$ of them, and the others are marked independently, a point at $y$ with probability $p_r(y)$. Given that the $r$th point is at $a$, the marked points above $a$ then form a Poisson process with intensity $p_r$ on $(a,\infty)$, so their number is Poisson with mean
+\begin{equation}\label{eq:Lambda}
+\Lambda_r(a)=\int_a^\infty p_r(y)\,dy=\E(G-a)_+=e^{-a}\sum_{\ell<r}(r-\ell)\frac{a^\ell}{\ell!}.
+\end{equation}
+The last equality is $\int_a^\infty e^{-y}y^i/i!\,dy=e^{-a}\sum_{\ell\le i}a^\ell/\ell!$, summed over $i<r$. We prove this description by factorial moments; the one dependence to control is the shared edge between two candidates.
+
+\begin{lemma}\label{lem:marks}
+Let $j\ge1$, let $i_1,\dots,i_j$ be distinct vertices other than $0$, and let $y\in(0,n)^j$. Let $Q_n(y)$ be the probability that every $i_a$ rejects $\{0,i_a\}$ given $Y_{i_a}=y_a$ for all $a$, and let $\beta_n(y)=\Pp(\Bin(n-1-j,y/n)\le r-1)$. Then
+\[
+0\le\prod_{a=1}^j\beta_n(y_a)-Q_n(y)\le\binom j2\frac{\max_ay_a}n.
+\]
+\end{lemma}
+
+\begin{proof}
+Split the $n-2$ edges at $i_a$ other than $\{0,i_a\}$ into the $j-1$ edges to the other $i_b$ and the $n-1-j$ edges to the remaining vertices, and let $C_a$ be the number of the latter whose score exceeds $1-y_a/n$. The $C_a$ are independent with $C_a\sim\Bin(n-1-j,y_a/n)$, and $i_a$ rejects $\{0,i_a\}$ if and only if $C_a$ plus the number of edges $\{i_a,i_b\}$ with score above $1-y_a/n$ is at most $r-1$. So rejection by every $i_a$ forces $C_a\le r-1$ for every $a$, which gives the first inequality. If every edge $\{i_a,i_b\}$ has score at most $1-\max(y_a,y_b)/n$, the two events coincide, and each of the $\binom j2$ edges fails this with probability at most $\max_ay_a/n$.
+\end{proof}
+
+\begin{theorem}\label{thm:fixedr}
+Fix $r\ge1$ and let $k=n-1-r$. Let $A_r\sim\Gamma(r,1)$ and, given $A_r$, let $H_r$ be Poisson with mean $\Lambda_r(A_r)$. Then $H$ converges to $H_r$ in distribution and in all moments. For every $j\ge1$,
+\[
+\E[(H)_j]\to\E[(H_r)_j]=\E\bigl[\Lambda_r(A_r)^j\bigr],
+\]
+where $(h)_j=h(h-1)\cdots(h-j+1)$. The generating function of $H_r$ is
+\[
+\E s^{H_r}=\frac1{(r-1)!}\int_0^\infty a^{r-1}e^{-a}\exp\bigl(-(1-s)\Lambda_r(a)\bigr)\,da,\qquad0\le s\le1.
+\]
+\end{theorem}
+
+\begin{proof}
+For an ordered $j$-tuple of distinct vertices $i_1,\dots,i_j$, the root prefers all of them if and only if at least $r$ of the other $n-1-j$ values $Y_l$ lie below $\min_aY_{i_a}$. Given $Y_{i_a}=y_a$ for all $a$, this event depends only on the other scores at the root, and the rejections depend only on scores not at the root, so the two are conditionally independent. Summing over ordered $j$-tuples,
+\begin{equation}\label{eq:factmom}
+\E[(H)_j]=\frac{(n-1)_j}{n^j}\int_{(0,n)^j}P_n(y)Q_n(y)\,dy,\qquad P_n(y)=\Pp\Bigl(\Bin\bigl(n-1-j,\min_ay_a/n\bigr)\ge r\Bigr).
+\end{equation}
+Fix $y\in(0,\infty)^j$. As $n\to\infty$, $P_n(y)\to\Pp(\Poi(\min_ay_a)\ge r)=\Pp(A_r<\min_ay_a)$, $\beta_n(y_a)\to p_r(y_a)$, hence $Q_n(y)\to\prod_ap_r(y_a)$ by Lemma~\ref{lem:marks}, and $(n-1)_j/n^j\to1$. For a dominating function, let $n\ge2(r+j)$ and $i\le r-1$; then
+\[
+\Pp\bigl(\Bin(n-1-j,y/n)=i\bigr)\le\frac{y^i}{i!}\Bigl(1-\frac yn\Bigr)^{n-1-j-i}\le\frac{y^i}{i!}e^{-y/2},
+\]
+so $P_nQ_n\le\prod_a\beta_n(y_a)\le\prod_a\psi_r(y_a)$ with $\psi_r(y)=e^{-y/2}\sum_{i<r}y^i/i!$, which is integrable on $(0,\infty)$. By dominated convergence and Fubini's theorem,
+\[
+\E[(H)_j]\to\int_{(0,\infty)^j}\Pp\Bigl(A_r<\min_ay_a\Bigr)\prod_ap_r(y_a)\,dy=\E\Bigl[\prod_{a=1}^j\int_{A_r}^\infty p_r(y_a)\,dy_a\Bigr]=\E\bigl[\Lambda_r(A_r)^j\bigr].
+\]
+A Poisson variable with mean $\lambda$ has $j$th factorial moment $\lambda^j$, so the limit is $\E[(H_r)_j]$.
+
+Since $\Lambda_r$ decreases, $\Lambda_r\le\Lambda_r(0)=\E G=r$. Hence $\E[(H_r)_j]\le r^j$ and $\E e^{tH_r}\le\exp(r(e^t-1))$ for every $t>0$, so the law of $H_r$ is determined by its moments \cite[Theorem~30.1]{Bil}. Every power $H^m$ is a fixed linear combination of $(H)_1,\dots,(H)_m$, so all moments of $H$ converge to those of $H_r$, and the method of moments \cite[Theorem~30.2]{Bil} gives $H\Rightarrow H_r$. The formula for $\E s^{H_r}$ is the Poisson generating function averaged over $A_r$.
+\end{proof}
+
+\subsection{Moments}
+Let $\mu_r=\E H_r$, $\nu_r=\Var H_r$ and $M_{2,r}=\E\Lambda_r(A_r)^2$. Since $H_r$ is Poisson given $A_r$,
+\[
+\mu_r=\E\Lambda_r(A_r),\qquad \nu_r=\mu_r+\Var\Lambda_r(A_r)=\mu_r+M_{2,r}-\mu_r^2>0.
+\]
+By Theorem~\ref{thm:fixedr}, $\E D=k-\mu_r+o(1)$, $\Var D=\nu_r+o(1)$ and
+\[
+\frac{D-\E D}{\sqrt{\Var D}}\Longrightarrow L_r:=\frac{\mu_r-H_r}{\sqrt{\nu_r}}.
+\]
+For $A\sim\Gamma(r,1)$, $c>0$ and an integer $N\ge0$, $\E[e^{-cA}A^N]=(r-1+N)!/((r-1)!(1+c)^{r+N})$. Expanding \eqref{eq:Lambda} therefore gives the finite sums
+\begin{align}
+\mu_r&=\sum_{\ell<r}\frac{(r-\ell)\,(r-1+\ell)!}{\ell!\,(r-1)!\,2^{r+\ell}},\label{eq:musum}\\
+M_{2,r}&=\frac1{(r-1)!}\sum_{\ell,m<r}\frac{(r-\ell)(r-m)\,(r-1+\ell+m)!}{\ell!\,m!\,3^{r+\ell+m}}.\label{eq:M2}
+\end{align}
+
+\begin{proposition}\label{prop:mu}
+For every $r\ge1$,
+\[
+\mu_r=\frac{r\binom{2r}r}{4^r}=\frac{\Gamma(r+1/2)}{\sqrt\pi\,\Gamma(r)}.
+\]
+\end{proposition}
+
+\begin{proof}
+Let $A,G$ be independent $\Gamma(r,1)$ variables. By \eqref{eq:Lambda}, $\mu_r=\E(G-A)_+=\tfrac12\E|G-A|$. The variables $S=A+G\sim\Gamma(2r,1)$ and $B=A/S\sim\Bet(r,r)$ are independent, and $G-A=S(1-2B)$, so $\mu_r=\tfrac12\E S\cdot\E|1-2B|=r\,\E|1-2B|$. The variable $1-2B$ has density $(1-w^2)^{r-1}/(2^{2r-1}B(r,r))$ on $(-1,1)$, whence $\E|1-2B|=1/(r\,2^{2r-1}B(r,r))$ and
+\[
+\mu_r=\frac1{2^{2r-1}B(r,r)}=\frac{2\,\Gamma(2r)}{4^r\,\Gamma(r)^2}=\frac{r\binom{2r}r}{4^r}.
+\]
+The duplication formula $\Gamma(2r)=2^{2r-1}\Gamma(r)\Gamma(r+1/2)/\sqrt\pi$ gives the last form.
+\end{proof}
+
+For $r=1$ and $r=2$, \eqref{eq:musum} and \eqref{eq:M2} give
+\begin{equation}\label{eq:r12}
+\mu_1=\tfrac12,\quad M_{2,1}=\tfrac13,\quad \nu_1=\tfrac7{12};\qquad \mu_2=\tfrac34,\quad M_{2,2}=\tfrac{22}{27},\quad \nu_2=\tfrac{433}{432}.
+\end{equation}
+Since $\Pp(H_r=0)>0$, the largest value of $L_r$ is $\mu_r/\sqrt{\nu_r}$, whose square is $3/7$ for $r=1$ and $243/433$ for $r=2$. So $L_1$ and $L_2$ are different laws, with largest values $0.6547\ldots$ and $0.7491\ldots$.
+
+\section{From the fixed complement to the interior}\label{sec:glue}
+
+\begin{theorem}\label{thm:glue}
+As $r\to\infty$, $H_r/\sqrt r\Rightarrow g(Z)$ with convergence of the first two moments. Consequently $\mu_r/\sqrt r\to1/\sqrt\pi$, $\nu_r/r\to v$ and $L_r\Rightarrow L_\infty$.
+\end{theorem}
+
+\begin{proof}
+Let $A_r,G_r$ be independent $\Gamma(r,1)$ variables and put $U_r=(A_r-r)/\sqrt r$, $V_r=(G_r-r)/\sqrt r$ and $h_r(u)=\E(V_r-u)_+$. By \eqref{eq:Lambda}, $\Lambda_r(A_r)/\sqrt r=h_r(U_r)$. By the central limit theorem $U_r,V_r\Rightarrow N(0,1)$, and $\E V_r^2=1$, so as in the proof of Lemma~\ref{lem:condmean} $h_r$ converges uniformly to $h(u)=\E(Z'-u)_+=g(-u)$. Hence $h_r(U_r)\Rightarrow g(-Z)$, which has the law of $g(Z)$. Moreover $0\le h_r(u)\le|u|+1$ and $\E U_r^4=3+6/r$, so the squares $h_r(U_r)^2$ are uniformly integrable, and $\E\Lambda_r(A_r)/\sqrt r\to1/\sqrt\pi$, $\E\Lambda_r(A_r)^2/r\to\E g(Z)^2$. In particular $\mu_r=O(\sqrt r)$. The Poisson noise is negligible:
+\[
+\frac1r\E\bigl[(H_r-\Lambda_r(A_r))^2\bigr]=\frac{\E\Lambda_r(A_r)}r=\frac{\mu_r}r\to0.
+\]
+So $H_r/\sqrt r\Rightarrow g(Z)$ with convergence of the first two moments, which gives $\mu_r/\sqrt r\to1/\sqrt\pi$ and $\nu_r/r\to v$, and $L_r=(\mu_r/\sqrt r-H_r/\sqrt r)/\sqrt{\nu_r/r}\Rightarrow L_\infty$.
+\end{proof}
+
+\section{Fixed \texorpdfstring{$k$}{k} and all sequences \texorpdfstring{$k(n)$}{k(n)}}\label{sec:class}
+
+For fixed $k$ the root degree converges to the root degree of the Erlang weighted tree. The local limit is \cite[Theorem~2.1]{EWT} and the law of the root degree is \cite[Theorem~5.1]{EWT}; the following short proof, in the notation of Section~\ref{sec:interior}, gives the form we use.
+
+\begin{proposition}\label{prop:fixedk}
+Fix $k\ge1$. Let $X_\infty\sim\Gamma(k+1,1)$ and $T_\infty\sim\Gamma(k,1)$, put $q_\infty(x)=\E(x-T_\infty)_+/x$, and let $D_k^\infty$ have, given $X_\infty=x$, the law $\Bin(k,1-q_\infty(x))$. Then $D_{n,k}\Rightarrow D_k^\infty$ as $n\to\infty$, with convergence of all moments, and $\Var D_k^\infty>0$.
+\end{proposition}
+
+\begin{proof}
+Let $n\ge k+2$. For $i\in S$, the scores at $i$ other than $U_{0i}$ are those of the $k-1$ edges to the rest of $S$ and those of the $n-1-k$ edges from $i$ to vertices outside $S\cup\{0\}$; for different $i$ the second groups are disjoint. Let $E_n$ be the event that the $\binom k2$ edges inside $S$ all have scores larger than $X$. On $E_n$, $i$ rejects $\{0,i\}$ if and only if at least $k$ of its scores to vertices outside $S\cup\{0\}$ are below $U_{0i}$. Let $\tilde R_i$ be the indicator of this last event and $\tilde H=\sum_{i\in S}\tilde R_i$. Given $X$, the $\tilde R_i$ are independent with
+\[
+\Pp(\tilde R_i=1\mid X)=\tilde b_n(X),\qquad \tilde b_n(x)=\frac1x\int_0^x\Pp\bigl(\Bin(n-1-k,u)\ge k\bigr)\,du,
+\]
+so $\tilde H$ is $\Bin(k,\tilde b_n(X))$ given $X$. The scores inside $S$ are independent of $X$, so $\Pp(H\ne\tilde H)\le\Pp(E_n^c)\le\binom k2\E X=\binom k2(k+1)/n$.
+
+Substituting $u=y/n$, $\tilde b_n(X)=(nX)^{-1}\int_0^{nX}\Pp(\Bin(n-1-k,y/n)\ge k)\,dy$. Le Cam's inequality and the bound $|a-b|$ for the total variation distance between Poisson laws with means $a$ and $b$ give, for $0<y<n$,
+\[
+\bigl|\Pp\bigl(\Bin(n-1-k,y/n)\ge k\bigr)-\Pp\bigl(\Poi(y)\ge k\bigr)\bigr|\le\frac{y^2}n+\frac{(k+1)y}n,
+\]
+and $\Pp(\Poi(y)\ge k)=\Pp(T_\infty\le y)$. Hence $|\tilde b_n(X)-q_\infty(nX)|\le(nX)^2/(3n)+(k+1)nX/(2n)$, which tends to $0$ in probability because $nX\Rightarrow X_\infty$. As $q_\infty$ is continuous, $\tilde b_n(X)\Rightarrow q_\infty(X_\infty)$, and applying the bounded continuous functions $p\mapsto\binom kh p^h(1-p)^{k-h}$ shows that $\tilde H$ converges in law to $k-D_k^\infty$. So $D_{n,k}=k-H\Rightarrow D_k^\infty$, and the moments converge because $0\le D_{n,k}\le k$. Finally $\Var D_k^\infty\ge\E[kq_\infty(X_\infty)(1-q_\infty(X_\infty))]>0$, since $0<q_\infty(x)<1$ for $x>0$.
+\end{proof}
+
+\begin{theorem}\label{thm:class}
+Let $1\le k(n)\le n-1$. Every sequence of values of $n$ has a subsequence along which one of the following holds.
+\begin{enumerate}[label=(\roman*)]
+\item $k=\kappa$ is constant, and $(D-\E D)/\sqrt{\Var D}$ converges in law to the standardization of $D_\kappa^\infty$.
+\item $k\to\infty$ and $n-k\to\infty$, and $(D-\E D)/\sqrt{\Var D}\Rightarrow L_\infty$.
+\item $n-1-k=r\ge1$ is constant, and $(D-\E D)/\sqrt{\Var D}\Rightarrow L_r$.
+\item $k=n-1$; then $D=n-1$ and the standardized degree is not defined.
+\end{enumerate}
+If $n-1-k(n)$ alternates between $1$ and $2$, the standardized degree has the two different subsequential limits $L_1$ and $L_2$, so it does not converge.
+\end{theorem}
+
+\begin{proof}
+Pass to a subsequence along which $k$ is bounded or tends to infinity. If $k$ is bounded, a further subsequence makes it constant, and (i) follows from Proposition~\ref{prop:fixedk}, the variance of the limit being positive. If $k\to\infty$, either $n-k\to\infty$ along a further subsequence, which is (ii) by Theorem~\ref{thm:interior}, or $n-k$ is bounded, and then a further subsequence makes $n-1-k$ constant, which is (iii) by Theorem~\ref{thm:fixedr} or (iv). The last statement follows from (iii) and Section~\ref{sec:fixedr}.
+\end{proof}
+
+\section{The mean at complementary budgets}\label{sec:dual}
+
+Write $H_{n,k}=k-D_{n,k}$, and let $I_{n,r}$ be the number of vertices that prefer their edge to the root in $LK(n,r)$.
+
+\begin{proposition}\label{prop:dual}
+Let $n\ge3$, $1\le k\le n-2$ and $r=n-1-k$. Then $H_{n,k}$ has the law of $I_{n,r}-D_{n,r}$, and $\E H_{n,k}=\E H_{n,r}$.
+\end{proposition}
+
+\begin{proof}
+Replace every score $U$ by $U'=1-U$, which has the same law. A vertex prefers its $k$ smallest $U$-scores exactly when it does not prefer them at budget $r$ for the scores $U'$. Let $P'_v$ be the set of neighbours that $v$ prefers at budget $r$ for $U'$, let $I'$ be the number of $i$ with $0\in P'_i$, and let $D'=\#\{i\in P'_0:0\in P'_i\}$. The root degree at budget $k$ for $U$ is
+\[
+D_{n,k}=\#\{i\notin P'_0:0\notin P'_i\}=(n-1-I')-\#\{i\in P'_0:0\notin P'_i\}=(n-1-I')-(r-D')=k-I'+D'.
+\]
+So $H_{n,k}=I'-D'$, and $(I',D')$ has the law of $(I_{n,r},D_{n,r})$. Every vertex prefers $r$ of its $n-1$ neighbours, so by symmetry $\E I_{n,r}=r$, and $\E H_{n,k}=r-\E D_{n,r}=\E H_{n,r}$.
+\end{proof}
+
+\begin{remark}\label{rem:gini}
+The mean has a closed form. Let $f_{a,b}$ be the $\Bet(a,b)$ density. Since $B(k+1,n-k-1)=kB(k,n-k-1)/(n-1)$,
+\[
+\frac kx\,f_{k+1,n-k-1}(x)=(n-1)\,f_{k,n-k-1}(x),
+\]
+and \eqref{eq:q} and \eqref{eq:condmean} give, for $1\le k\le n-2$,
+\[
+\E H_{n,k}=(n-1)\,\E(T'-T)_+=(n-1)\int_0^1F_T(t)\bigl(1-F_T(t)\bigr)\,dt,
+\]
+where $T,T'$ are independent $\Bet(k,n-1-k)$ variables. Since $1-T\sim\Bet(n-1-k,k)$ and $F_{1-T}(t)=1-F_T(1-t)$, the integral takes the same value at the budgets $k$ and $n-1-k$, which is Proposition~\ref{prop:dual} for the means once more. For $k=1$ the formula gives $\E H_{n,1}=(n-2)/(2n-3)$.
+\end{remark}
+
+\begin{corollary}\label{cor:ck}
+For every $k\ge1$ the constant $c_k$ of \cite[Theorem~7]{DS} equals $\mu_k$; both are $(2k-1)!/((k-1)!^2\,2^{2k-1})$.
+\end{corollary}
+
+\begin{proof}
+Fix $k$ and let $n\to\infty$. By \cite[Theorem~7]{DS}, $\E H_{n,k}\to c_k$. By Proposition~\ref{prop:dual} and Theorem~\ref{thm:fixedr} with complement $k$, $\E H_{n,k}=\E H_{n,n-1-k}\to\mu_k$. The common value follows from Proposition~\ref{prop:mu}.
+\end{proof}
+
+The laws at complementary budgets are not the same. For $k=1$, $H_{n,1}$ takes the values $0$ and $1$ and converges to a Bernoulli variable with mean $1/2$ and variance $1/4$, while $H_{n,n-2}$ converges to $H_1$, whose variance is $\nu_1=7/12$.
+
+\section{Computations}\label{sec:comp}
+
+The program \texttt{checks.py} in the repository named under Data availability tests the statements above; its output, \texttt{checks\_output.txt}, records $52$ checks, all of which pass. Exact computations use rational arithmetic.
+
+\begin{enumerate}[label=(\alph*),leftmargin=*]
+\item For $n=4$ and $n=5$ the program goes through all $\binom n2!$ orders of the scores ($720$ and $3\,628\,800$) and records the joint law of $D$ and $I$ for every budget. The mean and variance of $H$ agree with Lemma~\ref{lem:var}, the identity $\E[p_X(W)\mid X]=q_n(X)$ of Lemma~\ref{lem:cov} holds as an identity of polynomials, and the laws in Proposition~\ref{prop:dual} agree. For instance $\E D_{5,2}=52/35$ and $\Var D_{5,2}=4889/11025$.
+\item The equality $\E H_{n,k}=\E H_{n,n-1-k}$ and the formula of Remark~\ref{rem:gini} hold exactly for all $n\le24$ and $1\le k\le n-2$, with $\E H_{n,k}$ computed from \eqref{eq:q} and \eqref{eq:condmean}.
+\item In $200\,000$ samples each of $LK(12,4)$ and $LK(12,8)$, the sample mean and variance of $D$ are within $0.2$ standard errors of the exact values, which are $3.133127$ and $0.914105$ for $k=4$ and $7.203892$ and $0.987840$ for $k=8$.
+\item The sum \eqref{eq:musum} equals $r\binom{2r}r4^{-r}$ and $c_r$ for $r\le60$, and the values \eqref{eq:r12} hold. For $r=1$ the exact pairs $(\E H,\Var H)$ at $n=10,20,40,80$ are $(0.470588,0.523645)$, $(0.486486,0.556124)$, $(0.493506,0.570304)$ and $(0.496815,0.576954)$, against $(\mu_1,\nu_1)=(0.5,0.583333\ldots)$.
+\item Table~\ref{tab:interior} lists $\E H/s_n$ and $\Var H/s_n^2$ for three choices of $k$, computed from \eqref{eq:condmean} and Lemma~\ref{lem:var} by numerical integration. The integration agrees with the exact rational values at $(n,k)=(40,20)$ and $(80,30)$ to twelve decimal places. At $k=n/2$ the difference $\Var H/s_n^2-v$ is close to $0.141/s_n$ for each $n$ in the table.
+\end{enumerate}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{llcc}
+\toprule
+$k$ & $n$ & $\E H/s_n$ & $\Var H/s_n^2$\\
+\midrule
+$n/2$ & $10^3$ & 0.563695 & 0.299598\\
+ & $10^4$ & 0.564140 & 0.293509\\
+ & $10^5$ & 0.564185 & 0.291580\\
+ & $10^6$ & 0.564189 & 0.290970\\
+\midrule
+$n/10$ & $10^3$ & 0.563446 & 0.293487\\
+ & $10^4$ & 0.564115 & 0.291614\\
+ & $10^5$ & 0.564182 & 0.290984\\
+ & $10^6$ & 0.564189 & 0.290782\\
+\midrule
+$\sqrt n$ & $10^2$ & 0.556792 & 0.297426\\
+ & $10^4$ & 0.563484 & 0.290570\\
+ & $10^6$ & 0.564119 & 0.290654\\
+ & $10^8$ & 0.564183 & 0.290684\\
+\midrule
+limit & & $1/\sqrt\pi=0.564190$ & $v=0.290688$\\
+\bottomrule
+\end{tabular}
+\caption{The normalized mean and variance of $H=k-D$ in the interior regime.}\label{tab:interior}
+\end{table}
+
+The file \texttt{RootDegree.lean}, checked with Lean~4 \cite{MU21} and Mathlib \cite{Mathlib20}, proves the identity $\binom{n-3}{k-1}B(k,n-k-1)=1/(n-2)$ used in Lemma~\ref{lem:cov}, the identity $k\binom{2k}k4^{-k}=(2k-1)\binom{2k-2}{k-1}2^{1-2k}$ behind Corollary~\ref{cor:ck} for every $k\ge1$, the agreement of \eqref{eq:musum} with $r\binom{2r}r4^{-r}$ for $r\le6$, and the values of $M_{2,r}$, $\nu_r$ and $\mu_r^2/\nu_r$ for $r=1,2$.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. Between 17 and 19 September 2026 agents running in OpenAI's Codex (GPT-5.6 Sol) obtained the results of Sections~\ref{sec:interior} to~\ref{sec:dual}, and other Codex agents checked them. On 14 October 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, checked the proofs line by line, wrote out in full the uniform integrability in Lemma~\ref{lem:condmean} and the proofs of Theorem~\ref{thm:fixedr} and Proposition~\ref{prop:fixedk}, and wrote the computer checks, the Lean file and the paper in its present form. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code and the Lean file are available at\\ \url{https://github.com/yspennstate/bilateral-preference-degree-limits}.
+
+\begin{thebibliography}{10}
+
+\bibitem{Bil}
+P.~Billingsley, \emph{Probability and Measure}, 3rd ed., Wiley, New York, 1995.
+
+\bibitem{DS}
+H.~Dabirian and V.~Subramanian, Connectivity of a family of bilateral preference random graphs, \emph{J. Appl. Probab.} \textbf{63} (2026), 552--579. Theorems~7 and~8 there are Theorems~6.1 and~6.2 of arXiv:2209.05677v3.
+
+\bibitem{MU21}
+L.~de~Moura and S.~Ullrich, The Lean~4 theorem prover and programming language, in \emph{Automated Deduction -- CADE~28}, Lecture Notes in Comput. Sci. \textbf{12699}, Springer, 2021, 625--635.
+
+\bibitem{LK}
+R.~J.~La and M.~Kabkab, A new random graph model with self-optimizing nodes: connectivity and diameter, \emph{Internet Math.} \textbf{11} (2015), 528--554.
+
+\bibitem{Mathlib20}
+The mathlib Community, The Lean mathematical library, in \emph{Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020)}, ACM, 2020, 367--381.
+
+\bibitem{EWT}
+M.~Moharrami, V.~Subramanian, M.~Liu and R.~Sundaresan, The Erlang weighted tree, a new branching process, \emph{Random Structures Algorithms} \textbf{64} (2024), 537--624. Theorem numbers as in arXiv:2002.03993v5.
+
+\end{thebibliography}
+
+\end{document}

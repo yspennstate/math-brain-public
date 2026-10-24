@@ -1,0 +1,27 @@
+{
+  "helper_version": "A003-canonical-reset-adversary-v1",
+  "family": "F=1-2 A_a+2 A_(a+b+r), calibrated arbitrary source references",
+  "domain": {
+    "a": [
+      2,
+      3,
+      4
+    ],
+    "b": [
+      0,
+      1
+    ],
+    "r": [
+      1,
+      2,
+      3
+    ],
+    "reference_grid": "simplex vertices and all weak compositions of 4 into 2^(a+b)-1 slots when slots<=7; uniform and matching otherwise; mix each raw nonvacuum law with matching law at eps=1/1024 and 1/16"
+  },
+  "case_count": "computed exactly from frozen composition count before loops; at most 20000 coordinate/reference cases",
+  "symmetry": "query j=0 by active permutation; keep all source labels",
+  "arithmetic": "Fraction amplitudes, reference and likelihoods; floating discovery only; any claimed sign rechecked by rational log intervals",
+  "memory_estimate_mb": 100,
+  "maximum_runtime_seconds": 55,
+  "purpose": "try to refute individual nonpositive canonical active reset; no universal inference from absence"
+}

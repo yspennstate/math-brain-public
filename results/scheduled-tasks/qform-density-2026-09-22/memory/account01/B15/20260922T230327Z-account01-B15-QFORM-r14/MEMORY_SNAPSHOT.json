@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260922T230327Z-account01-B15-QFORM-r14",
+  "status": "ESSENTIAL_STEP_APPLIED_RAW_REGULARITY_COMPACTNESS_OBSTRUCTION",
+  "without_verified_brain": true,
+  "full_brain_connected": false,
+  "source_control_commit_at_coherent_read": "319a9558a2e9ba4c5e9e73f7a75fb72f79116f54",
+  "source_control_commit_at_prepublication_refresh": "9e56eeef725d4b43972faf69169049e4a51f0575",
+  "owner_control_revision": "2026-09-22.15",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "mathematical_premises": [
+    {
+      "worker": "account02/B15",
+      "source": "yspennstate/math-open-problems@4fc6472947c7e5551592974a34e7bc4bfe78def0",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T220230Z-account02-B15-qform-r11/REPORT.md",
+      "scope": "fixed A=I_3 analytic-Schwartz cap-one iid target family with uniform height <=2pi, uniform tightness, and frequencies tau_m->infinity satisfying |p_hat_m(tau_m)|>=27/512"
+    },
+    {
+      "worker": "account03/B15",
+      "source": "yspennstate/math-open-problems@ae1acd1eb774e59dd80eb9ddfb8ea9c7e72b79a1",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T213701Z-account03-B15-qform-r18/REPORT.md",
+      "scope": "exact unit-heat and unit-window homogeneous normal forms for the sharp QFORM height constant"
+    }
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B15",
+    "source": "yspennstate/math-open-problems@4fc6472947c7e5551592974a34e7bc4bfe78def0",
+    "application": "with h_m=pi/tau_m, Fourier translation identity gives ||T_{h_m}p_m-p_m||_1>=27/256; the same nondecaying coefficient gives BV/Besov blow-up and failure of uniform Gaussian desmoothing"
+  },
+  "new_inference": {
+    "id": "QFORM-RAW-DESMOOTHING-COMPACTNESS-FALSE-v1",
+    "statement": "The raw target-output family has no target-uniform L1 translation modulus, no uniform BV/W^{1,1} or positive B^alpha_{1,infinity} translation bound, and no uniform Gaussian approximate-identity desmoothing rate, even in a fixed-I_3 analytic-Schwartz uniformly tight subfamily with height <=2pi. By contrast the exact fixed-scale heat profiles H=mu_Q*gamma_1 have universal derivative bounds ||H^(k)||_infinity<=||gamma_1^(k)||_infinity, including Lip(H)<=1/sqrt(2pi e)."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "39c38206fcf34f616112fe9fa6808161e0472c34",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260922T230327Z-account01-B15-QFORM-r14/REPORT.md",
+    "blob": "b9cf7f7bce136684c2d6a7c931b82ec4879352e9"
+  },
+  "handoff_commit": "d377bfa42a6dd490510d7ec682b1a8ccbb32c9ad",
+  "correction_event_commit": "a860c4f8144d07ccdea42c3bae1dace6c384987a",
+  "unresolved_implication": "Prove sup_{A,f,y} s_3(A) E gamma_1(X^T A X-y)<infinity, equivalently the exact unit-window bound, using original-coordinate product aggregation rather than raw-output regularity or desmoothing.",
+  "next_step": "Apply grouped-coordinate, ridge, physical-pivot, or aggregate-cross estimates directly to the positive fixed-scale heat/window quantity; exploit the universally smooth heat profile only to discretize/regularize the output center, not to infer raw-density compactness.",
+  "full_qform_status": "OPEN_NOT_PROVED"
+}

@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "fixtures": [
+    {
+      "fixture": "Cycle through final FEI and signed lemma",
+      "PASS": true,
+      "rejection": [
+        "CYCLE_THROUGH_FINAL_FEI:FEI-FINAL@1 -> A090-ARBITRARY-GATE-SIGNED-REFUND-PARTITION@1 -> FEI-FINAL@1"
+      ]
+    },
+    {
+      "fixture": "Accepted lemma borrows isolated refuted capacity leaf",
+      "PASS": true,
+      "rejection": [
+        "ACCEPTED_DEPENDS_ON_UNRESOLVED:A090-ARBITRARY-GATE-SIGNED-REFUND-PARTITION@1",
+        "ACCEPTED_DEPENDS_ON_UNRESOLVED:A081-LOCAL-RESERVE-DOES-NOT-CERTIFY-CHILD-SLACK@1"
+      ]
+    },
+    {
+      "fixture": "Changed exact gate hypotheses",
+      "PASS": true,
+      "rejection": [
+        "STATEMENT_HASH:A090-ARBITRARY-GATE-SIGNED-REFUND-PARTITION@1"
+      ]
+    },
+    {
+      "fixture": "Wrong source hash alias on proof edge",
+      "PASS": true,
+      "rejection": [
+        "DEPENDENCY_HASH:A081-LOCAL-RESERVE-DOES-NOT-CERTIFY-CHILD-SLACK@1"
+      ]
+    },
+    {
+      "fixture": "Final FEI in route premises",
+      "PASS": true,
+      "rejection": [
+        "ROUTE_ASSUMES_CONCLUSION:R-C018-COMPLETE-KL"
+      ]
+    },
+    {
+      "fixture": "Borrow dedicated quarter for terminal CE",
+      "PASS": true,
+      "rejection": [
+        "RESERVE_REUSE:A090-ARBITRARY-GATE-SIGNED-REFUND-PARTITION@1"
+      ]
+    },
+    {
+      "fixture": "Assume positive unused child slack",
+      "PASS": true,
+      "rejection": [
+        "UNPROVED_CHILD_CAPACITY:A090-ARBITRARY-GATE-SIGNED-REFUND-PARTITION@1"
+      ]
+    },
+    {
+      "fixture": "Promote a root bill to hereditary capacity",
+      "PASS": true,
+      "rejection": [
+        "ROOT_BOUND_PROMOTED_TO_CAPACITY:A090-ARBITRARY-GATE-SIGNED-REFUND-PARTITION@1"
+      ]
+    },
+    {
+      "fixture": "Erase retained gate-mask debt",
+      "PASS": true,
+      "rejection": [
+        "UNPAID_TERMINAL_MASK:A090-ARBITRARY-GATE-SIGNED-REFUND-PARTITION@1"
+      ]
+    },
+    {
+      "fixture": "Drop reference-only mass",
+      "PASS": true,
+      "rejection": [
+        "REFERENCE_MASS_RESET:A081-COARSENING-REFUND-CONTRACT@1"
+      ]
+    }
+  ],
+  "scope": "Structural and declared ledger-contract tests; mathematical inference validity is not automated"
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "claim_id": "A059-INTERLEAVED-BIASED-STOPPING-RESERVE",
+    "version": 1,
+    "exact_statement": "For F=sum_j C_j u_j with a finite exclusive controller partition and pairwise disjoint independent Boolean data cores, every finite adaptive physical tree interleaving data and controller queries admits U=sum q_j[H(u_j)-eta(m_j^2)] and R=sum q_j log2(1/q_j)(1-m_j^2). At a controller query, U is a martingale and kappa=R-E R_child=sum_j q_j V_j D_2(P(X|C_j)||uniform)>=0. At a data query in core j, R-E R_child=q_j log2(1/q_j)beta_j^2 and D_iH(F)<=U+R-E(U_child+R_child)+(3/ln2)q_j beta_j^2. Hence R_root=E R_leaf+sum_data w q_j log2(1/q_j)beta_j^2+sum_controller w kappa, and sum_data w cap+E R_leaf+sum_controller w kappa<=((1+2/e)/ln2)Pi_data+R_root, with R_root<=2I_ctrl(root). The full stopped entropy bound retains E H(F_leaf), U_root-E U_leaf, R_root-E R_leaf and sum_controller w(DH-kappa); no universal price for that residual is asserted.",
+    "hypotheses": [
+      "Finite uniform physical cube; independent disjoint controller and data blocks, each selected core on its own physical cube; Boolean sign outputs.",
+      "Exclusive selector indicators C_j partition controller assignments; constant output states and biased core outputs are permitted.",
+      "Each adaptive tree step queries one currently unrevealed physical coordinate and children have fair reach probabilities; arbitrary stopping frontiers and interleavings.",
+      "H, eta and KL use bits; eta(x)=x log2(1/x). Endpoint caps and zero-probability terms are zero. Shared physical DATA between cores is excluded."
+    ],
+    "statement_sha256": "751c4dfb5c28dc0715e0148810bb712da3d72761db3c29b1f46995ec2d03ab21",
+    "contributors": [
+      "A059",
+      "A056/A057 upstream recentered split and positive cap envelope"
+    ],
+    "proof_source": {
+      "run": "20261013T235852Z-account05-A059-decomposition-depth",
+      "path": "PROOF.md",
+      "locators": "Sections 1-4; growing-depth test Section 5"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A056-BIASED-ERASURE",
+        "version": 2,
+        "scope": "exact signed row split/envelope independently reconstructed here"
+      },
+      {
+        "claim_id": "A057-EXCLUSIVE-SELECTOR-VARIANCE-CAP-PAYMENT",
+        "version": 1,
+        "scope": "Sections 1,3,4 independently accepted locally; fresh suffix subclaim not reviewed"
+      },
+      "Elementary physical variance/influence conservation, selector KL concavity and indicator isoperimetry"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A056",
+      "A057",
+      "A091",
+      "A090",
+      "A024",
+      "A064",
+      "A097",
+      "B12",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+# w458 C0048 referee report — 2026-10-10
+
+Primary source: Duminil-Copin's 2017 Conjecture 2 asks for discontinuity of the nearest-neighbor Potts phase transition on Z^d for each integer d,q>=3, meaning positive critical spontaneous magnetization. The local intake calls it attempted_unsolved, and C0048-A001 records a failed contour route. A bounded 2026-10-10 primary-literature search found rigorous high-dimensional cases and a 2024 discussion of q=3,d=3 as believed first order, but did not establish current openness; it remains UNKNOWN. The local extracted-source file has SHA256 484dfbf0f1a29e0efa259f59ec60bf396fd4174042683d27ce1d8943007f0686; this is not a hash of the primary PDF or a mathematical proof.
+
+I independently checked w456's exact free-FK cumulants, local Legendre coefficient, algebraic cubic exclusion lemma and conditional critical-endpoint bridge. I checked w457's finite-FK conditional edge bounds, path bound, subcritical counterexample, wired right continuity and abstract cubic obstruction. REVIEW_PACKET.md gives the scoped KEEP/FIX verdicts and reproductions. The only remaining parent-problem input is a bound uniform as p decreases to p_c (or an actual lattice potential that implies it), in particular at q=d=3. Neither peer proved it.
+
+Measured run: `python -X utf8 verify_exact.py` gave exact q=3 two-vertex spin and FK cumulants (5/9, 7/27, -8/27) on both sides, and free-four-cycle Z=258, edge marginal 11/43, all-open 1/86, joint/product ratio 2.71521754. `python -X utf8 validate_artifacts.py` found 8 claim rows, a 3-entry/3-relation draft, one existing C0048 card, and zero matching new logical names before submission. These finite checks test algebra and duplicate placement; they do not establish C0048.
+
+Submitted DRAFT `~/math-brain-inbox/w458/bundle_001.json` (SHA256 ed4701725b65656a3bb696a306123a56ec9becf381e49dbc0b481374c9a4d298). It contains two reviewed special-case lemmas and a clearly marked unproved gap concept, linked to the existing unverified C0048 card. The bundle is submitted; ingestion and retrieval remain UNKNOWN. A narrow hook proposal is in hooks-proposal.jsonl. No live store, recall control, test bank, or code was edited.
+
+The hook was submitted as `~/primary_directive/hooks1000/proposals/math-w458.jsonl`; it is a proposal, not an active hook. The progress event was logged through pd_progress.py. STUCK: team_comm direct delivery failed twice because w458 has no team membership and the named integration team was not registered there; the durable inbox draft and progress row carry the handoff instead.
+
+Apply: the validating coordinator reviews `math-brain-inbox/w458/bundle_001.json`, then integrates it and checks recall; there is no live-code patch. Any second reviewer should keep the finite lemmas separate from the unproved uniform critical input. Author and referee response-side served-model evidence is unavailable.
+
+NEXT: Seek a q=3,d=3 volume-uniform ordered-branch estimate with an explicit spatial-correlation bound; do not repeat the open-status search.

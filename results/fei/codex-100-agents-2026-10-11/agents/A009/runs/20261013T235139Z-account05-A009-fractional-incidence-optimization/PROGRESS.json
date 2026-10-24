@@ -1,0 +1,59 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261013T235139Z-account05-A009-fractional-incidence-optimization",
+  "stream": "B02",
+  "packet_id": "A009",
+  "gap_id": "G-J-COST",
+  "attempt_id": "A009-dense-matching-complete-mass-v1",
+  "method": "distinct matching actual-run mass, both-order subset reference, all-n influence payment, rational fixed-posterior KKT, independent whole A008 reconstruction",
+  "mathematical_delta": "Complete-graph edge DNF with unbounded read and density has full cost <=185I/6; uniform weights globally optimal for frozen matching posterior. General graph matching mass exact, zero on 104 positive-mass small cases; star witness 1/64. A008 complete mass v1 independently accepted without repair.",
+  "deliverable_status": "COMPLETE_LOCAL_ARTIFACTS_PENDING_SUPERVISOR_COPY",
+  "mathematical_status": "RESTRICTED_ALL_DIMENSIONAL_CERTIFICATE_PROVED; UNIVERSAL_PIJ_AND_FULL_FEI_OPEN",
+  "claim_versions_used": [
+    {
+      "claim_id": "A008-COMPLETE-QUEUE-DEGREE-WEIGHTED-DETERMINANT-MASS",
+      "version": 1,
+      "statement_sha256": "f64b142a5309e20059893f5fba1082151a3b74f4beb6e13849c6f2b07d5f2f3f",
+      "status": "INDEPENDENTLY_RECONSTRUCTED_LOCALLY_BY_A009"
+    },
+    {
+      "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+      "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+      "status": "SOURCE_COMPLETE_BASELINE"
+    }
+  ],
+  "claims_created_or_changed": [
+    "A009-DENSE-GRAPH-MATCHING-MASS-AND-FIXED-POSTERIOR-KKT@1",
+    "A008-COMPLETE-QUEUE-DEGREE-WEIGHTED-DETERMINANT-MASS@1: A009 whole independent review"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "MATCHING_CERTIFICATE.md",
+    "REVIEW_A008.md",
+    "CLAIMS.json",
+    "out/CHECK.json",
+    "out/GRAPH_CHECK.json",
+    "out/REVIEW_CHECK.json",
+    "out/SOURCES.json"
+  ],
+  "next_consumers": [
+    "A006",
+    "A008",
+    "A010",
+    "A014",
+    "A086",
+    "A094",
+    "B02",
+    "B03",
+    "B20"
+  ],
+  "next_action": "Replace zero matching-sector mass by assignment-sensitive rooted forests on unmatched-coordinate components; retain complete N_s factors and certify one globally fixed feasible weight vector. A006/A008 reconstruct matching bijection and KKT; A014/B03 challenge dense graph-to-linear-hypergraph extension.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "General graphs lack sufficient matching-sector mass on their true spectrum; full rooted-forest payment remains open.",
+    "New restricted certificate awaits independent review; supervisor adoption and mirrors unobserved."
+  ],
+  "packet_ids": [
+    "A009"
+  ]
+}

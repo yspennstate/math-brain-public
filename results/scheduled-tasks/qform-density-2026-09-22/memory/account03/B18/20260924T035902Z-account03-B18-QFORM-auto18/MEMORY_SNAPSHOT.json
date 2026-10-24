@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260924T035902Z-account03-B18-QFORM-auto18",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "full_target_status": "OPEN",
+  "continuity_full_target_status": "OPEN",
+  "control": {
+    "startup_main_commit": "09c764e74095f6305fa8606a11a53a56431fa0b8",
+    "prepublication_main_commit": "da56f223f60a03542f37d2659c7097d0a4667b19",
+    "revision": "2026-09-22.15"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "new_result_ids": [
+    "QFORM-RV-SPECTRAL-TAIL-CROSS-v1",
+    "QFORM-TWOSIDED-ANCHOR-HS-RANK2-COLLAR-v1"
+  ],
+  "primary_source": {
+    "citation": "Rudelson-Vershynin, Small ball probabilities for linear images of high dimensional distributions, arXiv:1402.4492v2 / IMRN 2015",
+    "used_results": [
+      "Theorem 1.2: normalized linear-form density cap sqrt(2)K",
+      "Theorem 8.1 proof equation (8.4): L(AY,M t S_r(A)) <= (C M p)^r for every integer r, with S_r^2=sum_{j>r}s_j^2"
+    ]
+  },
+  "mathematical_premises": [
+    "X and Y are disjoint original-coordinate product banks with one-dimensional density caps <=1",
+    "S_r(M)=dist_HS(M,rank<=r) by Eckart-Young",
+    "conditioning only on disjoint original-coordinate banks preserves the required product independence"
+  ],
+  "proved_implication": "For R=X^T M Y+alpha^T X+G(Y), r>=2 and S_r(M)>0 imply ||p_R||inf <= sqrt(2) C_RV r/((r-1)S_r(M)). For full Q with original split I,J,K, A_II=0, B=A_IJ, this gives ||p_Q||inf <= (C_RV/sqrt(2)) r/((r-1)S_r(B)); in particular sqrt(2)C_RV/dist_HS(B,rank<=2).",
+  "partner_result_applied": {
+    "worker": "account04/B18",
+    "commit": "48c914d1bd070cad090d6d5deac743bd8465bc15",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260924T032058Z-account04-B18-QFORM-r6/REPORT.md",
+    "application": "At theta=2^-12 partner pays c1*c2>=theta by 128sqrt(2pi). If that gate fails but S_2([C r])>=1/64, the new theorem pays by 64sqrt(2)C_RV. The first unpaid survivor therefore has c1*c2<2^-12 and dist_HS([C r],rank<=2)<1/64."
+  },
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "5c462c1aa1cd2ce2fd59eae1fbe4ac2c6136c0d6",
+    "checks_commit": "46a6d528974534e55be0617a4bfa2a1beee34d98",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260924T035902Z-account03-B18-QFORM-auto18/",
+    "check_status": "PASS"
+  },
+  "handoff": {
+    "commit": "4a1dde7eb09637fce1dc4cd9f2c7c99d521aef7a",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B18/20260924T035902Z-account03-B18-QFORM-auto18.md"
+  },
+  "unresolved_implication": "Retain the Hilbert-Schmidt-small near-rank-two cross tail exactly and close the exact/near rank-two carrier with same-side curvature, or route it into an already-paid active-plane/ridge/grouped-hub/pair-log branch.",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "privacy": "No credentials, scheduler IDs, machine paths, signed URLs, unrelated personal data, or private source excerpts stored."
+}

@@ -1,0 +1,234 @@
+{
+  "target": "C0023",
+  "checked_on": "2026-10-10",
+  "dated_ranking": {
+    "file": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 539,
+    "title": "No percolation at criticality on Z^d for 3 <= d <= 10",
+    "previous_status": "attempted_un",
+    "reason": "theta(p_c)=0 for 3<=d<=10"
+  },
+  "exact_model_recovery": {
+    "statement": "For each integer d with 3<=d<=10, independent nearest-neighbor Bernoulli bond percolation on Z^d has theta_d(p_c(d))=0.",
+    "definitions": "Edges join lattice vertices at l1 distance 1; theta_d(p)=P_p(|C(0)|=infinity); p_c(d)=inf{p in [0,1]:theta_d(p)>0}.",
+    "intake_record": "probability_1000_intake_claude_20260907/problems.jsonl, exact problem_id C0023, line 23",
+    "primary_model_locator": "Duminil-Copin, Sixty years of percolation, arXiv:1712.04651v1, pp.1-3, Conjecture 1",
+    "primary_quote": "Show that theta(pc) = 0 on Z^d for every d >= 3.",
+    "quote_note": "Plain-text normalization of displayed mathematical notation in Conjecture 1.",
+    "site_or_long_range_claim": false
+  },
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1712.04651",
+      "authors": "Hugo Duminil-Copin",
+      "title": "Sixty years of percolation",
+      "revision": "2017-12-14 as printed",
+      "verified_scope": "Independent Bernoulli bonds on nearest-neighbor Z^d, Conjecture 1, printed page 3; half-space discussion on pages 3-4.",
+      "current_status_limit": "Historical survey, not evidence of current openness."
+    },
+    {
+      "url": "https://arxiv.org/abs/1506.07977v2",
+      "authors": "Robert Fitzner and Remco van der Hofstad",
+      "title": "Mean-field behavior for nearest-neighbor percolation in d>10",
+      "revision": "2017-03-23",
+      "verified_scope": "nearest-neighbor percolation in dimensions d>=11; infrared and finite triangle bounds",
+      "short_quote": "nearest-neighbor percolation in dimensions",
+      "proof_checked_here": false
+    },
+    {
+      "url": "https://arxiv.org/abs/1401.7130v1",
+      "authors": "Hugo Duminil-Copin, Vladas Sidoravicius and Vincent Tassion",
+      "title": "Absence of infinite cluster for critical Bernoulli percolation on slabs",
+      "revision": "2014-01-28",
+      "verified_scope": "Z^2 x {0,...,k}, each fixed finite k, at that graph's own critical probability",
+      "proof_checked_here": false
+    },
+    {
+      "url": "https://github.com/openai/math/blob/main/lean/docs/213.md",
+      "verified_scope": "documentation claims Z^3 bond/site and general quasi-transitive critical bond results",
+      "status": "PUBLIC_CLAIM_REQUIRING_PROOF_CHECK",
+      "accompanying_paper": "https://github.com/openai/math/blob/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf"
+    },
+    {
+      "url": "https://arxiv.org/abs/2401.12397v1",
+      "authors": "Gady Kozma and Shahaf Nitzan",
+      "title": "A reduction of the theta(p_c)=0 problem to a conjectured inequality",
+      "revision": "2024-01-22 v1",
+      "verified_scope": "Abstract states a conjectured gluing/correlation inequality would imply critical nonpercolation on Euclidean lattices in every dimension above one.",
+      "status_limit": "The implication does not provide a proof of the general gluing inequality."
+    }
+  ],
+  "formal_receipt": {
+    "type": "source_inspection_only_not_kernel_check",
+    "artifact": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/CriticalPercolation.lean",
+    "theorem": "OAI.CriticalPercolation.BondGraph.no_percolation_at_criticality",
+    "assumptions": [
+      "Infinite V",
+      "fullGraph.Connected",
+      "LocallyFinite counting labelled incident bonds",
+      "QuasiTransitive",
+      "criticalProbability < 1"
+    ],
+    "conclusion": "G.law G.criticalProbability G.percolates = 0",
+    "source_lines": "47-54 (1-based)",
+    "body": "by sorry",
+    "trusted_axioms": "NOT_MEASURED: no Lean run. The displayed challenge contains an admitted placeholder.",
+    "counts_as_proof": false,
+    "limitation": "A comparator challenge is a statement to be proved. Its placeholder does not refute a separate paper or establish that the repository has no separate proof."
+  },
+  "recall": {
+    "result": "timeout at 60 seconds",
+    "command": "python -X utf8 ~/brain_workers/w427/recall_once.py",
+    "fallback": "MEMORY.md grep returned no matching term. Read the exact named scar directly.",
+    "memory_slug": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "lesson_applied": "Local validated pieces and green completion text do not establish the hardest unchecked theorem or its formal proof."
+  },
+  "states": {
+    "submitted": {
+      "state": "submitted",
+      "artifact": "~\\math-brain-inbox\\w427\\bundle_001.json",
+      "receipt": "SUBMISSION_RECEIPT.json"
+    },
+    "reviewed": {
+      "state": "pending",
+      "referee": "w428",
+      "different_model_gate": "not established"
+    },
+    "ingested": {
+      "state": "unconfirmed",
+      "worker_ingestion_attempted": false
+    },
+    "retrievable": {
+      "state": "unconfirmed",
+      "post_ingestion_recall_run": false
+    }
+  },
+  "next": "Independent referee checks the boundary claims; concept-only draft remains review-gated and current openness UNKNOWN.",
+  "prior_attempt": {
+    "id": "C0023-A001",
+    "locator": "intake attempts.jsonl line 22",
+    "route": "half-space result plus susceptibility and gluing",
+    "remaining_gaps": [
+      "half-space susceptibility assertion",
+      "dependence-aware gluing through a hyperplane"
+    ],
+    "assessment": "Not a proof; the intake itself acknowledges both gaps."
+  },
+  "recent_primary_claim": {
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf",
+    "local_artifact": "sources/critical_quasi_transitive_2026_09_24.pdf",
+    "title": "No percolation at criticality on quasi-transitive graphs",
+    "author_as_printed": "OpenAI",
+    "date_as_printed": "2026-09-24",
+    "theorem_locator": "Theorem 1.1, printed page 2",
+    "claimed_statement": "Any infinite connected locally finite quasi-transitive undirected graph with p_c<1 has no infinite critical Bernoulli bond cluster.",
+    "inspected_pages": [
+      1,
+      2,
+      3,
+      21,
+      22,
+      23
+    ],
+    "total_pages": 42,
+    "full_proof_independently_checked": false,
+    "relation_to_target": "If correct, its bond statement covers every assigned dimension.",
+    "current_openness_conclusion": "UNKNOWN: public resolution claim exists, but its full proof and formal receipt have not been verified in this packet."
+  },
+  "prior_work_search": {
+    "ranking_and_exact_intake": "recovered",
+    "attempts_H_and_I": "targeted C0023 search found no exact ID matches",
+    "lean_campaign": "dated annotated ranking has C0023 but no target proof found in targeted search",
+    "team_O": "no C0023 row found in target search",
+    "owner_percolation_attempts": "targeted filename search produced no matching path; this is incomplete and is not a solved/retired certificate",
+    "canonical_export": "read exact C0023 logical node only after grep; no full export put in context"
+  },
+  "canonical_target": {
+    "node_id": "claim_bd1649f5faaa6ff62cd5af58a8936dad1e31cf6ebdf05d8dfa5591e526baf796",
+    "logical_id": "math:probability.percolation:open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10",
+    "status_as_recorded": "no_resolution_found_in_documented_search as of 2026-09-07",
+    "assessment": "Date-qualified historical claim; do not silently treat it as verified current openness."
+  },
+  "served_model_evidence": {
+    "requested_author_model": "gpt-6.1-sol",
+    "requested_reasoning": "maximum",
+    "requested_service_tier": "Fast",
+    "response_side_author_identity": "UNAVAILABLE",
+    "response_side_referee_identity": "UNAVAILABLE",
+    "different_model_review_gate": "NOT_ESTABLISHED"
+  },
+  "measurements": {
+    "artifact": "MEASUREMENTS.json",
+    "configuration_count": 4436,
+    "correct_cut_bounds_passed": 20,
+    "incorrect_missing_width_bounds_failed": 2,
+    "planar_percolation_lower_bound": "2352239443/2352250000",
+    "brain_effect_claim": "No live ingestion or recall improvement measured; draft mechanism only."
+  },
+  "canonical_store_read": {
+    "path": "~/math-brain-build/local/population/brain.sqlite3",
+    "mode": "ro",
+    "writes": false,
+    "matches": [
+      {
+        "id": "claim_bd1649f5faaa6ff62cd5af58a8936dad1e31cf6ebdf05d8dfa5591e526baf796",
+        "title": "Open problem: No percolation at criticality on Z^d for 3 <= d <= 10",
+        "body": "OPEN PROBLEM (source_says_open; current status no_resolution_found_in_documented_search; result status attempted_unsolved). Prove theta(p_c) = 0 for Bernoulli percolation on Z^d for every d >= 3; open for 3 <= d <= 10 (known for d >= 11 by Fitzner and van der Hofstad, and for d = 2). Source: Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems, Chapter XI Section 1, p. 136; also duminil_copin_icm_2018 Conjecture 1 p. 3 and duminil_copin_ising_potts_2017 Conjecture 1 p. 37. Status notes: Bounded search 2026-09-07: no resolution for 3 <= d <= 10 found; the d >= 11 result (Fitzner-van der Hofstad 2017) and the half-space result of Barsky-Grimmett-Newman remain the state of the art.\nPosed in Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems\nCurrent status no_resolution_found_in_documented_search as of 2026-09-07",
+        "logical_id": "math:probability.percolation:open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10",
+        "truth_status": "unverified"
+      }
+    ],
+    "inspected_schema": {
+      "nodes": [
+        "id",
+        "kind",
+        "title",
+        "body",
+        "metadata_json",
+        "digest",
+        "created_at"
+      ],
+      "claims": [
+        "id",
+        "payload_json",
+        "digest",
+        "created_at"
+      ]
+    },
+    "result": "read completed"
+  },
+  "paired_audit": {
+    "artifact": "PAIRED_AUDIT.jsonl",
+    "scoped_keeps": [
+      "w426-C0023-L1",
+      "w426-C0023-L2",
+      "w426-C0023-B1",
+      "w426-C0023-L3",
+      "w426-C0023-B2"
+    ],
+    "limits": "These are w427 verdicts on mathematical statements, not review of another verdict or a parent-problem proof.",
+    "supplement": "PAIRED_AUDIT_SUPPLEMENT.jsonl"
+  },
+  "pair_measurements": {
+    "gate": {
+      "opened_at": "2026-10-10T06:19:14.306214+00:00",
+      "max_configurations": 32,
+      "max_seconds": 10,
+      "local_cpu_only": true,
+      "gpu_or_training": false
+    },
+    "enumerated_configurations": 24,
+    "path_actual_terminal_probability": "1/8",
+    "path_incorrect_marginal_average": "3/16",
+    "path_excess": "1/16",
+    "path_selected_a2_conditional_terminal_probability": "0",
+    "cycle_actual_terminal_probability": "7/16",
+    "cycle_correct_product_lower_bound": "27/64",
+    "cycle_positive_margin": "1/64",
+    "all_exact_checks_pass": true,
+    "elapsed_seconds": 0.0005796999903395772,
+    "limits": "Two finite graphs; general proofs are in PAIRED_AUDIT.md, not certified by this enumeration."
+  }
+}

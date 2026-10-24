@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact Fraction computations; decimals are display-only",
+  "exact_checks": {
+    "M1_equals_influence": true,
+    "crossing_bracketing": true
+  },
+  "D128_selected_moments_display": {
+    "M1": 2.9857556510886103e-36,
+    "M2": 1.881261159055989e-34,
+    "M3": 1.1760820979976987e-32,
+    "M4": 7.2944420319513935e-31,
+    "M8": 9.960824368376743e-24,
+    "M12": 1.1920616559815382e-16,
+    "M14": 3.919089992681796e-13,
+    "M15": 2.2181167902352237e-11,
+    "halfband_current_lower_bound": 1.0863398454364166e-12
+  },
+  "first_unit_weight_moment_crossing": [
+    {"D": 128, "k": 15},
+    {"D": 256, "k": 31},
+    {"D": 512, "k": 59},
+    {"D": 1024, "k": 109}
+  ],
+  "interpretation": "Finite displays diagnose the proved exact formula. The fixed-order and o(D/log D) barriers are analytic and do not depend on extrapolating these four points."
+}

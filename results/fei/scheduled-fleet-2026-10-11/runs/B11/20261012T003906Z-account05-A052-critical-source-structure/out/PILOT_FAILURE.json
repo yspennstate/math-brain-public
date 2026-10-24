@@ -1,0 +1,8 @@
+{
+  "helper_version": "A052-recentred-census-v2",
+  "status": "FAILED_CASE_COUNT",
+  "assertion_at_failure": 465,
+  "reason": "Six/eight-variable seeds were internally named Hod_g6/g8 instead of source labels Hod_g3/g4, so pilot seed-name filtering skipped them. The final frozen count correctly rejected incomplete execution.",
+  "repair": "Correct the generated names to Hod_g(n/2); the frozen truth-table family and arithmetic are unchanged. Rerun the full pilot before starting the full job.",
+  "mathematical_failure": false
+}

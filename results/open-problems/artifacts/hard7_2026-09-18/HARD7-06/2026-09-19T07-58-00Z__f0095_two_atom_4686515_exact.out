@@ -1,0 +1,15 @@
+d_cert = 4.686514000
+reported_endpoint = 4.686515000
+p = 0.234426000
+x = 0.764512000
+y = 0.121930000
+D_max = 24
+first_term_upper ~= -4.704523777986915345e-01
+edge_log_expect_lower ~= -2.007685626853676353e-01
+Sigma_upper ~= -3.790626504822440193e-08
+SIGMA_STRICTLY_NEGATIVE = True
+D_CERT_STRICTLY_BELOW_REPORTED_ENDPOINT = True
+ACG implication: d_3^* <= 4.686514 < 4.686515, so chi(G(n,4.686515/n)) > 3 w.h.p.
+ALL_EXACT_CHECKS_PASS = True
+
+Execution note: reproduced during HARD7-06 run 12 from the archived script with Python fractions.Fraction arithmetic. Floating-point strings are display only; every sign decision is exact rational arithmetic.

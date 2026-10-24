@@ -1,0 +1,49 @@
+[
+  {
+    "claim_id": "A021-CONTROLLER-EXPOSURE-REFINEMENT",
+    "version": 1,
+    "exact_statement": "For every independent indicator A and Boolean core split with BOTH child means zero, with p=EA, J(A)=I(1-2A)/2 and delta=Pr(g_+!=g_-), the activated split F_+=1+A(g_+-1), F_-=1+A(g_--1) satisfies B_i(F)=pB_i(g), d_i(F)=pdelta and I(F_+F_-)/2=pI(g_+g_-)/2+delta J(A). For t balanced bent_m/zero-flip selector seed copies and any selector/control-only adaptive prefix retaining bent data and balance signs and processing every selector unless A is identically zero, its strictly bad-selector credit (when B_selector>K2^-m) is 2^-m[m t p+sum_selector_v w_v J(A_v)], while I(F)=p t[1+m/2+(m+1)2^-m]+J(A). A proposed full-tree Q_bad<=L I therefore necessarily bounds the displayed residual-boundary exposure by L2^m I(F)-m t p; this is sufficient only for the selector contribution. Control queries telescope J; selectors leave it unchanged. For every union of positive point events, density and J equal inclusion-exclusion over union-coordinate sizes, including duplicated events. The actual controller A=x1x2 OR x1x3 OR x0x2x3 has p=7/16,J=3/4 and its x0 query in 1+A(g-1) has d=1/16 and B>4d for ANY independent balanced core; with g=z this is a five-bit Boolean witness. Permuting labels refutes zero-badness for any function-independent control order. Exactly all 680 triples-with-repetition of nonempty positive point events on four controls admit a control-only stopping tree with zero strictly 4-bad control nodes for every balanced core: 677 use (0,1,2,3), and the three exceptional triples (6,10,13),(6,11,12),(7,10,12) use (1,0,2,3), each having 18 zero-bad orders among 24. The finite-domain stopping ledger retains terminal pH(g), giving H(1+A(g-1))<=(4+2/ln2)J(A)+pH(g). No arbitrary-width or full-FEI selection claim is made.",
+    "hypotheses": [
+      "uniform physical cube and actual Boolean signs",
+      "controller coordinates independent of core",
+      "bit entropy and B_i=H(S_i|S_-i)",
+      "both-child balance for data erasure scaling; balanced whole core for control-transfer claim",
+      "adaptive selector/control-only prefix as specified, fresh independent balanced seed blocks, fixed even m>=4",
+      "positive point events for inclusion-exclusion boundary formula",
+      "finite controller closure is restricted to four controls and exactly three nonempty events with repetition allowed",
+      "terminal entropy retained; entire tree bad credit may exceed selector credit"
+    ],
+    "statement_sha256": "dd4b146902a8cd10b8c78afb2cd9848e451e335162eb2328a0f5a30874272fab",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261013T214613Z-account05-A021-rare-core-asymptotics\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A021-LOCALIZED-ODDFACE-ORDER-OBSTRUCTION",
+        "version": 1,
+        "role": "bent-flip seed constants and strict bad-selector certificate only; identity independently reconstructed here",
+        "status": "PROVED_LOCALLY; independent current review status not presumed"
+      },
+      {
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A023\\runs\\20261012T010933Z-account05-A023-amortized-rarity-budget\\OVERLAP_GOOD_NODE_PROOF.md",
+        "role": "B+JS entropy telescope with JS<=2d/ln2 for the final finite stopping ledger, not a premise of the exact witness or exposure identity"
+      }
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unproved extension: every three-event shared-core controller query is strictly K=4-good under a prechosen physical control order. This is not the stated A023 two-event theorem."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A027",
+      "A028",
+      "A087",
+      "B05",
+      "B20"
+    ]
+  }
+]

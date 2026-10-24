@@ -1,0 +1,73 @@
+{
+  "worker": "w379",
+  "target_id": "P0110",
+  "checked_on": "2026-10-10",
+  "catalog": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 551,
+    "title": "An iid FPP law with proved KPZ exponent relation",
+    "dated_tier": 5,
+    "dated_attempt_status": "attempted_un"
+  },
+  "primary_target": {
+    "authors": [
+      "Antonio Auffinger",
+      "Michael Damron",
+      "Jack Hanson"
+    ],
+    "title": "50 years of first passage percolation",
+    "url": "https://arxiv.org/pdf/1511.03262v2",
+    "version_read": "arXiv:1511.03262v2, 2016; PDF dated September 26, 2016",
+    "location": "Question 22, Section 4.3 printed pp.88-89; question also reproduced in summary printed p.147; equation (4.19)",
+    "exact_question": "Find a distribution of passage times where (4.19) holds.",
+    "equation": "chi = 2 xi - 1",
+    "version_warning": "Both revisions directly checked: the 2015 author-hosted PDF uses (4.13), while arXiv v2 uses (4.19). Do not mix numbering.",
+    "recovered_model": "Ordinary undirected nearest-neighbor FPP on Z^d, d>=2, with one fixed iid nonnegative edge-weight law. Passage times are infima of path sums.",
+    "quantifiers": "Existential in a single law; a witness must specify its dimension, admissibility and exact fluctuation/wandering exponent definitions, prove required existence properties, and prove the identity. Planar values 1/3 and 2/3 are not required by the question itself.",
+    "recovered_catalog_statement": "Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1.",
+    "catalog_statement_source": {
+      "node_id": "claim_081071dcf812e1c0843a53fe1da486f97876afe30678a091de36c26017e679f0",
+      "logical_id": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
+      "read_only_receipt": "STORE_TARGET_ROWS.json"
+    }
+  },
+  "conditional_primary": {
+    "title": "The universal relation between scaling exponents in first-passage percolation",
+    "author": "Sourav Chatterjee",
+    "url": "https://arxiv.org/pdf/1105.4566",
+    "version": "v3, 2012-08-17; Annals of Mathematics 177 (2013)",
+    "location": "Theorem 1.1, pp.3-4",
+    "scope": "For d>=2, nearly-gamma iid weights with an MGF near zero, equality of its upper/lower fluctuation exponents and upper/lower wandering exponents implies chi=2xi-1. Upper definitions use uniform exponential moments over all nonzero lattice endpoints; lower definitions use uniform variance and expected-deviation lower bounds beyond a radius.",
+    "does_not_supply": "A concrete iid law for which the two exponent equalities have been established."
+  },
+  "current_openness": "UNKNOWN",
+  "novelty_claimed": false,
+  "status_search": "Bounded arXiv primary searches for 2025/2026 FPP KPZ exponent existence returned no results. Historical openness and an empty search are not a present-day status certificate.",
+  "prior_checks": {
+    "exact_id_search": "Recovered exact target and prior attempt from two exported nodes, then verified both node IDs in the current read-only population SQLite store. No exact P0110 match in the named H/I attempts or Lean tree; no KPZ/FPP title match in the named H/I text artifacts. Original target requires a nondegenerate law.",
+    "owner_solved_or_retired_status": "No solved status in the exact target/prior-attempt nodes checked; current openness remains UNKNOWN after bounded checks.",
+    "brain_recall": "60-second subprocess timeout; receipt records 71.320 s including teardown. Used the specifically named perceptron_proof_open_gaps_fleet_2026_07_12 scar, which requires checking the hardest mathematical gap rather than treating a successful pipeline as proof.",
+    "prior_attempt": "The existing 2026-09-07 attempt is a conditional curvature balance n^(2xi-1), or kappa*xi-(kappa-1); its own statement says exponent existence and passage-time replacement error control remain unproved. It is a concept with truth_status unverified, not a solved theorem."
+  },
+  "hardest_open_piece": "Establish sufficient compatible large-scale fluctuation and wandering exponent hypotheses for one fixed admissible iid nearest-neighbor law. The independent axial-detour obstruction and paired finite-scale lemma do not close this gap.",
+  "review_state": "w380 independently KEEP C1/C2; REFEREE_VERDICTS.jsonl stores the receipts. w379 directly KEEP w378 L1/L2. Coordinator still must verify account/model provenance before ingestion. No original-target proof is claimed.",
+  "alternate_primary_revision": {
+    "url": "https://sites.math.northwestern.edu/~auffing/FPPSurvey.pdf",
+    "version": "Author-hosted PDF dated 2015-11-08",
+    "location": "Section 4.3, Question 22, printed p.79; equation (4.13)",
+    "exact_question": "Find a distribution of passage times where (4.13) holds.",
+    "equation_number": "4.13"
+  },
+  "additional_primary_checks": [
+    {
+      "url": "https://arxiv.org/abs/1109.0523",
+      "title": "A simplified proof of the relation between scaling exponents in first-passage percolation",
+      "scope": "Auffinger-Damron prove chi<=2xi-1 under existence of Chatterjee's exponents without the nearly-gamma assumption. This is still a conditional exponent result."
+    },
+    {
+      "url": "https://arxiv.org/abs/2604.01214",
+      "title": "Rotationally invariant first passage percolation: Breaking the n/log n variance barrier",
+      "scope": "Basu-Sidoravicius-Sly (2026) give Var T=O(n^(1-epsilon)) for a rotationally invariant Riemannian planar model. The abstract does not exhibit the fixed iid nearest-neighbor lattice law or exact exponent relation sought by P0110."
+    }
+  ]
+}

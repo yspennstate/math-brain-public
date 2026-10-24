@@ -1,0 +1,100 @@
+--- a/~/math-brain-inbox/w342/bundle_005.json
++++ b/~/math-brain-inbox/w342/bundle_005.json
+@@ -0,0 +1,97 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w342",
++  "bundle_slug": "w342-c0002-partial-results",
++  "entries": [
++    {
++      "key": "c0002-w342-result-scope",
++      "namespace": "probability.research.attempts",
++      "logical_name": "c0002-w342-result-scope",
++      "kind": "concept",
++      "title": "Result scope and audit status for C0002",
++      "statement": "The cached DGFF problem asks for convergence rates, fluctuation laws and rare deviations of intermediate level sets. A bulk one-point Gaussian tail expansion improves the first-moment calculation only; it establishes neither the joint fluctuation law nor large deviations. Its proof awaits w346 KEEP.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0002:c0002-w342-result-scope",
++        "url": "file:///~/brain_workers/w342/proofs/C0002.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "gaussian-intermediate-level-tail-relative-log-correction",
++      "namespace": "probability.gaussian-fields",
++      "logical_name": "gaussian-intermediate-level-tail-relative-log-correction",
++      "kind": "lemma",
++      "title": "Relative log correction in a Gaussian intermediate-level tail",
++      "statement": "Fix g>0, lambda>0 and a bounded interval of B. For L=log N and H centered Gaussian with variance g(L+B), as L->infinity uniformly over B, P(H>=2sqrt(g)lambda L)=N^{-2lambda^2}exp(2lambda^2 B)/(2lambda sqrt(2pi L)) times [1+(B/2-2lambda^2 B^2-1/(4lambda^2))/L+O(L^{-2})]. The variance remainder B is its exact finite-N value. This is a one-point statement, not a level-set fluctuation theorem.",
++      "proof_text": "# C0002: a uniform bulk one-point tail expansion\n\nStatus: proof of a one-point expansion, awaiting w346. This continues the corrected Gaussian-tail normalization. It does not identify the fluctuation law or large deviations of the entire DGFF level set.\n\nFix g>0 and lambda>0. Set L=log N and let a centered Gaussian H have variance gL+b, with B=b/g in a fixed bounded interval. For L sufficiently large,\n\n    P(H >= 2 sqrt(g) lambda L)\n      = N^{-2lambda^2} exp(2lambda^2 B)/(2lambda sqrt(2pi L))\n        * [1 + (B/2 - 2lambda^2 B^2 - 1/(4lambda^2))/L + O(L^{-2})],\n\nuniformly over that interval of B. The variance is assumed to be exactly gL+b; for a varying finite-N variance, b can be its exact remainder. A limiting b alone is insufficient for the displayed correction without controlling its finite-N error.\n\nProof: with x=2lambda L/sqrt(L+B), Mills' expansion is Phi_bar(x)=exp(-x^2/2)/(sqrt(2pi)x) * (1-x^{-2}+O(x^{-4})). It follows by repeated integration by parts, with the next integral bounding the remainder uniformly when x tends to infinity. Expand\n\n    x^2/2=2lambda^2 L-2lambda^2 B+2lambda^2 B^2/L+O(L^{-2}),\n    1/x=(2lambda sqrt(L))^{-1}[1+B/(2L)+O(L^{-2})],\n    1/x^2=1/(4lambda^2 L)+O(L^{-2}),\n\nand multiply. Boundedness of B makes every remainder uniform.\n\nThus bounded variance corrections enter the LEADING factor exp(2lambda^2 b/g), not merely a vanishing additive correction. On a bulk set of DGFF vertices where b_N(x)=Var(h_x)-g log N is uniformly bounded, linearity of expectation permits summing this expansion with B=b_N(x)/g. No independence of vertices is needed for the expectation. Pair correlations and the scale ladder remain necessary for fluctuation laws.\n\nSource: C0002-A002 in the cached intake, which corrected the missing (log N)^{-1/2} leading normalization. The explicit relative 1/log N term here is independently derived campaign work.\n",
++      "assumptions": [
++        "Fixed positive g and lambda",
++        "Bounded B",
++        "L sufficiently large for positive variance"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0002:gaussian-intermediate-level-tail-relative-log-correction",
++        "url": "file:///~/brain_workers/w342/proofs/C0002.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0002-w342-validation-evidence",
++      "namespace": "probability.research.attempts",
++      "logical_name": "c0002-w342-validation-evidence",
++      "kind": "concept",
++      "title": "Finite validation evidence for C0002",
++      "statement": "Measured validation evidence for C0002: {\"command\": \"python -X utf8 verify_remaining.py\", \"gaussian_tail_checks\": 24, \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"maximum_relative_remainder_times_logN_squared\": \"9.6956653470651173869442709424727733978859199010812976961423770621\", \"seconds\": 0.012, \"violations\": 0}. These finite checks support the written proof and do not replace its independent audit or establish the full open problem.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0002:c0002-w342-validation-evidence",
++        "url": "file:///~/brain_workers/w342/c0002_measurements.json",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "c0002-w342-result-scope",
++      "kind": "cites",
++      "rationale": "FROM \"The cached DGFF problem asks for convergence rates, fluctuation laws and rare deviations of intermediate level sets. A bulk one-point Gaussian tail expansion improves the first-moment calculation only; it establishes neither the joint fluctuation law nor\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Describe the rate of convergence in Corollary 2.9 (size of the intermediate level set), identify the limit law of the fluctuations of the level set around its limit,\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0002-fluctuations-and-large-deviations-of-intermediate-level-sets-of-the-2d"
++    },
++    {
++      "from_key": "gaussian-intermediate-level-tail-relative-log-correction",
++      "kind": "cites",
++      "rationale": "FROM \"Fix g>0, lambda>0 and a bounded interval of B. For L=log N and H centered Gaussian with variance g(L+B), as L->infinity uniformly over B, P(H>=2sqrt(g)lambda L)=N^{-2lambda^2}exp(2lambda^2 B)/(2lambda sqrt(2pi L)) times [1+(B/2-2lambda^2\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Describe the rate of convergence in Corollary 2.9 (size of the intermediate level set), identify the limit law of the fluctuations of the level set around its limit,\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0002-fluctuations-and-large-deviations-of-intermediate-level-sets-of-the-2d"
++    },
++    {
++      "from_key": "gaussian-intermediate-level-tail-relative-log-correction",
++      "kind": "cites",
++      "rationale": "FROM \"Fix g>0, lambda>0 and a bounded interval of B. For L=log N and H centered Gaussian with variance g(L+B), as L->infinity uniformly over B, P(H>=2sqrt(g)lambda L)=N^{-2lambda^2}exp(2lambda^2 B)/(2lambda sqrt(2pi L)) times [1+(B/2-2lambda^2\"; TO \"The cached DGFF problem asks for convergence rates, fluctuation laws and rare deviations of intermediate level sets. A bulk one-point Gaussian tail expansion improves the first-moment calculation only; it establishes neither the joint fluctuation law nor\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "c0002-w342-result-scope"
++    },
++    {
++      "from_key": "c0002-w342-validation-evidence",
++      "kind": "cites",
++      "rationale": "FROM \"Measured validation evidence for C0002: {\"command\": \"python -X utf8 verify_remaining.py\", \"gaussian_tail_checks\": 24, \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"maximum_relative_remainder_times_logN_squared\":\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Describe the rate of convergence in Corollary 2.9 (size of the intermediate level set), identify the limit law of the fluctuations of the level set around its limit,\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0002-fluctuations-and-large-deviations-of-intermediate-level-sets-of-the-2d"
++    },
++    {
++      "from_key": "c0002-w342-validation-evidence",
++      "kind": "cites",
++      "rationale": "FROM \"Measured validation evidence for C0002: {\"command\": \"python -X utf8 verify_remaining.py\", \"gaussian_tail_checks\": 24, \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"maximum_relative_remainder_times_logN_squared\":\"; TO \"The cached DGFF problem asks for convergence rates, fluctuation laws and rare deviations of intermediate level sets. A bulk one-point Gaussian tail expansion improves the first-moment calculation only; it establishes neither the joint fluctuation law nor\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "c0002-w342-result-scope"
++    }
++  ]
++}

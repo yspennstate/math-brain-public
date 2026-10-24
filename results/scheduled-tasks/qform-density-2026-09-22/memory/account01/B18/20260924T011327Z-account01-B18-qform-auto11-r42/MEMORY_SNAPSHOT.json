@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260924T011327Z-account01-B18-qform-auto11-r42",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "control_head_observed_before_publication": "446d5063468cb0a8f806a2823558e74747d4f860",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "d2da7e2fe849b780bd97057bf83c7ea163481f5f",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260924T011327Z-account01-B18-qform-auto11-r42/REPORT.md",
+  "handoff_commit": "635f6109c6136585496c6d2072a257bc6b7d752a",
+  "primary_sources": [
+    "Livshyts-Paouris-Pivovarov arXiv:1507.07949 Theorem 1.1",
+    "Herry-Malicet-Poly arXiv:2303.09488 scope comparison only"
+  ],
+  "prior_exact_result_found": {
+    "id": "QFORM-ONE-SIDED-CROSS-NEGATIVE-MOMENT-v1",
+    "source_commit": "a2cf029c5c935d6eadf4216c073911fc8dc404ac",
+    "novelty_claimed": false
+  },
+  "designated_partner_applied": {
+    "partner": "account02/B18",
+    "id": "QFORM-ONE-SIDED-ANCHOR-CROSS-SQUARE-LP-v1",
+    "source_commit": "39fec6de415da54a5947972780a6aa76816bdca0",
+    "check_commit": "725262eae14b62acb3b2b41365e3d23f5a8d68e0",
+    "actual_inequality": "at rho=0, a=delta and ||C||=delta^{-1/2}, so ||p||_infty <= 12/2^(1/3)"
+  },
+  "proved_supporting_implications": [
+    "If A_II=0 and the physical cross block has top singular values d1,d2>0, LPP plus the planar negative-moment bathtub estimate gives ||p_Q||_infty <= 2 sqrt(pi)/(d1 d2)^(1/2), with arbitrary opposite-bank curvature and outside couplings after original-coordinate conditioning.",
+    "For Q_{delta,rho}=2 delta^{-1/2}UV+2W(rho R+sqrt(1-rho^2)S)+delta W^2 with zero self-curvature on both source banks, the exact spectrum has three large eigenvalues and ||p||_infty <= 2 sqrt(pi) 2^(1/4) delta^(1/4) <= 1.490451 for 0<delta<=1/64, uniformly in rho and all cap-one product laws.",
+    "After adding S^2 curvature on the Y bank, the X-side cross receiver gives ||p||_infty<=2sqrt(pi) whenever rho>=sqrt(delta), while the designated partner gives <=9.524407 at rho=0."
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "continuity": "Tracked separately. Cross negative-moment branch: essential boundedness only. Designated partner standalone one-sided endpoint: C0 continuity. No ambient mixture continuity inferred without an additional uniform Fourier envelope.",
+  "unresolved_implication": "For the curved-opposite-bank interpolation, the strict small nonzero two-sided collar 0<rho<sqrt(delta) remains unpaid by the two exact receivers. Globally, s3(A)>=1 does not force literal zero-self banks or a universal cross-singular-product certificate.",
+  "next_step": "Seek a source-valid receiver uniform as a two-sided anchor edge tends to zero while retaining arbitrary opposite-bank curvature exactly, or route that collar into an already-paid ridge/grouped/principal-core branch without deleting the small edge.",
+  "full_solution_status": "OPEN_NOT_PROVED"
+}

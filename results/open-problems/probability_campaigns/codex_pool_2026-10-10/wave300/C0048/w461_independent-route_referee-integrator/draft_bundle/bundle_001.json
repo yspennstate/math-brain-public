@@ -1,0 +1,57 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w461",
+  "bundle_slug": "c0048-source-scope-and-product-kl-bound-w461-001",
+  "entries": [
+    {
+      "key": "c0048-source-scope",
+      "namespace": "probability.statmech",
+      "logical_name": "c0048-potts-discontinuity-source-scope-correction-draft",
+      "kind": "concept",
+      "title": "DRAFT source correction: C0048 critical Potts magnetization",
+      "statement": "Historical conjecture, current 2026 status UNKNOWN: for each integer d>=3 and integer q>=3, the ferromagnetic nearest-neighbor q-state Potts model on Z^d has positive monochromatic-boundary spontaneous magnetization at its critical inverse temperature. In the source's simplex-spin convention, discontinuity means MAG at beta_c. The parenthetical q_c(d)=2 requires a separately specified q-domain and is not part of the cited 2017 Conjecture 2. Free random-cluster nonpercolation at p_c is not included in that conjecture; it is an extra premise in one sufficient pressure route. No proof of C0048 is claimed.",
+      "proof_text": null,
+      "assumptions": ["nearest-neighbor ferromagnetic Potts", "integer q>=3", "integer d>=3", "monochromatic infinite-volume state"],
+      "domain": "probability theory / statistical mechanics",
+      "source": {
+        "source_id": "arxiv:1707.00520:conjecture-2-and-mag-definition",
+        "url": "https://arxiv.org/pdf/1707.00520",
+        "revision": "as-read-2026-10-10; printed pp.3-4,93",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "If the model satisfies (MAG_beta_c), the phase transition is said to be discontinuous"
+      }
+    },
+    {
+      "key": "uniform-product-kl",
+      "namespace": "probability.statmech",
+      "logical_name": "potts-uniform-product-extensive-relative-entropy-bound-draft",
+      "kind": "lemma",
+      "title": "DRAFT reviewed lemma: extensive KL deficit of the uniform Potts product law",
+      "statement": "Let G=(V,E) be a finite simple graph, q>=2 an integer, K>=0, u the uniform independent q-color law, and gamma_K the free ferromagnetic Potts law proportional to exp(K times the number of agreeing edges). Then D(u||gamma_K)>=|E|[log((exp(K)+q-1)/q)-K/q]. Equality holds on forests; for K>0 and a graph with a cycle it is strict. Thus on growing Z^d boxes at any fixed K>0, liminf D(u||gamma_K)/|V|>=d[log((exp(K)+q-1)/q)-K/q]>0. This is a product-law obstruction and does not establish critical discontinuity.",
+      "proof_text": "Set v=exp(K)-1>=0. The exact Fortuin-Kasteleyn expansion is Z_G(K)=sum_{A subset E} v^|A| q^{k(A)}, with isolated vertices counted. Since k(A)>=|V|-|A|, Z_G>=q^|V|(1+v/q)^|E|. Also D(u||gamma_K)=log Z_G-|V|log q-K|E|/q. Combining gives the bound. The component inequality is equality for all A on a forest; a cycle gives a strict term for K>0. Strict positivity of the bracket follows from strict Jensen for the nonconstant Bernoulli(1/q) agreement indicator. The referee independently rederived the expansion and equality cases in ~/brain_workers/w461/REVIEW_PACKET.md, 2026-10-10. Served-model identity remains UNKNOWN.",
+      "assumptions": ["finite simple graph", "integer q>=2", "K>=0", "uniform independent spins", "free zero-field Potts Gibbs law"],
+      "domain": "probability theory / statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w459:C0048:L4",
+        "url": "file:///~/brain_workers/w459/ATTEMPT.md",
+        "revision": "sha256:7ED44306309CF84531C76E25E4ED2D2B83D04515897AA11B36FCBFF46034C832; reviewed-proof-prefix-sha256:6C99143FB1268C68CBD9404B19EB46352CDF76464624FCA227E55C34575BE7A3",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "uniform-product-kl",
+      "to_key": "c0048-source-scope",
+      "kind": "semantic_association",
+      "rationale": "The finite-graph lemma rules out a uniform-product variational shortcut to the C0048 critical jump; it does not prove the conjecture. Both endpoints are stated in this bundle."
+    },
+    {
+      "from_key": "c0048-source-scope",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0048-discontinuity-of-the-potts-phase-transition-on-z-d-for-q-3-d-3",
+      "kind": "semantic_association",
+      "rationale": "The existing C0048 concept carries an unqualified q_c(d)=2 equivalence; this source-scope draft records the exact integer-q primary conjecture and critical magnetization definition."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260923T022819Z-account01-B13-qform-auto13",
+  "control_start_commit": "26513d906d6c181d809590c20370657a09283b5c",
+  "control_prepublication_commit": "0e63d25f0b628d5fe9fe5988a85ac2ba93fea119",
+  "control_revision": "2026-09-22.15",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_qform_status": "OPEN",
+  "continuity_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "dependencies": [
+    {
+      "claim": "QFORM-PRODUCT-BANGBANG-REDUCTION-v1",
+      "repo": "yspennstate/math-open-problems",
+      "commit": "604a08009638981da254a72f09a24dd50e3a3c94",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260922T115714Z-account02-B13-qform-480ba28b/REPORT.md"
+    },
+    {
+      "claim": "QFORM-CROSS-3VOLUME-L3-v1",
+      "repo": "yspennstate/math-open-problems",
+      "commit": "3345697a0e1ea6c84ef3128a22917d49f0b0a826",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T013555Z-account03-B13-qform-r21/REPORT.md"
+    },
+    {
+      "claim": "QFORM-DEPENDENT-SQUARE-L3-v1",
+      "repo": "yspennstate/math-open-problems",
+      "commit": "985cf2e130fcdbf8c49bbe871b5778b207143ce1",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260922T185149Z-account03-B16-QFORM-r15/REPORT.md"
+    },
+    {
+      "claim": "QFORM-NOPIVOT-GRID-CROSSRANK-NORMAL-FORM-v1",
+      "repo": "yspennstate/math-open-problems",
+      "commit": "d59fc91cdb6c772a0b3c73ba5b90fb62e10e3bf",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260923T000555Z-account02-B13-productset-r15-482fba/REPORT.md",
+      "scope_note": "used with its stated supplied full-to-no-pivot reduction; not promoted to an unconditional full-QFORM theorem"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-ANCHORED-DISJOINT-4VOLUME-v1",
+      "status": "PROVED_SUPPORTING_TARGET_LEVEL_CERTIFICATE",
+      "statement": "For a=A_ii!=0 and Omega_i=sum over ordered disjoint triples U,V of det A[{i}U,{i}V]^2, ||p_(X^TAX)||inf <20.8701 |a|^(-1/3) Omega_i^(-1/12)."
+    },
+    {
+      "id": "QFORM-PIVOT-CROSS4-LINF-v1",
+      "status": "PROVED_SUPPORTING_COROLLARY",
+      "statement": "If i is disjoint from M=A[I,J], then ||p_Q||inf <14.758 |A_ii|^(-1/2)[s2(M)s3(M)s4(M)]^(-1/6)."
+    },
+    {
+      "id": "QFORM-BAD-WITNESS-ANCHORED4-COLLAPSE-v1",
+      "status": "CONDITIONAL_ON_PARTNER_R15_REDUCTION",
+      "statement": "Every partner-r15 m-witness has max_i |A_ii|^4 Omega_i(A)<0.083 m^-12."
+    }
+  ],
+  "canonical_output": {
+    "repo": "yspennstate/math-open-problems",
+    "commit": "3ba3125a5d8dd06d778b7c79849c4c3106da9855",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260923T022819Z-account01-B13-qform-auto13/REPORT.md",
+    "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260923T022819Z-account01-B13-qform-auto13/CHECK.txt"
+  },
+  "unresolved_implication": "QFORM-ANCHORED4-VOLUME-OR-ZEROPIVOT-CLOSURE-v1",
+  "next_recipient": "account03/B08",
+  "next_step": "Combine simultaneous collapse of all |A_ii|^4 Omega_i with the s5-small all-cut normal form and max-volume rank-16 skeleton; force a zero/near-zero-pivot bilinear or grouped-bank branch without perturbative slab continuity."
+}

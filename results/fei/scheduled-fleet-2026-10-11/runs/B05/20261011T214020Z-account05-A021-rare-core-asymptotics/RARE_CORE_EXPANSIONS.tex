@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A021: exact uniform two-parameter interface}
+Let $b$ be any balanced Boolean seed, $h=H(b)$, $i=I(b)$,
+$g_t=\prod_{j=1}^t b_j$, $q=2^{-k}$, $F=1+A_k(g_t-1)$,
+where the blocks and $k$ point controls are independent and $t,k\ge1$.
+All logarithms are base two; $c=1/\ln2$.
+\[
+ H(F)=qth+(4q-2q^2)k-2(1-q)^2\log(1-q),\qquad
+ I(F)=q(ti+k).
+\]
+The mean is $1-q$, variance $2q-q^2$, minority probability $q/2$.
+The three entropy contributions are $qth+2kq$, $2k(q-q^2)$,
+and $-2(1-q)^2\log(1-q)$.
+For every $k,t$,
+\[
+ H(F)=q(th+4k+2c)-q^2(2k+3c)+R(q),\quad
+ -\frac{2cq^3}{3(1-q)}\le R(q)\le0.
+\]
+Indeed $R(q)=-4c\sum_{j\ge3}q^j/[j(j-1)(j-2)]$.
+The proof and normalized conditional-entropy expansion are in REPORT.md.
+
+At an active physical control node with $s$ controls remaining put
+$u=2^{-s}$, $Q_0=1-2u+2u^2$.
+The magnitude-mismatch mass is $\mu=u$, with empty packet $m_0=u^2$
+and $m_W=Q_W/2$ elsewhere. Thus
+\[
+ J_s=\mu[\log(1/\mu)-D_2(\nu\Vert Q)]
+ =u-u^2+u^2\log(Q_0/u^2),
+\quad L_s=2(u-u^2)+Q_0h_2(u^2/Q_0).
+\]
+For $s\ge2$,
+\[
+ |J_s-u-(2s-1)u^2|\le4cu^3,\quad
+ |L_s-2u-(2s-2+c)u^2|\le5cu^3.
+\]
+For $s=1$ retain the exact $J_1=1/2$, $L_1=1$.
+The actual entropy decrement has the uniform expansion, for $s\ge2$,
+\[
+ \Delta_s=4u+(2s-4+3c)u^2+G_s,\qquad
+ 0\le G_s\le\frac{8cu^3}{3(1-2u)}\le\frac{16cu^3}{3}.
+\]
+The active-node reach probability is $q/u$, and
+\[
+ J_{\rm tree}=q(k+A_k),\quad
+ A_k=\sum_{s=1}^k2^{-s}[2s-1+\log(1-2^{1-s}+2^{1-2s})].
+\]
+There is $A\in[0,3]$ with
+\[
+ 0\le A-A_k\le(2k+3)2^{-k},\qquad
+ q(k+A)-q^2(2k+3)\le J_{\rm tree}\le q(k+A).
+\]
+Queried influence is $kq$; terminal influence and entropy are $qti$ and $qth$.
+The additive allowance $3c\sum w_s\mu_s=3ckq$ is separate from $J_{\rm tree}$.
+The blind unrebated charge is $qk(k+1)/2$.
+
+For fixed $b$, as $k\to\infty$, $t/k\to\lambda<\infty$,
+\[
+ \frac{H(F)}{I(F)}\longrightarrow\frac{\lambda h+4}{\lambda i+1}.
+\]
+If $k=o(t)$ and $qt\to0$, the ratio tends to $h/i$ while influence and
+minority probability tend to zero. For arbitrary unbalanced $f$, replace
+$g_t$ by $z\prod f_j$ and substitute core influence $tI(f)+1$.
+Independent review is pending; full FEI is open.
+\end{document}

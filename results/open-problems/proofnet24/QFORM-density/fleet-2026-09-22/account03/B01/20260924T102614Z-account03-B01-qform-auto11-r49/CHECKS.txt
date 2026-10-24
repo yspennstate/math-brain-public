@@ -1,0 +1,29 @@
+account03/B01 r49 deterministic arithmetic checks
+run_id=20260924T102614Z-account03-B01-qform-auto11-r49
+
+[fixed-displacement scalar fusion]
+2*pi/sqrt(2) = sqrt(2)*pi = 4.442882938158366
+For q=2,3,4,10 with p=q/(q-1), Hausdorff-Young plus L1/Linf interpolation raises to q-th power with constant 2*pi/sqrt(2), independent of q.
+
+[partner Fejer]
+sqrt(2/(3*pi)) = 0.46065886596178063
+Thus r=2 gives sup_y |D_T law(Z)(y)| <= 0.46065886596178063 * sqrt(T/|c|).
+
+[negative-moment construction]
+Let B=sum_{k>=2} 1/[k(log k)^2]. A numerical partial sum through 2,000,000 is 2.040818438915376 and the integral-tail upper estimate gives B<2.109742802424534.
+The analytic integral-test scale S_K^3/q_K is at least K/[4 B^2 log K].
+Using B<=2.109742802424534, the corresponding lower scales are:
+K=10      : 0.24393004287682044
+K=100     : 1.2196502143841021
+K=1000    : 8.13100142922735
+K=10000   : 60.98251071920511
+K=100000  : 487.8600857536409
+The actual negative-moment lower bound in REPORT.md is a fixed positive multiple of K^alpha (log K)^(2alpha-3), so it diverges for every alpha>0.
+
+[dual ambiguity]
+(a,b)=(s+xi,s-xi) has |det d(a,b)/d(s,xi)|=2, hence ds dxi=(1/2) da db.
+With ||hat f||_2^2=2*pi||f||_2^2<=2*pi,
+fixed-s and fixed-xi L1 slice caps are <=2*pi,
+and the plane L2 norm squared is <= (1/2)(2*pi)^2=2*pi^2.
+
+STATUS=PASS

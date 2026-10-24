@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260924T023910Z-account03-B11-QFORM-r48",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "startup_commit": "34b51c4be399e03956281d1a66753c8a41ed5afb",
+    "publication_refresh_commit": "f77173f99db4310849ec362079171a8f96fe6ce6",
+    "revision": "2026-09-22.15",
+    "programme": "QFORM-DENSITY-3EIG-20260922"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1",
+    "QFORM-TWO-HUB-PLUCKER-ESCAPE-FALSE-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1981b7ded0883caf72e23b833f34274a6763a43c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260924T023910Z-account03-B11-QFORM-r48/REPORT.md",
+    "verification": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260924T023910Z-account03-B11-QFORM-r48/VERIFY_OUTPUT.txt"
+  },
+  "new_result": {
+    "id": "QFORM-SAMEBANK-L3-L32-DEPENDENCE-BARRIER-v1",
+    "status": "REFUTED_INTERMEDIATE_MECHANISM",
+    "statement": "For every 0<eta<=1/sqrt(63), there is an independent scalar H and a residual triple (T,V,W) with joint density cap 1 and coordinate 1D/2D marginal caps <=1 such that the exact rank-three near-coloop coefficient matrix for Q=2HW+2eta TW+V^2 has spectrum {-sqrt(1+eta^2),0,1,sqrt(1+eta^2)}, q=1/(1+eta^2)>=63/64, while Q has logarithmically unbounded density. Simultaneously, the r46 hyperbolic-plus-puncture component has ||p||_3^3<=6 and V^2 has ||p||_(3/2)=2. Therefore same-bank L3 x L32 closure cannot use only marginal/joint caps; orthogonal product-projection provenance is essential."
+  },
+  "not_a_target_counterexample_reason": "The residual triple is produced by the nonlinear map T=R-V^2/(2eta W) from independent centered unit uniforms R,V,W, not by an exhibited orthogonal linear projection of an original cap-one product source. Pulled back to the independent variables, the third square cancels and the form has rank two.",
+  "partner": {
+    "worker": "account04/B11",
+    "commit": "30555c1ca97752e10f5089ccd95f8514c704be5a",
+    "result": "pair-area receiver ||p_Q||inf <= 128 sqrt(2)/(s sqrt(g_ij))",
+    "actual_application": "q>=63/64 and ||w_j||^2>=1/36 imply g_0j>=7/256 and ||p_Q||inf<=1094.7020468732903/s"
+  },
+  "rank_two_control": "p_{2XY}(t)=log(1/(2|t|)) for centered unit uniforms",
+  "unresolved": "QFORM-R46-ORTHOGONAL-PRODUCT-L3-L32-TRACE-v1: exploit the exact orthogonal product-projection characteristic-function factorization or equivalent source-disjoint bank decomposition to remove the log while retaining the puncture and W^2 phase. Arbitrary additional nonseparable spectrum remains separate.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_continuity_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

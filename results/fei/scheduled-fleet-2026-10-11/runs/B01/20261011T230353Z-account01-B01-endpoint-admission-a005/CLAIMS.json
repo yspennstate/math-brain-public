@@ -1,0 +1,57 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261011T230353Z-account01-B01-endpoint-admission-a005",
+  "claims": [
+    {
+      "claim_id": "B01-A005-DOWNWARD-JOINT-HARDNESS",
+      "version": 1,
+      "exact_statement": "For every eta>0, let C_eta be the class of nonconstant genuine Boolean functions with full Walsh support, I(F)<=eta, max_i I_i(F)/I(F)<=eta, and Pr(F=-1)<=eta. Then sup_{F in C_eta} L(F)/I(F)=C_L, where C_L is the unrestricted optimal constant for the complete signed downward functional. For every nonconstant seed g, the explicit one-point-surgery plus r_m=ceil(sqrt(m)) sparse-activation sequence satisfies L(F_m)/I(F_m)->L(g)/I(g).",
+      "hypotheses": [
+        "uniform physical Boolean cube",
+        "nonconstant genuine sign-valued seed",
+        "complete signed downward functional L",
+        "entropy in bits"
+      ],
+      "contributors": ["account01/B01", "prior tensor-activation and full-support sources as credited"],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "path": "reports/fei-2026-10-11/runs/B01/20261011T230353Z-account01-B01-endpoint-admission-a005/REPORT.md",
+        "locator": "sections 4 and 5"
+      },
+      "proof_dependencies": [
+        {"claim_id": "B01-A002-ARBITRARY-MEAN-ACTIVATION-LEDGER", "version": 1, "role": "Fourier partition and influence asymptotic"},
+        {"result": "L is additive under disjoint Boolean products", "role": "tensor amplification"},
+        {"result": "one-point surgery changes L by at most 8N^2 2^(-N/2)", "role": "full-support admission"}
+      ],
+      "review_records": [],
+      "status": "ANALYTICALLY_PROVED_WITH_DETERMINISTIC_CHECK_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": ["Full support, rare output, small total influence, and diffuse directional influences make the signed downward endpoint easier."],
+      "first_unproved_line": null,
+      "scope_exclusions": ["Does not bound C_L.", "Does not prove FEI.", "Does not preserve the STEP statistic or the posterior-forest residual."],
+      "next_consumers": ["A012", "A034", "A036", "A043", "A050", "A051", "A079", "A086", "A094", "B20"]
+    },
+    {
+      "claim_id": "B01-A005-ACTIVATION-CONTROL-STEP-CAP",
+      "version": 1,
+      "exact_statement": "For F_r=1+A_r(g-1), p=2^-r, q=1-Eg, every activation control z has I_z=pq and the exact entropy decrement displayed in REPORT.md equation (6.1). Along the A002 joint-hardness sequence, E u_m->0 and p_m->0, so Delta_z H(F_m)/I_z(F_m)->4. Hence that explicit embedding does not preserve arbitrary seed STEP statistics.",
+      "hypotheses": ["uniform physical Boolean cube", "fresh activation controls", "nonconstant seed", "entropy in bits"],
+      "contributors": ["account01/B01"],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "path": "reports/fei-2026-10-11/runs/B01/20261011T230353Z-account01-B01-endpoint-admission-a005/REPORT.md",
+        "locator": "section 6"
+      },
+      "proof_dependencies": [
+        {"claim_id": "B01-A002-ARBITRARY-MEAN-ACTIVATION-LEDGER", "version": 1, "role": "exact H(F_r) formula"}
+      ],
+      "review_records": [],
+      "status": "ANALYTICALLY_PROVED_WITH_DETERMINISTIC_CHECK_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": ["The A002 sparse-activation embedding preserves arbitrary seed restriction-step criticality."],
+      "first_unproved_line": "Whether a different transformation preserves high STEP criticality while meeting all joint class restrictions remains open.",
+      "scope_exclusions": ["Does not disprove universal STEP(K).", "Does not disprove FEI.", "Does not rule out a different embedding."],
+      "next_consumers": ["A012", "A034", "A043", "A051", "A055", "A086", "A094", "B20"]
+    }
+  ]
+}

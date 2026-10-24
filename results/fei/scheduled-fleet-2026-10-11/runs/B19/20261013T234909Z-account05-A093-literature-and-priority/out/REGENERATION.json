@@ -1,0 +1,17 @@
+{
+  "primary_command": "python -X utf8 code/fetch_sources.py",
+  "witness_command": "python -X utf8 code/check_witness.py",
+  "additional_sources": [
+    {
+      "url": "https://arxiv.org/pdf/2608.27908v1",
+      "file": "out/fangwang26.pdf",
+      "recipe": "urllib.request.urlopen(url,timeout=20).read(); save PDF; fitz.open(stream=bytes,filetype=\"pdf\"); extract page.get_text() with PDF page markers"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2606.00246v1",
+      "file": "out/gmp26_v1.pdf",
+      "recipe": "same urllib/fitz extraction; exact bytes pinned by ADDITIONAL_RECEIPTS.json"
+    }
+  ],
+  "image_recipe": "python -X utf8 -c \"import fitz; d=fitz.open('out/gmp26.pdf'); d[15].get_pixmap(matrix=fitz.Matrix(1,1)).save('out/gmp_page16.png')\""
+}

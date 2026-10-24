@@ -1,0 +1,217 @@
+[
+  {
+    "reviewer": "A091",
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A091\\runs\\20261014T042228Z-account05-A091-composition-referee\\CLAIMS.json",
+    "source_sha256": "2e0b77b4b3f1b8224f82de41a7f1822dbb7fd81ba9de8dda08766d65fe5f6c4c",
+    "source_claim_record": {
+      "claim_id": "A059-INTERRUPTED-PRIORITY-STOPPING-PAYMENT",
+      "version": 1,
+      "exact_statement": "For every finite ordered priority controller formed by disjoint point tests A_1,...,A_k of arbitrary positive widths and selecting pairwise disjoint independent Boolean data cores u_1,...,u_k with default +1, every finite adaptive physical restriction tree respecting priority order for control queries, with arbitrary data interruptions, has H(F)<=U_root+R_root+(3/ln2)T_data+(8+2/ln2)Pi_ctrl+E[H_leaf-U_leaf-R_leaf]. Here U=sum p_j[H(u_j)-eta((Eu_j)^2)], R=sum eta(p_j)Var(u_j), T_data=sum visited-node weights p_j beta_j^2, and Pi_ctrl is same-tree actual controller influence spent. At controller-resolved leaves the final term is eta((Eu_leaf)^2)<=I_leaf/ln2. The local repeated-fallback point test F=A u+(1-A)G, with u,G on disjoint blocks, satisfies D_control-kappa<=(8+2/ln2)Inf_control even though the same G occurs in both children. All entropy units are bits. There is no depth, width or number-of-stages bound, and inherited U and unresolved terminal entropy are retained.",
+      "hypotheses": [
+        "Finite uniform physical cube; pairwise disjoint controller point-test blocks and independent disjoint data-core blocks; genuine Boolean signs.",
+        "Controller queries respect priority order; arbitrary adaptive data interleavings and finite frontiers; irrelevant blocks skipped.",
+        "Repeated fallback data between children allowed; distinct selected cores do not share physical data.",
+        "Bits; eta(0)=0; unresolved stopping profile retained, no universal inherited-core entropy bound."
+      ],
+      "statement_sha256": "1f99994b750d8caf70bd3de0030246788ef4e35fe18e2cabc6564141afe998c9",
+      "contributors": [
+        "A059"
+      ],
+      "proof_source": {
+        "run_id": "20261014T025828Z-account05-A059-decomposition-depth",
+        "path": "PRIORITY_PROOF.md",
+        "locators": "Equations (1)-(4), direct repeated-fallback Fourier sectors and ordered priority induction"
+      },
+      "proof_dependencies": [
+        {
+          "claim_id": "A059-INTERLEAVED-BIASED-STOPPING-RESERVE",
+          "version": 1,
+          "scope": "signed data drift, independently accepted by A091 source run 20261014T013816Z"
+        },
+        {
+          "claim_id": "A091-POINT-CONTROLLER-RESIDUAL-AND-BOUNDARY",
+          "version": 1,
+          "scope": "resolved terminal profile and physical JS inequality reconstructed; accepted locally in REVIEW_A091.md"
+        },
+        "Elementary binary entropy/Hellinger inequality proved here; exact Fourier algebra; physical same-tree influence conservation"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A091 account05 B19",
+          "date_utc": "2026-10-14T05:08:10.281911+00:00",
+          "verdict": "ACCEPT_AT_EXACT_STATED_SCOPE_WITHOUT_SUBSTANTIVE_REPAIR",
+          "scope": "Full exact v1 any-width, any-stage ordered priority theorem, arbitrary data interleaving, every finite actual frontier; original fine R and actual repeated fallback retained",
+          "source_run": "20261014T042228Z-account05-A091-composition-referee",
+          "source": "REVIEW.md; PROOF.md; out/CHECK.json",
+          "method": "Independent full-function integer FWHT and physical selector/edge reconstruction; analytic empty/nonempty-sector proof and actual terminal telescope",
+          "validation": {
+            "files": [
+              "out\\GENERAL_0_27.json",
+              "out\\GENERAL_27_54.json",
+              "out\\GENERAL_54_81.json"
+            ],
+            "exact_assertions": 185244,
+            "runtime_seconds": 254.28792180000028,
+            "cases": 15552,
+            "stats": {
+              "roots": 0,
+              "trees": 0,
+              "nodes": 15552,
+              "override_nodes": 15552,
+              "source_shared_nodes": 0,
+              "resolved_leaves": 0,
+              "data_nodes": 0
+            }
+          },
+          "hash_scheme": "Source original raw UTF-8 exact_statement SHA256 retained; hypotheses and contributors preserved",
+          "exclusions": [
+            "No arbitrary inherited-core entropy payment",
+            "No unresolved arbitrary-controller boundary funding",
+            "Authored two-test order extension is separate, not imported into this source statement"
+          ]
+        }
+      ],
+      "status": "INDEPENDENTLY_REVIEWED_ACCEPTED_AT_STATED_SCOPE",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A087",
+        "A091",
+        "A090",
+        "A057",
+        "A064",
+        "B12",
+        "B20"
+      ]
+    },
+    "scope": "v1 independently accepted unchanged; not a review of new v2"
+  },
+  {
+    "reviewer": "A057",
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A057\\runs\\20261014T044759Z-account05-A057-coherent-restriction-remainder\\CLAIMS.json",
+    "source_sha256": "7ed5842f41760a07bae9661092902fdfb8cb87fab017b79d939bfb6dbdec62fd",
+    "source_claim_record": {
+      "claim_id": "A059-INTERRUPTED-PRIORITY-STOPPING-PAYMENT",
+      "version": 1,
+      "exact_statement": "For every finite ordered priority controller formed by disjoint point tests A_1,...,A_k of arbitrary positive widths and selecting pairwise disjoint independent Boolean data cores u_1,...,u_k with default +1, every finite adaptive physical restriction tree respecting priority order for control queries, with arbitrary data interruptions, has H(F)<=U_root+R_root+(3/ln2)T_data+(8+2/ln2)Pi_ctrl+E[H_leaf-U_leaf-R_leaf]. Here U=sum p_j[H(u_j)-eta((Eu_j)^2)], R=sum eta(p_j)Var(u_j), T_data=sum visited-node weights p_j beta_j^2, and Pi_ctrl is same-tree actual controller influence spent. At controller-resolved leaves the final term is eta((Eu_leaf)^2)<=I_leaf/ln2. The local repeated-fallback point test F=A u+(1-A)G, with u,G on disjoint blocks, satisfies D_control-kappa<=(8+2/ln2)Inf_control even though the same G occurs in both children. All entropy units are bits. There is no depth, width or number-of-stages bound, and inherited U and unresolved terminal entropy are retained.",
+      "hypotheses": [
+        "Finite uniform physical cube; pairwise disjoint controller point-test blocks and independent disjoint data-core blocks; genuine Boolean signs.",
+        "Controller queries respect priority order; arbitrary adaptive data interleavings and finite frontiers; irrelevant blocks skipped.",
+        "Repeated fallback data between children allowed; distinct selected cores do not share physical data.",
+        "Bits; eta(0)=0; unresolved stopping profile retained, no universal inherited-core entropy bound."
+      ],
+      "statement_sha256": "1f99994b750d8caf70bd3de0030246788ef4e35fe18e2cabc6564141afe998c9",
+      "contributors": [
+        "A059"
+      ],
+      "proof_source": {
+        "run_id": "20261014T025828Z-account05-A059-decomposition-depth",
+        "path": "PRIORITY_PROOF.md",
+        "locators": "Equations (1)-(4), direct repeated-fallback Fourier sectors and ordered priority induction"
+      },
+      "proof_dependencies": [
+        {
+          "claim_id": "A059-INTERLEAVED-BIASED-STOPPING-RESERVE",
+          "version": 1,
+          "scope": "signed data drift, independently accepted by A091 source run 20261014T013816Z"
+        },
+        {
+          "claim_id": "A091-POINT-CONTROLLER-RESIDUAL-AND-BOUNDARY",
+          "version": 1,
+          "scope": "resolved terminal profile and physical JS inequality reconstructed; accepted locally in REVIEW_A091.md"
+        },
+        "Elementary binary entropy/Hellinger inequality proved here; exact Fourier algebra; physical same-tree influence conservation"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A057",
+          "verdict": "ACCEPT_AT_STATED_SCOPE",
+          "repair_supplied": false,
+          "source_claim_sha256": "1f99994b750d8caf70bd3de0030246788ef4e35fe18e2cabc6564141afe998c9",
+          "proof_reconstruction": "REVIEW_A059.md",
+          "validation": "out/CHECK.json",
+          "scope": "Source ordered controller theorem only; no arbitrary-order or universal FEI acceptance."
+        }
+      ],
+      "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A087",
+        "A091",
+        "A090",
+        "A057",
+        "A064",
+        "B12",
+        "B20"
+      ]
+    },
+    "scope": "v1 independently accepted unchanged; not a review of new v2"
+  },
+  {
+    "reviewer": "A087",
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261014T045317Z-account05-A087-restriction-referee\\CLAIMS.json",
+    "source_sha256": "c79574386e5fb536821f2999779bc7bbf392efbef4235ef016875ae3638d9a7a",
+    "source_claim_record": {
+      "claim_id": "A059-INTERRUPTED-PRIORITY-STOPPING-PAYMENT",
+      "version": 1,
+      "exact_statement": "For every finite ordered priority controller formed by disjoint point tests A_1,...,A_k of arbitrary positive widths and selecting pairwise disjoint independent Boolean data cores u_1,...,u_k with default +1, every finite adaptive physical restriction tree respecting priority order for control queries, with arbitrary data interruptions, has H(F)<=U_root+R_root+(3/ln2)T_data+(8+2/ln2)Pi_ctrl+E[H_leaf-U_leaf-R_leaf]. Here U=sum p_j[H(u_j)-eta((Eu_j)^2)], R=sum eta(p_j)Var(u_j), T_data=sum visited-node weights p_j beta_j^2, and Pi_ctrl is same-tree actual controller influence spent. At controller-resolved leaves the final term is eta((Eu_leaf)^2)<=I_leaf/ln2. The local repeated-fallback point test F=A u+(1-A)G, with u,G on disjoint blocks, satisfies D_control-kappa<=(8+2/ln2)Inf_control even though the same G occurs in both children. All entropy units are bits. There is no depth, width or number-of-stages bound, and inherited U and unresolved terminal entropy are retained.",
+      "hypotheses": [
+        "Finite uniform physical cube; pairwise disjoint controller point-test blocks and independent disjoint data-core blocks; genuine Boolean signs.",
+        "Controller queries respect priority order; arbitrary adaptive data interleavings and finite frontiers; irrelevant blocks skipped.",
+        "Repeated fallback data between children allowed; distinct selected cores do not share physical data.",
+        "Bits; eta(0)=0; unresolved stopping profile retained, no universal inherited-core entropy bound."
+      ],
+      "statement_sha256": "1f99994b750d8caf70bd3de0030246788ef4e35fe18e2cabc6564141afe998c9",
+      "contributors": [
+        "A059"
+      ],
+      "proof_source": {
+        "run_id": "20261014T025828Z-account05-A059-decomposition-depth",
+        "path": "PRIORITY_PROOF.md",
+        "locators": "Equations (1)-(4), direct repeated-fallback Fourier sectors and ordered priority induction"
+      },
+      "proof_dependencies": [
+        {
+          "claim_id": "A059-INTERLEAVED-BIASED-STOPPING-RESERVE",
+          "version": 1,
+          "scope": "signed data drift, independently accepted by A091 source run 20261014T013816Z"
+        },
+        {
+          "claim_id": "A091-POINT-CONTROLLER-RESIDUAL-AND-BOUNDARY",
+          "version": 1,
+          "scope": "resolved terminal profile and physical JS inequality reconstructed; accepted locally in REVIEW_A091.md"
+        },
+        "Elementary binary entropy/Hellinger inequality proved here; exact Fourier algebra; physical same-tree influence conservation"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A087",
+          "verdict": "HOLDS_AT_EXACT_STATED_SCOPE_NO_SUBSTANTIVE_REPAIR",
+          "scope": "Full v1: exact local fine-reserve repeated fallback, ordered arbitrary-width data-interrupted stopping inequality and actual terminal profile; inherited U retained.",
+          "source_run": "20261014T045317Z-account05-A087-restriction-referee",
+          "source": "PROOF.md; out/POINT_CHECK.json; out/MANY_CHECK.json; out/BINARY_CHECK.json",
+          "method": "Independent direct physical Walsh/edge and exact conditional reserve reconstruction; complete analytic dependence and finite prime-log/interval checks",
+          "original_recorded_statement_sha256": "1f99994b750d8caf70bd3de0030246788ef4e35fe18e2cabc6564141afe998c9",
+          "source_snapshot_sha256": "2bcd2986de55dd4528e7e15efae6f31a02e4a2cff2bc5790707dc6ca3098d5a1"
+        }
+      ],
+      "status": "INDEPENDENTLY_RECONSTRUCTED_HOLDS_AT_STATED_SCOPE_BY_A087",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A087",
+        "A091",
+        "A090",
+        "A057",
+        "A064",
+        "B12",
+        "B20"
+      ]
+    },
+    "scope": "v1 independently accepted unchanged; not a review of new v2"
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260922T134146Z-account03-B15-qform-r11c",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit": "a3c89beb58ed3d99a6183caa98f0941d77ed6ddd",
+  "control_revision": "2026-09-22.5",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "actual_mathematical_premises": [
+    {
+      "source": "yspennstate/math-open-problems@657566d3f5026e672f5cbe6b8c03fe63766bf0",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T132108Z-b15-qform-separator-regularity-r2/REPORT.md",
+      "scope_used": "common-height averaging of conditional C0 densities preserves C0 by dominated convergence; affine principal-block bounds are uniform in induced linear terms"
+    },
+    {
+      "source": "yspennstate/math-open-problems@2279571f59ade7a9ec478af1e4818f6c117ac224",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/QFORM-B11-20260922T121344Z/REPORT.md",
+      "scope_used": "binary-indefinite L3 estimate and probability-mass dependent-square smoothing mechanism"
+    },
+    {
+      "source": "yspennstate/math-open-problems@47dc925729bbf269333cc6e1256178a538d2f553",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260922T120320Z-account01-B15-qform/REPORT.md",
+      "scope_used": "uniform-in-affine-term fixed-block density bounds for invertible physical 3x3 and 4x4 blocks"
+    },
+    {
+      "source": "yspennstate/math-open-problems@5b82e40a37b4f475866e63f67d48cfd9e3909d0c",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260922T123805Z-account03-B14-QFORM-r11/REPORT.md",
+      "scope_used": "definite 2x2 affine quadratic density bound pi/sqrt(det S)"
+    }
+  ],
+  "partner_result_actually_applied": "account04/B15 common-height conditional C0 averaging is applied to the new fully coupled principal-block conditional densities, removing arbitrary outside coordinates without an exact separator.",
+  "new_results": [
+    "QFORM-SUBPROB-DEPENDENT-SQUARE-v1: for finite base mass delta<=1, ||p_{R+dV^2}||_infinity <= 4 |d|^-1/2 ||rho||_3^(3/4) delta^(1/4).",
+    "QFORM-COUPLED-PIVOT-L1-QUARTER-v1: changing a nonpivot marginal in an invertible physical 3x3/4x4 block with nonzero pivot changes the output density by O(||f-g||_1^(1/4)), uniformly in outside affine terms.",
+    "QFORM-TWO-PIVOT-C0-v1: an invertible physical 3x3/4x4 principal block with at least two nonzero diagonal entries forces a C0 output density for arbitrary measurable independent marginals bounded by one."
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "068c67aeef2c1767939096b3e0ef07c636778668",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T134146Z-account03-B15-qform-r11c/REPORT.md"
+  },
+  "central_status": "OPEN: the universal matrix- and dimension-independent L-infinity constant is not proved; fixed-block constants may degenerate.",
+  "regularity_status": "PROVED on the two-pivot principal-block branch; prior rank>=5/disjoint-smoothing branches remain valid; zero-diagonal/single-square-pivot low-rank configurations remain open for continuity.",
+  "unresolved_implication": "For the central theorem, prove a dimension-free aggregation/small-ball estimate in the mixed localized/diffuse class surviving QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE. For continuity, derive a different bilinear/multi-pivot stability mechanism for zero-diagonal or single-nonzero-diagonal low-rank blocks.",
+  "next_step": "Attack a zero-diagonal invertible 3x3 block q=2axy+2bxz+2cyz by a bilinear perturbation-stability estimate retaining the L1 mass of the changed marginal; do not repeat square-pivot smoothing when no second physical square pivot exists.",
+  "native_brain_receiver_used": false,
+  "full_brain_connected": false
+}

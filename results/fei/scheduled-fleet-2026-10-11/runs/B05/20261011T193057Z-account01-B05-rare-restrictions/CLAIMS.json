@@ -1,0 +1,45 @@
+{
+  "run_id": "20261011T193057Z-account01-B05-rare-restrictions",
+  "full_fei_status": "OPEN_NOT_PROVED_OR_DISPROVED",
+  "claims": [
+    {
+      "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO-v1",
+      "status": "PROVED",
+      "scope": "all proposed dimension-independent one-node inequalities L <= K d + A V + B M with finite nonnegative K,A,B",
+      "statement": "For every finite K,A,B there is an even-k genuine Boolean sparse-activation split with L > Kd + AV + BM.",
+      "quantitative_witness": {
+        "delta": "2^-k",
+        "p": "2^-2k",
+        "d": "2^-3k",
+        "L_lower": "(1-delta)(k-2)d",
+        "L_asymptotic": "(k+log_2(e)+o(1))d",
+        "V_upper": "4 delta d",
+        "M_exact": "12 k d^2"
+      },
+      "dependencies": [
+        "physical restriction entropy and phase-potential refund, blob 67759a5275432c298be6a0025c9a375d90b2cd1d",
+        "logarithmic child-defect allocation and sparse activation, blob 822c380de0c4be109415f22f040cc2c8c345d53c"
+      ],
+      "does_not_imply": [
+        "FEI is false",
+        "no adaptive stopping tree can work",
+        "the exact physical telescoping identities fail"
+      ]
+    },
+    {
+      "claim_id": "B05-NONLINEAR-TREE-LOG-TRANSPORT-v1",
+      "status": "OPEN",
+      "scope": "all genuine Boolean functions",
+      "statement": "Construct a source-realizable stopping-tree credit that pays the accumulated packet entropy logarithm once, yields at least (k-O(1))d on the sparse-activation witness, and survives recursive ternary majority without a fixed positive global occurrence-KL reserve."
+    }
+  ],
+  "verification": {
+    "script": "CHECK.py",
+    "output": "CHECK.out",
+    "python": "3.12.14",
+    "randomness": "NONE",
+    "assertions": 95,
+    "passed": 95,
+    "failed": 0
+  }
+}

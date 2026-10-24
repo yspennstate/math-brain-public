@@ -1,0 +1,10 @@
+STATE: NEEDS_REVIEW
+NEXT: w413 independently checks w410-S1.2; the core proof lane must construct two correctly oriented square-bond exit events and prove their joint stopped slit-domain Cardy approximation.
+
+2026-10-10: Started source and prior-work verification. The 03:30 local hook-audit window has passed; assignment lookup found no w410 row.
+2026-10-10: Saved w410-S1.1 from the exact intake row. Verified Wang Zhou's arXiv:2409.03235v6 Theorem 2 and Corollary 1.1 as a primary proof claim under Condition C; current mathematical resolution remains UNKNOWN pending proof audit. Manolescu 2025 treats the stronger full-plane CLE limit as conjectural.
+2026-10-10: Independently rederived w408's two-martingale signed-measure calculation and saved w410-S1.2: an explicit deterministic Loewner driver with one exact Cardy martingale but zero quadratic variation. w413 review pending.
+2026-10-10: Kept w409's contour reduction and w408's L4-L6 as conditional/diagnostic results. Primary Definition 3 in arXiv:1208.3787 confirms q=1 spin 1/3, correcting C0017-A001's 2/3; patch generator prepared.
+2026-10-10: Verified Garban-Steif arXiv:1102.5761 Chapter II Section 4: original source states the square-lattice conformal-invariance challenge; the intake's Cardy/SLE6 pair is a sharper working formulation. Saved source-fidelity row w410-S1.4.
+2026-10-10: Submitted reviewed 4-card/3-link draft to math-brain-inbox/w410/bundle_001.json (SHA-256 0c96de7cca1a083dbed47f47bd87b6edcaae10bfca5b07aacb47c216133ec1ac) and one hook proposal to hooks1000/proposals/math-w410.jsonl. Ingestion and retrieval not verified; live store not edited. Progress rows S1.3 and S1.2 logged.
+2026-10-10: Final `python -X utf8 validate_packet.py` passed: 5 claim rows, 10 verdict rows, 4 draft cards, 3 links, submitted-byte checks, and `git apply --check` of source patch. STUCK: team_comm send first failed on database lock and second reported w410 not in a team; switched reviewer request/handoff to progress page plus REVIEW_PACKET.md.

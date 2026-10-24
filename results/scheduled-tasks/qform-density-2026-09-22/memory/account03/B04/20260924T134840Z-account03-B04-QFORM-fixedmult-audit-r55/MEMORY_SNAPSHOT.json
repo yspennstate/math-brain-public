@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260924T134840Z-account03-B04-QFORM-fixedmult-audit-r55",
+  "objective": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "source_control_start_commit": "483e504209df46b7361e842fbe3e0ed2d9d8852c",
+  "source_control_final_refresh_commit": "f0c42ecba6e21a3013721195726ade8d082488e4",
+  "programme_revision": "2026-09-22.15",
+  "baseline_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+    "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex",
+    "blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "sha256": "9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69",
+    "lines": 790
+  },
+  "correction_inbox_blob": "ba7aeac3d879f59da5ec8a12daad74ea85714465",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "actual_mathematical_premises": [
+    "independent original-coordinate densities bounded by K",
+    "geometric rank-one Brascamp--Lieb proved in the pinned manuscript",
+    "product-projection density bound proved in the pinned manuscript",
+    "scalar integrated Fourier powers and regularized determinant theorem proved in the pinned manuscript",
+    "nonsymmetric volume-sampled interpolation with global rank <=3r and complement rank <=r",
+    "grouped product-Fourier nine-direction replacement independently reconstructed in this run"
+  ],
+  "results": [
+    {
+      "id": "QFORM-FIXED-MULTIPLICITY-17-20260924",
+      "status": "PASS_IN_THIS_FULL_INDEPENDENT_AUDIT",
+      "statement": "s_17(A)>=s implies ||p_Q||_infinity<=10000 K^2/s"
+    },
+    {
+      "id": "QFORM-FIXED-MULTIPLICITY-9-v1",
+      "status": "PASS_IN_THIS_INDEPENDENT_RECONSTRUCTION",
+      "statement": "s_9(A)>=s implies ||p_Q||_infinity<(2010+1200 log16)K^2/s<5338 K^2/s",
+      "regularity": "essentially bounded density globally; continuous C0 on no-pivot Fourier branch only"
+    },
+    {
+      "id": "QFORM-EXACT-ZERO-TWO-ANCHOR-AFFINE-RECEIVER-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "If literal H has A[H,H]=0 and C=A[H,H^c] has row rank two, then ||p_Q||_infinity<=e sqrt(2pi) det(CC^T)^(-1/4)",
+      "regularity": "essentially bounded density; continuity not claimed"
+    }
+  ],
+  "partner_result_actually_applied": null,
+  "partner_note": "The later owner objective superseded the old account04/B04 partner requirement for this invocation; peer artifacts were used only after independent rederivation, not as premises.",
+  "math_outputs": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "0635bb4439bb722f1c4f13622a52a4a353fe9b39",
+      "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/audits/account03/B04/20260924T134840Z-account03-B04-QFORM-fixedmult-audit-r55/AUDIT.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "3c07ea9e59c45aa5a2151812e932bc85d5959461",
+      "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/account03/B04/20260924T134840Z-account03-B04-QFORM-fixedmult-audit-r55/EXACT_ZERO_TWO_ANCHOR.md"
+    }
+  ],
+  "unresolved_implication": "QFORM-EIGHT-MASKED-BILATERAL-SHEAR-COLLAR-RECEIVER: turn aggregate overlap-one/two-sided collar currency into a universal density bound without selecting a tiny local determinant, while retaining arbitrary same-bank curvature and shifted product masks.",
+  "next_step": "Seek an aggregate product-space inequality for the bilateral-shear masks, or a direct original-coordinate averaging argument that spends Xi_2 before reciprocal local payment; do not infer conditional caps after rotation.",
+  "full_three_eigenvalue_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_thinking_counters": null,
+  "scheduler_changed": false,
+  "notifications_changed": false,
+  "email_sent": false,
+  "public_release": false,
+  "paid_model_or_api_call": false,
+  "cross_account_authentication": false
+}

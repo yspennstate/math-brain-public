@@ -1,0 +1,14 @@
+{
+  "helper_version": "A064-exclusive-prefix-v1",
+  "actual_boolean_family": "Exclusive controllers on two fair control bits selecting one of two independent two-bit Boolean cores or constant +1; all 81 controller maps and all 16x16 core pairs",
+  "parameter_domain": "control map in {0,1,constant}^4; two-bit core truth tables 0..15; core prices C=0,2,4; transported price alpha=C+11/2",
+  "case_count": "Pilot 8 controllers x 4x4 core pairs=128 roots; full 81x16x16=20736 roots, 82944 root data-query occurrences; prefix tests 81x4x4 x 2 interleavings x 3 prices=7776 trees on named cores",
+  "symmetry": "No symmetry reduction; independent data blocks; repeated selectors for a physical core merged",
+  "arithmetic": "Integer Walsh coefficients, Fraction direct physical influences, rational prime-log entropy vectors, 32-term rational atanh log enclosures with proved remainder for signs",
+  "memory_estimate_mb": 220,
+  "pilot_max_runtime_seconds": 60,
+  "full_max_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "special_witnesses": "Actual biased-core growing branch under q=1/4; arbitrary-controller data-first terminal obstruction verified through all 16 two-bit controller signs",
+  "nonduplication": "Independent review of A087 exact signed ledger and original Snell/potential lift; no A023 overlap census, no reproof of baseline conservation or J<=B"
+}

@@ -1,0 +1,285 @@
+{
+  "status": "PASS",
+  "truth_tables": 276,
+  "all_vertex_edit_pairs": 65808,
+  "signed_cut_checks": 263232,
+  "two_sign_flow_problems": 2208,
+  "feasible_with_positive_charge": 0,
+  "first_positive_charge_flow": null,
+  "maximal_deficits": {
+    "n1_K1": {
+      "D_natural_log_vector": {},
+      "tables": [
+        0,
+        3
+      ]
+    },
+    "n1_K2": {
+      "D_natural_log_vector": {},
+      "tables": [
+        0,
+        3
+      ]
+    },
+    "n1_K3": {
+      "D_natural_log_vector": {},
+      "tables": [
+        0,
+        3
+      ]
+    },
+    "n1_K4": {
+      "D_natural_log_vector": {},
+      "tables": [
+        0,
+        3
+      ]
+    },
+    "n2_K1": {
+      "D_natural_log_vector": {
+        "2": "1"
+      },
+      "tables": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        11,
+        13,
+        14
+      ]
+    },
+    "n2_K2": {
+      "D_natural_log_vector": {},
+      "tables": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        11,
+        13,
+        14,
+        15
+      ]
+    },
+    "n2_K3": {
+      "D_natural_log_vector": {},
+      "tables": [
+        0,
+        15
+      ]
+    },
+    "n2_K4": {
+      "D_natural_log_vector": {},
+      "tables": [
+        0,
+        15
+      ]
+    },
+    "n3_K1": {
+      "D_natural_log_vector": {
+        "3": "-9/8",
+        "2": "13/4"
+      },
+      "tables": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        127,
+        128,
+        191,
+        223,
+        239,
+        247,
+        251,
+        253,
+        254
+      ]
+    },
+    "n3_K2": {
+      "D_natural_log_vector": {
+        "3": "-9/8",
+        "2": "5/2"
+      },
+      "tables": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        127,
+        128,
+        191,
+        223,
+        239,
+        247,
+        251,
+        253,
+        254
+      ]
+    },
+    "n3_K3": {
+      "D_natural_log_vector": {},
+      "tables": [
+        0,
+        255
+      ]
+    },
+    "n3_K4": {
+      "D_natural_log_vector": {},
+      "tables": [
+        0,
+        255
+      ]
+    }
+  },
+  "parity_guards": [
+    {
+      "code": 105,
+      "K": 3,
+      "flow": [
+        {
+          "sign": -1,
+          "feasible": false,
+          "demand": "6",
+          "flow_value": "0",
+          "vertices": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "charges_upper": [
+            "3/2",
+            "3/2",
+            "3/2",
+            "3/2"
+          ],
+          "net_flow_edges": [],
+          "divergences": {
+            "1": "0",
+            "2": "0",
+            "4": "0",
+            "7": "0"
+          },
+          "failure_cut_vertices": [
+            1,
+            2,
+            4,
+            7
+          ]
+        },
+        {
+          "sign": 1,
+          "feasible": false,
+          "demand": "6",
+          "flow_value": "0",
+          "vertices": [
+            0,
+            3,
+            5,
+            6
+          ],
+          "charges_upper": [
+            "3/2",
+            "3/2",
+            "3/2",
+            "3/2"
+          ],
+          "net_flow_edges": [],
+          "divergences": {
+            "0": "0",
+            "3": "0",
+            "5": "0",
+            "6": "0"
+          },
+          "failure_cut_vertices": [
+            0,
+            3,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "code": 150,
+      "K": 3,
+      "flow": [
+        {
+          "sign": -1,
+          "feasible": false,
+          "demand": "6",
+          "flow_value": "0",
+          "vertices": [
+            0,
+            3,
+            5,
+            6
+          ],
+          "charges_upper": [
+            "3/2",
+            "3/2",
+            "3/2",
+            "3/2"
+          ],
+          "net_flow_edges": [],
+          "divergences": {
+            "0": "0",
+            "3": "0",
+            "5": "0",
+            "6": "0"
+          },
+          "failure_cut_vertices": [
+            0,
+            3,
+            5,
+            6
+          ]
+        },
+        {
+          "sign": 1,
+          "feasible": false,
+          "demand": "6",
+          "flow_value": "0",
+          "vertices": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "charges_upper": [
+            "3/2",
+            "3/2",
+            "3/2",
+            "3/2"
+          ],
+          "net_flow_edges": [],
+          "divergences": {
+            "1": "0",
+            "2": "0",
+            "4": "0",
+            "7": "0"
+          },
+          "failure_cut_vertices": [
+            1,
+            2,
+            4,
+            7
+          ]
+        }
+      ]
+    }
+  ],
+  "assertions": 148933,
+  "runtime_seconds": 8.049146000001201
+}

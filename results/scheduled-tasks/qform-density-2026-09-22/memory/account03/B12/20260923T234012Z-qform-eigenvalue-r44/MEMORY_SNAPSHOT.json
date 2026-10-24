@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260923T234012Z-qform-eigenvalue-r44",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_head_prepublication": "8f0a6944b6a8c5ac75092ac77829bc89c433fe16",
+  "correction_inbox_blob": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "status": "SUPPORTING_STABILITY_THEOREMS_PROVED_FULL_TARGET_OPEN",
+  "math_repository": "yspennstate/math-open-problems",
+  "math_commit": "fd0d29b2e79ba12076c85505ee2a2b55cb10a743",
+  "math_report": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T234012Z-qform-eigenvalue-r44/REPORT.md",
+  "claims": [
+    {
+      "id": "QFORM-MULTIPACKET-SPECTRAL-BUDGET-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "For A=A0+sum E_l, Q=sum q_l, Delta=sum s_{q_l+1}(E_l), a final original-coordinate invertible pivot of size r with Schur complement S satisfies s_k(S)>=[s_{k+r+Q}(A0)-Delta]_+."
+    },
+    {
+      "id": "QFORM-MULTIPACKET-COLUMN-SQUARE-STABILITY-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "For an original-coordinate carrier H, sqrt(lambda_k((A^2)[H,H]))>=[sqrt(lambda_{k+Q}((A0^2)[H,H]))-Delta]_+."
+    },
+    {
+      "id": "QFORM-MULTIPACKET-PHYSICAL-CORE-DENSITY-STABILITY-v1",
+      "status": "PROVED_SUPPORTING_DENSITY_THEOREM",
+      "statement": "If H has m original coordinates and sigma=[s_{3+Q}(A0[H,H])-Delta]_+>0, then the full ambient quadratic form has a continuous C0 density bounded by 2 sqrt(6 pi m)/sigma."
+    }
+  ],
+  "partner_applied": {
+    "worker": "account04/B12",
+    "run": "20260923T191531Z-account04-B12-hybrid-square-defect-r7",
+    "source_commit": "3df1475f988c811570dc5c249a7756d24adb51bf",
+    "actual_inequality": "Applying the partner theorem on all 16 physical coordinates with (k,r,q,p)=(11,1,2,2) gives s_11(A_p)>=7/4. After further packets with total free rank <=8 and tail budget <=1/4, the final physical core has s_3>=3/2 and density <=23.155240145864564 with a C0 representative."
+  },
+  "analytic_receiver": {
+    "source_commit": "51d2edb29d7a4c150e4d47ed3a6685875a8483ae",
+    "path": "proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md",
+    "scope": "m-coordinate actual coefficient matrix with three singular values >=sigma, arbitrary affine terms, independent cap-one original coordinates",
+    "bound": "2 sqrt(6 pi m)/sigma"
+  },
+  "continuity_source": {
+    "source_commit": "9b8bb7e84811978a2c46c7bb5ec50f2570dbc056",
+    "scope": "fixed symmetric rank>=3 coefficient matrix under cap-one product input has an instance-dependent C0 density"
+  },
+  "finite_checks": {
+    "schur_generated": 10000,
+    "schur_admissible": 8996,
+    "schur_violations": 0,
+    "core_generated": 10000,
+    "core_admissible": 6359,
+    "core_violations": 0,
+    "status": "SANITY_ONLY"
+  },
+  "unresolved_implication": "From bare s_3(A)>=1, force a bounded original-coordinate core with enough reserve after optimal packet budgeting, or route its failure into hub/grouped-crossing/ridge/common-plane/diffuse-bank mechanisms.",
+  "next_step": "Attempt a product-preserving reserve-or-diffuse-bank dichotomy that turns failure of every bounded-core post-budget reserve into a quantitative existing receiver.",
+  "same_hour_login": "Preserved existing canonical r43 login; did not overwrite or fabricate a second canonical login."
+}

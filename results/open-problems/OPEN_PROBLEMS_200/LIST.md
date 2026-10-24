@@ -1,0 +1,1343 @@
+# The 200 open problems (probability), 10 October 2026
+
+From 10 October 2026 to the end of the primary directive (16 October 2026, 19:08) this is the only list of open problems
+that agents work on. His words, 10 Oct 18:42: "make a list of important but solvable open problems in probability theory,
+based on the brain ... 200 open problems that are publishable but doable. and from now on for the rest of the prime
+directive this list should be the only list the agents are trying to solve".
+
+How the list was made. The pool was every probability problem in the ledgers (intakes C, D, E, F, G, H, I, P and the
+Claude intake) still open on 10 October, after the problems we have answered, partly answered or found settled in the
+literature were taken out. Problems that are famous and decades old, vaguely posed, or not checkable from their source
+were dropped. Each problem carries its statement as the source gives it, a one-line summary and one line on what is known
+around it. Every problem was searched for papers since 2019 (OpenAlex for 85 of them, the arXiv listing for the other
+115 once OpenAlex's daily quota ran out); every hit that read like an answer was read. Two problems answered in 2025
+papers and one too vaguely posed to aim at were replaced. A line marked (not checked) states partial progress that has
+not been verified against the literature. The searches were bounded: before working on a problem, search again.
+
+Rules for agents. Work only on these 200. Before you start, search the literature and GitHub for someone else's solution
+and cite what you find. A claimed answer is a candidate until two independent audits pass; record it in the problem's
+ledger row (newest recorded_at wins), never by editing this list. Test questions, answer keys and test items never go into
+any repository.
+
+
+| Domain | Problems |
+|---|---|
+| Random walks, Markov chains and mixing | 25 |
+| Percolation, spanning forests and spatial graphs | 37 |
+| Random graphs and networks | 11 |
+| Random matrices and free probability | 18 |
+| Interacting particle systems, sandpiles and KPZ | 23 |
+| Statistical mechanics: polymers, gases, interfaces | 12 |
+| Gaussian fields, LQG and planar maps | 10 |
+| Brownian motion, Levy processes and SPDE | 14 |
+| Branching structures, trees and recursive equations | 15 |
+| Boolean functions, concentration and combinatorial probability | 15 |
+| Optimal transport, statistics and inference | 8 |
+| Queueing and stochastic networks | 3 |
+| Stationary processes and nonlinear Markov operators | 9 |
+
+## Random walks, Markov chains and mixing
+
+**1. P0034: Recurrence of the planar horizontal-new vertical-old walk**  
+Start at the origin in Z^2; after first visiting a site step horizontally with either sign equally likely, and after a repeat visit step vertically with either sign equally likely. Does any site receive infinitely many visits with positive probability?  
+Caveat: The source indexing omits the first step; use its intended new-site rule also at time zero. The analogous four- and three-dimensional results do not decide this planar model.  
+Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 2.27, printed p.56 (https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf).  
+In brief: A clean planar test case for self-interacting walks, where martingale and Markov tools both fail.  
+Where it stands: The three- and four-dimensional analogues are settled; the rule is explicit and two-dimensional.  
+
+**5. P0065: Monotonicity of harmonic dimension under inward bias**  
+For a nondegenerate supercritical Galton-Watson tree without leaves and 0<=lambda<m, does harmonic-measure dimension of RW_lambda increase with lambda, and is the increase strict?  
+Caveat: On a deterministic regular tree the dimension is constant, so retain the chapter's nondegeneracy assumptions for strictness. Both monotonic and strict clauses are grouped.  
+Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 17.29, printed p.582 (https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf).  
+In brief: Monotonicity of harmonic-measure dimension for biased walk on Galton-Watson trees.  
+Where it stands: Explicit dimension formulas through the invariant measure on the space of trees exist.  
+
+**15. P0072: Geodesic selection by reinforced ants**  
+On a finite graph with nest N and food F, ants take edge-weighted random walks until hitting F. Reinforce either a uniformly chosen shortest N-F path in the visited trace, or the loop erasure of the reversed walk. Are all edges whose weights grow linearly contained in shortest N-F paths of the original graph?  
+Caveat: The two reinforcement algorithms form one conjecture family here. The source proves series-parallel and losange cases, not all graphs.  
+Source: Aletti et al.: Open problems in stochastic reinforcement models; March2023 workshop, published2025, Section2, main conjecture, PDF pp.1-2 (https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf).  
+In brief: Reinforcement dynamics as a model of path selection by learning agents.  
+Where it stands: Finite graphs and stochastic-approximation methods; the source proves special graphs.  
+
+**16. P0073: Deterministic limits for trace-reinforced ants**  
+When each ant reinforces every edge it visited at least once, do all edge weights divided by the number of ants converge almost surely to deterministic constants on general finite graphs, and does an appropriate edgewise statement hold on Z^2?  
+Caveat: The finite and Z^2 versions are grouped. The underlying paper excludes multiple edges incident to food; the brief workshop statement omits this load-bearing restriction. Its wording main conjecture is interpreted using the immediately preceding trace-process paragraph.  
+Source: Aletti et al.: Open problems in stochastic reinforcement models; March2023 workshop, published2025, OpenProblems1-2, PDF p.2; underlying Kious-Mailler-Schapira Conjecture1.1 (https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf).  
+In brief: Almost sure limits of reinforced edge weights on general finite graphs.  
+Where it stands: Stochastic approximation on a finite system; series-parallel cases are worked out.  
+
+**17. P0081: Critical WARM on the integer line**  
+For WARM on Z with alpha=1 and all vertex firing rates1, prove that each edge count divided by time converges almost surely to1.  
+Caveat: Keep the stochastic count process distinct from its deterministic equilibrium equation.  
+Source: Aletti et al.: Open problems in stochastic reinforcement models; March2023 workshop, published2025, Conjecture2, PDF p.10 (https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf).  
+In brief: Law of large numbers for a reinforced network model on the integers.  
+Where it stands: Explicit conjecture with all parameters fixed; finite-graph cases are known.  
+
+**62. P0199: Cutoff for cyclic-to-random transpositions**  
+Does the shuffle that swaps the cyclically chosen position with a uniform random position have cutoff?  
+Caveat: This is a time-inhomogeneous deck chain or a chain sampled by full sweeps. It differs from the cyclic adjacent-transposition shuffle, whose cutoff was proved by Nam-Nestoridi.  
+Source: Levin-Peres: Markov Chains and Mixing Times, second edition, Chapter26 Question6(a), PDFp376 (https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf).  
+In brief: Cutoff for the cyclic-to-random transposition shuffle.  
+Where it stands: The mixing order is known; cutoff needs the matching lower bound. (not checked)  
+
+**63. P0200: Cutoff for card-cyclic random insertion**  
+Does the shuffle that cyclically chooses a card label, removes that card and reinserts it uniformly have cutoff?  
+Caveat: Random-to-random insertion is a different shuffle and is resolved. Here the selected label, rather than its present position, advances cyclically.  
+Source: Levin-Peres: Markov Chains and Mixing Times, second edition, Chapter26 Question6(c), PDFp376 (https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf).  
+In brief: Cutoff for the cyclic remove-and-insert shuffle.  
+Where it stands: Same structure as the previous shuffle, with known order of mixing. (not checked)  
+
+**64. P0203: Mixing exponent of uniform binary row additions**  
+Determine the mixing order for the walk on GL_N(2) that adds one uniformly chosen distinct row to another.  
+Caveat: The same question on the Peres author page is counted once. The book phrase saying order2^N nodes is a typo; the group size is of order2^(N^2). The asymptotic question concerns N tending to infinity.  
+Source: Levin-Peres: Markov Chains and Mixing Times, second edition, Chapter26 Question9, PDFp377; Peres current page Question2 (https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf).  
+In brief: Mixing time of row-addition walk on GL_N(2).  
+Where it stands: Comparison techniques give bounds of nearby orders.  
+
+**67. P0245: Exact minimum stationary cover time for reversible chains**  
+Prove or refute E_pi C>=(n-1)H_(n-1) for every irreducible reversible discrete-time chain on n states.  
+Caveat: The comparison is the nonlazy complete graph. Feige asymptotic lower bounds for unweighted graphs do not establish this exact weighted-chain statement.  
+Source: Aldous-Fill: Reversible Markov Chains and Random Walks on Graphs, 2002 recompiled2014, Open Problem6.30,PDF230 (https://www.stat.berkeley.edu/~aldous/RWG/book.pdf).  
+In brief: Aldous-Fill cover-time lower bound for reversible chains.  
+Where it stands: Extremal for the complete graph; known for large classes of chains.  
+
+**68. P0247: Asymptotic uniformity of the final discovered vertex**  
+For simple random walk from a fixed vertex on growing finite vertex-transitive graphs, does the law of the last new vertex approach the uniform law in total variation?  
+Caveat: Uniform stationary initialization makes the marginal exactly uniform by symmetry, but that is weaker than the fixed-start question.  
+Source: Aldous-Fill: Reversible Markov Chains and Random Walks on Graphs, 2002 recompiled2014, Open Problem7.10,PDF246 (https://www.stat.berkeley.edu/~aldous/RWG/book.pdf).  
+In brief: Is the last new vertex of a random walk nearly uniform on transitive graphs?  
+Where it stands: Known in specific families; coupling and hitting-time estimates.  
+
+**69. P0251: Mixing of the random-pair binary crossover chain**  
+For K even binary words of length L, repeatedly choose a uniform pairing and independently swap each paired coordinate with probability1/2. Prove the proposed O(log K*log L) mixing bound within each fixed column-sum class.  
+Caveat: The source uses a family of words and a fresh uniform permutation to place pairs; shared pairings couple the columns. Replace logarithms by log(K+1),log(L+1) when stating small-parameter bounds. General evolutionary algorithms are different chains.  
+Source: Aldous-Fill: Reversible Markov Chains and Random Walks on Graphs, 2002 recompiled2014, Open Problem12.5,PDF400-401 (https://www.stat.berkeley.edu/~aldous/RWG/book.pdf).  
+In brief: Mixing of a random pairing-swap process on binary words.  
+Where it stands: A concrete bound to prove by coupling.  
+
+**91. C0130: Escape probability of a transient one-dimensional excited random walk**  
+Compute, for a transient excited random walk on Z, the probability P_0(X_n not 0 for all n >= 1) of never returning to the starting point.  
+Source: Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012, Problem 3.12, p. 13 (https://arxiv.org/pdf/1204.1895).  
+In brief: Escape probability of transient excited random walk.  
+Where it stands: Branching-process representations compute related quantities.  
+
+**92. C0133: Zero velocity on the non-transient event for excited random walks**  
+For excited random walks on Z^d with i.i.d. elliptic environments and a direction l, does X_n . l / n converge to 0 almost surely on the complement of the event {|X_n| -> infinity}?  
+Source: Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012, Problem 4.7, p. 19 (https://arxiv.org/pdf/1204.1895).  
+In brief: Zero speed off the transience event for excited walks in higher dimension.  
+Where it stands: Zero-one laws and renewal structures are developed.  
+
+**114. I0004: Recurrence for horizontal orientations given by an irrational rotation**  
+"Fix an irrational alpha. Direct the line at height y in Z to the right if the fractional part of y*alpha is less than 1/2, and to the left otherwise; vertical edges can be crossed in either direction. Is this walk recurrent or transient?"  
+Source: arxiv_2609_07621, Section 7, inside Problem 3 (attributed to Guillotin-Plantard and Le Ny [2008b, Section 4]).  
+In brief: Recurrence of a walk on a quasi-periodic Manhattan lattice.  
+Where it stands: A deterministic orientation pattern; ergodic-theoretic tools apply.  
+
+**124. F0093: Noise sensitivity of simple random walk on Liouville Cayley graphs**  
+[Verbatim from the source, Section 3.3.4.] Consider n steps simple random walk (SRW) X_n on a Cayley graph of a finitely generated infinite group Gamma. Refresh independently each step with probability epsilon, to get Y_n from X_n. Are there groups for which the positions at time n, X_n and Y_n are asymptotically independent? That is, the l_1 (total variation) distance between the chain (X_n, Y_n) and two independent copies (X'_n, X''_n) is going to 0, with n. Note that on the line Z, they are uniformally correlated, and therefore also on any group with a non trivial homomorphism to R, or any group that has a finite index subgroup with a non trivial homomorphism to R. On the free group and for any non-Liouville group, X_n and Y_n are correlated as well, but for a different reason: Both X_n and Y_n have nontrivial correlation with X_1. Itai Benjamini and Jeremie Brieussel conjecture that these are the only ways not to be noise sensitive. That is, if a Cayley graph is Liouville and the group does not have a finite index subgroup with a homomorphism to the reals, then the Cayley graph is noise sensitive for the simple random walk. In particular, the Grigorchuk group is noise sensitive for the simple random walk!  
+Source: Kalai: Three puzzles on mathematics, computation, and games (ICM 2018), Section 3.3.4 (a problem of Benjamini and Brieussel), PDF p. 22 (https://arxiv.org/pdf/1801.02602).  
+In brief: Noise sensitivity of random walk on Liouville groups.  
+Where it stands: Entropy and boundary theory of groups give tools.  
+
+**142. F0124: Crossover at drift 4/5 for the bad configurations of reduced random walk in random scenery**  
+Conjecture 2.16. Consider the random walk on Z with F = {-1, +1}, m_F(+1) = p and m_F(-1) = 1 - p, where p in [1/2, 1]. For p in [1/2, 4/5) every configuration (Y_n)_{n != 0} is bad for Y_0, while for p in (4/5, 1] every configuration (Y_n)_{n != 0} is good for Y_0. [Same page: 'We are presently attempting to prove this conjecture. If true, it would provide us with a remarkable example where the continuity problem has a phase transition in the drift parameter.' The scenery here is the two-colour i.i.d. scenery of Section 2.6, values in {-1, +1}.] [Setting of the source, Section 1 and Section 2.6: X = (X_n)_{n in Z} i.i.d. Z^d-valued increments with law m_F (F the set of possible values), S the random walk S_n = X_1 + ... + X_n (S_0 = 0, S_{-n} = -(X_0 + ... + X_{-n+1})), C = (C_z)_{z in Z^d} an i.i.d. scenery with law m_G on a finite set G, independent of X; Y_n = C_{S_n} the scenery seen along the walk; RWRS is the joint process Z_n = (X_n, Y_n) and 'reduced RWRS' is (Y_n) alone. PDF p. 8: Lambda_n = [-n, n] cap Z; a configuration (W_n)_{n != 0} is a bad configuration for W_0 if there is an epsilon > 0 such that for all n in N there are m >= n and a configuration zeta agreeing with W on Lambda_n minus {0} such that the two conditional laws of W_0 given the configurations on Lambda_m minus {0} differ by at least epsilon in total variation; a configuration that is not bad is called good; every version of the conditional probability is discontinuous at the bad configurations and there is a version continuous at all good ones (Maes, Redig, Van Moffaert).]  
+Source: den Hollander, Steif: Random walk in random scenery: a survey of some recent results (2006), Conjecture 2.16, Section 2.6, PDF p. 9 (https://arxiv.org/pdf/math/0608219).  
+In brief: A crossover in random walk in random scenery.  
+Where it stands: An explicit one-dimensional model.  
+
+**143. E0095: Best edge to add to a regular graph to speed up the random walk**  
+One may ask the analogue of Question 3 for random walk on any graph: for a connected d-regular graph on an even number n of vertices, which edge (or perfect matching) should be added to best speed up the nearest-neighbour random walk?  
+Source: Diaconis: Some things we have learned (about Markov chain Monte Carlo), Question 4, PDF p. 9 (https://arxiv.org/pdf/1309.7754).  
+In brief: Which edge speeds up random walk on a regular graph the most?  
+Where it stands: Spectral perturbation on a finite graph.  
+
+**144. E0093: Typical mixing rate of a random random walk on a general finite group**  
+For an arbitrary finite group G, if a generating set S is chosen at random, what is the typical rate of convergence of the random walk it generates? The source notes that this is the topic of random random walks, surveyed by Hildebrand, and that the best bounds on the diameter of random Cayley graphs are due to Babai, Beals and Seress, which can be turned into mixing bounds.  
+Source: Diaconis: Some things we have learned (about Markov chain Monte Carlo), Question 2, PDF p. 9 (https://arxiv.org/pdf/1309.7754).  
+In brief: Mixing of random walk with random generators on a general group.  
+Where it stands: Known for abelian and some other groups. (not checked)  
+
+**147. E0086: Largest completely covered disc for a random walk in an annular region**  
+Consider D_n intersect H with D_n contained in the complement of the disc D(0, a_n), where a_n tends to infinity. What is the almost sure asymptotic of M_{D_n}(n), the maximal local time over that region? The source is especially interested in the case D_n contained in D(0,2 a_n) minus D(0, a_n) with a_n = n^alpha for 0 < alpha < 1/2, noting that the largest disc completely covered by the planar walk before time tau_n has radius n^{1/2 + o(1)}, and conjectures that for a_n at least n^{1/2 + eps} a corresponding statement holds.  
+Source: Topics and problems on favorite sites of random walks, Open problem 2, PDF p. 6 (https://arxiv.org/pdf/1606.03787).  
+In brief: Covered discs for planar random walk in an annulus.  
+Where it stands: Cover-time machinery for the planar walk is developed.  
+
+**148. E0072: Vanishing drift for conjugation-invariant metrics on symmetric measured groups**  
+Let (G, mu) be a symmetric measured group and suppose there exists a bi-invariant (conjugation-invariant) and mu-integrable (semi-)metric d on G. Is the drift delta_d(mu) equal to 0? The source suggests as a first test case the commutator subgroup of the free group on two generators with the stable commutator length.  
+Source: Five remarks about random walks on groups, Problem 4, PDF p. 25 (https://arxiv.org/pdf/1406.0763).  
+In brief: Drift of random walks for conjugation-invariant metrics.  
+Where it stands: A boundary-theory question for symmetric measures.  
+
+**159. F0136: Sharpness of kappa <= 1 for non-ballisticity of the Dirichlet walk in dimension two**  
+As we will see below (Theorem 5), the assumption kappa <= 1 is sharp in dimension d >= 3, and this is also conjectured to be true in dimension 2. [I.e. the conjecture: for the RWDE on Z^2 with d_alpha != 0 and kappa > 1, lim X_n/n = v exists and is non-zero, P_0^(alpha)-a.s. Context, PDF p. 17, Remark 7: 'A famous conjecture is that for uniformly elliptic RWRE in dimension d >= 2, directional transience implies ballisticity. We see that it is not true for non uniformly elliptic environment, in particular for Dirichlet environment. Nevertheless, the previous theorem shows that with a slightly different notion of ballisticity, which involves the parameter kappa which is a function of the environment, directional transience implies ballisticity. It hence gives in dimension d >= 3 for Dirichlet environments an answer to the conjecture. It is expected that the same is true in dimension d = 2, but we are still far for a proof of that.'] [Setting of the source, Sections 2-5: a random walk in Dirichlet environment (RWDE) on Z^d with weights alpha_1, ..., alpha_{2d} > 0 attached to the 2d nearest-neighbour directions e_1, ..., e_{2d} (e_{i+d} = -e_i): at each site the transition probabilities (omega(x, x + e_i))_i are an independent Dirichlet(alpha_1, ..., alpha_{2d}) vector; P^(alpha) is the law of the environment, P_0^(alpha) the annealed law of the walk from 0. d_alpha := sum_{i=1}^{2d} alpha_i e_i is the mean drift direction; kappa := 2 sum_{i=1}^{2d} alpha_i - max_{1 <= i <= d} (alpha_i + alpha_{i+d}) (PDF p. 11, (4.3)) is the integrability exponent of the Green function of the strongest finite trap (a pair of neighbours). Theorem 1 (PDF p. 12): if d_alpha . l != 0 the walk is transient in the direction of sign(d_alpha . l) l, and if d_alpha != 0 it has asymptotic direction d_alpha/|d_alpha|, P_0^(alpha)-a.s. Proposition 2 (PDF p. 11): if kappa <= 1 then X_n/n -> 0. Theorem 5 (PDF p. 16): (i) if d >= 3, d_alpha != 0 and kappa > 1 then X_n/n -> v != 0; (ii) if d_alpha = 0 or kappa <= 1 then X_n/n -> 0; (iii) if d >= 3, d_alpha . l > 0 and kappa <= 1 then log(X_n . l)/log n -> kappa in probability. (T)^gamma is Sznitman's ballisticity condition (exponential decay, at rate L^gamma, of the annealed probability of exiting a slab of width L on the wrong side).]  
+Source: Sabot, Tournier: Random walks in Dirichlet environment: an overview (2016), Section 4, PDF p. 11 (the sentence following Proposition 2) (https://arxiv.org/pdf/1601.08219).  
+In brief: Ballisticity threshold for random walk in Dirichlet environment in the plane.  
+Where it stands: Sharp in dimension at least three.  
+
+**160. F0137: Sznitman's condition (T)^gamma holds for every directionally transient Dirichlet walk**  
+It is expected that this condition is not optimal, and we conjecture that at least (T)^gamma is satisfied when d_alpha != 0, hence that renewal times have finite s-moments for s < kappa when the RWDE is directionally transient, i.e. when d_alpha != 0. [Context, PDF pp. 18-19: Corollary 2: 'Assume that d >= 2 and that d_alpha . l > 0 for some direction l. Assume that the condition (6.1) is satisfied, and denote (tau_k)_{k >= 1} the renewal times in the direction l. Then E_0[tau_1^s] < infinity if and only if s < kappa.' Condition (6.1) is the source's sufficient condition for (T)^gamma (a lower bound on the weights in a half space, from Bouchet-Ramirez-Sabot and Fribergh-Kious); 'this condition' in the conjecture is (6.1).] [Setting of the source, Sections 2-5: a random walk in Dirichlet environment (RWDE) on Z^d with weights alpha_1, ..., alpha_{2d} > 0 attached to the 2d nearest-neighbour directions e_1, ..., e_{2d} (e_{i+d} = -e_i): at each site the transition probabilities (omega(x, x + e_i))_i are an independent Dirichlet(alpha_1, ..., alpha_{2d}) vector; P^(alpha) is the law of the environment, P_0^(alpha) the annealed law of the walk from 0. d_alpha := sum_{i=1}^{2d} alpha_i e_i is the mean drift direction; kappa := 2 sum_{i=1}^{2d} alpha_i - max_{1 <= i <= d} (alpha_i + alpha_{i+d}) (PDF p. 11, (4.3)) is the integrability exponent of the Green function of the strongest finite trap (a pair of neighbours). Theorem 1 (PDF p. 12): if d_alpha . l != 0 the walk is transient in the direction of sign(d_alpha . l) l, and if d_alpha != 0 it has asymptotic direction d_alpha/|d_alpha|, P_0^(alpha)-a.s. Proposition 2 (PDF p. 11): if kappa <= 1 then X_n/n -> 0. Theorem 5 (PDF p. 16): (i) if d >= 3, d_alpha != 0 and kappa > 1 then X_n/n -> v != 0; (ii) if d_alpha = 0 or kappa <= 1 then X_n/n -> 0; (iii) if d >= 3, d_alpha . l > 0 and kappa <= 1 then log(X_n . l)/log n -> kappa in probability. (T)^gamma is Sznitman's ballisticity condition (exponential decay, at rate L^gamma, of the annealed probability of exiting a slab of width L on the wrong side).]  
+Source: Sabot, Tournier: Random walks in Dirichlet environment: an overview (2016), Section 6.1, PDF p. 19 (the sentence following Corollary 2) (https://arxiv.org/pdf/1601.08219).  
+In brief: Sznitman's ballisticity condition for Dirichlet environments.  
+Where it stands: Proved under a stronger condition.  
+
+**190. I0012: The boundary case of the collision phase transition on comb graphs**  
+The source excludes "the boundary case gamma = 1/3 in our analysis, which we conjecture to fall into the regime of Theorem 4.1-(1)", i.e. the infinite collision property.  
+Source: arxiv_2609_05343, Section 4, before Theorem 4.1.  
+In brief: The boundary case of collision for walks on comb graphs.  
+Where it stands: The other cases are settled in the source.  
+
+**192. G0012: Alon-Peres conjecture: non-backtracking walks of length C sqrt(n) are rarely simple (minimum degree 3)**  
+Conjecture 1.5 (Alon-Peres). For any eps > 0, there exists a C = C(eps) such that if Gamma is a graph on n vertices with all degrees at least 3, and k > C sqrt(n), then for any edge delta, the probability that a length-k random non-backtracking walk starting with delta is simple is less than eps. [The source proves the fixed-degree (regular) case; 'one could also explore analogs of these statements for (non-backtracking) closed loops'.]  
+Source: Dozier: The birthday paradox for non-backtracking walks on regular graphs (2026), Conjecture 1.5 (Alon-Peres), Section 1, PDF p. 2 (https://arxiv.org/pdf/2608.26321).  
+In brief: Alon-Peres conjecture on non-backtracking walks.  
+Where it stands: Proved for walks of larger length. (not checked)  
+
+**197. P0204: Mixing on large monotone subsets of the hypercube**  
+For an increasing subset V of the binary N-cube with at least half its vertices, is lazy induced-subgraph random-walk mixing always O(N*log N)?  
+Caveat: The author page gives an O(N^3) theorem of Ding-Mossel and conjectures N*log N. This is the induced graph walk, whose stationary law is degree weighted, not automatically uniform.  
+Source: Yuval Peres: related open Markov-chain problems, Related open problems, Question1 (https://www.yuval-peres-books.com/markov-chains-and-mixing-times/).  
+In brief: Mixing on monotone subsets of the hypercube.  
+Where it stands: Bounds of polynomial order are known. (not checked)  
+
+## Percolation, spanning forests and spatial graphs
+
+**2. P0036: Percolation threshold on arbitrary geodesic Cayley spanning trees**  
+If T is any geodesic spanning tree rooted at the identity of a Cayley graph of growth rate b, must br(T)=b, equivalently must its Bernoulli bond percolation threshold be 1/b?  
+Caveat: The branching-number/percolation equivalence is a theorem of the source. The question is stated there geometrically; its probability formulation is recorded transparently. Lexicographically minimal spanning trees satisfy it.  
+Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 3.12, printed p.91 (https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf).  
+In brief: Ties the growth of a group to the percolation threshold of its geodesic trees.  
+Where it stands: True for free groups and trees; a branching-number comparison for one tree at a time.  
+
+**3. P0050: Singularity of distinct free and wired forest measures**  
+If the wired and free uniform spanning-forest measures differ on an infinite network, must they be mutually singular?  
+Caveat: Known for trees and networks with an infinite automorphism orbit. Distinct probability measures need not be singular in general.  
+Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 10.58, printed p.385 (https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf).  
+In brief: A structural dichotomy for the two uniform spanning forest measures.  
+Where it stands: Tail triviality and indistinguishability arguments for spanning forests apply directly.  
+
+**4. P0062: Connectivity of minimal forests on graphs roughly isometric to trees**  
+If a connected locally finite graph is roughly isometric to a tree, must its free minimal spanning forest be connected almost surely?  
+Caveat: This concerns minimal forests, not uniform forests; Pete-Timar's uniform-forest counterexample cannot be substituted.  
+Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 11.37, printed p.410 (https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf).  
+In brief: Connectivity of the free minimal spanning forest beyond trees.  
+Where it stands: Known on trees; rough isometry gives a concrete transfer route.  
+
+**9. C0083: Asymptotic expansion of the critical value of the Hamming graph**  
+Show that the critical value of percolation on the Hamming graph K_n^d satisfies p_c(K_n^d; lambda) = sum_{i=1}^{d/3} a_i(d) n^{-i} + O(n^{-1-d/3}), with a_1(d) = 1/d; the second-order term was identified by Federico, van der Hofstad, den Hollander and Hulshof.  
+Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 15.10, p. 233 (https://www.mathematik.uni-muenchen.de/~heyden/survey-high-d-percolation.pdf).  
+In brief: Asymptotic expansion of the critical point of percolation on Hamming graphs.  
+Where it stands: Lace-expansion machinery for high-dimensional graphs is developed and the first coefficient is known.  
+
+**10. C0068: Concentration and uniqueness of the giant component above the scaling window on high-dimensional tori**  
+For the torus T_{n,d}, d > 6, and p = p_c(1 + eps) with eps -> 0 but eps >> V^{-1/3}, prove that |C_max|/(eps V) -> c in probability and |C_(2)|/(eps V) -> 0, with c the right-derivative of theta at p_c(Z^d).  
+Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 13.2, p. 180 (https://www.mathematik.uni-muenchen.de/~heyden/survey-high-d-percolation.pdf).  
+In brief: Law of large numbers for the giant component of high-dimensional torus percolation just above criticality.  
+Where it stands: The hypercube analogue is proved; the torus requires the same expansion with finite-size control.  
+
+**11. C0090: Critical behaviour of scale-free percolation**  
+For scale-free percolation with parameters alpha (long-range exponent) and tau (weight tail), determine when lambda -> theta(lambda) is continuous, identify the critical exponents, and determine the upper critical dimension as a function of alpha and tau.  
+Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 16.8, p. 251 (https://www.mathematik.uni-muenchen.de/~heyden/survey-high-d-percolation.pdf).  
+In brief: Phase transition of scale-free percolation, a standard spatial model of real networks.  
+Where it stands: Continuity and exponent questions with existing long-range lace-expansion and renormalisation tools.  
+
+**12. P0098: Strict FPP comparison in higher dimensions at a large minimum atom**  
+Extend strict comparison of axial time constants for strictly ordered passage-time laws in increasing-concave order to d>2 when the minimum support value r>0 has mass at least the oriented-percolation threshold.  
+Caveat: More variable means integral phi dF <= integral phi dG for every increasing concave phi. The claim is axial; equality inside an oriented percolation cone cannot be ignored in statements about arbitrary directions.  
+Source: Auffinger, Damron and Hanson: 50 years of first-passage percolation, Question3, PDF p.13; Definition2.8 and Theorem2.12, pp.12-13 (https://arxiv.org/pdf/1511.03262).  
+In brief: How the first-passage time constant depends on the edge law.  
+Where it stands: The planar case is settled; the higher-dimensional comparison asks for an extension of that argument.  
+
+**13. P0107: Critical Bernoulli FPP growth in three dimensions**  
+For iid edge times0 with probability p_c(Z^3) and1 otherwise, determine whether E T(0,boundary B(n)) is comparable to log n.  
+Caveat: The target is undirected edge FPP at the three-dimensional bond threshold; planar critical exponents cannot be transferred.  
+Source: Auffinger, Damron and Hanson: 50 years of first-passage percolation, Question19, PDF p.71 (https://arxiv.org/pdf/1511.03262).  
+In brief: Critical first-passage percolation in three dimensions.  
+Where it stands: The planar answer is known; the question is a single growth rate.  
+
+**14. P0108: Sharp width threshold for the thin-cylinder FPP CLT**  
+Determine the largest power alpha for which standardized passage times constrained to Z times[-n^alpha,n^alpha]^(d-1) converge to a standard normal law.  
+Caveat: The source defines gamma_F(d) by this threshold under a finite2+delta edge-time moment. A sufficient exponent from the source theorem is not an optimality result.  
+Source: Auffinger, Damron and Hanson: 50 years of first-passage percolation, Question20, PDF p.72 (https://arxiv.org/pdf/1511.03262).  
+In brief: Crossover from Gaussian to non-Gaussian behaviour of passage times in thin cylinders.  
+Where it stands: A Gaussian limit is known for small widths; the problem is to push the exponent.  
+
+**26. P0133: Torus spanning-tree dual homotopy distribution**  
+Determine the limiting distribution of the homotopy classes of the three edge-simple noncontractible closed paths in the dual complement of a uniform spanning tree on a fine toroidal square grid.  
+Caveat: The question concerns the joint winding information, not only the number of dual cycles. The geometry of the torus is an input. Later line-bundle determinant methods require a separate exact-scope comparison.  
+Source: Schramm: Conformally invariant scaling limits, overview and collection of problems, 2006v2, Problem6.2, PDF p.24 (https://arxiv.org/pdf/math/0602151).  
+In brief: Topological observables of the uniform spanning tree on a torus.  
+Where it stands: Determinantal and Laplacian methods compute such limits in related cases.  
+
+**30. C0155: Quasi-isometry of two independent Poisson point processes on the line**  
+Are two independent Poisson point processes on R almost surely quasi-isometric to each other (as metric spaces with the induced metric)?  
+Source: Pete: Probability and geometry on groups, lecture notes with open problems, Question 16.2 (Szegedy), p. 222 (https://www.math.bme.hu/~gabor/PGG.pdf).  
+In brief: Coarse geometry of random point sets: are two Poisson processes quasi-isometric?  
+Where it stands: One-dimensional, so a combinatorial matching of gap sequences.  
+
+**52. D0071: The golden-mean conjecture: mu(G) >= phi for every cubic transitive graph**  
+Is it the case that mu(G) >= phi = (1 + sqrt 5)/2 for every G in G_3, the class of infinite, connected, transitive, simple, cubic graphs? Known in various classes including TLF-planar graphs; the best general lower bounds are mu >= x with 1/x^2 + 1/x^3 = 1/sqrt 2 for girth at least 3 and mu >= 12^{1/6} for girth at least 4.  
+Source: Grimmett and Li: Self-avoiding walks and connective constants, Question 3.4, Section 3.2, PDF p. 13 (https://arxiv.org/pdf/1704.05884).  
+In brief: A universal lower bound for connective constants of cubic graphs.  
+Where it stands: Proved for several large classes of transitive cubic graphs. (not checked)  
+
+**53. D0069: The sqrt(Delta - 1) lower bound for the connective constant of non-simple transitive multigraphs of degree at least 5**  
+Theorem 2.1 states that an infinite, connected, Delta-regular, transitive, loopless multigraph with Delta >= 2 satisfies mu(G) >= sqrt(Delta - 1) if either (a) G is simple or (b) G is non-simple and Delta <= 4. Is the same true in the non-simple case with Delta >= 5?  
+Source: Grimmett and Li: Self-avoiding walks and connective constants, Question 2.2, Section 2.2, PDF p. 9 (https://arxiv.org/pdf/1704.05884).  
+In brief: Connective-constant lower bounds for regular multigraphs.  
+Where it stands: Proved in the simple-graph and other cases by the source. (not checked)  
+
+**58. P0010: Biased random square-lattice orientations**  
+Does every nonzero orientation bias give positive probability of an infinite directed path from the origin?  
+Source: Selected problems in probability theory, Question 5.1, PDF page 9 (https://arxiv.org/pdf/2205.07318).  
+In brief: Directed paths under biased orientations.  
+Where it stands: A sharp question with monotonicity and coupling tools.  
+
+**83. P0228: Uniqueness of the unbounded major-road component**  
+Must the major-road set E(infinity,1) of every SIRSN have only one unbounded connected component almost surely?  
+Caveat: Disconnected finite major-road pieces are allowed by definition. The question concerns unbounded components only.  
+Source: Aldous: Scale-invariant random spatial networks, Open Problem33,PDFp49 (https://arxiv.org/pdf/1204.0817).  
+In brief: Structure of scale-invariant random spatial networks.  
+Where it stands: The network is constructed explicitly; one-component questions are tractable.  
+
+**84. P0230: Asymptotic total length of finite SIRSN samples**  
+For k uniform points in a square of area k, prove that the mean total length of their spanning route network is asymptotic to ell*k.  
+Caveat: Length includes route pieces outside the sampling square. This global excursion contribution is the main source obstruction.  
+Source: Aldous: Scale-invariant random spatial networks, Open Problem35,PDFp50 (https://arxiv.org/pdf/1204.0817).  
+In brief: Length asymptotics of route networks on random points.  
+Where it stands: Subadditivity arguments give the limit constant.  
+
+**89. P0409: Joint law of neighboring ideal Voronoi vertices**  
+Find the joint distribution of all neighboring vertices viewed from a typical vertex of the hyperbolic IPVT.  
+Caveat: Typical means the vertex Palm law, not the cell containing a fixed point. The source gives Gamma(d+1) separation at a typical vertex.  
+Source: D Achille Curien Enriquez Lyons Unel: Ideal Poisson Voronoi tessellations on hyperbolic spaces, Question7.3; PDF48; Proposition4.4 (https://arxiv.org/pdf/2303.16831).  
+In brief: Local structure of the hyperbolic ideal Poisson-Voronoi tessellation.  
+Where it stands: Explicit Poisson geometry in the hyperbolic plane.  
+
+**90. P0413: Low-intensity variance of typical hyperbolic Voronoi cell volume**  
+Determine the finite limit, if any, of lambda times the typical-cell volume variance at actual nucleus intensity lambda, and its proposed coupling representation.  
+Caveat: Use lambda for the actual intensity in this entry. The source uses an auxiliary reparametrization in parts of its proofs; no reparametrized intensity is substituted in the Palm identity.  
+Source: D Achille Curien Enriquez Lyons Unel: Ideal Poisson Voronoi tessellations on hyperbolic spaces, Question7.7; PDF48 (https://arxiv.org/pdf/2303.16831).  
+In brief: Typical-cell volume variance of ideal Voronoi tessellations.  
+Where it stands: A limit with a proposed coupling representation.  
+
+**100. P0418: Non-Poisson low-intensity ideal Voronoi diagrams**  
+Construct a nontrivial low-intensity ideal diagram with a law different from the IPVT using a non-Poisson nuclei process.  
+Caveat: The source suggests the alpha-hyperbolic ensemble. Merely making the finite-intensity point process non-Poisson need not alter the limiting diagram.  
+Source: D Achille and Khezeli: Convergence towards Ideal Poisson Voronoi tessellations with a focus on Diestel Leader graphs, Question7.2; PDF49 (https://arxiv.org/pdf/2606.30517).  
+In brief: Ideal tessellations from non-Poisson nuclei.  
+Where it stands: Construction question with the Poisson case as the model.  
+
+**105. P0257: Law of large numbers and constants for NUV lengths**  
+Prove existence and identify the linear-scale NUV length constants in the source Euclidean, iid-weighted-grid and complete-graph mean-field models.  
+Caveat: The three model versions are conservatively grouped as one first-order limit programme. Tightness and order bounds proved in the source are not counted as solutions.  
+Source: Aldous: The Nearest Unvisited Vertex Walk on Random Graphs,2019 preprint, Equation4,PDF9; Section5,PDF20; companion talk2022p23 (https://arxiv.org/pdf/1912.13175).  
+In brief: Existence of the constant for nearest-unvisited tours.  
+Where it stands: Subadditivity in the stated spatial models.  
+
+**115. P0231: A zero-one law for Poisson-coloring frontier dimension**  
+Is the Hausdorff dimension of the limiting Poisson-coloring frontier almost surely deterministic?  
+Caveat: The strict inequalities d-1<dimension<d are already proved in Theorem1.1. This entry concerns the explicitly remaining zero-one question, not that resolved conjecture.  
+Source: Basdevant et al: primary paper on spatial coloring, identity pending, Discussion before Open Question1.2,PDFp3 (https://alea.impa.br/articles/v20/20-59.pdf).  
+In brief: Is the dimension of the Poisson-colouring frontier deterministic?  
+Where it stands: A zero-one law question for an explicit random set.  
+
+**116. F0022: Singularity of the mean number of clusters per site for critical planar percolation**  
+Site percolation on the triangular lattice. 'Question 1. Prove that the mean number of clusters per site kappa(p) = E_p(|C|^{-1}) behaves like |1/2 - p|^{2+alpha+o(1)}, where C is the cluster at the origin and alpha = -2/3.' (The source notes that the cluster density theta, the truncated mean cluster size chi(p) = (p - 1/2)^{-gamma+o(1)} and the two-point function are known, but this quantity is not.)  
+Source: Beffara, Duminil-Copin: Planar percolation with a glimpse of Schramm-Loewner evolution, Question 1, Section 5, PDF p. 44 (https://arxiv.org/pdf/1107.0158).  
+In brief: Singularity of the mean cluster count in planar percolation.  
+Where it stands: Arm exponents on the triangular lattice are known.  
+
+**123. C0020: Optimal exponent for the computational complexity of randomised algorithms for percolation crossings**  
+Find the smallest sigma such that there are randomised algorithms A_n deciding the left-right crossing f_n of an n x n box in critical percolation with computational complexity C(A_n) <= n^sigma; known sigma in [6/4, 7/4].  
+Source: Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems, Chapter VIII Section 4, p. 92 (https://arxiv.org/pdf/1102.5761).  
+In brief: Optimal randomised algorithms for percolation crossings.  
+Where it stands: Upper and lower bounds on the exponent are known.  
+
+**134. C0097: Divergence of the 1/d expansion of the connective constant**  
+Prove that the asymptotic expansion of the connective constant mu(d) of Z^d in powers of 1/(2d) has radius of convergence zero (expected but unproved; coefficients known to order 11 grow rapidly).  
+Source: Bauerschmidt, Duminil-Copin, Goodman, Slade: Lectures on self-avoiding walks, Clay 2012, Section 1.5, p. 4-5 (https://arxiv.org/pdf/1206.2092).  
+In brief: Divergence of the 1/d expansion of the self-avoiding walk connective constant.  
+Where it stands: Many coefficients are known and grow factorially.  
+
+**138. G0010: Tight subcritical bound on the largest component in terms of the maximum degree and the spectral radius**  
+Bernoulli bond percolation G_p on a finite graph G with maximum degree Delta(G) and spectral radius lambda(G), p <= (1 - eps)/lambda(G). Theorem 1.4 of the source: a.a.s. the largest component has size at most O( sqrt(|G| Delta(G)) log|G| / lambda(G) ), optimal when lambda(G) >> sqrt|G| (e.g. K_{s,s^3}) but not in all regimes (for lambda(G) = Delta(G) and G connected the true bound is O(log |G|)). Question 5.2. For a graph with given Delta(G) and lambda(G), what is the tight upper bound for the typical size of the largest component of G_p, when p <= (1 - eps)/lambda(G)? The source singles out the near-regular case Delta(G) <= (1 + delta) lambda(G).  
+Source: Christoph, Morawski, Wigderson: The critical probability for percolation on finite graphs (2026), Question 5.2, Section 5, PDF p. 19 (https://arxiv.org/pdf/2608.19145).  
+In brief: Largest subcritical component of percolation on a finite graph.  
+Where it stands: A bound in terms of maximum degree and spectral radius is proved.  
+
+**149. C0160: Continuity of the uniqueness threshold in the retention parameter: is N(p) monotone in p on transitive graphs?**  
+For i.i.d. bond percolation on a transitive graph, show that the number of infinite clusters N(p) cannot switch back and forth between infinity and 1 as p increases: the set of p with uniqueness is an interval [p_u, 1] (proved for transitive graphs by Haggstrom-Peres and Schonmann; the survey records the general question for quasi-transitive and for non-unimodular graphs as settled only in the transitive case).  
+Source: Haggstrom and Jonasson: Uniqueness and non-uniqueness in percolation theory, Probability Surveys 2006, with open problems, Section 3, p. 12 (PDF) (https://projecteuclid.org/journals/probability-surveys/volume-3/issue-none/Uniqueness-and-non-uniqueness-in-percolation-theory/10.1214/154957806000000096.pdf).  
+In brief: Monotonicity of the number of infinite percolation clusters.  
+Where it stands: Uniqueness monotonicity is known; the question excludes back-and-forth switching.  
+
+**150. C0159: Cluster repulsion for nonunimodular transitive graphs**  
+Does every transitive graph exhibit cluster repulsion, i.e. two distinct infinite clusters at level p almost surely do not come within bounded distance of each other along an infinite set of sites (Haggstrom-Peres-Schonmann conjecture)? Timar proved it for unimodular transitive graphs by mass transport; the nonunimodular case is open.  
+Source: Haggstrom and Jonasson: Uniqueness and non-uniqueness in percolation theory, Probability Surveys 2006, with open problems, Section 6, p. 20-21 (PDF) (https://projecteuclid.org/journals/probability-surveys/volume-3/issue-none/Uniqueness-and-non-uniqueness-in-percolation-theory/10.1214/154957806000000096.pdf).  
+In brief: Cluster repulsion on transitive graphs.  
+Where it stands: Proved for unimodular transitive graphs (Timar, 2006). For nonunimodular quasi-transitive graphs, Bell, Chu, Rodgers, Terlov and Tserunyan (arXiv:2509.10631, 2025) proved that for any two heavy clusters the vertices of one within distance one of the other form a set of finite total weight; light clusters, and finiteness in place of finite weight, remain open.  
+
+**151. F0084: Tail of the allocation distance for the critical stable marriage of Poisson and Lebesgue**  
+Open problems (ii) Critical tail behavior. What is the tail behavior of X for the critical Poisson model? In particular, give any quantitative upper bound for d >= 2. [Setting: centres form a Poisson process of intensity 1 in R^d with appetite alpha = 1 (critical: total appetite equals volume), X is the distance from a typical site to its centre; the source proves E X^d = infinity in the critical case (Theorem 32 for the site-to-centre distance under insertion tolerance) and power-law lower bounds, and says in its abstract 'It is an open problem to prove any upper bound in d > 1'.]  
+Source: Hoffman, Holroyd, Peres: A stable marriage of Poisson and Lebesgue (Ann. Probab. 2006), Open problems (ii) Critical tail behavior, Section 12, PDF p. 31 (https://arxiv.org/pdf/math/0505668).  
+In brief: Tail of the stable marriage of Poisson and Lebesgue at criticality.  
+Where it stands: Subcritical and supercritical tails are known.  
+
+**152. F0085: Percolation of claimed and unclaimed sites in the stable marriage of Poisson and Lebesgue**  
+Open problems (iii) Percolation. In the Poisson model, does the set of unclaimed sites have an infinite component for alpha sufficiently small? Does it fail to have an infinite component for sufficiently large alpha < 1? Similar questions apply to the set of claimed sites. After this paper was accepted for publication, progress on these problems was achieved in [5]. [[5] is Freire, Popov and Vachkovskaia, 'Percolation for the stable marriage of Poisson and Lebesgue', Stoch. Proc. Appl. 2007. Setting: centres form a Poisson process of intensity 1 in R^d, appetite alpha < 1, so a positive fraction 1 - alpha of the volume is unclaimed.]  
+Source: Hoffman, Holroyd, Peres: A stable marriage of Poisson and Lebesgue (Ann. Probab. 2006), Open problems (iii) Percolation, Section 12, PDF p. 31 (https://arxiv.org/pdf/math/0505668).  
+In brief: Percolation of claimed and unclaimed sites in stable marriage.  
+Where it stands: Explicit translation-invariant construction.  
+
+**168. G0001: Stretched-exponential finite-cluster tail wherever theta(p) > 0 (site percolation, d >= 3)**  
+Bernoulli site percolation on Z^d, d >= 3, C(0) the cluster of the origin. Conjecture 1.4. Let d >= 3. For any p in ]0,1[, we have the implication theta(p, Z^d) > 0 => liminf_{n -> infinity} (1/ln n) ln ln (1 / P_p(n <= |C(0)| < +infinity)) > 0. [Context: Theorem 1.2 of the source proves that at p = p_c either theta(p_c, Z^d) = 0 or that liminf is 0; the source says 'it could be that the correct way to prove that theta(p_c, Z^d) = 0 is to prove separately theorem 1.3 and conjecture 1.4'.]  
+Source: Cerf: theta(p_c, Z^d) = 0? (2026, 708 pp.), Conjecture 1.4, Section 1, PDF p. 3 (https://arxiv.org/pdf/2608.23661).  
+In brief: Finite-cluster tails throughout the supercritical regime of site percolation.  
+Where it stands: Known for bond percolation via slab arguments.  
+
+**173. G0004: Increasing-events boundary-connectivity conjecture on finite graphs (implies theta(p_c) = 0)**  
+Bernoulli bond percolation with parameter p on a finite graph G = (V,E), o in V, B a subset of V. An event A is increasing with respect to the percolation configuration if omega -> P[A | pi = omega] is increasing on {0,1}^E (pi the configuration; the event may depend on extra randomness). Conjecture 2.2. There exists a universal function phi : (0, +infinity) -> R, independent of G, o, B and p, such that phi(eps) -> 1 as eps -> 0, and such that the following statement always holds. Let eps > 0. Let (E_b)_{b in B} be a family of events which are increasing with respect to the percolation configuration. Assume that P[E_b] >= 1 - eps for every b in B. Then P[ union_{b in B} ({o <-> b} cap E_b) ] >= phi(eps) P[o <-> B]. [Theorem 2.4 of the source: the conjecture implies theta(p_c) = 0 for every d >= 2, via Kozma and Nitzan's Theorem 6.]  
+Source: Flammant: A finite-graph conjecture related to theta(p_c)=0 for Bernoulli bond percolation on Z^d (2026), Conjecture 2.2 (Main conjecture), Section 2, PDF p. 2 (https://arxiv.org/pdf/2609.03492).  
+In brief: Boundary connectivity for increasing events on finite graphs.  
+Where it stands: A finite-graph inequality with special cases proved.  
+
+**178. F0081: Tail exponent of the two-colour stable Poisson matching in dimensions at least two**  
+Open Problems (i). For the two-color stable matching of two independent Poisson processes, what is the correct power law for the tail behavior of X in dimensions d >= 2? We conjecture that E* X^alpha < infinity if and only if alpha < d/2. [Setting: red and blue points are independent Poisson processes of intensity 1 in R^d; the two-colour stable matching is the Gale-Shapley matching obtained by iteratively matching mutually closest red-blue pairs; X is the distance from a typical (Palm) point to its partner and E* the Palm expectation. The source proves a power-law upper bound on P*(X > r) for this scheme, a power-law lower bound in all dimensions, and the exact tail in d = 1; for arbitrary translation-invariant two-colour schemes E* X^{d/2} = infinity in d = 1, 2 while schemes with finite exponential moments exist in d >= 3.]  
+Source: Holroyd, Pemantle, Peres, Schramm: Poisson matching (Ann. IHP 2009), Open Problems (i), Section 8, PDF p. 34 (https://arxiv.org/pdf/0712.1867).  
+In brief: Tail exponent for two-colour stable Poisson matching.  
+Where it stands: One-colour and one-dimensional cases are known.  
+
+**179. F0082: Non-crossing translation-invariant matching of two Poisson processes in the plane**  
+Open Problems (ii). Does there exist a translation-invariant matching of two independent Poisson processes in R^2 such that the line segments connecting matched pairs do not cross? [Two-colour setting as in the source: red and blue independent Poisson processes of intensity 1 in R^2, a perfect bipartite matching whose joint law with the points is translation-invariant.]  
+Source: Holroyd, Pemantle, Peres, Schramm: Poisson matching (Ann. IHP 2009), Open Problems (ii), Section 8, PDF p. 34 (https://arxiv.org/pdf/0712.1867).  
+In brief: Non-crossing invariant matching of two Poisson processes.  
+Where it stands: A construction question in the plane.  
+
+**183. E0103: Coverage asymptotics for the inertial Boolean model**  
+For the mobile Boolean model, study the coverage problem, i.e. the law of inf{t >= 0 : K contained in W(t)}, the first time a compact set K is entirely covered by the moving grains. For the Brownian Boolean model, and as the diameter of the region tends to infinity, the problem has been solved; what are the corresponding asymptotics for the INERTIAL cases, in which the grains move ballistically with random velocities?  
+Source: The mobile Boolean model: an overview and further results, Open problem 1, PDF p. 18 (https://arxiv.org/pdf/1407.6834).  
+In brief: Coverage time for moving random sets.  
+Where it stands: Static coverage asymptotics are classical.  
+
+**191. G0008: Monotonicity of the two-point connection probability in the distance on Z^2**  
+Bernoulli bond percolation on Z^2 with parameter p. Source: 'on the square lattice is an open question to prove that the probability of the origin being connected to the vertex (0,n) is monotone in n' and, after the construction of a transitive graph without the property, 'it remains an open question whether graphs like Z^d satisfy the monotonic property or not'. Question: for every p in (0,1), is n -> P_p(0 <-> (0,n)) non-increasing on Z^2 (and on Z^d)? [The source traces the question to Hammersley and Welsh (1965) in first-passage percolation.]  
+Source: Campos, de Lima: The probability of connection between two vertices cannot be monotone with the distance for Bernoulli percolation on transitive graphs (2026), Abstract and Introduction, PDF p. 1; Section 3, PDF p. 4 (https://arxiv.org/pdf/2601.00291).  
+In brief: Monotonicity of connection probabilities in planar percolation.  
+Where it stands: Counterexamples exist in other settings; Z^2 symmetry is the tool.  
+
+**193. C0060: Positivity of the vacant-set threshold u* for random interlacements on the Sierpinski gasket times Z**  
+For random interlacements on G x Z with G the discrete Sierpinski gasket graph, is the vacant-set percolation threshold u* strictly positive?  
+Source: Drewitz, Rath, Sapozhnikov: An introduction to random interlacements, preliminary version of the SpringerBriefs book, Chapter 10 notes, p. 81 (https://www.mi.uni-koeln.de/~drewitz/SpringerRI.pdf).  
+In brief: Vacant-set percolation for random interlacements on fractal graphs.  
+Where it stands: Positivity is known on many transient graphs.  
+
+**196. F0080: Dependence of the expected free minimal spanning forest degree on the Cayley graph**  
+Question 6.13. Given a finitely generated group Gamma, does the expected degree of a vertex in the FMSF of a Cayley graph of Gamma depend on which Cayley graph is used? As discussed in the proof of Corollary 3.24, the analogous result is true for the FSF. [FMSF = free minimal spanning forest: edges carry i.i.d. uniform labels and an edge is kept iff its endpoints are not joined by a path of edges with strictly smaller labels; WMSF = wired version, where paths 'through infinity' also count. For the free uniform spanning forest the expected degree is 2 + 2 beta_1^{(2)}(Gamma), a group invariant (Lyons).]  
+Source: Lyons, Peres, Schramm: Minimal spanning forests (Ann. Probab. 2006), Question 6.13, Section 6, PDF p. 27 (https://arxiv.org/pdf/math/0412263).  
+In brief: Does the free minimal spanning forest depend on the Cayley graph?  
+Where it stands: Known for related invariants.  
+
+## Random graphs and networks
+
+**18. P0089: Local limits for nonaffine attachment with multiple edges**  
+Determine local weak limits of preferential-attachment graphs with fixed outgoing degree m>=2 and nonaffine attachment function f, extending the known tree and affine cases.  
+Caveat: State a nonexplosive/noncondensed class of f before expecting a locally finite limit; the source asks for a theory beyond the affine case, not one arbitrary universal formula.  
+Source: Aletti et al.: Open problems in stochastic reinforcement models; March2023 workshop, published2025, OpenProblem24, PDF p.21 (https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf).  
+In brief: Local weak limits of preferential attachment with nonlinear attachment.  
+Where it stands: Tree and affine cases are known; the exploration construction extends.  
+
+**20. P0141: First-order distance constants in finite-variance preferential attachment**  
+For affine preferential attachment with m>=2 and delta>0, prove convergence of typical graph distance/log n and diameter/log n to explicit positive constants a<b.  
+Caveat: Two-sided logarithmic bounds are weaker than convergence to constants. The positive-delta regime is the finite-variance degree regime; logarithmic-logarithmic formulas from negative delta do not apply.  
+Source: Van der Hofstad: Stochastic processes on random graphs, Saint-Flour2017, Open Problem2.3, PDF p.74 (https://www.win.tue.nl/~rhofstad/SaintFlour_SPoRG_fin_Saint_Flour.pdf).  
+In brief: Exact distance and diameter constants for preferential attachment graphs.  
+Where it stands: Upper and lower bounds of the right order exist; the problem is to identify the constants. (not checked)  
+
+**21. P0143: Second-order extremal hopcount in exponential complete-graph FPP**  
+Determine fluctuations of the longest minimum-weight path, both from a fixed root and over all vertex pairs, beyond the first-order e log n and alpha_star log n scales.  
+Caveat: The rooted shortest-path tree is a random recursive tree, for which substantial height refinements already exist. The all-pairs fluctuation target is retained; known rooted results are not new solutions.  
+Source: Van der Hofstad: Stochastic processes on random graphs, Saint-Flour2017, Open Problem3.1, PDF pp.99-100 (https://www.win.tue.nl/~rhofstad/SaintFlour_SPoRG_fin_Saint_Flour.pdf).  
+In brief: Fluctuations of extremal weighted paths in random graphs.  
+Where it stands: First-order asymptotics are known; second order through exploration processes.  
+
+**22. P0151: Critical window for fixed-outdegree preferential attachment**  
+For affine preferential attachment with a fixed m>=2 edges per arriving vertex and delta>0, identify the percolation scaling window and largest critical component sizes.  
+Caveat: The percolation threshold itself is covered by later work2312.14085. The2025 growing-graph window theorem concerns models with independently attached edges; it is not automatically the fixed-outdegree model asked here.  
+Source: Van der Hofstad: Stochastic processes on random graphs, Saint-Flour2017, Open Problem4.4, PDF p.220 (https://www.win.tue.nl/~rhofstad/SaintFlour_SPoRG_fin_Saint_Flour.pdf).  
+In brief: The critical window of percolation on preferential attachment graphs.  
+Where it stands: Windows for Erdos-Renyi and configuration models give the template.  
+
+**23. P0157: Two competing largest-component scales in barely subcritical configuration models**  
+Under convergence of third degree moments, prove that the largest barely subcritical configuration-model component has order max{d_max/epsilon_n, epsilon_n^(-2)log(n epsilon_n^3)} in the regime specified by the source.  
+Caveat: The asymptotic regime must have epsilon_n tending to0 with n epsilon_n^3 large; otherwise the displayed logarithm is not the intended barely-subcritical scale. Infinite-third-moment results are a different regime.  
+Source: Van der Hofstad: Stochastic processes on random graphs, Saint-Flour2017, Open Problem4.13, PDF p.234 (https://www.win.tue.nl/~rhofstad/SaintFlour_SPoRG_fin_Saint_Flour.pdf).  
+In brief: Largest component of a barely subcritical configuration model under minimal moment assumptions.  
+Where it stands: A precise order to prove, with matching known results under stronger hypotheses.  
+
+**35. E0053: Sum of maximum and minimum bisection of a random regular graph**  
+Let G be a uniformly random d-regular graph on n vertices. Prove or disprove that for every d, as n grows, (1/n)(MaxBis(G) + MinBis(G)) = d/2 + o(1), where MaxBis and MinBis are the maximum and minimum bisection sizes. The source notes that the conjecture is known to hold up to o(sqrt(d)) terms by Dembo-Montanari-Sen.  
+Source: Bandeira: Ten lectures and forty-two open problems in the mathematics of data science, Open Problem 8.5 and Conjecture 8.5, PDF p. 117 (https://people.math.ethz.ch/~abandeira/TenLecturesFortyTwoProblems.pdf).  
+In brief: Maximum and minimum bisections of random regular graphs.  
+Where it stands: Spin-glass interpolation methods handle large degree; the identity is a sharp target.  
+
+**107. F0096: Hamiltonicity of the random graph with minimum degree three above edge density three halves**  
+We now consider conditioning on minimum degree at least three. Let L_c = lim_{n -> infinity} Pr(G_{n,cn;3} is Hamiltonian). Conjecture: L_c = 1 for all c >= 3/2. [Following slides: conjecture true for c = 3/2 (Robinson and Wormald 1984, the random cubic graph); Bollobas, Cooper, Fenner, Frieze (2000): L_c = 1 for c >= 128; Frieze (2012): L_c = 1 for c >= 10; 'Conjecture true for c >= 3, assuming numerical solution of some differential equations'. Here G_{n,m;3} is uniform over graphs with n vertices, m edges and minimum degree at least 3.]  
+Source: Frieze: Random structures and algorithms (ICM 2014 survey with open problems), Hamilton cycles slide, PDF p. 166 (with pp. 167-170) (https://www.math.cmu.edu/~af1p/ICM.pdf).  
+In brief: Hamiltonicity of sparse random graphs with minimum degree three.  
+Where it stands: Proved above a larger density; the target is the conjectured threshold. (not checked)  
+
+**117. E0089: Concentration of the critical density for bootstrap percolation on random regular graphs**  
+Consider the random d-regular graph sequence G_{n,d} with 2 <= k <= d-2. Is there a delta > 0 such that P_{G_{n,d}}(Corr_{p_c(n)}(f_n(omega), f_n(omega^eps)) > delta) tends to 1 as n tends to infinity? The source notes that establishing this would require showing that the critical density theta(G) concentrates around its mean, for instance that P(theta(G) > 1 - 2 eps) tends to 1, and suggests trying Azuma-Hoeffding for a Lipschitz martingale exploring G_{n,d} edge by edge or in the configuration model.  
+Source: Noise sensitivity in bootstrap percolation, Question 1.4(a), PDF p. 3 (https://arxiv.org/pdf/1509.08454).  
+In brief: Noise sensitivity of bootstrap percolation on random regular graphs.  
+Where it stands: Locally tree-like structure gives explicit recursions.  
+
+**121. P0452: Giant-component density from Erlang weighted-tree survival**  
+Prove the lower bound matching the known upper bound: the largest La-Kabkab component has asymptotic vertex fraction equal to EWT survival probability.  
+Caveat: The later logarithmic connectivity theorem concerns growing preference budgets and does not supply the fixed-distribution giant lower bound.  
+Source: Moharrami, Subramanian, Liu and Sundaresan: The Erlang Weighted Tree, A New Branching Process (v5, 27 May 2023), Section4, question3; PDF16; Corollary2.2 (https://arxiv.org/pdf/2002.03993).  
+In brief: Giant component of a weighted random graph via its local limit tree.  
+Where it stands: The upper bound is proved; the matching lower bound is the target.  
+
+**132. H0021: Conjecture 1.4 (Sharp threshold for tree universality) of arXiv:2608.06358**  
+"For every ε>0 and integer Δ≥2, whp G(n,(1+ε)ln n/n) is 𝒯_{n,Δ}-universal."  
+Source: arxiv_2608_06358, Conjecture 1.4 (Sharp threshold for tree universality); Section 1.6, "Further challenges".  
+In brief: Sharp threshold for spanning-tree universality of random graphs.  
+Where it stands: Universality is known at a constant factor above the threshold. (not checked)  
+
+**164. I0010: A uniform strict improvement of the spectral gap constant for noncubic degrees**  
+"A uniform strict improvement for noncubic graphs implies that, for every sufficiently large even order, the maximum is attained uniquely by the cubic graph of least algebraic connectivity." The source proves that every noncubic degree admits a uniformly larger spectral-gap constant but leaves the uniform strict improvement that would give uniqueness of the extremiser.  
+Source: arxiv_2609_06818, Abstract and Section 1.  
+In brief: Extremal spectral gap among graphs of a given order.  
+Where it stands: The cubic case is proved in the source.  
+
+## Random matrices and free probability
+
+**27. F0006: Anti-concentration of the determinant of a random Rademacher matrix at non-zero values**  
+Conjecture 6.8 (Determinant). For any x != 0, P(det M_n = x) <= n^{-(1/2+o(1))n}. (Here M_n is the n x n i.i.d. Rademacher matrix. The source adds that the best current upper bound is exponential [Kahn-Komlos-Szemeredi], and that even the much weaker conjecture that the support of det M_n is super-exponential in size is not known.)  
+Source: Vu: Recent progress in combinatorial random matrix theory, Conjecture 6.8 (Determinant), Section 6, PDF p. 10 (https://arxiv.org/pdf/2005.02797).  
+In brief: Anticoncentration of the determinant of a random sign matrix.  
+Where it stands: Singularity-probability methods and inverse Littlewood-Offord theory give the tools.  
+
+**29. F0010: Probability that a random Rademacher matrix is normal**  
+Let nu_n be the probability that M_n (i.i.d. Rademacher entries) is normal, i.e. M M^T = M^T M. Since symmetric matrices are normal, nu_n >= 2^{-(0.5+o(1)) n^2}. Conjecture 9.2 (Normality): nu_n = 2^{-(0.5+o(1)) n^2}. Known: nu_n <= 2^{-(0.302+o(1)) n^2} (Deneanu-Vu); Ferber, Jain and Zhao noted a lemma there can be improved, changing 0.302 'maybe at the 5th decimal place'.  
+Source: Vu: Recent progress in combinatorial random matrix theory, Conjecture 9.2 (Normality), Section 9, PDF p. 14 (https://arxiv.org/pdf/2005.02797).  
+In brief: Probability that a random sign matrix is normal.  
+Where it stands: Exponential upper bounds of the right shape are known; the exponent is the target.  
+
+**32. P0015: Random complex phase-retrieval injectivity at 4M-5 measurements**  
+Let p_M be the probability that a complex Gaussian (4M-5)-by-M matrix gives an injective phaseless measurement map modulo global phase. Is p_M<1 for each meaningful M, and does p_M tend to zero?  
+Caveat: M>=2 is needed for the matrix size to be meaningful. The two clauses are retained as one source conjecture, not counted twice.  
+Source: Randomstrasse101: Open Problems of 2025, Conjecture 19(a,b), Entry 10 (https://arxiv.org/pdf/2603.29571).  
+In brief: Phase retrieval: when is a Gaussian measurement map injective up to phase?  
+Where it stands: An algebraic-geometric probability with small cases computable.  
+
+**33. P0016: Worst square-submatrix conditioning in a Gaussian frame**  
+For a (2M-1)-by-M matrix of independent standard real Gaussians, determine the asymptotic size of omega(A), the minimum smallest singular value over row subsets whose complement has rank below M. In particular determine whether its decay is exponential and identify the exponential rate.  
+Caveat: Almost surely every M-row subset is nonsingular, so the minimum reduces to M-row subsets. Interpret asymptotic size in probability; the source does not specify a convergence mode or a normalized logarithmic limit.  
+Source: Randomstrasse101: Open Problems of 2025, Open Problem 21 and Definition 10.1, Entry 10 (https://arxiv.org/pdf/2603.29571).  
+In brief: Robust injectivity of Gaussian frames over row subsets.  
+Where it stands: Union bounds against small-ball estimates for minimal singular values.  
+
+**43. P0184: Strong convergence of modular-group actions on finite projective lines**  
+Does the PSL_2(Z) action on P^1(F_q), restricted to constants-orthogonal vectors, converge strongly to the regular group representation for every fixed tuple of integer matrices?  
+Caveat: The diffusion-operator formulation and arbitrary-polynomial formulation are equivalent in the source and are counted once. Random homomorphisms from C2*C3 are a different model.  
+Source: The strong convergence phenomenon,2025 survey, Section 6.4, p.67 (https://arxiv.org/pdf/2507.00346).  
+In brief: Strong convergence for an arithmetic action, a spectral-gap question.  
+Where it stands: The polynomial method proves strong convergence for related random actions.  
+
+**44. P0186: Largest coefficient dimension compatible with strong convergence**  
+Determine the optimal growth of matrix-coefficient dimension D_N for strong convergence of polynomials in Gaussian or Haar random matrices.  
+Caveat: Known subexponential sufficiency and failure at sufficiently large exp(C*N^2) leave a gap; Gaussian and Haar versions are grouped. New q-Gaussian model statements are not automatically the same fixed-model question.  
+Source: The strong convergence phenomenon,2025 survey, Section 6.6, p.68 (https://arxiv.org/pdf/2507.00346).  
+In brief: How large matrix coefficients can be in strong convergence theorems.  
+Where it stands: Current methods give explicit dimension bounds to improve.  
+
+**45. P0188: Joint strong convergence for permutation and deterministic matrices**  
+Develop a permutation-matrix counterpart of joint strong convergence with strongly convergent deterministic matrices.  
+Caveat: Removing the common constant vector of permutation matrices requires an explicit convention for deterministic matrices that do not preserve its orthogonal complement.  
+Source: The strong convergence phenomenon,2025 survey, Section 6.8, p.69 (https://arxiv.org/pdf/2507.00346).  
+In brief: Strong convergence for permutation matrices with deterministic coefficients.  
+Where it stands: The Gaussian and unitary versions are proved.  
+
+**59. C0033: Concavity of the entropy of determinantal measures in the kernel**  
+For positive contractions Q_1, Q_2 on l^2(E), E finite, Ent(P_{(Q_1+Q_2)/2}) >= (Ent(P_{Q_1}) + Ent(P_{Q_2}))/2; which implies (Conjecture 5.3, by finite restrictions) concavity of the entropy rate H(P_f) of stationary determinantal processes in the symbol f; the converse is not claimed.  
+Source: Lyons: Determinantal probability, basic properties and conjectures, ICM 2014, Conjecture 2.6, p. 5 and Conjecture 5.3, p. 22 (https://arxiv.org/pdf/1406.2707).  
+In brief: Concavity of entropy for determinantal measures.  
+Where it stands: Finite-dimensional matrix inequality; checked in small cases.  
+
+**60. C0034: Coupling of determinantal projection measures with union marginal**  
+Given H = H_1 (+) H_2 orthogonal in l^2(E), is there a coupling of P_{H_1} and P_{H_2} whose union has law P_H?  
+Source: Lyons: Determinantal probability, basic properties and conjectures, ICM 2014, Question 2.8, p. 6 (https://arxiv.org/pdf/1406.2707).  
+In brief: Couplings of determinantal processes for orthogonal sums.  
+Where it stands: Finite ground sets; known in special cases.  
+
+**61. C0039: d-bar distance bound for commuting versus general equivariant kernels**  
+For Gamma-equivariant positive contractions Q, Q' the bound d-bar(P_Q, P_{Q'}) <= 6 3^{2/3} ||Q - Q'||_1^{1/3} holds, and d-bar(P_Q, P_{Q'}) <= ||Q - Q'||_1 when Q and Q' commute. Does the linear bound d-bar <= ||Q - Q'||_1 hold for all pairs?  
+Source: Lyons: Determinantal probability, basic properties and conjectures, ICM 2014, Section 5.2, p. 23 (https://arxiv.org/pdf/1406.2707).  
+In brief: Optimal transport distance between equivariant determinantal processes.  
+Where it stands: A Lipschitz bound with a cube-root version proved.  
+
+**77. D0040: Which beta-ensembles admit the nesting coupling of tridiagonal minors?**  
+The top minors of the tridiagonal beta-Hermite model give a coupling of beta-ensembles of different sizes (a nested family). Can any other Dyson beta-ensembles be coupled this way? What about other natural random matrix models?  
+Source: Virag: Operator limits of random matrices (ICM 2014), Question 2 (Nested models), PDF p. 6 (https://arxiv.org/pdf/1804.06953).  
+In brief: Couplings of beta ensembles of different sizes.  
+Where it stands: Explicit tridiagonal models give one coupling.  
+
+**78. D0043: Higher-order edge limits are the operators -d^2/dt^2 + t^{1/(2k+1)} + (2/sqrt beta) t^{-k/(2k+1)} b'**  
+When the equilibrium density vanishes at the edge like x^{2k+1/2} rather than x^{1/2}, the tridiagonal matrices T_n should converge, after scaling, to the random operator S_{beta,k} = -d^2/dt^2 + t^{1/(2k+1)} + (2/sqrt beta) t^{-k/(2k+1)} b'_t, where b' is white noise. For beta = 2 the eigenvalue limits have been studied by Riemann-Hilbert methods.  
+Source: Virag: Operator limits of random matrices (ICM 2014), Conjecture 5 (Exotic edge operators), PDF p. 14 (https://arxiv.org/pdf/1804.06953).  
+In brief: Operator limits at non-generic spectral edges.  
+Where it stands: The stochastic Airy method extends to modified edge behaviour.  
+
+**79. D0047: Deriving the gap Painleve equation from the Brownian carousel generator**  
+Can one deduce the Painleve equation for the bulk gap probability from the PDEs corresponding to the generator of the Brownian carousel SDE?  
+Source: Virag: Operator limits of random matrices (ICM 2014), Question 9 (Painleve in the bulk), PDF p. 25 (https://arxiv.org/pdf/1804.06953).  
+In brief: Painleve equations from the Brownian carousel.  
+Where it stands: The carousel SDE and its generator are explicit.  
+
+**165. C0031: Almost-sure convergence in the heavy-tailed circular law**  
+Upgrade the convergence in probability of the empirical spectral distribution of n^{-1/alpha} X (i.i.d. entries in the domain of attraction of an alpha-stable law, alpha in (0,2)) to almost-sure weak convergence to mu_alpha.  
+Source: Bordenave and Chafai: Around the circular law, survey with open problems, Section 6.6 remark, p. 39 (https://arxiv.org/pdf/1109.3343).  
+In brief: Almost sure convergence in the heavy-tailed circular law.  
+Where it stands: Convergence in probability is proved.  
+
+**166. P0191: Least singular values at the polynomial constant term**  
+Extend the polynomial least-singular-value bound for a nonzero holomorphic polynomial of independent complex Ginibre matrices to the shift equal to its constant term.  
+Caveat: The source theorem excludes that single shift. Qualitative invertibility and a quantitative polynomial lower-tail estimate are kept distinct.  
+Source: Yi Han: Brown measure convergence for the spectrum of polynomials in Ginibre matrices, Question 1.6 (https://arxiv.org/pdf/2606.01664).  
+In brief: Least singular values of polynomials in Ginibre matrices.  
+Where it stands: Proved away from the constant term.  
+
+**174. P0175: Symmetric unimodality under free addition**  
+Is the free additive convolution of two symmetric unimodal probability laws unimodal?  
+Caveat: The older AIM free-analysis question is the same family and is not counted again. A semicircle factor and some freely infinitely divisible subclasses are established cases.  
+Source: Hasebe-Ueda: Large time unimodality, published version, Conjecture 3.5 (https://alea.math.cnrs.fr/articles/v15/15-15.pdf).  
+In brief: Unimodality of free convolutions of symmetric unimodal laws.  
+Where it stands: Related unimodality questions for free Brownian motion are settled.  
+
+**184. C0109: Rate of convergence in the circular law as a function of the moment assumption**  
+Determine the optimal rate n^{-delta} of convergence of the empirical spectral distribution of n^{-1/2} M_n to the circular law under a (2+eps)-th moment assumption, and the exact dependence of delta on eps.  
+Source: Tao and Vu: From the Littlewood-Offord problem to the circular law, survey with open questions, Section 6, p. 22 (https://arxiv.org/pdf/0810.2994).  
+In brief: Rate of convergence to the circular law under weak moments.  
+Where it stands: Rates are known under stronger moments. (not checked)  
+
+**194. F0086: Existence of alpha-determinantal processes for 0 <= alpha <= 2**  
+Conjecture 40. If K is a (real) kernel defining a self-adjoint, non-negative integral operator on L^2(Lambda) and 0 <= alpha <= 2, then the alpha-determinantal process with kernel K exists. However, if alpha > 2, then there exists such a kernel K for which there is no corresponding alpha-determinantal process. [The source verifies the second half for alpha > 4 with the 3 x 3 matrix K = ((2,-1,-1),(-1,2,-1),(-1,-1,2)), whose alpha-determinant is 2(4 - alpha)(alpha + 1) < 0 for alpha > 4; an alpha-determinantal process has joint intensities det_alpha(K(x_i, x_j)), where det_alpha A = sum over permutations of alpha^{n - #cycles} prod a_{i sigma(i)}.]  
+Source: Hough, Krishnapur, Peres, Virag: Determinantal processes and independence (Probab. Surveys 2006), Conjecture 40, Section 4.5 (alpha-determinantal processes), PDF p. 22 (https://arxiv.org/pdf/math/0503110).  
+In brief: Existence of alpha-determinantal processes.  
+Where it stands: Known for special values of alpha. (not checked)  
+
+## Interacting particle systems, sandpiles and KPZ
+
+**19. P0383: Exponential incompressibility of the infinite-volume wired ARW state**  
+For every zeta>zeta_s, prove a volume-exponential upper tail for the number of sleepers in an L-sided cube under pi.  
+Caveat: Conditional on existence of pi and the intended mean density. Pairwise negative covariance is not assumed to imply negative association.  
+Source: Levine and Silvestri: Universality conjectures for activated random walk, Conjecture 20; PDF11 (https://arxiv.org/pdf/2306.01698).  
+In brief: Large deviations for activated random walk above the threshold density.  
+Where it stands: A volume-exponential tail estimate; the corresponding lower-density bounds are proved.  
+
+**54. D0093: Removing the log^2 n factor from the fast-phase toppling bound**  
+Improve the estimate P(T <= kappa n log^2 n) >= 1 - n^{-delta} of (6.3) to one without the log^2 n term, i.e. to a bound of order n.  
+Source: Rolla: Activated random walks on Z^d, survey with open problems, Second Open Problem after Theorem 6.1, Section 6, PDF p. 30 (https://arxiv.org/pdf/1906.05037).  
+In brief: Linear fixation time for activated random walk.  
+Where it stands: The bound with a squared logarithm is proved; the logarithm is the target.  
+
+**55. D0097: Small-sleep-rate behaviour of the critical density for unbiased walks on Z^2**  
+Theorem 7.2 of the source proves, for transient (d > 2) walks, that zeta_c < 1 for every lambda < infinity AND that zeta_c tends to 0 as lambda tends to 0. Prove a similar statement for unbiased walks on Z^2.  
+Source: Rolla: Activated random walks on Z^d, survey with open problems, First Open Problem after Theorem 7.2, Section 7, PDF p. 35 (https://arxiv.org/pdf/1906.05037).  
+In brief: Activated random walk with recurrent walks at low sleep rate.  
+Where it stands: The transient case is proved in the source.  
+
+**70. P0254: Mixing of gap-jump exclusion on a discrete circle**  
+For m particles on K circular sites, choose a vacant site and a direction by the source per-step rule, then move the first encountered particle to the site. Prove the conjectured tau2=Theta(m^3) and tau1=O(m^3 log m) uniformly in K>m.  
+Caveat: The step first chooses a site uniformly from all K, doing nothing if occupied. The continuum-circle limit keeps m fixed before K grows; both spectral and mixing targets are grouped.  
+Source: Aldous-Fill: Reversible Markov Chains and Random Walks on Graphs, 2002 recompiled2014, Example14.32 conjectures,PDF485-486 (https://www.stat.berkeley.edu/~aldous/RWG/book.pdf).  
+In brief: A conjectured stationary law for a circular particle model.  
+Where it stands: Explicit finite state space; matrix-product methods.  
+
+**71. E0007: Competitive exclusion in the two-type contact process with unequal death rates**  
+In the two-species competition model (a multitype contact process with birth rates beta_i and death rates delta_i), show that species 1 outcompetes species 2 when the two dispersal distributions are the same and beta_1/delta_1 > beta_2/delta_2. Durrett notes that this is what the Competitive Exclusion Principle predicts and that simulation supports it.  
+Source: Durrett: Coexistence in stochastic spatial models (Wald lectures), Problem 1, PDF p. 3 (https://arxiv.org/pdf/0906.2293).  
+In brief: Competition between species in a multitype contact process.  
+Where it stands: Voter-model perturbation results cover nearby parameter regions.  
+
+**72. E0012: Absence of coexistence in the two-type colicin model with equal death rates**  
+In the colicin model of Durrett and Levin (type 1 produces colicin, which raises the death rate of type 2 by an amount proportional to the local density of 1s), show that coexistence is not possible when lambda_1 < lambda_2 and delta_1 = delta_2 = 1. Durrett notes that in the parameter range where the mean-field ODE has an interior fixed point that fixed point is unstable, and that simulations show segregation with the interface moving in favour of the 1s.  
+Source: Durrett: Coexistence in stochastic spatial models (Wald lectures), Problem 6, PDF p. 14 (https://arxiv.org/pdf/0906.2293).  
+In brief: Coexistence in the colicin model.  
+Where it stands: Same perturbative approach; mean-field behaviour is known.  
+
+**108. F0033: Almost sure finiteness of avalanches for the stationary sandpile on Z^2**  
+Open Question 6.7. Consider Z^2. Is it true that for nu-a.e. eta the configuration eta + 1_0 can be stabilised with finitely many topplings? (Here nu is the infinite-volume weak limit of the stationary sandpile measures. The source notes E_nu[n(o,x)] = lim_n G_n(o,x) = infinity for all x: on average every vertex topples infinitely often. On transient graphs, under the one-end assumption, avalanches are finite by Theorem 6.6.)  
+Source: Jarai: Sandpile models (Probab. Surveys 2018), Open Question 6.7, Section 6.2, PDF p. 61 (https://arxiv.org/pdf/1401.0354).  
+In brief: Finiteness of avalanches for the stationary sandpile on Z^2.  
+Where it stands: Proved in high dimension; the planar case needs a recurrence argument. (not checked)  
+
+**112. P0281: Log concavity of finite particle TASEP transition probabilities**  
+For continuous-time TASEP with n particles started from the step configuration, determine whether its fixed-time transition mass function on ordered particle configurations is log concave.  
+Caveat: The lattice midpoint assertion is considered when the midpoint is integral and is a legal ordered configuration. A real-variable extension or a stronger rounded-midpoint notion would require a separate definition.  
+Source: AIM All roads to KPZ universality: workshop open problems,March19 2025, Section3,PDF2;follow-up Q2,PDF3 (https://lpetrov.cc/LaTeX/2025-03-19-AIM-KPZ/2025-03-19-AIM-KPZ.pdf).  
+In brief: Log-concavity of TASEP transition probabilities.  
+Where it stands: Determinantal formulas for the transition probabilities are explicit.  
+
+**113. P0286: Stationary two color ASEP covariance decay on a large ring**  
+For stationary two-color ASEP on a growing ring with fixed color densities, determine the spatial decay and scaling of occupation covariances, including the near-half-density regime discussed in the source.  
+Caveat: Finite-ring conservation corrections must be separated from an infinite-volume or mesoscopic decay assertion. Color densities alone do not make the asymmetric multi-species stationary law uniform.  
+Source: AIM All roads to KPZ universality: workshop open problems,March19 2025, Section5,PDF3 (https://lpetrov.cc/LaTeX/2025-03-19-AIM-KPZ/2025-03-19-AIM-KPZ.pdf).  
+In brief: Covariances in stationary two-colour ASEP on a ring.  
+Where it stands: Multispecies queue constructions give the stationary law.  
+
+**126. C0101: Maximal integer superharmonic matrices in dimensions d >= 3**  
+Describe the maximal elements of the set Gamma(Z^d) of integer superharmonic matrices for d >= 3: are they isolated, and do they have rational entries? (In d = 2 they correspond to the circles of the Apollonian band packing and are rational.)  
+Source: Levine and Peres: Laplacian growth, sandpiles and scaling limits, BAMS 2017, with open problems, Open problems (4), p. 27 (https://arxiv.org/pdf/1611.00411).  
+In brief: Integer superharmonic matrices in higher dimension.  
+Where it stands: The planar case is solved via an Apollonian structure. (not checked)  
+
+**127. C0100: Convergence of height-fraction statistics in the sandpile scaling limit**  
+Refine the Pegden-Smart weak-* convergence of the rescaled sandpile s_n by showing that for any ball B and integer j the fraction of sites in B with exactly j particles converges as the lattice spacing tends to zero; also determine the scaling limit of the sandpile identity element.  
+Source: Levine and Peres: Laplacian growth, sandpiles and scaling limits, BAMS 2017, with open problems, Open problems (3), p. 27 (https://arxiv.org/pdf/1611.00411).  
+In brief: Local statistics in the sandpile scaling limit.  
+Where it stands: Weak-star convergence is proved; the refinement is local.  
+
+**131. P0287: Invariant measures for full line TASEP with killing at one site**  
+Characterize invariant measures for unit-rate full-line TASEP with particles at site0 removed at a fixed positive rate kappa, as proposed in workshop systemS2.  
+Caveat: The empty invariant law is trivial and does not resolve classification of nontrivial stationary flows. Boundary or tail densities must be included when specifying a particular nontrivial invariant law.  
+Source: AIM all roads to KPZ workshop follow-up report,2025, ASEP on graphs or trees,S2,PDF5 (https://aimath.org/pastworkshops/roadtokpzrep.pdf).  
+In brief: Invariant measures of TASEP with killing at one site.  
+Where it stands: Explicit dynamics on the line.  
+
+**146. D0024: Weak convergence of the disordered zero-range process from a spatially ergodic start**  
+Fix the site rates alpha and take the initial distribution of eta(0) spatially ergodic with density rho. Does the law of eta(t) converge weakly as t tends to infinity to one of the equilibria nu^alpha_phi? If rho > rho* in the phase-transition case, does eta(t) converge weakly to the equilibrium with density rho*? The analogous statement for the standard (non-disordered) zero-range process is due to Andjel, Ferrari, Guiol and Landim type results.  
+Source: Recent results and open problems on the hydrodynamics of disordered asymmetric exclusion and zero-range processes, Problem 3, Section 4, PDF p. 9 (https://arxiv.org/pdf/math/9906194).  
+In brief: Long-time behaviour of the disordered zero-range process.  
+Where it stands: Hydrodynamic and condensation results exist.  
+
+**153. D0026: Convergence to equilibrium for FA-1f from any initial law with an infection**  
+For the Fredrickson-Andersen one-spin facilitated model on Z with infection density q in (0,1): for any q and any local function f, E_nu(f(eta(t))) tends to pi(f) as t tends to infinity, provided nu(there exists an infected vertex) = 1. Here pi is the Bernoulli(q) product measure, which is reversible for the dynamics.  
+Source: Long time behaviour of one facilitated kinetically constrained models: results and open problems, Conjecture 1, Section 1.1, PDF p. 2 (https://arxiv.org/pdf/2510.20461).  
+In brief: Convergence to equilibrium for the FA-1f kinetically constrained model.  
+Where it stands: Proved for special initial laws.  
+
+**154. D0027: Exponential relaxation of FA-1f from an initial law with exponentially rare infection gaps**  
+For FA-1f on Z: if there is kappa > 0 with nu(no infected vertices in [-l, l]) = O(exp(-kappa l)) for all large l, then for every q > 0 the convergence of E_nu(f(eta(t))) to pi(f) is exponentially fast.  
+Source: Long time behaviour of one facilitated kinetically constrained models: results and open problems, Conjecture 2, Section 1.1, PDF p. 2 (https://arxiv.org/pdf/2510.20461).  
+In brief: Exponential relaxation of FA-1f under rare infection gaps.  
+Where it stands: Proved for special initial laws.  
+
+**163. I0005: The four-dimensional case of the closer-to-a-car question**  
+The source answers the analogue of Open Question 3 ("P(the origin is closer to a free spot than to a driving car at time t) -> 0 ?") "affirmatively when d <= 3" and "construct[s] counterexamples when d >= 5". The case d = 4 is left open by that pair of results.  
+Source: arxiv_2609_02820, Theorem 1.5 and the discussion of Damron, Gravner, Junge, Lyu and Sivakoff [2019, Open Question 3].  
+In brief: The four-dimensional case of a parking question.  
+Where it stands: Dimensions up to three are answered in the source.  
+
+**171. G0006: Is lambda_1 < lambda_p for the contact process on Z^d, d >= 2 (percolation of the upper invariant measure)**  
+Contact process with infection rate lambda on Z^d; lambda_1 the critical value for survival (lambda_1 = lambda_c on Z^d), and lambda_p the critical value beyond which the infected vertices of the upper invariant measure nu_lambda percolate. Source: '[8] proves in particular that ... lambda_p(Z) = +infinity, lambda_p(Z^d) <= 6.25 < +infinity for d >= 2. The same paper also raises the natural question whether we have lambda_1 < lambda_p on Z^d when d >= 2, which remains a difficult open problem. To the best of our knowledge, such a result has previously never been proven for any graph with lambda_p < +infinity.' The source proves lambda_1 < lambda_p on the regular tree T_d for all d >= 3 (and 0 < lambda_1 < lambda_p < lambda_2 < lambda_p^c < infinity for d >= 7).  
+Source: Fernley, Jacob: Percolation of the contact process on the regular tree (2026), Introduction, PDF pp. 1-2 (question attributed to [8]) (https://arxiv.org/pdf/2609.09972).  
+In brief: Percolation of the upper invariant measure of the contact process.  
+Where it stands: Comparison arguments with oriented percolation.  
+
+**172. G0007: Continuity of the two percolation transitions of the upper invariant measure on T_d**  
+Contact process on the regular tree T_d with upper invariant measure nu_lambda; lambda_p the percolation threshold of the infected set, lambda_p^c the threshold before which the healthy set percolates. Source: 'the figure suggests that both transitions are continuous, and it's possible as well that the probability to be in an infinite healthy component has a continuous derivative at lambda = lambda_p^c while the probability to be in an infinite infected component at lambda = lambda_p does not. We leave both questions as interesting open problems.' Question: are the functions lambda -> nu_lambda(0 in an infinite infected component) and lambda -> nu_lambda(0 in an infinite healthy component) continuous at lambda_p and lambda_p^c respectively, and is the first derivative continuous at lambda_p^c but not at lambda_p?  
+Source: Fernley, Jacob: Percolation of the contact process on the regular tree (2026), Section 2, PDF p. 5 (paragraph before Figure 1) (https://arxiv.org/pdf/2609.09972).  
+In brief: Continuity of percolation thresholds for the contact process on trees.  
+Where it stands: Explicit tree structure.  
+
+**177. F0131: Is the sandpile aggregate on a background of holes a regular (4H+12)-gon?**  
+Question 6.2. In Z^2, is the limiting shape of S_{n,H} as n -> infinity a regular (4H+12)-gon? [Same page: 'Simulations indicate that for general H >= -2, the limiting shape of S_{n,H} in Z^2 may be a polygon with 4H + 12 sides.' 'Simulations indicate a regular (4H + 12)-gon with some rounding at the corners; it remains unclear if the rounded portions of the boundary become negligible in the limit. Even if the limiting shape is not a polygon, it would still be very interesting to establish the weaker statement that it has the dihedral symmetry D_{4H+12}.' Figure 11: square, octagon and dodecagon for H = -2, -1, 0.] [Setting, Section 6, PDF p. 29: 'Fey-den Boer and Redig [FR07] consider aggregation in the sandpile model on Z^d. In their setup, the underlying graph for the chip-firing game is the infinite undirected d-dimensional cubic lattice Z^d. Start with each site containing h <= 2d - 2 chips. Here h may be even be taken negative, corresponding to starting with a hole of depth H = -h at each lattice site; that is, each site absorbs the first H chips it receives, and thereafter fires every time it receives an additional four chips. Now add n chips to the origin and stabilize. Denote by S_{n,H} the set of sites in Z^d which fired in the process of stabilization.' Theorem 6.1 ([FR07]): S_{n,2-2d} is a cube C(r_n) for every n; in Z^2, S_{n,-2} is a square. PDF p. 30: 'even the existence of a limiting shape for S_{n,H} has not been proved in the case H > -2', and as H -> infinity the limiting shape is a ball (Fey-Redig; Theorem 6.3 of Levine-Peres).]  
+Source: Holroyd, Levine, Meszaros, Peres, Propp, Wilson: Chip-firing and rotor-routing on directed graphs (2008), Question 6.2, Section 6, PDF p. 29 (https://arxiv.org/pdf/0801.3306).  
+In brief: Limit shape of the sandpile with holes.  
+Where it stands: Simulations are strong and divisible-sandpile methods exist.  
+
+**185. P0212: Low-density genealogical limit of branching coalescing walks**  
+Prove the proposed low-density, time-rescaled lineage limit for transient branching-coalescing walk and the constrained-Ising analogue, after discarding short-lived branching jitter.  
+Caveat: The two explicitly linked microscopic models are grouped; the undefined dynamic-graph research direction is not a second admitted problem. Spatial positions are forgotten but splitting and merging histories remain.  
+Source: Aldous open problems: Low-density coalescing branching random walk, Problem A,2012; updateMarch2018 (https://www.stat.berkeley.edu/~aldous/Research/OP/cbrw.html).  
+In brief: Genealogies of branching-coalescing walks at low density.  
+Where it stands: A proposed limit with a clear construction.  
+
+**186. P0211: Relaxation of linear-polymer coagulation and fragmentation**  
+Determine the order of the relaxation time for the reversible polymer coagulation-fragmentation chain, especially fragmentation rate beta_n comparable to1/n.  
+Caveat: Clusters merge at rate2/n per pair; each internal link splits at rate beta. Fixed-beta and small-beta regimes are grouped. The source proves bounds between asymptotic1/sqrt(beta^2+4beta) and1/beta.  
+Source: Aldous open problems: Coagulation-fragmentation mixing, Problem; linked coag_frag_mix.pdf pp1-4 (https://www.stat.berkeley.edu/~aldous/Research/OP/coag_frag.html).  
+In brief: Relaxation time of a coagulation-fragmentation chain.  
+Where it stands: A reversible chain with explicit stationary law.  
+
+**187. P0220: Explicit stationary law of the leftmost Hammersley drift-jump particles**  
+Give a useful explicit joint stationary law for the ordered particles which drift at speed x and jump left at rate1 Poisson space-time points.  
+Caveat: The1993 notes already contain a patience-sorting representation and small-k calculations. The1999 paper Section5.2 uses the stationary process for limit theorems. Those established representations are not counted as newly solved open work.  
+Source: Aldous open problems: One-dimensional drift-jump particle process, Problem,postedFebruary2018;1993notes Section4.1 (https://www.stat.berkeley.edu/~aldous/Research/OP/left_Hamm.html).  
+In brief: Stationary law of drifting particles with Poisson jumps.  
+Where it stands: Hammersley-process tools give stationary measures.  
+
+**189. F0127: When is the coalescence time twice the meeting time (Kingman behaviour for coalescing walks)?**  
+Open Problem 2. Assuming (5.2), under what further conditions can one prove E T^coal ~ 2 tau_meet as n -> infinity? (5.3) [Section 5.5, PDF p. 15: 'Return to the setting of Section 5.1 - chains are associated chains run at half speed. Write tau_meet for the mean meeting time from independent uniform starts. In a sequence of chains with n -> infinity, impose a condition such as the following. For each delta > 0, n^{-2} |{(i,j) : E T^meet_{ij} not in (1 +- delta) tau_meet}| -> 0 as n -> infinity. (5.2)' Here T^coal is the time for n coalescing walkers started one per vertex to coalesce to one, T^meet_{ij} the meeting time of two independent copies of the chain started at i and j; the geometry is a weighted graph (nu_{ij}) with the standardisation (2.2) of Section 2 (sum_j nu_{ij} = 1). Same page: 'That such a result is anticipated has been folklore since 1989, when Cox [23] proved (5.3) for the torus [0, m-1]^d in dimension d >= 2.' The source also proposes a two-stage route: Stage 1 (m fixed walkers coalesce in mean ~ 2(1 - 1/m) tau_meet, 'likely ... without further assumptions') and Stage 2 (n walkers reduce to m(n) -> infinity clusters in time o(tau_meet)), and says 'See [42] for a recent extensive study of this problem, and the current best results.']  
+Source: Aldous: Interacting particle systems as stochastic social dynamics (Bernoulli 2013), Open Problem 2, Section 5.5, PDF p. 16 (https://arxiv.org/pdf/1309.6766).  
+In brief: Coalescence time versus meeting time for coalescing walks.  
+Where it stands: Proved under mixing conditions in related settings. (not checked)  
+
+## Statistical mechanics: polymers, gases, interfaces
+
+**73. P0310: Uniqueness for the one-dimensional short-range Riesz Gibbs gas**  
+Establish the expected uniqueness of the one-dimensional short-range Riesz Gibbs state in the unresolved exponent range1<s<=2.  
+Caveat: The s>2 uniqueness regime is already known. Boursier proves a unique thermodynamic limit of the circular finite-volume laws for s>1, which is not by itself uniqueness among all DLR Gibbs states.  
+Source: Lewin: Coulomb and Riesz gases, the known and the unknown,2022, SectionVI,PDF61;Boursier Section1.3,PDF5 (https://arxiv.org/pdf/2202.09240).  
+In brief: Uniqueness of the one-dimensional short-range Riesz Gibbs state.  
+Where it stands: Uniqueness is known for larger exponents; the range 1<s<=2 is the gap.  
+
+**85. F0072: Entropic repulsion for the continuous solid-on-solid interaction**  
+Open Problem 5. Prove similar results (even without the proper constants) when V(x) is not uniformly strictly convex. In particular prove it for the continuous SOS model, that is, the continuous effective interface model with interaction V(x) = |x|. Note that the behavior should be different as soon as the tail of V changes. This has important impact on other related issues, as is discussed in Sections 4 and 6. ['Similar results' refers to the entropic repulsion heights of Section 3.2: sqrt(4 g_d log N)-type heights in d >= 3 and the two-dimensional statement (20).] Setting of the source (Section 1): effective interface model phi = (phi_i)_{i in Lambda} in R^Lambda with Hamiltonian sum over nearest neighbours of V(phi_i - phi_j) and zero boundary condition; 'Gaussian' means V(x) = x^2/2, 'uniformly strictly convex' means c_- <= V'' <= c_+; the repelled (hard-wall) measure P^+ conditions on phi_i >= 0 on a subbox; the DG (discrete Gaussian) model is the integer-valued version.  
+Source: Velenik: Localization and delocalization of random interfaces (Probab. Surveys 2006), Open Problem 5, Section 3.2, PDF p. 22 (https://arxiv.org/pdf/math/0509695).  
+In brief: Interface behaviour for non-convex gradient models.  
+Where it stands: Results for strictly convex interactions are known; the continuous SOS model is the test case.  
+
+**86. F0073: Height of the two-dimensional field pinned at the origin and kept positive, for convex interactions**  
+Open Problem 6. Extend (21) (when d = 2) to the case of uniformly strictly convex interactions V. [(21), same page: for the field pinned at the origin and conditioned to be positive, E^+_{Z^2 \ {0}}(phi_i) is of order sqrt(|i|) for d = 1 and of order log|i| for d = 2; the source adds that the two-dimensional result has only been established for the Gaussian model, and that an extension to uniformly strictly convex V would also allow an extension of the results of [29], discussed in Section 6, to this class.] Setting of the source (Section 1): effective interface model phi = (phi_i)_{i in Lambda} in R^Lambda with Hamiltonian sum over nearest neighbours of V(phi_i - phi_j) and zero boundary condition; 'Gaussian' means V(x) = x^2/2, 'uniformly strictly convex' means c_- <= V'' <= c_+; the repelled (hard-wall) measure P^+ conditions on phi_i >= 0 on a subbox; the DG (discrete Gaussian) model is the integer-valued version.  
+Source: Velenik: Localization and delocalization of random interfaces (Probab. Surveys 2006), Open Problem 6, Section 3.3, PDF p. 23 (https://arxiv.org/pdf/math/0509695).  
+In brief: Entropic repulsion with convex interactions in two dimensions.  
+Where it stands: The Gaussian case is known.  
+
+**119. C0119: Chaos in directed polymers in dimensions d >= 3**  
+Prove chaos (sensitivity of the polymer measure to a small perturbation of the environment) for directed polymers in random environment in dimensions d >= 3, at low temperature.  
+Source: Chatterjee: Chaos, concentration and multiple valleys, 2008, with open questions, Section 12, problem (2), p. 59 (https://arxiv.org/pdf/0810.4221).  
+In brief: Chaos for directed polymers in dimension three and higher.  
+Where it stands: Superconcentration methods prove chaos in related models.  
+
+**128. P0331: Sharpness of the Debye scale in Coulomb local laws**  
+Prove the conjectured sharpness of the temperature-dependent minimal Debye scale in the Coulomb local-energy laws, including the proposed Poissonian behavior below that scale.  
+Caveat: The source scale is rho_beta=C*max(1,sqrt(chi(beta)/beta)) in microscopic coordinates; chi(beta) is the source dimension-dependent correction. In d>=3 it is1. All temperature and dimension cases are one scale-sharpness question.  
+Source: Serfaty: Lectures on Coulomb and Riesz gases,2024, Equations8.0.1-8.0.2,PDF163;conjecturePDF164 (https://arxiv.org/pdf/2407.21194).  
+In brief: Sharpness of the Debye scale for Coulomb gases.  
+Where it stands: Local laws down to the Debye scale are proved.  
+
+**129. F0021: Fluctuations of the heavy-tailed directed polymer at fixed temperature for tail exponent alpha > 5**  
+Context: the directed polymer in d = 1 with disorder in the domain of attraction of an alpha-stable law (Assumption 3, tail exponent alpha) and inverse temperature beta_n = hat-beta n^{-gamma}; the phase diagram in (alpha, gamma) is described by the source's Theorems 5.3-5.5 (energy-dominated stable fluctuations for 1/2 < alpha < 2 and gamma >= 3/(2 alpha), variational problems below that curve, a Gaussian regime for alpha in (2,6] and gamma >= 3/(2 alpha)). 'Question 5. Derive the limiting behaviours in the rest of the phase diagram. Do Airy and KPZ asymptotics extend when gamma = 0 and alpha > 5?'  
+Source: Zygouras: Directed polymers in a random environment: a review of the phase transitions, Question 5, Section 5.1, PDF p. 42 (https://arxiv.org/pdf/2401.01757).  
+In brief: Fluctuations of heavy-tailed directed polymers.  
+Where it stands: Scaling limits are identified in neighbouring regimes.  
+
+**133. I0008: Minimality of ergodic gradient Gibbs measures of finite free energy**  
+"[70, Conjecture 10.3.2] conjectures that if mu-nabla is ergodic and slope(mu-nabla) is in the interior of S then SFE(mu-nabla) < infinity", and Conjecture 10.3.1 "conjectures that if mu-nabla is ergodic, SFE(mu-nabla) < infinity and s = slope(mu-nabla) is in the interior of S then mu-nabla is minimal". The source notes these are proved for Lipschitz height functions or isotropic interactions, "We are not aware of results on which interactions V (if any) admit" the general case.  
+Source: arxiv_2609_01499, Section 2.4, citing [70, Conjecture 10.3.2].  
+In brief: Finite specific free energy for ergodic gradient Gibbs measures.  
+Where it stands: A conjecture of Sheffield with the relevant tools in the source.  
+
+**135. P0324: Analyticity of the one-dimensional Riesz free energy**  
+Prove the expected real analyticity in inverse temperature beta of the thermodynamic free energy of the one-dimensional long-range Riesz gas0<s<1 defined in the source.  
+Caveat: The source discusses deriving twice differentiability from its correlation and convergence results and expects full analyticity. Neither a possible C2 consequence nor convergence of periodic laws is counted as analyticity.  
+Source: Boursier: Decay of correlations and thermodynamic limit for circular Riesz gas, Section1.3,PDF5 (https://arxiv.org/pdf/2209.00396).  
+In brief: Analyticity of the free energy of long-range Riesz gases.  
+Where it stands: Decay of correlations is proved in the source.  
+
+**136. P0323: DLR characterization of the circular Riesz thermodynamic limit**  
+Prove that the thermodynamic limit of the circular one-dimensional Riesz gas constructed in Boursier satisfies the anticipated infinite-volume DLR equations.  
+Caveat: The paper proves convergence of the finite circular laws for0<s<1 and s>1 and explicitly says the DLR characterization remains open. This is existence of the specification identity for that limit, distinct from uniqueness among all Gibbs states.  
+Source: Boursier: Decay of correlations and thermodynamic limit for circular Riesz gas, Section1.3,PDF5 (https://arxiv.org/pdf/2209.00396).  
+In brief: DLR equations for the circular Riesz gas limit.  
+Where it stands: The analogue for sine-beta is proved.  
+
+**167. E0112: Weak and strong disorder critical temperatures for directed Brownian polymers in a Poissonian environment**  
+For the directed Brownian polymer in a Poissonian environment, define the critical inverse temperatures beta_c^{+,dir} = sup{beta >= 0 : lim_t P[(W_t^{dir,beta})^{1/2}] > 0} and beta_c^{-,dir} = inf{beta >= 0 : lim_t P[(W_t^{dir,beta})^{1/2}] > 0}, the analogues of the weak/strong disorder transition. The survey formulates conjectures about these critical points for the directed model.  
+Source: Brownian polymers in Poissonian environment: a survey, Conjecture 4.3.2, PDF p. 24 (https://arxiv.org/pdf/1805.10899).  
+In brief: Critical temperatures of directed Brownian polymers in Poisson environments.  
+Where it stands: Weak and strong disorder are characterised separately.  
+
+**170. P0315: Forrester-Haldane pointwise pair-correlation asymptotics for sine beta**  
+Prove the predicted oscillatory large-distance expansion of the sine-beta truncated two-point correlation function for general beta, beyond the established special values and weaker averaged decay estimates.  
+Caveat: All harmonics and beta regimes are one asymptotic family. Lewin uses unit density; Dumaz-Malvy use density1/(2*pi), so distances must be rescaled before comparing coefficients.  
+Source: Dumaz and Malvy: Long-Range Correlation of Sine beta Point Process (2026), Introduction,PDF2-3;Lewin equations149-150,PDF64 (https://arxiv.org/pdf/2603.15289).  
+In brief: Correlation asymptotics for sine-beta point processes.  
+Where it stands: Proved for special values of beta.  
+
+**200. P0320: Number rigidity in the remaining Riesz exponent band**  
+Determine number rigidity or non-rigidity for Riesz gases in the remaining admissible band s in(d-2,d-1], which Thoma identifies as open after disproving the older general threshold conjecture.  
+Caveat: The earlier threshold claim is retained separately as an excluded historical conjecture P0319. The interval is one question, restricted to the Riesz models for which an infinite-volume gas is defined. Later status remains unverified.  
+Source: Thoma: Non-rigidity Properties of the Coulomb Gas, Introduction,PDF2 (https://arxiv.org/pdf/2303.11486).  
+In brief: Number rigidity for Riesz gases in the remaining exponent band.  
+Where it stands: Rigidity and non-rigidity are settled outside the band.  
+
+## Gaussian fields, LQG and planar maps
+
+**6. C0002: Fluctuations and large deviations of intermediate level sets of the 2D DGFF**  
+Describe the rate of convergence in Corollary 2.9 (size of the intermediate level set), identify the limit law of the fluctuations of the level set around its limit, and study deviations whose probability tends to zero as N -> infinity.  
+Source: Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes, Problem 16.2, p. 220 (https://arxiv.org/pdf/1712.09972).  
+In brief: Second-order behaviour of intermediate level sets of the planar discrete Gaussian free field.  
+Where it stands: The first-order limit is proved in the source; the fluctuation question is the next step of that program.  
+
+**7. C0006: Existence of the limit of e^{-alpha h} E nu(f_h) for the DGFF cluster law**  
+For the cluster law nu and the functionals f_h counting points at depth h in the cluster, the limit lim_{h -> infinity} e^{-alpha h} E_nu(f_h) exists in (0,infinity).  
+Source: Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes, Conjecture 16.6, p. 222 (https://arxiv.org/pdf/1712.09972).  
+In brief: Exact growth of the cluster law that describes local extremes of the DGFF.  
+Where it stands: A renewal-type statement about an explicit cluster law already constructed in the source.  
+
+**8. C0012: Subdiffusive upper bound for the Liouville random walk on the DGFF**  
+For the random walk X on Z^2 driven by the DGFF with parameter beta > 0 (13.9), show that for each delta > 0, P^0_h(|X_T| <= T^{1/psi(beta)} e^{(log T)^{1/2+delta}}) -> 1 in P-probability.  
+Source: Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes, Problem 16.12, p. 225 (https://arxiv.org/pdf/1712.09972).  
+In brief: Subdiffusive scaling of the random walk driven by a log-correlated field.  
+Where it stands: Upper bounds of the right type are in the source; the problem asks for the matching sharpening.  
+
+**42. D0082: Brownian limit and correlation for the meander lattice walk**  
+Prove that the lattice walk Z arising in the meander problem converges to a two-dimensional Brownian motion whose coordinate correlation is -cos(pi gamma^2 / 4) for the appropriate gamma. A solution would, by an argument analogous to Gwynne-Sun's estimate of the FK partition function, give the exponent alpha in the asymptotic enumeration of meanders. The source carries an UPDATE stating that, contrary to the conjecture, the scaling limit of a uniform meander is expected to be LQG with central charge c = -4 decorated by two independent SLE_8 curves, with kappa not equal to 16/gamma^2, so that the mating-of-trees results do not apply directly.  
+Source: Gwynne, Holden, Sun: Mating of trees for random planar maps and LQG, a survey, Problem 6.3, Section 6, PDF p. 55 (https://arxiv.org/pdf/1910.04713).  
+In brief: Meanders and their conjectured link to Liouville quantum gravity.  
+Where it stands: Mating-of-trees encodings give a concrete walk whose limit is the target.  
+
+**139. C0059: Transience of the dual infinite Boltzmann map for a in [2, 5/2)**  
+Let q be a critical weight sequence of type a in [2, 5/2); is the dual map m-dagger of the infinite Boltzmann map of the plane transient for simple random walk under P^{(1)}_infinity?  
+Source: Curien: Peeling random planar maps, Saint-Flour XLIX 2019 lecture notes, author preliminary version, Open question, p. 93 (https://www.imo.universite-paris-saclay.fr/~nicolas.curien/cours/peccot.pdf).  
+In brief: Transience of the dual of infinite Boltzmann planar maps.  
+Where it stands: Peeling exploration handles the neighbouring parameter range.  
+
+**140. C0057: Filled-in peeling discovers the whole map for every critical weight sequence**  
+Corollary 27 shows that for a critical weight sequence of type a in [3/2, 5/2] a filled-in peeling exploration of the infinite Boltzmann map almost surely exhausts the map; is this true for every critical weight sequence?  
+Source: Curien: Peeling random planar maps, Saint-Flour XLIX 2019 lecture notes, author preliminary version, Open question after Corollary 27, p. 61 (https://www.imo.universite-paris-saclay.fr/~nicolas.curien/cours/peccot.pdf).  
+In brief: Does filled-in peeling explore the whole map?  
+Where it stands: Proved for part of the parameter range.  
+
+**141. D0051: The thickness spectrum of a point on an LQG geodesic**  
+Let xi > 0 and let P be a D_h-geodesic for the LQG metric. Compute the Hausdorff dimension of the intersection of P with the set T^alpha_h of alpha-thick points, for each alpha in [-2,2], with respect to both D_h and the Euclidean metric. More weakly, is there a unique value of alpha maximising this dimension, i.e. a typical thickness for a point on an LQG geodesic? The analogue for the boundary of a metric ball is solved, with maximiser alpha = xi (Euclidean) and alpha = gamma (LQG).  
+Source: Ding, Dubedat, Gwynne: Introduction to the Liouville quantum gravity metric, Problem 5.3, PDF p. 24 (https://arxiv.org/pdf/2109.01252).  
+In brief: Thick points on Liouville quantum gravity geodesics.  
+Where it stands: Dimension computations for related sets are done.  
+
+**155. P0306: One-dimensional boundary two-star set in LQG**  
+For the gamma-LQG metric associated with a Neumann GFF on the upper half plane, is the metric Hausdorff dimension of the boundary two-star set exactly1?  
+Caveat: The boundary intersection uses the ambient LQG metric restricted to the boundary, not an intrinsic boundary path metric. The established lower bound1 is not the requested equality.  
+Source: Bhatia Gwynne Harper: Dimension lower bounds in random geometry via Lipschitz functions (2026), Conjecture1.4,PDF7;Theorem1.3 lower boundPDF6 (https://arxiv.org/pdf/2606.10496).  
+In brief: Dimension of the boundary two-star set in LQG.  
+Where it stands: Bulk analogues are computed.  
+
+**158. D0064: Classification of the solutions of the star-scale-invariance equation**  
+Classify the solutions M of the star-equation (star-scale invariance) according to the parameters alpha and gamma: (1) if alpha = 1 and gamma^2 < 2d, M is the standard Gaussian multiplicative chaos; (2) if alpha = 1 and gamma^2 = 2d, M is the derivative martingale M'; (3) if alpha < 1 and gamma^2 < 2d, M is an atomic chaos of the dual phase; (4) if alpha < 1 and gamma^2 = 2d, M is an atomic chaos of the frozen phase.  
+Source: Rhodes and Vargas: Gaussian multiplicative chaos and applications, a review, Conjecture 6.4 (Solutions to the star-equation), Section 6.3, PDF p. 52 (https://arxiv.org/pdf/1305.6221).  
+In brief: Classification of star-scale invariant random measures.  
+Where it stands: Log-normal solutions are classified.  
+
+**180. F0087: Scaling limit of the electric field exp(i alpha h) of the dimer height function**  
+1. Height mod k. What can be said about the random variable e^{i alpha h} where alpha is a constant and h is the height function? This is an analog of the spin-spin correlations in the Ising model and is a more delicate quantity to measure than the height function itself. Standard Toeplitz techniques allow one to evaluate it in lattice directions, and it is conjectured to be rotationally invariant (for the uniform square grid dimers, say). See [24] for some partial results. Can one describe the scaling limit of this field? [Setting: uniform dimer model (domino tilings) on the square grid, h the height function.]  
+Source: Kenyon: Lectures on dimers, Open problems, item 1 (Height mod k), Section 12, PDF p. 54 (https://arxiv.org/pdf/0910.3129).  
+In brief: Scaling limit of the electric correlator of dimers.  
+Where it stands: The height function converges to the Gaussian free field.  
+
+## Brownian motion, Levy processes and SPDE
+
+**47. P0025: Synchronous reflection outside a disk**  
+For synchronously coupled reflected Brownian motions in the exterior of a nondegenerate closed disk, can their distance have positive limsup with positive probability?  
+Caveat: This unbounded exterior geometry differs from the bounded-domain existence question.  
+Source: Krzysztof Burdzy: My favorite open problems, Problem 5(ii) (https://sites.math.washington.edu/~burdzy/open_mathjax.php).  
+In brief: Long-term behaviour of synchronously coupled reflected Brownian motions.  
+Where it stands: A two-dimensional exterior domain with explicit geometry.  
+
+**48. P0023: Efficient reflected-Brownian coupling in acute triangles**  
+In any acute triangle, can reflected Brownian motions from distinct starting points be coupled so their meeting-time tail decays at every exponential rate strictly below the first positive Neumann spectral rate?  
+Caveat: Check the generator convention in Burdzy-Kendall (2000): the page calls its rate a Laplacian eigenvalue. A factor-two convention discrepancy is not a solution of the coupling question.  
+Source: Krzysztof Burdzy: My favorite open problems, Problem 4 (https://sites.math.washington.edu/~burdzy/open_mathjax.php).  
+In brief: Efficient couplings of reflected Brownian motion in triangles.  
+Where it stands: Spectral theory of triangles and coupling constructions are developed.  
+
+**65. I0070: Time regularization in Hilbert spaces: Let X0 be a Hilbert space**  
+Problem 6. (Time regularization in Hilbert spaces) Let X0 be a Hilbert space. Does the regularization result of Theorem 5.7 extend to p = 2 in the critical case (i.e. equality in (6.1) holds for some j)? Stochastic reaction-diﬀusion equations In Subsections 8.2 we discussed the global well-posedness of some coercive systems. We also included a non- coercive case in Subsection 8.2.3, where a predator-prey model was discussed. Some triangular models we are able to treat as well (see [14] for the Brussela- tor and Gray-Scott model both with cubic f).  
+Source: Agresti-Veraar: Nonlinear SPDEs and maximal regularity,published NoDEA2025, Problem 6 (https://repository.tudelft.nl/file/File_783e6459-5d3b-4957-bcd3-64da5b8d9025).  
+In brief: Critical time regularisation for stochastic PDEs in Hilbert spaces.  
+Where it stands: The non-critical and p>2 cases are proved in the source.  
+
+**66. I0071: Reaction-diﬀusion with triangular structure: Let O be Td or Rd and ℓ≥2**  
+Problem 7. (Reaction-diﬀusion with triangular structure) Let O be Td or Rd and ℓ≥2. Consider the reaction-diﬀusion system (8.14) with (bn,i)n≥1 ∈ Cγ(O; ℓ2) for some γ > 0 and with possibly additional boundary conditions in case O ̸= Td. Does global well-posedness hold for the reaction-diﬀusion system (8.14) under the following conditions for a ﬁxed h > 1 and each i ∈{1, . . .  
+Source: Agresti-Veraar: Nonlinear SPDEs and maximal regularity,published NoDEA2025, Problem 7 (https://repository.tudelft.nl/file/File_783e6459-5d3b-4957-bcd3-64da5b8d9025).  
+In brief: Global well-posedness for stochastic reaction-diffusion with triangular structure.  
+Where it stands: The critical-space framework of the source covers the related systems.  
+
+**95. F0034: The bubble hypothesis for the backbone of the Brownian net**  
+Let N be the graph of the backbone of the Brownian net (paths started at time -infinity), S and M the sets of separation points and meeting points on N, S* = S union {(*,-infinity)}, M* = M union {(*,infinity)}, and phi: S* -> M*, phi(z) = the first meeting point of the left-most and right-most paths starting at z (phi(z) = (*,infinity) if they never meet), with phi: M* -> S* defined analogously by time reversal. Conjecture 8.1 (Bubble hypothesis) (a) Almost surely, there does not exist an infinite sequence of points (z_k)_{k>=0} in S* union M*, all different from each other, such that phi(z_{k-1}) = z_k for all k >= 1. (b) Almost surely, there does not exist an infinite sequence of points (z_k) in S* union M*, all different, such that phi(z_k) = z_{k-1} for all k >= 1.  
+Source: Schertzer, Sun, Swart: The Brownian web, the Brownian net, and their universality, Conjecture 8.1 (Bubble hypothesis), Section 8.2, PDF p. 71 (https://arxiv.org/pdf/1506.00724).  
+In brief: Fine structure of the Brownian net.  
+Where it stands: The net is constructed with special points classified.  
+
+**96. F0036: Local finiteness of potential most recent common ancestors in the Brownian net**  
+For the Brownian web, let M be the set of all first meeting points of pairs of paths started at time 0, M := {(x,t) in R^2: t > 0, exist pi, pi' in W({0} x R) with pi(t) = x = pi'(t), pi < pi' on (0,t)}, interpreted as most recent common ancestors; it is easy to see that M is a locally finite subset of R x (0, infinity). Conjecture 8.3 (Potential most recent common ancestors). If we replace W({0} x R) in (8.3) by N({0} x R), the set of all Brownian net paths started at time 0, then the set M is a locally finite subset of R x (0, infinity).  
+Source: Schertzer, Sun, Swart: The Brownian web, the Brownian net, and their universality, Conjecture 8.3 (Potential most recent common ancestors), Section 8.2, PDF p. 72 (https://arxiv.org/pdf/1506.00724).  
+In brief: Meeting points of the Brownian web.  
+Where it stands: Special-point classification for the web is developed.  
+
+**97. E0024: Hunt's hypothesis for a product of two independent Levy processes**  
+Let X_1 and X_2 be independent Levy processes on R^n and R^m respectively, both satisfying Hunt's hypothesis (H). Does the R^{n+m}-valued Levy process X = (X_1, X_2) satisfy (H)? Equivalently (Question 4): if S is a nonempty proper subspace of R^n and the projections X_S and X_{S-perp} are independent and both satisfy (H), does X satisfy (H)?  
+Source: Hunt's hypothesis (H) for Markov processes: survey and beyond, Question 4 (equivalently Question 4'), PDF pp. 15 and 18 (https://arxiv.org/pdf/1908.06825).  
+In brief: Potential theory of products of Levy processes.  
+Where it stands: Hunt's hypothesis is known in many classes.  
+
+**98. E0025: Hunt's hypothesis for pure jump subordinators with infinite Levy measure**  
+Does any pure jump subordinator with infinite Levy measure satisfy Hunt's hypothesis (H)? More generally, does any pure jump n-dimensional Levy process satisfy (H)? The survey records in Section 2 that it is still unknown whether any pure jump subordinator of type-(alpha, beta) satisfies (H), where a pure jump subordinator is of type-(alpha, beta) with 0 < alpha < beta < 1 if its Levy measure has a density nu with c^{-1} x^{-(1+alpha)} <= nu(x) <= c x^{-(1+beta)} for x in (0,1].  
+Source: Hunt's hypothesis (H) for Markov processes: survey and beyond, Question 5, PDF p. 25 (https://arxiv.org/pdf/1908.06825).  
+In brief: Getoor's question for pure-jump subordinators.  
+Where it stands: Known for several classes of subordinators.  
+
+**99. E0027: Is Hunt's hypothesis stable under independent sums of Levy processes?**  
+Suppose X and Y are two independent n-dimensional Levy processes both satisfying Hunt's hypothesis (H). Does X + Y satisfy (H)?  
+Source: Hunt's hypothesis (H) for Markov processes: survey and beyond, Question 7, PDF p. 25 (https://arxiv.org/pdf/1908.06825).  
+In brief: Stability of Hunt's hypothesis under sums.  
+Where it stands: Potential-theoretic criteria exist.  
+
+**106. P0139: Rough-path continuity of chronological loop attachment**  
+Prove appropriate Holder, p-variation, or rough-path continuity estimates for the chronological loop-attachment map, possibly restricted to the cusp conditions proposed by the authors.  
+Caveat: The precise topology must include all necessary time and iterated-integral information. Continuity in the source's existing path topology does not imply continuity of rough-path lifts.  
+Source: Berestycki and Sauzedde: Brownian paths as loop-decorated SLEs,2026, Section7, Continuity in rough path topologies (https://arxiv.org/pdf/2602.04673).  
+In brief: Regularity of the map that attaches Brownian loops to a path.  
+Where it stands: Rough-path estimates for related maps exist.  
+
+**118. P0030: Compatibility of forward and backward Brownian decompositions**  
+Does a decomposable forward Brownian motion which is also backward Brownian necessarily become two-sided Brownian after a random shift? The source also asks weaker related formulations using independence of past and future at a random time.  
+Caveat: The three linked formulations are grouped as one compatibility problem. A general process that is both forward and backward Brownian without the extra assumptions is already counterexampled in the paper.  
+Source: Forward Brownian motion, Problems 7.1-7.3, PDF pages 25-26 (https://math.washington.edu/sites/math/files/documents/research/1302.6958.pdf).  
+In brief: Decompositions of Brownian motion forward and backward in time.  
+Where it stands: A specific path-decomposition question.  
+
+**125. D0019: A Marstrand projection theorem for the zero set of the Brownian sheet**  
+Marstrand's theorem says that almost every lower-dimensional orthogonal projection of a Borel set has the same Hausdorff dimension as the set. Theorem 1.1 of the source shows the projection of B^{-1}{0} onto the x-axis has the Marstrand property. Is there a RANDOM orthogonal projection whose image of B^{-1}{0} has Hausdorff dimension different from 2 - d/2? The source believes the answer is no but has neither proof nor counterexample.  
+Source: Khoshnevisan: Slices of Brownian sheet, new results and open problems, Open Problem 4, Section 8.3, PDF p. 34 (https://arxiv.org/pdf/math/0510518).  
+In brief: Projection theorems for the zero set of the Brownian sheet.  
+Where it stands: Projection results for related random sets are known.  
+
+**175. P0177: Location of Brownian modes at large time**  
+Estimate the mode of classical Brownian motion started from a law with a finite exponential quadratic moment, and determine analogous estimates for free Brownian motion.  
+Caveat: The source gives a growing interval of radius sqrt(t)/2 once unimodality holds. Classical and free versions of this mode-location request are grouped.  
+Source: Hasebe-Ueda: Large time unimodality, published version, Problem 4.6 (https://alea.math.cnrs.fr/articles/v15/15-15.pdf).  
+In brief: The mode of Brownian motion and free Brownian motion at large time.  
+Where it stands: Explicit heat-kernel and subordination formulas.  
+
+**198. E0110: Dimension-linear relaxation time for generalized reflected Brownian motion**  
+Under the assumptions of Theorem 1.3, the generalized reflected Brownian motion GRBM(R, mu, Sigma, U) is uniformly exponentially ergodic with exponent of order 1/d: there exist W : R^d -> [1, infinity) and C > 0 such that ||P^t(x, .) - pi(.)||_{TV} <= W(x) exp(-C t / d). This would mean the relaxation time to global equilibrium is of order d for a class of GRBMs.  
+Source: Exponential ergodicity and convergence for generalized reflected Brownian motion, Conjecture 1.5, PDF p. 5 (https://arxiv.org/pdf/1806.03755).  
+In brief: Relaxation time of reflected Brownian motion in high dimension.  
+Where it stands: Exponential ergodicity is proved under the stated assumptions.  
+
+## Branching structures, trees and recursive equations
+
+**38. P0343: Correlations of critical-tree leaves at mesoscopic separation**  
+For two leaves separated by r_n positions in the cyclic interval representation, prove that their continuous-height correlation tends to1-alpha when log(r_n)/log(n) tends to alpha in[0,1].  
+Caveat: The macroscopic alpha=1 case is already established in the corrected published Aldous-Pittel result. All separation exponents form one question, not separate variants.  
+Source: Aldous-Janson: Critical beta-splitting random tree II, overview and open problems, Open Problem1,PDF22 (https://arxiv.org/pdf/2303.02529).  
+In brief: Height correlations in Aldous's beta-splitting random tree.  
+Where it stands: Explicit recursions for the model are available.  
+
+**39. P0359: The multifractal spectrum of extremal ray local times**  
+Determine the Hausdorff dimension of rays with limsup, or liminf, N_ray^n/n^2=a under Theorem1.6(ii).  
+Caveat: All a and the related limsup/liminf spectra form one source question. Dimension uses the usual generation ultrametric on the tree boundary.  
+Source: Aidekon-Hu-Shi: Boundedness of discounted tree sums, Open question3;PDF4-5 (https://arxiv.org/pdf/2409.01048).  
+In brief: Open question 3 of Aidekon, Hu and Shi on discounted tree sums: the Hausdorff dimension of the rays whose local times grow at a prescribed quadratic rate.  
+Where it stands: The quadratic growth is Theorem 1.6(ii) of the source (2024); the spectrum asks for the standard multifractal analysis on the boundary of the tree.  
+
+**56. P0363: A finite-graph approximation to frozen percolation on the three-regular tree**  
+Show that the canonical frozen-percolation process on the three-regular tree is the local weak limit of a suitable sequence of finite graphs.  
+Caveat: This asks for finite graphs, not the known growing-cluster-threshold approximation on an infinite binary tree.  
+Source: Frozen percolation on the binary tree is nonendogenous, Problem2;PDF15 (https://arxiv.org/pdf/1910.09213).  
+In brief: Frozen percolation on finite graphs as an approximation of the tree model.  
+Where it stands: Endogeny of the tree model is known; local convergence is the step.  
+
+**57. P0368: All bivariate frozen-percolation fixed points and their attraction domains**  
+Classify every fixed point and domain of attraction of d(mu_h)/dh=T2(mu_h)-mu_h for frozen percolation on the oriented binary tree.  
+Caveat: The two scale-invariant fixed points are known; this question permits nonscale-invariant couplings and asks for their dynamics.  
+Source: Frozen percolation on the binary tree is nonendogenous, Problem7;PDF16 (https://arxiv.org/pdf/1910.09213).  
+In brief: Fixed points of the frozen-percolation evolution equation.  
+Where it stands: An explicit equation on laws of one variable.  
+
+**87. H0003: Conjecture 11.8 (Front-Markov property, full saturated regime) of arXiv:2608.15987**  
+"In the full saturated regime — without the dissipative condition κ<1 of (6), and uniformly through the critical window — there is a constant C such that, for the cluster law in G_n, d_TV(L(failed cluster), L(multitype GW with M)) ≤ C(ε(δ)+η_n), with η_n→0 as G_n →^BS T and ε(δ)→0 as the saturation margin δ→∞. Equivalently, the cascade front is asymptotically Markov: conditional on the set of failed vertices at generation k and their types, the failures into generation k+1 are asymptotically independent of generations <k."  
+Source: arxiv_2608_15987, Conjecture 11.8 (Front-Markov property, full saturated regime); Section 11.5, "The remaining conjecture".  
+In brief: Front asymptotics in a saturated branching system through the critical window.  
+Where it stands: Proved in the dissipative regime by the source.  
+
+**88. H0005: Open problem (3), "Sharp moment hypotheses for the CRT limit" of arXiv:2608.15987**  
+"Reduce the exponential-moment hypothesis of Theorem 6.4 to g''(1)<∞; see Remark 6.5."  
+Source: arxiv_2608_15987, Open problem (3), "Sharp moment hypotheses for the CRT limit"; Section 12.3.  
+In brief: Sharp moment hypothesis for a branching limit theorem.  
+Where it stands: A technical weakening suggested by the source.  
+
+**104. P0093: Infinitely many fixed points of a finite-color automaton**  
+For a finite color set of size at least3 and a deterministic child-count automaton under the paper standing offspring assumptions, can the distributional map have infinitely many fixed points?  
+Caveat: The one-child identity example is excluded by the genuine-branching assumption. Empty-color embeddings are not used to manufacture examples.  
+Source: Random tree recursions: which fixed points correspond to tangible sets of trees?, Section6, PDF p.40, third paragraph (https://arxiv.org/pdf/1808.03019v2).  
+In brief: Fixed points of distributional maps for tree automata.  
+Where it stands: Explicit finite colour sets.  
+
+**109. F0118: Reconstruction is monotone in the number of Potts states at fixed second eigenvalue**  
+Conjecture 4. Consider two symmetric channels M_1 and M_2 (as in (8)) on q_1 and q_2 symbols respectively, where q_1 < q_2. If 0 < lambda_2(M_1) = lambda_2(M_2) and the reconstruction problem is solvable for M_1, then it is also solvable for M_2. [Same page: 'This is obvious when q_2 is a multiple of q_1. Using the reconstruction criterion for the binary symmetric channel on 2 symbols, it is easy to prove the conjecture when q_1 = 2.' and 'it is easy to see that if the reconstruction problem is solvable for q and epsilon and q' < q, then the reconstruction problem is also solvable for q' and epsilon. We expect that for fixed lambda = lambda_2(M), reconstruction is easier when q is larger.'] [Setting of the source, Sections 2-4: T_b is the b-ary tree; a channel M is a q x q stochastic matrix (an ergodic Markov chain on the finite alphabet A); the root state is chosen, each vertex draws its state from its parent's through M independently; sigma_n is the configuration at level n; the reconstruction problem is solvable if the total variation distance between the laws of sigma_n given root i and given root j does not tend to 0 (Proposition 2.1: equivalently the mutual information I(sigma_rho, sigma_n) stays bounded away from 0); census-solvable if the same holds for the census c_n = (number of vertices at level n in each state); lambda_2(M) is the second largest eigenvalue of M in absolute value; Theorem 4.1: census-solvable if b|lambda_2(M)|^2 > 1 and not census-solvable if b|lambda_2(M)|^2 < 1. The symmetric q-state channel (8) is M_{i,i} = 1 - (q-1) epsilon, M_{i,j} = epsilon for i != j, with lambda_2(M) = 1 - q epsilon; ferromagnetic when lambda_2 > 0, antiferromagnetic when lambda_2 < 0; proper colourings are (9): M_{i,j} = 1{i != j}/(q-1).]  
+Source: Mossel: Survey: Information flow on trees (2004), Conjecture 4, Section 5.2, PDF p. 10 (https://arxiv.org/pdf/math/0406446).  
+In brief: Monotonicity of tree reconstruction in the number of Potts states.  
+Where it stands: Reconstruction thresholds are known in many regimes.  
+
+**137. E0101: When does the support of the limiting measure equal the accumulation set of the branching random walk?**  
+Give conditions under which the support of the limiting measure W coincides almost surely with the set of accumulation points of the branching random walk B on the boundary. The source notes that most of the existing literature on the boundary behaviour of branching random walk studies the accumulation set rather than the measure.  
+Source: On the boundary at infinity for branching random walk, Problem 4.2, PDF p. 9 (https://arxiv.org/pdf/2205.15287).  
+In brief: Support of the limit measure of branching random walk on hyperbolic boundaries.  
+Where it stands: Explicit boundary theory for hyperbolic groups.  
+
+**145. P0358: The extremal ray-height constant in a heavy-tailed branching random walk**  
+Identify the positive finite constant a1 in inf_ray limsup_n V(ray_n)/sqrt(n*log n)=a1 under Theorem1.2.  
+Caveat: This is the value of the source constant, not the already established existence theorem. Its full tilted-tail and logarithmic moment assumptions are retained by reference.  
+Source: Aidekon-Hu-Shi: Boundedness of discounted tree sums, Open question2;Theorem1.2;PDF2-5 (https://arxiv.org/pdf/2409.01048).  
+In brief: The extremal ray constant in branching random walk.  
+Where it stands: The order is proved; the constant is the target.  
+
+**156. D0056: Survival probability of the critical Derrida-Retaux recursion decays like 4/((m-1)^2 n^2)**  
+Assume the critical condition (m-1) E(X_0 m^{X_0}) = E(m^{X_0}) < infinity with X_0 valued in Z_+. Then P(X_n != 0) is asymptotic to (4/(m-1)^2) n^{-2} as n tends to infinity. For m = 2 this was already conjectured by Collet et al. and by Derrida and Retaux.  
+Source: A max-type recursive model: some properties and open questions, Conjecture 1, PDF p. 3 (https://arxiv.org/pdf/1705.04787).  
+In brief: Survival asymptotics of the critical Derrida-Retaux recursion.  
+Where it stands: The order of decay is known in special cases. (not checked)  
+
+**161. P0355: Endogeny of nonminimal discounted-tree fixed points**  
+Determine whether every positive-index invariant RTP from Corollary33 and condition39 is nonendogenous.  
+Caveat: The counterexample is restricted to literal zero-mark/unit-weight boundary assumptions. The intended strictly discounted nondegenerate regime remains unsolved.  
+Source: Aldous and Bandyopadhyay: A survey of max-type recursive distributional equations, Conjecture34;PDF26-30 (https://www.stat.berkeley.edu/~aldous/Papers/me107.pdf).  
+In brief: Endogeny of recursive tree processes.  
+Where it stands: A partial result is recorded in the problem's ledger row.  
+
+**176. P0360: Does frozen-percolation endogeny imply unrestricted almost sure uniqueness?**  
+When the burning-time RTP is endogenous, must all solutions to the frozen-percolation equation driven by the same innovations agree, even without stationarity, adaptation or subtree independence?  
+Caveat: Includes the source conjecture for geometric freezing sets theta<1/2; these are not counted as separate parameter questions.  
+Source: Rath-Swart-Szoke: A phase transition between endogeny and nonendogeny, Question1 and discussion;PDF7-9 (https://arxiv.org/pdf/2103.14408).  
+In brief: Uniqueness of frozen-percolation solutions under endogeny.  
+Where it stands: Endogeny is known in the relevant regime.  
+
+**181. G0014: Bramson correction for the front of threshold cascades on unimodular random trees**  
+Threshold cascades of interacting diffusions on unimodular random trees, in the setting of the source's Theorem 2.1 (supercritical branching-random-walk representation with tilt parameter theta*, speed c*, derivative martingale dW_n). Conjecture 3.2 (Uniform integrability of the derivative martingale => Bramson delay). Under the hypotheses of Theorem 2.1, the derivative martingale dW_n is uniformly integrable (equivalently, dW_infinity > 0 a.s. on survival), and consequently the time-indexed front obeys F(t) = c* t - (3/(2 theta* c*)) log t + O_P(1), with the tightness and the limiting law of the recentred front given by a randomly-shifted Gumbel decorated point process, the shift being a multiple of log dW_infinity, exactly as for branching Brownian motion. [Source's Programme 3.3 lists the three ingredients, of which the x log^2 x moment condition for the offspring point process is the missing one.]  
+Source: Kumar, Dudeja: Two problems for threshold cascades of interacting diffusions on unimodular random trees (2026), Conjecture 3.2, Section 3.2, PDF p. 4 (https://arxiv.org/pdf/2608.21125).  
+In brief: Bramson correction for threshold cascades on trees.  
+Where it stands: Branching random walk representation is proved.  
+
+**195. I0022: Problem 20.11 of Janson (2012): a scaling limit object in the condensation regime**  
+"Is there some kind of similar limiting object in the case nu < 1 (after suitable scaling)?" - a counterpart of the continuum random tree, or of the stable trees, for subcritical weight sequences.  
+Source: Janson: Simply generated trees, conditioned Galton-Watson trees, random allocations and condensation (Probab. Surveys 2012), Problem 20.11, Section 20.4 (https://arxiv.org/pdf/1112.0510).  
+In brief: Scaling limits of simply generated trees in the condensation regime.  
+Where it stands: Condensation is described at the level of local limits.  
+
+## Boolean functions, concentration and combinatorial probability
+
+**31. P0014: Expected Lovasz theta of a random circulant graph**  
+For the graph on Z/nZ formed by independently including each unordered nonzero generator pair {k,-k} with probability 1/2, is E theta(G)=(1+o(1)) sqrt(n)?  
+Caveat: The inverse-pair convention includes the order-two generator once when n is even; this differs substantively from independent edges.  
+Source: Randomstrasse101: Open Problems of 2025, Conjecture 18, Entry 9 (https://arxiv.org/pdf/2603.29571).  
+In brief: Lovasz theta of a random circulant graph.  
+Where it stands: Fourier diagonalisation of circulants reduces it to a random trigonometric problem.  
+
+**34. E0052: A sharp lower bound on the probability that a sum of nonnegative unit-mean variables exceeds its mean plus one**  
+Let X_1,...,X_n be independent random variables with X_i >= 0 and E X_i = 1 for every i. Prove or disprove that P(sum_i X_i <= n + 1) >= 1 - 1/e. The source notes that the bound is attained in the limit by the i.i.d. example X_i = n+1 with probability 1/(n+1) and 0 otherwise, for which the probability is 1 - (n/(n+1))^n, decreasing to 1 - 1/e.  
+Source: Bandeira: Ten lectures and forty-two open problems in the mathematics of data science, Open Problem 4.6 and Conjecture 4.33, PDF p. 78 (https://people.math.ethz.ch/~abandeira/TenLecturesFortyTwoProblems.pdf).  
+In brief: A classical tail inequality for sums of nonnegative random variables with mean one.  
+Where it stands: Moment and decomposition methods give steadily improving constants.  
+
+**40. E0030: Convergence of the variance of the stochastic travelling salesman tour length**  
+In the travelling salesman problem for n uniformly distributed points in [0,1]^2, prove that the variance of the length of the optimal tour converges to a constant as n tends to infinity, and identify this constant if possible. Chatterjee attributes the conjecture to Mike Steele.  
+Source: Chatterjee: A general method for lower bounds on fluctuations of random variables, Open problems, item (2), PDF p. 27 (https://arxiv.org/pdf/1706.04290).  
+In brief: Second-order behaviour of the random travelling salesman tour.  
+Where it stands: A matching lower bound technique exists; the limit of the variance is the target.  
+
+**41. E0031: Tight fluctuation lower bound for Euclidean minimal matching**  
+Prove a tight lower bound for the fluctuations of the length of the minimal matching when the points are uniformly distributed in [0,1]^d.  
+Source: Chatterjee: A general method for lower bounds on fluctuations of random variables, Open problems, item (3), PDF p. 27 (https://arxiv.org/pdf/1706.04290).  
+In brief: Lower bounds for fluctuations of random Euclidean matching.  
+Where it stands: Methods that give the assignment-problem bound transfer.  
+
+**46. P0029: Separation of two peaks in random square-grid labelings**  
+Uniformly label an n-by-n square grid and condition on exactly two local maxima. Does their graph distance divided by n converge in distribution to zero?  
+Caveat: This is the literal displayed question, despite the heading about repulsion. Verify against Twin peaks (2020) before correcting the sign or reporting a counterexample.  
+Source: Krzysztof Burdzy: My favorite open problems, Problem 9 (https://sites.math.washington.edu/~burdzy/open_mathjax.php).  
+In brief: Geometry of random fields conditioned on few local maxima.  
+Where it stands: A concrete scaling question on a finite grid.  
+
+**74. P0165: Optimal odd functions for many-player correlation distillation**  
+When r independent noisy copies of a common uniform bit string use the same odd Boolean function, is the agreement probability maximized by majority on some odd subset of coordinates?  
+Caveat: The number of players and the noise parameter are one optimization problem. This differs from two-party erasure distillation and from minimizing threshold stability.  
+Source: O Donnell: Open problems in analysis of Boolean functions, PDF p.6, Optimality of Majorities for Non-Interactive Correlation Distillation (https://arxiv.org/pdf/1204.6447).  
+In brief: Optimal non-interactive correlation distillation.  
+Where it stands: Hypercontractivity and partial results cover small numbers of players.  
+
+**75. P0167: Minimum correlation of symmetric Gaussian sets**  
+For correlated standard Gaussian vectors with prescribed rho and set measures mu,nu, minimize P(X in A,Y in B) under central symmetry A=-A.  
+Caveat: The proposed centered-ball optimizer is not the general optimization question. Heilman1511.00382 gives negative results for ball/complement maximizers in dimension at least2; this does not identify every optimum.  
+Source: O Donnell: Open problems in analysis of Boolean functions, PDF p.8, Symmetric Gaussian Problem (https://arxiv.org/pdf/1204.6447).  
+In brief: Gaussian noise stability under central symmetry.  
+Where it stands: Symmetric isoperimetry has partial results; finite-dimensional reductions exist.  
+
+**76. P0170: Optimal limited independence for Gaussian polynomial thresholds**  
+Determine the smallest k(d,epsilon) for which every k-wise independent standard-Gaussian vector fools every degree-d polynomial threshold to error epsilon.  
+Caveat: The joint distribution of every k coordinates must be product Gaussian. Matching finitely many mixed moments alone is a weaker property and is not substituted for this assumption.  
+Source: O Donnell: Open problems in analysis of Boolean functions, PDF p.9, k-wise Independence for PTFs (https://arxiv.org/pdf/1204.6447).  
+In brief: Bounded independence fooling polynomial threshold functions.  
+Where it stands: Known for low degree; the dependence on d and epsilon is the target.  
+
+**103. E0081: Order of the expected waiting time for a scale-indexed family of discrete patterns**  
+Given for each n a collection A_n of patterns of length n, what is the order of the expected waiting time E T(A_n) until some element of A_n is observed in a simple random walk? The source notes it is aware of no previous study of pattern problems in which a natural definition of the collection of patterns is made for each n.  
+Source: Pitman and Tang: Patterns in random walks and Brownian motion, Question 1.7, PDF p. 5 (https://arxiv.org/pdf/1411.0041).  
+In brief: Waiting times for families of patterns.  
+Where it stands: The matching-matrix method gives the order in special cases.  
+
+**120. C0122: Chaos implies multiple peaks without nonnegative correlations**  
+Show that chaos implies the multiple-peaks property for Gaussian fields whose correlations are not all nonnegative, which requires a second-moment bound on the overlap R(I_0, I_t) between the maximiser at time 0 and at time t.  
+Source: Chatterjee: Chaos, concentration and multiple valleys, 2008, with open questions, Section 12, problem (5), p. 59 (https://arxiv.org/pdf/0810.4221).  
+In brief: Chaos and multiple peaks for Gaussian fields with negative correlations.  
+Where it stands: A second-moment bound on the overlap is the missing step.  
+
+**122. C0021: Revealment exponent of the iterated 3-majority function**  
+The revealments of the iterated 3-majority function on 3^k bits decay like n^{-sigma}; determine sigma.  
+Source: Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems, Exercise VIII.5 note, p. 97 (https://arxiv.org/pdf/1102.5761).  
+In brief: Revealment exponent of iterated majority.  
+Where it stands: An explicit recursive function.  
+
+**162. P0216: Limit constant for common random two-dimensional partial orders**  
+Prove that the mean size of the largest common induced suborder of two independent uniform two-dimensional partial orders is asymptotic to c*n^(1/3), and determine c.  
+Caveat: The source already gives order n^(1/3) upper and lower arguments. The calculation here makes a constant in its grid lower construction explicit; it is a rederivation of an established method, not resolution of the limit question.  
+Source: Aldous open problems: Largest common random substructures, Original2003 Section2 Example4 PDFpp5-6 (https://www.stat.berkeley.edu/~aldous/Research/OP/substructures.html).  
+In brief: Common substructures of random partial orders.  
+Where it stands: Subadditivity gives the exponent; the constant is the target.  
+
+**169. G0002: Second-order pivotal maximisers of increasing sets sit between Hamming levels n/2 - 2 and n/2 + 1**  
+Setting of the source's Part on pivots (Sections 47-58): for an increasing subset A of {0,1}^n, P^+_k(A, omega) is the set of pivots of order k of A at omega and phi_2(A) = sum_omega |P^+_2(A, omega)|, phi_{2 \ 1}(A) the analogous sum over second-order pivots that are not first-order pivots (formulas (51.1) and (52.1) of the source). Conjecture 53.1. Let n >= 1 be fixed. If A* is an increasing subset of {0,1}^n which realizes the maximum of phi_{2\1} or of phi_2, then { omega : sum_i omega(i) >= n/2 + 1 } is contained in A* which is contained in { omega : sum_i omega(i) >= n/2 - 2 }. [The source: the conjecture 'holds for n <= 7' by exhaustive search and 'yields a valuable upper bound' E|P^+_2(A)| <= 6 sqrt(n) for every increasing A; Section 59 tries Steiner symmetrisation and fails.]  
+Source: Cerf: theta(p_c, Z^d) = 0? (2026, 708 pp.), Conjecture 53.1, Section 53, PDF p. 407 (https://arxiv.org/pdf/2608.23661).  
+In brief: Pivotal sets of increasing events.  
+Where it stands: A combinatorial extremal question on the cube.  
+
+**182. P0164: Gaussian lower bound for noise stability of unbiased thresholds**  
+For an unbiased linear threshold f and rho in(0,1), prove Stab_rho(f)>=(2/pi)*arcsin(rho).  
+Caveat: This is the authors refined conjecture, not the false finite-majority comparison. The degree-one Fourier lower bound2/pi and small-noise consequence are grouped as parts of this family.  
+Source: Kamath,Kumar,Manurangsi: When Majority Fails,2026, Section1.4, Conjecture1; O-Donnell2012 p.5 weaker consequences (https://arxiv.org/pdf/2604.06590).  
+In brief: A lower bound for the noise stability of unbiased thresholds.  
+Where it stands: The Gaussian limit gives the conjectured constant.  
+
+**188. P0221: Limit of the optimal online random spanning-tree cost**  
+Prove existence and determine the limiting optimal mean cost of an online spanning tree of the complete randomly weighted graph.  
+Caveat: Combinatorial random-order and Poisson offer models are grouped, but their finite-n costs differ. The draft explicitly lacks a complete asymptotic equivalence proof. Numerical estimates near1.9 are not certified limits.  
+Source: Aldous-Angel-Berestycki: Online random weight minimal spanning trees, draft2008, Conjecture PDFp2;Theorem3 PDFp4; author open page (https://www.stat.berkeley.edu/~aldous/Research/OP/Beres2008.pdf).  
+In brief: Optimal online spanning trees on random weights.  
+Where it stands: Bounds of the right order exist.  
+
+## Optimal transport, statistics and inference
+
+**36. E0055: Convergence threshold for the projected power method in the spiked Wigner model**  
+In the synchronisation model Y = z z^T + sigma W with z in {-1,+1}^n and W a Wigner matrix, for which values of sigma does the projected power method converge to the optimal solution of the maximum-likelihood problem, or at least to a solution correlating well with z, with high probability?  
+Source: Bandeira: Ten lectures and forty-two open problems in the mathematics of data science, Open Problem 10.1, PDF p. 133 (https://people.math.ethz.ch/~abandeira/TenLecturesFortyTwoProblems.pdf).  
+In brief: When does the projected power method reach the optimum in group synchronisation?  
+Where it stands: Spectral initialisation plus a contraction argument in a fixed Gaussian model.  
+
+**37. E0057: Consistency of the maximum likelihood estimator for multireference alignment**  
+(1) Is the quasi-maximum-likelihood (or the maximum-likelihood) estimator consistent for the multireference alignment problem, after fixing the power spectrum appropriately? (2) For a given signal length L and noise level sigma, how large must the number of observations n be to allow reasonably accurate recovery in the multireference alignment problem?  
+Source: Bandeira: Ten lectures and forty-two open problems in the mathematics of data science, Open Problem 10.4, PDF p. 139 (https://people.math.ethz.ch/~abandeira/TenLecturesFortyTwoProblems.pdf).  
+In brief: Consistency of maximum likelihood for multireference alignment.  
+Where it stands: Moment-tensor methods settled the sample complexity; consistency is the remaining step.  
+
+**49. D0005: Is the uniform distribution on a convex body in R^d completely mixable of order d+1?**  
+Let C be a convex set in R^d. Is the uniform distribution on C necessarily n-CM for every n >= d+1? The source states the problem is equivalent to (d+1)-complete mixability and records only the trivial cases d=0 and d=1.  
+Source: Current open questions in complete mixability, Open Problem 5, PDF p. 16 (https://arxiv.org/pdf/1411.6190).  
+In brief: Joint mixability, the core of worst-case risk aggregation bounds.  
+Where it stands: A convex-geometric question with the one-dimensional case solved.  
+
+**50. D0007: Is every absolutely continuous law on a bounded interval n-completely mixable for all large n?**  
+Puccetti, Wang and Wang show that a law on [a,b] with density f(x) >= 3/(n(b-a)) is n-CM, so any absolutely continuous law with a density bounded away from zero is n-CM for all large n. Can the lower bound on the density be dropped: is every absolutely continuous distribution on a bounded interval n-CM for all sufficiently large n?  
+Source: Current open questions in complete mixability, Open Problem 7, PDF p. 17 (https://arxiv.org/pdf/1411.6190).  
+In brief: Sharp density conditions for complete mixability.  
+Where it stands: Constructive; the known sufficient bound is explicit.  
+
+**51. D0010: Extra conditions making a unimodal law on a bounded interval completely mixable**  
+Counterexamples are known showing that the mean condition a + (b-a)/n <= mu <= b - (b-a)/n is not sufficient for the complete mixability of a law with a unimodal density on a bounded interval. Under what extra conditions is a unimodal distribution on a bounded interval n-CM? The case of interest is when one of the inequalities in the mean condition is an equality.  
+Source: Current open questions in complete mixability, Open Problem 10, PDF p. 18 (https://arxiv.org/pdf/1411.6190).  
+In brief: Complete mixability of unimodal laws.  
+Where it stands: Constructive; known counterexamples mark the boundary.  
+
+**101. P0334: Necessary and sufficient conditions for an Lp quantile-process limit**  
+Find necessary and sufficient conditions for sqrt(n)*(F_n^(-1)-F^(-1)) to converge weakly as an Lp(0,1)-valued random element, removing unnecessary endpoint monotonicity assumptions.  
+Caveat: The p=1 criterion is established in Beare-Kaji2502.01254. The remaining p>1 family is one question. The paper gives sufficient conditions involving J_p(P) and endpoint monotonicity.  
+Source: del Barrio et al: Distributional Limit Theory for Optimal Transport,July2026revision, Problem2,PDF29;Sections2.2-2.4,PDF7-9 (https://arxiv.org/pdf/2505.19104).  
+In brief: Weak convergence of the quantile process in L^p.  
+Where it stands: Sufficient conditions known; the sharp condition is the target.  
+
+**102. P0336: Selected limit of empirical Euclidean transport between separated rectangles**  
+For independent uniform samples from [0,1]^2 and [2,3]x[0,1], find the limiting empirical optimal transport plan for Euclidean distance as sample size tends to infinity.  
+Caveat: The empirical plan is almost surely a map, but the population problem has many optimal couplings. The task is to identify the plan selected by empirical optimization, not merely its limiting cost2.  
+Source: del Barrio et al: Distributional Limit Theory for Optimal Transport,July2026revision, Problem4,PDF29-30 (https://arxiv.org/pdf/2505.19104).  
+In brief: Limit of the empirical optimal transport plan between two squares.  
+Where it stands: An explicit geometry with one transport map.  
+
+**199. G0013: Catalano-Lavenant conjecture: the diagonal couplings of the uniform law are farthest from independence**  
+Conjecture 1.1 ([4, Remark 3]). Let lambda denote the uniform probability measure on [0,1]. Then the diagonal and antidiagonal couplings (id,id)_# lambda and (id, 1 - id)_# lambda maximize the 2-Wasserstein distance from the independent coupling lambda (x) lambda among all elements of Pi(lambda, lambda). [The source proves the Gaussian analogue for all n: the couplings Law(Z, ..., +-Z) maximise W_2^2(gamma_n, .) over Pi_n(gamma), via the Gaussian isoperimetric inequality; the uniform case 'remains open to the best of our knowledge'.]  
+Source: Schrott: Couplings farthest from the independent Gaussian (2026), Conjecture 1.1, Section 1, PDF p. 1 (restating Catalano and Lavenant [4, Remark 3]) (https://arxiv.org/pdf/2609.10467).  
+In brief: Which couplings of the uniform law are farthest apart?  
+Where it stands: A finite-dimensional optimisation after discretisation.  
+
+## Queueing and stochastic networks
+
+**24. P0429: Largest growing fork-join batch compatible with asymptotic independence**  
+Determine how quickly the number k(n) of tasks per uniformly routed job can grow while the corresponding k(n) stationary queues remain asymptotically independent.  
+Caveat: The source credits k=o(n^(1/4)); fixed-dimensional convergence alone does not answer the growing-dimensional question. Private author-only packet extends the credited coupling under exponential service. Later primary-source leads do not establish novelty.  
+Source: Harchol-Balter: Open problems in queueing theory inspired by datacenter computing, Section5; PDF16 (https://www.cs.cmu.edu/~harchol/Papers/QUESTA21.pdf).  
+In brief: Independence of the queues serving one job in large parallel systems.  
+Where it stands: A partial result is recorded in the problem's ledger row; mean-field propagation-of-chaos arguments apply.  
+
+**25. P0434: Sharp approximation ratio for simple alternatives to Gittins**  
+Improve or identify the sharp worst-case mean-response approximation factor for M-SERPT or other simple age-based policies in M/G/1.  
+Caveat: The source credits a factor-five guarantee. Heavy-traffic factor-two results and the conjectured sharp factor two are distinct from a uniform all-load guarantee.  
+Source: Harchol-Balter: Open problems in queueing theory inspired by datacenter computing, Section7.1.2; PDF22-23 (https://www.cs.cmu.edu/~harchol/Papers/QUESTA21.pdf).  
+In brief: Sharp approximation factor of simple age-based scheduling policies.  
+Where it stands: A constant to identify between known upper and lower bounds.  
+
+**157. P0391: Diffusion limit for an arbitrary symmetric M/G/1 discipline**  
+For every work-conserving symmetric discipline gamma, prove convergence of Q_gamma(r^2 t)/r to the common reflected Brownian limit when the service second moment is finite and r(1-rho_r) tends to beta.  
+Caveat: Use empty initial state, as in the source discussion of universal marginal laws. PS and LCFS are known special cases, not new solutions.  
+Source: Zwart: Conjectures on Symmetric Queues in Heavy Traffic, Problem 1; PDF1-2 (https://arxiv.org/pdf/2202.02366).  
+In brief: Diffusion limits for symmetric queueing disciplines.  
+Where it stands: Known for several disciplines; the claim is a universal limit.  
+
+## Stationary processes and nonlinear Markov operators
+
+**28. C0035: Determinantal processes with trigonometric-polynomial symbol as block factors**  
+Let f : T -> [0,1] be a trigonometric polynomial of degree m; the stationary determinantal process P_f on Z is m-dependent. Is P_f an (m+1)-block factor of an i.i.d. process? Known for m = 1.  
+Source: Lyons: Determinantal probability, basic properties and conjectures, ICM 2014, Question 5.4, p. 22 (https://arxiv.org/pdf/1406.2707).  
+In brief: Lyons' question whether an m-dependent determinantal process on Z with a degree-m trigonometric-polynomial symbol is an (m+1)-block factor of an i.i.d. sequence; it joins determinantal structure to the coding theory of finitely dependent processes.  
+Where it stands: Known for m = 1. An unaudited attempt at the sublattice case is recorded in the problem's ledger row. (not checked)  
+
+**80. D0031: A rho-mixing, bilaterally deterministic, finite-state stationary sequence**  
+Does there exist a nondegenerate strictly stationary, finite-state, rho-mixing, bilaterally deterministic sequence X = (X_k, k in Z)? (Bilaterally deterministic: the sequence is measurable with respect to its double tail sigma-field, modulo null sets.)  
+Source: Bradley: Basic properties of strong mixing conditions, a survey and some open questions, Question 3, Section 2.6, PDF p. 11 (https://arxiv.org/pdf/math/0511078).  
+In brief: Existence question in classical strong-mixing theory.  
+Where it stands: A construction problem in a finite-state setting.  
+
+**81. D0034: A psi-mixing or 1-dependent sequence that is not a function of a Harris recurrent Markov chain**  
+Does there exist a strictly stationary psi-mixing (or perhaps even 1-dependent) sequence which cannot be represented as an instantaneous function of a strictly stationary, Harris recurrent Markov chain?  
+Source: Bradley: Basic properties of strong mixing conditions, a survey and some open questions, Question 6, Section 3, PDF p. 16 (https://arxiv.org/pdf/math/0511078).  
+In brief: Representation of psi-mixing sequences by Harris chains.  
+Where it stands: Construction or obstruction in a concrete class.  
+
+**82. D0037: Spectral characterisation of rho*-mixing for stationary Gaussian sequences**  
+What condition on a spectral density is necessary and sufficient for a stationary Gaussian sequence to be rho*-mixing?  
+Source: Bradley: Basic properties of strong mixing conditions, a survey and some open questions, Question 9, Section 7, PDF p. 29 (https://arxiv.org/pdf/math/0511078).  
+In brief: Spectral characterisation of rho-star mixing for Gaussian sequences.  
+Where it stands: The rho-mixing analogue is classical.  
+
+**93. E0062: Necessary and sufficient conditions for Ulam's ergodic theorem for general Volterra operators**  
+Find necessary and sufficient conditions on the skew-symmetric matrix A of a Volterra QSO under which the ergodic theorem (existence of lim (1/n) sum_{k<n} V^k(x)) holds on S^{m-1} for every initial point, for m >= 2.  
+Source: Rozikov: Quadratic stochastic operators, results and open problems, Problem 5, PDF p. 4 (https://arxiv.org/pdf/0902.4207).  
+In brief: Ergodic theorem for Volterra quadratic stochastic operators.  
+Where it stands: Low-dimensional cases are settled.  
+
+**94. E0066: Trajectories of quadratic bistochastic operators**  
+A quadratic operator V on S^{m-1} is bistochastic if V(x) is majorised by x for every x, i.e. the partial sums of the decreasing rearrangement of V(x) are dominated by those of x. Investigate the behaviour of the trajectories of the bistochastic quadratic operators.  
+Source: Rozikov: Quadratic stochastic operators, results and open problems, Problem 13, PDF p. 8 (https://arxiv.org/pdf/0902.4207).  
+In brief: Structure of bistochastic quadratic stochastic operators.  
+Where it stands: Majorisation gives a finite-dimensional problem.  
+
+**110. E0018: Can the instability set in the jump rate be a union of several intervals?**  
+Is it possible to choose the two 2x2 matrices A_0 and A_1 in such a way that the set of jump rates r for which the associated switched linear process is unstable is the union of several intervals?  
+Source: Some simple but challenging Markov processes, Open question 3 (Oscillations of the Lyapunov exponent), PDF p. 10 (https://arxiv.org/pdf/1412.7516).  
+In brief: Instability sets of randomly switched linear systems.  
+Where it stands: Two explicit 2x2 matrices; a computational and analytic question.  
+
+**111. E0019: Smoothness of the invariant density of piecewise deterministic Markov processes**  
+What can be said on the smoothness of the density of the invariant measure of such processes (the switched-flow piecewise deterministic Markov processes considered in the paper, including the switched linear systems of Section 4)?  
+Source: Some simple but challenging Markov processes, Open question 4, PDF p. 13 (https://arxiv.org/pdf/1412.7516).  
+In brief: Smoothness of invariant densities of switched flows.  
+Where it stands: Hormander-type criteria for PDMPs exist.  
+
+**130. C0036: Fuglede-Kadison product-measure bounds for equivariant determinantal processes**  
+For every Gamma-equivariant positive contraction Q on l^2(Gamma), P_Q stochastically dominates the product measure with density FK(Q) = exp tr log|Q| and is dominated by the product measure with density 1 - FK(I-Q), and these bounds are optimal; open even for finite groups.  
+Source: Lyons: Determinantal probability, basic properties and conjectures, ICM 2014, Conjecture 5.7, p. 23 (https://arxiv.org/pdf/1406.2707).  
+In brief: Lyons' conjecture that an equivariant determinantal process on a group lies, in the stochastic order, between the product measures of densities FK(Q) and 1 - FK(I - Q), FK the Fuglede-Kadison determinant, and that these bounds are optimal; it would extend the Lyons-Steif domination theorem from Z^d to every group.  
+Where it stands: Proved for stationary determinantal processes on Z^d, with the bounds optimal (Lyons and Steif, 2003; Theorem 5.2 of the source). The source says the conjecture is open even for finite groups.  

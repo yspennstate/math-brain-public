@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_revision": "2026-09-22.5",
+  "source_control_commit": "d239f47d039f70baef28a955d32e690186525b3b",
+  "account": "account04",
+  "slot": "B16",
+  "run_id": "20260922T161909Z-account04-B16-QFORM-r2",
+  "status": "ESSENTIAL_STEP_APPLIED / TARGET_SUPPORTING_THEOREM / FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_applied": {
+    "account": "account01",
+    "slot": "B16",
+    "run_id": "20260922T154258Z-account01-B16-QFORM-r12",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "47fe1ce92881fa4b6df0fa8a12b706d6a4eb14c5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B16/20260922T154258Z-account01-B16-QFORM-r12/REPORT.md",
+    "blob": "66a96301a5033af3d0cc3c94ae66a9f8ada85194"
+  },
+  "theorem": "QFORM-NESTED-HEAVY-ZERODIAG-ATOM-v1",
+  "mathematical_premises": [
+    "exact-rank-three factor A=R Lambda R^T with R^T R=I3",
+    "nested heavy leverage c>1/2 and residual h>1/2",
+    "three nonzero eigenvalues have modulus at least one",
+    "eligible zero-diagonal physical triple carries normalized bank atom w_k>=tau",
+    "independent original coordinates with density caps one"
+  ],
+  "result": "G_ij=ch>1/4 and ||p_Q||inf <= C_off(4/tau)^(1/3); at tau=1/8 the bound is 15.276340039075507",
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "58c23c624db350cf44f0c836daa3582eb7e2d266",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260922T161909Z-account04-B16-QFORM-r2/REPORT.md"
+  },
+  "unresolved": "QFORM-NESTED-HEAVY-DIFFUSE-CUBIC-BANK-v1; then arbitrary additional spectral components",
+  "continuity": "NOT_PROVED"
+}

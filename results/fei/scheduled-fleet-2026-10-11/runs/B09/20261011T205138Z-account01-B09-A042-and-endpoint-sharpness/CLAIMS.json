@@ -1,0 +1,52 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261011T205138Z-account01-B09-A042-and-endpoint-sharpness",
+  "claims": [
+    {
+      "claim_id": "B09-A042-AND-ENDPOINT-SHARPNESS-02",
+      "version": "v1",
+      "exact_statement": "For every fixed q in (0,1/2), the genuine Boolean gate g(x,y)=(-1)^(xy), with P(X=1)=p, P(Y=1)=q and physical reveal A={X}, satisfies (J_A-M_A)/(p log_2(1/p)) -> 4q(1-2q) as p->0+. In particular at q=1/4 the limit is 1/2, so any p-only correction valid uniformly over all other biases and Boolean gates is not O(p).",
+      "hypotheses": [
+        "independent Bernoulli inputs",
+        "normalized product-biased orthonormal Fourier basis",
+        "q fixed in (0,1/2)",
+        "physical reveal A={X}",
+        "entropy in bits"
+      ],
+      "statement_sha256": "e5b15d55495e40e4330c0af814cf4b24b50b80ee54f72844490008f835e4ca1b",
+      "contributors": ["account01/B09"],
+      "proof_source": "REPORT.md sections 2-3; BIASED_ENDPOINT_SERIES.tex",
+      "proof_dependencies": [
+        "definitions of M_A and J_A from original B09 report",
+        "elementary binary-entropy expansion at zero"
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_REVIEW",
+      "supersedes": "original B09 REPORT.md section 5(4) unsupported endpoint-optimality inference",
+      "refutes": "existence of an O(p) correction epsilon(p) valid for all Boolean gates and all other product biases",
+      "first_unproved_line": null,
+      "next_consumers": ["A041", "A044", "A045", "A084", "A091", "A090"]
+    },
+    {
+      "claim_id": "B09-DISJOINT-TENSOR-LEDGER-ADD-02",
+      "version": "v1",
+      "exact_statement": "For f(x,y)=f_1(x)f_2(y) on disjoint variables and aligned reveal A=A_1 union A_2, the product-biased spectral law and every physical child law tensorize; consequently M,J,L and Delta add. No such additivity is claimed for arbitrary Boolean composition F(g_1,...,g_k).",
+      "hypotheses": [
+        "disjoint physical variable sets",
+        "multiplicative tensor f=f_1 f_2",
+        "product input measure",
+        "aligned reveal blocks"
+      ],
+      "statement_sha256": "ef057f1921978159107552315b9807e48ac3fb5a30b493d241f2867ce4afb41b",
+      "contributors": ["account01/B09"],
+      "proof_source": "REPORT.md section 4",
+      "proof_dependencies": ["Fourier coefficient factorization", "entropy additivity"],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_REVIEW",
+      "supersedes": "original B09 REPORT.md section 5 broad composition wording",
+      "refutes": null,
+      "first_unproved_line": "Any transfer of the M,J ledger through nonmultiplicative Boolean composition remains unproved here.",
+      "next_consumers": ["A043", "A044", "A091", "A090"]
+    }
+  ]
+}

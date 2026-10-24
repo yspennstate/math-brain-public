@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "a01-b07-20260922T160118Z-qform-r11",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "prepublication_control_commit": "850b39408a21a1220ca9b4c0e8e3cd10ac6a4f1d",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "Coordinate minor selection: dimension-free determinant-weighted averaging/selection from three large absolute eigenvalues.",
+  "correction_inbox_blob_consumed": "2ee621225465e603dfd118f6bd86b1ddc853f40e",
+  "correction_ids_consumed": ["QFORM-CROSSMINOR-ALONE-FALSE","QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH","QFORM-TWOSHEET-XRAY-ONLY-FALSE","QFORM-UV-CONDITIONAL-CAP-FALSE","QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE","QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS","QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1","QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE","QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE","QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1","QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1","QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1","QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"],
+  "partner_result_applied": {"account_slot":"account02/B07","name":"QFORM-PLUCKER-STRATUM-COLLAR-v1","repository":"yspennstate/math-open-problems","commit":"55751ad6d9915a2600d42385d41388c900d29a26","path":"proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260922T143520Z-account02-B07-QFORM-r11/REPORT.md"},
+  "prior_own_result_applied": {"name":"QFORM-TWO-SIDED-PLUCKER-CROSSBLOCK-v1","repository":"yspennstate/math-open-problems","commit":"6632b82758a39b45a72f482f12c558f620957a6d","path":"proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/a01-b07-20260922T143228Z-qform-r12b/TWO_SIDED_ENTROPY_CROSSBLOCK.md"},
+  "new_results": [
+    {"name":"QFORM-PLUCKER-TO-PHYSICAL-ROWVOLUME-v1","statement":"A^2-UU^T is PSD; each row-triple volume det((A^2)[R,R]) is the sum of squared full-A 3x3 minors on R and dominates det(U_R)^2. The partner packet therefore transfers with no loss to at least 1/8 total physical determinant mass.","status":"PROVED_SUPPORTING_THEOREM"},
+    {"name":"QFORM-PHYSICAL-OVERLAP-BANK-SELECTION-v1","statement":"One overlap class h=|R cap K| carries at least 1/32; deterministic three-role coloring captures at least 1/2048, 1/6250, 1/2048, or 1/32 for h=0,1,2,3 respectively.","status":"PROVED_STRUCTURAL_SELECTION"},
+    {"name":"QFORM-H0-DENSITY-COROLLARIES-v1","statement":"On h=0, q=1 leverage gives continuous density <20.155; exact rank-three plus delta_L,delta_R>=1/8 gives continuous density <58.122 via the two-sided theorem.","status":"PROVED_SCOPED_DENSITY_COROLLARIES"}
+  ],
+  "stress_test": {"matrix":"A=I_4-J_4/3","result":"For J={1,2}, T=J the selected packet has mass 1/2, packet row-volume is 2/3, and all full determinant mass lies in h=2 while h=0,h=1,h=3 vanish.","status":"EXACT_FRACTION_CHECK_PASS"},
+  "canonical_math": {"repository":"yspennstate/math-open-problems","commit":"50b9affaacaf7ad00fbf96249173ff32fc2e14c3","directory":"proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/a01-b07-20260922T160118Z-qform-r11/","main_file":"REPORT.md","addendum":"ADDENDUM.md","checker":"checks.py","check_output":"check_results.json"},
+  "full_target_status": "OPEN",
+  "continuity_status": "PROVED_ON_STATED_H0_SUBBRANCHES_ONLY; NOT_PROVED_GLOBALLY",
+  "unresolved_implication": "QFORM-MIXED-OVERLAP-BANK-PAYMENT-v1: pay the h=1,2,3 physical determinant banks and remaining high-leverage/localized h=0 branch while preserving original-coordinate product structure and arbitrary residual spectrum.",
+  "next_step": "Develop a bordered-minor/product-bank density inequality for the h=2 kernel det A[S union {i}, S union {j}] with |S|=2, since the exact cancellation stress matrix places all surviving determinant mass there.",
+  "no_full_solution_claim": true
+}

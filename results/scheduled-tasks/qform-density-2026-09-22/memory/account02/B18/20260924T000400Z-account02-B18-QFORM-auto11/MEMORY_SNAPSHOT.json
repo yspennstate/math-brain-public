@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B18",
+  "run_id": "20260924T000400Z-account02-B18-QFORM-auto11",
+  "control_commit_at_start": "348b4535614231bb4bdf40a2b5360313aa926651",
+  "pre_handoff_brain_head": "4236cc1741c65fc0a352b6e37da216296df39b2a",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "target_status": "OPEN / NOT PROVED / NOT DISPROVED",
+  "mathematical_result": {
+    "id": "QFORM-ONE-SIDED-ANCHOR-CROSS-SQUARE-LP-v1",
+    "status": "proved supporting analytic extension and target-valid applications",
+    "statement_short": "For disjoint original-coordinate X,Y,W, T=X^TMY+alpha^TX+G(Y)+aW^2+h(Y)W+c has ||p_T||inf <= [q/(q-1)]2^(1+1/q)(2-q)^(-1/q)||M||op^(-1/q)|a|^(-(q-1)/q); at q=3/2 the physical block [[0,C,0],[C^T,B,r],[0,r^T,a]] has cap (12/2^(1/3))(|a|||C||op^2)^(-1/3).",
+    "math_report_commit": "39fec6de415da54a5947972780a6aa76816bdca0",
+    "math_bundle_tip": "725262eae14b62acb3b2b41365e3d23f5a8d68e0",
+    "math_report": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260924T000400Z-account02-B18-QFORM-auto11/REPORT.md",
+    "math_check": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260924T000400Z-account02-B18-QFORM-auto11/CHECK.json",
+    "early_commits": ["4454492982463e2cea133c51a33b9e982fff8d3a", "ecb063b4e59b773bd4708771197aa8c8779417e6"]
+  },
+  "target_stress": {
+    "family": "Q_delta=2 delta^(-1/2)(u^TX)(v^TY)+2W(r^TY)+delta W^2, v perpendicular r, 0<delta<1/64",
+    "spectrum": "+/-delta^(-1/2) and (delta +/- sqrt(delta^2+4))/2",
+    "property": "all physical diagonals <1/64 and exactly three eigenvalues have modulus >=1",
+    "bound": "||p||inf <=12/2^(1/3)=9.524406311809196 uniformly as delta->0"
+  },
+  "actual_premises": [
+    "Latest completed account03/B18 QFORM-ONE-SIDED-CROSS-SQUARE-LP-v1 and its translation-uniform square L^q estimate.",
+    "Rudelson--Vershynin arXiv:1402.4492 Theorem 1.2: normalized linear forms of independent density<=K variables have density<=sqrt(2)K a.e.",
+    "Independence is used only between disjoint original-coordinate banks after conditioning on the original Y bank.",
+    "Pinned e5f ruled one-sheet theorem is used only at the exact rank-three epsilon=0 companion endpoint; e5f cross-volume D/D5 are shown unavailable on the high-rank-tail companion because every physical cross cut has rank <=2."
+  ],
+  "partner_result_applied": {
+    "commit": "a39a4b80dcf523ed26c8e978d738520fbf8feaf1",
+    "result": "QFORM-ONE-SIDED-CROSS-SQUARE-LP-v1",
+    "application": "extended its proof to permit arbitrary h(Y)W and applied the h=0 theorem to Q_epsilon with arbitrary-dimensional one-sided epsilon(I-vv^T) curvature"
+  },
+  "pinned_result_applied": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "result": "ruled one-sheet theorem plus cross-volume D/D5 scope",
+    "application": "Q_0=2(u^TX)(v^TY)+W^2 has p(t)<=pi sqrt(2) for a.e. t>=0; for Q_epsilon every original-coordinate cross cut has rank<=2 so D and D5 are unavailable"
+  },
+  "primary_source_verified": {
+    "citation": "Rudelson--Vershynin, Small ball probabilities for linear images of high dimensional distributions, arXiv:1402.4492, Theorem 1.2",
+    "hypotheses": "independent real variables; each density bounded by K; coefficients have l2 norm one",
+    "conclusion": "linear-form density bounded by sqrt(2)K a.e.; optimal",
+    "absent_hypotheses": "no moment, support, log-concavity, iid, centering, symmetry, or smoothness assumption"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-B15-NONZERO-SQUARE-AFFINE-SLOPE-RESCUE-FALSE-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "fresh_global_interface": "account03/B20 r42 leaves QFORM-SMALLDIAG-LOCAL-OVERLAP12-PAYMENT-v1 after paid diagonal/principal-triple/disjoint-cross exits.",
+  "unresolved_implication": "QFORM-TWOSIDED-ANCHOR-CROSS-SQUARE-BRIDGE-v1: permit a near-null anchor to couple into both source banks, or allow nonzero X-X curvature, without substituting conditional density caps for independence. Alternatively prove failure of the one-sided pattern forces an already-paid structural branch.",
+  "continuity": "proved C_0 for the standalone one-sided-anchor theorem; not promoted through arbitrary outside-coordinate mixtures; full-target continuity remains open",
+  "telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_requested": "maximum actually supported",
+    "reasoning_effort_configured": "UNKNOWN",
+    "reasoning_effort_self_report": "UNKNOWN",
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null
+  }
+}

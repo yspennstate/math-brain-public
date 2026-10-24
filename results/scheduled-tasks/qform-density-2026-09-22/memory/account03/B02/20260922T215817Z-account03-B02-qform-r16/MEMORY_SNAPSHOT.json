@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260922T215817Z-account03-B02-qform-r16",
+  "control_start_commit": "52cb2725682f68daf07e9e1583c12d8e641f0344",
+  "control_prepublication_commit": "676ae0fdf5a63b78d4a15c904b2128a16e36b976",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWO-SIDED-GABOR-LINE-L2-FALSE-v1"
+  ],
+  "partner_result": {
+    "worker": "account04/B02",
+    "theorem": "QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0b11995430ce407a8852ac3bc5651491f2ee64f7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B02/20260922T193108Z-account04-B02-QFORM-r2/REPORT.md",
+    "applied_inequality": "int |phi_Q|^2 <= 6*pi*2^(2/3)|det D|^(-1/3), used for the low-frequency term in the general-q hybrid"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-TWO-SIDED-GABOR-LINE-L2-FALSE-v1",
+      "status": "REFUTED_INTERMEDIATE_MECHANISM",
+      "summary": "No uniform L2 restriction bound exists for the one-parameter translation/modulation line arising from the naive two-sided extension; explicit chirped cap-one probability amplitudes have ratio growing like 2L/3."
+    },
+    {
+      "id": "QFORM-SHIFTED-SQUARE-LQ-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "summary": "For every q>2, shifted quadratic phases of cap-one one-dimensional laws have an explicit uniform Lq_t norm C_sq(q)|d|^(-1/q)."
+    },
+    {
+      "id": "QFORM-ONE-SIDED-SQUARE-RANK2-FOURIER-LQ-v2",
+      "status": "PROVED_SUPPORTING_FOURIER_THEOREM",
+      "summary": "The previous one-sided physical-square plus rank-two cross-bank Fourier theorem extends to every q>2, with explicit density bound and continuity. Optimizing q makes the small-pivot loss logarithmic relative to sqrt(Delta)."
+    }
+  ],
+  "math_repository": "yspennstate/math-open-problems",
+  "math_bundle_commit": "864e0222357c77d628a7e3389a32e230f30b9321",
+  "math_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260922T215817Z-account03-B02-qform-r16/REPORT.md",
+  "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260922T215817Z-account03-B02-qform-r16/CHECKS.txt",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B02/20260922T215817Z-account03-B02-qform-r16.md",
+  "event_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account03/B02/20260922T215817Z-account03-B02-qform-r16/QFORM-TWO-SIDED-GABOR-LINE-L2-FALSE-v1.json",
+  "full_target_status": "OPEN",
+  "continuity_status": "PROVED_ON_NEW_ONE_SIDED_FOURIER_BRANCH_ONLY",
+  "unresolved_implication": "Prove a coupled product-preserving fractional-trace or full-packet Lq estimate for the genuinely two-sided square/rank-two packet, or give a source-valid exact-target L1 Fourier counterexample. L2 bank norms after rank-two Plancherel are insufficient by the new Gabor-line obstruction.",
+  "next_step": "Retain original product-density information before the one-parameter time-frequency trace, rather than collapsing each bank to an L2 norm; test fractional trace estimates against the explicit chirped long-interval family."
+}

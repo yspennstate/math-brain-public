@@ -1,0 +1,119 @@
+[
+  {
+    "claim_id": "A020-BIASED-CHILD-FORCED-ROW-TRANSPORT-NOGO",
+    "version": 1,
+    "exact_statement": "For every k>=3, delta=2^-k, private A=1_(v=0), h(q,u,v)=chi_u*(1-A)+chi_q*A has nonconstant children of means +/-delta, identical spectra, query disagreement delta and core entropy decrement zero. Supply Q_b=(P_b+delta_empty)/2 and construct incoming Q_h by actual queried-frequency conditional lift of average Q_b, using absent queried frequency only on zero true rows. The positive empty UNQUERIED row has mass delta^2 exclusively at queried frequency present and forces Q_h(empty)=0; child empty references equal (1+delta^2)/2. With a fresh gate F=1 at x0 and h*s at x1 and SAME exact two-bit point-mask reference (mean1/2), the net insertion term Lambda=average child physical-label KL refund-parent refund-core KL refund/2 equals [a log2(a/t)+(1+a)log2((1+t)/(1+a))]/2, a=delta^2/4,t=(1+delta^2)/8, lies between1/32 and1/2 and tends to1/2 log2(9/8). Core KL refund and parent activation refund are zero. Thus Lambda/query disagreement is unbounded despite the support-aware zero-row convention. All parent/child core AND full activation references are rate4 eligible. Actual F query erasure is (1+a)/2*h2(a/(1+a))<delta/2=Inf_q(F), hence K1-good. One unused averaged child private half-reserve>=1 pays curvature+Lambda<5/8 once with >3/8 remaining. This refutes only a balanced-child-free query-price extension of the specified reference rule; no source theorem or FEI is refuted and no recursive reserve renewal is asserted.",
+    "hypotheses": [
+      "Uniform independent physical bits, Boolean signs, CE/KL/entropy in bits",
+      "k>=3; distinct fresh private query q,private u and k-bit private v block; fresh gate x and two shared mask bits",
+      "Specified normalized finite-cost child references and consistent incoming actual conditional lift; no reset of arbitrary unrelated reference",
+      "Same exact mask reference at parent and both children; s a positive-mean two-bit sign point defect",
+      "Absent-frequency convention applies only to zero true unqueried rows; positive true row conditional fixed by actual spectrum",
+      "Payment is one named single insertion, not universal existence or recursive conservation of terminal slack"
+    ],
+    "statement_sha256": "3a3331c4de57fb38fdbf63176cf63ff3151d89325263e00131030f3569470e9f",
+    "contributors": [
+      "A020"
+    ],
+    "proof_source": "REPORT.md sections2-6; code/check.py; out/CHECK.json",
+    "proof_dependencies": [
+      "Self-contained Boolean spectra, physical edges, tagged KL and conditional-reference calculation",
+      "A019-PRIVATE-QUERY-ZERO-ROW-TRANSFER@1 exact reference interface independently reconstructed; source balanced-child theorem retained only at its hypotheses"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A020",
+        "independent": false,
+        "verdict": "AUTHOR_ANALYTIC_ALL_K_PROOF_AND_EXACT_CERTIFICATES",
+        "actual_cases": 6,
+        "source_balanced_guards": 12,
+        "maximum_dimension": 13
+      },
+      {
+        "reviewer": "A016",
+        "independent": true,
+        "verdict": "PARTIAL_HOLDS_FORCED_SUPPORT_REFUND_DIVERGENCE_ELIGIBILITY",
+        "scope": "Independent signed Walsh reconstruction for all k>=3: actual family spectra, physical influences, forced positive-row support, supplied reference normalization, exact child refund and positive limit, core/full rate4 eligibility. Frozen k3..7 interval checks also reproduce stated1/32 lower bound. Excludes full all-k1/32 estimate and source exact K1 erasure clause; one-step ownership reconstructed with a different elementary first-debit bound. No blanket acceptance of source statement.",
+        "source_statement_sha256": "3a3331c4de57fb38fdbf63176cf63ff3151d89325263e00131030f3569470e9f",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T075009Z-account05-A016-addressing-benchmark\\REPORT.md",
+        "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T075009Z-account05-A016-addressing-benchmark\\out\\CHECK.json",
+        "substantive_repair": false,
+        "actual_cases": 5,
+        "source_file_binding": {
+          "source_declared_statement_sha256": "3a3331c4de57fb38fdbf63176cf63ff3151d89325263e00131030f3569470e9f",
+          "canonical_statement_hypotheses_sha256": "3a3331c4de57fb38fdbf63176cf63ff3151d89325263e00131030f3569470e9f",
+          "raw_statement_utf8_sha256": "aec845dd48e03794c77b20b64e9aebce66f118afc0e16af072d1f7948de3f1c4",
+          "source_CLAIMS_file_sha256": "2e7dcdbed2350bf83a6bf72aeec0011b7a059ecf1777da283293e9d4c763d360",
+          "status": "PASS_SOURCE_CANONICAL_CONVENTION",
+          "convention": "A020 code/persist.py line12: compact sorted JSON of statement and hypotheses; initial raw-text-only comparison was the wrong convention"
+        }
+      }
+    ],
+    "status": "PARTIAL_A016_FORCED_SUPPORT_REFUND_DIVERGENCE_ELIGIBILITY_HOLDS; OTHER_SOURCE_CLAUSES_NOT_ACCEPTED_BY_THIS_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "A020 diagnostic balanced-child-free extension: Lambda<=K*Pr(h0!=h1) for an absolute K under the stated support-aware core conditional lift, even with rate4 eligible references",
+      "A020 diagnostic: absent queried-frequency convention on zero true rows suffices for a query-price bound under arbitrarily small nonzero child biases"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A018",
+      "A019",
+      "A090",
+      "A091",
+      "A092",
+      "A095",
+      "A097",
+      "B04-lead",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A016-SAME-REFERENCE-TWO-QUERY-TERMINAL-BOUNDARY",
+    "version": 1,
+    "exact_statement": "For every k>=3, delta=2^-k, h=chi_u*(1-A)+chi_q*A, A=1_(v=0), and F=1 on fresh gate x0,h*s on x1 with fresh two-bit positive-mean point mask s, fix core Q_h=(P_h+point_{q})/2 and full physical Q_F(gate,T)=[Q_h(core)P_s(mask)+point_empty(T)]/4 at both gate frequencies. Marginalize this SAME full reference at q and then at one private v bit, identically for both physical child outcomes. Full supplied-code transport obeys CE_parent=average CE_child+L, L>=0, with every terminal retained. First debit L_q=1/2 log2[(9+delta^2)/8]+delta^2/8 log2[(9+delta^2)/(1+delta^2)]. Fresh-to-inherited child conversion E lies in[0,delta^2), is retained, and J=L_q+E<35/128<5/8. Second debit at either actual q child is below delta+(2k+5)delta^2<3delta<=3/8. The SAME unused private half-core reserve>=1 pays both and conversion without renewal; all four complete two-query terminal references obey CE<4I. Inactive-v terminals have I=3/2 and CE<4; active-v terminals have I=3/2+(k-2)delta minus/plus delta/2 and CE<4+4(k-1)delta. Nevertheless marginalizing this same root reference through all v bits reaches actual q0,v=0 leaf with I=3/4 and CE=5-[5log2(9+delta)+3log2(1+delta)]/8>3=4I for every k>=6, certified by577^5*65^3<2^64. Thus two-query one-owner continuation holds on this source fixture, but automatic same-rate eligibility of all later inherited terminals is false. No universal cheap-root construction, arbitrary-core conserved-bank theorem or FEI conclusion is asserted.",
+    "hypotheses": [
+      "uniform independent physical bits, Boolean signs, bits for CE/KL/entropy",
+      "specified A020 fixture k>=3; supplied normalized root reference fixed before sampling",
+      "q then one private-v query; children inherit exact frequency marginals, no reset or new activation lift",
+      "complete conversion and all physical terminal costs retained; private half-bank spent once",
+      "later endpoint clause concerns q0,v=0 of same inherited reference for k>=6; no FEI refutation"
+    ],
+    "statement_sha256": "8fa019dee323aa779bf758d521364864527b4fa83250417a7f1231847b672ccf",
+    "contributors": [
+      "A016/account05"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T075009Z-account05-A016-addressing-benchmark\\REPORT.md",
+      "locators": [
+        "complete derivation sections1-5"
+      ],
+      "certificates": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T075009Z-account05-A016-addressing-benchmark\\out\\CHECK.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T075009Z-account05-A016-addressing-benchmark\\out\\TERMINAL_PROBE.json"
+      ],
+      "code": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T075009Z-account05-A016-addressing-benchmark\\code\\check.py",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T075009Z-account05-A016-addressing-benchmark\\code\\terminal.py"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SCOPED_DEPENDENCY_CONTINUATION_AUTHOR_PROVED_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Specified supplied rate4 root and marginal full-reference transport guarantee CE<=4I at every later actual physical terminal."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B04-lead",
+      "A018",
+      "A019",
+      "A020",
+      "A090",
+      "A091",
+      "A094",
+      "B20"
+    ]
+  }
+]

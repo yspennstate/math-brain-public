@@ -1,0 +1,166 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w430",
+  "bundle_slug": "critical-percolation-quantitative-bridge-w430-001",
+  "entries": [
+    {
+      "key": "pointwise-limit-obstruction",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-percolation-pointwise-limit-obstruction",
+      "kind": "concept",
+      "title": "Draft obstruction: subcritical pointwise decay does not pass to criticality",
+      "statement": "DRAFT; independent check pending from w431. Pointwise decay for p<p_* together with finite-n continuity and monotonicity does not imply decay at p_*. For p_* in (0,1), 0<=p<=p_*, n>=1, f_n(p)=exp(-(p_*-p)n)/2 has those properties but f_n(p_*)=1/2.",
+      "proof_text": null,
+      "assumptions": [
+        "This is an abstract family of numbers, not claimed to arise from nearest-neighbour percolation."
+      ],
+      "domain": "probability: nearest-neighbour percolation and dependent-site renormalization",
+      "source": {
+        "source_id": "owner-own-work:w430:C0023:pointwise-limit-obstruction",
+        "url": "file:///~/brain_workers/w430/ATTEMPT.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work (campaign deductions; cited literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "uniform-exponential-obstruction",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-percolation-uniform-exponential-rate-obstruction",
+      "kind": "concept",
+      "title": "Draft obstruction: no uniform positive exponential rate up to criticality",
+      "statement": "DRAFT; independent check pending from w431. For nearest-neighbour Bernoulli bond percolation on Z^d, every integer d>=2 and n>=1 satisfy P_(p_c)(0 connects to boundary Lambda_n)>=1/[2d p_c (2n+1)^(d-1)]. In particular no constants delta>0, C<infinity, c_0>0 bound these probabilities by C exp(-c_0 n) simultaneously for all n and p in (p_c-delta,p_c).",
+      "proof_text": null,
+      "assumptions": [
+        "Independent homogeneous Bernoulli bond percolation on nearest-neighbour Z^d",
+        "Lambda_n is the integer infinity-norm box",
+        "Duminil-Copin--Tassion Theorem 1.1 identifying the finite-set threshold with p_c",
+        "0<p_c<1"
+      ],
+      "domain": "probability: nearest-neighbour percolation and dependent-site renormalization",
+      "source": {
+        "source_id": "owner-own-work:w430:C0023:uniform-exponential-obstruction",
+        "url": "file:///~/brain_workers/w430/ATTEMPT.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work (campaign deductions; cited literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "coarsened-dependent-field",
+      "namespace": "probability.percolation",
+      "logical_name": "dependent-site-percolation-square-coarsening-criterion",
+      "kind": "concept",
+      "title": "Draft criterion: polynomial dependence-range threshold by whole-square coarsening",
+      "statement": "DRAFT; independent check pending from w431. Let d>=2, integer r>=0, and X in {0,1}^{Z^d} have independent sigma-fields on any two sets separated by infinity-norm distance greater than r. If P(X_x=0)<=64^(-4)/(r+1)^2 for every x, then P(0 belongs to an infinite nearest-neighbour good component)>0.",
+      "proof_text": null,
+      "assumptions": [
+        "Setwise sigma-field independence, not merely pairwise independence",
+        "Uniform bad marginal bound",
+        "Nearest-neighbour good components; no FKG or stationarity required"
+      ],
+      "domain": "probability: nearest-neighbour percolation and dependent-site renormalization",
+      "source": {
+        "source_id": "owner-own-work:w430:C0023:coarsened-dependent-field",
+        "url": "file:///~/brain_workers/w430/REVIEW_PACKET.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work (campaign deductions; cited literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "comparison-parameter-gap",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-percolation-green-magnetization-parameter-gap",
+      "kind": "concept",
+      "title": "Draft obstruction: comparison parameter stays below criticality at positive density",
+      "statement": "DRAFT; independent check pending from w431. For nearest-neighbour Bernoulli bond percolation on Z^d, d>=2, with independently green vertices of density 1-exp(-h), let m_h(p)=P_(p,h)(C(0) meets green). For every h>0, q_h=p_c(1-m_h(p_c))<=p_c(1-theta(p_c)), and lim_(h down to 0) q_h=p_c(1-theta(p_c)). Thus q_h tends to p_c if and only if theta(p_c)=0.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent green vertex marks independent of the bond configuration",
+        "p_c>0",
+        "h>0; exp(-h infinity)=0"
+      ],
+      "domain": "probability: nearest-neighbour percolation and dependent-site renormalization",
+      "source": {
+        "source_id": "owner-own-work:w430:C0023:comparison-parameter-gap",
+        "url": "file:///~/brain_workers/w430/ATTEMPT.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work (campaign deductions; cited literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "fixed-range-contour",
+      "namespace": "probability.percolation",
+      "logical_name": "dependent-site-percolation-fixed-range-contour-criterion",
+      "kind": "concept",
+      "title": "Draft reference criterion: fixed-range coloring and contours",
+      "statement": "DRAFT; independent check pending from w431. Let d>=2 and integer r>=0. Let X be a {0,1}-valued field on Z^d whose sigma-fields on any two vertex sets at infinity-norm distance greater than r are independent. If P(X_x=0)<=64^(-(r+1)^2) for every x, the origin has positive probability of belonging to an infinite nearest-neighbour good component. This is w429 L2, the conservative parity-color and bad-star-contour criterion; it assumes setwise independence, not merely pairwise independence. Independent review is pending.",
+      "proof_text": null,
+      "assumptions": [
+        "d>=2",
+        "integer r>=0",
+        "Setwise sigma-field independence at distances >r",
+        "Uniform bad marginals"
+      ],
+      "domain": "probability: nearest-neighbour percolation and dependent-site renormalization",
+      "source": {
+        "source_id": "owner-own-work:w429:C0023:L2:attributed-by-w430",
+        "url": "file:///~/brain_workers/w429/ATTEMPT.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work (campaign deductions; cited literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "critical-block-gap",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-percolation-polynomial-block-margin-gap",
+      "kind": "concept",
+      "title": "Draft conditional bridge and unresolved critical block construction",
+      "statement": "DRAFT; independent check pending from w431. In nearest-neighbour Bernoulli bond percolation on Z^d, d>=2, let p_c in (0,1). Suppose there are fixed events G_z, z in a coarse Z^2, each determined by at most M>=1 bond bits. For coarse index sets at infinity-norm distance >integer r>=0, assume the unions of their determining edge sets are disjoint. Assume every infinite nearest-neighbour collection of good indices yields an infinite physical open cluster for every configuration. If P_(p_c)(G_z fails)<=delta<epsilon_r=64^-4/(r+1)^2 uniformly in z, then eta=min(p_c/2,(epsilon_r-delta)/(2M))>0 preserves bad marginals below epsilon_r at p'=p_c-eta, giving percolation below p_c by the candidate square-coarsening criterion, a contradiction. The unproved premise for C0023 is existence, from hypothetical theta(p_c)>0, of such fixed local compatible blocks with this quantitative margin. Qualitative density tending to one with uncontrolled r does not establish it.",
+      "proof_text": null,
+      "assumptions": [
+        "The square-coarsening criterion remains independently unchecked",
+        "Fixed local determining sets at both p_c and p'",
+        "Configuration-wise deterministic compatibility",
+        "Uniform delta margin"
+      ],
+      "domain": "probability: nearest-neighbour percolation and dependent-site renormalization",
+      "source": {
+        "source_id": "owner-own-work:w430:C0023:critical-block-gap",
+        "url": "file:///~/brain_workers/w430/REVIEW_PACKET.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work (campaign deductions; cited literature attributed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "coarsened-dependent-field",
+      "to_key": "fixed-range-contour",
+      "kind": "depends_on",
+      "rationale": "Whole-good squares of side r+1 form a setwise 1-dependent field on a coordinate plane, with bad marginal <=(r+1)^2 delta. The fixed-range criterion at r=1 requires bad marginal <=64^-4. Adjacent fully good squares connect through their faces."
+    },
+    {
+      "from_key": "critical-block-gap",
+      "to_key": "coarsened-dependent-field",
+      "kind": "depends_on",
+      "rationale": "A coupling changes any fixed M-bit event probability by at most M*eta. The stated strict margin keeps the same compatible block field under the candidate criterion at p_c-eta. This relation does not assert existence of the blocks."
+    },
+    {
+      "from_key": "comparison-parameter-gap",
+      "to_existing_logical": "math:harvest.arxiv.owner-math:arxiv-2304-12110-theorem-2-d5f582",
+      "kind": "cites",
+      "rationale": "The retrieved comparison theorem uses q=p(1-m_h(p)), h>0. The new deduction expands the omitted magnetization definition and shows q_h->p_c requires theta(p_c)=0; it cites and does not refute the comparison theorem."
+    },
+    {
+      "from_key": "comparison-parameter-gap",
+      "to_key": "uniform-exponential-obstruction",
+      "kind": "analogous_to",
+      "rationale": "These are distinct endpoint obstructions: a hypothetical positive critical density prevents the comparison parameter approaching p_c, while the finite-set threshold prevents any uniformly positive exponential rate across all p just below p_c."
+    }
+  ]
+}

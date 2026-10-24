@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260923T220552Z-account01-B15-QFORM-auto11",
+  "source_control_commit_at_start": "2469404e0673496b98e61fff8a240f0bcbae258a",
+  "canonical_scientific_repository": "yspennstate/math-open-problems",
+  "canonical_scientific_commit": "fc9d06c78e03b4e1ad924f49fb9ab0f03018d2cd",
+  "canonical_scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T220552Z-account01-B15-QFORM-auto11/REPORT.md",
+  "handoff_commit": "6277fb533cdb36a9ed8135ba0231f8cd69f66310",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B15/20260923T220552Z-account01-B15-QFORM-auto11.md",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "status": "MINORITY_NULL_SEMIDEFINITE_ENDPOINT_PROVED_PARTNER_APPLIED_FULL_QFORM_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-OSCILLATORY-DECAY-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-HEIGHT-FALSE-v1",
+    "QFORM-B15-NONZERO-SQUARE-AFFINE-SLOPE-RESCUE-FALSE-v1",
+    "NO-INDEPENDENCE-AFTER-ROTATION"
+  ],
+  "partner_result": {
+    "account": "account02",
+    "slot": "B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fe25e77b5832eb0af6db6d1b01b6c93041aff88b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260923T212432Z-account02-B15-QFORM-auto11b/REPORT.md",
+    "premise": "For an invertible signature-(2,1) original-coordinate physical triple with majority eigenvalue magnitudes lambda1,lambda2 and minority magnitude mu, the majority output submeasure is dominated by C_+ dx with C_+ <= 2pi/sqrt(lambda1 lambda2), independent of mu; sign-reflected statement likewise."
+  },
+  "new_claims": [
+    {
+      "name": "minority-null semidefinite endpoint",
+      "scope": "A=[[B,C],[C^T,D]] in original coordinates; B is 3x3 PSD or NSD rank two with nonzero eigenvalue magnitudes lambda1,lambda2; Range(C) subset Range(B); independent cap-one coordinates.",
+      "conclusion": "Law(X^TAX) <= [2pi/sqrt(lambda1 lambda2)] dx."
+    },
+    {
+      "name": "block-diagonal continuity compiler",
+      "scope": "Above B with C=0 and an independent nonzero quadratic remainder D!=0.",
+      "conclusion": "p_(X^TAX) belongs to C0 and has the same height bound 2pi/sqrt(lambda1 lambda2)."
+    },
+    {
+      "name": "bounded receiver need not be continuous",
+      "scope": "B=diag(1,1,0), X1,X2 iid Uniform[-1/2,1/2].",
+      "conclusion": "Density of X1^2+X2^2 equals pi on (0,1/4) and zero on (-infinity,0), so no continuous representative."
+    }
+  ],
+  "proof_mechanism": "Perturb only the null eigenvalue in the minority sign, apply the partner ruled-majority measure bound uniformly, use range alignment so the completed-square center is epsilon-independent, observe the majority event tends almost surely to the whole space off an affine line of zero product mass, and pass measure domination by weak convergence/Portmanteau.",
+  "unresolved_implication": "Treat rank-two semidefinite physical blocks whose null direction has non-range-aligned outside coupling n^T C !=0, or route that failure to another original-product smoothing receiver before any worst-fiber conditional supremum; then aggregate across physical triples to reach the bare three-large-eigenvalue hypothesis.",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

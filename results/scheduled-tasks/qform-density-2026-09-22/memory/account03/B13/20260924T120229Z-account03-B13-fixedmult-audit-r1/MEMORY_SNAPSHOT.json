@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260924T120229Z-account03-B13-fixedmult-audit-r1",
+  "objective_id": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "control_revision": "2026-09-22.15",
+  "manuscript_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+    "blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex"
+  },
+  "status": "PASS_INDEPENDENT_AUDIT_NO_FATAL_GAP",
+  "result": {
+    "baseline_17": "PASS_IN_THIS_AUDIT",
+    "fatal_gap": null,
+    "b13_hyperbolic_check": "Exact Jacobian 1/(2 sqrt(D)); manuscript envelope valid; leading branch constant may be sharpened to (15/2) log 2 = 5.198603854...; negative tail may use a different original coordinate than positive tail.",
+    "local_gap": "Projection proof should use sum_{b_i>0}(1-b_i)<=d after omitting b_i=0 rows; conclusion unchanged.",
+    "package_gap": "README-referenced proof_map.csv, verify.py, checks.json, SOURCE_MANIFEST.json absent from inspected manuscript-root listing.",
+    "threshold_improvement": null,
+    "threshold_obstruction": "k=4 corresponds to 13 directions but the current determinant envelope has exponent 1, leaving a nonintegrable absolute |t|^-1 endpoint."
+  },
+  "partner_result_applied": null,
+  "partner_note": "The later fixed-multiplicity audit objective superseded the older account04/B13 partner-application requirement for this run; no peer verdict was used as a premise.",
+  "output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9d6e4775ce22607466fe239fe5ad5975121088f2",
+    "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/audits/account03/B13/20260924T120229Z-account03-B13-fixedmult-audit-r1/REPORT.md"
+  },
+  "handoff_commit": "62fe258d1faece6e4620bd01769513a2fbee437a",
+  "next_step": "Attack the k=4/order-four endpoint with a product-preserving small-ball or integrated-cancellation theorem strong enough to lower the fixed-multiplicity threshold to 13.",
+  "full_three_eigenvalue_target": "OPEN",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

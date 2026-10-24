@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260924T012256Z-account03-B06-qform-r49",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit_at_final_refresh": "30668449ed89e2f66344b06b8bac32761e2b607f",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_conjecture_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "GLOBAL_OPEN; MAIN_R49_BRANCH_ESSENTIALLY_BOUNDED; DESIGNATED_PARTNER_TWOOUTPUT_OFFFOLD_CONTINUOUS_C0",
+  "result_id": "QFORM-RANK1T-TWOPIVOT-AGGREGATE-v1",
+  "result_status": "PROVED_SUPPORTING_TARGET_LEVEL_CONDITIONAL_RECEIVER",
+  "mathematical_premises": [
+    "r47/r48 exact physical shear-flat normal form C-E^T H^-1 E = D+E^T T E with original-coordinate product provenance",
+    "singular endpoint T=lambda v v^T with lambda nonzero",
+    "completed determinant-squared physical pair-law random-cut identity",
+    "completed QFORM-RANK2-CROSS-SCALAR-PIVOT-v1 at its exact scope"
+  ],
+  "new_exact_identities": [
+    "det R_1=lambda (Hv)_1^2/(H_11 det H)",
+    "det R_2=lambda (Hv)_2^2/(H_22 det H)",
+    "sum_s H_ss^2 |det R_s| = |lambda| Xi_H(v)/|det H|"
+  ],
+  "main_implication": "If pair-law disjointness Omega>=1/256 and Xi_H(v)>0, then ||p_Q||_infinity <= 8 [128 |det H|/(|lambda| det(EE^T) Xi_H(v))]^(1/4), retaining the other outer hub, all diagonal same-bank curvature, same-side curvature, affine terms, and the complete nonzero tail.",
+  "partner_result_applied": {
+    "worker": "account04/B06",
+    "theorem": "QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B06/20260924T001014Z-account04-B06-QFORM-r3/REPORT.md",
+    "actual_application": "Under max_j e_j^T(EE^T)^-1 e_j<=1/2, whiten and diagonalize the actual r49 coefficient plane; at r=1/64 the partner gives ||g_off||_infinity<=256/|rho_s| for the continuous two-output off-fold density. This is not promoted through the same-bank diagonal D."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-RANK1-SAMEBANK-HALFRIESZ-FALSE-v1"
+  ],
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ac4d8963e32785d2191e535b0268fe451262a903",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T012256Z-account03-B06-qform-r49/REPORT.md"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B06/20260924T012256Z-account03-B06-qform-r49.md",
+    "commit": "8896c169293a2ee0ed9ecfe86a936af2534f90d7"
+  },
+  "unresolved_implication": "Close either Omega<1/256, which forces a >3/5 physical environment leverage hub, or Xi_H(v)=0, which is exactly a zero-diagonal/one-zero-diagonal tangency face, without deleting the same-bank diagonal D or the tail.",
+  "next_step": "QFORM-RANK1T-ZERODIAG-TANGENCY-OR-HEAVYHUB-v1"
+}

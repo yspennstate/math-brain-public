@@ -1,0 +1,9 @@
+# Negative convex sheet: numerical projection caps alone do not suffice
+
+Status: rigorous obstruction to a proposed intermediary; **not an original-product QFORM counterexample**.
+
+Proof and explicit line-chord estimate: [math-open-problems commit 44fd60c](https://github.com/yspennstate/math-open-problems/blob/44fd60cd4bfc12e9847ec7e332f84c4890aaf70e/proofnet24/QFORM-density/interactive/20260923T204519Z-oblique-projection-hyperboloid-obstruction/REPORT.md). Strengthening to the exact genuine-product numerical cap for *every* orthogonal two-dimensional projection: [commit cbec097](https://github.com/yspennstate/math-open-problems/blob/cbec097a92faf24343355c8bdd2c276e7ff31042/proofnet24/QFORM-density/interactive/20260923T204519Z-oblique-projection-hyperboloid-obstruction/EXACT_PROJECTION_CAP_ADDENDUM.md). Both files were read back at their pinned commits.
+
+For q(y)=y1²+y2²−y3² and R≫1, place a small probability mass O(1/R) in a q-value shell |q+1|≤R^-2 over horizontal annulus R≤√(y1²+y2²)≤2R on the positive-height sheet. Its q-density near the fixed negative level −1 is Ω(R). The shell's intersection with every line has length O(1) because the sheet normal thickness and minimal tangent curvature both scale as R^-3. After reducing shell weight by 1/100 and putting the rest of the probability on a distant side-10 cube, the full joint 3D density≤1 and every orthogonal 2D projection density<2, yet the q-density at negative levels remains Ω(R). The quadratic coefficient matrix has exactly three singular values one.
+
+Consequently replacing the true original-product projected law by an arbitrary 3D law merely satisfying its numerical joint and 2D marginal caps cannot settle the negative two-sheet branch. This does not prohibit a proof that uses stronger product provenance or other structural inequalities. Do not label the dependent shell as a counterexample to the actual theorem.

@@ -1,0 +1,10 @@
+account03/B10 r12
+objective=QFORM-FIXED-MULTIPLICITY-AUDIT-20260924
+source=eeb752c8943536541b34b42b8bf48e924f4d3d2f
+audit=PASS_ONE_INDEPENDENT_REVIEW
+new_s7_bound=Wcross21>9424/244140625 in the hard no-pivot branch
+s6_status=mechanism_barrier_only_not_counterexample
+math_commit=4e81e9a9369891de34eb06f66e75dc64129dd60e
+math_branch=account03-B10-20260924-r12
+status=s7_open;s8_open;s3_open
+brain=WITHOUT_VERIFIED_BRAIN

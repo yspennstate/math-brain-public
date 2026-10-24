@@ -1,0 +1,12 @@
+{
+  "helper_version": "A030-plateau-reserve-v1",
+  "family": "All Boolean seeds through n=3 with spectator parities; parity-block expansions; data-first ordinary addressing",
+  "domain": "276 seeds, every variable-order permutation (1572 ordered core trees), prices C=0,1,4, spectator m=1,2 (9432 parent evaluations). Pair expansion L=2 for all seeds n<=2 and five fixed n=3 masks 1,22,105,128,232, every core order and price (198 parent evaluations). Addressing a=1,2,3, prices C=1,2,4; spectator m=ceil(2a/C).",
+  "case_count": {"ordered_core_trees":1572,"spectator_parent_evaluations":9432,"pair_parent_evaluations":198,"addressing_evaluations":9},
+  "symmetry": "None. Input orders and physical assignments retained. Constant leaves stop early; zero-influence queries are allowed and cost zero.",
+  "arithmetic": "Integer Walsh; Fraction prime-log entropy expressions; exact symbolic zero tests; rational atanh-series intervals with 40 terms and proved tail for every max-branch sign. No floating sign decisions.",
+  "memory_estimate": "Under 150 MB, maximum computed addressing truth table 2048 entries. Large spectator-address tables are not materialized; their compression is checked algebraically from the small core.",
+  "maximum_runtime_seconds":60,
+  "pilot":true,
+  "automatic_dimension_escalation":false
+}

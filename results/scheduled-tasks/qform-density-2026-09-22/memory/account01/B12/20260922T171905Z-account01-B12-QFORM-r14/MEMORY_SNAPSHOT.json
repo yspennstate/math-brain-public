@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260922T171905Z-account01-B12-QFORM-r14",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "control_revision": "2026-09-22.8",
+  "source_control_commit_initial": "9fe56368335e331918ec54914f90f018399a8683",
+  "source_control_commit_prepublication": "2e410d2b08e5aa22c7ccc5b51893f100ec4fa034",
+  "status": "PROVED_SUPPORTING_THEOREM_FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "correction_ids_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9c39f272f2bbaa526533f38ba0ff82ee801732a1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260922T171905Z-account01-B12-QFORM-r14/REPORT.md",
+    "blob": "81f1f4e07ba08378b5d4b60eaa654f07fdde20cb"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "ef211939d1f2a62aa8f519bb6772b0cffeaae54f",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B12/20260922T171905Z-account01-B12-QFORM-r14.md"
+  },
+  "partner_result_applied": {
+    "worker": "account02/B12",
+    "source_repository": "yspennstate/math-open-problems",
+    "source_commit": "c1c87a33cb9223e78b3b50398328ff73d7dc85d1",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260922T155613Z-account02-B12-qform-add-eigen-r11/REPORT.md",
+    "result": "Schur complement full-rank tail stability",
+    "actual_application": "For A=A_tau+E, ||E||op<=delta<|a_tau|, used epsilon_tail=delta(1+||b_tau||/|a_tau|)^2/(1-delta/|a_tau|) to preserve the two-same-sign endpoint residual and proved ||p||inf <=2 sqrt(C_*/[(L-epsilon_tail)(|a_tau|-delta)])."
+  },
+  "partner_stress_family_consumed": {
+    "worker": "account02/B12",
+    "source_commit": "c831c437535fc6dcffe0e2cd8fb40f9f7dbe9810",
+    "result": "A_M=I4-(M+1)vv^T-(3/2)ww^T transfers third-compound mass into overlap-two and destroys local conditioning",
+    "new_application": "Endpoint Schur absorption proves the entire family and its sign reflection have ||p||inf<9C_*<218 uniformly for every M>1."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-RANK1-ENDPOINT-SCHUR-v1",
+      "status": "PROVED_IN_STATED_SCOPE",
+      "statement": "For A_tau=A0+tau vv^T and original pivot i with u=v_i!=0, Sc_i(A_tau)=S_infty-a_tau^{-1}zz^T with tau-independent S_infty and z."
+    },
+    {
+      "id": "QFORM-SIGN-OPPOSED-RANK1-ABSORBER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "If sigma S_infty has a physical residual triple with two eigenvalues >=L and sigma a_tau<0, then ||p||inf<=2 sqrt(C_*/(L|a_tau|))."
+    },
+    {
+      "id": "QFORM-RANK1-ENDPOINT-PLUS-TAIL-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "After a full-rank mixed-sign tail E with partner loss epsilon_tail<L, ||p||inf<=2 sqrt(C_*/[(L-epsilon_tail)(|a_tau|-delta)])."
+    },
+    {
+      "id": "QFORM-PARTNER-AM-STRESS-PAID-v1",
+      "status": "PROVED_TARGET_SUBCLASS",
+      "statement": "For the exact account02/B12 family A_M and -A_M, M>1, ||p||inf<9C_*<218 for all admissible product inputs."
+    }
+  ],
+  "continuity_proved": false,
+  "full_solution": false,
+  "first_unproved_step": "QFORM-O1-O2-TO-ENDPOINT-OR-RIDGE-AGGREGATION-v1",
+  "next_step": "Aggregate the third-compound O1/O2 heavy overlap mass into sign-opposed endpoint Schur forms before taking reciprocal local pivots, or route the same mass into a completed ridge/grouped-coordinate payment.",
+  "privacy_review": "Manual changed-file allowlist review only; mathematical and source-pin content, no credentials, machine paths, unrelated private data, public release, paid or remote compute.",
+  "independent_end_to_end_reviews": 0
+}

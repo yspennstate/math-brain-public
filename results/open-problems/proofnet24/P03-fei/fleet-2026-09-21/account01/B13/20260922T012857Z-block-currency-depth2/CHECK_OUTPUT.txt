@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "source_table_sha256": "f8a7bb2c738d86368305111633376b1a3a83d8ee1f1abcc9a37d841b0f9c7839",
+  "I_exact": "261/128",
+  "P_exact": "133/512",
+  "pair_walsh_coefficients_all_zero": [0,0,0,0,0,0,0,0,0],
+  "core_first_step": {
+    "influence": "57/256",
+    "Q_exact": "11343/262144",
+    "rho_lower": "5.856243892621909096",
+    "rho_upper": "5.856243892621909097"
+  },
+  "aux_first_step": {
+    "influence": "1/256",
+    "Q_exact": "255/262144",
+    "rho_lower": "8.423640691787006960",
+    "rho_upper": "8.423640691787006961"
+  },
+  "host_pivot_blocks": [
+    {"aux":9,"pivot":0,"Q_exact":"5799/131072","rho_lower":"5.917209605195321625","rho_upper":"5.917209605195321626"},
+    {"aux":10,"pivot":3,"Q_exact":"5799/131072","rho_lower":"5.917209605195321625","rho_upper":"5.917209605195321626"},
+    {"aux":11,"pivot":8,"Q_exact":"5799/131072","rho_lower":"5.917209605195321625","rho_upper":"5.917209605195321626"},
+    {"aux":12,"pivot":4,"Q_exact":"5799/131072","rho_lower":"5.917209605195321625","rho_upper":"5.917209605195321626"},
+    {"aux":13,"pivot":1,"Q_exact":"5799/131072","rho_lower":"5.917209605195321625","rho_upper":"5.917209605195321626"},
+    {"aux":14,"pivot":7,"Q_exact":"5799/131072","rho_lower":"5.917209605195321625","rho_upper":"5.917209605195321626"},
+    {"aux":15,"pivot":5,"Q_exact":"5799/131072","rho_lower":"5.917209605195321625","rho_upper":"5.917209605195321626"},
+    {"aux":16,"pivot":2,"Q_exact":"5799/131072","rho_lower":"5.917209605195321625","rho_upper":"5.917209605195321626"},
+    {"aux":17,"pivot":6,"Q_exact":"5799/131072","rho_lower":"5.917209605195321625","rho_upper":"5.917209605195321626"}
+  ],
+  "certified_common_host_pivot_upper": "5.918",
+  "log_series_terms": 80,
+  "checker_sha256": "0fc00d072325652ec1621bf1fb972665bc1b5577aab19935ec8ce5dfca59c892",
+  "captured_output_sha256": "c6beed797d420f617d79b74c4a51ac6d31b53079feedefdc1c21e6b54394feb9",
+  "meaning": "For this balanced monotone n=18 source, every expensive auxiliary coordinate has a natural host-pivot two-coordinate block whose zero-reference FEI-unit block ratio is rigorously below 5.918. This is not a universal FEI proof and does not test the certified read-once reference potential."
+}

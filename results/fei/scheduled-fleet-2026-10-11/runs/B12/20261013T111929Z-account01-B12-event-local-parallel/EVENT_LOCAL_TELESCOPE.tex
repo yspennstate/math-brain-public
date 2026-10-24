@@ -1,0 +1,118 @@
+\section*{A cylinder-safe event-local telescope for parallel triples}
+
+All logarithms are natural.  For a Boolean source indicator $s$ define the
+selector splice
+\[
+ d(x,z)=\mathbf1_{\{x=-1\}}s(z),\quad a_0=x+d,\quad F=x+2d,
+\]
+and its local associator
+\[
+ \Omega(s)=\mathcal E_{\rm raw}(F)
+ -\mathcal E_{\rm raw}(a_0)-\mathcal E_{\rm raw}(d).
+\]
+
+Let a restriction tree query physical source coordinates, adaptively if
+desired, and let $s_v$ be the reached source at node $v$.  For an internal
+node with children $v0,v1$, define the event-local compensated charge
+\[
+ \Gamma_v=\Omega(s_v)-\frac{\Omega(s_{v0})+\Omega(s_{v1})}{2}. \tag{1}
+\]
+If $w_v$ is the reach probability, the martingale identity gives
+\[
+ \sum_{v\ {m internal}}w_v\Gamma_v
+ =\Omega(s_{\rm root})-\sum_{\ell\ {m leaf}}w_\ell\Omega(s_\ell).
+                                                                    \tag{2}
+\]
+In particular, an unchanged cylinder restriction has $\Gamma_v=0$.
+
+Assume the tree is complete on the source variables.  At a leaf,
+$s_\ell\in\{0,1\}$.  Direct selector calculation gives
+\[
+ \Omega(0)=0,\qquad \Omega(1)=-2\log2.
+\]
+If $p=\mathbb E s$, then $\sum_{\ell:s_\ell=1}w_\ell=p$, and therefore
+\[
+ \sum_vw_v\Gamma_v=\Omega(s)+2p\log2.                \tag{3}
+\]
+
+\paragraph{Theorem.}
+If $s$ is the union of three distinct parallel affine cosets, then every
+complete adaptive restriction tree satisfies
+\[
+ \boxed{\sum_vw_v\Gamma_v\le8\log2\,I(d).}          \tag{4}
+\]
+The constant is independent of dimension, codimension, physical orientation,
+tree depth, and query order, and is the sharp supremum.
+
+\paragraph{Proof of the root estimate.}
+Let the common direction be $V$ of codimension $k\ge2$, and put
+$y=2^{-k}$, so $p=3y$.  The three quotient points form an affine two-plane;
+if $U$ is its lifted direction, the exact two-shell spectrum gives
+\[
+ \mathcal E_{\rm raw}(s)=6ky\log2-\frac92y\log3.     \tag{5}
+\]
+If $m_V=|\{i:e_i\notin V\}|$ and
+$m_U=|\{i:e_i\notin U\}|$, exact edge counting gives
+\[
+ I(s)=\frac y2(m_V+2m_U)\ge\frac y2(3k-4).             \tag{6}
+\]
+The selector identity is
+\[
+ \Omega(s)=\mathcal E_{\rm raw}(s)+C(p),               \tag{7}
+\]
+where
+\[
+ C(p)=\Phi((1-p)^2)-3\Phi(p^2/4)-\Phi((1-p/2)^2)
+      -p(1-p)\log4.
+\]
+We claim
+\[
+ C(3y)\le y\left(\frac92\log3-8\log2\right).        \tag{8}
+\]
+For $k\ge5$, write $f(t)=\Phi((1-t)^2)$.  Since $f'(t)\le2$,
+\[
+ C(p)\le p-p(1-p)\log4.
+\]
+Here $p\le3/32$, and
+\[
+ 1-\frac{29}{32}\log4
+ <\frac32\log3-\frac83\log2.
+\]
+The last inequality is elementary: the atanh series gives
+$\log3>549/500$ and $\log2<347/500$, so its right-minus-left side exceeds
+$1301/24000$.  This proves (8) for $k\ge5$.
+
+For $k=2,3,4$, after multiplying the positive gap
+$4\log2\,I(s)-\Omega(s)$ by $32,128,512$, respectively, positivity is
+equivalent to the exact integer comparisons
+\[
+ 2^{96}3^9>5^{25},\qquad
+ 2^{416}3^{45}5^{100}>13^{169},\qquad
+ 2^{1536}3^{117}13^{676}>29^{841}.
+\]
+Thus (8) holds for every $k\ge2$.  Combining (5)--(8) yields
+\[
+ \Omega(s)\le4\log2\,I(s).                            \tag{9}
+\]
+Finally,
+\[
+ I(d)=\frac12I(s)+\frac p4,
+\]
+so (3) and (9) give
+\[
+ \sum_vw_v\Gamma_v
+ \le4\log2\,I(s)+2p\log2
+ =8\log2\,I(d).
+\]
+
+For coordinate-minimal point triples with $k\to\infty$, the ratio in (4)
+tends to $8\log2$, proving sharpness.
+
+\paragraph{Scope.}
+Equation (4) repairs the dummy-cylinder repetition only for the compensated
+charge (1).  It does not make the false unrenormalized sum
+$\sum_vw_v\Omega(s_v)$ finite.  To use (4) in full FEI, the global entropy
+decomposition must identify its coherent remainder with $\Gamma_v$ (plus
+already paid endpoint terms), or bound the difference by a separate
+single-use reserve.
+

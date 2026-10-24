@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "B18-20260922T155856Z-r13",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_at_start": "d033be589234165c57b0db53236a35f5ebd377c0",
+  "source_control_commit_before_publication": "77a0f1341a91f9df19dd684324fcf02b3ecc7e0f",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "correction_ids_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "primary_source": {
+    "name": "Livshyts-Paouris-Pivovarov, On sharp bounds for marginal densities of product measures",
+    "source": "arXiv:1507.07949",
+    "used_hypothesis": "independent product coordinates, probability densities with L-infinity norm <=1",
+    "used_conclusion": "j-dimensional orthogonal marginal density <=2^(j/2)"
+  },
+  "source_scope_check": "Banks Theorem 4.15/Corollary 4.18 was rechecked but not extended through arbitrary same-side quadratic terms.",
+  "partner_result": {
+    "account_slot": "account04/B18",
+    "scientific_commit": "441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T113729Z-account04-B18-qform-r1/REPORT.md",
+    "result_id": "QFORM-DEPENDENT-SQUARE-SMOOTHING-v1",
+    "application": "Combined with the new one-sided Schur residual density estimate to obtain QFORM-ONE-SIDED-SCHUR-SMOOTHING-v1."
+  },
+  "new_results": [
+    "QFORM-ONE-SIDED-CROSS-AGGREGATE-v1",
+    "QFORM-ONE-SIDED-PHYSICAL-BLOCK-v1",
+    "QFORM-ONE-SIDED-SCHUR-SMOOTHING-v1"
+  ],
+  "scientific_commit": "fb0c75e8f951da2564fe595f09f7e484c37dfd40",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/B18-20260922T155856Z-r13/REPORT.md",
+  "main_bound": "For T=G(U)+2U^T B V+beta^T V, rank(B)>=2: ||p_T||_inf <= min_{2<=j<=rank B} j/(j-1) * (v_j/prod_{ell<=j} sigma_ell(B))^(1/j), with continuous density.",
+  "partner_applied_bound": "After one physical pivot a and a Schur residual with S_JJ=0: ||p_Q||_inf <=2|a|^(-1/2) min_j sqrt(M_j); j=2 gives 2sqrt(2)pi^(1/4)/(|a|^(1/2)(sigma1 sigma2)^(1/4)).",
+  "continuity_status": "proved for the one-sided cross theorem and direct physical-block corollary; not claimed for the dependent-square Schur wrapper",
+  "first_unproved_step": "From only three eigenvalues |lambda|>=1, obtain a product-preserving decomposition entering either a ridge/diffuse branch or a quantitatively stable one-sided small-self-block cross branch.",
+  "next_step": "Develop a perturbative extension of A_JJ=0 that pays a small same-side J block without falling into the corrected both-sides-uncontrolled cross-minor failure.",
+  "full_target_status": "OPEN"
+}

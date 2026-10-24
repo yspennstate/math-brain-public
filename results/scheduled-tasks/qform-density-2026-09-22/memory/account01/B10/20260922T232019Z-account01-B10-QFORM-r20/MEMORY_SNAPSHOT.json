@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B10",
+  "run_id": "20260922T232019Z-account01-B10-QFORM-r20",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit_prepublication": "19c4c8d5a107dd437f340087666c78922efd0700",
+  "control_revision": "2026-09-22.15",
+  "target_status": "OPEN_NOT_PROVED",
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "partner_results_applied": [
+    {
+      "worker": "account02/B10",
+      "run_id": "20260922T225540Z-account02-B10-QFORM-auto11",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "9005415f079b7b46c0618c0187bf29b3f8d44167",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B10/20260922T225540Z-account02-B10-QFORM-auto11/REPORT.md",
+      "application": "Tripartite heavy-hub delete-or-isolate theorem; diffuse child bound <=768."
+    },
+    {
+      "worker": "account02/B10",
+      "run_id": "20260922T214629Z-account02-B10-qform",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "ceae35deb4625f33bb99551dc50e455285d44da0",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B10/20260922T214629Z-account02-B10-qform/REPORT.md",
+      "application": "Generated-mismatch state and one-large-leakage branch <=46.282; leaves tau_J,tau_K<1/64."
+    },
+    {
+      "worker": "account03/B10",
+      "run_id": "20260922T221548Z-account03-B10-QFORM-r20",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "7acd371ee2ee83a7fae12d7bedb38bc99c051b6d",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B10/20260922T221548Z-account03-B10-QFORM-r20/REPORT.md",
+      "application": "Random tripartition, Gram certificate, near-unit null-row packet, diffuse selected-core bound <=96."
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-DOUBLE-SMALL-MIXED-PACKET-IDENTITY-v1",
+      "status": "PROVED_EXACT_STRUCTURAL_IDENTITY",
+      "statement": "E_21+E_12=rho-tau_J det S_J-tau_K det S_K=E_gen+tau_J(1-det S_J)+tau_K(1-det S_K)>=E_gen."
+    },
+    {
+      "id": "QFORM-DOUBLE-SMALL-TO-TRIPARTITE-CORE-v1",
+      "status": "PROVED_SUPPORTING_REDUCTION",
+      "statement": "Every 0<tau_J,tau_K<1/64 generated-mismatch state has three disjoint original-coordinate banks with tripartite squared-volume packet T>=1/256."
+    }
+  ],
+  "paid_branches": [
+    "max(tau_J,tau_K)>=1/64: partner continuous bound <46.282",
+    "double-small selected core diffuse: continuous bound <=96",
+    "designated-partner heavy-hub child diffuse: bound <=768"
+  ],
+  "unresolved_implication": "QFORM-SINGLETON-HUB-TWOBANK-AGGREGATE-PAYMENT-v1, plus nonuniform repeated-delete heavy cascade; requires aggregate whole-bank smoothing rather than one local reciprocal minor.",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "51a3e87c44bc6d677f2a6a49fe962069b56704c8",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B10/20260922T232019Z-account01-B10-QFORM-r20/REPORT.md",
+    "readback_blob": "d54d8e98b1e0962ced0c26dd034eec0410161e1b"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B10/20260922T232019Z-account01-B10-QFORM-r20.md",
+  "continuity_status": "PROVED_IN_PAID_FRESNEL_BRANCHES_ONLY; OPEN_FOR_REMAINING_HUB_BRANCH"
+}

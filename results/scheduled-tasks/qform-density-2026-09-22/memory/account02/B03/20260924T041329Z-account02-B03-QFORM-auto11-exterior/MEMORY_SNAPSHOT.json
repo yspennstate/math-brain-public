@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B03",
+  "run_id": "20260924T041329Z-account02-B03-QFORM-auto11-exterior",
+  "control_commit_at_start": "838f2cdc78f32ac1bc82541ede2baa2475064f2b",
+  "control_commit_before_handoff": "ceea86b4db08435ab86f553e346d3d2d6168c4a0",
+  "control_revision": "2026-09-22.15",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "new_result": {
+    "id": "QFORM-DISJOINT-EXTERIOR-MASS-EXIT-v1",
+    "statement": "For E_r(A)=sum_{|S|=|T|=3,|S∩T|=r}det(A[S,T])^2, sum_r E_r=e_3(A^2). Under three eigenvalues of modulus at least one, sum_r E_r>=1. Some literal physical bipartition has e_3(A[I,J]^T A[I,J])>=E_0/64. With the completed marginal-free physical-E3 receiver, ||p_Q||inf<=2 C_E3 E_0^-1/6, C_E3=8.4530212255281768747... .",
+    "status": "PROVED_SUPPORTING_BRANCH"
+  },
+  "whole_copy_bound": "int |t|^-1/2 |phi_Q(t)|^2 dt <= 4 sqrt(2 pi C_E3) E_0^-1/12; only the whole scalar Q-Q' identity is used.",
+  "pinned_result_applied": {
+    "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+    "result": "Theorem D",
+    "application": "balanced cut of the flat signed-frame target family has Z_3=1/64 and row marginals 3/(2q)<=1/2 for even q>=4, giving ||p_Q||inf<=12 sqrt(e) and the explicit weighted-time bound."
+  },
+  "partner_result_applied": {
+    "partner": "account03/B03",
+    "run": "r48",
+    "source_commit": "3638467084deb8af24d1b01aa01cc300ee85ea8a",
+    "result": "marginal-free physical-E3 receiver imported in QFORM-BALANCED-CARRIER-E3-PROMOTION-v1",
+    "application": "combined with the random physical bipartition identity to close the E_0>0 branch quantitatively."
+  },
+  "obstruction": "For A_q=R diag(1,1,-1)R^T with repeated tetrahedral sign rows, every physical principal triple determinant is <=1/(4q^3), while e_3(A_q^2)=1 and E_0(q)=(1/4)(1-1/q)^3+(3/4)(1-1/q)^2 tends to one. One-minor localization is therefore not exhaustive.",
+  "unresolved_implication": "If E_0<1/4, at least one of E_1,E_2,E_3 exceeds 1/4. Route each overlap-heavy class product-preservingly into an existing finite-hub, nested-rank-two, localized-principal, physical-E3, or aggregate-frame receiver, or isolate a sharper exact obstruction.",
+  "canonical_math_commit": "5e5366b98337d13ba24bf666f4e42155553de7c2",
+  "early_math_commit": "43eab33dc9cd6063c84089b5fc3692abceeadb21",
+  "handoff_commit": "c2cf502ba91445ad3119cfb9991131ec7d32d725",
+  "full_qform_status": "OPEN",
+  "full_continuity_status": "OPEN",
+  "without_verified_brain": true,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  }
+}

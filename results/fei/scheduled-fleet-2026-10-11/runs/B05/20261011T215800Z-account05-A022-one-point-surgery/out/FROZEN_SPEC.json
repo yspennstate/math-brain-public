@@ -1,0 +1,12 @@
+{
+  "helper_version": "A022-surgery-v1",
+  "family": "All Boolean tables in dimensions 1,2,3; every one-point flip and every unordered adjacent-pair flip. All 16 two-bit seeds, tensor powers t=1,...,6. Quadratic bent seeds n=4,6,8 at vertices 0,1,2^n-1, each point and each adjacent pair.",
+  "domain": "No dimension escalation. Cube encoded in binary; Walsh characters (-1)^(S dot x).",
+  "case_count": {"small_seed_tables":276,"small_one_point":2120,"small_adjacent":3140,"tensor_seed_powers":96,"bent_surgeries":63},
+  "symmetry": "None in small exhaustive domain. Bent checks are declared fixtures, not exhaustive or symmetry claims.",
+  "arithmetic": "Integer FWHT, Fraction for spectral laws and influence; rational outward log intervals using range reduction and atanh series, 50 terms; illustrative decimal output labeled only.",
+  "memory_estimate_MB":100,
+  "maximum_runtime_seconds":60,
+  "pilot": "Entire bounded domain; stop after 60 seconds without raising n.",
+  "randomness":"none"
+}

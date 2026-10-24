@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "kind": "local scientific result cards; canonical source commit to be filled only after actual publication",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "id": "FEI-GEOMETRIC-AMPLITUDE-KL-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "scope": "every balanced uniform-cube Boolean function; positive integer q",
+      "statement": "0<=K_occ-K_q<=kappa_q P(|S|>=2)<=kappa_q(I-1), with kappa_q=(a_q-1-ln(a_q))/ln2 and a_q=2^(2/q)ln(2^(2/q))/(2^(2/q)-1).",
+      "local_proof": "REPORT.md Sections2-5",
+      "source_dependencies": [
+        "SVIC"
+      ],
+      "independent_review": "See separate reviewer report when supplied; not inferred from this card."
+    },
+    {
+      "id": "FEI-LEVEL-ADAPTIVE-KL-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "scope": "every balanced uniform-cube Boolean function; O(qn log n) cell bound when all influences equal",
+      "statement": "0<=K_occ-K_lin,q<=(I-1)/q; equal-influence cell count<=2qn H_(n-1)+2n.",
+      "local_proof": "REPORT.md Section5, equations7a-7c",
+      "depends_on": [
+        "FEI-GEOMETRIC-AMPLITUDE-KL-v1"
+      ]
+    },
+    {
+      "id": "FEI-BIASED-AMPLITUDE-KL-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "scope": "all nonconstant Boolean functions under every interior product-bias vector; no uniform integer-lattice cell bound assumed",
+      "statement": "v(K_occ-K_q)<=kappa_q(I_tilde-v); adaptive variance-weighted loss<=(I_tilde-v)/q.",
+      "local_proof": "REPORT.md Section7",
+      "depends_on": [
+        "FEI-GEOMETRIC-AMPLITUDE-KL-v1",
+        "FEI-LEVEL-ADAPTIVE-KL-v1"
+      ]
+    },
+    {
+      "id": "FEI-AFFINE-SUPPORT-ENTROPY-COLLAR-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "scope": "balanced squared spectrum fully supported on F union subsets A, F nonempty; TV<=15/32 from uniform template",
+      "statement": "H<=[5+31log2(32/31)](I-1); elementary entropy corollary, no novelty claim.",
+      "local_proof": "REPORT.md Section9",
+      "source_dependencies": [
+        "NEAR_BENT"
+      ]
+    },
+    {
+      "id": "FEI-AMPLITUDE-BIN-PAYMENT",
+      "status": "OPEN",
+      "scope": "all balanced Boolean functions at one finite constant C",
+      "statement": "Prove K_q>=H_max-C(I-1), or the analogous adaptive-bin payment, using additional actual Boolean constraints.",
+      "local_source": "REPORT.md Section8",
+      "remaining_obligations": [
+        "Source-statistic construction and approximation bound do not establish this universal lower bound."
+      ]
+    }
+  ]
+}

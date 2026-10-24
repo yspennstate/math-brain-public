@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "quantity": "R(h0,h1) = [B_can((P0+P1)/2) - (B_can(P0)+B_can(P1))/2] / Pr[h0 != h1]",
+  "classification": "computational_evidence_except_exact_m4_witness",
+  "results": [
+    {
+      "m": 1,
+      "scope": "exhaustive_all_boolean_pairs",
+      "max_observed_R": 1.0
+    },
+    {
+      "m": 2,
+      "scope": "exhaustive_all_boolean_pairs",
+      "max_observed_R": 2.084962500721156
+    },
+    {
+      "m": 3,
+      "scope": "exhaustive_all_boolean_pairs",
+      "max_observed_R": 2.4253482448368153
+    },
+    {
+      "m": 4,
+      "scope": "exhaustive_all_unique_one_point_flip_pairs",
+      "pairs_checked": 524288,
+      "max_observed_R": 3.2971013261060733,
+      "mask0_hex": "0x8116",
+      "mask1_hex": "0x8117",
+      "status": "exact witness separately certified in reproduce_exact_witness.py"
+    },
+    {
+      "m": 5,
+      "scope": "heuristic_one_point_flip_search",
+      "lower_bound_R": 3.531561334595537,
+      "mask_hex": "0x80010116",
+      "other_mask_rule": "xor 0x1",
+      "status": "lower bound only; not an exhaustive maximum"
+    },
+    {
+      "m": 6,
+      "scope": "heuristic_one_point_flip_search",
+      "lower_bound_R": 3.92441184348624,
+      "mask_hex": "0x91151f3e13fe5ee8",
+      "other_mask_rule": "xor 0x1",
+      "flipped_endpoint_walsh_absolute_numerator": 8,
+      "flipped_endpoint_walsh_count": 64,
+      "status": "lower bound only; not an exhaustive maximum"
+    }
+  ],
+  "conclusions_not_authorized_by_these_numbers": [
+    "R is unbounded",
+    "4 is a universal upper bound",
+    "4 is a sharp constant",
+    "full FEI is proved or refuted"
+  ]
+}

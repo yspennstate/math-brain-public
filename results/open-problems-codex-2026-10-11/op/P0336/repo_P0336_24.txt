@@ -1,0 +1,255 @@
+Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 maximum, and I do not claim otherwise. NO SOURCE-METRIC MOVEMENT: `7/sqrt(17) -> 7/sqrt(17)`; successor availability `E_ready: 0 -> 0`; methods #8 GO THE OTHER WAY AND DISCRETIZE, #16 COMPUTE EVERY SMALL CASE AND STARE AT THE SEQUENCE, #21 ASK WHO ELSE HAS THIS SHAPE.**
+
+# R02 — successor gate: P0336 reaches six-run handoff but is not released
+
+Date: 2026-09-19 UTC  
+Worker: `R02`  
+Lane: `CLOSABLE OUTSIDE`  
+Repository / branch: private `yspennstate/math-open-problems` / `master`
+
+## 1. Continuity and fixed source metric
+
+I continued from the exact preceding R02 report
+
+`runs/R02/20260919T1316Z_successor_gate_zero_claim_delta_r13_upper_7_13_30_7c4e91b2.md`
+
+at commit
+
+`2a4b3b632e26b5b2dd38b702f9687140dc48182b`.
+
+The durable source-matching witness remains the independently audited order-17 sign matrix
+
+\[
+\operatorname{disc}(A_{17})=7,
+\qquad
+C^*\ge \frac7{\sqrt{17}},
+\qquad
+\left(\frac7{\sqrt{17}}\right)^2=\frac{49}{17}.
+\]
+
+The preserved independent R01 audit checked all `65536` projective signings and returned
+
+```text
+vectors_checked = 65536
+discrepancy = 7
+argmask = 430
+ratio_squared = 49/17
+PASS
+```
+
+No stronger explicit flat sign-matrix witness was certified in this run.
+
+Canonical `operations/claims/I0095.md` still records `Owner: R02`, category `CLOSABLE OUTSIDE`, and status `PENDING_ADMISSION, not READY`. The active I0095 route is nevertheless already `RETIRED / HANDOFF` after its earlier six unchanged research runs. I therefore did not restart the sign-matrix enumeration, order-12 covering search, old KLS route, or any equivalent I0095 research under a new name.
+
+## 2. Required repository reconciliation
+
+I reread/recovered the current campaign `probability_campaign_2026_09/INDEX.md` and `RANKING.md`, root `POSTED.md`, `RESULTS.md`, `QUEUE.md`, the controlling `operations/new_methods_2026-09-16/OWNER_DIRECTIVE.md`, canonical `operations/claims/I0095.md`, the preceding R02 report, current intake-corpus metadata, the newest relevant CLOSABLE admission screen, the new P0336 terminal handoff, its canonical claim, the newest R20 terminal-wait reconciliation, and the newest R01 successor-gate report.
+
+The append-only intake corpus is too large to honestly claim that every unchanged historical byte was freshly rendered model-visible in one invocation. I do not make that claim. Its current metadata still records, for example, the F intake as 140 rows / 111 admitted problems, and the complete Git comparison below contains no `operations/claims/` mutation. Candidate-specific claim/lifecycle/current-source evidence was reopened where material.
+
+## 3. Exact predecessor-to-prewrite repository delta
+
+Pinned pre-write master after the final race check:
+
+`f22a0a66cb3ee0cb1d950825dc6fbfcebcffd1e0`.
+
+Exact comparison
+
+`2a4b3b632e26b5b2dd38b702f9687140dc48182b .. f22a0a66cb3ee0cb1d950825dc6fbfcebcffd1e0`
+
+returns
+
+```text
+status = ahead
+ahead_by = 106
+behind_by = 0
+total_commits = 106
+too_large = null
+```
+
+The returned complete changed-file set contains **zero `operations/claims/` additions, modifications, deletions, or renames**.
+
+The interval does contain one superficially important lifecycle event: R7-05 reached its sixth unchanged run on P0336, a genuine `CLOSABLE OUTSIDE` source, and wrote
+
+`research7_2026-09-17/R7-05/handoffs/2026-09-19/2026-09-19T135300Z__P0336_six_run_retirement_handoff.md`.
+
+That handoff is explicit: R7-05 retires P0336 from its own further source research, but says this is a **worker-local operational handoff**, that the canonical claim is preserved, and that it must not be treated as ownership release by another worker without the owner protocol.
+
+Direct current read of `operations/claims/P0336.md` confirms that canonical ownership is still
+
+```text
+owner worker: R7-05
+category: CLOSABLE OUTSIDE
+initial state: OPEN / PARTIAL
+```
+
+and the claim itself says not to infer release from task state or missing future reports.
+
+The newest independent R20 gate report reaches the same conclusion from a separate CLOSABLE slot: P0336 retirement is not owner-clear, and no other canonical READY/CLOSABLE release appears in its complete delta. The newest R01 successor gate likewise reports `E_READY_SUCCESSOR=0 -> 0` after testing unclaimed-looking IDs and current coordinator evidence.
+
+Therefore R02's lawful successor inventory remains
+
+```text
+E_ready before = 0
+E_ready after  = 0
+```
+
+where `E_ready` means **free AND READY AND CLOSABLE OUTSIDE AND source-current AND nonexcluded** under the owner protocol.
+
+## 4. Method #8 — GO THE OTHER WAY AND DISCRETIZE
+
+The successor problem is easy to state vaguely — “find the next eligible target” — but vague queue prose repeatedly creates false positives. I discretized it into an exact finite gate over the material repository delta.
+
+For any target `T` to become newly acquirable in this interval, at least one of the following finite events must exist:
+
+1. a canonical claim is created with `T` READY/CLOSABLE and assigned to R02;
+2. an existing canonical claim is explicitly released and `T` is READY/CLOSABLE;
+3. an existing canonical claim is explicitly reassigned to R02;
+4. a controlling owner instruction creates an equivalent exact scoped transition.
+
+The complete 106-commit compare has `too_large = null` and contains zero `operations/claims/` changes. The only new near-miss, P0336, explicitly says the opposite of release.
+
+**Outcome #8:** the acquisition question reduces to a finite transition set, and that set is empty for R02 in this interval. No candidate is promoted from narrative status to READY by inference.
+
+## 5. Method #16 — COMPUTE EVERY SMALL CASE AND STARE AT THE SEQUENCE
+
+I treated each new CLOSABLE-looking lifecycle event in the material delta as a separate finite case rather than using one global “task stopped” heuristic.
+
+The cases that matter to R02 now have the following pattern:
+
+- `KRESSNER-VANDEREYCKEN-2026-LYAP6`: genuinely READY/CLOSABLE, but already owned at admission;
+- `P0342`: CLOSABLE, already owned;
+- `P0336`: CLOSABLE and now worker-locally retired after six unchanged runs, but canonical owner still R7-05 and the handoff explicitly denies release;
+- `H0008`: explicitly released earlier, but HARD OUTSIDE rather than R02's lane;
+- `P0157`: HARD OUTSIDE / reassigned;
+- broad or source-ambiguous no-claim rows such as the ones screened by R01/NM13 remain PENDING/HARD-shaped rather than READY.
+
+The sequence is informative: **worker retirement and canonical release are independent state variables**. A stopped CLOSABLE track does not enter the free pool unless the claim state itself changes.
+
+**Outcome #16:** the small-case table has no sporadic exception. `E_ready` remains zero without rescanning the entire historical corpus as if prior admission work did not exist.
+
+## 6. Method #21 — ASK WHO ELSE HAS THIS SHAPE
+
+I compared the new P0336 event against other targetless CLOSABLE workers rather than treating it as unique.
+
+R20's current terminal-wait report identifies exactly the same shape: completed/retired research target, locally stopped worker, preserved canonical claim, and no release. R01's fresh successor gate independently distinguishes “unclaimed filename” from “READY CLOSABLE source” and finds no dispatchable successor. NM13 admission screens likewise preserve PENDING/HARD dispositions when source scope is not clean enough.
+
+This cross-track recurrence suggests a reliable lifecycle rule for future R02 runs:
+
+\[
+\text{worker-local retirement}
+\;\not\Rightarrow\;
+\text{canonical owner release}
+\;\not\Rightarrow\;
+\text{READY acquisition}.
+\]
+
+Only an explicit owner-clear transition can bridge those implications.
+
+**Outcome #21:** P0336 is not a one-off ambiguity; it is another instance of a fleet-wide lifecycle pattern. Future successor screening should prioritize canonical claim transitions and only reopen broader queue/intake scope when a source-status/admission delta actually appears.
+
+## 7. Neighboring discrepancy work
+
+There is **no new R13 report commit after the preceding R02 report time** in the current repository interval. Therefore the last recorded neighboring finite-dimensional Boolean-Komlós movement is simply carried forward; I do not re-report it as new progress and do not rerun any R13 finite checker.
+
+The R02 lower-bound metric remains tied to an explicit flat sign matrix, so even future movement in the larger general unit-column class transfers only if a valid flat-sign subclass theorem or explicit flat witness is supplied.
+
+## 8. Fresh source / current-literature check — 2026-09-19
+
+The official arXiv page for `arXiv:2504.20539`, *Randomstrasse101: Open Problems of 2024*, still shows a single submission history entry:
+
+```text
+[v1] Tue, 29 Apr 2025
+```
+
+with no later arXiv revision displayed.
+
+A bounded current search again recovered the two newest directly adjacent discrepancy developments:
+
+- Emrullah Akbas and Suvrit Sra, *Boolean Small-Ball Inequalities for Discrepancy Theory*, `arXiv:2609.20785`, submitted 17 September 2026. Its advertised consequences include new Boolean matrix-series small-ball inequalities and new proofs/recoveries of Kadison-Singer, Matrix Spencer, and Komlós.
+- Nestor Guillen and Vladimir A. Kobzar, *The Komlós conjecture for complex discrepancy*, `arXiv:2609.15071`, submitted 14 September 2026. It allows unit-modulus complex phases rather than real signs and proves a finite complex Komlós constant.
+
+Neither advertised statement determines the exact universal **real flat sign-matrix** constant in Randomstrasse Open Problem 11. Complex phases strictly enlarge the allowed coefficient set, so the complex result is not an upper theorem for the harder real-sign problem by inclusion alone.
+
+This is bounded dated current-search evidence, not a worldwide novelty, priority, or openness certificate.
+
+## 9. Why there is no new checker or artifact
+
+No finite mathematical claim moved this run. The material result is a lifecycle exclusion: P0336 reached local retirement but its claim was not released, and the complete exact claim-transition set is empty.
+
+Manufacturing another sign-matrix discrepancy checker for the already-certified `7/sqrt(17)` witness, or an “exact checker” for repository ownership text, would be evidence production without mathematical movement and would violate the requested 90/10 research-to-validation discipline.
+
+Therefore no new `artifacts/R02/` file is created in this run.
+
+## 10. Model / scheduler-control truth
+
+Actual model visible to this invocation: **GPT-5.6 Sol**.  
+Reasoning-effort telemetry: **UNVERIFIED**.  
+I do not claim GPT-6 maximum.
+
+The exposed scheduled-task control schema still offers task title/prompt, schedule or relative-start configuration, timing mode, enabled state, task identity/list/update operations. It exposes **no binding model-family selector, no binding reasoning-effort selector, no guaranteed hour-long execution field, and no authenticated per-run applied-model/applied-effort receipt**. `GPT-6 / maximum` therefore remains prompt text only on this surface.
+
+Making the request binding would require an owner-authorized product/workspace/API/admin scheduling surface that persists explicit model-family and reasoning-effort fields into inference routing and returns trustworthy per-run applied-model/applied-effort attestation.
+
+The historical P26 response `You cannot modify this task` remains an authorization-context boundary rather than evidence that the task is globally immutable. Repository continuity records later successful P26 updates from an authorized context. The compliant workaround is the owning or otherwise authorized account/workspace/API/admin context for the same task, or platform support. It is not duplicate scheduling, identity substitution, or permission bypass.
+
+No scheduler, permission, email, Drive, public-posting, or workflow mutation was attempted in this run.
+
+## 11. Structured ledger delta
+
+```yaml
+ledger_delta:
+  worker: R02
+  lane: CLOSABLE_OUTSIDE
+  source_id: I0095
+  source: Randomstrasse_2024_Open_Problem_11
+  source_metric:
+    field: certified_explicit_flat_sign_lower_bound_for_C_star
+    before: 7/sqrt(17)
+    after: 7/sqrt(17)
+    order: 17
+    discrepancy: 7
+    status: PARTIAL_FROZEN_RETIRED_HANDOFF
+  canonical_i0095:
+    owner: R02
+    readiness: PENDING_ADMISSION_NOT_READY
+  successor_gate:
+    field: E_ready
+    before: 0
+    after: 0
+    status: SUCCESSOR_ADMISSION_HOLD
+  methods: [8, 16, 21]
+  material_delta:
+    base_commit: 2a4b3b632e26b5b2dd38b702f9687140dc48182b
+    prewrite_head: f22a0a66cb3ee0cb1d950825dc6fbfcebcffd1e0
+    commits_ahead: 106
+    commits_behind: 0
+    too_large: null
+    canonical_claim_mutations: 0
+    new_r13_report_commits: 0
+    p0336:
+      category: CLOSABLE_OUTSIDE
+      worker_local_state: RETIRED_HANDOFF_AFTER_SIX_UNCHANGED
+      canonical_owner: R7-05
+      canonical_claim_mutated: false
+      explicit_release: false
+      available_to_R02: false
+  successor_claim_created: false
+  new_finite_claim: false
+  new_checker_created: false
+  remaining_obligation: >-
+    Preserve the retired I0095 handoff and wait for or recover a material
+    source-current, nonexcluded, READY CLOSABLE OUTSIDE target with an explicit
+    owner-clear transition. Do not infer release from worker-local retirement,
+    do not reopen I0095 absent reassignment, and do not promote PENDING rows.
+  scheduler_model_selector: NOT_EXPOSED
+  scheduler_reasoning_selector: NOT_EXPOSED
+  actual_model: GPT-5.6_Sol
+  actual_reasoning_level: UNVERIFIED
+```
+
+## 12. Disposition
+
+**R02 remains `CLOSABLE OUTSIDE / SUCCESSOR_ADMISSION_HOLD`.**
+
+The next run should inspect the material canonical ownership/admission delta first. If a free, source-exact, current-open-looking, nonexcluded, explicitly READY CLOSABLE target appears, claim it create-only and initialize a fresh mathematical metric. Otherwise preserve the handoff instead of restarting I0095 or converting another worker's retirement into an unauthorized claim.

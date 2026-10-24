@@ -1,0 +1,18 @@
+{
+  "slot": "NM13-01",
+  "parent": "T08",
+  "source": "Salez arXiv:2508.21055v1 Problem 2.3",
+  "source_status_before": "OPEN",
+  "source_status_after": "OPEN",
+  "original_problem_scope_before": "Known/repository-positive scope included Ramanujan and long-range expanders, pre-entropic LRE variants, historical Cartesian and synchronous tensor products, line graphs, truncations, finite-fiber/twisted extensions, and P26 graph squares.",
+  "original_problem_scope_after": "Adds strong graph squares G_n boxtimes G_n of fixed-degree vertex-transitive c-long-range expanders with a uniform lower spectral edge; these are vertex-transitive spectral expanders, fail every fixed long-range-expansion constant, and have Salez-convention continuous-time cutoff with O(sqrt(log |V|)) window. Nonbipartite Ramanujan Cayley bases give an explicit source-valid family.",
+  "new_cutoff_center": "For d-regular base size n, q=d-1: T_n = [d(d+2)/((d+1)(d-2))] log_q n = [d(d+2)/(2(d+1)(d-2))] log_q |V(H_n)|.",
+  "new_window": "O(sqrt(log n)) = O(sqrt(log |V(H_n)|))",
+  "mechanism_progress": "Exact transitivity-specific NBRW collision trace identity: chi^2(K_r(x,.),uniform) = sum_{i=2}^n p_r(lambda_i)^2 for every start x. This removes the prior start/orbit-sector collision obstruction and yields a complete spectral-trace sufficient criterion for O(sqrt(log n)) continuous-time cutoff.",
+  "remaining_obstruction": "Prove a polylogarithmic NBRW spectral-trace bound at the entropic radius from vertex transitivity plus ordinary spectral expansion alone, or find a different equivariant transport kernel when that trace condition fails. Long-range expansion is not assumed equivalent to spectral expansion.",
+  "sanity_checker": "proofnet24/NM13-01/progress-cutoff/runs/2026-09-20/2026-09-20T03-03-00Z__strong_product_nbrw_exact.py",
+  "sanity_output": "proofnet24/NM13-01/progress-cutoff/runs/2026-09-20/2026-09-20T03-03-00Z__strong_product_nbrw_exact.out",
+  "sanity_terminal": "ALL_EXACT_CHECKS_PASS",
+  "publication_novelty": "UNVERIFIED",
+  "review_status": "CANDIDATE_FULL for the two restricted theorems, pending later independent review; PARTIAL for T08"
+}

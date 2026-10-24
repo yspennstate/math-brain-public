@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260923T154425Z-account01-B04-QFORM-auto11-r14",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_head_observed_near_publication": "d42cbe48716148f2156227e8d9e8b5a6c09e2387",
+  "control_readme_blob": "fca13a89d221115332ce5e60d49554ee0e213efa",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "mathematical_result": {
+    "claim_id": "QFORM-Q1-EXACT-MARGINAL-FACTOR-v1",
+    "statement": "For any probability weight w on positive physical 3x3 minors, if all constrained-side row marginals alpha_i are <=1/2, then ||p_Q||inf <= 3 R(w)^(1/3) G(w)^(-1/6), where R is the exact row/column Hausdorff-Young marginal product and G is determinant/entropy currency; also int|phi_Q| <=6pi R^(1/3)G^(-1/6), so p_Q is C0.",
+    "full_target_proved": false,
+    "full_target_disproved": false,
+    "continuity_full_target_proved": false,
+    "continuity_supporting_branch_proved": true,
+    "independent_review": "pending"
+  },
+  "actual_matrix_application": {
+    "M": "2 I_6 + J_6",
+    "A": "[[J_6/100,M],[M,J_6/100]]",
+    "spectrum": "{8.06,-7.94,+2 multiplicity5,-2 multiplicity5}",
+    "E3": 10880,
+    "density_bound": 1.2746171799329793,
+    "phi_L1_bound": 8.008655937233575,
+    "projection_tail_gate": "fails for every projection with max diagonal<=1/2 because epsilon/sqrt(T2)>=1/2>1/15"
+  },
+  "partner_applied": {
+    "account_slot": "account02/B04",
+    "claim": "QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1",
+    "source_commit": "00e728cf7f226ccce4b41ad751d494c5c94f67ec",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/account02-B04-20260923T111930Z-qform/REPORT.md",
+    "application": "condition two left-bank coordinates; retained four-row block has E3=2176 and unavoidable row marginal >=3/4",
+    "partner_bound": 2.0999942250555836,
+    "improvement_factor": 1.6475489724420658
+  },
+  "source_inputs": [
+    "math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+    "math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md",
+    "math-open-problems@00e728cf7f226ccce4b41ad751d494c5c94f67ec:proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/account02-B04-20260923T111930Z-qform/REPORT.md"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-PRESCHUR-RANK2-NOT-SCHUR-STABLE-v1",
+    "QFORM-QUADRATIC-HUB-SQRT-SLICE-ONLY-FALSE-v1"
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "b1b60d0a4fe67c2e41a60bd38fb88668bbb9b378",
+    "bundle_tail_commit": "3c7e2f74a8ea07ccdb17d33695260934da6bf650",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T154425Z-account01-B04-QFORM-auto11-r14/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T154425Z-account01-B04-QFORM-auto11-r14/CHECKS.json",
+    "handoff_commit": "b368d939b64993949d99ef6a6a3a73b373447d26"
+  },
+  "first_unproved_step": "QFORM-EXACT-MARGINAL-VOLUME-OR-COMPOUND-HUB-ROUTING-v1",
+  "next_action": "Use exact R-G objective rather than crude e^3 relaxation when routing quantitative poor-currency cases; seek a deterministic cut/weight alternative from the three-large-eigenvalue hypothesis or hand off failure to bounded compound hubs."
+}

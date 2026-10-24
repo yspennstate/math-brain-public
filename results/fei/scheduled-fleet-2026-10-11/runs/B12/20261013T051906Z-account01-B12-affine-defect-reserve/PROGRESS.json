@@ -1,0 +1,72 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2 plus owner control 2026-10-12.1",
+  "run_id": "20261013T051906Z-account01-B12-affine-defect-reserve",
+  "stream": "B12",
+  "packet_id": "A057",
+  "packet_ids": ["A057"],
+  "gap_id": "B12-A057-COHERENT-HIERARCHY-v11",
+  "attempt_id": "B12-A057-ATTEMPT-11",
+  "bounded_objective": "Determine whether the source-influence coefficient 8 ln(2), forced by the point-defect associator family, is sufficient on a strictly broader correlated all-parameter class and under actual changing hierarchy weights.",
+  "prior_status": "Overlap plus the selector alpha-log envelope was refuted as an associator payment; source influence had the correct scale on one point-defect family but no positive sufficiency theorem covered correlated defects.",
+  "new_status": "AFFINE_COSET_CHARACTER_FLIPS_PAID_SHARPLY_BY_ONE_SOURCE_BUDGET; ARBITRARY_COHERENT_REMAINDER_OPEN; FULL_FEI_OPEN",
+  "mathematical_delta": "For every affine-coset flip of a character, the signed associator is zero in the varying-character regime, nonpositive on the positive level, and at most 8 ln(2) I(b) on the negative level. The constant is sharp. The exact nonreuse derivative ledger sums the theorem through adaptive hierarchies without depth or activation loss.",
+  "case_extension": {
+    "starting_class": "One negative-level point defect with asymptotic source ratio 8 ln(2).",
+    "new_class": "All affine-coset flips of arbitrary nonconstant characters, including correlated affine constraints and adaptive nonreusing hierarchies whose local sources are restrictions of one physical source.",
+    "quantifiers": "Every ambient dimension, every affine coset of codimension k>=1, every nonconstant character, every allowed hierarchy depth and actual reach-weight profile.",
+    "previous_bound": "Necessary coefficient >=8 ln(2) from one family; sufficiency unknown.",
+    "new_bound": "sum_v w_v Omega_v <=8 ln(2) I(b), with equality constant asymptotically sharp.",
+    "parameter_dependence": "No dependence on dimension, codimension, active support size, depth, address count, overlap, or activation weights.",
+    "proof_status": "AUTHOR_PROVED_PENDING_A091_A090_REVIEW"
+  },
+  "claim_versions_used": [
+    "B12-A057-ASSOCIATOR-OVERLAP-NOGO-v1 at canonical commit 692d32b3295325cd3ede79dcbcb4d35e70597ccc",
+    "B12-A057-CHANNEL-INFLUENCE-CREDIT-v1 at canonical commit 73b3106713a3b50acf9cb1e8315e00e4f0c96659",
+    "B01-A003-KL-JS-FOURBIT-FALSIFIER-v1 at canonical commit 59d698866d319542ba55d8215846586b14279ad1"
+  ],
+  "claims_created_or_changed": [
+    "B12-A057-AFFINE-DEFECT-RESERVE-v1",
+    "B12-A057-AFFINE-DEFECT-TRICHOTOMY-v1",
+    "B12-A057-AFFINE-DEFECT-SHARPNESS-v1",
+    "B12-A057-AFFINE-HIERARCHY-v1"
+  ],
+  "acceptance_evidence": [
+    "AFFINE_DEFECT_RESERVE.tex: all-dimension exact proof, hierarchy corollary, and sharpness",
+    "check_affine_defect.py/check_affine_defect.out: exact Walsh reconstruction of all 4998 affine-coset/character instances through n=4 and the B01 control"
+  ],
+  "remaining_obstacle": "Arbitrary branch-difference sources need not have flat translated Fourier support. No single-use terminal reserve yet controls mixtures of affine cosets or general coherent source spectra across multiple ancestors.",
+  "next_action": "Prove or falsify a two-coset extension: decompose b into two signed affine-coset pieces with overlapping translated spectra, retain their signed cross term, and charge only one nonflat terminal reserve in addition to 8 ln(2) I(b).",
+  "next_consumers": ["A058", "A059", "A090", "A091", "B20"],
+  "independent_reviewers": ["A090", "A091"],
+  "stagnant_substantive_attempts": 0,
+  "source_plan": {
+    "source_head_at_research": "d37b86d19657151b3d3cd288ec10e357cfe03a77",
+    "brain_head_at_research": "6c7ced77884019a47dada5061046fba60173f5bf",
+    "owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "owner_order_blob": "7c5e21945adef435e6b587909603dd96794a1ebe",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "assignment_blob": "40935ac651643a17815d0addf664ec4c1c0313cc",
+    "current_status_blob": "c416d4b4a83fc67965cb95d06a0cc80c5c29a520"
+  },
+  "validation": {
+    "command": "python3 check_affine_defect.py",
+    "arithmetic": "Exact Fraction Walsh transforms and influence; floating natural-log entropy only for finite reconstruction, with analytic exact formulas proving the theorem.",
+    "scope": "All affine cosets and nonconstant characters through n=4, 4998 total instances; explicit B01/A003 two-defect control.",
+    "status": "PASS"
+  },
+  "delivery_status": {
+    "canonical": "PENDING_REPOSITORY_DELIVERY",
+    "brain_mirror": "PENDING_REPOSITORY_DELIVERY",
+    "independent_review": "NOT_YET",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {
+    "model": "Codex as exposed by the runtime instructions",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  },
+  "full_fei_status": "OPEN"
+}
+

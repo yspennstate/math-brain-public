@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260922T121915Z-qform-a01-b02-r11",
+  "control_commit_at_start": "06069e739aeaa993d648145e277bc6683d947261",
+  "final_control_refresh_commit": "b1a9a289d50e8860d202c7ee8dacc0f51839546d",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "partner_results_applied": [
+    {
+      "account_slot": "account02/B02",
+      "name": "QFORM-DELOCALIZED-RANK3-INTEGRATED-FOURIER-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "2d79dea715c2baa9e8ef6c0ac174eee1712d2888",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260922T114331Z-account02-B02-qform-r12/REPORT.md",
+      "application": "normalized conditional subframe L1 Fourier estimate and Fresnel transfer"
+    },
+    {
+      "account_slot": "account02/B02",
+      "name": "QFORM-PHYSICAL-PIVOT-CROSSBLOCK-FOURIER-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "400f82c8b98fc5623f567581b6ccb0b4298974e8",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/B02-20260922T120900Z-qform-r11/REPORT.md",
+      "application": "applied to exact cross-block factorization to obtain a density inequality"
+    }
+  ],
+  "new_results": [
+    "QFORM-CONDITIONAL-SUBFRAME-FOURIER-v1",
+    "QFORM-FRAME-DIFFUSE-OR-FINITE-HEAVY-v1",
+    "rank-three exact cross-block singular-product factorization"
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "99b02614f2519e5f61057a917957b112709d60e7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260922T121915Z-qform-a01-b02-r11/REPORT.md",
+    "blob": "bf523c14adf25177c58f282063a9161189d3f96a"
+  },
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuous_density_scope": "proved only for the conditional-subframe rank-exactly-three class",
+  "first_unresolved_implication": "In the finite-heavy rank-three branch, force either a dimension-free rank-three physical cross-block singular-product lower bound or enough finite-coordinate atomic smoothing to combine with the residual two spectral directions; arbitrary extra eigendirections remain a separate dependence-preserving problem.",
+  "next_step": "Analyze the finite-heavy set using the exact cross-block determinant identity and partition the remaining spectral mass into balanced versus atomic endpoints.",
+  "notes": "No law-uniform pointwise one-dimensional oscillatory decay, rotated independence, moment, compact-support, Gaussian or log-concavity assumption was used."
+}

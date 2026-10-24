@@ -1,0 +1,53 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261012T001125Z-account01-B14-A067-boolean-granularity",
+  "stream": "B14",
+  "packet_id": "A067",
+  "packet_ids": ["A067"],
+  "gap_id": "G-A067-BOOLEAN-LOSS",
+  "attempt_id": "A067-attempt-01-exact-degree-granularity",
+  "method": "Boolean Fourier granularity, atomwise Shannon entropy, empty-atom separation, exact influence comparison, and exhaustive integer-Walsh verification.",
+  "prior_status": "UNPROVED_TARGET",
+  "mathematical_delta": "Proved a degree-dependent FEI inequality H<=(2(d-1)+log2(e))I for all genuine Boolean degree-d functions, sharp in its pre-influence entropy term on address, and isolated the Boolean removal of the real Bohnenblust-Hille sqrt(log d) loss. Replayed fixed-Renyi and near-Boolean controls.",
+  "deliverable_status": "A067_D1_D2_AUTHOR_COMPLETE_PENDING_REVIEW",
+  "mathematical_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "claim_versions_used": ["B14-A066-PARITY-LIFT-SEMI-v1"],
+  "claims_created_or_changed": ["B14-A067-BOOLEAN-DEGREE-FEI-v1"],
+  "source_versions": {
+    "current_status_blob": "74f6ae761739455083804505ba0e0fd7aaf2f3e2",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "assignment_blob": "c1457da582b357efb51b39eb3bda0cff56437219",
+    "protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "packet_status_blob": "66a78ef3249a89d481a47320f990dc2aec002ccb",
+    "claim_registry_blob": "bef50513c8309b0e601aec42470bc09162f26ea8",
+    "obstruction_registry_blob": "d9c8b8632d019aa9e4d5c7394001d116fd21d94e",
+    "a066_report_commit": "44282b328360154fa9f8b77ac594fa37346897a7"
+  },
+  "next_consumers": ["A070", "A088", "A094", "B20"],
+  "next_action": "Independent reconstruction, then seek a scale-sensitive Boolean Fourier-tail condition replacing exact degree without invoking a fixed Renyi order or paying a growing degree constant.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "The coefficient grows linearly with exact degree and is not dimension independent.",
+    "No suitable scale-sensitive approximate-degree/tail replacement has been proved.",
+    "Independent review is absent."
+  ],
+  "validation": {
+    "arithmetic": "integer FWHT and fractions.Fraction; floating log2 only for entropy diagnostics",
+    "random_seed": null,
+    "truth_tables_exhausted": 65812,
+    "nonconstant_truth_tables": 65804,
+    "maximum_dimension": 4,
+    "aggregate_assertions_passed": 329028,
+    "assertions_failed": 0,
+    "command": "python CHECK.py"
+  },
+  "delivery": {
+    "local_staging": "COMPLETE",
+    "open_problems_repository": "SAVED_ALL_FILES_BASE_COMMIT_bf47c2a3b0542cdf0fefdf10aec1900ebce010a8",
+    "brain_mirror": "SAVED_ALL_FILES_BASE_COMMIT_8fa8edf66ee3adaa5696bff67b33389a426ce7d3",
+    "independent_review": "NOT_RUN",
+    "native_brain_ingestion": "NOT_RUN"
+  },
+  "full_fei_status": "OPEN"
+}

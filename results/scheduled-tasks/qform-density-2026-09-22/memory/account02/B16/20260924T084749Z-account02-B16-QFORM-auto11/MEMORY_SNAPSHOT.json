@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B16",
+  "title": "Projection-product interaction",
+  "run_id": "20260924T084749Z-account02-B16-QFORM-auto11",
+  "receipt_alias": "B16-20260924T084749Z-auto11",
+  "control_commit_at_invocation": "37e6b7ed845834686c4ebd0b67b694b89ffdb306",
+  "brain_head_after_handoff": "d0dd8a67f07e770639d443230a811b354a51e279",
+  "target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "result_status": "PROVED_TARGET_LEVEL_SUPPORTING_THEOREM",
+  "new_result": {
+    "name": "QFORM-SHAREDBANK-PROJECTEDSQUARE-HYPERBOLIC-CURVEDCAP-v1",
+    "statement": "If (S,U) has arbitrary joint density cap M, V is independent with density cap N, and Q=a(S+d)^2+2b(U+alpha)(V+beta)+r0 with ab nonzero, then ||p_Q||_infinity <= 6(MN)^(2/3)(|a|b^2)^(-1/3). For disjoint original-coordinate source banks with S=r^T X_I, U=u^T X_I, V=v^T X_J, this gives ||p_Q||_infinity <= 12[|a|b^2 det(G)||v||^2]^(-1/3). For the exact-rank-three core A=a rr^T+b(uv^T+vu^T) with three nonzero eigenvalues of modulus at least one, ||p_(X^TAX)||_infinity <=12.",
+    "continuity_claimed": false,
+    "source_provenance": "S and U may be dependent projections of the same original-coordinate product bank and are used only through their true joint density cap. V comes from a disjoint original-coordinate bank and is genuinely independent of the vector (S,U). No post-rotation independence or conditional projection cap is used."
+  },
+  "strict_target_witness": "Flat orthonormal sign projections S,U on one m-coordinate bank and flat V on a disjoint m-coordinate bank give Q_m=S^2+2UV with nonzero spectrum {1,1,-1}; the new theorem gives ||p_Qm||_infinity<=12 uniformly in m and all cap-one physical source laws, while physical coefficients are O(1/m) and relevant physical pair minors are O(1/m^2).",
+  "pinned_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "files": [
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+    ],
+    "applied_results": [
+      "two-dimensional product-projection joint density cap",
+      "ruled one-sheet bound p_Q(s)<=pi*sqrt(2) on the majority-sign side",
+      "twisted characteristic-function Lp bound in the sharper diffuse subcase"
+    ]
+  },
+  "partner_result_applied": {
+    "account": "account03",
+    "slot": "B16",
+    "run": "20260924T082444Z-account03-B16-QFORM-auto11-r2",
+    "result": "QFORM-THREEBANK-PROJECTEDSQUARE-HYPERBOLIC-LP-v1",
+    "next_implication_paid_in_scope": "QFORM-SHAREDBANK-PROJECTEDSQUARE-HYPERBOLIC-PREABSOLUTE-v1",
+    "scope_note": "Paid for the exact source-valid shared-square/hyperbolic normal form; not a reduction of every near-coloop survivor to that form."
+  },
+  "corrections_consumed": [
+    "QFORM-HUBSTAR-FIBERL2-MIXEDNORM-UNIVERSAL-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "arbitrary-joint coarea counterexamples and physical-minor-only compiler failures retained from live correction inbox"
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e242a1718c8fe91f9ea9b2cdfa2a7961f25cd37b",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260924T084749Z-account02-B16-QFORM-auto11/REPORT.md",
+    "report_blob": "8ad59b90ced03f99578850c129057d8771c2133a",
+    "checker_blob": "6a4c0a4efd620995339eab013d412b23fa191b8d",
+    "checker_status": "PASS"
+  },
+  "handoff": {
+    "commit": "d0dd8a67f07e770639d443230a811b354a51e279",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B16/20260924T084749Z-account02-B16-QFORM-auto11.md",
+    "blob": "664da54c44de54a887e3d379c853848419c033bd",
+    "read_back": true
+  },
+  "first_unpaid_implication": "QFORM-SHAREDBANK-NONSEPARABLE-CURVATURE-TRANSDUCER-v1",
+  "next_step": "Show that the general live near-coloop survivor either reduces source-validly to the paid dependent-planar-plus-disjoint-scalar normal form, with other coordinates entering only as shifts/translations, or convert additional non-diagonal/nonseparable same-bank quadratic curvature into a previously paid Fresnel, pair, or cross-volume resource. Never delete small same-bank terms for unbounded sources.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null,
+  "native_learned_memory_connectivity": "UNKNOWN_NOT_ASSERTED",
+  "authenticated_repository_retrieval": true,
+  "receiver_write_and_readback": true,
+  "without_verified_brain": false
+}

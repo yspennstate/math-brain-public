@@ -1,0 +1,53 @@
+[
+  {
+    "claim_id": "A059-GATE-VS-SUBFORMULA-DEPTH-LEDGER",
+    "version": 1,
+    "exact_statement": "For every finite balanced disjoint Boolean composition tree with literal leaves or a balanced stopping frontier, delta(F)=sum_internal J(v)delta(g_v)+sum_terminal J(l)delta(Sub_l), and sum_internal J(v)Lambda(g_v)<= (4+6/e)[delta(F)-sum_terminal J(l)delta(Sub_l)] in nats. The exact first-charge factorization is Lambda(F)=sum_internal A(v)sum_i alpha_vi^2 ln(1/alpha_vi^2)W1(Sub_vi)+sum_terminal A(l)Lambda(Sub_l). In contrast no finite K bounds sum_nonroot c J(c)Lambda(Sub_c) by K I(F): the rare-switch chain with depth d=2^(2k), r=3k, p=2^(-3k) has I<=5/2 and that bank/I >=2^k(1-2^(-2k))/5 for k>=2. The same Boolean family satisfies H(F)<=6(I(F)-1) in bits.",
+    "hypotheses": [
+      "Uniform finite cubes and normalized Fourier coefficients; Boolean sign functions.",
+      "Gate outputs and child/subformula outputs are balanced; physical child blocks are disjoint.",
+      "J(v) is the product of ancestor gate coordinate influences; A(v) is the product of ancestor singleton coefficients squared.",
+      "Lambda uses nats, H uses bits, delta=I-1; no depth or arity bound. No physical-restriction transfer is asserted."
+    ],
+    "statement_sha256": "74b419f16543d7eb3211f25db790f5ea6c03028d5afe8d796988e989cb6e28eb",
+    "contributors": [
+      "A059",
+      "Claude B12 lead: local Lambda/deficit lemma and target formulation"
+    ],
+    "proof_source": {
+      "run": "20261011T224320Z-account05-A059-decomposition-depth",
+      "path": "PROOF.md",
+      "sections": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A056-DISJOINT-SUBSTITUTION",
+        "version": 1,
+        "acceptance": "A091 accepted at scope; exact identities also reconstructed here"
+      },
+      "Threshold paper 38pp Proposition 7.1; elementary Fourier/Boolean derivative, Bernoulli and logarithm inequalities"
+    ],
+    "review_records": [],
+    "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "B12 lead v1 A059 test: universal sum_c J(c)Lambda(Sub_c)<=K I(F) for balanced disjoint trees"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A057",
+      "A060",
+      "A091",
+      "A090",
+      "A097",
+      "B12 lead",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B07-A034-FIBER-PHASE",
+      "version": 1,
+      "packet_id": "A034",
+      "attempt_id": "A034-BOOLEAN-GRANULARITY-FIBER-1",
+      "gap_id": "G-PHASE-COND",
+      "status": "PROVED_RESTRICTED_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every genuine Boolean f on disjoint uniform cubes X,Y whose nonzero Fourier coefficients have X-degree at most d>=1, the X-spectral marginal obeys H(p_X)<=2 I_Y(f)/ln2+2(d-1)-E_y Gamma_d(f_y), where Gamma_d is the exact nonnegative Boolean-granularity deficit. If every positive X-fiber has Fourier support at most K, then H(f)<=2 I_Y(f)/ln2+2(d-1)+log_2 K-E_y Gamma_d(f_y). If Var(f)>=nu>0 this implies the displayed dimension-independent FEI bound for fixed d,K,nu.",
+      "quantifiers": "All finite disjoint coordinate sets X,Y; independent uniform physical signs; all genuine Boolean f; integers d,K>=1 satisfying the stated degree and fiber-support hypotheses; real nu>0 when the variance consequence is invoked.",
+      "units": "bits",
+      "scope_exclusions": [
+        "Not a proof of full FEI and not a Boolean counterfamily.",
+        "No universal bound on d, K, or the variance reserve is proved.",
+        "No universal decomposition into fiber-sparse pieces is proved.",
+        "The unrestricted conditional entropy H(S_Y|S_X) remains unpaid.",
+        "No correlated physical input law is allowed."
+      ],
+      "tensor_guard": "For F=f*g on a fresh block, fiber supports multiply by |supp(ghat)| and conditional entropies add. Fixed K excludes every positive-spectral-entropy arbitrary-core tensor sequence.",
+      "next_consumers": ["A003", "A079", "A096", "B20"],
+      "independent_reviewers": ["A088", "A094"]
+    }
+  ]
+}
+

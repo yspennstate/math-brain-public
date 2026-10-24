@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260924T010811Z-account03-B02-qform-r43",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_commit_prepublication": "90750bd84d3839b7ad6174d8e9bbb47af42896fe",
+  "control_revision": "2026-09-22.15",
+  "math_repository": "yspennstate/math-open-problems",
+  "math_commit": "d298129b29fae57620ce14cf74fd516bda63ac98",
+  "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260924T010811Z-account03-B02-qform-r43/REPORT.md",
+  "result_id": "QFORM-GROUPED-TWOSTAR-LOWRANK-FUNNEL-L1-v1",
+  "new_results": [
+    "Uniform physical-Z3 tail: |phi(t)| <= min(1,4 sqrt(e) pi^(3/2) Z3^(-1/4)|t|^(-3/2)).",
+    "Spectral tube lemma: outside x2<theta E and T2<theta E, Z3>=theta^3 E^3.",
+    "Grouped energy inequality: S <= (1/4)||N||_F^2 ||B_*||_F^4.",
+    "Grouped two-star funnel: either N or B_* is theta-near-rank-one/two, or ||p_Q||inf <= 6 e^(1/3) theta^(-1/2) S^(-1/6) with genuine Fourier L1 and C0 continuity.",
+    "At r39 S>=(4/3125)V1 and theta=1/4: ||p_Q||inf <=50.8250418687 V1^(-1/6); if V1>1/4, <64.0355401123 and int|phi|<402.3471647704.",
+    "Partner hybrid: ||p_Q||inf <=2^(29/12)3^(1/4)e^(1/4)|det H0|^(-1/12)theta^(-3/8)S^(-1/8)."
+  ],
+  "partner_used": {
+    "account": "account04",
+    "slot": "B02",
+    "theorem": "QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1",
+    "commit": "0b11995430ce407a8852ac3bc5651491f2ee64f7",
+    "application": "combined partner L2 credit with the new grouped t^(-3/2) tail and optimized the frequency split"
+  },
+  "failed_mechanism_preserved": "A naive rotation of an arbitrary large rank-two star bank followed by marginalizing the kernel complement does not inherit the r36 scalar L_t^4 fiber bound: arbitrary internal quadratic curvature creates a t-dependent amplitude and rotated conditioning loses product provenance.",
+  "full_target_status": "OPEN",
+  "full_target_continuity": "OPEN",
+  "target_wide_unweighted_L1_status": "OPEN_NOT_REFUTED",
+  "new_branch_continuity": "CONTINUOUS_C0",
+  "next": "QFORM-LOWRANK-PAIRBLOCK-STARBLOCK-COUPLED-PAYMENT-v1",
+  "successor_source": "yspennstate/math-open-problems@246f7b039bd6a1411ceccfa38bf922cac02ab5dc",
+  "checks": {
+    "seed": 2026092401,
+    "cases": 3000,
+    "S_inequality_violations": 0,
+    "spectral_dichotomy_violations": 0,
+    "status": "corroborative_only"
+  }
+}

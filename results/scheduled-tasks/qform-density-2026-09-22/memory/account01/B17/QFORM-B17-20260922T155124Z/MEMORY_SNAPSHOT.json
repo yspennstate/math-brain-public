@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit": "fc1ce39df9220d4c90d43d68cf668e7f3f28f4f5",
+  "account": "account01",
+  "slot": "B17",
+  "run_id": "QFORM-B17-20260922T155124Z",
+  "classification": "AUXILIARY_ONLY / ROTATED_INFINITESIMAL_LIMIT_NO_ESCAPE",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "partner_applied": {
+    "worker": "account02/B17",
+    "theorem": "GENERAL_INFINITESIMAL_BANK_LIMIT_NO_ESCAPE",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9ef2d4cbf56e1aa3368eeaa322d09ba4d91f31cf",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260922T154450Z-account02-B17-QFORM-r11b/REPORT.md"
+  },
+  "other_dependency": {
+    "theorem": "QFORM-GAUSSIAN-FULL-NONCENTRAL-C3SQRT2-v1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260922T120821Z-account01-B17-qform-sharp-constant-v1/ADDENDUM_NONCENTRAL_GAUSSIAN.md"
+  },
+  "mathematical_change": "Projected the partner scalar Gaussian-floor theorem in every direction of an arbitrary infinitesimal tight-frame array, yielding Levy-Khintchine Gaussian covariance Gamma >= I_d/12. Conditioning on the independent jump residual then gives ||p_(Y^T B Y)||_infinity <= 3 sqrt(2) for every fixed B with at least three eigenvalues |lambda|>=1. This closes shared-coordinate rotation as an escape mechanism in the convergent infinitesimal regime.",
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6083da02d027a02b2762f1f0b955861197c17ff7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260922T155124Z/REPORT.md"
+  },
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "unpaid_implication": "Weak-limit control is not a finite-row local limit theorem; non-infinitesimal/mixed-leverage rows and finite-row density spikes remain possible witness mechanisms.",
+  "next_step": "Attack mixed-leverage arrays with one or finitely many non-infinitesimal rows plus an infinitesimal tight-frame remainder, seeking either a finite-row uniform bound or a source-valid peak above 3sqrt(2)."
+}

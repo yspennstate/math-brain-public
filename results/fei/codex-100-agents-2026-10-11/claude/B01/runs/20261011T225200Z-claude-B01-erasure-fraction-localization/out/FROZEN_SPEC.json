@@ -1,0 +1,14 @@
+{
+  "helper_version": "claude-B01-exact-v1",
+  "frozen_at_utc": "2026-10-11T22:52:00Z",
+  "actual_Boolean_family": "All labelled Boolean sign tables on n=1,2,3,4 inputs (uniform cube); parity lifts and two-cell selectors of all n<=3 seeds; two-dummy point-flip surgery on all n<=3 seeds",
+  "parameter_domain": {"exhaustive_n": [1,2,3,4], "seed_n_for_transform_checks": [1,2,3]},
+  "case_count": "2^2+2^4+2^8+2^16 = 65812 tables; 278 seeds for transform checks",
+  "symmetry_reduction": "B,H,I,Inf_i depend only on the squared spectrum, so the rigorous interval pass runs once per distinct squared-spectrum vector; Delta_i needs restriction spectra, so its rigorous pass runs once per distinct key (squared spectrum, per-coordinate unordered pair of restriction squared spectra). Both keys are exact invariants, no group action is assumed.",
+  "arithmetic": "Integer Walsh transform; masses as exact integers over 4^n; every log is log2 of a positive integer <= 2*4^n, enclosed by mpmath interval arithmetic at 120 bits; statistics are interval sums; extremal values also reported as exact rational combinations of log2 primes",
+  "statistics": ["max H/I", "max B/I", "max_f min_{i:Inf_i>0} B_i/Inf_i", "max_f min_i Delta_i/Inf_i", "max_f B_{i*}/Inf_{i*} at a max-influence coordinate i*", "checks: B_i<=h2(Inf_i), JS_i<=(2/ln2)min(Inf_i,1-Inf_i), JS_i<=4min(Inf_i,1-Inf_i), Delta_i=B_i+JS_i"],
+  "memory_estimate_MB": 150,
+  "max_runtime_seconds": 900,
+  "automatic_dimension_escalation": false,
+  "purpose": "Certified small-dimension calibration of the good-coordinate and aggregate-erasure constants entering C018 and the lead's localization theorem; independent re-implementation of A001/A002 load-bearing identities. Finite checks do not prove universal FEI."
+}

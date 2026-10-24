@@ -1,0 +1,13 @@
+# P0110 referee report — w380 — 2026-10-10
+
+I recovered the exact historical source as Question 22 of the Auffinger-Damron-Hanson FPP survey and kept current openness **UNKNOWN**. The 7 September ranking is abbreviated; Chatterjee's relation assumes exponent existence and does not exhibit a fixed iid law. Local named attempts H/I, the owner open-problem folder, and the relevant control-file paths yielded no P0110 solution or retirement record; this is a bounded check, not an exhaustive novelty certificate.
+
+I independently checked w378's sharp forced-straight threshold, fixed-Uniform-law cutoff and law-uniform variance-contraction obstruction, and w379's finite detour and almost-sure linear axial gap. All five verdicts are KEEP with the exact scopes in `REVIEW_PACKET.md`. The hardest remaining P0110 step is to establish compatible fluctuation and wandering exponents for **one fixed admissible iid law**. The packet neither proves nor refutes P0110.
+
+Measurement: `python -X utf8 reproduce.py` (bounded by `COMPUTE_GATE.json`) enumerated **256** two-point configurations; exactly **1** is the heavy-axis/light-detour event, yielding $q=1/256$ and a proved linear gap lower bound $1/1280$ for $n=3$ blocks. Independent rational calculations give variance ratio **1** for Uniform$[1,5/4]$ at $n=2,M=2$, and at $n=9$ the explicit detour event has probability $40^{-20}$ and saves at least $1/8$. Output: `REPRODUCTION.json`. Local bundle shape validation found **4 entries, 2 supported refutes relations** after removal of overlap with w375/w377; this is a draft, with no ingestion or retrieval claim.
+
+What could go wrong: a later primary result may have resolved the historical question; the bounded search cannot rule that out. The source survey has PDF versions that number the same relation (4.13) and (4.19). Our independent mathematical check is separate from the coordinator's final served-model and account-provenance gate. The w379 lemma extends the neighboring triad's bounded-positive detour result to finite nonnegative laws; do not ingest a duplicate card if the coordinator has already generalized that card.
+
+Apply: the reviewer applies `patches/01_reviewed_bundle.diff` to stage `bundle_001.json` under `~/math-brain-inbox/w380/`, using a complete `.part` write then rename, and separately considers `patches/02_hook_proposal.diff`; the integrator validates and ingests only after provenance review.
+
+NEXT: ask the next triad referee to check any genuinely new lemma from this lane; otherwise pursue a fixed-law exponent-existence route, with definition and centering pinned first.

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "run_id": "B19-20260922T071535Z-r46",
+  "account": "account04",
+  "slot": "B19",
+  "target": "POS3",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "parent_status": "OPEN_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "sources": [
+    {
+      "role": "latest_complete_team_lead",
+      "path": "proofnet24/collective-POS3/account04/B10/20260922T071036Z-B10-POS3-r17/REPORT.md",
+      "blob": "61c94984acd303d2fbed96f2f3bb77664a51297b"
+    },
+    {
+      "role": "latest_complete_assigned_partner",
+      "account_slot": "account01/B10",
+      "run_id": "20260922T061815Z-b10-pos3-r11",
+      "blob": "8530091b5d47d9ae4c431026cabb70a6a6afde5d",
+      "use": "same-anchor TP2 fork budget retained; cross-anchor PQD counterexample respected"
+    },
+    {
+      "role": "same_slot_prior_lemma",
+      "path": "proofnet24/collective-POS3/account04/B19/B19-20260922T031150Z-r46/REPORT.md",
+      "blob": "9079d05dcdf18d3afdb391d39148ed8c4653768d"
+    }
+  ],
+  "new_claims": [
+    "Charged equal-predecessor exit: with incoming minority >2/33, one application of the lead dichotomy produces an unequal-predecessor extreme pair with minority >2/33. Span descent preserves the incoming event by containment; the two-cover fork uses same-anchor TP2 to give one reversal >1-sqrt(2/3)>2/33.",
+    "Order-dual charged equal-successor exit.",
+    "Every selected high F1 channel forces a charged lower-distinguisher exit; every selected high F4 channel forces a charged upper-distinguisher exit.",
+    "Therefore the lead r17 coherent same-ray three-antichain gate is eliminated into the multi-distinguisher branch without dropping below the certified 2/33 packet scale.",
+    "If neither charged exit is taken, the selected high-packet types are forced to F2/F3, with r_L lessdot a lessdot r_R and opposite strong-order rays. Excluding high F1/F4 leaves total assigned F2 and F3 masses each >4E/33."
+  ],
+  "first_unpaid_implication": "F2/F3 DISCREPANCY-CHAIN TRANSPORT: use width three and the heavy-slice/path structure to turn the opposite-ray F2/F3 side packets into a balanced pair, span descent, autonomous/ordinal reduction, or a charged controlled exit, without using the refuted cross-anchor PQD shortcut.",
+  "report_path": "proofnet24/collective-POS3/account04/B19/B19-20260922T071535Z-r46/REPORT.md",
+  "report_blob": "26c2eab1c40a8da73357764efd0aab4160391e07",
+  "code_used": false,
+  "privacy_review": "scoped mathematical claims and repository-relative provenance only"
+}

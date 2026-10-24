@@ -1,0 +1,12 @@
+q1 = {('L', 'L'): Fraction(1, 2), ('L', 'M'): Fraction(1, 2), ('M', 'L'): Fraction(1, 2), ('M', 'M'): Fraction(1, 2)}
+q2 = {('M', 'M'): Fraction(1, 2), ('M', 'R'): Fraction(1, 2), ('R', 'M'): Fraction(1, 2), ('R', 'R'): Fraction(1, 2)}
+alpha,beta = 1/2 1/2
+shared-terminal loop probability r = 1/2
+outer p_LL formula/direct = 3/4 3/4
+outer p_LR formula/direct = 1/4 1/4
+direct P(full interior | outer LR) = 4/21
+series P(full interior | outer LR) = 4/21
+R1,R2 = 2 2
+escape_L,escape_R,1-r = 1/4 1/4 1/2
+generic simple-graph lower bound 2/(n-1)^2 = 1/18
+EXACT_CHECK_PASS

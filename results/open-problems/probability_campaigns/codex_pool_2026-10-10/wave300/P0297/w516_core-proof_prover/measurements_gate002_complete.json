@@ -1,0 +1,136 @@
+{
+  "gate_id": "w516-P0297-gaussian-response-002",
+  "command": "python -X utf8 ./measure_response.py",
+  "method": "deterministic Simpson quadrature; no Monte Carlo or LQG extrapolation",
+  "finite_beta_cases": [
+    {
+      "xi": 0.2,
+      "beta": 0.5,
+      "grid_points": 25921,
+      "expected_log_soft_min": -1.6794053927463546,
+      "expected_direct_derivative": 0.030208896655724102,
+      "expected_corrected_response": 0.030208896655725508,
+      "expected_within_term": 0.22825610430263346,
+      "expected_switch_term": 0.07721162102400715,
+      "finite_difference": 0.030208896469266035,
+      "ibp_absolute_error": 1.4051260155412137e-15,
+      "finite_difference_error": 1.864580677357619e-10
+    },
+    {
+      "xi": 0.2,
+      "beta": 2.0,
+      "grid_points": 25921,
+      "expected_log_soft_min": -0.05303682746189603,
+      "expected_direct_derivative": -0.02593034581074183,
+      "expected_corrected_response": -0.025930345810744975,
+      "expected_within_term": 0.201338218468209,
+      "expected_switch_term": 0.33098994752192823,
+      "finite_difference": -0.02593034590551589,
+      "ibp_absolute_error": 3.146788385421928e-15,
+      "finite_difference_error": 9.477406012758927e-11
+    },
+    {
+      "xi": 0.2,
+      "beta": 8.0,
+      "grid_points": 25921,
+      "expected_log_soft_min": 0.2896789442318532,
+      "expected_direct_derivative": -0.16330131756523308,
+      "expected_corrected_response": -0.1633013175652376,
+      "expected_within_term": 0.1464236885581573,
+      "expected_switch_term": 0.9629302763843266,
+      "finite_difference": -0.16330131258674344,
+      "ibp_absolute_error": 4.524158825347513e-15,
+      "finite_difference_error": 4.978489648310713e-09
+    },
+    {
+      "xi": 0.8,
+      "beta": 2.0,
+      "grid_points": 6561,
+      "expected_log_soft_min": -0.09171392460688002,
+      "expected_direct_derivative": -0.09580262346268878,
+      "expected_corrected_response": -0.09580262346268863,
+      "expected_within_term": 0.17419094561827567,
+      "expected_switch_term": 0.2939442249466355,
+      "finite_difference": -0.0958026231495492,
+      "ibp_absolute_error": 1.5265566588595902e-16,
+      "finite_difference_error": 3.1313958370748907e-10
+    }
+  ],
+  "two_edge_cases": [
+    {
+      "xi": 0.7,
+      "beta": 2.0,
+      "beta_expected_B": 0.6093760985491254,
+      "finite_beta_derivative": -0.4265632689843878,
+      "zero_temperature_derivative": -0.5641895835477563,
+      "baseline_without_switch": 0.0,
+      "baseline_absolute_error": 0.5641895835477563,
+      "corrected_absolute_error": 0.1376263145633685,
+      "omitted_logistic_tail_bound": 6.8482206230180005e-18
+    },
+    {
+      "xi": 0.7,
+      "beta": 10.0,
+      "beta_expected_B": 0.7929098432944754,
+      "finite_beta_derivative": -0.5550368903061328,
+      "zero_temperature_derivative": -0.5641895835477563,
+      "baseline_without_switch": 0.0,
+      "baseline_absolute_error": 0.5641895835477563,
+      "corrected_absolute_error": 0.009152693241623489,
+      "omitted_logistic_tail_bound": 6.8482206230180005e-18
+    },
+    {
+      "xi": 0.7,
+      "beta": 50.0,
+      "beta_expected_B": 0.8054447409676081,
+      "finite_beta_derivative": -0.5638113186773256,
+      "zero_temperature_derivative": -0.5641895835477563,
+      "baseline_without_switch": 0.0,
+      "baseline_absolute_error": 0.5641895835477563,
+      "corrected_absolute_error": 0.000378264870430689,
+      "omitted_logistic_tail_bound": 6.8482206230180005e-18
+    },
+    {
+      "xi": 0.7,
+      "beta": 250.0,
+      "beta_expected_B": 0.8059634749847111,
+      "finite_beta_derivative": -0.5641744324892978,
+      "zero_temperature_derivative": -0.5641895835477563,
+      "baseline_without_switch": 0.0,
+      "baseline_absolute_error": 0.5641895835477563,
+      "corrected_absolute_error": 1.5151058458506839e-05,
+      "omitted_logistic_tail_bound": 6.8482206230180005e-18
+    },
+    {
+      "xi": 0.7,
+      "beta": 1250.0,
+      "beta_expected_B": 0.8059842535322904,
+      "finite_beta_derivative": -0.5641889774726032,
+      "zero_temperature_derivative": -0.5641895835477563,
+      "baseline_without_switch": 0.0,
+      "baseline_absolute_error": 0.5641895835477563,
+      "corrected_absolute_error": 6.060751530645447e-07,
+      "omitted_logistic_tail_bound": 6.8482206230180005e-18
+    }
+  ],
+  "controls": [
+    {
+      "name": "common Gaussian mode invariance",
+      "maximum_error": 3.885780586188048e-15
+    },
+    {
+      "name": "single deterministic path has no switching term",
+      "switching": 0.0
+    }
+  ],
+  "prior_gate_receipt": "measurements_gate001_partial.json",
+  "mathematical_proof": "ATTEMPT.md L1-L5; author-proved, independent review pending",
+  "comparison_bound": {
+    "xi_critical_upper": 0.41886116991581024,
+    "interpretation": "author-derived comparison bound; no novelty claim"
+  },
+  "elapsed_script_seconds": 0.5407477000262588,
+  "assertions_passed": true,
+  "maximum_ibp_absolute_error": 4.524158825347513e-15,
+  "maximum_finite_difference_error": 4.978489648310713e-09
+}

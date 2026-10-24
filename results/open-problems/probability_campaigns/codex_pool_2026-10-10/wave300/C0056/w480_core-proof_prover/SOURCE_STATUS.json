@@ -1,0 +1,56 @@
+{
+  "candidate_id": "C0056",
+  "checked_date": "2026-10-10",
+  "ranking_title": "Extended states for the three-dimensional Anderson model at weak disorder",
+  "ranking_tier": 5,
+  "ranking_status": "attempted_un",
+  "ranking_reason": "3D Anderson delocalisation",
+  "ranking_evidence": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 543,
+    "quote": "5,C0056,Extended states for the three-dimensional Anderson model at weak disorder,attempted_un,3D Anderson delocalisation"
+  },
+  "exact_original_statement": "Prove existence of absolutely continuous spectrum (delocalised states) for the random Schrodinger operator -Delta + lambda V on Z^3 at small disorder lambda, and GOE local statistics for its finite-volume restriction.",
+  "current_openness": "UNKNOWN",
+  "parent_problem_solved": false,
+  "served_model_evidence": "UNAVAILABLE: no response-side model identity supplied; requested settings are not evidence.",
+  "review_state": "submitted_to_named_referee; independent verdict pending",
+  "bundle_state": {
+    "prepared": true,
+    "submitted": true,
+    "reviewed": false,
+    "ingested": false,
+    "retrievable": false
+  },
+  "primary_source": {
+    "author": "Paul Bourgade",
+    "title": "Random band matrices",
+    "url": "https://arxiv.org/pdf/1807.03031",
+    "locator": "Section 2.1, printed page 7; page index 6",
+    "model": "H=Delta+alpha*V; iid centered potentials of variance 1; discrete hopping spectrum [-2d,2d].",
+    "finite_volume": "Periodic boundary conditions on the N-side box; microscopic energy scale N^d. Source does not fully formalize a fixed-energy GOE theorem.",
+    "short_quote": "there is no clear understanding about how extended states imply GOE spectral statistics",
+    "source_status_date": "2018 (historical status only)"
+  },
+  "working_statement": "Uniform-law spectral subtarget: H_lambda=-A+lambda*U on l2(Z^3), iid U uniform[-1,1], fixed lambda>0 before eta->0. Seek nonzero purely absolutely continuous spectral restriction to a deterministic open interval for all fixed sufficiently small lambda.",
+  "normalization_bridge": "The source variance-one uniform law is V=sqrt(3)*U; alpha=lambda/sqrt(3). Hopping sign is reversed by the bipartite gauge on Z^3; a Laplacian diagonal constant translates energies.",
+  "full_target_components": {
+    "spectral_component": "conditional reduction prepared; LG unproved",
+    "GOE_component": "not solved or reduced by this lane"
+  },
+  "recent_primary_claim": {
+    "date": "2026-09-23",
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/build/01-introduction.tex",
+    "law": "iid uniform[-1,1]",
+    "scope": "Claims nonzero pure a.c. spectrum on a fixed interval for each fixed d>=3 at sufficiently small fixed coupling; no GOE conclusion in the main theorem.",
+    "independent_proof_audit": "not performed"
+  },
+  "prior_attempts": [
+    "C0056-A001"
+  ],
+  "owner_solved_retired_check": "Exact C0056 intake and export cards were inspected; both retain unverified/attempted-unsolved status. No exhaustive owner-archive certification or current solved-status certification is claimed.",
+  "canonical_store_check": "Read-only exact C0056 IDs queried in the explicitly assigned active population DB; receipt in sources/canonical_store_c0056.json. A separate canonical path under math-research-brain/local was not located in targeted pilot directories. No writes or solved-status certification.",
+  "receipts_path": "~\\brain_workers\\w480\\sources\\SOURCE_RECEIPTS.json",
+  "formal_check_receipt": null,
+  "integration_not_run": "The current task prohibits unreviewed live-store changes; a concept-only draft is prepared for the validating coordinator."
+}

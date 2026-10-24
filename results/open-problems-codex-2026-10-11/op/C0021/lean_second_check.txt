@@ -1,0 +1,20 @@
+2026-10-12
+Command: lake env lean ~/brain_workers/TRIO_1011/op/C0021/TransportFinite.lean
+Working directory: ~/lean_verify
+Exit code: 0
+Shared Lean slot wait: 1526 seconds; slot 0.
+The file was extended while it was queued. The printed bounded_map_moments and
+median_revealment_gap facts confirm that the final extended revision was checked.
+
+Output:
+'C0021Transport.monotone_pairs' depends on axioms: [propext]
+'C0021Transport.total_distance' depends on axioms: [propext]
+'C0021Transport.bounded_map_moments' depends on axioms: [propext]
+'C0021Transport.median_depth_three_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'C0021Transport.median_revealment_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Eight finite-map facts use decide +kernel. Six rational facts use norm_num.
+Imports: Mathlib.Data.Fintype.Basic and Mathlib.Tactic.NormNum only.
+No sorry, no native_decide, no import Mathlib.
+This check does not formalize the general martingale proof, the recursive
+coupling proof, higher-moment asymptotics, or the Python Bellman/transport tables.

@@ -1,0 +1,112 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261012T001045Z-account01-B01-constant-unit-a004",
+  "stream": "B01",
+  "packet_id": "A004",
+  "packet_ids": ["A004"],
+  "gap_id": "G-BOOLEANITY",
+  "related_gap_ids": ["G-R-SELECT"],
+  "attempt_id": "A004-CONSTANT-UNIT-1",
+  "bounded_objective": "Freeze all FEI units and endpoint conventions, audit the additive constants in the A003 equivalences, and identify the first unsupported improvement without confusing local bridge sharpness with global optimal-constant sharpness.",
+  "method": "Exact sign/indicator and character-translation ledger; endpoint calculations; pairwise entropy decomposition; bent Boolean seed with one-point-flipped selector child; exact Walsh verification.",
+  "prior_status": "A003 proved C_FEI <= C_step <= C_FEI+2/ln2 and C_L <= C_FEI <= C_L+3/ln2, but the additive losses had not been tested for sharpness on genuine Boolean functions. A004 deliverables were open.",
+  "mathematical_delta": "Froze the conventions and all imported constants. Proved that the 1/ln2, 2/ln2, and 3/ln2 fixed-coordinate bridge losses are simultaneously asymptotically sharp on a genuine bent-one-point-flip selector family. Therefore any smaller DOWN-to-FEI additive loss needs a nonlocal/existential-coordinate theorem; global sandwich sharpness remains open.",
+  "deliverable_status": {
+    "A004-D1": "COMPLETE_PENDING_INDEPENDENT_REVIEW: CONVENTIONS.json",
+    "A004-D2": "COMPLETE_PENDING_INDEPENDENT_REVIEW: ENDPOINT_CHECKS.md",
+    "packet_target": "SOURCE_COMPLETE_BASELINE_AND_LOCAL_SHARPNESS_CLAIM_PENDING_REVIEW"
+  },
+  "mathematical_status": "LOCAL_BRIDGE_CONSTANTS_SHARP_PENDING_REVIEW; GLOBAL_FEI_CONSTANT_IMPROVEMENT_OPEN; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "B01-A003-STEP-EQUIVALENCE-v1",
+    "B01-A003-DOWNWARD-EQUIVALENCE-v1"
+  ],
+  "claims_created_or_changed": [
+    "B01-A004-CONVENTION-LEDGER-v1",
+    "B01-A004-LOCAL-BRIDGE-SHARPNESS-v1"
+  ],
+  "source_plan": {
+    "assignment_path": "reports/fei-2026-10-11/assignments/B01.json",
+    "assignment_blob": "ac038a028831d59ad053dd56b2b527e2a71ffdee",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "current_status_blob": "74f6ae761739455083804505ba0e0fd7aaf2f3e2"
+  },
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/fourier-entropy-threshold-functions",
+      "commit": "b38ba0ab49618ccbe6d1518a34c141dcec9f247c",
+      "path": "paper/main.tex",
+      "blob": "1a9af8c62a32566a6ad1b7323a84d103a8375e93"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "87f7c6267e56e7a0eb5b8dfd572a6eaaecae6907",
+      "path": "reports/fei-2026-10-11/runs/B01/20261011T210729Z-account01-B01-minimal-target-a003/",
+      "report_blob": "85308728bbfffe5cd3afd554cae783110fc57035"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "69fdc6d41576bc4921ba44a8acce696103bf6a81",
+      "path": "reports/fei-2026-10-11/runs/B01/20261011T230353Z-account01-B01-endpoint-admission-a005/",
+      "report_blob": "a32f008d392e999167eef98e4656dea03ad643fc"
+    }
+  ],
+  "next_consumers": ["A001", "A002", "A016", "A018", "A024", "A036", "A042", "A046", "A056", "A061", "A062", "A068", "A072", "A076", "A081", "A086", "A094", "B20"],
+  "independent_reviewers": ["A086", "A094"],
+  "next_action": "Independently reconstruct the bent-selector counts and U,V limits. Then attack the existential inequality min_i Delta_iH/I_i <= L/I+c for c<3/ln2; do not retry the sharp fixed-coordinate scalar bound.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "The two A004 claims require independent A086/A094 review.",
+    "Fixed-coordinate sharpness does not decide whether existential selection lowers the global additive loss.",
+    "No dimension-independent bound on C_L, C_step, or the forest residual is proved.",
+    "Full FEI remains open."
+  ],
+  "validation": {
+    "command": "python3 verify_a004.py",
+    "observed_runtime_seconds": 0.1,
+    "random_seed": null,
+    "arithmetic": "exact Fraction Walsh arithmetic for Boolean identities; binary64 only for displayed convergent values",
+    "truth_tables": 256,
+    "character_shifts_per_truth_table": 8,
+    "bent_dimensions_exact": [2, 4, 6, 8],
+    "asymptotic_dimensions_displayed": [2, 4, 6, 8, 10, 20, 40],
+    "exact_and_numeric_checks": 5908,
+    "script_sha256": "d9dfc8ac206f048b77c596ed2c8fa93064acefc740717a32da40c8cb7cd3e828",
+    "output_sha256": "c485fb2ccacda64c2b7a60525e24b4e649413453e07603871658db692e70041d",
+    "status": "PASS"
+  },
+  "literature": {
+    "primary_sources_checked": [
+      "Owner-approved threshold paper at b38ba0ab49618ccbe6d1518a34c141dcec9f247c"
+    ],
+    "novelty_claim": "NONE; bent functions and one-point surgery are standard. The campaign claim is only the exact source-bound local-constant audit."
+  },
+  "delivery_status": {
+    "canonical": {
+      "status": "EIGHT_FILE_SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-open-problems",
+      "core_complete_commit": "1b4a2d7c36491f5ad8492cc59d296712639a59ef",
+      "path": "reports/fei-2026-10-11/runs/B01/20261012T001045Z-account01-B01-constant-unit-a004/",
+      "verified_files": 8,
+      "report_sha256": "e3ef1f40d404785eb768107c498cbf90504c893514a147720d960112e75800b8"
+    },
+    "brain_mirror": {
+      "status": "EIGHT_FILE_SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-research-brain",
+      "core_complete_commit": "0e92a5b43d93b16519fd28bfc0690a387ad66daa",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B01/20261012T001045Z-account01-B01-constant-unit-a004/",
+      "verified_files": 8,
+      "report_sha256": "e3ef1f40d404785eb768107c498cbf90504c893514a147720d960112e75800b8"
+    },
+    "independent_review": "NOT YET; A086/A094 requested",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {
+    "model": "Codex as exposed by this run",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  }
+}

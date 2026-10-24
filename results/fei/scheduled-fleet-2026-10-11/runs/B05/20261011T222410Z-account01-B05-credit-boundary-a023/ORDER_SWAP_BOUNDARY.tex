@@ -1,0 +1,57 @@
+\section*{Order-swap credit boundary for Boolean one-point defects}
+
+Let $b:\{0,1\}^n\to\{-1,1\}$ satisfy $b(0)=1$, let
+$b'=b-2\mathbf 1_{\{0\}}$, and let $\delta=2^{-n}$.  Put
+\[
+ \phi(t)=t\log_2(1/t),\qquad
+ \Psi(a,e)=\phi(a^2)+\phi(e)-\phi(a^2+e).
+\]
+The conditional-label selector packet of the fresh selector between $b$ and
+$b'$ is
+\[
+ L_n(b)=\sum_{S\subseteq[n]}
+ \Psi(\widehat b(S)-\delta,\delta^2).
+\]
+If coordinate $i$ is queried first, its branch excluding the origin has zero
+remaining selector packet.  On the surviving branch,
+$\widehat{b_0}(T)=\widehat b(T)+\widehat b(T\cup\{i\})$.  Hence
+\[
+ \Gamma_i(b)=L_n(b)-\frac12L_{n-1}(b_0)
+ =\sum_{T\not\ni i}G_\delta(x_T,y_T),
+\]
+where
+\[
+ x_T=\widehat b(T)-\delta,\quad
+ y_T=\widehat b(T\cup\{i\})-\delta,
+\]
+and
+\[
+ G_\delta(x,y)=\Psi(x,\delta^2)+\Psi(y,\delta^2)
+ -\frac12\Psi(x+y,4\delta^2).
+\]
+
+For the AND-type gate $q_n(0)=1$ and $q_n(x)=-1$ for $x\ne0$, all
+coordinates have
+\[
+ \Gamma_n=F(\delta)-\frac12F(2\delta)+2\delta^2,
+ \qquad F(x)=\Psi(1-x,x^2),
+\]
+and
+\[
+ \Gamma_n<0\quad(n\ge3),\qquad
+ \Gamma_n=\delta^2(-2n+6-\log_2e)+O(\delta^3).
+\]
+The cases $n=3,4$ are certified by rigorous rational logarithm intervals;
+for $n\ge5$ the elementary bound in the accompanying report proves the
+sign.
+
+For the unequal tensor $q_4\otimes q_5$, exact rational interval evaluation
+gives
+\[
+ \Gamma_{q_4\text{-coordinate}}<-0.00022,\qquad
+ \Gamma_{q_5\text{-coordinate}}<-0.00026.
+\]
+Thus every one of its nine physical coordinates has negative first-step
+credit.  This refutes universal or existential nonnegative first-step credit
+at unchanged hypotheses, but does not refute signed multi-step amortization
+or FEI.

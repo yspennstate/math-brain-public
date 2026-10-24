@@ -1,0 +1,54 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261011T222410Z-account01-B05-credit-boundary-a023",
+  "claims": [
+    {
+      "claim_id": "B05-A023-ORDER-SWAP-CREDIT-BOUNDARY",
+      "version": 1,
+      "label": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "exact_statement": "For every n and every Boolean b on {0,1}^n with b(0)=1, let b' flip only the origin, delta=2^(-n), Psi(a,e)=phi(a^2)+phi(e)-phi(a^2+e), and L_n(b)=sum_S Psi(bhat(S)-delta,delta^2). For physical coordinate i, the data-before-selector order-swap credit Gamma_i=L_n(b)-L_(n-1)(b restricted to x_i=0)/2 equals sum_{T not containing i}[Psi(x_T,delta^2)+Psi(y_T,delta^2)-Psi(x_T+y_T,4delta^2)/2], where x_T=bhat(T)-delta and y_T=bhat(T union {i})-delta. This total need not be nonnegative. For q_n(0)=1 and q_n(x)=-1 otherwise, Gamma_i<0 for every n>=3 and every i, with Gamma_i=delta^2(-2n+6-log2(e))+O(delta^3). For the unequal tensor q_4 tensor q_5, all nine physical coordinates have negative credit; rigorous intervals give Gamma<-0.00022 in the q_4 factor and Gamma<-0.00026 in the q_5 factor.",
+      "hypotheses": [
+        "uniform physical Boolean cube",
+        "genuine Boolean background",
+        "single origin flip",
+        "fresh physical selector",
+        "conditional-label packet L only",
+        "entropy in bits"
+      ],
+      "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "stable_gap_id": "B05_RARE_REFUNDS",
+      "obstruction_id": "O-B05",
+      "contributors": ["account01/B05"],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "path": "reports/fei-2026-10-11/runs/B05/20261011T222410Z-account01-B05-credit-boundary-a023/REPORT.md"
+      },
+      "dependencies": [
+        {
+          "claim_id": "B05-A023-BENT-DATA-PREFIX-TELESCOPE",
+          "version": 1,
+          "role": "positive mechanism whose universal extension is delimited",
+          "commit": "6cb946b93c2506310f15deda852cc40cd4cd2181"
+        },
+        {
+          "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+          "version": 1,
+          "role": "accepted rare-defect baseline",
+          "commit": "80cc2e5027efa56d79c4ecdf7d4949759ef2068b"
+        }
+      ],
+      "refutes": [
+        "Every Boolean one-point-defect selector pair has a physical data coordinate with nonnegative first data/selector order-swap credit.",
+        "The bent data-prefix nonnegative-credit proof extends at unchanged hypotheses to arbitrary unequal prime factors."
+      ],
+      "does_not_refute": [
+        "signed multi-step amortization",
+        "existence of a different global stopping-tree potential",
+        "the Fourier Entropy-Influence conjecture"
+      ],
+      "next_consumers": ["A021", "A024", "A025", "A027", "A028", "A036", "A064", "A087", "A094", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN",
+  "independent_review": "PENDING"
+}

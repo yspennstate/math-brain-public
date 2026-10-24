@@ -1,0 +1,13 @@
+{
+  "helper_version": "A016-bent-code-v1",
+  "family": "F_{a,m}=product_{j=1}^a [g_m(y_j)-2 x_j 1{y_j=0}], g_m=(-1)^(sum_k y_{2k-1}y_{2k}), binary fair inputs, disjoint blocks",
+  "domain": {"m": [2,4,6], "a": [1,2]},
+  "case_count": "6 tensor families; independent full truth tables on n=a(m+1)<=14; exact size/inclusion distributions and literal one-root queue interval costs",
+  "symmetry": "No Boolean truth-table reduction. Tensor factors use disjoint labeled coordinates; independence permits exact polynomial convolution of spectral size and inclusion laws.",
+  "arithmetic": "Integer Walsh transform, Fraction probabilities/influences, dyadic algebraic fifth-root certificates and rational atanh-log intervals with explicit remainder",
+  "memory_estimate_mb": 40,
+  "maximum_runtime_seconds": 60,
+  "randomness": "none",
+  "automatic_dimension_escalation": false,
+  "code_definition": "flat whole-set mask n bits; separate one-root conditioned queue with one full support ordered by blocks (selector then m data), gamma=6/5, size probability 1/[s(s+1)], no-child probability 1/2, actual elementary-symmetric subset normalizer; empty atom paid separately"
+}

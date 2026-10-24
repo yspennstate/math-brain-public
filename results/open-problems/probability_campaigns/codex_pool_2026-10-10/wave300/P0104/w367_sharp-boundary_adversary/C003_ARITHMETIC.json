@@ -1,0 +1,35 @@
+{
+  "command": "python -X utf8 finalize_packet.py",
+  "checks": [
+    {
+      "epsilon": "1/4",
+      "window_endpoint": 8,
+      "exact_passage_variance": "1/24",
+      "theta": "2/3",
+      "necessary_prefactor_if_onset_in_window": 2
+    },
+    {
+      "epsilon": "2/27",
+      "window_endpoint": 27,
+      "exact_passage_variance": "1/81",
+      "theta": "2/3",
+      "necessary_prefactor_if_onset_in_window": 3
+    },
+    {
+      "epsilon": "1/500",
+      "window_endpoint": 1000,
+      "exact_passage_variance": "1/3000",
+      "theta": "2/3",
+      "necessary_prefactor_if_onset_in_window": 10
+    },
+    {
+      "epsilon": "1/500000",
+      "window_endpoint": 1000000,
+      "exact_passage_variance": "1/3000000",
+      "theta": "2/3",
+      "necessary_prefactor_if_onset_in_window": 100
+    }
+  ],
+  "status": "PASS",
+  "scope": "Closed-form rational arithmetic only; no new experiment or asymptotic estimate."
+}

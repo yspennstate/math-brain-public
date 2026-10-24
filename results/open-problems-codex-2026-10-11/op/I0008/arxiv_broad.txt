@@ -1,0 +1,1086 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/72qW3BslpQBEbZRu5q6++AP51ts</id>
+  <title>arXiv Query: search_query=all:gradient AND all:Gibbs&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-10-11T21:39:39Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:gradient+AND+all:Gibbs&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>348</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.09882v1</id>
+    <title>Simulated annealing and Weak Poincaré inequalities with inverse-polynomial accuracy for the Sherrington-Kirkpatrick model</title>
+    <updated>2026-10-07T11:41:35Z</updated>
+    <link href="https://arxiv.org/abs/2610.09882v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.09882v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study sampling from the Gibbs distribution of the Sherrington-Kirkpatrick (SK) model with Glauber dynamics. For every fixed inverse temperature $0\leqβ&lt;1$ and every fixed $M,D&gt;0$, we give a polynomial-time simulated annealing algorithm whose output distribution is within $n^{-M}$ total-variation distance of the Gibbs distribution, with probability at least $1-n^{-D}$ over the interaction matrix. The algorithm starts from uniform product spins and uses Glauber dynamics along an increasing inverse-temperature schedule. The same approach also yields partition-function estimates with relative error $n^{-M}$. The key ingredient is a quantitative weak Poincaré inequality.
+  Building on the stochastic-localization approach to weak Poincaré inequalities [Davies, Lee, Sandhu, and Shi, arXiv:2607.08160, 2026], we use Gaussian isoperimetry to directly compare exact stochastic localization paths. Our comparison tolerates failures of local Lipschitz continuity of the posterior mean by controlling their accumulated cost.
+  The local Lipschitzness comes from approximating the posterior means by stationary points of the Thouless-Anderson-Palmer (TAP) free energy in locally strongly convex regions located by approximate message passing, a paradigm introduced by algorithmic stochastic localization [El Alaoui, Montanari, and Sellke, 2025; Celentano, 2024]. The approximation errors are roughly characterized by the validity of the TAP gradient equations, but in a different coordinate. To show that the errors rarely accumulate too much, we need a strong concentration control. A direct argument would require solving a variant of an open problem by Talagrand [2010, Research Problem 1.7.9]. We bypass this open problem with an intermediate conditioning step and transfer the control back by establishing the stability of the TAP gradient under deletion of coordinates.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-07T11:41:35Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Zhe Hou</name>
+    </author>
+    <author>
+      <name>Jingcheng Liu</name>
+    </author>
+    <author>
+      <name>Yixiao Yu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.09261v1</id>
+    <title>A Sensitivity-based Framework for Calibrating Coupled Ordinary Differential Equations under Model Discrepancy</title>
+    <updated>2026-10-07T00:51:15Z</updated>
+    <link href="https://arxiv.org/abs/2610.09261v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.09261v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Coupled systems of ordinary differential equations (ODEs) are widely used to model complex physical and biological processes. In these applications, ODE model parameters must be calibrated to field data to enable prediction and parameter inference. In practice, the governing ODEs are an imperfect approximation to the true system, leading to non-negligible model discrepancy that must be incorporated to avoid biased parameter estimates. However, it is well known that highly flexible discrepancy models can confound discrepancy and simulator parameters, leading to poor identifiability. As a result, practitioners often must impose problem-specific prior constraints to adequately regularize the discrepancy, which can be challenging and cumbersome. In this work, we propose a novel calibration framework for coupled, multi-output ODE systems that enforces automatic, model-structural constraints on the discrepancy, improving identifiability without requiring application-specific discrepancy priors. Forward-model gradients are computed via sensitivity equations, solved jointly with the ODE system as a coupled initial value problem. Posterior inference is performed using an adaptive Metropolis-within-Gibbs sampler tailored to the resulting constrained posterior. We demonstrate the approach on three model systems: a mass-spring oscillator, a model of infectious disease spread, and a neuron firing model. We show that our method leads to improved parameter inference and predictive accuracy compared to standard calibration approaches.</summary>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-07T00:51:15Z</published>
+    <arxiv:comment>33 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.AP"/>
+    <author>
+      <name>Mitchel J. Colebank</name>
+    </author>
+    <author>
+      <name>William Consagra</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.08963v1</id>
+    <title>On KL-Regularized Policy Optimization</title>
+    <updated>2026-10-06T18:30:42Z</updated>
+    <link href="https://arxiv.org/abs/2610.08963v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.08963v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Asynchronous reinforcement learning (RL) for large language model (LLM) agents trains one policy on trajectories generated by another: rollouts come from stale checkpoints, and the inference engine's probabilities differ from the trainer's even at identical parameters. Standard remedies either clip importance ratios, which biases the update, or, as in GRPO, sample a group of responses per prompt, which is costly when episodes are long. We propose KL-Regularized Policy Optimization (KLPO), a framework that anchors the KL regularizer at the sampler. The regularized improvement step then has a closed-form Gibbs solution, and KLPO fits its log-ratio optimality condition by least squares on the sampler's own trajectories, so the sampler probability enters through a log-ratio and no importance weights are needed. Profiling out the regression intercept replaces the intractable log-partition function with the signal's sampler mean plus a sampler-to-trainer KL divergence. For token-level policy mirror descent targets, we show that the resulting gradient can be computed from terminal returns without a critic, via sampler-centered scores or a single trajectory residual, even under stochastic tool outputs. We further prove that independent Monte Carlo estimates of the KL term keep these gradients unbiased, derive the exact KL gap of cheaper top-$K$ and binary approximations, and show that SPPO, GPO, REBEL, and BPO arise as special cases of KLPO. The result is a critic-free update that uses one rollout per prompt and requires neither a learned normalizer nor a group of responses.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-06T18:30:42Z</published>
+    <arxiv:comment>Project Page: https://github.com/yifanzhang-pro/KLPO</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yifan Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.08103v1</id>
+    <title>The mixing time of Mean-Field Gibbs-Ornstein-Uhlenbeck processes</title>
+    <updated>2026-10-06T10:30:33Z</updated>
+    <link href="https://arxiv.org/abs/2610.08103v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.08103v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce mean-field Gibbs--Ornstein--Uhlenbeck (MFGOU) processes, a class of discrete-time Markov processes with increments of order $1/n$, whose conditional means approximate a smooth vector field. If the field has a unique attracting zero and satisfies a global Lyapunov condition, we prove \[ τ_{\mathrm{mix}} = \frac{1}{λ_1}n\log n+O(n), \] where $λ_1$ is the smallest eigenvalue of the drift Jacobian at the attractor.
+  Mean-field block measures form an important subclass encompassing mean-field spin systems and projected Gibbs samplers for Latent Dirichlet Allocation (LDA) and related mixture models. The leading mixing constant has a spectral expression involving the free-energy Hessian and the covariance of single-step dynamics. A block-refinement argument transfers projected-chain results to the full chain under a mild spectral condition, preserving this constant. The theory recovers known cutoff locations for Curie--Weiss Ising and Potts models and complete multipartite Ising models, gives an external-field formula for Curie--Weiss Ising, and covers regular-graph interactions. It yields explicit $n\log n$ asymptotics for multinomial mixtures and partially collapsed LDA. For full LDA, mixing is determined conditionally on the stationary-point structure of the free energy, distinguishing metastability from topic-label switching.
+  The framework also applies to continuous-state Gibbs sampling, constant-step stochastic gradient descent, and frequently refreshed Hamiltonian Monte Carlo, rigorously for truncated Gaussian increments and heuristically without truncation.
+  The proof combines variance and mean estimates with path coupling allowing slight expansion in expected distance. After rescaling, the coupling distance is a nonnegative supermartingale whose quadratic variation gives a positive probability of coalescence.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-06T10:30:33Z</published>
+    <arxiv:comment>85 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Johan Jonasson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.04452v1</id>
+    <title>Gaussian fluctuations of differential observables of stationary lattice fields</title>
+    <updated>2026-10-03T11:40:31Z</updated>
+    <link href="https://arxiv.org/abs/2610.04452v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.04452v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study Gaussian fluctuations of differential observables of centered stationary random fields on the discrete $d$-dimensional torus of mesh $1/N$. Our main result is a Central Limit Theorem for the fields $f\mapsto N^{-d/2-m}\sum_xφ_x^N(Pf)(x/N)$, where $P$ is a scalar homogeneous constant-coefficient differential operator of order $m\geq0$ with Fourier symbol $p$, e.g., $P=Δ$ and $m=2$. Under suitable assumptions on the spectral scaling limit $γ$ of the covariance and the normalized cumulants of order $r\geq3$, we prove convergence in law in a negative Sobolev space to a centered Gaussian random distribution with covariance multiplier $|p(k)|^2γ(k)$. The two factors separate the effects of the operator and the field and, notably, differentiation can compensate a low-frequency spectral singularity. For the lattice Gaussian Free Field, this gives a projected white-noise limit for the gradient. The proofs use Fourier analysis and the method of moments and cumulants, together with a tightness argument. Finally, we give two sufficient criteria for the cumulant assumption, namely a tree--graph bound and the Dobrushin uniqueness condition for finite-range Gibbs fields, and recover the white-noise limits of the centered Ising magnetization and Potts colour fluctuation fields at high temperature.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-03T11:40:31Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Fabio Coppini</name>
+    </author>
+    <author>
+      <name>Wioletta M. Ruszel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.04285v1</id>
+    <title>Amortized Score-Hamiltonian Policy Iteration: A Grid-Free Scheme for Relaxed Stochastic Control Problems</title>
+    <updated>2026-10-03T04:28:25Z</updated>
+    <link href="https://arxiv.org/abs/2610.04285v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.04285v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop an amortized, grid-free implementation of continuous Langevin dynamics based policy-value iteration for entropy-regularized, infinite-horizon relaxed stochastic control problems. The improvement rate of the exact iteration is a discounted aggregate of relative Fisher information between the policy and the Gibbs law of its Hamiltonian. The associated score residual is the velocity with which the control's Langevin dynamics transport its law. We project this velocity onto a conditional sampler shared across states, instead of one Langevin dynamics per state, and the value dynamics onto a parametric critic, estimating both projections at sampled states to obtain coupled actor--critic flows. The score loss measures the actor's agreement with the current critic, while the policy-evaluation residual measures the critic's agreement with the actor. We also derive gradient and Hessian residuals, including a Feynman--Kac representation for the gradient equation, to control errors not detected by the projected value iteration. An exact decomposition of the HJB residual combines these errors into a policy-suboptimality bound under verification and logarithmic Sobolev assumptions. In the linear-quadratic class, both projections are exact and recover the pointwise iteration, and we provide numerical experiments on general models to demonstrate the coupled actor--critic learning in high-dimensions.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-03T04:28:25Z</published>
+    <arxiv:comment>25 pages, 5 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Qi Feng</name>
+    </author>
+    <author>
+      <name>Gu Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.02158v1</id>
+    <title>Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials</title>
+    <updated>2026-10-01T17:52:36Z</updated>
+    <link href="https://arxiv.org/abs/2610.02158v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.02158v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the problem of sampling from Gibbs distributions on matrix spaces whose potential energies are neither convex nor globally gradient-Lipschitz. We introduce a family of non-quadratic kinetic energies that lead to a new underdamped Langevin system with momentum preconditioning, in which the gradient of the kinetic energy acts as a smooth spectral taming of the momentum. We prove that, under these relaxed assumptions on the potential, the resulting dynamics leaves the target Gibbs measure invariant, and we establish exponential convergence to equilibrium in a weighted total variation distance. Finally, we show that the corresponding Euler-Maruyama discretization admits moment bounds that are uniform in time, without any modification of the potential gradient, which ensures the stability of the resulting sampling algorithm.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-01T17:52:36Z</published>
+    <arxiv:comment>26pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Nikolaos Makras</name>
+    </author>
+    <author>
+      <name>Sotirios Sabanis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.01448v1</id>
+    <title>On skew-symmetric distributions and their use in Monte Carlo sampling algorithms: coordinate-free, Gibbs-style and manifold versions of the Barker proposal</title>
+    <updated>2026-10-01T10:44:00Z</updated>
+    <link href="https://arxiv.org/abs/2610.01448v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.01448v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Skew-symmetric probability distributions provide a principled mechanism for incorporating gradient information into Markov chain Monte Carlo algorithms. Here we review the (preconditioned) Barker proposal, a Metropolis--Hastings algorithm built on skew-symmetric distributions, and motivate its design. We then introduce three natural extensions. First, we propose coordinate-free variants of the Barker algorithm. Second, we introduce a Gibbs-style Barker algorithm that re-evaluates the gradient at each partially updated coordinate. Third, we derive a simplified manifold Barker algorithm, producing a manifold sampler with enhanced robustness compared to natural comparators. Numerical experiments demonstrate that the Gibbs-style variant improves raw sampling efficiency on correlated targets, that the coordinate-free variants offer limited practical advantage over the standard Barker proposal once computational costs are accounted for, and that the simplified manifold Barker algorithm can achieve significant advantages over simplified manifold MALA when the local geometric structure of the target is irregular or unreliable.</summary>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-01T10:44:00Z</published>
+    <arxiv:comment>19 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.CO"/>
+    <author>
+      <name>Minh Vu</name>
+    </author>
+    <author>
+      <name>Samuel Livingstone</name>
+    </author>
+    <author>
+      <name>Pantelis Samartsidis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.39271v2</id>
+    <title>RW-Flow: One-Step Generation on Compact Manifolds via Wasserstein Gradient Flows</title>
+    <updated>2026-10-01T04:57:41Z</updated>
+    <link href="https://arxiv.org/abs/2609.39271v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.39271v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Manifold-valued data, and consequently the distributions they induce, are prevalent across many domains, ranging from the locations of geospatial events, such as earthquakes, to biomolecular torsion angles that encode information about three-dimensional structure. While diffusion and flow-based generative models have been successfully extended to compact manifolds, sampling typically requires tens or hundreds of sequential network evaluations. We introduce RW-Flow, a theoretically grounded framework for learning one-step generative models on compact manifolds via Wasserstein gradient flows. The main challenge is identifiability: driving the velocity field to zero should guarantee that the model distribution matches the target distribution. We establish a necessary and sufficient condition for identifiability on compact, connected Riemannian manifolds. We specifically show that, for a symmetric, Lipschitz-continuous cost function, the velocity field induced by the Sinkhorn divergence is identifiable if and only if the associated Gibbs kernel is nondegenerate. This characterization provides a general principle for designing identifiable costs on compact manifolds. It also reveals that the squared geodesic distance, the natural manifold analogue of the squared Euclidean distance, does not always guarantee identifiability. Across benchmarks involving geospatial events, protein side chain torsion angles, RNA backbone torsion angles, and general manifolds discretized as triangular meshes, RW-Flow outperforms existing one-step methods in nearly all settings under fair comparison conditions.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-30T08:24:39Z</published>
+    <arxiv:comment>27 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ualibyek Nurgulan</name>
+    </author>
+    <author>
+      <name>Seungwoo Yoo</name>
+    </author>
+    <author>
+      <name>Prin Phunyaphibarn</name>
+    </author>
+    <author>
+      <name>Minhyuk Sung</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.38069v1</id>
+    <title>Stochastic Lie-Bracket Approximations for Zeroth-Order Optimization on Manifolds</title>
+    <updated>2026-09-29T17:31:59Z</updated>
+    <link href="https://arxiv.org/abs/2609.38069v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.38069v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a continuous-time algorithm for zeroth-order global optimization of smooth functions on compact manifolds that synthesizes Riemannian gradient dynamics using only objective measurements, without evaluating gradients. The algorithm is formulated as an ordinary differential equation driven by piecewise-smooth McShane-type approximations of the Wiener process, with a geometric compensation term that depends only on the actuation frame and not on the objective function. Our main result establishes infinite-horizon practical probabilistic guarantees for fixed approximation parameters. To this end, we show that the algorithm's trajectories approximate, in the mean-square sense, a Riemannian Langevin diffusion whose unique invariant Gibbs measure concentrates on the set of global minimizers. We exploit this approximation to establish finite-horizon probabilistic convergence guarantees and directly analyze the algorithm's long-time behavior to obtain the infinite-horizon result.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-29T17:31:59Z</published>
+    <arxiv:comment>8 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Mahmoud Abdelgalil</name>
+    </author>
+    <author>
+      <name>Miroslav Krstic</name>
+    </author>
+    <author>
+      <name>Jorge I. Poveda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.37041v1</id>
+    <title>Beam Search as Test-Time Self-Distillation via Counterfactual Contexts</title>
+    <updated>2026-09-29T08:50:24Z</updated>
+    <link href="https://arxiv.org/abs/2609.37041v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.37041v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Self-Distillation Fine-Tuning (SDFT) enables a language model to act as its own teacher: by conditioning on a demonstration, the model produces an implicit reward via pointwise mutual information, which guides on-policy learning without external supervision. However, SDFT operates at training time: it requires gradient updates and access to expert demonstrations, making it inapplicable at inference. We propose test-time self-distillation, a decoding-time method that extracts a steering signal from the self-distillation framework without any parameter updates, reward models, or training data. Our key insight is that counterfactual contexts, i.e. fixed textual templates that hypothetically prime the model for excellent versus poor reasoning, can substitute for the demonstration. The log-odds ratio of a candidate answer under these two counterfactual conditions defines a new reward signal. We derive the optimal KL-regularized policy under this reward, which takes the form of a Gibbs reweighting of the base distribution. Crucially, this reweighting is global: it cannot be decomposed into independent per-token operations without ignoring future trajectory quality. We therefore approximate the target distribution via beam search. Experiments on mathematical reasoning (MATH500), code generation (HumanEval), and graduate-level science QA (GPQA) across multiple model scales show that test-time self-distillation improves over standard sampling, low temperature, beam search and power sampling baselines on average, demonstrating that the self-distillation principle can be operationalized at inference time.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-29T08:50:24Z</published>
+    <arxiv:comment>Accepted at NeurIPS 2026 Workshop on Towards Test-Time Continual Learning Agents</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Su Ee Tan</name>
+    </author>
+    <author>
+      <name>Xiaotong Ji</name>
+    </author>
+    <author>
+      <name>Rasul Tutunov</name>
+    </author>
+    <author>
+      <name>Haitham Bou-Ammar</name>
+    </author>
+    <author>
+      <name>Matthieu Zimmer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.36812v2</id>
+    <title>Diffusion Policy Improvement with Proposal-Conditioned Refinement Flows</title>
+    <updated>2026-10-01T17:05:17Z</updated>
+    <link href="https://arxiv.org/abs/2609.36812v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.36812v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion and flow policies can model complex behaviors in offline reinforcement learning (RL). However, penalizing their KL divergence from the behavior policy can discourage actions having high critic values with low behavior density. Directly refining behavior proposals may be an alternative, yet Gaussian or deterministic editors limit expressiveness to represent multiple separated modes for the same proposal. In this work, we introduce Proposal-Conditioned Refinement Flows (PReFlow), a policy extraction method combining critic-based proposal selection with a conditional refinement flow. To optimize proposal selection and refinement together, we formulate a KL-regularized objective whose optimum induces a Gibbs policy over final actions under a Gaussian-smoothed behavior prior. The refinement flow can represent multiple high value modes, while a proposal-centered Gaussian reference regulates large action changes. This Gaussian reference further enables us to make use of simulation-free, closed form adjoint matching targets from sampled endpoints and critic gradients, yielding a single velocity regression loss without a backward adjoint solve. On 50 OGBench tasks, PReFlow achieves competitive offline performance and the highest aggregate score among the compared methods after online fine-tuning, reaching 91\% after 500K environment steps.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-29T06:25:13Z</published>
+    <arxiv:comment>27 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Junhyun Ha</name>
+    </author>
+    <author>
+      <name>Juho Lee</name>
+    </author>
+    <author>
+      <name>Byoungwoo Park</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.31101v1</id>
+    <title>A Flatness-Generalization Relation in the Teacher-Student Tree-Committee Machine</title>
+    <updated>2026-09-25T10:38:34Z</updated>
+    <link href="https://arxiv.org/abs/2609.31101v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.31101v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The flatness of the loss landscape at a minimizer is a widely used heuristic for reasoning about neural-network generalization, yet evidence for this relation is mostly empirical and controversial. We study this relation in a teacher-student tree committee machine, where both the ERM estimator and the Hessian spectrum are analytically tractable in the proportional high-dimensional limit. First, we use a zero-temperature Gibbs formulation to obtain predictions for the observables of the typical minimizers of the empirical loss. Secondly, we use Edwards-Jones formalism to derive the limiting Hessian resolvent around these typical minimizers. All predictions agree with finite-size gradient-descent simulations. Finally, we study three measures of flatness, namely the left and right edges and the spectral mean, and check if a decrease in generalization error as the dataset size is increased corresponds to an increase in flatness. We find that the answer strongly depends on the learning task and on the ratio of the number of parameters to the number of data points. In regression, the spectral mean and right edge correlate with the generalization error, while the left edge does so only in the overparametrized regime. In classification this correlation reliably holds only in the highly overparametrized phase, while for underparametrized networks it can even reverse.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-25T10:38:34Z</published>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Brandon Livio Annesi</name>
+    </author>
+    <author>
+      <name>Davide Straziota</name>
+    </author>
+    <author>
+      <name>Enrico Maria Malatesta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.28391v1</id>
+    <title>Quantum score matching with applications to learning thermal states</title>
+    <updated>2026-09-23T17:01:36Z</updated>
+    <link href="https://arxiv.org/abs/2609.28391v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.28391v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Score matching has driven major advances in classical generative learning by enabling models to learn from data without evaluating intractable normalization constants, or partition functions. Yet, extending this principle to quantum learning requires rethinking its foundations, as quantum states are described by noncommuting density operators rather than scalar probabilities. The noncommutativity creates fundamental challenges not only in defining quantum scores, but also in developing a training framework with efficient circuit implementations and rigorous theoretical guarantees. In this work, we bridge this gap by establishing a general quantum score-matching framework with end-to-end theoretical guarantees. Applied to Gibbs-state learning, our approach avoids additional thermal-state preparation and achieves information-theoretically optimal sample complexity in the high-temperature regime for Hamiltonians with bounded locality and interaction degree. This positions score matching as a new route to state-of-the-art performance in learning quantum Gibbs states.
+  Beyond these theoretical results, numerical simulations show that our method remains effective even when gradients are estimated inaccurately under limited measurement budgets. Experiments on IBM quantum hardware further demonstrate that quantum score matching is NISQ-friendly: without any error mitigation or correction, it reduces the relative Hamiltonian-parameter error from 64% to approximately 10%. Together, these results extend score matching into an experimentally realizable paradigm for quantum-state learning.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-23T17:01:36Z</published>
+    <arxiv:comment>57 pages, 5 figures, 3 tables, with an accompanying GitHub repository at https://github.com/dongsnaq/Quantum-Score-Matching</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Yulong Dong</name>
+    </author>
+    <author>
+      <name>Jiaqi Leng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.27534v1</id>
+    <title>From Frequentist to Bayesian Contextual Optimization</title>
+    <updated>2026-09-23T08:27:11Z</updated>
+    <link href="https://arxiv.org/abs/2609.27534v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.27534v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In data-driven contextual stochastic optimization, existing approaches are predominantly frequentist: they commit to a single predictive model and treat it as ground truth, yielding prescriptions that are fragile to model uncertainty and sampling variability in small- and moderate-sample regimes. We propose Bayesian contextual optimization (BCO), a framework that maintains a Gibbs posterior over the parameter space. This decision-focused posterior weights candidate models by their empirical decision quality rather than statistical fit, thereby avoiding commitment to a potentially misspecified likelihood while encoding the full distribution of plausible models consistent with the data. A Bayesian contextual policy is then derived by minimizing the expected decision cost under the posterior predictive distribution, hedging prescriptions against model uncertainty by aggregating over the posterior. We establish three theoretical guarantees: (i) the Gibbs posterior concentrates exponentially fast around the frequentist best-in-class parameter set; (ii) BCO can strictly improve over the frequentist best-in-class policy when model uncertainty is non-negligible; and (iii) BCO attains an $O(n^{-1/2})$ excess risk rate against the oracle over all probability measures up to a misspecification term and an oracle aggregate gap. Computationally, we tailor a variational inference scheme that has the same per-iteration cost as frequentist alternatives and a gradient-free Metropolis-Hastings algorithm that handles nondifferentiable problems. Numerical experiments on two-stage shipment planning, contextual newsvendor, and return-constrained portfolio problems confirm that BCO consistently reduces out-of-sample cost and variance relative to kernel estimators and decision-focused baselines, with the most pronounced gains in small- and moderate-sample regimes under substantial model uncertainty.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-23T08:27:11Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Zhuojun Xie</name>
+    </author>
+    <author>
+      <name>Adam Abdin</name>
+    </author>
+    <author>
+      <name>Yiping Fang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.25381v2</id>
+    <title>Penalized Nonreversible Langevin for Constrained Sampling</title>
+    <updated>2026-10-02T03:01:01Z</updated>
+    <link href="https://arxiv.org/abs/2609.25381v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.25381v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose penalized nonreversible Langevin algorithms for sampling from $π(x)\propto e^{-f(x)}\mathbf 1_{\mathcal C}(x)$, where $\mathcal C\subset\mathbb R^d$ is a compact convex set. The algorithms combine a squared distance penalty with constant or compatible state dependent skew symmetric perturbations that preserve the penalized Gibbs distribution. For smooth, possibly nonconvex $f$, we derive nonasymptotic total variation bounds for the full gradient algorithm under a log Sobolev inequality. When unbiased stochastic gradients are available, we establish $2$-Wasserstein bounds under global contraction and Lipschitz conditions on the full drift in an adapted quadratic metric. For a fixed penalty parameter, the error relative to the penalized Gibbs distribution decays exponentially to an $\mathcal{O}(\sqrtη)$ neighborhood, where $η$ is the stepsize. We also bound the discrepancy between the penalized Gibbs distribution and the constrained target. In a two dimensional quadratic model, we establish nonreversible acceleration by tuning the skew perturbation to the curvature imbalance induced by penalization. With the target accuracy and smaller curvature fixed and initial Wasserstein distances uniformly bounded, tuning the skew perturbation improves the sufficient Euler iteration bound from linear to logarithmic in the curvature ratio. Numerical experiments evaluate the algorithms on constrained Bayesian regression, classification, neural networks, and truncated sampling, and examine the acceleration mechanism in a stochastic quadratic model.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-21T20:24:08Z</published>
+    <arxiv:comment>68 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Pervez Ali</name>
+    </author>
+    <author>
+      <name>Weihao Dong</name>
+    </author>
+    <author>
+      <name>Xiaoyu Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.25246v1</id>
+    <title>Operator Score Matching for Learning Quantum Hamiltonians</title>
+    <updated>2026-09-21T18:02:28Z</updated>
+    <link href="https://arxiv.org/abs/2609.25246v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.25246v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning quantum Hamiltonians from low-temperature thermal state measurements is a fundamental problem in quantum physics. Scalability of existing methods is limited by the complexity of semidefinite optimization problems or partition function computation. Here, we develop a quantum analog of classical score matching method that exploits generalized notions of derivatives and integration by parts in operator algebras. We introduce a new \emph{Operator Score Matching} loss function that recovers Hamiltonian parameters by a simple gradient descent without the need to compute intractable normalization constants. Numerical experiments on the Gibbs states of the transverse-field Ising model, XXZ spin chain, Fermi-Hubbard model, and lattice $φ^4$ theory demonstrate efficient parameter recovery using finite-depth truncations of nested commutator expansions. Our results establish Operator Score Matching as a practical, partition-function-free framework for quantum Hamiltonian learning.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-21T18:02:28Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Shreya Shukla</name>
+    </author>
+    <author>
+      <name>Abhijith Jayakumar</name>
+    </author>
+    <author>
+      <name>Andrey Y. Lokhov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.20906v2</id>
+    <title>Continuous Delayed-Memory Stochastic Gradient Descent and Continuous-Time Reinforcement Learning from History of Astrophysical Time Series Studies</title>
+    <updated>2026-09-22T16:02:32Z</updated>
+    <link href="https://arxiv.org/abs/2609.20906v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.20906v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quasars are luminous objects in the universe that exhibit stochastic brightness variations encoding information about the supermassive black holes powering them, and modeling these variations from ground-based survey data time series, known as light curves, is a statistical challenge. This paper reviews how stochastic differential equations (SDEs) have been adapted with neural network parameterizations to overcome this challenge in history. We create the Continuous-Delayed-Memory Stochastic Gradient Descent which depend on the past state of the discrete iteration process. We performed the simulation on some 2-dimensional landscape and observed some wider-exploration and more precise convergent behavior compared to Vanilla SGD by adjusting hyperparameters. Besides, we proposed a reinforcement learning structure with continuous time policy gradients for exploratory policies without solving HJB PDE, and we show that its optimality conditions recover the Gibbs policy of previous works.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-17T15:38:37Z</published>
+    <arxiv:comment>Keywords: Stochastic process, Stochastic gradient descent, Continuous-Delayed-Memory Stochastic Gradient Descent, Stochastic Delay Differential Equation, Reinforcement Learning, Adjoint method</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Juncheng Yi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.14548v1</id>
+    <title>SCMO: Stochastic Control for Optimization over Probability Measures on Infinite-Dimensional Spaces</title>
+    <updated>2026-09-13T14:36:04Z</updated>
+    <link href="https://arxiv.org/abs/2609.14548v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.14548v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study objective-only optimization of possibly nonconvex and nonsmooth functionals over probability measures on a separable Hilbert space, allowing the optimizer to be intrinsically non-Dirac. We introduce SCMO (Stochastic Control Measure Optimizer), a gradient-free particle method derived from entropy regularized stochastic control. After finite-particle and Galerkin approximations, a Cole--Hopf transform represents the optimal feedback as a Gibbs-weighted terminal displacement. SCMO approximates this feedback by sampling context clouds, replacing one particle at a time with candidate draws, scoring the resulting empirical measures, and applying exponential reweighting.
+  SCMO uses separate covariances for candidate proposals and particle updates, termed matched when equal and nonmatched otherwise; our analysis covers both settings. In the matched case, we establish PDE-free qualitative convergence and a projection-first quantitative bound separating particle, Galerkin-projection, and entropy-regularization errors. For the practical multi-context implementation with nonmatched covariance, we prove finite-candidate consistency and show that the signed, curvature-dependent effect of nonmatched covariance can reduce the resulting upper bound on the approximation error. Finally, experiments on function-space, trajectory-law, and contact-rich manipulation problems show that SCMO handles nonsmooth and nonconvex objectives, escapes suboptimal local basins, and recovers prescribed multimodal, non-Dirac law structure.
+  Code for reproducing our experimental results is available at https://github.com/HenryCHEUNG7373/SCMO.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-13T14:36:04Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Hang Cheung</name>
+    </author>
+    <author>
+      <name>Jinniao Qiu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.11339v1</id>
+    <title>InFlow: entropic stochastic dual dynamic programming with HJB cross-certification for seasonal energy storage</title>
+    <updated>2026-09-10T10:18:21Z</updated>
+    <link href="https://arxiv.org/abs/2609.11339v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.11339v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Seasonal reservoir operation requires optimization methods that remain reliable under strongly periodic and uncertain inflow dynamics. We present InFlow, a verification-oriented framework combining periodic stochastic dual dynamic programming (SDDP), entropic robustness, control-space Bellman annealing, and an independently discretized Hamilton-Jacobi-Bellman (HJB) benchmark. The entropic transition operator is interpreted as a KL-penalized worst-case expectation and linked to fixed-radius KL ambiguity sets through Lagrange duality. We establish a uniform soft-Bellman approximation bound and prove the validity of Gibbs-tilted SDDP cuts. The benchmark relies on a normalized seasonal Cox-Ingersoll-Ross inflow process whose positivity condition fails during the driest weeks, requiring explicit treatment of the degenerate boundary. Independent verification shows strong agreement between HJB storage gradients and HiGHS storage-balance duals, with water-value correlations of 0.995 and 0.996 for the standard and exact-cut-only implementations. Refining the HJB grid from 61^2 to 81^2 states changes the annual mean water value by only 0.6% and the peak value by less than 0.1%. Out-of-sample simulations based on 3,000 independent trajectories show that a robustness level of gamma=5 increases nominal mean cost by 4.6% while reducing CVaR90 by 11.2%. Under a dry-season stress scenario with inflows reduced by 40%, the mean-cost difference becomes statistically insignificant whereas CVaR90 improves by 11.5%. A robustness sweep confirms monotonicity of the risk-adjusted value. Finally, a two-reservoir cascade reproduces grid-oracle marginal water values with correlation 0.999 and recovers the predicted upstream-to-downstream value ratio of two. InFlow is intended as a transparent methodological benchmark rather than a calibrated operational reservoir model.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-10T10:18:21Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Steeven B. Affognona</name>
+    </author>
+    <author>
+      <name>Babacar M. Ndiaye</name>
+    </author>
+    <author>
+      <name>Pierre Mendy</name>
+    </author>
+    <author>
+      <name>Cheikh M. F. Kebe</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.06574v2</id>
+    <title>Equivalence between $N$-particle log-Sobolev inequalities and non-linear Łojasiewicz inequalities for a class of mean field systems</title>
+    <updated>2026-09-10T20:12:42Z</updated>
+    <link href="https://arxiv.org/abs/2609.06574v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.06574v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The convergence rate of a free energy Wasserstein gradient flow is quantified by its so-called Polyak-Lojasiewicz (PL) constant $λ$, which relates the objective function to its dissipation along the flow. Such a flow is the mean-field limit as $N$ goes to infinity of a system of $N$ interacting particles, whose convergence rate in relative entropy towards its Gibbs measure is quantified by its log-Sobolev constant $λ_N$. Different behaviours of $λ_N$ as $N$ goes to infinity thus describe drastically different phenomena, such as fast relaxation or metastability, with many models undergoing phase transitions between these regimes, depending typically on temperature. Under fairly general conditions, a uniform-in-$N$ log-Sobolev constant (i.e. fast exponential convergence for the particle system) is known to induce a positive PL constant (i.e. exponential convergence for the mean-field flow). A conjecture was stated by Delgadino, Gvalani, Pavliotis and Smith according to which the converse implication was true ($λ&gt;0$ implies $\liminf λ_N &gt;0$), even with $\lim λ_N =λ$.
+  First, we will prove this converse implication, although without the equality $\lim λ_N = λ$, for a general class of mean-field models. Second, we also notice that this implication fails if the free energy minimiser is not unique, and provide an explicit counter-example. Third, we also consider the same question of relating $N$-particle and mean-field inequalities in the context of more general Lojasiewicz inequalities, which correspond to polynomial (instead of exponential) convergence rates, and can describe the situation exactly at a phase transition.</summary>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-06T12:36:56Z</published>
+    <arxiv:primary_category term="math.FA"/>
+    <author>
+      <name>Pierre Monmarché</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04530v1</id>
+    <title>An Energy-Based Conservative-Dissipative Latent Neural Evolution Operator for Magnetization Dynamics</title>
+    <updated>2026-09-03T22:42:04Z</updated>
+    <link href="https://arxiv.org/abs/2609.04530v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04530v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop an energy-based reduced-order model for micromagnetic magnetization dynamics that couples a convolutional autoencoder to a structured latent neural ordinary differential equation. Motivated by the precessional-dissipative structure of the Landau-Lifshitz-Gilbert equation, the latent vector field is generated from the gradient of a learned scalar potential through an antisymmetric operator and a symmetric positive-semidefinite dissipative operator. This potential is learned in nonunique latent coordinates and is not identified with the Gibbs free energy, but decreases monotonically along autonomous continuous-time solutions, while the antisymmetric component permits motion along its level sets. The encoder, decoder, latent energy, and operators are trained jointly on short trajectory windows using latent and decoded-rollout losses alone, without time-derivative supervision, physical-energy labels, or dissipation penalties. At inference, an initial state is encoded once, evolved in latent space, and decoded only at the requested output times, enabling substantially cheaper trajectory prediction than the micromagnetic solver used to generate the training data. We compare quadratic, deep, and additive deep-quadratic latent energies on two datasets parameterized by field amplitude and generated for the two applied-field directions of the NIST $μ$MAG Standard Problem 4. Dissipative-only and antisymmetric-dissipative models achieve comparable accuracy on short training-style windows but differ substantially on uninterrupted rollouts, for which the antisymmetric-dissipative models provide markedly more accurate trajectory predictions. The deep-quadratic energy gives the best overall accuracy for both field directions and exhibits slower error growth when rollouts are extended to twice the training horizon.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T22:42:04Z</published>
+    <arxiv:comment>24 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sebastian Schaffer</name>
+    </author>
+    <author>
+      <name>Lukas Exl</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.28262v1</id>
+    <title>SinkSLOT: Sinkhorn via Sparse Lifted Optimal Transport</title>
+    <updated>2026-08-28T12:24:40Z</updated>
+    <link href="https://arxiv.org/abs/2608.28262v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.28262v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Entropic optimal transport (EOT) has been shown to offer a computationally tractable approximation to exact optimal transport. However, the standard Sinkhorn-Knopp algorithm has two main limitations. First, given discrete measures with $N$ points, each iteration requires $O(N^2)$ operations, which restricts its use on large-scale datasets (e.g. $N\geq10^4$). Second, it uses the independent coupling as a reference measure for regularisation. This assigns mass to high-cost transport edges at moderate regularisation strengths. We propose SinkSLOT, which addresses both limitations by putting forth the expected sliced lifted transport plan as a natural way to sparsify the Gibbs kernel with a non-independent prior coupling. We prove that: 1) SinkSLOT converges; 2) with $L$ slices, each resulting sparse Sinkhorn iteration costs $O(LN)$; and 3) the resulting objective is a divergence requiring no debiasing. Experiments on synthetic benchmarks show that SinkSLOT delivers substantial speedups over state-of-the-art dense and sparse EOT methods. We also demonstrate the applicability of the proposed divergence in a gradient flow experiment. The code is publicly available at https://github.com/cai4cai/SinkSLOT.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-28T12:24:40Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ian Hsieh</name>
+    </author>
+    <author>
+      <name>Soumya Snigdha Kundu</name>
+    </author>
+    <author>
+      <name>Tom Vercauteren</name>
+    </author>
+    <author>
+      <name>Reuben Dorent</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.24527v2</id>
+    <title>Provable Quantum-Classical Separation for Continuous Gibbs Sampling</title>
+    <updated>2026-09-25T01:03:21Z</updated>
+    <link href="https://arxiv.org/abs/2608.24527v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.24527v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove the first quantum-classical separation for a sampling problem over a continuous domain. For a class of Gibbs states $p\propto e^{-βE}$ on the torus $\mathbb{T}^d$ with smooth ($s$-Gevrey) potential and barrier amplitude $α=e^{βΔ}$, where $Δ= \max E-\min E$, every classical algorithm querying the value, gradient, or any higher-order derivatives of the log-density requires $Ω(α)$ queries to sample at constant accuracy in total variation distance, while a quantum algorithm based on quantum singular value thresholding and temperature annealing samples with $\tilde{O}\left(\sqrtα\right)$ queries to an oracle for the gradient. The advantage is quadratic in the barrier amplitude, which becomes exponential in the dimension, $e^{Ω(d)}$, at low temperature. The classical bound is information-theoretic, holding for every classical algorithm with query access to the Gibbs potential and its derivatives at any order.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-25T13:13:34Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Enrico Olivucci</name>
+    </author>
+    <author>
+      <name>Mariia Sobchuk</name>
+    </author>
+    <author>
+      <name>Sehmimul Hoque</name>
+    </author>
+    <author>
+      <name>Jeffrey Hnybida</name>
+    </author>
+    <author>
+      <name>Kyungho W. Kim</name>
+    </author>
+    <author>
+      <name>Ala Shayeghi</name>
+    </author>
+    <author>
+      <name>Pooya Ronagh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.14526v1</id>
+    <title>Gradient Gibbs measures with non-convex potentials and the universality class of the Gaussian Free Field</title>
+    <updated>2026-08-14T17:45:42Z</updated>
+    <link href="https://arxiv.org/abs/2608.14526v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.14526v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study a general class of gradient interface models with Hamiltonian $H=β\sum V(\nablaφ)$, $β&gt;0$, assuming essentially that the potential $V$ is even, $V'(s)\ge αs$ on $[0,\infty)$ for some $α&gt;0$, and $-M\leq V''\le C$. We establish a Helffer-Sjöstrand representation for these models, and use it to prove that their scaling limits are Gaussian Free Fields (GFFs), and that their covariances decay at the same rate as the GFF. This extends results for strictly convex potentials to a large class of non-convex potentials and to arbitrary temperatures. Additionally, we prove Brascamp-Lieb and dimension-free Poincaré inequalities for the models.
+  We obtain these results by representing the interface as a mixture of gradient interface models with strictly convex potentials, extending an idea by Biskup-Spohn who had considered mixtures of Gaussians at moderate inverse temperature $β=1$. The construction of such a representation is one of the key new contributions of this work.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-14T17:45:42Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Simon Buchholz</name>
+    </author>
+    <author>
+      <name>Codina Cotar</name>
+    </author>
+    <author>
+      <name>Florian Schweiger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.10211v1</id>
+    <title>Reduced Gibbs free energy supply hinders brain information processing during mental fatigue</title>
+    <updated>2026-08-10T20:28:32Z</updated>
+    <link href="https://arxiv.org/abs/2608.10211v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.10211v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Background: Brain information processing deteriorates as cortical neurons gradually transition from a rested state into fatigue. Subjectively, fatigue is experienced as a state of weariness, tiredness, or lack of energy that reduces the ability to work safely and effectively. Objective: In this theoretical paper, we pinpoint the physical origin of brain fatigue in the gradual deterioration of biochemical reaction quotients and transmembrane ion concentration gradients, which increase neuronal excitability and decrease the signal-to-noise ratio in the brain cortex. Methods: Brain performance in a rested state versus fatigue is examined by well-established, data-driven computer models for energy transport inside protein $α$-helices in the presence of thermal noise for different ATP energy states or for pyramidal neuron firing of action potentials under electric stimulation in a rested membrane state versus fatigue. Results: We found that reduced Gibbs free energy supply from ATP hydrolysis impairs the cooperative effect between amide I excitons propagating inside protein $α$-helices, with resulting decreased thermal stability of molecular solitons. Concurrent changes in Nernst reversal potentials for Na+ or K+ ions further led to neuronal hyperexcitability and a higher risk of neuronal depolarization block during mental fatigue. Conclusions: Detailed computational modeling showed that inefficient protein function due to diminished ATP energy status, alters the electrophysiological properties of individual neurons, thereby impairing their information processing capacity for the proper execution of cognitive tasks. Scheduling practices aimed at intermittent recovery of the rested brain state during intellectually challenging work could protect physical and mental wellbeing, prevent burnout, and enhance long-term productivity.</summary>
+    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-10T20:28:32Z</published>
+    <arxiv:comment>21 pages, 4 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="q-bio.NC"/>
+    <arxiv:journal_ref>Fatigue: Biomedicine, Health &amp; Behavior 2026; 14 (3): 216-233</arxiv:journal_ref>
+    <author>
+      <name>Danko D. Georgiev</name>
+    </author>
+    <author>
+      <name>Oskan B. Tasinov</name>
+    </author>
+    <author>
+      <name>Danail V. Pavlov</name>
+    </author>
+    <author>
+      <name>Deyan S. Hrusafov</name>
+    </author>
+    <arxiv:doi>10.1080/21641846.2026.2636450</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1080/21641846.2026.2636450" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.01223v1</id>
+    <title>Perspectives on Tsallis Statistics for Artificial Intelligence</title>
+    <updated>2026-08-02T13:12:16Z</updated>
+    <link href="https://arxiv.org/abs/2608.01223v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.01223v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Tsallis statistics generalizes Boltzmann-Gibbs statistical mechanics through a single real parameter $q$ that controls the weight assigned to rare and frequent events. Originally proposed to describe physical systems with long-range correlations, multifractal geometry, and heavy-tailed fluctuations, the framework has become a recurring ingredient in modern artificial intelligence (AI): it underlies sparse attention mechanisms (\textsc{sparsemax} and $α$-\textsc{entmax}), maximum-entropy reinforcement learning with controllable exploration, robust and heavy-tailed probabilistic models, and a family of generalized loss functions and regularizers. This paper offers a structured perspective on where Tsallis statistics meets AI. We first review the mathematical core: $q$-entropy and its variational (maximum-entropy) foundation, the $q$-exponential and $q$-logarithm, the $q$-central limit theorem, $q$-Gaussian distributions, and their dynamical origin in superstatistics, emphasizing the properties that matter for machine learning. We then survey applications across softmax generalization, reinforcement learning, sequential and graph neural models, generative and probabilistic modeling, loss design, and optimization, extracting the recurring design pattern in each case: a tunable interpolation between dense/uniform and sparse/peaked behavior governed by $q$. We further argue that the heavy-tailed weight spectra and gradient-noise statistics empirically observed in deep networks are themselves nonextensive signatures, placing modern learning dynamics within the scope of $q$-statistics. Finally, we discuss methodological pitfalls, the relationship to information geometry and $q$-exponential families, and open directions, arguing that $q$ should be treated as a learnable inductive bias rather than a fixed hyperparameter.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-02T13:12:16Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Kleyton da Costa</name>
+    </author>
+    <author>
+      <name>Bernardo Modenesi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.26577v1</id>
+    <title>Simultaneous Coverage and Efficiency Guarantee in Online Conformal Prediction</title>
+    <updated>2026-07-29T07:56:59Z</updated>
+    <link href="https://arxiv.org/abs/2607.26577v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.26577v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Adaptive conformal inference (ACI) of Gibbs and Cand{è}s and its variants are the standard approach to online conformal prediction under distribution shift, but they suffer from three fundamental limitations. First, their guarantees control only the \emph{signed} long-run coverage error: persistent miscoverage in one direction can be masked by compensating errors later, so a method can satisfy the theoretical guarantee while being badly wrong for extended periods. Second, existing guarantees say nothing about prediction-set size, so validity can be achieved trivially at the cost of unduly wide prediction sets. Third, the efficiency guarantees that do exist compare against a \emph{fixed} predictor chosen in hindsight, a benchmark that becomes increasingly less meaningful once the data-generating distribution shifts, since the very notion of an optimal threshold then changes over time.
+  We consider a unified online learning framework that simultaneously controls absolute, non-cancelling coverage violation and prediction-set efficiency against a dynamically evolving benchmark for three important models. In the fully adversarial setting, exploiting the fact that the standard ACI update is exactly projected online gradient descent on the pinball loss, we derive simultaneous coverage and efficiency guarantees for arbitrary monotone Lipschitz efficiency objectives, with no distributional or {\it convexity} assumptions. In the stochastic setting with full-score feedback, we propose a sliding-window quantile tracker and establish a matching minimax lower bound showing our algorithm is rate-optimal. In the covariate-dependent stochastic setting, we develop a partitioned ACI algorithm that tracks a function-valued oracle threshold, and derive simultaneous coverage and efficiency guarantees.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-29T07:56:59Z</published>
+    <arxiv:comment>We acknowledge the use of LLMs for editorial assistance in improving the clarity, style, proof checking, and figure generation of this manuscript</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Rahul Vaze</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.19928v3</id>
+    <title>Continuous-Time Reinforcement Learning for $N$-Player Stochastic Differential Games with Exploratory Policies</title>
+    <updated>2026-09-19T15:51:43Z</updated>
+    <link href="https://arxiv.org/abs/2607.19928v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.19928v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study entropy-regularized exploratory control in finite $N$-player stochastic differential games under a response model in which each player conditions on the opponents' currently realized actions and evaluates continuation with that profile frozen. The resulting Gibbs best responses form a system of full conditional densities, which need not admit a common joint law. We characterize joint realizability by a cross-partial condition on the entropy-scaled Hamiltonian gradients and, on simply connected action domains, by an equivalent entropy-weighted potential structure. When compatibility fails, a coordinate-path construction yields a joint density whose full conditionals satisfy explicit quadratic Kullback--Leibler bounds. We extend the analysis to stationary discounted problems and derive martingale and policy-improvement characterizations for learning the frozen response maps. A two-player linear-quadratic example illustrates the compatibility criterion and the associated learning procedure.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-22T09:00:00Z</published>
+    <arxiv:comment>39 pages,4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Jisheng Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.16001v1</id>
+    <title>BayesPO: Bayesian Prompt Optimization via Parallel-Tempered Gradient-Guided Discrete MCMC</title>
+    <updated>2026-07-17T14:39:05Z</updated>
+    <link href="https://arxiv.org/abs/2607.16001v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.16001v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prompt optimization adapts large language models (LLMs) without updating model parameters, but many automatic prompt optimizers remain heuristic search procedures over candidate instructions. This paper studies prompt optimization as Bayesian posterior sampling over discrete prompt tokens. We define a posterior distribution by combining a task likelihood term, which rewards prompts that explain input-output examples, with a language-model prior, which favors fluent instructions. This converts prompt optimization into an energy-based posterior sampling problem, for which gradients can be used to guide discrete Markov chain Monte Carlo (MCMC) proposals over vocabulary tokens. We refer to our framework as BayesPO, short for Bayesian Prompt Optimization. In this paper, BayesPO is instantiated with Markov chain Monte Carlo: it uses a Metropolis-Hastings corrected Gibbs-with-Langevin (GwL) proposal and integrates parallel tempering for global exploration of rugged LLM-induced energy landscapes. The concrete sampler further adapts the GwL sampler to the practical constraints of non-weight-tied LLM embeddings. Experiments with Qwen2.5 models show that the sampler discovers semantically meaningful prompts on diagnostic tasks, that parallel tempering helps escape a local optimum in a poetry completion task, and that post-optimizing APE prompts on 24 instruction-induction subtasks improves average accuracy from 60.04% to 63.23%. The study also reveals two main limitations: energy minimization may overfit small optimization sets, and the current sampler remains computationally expensive. These findings position Bayesian prompt sampling as a principled post-optimization tool and point to a promising direction for probabilistic prompt optimization.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-17T14:39:05Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Junjie Zhou</name>
+    </author>
+    <author>
+      <name>Zhijian Ou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.09416v2</id>
+    <title>The Statistical physics of unsaturated soil water: kinetic theory and non commutative pore water dynamics</title>
+    <updated>2026-09-03T19:09:14Z</updated>
+    <link href="https://arxiv.org/abs/2607.09416v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.09416v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a statistical-mechanical theory of water in unsaturated soil whose outcome is a continuum field equation for the pore-occupancy g(r,x,t), the fraction of pores of radius r that are water-filled at position x and time t. The theory is built across three scales: microscopic inter-pore transfers set by Hagen-Poiseuille rates and a driving potential (the difference of pore-class chemical potentials, taken in capillary-gravitational form but open to adsorptive, osmotic, or thermal refinement); a mesoscale master equation relaxing the occupancy toward the equilibrium step g_eq=H(r*-r); and, on contracting the averaging volume to a point, the continuum balance d_t g + div F = C[g] - E - T, of which everything else is a limit, a moment, or a boundary resolution. The kinetic equation is an Onsager gradient flow descending the Gibbs free energy, with an H-theorem for the isothermal unforced system and mass conservation as its zeroth moment. A single dimensionless group, the pore-resolved Damkohler number Da(r,x), organizes the behavior and unifies phenomenologies long modelled separately. A Chapman-Enskog reduction identifies Richards' equation as the quasi-static (Da-&gt;0) limit, with matric potential and hydraulic conductivity K emerging only there and K vanishing below the percolation threshold; capillary-bundle and critical-path models are its diagonal and spectral limits. Hysteresis is the holonomy of a forcing bundle, a geometric phase rather than per-pore bistability, with a falsifiable loop-area law H ~ I^2. Preferential flow is what the same equation does where Da&gt;1, so the Richards/preferential-flow dichotomy becomes a continuous Da-controlled crossover. Out of the quasi-static limit g(r) is the irreducible state variable. All inputs are geometric properties of the pore network, measurable from micro-CT and calibrated against no macroscopic data.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-10T13:47:51Z</published>
+    <arxiv:comment>Main paper plus supplemental material</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Riccardo Rigon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.01619v2</id>
+    <title>Post-Processing Reduced-Order Models for Transport-Dominated Problems by Gegenbauer Reconstruction</title>
+    <updated>2026-09-29T15:02:09Z</updated>
+    <link href="https://arxiv.org/abs/2607.01619v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.01619v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we develop a physics-based post-processing technique for data-driven reduced-order models (ROMs) of transport-dominated problems. Besides the slow decay of the Kolmogorov n-width, ROMs based on globally supported bases often produce unphysical oscillations when approximating solutions with shocks or sharp gradients, a phenomenon analogous to Gibbs oscillations in spectral approximations. To address this issue, we introduce a post-processing framework based on Gegenbauer polynomial reconstruction.
+  The key idea is to re-project the ROM solution onto a Gegenbauer polynomial basis over each interval of analyticity. Originally developed for spectral approximations, Gegenbauer reconstruction achieves spectral accuracy while effectively suppressing Gibbs oscillations. We extend this technique to data-driven ROMs and consider three representative approaches: Proper Orthogonal Decomposition (POD)-Galerkin ROM, Operator Inference (OpInf), and nonlinear manifold ROMs based on convolutional autoencoders (CAE). Numerical results show that the proposed post-processing consistently removes spurious oscillations and substantially improves solution quality for all three ROMs.
+  For one-dimensional problems, the method is straightforward to implement once discontinuities are detected. We further develop a practical extension to two-dimensional problems using line-by-line reconstruction in each coordinate direction. Extensive numerical experiments demonstrate that the proposed method reduces errors by up to one or two orders of magnitude for inviscid transport problems and significantly outperforms total variation regularization in both numerical accuracy and the sharp resolution of discontinuities.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-02T02:37:01Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Lei Yan</name>
+    </author>
+    <author>
+      <name>Yan Jiang</name>
+    </author>
+    <author>
+      <name>Chi-Wang Shu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.17343v2</id>
+    <title>Trustworthy MRI Reconstruction via Bayesian Uncertainty Quantification with Sparsity Prior Models</title>
+    <updated>2026-06-21T11:17:19Z</updated>
+    <link href="https://arxiv.org/abs/2606.17343v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.17343v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a novel Bayesian framework for joint image reconstruction and uncertainty quantification from compressed sensing magnetic resonance imaging data. The problem is formulated as a linear inverse problem, where prior distributions are assigned to the unknown image parameters. Specifically, the image is assumed to be sparse in a given transform domain. We develop a general framework applicable to any sparsifying transform and demonstrate its performance using (1) a total variation transform based on image spatial gradients and (2) a wavelet-domain transform. Bayesian inference is performed using a split-and-augmented Gibbs sampler, while the resulting non-differentiable conditional distributions are efficiently sampled using a proximal Markov chain Monte Carlo method. The proposed algorithms are validated on both single-coil and multi-coil datasets using various k-space sampling patterns and acceleration factors. The results demonstrate that the proposed Bayesian methods consistently outperform their optimisation-based counterparts in image reconstruction while providing uncertainty estimates for the reconstructed images. Furthermore, the estimated uncertainty maps show a strong correlation with the true reconstruction errors and substantially outperformed deep learning-based uncertainty estimation methods.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T22:44:38Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Ahmed Karam Eldaly</name>
+    </author>
+    <author>
+      <name>Matteo Figini</name>
+    </author>
+    <author>
+      <name>Daniel C. Alexander</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.16083v1</id>
+    <title>Eyring-Kramers asymptotics for infinite-dimensional stochastic gradient systems</title>
+    <updated>2026-06-15T00:49:03Z</updated>
+    <link href="https://arxiv.org/abs/2606.16083v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16083v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study small-noise asymptotics for a class of reversible stochastic evolution equations in infinite dimensions. The dynamics are of the form \[ dX_t=-A\nabla F(X_t)\,dt+\sqrt{2β^{-1}A}\,dW_t, \] where $F$ is a regular multi-well potential, $A$ is a selfadjoint mobility operator, $W$ is a cylindrical Brownian motion and $β\gg 1$ is the inverse noise strength. The invariant measure is a Gibbs perturbation of a Gaussian reference measure, and the resulting framework covers, in particular, the stochastic Allen-Cahn and stochastic Cahn-Hilliard equations on bounded intervals. In the double-well case, we derive a sharp asymptotic formula for the first nonzero eigenvalue of the generator. This gives an infinite-dimensional Eyring-Kramers law for the spectral gap, with exponential rate determined by the communication height and leading prefactor determined by the local quadratic behavior at the relevant minima and saddle points. Our approach provides a general strategy for lifting finite-dimensional Eyring-Kramers analysis to infinite-dimensional stochastic gradient systems.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T00:49:03Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Morris Brooks</name>
+    </author>
+    <author>
+      <name>Giacomo Di Gesù</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.14287v1</id>
+    <title>Surface-tension calibration for N-phase mixtures</title>
+    <updated>2026-06-12T09:16:05Z</updated>
+    <link href="https://arxiv.org/abs/2606.14287v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.14287v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffuse-interface (phase-field) models are a widely used framework for interfacial dynamics in complex fluids, in which sharp interfaces are replaced by smooth transition layers and interfacial forces follow from a free-energy functional. In these models, surface tensions and diffuse thicknesses are not prescribed directly but are encoded implicitly by the bulk multiwell potential and the gradient-energy term through one-dimensional equilibrium profiles. While this link is classical in the binary Cahn--Hilliard setting, calibrating multiphase models is substantially more delicate because multiple pairwise surface tensions must be matched simultaneously and the relevant equilibrium paths are constrained by the Gibbs simplex. The practical problem is therefore: given a chosen bulk potential and a set of target pairwise surface tensions, determine gradient-energy coefficients that reproduce these targets in the full multiphase model.
+  Here we present a thermodynamically consistent calibration procedure for N-phase diffuse-interface free energies of Cahn--Hilliard type. The method determines a symmetric capillary matrix that matches prescribed pairwise surface tensions through the model's equilibrium profiles. We further introduce a rescaling strategy that adjusts diffuse interface widths to mesh-resolvable values while preserving the calibrated surface tensions. The resulting calibrated free-energy closure can be incorporated directly into N-phase mixture simulations, and we demonstrate this by applying it to N-phase Navier--Stokes--Cahn--Hilliard flows.</summary>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-12T09:16:05Z</published>
+    <arxiv:comment>43 pages</arxiv:comment>
+    <arxiv:primary_category term="physics.flu-dyn"/>
+    <author>
+      <name>M. F. P. ten Eikelder</name>
+    </author>
+    <author>
+      <name>A. Brunk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.04217v2</id>
+    <title>Polymarket-v1 Database</title>
+    <updated>2026-06-08T11:47:35Z</updated>
+    <link href="https://arxiv.org/abs/2606.04217v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.04217v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce the Polymarket-v1 Database: the complete on-chain trade archive of Polymarket's first-generation CTF Exchange on Polygon, spanning 2022-11-21 to 2026-04-28 and covering the full contract lifecycle from first settlement to natural termination. The dataset comprises 1.20 billion trade records across 1.30 million markets with $61 billion in nominal volume. Its defining feature is 100% ground-truth aggressor direction derived from the blockchain settlement layer, a property unavailable in existing prediction market archives, which rely on heuristic inference. We use this truth-aligned archive to benchmark standard microstructure tools and document three findings. First, the tick rule and bulk volume classification achieve near-random aggregate accuracy (49.83% and 50.51%), but this masks a systematic, correctable price-level gradient driven by positive trade direction autocorrelation and concentrated market-making -- two structural features of prediction markets that violate the mean-reversion assumption embedded in classical classifiers. Second, these classification errors propagate into downstream metrics: inferred VPIN diverges substantially from ground-truth VPIN, and OFI estimates are directionally biased, with material consequences for Transaction Cost Analysis. Third, ground-truth microstructure quality predicts forecasting performance in ways that classification-based proxies cannot recover: True VPIN positively predicts Brier scores, while Gibbs spread negatively predicts them -- a selection effect reflecting that high-spread niche markets attract informed specialists rather than noise traders. Replacing ground-truth metrics with classified proxies attenuates both relationships, illustrating that measurement accuracy at the transaction level is a prerequisite for reliable inference about prediction market design and probability calibration.</summary>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-fin.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-fin.TR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-02T21:06:27Z</published>
+    <arxiv:comment>35 pages, 17 figures, 15 tables. Dataset available at https://huggingface.co/datasets/TimeSeventeen/Polymarket-v1</arxiv:comment>
+    <arxiv:primary_category term="cs.CE"/>
+    <author>
+      <name>Boka Qin</name>
+    </author>
+    <author>
+      <name>Rui Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.00715v1</id>
+    <title>Rate-optimal neural boundary detection from unlabeled noisy images</title>
+    <updated>2026-05-30T12:58:09Z</updated>
+    <link href="https://arxiv.org/abs/2606.00715v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.00715v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study boundary detection for unlabeled noisy images from a statistical perspective. The aim is to recover an unknown object region from raw intensity observations without pixel-wise annotating labels or a parametric model for the intensity distributions. Motivated by robust Gibbs posterior approaches based on thresholded misclassification losses, we propose a continuous hinge-type surrogate loss for boundary detection. The proposed loss is amenable to gradient-based optimization and can be combined with deep neural networks to represent complex object boundaries. We prove that the proposed loss function is Fisher consistent under a mild separation assumption and obtain a calibration inequality linking excess surrogate risk to the symmetric difference error of the estimated region. Under a piecewise smooth boundary model, we prove that the resulting deep neural network estimator achieves the minimax-optimal boundary recovery rate, up to logarithmic factors. The piecewise smooth formulation accommodates boundaries with corners and kinks, thereby extending beyond globally smooth boundary models. Numerical experiments demonstrate that the proposed method accurately and stably recovers object boundaries across a range of noise levels and shape configurations, and compares favorably with existing unsupervised boundary detection methods.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-30T12:58:09Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Kyeongho Kim</name>
+    </author>
+    <author>
+      <name>Ilsang Ohn</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.00309v1</id>
+    <title>Large-scale Uncertainty Quantification for Latent Variable Models Using Subsampling Markov Chain Monte Carlo</title>
+    <updated>2026-05-29T19:34:28Z</updated>
+    <link href="https://arxiv.org/abs/2606.00309v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.00309v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Stochastic gradient Langevin dynamics combined with Gibbs updates (SGLD--Gibbs) provides a highly scalable approach to approximate Bayesian inference in latent variable models. However, it remains unclear how to tune the algorithm's hyperparameters in a principled manner to ensure the uncertainty estimates are statistically meaningful. In this work, we address this gap in tuning guidance by developing a statistical scaling limit theory for SGLD--Gibbs. We derive a joint asymptotic limit for the global parameters and latent variables under appropriate space-time rescaling. We show that global parameters converge to a diffusion-type limit, while each latent variable converges to a jump process, reflecting the use of intermittent Gibbs updates. This joint jump-diffusion structure reveals how latent-variable randomness contributes to the stationary distribution of the global parameters. We leverage our results to propose explicit guidance on hyperparameter tuning for SGLD--Gibbs that ensures meaningful uncertainty quantification. Numerical experiments show that SGLD--Gibbs with our tuning guidance leads to better parameter estimates, uncertainty quantification, and predictive performance than stochastic variational inference.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-29T19:34:28Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Proceedings of the 43rd International Conference on Machine Learning, Seoul, South Korea. PMLR 306, 2026</arxiv:journal_ref>
+    <author>
+      <name>Xiaoyu Wang</name>
+    </author>
+    <author>
+      <name>Jonathan H. Huggins</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.26078v3</id>
+    <title>Global Convergence of Wasserstein Policy Gradient for Entropy-Regularized Reinforcement Learning</title>
+    <updated>2026-06-08T11:31:14Z</updated>
+    <link href="https://arxiv.org/abs/2605.26078v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.26078v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Wasserstein policy gradient (WPG) is a policy optimization method for reinforcement learning (RL) that exploits the optimal-transport geometry of action distributions. For the entropy-regularized RL objective, WPG evolves each state-conditional policy by transporting it along the action gradient of the soft Q-function together with a Langevin-type diffusion. Despite its appeal for continuous-control problems, its global convergence properties remain poorly understood. Standard Langevin analyses do not directly apply, because the RL objective depends on the policy through the Bellman recursion rather than through a static convex functional, and the Langevin drift is determined by the soft Q-function, whose regularity must be controlled along the policy iterates.
+  In this paper, we develop a global convergence theory for WPG by exploiting the Bellman structure of entropy-regularized RL. We show that the role usually played by convexity can be replaced by a Bellman-based argument: the soft Bellman residual admits a statewise KL representation with respect to a Gibbs policy; Bellman contraction relates this residual to the global optimality gap; and a Bellman resolvent identity connects value improvement to relative Fisher information. Combined with a uniform log-Sobolev inequality (LSI) for the evolving Gibbs family, these ingredients yield a distributional Polyak--Łojasiewicz condition. We further establish the regularity and uniform bounds needed to control the discretization error, thereby obtaining geometric contraction up to a discretization bias. Conceptually, our analysis shows that although entropy-regularized RL is not convex in the usual flat sense, the Bellman recursion induces a favorable Polyak--Lojasiewicz-type (PL) geometry that supports global convergence of WPG.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-25T17:42:59Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zhaoyu Zhu</name>
+    </author>
+    <author>
+      <name>Rui Gao</name>
+    </author>
+    <author>
+      <name>Shuang Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.25425v1</id>
+    <title>Experimental and computational diffusion analysis in Ni-X binary and Ni-Al-X (X = Cr, Mo, Ta, W, Re) ternary systems</title>
+    <updated>2026-05-25T04:55:22Z</updated>
+    <link href="https://arxiv.org/abs/2605.25425v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.25425v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An extensive diffusion analysis is presented for binary Ni-X and ternary Ni-Al-X (X = Cr, Mo, Ta, W, Re) systems, which play a crucial role in microstructural evolution and phase stability in Ni-Al-based superalloys. Specifically, we highlight changes in the diffusion coefficients of X in the presence of Al and compare diffusional interactions across systems considered. First-principles calculations, combined with activation energies derived from temperature-dependent experiments, reveal consistent trends in Ni-X systems, with variations in activation energies largely attributed to differences in migration energies. In ternary systems, diffusion coefficients estimated from intersecting diffusion profiles show that the main interdiffusion coefficient of X is comparable to its binary counterpart, with similar activation energies. However, cross-diffusion coefficients are shown to significantly influence fluxes, either enhancing or reducing diffusion lengths depending on the relative directions of diffusing elements. For Ni-Al-Re, a single-profile method is employed to overcome uncertainties in estimating composition gradients at the near-end-member intersecting composition. The diffusion coefficients obtained correlate well with the nature of diffusion paths when represented on Gibbs triangles. To extend these findings, a physics-informed neural network (PINN) optimization method is applied to extract composition-dependent diffusion coefficients across the full composition range. The analysis demonstrates the necessity of incorporating experimentally estimated diffusion coefficients as equality constraints, without which optimization reliability is compromised. Overall, the results establish a robust framework for diffusion studies in Ni-Al-X systems, highlighting the critical role of cross-diffusion effects and constraint-enhanced numerical methods.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-25T04:55:22Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Ankur Srivastava</name>
+    </author>
+    <author>
+      <name>Suman Sadhu</name>
+    </author>
+    <author>
+      <name>Satyam Kumar</name>
+    </author>
+    <author>
+      <name>Ujjval Bansal</name>
+    </author>
+    <author>
+      <name>Raju Ravi</name>
+    </author>
+    <author>
+      <name>Saswata Bhattacharyya</name>
+    </author>
+    <author>
+      <name>Gopalakrishnan Sai Gautam</name>
+    </author>
+    <author>
+      <name>Aloke Paul</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.24485v1</id>
+    <title>Optimal drift optimizer for non-convex optimization</title>
+    <updated>2026-05-23T09:19:30Z</updated>
+    <link href="https://arxiv.org/abs/2605.24485v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.24485v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study a finite-horizon stochastic control criterion for non-convex optimization in which Brownian exploration is balanced against a quadratic control cost. Rather than emphasizing the classical Hopf--Cole representation, we isolate the exact drift selected by the criterion and reorganize it in a form adapted to optimization. The key object is the conditional terminal law of the optimal process. We show that this law is a Gibbs measure for a proximally penalized energy, yielding three exact representations of the drift: potential, averaged-gradient, and barycentric. We then analyze two asymptotic regimes relevant for optimization. As terminal time is approached, the drift recovers a scaled gradient-descent field. In the low-temperature regime, assuming a unique global minimizer, the conditional terminal law concentrates on it even in the presence of nonglobal local minima, and the drift converges to an affine attraction field toward it. In the nondegenerate case we also derive Laplace asymptotics for the drift, the value function, and the covariance of the conditional terminal law. Finally, we record a simple gradient-free discretization suggested by the barycentric formula.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-23T09:19:30Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Qin Li</name>
+    </author>
+    <author>
+      <name>Sixu Li</name>
+    </author>
+    <author>
+      <name>Eitan Tadmor</name>
+    </author>
+    <author>
+      <name>Emmanuel Trélat</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.23879v1</id>
+    <title>On the Stability of Spherical Hellinger-Kantorovich Flows and Their Implications for Differential Privacy</title>
+    <updated>2026-05-22T17:38:20Z</updated>
+    <link href="https://arxiv.org/abs/2605.23879v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.23879v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gradient-flow sampling interprets a Gibbs distribution as the minimizer of an energy functional over probability measures and generates dynamics converging to this target. Under spherical Hellinger-Kantorovich (SHK) geometry, the flow couples transport and reaction and coincides with birth-death Langevin dynamics. In this work, we develop a perturbation theory for SHK gradient flows. For two potentials $V$ and $V^{\prime}$, we compare the associated flows from a common initialization and quantify how potential discrepancies propagate over time. A uniform perturbation bound yields dimension-free, pointwise control of the log-likelihood ratio and Rényi divergence, while additional structure allows us to derive bounds for the KL divergence as well. We apply these results to approximate sampling for the exponential mechanism in differential privacy. The likelihood-ratio control provides explicit time-dependent Pure-DP guarantees for SHK-based samplers, while the KL bound yields Approximate-DP certificates via hockey-stick divergence. We also derive a utility bound separating intrinsic exponential-mechanism suboptimality from finite-time sampling error.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-22T17:38:20Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Aratrika Mustafi</name>
+    </author>
+    <author>
+      <name>Soumya Mukherjee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.18180v1</id>
+    <title>Canonical Regularisation of Wide Feature-Learning Neural Networks</title>
+    <updated>2026-05-18T10:23:06Z</updated>
+    <link href="https://arxiv.org/abs/2605.18180v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.18180v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Wide neural networks in the feature-learning regime drive modern deep learning, and yet they remain far less studied than their kernel-regime counterparts. We consider a critical yet under-explored difference between these two regimes: the regulariser and prior implied by gradient flow training. This canonical regularisation property is well-studied in kernel regime networks -- of all the infinite global minima, gradient flow selects exactly the vanishing ridge solution -- and underpins the celebrated NN-GP correspondence, precisely allowing the modelling of noise during training. However, we prove ridge regularisation biases gradient flow in feature-learning regime networks, even in the infinitesimal limit of vanishing regularisation. Over training, ridge distorts the inductive bias of the network, with a particular damage done to pretrained networks where the implicit prior is informative. We resolve this by axiomatising the canonical regulariser as a regime-agnostic function-space energy and lift, which uniquely identifies ridge in the kernel regime, and crucially generalises to the feature-learning regime. By studying the Riemannian geometry of feature-learning networks, we derive geodesic ridge from our framework, generalising ridge to the feature-learning regime. Correspondingly, we prove the canonical function-space prior is a Riemannian Gibbs Process, generalising the more familiar Gaussian Process. As a practical contribution, we propose arc ridge as a minimax-robust, scalable surrogate to geodesic ridge, revealing a deep relationship between early stopping and canonical regularisation across learning regimes. Finally, we demonstrate the consequences of our theory empirically on both image processing and NLP transfer-learning problems.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-18T10:23:06Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>George Whittle</name>
+    </author>
+    <author>
+      <name>Pranav Vaidhyanathan</name>
+    </author>
+    <author>
+      <name>Juliusz Ziomek</name>
+    </author>
+    <author>
+      <name>Natalia Ares</name>
+    </author>
+    <author>
+      <name>Maike A. Osborne</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.15899v1</id>
+    <title>Solving Classical and Quantum Spin Glasses with Deep Boltzmann Quantum States</title>
+    <updated>2026-05-15T12:30:07Z</updated>
+    <link href="https://arxiv.org/abs/2605.15899v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.15899v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Variational neural network models have achieved remarkable success in solving ground-state problems of quantum many-body systems. However, addressing classical and quantum spin glasses remains challenging, as disorder and energy frustration give rise to an exponentially large number of local energy minima separated by high-energy barriers, hindering the efficiency of conventional Metropolis-based Monte Carlo methods. To bridge this gap, we introduce Deep Boltzmann Quantum States, a class of neural quantum states inspired by deep Boltzmann machines that inherit efficient block Gibbs sampling. We also propose two key advances in the training algorithm. Firstly, we combine natural-gradient updates with state-of-the-art stochastic optimizers. Secondly, we gradually tune the hardness of the problem Hamiltonian by interpolating from an easy to a hard regime, without the need to closely approximate the instantaneous adiabatic state at intermediate times. We match the exact solution or the best available estimate for several instances of classical and quantum Ising spin-glass models with infinite-range interactions and hundreds of spins. We also solve instances of the NP-hard Job Shop Scheduling Problem exceeding the current limitations of quantum annealing hardware. To summarize, deep neural architectures with efficient global update rules and trained within an annealing-like scheme, provide a powerful framework for solving real-world hard combinatorial optimization and for investigating disordered quantum many-body systems.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T12:30:07Z</published>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Luca Leone</name>
+    </author>
+    <author>
+      <name>Arka Dutta</name>
+    </author>
+    <author>
+      <name>Markus Heyl</name>
+    </author>
+    <author>
+      <name>Enrico Prati</name>
+    </author>
+    <author>
+      <name>Pietro Torta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.12007v1</id>
+    <title>A geometry-aligned multi-fidelity framework for uncertainty quantification of wildfire spread</title>
+    <updated>2026-05-12T11:55:52Z</updated>
+    <link href="https://arxiv.org/abs/2605.12007v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.12007v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Forward propagation of input uncertainties in physics-based wildfire models is computationally prohibitive, limiting the use of high-fidelity simulators in risk assessment workflows. This work introduces a geometry-aligned bi-fidelity surrogate framework that addresses the convection-dominated nature of wildfire spread by mapping low- and high-fidelity solution snapshots onto a common reference domain prior to basis selection and reconstruction. Unlike conventional bi-fidelity schemes, which combine spatially shifted snapshots and thus suffer from oscillations and excess basis requirements near sharp fronts, the proposed mapping aligns the dominant front geometry through per-variable shift/stretch transforms in 1D and an activity indicator-based affine alignment in 2D, so that reduced bases compare physically corresponding structures rather than displaced ones. Building on the ADfiRe physics-based simulator, we demonstrate the method on 1D and 2D test cases in which low- and high-fidelity models differ in mesh resolution and physical completeness. Across both settings, the geometry-aligned surrogate reproduces full-field temperature and fuel composition with substantially lower error than its unmapped counterpart, eliminates Gibbs-type oscillations near steep gradients, and recovers high-fidelity probability density functions for key quantities of interest (e.g., maximum temperature, evaporated moisture, and burned area). After offline training, online predictions are roughly three orders of magnitude cheaper than direct high-fidelity evaluation, making the framework a practical building block for many-query uncertainty quantification once the offline cost is amortized over enough queries. We discuss the conditions under which the geometric alignment is most effective, its limitations for non-convex or topologically complex fronts, and the path toward validation against real data.</summary>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-12T11:55:52Z</published>
+    <arxiv:comment>23 pages, 15 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CE"/>
+    <author>
+      <name>Konstantinos Vogiatzoglou</name>
+    </author>
+    <author>
+      <name>Costas Papadimitriou</name>
+    </author>
+    <author>
+      <name>Vasilis Bontozoglou</name>
+    </author>
+    <author>
+      <name>Petros Koumoutsakos</name>
+    </author>
+    <author>
+      <name>Han Gao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.09302v1</id>
+    <title>Discrete Langevin-Inspired Posterior Sampling</title>
+    <updated>2026-05-10T03:59:40Z</updated>
+    <link href="https://arxiv.org/abs/2605.09302v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.09302v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study posterior sampling for inverse problems in discrete state spaces using discrete diffusion models as generative priors. While continuous diffusion models have become widely used for inverse problems, their discrete counterparts remain comparatively underexplored. Existing discrete posterior samplers often rely on continuous relaxations of discrete variables, Gibbs-style updates, or mechanisms specialized to particular corruption processes, which can limit scalability or generality. We propose $Δ$LPS, a Discrete Langevin-Inspired Posterior Sampler that uses gradient information to identify promising discrete moves without leaving the discrete state space. The resulting approach enables efficient parallel updates across all token dimensions and is agnostic to the training paradigm of the discrete diffusion prior, including masked and uniform-state diffusion. We evaluate our method on image restoration tasks across MNIST, CIFAR, and FFHQ, as well as spatial mapping, covering linear, nonlinear, and blind inverse problems. Across these settings, we improve over recent discrete diffusion posterior samplers and are competitive with strong continuous diffusion-based inverse solvers. Our results suggest that fully discrete, gradient-informed posterior samplers offer a scalable and general path toward solving inverse problems over discrete representations.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-10T03:59:40Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Chaitanya Amballa</name>
+    </author>
+    <author>
+      <name>Sattwik Basu</name>
+    </author>
+    <author>
+      <name>Jorge Vančo Sampedro</name>
+    </author>
+    <author>
+      <name>Romit Roy Choudhury</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.05530v1</id>
+    <title>Energy Generative Modeling: A Lyapunov-based Energy Matching Perspective</title>
+    <updated>2026-05-07T00:18:55Z</updated>
+    <link href="https://arxiv.org/abs/2605.05530v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.05530v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative models based on static scalar energy functions represent an emerging paradigm in which a single time independent potential drives sample generation through its gradient field, eliminating the need for time conditioning entirely. We unify the training and sampling phases of this paradigm, conventionally treated as separate procedures, within a single framework: density transport on the Wasserstein space, cast as a nonlinear control problem in which the Kullback Leibler (KL) divergence serves as a Lyapunov function. Training and sampling are then two instances of this same master dynamics, differing only in initial condition. Within this autonomous framework we develop two analytic results. First, since the Lyapunov certificate is asymptotic, we derive a finite step stopping criterion for Langevin sampling and prove that no Lyapunov certificate exists for the deterministic gradient flow on the same energy landscape. Second, the reformulation brings the toolkit of nonlinear control theory to bear on static scalar energy generative modeling, that is, we show that additive composition of trained scalar energies retains an explicit Gibbs invariant measure and inherits the closed-loop Lyapunov certificate. Beyond these immediate results, this reformulation bridges static scalar energy generative models with the full toolkit of nonlinear control theory, opening the door to barrier functions for constrained generation and contraction metrics for accelerated sampling. Experiments on synthetic distributions validate the theoretical predictions.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-07T00:18:55Z</published>
+    <arxiv:comment>11 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yixuan Wang</name>
+    </author>
+    <author>
+      <name>Wenqian Xue</name>
+    </author>
+    <author>
+      <name>Warren E. Dixon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.03080v1</id>
+    <title>High-Dimensional Enhanced Sampling via Regularized Path-Dependent McKean--Vlasov Dynamics using Tensor Density Approximation</title>
+    <updated>2026-05-04T18:49:44Z</updated>
+    <link href="https://arxiv.org/abs/2605.03080v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.03080v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sampling from high-dimensional Gibbs measures poses a challenge when the energy landscape consists of multiple metastable states. Enhanced-sampling methods mitigate this difficulty by introducing adaptive biasing potentials to facilitate the exploration along prescribed collective variables (CVs), but their scalability is often limited by the dimension of the CV space. Motivated by the Wasserstein-gradient-flow interpretation of adaptive biasing, we propose a regularized path-dependent McKean--Vlasov formulation for high-dimensional enhanced sampling. The formulation replaces the variational regularization of the Wasserstein functional by a direct regularization of the CV marginal density in the McKean--Vlasov drift, avoiding the outer convolution over the CV domain. Furthermore, it replaces the instantaneous law by a weighted path-history measure to improve statistical stability in the small-replica regime. We establish well-posedness of the resulting regularized and path-dependent stochastic dynamics under suitable assumptions. For numerical realization, the history-averaged CV marginal density is approximated using an optimization-free functional hierarchical tensor representation, leading to a scalable density-based adaptive biasing scheme. Numerical experiments on benchmark potentials and molecular systems demonstrate the effectiveness of the proposed method for sampling problems with CV dimensions up to 64.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-04T18:49:44Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Liyao Lyu</name>
+    </author>
+    <author>
+      <name>Siyu Guo</name>
+    </author>
+    <author>
+      <name>Huan Lei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.02850v1</id>
+    <title>Quantum Tilted Loss in Variational Optimization: Theory and Applications</title>
+    <updated>2026-05-04T17:25:43Z</updated>
+    <link href="https://arxiv.org/abs/2605.02850v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.02850v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Variational quantum algorithms (VQAs) are leading strategies for using near-term quantum devices, with a well-studied bottleneck being their trainability. Standard expectation-value objectives with expressive circuits frequently encounter barren plateaus in the optimization landscape during training. To address this challenge, we introduce the Quantum Tilted Loss (QTL), an operator-level generalization of classical exponential tilting designed to systematically reshape the optimization landscape. By tuning a single continuous parameter, QTL can amplify gradient signals in structured settings while preserving the problem's true global minima. We provide a theoretical foundation that unifies standard expectation minimization with popular tunable heuristics, such as Conditional Value-at-Risk (CVaR) and Gibbs formulations. Deploying this framework requires balancing the geometric benefits of a sharpened landscape against the statistical cost of estimating nonlinear gradients from finite quantum measurements. We formalize this trainability-estimability trade-off, demonstrating how aggressive tilting fundamentally shifts the optimization bottleneck from landscape flatness to sample complexity. Thus, the operational bottleneck shifts from vanishing gradients to measurement sampling variance. Finally, we exhibit through numerical simulations that ascending tilt schedules can outperform fixed-tilt training in finite-shot regimes.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-04T17:25:43Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Yixian Qiu</name>
+    </author>
+    <author>
+      <name>Josep Lumbreras</name>
+    </author>
+    <author>
+      <name>Xiufan Li</name>
+    </author>
+    <author>
+      <name>Patrick Rebentrost</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.00723v1</id>
+    <title>Decentralized Proximal Stochastic Gradient Langevin Dynamics</title>
+    <updated>2026-05-01T15:11:06Z</updated>
+    <link href="https://arxiv.org/abs/2605.00723v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.00723v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose Decentralized Proximal Stochastic Gradient Langevin Dynamics (DE-PSGLD), a decentralized Markov chain Monte Carlo (MCMC) algorithm for sampling from a log-concave probability distribution constrained to a convex domain. Constraints are enforced through a shared proximal regularization based on the Moreau-Yosida envelope, enabling unconstrained updates while preserving consistency with the target constrained posterior. We establish non-asymptotic convergence guarantees in the 2-Wasserstein distance for both individual agent iterates and their network averages. Our analysis shows that DE-PSGLD converges to a regularized Gibbs distribution and quantifies the bias introduced by the proximal approximation. We evaluate DE-PSGLD for different sampling problems on synthetic and real datasets. As the first decentralized approach for constrained domains, our algorithm exhibits fast posterior concentration and high predictive accuracy.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-01T15:11:06Z</published>
+    <arxiv:comment>42 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Mohammad Rafiqul Islam</name>
+    </author>
+    <author>
+      <name>Lingjiong Zhu</name>
+    </author>
+  </entry>
+</feed>

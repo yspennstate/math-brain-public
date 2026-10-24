@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260924T104931Z-account03-B09-QFORM-r49",
+  "source_control": {
+    "startup_commit": "86da67febc99b700fedf80d5245bbdb13b0ef3da",
+    "prepublication_refresh_commit": "2f5fefdcc24781234c2b2ab3ec6fb7d4943a7eb0",
+    "owner_control_revision": "2026-09-22.15",
+    "activation_revision": "2026-09-22.5",
+    "sole_target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "REGULARIZED-DETERMINANT-CROSS-BOUND",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "a302aab3477c64757b511e80d3907f982e04873a",
+      "path": "proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md",
+      "scope": "For an original-coordinate cross block C and 1<=q<2, leverage<=q/2 on one side gives |phi(t)|<=det(I+2q t^2 CC^T/(pi^2 e^2))^(-1/(4q)); arbitrary same-side phases retained.",
+      "status": "complete supporting analytic argument; independent review pending"
+    },
+    {
+      "id": "FRACTIONAL-HALF-POTENTIAL-FOURIER",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e542b1a6ef471b329e4e88a6553e1aacb45acc1a",
+      "path": "proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md",
+      "scope": "E|R-w|^-1/2 <= (2pi)^-1/2 int |t|^-1/2 |phi_R(t)| dt when RHS finite."
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-REGDET-TWOVOLUME-HALFRIESZ-v1",
+      "status": "supporting theorem pending independent review",
+      "statement": "For R=F(Y)+2Y^T C Z+G(Z) on disjoint original-coordinate banks, E2(C)=sum_{i<j} sigma_i^2 sigma_j^2>0, and physical-side leverage theta<=q/2 with 1<=q<2, sup_w E|R-w|^-1/2 <= K_q E2(C)^-1/8, K_q=sqrt(e)2^-7/4 q^-1/4 B(1/8,(2-q)/(8q))."
+    },
+    {
+      "id": "QFORM-SCALARPIVOT-REGDET-TWOVOLUME-v1",
+      "status": "supporting theorem pending independent review",
+      "statement": "After a literal scalar pivot a=A_hh!=0, the preceding cross block in the exact Schur remainder gives ||p_Q||infinity <= K_q |a|^-1/2 E2(C)^-1/8 and the same coefficient times interval length. Essential boundedness only; continuity not separately proved."
+    },
+    {
+      "id": "QFORM-DISJOINT-TWOVOLUME-PARTITION-v1",
+      "status": "exact algebraic identity",
+      "statement": "For symmetric Schur complement S, a uniform random physical bipartition has E E2(S[Y,Z])=D2_disj(S)/16. With T_h(A)=sum disjoint det A[hI,hJ]^2, T_h(A)=a^2 D2_disj(S)."
+    },
+    {
+      "id": "QFORM-PHYSICAL-ROW-TWOVOLUME-v1",
+      "status": "exact algebraic identity",
+      "statement": "For M=CC^T, W_i=sum_{j!=i,K}det C[{i,j},K]^2=M_ii tr M-(M^2)_ii and sum_i W_i=2E2(C); for rank two, W_i=(sigma1 sigma2)^2 ell_i."
+    }
+  ],
+  "partner_applied": {
+    "partner": "account04/B09",
+    "source_commit": "c0d3f34e557a374f41b2639994c43af4f950b682",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B09/20260923T101659Z-account04-B09-dense-self-cross-fourier-r1/REPORT.md",
+    "application": "K=diag(6,2,1), spectrum {-6,-2,-1,1,2,6}, hence ||p_Q||infinity<=3*12^(-1/3)=1.310370697104448 with continuity."
+  },
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "6aa8768d34aabe274ad4c286bb8bffffd431c271",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260924T104931Z-account03-B09-QFORM-r49/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260924T104931Z-account03-B09-QFORM-r49/CHECK.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260924T104931Z-account03-B09-QFORM-r49/CHECK_OUTPUT.txt",
+    "handoff_commit": "24bb674e61dc4e1f7a3f6913857a20752222b7f9"
+  },
+  "stress_result": "For U=(I_r;I_r)/sqrt2 and C_eps=U diag(2,2,eps,...,eps)U^T, leverage=1/2, E2>=16, and the target-valid full form has ||p_Q||infinity<=5.426167231424402 uniformly in r and eps>0.",
+  "unresolved_implication": "The bare three-large-eigenvalue hypothesis has not been shown to force a scalar pivot plus a disjoint partition with both universal two-volume currency and leverage<1. The high-leverage complementary branch must retain the heavy physical row, complementary Pluecker mass and arbitrary same-side curvature jointly.",
+  "next_step": "QFORM-HEAVYROW-TWOVOLUME-CONDITIONAL-LINEAR-v1: use W_i=M_ii tr M-(M^2)_ii to isolate a heavy original row and prove a translation-uniform inverse-half-potential estimate by conditional linear anti-concentration without using the refuted one-heavy-row-only shortcut.",
+  "full_qform_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

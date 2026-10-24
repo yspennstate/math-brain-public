@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260923T184804Z-account03-B09-QFORM-r39",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity_status": "OPEN",
+  "source_control": {
+    "initial_brain_commit": "40024d459ee9559e24841ef53535df834761c6d9",
+    "prepublication_observed_brain_head": "9b4fa36b6f9c3f59309df9c0f7916793350749f2",
+    "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "claim": "QFORM-RANK2-DUAL-AGGREGATE-COLLAPSE-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "b2a0ccad9d4f4d654e0fc84dd0323ce84230ebc4",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T175610Z-account03-B09-QFORM-r38/REPORT.md"
+    },
+    {
+      "claim": "weighted-subset / arbitrary-rank projected-crossing theorem",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "829192412f2a2d84e72b4bed91115fc5fab68401",
+      "path": "proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md"
+    },
+    {
+      "claim": "QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c0d3f34e557a374f41b2639994c43af4f950b682",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B09/20260923T101659Z-account04-B09-dense-self-cross-fourier-r1/REPORT.md",
+      "role": "designated partner actually applied"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-E3-PHYSICAL-CROSS-SMOOTHING-v1",
+      "status": "SOURCE_DERIVED_SUPPORTING_LEMMA",
+      "statement": "If a literal physical cross block has positive aggregate third volume Z3 and all normalized size-three row-volume marginals <=1/2, then ||p_Q||inf<=6 sqrt(2e) Z3^(-1/6), with continuous density and the same linear interval coefficient."
+    },
+    {
+      "id": "QFORM-R4-CARRIER-DIFFUSE-OR-256-LOCALIZED-v1",
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For A=D+VKV^T with D physical diagonal, rank carrier r in {3,4}, V^TV=I and s3(K)>=gamma, either ||p_Q||inf<64.617/gamma with a continuous density, or some unit carrier vector has more than half its squared mass on at most 256 original coordinates."
+    },
+    {
+      "id": "QFORM-DIAGONAL-PLUS-R4-DIFFUSE-CARRIER-v1",
+      "status": "CONCURRENT_INDEPENDENT_REPRODUCTION_NOT_UNIQUE",
+      "statement": "Under max carrier leverage <=1/16, ||p_Q||inf<=24 sqrt(2e)/gamma.",
+      "source_match_found": {
+        "account": "account01",
+        "slot": "B09",
+        "run_id": "20260923T184722Z-account01-B09-QFORM-auto11",
+        "commit": "4c14dc43b9c5f602ac85f25587e30a0fc9ad3c9e",
+        "claim": "QFORM-RANK4-DIFFUSE-CARRIER-UNIFORM-v1"
+      }
+    }
+  ],
+  "partner_application": {
+    "partner": "account04/B09",
+    "family": "N=64 Walsh rank-three projector A=VV^T",
+    "physical_3x3_cross_det": "1/16384",
+    "inequality": "||p_Q||inf <= 76.1952504945",
+    "aggregate_comparison": "same family has an aggregate physical cut with ||p_Q||inf <= 27.9797277792"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "af81ace54b10d45b8284185c92e89df38b92063c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T184804Z-account03-B09-QFORM-r39/REPORT.md",
+    "late_source_note": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T184804Z-account03-B09-QFORM-r39/LATE_SOURCE_NOTE.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T184804Z-account03-B09-QFORM-r39/CHECK.py"
+  },
+  "handoff": {
+    "commit": "4f9637b0247075e6f5bb2969dd86ea1ffab4ff81",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B09/20260923T184804Z-account03-B09-QFORM-r39.md"
+  },
+  "unresolved_implication": "QFORM-R4-CARRIER-256-LOCALIZED-OR-RESIDUAL-CROSSING-v1",
+  "next_step": "Route the <=256-coordinate carrier localization into an existing physical hub/pivot/fixed-pair receiver or iterate a product-preserving quotient split; separately retain and compile the nonzero r38 residual E rather than dropping it."
+}

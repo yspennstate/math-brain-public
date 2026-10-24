@@ -1,0 +1,24 @@
+{
+  "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "mode": "ro",
+  "query": "SELECT id,title,body,metadata_json FROM nodes WHERE id IN (?,?)",
+  "parameters": [
+    "claim_081071dcf812e1c0843a53fe1da486f97876afe30678a091de36c26017e679f0",
+    "claim_a60b9dcbea1c3b4133831211a8107b42fbce24f2c59d8b4b21ede96b3cab07f1"
+  ],
+  "rows": [
+    {
+      "id": "claim_081071dcf812e1c0843a53fe1da486f97876afe30678a091de36c26017e679f0",
+      "title": "Open problem: An iid FPP law with proved KPZ exponent relation",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1. Source: Auffinger, Damron and Hanson: 50 years of first-passage percolation, Question22, PDF p.89; equation4.19.\nPosed in Auffinger, Damron and Hanson: 50 years of first-passage percolation\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "metadata_json": "{\"artifact_digest\":\"sha256:53ed5f63a17ce48ed04744ed37a7172602259671f2ff18da37068d22aee73c32\",\"artifact_path\":\"objects/sha256/53/53ed5f63a17ce48ed04744ed37a7172602259671f2ff18da37068d22aee73c32.md\",\"bundle_digest\":\"sha256:58d74c8da229fa6b81fe6bac4abdfaadf798d61b07728701a8922a92ccd764b6\",\"bundle_entry_key\":\"op-p0110\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-01\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_009.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:772492982336f844e436033d99bbb6870cb26f16b277731cabc6cb87e48d4e89\",\"revision_digest\":\"sha256:081071dcf812e1c0843a53fe1da486f97876afe30678a091de36c26017e679f0\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0110\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_a60b9dcbea1c3b4133831211a8107b42fbce24f2c59d8b4b21ede96b3cab07f1",
+      "title": "Attempt on An iid FPP law with proved KPZ exponent relation",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: An iid FPP law with proved KPZ exponent relation structural argument Result: If a geodesic deviates transversely by n^xi and the norm has quadratic curvature, the deterministic excess norm over a displacement of length n has order n*(n^(xi-1))^2=n^(2xi-1). This yields the proposed balance only after assuming random fluctuations are of the same order. Check: The power follows from norm homogeneity and the square of the relative transverse displacement. A curvature exponent kappa would instead give kappa*xi-(kappa-1). Obstruction: Both the required exponent existence and error control when replacing random passage times by the norm remain unproved for a concrete iid law here. The balance calculation is conditional, not a proof.\nRefers to the open problem node open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation\nNo independent review",
+      "metadata_json": "{\"artifact_digest\":\"sha256:1cbe8d7ad52e92812b2ddaf33f86d8b183e48a2ed295ef9244fd93fa95feba01\",\"artifact_path\":\"objects/sha256/1c/1cbe8d7ad52e92812b2ddaf33f86d8b183e48a2ed295ef9244fd93fa95feba01.md\",\"bundle_digest\":\"sha256:f3e0d4cb2f270970b3a7e311e549325fd4a447f22688326d8e681b699cda8afb\",\"bundle_entry_key\":\"at-p0110\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-04\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_012.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:705337efabf29cd94bdc3e6e7eb6e032d19e1a439ab1ed1610b6421824e2eead\",\"revision_digest\":\"sha256:a60b9dcbea1c3b4133831211a8107b42fbce24f2c59d8b4b21ede96b3cab07f1\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0110\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    }
+  ],
+  "scope": "Exact exported-node IDs looked up in the current read-only population store. The earlier case-sensitive P0110/An-title search missed lowercase metadata and prefixed titles. Stored labels do not certify present openness."
+}

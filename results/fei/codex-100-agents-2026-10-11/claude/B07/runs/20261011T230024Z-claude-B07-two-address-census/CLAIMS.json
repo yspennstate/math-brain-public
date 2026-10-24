@@ -1,0 +1,139 @@
+[
+ {
+  "claim_id": "B07L-TWO-ADDRESS-POINT-DEFECT",
+  "version": 1,
+  "exact_statement": "The three-variable one-point defect f = 1 - 2*1{x = x0}, with address set A equal to two of its variables and with any number of dummy variables added, lies in the two-address conditional-product class and has H(f)/I(f) = 16/3 - (3/2) log2 3 = 2.955889... > 40/17. Hence any constant C_2 with H <= C_2 I on the class satisfies C_2 >= 16/3 - (3/2) log2 3. More generally C_k >= M_(k+1), the largest H/I over (k+1)-variable Boolean functions.",
+  "hypotheses": [
+   "Uniform measure on {-1,1}^N",
+   "f Boolean",
+   "Entropy in bits, I = sum |S| fhat(S)^2",
+   "Two-address class: a set A of two coordinates such that for every positive-probability value of S_A the conditional law of S_(A^c) is a product law (ONE_BIT_ENDPOINT.md section 3; alternative_strategy.md Route C)"
+  ],
+  "statement_sha256": "7f40fa1d0b9e4c41c8d5c2515c8c41a30445026acf07e67dd4c5d38c5e65ff77",
+  "contributors": [
+   "claude-B07-lead"
+  ],
+  "proof_source": {
+   "text": "fhat(empty) = 3/4 and fhat(S) = -chi_S(x0)/4 for S nonempty, so H = (9/16)log2(16/9) + 7/4 and I = 12/16. With A = {1,2}, A^c = {3}; every law on one bit is product, and dummy coordinates are deterministic in every conditional law. For k addresses the condition is vacuous on k+1 variables.",
+   "check": "out/P4_census.json, out/P4_certificate_cstar.json"
+  },
+  "proof_dependencies": [],
+  "review_records": [],
+  "status": "PROVED",
+  "supersedes": [],
+  "refutes": [
+   "C016 and X008 as the best recorded two-address obstruction (40/17); not refuted as a counterexample to constant two"
+  ],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A034",
+   "A032",
+   "F12",
+   "A088",
+   "A094"
+  ]
+ },
+ {
+  "claim_id": "B07L-TWO-ADDRESS-CENSUS-N5",
+  "version": 1,
+  "exact_statement": "For every Boolean F on N <= 5 uniform variables and every pair A of coordinates for which F is in the two-address conditional-product class, H(F) <= (16/3 - (3/2) log2 3) I(F). For a fixed address pair, equality holds for exactly 32 functions at N = 4 and 48 at N = 5, each an embedded three-variable one-point defect containing both addresses.",
+  "hypotheses": [
+   "Uniform measure on {-1,1}^N",
+   "f Boolean",
+   "Entropy in bits, I = sum |S| fhat(S)^2",
+   "Two-address class: a set A of two coordinates such that for every positive-probability value of S_A the conditional law of S_(A^c) is a product law (ONE_BIT_ENDPOINT.md section 3; alternative_strategy.md Route C)",
+   "N <= 5"
+  ],
+  "statement_sha256": "7965e04cff909211f8f344d72c375c3a4d279a78d2ce4d8e671ac4df1a9b6973",
+  "contributors": [
+   "claude-B07-lead"
+  ],
+  "proof_source": {
+   "text": "Exhaustive enumeration through the partial Walsh slices g_J in {0,+-1/2,+-1} (pure/mixed pointwise pattern lemma), exact integer product test per slice, Booleanity re-checked per function; the inequality decided per function by the integer comparison Ztot^(6 Ztot) 3^(9K) <= 2^(32K) prod C^(6C). N = 4 count (10,560) confirmed by brute force over all 65,536 truth tables. N = 5 count 1,564,928.",
+   "code": [
+    "code/b07_lead_checks.py",
+    "code/certify_max.py",
+    "code/bruteforce_n4.py"
+   ],
+   "certificate": "out/P4_certificate_cstar.json",
+   "certificate_sha256": "f7c99c549139371890f2bf282f225cd7a79f79ae94d7d5cfa60980cc11c8572f"
+  },
+  "proof_dependencies": [
+   "B07L-TWO-ADDRESS-POINT-DEFECT"
+  ],
+  "review_records": [],
+  "status": "CERTIFIED",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A034",
+   "A032",
+   "F12",
+   "A088"
+  ]
+ },
+ {
+  "claim_id": "B07L-GENERIC-MINENTROPY-CALIBRATION",
+  "version": 1,
+  "exact_statement": "p_max (H(p) - H_inf(p))^2 <= (1 - p_max) Var_p(ell). Equality holds when ell takes exactly two values and the smaller value has mass p_max; in particular for the spectral law of every n-bit one-point defect. So the point-defect calibration (H - H_inf)/I -> 4 of the A031 anchor inequality is reproduced, with equality, without Booleanity.",
+  "hypotheses": [
+   "p a probability law on a finite set",
+   "largest atom p_max < 1",
+   "ell = log2(1/p) on the support",
+   "entropy in bits"
+  ],
+  "statement_sha256": "8e6a76d843e823fb5e61b8299610d9b07f84f80d92b75f0eac528d0d4677db2e",
+  "contributors": [
+   "claude-B07-lead"
+  ],
+  "proof_source": {
+   "text": "X = ell - H_inf >= 0, q = P(X = 0) >= p_max, mu = E X. Cauchy-Schwarz on {X > 0}: E X^2 >= mu^2/(1-q), so Var X >= mu^2 q/(1-q) >= mu^2 p_max/(1-p_max).",
+   "illustration": "out/P3_generic_minentropy.json"
+  },
+  "proof_dependencies": [],
+  "review_records": [],
+  "status": "PROVED",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A031",
+   "A035",
+   "A088"
+  ]
+ },
+ {
+  "claim_id": "B07L-REVIEW-A032-TEN-ATOM",
+  "version": 1,
+  "exact_statement": "m passes every separate XOR pair-partition test and, for each nonzero U, some common sign vector cancels the U-th signed autoconvolution, but none of the 1024 sign vectors cancels all fifteen; no 4-bit Boolean function has |fhat| = m; 840 of the 360,360 labelled placements of the multiset {8,8,4^8,0^6} are Boolean-realizable; there are 2261 distinct 4-bit Boolean spectral laws.",
+  "hypotheses": [
+   "n = 4",
+   "magnitude vector m = (8,8,4,4,4,4,4,4,4,4,0,0,0,0,0,0)/16 indexed by subsets of [4] in binary order"
+  ],
+  "statement_sha256": "38e2783a16b7f464d1b9a180d8920310db739374b0a5ccb551e6108eb8309526",
+  "contributors": [
+   "claude-B07-lead (independent re-derivation of A032)"
+  ],
+  "proof_source": {
+   "code": "code/b07_lead_checks.py P1",
+   "certificate": "out/P1_ten_atom.json",
+   "certificate_sha256": "c3daa360ba1ebeeb9fe2d85e193865a5b9c75fceb7f1281eb593a0b960861c3e"
+  },
+  "proof_dependencies": [],
+  "review_records": [
+   {
+    "reviews": "A032-EXACT-PHASE-ADMISSION v1 (sha de3e9399...)",
+    "verdict": "ACCEPT ten-atom obstruction, n=4 counts, even-rank admission at n<=4; general-n support<=4 classification not re-proved"
+   }
+  ],
+  "status": "CERTIFIED",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A032",
+   "A088"
+  ]
+ }
+]

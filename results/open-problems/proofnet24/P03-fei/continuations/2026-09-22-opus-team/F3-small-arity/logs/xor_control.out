@@ -1,0 +1,7 @@
+control steep: min Gamma(p)+Gamma(q)-Gamma(p*q) on a 500^2 grid = -3.3062 at p=0.378 q=0.006
+   (L) q-cells: 1280 ; max x* - y over cells = 2.195 ; cells with x* = inf: 33  (0.4 s)
+   XOR certificate for control_steep.npz: NOT VERIFIED (the Lipschitz stage cannot close 33 q-cells: Gamma' exceeds every G)
+control smooth: min Gamma(p)+Gamma(q)-Gamma(p*q) on a 500^2 grid = -2.8945 at p=0.342 q=0.175
+    [4.1875     4.18945312 1.375      1.37695312]
+    [4.21875    4.22070312 1.375      1.37695312]]
+   XOR certificate for control_smooth.npz: NOT VERIFIED ; cells evaluated 2446031 ; smallest verified cell lower bound 1.505e-13 ; (27.7 s)

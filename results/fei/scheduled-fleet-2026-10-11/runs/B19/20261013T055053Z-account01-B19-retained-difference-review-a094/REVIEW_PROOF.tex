@@ -1,0 +1,142 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newcommand{\E}{\mathbb E}
+\newcommand{\cH}{\mathsf H}
+\newcommand{\cU}{\mathsf U}
+\title{Independent review of the retained-difference entropy telescope}
+\author{B19 / A094}
+\date{13 October 2026}
+\begin{document}
+\maketitle
+
+\section{Verdict}
+
+The claims \texttt{B05\_A023\_RETAINED\_DIFFERENCE\_NODE\_v1} and
+\texttt{B05\_A023\_RETAINED\_DIFFERENCE\_TREE\_v1} are accepted at their
+declared scope.  No repair was needed.  This reviewer did not contribute to
+the source proof.
+
+The word ``single-use'' must retain its narrow meaning: one displayed packet
+per tree node.  The theorem does not prove that the packets have disjoint
+ownership of their underlying physical data coordinates.  That stronger
+payment is precisely the open claim
+\texttt{B05\_A023\_RAW\_DIFFERENCE\_OWNERSHIP\_v1}.
+
+\section{Independent one-node reconstruction}
+
+Let $F$ use a fresh fair bit to choose Boolean $g$ or $h$.  Put
+$a_S=\widehat g(S)$, $b_S=\widehat h(S)$,
+$u_S=(a_S+b_S)/2$, $v_S=(a_S-b_S)/2$, and
+$M_S=u_S^2+v_S^2=(a_S^2+b_S^2)/2$.  Parseval gives
+\[
+ q:=\Pr[g\ne h]=\sum_Sv_S^2.
+\]
+The Fourier atoms of $F$ not containing the selector have coefficients $u_S$;
+those containing it have coefficients $v_S$.  Therefore, without using an
+upper-set identity,
+\[
+ \cH(F)-\frac{\cH(g)+\cH(h)}2
+ =\operatorname{JS}(a^2,b^2)
+  +\sum_SM_Sh_2(v_S^2/M_S).                              \tag{1}
+\]
+
+For real $x,y$, the scalar Jensen--Shannon contribution satisfies
+\[
+ \frac12\left[x^2\log_2\frac{2x^2}{x^2+y^2}
+ +y^2\log_2\frac{2y^2}{x^2+y^2}\right]
+ \leq \frac{(x-y)^2}{2\ln2}.                            \tag{2}
+\]
+Indeed, signs only enlarge the right side.  For $x,y\geq0$, homogeneity
+reduces to $y=1$, $r=x$.  The difference after multiplication by $2\ln2$ is
+\[
+ G(r)=(r-1)^2-r^2\ln\frac{2r^2}{r^2+1}
+             -\ln\frac2{r^2+1}.
+\]
+Writing
+\[
+ A(r)=1-r^{-1}-\ln\frac{2r^2}{r^2+1},
+ \qquad A'(r)=\frac{(r-1)^2}{r^2(r^2+1)},
+\]
+we have $G'(r)=2rA(r)$ and $A(1)=0$.  Thus $G$ decreases up to one and
+increases afterwards, proving (2), including endpoints by continuity.
+Summing (2) and using $\sum_S(a_S-b_S)^2=4q$ gives
+\[
+ \operatorname{JS}(a^2,b^2)\leq\frac{2q}{\ln2}.         \tag{3}
+\]
+
+Let $d=(g-h)/2$, so $\widehat d=v$.  Since $M$ is a probability law,
+$M_S\leq1$, and $\ln(1+t)\leq t$ gives
+\[
+ \begin{aligned}
+ M_Sh_2(v_S^2/M_S)
+ &=v_S^2\log_2(M_S/v_S^2)
+   +u_S^2\log_2(1+v_S^2/u_S^2)\\
+ &\leq v_S^2\log_2(1/v_S^2)+v_S^2/\ln2.
+ \end{aligned}                                          \tag{4}
+\]
+Zero atoms follow by continuity.  Combining (1)--(4),
+\[
+ \cH(F)-\frac{\cH(g)+\cH(h)}2
+ \leq \mathcal L(d)+\frac{3q}{\ln2}.                   \tag{5}
+\]
+
+For $V=\cH-\cU$, equation (5) is exactly
+\[
+ \cU(F)-\frac{\cU(g)+\cU(h)}2
+ \leq -V(F)+\frac{V(g)+V(h)}2
+       +\mathcal L(d)+\frac{3q}{\ln2}.                 \tag{6}
+\]
+Also $V\geq0$ termwise because
+$\widehat f(S)^2\leq\pi_f(S)\leq1$.  This proves the node claim.
+
+\section{Tree reconstruction and physical accounting}
+
+At an internal node $v$ at depth $j$, let $w_v=2^{-j}$.  Multiplying (6) by
+$w_v$ makes each child coefficient $w_v/2$, equal to its reach weight.
+Summation over a finite tree cancels every internal $\cU$ and $V$ term and
+leaves
+\begin{equation}
+\begin{split}
+ \cU(F_{\rm root})-\sum_\ell w_\ell\cU(g_\ell)
+ \leq{}&\sum_\ell w_\ell V(g_\ell)-V(F_{\rm root})\\
+ &+\sum_vw_v\mathcal L(d_v)+\frac3{\ln2}\sum_vw_vq_v.
+\end{split}
+\tag{7}
+\end{equation}
+
+If $z_v$ occurs at exactly this node and nowhere in a terminal core, the
+ancestors determine reach without consulting $z_v$.  Off the reached cylinder
+the output ignores $z_v$; on it, flipping $z_v$ changes the output with
+probability $q_v$.  Hence
+\[
+ \operatorname{Inf}_{z_v}(F_{\rm root})=w_vq_v,
+ \qquad I_{\rm sel}=\sum_vw_vq_v.                       \tag{8}
+\]
+Equations (7)--(8) prove the tree claim for arbitrary shared data variables
+and arbitrary Boolean terminal cores.
+
+Freshness is essential to (8).  If a root and a reached child formally query
+the same bit, consistent assignments can make the global function constant
+while the formal child ledger still charges $1/2$.  The supplied independent
+checker records this explicit control.  Thus reused selectors are correctly
+excluded.
+
+\section{Scope and remaining gap}
+
+The proof has no factorization, flatness, nonzero-atom, or disjoint-data
+hypothesis.  It survives coherent shared cores, zero Fourier atoms, and
+arbitrarily small dyadic reach weights.  The constants $1$ and $3/\ln2$ are
+independent of depth and dimension.
+
+However, a data coordinate may influence several node differences $d_v$.
+Thus $\sum_vw_v\mathcal L(d_v)$ is an explicit retained ledger, not yet a
+nonreused physical payment.  The sparse-surgery counterfamily already rules
+out replacing it by a constant times selector influence.  No implication
+$\cU\leq K I$, no new FEI class bound, and no full FEI proof follows.
+
+The source makes no novelty claim, and this review accepts none.  The result
+is self-contained and does not require a composition or plateaued-function
+theorem as a premise.
+
+\end{document}

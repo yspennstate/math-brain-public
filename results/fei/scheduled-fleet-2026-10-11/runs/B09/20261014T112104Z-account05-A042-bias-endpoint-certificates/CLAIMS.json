@@ -1,0 +1,134 @@
+[
+  {
+    "claim_id": "A042-RARE-SELECTOR-CONGESTION-UNIT-ATOM-ENDPOINT",
+    "version": 1,
+    "exact_statement": "For the actual parity/band selector on n=16r^2 fair data bits, r>=1, with band sign g positive at counts <=n/2-r or >=n/2+r, and independent selector probability epsilon in (0,1/2], let F be parity when C=0 and g when C=1. Let a=2(2r-1)Pr[Bin(n-1,1/2)=n/2-r]/(n-1), m=2epsilon a, V=4(1-epsilon)+epsilon E Z_g^2-4epsilon^2a^2 for the actual integer data-pair profile. The complete mean-refunded pair bill is L_kappa=binom(n,2)kappa(m)V/4, and exact signed pair residual is Q_pair=binom(n,2)h(m)/4, where kappa(m)=2m ln(1/m)/(1-m), h(m)=m^2 ln(1/m^2). With D=I-Var, L_kappa/D>=epsilon(1-epsilon)ln((n-1)/(4epsilon))/6, while 0<=Q_pair/D<=10epsilon^2 ln((n-1)/(4epsilon))/n. On epsilon=1/k,r=2^(k^2),k>=2, the former is >=k ln2/6 and diverges while the latter tends to zero. Ordinary H/I<=2+2/n, so this is a ledger obstruction, not a FEI disproof. For any fixed n>=1 and Boolean branch g on fair data, at the same parity-selector endpoint write mu=Eg,t=E[g parity], b_T=ghat(T)-1_{T=full}, J=sum_all_data_T b_T^2 ln(4/b_T^2), Z=1-t^2-mu^2, B=sum_nonempty_T_not_full h(ghat(T))-J-3(1-t)^2. Then corrected natural E=epsilon[2(1-t)+J]+2Z epsilon^2 ln(1/epsilon)+B epsilon^2+O_g,n(epsilon^3), and exact D=n-1+epsilon[I(g)-n+2-2t]-epsilon^2[2-2t-mu^2]. At n>=2 the limiting unit atom has positive deficit n-1. At n=1 the four branches yield respectively E=D=0 for g=parity, E/D->1 for g=-parity and E/D->2+4ln2 for constant branches, with ratios here in natural units. There is no claim of a bounded selected whole-set reference or universal FEI theorem.",
+    "hypotheses": [
+      "actual Boolean signs and independent physical product inputs; fair data and one biased selector",
+      "natural E=(ln2)Hplus, ordinary H in bits, spectral D=I-Var",
+      "kappa sum applies to all data pairs with actual strict-superset masses; selector pairs have zero mean",
+      "integer r>=1 and 0<epsilon<=1/2 for uniform family bounds; no growing-diagonal brute force",
+      "unit-atom expansion fixes g and n; no uniformity in growing dimension is inferred from its remainder",
+      "zero entropy terms continuous; deterministic selector contracted before endpoint deficit or ratio interpretation"
+    ],
+    "statement_sha256": "34e332e4c151c0440f15d96fe715be15dff35dfe885cbb8ab0d0dfb54075f3f2",
+    "contributors": [
+      "A042/account05"
+    ],
+    "proof_source": {
+      "run_id": "20261014T112104Z-account05-A042-bias-endpoint-certificates",
+      "paths": [
+        "PROOF.md",
+        "code/check.py",
+        "out/CHECK.json",
+        "out/FAMILY.json"
+      ]
+    },
+    "proof_dependencies": [
+      "actual parity/band Boolean family and integer pair profiles",
+      "physical count compression and exact product Fourier algebra",
+      "elementary binomial/Chebyshev argument independently reconstructed in PROOF.md",
+      "Taylor expansion at a unit coefficient; empty nonselector atom excluded"
+    ],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_ENDPOINT_MECHANISM_OBSTRUCTION_AND_SYMBOLIC_CERTIFICATES; INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered proposal that vanishing selector probability restores a uniform all-pairs mean-refunded variance price"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A043",
+      "A044",
+      "A045",
+      "A041",
+      "A090",
+      "A091",
+      "B09",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A045-SHARP-MEAN-REFUND-PAIR-CONGESTION-NOGO",
+    "version": 1,
+    "exact_statement": "For an actual Boolean pair mixed profile Z_S with mean m and 0<|m|<1, the smallest universally valid nonnegative variance multiplier depending only on the mean is kappa(|m|)=2|m|ln(1/|m|)/(1-|m|): h(m)<=kappa(|m|)Var(Z_S), h(m)=m^2ln(1/m^2), and every real mean in this interval is attained sharply by the actual AND3 sign with the pair selected and controller probability |m| (negate for negative means). Set kappa(0)=0 and charge no positive residual at |m|>=1. The sum-all-pairs strict-superset packet bill L_kappa=sum_{|S|=2,0<|m_S|<1}kappa(|m_S|)sum_{T strictly containing S}P_F(T) has no finite universal root-deficit price. For every integer r>=1 let n=16r^2 fair data bits, g=+1 if their one-count N<=n/2-r or N>=n/2+r and -1 otherwise; a fresh fair selector chooses parity (-1)^N or g. This is an actual Boolean sign F. Every data-pair mixed-profile mean equals a=2(2r-1)Pr[Bin(n-1,1/2)=n/2-r]/(n-1), with 1/[8(n-1)]<=a<=2/(n-1). Two actual full-data Fourier packets have combined mass>=1/2 and strictly contain every data pair. Hence L_kappa(F)>=n ln((n-1)/2)/16 and L_kappa(F)/Delta(F)>=ln((n-1)/2)/24 tends to infinity, using Delta(F)<=n+1<=3n/2. Any other nonnegative mean-only multiplier valid for all actual Boolean pair profiles is at least kappa and fails the same all-pairs universal price. Nonetheless ordinary H(F)/I(F)<=2+2/n. This is a mean-only variance-ledger obstruction, not an FEI disproof or a refutation of exact signed residuals, selected pairs, full profile laws or joint complete-reference allocation.",
+    "hypotheses": [
+      "actual finite Boolean signs and physical integer pair cofactor profiles",
+      "independent product inputs; actual AND3 sharp admission allows arbitrary interior controller bias",
+      "explicit selector counterfamily is uniformly fair, with n=16r^2,r integer>=1",
+      "P squared orthonormal Fourier masses, Delta=I-Var, local bill in natural units and ordinary H in bits",
+      "mean-only multiplier valid universally for every physical Boolean pair profile and applied to all pairs without joint selection or ownership merging",
+      "deterministic inputs contracted and repeated physical variables substituted before product normalization",
+      "no universal entropy counterexample, all-bias prime gap or selected-reference payment asserted"
+    ],
+    "statement_sha256": "b6f5938ce1562003dfdfc4ecc4e1dbe8f30f6c9875ff965bf34bd7c1a986af9f",
+    "contributors": [
+      "A045"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A045\\runs\\20261014T063646Z-account05-A045-biased-realizability-referee\\REPORT.md",
+      "sha256": "315445677eea47ed1743f67b417910c0e62f85472428fe8e0a26d6f550b82b6c",
+      "locators": [
+        "complete derivation subsections2-5"
+      ],
+      "checker": "code/check.py",
+      "certificates": [
+        "out/FAMILY.json",
+        "out/CHECK_OUTPUT.json"
+      ]
+    },
+    "proof_dependencies": [
+      "integer second-moment bound and actual AND3 cofactor admission",
+      "exact binomial physical boundary moments and parity/selector Fourier packet identities",
+      "Chebyshev, binomial unimodality and finite Bernoulli product bound",
+      "elementary entropy support size and physical influence bounds"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A042/account05",
+        "at_utc": "2026-10-14T11:30:02.313995+00:00",
+        "verdict": "HOLDS_FULL_STATED_NARROW_OBSTRUCTION_CLAIM",
+        "claim_id": "A045-SHARP-MEAN-REFUND-PAIR-CONGESTION-NOGO",
+        "version": 1,
+        "statement_sha256": "b6f5938ce1562003dfdfc4ecc4e1dbe8f30f6c9875ff965bf34bd7c1a986af9f",
+        "accepted_scope": [
+          "sharp mean-only multiplier and actual AND3 admission",
+          "actual fair parity/band selector, pair means and shared top packets",
+          "all-r binomial bounds and diverging refunded bill/deficit",
+          "ordinary entropy control and exact scope exclusions"
+        ],
+        "excluded_scope": [
+          "the source separate review record for A044",
+          "any selected conditional reference or universal FEI bound"
+        ],
+        "repair_supplied": false,
+        "contributor_to_source_version": false,
+        "independence": "new count-profile finite-difference and physical boundary checker, independent analytic binomial/Chebyshev proof; epsilon=1/2 specialization reproduces original constants",
+        "evidence": [
+          "PROOF.md sections1-3",
+          "code/check.py",
+          "out/FAMILY.json",
+          "out/CHECK.json"
+        ],
+        "source_hash_convention": "SHA256 of exact_statement UTF8 only, verified against source code/finalize.py; hypotheses pinned by full CLAIMS.json file hash"
+      }
+    ],
+    "status": "FULL_NARROW_OBSTRUCTION_INDEPENDENTLY_RECONSTRUCTED_LOCALLY; ORIGINAL_UNCHANGED",
+    "supersedes": [],
+    "refutes": [
+      "unregistered universal sum-all-pairs kappa(mean) strict-superset bill<=KDelta",
+      "unregistered universal mean-only nonnegative scalar variance payment with bounded all-pairs packet congestion"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A044",
+      "A043",
+      "A041",
+      "A090",
+      "A091",
+      "A085",
+      "B09",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "run_id": "account02-B18-20260924T020253Z-r11",
+  "status": "PASS",
+  "claim": "QFORM-ZEROSELF-STABLERANK-D5-RANK4-FUNNEL-v1",
+  "checks": [
+    {
+      "id": "rv_primary_scope",
+      "status": "PASS",
+      "detail": "Rudelson--Vershynin Theorem 1.2 gives sqrt(2)K for normalized scalar sums of independent variables with densities <=K; Corollary 8.6 gives L(MY,tau||M||op)<=(C K tau)^r with r=floor(||M||HS^2/||M||op^2). No moment, support, log-concavity, iid, centering or symmetry hypothesis is introduced."
+    },
+    {
+      "id": "partner_scaling",
+      "status": "PASS",
+      "detail": "For A_II=0 the ambient cross term is 2 X_I^T B X_J; account03/B18 therefore gives ||p_Q||inf <= sqrt(2) C_RV ||B||op^-1 when the floored stable rank is >=2."
+    },
+    {
+      "id": "fifth_volume_tail_lemma",
+      "status": "PASS",
+      "detail": "For x_j=sigma_j(B)^2 and R5=sum_{j>=5}x_j, e5(x)>=x1 e4(x2,...), while e4(y)>=(sum_{j>=4}y_j/4)^4. Hence e5(B^T B)>=sigma1^2(R5/4)^4."
+    },
+    {
+      "id": "rank4_residual_threshold",
+      "status": "PASS",
+      "detail": "If e5(B^T B)<2^-24 sigma1^10, then R5<sigma1^2/16, so the rank-four truncated SVD B4 obeys ||B-B4||HS<sigma1/4 and ||B-B4||op<sigma1/4."
+    },
+    {
+      "id": "target_family_spectrum",
+      "status": "PASS",
+      "detail": "For B=diag(1,1/4,1/4,1/4,1/4) and A=[[0,B,0],[B,0,0],[0,0,1]], the spectrum is {-1, +1, +1, -1/4^4, +1/4^4}; exactly three eigenvalues have modulus >=1."
+    },
+    {
+      "id": "target_family_stable_rank",
+      "status": "PASS",
+      "detail": "||B||op=1 and ||B||HS^2=1+4/16=5/4, hence the Rudelson--Vershynin floored stable rank is one and the newest account03/B18 stable-rank density theorem is unavailable."
+    },
+    {
+      "id": "target_family_d5",
+      "status": "PASS",
+      "detail": "e5(B^T B)=(1/4)^8=2^-16. Pinned e5f Theorem D5 gives ||p_Q||inf <=5 sqrt(2e) 2^(8/5)=35.34111410111027."
+    },
+    {
+      "id": "live_corrections",
+      "status": "PASS",
+      "detail": "No arbitrary-joint coarea, conditional-cap-as-independence, post-rotation independence, fixed-good-minor claim, pointwise law-uniform phase decay, or deletion of the retained low-rank residual is used."
+    }
+  ],
+  "finite_values": {
+    "target_D5_bound": 35.34111410111027,
+    "universal_D5_branch_constant_at_beta_ge_s_over_2_and_zeta_2^-24": 123.06490715293657,
+    "rank4_HS_residual_ratio_at_zeta_2^-24": 0.25
+  }
+}

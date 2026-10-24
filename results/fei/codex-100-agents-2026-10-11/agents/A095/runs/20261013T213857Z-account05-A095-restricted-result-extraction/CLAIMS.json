@@ -1,0 +1,126 @@
+[
+  {
+    "claim_id": "A095-RANK-KL-EQUIVALENCE",
+    "version": 2,
+    "exact_statement": "For every Boolean f and every order sigma, normalize Q_(sigma,k)(S)=prod_{i in positions_sigma(S)}i^(-2)/Z_(n,k), set beta_(n,k)=ln(Z_(n,k)(k!)^2), D_sigma=sum_k P(|S|=k)D_nat(P(S||S|=k)||Q_(sigma,k)), and T_sigma=2R_sigma-D_sigma. Then (ln2)H(f)=H_nat(|S|)+T_sigma+E beta, with 0<=beta_(n,k)<=k ln(pi^2/4). If K_T=sup_nonconstant_f min_sigma T_sigma/I(f) and C_FEI=sup H/I, then K_T/ln2<=C_FEI<=log2(4+e)+log2(pi^2/4)+K_T/ln2 in the extended real sense. Thus K_T finite iff uniform-cube FEI holds. Concrete paid application: for any Boolean g with known bias mu and supplied normalized core reference R positive on its spectrum, empty calibration to R0(empty)=mu^2 is CE-nonincreasing. For r>=1,p=2^-r,F=1+A_r(g-1), the full reference Q(vac)=[1-p(1-mu)]^2, Q(U!=empty,T=empty)=p^2(1-mu)^2, Q(U,T!=empty)=p^2 R0(T) is normalized and has CE_F-H(F)=p D(P_g||R0) and CE_F<=p CE_g_cal+6rp(1-mu). For g=q product_j(1-2 A_(L_j)) on disjoint private blocks and a supplied terminal reference, its fixed occupied-block/uniform-nonempty-subset reference gives CE_F<=p CE_q_cal+4p sum_j I(h_j)+6rp(1-mu_g), with I(F)=p[I(q)+sum_j I(h_j)+r(1-mu_g)]. Thus a terminal cost <=C I(q) yields full cost <=max(C,6)I(F); q=1 yields CE<=6I uniformly in r, widths and number of blocks. For r=0,q=1 the same block reference has CE=H<4I. No universal terminal reference bound or incompatible shared-control extension is claimed.",
+    "hypotheses": [
+      "Boolean sign function",
+      "uniform measure",
+      "H in bits, D and beta in nats",
+      "zero-mass levels omitted",
+      "k=0 reference assigns mass one to empty set",
+      "References normalized and positive on actual support",
+      "Shared controls form one common signed conjunction; all remaining private blocks and terminal cube are disjoint",
+      "Bias is fixed known instance data; references chosen before spectral sampling",
+      "Ideal negative-log probability costs; no optional binary prefix-rounding bit included"
+    ],
+    "statement_sha256": "47a8a15a5202bd2995be6bccf1bc4523b17b5643ff0dfdc4e8abec9aee9ac0ad",
+    "contributors": [
+      "A095"
+    ],
+    "proof_source": {
+      "old_exact_equivalence": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261011T231526Z-account05-A095-restricted-result-extraction\\REPORT.md",
+      "new_paid_application": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261013T213857Z-account05-A095-restricted-result-extraction\\DERIVATION.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261013T213857Z-account05-A095-restricted-result-extraction\\out\\EXACT_RESULTS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 1,
+        "status": "previous author-proved equivalence retained unchanged; not independently accepted"
+      },
+      "Elementary Fourier activation expansion and KL disintegration",
+      "Direct scalar JS proof in DERIVATION.md",
+      "Cube edge-isoperimetric variance-entropy bound for point defects"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 1,
+        "scope": "same C020 candidate, old equivalence retained and concrete reference application added"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A094",
+      "A086",
+      "A008",
+      "A012",
+      "B19",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A094-CONCRETE-ACTIVATED-DICTIONARY-DEBT-AND-RANK-BOUNDARY",
+    "version": 1,
+    "exact_statement": "For each L>=2 let t=4^L, r=4L+1, p=2^-r, h_L=1-2 A_L on L fresh fair bits, g=z0 product_{j=1}^t h_L on disjoint data blocks with fresh balancing sign z0, N=tL+1, and F=1+A_r(g-1) on fresh point controls. The one-support uniform-nonempty A008 dictionary R_g(T)=1/(2^N-1), transferred by vacuum mass (1-p)^2, control-only mass p^2, and data mass p^2 R_g(T), is a fixed normalized full-output reference. Its nonempty reference divided by v=p(2-p) has normalization and both sector/control projection debts zero; the entire remaining debt is C-H(F)=p[log2(2^N-1)-t H(h_L)]. Its I(F)=p[2L2^L+4L+2] tends to zero, minority probability is p/2, C/I(F)>=2^(L-2), and H(F)<4I(F). Hence (C-H(F))/I(F)>2^(L-2)-4 tends to infinity. A fixed explicit independent occupied-block/uniform-local-subset data reference has zero debt on the same family and transferred cost H(F)<4I(F). The failure is for the specified uniform dictionary, not FEI, general dictionaries or the original incidence queue. Independently, for a product of m width-L point-defect signs, every coordinate order has R=d ln((mL)!)-E ln(K!), d=2^(1-L), I=mLd, a=(L+1)/2-Ld, and ln(1/d)-ln(1+a/I)-(1+ln(I+1))/I <= R/I <= ln(1/d)+(1+ln(mL+1))/(mL); thus its exact all-order limit as m grows is (L-1)ln2.",
+    "hypotheses": [
+      "finite uniform Boolean cubes",
+      "fixed explicit structural references, independent of sampled spectral output",
+      "r>=1 fresh controls; explicit diagonal uses L>=2,t=4^L,r=4L+1",
+      "entropy, CE and generalized debt in bits; R in natural units",
+      "all original data blocks disjoint; shared-coordinate extensions not claimed",
+      "ideal reference cost; one-symbol prefix rounding separate"
+    ],
+    "statement_sha256": "a942f2e82af468cc6c71aeeccaef97e212ad52b3222a06dd6401ae972efc5597",
+    "contributors": [
+      "account05/A094; original global-order rank obstruction credited to Claude B19 lead and earlier A095 reconstruction"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261012T044109Z-account05-A094-proof-chain-challenger\\AUDIT.md",
+      "locators": "Sections 3,5,6; exact results and diagonal certificates in out/"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A086-ACTIVATION-REFERENCE-DEBT-PROJECTION",
+        "version": 1,
+        "status": "independently reviewed at scope in this stage"
+      },
+      {
+        "claim_id": "A012-CONTROL-FIRST-POSTERIOR-REPAIR",
+        "version": 1,
+        "status": "complete-reference transfer clause independently reconstructed; remaining bundled claims not assumed"
+      },
+      {
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261011T221357Z-account05-A008-gate-label-compression\\WHOLE_SET_CODEC.tex",
+        "locator": "generic one-gate dictionary generator, directly normalized in audit",
+        "status": "source definition reconstructed"
+      },
+      {
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261011T224936Z-account05-A094-proof-chain-challenger\\AUDIT.md",
+        "locator": "equal-influence identity",
+        "status": "consume previous proved identity; quantitative exact-limit extension proved in present audit"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A095",
+        "verdict": "HOLDS_AT_FULL_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261013T213857Z-account05-A095-restricted-result-extraction\\REVIEW_A094.md",
+        "method": "Independent all-parameter analytic reconstruction, actual Fourier/edge and rational prime-log implementation, and exact diagonal certificates",
+        "substantive_repair_supplied": false,
+        "source_claims_sha256": "dfef56b4168ec2a0a6ebe247c74c7d08af070f405f67ada03e4cd4e0b5399d75",
+        "stage": "20261013T213857Z"
+      }
+    ],
+    "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED_LOCALLY",
+    "supersedes": [],
+    "refutes": [
+      "Prospective universal dimension-independent influence payment for the specified uniform single-support dictionary plus exact compatible balanced-core activation transfer"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A003",
+      "A008",
+      "A012",
+      "A085",
+      "A086",
+      "A095",
+      "B19",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,109 @@
+{
+  "claims": [
+    {
+      "claim_id": "A019-FOLDED-SEPARATOR-OWNER",
+      "version": 1,
+      "exact_statement": "For arbitrary Boolean modules f_j(z,y_j) sharing one uniform separator z with mutually disjoint uniform private cubes, set J_j=(I(f_j|z0)+I(f_j|z1))/2 and fold each module by an optional selector character to delta_j=min(Inf_z(f_j),1-Inf_z(f_j)). With q_j=1-2delta_j>=0, delta_*=(1-product_j q_j)/2, Q_-j=product_(k!=j)q_k and kappa_j=I((a_j-b_j)/2) for the folded children, the folded product has private influence J=sum J_j and separator influence delta_*. Entropy and normalized-reference costs are unchanged by folding and original separator influence is at least delta_*. Its repeated-selector loss satisfies 0<=sum delta_j-delta_*<=J-delta_*, with optimal coefficient1 on J. Its exact derivative energy is I(D)=sum_j t_j, t_j=(1-Q_-j)J_j/2+Q_-j kappa_j<=J_j. Supplied finite normalized complete references of terminal costs c_0,c_1 admit a normalized root reference with CE_root<=(c_0+c_1)/2+(3/ln2)delta_*+2sum_j t_j. Thus exclusive per-module terminal allocations c_j,avg+2t_j<=KJ_j and K>=3/ln2 suffice for CE_root<=K I(original product). No universal terminal allocation or paired-row entropy-subadditivity statement is asserted.",
+      "hypotheses": [
+        "Boolean signs on uniform physical cubes; entropy and CE in bits",
+        "Private blocks mutually disjoint and independent of the single common separator",
+        "Character folding permutes Fourier labels and normalized references; original physical influence retained in final conclusion",
+        "I(D) is L2 Dirichlet energy for a real derivative",
+        "Terminal references supplied, normalized, finite-cost; their complete CE is retained",
+        "All-r sharpness witnessed by a_j=1,b_j=private coordinate character"
+      ],
+      "statement_sha256": "44ba0dda071d6205a5ef985e5839455d2aa9e3566f74ce3d7decc10dfadadaaf",
+      "contributors": [
+        "A019"
+      ],
+      "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A019\\runs\\20261013T235305Z-account05-A019-orthogonality-extensions\\REPORT.md sections2-5; ~\\brain_workers\\FEI100_20261011\\agents\\A019\\runs\\20261013T235305Z-account05-A019-orthogonality-extensions\\code\\check_owner.py; ~\\brain_workers\\FEI100_20261011\\agents\\A019\\runs\\20261013T235305Z-account05-A019-orthogonality-extensions\\out\\OWNER_CHECK.json",
+      "proof_dependencies": [
+        "B04-NODE-BOUNDARY@1 (A018 independent acceptance)",
+        "A097 compatible conditional-mixture reference lift; needed log-sum step reconstructed in REPORT section5"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A019",
+          "independent": false,
+          "verdict": "AUTHOR_PROOF_AND_STRICT_EXACT_VALIDATION",
+          "cases": 8448,
+          "assertions": 98432
+        },
+        {
+          "reviewer": "A020",
+          "independent": true,
+          "verdict": "HOLDS_AT_STATED_SCOPE_WITH_ACCEPTED_NODE_BOUNDARY_DEPENDENCY",
+          "scope": "All-r independent owner/derivative reconstruction and KL lift in REPORT; no substantive repair; 256 arbitrary module pairs in independent helper.",
+          "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A020\\runs\\20261014T002716Z-account05-A020-selector-boundary-tests\\REPORT.md",
+          "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A020\\runs\\20261014T002716Z-account05-A020-selector-boundary-tests\\out\\review_and_orientations.json",
+          "cases": 256,
+          "source_statement_sha256": "44ba0dda071d6205a5ef985e5839455d2aa9e3566f74ce3d7decc10dfadadaaf"
+        }
+      ],
+      "status": "PROVED_AT_STATED_SCOPE_A020_INDEPENDENT_REVIEW_WITH_ACCEPTED_DEPENDENCY",
+      "supersedes": null,
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A016",
+        "A018",
+        "A020",
+        "A064",
+        "A090",
+        "A091",
+        "A095",
+        "A097",
+        "B04-lead"
+      ]
+    },
+    {
+      "claim_id": "A020-SHARED-BLOCK-OWNER-LOSS-NOGO",
+      "version": 1,
+      "exact_statement": "For every k,r>=1 let A(Z)=product of k shared 0/1 bits, f_j(Z,y_j)=(-1)^(A(Z)y_j), and F=product of r modules on disjoint private bits. F has connected physical ANF interaction graph and every physical coordinate has influence delta=2^-k. For all choices of per-module shared characters, the minimum loss sum_j I_Z(chi_Cj f_j)-I_Z(product_j chi_Cj f_j) is k(r-1)delta. Thus r=k^2 gives loss/I(F)=k-1, although I(F)=(k^2+k)2^-k tends to zero. An explicit normalized joint Fourier reference has empty mass (1-delta)^2 and mass delta^2 at every other shared subset times either no private bits or all private bits, giving complete CE=H<=4I(F). A physical tree querying shared bits until the first zero, with constant/parity complete terminal references, has exact zero K4 bad-node bill. Hence no dimension-independent private- or whole-influence payment bounds this character-minimized repeated shared-owner loss; this does not refute one-bit A019-FOLDED-SEPARATOR-OWNER@1, FEI, or adaptive shared-block payment.",
+      "hypotheses": [
+        "Uniform physical cubes, Boolean signs; entropy and complete-reference CE in bits",
+        "Global per-module shared characters only in the minimized loss; no context-dependent nonlinear folding",
+        "k,r positive integers; private bits mutually disjoint",
+        "K4 good means exact conditional selector erasure B<=4 times conditional physical pivotal influence",
+        "The diagnostic false extension is proposed by A020, not attributed to A019"
+      ],
+      "statement_sha256": "737eea45895e4e6eb0f7bb13a067763bc2d4ebaac1469917d4acace35fd290d1",
+      "contributors": [
+        "A020"
+      ],
+      "proof_source": "REPORT.md multibit obstruction, full normalized joint reference and exact shared-block-first tree; code/check.py; out/family.json; out/growth.json",
+      "proof_dependencies": [
+        "Self-contained Boolean/Fourier/ANF calculation; no unproved spectral inequality"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A020",
+          "independent": false,
+          "verdict": "AUTHOR_PROOF_AND_EXACT_VALIDATION",
+          "full_table_cases": 48,
+          "character_formula_orientations": 5050,
+          "closed_form_growth_cases": 31
+        }
+      ],
+      "status": "PROVED_AT_STATED_SCOPE_INDEPENDENT_REVIEW_PENDING",
+      "supersedes": null,
+      "refutes": [
+        "A020 diagnostic extension: min character-folded repeated shared-block owner loss<=K*private influence for an absolute K",
+        "A020 diagnostic stronger payment: min character-folded repeated shared-block owner loss<=K*whole influence for an absolute K"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A018",
+        "A019",
+        "A016",
+        "A064",
+        "A090",
+        "A091",
+        "A095",
+        "A097",
+        "B04-lead",
+        "B20"
+      ]
+    }
+  ]
+}

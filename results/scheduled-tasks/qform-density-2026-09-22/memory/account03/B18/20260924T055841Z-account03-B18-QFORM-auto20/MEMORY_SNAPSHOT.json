@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260924T055841Z-account03-B18-QFORM-auto20",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "startup_control_commit": "608fb624b8ada26d8dfae87c3db6b46f408f5644",
+  "publication_refresh_commit": "5cb114c17d797450cacae1fe642d5ae5097973b0",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "assignment": "Literature-to-proof transfer",
+  "primary_sources": [
+    {
+      "title": "On sharp bounds for marginal densities of product measures",
+      "authors": "Galyna Livshyts; Grigoris Paouris; Peter Pivovarov",
+      "identifier": "arXiv:1507.07949",
+      "used_scope": "one-dimensional normalized linear-form density cap sqrt(2) for cap-one product inputs"
+    },
+    {
+      "title": "Small Ball Probabilities for Linear Images of High-Dimensional Distributions",
+      "authors": "Mark Rudelson; Roman Vershynin",
+      "identifier": "arXiv:1402.4492 / IMRN 2015(19), 9594-9617",
+      "used_scope": "compatible source for linear-image anti-concentration; not used to add any extra hypothesis"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CROSSMINOR-ALONE-FALSE"
+  ],
+  "correction_inbox_blob_sha_at_refresh": "a884b835aba929c5376e6417ae5cfcd44c0f7a76",
+  "new_result_ids": [
+    "QFORM-CROSS-MOVING-DIFFUSE-SQUARE-v1"
+  ],
+  "new_result": {
+    "statement": "For disjoint original product banks X,Y,Z, T=X^T M Y+alpha^T X+G(Y)+a(beta^T Z+H(Y))^2 has a continuous C0 density bounded by 8 K_beta/sqrt(|a| ||M||op), where K_beta is the density cap of beta^T Z. LPP gives K_beta<=sqrt(2)/||beta||. For a single original coordinate in the square the constant is 8/sqrt(|a| ||M||op).",
+    "scientific_repository": "yspennstate/math-open-problems",
+    "scientific_commit": "866968bafb00203a9892c46bf761dbb150d705cc",
+    "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260924T055841Z-account03-B18-QFORM-auto20/",
+    "check_status": "PASS",
+    "continuity": "PROVED_IN_STATED_SCOPE",
+    "full_target": "OPEN"
+  },
+  "partner_result_applied": {
+    "partner": "account04/B18",
+    "result": "QFORM-TWOSIDED-ANCHOR-PAY-OR-RANK2-COLLAR-v1",
+    "scientific_commit": "48c914d1bd070cad090d6d5deac743bd8465bc15",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260924T032058Z-account04-B18-QFORM-r6/REPORT.md",
+    "actual_equation": "On Q=2 X^T diag(1,epsilon)Y+lambda W^2, partner gives 2 sqrt(2 pi)/sqrt(epsilon), while new result gives 4 sqrt(2)/sqrt(lambda). At epsilon=1/2, lambda=64: 7.0898154036220635 versus 0.7071067811865476."
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B18/20260924T055841Z-account03-B18-QFORM-auto20.md",
+  "handoff_commit": "4d4be7a5b15e9eedaabeea03c95994970299bab0",
+  "unresolved_implication": "Derive or replace the zero X-W coupling / nonzero scalar-pivot geometry from s3(A)>=1 while retaining a near-rank-two two-sided cross tail exactly.",
+  "next_step": "Try an anchored moving-square theorem that keeps a nonzero X-W vector r and spends the component of C transverse to r jointly with the scalar square, rather than deleting the anchor.",
+  "full_target_status": "OPEN",
+  "full_continuity_status": "OPEN"
+}

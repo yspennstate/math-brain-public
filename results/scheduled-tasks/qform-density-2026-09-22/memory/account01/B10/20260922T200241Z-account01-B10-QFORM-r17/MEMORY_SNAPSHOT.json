@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B10",
+  "run_id": "20260922T200241Z-account01-B10-QFORM-r17",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_publication_refresh": "d2a8ca19473ef88f07320c23fa9c1e740e4b6cf8",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "outcome": "ESSENTIAL_STEP_APPLIED_NEW_SUPPORTING_THEOREM",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "NOT_PROVED_BY_NEW_ARGUMENT",
+  "mathematical_result": {
+    "claim_id": "QFORM-RANK3-TWOPLANE-ESCAPE-v1",
+    "statement": "For symmetric 3x3 M with sigma_min(M)>=s and unit e,f, if alpha=e^TMe, beta=f^TMf, gamma=e^TMf and theta=|e.f|, then |gamma|>=s(1-theta)-max(|alpha|,|beta|). Applied to account02/B10 r13's hard state, projective overlap <=5/8 forces an original-coordinate indefinite pair with |det B|>1/32768 and sigma_min(B)>1/6144; the supplied pair-log theorem then gives ||p_Q||_infinity<2131.",
+    "surviving_structure": "Any unpaid second heavy step has projective overlap >5/8, original leverage rho/2<d<64rho/(25+39rho), and two-row residual Gram determinant <rho/2."
+  },
+  "partner_result_applied": {
+    "worker": "account02/B10",
+    "version": "r13",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9a34dc516006d7eb417687b3d7d409f7dfaf33d9",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B10/20260922T154900Z-account02-B10-QFORM-r13/REPORT.md",
+    "use": "Supplies the second original physical row with d+q^2/rho>1/2, d>rho/2, and |A_jj|<rho/8 after the first hard row."
+  },
+  "supporting_result": {
+    "name": "pair-log theorem",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f7f0fedb2d93b46824f96cac1164af6f8a55626f",
+    "path": "proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md",
+    "status": "COMPLETE_SUPPLIED_ANALYTIC_ARGUMENT_PENDING_INDEPENDENT_REVIEW"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "42079e16efa2570bef636eaff94481687daabf44",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B10/20260922T200241Z-account01-B10-QFORM-r17/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "7eed8549df05d1ce2eced35e1df8550b9aaaad27",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B10/20260922T200241Z-account01-B10-QFORM-r17.md"
+  },
+  "unresolved_implication": "QFORM-PROJECTIVE-CASCADE-BANK-COMPRESSION-v1: aggregate the projectively aligned multiscale original-coordinate cascade before reciprocal local-minor payment; cumulative angular drift should force a paid pair, while persistent clustering should compress to a product-linear bank.",
+  "next_step": "Develop a weighted projective-path/bank approximation inequality compatible with original-product provenance and the near-coloop rho<1/64 endpoint; do not use conditional sup-density or arbitrary-joint coarea gates."
+}

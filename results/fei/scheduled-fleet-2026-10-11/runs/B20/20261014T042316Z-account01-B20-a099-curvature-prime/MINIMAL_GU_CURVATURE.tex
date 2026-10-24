@@ -1,0 +1,196 @@
+\section*{Tensor-prime minimal-counterexample curvature for GU}
+
+All logarithms are base two.  For a Boolean function $f$ on a finite
+uniform cube write
+\[
+ p(S)=\widehat f(S)^2,\quad \pi(S)=\sum_{T\supseteq S}p(T),\quad
+ U(f)=\sum_Sp(S)\log {\pi(S)\over p(S)},
+\]
+\[
+ I(f)=\sum_S|S|p(S),\qquad
+ \Delta_iU(f)=U(f)-\frac{U(f_{i,+})+U(f_{i,-})}{2},\qquad
+ G(f)=\sum_i\Delta_iU(f).
+\]
+Zero terms are omitted and all three functionals vanish on constants.
+
+For any functional $F$ define the physical restriction average
+\[
+ P_iF(f)={F(f_{i,+})+F(f_{i,-})\over2},\qquad
+ \Delta_iF=(1-P_i)F.
+\]
+For $i\ne j$ the physical restrictions commute, hence
+\[
+ \Delta_i\Delta_jU
+ =U-P_iU-P_jU+P_iP_jU.                              \tag{1}
+\]
+
+\subsection*{Exact residual derivative}
+
+Fix $a\ge0$ and $0\le b<1$, and set
+\[
+ \mathcal R_{a,b}(f)=G(f)-aI(f)-bU(f).                \tag{2}
+\]
+The influence restriction identity is
+\[
+ \Delta_i I(f)=\operatorname{Inf}_i(f)=:p_i.         \tag{3}
+\]
+Moreover
+\[
+ \begin{aligned}
+ \Delta_iG
+ &=G-P_iG\\
+ &=\Delta_iU+\sum_{j\ne i}
+       \bigl(\Delta_jU-P_i\Delta_jU\bigr)\\
+ &=\Delta_iU+\sum_{j\ne i}\Delta_i\Delta_jU.
+ \end{aligned}                                       \tag{4}
+\]
+Combining (2)--(4) gives the exact identity
+\[
+ \boxed{
+ \Delta_i\mathcal R_{a,b}
+ =(1-b)\Delta_iU+\sum_{j\ne i}\Delta_i\Delta_jU-a p_i.}
+                                                               \tag{5}
+\]
+No spectral-law relaxation or sign removal is used: every term in (5) is
+computed from genuine physical Boolean restrictions.
+
+\subsection*{Minimal counterexamples are tensor-prime and curvature-positive}
+
+Suppose $G\le aI+bU$ fails.  Choose a positive-residual counterexample
+$f$ with the smallest number $n$ of relevant physical coordinates.  Such
+a choice exists because dimensions are nonnegative integers and the
+assumed counterexample is finite.
+
+The complete residual (2) is additive under disjoint Boolean tensor
+products: this follows from the source-pinned exact additivity of $U,I,G$.
+If $f=gh$ were a nontrivial disjoint-variable product, then
+\[
+ \mathcal R_{a,b}(f)=\mathcal R_{a,b}(g)+\mathcal R_{a,b}(h)>0,
+\]
+so one proper factor would be a smaller counterexample.  Thus $f$ is
+tensor-prime.  Irrelevant coordinates are absent by the same minimality.
+
+Every child $f_{i,\pm}$ has fewer relevant coordinates after dummy
+coordinates are deleted, so its residual is nonpositive.  Consequently
+\[
+ \Delta_i\mathcal R_{a,b}(f)
+ =\mathcal R_{a,b}(f)-P_i\mathcal R_{a,b}(f)
+ \ge \mathcal R_{a,b}(f)>0                             \tag{6}
+\]
+for every relevant $i$.  Equations (5)--(6) prove the necessary
+all-coordinate obstruction
+\[
+ \boxed{
+ (1-b)\Delta_iU(f)+\sum_{j\ne i}\Delta_i\Delta_jU(f)>a p_i
+ \quad\hbox{for every }i.}                            \tag{7}
+\]
+
+This is stronger than merely requiring a positive GU residual: a minimal
+counterexample must be a strict local maximum of that residual in every
+physical restriction direction, with the complete mixed-curvature term
+retained.
+
+\subsection*{A sufficient good-coordinate and aggregate theorem}
+
+The preceding argument gives the following exact induction criterion.
+
+\paragraph{Good-coordinate criterion.}
+If every nonconstant tensor-prime Boolean $f$ has a relevant coordinate
+$i$ satisfying
+\[
+ \boxed{
+ (1-b)\Delta_iU(f)+\sum_{j\ne i}\Delta_i\Delta_jU(f)
+ \le a\,\operatorname{Inf}_i(f),}                    \tag{GC}_{a,b}
+\]
+then $G(f)\le aI(f)+bU(f)$ for every Boolean $f$.
+
+Indeed, a minimal counterexample would be tensor-prime and would violate
+$(\mathrm{GC}_{a,b})$ at every coordinate by (7).
+
+Let
+\[
+ Q_2(f)=\sum_{i<j}\Delta_i\Delta_jU(f).               \tag{8}
+\]
+Summing the left side of $(\mathrm{GC}_{a,b})$ over $i$ gives
+\[
+ (1-b)G(f)+2Q_2(f).                                   \tag{9}
+\]
+Therefore the single aggregate estimate
+\[
+ \boxed{(1-b)G(f)+2Q_2(f)\le aI(f)}                  \tag{AG}_{a,b}
+\]
+on every tensor-prime Boolean function implies $(\mathrm{GC}_{a,b})$ and
+hence universal GU with the same pair.  This is a sufficient estimate,
+not a proved universal bound.
+
+The frozen candidate in this package is the weaker good-coordinate form
+\[
+ \boxed{\min_{i:p_i>0}{\Delta_iG(f)\over p_i}\le14
+ \quad\hbox{for every tensor-prime Boolean }f.}       \tag{10}
+\]
+Here (4) shows that (10) is exactly $(\mathrm{GC}_{14,0})$.  The aggregate
+bound $(\mathrm{AG}_{14,0})$ is one stronger possible route to it, but is
+not assumed.  If (10) holds, then $G\le14I$ universally.  The source-reviewed induction
+for $U$ gives $U\le14I$, and the proved Boolean granularity bridge
+$H\le2I+2U$ yields
+\[
+ \boxed{H(f)\le30I(f).}                               \tag{11}
+\]
+
+\subsection*{Exact tensor-prime obstruction to smaller constants}
+
+Let $q$ be the symmetric four-bit Boolean function
+\[
+ q(x)=+1\quad\Longleftrightarrow\quad |x|\in\{1,2\}, \tag{12}
+\]
+where $|x|$ is the number of $1$ bits in the $\{0,1\}$ encoding.  Its
+squared Walsh spectrum is uniform: $p(S)=1/16$ for all $S\subseteq[4]$.
+Hence
+\[
+ U(q)=2,\qquad I(q)=2.                                \tag{13}
+\]
+For every coordinate, the two three-bit children have respectively
+\[
+ (U,I,G)=\left({1\over2},{3\over2},-{3\over2}\right),
+ \qquad
+ (U,I,G)=\left({3\over4},{3\over2},-{3\over4}\right). \tag{14}
+\]
+It follows that
+\[
+ G(q)={11\over2},\qquad p_i={1\over2},\qquad
+ \Delta_iU={11\over8},\qquad
+ \Delta_iG={53\over8}.                               \tag{15}
+\]
+Using (4),
+\[
+ \sum_{j\ne i}\Delta_i\Delta_jU={21\over4}.          \tag{16}
+\]
+Thus $(\mathrm{GC}_{a,b})$ fails at every coordinate of $q$ unless
+\[
+ \boxed{4a+11b\ge53.}                                \tag{17}
+\]
+
+The gate is tensor-prime.  If it factored across any nontrivial partition,
+then for $i,j$ in opposite factors the multiplicative rectangle identity
+\[
+ q(x)q(x\oplus e_i)q(x\oplus e_j)q(x\oplus e_i\oplus e_j)=1
+\]
+would hold for every $x$.  At $x=0$ the four weights are $0,1,1,2$ and
+the product is $(-1)(+1)(+1)(+1)=-1$, a contradiction.
+
+Tensor powers of $q$ preserve the local numbers in (15)--(16), since all
+mixed $U$-curvatures across distinct tensor factors vanish.  Hence (17)
+is a genuine all-dimensional lower bound on this second-order induction
+mechanism, not a small-dimension accident.  It is not a GU counterexample:
+$q^{\otimes m}$ has $G/I=11/4$ and $U/I=1$ for every $m$.
+
+\subsection*{Exact status}
+
+Equations (5)--(9) and the gate calculation are proved.  Exhaustive
+high-precision verification in the companion checker shows (10) for every Boolean truth table through four
+variables; the worst value is exactly $53/4$, attained by (12).  No
+all-dimensional proof of (10) is supplied.  Universal GU and full FEI
+therefore remain open.  The next step is to bound the mixed curvature
+$Q_2$ on tensor-prime sources using the signed convolution terms in the
+source-pinned identity $\Delta_iU=B_i-\Gamma_i+K_i$; raw arbitrary set-law
+curvature is outside the claim.

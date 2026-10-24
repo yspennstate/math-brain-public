@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260923T115729Z-account03-B03-QFORM-r33",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_observed_at_start": "8b62c5e4a5a3867f2ddd3eac0b5b68db7c43487e",
+  "control_readme_blob_sha_final_refresh": "fca13a89d221115332ce5e60d49554ee0e213efa",
+  "correction_inbox_blob_sha_final_refresh": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FULL_TARGET__PROVED_C0_FOR_THREE_SELECTOR_BRANCH",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38",
+      "scope": "account04/B03 valid collision lemma only: P(|Y-Y'|<=eps)<=2 eps ||p_Y||_2^2; challenged weighted-L2 compiler excluded"
+    },
+    {
+      "source": "yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f",
+      "scope": "joint density cap <=exp(k/2) for a k-dimensional orthogonal projection of an original-coordinate cap-one product law"
+    },
+    {
+      "source": "yspennstate/math-open-problems@0ef1395ef5636eab3acb9e70130042e4dfcbb644",
+      "scope": "own r32 determinant-entropy and near-coloop/near-three-coordinate predecessor; full theorem remained open"
+    },
+    {
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "scope": "newest-Claude integrated/twisted-Fourier correction boundary and complementary mixed-Fresnel mechanisms"
+    }
+  ],
+  "headline_result": "QFORM-DEPENDENT-COEFFICIENT-SELECTOR-PLANCHEREL-v1: for k genuine independent original-coordinate selectors coupled linearly to an arbitrarily dependent coefficient vector of joint density cap M, |phi(t)|^2 <= min(1, M*pi^k/(prod|beta_j|)*|t|^-k). Two selectors yield a uniform half-Riesz potential and, after one genuine physical square, a universal linear output small-ball bound; three selectors directly yield a continuous bounded density.",
+  "key_bounds": {
+    "one_selector_weighted_time": "int |t|^-1/2 |phi|^2 <= 8 sqrt(pi M/|beta|)",
+    "two_selector_L2": "||p||_2^2 <= 2 sqrt(M/|beta1 beta2|)",
+    "two_selector_half_riesz": "sup_s E|Q-s|^-1/2 <= 4 sqrt(2) (M/|beta1 beta2|)^(1/4)",
+    "two_selector_plus_square": "||p||_inf <= 4 sqrt(2)|d|^-1/2 (M/|beta1 beta2|)^(1/4)",
+    "three_selector": "||p||_inf <= 3 (M/|beta1 beta2 beta3|)^(1/3), continuous C0",
+    "partner_collision_after_square": "P(|T-T'|<=eps)<=8 sqrt(2)|d|^-1/2(M/|beta1 beta2|)^(1/4) eps"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0a2be76b2cba4f4d46b88682e196af8945db9ed1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T115729Z-account03-B03-QFORM-r33/REPORT.md",
+    "checkpoint_commit": "227d23242e7b1a725746499139160f610e782047",
+    "checks_status": "QFORM_B03_R33_CHECK_PASS"
+  },
+  "brain_handoff": {
+    "commit": "f71bcad6ee232ae6d3aaf74acb51c4eb2b609e61",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B03/20260923T115729Z-account03-B03-QFORM-r33.md"
+  },
+  "remaining_implication": "QFORM-SELECTOR-EXTRACTION-OR-RESIDUAL-CURVATURE-v1: in the r32 near-coloop/near-three-coordinate collar, after exact-coloop and finite-coordinate exits, extract two genuine original-coordinate selector arms plus one quantitative physical square, or route retained residual same-side curvature into an existing diffuse-volume/ridge/mixed-hub exit without perturbatively deleting it.",
+  "independent_review": "PENDING",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

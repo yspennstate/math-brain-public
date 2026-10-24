@@ -1,0 +1,61 @@
+{
+  "schema": "fei-multiscale-cost-ledger/1",
+  "claim_id": "B16-SPARSE-SHARED-ADDRESSING-MARGINAL-OVERCOUNT",
+  "version": 1,
+  "parameters": {
+    "general": "t,k,r >= 1; N=2^t; p=2^-r",
+    "tower": "k=r=t; p=2^-t"
+  },
+  "physical_construction": "f=1+A_r(z)(g_{t,k}(a,y)-1), A_r=1 iff all r fresh trigger signs are +1, g_{t,k}=product_{j=1}^k y_{j,a}",
+  "defect_probability": "P[f=-1]=p/2",
+  "entropy_ledger_bits": [
+    {
+      "level": "dc",
+      "spectral_mass": "(1-p)^2",
+      "entropy": "-(1-p)^2 log2((1-p)^2)"
+    },
+    {
+      "level": "trigger_only",
+      "spectral_mass": "p(1-p)",
+      "entropy": "2 r p (1-p)"
+    },
+    {
+      "level": "activated_core_copies",
+      "spectral_mass": "p",
+      "entropy": "p H(g)+2rp = 2pt+2rp"
+    }
+  ],
+  "influence_ledger": [
+    {
+      "coordinates": "t address bits",
+      "per_coordinate": "p/2",
+      "total": "pt/2"
+    },
+    {
+      "coordinates": "k 2^t data bits",
+      "per_coordinate": "p/2^t",
+      "total": "pk"
+    },
+    {
+      "coordinates": "r trigger bits",
+      "per_coordinate": "p",
+      "total": "pr"
+    }
+  ],
+  "cross_scale_expected_degree": {
+    "trigger_only": "rp/2",
+    "trigger_degree_in_core_copies": "rp/2",
+    "base_degree_in_core_copies": "p(t/2+k)",
+    "sum": "p(t/2+k+r)"
+  },
+  "tower_exact": {
+    "I": "(5/2)t 2^-t",
+    "H": "-(1-2^-t)^2 log2((1-2^-t)^2)+2^-t(6t-2t2^-t)",
+    "marginal_entropy_lower_bound": "2t^2 2^-t",
+    "H_over_I": "<=3 for t>=2 and tends to 12/5",
+    "marginal_entropy_over_I": ">=4t/5 -> infinity"
+  },
+  "credit_reuse_diagnosis": "The common address label u is charged separately for each of k active data coordinates by sum_i h2(Inf_i), but occurs once in the joint Fourier support.",
+  "full_FEI": "OPEN; this family has bounded H/I"
+}
+

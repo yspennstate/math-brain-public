@@ -1,0 +1,24 @@
+b2_ent     ok=True certified<= 3.5777  grid 3.577657 at L=1.6449  cells 2883  worst iv 3.577700  tail 1.86e-22  (2s)
+b2         ok=True certified<= 3.5777  grid 3.577657 at L=1.6449  cells 2883  worst iv 3.577700  tail 3.69e-11  (2s)
+b3         ok=True certified<= 7.3278  grid 7.327698 at L=4.2323  cells 2387  worst iv 7.327800  tail 1.32e-11  (1s)
+b4         ok=True certified<= 10.1773  grid 10.177229 at L=6.1614  cells 2416  worst iv 10.177300  tail 1.36e-11  (1s)
+b5         ok=True certified<= 13.0437  grid 13.043622 at L=8.1228  cells 2364  worst iv 13.043700  tail 1.41e-11  (1s)
+b6         ok=True certified<= 15.9174  grid 15.917357 at L=10.0989  cells 2496  worst iv 15.917400  tail 1.45e-11  (1s)
+b7         ok=True certified<= 18.795  grid 18.794893 at L=12.0827  cells 2291  worst iv 18.794999  tail 1.50e-11  (1s)
+b8         ok=True certified<= 21.6747  grid 21.674640 at L=14.0710  cells 2381  worst iv 21.674699  tail 1.54e-11  (1s)
+b9         ok=True certified<= 24.5559  grid 24.555781 at L=16.0622  cells 2262  worst iv 24.555900  tail 1.58e-11  (1s)
+b10        ok=True certified<= 27.4379  grid 27.437859 at L=18.0554  cells 2442  worst iv 27.437900  tail 1.63e-11  (1s)
+C(0.2)     ok=True certified<= 1.7501  grid 1.750078 at L=0.5000  cells 2691  worst iv 1.750100  tail 7.97e-13  (5s)
+C(0.3)     ok=True certified<= 4.0782  grid 4.078084 at L=6.6667  cells 1976  worst iv 4.078136  tail 2.57e-16  (12s)
+Traceback (most recent call last):
+  File "~\fei_opus_2026_10_11\L2-level-two\code\certify_constants.py", line 294, in <module>
+    main()
+    ~~~~^^
+  File "~\fei_opus_2026_10_11\L2-level-two\code\certify_constants.py", line 289, in main
+    res[nm] = certify(nm, spec, Lmax, target, Lc)
+              ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\fei_opus_2026_10_11\L2-level-two\code\certify_constants.py", line 221, in certify
+    target = math.ceil((best[0] + 2e-5) * 1e4) / 1e4
+             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: cannot convert float infinity to integer
+exit=1

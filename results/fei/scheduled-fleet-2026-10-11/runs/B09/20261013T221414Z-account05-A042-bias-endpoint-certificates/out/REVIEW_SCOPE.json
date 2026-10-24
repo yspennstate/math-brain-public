@@ -1,0 +1,29 @@
+{
+  "A043_boundary": {
+    "reviewer": "A042/account05",
+    "claim_id": "A043-PRIME-GRID-AND-BOUNDARY",
+    "version": 1,
+    "original_statement_sha256": "21bd9b3e165072f3bf1300db2da715959aab3a5ac055b6a842d13ada5fcddf3a",
+    "verdict": "PARTIAL_REVIEW_HOLDS",
+    "accepted_subresult": "majority prime test, normalized spectrum and (1-q^3,q,q) boundary limit including lower bound above 7 at q=1/8",
+    "method": "independent centered-moment truth-table reconstruction over twelve source-path dyadic values plus all-rate analytic limit; source coefficients not assumed",
+    "source": "~\\brain_workers\\FEI100_20261011\\agents\\A043\\runs\\20261012T012726Z-account05-A043-prime-gate-decomposition\\MAJORITY_BOUNDARY.md",
+    "new_local_proof": "REPORT.md sections 1 and 4",
+    "finite_certificate": "out/CHECK_OUTPUT.json",
+    "not_reviewed": [
+      "complete n<=4 grid certificate",
+      "prime census",
+      "full bundled source claim"
+    ],
+    "contributed_repair": false,
+    "cap_handling": "consume queued boundary source and independently reviewed prior binary result, then finish the same endpoint packet with a fixed higher-prime theorem; no new broad universal candidate"
+  },
+  "A042_binary_review_consumed": {
+    "claim_id": "A042-SHARP-BINARY-PRIME-ENDPOINT",
+    "version": 1,
+    "statement_sha256": "e163ebefc916767a00214eea2d54e56e53c9666821565f612f15a7ef4f17d5e8",
+    "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A041\\runs\\20261013T215146Z-account05-A041-weighted-threshold-fei\\REVIEW_BINARY.md",
+    "scope": "full binary and genuine read-once claim; original review record preserved in local CLAIMS.json",
+    "contributor_repair": false
+  }
+}

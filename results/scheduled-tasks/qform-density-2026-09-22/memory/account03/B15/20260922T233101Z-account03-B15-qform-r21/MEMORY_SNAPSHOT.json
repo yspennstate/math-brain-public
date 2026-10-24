@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260922T233101Z-account03-B15-qform-r21",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control": {
+    "start_commit": "0978e6fe90234d8b545ec790fef99764d301dce4",
+    "prepublication_commit": "299087a96cac1db6a92973fe418e273a5e7d230e",
+    "revision": "2026-09-22.15"
+  },
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "newest_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md",
+    "result_used": "ruled one-sheet exact-rank-three bound and its stated rough-trace obligation"
+  },
+  "mathematical_premises": [
+    "Independent original-coordinate Gaussian padding preserves the probability-density cap <=1 and converges in L1 coordinatewise.",
+    "Product L1 distance is at most the sum of coordinate L1 distances, hence quadratic pushforwards converge in total variation.",
+    "Every two-dimensional orthogonal projection of a cap-one product law has density at most 2 (Livshyts-Paouris-Pivovarov product-marginal theorem).",
+    "For q(z)=z1^2+z2^2-z3^2 on q>0, F(s,theta,t)=sqrt(s)e_theta+t(e_theta_perp+e3) has Jacobian 1/2 and parametrizes the one-sheet level region.",
+    "The zero set of a nonzero real polynomial is Lebesgue-null."
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ad7e5daa036cc8330b1432285ad40fec611d37dd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T211430Z-account04-B15-heat-regularity-r4/REPORT.md",
+    "theorem": "exact Gaussian heat-height identity",
+    "application": "sup_(eta,y) integral_[0,infinity) gamma_eta(s-y) dmu_Q(s) <= pi sqrt(2) for the exact-rank-three (+,+,-) one-sheet submeasure"
+  },
+  "new_result": {
+    "id": "QFORM-RULED-ROUGH-INTERVAL-BRIDGE-v1",
+    "scope": "exact rank three, signature (+,+,-), majority-sign one-sheet side s>=0, arbitrary independent measurable cap-one coordinate densities",
+    "statement": "For every interval I subset [0,infinity), P(Q in I)<=C_+|I| with C_+=(lambda1 lambda2 mu)^(-1/2) int_0^(2pi)(sin^2(theta)/lambda1+cos^2(theta)/lambda2+1/mu)^(-1/2)dtheta <= pi sqrt(2). Thus the positive-side submeasure has essential density <=pi sqrt(2).",
+    "continuity_status": "NOT_PROVED_BY_THIS_THEOREM",
+    "full_target_status": "OPEN"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b4c8edd512776799decc9a16a40a3b37afba45b6",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T233101Z-account03-B15-qform-r21/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "0a97dc8ae391155060703e96ec4f300992357f54",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B15/20260922T233101Z-account03-B15-qform-r21.md"
+  },
+  "unresolved_implication": "Bound the minority-sign/two-sheet submeasure for exact rank three with product provenance intact; then integrate with a structural higher-rank reduction that avoids reciprocal tiny physical minors.",
+  "next_step": "Seek a two-sheet interval/positive-heat representation that averages product marginal information over genuinely curved fibers before taking any supremum; do not reuse the refuted X-ray-only bound.",
+  "method_change": "Changed from the previous tent-kernel averaging mechanism to ruled-level geometry plus class-preserving Gaussian padding.",
+  "updated_utc": "2026-09-22T23:39:35Z"
+}

@@ -1,0 +1,96 @@
+[
+  {
+    "claim_id": "A025-POINT-SEPARATOR-RESERVE-REPLAY-NOGO",
+    "version": 1,
+    "exact_statement": "Let S,W,U,V be compatible point indicators on disjoint blocks of positive widths s,L,R,T and g an independent balanced Boolean core. For F=1+(WUV OR SU OR SV)(g-1), when R=T=1 the physical policy exposing S then WUV on failure or U OR V on success has zero strict-threshold-4 bad-node prefix charge and retains terminal entropy pi H(g). With L=2s and g=z, the actual sign family F_s has n=3s+3 and unfiltered separator face price R_all/I(F_s)>=11s/48 and R_all/(I(F_s)-I_separator)>=11s(s+1)/60 for every s>=1. Thus no fixed constant pays that explicitly defined unfiltered repeated full-price rule. The same family has complete-tree Q_bad,4=0 and H(F_s)<7 I(F_s). More generally a point-selector query switching arbitrary Boolean branches with disagreement gamma>0 satisfies B_i/Inf_i<=2+log2(e)/sqrt(e gamma), hence is strictly 4-good if gamma>=1/4. This does not refute A023 v2, a localized existential stopping theorem or FEI.",
+    "hypotheses": [
+      "Uniform cube, Boolean signs and bit entropy; fresh independent point-selector block",
+      "Physical history reach weights, strict badness B_i>4 Inf_i and price I(child_product)/2",
+      "All core entropy is retained at stopping leaves; g balanced only in the controller theorem",
+      "R_all includes every separator node irrespective of badness; its failure is not a localized-cost failure"
+    ],
+    "statement_sha256": "11e8134d6b829741fcb2cb2ceffe8989e9422179211d502dbad39f1cf6832e31",
+    "contributors": [
+      "A025/account05"
+    ],
+    "proof_source": {
+      "run_id": "20261014T002956Z-account05-A025-rare-event-counterfamily",
+      "proof": "PROOF.md",
+      "entropy_bank": "REPORT.md",
+      "exact_ledgers": "out/full_RESULTS.json",
+      "independent_implementation": "out/REPRODUCTION_RESULTS.json",
+      "sign_replay": "out/REPLAY_RESULTS.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A046",
+        "verdict": "HOLDS_PAIRED_ROW_POINT_SWITCH_CRITERION_ONLY",
+        "source_run": "20261014T012528Z-account05-A046-current-candidate-intake",
+        "source": "PROOF.md section 1",
+        "scope": "For arbitrary actual Boolean G,H with disagreement gamma, B/d <= 2(1-rho)+rho log2(euler/(rho^2 gamma)), hence the source uniform upper bound and moderate-gap good-node consequence. Independent reconstruction, no repair.",
+        "excluded": "No blanket independent acceptance of bundled all-s no-go, finite census, reproduction or full terminal class theorem",
+        "statement_sha256": "11e8134d6b829741fcb2cb2ceffe8989e9422179211d502dbad39f1cf6832e31",
+        "repair_supplied": false
+      }
+    ],
+    "status": "PARTIAL_INDEPENDENT_ACCEPTANCE_PAIRED_ROW_SLICE; OTHER_BUNDLED_CLAUSES_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Defined unfiltered repeated full separator-price rule R_all<=K I, every finite K; no indexed existing claim refuted"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "Claude B05",
+      "A023",
+      "A021",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A046-SEPARATOR-LAYER-CUTOFF-RESERVE",
+    "version": 1,
+    "exact_statement": "Let S,W,U,V be compatible point indicators on disjoint uniform blocks of positive widths s,L,R,T and g an independent balanced Boolean core. For F=1+[WUV OR S(U OR V)](g-1), query the separator S until first failure or completion, then resolve WUV or U OR V and stop at a constant or g. Put alpha=2^-s, q=2^-R,r=2^-T,eta=2^-(L+R+T),e=q+r-qr-eta,JB=(L+R+T)eta,JC=R q(1-r)+T r(1-q),JD=JB+JC,pi=eta+alpha e,m=ceil(log2(min(R,T)+2))+2 and M=min(s,m). Every live separator query with j>m remaining bits is strictly K=4-good. The nonnegative reserve at live state j is V_j=2^-j[min(j,m) JD+e min(j,m)(min(j,m)-1)/2+min(j,m)e I(g)], set zero after failure. Its exact physical drift V_j-V_(j-1)/2 equals the actual child-product face price c_j=2^-j[JD+(j-1)e+e I(g)] when j<=m and zero otherwise. Thus the actual localized separator bill is <=V_s<=M I_other+(M-1)I_sep/2+M I_terminal<=M I(F), where I_sep=s alpha e,I_other=(1-alpha)JB+alpha JC,I_terminal=pi I(g). Terminal entropy remains pi H(g), and H(F)<=(4+2/ln2)(I_sep+I_other)+V_s+pi H(g). This eliminates dependence on separator length s for fixed R,T, but is not a universal influence constant or terminal-core certificate.",
+    "hypotheses": [
+      "Actual Boolean signs on uniform cube; entropy and logarithms in bits",
+      "Compatible point literals; disjoint fresh separator/controller blocks independent of g",
+      "Independent balanced core; full pi H(g) retained at stopping leaves",
+      "History-measurable physical policy exactly as specified; one query per coordinate along each path",
+      "V is a cutoff-envelope reserve and may charge eligible but actually good layers; it is not renewed at descendants"
+    ],
+    "statement_sha256": "c4f09ea5b2a552f438fe64c85737ae4570e03f57453c63683f124dd3a245f2af",
+    "contributors": [
+      "A046"
+    ],
+    "proof_source": {
+      "run_id": "20261014T012528Z-account05-A046-current-candidate-intake",
+      "files": [
+        "PROOF.md",
+        "REPORT.md",
+        "code/layers.py",
+        "code/reserve_check.py",
+        "out/RESULTS.json",
+        "out/RESERVE_CHECK.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "NARROW_EXISTING_SEPARATOR_INTERFACE_REFINEMENT_PROVED_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A025",
+      "A040",
+      "A050",
+      "A064",
+      "A087",
+      "A092",
+      "B10",
+      "B20"
+    ]
+  }
+]

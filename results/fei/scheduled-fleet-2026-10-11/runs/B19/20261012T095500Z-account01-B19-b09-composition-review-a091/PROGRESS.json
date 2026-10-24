@@ -1,0 +1,71 @@
+{
+  "schema": "fei-run-progress/2",
+  "run_id": "20261012T095500Z-account01-B19-b09-composition-review-a091",
+  "stream": "B19",
+  "account": "account01",
+  "primary_packet_id": "A091",
+  "packet_ids": ["A091"],
+  "gap_id": "B09_BIASED_COMPOSITION_PAYMENT",
+  "gap_version": "product-biased-restriction-2026-10-12.1",
+  "attempt_id": "B19-A091-B09-COMPOSITION-REVIEW-01",
+  "claim_version": "B09-BIASED-BLOCK-UNCERTAINTY-01-source-v1",
+  "review_target": {
+    "stream": "B09",
+    "run_id": "20261011T195500Z-account01-B09-biased-restriction-uncertainty",
+    "commit": "adb671ffcda143fa68347806bb96e8c305621a7d",
+    "report_blob": "71b68e4decf9658a42fef6bb2668e19f25bd214a"
+  },
+  "bounded_objective": "Independently audit B09's product-biased restriction lemma, separate exact tensor additivity from general Boolean composition, and resolve the unsupported endpoint-necessity inference if possible.",
+  "prior_status": "Main lemma AUTHOR_PROVED_PENDING_REVIEW; finite tax-free counterexample separately repaired; composition and endpoint optimality disputed.",
+  "new_status": "MAIN_LEMMA_ACCEPTED; EXACT_TENSOR_SCOPE_ACCEPTED; GENERAL_COMPOSITION_TRANSFER_NOT_ACCEPTED; ENDPOINT_LOWER_BOUND_REPAIRED_BY_REVIEWER_PENDING_FRESH_REVIEW; FULL_FEI_OPEN",
+  "mathematical_delta": "Reconstructed the exact physical restriction channel and Maassen-Uffink payment. Derived an explicit genuine-Boolean AND family with J-M=[4q(1-2q)+o(1)]p log2(1/p), giving coefficient 1/2 at q=1/4 and proving O(p) corrections impossible. Located the missing interface between this ledger and O'Donnell-Tan biased FEI+ composition.",
+  "accepted_scope": {
+    "main_lemma": "All finite Boolean functions, all interior product biases, all physical blocks",
+    "composition": "Exact products on disjoint variable sets with aligned revealed blocks",
+    "finite_counterexample": "Source-bound repaired two-bit AND certificate"
+  },
+  "rejected_or_pending_scope": {
+    "general_composition": "No M,J,Delta cocycle or no-reuse theorem was supplied",
+    "shared_variables": "Not covered",
+    "endpoint_lower_bound": "Proved in this review, so requires a fresh uninvolved reviewer",
+    "full_fei": "Open"
+  },
+  "verification": {
+    "new_independent_assertions": 5643,
+    "randomness": "NONE",
+    "max_ledger_identity_error": "6.661e-16",
+    "endpoint_range": "p=2^-4 through 2^-50",
+    "status": "PASS",
+    "role": "Finite support for analytic proofs"
+  },
+  "primary_source_comparison": {
+    "odonnell_tan": "arXiv:1304.1347, Theorem 1 and Proposition 3.2; disjoint biased FEI+ composition, not an automatic B09 ledger cocycle",
+    "maassen_uffink": "Phys. Rev. Lett. 60 (1988), 1103-1106; finite-basis entropy inequality used exactly",
+    "retrieved": "2026-10-12"
+  },
+  "exact_remaining_obstacle": "Pay M_A+Delta_A with a dimension-independent single-use potential through arbitrary changing-gate hierarchies, including address reuse and shared physical variables.",
+  "next_action": "Construct or falsify an explicit cocycle inequality mapping the B09 physical posterior channel to the O'Donnell-Tan FEI+ gate functional; test first on two-level AND/OR compositions and reused-address gates.",
+  "next_consumers": ["A044", "A085", "A090", "A095", "A099", "B20"],
+  "fresh_review_required_for": ["B19-B09-AND-ENDPOINT-LOWER-BOUND-v1"],
+  "source_versions": {
+    "owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "B19_assignment_blob": "ee688080aba90acd2daed1b26e809e38285dcb85",
+    "B09_report_blob": "71b68e4decf9658a42fef6bb2668e19f25bd214a",
+    "B09_repair_report_blob": "c3adb486c8ca9f7a35f384ee82942eef66bd64be",
+    "B09_repair_checker_blob": "0a6917feb25ab0e1cc0703c4c134b299c6e3243f",
+    "B09_repair_output_blob": "d3db5bd09e009eb3f4f4d3572ccba9b6e6ce3239"
+  },
+  "delivery": {
+    "canonical": "DELIVERED_AND_EXACTLY_READ_BACK_AT_61f210ceb7e79c85ab480cd1ad58340446730d29",
+    "brain_mirror": "DELIVERED_AND_EXACTLY_READ_BACK_AT_f817c13d1c1e58c85a22ce38a3ffc18f86d31025",
+    "independent_review": "COMPLETE_FOR_SOURCE_MAIN_LEMMA; FRESH_REVIEW_PENDING_FOR_REVIEWER_CONTRIBUTED_ENDPOINT_COROLLARY",
+    "native_ingestion": "NOT_CLAIMED"
+  },
+  "runtime": {
+    "model": "Codex as exposed by runtime instructions",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  },
+  "global_status": "FULL_FEI_OPEN"
+}

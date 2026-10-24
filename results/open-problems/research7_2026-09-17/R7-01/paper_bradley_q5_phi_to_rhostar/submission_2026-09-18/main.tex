@@ -1,0 +1,657 @@
+\documentclass[11pt]{amsart}
+\usepackage[a4paper,margin=1.05in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Phi-mixing implies interlaced rho-mixing for Markov chains},pdfauthor={Yitzchak Shmalo},pdfsubject={Bradley Question 5 and quantitative interlaced maximal correlation}}
+\setlength{\emergencystretch}{1em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{question}[theorem]{Question}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\TV}{\mathrm{TV}}
+\newcommand{\Law}{\operatorname{Law}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Corr}{\operatorname{Corr}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\osc}{\operatorname{osc}}
+\newcommand{\rhostar}{\rho^{*}}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\condrho}[3]{\rho_{#3}(#1,#2)}
+
+\title[Phi-mixing and interlaced maximal correlation]{Phi-mixing implies interlaced rho-mixing for Markov chains}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{18 September 2026}
+\keywords{Markov chain, phi-mixing, interlaced maximal correlation, tensorization, Dobrushin coefficient}
+
+\begin{document}
+\begin{abstract}
+We prove that every phi-mixing Markov chain is interlaced rho-mixing, giving an affirmative answer to Question~5 in Bradley's 2005 survey. The chain may be time-inhomogeneous and need not be stationary; its state space may be any standard Borel space. With Bradley's normalization, we obtain
+\[
+\rho^*(n)\le \min\{1,2\sqrt{2\phi(n)}\},
+\]
+and the stronger bound $\rho^*(n)\le 2\sqrt{2\phi(n)(1-2\phi(n))}$ when $\phi(n)\le1/4$. The proof combines a transition-row estimate with Peyre's maximal-correlation tensorization under prefix conditioning. A Markov separator makes the conditional correlation matrix of an arbitrary interlacing a weighted path. We give a self-contained proof of the local channel estimate, including the passage to standard Borel spaces. An explicit six-state chain shows that the square-root dependence cannot be improved in a uniform coefficient comparison. A countably infinite reset chain shows that the corresponding loss of a factor two in the exponential rate is also unavoidable for a single stationary chain. A symmetric two-state family separately shows first-order sharpness of the path amplification factor.
+\end{abstract}
+\maketitle
+
+\section{Introduction and principal results}
+
+Uniform mixing and interlaced maximal correlation measure different aspects of temporal dependence. The first controls conditional probabilities across a past--future cut. The second permits two sets of observation times to alternate arbitrarily often. A bound for one cut therefore does not, by itself, give a bound uniform in the number of alternations.
+
+Bradley asks in Question~5 of \cite[Section~3, p.~119]{Bradley2005} whether a phi-mixing Markov chain must be rho-star-mixing. We establish this implication in the full, not necessarily stationary setting of that section. Our argument uses the Markov property to reduce every finite interlacing to an alternating sequence of blocks, and applies the prefix versions of Peyre's tensorization theorems \cite[Theorems~3.3.1 and~3.3.10; Section~3.4(a)]{Peyre2010}. These tensorization results are existing ingredients; the application here is based on verifying their precise conditional hypotheses for arbitrary Markov interlacings.
+
+Here and below, total variation is normalized by
+\begin{equation}\label{eq:tv}
+\|\mu-\nu\|_{\TV}=\sup_{B}|\mu(B)-\nu(B)|.
+\end{equation}
+For two sigma-fields $\mathcal A,\mathcal B$, put
+\begin{align}
+\phi(\mathcal A,\mathcal B)
+ &=\sup_{\substack{A\in\mathcal A,\,\PP(A)>0\\B\in\mathcal B}}
+       |\PP(B\mid A)-\PP(B)|,\label{eq:phi-fields}\\
+\rho(\mathcal A,\mathcal B)
+ &=\sup_{f,g}|\Corr(f,g)|,\label{eq:rho-fields}
+\end{align}
+where $f$ and $g$ are nonconstant, square-integrable, real random variables measurable with respect to $\mathcal A$ and $\mathcal B$, respectively. If one of the centered $L^2$ spaces is zero, the coefficient is defined to be zero.
+
+Let $X=(X_k)_{k\in\ZZ}$ be a Markov chain on a standard Borel space $E$. No common transition kernel, invariant distribution, or reversibility assumption is imposed. Write
+\[
+\cF_a^b=\sigma(X_k:a\le k\le b),\qquad
+\phi(n)=\sup_{j\in\ZZ}\phi(\cF_{-\infty}^{j},\cF_{j+n}^{\infty}).
+\]
+For nonempty disjoint $S,T\subset\ZZ$, let
+\[
+\dist(S,T)=\inf\{|s-t|:s\in S,\ t\in T\}.
+\]
+The interlaced coefficient is
+\begin{equation}\label{eq:rhostar-def}
+\rhostar(n)=\sup_{\dist(S,T)\ge n}
+\rho\bigl(\sigma(X_s:s\in S),\sigma(X_t:t\in T)\bigr).
+\end{equation}
+Phi-mixing and rho-star-mixing mean, respectively, that these coefficients tend to zero as $n\to\infty$.
+
+\begin{theorem}\label{thm:main}
+For every standard-Borel Markov chain indexed by $\ZZ$ and every $n\ge1$,
+\begin{equation}\label{eq:main-simple}
+\rhostar(n)\le\min\{1,2\sqrt{2\phi(n)}\}.
+\end{equation}
+More precisely, if $0\le\phi(n)\le1/4$, then
+\begin{equation}\label{eq:main-strong}
+\rhostar(n)\le2\sqrt{2\phi(n)\bigl(1-2\phi(n)\bigr)}.
+\end{equation}
+Consequently, every phi-mixing Markov chain is rho-star-mixing.
+\end{theorem}
+
+The supremum in \eqref{eq:rhostar-def} includes infinite observation sets and arbitrary numbers of alternations. Thus Theorem~\ref{thm:main} is not a bounded-interlacing or finite-state assertion. It answers the Markov-chain question, not the analogous question for arbitrary stochastic sequences.
+
+The square-root scale in \eqref{eq:main-simple} is necessary in two distinct senses.
+
+\begin{theorem}\label{thm:sharpness-summary}
+The following stationary examples hold.
+\begin{enumerate}
+\item For each $\varepsilon\in(0,1/2)$ there is an irreducible, aperiodic six-state chain such that
+\[
+\phi(1)=\varepsilon,\qquad \rhostar(1)=\sqrt{2\varepsilon},
+\qquad \phi(n)=\rhostar(n)=0\quad(n\ge2).
+\]
+\item For each $q\in(0,1)$ the stationary chain on $\{0,1,2,\ldots\}$ with
+\[
+P(i,0)=1-q,\qquad P(i,i+1)=q
+\]
+satisfies
+\[
+\phi(n)=q^n,\qquad q^{n/2}\le\rhostar(n)\le\min\{1,2q^{n/2}\}.
+\]
+In particular,
+\[
+\lim_{n\to\infty}\frac{1}{n}\log\rhostar(n)=\frac12\log q.
+\]
+\end{enumerate}
+\end{theorem}
+
+The six-state example proves optimality of the exponent in a universal comparison of the coefficients. The reset chain proves sharpness of the exponential-rate loss for one fixed stationary chain. Neither assertion identifies the best universal leading constant in \eqref{eq:main-simple}. A third example, treated in Section~\ref{sec:binary}, shows that the factor two in the block-path estimate is separately sharp to first order when expressed in terms of a robust local maximal correlation.
+
+\subsection*{Proof outline}
+A phi bound places almost every transition row within $\phi(n)$ of the future marginal. The diameter of the family of such rows is at most $2\phi(n)$. A channel of row diameter $\delta$ has maximal correlation at most $\sqrt\delta$, uniformly over its input distribution. This uniformity is essential: conditioning on earlier observation blocks changes the input distribution of an adjacent transition.
+
+After merging observation times of the same color, the blocks alternate. Under the conditioning fields required by Peyre's theorems, adjacent blocks retain the original intervening transition kernel. Nonadjacent blocks are separated by an observed Markov state. The additional conditioning splits into a statistic of the past and a statistic of the future, so it preserves the conditional product law. The resulting matrix has the support of a path, uniformly in the number of blocks.
+
+\section{Channel estimates and full-measure row sets}\label{sec:channels}
+
+For random elements $U,V$, we abbreviate $\rho(\sigma(U),\sigma(V))$ as $\rho(U,V)$. Conditional expectation gives the equivalent formula
+\begin{equation}\label{eq:conditional-norm}
+\rho(U,V)^2=
+\sup_{0\ne h\in L^2_0(\Law(U))}
+\frac{\Var(\EE[h(U)\mid V])}{\Var(h(U))}.
+\end{equation}
+Indeed, for fixed centered $h(U)$, the Cauchy--Schwarz inequality bounds its covariance with a function of $V$ by the norm of its conditional expectation; equality is obtained by taking that conditional expectation as the second function when it is nonzero.
+
+If $U\longrightarrow V\longrightarrow W$ is a Markov chain, conditional expectation and \eqref{eq:conditional-norm} give the data-processing bound
+\begin{equation}\label{eq:dp}
+\rho(U,W)\le\rho(U,V)\rho(V,W).
+\end{equation}
+In particular, passing through additional channels cannot increase maximal correlation. We will use the same statement under regular conditional probability laws.
+
+\subsection{Uniform channel contraction}
+Let $K$ be a Markov kernel from a standard Borel space $E$ to a standard Borel space $F$, and let $A\subset E$ be a Borel set. Define
+\begin{align}
+\delta_A(K)&=\sup_{x,x'\in A}\|K(x,\cdot)-K(x',\cdot)\|_{\TV},\label{eq:diameter}\\
+\kappa_A(K)&=\sup_{\lambda:\lambda(A)=1}\rho_\lambda(U,V),
+\quad U\sim\lambda,\quad V\mid U=x\sim K(x,\cdot).\label{eq:robust}
+\end{align}
+Degenerate inputs contribute zero. These definitions specify the actual row set, rather than a product-essential supremum, because a conditional input distribution may be singular with respect to the unconditional input distribution.
+
+\begin{lemma}[Row diameter and maximal correlation]\label{lem:channel}
+For every such kernel and row set,
+\begin{equation}\label{eq:channel}
+\kappa_A(K)^2\le\delta_A(K).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+We first give a finite-state proof. Fix an input law $\lambda$, discard its zero-mass atoms, and set $\nu=\lambda K$. Discard also the zero-mass output atoms. The reverse kernel is
+\[
+R(y,x)=\frac{\lambda(x)K(x,y)}{\nu(y)}.
+\]
+The operator $T:h\mapsto\EE[h(U)\mid V]$ is $R$, its adjoint is $K$, and $T^*T=KR$. Thus $M=KR$ is a positive semidefinite self-adjoint Markov operator on $L^2(\lambda)$. It preserves constants, and its largest eigenvalue on $L^2_0(\lambda)$ is $\rho_\lambda(U,V)^2$.
+
+Postprocessing contracts total variation, so
+\[
+\delta(M)=\sup_{x,x'}\|K(x,\cdot)R-K(x',\cdot)R\|_{\TV}
+\le\delta(K).
+\]
+For a real function $h$ on a finite set, the definition of total variation implies
+\[
+\osc(Mh)\le\delta(M)\osc(h),\qquad
+\osc(h)=\max h-\min h.
+\]
+Apply this inequality to a nonconstant eigenvector for the largest centered eigenvalue $\theta\ge0$. Since $\osc(h)>0$, it gives $\theta\le\delta(M)\le\delta(K)$. This proves \eqref{eq:channel} for finite channels. The zero-dimensional centered space is immediate.
+
+Now fix an arbitrary input law $\lambda$ supported on $A$. For finite measurable partitions of $U$ and $V$, the induced finite channel has rows obtained by first mixing the original rows within an input cell and then projecting to the output partition. Any two mixtures of rows supported on $A$ are at total-variation distance at most $\delta_A(K)$: for probability measures $\alpha,\beta$ supported there and every measurable $B$,
+\begin{align*}
+\left|\int K(x,B)\,d\alpha(x)-\int K(x',B)\,d\beta(x')\right|
+&\le\iint|K(x,B)-K(x',B)|\,d\alpha(x)d\beta(x')\\
+&\le\delta_A(K).
+\end{align*}
+Projection cannot increase this bound. The finite result therefore bounds the correlation of every pair of simple functions of $U$ and $V$ by $\sqrt{\delta_A(K)}$. Approximate arbitrary square-integrable functions by bounded simple functions and pass to the limit in covariance and variance. Finally take the supremum over $\lambda$.
+\end{proof}
+
+The inequality in Lemma~\ref{lem:channel} is a classical strong data-processing comparison; see, for example, \cite{PolyanskiyWu2016} for the channel-contraction perspective. The proof above is included to make explicit both the normalization and the uniformity in the input law.
+
+\subsection{A common row-good set from phi}
+For $s<t$, choose a regular conditional law
+\[
+K_{s,t}(x,\cdot)=\Law(X_t\mid X_s=x),\qquad \mu_s=\Law(X_s).
+\]
+
+\begin{lemma}\label{lem:row-good}
+There is a Borel set $A_{s,t}\subset E$ of full $\mu_s$-measure such that
+\begin{equation}\label{eq:row-good}
+\|K_{s,t}(x,\cdot)-\mu_t\|_{\TV}\le\phi(t-s)
+\qquad(x\in A_{s,t}).
+\end{equation}
+Consequently,
+\begin{equation}\label{eq:phi-diameter}
+\delta_{A_{s,t}}(K_{s,t})\le\min\{1,2\phi(t-s)\}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For a fixed Borel $B\subset E$, set $h_B(x)=K_{s,t}(x,B)-\mu_t(B)$. For each Borel $D$ with $\mu_s(D)>0$, the definition of $\phi(t-s)$ gives
+\[
+\left|\frac1{\mu_s(D)}\int_D h_B\,d\mu_s\right|\le\phi(t-s).
+\]
+Taking $D=\{h_B>\phi(t-s)+\eta\}$, or the corresponding negative level set, shows that $|h_B|\le\phi(t-s)$ almost everywhere.
+
+A standard Borel sigma-field has a countable generating algebra $\mathcal C$. Intersect the full-measure Borel sets just obtained for $B\in\mathcal C$, and call the intersection $A_{s,t}$. For fixed $x\in A_{s,t}$, the class of Borel sets satisfying $|K_{s,t}(x,B)-\mu_t(B)|\le\phi(t-s)$ is a monotone class containing $\mathcal C$. It therefore contains every Borel set. This proves \eqref{eq:row-good}. The triangle inequality and the universal upper bound one for total variation give \eqref{eq:phi-diameter}.
+\end{proof}
+
+Fix one such set $A_{s,t}$ for every integer pair $s<t$, and write
+\begin{equation}\label{eq:kappa-n}
+\kappa(n)=\sup_{t-s\ge n}\kappa_{A_{s,t}}(K_{s,t}),
+\qquad
+\Delta(n)=\sup_{t-s\ge n}\delta_{A_{s,t}}(K_{s,t}).
+\end{equation}
+The coefficients $\phi(n)$ are nonincreasing. Lemmas~\ref{lem:channel} and~\ref{lem:row-good} imply
+\begin{equation}\label{eq:kappa-phi}
+\kappa(n)^2\le\Delta(n)\le\min\{1,2\phi(n)\}.
+\end{equation}
+The auxiliary coefficients in \eqref{eq:kappa-n} refer to the fixed row-good sets; the final bounds in terms of $\phi$ do not depend on those choices.
+
+\begin{remark}[Conditional support]\label{rem:conditional-support}
+If $H$ is any random element and $\lambda_H=\Law(X_s\mid H)$, then
+\[
+\lambda_H(A_{s,t}^c)=\PP(X_s\notin A_{s,t}\mid H)=0
+\quad\text{almost surely}.
+\]
+No absolute continuity of $\lambda_H$ with respect to $\mu_s$ is asserted or needed. When $H$ consists of observations strictly before $s$, the Markov property also preserves the transition kernel $K_{s,t}$ under conditioning on $H$.
+\end{remark}
+
+\section{Separators and conditional correlation}\label{sec:separators}
+
+For standard Borel random elements $U,V,H$, define the conditional, or subjective, maximal correlation by
+\begin{equation}\label{eq:subjective}
+\rho_H(U,V)=\operatorname*{ess\,sup}_{h}
+\rho(U,V;\PP(\,\cdot\mid H=h)).
+\end{equation}
+We also write $\rho_{\cH}(U,V)$ when $\cH=\sigma(H)$. All conditioning fields used below are generated by finite collections of standard Borel random elements. Statements about their conditional laws are always almost sure statements.
+
+Conditional independence is not preserved under arbitrary additional conditioning. The following precise form is what the Markov argument needs.
+
+\begin{lemma}[Side-separated conditioning]\label{lem:side-separated}
+Suppose $A,B,R$ are standard Borel random elements and $A$ and $B$ are conditionally independent given $R$. If $C=c(A,R)$ and $D=d(B,R)$ are measurable random elements, then $A$ and $B$ are conditionally independent given $(R,C,D)$.
+\end{lemma}
+
+\begin{proof}
+For almost every $r$, write the conditional law of $(A,B)$ given $R=r$ as $\alpha_r\otimes\beta_r$. Under this product law, $C$ is a statistic of the first coordinate and $D$ a statistic of the second coordinate. Disintegrating each factor separately produces kernels $\alpha_{r,c}$ and $\beta_{r,d}$. The product kernel $\alpha_{r,c}\otimes\beta_{r,d}$ has the defining integral property of the conditional law of $(A,B)$ given $(R,C,D)$, first on rectangles and product test functions and then, by a monotone-class argument, on the full sigma-field. This is the desired factorization.
+\end{proof}
+
+\subsection{Alternating observation blocks}
+Fix finite nonempty disjoint $S,T\subset\ZZ$ with $\dist(S,T)\ge n$. Order $S\cup T$ chronologically and merge successive selected times of the same color into maximal blocks. The resulting blocks
+\[
+B_1<B_2<\cdots<B_m
+\]
+alternate in color. A block need not be an interval of integers: it is a block in the ordered list of selected times. Denote the $S$-blocks, in chronological order, by $S_1,\ldots,S_I$, and the $T$-blocks by $T_1,\ldots,T_J$. Put
+\[
+U_i=(X_k)_{k\in S_i},\qquad V_j=(X_k)_{k\in T_j},
+\qquad
+\cH_{ij}=\sigma(U_{i'}:i'<i,\ V_{j'}:j'<j).
+\]
+
+\begin{proposition}[The prefix interface]\label{prop:prefix}
+For these block variables,
+\begin{equation}\label{eq:prefix}
+\rho_{\cH_{ij}}(U_i,V_j)
+\le\kappa(n)\ind\{S_i,T_j\text{ are adjacent in the block order}\}.
+\end{equation}
+More precisely, an adjacent boundary at times $s<t$ admits the bound $\kappa_{A_{s,t}}(K_{s,t})$.
+\end{proposition}
+
+\begin{proof}
+Suppose first that $S_i$ is immediately before $T_j$, and set $s=\max S_i$ and $t=\min T_j$. Then $t-s\ge n$. Every coordinate in $\cH_{ij}$ is strictly before the earlier block $S_i$. Under almost every conditional law given this prefix, the Markov property gives
+\begin{equation}\label{eq:conditional-chain}
+U_i\longrightarrow X_s\longrightarrow X_t\longrightarrow V_j.
+\end{equation}
+The transition in the middle remains $K_{s,t}$. Only the input law of $X_s$ has changed, and Remark~\ref{rem:conditional-support} shows that this conditional input law is supported on $A_{s,t}$. Definition~\eqref{eq:robust} and data processing now bound the conditional correlation of $U_i,V_j$ by $\kappa_{A_{s,t}}(K_{s,t})\le\kappa(n)$. If $T_j$ immediately precedes $S_i$, exchange the colors; the argument still runs forward in time and uses no reverse transition estimate.
+
+Next suppose $S_i$ is before $T_j$ and they are not adjacent. The $T$-block immediately following $S_i$ lies strictly between them and has index less than $j$. Choose $r$ in that block. Then $X_r$ is $\cH_{ij}$-measurable, $U_i$ is before $r$, and $V_j$ is after $r$.
+
+Conditional on $X_r$, the pre-$r$ and post-$r$ paths are independent. Split every other coordinate generating $\cH_{ij}$ according to which side of $r$ it occupies. Thus this conditioning consists of $X_r$, a statistic of the pre-$r$ path, and a statistic of the post-$r$ path. Lemma~\ref{lem:side-separated} shows that the two sides remain conditionally independent under $\cH_{ij}$. In particular $\rho_{\cH_{ij}}(U_i,V_j)=0$. When $T_j$ is before $S_i$, use the intervening $S$-block instead.
+
+There are only finitely many pairs $(i,j)$. The pairwise almost sure assertions can therefore be realized on one probability-one event for this fixed finite interlacing. No common null set over all possible interlacings is required.
+\end{proof}
+
+\section{Tensorization on a path}\label{sec:tensorization}
+
+We state the two existing tensorization inputs in the form used here. They are the minimal-prefix versions of \cite[Theorems~3.3.1 and~3.3.10, Section~3.4(a)]{Peyre2010}.
+
+\begin{theorem}[Peyre's prefix tensorization]\label{thm:peyre}
+Let $(U_i)_{i=1}^I,(V_j)_{j=1}^J$ be ordered finite families, and put $\cH_{ij}=\sigma(U_{i'}:i'<i,V_{j'}:j'<j)$.
+\begin{enumerate}
+\item If $\rho_{\cH_{ij}}(U_i,V_j)\le e_{ij}$, where $E=(e_{ij})$ has nonnegative entries, then
+\begin{equation}\label{eq:peyre-matrix}
+\rho((U_i)_i,(V_j)_j)\le\min\{1,\|E\|_{2\to2}\}.
+\end{equation}
+\item Pad both families by deterministic variables and index them by $\ZZ$. If $\rho_{\cH_{ij}}(U_i,V_j)\le e(j-i)$, where $e:\ZZ\to[0,1]$, then
+\begin{equation}\label{eq:peyre-arcsine}
+\arcsin\rho((U_i)_i,(V_j)_j)
+\le\min\left\{\sum_{z\in\ZZ}\arcsin e(z),\frac\pi2\right\}.
+\end{equation}
+\end{enumerate}
+\end{theorem}
+
+Only finite nonconstant families are needed in the second statement; padding adds no information to any prefix. This avoids any tail-field issue associated with general two-sided indexed families.
+
+Define the nondecreasing function
+\begin{equation}\label{eq:psi}
+\Psi(r)=\sin\!\left(\min\left\{2\arcsin r,\frac\pi2\right\}\right)
+=\begin{cases}
+2r\sqrt{1-r^2},&0\le r\le1/\sqrt2,\\
+1,&1/\sqrt2\le r\le1.
+\end{cases}
+\end{equation}
+
+\begin{proposition}[Finite interlacing bounds]\label{prop:finite}
+For a finite interlacing with $m$ chronological blocks,
+\begin{align}
+\rho(X_S,X_T)&\le\min\left\{1,2\kappa(n)\cos\frac\pi{m+1}\right\},\label{eq:finite-path}\\
+\rho(X_S,X_T)&\le\Psi(\kappa(n)).\label{eq:finite-arcsine}
+\end{align}
+More generally, form the bipartite matrix $E$ whose entry at an adjacent boundary $s<t$ is $\kappa_{A_{s,t}}(K_{s,t})$ and whose other entries are zero. Then $\rho(X_S,X_T)\le\min\{1,\|E\|_{2\to2}\}$.
+\end{proposition}
+
+\begin{proof}
+Apply Proposition~\ref{prop:prefix} and \eqref{eq:peyre-matrix}. The matrix for the uniform bound is $\kappa(n)$ times the bipartite adjacency matrix $B$ of a path on $m$ vertices. After grouping the two colors, the ordinary adjacency matrix of the path is
+\[
+\begin{pmatrix}0&B\\ B^T&0\end{pmatrix}.
+\]
+Its largest eigenvalue is $2\cos(\pi/(m+1))$: the vector with $k$th coordinate $\sin(k\pi/(m+1))$ is a positive eigenvector with that eigenvalue, as follows from the sine addition formula. The bipartite block matrix has operator norm $\|B\|$, proving \eqref{eq:finite-path}. For nonuniform weights, monotonicity under entrywise nonnegative domination also gives the same uniform upper bound.
+
+For \eqref{eq:finite-arcsine}, exchange the colors if necessary so that the chronological order starts with an $S$-block. Then $U_i$ can be adjacent only to $V_i$ and $V_{i-1}$. In \eqref{eq:peyre-arcsine}, take
+\[
+e(0)=e(-1)=\kappa(n),\qquad e(z)=0\quad(z\notin\{0,-1\}).
+\]
+The prefix hypotheses hold by Proposition~\ref{prop:prefix}, and \eqref{eq:psi} is exactly the resulting bound.
+\end{proof}
+
+\begin{remark}
+The support of the matrix, rather than a bound on the number of observations, is decisive. Each row and column has at most two nonzero entries. Already the elementary bound $\|E\|\le\sqrt{\|E\|_1\|E\|_\infty}\le2\kappa(n)$ is uniform in the interlacing length and suffices for the mixing implication. The arcsine input is needed only for the sharper quantitative envelope.
+\end{remark}
+
+\section{Proof of the mixing implication}\label{sec:proof-main}
+
+\begin{lemma}[Finite-coordinate approximation]\label{lem:finite-approx}
+A correlation bound uniform over all finite $S,T\subset\ZZ$ with $\dist(S,T)\ge n$ extends to arbitrary such sets.
+\end{lemma}
+
+\begin{proof}
+Choose finite sets $S_k\uparrow S$, $T_k\uparrow T$. For centered square-integrable $f\in L^2(\sigma(X_s:s\in S))$ and $g\in L^2(\sigma(X_t:t\in T))$, put
+\[
+f_k=\EE[f\mid\sigma(X_s:s\in S_k)],\qquad
+g_k=\EE[g\mid\sigma(X_t:t\in T_k)].
+\]
+These conditional expectations converge in $L^2$ to $f,g$. If the finite bound is $b$, it gives
+\[
+|\EE[f_kg_k]|\le b\|f_k\|_2\|g_k\|_2.
+\]
+Passing to the limit and then taking the supremum over $f,g$ proves the assertion. This argument also handles a degenerate finite approximation without dividing by its variance.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Proposition~\ref{prop:finite} and Lemma~\ref{lem:finite-approx} give the robust-channel estimate
+\begin{equation}\label{eq:robust-global}
+\rhostar(n)\le\Psi(\kappa(n))\le\min\{1,2\kappa(n)\}.
+\end{equation}
+Insert \eqref{eq:kappa-phi} to obtain \eqref{eq:main-simple}. If $\phi(n)\le1/4$, then $\kappa(n)\le\sqrt{2\phi(n)}\le1/\sqrt2$. Since $\Psi$ is nondecreasing,
+\[
+\rhostar(n)\le\Psi(\sqrt{2\phi(n)})
+=2\sqrt{2\phi(n)(1-2\phi(n))}.
+\]
+This is \eqref{eq:main-strong}. Finally, if $\phi(n)\to0$, either bound tends to zero.
+\end{proof}
+
+\begin{corollary}[Rate transfer]\label{cor:rate}
+If $\phi(n)\le A e^{-cn}$ for $A,c>0$, then
+\[
+\rhostar(n)\le\min\{1,2\sqrt{2A}\,e^{-cn/2}\}.
+\]
+More generally, any bound $\phi(n)\le b_n$ gives $\rhostar(n)\le\min\{1,2\sqrt{2b_n}\}$.
+\end{corollary}
+
+\begin{corollary}[A one-lag criterion]\label{cor:one-lag}
+If $\phi(n_0)<1/8$ at some lag, then $\rhostar(n_0)<1$. In Bradley's Markov-chain setting, $\rhostar(n)$ consequently decreases to zero exponentially fast.
+\end{corollary}
+
+\begin{proof}
+The strict inequality follows from \eqref{eq:main-simple}. The final assertion is \cite[Theorem~3.3(6)]{Bradley2005}. In particular, phi-mixing provides such a lag. The direct proof of Theorem~\ref{thm:main} does not require this one-lag theorem.
+\end{proof}
+
+The sharper estimate \eqref{eq:main-strong} in fact yields $\rhostar(n_0)<1$ whenever $\phi(n_0)<1/4$. We have separated the simpler threshold in Corollary~\ref{cor:one-lag} because it uses only the finite matrix-norm tensorization. No necessity of either threshold is claimed.
+
+\section{An exact six-state square-root example}\label{sec:six-state}
+
+Fix $0<\varepsilon<1/2$. On
+\[
+E=\{-1,+1\}\times\{-1,0,+1\}
+\]
+let $\pi=\mu\otimes\nu$, where $\mu$ is uniform on the two signs and
+\[
+\nu(-1)=\nu(+1)=\varepsilon,\qquad \nu(0)=1-2\varepsilon.
+\]
+Write $x=(u,v)$ and define
+\begin{equation}\label{eq:six-kernel}
+K((u,v),(u',v'))=\pi(u',v')(1+uv').
+\end{equation}
+
+\begin{proposition}\label{prop:six}
+The stationary chain with kernel \eqref{eq:six-kernel} is irreducible and aperiodic. It satisfies
+\begin{align}
+\phi(1)&=\varepsilon,&\rhostar(1)&=\sqrt{2\varepsilon},\label{eq:six-exact}\\
+\phi(n)&=0,&\rhostar(n)&=0\quad(n\ge2).\label{eq:six-zero}
+\end{align}
+Moreover, on the full state space,
+\begin{equation}\label{eq:six-robust}
+\kappa_E(K)^2=\delta_E(K)=2\phi(1)=2\varepsilon.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The kernel is nonnegative because $uv'\in\{-1,0,+1\}$. Its row sums equal one, since $\EE_\pi V=0$. Also
+\[
+\sum_{u,v}\pi(u,v)K((u,v),(u',v'))
+=\pi(u',v')(1+v'\EE_\pi U)=\pi(u',v').
+\]
+Thus $\pi$ is invariant. Independence and centering of $U,V$ under $\pi$ imply
+\begin{align*}
+K^2((u,v),(\widetilde u,\widetilde v))
+&=\pi(\widetilde u,\widetilde v)
+  \EE_\pi[(1+uV)(1+U\widetilde v)]\\
+&=\pi(\widetilde u,\widetilde v).
+\end{align*}
+Hence $K^2=\Pi$, where every row of $\Pi$ equals $\pi$. All entries of $K^2$ are positive, so the finite chain is irreducible and aperiodic.
+
+For every state $x$, the signed row difference from $\pi$ has density $uv'$ with respect to $\pi$. Therefore
+\begin{equation}\label{eq:six-tv}
+\|K(x,\cdot)-\pi\|_{\TV}=\tfrac12\EE_\pi|V|=\varepsilon.
+\end{equation}
+For a stationary Markov chain, the future given the past is obtained by mixing the rows at the present state and then applying the future continuation kernel. Total variation cannot increase under this continuation. Thus \eqref{eq:six-tv} bounds $\phi(1)$ above by $\varepsilon$. Equality follows by conditioning on $U_0=1$ and testing $V_1=1$, since the two probabilities are $2\varepsilon$ and $\varepsilon$. The identity $K^2=\Pi$ gives past--future independence at every gap at least two, proving the assertions about $\phi$.
+
+To compute the interlaced coefficient, independently over $t\in\ZZ$ sample pairs $(A_t,B_{t+1})$ with law
+\begin{equation}\label{eq:independent-edges}
+q(a,b)=\mu(a)\nu(b)(1+ab),
+\end{equation}
+and set $X_t=(A_t,B_t)$. The two coordinates of $X_t$ belong to different independent edge pairs, so $X_t\sim\pi$. Given the past through time $t$, $A_{t+1}$ is a fresh $\mu$ variable and $B_{t+1}$ has law $\nu(b)(1+A_tb)$. This verifies exactly the Markov kernel \eqref{eq:six-kernel}.
+
+For one edge, $A$ is a symmetric sign and $\EE[A\mid B]=B$. Every centered function of $A$ is a scalar multiple of $A$, so \eqref{eq:conditional-norm} yields
+\begin{equation}\label{eq:edge-rho}
+\rho(A,B)^2=\EE B^2=2\varepsilon.
+\end{equation}
+For disjoint sets of times $S,T$, a single independent edge pair is either observed on only one side, or its two components are observed on opposite sides because one of its endpoints lies in $S$ and the other in $T$. Tensorization over independent pairs (Lemma~\ref{lem:independent-pairs} below) therefore bounds the full correlation by $\sqrt{2\varepsilon}$. This value is attained for $S=\{0\}$, $T=\{1\}$ by the two edge components. If $\dist(S,T)\ge2$, no edge crosses between the two sets, so they use disjoint families of independent edge pairs. This proves \eqref{eq:six-exact}--\eqref{eq:six-zero}.
+
+The rows with $u=1$ and $u=-1$ differ in total variation by $2\varepsilon$. Hence $\delta_E(K)=2\varepsilon$. To compute $\kappa_E(K)$ directly, an arbitrary input influences the output only through its sign coordinate $U$. If $m=\EE U$, then
+\[
+\PP(V'=1)=\varepsilon(1+m),\quad
+\PP(V'=-1)=\varepsilon(1-m),\quad
+\PP(V'=0)=1-2\varepsilon,
+\]
+and the posterior means of $U$ are $1,-1,m$, respectively. For a nondegenerate input sign,
+\[
+\Var(\EE[U\mid V'])=2\varepsilon(1-m^2)
+=2\varepsilon\Var(U).
+\]
+The fresh coordinate $U'$ provides no additional information. The input factorization $(U,V)\to U\to V'\to(U',V')$ and \eqref{eq:conditional-norm} show that the maximal correlation is $\sqrt{2\varepsilon}$ whenever the sign is nondegenerate. Lemma~\ref{lem:channel} gives the same upper bound for every input law, proving \eqref{eq:six-robust}.
+\end{proof}
+
+\begin{corollary}
+No uniform bound $\rhostar(1)\le C\phi(1)^\alpha$, with fixed $C<\infty$ and $\alpha>1/2$, holds over all stationary irreducible aperiodic Markov chains, even on a six-point state space.
+\end{corollary}
+
+\begin{proof}
+For the family above, the ratio of the two sides without $C$ is $\sqrt2\,\varepsilon^{1/2-\alpha}$, which tends to infinity as $\varepsilon\downarrow0$.
+\end{proof}
+
+\section{A fixed chain with the sharp exponential-rate loss}\label{sec:reset}
+
+\begin{proposition}\label{prop:reset}
+Let $0<q<1$ and let $X$ be the stationary chain on $\NN_0$ with transitions
+\[
+P(i,0)=1-q,\qquad P(i,i+1)=q.
+\]
+Its invariant law is $\pi_i=(1-q)q^i$, and, for all $n\ge1$,
+\begin{equation}\label{eq:reset-values}
+\phi(n)=q^n,\qquad \rho(X_0,X_n)=q^{n/2},\qquad
+q^{n/2}\le\rhostar(n)\le\Psi(q^{n/2}).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The stated invariant law follows immediately from the balance equations. The chain is irreducible and has a self-loop at zero, so it is aperiodic. An $n$-step transition consists either of no reset, with probability $q^n$, or of a last reset during those $n$ steps. Explicitly,
+\begin{equation}\label{eq:reset-kernel}
+P^n(i,j)=
+\begin{cases}
+(1-q)q^j,&0\le j<n,\\
+q^n\ind\{j=i+n\},&j\ge n.
+\end{cases}
+\end{equation}
+The first part is independent of $i$. The stationary tail on $\{n,n+1,\ldots\}$ has mass $q^n$ and, after translating by $n$, has law $\pi$. Thus
+\[
+\|P^n(i,\cdot)-\pi\|_{\TV}=q^n\|\delta_i-\pi\|_{\TV}
+=q^n(1-\pi_i).
+\]
+The supremum over $i$ is $q^n$. The Markov continuation argument used in Proposition~\ref{prop:six} gives $\phi(n)\le q^n$. Conversely, for every $i$, conditioning on $X_0=i$ and choosing a maximizing event determined by $X_n$ gives the displayed row distance. Taking the supremum proves $\phi(n)=q^n$.
+
+The transition \eqref{eq:reset-kernel} is an erasure channel with a visible erasure flag. If the output is at least $n$, the input is recovered exactly by subtracting $n$; if the output is below $n$, its law is independent of the input. For any input law $\lambda$ and any centered $h\in L^2(\lambda)$,
+\[
+\EE[h(U)\mid V]=
+\begin{cases}
+0,&V<n,\\
+h(V-n),&V\ge n.
+\end{cases}
+\]
+Consequently
+\[
+\Var(\EE[h(U)\mid V])=q^n\Var(h(U)).
+\]
+Every nondegenerate input has maximal correlation $q^{n/2}$, so the robust lag coefficient is exactly $\kappa(n)=q^{n/2}$. Taking the stationary input proves the middle identity in \eqref{eq:reset-values}. The lower bound for $\rhostar(n)$ follows by taking the singleton observation sets $\{0\},\{n\}$, and the upper bound follows from \eqref{eq:robust-global}.
+\end{proof}
+
+Since $\Psi(r)\le2r$, Proposition~\ref{prop:reset} proves part~(2) of Theorem~\ref{thm:sharpness-summary}. Together with Proposition~\ref{prop:six}, it completes that theorem. It also shows that the rate exponent $c/2$ in Corollary~\ref{cor:rate} cannot in general be replaced by a larger fixed multiple of $c$, even when one restricts to stationary irreducible aperiodic countable-state chains.
+
+\section{First-order sharpness of path amplification}\label{sec:binary}
+
+Consider a stationary symmetric two-state chain taking values in $\{-1,+1\}$, with
+\begin{equation}\label{eq:binary-kernel}
+\PP(X_{k+1}=y\mid X_k=x)=\frac{1+axy}{2},\qquad 0<a<1.
+\end{equation}
+For a lag $n$, put $r=a^n$.
+
+\begin{proposition}\label{prop:binary}
+For the chain \eqref{eq:binary-kernel},
+\begin{equation}\label{eq:binary-basic}
+\phi(n)=\frac r2,\qquad \kappa(n)=r,
+\end{equation}
+and
+\begin{equation}\label{eq:binary-envelope}
+\frac{2r}{1+r^2}\le\rhostar(n)\le\Psi(r).
+\end{equation}
+In particular, as $r\downarrow0$,
+\begin{equation}\label{eq:binary-first-order}
+\rhostar(n)=2r+O(r^3).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The stationary law is uniform, and
+\[
+\EE[X_{k+h}\mid X_k]=a^hX_k,\qquad \EE[X_iX_j]=a^{|i-j|}.
+\]
+The two $n$-step rows are at distance $r/2$ from the uniform law. The Markov continuation argument gives the upper phi bound, and conditioning on $X_0=1$ and testing $X_n=1$ gives equality.
+
+For the binary channel with parameter $r$ and input mean $m\in(-1,1)$, both centered spaces are one-dimensional. Direct computation gives
+\[
+\rho(U,V)^2=\frac{r^2(1-m^2)}{1-r^2m^2}\le r^2,
+\]
+with equality at $m=0$. The bound at a longer lag is smaller, so $\kappa(n)=r$. Equation~\eqref{eq:robust-global} proves the upper bound in \eqref{eq:binary-envelope}.
+
+For the lower bound, take
+\[
+S_N=\{0,2n,\ldots,2Nn\},\qquad
+T_N=\{n,3n,\ldots,(2N-1)n\},
+\]
+and centered test functions
+\[
+F_N=\sum_{i=0}^{N}X_{2in},\qquad
+G_N=\sum_{j=0}^{N-1}X_{(2j+1)n}.
+\]
+Counting pairs by their separation gives
+\begin{align*}
+\Var(F_N)&=N+1+2\sum_{h=1}^{N}(N+1-h)r^{2h},\\
+\Var(G_N)&=N+2\sum_{h=1}^{N-1}(N-h)r^{2h},\\
+\Cov(F_N,G_N)&=2\sum_{h=0}^{N-1}(N-h)r^{2h+1}.
+\end{align*}
+For fixed $r<1$, division by $N$ and summation of the geometric series yield
+\[
+\frac{\Var(F_N)}N,\frac{\Var(G_N)}N\longrightarrow
+\frac{1+r^2}{1-r^2},\qquad
+\frac{\Cov(F_N,G_N)}N\longrightarrow\frac{2r}{1-r^2}.
+\]
+Therefore $\Corr(F_N,G_N)\to2r/(1+r^2)$, proving the lower bound. For small $r$, its expansion is $2r-2r^3+O(r^5)$, whereas $\Psi(r)=2r-r^3+O(r^5)$. The two bounds imply \eqref{eq:binary-first-order}.
+\end{proof}
+
+Thus no coefficient smaller than two can replace the leading coefficient in a universal bound $\rhostar(n)\le 2\kappa(n)+o(\kappa(n))$. This occurs already for positive two-state kernels. In contrast, this family does not saturate the conversion $\kappa(n)^2\le2\phi(n)$: here $\kappa(n)=2\phi(n)$. The local square-root extremality and the long-path amplification are distinct mechanisms.
+
+\section{The remaining constant question}\label{sec:constant}
+
+The main implication and its square-root exponent do not determine the optimal universal envelope. To state the remaining quantitative question precisely, define
+\[
+M(x)=\sup\{\rhostar_X(1): X\text{ is a stationary standard-Borel Markov chain},\ \phi_X(1)\le x\}.
+\]
+For $0<x\le1/4$, Theorem~\ref{thm:main} and Proposition~\ref{prop:six} give
+\begin{equation}\label{eq:envelope}
+\sqrt{2x}\le M(x)\le2\sqrt{2x(1-2x)}.
+\end{equation}
+
+\begin{question}
+What is the sharp small-$x$ asymptotic behavior of $M(x)$? In particular, does $M(x)/\sqrt{x}$ have a limit, and what is its value?
+\end{question}
+
+The examples above do not answer this question. They prove the optimal exponent and separate sharpness statements for two steps of the argument, but they do not simultaneously saturate both steps in a single family. A sharper universal leading constant would therefore require additional information about which local channels can coexist along one stationary Markov path.
+
+\appendix
+\section{Tensorization over independent pairs}\label{app:independent}
+
+\begin{lemma}\label{lem:independent-pairs}
+If the pairs $(U_i,V_i)$, $i$ in a finite or countable set, are mutually independent, then
+\[
+\rho((U_i)_i,(V_i)_i)=\sup_i\rho(U_i,V_i).
+\]
+A deterministic member of a pair is allowed and contributes zero.
+\end{lemma}
+
+\begin{proof}
+For finitely many pairs, let $T_i:L^2(\Law(U_i))\to L^2(\Law(V_i))$ be conditional expectation. It preserves constants, maps centered functions to centered functions, and has norm $\rho(U_i,V_i)$ on the centered subspace. Independence makes the full conditional-expectation operator the Hilbert tensor product $\bigotimes_iT_i$.
+
+Decompose each factor as the orthogonal sum of constants and centered functions. The centered subspace of the full product is the orthogonal sum indexed by nonempty subsets $J$ of the coordinates. On the summand indexed by $J$, the operator norm is $\prod_{i\in J}\rho(U_i,V_i)$, which is at most $\max_i\rho(U_i,V_i)$ because every factor lies in $[0,1]$. This proves the upper bound. Functions depending on a single pair give the reverse inequality. For countably many pairs, finite-coordinate conditional expectations converge in $L^2$, as in Lemma~\ref{lem:finite-approx}.
+\end{proof}
+
+\section*{Acknowledgments and funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+AI systems were used in mathematical exploration, proof checking, computation, and manuscript preparation in a research project directed by the author. The manuscript consolidates the project's recorded arguments and includes further derivations. Internal AI-assisted checks are not represented as independent human peer review. This version is a preprint prepared for the author's review.
+
+\section*{Data and code availability}
+The arguments are analytic and do not rely on numerical evidence. The accompanying source package includes the \LaTeX{} manuscript and a reproducible checker for the finite-state identities and finite-dimensional consistency tests. These computations are supplementary checks, not replacements for the proofs.
+
+\begin{thebibliography}{9}
+\bibitem{Bradley2005}
+R.~C. Bradley, \emph{Basic properties of strong mixing conditions. A survey and some open questions}, Probability Surveys \textbf{2} (2005), 107--144. \href{https://doi.org/10.1214/154957805100000104}{doi:10.1214/154957805100000104}.
+
+\bibitem{Peyre2010}
+R.~Peyre, \emph{Tensorizing maximal correlations}, arXiv:1004.1602v2 (2010). \url{https://arxiv.org/abs/1004.1602v2}.
+
+\bibitem{PolyanskiyWu2016}
+Y.~Polyanskiy and Y.~Wu, \emph{Strong data-processing inequalities for channels and Bayesian networks}, arXiv:1508.06025v4 (2016). \url{https://arxiv.org/abs/1508.06025v4}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B03",
+  "run_id": "20260923T211103Z-account02-B03-QFORM-auto11",
+  "status": "NEW_SUPPORTING_THEOREM_FULL_QFORM_OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_commits": {
+    "control": "ed8f7fdcf9e9d2eda75b098d7f05db9606ae9e5b",
+    "math_fresh": "9b6f5a07f8fde2ce713d3eb1b674e8e3e24eb82c",
+    "pinned_package": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "canonical_report": "68e6d8f52d904033878f6f55c376c38fd214684e"
+  },
+  "main_result": {
+    "id": "QFORM-Z2-HALFRIESZ-MARGINAL-FREE-v1",
+    "statement": "For any original-coordinate cut M=A[I,J] with Z2=e2(MM^T)>0, sup_s E|Q-s|^{-1/2} <= 8 e^(1/4) Z2^(-1/8), with arbitrary same-side quadratic and affine terms and no two-volume row-marginal hypothesis.",
+    "collision": "E|Q-Q'|^-1/2 <= (16/3)e^(1/4) Z2^-1/8; equivalently int |t|^-1/2 |phi(t)|^2 dt <= (16/3)sqrt(2pi)e^(1/4) Z2^-1/8.",
+    "proof_key": "If two-volume row marginals are spread, use pinned D2 critical |t|^-1 envelope. If a row is heavy, promote it to a genuine hub; exact identity ||m||^2 F^2=alpha_i Z2. If projected one-volume is spread, grouped crossing (1,1) closes; if not, promote one more physical row to an exact rank-two crossing. Recursion terminates after two promotions."
+  },
+  "square_receiver": {
+    "id": "QFORM-SQUARE-PLUS-Z2-MARGINAL-FREE-v1",
+    "statement": "After exact completion at physical diagonal d!=0, if the Schur residual has a cut with two-volume Z2>0, then ||p_Q||_infty <= 8e^(1/4)|d|^-1/2 Z2^-1/8 = 8e^(1/4)(|d|^4 Z2)^-1/8, hence linear interval small-ball. Continuity separate."
+  },
+  "partner_application": {
+    "partner": "account03/B03",
+    "source": "20260923T181128Z-account03-B03-QFORM-r36/REPORT.md",
+    "family": "R_N=2N^2 X_h<u,Y>+2N^2<w,Z><v,Y>, Q_N=R_N+N^-1 X_s^2",
+    "result": "Partner effective-dimension compiler applied at d=2,K=2pi/N^2 gives E|R_N-R_N'|^-1/2<=16/(3N), ||p_RN||_2^2<=4/N^2, and P(|R_N-R_N'|<=eps)<=8eps/N^2. Direct one-copy Riesz plus square gives ||p_QN||_infty<=8/sqrt(N)."
+  },
+  "first_unpaid_implication": "From the remaining s3(A)>=1 no-pivot/hub survivor, extract product-preservingly either a physical square and Schur cut with |d|^4 Z2>=c>0, or an already-paid zero-diagonal/grouped-hub/rank-three-crossing/low-rank-carrier exit. Two-volume row marginals are no longer part of the debt.",
+  "corrections_preserved": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "no conditional cap for conjugate sum/difference",
+    "no arbitrary-joint 3D coarea",
+    "no universal rank-three physical cut"
+  ],
+  "telemetry": {
+    "reasoning_effort_configured": "UNKNOWN",
+    "provider_reasoning_tokens": null,
+    "provider_reasoning_time": null
+  }
+}

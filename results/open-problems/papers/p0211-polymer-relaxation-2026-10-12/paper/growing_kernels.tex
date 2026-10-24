@@ -1,0 +1,121 @@
+\subsection{A uniform upper bound for two growing kernels}
+\label{sec:growing-kernel-upper}
+
+In this subsection the equilibrium is the original law $\pi_M$.
+Let $\gamma_{\mathrm{prod}}$ and $\gamma_{\mathrm{add}}$ denote the
+gaps obtained by using the shared multipliers $c(i,j)=ij$ and
+$c(i,j)=i+j$, respectively.
+Thus the product model has pair-merger rate $2ij/n$ and per-link
+fragmentation rate $\beta ij$; its fragmentation rule and equilibrium
+differ from those of the classical Ewens model above.
+
+\begin{proposition}\label{prop:growing-kernel-upper}
+For every $n\ge2$ and $\beta>0$,
+\begin{align}
+ \gamma_M
+ &\le\gamma_{\mathrm{prod}}
+       \le 2\beta+\frac{2(n-1)}n,\label{eq:product-kernel-bounds}\\
+ 2\gamma_M
+ &\le\gamma_{\mathrm{add}}
+       \le 4\beta+\frac{4(n-1)}n.\label{eq:additive-kernel-bounds}
+\end{align}
+In particular the growing kernels have gap bounded above by a
+constant times $1+\beta$, uniformly in $n$.
+\end{proposition}
+
+\begin{proof}
+The lower bounds follow from $ij\ge1$ and $i+j\ge2$ by
+Dirichlet-form comparison.  To prove the upper bounds, write
+$X=m_1$ for the number of monomers, $K=\sum_jm_j$, and
+$\theta=\beta n$.
+For the shared-product generator $L_{\mathrm{prod}}$, direct counting
+gives
+\begin{equation}\label{eq:monomer-product-drift}
+ L_{\mathrm{prod}}X
+   =2\beta(n-K)-\frac{2(n-1)}nX.
+\end{equation}
+Indeed a $j$-cluster with $j\ge3$ creates monomers at total rate
+$2\beta(j-1)$.
+A dimer splits at rate $\beta$ and creates two monomers, giving the
+same contribution $2\beta(j-1)$.
+Merging a monomer with every possible cluster, including another
+monomer with its double loss, contributes $-2(n-1)X/n$.
+
+We claim
+\begin{equation}\label{eq:monomer-count-covariance}
+ \operatorname{Cov}_{\pi_M}(X,K)\le\operatorname{Var}_{\pi_M}(X).
+\end{equation}
+Condition on $X=s$.  The remaining mass is $N=n-s$ and has no parts
+of size one.  If $N=0$ its cluster count is zero.
+The value $N=1$ is impossible under this conditioning.
+For $N\ge2$, the unnormalized probabilities of its cluster count
+$J_N=j$ are
+\begin{equation}\label{eq:nonmonomer-count-weights}
+ a_N(j)=\frac{\theta^j}{j!}\binom{N-j-1}{j-1},
+ \qquad 1\le j\le\lfloor N/2\rfloor.
+\end{equation}
+To obtain this formula, sum $1/\prod_{r\ge2}m_r!$ over nonmonomer
+partitions with $j$ parts.  Multiplying by $j!$ counts ordered
+compositions of $N$ into $j$ parts each at least two, of which there
+are $\binom{N-j-1}{j-1}$.
+
+On the common support for $N,N+1$,
+\[
+ \frac{a_{N+1}(j)}{a_N(j)}
+   =\frac{N-j}{N-2j+1},
+\]
+which is increasing in $j$: its derivative, viewed as a real
+function, is $(N-1)/(N-2j+1)^2>0$.
+Any newly available support point for $N+1$ is at the upper end.
+Thus $J_{N+1}$ stochastically dominates $J_N$.
+For completeness, an increasing likelihood ratio gives this
+dominance by the nonnegative covariance of any increasing test
+function with the likelihood ratio under the first distribution;
+mass at a newly available largest point only increases such
+expectations.
+Also $J_0=0$ is stochastically below every $J_N$ with $N\ge2$.
+It follows that the function
+\[
+ s\longmapsto\mathbb E[K-X\mid X=s]
+       =\mathbb E J_{n-s}
+\]
+is decreasing on the feasible conditioning values
+$s\in\{0,\ldots,n-2,n\}$.
+The missing value $n-1$ causes no difficulty.
+For a real random variable and a decreasing function of that
+variable, covariance is nonpositive, as follows by taking an
+independent copy and expanding the product of the two differences.
+Consequently
+\[
+ \operatorname{Cov}(X,K)
+ =\operatorname{Var}(X)
+   +\operatorname{Cov}\bigl(X,\mathbb E[K-X\mid X]\bigr)
+ \le\operatorname{Var}(X),
+\]
+proving \eqref{eq:monomer-count-covariance}.
+
+The monomer count is nonconstant under $\pi_M$: both the all-monomer
+and single-cluster states have positive mass.
+Using it in the Rayleigh quotient and applying
+\eqref{eq:monomer-product-drift} gives
+\[
+ \gamma_{\mathrm{prod}}
+ \le\frac{-\operatorname{Cov}(X,L_{\mathrm{prod}}X)}
+             {\operatorname{Var}(X)}
+ =\frac{2(n-1)}n+
+       2\beta\frac{\operatorname{Cov}(X,K)}{\operatorname{Var}(X)}
+ \le\frac{2(n-1)}n+2\beta.
+\]
+Finally $i+j\le2ij$ for positive integers $i,j$.
+The two chains have the same stationary law, so
+$\mathcal E_{\mathrm{add}}\le2\mathcal E_{\mathrm{prod}}$ and
+$\gamma_{\mathrm{add}}\le2\gamma_{\mathrm{prod}}$.
+This proves the remaining upper bound.
+\end{proof}
+
+These estimates constrain the relaxation scale without reducing the
+growing-kernel dynamics to a count chain.
+At $\beta=b/n$ with fixed $b>0$, the comparison lower bounds have
+order $n^{-1/2}$ while the upper bounds have constant order.
+A lower bound of constant order in that regime is not established
+by Proposition~\ref{prop:growing-kernel-upper}.

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260922T155502Z-qform-B18-a01-r13",
+  "source_control_commit": "fc1ce39df9220d4c90d43d68cf668e7f3f28f4f5",
+  "publication_recheck_commit": "b9c9133ebdfe75214f31ea9f4cb1e3b3c7e57d76",
+  "programme_revision": "2026-09-22.5",
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "execution_context": "scheduled_automation",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "primary_source": {
+    "authors": "T. Juskevicius and J. D. Lee",
+    "title": "Small ball probabilities, maximum density and rearrangements",
+    "arxiv": "1503.09190",
+    "result_used": "Theorem 1 and the one-dimensional Rogozin maximum-density consequence"
+  },
+  "partner_result": {
+    "worker": "account02/B18",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f985e95ceec640cdc37cffc34fab07bb2687a414",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/account02-B18-20260922T153407Z-qform-lit/REPORT.md",
+    "theorem": "QFORM-LPP-FULL-THREE-BANK-v1",
+    "application": "Replaced generic bank caps by sharp Rogozin coefficient-sensitive caps in the partner three-bank inequality."
+  },
+  "mathematical_change": {
+    "theorem": "QFORM-ROGOZIN-THREE-BANK-v1",
+    "statement": "For an exact disjoint physical three-bank factorization with invertible compressed B, defining R(u) as the maximum density of the convolution of centered uniforms of widths |u_i| gives ||p_Q||_infinity <= (2*pi+3*sqrt(3))/sigma_min(D_R^{-1} B D_R^{-1}), with continuous density.",
+    "sharp_bank_cap": "For u=(1,1,1)/sqrt(3), R(u)=3sqrt(3)/4 exactly.",
+    "concrete_bound": "Three equal triple-coordinate banks give (27/16)(2*pi+3sqrt(3))/sigma_min(B)=19.37138241918299.../sigma_min(B), improving the coarse partner payment by 15.625%."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e46b43ba6c0a19bb13bb59c393a054f460220c96",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260922T155502Z-qform-B18-a01-r13/REPORT.md",
+    "readback_blob": "a0804e539e3fef2f6bd16e4dc89132eb661882c3"
+  },
+  "unresolved_implication": "Outside the ridge/spectral-window branch, derive from only the three-large-eigenvalue hypothesis a product-preserving compression with uniformly positive weighted bank score sigma_min(D_R^{-1}BD_R^{-1}) while controlling non-bank remainder interactions, or prove a source-valid stability theorem replacing exact factorization.",
+  "next_step": "Use sharp bank-cap geometry together with high-leverage decomposition and the newest one-sided cross-aggregate branch; do not return to refuted local-minor, single-Schur, post-rotation-independence, or absolute-Fourier mechanisms.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_effort_requested": "maximum actually supported"
+}

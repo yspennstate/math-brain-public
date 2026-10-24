@@ -1,0 +1,118 @@
+\section*{Activation quotient collapse and a constant-output gauge obstruction}
+
+All logarithms are natural.  For Boolean branches $g_+,g_-$ and a Boolean
+selector $h$ on the same cube, put
+\[
+ a=(g_++g_-)/2,\qquad b=(g_+-g_-)/2,\qquad F=a+hb.
+\]
+Write
+\[
+ q=\|b\|_2^2,\quad Z={\cal E}_{\rm raw}(b),\quad
+ V=\operatorname{Var}(h),\quad J=\mathbf I(h).
+\]
+
+\subsection*{The activation quotient is identically zero}
+
+Fix Boolean $F,h$.  Consider all Boolean branch-pair representations of the
+same selected output,
+\[
+ {\cal R}(F,h)=\{(g_+,g_-):g_{h(z)}(z)=F(z)\text{ for every }z\}.
+\]
+The degenerate pair $g_+=g_-=F$ belongs to ${\cal R}(F,h)$.  For it $b=0$,
+and hence $q=Z=0$.  Therefore, for every $A,\lambda\ge0$,
+\[
+ \inf_{{\cal R}(F,h)}\{AqJ+\lambda VZ\}=0.                 \tag{1}
+\]
+Thus unrestricted minimization over activation-equivalent representations
+deletes all source-disagreement information.  It cannot serve as the reserve
+for the already proved coherent-remainder inequality unless the charged
+remainder is simultaneously replaced by a representation-invariant quantity.
+
+\subsection*{An activation-irreducible constant-output witness}
+
+On three bits, in zero-based lexicographic truth-table order, take
+\[
+\begin{split}
+ g_+&=(1,1,-1,1,-1,1,-1,-1),\\
+ g_-&=(-1,1,1,1,1,1,1,1),\\
+ h&=(1,-1,-1,-1,-1,-1,-1,-1).
+\end{split}                                                   \tag{2}
+\]
+The selected output is $F\equiv1$.  The branches disagree on
+$\{0,2,4,6,7\}$, and $h$ takes both signs on that set.  Thus both branches
+are genuinely selected on disagreement points; this is not an unused-branch
+example.
+
+Query coordinate one (coordinate zero in zero-based notation).  Exact Walsh
+calculation gives
+\[
+ (q,Z,V,J)=\left(\frac58,\frac{15}{4}\log2-\frac98\log3,
+                  \frac7{16},\frac34\right).
+\]
+The two children have data
+\[
+ (q_0,Z_0,V_0,J_0)=\left(1,2\log2,\frac34,1\right),
+\]
+\[
+ (q_1,Z_1,V_1,J_1)=\left(\frac14,\log2,0,0\right).
+\]
+Consequently
+\[
+ \Delta(qJ)=-\frac1{32},                                      \tag{3}
+\]
+and
+\[
+ \Delta(VZ)=\frac{57}{64}\log2-\frac{63}{128}\log3.          \tag{4}
+\]
+Moreover
+\[
+ \Delta(VZ)<\frac18\log2<\frac18,                            \tag{5}
+\]
+because $2^{14}<3^9$ implies $2^{98}<3^{63}$, which is exactly
+$98\log2<63\log3$.
+
+It follows from (3)--(5) that for every $A,\lambda\ge0$, not both zero,
+satisfying $A\ge4\lambda$,
+\[
+ \Delta\{AqJ+\lambda VZ\}<0.                                 \tag{6}
+\]
+In particular (6) applies to the preceding B12 coefficient
+$A=4+2\log2+2/e$, $\lambda=1$.
+
+\subsection*{Why output-only local repairs fail}
+
+For the witness (2), the output and both of its restricted children are the
+same constant Boolean function.  Hence all of the following local drops are
+zero:
+\[
+ \Delta H(F)=0,\qquad \Delta\mathbf I(F)=0,
+\]
+\[
+ \operatorname{Inf}_i(F)=0,\qquad
+ {\cal E}_{\rm raw}\left((F_+-F_-)/2\right)=0.                \tag{7}
+\]
+Thus no finite multiple of output entropy, output influence, output-split
+mass, or output-split raw entropy can repair (6).  More generally, any
+normalized restriction-consistent functional of the actual output alone has
+zero drop on this constant-output step.
+
+The conclusion is scoped.  It does not refute FEI: the actual output is
+constant and satisfies $H(F)=\mathbf I(F)=0$.  It refutes a proof mechanism
+that attempts to repair a representation-dependent coherent potential using
+only a local functional of the represented output.
+
+\subsection*{Repaired obligation}
+
+Any surviving overlap proof must retain information beyond the selected
+output while remaining invariant under harmless changes of unselected
+branches.  Concretely, it must either
+\begin{enumerate}
+\item choose a canonical physical representation before restriction and use
+      a global one-use gauge budget;
+\item charge a joint witness supported only where a branch can become active
+      along the future physical hierarchy; or
+\item prove a cancellation only after summing several shared-coordinate
+      steps, rather than by a one-node Bellman inequality.
+\end{enumerate}
+The old nonnegative two-term potential, its unrestricted activation quotient,
+and every output-only local correction are now all excluded.

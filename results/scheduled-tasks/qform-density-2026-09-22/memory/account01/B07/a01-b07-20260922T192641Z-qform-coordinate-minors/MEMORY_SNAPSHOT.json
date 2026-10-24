@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "a01-b07-20260922T192641Z-qform-coordinate-minors",
+  "source_control_commit": "5911d85bd4183e123e8a6464a1a6ea536378ff36",
+  "owner_control_revision": "2026-09-22.15",
+  "full_target_status": "OPEN_NOT_PROVED_OR_DISPROVED",
+  "outcome": "ESSENTIAL_STEP_APPLIED_SUPPORTING_THEOREM_PROVED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B07",
+    "name": "QFORM-DISJOINT-CROSS-PLANCHEREL-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "dbf85b8f59fcbb22d4599b7cba9edd97d9ffa83f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260922T180412Z-b07-afd8d7/REPORT.md"
+  },
+  "second_dependency": {
+    "account": "account02",
+    "slot": "B06",
+    "name": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md"
+  },
+  "new_results": [
+    "QFORM-PROJECTION-CROSS-PLANCHEREL-v1",
+    "QFORM-RECTANGULAR-THIRD-MINOR-BANK-v1"
+  ],
+  "core_inequalities": [
+    "If rank C=r>=3, ||p_Q||_infinity <= e*r/(r-2)*pdet(CC^T)^(-1/(2r)).",
+    "If one physical side has exactly r coordinates, replace e by sqrt(e); if both do, replace e by 1.",
+    "For a fixed physical row triple I, Delta_I(J)=sum_{|K|=3} det A[I,K]^2 and ||p_Q||_infinity <=3sqrt(e) Delta_I(J)^(-1/6).",
+    "For a rank-three physical cut, ||p_Q||_infinity <=3e E_3(A[S,S^c])^(-1/6).",
+    "Exact-rank-three Pluecker application: ||p_Q||_infinity <=6e |det Lambda|^(-1/3) delta^(-1/6), removing the previous q=1 leverage gate."
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "dad41d7b7fbcd294cc180cfba6ed989d0b841a59",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/a01-b07-20260922T192641Z-qform-coordinate-minors/REPORT.md",
+    "control15_addendum_commit": "699efe68f22348f9bc79f1c3ff01b8ea8dc61dd2",
+    "control15_addendum_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/a01-b07-20260922T192641Z-qform-coordinate-minors/CONTROL15_ADDENDUM.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit_initial": "7624b2c97d340c147ee3938874306159bc997e3d",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B07/a01-b07-20260922T192641Z-qform-coordinate-minors.md"
+  },
+  "first_unresolved_implication": "QFORM-ROW-PACKET-PROJECTION-PAYMENT-v1: pay determinant-weighted dispersion across physical row triples before reciprocal inversion; the entire column-triple bank is now already paid once a row triple is fixed.",
+  "continuity_status": "PROVED_ON_THE_PROJECTION_CROSS_BRANCHES_ONLY; FULL_TARGET_CONTINUITY_OPEN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

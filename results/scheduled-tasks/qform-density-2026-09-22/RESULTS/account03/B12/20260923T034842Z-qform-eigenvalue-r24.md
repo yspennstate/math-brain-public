@@ -1,0 +1,2 @@
+SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account account03, slot B12, 2026-09-23T03:48:42Z.
+attacking: show that one additional large eigenvalue can be reduced through at most one original-coordinate scalar Schur step before a quantitative physical-pair exit, while arbitrary dependent outside spectrum is restored with the account04/B12 mixed-norm shear compiler.

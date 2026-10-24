@@ -1,0 +1,114 @@
+{
+  "schema": "fei-run-progress/2",
+  "run_id": "20261012T091002Z-account01-B12-channel-influence-credit",
+  "stream": "B12",
+  "packet_ids": ["A057"],
+  "primary_packet_id": "A057",
+  "attempt_id": "B12-A057-ATTEMPT-09",
+  "attempt_counter": 9,
+  "bounded_objective": "Aggregate all selector-frequency channels from the exact block identity before entropy estimation, prove a dimension-free physical influence budget with collision refunds, and decide whether standalone channel entropy payment is genuinely weaker than full FEI.",
+  "source_registry": {
+    "owner_control_revision": "2026-10-12.1",
+    "owner_order_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "owner_order_blob": "81b6d6f988aee4489512c6e62543253900620453",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "current_status_blob": "c416d4b4a83fc67965cb95d06a0cc80c5c29a520",
+    "stream_contract_blob": "40935ac651643a17815d0addf664ec4c1c0313cc",
+    "obstruction_registry_blob": "e111933338dff1d7798c5e59b43700bbf30f7b96",
+    "canonical_source_head_read": "3dd5f38ff0768c47b18a5be8b409723a8bb1a9ac",
+    "brain_source_head_read": "8bbad4bf3d4c747b0a0904746682d25391a65b36"
+  },
+  "input_handoffs_used": [
+    {
+      "description": "exact arbitrary-block channel identity and sequential/block reassociation transfer",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "3dd5f38ff0768c47b18a5be8b409723a8bb1a9ac",
+      "path": "reports/fei-2026-10-11/runs/B12/20261012T083727Z-account01-B12-block-reassociation/"
+    },
+    {
+      "description": "Brain mirror of the exact predecessor package",
+      "repository": "yspennstate/math-research-brain",
+      "commit": "2a4f21e2a8df20c9faeeeffbd44576fd2810fac9",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B12/20261012T083727Z-account01-B12-block-reassociation/"
+    }
+  ],
+  "cross_stream_corrections_consulted": [
+    {
+      "packet": "A003",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "59d698866d319542ba55d8215846586b14279ad1",
+      "path": "reports/fei-2026-10-11/runs/B01/20261012T090930Z-account01-B01-kl-js-falsifier-a003/",
+      "applicable_guard": "Coefficient-one asymmetry-KL payment by restriction JS is false; retain signed alignment and test its tensor counterfamily."
+    }
+  ],
+  "claim_versions": [
+    "B12-A057-CHANNEL-COLLISION-CREDIT-v1",
+    "B12-A057-ADAPTIVE-CHANNEL-INFLUENCE-v1",
+    "B12-A057-CHANNEL-UNIVERSALITY-v1"
+  ],
+  "gap_id": "B12-A057-COHERENT-HIERARCHY",
+  "gap_version": "v9",
+  "prior_mathematical_status": "The arbitrary-block algebra was exact, but its 2^|B|-1 selector-frequency channels had no aggregate quantitative budget and their separate treatment risked exponential loss.",
+  "new_mathematical_status": "PARTIAL_PROVED_AND_STANDALONE_ROUTE_REDUCED_TO_FULL_FEI: selector-channel energy and influence aggregate exactly with a nonnegative overlap refund and a depth-uniform I(b)+I(h) hierarchy budget; standalone entropy payment for these channels is exactly full FEI-hard.",
+  "mathematical_delta": "The apparent exponential channel multiplicity is removed at the influence level. The exact refund preserves activation and parity-zero erasure. A fresh-parity construction realizes every Boolean k as the unique selector channel, proving that the next unsigned channel-entropy inequality is not an auxiliary shortcut.",
+  "previous_value": "2^|B|-1 exact channels with no aggregate budget",
+  "new_value": "sum channel influence = activated source term + activated selector term - exact overlap refund <= I_B(b)+I_B(h), and the hierarchy sum <= I(b)+I(h)",
+  "unchanged_obstruction_count": 0,
+  "case_extension": {
+    "starting_class": "exact block decomposition without a quantitative aggregate channel budget",
+    "new_class": "all Boolean source/selector triples on every block and all adaptive nonreusing block hierarchies",
+    "exact_quantifiers": "every finite dimension, physical block, Boolean g_+,g_-,h, and adaptive nonreusing physical hierarchy",
+    "prior_constant": "formal 2^|B|-1 channel count",
+    "new_constant": "one unit each of root I(b) and I(h), with an exact nonnegative overlap refund",
+    "parameter_dependence": "independent of dimension, depth, block size, bias, address count and collision gap",
+    "proof_status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+    "universal_gap": "one-sided payment of the combined channel entropy plus signed remainder, since channel entropy alone is full FEI"
+  },
+  "acceptance": {
+    "A057-D1": "ADVANCED_BY_EXACT_DIMENSION_FREE_CHANNEL_INFLUENCE_BUDGET",
+    "A057-D2": "MET_FOR_PARITY_ZERO_ACTIVATION_COLLISION_DEPTH_AND_BOOLEAN_REALIZABILITY_CONTROLS",
+    "criterion_complete_source_remainder": "INFLUENCE_SIDE_AGGREGATED; SIGNED_ENTROPY_PAYMENT_OPEN",
+    "criterion_logarithmic_counterexample": "MET_AND_RETAINED",
+    "criterion_nonreusing_physical_hierarchy": "MET_FOR_CHANNEL_INFLUENCE; OPEN_FOR_COMBINED_ENTROPY",
+    "packet_complete": false
+  },
+  "finite_check": {
+    "status": "PASS",
+    "scope": [
+      "all 4096 genuine Boolean triples on two bits",
+      "3260 strict overlap refunds and 12 complete parity erasures",
+      "8192 two-order adaptive hierarchy checks",
+      "exact parity-zero witness",
+      "universality construction for all 278 Boolean functions through three variables"
+    ],
+    "arithmetic": "exact Fraction Walsh arithmetic",
+    "seed": null,
+    "command": "python3 check_channel_influence_credit.py",
+    "output": "check_channel_influence_credit.out",
+    "limitation": "finite enumeration validates implementation; all-dimensional identities, hierarchy budget and universality reduction are proved analytically"
+  },
+  "failed_or_insufficient_approaches": [
+    "Bounding the 2^|B|-1 channel influences separately is unnecessary; exact aggregation removes the multiplicity.",
+    "Bounding their entropy decrements by their aggregate channel influence is not an easier lemma: a fresh parity selector realizes arbitrary full FEI as one channel.",
+    "Discarding the overlap term loses complete parity-zero erasure.",
+    "The exact influence budget does not by itself control the signed entropy associator or solve FEI."
+  ],
+  "review": {
+    "previous_claim_review": "No independent review of the immediately preceding block-reassociation claims was observed.",
+    "new_claim_contributor_check": "complete",
+    "new_claim_independent_review": "PENDING",
+    "requested_packets": ["A091", "A090"]
+  },
+  "routing": {
+    "next_consumers": ["A058", "A059", "A085", "A091", "A090", "A094", "A097", "B20"],
+    "note": "Use the exact activated influence identity and preserve the -2 overlap refund. Do not claim a standalone channel entropy inequality as progress beyond full FEI."
+  },
+  "deliverable_status": {
+    "local_package": "COMPLETE",
+    "canonical": "COMPLETE_10_FILE_BYTE_EQUAL_READBACK_VERIFIED_AT_270913622938a8b1ced96f0da91b2d0149ad36e1",
+    "brain_mirror": "COMPLETE_10_FILE_BYTE_EQUAL_READBACK_VERIFIED_AT_59b6502b42091409b31c2adf01cb3bac36219ed4",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "next_action": "Derive the scalar entropy interference associator for sum_alpha C^alpha and pair it with the exact overlap refund; test a one-sided combined sum_alpha X_{B,alpha}+R_B^sh bound without absolute values and against the B01/A003 KL-by-JS tensor falsifier.",
+  "full_fei_status": "OPEN"
+}

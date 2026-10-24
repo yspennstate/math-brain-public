@@ -1,0 +1,22 @@
+{
+  "status": "PASS QFORM_GAUSSIAN_FULLTARGET_COMPARATOR",
+  "execution": "same-run local Python arithmetic/algebraic-grid check; no installation, no Monte Carlo used in proof",
+  "constants": {
+    "indefinite_unit_coefficient": 0.35355339059327373,
+    "definite_unit_coefficient": 0.24197072451914337,
+    "definite_tail_unit_coefficient": 0.15418032980376928,
+    "cap_one_gaussian_barrier": 4.242640687119285,
+    "fold_gaussian_ceiling": 3.464101615137755,
+    "partner_uniform_ceiling": 4.898979485566356,
+    "fold_to_partner_ratio": 0.7071067811865477
+  },
+  "exact_identities_checked": [
+    "12/(2*sqrt(2)) = 3*sqrt(2)",
+    "12/(2*sqrt(3)) = 2*sqrt(3)",
+    "(2*sqrt(3))*sqrt(2) = 2*sqrt(6)"
+  ],
+  "analytic_proof_notes": [
+    "The r-grid is only a regression check; the report proves r(r+c)>=3 analytically by two cases.",
+    "The theorem does not use numerical sampling or histogram evidence."
+  ]
+}

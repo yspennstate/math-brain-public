@@ -1,0 +1,13 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "~\\brain_workers\\TRIO_1011\\op\\P0216\\CollisionTruth.lean"
+  ],
+  "timeout_seconds": 3600,
+  "exit_code": 1,
+  "output": "~\\brain_workers\\TRIO_1011\\op\\P0216\\CollisionTruth.lean:10:2: error: Tactic `decide` proved that the proposition\n  \u2200 (a b c d : Bool),\n    (a && decide (b = c) && d) = true \u2227 (!a && decide ((!b) = !c) && !d) = true \u2194\n      ((((if a = true then 1 else 0) + if b = true then 1 else 0) + if (!c) = true then 1 else 0) +\n          if (!d) = true then 1 else 0) =\n        2\nis false\n",
+  "wall_seconds": 768.1427386000287,
+  "sha256": "4df7cf1604a64bac037b9a680b0badb34a7bdba7585f6eb49ea2cbbfc253afc8"
+}

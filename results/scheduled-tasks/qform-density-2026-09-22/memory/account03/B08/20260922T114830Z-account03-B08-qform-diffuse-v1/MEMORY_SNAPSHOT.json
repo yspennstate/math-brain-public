@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B08",
+  "run_id": "20260922T114830Z-account03-B08-qform-diffuse-v1",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "source_control_commit_at_start": "89884ca4fbf7c407c5683f31e56be24f34166e36",
+  "final_fresh_control_head_observed": "ee45455161ad4f84ed8561c276fac7419cfafa68",
+  "assignment_blob": "de412bf847528fc20400d5ce47e61e924654f839",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "classification": ["ESSENTIAL_STEP_APPLIED"],
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE"
+  ],
+  "partner_card": "account04/B08",
+  "partner_current_handoff_found": false,
+  "other_account_result_applied": {
+    "account_slot": "account02/B06",
+    "run": "b06-20260922T113045Z-d47192d10a82",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6902eb62f21a7c833ca27dcca69f34d50e711a7d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md",
+    "blob": "9cced3d58d10574ef548c119c8d5a67276dc870f",
+    "scope": "exact rank-three Sylvester-Hadamard delocalized family and failure of finite-coordinate curvature localization"
+  },
+  "proved_supporting_results": [
+    "QFORM-COMPLEX-HY-HIGHPOWER-v1",
+    "QFORM-DIFFUSE-FRAME-BL-v1",
+    "QFORM-DIFFUSE-SPECTRAL-FRAME-v1",
+    "QFORM-CONDITIONAL-WHITENED-DIFFUSE-v1"
+  ],
+  "quantitative_conclusion": "If R has orthonormal columns, rank r>=3 and all row leverages <=1/2, then for Y=(R^T X)^T Lambda(R^T X)+sum_i V_i(X_i), |phi_Y(t)|<=min(1,(pi e)^(r/2)|det Lambda|^(-1/2)|t|^(-r/2)) and ||p_Y||inf<=e r/(r-2)|det Lambda|^(-1/r). If |lambda_j|>=1 this is <=3e. Arbitrary measurable coordinatewise V_i are allowed.",
+  "peer_application": "For account02/B06's U diag(1,1,-1) U^T Hadamard family, row leverage=3/n<=3/8, so the theorem gives continuous density with ||p_Q||inf<=3e for every admissible product law.",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9dcddd0bf3fbcb8e0b3396e0a4d883924d3f4ada",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260922T114830Z-account03-B08-qform-diffuse-v1/REPORT.md",
+    "blob": "022e24d4e6470665c48d7bfb1a3ad5c7963f664a"
+  },
+  "handoff": {
+    "commit": "0faa57b2e3b024a639c79ddd8df5910856371a10",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B08/20260922T114830Z-account03-B08-qform-diffuse-v1.md"
+  },
+  "unresolved_implication": "QFORM-DIFFUSE-OFFDIAGONAL-REMAINDER-v1",
+  "next_step": "Control an arbitrary off-diagonal spectral remainder C orthogonal to the selected diffuse large-eigenvector subspace without destroying the leverage-dependent high-power Fourier budgets; alternatively combine this diffuse branch with a localized decomposition that conditions away enough coordinates while retaining det(R_L^T R_L)."
+}

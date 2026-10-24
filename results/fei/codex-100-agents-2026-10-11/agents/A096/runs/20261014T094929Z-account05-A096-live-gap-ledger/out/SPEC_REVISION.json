@@ -1,0 +1,10 @@
+{
+  "revision": 2,
+  "frozen_before_rerun": true,
+  "change": "Outward round interval endpoints to 2^-90 before output; no source or search scope change",
+  "reason": "Unrounded sums of exact rational bounds can exceed the default integer string digit limit. Stop at sufficient sign precision rather than raise the limit.",
+  "prior_failure": "ATTEMPT_1.json",
+  "same_case_count": 54,
+  "same_runtime_cap_seconds": 55,
+  "same_memory_estimate_MB": 100
+}

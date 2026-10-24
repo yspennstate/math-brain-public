@@ -1,0 +1,12 @@
+{
+  "helper_version": "A094-stage3-independent-signed-mux-v1",
+  "actual_Boolean_family": "All labelled disjoint two-bit Boolean children; all labelled one-shared-bit children with private widths (1,1) and (2,1); even quadratic bent sign versus its flip at zero; fresh shared balancing-character tensor embeddings",
+  "parameter_domain": {"disjoint_child_bits": [2,2], "shared_private_widths": [[1,1],[2,1]], "bent_k": [4,6,8,10,12], "direct_bent_k": [4,6], "balanced_tag_direct_k": [4,6]},
+  "case_count": {"disjoint_pairs": 256, "shared_pairs": 4352, "reference_variants_per_pair": 3, "bent_parameters": 5, "direct_balancing_tags": 2},
+  "symmetry": "None for labelled Boolean children. Bent compression only after exact tensor transform and sign-count proof, with direct truth-table comparison at k=4,6.",
+  "arithmetic": "Integer Hadamard transform, independent physical edge counts, fractions, exact rational prime-log coefficient vectors for CE and KL identities; 36-term rational atanh logarithm bounds after binary range reduction with proved remainder. No floating-point mathematical verdicts.",
+  "memory_estimate_MB": 95,
+  "maximum_runtime_seconds_per_job": 55,
+  "pilot": "Run disjoint first under the frozen 256-pair domain. Shared and boundary modes sequential; never increase a domain automatically.",
+  "jobs": ["python -X utf8 code/check.py disjoint", "python -X utf8 code/check.py shared", "python -X utf8 code/check.py boundary"]
+}

@@ -1,0 +1,85 @@
+{
+  "candidate_id": "C0047",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "parent_solved_claim": false,
+  "ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 431,
+    "prior_status": "attempted_un",
+    "date": "2026-09-07"
+  },
+  "primary_statement": "For every infinite finitely generated group and every prescribed finite symmetric simple generating set, iid Bernoulli bond p_c<p_u iff the group is nonamenable; current openness UNKNOWN.",
+  "recent_status_flag": "The public scope note claims a full result. Comparator placeholders are templates; the named solution module and actual comparator proof receipt remain unchecked. No evidence of mathematical failure is inferred.",
+  "served_identity": {
+    "author_native_worker": "w559",
+    "system_model_family": "GPT-6",
+    "requested_model": "gpt-6.1-sol",
+    "response_side_served_model_evidence": null,
+    "status": "UNVERIFIED"
+  },
+  "reviewer": "w560",
+  "submitted": true,
+  "reviewed": false,
+  "ingested": false,
+  "retrievable": false,
+  "primary_sources": [
+    {
+      "url": "https://www.maths.tcd.ie/EMIS/journals/EJP-ECP/article/download/978/978-3321-1-PB.pdf",
+      "locator": "Sections 2 and 4, Conjecture 6 and Theorem 4",
+      "read": true
+    },
+    {
+      "url": "https://arxiv.org/html/1206.2183v3",
+      "locator": "Conjecture 1 and Theorems 2 and 4",
+      "read": true
+    },
+    {
+      "url": "https://arxiv.org/html/math/0611668v3",
+      "locator": "Theorem 1, Cayley multiplicity convention, section 5",
+      "read": true
+    }
+  ],
+  "recent_claim": {
+    "url": "https://raw.githubusercontent.com/openai/math/main/lean/docs/214.md",
+    "paper": "Nonuniqueness of percolation on nonamenable quasi-transitive graphs, September 24, 2026",
+    "claimed_scope": "Full bond nonuniqueness including every prescribed finite symmetric Cayley generating set",
+    "verification_status": "PUBLISHED_CLAIM_UNVERIFIED",
+    "comparator_template": "ComparatorChallenges/BenjaminiSchramm.lean contains sorry placeholders as comparison statements; not a proof receipt and not evidence against the actual solution module",
+    "solution_module": "OAI.Probability.BenjaminiSchramm.Main",
+    "theorem_names": [
+      "OAI.Percolation.BenjaminiSchramm.full_main",
+      "OAI.Percolation.BenjaminiSchramm.cayley_main",
+      "OAI.Percolation.BenjaminiSchramm.critical_laws"
+    ],
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "enable_nanoda": false,
+    "comparator_run": false,
+    "actual_trusted_axioms": null,
+    "mathematical_proof_audit": false
+  },
+  "prior_scoped_checks": [
+    "Exact C0047 ranking, problem and attempt records; two draft duplicates carry the same missing-degree statement",
+    "Named H/I attempt directories: no C0047/Benjamini-Schramm match found",
+    "Other named intake directories: D0061 is the broader prior statement; no current-status certification",
+    "Annotated Lean list: attempted_un, no proof receipt",
+    "Team O board: no C0047 row; peers own distinct regular-tree/F_2 and triangle-block lanes",
+    "Population store read-only: exact old open-problem and attempt nodes captured; no live data changed"
+  ],
+  "owner_solved_retired_check": "Only the named percolation-relevant paths and records were scoped; no exhaustive owner archive audit. No novelty claim.",
+  "recall": {
+    "status": "TIMEOUT_60S",
+    "fallback_memory_slug": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "read": true
+  },
+  "submitted_path": "~\\math-brain-inbox\\w559\\bundle_001.json",
+  "submission_kind": "DRAFT concepts only; no live store integration run",
+  "updated_utc": "2026-10-10T07:28:52.914525+00:00",
+  "stuck_notes": [
+    "STUCK: two raw CayleyPercolation.lean fetch attempts failed; switched to the accessible BenjaminiSchramm comparator and configuration. No further status search or formal run was attempted."
+  ]
+}

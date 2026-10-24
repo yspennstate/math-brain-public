@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B11",
+  "run_id": "20260924T012158Z-account01-B11-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "control_commit_at_start": "e63a25346d9f5396ce2d1eb10708a2053b9f4a5f",
+  "control_revision": "2026-09-22.15",
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY refutation",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "dependency": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "25c25e15fa0f570e7b0b1a2a9fab0811eda07113",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260923T201026Z-account02-B11-QFORM-auto11/REPORT.md",
+    "result": "QFORM-3D-PROJECTION-CROSS-L2-v1",
+    "actual_use": "Converted each nonzero three-dimensional ORIGINAL-source crossing volume into a continuous C0 density bound. For the explicit target matrix A_* with determinant-one hub-augmented crossing and spectrum {3,3,-2,0,0,0}, applied the sharper M_X=M_Y=1 form to obtain ||p||_infinity <= 3."
+  },
+  "headline_result": "QFORM-RANK1-TRANSVERSE-HUB-AUGMENTED-TRICHOTOMY-v1",
+  "mathematical_result": {
+    "setup": "rank-one transverse shared-hub geometry with star norms alpha,beta, transverse singular value sigma, and off-axis leakages p_0,q_0",
+    "bilateral": "inherited: p_0,q_0 nonzero implies Delta3(N)=sigma||p_0||||q_0|| and zero physical pivot",
+    "right_only": "p_0=0,q_0!=0 implies Delta3(A[{i} union L,R])=beta sigma||q_0||",
+    "left_only": "q_0=0,p_0!=0 implies Delta3(A[L,{i} union R])=alpha sigma||p_0||",
+    "double_aligned": "p_0=q_0=0 implies rank N, rank A[{i} union L,R], rank A[L,{i} union R] are all at most two",
+    "density_consequence": "nonzero leakage branches have continuous C0 densities with bounds 6 times the relevant three-volume to the power -1/3",
+    "rank_two_control": "for centered unit uniforms p_{2XY}(t)=log(1/(2|t|)) on 0<|t|<1/2; the new third direction is an ORIGINAL-coordinate source-crossing volume, not rotated-coordinate independence"
+  },
+  "explicit_target_example": {
+    "matrix_spectrum": [3,3,-2,0,0,0],
+    "signature": "(+,+,-), with -A_* giving (+,-,-)",
+    "hub_augmented_cross_delta3": 1,
+    "density_bound": 3,
+    "regularity": "continuous C0"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "950d6622fa0403f1b95a161f6da758c7f814fbfb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/20260924T012158Z-account01-B11-QFORM-auto11/REPORT.md",
+    "verifier": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/20260924T012158Z-account01-B11-QFORM-auto11/VERIFY_OUTPUT.txt",
+    "verifier_status": "QFORM_B11_HUBAUGMENTED_TRICHOTOMY_CHECK_PASS"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "781cce6b751bf8f16a0a02036f3140495b7239b6",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B11/20260924T012158Z-account01-B11-QFORM-auto11.md"
+  },
+  "unresolved_implication": "QFORM-RANK1-TRANSVERSE-DOUBLEALIGNED-RANK2-CURVATURE-v1: when p_0=q_0=0, exploit exact-rank-three same-bank curvature and product-projection provenance uniformly through the aligned rank-two crossing, or force an already-paid exit.",
+  "separate_full_target_bridge": "arbitrary additional nonseparable spectrum beyond the exact-rank-three reduction",
+  "full_target_status": "OPEN",
+  "continuity_status": "PROVED_ONLY_FOR_THE_NONZERO_LEAKAGE_BRANCHES",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

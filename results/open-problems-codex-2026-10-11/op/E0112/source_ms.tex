@@ -1,0 +1,460 @@
+%\documentclass[11pt]{book}
+%%\documentclass[11pt]{article}
+%
+\documentclass[11pt]{report}
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage[usenames]{color}
+\usepackage[numbers]{natbib}
+\usepackage{enumitem} %%pour faire des (ii)
+\usepackage{amscd} %% pour faire des diagrammes
+\usepackage{authblk}
+\usepackage{hyperref}
+
+%%% figure eps
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{amsthm}
+\usepackage{xcolor}
+
+%%   \usepackage{showkeys}
+
+%\usepackage{pbsi}
+\usepackage{aurical}
+
+  
+ \addtolength{\topmargin}{-10ex}
+   
+ \addtolength{\topskip}{0pt}
+   
+ \setlength{\oddsidemargin}{0pt}
+   
+ \setlength{\evensidemargin}{15pt}
+  
+  \addtolength{\textwidth}{90pt}
+  
+  \addtolength{\textheight}{130pt}
+
+
+\newenvironment{demo}[1]{\begin{trivlist}%
+\item[]\hspace{\parindent}{\it #1.}\ }{\end{trivlist}}
+\usepackage{latexsym}
+\newsavebox{\toy}
+\savebox{\toy}{\framebox[0.65em]{\rule{0cm}{1ex}}}
+\newcommand{\QED}{\usebox{\toy}\end{demo}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{property}[theorem]{Property}
+\newtheorem{openproblem}[theorem]{Open Problem}
+\newcommand{\Thm}[1]{Theorem \ref{Thm.#1}}
+\newcommand{\Lem}[1]{Lemma \ref{Lem.#1}}
+\newcommand{\Rem}[1]{Remark \ref{Rem.#1}}
+\newcommand{\Prop}[1]{Proposit
+ion \ref{Prop.#1}}
+\newcommand{\Cor}[1]{Corollary \ref{Cor.#1}}
+\newcommand{\Ass}[1]{Assumption \ref{Ass.#1}}
+\newcommand{\Def}[1]{Definition \ref{Def.#1}}
+\newcommand{\Exe}[1]{Exercise \ref{Exe.#1}}
+\newcommand{\Exa}[1]{Example \ref{Exa.#1}}
+\newcommand{\Eq}[1]{(\ref{Eq.#1})}
+\newcommand{\Theorem}[1]{\begin{theorem}\label{Thm.#1}}
+\newcommand{\Lemma}[1]{\begin{lemma}\label{Lem.#1}}
+\newcommand{\Proposition}[1]{\begin{proposition}\label{Prop.#1}}
+\newcommand{\Corollary}[1]{\begin{corollary}\label{Cor.#1}}
+\newcommand{\Assumption}[1]{\begin{assumption}\label{Ass.#1}\rm}
+\newcommand{\Definition}[1]{\begin{definition}\label{Def.#1}\rm}
+\newcommand{\Remark}[1]{\begin{remark}\label{Rem.#1}\rm }
+\newcommand{\Exercise}[1]{\begin{exercise}\label{Exe.#1}\rm }
+\newtheorem{open}[theorem]{Open problem}
+
+
+
+
+
+\def\qed{\hfill\rule{.2cm}{.2cm}\par\medskip\par\relax}
+
+%
+%        date: Ve 19.11.03{example}\label{Exa.#1}\rm }
+%\newcommand{\bdn}[1]{\begin{equation}\label{eq.#1}}
+%.................................................................
+%.====\Theorem{A}, \Lemma{B}, etc. ==================.............
+%.................................................................
+%......\Theorem{A} (= \label{Thm.A} ) ............................
+%.................................................................
+%.........(  statement of the theorem   ).........................
+%.................................................................
+%......\end{theorem}..............................................
+%.................................................................
+\newcommand{\bd}{\begin{displaymath}}
+\newcommand{\ed}{\end{displaymath}}
+\newcommand{\bdn}{\begin{equation}}
+\newcommand{\bdnl}{\begin{equation}\label}
+\newcommand{\edn}{\end{equation}}
+\newcommand{\barray}{\begin{array}}
+\newcommand{\earray}{\end{array}}
+\newcommand{\bds}{\begin{description}}
+\newcommand{\eds}{\end{description}}
+\newcommand{\bitemize}{\begin{itemize}}
+\newcommand{\eitemize}{\end{itemize}}
+\newcommand{\benumerate}{\begin{enumerate}}
+\newcommand{\eenumerate}{\end{enumerate}}
+\newcommand{\btabbing}{\begin{tabbing}}
+\newcommand{\etabbing}{\end{tabbing}}
+\newcommand{\bcenter}{\begin{center}}
+\newcommand{\ecenter}{\end{center}}
+\newcommand{\bflushright}{\begin{flushright}}
+\newcommand{\bflushleft}{\begin{flushleft}}
+\newcommand{\eflushright}{\end{flushright}}
+\newcommand{\eflushleft}{\end{flushleft}}
+\newcommand{\bdnn }{\begin{eqnarray*}}
+\newcommand{\ednn }{\end{eqnarray*}}
+\newcommand{\bdmn}{\begin{eqnarray}}
+\newcommand{\edmn}{\end{eqnarray}}
+\newcommand{\leqn}{\lefteqn}
+\newcommand{\Eqn}[1]{\label{Eq.#1}}
+\newcommand{\nn}{\nonumber}
+%.......................................................
+%...===== \bd,\ed,\bdn etc. =========...................
+%.......................................................
+%...................numbered............................
+%...........\bd------------------>\bdn..................
+%............l.....................l....................
+%............l.....................l....................
+%............lmultiline............lmultiline...........
+%............l.....................l....................
+%............l.....................l....................
+%........... v .....numbered...... v ...................
+%...........\bdm----------------->\bdmn.................
+%................................./\bdnm................
+%.......................................................
+%......   use numbered formulas with the commands   ....
+%......       \Eqn{B} or \nn  etc.                  ....
+%.......................................................
+%
+%
+%
+\newcommand{\SSC}[1]{\section{#1}\setcounter{equation}{0}}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\newcounter{biblio}
+\newenvironment{references}%
+{\begin{list}{[\arabic{biblio}]}{\usecounter{biblio}%
+\setlength{\leftmargin}{2.5em}\setlength{\rightmargin}{0pt}%
+\setlength{\labelwidth}{2em}\setlength{\itemsep}{0pt}}}{\end{list}}
+\newcommand{\References}%
+{\vspace{2.8ex plus .3ex minus .3ex}%
+\begin{center}{\bf References}\end{center}\begin{references}}
+\newcommand{\ytem}[1]{\item\label{Bib.#1}}
+\newcommand{\Bib}[1]{\ref{Bib.#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%...............................................................
+%...=====   \References, \Bib   =====...........................
+%...............................................................
+%......\References..............................................
+%......\ytem{L-S} Leinfelder and etc.   ........................
+%......\ytem{R-S} Reed and Simon etc.   ........................
+%......\end{references}.........................................
+%...............................................................
+%......\Bib{L-S}               %(--->  5).......................
+%......[\Bib{L-S}, \Bib{R-S}]  %(--->  [5, 7])..................
+%...............................................................
+%
+%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%
+%
+% \usepackage{amssymb}; needed for \R, \C, ....
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\zd}{\Z^d}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\rd}{\R^d}
+\newcommand{\C}{{\mathbb{C}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ra }{\rightarrow }
+\newcommand{\lra }{\longrightarrow }
+%%\newcommand{\la }{\leftarrow }
+\newcommand{\Ra}{\Rightarrow }
+\newcommand{\La}{\Lefttarrow }
+\newcommand{\LRa}{\Leftrightarrow }
+\newcommand{\ov}{\overline}
+\newcommand{\tl}{\widetilde}
+\newcommand{\sint}{\mbox{$\int$}}
+\newcommand{\ssum}{\mbox{$\sum$}}
+\newcommand{\sprod}{\mbox{$\prod$}}
+\newcommand{\Llra}{\Longleftrightarrow }
+\newcommand{\limn}{\lim_{n \nearrow \8}}
+\newcommand{\vvvvs}{\vspace{4ex}}
+\newcommand{\vvs}{\vspace{2ex}}
+\newcommand{\vs}{\vspace{1ex}}
+\newcommand{\Dom}{{\rm Dom }}
+\newcommand{\Ran}{{\rm Ran }}
+\newcommand{\Ker}{{\rm Ker }}
+\newcommand{\lan}{\langle \:}
+\newcommand{\ran}{\: \rangle}
+\newcommand{\lef}{\left}
+\newcommand{\rig}{\right}
+\newcommand{\ri}{\right}
+\newcommand{\st}{\stackrel}
+\renewcommand{\=}{\equiv}
+\newcommand{\8}{\infty}
+\newcommand{\nab}{\nabla}
+\newcommand{\6}{\partial}
+\newcommand{\dps}{\displaystyle}
+\newcommand{\sub}{\subset}
+\newcommand{\sbt }{\subset }
+\newcommand{\bsh}{\backslash}
+\newcommand{\pri}{\prime}
+\newcommand{\half}{\mbox{$\frac{1}{2}$}}
+\newcommand{\cpmt}{{\sf c}}
+\newcommand{\cmpt}{{\sf c}}
+\newcommand{\A}{{\bf A}}
+\newcommand{\B}{{\bf B}}
+\newcommand{\J}{{\bf J}}
+\newcommand{\E}{{\bf E}}
+\def\P{{\mathbb P}}
+\newcommand{\K}{{\bf K}}
+\newcommand{\bfL}{{\bf L}}
+\newcommand{\M}{{\bf M}}
+\newcommand{\Real}{\Re}
+\newcommand{\Imag}{\Im}
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+\newcommand{\inflim}{\mathop{\underline{\lim}}}
+\newcommand{\suplim}{\mathop{\overline{\lim}}}
+\newcommand{\epty}{\emptyset}
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+\newcommand{\gm}{\gamma}
+\newcommand{\Gm}{\Gamma}
+\newcommand{\vGm}{\varGamma}
+\newcommand{\del}{\delta}
+\newcommand{\rmd}{\mathrm{d}}
+\newcommand{\D}{\Delta}
+\newcommand{\vD}{\varDelta}
+\newcommand{\e}{\varepsilon}
+\newcommand{\ve}{\epsilon}
+\newcommand{\z}{\zeta}
+\newcommand{\h}{\eta}
+\newcommand{\tht}{\theta}
+\newcommand{\Th}{\Theta}
+\newcommand{\vTh}{\varTheta}
+\newcommand{\vth}{\vartheta}
+\newcommand{\io}{\iota}
+\newcommand{\kp}{\kappa}
+\newcommand{\vk}{\varkappa}
+\newcommand{\lm}{\lambda}
+\newcommand{\la}{\lambda}
+\newcommand{\Lm}{\Lambda}
+\newcommand{\vLm}{\varLambda}
+\newcommand{\m}{\mu}
+\newcommand{\n}{\nu}
+
+\newcommand{\vX}{\varXi}
+\newcommand{\vPi}{\varPi}
+\newcommand{\rh}{\rho}
+\newcommand{\vr}{\varrho}
+\newcommand{\s}{\sigma}
+\newcommand{\vS}{\varSigma}
+\renewcommand{\t}{\tau}
+\renewcommand{\u}{\upsilon}
+\newcommand{\U}{\Upsilon}
+\newcommand{\vU}{\varUpsilon}
+\newcommand{\ph}{\phi}
+\newcommand{\Ph}{\Phi}
+\newcommand{\vP}{\varPhi}
+\newcommand{\vp}{\varphi}
+\newcommand{\ch}{\chi}
+\newcommand{\ps}{\psi}
+\newcommand{\Ps}{\Psi}
+\newcommand{\vPs}{\varPsi}
+\newcommand{\w}{\omega}
+\newcommand{\tw}{\tilde \omega}
+\newcommand{\om}{\omega}
+\newcommand{\W}{\Omega}
+\newcommand{\Om }{\Omega}
+\newcommand{\vW}{\varOmega}
+\newcommand{\cA }{{\cal A}}
+\newcommand{\cB }{{\cal B}}
+\newcommand{\cC }{{\cal C}}
+\newcommand{\cD }{{\cal D}}
+\newcommand{\cE }{{\cal E}}
+\newcommand{\cF }{{\cal F}}
+\newcommand{\cG }{{\cal G}}
+\newcommand{\cH }{{\cal H}}
+\newcommand{\cI }{{\cal I}}
+\newcommand{\cT }{{\cal T}}
+\newcommand{\cJ }{{\cal J}}
+\newcommand{\cK }{{\cal K}}
+\newcommand{\cL }{{\cal L}}
+\newcommand{\cM }{{\cal M}}
+\newcommand{\cN }{{\cal N}}
+\newcommand{\cO }{{\cal O}}
+\newcommand{\cP }{{\cal P}}
+\newcommand{\cQ }{{\cal Q}}
+\newcommand{\cR }{{\cal R}}
+\newcommand{\cS }{{\cal S}}
+\newcommand{\cU }{{\cal U}}
+\newcommand{\cV }{{\cal V}}
+\newcommand{\cW }{{\cal W}}
+\newcommand{\pii}{\pi \sqrt{-1}}
+\newcommand{\WW}{{\cal W}}
+\newcommand{\hX }{{\hat X}}
+
+\makeatletter
+\def\section{\@startsection{section}{1}{\z@}{-3.5ex plus -1ex minus 
+ -.2ex}{2.3ex plus .2ex}{\bf}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{-3.25ex plus -1ex minus 
+ -.2ex}{1.5ex plus .2ex}{\bf}}
+\makeatother
+
+\newcommand{\cvlaw}{\stackrel{\rm{ law}}{\longrightarrow}}
+\newcommand{\eqlaw}{\stackrel{\rm{ law}}{=}}
+\newcommand*\cvLdeux{\overset{L^2}{\longrightarrow}}
+
+%%%%%%%%%%%%%%% added n0v 19
+\newcommand{\bz}{\bar \zeta}
+\newcommand{\md}{\mu^{(2)}_\8}
+
+\newcommand{\IW}{{\mathbb{W}}}
+%%\newcommand{\1}{\sqrt{-1}}
+%%\def\1#1{\bf 1}{ \{ #1 \} }
+\def\1#1{{\bf 1}{\{#1\}}}
+
+\newcommand{\T}{\mathbb T}
+
+%%\newcommand{\pc}{{\vec p_c}}
+\newcommand{\pc}{{\vec {\wp}_c}}
+
+\newcommand{\IP}{{\mathbb P}}
+\newcommand{\ESP}{\mathbb E}
+\newcommand{\Esp}{\mathrm E}
+\newcommand{\IPPPP}{{Q}} %%%%% dans $\rho$-perc
+\newcommand{\EEEE}{{Q}} %%%%% dans $\rho$-perc
+\newcommand{\V}{{\mathcal V}}
+\newcommand{\Perc}{{\tt Perc}}
+\newcommand{\calP}{{\mathcal P}}
+\newcommand{\calA}{{\mathcal A}}
+\newcommand{\calE}{{\mathcal E}}
+\newcommand{\calI}{{\mathcal I}}
+\newcommand{\be}{{\beta}}
+\newcommand{\eps}{{\varepsilon}}
+\newcommand{\Si}{{\Sigma}}
+\newcommand{\Card}{{\rm Card}}
+\newcommand{\al}{{\alpha}}
+\newcommand{\lh}{{\hat \lambda}}
+
+
+\newcommand{\rs}{{\rm s}}
+\newcommand{\bx}{{\bf x}}
+\newcommand{\by}{{\bf y}}
+\newcommand{\bb}{{\bf b}}
+
+\newcommand{\bfc}{\color {blue}}
+\newcommand{\ec}{\color {black}}
+
+
+\newcommand{\Yt}{{\mathsf Y}^{(t)}}
+
+
+\AtBeginDocument{% ceci supprime les numeros MR
+   \def\MR#1{}  }
+
+%\usepackage{makeidx}
+%\makeindex
+
+%% To set the depth for numbering for the Table of Contents
+\setcounter{tocdepth}{1}
+
+%%% tabelau de variations en LaTeX
+\usepackage{variations}
+
+\begin{document}
+
+%%%\pagestyle{myheadings}
+
+
+
+%
+\pagestyle{myheadings}
+\markboth{FC-CC}{BPPE}
+
+
+\author{Francis Comets, Cl\'ement Cosco}
+
+
+\affil[]{\small{Universit\'e Paris Diderot\\
+Laboratoire de Probabilit\'es, Statistique et Mod\'elisation\\ LPSM (UMR 8001 CNRS, SU, UPD)\\
+B\^atiment Sophie Germain, 8 place Aur\'elie Nemours, 75013 Paris\\
+{\tt comets@lpsm.paris,  ccosco@lpsm.paris}}
+}
+
+\title{Brownian Polymers in Poissonian Environment: \\ a survey. }
+%$\phantom$\\
+%\\  \small{ CIRM --  KPZ school 2017}}
+\maketitle
+\begin{abstract}
+We consider a space-time continuous directed polymer in random environment. The path is Brownian and the medium is Poissonian.
+We review many results obtained in the last decade, and also we present  new ones. In this fundamental setup, we can make use of fine formulas and strong tools 
+from stochastic analysis for Gaussian or Poisson measure, together with martingale techniques. 
+ These notes cover the matter of a course presented during the Jean-Morlet chair 2017 of CIRM
+"Random Structures in Statistical Mechanics and Mathematical Physics" in Marseille.
+ \\[.3cm]\textbf{Keywords:} Directed polymers, random environment; weak disorder, intermediate disorder, strong disorder; free energy; Poisson processes, martingales.
+\\[.3cm]\textbf{AMS 2010 subject classifications:}
+Primary 60K37. Secondary 60Hxx, 82A51, 82D30.
+\end{abstract}
+
+
+
+
+
+
+{\parskip=0pt {%\small 
+\tableofcontents}}
+\input{ch-0}
+\input{ch-intro}
+\input{ch-WSD}
+%\input{ch-mart}
+\input{ch-dir}
+\input{ch-RO}
+\input{ch-Var}
+\input{ch-CM}
+\input{ch-PD}
+%\input{ch-loc}
+\input{ch-completeloc}
+\input{ch-IR}
+
+
+
+% 
+ 
+{\small
+\bibliographystyle{plain}%harvard}%  astron, authordate chicago}
+\bibliography{polymeres-bib.bib}
+}
+
+
+
+
+\end{document}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account03",
+  "slot": "B07",
+  "run_id": "20260922T154026Z-account03-B07-qform-r11",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "source_control_commit_prewrite": "a1f27a271acad1d784c6bb6022a9f8f4983d822d",
+  "correction_blob_prewrite": "2ee621225465e603dfd118f6bd86b1ddc853f40e",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "assignment": "Coordinate minor selection: dimension-free averaging/selection of coordinate minors exploiting three large absolute eigenvalues without paying one tiny minor.",
+  "previous_own_result": {
+    "commit": "0b3ca7e927cad2a7c7805a7f2ba6b88b12d000fd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260922T143620Z-account03-B07-QFORM-r12/REPORT.md",
+    "scope": "conditional Pluecker DPP star/triangle theorem and Schur pseudo-determinant bookkeeping"
+  },
+  "new_result": {
+    "id": "QFORM-NESTED-HEAVY-DISJOINT-BANK-COLLAR-v1",
+    "status": "PROVED_SUPPORTING_STRUCTURAL_THEOREM",
+    "statement_short": "For nested-heavy exact-rank-three geometry and any 0<eta<1/4, either the residual planar top eigenvalue is <eta and pair Pluecker mass ch>1-4eta, or original residual coordinates split into disjoint banks Y,Z with dominant-plane energy >=lambda(1-d*)/4, transverse energy >=(1-d*)/4, and minor-plane contamination Delta/lambda<=Delta/eta.",
+    "asymptotic_consequence": "Combined with completed B13 necessity d*->0 and Delta->0, every putative unbounded nested-heavy sequence has a subsequence that either satisfies pair Pluecker mass ->1 or contains two disjoint original-coordinate banks with uniformly positive dominant/transverse norms and vanishing orthogonal planar contamination."
+  },
+  "partner": {
+    "designated": "account04/B07",
+    "designated_completed_artifact_found": false,
+    "compatible_completed_applied": "account04/B18 QFORM-SCHUR-PIVOT-SMOOTHING-v1",
+    "source_commit": "441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T113729Z-account04-B18-qform-r1/REPORT.md",
+    "actual_inequality": "On preceding triangle branch |det B|>=47/384, if |a|>=1/32 and Schur complement definite, ||p_Q||_infinity<14.255."
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "494c999fc67d230fff7e2079b1867216253b35bc",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260922T154026Z-account03-B07-qform-r11/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260922T154026Z-account03-B07-qform-r11/CHECK.py"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "08c807493f3d3e268330994ba0d2fecd7f9d9a0a",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B07/20260922T154026Z-account03-B07-qform-r11.md"
+  },
+  "first_unproved_step": "QFORM-DISJOINT-BANK-PERTURBATIVE-PAYMENT-v1: apply product-preserving aggregate hyperbolic/square or signed-Fourier estimates before reciprocal local-minor payment and prove quantitative stability under vanishing minor-planar contamination; then handle the two-coloop limit.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuous_density_full_target": "OPEN",
+  "telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_configured": null,
+    "thinking_counter": null,
+    "unavailable_values_mean": "UNKNOWN"
+  }
+}

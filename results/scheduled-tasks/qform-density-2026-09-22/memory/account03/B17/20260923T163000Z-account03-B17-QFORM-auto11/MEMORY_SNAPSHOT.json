@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260923T163000Z-account03-B17-QFORM-auto11",
+  "control_commit_start": "df0a2d166f65a3155e3e1306e0394b16ad8f7e7a",
+  "control_commit_prepublication": "a1ba439b25ddda5ccf87bf6c7f2d0d69f40d2c53",
+  "control_revision": "2026-09-22.15",
+  "status": "FULL_TARGET_OPEN_ONE_HEAVY_UNIFORM_CONE_TIP_GAP",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "scientific_commit": "893942adb1bea6e1d33f16eec652d9feeecdc69b",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T163000Z-account03-B17-QFORM-auto11/REPORT.md",
+  "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T163000Z-account03-B17-QFORM-auto11/check.py",
+  "check_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T163000Z-account03-B17-QFORM-auto11/CHECK_OUTPUT.txt",
+  "new_result": {
+    "scope": "cone tip of the one-heavy/shared-diffuse exact spectrum {1,1,-1} family",
+    "statement": "For every 0<a<=1, after optimizing over every heavy-coordinate probability density 0<=f<=1, C(a) <= (3sqrt(2)/2)(1+sqrt(pi/3) erf(sqrt(3/2))) < 3sqrt(2).",
+    "diagnostic_ceiling": 4.111373181080647,
+    "diagnostic_gap_to_3sqrt2": 0.13126750603863816,
+    "proof_mechanism": "strict monotonic matched-variance square-Laplace ratio plus exact angular Gaussian normalization and a half-mass lemma for F_a>=1"
+  },
+  "premises": [
+    "preceding account03/B17 exact coarea kernel and bathtub optimizer for the one-heavy family at math-open-problems@4e3db9a1284f35692c3d8b1c279aedb5dd5cc626",
+    "elementary integration by parts and exp(y)>1+y",
+    "elementary integral of 1/(alpha-beta cos theta)",
+    "completed account04/B17 weighted local Edgeworth theorem and exact lower witness at math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f"
+  ],
+  "partner_application": "For each fixed a>0, the partner weighted local Edgeworth theorem inserted into the two diffuse-bank coarea formula gives p_{Q_{a,m}}(0)=C(a)+O_a(1/m); together with the partner lower witness C_*>=3sqrt(2), limsup_m p_{Q_{a,m}}(0)<3sqrt(2)<=C_*.",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "nonclaims": [
+    "No global-in-output-level density bound is proved for the one-heavy family.",
+    "No two-heavy or multiple-shared-row architecture is controlled.",
+    "No a-uniform finite-m Edgeworth remainder is claimed.",
+    "No arbitrary added spectrum is controlled.",
+    "Full QFORM and full-target continuity remain open."
+  ],
+  "next_step": "Attack off-tip global peaks in the one-heavy family or change mechanism to a genuinely two-heavy/multiple-shared-row exact cap-one construction.",
+  "privacy_review": "Changed files contain only mathematical derivations, public theorem-style formulas, repository commit/path pins, and nonsecret run metadata; no credentials, scheduler IDs, signed URLs, unrelated personal/company/trading data, or private benchmark answers. Manual narrow fallback review used; no installation work performed."
+}

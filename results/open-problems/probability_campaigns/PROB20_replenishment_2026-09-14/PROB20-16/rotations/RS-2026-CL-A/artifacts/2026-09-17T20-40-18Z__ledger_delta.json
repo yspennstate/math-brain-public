@@ -1,0 +1,52 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "RS-2026-CL-A",
+  "report_kind": "NA_RENYI_STRENGTHENING_AND_PRIOR_ART_COLLISION",
+  "input_snapshot_sha": "4632ada280e69f839b13ef4111f36d528b257192",
+  "previous_report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T19-38-01Z__report.md",
+  "previous_report_creation_commit": "45a34fd3c516f277af3580dcb71f74539ebae128",
+  "previous_report_blob": "738d5b12b87937f6989d02d1c9f42a2667b643f2",
+  "source": "Anastasia Kireeva, Randomstrasse 101, 2026-06-05, first displayed Open Problem 35 in Low-degree hardness of finding the largest clique in Erdos-Renyi graph (problems 36-38)",
+  "metric": {
+    "name": "E_framework",
+    "before": 1,
+    "after": 1
+  },
+  "unchanged_count": {
+    "before": 0,
+    "after": 0,
+    "reason": "The remaining obligation changed materially: the prior worst-support kappa hypothesis was proved unnecessary inside the negatively-associated forced-support class; it was replaced by an exact matched-independent Renyi-2 domination theorem, and a fresh Che-Xu 2026 prior-art collision localized the non-novel negative-dependence mechanism."
+  },
+  "stuck_recovery_cycle_consumed": 1,
+  "methods": {
+    "B18": "Rewrote the forced-support theorem as marginal-matched-independent Renyi-2 domination. A fresh prior-art search found a close conceptual analogue in Che-Xu arXiv:2609.01944 for negatively associated participation indicators in differential privacy, so the generic NA-to-Renyi-domination mechanism is not claimed novel; the exact low-degree inference corollary remains novelty UNVERIFIED.",
+    "B3": "Strengthened the theorem by retaining both support copies and proving their coordinatewise intersection vector is negatively associated. This removes kappa entirely and gives D2(TP||Q) <= sum_e log(1+rho_e^2 lambda_e q_e^2) <= rho_*^2 Adv_{<=D}(P,Q)^2 for every D>=1, with heterogeneous Bernoulli null marginals and coordinatewise noise.",
+    "B20": "Exhibited an independent Bernoulli(1/N) support law with kappa=N->infinity but chi^2(T_rho P||Q)=(1+rho^2 lambda/N^2)^N-1->0 and Adv_{<=1}^2=lambda/N->0, proving the old worst-support kappa condition was a proof artifact caused by extremely rare large supports."
+  },
+  "new_mathematical_results": [
+    "Heterogeneous exact Fourier identity: Lhat(S)=prod_{e in S} sqrt(lambda_e) Pr(S subseteq A), so b1=sum_e lambda_e q_e^2.",
+    "Exact two-copy noisy identity: 1+chi^2(TP||Q)=E prod_e (1+rho_e^2 lambda_e 1_{e in A intersect A'}).",
+    "If the support indicator vector is negatively associated, then the coordinatewise intersection of two independent copies is negatively associated.",
+    "Matched-independent Renyi-2 domination: 1+chi^2(TP||Q) <= prod_e(1+rho_e^2 lambda_e q_e^2), hence D2(TP||Q) <= rho_*^2 Adv_{<=D}(P,Q)^2 for every D>=1.",
+    "Source-style corollary: in this structural class bounded source low-degree advantage implies a uniform full-measurable-test total-variation gap even with no noise; vanishing low-degree advantage implies TV->0.",
+    "Old-kappa failure family: independent Bernoulli(1/N) support has kappa=N but full chi-square tends to zero."
+  ],
+  "failed_routes": [
+    "The preceding bounded-kappa sufficient condition is not structural: it can fail solely because an exponentially rare large support attains the supremum C.",
+    "No negatively associated forced-support counterexample with bounded low-degree advantage and noise-surviving high-degree chi-square signal exists, because the new theorem rules out that phenomenon throughout this class.",
+    "The generic probabilistic principle negative association implies marginal-matched independent Renyi domination has close current prior art (Che-Xu 2026) and is not claimed novel.",
+    "The theorem remains a structured forced-support/product-null class and is not a necessary-and-sufficient characterization for arbitrary source pairs (P_n,Q_n)."
+  ],
+  "mathematical_status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING",
+  "source_status": "Live Randomstrasse page rechecked 2026-09-17 and still displays the framework as Open Problem 35.",
+  "audit_status": "0/2 qualifying independent full theorem/source audits recovered",
+  "audit_refs": [],
+  "prior_art_status": "Classical NA closure/product-moment machinery is Joag-Dev-Proschan 1983; strongly Rayleigh/determinantal examples are classical via Borcea-Branden-Liggett 2009. Che-Xu arXiv:2609.01944 gives a close NA-to-marginal-matched-independent integer-Renyi dominance principle in differential privacy. The exact forced-support likelihood-ratio/low-degree corollary was not found in the bounded search, but novelty remains UNVERIFIED.",
+  "next_methods": ["B4", "B22", "B15"],
+  "artifact_refs": {
+    "report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T20-40-18Z__report.md",
+    "report_creation_commit": "77472a859f19286041627ebfcbe1c2b8ec90bef9",
+    "report_blob": "5c1743fdf5343ecc42b02e7764b1c4b058a710d9",
+    "ledger_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-17T20-40-18Z__ledger_delta.json"
+  }
+}

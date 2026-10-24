@@ -1,0 +1,2 @@
+STATE: A051 stage6 saved: finite maximal-deficit minimal witness selected; all signed vertex-cut constraints proved with8/ln2 entropy error and exact boundary; epsilon error2^n epsilon/4;140390 exact checks PASS; scoped A052 Gibbs review; FEI OPEN.
+NEXT: A052/A055 compare Boolean signed-cut entropy potential with actual pair parity-minus-refund residual using SAME D+S_pair bank and one influence owner; A090/A094 review finite selection and curvature factors.

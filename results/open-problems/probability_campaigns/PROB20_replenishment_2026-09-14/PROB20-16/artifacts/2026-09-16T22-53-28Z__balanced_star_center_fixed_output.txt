@@ -1,0 +1,23 @@
+status=PASS
+balanced_star_conditionals=PASS
+rank_one_above_half_atoms=PASS
+gradient_determinant_identity=PASS
+hyperbolic_lower_bound_algebra=PASS
+d_logcosh=PASS
+diagnostic_trials=60000
+diagnostic_accepted=60000
+diagnostic_negative_found= False
+diagnostic_best_min_eigenvalue= 1.4563418346067628e-10
+diagnostic_best_parameters= (0.6628840142635094, 0.7436930138053496, 3.458815939107958e-05, 0.0008636822542585032, [1.4563418346067628e-10, 0.02320398119882796])
+NOTE: diagnostic search is floating-point only and is not a proof of the full c=1/2 case.
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 772, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py", line 37, in get_or_create_client
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py", line 124, in start_daemon
+TimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.
+
+exit_code=0

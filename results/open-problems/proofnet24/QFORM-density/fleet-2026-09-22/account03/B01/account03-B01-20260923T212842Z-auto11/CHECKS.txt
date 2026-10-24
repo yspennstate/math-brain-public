@@ -1,0 +1,49 @@
+account03/B01 deterministic checks for account03-B01-20260923T212842Z-auto11
+
+Constants
+alpha=beta=1/64
+K_W=77.02149767209895
+2^(1/4)=1.189207115002721
+high-W2 branch = K_W*2^(1/4)*alpha^(-1/2)*beta^(-1/4)
+                 = 2072.5472412780905
+rank-two half-Riesz branch = 128*2^(1/4)*alpha^(-1/2)*beta^(-1/4)
+                           = 3444.311716879215
+
+Low-second-pivot scalar-Schur cross energy
+E0=(1/2)*(63/64)^2=3969/8192=0.4844970703125
+
+Fifth-volume residual branch
+C5=5*sqrt(2e)=11.658219907985622
+M5=C5*120^(1/10)*64^(2/5)*E0^(-1/2)
+  =142.68449407608503
+outer-square bound =2*sqrt(2)*8*sqrt(M5)
+                   =270.28588747279343
+
+Rank-three residual branch
+sigma=1/256
+product floor =sqrt((63/256)*E0)*sigma^2
+              =5.2688512660583475e-06
+M3=3e*(product floor)^(-1/3)
+  =468.6447507866775
+outer-square bound =2*sqrt(2)*8*sqrt(M3)
+                   =489.84294667043935
+
+Scaling audit
+- W2 has quadratic 3x3-minor squares and scales as |lambda|^6.
+- |a|^(-1/4) W2^(-1/8) scales as |lambda|^(-1).
+- alpha^(-1/2) beta^(-1/4) is a threshold specialization, not a homogeneous formula; when alpha,beta are actual coefficient scales each payment before specialization is homogeneous.
+- outer compiler |a|^(-1/2) M^(1/2): M is a density scale and under A->lambda A, M->|lambda|^(-1)M, hence the product scales |lambda|^(-1).
+
+Random algebra diagnostic
+Seed: 12345.
+Dimensions tested: n=4,5,7,10.
+For each n: 500 random real symmetric matrices; a random pivot i with |A_ii| bounded away from zero was used. For each admissible first Schur complement H, a random second pivot j with |H_jj| bounded away from zero was tested.
+Total second-stage instances: 1852.
+Minimum observed margin s2(H)-s3(A): 1.807231551076427e-07.
+Minimum observed margin s1(S)-s2(H): 1.474123119127313e-07.
+No violation observed. These tests are diagnostics only; the proof is the exact rank-one decomposition plus singular-value interlacing.
+
+Outer-square compiler check
+Integral int_0^infinity min(1,2M u^-2) du splits at u=sqrt(2M) and equals 2 sqrt(2M).
+
+STATUS=PASS

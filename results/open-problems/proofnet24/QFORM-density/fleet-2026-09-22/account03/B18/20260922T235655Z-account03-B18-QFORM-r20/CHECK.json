@@ -1,0 +1,21 @@
+{
+  "run_id": "20260922T235655Z-account03-B18-QFORM-r20",
+  "checks": {
+    "kk_bank_constant_sqrt_6_over_pi": 1.381976597885342,
+    "generic_lpp_constant_sqrt_2": 1.4142135623730951,
+    "partner_generic_constant_det1": 9.524406311809196,
+    "partner_kk_constant_det1": 9.236033557419038,
+    "target_H_det": 2,
+    "target_H_eigenvalues": [2, -1, -1],
+    "target_H_kk_bound": 7.330644692530287,
+    "threshold_condition": "max bank leverage <= 4/9 implies p_j=1/a_j^2 >= 9/4 and sum 1/p_j=1",
+    "pair_determinants_target_family": "scalar-I: -u_i^2; scalar-J: -v_j^2; I-J: -u_i^2 v_j^2; same-bank: 0",
+    "full_target": "OPEN_NOT_PROVED",
+    "continuity_new_branch": true
+  },
+  "arithmetic": {
+    "sqrt_6_over_pi_formula": "sqrt(6/pi)",
+    "partner_det1_formula": "6*(6/pi)^(2/3)",
+    "target_formula": "6*(6/pi)^(2/3)*2^(-1/3)"
+  }
+}

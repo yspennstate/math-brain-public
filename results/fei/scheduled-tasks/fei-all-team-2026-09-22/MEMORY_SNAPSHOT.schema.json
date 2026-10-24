@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FEI worker research-memory snapshot",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "account",
+    "slot",
+    "run_id",
+    "control_commit",
+    "control_revision",
+    "manifest_commit",
+    "manifest_revision",
+    "state_revision",
+    "write_parent_commit",
+    "consumed_correction_ids",
+    "remembered_claims",
+    "repository_memory",
+    "native_memory",
+    "full_brain_connected",
+    "next_mathematical_step",
+    "consumed_inbox_event_ids",
+    "pending_challenges"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "account": {
+      "enum": [
+        "account01",
+        "account02",
+        "account03",
+        "account04"
+      ]
+    },
+    "slot": {
+      "type": "string",
+      "pattern": "^B(0[1-9]|1[0-9]|20)$"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "control_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "control_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "manifest_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "write_parent_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "consumed_correction_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "remembered_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "status",
+          "candidate_id",
+          "use"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "OPEN",
+              "PROVED_IN_SOURCE",
+              "REFUTED",
+              "CANDIDATE_UNPROVED",
+              "EQUIVALENT_REFORMULATION",
+              "CONDITIONAL_IN_SOURCE",
+              "FINITE_CHECK_IN_SOURCE",
+              "NEEDS_REVALIDATION"
+            ]
+          },
+          "candidate_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "use": {
+            "enum": [
+              "positive_premise",
+              "conditional_assumption",
+              "candidate_definition",
+              "negative_result",
+              "historical_context"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "repository_memory": {
+      "enum": [
+        "loaded",
+        "partial",
+        "unavailable"
+      ]
+    },
+    "native_memory": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "loaded",
+            "unavailable",
+            "not_attempted",
+            "unverified"
+          ]
+        },
+        "api": {
+          "type": "string",
+          "minLength": 1
+        },
+        "receipt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "receiver_run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "observed_use": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "full_brain_connected": {
+      "type": "boolean"
+    },
+    "next_mathematical_step": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consumed_inbox_event_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "pending_challenges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "event_id"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "event_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261013T143351Z-account01-B12-gu-point-defect-tensor",
+  "primary_packet_id": "A056",
+  "claims": [
+    {
+      "claim_id": "B12-A056-GU-PRODUCT-TENSORIZATION-v1",
+      "status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+      "scope": "For every pair of Boolean functions on disjoint physical blocks, U, G=sum_i Delta_i U, and influence are exactly additive under pointwise product.",
+      "units": "bits",
+      "hypotheses": ["Boolean factors", "disjoint physical variable blocks"],
+      "artifact": "GU_POINT_DEFECT_TENSOR.tex"
+    },
+    {
+      "claim_id": "B12-A056-GU-POINT-DEFECT-SHARP-v1",
+      "status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+      "scope": "Every n-variable Boolean point defect satisfies G<=kappa_pd I with sharp class constant kappa_pd=37/4-(9/2)log_2(3), attained at n=3.",
+      "units": "bits",
+      "parameter_dependence": "none",
+      "artifact": "GU_POINT_DEFECT_TENSOR.tex"
+    },
+    {
+      "claim_id": "B12-A056-GU-POINT-DEFECT-PRODUCTS-v1",
+      "status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+      "scope": "Every finite product of point defects on disjoint blocks satisfies G<=kappa_pd I with no dependence on total dimension, number of factors, block arities, or product-tree depth.",
+      "units": "bits",
+      "hypotheses": ["point-defect factors", "disjoint blocks", "outer operation is pointwise product/parity"],
+      "artifact": "GU_POINT_DEFECT_TENSOR.tex"
+    },
+    {
+      "claim_id": "B12-A056-GU-COMPOSITION-v1",
+      "status": "OPEN",
+      "scope": "Extend the exact GU composition law from product/parity to a nontrivial outer gate while controlling the biased child laws created by physical restriction.",
+      "unpaid_step": "A balanced child becomes biased after restriction, so the root upper-mass chain rule cannot simply be subtracted at the children."
+    },
+    {
+      "claim_id": "FULL-FEI",
+      "status": "OPEN",
+      "scope": "Universal Fourier entropy-influence conjecture."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_start": "8d10d13f7fff2627ec7d7168875a6c843c5803db",
+  "source_control_commit_prepublication": "38a94fb87e7d855c60a9fb0b9f23504249d996b6",
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260923T041225Z-account01-B08-QFORM-auto11",
+  "execution_context": "scheduled_automation",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "continuity_full_target_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-NEARRANK1-RECOLOR-STABILITY-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "partner-account02-B08-QFORM-DIFFUSE-HYBRID-VOLUME-TAIL-LADDER-v1",
+      "source_repo": "yspennstate/math-open-problems",
+      "source_commit": "31212dc0982ef58cdae6fc12c9354599a663fad6",
+      "scope": "selected-three leverage <=1/48; k=2 branch includes a rank-one Frobenius tube dist_F(B,rank<=1)<beta/8"
+    },
+    {
+      "id": "QFORM-BALANCED-CUT-LOWCROSS-BILATERAL-CURVATURE-v1",
+      "source_repo": "yspennstate/math-open-problems",
+      "source_commit": "9534b12fbf558d1b6c82db1bc55068afd764fcce",
+      "scope": "partner rank-one tube transfers two fixed-scale child curvature directions to each bank"
+    },
+    {
+      "id": "QFORM-RANK1-RECOLORING-PAID-OR-BICOLOP-v1-plus-falsifier",
+      "source_repo": "yspennstate/math-open-problems",
+      "source_commit": "e18687997f34a76c422a1d8c76f2cdeba38faff1",
+      "scope": "exact-rank-one recoloring paid-or-bicolop; scale-free near-rank-one stability is false"
+    },
+    {
+      "id": "QFORM-FRACTIONAL-E2-BL-L3-v1",
+      "scope": "order-two volume marginals <=2/3 at theta=3/4 give dimension-free L3 density with arbitrary same-side curvature"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-RECOLOR-COFACTOR-DEFECT-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "For N=[[I2,U],[V,I2]], E3(N)>=||I2-VU||_F^2 and symmetrically with UV."
+    },
+    {
+      "id": "QFORM-RECOLOR-E3-OR-ORIGINAL-E2-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "If s2(C),s2(D)>=c, then for every delta in (0,1), the recolored cross block M satisfies E3(M)>=delta^2 c^6 or the original outer block B satisfies s1(B)s2(B)>=(1-delta)c^2, hence E2(B)>=(1-delta)^2 c^4."
+    },
+    {
+      "id": "QFORM-NEARRANK1-SCALE-SENSITIVE-ROUTING-v1",
+      "status": "PROVED_CONDITIONAL_APPLICATION",
+      "statement": "In the designated partner k=2 rank-one tube plus the explicit second-stage child window, either ||p_Q||inf<126.409/L continuously, or a third-volume bicolop exceeds 7.38981e-6 L^6, or s1(B)>2.92437L and E2(B)>0.00281863L^4; the latter further yields diffuse L3 smoothing or an order-two bicolop."
+    }
+  ],
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B08",
+    "id": "QFORM-DIFFUSE-HYBRID-VOLUME-TAIL-LADDER-v1",
+    "actual_inequality": "dist_F(B,rank<=1)<(3/128)sqrt(3/5)L implies s2(B)<0.0181546094353473L; combined with new E2 alternative and c>=0.266059688465556L gives s1(B)>2.9243712765L in the un-paid E2 branch"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2a3ab6d44dcacf731da25947cbe217f74ea0e892",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T041225Z-account01-B08-QFORM-auto11/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T041225Z-account01-B08-QFORM-auto11/CHECKS.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T041225Z-account01-B08-QFORM-auto11/CHECKS_OUTPUT.txt",
+    "checker_terminal": "QFORM_B08_AUTO11_RECOLOR_E3_E2_CHECK_PASS"
+  },
+  "unresolved_implication": "QFORM-HUGE-RANK1-CORE-E2-RECEIVER-v1",
+  "next_step": "Pay the remaining highly anisotropic near-rank-one channel by coupling its fixed E2 currency to either the diffuse E2 L3 receiver or localized E2 bicolop while retaining both child curvatures and the true nonzero tail.",
+  "nonclaims": [
+    "The second-stage child-window hypotheses are not claimed automatic from the full target.",
+    "The L3 branch is not an Linfinity conclusion.",
+    "No full-target continuity is proved.",
+    "Repository writes do not establish native brain ingestion."
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "gate": {
+    "fresh_gate": "w388-exact-diagnostics-20261010-v1",
+    "max_cpu_seconds": 3,
+    "max_wall_seconds": 30,
+    "max_vertices_per_graph": 361,
+    "bounded_weight_seeds": 6,
+    "no_gpu": true,
+    "purpose": "check exact witness counts and finite deterministic examples only"
+  },
+  "command": "python -X utf8 check_obstructions.py",
+  "cases": [
+    {
+      "case": "endpoint-partition",
+      "n": 2,
+      "witnesses": 4,
+      "max_marginal": "1/4",
+      "union": "1",
+      "naive_union_upper": "1"
+    },
+    {
+      "case": "paired-shell-partition",
+      "n": 2,
+      "boundary_vertices": 16,
+      "max_marginal": "1/8",
+      "union": "1",
+      "mean_incidence": "2",
+      "shell_bound": "1"
+    },
+    {
+      "case": "endpoint-partition",
+      "n": 4,
+      "witnesses": 16,
+      "max_marginal": "1/16",
+      "union": "1",
+      "naive_union_upper": "1"
+    },
+    {
+      "case": "paired-shell-partition",
+      "n": 4,
+      "boundary_vertices": 32,
+      "max_marginal": "1/16",
+      "union": "1",
+      "mean_incidence": "2",
+      "shell_bound": "1"
+    },
+    {
+      "case": "endpoint-partition",
+      "n": 8,
+      "witnesses": 64,
+      "max_marginal": "1/64",
+      "union": "1",
+      "naive_union_upper": "1"
+    },
+    {
+      "case": "paired-shell-partition",
+      "n": 8,
+      "boundary_vertices": 64,
+      "max_marginal": "1/32",
+      "union": "1",
+      "mean_incidence": "2",
+      "shell_bound": "1"
+    },
+    {
+      "case": "endpoint-partition",
+      "n": 16,
+      "witnesses": 256,
+      "max_marginal": "1/256",
+      "union": "1",
+      "naive_union_upper": "1"
+    },
+    {
+      "case": "paired-shell-partition",
+      "n": 16,
+      "boundary_vertices": 128,
+      "max_marginal": "1/64",
+      "union": "1",
+      "mean_incidence": "2",
+      "shell_bound": "1"
+    },
+    {
+      "case": "endpoint-partition",
+      "n": 32,
+      "witnesses": 1024,
+      "max_marginal": "1/1024",
+      "union": "1",
+      "naive_union_upper": "1"
+    },
+    {
+      "case": "paired-shell-partition",
+      "n": 32,
+      "boundary_vertices": 256,
+      "max_marginal": "1/128",
+      "union": "1",
+      "mean_incidence": "2",
+      "shell_bound": "1"
+    }
+  ],
+  "unit_weight_horizontal_pairs": 21,
+  "bounded_localization_pair_checks": 168,
+  "localization_scope": "Finite B7 versus B9 checks only; the deterministic proof in ATTEMPT.md establishes global equality.",
+  "false_box_geodesic_example": {
+    "cost_inside_B1": 20,
+    "cost_inside_B3": 10,
+    "root_path_cost": 20,
+    "explicit_detour_cost": 10,
+    "detour": [
+      [
+        -1,
+        0
+      ],
+      [
+        -2,
+        0
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        -2,
+        2
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "posterior_product_checks": 36,
+  "output_measurable_selector_checks": 9,
+  "posterior_example": {
+    "law": "uniform[0,1]",
+    "a0": "1/4",
+    "b0": "3/4",
+    "delta": "1/16",
+    "theta_on_high_output": "1/5",
+    "conditioning": "the entire individual modified output; no other site's output"
+  },
+  "wall_seconds": 0.216307,
+  "cpu_seconds": 0.15625,
+  "scope": "No asymptotic iid-FPP theorem, formal proof, or live brain improvement is inferred from these controls."
+}

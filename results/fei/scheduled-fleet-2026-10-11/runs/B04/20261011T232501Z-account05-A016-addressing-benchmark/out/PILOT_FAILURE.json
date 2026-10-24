@@ -1,0 +1,8 @@
+{
+  "helper_version": "A016-bent-code-v1",
+  "failure": "First pilot stopped on an incorrect anticipated influence formula Ib=m/2+(m/2+1)delta.",
+  "correction": "Every edge adjacent to the flipped point was originally nonpivotal; both directed orientations become pivotal. Thus Inf_i(g1)=1/2+2delta, average data influence is 1/2+delta, and Ib=m/2+(m+1)delta.",
+  "second_analytic_correction_before_rerun": "Derivative boundary charges in tensor products include spectator influences. Actual selector-first charge is a*m*delta+2delta*a(a-1)*Idata+a(a-1)delta^2, not a*m*delta.",
+  "second_pilot_failure": "Python blocked decimal string rendering of enormous exact rational endpoints (4300-digit safety limit). Corrected by outward dyadic rounding of each certified logarithm to denominator 2^100; this also bounds intermediate certificate sizes without weakening rigor.",
+  "scope": "Local derivation/checker correction; no external claim is refuted; retain failed pilot provenance."
+}

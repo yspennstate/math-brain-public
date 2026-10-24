@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 2,
+      "root_influence": "2/2",
+      "fresh_disagreement_tickets": 1,
+      "ratio_to_root_I": 1
+    },
+    {
+      "n": 4,
+      "root_influence": "4/2",
+      "fresh_disagreement_tickets": 6,
+      "ratio_to_root_I": 3
+    },
+    {
+      "n": 6,
+      "root_influence": "6/2",
+      "fresh_disagreement_tickets": 15,
+      "ratio_to_root_I": 5
+    },
+    {
+      "n": 8,
+      "root_influence": "8/2",
+      "fresh_disagreement_tickets": 28,
+      "ratio_to_root_I": 7
+    },
+    {
+      "n": 10,
+      "root_influence": "10/2",
+      "fresh_disagreement_tickets": 45,
+      "ratio_to_root_I": 9
+    },
+    {
+      "n": 12,
+      "root_influence": "12/2",
+      "fresh_disagreement_tickets": 66,
+      "ratio_to_root_I": 11
+    }
+  ],
+  "proof": "At a k-coordinate restriction, GH is parity of all k-1 remaining bits; its influence is k-1 regardless of affine terms and reached branch. True reach weights sum to1 at each depth. Sum = n(n-1)/2. Root derivative at each i is nonconstant parity of n-1 bits, so I=n/2.",
+  "scope": "Actual Boolean family; refutes summing fresh mismatch tickets by O(root influence); not a counterexample to FEI."
+}

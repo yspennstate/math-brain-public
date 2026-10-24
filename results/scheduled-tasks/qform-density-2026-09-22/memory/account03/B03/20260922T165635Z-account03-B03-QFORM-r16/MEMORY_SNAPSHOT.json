@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260922T165635Z-account03-B03-QFORM-r16",
+  "source_control_start_commit": "163d4282f9f9b050f16069c124e1a0fab8ede4a4",
+  "source_control_publication_refresh_commit": "a62a9478eb8d9034fdbea7cb8ef3402c2a576bea",
+  "owner_control_revision": "2026-09-22.8",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "assignment": "Decoupled time integral",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "mathematical_premises": [
+    "Exact independent-copy identity Q(X)-Q(X')=(X+X')^T A (X-X') for symmetric A.",
+    "For one coordinate the exact pair density is h_u(v)=1/2 f((u+v)/2)f((u-v)/2); U and V are not treated as independent.",
+    "Completed compatible account04/B16 nested-heavy determinant-bank theorem at math-open-problems commit 58c23c624db350cf44f0c836daa3582eb7e2d266."
+  ],
+  "new_results": [
+    "Sharp one-pair inequality int h_u^2=(1/2)(f^2*f^2)(u)<=m(u)/2 and unnormalized conditional Plancherel bound int|H_u(at)|^2dt<=pi m(u)/|a|.",
+    "Exact full identity |phi(t)|^2=int prod_j H_{j,u_j}(t(Au)_j) du retaining within-pair dependence.",
+    "Explicit fragmented indicator family f_N=1_{union_k[10^k,10^k+1/N]} has normalized one-pair TT* cost F(f_N)=(N+1)/2, refuting a law-uniform one-pair normalized-Plancherel closure.",
+    "Applying account04/B16 with tau=1/8 gives actual linear small-ball bound ||p_Q||_infty<=15.276340039075507 on its large eligible atom nested-heavy exact-rank-three branch."
+  ],
+  "partner_status": "Designated account04/B03 had no completed current-QFORM handoff/canonical run at fresh scans; no result fabricated. Compatible account04/B16 result applied instead.",
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "16849154c191385e444059bd0a43a2c8a2bba674",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260922T165635Z-account03-B03-QFORM-r16/REPORT.md",
+  "canonical_report_blob": "ccff06141088ee91b459276139554a340b62b1a0",
+  "math_tip_with_checker": "3018eec9926661b03e7bdea154523c9d440f4033",
+  "handoff_commit": "1e83ac7cf2a94ee27cde515606db0b63affb7410",
+  "correction_event_commit": "5fb6f583ee71d0a62d0d2aac9b55a8aa68b16874",
+  "unresolved_implication": "Prove a multi-pair or bank integrated-time estimate that controls the diffuse determinant-bank branch before dividing by any one-coordinate sum density, at a dimension-free aggregate scale, and retain arbitrary additional spectrum.",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN"
+}

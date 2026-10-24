@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B07",
+  "run_id": "20260924T104017Z-account03-B07-qform-r52",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_start_commit": "414242d1f16ce941b28a4737dd5a991a88b07733",
+  "control_publication_refresh_commit": "3e81bb4783e20dc4cba1c9f7e5430cee37290733",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_automation",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "incoming_state": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "87ddc6e4974103cb1f992bab5cfeccadee810ddb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260924T093712Z-account03-B07-qform-r51/REPORT.md",
+    "scope": "r51 finite-heavy weak-core packet, T-side three-curvature branch, and earlier preserved residual branches"
+  },
+  "partner_result_applied": {
+    "worker": "account04/B07",
+    "theorem": "QFORM-PHYSICAL-CORE-SPECTRAL-LEAKAGE-GATE-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5331e6c4246adcded8b07e2722d18a364688a0f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B07/20260924T081607Z-account04-B07-core-leakage-r3/REPORT.md",
+    "actual_application": "For the r51 physical K with a_K>=1/4 and s3(A[K,K])<1/64, the partner leakage inequality forces ||A[K,K^c]||op>sqrt(1023)/64; the new singular ladder refines this into 1+2 and 2+1 resource cases."
+  },
+  "analytic_receiver": {
+    "theorem": "QFORM-Z3-CROSSING-MARGINAL-FREE-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "df738b7f0821d9af56dfd992cab10ecc6704e3fb",
+    "scope": "literal physical crossing with positive e3; arbitrary same-side blocks/outside couplings/signs/additional spectrum; continuous C0 density"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-CORE-BOUNDARY-SINGULAR-LADDER-v1",
+      "status": "proved_supporting_deterministic_lemma",
+      "statement": "For B=A[I,I], D=A[I,Ic], a=lambda_min(U_I^T U_I) from three selected |lambda|>=1 eigenvectors: s3(D)^2>=(a-s1(B)^2)_+, s2(D)^2>=(a-s2(B)^2)_+, s1(D)^2>=(a-s3(B)^2)_+."
+    },
+    {
+      "id": "QFORM-R52-WEAK-FIRST-CORE-PAID-E3",
+      "status": "proved_target_level_branch",
+      "statement": "For the r51 K packet, if a_K>=1/4 and s1(A[K,K])<=1/sqrt(8), then e3(A[K,Kc]A[K,Kc]^T)>=1/512 and the full ambient law has a continuous C0 density with sup norm <=29.840383692718262."
+    },
+    {
+      "id": "QFORM-R52-MIXED-1PLUS2-E2-DELETION-PACKET",
+      "status": "proved_supporting_structural_lemma",
+      "statement": "In the captured 1+2 branch, either <=3 rows carry >=half principal-row energy or some literal B_hk^2 times row-deleted boundary e2 bank exceeds 1/(2048*895^2)."
+    },
+    {
+      "id": "QFORM-R52-MIXED-2PLUS1-E2-DELETION-PACKET",
+      "status": "proved_supporting_structural_lemma",
+      "statement": "In the captured 2+1 branch, either <=3 rows carry >=half boundary-star energy or some literal boundary star times row-deleted principal e2 bank exceeds 1023/(1048576*895)."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4f5ee2dc112f258cb5dad4c9be03a9ae3573be6b",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260924T104017Z-account03-B07-qform-r52/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260924T104017Z-account03-B07-qform-r52/CHECKS.txt",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260924T104017Z-account03-B07-qform-r52/check_r52.py"
+  },
+  "unresolved_implication": "QFORM-MIXED-1PLUS2-OR-2PLUS1-BORDERED-E3-COMPILER-v1: convert the coefficient/star times row-deleted E2 bank into a literal physical E3 crossing or paid bounded core while controlling row- and column-star contamination. Spectral escape, T-side three-curvature, E_star>1, and earlier distinct residual branches remain open.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity_status": "OPEN"
+}

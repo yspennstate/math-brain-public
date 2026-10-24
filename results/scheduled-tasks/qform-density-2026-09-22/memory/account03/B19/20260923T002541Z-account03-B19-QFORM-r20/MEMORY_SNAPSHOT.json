@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B19",
+  "run_id": "20260923T002541Z-account03-B19-QFORM-r20",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "final_control_revision": "2026-09-22.15",
+  "final_control_main_observed_before_handoff": "17b5892c5f534e4772409f360e2d73a4471395ee",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "premises": [
+    "Full target remains arbitrary independent original-coordinate inputs with marginal density <=1 and arbitrary symmetric A with at least three eigenvalues of modulus >=1.",
+    "Live corrections prohibit arbitrary-joint rank-three coarea, conditional-cap-as-independence, law-uniform pointwise quadratic-phase decay, fixed-good-minor extraction from aggregate determinant mass, and perturbative deletion under unrestricted supports.",
+    "Immediate source state is account03/B19 r19: exact rank-three O3, exactly one internally rank-two resource bank and two rank-one companion banks, with unpaid conditions kappa(B)<1/64, theta_1,theta_2<1/4096, mu>=1/512.",
+    "Exact-rank-three spectral core is A=RMR^T with R^TR=I_3 and s_min(M)>=1."
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-O3-RANK2-INTERNAL-ROBUSTNESS-v1",
+      "statement": "If the internal frame S_G=I-lambda_1v_1v_1^T-lambda_2v_2v_2^T has rank exactly two in the r19 unpaid state, then tau=2-lambda_1-lambda_2>1/3. The two nonzero eigenvalues of S_G are exactly 1 and tau."
+    },
+    {
+      "id": "QFORM-PLANE-COMPRESSION-3EIG-v1",
+      "statement": "For every two-plane P in R^3 and symmetric M with s_min(M)>=1, the orthogonal compression P M P has operator norm at least one. This yields ||B||_op >=(1-tau)(1-sqrt(tau)) for the two compressed companion banks."
+    },
+    {
+      "id": "QFORM-O3-FORCED-2PLUS1-VOLUME-v1",
+      "statement": "In the same survivor, one rank-one companion plus the rank-two internal bank has grouped spectral map L with det(L)^2>1/6. Equivalently the physical principal-triple packet with one coordinate from that companion and two from the internal bank has total absolute determinant mass >|det M|/6>=1/6."
+    }
+  ],
+  "partner_application": {
+    "partner": "account04/B19",
+    "result": "QFORM-NULL-COLOOP-ADAPTIVE-HY-STABILITY-v1",
+    "source_commit": "5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a",
+    "application": "On its proved residual-diffuse exact-null-coloop scope, e^-8<=D<=1 implies ||p_Q||_infinity<34 sqrt(log(e/D))<=102."
+  },
+  "compatible_other_account_results_consumed": [
+    {
+      "source": "account01/B19",
+      "result": "QFORM-INDEPENDENT-LINEAR-SQUARE-SMOOTHING-v1",
+      "use": "Assembly update only: exact null-coloop essential boundedness no longer needs a D-gap; continuity remains separate."
+    },
+    {
+      "source": "account02/B19",
+      "result": "r22 N3 dense-twist routing",
+      "use": "Assembly boundary: high fifth cross rank and diffuse high third cross rank are paid; the remaining global N3 low-cross-rank/co-heavy hybrid stays separate from the O3 branch proved here."
+    }
+  ],
+  "canonical_math_commit": "0a3018cb14b94787c8f3f8d95a0e292ed230f8e0",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260923T002541Z-account03-B19-QFORM-r20/",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B19/20260923T002541Z-account03-B19-QFORM-r20.md",
+  "remaining_first_implication": "QFORM-O3-ROBUST-2PLUS1-GROUPED-PAYMENT-v1: pay the forced one-scalar plus rank-two genuine product-projection block with internal frame eigenvalues 1 and >1/3 and grouped volume det(L)^2>1/6, or route it to an already-paid heavy-coordinate/diffuse-ridge certificate. An arbitrary joint density cap for the grouped pair is not sufficient; original-product projection provenance must be retained.",
+  "separate_remaining_branches": [
+    "O3 states with at least two internally rank-two resource banks",
+    "global N3 low-cross-rank/co-heavy hybrid",
+    "arbitrary additional-spectrum descent"
+  ],
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY; partner null-coloop branch continuous at its stated D>0 scope; new r20 results are structural and do not themselves assert density continuity",
+  "canonical_hour_login": "scheduled_tasks/status/account03/logins/2026-09-23T00Z/B19.json",
+  "canonical_hour_login_status": "created_create_only",
+  "scheduler_mutations": 0,
+  "quiet_delivery_changed": false,
+  "email_or_push_enabled": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN"
+}

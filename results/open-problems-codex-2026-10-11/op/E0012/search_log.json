@@ -1,0 +1,44 @@
+[
+  [
+    "source",
+    "OK",
+    502730,
+    "https://arxiv.org/pdf/0906.2293"
+  ],
+  [
+    "arxiv",
+    "OK",
+    7605,
+    "https://export.arxiv.org/api/query?search_query=all:colicin&max_results=30"
+  ],
+  [
+    "openalex",
+    "ERROR",
+    "HTTP Error 429: Too Many Requests",
+    "https://api.openalex.org/works?search=colicin%20interacting%20particle&per-page=30"
+  ],
+  [
+    "crossref",
+    "OK",
+    269560,
+    "https://api.crossref.org/works?query=colicin%20spatial%20model&rows=30"
+  ],
+  [
+    "semantic",
+    "ERROR",
+    "HTTP Error 429: ",
+    "https://api.semanticscholar.org/graph/v1/paper/search?query=colicin%20spatial%20model&limit=30&fields=title,authors,year,externalIds,abstract"
+  ],
+  [
+    "github",
+    "OK",
+    16377,
+    "https://api.github.com/search/repositories?q=colicin+model&per_page=30"
+  ],
+  [
+    "openalex_source",
+    "ERROR",
+    "HTTP Error 429: Too Many Requests",
+    "https://api.openalex.org/works/https://doi.org/10.1214/09-PS153"
+  ]
+]

@@ -1,0 +1,14 @@
+{
+  "helper_version": "A006-stage2-review-majority-v1",
+  "actual_Boolean_family": "A008 sunflower f_m for review; odd majority Maj_n for PI-J",
+  "parameter_domain": {"dictionary_m": [1,2,3,4,5,6], "full_majority_partition_n": [1,3], "constructive_majority_n": [5,7], "symmetric_spectrum_n": [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31]},
+  "case_count": {"dictionary_records": 5454, "full_partition_outputs": 8, "constructive_nonempty_outputs": 158, "symmetric_level_spectra": 272},
+  "symmetry": "Dictionary closed formulas aggregate by private cardinality only after independent trace enumeration. Exact majority spectra aggregate exchangeable coefficients by level using the direct binomial character-sum identity. Forest costs do not assume coordinate symmetry: every nonempty output is processed for n=1,3,5,7 with one common physical order.",
+  "arithmetic": "fractions.Fraction and integers; exact residual partition sums represented as finite sums c*z^(6/5); fifth-root enclosures by 48 dyadic bisections, logarithm enclosures by 18-term atanh series with explicit remainder and sign-correct interval division; no floating sign decisions",
+  "memory_estimate_bytes": 70000000,
+  "maximum_runtime_seconds": 60,
+  "heavy_job": false,
+  "memok_requirement": "No planned job exceeds 300 MB; if that changes, run the user-prescribed memok.py and require exit 0 before starting.",
+  "automatic_dimension_escalation": false,
+  "command": "python -X utf8 runs/20261011T231903Z-account05-A006-posterior-forest-optimization/code/check.py"
+}

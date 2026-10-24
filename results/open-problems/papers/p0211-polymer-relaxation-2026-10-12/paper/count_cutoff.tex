@@ -1,0 +1,448 @@
+\section{Total-variation and separation cutoff}\label{sec:count-cutoff}
+
+For a finite chain with semigroup $P_t$ and stationary law $\pi$, write
+\[
+ d_x(t)=\|P_t(x,\cdot)-\pi\|_{\mathrm{TV}},\qquad
+ d(t)=\max_x d_x(t),\qquad
+ t_{\mathrm{mix}}(\varepsilon)=\inf\{t:d(t)\le\varepsilon\}.
+\]
+The superscripts ``count'' and ``polymer'' specify the chain. For a
+specified initial state the maximum is omitted. All logarithms are
+natural. The time-window statements below imply cutoff because the
+window is smaller than the stated mixing time by a factor tending to
+zero.
+
+\subsection{The two polymer endpoints}
+Let $L=L_M$ be the polymer generator, with stationary law $\pi=\pi_M$,
+and write $K(x)$ for the number of polymers. The count strongly lumps
+$L$ to the birth--death generator $Q$ on $\{1,\ldots,n\}$. Let $\bar\pi$ denote the pushforward of $\pi$ by $K$.
+For every function $g$ on $\{1,\ldots,n\}$,
+\[
+ L(g\circ K)=(Qg)\circ K,
+ \qquad P_t(g\circ K)=(\bar P_tg)\circ K.
+\]
+Fix $i$ such that the fiber $K^{-1}(i)$ consists of one state $x_i$.
+The initial density with respect to stationarity is then
+\[
+ h_0(x)=\frac{\mathbf1_{\{x_i\}}(x)}{\pi(x_i)}
+       =\frac{\mathbf1_{\{i\}}(K(x))}{\bar\pi(i)}.
+\]
+By reversibility, the density at time $t$ is $P_th_0$; invariance of the
+count-function subspace gives
+\[
+ \frac{P_t(x_i,x)}{\pi(x)}
+ =\frac{\bar P_t(i,K(x))}{\bar\pi(K(x))}.
+\]
+Consequently, at every $t\geq0$,
+\[
+ \boxed{\ \|P_t(x_i,\cdot)-\pi\|_{\rm TV}
+       =\|\bar P_t(i,\cdot)-\bar\pi\|_{\rm TV}.\ }
+\]
+Indeed, sum the absolute density difference over each count fiber and use
+$\sum_{K(x)=k}\pi(x)=\bar\pi(k)$. Both $i=1$ (one polymer of size $n$)
+and $i=n$ (all monomers) have singleton fibers, so the identity holds at
+both endpoints of the polymer chain. It transfers endpoint cutoff, and
+provides a lower bound on worst-case polymer mixing. It does not provide
+an upper bound for arbitrary initial polymer states.
+
+
+\subsection{Count cutoff for fixed scaled fragmentation rate}
+Throughout this section, $b>0$ is fixed and constants may depend on $b$.
+Let $Q_n$ be the continuous-time birth--death generator on $\{1,\ldots,n\}$
+with rates
+\[
+ \lambda_k=\frac{b(n-k)}n,\qquad \mu_k=\frac{k(k-1)}n.
+\]
+Its stationary law $p=p_n$ satisfies
+\[
+ p(k)\propto \binom nk\frac{b^k}{(k-1)!},\qquad
+ \frac{p(k+1)}{p(k)}=\frac{b(n-k)}{k(k+1)}.
+\]
+Define the positive drift zero
+\[
+ a=a_n=\frac{-(b-1)+\sqrt{(b-1)^2+4bn}}2
+       =\sqrt{bn}+O_b(1),
+\]
+so that
+\[
+ D_k:=\mu_k-\lambda_k
+     =\frac{(k-a)(k+a+b-1)}n.
+\]
+
+\begin{theorem}[Count cutoff and polymer endpoint cutoff]\label{thm:count-cutoff}
+For every fixed $b>0$, the count chains have a worst-case total-variation
+cutoff at
+\[
+ t_n=\frac{\sqrt n\log n}{8\sqrt b}
+\]
+with an $O_b(\sqrt n)$ window. Precisely, for each $\varepsilon\in(0,1)$,
+\[
+ t^{\mathrm{count}}_{\mathrm{mix},n}(\varepsilon)
+ =t_n+O_{b,\varepsilon}(\sqrt n).
+\]
+The same statement holds separately for the count chain started from $1$
+and from $n$. The polymer chain at $\beta=b/n$ strongly lumps to $Q_n$. Its
+total-variation distance from the single $n$-polymer and all-monomer states
+equals the corresponding count distance at every time. These two polymer
+initial states therefore have the same cutoff and window. In particular,
+the worst-case polymer mixing time is at least
+$t_n-O_{b,\varepsilon}(\sqrt n)$. An arbitrary-start upper bound is proved in
+Theorem~\ref{thm:full-polymer-tv-upper-new}.
+\end{theorem}
+
+\subsection{Elementary stationary estimates}
+Write $F_k=p([1,k])$ and $G_k=p([k,n])$. We shall use the following bounds:
+\begin{align}
+ \mathbb E_p|K-a|&\leq C_b\sqrt a,\label{eq:stationary-first-moment}\\
+ c_{b,L}a^{-1/2}\leq p(k)&\leq C_{b,L}a^{-1/2}
+       &&(|k-a|\leq L\sqrt a),\label{eq:stationary-local}\\
+ F_k\wedge G_k&\geq c_{b,L}
+       &&(|k-a|\leq L\sqrt a).\label{eq:stationary-central-masses}
+\end{align}
+Here $L$ is any fixed finite constant and $n$ is sufficiently large.
+In particular every stationary median $m$ satisfies
+$|m-a|\leq C_b\sqrt a$.
+
+For completeness, these estimates follow directly from the consecutive
+weight ratio. For unnormalized stationary weights $w_k$, set
+\[
+ R(x)=\frac{b(n-x)}{x(x+1)}.
+\]
+It is decreasing, and its unique positive solution to $R(x)=1$ is
+$a+O_b(1)$. A maximizing index $r$ for $w_k$ therefore satisfies
+$r=a+O_b(1)$. On $[a/2,2a]$, for all sufficiently large $n$,
+\[
+ -\frac{C_b}{a}\leq (\log R)'(x)
+ =-\frac1{n-x}-\frac1x-\frac1{x+1}
+ \leq-\frac{c_b}{a}.
+\]
+Since $R(r-1)\geq1\geq R(r)$, summing these derivative bounds over
+successive ratios gives
+\[
+ c_b\exp\!\left(-C_b\frac{(k-a)^2}{a}\right)
+ \leq\frac{w_k}{w_r}
+ \leq C_b\exp\!\left(-c_b\frac{(k-a)^2}{a}\right),
+ \qquad a/2\leq k\leq2a.
+\]
+Rounding endpoints changes only the constants. Below $a/2$, the successive
+ratios in the direction away from the mode are bounded by a fixed number
+$q_b<1$; the same holds above $2a$. These two tails are thus geometric,
+starting at weights at most $C_be^{-c_ba}w_r$.
+Consequently
+\[
+ \sum_k w_k\asymp_b\sqrt a\,w_r,\qquad
+ \sum_k|k-a|w_k\leq C_b a\,w_r.
+\]
+This proves \eqref{eq:stationary-first-moment} and
+\eqref{eq:stationary-local}. To obtain
+\eqref{eq:stationary-central-masses}, sum the local lower bound over an
+interval of length $\lfloor\sqrt a\rfloor$ immediately to the left, or
+right, of $k$, using \eqref{eq:stationary-local} with $L+2$.
+Finally, Markov's inequality applied to
+\eqref{eq:stationary-first-moment} puts every median within
+$C_b\sqrt a$ of $a$ (enlarging $C_b$ as needed).
+
+
+\subsection{Endpoint hitting-time means}
+Let $T_j$ be the first hitting time of $j$ and define the one-edge passage
+means
+\[
+ e_k=\mathbb E_kT_{k+1}=\frac{F_k}{p(k)\lambda_k},\qquad
+ f_k=\mathbb E_kT_{k-1}=\frac{G_k}{p(k)\mu_k}.
+\]
+These standard identities also follow by summing the Poisson equation
+$Qh=-1$ against $p$ up to the absorbing edge. The recurrences are
+\[
+ \lambda_ke_k-\mu_ke_{k-1}=1,\qquad
+ \mu_kf_k-\lambda_kf_{k+1}=1,
+\]
+with $e_1=1/\lambda_1$ and $f_n=1/\mu_n$.
+Since $\lambda_k$ decreases and $\mu_k$ increases, induction in the first
+recurrence shows that $e_k$ increases with $k$; reverse induction shows
+that $f_k$ decreases with $k$.
+
+Fix a stationary median $m$, and choose a fixed $L$ so large that
+$|m-a|\leq(L-2)\sqrt a$. Put
+$u=\lfloor a-L\sqrt a\rfloor$ and
+$v=\lceil a+L\sqrt a\rceil$.
+The stationary estimates imply, uniformly on the central interval
+$[u,v]$,
+\[
+ e_k+f_k\leq C_{b,L}\sqrt a
+\]
+whenever the respective passage is defined: indeed
+$p(k)\geq c_{b,L}/\sqrt a$ and
+$\lambda_k\wedge\mu_k\geq c_b>0$ there. Hence all passages between
+$u$, $m$, and $v$ together contribute $O_{b,L}(a)$ to their mean times.
+
+For $k\leq u$ write $\delta_k=\lambda_k-\mu_k=-D_k>0$ and
+$h_k=1/\delta_k$. The recurrence gives $e_k\leq h_k$ by induction, since
+$h_k$ increases. If $\Delta_k=h_k-e_k$ and
+$q_k=\mu_k/\lambda_k$, then
+\[
+ \Delta_1=0,\qquad
+ \Delta_k=q_k\Delta_{k-1}+q_k(h_k-h_{k-1}).
+\]
+The sequence $q_k$ increases, and
+\[
+ h_k-h_{k-1}
+ =\frac{2k+b-2}{n\delta_k\delta_{k-1}}
+\]
+also increases. Iterating and bounding the resulting geometric series
+therefore gives
+\[
+ 0\leq h_k-e_k
+ \leq\frac{q_k}{1-q_k}(h_k-h_{k-1})
+ \leq\frac{\mu_k(\delta_{k-1}-\delta_k)}{\delta_k^3}
+ \leq\frac{C_ba^2}{(a-k)^3}.
+\]
+The last inequality uses $n\asymp_ba^2$, $\mu_k\leq C_b$,
+$\delta_{k-1}-\delta_k\leq C_b/a$, and
+$\delta_k\geq c_b(a-k)/a$. Summing for $k\leq u$ yields
+\[
+ \sum_{k=1}^{u}e_k
+ =\sum_{k=1}^{u}\frac1{\delta_k}+O_{b,L}(a),
+\]
+because $\sum_{d\geq L\sqrt a-1}d^{-3}=O_L(a^{-1})$.
+
+For $k\geq v$, put $h_k=1/D_k$. This time $h_k$ decreases, and
+$h_k-h_{k+1}$ decreases as well: the function
+$x\mapsto n/[x^2+(b-1)x-bn]$ is decreasing and convex for $x>a$
+(and $n$ large). The ratio $p_k^*=\lambda_k/\mu_k$ decreases. Reverse
+iteration of the recurrence, starting at $f_n=h_n$, gives
+\[
+ 0\leq h_k-f_k
+ \leq\frac{p_k^*}{1-p_k^*}(h_k-h_{k+1})
+ \leq\frac{\lambda_k(D_{k+1}-D_k)}{D_k^3}
+ \leq\frac{C_ba^2}{(k-a)^3}.
+\]
+At $k=n$ the difference is zero. For the final estimate, use
+$\lambda_k\leq b$, $D_{k+1}-D_k=(2k+b)/n$, and
+$D_k\geq c_b(k-a)(k+a)/n$; hence the displayed ratio is at most
+$C_bn^2/[(k-a)^3(k+a)^2]\leq C_ba^2/(k-a)^3$.
+It follows that
+\[
+ \sum_{k=v}^{n}f_k
+ =\sum_{k=v}^{n}\frac1{D_k}+O_{b,L}(a).
+\]
+
+The reciprocal drift sums have elementary partial fractions:
+\begin{align*}
+ \sum_{k=1}^{u}\frac1{\delta_k}
+ &=\frac n{2a+b-1}
+   \sum_{k=1}^{u}\left(\frac1{a-k}+\frac1{a+k+b-1}\right),\\
+ \sum_{k=v}^{n}\frac1{D_k}
+ &=\frac n{2a+b-1}
+   \sum_{k=v}^{n}\left(\frac1{k-a}-\frac1{k+a+b-1}\right).
+\end{align*}
+Integral comparison for the decreasing functions $1/x$ shows that each
+bracketed sum is
+$\tfrac12\log a+O_{b,L}(1)$: the first singular sum runs from a distance
+of order $a$ down to $L\sqrt a$, and in the second sum the upper endpoint
+contributes only
+$\log[(n-a)/(n+a+b-1)]=O_b(a/n)$ after cancellation.
+Thus, by the strong Markov property and addition of passage means,
+\[
+ \boxed{\begin{aligned}
+ \mathbb E_iT_m
+ &=\frac n{4a}\log a+O_b(a)\\
+ &=\frac{\sqrt n\log n}{8\sqrt b}+O_b(\sqrt n),
+ \qquad i\in\{1,n\}.
+ \end{aligned}}
+\]
+More explicitly, both endpoint means separately equal the last expression.
+The same proof works for any target $j$ with $|j-a|\leq L_0\sqrt a$,
+with constants allowed to depend on the fixed $L_0$.
+
+
+\subsection{Endpoint hitting-time variances}
+Successive one-edge passage times are independent by the strong Markov
+property. We prove
+\[
+ \operatorname{Var}_1T_m+\operatorname{Var}_nT_m=O_b(a^2)=O_b(n).
+\]
+For an upward passage $T=T_{k+1}$ started at $k$, let
+$H(j)=\mathbb E_jT_{k+1}=\sum_{\ell=j}^{k}e_\ell$ for $j\leq k$.
+The equations $QH=-1$ and
+$Q\mathbb E_{\cdot}T_{k+1}^2=-2H$ on $\{1,\ldots,k\}$,
+with zero boundary value at $k+1$, give upon summing against $p$
+\begin{align*}
+ \mathbb E_kT_{k+1}^2
+ &=\frac2{p(k)\lambda_k}\sum_{j=1}^{k}p(j)H(j)\\
+ &=\frac2{p(k)\lambda_k}\sum_{\ell=1}^{k}e_\ell F_\ell
+ \leq2e_k^2\sum_{\ell=1}^{k}\frac{F_\ell}{F_k}.
+\end{align*}
+The inequality uses monotonicity of $e_\ell$ and
+$e_k=F_k/[p(k)\lambda_k]$. In particular,
+\begin{equation}\label{eq:upward-variance-bound}
+ \operatorname{Var}_kT_{k+1}
+ \leq2e_k^2\sum_{\ell=1}^{k}\frac{F_\ell}{F_k}.
+\end{equation}
+The reflected argument, using monotonicity of $f_k$, gives
+\begin{equation}\label{eq:downward-variance-bound}
+ \operatorname{Var}_kT_{k-1}
+ \leq2f_k^2\sum_{\ell=k}^{n}\frac{G_\ell}{G_k}.
+\end{equation}
+
+For $k\leq u=\lfloor a-L\sqrt a\rfloor$, set
+\[
+ r_k=\frac{p(k-1)}{p(k)}
+     =\frac{\mu_k}{\lambda_{k-1}}
+     \leq\frac{\mu_k}{\lambda_k}<1,
+\]
+with $r_1=0$. These ratios increase with $k$. Shifting every index in
+the sum defining $F_\ell$ by $k-\ell$ gives
+$F_\ell\leq r_k^{k-\ell}F_k$. Consequently,
+\[
+ \sum_{\ell=1}^{k}\frac{F_\ell}{F_k}
+ \leq\frac1{1-r_k}\leq\frac{\lambda_k}{\delta_k}.
+\]
+Together with $e_k\leq1/\delta_k$, this implies
+\[
+ \operatorname{Var}_kT_{k+1}
+ \leq\frac{2\lambda_k}{\delta_k^3}
+ \leq\frac{C_ba^3}{(a-k)^3}.
+\]
+Summing over $k\leq u$ gives $O_b(a^2)$.
+
+For $k\geq v=\lceil a+L\sqrt a\rceil$, use instead the decreasing
+ratios
+\[
+ s_k=\frac{p(k+1)}{p(k)}
+     =\frac{\lambda_k}{\mu_{k+1}}
+     \leq\frac{\lambda_k}{\mu_k}<1,
+\]
+with $s_n=0$. The same index-shifting argument gives
+\[
+ \sum_{\ell=k}^{n}\frac{G_\ell}{G_k}
+ \leq\frac1{1-s_k}\leq\frac{\mu_k}{D_k}.
+\]
+Since $f_k\leq1/D_k$,
+\[
+ \operatorname{Var}_kT_{k-1}
+ \leq\frac{2\mu_k}{D_k^3}.
+\]
+For $v\leq k\leq2a$, this is at most
+$C_ba^3/(k-a)^3$, whose sum is $O_b(a^2)$.
+For $k>2a$, use $D_k\geq c_bk^2/n$ and $\mu_k\leq k^2/n$
+to obtain the bound $C_bn^2/k^4$; its sum is
+$O_b(n^2/a^3)=O_b(a)$.
+
+It remains to treat the $O_b(\sqrt a)$ central passages. Uniformly for
+$k\in[u,v]$, the stationary estimates and the mean formulas give
+$e_k+f_k\leq C_b\sqrt a$ and $F_k\wedge G_k\geq c_b>0$.
+Furthermore,
+\begin{align*}
+ \sum_{\ell=1}^{k}F_\ell
+ &=\mathbb E_p[(k-K+1)_+]\leq|k-a|+1+\mathbb E_p|K-a|
+   \leq C_b\sqrt a,\\
+ \sum_{\ell=k}^{n}G_\ell
+ &=\mathbb E_p[(K-k+1)_+]\leq C_b\sqrt a.
+\end{align*}
+Equations \eqref{eq:upward-variance-bound} and
+\eqref{eq:downward-variance-bound} therefore bound each central passage
+variance by $C_ba^{3/2}$. Their total is $O_b(a^2)$.
+Adding independent passage variances proves
+\[
+ \boxed{\quad
+ \operatorname{Var}_1T_m\vee\operatorname{Var}_nT_m
+ \leq C_ba^2\leq C_bn.
+ \quad}
+\]
+As with the means, this bound remains valid for every target within a
+fixed multiple of $\sqrt a$ of $a$, with the constant depending on that
+multiple.
+
+
+\subsection{Application of the birth--death cutoff theorem}
+We use Chen--Saloff-Coste \cite[Theorem~1.4(1)]{CSC2015}.
+In the continuous-time setting, if $m_n$ has
+stationary mass bounded below on both sides, put
+\[
+ \theta_n=\max\{\mathbb E_1T_{m_n},\mathbb E_nT_{m_n}\},\qquad
+ \alpha_n^2=\max\{\operatorname{Var}_1T_{m_n},
+                         \operatorname{Var}_nT_{m_n}\}.
+\]
+Their theorem states that $\theta_n/\alpha_n\to\infty$ implies a
+worst-case total-variation $(\theta_n,\alpha_n)$ cutoff. Its published
+normalization starts from a stochastic matrix $B_n$ and uses the generator
+$B_n-I$. To apply it here, take
+\[
+ c_n\geq\max_k(\lambda_k+\mu_k),\qquad B_n=I+Q_n/c_n.
+\]
+The continuous-time chain with generator $B_n-I$ is our chain slowed by
+$c_n$. All passage means and standard deviations are multiplied by $c_n$;
+both the criterion and its time-window conclusion therefore transfer
+exactly to $Q_n$.
+
+Take $m_n$ to be any stationary median. The previous two subsections give
+\[
+ \theta_n=t_n+O_b(a),\qquad \alpha_n=O_b(a),\qquad
+ \frac{\theta_n}{\alpha_n}\longrightarrow\infty.
+\]
+The theorem yields
+\[
+ t^{\mathrm{count}}_{\mathrm{mix},n}(\varepsilon)
+ =t_n+O_{b,\varepsilon}(a)
+ =t_n+O_{b,\varepsilon}(\sqrt n).
+\]
+This proves the worst-case count assertion of
+Theorem~\ref{thm:count-cutoff}.
+
+To prove the assertion for each endpoint separately, it remains only to
+give endpoint lower bounds; their upper bounds follow from the worst-case
+bound. For a fixed $L>0$, let
+$j_-=\lfloor a-L\sqrt a\rfloor$ and
+$j_+=\lceil a+L\sqrt a\rceil$.
+The stationary moment estimate gives
+\[
+ p([1,j_--1])\vee p([j_++1,n])\leq C_b/L.
+\]
+The preceding passage estimates, now with these central targets, give
+\[
+ \left|\mathbb E_1T_{j_-}-t_n\right|
+ +\left|\mathbb E_nT_{j_+}-t_n\right|\leq C_{b,L}a,
+ \qquad
+ \operatorname{Var}_1T_{j_-}\vee\operatorname{Var}_nT_{j_+}
+ \leq C_{b,L}a^2.
+\]
+By nearest-neighbor paths,
+$\{T_{j_-}>t\}\subseteq\{K_t<j_-\}$ when $K_0=1$, and
+$\{T_{j_+}>t\}\subseteq\{K_t>j_+\}$ when $K_0=n$.
+Chebyshev's inequality therefore gives, for $A>C_{b,L}$ and $n$ large,
+\[
+ d_{n,1}(t_n-Aa)\wedge d_{n,n}(t_n-Aa)
+ \geq1-\frac{C_b}{L}-\frac{C_{b,L}}{(A-C_{b,L})^2}.
+\]
+First choose $L$ and then $A$ large. Together with the count upper bound,
+this proves both endpoint cutoffs with an $O_b(\sqrt n)$ window. The exact
+endpoint identity in the first subsection completes the polymer endpoint
+claims.
+
+\subsection{A further consequence: separation cutoff}
+Define separation from an initial state $x$ by
+\[
+ \operatorname{sep}_x(t)=1-\min_y\frac{P_t(x,y)}{\pi(y)}.
+\]
+The same established passage estimates give
+\[
+ s_n:=\mathbb E_1T_m+\mathbb E_nT_m
+      =\frac{\sqrt n\log n}{4\sqrt b}+O_b(\sqrt n),\qquad
+ v_n:=\sqrt{\operatorname{Var}_1T_m+\operatorname{Var}_nT_m}
+      =O_b(\sqrt n).
+\]
+Chen--Saloff-Coste \cite[Theorem~1.3(1)]{CSC2015} implies endpoint separation cutoff at
+$s_n$ with window $v_n$. In a continuous-time birth--death chain maximum
+separation is attained from either boundary state; see their
+Remark~1.2. Thus
+\[
+ t^{\mathrm{count}}_{\mathrm{sep},n}(\varepsilon)
+ =\frac{\sqrt n\log n}{4\sqrt b}
+       +O_{b,\varepsilon}(\sqrt n).
+\]
+The singleton-fiber identity gives a density that is constant on every
+count fiber. Taking the minimum of that density, rather than summing its
+absolute difference from one, proves the exact endpoint separation
+identity for the polymer chain as well. Both polymer endpoint separation
+mixing times therefore have this same asymptotic formula. This again does
+not yield an arbitrary-start polymer upper bound.

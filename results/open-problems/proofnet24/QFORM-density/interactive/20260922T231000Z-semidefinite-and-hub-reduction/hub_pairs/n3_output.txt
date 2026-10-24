@@ -1,0 +1,12 @@
+columns: P(|Q-s|<=eps)/(2eps) at eps = 1e-2, 1e-3, 1e-4, 1e-5, 1e-6
+R = 1.0 L^T B^-1 L                               worst s=+0.000:  2.025   2.872   3.767   4.522   5.297   [2s]
+R = 0.99 L^T B^-1 L                              worst s=+0.000:  2.040   2.885   3.327   3.365   3.346   [7s]
+R = 0.9 L^T B^-1 L                               worst s=+0.000:  2.179   2.639   2.650   2.669   2.660   [12s]
+R = 0.5 L^T B^-1 L                               worst s=+0.000:  2.551   2.634   2.638   2.623   2.619   [17s]
+R = 0.0 L^T B^-1 L                               worst s=+0.000:  2.356   2.405   2.404   2.410   2.407   [23s]
+R = L^T B^-1 L + 0.25 V3^2 (third dir. in leaves) worst s=+0.000:  1.634   1.801   1.838   1.851   1.883   [27s]
+R = L^T B^-1 L + 1.0 V3^2 (third dir. in leaves) worst s=+0.000:  1.249   1.326   1.340   1.350   1.370   [32s]
+R = L^T B^-1 L + 4.0 V3^2 (third dir. in leaves) worst s=+0.000:  0.832   0.865   0.871   0.882   0.886   [36s]
+R = L^T B^-1 L + 4 X_k^2 (independent coordinate) worst s=+0.050:  0.738   0.741   0.735   0.732   0.732   [44s]
+R = L^T B^-1 L + 4 X_k^2 - 4 X_k'^2 (two indep.) worst s=+0.000:  0.607   0.600   0.597   0.603   0.612   [48s]
+done

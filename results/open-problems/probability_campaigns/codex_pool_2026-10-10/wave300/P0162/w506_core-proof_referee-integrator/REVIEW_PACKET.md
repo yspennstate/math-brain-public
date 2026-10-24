@@ -1,0 +1,34 @@
+# P0162 referee packet (w506, 2026-10-10)
+
+Target: universal Fourier entropy versus total influence inequality for Boolean functions under the uniform cube measure, with base-2 entropy. Exact source: O'Donnell–Wright–Zhou, author-hosted `https://people.eecs.berkeley.edu/~jswright/papers/fei.pdf`, PDF pp. 1 and 3–4. Current global openness remains UNKNOWN after the bounded literature check; no novelty or full-proof claim is made.
+
+## w504: KEEP C001–C004; C005 remains an unproved input
+
+The dated ranking's exact CSV row 553 supports tier 5 and `attempted_un` only as historical intake metadata; the source row is KEEP. After it was filed, I read `PROOF.md` section by section and independently checked all four mathematical claims:
+
+- **C001, KEEP.** For restriction Fourier coefficients `u_T,v_T`, the pair masses of `f` are `w_T(1-q_T),w_T q_T`. Parseval makes `sum w_T=1` and makes the branch of the auxiliary law `u_T²/2,v_T²/2` uniform. Two entropy chain rules give exactly `Delta_i=sum w_T[1+h_2(q_T)-h_2(p_T)]`. The influence split is an independent squared-coefficient calculation. No branch independence is assumed.
+- **C002, KEEP as a conditional reduction.** At every recursive restriction one would need an `i` with `Delta_i<=K Inf_i`, with the same K. Induction then gives `H<=K I`. The existence premise itself is not established; the 2026 González–MacManus–Pereyra paper describes this route conditionally.
+- **C003, KEEP for the displayed family only, with a proof-text FIX.** I recomputed the quadratic Walsh signs, the point-mass Fourier transform, and the two base-coordinate restriction spectra. With `a=2^{-m/2}`, `t=a²`, their entropy difference is `Delta_j=2-(m/2)t-[R(1-a)+R(1+a)]/2`, where `R(u)=u² log_2 u`. Since `R''(u)=(2 ln u+3)/ln 2>0` on `[1/2,3/2]`, the bracket is nonnegative, so `Delta_j<=2-(m/2)t<4(1/2+t)`. Direct truth-table Walsh verification using `python -X utf8 test_w504.py` passed m=2,4,6,8. The measured base-coordinate ratios were 1.622556249, 3.093729729, 3.722358844, 3.921212616. The three auxiliary control blocks have coefficients `-2t(-1)^beta`, not all `-2t`; their squared masses still equal `t`. w504's submitted `bundle_002.json` and my withdrawn duplicate draft contain the wrong sign phrase; a corrected revision is needed before ingestion.
+- **C004, KEEP for the displayed family only.** Direct flips give `I(F_m)=m/2+(m+1)t`. Splitting the Fourier spectrum by selector presence gives `H(F_m)<=m+h_2(t)<=2I(F_m)`, independently of C003. The same truth-table run checked the bound at four even dimensions.
+
+**C005 is a conjectural universal suitable-coordinate premise**, neither a theorem nor a consequence of C003. w504 states this correctly. The above KEEPs are separate from a KEEP on the parent FEI conjecture.
+
+**C006, KEEP as a conditional localization.** The C001 identity gives `0<=Delta_i<=2` for every coordinate. If some influence is at least `tau`, that coordinate has `Delta_i/Inf_i<=2/tau`; otherwise all influences are below `tau` and the assumed small-influence lemma supplies a good coordinate. Therefore a uniform K_0 in the all-small-influence class yields K=max(K_0,2/tau) globally, while the converse is immediate. At `tau=1/16`, K=max(K_0,32). The assumption that K_0 exists remains unproved, and owner F4 prior work has a stronger high-influence estimate.
+
+Cross-triad referee w509 independently returned KEEP on w504 C003 after rederiving the `b_j=0` spectrum, Jensen direction, and influence count (`~/brain_workers/w509/REVIEW_VERDICTS.jsonl:w504.C003`). w509 returned a packaging FIX on my duplicate two-entry draft because its identity overlaps pending peer cards. I withdrew that draft to an ignored `.part`. w504 then published `~/math-brain-inbox/w504/bundle_003.json`, whose `adaptive-family` proof text I checked contains the corrected phase `-2t*(-1)^1_{z in U}`. Integration and retrieval remain unobserved; the parent conjecture is still unproved.
+
+## w505: KEEP intermediate counterexample
+
+I checked the Boolean selector construction from its truth table. For `N=2^(2m)` and `A=2^m`, the bilinear bent function has coefficients `Bhat(alpha,beta)=(-1)^(alpha dot beta)/A`; the point mass has coefficient `1/N`. Thus for selector coordinate `y`, `b_T=1/N`, `a_T=sign_T/A-1/N`, and `I_y=1/N`.
+
+For `phi(t)=t log_2(1/t)`, each coefficient pair contributes exactly `r[h_2(w)+J(t)]` to `Delta_y`, where `r=a^2+b^2`, `w=b^2/r`, `t=2ab/r`, and `J(t)=1-h_2((1+t)/2)>=0`. Since `r/b^2=(sign_T A-1)^2+1 >=(A-1)^2+1`, summing `r h_2(w)>=b^2 log_2(r/b^2)` gives `Delta_y/I_y >= log_2((2^m-1)^2+1)`. It diverges. This rejects an **all-coordinate** local restriction bound only; it does not contradict FEI.
+
+Independent reproduction: `python -X utf8 test_selector.py` in this folder. The program constructs all `2^(2m+1)` truth-table values, computes Walsh coefficients without invoking the analytic formula, and checks selector influence both spectrally and by flips. For `m=1,2,3` the measured `Delta_y/I_y` is `4.867668747, 8.030013847, 10.255970235`; lower bounds are `1, 3.321928095, 5.643856190`. Total influence matches `m+(2m+1)/2^(2m)`. The full ratios `H/I` are `1.266809821, 1.800892435, 1.952643846`, which illustrates the distinction.
+
+Prior owner work already records failed per-coordinate and maximal-influence restriction routes (`fei_opus_wave1_reduction_small_influences_gates_and_ltf_2026_09_23`); I claim no novelty for this obstruction. The load-bearing unresolved input for this induction is a uniform suitable-coordinate rule or a noncircular amortized substitute. Neither is proved here.
+
+The canonical prior P0162 attempt card (`claim_06b0c09db7e28efc6febd3962e234332a00c2ba45a17792cc4d83fdbc6752fba`) already rejects treating squared Fourier spectra as arbitrary subset laws: uniform mass on singleton subsets would have entropy log_2 n at mean size one, but violates f²=1. It is an author-checked attempt record with no independent review, used here as prior context only.
+
+w505's other rows also have narrow checks: C001 follows from entropy subadditivity for a general subset law, with a one-coordinate Bernoulli(q) law showing `h_2(q)/q` diverges; this does not describe every Boolean Fourier spectrum. C002 is the same exact defect algebra checked under C001 above. C004 is the same family as w504's with `m_w504=2m_w505`, and its `H<=2I` chain-rule argument is checked. C005 follows by two Jensen steps and `J(t)<=t²`, whose positive even-power coefficients sum to one. C006 is the same conditional induction as w504 C002; its premise remains unproved. w505's finite checks corroborate these statements but are not the all-dimensions proof.
+
+NEXT: Test any proposed general suitable-coordinate or amortized step against the selector construction and owner small-influence counterexamples before induction.

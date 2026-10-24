@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B04",
+  "run_id": "20260924T031958Z-account02-B04-QFORM-auto11-r18",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "target_status": "QFORM-FULL_OPEN",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "secondary_status": "TWO_CARRIER_E3_GEOMETRIC_BALANCE_WITH_GLOBAL_DDPRIME_OPTIMIZATION_AND_E4_DOWNSHIFT_COMPARISON",
+  "new_theorem": "QFORM-TWO-CARRIER-GEOMETRIC-BALANCE-v1",
+  "new_theorem_statement": "For two distinguished physical E3 row carriers with four aggregate squared-minor face masses W_ab, the maximum determinant-entropy currency among supported laws with both carrier marginals exactly 1/2 is 2(sqrt(W00 W11)+sqrt(W10 W01)); if other row marginals are <=1/2, pinned Theorem D gives 6 sqrt(e) times the inverse sixth root of this currency.",
+  "report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0999bcddc0ce4780efe4c4b6cd3792cbe34b3eb3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260924T031958Z-account02-B04-QFORM-auto11-r18/REPORT.md"
+  },
+  "checks": {
+    "source_commit": "319c73a13003da9f4cd908ac6cf0b5e0348b6eca",
+    "output_commit": "57fcbd2ca459eeaaf6bd6cdfd9e41f747d7fc092",
+    "marker": "QFORM_B04_R18_TWO_CARRIER_BALANCE_CHECK_PASS"
+  },
+  "handoff": {
+    "commit": "821fbe5e16a3b0532d53cb2315c4a093a24b93ca",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B04/20260924T031958Z-account02-B04-QFORM-auto11-r18.md"
+  },
+  "sources": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "paths": [
+        "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+        "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+        "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+      ],
+      "use": "Theorem D arbitrary physical minor weights; D' marginal window; counterexample scope audit"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "24476f8abf801b3e862fd227748790459d731340",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260924T024757Z-account03-B04-QFORM-auto11-r47/REPORT.md",
+      "use": "QFORM-HIGHER-COMPOUND-DOWNSHIFT-v1 positively applied at E4(M_64)=(64^2+1)^2"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "9c1167db05c7b0f520f060796fde921ed769a4e7",
+      "path": "proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md",
+      "use": "same-matrix direct ridge comparison"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "actual_application": {
+    "matrix_family": "A_L=[[0,M_L],[M_L^T,0]], M_L=R_L V^T, R_L stacks L e1,L e2 above H8[:,0:4]/sqrt(8)",
+    "stress_parameter": 64,
+    "target_spectrum_nonzero": ["+sqrt(4097) twice", "+1 twice", "-1 twice", "-sqrt(4097) twice"],
+    "face_masses": {"W00":4,"W10":12288,"W01":12288,"W11":33554432},
+    "global_D_Dprime_currency": 47746.47500592079,
+    "pinned_D_bound": 1.642384882794337,
+    "E4": 16785409,
+    "partner_r47_bound": 0.9573283901129036,
+    "direct_marginal_free_E3_bound": 0.47061667074507735,
+    "displayed_ridge_bound": 696.1772560480864
+  },
+  "first_unproved_step": "QFORM-MULTICARRIER-FACE-COLLAPSE-OR-OVERLAP-RECEIVER-v1",
+  "next_step": "From the remaining high-leverage/small-s3 zero-anchor C1 residual, force a literal crossing with one/two-carrier E3 face-product currency or target-scale E4; otherwise turn simultaneous complementary-face and E4 collapse into an already-paid rank-two star, fixed-pair/hyperbolic, square-bank, grouped-hub, or overlap C2/C3 endpoint while preserving original-coordinate product provenance."
+}

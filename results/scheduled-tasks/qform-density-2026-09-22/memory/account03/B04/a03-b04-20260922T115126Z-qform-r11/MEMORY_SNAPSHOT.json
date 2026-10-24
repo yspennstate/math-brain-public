@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "a03-b04-20260922T115126Z-qform-r11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_at_start": "d85ce8bcca55a068b70ab443f8edb4063ed479c8",
+  "correction_events_consumed": [],
+  "required_route_corrections_respected": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION"
+  ],
+  "premises": [
+    "Each original coordinate law has a density bounded by one.",
+    "The Fourier transform convention is hat g(t)=int exp(i t y)g(y)dy.",
+    "For the scoped theorem, three square directions are independent; this is not assumed in the full rotated target."
+  ],
+  "partner_result_applied": null,
+  "partner_status": "account04/B04 had no completed QFORM handoff at two coherent snapshots",
+  "compatible_peer_result_applied": {
+    "worker": "account04/B14",
+    "run_id": "20260922T114319Z-b14-qform-extreme-reduction-r1",
+    "brain_blob": "1cc6b030bb92579d97e4826914a248f5037d054b",
+    "math_report_commit": "8fcc9ba5db68dfd4cd5daeb181a39666ceeda322",
+    "math_report_blob": "30ebe93170ba26fb57dc128ee0116762de1d9f26",
+    "scope": "exact extreme-product / finite-fragment reduction; used only as compatible product-density reduction logic, not as a premise for the Fourier inequalities"
+  },
+  "outputs": {
+    "report_commit": "f824ded997ee16c741468bb49860e1ccaf18d8bd",
+    "report_blob": "2438594f82b064359483972f59f4d061a6814ce0",
+    "claims_commit": "c0c708e2679d3713bc94104394c63a1376015c66",
+    "claims_blob": "240410211efcd73635c5f8267a606d6a80c029ab",
+    "handoff_commit": "9c946331d5e97e35584005a98d0e496fae7014d0"
+  },
+  "proved_claims": [
+    "Single-square L3 Fourier budget with explicit constant 2(2pi)^(1/3)M^(2/3)|lambda|^(-1/3).",
+    "Three-independent-square density bound 8(M1M2M3)^(2/3)/|lambda1lambda2lambda3|^(1/3).",
+    "Explicit rotated indefinite six-variable example with density sup norm at most 16."
+  ],
+  "unresolved_implication": "Find an overlap replacement for the exact product Holder factorization for three orthonormal spectral directions that preserves the original coordinate-product structure.",
+  "next_step": "Test determinant/fractional-cover Brascamp-Lieb candidates against the disjoint endpoint and the two-opposite-sign logarithmic control.",
+  "full_target_status": "OPEN",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

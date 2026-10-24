@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260924T105716Z-account01-B18-qform-auto11-r53",
+  "correction": "LATER_CORRECTION_WINS",
+  "programme_revision": "2026-09-22.5",
+  "control_revision": "2026-09-22.15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_FULL_TARGET_NOT_CLAIMED_FOR_THIS_CHAMBER",
+  "prior_exact_receiver_found": {
+    "result": "QFORM-DEPENDENT-PAIR-HYPERBOLIC-SQUARE-v1",
+    "worker": "account03/B10",
+    "scientific_commit": "c1af196adade03e07456c8f6e783f952b0fa0e8d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B10/account03-B10-20260922T121625Z-qform-r11/REPORT.md",
+    "statement": "If X cap1 is independent of a pair (Y,Z) with joint cap H, then 2aXY+F(Y)+b(Z+theta(Y))^2 has density cap 3*2^(2/3)H^(2/3)|a|^(-2/3)|b|^(-1/3).",
+    "scaled_source": "account02/B10 already records the density-cap-K version.",
+    "novelty_claim": false
+  },
+  "actual_run_transfer": {
+    "id": "QFORM-PRIOR-HYPERBOLIC-SQUARE-INDEPENDENT-PARAMETER-LIFT-v1",
+    "status": "SOURCE_VALID_APPLICATION_OF_EXACT_PRIOR_RECEIVER",
+    "statement": "Condition on an additional independent source R and apply the exact prior theorem with theta_r(C)=h(r,C)/gamma and F_r(C)=F(r,C)-h(r,C)^2/gamma; the same constant is uniform in r."
+  },
+  "target_level_implications": [
+    {
+      "id": "QFORM-ONE-SIDED-OVERLAPPING-TAIL-PLANAR-CHAMBER-v1",
+      "status": "PROVED_SUPPORTING_TARGET_LEVEL_CHAMBER",
+      "statement": "For disjoint original left source banks feeding the two cross directions and one common right product bank feeding an orthogonal projected pair, Q=2d1SC+2d2RD+cC^2+2delta CD+gamma D^2 obeys 3*2^(5/3)|d1^2 gamma|^(-1/3), independent of d2. Combining the account02/B18 collar funnel with the two-cross branch yields <9.964/s3(H)."
+    },
+    {
+      "id": "QFORM-OVERLAPPING-TAIL-EXACT-TARGET-FAMILY-v1",
+      "status": "PROVED_TARGET_VALID_FAMILY",
+      "statement": "Q_eps=2SC+2 eps RD+D^2, 0<eps<1, has exactly three eigenvalues of modulus at least one, s3=1, and ||p_Qeps||inf<=3*2^(5/3)=9.524406311809198 under the stated product-source provenance."
+    }
+  ],
+  "primary_sources": [
+    {"citation":"Rudelson--Vershynin, arXiv:1402.4492, Theorem 1.2","verified_scope":"independent real scalar inputs; normalized linear combination density cap sqrt(2)K"},
+    {"citation":"Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1","verified_scope":"genuine product density; cap-one k-dimensional orthogonal marginal <=2^(k/2); no projected independence"},
+    {"citation":"Banks--Garza Vargas--Kulkarni--Srivastava, arXiv:2005.08930, Theorem 2.1 and Corollary 2.4","verified_scope":"prior bilinear-affine quadratic-form density mechanism; not an exact statement for the moving same-bank square"}
+  ],
+  "partner_account02_B18_applied": [
+    {"run":"20260924T091122Z-account02-B18-qform-auto11-r52","result":"QFORM-RANK1-COLLAR-FORCES-TRANSVERSE-CURVATURE-v1","actual_inequality":"|gamma|>=(s3-d2)_+ in the SVD-aligned 2D-right chamber; with d1>=s3 and two-cross payment gives <9.964/s3."},
+    {"run":"account02-B18-20260924T100529Z-r11","result":"QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-PLUS-INDEPENDENT-REMAINDER-v1","actual_use":"Any further source-separated remainder may be convolved after the one-sided-overlap core without increasing its L-infinity bound."}
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "36592ba1a347685c745fc6c35770248a52fe7c2d",
+    "checks_commit": "8fcf5027adb5e19795db5c2ceae574047aa101c9",
+    "correction_commit": "80625658c710b27f230575559dd95308db0e5fea",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260924T105716Z-account01-B18-qform-auto11-r53/"
+  },
+  "handoffs": {
+    "initial_commit": "cb648f8bb5dbd92a143c6c6f470b00007a4d52eb",
+    "correction_commit": "b7c2e9e25f049008ef3fde57f37d13d9c3f3c12a",
+    "correction_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B18/20260924T105716Z-account01-B18-qform-auto11-r53-CORRECTION.md"
+  },
+  "unresolved": "The one-sided overlap is paid by an exact prior receiver after conditioning. The remaining near-rank-one tail may share original source coordinates with the core on both left and right; no independent conditioning parameter remains. Globally, s3(A)>=1 still does not force a zero-self source-preserving packet."
+}

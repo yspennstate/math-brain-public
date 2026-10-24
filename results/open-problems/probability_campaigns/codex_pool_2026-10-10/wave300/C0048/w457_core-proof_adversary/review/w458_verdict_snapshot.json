@@ -1,0 +1,62 @@
+{
+  "reviewer": "w458",
+  "source_file": "~\\brain_workers\\w458\\CLAIMS.jsonl",
+  "source_sha256": "2a9d5b8f85ef4bd94fa5dae9d24d77f3f236ef0cb836cfd213eca3d23b1a6fdf",
+  "snapshot_at": "2026-10-10T07:14:03.054935+00:00",
+  "records": [
+    {
+      "id": "w456-L1-referee",
+      "kind": "proof_verdict",
+      "verdict": "KEEP",
+      "exact_statement": "For any nonempty finite free-boundary zero-field q-state Potts graph, q integer >=2, beta>=0, the favored-color centered pressure has P''=a2 E[S2]/N, P'''=a3 E[S3]/N, and P''''=(a4 E[S4]+3a2^2 Var(S2))/N at field zero.",
+      "assumptions": "Free boundary; finite graph; uniform independent colors conditional on FK components; a2=(q-1)/q^2, a3=(q-1)(q-2)/q^3, a4=(q-1)(q^2-6q+6)/q^4.",
+      "source": "w456/ATTEMPT.md L1; w457/CUBIC_OBSTRUCTION.md; verify_exact.py",
+      "source_quote": "P_G''''(0)=(a4 E[S_4]+3 a2^2 Var(S_2))/N.",
+      "proof_or_counterexample": "Independently expanded conditional moments and subtracted 3(E X^2)^2; exact q=3 two-vertex enumeration gave cumulants 5/9,7/27,-8/27 on both spin and FK sides (before division by N).",
+      "independent_reviewer": "w458; served-model receipt unavailable",
+      "remaining_gap": "Finite-volume identity gives no uniform thermodynamic remainder or critical magnetization.",
+      "status": "independently checked proof"
+    },
+    {
+      "id": "w457-I1-referee",
+      "kind": "proof_verdict",
+      "verdict": "KEEP",
+      "exact_statement": "For finite FK with q>=1, p in (0,1), each edge conditional open probability given all other edges is either p or a=p/(p+q(1-p)); every fixed simple n-edge path has open probability in [a^n,p^n]. Positive local conditional probabilities alone do not imply infinite-cluster probability.",
+      "assumptions": "Finite graph with arbitrary fixed FK boundary partition; chain rule for path; in the example Z^3, q=3,p=1/10.",
+      "source": "w457/ATTEMPT.md I1; verify_exact.py",
+      "source_quote": "a^n <= P(all n path edges open) <= p^n.",
+      "proof_or_counterexample": "Edge-weight ratio gives p or a. Tower property preserves bounds under partial exposure. Union over at most 2d(2d-1)^(N-1) paths gives f_N<=0.6(0.5)^(N-1) in the example. Exact C4 enumeration gives Z=258, marginal=11/43, all-open=1/86, ratio to product 2.71521754.",
+      "independent_reviewer": "w458; served-model receipt unavailable",
+      "remaining_gap": "Subcritical example does not address the critical q=3,d=3 case.",
+      "status": "independently checked proof"
+    },
+    {
+      "id": "w457-I2-referee",
+      "kind": "conditional_verdict",
+      "verdict": "KEEP",
+      "exact_statement": "For wired FK on Z^d with q>=1, theta_w(p)=inf_N phi^w_{Lambda_N,p,q}(0 connected to boundary Lambda_N) is right continuous. A fixed positive lower bound on theta_w(p) for all p just above p_c therefore implies theta_w(p_c)>0.",
+      "assumptions": "Standard finite-volume wired FK domain Markov comparison; p in (0,1); finite boxes increasing to Z^d.",
+      "source": "w457/ATTEMPT.md I2",
+      "source_quote": "The same delta must survive the p-downarrow-p_c and N-to-infinity limits.",
+      "proof_or_counterexample": "Finite-box f_N decrease in N and increase continuously in p. Infimum of f_N is upper semicontinuous; monotonicity gives right continuity. Inner-boundary event sandwiches the limiting f_N against infinite-volume theta_w.",
+      "independent_reviewer": "w458; served-model receipt unavailable",
+      "remaining_gap": "No uniform positive critical-window bound has been proved.",
+      "status": "independently checked proof"
+    },
+    {
+      "id": "w457-cubic-obstruction-referee",
+      "kind": "proof_verdict",
+      "verdict": "KEEP",
+      "exact_statement": "An S3-invariant scalar functional can have a fixed nonzero cubic term and still develop a continuous ordered minimizer if a nonanalytic r^(5/2) term dominates the cubic near zero.",
+      "assumptions": "Functional F_t(z)=-t|z|^2+|z|^(5/2)-Re(z^3)+|z|^4 on C; this is an abstract functional, not a Potts lattice Gibbs potential.",
+      "source": "w457/CUBIC_OBSTRUCTION.md",
+      "source_quote": "F_t(z)=-t*r^2+r^(5/2)-Re(z^3)+r^4.",
+      "proof_or_counterexample": "With s=sqrt(r), 1-s+s^3>=1-2/(3sqrt(3))=:c>0, so t<=0 has unique zero minimizer and each t>0 minimizer has radius <=(t/c)^2, tending to zero.",
+      "independent_reviewer": "w458; served-model receipt unavailable",
+      "remaining_gap": "Does not decide C0048; it blocks an argument from cubic symmetry alone.",
+      "status": "independently checked proof"
+    }
+  ],
+  "served_model_evidence": "unavailable; no different-model attestation",
+  "promotion_scope": "concept drafts only; C0048 NOT_PROVED"
+}

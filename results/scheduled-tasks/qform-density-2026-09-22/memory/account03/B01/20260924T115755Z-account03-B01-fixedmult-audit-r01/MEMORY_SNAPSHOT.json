@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "20260924T115755Z-account03-B01-fixedmult-audit-r01",
+  "objective_id": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "fresh_control_commit_at_start": "0c248613f52eec93e6a4e3bf467b22d328cd33fe",
+  "fresh_control_commit_prepublication": "2f786ba7bef3c376815195325b6f3d01ba13b6bc",
+  "programme_revision_legacy_control": "2026-09-22.15",
+  "current_objective_supersedes_legacy_assignment": true,
+  "audited_source": {
+    "repository": "yspennstate/math-open-problems",
+    "branch": "master",
+    "initial_commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+    "manuscript_blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "sha256_reported": "9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69",
+    "audit_commit": "fba7127a71c348007f6cb8490251d12d05eaae33",
+    "audit_path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/audits/account03/B01/20260924T115755Z-account03-B01-fixedmult-audit-r01/REPORT.md"
+  },
+  "status": {
+    "fixed_multiplicity_17_baseline": "PASS_IN_THIS_INDEPENDENT_AUDIT",
+    "fatal_mathematical_gap_found": false,
+    "full_three_eigenvalue_conjecture": "OPEN",
+    "global_continuity": "NOT_PROVED"
+  },
+  "findings": [
+    {
+      "id": "PROJECTION-ZERO-B-WORDING",
+      "status": "GAP_NONFATAL",
+      "statement": "After dropping indices with b_i=0, the proof should use sum_{b_i>0}(1-b_i)<=d rather than equality. The e^{d/2} conclusion remains valid."
+    },
+    {
+      "id": "PACKAGE-MISSING-SUPPLEMENTARY",
+      "status": "GAP_RELEASE_RELEVANT_NONMATHEMATICAL",
+      "statement": "SOURCE_MANIFEST.json, proof_map.csv, verify.py, and checks.json are named by README but absent from the inspected manuscript root."
+    },
+    {
+      "id": "ORDER4-ENDPOINT-BARRIER",
+      "status": "OPEN_IMPLICATION",
+      "statement": "The same crossing-volume architecture at k=4 yields |phi(t)|<=min(1,u4/|t|), whose absolute integral grows logarithmically, so the present absolute-inversion chain does not prove multiplicity 13."
+    }
+  ],
+  "corrections_consumed": [
+    "bounded-density-alone-does-not-imply-uniform-pointwise-quadratic-phase-decay",
+    "do-not-infer-rotated-coordinate-independence",
+    "do-not-infer-conditional-density-caps-from-unconditional-projection-caps",
+    "absolute-ambiguity-holder-can-lose-logarithm"
+  ],
+  "partner_result_applied": null,
+  "partner_note": "The later owner objective superseded the older partner-dependent B01 assignment for this invocation; no account04/B01 result was needed for the audit.",
+  "next_step": "Prove or refute an order-four endpoint L-infinity/small-ball theorem compatible with arbitrary quadratic same-bank phases and rough product laws, which would lower the current architecture from 17 to 13; otherwise seek a stronger structural reduction.",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

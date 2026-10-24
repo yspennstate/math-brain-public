@@ -1,0 +1,7 @@
+Checkpoint: unequal-mean radial contraction, all quantities in bits.
+
+Let beta_b be the actual child means, r=(beta0^2+beta1^2)/2, beta=(beta0+beta1)/2, nu=beta^2/r (nu=1 for r=0 with absent zero-row convention). Let a_b=Q_b(empty), a=average a_b, m=(E s)^2, t=Qs(empty), p=m*r,z=t*a. Incoming core lift forces parent empty reference nu*a. Define A(p,z)=[p log2(p/z)+(1+p)log2((1+z)/(1+p))]/2. Let E0 be the empty-row part of core label KL Dc, and Erest=Dc-E0>=0. Let Kplus=average(1+m beta_b^2)log2((1+m beta_b^2)/(1+t a_b)) -(1+p)log2((1+p)/(1+z))>=0 by log-sum. Then EXACT Lambda=A(p,z)-A(nu*p,nu*z)-[(1-m)E0+Erest+Kplus]/2.
+
+The only positive part left is G=A(p,z)-A(nu*p,nu*z). For p,z>0, a(k)=A(kp,kz) is increasing and concave: a'(k)=[p ln(w)+(z-p)/(1+kz)]/(2 ln2), w=p(1+kz)/(z(1+kp)), and a''(k)=-(p-z)^2/[2ln2(1+kp)(1+kz)^2]. Thus G>=0 and G<=(1-nu)[p log2(p/z)+(z-p)/ln2]/2. If 0<=p<=z, G=(1-nu)/(2ln2) int_p^z (v-p)/[v(1+v)(1+nu*v)] dv <= (1/2)log2((1+z)/(1+nu*z)). This is <=(1-nu)log2(1+z)/2. Equal means nu1 recovers last stage. One balanced child nu1/2 captures the half-log18/17 ghost limit; opposed means nu0 preserves the obstruction.
+
+No arbitrary bank is supplied. Conditional owned payment requires ONE existing unused half-core reserve S/2-U >= G (or its stated upper bound), while the core entropy increment, profile curvature and BOTH activation terminals remain in the exact insertion. Next validate the identities on actual Boolean pairs and independently review A019's existing bank theorem before claiming an extension.

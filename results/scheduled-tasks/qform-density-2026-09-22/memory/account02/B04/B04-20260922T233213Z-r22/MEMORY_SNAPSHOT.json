@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision_final": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B04",
+  "run_id": "B04-20260922T233213Z-r22",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "secondary_status": "SUPPORTING_THEOREMS_PROVED",
+  "target_status": "QFORM-FULL_OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_earliest_fresh_head": "c7ffb38c22f90a575de860076371c0bc923eb29c",
+  "source_control_prepublication_head": "b7d50cf7b8042dc1bce5f301ca84486c619a7c6c",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-HYPERBOLIC-TWOSIDED-HALFRIESZ-UNIFORM-FALSE-v1"
+  ],
+  "mathematical_premises": [
+    {
+      "id": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+      "source": "yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md",
+      "scope": "an r-dimensional orthogonal projection of an original-coordinate cap-one product vector has joint density at most exp(r/2)"
+    },
+    {
+      "id": "QFORM-SQUARE-RANKR-CLEANBANK-LINF-v1",
+      "source": "yspennstate/math-open-problems@52dbe47e8a0ed76734162216e4446595bba201d9:proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/B04-20260922T225115Z-r20/REPORT.md",
+      "scope": "named-partner clean-side bilinear bank plus overlapping scalar square; at r=2 gives 5.749943550416816/sqrt(|a| sigma)"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-RANKR-TWOSIDED-CONTAMINATION-FOURIER-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "For exact physical cross rank r>=2, H=F(X,W)+G(Y,W)+2X^TBY with arbitrary contamination on both original product banks has ||p_H||_3<=[3er/(3r-4)]^(2/3) Delta^(-2/(3r)); its joint characteristic function is bounded by min(1,(pi e)^(r/2)Delta^(-1/2)|t|^(-r/2)); for r>=3, ||p_H||_infinity<=er/(r-2)Delta^(-1/r)."
+    },
+    {
+      "id": "QFORM-SQUARE-RANKR-TWOSIDED-CONTAMINATION-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "For an additional original scalar Z and arbitrary overlapping square shift, ||p_Q||_infinity<=C_r |a|^(-1/2)Delta^(-1/(2r)), C_r=8*3^(-1/4)*sqrt(er/(3r-4)); at r=2 C_2=10.022058057366376."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "account": "account03",
+    "slot": "B04",
+    "run": "B04-20260922T225115Z-r20",
+    "source_commit": "52dbe47e8a0ed76734162216e4446595bba201d9",
+    "application": "For Q_clean=2[z+q_x^T x+q_y^T y]^2+x^TCx+2x^TBy with B=3H2 and clean y bank, ||p||_infinity<=5.749943550416816/sqrt(6)=2.347404624721380."
+  },
+  "explicit_rotated_indefinite_estimate": {
+    "form": "Q_*=2[z+q_x^T x+q_y^T y]^2+x^TCx+2x^TBy+y^TDy, with H2=(1/sqrt2)[[1,1],[1,-1]], B=3H2, C=(1/5)H2, D=-(3/20)H2, q_x=q_y=(1,1)/(20sqrt2)",
+    "rigorous_target_certificate": "s_min(A_*)>=41/25-sqrt(2)/10=1.498578643762690...>1; A_* remains indefinite",
+    "bound": "||p_Q*||_infinity<=4sqrt(2e)/3^(3/4)=4.091488068849406 for every admissible product input law"
+  },
+  "first_unproved_step": "QFORM-REGULARIZED-CROSS-RANK-ROUTING-v1",
+  "next_step": "Under only s_3(A)>=1, either obtain a physical cross packet whose entire nonzero singular spectrum has controlled geometric-mean cost, or prove a regularized joint product-space estimate that ignores tiny extra singular directions without conditioning on dependent projected coordinates.",
+  "report": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_tail_commit": "bcd296a9033080bebfb73c5d93bf0cbb96b3e72b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/B04-20260922T233213Z-r22/REPORT.md",
+    "blob": "055e273f984fb4d6299a1897920c232aaaa80496"
+  },
+  "checker_output_blob": "af699435e75f1b6f5622825ce40792a78332ca53",
+  "handoff": {
+    "commit": "4ad556242f3887001104aa5621e2ae60875aaa14",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B04/B04-20260922T233213Z-r22.md"
+  }
+}

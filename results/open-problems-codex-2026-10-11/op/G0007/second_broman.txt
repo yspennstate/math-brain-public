@@ -1,0 +1,2333 @@
+PDF PAGE 1
+arXiv:math/0605641v1  [math.PR]  24 May 2006
+The Annals of Probability
+2006, Vol. 34, No. 2, 539–576
+DOI: 10.1214/009117905000000602
+c
+⃝Institute of Mathematical Statistics, 2006
+DYNAMICAL STABILITY OF PERCOLATION FOR SOME
+INTERACTING PARTICLE SYSTEMS AND ε-MOVABILITY
+By Erik I. Broman1 and Jeffrey E. Steif2
+Chalmers University of Technology
+In this paper we will investigate dynamic stability of percolation
+for the stochastic Ising model and the contact process. We also in-
+troduce the notion of downward and upward ε-movability which will
+be a key tool for our analysis.
+1. Introduction.
+Consider bond percolation on an inﬁnite connected lo-
+cally ﬁnite graph G, where, for some p ∈[0,1], each edge (bond) of G is,
+independently of all others, open with probability p and closed with prob-
+ability 1 −p. Write πp for this product measure. The main questions in
+percolation theory (see [10]) deal with the possible existence of inﬁnite con-
+nected components (clusters) in the random subgraph of G consisting of all
+sites and all open edges. Write C for the event that there exists such an in-
+ﬁnite cluster. By Kolmogorov’s 0–1 law, the probability of C is, for ﬁxed G
+and p, either 0 or 1. Since πp(C) is nondecreasing in p, there exists a critical
+probability pc = pc(G) ∈[0,1] such that
+πp(C) =
+0,
+for p < pc,
+1,
+for p > pc.
+At p = pc, we can have either πp(C) = 0 or πp(C) = 1, depending on G.
+In [15] the authors initiated the study of dynamical percolation. In this
+model, with p ﬁxed, the edges of G switch back and forth according to
+independent 2 state Markov chains where 0 switches to 1 at rate p and 1
+switches to 0 at rate 1 −p. In this way, if we start with distribution πp, the
+distribution of the system is at all times πp. The general question studied in
+Received June 2004; revised January 2005.
+1Supported in part by the Swedish Natural Science Research Council.
+2Supported in part by the Swedish Natural Science Research Council, NSF Grant
+DMS-01-0384 and the G¨oran Gustafsson Foundation (KVA).
+AMS 2000 subject classiﬁcations. 82C43, 82B43, 60K35.
+Key words and phrases. Percolation, stochastic Ising models, contact process.
+This is an electronic reprint of the original article published by the
+Institute of Mathematical Statistics in The Annals of Probability,
+2006, Vol. 34, No. 2, 539–576. This reprint diﬀers from the original in pagination
+and typographic detail.
+1
+
+PDF PAGE 2
+2
+E. I. BROMAN AND J. E. STEIF
+[15] was whether there could exist atypical times at which the percolation
+structure looks diﬀerent than at a ﬁxed time.
+We record here some of the results from [15]; (i) for any graph G and for
+any p < pc(G), there are no times at which percolation occurs, (ii) for any
+graph G and for any p > pc(G), there are no times at which percolation does
+not occur, (iii) there exist graphs which do not percolate for p = pc(G), but,
+nonetheless, for p = pc(G), there are exceptional times at which percolation
+occurs, (iv) there exist graphs which percolate for p = pc(G), but, nonethe-
+less, for p = pc(G), there are exceptional times at which percolation does
+not occur, and (v) for Zd with d ≥19 with p = pc(Zd), there are no times
+at which percolation occurs. In addition, it has recently been shown in [23]
+that, for site percolation on the triangular lattice, for p = pc = 1/2, there are
+exceptional times at which percolation occurs. Given this, a similar result
+would be expected for Z2.
+The point of the present paper is to initiate a study of dynamical per-
+colation for interacting systems where the edges or sites ﬂip at rates which
+depend on the neighbors. We point out that in a diﬀerent direction such
+questions in continuous space, but without interactions, related to contin-
+uum percolation have been studied in [2].
+Ising model results.
+Precise deﬁnitions of the following Ising model mea-
+sures and the stochastic Ising model will be given in Section 2. Fix an in-
+ﬁnite graph G = (S,E). Let µ+,β,h be the plus state for the Ising model
+with inverse temperature β and external ﬁeld h on G [this is a probability
+measure on {−1,1}S]. Let Ψ+,β,h denote the corresponding stochastic Ising
+model; [this is a stationary continuous time Markov chain on {−1,1}S with
+marginal distribution µ+,β,h]. Let C+ (C−) denote the event that there exists
+an inﬁnite cluster of sites with spin 1 (−1) and let C+
+t (C−
+t ) denote the event
+that there exists an inﬁnite cluster of sites with spin 1 (−1) at time t. It is
+known that the family µ+,β,h is, for ﬁxed β, stochastically increasing (to be
+deﬁned later) in h.
+Theorem 1.1.
+Consider a graph G = (S,E) of bounded degree. Fix β ≥
+0 and let hc = hc(β) be deﬁned by
+hc := inf{h:µ+,β,h(C+) = 1}.
+Then for all h > hc,
+Ψ+,β,h(C+
+t occurs for every t) = 1
+and for all h < hc,
+Ψ+,β,h(∃t ≥0:C+
+t occurs) = 0.
+
+PDF PAGE 3
+DYNAMICAL STABILITY FOR IPS
+3
+If we modify hc to be instead
+h′
+c := sup{h:µ+,β,h(C−) = 1},
+the same two claims hold with C+
+t replaced by C−
+t and with h < h′
+c and h > h′
+c
+reversed.
+This result tells us what happens in the subcritical and supercritical cases
+(with respect to h with β held ﬁxed). It is the analogue of the easier Propo-
+sition 1.1 in [15] where it is proved that if p < pc (p > pc), then, with prob-
+ability 1, there is percolation at no time (at all times).
+The following easy lemma gives us information about when hc is nontriv-
+ial.
+Lemma 1.2.
+Assume the graph G has bounded degree and let β be ar-
+bitrary. Then hc > −∞. If pc(site) < 1, then hc < ∞. Similar results hold if
+hc is replaced by h′
+c.
+The following theorems, where we restrict to Zd, will only discuss the
+case h = 0. However, this will in many cases give us information about the
+“critical” case (β,hc(β)) since, in a number of situations, hc(β) = 0. For
+example, this is true on all Zd with d ≥2 and β suﬃciently large. We also
+mention that while the relationship between hc and h′
+c in Theorem 1.1 might
+in general be complicated, for Zd, one easily has that hc = −h′
+c; this follows
+from the known fact that the plus and minus states are the same when h ̸= 0.
+When h = 0, we will abbreviate µ+,β,0 by µ+,β and Ψ+,β,0 by Ψ+,β. We point
+out that while µ+,β,h is stochastically increasing in h for ﬁxed β, there is no
+such monotonicity in β for ﬁxed h, not even for h = 0. Therefore, we must
+use a diﬀerent approach in the latter case.
+We ﬁrst study percolation of −1’s and then percolation of 1’s. Let
+βp(2) := inf
+(
+β :
+∞
+X
+l=1
+l3l−1e−2βl < ∞
+)
+= log 3
+2
+.
+We will refer to βp(2) as the critical inverse temperature of the Peierls regime
+for Z2. The choice of βp(2) might at ﬁrst look quite arbitrary, but it is
+exactly what is needed to carry out a contour argument (known as Peierls
+argument) for Z2. For d ≥3, there is a βp(d), such that, for β larger than
+βp(d), a similar (although topologically more complicated) argument works
+for Zd. As a result of this “contour argument,” it is well known and easy to
+show that, for β > βp(d), we have that
+µ+,β(C−) = 0.
+(1)
+Our next result is a dynamical version of (1) and we emphasize that this
+corresponds to the critical case as it is easy to check that, for these β’s,
+hc(β) = 0.
+
+PDF PAGE 4
+4
+E. I. BROMAN AND J. E. STEIF
+Theorem 1.3.
+For Zd with d ≥2 and β > βp(d),
+Ψ+,β(∃t ≥0:C−
+t occurs) = 0.
+It is well known that βp(d) ≥βc(d), the latter being the critical inverse
+temperature for the Ising model on Zd. For d = 2, Theorem 1.3 can be
+extended down to the critical inverse temperature βc(2). First, it is known
+(see [5]) that on Z2, for all β,
+µ+,β(C−) = 0.
+(2)
+Our dynamical analogue for β > βc is the following where we again point
+out that this is also a critical case as it is easy to check that, for these β’s,
+we also have hc(β) = 0.
+Theorem 1.4.
+For the stochastic Ising model Ψ+,β on Z2 with param-
+eter β > βc,
+Ψ+,β(∃t ≥0:C−
+t occurs) = 0.
+Interestingly, (1) is not always true for β > βc(d), although, as stated, it
+is true for Z2 or β suﬃciently large. In [1] it is shown that for Zd with large
+d, there exists β+ > βc(d) such that the probability in (1) is, in fact, 1 for
+all β < β+. Moreover, they show that, for these β, there exists h > 0 with
+µ+,β,h(C−) = 1.
+For such β’s, this means that h′
+c > 0 and, hence, it immediately follows from
+Theorem 1.1 that
+Ψ+,β(C−
+t occurs for every t) = 1.
+Note that, for these values of β, the case h = 0 is a noncritical case.
+We next look at percolation of 1’s under µ+,β. In the above results, we
+have not discussed the case of percolation of −1’s when β ≤βc. However, by
+symmetry, this is the same as studying percolation of 1’s in this case and so
+we can now move over to the study of C+.
+First, it is well known that, for any graph of bounded degree, µ+,β,h ̸=
+µ−,β,h implies that µ+,β,h(C+) = 1. (This is proved in [3] for Zd; this argu-
+ment extends to any graph of bounded degree.) In particular, for any graph
+G of bounded degree and for β > βc(G),
+µ+,β(C+) = 1.
+(3)
+Our next result is a dynamical version of (3) for Zd. We mention that
+this result sometimes corresponds to a critical case and sometimes not. For
+β > βp(d) in Zd or β > βc(2) in Z2, we have seen that hc = 0 and so, in these
+
+PDF PAGE 5
+DYNAMICAL STABILITY FOR IPS
+5
+cases, this next result covers the critical case. However, as pointed out, for d
+large and β just a little higher than βc, the result in [1] gives us that hc < 0
+and, hence, in this case, this next theorem already follows from Theorem 1.1.
+Theorem 1.5.
+For the stochastic Ising model Ψ+,β on Zd with param-
+eter β > βc(d),
+Ψ+,β(C+
+t occurs for every t) = 1.
+(The proof we give actually works for any graph of bounded degree.)
+We mention that while β > βc is a suﬃcient condition for (3) to hold, it is
+certainly not necessary. For example, on Z3 we have that µ+,0(C+) = 1 since
+µ+,0 = π1/2 and the critical value for site percolation on Z3 is less than 1/2.
+The reason βc appears is the connection between the Ising model and the
+random cluster model; βc corresponds to the critical value for percolation in
+the corresponding random cluster model (see [13]).
+We are now left with the case β ≤βc. We will not be able to say too much
+since it is not known in all cases whether one has percolation at a ﬁxed
+time. We ﬁrst, however, have the following easy result for d ≥3. We do not
+prove this result since it follows easily from the fact that the critical value
+for site percolation on Zd is less than 1/2 for d ≥3, as this gives easily that
+hc(β) < 0 for β suﬃciently small and, hence, Theorem 1.1 is applicable.
+Note that the case β = 0 follows from the result in [15] mentioned above.
+Proposition 1.6.
+For d ≥3, there exists β1(d) > 0 such that, for all
+β < β1(d), we have that
+Ψ+,β(C+
+t occurs for every t) = 1.
+Finally, due to work of Higuchi, we can determine what happens with
+β < βc for Z2. It is shown in [16] that, for Z2, for all β < βc, we have that
+hc(β) > 0. The following result follows from this fact and Theorem 1.1.
+Theorem 1.7.
+For d = 2, for all β < βc, we have that
+Ψ+,β(∃t ≥0:C+
+t occurs) = 0.
+We note that even though it is known that for Z2, µ+,βc(C+) = 0, we
+cannot conclude that
+Ψ+,βc(∃t ≥0:C+
+t occurs) = 0,
+since it is known (see [17]) that hc(βc) = 0. In contrast, based on the results
+in [23], it is interesting to ask the following:
+
+PDF PAGE 6
+6
+E. I. BROMAN AND J. E. STEIF
+Question 1.8.
+For the graph Z2, is it the case that
+Ψ+,βc(∃t ≥0:C+
+t occurs) = 1?
+We ﬁnally mention that, interestingly, it is also known (see again [17])
+that, for β < βc, µ+,β,hc(β)(C+) = 0.
+Contact process results.
+Precise deﬁnitions of the following items will be
+given in Section 2. Fix an inﬁnite graph G = (S,E). Consider the contact
+process on G = (S,E) with parameter λ. Denote by µλ the stochastically
+largest invariant measure, the so-called “upper invariant measure” (this is a
+probability measure on {0,1}S). Let Ψλ denote the corresponding stationary
+contact process (this is a stationary continuous time Markov chain on {0,1}S
+with marginal distribution µλ). If 0 < λ1 < λ2, it is well known that µλ1 is
+stochastically smaller than µλ2, denoted by
+µλ1 ⪯µλ2
+(see Section 2 for this precise deﬁnition).
+Theorem 1.9.
+Consider the contact process Ψλ on a graph G = (S,E),
+with initial and stationary distribution µλ. Let λp be deﬁned by
+λp := inf{λ:µλ(C+) = 1}.
+We have that, for all λ > λp,
+Ψλ(C+
+t occurs for every t) = 1.
+In order for this theorem to be nonvacuous, we need to know that λp < ∞
+for at least some graph. First, the fact that there exists λ such that µλ(C+) >
+0 for Td with d ≥2 follows from [12]. Here Td is the unique inﬁnite connected
+graph without circuits and in which each site has exactly d + 1 neighbors;
+Td is commonly known as the homogenous tree of order d. Combined with
+a 0–1 law which we develop, Proposition 4.2, we obtain that λp < ∞in this
+case. For Zd with d ≥2 (as well as for Td), it is proved in [22] that, for
+large λ, µλ stochastically dominates high density product measures, which
+immediately implies that λp < ∞in these cases.
+When we prove Theorem 1.1, we will, in fact, prove a more general the-
+orem which holds for a large class of systems. However, this proof will only
+work for models satisfying the so-called FKG lattice condition (which we
+call “monotone” in this paper). We now point out the important fact that,
+for λ < 2, in 1 dimension, the upper invariant measure for the contact pro-
+cess, while having positive correlations, is not monotone (see [20]). These
+terms are deﬁned in Section 2. (One would also believe it is never monotone
+whenever the measure is not δ0.) Hence, Theorem 1.9 does not follow from
+the generalization of Theorem 1.1 which will come later.
+
+PDF PAGE 7
+DYNAMICAL STABILITY FOR IPS
+7
+ε-movability.
+We now introduce the concepts of upward and downward
+ε-movability. While we mainly introduce these as a technical tool to be used
+in our main results, it turns out that they are of interest in their own right.
+In [4] the concept of upward movability is studied for its own sake and is
+related to other well studied concepts, such as uniform insertion tolerance.
+Let S be a countable set. Take any probability measure µ on {−1,1}S and
+let X be a {−1,1}S valued random variable with distribution µ. Let Z be a
+{−1,1}S valued random variable with distribution π1−ε and be independent
+of X. Deﬁne X(−,ε) by letting X(−,ε)(s) = min(X(s),Z(s)) for every s ∈S,
+and let µ(−,ε) denote the distribution of X(−,ε). In a similar way, deﬁne
+X(+,ε) by letting X(+,ε)(s) = max(X(s),Z(s)) for every s ∈S, where Z has
+distribution πε and is independent of X. Denote the distribution of X(+,ε)
+by µ(+,ε).
+Definition 1.10.
+Let (µ1,µ2) be a pair of probability measures on
+{−1,1}S, where S is a countable set. Assume that
+µ1 ⪯µ2.
+If
+µ1 ⪯µ(−,ε)
+2
+,
+then we say that this pair of probability measures is downward ε-movable.
+If the pair is downward ε-movable for some ε > 0, we say that the pair is
+downward movable. Analogously, if
+µ(+,ε)
+1
+⪯µ2,
+then we say that the pair (µ1,µ2) is upward ε-movable and that it is upward
+movable if the pair is upward ε-movable for some ε > 0.
+For probability measures on {0,1}S, we have identical deﬁnitions.
+The relevance of downward (or upward) ε-movability to our dynamical
+percolation analysis will be explained in Section 5. In Section 3 we will
+prove ε-movability for general monotone systems, which will eventually lead
+to a proof of Theorem 1.1 (and its generalization). We now state a similar
+and key result for the contact process.
+Theorem 1.11.
+Let G be a graph of bounded degree, 0 < λ1 < λ2 and
+µλ1, µλ2 be the upper invariant measures for the contact process on {0,1}S
+with parameters λ1 and λ2, respectively. Then (µλ1,µλ2) is downward mov-
+able.
+
+PDF PAGE 8
+8
+E. I. BROMAN AND J. E. STEIF
+We ﬁnally mention how the above questions that we study fall into the
+context of classical Markov process theory. Let (Ω,F,P) be the probability
+space where a stationary Markov process {Xt}t≥0 taking values in some
+state space S is deﬁned. Letting µ denote the distribution of Xt (for any t),
+consider an event A ⊆S with µ(A) = 1. Let At be the event that A occurs
+at time t. We say that A is a dynamically stable event if P(At ∀t ≥0) = 1.
+In Markov process terminology, this is equivalent to saying that Ac has
+capacity zero. All the questions in this paper deal with showing, for various
+models and parameters, that the event that there exists/there does not exist
+an inﬁnite connected component of sites which are all open is dynamically
+stable.
+The rest of this paper is divided into 9 sections. In Section 2 we will give
+all necessary preliminaries and precise deﬁnitions of our models. Sections 3
+and 4 will deal with the concept of ε-movability. In Section 3 we develop
+what will be needed to prove Theorem 1.1 and its generalization. In Section
+4 we will prove Theorem 1.11 (which is the key to Theorem 1.9), as well as
+give a proof that λp < ∞for trees. In Section 5 we prove two elementary
+lemmas which relate the notion of ε-movability to dynamical questions. In
+the remaining sections proofs of the remaining results are given. We note
+that the proof of Theorem 1.4 will use the proof of Theorem 1.5 and, hence,
+will come afterward.
+We end with one bit of notation. If µ is a probability measure on some
+set U, we write X ∼µ to mean that X is a random variable taking values
+in U with distribution µ.
+2. Models and deﬁnitions.
+Before presenting the interacting particle sys-
+tems discussed in this paper, we will present some deﬁnitions and results
+related to stochastic domination. Let S be any countable set. For σ,σ′ ∈
+{−1,1}S, we write σ ⪯σ′ if σ(s) ≤σ′(s) for every s ∈S. An increasing func-
+tion f is a function f :{−1,1}S →R such that f(σ) ≤f(σ′) for all σ ⪯σ′. For
+two probability measures µ,µ′ on {−1,1}S, we write µ ⪯µ′ if, for every con-
+tinuous increasing function f, we have that µ(f) ≤µ′(f). [µ(f) is shorthand
+for
+R f(x)dµ(x).] When {−1,1}S is replaced by {0,1}S, we have identical
+deﬁnitions. Strassen’s theorem (see [19], page 72) states that if µ ⪯µ′, then
+there exist random variables X,X′ with distribution µ,µ′, respectively, such
+that X ⪯X′ a.s.
+A very useful result is the so-called Holley’s inequality, which appeared
+ﬁrst in [18]. We will present a variant of the theorem by Holley; it is not the
+most general, but is suﬃcient for our purposes.
+Theorem 2.1.
+Take S to be a ﬁnite set. Let µ, µ′ be probability mea-
+sures on {−1,1}S which assign positive probability to all conﬁgurations σ ∈
+
+PDF PAGE 9
+DYNAMICAL STABILITY FOR IPS
+9
+{−1,1}S. Assume that
+µ(σ(s) = 1|σ(S \ s) = ξ) ≤µ′(σ(s) = 1|σ(S \ s) = ξ′)
+for every s ∈S and ξ ⪯ξ′, where ξ,ξ′ ∈{−1,1}S\s. Then µ ⪯µ′.
+Proof.
+See [9] or [13] for a proof.
+□
+Two properties of probability measures which are often encountered within
+the ﬁeld of interacting particle systems are the monotonicity property and
+the property of positive correlations presented below.
+Definition 2.2.
+Take S to be a ﬁnite set. A probability measure µ on
+{−1,1}S which assigns positive probability to every σ ∈{−1,1}S is called
+monotone if, for every s ∈S and ξ ⪯ξ′ where ξ,ξ′ ∈{−1,1}S\s,
+µ(σ(s) = 1|σ(S \ s) = ξ) ≤µ(σ(s) = 1|σ(S \ s) = ξ′).
+We point out immediately that it is known that this is equivalent to the
+so-called FKG lattice condition.
+Definition 2.3.
+A probability measure µ on {−1,1}S is said to have
+positive correlations if, for all bounded increasing functions f,g :{−1,1}S →
+R, we have
+µ(fg) ≥µ(f)µ(g).
+The following important result is sometimes known as the FKG inequality
+(see [7]).
+Theorem 2.4.
+Take S to be a ﬁnite set. Let µ be a monotone probability
+measure on {−1,1}S which assigns positive probability to every conﬁgura-
+tion. Then µ has positive correlations.
+Proof.
+This was originally proved in [7]; see also [9] for a proof.
+□
+In this section, and also later in this paper, we will talk about convergence
+of probability measures. Convergence will always mean weak convergence,
+where {0,1}S is given the product topology.
+
+PDF PAGE 10
+10
+E. I. BROMAN AND J. E. STEIF
+2.1. The Ising model.
+Take G = (S,E), where |S| < ∞. The Ising mea-
+sure µβ,h on {−1,1}S at inverse temperature β ≥0, external ﬁeld h and
+with free boundary conditions is deﬁned as follows. For any conﬁguration
+σ ∈{−1,1}S, let
+Hβ,h(σ) = −β
+X
+{t,t′}∈E
+t,t′∈S
+σ(t)σ(t′) −h
+X
+t∈S
+σ(t).
+(4)
+Hβ,h is called the Hamiltonian. Deﬁne µβ,h by assigning the probability
+µβ,h(σ) = e−Hβ,h(σ)
+Z
+(5)
+to any conﬁguration σ ∈{−1,1}S, where Z is a normalization constant. Of
+course, Z depends on the graph and the values β and h, but this will not
+be important for us and, therefore, not reﬂected in the notation.
+Take Sn := Λn+1 = {−n −1,...,n + 1}d and En to be the set of all near-
+est neighbor pairs of Sn. Given a conﬁguration ξ on {−1,1}Zd\Λn, let, for
+σ ∈{−1,1}Λn,
+Hξ,β,h
+n
+(σ) = −β
+X
+{t,t′}∈En
+t,t′∈Λn
+σ(t)σ(t′) −h
+X
+t∈Λn
+σ(t) −β
+X
+{t,t′}∈En
+t∈Λn
+t′∈Λn+1\Λn
+σ(t)ξ(t′)
+(6)
+be our Hamiltonian. Here ξ is called a boundary condition. Again, we deﬁne
+a probability measure using (5), but using the Hamiltonian of (6) instead.
+This Ising measure will be denoted by µξ,β,h
+n
+. The cases ξ ≡1 and ξ ≡−1 are
+especially important and the corresponding Ising measures are denoted by
+µ+,β,h
+n
+and µ−,β,h
+n
+, respectively. We view µ+,β,h
+n
+(resp. µ−,β,h
+n
+) as a probability
+measure on {−1,1}Zd by letting, with probability 1, the conﬁguration be
+identically 1 (resp. −1) outside Λn. It is known (see [19], page 189) that the
+sequences {µ+,β,h
+n
+} and {µ−,β,h
+n
+} converge as n tends to inﬁnity; these limits
+are denoted by µ+,β,h and µ−,β,h.
+The same kind of construction can be carried out on any inﬁnite connected
+locally ﬁnite graph G = (S,E). One deﬁnes a Hamiltonian analogous to the
+one in (6), but with Λn replaced by any Λ ⊆S where |Λ| < ∞. With ξ ≡1
+or ξ ≡−1, one then considers the corresponding limits of Ising measures as
+Λ ↑S, the limit turning out to be independent of the particular choice of
+sequence. See, for instance, [9] for how this is carried out in detail. Fix h = 0
+and abbreviate µ+,β,0 and µ−,β,0 by µ+,β and µ−,β. It is well known [8, 9]
+that, for any graph, there exists βc ∈[0,∞] such that, for 0 ≤β < βc, we have
+that µ−,β = µ+,β (and there is then a unique so-called Gibbs state) and for
+β > βc, µ−,β ̸= µ+,β. For Zd with d ≥2, and many other graphs, βc ∈(0,∞).
+βc is sometimes referred to as the critical inverse temperature for phase
+
+PDF PAGE 11
+DYNAMICAL STABILITY FOR IPS
+11
+transition in the Ising model. Furthermore, in [14] the author shows that if
+G is of bounded degree, the condition βc < ∞is equivalent to the condition
+pc < 1, where pc is the critical parameter value for site percolation on G. It
+is easy to see that for any graph of bounded degree pc > 0 (see the proof
+of Theorem 1.10 of [10]). This, in turn, implies, via the connection between
+the random cluster model and the Ising model described below, that βc > 0
+for any graph of bounded degree.
+2.2. Spin systems.
+A conﬁguration σ ∈{−1,1}S can be seen as parti-
+cles on a discrete set S having one of two diﬀerent “spins” represented by
+−1 and 1. To this we will add a stochastic dynamics, and assume that
+the system is described by “ﬂip rate intensities,” which we will denote by
+{C(s,σ)}s∈S, σ∈{−1,1}S. C(s,σ) represents the rate at which site s changes
+its state when the present conﬁguration is σ. Of course, C(s,σ) ≥0 ∀s ∈
+S,σ ∈{−1,1}S, and we assume that the interaction is nearest neighbor in
+the sense that the ﬂip rate of a site s ∈S only depends on the conﬁguration
+σ at s and at sites t with {s,t} ∈E. We will limit ourselves to only allow
+one site ﬂip in every transition and we will only consider ﬂip rate intensities
+such that
+sup
+s,σ C(s,σ) < ∞.
+In many cases we will consider translation invariant systems and then this
+last condition will hold trivially. Furthermore, we will always assume the
+trivial condition that, for every s ∈S,
+sup
+σ : σ(s)=0
+C(s,σ(s)) > 0,
+sup
+σ : σ(s)=1
+C(s,σ(s)) > 0.
+We will call such an object a spin system (see [6] or [19] for results concerning
+general spin systems). Given such rates, one can obtain a Markov process
+Ψ on {−1,1}S governed by these ﬂip rates; see [19]. Such a Markov process
+with a speciﬁed initial distribution µ on {−1,1}S will be denoted by Ψµ.
+Given a Markov process, µ will be called an invariant distribution for the
+process if the projections of Ψµ onto {−1,1}S at any ﬁxed time t ≥0 is
+µ. In this case, Ψµ will be a stationary Markov process on {−1,1}S, all of
+whose marginal distributions are µ. Of course, the state space {−1,1}S can
+be exchanged for either {0,1}S or {0,1}E.
+Sometimes
+we
+will
+work
+with
+two
+diﬀerent
+sets
+of
+ﬂip
+rates,
+{C1(s,σ)}s∈S,σ∈{−1,1}S and {C2(s,σ)}s∈S,σ∈{−1,1}S, governing two Markov
+processes Ψ1 and Ψ2, respectively. We will write C1 ⪯C2 if the following
+conditions are satisﬁed:
+C2(s,σ2) ≥C1(s,σ1)
+∀s ∈S, ∀σ1 ⪯σ2 s.t. σ1(s) = σ2(s) = 0,
+(7)
+
+PDF PAGE 12
+12
+E. I. BROMAN AND J. E. STEIF
+and
+C1(s,σ1) ≥C2(s,σ2)
+∀s ∈S, ∀σ1 ⪯σ2 s.t. σ1(s) = σ2(s) = 1.
+(8)
+The point of C1 ⪯C2 is that a coupling of Ψ1 and Ψ2 will then exist for
+which {(η,δ):η(s) ≤δ(s) ∀s ∈S} is invariant for the process; see [19].
+2.3. Stochastic Ising models.
+We will now brieﬂy discuss stochastic Ising
+models. We will omit most details; for an extensive discussion and analysis,
+see again [19]. Consider Gn = (Sn,En), deﬁned in Section 2.1. Given β and
+h, it is possible to construct ﬂip rates C+
+n on {−1,1}Sn for which µ+,β,h
+n
+is
+reversible and invariant. We denote by Ψ+,β,h
+n
+the corresponding stationary
+Markov process with initial distribution µ+,β,h
+n
+. One possible choice of ﬂip
+rate intensities are that, for every s ∈Λn and σ ∈{−1,1}S,
+C+
+n (s,σ)
+= exp
+"
+−β
+ 
+X
+t∈Λn : {t,s}∈En
+σ(t)σ(s) +
+X
+t∈Λn+1\Λn : {t,s}∈En
+σ(s)
+!
+−hσ(s)
+#
+.
+Sites in Λn+1 \ Λn are kept ﬁxed at 1. Observe that if s ∈Λn−1, the second
+sum is over an empty set. A straightforward calculation gives
+C+
+n (s,σ)µ+,β,h
+n
+(σ) = C+
+n (s,σs)µ+,β,h
+n
+(σs),
+(9)
+where
+σs(t) =
+σ(t),
+if t ̸= s,
+−σ(t),
+if t = s.
+This shows that indeed µ+,β,h
+n
+is reversible and invariant for C+
+n . Any family
+of spin rates satisfying (9) is called a stochastic Ising model (on our ﬁnite
+set). One can show that there exists a limiting distribution Ψ+,β,h of Ψ+,β,h
+n
+when n tends to inﬁnity; see [19], Theorem 2.2, page 17 and Theorem 2.7,
+page 139. Furthermore, Ψ+,β,h is a stationary Markov process on {−1,1}Zd
+with marginal distribution µ+,β,h governed by ﬂip rate intensities
+C(s,σ) = exp
+ 
+−β
+X
+t∈Zd : {t,s}∈E
+σ(t)σ(s) −hσ(s)
+!
+;
+(10)
+see [19], Theorem 2.7, page 139. It is also possible to construct Ψ+,β,h directly
+on {−1,1}Zd without going through the limiting procedure. Furthermore,
+there are several possible choices of ﬂip rate intensities that can be used
+to construct a stationary and reversible Markov process on {−1,1}Zd with
+marginal distribution µ+,β,h. In [19], a stochastic Ising model is deﬁned to be
+
+PDF PAGE 13
+DYNAMICAL STABILITY FOR IPS
+13
+any spin system with ﬂip rate intensities {C(s,σ)}s∈Zd,σ∈{−1,1}Zd satisfying
+that, for each s ∈Zd,
+C(s,σ)exp
+ 
+β
+X
+{t,s}∈E
+t∈Zd
+σ(t)σ(s) + hσ(s)
+!
+(11)
+is independent of σ(s). Therefore, when we refer to a stochastic Ising model
+Ψ+,β,h with marginal distribution µ+,β,h, we will have this deﬁnition in mind.
+It is particularly easy to see that (11) (or the condition of detailed balance
+as it is often referred to) is satisﬁed for the ﬂip rate intensities of (10), but
+there are many other rates satisfying this. It is known that the set of so-
+called Gibbs states are exactly the same as the class of reversible measures
+with respect to the ﬂip rates satisfying (11); see [19], pages 190–196. Note
+also that the condition speciﬁed in (11) with Zd replaced by Λn is equivalent
+to that of (9) (modiﬁed with the boundary condition removed).
+While we deﬁned above stochastic Ising models on {−1,1}Zd, this con-
+struction can be done on more general graphs (see [19]).
+2.4. The random cluster model.
+Unlike all other models in this paper,
+the random cluster model deals with conﬁgurations on the edges E of a
+graph G = (S,E). We will review the deﬁnition of the regular random cluster
+measure on general ﬁnite graphs and the “wired” random cluster measure on
+Λn ⊆Zd. We will also recall the limiting measures and in the next subsection
+the connection between the random cluster model and the Ising model. In
+doing so we will follow the outlines of [9] and [13] closely.
+Take a ﬁnite graph G = (S,E). Deﬁne the random cluster measure νp,q
+G
+on {0,1}E with parameters p ∈[0,1] and q > 0 as the probability measure
+which assigns to the conﬁguration η ∈{0,1}E the probability
+νp,q
+G (η) = qk(η)
+Z
+Y
+e∈E
+pη(e)(1 −p)1−η(e).
+(12)
+Here Z is again a normalization constant and k(η) is the number of con-
+nected components of η. From now on we will always take q = 2 and, there-
+fore, we will suppress q in the notation.
+Take Gn = (Sn,En), where Sn = Λn+1 ⊆Zd and En is the set of all nearest
+neighbor pairs of Λn+1. Write νp
+n for νp
+Gn, and deﬁne
+˜νp
+n(·) = νp
+n(·|all edges of En with both
+(13)
+end sites in Λn+1 \ Λn are present).
+This is the so-called “wired” random cluster measure. It is called “wired”
+since all edges of the boundary are present. It is immediate from the deﬁning
+
+PDF PAGE 14
+14
+E. I. BROMAN AND J. E. STEIF
+equations (12) and (13), that, for e ∈En and any ξ ∈{0,1}En\e,
+˜νp
+n(η(e) = 1|η(En \ e) = ξ)
+(14)
+=
+(p,
+if the endpoints of e are connected in ξ,
+p
+2 −p,
+otherwise.
+One can show (see [9] or [13]) that when n tends to inﬁnity, the probabil-
+ity measures {˜νp
+n}n∈N+ converge to a probability measure ˜νp. Furthermore,
+the construction of ˜νp
+n on {0,1}En can be done on any ﬁnite subgraph by
+connecting all sites of the boundary of the graph with each other. As a
+consequence, we can also deﬁne random cluster measures on more general
+graphs than Zd; see, for example, [11].
+2.5. The random cluster model and the Ising model.
+Take Gn = (Sn,En)
+as in Section 2.4. As in [13], let Pp
+n be the probability measure on {−1,1}Sn ×
+{0,1}En deﬁned in the following way:
+1. Assign each site of Λn+1 \ Λn and every edge with both endpoints in
+Λn+1 \ Λn the value 1.
+2. Assign each site of Λn the value 1 or −1 with equal probability, assign
+each edge with not more than one endpoint in Λn+1 \ Λn the value 0 or
+1 with probabilities 1 −p and p, respectively. Do this independently for
+all sites and edges.
+3. Condition on the event that no two sites with diﬀerent spins have an open
+edge connecting them.
+One can then check that Pp
+n(σ,{0,1}En) = µ+,β
+n
+(σ) with β = −log(1 −p)/2,
+and that Pp
+n({−1,1}Sn,η) = ˜νp
+n(η). Here, Pp
+n(σ,{0,1}En) is just the marginal
+in the ﬁrst coordinate of Pp
+n. The same kind of construction can be carried
+out on any ﬁnite graph G = (S,E).
+2.6. The contact process.
+Consider a graph G = (S,E) of bounded de-
+gree. In the contact process the state space is {0,1}S. Let λ > 0, and deﬁne
+the ﬂip rate intensities to be
+C(s,σ) =
+
+
+
+1,
+if σ(s) = 1,
+λ
+X
+(s′,s)∈E
+σ(s′),
+if σ(s) = 0.
+If we let the initial distribution be σ ≡1, the distribution of this process
+at time t, which we will denote by δ1Tλ(t), is known to converge as t tends
+to inﬁnity. This is simply because it is a so-called “attractive” process and
+σ ≡1 is the maximal state and {δ1Tλ(t)} is stochastically decreasing; see
+[19], page 265. This limiting distribution will be referred to as the upper
+invariant measure for the contact process with parameter λ and will be
+denoted by µλ. We then let Ψλ denote the stationary Markov process on
+{0,1}S with initial (and invariant) distribution µλ.
+
+PDF PAGE 15
+DYNAMICAL STABILITY FOR IPS
+15
+3. ε-movability for monotone measures.
+In this section we prove mov-
+ability results for classes of monotone measures. The ﬁnite case is covered
+by Lemma 3.3, while the countable case is discussed in Proposition 3.4. In
+this section we will always assume that our measures have full support.
+For any |S| < ∞, s ∈S, ξ ∈{0,1}S\s and probability measure µ on {0,1}S,
+write µ(∗,ε)(i|ξ) for µ(∗,ε)(σ(s) = i|σ(S \s) = ξ), µ(∗,ε)(i∩ξ) for µ(∗,ε)({σ(s) =
+i} ∩{σ(S \ s) = ξ}) and µ(∗,ε)(ξ) for µ(∗,ε)(σ(S \ s) = ξ). Here “∗” can repre-
+sent either + or −and i ∈{0,1}. Note that s is suppressed in the notation
+and so should be understood from context.
+We begin with an easy lemma whose proof is left to the reader. The
+idea is that if the conﬁguration outside of s is ξ under µ(−,ε), it must have
+been at least as large under µ “before ﬂipping some 1’s to 0’s”; then use
+monotonicity.
+Lemma 3.1.
+Assume that µ is a monotone probability measure on {0,1}S,
+where |S| < ∞. Take s ∈S and let ξ ∈{0,1}S\s. Then, for any ε > 0, we have
+that
+µ(−,ε)(1|ξ) ≥(1 −ε)µ(1|ξ)
+and that
+µ(+,ε)(0|ξ) ≥(1 −ε)µ(0|ξ).
+The next lemma will be used to prove Lemma 3.3.
+Lemma 3.2.
+Assume that µ is a monotone probability measure on {0,1}S,
+where |S| < ∞. For any ε > 0, µ(−,ε) is also monotone.
+Proof.
+Let s ∈S be arbitrary, X ∼µ and X(−,ε) ∼µ(−,ε). For any δ,η ∈
+{0,1}S\s, deﬁne the probability measures µδ and µη on {0,1}S\s by letting
+µδ(A) = P(X ∈A|X(−,ε)(S \s) ≡δ) and µη(A) = P(X ∈A|X(−,ε)(S \s) ≡η)
+for every event A in {0,1}S\s, respectively. We will prove that
+µδ ⪯µη
+∀δ ⪯η.
+(15)
+This will give us [since P(X(s) = 1|X(S \s) ≡η) is an increasing function of
+η] that
+P(X(−,ε)(s) = 1|X(−,ε)(S \ s) ≡η)
+= (1 −ε)
+Z
+˜η∈{0,1}S\s P(X(s) = 1|X(S \ s) ≡˜η)dµη(˜η)
+≥(1 −ε)
+Z
+˜η∈{0,1}S\s P(X(s) = 1|X(S \ s) ≡˜η)dµδ(˜η)
+= P(X(−,ε)(s) = 1|X(−,ε)(S \ s) ≡δ).
+
+PDF PAGE 16
+16
+E. I. BROMAN AND J. E. STEIF
+Since s was chosen arbitrarily, this would prove the statement.
+We now prove (15). Deﬁne for η ⪯˜η d(˜η,η) := |{t ∈S \ s: ˜η(t) = 1}| −
+|{t ∈S \ s:η(t) = 1}| and d(˜η,0) = |{t ∈S \ s: ˜η(t) = 1}|. Here | · | denotes
+cardinality. Let µS\s(η) = P(X(S \ s) ≡η) and deﬁne µ(−,ε)
+S\s
+similarly. We
+have that, for η ⪯˜η,
+µη(˜η) = P(X(−,ε)(S \ s) ≡η|X(S \ s) ≡˜η) µS\s(˜η)
+µ(−,ε)
+S\s (η)
+(16)
+= εd(˜η,η)(1 −ε)d(η,0) µS\s(˜η)
+µ(−,ε)
+S\s (η)
+.
+(17)
+It is well known that µ being monotone implies that, for every, ˜δ, ˜η,
+µS\s(˜η ∨˜δ)µS\s(˜η ∧˜δ) ≥µS\s(˜η)µS\s(˜δ).
+(18)
+By a simple modiﬁcation of Theorem 2.9, page 75 of [19], it is enough for us
+to show that
+µη(˜η ∨˜δ)µδ(˜η ∧˜δ) ≥µη(˜η)µδ(˜δ)
+(19)
+for all ˜η ⪰η and ˜δ ⪰δ to show (15). An elementary calculation shows that
+d(˜η ∨˜δ,η) + d(˜η ∧˜δ,δ) = d(˜η,η) + d(˜δ,δ).
+(20)
+We therefore get
+µη(˜η ∨˜δ)µδ(˜η ∧˜δ)
+= εd(˜η∨˜δ,η)+d(˜η∧˜δ,δ)(1 −ε)d(η,0)+d(δ,0) µS\s(˜η ∨˜δ)
+µ(−,ε)
+S\s (η)
+µS\s(˜η ∧˜δ)
+µ(−,ε)
+S\s (δ)
+≥εd(˜η,η)+d(˜δ,δ)(1 −ε)d(η,0)+d(δ,0) µS\s(˜η)
+µ(−,ε)
+S\s (η)
+µS\s(˜δ)
+µ(−,ε)
+S\s (δ)
+= µη(˜η)µδ(˜δ),
+where (16) is used in the ﬁrst and last equality and equations (18) and (20)
+are used in the inequality.
+□
+Lemma 3.3.
+Let µ1,µ2 be probability measures on {0,1}S, where |S| <
+∞. Assume that µ2 is monotone and that
+A :=
+inf
+s∈S
+ξ∈{0,1}S\s
+[µ2(σ(s) = 1|σ(S \ s) ≡ξ) −µ1(σ(s) = 1|σ(S \ s) ≡ξ)] > 0.
+Then for any choice of ε > 0, such that
+A >
+1
+1 −ε −1,
+
+PDF PAGE 17
+DYNAMICAL STABILITY FOR IPS
+17
+we have
+µ1 ⪯µ(−,ε)
+2
+.
+Hence, (µ1,µ2) is downward movable.
+Proof.
+Monotonicity of µ2, Lemma 3.1, the deﬁnition of A and our
+choice of ε give us that, for any s ∈S and ξ ∈{0,1}S\s,
+µ(−,ε)
+2
+(1|ξ) ≥(1 −ε)µ2(1|ξ) ≥(1 −ε)(A + µ1(1|ξ))
+≥(1 −ε)µ1(1|ξ)
+1 −ε = µ1(1|ξ).
+By Lemma 3.2, µ(−,ε)
+2
+is monotone and so ∀˜ξ ⪯ξ,
+µ1(1|˜ξ) ≤µ(−,ε)
+2
+(1|˜ξ) ≤µ(−,ε)
+2
+(1|ξ).
+The proof is completed by the use of Holley’s inequality, Theorem 2.1.
+□
+Proposition 3.4.
+Let S be any ﬁnite or countable set and consider
+(Sn)n∈N+, a collection of sets such that |Sn| < ∞∀n ∈N+ and Sn ↑S.
+Let (µ1,n)n∈N+, (µ2,n)n∈N+, be two collections of probability measures, where
+µ1,n,µ2,n are probability measures on {0,1}Sn for every n ∈N+. Further-
+more, assume that all of the probability measures (µ1,n)n∈N+((µ2,n)n∈N+)
+are monotone, that µ1,n →µ1 and that µ2,n →µ2. Set
+An :=
+inf
+s∈Sn
+ξ∈{0,1}Sn\s
+[µ2,n(σ(s) = 1|σ(S \ s) ≡ξ) −µ1,n(σ(s) = 1|σ(S \ s) ≡ξ)].
+If
+inf
+n∈N+ An > 0,
+then (µ1,µ2) is both upward and downward movable.
+Proof.
+Take ε > 0 such that
+inf
+n∈N+ An >
+1
+1 −ε −1.
+With this choice of ε, Lemma 3.3 says that (µ1,n,µ2,n) is upward (downward)
+ε-movable. Since µ1,n →µ1 and µ2,n →µ2, we easily get that µ(−,ε)
+2,n
+→µ(−,ε)
+2
+and µ(+,ε)
+1,n
+→µ(+,ε)
+1
+. Furthermore, since the relations
+µ1,n ⪯µ(−,ε)
+2,n
+and
+µ(+,ε)
+1,n
+⪯µ2,n
+are easily seen to be preserved under weak limits, we get that
+µ1 ⪯µ(−,ε)
+2
+and
+µ(+,ε)
+1
+⪯µ2.
+□
+
+PDF PAGE 18
+18
+E. I. BROMAN AND J. E. STEIF
+4. ε-movability for the contact process and a 0–1 law.
+The conditions in
+our next proposition might seem overly technical; however, these represent
+the essential features of the contact process (after a small suitable time
+rescaling) and, therefore, we feel it is instructive to highlight these features.
+In Proposition 4.1 and Lemmas 5.1, 5.2 and 8.1 we will use the so-called
+graphical representation to deﬁne our processes; see, for instance, [19], page
+172.
+Proposition 4.1.
+Let µ1 and µ2 be two probability measures deﬁned
+on {0,1}S, where S is a countable set. Assume that µ1 ⪯µ2 and that there
+exists two stationary Markov processes Ψ1 and Ψ2, governed by ﬂip rate
+intensities {C1(s,σ1)}s∈S,σ1∈{0,1}S and {C2(s,σ2)}s∈S,σ2∈{0,1}S, respectively,
+and with marginal distributions µ1 and µ2. Assume that C1 ⪯C2 [conditions
+(7) and (8) of the Introduction]. Consider the following conditions:
+1. There exists an ε1 > 0 such that
+C2(s,σ2) −C1(s,σ1) ≥ε1
+(21)
+∀s ∈S, ∀σ2 ⪰σ1 s.t. σ2(s) = 0 and C1(s,σ1) ̸= 0.
+2. There exists an ε2 > 0 such that
+C1(s,σ1) −C2(s,σ2) ≥ε2
+(22)
+∀s ∈S, ∀σ2 ⪰σ1 s.t. σ1(s) = 1 and C2(s,σ2) ̸= 0.
+3. There exists an ε3 > 0 such that
+C1(s,σ1) ≥ε3
+∀s ∈S, ∀σ1 s.t. σ1(s) = 1.
+(23)
+4. There exists an ε4 > 0 such that
+C2(s,σ2) ≥ε4
+∀s ∈S, ∀σ2 s.t. σ2(s) = 0.
+(24)
+If conditions 1, 2 and 3 are satisﬁed, then (µ1,µ2) is downward movable.
+If conditions 1, 2 and 4 are satisﬁed, then (µ1,µ2) is upward movable.
+Proof.
+We will prove the ﬁrst statement, the second follows by sym-
+metry. Deﬁne
+λ :=
+sup
+s,σ2 : σ2(s)=0
+C2(s,σ2) +
+sup
+s,σ1 : σ1(s)=1
+C1(s,σ1).
+Our aim is to construct a coupling of the processes {X1,t}t≥0 ∼Ψ1 and
+{X2,t}t≥0 ∼Ψ2 such that X1,t ⪯X2,t ∀t ≥0 in such a way that we prove the
+proposition. Before presenting the actual coupling, we will discuss the idea
+behind it. For every site s ∈S, associate an independent Poisson process
+with parameter λ. Next, let {Us,k}s∈S,k≥1 and {U ′
+s,k}s∈S,k≥1 be independent
+
+PDF PAGE 19
+DYNAMICAL STABILITY FOR IPS
+19
+uniform [0,1] random variables also independent of the Poisson processes. If
+τ is an arrival time for the Poisson process at site s, we write Us,τ for Us,k,
+where k is such that τ is the kth arrival of the Poisson process at site s.
+Now, let τ be an arrival time for the Poisson process associated to a site s.
+For i ∈{1,2}, let Xi,τ −and Xi,τ + denote the conﬁgurations before and after
+the arrival. We will let the outcome of Us,τ decide what happens with the
+{X2,t}t≥0 process at time t = τ, and then we will let U ′
+s,τ, together with Us,τ,
+decide what happens with the {X1,t}t≥0 process at time t = τ. As we will see,
+we will do this so that X1,t ⪯X2,t for all t ≥0. Furthermore, we will do this
+in such a way that there exists an ε ∈(0,1) such that if U ′
+s,τ ≥1 −ε, then
+X1,τ +(s) = 0 regardless of the outcome of Us,τ. Consider now the process
+{Xε
+t }t≥0 we get by taking Xε
+0(s) = 1 for every s ∈S and letting {Xε
+t (s)}t≥0
+be updated at every arrival time τ for the Poisson process associated to s,
+and updated in such a way that Xε
+τ +(s) = 0 if U ′
+s,τ ≥1 −ε, and Xε
+τ +(s) = 1
+if U ′
+s,τ < 1 −ε. Of course, the distribution of Xε
+t will converge to π1−ε.
+Observe that whenever Xε
+t (s) = 0, we have that X1,t(s) = 0. Therefore, we
+can conclude that
+X1,t ⪯min(X2,t,Xε
+t )
+∀t ≥0.
+(25)
+Furthermore, since the process {Xε
+t }t≥0 does not depend on any Us,τ, we
+have that Xε
+t (s) is conditionally independent of X2,t if there has been an
+arrival for the Poisson process associated to s before time t. Let si, i ∈
+{1,... ,n}, be distinct sites in S and let At be the event that all Poisson
+processes associated to s1 through sn have had an arrival by time t. Of
+course, P(At) = (1 −e−λt)n and so we get that
+P(X2,tXε
+t (s1) = ··· = X2,tXε
+t (sn) = 1)
+= P(X2,tXε
+t (s1) = ··· = X2,tXε
+t (sn) = 1|At)P(At)
++ P(X2,tXε
+t (s1) = ··· = X2,tXε
+t (sn) = 1|Ac
+t)P(Ac
+t)
+= P(X2,t(s1) = ··· = X2,t(sn) = 1|At)
+× P(Xε
+t (s1) = ··· = Xε
+t (sn) = 1|At)P(At)
++ P(X2,tXε
+t (s1) = ··· = X2,tXε
+t (sn) = 1|Ac
+t)P(Ac
+t)
+= P(X2,t(s1) = ··· = X2,t(sn) = 1|At)P(At)(1 −ε)n
++ P(X2,tXε
+t (s1) = ··· = X2,tXε
+t (sn) = 1|Ac
+t)P(Ac
+t)
+= P({X2,t(s1) = ··· = X2,t(sn) = 1} ∩At)(1 −ε)n
++ P(X2,tXε
+t (s1) = ··· = X2,tXε
+t (sn) = 1|Ac
+t)P(Ac
+t)
+≥(P(X2,t(s1) = ··· = X2,t(sn) = 1) −P(Ac
+t))(1 −ε)n
++ P(X2,tXε
+t (s1) = ··· = X2,tXε
+t (sn) = 1|Ac
+t)P(Ac
+t)
+
+PDF PAGE 20
+20
+E. I. BROMAN AND J. E. STEIF
+= P(X2,t(s1) = ··· = X2,t(sn) = 1)(1 −ε)n
++ P(Ac
+t)(P(X2,tXε
+t (s1) = ··· = X2,tXε
+t (sn) = 1|Ac
+t) −(1 −ε)n)
+= µ(−,ε)
+2
+(σ(s1) = ··· = σ(sn) = 1)
++ P(Ac
+t)(P(X2,tXε
+t (s1) = ··· = X2,tXε
+t (sn) = 1|Ac
+t) −(1 −ε)n)
+t→∞
+−→µ(−,ε)
+2
+(σ(s1) = ··· = σ(sn) = 1).
+In addition,
+P(X2,t(s1) = ··· = X2,t(sn) = 1 ∩At)(1 −ε)n
+≤P(X2,t(s1) = ··· = X2,t(sn) = 1)(1 −ε)n
+= µ(−,ε)
+2
+(σ(s1) = ··· = σ(sn) = 1).
+Hence, by inclusion exclusion, we have that the distribution of
+min(X2,t,Xε
+t ) approaches µ(−,ε)
+2
+as t tends to inﬁnity. So by ﬁrst taking the
+limit in (25), we get that µ1 ⪯µ(−,ε)
+2
+, as desired.
+Now to the construction. Take X1,0 ∼µ1, X2,0 ∼µ2, such that X1,0 ⪯
+X2,0. Let τ be an arrival time for the Poisson process associated to s. Take
+Us,τ and U ′
+s,τ. The following transition rules apply:
+X2,τ −
+X2,τ +
+if
+0
+1
+Us,τ ≤C2(s,X2,τ −)
+λ
+1
+0
+Us,τ ≥λ −C2(s,X2,τ −)
+λ
+.
+It is easy to check that the process {X2,t}t≥0 thus constructed will have
+the right ﬂip-rate intensities. The construction of {X1,t}t≥0 is slightly more
+complicated. If C2(s,X2,τ −) = 0 and X2,τ −(s) = 0, then it follows from (7)
+that C1(s,X1,τ −) = 0, and in that case we interpret
+C1(s,X1,τ−)
+C2(s,X2,τ−) as 0. Observe
+that C2(s,X2,τ −) can be 0 when X2,τ −(s) = 1, but it will not cause any
+problems. With these observations in mind, these are the transition rules we
+
+PDF PAGE 21
+DYNAMICAL STABILITY FOR IPS
+21
+apply:
+(X1,τ −,X2,τ −)
+(X1,τ +,X2,τ +)
+if
+(0,0)
+(1,1)
+Us,τ ≤C2(s,X2,τ −)
+λ
+and U ′
+s,τ ≤C1(s,X1,τ −)
+C2(s,X2,τ −)
+(0,0)
+(0,1)
+Us,τ ≤C2(s,X2,τ −)
+λ
+and U ′
+s,τ > C1(s,X1,τ −)
+C2(s,X2,τ −)
+(0,0)
+(0,0)
+otherwise
+(0,1)
+(0,0)
+Us,τ ≥λ −C2(s,X2,τ −)
+λ
+(0,1)
+(1,1)
+Us,τ < sups,σ2 : σ2(s)=0 C2(s,σ2)
+λ
+and
+U ′
+s,τ ≤
+C1(s,X1,τ −)
+sups,σ2 : σ2(s)=0 C2(s,σ2)
+(0,1)
+(0,1)
+otherwise
+(1,1)
+(0,0)
+Us,τ ≥λ −C2(s,X2,τ −)
+λ
+(1,1)
+(0,1)
+Us,τ < λ −C2(s,X2,τ −)
+λ
+and
+U ′
+s,τ ≥λ −C1(s,X1,τ −)
+λ −C2(s,X2,τ −)
+(1,1)
+(1,1)
+otherwise.
+It is not diﬃcult to check that all ﬂip rate intensities are correct and that
+X1,t ⪯X2,t for all t ≥0. Observe that, by the deﬁnition of λ, the events
+{Us,τ ≥
+λ−C2(s,X2,τ−)
+λ
+} and {Us,τ <
+sups,σ2 : σ2(s)=0 C2(s,σ2)
+λ
+} are disjoint when
+(X1,τ −,X2,τ −) = (0,1).
+We now want to show that there exists an ε > 0 so that U ′
+s,τ ≥1−ε implies
+that X1,τ +(s) = 0. Note that if (X1,τ −,X2,τ −) = (0,0) and C1(s,X1,τ −) > 0
+[⇒C2(s,X2,τ −) > 0], then
+C1(s,X1,τ −)
+C2(s,X2,τ −) ≤C2(s,X2,τ −) −ε1
+C2(s,X2,τ −)
+≤1 −
+ε1
+sups,σ2 : σ2(s)=0 C2(s,σ2) < 1
+and if (X1,τ −,X2,τ −) = (0,0) and C1(s,X1,τ −) = 0, then
+C1(s,X1,τ −)
+C2(s,X2,τ −) = 0.
+Furthermore, if (X1,τ −,X2,τ −) = (0,1) and C1(s,X1,τ −) > 0, then
+C1(s,X1,τ −)
+sups,σ2 : σ2(s)=0 C2(s,σ2) ≤1 −
+ε1
+sups,σ2 : σ2(s)=0 C2(s,σ2) < 1,
+
+PDF PAGE 22
+22
+E. I. BROMAN AND J. E. STEIF
+while again if (X1,τ −,X2,τ −) = (0,1) and C1(s,X1,τ −) = 0, then the 0 never
+changes to a 1. Finally, if (X1,τ −,X2,τ −) = (1,1) and C2(s,X2,τ −) > 0
+[⇒C1(s,X1,τ −) > 0], then
+λ −C1(s,X1,τ −)
+λ −C2(s,X2,τ −) ≤λ −C2(s,X2,τ −) −ε2
+λ −C2(s,X2,τ −)
+≤1 −
+ε2
+λ −C2(s,X2,τ −)
+≤1 −ε2
+λ ,
+and if (X1,τ −,X2,τ −) = (1,1) and C2(s,X2,τ −) = 0,
+λ −C1(s,X1,τ −)
+λ −C2(s,X2,τ −) ≤λ −ε3
+λ
+= 1 −ε3
+λ < 1.
+Therefore, whenever
+U ′
+s,τ ≥max
+
+1 −
+ε1
+sups,σ2 : σ2(s)=0 C2(s,σ2),1 −ε2
+λ ,1 −ε3
+λ
+
+,
+we have that X1,τ +(s) = 0 regardless of the outcome of Us,τ. Therefore,
+(µ1,µ2) is downward ε-movable where
+ε := 1 −max
+
+1 −
+ε1
+sups,σ2 : σ2(s)=0 C2(s,σ2),1 −ε2
+λ ,1 −ε3
+λ
+
+= min
+
+ε1
+sups,σ2 : σ2(s)=0 C2(s,σ2), ε2
+λ , ε3
+λ
+
+.
+□
+Proof of Theorem 1.11.
+Take δ > 0 such that λ1(1 + δ) < λ2 and
+consider the process {Xt}t≥0 constructed in the following way. Take X0 ≡1
+and let the process evolve with ﬂip rate intensities
+C1(s,σ) =
+
+
+
+1 + δ,
+if σ(s) = 1,
+λ1(1 + δ)
+X
+s′∼s
+σ(s′),
+if σ(s) = 0.
+(26)
+Denote the limiting distribution of Xt as t tends to inﬁnity by µ1+δ,λ1(1+δ).
+It is easy to see that this process is just a time-scaling of the contact process
+constructed in Section 2.6 with parameter λ1. Recall that that process had
+limiting distribution µλ1, the upper invariant measure for the contact pro-
+cess. Thus, we have µλ1 = µ1+δ,λ1(1+δ). By Proposition 4.1 with C1 as above
+and C2 as in Section 2.6 with parameter λ2, there exists an ε > 0 such that
+µ1+δ,λ1(1+δ) ⪯µ(−,ε)
+λ2
+.
+Hence, (µλ1,µλ2) is downward movable.
+□
+
+PDF PAGE 23
+DYNAMICAL STABILITY FOR IPS
+23
+For the rest of this section we will only consider the graph Td for d ≥2.
+The following is a 0–1 law for the upper invariant measure for the contact
+process.
+Proposition 4.2.
+Let A ⊆{0,1}Td, where d ≥2, be a set which is in-
+variant under all graph automorphisms on Td. Then, for λ > 0, we have
+that
+µλ(A) ∈{0,1}.
+Proof.
+Let ε > 0. By elementary measure theory, there exists a cylinder
+event B depending on ﬁnitely many coordinates such that
+µλ(A∆B) ≤ε.
+(27)
+Let suppB denote the ﬁnite number of coordinates with respect to which
+B is measurable. Letting {Tλ(t)}t≥0 denote the Markov semigroup for the
+contact process with parameter λ, we have that δ1Tλ(t) →µλ and also that
+µλ ⪯δ1Tλ(t) for every t ≥0. Choose t so that, for all (equivalently, some)
+sites s,
+δ1Tλ(t)(η(s) = 1) ≤µλ(η(s) = 1) +
+ε
+2|suppB|.
+It follows easily that if m is any coupling of δ1Tλ(t) and µλ which is concen-
+trated on {(η,δ):η ⪯δ}, then, for any ﬁnite set S of sites,
+m((η,δ):η(s) ̸= δ(s) occurs for some s ∈S) ≤
+|S|ε
+2|suppB|.
+In particular, if E is any event depending on at most 2|suppB| sites, then
+|δ1Tλ(t)(E) −µλ(E)| ≤ε.
+(28)
+For this ﬁxed t, Theorem 4.6, page 35 of [19] shows that there exists an
+automorphism γ ∈AUT(Td) such that
+|δ1Tλ(t)(B ∩γB) −δ1Tλ(t)(B)δ1Tλ(t)(γB)| ≤ε.
+(29)
+Furthermore, since µλ is invariant under automorphisms, (27) implies that
+µλ(γA∆γB) ≤ε,
+and since A = γA, we have
+µλ(A∆γB) ≤ε.
+It follows that
+µλ(B∆γB) ≤µλ(A∆γB) + µλ(A∆B) ≤2ε.
+
+PDF PAGE 24
+24
+E. I. BROMAN AND J. E. STEIF
+Next, (28) implies that
+|δ1Tλ(t)(B∆γB) −µλ(B∆γB)| ≤ε,
+and so
+δ1Tλ(t)(B∆γB) ≤3ε.
+(30)
+We get that
+|µλ(A) −µλ(A)2| = |µλ(A) −µλ(A)µλ(γA)|
+≤|µλ(B) −µλ(B)µλ(γB)| + 3ε
+≤|δ1Tλ(t)(B) −δ1Tλ(t)(B)δ1Tλ(t)(γB)| + 6ε
+≤|δ1Tλ(t)(B) −δ1Tλ(t)(B ∩γB)| + 7ε
+≤δ1Tλ(t)(B∆γB) + 7ε ≤10ε,
+where we used (27), (28) and (29) for the three ﬁrst inequalities and (30) in
+the last. Since ε > 0 was choosen arbitrarily, we get that
+µλ(A) = µλ(A)2
+and so µλ(A) ∈{0,1}.
+□
+Remarks.
+The above proof works for any transitive and even quasi-
+transitive graph. For the case of Zd, this was proved in Proposition 2.16,
+page 143 of [19]. It is mentioned there that, while δ1Tλ(t) is ergodic for
+each t, one cannot conclude immediately the ergodicity of µλ because the
+class of ergodic processes is not weakly closed. We point out, however, that
+there is another important notion of convergence given by the ¯d-metric (see
+[24], page 89 for deﬁnition) on stationary processes. Convergence in this
+metric is stronger than weak convergence and weaker than convergence in
+the total variation norm. It is also known that the ergodic processes are ¯d-
+closed and that weak convergence together with stochastic ordering implies
+¯d-convergence. In this way, one can conclude ergodicity of µλ using the ¯d-
+metric, giving an alternative proof of Proposition 2.16 of [19]. In fact, the
+proof of Proposition 4.2 is essentially based on this idea. However, because
+of the open question listed below, it is not so easy to formulate the ¯d-metric
+for tree indexed processes and so we choose a more hands on approach.
+Observe that the crucial property of ¯d-convergence which is essentially used
+in the above proof is that, for each ﬁxed k, one has uniform convergence
+of the probability measures (in, say, the total variation norm) over all sets
+which depend on at most k points. (The point is that the k points can lie
+anywhere and, hence, this is much stronger than weak convergence.)
+
+PDF PAGE 25
+DYNAMICAL STABILITY FOR IPS
+25
+Open question related to deﬁning the ¯d-metric for tree indexed processes.
+Assume that µ and ν are two automorphism invariant probability measures
+on {0,1}Td such that µ ⪯ν. Does there exist a Td-invariant coupling (X,Y )
+with X ∼µ, Y ∼ν and X ⪯Y ?
+Proposition 4.3.
+On Td, d ≥2, there exists a λp such that, for all
+λ > λp,
+µλ(C+) = 1.
+Proof.
+By Theorem 1.33(c), page 275 in [19], for suﬃciently large λ,
+µλ(η(s) = 1) ≥2/3. By [12], we have that if µλ(η(s) = 1) ≥2/3, then
+µλ(C+) > 0.
+Finally, Proposition 4.2 then implies that
+µλ(C+) = 1.
+□
+5. Relationship between ε-movability and dynamics.
+In the general setup
+we have a family of stationary Markov processes parametrized by one or two
+parameters, for example, the contact processes Ψλ (λ is here the only pa-
+rameter) or a stochastic Ising model Ψ+,β,h (β and h being the parameters).
+Many of the proofs in this paper will involve comparing the marginal dis-
+tributions of these Markov processes for two diﬀerent values of one of the
+involved parameters. Let p be the parameter and let p1 < p2. Assume that
+the marginal distributions are µp1 and µp2, respectively, and that µp1 ⪯µp2.
+Lemmas 5.1 and 5.2 show that there is a close connection between showing
+that (µp1,µp2) is downward ε-movable and that the inﬁmum of the second
+process over a short time interval is stochastically larger than the ﬁrst pro-
+cess.
+Let Ψµ be a stationary Markov process on {0,1}S with marginal distri-
+bution µ and let {Xt}t≥0 ∼Ψµ. For δ > 0 and s ∈S, deﬁne
+Xinf,δ(s) := inf
+t∈[0,δ]Xt(s),
+and denote the distribution of Xinf,δ by µinf,δ. Similarly, deﬁne
+Xsup,δ(s) := sup
+t∈[0,δ]
+Xt(s),
+and denote the distribution of Xsup,δ by µsup,δ.
+Lemma 5.1.
+Take S to be the sites of a bounded degree graph. Let
+{C(s,σ)}s∈S,σ∈{−1,1}S be the ﬂip rate intensities for a stationary Markov
+process Ψµ on {−1,1}S with marginal distribution µ. Let
+λ := sup
+(s,σ)
+C(s,σ).
+
+PDF PAGE 26
+26
+E. I. BROMAN AND J. E. STEIF
+For any τ > 0, if we set ε := 1 −e−λτ, we have that
+µ(−,ε) ⪯µinf,τ.
+Similarly, we get that
+µsup,τ ⪯µ(+,ε).
+Proof.
+We will prove the ﬁrst statement, the second statement follows
+by symmetry. Take τ > 0. For every s ∈S, associate an independent Poisson
+process with parameter λ. Deﬁne {(X1
+t ,X2
+t )}t≥0 in the following way. Let
+X1
+0 ≡X2
+0 ∼µ, and take t′ to be an arrival time for the Poisson process of a
+site s. For i ∈{1,2}, let Xi
+t′,−and Xi
+t′,+ denote the conﬁgurations before and
+after the arrival. We let X1
+t′,+(s) ̸= X1
+t′,−(s) with probability C(s,X1
+t′,−)/λ
+and we let X2
+t′,+(s) = 0 and ﬁnally, we let X1
+t′,+(S \s) ≡X1
+t′,−(S \s), X2
+t′,+(S \
+s) ≡X2
+t′,−(S \ s). Do this independently for all arrival times for all Poisson
+processes of all sites. Observe that once X2
+t (s) is 0, it remains so. Note also
+that X1
+τ ∼µ, X2
+τ ∼µ(−,ε). Furthermore, if X1
+t (s) = 0 for some t ∈[0,τ], the
+construction guarantees that X2
+τ (s) = 0 and, therefore, X2
+τ ⪯X1
+inf,τ ∼µinf,τ.
+□
+Lemma 5.2.
+Take S to be the sites of any bounded degree graph. Let
+{C(s,σ)}s∈S,σ∈{−1,1}S be the ﬂip rate intensities of a stationary Markov pro-
+cess Ψµ on {−1,1}S with marginal distribution µ. Deﬁne
+λ1 :=
+inf
+s,σ : σ(s)=1 C(s,σ).
+If λ1 > 0, then for any 0 < ε < 1, if we set τ := −log(1−ε)
+λ1
+, we have that
+µinf,τ ⪯µ(−,ε).
+Similarly, deﬁning λ2 := infs,σ : σ(s)=0 C(s,σ), if λ2 > 0, then for any 0 < ε <
+1, if we set τ := −log(1−ε)
+λ2
+, we have that
+µ(+,ε) ⪯µsup,τ.
+Proof.
+We will prove the ﬁrst statement, the second statement follows
+by symmetry. For every s ∈S, associate an independent Poisson process
+with parameter λ := sup(s,σ) C(s,σ). Next, let {Us,k}s∈S,k≥1 be independent
+uniform [0,1] random variables also independent of the Poisson processes. If
+t′ is an arrival time for the Poisson process at site s, we write Us,t′ for Us,k,
+where k is such that t′ is the time of the kth arrival of the Poisson process
+at site s. Deﬁne {(X1
+t ,X2
+t )}t≥0 in the following way. Let X1
+0 ≡X2
+0 ∼µ, and
+take t′ to be an arrival time for the Poisson process of a site s. We let
+X1
+t′,+(s) ̸= X1
+t′,−(s) if Us,t′ ≤C(s,X1
+t′,−)/λ. Furthermore, we let X2
+t′,+(s) = 0
+
+PDF PAGE 27
+DYNAMICAL STABILITY FOR IPS
+27
+if Us,t′ ≤λ1/λ or X2
+t′,−(s) = 0, and ﬁnally, we let X1
+t′,+(S \ s) ≡X1
+t′,−(S \ s),
+X2
+t′,+(S \ s) ≡X2
+t′,−(S \ s). Do this independently for all arrival times for all
+Poisson processes of all sites. Clearly, X1
+τ ∼µ and X2
+τ ∼µ(−,ε). Furthermore,
+if X2
+τ (s) = 0, then either X1
+0(s) = X2
+0(s) = 0 or there exists a t ∈[0,τ] such
+that t is an arrival time for the Poisson process associated to s and Us,t ≤
+λ1/λ. Since λ1 ≤C(s,X1
+t−) if X1
+t−(s) = 1, we get that either X1
+t+(s) or X1
+t−(s)
+is 0 and, therefore, X1
+inf,τ ⪯X2
+τ .
+□
+To illustrate why the condition λ1 > 0 of Lemma 5.2 is needed, consider
+the case µ = πp for some p > 0. With ε > 0, if we assume the trivial dynamics
+C(s,σ) = 0 for all s,σ, we will of course not have that µinf,τ ⪯µ(−,ε) for any
+τ > 0.
+6. Proof of Theorem 1.9.
+Take λ > λp and let λ′ = (λ + λp)/2. By The-
+orem 1.11, there exists an ε > 0 such that (µλ′,µλ) is downward ε-movable.
+Lemma 5.1 gives us that there exists a τ > 0 such that µ(−,ε)
+λ
+⪯µλ,inf,τ and,
+hence, that µλ′ ⪯µλ,inf,τ. Therefore, since C+ is an increasing event and
+λ′ > λp, we have that
+1 = µλ′(C+) ≤µλ,inf,τ(C+)
+and so
+Ψλ(C+
+t ∀t ∈[0,τ]) = 1.
+The theorem now follows from countable additivity.
+□
+7. Proof of Theorem 1.1.
+In this section we will deal with stationary
+distributions for interacting particle systems which are monotone in the
+sense of Deﬁnition 2.2.
+Let G = (S,E) be a countable connected locally ﬁnite graph and let Λ ⊆
+S be connected and |Λ| < ∞. Let {µp
+Λ}p∈I, where I ⊆R be a family of
+probability measures on {−1,1}Λ such that
+µp1
+Λ ⪯µp2
+Λ
+∀p1 ≤p2.
+Assume that there exist stationary Markov processes Ψp
+Λ governed by ﬂip
+rate intensities {Cp,Λ(s,σ)}s∈Λ,σ∈{−1,1}Λ and with marginal distributions µp
+Λ.
+Furthermore, assume that there exists limiting distributions Ψp of Ψp
+Λ and
+µp of µp
+Λ as Λ ↑S. Assume that µp
+Λ are monotone for every p and Λ. For
+p1 < p2, let
+AΛ,p1,p2 :=
+inf
+s∈Λ
+ξ∈{−1,1}Λ\s
+[µp2
+Λ (σ(s) = 1|σ(Λ \ s) ≡ξ) −µp1
+Λ (σ(s) = 1|σ(Λ \ s) ≡ξ)]
+
+PDF PAGE 28
+28
+E. I. BROMAN AND J. E. STEIF
+and assume that, for all p1 < p2,
+inf
+Λ⊆S AΛ,p1,p2 > 0.
+For ﬁxed p1 < p2, there exists by Proposition 3.4 an ε > 0 such that (µp1,µp2)
+is both upward and downward ε-movable. Next, by Lemma 5.1, there exists
+a τ > 0 such that
+µp2,(−,ε) ⪯µp2
+inf,τ,
+and therefore,
+µp1 ⪯µp2
+inf,τ.
+(31)
+Theorem 7.1.
+Consider the setup just described. Let A be an increasing
+event on {−1,1}S and let At be the event that A occurs at time t.
+(1) Let a ∈R. If
+µp(A) = 1
+for all p ∈I with p > a, then
+Ψp(At occurs for every t) = 1
+for all p ∈I with p > a.
+(2) Let a ∈R. If
+µp(A) = 0
+for all p ∈I with p < a, then
+Ψp(At occurs for some t) = 0
+for all p ∈I with p < a.
+Proof.
+We prove only (1), as (2) is proved in an identical way. Take
+p > a and let p2 = (p + a)/2. By the argument leading toward (31), there
+exists τ > 0 such that
+µp2(A) ≤µp
+inf,τ(A).
+By using µp2(A) = 1 and
+µp
+inf,τ(A) ≤Ψp(At occurs for every t ∈[0,τ]),
+we get by countable additivity that
+Ψp(At occurs for every t) = 1.
+□
+
+PDF PAGE 29
+DYNAMICAL STABILITY FOR IPS
+29
+We will now be able to prove Theorem 1.1 easily.
+Proof of Theorem 1.1.
+We prove only the very ﬁrst statement; all
+the other statements are proved in a similar manner. We ﬁx β ≥0 and then
+h will correspond to our parameter p in the above set up. For any Λ ⊆S,
+any s ∈Λ and any ξ ∈{−1,1}Λ\s, we have that
+µ+,β,h
+Λ
+(σ(s) = 1|σ(Λ \ s) = ξ) =
+1
+1 + e−2β(P
+t : t∼s ξ(t))−2h ,
+(32)
+where we let ξ(t) = 1 if t ∈Λc in order to take the boundary condition into
+account. It is obvious from (32) and the deﬁnition of monotonicity that
+µ+,β,h
+Λ
+is monotone for any h and Λ. Letting h1 < h2, it is immediate that
+AΛ,h1,h2 =
+inf
+s∈Λ
+ξ∈{−1,1}Λ\s
+
+1
+1 + e−2β(P
+t : t∼s ξ(t))−2h2 −
+1
+1 + e−2β(P
+t : t∼s ξ(t))−2h1
+
+> 0,
+where again ξ(t) = 1 for all t ∈Λc. It is not hard to see that this strict
+inequality must hold uniformly in Λ, that is,
+inf
+Λ⊆S AΛ,h1,h2 > 0.
+It follows that all of the assumptions of Theorem 7.1 hold and part (1) of
+that result gives us what we want.
+□
+Proof of Lemma 1.2.
+Fix β ≥0. Given any p ∈(0,1), it is easy to see
+that there exists a real number h2 such that, for all h ≥h2, for s ∈S and
+for all ξ ∈{−1,1}S\s,
+µ+,β,h(σ(s) = 1|σ(S \ s) = ξ) ≥p
+and, hence, πp ⪯µ+,β,h. It is also easy to see that there exists a real number
+h1 such that, for all h < h1, for s ∈S and for all ξ ∈{−1,1}S\s,
+µ+,β,h(σ(s) = 1|σ(S \ s) = ξ) ≤p
+and, hence, µ+,β,h ⪯πp. The statements of the lemma easily follow from
+these facts.
+□
+8. Proof of Theorem 1.3.
+In this section we will use a variant of the
+so-called Peierls argument to prove Theorem 1.3. We prove this only for Z2;
+the proof (with more complicated topological details) can be carried out for
+Zd with d ≥3.
+We will write 0
+−,t
+←→∂ΛL for the event that there exists a path of sites
+in state −1 connecting the origin to ∂ΛL := ΛL+1 \ ΛL at time t and we
+will write 0
+−,t
+←→∞for the event that there exists an inﬁnite path of sites in
+
+PDF PAGE 30
+30
+E. I. BROMAN AND J. E. STEIF
+Fig. 1.
+S1 and the edges of its dual graph. A solid circle marks a site with spin 1, while
+an empty circle has spin −1. A solid line is a present edge of the dual graph, and a dashed
+line is an absent edge of the dual graph.
+state −1 containing the origin at time t. We will also write 0
++,t
+←→∂ΛL and
+0
++,t
+←→∞for the obvious analogous events. We will ﬁrst need Lemma 8.1
+and the concept of a dual graph. The dual graph Gdual
+n
+= (Sdual
+n
+,Edual
+n
+) of
+Gn = (Sn,En) consists of the set of sites Sdual
+n
+:= {−n −1
+2,...,n + 1
+2}2 and
+Edual
+n
+, which is the set of nearest neighbor pairs of Sdual
+n
+. In this paper we
+will only work with the edges of the dual graph. An edge e ∈Edual
+n
+crosses
+one (and only one) edge f ∈En and the end sites of this edge f will be
+called the sites (of Gn) associated to e. For a random spin conﬁguration X
+on {−1,1}Sn, deﬁne a random edge conﬁguration Y on {0,1}Edual
+n
+in the
+following way:
+Y (e) =
+0,
+if X(t) = X(s),
+1,
+if X(t) ̸= X(s),
+(33)
+where s,t are the sites associated to edge e ∈Edual
+n
+. In Figure 1 we have
+drawn a conﬁguration σ ∈{−1,1}S1 and the induced edge conﬁguration on
+{0,1}Edual
+1
+.
+Assume that the sites evolve according to the ﬂip rate intensities
+{Cn(s,σ)}s∈Sn,σ∈{−1,1}Sn . Consider γ, a (ﬁnite) path of edges in the dual
+graph. Take γ′ to be a subset of γ. Assume that all edges of γ′ are absent
+and all edges of γ \γ′ are present at t = 0. We want to estimate the probabil-
+ity of the event that all edges of γ′ are present at some point (not necessarily
+all at the same time) during some time interval [0,τ]. In other words, we
+want to estimate P(Ysup,τ(γ′) ≡1|Y0(γ′) ≡0,Y0(γ \ γ′) ≡1).
+
+PDF PAGE 31
+DYNAMICAL STABILITY FOR IPS
+31
+Lemma 8.1.
+Let {Cn(s,σ)}s∈Sn,σ∈{−1,1}Sn be the ﬂip rate intensities for
+a stationary Markov process on {−1,1}Sn and let Yt be deﬁned as above. Let
+λ := sup
+(s,σ)
+Cn(s,σ) (< ∞).
+For any τ > 0 and any γ′ ⊆Edual
+n
+,
+P(Ysup,τ(γ′) ≡1|Y0(γ′) ≡0,Y0(Edual
+n
+\ γ′) ≡1) ≤(4(1 −e−λτ)1/4)|γ′|.
+Proof.
+Take τ > 0. For every s ∈Sn, associate an independent Poisson
+process with parameter λ. Deﬁne {Xt}t≥0 in the following way. Let X0 ∼µ
+and take t′ to be an arrival time for the Poisson process of a site s. We let
+Xt′,+(s) ̸= Xt′,−(s) with probability C(s,Xt′,−)/λ. Do this independently for
+all arrival times for all Poisson processes associated to the diﬀerent sites. It
+is immediate that Xτ ∼µ. Let si, i ∈{1,...,l}, be distinct sites of Sn. The
+event {Xinf,τ(si) ̸= Xsup,τ(si) ∀i ∈{1,...,l}} is contained in the event that
+every Poisson process associated to the sites si,i ∈{1,... ,l}, have had at
+least one arrival by time τ. The probability that a particular site has had
+an arrival by time τ is 1 −e−λτ. Furthermore, this event is independent of
+the Poisson processes for all other sites. Therefore,
+P(Xinf,τ(si) ̸= Xsup,τ(si) ∀i ∈{1,...,l}) ≤(1 −e−λτ)l.
+(34)
+Given γ′, consider the set of all sites associated to some edge of γ′ and let
+nγ′ be the cardinality of that set. Observe that nγ′ ≤2|γ′| and that in order
+for the event (Ysup,τ(γ′) ≡1|Y0(γ′) ≡0,Y0(Edual
+n
+\ γ′) ≡1) to occur, at least
+|γ′|/4 of the sites associated to γ′ must ﬂip during [0,τ]. This is because one
+site is associated to at most 4 edges. Denote the event that at least |γ′|/4 of
+the sites associated to γ′ ﬂip during [0,τ] by Aτ,γ′. Take ˜S to be a subset of
+the sites associated to γ′ such that | ˜S| ≥|γ′|/4. By (34), the probability that
+all of these sites ﬂip during [0,τ] is less than (1 −e−λτ)| ˜S| ≤(1 −e−λτ)|γ′|/4.
+To conclude, observe that the number of subsets of the sites associated to γ′
+is bounded by 22|γ′|. Hence, the probability of the event Aτ,γ′ must be less
+than (1 −e−λτ)|γ′|/422|γ′|, and so
+P(Ysup,τ(γ′) ≡1|Y0(γ′) ≡0,Y0(Edual
+n
+\ γ′) ≡1)
+≤P(Aτ,γ′) ≤((1 −e−λτ)1/44)|γ′|.
+□
+Proof of Theorem 1.3.
+We will prove the theorem for d = 2. For
+β > βp, choose δ1 > 0 so that β′ := β 2−δ1
+2
+> βp and, hence,
+∞
+X
+l=1
+l3l−1e−2β′l < ∞.
+
+PDF PAGE 32
+32
+E. I. BROMAN AND J. E. STEIF
+Next, choose N and ε < 1/2 such that
+4
+N ≤δ1, and ε1/N ≤e−β(2−δ1) and let
+τ be such that ε = 4(1 −e−λτ)1/4. Let δ > 0 be arbitrary and choose L so
+that
+3
+∞
+X
+l=L
+l3l−1e−2β′l < δ.
+Let EL,τ be the event that 0
+−,t
+←→∂ΛL, for some t ∈[0,τ]. Let Ψ+,β
+n
+be deﬁned
+as in Section 2.3. We will show that
+Ψ+,β
+n
+(EL,τ) < δ
+∀n > L.
+Since Ψ+,β
+n
+(EL,τ) →Ψ+,β(EL,τ) (see Section 2.3) we get that Ψ+,β(EL,τ) ≤δ.
+Letting L →∞and δ →0, we get that
+Ψ+,β(∃t ∈[0,τ]:0
+−,t
+←→∞) = 0,
+and then by countable additivity,
+Ψ+,β(∃t ≥0:0
+−,t
+←→∞) = 0.
+It is well known (see [8]) that if all sites in Λn+1 \ Λn take the value +1,
+EL,τ ⊆{∃γ ⊆Edual
+n
+,t ∈[0,τ]:|γ| ≥L,γ surrounds the origin,Yt(γ) ≡1}
+(35)
+⊆{∃γ ⊆Edual
+n
+:|γ| ≥L,γ surrounds the origin,Ysup,τ(γ) ≡1}.
+To prove Ψ+,β
+n
+(EL,τ) < δ, consider γ with |γ| = l a contour in Edual
+n
+sur-
+rounding the origin. By Lemma 8.1, P(Ysup,τ(γ′) ≡1|Y0(γ′) ≡0,Y0(γ \ γ′) ≡
+1) ≤ε|γ′| whenever γ′ ⊆γ. We get
+P(Ysup,τ(γ) ≡1)
+=
+l
+X
+k=0
+X
+γ′⊆γ
+|γ′|=k
+P(Y0(γ′) ≡0,Y0(γ \ γ′) ≡1)
+× P(Ysup,τ(γ′) ≡1|Y0(γ′) ≡0,Y0(γ \ γ′) ≡1)
+≤
+l
+X
+k=0
+X
+γ′⊆γ
+|γ′|=k
+P(Y0(γ′) ≡0,Y0(γ \ γ′) ≡1)εk
+(36)
+=
+l
+X
+k=0
+P({all edges except k of γ are present at t = 0})εk
+=
+l/N
+X
+k=0
+P({all edges except k of γ are present at t = 0})εk
+
+PDF PAGE 33
+DYNAMICAL STABILITY FOR IPS
+33
++
+l
+X
+k=l/N+1
+P({all edges except k of γ are present at t = 0})εk.
+Obviously, l/N need not be an integer, but correcting for this is trivial and
+is left for the reader.
+We need to estimate P({all edges except k of γ are present at t = 0}). For
+this purpose, deﬁne T :{−1,1}Sn →{−1,1}Sn, by
+(Tσ)(s) =
+σ(s),
+if s is not in the domain bounded by γ,
+−σ(s),
+if s is in the domain bounded by γ,
+for all σ ∈{−1,1}Sn. Let Ek = {σ : all edges except k of γ are present}. Since
+H+,β
+n
+of (6) gives a contribution of −β for adjacent pairs of equal spin and +β
+for adjacent pairs of unequal spin, we have that, for σ ∈Ek, H+,β
+n
+(Tσ) =
+H+,β
+n
+(σ) −2β(|γ| −k) + 2βk = H+,β
+n
+(σ) −2β|γ| + 4βk.
+Hence, for σ ∈Ek,
+µ+,β
+n
+(σ) = e−H+,β
+n
+(σ)
+Z
+= e−H+,β
+n
+(Tσ)−2β|γ|+4βk
+Z
+,
+and so
+µ+,β
+n
+(Ek) =
+X
+σ∈Ek
+µ+,β
+n
+(σ) = e−2βl+4βk X
+σ∈Ek
+e−H+,β
+n
+(Tσ)
+Z
+≤e−2βl+4βk
+X
+σ∈{−1,1}Sn
+e−H+,β
+n
+(Tσ)
+Z
+= e−2βl+4βk,
+where the last equality follows from T being bijective. We then get that
+l/N
+X
+k=0
+P({all edges except k of γ are present at t = 0})εk
+≤
+l/N
+X
+k=0
+e−2βl+4βkεk ≤e−2βl+4βl/N
+l/N
+X
+k=0
+εk ≤2e−2βl+4βl/N
+(37)
+≤2e−β(2−δ1)l = 2e−2β′l.
+Furthermore,
+l
+X
+k=l/N+1
+P({all edges except k of γ are present at t = 0})εk
+≤εl/N
+l
+X
+k=l/N+1
+P({all edges except k of γ are present at t = 0})
+(38)
+≤εl/N ≤e−β(2−δ1)l = e−2β′l,
+
+PDF PAGE 34
+34
+E. I. BROMAN AND J. E. STEIF
+where we use that {all edges except k of γ are present at t = 0} are disjoint
+events for diﬀerent k. Hence, (36), (37) and (38) combined give us
+P(Ysup,τ(γ) ≡1) ≤3e−2β′l
+and so by (35), for all n > L,
+Ψ+,β
+n
+(EL,τ) ≤Ψ+,β
+n
+(∃γ ⊆Edual
+n
+:|γ| ≥L,γ surrounds the origin, Ysup,τ(γ) ≡1)
+≤
+∞
+X
+l=L
+l3l−13e−2β′l < δ,
+where the second to last inequality follows from the fact that the number of
+contours around the origin of length l is at most l3l−1 (see [8]).
+□
+Remark.
+For Zd, the proof is generalized by noting that the number of
+connected surfaces of size l surrounding the origin is at most C(d)l, for some
+constant C(d). The arguments are the same but the “topological details”
+are messier.
+9. Proof of Theorem 1.5.
+We will start this subsection by presenting a
+theorem by Liggett, Schonmann and Stacey [21].
+Theorem 9.1.
+Let G = (S,E) be a graph with a countable set of sites
+in which every site has degree at most ∆≥1, and in which every ﬁnite
+connected component of G contains a site of degree strictly less than ∆. Let
+p,α,r ∈[0,1], q = 1 −p, and suppose that
+(1 −α)(1 −r)∆−1 ≥q,
+(1 −α)α∆−1 ≥q.
+If µ ∈G(p), then παr ⪯µ. In particular, if q ≤(∆−1)∆−1/∆∆, then πρ ⪯µ,
+where
+ρ =
+
+1 −
+q1/∆
+(∆−1)(∆−1)/∆
+
+(1 −(q(∆−1))1/∆).
+Here G(p) denotes the set of probability measures on {−1,1}S such that
+if µ ∈G(p), X ∼µ, then for any site s ∈S,
+P[X(s) = 1|σ({X(t):{s,t} /∈E})] ≥p
+a.s.
+Observe that when p →1 ⇒q →0 and so ρ →1. The above theorem is stated
+as the original in [21]. However, by considering the line-graph of G = (S,E),
+it can be restated in the following way.
+
+PDF PAGE 35
+DYNAMICAL STABILITY FOR IPS
+35
+Corollary 9.2.
+Let ˜G = ( ˜S, ˜E) be any countable graph of degree at
+most ∆. For each 0 < ρ < 1, there exists a 0 < p < 1, where p = p(∆,ρ) such
+that if Y ∼ν, where ν is a probability measure on the edges of ˜G such that
+for every edge e ∈˜E,
+P[Y (e) = 1|σ({Y (f):e ̸∼f})] ≥p
+a.s.,
+we have that π ˜E
+ρ ⪯ν.
+By e ̸∼f, we of course mean that the edges e and f do not have any
+endpoints in common. Here, π ˜E
+ρ is the product measure with density ρ on
+the edges of ˜G.
+Consider a graph G = (S,E) and a subgraph G′ = (S′,E′), where S′ = S
+and E′ ⊂E. Let X ∼πp on S. We declare an edge e ∈E′ to be closed if any
+of the endpoints takes the value 0 under X. Corollary 9.2 gives us that, for
+any ρ < 1, there is a p < 1 such that this method of closing edges dominates
+independent bond percolation with density ρ on E′. Observe that we can
+choose p independent of E′ since the maximal degree of E′ is bounded above
+by the maximal degree of E.
+Let (X,Y ) ∼Pp
+n, deﬁned in Section 2.5. Close every e ∈En such that
+Y (e) = 1 independently with probability ε, thus creating (X,Y (−,ε)). Com-
+pare this to closing every site in Sn independently with parameter ε′ [creating
+X(−,ε′)] and deﬁning
+Y ε′(e) =
+1,
+if Y (e) = 1 and neither one of the endpoints of e ﬂips,
+0,
+otherwise.
+By the arguments of the last paragraph, we see that, for a ﬁxed ε, there exists
+an ε′ [that we can choose independent of (X,Y ) and n] such that the ﬁrst
+way (i.e., independent bond percolation) of removing edges is stochastically
+dominated by the latter. Hence,
+Pp
+n((X,Y (−,ε)) ∈({−1,1}Sn,·)|(X,Y ))
+⪯Pp
+n((X(−,ε′),Y ε′) ∈({−1,1}Sn,·)|(X,Y )).
+By averaging over all possible (X,Y ), the next lemma follows.
+Lemma 9.3.
+With notation as above, for any ε > 0, there exists ε′ > 0
+independent of n such that
+Pp
+n((X,Y (−,ε)) ∈({−1,1}Sn,·)) ⪯Pp
+n((X(−,ε′),Y ε′) ∈({−1,1}Sn,·)).
+Observe that
+Pp
+n((X,Y (−,ε)) ∈({−1,1}Sn,·)) D= ˜νp,(−,ε)
+n
+(·)
+(39)
+
+PDF PAGE 36
+36
+E. I. BROMAN AND J. E. STEIF
+and that
+Pp
+n((X(−,ε′),Y ε′) ∈(·,{−1,1}En)) D=µ+,β,(−,ε′)
+n
+(·).
+(40)
+We are now ready to prove Theorem 1.5.
+Proof of Theorem 1.5.
+For any choice of β > βc, take p = 1 −e−2β
+and let δ ∈(0,p −pc). Now, (14) and Holley’s inequality imply that
+˜νp−δ
+n
+⪯˜νp
+n
+∀n ∈N+.
+Since, by (14), both ˜νp−δ
+n
+and ˜νp
+n are monotone, there exists by Lemma 3.3
+(it is easy to check that all other conditions of that lemma are satisﬁed) an
+ε > 0 such that
+˜νp−δ
+n
+⪯˜νp,(−,ε)
+n
+∀n ∈N+.
+(41)
+In [13] they show that the limit limn ˜νp−δ
+n
+(0 ←→∂Λn) exists and that
+lim
+n ˜νp−δ
+n
+(0 ←→∂Λn) > 0.
+(42)
+Here {0 ←→∂Λn} denotes the event that there exists a path of present
+edges connecting the origin to ∂Λn := Λn+1 \ Λn. Since {0 ←→∂Λn} is an
+increasing event on the edges, Lemma 9.3 guarantees the existence of an
+ε′ > 0 such that
+˜νp,(−,ε)
+n
+(0 ←→∂Λn)
+= Pp
+n((X,Y (−,ε)) ∈({−1,1}Sn,0 ←→∂Λn))
+≤Pp
+n((X(−,ε′),Y ε′) ∈({−1,1}Sn,0 ←→∂Λn))
+∀n ∈N+.
+If there exists a path of present edges connecting the origin to the boundary
+∂Λn under Y , all the sites of this path must have the value 1 under X.
+Similarly for (X(−,ε′),Y ε′), if there exists a path of present edges connecting
+the origin to the boundary ∂Λn under Y ε′, all the sites of this path must
+have the value 1 under X(−,ε′). Hence,
+Pp
+n((X(−,ε′),Y ε′) ∈({−1,1}Sn,0 ←→∂Λn))
+= Pp
+n((X(−,ε′),Y ε′) ∈(0
++
+←→∂Λn,0 ←→∂Λn))
+≤Pp
+n((X(−,ε′),Y ε′) ∈(0
++
+←→∂Λn,{0,1}En))
+= µ+,β,(−,ε′)
+n
+(0
++
+←→∂Λn).
+Of course,
+µ+,β,(−,ε′)
+n
+(0
++
+←→∂Λn) ≤µ+,β,(−,ε′)
+n
+(0
++
+←→∂ΛL)
+∀L < n.
+
+PDF PAGE 37
+DYNAMICAL STABILITY FOR IPS
+37
+Therefore, for any L, we have that
+0 < lim
+n ˜νp−δ
+n
+(0 ←→∂Λn)
+≤lim
+n µ+,β,(−,ε′)
+n
+(0
++
+←→∂ΛL) = µ+,β,(−,ε′)(0
++
+←→∂ΛL),
+and so
+0 < lim
+L µ+,β,(−,ε′)(0
++
+←→∂ΛL) = µ+,β,(−,ε′)(0
++
+←→∞).
+The limit in L exists since {0
++
+←→∂ΛL2} ⊆{0
++
+←→∂ΛL1} for L1 ≤L2. Since
+µ+,β is ergodic (see [19], pages 143 and 195), it follows that µ+,β,(−,ε′) must
+also be ergodic. This is because µ+,β,(−,ε′) can be expressed as a function of
+two independent processes, one being µ+,β and the other a product measure.
+We conclude that
+µ+,β,(−,ε′)(C+) = 1.
+(43)
+By Lemma 5.1, there exists a τ > 0 such that
+µ+,β,(−,ε′) ⪯µ+,β
+inf,τ
+and therefore,
+µ+,β
+inf,τ(C+) = 1.
+Therefore,
+Ψ+,β(C+
+t occurs for every t ∈[0,τ]) = 1.
+Finally, using countable additivity,
+Ψ+,β(C+
+t occurs for every t) = 1.
+□
+10. Proof of Theorem 1.4.
+The aim of this section is to prove Theorem
+1.4. For that we will use Theorem 1.5 and Lemma 10.1. We will not prove
+Lemma 10.1 since it follows immediately from the proof of Lemma 11.12 in
+[10] due to Y. Zhang.
+A probability measure µ on {−1,1}S is said to have the ﬁnite energy
+property if all conditional probabilities on ﬁnite sets are strictly positive.
+Lemma 10.1.
+Take µ to be any probability measure on {−1,1}Z2 which
+has positive correlations and the ﬁnite energy property. Assume further that
+µ is invariant under translations, rotations and reﬂections in the coordinate
+axes. If µ(C+) = 1, then µ(C−) = 0.
+
+PDF PAGE 38
+38
+E. I. BROMAN AND J. E. STEIF
+Proof of Theorem 1.4.
+Fix β > βc. By (43), there exists ε > 0 such
+that
+µ+,β,(−,ε)(C+) = 1.
+Since µ+,β and π1−ε both have positive correlations, it follows that µ+,β,(−,ε)
+has positive correlations. This is because (see [19], page 78) the product of
+two probability measures which have positive correlations also has positive
+correlations. Furthermore, a collection of increasing functions of random
+variables which have positive correlations also has positive correlations. In
+addition, the ﬁnite energy property is easily seen to hold for µ+,β,(−,ε). Using
+this, we can by Lemma 10.1 conclude that
+µ+,β,(−,ε)(C−) = 0.
+By Lemma 5.1, there exists a τ > 0 such that µ+,β,(−,ε) ⪯µ+,β
+inf,τ and hence,
+µ+,β
+inf,τ(C−) = 0.
+It follows that
+Ψ+,β(∃t ∈[0,τ]:C−
+t occurs) = 0,
+and by countable additivity, we conclude
+Ψ+,β(∃t ≥0:C−
+t occurs) = 0.
+□
+Acknowledgment.
+We thank the referee for a very careful reading and
+for providing a number of suggestions.
+REFERENCES
+[1] Aizenman, M., Bricmont, J. and Lebowitz, J. L. (1987). Percolation of the mi-
+nority spins in high-dimensional ising models. J. Statist. Phys. 49 859.
+[2] van den Berg, J., Meester, R. and White, D. G. (1997). Dynamic Boolean
+models. Stochastic Process. Appl. 69 247–257. MR1472953
+[3] Bricmont, J., Lebowitz, J. L. and Maes, C. (1987). Percolation in strongly cor-
+related systems: The massless Gaussian ﬁeld. J. Statist. Phys. 48 1249–1268.
+MR0914444
+[4] Broman, E. I., H¨aggstr¨om, O. and Steif, J. E. (2006). Reﬁnements of stochastic
+domination. Probab. Theory Related Fields. To appear.
+[5] Coniglio, A., Nappi, C. R., Peruggi, F. and Russo, L. (1976). Percolation
+and phase transitions in the Ising model. Comm. Math. Phys. 51 315–323.
+MR0426745
+[6] Durrett, R. (1988). Lecture Notes on Particle Systems and Percolation. Wadsworth
+and Brooks/Cole Advanced Books and Software, Paciﬁc Grove, CA. MR0940469
+[7] Fortuin, C. M., Kasteleyn, P. W. and Ginibre, J. (1971). Correlation inequali-
+ties on some partially ordered sets. Comm. Math. Phys. 22 89–103. MR0309498
+[8] Georgii, H.-O. (1988). Gibbs Measures and Phase Transitions. de Gruyter, Berlin.
+MR0956646
+
+PDF PAGE 39
+DYNAMICAL STABILITY FOR IPS
+39
+[9] Georgii, H.-O., H¨aggstr¨om, O. and Maes, C. (2001). The random geometry of
+equilibrium phases. In Phase Transitions and Critical Phenomena 18 (C. Domb
+and J. L. Lebowitz, eds.) 1–142. Academic Press, San Diego, CA. MR2014387
+[10] Grimmett, G. (1999). Percolation, 2nd ed. Springer, Berlin. MR1707339
+[11] H¨aggstr¨om, O. (1996). The random-cluster model on a homogeneous tree. Probab.
+Theory Related Fields 104 231–253. MR1373377
+[12] H¨aggstr¨om, O. (1997). Inﬁnite clusters in dependent automorphism invariant per-
+colation on trees. Ann. Probab. 25 1423–1436. MR1457624
+[13] H¨aggstr¨om, O. (1998). Random-cluster representations in the study of phase tran-
+sitions. Markov Process. Related Fields 4 275–321. MR1670023
+[14] H¨aggstr¨om, O. (2000). Markov random ﬁelds and percolation on general graphs.
+Adv. in Appl. Probab. 32 39–66. MR1765172
+[15] H¨aggstr¨om, O. Peres, Y. and Steif, J. E. (1997). Dynamical percolation. Ann.
+Inst. H. Poincare Probab. Statist. 33 497–528. MR1465800
+[16] Higuchi, Y. (1993). Coexistence of inﬁnite (∗)-clusters. II. Ising percolation in two
+dimensions. Probab. Theory Related Fields 97 1–33. MR1240714
+[17] Higuchi, Y. (1993). A sharp transition for the two-dimensional Ising percolation.
+Probab. Theory Related Fields 97 489–514. MR1246977
+[18] Holley, R. (1974). Remarks on the FKG inequalities. Comm. Math. Phys. 36 227–
+231. MR0341552
+[19] Liggett,
+T.
+M. (1985).
+Interacting Particle Systems.
+Springer, New York.
+MR0776231
+[20] Liggett, T. M. (1994). Survival and coexistence in interacting particle systems.
+In Probability and Phase Transition (G. Grimmett, ed.) 209–226. Kluwer, Dor-
+drecht. MR1283183
+[21] Liggett, T. M., Schonmann, R. H. and Stacey, A. M. (1997). Domination by
+product measures. Ann. Probab. 25 71–95. MR1428500
+[22] Liggett, T. M. and Steif, J. E. (2006). Stochastic domination: The contact pro-
+cess, Ising models and FKG measures. Ann. Inst. H. Poincar´e Probab. Statist.
+To appear.
+[23] Schramm, O. and Steif, J. E. (2005). Quantitative noise sensitivity and exceptional
+times for percolation. Preprint.
+[24] Shields, P. C. (1996). The Ergodic Theory of Discrete Sample Paths. Amer. Math.
+Soc., Providence, RI. MR1400225
+Department of Mathematics
+Chalmers University of Technology
+412 96 Gothenburg
+Sweden
+E-mail: broman@math.chalmers.se
+steif@math.chalmers.se
+URL: www.math.chalmers.se/˜broman
+www.math.chalmers.se/˜steif

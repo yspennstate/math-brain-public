@@ -1,0 +1,216 @@
+{
+  "status": "PASS",
+  "full_FEI": "OPEN",
+  "proof_scope": "Analytic theorems in REPORT.md; exact finite self-checks here, not an independent audit or formalization.",
+  "actual_boolean_checks": [
+    {
+      "m": 2,
+      "truth_table_size": 16,
+      "signed_Walsh_coefficients_checked": 16
+    },
+    {
+      "m": 3,
+      "truth_table_size": 64,
+      "signed_Walsh_coefficients_checked": 64
+    },
+    {
+      "m": 4,
+      "truth_table_size": 256,
+      "signed_Walsh_coefficients_checked": 256
+    },
+    {
+      "m": 5,
+      "truth_table_size": 1024,
+      "signed_Walsh_coefficients_checked": 1024
+    },
+    {
+      "m": 6,
+      "truth_table_size": 4096,
+      "signed_Walsh_coefficients_checked": 4096
+    }
+  ],
+  "exhaustive_surgery_checks": [
+    {
+      "n": 2,
+      "zero_supported_sources_checked": 8,
+      "flip_point": 0
+    },
+    {
+      "n": 3,
+      "zero_supported_sources_checked": 128,
+      "flip_point": 0
+    },
+    {
+      "n": 4,
+      "zero_supported_sources_checked": 31872,
+      "flip_point": 0
+    }
+  ],
+  "exact_correlations": [
+    {
+      "kind": "support_conditioned",
+      "m": 2,
+      "shifts": 3
+    },
+    {
+      "kind": "support_conditioned",
+      "m": 3,
+      "shifts": 7
+    },
+    {
+      "kind": "support_conditioned",
+      "m": 4,
+      "shifts": 15
+    },
+    {
+      "kind": "support_conditioned",
+      "m": 5,
+      "shifts": 31
+    },
+    {
+      "kind": "support_conditioned",
+      "m": 6,
+      "shifts": 63
+    },
+    {
+      "kind": "unconditioned_plus_completion",
+      "m": 2,
+      "shifts": 15
+    },
+    {
+      "kind": "unconditioned_plus_completion",
+      "m": 3,
+      "shifts": 63
+    },
+    {
+      "kind": "unconditioned_plus_completion",
+      "m": 4,
+      "shifts": 255
+    }
+  ],
+  "tensor_certificate": {
+    "base_Z": "319/256",
+    "base_L_interval": [
+      1.0772085933443496,
+      1.0772085933443498
+    ],
+    "base_K_interval": [
+      0.21691718668869928,
+      0.2169171866886993
+    ],
+    "k": 32,
+    "(L_k/4-K_k)/I_k_interval": [
+      328.7523743404644,
+      328.75237434046454
+    ],
+    "rigorous_lower_bound": 328,
+    "balanced_suspension_ratio_interval": [
+      315.6022793668459,
+      315.60227936684595
+    ],
+    "suspended_rigorous_lower_bound": 315
+  },
+  "tensor_entropy_identity_checks": [
+    2,
+    3
+  ],
+  "asymptotic_examples_FLOAT_NOT_CERTIFICATES": [
+    {
+      "m": 3,
+      "p": "1/4",
+      "I": 1.5,
+      "H_over_I": 1.4779447911257997,
+      "Kshape_over_I": 0.4110238964854567,
+      "support_KL_over_I": 1.3561438102252754,
+      "conditioned_T_over_I": 0.6042383046492131,
+      "completed_T_quarter_minus_Kshape_over_I": -0.06956101656053774,
+      "Z_conditioned": 1.430704,
+      "Z_completed": 13.540266990661621
+    },
+    {
+      "m": 4,
+      "p": "1/8",
+      "I": 1.0,
+      "H_over_I": 1.7012377755992936,
+      "Kshape_over_I": 1.2227025290963756,
+      "support_KL_over_I": 1.4245752409011012,
+      "conditioned_T_over_I": 0.7975760348379841,
+      "completed_T_quarter_minus_Kshape_over_I": -0.3897058639103663,
+      "Z_conditioned": 1.244749880527667,
+      "Z_completed": 12.057112360402186
+    },
+    {
+      "m": 6,
+      "p": "1/32",
+      "I": 0.375,
+      "H_over_I": 1.8698820089490271,
+      "Kshape_over_I": 3.108321709378521,
+      "support_KL_over_I": 1.4417106596793292,
+      "conditioned_T_over_I": 0.5045982227485072,
+      "completed_T_quarter_minus_Kshape_over_I": -0.5687672449458742,
+      "Z_conditioned": 1.0244080860759668,
+      "Z_completed": 3.5032118357433886
+    },
+    {
+      "m": 8,
+      "p": "1/128",
+      "I": 0.125,
+      "H_over_I": 1.9213912959489678,
+      "Kshape_over_I": 5.073017838738337,
+      "support_KL_over_I": 1.4426356452476794,
+      "conditioned_T_over_I": 0.18941933275049058,
+      "completed_T_quarter_minus_Kshape_over_I": -0.4129140831144804,
+      "Z_conditioned": 1.0019803167249381,
+      "Z_completed": 1.6017464583641192
+    },
+    {
+      "m": 12,
+      "p": "1/2048",
+      "I": 0.01171875,
+      "H_over_I": 1.9530222833667514,
+      "Kshape_over_I": 9.046625668300807,
+      "support_KL_over_I": 1.442694811410745,
+      "conditioned_T_over_I": 0.019548536866564235,
+      "completed_T_quarter_minus_Kshape_over_I": -0.09886739799969628,
+      "Z_conditioned": 1.0000114551501034,
+      "Z_completed": 1.0477790051844844
+    },
+    {
+      "m": 16,
+      "p": "1/32768",
+      "I": 0.0009765625,
+      "H_over_I": 1.965135702268907,
+      "Kshape_over_I": 13.034842284599108,
+      "support_KL_over_I": 1.442695039993179,
+      "conditioned_T_over_I": 0.0017090831175531904,
+      "completed_T_quarter_minus_Kshape_over_I": -0.03976944192048748,
+      "Z_conditioned": 1.0000000596082794,
+      "Z_completed": 1.0039128138229911
+    },
+    {
+      "m": 24,
+      "p": "1/8388608",
+      "I": 5.7220458984375e-06,
+      "H_over_I": 1.9767788356274858,
+      "Kshape_over_I": 21.023221092339526,
+      "support_KL_over_I": 1.4426950408889496,
+      "conditioned_T_over_I": 1.0490419899544073e-05,
+      "completed_T_quarter_minus_Kshape_over_I": -0.02325277619568548,
+      "Z_conditioned": 1.0000000000013642,
+      "Z_completed": 1.0000228884209734
+    },
+    {
+      "m": 32,
+      "p": "1/2147483648",
+      "I": 2.9802322387695312e-08,
+      "H_over_I": 1.9825842375592708,
+      "Kshape_over_I": 29.017416337883937,
+      "support_KL_over_I": 1.4426950415607713,
+      "conditioned_T_over_I": 5.5879354527718924e-08,
+      "completed_T_quarter_minus_Kshape_over_I": -0.017416510079016234,
+      "Z_conditioned": 1.0,
+      "Z_completed": 1.0000001192092962
+    }
+  ],
+  "script_sha256": "2635bf54aab7a0f6b9da28ed9a27839015fc9687034a4997b5d17aeeac515272"
+}

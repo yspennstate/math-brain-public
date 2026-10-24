@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "account": "account02",
+  "slot": "B16",
+  "run_id": "B16-20260924T093003Z-auto11",
+  "source_control_commit_initial": "3737a994c446618e615308e826ad008660451597",
+  "source_control_commit_refresh": "178dda7764dfcfaa517f134bc89d418d67580ea2",
+  "required_pinned_math_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "files_read": [
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+    ],
+    "completed_result_applied": "two-dimensional product-projection joint density cap; used as a joint cap only, never as projected independence"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "partner_result_applied": {
+    "account_slot": "account03/B16",
+    "report_commit": "bc397f473db245b56f3a4a29a8af75b2562d1967",
+    "checker_commit": "fb28047260afcaa64675fef64af6457e2815af2d",
+    "result": "r45 rank-one shared-hyperbolic overlap compiler and its named genuinely two-dimensional same-bank overlap gap"
+  },
+  "new_result": {
+    "id": "QFORM-DEPENDENTPAIR-NULLSCALAR-DETERMINANT-v1",
+    "statement": "If Z in R^2 has arbitrary joint density cap M, V is independent with scalar density cap N, and B=[[C,ell],[ell^T,0]] is invertible, then for arbitrary affine terms Q=Z^T C Z+2V ell^T Z+affine has essential density <=6(MN)^(2/3)|det B|^(-1/3).",
+    "product_projection_corollary": "For two projections from one original product bank with Gram G and one scalar projection from a disjoint bank of coefficient norm tau, density <=12[|det B|det(G)tau^2]^(-1/3).",
+    "target_consequence": "For exact rank three A=TBT^T in this source-separated null-pivot carrier class, three nonzero eigenvalues |lambda|>=1 imply density <=12.",
+    "partner_application": "For partner r45 strict family Q*=3S^2+6(S+U)V with S,U an orthonormal dependent product projection pair and V a unit disjoint projection, det B*=-27 and the global bound is 4."
+  },
+  "interface_obstruction": {
+    "id": "QFORM-PAIRCAP-PLUS-NONZERO-SCALARPIVOT-CAPSONLY-FALSE-v1",
+    "statement": "There exist a joint pair density cap one and an independent scalar density cap one for which Q=S^2-U^2+V^2 has p_Q(delta)=delta^(-1/2). This refutes a caps-only extension to nonzero separated-scalar curvature, but is not a QFORM counterexample because the dependent pair is not shown to be a product projection."
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "db3f2d55cd1c6ed9860bc92f6cd4101d8c3daa8d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/B16-20260924T093003Z-auto11/REPORT.md",
+    "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/B16-20260924T093003Z-auto11/CHECK_OUTPUT.txt",
+    "check_status": "PASS"
+  },
+  "handoff": {
+    "commit": "7f70cfa903b3843d4c85ec9a8b6129476d8aa3e8",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B16/B16-20260924T093003Z-auto11.md"
+  },
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY",
+  "first_unresolved_implication": "QFORM-SHAREDBANK-NONZERO-SCALARPIVOT-PRODUCTTRANSDUCER-v1",
+  "next_step": "Retain additional original-product provenance through a nonzero separated scalar square using Fresnel before projection conditioning, a second source-separated innovation, or a definite projected-plane exit; pair-density caps alone are insufficient.",
+  "verified_brain_repository_retrieval": true,
+  "receiver_write_and_readback": true,
+  "native_learned_memory_connectivity": "UNKNOWN"
+}

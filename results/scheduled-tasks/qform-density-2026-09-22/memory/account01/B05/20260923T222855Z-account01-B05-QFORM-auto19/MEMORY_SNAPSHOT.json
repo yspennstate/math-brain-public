@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B05",
+  "run_id": "20260923T222855Z-account01-B05-QFORM-auto19",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit": "38be5d78b2857ad1d372426b4b7b6e93061d63c4",
+  "control_revision": "2026-09-22.15",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "f3ddb91316b71f90bcb93669af6933f09dfa4ab9",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T222855Z-account01-B05-QFORM-auto19/REPORT.md",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B05/20260923T222855Z-account01-B05-QFORM-auto19.md",
+  "claim_id": "QFORM-SHARED-REMAINDER-DISJOINT-SQUARE-v1",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity": "OPEN",
+  "branch_continuity": "C0_PROVED",
+  "result": {
+    "theorem": "For Q=2H A(Z)+R(Z)+gamma Y^2+2W(Z)Y with H,Y independent and independent of Z, f_H<=m_H, f_Y<=m_Y, A(Z) density cap M_A, arbitrary same-source R,W and gamma!=0, p_Q is C0 and ||p_Q||_inf <=4sqrt(2)m_Y sqrt(m_H M_A)|gamma|^-1/2.",
+    "all_p": "For every p>2, ||p_Q||_inf <=p 2^(1/p)((p-1)/(p-2))^((p-1)/p)(m_HM_A)^(1-1/p)m_Y^(2/p)|gamma|^-1/p.",
+    "canonical_family": "Q_b=2HL+2bLP+V^2, L=(X1+X4)/sqrt2, P=(X2+X5)/sqrt2, V=(X3+X6)/sqrt2 has target spectrum {0,1,+sqrt(1+b^2),-sqrt(1+b^2)} and ||p_Qb||_inf<=4*2^(5/4)<9.514 uniformly in b.",
+    "partner_use": "account02/B05 punctured theorem on the same family gives the explicit logarithmic bound 1/2+sqrt2[2+sqrt2+log2^+(C_T^2(2+2sqrt2)^2/(32|b|))] for b!=0.",
+    "missing_factor": "support incidence between hub multiplier and transverse original square carrier, rather than the shear coefficient alone"
+  },
+  "next_implication": "QFORM-INFINITESIMAL-SQUARE-CARRIER-OVERLAP-GLUE-v1",
+  "failed_or_forbidden_shortcuts_retained": [
+    "law-uniform pointwise quadratic van der Corput",
+    "arbitrary-joint coarea cap",
+    "conditional projection-density cap",
+    "unrestricted fiber supremum",
+    "post-rotation independence",
+    "small coefficient treated as small random error without moments"
+  ],
+  "native_brain_ingestion_verified": false
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "fei-review-claims/2",
+  "stream": "B19",
+  "primary_packet_id": "A094",
+  "target_packet_id": "A023",
+  "review_claims": [
+    {
+      "claim_id": "B19-REVIEW-B05_ODD_SURGERY_PAYMENT_v1",
+      "target_claim_id": "B05_ODD_SURGERY_PAYMENT_v1",
+      "verdict": "ACCEPTED_EXACT_SCOPE",
+      "statement": "For every bent Boolean g on even k>=10, every triple truth-table surgery h, and every fresh d-bit one-address selector with d>=1, J<327 I_ctl.",
+      "independence": "No proof repair was required; checker and derivation were independently written.",
+      "scope_limit": "One-node retained-child inequality only; not a terminal FEI theorem, restriction-closed class, or changing-core hierarchy theorem.",
+      "evidence": ["REVIEW_PROOF.tex", "CHECK.py", "CHECK.out"]
+    },
+    {
+      "claim_id": "B19-REVIEW-B05_ODD_M_SPARSE_PAYMENT_v1",
+      "target_claim_id": "B05_ODD_M_SPARSE_PAYMENT_v1",
+      "verdict": "ACCEPTED_EXACT_SCOPE",
+      "statement": "For odd m with m*2^(-k/2)<=1/32, J<=[1+99m/(2ln2)+4log2(m)]I_ctl.",
+      "scope_limit": "The constant grows as O(m) and is not a universal surgery-count payment.",
+      "evidence": ["REVIEW_PROOF.tex", "CHECK.py", "CHECK.out"]
+    },
+    {
+      "claim_id": "B19-REVIEW-B05_ODD_PARITY_REFUND_v1",
+      "target_claim_id": "B05_ODD_PARITY_REFUND_v1",
+      "verdict": "ACCEPTED_EXACT_SCOPE",
+      "statement": "Odd surgery count forces every difference-spectrum atom to be nonzero and gives K<=8m*2^-k*log2(m).",
+      "scope_limit": "The argument does not apply to even m, where zero atoms may occur.",
+      "evidence": ["REVIEW_PROOF.tex", "CHECK.py", "CHECK.out"]
+    }
+  ],
+  "minor_source_issue": "Equation (16) has the harmless TeX token '1.1,quad' instead of '1.1,\\quad'.",
+  "full_fei_status": "OPEN"
+}

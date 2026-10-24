@@ -1,0 +1,185 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w582",
+  "bundle_slug": "c0044-sharp-harmonic-and-drift-boundaries-20261010",
+  "entries": [
+    {
+      "key": "target",
+      "namespace": "probability.random_environment",
+      "logical_name": "directional-zero-one-iid-elliptic-rwre-question-c0044",
+      "kind": "concept",
+      "title": "C0044 target and its unresolved proof status",
+      "statement": "Historical question, current openness UNKNOWN: for d>=3, iid nearest-neighbor transition rows on Z^d satisfying strict ellipticity, and each fixed nonzero deterministic l, is the annealed probability of A_l={lim_n X_n dot l=+infinity} in {0,1}? Strict ellipticity means every transition is positive almost surely; no common positive lower bound is required. The source is Drewitz-Ramirez, arXiv:1309.2589, Open question 3.2. Recent claims have not passed the complete-proof and independent-review gates in this packet.",
+      "proof_text": null,
+      "assumptions": [
+        "d>=3",
+        "iid transition rows",
+        "strict ellipticity",
+        "fixed nonzero direction"
+      ],
+      "domain": "probability theory; random walks in random environment",
+      "source": {
+        "source_id": "campaign:w582:C0044:target",
+        "url": "file:///~/brain_workers/w582/ATTEMPT.md#target",
+        "revision": "2026-10-10-author-derivation-review-pending",
+        "license": "owner-own-work (campaign derivation; novelty not claimed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "floor",
+      "namespace": "probability.random_environment",
+      "logical_name": "quenched-directional-escape-uniform-floor-forces-certainty",
+      "kind": "lemma",
+      "title": "Uniform escape floor forces probability one (draft review packet)",
+      "statement": "Author-derived scoped result; review/provenance gates tracked separately. Fix a deterministic nearest-neighbor environment on Z^d with strictly positive transition probabilities, and a nonzero direction l. Put A_l={lim_n X_n dot l=+infinity} and q(x)=P_x^omega(A_l). If inf_{x in Z^d} q(x)>0, then q(x)=1 for every x.",
+      "proof_text": "the precise uniform-floor bridge\n\nFix a deterministic nearest-neighbor environment omega on Z^d. For a nonzero direction l let A_l be the event that X_n dot l tends to positive infinity, and let q(x)=P_x^omega(A_l). Assume inf_x q(x)=c>0. Then q(x)=1 for every starting site x.\n\nProof. With F_n the natural path filtration, removal of the first n steps does not change A_l. The Markov property consequently gives P_x^omega(A_l | F_n)=q(X_n). Since A_l belongs to F_infinity, Levy's upward theorem gives q(X_n) -> 1_{A_l} almost surely. Each q(X_n)>=c. The limit cannot be zero, hence A_l has probability one. This proves the claim for any x. Ellipticity is unnecessary for this particular implication.\n\nSingle hardest gap at this checkpoint: infer a path-uniform positive escape floor (or another exclusion of convergence to zero) from the exact iid environment assumptions without assuming the conclusion. A pointwise positive harmonic q is not automatically bounded away from zero on an infinite state space.\n\nStatus: elementary proved special case, independent mathematical review pending. No claim that C0044 is solved or that this lemma is novel.",
+      "assumptions": [
+        "time-homogeneous Markov chain in a fixed environment",
+        "A_l is invariant under removal of any finite path prefix",
+        "inf_x q(x)>0"
+      ],
+      "domain": "probability theory; random walks in random environment",
+      "source": {
+        "source_id": "campaign:w582:C0044:floor",
+        "url": "file:///~/brain_workers/w582/ATTEMPT.md#l1",
+        "revision": "2026-10-10-author-derivation-review-pending",
+        "license": "owner-own-work (campaign derivation; novelty not claimed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "trichotomy",
+      "namespace": "probability.random_environment",
+      "logical_name": "quenched-directional-escape-harmonic-trichotomy",
+      "kind": "lemma",
+      "title": "Quenched harmonic trichotomy and spatial positivity (draft review packet)",
+      "statement": "Author-derived scoped result; review/provenance gates tracked separately. For a fixed elliptic nearest-neighbor environment and a fixed nonzero direction, q(x)=P_x^omega(A_l) is either identically 0, identically 1, or strictly between 0 and 1 everywhere with inf_x q=0 and sup_x q=1. Uniform ellipticity only supplies the distance-dependent bound q(x)>=kappa^{|x-y|_1}q(y). Under a stationary ergodic law with 0<E[q(0)]<1 the third alternative holds almost surely.",
+      "proof_text": "exact harmonic boundary and finite-path comparison\n\nAssume the fixed nearest-neighbor environment is elliptic, so its walk is irreducible. For any finite path x=x_0,...,x_r=y with path probability p>0, the Markov property gives q(x)>=p q(y). Apply the same argument to the complementary tail event to obtain 1-q(x)>=p(1-q(y)). Thus positivity of q, and positivity of 1-q, propagate to every starting site. Under uniform ellipticity kappa, a shortest path gives q(x)>=kappa^{|x-y|_1}q(y); the bound depends on distance.\n\nConsequently exactly one of the following holds: q is identically zero; q is identically one; or 0<q(x)<1 at every site and inf_x q(x)=0, sup_x q(x)=1. In the third case L1 rules out a positive infimum; L1 applied to the complementary event rules out a supremum below one.\n\nFor a stationary ergodic environment law, {q(0)>0} is invariant under every spatial shift: q_{theta_z omega}(0)=q_omega(z), and the preceding positivity propagation holds pathwise. If the annealed probability alpha=E[q(0)] is positive, this event therefore has probability one. If 0<alpha<1, apply the same argument to 1-q; almost every environment is in the third alternative. Stationarity and ergodicity alone do not exclude that alternative. Given alpha>0, proving an almost-sure positive infimum of q is equivalent to proving alpha=1, so this bridge contains the unresolved conclusion unless an additional argument supplies the floor.",
+      "assumptions": [
+        "fixed irreducible nearest-neighbor Markov chain",
+        "directional tail event",
+        "uniform ellipticity only for the explicit Harnack bound",
+        "stationary ergodic environment law only for the annealed assertion"
+      ],
+      "domain": "probability theory; random walks in random environment",
+      "source": {
+        "source_id": "campaign:w582:C0044:trichotomy",
+        "url": "file:///~/brain_workers/w582/ATTEMPT.md#l2",
+        "revision": "2026-10-10-author-derivation-review-pending",
+        "license": "owner-own-work (campaign derivation; novelty not claimed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "balanced",
+      "namespace": "probability.random_environment",
+      "logical_name": "zero-local-projected-drift-rwre-projection-oscillation",
+      "kind": "lemma",
+      "title": "Zero local projected drift implies oscillation (draft review packet)",
+      "statement": "Author-derived scoped result; review/provenance gates tracked separately. In any uniformly elliptic nearest-neighbor environment on Z^d with zero local drift projected onto a fixed nonzero l at every site, the projected walk satisfies liminf X_n dot l=-infinity and limsup X_n dot l=+infinity almost surely from every starting site. Thus P_x^omega(A_l)=P_x^omega(A_-l)=0, including any iid law supported on such rows.",
+      "proof_text": "balanced projected drift gives oscillation (an actual C0044 subclass)\n\nFix any d>=1, l!=0, and a uniformly elliptic nearest-neighbor environment omega with kappa>0. Suppose sum_{|e|=1} omega(x,e)(e dot l)=0 at every site. For a walk starting at x, M_n=(X_n-x) dot l is a martingale with increments bounded by L=||l||_infinity>0 and conditional second moments at least v=2 kappa ||l||_2^2>0.\n\nFor a,b>0 let tau be the first time M_n<=-a or M_n>=b. The stopped square identity gives v E[tau wedge n]<=E[M_{tau wedge n}^2]<=max(a+L,b+L)^2. Monotone convergence gives E[tau]<infinity. Since the stopped M is uniformly bounded, optional stopping gives E[M_tau]=0. With p=P(M_tau>=b), the overshoot bounds give 0=E[M_tau]>=bp-(a+L)(1-p), so p<=(a+L)/(a+b+L).\n\nThe event of never hitting (-infinity,-a] forces exit through the upper endpoint for each b; the displayed bound tends to zero as b tends to infinity. Thus every fixed negative threshold is hit almost surely. Apply the same argument to -M for every positive threshold. A countable intersection over integer thresholds yields liminf M_n=-infinity and limsup M_n=+infinity almost surely. Hence both directional escape events have probability zero in this fixed environment. Any iid uniformly elliptic law supported on such rows satisfies the exact C0044 conclusion with alpha=0. No novelty is claimed.",
+      "assumptions": [
+        "d>=1",
+        "fixed nonzero deterministic l",
+        "omega(x,e)>=kappa>0",
+        "sum_e omega(x,e)(e dot l)=0 at every site"
+      ],
+      "domain": "probability theory; random walks in random environment",
+      "source": {
+        "source_id": "campaign:w582:C0044:balanced",
+        "url": "file:///~/brain_workers/w582/ATTEMPT.md#l3",
+        "revision": "2026-10-10-author-derivation-review-pending",
+        "license": "owner-own-work (campaign derivation; novelty not claimed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "positive",
+      "namespace": "probability.random_environment",
+      "logical_name": "uniform-positive-local-projected-drift-implies-escape",
+      "kind": "lemma",
+      "title": "Uniform positive projected drift implies escape (draft review packet)",
+      "statement": "Author-derived scoped result; review/provenance gates tracked separately. In any fixed nearest-neighbor environment, if its local drift projected onto a fixed nonzero l is at least a fixed delta>0 at every site, then liminf_n (X_n dot l)/n>=delta almost surely and P_x^omega(A_l)=1. Ellipticity and iid assumptions are not required.",
+      "proof_text": "strictly positive uniform projected drift gives escape\n\nIn a fixed nearest-neighbor environment suppose sum_e omega(x,e)(e dot l)>=delta>0 at all x. No ellipticity or independence assumption is needed. The martingale N_n=(X_n-X_0) dot l - sum_{j<n} drift_l(X_j) has differences bounded by 2L. Azuma's inequality yields P(|N_n|>=epsilon n)<=2 exp(-epsilon^2 n/(8L^2)). These probabilities are summable, so Borel-Cantelli, first for rational epsilon>0, gives N_n/n->0. Thus liminf_n (X_n dot l)/n>=delta almost surely, and P_x^omega(A_l)=1. This supplies the alpha=1 subclass even for arbitrarily small fixed positive delta. Delta=0 alone cannot replace delta>0, as L3 shows.",
+      "assumptions": [
+        "fixed time-homogeneous nearest-neighbor environment",
+        "fixed nonzero l",
+        "uniform drift floor delta>0"
+      ],
+      "domain": "probability theory; random walks in random environment",
+      "source": {
+        "source_id": "campaign:w582:C0044:positive",
+        "url": "file:///~/brain_workers/w582/ATTEMPT.md#l4",
+        "revision": "2026-10-10-author-derivation-review-pending",
+        "license": "owner-own-work (campaign derivation; novelty not claimed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "floor-warning",
+      "namespace": "probability.random_environment",
+      "logical_name": "pointwise-escape-positivity-does-not-supply-uniform-floor",
+      "kind": "concept",
+      "title": "Pointwise escape positivity is not a uniform floor",
+      "statement": "For a fixed elliptic nearest-neighbor environment, pointwise positivity of q(x)=P_x^omega(A_l) propagates along finite paths, but the path probability depends on distance. Uniform ellipticity gives q(x)>=kappa^{|x-y|_1}q(y), which need not give a positive infimum over x. A deterministic outward-layered uniformly elliptic environment has 0<q(x)<1 everywhere and inf q=0; it refutes this auxiliary bridge outside the iid class, not the iid C0044 question.",
+      "proof_text": null,
+      "assumptions": [
+        "fixed elliptic nearest-neighbor environment",
+        "q is a directional escape probability"
+      ],
+      "domain": "probability theory; random walks in random environment",
+      "source": {
+        "source_id": "campaign:w582:C0044:floor-warning",
+        "url": "file:///~/brain_workers/w582/ATTEMPT.md#ce1",
+        "revision": "2026-10-10-author-derivation-review-pending",
+        "license": "owner-own-work (campaign derivation; novelty not claimed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "floor",
+      "to_key": "target",
+      "kind": "semantic_association",
+      "rationale": "Floor: \"inf_x q(x)>0\" supplies an extra sufficient hypothesis for target: \"annealed probability ... in {0,1}\"."
+    },
+    {
+      "from_key": "trichotomy",
+      "to_key": "floor",
+      "kind": "depends_on",
+      "rationale": "Trichotomy: \"inf_x q=0 and sup_x q=1\" for interior values follows by applying floor: \"q(x)=1 for every x\" to q and its complement."
+    },
+    {
+      "from_key": "trichotomy",
+      "to_key": "target",
+      "kind": "semantic_association",
+      "rationale": "Trichotomy: \"0<E[q(0)]<1\" isolates the mixed alternative that target: \"iid ... probability ... in {0,1}\" must exclude."
+    },
+    {
+      "from_key": "balanced",
+      "to_key": "target",
+      "kind": "specializes",
+      "rationale": "Balanced: \"zero local drift projected onto ... l\" proves probability zero for the target iid subclass of such uniformly elliptic rows."
+    },
+    {
+      "from_key": "positive",
+      "to_key": "target",
+      "kind": "specializes",
+      "rationale": "Positive: \"local drift ... at least ... delta>0\" proves probability one for the target iid subclass of such rows."
+    },
+    {
+      "from_key": "floor-warning",
+      "to_key": "trichotomy",
+      "kind": "depends_on",
+      "rationale": "Warning: \"pointwise positivity ... need not give a positive infimum\" is supported by trichotomy: interior q has \"inf_x q=0\"."
+    },
+    {
+      "from_key": "balanced",
+      "to_key": "positive",
+      "kind": "analogous_to",
+      "rationale": "Balanced: \"zero local drift\" yields oscillation; positive: \"delta>0\" yields directional escape. This compares two explicitly different drift hypotheses."
+    }
+  ]
+}

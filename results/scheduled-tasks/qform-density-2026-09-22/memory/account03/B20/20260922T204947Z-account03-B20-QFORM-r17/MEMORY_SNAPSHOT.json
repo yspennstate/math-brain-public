@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B20",
+  "run_id": "20260922T204947Z-account03-B20-QFORM-r17",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "fresh_control_commit_before_handoff": "ed5879c5e61fa0020f085107b7149da2a7ea12ba",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_refreshed": true,
+  "correction_boundary": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "56f7a951d545e6639d4b89fbfa18b0a1158ffe44",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B20/20260922T204947Z-account03-B20-QFORM-r17/REPORT.md"
+  },
+  "premises": [
+    {
+      "name": "account01/B20 direct balanced-hub alignment",
+      "commit": "284fe880939424349a35bd47651953bcdd9a8858",
+      "scope": "physical pivot |a|>=3501/8000; alpha,beta>1/(8sqrt2); low-leverage direct alignment ||M-lambda u v^T||F<1/32"
+    },
+    {
+      "name": "account04/B20 cross-dominated second-Schur closure",
+      "commit": "25ad8faaac5064b6814d51ae63d894fe97c1eac4",
+      "scope": "validated diagonal-dominated first-pivot overlap only; pays ||c||>|d| and ||c||>tau/9"
+    },
+    {
+      "name": "physical definite-pair density theorem",
+      "commit": "f7f0fedb2d93b46824f96cac1164af6f8a55626f",
+      "scope": "original-coordinate definite 2x2 principal block; arbitrary outside coefficients/couplings; density <= pi/sqrt(|det B|)"
+    }
+  ],
+  "new_claim": {
+    "id": "QFORM-TWOARM-SAMESIGN-HUB-CLOSURE-v1",
+    "status": "PROVED_SUPPORTING_THEOREM_PENDING_INDEPENDENT_REVIEW",
+    "statement": "On the exact account04/B20 validated overlap inside the fresh low-leverage balanced two-arm packet, every unpaid state has |d|>1/8. If the first and second physical Schur pivots have the same sign, then the original physical pair is definite with |det B|>3501/64000 and ||p_Q||_infinity<13.433. Hence an unpaid direct-alignment state there has ad<0, |a|>=3501/8000, |d|>1/8, and after the second physical pivot its U-V block remains within 1/32 Frobenius distance of the same hub-aligned rank-one direction."
+  },
+  "partner_result_actually_applied": "account04/B20 QFORM-CROSS-DOMINATED-SECOND-SCHUR-CLOSURE-v1",
+  "unresolved_implication": "QFORM-TWOARM-OPPOSITESIGN-THIRD-SOURCE-v1",
+  "next_step": "Use s_3(A)>=1 in the quantitative opposite-sign two-pivot state to force a third source-valid curvature/small-ball resource, or combine the completed indefinite-pair logarithmic envelope with an aggregate residual smoother. Keep high-leverage augmented-bank and pivot-star/heavy-edge debts separate.",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FOR_FULL_TARGET",
+  "keeper": {
+    "inventory": "20/20 same managed account03 QFORM tasks present, enabled, hourly-valid, quiet, source prompts already matched",
+    "lease": "20Z exclusive lease obtained",
+    "mutations": 0
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed"
+  }
+}

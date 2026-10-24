@@ -1,0 +1,216 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w537",
+  "bundle_slug": "p0309-circular-bragg-pressure-bridge-001",
+  "entries": [
+    {
+      "key": "w537-C1",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "bounded-order-pressure-double-limit",
+      "kind": "concept",
+      "title": "Draft: bounded order parameter and pressure double limit",
+      "statement": "DRAFT, author-proved special case, independent review pending; no claim that P0309 is solved. For beta>0 and symmetric M_N with |M_N|<=N, pointwise convergence near zero of p_N(h)=log E exp(beta*h*M_N)/(beta*N) implies lim_{h down to 0}liminf_N p_N'(h)=lim_{h down to 0}limsup_N p_N'(h)=p'_+(0). Every finite-N response at h=0 is zero. Remaining scope: Independent review; full Riesz pressure cusp not proved.",
+      "proof_text": null,
+      "assumptions": [
+        "Fixed finite beta>0",
+        "Probability laws symmetric in M_N",
+        "|M_N|<=N",
+        "Pointwise finite pressure limit for every h in an open interval about zero"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w537:P0309:pressure-bridge:20261010",
+        "url": "urn:math-research:w537:p0309:pressure-bridge:2026-10-10",
+        "revision": "author-proof-pending-independent-review-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "w537-C2",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "pressure-slope-fourier-event-rate-threshold",
+      "kind": "concept",
+      "title": "Draft: pressure slope and the exact Fourier-event rate threshold",
+      "statement": "DRAFT, author-proved special case, independent review pending; no claim that P0309 is solved. Fix beta>0 and h0>0. For each N let M_N have a symmetric law and |M_N|<=N. Assume p_N(h)=log E exp(beta*h*M_N)/(beta*N) converges to finite p(h) for every |h|<h0. Put A_N=M_N/N and m=p'_+(0). For every 0<=a<m, liminf_N log P(A_N>=a)/N=0. For every m<a<=1, limsup_N log P(A_N>=a)/N is strictly negative. Conversely, a zero lower exponential rate at any a>0 implies m>=a. No assertion is made at a=m. Remaining scope: Independent review; subexponential crystalline-event mass for actual Riesz gases remains unproved.",
+      "proof_text": null,
+      "assumptions": [
+        "Fixed finite beta>0; an open pressure interval about zero",
+        "The standalone statement's bounded order variable and exact law symmetry",
+        "Pointwise finite pressure convergence throughout that interval",
+        "Full-law expectations; no conditioned crystalline-branch substitution"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w537:P0309:pressure-bridge:20261010",
+        "url": "urn:math-research:w537:p0309:pressure-bridge:2026-10-10",
+        "revision": "author-proof-pending-independent-review-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "w537-C3",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "cell-fourier-response-local-limit-obligations",
+      "kind": "concept",
+      "title": "Draft: cell Fourier response requires local uniform integrability and Gibbs closure",
+      "statement": "DRAFT, author-proved special case, independent review pending; no claim that P0309 is solved. Let Gamma be a full rank lattice in R^d with bounded fundamental cell C and nonzero reciprocal vector G. Let Gamma-invariant canonical periodic laws mu_k be tiled by K_k cells with N_k=rho*K_k*|C| particles, fixed rho>0, and N_k->infinity. Suppose m_k=N_k^(-1) E_mu_k sum_x cos(G.x)->m>0. If their periodically lifted laws converge locally weakly to P, local counts n_C are uniformly integrable, and P has no points on boundary C, then E_P sum_{x in C}cos(G.x)=rho*|C|*m>0. P breaks full translation invariance. For laws from fields h_k->0, the unpinned Gibbs conclusion needs a separately established closure theorem for the specified kernels. Remaining scope: Independent review; Riesz tightness/UI and long-range Gibbs closure not established here; a single Fourier mode does not classify a full crystal.",
+      "proof_text": null,
+      "assumptions": [
+        "Compatible finite tori and Gamma-invariant laws",
+        "N=rho*K_N*|C|",
+        "G nonzero reciprocal vector of Gamma",
+        "Positive diagonal response limit",
+        "Local weak convergence",
+        "Uniform integrability of local counts",
+        "Zero limiting boundary count",
+        "Gibbs closure is an additional assumption only for the Gibbs conclusion"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w537:P0309:pressure-bridge:20261010",
+        "url": "urn:math-research:w537:p0309:pressure-bridge:2026-10-10",
+        "revision": "author-proof-pending-independent-review-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "w537-C4",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "exponentially-rare-crystalline-branch-obstruction",
+      "kind": "concept",
+      "title": "Draft refuted route: an exponentially rare crystalline branch need not order after depinning",
+      "statement": "DRAFT, author-proved special case, independent review pending; no claim that P0309 is solved. Fix beta,c>0 and 0<a<=1. Let M_N/N have probabilities 1/(2+exp(c*N)), 1/(2+exp(c*N)), exp(c*N)/(2+exp(c*N)) at a,-a,0. Then p_N(h)=log E exp(beta*h*M_N)/(beta*N) tends to p(h)=max(a*|h|-c/beta,0), with p'_+(0)=0, although conditioning on the positive branch gives response a. This refutes an inference; it is not a Riesz counterexample. Remaining scope: Independent review. This refutes a conditional-branch inference only; it is not a Riesz counterexample.",
+      "proof_text": null,
+      "assumptions": [
+        "Specified finite probability laws",
+        "Fixed finite beta,c>0",
+        "0<a<=1"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w537:P0309:pressure-bridge:20261010",
+        "url": "urn:math-research:w537:p0309:pressure-bridge:2026-10-10",
+        "revision": "author-proof-pending-independent-review-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "w537-C5",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "circular-bragg-intensity-pressure-slope-bridge",
+      "kind": "concept",
+      "title": "Draft: full-law circular Bragg intensity implies positive pressure slope",
+      "statement": "DRAFT, author-proved special case, independent review pending; no claim that P0309 is solved. Fix beta>0 and h0>0. For every N let S_N be complex, |S_N|<=N, and its law invariant under S_N->exp(i*theta)*S_N for every real theta. Assume p_N(h)=log E exp(beta*h*Re S_N)/(beta*N) converges to finite p(h) for every |h|<h0. If liminf_N E|S_N/N|^2>=b^2 with 0<b<=1, then p'_+(0)>=b. The expectation must be under the full zero-field law. No particle independence or Gaussian assumption is needed. Remaining scope: Independent review. The actual unrestricted Riesz full-law moment, pressure existence, local-limit control and Gibbs closure are not proved.",
+      "proof_text": null,
+      "assumptions": [
+        "Fixed finite beta>0; an open pressure interval about zero",
+        "The standalone statement's bounded order variable and exact law symmetry",
+        "Pointwise finite pressure convergence throughout that interval",
+        "Full-law expectations; no conditioned crystalline-branch substitution"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w537:P0309:pressure-bridge:20261010",
+        "url": "urn:math-research:w537:p0309:pressure-bridge:2026-10-10",
+        "revision": "author-proof-pending-independent-review-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "branch-inference",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "conditional-crystalline-branch-depinning-inference-refuted",
+      "kind": "concept",
+      "title": "Refuted route: conditional crystalline order is insufficient for spontaneous order",
+      "statement": "Refuted inference, not a theorem: a positive order parameter in a Gibbs law conditioned on a selected crystalline branch does not by itself imply a positive vanishing-field response in the unrestricted zero-field law. The probability and entropy cost of that branch in the full partition function are missing hypotheses. The explicit three-state family in this bundle has branch response a>0 but full pressure slope zero.",
+      "proof_text": null,
+      "assumptions": [
+        "A branch-conditioned law is different from the unrestricted law"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w537:P0309:pressure-bridge:20261010",
+        "url": "urn:math-research:w537:p0309:pressure-bridge:2026-10-10",
+        "revision": "author-proof-pending-independent-review-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "parent-gap",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "p0309-full-law-fourier-event-accessibility-gap",
+      "kind": "concept",
+      "title": "P0309 remaining gap: full-law nonzero Fourier order at finite temperature",
+      "statement": "OPEN proof obligation, current openness UNKNOWN: for a specified unrestricted three-dimensional Coulomb or Riesz Gibbs model at fixed finite beta and density rho, prove that some nonzero crystalline Fourier-response event has zero exponential probability cost, or prove a positive full-law Bragg-intensity liminf. The pressure bridge then also needs pressure-limit existence, local uniform integrability and closure of the specified unpinned Gibbs equations. One nonzero mode only establishes translation breaking; BCC/FCC selection and a full rank periodic crystal require further results.",
+      "proof_text": null,
+      "assumptions": [
+        "Full unrestricted Riesz law, not a harmonic or defect-free restriction",
+        "Correct short-range or neutralized long-range specification must be fixed"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w537:P0309:pressure-bridge:20261010",
+        "url": "urn:math-research:w537:p0309:pressure-bridge:2026-10-10",
+        "revision": "author-proof-pending-independent-review-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "w537-C2",
+      "to_key": "w537-C1",
+      "kind": "depends_on",
+      "rationale": "C2 uses the finite pressure limit and right slope defined in C1, then splits the bounded exponential moment."
+    },
+    {
+      "from_key": "w537-C5",
+      "to_key": "w537-C2",
+      "kind": "depends_on",
+      "rationale": "C5 obtains a positive real Fourier-tail probability through circular averaging and applies C2's zero-rate-implies-slope statement."
+    },
+    {
+      "from_key": "w537-C3",
+      "to_key": "w537-C1",
+      "kind": "semantic_association",
+      "rationale": "C1 can select a positive-response diagonal; C3 separately supplies the local-limit obligations needed to retain it."
+    },
+    {
+      "from_key": "w537-C4",
+      "to_key": "branch-inference",
+      "kind": "refutes",
+      "rationale": "The three-state weights yield conditional branch response a but full pressure max(a|h|-c/beta,0), whose right slope is zero."
+    },
+    {
+      "from_key": "parent-gap",
+      "to_key": "w537-C5",
+      "kind": "semantic_association",
+      "rationale": "C5 supplies a bridge only after its full-law Bragg and pressure hypotheses are established for the actual Riesz model."
+    },
+    {
+      "from_key": "w537-C1",
+      "to_existing_logical": "math:optimization.convexity:first-order-convexity-characterization",
+      "kind": "depends_on",
+      "rationale": "Each p_N is differentiable on an open interval and convex because its second derivative is beta*Var_h(M_N)/N; the tangent inequalities give C1's secant squeeze."
+    },
+    {
+      "from_key": "parent-gap",
+      "to_existing_logical": "math:probability.core:attempt-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "semantic_association",
+      "rationale": "The exact prior attempt explicitly bounds only a Gaussian approximation conditional on a lattice, leaving defects, anharmonic fluctuations and alternative configurations; these do not provide C5's full-law expectation."
+    },
+    {
+      "from_key": "parent-gap",
+      "to_existing_logical": "math:probability.core:open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "specializes",
+      "rationale": "The scoped pressure and Fourier-response bridge addresses a necessary translation-breaking component of the intake; it does not prove BCC/FCC classification or the full phase diagram."
+    }
+  ]
+}

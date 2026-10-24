@@ -1,0 +1,40 @@
+QFORM account02/B07 r50 deterministic arithmetic checks
+
+D0=5.438340267613160e-4
+2D0=0.001087668053522632
+3D0=0.001631502080283948
+1/64-D0=0.015081165973238684
+CORE_BOUND_d=1/64=4230.995053421305
+CORE_BOUND_d=2D0=117330.53742994918
+PINNED_THEOREM_F_R4_c=sqrt(2)=5.656854249492381
+
+PAIRBLOCK_DIMENSION_CHECK:
+  dim(U)>=r+3
+  dim ker(R0)>=m-r
+  dim(U intersect ker R0)>=r+3+m-r-m=3
+  PASS
+
+R49_COMPRESSION_CHECK:
+  nu_d<=26 => <=26 physical pair blocks with opnorm>=d
+  removed good coordinates <=52
+  exceptional coordinates <=10
+  total H<=62
+  remaining pairblock opnorm<2D0
+  E opnorm<D0
+  distance to rank<=4 <3D0
+  PASS
+
+TARGET_REGRESSION_CHECK:
+  M singular values=(sqrt(2),sqrt(2))
+  symmetric bipartite eigenvalues=(sqrt(2),sqrt(2),-sqrt(2),-sqrt(2))
+  target has >=4 eigenvalues |lambda|>1
+  S0 pair leverage=4/N<=1/2 for N>=8
+  deleted-pair Z_K=4(1-2/N)^2>0.4790164554247098 for N>=8
+  P pair Z_K=4
+  E_star=0
+  nu_d(B_pair)=26, rank cancellation=24, actual residual diagonal rank=2
+  fixed-cardinality s3 <= sqrt(2)*L0/N ->0
+  pinned Theorem F: r=4, product |lambda|=4 => density <=4sqrt(2)
+  PASS
+
+STATUS=PASS

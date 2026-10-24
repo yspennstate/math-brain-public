@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260923T045948Z-account03-B16-QFORM-r26",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control": {
+    "startup_commit": "8be2516e16b25148c91fe571f08dbf44cc2eedfe",
+    "final_refresh_commit": "2873434705753bd3de9dcdd5d4efe1a85a3c8226",
+    "owner_control_revision": "2026-09-22.15",
+    "programme_revision": "2026-09-22.5"
+  },
+  "corrections_consumed": [
+    "bounded density does not imply law-uniform pointwise quadratic-phase decay",
+    "arbitrary-joint 3D coarea / projection-height shortcuts are not valid QFORM interfaces",
+    "rotated spectral coordinates may be dependent",
+    "worst conditional/fiber suprema can diverge",
+    "small coefficients cannot be deleted perturbatively without source-preserving control"
+  ],
+  "premises": [
+    "exact-rank-three coefficient frame A=R Lambda R^T with R^T R=I_3 and |det Lambda|>=1 on this branch",
+    "r24 dominant-star residual state c>643/7936, partner d<1/64 after exit, all residual h_k<1/64 after transverse-pair exit",
+    "r25 Pluecker identities P(i,j)=c h_j and P(j|i absent)=h_j+s_j^2/(1-c)",
+    "account01/B18 QFORM-FRESNEL-CAPPED-BASIS-WEIGHTS-v1 with marginal cap alpha_k<=1/2",
+    "account04/B16 QFORM-RULED-PLUECKER-ENDPOINT-v1"
+  ],
+  "partner_actual_application": {
+    "source_repository": "yspennstate/math-open-problems",
+    "source_commit": "b111363ff02b67015d14db35482e0150591744cd",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260922T231542Z-account04-B16-QFORM-r1/REPORT.md",
+    "inequality": "d>=1/64 => ||p_Q||_infinity<=12 D^(-1/3)d^(-1/6)<=24"
+  },
+  "results": {
+    "primary_result_id": "QFORM-TWO-BANK-COCIRCUIT-FRESNEL-v1",
+    "secondary_result_id": "QFORM-R23-ONE-COLOOP-REDUCTION-v1",
+    "statement": "If c>=1/64, 1-c>=1/64, all residual h_k<1/64, and the duplicated gate fails at j, an XOR two-bank Pluecker law has all coordinate marginals <=1/2 and Z_w>63/2048; hence ||p_Q||_infinity<27 with a continuous C_0 density.",
+    "rest_marginal_bound": "alpha_k<13891/249984 for k outside {i,j}",
+    "score_bound": "Z_w>63/2048",
+    "density_constant": "3e(2048/63)^(1/3)=26.02628638047539...<27",
+    "reduction": "after existing partner/transverse/gate-pass exits, only c>63/64 remains in the exact-rank-three dominant-star B16 chamber"
+  },
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "canonical_report_commit": "a398a1c2e6e97683e3fe594fa19476929a882be6",
+    "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T045948Z-account03-B16-QFORM-r26/REPORT.md",
+    "verifier_commit": "15b6186ccb23f17a42749b71bfa05f3b80622f05",
+    "check_output_commit": "275b9cd6219e5518d5ad79491d395f03354d3b64",
+    "handoff_commit": "866d431715f6c1f595e7bd827fa7b7bfbfbcf7c1",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B16/20260923T045948Z-account03-B16-QFORM-r26.md"
+  },
+  "unresolved_implication": "QFORM-NEAR-COLOOP-UNIFORM-TRANSITION-v1: close c>63/64 uniformly as a=1-c tends to zero while retaining original product provenance; then handle arbitrary additional spectrum.",
+  "next_mechanism": "Do not rely solely on capped-basis volume scores in the near-coloop collar; fuse the exact null-coloop product estimate, nonzero scalar-pivot half-Riesz control, and transverse product projection before reciprocal weak-direction loss.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "PROVED_ON_NEW_TWOBANK_BRANCH_GLOBAL_OPEN",
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

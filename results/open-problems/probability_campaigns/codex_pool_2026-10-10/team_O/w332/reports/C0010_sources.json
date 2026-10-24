@@ -1,0 +1,91 @@
+{
+  "id": "C0010",
+  "ledger_rows": [
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+      "line": 10,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "C0010",
+        "historical_status": "source_says_open",
+        "intake": "claude_20260907",
+        "locator": "Problem 16.10, p. 224",
+        "problem_id": "C0010",
+        "recorded_at": "2026-09-07T06:38:45Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "biskup_dgff_extrema_2020",
+        "statement": "For uniformly elliptic conductances with a shift-invariant ergodic law, prove for almost every realisation the analogues of Theorems 2.7 and 9.3 for the associated DGFF.",
+        "status_search": "Bounded search 2026-09-07 recalls a 2021-2022 result of Schweiger and Zeitouni on the maximum of the DGFF in random environment (random conductances) in d=2; whether the full extremal process and the intermediate level sets were also treated was not confirmed. Problem kept for the parts beyond the maximum.",
+        "title": "DGFF over an ergodic uniformly elliptic random conductance model: level sets and extremal process",
+        "verification": "unreviewed"
+      }
+    },
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+      "line": 10,
+      "record": {
+        "attempt_id": "C0010-A001",
+        "author": "claude-probability-1000-continue-0907",
+        "independent_check": "",
+        "key_identity": "",
+        "method": "Homogenisation of the Green function at all scales plus the DGFF argument.",
+        "obstruction": "The analogue of the cluster law is environment-dependent; the statement of Theorem 9.3 must be modified before it can be proved.",
+        "problem_id": "C0010",
+        "recorded_at": "2026-09-07T06:38:45Z",
+        "result": "The quenched Green function of the random conductance model in d=2 is g_eff log|x-y| + O(1) up to the scale where homogenisation holds; the concentric decomposition needs the O(1) error to be controlled uniformly over all dyadic scales near a point, which is a quenched local limit theorem at every scale. This is available for uniformly elliptic ergodic conductances by Andres-Deuschel-Slowik type estimates for the heat kernel, so the intermediate level sets (which only need two-point covariances) follow the DGFF proof with g replaced by g_eff. The extremal-process cluster law, however, depends on the local geometry of the conductances around the maximiser and is therefore itself random (not a constant law), which changes the STATEMENT of the Theorem 9.3 analogue: the cluster law becomes a random law indexed by the environment at the maximiser. This suggests the problem as posed needs reformulation for the extremal process.",
+        "schema": "probability-attempt.v1",
+        "substantive": true
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 580,
+      "record": {
+        "admitted": false,
+        "current_status": "unverified",
+        "exclusion_reason": "Later2025 random-conductance field/Green convergence must be compared to the exact microscopic covariance and rare-level target before admission.",
+        "historical_status": "source_says_open",
+        "intake_origin": {
+          "agent": "claude-probability-1000-continue-0907",
+          "frozen_record": "intake_dgff_frozen_037.json",
+          "id": "C0010"
+        },
+        "locator": "Chapter16 target16.10",
+        "problem_id": "P0475",
+        "recorded_at": "2026-09-07T08:55:42Z",
+        "result_status": "held",
+        "schema": "probability-problem.v1",
+        "source_id": "biskup_dgff_extrema_2020",
+        "source_statement_date": "2019-08-17",
+        "statement": "For uniformly elliptic conductances with a shift-invariant ergodic law, prove for almost every realisation the analogues of Theorems 2.7 and 9.3 for the associated DGFF.",
+        "statement_caveat": "Held direction; incoming claims are not promoted or counted as substantive main-campaign attempts.",
+        "title": "DGFF over an ergodic uniformly elliptic random conductance model: level sets and extremal process"
+      }
+    }
+  ],
+  "store_cards": [
+    {
+      "id": "claim_5133b060233c9110666f652c090e2e0766fc6d5b6ddea9da9b42ba80767e49c2",
+      "kind": "claim",
+      "title": "Open problem: DGFF over an ergodic uniformly elliptic random conductance model: level sets and extremal process",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For uniformly elliptic conductances with a shift-invariant ergodic law, prove for almost every realisation the analogues of Theorems 2.7 and 9.3 for the associated DGFF. Source: Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes, Problem 16.10, p. 224. Status notes: Bounded search 2026-09-07 recalls a 2021-2022 result of Schweiger and Zeitouni on the maximum of the DGFF in random environment (random conductances) in d=2; whether the full extremal process and the intermediate level sets were also treated was not confirmed. Problem kept for the parts beyond the maximum.\nPosed in Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes\nCurrent status unverified as of 2026-09-07",
+      "metadata_json": "{\"artifact_digest\":\"sha256:97ec5cdaed81ab349fbd8e3d2530cb188cac45b67791fa3398429dce7fad39c3\",\"artifact_path\":\"objects/sha256/97/97ec5cdaed81ab349fbd8e3d2530cb188cac45b67791fa3398429dce7fad39c3.md\",\"bundle_digest\":\"sha256:bee140cfde7d5bf56318732d7b8273e9824005d4b35903e078e74d929a549266\",\"bundle_entry_key\":\"op-c0010\",\"bundle_id\":\"population.probability-intake-claude-bulk-problems-and-exclusions-c004a\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_006.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.gaussian:open-problem-c0010-dgff-over-an-ergodic-uniformly-elliptic-random-conductance-model-level\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:27ce636e4c81aa81a5dbf74798c83425e9bd5ce208c7c2ac89a1b27196ba3791\",\"revision_digest\":\"sha256:5133b060233c9110666f652c090e2e0766fc6d5b6ddea9da9b42ba80767e49c2\",\"source_id\":\"owner-probability-intake-claude-20260907:op-c0010\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_9a5f4e6daaf8a61887126ea1ed45e62cf364f0c5b9227a19372bbc346896e9b8",
+      "kind": "claim",
+      "title": "Attempt on DGFF over an ergodic uniformly elliptic random conductance model: level sets and extremal process",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Homogenisation of the Green function at all scales plus the DGFF argument. Result: The quenched Green function of the random conductance model in d=2 is g_eff log|x-y| + O(1) up to the scale where homogenisation holds; the concentric decomposition needs the O(1) error to be controlled uniformly over all dyadic scales near a point, which is a quenched local limit theorem at every scale. This is available for uniformly elliptic ergodic conductances by Andres-Deuschel-Slowik type estimates for the heat kernel, so the intermediate level sets (which only need two-point covariances) follow the DGFF proof with g replaced by g_eff. The extremal-process cluster law, however, depends on the local geometry of the conductances around the maximiser and is therefore itself random (not a constant law), which changes the STATEMENT of the Theorem 9.3 analogue: the cluster law becomes a random law indexed by the environment at the maximiser. This suggests the problem as posed needs reformulation for the extremal process. Obstruction: The analogue of the cluster law is environment-dependent; the statement of Theorem 9.3 must be modified before it can be proved.\nRefers to the open problem node open-problem-c0010-dgff-over-an-ergodic-uniformly-elliptic-random-conductance-model-level\nNo independent review; result status attempted_unsolved",
+      "metadata_json": "{\"artifact_digest\":\"sha256:2241809aa64be29ed961cf07c885df98f0512b50df2a096ded4a7a1d0b6f8543\",\"artifact_path\":\"objects/sha256/22/2241809aa64be29ed961cf07c885df98f0512b50df2a096ded4a7a1d0b6f8543.md\",\"bundle_digest\":\"sha256:3afc0553fbedbe5e4a4f8548c9d6f5c8d0ecfb86f127315c266229ee060578ce\",\"bundle_entry_key\":\"at-c0010\",\"bundle_id\":\"population.probability-intake-claude-bulk-attempts-c004b\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_007.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.gaussian:attempt-c0010-dgff-over-an-ergodic-uniformly-elliptic-random-conductance-model-level\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:d60ad0b3f8346e7b04626eeea85bdd0598b8424cfd19b6d40584ecb68567692f\",\"revision_digest\":\"sha256:9a5f4e6daaf8a61887126ea1ed45e62cf364f0c5b9227a19372bbc346896e9b8\",\"source_id\":\"owner-probability-intake-claude-20260907:at-c0010\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_306a6a499abae1d774fd542a42b110a1e39fcf62ce873ed8305b9c035ffb1bcd",
+      "kind": "claim",
+      "title": "Resolved: DGFF over an ergodic uniformly elliptic random conductance model: level sets and extremal process",
+      "body": "RESOLVED OR EXCLUDED in the Codex campaign ledger (status unverified, recorded by that worker's bounded search; verify before citing). For uniformly elliptic conductances with a shift-invariant ergodic law, prove for almost every realisation the analogues of Theorems 2.7 and 9.3 for the associated DGFF. Source posing it: Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes, Chapter16 target16.10. Notes:\nPosed in Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes\nExclusion status from the campaign ledger",
+      "metadata_json": "{\"artifact_digest\":\"sha256:c84c63e1e1e438953aefe4572420ac71241e85143b13d697ac6ff0e3fe5ffcee\",\"artifact_path\":\"objects/sha256/c8/c84c63e1e1e438953aefe4572420ac71241e85143b13d697ac6ff0e3fe5ffcee.md\",\"bundle_digest\":\"sha256:6913ad4db57082b81fdec0f29146178848c9c051d8c521e4f541a065ceca6365\",\"bundle_entry_key\":\"res-p0475\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-03\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_011.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:resolved-p0475-dgff-over-an-ergodic-uniformly-elliptic-random-conductance-model-level\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:f48cd8bd688b3052c95326e6be4b13d699e2f33a0e6a9da6bce4ba5cac1b5c16\",\"revision_digest\":\"sha256:306a6a499abae1d774fd542a42b110a1e39fcf62ce873ed8305b9c035ffb1bcd\",\"source_id\":\"owner-probability-campaign-codex-20260906:res-p0475\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    }
+  ]
+}

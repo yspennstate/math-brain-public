@@ -1,0 +1,97 @@
+[
+  {
+    "claim_id": "A073-NONZERO-ERASURE-BINARY-REMAINDER",
+    "version": 1,
+    "exact_statement": "For every even integer d>=2, put delta=2^-d, t=2^(-d/2), b(y)=(-1)^(sum_j y_(2j-1)y_(2j)) on 0/1 labels, q(u,v)=-1 only at (1,1), and F_d=b(y)+1_(y=0)(q(u,v)-1). Every Fourier atom of F_d is positive. Each query i in {u,v} has e_i=delta/2 and positive true erasure. Retaining only the other pair coordinate gives complete derivative/reference laws (1/2,1/2) and (1-e_i,e_i). With N_+=(2^d+2^(d/2))/2,N_-=(2^d-2^(d/2))/2 and D0=sum_sigma N_sigma delta log2[(1-delta/2)/(1-sigma t+delta/2)], the full KL equals binary KL plus D0/2 and the influence-weighted quotient loss is L_i=e_i D0/2. Uniformly 0<L_i/e_i<=log2(7/5)/2<1/4-1/256, certified by 7^128<2^63*5^128. The two losses together are <delta/4 and <Inf_(y1)/10 if that physical reserve is dedicated only to these losses. Nevertheless M_i/e_i>d/2+3/4. Each core influence equals (1+delta)/2, I(F_d)=d/2+(d/2+1)delta, and H(F_d)/I(F_d)<=2+4/d<=4. No universal conditional partition, terminal payment, or FEI conclusion is asserted.",
+    "hypotheses": [
+      "Actual uniform-cube Boolean signs; entropy and KL in bits; ordinary physical flip influence",
+      "Even d>=2, the specified quadratic bent core and two-bit gate on disjoint physical coordinates",
+      "Complete normalized reference laws including derivative-free mass; no reference conditioning on derivative support",
+      "Dedicated reserve inequality is only a partial ledger for the two stated quotient losses; no other charges or free global reserve are asserted"
+    ],
+    "statement_sha256": "4d5f4f68786c0dc430a4d774b0b6db71c5d85f0a8e4b611b8b48493d9066a96a",
+    "contributors": [
+      "A073"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261014T023508Z-account05-A073-certified-logarithms\\DERIVATION.md",
+      "locator": "Nonzero-erasure Boolean boundary family; Certified logarithms",
+      "validation": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261014T023508Z-account05-A073-certified-logarithms\\out\\SUMMARY.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261014T023508Z-account05-A073-certified-logarithms\\out\\UNIFORM_MARGIN.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A100/account05",
+        "timestamp": "2026-10-14T04:03:48.456807+00:00",
+        "verdict": "ACCEPT_AT_FULL_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "scope": "Entire unchanged explicit-family v1: complete normalized positive-erasure row, binary KL chain, dedicated remainder-only reserve, unbounded retained local row price and bounded H/I; no arbitrary partition or universal terminal bank.",
+        "independent_method": "Direct finite signed quadratic/gate coefficients, conditional likelihood ratio and physical edges; independent all-labeled two-bit spectator tensor validation and Jensen/strict-Gibbs reconstruction.",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\REVIEW.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\out\\INDEPENDENT_CHECK.json",
+        "source_recorded_statement_sha256": "cad6427336999a42e9519d546b6a1d38f42934ea5fe34a4270bfd2accd1a18ed",
+        "statement_only_sha256": "4d5f4f68786c0dc430a4d774b0b6db71c5d85f0a8e4b611b8b48493d9066a96a",
+        "material_repair_to_reviewed_version": false,
+        "contributor_conflict": false,
+        "scope_guard": "Stronger Jensen consequence is a separate A100 claim, not a repair or new version of this source."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_FULL_ORIGINAL_SCOPE_BY_A100",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A001",
+      "A085",
+      "A099",
+      "B15",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A100-BINARY-REMAINDER-JENSEN-BOUND",
+    "version": 1,
+    "exact_statement": "For every even d>=2 let delta=2^-d, b(y)=(-1)^(sum_j y_(2j-1)y_(2j)), q(u,v)=-1 only at (1,1), and F_d=b(y)+1_(y=0)(q(u,v)-1). For either i in {u,v}, with complete normalized laws mu_i(T)=p_(T+i)/e_i and r_i(T)=p_T+p_(T+i), retaining only the other pair coordinate gives influence-weighted lost conditional KL L_i=e_i[D(mu_i||r_i)-D(Cmu_i||Cr_i)], where e_i=delta/2. Put R(delta)=(1+delta-3delta^2/4)/(1+delta^2/4). Then 0<L_i/e_i<=log2(R(delta))/2<=log2(77/65)/2<1/8. Their combined loss satisfies L_u+L_v<=delta log2(R(delta))/2<delta^2/(2ln2), and also L_u+L_v<delta/8<=Inf_(y1)/20. The same row divergences and remainders hold after tensoring with any common Boolean spectator on independent fresh coordinates. These allowances pay only the two discarded conditional KL remainders; retained M_i/e_i>d/2+3/4 remains unpaid, and no globally available or repeatedly reusable terminal reserve is asserted.",
+    "hypotheses": [
+      "Actual finite uniform Boolean signs in the displayed family; d even and >=2; bits and ordinary physical influence",
+      "Complete residual reference is marginalized, not conditioned on derivative support; KL zero terms continuous",
+      "Common spectator is independent on fresh physical coordinates; both row laws share its same normalized spectrum",
+      "Dedicated physical reserve, if used, is exclusive to these two remainder bills; no universal core payment assumed"
+    ],
+    "statement_sha256": "80502ef87dba2f2e9ee6cb86e5774884a7c0cbfd2cf3cc6fce0bbdf5da23f474",
+    "contributors": [
+      "A100/account05; explicit boundary family credited to A073"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\REVIEW.md",
+      "locator": "New quantitative refinement: Jensen bound",
+      "checker": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\code\\check_binary.py",
+      "output": "~\\brain_workers\\FEI100_20261011\\agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\out\\INDEPENDENT_CHECK.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A073-NONZERO-ERASURE-BINARY-REMAINDER",
+        "version": 1,
+        "usage": "Unchanged family/signed row identities independently reconstructed above; original lemma accepted by A098 and separately A100"
+      }
+    ],
+    "review_records": [],
+    "status": "SCOPED_ANALYTIC_JENSEN_REFINEMENT_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A073",
+      "A096",
+      "A001",
+      "A098",
+      "A099",
+      "A085",
+      "A094",
+      "B20"
+    ]
+  }
+]

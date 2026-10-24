@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B14",
+  "run_id": "20260923T155625Z-account02-B14-QFORM-r39",
+  "title": "Translations and localization",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_SEPARATE",
+  "control_commit_initial": "4668f498708f4e688d916a82d3a92270441550d9",
+  "control_commit_final_refresh": "7e3956404c13a3606132dd9117c6e94fad9c7a40",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "partner_applied": {
+    "worker": "account03/B14",
+    "run_id": "20260923T153652Z-account03-B14-QFORM-auto11",
+    "math_commit": "8b9adaf929bab4d0d18a15b81055040f3313629a",
+    "result": "QFORM-L2-BILINEAR-RECEIVER-LOCALIZATION-v1 plus affine slice-Fresnel core",
+    "actual_use": "Upgraded the partner core envelope |phi_T(t)|<=B|t|^-3/4 to a uniform L3 density bound, then fed it to the new moving-fold receiver theorem to pay arbitrary scalar receiver self-curvature."
+  },
+  "required_claude_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "paths_read": [
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+    ],
+    "completed_result_used": "Theorem B: ||p_Q||inf <=2sqrt(2pi) sum_i |P e_i| under the three-large-eigenvalue hypothesis",
+    "actual_application": "For Q_a=U1^2+U2^2+aW^2+2ZW the matrix is invertible in dimension four, so P=I4 and the theorem gives ||p_Qa||inf<=8sqrt(2pi), uniformly in a."
+  },
+  "new_result_ids": [
+    "QFORM-MOVING-FOLD-RECEIVER-LOCALIZATION-v1",
+    "QFORM-WORST-FOLD-SUPREMUM-BARRIER-v1"
+  ],
+  "main_inequalities": [
+    "If ||p_Tz||3<=K and Q=T_Z+aW^2+(2v^TZ+d)W, then ||p_Q||inf<=2^(7/6)K||v||^(-1/3), uniformly in a,d and support geometry.",
+    "Partner core upgrade: ||p_Tz||3<=3^(4/3)2^(8/9)|h|^(-4/9)|gamma|^(-2/9).",
+    "Combined structured branch: ||p_Q||inf<=3^(4/3)2^(37/18)|h|^(-4/9)|gamma|^(-2/9)||v||^(-1/3).",
+    "Exact target family Q_a=U1^2+U2^2+aW^2+2ZW obeys ||p_Qa||inf<=2^(7/6)pi^(2/3)=4.815428181530122... for all a.",
+    "Worst conditional fold obstruction: for W uniform [-1/2,1/2], ||p_(aW^2)||_(3/2)=2|a|^(-1/3)."
+  ],
+  "localization_principle": "Average the moving quadratic receiver critical point against the whole independent product driver before endpoint norm payment. Arbitrary translations and fragmented/unbounded supports remain admissible; taking a worst conditional fold first loses a spurious |a|^(-1/3).",
+  "first_unpaid_implication": "QFORM-RECEIVER-CORE-COUPLING-OR-VOLUME-EXIT-v1",
+  "next_step": "In surviving N3/no-pivot states, structurally force either a whole-law D'/D5/ridge/mixed-hub/grouped-bank exit or a disjoint driver plus affine-uniform L3 core and scalar receiver. Otherwise derive an aggregate estimate for receiver-core couplings without normalizing active fragments.",
+  "math_repository": "yspennstate/math-open-problems",
+  "partial_commit": "350b6259e65e8d8a2d0b63b7dd6d623190dea327",
+  "partial_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T155625Z-account02-B14-QFORM-r39/PARTIAL.md",
+  "math_report_commit": "6b6cd1c3be8a9c23a3424593a38b0450acb61cfa",
+  "math_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T155625Z-account02-B14-QFORM-r39/REPORT.md",
+  "handoff_commit": "baf5631154ba069bb51a181420cc59914f9a41c3",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B14/20260923T155625Z-account02-B14-QFORM-r39.md",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_requested": "maximum actually supported",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

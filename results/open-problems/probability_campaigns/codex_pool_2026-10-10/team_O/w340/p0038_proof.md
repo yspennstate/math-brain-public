@@ -1,0 +1,9 @@
+# P0038: the finite-energy gate for embedded tree corridors
+
+Label: proof of a conditional electrical-network reduction and an obstruction, awaiting w346. No general Bernoulli-cluster transience conclusion is claimed.
+
+Suppose an infinite connected locally finite unit-conductance graph C contains a subdivision of a locally finite graph H: distinct branch vertices represent vertices of H, and each H-edge e is replaced by a finite path of length ell_e, with the replacement paths internally vertex-disjoint. If H has a unit flow f from o to infinity with sum_e ell_e f(e)^2<infinity, then C is transient. Orient each replacement path along its H-edge and carry the same current f(e) along every segment. Intermediate vertices have zero divergence and branch vertices inherit the divergence of f. The resulting unit flow has energy exactly sum_e ell_e f(e)^2. Extending by zero to the rest of C and applying the finite-energy flow criterion proves transience. Uniformly bounded ell_e suffice whenever H is transient.
+
+For a rooted binary tree with every edge between levels k-1 and k replaced by a path of length ell_k, the effective resistance from the root to infinity is sum_(k>=1) ell_k/2^k. Each level has 2^k equal parallel paths and the level resistances add in series; alternatively, the equal-splitting flow has energy this sum, while Cauchy-Schwarz forces every unit flow to expend at least ell_k/2^k on level k. Thus this subdivided tree is transient exactly when that sum is finite.
+
+Examples: ell_k=k gives resistance sum k/2^k=2, hence transience. ell_k=2^k gives infinite resistance, hence recurrence despite retaining an infinite binary branching topology. Finding a branching structure in a percolation cluster alone is therefore insufficient; its path lengths must support a finite-energy flow. A proof for arbitrary transient Cayley percolation clusters still has to produce such a structure or another quantitative energy bound.

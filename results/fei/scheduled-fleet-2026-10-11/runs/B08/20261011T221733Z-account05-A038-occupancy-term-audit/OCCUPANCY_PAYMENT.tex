@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A038 exact occupancy-account audit}
+All logarithms are base two. Write $v=P(S\ne\varnothing)>0$, $P^+=P(\cdot\mid S\ne\varnothing)$, $r_i=P^+(i\in S)$, $d_i=vr_i$, and let $Q_r$ be the maximum-entropy nonempty law with marginals $r$. Put $Q_d=\bigotimes_i\mathrm{Bern}(d_i)$ and $M=(1-v)\delta_\varnothing+vQ_r$. The affine log-likelihood calculation in REPORT.md proves
+\[
+D(P\Vert Q_d)=vD(P^+\Vert Q_r)+\Delta,\qquad
+\Delta=D(M\Vert Q_d)=\sum_i h_2(d_i)-h_2(v)-vH(Q_r)\ge0.
+\]
+If $c_d=Q_d(S\ne\varnothing)$ then
+\[
+\Delta=D(\mathrm{Bern}(v)\Vert\mathrm{Bern}(c_d))+vD(Q_r\Vert Q_d^+).
+\]
+For $f_m=1-2\mathbf1_{\{x=0\}}$, $m\ge2$, set $d=2^{1-m}$. Its nonempty spectrum is uniform on $2^m-1$ sets, $v=2d-d^2$, $r_i=(2-d)^{-1}$, and the projection parameter is $c=1-d/2$, with $cr_i=1/2$. Thus $K_{\rm occ}=0$, $I=md$, and $\Delta=K_{\rm full}\ge(m-5)I$.
+The actual signed unconditioned product reference has squared collision masses, for $k\ge1$,
+\[
+w_k=[4d(1-d)]^k\bigl[1-2^{2-k}(1-d)^{m-k}\bigr]^2,\quad w_0=1.
+\]
+Let $Z=\sum_{k=0}^m\binom mk w_k$ and $T=Z^{-1}\sum_{k=1}^m\binom mk w_k\log(1/w_k)$. The singleton bound proved in REPORT.md gives $T/(4I)>m-7$ for all $m\ge8$. Hence for every finite $\kappa$ the explicitly changed candidate $K_{\rm occ}\ge T/4-\kappa I$ fails at any integer $m\ge8$ with $m>\kappa+7$. The same holds for $vK_{\rm occ}$. This refutes only the cross-law substitution, not A036's $K_{\rm full}$ estimate or FEI.
+For the fresh balanced lift $F_m=z f_m$, $K_{\rm occ}(F_m)=K_{\rm full}(f_m)$ and $\Delta(F_m)=0$. The known $H(f_m)\le4md$ yields the named balanced-family debt payment
+\[
+K_{\rm occ}(F_m)\ge[H_{\max}(r(F_m))-4(I(F_m)-1)]_+.
+\]
+The original all-gate debt remains open. Complete source pins, endpoint conventions, derivations and exact validation are in REPORT.md and OCCUPANCY\_TARGET\_SOURCE.md.
+\end{document}

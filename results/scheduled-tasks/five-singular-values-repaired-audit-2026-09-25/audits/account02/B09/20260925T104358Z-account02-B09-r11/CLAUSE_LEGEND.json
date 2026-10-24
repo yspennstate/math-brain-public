@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "page_policy": "UNCHECKED_VISUAL = exact repaired 15-page reference PDF unavailable to this worker; no page number invented.",
+  "status_policy": "PASS = independently reconstructed in this pass; GAP = literal local defect with repair; UNCHECKED = external metadata not independently verified; NOT_MATHEMATICAL = formatting/preamble/environment wrapper.",
+  "clauses": {
+    "PREAMBLE": {
+      "hypotheses": "none",
+      "dependencies": "LaTeX only",
+      "derivation": "not mathematical",
+      "downstream": "typesetting only",
+      "independence": "none"
+    },
+    "MAIN_STMT": {
+      "hypotheses": "independent real coordinate densities <=K; A symmetric; s5(A)>=s>0; arbitrary b,c",
+      "dependencies": "proved at MAINPROOF",
+      "derivation": "statement/quantifiers cross-checked against scaling and final case split",
+      "downstream": "Theorem 1.1",
+      "independence": "only original coordinates assumed independent"
+    },
+    "INTRO": {
+      "hypotheses": "as stated in introductory examples",
+      "dependencies": "later lemmas where cited",
+      "derivation": "examples/scaling/outline checked against later proof",
+      "downstream": "expository",
+      "independence": "no rotated-independence claim"
+    },
+    "FOURIER": {
+      "hypotheses": "standard L1/L2 and real random-variable assumptions as stated",
+      "dependencies": "Plancherel, inversion, Gaussian Fourier identity",
+      "derivation": "normalizations and Fubini checked",
+      "downstream": "envelope, halfmoment, concentration, decay",
+      "independence": "none"
+    },
+    "ENVELOPE": {
+      "hypotheses": "p>1,a>0 and characteristic envelope",
+      "dependencies": "FOURIER inversion",
+      "derivation": "integral of min{1,(a/|t|)^p} computed exactly",
+      "downstream": "Corollary 4.4 density",
+      "independence": "none"
+    },
+    "HALFMOMENT": {
+      "hypotheses": "real Z; u>0 for specialization",
+      "dependencies": "Gaussian integral and FOURIER(c)",
+      "derivation": "Tonelli and t-weight integral constants checked",
+      "downstream": "Corollary 4.4(b)",
+      "independence": "none"
+    },
+    "CONDITION": {
+      "hypotheses": "U,V independent; measurable h,g; conditional domination",
+      "dependencies": "Tonelli/product law",
+      "derivation": "Borel domination implies absolute continuity and expectation bound",
+      "downstream": "pivot conditioning",
+      "independence": "independence is only for original conditioned blocks"
+    },
+    "WEYL": {
+      "hypotheses": "real matrices; padded singular values",
+      "dependencies": "approximation-number identity",
+      "derivation": "zero-padded case separated; perturbation/rank/compression inequalities checked",
+      "downstream": "Schur limit and random-sign extraction",
+      "independence": "none"
+    },
+    "SCHUR": {
+      "hypotheses": "symmetric block matrix; B invertible",
+      "dependencies": "block inverse, Cauchy interlacing, WEYL",
+      "derivation": "invertible count and epsilon limit including threshold equality checked",
+      "downstream": "pivot leaves large spectrum in Schur complement",
+      "independence": "none"
+    },
+    "GRAM": {
+      "hypotheses": "row matrix M",
+      "dependencies": "determinant expansion, Cauchy-Binet, Schur complement",
+      "derivation": "principal-minor and residual-Gram identities checked",
+      "downstream": "crossing volumes and entropy",
+      "independence": "none"
+    },
+    "BL": {
+      "hypotheses": "geometric frame sum c_i u_i u_i^T=I; nonnegative integrable h_i",
+      "dependencies": "heat equation, integration by parts, Fatou/monotone convergence",
+      "derivation": "heat-flow monotonicity and both limits reconstructed",
+      "downstream": "projection-density lemma",
+      "independence": "none"
+    },
+    "PROJECTION": {
+      "hypotheses": "independent coordinate densities <=1",
+      "dependencies": "BL",
+      "derivation": "orthogonal completion, all zero-beta factors dropped, p(y)=0 handled before logarithm",
+      "downstream": "linear/projection density caps used in fpower and hub",
+      "independence": "original product coordinates only"
+    },
+    "FPOWER": {
+      "hypotheses": "probability density f<=1; p>=2",
+      "dependencies": "FOURIER, PROJECTION",
+      "derivation": "difference density cap, even Fourier power, continuous density at zero checked",
+      "downstream": "hub Step 4",
+      "independence": "independent copies/original coordinates"
+    },
+    "DECAY_SETUP": {
+      "hypotheses": "independent densities<=1; fixed crossing block M",
+      "dependencies": "GRAM",
+      "derivation": "crossing-volume identities and definitions checked",
+      "downstream": "Theorem 4.1",
+      "independence": "original coordinates"
+    },
+    "ENTROPY": {
+      "hypotheses": "probability law on m-subsets",
+      "dependencies": "Jensen/concavity and multinomial expansion",
+      "derivation": "entropy-marginal inequality checked including zero marginals",
+      "downstream": "hub Step 5",
+      "independence": "none"
+    },
+    "HUB": {
+      "hypotheses": "Theta_l(H)>0 and diffuse condition if k<ell",
+      "dependencies": "PROJECTION,FPOWER,ENTROPY,GRAM,FOURIER",
+      "derivation": "complex-measure TV domination; L2 measurability before expectation/terminal branch; Jensen; mollification/Fubini/Young-DCT; original-coordinate factorization; Holder and determinant factors checked",
+      "downstream": "Theorem 4.1",
+      "independence": "no independence after rotation/projection; factorization uses original X_{I'} and D coordinates"
+    },
+    "PROMOTION": {
+      "hypotheses": "E_l(M)>0",
+      "dependencies": "HUB",
+      "derivation": "greedy half-threshold promotion and omega ratio checked",
+      "downstream": "Theorem 4.1 decay constant",
+      "independence": "inherits HUB"
+    },
+    "COR_DECAY": {
+      "hypotheses": "E3/E2/E1 positive as applicable",
+      "dependencies": "PROMOTION,ENVELOPE,HALFMOMENT",
+      "derivation": "powers and constants checked, including exact e<11/4 comparisons",
+      "downstream": "no-pivot and concentration",
+      "independence": "inherits decay theorem"
+    },
+    "SQUARE": {
+      "hypotheses": "Y density<=1; a!=0",
+      "dependencies": "one-dimensional change of variables",
+      "derivation": "formula only z!=v; p(v)=0; no atom and interval-preimage estimate checked",
+      "downstream": "diagonal pivot/concentration",
+      "independence": "one original coordinate"
+    },
+    "DEFINITE": {
+      "hypotheses": "2D density<=L; definite quadratic part",
+      "dependencies": "open polar chart/change of variables",
+      "derivation": "slit-plane diffeomorphism, null seam/critical point, absolute Jacobian checked",
+      "downstream": "pair pivot/pairhalf",
+      "independence": "no rotated-coordinate independence used"
+    },
+    "HYPERBOLA": {
+      "hypotheses": "W1,W2 independent densities<=1; indefinite B",
+      "dependencies": "hyperbolic chart and one-coordinate tail integration",
+      "derivation": "both tails, separate original-coordinate choices, cutoff constants, critical level null checked",
+      "downstream": "pair pivot/pairhalf",
+      "independence": "product density used only in original coordinates"
+    },
+    "CONCENTRATION": {
+      "hypotheses": "nonzero symmetric S; independent densities<=1",
+      "dependencies": "SQUARE,COR_DECAY(c),Gaussian smoothing",
+      "derivation": "diagonal/offdiagonal split, Gamma certificate, no-atoms and log layer cake checked",
+      "downstream": "halfpotential and indefinite main branch",
+      "independence": "random partition deterministic after averaging; original coordinates remain independent"
+    },
+    "KERNELS": {
+      "hypotheses": "extended nonnegative J; even decreasing g,h",
+      "dependencies": "elementary antiderivatives and layer-cake rearrangement",
+      "derivation": "J(0)=infinity, d!=0 bound, translation rearrangement checked",
+      "downstream": "halfpotential",
+      "independence": "none"
+    },
+    "PAIRHALF": {
+      "hypotheses": "two independent density<=1 coordinates; det quadratic part nonzero",
+      "dependencies": "DEFINITE,HYPERBOLA,KERNELS",
+      "derivation": "bounded-density layer cake and rearrangement constants checked",
+      "downstream": "pair branch of halfpotential",
+      "independence": "original two coordinates independent"
+    },
+    "PIVOT": {
+      "hypotheses": "symmetric A",
+      "dependencies": "parameter definitions",
+      "derivation": "no-pivot entry bounds checked",
+      "downstream": "random-sign and final case split",
+      "independence": "none"
+    },
+    "CROSS": {
+      "hypotheses": "partition of symmetric A",
+      "dependencies": "block form/SVD",
+      "derivation": "A-DAD=2C and doubled crossing singular values checked including zeros",
+      "downstream": "random-sign extraction",
+      "independence": "none"
+    },
+    "SIGNMOM": {
+      "hypotheses": "zero diagonal O, bounded entries; Rademacher signs",
+      "dependencies": "fourth-moment parity",
+      "derivation": "ordered-pair expectation and Frobenius bound checked",
+      "downstream": "Proposition 6.4",
+      "independence": "independent random signs only"
+    },
+    "SIGNEXTRACT": {
+      "hypotheses": "no pivot; m in {1,2,3}; s_{2m-1}(A)>=1",
+      "dependencies": "WEYL,CROSS,SIGNMOM,GRAM",
+      "derivation": "eigenvector compression, perturbation, gamma constants and E_m lower bound checked",
+      "downstream": "no-pivot proposition",
+      "independence": "random signs auxiliary; no distributional rotation"
+    },
+    "NOPIVOT": {
+      "hypotheses": "no pivot; s5 or s3 normalized",
+      "dependencies": "SIGNEXTRACT,COR_DECAY",
+      "derivation": "gamma-to-crossing constants checked",
+      "downstream": "main theorem/halfpotential no-pivot branches",
+      "independence": "inherits original-coordinate decay"
+    },
+    "HALFPOT": {
+      "hypotheses": "s3(A)>=1; independent densities<=1",
+      "dependencies": "NOPIVOT,PAIRHALF,SQUARE,CONDITION,SCHUR,CONCENTRATION,KERNELS",
+      "derivation": "no-pivot/pair/diagonal branches and <77 constants checked",
+      "downstream": "main diagonal pivot; scaled s3 remark",
+      "independence": "conditioning only on original coordinates"
+    },
+    "MAINPROOF": {
+      "hypotheses": "normalized K=s=1 then general K,s",
+      "dependencies": "NOPIVOT,HALFPOT,SCHUR,SQUARE,DEFINITE,HYPERBOLA,CONCENTRATION,CONDITION",
+      "derivation": "all pivot/no-pivot branches, affine terms and a.e. scaling checked",
+      "downstream": "Theorem 1.1 <=270 K^2/s",
+      "independence": "all conditioning/factorization stays in original coordinates"
+    },
+    "REMARK": {
+      "hypotheses": "as stated",
+      "dependencies": "main proof or explicit construction",
+      "derivation": "s3 scaling and four-eigenvalue rank-2 crossing example checked",
+      "downstream": "expository/sharpness context",
+      "independence": "none"
+    },
+    "BIB": {
+      "hypotheses": "none",
+      "dependencies": "external bibliographic sources",
+      "derivation": "metadata not externally reverified this pass",
+      "downstream": "non-load-bearing",
+      "independence": "none"
+    }
+  }
+}

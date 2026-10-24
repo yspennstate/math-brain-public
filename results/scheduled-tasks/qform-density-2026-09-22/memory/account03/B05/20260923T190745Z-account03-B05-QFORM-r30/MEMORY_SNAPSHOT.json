@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B05",
+  "run_id": "20260923T190745Z-account03-B05-QFORM-r30",
+  "source_control_commit_initial": "9b4fa36b6f9c3f59309df9c0f7916793350749f2",
+  "source_control_commit_prepublication": "4f5d668f770217d15e0aae67e1d48b445a16c790",
+  "control_revision": "2026-09-22.15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "mathematical_premises": [
+    {
+      "source": "yspennstate/math-open-problems@954c8b881c4c60ac643b7c68da6d1ce924e6427f",
+      "scope": "r29 ratio-packet exact currencies T_Y,T_Z,U and identity T_Y T_Z-U^2=tau^2 det C"
+    },
+    {
+      "source": "yspennstate/math-open-problems@d13d6e8e5ee6d13d7dcc36ae1dd3fdb661f64b59",
+      "scope": "r30 product-kernel half-Riesz splice and failure of completing both scalar directions first"
+    },
+    {
+      "source": "yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae",
+      "scope": "current interactive two-hub slice and cross-split sufficient theorems used only to test applicability to the live ratio packet"
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B05",
+    "source": "yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f",
+    "statement": "||p_Q||_inf < 51.6 (mu m_*)^{-1/3}",
+    "actual_application": "mu>=1 and m_*>=1/8 implies ||p_Q||_inf<103.2"
+  },
+  "new_result": {
+    "id": "QFORM-TRANSVERSE-U-IS-PARTNER-PLANE-CURVATURE-v1",
+    "status": "PROVED_EXACT_STRUCTURAL_THEOREM",
+    "statement": "For tau=det P !=0 and ell=P^T V, P^{-1}CP^{-T}=tau^{-2}[[T_Z,-U],[-U,T_Y]]. Therefore full two-partner slicing freezes every r29 currency. In original first-bank coordinates M=P^T Gamma^T and A_R=Gamma C Gamma^T; for every split, either rank(M_J)<2 or A_R[I,J](I-Pi_J)=0."
+  },
+  "canonical_math_commit": "c2141e8758b0241ad18aedc7f9fb77654ff87fde",
+  "canonical_math_root": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260923T190745Z-account03-B05-QFORM-r30/",
+  "controlling_files": ["REPORT.md", "CHECKS.txt"],
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B05/20260923T190745Z-account03-B05-QFORM-r30.md",
+  "event_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account03/B05/20260923T190745Z-account03-B05-QFORM-r30/QFORM-TWOHUB-FULL-PARTNER-SLICE-FREEZES-U-v1.json",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "FULL_CONTINUITY_OPEN",
+  "unresolved_implication": "QFORM-TWISTED-TWOHUB-PARTNER-PLANE-TRACE-v1",
+  "next_step": "Prove a one-partner-at-a-time coarea/Fourier estimate that keeps the mixed moving slope -2 U ell_Y/tau^2 (or symmetric version) random until jointly paid with the second independent scalar bank; do not full-slice both partner values first."
+}

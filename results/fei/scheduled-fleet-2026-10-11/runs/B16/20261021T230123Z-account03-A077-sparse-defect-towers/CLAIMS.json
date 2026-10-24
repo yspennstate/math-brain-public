@@ -1,0 +1,95 @@
+[
+  {
+    "claim_id": "A077-TWO-POINT-CORRELATED-TRANSFER",
+    "version": 1,
+    "exact_statement": "For every d>=1,n>=0,h Boolean with h(0)=h(e1)=1 and arbitrary correlated Boolean V,W on a disjoint private n-cube, the two-point wrapper has H=H_sep+Xi with Xi=e sum_nonempty k(Vhat,What), -2e(VarV+VarW)<=Xi<=0, and every actual private i obeys Delta H(F)<=e[Delta H(V)+Delta H(W)]+Delta R+12Inf_i(F)+DeltaXi, R=de(2-mu^2-nu^2), e=2^-d. For the guarded bent/point pair at even k>=4 an actual unused C5 bent surplus S=e(3k/2+5), after old debit D0 with S-D0>=4e, pays one collision by booking4e and retaining S-D0-4e in both children; entropy price12 and erasure price12+2/ln2 retain full inherited core bills and terminals.",
+    "hypotheses": [
+      "uniform cube; entropy bits; actual Boolean controllers; shared/private inputs physically disjoint",
+      "Exact domain and side conditions as quantified in exact_statement"
+    ],
+    "statement_sha256": "c06e19b19d2412c4fc41fda2c482ae3b4d64408b784e9ea53f99970c2b71df6b",
+    "contributors": [
+      "A077"
+    ],
+    "proof_source": "PROOF.md sections1-6,8; out/full.json,out/mean_full.json,out/bent_full.json",
+    "proof_dependencies": [
+      "Self-contained Walsh/Parseval, binary entropy and scalar derivative arguments in PROOF.md",
+      "Entropy decrement B+JS with JS<=2Inf/ln2 for erasure corollary; exact baseline reconstructed in prior work"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "No independent acceptance or full Lean proof; arbitrary next-history donor eligibility and full FEI remain open.",
+    "next_consumers": [
+      "A076",
+      "A078",
+      "A028",
+      "A092",
+      "A094"
+    ]
+  },
+  {
+    "claim_id": "A077-CORRELATED-COLLISION-LOCAL-PRICE-NOGO",
+    "version": 1,
+    "exact_statement": "For every even k>=6 and d>=1 the two-point wrapper with V*=y times quadratic bent_k and W*=y times (k+1)-bit point defect satisfies Delta_iXi/Inf_i(F)>=k-6, Inf_i(F)=2^(-d-k), while all controller parent/child means and mean-bank releases vanish and all four controller children are nonconstant. At d=k the wrapper is rare with I tending to0. H(F)<=10I(F), so this refutes every finite local collision-price K and not FEI. The exact signed collision is not determined by (EV,EW,EVW).",
+    "hypotheses": [
+      "uniform cube; entropy bits; actual Boolean controllers; shared/private inputs physically disjoint",
+      "Exact domain and side conditions as quantified in exact_statement"
+    ],
+    "statement_sha256": "f4efd506a4eaa46dfae9ffb92c47ca96b14f9d73d160932853b78de97b280907",
+    "contributors": [
+      "A077"
+    ],
+    "proof_source": "PROOF.md sections5,7; out/bent_full.json,out/moments.json",
+    "proof_dependencies": [
+      "Self-contained Walsh/Parseval, binary entropy and scalar derivative arguments in PROOF.md",
+      "Entropy decrement B+JS with JS<=2Inf/ln2 for erasure corollary; exact baseline reconstructed in prior work"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "candidate universal DeltaXi<=K Inf_i(F), all finite K",
+      "candidate collision paid only by mean-bank release"
+    ],
+    "first_unproved_line": "No independent acceptance or full Lean proof; arbitrary next-history donor eligibility and full FEI remain open.",
+    "next_consumers": [
+      "A076",
+      "A078",
+      "A028",
+      "A092",
+      "A094"
+    ]
+  },
+  {
+    "claim_id": "A077-FINITE-COLLISION-PRICE4",
+    "version": 1,
+    "exact_statement": "For every ordered pair V,W of Boolean functions on n=1,2,3 uniform private bits and every physical private coordinate i, Delta_i(Xi/e)<=4[Inf_i(V)+Inf_i(W)]. Exactly65808 labelled roots and197136 private queries are certified; constant4 is attained. This finite statement does not extend universally: A077-CORRELATED-COLLISION-LOCAL-PRICE-NOGO refutes any finite all-dimensional K.",
+    "hypotheses": [
+      "uniform cube; entropy bits; actual Boolean controllers; shared/private inputs physically disjoint",
+      "Exact domain and side conditions as quantified in exact_statement"
+    ],
+    "statement_sha256": "e3d2b2753294322d292d03ba3ecdac5c2902e18fb337dd25d3c871acbeef7cd9",
+    "contributors": [
+      "A077"
+    ],
+    "proof_source": "code/scan_collision.py; COLLISION_FROZEN_SPEC.json; out/collision_full.json",
+    "proof_dependencies": [
+      "Self-contained Walsh/Parseval, binary entropy and scalar derivative arguments in PROOF.md",
+      "Entropy decrement B+JS with JS<=2Inf/ln2 for erasure corollary; exact baseline reconstructed in prior work"
+    ],
+    "review_records": [],
+    "status": "EXACT_FINITE_CERTIFICATE_AUTHOR_CHECKED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "None within the finite domain; general extension is refuted.",
+    "next_consumers": [
+      "A076",
+      "A078",
+      "A028",
+      "A092",
+      "A094"
+    ]
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "date": "2026-09-20",
+  "seed": 20260920,
+  "full_FEI_proved": false,
+  "formal_proof_assistant_used": false,
+  "exact_small": {
+    "functions": 65812,
+    "nonzero_direction_pairs": 984884,
+    "nonconstant_low_degree_coordinate_certificates": 1724992,
+    "subspace_closure_implications": 8438032,
+    "restriction_inclusions": 2365568,
+    "scope": "Every Boolean function in dimensions 1 through 4; all nonzero directions; d=1 and d=2."
+  },
+  "robust_small": {
+    "candidate_triples": 230160,
+    "nonconstant_positive_certificates": 1592,
+    "coordinate_assertions": 3488,
+    "scope": "Every f, nonzero v, and degree-at-most-two q in dimensions 1 through 3; exact Hamming errors."
+  },
+  "tree_checks": {
+    "roots": 36,
+    "nodes": 572,
+    "paid_nodes": 96,
+    "zero_cost_nodes": 476,
+    "leaves": 608,
+    "normal_form_assertions": 36,
+    "scope": "32 seeded affine-scrambled high-degree cores plus cubic phases, and 4 affine roots, in dimensions 5 through 8."
+  },
+  "approximate_symmetry": {
+    "approximate_signed_symmetry_triples": 2540,
+    "pivot_affinity_assertions": 4324,
+    "scope": "Every f, direction, constant phase, and supported pivot in dimensions 1 through 3, with error <=1/2."
+  },
+  "gluing_counterexample": {
+    "k": 5,
+    "individual_parent_dimension": 6,
+    "shared_control_parent_dimension": 11,
+    "inequality_refuted": "Delta(shared product) <= Delta(first factor) + Delta(second factor)",
+    "certified_gap_lower": "239650700679/100000000000000",
+    "certified_gap_upper": "5991267517/2500000000000",
+    "certified_decimal_enclosure": [
+      "0.00239650700679",
+      "0.00239650700680"
+    ],
+    "higher_precision_midpoint": "0.00239650700679668345276099024654825408",
+    "interval_width_upper": "6.15624309962113428930102114022469697E-49",
+    "exact_walsh_and_scalar_formula_agree": true,
+    "interpretation": "Counterexample to the proposed gluing inequality, NOT to FEI."
+  },
+  "compression_constant": {
+    "formula": "4*h_2(1/4)+2/ln(2) = 8-3*log_2(3)+2/ln(2)",
+    "certified_decimal_enclosure": [
+      "6.1305025796144",
+      "6.1305025796145"
+    ],
+    "interpretation": "Existing local entropy-payment bound used in the new directional compression theorem; not a new universal FEI constant."
+  },
+  "checker_sha256": "3ae698f3c826f2908558a5de13cd01e62f863e9dfef8a1d1f01f224ced00d037"
+}

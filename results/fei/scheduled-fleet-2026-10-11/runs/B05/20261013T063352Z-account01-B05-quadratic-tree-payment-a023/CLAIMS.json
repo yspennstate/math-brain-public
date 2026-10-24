@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "run_id": "20261013T063352Z-account01-B05-quadratic-tree-payment-a023",
+  "primary_packet_id": "A023",
+  "stable_gap_id": "B05_RARE_REFUNDS",
+  "claims": [
+    {
+      "claim_id": "B05_A023_QUADRATIC_ADAPTIVE_TREE_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every quadratic Boolean control phase q, arbitrary Boolean g on a disjoint block, and every finite adaptive/pruned physical restriction tree on the control block with no coordinate repeated on a path, U(qg)-sum_l w_l U(q_l g) <= 3 sum_v w_v Inf_{i_v}(q_v g) <= 3 I(q).",
+      "quantifiers": [
+        "all finite control dimensions and polar ranks",
+        "all quadratic coefficient graphs and affine shifts",
+        "all arbitrary disjoint Boolean cores",
+        "all finite adaptive/pruned uniform physical restriction trees",
+        "coordinates may repeat at incomparable nodes but not on one path"
+      ],
+      "constant": 3,
+      "units": "bits",
+      "class_extension": "arbitrary overlapping quadratic controls, adaptive pruning, branchwise coordinate reuse, and arbitrary retained disjoint cores",
+      "limitations": [
+        "shared-variable core coupling is excluded",
+        "activation probabilities are dyadic reach probabilities under uniform physical restriction",
+        "does not pay for the retained core and does not prove full FEI"
+      ],
+      "review_targets": ["A087", "A094"]
+    },
+    {
+      "claim_id": "B05_A023_PHYSICAL_OWNERSHIP_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "In any finite adaptive physical restriction tree with no coordinate repeated on a path, sum over nodes querying i of w_v Inf_i(F_v) <= Inf_i(F); therefore total queried influence is at most root influence.",
+      "proof_key": "Reach cylinders for nodes querying a fixed coordinate are pairwise disjoint and invariant under that coordinate flip."
+    },
+    {
+      "claim_id": "B05_A023_SHARED_CORE_COSET_STABILITY_v1",
+      "status": "OPEN",
+      "statement": "Obtain a dimension-free approximate coset-merge bound stable under adaptive iteration when queried controls are coupled to arbitrary nonflat shared cores.",
+      "unpaid_term": "aggregate cross/within upper-set asymmetry mismatch",
+      "next_test": "quadratic control coupled to a one-point-defect core"
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

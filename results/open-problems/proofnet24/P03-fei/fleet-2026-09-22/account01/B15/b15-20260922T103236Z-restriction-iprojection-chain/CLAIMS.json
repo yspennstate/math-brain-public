@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "run_id": "b15-20260922T103236Z-restriction-iprojection-chain",
+  "account": "account01",
+  "slot": "B15",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "claims": [
+    {
+      "id": "B15-RESTRICTION-IPROJECTION-CHAIN-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Every genuine physical coordinate restriction at interior selector bias, with nondegenerate cases stated explicitly and boundary/constant cases by contraction or finite-alphabet limit.",
+      "statement": "For weighted dependence KL Kcal(W)=v K_occ(W+), Kcal(parent)=(1-s)Kcal(child0)+sKcal(child1)+C_marg+C_erase+C_pair-JS_s(U,V), where all three C terms are explicit nonnegative KL divergences and C_marg exactly accounts for movement of empty/nonempty mass and occurrence marginals.",
+      "dependencies": [
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "mode": "uses proved I-projection definition and Pythagorean identity"
+        }
+      ]
+    },
+    {
+      "id": "B15-RESTRICTION-COEFFICIENT-ONE-PAYMENT-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Same physical restriction scope as the chain rule.",
+      "statement": "v K_occ(G) >= (1-s)v0 K_occ(G0)+s v1 K_occ(G1)-kappa(s) It_j(G;p), with kappa(s)=ln((1-s)/s)/((1-2s)ln2) and kappa(1/2)=2/ln2.",
+      "dependencies": [
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "8793c7e49e1de7921bc76c7724c92fae03024e26",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account03/B15/20260922T082654Z-js-packet-payment/REPORT.md",
+          "mode": "uses proved JS_s(U,V) <= kappa(s) It_j"
+        },
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "b5bf5c990f3597cf26c2aa0ab1eabea4ae9ea277",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T085941Z-suspension-kl-no-loss/REPORT.md",
+          "mode": "partner result applied to interpret why coefficient one is essential rather than optional"
+        }
+      ]
+    },
+    {
+      "id": "B15-NAIVE-RESTRICTION-KL-MONOTONICITY-v1",
+      "status": "REFUTED",
+      "scope": "Claim Kcal(parent) >= (1-s)Kcal(child0)+sKcal(child1) for all Boolean physical restrictions.",
+      "statement": "The universal monotonicity claim is false. A four-bit uniform Boolean truth table (1,1,1,-1,1,1,1,-1,1,-1,-1,-1,-1,1,1,1), restricted on bit 0, has parent Kcal=0 but positive average child Kcal. Exact chain balance uses JS=1 bit and C_marg=0.216889841739573... .",
+      "certificate": {
+        "checker": "CHECKER.py",
+        "output": "CHECKER_OUTPUT.txt",
+        "analytic_exact_features": [
+          "parent squared spectrum is uniform on all 16 subsets",
+          "child squared spectra are disjoint uniform four-atom laws",
+          "therefore JS_{1/2}=1 exactly",
+          "both child sources differ from their unique max-entropy references, hence have strictly positive dependence KL"
+        ]
+      }
+    },
+    {
+      "id": "FEI-FULL-UNIFORM-CUBE",
+      "status": "OPEN",
+      "statement": "No universal finite dimension-independent FEI constant is proved by this run. The next unpaid step is a joint multiscale physical-restriction inequality combining the signed KL node ledger with the Bellman/influence increment without losing a fixed fraction of K_occ or truncating high-cardinality dependence."
+    }
+  ],
+  "mandatory_preflight": {
+    "recursive_ternary_majority_lowlevel_barrier": "PASSED_BY_MECHANISM_SCOPE_ONLY",
+    "explanation": "The restriction identity retains full child Kcal at coefficient one and, when iterated, records every node-scale signed credit. It does not retain only a fixed/low-depth labelled projection or merge all higher atoms into one tail. This is compatibility, not FEI closure.",
+    "source": {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "bff0d7b6c21485f386841c42582eb04f32705046",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/account03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md"
+    }
+  },
+  "other_consumed_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2bf247373576eb406ca91bb3ea5f3ce5e5ab8588",
+    "path": "proofnet24/P03-fei/fleet-2026-09-21/account04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md",
+    "use": "Compared the restriction theorem with the exact composition hierarchy while explicitly deriving restriction weights afresh."
+  }
+}

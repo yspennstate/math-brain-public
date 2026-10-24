@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B16",
+  "run_id": "20260923T173727Z-account01-B16-QFORM-auto11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "control_commit_at_start": "1798756838c5a8f36cd8b102744792b300e9882f",
+  "control_commit_final_refresh": "56f7fdf6a61fd9df929a6e3fe645d94700873d3c",
+  "status": "NEW_SUPPORTING_THEOREM_FULL_QFORM_OPEN",
+  "theorem": {
+    "id": "QFORM-RANK32-PLANE-DET-OVERLAP-v1",
+    "statement_short": "For exact rank three, a disjoint source cut with one full-rank 3D Gram and one rank-2 Gram is paid whenever the quadratic restriction to the rank-2 spectral plane has nonzero determinant; the bound is 12.1398343707551 [det(G_I) pdet(G_J) |det Lambda| |det(Lambda|_P)|]^(-1/5), and the density is continuous.",
+    "key_identity": "(s1 s2)^2 |gamma| = det(G_I) pdet(G_J) |det Lambda|^2 |t^T Lambda^{-1} t| = det(G_I) pdet(G_J) |det Lambda| |det(Lambda|_P)|",
+    "balanced_corollary": "If the two nonzero eigenvalues of G_J lie in [1/4,3/4], |det Lambda|>=1, and |t^T Lambda^{-1}t|>=1/64, then ||p_Q||_infinity<54.482."
+  },
+  "premises": [
+    "math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401 account01/B18 Theorem 3.1 product-projection density bound",
+    "math-open-problems@bfb102a2317191969c16cf336b53ed47a8a06c6d account01/B16 QFORM-CROSS2-OVERLAP-SQUARE-L1-v1"
+  ],
+  "partner_result_applied": {
+    "source": "math-open-problems@c8258480a0bfb67e9b128e67c477c5c5dcdd38e8 account02/B16 20260923T163017Z-auto11b",
+    "application": "Combined hub-Schur bound with new inverse-Rayleigh branch: under both packets, |A00|>=1/64 or |t^T Lambda^{-1}t|>=1/64 implies ||p_Q||_infinity<104.512. The partner stress family has exact inverse-Rayleigh null q=0 and arbitrarily small A00, yet its source-first theorem gives ||p_Q||_infinity<176."
+  },
+  "corrections_consumed": [
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "arbitrary bounded projected density does not control indefinite coarea",
+    "current adapted-hub SP remains open"
+  ],
+  "immutable_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "cec6d551cd519592f559a466d1870e7638934414",
+    "blob": "96069a71fb17ad3360fcd73045a49cbe7964563b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B16/20260923T173727Z-account01-B16-QFORM-auto11/REPORT.md",
+    "checkpoint_commit": "fd35cc86a162c56fd7ed882c7c9562c181823a3c"
+  },
+  "handoff_commit": "683445e6b5f54bce719e3740ec2429635cd547c6",
+  "unresolved_implication": "QFORM-RANK32-ISOTROPIC-PLANE-SOURCE-TRANSDUCER-v1",
+  "next_step": "At det(Lambda|_P)=0, retain the rank-two crossing, the rank-one same-side curvature on the 2D source bank, and the null-direction coupling on the 3D source bank through nonlinear integration without replacing either bank by arbitrary joint density or worst conditional slices.",
+  "global_claim_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "global_continuity_status": "OPEN",
+  "timestamp_utc": "2026-09-23T18:01:27Z"
+}

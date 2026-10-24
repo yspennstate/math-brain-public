@@ -1,0 +1,77 @@
+[
+  {
+    "claim_id": "A035-MINENTROPY-CONSTANT-DIAGNOSTICS",
+    "version": 1,
+    "exact_statement": "For the explicitly specified 797 Boolean cases, H-Hinf<=4I is certified by rational log intervals; Hinf<=2I fails in three tribes cases. In particular h_{2,3} has I=27/16 and Hinf=10-4log2(3)>2I. The actual 514-bit Boolean F=(1+z)/2+(1-z)y product(j=1..32)h_{2,8}(x_j)/2 has I=2315/128, Hinf=2 and H-Hinf-4I>1.631488620635. These refute only helper constants 2 and 4, not universal finiteness or FEI. The largest certified Hinf/I in the specified primary family is (512/1029)(22-2log2(353))>2.524150672274, at h_{3,4}.",
+    "hypotheses": [
+      "Uniform independent cube inputs; Boolean outputs +-1, except explicitly labelled normalized non-Boolean controls; logarithms base two."
+    ],
+    "statement_sha256": "617e0b5e71a4c3a60adc7d9c1e7d99b83750e56c6274b8313c585d60996f972e",
+    "contributors": [
+      "A035"
+    ],
+    "proof_source": [
+      "CANCELLATION_FAILURE.tex",
+      "out/complete_payment_records.json",
+      "out/SIGNED_PAYMENT_TESTS.json",
+      "out/independent_tribes_selector.json",
+      "code/payment_test.py",
+      "code/independent_tribes_selector.py"
+    ],
+    "proof_dependencies": [
+      "Elementary Fourier factorization, Parseval and physical boundary identities; threshold_paper_38pp \u00a78.4 Proposition 8.9 as contextual exact identity, explicitly rederived."
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Proposed Hinf<=2I on all Boolean functions",
+      "Proposed H-Hinf<=4I on all Boolean functions"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B07 lead",
+      "A031",
+      "A033",
+      "A088",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A035-SIGNED-AND-GAP-SCOPE-AUDIT",
+    "version": 1,
+    "exact_statement": "For every even n quadratic bent sign, every nonzero signed Fourier autocorrelation is zero and every unsigned autocorrelation is one; its total unsigned cost is 2^n-1, and I=n/2, so total unsigned cost cannot be universally paid by KI. Separately, sup_boolean (H-Hinf)/I = sup_boolean H/I (extended real values): for arbitrary Boolean h and integer t>=1 the balanced-core selector F built from y*h^tensor(t) satisfies H(F)-Hinf(F)=tH(h)/2 and I(F)=1+tI(h)/2. Normalized dyadic non-Boolean phi_t=3/4+(1/(4*2^t))sum(i=1..7*4^t)x_i has gap/I=2t+log2(9) and violates the singleton signed Booleanity identity; flat psi_n has Hinf/I=log2(n) but gap zero.",
+    "hypotheses": [
+      "Uniform independent cube inputs; Boolean outputs +-1, except explicitly labelled normalized non-Boolean controls; logarithms base two."
+    ],
+    "statement_sha256": "93b73993cf806b98c3807af3175dad1dd6c1386d50b3010e5570942ec8c8b720",
+    "contributors": [
+      "A035"
+    ],
+    "proof_source": [
+      "CANCELLATION_FAILURE.tex",
+      "out/SIGNED_PAYMENT_TESTS.json",
+      "out/selector_followup.json"
+    ],
+    "proof_dependencies": [
+      "Elementary Fourier factorization, Parseval and physical boundary identities; threshold_paper_38pp \u00a78.4 Proposition 8.9 as contextual exact identity, explicitly rederived."
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unsigned total Fourier autocorrelation<=KI universally for Boolean functions",
+      "An estimate for H-Hinf is an easier universal conjecture than full FEI"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B07 lead",
+      "A031",
+      "A033",
+      "A088",
+      "A094",
+      "B20"
+    ]
+  }
+]

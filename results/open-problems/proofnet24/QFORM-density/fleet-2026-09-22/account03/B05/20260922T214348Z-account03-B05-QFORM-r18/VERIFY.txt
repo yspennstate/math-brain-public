@@ -1,0 +1,27 @@
+QFORM_B05_R18_ARITHMETIC_CHECK
+
+Input exact constants from account03/B06 r19:
+epsilon0^2 = 125/136576
+sigma0^2   = 9092287/17072000
+
+Numerical evaluations (double precision, only for regression; proofs in REPORT.md are exact inequalities):
+epsilon0 = 0.030252955737152597
+4*epsilon0 = 0.12101182294861039
+sigma0 = 0.7297840493386833
+sigma0 - 1/4 = 0.47978404933868335
+2^(7/4)*(sigma0-1/4)^(-1/4) = 4.041485649343972
+
+Therefore the rounded statements used in the report are safe:
+epsilon0 < 0.030253
+4 epsilon0 < 0.121012
+sigma0 > 0.729784
+sigma0-1/4 > 0.479784
+2^(7/4)*(sigma0-1/4)^(-1/4) < 4.042
+
+Layer-cake split for Lemma 2.1:
+t0=2/sqrt(A B)
+int_0^t0 1 dt = 2/sqrt(A B)
+int_t0^infinity 4/(A B t^2) dt = 2/sqrt(A B)
+total = 4/sqrt(A B)
+
+QFORM_B05_R18_ARITHMETIC_CHECK_PASS

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B12",
+  "run_id": "20260922T225440Z-account02-B12-QFORM-r19",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_start": "16096a66cd52bf29198921cfe305c0f82c297ab6",
+  "source_control_prepublication": "9c0b0b76ba86c5914cd236efbd511389385dd3e9",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-TWO-BANK-THIRD-SOURCE-ARBITRARY-COMPLETION-v1",
+      "source": "yspennstate/math-open-problems@e71ed8023266f157a6f5c7a04ea6f9c53acc59c5:proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260922T214833Z-qform-eigenvalue-r18/REPORT.md",
+      "scope": "Two disjoint normalized original-coordinate banks plus any third reduced-core singular direction; indefinite-pair density cap 6*400^(1/3)(D^2*kappa*s)^(-1/6), definite-pair cap 2*pi/sqrt(|det B|), with arbitrary outside completion and cross coupling handled by mixed-norm shear."
+    },
+    {
+      "id": "QFORM-FINITE-SMALL-SPECTRAL-TAIL-ARBITRARY-COMPLETION-v1",
+      "source": "yspennstate/math-open-problems@a069e66a087a471e0a4b0a23b909c0d8ba6a1e1f:proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260922T225241Z-qform-eigenvalue-r19/REPORT.md",
+      "scope": "Fixed finite physical packet with three dominant directions and small in-packet spectral tail; arbitrary outside completion. Read and used as the complementary small-magnitude branch."
+    },
+    {
+      "id": "LOW_RANK_SINGULAR_VALUE_INTERLACING",
+      "source": "standard singular-value Weyl inequality, proved inline in canonical report",
+      "scope": "rank(E)<=r implies s_k(H0+E)>=s_(k+r)(H0)."
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-RANK-RESERVE-PAIR-COMPRESSION-STABILITY-v1",
+      "status": "PROVED_SUPPORTING_STABILITY_THEOREM",
+      "statement": "If a protected two-bank reduced core H0 has s_(3+r)(H0)>=s0 and bank-pair gap beta0, then any symmetric rank<=r perturbation E of arbitrary sign and operator norm is harmless to the third-source singular gap after spending the rank reserve. If the 2x2 bank compression F obeys delta=||F||<beta0, the final pair keeps inertia. Indefinite branch: ||p_Q||inf <=6*400^(1/3)[(beta0-delta)^5 s0]^(-1/6); definite branch: <=2*pi/(beta0-delta). Arbitrary outside spectrum/cross coupling remains free through the completed partner theorem."
+    },
+    {
+      "id": "QFORM-ARBITRARY-EIGENVALUE-REPLACEMENT-COROLLARY-v1",
+      "status": "PROVED_SUPPORTING_COROLLARY",
+      "statement": "If r protected-core eigenvectors vanish on the two bank coordinates, their eigenvalues may be replaced by arbitrary real values of either sign and arbitrary magnitude with delta=0. For diag(1,-1,1,mu1,...,mur), all real mu_j and all r>=1, the density cap is <=6*400^(1/3)=44.2083779836846 in the partner factorization scope."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "partner": "account03/B12",
+    "source": "yspennstate/math-open-problems@e71ed8023266f157a6f5c7a04ea6f9c53acc59c5:proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260922T214833Z-qform-eigenvalue-r18/REPORT.md",
+    "application": "Rank interlacing supplies s3 of the actual final reduced core without any norm bound on the rank-r perturbation; pair-compression stability supplies D and kappa; the partner theorem is then invoked on the actual final original-coordinate factorization, including its arbitrary dependent outside quadratic remainder."
+  },
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "b873b2b52f4c75c331153c9227d0a7fae0f02979",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260922T225440Z-account02-B12-QFORM-r19/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260922T225440Z-account02-B12-QFORM-r19/CHECK.py",
+    "checker_result_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260922T225440Z-account02-B12-QFORM-r19/CHECK_RESULT.json",
+    "checker_status": "PASS",
+    "checker_scope": "3480 randomized rank-reserve sanity tests; 3000 pair-inertia/gap tests; 960 explicit arbitrary-eigenvalue replacement tests through r=12. Analytic proof is primary."
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "db4b75dfa23b010d7aed2ec5783e08f7b5a07417",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B12/20260922T225440Z-account02-B12-QFORM-r19.md"
+  },
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "NOT_PROVED_BY_THIS_RESULT",
+  "unresolved_implication": "From only s3(A)>=1, extract a quantitative protected two-bank pair plus sufficient rank reserve, or force an already-paid diffuse/ridge/grouped-bank/physical-triple branch before reciprocal pair conditioning is paid.",
+  "next_mathematical_attempt": "Try a reserve-or-small-tail dichotomy on a grouped two-bank reduced core: if s4 is small use partner r19 finite-tail localization; if s4 is large, spend it as one rank-reserve direction and seek a pair whose added-direction compression is small by aggregate leverage rather than one-minor selection.",
+  "scheduler_mutations": 0,
+  "quiet_delivery_changed": false,
+  "notifications_changed": false
+}

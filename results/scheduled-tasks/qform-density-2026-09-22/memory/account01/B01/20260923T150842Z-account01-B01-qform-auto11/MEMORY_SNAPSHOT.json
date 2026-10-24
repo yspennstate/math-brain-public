@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260923T150842Z-account01-B01-qform-auto11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_commit": "08458757b134d3a971c08d152fffe96fdedc6ca2",
+  "control_revision": "2026-09-22.15",
+  "full_target_status": "OPEN",
+  "continuity_full_target_status": "OPEN",
+  "new_claim_id": "QFORM-ZERODIAG-RANK1-LEAF-UNIFORM-v1",
+  "new_claim_status": "SUPPORTING_PROOF_SUPPLIED_PENDING_INDEPENDENT_REVIEW",
+  "new_claim_statement": "For a zero-leaf-diagonal common-hub rank-one packet a X0^2 + 2 X0 b^T Y + lambda(z^T Y)^2 whose three nonzero eigenvalues have modulus at least sigma, arbitrary independent cap-one physical inputs and arbitrary affine leakage give ||p_Q||_infinity <=256/sigma.",
+  "key_identities": [
+    "C^{-1} exact in the (hub,z,q) spectral-range basis",
+    "ell_i=z_i^2+q_i^2 for the natural two-frame law",
+    "P(P cap Q=empty)>=1/100 when max ell_i<=1/2",
+    "leaf completion currency lambda^2 z_i^2 E ell_i",
+    "hub-leaf Schur_i=-(lambda/d_i)v_i v_i^T with ||v_i||^2=E ell_i"
+  ],
+  "partner_used": {
+    "account": "account02",
+    "slot": "B01",
+    "run": "20260923T142922Z-account02-B01-qform-r44",
+    "canonical_commit": "31608e4193b3ba491084081cb7c000e254c01a82",
+    "application": "At Z>=1/64 the partner volume-marginal compiler gives <45.024 in its diffuse branch and <16.972 in its three-heavy branch."
+  },
+  "canonical_math_commit": "e1ffb95f2fb5c849d6af871102320eaeca736573",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T150842Z-account01-B01-qform-auto11/REPORT.md",
+  "bundle_tip": "2fe9165cba658b6642373f3a813b44187c79bac8",
+  "handoff_commit": "a138bc2965f59d54658bc85aa01b0cc2c8c701ee",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B01/20260923T150842Z-account01-B01-qform-auto11.md",
+  "first_unpaid_implication": "QFORM-W1-GLOBAL-LOCALIZATION-OR-HIGHER-LEAF-RANK-v5",
+  "phase_aligned_counterexample_preserved": true,
+  "notes": "Finite checker is diagnostic only. No claim of full QFORM or full continuity. Repository transport is not native brain ingestion."
+}

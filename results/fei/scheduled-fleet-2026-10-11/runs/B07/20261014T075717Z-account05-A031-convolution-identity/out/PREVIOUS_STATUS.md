@@ -1,0 +1,2 @@
+STATE: A031 stage4 complete: lossless three-state collision refund proved, tribes M/I<=5/2; arbitrary activation flag retains terminal seed debt; A090 degree-only obstruction independently accepted; 33653+578 exact checks; full FEI OPEN.
+NEXT: Test signed collision-trace sufficiency on three pairwise-overlapping point conjunctions with no common activation block; retain conditional KL/terminal cores and one joint influence budget; A088/A094 review.

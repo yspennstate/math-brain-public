@@ -1,0 +1,285 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}\usepackage{lmodern,amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\TV}{d_{\mathrm{TV}}}\newcommand{\Unif}{\operatorname{Unif}}
+\newcommand{\Z}{\mathbb Z}\newcommand{\Pp}{\mathbb P}\newcommand{\E}{\mathbb E}
+\title{The product condition without cutoff\protect\\on unweighted Abelian Cayley graphs}
+\author{Yitzchak Shmalo\\[3pt]
+\small Einstein Institute of Mathematics,\\
+\small The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}\date{10 September 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We construct finite simple connected undirected Cayley graphs of Abelian groups whose rate-one simple random walks satisfy the spectral product condition but do not exhibit total-variation cutoff. The groups are products of a hypercube group and a cyclic group. Uniform choice from an explicit generating set induces an exact rare-reset mechanism on the cube factor, while the auxiliary factor mixes on a negligible time scale. We compute the complete character spectrum and the limiting total-variation profile, obtaining an explicit separation between two fixed-threshold mixing times. The construction answers the unrestricted formulation of the Abelian Cayley question in Salez's survey and the corresponding bounded-step nilpotent-group conjecture of Hermon and Olesker-Taylor. A further existence construction retains the same profile with degree $n^{o(1)}$ on $n$ vertices. Degrees remain unbounded, and typical random-generator formulations are unaffected. The reset mechanism is classical; the contribution here is an explicit unweighted Abelian realization together with control of its full mixing profile.
+\end{abstract}
+\noindent\textbf{Keywords:} Markov chains; mixing times; cutoff; Abelian Cayley graphs; product condition.
+
+
+\section{Statement and scope}
+For a finite connected undirected regular graph let $P$ be its simple-random-walk transition matrix and let $e^{t(P-I)}$ be its rate-one continuous-time semigroup. Write $v(t)$ for the worst-start total-variation distance to stationarity and
+\[
+ t(\varepsilon)=\inf\{t\ge0:v(t)\le\varepsilon\},\qquad 0<\varepsilon<1.
+\]
+The spectral gap is $\gamma=1-\lambda_2(P)$. A sequence has cutoff if $t(\varepsilon)/t(1-\varepsilon)\to1$ for every $0<\varepsilon<1/2$. The product condition is $\gamma t(1/4)\to\infty$. These conventions and the necessity of the product condition are discussed in \cite[Chapter 18]{LPW}.
+
+For integers $d\ge8$, set
+\begin{equation}\label{eq:parameters}
+ N_d=2^d,\qquad m_d=1+\left\lceil\frac{2^d\log d}{4}\right\rceil,
+ \qquad H_d=(\Z/2\Z)^d,\quad K_d=\Z/m_d\Z.
+\end{equation}
+Let $e_1,\ldots,e_d$ be the standard generators of $H_d$. In $G_d=H_d\times K_d$ choose the generating set
+\begin{equation}\label{eq:generators}
+ S_d=\{(e_i,k):1\le i\le d,\ k\ne0\}
+ \ \cup\ \{(x,0):x\in H_d\setminus\{0\}\}.
+\end{equation}
+All generators have the same transition probability. Put
+\begin{equation}\label{eq:rates}
+ D_d=d(m_d-1)+N_d-1,\quad
+ \alpha_d=\frac{d(m_d-1)}{D_d},\quad
+ \theta_d=\frac{N_d-1}{D_d},\quad
+ \beta_d=\frac{N_d}{D_d},\quad
+ T_d=\frac{d\log d}{4\alpha_d}.
+\end{equation}
+The rates $\theta_d$ and $\beta_d$ are different: the former counts actual global-type jumps; the latter is the equivalent reset rate in the projected generator.
+
+\begin{theorem}\label{thm:main}
+The graph $\operatorname{Cay}(G_d,S_d)$ is finite, simple, connected, undirected and vertex-transitive, with degree $D_d$. Its rate-one simple random walk satisfies, for every fixed $s>0$ with $s\ne1$,
+\begin{equation}\label{eq:profile}
+ \lim_{d\to\infty}v_d(sT_d)=
+ \begin{cases} e^{-s},&0<s<1,\\0,&s>1.\end{cases}
+\end{equation}
+For all sufficiently large $d$ its spectral gap is
+\begin{equation}\label{eq:gap}
+ \gamma_d=\frac{2(m_d-1)+N_d}{D_d}
+ =\frac{2\alpha_d}{d}+\beta_d\sim\frac2d.
+\end{equation}
+For every fixed $\varepsilon\in(0,1)$,
+\begin{equation}\label{eq:mixing}
+ \frac{t_d(\varepsilon)}{T_d}\longrightarrow
+ \min\{1,\log(1/\varepsilon)\}.
+\end{equation}
+In particular,
+\[
+ \gamma_d t_d(1/4)\sim\tfrac12\log d\to\infty,
+ \qquad \frac{t_d(3/4)}{t_d(1/4)}\longrightarrow\log(4/3)<1.
+\]
+Thus the product condition holds and cutoff fails.
+\end{theorem}
+
+Salez's Problem 2.4 \cite{Salez} concerns uniform increments from a generating set and then discusses weighted increments separately. The conjecture in \cite[Section 7.4, Conjecture 1]{HOT} quantifies over sequences of generating subsets of bounded-step nilpotent groups. The present groups have nilpotency class one. These precise unrestricted formulations include \eqref{eq:generators}; neither imposes a degree bound in its displayed statement. The prose preceding \cite[Conjecture 1]{HOT} mentions random Cayley graphs, whereas the displayed conjecture quantifies arbitrary generating subsets. We address the displayed unrestricted statement. Our conclusion does not refute a high-probability assertion for uniformly sampled generators, and it does not concern uniformly bounded degree.
+
+\section{The graph and the exact projected walk}
+The two families in \eqref{eq:generators} are disjoint, since their second coordinates are respectively nonzero and zero. Neither contains the identity. Both are inverse closed: every cube element is its own negative, and $k\ne0$ implies $-k\ne0$ in $K_d$. Thus the Cayley graph is simple and undirected, with the degree asserted in \eqref{eq:rates}. The second family contains each $(e_i,0)$. Combining $(e_1,k)$ with $(e_1,0)$ gives $(0,k)$; hence the generators span the full product and the graph is connected. Translations are graph automorphisms, so the graph is vertex-transitive and its stationary distribution is uniform.
+
+Split the rate-one jump process into the two generator types. Independent Poisson thinning gives local-type jumps at rate $\alpha_d$ and global-type jumps at rate $\theta_d$. On a local-type jump the cube flips a uniformly selected coordinate, and independently the auxiliary coordinate adds a uniform nonzero element of $K_d$. On a global-type jump the cube adds a uniform nonzero element of $H_d$ and the auxiliary coordinate stays put.
+
+Let $L_d$ be the generator of rate-one simple random walk on the cube, and $\Pi_d$ the operator replacing a distribution on the cube by the uniform law. The kernel of a uniform nonzero cube increment is
+\[
+ Q_d=\frac{N_d\Pi_d-I}{N_d-1}.
+\]
+Consequently the projected generator equals
+\begin{equation}\label{eq:reset}
+ \alpha_d L_d+\theta_d(Q_d-I)
+ =\alpha_d L_d+\beta_d(\Pi_d-I).
+\end{equation}
+The cube semigroup commutes with $\Pi_d$, which is a projection. Since
+\[
+ e^{t\beta_d(\Pi_d-I)}=e^{-\beta_dt}I+(1-e^{-\beta_dt})\Pi_d,
+\]
+the cube law from zero is the mixture of its ordinary law at time $\alpha_dt$, with weight $e^{-\beta_dt}$, and uniform law with the remaining weight. If $c_d(t)$ is the ordinary rate-one cube distance and $q_d(t)$ is the projected distance, then
+\begin{equation}\label{eq:projected}
+ q_d(t)=e^{-\beta_dt}c_d(\alpha_dt).
+\end{equation}
+This is an exact identity, not an approximation replacing a nonzero increment by a uniform reset.
+
+\section{Controlling the complete product law}
+Projection contracts total variation, so $q_d(t)\le v_d(t)$. We now prove a matching approximation from above; convergence of a projection alone would be insufficient.
+
+\begin{lemma}\label{lem:whole}
+For every $t\ge0$,
+\begin{equation}\label{eq:whole}
+ 0\le v_d(t)-q_d(t)\le e^{-\alpha_dt}+\frac1{m_d}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $M_t$ count the local-type jumps, so $M_t$ is Poisson with mean $\alpha_dt$. Condition on the two jump processes, their times, and all cube increments. The auxiliary coordinate is then a sum of $M_t$ independent uniform nonzero increments. These remain independent under this conditioning, by the independent selections in the definition of each local-type jump.
+
+The distance between the uniform law on $K_d\setminus\{0\}$ and uniform law on $K_d$ is exactly $1/m_d$: half the sum of the absolute mass differences is
+\[
+ \tfrac12\left(\frac1{m_d}+(m_d-1)\left|\frac1{m_d-1}-\frac1{m_d}\right|\right)=\frac1{m_d}.
+\]
+Convolution by a probability law contracts total variation and preserves the uniform law. Conditional on $M_t\ge1$, the auxiliary sum therefore has distance at most $1/m_d$ from uniform. On $M_t=0$, bound the distance by one. Couple to a uniform auxiliary coordinate for each conditional law. The latter has uniform conditional distribution given the entire conditioning information, hence is independent of the cube endpoint. It follows that the joint law is within $e^{-\alpha_dt}+1/m_d$ of the product of its projected law and an independent uniform coordinate. The latter product has distance exactly $q_d(t)$ from uniform law on $G_d$. The triangle inequality proves the upper bound.
+\end{proof}
+
+\section{Cube cutoff and the limiting profile}
+We include a proof of the only cube asymptotics used. Under rate-one cube walk, independent coordinates flip at rate $1/d$. Their sign variables have means $e^{-2t/d}$. Product structure gives
+\begin{equation}\label{eq:chi}
+ \chi^2(\mathcal L(X_t),\Unif(H_d))=(1+e^{-4t/d})^d-1.
+\end{equation}
+For $t=s d\log d/4$ and $s>1$, the right side tends to zero, since $d e^{-4t/d}=d^{1-s}\to0$. Cauchy--Schwarz gives $c_d(t)\le\frac12\sqrt{\chi^2}$, proving convergence to zero.
+
+For $0<s<1$, let $F$ be the sum of the coordinate signs. From zero its mean is $a_d=d^{1-s/2}$ and its variance is at most $d$; under stationarity its mean is zero and variance $d$. Chebyshev applied to the event $\{F>a_d/2\}$ under both laws gives
+\[
+ c_d(s d\log d/4)\ge1-8d^{s-1}\longrightarrow1.
+\]
+No independence between different times is needed.
+
+The rounding in \eqref{eq:parameters} yields
+\begin{equation}\label{eq:betascale}
+ \beta_dT_d=\frac{2^d\log d}{4(m_d-1)}\longrightarrow1.
+\end{equation}
+Also $\alpha_d\to1$, $m_d\to\infty$, and $T_d\to\infty$. At time $sT_d$, the error in \eqref{eq:whole} tends to zero for each fixed $s>0$, since $\alpha_dsT_d=s d\log d/4\to\infty$. Equations \eqref{eq:projected} and \eqref{eq:betascale}, together with the two cube limits, prove \eqref{eq:profile}.
+
+\section{The complete spectrum}
+Characters of $G_d$ are indexed by a subset $A\subseteq\{1,\ldots,d\}$ and a character $\psi$ of $K_d$. Set $a=|A|$. The cube character takes value $(-1)^{\mathbf1_{\{i\in A\}}}$ at $e_i$, so its sum over the basis vectors is $d-2a$. Character orthogonality gives
+\[
+ c_\psi=\sum_{k\ne0}\psi(k)=
+ \begin{cases}m_d-1,&\psi=1,\\-1,&\psi\ne1,\end{cases}
+ \qquad
+ b_A=\sum_{x\ne0}\chi_A(x)=
+ \begin{cases}N_d-1,&A=\varnothing,\\-1,&A\ne\varnothing.\end{cases}
+\]
+The eigenvalue of the uniform-generator transition matrix is therefore
+\begin{equation}\label{eq:eigenvalues}
+ \lambda_{A,\psi}=\frac{(d-2a)c_\psi+b_A}{D_d}.
+\end{equation}
+These characters form an orthogonal basis, so the formula covers the entire spectrum. In particular, there is no unexamined auxiliary bottleneck. The three nonconstant sectors give the generator gaps
+\begin{align*}
+ &\frac{2a(m_d-1)+N_d}{D_d},&& a\ge1,\ \psi=1;\\
+ &\frac{d m_d}{D_d},&& a=0,\ \psi\ne1;\\
+ &\frac{D_d+d-2a+1}{D_d},&& a\ge1,\ \psi\ne1.
+\end{align*}
+The smallest gap in the first sector has $a=1$. Its value tends to zero and is asymptotic to $2/d$, whereas the second-sector value tends to one and the infimum of the third-sector values tends to one. Thus the first cube mode is the slowest for all sufficiently large $d$. This proves \eqref{eq:gap}. More explicitly, $D_d\sim d2^d\log d/4$, $\alpha_d\to1$ and $\beta_d\sim4/(d\log d)$, giving the asserted asymptotic.
+
+\section{Mixing times and the failure of cutoff}
+The function $v_d(t)$ is nonincreasing, since the semigroup contracts total variation. For $\varepsilon>e^{-1}$, the profile in \eqref{eq:profile} crosses level $\varepsilon$ at the interior point $s_\varepsilon=\log(1/\varepsilon)\in(0,1)$. For any sufficiently small $\delta>0$, the limiting distance at $(s_\varepsilon-\delta)T_d$ is strictly above $\varepsilon$ and at $(s_\varepsilon+\delta)T_d$ strictly below it. Monotonicity sandwiches the normalized mixing time between these two values; let $\delta\downarrow0$.
+
+For $0<\varepsilon\le e^{-1}$, every fixed $s<1$ has limiting distance $e^{-s}>\varepsilon$, while every $s>1$ has limiting distance zero. The same sandwich gives $t_d(\varepsilon)/T_d\to1$, including equality $\varepsilon=e^{-1}$. This proves \eqref{eq:mixing} without asserting a limit at the jump point $s=1$.
+
+The exact identity
+\[
+ \gamma_dT_d=\frac12\log d+\beta_dT_d
+\]
+and \eqref{eq:betascale} prove the product condition. The thresholds $1/4$ and $3/4$ give the ratio in Theorem~\ref{thm:main}. Its limit is strictly less than one, proving absence of cutoff. The jump in the limiting profile at $s=1$ is insufficient for cutoff, because an order-one amount of mixing has already occurred gradually on the same scale.
+
+\section{Relation to previous constructions and verification}
+Rare restarting is a classical obstruction to general product-condition criteria. The example attributed to Igor Pak in \cite[Example 18.7]{LPW} adds occasional stationary resampling to a chain and destroys cutoff while retaining the product condition. Salez discusses the weighted Abelian version in \cite[Lemma 1.3 and the following discussion]{Salez}; the final version of \cite[discussion following Theorem 1]{SalezCurvature} points to Pak's example. We do not claim the projected identity \eqref{eq:projected} as a new phenomenon. Uniform nonzero cube generators alone give a reset rate too large relative to coordinate flips. The auxiliary group in \eqref{eq:generators} supplies enough distinct local generators to tune their relative rate while keeping the full graph unweighted. Lemma~\ref{lem:whole} then verifies that this auxiliary group does not change the limiting mixing profile. These are the construction's relevant additional ingredients.
+
+Recent work on restart perturbations \cite{Vial} concerns perturbations and stationary distributions of general reversible chains; it must not be confused with a prior proof of this particular unweighted family. Likewise, long-range walks on products of cyclic groups \cite{GM} provide spectral descriptions and examples, but the presence of a similar state space alone does not identify the same counterexample. Lifting a chain to a larger state space is also a classical method, systematically studied by Chen, Lov\'asz and Pak \cite{CLP}. Their results concern acceleration and optimal mixing bounds under lifting, including nonreversible lifts of group walks. Here the projection is itself exactly Markov, the lifted graph is simple and unweighted, and Lemma~\ref{lem:whole} controls the difference between its full law and the projected law. The contribution is this realization and its consequence for the unrestricted Abelian product-condition question, rather than a general new principle of lifting.
+
+The strengthened criterion of \cite{SalezCurvature} contains a degree-dependent sparsity term. It is therefore distinct from the ordinary product condition contradicted here. The local product condition of Pedrotti and Salez \cite{PS} instead uses a non-equilibrium Poincar\'e constant; it too must be distinguished from the ordinary spectral gap in Theorem~\ref{thm:main}.
+
+The degree restriction is substantive. Since $|G_d|=2^dm_d$, one has
+\[
+ \frac{\log D_d}{\log|G_d|}\longrightarrow\frac12.
+\]
+Thus degrees grow roughly as the square root of the number of vertices, up to subpower factors. The construction supplies no counterexample to bounded-degree transitive-expander questions or statements about typical random generating sets. Those questions must retain their separate labels. In the bounded-degree Abelian setting, absence of cutoff is already classical: Abrams, Babson, Landau, Landau and Pommersheim \cite{ABLLP} give an elementary proof of the result of Diaconis and Saloff-Coste. More generally, M\"unch and Salez \cite[Theorem 2]{MS} show that mixing and relaxation times are comparable, with degree-dependent constants, on vertex-transitive non-negatively curved graphs. Thus bounded-degree Abelian examples do not supply the simultaneous product condition and failure of cutoff proved here.
+
+The handwritten proof above checks graph membership, the exact projected semigroup, the conditional auxiliary law, all spectral sectors, and the limiting-time brackets. The formal companion supplies proofs of the exact generator, gap and scaling algebra. It does not construct the graph or the Markov law in Lean, and it is not a complete formalization of Theorem~\ref{thm:main}. The companion \texttt{CayleyAlgebra.lean} contains eight compiled algebraic declarations, checked with Lean 4.33.1 and mathlib commit \texttt{0df444a360eaa60ab8c11dca51a86af692955474}. Their axiom reports contain only \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}. The file does not formalize probability, character completeness or the asymptotic limits above. Compilation of these components is not a formal certificate for the complete theorem.
+
+\section{Subpolynomial degree}
+The explicit construction above has degree $|G_d|^{1/2+o(1)}$. This relation between degree and volume is not intrinsic to the obstruction: a rapidly mixing factor can enlarge the volume without changing the profile. The use of random generators and character concentration is classical, as in the Alon--Roichman method \cite{AR}; we give all estimates needed here.
+
+\begin{corollary}\label{cor:padding}
+There is a sequence of finite simple connected undirected Abelian Cayley graphs $\widehat G_d$, of degree $2D_d$ and order
+\[
+ n_d=|G_d|\,2^{d^2},
+\]
+whose rate-one walks have the profile \eqref{eq:profile} on the time scale $2T_d$, satisfy the product condition and do not exhibit cutoff. Moreover,
+\[
+ \frac{\log(2D_d)}{\log n_d}\sim\frac1d\longrightarrow0,
+ \qquad 1\ll\log(2D_d)\ll\log n_d.
+\]
+In particular the degrees are $n_d^{o(1)}$. The auxiliary generating sets in this statement are obtained by an existence argument, not by a closed-form formula.
+\end{corollary}
+\begin{proof}
+Set $r=d^2$, $k=D_d$ and $\delta=2^{-d/4}$. Draw independent uniform vectors $Z_1,\ldots,Z_k$ from $B_d=(\Z/2\Z)^r$. For each nontrivial character $\chi$ of $B_d$, the variables $\chi(Z_j)$ are independent signs with equal probabilities. Since $\cosh u\le e^{u^2/2}$, the exponential Markov inequality, optimized at $u=\delta$, gives
+\[
+ \Pp\left(\left|k^{-1}\sum_{j=1}^k\chi(Z_j)\right|>\delta\right)
+ \le 2e^{-k\delta^2/2}.
+\]
+For completeness, the moment bound follows from
+$\E e^{u\sum_j\chi(Z_j)}=(\cosh u)^k\le e^{ku^2/2}$; the inequality for $\cosh$ follows by comparing its power series with that of $e^{u^2/2}$, using $(2j)!\ge2^j j!$.
+
+There are $2^r-1$ nontrivial characters. The probability of any zero vector or repeated vector is at most $k(k+1)/2^{r+1}$, by a union bound over the $k$ zero events and the $\binom{k}{2}$ collision events. Thus the probability that any of the required properties fails is at most
+\begin{equation}\label{eq:paddingbad}
+ 2(2^{d^2}-1)\exp\left(-D_d2^{-d/2}/2\right)
+ +\frac{D_d(D_d+1)}{2^{d^2+1}}.
+\end{equation}
+Both terms tend to zero: $D_d\sim d2^d\log d/4$, so the negative exponent in the first term dominates $d^2\log2$, and the logarithm of the second term is $-d^2\log2+O(d)$. Consequently, for all sufficiently large $d$, there is a set $A_d$ of exactly $D_d$ distinct nonzero vectors such that
+\[
+ \left|D_d^{-1}\sum_{a\in A_d}\chi(a)\right|\le\delta
+ \quad\hbox{for every nontrivial character }\chi.
+\]
+The set generates $B_d$: otherwise a nontrivial character annihilating its linear span would have average one. Every element is its own inverse. Hence $\operatorname{Cay}(B_d,A_d)$ is a simple connected undirected graph of degree $D_d$, with all nonconstant transition eigenvalues bounded in absolute value by $\delta$.
+
+Let $a_d(t)$ be its continuous-time total-variation distance. Fourier orthogonality and Cauchy--Schwarz show that after $\ell$ discrete jumps the distance is at most
+\[
+ \tfrac12\sqrt{2^{d^2}-1}\,\delta^\ell.
+\]
+At $\ell=4d$ this is at most $\tfrac12 2^{-d^2/2}$, and the same bound holds at later jump counts by contraction. At continuous time $8d$, the number of jumps $M$ is Poisson with mean $8d$. Chebyshev gives $\Pp(M<4d)\le1/(2d)$, and therefore
+\[
+ a_d(8d)\le\frac1{2d}+\frac12 2^{-d^2/2}\longrightarrow0.
+\]
+As $T_d/d\to\infty$, monotonicity implies $a_d(sT_d)\to0$ for every fixed $s>0$. Its spectral gap $\gamma_{A,d}$ is at least $1-\delta$.
+
+Now take the product group $\widehat G_d=G_d\times B_d$ with generating set
+\[
+ \widehat S_d=(S_d\times\{0\})\cup(\{0\}\times A_d).
+\]
+The two sets are disjoint and each has size $D_d$. The rate-one generator is the sum of the two factor generators, each run at half speed. Thus the two coordinates are independent factor walks, and at time $2t$ projection and the product total-variation inequality give
+\[
+ v_d(t)\le\widehat v_d(2t)\le v_d(t)+a_d(t).
+\]
+It follows that $\widehat v_d(2sT_d)$ has the limit in \eqref{eq:profile}. The tensor-product character basis gives the exact gap
+\[
+ \widehat\gamma_d=\tfrac12\min\{\gamma_d,\gamma_{A,d}\}
+ =\tfrac12\gamma_d
+\]
+for all sufficiently large $d$. The same monotone mixing-time brackets used in Section~6 now prove the product condition and absence of cutoff. Finally,
+$\log n_d=d^2\log2+O(d)$ and $\log(2D_d)=d\log2+O(\log d)$, proving the degree claims.
+\end{proof}
+
+This corollary also lies in the degree-growth regime $1\ll\log|\widehat S_d|\ll\log|\widehat G_d|$ appearing in the introduction of \cite{HOT}. It still concerns specially chosen generating sets and makes no assertion against the theorems about uniformly random generators in that paper. The auxiliary choice may be made deterministic by finite lexicographic selection from sets satisfying the character bound; no efficient selection algorithm is claimed. The formal companion does not encode this corollary.
+
+\section*{Funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+During the preparation of this work the author used generative AI tools to accelerate drafting and revision. AI assistance also contributed to the development and checking of the mathematical arguments, the literature search, the exposition, and the accompanying Lean components. This version was prepared and checked with OpenAI's Codex, including a separate agent review. Such checks do not replace the author's mathematical and bibliographic review. The author takes full responsibility for the content of the manuscript.
+
+\section*{Data and code availability}
+No empirical dataset is used. The source archive contains the complete manuscript, the Lean component file and its verification scope guide. The proof is self-contained apart from standard finite Fourier analysis, elementary Poisson thinning and the cited background on cutoff. The formal companion covers only the algebraic components specified above. The component source, pinned build configuration and verification records are available at \url{https://github.com/yspennstate/probability-proof-components}.
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{Salez} J. Salez, \emph{Modern aspects of Markov chains: entropy, curvature and the cutoff phenomenon}, 2025, Problem 2.4.
+\href{https://arxiv.org/abs/2508.21055}{arXiv:2508.21055}.
+\bibitem{HOT} J. Hermon and S. Olesker-Taylor, \emph{Cutoff for almost all random walks on Abelian groups}, J. Eur. Math. Soc. \textbf{28} (2026), 1913--1977. Section 7.4, Conjecture 1.
+\href{https://doi.org/10.4171/JEMS/1743}{doi:10.4171/JEMS/1743}.
+\bibitem{LPW} D. A. Levin and Y. Peres, with E. L. Wilmer, \emph{Markov Chains and Mixing Times}, second edition, American Mathematical Society, 2017. Chapter 18, especially Proposition 18.4 and Example 18.7.
+\href{https://pages.uoregon.edu/dlevin/MARKOV/}{Author's book page}.
+\bibitem{SalezCurvature} J. Salez, \emph{Cutoff for non-negatively curved Markov chains}, J. Eur. Math. Soc. \textbf{26} (2024), 4375--4392.
+\href{https://doi.org/10.4171/JEMS/1348}{doi:10.4171/JEMS/1348}.
+\bibitem{Vial} D. Vial and V. Subramanian, \emph{Restart perturbations for reversible Markov chains: trichotomy and pre-cutoff equivalence}, Random Structures \& Algorithms \textbf{66} (2025), e70007.
+\href{https://doi.org/10.1002/rsa.70007}{doi:10.1002/rsa.70007}.
+\bibitem{GM} R. Griffiths and S. Mano, \emph{A class of long range circulant random walks on $\mathbb Z_q^d$}, Stochastic Processes and their Applications \textbf{201} (2026), 105038.
+\href{https://doi.org/10.1016/j.spa.2026.105038}{doi:10.1016/j.spa.2026.105038}.
+\bibitem{CLP} F. Chen, L. Lov\'asz and I. Pak, \emph{Lifting Markov chains to speed up mixing}, Proceedings of the 31st Annual ACM Symposium on Theory of Computing (STOC), 1999, 275--281.
+\href{https://doi.org/10.1145/301250.301315}{doi:10.1145/301250.301315}.
+\bibitem{PS} F. Pedrotti and J. Salez, \emph{The local product condition implies cutoff}, 2026.
+\href{https://arxiv.org/abs/2607.05345}{arXiv:2607.05345}.
+\bibitem{ABLLP} A. Abrams, E. Babson, H. Landau, Z. Landau and J. Pommersheim, \emph{No cutoff for circulants: an elementary proof}, Probability and Mathematical Statistics \textbf{42} (2022), 97--108.
+\href{https://doi.org/10.37190/0208-4147.00032}{doi:10.37190/0208-4147.00032}.
+\bibitem{MS} F. M\"unch and J. Salez, \emph{Mixing time and expansion of non-negatively curved Markov chains}, Journal de l'\'Ecole polytechnique---Math\'ematiques \textbf{10} (2023), 575--590.
+\href{https://doi.org/10.5802/jep.226}{doi:10.5802/jep.226}.
+\bibitem{AR} N. Alon and Y. Roichman, \emph{Random Cayley graphs and expanders}, Random Structures \& Algorithms \textbf{5} (1994), 271--284.
+\href{https://doi.org/10.1002/rsa.3240050203}{doi:10.1002/rsa.3240050203}.
+\end{thebibliography}\endgroup
+\end{document}

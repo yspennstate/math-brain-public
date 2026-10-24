@@ -1,0 +1,24 @@
+P0282 eight-ninths-window exact self-check
+checks: star-word identity counts; Plancherel E[S6]; E[C^2*S2]; exact B7; log(A_j) through n^-7; D7 curvature; exact Chen margins
+star_leaves=1 length6_identity_words=1 formula=1
+star_leaves=2 length6_identity_words=22 formula=22
+star_leaves=3 length6_identity_words=93 formula=93
+star_leaves=4 length6_identity_words=244 formula=244
+star_leaves=5 length6_identity_words=505 formula=505
+j=1 partitions=1 E_S6=0 E_C2S2=0 eight_ninths_threshold_n=21 old_seven_eighths_threshold_n=24 source_margin_positive=True
+j=2 partitions=2 E_S6=1 E_C2S2=1 eight_ninths_threshold_n=33 old_seven_eighths_threshold_n=38 source_margin_positive=True
+j=3 partitions=3 E_S6=23 E_C2S2=15 eight_ninths_threshold_n=46 old_seven_eighths_threshold_n=53 source_margin_positive=True
+j=4 partitions=5 E_S6=116 E_C2S2=60 eight_ninths_threshold_n=59 old_seven_eighths_threshold_n=68 source_margin_positive=True
+j=5 partitions=7 E_S6=360 E_C2S2=160 eight_ninths_threshold_n=72 old_seven_eighths_threshold_n=84 source_margin_positive=True
+j=6 partitions=11 E_S6=865 E_C2S2=345 eight_ninths_threshold_n=85 old_seven_eighths_threshold_n=100 source_margin_positive=True
+j=7 partitions=15 E_S6=1771 E_C2S2=651 eight_ninths_threshold_n=99 old_seven_eighths_threshold_n=116 source_margin_positive=True
+j=8 partitions=22 E_S6=3248 E_C2S2=1120 eight_ninths_threshold_n=113 old_seven_eighths_threshold_n=133 source_margin_positive=True
+j=9 partitions=30 E_S6=5496 E_C2S2=1800 eight_ninths_threshold_n=127 old_seven_eighths_threshold_n=150 source_margin_positive=True
+j=10 partitions=42 E_S6=8745 E_C2S2=2745 eight_ninths_threshold_n=142 old_seven_eighths_threshold_n=167 source_margin_positive=True
+j=11 partitions=56 E_S6=13255 E_C2S2=4015 eight_ninths_threshold_n=156 old_seven_eighths_threshold_n=185 source_margin_positive=True
+j=12 partitions=77 E_S6=19316 E_C2S2=5676 eight_ninths_threshold_n=171 old_seven_eighths_threshold_n=202 source_margin_positive=True
+D7_discrete_curvature_identity=PASS
+D7_shifted_positive_coefficients=PASS
+analytic_tail_claim_used_in_report=tail_after_order7 <= 2^23*j^8/n^8 for n>=12j
+theorem_threshold_used_in_report=n^8 >= 2^26*(j+1)^9
+ALL_EXACT_CHECKS_PASS

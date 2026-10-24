@@ -1,0 +1,26 @@
+{
+  "command": "python -B -X utf8 checks/check_recall_gate.py",
+  "gate": {
+    "ts": "2026-10-10 08:44:17",
+    "status": "distress",
+    "mode": "throttle",
+    "reasons": [
+      "process_critical"
+    ],
+    "workload": "atomic_checkpoint_string_replay",
+    "bounds": "one process; standard library; at most 9 strings; no enumeration"
+  },
+  "scope": "exact captured top three plus six controls; relevance only",
+  "before": {
+    "off_target_hints_served": 3,
+    "target_relevant_top3": 0
+  },
+  "after": {
+    "off_target_hints_served": 0,
+    "abstained": true
+  },
+  "controls_passed": 6,
+  "elapsed_seconds": 0.0017405999824404716,
+  "deployment": "staged proposal; live recall unchanged",
+  "limitation": "Does not establish general recall accuracy or mathematical correctness"
+}

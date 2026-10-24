@@ -1,0 +1,49 @@
+[
+  {
+    "service": "arxiv",
+    "url": "https://export.arxiv.org/api/query?search_query=all:%22Agresti%22+AND+all:%22regularity%22&max_results=30&sortBy=submittedDate&sortOrder=descending",
+    "date": "2026-10-12",
+    "status": 200,
+    "bytes": 52848
+  },
+  {
+    "service": "openalex",
+    "url": "https://api.openalex.org/works?search=Nonlinear%20SPDEs%20and%20maximal%20regularity&per-page=15",
+    "date": "2026-10-12",
+    "error": "HTTPSConnectionPool(host='api.openalex.org', port=443): Max retries exceeded with url: /works?search=Nonlinear%20SPDEs%20and%20maximal%20regularity&per-page=15 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  },
+  {
+    "service": "crossref",
+    "url": "https://api.crossref.org/works?query.bibliographic=Agresti%20Veraar%20Nonlinear%20SPDEs%20maximal%20regularity&rows=15",
+    "date": "2026-10-12",
+    "status": 200,
+    "bytes": 375021
+  },
+  {
+    "service": "semantic",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=Agresti%20Veraar%20regularity&limit=30&fields=title,authors,year,url,externalIds",
+    "date": "2026-10-12",
+    "status": 429,
+    "bytes": 174
+  },
+  {
+    "service": "github",
+    "url": "https://api.github.com/search/repositories?q=Agresti+Veraar+regularity",
+    "date": "2026-10-12",
+    "error": "HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /search/repositories?q=Agresti+Veraar+regularity (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  },
+  {
+    "service": "arxiv_source",
+    "url": "https://arxiv.org/pdf/2501.18561",
+    "date": "2026-10-12",
+    "status": 200,
+    "bytes": 1591670
+  },
+  {
+    "service": "arxiv_lead",
+    "url": "https://arxiv.org/pdf/2509.07803",
+    "date": "2026-10-12",
+    "status": 200,
+    "bytes": 398777
+  }
+]

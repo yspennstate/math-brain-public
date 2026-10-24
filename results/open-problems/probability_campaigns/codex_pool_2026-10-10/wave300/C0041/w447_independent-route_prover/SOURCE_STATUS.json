@@ -1,0 +1,94 @@
+{
+  "candidate": "C0041",
+  "worker": "w447",
+  "checked_on": "2026-10-10T06:46:29.445058+00:00",
+  "exact_statement_verified": true,
+  "statement_packet": "~\\brain_workers\\w447\\STATEMENT_FOR_ADVERSARY.md",
+  "current_openness": "UNKNOWN",
+  "resolution_claim_found": true,
+  "novelty_claim": false,
+  "sources": [
+    {
+      "id": "drewitz_ramirez_rwre_2014",
+      "url": "https://arxiv.org/pdf/1309.2589",
+      "locator": "Open question 2.20, PDF page 24 (zero-index page 23), web lines 1012-1016",
+      "status": "primary formulation read",
+      "source_quote": "Is the RWRE necessarily ballistic in direction l?"
+    },
+    {
+      "id": "campos_ramirez_ellipticity_2014",
+      "url": "https://doi.org/10.1007/s00440-013-0527-7",
+      "locator": "Conjecture 1.1",
+      "status": "primary search excerpt corroborates formulation; full page redirect failed"
+    },
+    {
+      "id": "openai_ballisticity_20260923",
+      "url": "https://github.com/openai/math/blob/main/lean/docs/220.md",
+      "locator": "Family 220 scope and named comparator",
+      "status": "exact resolution claim found; not independently checked"
+    },
+    {
+      "id": "openai_ballisticity_actual_entrypoint",
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/OAI/Probability/Ballisticity/Main.lean",
+      "local_copy": "~\\brain_workers\\w447\\sources\\Ballisticity.Main.lean",
+      "sha256": "38f91c87ea497aec8f5fce3b1b4b1dad443982c4ac67ab38b2b81b0bf7e92e0c",
+      "status": "33-line actual entrypoint read; calls a separately imported theorem. Imports not audited or compiled."
+    }
+  ],
+  "prior_attempts_checked": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "id": "C0041-A001",
+      "method": "two-dimensional directional zero-one law plus regeneration",
+      "gap": "finite mean regeneration time"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_attempts_H_20260912",
+      "result": "bounded rg exact-ID and target-phrase search: no match"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_attempts_I_20260914",
+      "result": "bounded rg exact-ID and target-phrase search: no match"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/prob1000_lean_20260908",
+      "result": "dated ranking match only"
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "result": "no C0041 holder listed; related C0045 is listed"
+    }
+  ],
+  "owner_solved_retired_check": "Named prior attempt folders, Team O board, targeted export/private-problem filename lookup, and STORE_LOOKUP.json only; no exhaustive owner corpus search and no retirement certificate.",
+  "formal_artifact_inspection": {
+    "challenge_module": "ComparatorChallenges.DirectionalBallisticity",
+    "actual_solution_module": "OAI.Probability.Ballisticity.Main",
+    "actual_theorem": "OAI.DirectionalTransience.directional_transience_implies_ballisticity",
+    "assumptions": [
+      "d>=2",
+      "Nearest-neighbor model on Z^d",
+      "Spatial iid row law",
+      "Deterministic positive lower bound for every allowed transition",
+      "Fixed unit direction ell",
+      "P0(lim X_n dot ell=+infinity)=1"
+    ],
+    "permitted_axioms_from_config": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "observed_trusted_axioms": null,
+    "formal_check_executed": false,
+    "receipt_status": "NO FORMAL-CHECK RECEIPT",
+    "placeholder_note": "Comparator sorry is an expected statement-template placeholder; it is not a proof and does not refute the separately supplied solution."
+  },
+  "author_served_model_evidence": {
+    "requested": "gpt-6.1-sol / max / Fast",
+    "observed": null,
+    "status": "unavailable; requested settings and this task text are not response-side served identity"
+  },
+  "review_state": "w448 scoped KEEP of ER/FV/CC/GO received; assigned w449 and source-status reviews pending",
+  "ingested": false,
+  "retrievable": false,
+  "peer_keep_receipt": "~\\brain_workers\\w447\\PEER_KEEP_RECEIPT.json"
+}

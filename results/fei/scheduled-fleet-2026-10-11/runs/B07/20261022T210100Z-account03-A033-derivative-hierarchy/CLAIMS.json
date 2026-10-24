@@ -1,0 +1,46 @@
+[
+  {
+    "claim_id": "A033-PROTECTED-TAG-INTERLEAVING-SEPARATION",
+    "version": 1,
+    "exact_statement": "For every C>=0, every pair of ternary controller functions A,B with AB=0 and A^2+B^2=1 pointwise, every Boolean seed h on an independent uniform cube, and a balancing physical bit ell protected from queries, put F=A+B ell h and beta=E B^2. The maximum stopped sum of reach*(Delta H-C Inf) over all adaptive interleavings of any fixed allowed controller subset and the seed coordinates is exactly U_C(A+B ell)+beta V_C(h), where U and V are the corresponding controller-only and seed-only optimal stopping costs. Every complete terminal spectrum and physical influence is retained. The identity holds at every partial controller/seed restriction, including beta=0 and 1. Querying ell is excluded essentially: A=(1+c)/2,B=(1-c)/2 has tag entropy drop 2 for h=1 and 0 for h=y, both with tag influence 1/2. This is a route-separation identity, also valid for normalized real seed amplitudes, not a new Booleanity-specific FEI inequality. Corollary: for every fixed finite C>=0 and every fixed such mask with beta>0, no seed-independent finite controller reserve bounds all protected-tag stopped signed costs. Explicit Boolean seeds are tensor powers of bent/one-point-flip selector functions f_m with even m>=max(2,C+6); they satisfy H<=3I while their displayed seed-selector-only stopping costs diverge linearly in the tensor order. For the fixed A079 mask the complete outer functions also satisfy H<=3I. This refutes an all-history fixed-controller-reserve shortcut, not FEI or a selected-history theorem with a seed-dependent unused bank.",
+    "hypotheses": [
+      "Independent uniform physical controller, tag and seed inputs",
+      "AB=0 and A^2+B^2=1 pointwise; A,B ternary",
+      "Tag ell is not queried; fixed allowed controller subset; finite coordinate stopping trees",
+      "Normalized squared Fourier entropy in bits; original physical influence; C>=0"
+    ],
+    "statement_sha256": "966d3dafe714a1810f5b88edb7dc1d16ca0808ab48cdc7673de7877ff7687eb5",
+    "contributors": [
+      "A033"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A033\\runs\\20261022T210100Z-account03-A033-derivative-hierarchy\\PROOF.md",
+      "sha256": "acffb9973b9c200a168f242a9352157ab0d0f68bcbcb3913ab90220c05c76e39",
+      "certificates": [
+        "out/interleaving.json",
+        "out/tag_boundary.json",
+        "out/nogo.json"
+      ],
+      "additional_proof": {
+        "path": "~\\brain_workers\\FEI100_20261011\\agents\\A033\\runs\\20261022T210100Z-account03-A033-derivative-hierarchy\\NO_GO.md",
+        "sha256": "1a3c4e0288ccfacc7c93e4885ced24ef551d6c7369e1e77aa724bf211ac46812"
+      }
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A032",
+      "A079",
+      "A088",
+      "A094",
+      "B07",
+      "B20",
+      "A096",
+      "A097"
+    ]
+  }
+]

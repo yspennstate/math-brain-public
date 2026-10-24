@@ -1,0 +1,36 @@
+R17 PROB10-02 disagreement-flux exact checker
+m=1 reachable=4 checked_pair_inputs=8 worst_one_step_D_ratio=1/4
+m=2 reachable=14 checked_pair_inputs=64 worst_one_step_D_ratio=3/4
+m=3 reachable=58 checked_pair_inputs=520 worst_one_step_D_ratio=1
+m=3 strict-contraction obstruction= ((1, 0, 1), (0, 0, 1), (0, 1, 1), 1, Fraction(1, 1))
+m=4 reachable=224 checked_pair_inputs=3376 worst_one_step_D_ratio=1
+EXACT_DISAGREEMENT_FLUX_IDENTITY_PASS
+EXACT_PATHWISE_HAMMING_MONOVARIANT_PASS
+geometric_alpha=6/5 worst_ratio_m4=11/10
+geometric_counterexample= ((0, 1, 0, 1), (0, 0, 0, 0), (0, 1, 0, 0), Fraction(6, 5), Fraction(33, 25), (Fraction(6, 5), Fraction(36, 25), Fraction(6, 5), Fraction(36, 25)))
+EXACT_GEOMETRIC_WEIGHT_CONTRACTION_COUNTEREXAMPLE_PASS
+EXACT_FORMAL_MISMATCH_RESET_M1_TO_M6_PASS
+sync_length=2 reachable=14 universal_words=2
+universal_words= [((0, 1), (0, 1)), ((1, 0), (1, 0))]
+sync_length=4 reachable=224 universal_words=2
+universal_words= [((0, 1), (0, 1), (0, 1), (0, 1)), ((1, 0), (1, 0), (1, 0), (1, 0))]
+sync_length=6 reachable=3098 universal_words=2
+universal_words= [((0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1)), ((1, 0), (1, 0), (1, 0), (1, 0), (1, 0), (1, 0))]
+EXACT_SHORTEST_SYNCHRONIZER_CENSUS_W1_W2_W3_PASS
+joint_m=2 states=14 bellman_iter=12
+K_ext_upper_exact=26181361/8388608 K_ext_upper_decimal=3.121061444283 ceiling=1561/500
+arbitrary_start_stationary_reward_error_upper=42958577/8388608 decimal=5.121061444283
+old_overlapping_reset_mean=10
+bellman_slack_num_min=144960 max=444786
+joint_m=4 states=634 bellman_iter=24
+K_ext_upper_exact=273975518243713/35184372088832 K_ext_upper_decimal=7.786852570567 ceiling=7787/1000
+arbitrary_start_stationary_reward_error_upper=414713006599041/35184372088832 decimal=11.786852570567
+old_overlapping_reset_mean=170
+bellman_slack_num_min=3558918351090 max=242092363915656
+joint_m=6 states=18770 bellman_iter=90
+K_ext_upper_exact=2516810114759473628214826418194899531470875284660494553/191561942608236107294793378393788647952342390272950272 K_ext_upper_decimal=13.138361829555 ceiling=13139/1000
+arbitrary_start_stationary_reward_error_upper=3666181770408890271983586688557631419184929626298196185/191561942608236107294793378393788647952342390272950272 decimal=19.138361829555
+old_overlapping_reset_mean=2730
+bellman_slack_num_min=294843719380698918901287165387614358968445072504 max=485309528259717241694961010520179395439983858678726
+EXACT_JOINT_COALESCENCE_BELLMAN_DUAL_PASS
+ALL_EXACT_CHECKS_PASS

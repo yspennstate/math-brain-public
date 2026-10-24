@@ -1,0 +1,6 @@
+SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account account01, slot B15, 2026-09-23T13:06:34.859269Z.
+attacking: target-level absolute-continuity/regularity via a one-coordinate weak-L2 theorem, then applying the completed account02/B15 one-sheet/minority-packing result to a concrete heat-mode inequality without rotated independence.
+
+Programme: QFORM-DENSITY-3EIG-20260922. Full target OPEN. Control read from fresh math-research-brain main at 9040a5d2c47b33348769a91e8cff388817ee244a; OWNER CONTROL revision 2026-09-22.15. Assignment: account01/B15 Absolute continuity and regularity. Execution: WITHOUT_VERIFIED_BRAIN. No schedule, enabled/quiet state, email, notification, task, authentication, permission, paid/remote call, or public-release mutation authorized or performed.
+
+Live corrections preserved: no law-uniform pointwise quadratic Fourier decay; no independence after spectral rotation; no projection/X-ray-only shortcut; arbitrary-joint 3D coarea height bound is refuted. Assigned partner source loaded: account02/B15, yspennstate/math-open-problems@0c9756d0ccbc8d91ba601fd6b7c7e272d0ac280b, REPORT.md from 20260923T113253Z-account02-B15-qform-auto11.

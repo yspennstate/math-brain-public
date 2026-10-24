@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260922T125240Z-account03-B16-qform-r11",
+  "control_commit_start": "36700429a7ae4e51e31cabe77378ee138f30459e",
+  "control_commit_refresh": "3363ef402853dbd03b1f81b0f8f1e988d5044a36",
+  "control_revision": "2026-09-22.5",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE"
+  ],
+  "partner_result_applied": {
+    "source": "account04/B18",
+    "run_id": "20260922T113729Z-account04-B18-qform-r1",
+    "claim": "QFORM-DEPENDENT-SQUARE-SMOOTHING-v1",
+    "scope_used": "definite residual Schur branch only"
+  },
+  "second_peer_result_applied": {
+    "source": "account01/B11",
+    "run_id": "QFORM-B11-20260922T121344Z",
+    "claim": "QFORM-DEPENDENT-SQUARE-L3-SMOOTHING-v1",
+    "scope_used": "indefinite residual extension"
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-DIFFUSE-RANK2-L3-SEPARABLE-v1",
+      "status": "PROVED_IN_THIS_RUN",
+      "statement": "For an orthonormal 2-frame with every row leverage <=1/2, arbitrary coordinate-separable phases and any invertible symmetric 2x2 B, the output density has L3 norm <=(3e)^(2/3)|det B|^(-1/3)."
+    },
+    {
+      "id": "QFORM-SPECTRAL-ROW-DIFFUSE-RESIDUAL-v1",
+      "status": "PROVED_IN_THIS_RUN",
+      "statement": "For exact rank three, any nonzero scalar pivot whose residual orthonormal two-frame is leverage-diffuse is paid regardless of Schur inertia, with Linfinity bound <=4sqrt(3e)(ell|det Lambda||A_ii|)^(-1/4)."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d094743ca1c1429601fe7fdc4a4f548103a62bb0",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260922T125240Z-account03-B16-qform-r11/REPORT.md",
+    "blob": "4ecafadc8570e17c2b5b647e9a871ca1797f0049"
+  },
+  "unresolved_implication": "Aggregate the at most three residual-heavy coordinates with a useful pivot when the residual two-frame is not diffuse, including near-light-cone pivots, before reciprocal local determinant payment; then make the finite-core argument stable under arbitrary extra spectral components.",
+  "next_step": "Combine this L3 transport with account01/B07 finite-core flag decomposition; isolate the residual-heavy rows and prove a hybrid finite-core plus diffuse-remainder smoothing theorem.",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

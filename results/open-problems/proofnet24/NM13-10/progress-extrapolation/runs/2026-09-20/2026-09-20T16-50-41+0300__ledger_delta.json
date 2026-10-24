@@ -1,0 +1,51 @@
+{
+  "worker": "NM13-10",
+  "date": "2026-09-20",
+  "source": "Agresti-Veraar arXiv:2501.18561 Problem 3",
+  "runtime_model": "GPT-5.6 Sol",
+  "reasoning_level": "UNVERIFIED",
+  "frozen_pair": {
+    "X0": "H^{-1}(T)",
+    "Xhalf": "L^2(T)",
+    "X1": "H^1(T)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "noise": "one real Brownian driver"
+  },
+  "fixed_before": {
+    "strong_endpoint": "r_*=3, endpoint excluded",
+    "exact_subcritical_norm": "C_p^g=1/(sqrt(2/(p-1))-1), 2<=p<3",
+    "critical_rearrangement_bracket": "2/3 <= alpha_*(T) <= 1",
+    "conditional_alpha_2_3_lower_constant": "4/9",
+    "latest_successor": "exact spectral-variance Hessian defect, effective gap, and three-dyadic-block state rigidity"
+  },
+  "fixed_after": {
+    "strong_endpoint": "r_*=3, endpoint excluded",
+    "critical_rearrangement_bracket": "2/3 <= alpha_*(T) <= 1",
+    "conditional_alpha_2_3_lower_constant": "4/9"
+  },
+  "new_theorem": {
+    "name": "NM10-AVP3-JOINT-HESSIAN-SLACK-16",
+    "status": "CANDIDATE_FULL / SELF-CHECKED / PENDING INDEPENDENT REVIEW",
+    "summary": "The sharp Bellman envelope has an exact nonnegative joint state-input slack Sigma_p. It decomposes into the prior state spectral-variance defect, an input-direction Hessian defect, and a Hessian Cauchy/alignment defect. Sigma_p enters Ito as additional coercivity and gives a strictly stronger data-dependent endpoint extrapolation bound than the state-only kappa_p refinement.",
+    "joint_effective_gap": "(delta+sigma_p/2) R_p(Y)^2 <= (p-1)R_p(Y)+(p-1)/2, sigma_p=E int Sigma_p/I_p",
+    "quantile_refinement": "ell>=6, p=3-3/ell: s^(1/3)F*(s) <= 8 ell/(3+min(sigma_p,1) ell) ||Y||_3",
+    "near_sharp_stability": "if R_p(Y)>=q R_p^*, then sigma_p <= 2 delta(q^{-2}-1); if q=1-eps>=1/2 then sigma_p<=12 eps delta",
+    "cross_alignment": "for p>=5/2 and q>=1/2, the integrated cross-Hessian saturation ratio chi_p obeys 1-chi_p <=1.41(q^{-2}-1)",
+    "extremal_cone": "At an exact eigenspace state Az=a^2 z, Sigma_p has a closed shell formula and vanishes iff Y=gamma Z with gamma>=0. Globally Sigma_p=0 iff Z lies in one eigenspace and Y is a nonnegative scalar multiple of Z."
+  },
+  "source_level_movement": "none: strong endpoint and full critical exponent bracket unchanged",
+  "demonstrated_mechanism_gain": "Any branch that could beat the critical 2/3 scale must now annihilate the full Bellman slack, not merely the state spectral variance. Near-sharp subcritical responses simultaneously concentrate into a narrow spectral packet and saturate the positive state-input Hessian alignment; exact shell migration forcing away from the current state direction pays an explicit linear-plus-quadratic slack. This identifies the sharp cone underlying the one-shell feedback obstruction and gives a coercive quantity for an active packet-migration Carleson argument.",
+  "failed_or_nonclosing_routes": [
+    "The state-only spectral-variance defect cannot close the endpoint because one-shell states have zero state defect.",
+    "The new joint slack still does not by itself control a state that is only approximately, rather than exactly, in a moving three-block packet; a robust packet-level lower bound for Sigma_p is the remaining bridge."
+  ],
+  "next_attack": "Prove an approximate packet migration inequality: when Z has small leakage outside a three-adjacent-dyadic packet, lower-bound Sigma_p by a weighted amount of forcing outside that packet plus an error controlled by the state leakage. Combine with the prior packet-rigidity and Hellinger/decoherence estimates to obtain a summable active migration charge.",
+  "checker": {
+    "code": "2026-09-20T16-50-41+0300__joint_hessian_alignment_check.py",
+    "output": "2026-09-20T16-50-41+0300__joint_hessian_alignment_check.out",
+    "result": "CHECK_PASS"
+  },
+  "literature_check": "Bounded current search: Agresti-Veraar Problem 3 remains the source; Bechtel-Veraar 2025 covers a variational small-p interval; Lorist-van Neerven-Veraar 2026 concerns necessary Banach geometry; 2026 discrete SMR concerns numerical/discrete extrapolation. No source-matching resolution found in the bounded search."
+}

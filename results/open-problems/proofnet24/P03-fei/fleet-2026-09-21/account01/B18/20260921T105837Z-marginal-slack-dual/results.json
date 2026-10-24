@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "EXPLORATORY_CHECKS_NOT_UNIVERSAL_PROOF",
+  "candidate_C": 6.4547837,
+  "marginal_slack_criterion": "min_i [Delta_iH - C Inf_i - (P_C(f_+)+P_C(f_-))/2] <= 0, P_C=(CI-sum_j h2(Inf_j))_+",
+  "exhaustive_boolean_n_le_4": {
+    "n1_worst_min_residual": -6.4547837,
+    "n2_worst_min_residual": -4.4547837,
+    "n3_worst_min_residual": -2.6241705883,
+    "n4_worst_min_residual": -1.4176954811,
+    "violations": 0
+  },
+  "width2_tribes": {
+    "s_values": [2,3,4,5,6,7,8,9,10],
+    "potential_free_delta_over_influence": [3.2451,4.1502,5.3918,5.7825,5.9406,5.9968,6.0037,5.9870,5.9599],
+    "marginal_slack_residual": [-6.2483,-5.9295,-4.9349,-3.9292,-2.9454,-2.0688,-1.3394,-0.7641,-0.3468]
+  },
+  "bent_selector": {
+    "even_m": [2,4,6,8,10,12],
+    "selector_delta_over_influence": [4.8677,8.0300,10.2560,12.3102,14.3236,16.3270],
+    "selector_marginal_slack_residual": [-9.0790,-10.5159,-13.9186,-17.9987,-22.3293,-26.7452],
+    "asymptotic": "Delta_zH/Inf_z = m + 3/ln(2) + o(1)"
+  },
+  "interpretation": "No finite-check violation was found for the explicit marginal-profile slack criterion. The bent-selector family proves that a universal per-coordinate Delta_iH <= C Inf_i bound is impossible, while the child marginal slack repairs that deliberately bad selector. Full FEI remains open."
+}

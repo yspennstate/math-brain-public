@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "control_revision": "2026-09-22.3",
+  "state_revision": "FEI-20260922T1000Z-v1",
+  "assignment": {
+    "id": "FEI-20260922-account02-B01",
+    "account": "account02",
+    "slot": "B01",
+    "pathway": "A",
+    "title": "Dual gate constraints on the center",
+    "task": "Derive a finite nonnegative combination of genuine gate constraints that gives a new necessary center bound or excludes a specified finite-dimensional potential family. Method: Use the stronger 18-input witness, its biased relatives from B02, and certified two-input constraints to build an exact rational Farkas-type dual certificate.",
+    "target_claim_or_gap": "Derive a finite nonnegative combination of genuine gate constraints that gives a new necessary center bound or excludes a specified finite-dimensional potential family.",
+    "target_status": "OPEN_TARGET_NOT_ESTABLISHED",
+    "method": "Use the stronger 18-input witness, its biased relatives from B02, and certified two-input constraints to build an exact rational Farkas-type dual certificate.",
+    "inputs": [
+      {
+        "source_id": "GATE",
+        "url": "https://github.com/yspennstate/math-open-problems/blob/f5946fb64d336ed7369de279159643944efc47af/proofnet24/P03-fei/continuations/2026-09-22-gate-reformulation/REPORT.md",
+        "scope_note": "Gate defect and composition formulation; historical numerical/extremality text is superseded by STRONG_PRIME and BALANCED."
+      },
+      {
+        "source_id": "STRONG_PRIME",
+        "url": "https://github.com/yspennstate/math-open-problems/blob/f5946fb64d336ed7369de279159643944efc47af/proofnet24/P03-fei/fleet-2026-09-21/account02/B17/20260922T091146Z-strong-prime-shaped-repair/REPORT.md",
+        "scope_note": "Refutes quadratic coefficients 0.34 and hence 0.337; shaped repair covers one stronger witness only."
+      },
+      {
+        "source_id": "SAFE_SHAPE",
+        "url": "https://github.com/yspennstate/math-open-problems/blob/c50e06733fc1e7f109e20dbb1a0013d67aa71dc7/proofnet24/P03-fei/fleet-2026-09-21/account04/B13/20260922T0954Z-nearoptimal-singleton-repair/REPORT.md",
+        "scope_note": "Universal safety of the added direction is proved in source; universality of the repaired base potential is open."
+      },
+      {
+        "source_id": "SELECTOR_DEBIT",
+        "url": "https://github.com/yspennstate/math-open-problems/blob/4ccd51ad517f425a529daa52c3352905b86ea69d/proofnet24/P03-fei/fleet-2026-09-21/account02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md",
+        "scope_note": "Use Sections 2-4 selector-debit theorem and child-defect identity. Section 5 candidate c=0.337 is now refuted."
+      },
+      {
+        "source_id": "BALANCED",
+        "url": "https://github.com/yspennstate/math-open-problems/blob/7d20a4bb4067085af7c5e7c9a82aef31998a7d36/proofnet24/P03-fei/fleet-2026-09-21/account02/B18/20260922T093253Z-balanced-slice-admission/REPORT.md",
+        "scope_note": "Balanced slice is same-constant FEI, so safe shape optimization is not a smaller universal problem."
+      },
+      {
+        "source_id": "IPROJ",
+        "url": "https://github.com/yspennstate/math-open-problems/blob/4bd6d05f1eb8325d665f2748f4d74dcee2550a04/proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+        "scope_note": "Exact influence-marginal I-projection and R=B_inf+K_occ."
+      },
+      {
+        "source_id": "SHAPE_FRONTIER",
+        "url": "https://github.com/yspennstate/math-open-problems/blob/a5f19f05fa03671fb5ffeb435081ed92e9827e6a/proofnet24/P03-fei/fleet-2026-09-21/account01/B18/20260922T095300Z-shaped-safe-frontier/REPORT.md",
+        "scope_note": "CANDIDATE_UNPROVED: refined known-witness repair center 6.5584452830718245; universality of the base potential remains open. Do not prioritize tiny scalar retuning."
+      }
+    ],
+    "deliverable": {
+      "repository": "yspennstate/math-open-problems",
+      "path": "proofnet24/P03-fei/fleet-2026-09-22/account02/B01/<actual-run-id>/",
+      "required": "REPORT.md containing the exact target statement, new derivation or construction, all assumptions, consumed peer result, proof or precise failed step, and the next unpaid implication. Include CLAIMS.json with status and dependencies. For a theorem include a complete proof; for computational or counterexample claims include the exact source construction and executable certificate actually used.",
+      "handoff": "yspennstate/math-research-brain:scheduled_tasks/work/shared/fei-all-team-2026-09-22/handoffs/account02/B01/<actual-run-id>.md"
+    },
+    "acceptance": "A reproducible dual identity whose coefficients and all source gate constraints are exact, plus the numerical or symbolic improvement over the current family bound.",
+    "falsification": "If the proposed target is false, give an explicit genuine Boolean function/gate or a rigorously specified infinite Boolean family satisfying every claimed hypothesis, compute the exact violated quantity, and state which intermediate claim it refutes. A counterexample to a potential, lower certificate, or terminal-payment lemma is not a counterexample to FEI.",
+    "partner": "account03/B01",
+    "recipient": "account04/B17",
+    "collaboration_action": "Consume the latest compatible completed result from account03/B01; apply one exact expression to this target. Send the complete source-bound mathematical handoff to account04/B17 through the shared repository. Work from available complete snapshots without waiting for a synchronous reply.",
+    "first_run_action": "Read the current owner order, research state and correction ledger at one fresh control commit; compare the immutable source scopes listed here with later corrections. Then attempt this mathematical target. Do not rerun old scans or recreate the same missing implication under a new name.",
+    "if_blocked": "After three substantive attempts leaving the same implication unpaid, change the mathematical mechanism within this assigned FEI target, using the partner's newest result. Preserve unsuccessful derivations and classify them accurately. Never replace mathematics with status-only work.",
+    "full_problem_status": "OPEN_NOT_PROVED",
+    "caretaker_secondary": null
+  }
+}

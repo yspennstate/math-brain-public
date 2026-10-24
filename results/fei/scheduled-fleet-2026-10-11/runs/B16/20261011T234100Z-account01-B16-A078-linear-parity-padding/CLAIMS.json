@@ -1,0 +1,43 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B16-A078-LINEAR-PARITY-PADDING-BARRIER",
+      "version": 1,
+      "packet_id": "A078",
+      "attempt_id": "A078-attempt-01-linear-parity-padding",
+      "gap_id": "G-A078-BOOLEAN-CODING-PADDING",
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "exact_statement": "For every n,m>=0, every Boolean g:{-1,1}^n->{-1,1}, and arbitrary codewords c_1,...,c_n in F_2^m, define F(x,z)=g(x_i chi_{c_i}(z):1<=i<=n) and c(S)=xor_{i in S}c_i. Then Fhat(S,T)=ghat(S) when T=c(S) and zero otherwise; H(F)=H(g); I(F)=I(g)+E_{S~ghat^2}|c(S)|; and I_{z_j}(F)=Pr[c(S)_j=1]. For every padding block A and every physical assignment a, the child F_a has the same positive squared Fourier masses as g, so Gamma_A(F)=H(F)-E_a H(F_a)=0. Therefore any relevant padding coordinate is a proper zero-quotient block, and when H(g)>0 its restriction has strictly larger H/I; no nontrivial member of this family is restriction-critical or can be a hard family for the proper-block criterion.",
+      "hypotheses": [
+        "finite uniform Boolean cubes",
+        "normalized squared Walsh law",
+        "linear parity characters over physical padding variables",
+        "complete physical block entropy loss Gamma_A"
+      ],
+      "units": "bits",
+      "contributors": ["account01/B16 A078 run"],
+      "proof_source": "BOOLEAN_CODING_PADDING.tex",
+      "proof_dependencies": [
+        "B14-A066-PARITY-LIFT-SEMI-v1 only for the one-bit baseline",
+        "B20-A097-COMPLETE-BLOCK-DEFICIT-v1 for the campaign Gamma_A interface",
+        "elementary exact Walsh expansion"
+      ],
+      "review_records": [],
+      "scope_exclusions": [
+        "Not full FEI",
+        "Does not cover nonlinear gadgets that split one core coefficient among several auxiliary frequencies",
+        "Does not promote the non-Boolean fixed-prefix obstruction laws to Boolean counterexamples"
+      ],
+      "supersedes": null,
+      "refutes": [
+        "Arbitrary-rank linear parity padding can create an FEI counterfamily by preserving core entropy while hiding auxiliary influence",
+        "Deterministic linear occupied-label padding can evade the B20 proper-block criterion"
+      ],
+      "first_unproved_line": "A nonlinear Boolean encoder with genuine Fourier splitting may fall outside the deterministic-label barrier; its exact auxiliary influence and physical-child entropy losses remain open.",
+      "next_consumers": ["A032", "A033", "A079", "B20"],
+      "independent_reviewers": ["A092", "A088"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

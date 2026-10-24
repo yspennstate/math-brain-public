@@ -1,0 +1,2 @@
+STATE: A021 stage6 saved: ANY-seed two-edit bill<=Rstar+10IC; universal row-profile refund; A025 bad x-first query paid from disjoint delta/4+delta/6 of actual S8, all activation widths;2432+30 exact cases PASS; FEI OPEN.
+NEXT: A025/A029 review; carry SAME owner after delta/4 bank and delta/6 data-query bookings through a second actual core-data query, retaining both terminal bills and activation capacity.

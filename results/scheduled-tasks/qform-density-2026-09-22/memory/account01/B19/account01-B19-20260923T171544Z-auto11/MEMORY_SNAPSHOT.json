@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B19",
+  "run_id": "account01-B19-20260923T171544Z-auto11",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "cd266a121698fcefd5d9d00477916cb21b5f7700",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B19/account01-B19-20260923T171544Z-auto11/REPORT.md",
+    "blob": "35ad4cfef9abb3f5ccdac8514f8e8fcf545afb9a"
+  },
+  "handoff_commit": "3d477028b4b7ef9b4118e9d8a3b4496da5c3edd8",
+  "partner_applied": {
+    "account_slot": "account02/B19",
+    "commit": "9157730c1b552b81f58b3cb6ef604b687962e548",
+    "claim": "QFORM-OVERLAP-MIXED-EXTERIOR-VOLUME-v1",
+    "actual_inequality": "Z_K >= (Delta_*^3/kappa_0) d_R^2"
+  },
+  "peer_applied": {
+    "account_slot": "account03/B02",
+    "commit": "d0bda9f4e884eff19e5e7b0cf4cacab34d416c28",
+    "claim": "QFORM-CROSS-E3-MARGINALFREE-L1-v1",
+    "actual_inequality": "d_R^2>=1/64 => ||p_Q||_infinity<920.903 continuously"
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-STAR4-RIGHTPLANE-MISMATCH-MARGINALFREE-v1",
+      "status": "PROVED_SUPPORTING_TARGET_LEVEL_BRANCH",
+      "summary": "The fixed right-plane mismatch branch has physical E3 at least 2.260871454155696e-12 and is paid unconditionally by <920.903 with continuous C0 density; the former row-marginal anchor is removed."
+    },
+    {
+      "id": "QFORM-COMMONPLANE-COHERENT-CYCLE-ENERGY-v1",
+      "status": "PROVED_SUPPORTING_STRUCTURAL_INEQUALITY",
+      "summary": "For arbitrary real 2x2 R,S,T there are unit x,y,z with product of the three bilinear coefficients at least ||R||F||S||F||T||F/(16sqrt2); in the current common-plane STAR survivor this gives gamma_*>2.258579961e-5."
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "continuity": "PROVED_ONLY_ON_THE_PHYSICAL_E3_PAID_BRANCHES",
+  "first_local_unresolved": "QFORM-COMMONPLANE-COHERENT-CYCLE-WITH-TAIL-LINFINITY-v1; separately heavy top-two physical leverage >1/320",
+  "next_step": "Develop a product-preserving tail-stable triangle Fourier/small-ball receiver that spends the quantitative common 2+2+2 cycle without conditioning on projection complements and without any reciprocal small-tail factor; alternatively route heavy leverage into physical E3/ridge/pivot currency."
+}

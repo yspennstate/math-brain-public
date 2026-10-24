@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "account01-B07-20260923T110318Z-r23",
+  "control_commit_prepublication": "daef91678005d93e27eb75e565e7f8c2a50d689f",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_automation",
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "predecessor": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "dbdedece92b8abf88ad0eee0860011f88764fca4",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T100306Z-r22/REPORT.md",
+    "actual_use": "supplied the fixed double-pair third-volume survivor H>G/5 and, on the inherited r29 scale, H>F^6/64123518131896320"
+  },
+  "partner_result_actually_applied": {
+    "worker": "account02/B07",
+    "theorem": "QFORM-PAIRTAIL-CURVATURE-RECEIVER-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3e36370502df5afeb00457b74d05cdbfd87168b0",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T104812Z-account02-B07-qform-r13/REPORT.md",
+    "application": "after aggregate edge extraction, the small-diagonal principal pair has |det|>=3b^2/4 and sigma_min>=|b|/2; if T2(C)>=tau b^2, the partner bound gives ||p_Q||inf<=31.274095 tau^(-1/20)F^2/sqrt(H)"
+  },
+  "newest_required_result_actually_applied": {
+    "theorem": "fractional third-volume q=4/3 receiver",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+    "application": "E3(M)>=H; if either complete third-volume side has max inclusion marginal <=2/3, then ||p_Q||inf<=(9sqrt(3)e/2)H^(-1/6) with continuous density"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-DOUBLEPAIR-EXTENSION-MATRIX-v1",
+      "statement": "For M=[[B,U],[V,D]] and the complete fixed-double-pair 3x3 extension bank H, H=||det(B)D-V adj(B)U||_F^2, without invertibility of B."
+    },
+    {
+      "id": "QFORM-DOUBLEPAIR-BANK-FORCES-EDGE-v1",
+      "statement": "sqrt(H)<=(1/2)||B||_F||M||_F^2; hence some physical edge b in B satisfies |b|>=sqrt(H)/||M||_F^2."
+    },
+    {
+      "id": "QFORM-EDGE-PAIR-DIAGONAL-OR-CONDITIONED-INDEFINITE-v1",
+      "statement": "For the symmetric physical principal pair on the forced edge, either max diagonal >=|b|/2 or the pair is indefinite with |det|>=3b^2/4 and sigma_min>=|b|/2."
+    },
+    {
+      "id": "QFORM-DOUBLEPAIR-BANK-EDGE-PAIRTAIL-OR-RANK2-v1",
+      "statement": "In the conditioned-indefinite branch, either the exact post-pair Schur cross block has T2>=tau b^2 and the partner theorem pays the full form, or it lies in a rank-two Frobenius tube T2<tau b^2."
+    }
+  ],
+  "singular_anchor_identity": "If rank(B)=1 and B=s a b^T, then H=s^2||V b_perp||_2^2||a_perp^T U||_2^2.",
+  "live_constant": {
+    "c": "1/64123518131896320",
+    "edge_floor": "|b|>F/253226219.2820805",
+    "pairtail_coefficient": "7.9194206304e9*tau^(-1/20)*F^(-1)",
+    "volume_coefficient": "13404.08521084*F^(-1)"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bcecea864b0c99b14a47665b87f9c9ea6fde4b41",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T110318Z-r23/REPORT.md",
+    "checkpoint_commit": "d74ad7723779b2e49e3c10ae608dafe17723de5d"
+  },
+  "handoff_commit": "db9adb02653186ba882efd5418a1d4170e310546",
+  "remaining_implication": "QFORM-LARGE-DIAGONAL-OR-RANK2-SCHUR-TUBE-RECEIVER-v1",
+  "remaining_gap": "Pay either a bank-forced edge with an adjacent diagonal >=|b|/2 without a bad reciprocal determinant, or a genuinely nonzero rank-two Schur tube while retaining arbitrary same-bank curvature.",
+  "continuity": {
+    "global": "OPEN",
+    "volume_exit": "PROVED_CONTINUOUS",
+    "partner_pairtail_exit": "ESSENTIAL_BOUNDEDNESS_ONLY_NOT_PROMOTED_TO_CONTINUITY"
+  },
+  "independent_review": "NOT_YET_PERFORMED"
+}

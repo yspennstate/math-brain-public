@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B08",
+  "run_id": "account02-B08-20260924T083643Z-r35",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit": "5bc6f70a6b833f2f0a1249c28cf6eb1c4c01a1c5",
+  "full_target_status": "OPEN",
+  "status": "NEW SUPPORTING HYBRID ROUTER + EXACT TARGET-VALID SCALAR/CANCELLATION STRESS FAMILY / FULL_TARGET_OPEN",
+  "result_id": "QFORM-ROWAWARE-RANK2-CANCELLATION-ROUTER-v1",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "087cf5aa5cfcee4eb6ae243facb9e0fcf2391e29",
+  "canonical_math_root": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/account02-B08-20260924T083643Z-r35/",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B08/account02-B08-20260924T083643Z-r35.md",
+  "handoff_commit": "2fa605df91545aa02a314f0605f7e8d95f42b6a7",
+  "required_fixed_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "root": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "applied_result": "generalized Fresnel-Brascamp-Lieb Theorem F",
+    "actual_application": "six-Walsh-frame target-valid exact crossing-cancellation family; density <=6/L with C_0 representative"
+  },
+  "supporting_sources": [
+    {
+      "result": "QFORM-THIRDCOMPOUND-CROSS-PROMOTION-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c2ce876df8b5483a00802170001d4144bb4cdbfa"
+    },
+    {
+      "result": "QFORM-STAR-OVER-R2-THIRDCOMPOUND-v1",
+      "partner": "account03/B08",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "19c12072f7e67266ce894042034bcabb9c376bea",
+      "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B08/20260924T061920Z-account03-B08-qform-diffuse-r51.md"
+    }
+  ],
+  "premises": [
+    "arbitrary independent one-dimensional densities bounded by one",
+    "real symmetric A with at least three eigenvalues of modulus at least L",
+    "diffuse selected top-three eigenframe max physical leverage <=1/48 on this branch",
+    "arbitrary complementary spectrum, same-bank curvature, and affine terms retained",
+    "no post-rotation independence"
+  ],
+  "new_implications": [
+    "For every fixed original off-diagonal row witness k, one can choose one original-coordinate cut with both selected-top-three Gramians >=3I/10 and cross-row norm >=||A[k,-k]||/sqrt(6).",
+    "On an unpaid 197.779/L branch for that same cut, the literal crossing is within theta L of rank two with theta=0.05512604949999305, while complementary crossing norm exceeds 0.24487395050000694L and has a signed target-scale cancellation direction.",
+    "Using the inherited physical row gate gamma=0.0006247538095703261, either an actual scalar |A_kk|>gamma L survives, or the same cut has an actual cross-star >0.0002550546747178715L.",
+    "After deleting k, selected top-three crossing retains s3>=sqrt(67/800)L. With sigma=sqrt(67/800)L/2, either deleted literal crossing s2<sigma and complementary crossing has s2>sigma, or the actual star lies within 0.008001027955285274L of the literal crossing top-two right singular plane.",
+    "Six-frame Walsh exact-cancellation family proves the scalar-disconnected branch is real and defeats any universal well-conditioned physical-pair/crossing claim, but fixed-source Theorem F pays it by 6/L."
+  ],
+  "constants": {
+    "benchmark_C": 197.7780678260685,
+    "third_compound_C3": 10.902723556992836,
+    "theta": 0.05512604949999305,
+    "row_aware_gram_floor": 0.3,
+    "row_aware_joint_probability_lower_bound": 0.009375,
+    "row_aware_complement_floor": 0.24487395050000694,
+    "inherited_row_gamma": 0.0006247538095703261,
+    "cross_star_floor": 0.0002550546747178715,
+    "deleted_selected_c0": 0.28939592256975566,
+    "deleted_sigma": 0.14469796128487783,
+    "absolute_star_alignment_delta": 0.008001027955285274
+  },
+  "corrections_respected": [
+    "QFORM-POINTWISE-QUADRATIC-PHASE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-SMALL-MATRIX-NOT-SMALL-RANDOM-PERTURBATION",
+    "no universal well-conditioned physical minor inferred"
+  ],
+  "first_unpaid_implication": "QFORM-ROWAWARE-SCALAR-OR-DOUBLECANCEL-COMPILER-v1",
+  "next": "Consume either the actual physical scalar branch or the row-aware star-aligned / two-mode complementary-cancellation packet with product-safe pair-log, hub, projected-crossing or same-bank receivers; do not infer a relative star angle from the absolute 0.008001L tube.",
+  "checker_marker": "QFORM_B08_R35_CHECK_PASS",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

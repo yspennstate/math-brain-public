@@ -1,0 +1,379 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B09",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A041",
+      "stream": "B09",
+      "topic": "Weighted-threshold FEI+",
+      "target_statement": "Begin from the recovered weighted-threshold counterfamilies already disproving three conditional-input normalization/total-correlation payments in paper/biased.tex. Prove a replacement estimate that survives those controls and could extend corrected FEI+ to arbitrary real weights with an arity-independent constant. Preserve the coefficient-one scope of the pivotal-credit failure and distinguish conditional-input TC from spectral good-coordinate erasure.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A041-D1",
+          "description": "WEIGHTED_THRESHOLD_REPLACEMENT.tex: new inequality replacing the failed symmetric-proof payments",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A041-D2",
+          "description": "WEIGHTED_GUARD_LEDGER.md: three recovered no-go families and surviving scope",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Import all three failures from reductions/paper/biased.tex: event total-correlation payment, coefficient-one pivotal normalization credit, and conditional-input-TC existential-coordinate payment.",
+        "Test the two-branch weighted threshold A_m={mX_0+ΣX_j≥m} in the stated q/q_0 regimes before advancing any replacement; convert nats/bits exactly.",
+        "Do not generalize the pivotal-credit failure beyond coefficient one, or confuse conditional-input TC with the still-open spectral B_i selection problem.",
+        "Any claimed corrected FEI+ extension must be uniform in arity, real weights, product biases, and deterministic endpoints, with a complete composition implication."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A042",
+          "interface": "endpoint expansions for the weighted counterfamily"
+        },
+        {
+          "agent_id": "A045",
+          "interface": "actual biased Fourier normalization"
+        },
+        {
+          "agent_id": "A024",
+          "interface": "induced outer means"
+        },
+        {
+          "agent_id": "A093",
+          "interface": "primary theorem overlap"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A042",
+          "interface_use": "proposed weighted replacement"
+        },
+        {
+          "agent_id": "A044",
+          "interface_use": "failures that a new weighted/gate payment must survive"
+        },
+        {
+          "agent_id": "A045",
+          "interface_use": "weighted gate proposal"
+        },
+        {
+          "agent_id": "A084",
+          "interface_use": "weighted replacement parameter domain"
+        },
+        {
+          "agent_id": "A091",
+          "interface_use": "weighted replacement"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A replacement lemma that survives all three known weighted controls and pays a precise missing term, even on a new restricted weight class.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_biased",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F04",
+        "F06",
+        "F12",
+        "F13"
+      ]
+    },
+    {
+      "agent_id": "A042",
+      "stream": "B09",
+      "topic": "Bias endpoint certificates",
+      "target_statement": "Analyze limits as selected input probabilities tend to zero or one. Derive symbolic expansions for corrected FEI+ and I-Var, including zero-deficit and unit-atom endpoints.",
+      "work_type": "interface_derivation",
+      "priority": "P1",
+      "mathematical_design_status": "RECOVERED_BASELINE",
+      "deliverables": [
+        {
+          "deliverable_id": "A042-D1",
+          "description": "BIASED_ENDPOINT_SERIES.tex: symbolic zero/one-bias and zero-deficit expansions",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A042-D2",
+          "description": "WEIGHTED_CONTROL_LIMITS.json: exact regimes and proven remainder ranges",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "For the q=m^(−2) weighted family retain the event-TC and pivotal residual divergences while the genuine corrected entropy/deficit ratio tends to its finite limit.",
+        "For the separate η=1/2, q→0 then m→∞ regime, verify the conditional-input-TC every-coordinate obstruction in its exact order of limits.",
+        "Contract deterministic coordinates and state whether each expansion is uniform in m, weights, or bias; a fixed-m series cannot certify an all-arity limit."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A004",
+          "interface": "corrected FEI+ conventions"
+        },
+        {
+          "agent_id": "A041",
+          "interface": "proposed weighted replacement"
+        },
+        {
+          "agent_id": "A024",
+          "interface": "deterministic input contraction"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A024",
+          "interface_use": "weighted bias endpoint controls"
+        },
+        {
+          "agent_id": "A041",
+          "interface_use": "endpoint expansions for the weighted counterfamily"
+        },
+        {
+          "agent_id": "A044",
+          "interface_use": "biased endpoints"
+        },
+        {
+          "agent_id": "A045",
+          "interface_use": "product-bias boundary certificates"
+        },
+        {
+          "agent_id": "A047",
+          "interface_use": "biased boundary certificates"
+        },
+        {
+          "agent_id": "A084",
+          "interface_use": "analytic bias endpoint reductions"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "A reusable exact endpoint certificate distinguishes failed auxiliary payments from the still-viable corrected FEI+ theorem.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_biased",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F04",
+        "F06",
+        "F12",
+        "F13"
+      ]
+    },
+    {
+      "agent_id": "A043",
+      "stream": "B09",
+      "topic": "Prime-gate decomposition",
+      "target_statement": "Factor Boolean functions under genuine disjoint composition and identify remaining irreducible gates. Prove what a uniform theorem on that precisely defined prime class would imply.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A043-D1",
+          "description": "PRIME_GATE_DEFINITION.tex: factorization notion and existence/termination theorem",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A043-D2",
+          "description": "PRIME_ENDPOINT_IMPLICATION.md: bias and arity quantifiers with exact constant",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Define irreducibility under genuine disjoint composition, including constants, literals, and parity conventions.",
+        "Prove the decomposition terminates and the required product measures/means are inherited correctly.",
+        "Show exactly what an arity-uniform theorem on the remaining primes implies, without treating the theorem on all primes as an already easier or proved input."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A056",
+          "interface": "exact disjoint composition identities"
+        },
+        {
+          "agent_id": "A002",
+          "interface": "hardness-preserving transformations"
+        },
+        {
+          "agent_id": "A005",
+          "interface": "arbitrary-seed admission"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A044",
+          "interface_use": "prime-class definition"
+        },
+        {
+          "agent_id": "A059",
+          "interface_use": "genuine prime decomposition"
+        },
+        {
+          "agent_id": "A091",
+          "interface_use": "prime decomposition"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A correct decomposition/implication theorem plus one structural restriction on a nontrivial prime family.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_biased",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F04",
+        "F06",
+        "F12",
+        "F13"
+      ]
+    },
+    {
+      "agent_id": "A044",
+      "stream": "B09",
+      "topic": "Non-symmetric gate classes",
+      "target_statement": "Seek an arity-uniform corrected FEI+ inequality for a new explicit gate family. Give a composition corollary whose depth and fan-in dependence are completely controlled.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A044-D1",
+          "description": "NEW_GATE_CLASS_FEIPLUS.tex: explicit gate class and arity-uniform inequality",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A044-D2",
+          "description": "DEPTH_INDEPENDENT_COROLLARY.tex: read-once substitution with all mean/bias conditions",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Name a gate family outside the already covered symmetric-threshold/parity result and verify novelty against primary sources.",
+        "Prove all normalization and boundary terms with the same constant for every allowed arity; inherited biases cannot be restricted after composition.",
+        "Replay applicable weighted no-go controls and state which structural hypothesis changes their conclusion, then prove depth-independent closure."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A041",
+          "interface": "failures that a new weighted/gate payment must survive"
+        },
+        {
+          "agent_id": "A042",
+          "interface": "biased endpoints"
+        },
+        {
+          "agent_id": "A043",
+          "interface": "prime-class definition"
+        },
+        {
+          "agent_id": "A091",
+          "interface": "composition requirements"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A060",
+          "interface_use": "new biased gate result"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A complete new class theorem or a decisive obstruction to the proposed class's auxiliary estimate.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_biased",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F04",
+        "F06",
+        "F12",
+        "F13"
+      ]
+    },
+    {
+      "agent_id": "A045",
+      "stream": "B09",
+      "topic": "Biased realizability referee",
+      "target_statement": "Check that a proposed biased spectral law is the normalized product Fourier law of an actual Boolean gate. Audit deterministic inputs, repeated variables, and the distinction between physical and spectral conditioning.",
+      "work_type": "independent_scope_review",
+      "priority": "P1",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A045-D1",
+          "description": "BIASED_REALIZABILITY_AUDIT.md: inverse product-Fourier and norm checks",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A045-D2",
+          "description": "GATE_BOUNDARY_AUDIT.json: deterministic, repeated-variable, and conditioning cases",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Normalize coefficients in the actual product orthonormal basis and prove the inverse is a Boolean gate at every positive-mass input.",
+        "Handle probability-zero/one coordinates by contraction; repeated physical variables invalidate a claimed disjoint product law unless separately proved.",
+        "Replay the three weighted control failures, distinguishing conditional-input TC, spectral conditional entropy, and the coefficient-one pivotal-credit scope."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A032",
+          "interface": "common actual-Boolean certificate format"
+        },
+        {
+          "agent_id": "A041",
+          "interface": "weighted gate proposal"
+        },
+        {
+          "agent_id": "A042",
+          "interface": "product-bias boundary certificates"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A041",
+          "interface_use": "actual biased Fourier normalization"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One complete gate/candidate normalization review with an exact accepted domain or a concrete witness of failure.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_biased",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F04",
+        "F06",
+        "F12",
+        "F13"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "worker": "NM13-13",
+  "parent": "T04 classical iid random 3-SAT",
+  "route": "cluster-aware counting / variational upper-bound refinement",
+  "status": "PARTIAL",
+  "runtime_model": "GPT-5.6 Sol",
+  "reasoning_level": "UNVERIFIED",
+  "source_metric": {
+    "quantity": "rigorous explicit threshold bracket [alpha_L, alpha_U] and width W",
+    "before": {"alpha_L": 3.52, "alpha_U": 4.4898, "W": 0.9698},
+    "after": {"alpha_L": 3.52, "alpha_U": 4.4898, "W": 0.9698},
+    "movement": false
+  },
+  "mechanism_gain": {
+    "proved": [
+      "two-flip rescue lemma: a singleton-blocked false variable paired with a zero-blocking true root yields a satisfying two-step path except for one explicitly classified pair-collision clause type",
+      "iid continuous positive-score star penalty: r clean rescue children at one root impose probability exactly 1/(r+1); for Diaz light degree cap M=23 this is at most exp(-(log 2/23) times the number of rescue edges)"
+    ],
+    "conditional": [
+      "refining the Diaz-Kirousis-Mitsche-Perez-Gimenez M=23 type count by zero-blocking true-root status and clean k=1 rescue incidences gives a strict exponential penalty at the published interior critical type; a certified refined global maximization below alpha=4.4898 is still missing"
+    ],
+    "diagnostic": {
+      "model": "unconditioned first-moment EGF with root/child types and pairwise score penalty",
+      "phi_at_4_4898_with_rescue": 0.00311352891607,
+      "phi_at_4_4898_without_pair_penalty": 0.0151352154377,
+      "apparent_local_crossing": "about 4.5245",
+      "certificate": false
+    }
+  },
+  "prior_failures_preserved": [
+    "fixed positive clause-local weighted second moment: stationarity u=v+w and optimized identical-pair ratio 5/4 force alpha<=log(2)/log(5/4)=3.10628... for that mechanism",
+    "solution-graph ball normalization with radius o(n/log n) cannot remove that exponential second-moment defect",
+    "R03 routes: one-variable cavity iteration; fractional solution-count martingales; randomized booster replacement; loose-hypertree transfer; positive-temperature/free-energy compactification; bounded-excess minimal-UNSAT enumeration below the pure-literal threshold",
+    "Maneva-Sinclair 4.453 is not an unconditional iid 3-SAT threshold upper bound; it is a core-geometry alternative",
+    "large-k threshold results, sharp-window existence, and k-wise-independent-clause results do not settle fixed iid k=3"
+  ],
+  "neighbor_nonduplication": "NM13-06 is pursuing the constructive degree-spectrum / unit-propagation lower-bound route; this run stays on cluster-aware upper-bound counting.",
+  "next_attack": "Build the finite M=23 refined Diaz type functional: split t_{i,j} by zero-blocking positive occurrences, split f_{i,j,1} by clean rescue incidence into nu root slots, incorporate the product 1/(r+1) star factor, and run a certified interval/global sweep at a density strictly below 4.4898.",
+  "artifacts": {
+    "code": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T00-54-08Z__rescue_variational.py",
+    "output": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T00-54-08Z__rescue_variational.out"
+  }
+}

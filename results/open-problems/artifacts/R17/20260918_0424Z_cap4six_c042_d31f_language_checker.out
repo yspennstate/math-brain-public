@@ -1,0 +1,22 @@
+R17 C042 cap4 minimal-six extension exact language checker
+base_patterns_le5=314928
+cap4_minimal_deficient_six=507296
+patterns_total=822224
+aho_nodes=1031337
+safe_aho_nodes=209113
+minimized_nonrejecting_states=38583
+start=0
+EXACT_CAP4_MIN6_COUNT_PASS
+EXACT_SYMMETRY_CLOSURE_PASS
+EXACT_DFA_MINIMIZATION_PASS
+ALL_EXACT_CHECKS_PASS
+
+stderr diagnostic:
+CAP4_MIN6_COUNT=507296
+classes=1054
+classes=19694
+classes=35338
+classes=38584
+classes=38584
+
+Implementation note: an initial search-only build inherited C041's int16_t minimized-transition storage. Since C042 has 38583 nonrejecting states, this overflowed and caused a false symmetry-equivariance failure. The promoted checker widens transitions to int32_t and complement/swap maps to uint32_t; the exact checks above then pass. No theorem claim relies on the overflowed exploratory build.

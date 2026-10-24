@@ -1,0 +1,48 @@
+{
+  "schema": "fei-a023-positive-credit-ledger/1",
+  "family": "finite disjoint products of genuine Boolean point defects q_n",
+  "units": "bits",
+  "tree": {
+    "order": "any deterministic factor order",
+    "physical": true,
+    "adaptive": false,
+    "finite": true,
+    "stage_rule": "exhaust the current point-defect block before moving to the next block",
+    "terminal_packet": 0
+  },
+  "stage": {
+    "factor": "q_a",
+    "rarity": "delta=2^{-a}",
+    "rest_disagreement": "y in [0,1/2]",
+    "secant": "s_y(x)=[F(y+(1-2y)x)-F(y)]/x",
+    "reached_credit_m_ge_2": "delta [s_y(2^{-m})-s_y(2^{1-m})]",
+    "one_bit_credit_upper": "4 delta",
+    "tail_positive_variation_upper": "44 delta",
+    "complete_positive_credit_upper": "P(a|y)<48 delta<=24 I(q_a)"
+  },
+  "shape_proof": {
+    "identity": "F'''(p)=-4/[(ln 2)p(1-p)(1-2p)]<0",
+    "consequence": "the secant slope is first nondecreasing and then nonincreasing",
+    "derivative_bound": "|F'|<22",
+    "positive_variation_bound": 44
+  },
+  "single_use": {
+    "identity": "R(A)+sum_j N_j=sum_j P_j",
+    "complete_bound": "R(A)+sum_j N_j<24 sum_j I(q_{n_j})=24 I(product_j q_{n_j})",
+    "ancestor_reuse": false,
+    "terminal_reuse": false,
+    "interaction_reuse": false,
+    "physical_influence_reuse": false
+  },
+  "scope": {
+    "sparse_defects": "complete",
+    "near_tensors": "all finite disjoint products of the declared point-defect factors",
+    "prime_gates": "each factor is an AND/OR-type prime gate up to signs and input relabeling",
+    "rare_activation": "a fresh activation multiplies reached conditional terms by its reach probability; its separate control packet is not silently charged here",
+    "addressing": "not covered",
+    "shared_variables": "not covered",
+    "general_boolean_leaves": "not covered",
+    "full_fei": "OPEN"
+  },
+  "remaining_obligation": "Find an analogous bounded-variation or nonlocal information ledger for unrelated branching leaves and shared-variable trees, with whole-set addressing as a mandatory falsifier."
+}

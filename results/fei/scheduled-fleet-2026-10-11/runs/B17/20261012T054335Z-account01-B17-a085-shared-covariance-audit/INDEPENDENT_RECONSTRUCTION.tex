@@ -1,0 +1,74 @@
+\section*{Independent reconstruction of the shared-coordinate obstruction}
+
+For a real function $u$ on a uniform cube write
+\[
+ q(u)=\sum_S\widehat u(S)^2,
+ \qquad Z(u)=\sum_S\widehat u(S)^2\log\frac1{\widehat u(S)^2}.
+\]
+For a Boolean $h$ put $V(h)=\operatorname{Var}(h)$ and
+$J(h)=\mathbf I(h)$.  Under restriction of one coordinate, let bars denote
+the average of the two children and let $\delta X=(X_+-X_-)/2$.
+Parseval and the Boolean restriction identities give
+\[
+ q=\bar q,\quad J=\operatorname{Inf}_i(h)+\bar J,
+ \quad V=\alpha_i^2+\bar V,\quad Z=\bar Z+D_Z.
+\]
+Direct expansion, without an inequality, yields
+\[
+ qJ-\overline{qJ}=q\operatorname{Inf}_i(h)-\delta q\,\delta J
+\]
+and
+\[
+ VZ-\overline{VZ}=\alpha_i^2Z+\bar V D_Z-\delta V\,\delta Z.
+\]
+These are precisely the two covariance terms absent for disjoint source and
+child coordinates.
+
+For the displayed B12 four-bit truth tables, independent normalized Walsh
+transforms give
+\[
+ (q,Z,V,J)=\left(\frac14,\frac54\log2,\frac{15}{64},\frac12\right),
+\]
+while the two children are
+\[
+ \left(\frac18,\frac34\log2,0,0\right),\qquad
+ \left(\frac38,\frac94\log2-\frac9{16}\log3,
+       \frac7{16},\frac34\right).
+\]
+Consequently
+\[
+ qJ-\overline{qJ}=-\frac1{64}<0,
+\]
+and
+\[
+ VZ-\overline{VZ}=\frac{63\log3-102\log2}{512}<0.
+\]
+The latter sign is exact because $3^{63}<2^{102}$.  Thus for every
+$A,\lambda\ge0$, not both zero,
+\[
+ AqJ+\lambda VZ-
+ \overline{AqJ+\lambda VZ}<0.
+\]
+No nonzero nonnegative rescaling of these two old potential components can
+be a universal supermartingale under shared-coordinate restriction.
+
+The disagreement support is exactly $\{3,4,14,15\}$ in zero-based
+lexicographic order, and $h$ assumes both signs there, so this is not an
+inactive-branch encoding.  The actual output has $H(F)=3$ bits and
+$\mathbf I(F)=2$.
+
+For the bent spectator $s_k(x,y)=(-1)^{x\cdot y}$ on $2k$ fresh bits,
+tensor identities give $H(s_k)=2k$, $\mathbf I(s_k)=k$, and
+\[
+ Z(bs_k)=Z(b)+2kq\log2.
+\]
+Hence the second drift becomes
+\[
+ \frac{63\log3-(102+24k)\log2}{512}<0
+\]
+for every integer $k\ge0$, while
+\[
+ \frac{H(Fs_k)}{\mathbf I(Fs_k)}=\frac{2k+3}{k+2}<2.
+\]
+This is an all-dimensional obstruction to the helper potential, not a
+counterexample to FEI.

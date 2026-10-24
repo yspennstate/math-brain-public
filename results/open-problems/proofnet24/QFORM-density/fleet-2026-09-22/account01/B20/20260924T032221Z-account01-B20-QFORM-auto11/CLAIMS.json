@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260924T032221Z-account01-B20-QFORM-auto11",
+  "status": "ESSENTIAL_STEP_APPLIED_FULL_QFORM_OPEN",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-ACTIVELOCALIZED-TARGETSCALE-RESTORATION-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "For the exact scaled-back active-localized carrier A=D+R+E inherited from completed account02/B20, the original target s3(A)>=1 upgrades the carrier to s3(R)>1-||D||op-||E||op."
+    },
+    {
+      "id": "QFORM-R42-PHYSICAL-HALFCUT-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "For R=VKV^T of rank r<=42 and q=max_i(VV^T)_ii with qr<1, some literal original-coordinate half-cut has both carrier Grams at least ((1-sqrt(qr))/2)I, hence s3(R[I,J])>=((1-sqrt(qr))/2)s3(R)."
+    },
+    {
+      "id": "QFORM-R44-ACTIVELOCALIZED-LEVERAGE1OVER43-PAID-OR-30030CORE-v1",
+      "status": "PROVED_IN_RUN_WITH_B19_PULLBACK",
+      "statement": "Using the B19 pullback of the account02/B20 active vector to the original tiny-tail rank-42 carrier, either max physical carrier leverage is <=1/43 and a literal physical E3 cut pays with ||p_Q||_infinity<1782.546 and continuous C0 density, or a set F of at most 30030 original coordinates contains more than half of the active vector and every carrier row with leverage>1/43, while the exact tiny-tail decomposition is retained."
+    },
+    {
+      "id": "QFORM-R44-30030CORE-HUB-STAR-NORMALIZEDROW-PAYMENT-v1",
+      "status": "OPEN_NEXT_IMPLICATION",
+      "statement": "Pay the remaining <=30030-coordinate heavy-range active core jointly with the current B19 HUB/STAR/near-threshold normalized-row output and the remaining target-scale spectral resources, without deleting D, E or changing product-coordinate provenance."
+    }
+  ],
+  "separate_unresolved_endpoints": [
+    "account02/B20 common-hub curvature collar",
+    "giant near-rank-one / exterior-third-mode collar"
+  ],
+  "forbidden_premises_not_used": [
+    "uniform pointwise quadratic oscillatory decay",
+    "worst-fibre density cap",
+    "arbitrary-joint coarea",
+    "independence after spectral rotation",
+    "one-good-minor inference from aggregate mass",
+    "probabilistic deletion of nonzero coefficient tails",
+    "near-rank-one perturbation of exact-rank-one half-Riesz"
+  ]
+}

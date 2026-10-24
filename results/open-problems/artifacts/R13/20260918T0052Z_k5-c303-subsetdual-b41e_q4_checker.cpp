@@ -1,0 +1,60 @@
+#include <bits/stdc++.h>
+using namespace std; using A5=array<int,5>; using A4=array<int,4>;
+struct St{uint16_t mask, plusmask; A5 v; int norm2; vector<double> score10;};
+static const long long CP=303, CQ=1000;
+static const int M[17]={0,5,16,29,48,61,80,101,128,133,144,157,176,189,208,229,256};
+vector<A5>S(16),W10,W20,W30,W40,W50,W60; vector<St> states; unordered_map<int,vector<int>> by_key; set<int> observed[14],needed[14]; vector<vector<uint16_t>> mask_cache(17);
+__int128 gcd128(__int128 a,__int128 b){if(a<0)a=-a;if(b<0)b=-b;while(b){auto r=a%b;a=b;b=r;}return a;}
+long long lcmll(long long a,long long b){return a/std::gcd(a,b)*b;}
+pair<long long,long long> cert_term(const A5&v,int k,const A5&w,int D){long long L=1,N=0;for(int x:w)L=lcmll(L,x);for(int j=0;j<5;j++)N+=1LL*v[j]*v[j]*(L/w[j]);if(!N)return{LLONG_MAX/4,1}; long long a=1LL*k*k*L,b=1LL*D*N,g=std::gcd(a,b);return{a/g,b/g};}
+bool exact_cert(const vector<int>&idx,const A4&k,const vector<A5>&W,int wi,int D){__int128 a=0,b=1;for(int r=0;r<4;r++){auto [p,q]=cert_term(states[idx[r]].v,k[r],W[wi],D);if(p>=LLONG_MAX/8)return true;a=a*q+(__int128)p*b;b*=q;auto g=gcd128(a,b);a/=g;b/=g;}return a*CQ>=(__int128)CP*b;}
+double fterm(const A5&v,int k,const A5&w,int D){double z=0;for(int j=0;j<5;j++)z+=(double)D*v[j]*v[j]/w[j];return (double)k*k/z;}
+void genW(vector<A5>&W,int D){for(int a=1;a<=D-4;a++)for(int b=1;b<=D-a-3;b++)for(int c=1;c<=D-a-b-2;c++)for(int d=1;d<=D-a-b-c-1;d++){int e=D-a-b-c-d;if(e>=1)W.push_back({a,b,c,d,e});}}
+void add_state(int k,uint16_t m,uint16_t pm,const A5&v,int n){St x{m,pm,v,n,{}};x.score10.resize(W10.size());for(int i=0;i<(int)W10.size();i++)x.score10[i]=fterm(v,k,W10[i],10);int id=states.size();states.push_back(move(x));by_key[k*65536+(int)m].push_back(id);}
+void gen_states(int k){vector<int>c(k);function<void(int,int)>rec=[&](int p,int z){if(p==k){uint16_t m=0;for(int x:c)m|=(uint16_t)(1u<<x);for(int sb=0;sb<(1<<(k-1));sb++){A5 v=S[c[0]];uint16_t pm=(uint16_t)(1u<<c[0]);for(int t=1;t<k;t++){int sg=((sb>>(t-1))&1)?1:-1;if(sg>0)pm|=(uint16_t)(1u<<c[t]);for(int j=0;j<5;j++)v[j]+=sg*S[c[t]][j];}int n=0;for(int x:v)n+=x*x;observed[k].insert(n);if(needed[k].count(n))add_state(k,m,pm,v,n);}return;}for(int x=z;x<=16-(k-p);x++){c[p]=x;rec(p+1,x+1);}};rec(0,0);}
+bool tryW(const vector<int>&idx,const A4&K,const vector<A5>&W,int D){double best=-1;int wi=-1;for(int z=0;z<(int)W.size();z++){double q=0;for(int r=0;r<4;r++)q+=fterm(states[idx[r]].v,K[r],W[z],D);if(q>best){best=q;wi=z;}}if(exact_cert(idx,K,W,wi,D))return true;for(int z=0;z<(int)W.size();z++)if(exact_cert(idx,K,W,z,D))return true;return false;}
+
+struct Fr{long long p,q; bool inf=false;};
+Fr subset_best_exact(const St&st,const A5&w,int D){
+ vector<pair<int,int>> mem; for(int x=0;x<16;x++) if(st.mask&(1u<<x)) mem.push_back({x,(st.plusmask&(1u<<x))?1:-1});
+ long long L=1;for(int x:w)L=lcmll(L,x);
+ Fr best{0,1,false}; int k=mem.size();
+ for(int sm=1;sm<(1<<k);sm++){
+   A5 u={0,0,0,0,0};int h=0;for(int z=0;z<k;z++)if(sm>>z&1){h++;auto [ix,sg]=mem[z];for(int j=0;j<5;j++)u[j]+=sg*S[ix][j];}
+   long long N=0;for(int j=0;j<5;j++)N+=1LL*u[j]*u[j]*(L/w[j]);
+   if(N==0)return {1,0,true};
+   long long a=1LL*h*h*L,b=1LL*D*N,g=std::gcd(a,b);a/=g;b/=g;
+   if((__int128)a*best.q>(__int128)best.p*b)best={a,b,false};
+ }
+ return best;
+}
+double subset_best_double(const St&st,const A5&w,int D){
+ vector<pair<int,int>> mem; for(int x=0;x<16;x++) if(st.mask&(1u<<x)) mem.push_back({x,(st.plusmask&(1u<<x))?1:-1});
+ double best=0;int k=mem.size();for(int sm=1;sm<(1<<k);sm++){A5 u={0,0,0,0,0};int h=0;for(int z=0;z<k;z++)if(sm>>z&1){h++;auto [ix,sg]=mem[z];for(int j=0;j<5;j++)u[j]+=sg*S[ix][j];}double den=0;for(int j=0;j<5;j++)den+=(double)D*u[j]*u[j]/w[j];if(den==0)return 1e100;best=max(best,(double)h*h/den);}return best;
+}
+bool enhanced_exact_cert(const vector<int>&idx,const vector<A5>&W,int wi,int D){
+ __int128 a=0,b=1;for(int r=0;r<4;r++){auto f=subset_best_exact(states[idx[r]],W[wi],D);if(f.inf)return true;a=a*f.q+(__int128)f.p*b;b*=f.q;auto g=gcd128(a,b);a/=g;b/=g;}return a*CQ>=(__int128)CP*b;
+}
+bool tryEnhanced(const vector<int>&idx,const vector<A5>&W,int D){
+ for(int z=0;z<(int)W.size();z++)if(enhanced_exact_cert(idx,W,z,D))return true;return false;
+}
+
+int main(int argc,char**argv){ string SEG=(argc>1?argv[1]:"A"); int ONLY=(argc>2?stoi(argv[2]):-1);
+ for(int m=0;m<16;m++){S[m][0]=1;for(int j=0;j<4;j++)S[m][j+1]=((m>>j)&1)?1:-1;}
+ for(int k=1;k<=16;k++)for(unsigned m=1;m<65536;m++)if(__builtin_popcount(m)==k)mask_cache[k].push_back((uint16_t)m);
+ genW(W10,10);genW(W20,20);genW(W30,30);genW(W40,40);genW(W50,50);genW(W60,60); cerr<<"W "<<W10.size()<<" "<<W20.size()<<" "<<W30.size()<<" "<<W40.size()<<" "<<W50.size()<<" "<<W60.size()<<"\n";
+ vector<set<int>>E(14);E[1]={5};E[2]={4,8,12,16};E[3]={5,13,21,29};E[4]={0,4,8,12,16,20,24,28,32,36,40,44,48};E[5]={5,13,21,29,37,45,53,61};E[6]={0,4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80};E[7]={5,13,21,29,37,45,53,61,69,77,85,93,101};E[8]={0,4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96,100,104,108,112,128};E[9]={5,13,21,29,37,45,53,61,69,77,85,93,101,109,117,125,133};E[10]={0,4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96,100,104,108,112,116,120,124,128,132,136,140,144};for(int n=5;n<=157;n+=8)E[11].insert(n);for(int n=0;n<=176;n+=4)E[12].insert(n);for(int n=5;n<=189;n+=8)E[13].insert(n);
+ vector<A4>P;for(int a=1;a<=16;a++)for(int b=a;b<=16;b++)for(int c=b;c<=16;c++){int d=16-a-b-c;if(d<c||d<1)continue;int K[4]={a,b,c,d};__int128 x=0,y=1;for(int r=0;r<4;r++){x=x*M[K[r]]+(__int128)K[r]*K[r]*y;y*=M[K[r]];auto g=gcd128(x,y);x/=g;y/=g;}if(x*CQ<(__int128)5*CP*y)P.push_back({a,b,c,d});}
+ cerr<<"profiles="<<P.size()<<" last=";for(int x:P.back())cerr<<x<<",";cerr<<"\n";
+ for(auto p:P)for(int r=0;r<4;r++){int k=p[r];__int128 x=0,y=1;for(int i=0;i<4;i++)if(i!=r){x=x*M[p[i]]+(__int128)p[i]*p[i]*y;y*=M[p[i]];auto g=gcd128(x,y);x/=g;y/=g;}for(int n:E[k])if(n>0)if((x*n+(__int128)k*k*y)*CQ<(__int128)5*CP*y*n)needed[k].insert(n);}
+ for(int k=1;k<=13;k++){gen_states(k);cerr<<"k="<<k<<" need="<<needed[k].size()<<" states="<<states.size()<<"\n";}
+ long long N=0,uniq=0, u20=0,u30=0,u40=0,u50=0,u60=0, enhanced=0,enh20=0,enh30=0; unordered_map<string,unsigned char> cache; cache.reserve(2500000);
+ int pidx=0; for(auto K:P){bool take=(ONLY>=0 ? pidx==ONLY : (SEG=="A"?K<A4{2,2,5,7}:SEG=="B"?(K>=A4{2,2,5,7}&&K<A4{3,3,3,7}):K>=A4{3,3,3,7})); pidx++; if(!take)continue;
+   vector<set<int>>A(4);for(int r=0;r<4;r++){int k=K[r];__int128 x=0,y=1;for(int i=0;i<4;i++)if(i!=r){x=x*M[K[i]]+(__int128)K[i]*K[i]*y;y*=M[K[i]];auto g=gcd128(x,y);x/=g;y/=g;}for(int n:E[k])if(n>0)if((x*n+(__int128)k*k*y)*CQ<(__int128)5*CP*y*n)A[r].insert(n);} auto&m0=mask_cache[K[0]];auto&m1=mask_cache[K[1]];auto&m2=mask_cache[K[2]];
+  for(uint16_t a:m0){auto p0=by_key.find(K[0]*65536+(int)a);if(p0==by_key.end())continue;for(uint16_t b:m1){if((a&b)||(K[1]==K[0]&&b<=a))continue;auto p1=by_key.find(K[1]*65536+(int)b);if(p1==by_key.end())continue;for(uint16_t c:m2){if(((a|b)&c)||(K[2]==K[1]&&c<=b))continue;uint16_t d=(uint16_t)(0xFFFFu^(a|b|c));if(__builtin_popcount((unsigned)d)!=K[3]||(K[3]==K[2]&&d<=c))continue;auto p2=by_key.find(K[2]*65536+(int)c),p3=by_key.find(K[3]*65536+(int)d);if(p2==by_key.end()||p3==by_key.end())continue;
+   for(int i0:p0->second)if(A[0].count(states[i0].norm2))for(int i1:p1->second)if(A[1].count(states[i1].norm2))for(int i2:p2->second)if(A[2].count(states[i2].norm2))for(int i3:p3->second)if(A[3].count(states[i3].norm2)){N++;int ids[4]={i0,i1,i2,i3};string key;for(int r=0;r<4;r++)key.push_back((char)K[r]);for(int r=0;r<4;r++)for(int j=0;j<5;j++)key.push_back((char)(states[ids[r]].v[j]*states[ids[r]].v[j]));auto it=cache.find(key);if(it!=cache.end()){if(it->second==0){cerr<<"cached fail\n";return 2;}continue;}uniq++;vector<int>idx={i0,i1,i2,i3};bool ok=tryW(idx,K,W10,10);unsigned char lvl=10;if(!ok){u20++;ok=tryW(idx,K,W20,20);lvl=20;}if(!ok){enhanced++;ok=tryEnhanced(idx,W10,10);lvl=100;if(!ok){enh20++;ok=tryEnhanced(idx,W20,20);lvl=101;}if(!ok){cerr<<"FAIL_ENH profile "<<K[0]<<","<<K[1]<<","<<K[2]<<","<<K[3]<<" N="<<N<<" uniq="<<uniq<<" squares:";for(int r=0;r<4;r++){cerr<<" [";for(int j=0;j<5;j++)cerr<<states[ids[r]].v[j]*states[ids[r]].v[j]<<",";cerr<<"] mask="<<states[ids[r]].mask<<" plus="<<states[ids[r]].plusmask;}cerr<<"\n";return 2;}}else cache.emplace(key,lvl);
+  }}}}
+  cerr<<"done profile "<<K[0]<<","<<K[1]<<","<<K[2]<<","<<K[3]<<" N="<<N<<" uniq="<<uniq<<" u20="<<u20<<" u30="<<u30<<" u40="<<u40<<" u50="<<u50<<" u60="<<u60<<" enhanced="<<enhanced<<" enh20="<<enh20<<" enh30="<<enh30<<"\n";
+ }
+ cout<<"PASS q4 segment="<<SEG<<" c="<<CP<<"/"<<CQ<<" profiles_total="<<P.size()<<" configs="<<N<<" uniq="<<uniq<<" u20="<<u20<<" u30="<<u30<<" u40="<<u40<<" u50="<<u50<<" u60="<<u60<<" enhanced="<<enhanced<<" enh20="<<enh20<<" enh30="<<enh30<<"\n";
+}

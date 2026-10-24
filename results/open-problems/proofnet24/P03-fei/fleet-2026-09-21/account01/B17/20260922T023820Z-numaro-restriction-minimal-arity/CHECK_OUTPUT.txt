@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "source_sha256": "f8a7bb2c738d86368305111633376b1a3a83d8ee1f1abcc9a37d841b0f9c7839",
+  "normalized_restrictions_nominal_arity_at_most_10": 44266,
+  "coverage": "Every physical restriction with at most 10 essential variables has an equivalent representative here: free inactive/dummy auxiliary variables can be fixed without changing the function.",
+  "cap_tested_exact": "64559/10000",
+  "effective_arity_stats": {
+    "1": {
+      "balanced_normalized_restrictions": 3492,
+      "violating_cap_6.4559": 0,
+      "ambiguous_at_cap": 0,
+      "max_ratio_interval": ["0", "0"],
+      "max_I_exact": "1",
+      "max_square_histogram": {"1024": 1},
+      "max_core_status": [-1,-1,-1,-1,0,1,1,0,-1],
+      "max_aux_status": []
+    },
+    "4": {
+      "balanced_normalized_restrictions": 288,
+      "violating_cap_6.4559": 0,
+      "ambiguous_at_cap": 0,
+      "max_ratio_interval": ["6", "6"],
+      "max_I_exact": "3/2",
+      "max_square_histogram": {"64": 8, "256": 2},
+      "max_core_status": [-1,-1,-1,-1,-1,1,0,0,1],
+      "max_aux_status": [0,1]
+    },
+    "6": {
+      "balanced_normalized_restrictions": 324,
+      "violating_cap_6.4559": 0,
+      "ambiguous_at_cap": 0,
+      "max_ratio_interval": ["6.347067498701918873383269900893930284232333863918895997", "6.347067498701918873383269900893930284232401380527582521"],
+      "max_I_exact": "13/8",
+      "max_square_histogram": {"16": 32, "64": 4, "256": 4, "576": 4},
+      "max_core_status": [-1,-1,-1,-1,-1,-1,0,0,1],
+      "max_aux_status": [1,1]
+    },
+    "8": {
+      "balanced_normalized_restrictions": 72,
+      "violating_cap_6.4559": 0,
+      "ambiguous_at_cap": 0,
+      "max_ratio_interval": ["6.363969446288164350267463751013285715335357026962092287", "6.363969446288164350267463751013285715335382927535945792"],
+      "max_I_exact": "53/32",
+      "max_square_histogram": {"16":128,"64":16,"256":14,"576":12,"1600":2,"2304":1,"4096":2,"6400":1,"7744":2,"16384":1},
+      "max_core_status": [-1,-1,-1,-1,-1,0,-1,0,1],
+      "max_aux_status": [-1,-1]
+    },
+    "10": {
+      "balanced_normalized_restrictions": 630,
+      "violating_cap_6.4559": 621,
+      "ambiguous_at_cap": 0,
+      "max_ratio_interval": ["6.459372281637855731574361612219124166218613214185697090", "6.459372281637855731574361612219124166218648928445961812"],
+      "max_I_exact": "257/128",
+      "max_square_histogram": {"16":337,"64":48,"144":108,"256":28,"576":32,"784":18,"1024":34,"1296":36,"1600":24,"2304":8,"3136":8,"5184":8,"6400":16,"7056":12,"9216":8,"12544":4,"38416":1,"53824":8},
+      "max_core_status": [-1,-1,-1,-1,-1,-1,-1,-1,-1],
+      "max_aux_status": [-1,0,1,1,0,1,1,0,0]
+    }
+  },
+  "conclusion": "Within all physical restrictions of the recovered Numaro n=18 seed, no balanced restriction with <=9 essential variables violates 6.4559; balanced 10-essential-variable restrictions do, and the maximal observed interval is the peer-certified G10 value.",
+  "full_FEI_status": "OPEN"
+}

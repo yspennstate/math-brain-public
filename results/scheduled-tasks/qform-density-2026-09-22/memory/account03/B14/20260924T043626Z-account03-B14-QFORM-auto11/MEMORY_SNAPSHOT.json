@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260924T043626Z-account03-B14-QFORM-auto11",
+  "control_revision": "2026-09-22.15",
+  "control_readme_sha": "14046b5138615be52bb1c49a998122a7c84e200e",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_conjecture": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1",
+    "QFORM-B15-NONZERO-SQUARE-AFFINE-SLOPE-RESCUE-FALSE-v1"
+  ],
+  "source_match_correction": {
+    "physical_definite_pair_already_proved": true,
+    "source_commit": "43eab33dc9cd6063c84089b5fc3692abceeadb21",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md",
+    "opposite_sign_barrier_already_in_live_corrections": true,
+    "barrier_source_commit": "eb5cd7bd244d799988b7fa618280b46713bd13c8"
+  },
+  "proved_supporting_lemma": {
+    "id": "QFORM-OVERLAP-SAME-SIGN-SQUARE-COMPILER-v1",
+    "statement": "For mutually independent W,U,Z with density caps K_W,K_U, same-sign nonzero a,d, and arbitrary measurable Phi(U,Z), theta(Z), R(Z), T=a(W+Phi)^2+d(U+theta)^2+R has essential density cap pi K_W K_U/sqrt(|ad|). Random affine slope D(Z)U in the dU^2 term is absorbed at zero cost by completing the square.",
+    "constant_sharp_for_abstract_compiler": true,
+    "localization_costs": "zero in translations, distant/countable fragments, unbounded supports, tails, moments"
+  },
+  "partner_applied": {
+    "worker": "account04/B14",
+    "source_commit": "deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260924T001624Z-account04-B14-scaled-schur-localization-r10/REPORT.md",
+    "actual_inequality": "For A_*=[[2,1,0],[1,2,0],[0,0,-1]], spec={3,1,-1}; overlap/definite-pair gives pi/sqrt(3), partner r10 gives 6sqrt(pi), hence min=pi/sqrt(3)."
+  },
+  "canonical_math_commit": "7c982b2537be11bbe3f63123e2870171bfb27717",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260924T043626Z-account03-B14-QFORM-auto11/",
+  "authoritative_status_file": "ADDENDUM_SOURCE_MATCH.md",
+  "handoff_commit": "285b320c77e0d7eb3753eb1e4e83d03eb768d134",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B14/20260924T043626Z-account03-B14-QFORM-auto11.md",
+  "unresolved_implication": "From s_3(A)>=1 alone, obtain through product-preserving elimination either a same-sign overlap-square certificate or an already-certified grouped/physical-triple receiver; opposite-sign Schur elimination must retain genuine third curvature because affine slope alone can be cancelled.",
+  "next_step": "Test a Schur-sign dichotomy that keeps the third curvature before conditioning or reciprocal-pivot payment, using same-sign overlap compiler on the favorable sign branch and grouped/half-Riesz receivers on the indefinite branch."
+}

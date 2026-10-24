@@ -1,0 +1,258 @@
+[
+  {
+    "claim_id": "A039-COHERENT-PROJECTION-TRANSFER",
+    "version": 1,
+    "exact_statement": "For every finite uniform-cube Boolean sign and physical coordinate i, TC(f)=I_P(S_i;S_-i)-JS_i+Gamma_i+E TC(f_child), where Gamma_i=sum_{j!=i}[h2(Inf_j(f))-E h2(Inf_j(f_child))]. The identity telescopes over every finite adaptive fair physical tree with terminal TC retained. Applying the function-specific coherent child kernel to both the residual spectrum and its product projection gives zero channel injection and signed Bayes reset E delta=D_out+JS_i-Gamma_i. The occupancy account K_full=v K_occ+Delta has the exact signed transfer in DERIVATION.md (4). Isospectral children have JS_i=Gamma_i=0. Neither monotonic direction holds generally for TC, K_occ or Delta. For m-bit point defects a=2^(1-m), Gamma_i/a=(m-1)+O(m a), JS_i/a<=4+O(m a), and the Delta release divided by a differs from 2m-6+log2(e) by at most (12m+16)a. Consequently no finite universal c bounds Gamma_i by c Inf_i or c(JS_i+Inf_i), or the absolute expected single-step Delta change by c Inf_i.",
+    "hypotheses": [
+      "Boolean sign on a finite uniform physical cube; information in bits; d_j=P(j in spectral set)",
+      "Adaptive coordinate tree choices measurable from physical history; physical branch probabilities fair; retained terminal accounts",
+      "Supported finite KL expressions; deterministic marginal coordinates removed; common kernel on positive residual fibers and fair extension on zero fibers",
+      "Occupancy projection maximizes entropy among nonempty laws with prescribed conditional marginals; constants have zero occupancy/Delta account"
+    ],
+    "statement_sha256": "83861bba22bb5e0f759a34b2580479b5032b19eaa9d91e1e53f9c648d48354e1",
+    "contributors": [
+      "A039"
+    ],
+    "proof_source": {
+      "run_id": "20261011T223903Z-account05-A039-projection-under-restrictions",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/baseline_check.py",
+        "code/reset_check.py",
+        "code/census4.py",
+        "out/VALIDATION.json",
+        "out/RESET_VALIDATION.json",
+        "out/CENSUS4.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A088",
+        "verdict": "HOLDS",
+        "acceptance": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent signed physical-child/entropy/prime-log reconstruction; exact padding-reserve and coherent Bayes reference checks; strongest applicable normalized-real scope diagnostics; no source proof repaired",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261012T024518Z-account05-A088-booleanity-referee\\AUDIT.md",
+        "sha256": "32617136410335977923ed3004c8e57c299435e007691bd88fc41ebba0830653",
+        "reviewer_conflict": false,
+        "shared_registry_adoption": "PENDING_B20"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_ACCEPT_AT_STATED_SCOPE_PENDING_INDEX_ADOPTION",
+    "supersedes": [],
+    "refutes": [
+      "Finite universal Gamma_i<=c Inf_i for every Boolean physical coordinate",
+      "Finite universal Gamma_i<=c(JS_i+Inf_i) for every Boolean physical coordinate",
+      "Finite universal absolute expected Delta transfer <=c Inf_i"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A040",
+      "A057",
+      "A064",
+      "A088",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f on a finite uniform cube and physical block B, K(f)=integral J_f=(H_nat(f)-p_empty ln(1/p_empty))/2 obeys 2[K(f)-E_y K(f_y)]=M_B^+ + C_B^+ + ell_B, where q_T=sum_{U subset B}p_{U union T}=E_y p_y(T), M_T=sum_U p_{U union T}ln(q_T/p_{U union T}), C_T=E_y p_y(T)ln(p_y(T)/q_T), plus omits T=empty, and ell_B=sum_{nonempty U subset B}p_U ln(1/p_U). All three terms are nonnegative. For B={i}, C_i^+<=2 Inf_i and ell_i<=(2/e)Inf_i. The identity telescopes in every finite physical stopping tree, with retained terminal K and cumulative channel-plus-level cost <=(2+2/e)[I(f)-E I(leaf)]. If R_nat=sum_i M_i^+ and B_nat=sum_i H_nat(S_i|S_without_i), then 0<=B_nat-R_nat<=(1+2/e)I. Moreover R_nat(y product_{j=1}^m g(x^(j)))=m B_nat(g) and I=m I(g)+1, so the optimal universal constants for R_nat/I and B_nat/I are equal. A universal R_nat<=A I implies FEI in bits with constant (A+2)/ln2 via C018; no such A is proved here.",
+    "hypotheses": [
+      "Finite uniform cube; Boolean outputs in {-1,1}",
+      "Natural logarithms; entropy bits = nats/ln2",
+      "Zero-mass log terms vanish",
+      "Physical restrictions and actual coherent child Fourier coefficients"
+    ],
+    "statement_sha256": "91cb0a1f21648d5372e658f92219b45f224f832a7e835cebff58f0143f5fc5bb",
+    "contributors": [
+      "account05/A066"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T233317Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+        "version": 1,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+        "acceptance_scope": "Source-bound independent A067 and A088 acceptance at stated scope; central adoption not asserted"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "account05/A088",
+        "verdict": "GAP_SCOPE_CLARIFICATION",
+        "acceptance": "SINGLETON_TREE_COMPONENTS_HOLD; UNQUALIFIED_BLOCK_TREE_BUDGET_REFUTED",
+        "method": "Independent signed physical-child/entropy/prime-log reconstruction; exact padding-reserve and coherent Bayes reference checks; strongest applicable normalized-real scope diagnostics; no source proof repaired",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261012T024518Z-account05-A088-booleanity-referee\\AUDIT.md",
+        "sha256": "32617136410335977923ed3004c8e57c299435e007691bd88fc41ebba0830653",
+        "reviewer_conflict": false,
+        "shared_registry_adoption": "PENDING_B20"
+      }
+    ],
+    "status": "INDEPENDENT_REVIEW_SCOPE_CLARIFICATION_REQUIRED",
+    "supersedes": [],
+    "refutes": [
+      "Channel-only restriction heat payment; refuted by majority calibration in second claim"
+    ],
+    "first_unproved_line": "The cumulative channel-plus-level budget must specify singleton-query physical stopping trees; its unrestricted block-tree reading fails on the one-step full-block n128 Boolean point defect. Source DERIVATION equation7 proves singleton scope only.",
+    "next_consumers": [
+      "A067",
+      "A070",
+      "A064",
+      "A088",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A066-MAJORITY-DEFECTED-ADDRESS-HEAT-CALIBRATION",
+    "version": 1,
+    "exact_statement": "For odd majority n=2m+1 and alpha=binom(2m,m)/2^(2m), every singleton physical restriction has M_i=C_i=0 and K(parent)-E K(child)=alpha^2 ln(1/alpha^2)/2, with ratio to Inf_i equal to alpha ln(1/alpha)<=1/e. Thus no finite A bounds that heat drop by A times its C006 channel term, already for Maj3. For F_{a,r}=Addr_a-2 indicator{all inputs +1} with a>=1, k=a+2^a, r>=1, D=k+r and delta=2^(-D), and any b padding coordinates, 1<=b<=r, the exact signed three-class row formulas (9)-(11) of DERIVATION.md compute the heat drop, conditional erasure, channel and level mass. For fixed a,b as r grows, M_B/I_B and C_B/I_B tend to 2ln2 and the heat-drop ratio tends to 2ln2. For b=r, rho=4^a/2^k, the erasure/channel limits are 2(1+rho)ln2 and 2(1-rho)ln2, the heat limit remains 2ln2, and the lost-level limit is 4ln2/2^k. All limits are analytic, not finite-grid extrapolations.",
+    "hypotheses": [
+      "Finite uniform cube; Boolean outputs in {-1,1}",
+      "Natural logarithms; entropy bits = nats/ln2",
+      "Zero-mass log terms vanish",
+      "Physical restrictions and actual coherent child Fourier coefficients"
+    ],
+    "statement_sha256": "b26985a0cdb03ecd4f45cb8145ab1ff024e42c0f2a3608cd2738f1ee7ce6bddc",
+    "contributors": [
+      "account05/A066"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T233317Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+        "version": 1
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "account05/A088",
+        "verdict": "HOLDS",
+        "acceptance": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent signed physical-child/entropy/prime-log reconstruction; exact padding-reserve and coherent Bayes reference checks; strongest applicable normalized-real scope diagnostics; no source proof repaired",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261012T024518Z-account05-A088-booleanity-referee\\AUDIT.md",
+        "sha256": "32617136410335977923ed3004c8e57c299435e007691bd88fc41ebba0830653",
+        "reviewer_conflict": false,
+        "shared_registry_adoption": "PENDING_B20",
+        "dependency_scope": "Uses only the independently reconstructed finite block row identity of A066-POSITIVE-RESTRICTION-HEAT-LEDGER v1 and direct signed coefficients; the ambiguous stopping-tree budget is not used."
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_ACCEPT_AT_STATED_SCOPE_PENDING_INDEX_ADOPTION",
+    "supersedes": [],
+    "refutes": [
+      "Universal K(f)-E K(f_y) <= A C_B for finite A, with no separate level term"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A070",
+      "A064",
+      "A088",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A067-PADDING-STRIP-RESERVE-AND-LEAF-ACCESS",
+    "version": 1,
+    "exact_statement": "For every Boolean seed g on m>=1 uniform core coordinates, every physical vertex x0, and r>=1 dummy padding coordinates, let F_r differ from g only at (x0,all +), let d=2^(1-m-r), and let I_core=sum of the core-coordinate influences of F_r. For every physical tree that queries only padding coordinates along the unique edited branch and stops every clean branch, the total expected entropy drop Q_pad satisfies Q_pad<=4 I_queried+(1+6/ln(2)) I_core. The core reserve is allocated once across the whole tree. If every leaf satisfies U<=b I, b>=0, where U=sum_nonempty hat f(S)^2(max{|T|:hat f(T)!=0,T contains S}-|S|), then H(F_r)<=(3+2b+6/ln(2)) I(F_r); a sufficient admission is U(g)<=b I(g) and U(F_0)<=b I(F_0). For fixed finite g and r>=2, with L the number of its nonzero Fourier coefficients and p=2^(-m-r), the padding-node drop Delta_r obeys |Delta_r/(2p)-4|<=4 L p (|m+r-3|+m+3/(2ln(2))), hence the ratio tends to 4. The point-defect padding nodes satisfy 0<=Delta<=5 Inf at every dimension. Consequently dictator one-point surgery and Maj3 tensor point defects have explicit U<=I stopping trees paid at node rate 5, with full terminal entropy retained. There is no uniform padding-node rate for arbitrary varying seeds: quadratic bent seeds of even dimension m at fixed r>=2 have Delta_r/(2p)=4+2^(1-r)(m+2r-6+3/ln(2))+O(2^(-r)*2^(1-m/2-r)). These are a padding-access theorem and its scope guards, not universal admission of arbitrary Boolean core leaves.",
+    "hypotheses": [
+      "Finite uniform cubes, Boolean outputs {-1,1}; Fourier entropy in bits and standard total influence.",
+      "Physical one-vertex edit of an actual Boolean seed and dummy padding, not a spectral projection.",
+      "Trees stop clean branches and query only remaining relevant padding on the edited branch; terminal entropy is retained.",
+      "The conditional FEI certificate requires the stated U<=b I condition on every terminal restriction; it is not automatic.",
+      "The fixed-seed limit keeps seed dimension and spectrum fixed; the bent guard instead keeps r fixed while m grows."
+    ],
+    "statement_sha256": "84f33fb24c7f4cb9f910a9d7fb8f2c2c76aea32ac80e9c704bd7c498898fd5a1",
+    "contributors": [
+      "account05/A067"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261012T004014Z-account05-A067-hypercontractive-refinement\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A067-LOCAL-BOOLEAN-GRANULARITY",
+        "version": 1,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-account05-A067-hypercontractive-refinement\\CLAIMS.json",
+        "acceptance_scope": "Stage-1 local granularity certificate independently accepted by A088 and A070; only used for terminal U certificate."
+      },
+      {
+        "claim_id": "C005",
+        "version": 1,
+        "acceptance_scope": "Physical singleton restriction identity and its channel <=2 Inf/ln2; reconstructed in source campaign."
+      },
+      {
+        "claim_id": "C019",
+        "version": 1,
+        "acceptance_scope": "Exact finite physical-tree entropy and influence telescopes, not the conjectural universal stopping payment."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "account05/A088",
+        "verdict": "HOLDS",
+        "acceptance": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent signed physical-child/entropy/prime-log reconstruction; exact padding-reserve and coherent Bayes reference checks; strongest applicable normalized-real scope diagnostics; no source proof repaired",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261012T024518Z-account05-A088-booleanity-referee\\AUDIT.md",
+        "sha256": "32617136410335977923ed3004c8e57c299435e007691bd88fc41ebba0830653",
+        "reviewer_conflict": false,
+        "shared_registry_adoption": "PENDING_B20"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_ACCEPT_AT_STATED_SCOPE_PENDING_INDEX_ADOPTION",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A064",
+      "A069",
+      "B06",
+      "B13",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A088-BLOCK-TREE-HEAT-BUDGET-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "There is no universal all-block physical-stopping-tree bound sum_h w_h(C_Bh^+(f_h)+ell_Bh(f_h)) <= (2+2/e)[I(f)-E I(f_leaf)] for all Boolean signs on finite uniform cubes, where C_B^+ is the natural-log physical-child row channel omitting the empty residual row and ell_B=sum_nonempty_U_subset_B fhat(U)^2 ln(1/fhat(U)^2). A one-step tree querying all128 coordinates of f=1-2 indicator{x=all plus} has constant leaves and rate 4*(127/128)*(1-2^-128)*ln(2)>11/4>2+2/e. This refutes the unrestricted block-tree interpretation of A066 stage2, not its correct singleton-query payment or FEI.",
+    "hypotheses": [
+      "Actual Boolean sign on a finite uniform cube; entropy row costs in natural units",
+      "Physical block B may contain more than one coordinate; the certificate queries the entire128-variable cube in one node",
+      "Zero log masses contribute zero; total influence is sum_S |S|fhat(S)^2",
+      "No claim against the singleton-query restriction theorem"
+    ],
+    "statement_sha256": "3439312033d36f610afc4a50f2b62b574f7507a60f5ac0cd8547241399c12491",
+    "contributors": [
+      "account05/A088"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261012T024518Z-account05-A088-booleanity-referee\\AUDIT.md",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261012T024518Z-account05-A088-booleanity-referee\\out\\A066_BLOCK_SCOPE_CERTIFICATE.json",
+      "checker": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261012T024518Z-account05-A088-booleanity-referee\\code\\check.py"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "EXACT_BOOLEAN_SCOPE_OBSTRUCTION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unqualified block-query cumulative channel-plus-level payment with coefficient2+2/e"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A066",
+      "A070",
+      "A094",
+      "A085",
+      "B14",
+      "B20"
+    ]
+  }
+]

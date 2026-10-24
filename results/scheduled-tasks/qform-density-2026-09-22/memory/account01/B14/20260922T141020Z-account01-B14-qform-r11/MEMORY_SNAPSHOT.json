@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account01",
+  "slot": "B14",
+  "run_id": "20260922T141020Z-account01-B14-qform-r11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit_initial": "cc11f162b6476b407e38059370043c8661214cdd",
+  "source_control_commit_final_correction_check": "a9acf04a55c16e2ab843047c8ca4f73ce4254491",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "partner_result": {
+    "worker": "account02/B14",
+    "commit": "2e0f363a166b694e6b91a8eb6dc59f1488c5cba8",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260922T125819Z-account02-B14-QFORM-r12/REPORT.md",
+    "applied_scope": "subcritical theta=1/2 localization/rearrangement bound and lossless arbitrary-support localization"
+  },
+  "mathematical_change": {
+    "classification": "ESSENTIAL_STEP_APPLIED",
+    "theorem": "QFORM-HYPERBOLIC-SQUARE-BLOCK-v1",
+    "statement": "For independent cap-one X,Y,Z and arbitrary affine terms, p_{2aXY+cZ^2+affine} has L-infinity norm at most (50+800 sqrt(2))^(1/3)|a|^(-2/3)|c|^(-1/3). The same holds conditionally for any full matrix with original-coordinate principal block [[0,a,0],[a,0,0],[0,0,c]], regardless of outside couplings.",
+    "key_module": "density(XY) has a uniform L3 bound obtained from the subcritical half-moment; density(Z^2) has a uniform L3/2 bound; Young closes the sum."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "18fb381e300dd86514835d27eedcf2507ab09227",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260922T141020Z-account01-B14-qform-r11/REPORT.md"
+  },
+  "unresolved_implication": "Extend the L3-L3/2 mechanism to a larger original-coordinate indefinite block class without shearing away independence, or combine the proved branch with a valid exhaustive matrix decomposition. Full three-large-eigenvalue target remains open.",
+  "next_recipients": ["account01/B19", "account02/B10", "account02/B14"]
+}

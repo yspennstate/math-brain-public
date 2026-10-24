@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B17",
+  "run_id": "QFORM-B17-20260922T225652Z",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "control_commit_last_checked": "45d4901499a690e174a623e8e4425008cfebaf53",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "OPEN_SEPARATE",
+  "assignment": "Sharp constant and witnesses",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "partner_results_applied": [
+    {
+      "worker": "account02/B17",
+      "run": "20260922T194544Z-account02-B17-QFORM-r18",
+      "source_commit": "97c8874b48c663a7ae131cb3899dbafdb5a31d1c",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260922T194544Z-account02-B17-QFORM-r18/REPORT.md",
+      "application": "exact negative-output two-shell rearrangement inserted into the present arbitrary-r collinear BLL integral"
+    },
+    {
+      "worker": "account02/B17",
+      "run": "20260922T204449Z-account02-B17-QFORM-r19",
+      "source_commit": "50913ed00c5943aaf2772473cbf17ddcb5bed090",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260922T204449Z-account02-B17-QFORM-r19/REPORT.md",
+      "application": "identifies the exact Gaussian endpoint after adding an independent diffuse fourth minority-sign mode: 3sqrt(2)/sqrt(1+delta)"
+    }
+  ],
+  "new_mathematics": {
+    "claim": "For every finite leverage vector a with sum a_i^2=1, the Gaussian-completion branch T_a=G1^2+G2^2-12(sum a_i X_i)^2 has global density peak at most (1/2)E exp[-6(sum a_i U_i)^2] for arbitrary independent cap-one X_i; equality is attained by centered unit intervals at output zero.",
+    "source_valid_frame": "two diffuse positive banks plus heavy rows a_i e3, giving R^T R=I3 and exact nonzero spectrum {1,1,-1} at every finite dimension",
+    "whole_collinear_ceiling": "By Ball's sinc-integral inequality and generalized Holder, C(a)<=3sqrt(2)(pi/3)^(1/4)=4.291838853339765... for every finite leverage vector a.",
+    "equal_weight_formula": "C_k=6 E exp[-(6/k)(sum U_i)^2]",
+    "asymptotic": "C_k=3sqrt(2)[1-3/(80k)-173/(17920k^2)+O(k^-3)]",
+    "endpoint": "C_k tends to 3sqrt(2) from below for sufficiently large k"
+  },
+  "output_sources": [
+    "yspennstate/math-open-problems@38874ab0cdcfc9f12929f1fa3a72c83a55d448bb:proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260922T225652Z/REPORT.md",
+    "yspennstate/math-open-problems@316a0f16bb9d6a9669dc4121d4e0440e7c6e22bb:proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260922T225652Z/GENERAL_WEIGHTS_ADDENDUM.md",
+    "yspennstate/math-open-problems@bae901d3bf8235ad81ad86166d6adbf4eaea31e9:proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260922T225652Z/COLLINEAR_UNIVERSAL_CEILING.md",
+    "yspennstate/math-open-problems@6c6db4ea164754e99cc9aed38ee3ad4c62fc51b2:proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260922T225652Z/check_kfold.py",
+    "yspennstate/math-open-problems@96848fe06d85223f453044a3ad24d7854be26a10:proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/QFORM-B17-20260922T225652Z/CHECKS.txt"
+  ],
+  "unpaid_implication": "The whole-collinear ceiling is 4.29184 rather than 3sqrt(2), and no theorem here controls genuinely non-collinear heavy rows; universal sharpness and full QFORM remain open.",
+  "next_step": "Attack a source-valid non-collinear/coupled heavy-row family spanning multiple spectral directions, preserving original-coordinate product provenance and global output control."
+}

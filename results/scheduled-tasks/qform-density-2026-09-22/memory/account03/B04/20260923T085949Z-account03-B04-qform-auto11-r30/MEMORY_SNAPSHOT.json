@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit": "00d51d601badf00d9c8047baa9d6ddf876e7182b",
+  "correction_inbox_sha": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "account": "account03",
+  "slot": "B04",
+  "run_id": "20260923T085949Z-account03-B04-qform-auto11-r30",
+  "assignment": "Product Fourier rearrangement",
+  "full_target_status": "OPEN",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "new_result": {
+    "id": "QFORM-OVERLAP1-PIVOT-PAIRVOLUME-v1",
+    "statement": "For a physical coordinate i with a_i=A_ii nonzero, define Delta_i(A) as the sum of squared 3x3 minors det A[{i} union P,{i} union Q]^2 over ordered disjoint residual 2-sets P,Q. Then ||p_(X^T A X)||_infinity <= C_ov1 (|A_ii|^2 Delta_i(A))^(-1/8), with C_ov1 <= 12*2^(4/3)*e^(5/24)=37.2419652609898, for every independent cap-one product law.",
+    "proof_currency": [
+      "Exact Schur factorization Delta_i(A)=A_ii^2 D2_disj(S_i).",
+      "Fair residual coordinate cut satisfies E E2(S_i[L,R])=D2_disj(S_i)/16.",
+      "Apply the completed unconditional pair-volume half-Riesz theorem to the resulting residual cross block, then the original-coordinate square kernel."
+    ],
+    "regularity": "absolute continuity and essential L-infinity boundedness proved in this scope; continuity not proved for arbitrary measurable input densities"
+  },
+  "peer_result_applied": {
+    "account": "account01",
+    "slot": "B01",
+    "id": "QFORM-PAIRVOLUME-HALF-RIESZ-UNCONDITIONAL-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1f3af9dc58afb9e902b972466d6da01cece89734",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T030821Z-account01-B01-qform-auto11/REPORT.md",
+    "actual_application": "Used at the residual cut inequality ||p_Q||_infinity <= C_E2 |A_ii|^(-1/2) E2(S_i[L,R])^(-1/8)."
+  },
+  "designated_partner": {
+    "account": "account04",
+    "slot": "B04",
+    "completed_current_qform_result_visible": false,
+    "note": "Fresh direct lookup found no completed current-QFORM handoff/report; none was fabricated."
+  },
+  "explicit_family": {
+    "definition": "A_m=[1] direct sum [[0,J_p/p],[J_p/p,0]], m=2p>=4",
+    "spectrum_nonzero": [1,1,-1],
+    "local_couplings": "2/m -> 0",
+    "Delta0": "(1-2/m)^2",
+    "bound": "37.2419652609898*(1-2/m)^(-1/4)"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "149cb3c6920e6df7da7b2cf16abdae9572aef328",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T085949Z-account03-B04-qform-auto11-r30/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/20260923T085949Z-account03-B04-qform-auto11-r30/CHECKS.json"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "82c5f57db96b14e4f6ba50caebb582c490a2dcc9",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B04/20260923T085949Z-account03-B04-qform-auto11-r30.md"
+  },
+  "unresolved_implication": "QFORM-OVERLAP1-SMALLDIAG-OR-OVERLAP2-ROUTING-v1: after the disjoint-third-volume exit and nonzero-pivot overlap-one compiler, route remaining third-compound mass through a zero/near-zero pivot mechanism without dividing by A_ii, or through intersection-two/principal-third-minor layers into paid pair/star/grouped/ridge/local-3block endpoints.",
+  "corrections_respected": [
+    "no law-uniform pointwise quadratic-phase decay",
+    "no unrestricted joint coarea lemma",
+    "no positive conditional-projection-density moment bound",
+    "no independence after spectral rotation",
+    "no local-minor selection before aggregate volume payment"
+  ],
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_effort_requested": "maximum actually supported",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-30T03:30:00Z",
+  "full_classical_FEI": "OPEN",
+  "source_guardrail": "Slote arXiv:2608.01424 refutes noncommutative quantum FEI, not classical FEI. This package analyzes one specific commutative replacement and sign-rounding procedure.",
+  "claims": [
+    {
+      "id": "FEI-FLAT-LAST-LAYER-THRESHOLD-COST-20260930",
+      "status": "PROVED_AUXILIARY",
+      "statement": "For any real flat orthogonal L-by-L matrix R, any unit vector W independent of uniform signs xi, and Boolean threshold sign(sum_j Y_j (R Diag(xi)W)_j), the data-averaged sum of control influences is at least (1/(2sqrt(6)))sqrt(L/ln(4L)). Independent parity controls of length r multiply the bound by r.",
+      "proof": "REPORT.md Theorem 2.1",
+      "dependencies": "Elementary Rademacher moments, Hoeffding bound proved via cosh, Boolean unate influence identity",
+      "scope": "Only the specified actual Boolean threshold; uniform in all earlier layers"
+    },
+    {
+      "id": "FEI-LAST-LAYER-ONE-HOT-RIGIDITY-20260930",
+      "status": "PROVED_AUXILIARY",
+      "statement": "A norm-one linear form in independent signs is Boolean on every input iff its coefficient vector is one-hot. The final flat orthogonal/random-sign layer yields one-hot with conditional probability 2L/2^L if all |W_a|=1/sqrt(L), and zero otherwise.",
+      "proof": "REPORT.md Theorem 2.2",
+      "scope": "Exact full-Booleanity assertion; norm-one or truncated cancellation alone is not substituted"
+    },
+    {
+      "id": "FEI-HADAMARD-CONDITIONAL-MEAN-SCALING-20260930",
+      "status": "PROVED_AUXILIARY",
+      "statement": "The unrounded real function has supremum norm at least sqrt(L/3); any exact Boolean conditional-mean representation of lambda times this function has |lambda|<=sqrt(3/L).",
+      "proof": "REPORT.md Theorem 2.3",
+      "scope": "Exact scalar conditional-mean model only; not a universal auxiliary-influence lower bound"
+    },
+    {
+      "id": "FEI-MULTILAYER-CLASSICALIZATION-COST-20260930",
+      "status": "PROVED_APPLICATION",
+      "statement": "For k Hadamard data layers and independent length-r parity controls, the unrounded real polynomial has flat Fourier support L^(k+1), entropy (k+1)log2L and Dirichlet energy r+k. Its Boolean sign rounding has control influence at least r/(2sqrt(6))*sqrt(L/ln(4L)). For L of order 3^r and r,k of order d this is exponential in d.",
+      "proof": "REPORT.md Section 3",
+      "not_proved": "An entropy upper bound for all rounded functions, any obstruction to all possible classicalizations, or classical FEI"
+    }
+  ],
+  "attribution": "The earlier Booleanity-order report already contains a one-layer affine Hadamard threshold-cost mechanism; the present abstract final-layer formulation extends the bound uniformly to arbitrary preceding layers. Novelty outside the project is unverified.",
+  "verification_kind": "Analytic proof with exact finite self-checks; no independent audit or formalization yet"
+}

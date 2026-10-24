@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B12",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "run_id": "20260923T094544Z-qform-eigenvalue-r30",
+  "source_control_initial": "b62a5a6a771e37a12087944f73ce0a0f78ef2ec1",
+  "source_control_final_refresh": "e70dbfa64bf15bda1a238d715e3e4e3e1b432835",
+  "owner_control_revision": "2026-09-22.15",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "mathematical_result": {
+    "id": "QFORM-RANK-BUDGET-LEAKAGE-SHIELD-v1",
+    "status": "PROVED_SUPPORTING_THEOREM_NOT_INDEPENDENTLY_REVIEWED",
+    "statement": "For H=[[C,B],[B^T,D]], a reducing spectral projection P of D whose D_P has j+2k singular values >=mu gives s_j(H)>=mu*ell(||BP D_P^{-1}||)^2-s_{k+1}(BQ), Q=I-P. Thus k arbitrarily large leakage directions cost protected-mode count rather than magnitude.",
+    "density_corollary": "On an actual m-coordinate core, if gamma=mu*ell(rho)^2-s_{K+1}(BQ)-delta>0 with K=floor((r-3)/2), then ||p_Q||inf<=2sqrt(6*pi*m)/gamma after conditioning only outside original coordinates.",
+    "continuity": "not proved on spectral-shield branch"
+  },
+  "volume_alternative": {
+    "status": "PROVED_SCOPED_COMPOSITION",
+    "statement": "For r>=7 and epsilon=s_{K+1}(BQ)>=g/2, s3(B)>=g/2. If max diag(P_range(B))<=1/2 on one actual cross-block side, q=1 fractional three-volume gives continuous C0 density ||p_Q||inf<=6e/g.",
+    "continuity": "proved on this volume branch"
+  },
+  "partner_result_applied": {
+    "worker": "account04/B12",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3948d77b0bde5af1bd37cd7c975d4f540eba901b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260923T081758Z-account04-B12-complementary-schur-shield-r4/REPORT.md",
+    "use": "exact complementary-Schur factorization and shear lower bound"
+  },
+  "newest_required_result_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+    "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+    "use": "q=1 fractional three-volume density bound on the actual original-coordinate cross block"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5d483a217c0a6133c2aec3780d9d0a24b4754984",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T094544Z-qform-eigenvalue-r30/REPORT.md",
+    "report_blob": "4adebbe9e832acaec28e3652ed3c69ea5a79b0a3",
+    "erratum_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T094544Z-qform-eigenvalue-r30/ERRATUM.md"
+  },
+  "finite_checks": {
+    "rank_budget_trials": 10000,
+    "rank_budget_violations": 0,
+    "cross_monotonicity_trials": 5000,
+    "cross_monotonicity_violations": 0,
+    "evidentiary_status": "consistency_only_not_proof"
+  },
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "unresolved_implication": "From s3(A)>=1 alone force a bounded physical reserve certificate, a diffuse actual cross block, or an already-paid grouped-bank/hub/ridge/pair/rank-two mechanism.",
+  "next_mechanism": "analyze the high-leverage spread-over-many-original-coordinates remainder, seeking a protected-reserve versus grouped-bank alternative",
+  "same_hour_login": {
+    "status": "existing_preserved_no_overwrite",
+    "path": "scheduled_tasks/status/account03/logins/2026-09-23T09Z/B12.json",
+    "existing_run_id": "20260923T091613Z-qform-eigenvalue-r29"
+  }
+}

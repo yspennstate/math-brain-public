@@ -1,0 +1,13 @@
+{
+  "helper_version": "A080-finite-Hod-interval-v2",
+  "actual_Boolean_family": "F_0=identity; F_(m+1)=K_80(F_m), with K_0(lambda)=lambda and K_(j+1)(lambda)=dual(lambda AND K_j(lambda)) on disjoint independent copies",
+  "parameter_domain": "m=0..48; j=0..80 at each level (explicit revision before final rerun)",
+  "case_count": "3840 finite conjunction/dual recurrences; one explicit final formula on 81^48 bits",
+  "justified_symmetry_reduction": "none; exact disjoint-gate scalar identities avoid truth-table enumeration",
+  "arithmetic": "rational intervals with dyadic outward rounding to 2^-80; binary entropy extrema; 28-term range-reduced atanh log intervals with intermediate series endpoints rounded outward at 2^-112; same proved remainder and rational sign checks. Precision refrozen after the 16-term final interval [6.4547836092,6.4547838235] was too wide for the target sign.",
+  "memory_estimate": "under 100 MB",
+  "maximum_runtime_seconds": 180,
+  "pilot_result": "Initial 60-term helper stopped itself at its frozen 60-second cap. A 28-term/160-bit attempt stopped at 180 seconds with only partial stages. Final lower-precision 16-term/64-bit, L=80 spec frozen before rerun; no accepted certificate from aborted attempts.",
+  "dimension_escalation": "none; single frozen symbolic formula",
+  "purpose": "Certify H/I > 6.4547837 for an actual finite monotone Boolean formula; constant lower bound only"
+}

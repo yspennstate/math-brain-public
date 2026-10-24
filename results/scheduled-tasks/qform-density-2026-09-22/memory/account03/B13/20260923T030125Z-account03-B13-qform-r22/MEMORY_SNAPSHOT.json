@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260923T030125Z-account03-B13-qform-r22",
+  "source_control_commit_at_final_refresh": "d6e93178f8b6489136ffa680203f1ea8b35a4625",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_telemetry": null,
+  "assignment": "Extremal product laws",
+  "mathematical_status": "PROVED_TARGET_RELEVANT_SUPPORTING_THEOREMS_FULL_QFORM_OPEN_FULL_CONTINUITY_OPEN",
+  "result_ids": [
+    "QFORM-CROSS-3VOLUME-SLAB-THREEQUARTER-v1",
+    "QFORM-L3-ONESIDED-HALF-RIESZ-SHARP-v1",
+    "QFORM-SCALAR-SCHUR-CROSS3-LINF-SHARPENED-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "aa2dca68a08b39fa15e783403a82bd54e711bfb5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T030125Z-account03-B13-qform-r22/FINAL_REPORT.md",
+    "blob": "388305188764c6479ce4bab0558a5509c0ad2d4d"
+  },
+  "partner_applied": {
+    "account_slot": "account04/B13",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e1a56859520ae79b7a1f049a9eedf41972ddf1e1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260922T231352Z-account04-B13-rough-geometric-transfer-r5/REPORT.md",
+    "application": "zero-loss transfer of the new extreme-product slab inequality to arbitrary cap-one product laws via the no-attainment product purification"
+  },
+  "other_completed_inputs": [
+    {
+      "commit": "77bd4ea475a11a505c6990630cbdfebdcce0fd8f",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T013555Z-account03-B13-qform-r21/REPORT.md",
+      "use": "cross-three-volume L3 theorem and entropic/six-hub aggregate envelope"
+    },
+    {
+      "commit": "6fb28b3e367d9cd8bf1dff3a4ca05b500d5d32c8",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T011959Z-account03-B06-qform-r24/REPORT.md",
+      "use": "dependence-safe one-sided square kernel and predecessor L3 half-Riesz transducer"
+    },
+    {
+      "commit": "6fb28b3e367d9cd8bf1dff3a4ca05b500d5d32c8",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260923T025607Z-account02-B13-extreme-cf3f0909/REPORT.md",
+      "use": "predecessor scalar-Schur/cross-three-volume qualitative certificate and anchored four-volume identity; current run sharpens its constant"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "main_results": {
+    "cross_three_volume_smallball": "P(Q in J)<14.486 e3(M^T M)^(-1/8)|J|^(3/4)",
+    "one_sided_half_riesz": "sup_t int_0^infinity p(t-u)u^(-1/2)du <=2 sqrt(pi/sqrt(3)) ||p||_3^(3/4)",
+    "scalar_schur_density": "||p_Q||inf<11.327 |A_ii|^(-1/2)e3(M^TM)^(-1/12)",
+    "anchored_four_volume": "||p_Q||inf<11.327 (|A_ii|^4 W_i(I,J))^(-1/12)"
+  },
+  "predecessor_reconciliation": "account02/B13 had already proved the qualitative scalar-Schur/cross-three-volume gluing with constant 20.870. This run does not claim priority for that mechanism; it sharpens the one-sided half-Riesz constant and the resulting density constant, and proves the separate three-quarter slab theorem.",
+  "continuity": "NOT_PROVED_IN_NEW_SCALAR_SCHUR_BRANCH",
+  "unresolved_implication": "In strict no-pivot survivors, prove that simultaneous collapse of |A_ii|^4 W_i(I,J) for all nonzero scalar pivots and residual cuts forces an already-paid diffuse/null-coloop/rank-two-tube/grouped-bank/determinant-pair/hub/Fresnel/finite-core branch.",
+  "next_step": "Attack the matrix-level anchored-four-volume collapse alternative without deleting small coefficients on arbitrary unbounded product supports.",
+  "quiet_delivery_preserved": true,
+  "scheduler_or_notification_mutation": false
+}

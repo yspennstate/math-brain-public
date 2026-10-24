@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260922T184648Z-account03-B09-QFORM-r15",
+  "control_commit_initial": "45b6105340ece03da68b05d5186d1d324b03a120",
+  "control_commit_refresh": "3b492b0cd6eba9c9474d3fdcfb7b20a98a82cd54",
+  "control_revision": "2026-09-22.11",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_NOT_PROVED_BY_THIS_RUN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "proved_claims": [
+    {
+      "id": "QFORM-SHIFTED-SQUARE-HALFRIESZ-LOG-v1",
+      "statement": "For a cap-one scalar density, E|a(X-m)^2+c|^{-1/2} <= |a|^{-1/2}[8+log_+(|a|/|c|)] for c!=0."
+    },
+    {
+      "id": "QFORM-HALFRIESZ-SECOND-PIVOT-v1",
+      "statement": "If s_2(S)>=1 and some original-coordinate diagonal |S_kk|>=1/2, then the translation-uniform half-Riesz potential of the quadratic-affine form is <25.095."
+    },
+    {
+      "id": "QFORM-HALFRIESZ-TWO-CROSS-v1",
+      "statement": "If an original-coordinate cross block has two singular values at least beta, then sup_w E|F-w|^{-1/2} <= 8 beta^{-1/2}."
+    }
+  ],
+  "target_level_application": {
+    "source_reduction": "QFORM-NESTED-CUT-THREE-RESOURCE-v1",
+    "outer_pivot_threshold": "157/320",
+    "second_pivot_density_constant": 35.826673350780275,
+    "two_cross_density_constant": 45.68515905588798,
+    "scope": "target matrices entering the B20 heavy physical-pivot branch and then the stated Schur subbranches"
+  },
+  "other_account_result_consumed": {
+    "worker": "account02/B09",
+    "id": "QFORM-RANK3-BILINEAR-SCHUR-BANK-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "caa2cef304844e9d6f841acaf2e003f0bc1c24b5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260922T183809Z-account02-B09-QFORM-r7/REPORT.md",
+    "application": "Used to remove the exact-rank-three whole-Schur-bank branch from duplicate work and redirect this run to the arbitrary-rank Schur residual; its aggregate inequality was recorded explicitly in the report."
+  },
+  "designated_partner": {
+    "worker": "account04/B09",
+    "completed_current_qform_artifact_observed": false,
+    "action": "continued asynchronously; no partner result fabricated"
+  },
+  "dependencies": [
+    {
+      "id": "QFORM-ARBITRARY-RANK-QUARTER-SMALLBALL-v1",
+      "commit": "742ac943440e41925fe09db9a8c02a96cbd83dbc",
+      "path": "proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md"
+    },
+    {
+      "id": "QFORM-SCHUR-SINGULAR-INHERITANCE-v1",
+      "commit_observed": "d511859edaa636cdc00fcd64155ab07506875c3d",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/B09-20260922T174813Z-r15/REPORT.md"
+    },
+    {
+      "id": "QFORM-NESTED-CUT-THREE-RESOURCE-v1",
+      "commit": "06ef7346c08f41c3fac240e1acdeb1b42dc2995d",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B20/20260922T165009Z-account03-B20-QFORM-r13/REPORT.md"
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2589a6230149bd8c3b4b2a0aad6f404bc7ab034a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260922T184648Z-account03-B09-QFORM-r15/REPORT.md",
+    "blob": "45bedfe3fd5214af3f9e52698298ce2b07c1b1f7"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "52c8e26b221aa898ac4cd029cb14bbe09e36dadc",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B09/20260922T184648Z-account03-B09-QFORM-r15.md"
+  },
+  "unresolved_implication": "QFORM-ONE-STRONG-CROSS-HALFRIESZ-v1: with all physical diagonals below 1/2 and one strong original-coordinate cross singular direction but insufficient second cross singular value, retain arbitrary same-bank curvature and prove a translation-uniform half-Riesz bound.",
+  "next_step": "Attack the one-strong-cross branch by a two-bank operator inequality without conditioning onto rotated singular coordinates; if closed, combine with the proved second-pivot/two-cross branches to finish QFORM-SCHUR-HALFRIESZ-TWO-LARGE-v1.",
+  "login_status": "CANONICAL_LOGIN_WRITE_BLOCKED_BY_PLATFORM_SAFETY_CHECKS; no bypass attempted",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

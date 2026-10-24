@@ -1,0 +1,271 @@
+\section{A supplied source bank pays a negative-cell floor}
+\label{sec:floor}
+This is A097's version-1 theorem, independently accepted at its full stated
+scope by A098 and reconstructed here by A099~\cite{A097e,A098e}. All costs are in bits. It
+does not supply hereditary references for an arbitrary physical tree.
+
+Let $a\ge1,b\ge0,n=a+b,r\ge1$, $s=2^{-a},t=2^{-n},p=2^{-r}$.
+Let $A_j$ indicate a fixed point of a $j$-cube, and put
+\[
+ g=1-2A_a,\qquad F=g+2A_rD_n=1-2A_a(1-A_rA_b).
+\]
+Here $D_n$ is any specified negative data point of $g$; cube translations
+reduce it to the displayed point without changing squared spectra.
+Write $\mu=1-2s$, $\rho=4pt$, $\lambda=2p2^{-b}=\rho/(2s)\le1$.
+The coefficients of $g$ are $\mu$ at the vacuum, $-2s$ on nonempty
+active subsets, and zero elsewhere. Direct expansion of the point edit
+therefore gives the data spectral marginal
+\[
+ q=(1-\lambda)P_g+\lambda\mu\delta_\emptyset+\rho U_n.
+\]
+These are nonnegative weights summing to one. Take any normalized source
+reference $R$ positive on the source support, with finite supplied cost
+$c=\operatorname{CE}(P_g,R)$. Calibrate its vacuum mass to $\mu^2$,
+preserving the conditional nonempty reference, obtaining $R_0$. The
+binary chain rule gives
+\[
+ c_0=\operatorname{CE}(P_g,R_0)
+ =c-D_{\rm Ber}(\mu^2\Vert R(\emptyset))\le c.
+\]
+Set $R'=(1-\lambda)R_0+\lambda\mu\delta_\emptyset+\rho U_n$,
+and lift by the actual conditional control kernel:
+$Q(U,T)=R'(T)P_F(U,T)/q(T)$. This is a complete normalized reference.
+The uniform floor makes every data normalizer positive. References with
+zeros off the original source support are allowed.
+
+\begin{theorem}\label{thm:floor}
+Let $C=2ptb$, $E=2pta$, $J=2rpt$. Then
+\[
+ I(F)=I(g)+C-E+J,\quad I(g)=2as,\quad
+ \operatorname{CE}(P_F,Q)\le c+10(C+E+J).
+\]
+For $K\ge10$, the supplied bank $S_K=KI(g)-c$ satisfies
+\[
+ KI(F)-\operatorname{CE}(P_F,Q)
+ \ge S_K+(K-10)C-(K+10)E+(K-10)J.
+\]
+In particular, $c\le C_0I(g)$ implies
+$\operatorname{CE}(P_F,Q)\le(2C_0+10)I(F)$. The structural choice
+$R=P_g$ gives $\operatorname{CE}(P_F,Q)\le18I(F)$.
+\end{theorem}
+\begin{proof}
+Physical edge counting gives each active influence $2s-2pt$, each dummy
+influence $2pt$, and each control influence $2pt$, proving the influence
+identity. Use the same three mixture labels for the true and reference
+data laws. Their posterior divergence is
+$\kappa=\sum_Tq(T)D(\pi_P(\cdot\mid T)\Vert\pi_R(\cdot\mid T))$.
+The chain rule and the common actual conditional kernel give exactly
+\[
+ D(P_F\Vert Q)=(1-\lambda)D(P_g\Vert R_0)-\kappa,
+\]
+\[
+ \operatorname{CE}(P_F,Q)=(1-\lambda)c_0+\rho n+
+ H(\text{labels})-H(\text{labels}\mid T)-\kappa+
+ H(S_{\rm controls}\mid S_{\rm data}).
+\]
+The labels are analytical mixture labels, not a fair physical history.
+
+For $a\ge2$ let $v=1-\mu^2$, $q_0=\mu^2+\rho(\mu+t)$,
+$M=1-q_0$, $A=(1-\lambda)v$, $B_0=\rho(1-t)$.
+Then $R'(\emptyset)=q_0$, $M=A+B_0\le v$.
+On nonempty data sets retain the source conditional reference and the
+uniform nonempty reference. The complete-reference mixture inequality,
+followed by dropping only $(A-v)$ times the nonnegative source conditional
+cross entropy, yields, with $\eta(x)=-x\log_2x$,
+\begin{align*}
+ \operatorname{CE}(q,R')-c_0
+ &\le\eta(q_0)-\eta(\mu^2)+\eta(M)-\eta(v)\\
+ &\quad+B_0\log_2(2^n-1)+(A+B_0)h_2(B_0/(A+B_0)).
+\end{align*}
+The mixture inequality follows directly by adjoining its label: joint
+cross entropy is the weighted component cost plus label entropy; its
+marginal cross entropy cannot be larger. Thus no source debt was erased.
+Since $\mu^2\ge1/4$, $\eta'\le1$ on the vacuum interval and
+$q_0-\mu^2\le\rho$. Since $\eta'\ge-1/\ln2$ everywhere,
+$\eta(M)-\eta(v)\le\rho/\ln2$. Their sum is at most $4\rho$.
+Also $v\le4s$, $B_0\ge3\rho/4$, and
+$M/B_0\le(4/3)2^{b+r}$. The inequality
+$h_2(x)\le x\log_2(e/x)$ gives the label bill at most
+$\rho(b+r+2)$; the subset bill is at most $\rho n$.
+Hence $\operatorname{CE}(q,R')\le c+\rho(n+b+r+6)$.
+Each nonempty control set has marginal mass $4p^2t$, so their total mass
+is $V=\rho(1-p)$. Consequently
+\[
+ H(S_{\rm controls})=h_2(V)+V\log_2(2^r-1)
+ \le\rho(n+2r).
+\]
+Indeed the preceding binary bound gives
+$\rho(1-p)(n+2r-2+1/\ln2)$, which is no larger than the displayed
+bound. Combining costs gives $c+\rho(2n+b+3r+6)$.
+Because $b\le n$ and $n+r\ge3$, this is at most
+$c+5\rho(n+r)=c+10(C+E+J)$.
+
+For $a=1$, $\mu=0$ and $\lambda=\rho$. The data marginal is simply
+$(1-\rho)P_g+\rho U_n$. The joint-label bound gives
+$\operatorname{CE}(q,R')\le c+\rho n+h_2(\rho)
+\le c+\rho(2n+r)$, since $\log_2(1/\rho)=n+r-2$ and
+$1/\ln2<2$. Adding the control bill gives
+$c+3\rho(n+r)=c+6(C+E+J)$, including $n=r=1$.
+
+Subtract the cost bound from the physical influence identity to obtain
+the signed bank inequality. Since $E/I(g)=p2^{-b}\le1/2$, setting
+$K=2C_0+10$ leaves
+$S_K-(K+10)E\ge[K-C_0-(K+10)/2]I(g)=0$;
+the created-edge and control terms are nonnegative. The source bank is
+spent once for both the changed reference and the erased edges.
+For $R=P_g$, at $a\ge2$ the source entropy is
+$\eta(\mu^2)+4s(1-s)(2a-2)<8as=4I(g)$, using
+$\eta(\mu^2)\le4s(1-s)/\ln2$; at $a=1$ it is zero.
+This proves the structural constant $18$.
+\end{proof}
+
+For any independent Boolean terminal $h$ with supplied normalized finite
+reference $R_h$, use its product with $Q$. Then exactly
+\[
+ \operatorname{CE}_{\rm total}=c_h+\operatorname{CE}(P_F,Q),\quad
+ D_{\rm total}=D_h+(1-\lambda)D(P_g\Vert R_0)-\kappa,
+ \quad I_{\rm total}=I(h)+I(F).
+\]
+Thus $c_h\le C_hI(h)$ gives constant $\max(C_h,2C_0+10)$;
+the terminal is retained, rather than funding the floor. This algebraic
+product clause is included in both full scoped reconstructions.
+
+\paragraph{First unsupported hereditary line.}
+After an actual active-bit query, construct the descendant reference
+from the incoming $Q$, with its normalizer and reset paid by the same
+remaining bank. The Boolean child's membership in the point-edit family
+does not establish this reference statement. Positive-cell edits and
+arbitrary cores are not admitted by the nonnegative mixture above.
+
+\section{A root remainder allowance is not unused child surplus}
+\label{sec:childbank}
+The following complete derivation is A096 version 1 at author scope~\cite{A096e};
+its two new claims have not acquired independent full scoped acceptance.
+Let $b$ be any $d$-bit Boolean core, $d\ge1$, $b(0)=1$, and let $g$ be
+any $r$-bit Boolean gate. Put $\delta=2^{-d}$, $c=b-2\mathbf1_0$ and
+$F=b+\mathbf1_0(g-1)$. Write $\beta_T=\widehat b(T)$ and
+$a_V=\widehat g(V)$. Then
+\[
+ \widehat F(T,V)=\beta_T\mathbf1_{V=\emptyset}
+       +\delta(a_V-\mathbf1_{V=\emptyset}),\qquad
+ e_i=\delta\operatorname{Inf}_i(g),
+\]
+and $I_X=\delta I(g)$,
+$I_Y=((1+a_0)I(b)+(1-a_0)I(c))/2$, by conditioning the physical gate.
+For a gate query $i$, retaining $(V,\beta_T)$ retains the complete KL:
+its likelihood ratio is constant on each cell. This alphabet need not
+have bounded size. Retaining only $V$ loses KL only in the vacuum gate
+cell. Put
+\[
+ \rho_i=1-\delta+\delta(a_0^2+a_i^2),\qquad
+ q_i(T)=\frac{(\beta_T+\delta(a_0-1))^2+\delta^2a_i^2}{\rho_i}.
+\]
+Parseval and $\sum_T\beta_T=b(0)=1$ prove normalization. If $a_i\ne0$
+then $q_i$ is positive, and the exact weighted loss is
+$L_i=\delta a_i^2D(U_d\Vert q_i)$; for $a_i=0$ it is zero.
+All other gate cells have constant core weights and zero conditional
+loss. Since $\rho_i\le1$ and $q_i\ge\delta^2a_i^2$,
+\[
+ \sum_iL_i\le\delta d W_1+\delta\Lambda_1,\quad
+ W_1=\sum_i a_i^2,\quad
+ \Lambda_1=\sum_i a_i^2\log_2(1/a_i^2).
+\]
+The derivative identity gives $|a_i|\le\operatorname{Inf}_i(g)$;
+$u\ln(1/u)\le1/e$ therefore gives
+$\Lambda_1\le[2/(e\ln2)]I(g)<(9/8)I(g)$.
+Every nonconstant $d$-cube Boolean function has at least $d$ boundary
+edges, hence influence at least $2d\delta$. To see the boundary bound,
+split a nonempty proper subset into two halves. If both are nontrivial,
+induction gives $2(d-1)\ge d$ for $d\ge2$. If one is trivial and the
+other nontrivial, its internal boundary gives $d-1$ and at least one
+cross edge gives the last edge. Opposite trivial halves have $2^{d-1}
+\ge d$ cross edges; dimension one starts the induction.
+If $b,c$ are nonconstant, $I_Y\ge2d\delta$ and $W_1\le1$, so
+$\delta dW_1\le I_Y/2$. If $b\equiv1$ or $c\equiv-1$, then
+$I_Y=d\delta(1\mp a_0)$ and $W_1\le1-a_0^2$ gives
+$\delta dW_1\le2I_Y$. Consequently
+\[
+ \sum_iL_i\le2I_Y+\frac{2}{e\ln2}I_X,
+\]
+with $2I_Y$ replaced by $I_Y/2$ when both cores are nonconstant.
+This spends fresh root influence only on the quotient remainder.
+
+\paragraph{Sharp loss-only child-bank threshold.}
+For $d\ge2$ take $b=-1+2\mathbf1_0$, $c=-1$, $g(x)=x$.
+The output is a $(d+1)$-bit point sign, $e=\delta$, $I_Y=d\delta$,
+$I_F=(d+1)\delta$, and all functions satisfy $H\le4I$.
+The exact vacuum-cell loss is $L=\delta D_0$, where
+\[
+ D_0=(1-\delta)(d-1)+\delta\log_2(\delta/z),\quad
+ z=(1-\delta)^2+\delta^2,\quad d-2\le D_0\le d.
+\]
+The lower bound follows from $z\le1$ and $(2d-1)2^{-d}\le1$;
+the upper follows from $\delta/z\le1$. The actual averaged child bank
+at a certified constant $C\ge4$ is
+\[
+ S_C=\tfrac12(CI(b)-H(b)),\quad
+ H(b)=\eta((1-2\delta)^2)+(4\delta-4\delta^2)(2d-2).
+\]
+Thus $0\le S_4\le4\delta+4(d-1)\delta^2\le5\delta$ and
+$S_C=S_4+(C-4)d\delta$. It follows that
+\[
+ (L-S_C)/e\ge(5-C)d-7.
+\]
+Every $4\le C<5$ therefore fails $L\le S_C+Ke$ for any fixed $K$,
+although the actual Boolean family satisfies FEI with constant four.
+At $C=5$, $S_5\ge d\delta\ge L$: five is sharp for this loss-only
+bank. The full source entropy bound follows, for every point-sign
+dimension $m\ge2$, from
+$\eta((1-2^{1-m})^2)\le4\epsilon(1-\epsilon)/\ln2$
+and the other mass $4\epsilon(1-\epsilon)(2m-2)$,
+$\epsilon=2^{-m}$; dimension one is a character.
+
+To make both query children nonconstant, tensor an independent point
+sign on $2d$ bits. It has influence $4d\delta^2$ and entropy at most
+four times that influence. Its common spectral factor cancels in both
+KL laws, so $L/e$ is unchanged, while the actual bank gains exactly
+$CI(h)-H(h)$. Hence the deficit is at least
+$(5-C)d-7-4Cd\delta$, still unbounded for $C<5$. At $C=5$ it
+still pays the loss. This is a tensor attachment, not a single edit on
+the combined cube. Neither variant disproves FEI or the possibility of
+a more generous certified terminal bank.
+
+\section{Jensen sharpens the positive-erasure remainder}
+\label{sec:jensen}
+A100 independently accepted the original A073 family statement~\cite{A100e}; this
+does not change its version or its original digest convention. Together
+with A098 this supplies two full scoped acceptances of that statement.
+For A100's separate refinement, put $w_\sigma=(1+\sigma\sqrt\delta)/2$
+in the exact $D_0$ formula of Section~\ref{sec:binary}. Concavity gives
+\[
+ D_0\le\log_2R(\delta),\qquad
+ R(\delta)=\frac{1+\delta-3\delta^2/4}{1+\delta^2/4}.
+\]
+Indeed summing $w_\sigma/(1-\sigma\sqrt\delta+\delta/2)$ and
+multiplying by $1-\delta/2$ gives this rational function exactly.
+For $0<\delta\le1/4$, the derivative numerator
+$1-2\delta-\delta^2/4\ge31/64$ is positive, so
+$R\le R(1/4)=77/65$. The integer certificate $77^4<2\cdot65^4$
+implies $L_i/e=D_0/2<1/8$. Also
+$(1+\delta)(1+\delta^2/4)-(1+\delta-3\delta^2/4)
+=\delta^2+\delta^3/4>0$. Therefore
+\[
+ L_u+L_v=\delta D_0/2<\frac{\delta^2}{2\ln2},\qquad
+ L_u+L_v<\delta/8\le\operatorname{Inf}_{y_1}(F)/20.
+\]
+An actually common independent spectator cancels from the full and
+conditional KL ratios, so the improvement also holds for that tensor
+extension with its entire terminal cost retained. The retained row cost
+still exceeds $(d/2+3/4)e$. A099 independently reconstructs this separate
+refinement at its full stated scope; its second independent review is
+pending. The twentieth of core influence is a dedicated remainder
+allowance, not a free entropy bank.
+
+\paragraph{Review scope.}
+The negative-cell floor has two independent full scoped reconstructions,
+A098 and A099, with no statement repair. The Jensen improvement has one,
+A099. The two new non-flat/child-bank claims above remain at author scope.
+Neither an integrated manuscript audit nor a hereditary reference theorem
+is inferred from any of these scoped reviews. The four named universal
+open leaves in the dependency ledger remain conjectures.
+

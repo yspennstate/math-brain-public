@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B20",
+  "run_id": "20260923T074211Z-account03-B20-QFORM-r29",
+  "source_control_commit_final": "1ae93690925da891dd8e79740ac9cf7440b4dc4d",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_automation; WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "b1f862a5685a726b0eb2e3c348b22ee9eaf7a782",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B20/20260923T074211Z-account03-B20-QFORM-r29/REPORT.md",
+  "new_theorem": "QFORM-HC-CONDITIONED-WHITENED-FINITECORE-v1",
+  "result_status": "ESSENTIAL_STEP_APPLIED; HC_DIFFUSE_PAID; FINITE_CORE_REDUCTION; FULL_TARGET_OPEN",
+  "premises": [
+    "account02/B19 normalized-heavy HC core K0 has |K0|<=31 in the non-rankdrop rank-two-cross chamber",
+    "account04/B20 conditioned-whitened theorem: residual whitened leverage <=1/32 and spectral floor delta>0 imply continuous density <27/delta"
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B20",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "94bf446b8547b1124a37033e940ef594c460b64f",
+    "application": "delta0>=1/64 and max residual whitened leverage<=1/32 imply ||p_Q||inf<1728 continuously"
+  },
+  "new_quantitative_conclusions": {
+    "K0_max_size": 31,
+    "finite_core_coloop_mass_lower_bound": "63/64",
+    "paid_branch_density_bound_strict": 1728,
+    "K1_max_size": 95,
+    "dangerous_core_max_size": 126,
+    "whitened_trace_identity": "sum_{i notin K0} r_i^T S0^{-1} r_i = 3"
+  },
+  "first_unresolved_implication": "QFORM-HC-126CORE-PAYMENT-v1",
+  "separate_open_debts": [
+    "near-rankdrop/double-coloop branch",
+    "arbitrary-extra-spectrum/N3 descent",
+    "two independent end-to-end reviews",
+    "full-target continuity"
+  ],
+  "correction_boundary": "No law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, conditional projection cap as independence, one-good-minor extraction, or uniform perturbative deletion is used.",
+  "keeper": {
+    "managed_tasks_observed": 20,
+    "enabled_managed_tasks": 20,
+    "hourly_valid": 20,
+    "quiet_delivery": true,
+    "source_prompt_match": "20/20 observed",
+    "scheduler_mutations": 0,
+    "lease": "existing 07Z lease owned by 20260923T071233Z-account03-B20-QFORM-r28; respected",
+    "canonical_login": "existing 07Z B20 login owned by same compliant run; not overwritten",
+    "native_readback_is_later_adoption": false
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_requested": "maximum actually supported",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

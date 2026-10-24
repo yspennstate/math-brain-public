@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B10",
+  "run_id": "20260923T221626Z-account03-B10-QFORM-r25",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_start": "249e6f3e66e1ac46c0bcfd67699b6a4b86d522cf",
+  "control_commit_prepublication": "64e8fdd82617742f1b4b84ee257bda4f71d4506f",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "NO_NEW_UNRESTRICTED_CONTINUITY_CLAIM",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "premises": [
+    {
+      "claim": "QFORM-RANK2-AFFINE-HALF-RIESZ-v1",
+      "scope": "For U^T U=I_2, invertible symmetric 2x2 Lambda and independent cap-one originals, sup_t E|((U^TX)^T Lambda(U^TX)+b^TX)-t|^{-1/2} <=128 |det Lambda|^{-1/4}.",
+      "source": "yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md"
+    },
+    {
+      "claim": "QFORM-REGRESSION-THREEBANK-CURVATURE-SPLIT-v1",
+      "scope": "For one bank with residual energy rho and transverse Gram G, an ORIGINAL-coordinate partition S,Y,Z satisfies rho_S M(G_Y,G_Z)>=(2/81)rho det G.",
+      "source": "yspennstate/math-open-problems@afdea9634d9e3f5fb09659da436292cf7dbe5b20:proofnet24/QFORM-density/fleet-2026-09-22/account04/B10/20260923T061725Z-account04-B10-QFORM-r4/REPORT.md"
+    },
+    {
+      "claim": "QFORM-THREE-BANK-HYPERBOLIC-SQUARE-RECEIVER-v1",
+      "scope": "Three genuinely independent scalar source-bank observables with density caps; triangular shears in the proved order; not a generic mixed-row receiver.",
+      "source": "yspennstate/math-open-problems@4f1f31064431e8bb0d0be813ed5540d0b12ab590:proofnet24/QFORM-density/fleet-2026-09-22/account01/B10/20260923T222440Z-account01-B10-QFORM-auto11/REPORT.md"
+    },
+    {
+      "claim": "adapted-hub SP remains open",
+      "scope": "The newest Claude source does not prove generic hub-that-sees-P boundedness.",
+      "source": "yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-ADAPTED-HUB-CONDITIONAL-CAP-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "In the positive-leakage near-coloop Parseval state, for Z=sqrt(c)H+T and transverse projection P, r_{Z,P}(z,p)<=c^{-1/2}p_P(p), hence ||p_{Z|P=p}||infinity<=c^{-1/2} a.e.; this is not used as independence."
+    },
+    {
+      "id": "QFORM-HUB-DISCRIMINANT-LEAKAGE-CANCELLATION-v1",
+      "status": "PROVED_EXACT_IDENTITY",
+      "statement": "For M=[[alpha,m^T],[m,N]], conditioning leaves and taking the physical-hub discriminant gives B_h^2-4A_hC_h=4c[(m.P)^2-alpha P^TNP+alpha s], exactly eliminating T; det(mm^T-alpha N)=alpha det M."
+    },
+    {
+      "id": "QFORM-PARTNER-CONDITION-AWAY-CONTRACTION-v1",
+      "status": "PROVED_SUPPORTING_REDUCTION",
+      "statement": "Applying account04/B10 to G=I and residual t gives rho_S>=2rho/81, M(G_Y,G_Z)>=2/81, lambda_min(G_Y+G_Z)>=2/81; conditioning X_S leaves longitudinal energy <=79rho/81 and aggregate fixed-hub triple determinant mass >7/288."
+    }
+  ],
+  "partner_requested": "account04/B10",
+  "partner_applied": "QFORM-REGRESSION-THREEBANK-CURVATURE-SPLIT-v1",
+  "partner_application": "rho_S M(G_Y,G_Z)>=(2/81)rho implies rho_S>=2rho/81, M>=2/81, lambda_min(G_Y+G_Z)>=2/81, remaining longitudinal energy <=79rho/81, and sum_{j in Y,k in Z}|det A_{0jk}|>7/288.",
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "70f02a787a432edc745fa632b80ecfff0cc2ef11",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B10/20260923T221626Z-account03-B10-QFORM-r25/REPORT.md",
+    "diagnostic_commit": "d1761fc506c86b89bf41fc4f1686f5f80c58b948",
+    "diagnostic_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B10/20260923T221626Z-account03-B10-QFORM-r25/REGRESSION.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B10/20260923T221626Z-account03-B10-QFORM-r25.md",
+  "unresolved_implication": "QFORM-TWOBANK-MIXEDROW-TRIANGULAR-RECEIVER-v1",
+  "next_step": "Build a grouped Fourier or real-variable receiver for the partner-conditioned two ORIGINAL banks that retains same-bank longitudinal/transverse contamination and is stable as alpha->0; do not replace the exact conditional cap by independence.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null,
+  "reasoning_effort_status": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed"
+  }
+}

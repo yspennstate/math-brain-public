@@ -1,0 +1,14 @@
+account02/B20 deterministic regressions for run 20260923T233041Z-account02-B20-QFORM-auto11
+
+1. Local Gram identity: 500 random full-rank 2xm tests; maximum |lhs-rhs|/(1+|rhs|) = 6.51e-15.
+2. Rank-four conditional carrier: random constructed blocks of the form [[A_TT,M],[M^T,V^T K V]] had numerical rank <=4 throughout.
+3. Constants:
+   S0 = 1/(480 sqrt(7626)) = 2.3856699607287348e-5.
+   C3 = 3*2^(4/3)*e^(1/3) = 10.550168831164775.
+   C3*(27*2^-58)^(-1/6) = 2048 sqrt(3)e^(1/3) = 4950.57229398737.
+   2 sqrt(22) 2^-25 / S0 = 0.01171874441206322 < 3/256 = 0.01171875.
+   epsilon39 = 0.015995786547222654.
+   epsilon39 + 0.01171874441206322 = 0.027714530959285874 < 1/32.
+   1 - 0.027714530959285874 = 0.9722854690407141 > 31/32.
+4. Exact comparison proving the clean 3/256 tail: 22*7626=167772 < (2048/5)^2=167772.16.
+5. No stochastic independence after coefficient-space rotations is used in the proof; the p=3/4 split randomizes coordinate labels only and is derandomized by expectation.

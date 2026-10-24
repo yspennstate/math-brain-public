@@ -1,0 +1,43 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w335",
+  "bundle_slug": "w335-p0205-20261010",
+  "entries": [
+    {
+      "key": "p0205-complete-cayley-spectrum",
+      "namespace": "probability.markov",
+      "logical_name": "complete-cayley-geometric-target-metropolis-spectrum",
+      "kind": "lemma",
+      "title": "Exact complete-Cayley geometric-target Metropolis relaxation [draft; pending w347]",
+      "statement": "Let G have order n>=2 and identity e. For 0<alpha<=1 let P(x,x)=1-alpha and P(x,y)=alpha/(n-1) for y!=x. Start P at e and stop at independent T with P(T=k)=p(1-p)^k, k>=0, 0<p<1. Put b=1-alpha*n/(n-1) and a=p/(1-(1-p)*b). The Metropolis kernel M with proposal P and target Law(X_T) has spectral-gap relaxation time tau(M)=tau(P)*(1+(n-1)*a), where tau(P)=(n-1)/(alpha*n). It is strictly increasing in p. With alpha=p=1/2 both kernels are lazy and tau(M)/[n*tau(P)] tends to 2/3 as n tends to infinity. This family has proposal degree n-1 and does not settle a fixed-degree variant or a differently parametrised monotonicity question.",
+      "proof_text": "P acts as the scalar b on the space orthogonal to constants. Summing p*sum_k (1-p)^k P^k gives the displayed target. Every proposal from a nonidentity state is accepted. From e to any other state, its probability is alpha/(n-1) times r=(1-a)/(1+(n-1)*a). Thus the two-state radial lump has rates alpha*r and alpha/(n-1), and nonconstant eigenvalue 1-alpha*r-alpha/(n-1). The n-2 contrasts between nonidentity states have eigenvalue b. Since 0<a<1 and r<1, the radial eigenvalue is at least b and is lambda_2. Its gap is alpha*(r+1/(n-1))=alpha*n/((n-1)*(1+(n-1)*a)). Inversion proves the formula, including n=2 where the contrast subspace is empty. Differentiating a=p/(1-b+b*p) gives a prime=(1-b)/(1-b+b*p)^2>0. For alpha=p=1/2, a=(n-1)/(3*n/2-1), so (1+(n-1)*a)/n tends to 2/3.",
+      "assumptions": [
+        "Finite group order n>=2",
+        "Uniform nonidentity proposal with holding 1-alpha",
+        "Geo0 convention and inverse ordinary spectral gap"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w335:p0205-complete-cayley-spectrum",
+        "url": "file:///~/brain_workers/w335/P0205_proof.md",
+        "revision": "author-checked-20261010-pending-independent-w347",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0205-complete-cayley-spectrum",
+      "to_existing_logical": "math:probability.core:open-problem-p0205-metropolis-relaxation-for-geometric-time-cayley-targets",
+      "kind": "specializes",
+      "rationale": "New card: \"This family has proposal degree n-1\"; existing card: \"Control the relaxation time of Metropolis random walk targeting the distribution of a Cayley walk at an independent geometric time; in particular, test monotonic decrease in the geometric parameter\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    },
+    {
+      "from_key": "p0205-complete-cayley-spectrum",
+      "to_existing_logical": "math:probability.core:attempt-p0205-metropolis-relaxation-for-geometric-time-cayley-targets",
+      "kind": "generalizes",
+      "rationale": "New card: \"tau(M)=tau(P)*(1+(n-1)*a)\"; existing card: \"Monotone decrease is false already on the two-element Cayley group\"."
+    }
+  ]
+}

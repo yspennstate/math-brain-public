@@ -1,0 +1,83 @@
+run_id: NM13-08-T07-2026-09-20T12-40-24Z
+owner_slot: NM08
+source_target: T07_uniform_all_forests_pairwise_negative_edge_correlation
+repository: yspennstate/math-open-problems
+branch: master
+status:
+  parent: OPEN
+  restricted_theorem: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+  novelty_priority: UNVERIFIED
+parent_scope:
+  before_complete_all_graph_order: 9
+  after_complete_all_graph_order: 9
+  before_counterexample_order_lower_bound: 10
+  after_counterexample_order_lower_bound: 10
+mechanism_gain:
+  before: finite independent-terminal response-strip atom library P1..P11,C3..C8 with 52-state cycle-tail recurrence
+  after: 15-state star-leaf nilpotent tail plus infinite star-size symbolic strip admission
+new_claims:
+  - id: T07-STAR-TAIL-NILPOTENT-23
+    statement: for the 15-state star-leaf extension operator L, J=L-5I satisfies J^4=0 with ranks 8,2,1,0; hence all marked/unmarked star transfers are bounded-degree polynomials in star size after 5^m normalization
+    proof_status: COMPUTER_ASSISTED_EXACT
+  - id: T07-SYMBOLIC-STAR-STRIP-ADMISSION-23
+    statement: finite symbolic marked-response schemes over a common response strip transfer to arbitrary finite multisets from an infinite atom family
+    proof_status: PROVED
+  - id: T07-INDEPENDENT-STAR-FOREST-PNC-23
+    statement: pairwise forest negative correlation for G=bar(K3) join H for every finite star forest H=disjoint_union_j K_{1,m_j}; strict except G=K3,1
+    proof_status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+unmarked_star_transfer:
+  A_over_5m: (3*m+20)/5
+  B_over_5m: (4*m^2+31*m+25)/25
+  C_over_5m: m*(16*m^2+127*m+107)/750
+  rho: (43*m^3+622*m^2+2510*m+1875)/(30*(3*m+20)*(4*m^2+31*m+25))
+  response_strip_low: 43/360
+  response_strip_high: 1/8
+symbolic_certificate:
+  same_component_pair_schemes: 10
+  cross_component_pair_schemes: 13
+  regular_bernstein_schemes: 22
+  discriminant_schemes: 1
+  exceptional_scheme: two leaf spokes on distinct leaves to different terminals in one star
+  exceptional_K: 108*(573*m^2+7832*m+30144)/9765625
+  failures: 0
+  terminal_marker: ALL_EXACT_CHECKS_PASS
+application:
+  general_class: bar(K3) join arbitrary finite star forest
+  vertices: 3 + sum_j (m_j+1)
+  edges: sum_j (4*m_j+3)
+  clean_subfamily: G_m=bar(K3) join K_{1,m}
+  first_beyond_complete_order_baseline:
+    m: 6
+    vertices: 10
+    edges: 27
+    forests: 2090000
+    min_rayleigh_numerator: 4923437500
+p14_scope:
+  dense_nine_classes_19_36_edges: 120314
+  all_unlabeled_simple_nine_vertex_graphs: 274668
+  dense_pair_checks: 25304635
+  minimal_counterexample_reduction: 3-connected via block factorization plus two-separator transfer/fixed-graph weighted implication
+literature_scope:
+  grimmett_winkler: all graphs <=8 vertices and 9-vertex graphs <=18 edges under uniform all-forests law; spanning-tree theorem separate
+  erickson: all-positive-weight I-Rayleigh SOS for series-parallel graphs
+  huang: restricted arboreal-gas results; general negative-correlation question open
+  bado: strict uniform-all-forests p-NC for wheels
+  tang_zhang_2603_10738: specified complete-graph ensembles including fixed-component forests; not arbitrary-graph all-forest law
+artifacts:
+  report: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T12-40-24Z__independent-star-forest-report.md
+  checker: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T12-40-24Z__independent-star-forest-checker.py
+  output: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T12-40-24Z__independent-star-forest-checker.out
+  ledger_delta: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T12-40-24Z__ledger_delta.yaml
+next_attack: depth-two subdivided-star right components; seek a two-operator nilpotent/triangular branching algebra rather than another finite component-size cutoff
+constraints_respected:
+  posted_registry_read: true
+  historical_or_peer_overwrite: false
+  email: false
+  drive: false
+  public_posting: false
+  paid_compute: false
+  access_change: false
+  schedule_change: false
+runtime:
+  model: GPT-5.6 Sol
+  reasoning_effort: UNVERIFIED

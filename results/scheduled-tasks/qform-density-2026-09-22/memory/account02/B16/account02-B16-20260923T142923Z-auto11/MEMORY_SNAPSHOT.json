@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B16",
+  "run_id": "account02-B16-20260923T142923Z-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_initial": "54a02a82ba1de885cf0ddf5ff8911ba5a2e3b73c",
+  "control_commit_start_refresh": "72282f3b10b69729afbc37d74cd5837a64d44792",
+  "control_commit_prepublication": "e225770fc8e65e3848beee0a5b3b5886f698574a",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "PROVED_ON_PROJECTED_2HUB_RANK2_DIAGONAL_SIDE_BRANCH; NOT_CLAIMED_ON_NULL_SIDE_SHARPENING; FULL_TARGET_OPEN",
+  "new_results": [
+    "QFORM-PROJECTED-2HUB-RANK2-DIAGONAL-SIDE-v1",
+    "QFORM-NULL-SIDE-CROSS2-PROJECTION-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b84dffeb117523831ee7871e8ebee3630c14f372",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/account02-B16-20260923T142923Z-auto11/REPORT.md"
+  },
+  "required_pinned_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "directory": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "results_applied": [
+      "two-dimensional orthonormal product projection has joint density cap 2",
+      "twisted characteristic-function Lp bound integral |g_hat|^p <= 4 pi/sqrt(p)",
+      "Theorem D/D5 volume route tested and shown certificate-zero on the rank-two stress family"
+    ]
+  },
+  "partner_applied": {
+    "account": "account03",
+    "slot": "B16",
+    "run": "20260923T132339Z-account03-B16-QFORM-r29",
+    "result": "QFORM-TRUE-NEARCOLOOP-PAIR-OR-SUPERDIFFUSE-STAR-v1",
+    "repository": "yspennstate/math-open-problems",
+    "observed_commit": "f98635ec90f47da9c38e40516896462bb423f3c6",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T132339Z-account03-B16-QFORM-r29/REPORT.md",
+    "actual_use": "The new rank-two diagonal-side theorem pays any r29 bank cut with diagonal same-side curvature, quantitative s1*s2, and diffuse right singular two-plane; the rank inequality rank([[P,M],[M^T,0]])>=2 rank(M) proves a null-side rank-two cut cannot exist in exact rank three."
+  },
+  "premises_and_scopes": [
+    "Original input coordinates are independent with density caps at most one.",
+    "A two-dimensional orthonormal projection may be dependent internally; only its joint density cap is used.",
+    "Theorem A requires an exact rank-two cross block and diagonal same-side block in original coordinates, plus right-singular two-plane row leverage <=1/2.",
+    "Theorem B requires a null original-coordinate side and at least two cross singular values; no projected independence is used.",
+    "The stress family has nonzero spectrum exactly {1,1,-1,-1}, so it is target-valid and not merely an auxiliary rank-two example."
+  ],
+  "stress_family": {
+    "matrix": "A_m=[[0,C D^T],[D C^T,0]], C^TC=D^TD=I_2 with balanced sign rows",
+    "spectrum": [1, 1, -1, -1],
+    "aggregate_bound": "2 sqrt(pi)",
+    "physical_pair_certificate": "10.63659179... m^(3/4)",
+    "pinned_volume_certificate": "e_3=e_5=0 because cross rank is two",
+    "interpretation": "aggregation-before-reciprocal-payment obstruction; not a QFORM counterexample"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "first_unpaid_implication": "QFORM-SUPERDIFFUSE-BANK-DIAGONALIZE-OR-PAY-CURVATURE-v1",
+  "next_step": "From the account03/B16 r29 eighty-bank survivor, either extract an original-coordinate bank union with diagonal same-side curvature, exact rank-two cross interaction, quantitative s1*s2 and diffuse right singular plane, or convert the non-diagonal same-side curvature preventing such a cut into a source-preserving Fresnel resource before absolute values or conditioning destroy product provenance.",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B16/account02-B16-20260923T142923Z-auto11.md",
+  "execution": {
+    "authenticated_brain_repository_retrieval": true,
+    "receiver_write_used": true,
+    "without_verified_brain_fallback": false,
+    "native_learned_memory_connected": "UNKNOWN_NOT_ASSERTED",
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_configured": "UNKNOWN",
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "quiet_delivery_preserved": true,
+    "scheduler_mutated": false,
+    "notifications_mutated": false,
+    "email_mutated": false,
+    "new_tasks_created": false,
+    "paid_calls": false,
+    "public_release": false,
+    "permission_changes": false
+  }
+}

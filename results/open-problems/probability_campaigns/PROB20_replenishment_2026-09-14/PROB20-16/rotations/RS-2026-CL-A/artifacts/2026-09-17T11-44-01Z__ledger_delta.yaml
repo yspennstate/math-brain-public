@@ -1,0 +1,60 @@
+ledger_delta:
+  native_task_id: 6aa7b4b639a08191b893e2b7dd6cdf59
+  target_id: RS-2026-CL-A
+  report_kind: research
+  input_snapshot_sha: ad9a49420f9b18908d9f3f8d45bee76626c18391
+  final_ownership_recheck_sha: 6cfdce2830b17821705b1fad2b7c053a7836c775
+  canonical_claim_path: operations/claims/RS-2026-CL-A.md
+  canonical_claim_commit: e5d20fd33a98159a94a33692ccae8a2915f1fc00
+  canonical_claim_blob: 72d30cb23d145faea9a2654951c7aac41bf21c5d
+  exact_source: "Anastasia Kireeva, Randomstrasse 101, 2026-06-05, first displayed Open Problem 35"
+  source_url: https://randomstrasse101.math.ethz.ch/posts/clique-low-degree/
+  previous_own_report: NONE_FIRST_CANONICAL_OWNER_RUN
+  neighboring_prior_work:
+    path: probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-13/rotations/I0099/runs/2026-09-17/2026-09-17T09-53-07Z__handoff-rotation.md
+    role: pre-claim screening only; recovered to avoid duplicate affine-code route
+  report_path: probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T11-44-01Z__report.md
+  report_creation_commit: 77506ff5d3f98e12ece046a22c7365dcc8527213
+  report_readback_blob: b347e9d2a487d73e225bc22abb93f4bce0481d14
+  report_readback_verified_at_creation_commit: true
+  metric_name: E_framework
+  metric_before: 0
+  metric_after: 0
+  unchanged_count: 1
+  methods:
+    - B2_ATTACK_THE_NEGATION
+    - B27_SWAP_THE_QUANTIFIERS
+    - B21_ASK_WHO_ELSE_HAS_THIS_SHAPE
+  method_outcomes:
+    B2: "Mao stress test proves product uniform null + vertex relabeling symmetry + exact polylog-wise marginal matching + fixed independent noise are insufficient."
+    B27: "Complete fixed-noise/all-fixed-noise quantifier theorem via degree-contractive noise and a pre-noise Renyi-2 growth budget."
+    B21: "Identified high-degree likelihood-ratio tail control as the common module behind Hsieh symmetry and Chen-Li separator decompositions."
+  new_mathematics:
+    - theorem_6_1_degree_contractive_noise_chi_square_bound
+    - corollary_sublinear_Renyi2_budget_precludes_strong_noisy_distinction
+    - quantitative_Mao_entropy_rate_obstruction
+  theorem_core: "chi2(T_rho P || Q) <= Adv_le_D(P,Q)^2 + rho^(2(D+1))*chi2(P||Q)"
+  source_current_check_date: 2026-09-17
+  source_status: OPEN_IN_BOUNDED_CHECK
+  later_literature_checked:
+    - "Buhai-Hsieh-Jain-Kothari 2025, arXiv:2505.17360"
+    - "Hsieh-Kane-Kothari-Li-Mohanty-Tiegel 2026, arXiv:2601.05850 / STOC 2026"
+    - "Songtao Mao 2026, arXiv:2607.20318, submitted 2026-07-22"
+    - "Xuan Chen-Shuangping Li 2026, arXiv:2608.06279, submitted 2026-08-06"
+    - "He Jia-Aravindan Vijayaraghavan 2026, arXiv:2603.02594 / COLT 2026"
+  mathematical_status: PARTIAL
+  frozen_metric_reason_no_move: "The Renyi-2 budget is explicit and non-tautological but globally strong and not yet a source-level natural/general characterization across intended graph/hypergraph models."
+  finite_checker: NOT_APPLICABLE_THEOREM_SIZED_WRITTEN_PROOF
+  self_check_label: "Written derivation only; no finite checker manufactured."
+  audit_refs: []
+  artifact_refs:
+    - probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-17T11-44-01Z__ledger_delta.yaml
+  next_methods:
+    - B11_DUALIZE
+    - B20_FIND_WHY_THE_ALGORITHM_FAILS
+    - B4_PROVE_SOMETHING_WEAKER_COMPLETELY
+  next_obligation: "Derive a structural high-degree bootstrap condition materially broader than the global Renyi-2 budget, preferably a graph Fourier-support separator/decomposability condition, and stress-test it against Mao/Buhai."
+  model_reported: GPT-5.6 Sol
+  reasoning_reported: UNVERIFIED
+  scheduler_model_selector_exposed: false
+  scheduler_reasoning_selector_exposed: false

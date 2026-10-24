@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260924T085723Z-account01-B18-qform-auto11-r51",
+  "control_commit_at_start": "3878a74872d9ae2a5ff331b6dd539cae19d7fa7a",
+  "fresh_control_commit_before_math_write": "2ab3c879fa8b5ba6dacc2d38d9bfe339232bf031",
+  "owner_control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "continuity_full_target_status": "OPEN_NOT_PROVED",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "43beacb57eba0134d9b4b4cf8b7843a4f119049c",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260924T085723Z-account01-B18-qform-auto11-r51/REPORT.md",
+  "canonical_math_blob": "44e52edcf8c10d8a36bc392642c5046f07ddae55",
+  "handoff_commit": "b08fd7b490104f7012d516bdfd072605bb60c34f",
+  "partner_results_applied": [
+    {
+      "account_slot": "account02/B18",
+      "scientific_commit": "fedbabc70c2245476d15532f38c5c2555a0d6c31",
+      "result": "QFORM-CONDITIONAL-CROSS-PRIVATEBANK-WEAKL2-v1",
+      "actual_use": "M=2B, literal private original scalar W; yields 4sqrt(2)/sqrt(|a|sigma_1(B)) while retaining arbitrary G(Y) and rho(Y)W"
+    },
+    {
+      "account_slot": "account02/B18",
+      "scientific_commit": "fd7c768025320fbb5e54e13a1acd00d329e8f8dd",
+      "result": "QFORM-HS-MOVING-DIFFUSE-SQUARE-v1",
+      "actual_use": "completed-square target subfamily; yields min{K_HP/(sqrt(2)r^(1/4)),4sqrt(2)}"
+    }
+  ],
+  "proved_this_run": [
+    "One-sided-curvature all-rank cross/private-square fusion: for T=2X^TBY+alpha^TX+G(Y)+aW^2+rho(Y)W+c with disjoint original product banks, density <= min_j C_j(B) and <=4sqrt(2)/sqrt(|a|sigma_1(B)).",
+    "Ambient original-coordinate block [[0,B,0],[B^T,C,h],[0,h^T,a]] permits arbitrary C,h and arbitrary outside couplings after original-coordinate conditioning.",
+    "Exact target family Q_{r,t,C,d}=U_+^2-U_-^2+2(t/sqrt(r))sum X_iY_i+Y^TCY+(sqrt(r)/t)W^2+2(d^TY)W has density <=4sqrt(2) for all r>=2,t>0, arbitrary C,d, and all cap-one product laws.",
+    "The explicit target family has a C_0 representative by convolving its L1-cap-Linf active density with the L1 law of U_+^2-U_-^2; no continuity of the rank-two opposite-sign component itself is assumed."
+  ],
+  "primary_sources": [
+    "Banks--Garza Vargas--Kulkarni--Srivastava, arXiv:2005.08930, Section 2",
+    "Rudelson--Vershynin, arXiv:1402.4492, Theorem 1.2",
+    "Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1",
+    "Hu--Paouris, arXiv:2403.20192, used only through the newest completed partner HS theorem"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "remaining_implication": "From the bare s_3(A)>=1 hypothesis, extract a source-preserving one-zero-self-side packet with payable geometric-mean cross volume or |a|sigma_1(B) currency while retaining opposite-bank curvature, or route every failure into an already-paid ridge/grouped-hub/projected-crossing/physical-pair branch.",
+  "next_step": "Test whether a signed interlacing/Schur complement decomposition can force one of the two currencies after choosing a zero-self original-coordinate side, without invoking a uniformly good single minor or deleting a small nonzero tail."
+}

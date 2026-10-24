@@ -1,0 +1,67 @@
+[
+  {
+    "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f on every finite uniform cube, with p_S=hat(f)(S)^2, I=sum |S|p_S, H_nat=sum p_S ln(1/p_S), T_t=exp(-tL), L chi_S=|S|chi_S, q_t(S)=p_S exp(-2t|S|), G_f(t)=sum q_t(S)ln(1/p_S) and J_f(t)=sum |S|q_t(S)ln(1/p_S), G_f prime=-2J_f and H_nat=p_empty ln(1/p_empty)+2 integral_0^infinity J_f. The boundary term is between zero and I; J_f(t)<=J_f(0) and J_f(t)<=exp(-2t)J_f(0), giving integrability at both endpoints for every fixed f. For n>=1, J_f(0)<=2(n-1)ln(2)I. A universal integral bound integral J_f<=KI implies FEI in bits with constant (1+2K)/ln(2), and FEI with bit constant C implies that integral bound with K=C ln(2)/2.",
+    "hypotheses": [
+      "Finite uniform cube",
+      "Boolean outputs in {-1,1}",
+      "Natural logarithms; zero mass contributes zero",
+      "J_f as defined in DERIVATION.md"
+    ],
+    "statement_sha256": "6a0f129e7897d58cbfdf3d7fd67b3f9b32ce920aa72238c9b17984ac379365e6",
+    "contributors": [
+      "account05/A066"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A070",
+      "A088",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A066-NO-INTEGRABLE-HEAT-ENVELOPE",
+    "version": 1,
+    "exact_statement": "There is no nonnegative measurable k with finite integral on (0,infinity) such that J_f(t)<=I(f)k(t) for every finite-dimensional Boolean sign f and almost every t. For f_n(x)=1-2 indicator{x=(1,...,1)}, n>=2, J_f_n(t)/I(f_n)=(2n-2)ln(2)exp(-2t)((1+exp(-2t))/2)^(n-1). Any such pointwise envelope must be at least ln(2)exp(-3/2)/t almost everywhere on (0,1/4]. Nevertheless integral J_f_n/I(f_n)=2(1-1/n)(1-2^(-n))ln(2)<=2ln(2). This refutes the integrable pointwise-envelope helper, not the integrated target or FEI.",
+    "hypotheses": [
+      "Finite uniform cube",
+      "Boolean outputs in {-1,1}",
+      "Natural logarithms; zero mass contributes zero",
+      "J_f as defined in DERIVATION.md"
+    ],
+    "statement_sha256": "e46b8cb695767e6dd284aaa8889d87e61c3f05c4da3ba0c531a8f3d4918edcfe",
+    "contributors": [
+      "account05/A066"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+        "version": 1
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Universal integrable pointwise influence envelope for J_f"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A070",
+      "A088",
+      "A094",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "problem_id": "P0297",
+  "candidate_title": "Exact Hausdorff dimension of Liouville quantum gravity",
+  "candidate_title_evidence": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:554",
+  "exact_statement": "For gamma in (0,2), compute d_gamma, the a.s. Hausdorff dimension of the plane equipped with the gamma-LQG metric D_h; d_gamma is defined in the paper through xi_gamma=gamma/d_gamma.",
+  "original_primary_source": "Gwynne and Miller, Existence and uniqueness of the Liouville quantum gravity metric for gamma in (0,2), Inventiones Mathematicae 2020, Problem 7.1, https://link.springer.com/article/10.1007/s00222-020-00991-6",
+  "prior_status": "unsolved according to dated 2026-09-07 ranking in worker brief",
+  "current_open_status": "OPEN FOR GENERAL GAMMA as of 2026 ICM lecture; later developments still to be checked",
+  "source_verification": "Primary Problem 7.1 recovered; 2026 ICM confirms general unknown. Existing store has a P0297 card and an attempt card, both with truth_status=unverified; the attempt explicitly computes no dimension formula. The named local intake JSONL files do not have the literal P0297 ID.",
+  "result_rows": [
+    {
+      "row": "P0297-source-001",
+      "verdict": "HOLD",
+      "statement": "The candidate title and 2026-09-07 unsolved tag alone do not specify the metric, gamma range, or precise dimension whose exact value is sought.",
+      "evidence": "2026-10-10 w521 brief: 'Candidate target P0297: Exact Hausdorff dimension of Liouville quantum gravity' and 'Prior status: unsolved; reason: exact Hausdorff dimension of LQG.'",
+      "next": "DONE: primary Problem 7.1 recovered."
+    },
+    {
+      "row": "P0297-source-002",
+      "verdict": "KEEP",
+      "statement": "Problem 7.1 asks for d_gamma for all gamma in (0,2); gamma=sqrt(8/3) has known d_gamma=4 and therefore cannot be counted as a solution of the general problem.",
+      "evidence": "Gwynne--Miller 2020, Problem 7.1, https://link.springer.com/article/10.1007/s00222-020-00991-6",
+      "next": "Check whether any later primary paper solves the general case."
+    },
+    {
+      "row": "P0297-source-003",
+      "verdict": "KEEP",
+      "statement": "A 2026 ICM invited lecture says d_gamma is not known for general gamma.",
+      "evidence": "2026 ICM invited lecture, Liouville Quantum Gravity: From Random Planar Maps to Conformal Field Theory, https://epubs.siam.org/doi/10.1137/25M181012X",
+      "next": "Treat new proof attempts as unresolved until independently checked."
+    },
+    {
+      "row": "P0297-source-004",
+      "verdict": "KEEP WITH SCOPE",
+      "statement": "The store already has a P0297 open-problem concept and an attempt concept, but the latter records only xi*d=gamma and says it does not calculate xi for general gamma.",
+      "evidence": "Read-only sqlite3 query of nodes.title/body/metadata_json in ~/math-brain-build/local/population/brain.sqlite3; target logical IDs math:probability.core:open-problem-p0297-exact-hausdorff-dimension-of-liouville-quantum-gravity and math:probability.core:attempt-p0297-exact-hausdorff-dimension-of-liouville-quantum-gravity; command python -X utf8 ~/brain_workers/w521/inspect_store.py",
+      "next": "Link the new primary-source card to these existing concepts; do not assert a solved result."
+    },
+    {
+      "row": "P0297-source-005",
+      "verdict": "KEEP",
+      "statement": "The historical Watabiki closed-form prediction is false for sufficiently small gamma according to the primary Problem 7.1 discussion, citing Ding--Goswami.",
+      "evidence": "Gwynne--Miller, Invent. Math. 223 (2021), Problem 7.1, equation (7.1) and paragraph after it, https://link.springer.com/article/10.1007/s00222-020-00991-6",
+      "next": "Make this a clearly marked obstruction concept, not a theorem asserting the formula."
+    }
+  ]
+}

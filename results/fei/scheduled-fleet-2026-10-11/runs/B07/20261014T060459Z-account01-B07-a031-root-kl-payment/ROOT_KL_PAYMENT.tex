@@ -1,0 +1,98 @@
+\section*{Boolean payment of the root signed-KL rows}
+
+For a Boolean function $f$ and a physical coordinate $i$, write
+\[
+a_A=\widehat f(A),\qquad b_A=\widehat f(A\cup\{i\}),
+\qquad m_A=a_A^2+b_A^2,
+\]
+where $A$ avoids $i$.  Put
+\[
+C_A=\sum_{T\supseteq A}a_Tb_T,qquad
+M_A=\sum_{T\supseteq A}m_T,qquad
+\alpha_A={2a_Ab_A\over m_A},\qquad
+\beta_A={2C_A\over M_A}.
+\]
+The exact restriction identity is
+\[
+\Delta_iU=B_i-\Gamma_i+K_i,qquad
+K_i=\sum_Am_AD_2\left({1+\alpha_A\over2}\middle\|
+                       {1+\beta_A\over2}\right).     \tag{1}
+\]
+
+\paragraph{Theorem.}
+Let $K_i^{(0)}$ be the $A=\varnothing$ summand in (1).  Then
+\[
+\boxed{\sum_iK_i^{(0)}\le4\sum_i\widehat f(\{i\})^2
+                         \le4I(f).}                  \tag{2}
+\]
+Consequently, if for some $a\ge4$ and $0\le b<1$ every tensor-prime
+Boolean function obeys
+\[
+\sum_i\sum_{A\ne\varnothing}m_{i,A}D_2\left(
+ {1+\alpha_{i,A}\over2}\middle\|{1+\beta_{i,A}\over2}\right)
+\le(a-4)I+bU+\sum_i(\Gamma_i-B_i),                   \tag{3}
+\]
+then $G\le aI+bU$ for every Boolean function.
+
+\paragraph{Proof.}
+Boolean convolution at the nonzero shift $\{i\}$ gives
+\[
+C_\varnothing=\sum_Aa_Ab_A=0.                        \tag{4}
+\]
+Hence $\beta_\varnothing=0$.  Set
+$a=\widehat f(\varnothing)$, $b=\widehat f(\{i\})$, and
+$m=a^2+b^2$.  With the zero-mass convention,
+\[
+K_i^{(0)}=mD_2\left({1+2ab/m\over2}\middle\|{1\over2}\right)
+=m\left[1-h_2\left({1+2ab/m\over2}\right)\right].   \tag{5}
+\]
+For $|x|\le1$,
+\[
+1-h_2\left({1+x\over2}\right)
+={1\over\ln2}\sum_{k\ge1}{x^{2k}\over2k(2k-1)}
+\le x^2.                                             \tag{6}
+\]
+Indeed all coefficients are positive and their sum is $\ln2$, as follows
+by evaluating the series at $x=1$.  Applying (6) to $x=2ab/m$ yields
+\[
+K_i^{(0)}\le {4a^2b^2\over a^2+b^2}\le4b^2.         \tag{7}
+\]
+Summing (7) proves the first inequality in (2), and the second follows
+because the singleton Fourier mass is part of total influence.
+
+Summing (1), separating the root rows, and applying (2) gives
+\[
+G\le4I+\sum_i(B_i-\Gamma_i)+
+ \sum_i\sum_{A\ne\varnothing}m_{i,A}D_2\left(
+ {1+\alpha_{i,A}\over2}\middle\|{1+\beta_{i,A}\over2}\right).
+\]
+Thus (3) implies $G\le aI+bU$ on tensor-prime functions.  Exact tensor
+additivity of $G,I,U$ then extends the same pair to every Boolean function.
+
+\paragraph{Two-face compatibility.}
+For distinct $i,j$, write on each Fourier two-face
+\[
+a_A=\widehat f(A),\ b_A=\widehat f(Ai),\
+c_A=\widehat f(Aj),\ d_A=\widehat f(Aij).
+\]
+The convolution identities at shifts $\{i\},\{j\},\{i,j\}$ are
+\[
+\sum_A(a_Ab_A+c_Ad_A)=0,
+\quad \sum_A(a_Ac_A+b_Ad_A)=0,
+\quad \sum_A(a_Ad_A+b_Ac_A)=0.                      \tag{8}
+\]
+In particular the signed root correlation in each $j$-child for coordinate
+$i$ is
+\[
+\sum_A(a_A\pm c_A)(b_A\pm d_A)=0,                   \tag{9}
+\]
+where (8) preserves both the ordinary and mixed terms.  The root payment is
+therefore restriction-stable locally.  A global stopping argument must still
+avoid repaying the same spectral degree mass at multiple nodes.
+
+\paragraph{Scope.}
+The theorem removes exactly the empty upper-set rows from the unpaid signed
+KL aggregate.  It supplies no bound for $A\ne\varnothing$, no global
+nonreuse theorem, and no universal pair $(a,b)$.  Universal GU and FEI
+remain open.
+

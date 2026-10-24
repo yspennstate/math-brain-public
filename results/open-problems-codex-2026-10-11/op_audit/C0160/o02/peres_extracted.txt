@@ -1,0 +1,436 @@
+ANNALES DE L’I. H. P., SECTION B
+YUVAL PERES
+Percolation on nonamenable products at the
+uniqueness threshold
+Annales de l’I. H. P., section B, tome 36, no 3 (2000), p. 395-406
+<http://www.numdam.org/item?id=AIHPB_2000__36_3_395_0>
+© Gauthier-Villars, 2000, tous droits réservés.
+L’accès aux archives de la revue « Annales de l’I. H. P., section B »
+(http://www.elsevier.com/locate/anihpb) implique l’accord avec les condi-
+tions générales d’utilisation (http://www.numdam.org/conditions). Toute uti-
+lisation commerciale ou impression systématique est constitutive d’une
+infraction pénale. Toute copie ou impression de ce ﬁchier doit conte-
+nir la présente mention de copyright.
+Article numérisé dans le cadre du programme
+Numérisation de documents anciens mathématiques
+http://www.numdam.org/
+
+395
+Percolation on nonamenable products
+at the uniqueness threshold
+Yuval PERES1
+Institute of Mathematics, The Hebrew University, Givat Ram, Jerusalem 91904, Israel
+Received in 1 June 1999, revised 30 August 1999
+Ann. Inst. Henri Poincaré, Probabilités et Statistiques 36, 3 (2000)
+406
+© 2000 Editions scientifiques et medicales Elsevier SAS. All rights reserved
+ABSTRACT. - Let X and Y be infinite quasi-transitive graphs, such that
+the automorphism group of X is not amenable. For i.i.d. percolation on
+the direct product X x Y, we show that the set of retention parameters p
+where a.s. there is a unique infinite cluster, does not contain its infimum
+This extends a result of Schonmann, who considered the direct
+product of a regular tree and Z. © 2000 Editions scientifiques et medicales
+Elsevier SAS
+Key words: Percolation, Cayley graphs, Amenability
+RESUME. - Soit X et Y des graphes infinis quasi-transitifs, tels
+que le groupe d’automorphismes de X n’ est pas moyennable. Pour
+la percolation i.i.d. sur le produit direct X x Y, nous montrons que
+l’ensemble des paramètres p pour lesquels p.s. il y a un unique amas
+infini ne contient pas son infimum 
+Cela etend un resultat de
+Schonmann, qui considerait le produit direct d’un arbre regulier avec Z.
+@ 2000 Editions scientifiques et médicales Elsevier SAS
+1 Research partially supported NSF grant DMS-9803597. E-mail: peres@math.huji.
+ac.il.
+
+396
+Y PERES / Ann. Inst. Henri Poincare 36 (2000) 395-406
+1. INTRODUCTION
+Let X = (Vy, Ex) be an infinite, locally finite, connected graph. Say
+that X is transitive if its automorphism group Aut(X) has a single orbit
+in Vx ; more generally, if Aut(X) has finitely many orbits in Vy, then X is
+called quasi-transitive. In i.i.d. bond percolation with retention parameter
+p G [0, 1] on X, each edge is independently assigned the value 1 (open)
+with probability p, and the value 0 (closed) with probability 1 
+- p. We
+write P;, or simply Pp, for the resulting probability measure on 
+A connected component of open edges is called a cluster. The critical
+parameters for percolation on X are
+p~ (X ) = inf {p E [0, 1] : 
+an infinite cluster) =1};
+= inf{p E [0, 1] : 
+a unique infinite cluster) =1}.
+We now state our result; further background and references will follow.
+THEOREM 1.1. - Let X and Y be infinite, locally finite, connected
+quasi-transitive graphs and suppose that Aut(X) is not amenable. Then
+on the direct product graph X x Y,
+P pu (3 a unique infinite cluster) = 0.
+Remarks. -
+2022 For the definition of amenable groups, see, e.g., [14].
+~ Theorem 1.1 and its proof may be adapted to site percolation as well.
+~ In the case where X is a regular tree of degree d > 3 and Y = Z,
+Theorem 1.1 is due to Schonmann [20].
+~ Given two graphs X = (Vx, Ex) and Y = (Vy, Ey), the direct
+product graph X x Y has vertex set Vx x Vy ; the vertices 
+yi)
+and (x2 , y2 ) in Vx x Vy are adjacent in X x Y iff either xi = 
+x2 and
+[Yl, y2] E Ey, or yi = y2 and 
+Ex.
+~ Our proof of Theorem 1.1 is based on the following ingredients:
+(i) The characterization of pu in terms of connection probabili-
+ties between large balls, due to Schonmann [19]; see Theo-
+rem 2.1.
+(ii) The principle that for a (possibly dependent) percolation
+process, that is invariant under a nonamenable automorphism
+group, high marginals yield infinite clusters. This principle was
+proved by Haggstrom [8] for regular trees; it was extended
+to graphs with a nonamenable automorphism group by Ben-
+
+397
+Y PERES / Ann. Inst. Henri Poincare 36 (2000) 395~06
+jamini, Lyons, Peres and Schramm [2]. (See Theorems 2.2 and
+2.3 below.)
+(iii) The shadowing method used in Pemantle and Peres [ 16] to
+prove that there is no automorphism-invariant measure on span-
+ning trees in any nonamenable direct product X x Y of the type
+considered in Theorem 1.1.
+The first two ingredients are explained in the next section; (ii) was
+used in [3] to prove that percolation at level pc on any nonamenable
+Cayley graph has no infinite clusters. Section 3 contains the proof of
+Theorem 1.1, and we will point out there where the shadowing method is
+used.
+2. BACKGROUND
+In an infinite tree, clearly pu = 1, and in quasi-transitive amenable
+graphs, the arguments of Burton and Keane [5] yield that pu = pc (see
+[6]). Examples of transitive graphs where Pc  p~  1 were provided
+by Grimmett and Newman [7], Benjamini and Schramm [4] and Lalley
+[ 11 ] . The conjecture stated in [4] that Pc  pu on any nonamenable
+Cayley graph, is still open. Benjamini and Schramm also conjectured
+that on any quasi transitive graph, for all p 
+there is a unique infinite
+cluster Pp-a.s. This was established by Haggstrom and Peres [9] under a
+unimodularity assumption, and by Schonmann [19] in general. The latter
+paper also contains the following useful expression for ~
+THEOREM 2.1 ([19]). - Let X be any quasi-transitive graph. Then
+Notation. - Let ( V , E) be a locally finite graph.
+. For Ki , K2 C V, we write Ki ~ K2 for the event that there is an
+open path from some vertex in K 
+to some vertex in K2.
+. For x, z E V and F G E, denote by dist (x , z ; F) the minimal length
+of a path in F from x to z.
+. For x E V and R > 0, let BR (x) := 
+V : dist(x , z ; E )  7~}.
+In [10], Theorem 2.1 is used to show that ~(~) ~ Pc(Zd) for any
+graph 7~ which is a direct product of d infinite connected graphs of
+bounded degree.
+
+398
+Y PERES / Ann. Inst. Henri Poincare 36 (2000) 395-406
+Next, we discuss the relation between nonamenability and invariant
+percolation. Let X be a locally finite graph, and endow the automorphism
+group Aut(X) with the topology of pointwise convergence. Then any
+closed subgroup G of Aut(X) is locally compact, and the stabilizer
+Sex) = SG (x) i== {~ ~ G : gx = x } of any vertex x is compact. We start
+with a qualitative statement.
+THEOREM 2.2 ([2, Theorem 5.1]). - Let X be a locally finite graph
+and let G be a closed subgroup of Aut(X). Then G is nonamenable iff
+there exists a threshold ryG > 0, such that if a G-invariant site percolation
+A on X satisfies P[x ~ A]  hG 
+for all x E Vx, then A has infinite
+clusters with positive probability.
+The proof of this result in [2] uses a method of Adams and Lyons
+[ 1 ], that does not yield any estimate for the threshold 
+Although
+Theorem 2.2 suffices for the proof of Theorem 1.1, we take this
+opportunity to complete the discussion of quantitative thresholds from
+Section 4 of [2]. This avoids the nonconstructive definition of amenability
+via invariant means, and will also allow us to obtain quantitative bounds
+on the intrinsic graph metric within the unique percolation cluster for
+p > Pu. (See the second remark in Section 4.)
+Say that a subgroup G of Aut(X) is quasi-transitive if it has finitely
+many orbits in V x. Let JL be the left Haar measure on G, and denote
+:= 
+for v E Vx. For any finite set K C Vx, denote by
+~K the set of vertices in 
+adjacent to K, and let 
+:=
+Define
+: V x is finite nonempty .
+For x E Vx and w C Vx , denote by C(x , co) the connected component
+of x in w with respect to the edges induced from Ex . (This component is
+empty if x ~ 
+.
+The next theorem combines several results from [2] ; we will provide
+the additional arguments needed below.
+THEOREM 2.3. - Let X be a locally finite graph, and suppose that G
+is a closed quasi-transitive subgroup of Aut(X). Choose a complete set
+{vl, ..., 
+of representatives in Vx of the orbits of G. Then
+(i) G is nonamenable iff KG > 0.
+
+399
+Y PERES / Ann. Inst. Henri Poincare 36 (2000) 395-406
+(ii) Let A be a G-invariant site percolation on X. If KG > 0, then
+Consequently, if
+then A has infinite clusters with positive probability.
+(The threshold in (2.3) is sharp for regular trees, see Häggström [8,
+Theorem 8 .1 ] . )
+To prove Theorem 2.3, we need the following version of the mass
+transport principle, obtained from Corollary 3.7 in [2] by setting ai n 1:
+LEMMA 2.4. - Let X, G and f vl , ... , vL} be as in Theorem 2.3.
+Suppose that the function f : Vx x 
+[0,00] is invariant under the
+diagonal action of G. Then
+Proof of Theorem 2. 3. -
+(i) This follows from Theorem 3.9 and Lemma 3.10 in [2].
+(ii) Let v, z E Vx and w c Vx. If v E ~, the component C(v, w) is
+finite, and z E 
+then define
+otherwise, take fo(v, z, OJ) = 0. For any vertex v, clearly
+Since v can be adjacent to at most deg(v) components of ~,
+
+400
+Y. PERES / Ann. Inst. Henri Poincare 36 (2000) 395-406
+The function f ( v , z) 
+:= E fo ( v , z, A) is invariant under the diag-
+onal action of G. By (2.4) and (2.5), for any v E Vx we have
+f (v, z) = P[0  
+ ~] and
+Taking v = vi and summing over i , we obtain from Lemma 2.4
+that
+Since 
+I  
+= P[O  
+~)  
++ 
+A],
+(2.2) follows. Finally, if (2.3) holds, then the right-hand side of
+(2.2) is less than L, so at least one of the probabilities on the left-
+hand side of (2.2) is less than 1. 
+0
+3. PROOF OF NONUNIQUENESS AT pu
+We will use the canonical coupling of the percolation processes for all
+p, obtained by equipping the edges of a graph (V, E) with i.i.d. random
+variables {U(e)}eEE, uniform in [0, 1 ] . Denote by P the resulting product
+measure on [0, l]E. For each p, the edge set ~ ( p ) : - {e G E : U (e) x p}
+has the same distribution as the set of open edges under Pp . Denote
+by C ( w , p ) the connected component of a vertex w in the subgraph
+(V, ~(~)), and for W C V, write C(W, p) := UwEw C(w, p). We need
+the following easy lemma.
+LEMMA 3.1. - Consider the coupling defined above on a graph
+(V, E), and fix pi 
+1  p2 in [0, 1 ] . For any two sets K, W C V and
+M  oo, denote by AM (K, W ; p1) the event that infinitely many vertices
+in C(K, pi) are within distance at most M from C(W, pl). Then
+Proof. - On the event AM ( K, W ; /?i), there are infinitely many paths
+{ ~~ { of length at most M from C(K, 
+to C ( W, /?i). Each of these paths
+intersects at most finitely many of the others, so we can extract an infinite
+
+401
+Y. PERES / Ann. Inst. Henri Poincare 36 (2000) 395-406
+subcollection 
+of edge-disjoint paths. Thus on AM (K, W; p1 ),
+for each j , and the assertion follows. 
+D
+Proofof Theorem 1.1. - We will show that in X x Y, if
+Pp [3 a unique infinite cluster] = 1, 
+(3 .1 )
+then p > PU. Let G = Aut(X), and fix a threshold ryG > 0 as in
+Theorem 2.2. (By Theorem 2. 3, we can take ryG = KG ~ (KG + Dx) where
+Dx 
+:= maxx~VX deg (x ) . ) Denote by 
+the unique infinite cluster in
+?(p), and define
+By (3.1 ) and quasi-transitivity of X x Y, there exists r such that
+Next, define
+Once r is chosen, we can find n such that
+Denote by D = DX Y the maximal degree in X x Y.
+CLAIM. - Fix r, n as above. If
+then
+By Theorem 2.1, the last equation yields that 
+p*, so the claim
+implies that
+
+402
+Y PERES / Ann. Inst. Henri Poincare 36 (2000) 395-406
+To prove the claim, choose pi, p2 such that
+Use the canonical coupling variables {C/(~)} to define
+Since Dr+n bounds the number of edges in a ball of radius r + n in X x Y,
+(3.7) gives
+Let ro := r1 (r) n h2 (r, n) n F3 (r, n, 
+and note that P[(x, y) ~ ro] 
+ryG/2 for any (x, y) e Vyxy. The "shadowing method" which is the key
+to our argument, is based on defining a site percolation on X that requires
+"good behavior" simultaneously in two levels, X x { yo } and X x {yi}. Fix
+yo, Yl E Vy , and consider
+A is a G-invariant site percolation on X, with P[;c ~ ~1]  ryG for every
+vertex x. Thus
+P[A has an infinite component] > 0, 
+(3.8)
+by Theorem 2.2. Since the event in (3.8) is G-invariant and determined by
+the i.i.d. variables in the canonical coupling, it must have probability 1.
+(The action of G on X has infinite orbits, whence the induced action on
+the random field 
+is ergodic.)
+Our next task is to verify that for any infinite path with vertices 
+1
+in A , its lift ~o 
+:= {(~ 
+to X x {yoL is "shadowed" by an infinite
+path with edges 
+that remains a bounded distance from ~o .
+Indeed, the ball Br (x j , yo) contains a point v~ in Coo (p) by the definition
+of r1, and there is a path 
+from v~ to 
+by the definitions of
+r2 and 7"3. Concatenating these finite paths gives an infinite path with
+edges 
+that intersects Br (x j , yo ) for each j > 1. Similarly, there
+is an infinite path with edges 
+that intersects Br (x j , yi) for each
+7~L
+
+403
+Y. PERES / Ann. Inst. Henri Poincare 36 (2000) 395-406
+Therefore, Lemma 3.1 with M 
+= 2r + dist(yo, y1; Ey) implies that for
+any x E Vx,
+yo) ++ Br (xi , y1) in ~(p2)|C(x1, 
+A) is infinite] = 1. 
+(3.9)
+Let 8 > 0. Since the event in (3.8) has probability 1, there exists Ro such
+that for all x E Vx,
+P [ B Ro (x) intersects an infinite component of A] > 1 
+- 8. 
+(3.10)
+Let R = Ro + r. By (3.9), (3.10) and the triangle inequality,
+Finally, consider two arbitrary vertices v~ = 
+(x 1, y 1 ) and v2 = (x 2 , y2 )
+in Vxxy. For y E Vy, let
+By (3.11 ), P[Hy] > 1 
+- 2~ for any y E Vy. Consequently,
+P[Hy for infinitely many y] > 1 - 2E. 
+(3.12)
+On this event, the sets 
+p2 ) and 
+p2 ) come infinitely
+often within distance dist(x 1, x2; Ex ) + 2R from each other. As P* > p2,
+we obtain from Lemma 3.1 and (3.12) that
+Since 8 > 0 is arbitrary, we have established (3.5) and the claim. This
+implies (3.6) and the theorem. 
+D
+4. CONCLUDING REMARKS
+. Nonamenability and isoperimetric inequalities. Say that an infinite
+graph X is nonamenable if
+In Theorem 1.1 we assumed that the group Aut(X) is nonamenable.
+Could this assumption be replaced by the weaker assumption that
+
+404
+Y PERES / Ann. Inst. Henri Poincare 36 (2000) 395-406
+the graph X is nonamenable? (These assumptions are equivalent if
+Aut(X) is quasi-transitive and unimodular, see Salvatori [17].)
+2022 Intrinsic distance within the infinite cluster. In the setup of Theo-
+rem 1.1, denote by D the maximal degree in X x Y. For p > 
+pu (X x Y), choose r = r ( p) and n = n ( p) to satisfy (3.2) and (3.3).
+Then (3.4) implies that
+If pu > Pc then supp>pu r ( p)  oo, so (4.2) yields a bound on the
+distribution of the intrinsic distance between vertices in the unique
+infinite cluster.
+~ Kazhdan groups. Lyons and Schramm [ 13] proved that pu  1 for
+Cayley graphs of Kazhdan groups. The present author observed that
+their argument can be modified to prove nonuniqueness at pu on
+these graphs; see [13].
+~ Planar graphs. Benjamini and Schramm (unpublished) showed that
+for i.i.d. percolation on a planar nonamenable transitive graph, there
+is a unique infinite cluster for p = Pu. (As noted by the referee, for
+Cayley graphs of cocompact Fuchsian groups of genus at least 2,
+this can be infered from [ 11 ] . ) It is an open problem to find a
+geometric characterization of nonamenable transitive graphs that
+satisfy uniqueness at pu .
+~ Minimal spanning forests and 
+The impetus for this note was
+a suggestion by I. Benjamini and O. Schramm, that uniqueness for
+i.i.d. percolation at p = pu on a transitive graph X, should be closely
+related to connectedness of the "free minimal spanning forest"
+(FMSF) on X ; this is a random subgraph ( Vx , F) of X, obtained by
+labeling the edges in Ex by i.i.d. uniform variables, and removing
+any edge that has the highest label in a cycle. Indeed, Schramm
+(personal communication) has recently observed that connectedness
+of the FMSF implies uniqueness at 
+the converse fails for certain
+free products, but it is open whether it holds for transitive graphs
+that satisfy Pc  pu  1.
+~ The contact process. Let Td be a regular tree of degree d > 3.
+Pemantle [15] considered the contact process on Td with infection
+rate JL He showed that if~/~4, then the critical parameter for global
+survival, À1 (Td), is strictly smaller than the critical parameter for
+local survival, ~,2(Td); the result was extended to T3 by Liggett [12].
+Zhang [21 ] showed that the contact process on Td does not survive
+
+405
+Y. PERES / Ann. Inst. Henri Poincare 36 (2000) 395~06
+locally at the parameter ~2(?~). and that for larger values of À,
+the so called "complete convergence theorem" holds. The proof by
+Schonmann [20] of nonuniqueness for percolation at level pu on
+T x Z, was motivated by these results of Zhang and alternative
+proofs of them in Salzano and Schonmann [18]. Can the proof of
+Theorem 1.1 be adapted to show that for any graph X with Aut(X)
+nonamenable, the contact process does not survive locally at the
+parameter À2(X)?
+ACKNOWLEDGEMENT
+I am grateful to Itai Benjamini, Russell Lyons, Robin Pemantle,
+Roberto Schonmann and Oded Schramm for useful discussions and
+comments. I thank the referee for helpful suggestions.
+REFERENCES
+[1] Adams S., Lyons R., Amenability, Kazhdan’s property and percolation for trees,
+groups and equivalence relations, Israel J. Math. 75 (1991) 341-370.
+[2] Benjamini I., Lyons R., Peres Y., Schramm O., Group-invariant percolation on
+graphs, Geom. Funct. Anal. 9 (1999) 29-66.
+[3] Benjamini I., Lyons R., Peres Y, Schramm O., Critical percolation on any
+nonamenable group has no infinite clusters, Ann. Probab. (1999), to appear.
+[4] Benjamini I., Schramm O., Percolation beyond Zd, many questions and a few
+answers, Electronic Commun. Probab. 1 (8) (1996) 71-82.
+[5] Burton R.M., Keane M., Density and uniqueness in percolation, Comm. Math.
+Phys. 121 (1989) 501-505.
+[6] Gandolfi A., Keane M.S., Newman C.M., Uniqueness of the infinite component in
+a random graph with applications to percolation and spin glasses, Probab. Theory
+Related Fields 92 (1992) 511-527.
+[7] Grimmett G.R., Newman C.M., Percolation in oo + 1 dimensions, in: Grimmett
+G.R., Welsh D.J.A. (Eds.), Disorder in Physical Systems, Clarendon Press, Oxford,
+1990, pp. 167-190.
+[8] Häggström O., Infinite clusters in dependent automorphism invariant percolation on
+trees, Ann. Probab. 25 (1997) 1423-1436.
+[9] Häggström O., Peres Y., Monotonicity of uniqueness for percolation on Cayley
+graphs: all infinite clusters are born simultaneously, Probab. Theory Related
+Fields 113 (1999) 273-285.
+[10] Häggström O., Peres Y., Schonmann R.H., Percolation on transitive graphs as a
+coalescent process: relentless merging followed by simultaneous uniqueness, in:
+Bramson M., Durrett R. (Eds.), Perplexing Probability Problems: Papers in Honor
+of Harry Kesten, Birkhäuser, 1999, pp. 69-90.
+[11] Lalley S.P., Percolation on Fuchsian groups, Ann. Inst. H. Poincaré Probab.
+Statist. 34 (1998) 151-177.
+
+406
+Y. PERES / Ann. Inst. Henri Poincare 36 (2000) 395-406
+[12] Liggett T.M., Multiple transition points for the contact process on the binary tree,
+Ann. Probab. 24 (1996) 1675-1710.
+[13] Lyons R., Schramm O., Indistinguishability of percolation clusters, Ann. Probab.
+(1999), to appear.
+[14] Paterson A.L.T., Amenability, American Mathematical Soc., Providence, 1988.
+[15] Pemantle R., The contact process on trees, Ann. Probab. 20 (1992) 2089-2116.
+[16] Pemantle R., Peres Y., Nonamenable products are not treeable, Preprint, 1999, Israel
+J. Math., to appear.
+[17] Salvatori M., On the norms of group-invariant transition operators on graphs,
+J. Theor. Probab. 5 (1992) 563-576.
+[18] Salzano M., Schonmann R.H., A new proof that for the contact process on
+homogeneous trees local survival implies complete convergence, Ann. Probab. 26
+(1998) 1251-1258.
+[19] Schonmann R.H., Stability of infinite clusters in supercritical percolation, Probab.
+Theory Related Fields 113 (1999) 287-300.
+[20] Schonmann R.H., Percolation in ~ + 1 dimensions at the uniqueness threshold, in:
+Bramson M., Durrett R. (Eds.), Perplexing Probability Problems: Papers in Honor
+of H. Kesten, Birkhäuser, 1999, pp. 53-67.
+[21] Zhang Y., The complete convergence theorem of the contact process on trees, Ann.
+Probab. 24 (1996) 1408-1443.

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260922T175509Z-qform-B18-a01-r15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.9",
+  "control_commit_initial": "b7325a4d01f03ddcd0dabbfbbdbecaec8e647a8d",
+  "control_commit_prepublication": "63b776af052f2dfd524f1474959b8a7d7616380d",
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "classification": "PROVED_SUPPORTING_TARGET_LEVEL_BRANCH",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B18",
+    "run_id": "account02-B18-20260922T170013Z-r11",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7045cf7745ad4f1bb04e5a6e4b3196aeb867a140",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/account02-B18-20260922T170013Z-r11/REPORT.md",
+    "claims": ["QFORM-ZEROPIVOT-RANK-TRICHOTOMY-v1", "QFORM-ZEROPIVOT-LPP-COMPRESSION-v1"]
+  },
+  "primary_source_applied": {
+    "citation": "Livshyts--Paouris--Pivovarov, On sharp bounds for marginal densities of product measures, Israel J. Math. 216 (2016), arXiv:1507.07949",
+    "use": "two-dimensional orthogonal projection density cap M<=2"
+  },
+  "mathematical_change": {
+    "claim_id": "QFORM-ZEROPIVOT-1PLUS2-DENSITY-v1",
+    "statement": "If X has density cap 1, Y in R^2 is independent of X with arbitrary joint density cap M, and H=[[0,ell^T],[ell,B]] is symmetric nonsingular, then (X,Y)^T H(X,Y) has a continuous density bounded by 6 M^(2/3)|det H|^(-1/3).",
+    "application": "Partner zero-pivot rank-one-deletion and rank-two-deletion cases close with universal bound 6*2^(2/3)<9.525 under the target exact-rank-three spectral normalization."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "dd94932dae1791af1bca9396c062e17d0e55142a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260922T175509Z-qform-B18-a01-r15/REPORT.md"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B18/20260922T175509Z-qform-B18-a01-r15.md",
+  "unresolved_implication": "QFORM-ZEROPIVOT-CASE3-PRODUCT-TRACE-v1: close the rank-three Schur-isotropic zero-pivot case with a 3D projected residual while retaining actual product-projection provenance; after exact-rank-three closure, arbitrary additional spectrum still requires an exhaustive product-preserving ridge-or-grouped-coordinate reduction.",
+  "execution_context": "scheduled_automation",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

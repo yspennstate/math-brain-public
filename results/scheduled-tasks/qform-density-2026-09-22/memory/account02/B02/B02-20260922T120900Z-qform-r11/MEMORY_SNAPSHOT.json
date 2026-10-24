@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B02",
+  "run_id": "B02-20260922T120900Z-qform-r11",
+  "assignment": "Integrated Fourier estimate",
+  "pathway": "FOURIER",
+  "execution_state": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "source_control_commit_prepublication": "e047faebe2363a9e7aaa47e27f51dacae44aaad7",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH"
+  ],
+  "new_claim": {
+    "id": "QFORM-PHYSICAL-PIVOT-CROSSBLOCK-FOURIER-v1",
+    "status": "PROVED_CONDITIONAL_TARGET_LEVEL",
+    "statement": "For disjoint original-coordinate sets I,J with |I|=r>2 and rank-r B=A[I,J] having singular-value product Delta, arbitrary product input densities<=1 satisfy ||p_Q||_infinity <= sqrt(2) r/(r-2) Delta^(-1/r); if |J|=r too, improve to r/(r-2)|det B|^(-1/r).",
+    "fourier_bound": "|phi_Q(t)| <= min(1,2^(r/4) pi^(r/2) Delta^(-1/2)|t|^(-r/2))",
+    "scope": "arbitrary symmetric A, arbitrary outside coordinates/couplings/additional eigenvalues; requires the stated physical cross-block condition"
+  },
+  "secondary_claim": {
+    "id": "QFORM-LOCALIZED-ROW-ENDPOINT-DICHOTOMY-v1",
+    "status": "PROVED_SUPPORTING_LEMMA",
+    "statement": "If a row of any chosen three-large-eigenvalue spectral frame has norm >1/2, then with d=A_ii and sigma=(sum_{j!=i}A_ij^2)^(1/2), either |d|>=1/4 and ||p_Q||_(3/2)<=2|d|^(-1/3), or sigma>=sqrt(3)/4 and |phi_Q(t)|<=2sqrt(pi)(2/3)^(1/4)|t|^(-1/2).",
+    "scope": "full A including arbitrary extra eigenvalues; endpoint smoothing only, not full density closure"
+  },
+  "published_inputs": [
+    {
+      "source": "Livshyts-Paouris-Pivovarov, On sharp bounds for marginal densities of product measures, arXiv:1507.07949v2 / Israel J. Math. 216 (2016)",
+      "used_result": "r-dimensional orthogonal marginal of product density with one-dimensional caps 1 has density cap 2^(r/2)"
+    },
+    {
+      "source": "Rudelson-Vershynin, Small Ball Probabilities for Linear Images of High-Dimensional Distributions, IMRN 2015, Theorem 1.2",
+      "used_result": "normalized one-dimensional linear combination of independent density<=1 variables has density cap sqrt(2)"
+    }
+  ],
+  "peer_results_applied": [
+    {
+      "source": "interactive correction report",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "8624982153e5a2154e4ae8922d2fe4dc77080efc",
+      "blob": "d0546b3190cb35a070fabd86162f4b4874975f62",
+      "use": "consumed fresh C>=3sqrt(2) correction and arbitrary-block cross-Fourier theorem; new B02 theorem sharpens its constant on an exact physical pivot side"
+    },
+    {
+      "source": "account02/B08",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "0b5925a458d36c1ec1cf8ab344c9676260a97c8a",
+      "use": "diffuse rank-three branch and heavy-leverage mechanism boundary"
+    },
+    {
+      "source": "account02/B07",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "7ba557b8854ea86dcdc22a342d6fdd73d6882c6a",
+      "use": "determinant-mass and Walsh/Hadamard fixed-minor obstruction"
+    }
+  ],
+  "assigned_partner": {
+    "account": "account03",
+    "slot": "B02",
+    "completed_handoff_consumed": false,
+    "observed_current_qform_start_commits": [
+      "d85ce8bcca55a068b70ab443f8edb4063ed479c8",
+      "4286c417f2dd17b8550b88f332b02d03cd4d275e"
+    ],
+    "reason": "no completed current-programme QFORM handoff existed at final pre-handoff check"
+  },
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "400f82c8b98fc5623f567581b6ccb0b4298974e8",
+    "blob": "7d74c6e2d3acb66392bc8a9304a2b72ad2a6317c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/B02-20260922T120900Z-qform-r11/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "b7a3c538f1590c1ada638e9a1b5dba0c4f7a2460",
+    "blob": "3101b6481fcdc2273be85e4d218fdcb0816edfb0",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B02/B02-20260922T120900Z-qform-r11.md"
+  },
+  "computation": "none; exact analytic derivation only",
+  "first_unpaid_implication": "QFORM-THREE-PIVOT-OR-RESIDUAL-CURVATURE-v1: derive from the three-large-eigenvalue hypothesis either a dimension-free three-physical-pivot cross-block singular-product lower bound, or combine the localized endpoint dichotomy with the residual two spectral directions to obtain additional smoothing; fixed-minor selection is insufficient in diffuse Walsh/Hadamard families.",
+  "full_target_status": "OPEN",
+  "privacy_review": "scoped artifact text contains no credentials, scheduler identifiers, machine paths, benchmark gold, unrelated private data, email content, or raw transcripts"
+}

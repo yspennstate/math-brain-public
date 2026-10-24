@@ -1,0 +1,31 @@
+# C0052 independent adversarial checkpoint
+
+Saved before reading any paired prover's proof (2026-10-10). The ranking title alone does not specify a normalization, a topology, or whether the desired quantifier is one or every subsequential limit. Current openness remains UNKNOWN pending the targeted source/status check.
+
+L1 (independent elementary transfer lemma; awaiting w479): Let X_n be real random variables with E X_n=0, E X_n^2=1, and E X_n^4<=3-epsilon for a fixed 0<epsilon<=2 and all n. If X_n converges in law to X, then E X=0, E X^2=1, and E X^4<=3-epsilon. In particular X is not Gaussian. Indeed E[X_n^2 1_{|X_n|>R}]<=(3-epsilon)/R^2, so second moments are uniformly integrable. Bounded fourth moments also imply uniform integrability of first moments. Weak convergence therefore preserves the first two moments. Portmanteau applied to the nonnegative continuous function x^4 gives E X^4<=liminf E X_n^4<=3-epsilon. A centered Gaussian of variance one has fourth moment three. No equality of fourth-moment limits is needed. This lemma neither establishes field tightness nor supplies epsilon for critical 3D Ising.
+
+L2 (independent obstruction to an intersection-count route; awaiting w479): For integers n>=2, set N_n=n^2 with probability 1/n and N_n=0 otherwise. Then E N_n=n diverges but P(N_n>0)=1/n tends to zero. Thus a divergent expected overlap count does not prove a uniform connection probability. A sufficient extra premise is E N_n^2 <= C(E N_n)^2, with C independent of scale and with E N_n>0: Cauchy-Schwarz gives P(N_n>0)>=1/C. This is a counterexample to the proposed logical implication, not a construction of Ising currents.
+
+Candidate hardest bridge: an epsilon>0 independent of lattice scale in a variance-normalized negative fourth cumulant of one fixed nonnegative test function. The random-current representation can express that deficit as an endpoint-weighted intersection probability. A first-moment overlap estimate or the d=4 triviality theorem does not by itself supply a d=3 lower bound.
+
+Source recovery: the original question is Duminil-Copin, arXiv:1707.00520v1, printed p.94, Conjecture 6, with definitions (7.1)-(7.2). Its signed g(beta) is nonpositive. Nontriviality means that g(beta) does not tend to zero as beta increases to beta_c from below. This is a limsup/nonvanishing requirement; a uniform positive liminf is stronger. The critical block criterion is a separate auxiliary formulation. Current openness remains UNKNOWN after the bounded literature/prior-record checks.
+
+L3 (endpoint-weighted current bridge; referee pending): On a finite graph with nonnegative couplings, finite inverse temperature, zero external field and free boundary, let f_x>=0 be nonzero. Put G_xy=E[sigma_x sigma_y], V_f=sum_{x,y} f_x f_y G_xy>0, Y_f=sum_x f_x sigma_x/sqrt(V_f), and mu_f(x,y)=f_x f_y G_xy/V_f. For positive-weight ordered endpoint pairs, let q(x,y,z,t) be the probability that x is connected to z in the union of two independent currents with source sets {x} symmetric-difference {y} and {z} symmetric-difference {t}. Source sets cancel repeated endpoints, and connectivity is reflexive. Set q arbitrarily to zero on zero-weight pairs. Then
+
+    3-E[Y_f^4] = 2 sum_{x,y,z,t} mu_f(x,y) mu_f(z,t) q(x,y,z,t).
+
+Proof: expand the fourth cumulant multilinearly and use Aizenman's switching identity (2112.04248v2, Theorem 5.4, equation 5.13). Coincident endpoints follow by source cancellation: e.g. U4(x,x,z,t)=-2 G_xz G_xt, with the corresponding sourceless/source switching identity giving the same right-hand side. Divide by V_f^2. The full sum of pair products is V_f^2. Thus the needed probability is an average under the correlation-weighted endpoint law, not the probability of one unspecified typical quadruple. If a nonnegative witness N under this mixed law satisfies {N>0} contained in the ORIGINAL two-current connection event, E N>0, and E N^2 <= C(E N)^2 with C uniform in scale, then Cauchy-Schwarz gives 3-E[Y_f^4]>=2/C. This is a conditional sufficient bridge; no such estimate has been obtained for critical 3D Ising.
+
+The enlarged-event trap: Aizenman 2112.04248v2, equations (8.1)-(8.3), adds two independent sourceless currents and obtains an UPPER bound through their enlarged source clusters. A lower bound on the enlarged event cannot be fed backwards into the exact two-current identity. The N-witness premise in L3 deliberately uses the original event. Independence between the two sourced currents does not make different overlap sites independent.
+
+L4 (direct conditional comparison to the original g(beta); referee pending): Let a translation-invariant, spin-flip symmetric zero-field Ising state on Z^3 have U4<=0, finite positive susceptibility chi and finite positive exponential correlation length xi. Assume A=sum_{y,z,t} -U4(0,y,z,t)<infinity. For any nonempty finite block B, let M=|B|, S_B=sum_{x in B} sigma_x, V_B=E S_B^2>0, and R_B=3-E S_B^4/V_B^2. With the original signed g=-A/(chi^2 xi^3),
+
+    -g >= R_B V_B^2/(M chi^2 xi^3).
+
+Proof: R_B V_B^2=sum_{x,y,z,t in B} -U4(x,y,z,t). For each fixed x in B, translation invariance and nonnegativity of -U4 bound the sum over the other three block vertices by A. Summing over x gives R_B V_B^2<=M A. Divide by M chi^2 xi^3. There is no independence assumption and no interchange of limits.
+
+Consequently, along beta_n increasing to beta_c, put b_n=V_{B_n}/[chi(beta_n) sqrt(M_n xi(beta_n)^3)]. If R_{B_n}>=r>0 and b_n>=b>0 for all n, then -g(beta_n)>=r b^2>0, which establishes nonvanishing along that near-critical sequence. A sufficient explicit normalization premise when M_n is of order xi^3 is a scale-uniform positive fraction of susceptibility captured by the block variance, V_{B_n}>=c M_n chi(beta_n). Neither that premise nor a near-critical uniform R lower bound is claimed here. A beta_c block result alone cannot be substituted into this statement.
+
+Audit of paired proof: w477 L001 receives a scoped KEEP in AUDIT_W477_L001.md. It is correctly conditional. It does not supply the L3 second-moment estimate or the near-critical premises in L4. Independent L1/L2 were frozen before that proof was read.
+
+NEXT: Referee w479 checks L1-L4, especially coincident source cancellation and the L4 normalization; then the integrator may handle the concept-only draft without promoting the unresolved C0052 bridge.

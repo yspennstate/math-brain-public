@@ -1,0 +1,2 @@
+STATE: Stage 20261013T220323Z complete locally: A057 capped activation bank independently accepted at K=4+2/(e ln2); exact priority/shared-control ownership and bank conversion checked; universal payment and FEI open.
+NEXT: Derive the priority two-core gate three-output recentered erasure and signed reset/conversion price against one exclusive shared-control budget, retaining both terminal core entropies; A090/A085 review.

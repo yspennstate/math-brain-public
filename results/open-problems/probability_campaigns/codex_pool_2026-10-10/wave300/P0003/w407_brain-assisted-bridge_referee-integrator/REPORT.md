@@ -1,0 +1,11 @@
+# w407 P0003 report (2026-10-10)
+
+Found: The P0003 primary source is Grimmett's Question 2.2 about a uniformly sampled fixed-n honeycomb SAW from the origin, suitably rescaled. The related Duminil-Copin--Smirnov Conjecture 1 instead uses critical length-weighted walks between fixed domain boundary points. The two ensembles must not be conflated. Current openness stays UNKNOWN after bounded status checks.
+
+Checked: KEEP w405-L1, w405-L2, w405-R1, w406-S1.1 and w406-S1.2. FIX w405-C1 as a conditional chordal statement; DROP its use as a direct P0003 reduction absent a fixed-n/free-endpoint transfer. The chordal route separately lacks curve tightness and critical fixed-buffer partition-ratio limits. Reproductions are in REVIEW_PACKET.md.
+
+Brain repair: bundle_001.json contains five typed draft nodes and three exact relations separating fixed-n P0003 from the critical chordal ensemble and recording the checked cycle-kernel obstruction. Production query command in RETRIEVAL_EVIDENCE.json took 5.657 s and served 3 hits; 0 of 3 described the requested local-relation compactness gap. This is one-query evidence, not a population recall score. Structural validation command `python -X utf8 ~/brain_workers/w407/validate_packet.py` checks 5 entries, 3 relations and all claim rows. The submitted inbox copy matched the local SHA256 EE9173D779DE92BC6B5EFBB2ED63D505363804150049AD0CCAB5F2CCA0477483. No after-ingestion gain is claimed. Apply: after independent source/edge audit, the validating coordinator integrates `~/math-brain-inbox/w407/bundle_001.json` through the normal draft gate; no live code patch is needed.
+
+Risk: A lemma KEEP is not a P0003 solution. The cycle mode is not the true SAW path-sum; LSW only identifies a continuum law after missing lattice inputs hold. Owner solved/retired checks and current literature search were bounded. My source correction, finite conditioning step and new bundle relations await independent w410 audit; no live store change was made. The hook proposal is saved locally in HOOK_PROPOSAL.jsonl for the coordinator to file under hooks1000.
+
+NEXT: Prove or refute a uniform length-and-endpoint local limit estimate strong enough to transfer a chordal grand-canonical limit to the fixed-n origin law; keep chordal B and T explicit.

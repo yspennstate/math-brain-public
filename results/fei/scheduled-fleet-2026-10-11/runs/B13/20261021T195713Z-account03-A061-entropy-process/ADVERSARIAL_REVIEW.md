@@ -1,0 +1,12 @@
+# Checks that could overturn the obstruction
+
+The strongest alternative explanation is that the divergent outcome KL is caused by an invalid physical transformation, a dropped reference-only row, or a non-Boolean amplitude construction. Each would invalidate the entire counterfamily, not merely its constant.
+
+1. **Realizability and shear:** G and H are explicit signs evaluated on every input in the finite checks. The common shear is an invertible linear map of physical bits, with inverse t_j=w_j for j!=u and t_u=w_u+sum_(j!=u)w_j. Its Fourier action is derived by substituting characters. Direct physical-edge counts separately verify every influence; a general linear invariance of influence is never assumed.
+2. **Fourier support and balancedness:** the bilinear sum is evaluated using the unique solution a=beta/gamma; gamma!=0 is used exactly there. The gamma=0 coefficient is separate. l=1 is excluded because its c coefficient vanishes, and is tested as a negative boundary control.
+3. **Reference-only rows:** their mass is epsilon=2^(-l)-2*2^(-3l), and their kernel is exactly1/2. The r_G formula includes epsilon/2. The finite checker retains all ambient atoms. Dropping these rows changes r_G and cannot certify this claim.
+4. **Entropy versus reference price:** exact prime-log dictionaries check Delta H=2 and mean TC_child-TC_parent=1 separately. The divergent D is not identified with the Fourier entropy decrement. H<=2I for this family prevents interpreting it as a FEI disproof.
+5. **Quantifiers:** one distinguished query fails a universal all-query local product price. No assertion is made that every physical query is bad, that every reference fails, or that every stopping tree needs this bill. The incoming reference is precisely the actual marginal product.
+6. **The bank is not free:** the conditional repair requires one unused ORIGINAL Sbar account, counted with original reaches. Its strict quarter bound does not infer availability after arbitrary earlier history. Both full terminal H+TC values are retained. The universal selection-and-ownership step remains open.
+
+Executed tests and their exact arithmetic are in FAMILY_CERTIFICATE and INDEPENDENT_CERTIFICATE. Discovery outputs using floating logs remain explicitly numerical evidence. The mathematical rung is a written all-dimensional proof with exact finite checks; external independent review remains pending. Any Lean receipt covers its submitted algebraic statement only.

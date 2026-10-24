@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260924T091232Z-account03-B09-QFORM-r47",
+  "source_control": {
+    "startup_commit": "0ac493113c8ca9f98d75b25dbfb2a0f6e587153d",
+    "prepublication_refresh_commit": "697942d6bd38e3cd1cbcf3d33cd7813069d84855",
+    "owner_control_revision": "2026-09-22.15",
+    "activation_revision": "2026-09-22.5",
+    "programme": "QFORM-DENSITY-3EIG-20260922"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE"
+  ],
+  "premises": [
+    {
+      "id": "ACCOUNT02-B08-SINGULAR-HUB-STAR-HALFRIESZ",
+      "source": "yspennstate/math-open-problems@cdd0eb22227a505e827a658038a1512897c0ad56:proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/account02-B08-20260924T034000Z-7c4f/REPORT.md",
+      "scope": "Exact singular physical pair; arbitrary remaining curvature; essential boundedness only; gives 2^(11/4)(|a|||g||)^(-1/2)."
+    },
+    {
+      "id": "PRODUCT-LINEAR-PROJECTION-CAP",
+      "source": "same account02/B08 proof dependency",
+      "scope": "For a linear form <g,Z> of original independent cap-one coordinates, density cap <=sqrt(2)/||g||; used only as a marginal density theorem, never as post-rotation independence."
+    }
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B09",
+    "source": "yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682:proofnet24/QFORM-density/fleet-2026-09-22/account04/B09/20260923T101659Z-account04-B09-dense-self-cross-fourier-r1/REPORT.md",
+    "application": "K=diag(4,2,1), A=[[0,K],[K,0]], det K=8, spectrum {-4,-2,-1,1,2,4}; theorem gives ||p_Q||infinity<=3/2 and P(Q in I)<=(3/2)|I| with continuity."
+  },
+  "new_result": {
+    "id": "QFORM-DEFINITEPAIR-POLYNOMIAL-STAR-UNIFORM-v1",
+    "status": "SUPPORTING_PROOF_SUPPLIED_PENDING_INDEPENDENT_REVIEW",
+    "statement": "For a literal original-coordinate definite physical pair B=[[a,c],[c,b]] and full arms u,v into arbitrary remaining original coordinates, let H=a v-c u. If H!=0, then for arbitrary independent cap-one sources and arbitrary remaining quadratic/affine curvature, ||p_Q||infinity<=2^(5/4) pi sqrt(3)||H||^(-1/2), with the same coefficient times interval length. No lower bound on det B is required. Essential boundedness is proved; continuity is not separately proved.",
+    "key_lemma": "For f<=1, the arcsine maximal operator Af(c)=sup_R int_{c-R}^{c+R} f(y)/sqrt(R^2-(y-c)^2)dy obeys Af<=pi sqrt(M_c f), hence if q is a probability density capped by K, int q Af<=2 pi sqrt(3K). This yields sup_t E[(t-delta Y^2-2YL-W)_+^(-1/2)]<=2 pi sqrt(3M) uniformly for delta>0 when L has density cap M.",
+    "live_application": "Under account02/B08 gates |a|>(4031/8192)L and ||g||>=L/8, every punctured definite survivor det B>0 satisfies ||p_Q||infinity<52.1833025296/L, uniformly as det B/a->0+. Exact det B=0 remains paid at <27.1247693734/L.",
+    "boundary": "A star-only extension to det B<0 is false: A=[[1,0,0],[0,-d,g],[0,g,-g^2/d]] gives Q=X^2-d(Y-(g/d)Z)^2 and a logarithmically divergent density at zero for independent uniforms despite fixed nonzero H=g. A third smoothing resource is necessary."
+  },
+  "outputs": {
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_commit": "fd800c8358502f8e947f77f47e06ac3e5fae1742",
+    "report": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260924T091232Z-account03-B09-QFORM-r47/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260924T091232Z-account03-B09-QFORM-r47/CHECK.py",
+    "checker_output": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260924T091232Z-account03-B09-QFORM-r47/CHECK_OUTPUT.txt",
+    "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B09/20260924T091232Z-account03-B09-QFORM-r47.md"
+  },
+  "verification": {
+    "deterministic_checks": "passed",
+    "scope": "1000 seeded square-completion and polynomial-star algebra checks; arcsine bathtub numerical regression; target-valid stress spectra down to det B=1e-12; live and partner constant checks.",
+    "proof_status": "analytic proof supplied; independent end-to-end review still required before promotion beyond supporting theorem"
+  },
+  "unresolved_implication": "QFORM-NEAR-SINGULAR-INDEFINITE-PAIR-THIRD-RESOURCE-COMPILER-v1",
+  "next_step": "In det B<0 punctured survivors, retain a third genuine original-coordinate spectral/crossing smoothing resource jointly with the logarithmic pair; route via a paid physical 3x3 cross determinant, aggregate projected third volume, or a new three-resource logarithmic convolution. Do not assume an independent extra square or discard the small Schur coefficient.",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

@@ -1,0 +1,125 @@
+\section*{Independent reconstruction of B06-A028-PAID-U-BOUNDARY-v1}
+
+\paragraph{Audited claim.}
+Let $f$ be Boolean and let $\mathcal T$ be a finite physical restriction
+tree.  At an internal node $v$, reached with probability $p_v$, the live
+coordinate $i_v$ is queried and $f_v$ is the restricted Boolean function.
+Write
+\[
+ \rho_i(g)=\Delta_iU(g)-K_i^{(0)}(g)
+           =B_i(g)-\Gamma_i(g)+K_i^{(+)}(g),
+\]
+\[
+ \Pi_I(\mathcal T)=\sum_{v\in\mathcal T^\circ}
+                 p_v\operatorname{Inf}_{i_v}(f_v).
+\]
+The source theorem assumes fixed $A,\kappa\ge0$ and $0\le b<1$, a tree
+for every nonconstant $f$, leaf estimates
+\[
+ U(f_\ell)\le\kappa I(f_\ell),                              \tag{1}
+\]
+and the aggregate residual estimate
+\[
+ \sum_vp_v\rho_{i_v}(f_v)\le A\Pi_I(\mathcal T)+bU(f).       \tag{2}
+\]
+It concludes
+\[
+ U(f)\le{\max\{A,\kappa\}I(f)+(2/\ln2)\operatorname{Var}(f)\over1-b}.
+                                                                    \tag{3}
+\]
+
+\paragraph{Exact telescope audit.}
+At a single live query,
+\[
+ U(g)=\Delta_iU(g)+\frac{U(g_{i=1})+U(g_{i=-1})}{2}.         \tag{4}
+\]
+Multiplying by the reach probability and summing cancels every internal
+child exactly once, giving
+\[
+ \sum_vp_v\Delta_{i_v}U(f_v)
+ =U(f)-\sum_\ell p_\ell U(f_\ell).                          \tag{5}
+\]
+Fourier restriction gives
+\[
+ I(g)=\operatorname{Inf}_i(g)
+      +\frac{I(g_{i=1})+I(g_{i=-1})}{2},                    \tag{6}
+\]
+so the same cancellation yields
+\[
+ \Pi_I(\mathcal T)
+ =I(f)-\sum_\ell p_\ell I(f_\ell).                          \tag{7}
+\]
+This is an equality, not a comparison: queried influence and terminal
+influence are disjoint in the root ledger.
+
+\paragraph{Independent root-row reconstruction.}
+At node $v$, let
+\[
+ a_v=\mathbb E[f\mid E_v],\qquad
+ d_v=\mathbb E[f x_{i_v}\mid E_v],\qquad m_v=a_v^2+d_v^2.
+\]
+Boolean convolution gives the empty-row formula
+\[
+ K_{i_v}^{(0)}(f_v)
+ =m_v\left[1-h_2\left({1+2a_vd_v/m_v\over2}\right)\right].
+\]
+The scalar inequality
+\[
+ 1-h_2((1+x)/2)\le{1-\sqrt{1-x^2}\over\ln2}
+\]
+therefore gives
+\[
+ K_{i_v}^{(0)}(f_v)
+ \le {m_v-|a_v^2-d_v^2|\over\ln2}
+ ={2\min(a_v^2,d_v^2)\over\ln2}
+ \le {2d_v^2\over\ln2}.                                    \tag{8}
+\]
+The node functions
+\[
+ \psi_v={\mathbf1_{E_v}x_{i_v}\over\sqrt{p_v}}
+\]
+are orthonormal.  Incomparable nodes have disjoint supports; at a strict
+descendant, the ancestor coordinate is fixed and the new query coordinate
+is still conditionally fair.  Since
+$\langle f,\psi_v\rangle=\sqrt{p_v}d_v$, Bessel gives
+\[
+ \sum_vp_vK_{i_v}^{(0)}(f_v)
+ \le {2\over\ln2}\sum_vp_vd_v^2
+ \le {2\over\ln2}\operatorname{Var}(f).                    \tag{9}
+\]
+The same physical coordinate may appear at incomparable nodes without
+affecting orthogonality.  It cannot reappear on one path because a physical
+restriction has fixed it.
+
+\paragraph{Assembly.}
+Using $\Delta_iU=K_i^{(0)}+\rho_i$, equations (2), (5), and (9) give
+\[
+ U(f)-\sum_\ell p_\ell U(f_\ell)
+ \le {2\over\ln2}\operatorname{Var}(f)+A\Pi_I+bU(f).
+\]
+Apply (1) and (7):
+\[
+ (1-b)U(f)
+ \le {2\over\ln2}\operatorname{Var}(f)+AI(f)
+       +(\kappa-A)\sum_\ell p_\ell I(f_\ell).
+\]
+Because $0\le\sum_\ell p_\ell I(f_\ell)\le I(f)$, this is (3).
+The source reduction $H\le2I+2U$ then gives
+\[
+ H(f)\le
+ \left(2+{2(\max\{A,\kappa\}+2/\ln2)\over1-b}\right)I(f).   \tag{10}
+\]
+Constants have $I=U=0$ and are separate endpoints.
+
+\paragraph{Verdict and first unsupported universal line.}
+The proof HOLDS at its stated conditional scope.  All quantifiers,
+normalizations, signs, terminal costs, and the single-use influence ledger
+are valid.  It is not yet a universal GU proof.  The first unpaid line is
+the existence, for every Boolean $f$, of one finite physical tree satisfying
+(1)--(2) with a single fixed triple $(A,\kappa,b)$, $b<1$.  The previous
+LTF-terminal modulation theorem supplies (1) only for a proper family and
+does not prove (2) for an arbitrary non-flat shared-data collision.
+
+The source theorem is an explicitly sufficient global $U$-drift route to
+FEI, not a proof of $G\le aI+bU$ itself.  Relabeling (2) as universal GU
+would be a quantifier error.

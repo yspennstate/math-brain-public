@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T175727Z-account03-B02-qform-r36",
+  "status": "PASS",
+  "proof_role": "corroborative arithmetic and finite identity regression only; symbolic proof is in REPORT.md",
+  "constants": {
+    "C4_exact": "(27*pi/2)^(1/4)",
+    "C4_numeric": 2.5519426504183844,
+    "direct_density_constant_exact": "(5/4)*3^(6/5)",
+    "direct_density_constant_numeric": 4.67149102355819,
+    "direct_L1_constant_exact": "(5*pi/2)*3^(6/5)",
+    "direct_L1_constant_numeric": 29.351843761842144,
+    "partner_hybrid_constant_exact": "3^(13/6)*2^(1/9)/2",
+    "partner_hybrid_constant_numeric": 5.836876444050815,
+    "strong_cut_c3": 0.72674560546875,
+    "near_rank2_e2_floor": 0.004061770999669534,
+    "near_rank1_x1_floor": 0.6813240051269531
+  },
+  "symbolic_simplifications": {
+    "direct_density": "10*(pi*C4*6^(3/4)/8)^(4/5)/(2*pi) = (5/4)*3^(6/5)",
+    "partner_hybrid": "(3*sqrt(3)/(2*pi))*(6*pi*2^(2/3))^(1/6)*(pi*C4)^(2/3) = 3^(13/6)*2^(1/9)/2"
+  },
+  "aggregate_identity_regression": {
+    "seed": 360923,
+    "dimensions": "m=3,...,10",
+    "trials_per_dimension": 50,
+    "total_trials": 400,
+    "max_relative_frobenius_error_sum_wIwIT": 2.496968008927496e-15,
+    "max_relative_error_signed_curvature_trace": 1.4876988529977098e-14,
+    "violations": 0
+  }
+}

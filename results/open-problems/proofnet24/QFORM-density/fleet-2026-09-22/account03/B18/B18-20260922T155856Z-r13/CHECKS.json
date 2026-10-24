@@ -1,0 +1,35 @@
+{
+  "run_id": "B18-20260922T155856Z-r13",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "four_dimensional_target_example_spectrum",
+      "matrix": [[3,0,1,0],[0,0,0,1],[1,0,0,0],[0,1,0,0]],
+      "exact_spectrum": ["(3+sqrt(13))/2", "(3-sqrt(13))/2", "1", "-1"],
+      "at_least_three_abs_ge_1": true
+    },
+    {
+      "name": "five_dimensional_schur_residual",
+      "S": [[4,0,2,0],[0,0,0,2],[2,0,0,0],[0,2,0,0]],
+      "exact_spectrum": ["2+2sqrt(2)", "2-2sqrt(2)", "2", "-2"],
+      "cross_block": [[2,0],[0,2]],
+      "singular_values": [2,2]
+    },
+    {
+      "name": "five_dimensional_target_perturbation",
+      "a": 2,
+      "b": [0.05,0.05,0.05,0.05],
+      "b_norm_exact": "1/10",
+      "operator_norm_upper_bound_exact": "21/200",
+      "preserved_large_eigenvalue_margin_exact": "379/200",
+      "at_least_four_abs_gt_1": true
+    },
+    {
+      "name": "constants",
+      "one_sided_rank2_bound_when_sigma2_ge_1": 3.5449077018110318,
+      "schur_bound_when_abs_a_ge_1_sigma2_ge_1": 3.7655850551068597,
+      "explicit_five_dimensional_bound": 1.8827925275534299
+    }
+  ],
+  "note": "Finite arithmetic checks support the displayed examples only; the theorems are analytic and do not depend on these checks."
+}

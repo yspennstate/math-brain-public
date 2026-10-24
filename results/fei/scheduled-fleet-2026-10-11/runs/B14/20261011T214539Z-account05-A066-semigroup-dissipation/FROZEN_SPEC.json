@@ -1,0 +1,12 @@
+{
+  "helper_version": "A066-heat-flow-v1; check.py v1",
+  "family": "All Boolean sign truth tables in dimensions 0 through 3; point defects in dimensions 2 through 8; dictator sanity check",
+  "parameter_domain": "n in {0,1,2,3}; point defects n in {2,...,8}; rational damping r=exp(-2t) in {1/4,1/2,3/4,1}",
+  "case_count": "278 exhaustive truth tables plus 7 point-defect truth tables; 4 damping values per spectrum",
+  "symmetry_reduction": "None; all truth tables explicitly included",
+  "arithmetic": "Integer Walsh transforms and Fraction probabilities, influences, and polynomial weights. Logarithms are retained as formal log(1/p) atoms; no floating logarithm certifies an inequality. All-parameter inequalities are proved analytically in DERIVATION.md.",
+  "memory_estimate": "Less than 30 MB; largest truth table 256 entries",
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "proof_role": "Finite checks validate algebra and conventions; they do not prove the universal integrated influence target"
+}

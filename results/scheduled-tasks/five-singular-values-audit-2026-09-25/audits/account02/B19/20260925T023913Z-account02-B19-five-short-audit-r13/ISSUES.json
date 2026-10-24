@@ -1,0 +1,114 @@
+{
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_tex_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "issues": [
+    {
+      "id": "C04",
+      "lines": "41",
+      "page": 1,
+      "status": "FALSE",
+      "literal": "unqualified random-sign conversion in abstract",
+      "repair": "add 'in the no-pivot regime' / the Section 6 small-entry hypothesis",
+      "impact": "outline only; proof already assumes no pivot",
+      "constant_change": false
+    },
+    {
+      "id": "C07",
+      "lines": "62",
+      "page": 1,
+      "status": "UNCHECKED",
+      "literal": "current-literature claim that the three-direction density case remains open",
+      "repair": "external literature verification only",
+      "impact": "none on proof",
+      "constant_change": false
+    },
+    {
+      "id": "C05",
+      "lines": "65",
+      "page": 1,
+      "status": "FALSE",
+      "literal": "outline says the conditional quadratic law has a square-root or logarithmic singularity",
+      "repair": "say it admits the corresponding upper envelope; definite pair can be bounded",
+      "impact": "outline only",
+      "constant_change": false
+    },
+    {
+      "id": "C06",
+      "lines": "148",
+      "page": 3,
+      "status": "PASS",
+      "literal": "'Both follow' after three assertions",
+      "repair": "grammar: 'All three follow'",
+      "impact": "none",
+      "constant_change": false
+    },
+    {
+      "id": "B19-N01",
+      "lines": "222",
+      "page": 5,
+      "status": "FALSE",
+      "literal": "'Factors with beta_i=0 are at most one'",
+      "counterexample": "n=4,d=2,U=[e1,e2], orthogonal complement W=[e3,e4], so beta_1=beta_2=0",
+      "repair": "drop all zero-beta factors; each is independent of z and <=1; positive-beta frame identity remains; entropy with 0 log 0 unchanged",
+      "impact": "Lemma 3.2 and all descendants remain valid after local repair",
+      "constant_change": false
+    },
+    {
+      "id": "C02",
+      "lines": "319-321",
+      "page": 7,
+      "status": "GAP",
+      "literal": "averaging conditional squared estimate directly to |phi_Q|^2",
+      "repair": "insert Jensen/Cauchy |E F|^2 <= E|F|^2",
+      "impact": "hub lemma and descendants close with same constants",
+      "constant_change": false
+    },
+    {
+      "id": "C01",
+      "lines": "412",
+      "page": 9,
+      "status": "FALSE",
+      "literal": "half-open polar chart called a diffeomorphism onto punctured plane",
+      "repair": "remove one angular seam/null ray, or state the a.e. change-of-variables chart",
+      "impact": "definite-pair Jacobian/density formula unchanged",
+      "constant_change": false
+    },
+    {
+      "id": "TAIL",
+      "lines": "431-437",
+      "pages": "9-10",
+      "status": "PASS",
+      "literal": "separate positive- and negative-tail coordinate choices",
+      "repair": null,
+      "impact": "historical selector defect is already repaired in this pinned short source",
+      "constant_change": false
+    },
+    {
+      "id": "C03",
+      "lines": "441",
+      "page": 10,
+      "status": "GAP",
+      "literal": "proof covers z>v and z<v but omits explicit critical-level atom exclusion",
+      "repair": "state q=v is a union of two affine lines for nondegenerate indefinite B, hence has zero probability under the joint density",
+      "impact": "global absolute continuity closes; constants unchanged",
+      "constant_change": false
+    },
+    {
+      "id": "LIT",
+      "lines": "74,651-671",
+      "pages": "2,14",
+      "status": "UNCHECKED",
+      "literal": "external related-work/bibliographic attributions",
+      "repair": "bibliographic verification if desired",
+      "impact": "no proof dependency",
+      "constant_change": false
+    }
+  ],
+  "new_in_this_run": [],
+  "repeated_run_result": "No additional mathematical defect was found beyond the independently revalidated listed issues. The theorem-level dependency graph closes after the local C01/C02/C03/B19-N01 repairs; C04/C05 are exposition-only and C07/LIT are non-proof literature metadata.",
+  "theorem_literal_source_status": "GAP_FALSE_LOCALLY_REPAIRABLE",
+  "theorem_repaired_status": "PASS_AFTER_LOCAL_REPAIRS",
+  "fatal_gap": false,
+  "constants_changed": false
+}

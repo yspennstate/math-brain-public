@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260923T190206Z-account03-B16-QFORM-auto11b",
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control_revision": "2026-09-22.15",
+  "control_commit_before_publication": "a802ea75a84ebd60eecfa4f733e4bc8b4a8783b0",
+  "owner_requests_consumed": [
+    "QFORM-DENSITY-3EIG-20260922",
+    "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z"
+  ],
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY",
+    "FIBER-SUP-DIMENSION-FREE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-CONDITIONAL-PROJECTION-ALL-POSITIVE-MOMENTS-FALSE-v1"
+  ],
+  "new_correction_event": {
+    "id": "QFORM-NONZERO-PIVOT-CONDITIONAL-MARGINAL-CAPS-FALSE-v1",
+    "status": "REFUTED_INTERMEDIATE_INTERFACE",
+    "brain_commit": "ceaaeefe8e6a482e732e1029998b7495f5453a90",
+    "note": "Not a QFORM counterexample; it refutes only a caps-only extension from zero pivot to nonzero pivot."
+  },
+  "actual_premises": [
+    "Inherited exact-rank-three B16 near-coloop hard chamber c>63/64.",
+    "Every surviving leaf transverse leverage p_j^2+q_j^2 is <1/64.",
+    "The original physical hub X_0 remains independent of every leaf coordinate.",
+    "Livshyts-Paouris-Pivovarov gives joint density cap 2 for the orthonormal two-dimensional leaf projection (U,V).",
+    "QFORM-ZERO-PIVOT-CONDITIONAL-TRACE-v1 accepts a genuine conditional scalar density cap, not independence.",
+    "The diffuse proof of QFORM-RANK2-AFFINE-HALF-RIESZ-v1 gives constant 4 sqrt(2e)|det H|^(-1/4).",
+    "The r30 ultra-collar compiler supplies the product-preserving two-bank structure on 0<|a|D<2^-12."
+  ],
+  "designated_partner_actual_application": {
+    "partner": "account04/B16",
+    "source_commit": "48d2f4234b05dfa527f1119c2c3dfc4a4b941f5d",
+    "result": "QFORM-HEAVY-FRESH-TRANSVERSE-CROSS-LIFT-v1",
+    "mapping": "fresh bank J={0}, n=1, receiver P=(U,V), det(MM^T)=1, gamma=ac, det B_a=det Lambda/a",
+    "inequality": "||p_Q||_infinity <=128 c^(-1/2)(|a|D)^(-1/4)"
+  },
+  "results": [
+    {
+      "id": "QFORM-NEARCOLOOP-CONDITIONAL-SHIFT-ZEROPIVOT-v1",
+      "status": "PROVED_SUPPORTING_BRANCH",
+      "scope": "exact rank three, true near-coloop B16 hard chamber, a=0",
+      "bound": "||p_Q||_infinity <7.6",
+      "continuity": "NOT_CLAIMED"
+    },
+    {
+      "id": "QFORM-NEARCOLOOP-SIGNFREE-PUNCTURED-OUTER-v1",
+      "status": "PROVED_SUPPORTING_BRANCH",
+      "scope": "same chamber, a!=0",
+      "bound": "||p_Q||_infinity <=4 sqrt(2e)c^(-1/2)(|a|D)^(-1/4); if |a|D>=2^-12 then <76",
+      "continuity": "NOT_CLAIMED"
+    },
+    {
+      "id": "QFORM-NONZERO-PIVOT-CONDITIONAL-MARGINAL-CAPS-FALSE-v1",
+      "status": "PROVED_INTERFACE_COUNTEREXAMPLE",
+      "scope": "arbitrary dependent 3D laws with conditional scalar cap and 2D marginal cap; not the QFORM product class",
+      "statement": "fixed det G=-1 but output density height >=4/(3a) as pivot a decreases to zero"
+    }
+  ],
+  "survivor": {
+    "description": "Exact-rank-three true-near-coloop punctured ultra-collar 0<|a|D<2^-12, with the previously proved two disjoint transverse-balanced, hyperbolic-mass banks and projected-crossing/Pluecker resources.",
+    "warning": "Do not replace the banks by only a scalar conditional cap plus a two-dimensional marginal cap; the new explicit counterexample proves that interface is insufficient for nonzero pivot. Do not delete acY^2 using coefficient smallness without moments."
+  },
+  "next_implication": "QFORM-PUNCTURED-ULTRACOLOOP-PRODUCT-RECEIVER-v2",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "GLOBAL_OPEN_NEW_BRANCHES_ESSENTIAL_BOUND_ONLY",
+  "canonical_bundle": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bdbe6e38a3ee3d586e8e6119e518c573310253fb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T190206Z-account03-B16-QFORM-auto11b/"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "69c5adcc6504bfbcba38200c17ba22e6a4fedd26",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B16/20260923T190206Z-account03-B16-QFORM-auto11b.md"
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

@@ -1,0 +1,13 @@
+{
+  "helper_version": "A066-joint-refinement-v1; reuses exact Walsh/log definitions from own stage2 check_restrictions.py, SHA256 recorded in output",
+  "family": "Every Boolean truth table on n=1,2,3; every nonempty physical block; every fixed ordering of that block. Actual point-defect signs f_n=1-2 indicator of one vertex.",
+  "domain": {"pilot_max_n": 2, "full_max_n": 3, "compressed_defect_dimensions": [1,128], "direct_defect_dimensions": [1,8]},
+  "case_count": {"pilot_function_block_order": 68, "full_function_block_order": 3908, "full_singleton_root_rows": 804, "compressed_defects": 128, "direct_defects": 8, "proper_block_obstruction": 1},
+  "symmetry": "None for truth tables; all block orderings. Closed spectral histogram used only for the specified point-defect family, with direct agreement checks n<=8.",
+  "arithmetic": "Integer Walsh transform; Fraction probabilities; canonical formal rational logarithm sums for exact identities; range-reduced 24-term positive atanh series with rigorous tail; factorial-series rational e enclosure; outward dyadic 80-bit certificate serialization.",
+  "memory_estimate_mb": 80,
+  "max_runtime_seconds_per_invocation": 60,
+  "commands": ["python -X utf8 code/check_joint.py pilot", "python -X utf8 code/check_joint.py full"],
+  "automatic_dimension_escalation": false,
+  "purpose": "Verify new joint singleton price and repaired signed block transfer against direct physical restrictions; reconstruct all-n defect ledger and the existing A088 obstruction. Finite checks do not establish universal statements; DERIVATION.md supplies their proofs."
+}

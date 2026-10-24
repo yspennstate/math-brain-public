@@ -1,0 +1,16 @@
+{
+ "helper_version":"A015-SUBPROB-TRANSPORT-AND-CENTRAL-REVIEW@1",
+ "family":"All 256 Boolean functions on n=3 for transport; actual A008 central threshold products for compatible-root review; abstract q are supplied references, not new Boolean counterfamilies",
+ "domain":"transport n=3 all 256 truth tables, all3 queries, four fixed positive references; source projection all coordinate subsets and six query orders; central physical k=1,2,3 all Fourier coefficients; actual queue k=1,2 every nonempty output; combinatorial review k=1..12 all good block-degree pairs",
+ "case_count":{"transport_queries":3072,"projection_orders":24,"physical_central_functions":3,"actual_queue_outputs":270,"pilot_truth_tables":8},
+ "symmetry":"No quotient of physical functions or queue outputs. Central combinatorial formula checks use block-degree symmetry explicitly.",
+ "arithmetic":"Integer Walsh and direct character sums; Fraction masses; exact exponentiated rational logarithmic identities and signs; dyadic outward fifth-root bounds at32 binary digits for queue visits",
+ "memory_estimate_mb":95,
+ "max_runtime_seconds":55,
+ "pilot_max_seconds":55,
+ "heavy_job":false,
+ "frozen_before_execution":true,
+ "commands":["python -X utf8 code/check.py --pilot","python -X utf8 code/check.py"],
+ "negative_control":"For actual Maj3 and one fixed smoothed subreference, omit projection denominator and require the exact product sign to become negative. Failure of that guard fails the checker.",
+ "scope":"All-dimensional transport and central review follow analytic derivations; finite checks do not imply universal root payment. No automatic dimension escalation."
+}

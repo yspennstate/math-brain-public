@@ -1,0 +1,13 @@
+(4, 4) valid= 31 four_port= 6 canonical_two_splice= 0
+(5, 5) valid= 121 four_port= 81 canonical_two_splice= 0
+(6, 6) valid= 456 four_port= 396 canonical_two_splice= 0
+(4, 6) valid= 80 four_port= 48 canonical_two_splice= 0
+(5, 4) valid= 65 four_port= 30 canonical_two_splice= 0
+(4, 5) valid= 52 four_port= 24 canonical_two_splice= 0
+example_word ++-+--+-
+plus [(0, 0), (3, 0), (2, 3), (1, 1)]
+minus [(3, 3), (2, 2), (2, 1), (1, 0)]
+states [(0, 0), (3, 0), (3, 3), (2, 3), (2, 2), (2, 1), (1, 1), (1, 0)]
+valid_functional True
+four_distinct_selection ((0, 3), (0, 1), [(0, 0), (1, 1)], [(3, 3), (2, 2)])
+canonical_two_splice None

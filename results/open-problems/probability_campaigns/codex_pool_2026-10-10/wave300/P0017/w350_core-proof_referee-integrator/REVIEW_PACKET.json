@@ -1,0 +1,258 @@
+{
+  "worker": "w350",
+  "target": "P0017",
+  "date": "2026-10-10T04:59:50.396707+00:00",
+  "verdicts": [
+    {
+      "id": "w350-R348-L1",
+      "subject": "w348 ATTEMPT.md L1",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "exact_scope": "1<=p<=q; tensor has both original block symmetries; norm sums ordered coordinates; optimality requires dim H>=2 and W nonzero.",
+      "independent_reproduction": "reviews/w348_independent.md proves the bound using the normalized disjointness operator and independently derives the sharpness witness. The peer's incidence identity has coefficient binom(q-p+r,p) on an ordered pair with intersection r; Vandermonde yields its nonnegative sum, including the identity term.",
+      "measurement": "35 sharpness pairs, 925 components, 140 arbitrary symmetric-block fixtures, 9 separate coordinate enumerations passed in check_math.py.",
+      "remaining_gap": "This deterministic lemma does not supply any all-function analytic Taylor bound or full KLS proof."
+    },
+    {
+      "id": "w350-R348-L2",
+      "subject": "w348 ATTEMPT.md L2",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "exact_scope": "First-block symmetry only, Q orthogonal second-block average, delta=||T-QT||.",
+      "independent_reproduction": "Q commutes with first-block symmetrization. Apply L1 to QT, use ||P QT||<=||PT||+delta and ||T||<=||QT||+delta to obtain binom(q,p)||PT||+(binom(q,p)+1)delta. The explicit antisymmetric p=1,q=2 tensor has squared norm 2 and projection 0.",
+      "remaining_gap": "Error coefficient is valid but not claimed optimal; no KLS implication without the external analytic input."
+    },
+    {
+      "id": "w350-R348-L3",
+      "subject": "w348 ATTEMPT.md L3",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "exact_scope": "Independent centered rate-one exponentials in any finite dimension; all f in L2; normalized ordered-index HS derivatives, d>=1.",
+      "independent_reproduction": "The normalized tilt kernel is product_i (1-z_i)exp(z_i Y_i). Its coefficients P_j=y^j/j!-y^(j-1)/(j-1)! are centered for j>=1 and have Gram coefficient binom(j+k-2,j-1). Ordered-index multiplicities give weight alpha!/d!. Different supports are orthogonal by independence and centering. Within support size s, the finite-rank frame trace is <=binom(2(d-s),d-s)*sum alpha!/d!<=binom(2d-2,d-1). The direct-sum norm is the maximum over support blocks, not their sum. f=P_d(Y_1)/sqrt(binom(2d-2,d-1)) attains equality. Central binomial upper/lower bounds imply optimal all-degree base 2.",
+      "remaining_gap": "Product independence is indispensable to this proof; the same direct-sum argument has not been proved for correlated log-concave laws. No full-target claim."
+    },
+    {
+      "id": "w350-R348-L4-original",
+      "subject": "w348 ATTEMPT.md L4",
+      "verdict": "FIX",
+      "reviewer": "w350",
+      "exact_scope": "Centered isotropic probability measure with finite fourth moments; symmetric HS matrix tests.",
+      "independent_reproduction": "reviews/L4_DOMAIN_FIX.md gives a centered isotropic polynomial-tail law of finite fourth moment with divergent MGF at every nonzero real tilt, and proves the repaired derivative domain using Cauchy-Schwarz.",
+      "remaining_gap": "Isotropy alone supplies no universal quadratic variance upper bound; that bound and higher-degree inputs remain external in this packet.",
+      "finding": "Finite fourth moments alone do not define exponential tilts near zero. The covariance operator identity is valid, but its identification as D^2F_f(0)/2 requires a local exponential moment.",
+      "corrected_statement": "Define U_2f=0.5 E[f(XX^T-I)] under finite fourth moments. It has the stated quadratic-variance dual norm. If the law additionally has exponential moments near zero, U_2 is the tilt derivative T_2."
+    },
+    {
+      "id": "w350-R348-L4-corrected",
+      "subject": "w348 current ATTEMPT.md L4, repaired algebraic statement",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "exact_scope": "Centered isotropic law with finite fourth moments for U_2; add a local exponential moment only for the equality U_2=T_2.",
+      "independent_reproduction": "Hilbert duality proves the algebraic identity under fourth moments. For |z|<epsilon/4, the extra E exp(epsilon|X|)<infinity and Cauchy-Schwarz justify numerator derivatives for every L2 f. Quotient differentiation then gives D^2F_f(0)/2=U_2. The current author artifact separates these two assertions.",
+      "remaining_gap": "No uniform quadratic variance upper bound is derived. This is a corrected auxiliary statement, not a full-target proof."
+    },
+    {
+      "id": "w350-R349-C001",
+      "subject": "w349-C001",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "independent_reproduction": "For f(x)=u.x, |u|=1, isotropy gives variance=1 and energy=1, so C_P>=1.",
+      "remaining_gap": "This is a lower bound, not the target upper bound.",
+      "scope": "Exact normalization assertion only; no parent solution."
+    },
+    {
+      "id": "w350-R349-C002",
+      "subject": "w349-C002",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "independent_reproduction": "Wick's formula yields delta_1i delta_jk + delta_1j delta_ik + delta_1k delta_ij. The three diagonal squared norms are n and the three cross products are 1, giving 3n+6; log MGF=|z|^2/2 has fourth derivative zero.",
+      "remaining_gap": "Does not refute cumulant or normalized tilt-derivative bounds.",
+      "scope": "Ordered Hilbert-Schmidt tensor norm and Gaussian example."
+    },
+    {
+      "id": "w350-R349-C003",
+      "subject": "w349-C003",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "independent_reproduction": "Let Z=X+1~Exp(1). Tilting exp(theta X) multiplies density by exp(theta Z), changing rate to 1-theta. For theta<1 normalization exists and Var(X)=(1-theta)^-2.",
+      "remaining_gap": "No stochastic-path frequency or averaged covariance statement follows.",
+      "scope": "Worst-case normalizable deterministic linear tilts."
+    },
+    {
+      "id": "w350-R349-C004",
+      "subject": "w349-C004",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "independent_reproduction": "Multiplying exp(-(x+1))1{x>=-1} by exp(x-tx^2/2) leaves a truncated Gaussian. For Z=sqrt(t)X the truncation is Z>=-sqrt(t). Dominated convergence of moments on [-1,infinity) gives mean sqrt(2/pi), second moment 1, variance 1-2/pi.",
+      "remaining_gap": "The worst-case endpoint theta=1 is paired with t>0. At t=0 its tilt is not normalizable. No localization expectation conclusion.",
+      "scope": "Asymptotic as t decreases to zero from positive values."
+    },
+    {
+      "id": "w350-R349-C005",
+      "subject": "w349-C005",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "independent_reproduction": "Stopped Brownian Y_t is a bounded martingale in [-1/4,1/4]. diag(1+Y_t,1-Y_t) has eigenvalues in [3/4,5/4] and expectation I. Its operator norm is 1+|Y_t|. At every t>0 the stopped value is nonzero with positive probability, hence expected norm>1.",
+      "remaining_gap": "It is a generic matrix martingale; no assertion that it is a log-concave localization covariance. The optional small-drift extension is excluded from this KEEP pending a separately stated interval bound.",
+      "scope": "The claim row's zero-drift assertion only."
+    },
+    {
+      "id": "w350-R349-W1",
+      "subject": "w349 WEIGHTED_GAP.md posterior factorization counterexample",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "exact_scope": "X=Exp(1)-1, s>0, Y=sX+sqrt(s)Z, independent standard Gaussian Z, fixed f(x)=x. Mathematical strictness only; the reported quadrature value is not independently certified by w350.",
+      "independent_reproduction": "The posterior is N((y-1)/s,1/s) truncated at -1. At y=1-s its variance is (1-2/pi)/s; as y tends to positive infinity it tends to 1/s. The variance A(y) is continuous, so it is nonconstant. Y has positive density everywhere and 0<A<=1/s, hence Var(A(Y))>0. The proposed bound reduces to E A^2 <= (E A)^2 and is strictly false.",
+      "remaining_gap": "Does not refute the correctly weighted bound or KLS."
+    },
+    {
+      "id": "w350-R349-W2",
+      "subject": "w349 WEIGHTED_GAP.md conditional Gronwall reduction",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "exact_scope": "Full-dimensional compactly supported isotropic log-concave prior; smooth f; assumed uniform T>0 and K>=0 with E|Cov_mu_t(f,X)|^2 <= K E Var_mu_t(f) for almost every t<T.",
+      "independent_reproduction": "Innovation Y_t-integral a_r dr has zero conditional drift and bracket tI; compact support gives integrability, so Levy identifies a Brownian motion. Bayes/Ito gives d(mu_t f)=Cov_mu_t(f,X).dW_t. Ito isometry and total variance give V(t)=V(0)-integral E|Cov|^2. The assumed inequality implies V(T)>=exp(-KT)V(0). Posterior curvature T gives V(T)<=energy/T by generalized strong-log-concavity Poincare. For extension, truncate an arbitrary prior on expanding balls and whiten. Its means converge to 0 and covariance matrices Sigma_j converge to I; transfer the bound to the unwhitened conditional laws with factor ||Sigma_j||, then pass compact smooth tests to the limit.",
+      "remaining_gap": "The weighted all-function input and the generalized strong-log-concavity Poincare inequality are explicit external inputs; no parent proof is claimed."
+    },
+    {
+      "id": "w350-R349-C009",
+      "subject": "w349-C009 sharp equality witness",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "exact_scope": "1<=p<=q, dim H>=2; extended passive W is nonzero.",
+      "independent_reproduction": "The coefficient witness and kth finite difference were independently derived in reviews/w348_independent.md before paired proof access; 35 p,q pairs and 925 components check the exact block-reversal identity.",
+      "remaining_gap": "The equality witness is not alone an upper-bound proof; that upper bound is separately checked as w348 L1."
+    },
+    {
+      "id": "w350-R349-C010",
+      "subject": "w349-C010 finite-fourth-moment tilt-domain counterexample",
+      "verdict": "KEEP",
+      "reviewer": "w350",
+      "exact_scope": "R density 5 r^-6 for r>=1, independent fair sign S, X=sqrt(3/5) S R. It is a counterexample to the general moment-only domain assertion, not a log-concave example.",
+      "independent_reproduction": "Integral_1^infinity 5r^(k-6)dr=5/(5-k) for k<5. Symmetry gives mean 0; scaling gives variance (3/5)*(5/3)=1 and fourth moment (9/25)*5=9/5. For any z!=0, the half with matching sign has an exponential integral against r^-6 and diverges.",
+      "remaining_gap": "The covariance-operator norm identity remains valid; the parent log-concave route has exponential moments."
+    }
+  ],
+  "source_status": "SOURCE_STATUS.json",
+  "own_attempt": "ATTEMPT.md",
+  "own_reviewer": "w353",
+  "own_review_status": "PENDING",
+  "reviewer_request_receipt": "msg-f94cc18b0d",
+  "hardest_unproved_input": "Universal all-function Gaussian-channel variance retention for all isotropic log-concave laws. It is quantitatively equivalent to the Poincare target, not a proved input.",
+  "peer_hardest_unproved_inputs": [
+    "w348: universal all-degree normalized Taylor tensor bound beyond exponential products",
+    "w349: uniform variance-weighted covariance bound (W)"
+  ],
+  "reproductions": [
+    "reviews/w348_independent.md",
+    "reviews/w348_verdicts.jsonl",
+    "reviews/w349_verdicts.jsonl"
+  ],
+  "snapshots": "reviews/snapshot_provenance.json",
+  "measurements": [
+    "measurements/math_checks.json",
+    "measurements/before_after.json",
+    "measurements/fresh_host_gate.json",
+    "measurements/exponential_frame.json"
+  ],
+  "bundle_states": {
+    "prepared_at": "2026-10-10T04:59:50.396707+00:00",
+    "bundle_001": {
+      "path": "~\\math-brain-inbox\\w350\\bundle_001.json",
+      "prepared": true,
+      "submitted": true,
+      "reviewed": "Own reduction independent reviewer w353 requested, pending. All new reductions are typed concept, not theorem.",
+      "ingested": false,
+      "retrievable": false,
+      "ingestion_verification": "No coordinator receipt or retrieval run has been checked; the false flags mean unverified, not a claimed inspection of integration."
+    },
+    "bundle_002": {
+      "path": "~\\math-brain-inbox\\w350\\bundle_002.part",
+      "prepared": true,
+      "submitted": false,
+      "reviewed": "Current four peer lemma statements independently reproduced by w350. Original L4 derivative generality required FIX; current U_2 statement is repaired. Second-account and statement review remain pending.",
+      "ingested": false,
+      "retrievable": false,
+      "duplicate_author_check": {
+        "observed_queued_peer_files": [
+          "~\\math-brain-inbox\\w348\\bundle_001.json"
+        ],
+        "decision": "Keep the reviewer copy unsubmitted. Apply the w350 KEEP verdicts to the original author bundle; the coordinator must avoid duplicate mathematical nodes."
+      },
+      "ingestion_verification": "No coordinator receipt or retrieval run has been checked; the false flags mean unverified, not a claimed inspection of integration."
+    },
+    "live_store_written": false,
+    "formal_check_receipt": null,
+    "parent_problem_solved_by_this_packet": false,
+    "bundle_003": {
+      "path": "~\\math-brain-inbox\\w350\\bundle_003.part",
+      "prepared": true,
+      "submitted": false,
+      "reviewed": "Author counterexample and exponential-bound proof drafts; narrow independent audit requested from w353, pending.",
+      "ingested": false,
+      "retrievable": false,
+      "ingestion_verification": "No coordinator receipt or retrieval run has been checked; the false flags mean unverified, not a claimed inspection of integration."
+    }
+  },
+  "open_votes": [],
+  "NEXT": "Independently audit Claims A-B adjoint and Sobolev-domain steps; retain VR as the explicit full-target input, then finish second-account review of the peer lemma bundle.",
+  "independent_account_identity": "Not verified from private profiles; one independent worker KEEP is recorded for each peer claim, not two account keeps.",
+  "verdict_counts": {
+    "KEEP": 13,
+    "FIX": 1,
+    "DROP": 0
+  },
+  "domain_correction": "reviews/L4_DOMAIN_FIX.md; original L4 FIX, current repaired L4 KEEP, w349-C010 counterexample KEEP. No unsubmitted lemma draft was ingested by this worker.",
+  "additional_author_drafts": [
+    {
+      "id": "w350-C005",
+      "statement": "No universal T>0 and finite K bound E[A_t Var(f(X)|Y_t)]/E Var(f(X)|Y_t) by K for every compactly supported full-dimensional isotropic log-concave prior in dimension one, every fixed smooth f, and almost every t in (0,T). For the original prior X=Exp(1)-1, Y_t=tX+sqrt(t)G and f_c(x)=exp(cx), this ratio tends to 1/t as c increases to 1/2. A_t is the posterior variance under the ORIGINAL prior.",
+      "assumptions": [
+        "Independent standard Gaussian observation noise",
+        "The counterexample concerns the stronger operator-norm variance-weighted estimate, not the actual covariance estimate (W)",
+        "The compact transfer uses recentering, whitening and smooth tests agreeing with the exponential on compact prior support"
+      ],
+      "source": "owner-own-work: w350 derivation in OPERATOR_WEIGHTED_COUNTEREXAMPLE.md; scope of the surrogate from w349 WEIGHTED_GAP.md",
+      "proof_or_counterexample": "Apply Claim A with the proved exponential C_P<=4. Bound the deficit 1/t-A_t by its expectation under f_c^2 weighting. The weighted joint law has X+1 of rate 1-2c, while A_t remains the ORIGINAL posterior variance. This deficit tends to zero. Truncated-exponential inverse-CDF coupling, dominated posterior moments and whitening transfer a strict violation to a compact isotropic law; continuity supplies an open time interval.",
+      "proof_artifact": "~\\brain_workers\\w350\\OPERATOR_WEIGHTED_COUNTEREXAMPLE.md",
+      "independent_reviewer": "w353",
+      "remaining_gap": "Independent audit pending of Claim A, retained-original-posterior weighting and the compact-isotropic limit. Does not refute actual (W), universal retention or the parent KLS statement. No novelty claim.",
+      "status": "sketch",
+      "proof_written": true,
+      "parent_problem_solved": false
+    },
+    {
+      "id": "w350-C006",
+      "statement": "The rate-one exponential law on [0,infinity), and its translate Exp(1)-1, satisfy the Sobolev Poincare inequality with C_P<=4.",
+      "assumptions": [
+        "Finite variance and finite weighted derivative energy; other cases follow by the extended-energy interpretation"
+      ],
+      "source": "owner-own-work: explicit half-line Sobolev calculation in OPERATOR_WEIGHTED_COUNTEREXAMPLE.md section 1",
+      "proof_or_counterexample": "For centered h put g=h exp(-y/2). Energy equals ||g_prime||^2+(1/4)||g||^2-(1/2)g(0)^2. Centering implies integral g_prime exp(-y/2)=-g(0), so g(0)^2<=||g_prime||^2. Energy is at least variance/4. Weighted Sobolev cutoff/density extends the calculation.",
+      "proof_artifact": "~\\brain_workers\\w350\\OPERATOR_WEIGHTED_COUNTEREXAMPLE.md",
+      "independent_reviewer": "w353",
+      "remaining_gap": "Independent boundary/domain audit pending. This is a known special-case bound, with no novelty or general KLS claim.",
+      "status": "sketch",
+      "proof_written": true,
+      "parent_problem_solved": false
+    }
+  ],
+  "additional_counterexample_scope": "Only the stronger operator-norm variance-weighted surrogate. The actual covariance input (W), all-function VR and parent KLS are not refuted or solved.",
+  "new_counterexample_review_request": {
+    "reviewer": "w353",
+    "message_id": "msg-372c00540a",
+    "status": "PENDING",
+    "claim_ids": [
+      "w350-C005",
+      "w350-C006"
+    ],
+    "artifact": "~\\brain_workers\\w350\\OPERATOR_WEIGHTED_COUNTEREXAMPLE.md"
+  },
+  "statement_correction_review_request": {
+    "reviewer": "claude-4a88bc43",
+    "message_id": "msg-312a2dc8e5",
+    "status": "PENDING",
+    "artifact": "~\\brain_workers\\w350\\reviews\\L4_DOMAIN_FIX.md"
+  },
+  "completion_state": "NEEDS_REVIEW"
+}

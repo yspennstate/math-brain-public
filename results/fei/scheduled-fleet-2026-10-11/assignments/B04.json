@@ -1,0 +1,385 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B04",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A016",
+      "stream": "B04",
+      "topic": "Addressing benchmark",
+      "target_statement": "Reproduce H=2a and I=1+a/2 for a-bit addressing, and compare coordinatewise, one-root, and posterior code costs. Derive the asymptotic ratio of each proposed cost to I.",
+      "work_type": "baseline_reproduction",
+      "priority": "P0",
+      "mathematical_design_status": "RECOVERED_BASELINE",
+      "deliverables": [
+        {
+          "deliverable_id": "A016-D1",
+          "description": "ADDRESSING_BASELINE.tex: exact spectrum, H, I, and three code costs",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A016-D2",
+          "description": "ADDRESSING_CONTROL.json: fixed small controls and symbolic asymptotics",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Prove H=2a and I=1+a/2 for a fresh a-bit selector and distinct data characters, including a=0.",
+        "Compute coordinatewise, complete-set one-root, and posterior costs under their actual code definitions; do not assume the bad code's asymptotic loss.",
+        "Treat the O(a) repair and sharp H=4(I−1) relation as existing baselines rather than new research results."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A004",
+          "interface": "units and character conventions"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A006",
+          "interface_use": "exact addressing reference"
+        },
+        {
+          "agent_id": "A008",
+          "interface_use": "address-code calibration"
+        },
+        {
+          "agent_id": "A015",
+          "interface_use": "one-root addressing contrast"
+        },
+        {
+          "agent_id": "A076",
+          "interface_use": "addressing comparison"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 1,
+      "renewal_milestone": "One accepted calibration is reused everywhere; retire the packet after discrepancies between implementations are resolved.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_multiplexers",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F11",
+        "F12"
+      ]
+    },
+    {
+      "agent_id": "A017",
+      "stream": "B04",
+      "topic": "Recursive addressing",
+      "target_statement": "Build iterated address functions with controlled input reuse. Derive exact recursive entropy and influence ledgers and identify where the same gate label can be shared across levels.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A017-D1",
+          "description": "RECURSIVE_ADDRESSING.tex: explicit family and level-by-level exact H/I recurrence",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A017-D2",
+          "description": "REUSE_CONDITIONS.json: selector freshness and branch-dependence certificate",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Specify at each node which coordinates are fresh selectors and which are shared data; shared control variables require a new proof.",
+        "Account for cross-level coefficient collisions and selector influence, instead of multiplying disjoint-composition formulas through reuse.",
+        "Show an unbounded-depth or unbounded-arity regime beyond an already proved orthogonal-selector iteration, or identify why the candidate lies within that baseline."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A018",
+          "interface": "exact shared-data collision law"
+        },
+        {
+          "agent_id": "A013",
+          "interface": "composition stability"
+        },
+        {
+          "agent_id": "A019",
+          "interface": "new correlation-class criterion"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A013",
+          "interface_use": "recursive addressing construction"
+        },
+        {
+          "agent_id": "A030",
+          "interface_use": "controlled input reuse"
+        },
+        {
+          "agent_id": "A077",
+          "interface_use": "recursive selector definitions"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A new recursive family with a closed exact ledger or a rigorous obstruction to its claimed closure is ready for review.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_multiplexers",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F11",
+        "F12"
+      ]
+    },
+    {
+      "agent_id": "A018",
+      "stream": "B04",
+      "topic": "Shared-data collision law",
+      "target_statement": "Exploit the exact Walsh collision identity for arbitrary overlapping branches. Characterize when posterior label entropy cancels the selector alphabet cost and when coherent interference adds entropy.",
+      "work_type": "interface_derivation",
+      "priority": "P0",
+      "mathematical_design_status": "RECOVERED_BASELINE",
+      "deliverables": [
+        {
+          "deliverable_id": "A018-D1",
+          "description": "COLLISION_BLOCK_INTERFACE.tex: R_T, r_T, ν_T, B_W, M_W and exact decrement",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A018-D2",
+          "description": "COLLISION_CONTROLS.json: identical, opposite, orthogonal, and bent-splice branches",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Prove or source-pin Δ_WH=Σ_T R_T H(ν_T)+a−Σ_T R_T H(r_T) with zero-mass T omitted and all quantities normalized.",
+        "Identify B_W=Σ_T R_T H(ν_T), M_W=a−Σ_T R_T H(r_T), and 0≤M_W≤(2/ln2)I_W as the exact B04→B06 interface.",
+        "Reproduce complete selector-cost cancellation for identical branches and the existing bent-splice failure of a universal Δ_selH≤C I_sel bound; no new constant-correlation theorem is claimed here."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A004",
+          "interface": "logarithm and normalization ledger"
+        },
+        {
+          "agent_id": "A056",
+          "interface": "existing disjoint-composition comparison"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A017",
+          "interface_use": "exact shared-data collision law"
+        },
+        {
+          "agent_id": "A019",
+          "interface_use": "exact collision and block decrement interface"
+        },
+        {
+          "agent_id": "A020",
+          "interface_use": "exact collision/block identity"
+        },
+        {
+          "agent_id": "A026",
+          "interface_use": "exact block/one-coordinate erasure interface"
+        },
+        {
+          "agent_id": "A027",
+          "interface_use": "B_W/M_W collision-to-restriction interface"
+        },
+        {
+          "agent_id": "A037",
+          "interface_use": "posterior information in exact collision"
+        },
+        {
+          "agent_id": "A057",
+          "interface_use": "exact coherent collision interface"
+        },
+        {
+          "agent_id": "A058",
+          "interface_use": "exact collision/block ledger"
+        },
+        {
+          "agent_id": "A061",
+          "interface_use": "exact restriction decrement interface"
+        },
+        {
+          "agent_id": "A063",
+          "interface_use": "spectral erasure versus collision mixing"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One reviewed shared-data/block interface is frozen and handed to A019/A027/A057/A058; new conjectures move to those packets.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_multiplexers",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F11",
+        "F12"
+      ]
+    },
+    {
+      "agent_id": "A019",
+      "stream": "B04",
+      "topic": "Orthogonality extensions",
+      "target_statement": "Start from the already proved disagreement closure C′=max{2/c,C}. Prove a uniform positive neighboring-disagreement bound from a genuinely new unbounded class, or sharply control the exact collision debt as disagreement tends to zero under explicit structure. Import the bent-splice falsifier and do not rederive the existing constant-correlation corollary as a new result.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A019-D1",
+          "description": "NEW_SHARED_DATA_CLASS.tex: explicit growing family and structural theorem",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A019-D2",
+          "description": "COLLISION_PAYMENT.md: derived disagreement or exact vanishing-disagreement cancellation",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Treat C′=max{2/c,C} under a proved uniform neighboring disagreement c>0 as an existing corollary, not the proposed new result.",
+        "Either prove a uniform c from a genuinely new unbounded-depth/arity class outside current structural hypotheses, or bound the exact collision debt under a stated structure when c→0.",
+        "Apply the a=1 bent-splice control with I_sel=2^(−m) and Δ_selH/I_sel≥m−1; any valid new hypothesis must explain why its claimed payment survives or excludes that family."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A018",
+          "interface": "exact collision and block decrement interface"
+        },
+        {
+          "agent_id": "A020",
+          "interface": "bent-splice and nearly identical branch guards"
+        },
+        {
+          "agent_id": "A060",
+          "interface": "closure sharpness examples"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A017",
+          "interface_use": "new correlation-class criterion"
+        },
+        {
+          "agent_id": "A020",
+          "interface_use": "candidate class hypothesis"
+        },
+        {
+          "agent_id": "A058",
+          "interface_use": "boundary of the already studied selector classes"
+        },
+        {
+          "agent_id": "A060",
+          "interface_use": "proposed correlation/class closure"
+        },
+        {
+          "agent_id": "A091",
+          "interface_use": "new shared-data class theorem"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A newly admitted unbounded class or a nontrivial exact collision payment as c→0, with no universal selector-only increment assumption.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_multiplexers",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F11",
+        "F12"
+      ]
+    },
+    {
+      "agent_id": "A020",
+      "stream": "B04",
+      "topic": "Selector boundary tests",
+      "target_statement": "Construct selectors with coincident Fourier supports, unequal cell sizes, affine cells, and nearly identical branches. Refute any proposed closure that silently discards interference or selector influence.",
+      "work_type": "targeted_countersearch",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A020-D1",
+          "description": "SELECTOR_FALSIFIER_SUITE.tex: exact unequal-cell, support-collision, affine, and near-equality controls",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A020-D2",
+          "description": "SELECTOR_FAILURE_SCOPE.json: precise hypothesis or constant invalidated",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Include the recovered bent-splice family analytically, with one selector bit and divergent decrement-to-selector-influence ratio.",
+        "Compute the actual shared coefficients before squaring; coincident Fourier supports are not treated as a disjoint mixture.",
+        "An unequal-cell or near-identical-branch counterexample states whether it breaks separation, uniform disagreement, or a proposed new collision payment."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A018",
+          "interface": "exact collision/block identity"
+        },
+        {
+          "agent_id": "A019",
+          "interface": "candidate class hypothesis"
+        },
+        {
+          "agent_id": "A022",
+          "interface": "one-point bent splice"
+        },
+        {
+          "agent_id": "A073",
+          "interface": "certified entropy comparison"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A019",
+          "interface_use": "bent-splice and nearly identical branch guards"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "At least one candidate-specific exclusion or certified new failure is handed to A019/A027/A058.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_multiplexers",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F11",
+        "F12"
+      ]
+    }
+  ]
+}

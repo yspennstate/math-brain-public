@@ -1,0 +1,41 @@
+[
+  {
+    "claim_id": "A085-ABSOLUTE-TV-RESET-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer n>=2 let F_n be the uniform Boolean sign on n+1 bits which is negative exactly at integer vertices 0,1,3; query least-significant bit j. Its squared Fourier law has full support, both physical children are nonconstant, Inf_j=2^-n, I=(3n-1)2^-n and H<=8I. Starting with matching complete root reference Q=P_F and giving both children the inherited marginal q, the conditional occupancy refund is exactly zero. On the j=0 point-defect child let a={y1}, t=2^-n, q_a=2t^2, q_0=1-6t+10t^2, p_0=(1-2t)^2 and M=2^(2n-2). Replace only q(a) by q(a)2^-M and add the removed mass to q(empty); leave the other terminal and already booked erasure unchanged. The new reference has full support and total variation <2^(1-2n), but its physically weighted signed complete reset bill is Z_n=[1-p_0 log2(1+q_a(1-2^-M)/q_0)]/2>3/8, with Z_n->1/2. Thus Z_n/Inf_j->infinity and no dimension-independent absolute-TV tolerance alone certifies an O(I) same-account reset. The first member has dimension three, minimal for full root support and two nonconstant children. This refutes an absolute-TV reset surrogate, not A099 exact RS2 or FEI. A multiplicative bound qtilde>=(1-eta)q on occupied atoms instead gives reset increase <=-log2(1-eta), for 0<=eta<1.",
+    "hypotheses": [
+      "Bits; finite uniform Boolean cube; exact complete normalized reference",
+      "Full matching root and conservative common child marginal",
+      "One specified descendant reference reset; both full terminals and booked debit retained",
+      "Integers n>=2; full-support root and descendants references; no side atom discarded"
+    ],
+    "statement_sha256": "1c3a1f364e96c0cd4677a0203538f099310cd3f6c4529d5ad140e53bc94856a3",
+    "contributors": [
+      "A085"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261021T174013Z-account03-A085-certificate-adversary\\PROOF.md",
+      "locators": "Sections 1-5",
+      "checker": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261021T174013Z-account03-A085-certificate-adversary\\code\\check_fullsupport.py",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261021T174013Z-account03-A085-certificate-adversary\\out\\FULLSUPPORT_CHECK.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "ANALYTIC_AUTHOR_PROOF_WITH_EXACT_FINITE_CERTIFICATES_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Absolute total-variation proximity alone uniformly preserves O(I) complete-reference reset costs, even on full-support matching roots with two nonconstant children"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A097",
+      "A099",
+      "A081",
+      "A094",
+      "A092",
+      "B17",
+      "B20"
+    ]
+  }
+]

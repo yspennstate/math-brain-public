@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260924T061805Z-account01-B12-QFORM-auto11",
+  "source_control_commit_at_start": "ea03ec93004479079764b6b0085d42e0e09c3c3a",
+  "source_control_commit_before_publication": "4b74ac6ede897b79cc19c061f16be266f3545b78",
+  "brain_state": "WITHOUT_VERIFIED_BRAIN",
+  "status": "PROVED_SUPPORTING_PLUECKER_SPECTRAL_STABILITY_FULL_TARGET_OPEN",
+  "target_status": "OPEN",
+  "continuity_status": "PROVED_ONLY_ON_THE_D5_BRANCH_NOT_FULL_TARGET",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BIINDEPENDENT-SPECTRAL-MODES-NOT-CROSS-VOLUME-v1"
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-PLUECKER-RANKONE-SPECTRAL-STABILITY-v1",
+      "statement": "For Z_k(B)=e_k(B^T B)>0 and any rank-one physical update B+theta a b^T, the full k-minor vector is D_k(B)+theta C_k(B;a,b), hence Z_k(B+theta ab^T)=||D+theta C||_2^2 and inf_theta Z_k=eta^2 Z_k(B), where eta is the sine of the angle between D and C. Thus eta>0 prevents rank-k collapse for every sign and magnitude of theta."
+    },
+    {
+      "id": "QFORM-TWOSIDED-RANKk-RESONANCE-FORMULA-v1",
+      "statement": "When rank(B)=k and B=U Sigma V^T, Z_k(B+theta ab^T)=(det Sigma)^2[1+2 theta tau+theta^2 R], with tau=beta^T Sigma^{-1} alpha and R-tau^2 the explicit sum of left-, right-, and two-sided transverse repair energies."
+    }
+  ],
+  "partner_applied": {
+    "account_slot": "account02/B12",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "572fa1f2bc3b1ab29018a426f414d21dce2b5504",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260924T055637Z-account02-B12-QFORM-auto11/REPORT.md",
+    "theorem": "QFORM-RELATIVE-NUMERICAL-RANGE-MODE-SHIELD-v1",
+    "actual_inequality_used": "s_5(B_c)>=2 for B_c=2(I_9+K_c^T) in the explicit hostile-spectrum family"
+  },
+  "receiver_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+    "theorem": "D5 fifth-volume receiver",
+    "scope": "actual disjoint original-coordinate cross block; no row-marginal condition",
+    "bound": "||p_Q||_infinity <= 5 sqrt(2e) e_5(B^T B)^(-1/10)"
+  },
+  "concrete_application": {
+    "description": "Starting from partner B_c with s_5=2, four further mutually orthogonal spectral modes v_r=(e_{h_r}+e_{j_{4+r}})/sqrt(2) with arbitrary real eigenvalues preserve s_5>=2 exactly because B_c^T E_lambda=0. After a low signed packet of norm 1/64 and a further tail with cross norm 1/64, s_5(A[H,J])>=63/32.",
+    "density_bound": 5.921635508818094,
+    "target_spectral_check": "s_5(A)>=63/32>1",
+    "density_regularization": "continuous C_0 on this D5 branch"
+  },
+  "mathematical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "01264c3a225f6e55100c8745cc78c5624fa5f030",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260924T061805Z-account01-B12-QFORM-auto11/REPORT.md"
+  },
+  "checks": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "297f649f17accbf882611bce01c8706188db2163",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260924T061805Z-account01-B12-QFORM-auto11/CHECK_RESULTS.txt",
+    "role": "finite sanity check only, not proof"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "f45daaba6b10947f35b70811e58e64551f6fc56e",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B12/20260924T061805Z-account01-B12-QFORM-auto11.md"
+  },
+  "unresolved_implication": "Derive, from bare s_3(A)>=1, either a quantitative original-coordinate fifth-volume carrier or a cancellation-aware exit to an already-paid grouped-bank/hub, pair, Schur, ridge, half-Riesz, common-plane, or related branch. Bi-independent spectral modes alone are insufficient because aggregate cross volume can cancel.",
+  "next_step": "Seek a cancellation-aware exterior-volume versus same-bank-curvature dichotomy, using the exact affine Pluecker-line identity to isolate the only truly destructive signed resonance.",
+  "updated_utc": "2026-09-24T06:30:00Z"
+}

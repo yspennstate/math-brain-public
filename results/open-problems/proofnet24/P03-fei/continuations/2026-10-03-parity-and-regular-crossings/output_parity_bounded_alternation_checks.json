@@ -1,0 +1,70 @@
+{
+  "status": "PASS finite validation; analytic proof separately supplied",
+  "dimensions": [
+    {
+      "dimension": 0,
+      "truth_functions": 2,
+      "parity_subsets": 1
+    },
+    {
+      "dimension": 1,
+      "truth_functions": 4,
+      "parity_subsets": 2
+    },
+    {
+      "dimension": 2,
+      "truth_functions": 16,
+      "parity_subsets": 4
+    },
+    {
+      "dimension": 3,
+      "truth_functions": 256,
+      "parity_subsets": 8
+    },
+    {
+      "dimension": 4,
+      "truth_functions": 65536,
+      "parity_subsets": 16
+    }
+  ],
+  "counts": {
+    "truth_functions": 65910,
+    "parity_pairs": 1051466,
+    "monotone_functions": 223,
+    "unate_partial_bound_pairs": 2075,
+    "endpoint_score_cases": 96,
+    "coordinate_orientation_cases": 96,
+    "zero_weight_score_cases": 24,
+    "constant_g_cases": 10,
+    "constant_h_pairs": 62
+  },
+  "maxima": {
+    "entropy_over_general_target": 0.16666666666666666,
+    "entropy_over_unate_target": 1.0
+  },
+  "sharp_unate_example": {
+    "dimension": 2,
+    "truth_values": [
+      -1,
+      1,
+      1,
+      1
+    ],
+    "entropy": 2,
+    "full_parity_influence": 1
+  },
+  "exact_checks": [
+    "all-function maximum path sign alternation",
+    "constant-output path vertices <= m+q+1",
+    "Fourier coefficient parity permutation",
+    "each coordinate influence complemented exactly on T",
+    "I(h)=|T|+I(g)-2*sum_T I_i(g)",
+    "full T specialization and coordinate orientations"
+  ],
+  "numerical_checks": [
+    "cotangent FEI bound",
+    "sharp unate partial-parity bound"
+  ],
+  "entropy_tolerance": 3e-11,
+  "scope": "Finite checks; no ordinary FEI for g or novelty certificate"
+}

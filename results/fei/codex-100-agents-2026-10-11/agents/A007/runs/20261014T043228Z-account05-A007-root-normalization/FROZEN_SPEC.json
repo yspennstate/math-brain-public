@@ -1,0 +1,14 @@
+{
+  "helper_version": "A007-original-posterior-tail-v1",
+  "family": "Full-support signed conjunction tables with N distinct positive full cells, common orders, lambda=1/N; actual parity prime tables for Boolean validation",
+  "domain": {"composition_s": [1,12], "N_values": "unique values in {1,2,4,16,2^(s-1)} for each s", "pilot_s": [1,5], "determinant_trace_s": [1,4], "determinant_trace_N": [1,4], "Delannoy_n": [0,40], "parity_m": [1,5]},
+  "case_count": "All ordered positive compositions in each fixed s,N domain; at most 5*(2^12-1) composition records. All N^s assignments for 16 fixed s,N pairs (s,N=1,...,4). 41 coefficient identities and five actual parity truth tables.",
+  "symmetry": "none for compositions/assignments; exact regrouping by increasing used gate IDs is proved, not assumed",
+  "arithmetic": "integer FWHT and pivotal counts, exact Fraction coefficients, fifth-power rational inequalities for gamma=6/5, sparse determinant polynomials and explicit actual child permutations; no floating logarithm certificates",
+  "memory_estimate_bytes": 120000000,
+  "maximum_runtime_seconds": 60,
+  "pilot_maximum_runtime_seconds": 60,
+  "dimension_escalation": false,
+  "claims_tested": "Exact retained W law versus actual forest events; recordwise entropy damping; exact prefactor C_s; Delannoy identity and rational growth majorant; constant 5 log2(6)<13; analytic all-dimensional tail and controller payment",
+  "limitations": "Finite certificates corroborate an analytic theorem; no universal base reference cost or arbitrary-support occupation payment is claimed"
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "stream": "B03",
+  "run_id": "20261012T014110Z-account01-B03-a014-rank-one-overlap",
+  "primary_packet_id": "A014",
+  "packet_ids": ["A014"],
+  "gap_id": "FEI-GAP-SHARED-SELECTOR-CIRCULARITY",
+  "attempt_id": "A014-RANK-ONE-OVERLAP-1",
+  "attempt_counter": 1,
+  "claim_versions": ["B03-A014-RANK-ONE-SIGNED-OVERLAP-v1", "B03-A014-ONE-DEFECT-MAJ3-SEPARATION-v1"],
+  "source_versions": {
+    "current_status_blob": "b367bbecba7527025320bded136fdb22eee5f362",
+    "stream_packet_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "packet_status_blob": "1beba565780ac4c3c1f28a00b20ca4d5e4e59ebb",
+    "claim_registry_blob": "bceaed2294e4dab574d363750858c6d3866137f8",
+    "obstruction_registry_blob": "e111933338dff1d7798c5e59b43700bbf30f7b96",
+    "B03_contract_blob": "02045d5236cbcfaee630469ed54e6022902b3dd9",
+    "B18_local_report_sha256": "039c7ea17c59030d59f470d980e8149810fb6303aa7a99b66a38f24457d112be"
+  },
+  "prior_status": "The exact overlap decomposition was proved, but its unrestricted conditional address-spectrum payment was shown to contain full FEI. A014 had no complete unbounded-read family with all congestion, label, rank, and root costs controlled.",
+  "new_status": "A rank-one signed-overlap theorem and a genuine one-point-defect times majority family now give a strict separation: worst read 2^t versus bounded spectral/fractional congestion and FEI constant below four. Independent review remains pending; full FEI remains open.",
+  "mathematical_delta": "Proved that balanced Boolean spectral rank one forces signed-copy factorization; paid the entire controller entropy explicitly; exhibited k=2^t, fractional congestion=1, rank=1, expected root cost<2, and H<4I.",
+  "deliverables": {
+    "A014-D1": "COMPLETE_PENDING_INDEPENDENT_REVIEW",
+    "A014-D2": "COMPLETE_PENDING_INDEPENDENT_REVIEW"
+  },
+  "acceptance_evidence": ["REPORT.md", "CLAIMS.json", "verify_rank_one_overlap.py", "CHECK.out"],
+  "remaining_obstacle": "No stable payment is known for spectral rank greater than one or approximate rank one without recovering the FEI-hard arbitrary controller term.",
+  "next_consumers": ["A009", "A068", "A086", "A097", "B20"],
+  "independent_reviewers": ["A086", "A094"],
+  "next_action": "Test a rank-two decomposition with two independently certified controllers and quantify the Boolean compatibility/cross-term obstruction before proposing any approximate-rank theorem.",
+  "stagnant_substantive_attempts": 0,
+  "delivery_status": {
+    "canonical": "SAVED_AND_EXACT_BLOB_READBACK_VERIFIED; artifact commit 32c09a14d540e3abda42660df5e435660b7b3c93",
+    "brain_mirror": "SAVED_AND_EXACT_BLOB_READBACK_VERIFIED; artifact commit ad443e41c199d9f555dcec47c18044fb6b405b13",
+    "independent_review": "PENDING",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN"
+}

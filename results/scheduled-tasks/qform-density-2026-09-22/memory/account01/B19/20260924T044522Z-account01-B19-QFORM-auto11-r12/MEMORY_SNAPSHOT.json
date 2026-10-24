@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "account": "account01",
+  "slot": "B19",
+  "run_id": "20260924T044522Z-account01-B19-QFORM-auto11-r12",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_initial_commit": "284e7b3ed4ebfce7efe7e183418d8c25d0c4cd8c",
+  "source_control_refresh_commit": "f415090f926052bc897bd0e83000028063c1fae9",
+  "owner_control_revision": "2026-09-22.15",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_SEPARATE",
+  "canonical_math": {
+    "report_commit": "1c7cd60173b1c7836e2613e3a096989ae76d6fff",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B19/20260924T044522Z-account01-B19-QFORM-auto11-r12/REPORT.md",
+    "checks_commit": "4d6a7ece404500ad26d9d8d561c39240bd45663d",
+    "addendum_commit": "da0590888162c3684c3fa77757bee0a60a91ab8a",
+    "early_calc_commit": "424ee0078605c51f7b405b20e966e8364f7a015b"
+  },
+  "handoff_commit": "f5b140052885ac4c8ad654c39e3d60178d90ecbf",
+  "partner_results_applied": [
+    {
+      "source": "yspennstate/math-open-problems@f4d95bc33caf8db11888cceb817c005484f67d31",
+      "claim": "QFORM-PHYSICAL-R2-FRACTIONAL-SMOOTHING-v1",
+      "scope": "literal original-coordinate physical cross block; arbitrary self curvature, outside couplings, affine terms, signs and extra spectrum retained"
+    },
+    {
+      "source": "yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f",
+      "claim": "physical indefinite-pair logarithmic transducer",
+      "scope": "two literal independent cap-one physical coordinates; arbitrary remainder-dependent shifts"
+    },
+    {
+      "source": "yspennstate/math-open-problems@c5347df59a4adcea406d9fa8ca0c88186670d731",
+      "claim": "curved rank-two two-bank scalarization obstruction + full three-resource payment",
+      "scope": "exact target-valid rank-three stress family"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-PAIRLOG-FRACTIONAL-SMALLBALL-TRANSDUCER-v1",
+      "status": "PROVED_SUPPORTING_ANALYTIC_LEMMA",
+      "statement": "If the exact remainder after an invertible indefinite physical pair has small-ball exponent alpha, the pair-log envelope optimizes to an explicit L-infinity bound; at alpha=1/4 the constant is 3*2^(4/3)."
+    },
+    {
+      "id": "QFORM-PHYSICAL-PAIR-PLUS-R2-SCHUR-LINFINITY-v1",
+      "status": "PROVED_SUPPORTING_RECEIVER",
+      "statement": "For pair scale D=|det B|, kappa=sigma_min(B) and Schur cross Z2>0, ||p_Q||inf <=18.8231503655 D^(-1/3) kappa^(-1/6) Z2^(-1/24)."
+    },
+    {
+      "id": "QFORM-INDEFINITE-PAIR-INCIDENT4VOLUME-RECEIVER-v1",
+      "status": "PROVED_SUPPORTING_RECEIVER",
+      "statement": "With W_T the aggregate squared disjoint 4x4 minors incident on the physical pair, ||p_Q||inf <=21.128271915 D^(-1/4) kappa^(-1/6) W_T^(-1/24)."
+    },
+    {
+      "id": "QFORM-DISJOINT-TETRAD-RIGIDITY-v1",
+      "status": "PROVED_DETERMINISTIC_STRUCTURE",
+      "statement": "If all disjoint 2x2 minors of a symmetric Schur matrix vanish, S=physical diagonal + symmetric rank<=2."
+    },
+    {
+      "id": "QFORM-TETRAD-STRONGTRIANGLE-STABILITY-v1",
+      "status": "PROVED_DETERMINISTIC_STRUCTURE",
+      "statement": "If W_dis^(1/2)=omega, one anchor triangle has edges >=mu and its anchor row norm <=R, then dist_F(S, diagonal+rank1)<=omega(4/mu+R/mu^2)."
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "exact_next_obligation": "QFORM-PAIR-INCIDENT4VOLUME-OR-DIAG-R2-JOINT-THIRD-PAYMENT-v1",
+  "next_step": "Cover small nonzero incident four-volume in the no-strong-triangle / large-star chamber, or route the resulting near diagonal-plus-low-rank Schur geometry jointly with the retained third target resource. Do not scalarize the curved two-bank core first.",
+  "notes": [
+    "Newest account02/B19 rank-three stress has rank-one Schur complement after every invertible pair, hence Z2=W_T=0 exactly; this validates the receiver boundary rather than contradicting it.",
+    "J_T=D^6*kappa^4*W_T is homogeneous of coefficient degree 24; the main report's word dimensionless is corrected in CHECKS.md to homogeneous after target-scale normalization.",
+    "No continuity claim is made by the new pair-log receivers."
+  ]
+}

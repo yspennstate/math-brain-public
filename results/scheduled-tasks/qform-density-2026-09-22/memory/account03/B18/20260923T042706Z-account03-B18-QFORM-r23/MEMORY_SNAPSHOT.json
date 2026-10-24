@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260923T042706Z-account03-B18-QFORM-r23",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "control_source_read": "scheduled_tasks/README.md",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "results": [
+    {
+      "id": "QFORM-SCHUR-ISOTROPIC-RLE2-DIFFUSE-CLOSURE-v1",
+      "status": "PROVED_SUPPORTING_TARGET_BRANCH",
+      "scope": "exact-rank-three Schur-isotropic core; 0<r<=2; every residual row squared norm<=1/2",
+      "conclusion": "continuous density; sup density <=3e(5/4)^(1/3)<8.785"
+    },
+    {
+      "id": "QFORM-CAPPED-BASIS-HIGHSHEAR-BARRIER-v1",
+      "status": "PROVED_METHOD_BARRIER",
+      "scope": "Schur-isotropic coefficient map L=[rn,V^T], V^TV=I3, r>=1; any basis law with special-coordinate marginal<=1/2",
+      "conclusion": "determinant-entropy score Z_w<=2r; sharp on the six-row duplicated-axis target family"
+    }
+  ],
+  "primary_sources": [
+    "Beckner, Inequalities in Fourier analysis, Annals of Mathematics 102 (1975), 159-182",
+    "Bennett-Carbery-Christ-Tao, The Brascamp-Lieb inequalities: finiteness, structure, and extremals, arXiv:math/0505065",
+    "Livshyts-Paouris-Pivovarov, On sharp bounds for marginal densities of product measures, arXiv:1507.07949"
+  ],
+  "partner_results_applied": [
+    {
+      "partner": "account04/B18",
+      "source": "yspennstate/math-open-problems@e9eb90e2a7746482fb3ba75bf449b224cbf507ce",
+      "application": "r<=1 and residual row norms squared<=1/2 gives continuous density <=3e"
+    },
+    {
+      "partner": "account04/B18",
+      "source": "yspennstate/math-open-problems@87dbe53e75a736bc87f97e02e40ebf2c3c13b095",
+      "application": "1<=r<=2 and row norms squared<=1/2 imply p_j+q_j<=1, hence continuous density <=3e(5/4)^(1/3)"
+    },
+    {
+      "partner": "account04/B18",
+      "source": "yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061",
+      "application": "on the duplicated-axis high-shear family, genuine scalar/pair independence yields density <=12 for r>=1"
+    }
+  ],
+  "scientific_repository": "yspennstate/math-open-problems",
+  "scientific_commit": "e8d024801adae701d47d58d85c41acb5b8ec4454",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T042706Z-account03-B18-QFORM-r23/REPORT.md",
+  "handoff_commit": "921327b7f720b5993a9f920f307ccd56e22f375a",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B18/20260923T042706Z-account03-B18-QFORM-r23.md",
+  "unresolved_implication": "For r>2, close genuinely non-source-separated high-shear residual frames, and route the low/moderate heavy-row complement; arbitrary additional spectrum still needs a global product-preserving reduction.",
+  "next_step": "Do not continue optimizing the capped-basis score alone in high shear. Use grouped/source-separated zero-pivot, heavy-row/ridge/hub, or another dependence-safe product-preserving transducer.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "proved on the new exact-rank-three branch and explicit high-shear witness family; unrestricted continuity open"
+}

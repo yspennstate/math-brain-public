@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "account": "account04",
+  "slot": "B17",
+  "run_id": "20260923T081528Z-account04-B17-QFORM-r4",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_start_commit": "cdd7543a77304d8b212104532969bf8631df9781",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "new_result": {
+    "name": "QFORM-HOUSEHOLDER-CUBE-CONE-EXACT-v1",
+    "matrix": "(1/3)[[1,-2,-2],[-2,1,-2],[-2,-2,1]]",
+    "spectrum": [1,1,-1],
+    "laws": "three independent Unif[-1/2,1/2], each density exactly one",
+    "certificate": "lim_{eps->0} P(|Q|<=eps)/(2eps) = 6sqrt(3) artanh((sqrt(2)-1)/sqrt(3)) = 2.5343552034856036...",
+    "scope": "exact dense all-heavy Householder cone tip only"
+  },
+  "partner_application": {
+    "source": "yspennstate/math-open-problems@87ad97a024629ad6f7eddb9db55fdbaaea1e0ba8",
+    "equation": "take the exact account01 rotational architecture at (m1,m2,m3)=(1,1,1), minority column e=(1,1,1)/sqrt3; then RJR^T=I-2ee^T"
+  },
+  "claude_application": {
+    "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+    "result": "the formerly numerical n=3 Householder value about 2.53 is now exact"
+  },
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "50e8478fc39475306f8e11c6b0318c6fd00f889a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B17/20260923T081528Z-account04-B17-QFORM-r4/REPORT.md",
+    "checker": "check_householder.py",
+    "check_status": "QFORM_HOUSEHOLDER_CUBE_CHECK_PASS"
+  },
+  "scope_warning": "Supporting analytic witness certificate only. It does not locate the global mode, pay the two-sheet side, prove universal sharpness of 3sqrt2, prove the full universal density theorem, or establish full-target continuity.",
+  "remaining_frontier": [
+    "off-tip/two-sheet peaks for dense shared-coordinate forms",
+    "asymmetric or fragmented laws in several heavy coordinates",
+    "multiscale/growing-activity constructions",
+    "coupled non-rank-one tails and arbitrary additional spectrum"
+  ],
+  "correction_discipline": {
+    "refuted_premises_used": false,
+    "not_used": [
+      "independence_after_rotation",
+      "arbitrary_joint_rank3_coarea",
+      "conditional_projection_positive_moments",
+      "fixed_fragment_localization",
+      "histogram_as_lower_certificate"
+    ]
+  }
+}

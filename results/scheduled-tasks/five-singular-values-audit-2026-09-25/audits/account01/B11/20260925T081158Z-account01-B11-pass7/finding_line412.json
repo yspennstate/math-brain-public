@@ -1,0 +1,11 @@
+{
+  "source_line":412,
+  "statement_label":"Lemma 5.2",
+  "status":"GAP",
+  "issue":"The polar chart omits w0. The source derives the density for z>v and declares it zero below v but does not explicitly exclude an atom at the omitted critical value z=v.",
+  "independent_repair":"After completing the square with B positive definite, q(w)=v iff w=w0. Since W has a Lebesgue density, P(W=w0)=0. Therefore the pushforward has no atom at v; define the density representative at v arbitrarily. The negative-definite case follows after q -> -q.",
+  "downstream":["Lemma 5.2","Lemma 5.6 definite branch","Proposition 7.2 pair branch","Theorem 1.1 definite-pair branch"],
+  "constant_change":false,
+  "hypothesis_change":false,
+  "peer_comparison":"Derived before reading account02/B09 pass-07; that summary does not separately list this no-atom omission."
+}

@@ -1,0 +1,23 @@
+P03 exact C_n verifier, integer-only comparison core
+Q=1048576 for dyadic log2-prime certificates
+prime=2 k=1048576 certificate: k/Q <= log2(p) < (k+1)/Q
+prime=3 k=1661953 certificate: k/Q <= log2(p) < (k+1)/Q
+prime=5 k=2434718 certificate: k/Q <= log2(p) < (k+1)/Q
+prime=7 k=2943724 certificate: k/Q <= log2(p) < (k+1)/Q
+prime=11 k=3627476 certificate: k/Q <= log2(p) < (k+1)/Q
+prime=13 k=3880192 certificate: k/Q <= log2(p) < (k+1)/Q
+NPN4_representatives=222 expected=222
+n=1 mode=full nonconstant=2 ties=2 ties_onepoint_or_complement=2 strict=0 inconclusive=0
+n=2 mode=full nonconstant=14 ties=8 ties_onepoint_or_complement=8 strict=6 inconclusive=0 min_strict_QtimesL_lower=8388608
+n=3 mode=full nonconstant=254 ties=16 ties_onepoint_or_complement=16 strict=238 inconclusive=0 min_strict_QtimesL_lower=24055736
+n=4 mode=full nonconstant=65534 ties=32 ties_onepoint_or_complement=32 strict=65502 inconclusive=0 min_strict_QtimesL_lower=44954722
+n=5 mode=222x65536 NPN-reduced nonconstant=14548991 ties=17 ties_onepoint_or_complement=17 strict=14548974 inconclusive=0 min_strict_QtimesL_lower=74240872
+n=5 reduced_expected_nonconstant=14548991
+Candidate exact formulas (bits):
+C1 = 0
+C2 = 2
+C3 = 16/3 - (3/2) log2(3)
+C4 = 12 - (49/16) log2(7)
+C5 = 128/5 - (45/8) log2(15)
+PASS: exact comparison certificates prove candidate >= every covered function; equality only for one-point flips/output complements.
+Coverage proof obligation used by checker: every 5-variable truth table f=(g,h) is NPN-equivalent, using only the first four inputs plus output complement, to one with g among the 222 representatives; h is then arbitrary and is exhaustively scanned.

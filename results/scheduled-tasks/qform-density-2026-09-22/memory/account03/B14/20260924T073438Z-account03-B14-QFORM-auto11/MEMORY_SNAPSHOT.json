@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260924T073438Z-account03-B14-QFORM-auto11",
+  "source_control_commit": "91c583588ff65dac10eaddb64c2e0e07c644c2f6",
+  "owner_control_revision": "2026-09-22.15",
+  "assignment_revision": "2026-09-22.5",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_qform_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "result_id": "QFORM-CANONICAL-SATURATED-MEDIAN-GENERIC-CORE-v1",
+  "result_status": "SUPPORTING_ZERO_LOSS_LOCALIZATION_THEOREM_PROVED",
+  "statement": "The optimal full QFORM interval-height constant equals the optimal constant on the affine core where every marginal is C_c^infinity, positive on the interior of one compact interval, lower-median zero, exact L-infinity cap one, and the symmetric matrix is rational generic with strict s_3>1. No common support diameter, moment, bridge floor, derivative bound, translation bound, or fragment-count bound is imposed.",
+  "proof_mechanism": [
+    "cap-preserving tail-mass compactification and smoothing",
+    "arbitrarily low smooth bridge to obtain one-interval connected support",
+    "exact median recentering with all shift information retained as affine leakage",
+    "exact marginal-cap saturation by positive diagonal congruence, preserving signed spectral threshold counts",
+    "generic rational perturbation only after compactification, chosen relative to the actual finite support radius so no moment is used",
+    "weak lower semicontinuity of output interval height",
+    "reverse affine homogenisation using one independent far cap-one auxiliary coordinate"
+  ],
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY-REFUTED",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1",
+    "QFORM-HUBSTAR-FIBERL2-MIXEDNORM-UNIVERSAL-FALSE-v1"
+  ],
+  "source_dependencies": [
+    "yspennstate/math-open-problems@7b0507a694df2c6f727f4d293c92d616bb46befb quantile-gauge localization",
+    "yspennstate/math-open-problems@27524c090248516692abfa19911c411adaa62c23 cap-saturation congruence",
+    "yspennstate/math-open-problems@46f817e053914df4ed718042194c1ff39f425e46 connected-support zero-loss approximation",
+    "yspennstate/math-open-problems@df6d00a11422f16763e8bccccc6bada6e4949a83 account01/B15 weak-height/generic core"
+  ],
+  "partner_result_applied": {
+    "source": "yspennstate/math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260924T001624Z-account04-B14-scaled-schur-localization-r10/REPORT.md",
+    "inequality": "sup_t ||p_((X+t)^T A (X+t))||_infinity <= 6 sqrt(pi)/sigma for a physical invertible 3x3 block with sigma=min|lambda|; for B_*=I-(2/3)11^T this is 10.634723105433096..."
+  },
+  "regularity_compiler": {
+    "source": "yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e",
+    "scope": "after an interval bound is proved for a fixed rank-at-least-three product quadratic instance, obtain a canonical C_0 density with the same height",
+    "applied_here": true
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "73adaff9841546b01091a1e129270d00e5cd9a92",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260924T073438Z-account03-B14-QFORM-auto11/"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "c6cab7bfb003ad947c2e8d872110480893225eae",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B14/20260924T073438Z-account03-B14-QFORM-auto11.md"
+  },
+  "unresolved_implication": "On the canonical core, prove a dimension-free matrix/product estimate uniform as generic physical pivots/minors tend to zero or spectral directions delocalise. The newest correction rules out the absoluteized hub-star fiber-L2 time-integral route; retain the third resource jointly before absolute values or use a certified source-separated/grouped exit.",
+  "continuity_ledger": "The canonical-core weak-limit reduction itself preserves essential height, not continuity. Separately, the source-pinned fixed-instance C_0 compiler gives same-height continuity after an interval estimate is paid. Full universal height remains open.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null,
+  "provider_thinking_tokens": null,
+  "provider_thinking_time": null
+}

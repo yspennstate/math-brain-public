@@ -1,0 +1,61 @@
+{
+  "run_id": "20260924T052338Z-account02-B20-QFORM-auto11-r46b",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "classification": "ESSENTIAL_STEP_APPLIED / NEW TARGET-LEVEL BRANCH RECEIVER / SCHUR-R1-COLLAPSE ISOLATED / FULL-QFORM-OPEN",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-INDEFINITE-PAIR-QUARTERPOTENTIAL-ENDPOINT-v1",
+      "status": "PROVED_SCOPED_THEOREM",
+      "statement": "For an invertible indefinite original-coordinate 2x2 principal pair B, D=|det B|, kappa=sigma_min(B), and exact Schur remainder R, if sup_s E|R-s|^{-1/4}<=L, then ||p_Q||_infinity <= 3*6^(2/3) D^(-1/3) kappa^(-1/6) L^(2/3).",
+      "dependencies": [
+        "account03/B20 r47 exact physical-pair logarithmic envelope",
+        "QFORM-LOG-TO-QUARTER-TRANSFER-v1"
+      ]
+    },
+    {
+      "id": "QFORM-INDEFINITE-PAIR-SCHUR-R2-ENDPOINT-v1",
+      "status": "PROVED_SCOPED_THEOREM",
+      "statement": "Under the previous pair hypotheses, if the exact Schur remainder coefficient matrix S has a literal original-coordinate cross block S[L,M] with Z2=e2(S[L,M]^T S[L,M])>0, then ||p_Q||_infinity <= 24.66530466603276 D^(-1/3) kappa^(-1/6) Z2^(-1/24).",
+      "dependencies": [
+        "QFORM-INDEFINITE-PAIR-QUARTERPOTENTIAL-ENDPOINT-v1",
+        "QFORM-PHYSICAL-R2-FRACTIONAL-SMOOTHING-v1"
+      ]
+    },
+    {
+      "id": "QFORM-R50-HEAVY-PAIR-POSTSCHUR-R2-EXIT-v1",
+      "status": "PROVED_SCOPED_APPLICATION",
+      "statement": "In the r50 robust light-light branch with mu=255/65536, if a disjoint all-small-diagonal heavy indefinite physical pair has D>=3/4096, kappa>=1/64 and the exact Schur remainder light-light cross block has sigma_2>=mu/2=255/131072, then ||p_Q||_infinity<1549.",
+      "numerical_bound": 1548.9034078724994
+    },
+    {
+      "id": "QFORM-R50-PINNED-D5-EXIT-v1",
+      "status": "PROVED_BY_PINNED_COMPLETED_SOURCE",
+      "statement": "On the actual r50 literal light-light cut M, e5(M^T M)>=1/1024 implies ||p_Q||_infinity <= 10 sqrt(2e) <23.317 by the pinned unrestricted D5 theorem.",
+      "numerical_bound": 23.316439815971243,
+      "source_commit": "e5f71d79eff325201dd0274053d20268ce65b837"
+    },
+    {
+      "id": "QFORM-ROBUST-PRESCHUR-R2-DOES-NOT-FORCE-POSTSCHUR-R2-v1",
+      "status": "REFUTED_INTERMEDIATE_STRUCTURAL_IMPLICATION",
+      "statement": "A robust pre-Schur rank-two crossing and a legal all-small-diagonal heavy indefinite physical pair do not force uniformly positive post-Schur rank-two volume, even under the full target spectral hypothesis.",
+      "witness": "For epsilon=1/32, N=epsilon^{-1}uv^T+ac^T and Bcross=[[N,u],[v^T,epsilon]] give full bipartite spectrum {-32.03125,-1,0,0,1,32.03125}, while the selected physical pair has D=1/1024, kappa=1/32 and exact Schur crossing ac^T of rank one. This is not a QFORM counterexample."
+    }
+  ],
+  "first_unpaid_implication": {
+    "id": "QFORM-R50-PAIR-SCHUR-R1-COLLAPSE-WITH-INTERNAL-CURVATURE-PAYMENT-v1",
+    "status": "OPEN",
+    "hypotheses": [
+      "full independent cap-one product target and at least three eigenvalues |lambda|>=1",
+      "r49/r50 literal original-coordinate robust light-light cut with sigma_2>255/65536",
+      "all-small-diagonal entry-heavy invertible indefinite physical pair disjoint from that cut",
+      "every disjoint post-puncture cross block has s_3<2^-16 unless another paid branch applies",
+      "the exact Schur remainder on the robust light-light cut has s_2<255/131072",
+      "the actual r50 light cut has e5<1/1024",
+      "all same-bank curvature, affine terms, outside couplings, extra spectrum, and nonzero coefficient tails retained"
+    ],
+    "required_conclusion": "Prove one universal essential density bound or source-preservingly route into a completed physical-pair, grouped-star/hub, ridge/window, Fresnel, or volume receiver."
+  },
+  "full_candidate_reviews": 0
+}

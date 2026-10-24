@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B05",
+  "run_id": "20260923T150834Z-account01-B05-QFORM-auto11",
+  "control_revision": "2026-09-22.15",
+  "start_control_commit": "feb0ad15ef4d7fa911dde59cba29c06b575b5c7f",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3900c05e9f4eb657b38c41f52e02ead0be23cf4b",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T150834Z-account01-B05-QFORM-auto11/REPORT.md",
+    "report_blob": "85f2ae01f2192e0114d2541a8c2b7430ecc3091d",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T150834Z-account01-B05-QFORM-auto11/CHECKS.json"
+  },
+  "mathematical_results": [
+    {
+      "id": "QFORM-NEARNULL-SCHUR-ANTI-PARABOLIC-v1",
+      "status": "PROVED_SUPPORTING_STRUCTURAL_IDENTITY",
+      "statement": "For M=[[d,g^T],[g,C]], d!=0, S=C-d^{-1}gg^T, one has q=d(s+d^{-1}g^Ty)^2+y^TSy and det M=d det S. Thus three large eigenvalues imply |det S|>=1/|d|."
+    },
+    {
+      "id": "QFORM-QUADRATIC-HUB-SQRT-SLICE-ONLY-FALSE-v1",
+      "status": "REFUTED_INTERMEDIATE_MECHANISM",
+      "statement": "Independent cap-one hub plus bounded L marginal plus uniform mu_l(E)<=K|E|^{1/2} does not suffice for Q=dX^2+2XL+Y. Explicit X,U,Z uniforms have K=2 yet a(X+U/a)^2-Z^2 has logarithmically unbounded density; the matrix has a zero eigenvalue, so QFORM itself is not refuted."
+    }
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B05",
+    "theorem": "QFORM-NEARNULL-SCALAR-DEPENDENT-PAIR-v1",
+    "source_commit": "c661893c05a7fd40d7f1e9b0a0a81a6f08f242a6",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T035943Z-account02-B05-QFORM-r21/REPORT.md",
+    "application": "For Q_eta=aX^2+2XU+(a^{-1}+eta)U^2-Z^2, ||p||inf<=31|a eta|^{-1/6}. At a=1, eta=-2, spectrum={sqrt(2),-sqrt(2),-1} and ||p||inf<27.618."
+  },
+  "newest_partner_context": {
+    "source_commit": "75df8a812c96735205ee8370363808fd734e2d12",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T130427Z-account02-B05-QFORM-auto11/REPORT.md",
+    "scope": "closes exact heavy null-pivot branch; near-null nonzero collar remains"
+  },
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY-refuted",
+    "FIBER-SUP-DIMENSION-FREE-refuted",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-2D-PRODUCT-PROJECTION-CONDITIONAL-CAP-MOMENTS-FALSE-v1"
+  ],
+  "unresolved_implication": {
+    "id": "QFORM-QUADRATIC-HUB-DETERMINANT-SENSITIVE-PRODUCT-SLICE-v1",
+    "statement": "For the exact heavy-row form d(sqrt(c)X_0+C)^2+y^TSy with |det S|>=1/|d|, prove a universal interval/density bound while retaining that (C,y) are simultaneous linear forms of the original independent residual coordinates. Spend determinant curvature before any slice-only relaxation."
+  },
+  "full_qform_status": "OPEN_NOT_PROVED",
+  "continuity_status": "NOT_PROVED",
+  "independent_review": "PENDING"
+}

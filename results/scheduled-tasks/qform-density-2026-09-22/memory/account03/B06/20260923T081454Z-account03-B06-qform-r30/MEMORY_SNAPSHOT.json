@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260923T081454Z-account03-B06-qform-r30",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit": "c91b7f9ef944f2d1a9f681d18928f82375036e2b",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "Curved fiber integration; weighted replacement using original-coordinate product structure",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-TWO-HUB-ANCHOR-CURRENCY-v1 + QFORM-ANCHOR-SCHUR-COFACTOR-IDENTITY-v1",
+      "source": "yspennstate/math-open-problems@36cc5730f42c76c15fdc330dc4b47beec060b8fd",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T061939Z-account03-B06-qform-r28/REPORT.md",
+      "scope_used": "zero-cross anchor gives K=||r||||c||>sqrt(127/800)G^2 in the live low-disjointness chamber"
+    },
+    {
+      "id": "QFORM-SHARED-COEFFICIENT-DOUBLESTAR-v1",
+      "source": "yspennstate/math-open-problems@5368af077ca929e49b8dc8adeb3e0cefad85f827",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T071947Z-account03-B06-qform-r29/REPORT.md",
+      "scope_used": "for alpha,beta linearly independent, ||p||inf <=2sqrt(3e)/sqrt(||alpha||||beta||)*sqrt(1+1/sin theta), with continuity"
+    },
+    {
+      "id": "QFORM-DEPENDENT-SQUARE-SMOOTHING-v1",
+      "source": "yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T113729Z-account04-B18-qform-r1/REPORT.md",
+      "scope_used": "actual outer-square inequality ||p_(R+aV_R^2)||inf <=2sqrt(M/|a|)"
+    }
+  ],
+  "designated_partner": {
+    "slot": "account04/B06",
+    "completed_current_qform_artifact_found": false,
+    "note": "No designated-partner theorem fabricated; compatible completed account04/B18 result applied at an actual inequality."
+  },
+  "result": {
+    "id": "QFORM-DOUBLESTAR-WEDGE-OR-SAMESIDE-TRANSFER-v1",
+    "status": "PROVED_SUPPORTING_ANALYTIC_STRUCTURAL_DICHOTOMY",
+    "statement": "For alpha=(s,r), beta=(c,t), K=||r||||c||, sigma=sin angle(alpha,beta): | ||s||||t||-K | <= ||alpha||||beta|| sigma. Therefore either ||alpha||||beta||sigma>=K/2 and the r29 weighted receiver gives ||p||inf<=4sqrt(3e)/sqrt(K), or ||s||||t||>K/2. Exact collinearity gives ||s||||t||=K.",
+    "live_constants": {
+      "K_lower": "sqrt(127/800) G^2",
+      "paid_density": "<18.097/G",
+      "same_side_star_product": ">0.199217 G^2",
+      "one_same_side_star_norm": ">0.446337 G",
+      "outer_square_paid_density": "<8.508/sqrt(|a|G)"
+    },
+    "full_conjecture_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+    "continuity_status": "FULL_OPEN; PAID_WEDGE_RESIDUAL_BRANCH_CONTINUOUS"
+  },
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "3a29bf211ad458485f62b5b9a1f7045ab70b41dd",
+    "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T081454Z-account03-B06-qform-r30/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T081454Z-account03-B06-qform-r30/CHECKS.md",
+    "handoff_commit": "5da74e7b8163cb050e349b7e52504831e43c5515",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B06/20260923T081454Z-account03-B06-qform-r30.md"
+  },
+  "unresolved_implication": "QFORM-SAMESIDE-TWOSTAR-HUB-RECEIVER-v1",
+  "next_step": "Starting from ||s||||t||>0.199217G^2, retain opposite-bank stars and all residual curvature; route to mixed-hub Pluecker/physical-pair/ridge/third-volume payment or prove a direct weighted two-hub receiver."
+}

@@ -1,0 +1,13 @@
+{
+  "helper_version": "verify_tree.py v1; baseline_check.py SHA256 d6bc7dd1abce58f20c9488cd692818b12a6861d82b0f3c512b391005ab4d2599; optimal_tree.py only for exact prime-log arithmetic, not state transitions or spectra",
+  "family": "Actual activated pair-quadratic/point-defect selector, k=2 and k=4, r=2k, and all 162 canonical k=4 descendants; point defect AND_m",
+  "domain": {"pilot_k": 2, "main_k": 4, "AND_m": [1,16], "special_descendants": "D(1,1,2,r), r=4,...,8"},
+  "case_count": "Two roots; all 162 canonical certificate states; all actual relevant-coordinate alternatives in the independent truth-table Bellman solver; 16 AND recurrences, direct spectra for m<=6",
+  "symmetry": "No orbit reduction in independent Bellman solver; identical truth-table tuples memoized, irrelevant coordinates physically dropped",
+  "arithmetic": "Integer recursive even/odd Walsh, Fraction, prime-log integer vectors and proved rational atanh enclosures; exact ties only",
+  "memory_estimate_MB": 200,
+  "pilot_max_seconds": 60,
+  "main_max_seconds": 1200,
+  "automatic_dimension_escalation": false,
+  "goal": "Reconstruct saved optimum independently and certify exact margins for the failure of descendant control-first ordering; validate all-m AND optimum formula"
+}

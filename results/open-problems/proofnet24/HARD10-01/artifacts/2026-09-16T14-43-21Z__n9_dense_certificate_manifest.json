@@ -1,0 +1,46 @@
+{
+  "claim_id": "HARD10-N9-DENSE-M33-36-UNIT-PAIR-01",
+  "status": "PASS_RESTRICTED_EXACT",
+  "scope": "all labelled simple graphs on vertex set {0,...,8} with 33, 34, 35, or 36 edges; all distinct present edge pairs; unit-weight uniform-all-forests pairwise negative correlation",
+  "metric_effect": "no movement: complete-all-graphs vertex metric remains 8",
+  "coverage": {
+    "method": "K9 minus every missing-edge subset of cardinality 0,1,2,3",
+    "graphs_by_edges": {"33": 7140, "34": 630, "35": 36, "36": 1},
+    "graphs_total": 7807,
+    "edge_pairs_tested": 4145400,
+    "graph6_sha256": "9e879987bd8a9af76e3e6ee20f023136f0ac35215859f4f0f60da75b843f0f25"
+  },
+  "checker_result": {
+    "negative_gaps": 0,
+    "zero_gaps": 0,
+    "min_positive_gap": 5042199240,
+    "min_positive_g6": "HJ~~~~~",
+    "min_positive_edge_indices": [0, 3],
+    "max_gap": 946567157600,
+    "max_gap_g6": "H~~~~~~",
+    "max_forest_count": 10026505,
+    "max_forest_count_g6": "H~~~~~~"
+  },
+  "independent_oracles": {
+    "selected_min_gap_graph": {"g6": "HJ~~~~~", "Z": 4856460, "Ze": 1077920, "Zf": 1205682, "Zef": 266570, "delta": 5042199240},
+    "K9": {"Z": 10026505, "Ze": 2022555, "Zef_adj": 313585, "Zef_dis": 403735, "delta_adj": 946567157600, "delta_dis": 42677731850}
+  },
+  "local_sha256": {
+    "checker_c": "6b6dde97ebb0c8aed1b7a206e49d1b2f604c68e2e3396245a7a9870ab087bffe",
+    "checker_compile_output": "b798bcae7cfbf0db62e33e02dc3c86a90f58abc64dde662ddceeab5276731c11",
+    "dense_generator_executed_py": "37925feb29e478eaca2e10844dd2e9c675ddd4b9995be0d3a630b887fb369312",
+    "dense_generation_manifest": "93cd9c1c5d7ef1abb61b23b90bcfb2d258a14a332696600a9d49727f94003f52",
+    "dense_generation_output": "4161c32c8dbcddc1dd7938e8eaff5ebda5af92eba34d38f77d6e2e462ebef0a8",
+    "checker_output": "d76a76623daf0fd26fef0e2f7e12d0138afc30991b5d4d7026cf4513e79374fd",
+    "selected_oracle_py": "bdd181681016065877217ce6a71290ab3d237d3b3d3dae005f7c700bc125252e",
+    "selected_oracle_output": "d29e8a0d1dacb6c7a842576962c0deb0a489b731bac328052b61de5f895abb30",
+    "k9_oracle_py": "bdeab1ddb3d1b51de4a01b785dc066c10d4b95212ff9805601ece06fb67331f4",
+    "k9_oracle_output": "ffde2a537128f09439747c86181fef8dc39ecbc0809ef050f8ec7c1b1e20eeb5"
+  },
+  "limitations": [
+    "This is a dense-edge restricted n=9 certificate, not complete n=9 coverage.",
+    "The generated graph6 catalogue is reproducibly hash-certified but is not itself archived; the executed generator plus manifest reproduce it.",
+    "The fixed metric remains 8 until all 274668 unlabeled n=9 graph classes are certified.",
+    "No all-positive-weight Rayleigh claim is made."
+  ]
+}

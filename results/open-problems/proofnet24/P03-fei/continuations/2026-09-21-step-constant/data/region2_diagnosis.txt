@@ -1,0 +1,128 @@
+candidate arrays: {'xs': (4321,), 'G': (4321,), 'C': (), 'M': (), 'K': ()}
+C0 = 6.4548  nodes = 4321  x range 1.0 40.0
+
+Hod ladder q_j: 0.500000, 0.666667, 0.600000, 0.625000, 0.615385, 0.619048, 0.617647, 0.618182 -> 1/phi = 0.6180339887498949
+
+residual Phi at (p = 2^-k, q = q_j), c = 0.003   [negative = candidate violates (A)]
+        q_0          q_1          q_2          q_3          q_4          q_5        
+p=2^-1     7.50e-04    4.14e-04    5.50e-04    5.62e-04    5.74e-04    5.70e-04
+p=2^-2     1.12e-03    4.90e-04    8.17e-04    8.44e-04    8.61e-04    8.54e-04
+p=2^-3     1.31e-03    2.72e-04    7.56e-04    9.84e-04    9.47e-04    1.01e-03
+p=2^-4     1.41e-03   -3.30e-04    7.60e-04    1.05e-03    1.01e-03    1.11e-03
+p=2^-5     1.45e-03    5.60e-04    9.31e-04    1.04e-03    1.08e-03    1.16e-03
+p=2^-6     1.48e-03    5.77e-04    9.51e-04    1.06e-03    1.10e-03    1.18e-03
+p=2^-7     1.49e-03    5.85e-04    9.61e-04    1.07e-03    1.11e-03    1.19e-03
+p=2^-8     1.49e-03    5.89e-04    9.66e-04    1.07e-03    1.11e-03    1.20e-03
+
+the run's failing cell: p = 1/16, q = 2/3 ->  Phi = -3.2957e-04
+random (p,q) control, 40000 points: min Phi = 6.4349e-04, fraction negative = 0.0000
+Hod-ladder grid (19 x 10):        min Phi = -3.2957e-04, fraction negative = 0.0053
+
+--- scan along q = 2/3, p = 2^-x ---
+negative at 1 of 4401 sampled x; x range of the bad set: 4.0000 .. 4.0000
+worst: x = 4.0000 (p = 0.0625), Phi = -3.2957e-04, Phi/v = -9.8872e-04
+
+--- same scan at several q, to see if 2/3 is special ---
+  q_0=1/2            min Phi =  4.201e-04   negatives: 0
+  q_1=2/3            min Phi = -3.296e-04   negatives: 1
+  q_2=3/5            min Phi =  5.496e-04   negatives: 0
+  q_3=5/8            min Phi =  5.625e-04   negatives: 0
+  1/phi              min Phi =  5.723e-04   negatives: 0
+  0.70 (off ladder)  min Phi =  3.830e-04   negatives: 0
+  0.55 (off ladder)  min Phi =  6.701e-04   negatives: 0
+
+--- the candidate's own residual sets the floor ---
+  c = 0.0030   worst Phi on the ladder = -3.296e-04  -> constant would be 6.455550  fails
+  c = 0.0020   worst Phi on the ladder = -6.421e-04  -> constant would be 6.455300  fails
+  c = 0.0015   worst Phi on the ladder = -7.983e-04  -> constant would be 6.455175  fails
+  c = 0.0010   worst Phi on the ladder = -9.546e-04  -> constant would be 6.455050  fails
+  c = 0.0005   worst Phi on the ladder = -1.111e-03  -> constant would be 6.454925  fails
+
+candidate arrays: {'xs': (4321,), 'G': (4321,), 'C': (), 'M': (), 'K': ()}
+C0 = 6.4548  nodes = 4321  x range 1.0 40.0
+
+--- scan along q = 2/3, p = 2^-x ---
+negative at 1 of 4401 sampled x; x range of the bad set: 4.0000 .. 4.0000
+worst: x = 4.0000 (p = 0.0625), Phi = -3.2957e-04, Phi/v = -9.8872e-04
+
+--- same scan at several q, to see if 2/3 is special ---
+  q_0=1/2            min Phi =  4.201e-04   negatives: 0
+  q_1=2/3            min Phi = -3.296e-04   negatives: 1
+  q_2=3/5            min Phi =  5.496e-04   negatives: 0
+  q_3=5/8            min Phi =  5.625e-04   negatives: 0
+  1/phi              min Phi =  5.723e-04   negatives: 0
+  0.70 (off ladder)  min Phi =  3.830e-04   negatives: 0
+  0.55 (off ladder)  min Phi =  6.701e-04   negatives: 0
+
+--- the candidate's own residual sets the floor ---
+  c = 0.0030   worst Phi on the ladder = -3.296e-04  -> constant would be 6.455550  fails
+  c = 0.0020   worst Phi on the ladder = -6.421e-04  -> constant would be 6.455300  fails
+  c = 0.0015   worst Phi on the ladder = -7.983e-04  -> constant would be 6.455175  fails
+  c = 0.0010   worst Phi on the ladder = -9.546e-04  -> constant would be 6.455050  fails
+  c = 0.0005   worst Phi on the ladder = -1.111e-03  -> constant would be 6.454925  fails
+sampled points: 335856  (dyadic x Hod ladder, plus 300k random)
+
+   c        worst Phi        at (p, q)                     constant C0+c/4
+  0.0030    -3.296e-04    p=0.0625       q=0.666667     6.455550   FAILS
+  0.0035    -1.733e-04    p=0.0625       q=0.666667     6.455675   FAILS
+  0.0040    -1.707e-05    p=0.0625       q=0.666667     6.455800   FAILS
+  0.0041     1.418e-05    p=0.0625       q=0.666667     6.455825   ok
+  0.0042     4.543e-05    p=0.0625       q=0.666667     6.455850   ok
+  0.0045     1.392e-04    p=0.0625       q=0.666667     6.455925   ok
+  0.0050     1.942e-04    p=0.399169     q=0.999997     6.456050   ok
+  0.0060     1.942e-04    p=0.399169     q=0.999997     6.456300   ok
+  0.0100     1.942e-04    p=0.399169     q=0.999997     6.457300   ok
+
+smallest pointwise-feasible c on this sample: 0.004055  ->  constant 6.455814
+(currently proved: 6.4573 at c = 0.01; the failed attempt was c = 0.003 -> 6.455550)
+
+candidate arrays: {'xs': (4321,), 'G': (4321,), 'C': (), 'M': (), 'K': ()}
+C0 = 6.4548  nodes = 4321  x range 1.0 40.0
+
+--- scan along q = 2/3, p = 2^-x ---
+negative at 1 of 4401 sampled x; x range of the bad set: 4.0000 .. 4.0000
+worst: x = 4.0000 (p = 0.0625), Phi = -3.2957e-04, Phi/v = -9.8872e-04
+
+--- same scan at several q, to see if 2/3 is special ---
+  q_0=1/2            min Phi =  4.201e-04   negatives: 0
+  q_1=2/3            min Phi = -3.296e-04   negatives: 1
+  q_2=3/5            min Phi =  5.496e-04   negatives: 0
+  q_3=5/8            min Phi =  5.625e-04   negatives: 0
+  1/phi              min Phi =  5.723e-04   negatives: 0
+  0.70 (off ladder)  min Phi =  3.830e-04   negatives: 0
+  0.55 (off ladder)  min Phi =  6.701e-04   negatives: 0
+
+--- the candidate's own residual sets the floor ---
+  c = 0.0030   worst Phi on the ladder = -3.296e-04  -> constant would be 6.455550  fails
+  c = 0.0020   worst Phi on the ladder = -6.421e-04  -> constant would be 6.455300  fails
+  c = 0.0015   worst Phi on the ladder = -7.983e-04  -> constant would be 6.455175  fails
+  c = 0.0010   worst Phi on the ladder = -9.546e-04  -> constant would be 6.455050  fails
+  c = 0.0005   worst Phi on the ladder = -1.111e-03  -> constant would be 6.454925  fails
+  strip p->1/2, q->1                 c=0.0041  min Phi =   1.465e-10 at p=0.49953465 q=1  ok
+  strip p->1/2, q->1                 c=0.0045  min Phi =   1.465e-10 at p=0.49953465 q=1  ok
+  strip p->1/2, q->1                 c=0.0050  min Phi =   1.465e-10 at p=0.49953465 q=1  ok
+  strip p->1/2, q->1                 c=0.0100  min Phi =   1.465e-10 at p=0.49953465 q=1  ok
+  arc pq = 1/2                       c=0.0041  min Phi =   1.444e-02 at p=0.5001 q=0.99980004  ok
+  arc pq = 1/2                       c=0.0045  min Phi =   1.444e-02 at p=0.5001 q=0.99980004  ok
+  arc pq = 1/2                       c=0.0050  min Phi =   1.444e-02 at p=0.5001 q=0.99980004  ok
+  arc pq = 1/2                       c=0.0100  min Phi =   1.444e-02 at p=0.5001 q=0.99980004  ok
+  q = 2^-1                           c=0.0041  min Phi =   1.025e-03 at p=0.5 q=0.5  ok
+  q = 2^-1                           c=0.0050  min Phi =   1.250e-03 at p=0.5 q=0.5  ok
+  q = 2^-2                           c=0.0041  min Phi =   1.317e-03 at p=0.44422228 q=0.25  ok
+  q = 2^-2                           c=0.0050  min Phi =   1.692e-03 at p=0.44422228 q=0.25  ok
+  q = 2^-3                           c=0.0041  min Phi =   1.224e-03 at p=0.33330777 q=0.125  ok
+  q = 2^-3                           c=0.0050  min Phi =   1.749e-03 at p=0.33330777 q=0.125  ok
+  q = 2^-4                           c=0.0041  min Phi =   1.472e-03 at p=0.44422228 q=0.0625  ok
+  q = 2^-4                           c=0.0050  min Phi =   1.941e-03 at p=0.44422228 q=0.0625  ok
+  q = 2^-5                           c=0.0041  min Phi =   1.548e-03 at p=0.44422228 q=0.03125  ok
+  q = 2^-5                           c=0.0050  min Phi =   2.033e-03 at p=0.44422228 q=0.03125  ok
+  q = 2^-6                           c=0.0041  min Phi =   1.585e-03 at p=0.44422228 q=0.015625  ok
+  q = 2^-6                           c=0.0050  min Phi =   2.077e-03 at p=0.44422228 q=0.015625  ok
+  q = 2^-7                           c=0.0041  min Phi =   1.604e-03 at p=0.44422228 q=0.0078125  ok
+  q = 2^-7                           c=0.0050  min Phi =   2.100e-03 at p=0.44422228 q=0.0078125  ok
+  q = 2^-8                           c=0.0041  min Phi =   1.613e-03 at p=0.44422228 q=0.00390625  ok
+  q = 2^-8                           c=0.0050  min Phi =   2.112e-03 at p=0.44422228 q=0.00390625  ok
+  both in [0.30, 0.70]               c=0.0041  min Phi =   3.572e-04 at p=0.69966639 q=0.69966639  ok
+  both in [0.30, 0.70]               c=0.0045  min Phi =   3.933e-04 at p=0.69966639 q=0.69966639  ok
+  both in [0.30, 0.70]               c=0.0050  min Phi =   4.384e-04 at p=0.69966639 q=0.69966639  ok
+  both in [0.30, 0.70]               c=0.0100  min Phi =   8.894e-04 at p=0.69966639 q=0.69966639  ok

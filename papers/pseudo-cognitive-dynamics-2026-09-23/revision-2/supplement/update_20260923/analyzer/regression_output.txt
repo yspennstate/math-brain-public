@@ -1,0 +1,16 @@
+PASS source identities: three pinned originals, three proposed copies, exact combined patch
+REPRODUCED current score crash: unsupported operand type(s) for |: 'list' and 'set'
+PASS grouping repair: three synthetic pairs, two families, one win/loss/tie
+REPRODUCED remaining score limits: duplicate last-wins; missing/diet ignored; AUDIT not consumed
+REPRODUCED sign-test display rounding: 19 wins/0 losses gives 0.0 although exact p is positive
+PASS cumulative usage and diet token pairing: both model entries; total input 47; diet/on ratio 0.25
+REPRODUCED cost scope: unmatched success included; failed/history excluded from summaries; AUDIT ignored
+PASS round selection: separate --runs-dir does not import round1 on/off; diet-only root has no diet pair
+REPRODUCED round-provenance limit: colocated item IDs pair without round/start checks
+REPRODUCED audit coverage limit: empty/malformed-only synthetic streams get empty hit lists
+REPRODUCED current diet collapse: marker absent => on=False/ondiet=False; present => on=True/ondiet=True
+PASS proposed diet modes: 12 arm/marker/inheritance combinations; ordinary prompts and SessionStart unchanged
+PASS proposed legacy fallback and marked-session tool events; no inherited flag reaches off/unspecified child
+PASS proposed dispatch seam: full mode runs both mock hooks; diet skips slow_sense and retains math_sense
+REPRODUCED runner status limit: mocked error result/rc1 labeled ok and skipped on repeat; no process launched
+PASS: synthetic source audit only; zero solver/hook processes; no live edits; no held-out answers

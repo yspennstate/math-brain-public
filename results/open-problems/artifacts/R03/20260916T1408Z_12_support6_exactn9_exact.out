@@ -1,0 +1,26 @@
+SUPPORT-6 EXACT CLASSIFICATION
+projective frames total 31465
+rank-5 frames 27990
+minimal-support-6 frames 2040
+type (1, 1, 1, 1, 1, 1) zero_columns 20 frame_count 810
+type (2, 2, 1, 1, 1, 1) zero_columns 14 frame_count 900
+type (3, 1, 1, 1, 1, 1) zero_columns 10 frame_count 30
+type (3, 2, 2, 1, 1, 1) zero_columns 10 frame_count 300
+safe original normal-direction counts {(1, 1, 1, 1, 1, 1): 32, (2, 2, 1, 1, 1, 1): 480, (3, 1, 1, 1, 1, 1): 192, (3, 2, 2, 1, 1, 1): 1920}
+fixed-row-set union bound:
+  32*(5/16)^n + 480*(7/32)^n + 2112*(5/32)^n
+target-scale coefficient after choosing six rows:
+  C(n,6)*[32*(5/8)^n + 480*(7/16)^n + 2112*(5/16)^n]
+
+EXACT IID SIGN SINGULARITY VALUES FROM PUBLISHED 0/1 COUNTS
+1 Psing 0 b 0 b_float 0
+2 Psing 1/2 b -2 b_float -2
+3 Psing 5/8 b -7 b_float -7
+4 Psing 169/256 b -215/16 b_float -13.4375
+5 Psing 1343/2048 b -1217/64 b_float -19.015625
+6 Psing 1315007/2097152 b -651073/32768 b_float -19.8691711425781
+7 Psing 1246339523/2147483648 b -162946621/16777216 b_float -9.71237546205521
+8 Psing 9143883857371/17592186044416 b 1447302462939/68719476736 b_float 21.0610227504949
+9 Psing 8092074521843299/18014398509481984 b 3025524941051491/35184372088832 b_float 85.9905907490057
+
+SELF-CHECK PASS

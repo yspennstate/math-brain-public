@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B12",
+  "run_id": "20260923T065358Z-account02-B12-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "initial_control_commit": "31297271af6e798a6b806a9c2196a0345e9cbf00",
+  "prepublication_control_commit": "59e76ef3cee387e6d219a25f9a2189bb8892ff1e",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_problem_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "claim_ids": [
+    "QFORM-THRESHOLDED-CROSS-FOOTPRINT-HYBRID-v1"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "scope_used": "D5: for any original-coordinate cross block M, ||p_Q||inf <= 5 sqrt(2e) e5(M^T M)^(-1/10), no marginal condition, arbitrary self blocks/outside couplings"
+    },
+    {
+      "source": "yspennstate/math-open-problems@3ea9c184594344f0d82c72c06646ad2c8291a12a",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T054842Z-qform-eigenvalue-r26/REPORT.md",
+      "scope_used": "cross-energy compiler on the actual final physical cross block: S>2c and S-2c>=(9/2)rho imply density <=(9 sqrt(3)e/2)[S(S-c)(S-2c)/6]^(-1/6)"
+    }
+  ],
+  "mathematics": {
+    "summary": "For A=A0+S+T and an original-coordinate cut M0=A0[I,J], charge arbitrary full-rank dense T only by delta=||T||op and arbitrary spectral modification S only by eta=||S[I,J]||op. With epsilon=delta+eta and a_j=(s_j(M0)-epsilon)_+, singular-value Weyl gives a D5 branch and a thresholded collective cross-energy branch on the actual final matrix.",
+    "d5_branch": "If a5>0, ||p_Q||inf <=5 sqrt(2e)(a1 a2 a3 a4 a5)^(-1/5).",
+    "cross_energy_branch": "Let R=sum a_j^2, C=(s1(M0)+epsilon)^2, rho*=min((sqrt(rowcap0)+epsilon)^2,(sqrt(colcap0)+epsilon)^2). If R>2C and R-2C>=(9/2)rho*, then ||p_Q||inf <=(9 sqrt(3)e/2)[R(R-C)(R-2C)/6]^(-1/6).",
+    "literal_replacement_family": "On 17 coordinates, A0 has 8+8 bipartite cross block 2I8 and one extra +2 coordinate. For arbitrary tau, v_tau is chosen inside the +2 eigenspace with alpha_tau^2=1/[20(1+|tau|)], so tau v_tau v_tau^T literally replaces one +2 eigenvalue by 2+tau while its physical I|J cross footprint is <=1/40. After any dense symmetric T with ||T||op<=1/40, s3>=79/40 and the cross-energy cap is 5.602062744709504 uniformly in tau.",
+    "forbidden_shortcut_avoided": "No probabilistic smallness of X^T T X is used; all perturbation control is deterministic on singular values and physical row/column energies."
+  },
+  "canonical_report_commit": "90db9e6ada8de1b168687585da38f48634f090ae",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260923T065358Z-account02-B12-auto11/REPORT.md",
+  "handoff_commit": "9a16a6f349ab7303be028182c4f0056d1afe2d73",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B12/20260923T065358Z-account02-B12-auto11.md",
+  "checker": {
+    "tests": 10000,
+    "violations": 0,
+    "status": "FINITE_SANITY_CHECK_ONLY"
+  },
+  "remaining_implication": "From bare s3(A)>=1, force a physical cut carrying either five threshold-robust cross singular directions or the thresholded collective cross-energy gate, or force an already-paid localized/hub/grouped-bank/ridge/Schur branch. This extraction is not proved here.",
+  "independent_review_status": "NOT_PERFORMED_IN_THIS_RUN",
+  "updated_utc": "2026-09-23T07:05:46Z"
+}

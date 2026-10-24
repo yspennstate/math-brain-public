@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260922T210642Z-b01-qform-auto11",
+  "control_commit_prepublication": "72c8e8e8dac24358962ff4de6f957b4f0c0559e1",
+  "control_revision": "2026-09-22.15",
+  "classification": ["CANDIDATE_REFUTED", "ESSENTIAL_STEP_APPLIED", "FULL_TARGET_OPEN"],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B01",
+    "run": "20260922T200159Z-account02-B01-qform-r27",
+    "commit": "b3f18a11f29e878b69278f6487fe50b4e3380d99",
+    "theorem": "QFORM-CROSS-EDGE-POINTWISE-v1",
+    "application": "On the unit cross-triangle leakage example, the theorem gives |phi(t)|<=sqrt(pi/|t|); stationary phase yields sqrt(t)|phi(t)|->(3/4)sqrt(pi), showing the exponent is sharp up to 4/3 despite three nonzero cross edges."
+  },
+  "new_result": {
+    "name": "QFORM-TRIBANK-RANKONE-COMPLETION-OBSTRUCTION-v1",
+    "statement": "Every nonzero scalar cross triangle a,b,c has the unique diagonal rank-one completion (ac/b,ab/c,bc/a). For the unit triangle, legal within-bank phases U^2+V^2+W^2 convert the conditioned off-diagonal core into (U+V+W)^2, whose density is unbounded for iid cap-one uniforms. Thus cross-core conditioning alone cannot pay arbitrary within-bank leakage.",
+    "positive_defect_lemma": "If M=M_*+diag(delta) with M_* rank one and sigma_min(M)>=s, then at least two |delta_i|>=s."
+  },
+  "target_valid_control": "J_3 direct_sum I_2 has eigenvalues 3,1,1,0,0; with iid unit-density uniforms its output is (U+V+W)^2+Y1^2+Y2^2 and has density <=pi by the proved diagonal same-sign theorem after grouping S=U+V+W.",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bfb018ea3b3734eec6e051778c5671d954717b74",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260922T210642Z-b01-qform-auto11/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260922T210642Z-b01-qform-auto11/CHECK_OUTPUT.txt"
+  },
+  "correction_event": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account01/B01/20260922T210642Z-b01-qform-auto11/QFORM-TRIBANK-CROSS-CORE-LEAKAGE-CLOSURE-FALSE-v1.json",
+  "unresolved_implication": "QFORM-TRIBANK-RANKONE-COMPLETION-DEFECT-RECURSION-v1: harvest the two completion-defect curvatures inside original product banks, or route them to existing ridge/pair/random-slope branches, without worst-fiber normalization.",
+  "full_brain_connected": false,
+  "execution_label": "WITHOUT_VERIFIED_BRAIN"
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B14",
+  "title": "Translations and localization",
+  "run_id": "20260923T122915Z-account02-B14-QFORM-r36",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "status": "NEW_SUPPORTING_LOCALIZATION_THEOREM_AND_PROOF_INTERFACE_OBSTRUCTION_FULL_QFORM_OPEN",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_SEPARATE",
+  "control_readback": {
+    "brain_handoff_commit": "21b4e1251325110b1517ccd9067fa3f498407d27",
+    "control_readme_blob": "fca13a89d221115332ce5e60d49554ee0e213efa",
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+    "paused": false
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "partner_results_applied": [
+    {
+      "partner": "account03/B14",
+      "result": "QFORM-SINGULAR-FUNCTIONAL-EXTREME-LOCALIZATION-v1",
+      "source_commit": "5b60b66568f5be5eb2375597ae1acb866c68f5f8",
+      "use": "Applied to interval kernels G_{t,h}=h^{-1}1_{[t,t+h)}(P) and commuted suprema to obtain exact full small-ball localization to compact finite-fragment product-indicator laws with identical constant."
+    },
+    {
+      "partner": "account03/B14",
+      "result": "QFORM-SQRT-CRITICAL-BUDGET-MIXTURE-v1",
+      "source_commit": "29096949260b7ec2e9659c1379bd0a0882a37387",
+      "use": "Applied to the exact-target family Q_T=2U1U2+2ZV_T; the minimal conditional critical constant is K_T^*/(2|Z|), giving square-root budget 2sqrt(K_T^*) and a diverging black-box certificate."
+    }
+  ],
+  "claude_source": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "directory": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "files_read": [
+      "RESULTS.md",
+      "FOURIER_ROUTE_REPORT.md",
+      "COUNTEREXAMPLE_SEARCH.md"
+    ],
+    "results_applied": [
+      "Theorem A: all eigenvalues bounded away from zero gives a fixed-dimensional density bound; applied to Q_T with spectrum {1,-1,1,-1} to prove the true density stays uniformly bounded while the critical-Fourier certificate diverges.",
+      "D_5: ||p_Q||inf<=5sqrt(2e)e_5(M^TM)^(-1/10); combined with exact extreme localization to show whole-active volume certificates survive with zero localization tax."
+    ]
+  },
+  "mathematics": {
+    "primary_result": {
+      "id": "QFORM-FULL-SMALLBALL-EXTREME-LOCALIZATION-v1",
+      "statement": "For every measurable P:R^n->R, sup over all cap-one product laws of Lambda(P,mu)=sup_{t,h>0} h^{-1}mu{t<=P<t+h} equals the supremum over product indicators of compact finite unions of intervals of total length one. Therefore the exact extended universal QFORM essential-density constant is unchanged on that extreme class, including arbitrary affine terms.",
+      "scope": "No uniform fragment count, common diameter, location, separation, support or moment hypothesis; law-level localization only."
+    },
+    "obstruction": {
+      "id": "QFORM-EXTREME-CLASS-CRITICAL-FOURIER-BARRIER-v1",
+      "statement": "There are compact finite-fragment unit sets E_{T,N} with K_T^*=sup_s |s||phi(s)| >= sinc(1/4) T. For Q_T=2U1U2+2ZV_T, partner r35's minimal square-root critical budget is 2sqrt(K_T^*) and its F_{1,1} certificate diverges, while Claude Theorem A gives a T-independent true density bound. Thus extreme localization does not uniformize pointwise critical Fourier tails."
+    },
+    "pair_log_corollary": "The prior piecewise pair-log compiler is globally <=6[H/(kappa sqrt(D))]^(1/3). For R=rho(Z)+2(gamma Z+beta)V with independent cap-one Z,V, this yields ||p_Q||inf<=9[kappa sqrt(D)|gamma|]^(-1/3), uniformly in beta, rho, translations, fragments, supports and moments.",
+    "safe_order": "Whole-active D'/D5/ridge/mixed-hub/grouped-bank/random-slope/fractional-trace certificate first; outside localization or mixture afterwards. Do not normalize active fragments before reciprocal/Fourier payment."
+  },
+  "first_unpaid_implication": "QFORM-EXTREME-LOCALIZE-THEN-WHOLE-ACTIVE-CERTIFICATE-v1: from each surviving no-pivot/N3 matrix configuration, after optional exact law-level reduction to arbitrary compact finite-fragment extremes, expose a whole-active volume/ridge/mixed-hub/grouped-bank certificate, a protected original-coordinate Schur slope, or a full-mass-homogeneous fractional-trace/positive-copy estimate before any active normalization.",
+  "outputs": {
+    "canonical_report_repository": "yspennstate/math-open-problems",
+    "canonical_report_commit": "d2180eded43f3c299ecff739c67109d342c032b7",
+    "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T122915Z-account02-B14-QFORM-r36/REPORT.md",
+    "canonical_report_readback_blob": "7c54e02e8e663e1152b931a53bf9a14abde32ced",
+    "checkpoint_readback_blob": "9a37a31140d59d0ec08870e5671659e362add6e8",
+    "handoff_commit": "21b4e1251325110b1517ccd9067fa3f498407d27",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B14/20260923T122915Z-account02-B14-QFORM-r36.md",
+    "handoff_readback_blob": "3a34bebef38b07cf78c7c0e8e3e379d1cbb59ceb"
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  },
+  "privacy_review": "Manual changed-file review only: mathematical/control metadata within authorized paths; no credentials, secrets, machine paths, scheduler identifiers, benchmark-gold material, or unrelated private data.",
+  "native_memory": "WITHOUT_VERIFIED_BRAIN"
+}

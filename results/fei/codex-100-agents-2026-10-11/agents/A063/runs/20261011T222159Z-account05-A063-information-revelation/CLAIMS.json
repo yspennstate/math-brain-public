@@ -1,0 +1,100 @@
+[
+  {
+    "claim_id": "A037-PHYSICAL-SPECTRAL-COMMON-LIFT",
+    "version": 1,
+    "exact_statement": "For every Boolean function on a finite uniform cube and every finite adaptive physical block restriction tree, the function-specific kernel k_h(y|S_0)=2^(-|B_h|) (f_h|B_h=y)hat(S_0 intersect C_h)^2 / sum_U f_hhat(U union (S_0 intersect C_h))^2, on positive fibers, constructs a common root spectral/physical-transcript law with actual fair physical branches and actual child spectra. It satisfies sum_h P(h) J_h=I(S_0;L) and H(S_0|L)=sum_h P(h) H(S_h intersect B_h|S_h intersect C_h,h)+sum_l P(l)H(f_l). No universal phase-blind channel on parent squared spectra exists, as witnessed by f=[1,1,1,-1], g=[1,1,-1,1].",
+    "hypotheses": [
+      "Finite probability/tree spaces; bits; omit zero-probability histories",
+      "Boolean signs, uniform inputs, adaptive block choices measurable from physical history; no rerevealed coordinates"
+    ],
+    "statement_sha256": "aa45c0dacad4b1897e4c2f62511ccd331caf0eb6dc7ecc88cddf5189e8cf2cdb",
+    "contributors": [
+      "A037"
+    ],
+    "proof_source": {
+      "run_id": "20261011T220010Z-account05-A037-conditional-credit-ledger",
+      "files": [
+        "REPORT.md",
+        "POSTERIOR_CREDIT_CHAIN.tex",
+        "NO_REUSE_CERTIFICATE.md",
+        "code/ledger_check.py",
+        "out/VALIDATION.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A063",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A063\\runs\\20261011T222159Z-account05-A063-information-revelation\\REVIEW_A037.md",
+        "method": "Direct character-sum Walsh reconstruction and full rational root-label/history probabilities; independent implementation; finite-tree proof rederived; no repair supplied",
+        "executed_exact_assertions": 199195,
+        "accepted_scope": "finite uniform-cube physical spectral common lift and retained residual, not generic KL or universal FEI payment"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_ACCEPT_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      "Universal physical-child spectral channel determined solely by squared parent Fourier masses"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A029",
+      "A039",
+      "A057",
+      "A063",
+      "A064",
+      "A097"
+    ]
+  },
+  {
+    "claim_id": "A063-QUERY-COARSENING-REFUND-AND-HALF-ENTROPY-BARRIER",
+    "version": 1,
+    "exact_statement": "For every finite uniform-cube Boolean sign and fixed physical block A completely queried by a deterministic adaptive order of canonical singleton kernels, under the common root spectral/physical-history lift let R_A=I(S_A;X_A|S_Ac). Then cumulative physical mixture information is J_A+R_A and cumulative erased-label entropy is B_A-R_A=H(S_A|S_Ac,X_A), where B_A=H(S_A|S_Ac) and J_A=I(X_A;S_Ac) in the actual child-spectrum experiment. Moreover 0<=R_A<=(B_A-J_A)/2. For every finite stopped canonical singleton tree, I(S;L)<=[H(f)-E H(f_L)]/2 and H(S|L)>=[H(f)+E H(f_L)]/2. The half-entropy bound is sharp for disjoint AND2 products. Query-order information is not invariant, as witnessed exactly by four-bit truth code 4951 in the supplied convention.",
+    "hypotheses": [
+      "Boolean signs on finite uniform cube; entropy in bits; zero fibers omitted",
+      "Canonical kernel makes deleted parent spectral label and physical branch conditionally independent given residual spectral label at each singleton",
+      "Policy decisions and stopping depend only on physical history; no coordinate queried twice; transcript records its full history",
+      "Fixed-block refund formula requires all and only coordinates of A queried, with complete assignment recorded; independent policy seeds may instead be conditioned on and averaged"
+    ],
+    "statement_sha256": "8f757badc3354b59dc3949bdfdd953cda052cf5e508390c98c978234eb703844",
+    "contributors": [
+      "A063"
+    ],
+    "proof_source": {
+      "run_id": "20261011T222159Z-account05-A063-information-revelation",
+      "files": [
+        "QUERY_INFORMATION_IDENTITY.tex",
+        "PHYSICAL_SPECTRAL_DISTINCTION.md",
+        "REPORT.md",
+        "out/ORDER_WITNESS.json",
+        "out/SHARPNESS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A037-PHYSICAL-SPECTRAL-COMMON-LIFT",
+        "version": 1,
+        "statement_sha256": "aa45c0dacad4b1897e4c2f62511ccd331caf0eb6dc7ecc88cddf5189e8cf2cdb",
+        "acceptance": "A063 independent reconstruction at stated scope, REVIEW_A037.md"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_VALIDATED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Query-order invariance of canonical full-label revealed information",
+      "Canonical complete physical revelation eliminates root spectral posterior entropy"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A064",
+      "A087",
+      "A094",
+      "A097",
+      "B20"
+    ]
+  }
+]

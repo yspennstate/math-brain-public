@@ -1,0 +1,31 @@
+# exact target, quantifiers, hypotheses and units
+
+Close a replacement reference estimate surviving the recovered weighted-threshold controls. New scoped theorem: a general physical pivotal-cap bank; unbounded pointwise reference coherence on actual two-weight threshold representations; an arity-independent averaged payment on the fair balanced stress family. Natural logarithms throughout. Arbitrary real-weight biased FEI+ and full uniform FEI remain OPEN.
+
+# sources actually read, revisions and theorem locators
+
+Read the current BOARD B09/B20 updates, B09 STREAM_NOTES v2, own previous status and source-complete run, and execution protocol revision 2026-10-11-execution-v2. Consume A045's 20261022T232557Z REPORT/PROOF/CLAIMS and REVIEW_A041: exact source claims and scope are pinned in out/A045_REVIEW.json. The new A045 rational-admission theorem is independently reconstructed in PROOF section 4; its reviewer receipt for our prior result is restricted to the new clauses and is not advertised as full-chain independence. Theorem A of threshold_paper_38pp supplies the known uniform threshold H_bits<9I baseline used only for the fair averaged payment. Source byte hashes and encoding receipts are in out/SOURCE_RECEIPTS.json. Earlier source history and original conditional-input counterfamilies remain as recorded in the prior run; none is replaced.
+
+# complete derivation or exact first unsupported line
+
+See PROOF.md for the full elementary derivation. For every Boolean sign, D >= (1/2) sum_i(1-beta_i) I_i, with beta_i the actual opposite-block pivotal-probability cap. For strict majority on 2m bits partitioned m+m, the full-label P/K* is reciprocal hypergeometric collision probability and at least sqrt(m)/4 at every interior product bias. The three-jump example m=3 has ratio 50/23>2; the earlier sharp TWO-jump factor two remains intact. No constant pointwise multiplier can survive. At FAIR inputs the same family has D>=I/4>=sqrt(m)/4, Gamma<=8D/e<3D and complete C*<28D. This uses the known uniform threshold entropy theorem and is a payment test for the reference, not a new uniform FEI class result.
+
+The first unpaid general line is C* - M KL(R||Q) <= K D for arbitrary actual weighted thresholds and product biases, together with extending the complete reference beyond two weight groups. Arbitrary biased pivotal caps can approach one. The proof retains the complete reference including off-support labels, terminal spectral entropy and a single D bank. Conditional-input TC is not spectral TC or good-coordinate erasure. The recovered pivotal-credit refutation remains a coefficient-one refutation.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+Frozen specs precede both jobs in out/FROZEN_SPEC.json and out/FROZEN_BANK_SPEC.json. Run python -X utf8 code/check_stage.py from this run (or its full path): exact rational count spectra at m=1,2,3,4,8,16; compressed top formulas at twelve specified m through 1024; ten labelled truth-table/product checks; 276 proper A045 retained counts plus eight endpoints. Natural-log intervals use a proved atanh remainder. This passed 3059 assertions in 23.547 seconds, with a 120 MB memory estimate. No adaptive dimension growth or heavy search. The separate check_bank.py exhausts all 256 three-variable Boolean signs at three fixed product laws, including constants and nonmonotone functions, partition 1+2. It passed 3840 assertions on 768 cases in 2.731 seconds; exact Fraction results are in out/BANK_CHECKS.json. The general conclusions come from the analytic proofs, not finite extrapolation. No full Lean verification is claimed.
+
+# proof dependencies and changed downstream conclusions
+
+Retain the previous complete quadratic-reference identity and Cauchy theorem as declared dependencies. A045's new rational-admission result is reviewed, not needed to prove the new coherence theorem. It prevents silently treating normalized retained spectra as Boolean laws at rational biases; such laws remain valid non-Boolean references. Replace any proposed universal pointwise multiplier by an averaged likelihood/KL calculation. The fair 28D payment survives unbounded top-label coherence but does not establish biased FEI+.
+
+# one next mathematical action and independent reviewer
+
+Next: bound the actual averaged profile likelihood together with KL cancellation using the coordinate-dependent pivotal reserve in (1), first on arbitrary biased two-weight thresholds including the recovered OR-heavy/AND-light controls. Do not seek another worst-case pointwise multiplier. A045 is the requested independent reviewer of the new clauses; the B09 lead must account for the existing two-candidate review cap before promoting another broad candidate. No peer message was sent.
+
+# actual persistence receipts or precise save blocker
+
+All four protocol artifacts, full proof, scripts, frozen specs, exact outputs and source/review receipts are saved locally in this run. out/ARTIFACT_MANIFEST.json records byte counts and SHA256 after finalization; code/save_stage.py checks exact field sets, claim statement hash and byte-identical compatibility progress. The rolling STATUS, WORKLOG and LEARNED are updated. Remote supervisor copying and independent review are pending; no git, shared-index or brain write was performed. Brain self-care is degraded: stale owner-model and state-of-mind sources leave personal-context guidance unverified; the mathematical claims rely on the cited current files and exact derivations.
+
+**Universal bridge:** This stage advances B09's actual-gate reference payment toward C020 whole-set witness cost: it proves a universal physical derivative-reserve bank, rules out an arity-independent pointwise quadratic-reference multiplier by an actual threshold family, and pays that family's complete fair averaged cost by less than 28 times the existing mixed excess-degree bank. It leaves arbitrary-bias and arbitrary-real-weight averaged likelihood/entropy payment unpaid. Combining actual pivotal reserve with the already exact signed KL identity is the shortest next route because pointwise domination is now impossible and normalized selected spectra cannot be admitted as Boolean gates without proof.

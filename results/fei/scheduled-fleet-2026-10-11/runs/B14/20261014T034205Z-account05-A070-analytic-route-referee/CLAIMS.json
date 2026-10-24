@@ -1,0 +1,168 @@
+[
+  {
+    "claim_id": "A069-SOURCE-BLIND-SHARED-EDGE-TRANSFER",
+    "version": 1,
+    "exact_statement": "For Boolean g(X) independent of private coordinates Z and Boolean mask q(X,Z), suppose every X-edge has private-averaged mask-disagreement probability p_e<=theta<=1/2. For every K,M>=0, K I(g)+M I(q)<=max(M,(K+M theta)/(1-theta)) I(gq). On a fixed complete hierarchy, Gamma(g)<=K I(g) and W(q)<=M I(q) therefore imply H(gq)<=max(M,(K+M theta)/(1-theta)) I(gq). For compatible two-subcube XOR masks on nonempty C,U,V,Y with source g(C,Y), p=2^-|U|+2^-|V|-2^(1-|U|-|V|)<=1/2 and M=12 applies to T=(T_Y,(T_C,(T_U,T_V))). For g(x,Y) with unequal cores h_+,h_- and x in C at depth d<=1 within T_C, let B=(Gamma_Y(h_+)+Gamma_Y(h_-))/2, equal to the average complete code cost of the actual final Y terminals. Then H(gq)<=Gamma_T(gq)<=B+2 I_Y(gq)+(4d+20) I_(C,U,V)(gq). If both Gamma_Y(h_sigma)<=K I(h_sigma), H(gq)<=max(K+2,4d+20) I(gq). No payment of arbitrary source codes or private-coordinate-dependent sources is asserted.",
+    "hypotheses": [
+      "Actual Boolean signs on finite uniform cubes; entropy and code lengths in bits; physical pivotal influence.",
+      "Source independence of private Z is essential to the abstract edge averaging; the edge condition is uniform over X edges.",
+      "The SAME complete fixed hierarchy pays source, mask and output; no sample-dependent reference selection.",
+      "Compatible-mask application has nonempty common and exclusive blocks and identical common assignment; operation is sequential XOR flips.",
+      "Unequal-core specialization uses one common Y tree and chooses the distinguished shared coordinate at depth at most one inside C.",
+      "Retained-B bound admits constant cores; paid-code corollary requires both specified inequalities and does not omit their root bits.",
+      "No overlapping-product entropy subadditivity, real-valued extension, same-constant induction or physical stopping-tree ownership is assumed."
+    ],
+    "statement_sha256": "2e84fba67dffd8f7a2120cfc07da00b6dbde27ca49bf3d9e6e1724e52f4b9145",
+    "contributors": [
+      "account05/A069"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A069\\runs\\20261014T030208Z-account05-A069-geometric-transfer\\DERIVATION.md",
+      "sha256": "04cac1fc71a3a42a7c3cf74bf0f7a513d812dec6241920e84685a53d76d21be5",
+      "locators": "Sections1-3, equations(1)-(7)"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A069-BOOLEAN-MASK-REFUND",
+        "version": 1,
+        "statement_sha256": "aa1a04460873eb447b856faa415cf09754940fe50811ca0ab078f305faee0851",
+        "acceptance": "Independent A070 at exact scope; no repair",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261014T005025Z-account05-A070-analytic-route-referee\\CLAIMS.json"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "account05/A070",
+        "verdict": "HOLDS_AT_FULL_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "reviewer_conflict": false,
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A069\\runs\\20261014T030208Z-account05-A069-geometric-transfer\\CLAIMS.json",
+        "source_sha256": "68d67f91a121ffc08447041a72a60220ef456eae2cb8cf00c1276e4e8f918f0e",
+        "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261014T034205Z-account05-A070-analytic-route-referee\\DERIVATION.md Section1",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261014T034205Z-account05-A070-analytic-route-referee\\out\\CHECK.json",
+        "method": "Independent two-case edge ratio, conditional Parseval, actual terminal common-tree bills and direct edge/source mask counts; no author code",
+        "registry_adoption": "UNVERIFIED"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_BY_A070_AT_FULL_SCOPE_PENDING_B20",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A067",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A070-MASK-REFUND-BOOLEANITY-AND-EDGE-CONVERSION-AUDIT",
+    "version": 1,
+    "exact_statement": "For the two-bit root code L(empty)=1,L(nonempty)=3, u=(12+5x1)/13 and v=u^2/||u^2||_2=(169+120x1)/sqrt(42961) both have unit L2 norm, but W(v)=28800/42961>2W(u)=100/169, with positive integer comparison gap 571100. Thus Boolean hierarchy product-cost subadditivity does not extend to normalized real products. For every fixed hierarchy and Boolean g,q, with R_T the conditional-resampling cost refund and R_I=2 sum_i P(both g and q disagree on the physical i-edge), K I(gq)-Gamma(gq)=[K I(g)-Gamma(g)]+[K I(q)-W(q)]+R_T-KR_I for every real K. Compatible overlapping masks on c,u,v, q=(1-c)/2+(1+c)uv/2 and source g=q*y under T=(y,(c,(u,v))) retain the nonconstant final core f=y, yet R_T=13/2<12R_I=36. Their full source/mask/converted banks at K=12 are 49/2,14,-59/2 and sum to final slack 9. This refutes only refund-alone final-influence conversion, not the accepted arbitrary-source mask-cost theorem.",
+    "hypotheses": [
+      "Uniform finite cubes, entropy/code units bits, fixed hierarchy chosen before the spectral sample",
+      "W(u)=Gamma(u)-1 for normalized functions; real witness explicitly renormalizes its product",
+      "Physical XOR, R_I and conversion identities require actual Boolean signs",
+      "Witness blocks C={c},U={u},V={v},Y={y}; compatible events {c=+,u=+},{c=+,v=+}; sequential flips/XOR",
+      "Source slack, mask bank and complete final core code cost are retained; no universal paid-source hypothesis"
+    ],
+    "statement_sha256": "61c6c449d84a298a12283f0fc401ba8f9dee2becbc404bd5e795ebce15b83ded",
+    "contributors": [
+      "account05/A070"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261014T005025Z-account05-A070-analytic-route-referee\\DERIVATION.md Sections 2-3",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A088",
+        "verdict": "HOLDS_AT_FULL_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261014T024038Z-account05-A088-booleanity-referee\\AUDIT.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261014T024038Z-account05-A088-booleanity-referee\\out\\CHECK.json",
+        "method": "New explicit controller/cell partition, physical final spectra, exact reference cross entropy and direct independent resampling pairs; own prior arithmetic only; no other agent code",
+        "hash_convention": "canonical statement+hypotheses",
+        "scope": "Original exact hypotheses preserved; normalized-real diagnostic failures and signed conversion guard are not Boolean FEI refutations",
+        "registry_adoption": "UNVERIFIED"
+      },
+      {
+        "reviewer": "account05/A070",
+        "verdict": "A088_SOURCE_BOUND_ACCEPTANCE_CONSUMED_NOT_SELF_REVIEW",
+        "reviewer_conflict": true,
+        "substantive_repair": false,
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261014T024038Z-account05-A088-booleanity-referee\\CLAIMS.json",
+        "source_sha256": "b2075b27e827a65d5e9e0ff48460d6013d6b10fd842c4706447bb5c7e065d0a9",
+        "scope": "Exact original signed-conversion/real-control version; accepted independently by A088, not by its contributor A070"
+      }
+    ],
+    "status": "A088_INDEPENDENT_ACCEPTANCE_RECEIPT_CONSUMED_PENDING_B20",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered real extension Gamma(normalized uw)<=Gamma(u)+Gamma(w)-1 for all norm-one real u,w",
+      "Unregistered shortcut R_T(g,q)>=12 R_I(g,q), even for compatible overlapping masks with nonconstant final core"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A069",
+      "A067",
+      "A088",
+      "A094",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A070-PARTIAL-PRIVACY-TRANSFER-AND-EXPOSED-EVENT-BOUNDARY",
+    "version": 1,
+    "exact_statement": "For compatible subcube XOR masks q=q1*q2 on disjoint nonempty C,U,V,Y with U=U0 union U1 and V=V0 union V1, U1,V1 nonempty, every Boolean source g(C,U0,V0,Y) independent of U1,V1 has visible-edge conditional mask-disagreement probability at most theta=max(a,b,a+b-2ab)<=1/2, a=2^-|U1|,b=2^-|V1|. For the fixed hierarchy T=(T_Y,(T_C,(T_U,T_V))), Gamma_T(g)<=K I(g), K>=0, implies H(gq)<=Gamma_T(gq)<=max(12,(K+12theta)/(1-theta)) I(gq)<= (2K+12)I(gq), retaining its entire source reference. Fully exposed U can invalidate every uniform ancestral-to-final influence transfer: for t>=4, C={c},U={u},|V|=|Y|=t, q1=1-2*1{c=+,u=+},q2=1-2*1{c=+,V=all+},h=1-2*1{Y=all+},g=q1*h,f=gq=q2*h, the source sees only one exclusive coordinate and Gamma_T(g)<=7I(g), yet I(g)=1+2t2^-t,I(q)=1+t2^-t,I(f)=(3t+1)2^-t, so [7I(g)+12I(q)]/I(f) diverges. The final nonconstant core h remains and H(f)<=4I(f); this is a transfer obstruction, not a FEI disproof. The abstract Boolean edge budget also fails for norm-one real g=sqrt(2)*1{x=+} and single mask flip at x=-,z1=z2=+: I(g)=I(gq)=1/2,I(q)=3/4,theta=1/4,K=M=1 would require5/4<=5/6.",
+    "hypotheses": [
+      "Finite uniform cubes; actual Boolean signs and ordinary physical influences except explicitly marked normalized-real guard; entropy/code lengths in bits",
+      "Compatible global assignments for two subcube events; sequential flips/XOR includes intersection correction",
+      "One fixed complete singleton-leaf binary hierarchy shared by source, mask and output; actual core references retained",
+      "Partial-privacy sufficient condition requires at least one source-independent coordinate in EACH exclusive block; source is arbitrary on the other indicated coordinates",
+      "Paid-source Gamma<=K I is a conditional hypothesis; no construction of arbitrary paid references or same-constant recursion asserted",
+      "Cancellation family uses nonconstant point-mask core on an independent t-bit block and binary internal block trees; t>=4",
+      "Normalized-real guard uses spectral Dirichlet influence, not Boolean pivotal counts; its source and final both have unit L2 norm"
+    ],
+    "statement_sha256": "eaebf2e1dcbac52e3dd1b9f973df942d95583a470633eef85fb9a43fe49a7b0f",
+    "contributors": [
+      "account05/A070"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261014T034205Z-account05-A070-analytic-route-referee\\DERIVATION.md Sections2-4",
+    "proof_dependencies": [
+      {
+        "claim_id": "A069-SOURCE-BLIND-SHARED-EDGE-TRANSFER",
+        "version": 1,
+        "statement_sha256": "2e84fba67dffd8f7a2120cfc07da00b6dbde27ca49bf3d9e6e1724e52f4b9145",
+        "acceptance": "Independent A070 full-scope review this run; no repair",
+        "scope": "Abstract source-independent conditional-edge influence transfer"
+      },
+      {
+        "claim_id": "A069-BOOLEAN-MASK-REFUND",
+        "version": 1,
+        "statement_sha256": "aa1a04460873eb447b856faa415cf09754940fe50811ca0ab078f305faee0851",
+        "acceptance": "A070 stage3 independent acceptance",
+        "scope": "Complete hierarchy product subadditivity and W(q)<=12I(q)"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACT_CERTIFICATES_PASSED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered extension to arbitrary private-coordinate-dependent sources: fixed finite A pays7I(g)+12I(q)<=A I(gq), even with Gamma(g)<=7I(g)",
+      "Unregistered norm-one real extension of the Boolean conditional-edge influence comparison"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A069",
+      "A088",
+      "A094",
+      "A067",
+      "B14",
+      "B20"
+    ]
+  }
+]

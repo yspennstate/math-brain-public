@@ -1,0 +1,208 @@
+--- a/~/math-brain-inbox/w396/bundle_001.json
++++ b/~/math-brain-inbox/w396/bundle_001.json
+@@ -0,0 +1,205 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w396",
++  "bundle_slug": "probability-saw-fixed-length-collar-control-w396-001",
++  "entries": [
++    {
++      "key": "length-kernel",
++      "namespace": "probability.selfavoiding",
++      "logical_name": "fixed-length-self-avoiding-continuation-kernel",
++      "kind": "lemma",
++      "title": "Length is retained by fixed-length SAW conditioning",
++      "statement": "DRAFT, mathematical review pending. In a finite graph with inherited positive edge weights, give each simple n-edge path starting at a probability proportional to its product weight, with terminal vertex free, and assume positive total weight C_n(G;a). Define C_m(H;v) as the total weight of simple m-edge paths from v in H, with C_0=1 for a retained vertex. At a realized k-edge prefix eta, delete all its visited vertices except its tip to get G_eta. For a forbidden vertex or edge set A excluding a, the conditional avoidance probability is zero if the prefix hit A, and otherwise C_(n-k)(G_eta minus A;tip)/C_(n-k)(G_eta;tip). The denominator is positive on every realized prefix; at k=n use the avoidance indicator. Replacing C_(n-k) by an all-length partition sum changes the model.",
++      "proof_text": "Every completion is uniquely a simple (n-k)-edge path from the retained tip avoiding the earlier visited vertices. Its full weight is the common prefix weight times the inherited completion weight. Cancellation in conditional probabilities proves the ratio. Completed prefixes retain the avoidance indicator.",
++      "assumptions": [
++        "Finite graph, fixed length n, positive inherited weights, C_n(G;a)>0",
++        "Free endpoint; no prescribed chordal terminal point",
++        "Only realized prefixes are divided by; forbidden vertices exclude the start"
++      ],
++      "domain": "probability and self-avoiding walks",
++      "source": {
++        "source_id": "owner:w396:P0003:length-kernel",
++        "url": "owner://primary-directive/P0003/w396/ATTEMPT.md#length-kernel",
++        "revision": "draft-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "maximal-collar",
++      "namespace": "probability.selfavoiding",
++      "logical_name": "self-avoiding-collar-maximal-avoidance-martingale-bound",
++      "kind": "lemma",
++      "title": "Static collar deficit controls every exploration time",
++      "statement": "DRAFT, mathematical review pending. Let P be a finite probability law on simple paths and F_k the prefix filtration, with completed paths retained and a finite deterministic horizon N. For nested forbidden sets A subset B let E_A,E_B be full-path avoidance events, so E_B subset E_A, and r(A)=P(E_A), r(B)=P(E_B). Put M_k^A=P(E_A|F_k), M_k^B=P(E_B|F_k). For every lambda>0, P(max_(0<=k<=N)(M_k^A-M_k^B)>=lambda)<=min(1,(r(A)-r(B))/lambda). This applies to exact fixed-length SAW kernels and to all-length finite endpoint-constrained SAW laws; no independence or path-length loss is required.",
++      "proof_text": "D_k=M_k^A-M_k^B is the nonnegative martingale E[1_(E_A minus E_B)|F_k]. Stop at its first lambda crossing, or at N if none occurs. Finite optional stopping gives E D_tau=D_0=r(A)-r(B). Since D_tau is at least lambda on the crossing event and nonnegative elsewhere, lambda times that probability is at most D_0. The equal-weight two-path diamond attains equality for lambda=1.",
++      "assumptions": [
++        "Nested full-path avoidance events",
++        "Finite prefix horizon retaining terminal information",
++        "Conditional probabilities under one common path law"
++      ],
++      "domain": "probability and self-avoiding walks",
++      "source": {
++        "source_id": "owner:w396:P0003:maximal-collar",
++        "url": "owner://primary-directive/P0003/w396/ATTEMPT.md#maximal-collar",
++        "revision": "draft-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "conditioning-cost",
++      "namespace": "probability.selfavoiding",
++      "logical_name": "nested-self-avoiding-avoidance-total-variation-cost",
++      "kind": "lemma",
++      "title": "Exact total variation cost of a thicker obstacle",
++      "statement": "DRAFT, mathematical review pending. In any probability space, let E_B subset E_A have 0<P(E_B)<=P(E_A). With total variation defined as sup_C |P(C)-Q(C)|, TV(P(.|E_A),P(.|E_B))=1-P(E_B)/P(E_A). After any common measurable projection, including a stopped-prefix projection of a self-avoiding path, the corresponding total variation is at most this value.",
++      "proof_text": "Writing p=P(E_B)/P(E_A), the law conditioned on E_A is p times the law conditioned on E_B plus complementary weight on E_A minus E_B. The components have disjoint support, so testing E_B attains 1-p and the mixture bounds all events by 1-p. For p=1 the laws coincide. Measurable projection contracts total variation.",
++      "assumptions": [
++        "Nested measurable events of positive probability",
++        "One common underlying probability law",
++        "Total variation convention is supremum over events"
++      ],
++      "domain": "probability and self-avoiding walks",
++      "source": {
++        "source_id": "owner:w396:P0003:conditioning-cost",
++        "url": "owner://primary-directive/P0003/w396/ATTEMPT.md#conditioning-cost",
++        "revision": "draft-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "weak-conditioning",
++      "namespace": "probability.selfavoiding",
++      "logical_name": "collar-stable-compact-trace-conditional-weak-convergence",
++      "kind": "lemma",
++      "title": "Collar ratios justify conditioning a weak trace limit",
++      "statement": "DRAFT, mathematical review pending. Let K_n be nonempty compact random sets in a fixed compact metric space, converging in distribution for Hausdorff distance to K. For nonempty closed A set d_n=dist(K_n,A). Suppose P(d_n>0)->r>0 and P(d_n>epsilon_j)->r_j for epsilon_j decreasing to zero, with r_j->r. Then P(K avoids A)=r and the conditional law of K_n given avoidance converges weakly to K conditioned on avoidance. Literal geometric neighborhood avoidance is required by these distance events; any substitute smooth collars need matching neighborhood inclusions.",
++      "proof_text": "Continuity of distance and Portmanteau give P(d>0)<=r and r_j<=P(d>=epsilon_j)<=P(d>0); sending j to infinity proves equality. On a Skorohod coupling, d_n converges to d and false negatives of avoidance vanish. Equality of the limiting avoidance probabilities makes false positives vanish too. The indicators converge in L1, so their products with bounded continuous test functions converge, yielding conditional weak convergence after division by r.",
++      "assumptions": [
++        "Hausdorff weak convergence in a compact trace space",
++        "Nonempty closed obstacle and positive avoidance limit",
++        "Shrinking-neighborhood ratio limits agree with the uncollared limit",
++        "No ordered-curve tightness claim follows from this trace lemma"
++      ],
++      "domain": "probability and self-avoiding walks",
++      "source": {
++        "source_id": "owner:w396:P0003:weak-conditioning",
++        "url": "owner://primary-directive/P0003/w396/ATTEMPT.md#weak-conditioning",
++        "revision": "draft-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "dependent-avoidance",
++      "namespace": "probability.selfavoiding",
++      "logical_name": "self-avoiding-avoidance-events-diamond-counterexample",
++      "kind": "lemma",
++      "title": "Avoidance marginals cannot be multiplied without justification",
++      "statement": "DRAFT, mathematical review pending. In the graph whose only a-to-b simple paths are (a,c,b) and (a,d,b), assign each edge weight one and normalize the two path weights. Then P(avoid c)=P(avoid d)=1/2, while P(avoid both c and d)=0. Thus two avoidance marginals for the same path are not independent and their product 1/4 gives the wrong intersection probability.",
++      "proof_text": "Each of the two equally likely paths hits exactly one of c,d. The marginals each count one path; their intersection counts none.",
++      "assumptions": [
++        "Exactly the two diamond paths, with equal inherited edge weights",
++        "Both events concern the same sampled path"
++      ],
++      "domain": "probability and self-avoiding walks",
++      "source": {
++        "source_id": "owner:w396:P0003:dependent-avoidance",
++        "url": "owner://primary-directive/P0003/w396/ATTEMPT.md#dependent-avoidance",
++        "revision": "draft-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "catalog-scope",
++      "namespace": "probability.selfavoiding",
++      "logical_name": "honeycomb-saw-fixed-length-versus-chordal-ensemble-gap",
++      "kind": "concept",
++      "title": "P0003 requires its fixed-length ensemble to be preserved",
++      "statement": "DRAFT source-scope correction. Grimmett, Selected problems in probability theory, arXiv:2205.07318 Question 2.2, asks about uniform n-step honeycomb SAW starting at the origin and suitable rescaling as n tends to infinity. The question does not specify all continuum normalization and stopping conventions. The critical all-length boundary-to-boundary ensemble in Bauerschmidt-Duminil-Copin-Goodman-Slade, arXiv:1206.2092 Conjecture 1.5 and Section 3.3, is related but has a different endpoint and length law. A proof in that chordal ensemble is not a proof of the fixed-length catalog target without an explicit transfer theorem. Present openness is UNKNOWN in this packet.",
++      "proof_text": null,
++      "assumptions": [
++        "The two primary formulations have been checked",
++        "No fixed-length/all-length transfer theorem or current-resolution certification was obtained"
++      ],
++      "domain": "probability and self-avoiding walks",
++      "source": {
++        "source_id": "owner:w396:P0003:catalog-scope",
++        "url": "owner://primary-directive/P0003/w396/ATTEMPT.md#catalog-scope",
++        "revision": "draft-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "disk-gap",
++      "namespace": "probability.selfavoiding",
++      "logical_name": "fixed-length-honeycomb-saw-shrinking-disk-collar-bound-conjecture",
++      "kind": "concept",
++      "title": "H_disk: the unproved positive collar-count estimate",
++      "statement": "DRAFT CONJECTURE, not proved. Fix a closed disk A of radius r about z with |z|>r and B_epsilon the concentric disk of radius (1+epsilon)r, still excluding zero. In the graph-distance-n honeycomb ball G_n, scale coordinates by n^(-3/4) and delete edges whose segments intersect A or B_epsilon, respectively. C_n denotes exact n-edge simple-path count from zero with free endpoint; c_n(H)=C_n(G_n;0). The missing estimate asks for alpha>0 and finite C(z,r) such that limsup_n [C_n(G_n minus A;0)-C_n(G_n minus B_epsilon;0)]/c_n(H)<=C(z,r) epsilon^alpha for sufficiently small epsilon. The spatial normalization is an operational conjectural choice. The maximal martingale bound would transfer this static estimate to all prefixes, but no such estimate is proved here; closing it would not alone prove the SLE scaling limit.",
++      "proof_text": null,
++      "assumptions": [
++        "Uniform fixed-length honeycomb model, free endpoint",
++        "Geometric forbidden edges and inherited lattice",
++        "Chosen spatial normalization n^(-3/4), not certified by the source question",
++        "Positive alpha and uniform collar estimate remain unproved"
++      ],
++      "domain": "probability and self-avoiding walks",
++      "source": {
++        "source_id": "owner:w396:P0003:disk-gap",
++        "url": "owner://primary-directive/P0003/w396/ATTEMPT.md#disk-gap",
++        "revision": "draft-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "maximal-collar",
++      "to_key": "length-kernel",
++      "kind": "semantic_association",
++      "rationale": "The exact remaining-length kernel gives the concrete conditional avoidance probabilities to which the maximal bound applies in fixed-length SAW."
++    },
++    {
++      "from_key": "conditioning-cost",
++      "to_key": "maximal-collar",
++      "kind": "analogous_to",
++      "rationale": "Both bounds control obstacle thickening using the same initial nested-event probability deficit."
++    },
++    {
++      "from_key": "weak-conditioning",
++      "to_key": "maximal-collar",
++      "kind": "analogous_to",
++      "rationale": "Both use a vanishing static collar deficit to justify a uniform or limiting avoidance operation; neither supplies that deficit."
++    },
++    {
++      "from_key": "dependent-avoidance",
++      "to_key": "maximal-collar",
++      "kind": "semantic_association",
++      "rationale": "The same-path dependence seen on the diamond is handled by conditional expectation in the maximal bound."
++    },
++    {
++      "from_key": "catalog-scope",
++      "to_key": "length-kernel",
++      "kind": "semantic_association",
++      "rationale": "The fixed-length catalog ensemble requires the remaining-length parameter in its continuation kernel."
++    },
++    {
++      "from_key": "disk-gap",
++      "to_key": "length-kernel",
++      "kind": "depends_on",
++      "rationale": "The conjectured count ratio is defined for exact-length kernels, not for an all-length sum."
++    },
++    {
++      "from_key": "disk-gap",
++      "to_key": "maximal-collar",
++      "kind": "semantic_association",
++      "rationale": "Supplying the static conjectured bound would give maximal-prefix error at most C epsilon^alpha/lambda by the proved conditional inequality."
++    }
++  ]
++}

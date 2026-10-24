@@ -1,0 +1,37 @@
+[
+  {
+    "claim_id": "A079-SHARP-QUADRATIC-TWO-PHASE-COLLISION",
+    "version": 1,
+    "exact_statement": "For every n>=0 and every two quadratic Boolean phases g0,g1 on the same uniform physical n-bit cube, G(z,y)=g_z(y) has selector entropy decrement L=H(G)-(H(g0)+H(g1))/2 <= (12-(9/2)log2(3))*Inf_z(G), and H(G) <= (16/3-(3/2)log2(3))*I(G). Both constants are attained by g0=1 and g1=(-1)^(y0*y1). The admitted distinct-label quadratic affine-row function f(x,z,y)=(-1)^(xz+zy0y1) restricts at x=0 to this witness, so arbitrary label collision does not preserve a conditional constant of two. For X=z,Y=(y0,y1), the witness retains H(S_Y|S_X)=2-(3/8)log2(3) and I_Y=1/2.",
+    "hypotheses": [
+      "Normalized Walsh transform; entropy in bits; influence is physical squared Fourier mean degree",
+      "Two actual quadratic sign phases on the same full uniform data cube",
+      "One independent uniform physical selector bit",
+      "No assertion for unequal affine supports or repeated collision closure"
+    ],
+    "statement_sha256": "938777233a0b7fffcfbb415d033d99989abf54fea66bda2d6e32cc6eda6f12ef",
+    "contributors": [
+      "A079"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A079\\runs\\20261014T000722Z-account05-A079-correlated-auxiliaries\\DERIVATION.md",
+      "sha256": "4375d67f0fd79bd6cc987a94eeff97ad2ada7f92c70a62f1ab8149a35eef3b09"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unqualified extension of A034 conditional constant two through an X restriction merging two quadratic labels"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A034",
+      "A080",
+      "A088",
+      "A092",
+      "B16",
+      "B20"
+    ]
+  }
+]

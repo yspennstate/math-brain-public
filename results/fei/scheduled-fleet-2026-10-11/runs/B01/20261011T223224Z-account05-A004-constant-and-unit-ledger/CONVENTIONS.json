@@ -1,0 +1,115 @@
+{
+  "schema": "fei-unit-ledger/1",
+  "packet_id": "A004",
+  "stream": "B01",
+  "status": "BASELINE_COMPLETE_PENDING_INDEPENDENT_REVIEW",
+  "reference_measure": "Uniform product cube unless explicitly biased",
+  "reference_output": "Boolean sign {-1,+1}",
+  "fourier_basis_uniform": "chi_S=product_{i in S}x_i; coefficient E[f chi_S]",
+  "fourier_basis_biased": "phi_S=product (X_i-p_i)/sqrt(p_i(1-p_i)); remove deterministic coordinates",
+  "logarithms": {
+    "H_nats": "ln(2)*H_bits",
+    "natural_influence_constant_to_bits": "divide by ln(2)",
+    "information_to_information_constant": "unchanged",
+    "influence_and_variance": "unchanged",
+    "mixed_inequality": "convert every information term together; log-free terms acquire reciprocal ln(2)"
+  },
+  "sign_indicator": {
+    "definition": "g=(f+1)/2; p=E g",
+    "nonempty_coefficients": "fhat(S)=2 ghat(S)",
+    "empty_coefficients": "fhat(empty)=2p-1; ghat(empty)=p",
+    "parseval_mass_indicator": "sum ghat(S)^2=p",
+    "variance": "Var(f)=4p(1-p)=4Var(g)",
+    "dirichlet_energy": "I_spec(f)=4 I_spec(g)",
+    "pivotal_boundary": "identical for f and g",
+    "raw_nonempty_entropy": "Hplus(f)=4 Ent_raw(ghat^2 on nonempty)-2Var(f)",
+    "normalized_indicator_entropy": "H(f)=h2(v)+4p[H(ghat^2/p)-h2(p)] for p>0"
+  },
+  "nonempty_entropy": {
+    "full": "H=h2(v)+v H(P_nonempty/v)",
+    "raw": "Hplus=v H(P_nonempty/v)+v log2(1/v)",
+    "empty": "E0=(1-v)log2(1/(1-v)); H=Hplus+E0",
+    "zero_variance": "omit conditional law; all entropies zero",
+    "empty_bounds": "E0<=v/ln2; E0<=sqrt(2/(1-ln2))*(I-v)",
+    "conditional_variance_charge": "h2(v)<=2I"
+  },
+  "influence_uniform": {
+    "total": "sum_i rho_i=sum_S |S| fhat(S)^2",
+    "flip": "rho_i=P[f(X)!=f(X^i)]",
+    "undirected_edges": "rho_i=boundary_edges_i/2^(n-1)",
+    "derivative": "E[((f_plus-f_minus)/2)^2]=rho_i",
+    "oriented_output_change": "rho_i/2",
+    "monotone_lower_side_fiber": "rho_i",
+    "independent_resampling_change": "rho_i/2"
+  },
+  "influence_biased": {
+    "pivotal": "rho_i depends only on other coordinates",
+    "spectral": "4p_i(1-p_i)rho_i",
+    "independent_resampling_change": "2p_i(1-p_i)rho_i",
+    "increasing_oriented_output_change": "(1-p_i)rho_i or p_i rho_i",
+    "percolation_symbols": "I=sum rho_i; J=sum spectral_i",
+    "threshold_symbols": "I_mu=sum spectral_i"
+  },
+  "corrected_entropy": {
+    "Hcorr": "sum_nonempty P_S log2(product sigma_i^2/P_S)",
+    "sigma_i_squared": "4p_i(1-p_i)",
+    "relation_to_raw": "Hcorr=Hplus+sum_i I_spec,i log2 sigma_i^2",
+    "natural": "E_mu=ln2 Hcorr",
+    "deficit": "I_spec-Var",
+    "biased_dictator": "Hcorr=deficit=0; ordinary spectrum entropy generally positive"
+  },
+  "character_translation": {
+    "scope": "uniform basis only",
+    "law": "P_shift(S)=P(S xor U)",
+    "full_H": "invariant",
+    "I_i": "rho_i -> 1-rho_i when i in U",
+    "D": "sum min(rho_i,1-rho_i)=min_U I(chi_U f)",
+    "deficit_bound": "D<=4(I-Var)",
+    "not_invariant": "I, Var and raw nonempty Hplus in general"
+  },
+  "bridge_constants": {
+    "C018_bits": "C_FEI<=K_erasure+2/ln2",
+    "C018_nats": "C_FEI<=K_erasure+2",
+    "C019": "combine paid-node and terminal constants in common base using max",
+    "C020_natural_residual": "C_bits<=2+Kref_bits+k_residual_nats/ln2",
+    "C024": "information charges divided by ln2 together; population size log-free; dissipation is not lifetime"
+  },
+  "constants_rational_intervals": {
+    "Clev_bits": {
+      "lower": "3483620875324144824142246060501/1267650600228229401496703205376",
+      "upper": "1741810437662072412071123030251/633825300114114700748351602688",
+      "display_only": 2.7480923171550184
+    },
+    "Creg_bits": {
+      "lower": "11328327463982878830895513712369/1267650600228229401496703205376",
+      "upper": "5664163731991439415447756856185/633825300114114700748351602688",
+      "display_only": 8.936474657877582
+    },
+    "CT_bits": {
+      "lower": "235668833975420796610787387831271/316912650057057350374175801344",
+      "upper": "942675335901683186443149551325089/1267650600228229401496703205376",
+      "display_only": 743.6397188089231
+    },
+    "Kref_bits": {
+      "lower": "6463485815788664677786280631799/633825300114114700748351602688",
+      "upper": "12926971631577329355572561263599/1267650600228229401496703205376",
+      "display_only": 10.197582543052432
+    },
+    "erasure_additive_bits": {
+      "lower": "1828833234529184422442202814989/633825300114114700748351602688",
+      "upper": "3657666469058368844884405629979/1267650600228229401496703205376",
+      "display_only": 2.8853900817779268
+    }
+  },
+  "proof": "REPORT.md",
+  "endpoint_evidence": [
+    "ENDPOINT_CHECKS.md",
+    "out/validation.json",
+    "out/biased_validation.json"
+  ],
+  "reviewers": [
+    "A086",
+    "A094"
+  ],
+  "full_FEI": "OPEN"
+}

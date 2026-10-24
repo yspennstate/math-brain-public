@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260923T004154Z-account03-B11-QFORM-r20",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_at_start": "17b5892c5f534e4772409f360e2d73a4471395ee",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "partner_result": {
+    "worker": "account04/B11",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4110bbfd21beffa0260a017d468b0a486af56db1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260922T222040Z-account04-B11-cone-envelope-r3/REPORT.md",
+    "applied_inequality": "||p_Q||_inf <= 6 e^(2/3)|det M|^(-1/3) <= 11.686404246328054/sigma on the full-null-bank boundary"
+  },
+  "new_result": {
+    "id": "QFORM-NULL-TANGENT-TWORAY-OVERLAP-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "statement": "For an exact-rank-three indefinite frame with a null rank-one source bank of leverage lambda and a disjoint M-orthogonal tangent rank-one source bank of leverage mu, ||p_Q||_inf <= 8 lambda^(-1/4) mu^(-1/2)/sqrt(|s beta|), where s=||Mr|| and beta=v^TMv. If sigma_min(M)>=sigma and eta=dist(v,span(r)), this is <=8 lambda^(-1/4)mu^(-1/2)eta^(-1)/sigma.",
+    "mechanism": "A translation-stable half-potential estimate allows arbitrary dependence among the residual spectral coordinates. The null-bank product lowers the rank-two hyperbolic singularity from |W|^-1 to |W|^-1/2 at the half-potential level; the independent tangent-square bank pays that half-potential.",
+    "continuity": "NOT_PROVED_BY_THIS_THEOREM"
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "633e2442f30ae1848ba02e37eecc735d2f22b12e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T004154Z-account03-B11-QFORM-r20/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T004154Z-account03-B11-QFORM-r20/VERIFY.py",
+    "checker_terminal": "QFORM_B11_TANGENT_RAY_OVERLAP_CHECK_PASS"
+  },
+  "full_target_status": "OPEN",
+  "unresolved_implication": "QFORM-NEAR-COLOOP-NO-TANGENT-RAY-AGGREGATION-v1",
+  "next_step": "From a near-unit null bank with leverage below one, force either a quantitative M-orthogonal tangent rank-one bank or a product-preserving rank-two/three residual aggregation certificate already covered by pair/ridge/grouped mechanisms; then address arbitrary additional spectrum."
+}

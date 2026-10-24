@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "qform-20260922T114042Z-account01-B16-r11",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "QFORM-SAMESIGN-SPECTRAL-PAIR-PROJECTION-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "For orthonormal r1,r2 and alpha,beta>0, if X has independent scalar densities <=1 then alpha<r1,X>^2+beta<r2,X>^2 has density L-infinity <=2*pi/sqrt(alpha*beta)."
+    },
+    {
+      "id": "QFORM-RANK3-RULED-MAJORITY-HALF-v1",
+      "status": "PROVED_SUPPORTING",
+      "statement": "For orthonormal r1,r2,r3 and alpha,beta,gamma>=1, the rank-three form alpha<r1,X>^2+beta<r2,X>^2-gamma<r3,X>^2 has density <=sqrt(2)*pi a.e. on s>0; reflected statement holds for signature (1,2)."
+    },
+    {
+      "id": "QFORM-PROJECTION-PRODUCT-INTERACTION-v2",
+      "status": "OPEN",
+      "statement": "Control the two-sheet/minority-sign levels and/or pass the ruled-level estimate through correlated additional spectral components while retaining original product structure."
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "Livshyts-Paouris-Pivovarov arXiv:1507.07949",
+      "scope": "every k-dimensional orthogonal marginal of product density with scalar caps 1 is <=2^(k/2)"
+    },
+    {
+      "source": "account02/B06 commit 6902eb62f21a7c833ca27dcca69f34d50e711a7d",
+      "scope": "same-sign spectral determinant mass and fixed-physical-block delocalization obstruction"
+    },
+    {
+      "source": "account02/B10 observed at commit 452586b3a9db037a9c09e4368906d1c3838d1ab3",
+      "scope": "hyperbolic-square physical theorem and reciprocal-Pluecker averaging obstruction"
+    }
+  ]
+}

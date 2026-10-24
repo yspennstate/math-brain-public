@@ -1,0 +1,38 @@
+QFORM B14 r25 verification
+
+1. Kernel norms
+For L_R(x)=log_+(R/|x|):
+int L_R = 2R.
+int L_R^2 = 2R * int_0^1 log(1/u)^2 du = 4R.
+Thus ||L_R||_2=2 sqrt(R).
+
+2. p=2 convolution
+R_i=2 r_i^2/kappa_i.
+||L_R1*L_R2||_inf <= 4 sqrt(R1 R2)
+= 8 r1 r2/sqrt(kappa1 kappa2).
+After determinant factors this is
+8 r1 r2/sqrt(D1 D2 kappa1 kappa2).
+
+3. Objective
+F=A/r1+B r1^2/r2+C r1 r2,
+A=2sqrt(2),
+B=8sqrt(2)/(sqrt(D1) kappa1),
+C=8/sqrt(D1 D2 kappa1 kappa2).
+For fixed r1, r2=sqrt(B r1/C), so
+F=A/r1+2sqrt(BC) r1^(3/2).
+Stationarity gives r1^(5/2)=A/(3sqrt(BC)).
+Minimum = 5*3^(-3/5)*A^(3/5)*(BC)^(1/5).
+Substitution gives
+C0=5*2^(11/5)/3^(3/5)=11.884016386440024.
+
+4. Target example
+A*=3[[J,I],[I,2J]], J=[[0,1],[1,0]].
+On a J-eigenspace with eigenvalue j=+/-1 the reduced 2x2 matrix is 3[[j,1],[1,2j]].
+Eigenvalue magnitudes are 3(3+sqrt(5))/2=7.854101966249685 and 3(3-sqrt(5))/2=1.1458980337503153, each twice.
+B1=3J, D1=9, kappa1=3.
+B2=6J-(3I)(3J)^(-1)(3I)=3J, so D2=9, kappa2=3.
+Theorem bound = C0/3 = 3.961338795480008.
+Existing one-pair arbitrary-rank bound on this matrix:
+3*400^(1/3)*(9^2*3*s3)^(-1/6)=8.649995413587321.
+
+QFORM_B14_R25_CHECK_PASS

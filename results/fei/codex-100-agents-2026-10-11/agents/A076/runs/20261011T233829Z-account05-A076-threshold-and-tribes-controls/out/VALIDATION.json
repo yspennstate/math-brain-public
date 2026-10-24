@@ -1,0 +1,4132 @@
+{
+  "helper_version": "A076-mixed-majority-v2",
+  "transport_cases": 556,
+  "tree_cases": 84,
+  "exact_assertions": 53949,
+  "elapsed_seconds": 2.4065137999132276,
+  "log_interval_method": {
+    "atanh_terms": 24,
+    "dyadic_rounding_bits": 70,
+    "proved_remainder": "2*z^(2N+1)/((2N+1)*(1-z^2)); range 0<=z<=1/3"
+  },
+  "code_sha256": "59895b847a29ac578c9eb692235b7b43838cc009342a09029eb6e729efcd9781",
+  "rows": [
+    {
+      "m": 2,
+      "w": 1,
+      "t": 1,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "3/2",
+      "leaf_influence_exact": "0",
+      "defect_exact": "1/2",
+      "internal_nodes": 5,
+      "leaves": 6,
+      "H": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "B": {
+        "lower_exact": "1180591620717411303423/1180591620717411303424",
+        "upper_exact": "1180591620717411303425/1180591620717411303424",
+        "lower_diagnostic": 1.0,
+        "upper_diagnostic": 1.0
+      },
+      "Q": {
+        "lower_exact": "1180591620717411303423/2361183241434822606848",
+        "upper_exact": "1180591620717411303425/2361183241434822606848",
+        "lower_diagnostic": 0.5,
+        "upper_diagnostic": 0.5
+      },
+      "Lambda": {
+        "lower_exact": "476578227963083056741/1180591620717411303424",
+        "upper_exact": "953156455926166113483/2361183241434822606848",
+        "lower_diagnostic": 0.40367746102880203,
+        "upper_diagnostic": 0.40367746102880203
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "476578227963083056741/1770887431076116955136",
+        "upper_exact": "317718818642055371161/1180591620717411303424",
+        "lower_diagnostic": 0.2691183073525347,
+        "upper_diagnostic": 0.2691183073525347
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 1,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "0",
+      "leaf_influence_exact": "3/2",
+      "defect_exact": "0",
+      "internal_nodes": 0,
+      "leaves": 1,
+      "H": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "B": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Q": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Hleaf": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "9",
+        "upper_exact": "9",
+        "lower_diagnostic": 9.0,
+        "upper_diagnostic": 9.0
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 1,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "3/2",
+      "leaf_influence_exact": "0",
+      "defect_exact": "1/2",
+      "internal_nodes": 5,
+      "leaves": 6,
+      "H": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "B": {
+        "lower_exact": "1180591620717411303423/1180591620717411303424",
+        "upper_exact": "1180591620717411303425/1180591620717411303424",
+        "lower_diagnostic": 1.0,
+        "upper_diagnostic": 1.0
+      },
+      "Q": {
+        "lower_exact": "1180591620717411303423/2361183241434822606848",
+        "upper_exact": "1180591620717411303425/2361183241434822606848",
+        "lower_diagnostic": 0.5,
+        "upper_diagnostic": 0.5
+      },
+      "Lambda": {
+        "lower_exact": "476578227963083056741/1180591620717411303424",
+        "upper_exact": "953156455926166113483/2361183241434822606848",
+        "lower_diagnostic": 0.40367746102880203,
+        "upper_diagnostic": 0.40367746102880203
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "476578227963083056741/1770887431076116955136",
+        "upper_exact": "317718818642055371161/1180591620717411303424",
+        "lower_diagnostic": 0.2691183073525347,
+        "upper_diagnostic": 0.2691183073525347
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 1,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "0",
+      "leaf_influence_exact": "3/2",
+      "defect_exact": "0",
+      "internal_nodes": 0,
+      "leaves": 1,
+      "H": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "B": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Q": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Hleaf": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "9",
+        "upper_exact": "9",
+        "lower_diagnostic": 9.0,
+        "upper_diagnostic": 9.0
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 1,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "3/2",
+      "leaf_influence_exact": "0",
+      "defect_exact": "1/2",
+      "internal_nodes": 5,
+      "leaves": 6,
+      "H": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "B": {
+        "lower_exact": "1180591620717411303423/1180591620717411303424",
+        "upper_exact": "1180591620717411303425/1180591620717411303424",
+        "lower_diagnostic": 1.0,
+        "upper_diagnostic": 1.0
+      },
+      "Q": {
+        "lower_exact": "1180591620717411303423/2361183241434822606848",
+        "upper_exact": "1180591620717411303425/2361183241434822606848",
+        "lower_diagnostic": 0.5,
+        "upper_diagnostic": 0.5
+      },
+      "Lambda": {
+        "lower_exact": "476578227963083056741/1180591620717411303424",
+        "upper_exact": "953156455926166113483/2361183241434822606848",
+        "lower_diagnostic": 0.40367746102880203,
+        "upper_diagnostic": 0.40367746102880203
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "476578227963083056741/1770887431076116955136",
+        "upper_exact": "317718818642055371161/1180591620717411303424",
+        "lower_diagnostic": 0.2691183073525347,
+        "upper_diagnostic": 0.2691183073525347
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 1,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "0",
+      "leaf_influence_exact": "3/2",
+      "defect_exact": "0",
+      "internal_nodes": 0,
+      "leaves": 1,
+      "H": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "B": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Q": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Hleaf": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "9",
+        "upper_exact": "9",
+        "lower_diagnostic": 9.0,
+        "upper_diagnostic": 9.0
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 2,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "3/2",
+      "leaf_influence_exact": "0",
+      "defect_exact": "5/8",
+      "internal_nodes": 7,
+      "leaves": 8,
+      "H": {
+        "lower_exact": "3541774862152233910271/1180591620717411303424",
+        "upper_exact": "3541774862152233910273/1180591620717411303424",
+        "lower_diagnostic": 3.0,
+        "upper_diagnostic": 3.0
+      },
+      "B": {
+        "lower_exact": "15294113982668869519275/9444732965739290427392",
+        "upper_exact": "15294113982668869519299/9444732965739290427392",
+        "lower_diagnostic": 1.6193273052979023,
+        "upper_diagnostic": 1.6193273052979023
+      },
+      "Q": {
+        "lower_exact": "4417119880984094326453/4722366482869645213696",
+        "upper_exact": "17668479523936377305829/18889465931478580854784",
+        "lower_diagnostic": 0.9353615177913804,
+        "upper_diagnostic": 0.9353615177913804
+      },
+      "Lambda": {
+        "lower_exact": "154528214561831726145/590295810358705651712",
+        "upper_exact": "618112858247326904581/2361183241434822606848",
+        "lower_diagnostic": 0.2617809780285064,
+        "upper_diagnostic": 0.2617809780285064
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "51509404853943908715/295147905179352825856",
+        "upper_exact": "618112858247326904581/3541774862152233910272",
+        "lower_diagnostic": 0.1745206520190043,
+        "upper_diagnostic": 0.1745206520190043
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 2,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "7/8",
+      "leaf_influence_exact": "5/8",
+      "defect_exact": "1/4",
+      "internal_nodes": 2,
+      "leaves": 3,
+      "H": {
+        "lower_exact": "3541774862152233910271/1180591620717411303424",
+        "upper_exact": "3541774862152233910273/1180591620717411303424",
+        "lower_diagnostic": 3.0,
+        "upper_diagnostic": 3.0
+      },
+      "B": {
+        "lower_exact": "3708314699430436335559/4722366482869645213696",
+        "upper_exact": "14833258797721745342257/18889465931478580854784",
+        "lower_diagnostic": 0.7852661823012519,
+        "upper_diagnostic": 0.7852661823012519
+      },
+      "Q": {
+        "lower_exact": "9214305373265728338869/18889465931478580854784",
+        "upper_exact": "18428610746531456677749/37778931862957161709568",
+        "lower_diagnostic": 0.4878012648261504,
+        "upper_diagnostic": 0.4878012648261504
+      },
+      "Lambda": {
+        "lower_exact": "154528214561831726145/590295810358705651712",
+        "upper_exact": "618112858247326904581/2361183241434822606848",
+        "lower_diagnostic": 0.2617809780285064,
+        "upper_diagnostic": 0.2617809780285064
+      },
+      "Hleaf": {
+        "lower_exact": "7595730950293013378611/4722366482869645213696",
+        "upper_exact": "60765847602344107028927/37778931862957161709568",
+        "lower_diagnostic": 1.6084585933443496,
+        "upper_diagnostic": 1.6084585933443496
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "1158314049276517005675/295147905179352825856",
+        "upper_exact": "13899768591318204068101/3541774862152233910272",
+        "lower_diagnostic": 3.9245206520190044,
+        "upper_diagnostic": 3.9245206520190044
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 2,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "3/2",
+      "leaf_influence_exact": "0",
+      "defect_exact": "3/4",
+      "internal_nodes": 11,
+      "leaves": 12,
+      "H": {
+        "lower_exact": "3541774862152233910271/1180591620717411303424",
+        "upper_exact": "3541774862152233910273/1180591620717411303424",
+        "lower_diagnostic": 3.0,
+        "upper_diagnostic": 3.0
+      },
+      "B": {
+        "lower_exact": "3541774862152233910269/2361183241434822606848",
+        "upper_exact": "3541774862152233910275/2361183241434822606848",
+        "lower_diagnostic": 1.5,
+        "upper_diagnostic": 1.5
+      },
+      "Q": {
+        "lower_exact": "3541774862152233910269/4722366482869645213696",
+        "upper_exact": "3541774862152233910275/4722366482869645213696",
+        "lower_diagnostic": 0.75,
+        "upper_diagnostic": 0.75
+      },
+      "Lambda": {
+        "lower_exact": "2513813687941117102867/4722366482869645213696",
+        "upper_exact": "2513813687941117102869/4722366482869645213696",
+        "lower_diagnostic": 0.5323207542362416,
+        "upper_diagnostic": 0.5323207542362416
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "2513813687941117102867/7083549724304467820544",
+        "upper_exact": "837937895980372367623/2361183241434822606848",
+        "lower_diagnostic": 0.35488050282416106,
+        "upper_diagnostic": 0.35488050282416106
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 2,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "1/4",
+      "leaf_influence_exact": "5/4",
+      "defect_exact": "1/4",
+      "internal_nodes": 1,
+      "leaves": 2,
+      "H": {
+        "lower_exact": "3541774862152233910271/1180591620717411303424",
+        "upper_exact": "3541774862152233910273/1180591620717411303424",
+        "lower_diagnostic": 3.0,
+        "upper_diagnostic": 3.0
+      },
+      "B": {
+        "lower_exact": "1180591620717411303423/2361183241434822606848",
+        "upper_exact": "1180591620717411303425/2361183241434822606848",
+        "lower_diagnostic": 0.5,
+        "upper_diagnostic": 0.5
+      },
+      "Q": {
+        "lower_exact": "1180591620717411303423/4722366482869645213696",
+        "upper_exact": "1180591620717411303425/4722366482869645213696",
+        "lower_diagnostic": 0.25,
+        "upper_diagnostic": 0.25
+      },
+      "Lambda": {
+        "lower_exact": "1560657232014950989385/4722366482869645213696",
+        "upper_exact": "780328616007475494693/2361183241434822606848",
+        "lower_diagnostic": 0.3304820237218406,
+        "upper_diagnostic": 0.3304820237218406
+      },
+      "Hleaf": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "54687280164298459643465/7083549724304467820544",
+        "upper_exact": "9114546694049743273911/1180591620717411303424",
+        "lower_diagnostic": 7.720321349147894,
+        "upper_diagnostic": 7.720321349147894
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 2,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "3/2",
+      "leaf_influence_exact": "0",
+      "defect_exact": "5/8",
+      "internal_nodes": 8,
+      "leaves": 9,
+      "H": {
+        "lower_exact": "3541774862152233910271/1180591620717411303424",
+        "upper_exact": "3541774862152233910273/1180591620717411303424",
+        "lower_diagnostic": 3.0,
+        "upper_diagnostic": 3.0
+      },
+      "B": {
+        "lower_exact": "15294113982668869519275/9444732965739290427392",
+        "upper_exact": "15294113982668869519299/9444732965739290427392",
+        "lower_diagnostic": 1.6193273052979023,
+        "upper_diagnostic": 1.6193273052979023
+      },
+      "Q": {
+        "lower_exact": "4417119880984094326453/4722366482869645213696",
+        "upper_exact": "17668479523936377305829/18889465931478580854784",
+        "lower_diagnostic": 0.9353615177913804,
+        "upper_diagnostic": 0.9353615177913804
+      },
+      "Lambda": {
+        "lower_exact": "154528214561831726145/590295810358705651712",
+        "upper_exact": "618112858247326904581/2361183241434822606848",
+        "lower_diagnostic": 0.2617809780285064,
+        "upper_diagnostic": 0.2617809780285064
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "51509404853943908715/295147905179352825856",
+        "upper_exact": "618112858247326904581/3541774862152233910272",
+        "lower_diagnostic": 0.1745206520190043,
+        "upper_diagnostic": 0.1745206520190043
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 2,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "5/8",
+      "leaf_influence_exact": "7/8",
+      "defect_exact": "1/4",
+      "internal_nodes": 2,
+      "leaves": 3,
+      "H": {
+        "lower_exact": "3541774862152233910271/1180591620717411303424",
+        "upper_exact": "3541774862152233910273/1180591620717411303424",
+        "lower_diagnostic": 3.0,
+        "upper_diagnostic": 3.0
+      },
+      "B": {
+        "lower_exact": "3708314699430436335559/4722366482869645213696",
+        "upper_exact": "14833258797721745342257/18889465931478580854784",
+        "lower_diagnostic": 0.7852661823012519,
+        "upper_diagnostic": 0.7852661823012519
+      },
+      "Q": {
+        "lower_exact": "9214305373265728338869/18889465931478580854784",
+        "upper_exact": "18428610746531456677749/37778931862957161709568",
+        "lower_diagnostic": 0.4878012648261504,
+        "upper_diagnostic": 0.4878012648261504
+      },
+      "Lambda": {
+        "lower_exact": "154528214561831726145/590295810358705651712",
+        "upper_exact": "618112858247326904581/2361183241434822606848",
+        "lower_diagnostic": 0.2617809780285064,
+        "upper_diagnostic": 0.2617809780285064
+      },
+      "Hleaf": {
+        "lower_exact": "7595730950293013378611/4722366482869645213696",
+        "upper_exact": "60765847602344107028927/37778931862957161709568",
+        "lower_diagnostic": 1.6084585933443496,
+        "upper_diagnostic": 1.6084585933443496
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "1601035907045546244459/295147905179352825856",
+        "upper_exact": "19212430884546554933509/3541774862152233910272",
+        "lower_diagnostic": 5.424520652019004,
+        "upper_diagnostic": 5.424520652019004
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 3,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "11/8",
+      "consumed_influence_exact": "11/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "21/32",
+      "internal_nodes": 9,
+      "leaves": 10,
+      "H": {
+        "lower_exact": "7339640337298740599577/2361183241434822606848",
+        "upper_exact": "117434245396779849593287/37778931862957161709568",
+        "lower_diagnostic": 3.10845859334435,
+        "upper_diagnostic": 3.10845859334435
+      },
+      "B": {
+        "lower_exact": "31163515777017259997671/18889465931478580854784",
+        "upper_exact": "15581757888508629998861/9444732965739290427392",
+        "lower_diagnostic": 1.6497827884633012,
+        "upper_diagnostic": 1.6497827884633012
+      },
+      "Q": {
+        "lower_exact": "70621188896414768504499/75557863725914323419136",
+        "upper_exact": "35310594448207384252281/37778931862957161709568",
+        "lower_diagnostic": 0.9346636526489511,
+        "upper_diagnostic": 0.9346636526489511
+      },
+      "Lambda": {
+        "lower_exact": "358641005833153730961/2361183241434822606848",
+        "upper_exact": "179320502916576865481/1180591620717411303424",
+        "lower_diagnostic": 0.15189037408855147,
+        "upper_diagnostic": 0.15189037408855147
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "358641005833153730961/3246626956972881084416",
+        "upper_exact": "16301863901506987771/147573952589676412928",
+        "lower_diagnostic": 0.11046572660985561,
+        "upper_diagnostic": 0.11046572660985561
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 3,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "11/8",
+      "consumed_influence_exact": "15/16",
+      "leaf_influence_exact": "7/16",
+      "defect_exact": "11/32",
+      "internal_nodes": 2,
+      "leaves": 3,
+      "H": {
+        "lower_exact": "7339640337298740599577/2361183241434822606848",
+        "upper_exact": "117434245396779849593287/37778931862957161709568",
+        "lower_diagnostic": 3.10845859334435,
+        "upper_diagnostic": 3.10845859334435
+      },
+      "B": {
+        "lower_exact": "17021230760049204251601/18889465931478580854784",
+        "upper_exact": "68084923040196817006493/75557863725914323419136",
+        "lower_diagnostic": 0.901096453536252,
+        "upper_diagnostic": 0.901096453536252
+      },
+      "Q": {
+        "lower_exact": "77571219847738911115219/151115727451828646838272",
+        "upper_exact": "38785609923869455557635/75557863725914323419136",
+        "lower_diagnostic": 0.513323273201106,
+        "upper_diagnostic": 0.513323273201106
+      },
+      "Lambda": {
+        "lower_exact": "358641005833153730961/2361183241434822606848",
+        "upper_exact": "179320502916576865481/1180591620717411303424",
+        "lower_diagnostic": 0.15189037408855147,
+        "upper_diagnostic": 0.15189037408855147
+      },
+      "Hleaf": {
+        "lower_exact": "212294655355840098270587/151115727451828646838272",
+        "upper_exact": "26536831919480012283839/18889465931478580854784",
+        "lower_diagnostic": 1.4048481844718217,
+        "upper_diagnostic": 1.4048481844718217
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "877800001725706158675/295147905179352825856",
+        "upper_exact": "4827900009491383872713/1623313478486440542208",
+        "lower_diagnostic": 2.974102090246219,
+        "upper_diagnostic": 2.974102090246219
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 3,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "11/8",
+      "consumed_influence_exact": "11/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "3/4",
+      "internal_nodes": 23,
+      "leaves": 24,
+      "H": {
+        "lower_exact": "7339640337298740599577/2361183241434822606848",
+        "upper_exact": "117434245396779849593287/37778931862957161709568",
+        "lower_diagnostic": 3.10845859334435,
+        "upper_diagnostic": 3.10845859334435
+      },
+      "B": {
+        "lower_exact": "14961034308112464668695/9444732965739290427392",
+        "upper_exact": "29922068616224929337441/18889465931478580854784",
+        "lower_diagnostic": 1.5840611229966504,
+        "upper_diagnostic": 1.5840611229966504
+      },
+      "Q": {
+        "lower_exact": "15537723874975116787481/18889465931478580854784",
+        "upper_exact": "31075447749950233575009/37778931862957161709568",
+        "lower_diagnostic": 0.82256025296523,
+        "upper_diagnostic": 0.82256025296523
+      },
+      "Lambda": {
+        "lower_exact": "2437498464687969854857/4722366482869645213696",
+        "upper_exact": "2437498464687969854859/4722366482869645213696",
+        "lower_diagnostic": 0.5161603771181208,
+        "upper_diagnostic": 0.5161603771181208
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "2437498464687969854857/6493253913945762168832",
+        "upper_exact": "2437498464687969854859/6493253913945762168832",
+        "lower_diagnostic": 0.37538936517681515,
+        "upper_diagnostic": 0.37538936517681515
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 3,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "11/8",
+      "consumed_influence_exact": "1/4",
+      "leaf_influence_exact": "9/8",
+      "defect_exact": "1/4",
+      "internal_nodes": 2,
+      "leaves": 3,
+      "H": {
+        "lower_exact": "7339640337298740599577/2361183241434822606848",
+        "upper_exact": "117434245396779849593287/37778931862957161709568",
+        "lower_diagnostic": 3.10845859334435,
+        "upper_diagnostic": 3.10845859334435
+      },
+      "B": {
+        "lower_exact": "5516301342373174241311/9444732965739290427392",
+        "upper_exact": "11032602684746348482641/18889465931478580854784",
+        "lower_diagnostic": 0.5840611229966504,
+        "upper_diagnostic": 0.5840611229966504
+      },
+      "Q": {
+        "lower_exact": "6092990909235826360097/18889465931478580854784",
+        "upper_exact": "12185981818471652720209/37778931862957161709568",
+        "lower_diagnostic": 0.32256025296523005,
+        "upper_diagnostic": 0.32256025296523005
+      },
+      "Lambda": {
+        "lower_exact": "490230059181221699529/1180591620717411303424",
+        "upper_exact": "3921840473449773596235/9444732965739290427392",
+        "lower_diagnostic": 0.4152410118609203,
+        "upper_diagnostic": 0.4152410118609203
+      },
+      "Hleaf": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "12443720218945011146697/1623313478486440542208",
+        "upper_exact": "99549761751560089173579/12986507827891524337664",
+        "lower_diagnostic": 7.665629826807942,
+        "upper_diagnostic": 7.665629826807942
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 3,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "11/8",
+      "consumed_influence_exact": "11/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "21/32",
+      "internal_nodes": 10,
+      "leaves": 11,
+      "H": {
+        "lower_exact": "7339640337298740599577/2361183241434822606848",
+        "upper_exact": "117434245396779849593287/37778931862957161709568",
+        "lower_diagnostic": 3.10845859334435,
+        "upper_diagnostic": 3.10845859334435
+      },
+      "B": {
+        "lower_exact": "31163515777017259997671/18889465931478580854784",
+        "upper_exact": "15581757888508629998861/9444732965739290427392",
+        "lower_diagnostic": 1.6497827884633012,
+        "upper_diagnostic": 1.6497827884633012
+      },
+      "Q": {
+        "lower_exact": "70621188896414768504499/75557863725914323419136",
+        "upper_exact": "35310594448207384252281/37778931862957161709568",
+        "lower_diagnostic": 0.9346636526489511,
+        "upper_diagnostic": 0.9346636526489511
+      },
+      "Lambda": {
+        "lower_exact": "358641005833153730961/2361183241434822606848",
+        "upper_exact": "179320502916576865481/1180591620717411303424",
+        "lower_diagnostic": 0.15189037408855147,
+        "upper_diagnostic": 0.15189037408855147
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "358641005833153730961/3246626956972881084416",
+        "upper_exact": "16301863901506987771/147573952589676412928",
+        "lower_diagnostic": 0.11046572660985561,
+        "upper_diagnostic": 0.11046572660985561
+      }
+    },
+    {
+      "m": 2,
+      "w": 1,
+      "t": 3,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "11/8",
+      "consumed_influence_exact": "3/4",
+      "leaf_influence_exact": "5/8",
+      "defect_exact": "13/32",
+      "internal_nodes": 3,
+      "leaves": 4,
+      "H": {
+        "lower_exact": "7339640337298740599577/2361183241434822606848",
+        "upper_exact": "117434245396779849593287/37778931862957161709568",
+        "lower_diagnostic": 3.10845859334435,
+        "upper_diagnostic": 3.10845859334435
+      },
+      "B": {
+        "lower_exact": "10088174430493777943033/9444732965739290427392",
+        "upper_exact": "80705395443950223544375/75557863725914323419136",
+        "lower_diagnostic": 1.0681270150345772,
+        "upper_diagnostic": 1.0681270150345772
+      },
+      "Q": {
+        "lower_exact": "92498450518942926128223/151115727451828646838272",
+        "upper_exact": "2890576578716966441509/4722366482869645213696",
+        "lower_diagnostic": 0.6121033996837211,
+        "upper_diagnostic": 0.6121033996837211
+      },
+      "Lambda": {
+        "lower_exact": "358641005833153730961/2361183241434822606848",
+        "upper_exact": "179320502916576865481/1180591620717411303424",
+        "lower_diagnostic": 0.15189037408855147,
+        "upper_diagnostic": 0.15189037408855147
+      },
+      "Hleaf": {
+        "lower_exact": "166320823877066207631915/151115727451828646838272",
+        "upper_exact": "83160411938533103816013/75557863725914323419136",
+        "lower_diagnostic": 1.1006188877996468,
+        "upper_diagnostic": 1.1006188877996468
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "13640296738904030894481/3246626956972881084416",
+        "upper_exact": "6820148369452015447241/1623313478486440542208",
+        "lower_diagnostic": 4.201374817518946,
+        "upper_diagnostic": 4.201374817518946
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 1,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "3/2",
+      "leaf_influence_exact": "0",
+      "defect_exact": "5/8",
+      "internal_nodes": 7,
+      "leaves": 8,
+      "H": {
+        "lower_exact": "3541774862152233910271/1180591620717411303424",
+        "upper_exact": "3541774862152233910273/1180591620717411303424",
+        "lower_diagnostic": 3.0,
+        "upper_diagnostic": 3.0
+      },
+      "B": {
+        "lower_exact": "15294113982668869519275/9444732965739290427392",
+        "upper_exact": "15294113982668869519299/9444732965739290427392",
+        "lower_diagnostic": 1.6193273052979023,
+        "upper_diagnostic": 1.6193273052979023
+      },
+      "Q": {
+        "lower_exact": "4417119880984094326453/4722366482869645213696",
+        "upper_exact": "17668479523936377305829/18889465931478580854784",
+        "lower_diagnostic": 0.9353615177913804,
+        "upper_diagnostic": 0.9353615177913804
+      },
+      "Lambda": {
+        "lower_exact": "154528214561831726145/590295810358705651712",
+        "upper_exact": "618112858247326904581/2361183241434822606848",
+        "lower_diagnostic": 0.2617809780285064,
+        "upper_diagnostic": 0.2617809780285064
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "51509404853943908715/295147905179352825856",
+        "upper_exact": "618112858247326904581/3541774862152233910272",
+        "lower_diagnostic": 0.1745206520190043,
+        "upper_diagnostic": 0.1745206520190043
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 1,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "7/8",
+      "leaf_influence_exact": "5/8",
+      "defect_exact": "1/4",
+      "internal_nodes": 2,
+      "leaves": 3,
+      "H": {
+        "lower_exact": "3541774862152233910271/1180591620717411303424",
+        "upper_exact": "3541774862152233910273/1180591620717411303424",
+        "lower_diagnostic": 3.0,
+        "upper_diagnostic": 3.0
+      },
+      "B": {
+        "lower_exact": "3708314699430436335559/4722366482869645213696",
+        "upper_exact": "14833258797721745342257/18889465931478580854784",
+        "lower_diagnostic": 0.7852661823012519,
+        "upper_diagnostic": 0.7852661823012519
+      },
+      "Q": {
+        "lower_exact": "9214305373265728338869/18889465931478580854784",
+        "upper_exact": "18428610746531456677749/37778931862957161709568",
+        "lower_diagnostic": 0.4878012648261504,
+        "upper_diagnostic": 0.4878012648261504
+      },
+      "Lambda": {
+        "lower_exact": "154528214561831726145/590295810358705651712",
+        "upper_exact": "618112858247326904581/2361183241434822606848",
+        "lower_diagnostic": 0.2617809780285064,
+        "upper_diagnostic": 0.2617809780285064
+      },
+      "Hleaf": {
+        "lower_exact": "7595730950293013378611/4722366482869645213696",
+        "upper_exact": "60765847602344107028927/37778931862957161709568",
+        "lower_diagnostic": 1.6084585933443496,
+        "upper_diagnostic": 1.6084585933443496
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "1158314049276517005675/295147905179352825856",
+        "upper_exact": "13899768591318204068101/3541774862152233910272",
+        "lower_diagnostic": 3.9245206520190044,
+        "upper_diagnostic": 3.9245206520190044
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 1,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "3/2",
+      "leaf_influence_exact": "0",
+      "defect_exact": "3/4",
+      "internal_nodes": 11,
+      "leaves": 12,
+      "H": {
+        "lower_exact": "3541774862152233910271/1180591620717411303424",
+        "upper_exact": "3541774862152233910273/1180591620717411303424",
+        "lower_diagnostic": 3.0,
+        "upper_diagnostic": 3.0
+      },
+      "B": {
+        "lower_exact": "3541774862152233910269/2361183241434822606848",
+        "upper_exact": "3541774862152233910275/2361183241434822606848",
+        "lower_diagnostic": 1.5,
+        "upper_diagnostic": 1.5
+      },
+      "Q": {
+        "lower_exact": "3541774862152233910269/4722366482869645213696",
+        "upper_exact": "3541774862152233910275/4722366482869645213696",
+        "lower_diagnostic": 0.75,
+        "upper_diagnostic": 0.75
+      },
+      "Lambda": {
+        "lower_exact": "2513813687941117102867/4722366482869645213696",
+        "upper_exact": "2513813687941117102869/4722366482869645213696",
+        "lower_diagnostic": 0.5323207542362416,
+        "upper_diagnostic": 0.5323207542362416
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "2513813687941117102867/7083549724304467820544",
+        "upper_exact": "837937895980372367623/2361183241434822606848",
+        "lower_diagnostic": 0.35488050282416106,
+        "upper_diagnostic": 0.35488050282416106
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 1,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "1/4",
+      "leaf_influence_exact": "5/4",
+      "defect_exact": "1/4",
+      "internal_nodes": 1,
+      "leaves": 2,
+      "H": {
+        "lower_exact": "3541774862152233910271/1180591620717411303424",
+        "upper_exact": "3541774862152233910273/1180591620717411303424",
+        "lower_diagnostic": 3.0,
+        "upper_diagnostic": 3.0
+      },
+      "B": {
+        "lower_exact": "1180591620717411303423/2361183241434822606848",
+        "upper_exact": "1180591620717411303425/2361183241434822606848",
+        "lower_diagnostic": 0.5,
+        "upper_diagnostic": 0.5
+      },
+      "Q": {
+        "lower_exact": "1180591620717411303423/4722366482869645213696",
+        "upper_exact": "1180591620717411303425/4722366482869645213696",
+        "lower_diagnostic": 0.25,
+        "upper_diagnostic": 0.25
+      },
+      "Lambda": {
+        "lower_exact": "1560657232014950989385/4722366482869645213696",
+        "upper_exact": "780328616007475494693/2361183241434822606848",
+        "lower_diagnostic": 0.3304820237218406,
+        "upper_diagnostic": 0.3304820237218406
+      },
+      "Hleaf": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "54687280164298459643465/7083549724304467820544",
+        "upper_exact": "9114546694049743273911/1180591620717411303424",
+        "lower_diagnostic": 7.720321349147894,
+        "upper_diagnostic": 7.720321349147894
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 1,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "3/2",
+      "leaf_influence_exact": "0",
+      "defect_exact": "5/8",
+      "internal_nodes": 8,
+      "leaves": 9,
+      "H": {
+        "lower_exact": "3541774862152233910271/1180591620717411303424",
+        "upper_exact": "3541774862152233910273/1180591620717411303424",
+        "lower_diagnostic": 3.0,
+        "upper_diagnostic": 3.0
+      },
+      "B": {
+        "lower_exact": "15294113982668869519275/9444732965739290427392",
+        "upper_exact": "15294113982668869519299/9444732965739290427392",
+        "lower_diagnostic": 1.6193273052979023,
+        "upper_diagnostic": 1.6193273052979023
+      },
+      "Q": {
+        "lower_exact": "4417119880984094326453/4722366482869645213696",
+        "upper_exact": "17668479523936377305829/18889465931478580854784",
+        "lower_diagnostic": 0.9353615177913804,
+        "upper_diagnostic": 0.9353615177913804
+      },
+      "Lambda": {
+        "lower_exact": "154528214561831726145/590295810358705651712",
+        "upper_exact": "618112858247326904581/2361183241434822606848",
+        "lower_diagnostic": 0.2617809780285064,
+        "upper_diagnostic": 0.2617809780285064
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "51509404853943908715/295147905179352825856",
+        "upper_exact": "618112858247326904581/3541774862152233910272",
+        "lower_diagnostic": 0.1745206520190043,
+        "upper_diagnostic": 0.1745206520190043
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 1,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "3/2",
+      "consumed_influence_exact": "5/8",
+      "leaf_influence_exact": "7/8",
+      "defect_exact": "1/4",
+      "internal_nodes": 2,
+      "leaves": 3,
+      "H": {
+        "lower_exact": "3541774862152233910271/1180591620717411303424",
+        "upper_exact": "3541774862152233910273/1180591620717411303424",
+        "lower_diagnostic": 3.0,
+        "upper_diagnostic": 3.0
+      },
+      "B": {
+        "lower_exact": "3708314699430436335559/4722366482869645213696",
+        "upper_exact": "14833258797721745342257/18889465931478580854784",
+        "lower_diagnostic": 0.7852661823012519,
+        "upper_diagnostic": 0.7852661823012519
+      },
+      "Q": {
+        "lower_exact": "9214305373265728338869/18889465931478580854784",
+        "upper_exact": "18428610746531456677749/37778931862957161709568",
+        "lower_diagnostic": 0.4878012648261504,
+        "upper_diagnostic": 0.4878012648261504
+      },
+      "Lambda": {
+        "lower_exact": "154528214561831726145/590295810358705651712",
+        "upper_exact": "618112858247326904581/2361183241434822606848",
+        "lower_diagnostic": 0.2617809780285064,
+        "upper_diagnostic": 0.2617809780285064
+      },
+      "Hleaf": {
+        "lower_exact": "7595730950293013378611/4722366482869645213696",
+        "upper_exact": "60765847602344107028927/37778931862957161709568",
+        "lower_diagnostic": 1.6084585933443496,
+        "upper_diagnostic": 1.6084585933443496
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "1601035907045546244459/295147905179352825856",
+        "upper_exact": "19212430884546554933509/3541774862152233910272",
+        "lower_diagnostic": 5.424520652019004,
+        "upper_diagnostic": 5.424520652019004
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 2,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "7/4",
+      "consumed_influence_exact": "7/4",
+      "leaf_influence_exact": "0",
+      "defect_exact": "105/128",
+      "internal_nodes": 21,
+      "leaves": 22,
+      "H": {
+        "lower_exact": "17296554529026576585037/4722366482869645213696",
+        "upper_exact": "276744872464425225360693/75557863725914323419136",
+        "lower_diagnostic": 3.6626878900165245,
+        "upper_diagnostic": 3.6626878900165245
+      },
+      "B": {
+        "lower_exact": "577836401298647619905221/302231454903657293676544",
+        "upper_exact": "577836401298647619906189/302231454903657293676544",
+        "lower_diagnostic": 1.9119002735266097,
+        "upper_diagnostic": 1.9119002735266097
+      },
+      "Q": {
+        "lower_exact": "158130279412277193406259/151115727451828646838272",
+        "upper_exact": "316260558824554386812875/302231454903657293676544",
+        "lower_diagnostic": 1.046418411099431,
+        "upper_diagnostic": 1.046418411099431
+      },
+      "Lambda": {
+        "lower_exact": "2361551441657764610999/4722366482869645213696",
+        "upper_exact": "9446205766631058444007/18889465931478580854784",
+        "lower_diagnostic": 0.5000779694300046,
+        "upper_diagnostic": 0.5000779694300046
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "2361551441657764610999/8264141345021879123968",
+        "upper_exact": "9446205766631058444007/33056565380087516495872",
+        "lower_diagnostic": 0.28575883967428833,
+        "upper_diagnostic": 0.28575883967428833
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 2,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "7/4",
+      "consumed_influence_exact": "11/8",
+      "leaf_influence_exact": "3/8",
+      "defect_exact": "81/128",
+      "internal_nodes": 7,
+      "leaves": 8,
+      "H": {
+        "lower_exact": "17296554529026576585037/4722366482869645213696",
+        "upper_exact": "276744872464425225360693/75557863725914323419136",
+        "lower_diagnostic": 3.6626878900165245,
+        "upper_diagnostic": 3.6626878900165245
+      },
+      "B": {
+        "lower_exact": "464499605709776134776613/302231454903657293676544",
+        "upper_exact": "464499605709776134777389/302231454903657293676544",
+        "lower_diagnostic": 1.5369002735266097,
+        "upper_diagnostic": 1.5369002735266097
+      },
+      "Q": {
+        "lower_exact": "129796080515059322124107/151115727451828646838272",
+        "upper_exact": "259592161030118644248475/302231454903657293676544",
+        "lower_diagnostic": 0.858918411099431,
+        "upper_diagnostic": 0.858918411099431
+      },
+      "Lambda": {
+        "lower_exact": "2361551441657764610999/4722366482869645213696",
+        "upper_exact": "9446205766631058444007/18889465931478580854784",
+        "lower_diagnostic": 0.5000779694300046,
+        "upper_diagnostic": 0.5000779694300046
+      },
+      "Hleaf": {
+        "lower_exact": "7083549724304467820541/9444732965739290427392",
+        "upper_exact": "7083549724304467820547/9444732965739290427392",
+        "lower_diagnostic": 0.75,
+        "upper_diagnostic": 0.75
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "18299538321342817207223/8264141345021879123968",
+        "upper_exact": "73198153285371268828903/33056565380087516495872",
+        "lower_diagnostic": 2.214330268245717,
+        "upper_diagnostic": 2.214330268245717
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 2,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "7/4",
+      "consumed_influence_exact": "7/4",
+      "leaf_influence_exact": "0",
+      "defect_exact": "7/8",
+      "internal_nodes": 47,
+      "leaves": 48,
+      "H": {
+        "lower_exact": "17296554529026576585037/4722366482869645213696",
+        "upper_exact": "276744872464425225360693/75557863725914323419136",
+        "lower_diagnostic": 3.6626878900165245,
+        "upper_diagnostic": 3.6626878900165245
+      },
+      "B": {
+        "lower_exact": "35438369958598103578701/18889465931478580854784",
+        "upper_exact": "70876739917196207157523/37778931862957161709568",
+        "lower_diagnostic": 1.8760916844949755,
+        "upper_diagnostic": 1.8760916844949755
+      },
+      "Q": {
+        "lower_exact": "37168438659186059935059/37778931862957161709568",
+        "upper_exact": "74336877318372119870227/75557863725914323419136",
+        "lower_diagnostic": 0.9838403794478451,
+        "upper_diagnostic": 0.9838403794478451
+      },
+      "Lambda": {
+        "lower_exact": "8348398134241859046519/9444732965739290427392",
+        "upper_exact": "16696796268483718093053/18889465931478580854784",
+        "lower_diagnostic": 0.883921034562398,
+        "upper_diagnostic": 0.883921034562398
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "8348398134241859046519/16528282690043758247936",
+        "upper_exact": "16696796268483718093053/33056565380087516495872",
+        "lower_diagnostic": 0.5050977340356559,
+        "upper_diagnostic": 0.5050977340356559
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 2,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "7/4",
+      "consumed_influence_exact": "9/16",
+      "leaf_influence_exact": "19/16",
+      "defect_exact": "3/8",
+      "internal_nodes": 6,
+      "leaves": 7,
+      "H": {
+        "lower_exact": "17296554529026576585037/4722366482869645213696",
+        "upper_exact": "276744872464425225360693/75557863725914323419136",
+        "lower_diagnostic": 3.6626878900165245,
+        "upper_diagnostic": 3.6626878900165245
+      },
+      "B": {
+        "lower_exact": "16548904027119522723933/18889465931478580854784",
+        "upper_exact": "33097808054239045447923/37778931862957161709568",
+        "lower_diagnostic": 0.8760916844949755,
+        "upper_diagnostic": 0.8760916844949755
+      },
+      "Q": {
+        "lower_exact": "18278972727707479080291/37778931862957161709568",
+        "upper_exact": "36557945455414958160627/75557863725914323419136",
+        "lower_diagnostic": 0.48384037944784514,
+        "upper_diagnostic": 0.48384037944784514
+      },
+      "Lambda": {
+        "lower_exact": "864832931294076234537/1180591620717411303424",
+        "upper_exact": "3459331725176304938151/4722366482869645213696",
+        "lower_diagnostic": 0.7325419866765972,
+        "upper_diagnostic": 0.7325419866765972
+      },
+      "Hleaf": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "13482405877711409539881/2066035336255469780992",
+        "upper_exact": "7704231930120805451361/1180591620717411303424",
+        "lower_diagnostic": 6.525738278100913,
+        "upper_diagnostic": 6.525738278100913
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 2,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "7/4",
+      "consumed_influence_exact": "7/4",
+      "leaf_influence_exact": "0",
+      "defect_exact": "97/128",
+      "internal_nodes": 23,
+      "leaves": 24,
+      "H": {
+        "lower_exact": "17296554529026576585037/4722366482869645213696",
+        "upper_exact": "276744872464425225360693/75557863725914323419136",
+        "lower_diagnostic": 3.6626878900165245,
+        "upper_diagnostic": 3.6626878900165245
+      },
+      "B": {
+        "lower_exact": "602509538324587777307683/302231454903657293676544",
+        "upper_exact": "602509538324587777308761/302231454903657293676544",
+        "lower_diagnostic": 1.9935368359214978,
+        "upper_diagnostic": 1.9935368359214978
+      },
+      "Q": {
+        "lower_exact": "352341641745048812229729/302231454903657293676544",
+        "upper_exact": "352341641745048812230061/302231454903657293676544",
+        "lower_diagnostic": 1.1658007001864357,
+        "upper_diagnostic": 1.1658007001864357
+      },
+      "Lambda": {
+        "lower_exact": "11048902118045773572215/18889465931478580854784",
+        "upper_exact": "5524451059022886786113/9444732965739290427392",
+        "lower_diagnostic": 0.584924007810787,
+        "upper_diagnostic": 0.584924007810787
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "11048902118045773572215/33056565380087516495872",
+        "upper_exact": "5524451059022886786113/16528282690043758247936",
+        "lower_diagnostic": 0.3342422901775926,
+        "upper_diagnostic": 0.3342422901775926
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 2,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "7/4",
+      "consumed_influence_exact": "21/16",
+      "leaf_influence_exact": "7/16",
+      "defect_exact": "65/128",
+      "internal_nodes": 8,
+      "leaves": 9,
+      "H": {
+        "lower_exact": "17296554529026576585037/4722366482869645213696",
+        "upper_exact": "276744872464425225360693/75557863725914323419136",
+        "lower_diagnostic": 3.6626878900165245,
+        "upper_diagnostic": 3.6626878900165245
+      },
+      "B": {
+        "lower_exact": "438690853120702666027635/302231454903657293676544",
+        "upper_exact": "438690853120702666028433/302231454903657293676544",
+        "lower_diagnostic": 1.4515062744231726,
+        "upper_diagnostic": 1.4515062744231726
+      },
+      "Q": {
+        "lower_exact": "265818782608205039639417/302231454903657293676544",
+        "upper_exact": "265818782608205039639625/302231454903657293676544",
+        "lower_diagnostic": 0.8795205737038205,
+        "upper_diagnostic": 0.8795205737038205
+      },
+      "Lambda": {
+        "lower_exact": "11048902118045773572215/18889465931478580854784",
+        "upper_exact": "5524451059022886786113/9444732965739290427392",
+        "lower_diagnostic": 0.584924007810787,
+        "upper_diagnostic": 0.584924007810787
+      },
+      "Hleaf": {
+        "lower_exact": "4978457095863917992729/4722366482869645213696",
+        "upper_exact": "79655313533822687883719/75557863725914323419136",
+        "lower_diagnostic": 1.054229296672175,
+        "upper_diagnostic": 1.054229296672175
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "85426174223242685687927/33056565380087516495872",
+        "upper_exact": "42713087111621342843969/16528282690043758247936",
+        "lower_diagnostic": 2.5842422901775928,
+        "upper_diagnostic": 2.5842422901775928
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 3,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "59/32",
+      "consumed_influence_exact": "59/32",
+      "leaf_influence_exact": "0",
+      "defect_exact": "1921/2048",
+      "internal_nodes": 63,
+      "leaves": 64,
+      "H": {
+        "lower_exact": "5211049461781983825968727/1208925819614629174706176",
+        "upper_exact": "10422098923563967651940553/2417851639229258349412352",
+        "lower_diagnostic": 4.310479085840947,
+        "upper_diagnostic": 4.310479085840947
+      },
+      "B": {
+        "lower_exact": "11003243540817022779826523/4835703278458516698824704",
+        "upper_exact": "11003243540817022779844339/4835703278458516698824704",
+        "lower_diagnostic": 2.2754174330407926,
+        "upper_diagnostic": 2.2754174330407926
+      },
+      "Q": {
+        "lower_exact": "384084407655268366547591/302231454903657293676544",
+        "upper_exact": "6145350522484293864767845/4835703278458516698824704",
+        "lower_diagnostic": 1.2708287023854068,
+        "upper_diagnostic": 1.2708287023854068
+      },
+      "Lambda": {
+        "lower_exact": "47049137563464710674361/75557863725914323419136",
+        "upper_exact": "47049137563464710674411/75557863725914323419136",
+        "lower_diagnostic": 0.6226901508774144,
+        "upper_diagnostic": 0.6226901508774144
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "47049137563464710674361/139309811244654533804032",
+        "upper_exact": "47049137563464710674411/139309811244654533804032",
+        "lower_diagnostic": 0.33773025132334344,
+        "upper_diagnostic": 0.33773025132334344
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 3,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "59/32",
+      "consumed_influence_exact": "25/16",
+      "leaf_influence_exact": "9/32",
+      "defect_exact": "1633/2048",
+      "internal_nodes": 21,
+      "leaves": 22,
+      "H": {
+        "lower_exact": "5211049461781983825968727/1208925819614629174706176",
+        "upper_exact": "10422098923563967651940553/2417851639229258349412352",
+        "lower_diagnostic": 4.310479085840947,
+        "upper_diagnostic": 4.310479085840947
+      },
+      "B": {
+        "lower_exact": "9643201993750564958283227/4835703278458516698824704",
+        "upper_exact": "9643201993750564958298739/4835703278458516698824704",
+        "lower_diagnostic": 1.9941674330407926,
+        "upper_diagnostic": 1.9941674330407926
+      },
+      "Q": {
+        "lower_exact": "341583109309441559624363/302231454903657293676544",
+        "upper_exact": "5465329748951064953995045/4835703278458516698824704",
+        "lower_diagnostic": 1.1302037023854068,
+        "upper_diagnostic": 1.1302037023854068
+      },
+      "Lambda": {
+        "lower_exact": "47049137563464710674361/75557863725914323419136",
+        "upper_exact": "47049137563464710674411/75557863725914323419136",
+        "lower_diagnostic": 0.6226901508774144,
+        "upper_diagnostic": 0.6226901508774144
+      },
+      "Hleaf": {
+        "lower_exact": "21250649172913403461623/37778931862957161709568",
+        "upper_exact": "21250649172913403461641/37778931862957161709568",
+        "lower_diagnostic": 0.5625,
+        "upper_diagnostic": 0.5625
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "238304980119685341829049/139309811244654533804032",
+        "upper_exact": "238304980119685341829099/139309811244654533804032",
+        "lower_diagnostic": 1.7106116072555468,
+        "upper_diagnostic": 1.7106116072555468
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 3,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "59/32",
+      "consumed_influence_exact": "59/32",
+      "leaf_influence_exact": "0",
+      "defect_exact": "257/256",
+      "internal_nodes": 191,
+      "leaves": 192,
+      "H": {
+        "lower_exact": "5211049461781983825968727/1208925819614629174706176",
+        "upper_exact": "10422098923563967651940553/2417851639229258349412352",
+        "lower_diagnostic": 4.310479085840947,
+        "upper_diagnostic": 4.310479085840947
+      },
+      "B": {
+        "lower_exact": "2692455910678182687616869/1208925819614629174706176",
+        "upper_exact": "2692455910678182687621323/1208925819614629174706176",
+        "lower_diagnostic": 2.227147329466799,
+        "upper_diagnostic": 2.227147329466799
+      },
+      "Q": {
+        "lower_exact": "2876526100054408336041075/2417851639229258349412352",
+        "upper_exact": "2876526100054408336044929/2417851639229258349412352",
+        "lower_diagnostic": 1.1897033107338886,
+        "upper_diagnostic": 1.1897033107338886
+      },
+      "Lambda": {
+        "lower_exact": "41497773929661917138913/37778931862957161709568",
+        "upper_exact": "82995547859323834277889/75557863725914323419136",
+        "lower_diagnostic": 1.0984369298791938,
+        "upper_diagnostic": 1.0984369298791938
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "41497773929661917138913/69654905622327266902016",
+        "upper_exact": "82995547859323834277889/139309811244654533804032",
+        "lower_diagnostic": 0.5957624026463424,
+        "upper_diagnostic": 0.5957624026463424
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 3,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "59/32",
+      "consumed_influence_exact": "45/64",
+      "leaf_influence_exact": "73/64",
+      "defect_exact": "129/256",
+      "internal_nodes": 21,
+      "leaves": 22,
+      "H": {
+        "lower_exact": "5211049461781983825968727/1208925819614629174706176",
+        "upper_exact": "10422098923563967651940553/2417851639229258349412352",
+        "lower_diagnostic": 4.310479085840947,
+        "upper_diagnostic": 4.310479085840947
+      },
+      "B": {
+        "lower_exact": "1483530091063553512911717/1208925819614629174706176",
+        "upper_exact": "1483530091063553512914123/1208925819614629174706176",
+        "lower_diagnostic": 1.2271473294667992,
+        "upper_diagnostic": 1.2271473294667992
+      },
+      "Q": {
+        "lower_exact": "1667600280439779161335923/2417851639229258349412352",
+        "upper_exact": "1667600280439779161337729/2417851639229258349412352",
+        "lower_diagnostic": 0.6897033107338887,
+        "upper_diagnostic": 0.6897033107338887
+      },
+      "Lambda": {
+        "lower_exact": "9302142469498542407061/9444732965739290427392",
+        "upper_exact": "37208569877994169628271/37778931862957161709568",
+        "lower_diagnostic": 0.9849026439648433,
+        "upper_diagnostic": 0.9849026439648433
+      },
+      "Hleaf": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "106258229320915945700757/17413726405581816725504",
+        "upper_exact": "425032917283663782803055/69654905622327266902016",
+        "lower_diagnostic": 6.101981095031779,
+        "upper_diagnostic": 6.101981095031779
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 3,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "59/32",
+      "consumed_influence_exact": "59/32",
+      "leaf_influence_exact": "0",
+      "defect_exact": "1849/2048",
+      "internal_nodes": 65,
+      "leaves": 66,
+      "H": {
+        "lower_exact": "5211049461781983825968727/1208925819614629174706176",
+        "upper_exact": "10422098923563967651940553/2417851639229258349412352",
+        "lower_diagnostic": 4.310479085840947,
+        "upper_diagnostic": 4.310479085840947
+      },
+      "B": {
+        "lower_exact": "11274758504403643793171157/4835703278458516698824704",
+        "upper_exact": "11274758504403643793190859/4835703278458516698824704",
+        "lower_diagnostic": 2.331565411515016,
+        "upper_diagnostic": 2.331565411515016
+      },
+      "Q": {
+        "lower_exact": "1634601069814384751215787/1208925819614629174706176",
+        "upper_exact": "102162566863399046951083/75557863725914323419136",
+        "lower_diagnostic": 1.352110314208897,
+        "upper_diagnostic": 1.352110314208897
+      },
+      "Lambda": {
+        "lower_exact": "25094226113454313025149/37778931862957161709568",
+        "upper_exact": "12547113056727156512587/18889465931478580854784",
+        "lower_diagnostic": 0.6642386344982822,
+        "upper_diagnostic": 0.6642386344982822
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "25094226113454313025149/69654905622327266902016",
+        "upper_exact": "12547113056727156512587/34827452811163633451008",
+        "lower_diagnostic": 0.3602650221007633,
+        "upper_diagnostic": 0.3602650221007633
+      }
+    },
+    {
+      "m": 2,
+      "w": 2,
+      "t": 3,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "59/32",
+      "consumed_influence_exact": "25/16",
+      "leaf_influence_exact": "9/32",
+      "defect_exact": "1561/2048",
+      "internal_nodes": 23,
+      "leaves": 24,
+      "H": {
+        "lower_exact": "5211049461781983825968727/1208925819614629174706176",
+        "upper_exact": "10422098923563967651940553/2417851639229258349412352",
+        "lower_diagnostic": 4.310479085840947,
+        "upper_diagnostic": 4.310479085840947
+      },
+      "B": {
+        "lower_exact": "9914716957337185971627861/4835703278458516698824704",
+        "upper_exact": "9914716957337185971645259/4835703278458516698824704",
+        "lower_diagnostic": 2.050315411515016,
+        "upper_diagnostic": 2.050315411515016
+      },
+      "Q": {
+        "lower_exact": "1464595876431077523522875/1208925819614629174706176",
+        "upper_exact": "45768621138471172610129/37778931862957161709568",
+        "lower_diagnostic": 1.211485314208897,
+        "upper_diagnostic": 1.211485314208897
+      },
+      "Lambda": {
+        "lower_exact": "25094226113454313025149/37778931862957161709568",
+        "upper_exact": "12547113056727156512587/18889465931478580854784",
+        "lower_diagnostic": 0.6642386344982822,
+        "upper_diagnostic": 0.6642386344982822
+      },
+      "Hleaf": {
+        "lower_exact": "21250649172913403461623/37778931862957161709568",
+        "upper_exact": "21250649172913403461641/37778931862957161709568",
+        "lower_diagnostic": 0.5625,
+        "upper_diagnostic": 0.5625
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "120722147391564628602493/69654905622327266902016",
+        "upper_exact": "60361073695782314301259/34827452811163633451008",
+        "lower_diagnostic": 1.7331463780329666,
+        "upper_diagnostic": 1.7331463780329666
+      }
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "t": 1,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "11/8",
+      "consumed_influence_exact": "11/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "21/32",
+      "internal_nodes": 9,
+      "leaves": 10,
+      "H": {
+        "lower_exact": "7339640337298740599577/2361183241434822606848",
+        "upper_exact": "117434245396779849593287/37778931862957161709568",
+        "lower_diagnostic": 3.10845859334435,
+        "upper_diagnostic": 3.10845859334435
+      },
+      "B": {
+        "lower_exact": "31163515777017259997671/18889465931478580854784",
+        "upper_exact": "15581757888508629998861/9444732965739290427392",
+        "lower_diagnostic": 1.6497827884633012,
+        "upper_diagnostic": 1.6497827884633012
+      },
+      "Q": {
+        "lower_exact": "70621188896414768504499/75557863725914323419136",
+        "upper_exact": "35310594448207384252281/37778931862957161709568",
+        "lower_diagnostic": 0.9346636526489511,
+        "upper_diagnostic": 0.9346636526489511
+      },
+      "Lambda": {
+        "lower_exact": "358641005833153730961/2361183241434822606848",
+        "upper_exact": "179320502916576865481/1180591620717411303424",
+        "lower_diagnostic": 0.15189037408855147,
+        "upper_diagnostic": 0.15189037408855147
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "358641005833153730961/3246626956972881084416",
+        "upper_exact": "16301863901506987771/147573952589676412928",
+        "lower_diagnostic": 0.11046572660985561,
+        "upper_diagnostic": 0.11046572660985561
+      }
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "t": 1,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "11/8",
+      "consumed_influence_exact": "15/16",
+      "leaf_influence_exact": "7/16",
+      "defect_exact": "11/32",
+      "internal_nodes": 2,
+      "leaves": 3,
+      "H": {
+        "lower_exact": "7339640337298740599577/2361183241434822606848",
+        "upper_exact": "117434245396779849593287/37778931862957161709568",
+        "lower_diagnostic": 3.10845859334435,
+        "upper_diagnostic": 3.10845859334435
+      },
+      "B": {
+        "lower_exact": "17021230760049204251601/18889465931478580854784",
+        "upper_exact": "68084923040196817006493/75557863725914323419136",
+        "lower_diagnostic": 0.901096453536252,
+        "upper_diagnostic": 0.901096453536252
+      },
+      "Q": {
+        "lower_exact": "77571219847738911115219/151115727451828646838272",
+        "upper_exact": "38785609923869455557635/75557863725914323419136",
+        "lower_diagnostic": 0.513323273201106,
+        "upper_diagnostic": 0.513323273201106
+      },
+      "Lambda": {
+        "lower_exact": "358641005833153730961/2361183241434822606848",
+        "upper_exact": "179320502916576865481/1180591620717411303424",
+        "lower_diagnostic": 0.15189037408855147,
+        "upper_diagnostic": 0.15189037408855147
+      },
+      "Hleaf": {
+        "lower_exact": "212294655355840098270587/151115727451828646838272",
+        "upper_exact": "26536831919480012283839/18889465931478580854784",
+        "lower_diagnostic": 1.4048481844718217,
+        "upper_diagnostic": 1.4048481844718217
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "877800001725706158675/295147905179352825856",
+        "upper_exact": "4827900009491383872713/1623313478486440542208",
+        "lower_diagnostic": 2.974102090246219,
+        "upper_diagnostic": 2.974102090246219
+      }
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "t": 1,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "11/8",
+      "consumed_influence_exact": "11/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "3/4",
+      "internal_nodes": 23,
+      "leaves": 24,
+      "H": {
+        "lower_exact": "7339640337298740599577/2361183241434822606848",
+        "upper_exact": "117434245396779849593287/37778931862957161709568",
+        "lower_diagnostic": 3.10845859334435,
+        "upper_diagnostic": 3.10845859334435
+      },
+      "B": {
+        "lower_exact": "14961034308112464668695/9444732965739290427392",
+        "upper_exact": "29922068616224929337441/18889465931478580854784",
+        "lower_diagnostic": 1.5840611229966504,
+        "upper_diagnostic": 1.5840611229966504
+      },
+      "Q": {
+        "lower_exact": "15537723874975116787481/18889465931478580854784",
+        "upper_exact": "31075447749950233575009/37778931862957161709568",
+        "lower_diagnostic": 0.82256025296523,
+        "upper_diagnostic": 0.82256025296523
+      },
+      "Lambda": {
+        "lower_exact": "2437498464687969854857/4722366482869645213696",
+        "upper_exact": "2437498464687969854859/4722366482869645213696",
+        "lower_diagnostic": 0.5161603771181208,
+        "upper_diagnostic": 0.5161603771181208
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "2437498464687969854857/6493253913945762168832",
+        "upper_exact": "2437498464687969854859/6493253913945762168832",
+        "lower_diagnostic": 0.37538936517681515,
+        "upper_diagnostic": 0.37538936517681515
+      }
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "t": 1,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "11/8",
+      "consumed_influence_exact": "1/4",
+      "leaf_influence_exact": "9/8",
+      "defect_exact": "1/4",
+      "internal_nodes": 2,
+      "leaves": 3,
+      "H": {
+        "lower_exact": "7339640337298740599577/2361183241434822606848",
+        "upper_exact": "117434245396779849593287/37778931862957161709568",
+        "lower_diagnostic": 3.10845859334435,
+        "upper_diagnostic": 3.10845859334435
+      },
+      "B": {
+        "lower_exact": "5516301342373174241311/9444732965739290427392",
+        "upper_exact": "11032602684746348482641/18889465931478580854784",
+        "lower_diagnostic": 0.5840611229966504,
+        "upper_diagnostic": 0.5840611229966504
+      },
+      "Q": {
+        "lower_exact": "6092990909235826360097/18889465931478580854784",
+        "upper_exact": "12185981818471652720209/37778931862957161709568",
+        "lower_diagnostic": 0.32256025296523005,
+        "upper_diagnostic": 0.32256025296523005
+      },
+      "Lambda": {
+        "lower_exact": "490230059181221699529/1180591620717411303424",
+        "upper_exact": "3921840473449773596235/9444732965739290427392",
+        "lower_diagnostic": 0.4152410118609203,
+        "upper_diagnostic": 0.4152410118609203
+      },
+      "Hleaf": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "12443720218945011146697/1623313478486440542208",
+        "upper_exact": "99549761751560089173579/12986507827891524337664",
+        "lower_diagnostic": 7.665629826807942,
+        "upper_diagnostic": 7.665629826807942
+      }
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "t": 1,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "11/8",
+      "consumed_influence_exact": "11/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "21/32",
+      "internal_nodes": 10,
+      "leaves": 11,
+      "H": {
+        "lower_exact": "7339640337298740599577/2361183241434822606848",
+        "upper_exact": "117434245396779849593287/37778931862957161709568",
+        "lower_diagnostic": 3.10845859334435,
+        "upper_diagnostic": 3.10845859334435
+      },
+      "B": {
+        "lower_exact": "31163515777017259997671/18889465931478580854784",
+        "upper_exact": "15581757888508629998861/9444732965739290427392",
+        "lower_diagnostic": 1.6497827884633012,
+        "upper_diagnostic": 1.6497827884633012
+      },
+      "Q": {
+        "lower_exact": "70621188896414768504499/75557863725914323419136",
+        "upper_exact": "35310594448207384252281/37778931862957161709568",
+        "lower_diagnostic": 0.9346636526489511,
+        "upper_diagnostic": 0.9346636526489511
+      },
+      "Lambda": {
+        "lower_exact": "358641005833153730961/2361183241434822606848",
+        "upper_exact": "179320502916576865481/1180591620717411303424",
+        "lower_diagnostic": 0.15189037408855147,
+        "upper_diagnostic": 0.15189037408855147
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "358641005833153730961/3246626956972881084416",
+        "upper_exact": "16301863901506987771/147573952589676412928",
+        "lower_diagnostic": 0.11046572660985561,
+        "upper_diagnostic": 0.11046572660985561
+      }
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "t": 1,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "11/8",
+      "consumed_influence_exact": "3/4",
+      "leaf_influence_exact": "5/8",
+      "defect_exact": "13/32",
+      "internal_nodes": 3,
+      "leaves": 4,
+      "H": {
+        "lower_exact": "7339640337298740599577/2361183241434822606848",
+        "upper_exact": "117434245396779849593287/37778931862957161709568",
+        "lower_diagnostic": 3.10845859334435,
+        "upper_diagnostic": 3.10845859334435
+      },
+      "B": {
+        "lower_exact": "10088174430493777943033/9444732965739290427392",
+        "upper_exact": "80705395443950223544375/75557863725914323419136",
+        "lower_diagnostic": 1.0681270150345772,
+        "upper_diagnostic": 1.0681270150345772
+      },
+      "Q": {
+        "lower_exact": "92498450518942926128223/151115727451828646838272",
+        "upper_exact": "2890576578716966441509/4722366482869645213696",
+        "lower_diagnostic": 0.6121033996837211,
+        "upper_diagnostic": 0.6121033996837211
+      },
+      "Lambda": {
+        "lower_exact": "358641005833153730961/2361183241434822606848",
+        "upper_exact": "179320502916576865481/1180591620717411303424",
+        "lower_diagnostic": 0.15189037408855147,
+        "upper_diagnostic": 0.15189037408855147
+      },
+      "Hleaf": {
+        "lower_exact": "166320823877066207631915/151115727451828646838272",
+        "upper_exact": "83160411938533103816013/75557863725914323419136",
+        "lower_diagnostic": 1.1006188877996468,
+        "upper_diagnostic": 1.1006188877996468
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "13640296738904030894481/3246626956972881084416",
+        "upper_exact": "6820148369452015447241/1623313478486440542208",
+        "lower_diagnostic": 4.201374817518946,
+        "upper_diagnostic": 4.201374817518946
+      }
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "t": 2,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "53/32",
+      "consumed_influence_exact": "53/32",
+      "leaf_influence_exact": "0",
+      "defect_exact": "1649/2048",
+      "internal_nodes": 59,
+      "leaves": 60,
+      "H": {
+        "lower_exact": "2397119129492349651467877/604462909807314587353088",
+        "upper_exact": "9588476517969398605874629/2417851639229258349412352",
+        "lower_diagnostic": 3.9657009397921246,
+        "upper_diagnostic": 3.9657009397921246
+      },
+      "B": {
+        "lower_exact": "5232113707744071954727487/2417851639229258349412352",
+        "upper_exact": "5232113707744071954736119/2417851639229258349412352",
+        "lower_diagnostic": 2.163951510859417,
+        "upper_diagnostic": 2.163951510859417
+      },
+      "Q": {
+        "lower_exact": "3077582888472673884967507/2417851639229258349412352",
+        "upper_exact": "6155165776945347769940447/4835703278458516698824704",
+        "lower_diagnostic": 1.2728584494347712,
+        "upper_diagnostic": 1.2728584494347712
+      },
+      "Lambda": {
+        "lower_exact": "29967951627011286392491/75557863725914323419136",
+        "upper_exact": "936498488344102699767/2361183241434822606848",
+        "lower_diagnostic": 0.39662253734065117,
+        "upper_diagnostic": 0.39662253734065117
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "29967951627011286392491/125142711796045598162944",
+        "upper_exact": "936498488344102699767/3910709743626424942592",
+        "lower_diagnostic": 0.2394702112245441,
+        "upper_diagnostic": 0.2394702112245441
+      }
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "t": 2,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "53/32",
+      "consumed_influence_exact": "85/64",
+      "leaf_influence_exact": "21/64",
+      "defect_exact": "1201/2048",
+      "internal_nodes": 9,
+      "leaves": 10,
+      "H": {
+        "lower_exact": "2397119129492349651467877/604462909807314587353088",
+        "upper_exact": "9588476517969398605874629/2417851639229258349412352",
+        "lower_diagnostic": 3.9657009397921246,
+        "upper_diagnostic": 3.9657009397921246
+      },
+      "B": {
+        "lower_exact": "3996462207052480924673823/2417851639229258349412352",
+        "upper_exact": "3996462207052480924680327/2417851639229258349412352",
+        "lower_diagnostic": 1.652898028237348,
+        "upper_diagnostic": 1.652898028237348
+      },
+      "Q": {
+        "lower_exact": "2395167906638261332636643/2417851639229258349412352",
+        "upper_exact": "4790335813276522665277039/4835703278458516698824704",
+        "lower_diagnostic": 0.990618228090195,
+        "upper_diagnostic": 0.990618228090195
+      },
+      "Lambda": {
+        "lower_exact": "29967951627011286392491/75557863725914323419136",
+        "upper_exact": "936498488344102699767/2361183241434822606848",
+        "lower_diagnostic": 0.39662253734065117,
+        "upper_diagnostic": 0.39662253734065117
+      },
+      "Hleaf": {
+        "lower_exact": "9160458490501833850587/9444732965739290427392",
+        "upper_exact": "293134671696058683218945/302231454903657293676544",
+        "lower_diagnostic": 0.9699012691763059,
+        "upper_diagnostic": 0.9699012691763059
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "253099767942602022739627/125142711796045598162944",
+        "upper_exact": "7909367748206313210615/3910709743626424942592",
+        "lower_diagnostic": 2.0224890791490724,
+        "upper_diagnostic": 2.0224890791490724
+      }
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "t": 2,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "53/32",
+      "consumed_influence_exact": "53/32",
+      "leaf_influence_exact": "0",
+      "defect_exact": "119/128",
+      "internal_nodes": 191,
+      "leaves": 192,
+      "H": {
+        "lower_exact": "2397119129492349651467877/604462909807314587353088",
+        "upper_exact": "9588476517969398605874629/2417851639229258349412352",
+        "lower_diagnostic": 3.9657009397921246,
+        "upper_diagnostic": 3.9657009397921246
+      },
+      "B": {
+        "lower_exact": "4949603077732355689093771/2417851639229258349412352",
+        "upper_exact": "4949603077732355689102403/2417851639229258349412352",
+        "lower_diagnostic": 2.0471078528665005,
+        "upper_diagnostic": 2.0471078528665005
+      },
+      "Q": {
+        "lower_exact": "1318378205227005396685585/1208925819614629174706176",
+        "upper_exact": "1318378205227005396687399/1208925819614629174706176",
+        "lower_diagnostic": 1.0905368913762357,
+        "upper_diagnostic": 1.0905368913762357
+      },
+      "Lambda": {
+        "lower_exact": "35576226842514932228613/37778931862957161709568",
+        "upper_exact": "71152453685029864457275/75557863725914323419136",
+        "lower_diagnostic": 0.9416948835813429,
+        "upper_diagnostic": 0.9416948835813429
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "35576226842514932228613/62571355898022799081472",
+        "upper_exact": "71152453685029864457275/125142711796045598162944",
+        "lower_diagnostic": 0.568570495747226,
+        "upper_diagnostic": 0.568570495747226
+      }
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "t": 2,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "53/32",
+      "consumed_influence_exact": "35/64",
+      "leaf_influence_exact": "71/64",
+      "defect_exact": "55/128",
+      "internal_nodes": 21,
+      "leaves": 22,
+      "H": {
+        "lower_exact": "2397119129492349651467877/604462909807314587353088",
+        "upper_exact": "9588476517969398605874629/2417851639229258349412352",
+        "lower_diagnostic": 3.9657009397921246,
+        "upper_diagnostic": 3.9657009397921246
+      },
+      "B": {
+        "lower_exact": "2531751438503097339683467/2417851639229258349412352",
+        "upper_exact": "2531751438503097339688003/2417851639229258349412352",
+        "lower_diagnostic": 1.0471078528665005,
+        "upper_diagnostic": 1.0471078528665005
+      },
+      "Q": {
+        "lower_exact": "713915295419690809333009/1208925819614629174706176",
+        "upper_exact": "713915295419690809333799/1208925819614629174706176",
+        "lower_diagnostic": 0.5905368913762356,
+        "upper_diagnostic": 0.5905368913762356
+      },
+      "Lambda": {
+        "lower_exact": "16120089623386675415713/18889465931478580854784",
+        "upper_exact": "32240179246773350831447/37778931862957161709568",
+        "lower_diagnostic": 0.8533904389812925,
+        "upper_diagnostic": 0.8533904389812925
+      },
+      "Hleaf": {
+        "lower_exact": "2361183241434822606847/1180591620717411303424",
+        "upper_exact": "2361183241434822606849/1180591620717411303424",
+        "lower_diagnostic": 2.0,
+        "upper_diagnostic": 2.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "204719601032993131137697/31285677949011399540736",
+        "upper_exact": "409439202065986262275415/62571355898022799081472",
+        "lower_diagnostic": 6.543556491460403,
+        "upper_diagnostic": 6.543556491460403
+      }
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "t": 2,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "53/32",
+      "consumed_influence_exact": "53/32",
+      "leaf_influence_exact": "0",
+      "defect_exact": "1649/2048",
+      "internal_nodes": 61,
+      "leaves": 62,
+      "H": {
+        "lower_exact": "2397119129492349651467877/604462909807314587353088",
+        "upper_exact": "9588476517969398605874629/2417851639229258349412352",
+        "lower_diagnostic": 3.9657009397921246,
+        "upper_diagnostic": 3.9657009397921246
+      },
+      "B": {
+        "lower_exact": "10456706197509354127003099/4835703278458516698824704",
+        "upper_exact": "10456706197509354127022313/4835703278458516698824704",
+        "lower_diagnostic": 2.162396159435707,
+        "upper_diagnostic": 2.162396159435707
+      },
+      "Q": {
+        "lower_exact": "6149689053665241891402257/4835703278458516698824704",
+        "upper_exact": "6149689053665241891407641/4835703278458516698824704",
+        "lower_diagnostic": 1.271725889605366,
+        "upper_diagnostic": 1.271725889605366
+      },
+      "Lambda": {
+        "lower_exact": "15193166325302453891491/37778931862957161709568",
+        "upper_exact": "7596583162651226945757/18889465931478580854784",
+        "lower_diagnostic": 0.40215976408267895,
+        "upper_diagnostic": 0.40215976408267895
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "286663515571744413047/1180591620717411303424",
+        "upper_exact": "7596583162651226945757/31285677949011399540736",
+        "lower_diagnostic": 0.24281344246501368,
+        "upper_diagnostic": 0.24281344246501368
+      }
+    },
+    {
+      "m": 2,
+      "w": 3,
+      "t": 2,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "53/32",
+      "consumed_influence_exact": "83/64",
+      "leaf_influence_exact": "23/64",
+      "defect_exact": "1137/2048",
+      "internal_nodes": 10,
+      "leaves": 11,
+      "H": {
+        "lower_exact": "2397119129492349651467877/604462909807314587353088",
+        "upper_exact": "9588476517969398605874629/2417851639229258349412352",
+        "lower_diagnostic": 3.9657009397921246,
+        "upper_diagnostic": 3.9657009397921246
+      },
+      "B": {
+        "lower_exact": "7587363857601793537174427/4835703278458516698824704",
+        "upper_exact": "7587363857601793537188137/4835703278458516698824704",
+        "lower_diagnostic": 1.5690300708484386,
+        "upper_diagnostic": 1.5690300708484386
+      },
+      "Q": {
+        "lower_exact": "4546023399257152546532481/4835703278458516698824704",
+        "upper_exact": "4546023399257152546535945/4835703278458516698824704",
+        "lower_diagnostic": 0.9400956050194821,
+        "upper_diagnostic": 0.9400956050194821
+      },
+      "Lambda": {
+        "lower_exact": "15193166325302453891491/37778931862957161709568",
+        "upper_exact": "7596583162651226945757/18889465931478580854784",
+        "lower_diagnostic": 0.40215976408267895,
+        "upper_diagnostic": 0.40215976408267895
+      },
+      "Hleaf": {
+        "lower_exact": "337923800368436676792923/302231454903657293676544",
+        "upper_exact": "337923800368436676793117/302231454903657293676544",
+        "lower_diagnostic": 1.118096064740042,
+        "upper_diagnostic": 1.118096064740042
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "137384399069554523795875/62571355898022799081472",
+        "upper_exact": "68692199534777261897949/31285677949011399540736",
+        "lower_diagnostic": 2.195643631144259,
+        "upper_diagnostic": 2.195643631144259
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 1,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "15/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "3/4",
+      "internal_nodes": 19,
+      "leaves": 20,
+      "H": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "B": {
+        "lower_exact": "16548904027119522723933/9444732965739290427392",
+        "upper_exact": "33097808054239045447923/18889465931478580854784",
+        "lower_diagnostic": 1.752183368989951,
+        "upper_diagnostic": 1.752183368989951
+      },
+      "Q": {
+        "lower_exact": "18278972727707479080291/18889465931478580854784",
+        "upper_exact": "36557945455414958160627/37778931862957161709568",
+        "lower_diagnostic": 0.9676807588956903,
+        "upper_diagnostic": 0.9676807588956903
+      },
+      "Lambda": {
+        "lower_exact": "4077892710113591220785/4722366482869645213696",
+        "upper_exact": "4077892710113591220789/4722366482869645213696",
+        "lower_diagnostic": 0.8635273702085854,
+        "upper_diagnostic": 0.8635273702085854
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "815578542022718244157/1770887431076116955136",
+        "upper_exact": "1359297570037863740263/2951479051793528258560",
+        "lower_diagnostic": 0.4605479307779122,
+        "upper_diagnostic": 0.4605479307779122
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 1,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "0",
+      "leaf_influence_exact": "15/8",
+      "defect_exact": "0",
+      "internal_nodes": 0,
+      "leaves": 1,
+      "H": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "B": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Q": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Hleaf": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "9",
+        "upper_exact": "9",
+        "lower_diagnostic": 9.0,
+        "upper_diagnostic": 9.0
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 1,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "15/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "3/4",
+      "internal_nodes": 19,
+      "leaves": 20,
+      "H": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "B": {
+        "lower_exact": "16548904027119522723933/9444732965739290427392",
+        "upper_exact": "33097808054239045447923/18889465931478580854784",
+        "lower_diagnostic": 1.752183368989951,
+        "upper_diagnostic": 1.752183368989951
+      },
+      "Q": {
+        "lower_exact": "18278972727707479080291/18889465931478580854784",
+        "upper_exact": "36557945455414958160627/37778931862957161709568",
+        "lower_diagnostic": 0.9676807588956903,
+        "upper_diagnostic": 0.9676807588956903
+      },
+      "Lambda": {
+        "lower_exact": "4077892710113591220785/4722366482869645213696",
+        "upper_exact": "4077892710113591220789/4722366482869645213696",
+        "lower_diagnostic": 0.8635273702085854,
+        "upper_diagnostic": 0.8635273702085854
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "815578542022718244157/1770887431076116955136",
+        "upper_exact": "1359297570037863740263/2951479051793528258560",
+        "lower_diagnostic": 0.4605479307779122,
+        "upper_diagnostic": 0.4605479307779122
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 1,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "0",
+      "leaf_influence_exact": "15/8",
+      "defect_exact": "0",
+      "internal_nodes": 0,
+      "leaves": 1,
+      "H": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "B": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Q": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Hleaf": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "9",
+        "upper_exact": "9",
+        "lower_diagnostic": 9.0,
+        "upper_diagnostic": 9.0
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 1,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "15/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "3/4",
+      "internal_nodes": 19,
+      "leaves": 20,
+      "H": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "B": {
+        "lower_exact": "16548904027119522723933/9444732965739290427392",
+        "upper_exact": "33097808054239045447923/18889465931478580854784",
+        "lower_diagnostic": 1.752183368989951,
+        "upper_diagnostic": 1.752183368989951
+      },
+      "Q": {
+        "lower_exact": "18278972727707479080291/18889465931478580854784",
+        "upper_exact": "36557945455414958160627/37778931862957161709568",
+        "lower_diagnostic": 0.9676807588956903,
+        "upper_diagnostic": 0.9676807588956903
+      },
+      "Lambda": {
+        "lower_exact": "4077892710113591220785/4722366482869645213696",
+        "upper_exact": "4077892710113591220789/4722366482869645213696",
+        "lower_diagnostic": 0.8635273702085854,
+        "upper_diagnostic": 0.8635273702085854
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "815578542022718244157/1770887431076116955136",
+        "upper_exact": "1359297570037863740263/2951479051793528258560",
+        "lower_diagnostic": 0.4605479307779122,
+        "upper_diagnostic": 0.4605479307779122
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 1,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "0",
+      "leaf_influence_exact": "15/8",
+      "defect_exact": "0",
+      "internal_nodes": 0,
+      "leaves": 1,
+      "H": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "B": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Q": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Hleaf": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "9",
+        "upper_exact": "9",
+        "lower_diagnostic": 9.0,
+        "upper_diagnostic": 9.0
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 2,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "15/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "203/256",
+      "internal_nodes": 25,
+      "leaves": 26,
+      "H": {
+        "lower_exact": "9622708994363403112783/2361183241434822606848",
+        "upper_exact": "153963343909814449804565/37778931862957161709568",
+        "lower_diagnostic": 4.075375780033049,
+        "upper_diagnostic": 4.075375780033049
+      },
+      "B": {
+        "lower_exact": "1362472542309002827165753/604462909807314587353088",
+        "upper_exact": "1362472542309002827168073/604462909807314587353088",
+        "lower_diagnostic": 2.2540217442676838,
+        "upper_diagnostic": 2.2540217442676838
+      },
+      "Q": {
+        "lower_exact": "204950967458695233239307/151115727451828646838272",
+        "upper_exact": "409901934917390466478929/302231454903657293676544",
+        "lower_diagnostic": 1.3562517344465532,
+        "upper_diagnostic": 1.3562517344465532
+      },
+      "Lambda": {
+        "lower_exact": "3399992238451812110111/4722366482869645213696",
+        "upper_exact": "3399992238451812110115/4722366482869645213696",
+        "lower_diagnostic": 0.719976361594396,
+        "upper_diagnostic": 0.719976361594396
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "3399992238451812110111/8854437155380584775680",
+        "upper_exact": "226666149230120807341/590295810358705651712",
+        "lower_diagnostic": 0.38398739285034456,
+        "upper_diagnostic": 0.38398739285034456
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 2,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "11/8",
+      "leaf_influence_exact": "1/2",
+      "defect_exact": "123/256",
+      "internal_nodes": 9,
+      "leaves": 10,
+      "H": {
+        "lower_exact": "9622708994363403112783/2361183241434822606848",
+        "upper_exact": "153963343909814449804565/37778931862957161709568",
+        "lower_diagnostic": 4.075375780033049,
+        "upper_diagnostic": 4.075375780033049
+      },
+      "B": {
+        "lower_exact": "934598364970671662239049/604462909807314587353088",
+        "upper_exact": "934598364970671662240565/604462909807314587353088",
+        "lower_diagnostic": 1.5461632960549967,
+        "upper_diagnostic": 1.5461632960549967
+      },
+      "Q": {
+        "lower_exact": "293524614438138663862295/302231454903657293676544",
+        "upper_exact": "293524614438138663862457/302231454903657293676544",
+        "lower_diagnostic": 0.9711914814813233,
+        "upper_diagnostic": 0.9711914814813233
+      },
+      "Lambda": {
+        "lower_exact": "3399992238451812110111/4722366482869645213696",
+        "upper_exact": "3399992238451812110115/4722366482869645213696",
+        "lower_diagnostic": 0.719976361594396,
+        "upper_diagnostic": 0.719976361594396
+      },
+      "Hleaf": {
+        "lower_exact": "409384214286442635747467/302231454903657293676544",
+        "upper_exact": "204692107143221317873867/151115727451828646838272",
+        "lower_diagnostic": 1.3545387405719982,
+        "upper_diagnostic": 1.3545387405719982
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "24650641411365215571743/8854437155380584775680",
+        "upper_exact": "8216880470455071857249/2951479051793528258560",
+        "lower_diagnostic": 2.7839873928503445,
+        "upper_diagnostic": 2.7839873928503445
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 2,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "15/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "15/16",
+      "internal_nodes": 39,
+      "leaves": 40,
+      "H": {
+        "lower_exact": "9622708994363403112783/2361183241434822606848",
+        "upper_exact": "153963343909814449804565/37778931862957161709568",
+        "lower_diagnostic": 4.075375780033049,
+        "upper_diagnostic": 4.075375780033049
+      },
+      "B": {
+        "lower_exact": "10045339444635878317101/4722366482869645213696",
+        "upper_exact": "40181357778543513268473/18889465931478580854784",
+        "lower_diagnostic": 2.127183368989951,
+        "upper_diagnostic": 2.127183368989951
+      },
+      "Q": {
+        "lower_exact": "681898362183116030955/590295810358705651712",
+        "upper_exact": "43641495179719425981177/37778931862957161709568",
+        "lower_diagnostic": 1.1551807588956902,
+        "upper_diagnostic": 1.1551807588956902
+      },
+      "Lambda": {
+        "lower_exact": "18497838410074280796341/18889465931478580854784",
+        "upper_exact": "18497838410074280796357/18889465931478580854784",
+        "lower_diagnostic": 0.9792674116449387,
+        "upper_diagnostic": 0.9792674116449387
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "18497838410074280796341/35417748621522339102720",
+        "upper_exact": "6165946136691426932119/11805916207174113034240",
+        "lower_diagnostic": 0.5222759528773007,
+        "upper_diagnostic": 0.5222759528773007
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 2,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "3/16",
+      "leaf_influence_exact": "27/16",
+      "defect_exact": "3/16",
+      "internal_nodes": 1,
+      "leaves": 2,
+      "H": {
+        "lower_exact": "9622708994363403112783/2361183241434822606848",
+        "upper_exact": "153963343909814449804565/37778931862957161709568",
+        "lower_diagnostic": 4.075375780033049,
+        "upper_diagnostic": 4.075375780033049
+      },
+      "B": {
+        "lower_exact": "3541774862152233910269/9444732965739290427392",
+        "upper_exact": "3541774862152233910275/9444732965739290427392",
+        "lower_diagnostic": 0.375,
+        "upper_diagnostic": 0.375
+      },
+      "Q": {
+        "lower_exact": "3541774862152233910269/18889465931478580854784",
+        "upper_exact": "3541774862152233910275/18889465931478580854784",
+        "lower_diagnostic": 0.1875,
+        "upper_diagnostic": 0.1875
+      },
+      "Lambda": {
+        "lower_exact": "6087667261448030049531/18889465931478580854784",
+        "upper_exact": "3043833630724015024767/9444732965739290427392",
+        "lower_diagnostic": 0.32227842139799,
+        "upper_diagnostic": 0.32227842139799
+      },
+      "Hleaf": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "97657143698592992260521/11805916207174113034240",
+        "upper_exact": "48828571849296496130261/5902958103587056517120",
+        "lower_diagnostic": 8.271881824745595,
+        "upper_diagnostic": 8.271881824745595
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 2,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "15/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "223/256",
+      "internal_nodes": 38,
+      "leaves": 39,
+      "H": {
+        "lower_exact": "9622708994363403112783/2361183241434822606848",
+        "upper_exact": "153963343909814449804565/37778931862957161709568",
+        "lower_diagnostic": 4.075375780033049,
+        "upper_diagnostic": 4.075375780033049
+      },
+      "B": {
+        "lower_exact": "1327618003123763994633545/604462909807314587353088",
+        "upper_exact": "1327618003123763994636017/604462909807314587353088",
+        "lower_diagnostic": 2.196359746120685,
+        "upper_diagnostic": 2.196359746120685
+      },
+      "Q": {
+        "lower_exact": "763091927962626931833377/604462909807314587353088",
+        "upper_exact": "763091927962626931834171/604462909807314587353088",
+        "lower_diagnostic": 1.2624296968127933,
+        "upper_diagnostic": 1.2624296968127933
+      },
+      "Lambda": {
+        "lower_exact": "35127362789290018034515/37778931862957161709568",
+        "upper_exact": "35127362789290018034547/37778931862957161709568",
+        "lower_diagnostic": 0.9298135510213551,
+        "upper_diagnostic": 0.9298135510213551
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "7025472557858003606903/14167099448608935641088",
+        "upper_exact": "11709120929763339344849/23611832414348226068480",
+        "lower_diagnostic": 0.49590056054472276,
+        "upper_diagnostic": 0.49590056054472276
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 2,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "9/16",
+      "leaf_influence_exact": "21/16",
+      "defect_exact": "63/256",
+      "internal_nodes": 3,
+      "leaves": 4,
+      "H": {
+        "lower_exact": "9622708994363403112783/2361183241434822606848",
+        "upper_exact": "153963343909814449804565/37778931862957161709568",
+        "lower_diagnostic": 4.075375780033049,
+        "upper_diagnostic": 4.075375780033049
+      },
+      "B": {
+        "lower_exact": "470415703848169044907593/604462909807314587353088",
+        "upper_exact": "470415703848169044908593/604462909807314587353088",
+        "lower_diagnostic": 0.7782375001273842,
+        "upper_diagnostic": 0.7782375001273842
+      },
+      "Q": {
+        "lower_exact": "297582646045619721368097/604462909807314587353088",
+        "upper_exact": "297582646045619721368283/604462909807314587353088",
+        "lower_diagnostic": 0.4923091908823331,
+        "upper_diagnostic": 0.4923091908823331
+      },
+      "Lambda": {
+        "lower_exact": "22805965508787216970107/37778931862957161709568",
+        "upper_exact": "22805965508787216970125/37778931862957161709568",
+        "lower_diagnostic": 0.6036688806214986,
+        "upper_diagnostic": 0.6036688806214986
+      },
+      "Hleaf": {
+        "lower_exact": "1603784832393900518797/590295810358705651712",
+        "upper_exact": "51321114636604816601527/18889465931478580854784",
+        "lower_diagnostic": 2.716917186688699,
+        "upper_diagnostic": 2.716917186688699
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "156356532713322896554793/23611832414348226068480",
+        "upper_exact": "156356532713322896554799/23611832414348226068480",
+        "lower_diagnostic": 6.621956736331466,
+        "upper_diagnostic": 6.621956736331466
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 3,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "57/32",
+      "consumed_influence_exact": "57/32",
+      "leaf_influence_exact": "0",
+      "defect_exact": "847/1024",
+      "internal_nodes": 31,
+      "leaves": 32,
+      "H": {
+        "lower_exact": "39259107816436430788237/9444732965739290427392",
+        "upper_exact": "2512582900251931570447733/604462909807314587353088",
+        "lower_diagnostic": 4.156719725041311,
+        "upper_diagnostic": 4.156719725041311
+      },
+      "B": {
+        "lower_exact": "1367950344924291192606653/604462909807314587353088",
+        "upper_exact": "1367950344924291192609065/604462909807314587353088",
+        "lower_diagnostic": 2.2630840085132014,
+        "upper_diagnostic": 2.2630840085132014
+      },
+      "Q": {
+        "lower_exact": "3230651306982095067168419/2417851639229258349412352",
+        "upper_exact": "3230651306982095067170801/2417851639229258349412352",
+        "lower_diagnostic": 1.3361660635273445,
+        "upper_diagnostic": 1.3361660635273445
+      },
+      "Lambda": {
+        "lower_exact": "45806492009560989629751/75557863725914323419136",
+        "upper_exact": "45806492009560989629815/75557863725914323419136",
+        "lower_diagnostic": 0.6062438739099845,
+        "upper_diagnostic": 0.6062438739099845
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "15268830669853663209917/44862481587261629530112",
+        "upper_exact": "45806492009560989629815/134587444761784888590336",
+        "lower_diagnostic": 0.34034743798455264,
+        "upper_diagnostic": 0.34034743798455264
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 3,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "57/32",
+      "consumed_influence_exact": "23/16",
+      "leaf_influence_exact": "11/32",
+      "defect_exact": "591/1024",
+      "internal_nodes": 9,
+      "leaves": 10,
+      "H": {
+        "lower_exact": "39259107816436430788237/9444732965739290427392",
+        "upper_exact": "2512582900251931570447733/604462909807314587353088",
+        "lower_diagnostic": 4.156719725041311,
+        "upper_diagnostic": 4.156719725041311
+      },
+      "B": {
+        "lower_exact": "2010721362766799553726453/1208925819614629174706176",
+        "upper_exact": "2010721362766799553729611/1208925819614629174706176",
+        "lower_diagnostic": 1.6632297285268998,
+        "upper_diagnostic": 1.6632297285268998
+      },
+      "Q": {
+        "lower_exact": "2412714787508409316637175/2417851639229258349412352",
+        "upper_exact": "2412714787508409316638595/2417851639229258349412352",
+        "lower_diagnostic": 0.997875447923477,
+        "upper_diagnostic": 0.997875447923477
+      },
+      "Lambda": {
+        "lower_exact": "45806492009560989629751/75557863725914323419136",
+        "upper_exact": "45806492009560989629815/75557863725914323419136",
+        "lower_diagnostic": 0.6062438739099845,
+        "upper_diagnostic": 0.6062438739099845
+      },
+      "Hleaf": {
+        "lower_exact": "679468376115148942150821/604462909807314587353088",
+        "upper_exact": "1358936752230297884302521/1208925819614629174706176",
+        "lower_diagnostic": 1.12408613513068,
+        "upper_diagnostic": 1.12408613513068
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "93187877637202809235901/44862481587261629530112",
+        "upper_exact": "279563632911608427707767/134587444761784888590336",
+        "lower_diagnostic": 2.0771895432477105,
+        "upper_diagnostic": 2.0771895432477105
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 3,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "57/32",
+      "consumed_influence_exact": "57/32",
+      "leaf_influence_exact": "0",
+      "defect_exact": "15/16",
+      "internal_nodes": 79,
+      "leaves": 80,
+      "H": {
+        "lower_exact": "39259107816436430788237/9444732965739290427392",
+        "upper_exact": "2512582900251931570447733/604462909807314587353088",
+        "lower_diagnostic": 4.156719725041311,
+        "upper_diagnostic": 4.156719725041311
+      },
+      "B": {
+        "lower_exact": "82744520135597613619665/37778931862957161709568",
+        "upper_exact": "165489040271195227239615/75557863725914323419136",
+        "lower_diagnostic": 2.190229211237439,
+        "upper_diagnostic": 2.190229211237439
+      },
+      "Q": {
+        "lower_exact": "91394863638537395401455/75557863725914323419136",
+        "upper_exact": "182789727277074790803135/151115727451828646838272",
+        "lower_diagnostic": 1.2096009486196129,
+        "upper_diagnostic": 1.2096009486196129
+      },
+      "Lambda": {
+        "lower_exact": "17897101003198274932547/18889465931478580854784",
+        "upper_exact": "35794202006396549865123/37778931862957161709568",
+        "lower_diagnostic": 0.9474646381279331,
+        "upper_diagnostic": 0.9474646381279331
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "17897101003198274932547/33646861190446222147584",
+        "upper_exact": "11931400668798849955041/22431240793630814765056",
+        "lower_diagnostic": 0.5319099722823484,
+        "upper_diagnostic": 0.5319099722823484
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 3,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "57/32",
+      "consumed_influence_exact": "3/16",
+      "leaf_influence_exact": "51/32",
+      "defect_exact": "3/16",
+      "internal_nodes": 2,
+      "leaves": 3,
+      "H": {
+        "lower_exact": "39259107816436430788237/9444732965739290427392",
+        "upper_exact": "2512582900251931570447733/604462909807314587353088",
+        "lower_diagnostic": 4.156719725041311,
+        "upper_diagnostic": 4.156719725041311
+      },
+      "B": {
+        "lower_exact": "16548904027119522723933/37778931862957161709568",
+        "upper_exact": "33097808054239045447923/75557863725914323419136",
+        "lower_diagnostic": 0.43804584224748777,
+        "upper_diagnostic": 0.43804584224748777
+      },
+      "Q": {
+        "lower_exact": "18278972727707479080291/75557863725914323419136",
+        "upper_exact": "36557945455414958160627/151115727451828646838272",
+        "lower_diagnostic": 0.24192018972392257,
+        "upper_diagnostic": 0.24192018972392257
+      },
+      "Lambda": {
+        "lower_exact": "3718814850243040626951/9444732965739290427392",
+        "upper_exact": "7437629700486081253905/18889465931478580854784",
+        "lower_diagnostic": 0.39374483786180275,
+        "upper_diagnostic": 0.39374483786180275
+      },
+      "Hleaf": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "46397234442521995898285/5607810198407703691264",
+        "upper_exact": "92794468885043991796571/11215620396815407382528",
+        "lower_diagnostic": 8.273681312483818,
+        "upper_diagnostic": 8.273681312483818
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 3,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "57/32",
+      "consumed_influence_exact": "57/32",
+      "leaf_influence_exact": "0",
+      "defect_exact": "903/1024",
+      "internal_nodes": 66,
+      "leaves": 67,
+      "H": {
+        "lower_exact": "39259107816436430788237/9444732965739290427392",
+        "upper_exact": "2512582900251931570447733/604462909807314587353088",
+        "lower_diagnostic": 4.156719725041311,
+        "upper_diagnostic": 4.156719725041311
+      },
+      "B": {
+        "lower_exact": "5407448724809203511266563/2417851639229258349412352",
+        "upper_exact": "5407448724809203511276947/2417851639229258349412352",
+        "lower_diagnostic": 2.236468374268383,
+        "upper_diagnostic": 2.236468374268383
+      },
+      "Q": {
+        "lower_exact": "1554377442188999328793829/1208925819614629174706176",
+        "upper_exact": "388594360547249832198841/302231454903657293676544",
+        "lower_diagnostic": 1.2857508847685049,
+        "upper_diagnostic": 1.2857508847685049
+      },
+      "Lambda": {
+        "lower_exact": "16470178112473642268281/18889465931478580854784",
+        "upper_exact": "65880712449894569073183/75557863725914323419136",
+        "lower_diagnostic": 0.8719239692757387,
+        "upper_diagnostic": 0.8719239692757387
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "16470178112473642268281/33646861190446222147584",
+        "upper_exact": "21960237483298189691061/44862481587261629530112",
+        "lower_diagnostic": 0.489501175733748,
+        "upper_diagnostic": 0.489501175733748
+      }
+    },
+    {
+      "m": 4,
+      "w": 1,
+      "t": 3,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "57/32",
+      "consumed_influence_exact": "47/64",
+      "leaf_influence_exact": "67/64",
+      "defect_exact": "407/1024",
+      "internal_nodes": 8,
+      "leaves": 9,
+      "H": {
+        "lower_exact": "39259107816436430788237/9444732965739290427392",
+        "upper_exact": "2512582900251931570447733/604462909807314587353088",
+        "lower_diagnostic": 4.156719725041311,
+        "upper_diagnostic": 4.156719725041311
+      },
+      "B": {
+        "lower_exact": "2888767485376001602961219/2417851639229258349412352",
+        "upper_exact": "2888767485376001602967163/2417851639229258349412352",
+        "lower_diagnostic": 1.1947662290382952,
+        "upper_diagnostic": 1.1947662290382952
+      },
+      "Q": {
+        "lower_exact": "892049030436657178097343/1208925819614629174706176",
+        "upper_exact": "111506128804582147262239/151115727451828646838272",
+        "lower_diagnostic": 0.7378856634239285,
+        "upper_diagnostic": 0.7378856634239285
+      },
+      "Lambda": {
+        "lower_exact": "13610708744695143927835/18889465931478580854784",
+        "upper_exact": "54442834978780575711387/75557863725914323419136",
+        "lower_diagnostic": 0.7205449213899379,
+        "upper_diagnostic": 0.7205449213899379
+      },
+      "Hleaf": {
+        "lower_exact": "1227326482255993218435419/604462909807314587353088",
+        "upper_exact": "76707905140999576152269/37778931862957161709568",
+        "lower_diagnostic": 2.03044134279013,
+        "upper_diagnostic": 2.03044134279013
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "191584895567844897919003/33646861190446222147584",
+        "upper_exact": "255446527423793197225353/44862481587261629530112",
+        "lower_diagnostic": 5.693990131306632,
+        "upper_diagnostic": 5.693990131306632
+      }
+    },
+    {
+      "m": 4,
+      "w": 2,
+      "t": 1,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "15/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "203/256",
+      "internal_nodes": 25,
+      "leaves": 26,
+      "H": {
+        "lower_exact": "9622708994363403112783/2361183241434822606848",
+        "upper_exact": "153963343909814449804565/37778931862957161709568",
+        "lower_diagnostic": 4.075375780033049,
+        "upper_diagnostic": 4.075375780033049
+      },
+      "B": {
+        "lower_exact": "1362472542309002827165753/604462909807314587353088",
+        "upper_exact": "1362472542309002827168073/604462909807314587353088",
+        "lower_diagnostic": 2.2540217442676838,
+        "upper_diagnostic": 2.2540217442676838
+      },
+      "Q": {
+        "lower_exact": "204950967458695233239307/151115727451828646838272",
+        "upper_exact": "409901934917390466478929/302231454903657293676544",
+        "lower_diagnostic": 1.3562517344465532,
+        "upper_diagnostic": 1.3562517344465532
+      },
+      "Lambda": {
+        "lower_exact": "3399992238451812110111/4722366482869645213696",
+        "upper_exact": "3399992238451812110115/4722366482869645213696",
+        "lower_diagnostic": 0.719976361594396,
+        "upper_diagnostic": 0.719976361594396
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "3399992238451812110111/8854437155380584775680",
+        "upper_exact": "226666149230120807341/590295810358705651712",
+        "lower_diagnostic": 0.38398739285034456,
+        "upper_diagnostic": 0.38398739285034456
+      }
+    },
+    {
+      "m": 4,
+      "w": 2,
+      "t": 1,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "11/8",
+      "leaf_influence_exact": "1/2",
+      "defect_exact": "123/256",
+      "internal_nodes": 9,
+      "leaves": 10,
+      "H": {
+        "lower_exact": "9622708994363403112783/2361183241434822606848",
+        "upper_exact": "153963343909814449804565/37778931862957161709568",
+        "lower_diagnostic": 4.075375780033049,
+        "upper_diagnostic": 4.075375780033049
+      },
+      "B": {
+        "lower_exact": "934598364970671662239049/604462909807314587353088",
+        "upper_exact": "934598364970671662240565/604462909807314587353088",
+        "lower_diagnostic": 1.5461632960549967,
+        "upper_diagnostic": 1.5461632960549967
+      },
+      "Q": {
+        "lower_exact": "293524614438138663862295/302231454903657293676544",
+        "upper_exact": "293524614438138663862457/302231454903657293676544",
+        "lower_diagnostic": 0.9711914814813233,
+        "upper_diagnostic": 0.9711914814813233
+      },
+      "Lambda": {
+        "lower_exact": "3399992238451812110111/4722366482869645213696",
+        "upper_exact": "3399992238451812110115/4722366482869645213696",
+        "lower_diagnostic": 0.719976361594396,
+        "upper_diagnostic": 0.719976361594396
+      },
+      "Hleaf": {
+        "lower_exact": "409384214286442635747467/302231454903657293676544",
+        "upper_exact": "204692107143221317873867/151115727451828646838272",
+        "lower_diagnostic": 1.3545387405719982,
+        "upper_diagnostic": 1.3545387405719982
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "24650641411365215571743/8854437155380584775680",
+        "upper_exact": "8216880470455071857249/2951479051793528258560",
+        "lower_diagnostic": 2.7839873928503445,
+        "upper_diagnostic": 2.7839873928503445
+      }
+    },
+    {
+      "m": 4,
+      "w": 2,
+      "t": 1,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "15/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "15/16",
+      "internal_nodes": 39,
+      "leaves": 40,
+      "H": {
+        "lower_exact": "9622708994363403112783/2361183241434822606848",
+        "upper_exact": "153963343909814449804565/37778931862957161709568",
+        "lower_diagnostic": 4.075375780033049,
+        "upper_diagnostic": 4.075375780033049
+      },
+      "B": {
+        "lower_exact": "10045339444635878317101/4722366482869645213696",
+        "upper_exact": "40181357778543513268473/18889465931478580854784",
+        "lower_diagnostic": 2.127183368989951,
+        "upper_diagnostic": 2.127183368989951
+      },
+      "Q": {
+        "lower_exact": "681898362183116030955/590295810358705651712",
+        "upper_exact": "43641495179719425981177/37778931862957161709568",
+        "lower_diagnostic": 1.1551807588956902,
+        "upper_diagnostic": 1.1551807588956902
+      },
+      "Lambda": {
+        "lower_exact": "18497838410074280796341/18889465931478580854784",
+        "upper_exact": "18497838410074280796357/18889465931478580854784",
+        "lower_diagnostic": 0.9792674116449387,
+        "upper_diagnostic": 0.9792674116449387
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "18497838410074280796341/35417748621522339102720",
+        "upper_exact": "6165946136691426932119/11805916207174113034240",
+        "lower_diagnostic": 0.5222759528773007,
+        "upper_diagnostic": 0.5222759528773007
+      }
+    },
+    {
+      "m": 4,
+      "w": 2,
+      "t": 1,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "3/16",
+      "leaf_influence_exact": "27/16",
+      "defect_exact": "3/16",
+      "internal_nodes": 1,
+      "leaves": 2,
+      "H": {
+        "lower_exact": "9622708994363403112783/2361183241434822606848",
+        "upper_exact": "153963343909814449804565/37778931862957161709568",
+        "lower_diagnostic": 4.075375780033049,
+        "upper_diagnostic": 4.075375780033049
+      },
+      "B": {
+        "lower_exact": "3541774862152233910269/9444732965739290427392",
+        "upper_exact": "3541774862152233910275/9444732965739290427392",
+        "lower_diagnostic": 0.375,
+        "upper_diagnostic": 0.375
+      },
+      "Q": {
+        "lower_exact": "3541774862152233910269/18889465931478580854784",
+        "upper_exact": "3541774862152233910275/18889465931478580854784",
+        "lower_diagnostic": 0.1875,
+        "upper_diagnostic": 0.1875
+      },
+      "Lambda": {
+        "lower_exact": "6087667261448030049531/18889465931478580854784",
+        "upper_exact": "3043833630724015024767/9444732965739290427392",
+        "lower_diagnostic": 0.32227842139799,
+        "upper_diagnostic": 0.32227842139799
+      },
+      "Hleaf": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "97657143698592992260521/11805916207174113034240",
+        "upper_exact": "48828571849296496130261/5902958103587056517120",
+        "lower_diagnostic": 8.271881824745595,
+        "upper_diagnostic": 8.271881824745595
+      }
+    },
+    {
+      "m": 4,
+      "w": 2,
+      "t": 1,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "15/8",
+      "leaf_influence_exact": "0",
+      "defect_exact": "223/256",
+      "internal_nodes": 38,
+      "leaves": 39,
+      "H": {
+        "lower_exact": "9622708994363403112783/2361183241434822606848",
+        "upper_exact": "153963343909814449804565/37778931862957161709568",
+        "lower_diagnostic": 4.075375780033049,
+        "upper_diagnostic": 4.075375780033049
+      },
+      "B": {
+        "lower_exact": "1327618003123763994633545/604462909807314587353088",
+        "upper_exact": "1327618003123763994636017/604462909807314587353088",
+        "lower_diagnostic": 2.196359746120685,
+        "upper_diagnostic": 2.196359746120685
+      },
+      "Q": {
+        "lower_exact": "763091927962626931833377/604462909807314587353088",
+        "upper_exact": "763091927962626931834171/604462909807314587353088",
+        "lower_diagnostic": 1.2624296968127933,
+        "upper_diagnostic": 1.2624296968127933
+      },
+      "Lambda": {
+        "lower_exact": "35127362789290018034515/37778931862957161709568",
+        "upper_exact": "35127362789290018034547/37778931862957161709568",
+        "lower_diagnostic": 0.9298135510213551,
+        "upper_diagnostic": 0.9298135510213551
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "7025472557858003606903/14167099448608935641088",
+        "upper_exact": "11709120929763339344849/23611832414348226068480",
+        "lower_diagnostic": 0.49590056054472276,
+        "upper_diagnostic": 0.49590056054472276
+      }
+    },
+    {
+      "m": 4,
+      "w": 2,
+      "t": 1,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "15/8",
+      "consumed_influence_exact": "9/16",
+      "leaf_influence_exact": "21/16",
+      "defect_exact": "63/256",
+      "internal_nodes": 3,
+      "leaves": 4,
+      "H": {
+        "lower_exact": "9622708994363403112783/2361183241434822606848",
+        "upper_exact": "153963343909814449804565/37778931862957161709568",
+        "lower_diagnostic": 4.075375780033049,
+        "upper_diagnostic": 4.075375780033049
+      },
+      "B": {
+        "lower_exact": "470415703848169044907593/604462909807314587353088",
+        "upper_exact": "470415703848169044908593/604462909807314587353088",
+        "lower_diagnostic": 0.7782375001273842,
+        "upper_diagnostic": 0.7782375001273842
+      },
+      "Q": {
+        "lower_exact": "297582646045619721368097/604462909807314587353088",
+        "upper_exact": "297582646045619721368283/604462909807314587353088",
+        "lower_diagnostic": 0.4923091908823331,
+        "upper_diagnostic": 0.4923091908823331
+      },
+      "Lambda": {
+        "lower_exact": "22805965508787216970107/37778931862957161709568",
+        "upper_exact": "22805965508787216970125/37778931862957161709568",
+        "lower_diagnostic": 0.6036688806214986,
+        "upper_diagnostic": 0.6036688806214986
+      },
+      "Hleaf": {
+        "lower_exact": "1603784832393900518797/590295810358705651712",
+        "upper_exact": "51321114636604816601527/18889465931478580854784",
+        "lower_diagnostic": 2.716917186688699,
+        "upper_diagnostic": 2.716917186688699
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "156356532713322896554793/23611832414348226068480",
+        "upper_exact": "156356532713322896554799/23611832414348226068480",
+        "lower_diagnostic": 6.621956736331466,
+        "upper_diagnostic": 6.621956736331466
+      }
+    },
+    {
+      "m": 4,
+      "w": 2,
+      "t": 2,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "33/16",
+      "consumed_influence_exact": "33/16",
+      "leaf_influence_exact": "0",
+      "defect_exact": "247/256",
+      "internal_nodes": 67,
+      "leaves": 68,
+      "H": {
+        "lower_exact": "86370037196160147734123/18889465931478580854784",
+        "upper_exact": "5527682380554249454984975/1208925819614629174706176",
+        "lower_diagnostic": 4.572391697545442,
+        "upper_diagnostic": 4.572391697545442
+      },
+      "B": {
+        "lower_exact": "5921695404204205461686241/2417851639229258349412352",
+        "upper_exact": "5921695404204205461696661/2417851639229258349412352",
+        "lower_diagnostic": 2.4491558159010416,
+        "upper_diagnostic": 2.4491558159010416
+      },
+      "Q": {
+        "lower_exact": "13562196639793187545143207/9671406556917033397649408",
+        "upper_exact": "13562196639793187545155655/9671406556917033397649408",
+        "lower_diagnostic": 1.4022982655085927,
+        "upper_diagnostic": 1.4022982655085927
+      },
+      "Lambda": {
+        "lower_exact": "70230695602989773181477/75557863725914323419136",
+        "upper_exact": "35115347801494886590775/37778931862957161709568",
+        "lower_diagnostic": 0.9294955169425009,
+        "upper_diagnostic": 0.9294955169425009
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "23410231867663257727159/51946031311566097350656",
+        "upper_exact": "3192304345590444235525/7083549724304467820544",
+        "lower_diagnostic": 0.45066449306303075,
+        "upper_diagnostic": 0.45066449306303075
+      }
+    },
+    {
+      "m": 4,
+      "w": 2,
+      "t": 2,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "33/16",
+      "consumed_influence_exact": "57/32",
+      "leaf_influence_exact": "9/32",
+      "defect_exact": "211/256",
+      "internal_nodes": 25,
+      "leaves": 26,
+      "H": {
+        "lower_exact": "86370037196160147734123/18889465931478580854784",
+        "upper_exact": "5527682380554249454984975/1208925819614629174706176",
+        "lower_diagnostic": 4.572391697545442,
+        "upper_diagnostic": 4.572391697545442
+      },
+      "B": {
+        "lower_exact": "5241674630670976550914593/2417851639229258349412352",
+        "upper_exact": "5241674630670976550923861/2417851639229258349412352",
+        "lower_diagnostic": 2.1679058159010416,
+        "upper_diagnostic": 2.1679058159010416
+      },
+      "Q": {
+        "lower_exact": "12202155092726729723599911/9671406556917033397649408",
+        "upper_exact": "12202155092726729723610055/9671406556917033397649408",
+        "lower_diagnostic": 1.2616732655085927,
+        "upper_diagnostic": 1.2616732655085927
+      },
+      "Lambda": {
+        "lower_exact": "70230695602989773181477/75557863725914323419136",
+        "upper_exact": "35115347801494886590775/37778931862957161709568",
+        "lower_diagnostic": 0.9294955169425009,
+        "upper_diagnostic": 0.9294955169425009
+      },
+      "Hleaf": {
+        "lower_exact": "21250649172913403461623/37778931862957161709568",
+        "upper_exact": "21250649172913403461641/37778931862957161709568",
+        "lower_diagnostic": 0.5625,
+        "upper_diagnostic": 0.5625
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "87162179386403468112055/51946031311566097350656",
+        "upper_exact": "130743269079605202168119/77919046967349146025984",
+        "lower_diagnostic": 1.677937220335758,
+        "upper_diagnostic": 1.677937220335758
+      }
+    },
+    {
+      "m": 4,
+      "w": 2,
+      "t": 2,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "33/16",
+      "consumed_influence_exact": "33/16",
+      "leaf_influence_exact": "0",
+      "defect_exact": "33/32",
+      "internal_nodes": 159,
+      "leaves": 160,
+      "H": {
+        "lower_exact": "86370037196160147734123/18889465931478580854784",
+        "upper_exact": "5527682380554249454984975/1208925819614629174706176",
+        "lower_diagnostic": 4.572391697545442,
+        "upper_diagnostic": 4.572391697545442
+      },
+      "B": {
+        "lower_exact": "182037944298314749963263/75557863725914323419136",
+        "upper_exact": "364075888596629499927153/151115727451828646838272",
+        "lower_diagnostic": 2.409252132361183,
+        "upper_diagnostic": 2.409252132361183
+      },
+      "Q": {
+        "lower_exact": "201068700004782269883201/151115727451828646838272",
+        "upper_exact": "402137400009564539766897/302231454903657293676544",
+        "lower_diagnostic": 1.330561043481574,
+        "upper_diagnostic": 1.330561043481574
+      },
+      "Lambda": {
+        "lower_exact": "12459959285373623382361/9444732965739290427392",
+        "upper_exact": "24919918570747246764741/18889465931478580854784",
+        "lower_diagnostic": 1.3192495045198258,
+        "upper_diagnostic": 1.3192495045198258
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "12459959285373623382361/19479761741837286506496",
+        "upper_exact": "8306639523582415588247/12986507827891524337664",
+        "lower_diagnostic": 0.6396361234035519,
+        "upper_diagnostic": 0.6396361234035519
+      }
+    },
+    {
+      "m": 4,
+      "w": 2,
+      "t": 2,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "33/16",
+      "consumed_influence_exact": "27/64",
+      "leaf_influence_exact": "105/64",
+      "defect_exact": "9/32",
+      "internal_nodes": 6,
+      "leaves": 7,
+      "H": {
+        "lower_exact": "86370037196160147734123/18889465931478580854784",
+        "upper_exact": "5527682380554249454984975/1208925819614629174706176",
+        "lower_diagnostic": 4.572391697545442,
+        "upper_diagnostic": 4.572391697545442
+      },
+      "B": {
+        "lower_exact": "49646712081358568171799/75557863725914323419136",
+        "upper_exact": "99293424162717136343769/151115727451828646838272",
+        "lower_diagnostic": 0.6570687633712317,
+        "upper_diagnostic": 0.6570687633712317
+      },
+      "Q": {
+        "lower_exact": "54836918183122437240873/151115727451828646838272",
+        "upper_exact": "109673836366244874481881/302231454903657293676544",
+        "lower_diagnostic": 0.36288028458588384,
+        "upper_diagnostic": 0.36288028458588384
+      },
+      "Lambda": {
+        "lower_exact": "26970194690156049103989/37778931862957161709568",
+        "upper_exact": "53940389380312098208005/75557863725914323419136",
+        "lower_diagnostic": 0.7138951092632863,
+        "upper_diagnostic": 0.7138951092632863
+      },
+      "Hleaf": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "194933245159710963323943/25973015655783048675328",
+        "upper_exact": "389866490319421926647895/51946031311566097350656",
+        "lower_diagnostic": 7.505221871157957,
+        "upper_diagnostic": 7.505221871157957
+      }
+    },
+    {
+      "m": 4,
+      "w": 2,
+      "t": 2,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "33/16",
+      "consumed_influence_exact": "33/16",
+      "leaf_influence_exact": "0",
+      "defect_exact": "931/1024",
+      "internal_nodes": 102,
+      "leaves": 103,
+      "H": {
+        "lower_exact": "86370037196160147734123/18889465931478580854784",
+        "upper_exact": "5527682380554249454984975/1208925819614629174706176",
+        "lower_diagnostic": 4.572391697545442,
+        "upper_diagnostic": 4.572391697545442
+      },
+      "B": {
+        "lower_exact": "24367357807033593699334037/9671406556917033397649408",
+        "upper_exact": "24367357807033593699381101/9671406556917033397649408",
+        "lower_diagnostic": 2.5195257446401063,
+        "upper_diagnostic": 2.5195257446401063
+      },
+      "Q": {
+        "lower_exact": "14560009512583983008266281/9671406556917033397649408",
+        "upper_exact": "14560009512583983008278229/9671406556917033397649408",
+        "lower_diagnostic": 1.5054696984246412,
+        "upper_diagnostic": 1.5054696984246412
+      },
+      "Lambda": {
+        "lower_exact": "167869626521720322000155/151115727451828646838272",
+        "upper_exact": "2622962914401880031255/2361183241434822606848",
+        "lower_diagnostic": 1.1108680039622767,
+        "upper_diagnostic": 1.1108680039622767
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "167869626521720322000155/311676187869396584103936",
+        "upper_exact": "2622962914401880031255/4869940435459321626624",
+        "lower_diagnostic": 0.5386026685877705,
+        "upper_diagnostic": 0.5386026685877705
+      }
+    },
+    {
+      "m": 4,
+      "w": 2,
+      "t": 2,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "33/16",
+      "consumed_influence_exact": "87/64",
+      "leaf_influence_exact": "45/64",
+      "defect_exact": "595/1024",
+      "internal_nodes": 32,
+      "leaves": 33,
+      "H": {
+        "lower_exact": "86370037196160147734123/18889465931478580854784",
+        "upper_exact": "5527682380554249454984975/1208925819614629174706176",
+        "lower_diagnostic": 4.572391697545442,
+        "upper_diagnostic": 4.572391697545442
+      },
+      "B": {
+        "lower_exact": "17419478949551675958155861/9671406556917033397649408",
+        "upper_exact": "17419478949551675958190205/9671406556917033397649408",
+        "lower_diagnostic": 1.8011319084805908,
+        "upper_diagnostic": 1.8011319084805908
+      },
+      "Q": {
+        "lower_exact": "10860259456370967864445761/9671406556917033397649408",
+        "upper_exact": "10860259456370967864452501/9671406556917033397649408",
+        "lower_diagnostic": 1.1229245087007185,
+        "upper_diagnostic": 1.1229245087007185
+      },
+      "Lambda": {
+        "lower_exact": "167869626521720322000155/151115727451828646838272",
+        "upper_exact": "2622962914401880031255/2361183241434822606848",
+        "lower_diagnostic": 1.1108680039622767,
+        "upper_diagnostic": 1.1108680039622767
+      },
+      "Hleaf": {
+        "lower_exact": "1681499825214813847757025/1208925819614629174706176",
+        "upper_exact": "840749912607406923879105/604462909807314587353088",
+        "lower_diagnostic": 1.3909040554289986,
+        "upper_diagnostic": 1.3909040554289986
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "1124148839302823477773595/311676187869396584103936",
+        "upper_exact": "17564825614106616840215/4869940435459321626624",
+        "lower_diagnostic": 3.606784486769589,
+        "upper_diagnostic": 3.606784486769589
+      }
+    },
+    {
+      "m": 4,
+      "w": 3,
+      "t": 1,
+      "policy": "x-first",
+      "stopping": "constant-only",
+      "I_exact": "57/32",
+      "consumed_influence_exact": "57/32",
+      "leaf_influence_exact": "0",
+      "defect_exact": "847/1024",
+      "internal_nodes": 31,
+      "leaves": 32,
+      "H": {
+        "lower_exact": "39259107816436430788237/9444732965739290427392",
+        "upper_exact": "2512582900251931570447733/604462909807314587353088",
+        "lower_diagnostic": 4.156719725041311,
+        "upper_diagnostic": 4.156719725041311
+      },
+      "B": {
+        "lower_exact": "1367950344924291192606653/604462909807314587353088",
+        "upper_exact": "1367950344924291192609065/604462909807314587353088",
+        "lower_diagnostic": 2.2630840085132014,
+        "upper_diagnostic": 2.2630840085132014
+      },
+      "Q": {
+        "lower_exact": "3230651306982095067168419/2417851639229258349412352",
+        "upper_exact": "3230651306982095067170801/2417851639229258349412352",
+        "lower_diagnostic": 1.3361660635273445,
+        "upper_diagnostic": 1.3361660635273445
+      },
+      "Lambda": {
+        "lower_exact": "45806492009560989629751/75557863725914323419136",
+        "upper_exact": "45806492009560989629815/75557863725914323419136",
+        "lower_diagnostic": 0.6062438739099845,
+        "upper_diagnostic": 0.6062438739099845
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "15268830669853663209917/44862481587261629530112",
+        "upper_exact": "45806492009560989629815/134587444761784888590336",
+        "lower_diagnostic": 0.34034743798455264,
+        "upper_diagnostic": 0.34034743798455264
+      }
+    },
+    {
+      "m": 4,
+      "w": 3,
+      "t": 1,
+      "policy": "x-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "57/32",
+      "consumed_influence_exact": "23/16",
+      "leaf_influence_exact": "11/32",
+      "defect_exact": "591/1024",
+      "internal_nodes": 9,
+      "leaves": 10,
+      "H": {
+        "lower_exact": "39259107816436430788237/9444732965739290427392",
+        "upper_exact": "2512582900251931570447733/604462909807314587353088",
+        "lower_diagnostic": 4.156719725041311,
+        "upper_diagnostic": 4.156719725041311
+      },
+      "B": {
+        "lower_exact": "2010721362766799553726453/1208925819614629174706176",
+        "upper_exact": "2010721362766799553729611/1208925819614629174706176",
+        "lower_diagnostic": 1.6632297285268998,
+        "upper_diagnostic": 1.6632297285268998
+      },
+      "Q": {
+        "lower_exact": "2412714787508409316637175/2417851639229258349412352",
+        "upper_exact": "2412714787508409316638595/2417851639229258349412352",
+        "lower_diagnostic": 0.997875447923477,
+        "upper_diagnostic": 0.997875447923477
+      },
+      "Lambda": {
+        "lower_exact": "45806492009560989629751/75557863725914323419136",
+        "upper_exact": "45806492009560989629815/75557863725914323419136",
+        "lower_diagnostic": 0.6062438739099845,
+        "upper_diagnostic": 0.6062438739099845
+      },
+      "Hleaf": {
+        "lower_exact": "679468376115148942150821/604462909807314587353088",
+        "upper_exact": "1358936752230297884302521/1208925819614629174706176",
+        "lower_diagnostic": 1.12408613513068,
+        "upper_diagnostic": 1.12408613513068
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "93187877637202809235901/44862481587261629530112",
+        "upper_exact": "279563632911608427707767/134587444761784888590336",
+        "lower_diagnostic": 2.0771895432477105,
+        "upper_diagnostic": 2.0771895432477105
+      }
+    },
+    {
+      "m": 4,
+      "w": 3,
+      "t": 1,
+      "policy": "y-first",
+      "stopping": "constant-only",
+      "I_exact": "57/32",
+      "consumed_influence_exact": "57/32",
+      "leaf_influence_exact": "0",
+      "defect_exact": "15/16",
+      "internal_nodes": 79,
+      "leaves": 80,
+      "H": {
+        "lower_exact": "39259107816436430788237/9444732965739290427392",
+        "upper_exact": "2512582900251931570447733/604462909807314587353088",
+        "lower_diagnostic": 4.156719725041311,
+        "upper_diagnostic": 4.156719725041311
+      },
+      "B": {
+        "lower_exact": "82744520135597613619665/37778931862957161709568",
+        "upper_exact": "165489040271195227239615/75557863725914323419136",
+        "lower_diagnostic": 2.190229211237439,
+        "upper_diagnostic": 2.190229211237439
+      },
+      "Q": {
+        "lower_exact": "91394863638537395401455/75557863725914323419136",
+        "upper_exact": "182789727277074790803135/151115727451828646838272",
+        "lower_diagnostic": 1.2096009486196129,
+        "upper_diagnostic": 1.2096009486196129
+      },
+      "Lambda": {
+        "lower_exact": "17897101003198274932547/18889465931478580854784",
+        "upper_exact": "35794202006396549865123/37778931862957161709568",
+        "lower_diagnostic": 0.9474646381279331,
+        "upper_diagnostic": 0.9474646381279331
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "17897101003198274932547/33646861190446222147584",
+        "upper_exact": "11931400668798849955041/22431240793630814765056",
+        "lower_diagnostic": 0.5319099722823484,
+        "upper_diagnostic": 0.5319099722823484
+      }
+    },
+    {
+      "m": 4,
+      "w": 3,
+      "t": 1,
+      "policy": "y-first",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "57/32",
+      "consumed_influence_exact": "3/16",
+      "leaf_influence_exact": "51/32",
+      "defect_exact": "3/16",
+      "internal_nodes": 2,
+      "leaves": 3,
+      "H": {
+        "lower_exact": "39259107816436430788237/9444732965739290427392",
+        "upper_exact": "2512582900251931570447733/604462909807314587353088",
+        "lower_diagnostic": 4.156719725041311,
+        "upper_diagnostic": 4.156719725041311
+      },
+      "B": {
+        "lower_exact": "16548904027119522723933/37778931862957161709568",
+        "upper_exact": "33097808054239045447923/75557863725914323419136",
+        "lower_diagnostic": 0.43804584224748777,
+        "upper_diagnostic": 0.43804584224748777
+      },
+      "Q": {
+        "lower_exact": "18278972727707479080291/75557863725914323419136",
+        "upper_exact": "36557945455414958160627/151115727451828646838272",
+        "lower_diagnostic": 0.24192018972392257,
+        "upper_diagnostic": 0.24192018972392257
+      },
+      "Lambda": {
+        "lower_exact": "3718814850243040626951/9444732965739290427392",
+        "upper_exact": "7437629700486081253905/18889465931478580854784",
+        "lower_diagnostic": 0.39374483786180275,
+        "upper_diagnostic": 0.39374483786180275
+      },
+      "Hleaf": {
+        "lower_exact": "7851821563287286157647/2361183241434822606848",
+        "upper_exact": "125629145012596578522389/37778931862957161709568",
+        "lower_diagnostic": 3.325375780033049,
+        "upper_diagnostic": 3.325375780033049
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "46397234442521995898285/5607810198407703691264",
+        "upper_exact": "92794468885043991796571/11215620396815407382528",
+        "lower_diagnostic": 8.273681312483818,
+        "upper_diagnostic": 8.273681312483818
+      }
+    },
+    {
+      "m": 4,
+      "w": 3,
+      "t": 1,
+      "policy": "alternating-x-y",
+      "stopping": "constant-only",
+      "I_exact": "57/32",
+      "consumed_influence_exact": "57/32",
+      "leaf_influence_exact": "0",
+      "defect_exact": "903/1024",
+      "internal_nodes": 66,
+      "leaves": 67,
+      "H": {
+        "lower_exact": "39259107816436430788237/9444732965739290427392",
+        "upper_exact": "2512582900251931570447733/604462909807314587353088",
+        "lower_diagnostic": 4.156719725041311,
+        "upper_diagnostic": 4.156719725041311
+      },
+      "B": {
+        "lower_exact": "5407448724809203511266563/2417851639229258349412352",
+        "upper_exact": "5407448724809203511276947/2417851639229258349412352",
+        "lower_diagnostic": 2.236468374268383,
+        "upper_diagnostic": 2.236468374268383
+      },
+      "Q": {
+        "lower_exact": "1554377442188999328793829/1208925819614629174706176",
+        "upper_exact": "388594360547249832198841/302231454903657293676544",
+        "lower_diagnostic": 1.2857508847685049,
+        "upper_diagnostic": 1.2857508847685049
+      },
+      "Lambda": {
+        "lower_exact": "16470178112473642268281/18889465931478580854784",
+        "upper_exact": "65880712449894569073183/75557863725914323419136",
+        "lower_diagnostic": 0.8719239692757387,
+        "upper_diagnostic": 0.8719239692757387
+      },
+      "Hleaf": {
+        "lower_exact": "0",
+        "upper_exact": "0",
+        "lower_diagnostic": 0.0,
+        "upper_diagnostic": 0.0
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "16470178112473642268281/33646861190446222147584",
+        "upper_exact": "21960237483298189691061/44862481587261629530112",
+        "lower_diagnostic": 0.489501175733748,
+        "upper_diagnostic": 0.489501175733748
+      }
+    },
+    {
+      "m": 4,
+      "w": 3,
+      "t": 1,
+      "policy": "alternating-x-y",
+      "stopping": "symmetric-threshold-leaves",
+      "I_exact": "57/32",
+      "consumed_influence_exact": "47/64",
+      "leaf_influence_exact": "67/64",
+      "defect_exact": "407/1024",
+      "internal_nodes": 8,
+      "leaves": 9,
+      "H": {
+        "lower_exact": "39259107816436430788237/9444732965739290427392",
+        "upper_exact": "2512582900251931570447733/604462909807314587353088",
+        "lower_diagnostic": 4.156719725041311,
+        "upper_diagnostic": 4.156719725041311
+      },
+      "B": {
+        "lower_exact": "2888767485376001602961219/2417851639229258349412352",
+        "upper_exact": "2888767485376001602967163/2417851639229258349412352",
+        "lower_diagnostic": 1.1947662290382952,
+        "upper_diagnostic": 1.1947662290382952
+      },
+      "Q": {
+        "lower_exact": "892049030436657178097343/1208925819614629174706176",
+        "upper_exact": "111506128804582147262239/151115727451828646838272",
+        "lower_diagnostic": 0.7378856634239285,
+        "upper_diagnostic": 0.7378856634239285
+      },
+      "Lambda": {
+        "lower_exact": "13610708744695143927835/18889465931478580854784",
+        "upper_exact": "54442834978780575711387/75557863725914323419136",
+        "lower_diagnostic": 0.7205449213899379,
+        "upper_diagnostic": 0.7205449213899379
+      },
+      "Hleaf": {
+        "lower_exact": "1227326482255993218435419/604462909807314587353088",
+        "upper_exact": "76707905140999576152269/37778931862957161709568",
+        "lower_diagnostic": 2.03044134279013,
+        "upper_diagnostic": 2.03044134279013
+      },
+      "Lambda_plus_9_leafI_over_I": {
+        "lower_exact": "191584895567844897919003/33646861190446222147584",
+        "upper_exact": "255446527423793197225353/44862481587261629530112",
+        "lower_diagnostic": 5.693990131306632,
+        "upper_diagnostic": 5.693990131306632
+      }
+    }
+  ],
+  "scope": "rational spectra/influence/kappa/log bounds exact; interval-straddling zero identities handled analytically; no all-dimensional claim comes from the finite grid"
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "claim_id": "A080-REPEATED-ESCAPE-RETURN-NOGROWTH",
+    "version": 1,
+    "exact_statement": "Let h:{-1,1}^6->{-1,1} be negative at binary indices {0,1,2,4,8,16,32,6,17,40}, with zero encoding sign +1, and let J(x)=-h(x xor1). For every nonconstant actual uniform-cube Boolean seed g, consider any finite strategy consisting of common-policy h substitutions and optional complete J rare-escape episodes, always using six identical cores with disjoint physical supports. A common step chooses minority-negative inputs when minority s<=7/32 and complements all six inputs otherwise; output signs may be reoriented to minority. A J episode is allowed only at 0<s<=1/16 and repeatedly substitutes J on minority-oriented copies until the first minority bias above1/16; a final output may stop inside an episode. Then every resulting actual finite Boolean F satisfies H(F)/I(F)<=H(g)/I(g)+(1731/44)*Var(g)/I(g)<H(g)/I(g)+40, in entropy bits. The proof uses mu=Var/I, which contracts by at least2/3 at each common h step and never increases at J steps; a common step costs at most8mu in normalized entropy and an entire escape episode costs at most(225/44)mu_start. Thus arbitrarily many eligible escape/return cycles from a fixed finite seed cannot yield an unbounded-H/I disproof.",
+    "hypotheses": [
+      "Actual nonconstant finite-dimensional Boolean functions on uniform physical cubes; entropy in bits",
+      "Six identical disjoint copies per composition, with all physical influences and full terminal entropy retained",
+      "Specified common orientation policy and rare-triggered J episodes completed before another common step; terminal prefixes permitted",
+      "No arbitrary mixed block signs, shared-data substitution, additional gate or starting-family absolute entropy bound"
+    ],
+    "statement_sha256": "13a3c4dcd4f264f3fe158f0fbccbccf8e5004e202f7329aa62af47c0bbfc4e5b",
+    "contributors": [
+      "A080"
+    ],
+    "proof_source": [
+      "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T034416Z-account05-A080-universal-counterexample-standard\\PROOF.md",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T034416Z-account05-A080-universal-counterexample-standard\\out\\BERNSTEIN.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T034416Z-account05-A080-universal-counterexample-standard\\out\\VALIDATION.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A080\\runs\\20261014T034416Z-account05-A080-universal-counterexample-standard\\out\\SYMBOLIC.json"
+    ],
+    "proof_dependencies": [
+      "Exact disjoint-block entropy/influence composition identity and biased degree moment (reconstructed here)",
+      "Scalar binary entropy inequality and endpoint rare C envelope (reconstructed here)",
+      "Strict degree-six Bernstein certificate on16 adjacent rational intervals",
+      "Geometric growth of actual J output bias and one-event-per-common-count accounting"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A080 (self)",
+        "kind": "All-dimensional analytic proof, exact polynomial certificate and direct Boolean Fourier/physical-edge verification",
+        "result": "PASS; external independent review pending"
+      },
+      {
+        "reviewer": "A072",
+        "reviewed_at": "2026-10-14T05:07:32.671055+00:00",
+        "verdict": "HOLDS",
+        "scope": "Exact unchanged source theorem, common-policy steps plus complete rare one-flip episodes and terminal prefixes only",
+        "kind": "Independent direct centered interpolation, Hamming-weight edge polynomial reconstruction, two-interval rational Bernstein certificate and analytic episode/event ownership proof",
+        "contributor_conflict": "No substantive repair supplied; source proof is valid unchanged. A072 prior one-flip work is acknowledged source context, not an independent acceptance of its own erasure theorem.",
+        "artifacts": [
+          "INDEPENDENT_PROOF.md",
+          "out/continuum_certificate.json",
+          "out/validation.json"
+        ],
+        "not_accepted": [
+          "All arbitrary mixed sign words or shared-data substitutions",
+          "Absolute starting-core H/I or C018/C019 bound",
+          "Later A075/A071 absolute-variation claims"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED",
+    "supersedes": [],
+    "refutes": [
+      "Candidate amplification of H/I to infinity from a fixed finite seed by the named common-policy plus arbitrarily repeated one-flip escape strategy"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A072",
+      "A075",
+      "A084",
+      "A089",
+      "A074",
+      "A092",
+      "B16 lead",
+      "B20"
+    ]
+  }
+]

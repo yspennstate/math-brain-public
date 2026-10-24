@@ -1,0 +1,51 @@
+{
+  "exact": {
+    "status": "PASS",
+    "cases": 466,
+    "reference_cases": 932,
+    "assertions": 8664,
+    "runtime_seconds": 1.1284734000219032,
+    "arithmetic": "Direct signed characters and physical edges; Fraction complete references; prime-log cancellation; fixed 20-term rational ln bounds",
+    "max_root_dimension": 5,
+    "helper_version": "A099-linear-collision-review-v1"
+  },
+  "integer_margin": true,
+  "sources_pinned": 24,
+  "claim_hashes_verified": 8,
+  "claim_fields": true,
+  "progress_fields": true,
+  "acyclic_DAG_nodes": 26,
+  "four_open_leaves": true,
+  "single_source_no_inputs": true,
+  "TeX_references_resolved": true,
+  "build": [
+    {
+      "pass": 1,
+      "command": [
+        "~\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE",
+        "--disable-installer",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-output-directory=out",
+        "CANDIDATE_MANUSCRIPT.tex"
+      ],
+      "returncode": 0
+    },
+    {
+      "pass": 2,
+      "command": [
+        "~\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE",
+        "--disable-installer",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-output-directory=out",
+        "CANDIDATE_MANUSCRIPT.tex"
+      ],
+      "returncode": 0
+    }
+  ],
+  "overfull_boxes": 0,
+  "undefined_references": false,
+  "full_FEI": "OPEN",
+  "PDF_complete_two_passes": true
+}

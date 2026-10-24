@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B06",
+  "run_id": "b06-20260923T165350Z-29753b",
+  "source_control_commit": "c3cf8e526098bed7ec4ef0e4156a0c77aedd9faa",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION"
+  ],
+  "new_result_ids": [
+    "QFORM-FUSED-ROW-MARGINAL-IDENTITY-v1",
+    "QFORM-FUSED-HEAVY-ROW-TRANSFER-v1",
+    "QFORM-FUSION-GATE-OR-2HUB-CONCENTRATION-v1",
+    "QFORM-FUSED-CONCENTRATION-NOT-HUB-v1"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@3f715005422309e2d831f45fb3c9d577e340af74",
+      "scope": "account02/B06 r=1,k=1 Fresnel-volume density theorem for an original-coordinate diagonal-plus-rank-one same bank"
+    },
+    {
+      "source": "yspennstate/math-open-problems@9ac8f055fe86ee993b00125fdcfbc1d528147632",
+      "scope": "account03/B06 r39 complete near-rank-two cross tube: E>11907/16384 and x2>=E/64"
+    },
+    {
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "scope": "FOURIER_ROUTE_REPORT fractional-potential Lemma 4.1 and square-peel Lemma 4.2"
+    }
+  ],
+  "main_math": "For fused weights proportional to (v_p M_qt-v_q M_pt)^2, alpha_i=v_i^2+||(I-vv^T)M row i||^2/Z. Moving a heavy original coordinate h to the arbitrary bank gives |lambda'|Z'=|lambda|Z(1-alpha_h) and conditions the fused law on avoiding h. Two transfers yield either a density bound with retained mass >=1/4 or >3/4 fused mass meeting at most two original coordinates.",
+  "partner_application": "On account03/B06 r39, Z>=x2>11907/1048576. For |lambda|>=1 the diffuse exit gives ||p_Q||inf<74.509547612; otherwise <=2 physical rows meet fused mass >0.008516550064.",
+  "counterexample_to_intermediate": "v=e1, M=[[0,0],[1,0],[0,1]] has 100% fused mass incident to coordinate 1 but physical cross row 1 is zero. With lambda=1 the genuine target Q=X1^2+2X2Y1+2X3Y2 has spectrum {1,1,1,-1,-1} and is paid by exact-rank-two crossing plus the pinned half-Riesz square peel: ||p_Q||inf<=4sqrt2.",
+  "canonical_repository": "yspennstate/math-open-problems",
+  "canonical_commit": "71f8bc9563aa8baabcea59a31027b12b2c6a18f9",
+  "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260923T165350Z-29753b/REPORT.md",
+  "handoff_commit": "b6d1a098e011f55aa7808b33da3dddaabd683107",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B06/b06-20260923T165350Z-29753b.md",
+  "first_unpaid_implication": "QFORM-FUSED-2HUB-CONCENTRATION-ROUTING-v1",
+  "next_step": "Quantitatively split the <=2-row fused concentration certificate into true hub-partner volume versus localized-square volume, then apply the current two-hub transverse-square/projected-crossing receiver or the localized-square rank-two half-Riesz peel while retaining the complete cross tail.",
+  "checker_source_sha256": "bf21ccb4e90debfdb90ea895063decd3f3e967ca65a0f71ebe4edd1aeb859666",
+  "checker_output_sha256": "0f8862b3dfdfaaac6d81d8bf5fbe7aeb3113d219476d7737eb527c29a2802d2b"
+}

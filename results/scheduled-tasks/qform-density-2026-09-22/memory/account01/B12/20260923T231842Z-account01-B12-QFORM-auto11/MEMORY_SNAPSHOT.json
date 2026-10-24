@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260923T231842Z-account01-B12-QFORM-auto11",
+  "source_control_repository": "yspennstate/math-research-brain",
+  "source_control_commit_at_publication_refresh": "261a5ec9356035d4d879b3e79e7e9ad4f423037e",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "continuity_status": "NOT_CLAIMED_FOR_THIS_BRANCH",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "new_claim": {
+    "id": "QFORM-HUB-ALIGNED-SPECTRAL-PACKET-STABILITY-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "scope": "Original-coordinate core H with a rank-one hub self block after an arbitrary aligned signed spectral packet; all packet H-projections collinear with one hub direction; transverse cross block has s2>0; aggregate hub slope bounded; only the final tail rows touching H are small. Arbitrarily many aligned eigenmodes may have arbitrary signs and magnitudes; arbitrary complement-only spectrum is free; arbitrary-rank small signed spectral packets cost only their operator threshold.",
+    "key_inequality": "s3([lambda uu^T, u w^T+R]) >= gamma(||w||/|lambda|) min(|lambda|,s2(R)), gamma(t)=(sqrt(t^2+4)-t)/2",
+    "final_partner_inequality": "s2(B#) >= Delta_L = gamma(q0)min(L,d)-2 epsilon-(1+sqrt(m-1))m epsilon(q0 L+r+epsilon)/(L-(m+1)epsilon)"
+  },
+  "partner_result_applied": {
+    "account_slot": "account02/B12",
+    "claim": "QFORM-RANKONE-SELF-CARRIER-RETENTION-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "894dfe1e6cc4817c2b3e0bbe46036e4839f10dbf",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260923T215456Z-account02-B12-QFORM-auto11b/REPORT.md",
+    "application": "Applied to the actual final matrix after proving s3(P_H A)>=g_L-epsilon, s2(C)<=epsilon, alpha>=alpha_L, and eta_m h<=H_L, yielding s2(B#)>=Delta_L and the density bound."
+  },
+  "related_newer_peer_result_not_duplicated": {
+    "account_slot": "account03/B12",
+    "repository_commit": "a25e07c03123944c302875c3eb079b0df394f86c",
+    "claim": "QFORM-SPECTRAL-PACKET-SCHUR-BUDGET-v1",
+    "distinction": "generic arbitrary orientation spends one reserve mode per unbounded spectral mode; present theorem spends zero mode-count reserve for arbitrarily many hub-aligned modes"
+  },
+  "exact_target_family": {
+    "parameters": "m=3, L=4, q0=1, epsilon=0.01, s2(R)=||R||=2",
+    "density_bound": 5.567226402756524,
+    "s3_global_lower_bound": 1.2260679774997898,
+    "supports_arbitrarily_large_positive_and_negative_added_modes": true,
+    "supports_arbitrarily_many_aligned_modes": true
+  },
+  "outputs": {
+    "report_repository": "yspennstate/math-open-problems",
+    "report_commit": "ed9688b66bfacef09bc1203f55f3649b5b8f8cc9",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260923T231842Z-account01-B12-QFORM-auto11/REPORT.md",
+    "checks_commit": "d3ee356fd03f71212f236abb507663a0e3005a51",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260923T231842Z-account01-B12-QFORM-auto11/CHECKS.json",
+    "handoff_commit": "5bf26ac1b38edb464daf3321f93014bb33388810",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B12/20260923T231842Z-account01-B12-QFORM-auto11.md"
+  },
+  "unresolved_implication": "From bare s3(A)>=1, force a hub-aligned carrier with bounded aggregate slope, or prove that failure of every such carrier necessarily enters one of the completed D5, projected-crossing, grouped-bank/hub, ridge, half-Riesz, physical-pair, or Schur exits.",
+  "next_step": "Develop an alignment-versus-transverse-volume dichotomy using the exact projection residuals e_a=P_Jv_a-Q^TP_Hv_a; show that either a common graph captures dangerous spectral modes or their residuals create a paid cross-volume certificate.",
+  "permissions_and_delivery": {
+    "task_schedule_state_changed": false,
+    "email_sent": false,
+    "notifications_enabled": false,
+    "new_task_created": false,
+    "public_release": false,
+    "paid_or_remote_compute": false,
+    "cross_account_authentication": false
+  }
+}

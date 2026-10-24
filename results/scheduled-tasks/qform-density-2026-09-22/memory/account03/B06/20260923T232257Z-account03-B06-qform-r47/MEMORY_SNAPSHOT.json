@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260923T232257Z-account03-B06-qform-r47",
+  "utc_start": "2026-09-23T23:22:57Z",
+  "snapshot_utc": "2026-09-23T23:35:13Z",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_start_commit": "4f02efd0c35bb09e6fc4a2faa82db9e5d58df285",
+  "source_control_final_observed_commit": "cccbad455d0ceea62e321db6a5ef280141f3f887",
+  "correction_inbox_final_sha": "47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-RANK1-SAMEBANK-HALFRIESZ-FALSE-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "branch": "master",
+    "bundle_commit": "fcd44d39858e562272e44a586a458f38776fea2e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T232257Z-account03-B06-qform-r47/",
+    "report_first_commit": "9acac2c905905c020ea8276c13a61e5c56566c82",
+    "checks_commit": "d2a5177eb2aba1e3e92a85e668236cd882077b26",
+    "source_pins_commit": "fcd44d39858e562272e44a586a458f38776fea2e"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B06/20260923T232257Z-account03-B06-qform-r47.md",
+    "commit": "be54a64fed8c16a76f09ceab3ef6003df8d2db6c"
+  },
+  "proved": [
+    {
+      "id": "QFORM-SHEARFLAT-NORMAL-FORM-v1",
+      "statement": "For rank-two physical shear E with no coloop, simultaneous vanishing of every projected anchored-K row is equivalent to K=E^T M E+D0 with M symmetric and D0 diagonal; hence the exact Schur residual is diagonal plus rank at most two."
+    },
+    {
+      "id": "QFORM-SHEARFLAT-CUT-FACTOR-v1",
+      "statement": "For S=D+E^T T E and any physical cut I|J, the cross block N=E_I^T T E_J satisfies sigma1(N)sigma2(N)=|det T| sqrt(det(E_I E_I^T)det(E_J E_J^T))."
+    },
+    {
+      "id": "QFORM-SHEARPAIR-DISJOINT-PAYMENT-v1",
+      "statement": "For the normalized squared pair-area law mu, if its iid disjointness Omega>=1/256 and det T!=0, a physical cut has sigma1 sigma2>=|det T|det(EE^T)/64, giving the full ambient essential-density bound 16[64/(|det T|det(EE^T))]^(1/8)[|det H|sigma_min(H)]^(-1/4) in the indefinite outer-hub branch."
+    },
+    {
+      "id": "QFORM-SHEARPAIR-HEAVYHUB-v1",
+      "statement": "If Omega<1/256, some literal original coordinate has whitened two-frame leverage e_h^T(EE^T)^(-1)e_h>3/5; at most three coordinates can satisfy this. A shear coloop has leverage one."
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B06",
+    "source_repository": "yspennstate/math-open-problems",
+    "source_commit": "769800c0ab0851828772adabfb6874aa813e423d",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B06/20260923T231442Z-account04-B06-QFORM-r2/REPORT.md",
+    "result": "QFORM-FRESH-TRANSVERSE-CURVED-SECTION-v1",
+    "actual_inequality": "After whitening F=(EE^T)^(-1/2)E, column leverage equals alpha_i. On max_i alpha_i<=1/2, |lambda|>=1 and r=1/64, the partner theorem gives ||g_(1/64)||_infinity<=256 for the fresh-hub transverse curved section."
+  },
+  "regularity": {
+    "main_paid_branch": "absolute continuity and essential L-infinity bound; continuity not proved by this branch",
+    "partner_subbranch": "continuous C0 two-dimensional pushforward density",
+    "full_target_continuity": "OPEN"
+  },
+  "unresolved_implication": "QFORM-SHEARFLAT-HEAVYHUB-OR-DIAGRANK1-RECEIVER-v1: consume the at-most-three >3/5 physical shear hubs or det T=0 diagonal-plus-rank-one endpoint while retaining complete diagonal Schur curvature and the nonzero outer hyperbolic hub.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "native_brain_ingestion_verified": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

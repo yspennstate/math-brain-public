@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260923T045157Z-account03-B09-QFORM-r24",
+  "source_control": {
+    "startup_commit": "b1a53102975a18cd1a902b35588edbf03d55d1f5",
+    "prepublication_commit": "d6287dfa1f63c280402327eaa19a86c831e9f8f7",
+    "owner_control_revision": "2026-09-22.15",
+    "active_programme": "QFORM-DENSITY-3EIG-20260922"
+  },
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "new_claim": {
+    "id": "QFORM-PLUCKER-SMALLRHO-RANKSPLIT-v1",
+    "status": "PROVED_SUPPORTING_STRUCTURAL_LEMMA",
+    "statement": "For any orthonormal-column U in R^(N x 3) and Pluecker disjointness mass rho, for every eta in (0,1), either rho>=eta^3/2 or a Pluecker subfamily of physical triples of total weight at least 1/6 admits an exhaustive k=1,2,3 physical rank split with core singular values at least sqrt(1-eta), complementary outside singular values greater than sqrt(eta), and outside leakage into the core subspace at most k eta in squared Frobenius mass."
+  },
+  "actual_premises": [
+    "Cauchy-Binet sum_S det(U_S)^2=1",
+    "Complementary Cauchy-Binet det(I-U_S^T U_S)=sum_{T subset S^c, |T|=3} det(U_T)^2",
+    "Markov inequality applied to residual determinant under the Pluecker law",
+    "Spectral decomposition of the residual covariance R_S=I-U_S^T U_S",
+    "account03/B09 r23 QFORM-GROUPED-TWOSLOPE-ONEFRESNEL-DISJOINT-v1 at math-open-problems@13986bc9209e39eb885d7ad9e7bede9e426754aa",
+    "account02/B09 QFORM-MIXED-HUB-PLUCKER-SMOOTHING-v1 at math-open-problems@c5a57d1be0dc69e47bcb9fb52d5eaac77f4833c6"
+  ],
+  "partner_result_applied": {
+    "designated_partner": "account04/B09",
+    "designated_partner_completed_artifact_found": false,
+    "compatible_completed_peer": "account02/B09",
+    "peer_claim": "QFORM-MIXED-HUB-PLUCKER-SMOOTHING-v1",
+    "application": "At eta=1/16, rho>=1/8192 and H_*=det(G)|lambda_1lambda_2|>=1, the peer theorem gives ||p_Q||_inf<40.281 and P(Q in L)<40.281|L|."
+  },
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "7759c62b6134a28efabe3b53520724f918dba8db",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T045157Z-account03-B09-QFORM-r24/REPORT.md",
+    "report_blob": "7f66b66802c227569d79eb5077cd32473bf28298",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T045157Z-account03-B09-QFORM-r24/CHECK.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T045157Z-account03-B09-QFORM-r24/CHECKER_OUTPUT.txt",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B09/20260923T045157Z-account03-B09-QFORM-r24.md"
+  },
+  "quantitative_application": {
+    "eta": 0.0625,
+    "rho_threshold": 0.0001220703125,
+    "grouped_two_slope_bound_when_resource_ge_1": 27.467631998930337,
+    "mixed_hub_peer_bound_when_resource_ge_1": 40.280823715466745
+  },
+  "unresolved_implication": "QFORM-RANKSPLIT-PHYSICAL-PAYMENT-v1: pay k=3 finite core, k=2 core-plus-line, and k=1 core-plus-plane under arbitrary residual curvature without moments or support bounds, preserving original-coordinate selectors and O(interval length).",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_FOR_FULL_TARGET; PROVED_ONLY_ON_THE_REFERENCED_LARGE_DISJOINTNESS_BRANCHES"
+}

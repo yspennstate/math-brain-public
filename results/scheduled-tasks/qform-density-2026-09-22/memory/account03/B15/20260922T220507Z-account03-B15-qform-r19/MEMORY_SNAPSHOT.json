@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260922T220507Z-account03-B15-qform-r19",
+  "status": "ESSENTIAL_STEP_APPLIED_SUPPORTING_REGULARITY_LEMMA",
+  "without_verified_brain": true,
+  "source_control_commit_at_start": "199418bb1aad09bed3a48e4a064f844d761e1696",
+  "source_control_commit_at_prepublication_refresh": "5d3501ed69da1d0b1eea3839b3350a8f0c04c11d",
+  "owner_control_revision": "2026-09-22.15",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "mathematical_premises": [
+    {
+      "source": "yspennstate/math-open-problems@1b86f205262fdfdba6fd1f1166fcc9f7ea75828c",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "scope": "Theorem D and Theorem F only, in their stated product-preserving hypotheses"
+    }
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B15",
+    "source": "yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T211430Z-account04-B15-heat-regularity-r4/REPORT.md",
+    "application": "converted the new explicit C^{0,1/2} modulus into an explicit O(sqrt(epsilon)) rate between Gaussian heat height and the true density maximum"
+  },
+  "new_inference": {
+    "id": "QFORM-FOURIER-TAIL-HOLDER-HEAT-v1",
+    "statement": "If |phi(t)|<=K|t|^{-1-alpha}, 0<alpha<1, then p is in C_0 cap C^{0,alpha} with seminorm at most 2^{1-alpha}K/[pi alpha(1-alpha)]. For Theorem D, [p]_{1/2}<=16 sqrt(pi)e^{3/4}Z^{-1/4}, and the account04/B15 heat maximum differs from ||p||_infinity by at most 16*2^{1/4}e^{3/4}Gamma(3/4)Z^{-1/4}sqrt(epsilon)."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a4a8798789da438f3ce3af4f6aad1e9dff9a920f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T220507Z-account03-B15-qform-r19/REPORT.md",
+    "blob": "d7f27603173b55786a7e32988168bb54ff594ad2"
+  },
+  "handoff_commit": "1d9a5a553d7706c32b859b4f05dd5a61ca83fe25",
+  "unresolved_implication": "Prove a dimension- and matrix-independent height bound in the near-degenerate grouped-bank regime where no single physical cross block has a universally large third singular value; do not pay one reciprocal tiny minor.",
+  "next_step": "Seek an aggregate product-preserving Fourier/heat estimate for the grouped-bank residual; any |t|^{-1-alpha} tail with uniform K immediately supplies quantitative continuity and heat recovery by this run's lemma.",
+  "full_qform_status": "OPEN"
+}

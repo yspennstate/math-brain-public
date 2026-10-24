@@ -1,0 +1,452 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+\hypersetup{pdftitle={Multicommodity flow, the relaxation time and the diameter},pdfauthor={Yitzchak Shmalo}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{question}[theorem]{Question}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\bfF}{\mathbf{f}}
+\newcommand{\PG}{\mathrm{PG}}
+\DeclareMathOperator{\Inc}{Inc}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\PSL}{PSL}
+\DeclareMathOperator{\PGL}{PGL}
+
+\title[Multicommodity flow, the relaxation time and the diameter]{Multicommodity flow, the relaxation time and the diameter}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{11 October 2026}
+\subjclass[2020]{60J10, 05C81, 05C50, 05C21}
+\keywords{Markov chains, relaxation time, multicommodity flow, diameter, Ramanujan graphs, projective planes}
+
+\begin{document}
+
+\begin{abstract}
+For a finite reversible Markov chain on $n$ states let $\inf_{\bfF}\psi(\bfF)$ be the least congestion of a family of unit flows from each state to the stationary distribution, in the normalisation of Aldous and Fill; we call it the flow parameter. Sinclair showed that it is at most a constant times the relaxation time $\tau_2$ times $\log n$. Open Problem 4.49(ii) of Aldous and Fill's \emph{Reversible Markov Chains and Random Walks on Graphs}, which they attribute to Sinclair, asks whether $\log n$ can be replaced by the diameter $\Delta$ of the transition graph. For general chains the answer is negative for a simple reason: adding transitions of small probability between all pairs of states of the random walk on an expander makes $\Delta=1$, does not increase $\tau_2$, and keeps the flow parameter of order $\log n$. We show that the answer is negative also for simple random walks on graphs, for every constant and already on graphs of diameter two. For the simple random walk on the cone over a $d$-regular Ramanujan graph on $n$ vertices the diameter is $2$, the relaxation time is at most $(d+1)/(d+1-2\sqrt{d-1})$, and the flow parameter tends to $2(d+1)$ as $n\to\infty$; so the ratio of the flow parameter to $\tau_2\Delta$ is at least $d+1-2\sqrt{d-1}$ in the limit and is unbounded over $d$. The length-weighted form of the flow parameter fails as well, on these graphs and already on bounded-degree expanders. On the cones over the incidence graphs of projective planes of order $s$ the flow parameter has a closed form, and the ratio increases with $s$ to $5/2$ and exceeds $2$ exactly when $s\ge38$. For simple random walks a diameter bound does hold with a constant of order $\log D$, $D$ the maximum degree, and the cones show that this order cannot be lowered below $\log D/\log\log D$.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $P$ be an irreducible reversible transition matrix on a finite state space $V$ of size $n$ with stationary distribution $\pi$, and let $1=\lambda_1>\lambda_2\ge\dots\ge\lambda_n\ge-1$ be its eigenvalues. The relaxation time is $\tau_2=(1-\lambda_2)^{-1}$. Following \cite[Chapter~3]{AF}, a flow is an antisymmetric function $f_{ij}=-f_{ji}$ on ordered pairs, supported on the pairs with $p_{ij}>0$; its net outflow at $i$ is $f_{(i)}=\sum_jf_{ij}$. A unit flow from $a$ to $\pi$ is a flow with $f_{(i)}=1_{(i=a)}-\pi_i$ for every $i$ \cite[(3.98)]{AF}. For a family $\bfF=(\bfF^{(a)})_{a\in V}$ of unit flows from each $a$ to $\pi$, Lemma 4.21 of \cite{AF} considers the quantity
+\begin{equation}\label{eq:psi}
+\psi(\bfF)=\max_{(i,j)}\ \sum_{a\in V}\pi_a\,\frac{|f^{(a)}_{ij}|}{\pi_ip_{ij}},
+\end{equation}
+the maximum over the edges $(i,j)$ of the transition graph, and proves that the flow induced by the chain itself satisfies $\psi\le\tau_1^{(4)}\le\Delta\,\psi$, where $\Delta$ is the diameter of the transition graph and $\tau_1^{(4)}$ is one of the mixing-time parameters of Chapter 4. We call $\inf_{\bfF}\psi(\bfF)$ the flow parameter. Aldous and Fill do not name $\psi$, and in their Section~4.5 the name flow parameter is used for
+\[
+\tau_c=\sup_A\frac{\pi(A)\pi(A^c)}{Q(A,A^c)},\qquad Q(A,A^c)=\sum_{i\in A,\,j\notin A}\pi_ip_{ij},
+\]
+the supremum over nonempty proper subsets $A$ of $V$; we call $\tau_c$ the cut parameter. Sinclair \cite{Sinclair} uses the corresponding multicommodity-flow quantity, the resistance $\rho$ of the chain, and $\rho\le\inf_{\bfF}\psi(\bfF)\le2\rho$, as one sees by decomposing flows into paths. In the notes to Section 4.3.5, Aldous and Fill write that Sinclair \cite{Sinclair} deduced from the multicommodity flow theorem of Leighton and Rao \cite{LR} that
+\begin{equation}\label{eq:449}
+\inf_{\bfF}\psi(\bfF)\le K\,\tau_2\log n
+\end{equation}
+for a universal constant $K$, and that Sinclair posed the following.
+
+\begin{quote}
+Open Problem 4.49 of \cite{AF}. (i) Is there a simple proof of \eqref{eq:449} in general? (ii) Does \eqref{eq:449} hold with the diameter $\Delta$ in place of $\log n$?
+\end{quote}
+
+For general chains the answer to (ii) is negative for a simple reason (\cref{rem:general}): adding transitions of small probability between all pairs of states of the random walk on an expander makes the diameter $1$, does not increase the relaxation time, and keeps the flow parameter of order $\log n$. A simple random walk has no transitions of small probability to add, and for simple random walks the answer is also negative, in a strong form: no constant works in the diameter form $\inf_{\bfF}\psi(\bfF)\le K\tau_2\Delta$ of \eqref{eq:449}, already on graphs of diameter two.
+
+\begin{theorem}\label{thm:main}
+For every $K<\infty$ there is a finite connected simple graph $G$ of diameter $2$ such that the simple random walk on $G$ satisfies
+\[
+\inf_{\bfF}\psi(\bfF)>K\,\tau_2\,\Delta .
+\]
+Consequently $\sup_G\inf_{\bfF}\psi(\bfF)/(\tau_2\Delta)=\infty$, the supremum over simple random walks on finite connected graphs, so the diameter form of \eqref{eq:449} fails for every universal constant even within this class.
+\end{theorem}
+
+The graphs are cones: a hub joined to every vertex of a $d$-regular expander. On such a cone the hub keeps the diameter at $2$ and the expansion of the base keeps the relaxation time bounded, but every base vertex has a single edge to the hub and $d$ edges into a base whose typical distances are large, so almost all of the flow has to pass through the spokes, and the congestion on a spoke is close to $2(d+1)$. The statement with the parameters made explicit is the following; $\mu_2(H)$ denotes the second largest adjacency eigenvalue of $H$.
+
+\begin{theorem}\label{thm:cone}
+Let $d\ge3$ and let $H$ be a connected $d$-regular graph on $n\ge d+2$ vertices. For the simple random walk on the cone $G=K_1\vee H$,
+\[
+\Delta(G)=2,\qquad \tau_2(G)=\frac{d+1}{d+1-\mu_2(H)},
+\]
+and, with $B_r=d\bigl((d-1)^{r-1}-1\bigr)/(d-2)$, for every integer $r\ge1$
+\begin{equation}\label{eq:twosided}
+2(d+1)\,\frac r{r+d}\Bigl(1-\frac{1+B_r}n\Bigr)\ \le\ \inf_{\bfF}\psi(\bfF)\ \le\ 2(d+1)\Bigl(1-\frac{d+1}{n(d+2)}\Bigr).
+\end{equation}
+In particular $\inf_{\bfF}\psi(\bfF)\to2(d+1)$ along any sequence of connected $d$-regular graphs $H$ with $n\to\infty$, and if $\mu_2(H)\le\beta$ along the sequence for some $\beta<d+1$ then
+\[
+\liminf_{n\to\infty}\frac{\inf_{\bfF}\psi(\bfF)}{\tau_2\,\Delta}\ \ge\ d+1-\beta .
+\]
+\end{theorem}
+
+Ramanujan graphs \cite{LPS,Morgenstern,MSS} have $\mu_2\le2\sqrt{d-1}$, and by the Alon--Boppana bound \cite{Nilli} no $d$-regular family does better, so within cones over regular graphs the limiting ratio is at most $d+1-2\sqrt{d-1}$ and Ramanujan bases attain it. This is $1.17$ for $d=3$, $2$ for $d=5$, $5$ for $d=10$ and $10$ for $d=17$; it tends to infinity with $d$, which is \cref{thm:main}. Random regular graphs give the same conclusion through Friedman's theorem \cite{Friedman,Bordenave}.
+
+For one family the flow parameter can be computed exactly. On the cone over the incidence graph of a projective plane of order $s$ an explicit family of flows attains $\inf_{\bfF}\psi(\bfF)$: it sends part of the traffic between the most distant pairs of base vertices through the hub and spreads the rest evenly over their shortest paths in the base (\cref{prop:pg}). The ratio of the flow parameter to $\tau_2\Delta$ then increases with $s$ to $5/2$ and exceeds $2$ exactly when $s\ge38$; the first Desarguesian example is $\PG(2,41)$, whose cone has $3447$ vertices.
+
+Three things survive the counterexamples. The cut parameter satisfies $\tau_c\le\tau_2$ \cite[Corollary~4.37]{AF}, with no factor $\log n$ or $\Delta$ at all; the cones show that the flow parameter can be far from it, since on the cones over Ramanujan graphs $\tau_c\le\tau_2\le(d+1)/(d+1-2\sqrt{d-1})$ while the flow parameter tends to $2(d+1)$. The diameter form of \eqref{eq:449} holds on graphs of bounded degree, with a constant of order the logarithm of the maximum degree (\cref{prop:degree}), and the cones show that this dependence on the degree is nearly sharp. And it holds with $K=2$ on edge-transitive graphs. Whether it holds on regular graphs, or on vertex-transitive graphs, is not settled here (\cref{sec:remain}).
+
+Throughout, $G=(V,E)$ is a finite connected simple graph with $m=|E|$ edges and the chain is the simple random walk, so that $\pi_x=\deg(x)/2m$ and $\pi_xp_{xy}=1/2m$ on every edge; since $|f_{ij}|=|f_{ji}|$ the maximum in \eqref{eq:psi} may be taken over undirected edges. We write
+\begin{equation}\label{eq:F}
+F(G)=\inf_{\bfF}\psi(\bfF)=2m\ \inf_{\bfF}\ \max_{e\in E}\ \sum_{a\in V}\pi_a|f^{(a)}_e| .
+\end{equation}
+Since simple random walks are reversible chains, a counterexample in this class answers (ii) as it is posed; for general chains \cref{rem:general} gives a much simpler one, and the point of the results below is that transitions of small probability are not needed. In continuous time, $q_{ij}=p_{ij}$ for the simple random walk, $\psi$ and $\tau_2$ are unchanged, and so are all statements below.
+
+\section{A lower bound from edge lengths}
+
+For $\ell:E\to[0,\infty)$ let $d_\ell$ be the shortest-path metric of the edge lengths $\ell$.
+
+\begin{lemma}\label{lem:dual}
+For every $\ell:E\to[0,\infty)$ with $\sum_e\ell_e>0$,
+\[
+F(G)\ \ge\ \frac{2m\sum_{a,v\in V}\pi_a\pi_v\,d_\ell(a,v)}{\sum_{e\in E}\ell_e}.
+\]
+\end{lemma}
+
+\begin{proof}
+Fix $a$ and a unit flow $\bfF$ from $a$ to $\pi$, and put $\varphi(v)=d_\ell(a,v)$, so that $\varphi(a)=0$ and $|\varphi(i)-\varphi(j)|\le\ell_{ij}$ on every edge. Using $f_{(v)}=1_{(v=a)}-\pi_v$ and antisymmetry,
+\begin{align*}
+\sum_v\pi_v\varphi(v)&=-\sum_vf_{(v)}\varphi(v)=-\sum_{v,j}f_{vj}\varphi(v)=\frac12\sum_{v,j}f_{vj}\bigl(\varphi(j)-\varphi(v)\bigr)\\
+&\le\frac12\sum_{(v,j)}|f_{vj}|\,\ell_{vj}=\sum_{e\in E}|f_e|\,\ell_e .
+\end{align*}
+Multiply by $\pi_a$, sum over $a$, and use $\sum_a\pi_a|f^{(a)}_e|\le\psi(\bfF)\,\pi_ip_{ij}=\psi(\bfF)/2m$ on each edge:
+\[
+\sum_{a,v}\pi_a\pi_vd_\ell(a,v)\le\sum_e\ell_e\sum_a\pi_a|f^{(a)}_e|\le\frac{\psi(\bfF)}{2m}\sum_e\ell_e .
+\]
+Take the infimum over $\bfF$.
+\end{proof}
+
+\Cref{lem:dual} is the weak-duality half of linear-programming duality for the maximum concurrent flow problem with demand $\pi_a\pi_v$ between each ordered pair and capacity $1/2m$ on each edge \cite{SM,LR}; strong duality, which is used below only for edge-transitive graphs (\cref{sec:remain}), says that the bound is attained for some $\ell$, and the linear programs of \cref{sec:comp} compute that optimum. Taking $\ell$ to be the indicator of the edges leaving a set $A$ gives $F(G)\ge2\pi(A)\pi(A^c)/Q(A,A^c)$, so $F(G)\ge2\tau_c$. Conversely, for this $\ell$ let $C_1,\dots,C_k$ be the components of the graph obtained from $G$ by deleting the edges leaving $A$. Then $d_\ell(a,v)=0$ for $a,v$ in the same component and $d_\ell(a,v)\le\Delta$ otherwise. Every edge leaving some $C_i$ leaves $A$, and every edge leaving $A$ leaves exactly two of the $C_i$, so $\sum_iQ(C_i,C_i^c)=2Q(A,A^c)$; since $\pi(C_i)\pi(C_i^c)\le\tau_cQ(C_i,C_i^c)$ for each $i$, the certificate is at most
+\[
+\frac{2\Delta\sum_i\pi(C_i)\pi(C_i^c)}{\sum_iQ(C_i,C_i^c)}\ \le\ 2\tau_c\Delta\ \le\ 2\tau_2\Delta .
+\]
+So a cut certificate never certifies a ratio $F/(\tau_2\Delta)$ above $2$. The value $2$ is attained by the complete graph, for which $F=2(n-1)/n$ (\cref{lem:dual} with $\ell\equiv1$, and the flows that send $\pi_v$ from $a$ directly to each $v$), $\tau_2=(n-1)/n$ and $\Delta=1$; constants below $2$ therefore fail for trivial reasons, and among simple random walks a counterexample with $K\ge2$ must have $\Delta\ge2$. The certificates used below are not cut certificates.
+
+\begin{remark}[general chains]\label{rem:general}
+For general reversible chains the answer to (ii) is negative by a device that Aldous and Fill use for the $n$-cycle in the paragraph after Corollary~4.22 of \cite{AF}. The proof of \cref{lem:dual} applies to any reversible chain, with $\pi_ip_{ij}$ in place of $1/2m$, and gives
+\[
+\inf_{\bfF}\psi(\bfF)\ \ge\ \frac{\sum_{a,v}\pi_a\pi_v\,d_\ell(a,v)}{\sum_{\{i,j\}}\ell_{ij}\,\pi_ip_{ij}}
+\]
+for every length function $\ell$ on the edges of the transition graph. Let $H$ be a connected $d$-regular graph on $n$ vertices, $P$ the transition matrix of the simple random walk on $H$, $J$ the all-ones matrix, $0<\varepsilon\le1/(n^2\operatorname{diam}H)$, and $P_\varepsilon=(1-(n-1)\varepsilon)P+\varepsilon(J-I)$. The matrix $P_\varepsilon$ is symmetric, so its stationary distribution is uniform, and its transition graph is complete, so $\Delta=1$. Its eigenvalues other than $1$ are $(1-(n-1)\varepsilon)\lambda-\varepsilon$ for the eigenvalues $\lambda\ne1$ of $P$, and $\lambda_2(P)\ge-1/(n-1)$ because the trace of $P$ is $0$, so $\tau_2(P_\varepsilon)\le\tau_2(P)$. Take $\ell=1$ on the edges of $H$ and $\ell=\operatorname{diam}H$ on the other pairs. Then $d_\ell=\dist_H$, and the denominator equals $\frac12+\frac12(n-1-d)\varepsilon(\operatorname{diam}H-1)\le\frac12(1+\frac1n)$, so
+\[
+\inf_{\bfF}\psi(\bfF)\ \ge\ \frac{2}{1+1/n}\cdot\frac1{n^2}\sum_{a,v}\dist_H(a,v)\ \ge\ (2-o(1))\log_{d-1}n
+\]
+for fixed $d\ge3$, since at most $1+B_r$ vertices of $H$ lie within distance $r-1$ of a given vertex, with $B_r$ as in \cref{thm:cone}. If $H$ is a Ramanujan graph then $\tau_2(P_\varepsilon)\le d/(d-2\sqrt{d-1})$, and the ratio $\inf_{\bfF}\psi(\bfF)/(\tau_2\Delta)$ is of order $\log n$.
+\end{remark}
+
+\section{Cones over regular graphs}\label{sec:cones}
+
+Let $H$ be a connected $d$-regular graph on $n$ vertices with $d\ge3$ and $n\ge d+2$, so that $H$ is not complete, and let $G=K_1\vee H$ be the cone over $H$: $V(G)=V(H)\cup\{h\}$ with the hub $h$ adjacent to every vertex of $H$. Then $G$ has $n+1$ vertices,
+\[
+m=\frac{nd}2+n=\frac{n(d+2)}2,\qquad \deg h=n,\qquad \deg v=d+1\quad(v\in V(H)),
+\]
+\[
+\pi_h=\frac1{d+2},\qquad \pi_v=\frac{d+1}{n(d+2)},\qquad \pi_B:=\pi(V(H))=\frac{d+1}{d+2}.
+\]
+Let $d=\mu_1\ge\mu_2\ge\dots\ge\mu_n$ be the adjacency eigenvalues of $H$.
+
+\begin{lemma}\label{lem:spectrum}
+$\Delta(G)=2$. The eigenvalues of the transition matrix $P$ of the simple random walk on $G$ are $1$, $-1/(d+1)$ and $\mu_i/(d+1)$ for $i=2,\dots,n$; hence $\lambda_2(P)=\mu_2/(d+1)$ and $\tau_2(G)=(d+1)/(d+1-\mu_2)$.
+\end{lemma}
+
+\begin{proof}
+Every vertex is adjacent to $h$, so any two vertices are at distance at most $2$, and since $H$ is not complete some two base vertices are not adjacent; so $\Delta=2$. Let $z\perp\mathbf1$ be an eigenvector of the adjacency matrix of $H$ with eigenvalue $\mu$, extended by $z_h=0$. At a base vertex $v$, $(Pz)_v=\frac1{d+1}\bigl(\sum_{w\sim v,\,w\in V(H)}z_w+z_h\bigr)=\frac{\mu}{d+1}z_v$, and $(Pz)_h=\frac1n\sum_vz_v=0$. This gives $n-1$ independent eigenvectors with eigenvalues $\mu_i/(d+1)$, $i\ge2$. On the complementary space of vectors constant on $V(H)$, in the basis (value at $h$, value on the base), $P$ acts by $\bigl(\begin{smallmatrix}0&1\\ 1/(d+1)&d/(d+1)\end{smallmatrix}\bigr)$, whose eigenvalues are $1$ and $-1/(d+1)$. Finally, $H$ contains two non-adjacent vertices, and Cauchy interlacing with the induced subgraph on them gives $\mu_2\ge0$, so the second largest eigenvalue of $P$ is $\mu_2/(d+1)$.
+\end{proof}
+
+\begin{lemma}\label{lem:hub}
+$F(G)\le2(d+1)(1-\pi_v)<2(d+1)$.
+\end{lemma}
+
+\begin{proof}
+Route everything through the hub. For a base vertex $a$ let $f^{(a)}_{ah}=1-\pi_a$ and $f^{(a)}_{hw}=\pi_w$ for every base vertex $w\ne a$; for the hub let $f^{(h)}_{hw}=\pi_w$ for every base $w$; all other values are zero or forced by antisymmetry. Each $\bfF^{(a)}$ is a unit flow from $a$ to $\pi$: for $a\ne h$ the net outflow at $h$ is $(\pi_B-\pi_a)-(1-\pi_a)=-\pi_h$, at $a$ it is $1-\pi_a$, and at every other base vertex $w$ it is $-\pi_w$. Base edges carry nothing. On the spoke $\{h,v\}$ the load is
+\[
+\sum_a\pi_a|f^{(a)}_{hv}|=\pi_v(1-\pi_v)+\pi_h\pi_v+\sum_{w\in V(H),\,w\ne v}\pi_w\pi_v=2\pi_v(1-\pi_v),
+\]
+so $\psi(\bfF)=2m\cdot2\pi_v(1-\pi_v)=2(d+1)(1-\pi_v)$, since $2m\pi_v=\deg v=d+1$.
+\end{proof}
+
+\begin{lemma}\label{lem:cert}
+For an integer $r\ge1$ let $B_r=d+d(d-1)+\dots+d(d-1)^{r-2}=d\bigl((d-1)^{r-1}-1\bigr)/(d-2)$, with $B_1=0$, and $L=(d+2)r/(r+d)$. Then
+\begin{equation}\label{eq:Vr}
+F(G)\ \ge\ V_r:=2L\Bigl[\pi_h\pi_B+\pi_v^2\sum_{u\ne w\in V(H)}\min\Bigl(\frac{\dist_H(u,w)}r,1\Bigr)\Bigr]
+\ \ge\ 2(d+1)\,\frac r{r+d}\Bigl(1-\frac{1+B_r}n\Bigr).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Give every base edge the length $b=2L/r=2(d+2)/(r+d)$ and every spoke the length $L$. Then $\sum_e\ell_e=\frac{nd}2b+nL=nL\bigl(\frac dr+1\bigr)=n(d+2)=2m$, so \cref{lem:dual} reads $F(G)\ge\sum_{a,v}\pi_a\pi_vd_\ell(a,v)$. A path from $h$ to a base vertex begins with a spoke, so $d_\ell(h,v)=L$. A path between base vertices $u\ne w$ either stays in $H$, with length at least $b\dist_H(u,w)$, or passes through $h$, with length at least $2L$, and both are attained; so $d_\ell(u,w)=\min(b\dist_H(u,w),2L)=2L\min(\dist_H(u,w)/r,1)$. Summing over ordered pairs gives $V_r$.
+
+In a graph of maximum degree $d$ at most $B_r$ vertices lie at distance between $1$ and $r-1$ from a given vertex, so at least $n(n-1)-nB_r$ ordered pairs of distinct base vertices are at distance at least $r$ in $H$. Hence
+\[
+V_r\ge2L\bigl[\pi_h\pi_B+\pi_v^2\,n(n-1-B_r)\bigr]=2L\pi_B\Bigl[\pi_h+\pi_B-\pi_B\frac{1+B_r}n\Bigr]\ge2L\pi_B\Bigl(1-\frac{1+B_r}n\Bigr),
+\]
+and $L\pi_B=(d+1)r/(r+d)$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:cone}]
+\Cref{lem:spectrum,lem:hub,lem:cert} give the first two statements and \eqref{eq:twosided}. In \eqref{eq:twosided} let $r=r_n\to\infty$ so slowly that $(d-1)^{r_n}=o(n)$; then $B_{r_n}/n\to0$ and $r_n/(r_n+d)\to1$, so $F(G)\to2(d+1)$, which uses only the two-sided bound and holds for every sequence. If moreover $\mu_2(H)\le\beta$ then $\tau_2\Delta\le2(d+1)/(d+1-\beta)$ by \cref{lem:spectrum}, and the ratio has liminf at least $d+1-\beta$.
+\end{proof}
+
+\begin{remark}
+The mechanism is visible in the numbers. The spokes carry total stationary flow rate $n/2m=\pi_h=1/(d+2)$, and all traffic to or from a base vertex must leave it along its single spoke or along one of its $d$ base edges. The base has $d/2$ times the capacity of the spokes, but in a $d$-regular graph on $n\gg(d-1)^r$ vertices almost all pairs are at distance at least $r$, so routing in the base costs at least $r$ units of capacity per unit of demand against $2$ through the hub; once $r\gg d$ the base is useless for typical pairs, and each spoke is a bottleneck with congestion $2(d+1)$. The cut bound sees none of this: the cut separating $h$ from $V(H)$ gives only $2\pi_h\pi_B/\pi_h=2(d+1)/(d+2)$.
+\end{remark}
+
+\section{Proof of \texorpdfstring{\cref{thm:main}}{the main theorem}}
+
+Let $p\equiv1\pmod4$ be prime. For every prime $q\equiv1\pmod4$ with $q\ne p$ and $q>2\sqrt p$, Lubotzky, Phillips and Sarnak \cite{LPS} construct a connected $(p+1)$-regular Cayley graph $X^{p,q}$, of $\PSL_2(\F_q)$ when $p$ is a quadratic residue modulo $q$ (then $X^{p,q}$ is not bipartite and has $q(q^2-1)/2$ vertices) and of $\PGL_2(\F_q)$ otherwise (then it is bipartite with $q(q^2-1)$ vertices), whose eigenvalues other than $\pm(p+1)$ all satisfy $|\mu|\le2\sqrt p$. By Dirichlet's theorem there are infinitely many primes $q\equiv1\pmod{4p}$, and for these $p$ is a residue modulo $q$ by quadratic reciprocity. Apply \cref{thm:cone} to the non-bipartite graphs $X^{p,q}$ with $q\to\infty$, $d=p+1$ and $\beta=2\sqrt p$:
+\[
+\liminf_{q\to\infty}\frac{F(K_1\vee X^{p,q})}{\tau_2\Delta}\ \ge\ p+2-2\sqrt p=(\sqrt p-1)^2+1\xrightarrow[p\to\infty]{}\infty .
+\]
+Given $K$, choose $p$ with $(\sqrt p-1)^2+1>K$ and then $q$ large. Morgenstern's $(p+1)$-regular Ramanujan graphs \cite{Morgenstern}, which exist for every prime power $p$, give the same with $d=p+1$, and Friedman's theorem \cite{Friedman}, in the form for the uniform model given by Bordenave \cite[Theorem~1]{Bordenave}, by which a uniformly random $d$-regular graph on $n$ vertices has all eigenvalues other than $d$ of absolute value at most $2\sqrt{d-1}+\varepsilon$ with probability tending to one, gives it for every $d\ge3$ with $\beta=2\sqrt{d-1}+\varepsilon$. \qed
+
+The quantifiers can be made explicit. With $r=3d$ and $n\ge2(1+B_{3d})$, \eqref{eq:twosided} gives $F/(\tau_2\Delta)\ge\frac38(d+1-\mu_2)$; so for $p=101$, $d=102$, any Ramanujan base on $n\ge2(1+B_{306})$ vertices gives a ratio above $\frac38(103-2\sqrt{101})>30$.
+
+\begin{remark}[absolute spectral gap]
+With the non-bipartite bases of the proof, every eigenvalue of $P$ other than $1$ has absolute value at most $2\sqrt{d-1}/(d+1)$ by \cref{lem:spectrum}, so the conclusion also holds with $\tau_2$ replaced by the absolute relaxation time $(1-\max(\lambda_2,|\lambda_n|))^{-1}$. This is why the bipartite members of the family are avoided: a bipartite base contributes the eigenvalue $-d/(d+1)$, and the absolute relaxation time would then be $d+1$.
+\end{remark}
+
+\begin{remark}[the length-weighted parameter]
+For a family presented as path flows, with $\bfF^{(a)}$ decomposed into simple $a\to v$ paths $\gamma$ carrying total mass $\pi_v$, Sinclair \cite{Sinclair}, modifying a bound of Diaconis and Stroock \cite{DS} for canonical paths, uses
+\[
+\bar\rho(\bfF)=\max_{(i,j)}\frac1{\pi_ip_{ij}}\sum_a\pi_a\sum_{\gamma\ni(i,j)}|\gamma|\,f^{(a)}(\gamma),
+\]
+where the inner sum is over the paths that traverse $(i,j)$ from $i$ to $j$ and $|\gamma|$ is the number of edges of $\gamma$. The value $|f^{(a)}_{ij}|$ is at most the mass of the paths of $\bfF^{(a)}$ through $(i,j)$ plus the mass of those through $(j,i)$; since $|\gamma|\ge1$ and $\pi_ip_{ij}=\pi_jp_{ji}$, every path family has $\psi(\bfF)\le2\bar\rho(\bfF)$, so $\inf\bar\rho\ge F(G)/2$. The hub routing of \cref{lem:hub} uses paths of length at most $2$, and each of its flows crosses every edge in one direction only, so it has $\bar\rho\le2\psi<4(d+1)$. On the cones $\inf\bar\rho$ therefore lies between $F(G)/2$ and $4(d+1)$, and $\inf\bar\rho/(\tau_2\Delta)$ is unbounded as well: the answer to (ii) is negative in either normalisation. In this normalisation the cones are not needed. Since the weights $\pi_ip_{ij}$ of the directed edges add up to at most $1$ and a path $\gamma$ traverses $|\gamma|$ directed edges, multiplying the definition of $\bar\rho$ by $\pi_ip_{ij}$ and summing over the directed edges $(i,j)$ gives $\bar\rho(\bfF)\ge\sum_a\pi_a\sum_\gamma|\gamma|^2f^{(a)}(\gamma)\ge\sum_{a,v}\pi_a\pi_v\dist(a,v)^2$. On $d$-regular Ramanujan graphs of fixed degree this is at least of order $(\log n)^2$, while $\tau_2$ is bounded and $\Delta$ is of order $\log n$; so $\inf\bar\rho/(\tau_2\Delta)$ is unbounded already on graphs of bounded degree, where $\inf_{\bfF}\psi(\bfF)/(\tau_2\Delta)$ is bounded by \cref{prop:degree}. Kahale \cite{Kahale} studies bounds of this kind with variable lengths on the edges; from multicommodity flows he obtains a bound on the spectral gap that can be computed by semidefinite programming and is within a factor $O(\log^2n)$ of the spectral gap for every reversible chain on $n$ states, and this factor cannot be improved in general.
+\end{remark}
+
+\section{Projective-plane cones}\label{sec:pg}
+
+A projective plane $\Pi$ of order $s\ge2$ has $N=s^2+s+1$ points and $N$ lines; every line contains $s+1$ points, every point lies on $s+1$ lines, any two points lie on exactly one common line, and any two lines meet in exactly one point. For every prime power $s$ the Desarguesian plane $\PG(2,s)$ is an example. The incidence graph $\Inc(\Pi)$ is the bipartite graph on the $n=2N$ points and lines in which a point is adjacent to the lines through it. It is $(s+1)$-regular, and it has no cycle of length four, since two points lie on only one common line.
+
+\begin{proposition}\label{prop:pg}
+Let $\Pi$ be a projective plane of order $s\ge2$, $H=\Inc(\Pi)$ and $G=K_1\vee H$. Then $F(G)$ equals the certificate $V_3$ of \cref{lem:cert}, and
+\[
+F(G)=\frac{(s+2)(5s^3+19s^2+13s+8)}{(s+3)(s+4)(s^2+s+1)},\qquad \tau_2(G)\,\Delta(G)=\frac{2(s+2)}{s+2-\sqrt s}.
+\]
+As a function of $s$, the ratio $F(G)/(\tau_2\Delta)$ is strictly increasing on $[2,\infty)$ and tends to $5/2$, and for integer $s\ge2$ it exceeds $2$ if and only if $s\ge38$.
+\end{proposition}
+
+\begin{proof}
+Let $M$ be the point-line incidence matrix. Since two distinct points lie on exactly one common line, $MM^{\mathsf T}=sI+J$, with eigenvalues $(s+1)^2$, once, and $s$, with multiplicity $N-1$. The adjacency eigenvalues of $H$ are plus and minus the singular values of $M$, that is $\pm(s+1)$ and $\pm\sqrt s$, so $\mu_2(H)=\sqrt s$, and \cref{lem:spectrum} with $d=s+1$ gives $\tau_2\Delta=2(s+2)/(s+2-\sqrt s)$.
+
+Next, the distances in $H$. From a point $p$, the $s+1$ lines through $p$ are at distance $1$; every other point $q$ is at distance $2$, and the line through $p$ and $q$ is their only common neighbour; and each of the $s^2$ lines $\ell$ not through $p$ is at distance $3$ and is joined to $p$ by exactly $s+1$ paths of length $3$, namely $p,m,m\cap\ell,\ell$ for the lines $m$ through $p$. By duality the same holds from a line. So every base vertex has $s+1$, $s^2+s$ and $s^2$ base vertices at distance $1$, $2$ and $3$.
+
+\emph{Lower bound.} In \eqref{eq:Vr} with $r=3$ the sum over pairs of base vertices equals $n\bigl(\frac{s+1}3+\frac{2(s^2+s)}3+s^2\bigr)=\frac n3(5s^2+3s+1)$. With $L=3(s+3)/(s+4)$, $\pi_h=1/(s+3)$, $\pi_v=(s+2)/(n(s+3))$ and $\pi_B=(s+2)/(s+3)$ this gives
+\[
+V_3=\frac{6(s+3)}{s+4}\cdot\frac{s+2}{(s+3)^2}\Bigl(1+\frac{(s+2)(5s^2+3s+1)}{6N}\Bigr)=\frac{(s+2)(5s^3+19s^2+13s+8)}{(s+3)(s+4)N},
+\]
+because $6N+(s+2)(5s^2+3s+1)=5s^3+19s^2+13s+8$.
+
+\emph{Upper bound.} Let
+\[
+\theta=\frac{3(s^2+3s+1)}{s(s+2)(s+4)},\qquad\text{so that}\qquad 1-\theta=\frac{(s-1)(s+1)(s+3)}{s(s+2)(s+4)}\quad\text{and}\quad0<\theta\le1 .
+\]
+The hub sends $\pi_v$ to each base vertex $v$ along the spoke $hv$. A base vertex $a$ sends $\pi_h$ to the hub along its spoke, sends $\pi_v$ to each $v$ at distance $1$ or $2$ along the shortest path, and sends to each $v$ at distance $3$ the amount $\theta\pi_v$ along $a,h,v$ and the amount $(1-\theta)\pi_v/(s+1)$ along each of the $s+1$ paths of length $3$. Each of these is a superposition of path flows that carry the mass $\pi_x$ from the source to every other vertex $x$, so it is a unit flow from the source to $\pi$. In the flow from a base vertex $a$ no edge is used in both directions: the paths in $H$ are shortest paths, along which the distance from $a$ increases at each step, the spoke at $a$ is used towards $h$, and the other spokes are used towards the base. The flow from $h$ uses only spokes, each towards the base. So the load $\sum_x\pi_x|f^{(x)}_e|$ of an edge $e$ is the sum, over the paths through $e$, of the mass of the path times $\pi_x$, where $x$ is its source.
+
+The spoke $hv$ is used by the flow from $h$, with weight $\pi_h\pi_v$; by the flow from $v$, with weight $\pi_v(\pi_h+\theta s^2\pi_v)$; and by the flows from the $s^2$ base vertices at distance $3$ from $v$, with weight $\theta\pi_v^2$ each. Its load is therefore $2\pi_h\pi_v+2\theta s^2\pi_v^2$. A base edge $uw$ is used by the pairs $(u,w)$ and $(w,u)$; by the $4s$ ordered pairs at distance $2$ whose path begins or ends with $uw$, the other end being one of the $s$ further neighbours of $u$ or of $w$; and by $6s^2$ paths of length $3$, since it can be the first, second or third edge of such a path, in either direction, with $s$ choices for each of the two other edges, and every path of length $3$ in $H$ joins two vertices at distance $3$ because $H$ is bipartite and has no cycle of length four. Its load is therefore
+\[
+\pi_v^2\Bigl(2+4s+\frac{6s^2(1-\theta)}{s+1}\Bigr).
+\]
+Since $\pi_h/\pi_v=n/(s+2)=2N/(s+2)$, the two loads are equal if and only if
+\[
+\frac{2s^2(s+4)}{s+1}\,\theta=\frac{(10s^2+6s+2)(s+2)-4N(s+1)}{(s+1)(s+2)}=\frac{6s(s^2+3s+1)}{(s+1)(s+2)},
+\]
+which is the definition of $\theta$. So every edge carries the same load, and since $2m=n(s+3)$, $2m\pi_v=s+2$ and $2N(s+4)+3s(s^2+3s+1)=5s^3+19s^2+13s+8$,
+\[
+\psi(\bfF)=2m\bigl(2\pi_h\pi_v+2\theta s^2\pi_v^2\bigr)=\frac{s+2}{s+3}\Bigl(2+\frac{3s(s^2+3s+1)}{N(s+4)}\Bigr)=V_3 .
+\]
+With the lower bound, $F(G)=V_3$.
+
+\emph{The ratio.} We have $F/(\tau_2\Delta)=\frac12V_3\bigl(1-\frac{\sqrt s}{s+2}\bigr)$. The derivative of $V_3$ in $s$ is
+\[
+\frac{11s^6+98s^5+355s^4+734s^3+949s^2+584s+104}{(s+3)^2(s+4)^2(s^2+s+1)^2}>0,
+\]
+and $\sqrt s/(s+2)$ is strictly decreasing on $[2,\infty)$: it equals $a/(a^2+2)$ with $a=\sqrt s$, and
+\[
+\frac a{a^2+2}-\frac b{b^2+2}=\frac{(b-a)(ab-2)}{(a^2+2)(b^2+2)}>0\qquad\text{for }\sqrt2\le a<b .
+\] Both factors are positive, so the ratio is strictly increasing on $[2,\infty)$, and it tends to $5/2$ because $V_3\to5$. The ratio exceeds $2$ exactly when $(V_3-4)(s+2)>V_3\sqrt s$. At $s=37$ and $s=38$,
+\[
+V_3(37)=\frac{727389}{153832},\qquad V_3(38)=\frac{2015320}{425621},
+\]
+and $(V_3-4)(s+2)/V_3$ equals $112061/18651<6.01<\sqrt{37}$ at $s=37$ and $312836/50383>6.2>\sqrt{38}$ at $s=38$.
+\end{proof}
+
+Projective planes exist for every prime-power order, and $41$ is the least prime power above $37$, so the first Desarguesian cone on which the ratio exceeds $2$ is $K_1\vee\Inc(\PG(2,41))$: it has $3447$ vertices, $F=1080977/227436$ and ratio $2.0226$. No plane of order $38$ exists, by the Bruck--Ryser theorem \cite{BR}, and none of order $39$ or $40$ is known, so $41$ is also the smallest order of a known projective plane whose cone has ratio above $2$. The degree $s+1$ of these bases grows with the number of vertices, so the limit in \cref{thm:cone} does not apply to them, and their ratio stays below $5/2$. The cones over Ramanujan graphs of a fixed degree $d\ge6$ exceed $5/2$ in the limit, since $d+1-2\sqrt{d-1}\ge7-2\sqrt5>5/2$.
+
+Other generalized polygons \cite{VM} give larger ratios in the limit, though not at comparable sizes. The incidence graph of a generalized $m$-gon of order $(s,s)$ is $(s+1)$-regular with $2(s^m-1)/(s-1)$ vertices, girth $2m$ and diameter $m$, so every vertex has $(s+1)s^{i-1}$ vertices at distance $i$ for $1\le i<m$ and $s^{m-1}$ at distance $m$; and $\mu_2=2\sqrt s\cos(\pi/m)$ \cite{FH}. For $m=3$ these are the projective planes. On the cone, the certificate $V_m$ of \cref{lem:cert} gives $V_m/(\tau_2\Delta)\to m-\frac12$ as $s\to\infty$; rounded down, the bound is $2.035$ on the cone over the symplectic quadrangle $W(16)$, which has $8739$ vertices, and $2.193$ on the cone over the split Cayley hexagon $H(11)$, which has $354{,}313$ vertices, while by \cref{prop:pg} the cones over $\PG(2,64)$ and $\PG(2,419)$, with $8323$ and $351{,}963$ vertices, give $2.125$ and $2.366$. Since a generalized $m$-gon of order $(s,s)$ with $m\ge3$ and $s\ge2$ exists only for $m=3,4,6$ \cite{FH}, the limits of these certificates are at most $11/2$.
+
+\section{What remains}\label{sec:remain}
+
+\begin{proposition}\label{prop:degree}
+For every finite reversible discrete-time chain,
+\[
+\inf_{\bfF}\psi(\bfF)\ \le\ \frac{16e}{e-1}\,\tau_2\Bigl(1+\frac12\log\frac1{\pi_*}\Bigr),\qquad \pi_*=\min_i\pi_i .
+\]
+For the simple random walk on a connected simple graph with maximum degree $D\ge3$ and diameter $\Delta$,
+\[
+\inf_{\bfF}\psi(\bfF)\ \le\ 65\,\tau_2\,\Delta\log D .
+\]
+\end{proposition}
+
+\begin{proof}
+For uniform $\pi$ the first inequality is the remark in the notes to Section~4.3.5 of \cite{AF} that \eqref{eq:449} follows from Corollary~4.22 and Lemma~4.23 there; we write it out for general $\pi$ in discrete time. By Lemma 4.21 of \cite{AF}, $\inf_{\bfF}\psi(\bfF)\le\psi(\bfF^{a\to\pi})\le\tau_1^{(4)}$; by Lemmas 4.13 and 4.12 there, $\tau_1^{(4)}\le4\tau_1^{(3)}\le4\tau_1^{(2)}$; and by Lemma 4.23 there, $\tau_1^{(2)}\le\frac{4e}{e-1}\tau_2(1+\frac12\log\frac1{\pi_*})$ in discrete time. For a graph of maximum degree $D\ge3$ and diameter $\Delta$, $n\le1+D\bigl((D-1)^\Delta-1\bigr)/(D-2)\le4D^\Delta$ and, with $\delta_{\min}$ the least degree, $1/\pi_*=2m/\delta_{\min}\le nD\le4D^{\Delta+1}$, so $1+\frac12\log\frac1{\pi_*}\le1+\log2+\frac12(\Delta+1)\log D\le2.55\,\Delta\log D$, and $\frac{16e}{e-1}\cdot2.55<65$.
+\end{proof}
+
+So the diameter form of \eqref{eq:449} holds with a constant depending on the maximum degree, $K(D)=O(\log D)$, and in particular on every class of graphs of bounded degree. The cones show that the dependence on $D$ is nearly sharp. For every $d\ge3$, repeated $2$-lifts of $K_{d,d}$ give bipartite $d$-regular graphs on $2d\cdot2^k$ vertices, $k\ge0$, whose eigenvalues other than $\pm d$ lie in $[-2\sqrt{d-1},2\sqrt{d-1}]$ \cite{MSS}; these graphs are connected, because $d$ is a simple eigenvalue of $K_{d,d}$ and each lift adds only eigenvalues in $[-2\sqrt{d-1},2\sqrt{d-1}]$, and they have $\mu_2\le2\sqrt{d-1}$, and one of them, $H$, has $2(1+B_{3d})\le n<4(1+B_{3d})$. The cone $K_1\vee H$ has $D=n$, the choice $r=3d$ in \eqref{eq:twosided} gives the first inequality below as in the paragraph after the proof of \cref{thm:main}, and $1+B_{3d}\le d^{3d}$ gives $\log n\le3d\log d+\log4$, so $d\ge c\log n/\log\log n$ and
+\[
+\frac{F(K_1\vee H)}{\tau_2\Delta}\ \ge\ \frac38\bigl(d+1-2\sqrt{d-1}\bigr)\ \ge\ c'\,\frac{\log D}{\log\log D}
+\]
+with absolute constants $c,c'>0$. Closing the gap between $\log D/\log\log D$ and $\log D$ is open.
+
+\begin{question}
+Does the diameter form of \eqref{eq:449} hold with a universal constant for simple random walks on regular graphs, or on vertex-transitive graphs?
+\end{question}
+
+The mechanism of \cref{sec:cones} needs one vertex of degree comparable to $n$ next to vertices of bounded degree. In a regular graph of diameter two every degree is at least $\sqrt{n-1}$, so no vertex can send most of its edges into a sparse part of the graph, and we do not know whether some other mechanism makes the ratio unbounded on regular graphs.
+
+On edge-transitive graphs the diameter form holds with $K=2$. By strong duality $F(G)$ is the maximum over $\ell$ of the right side of \cref{lem:dual}. With $\sum_e\ell_e=1$ the right side is a concave function of $\ell$, since $d_\ell(a,v)$ is a minimum of linear functions, and it is invariant under the automorphisms of $G$; averaging an optimal $\ell$ over the automorphism group therefore shows that a constant $\ell$ is optimal when the group acts transitively on the edges. Then $F(G)=2\sum_{a,v}\pi_a\pi_v\dist(a,v)<2\Delta$. If $G$ is not complete then $\lambda_2\ge0$, since $P$ is similar to the symmetric matrix with entries $a_{ij}/\sqrt{\deg(i)\deg(j)}$, where $(a_{ij})$ is the adjacency matrix, and its principal submatrix on two non-adjacent vertices is zero; Cauchy interlacing applies as in the proof of \cref{lem:spectrum}. Hence $\tau_2\ge1$ and $F(G)<2\tau_2\Delta$, while the complete graph has $F=2\tau_2\Delta$. The vertex-transitive case of the question therefore concerns graphs with more than one orbit on edges.
+
+\section{Computations}\label{sec:comp}
+
+$F(G)$ is the optimal value of the linear program
+\begin{gather*}
+\min\lambda\quad\text{subject to}\quad \sum_j\bigl(x^a_{ij}-x^a_{ji}\bigr)=1_{(i=a)}-\pi_i\ \ (a,i\in V),\\
+\sum_a\deg(a)\bigl(x^a_{e^+}+x^a_{e^-}\bigr)\le\lambda\ \ (e\in E),\qquad x\ge0,
+\end{gather*}
+where $e^+$ and $e^-$ are the two orientations of $e$; this is \eqref{eq:F} after the substitution $f^{(a)}_e=x^a_{e^+}-x^a_{e^-}$ and multiplication of the congestion constraint by $2m$. It was solved with the HiGHS solver \cite{HiGHS} through SciPy \cite{SciPy}, so the values carry the solver's tolerance, about $10^{-8}$. Every certificate of \cref{lem:dual} was evaluated in exact rational arithmetic, with Dijkstra's algorithm on integer weights for general length functions, so each certificate is a rigorous lower bound on $F$ for the graph in question; the tables print it rounded to four decimals. The linear program reproduces $F(K_n)=2(n-1)/n$ for $3\le n\le6$, $F(K_1\vee C_5)=21/10$, and $F=64/25$ and $133/52$ for the cones over the Petersen graph and the Paley graph on $13$ vertices; the eigenvalues of $P$ on cones over random regular graphs, over the Petersen graph and over the bipartite incidence graph of $\PG(2,3)$ agree with \cref{lem:spectrum} to $10^{-15}$; and the hub routing, built as an explicit family and evaluated exactly, has $\psi=2(d+1)(1-\pi_v)$.
+
+On the projective-plane cones the linear program agrees with \cref{prop:pg} to the solver's tolerance (\cref{tab:pg}), and the routing in its proof, built as an explicit family and evaluated in exact arithmetic for $s=2,3,4,5$, has $2m\sum_x\pi_x|f^{(x)}_e|=V_3$ on every edge $e$. The random regular graphs of \cref{tab:rr,tab:big} are those generated by \texttt{networkx.random\_regular\_graph} in NetworkX 3.6.1 with seed $1$, which gives a connected graph for every size used. On cones over random regular graphs with up to $160$ base vertices (\cref{tab:rr}) $F$ and the best certificate rise slowly with $n$ towards $2(d+1)$, but these sizes are far from the regime of \cref{thm:cone}: the certificate needs most pairs of $H$ at distance at least $r$ with $r$ several times $d$, hence $n\gg(d-1)^{3d}$, which is about $10^{2.7}$ for $d=3$, $10^{5.7}$ for $d=4$ and $10^9$ for $d=5$, while the linear program can be solved up to a few hundred vertices and the exact certificate up to some $10^4$ vertices. \Cref{tab:big} shows the certificates on larger random cones and on the cones over the Lubotzky--Phillips--Sarnak graphs $X^{5,q}$, built from the six quaternions of norm $5$ as $2\times2$ matrices over $\F_q$; the computed $\mu_2$ confirms the Ramanujan bound $2\sqrt5$. In \cref{tab:rr} the linear program stays well below the hub bound, so routing in the base still competes with the hub, and the ratio lies between $0.66$ and $0.87$; in \cref{tab:big} the certificates bound the ratio below by $0.798$ to $1.200$. The regime in which the ratio exceeds every constant is reached by the proof, not by computation.
+
+\begin{table}[ht]
+\centering
+\caption{Cones over the incidence graphs of $\PG(2,s)$: the linear program against the closed form of \cref{prop:pg}, the relaxation time $\tau_2=(s+2)/(s+2-\sqrt s)$, and the ratio $F/(\tau_2\Delta)$ with $\Delta=2$. For $s\ge37$ only the closed form is shown.}\label{tab:pg}
+\begin{tabular}{rrlllr}
+\toprule
+$s$ & $|V(G)|$ & $F$ (linear program) & $F$ (\cref{prop:pg}) & $\tau_2$ & $F/(\tau_2\Delta)$\\
+\midrule
+2 & 15 & 2.857142857 & $20/7$ & 1.546918 & 0.9235\\
+3 & 27 & 3.232600733 & $1765/546$ & 1.530012 & 1.0564\\
+4 & 43 & 3.489795918 & $171/49$ & 1.500000 & 1.1633\\
+5 & 63 & 3.678763441 & $2737/744$ & 1.469374 & 1.2518\\
+7 & 115 & 3.940191388 & $1647/418$ & 1.416375 & 1.3909\\
+37 & 2815 & --- & $727389/153832$ & 1.184790 & 1.9955\\
+41 & 3447 & --- & $1080977/227436$ & 1.174964 & 2.0226\\
+49 & 4903 & --- & $10786653/2251652$ & $51/44$ & 2.0665\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\small
+\setlength{\tabcolsep}{4.5pt}
+\caption{Cones over random $d$-regular graphs on $n$ vertices. Columns: $\mu_2(H)$; $\tau_2$; the diameter of $H$; the best certificate $\max_rV_r$ of \eqref{eq:Vr} (computed exactly, rounded to four decimals) and its $r$; $F$ by the linear program; the hub bound of \cref{lem:hub}; the ratio $F/(\tau_2\Delta)$; and the limiting value $d+1-\mu_2$ that the ratio would take if $F$ were $2(d+1)$.}\label{tab:rr}
+\begin{tabular}{rrrrrrrrrrr}
+\toprule
+$d$ & $n$ & $\mu_2(H)$ & $\tau_2$ & diam $H$ & $\max_rV_r$ & $r$ & $F$ & hub bound & $F/(\tau_2\Delta)$ & $d+1-\mu_2$\\
+\midrule
+3 & 20 & 2.6659 & 2.9984 & 6 & 3.3600 & 4 & 4.0000 & 7.6800 & 0.667 & 1.334\\
+3 & 40 & 2.7044 & 3.0875 & 7 & 3.8057 & 4 & 4.2900 & 7.8400 & 0.695 & 1.296\\
+3 & 80 & 2.7383 & 3.1703 & 8 & 4.2873 & 5 & 4.4193 & 7.9200 & 0.697 & 1.262\\
+3 & 160 & 2.7783 & 3.2741 & 9 & 4.6534 & 6 & 4.6978 & 7.9600 & 0.717 & 1.222\\
+4 & 20 & 3.0224 & 2.5284 & 4 & 3.1726 & 3 & 3.5985 & 9.5833 & 0.712 & 1.978\\
+4 & 40 & 3.2585 & 2.8711 & 5 & 3.6443 & 3 & 3.8487 & 9.7917 & 0.670 & 1.742\\
+4 & 80 & 3.3683 & 3.0644 & 6 & 4.1686 & 4 & 4.2047 & 9.8958 & 0.686 & 1.632\\
+5 & 20 & 3.1229 & 2.0854 & 3 & 2.9507 & 3 & 3.3673 & 11.4857 & 0.807 & 2.877\\
+5 & 40 & 3.5751 & 2.4743 & 4 & 3.6048 & 3 & 3.6096 & 11.7429 & 0.729 & 2.425\\
+5 & 80 & 3.9329 & 2.9026 & 5 & 4.0290 & 4 & 4.0943 & 11.8714 & 0.705 & 2.067\\
+6 & 20 & 3.5153 & 2.0088 & 3 & 2.8875 & 2 & 3.0555 & 13.3875 & 0.761 & 3.485\\
+6 & 40 & 4.2180 & 2.5162 & 4 & 3.5284 & 3 & 3.6462 & 13.6937 & 0.725 & 2.782\\
+8 & 40 & 4.2066 & 1.8776 & 3 & 3.2302 & 3 & 3.2432 & 17.5950 & 0.864 & 4.793\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\small
+\setlength{\tabcolsep}{4.5pt}
+\caption{Larger cones, certificates only: cones over random $d$-regular graphs and over the Lubotzky--Phillips--Sarnak graphs $X^{5,q}$ ($6$-regular; bipartite with $q(q^2-1)$ vertices for $q=13,17$, where $5$ is not a square modulo $q$, and with $q(q^2-1)/2$ vertices for $q=29$). Columns: $\mu_2(H)$; $\tau_2$; the diameter of $H$; the best certificate $\max_rV_r$ (computed exactly; before rounding to four decimals it is a rigorous lower bound on $F$) and its $r$; the hub bound; the resulting lower bound on $F/(\tau_2\Delta)$, rounded down to three decimals ($\tau_2$ is computed in floating point); and $d+1-\mu_2$.}\label{tab:big}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+base & $n$ & $d$ & $\mu_2(H)$ & $\tau_2$ & diam $H$ & $\max_rV_r$ & $r$ & hub bound & $V_r/(\tau_2\Delta)$ & $d+1-\mu_2$\\
+\midrule
+random & 1000 & 3 & 2.8230 & 3.3985 & 13 & 5.4276 & 8 & 7.9936 & 0.798 & 1.177\\
+random & 4000 & 3 & 2.8237 & 3.4006 & 15 & 5.8205 & 10 & 7.9984 & 0.855 & 1.176\\
+random & 16000 & 3 & 2.8261 & 3.4073 & 17 & 6.1214 & 11 & 7.9996 & 0.898 & 1.174\\
+random & 1000 & 4 & 3.4471 & 3.2199 & 9 & 5.4871 & 6 & 9.9917 & 0.852 & 1.553\\
+random & 4000 & 4 & 3.4603 & 3.2474 & 10 & 6.0004 & 7 & 9.9979 & 0.923 & 1.540\\
+$X^{5,13}$ & 2184 & 6 & 4.2497 & 2.5452 & 7 & 5.8695 & 5 & 13.9944 & 1.153 & 2.750\\
+$X^{5,17}$ & 4896 & 6 & 4.3089 & 2.6012 & 9 & 6.2202 & 6 & 13.9975 & 1.195 & 2.691\\
+$X^{5,29}$ & 12180 & 6 & 4.4420 & 2.7365 & 8 & 6.5699 & 6 & 13.9990 & 1.200 & 2.558\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. In September 2026 an agent running OpenAI GPT-5.6 selected the question from the open problems of \cite{AF} and identified the cone $K_1\vee\Inc(\PG(2,49))$ as a counterexample to the diameter form of \eqref{eq:449} with $K=2$. The construction of \cref{sec:cones}, the proofs, the computations and the text were then produced with Anthropic's Claude Fable~5.1 in Claude Code. In October 2026 Claude Opus~5.5, also in Claude Code, found the routing in the proof of \cref{prop:pg}, the argument of \cref{rem:general}, the bound on cut certificates after \cref{lem:dual}, the certificates on other generalized polygons in \cref{sec:pg} and the argument for edge-transitive graphs in \cref{sec:remain}, and revised the text. The proofs were checked by further runs of these systems, and the algebraic identities and numerical inequalities listed in the repository were verified in Lean~4 with Mathlib; the counting arguments and the spectral facts that feed them were not formalized. These checks are not peer review. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+The code that produces the tables (the linear programs, the exact certificates and the construction of the Lubotzky--Phillips--Sarnak graphs), an exact check of the routing in the proof of \cref{prop:pg}, and the Lean verification are available at \url{https://github.com/yspennstate/flow-parameter-diameter}.
+
+\begin{thebibliography}{99}
+
+\bibitem{AF} D. Aldous and J. A. Fill, Reversible Markov Chains and Random Walks on Graphs, unfinished monograph, 2002 (recompiled 2014; the numbering is that of the online edition), \url{https://www.stat.berkeley.edu/~aldous/RWG/book.html}.
+
+\bibitem{Bordenave} C. Bordenave, A new proof of Friedman's second eigenvalue theorem and its extension to random lifts, \emph{Ann. Sci. \'Ec. Norm. Sup\'er. (4)} 53 (2020), 1393--1439, arXiv:1502.04482.
+
+\bibitem{BR} R. H. Bruck and H. J. Ryser, The nonexistence of certain finite projective planes, \emph{Canad. J. Math.} 1 (1949), 88--93.
+
+\bibitem{DS} P. Diaconis and D. Stroock, Geometric bounds for eigenvalues of Markov chains, \emph{Ann. Appl. Probab.} 1 (1991), 36--61.
+
+\bibitem{FH} W. Feit and G. Higman, The nonexistence of certain generalized polygons, \emph{J. Algebra} 1 (1964), 114--131.
+
+\bibitem{Friedman} J. Friedman, A proof of Alon's second eigenvalue conjecture and related problems, \emph{Mem. Amer. Math. Soc.} 195 (2008), no. 910.
+
+\bibitem{HiGHS} Q. Huangfu and J. A. J. Hall, Parallelizing the dual revised simplex method, \emph{Math. Program. Comput.} 10 (2018), 119--142.
+
+\bibitem{Kahale} N. Kahale, A semidefinite bound for mixing rates of Markov chains, \emph{Random Structures Algorithms} 11 (1997), 299--313.
+
+\bibitem{LR} T. Leighton and S. Rao, Multicommodity max-flow min-cut theorems and their use in designing approximation algorithms, \emph{J. ACM} 46 (1999), 787--832.
+
+\bibitem{LPS} A. Lubotzky, R. Phillips and P. Sarnak, Ramanujan graphs, \emph{Combinatorica} 8 (1988), 261--277.
+
+\bibitem{MSS} A. W. Marcus, D. A. Spielman and N. Srivastava, Interlacing families I: Bipartite Ramanujan graphs of all degrees, \emph{Ann. of Math. (2)} 182 (2015), 307--325.
+
+\bibitem{Morgenstern} M. Morgenstern, Existence and explicit constructions of $q+1$ regular Ramanujan graphs for every prime power $q$, \emph{J. Combin. Theory Ser. B} 62 (1994), 44--62.
+
+\bibitem{Nilli} A. Nilli, On the second eigenvalue of a graph, \emph{Discrete Math.} 91 (1991), 207--210.
+
+\bibitem{SM} F. Shahrokhi and D. W. Matula, The maximum concurrent flow problem, \emph{J. ACM} 37 (1990), 318--334.
+
+\bibitem{Sinclair} A. Sinclair, Improved bounds for mixing rates of Markov chains and multicommodity flow, \emph{Combin. Probab. Comput.} 1 (1992), 351--370.
+
+\bibitem{VM} H. Van Maldeghem, \emph{Generalized Polygons}, Monographs in Mathematics 93, Birkh\"auser, Basel, 1998.
+
+\bibitem{SciPy} P. Virtanen et al., SciPy 1.0: fundamental algorithms for scientific computing in Python, \emph{Nature Methods} 17 (2020), 261--272.
+
+\end{thebibliography}
+
+\end{document}

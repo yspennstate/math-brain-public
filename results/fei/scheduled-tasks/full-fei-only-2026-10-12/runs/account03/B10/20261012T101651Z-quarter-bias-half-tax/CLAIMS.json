@@ -1,0 +1,56 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T101651Z-quarter-bias-half-tax",
+  "stream": "B10",
+  "primary_packet_id": "A046",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "account03-B10-QUARTER-BIAS-SINGLETON-HALFTAX",
+      "version": 1,
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For any n>=1, any Boolean sign function on an independent biased n-cube with all biases interior, and singleton physical reveal coordinate bias p in {1/4,3/4}, the existing frozen B10-A046-HALF-BIAS-TAX@1 obeys J_i<=M_i+Delta_i/2-epsilon_star, with epsilon_star=37/32-45/(128 ln 2)-(2-7/8 log_2 3)>0 bits.",
+      "hypotheses": [
+        "genuine Boolean sign output",
+        "finite dimension n>=1",
+        "independent product input distribution",
+        "all input biases interior",
+        "singleton reveal physical bias exactly 1/4 or 3/4",
+        "standard normalized biased Fourier basis",
+        "all Shannon quantities in bits; natural logarithms explicitly converted"
+      ],
+      "proof_source": "QUARTER_BIAS_LEMMA.md",
+      "proof_dependencies": [
+        "real 2x2 biased transform and conditional entropy chain identities",
+        "binary-entropy power series with exact positive tail",
+        "exact single-variable polynomial monotonicity",
+        "rational strict logarithm comparison"
+      ],
+      "known_gaps": [
+        "all other reveal biases including rare p->0",
+        "arbitrary multicoordinate physical reveal",
+        "nonreusing adaptive payment or FEI implication"
+      ],
+      "review_status": "UNVERIFIED",
+      "independent_reviewers_requested": [
+        "A087",
+        "A092"
+      ],
+      "new_conclusion_scope": "fixed revealed p subset only",
+      "supersedes": null,
+      "refutes": null
+    },
+    {
+      "claim_id": "account03-B10-QUARTER-BIAS-CHECK",
+      "version": 1,
+      "status": "FLOATING_DIAGNOSTIC_ONLY",
+      "statement": "Original reproducible Node checker passed 20,001 scalar angles and 38,400 n3 actual Boolean bias/reveal cases, using non-certified floating arithmetic.",
+      "proof_source": "CHECK.js",
+      "results": "CHECK.out",
+      "limitations": [
+        "not outward-certified intervals",
+        "finite n=3 is not universal proof"
+      ]
+    }
+  ]
+}

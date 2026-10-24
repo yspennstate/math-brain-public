@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "20260924T074629Z-account02-B17-QFORM-auto11",
+  "control_commit_at_start": "b1c909c38848638229156a9849f19a2c68282132",
+  "control_revision": "2026-09-22.15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "FULL_TARGET_OPEN_RANDOM_LOCATION_GAUSSIAN_AND_OFFAXIS_POISSON_BARRIER",
+  "correction_inbox_sha": "ba7aeac3d879f59da5ec8a12daad74ea85714465",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-HUBSTAR-FIBERL2-MIXEDNORM-UNIVERSAL-FALSE-v1"
+  ],
+  "new_theorem": {
+    "id": "QFORM-RANDOM-LOCATION-GAUSSIAN-INDEFINITE-BARRIER-v1",
+    "statement": "For any real symmetric indefinite 3x3 A with all three eigenvalue magnitudes >=1, G~N(0,Sigma) with lambda_min(Sigma)>=v0>0, and arbitrary independent random vector M, ||p_((G+M)^T A (G+M))||_inf <=1/(2sqrt(2)v0). In particular v0=1/12 gives <=3sqrt(2).",
+    "scope": "Gaussian core plus arbitrary independent location mixture; not arbitrary rough product laws."
+  },
+  "explicit_witness_test": {
+    "matrix": "B=I-2nn^T with n=(1,2,3)/sqrt(14); A_m=T_m B T_m^T",
+    "physical_spectrum": "{1,1,-1,0,...,0}",
+    "source_law": "Each of 3m physical coordinates has density 1 on a centered interval of length 1-1/m and a satellite interval of length 1/m centered at sqrt(m).",
+    "properties": "Exact cap one; root-m gap; non-Lindeberg; expected total satellite visits=3; bank limit N(0,I/12)+iid Poisson(1).",
+    "global_limit_bound": "limsup ||p_Qm||_inf <=2.9734669647011334<pi<3sqrt(2)."
+  },
+  "partner_applied": {
+    "slot": "account03/B17",
+    "theorem": "QFORM-GAUSSIAN-TRANSLATION-MIXTURE-RIGIDITY-v1",
+    "source": "yspennstate/math-open-problems@e6dfe24dd09057f92549593fd763444bc930ab99:proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260924T070819Z-account03-B17-QFORM-auto11/REPORT.md",
+    "use": "Condition on arbitrary random shift M; deterministic Gaussian translation cannot increase the centered comparator norm. Quantitative noncentral loss with D>=12 gives the strict Poisson bound."
+  },
+  "required_source_applied": {
+    "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+    "theorem": "Theorem F (Fresnel-Brascamp-Lieb)",
+    "use": "For the actual finite physical eigenframe V_m=T_mO, row leverage=1/m and residual=0, giving |Phi_m(t)|<=min(1,(4pi)^(3/2)|t|^(-3/2)); its L1 mass 24pi upgrades weak convergence to uniform all-output density convergence."
+  },
+  "math_bundle_commit": "97d91254e56ad2f8c79b121a0ce8bf66472a11d9",
+  "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T074629Z-account02-B17-QFORM-auto11/",
+  "handoff_commit": "bbd3e224b13eb2c3f8cd94510534f9f4a252c6a8",
+  "unresolved_implication": "A sharp or divergent witness must do more than independently translate a three-dimensional Gaussian core with covariance floor 1/12. Remaining mechanisms include depletion/non-location deformation of that core, dependence between macroscopic and Gaussian components, several shared non-collinear macroscopic rows before aggregation, or interacting additional active spectrum.",
+  "next_step": "Stress the first non-location non-Lindeberg limit: compound-Poisson random linear/quadratic deformation coupled to a diffuse Gaussian carrier, while preserving independent physical cap-one sources and exact target spectrum.",
+  "full_brain_connected": false,
+  "authenticated_repository_retrieval_receiver_use": true,
+  "continuity_full_target": "OPEN"
+}

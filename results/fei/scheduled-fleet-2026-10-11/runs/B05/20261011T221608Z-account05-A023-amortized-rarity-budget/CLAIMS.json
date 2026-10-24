@@ -1,0 +1,125 @@
+[
+  {
+    "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+    "version": 1,
+    "exact_statement": "For every balanced Boolean b, integers t,k>=1, q=2^-k and c=1/ln2, F=1+A_k(product_{j=1}^t b_j-1) has H(F)=q[tH(b)+4k+2c]-q^2(2k+3c)+R(q), I(F)=q[tI(b)+k], and -2cq^3/[3(1-q)]<=R(q)<=0. The exact entropy is q t H(b)+(4q-2q^2)k-2(1-q)^2 log2(1-q); variance is 2q-q^2 and minority probability q/2. If k=o(t) and 2^-k t->0 for a fixed seed, H(F)/I(F)->H(b)/I(b) with influence tending to zero.",
+    "hypotheses": [
+      "uniform physical cube",
+      "Boolean sign seed with mean zero",
+      "disjoint independent seed copies and fresh point controls",
+      "bit entropy"
+    ],
+    "statement_sha256": "cf143df5920601dcec3c3e11e0a14be3e6e217e964f3acd2250215079116d382",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T214020Z-account05-A021-rare-core-asymptotics\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A023",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A023\\runs\\20261011T221608Z-account05-A023-amortized-rarity-budget\\REVIEW_A021.md",
+        "method": "separate raw-truth-table FWHT/edge checker and analytic series reconstruction; no repair contributed",
+        "registry_adoption": "PENDING_SUPERVISOR"
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_LOCALLY_ACCEPT_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A002",
+      "A007",
+      "A012",
+      "A015",
+      "A023",
+      "A025",
+      "A026",
+      "A036",
+      "A040",
+      "A047",
+      "A048",
+      "A077",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A021-CONTROL-FIRST-KL-LEDGER",
+    "version": 1,
+    "exact_statement": "For the same family, a control-first stopping tree has terminal entropy 2^-k t H(b), queried influence k2^-k, and exact magnitude-mismatch/KL debt J_tree=2^-k(k+A_k). Here A_k=sum_{s=1}^k 2^-s[2s-1+log2(1-2^(1-s)+2^(1-2s))] and there exists A in [0,3] with 0<=A-A_k<=(2k+3)2^-k. Hence J_tree<=2^-k(k+3)<=4k2^-k uniformly in tensor count. The blind rarity sum before KL subtraction is 2^-k k(k+1)/2. At each active node s, mu=2^-s and J_s=mu-mu^2+mu^2 log2((1-2mu+2mu^2)/mu^2).",
+    "hypotheses": [
+      "hypotheses of A021-UNIFORM-RARE-CORE-EXPANSION, reproved directly in REPORT.md",
+      "controls queried first, stopping on first inactive control",
+      "mismatch defined using absolute child Fourier coefficients",
+      "complete terminal entropy retained"
+    ],
+    "statement_sha256": "6afe9b93a0b13174a5b51e23c0357056d3a334ff52b3dbb4d7003459eae91aea",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T214020Z-account05-A021-rare-core-asymptotics\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A023",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A023\\runs\\20261011T221608Z-account05-A023-amortized-rarity-budget\\REVIEW_A021.md",
+        "method": "separate raw-truth-table FWHT/edge checker and analytic series reconstruction; no repair contributed",
+        "registry_adoption": "PENDING_SUPERVISOR"
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_LOCALLY_ACCEPT_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A002",
+      "A007",
+      "A012",
+      "A015",
+      "A023",
+      "A025",
+      "A026",
+      "A036",
+      "A040",
+      "A047",
+      "A048",
+      "A077",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A023-FIRST-REVELATION-BIASED-CONTROL-LEDGER",
+    "version": 1,
+    "exact_statement": "For every Boolean core g on a uniform cube, every r>=1 fresh point controls, p=2^-r and a=1-Eg, the finite control-first tree has exclusive queried influence rpa, terminal influence pI(g), terminal entropy pH(g), and genuine magnitude-mismatch/KL debt sum_v w_v J_v <=(1+1/ln2+8/(e ln2))rpa<7rpa. Its complete sufficient ledger sum_v w_v(J_v+3mu_v/ln2)+pH(g)<=12rpa+pH(g), and directly H(1+A_r(g-1))<=8rpa+pH(g). For any finite disjoint product of such activations with cores selecting an arbitrary even-k>=4 bent function or its one-vertex flip, the control-first J+terminal is <=7I and full sufficient ledger <=12I; selector-first J+terminal <=8I and full sufficient ledger <=13I; H<=8I. Parameters r,k,vertices,bent seeds and product count are independent. Each control event is billed once and all terminal entropy is included.",
+    "hypotheses": [
+      "uniform physical cube and bit entropy",
+      "fresh point-control block disjoint from its core",
+      "J_v uses genuine magnitude/minority mismatch, not signed disagreement at negative-mean endpoint",
+      "unconditional terminal family: arbitrary bent seed, even k>=4, one actual vertex flip and a fresh fair selector",
+      "multi-event theorem requires disjoint physical component support"
+    ],
+    "statement_sha256": "1e173dc8b745229d19d521ce3cd89c15abbbe7d93706e131e81f09b39709c649",
+    "contributors": [
+      "A023"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A023\\runs\\20261011T221608Z-account05-A023-amortized-rarity-budget\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A037",
+      "A064",
+      "A065",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  }
+]

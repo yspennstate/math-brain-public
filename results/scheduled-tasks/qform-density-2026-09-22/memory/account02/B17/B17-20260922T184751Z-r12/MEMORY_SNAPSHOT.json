@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "B17-20260922T184751Z-r12",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.11",
+  "source_control_commit_start": "e3bee2eda2138528e813bca0c19f2ac5e733a548",
+  "latest_control_commit_pre_handoff": "3aa0c42c6c74f7c09a3342b3f47c23065e55c5c9",
+  "status": "PROVED_TWO_ORTHOGONAL_SAMESIGN_HEAVY_LIMIT_NOESCAPE_FULL_TARGET_OPEN",
+  "full_brain_connected": false,
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "partner_result_applied": {
+    "account": "account03",
+    "slot": "B17",
+    "handoff": "20260922T180732Z-account03-B17-QFORM-r14.md",
+    "math_commit": "0fe842ad60b590ca774ecfd71cf2bb9d15639f90",
+    "use": "Its exact one-coordinate fragmentation barrier closes the previous one-law cross-witness deformation; this run advances to simultaneous arbitrary two-law macroscopic deformation and proves a no-escape theorem in the orthogonal same-sign Gaussian-completion geometry. Its exact finite benchmark 4.063070616806... is retained as a finite-dimensional control below 3sqrt(2)."
+  },
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "new_claim": {
+    "id": "QFORM-TWO-ORTHOGONAL-SAMESIGN-HEAVY-NOESCAPE-v1",
+    "scope": "Two independent arbitrary cap-one macroscopic laws placed on orthogonal same-sign spectral axes, with diffuse centered-unit-interval banks completing an exact rank-three frame. In the Gaussian-completion limit the zero density is <=3sqrt(2), strictly below for fixed positive leverage. Centered intervals jointly maximize the limiting zero peak; for centered heavy intervals the limiting global density maximum is at zero and <=3sqrt(2).",
+    "not_claimed": "No full QFORM proof, no universal sharpness of 3sqrt(2), no exclusion of finite-m overshoot, nonorthogonal/opposite-sign heavy rows, shared-coordinate multi-direction coupling, extra eigendirections, or arbitrary-law off-zero peaks."
+  },
+  "premises": [
+    "Exact frame identity R_m^T R_m=I_3, hence A_m=R_m diag(1,1,-1)R_m^T has nonzero spectrum {1,1,-1}.",
+    "Cap-one bathtub rearrangement for a symmetric decreasing one-dimensional kernel.",
+    "Elementary erf inequality int_{-1/2}^{1/2} exp(-c x^2) dx <=(1+c/6)^(-1/2), proved by derivative comparison and log(1+z)<=z.",
+    "Positive Laplace representation of s^{-1/2}e^{-s/2} and the beta integral int_0^infinity u^{-1/2}/(1+u) du=pi.",
+    "Ordinary/local CLT only for the explicit centered-unit-interval diffuse banks; no rotated-coordinate independence assumption is made outside the disjoint bank construction."
+  ],
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "26ab15f7356940c8c4ef5c6eab412a38f5bb9498",
+    "report": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260922T184751Z-r12/REPORT.md",
+    "checker": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260922T184751Z-r12/check_exact.py",
+    "checker_output": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260922T184751Z-r12/CHECK_OUTPUT.txt",
+    "checker_status": "PASS"
+  },
+  "unresolved_implication": "Find or exclude a source-valid witness above 3sqrt(2) using nonorthogonal or opposite-sign macroscopic rows, finite/mesoscopic overshoot, shared-coordinate multi-direction coupling, extra large eigendirections, or off-zero peaks outside the centered monotone geometry.",
+  "next_step": "Attack two nonorthogonal macroscopic rows with exact covariance completion. Derive a multivariate cone/Laplace kernel that keeps product provenance, or search exact finite mesoscopic instances for a rigorously certifiable peak above 3sqrt(2)."
+}

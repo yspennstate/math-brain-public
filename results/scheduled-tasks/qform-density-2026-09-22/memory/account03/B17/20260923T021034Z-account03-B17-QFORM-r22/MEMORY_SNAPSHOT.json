@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260923T021034Z-account03-B17-QFORM-r22",
+  "status": "NEW_SUPPORTING_THEOREM_FULL_TARGET_OPEN",
+  "source_control": {
+    "startup_commit": "7e454f6dbbb319af8a5f9edccdab8aac49a52fca",
+    "prepublication_commit": "a40c8cb6ae77be571066e84958116b195113d26a",
+    "owner_control_revision": "2026-09-22.15",
+    "readme_blob": "fca13a89d221115332ce5e60d49554ee0e213efa",
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe"
+  },
+  "corrections_consumed": [
+    "pointwise oscillatory decay is false for arbitrary cap-one laws",
+    "post-rotation independence is unavailable",
+    "arbitrary-joint rank-three coarea cap is false",
+    "positive conditional density moments can diverge",
+    "fiber-supremum and single-minor mechanisms can lose dimension",
+    "universal C=pi is false; current source-valid lower bound is 3sqrt(2)"
+  ],
+  "mathematical_result": {
+    "id": "QFORM-TWO-HEAVY-SHARED-BANK-GAUSSIAN-NOESCAPE-v1",
+    "statement": "For any joint probability density rho<=1 on R^2 and independent G~N(0,1/12), Q=V^2-2UG has a bounded continuous density with sup <= 2^(13/6)*sqrt(3/pi)*Gamma(5/4)^(2/3)=4.109270566451296...<3sqrt(2). For the exact source-valid physical family with two arbitrary cap-one singleton inputs and one m-variable centered-uniform bank, active reflection B=[[1/2,-1/2,-1/sqrt2],[-1/2,1/2,-1/sqrt2],[-1/sqrt2,-1/sqrt2,0]], every finite matrix has nonzero spectrum {1,1,-1}; uniformly over m-dependent heavy laws, limsup of the output density sup is at most the same constant. For m>=2 the family density is continuous.",
+    "mechanism": "translation-uniform weak-L^(3/2) level-set bound for the Gaussian conditional kernel, cap-one layer-cake, plus a uniform local-limit transfer based on L1 characteristic-function convergence of normalized uniform sums",
+    "constant": 4.109270566451296,
+    "known_sharp_lower_bound": "3sqrt(2)",
+    "full_target_status": "OPEN"
+  },
+  "partner_result_applied": {
+    "partner": "account04/B17",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2156b76156ad5956c214a881fcfd6d977d6f3b9f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B17/20260922T211900Z-account04-B17-QFORM-r3/REPORT.md",
+    "application": "Partner exact rotated family gives C_*>=3sqrt(2). Combining with this run yields limsup_m sup_heavy ||p_Qm||_infty <=4.1092705664...<3sqrt(2)<=C_*, proving a strict asymptotic gap for the two-heavy/shared-bank Gaussian-completion mechanism."
+  },
+  "scientific_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f593cf73a4e7547eac4183f8e61062fca5176706",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T021034Z-account03-B17-QFORM-r22/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T021034Z-account03-B17-QFORM-r22/verify_cross_family.py",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T021034Z-account03-B17-QFORM-r22/CHECKS.txt",
+    "report_blob": "4ddcb287e81e92a487483698e88f6c3314289eb4"
+  },
+  "continuity": {
+    "family_scope": "PROVED for Gaussian completion and finite uniform-bank family m>=2",
+    "full_target": "OPEN"
+  },
+  "unresolved_implication": "The result does not control arbitrary higher-dimensional/shared-bank spectra. A witness above 3sqrt(2), if one exists, must leave this two-heavy plus one Gaussianizing-bank architecture.",
+  "next_step": "Attack two diffuse banks plus one mesoscopic shared row, or a genuinely multiscale fragmented three-bank frame, with exact spectrum/product provenance and no post-rotation independence.",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260922T142847Z-account03-B15-r11",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "source_control_commit_start": "18fa7726e6c04f1587bb2efb3f54f69453fee5d1",
+  "source_control_commit_refresh": "0d955f6fd1d4fa2164b5017cb8cd3b946b52f08f",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "657566d3f5026e672f5cbe6b8c03fe63766bf0fb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T132108Z-b15-qform-separator-regularity-r2/REPORT.md",
+    "application": "Its explicit C_0 height bound M_B was inserted into P(Q in I)<=M_B |I| on the separator branch."
+  },
+  "proved_results": [
+    "For any absolutely continuous R^n law and any nonzero symmetric A, X^TAX has an absolutely continuous law; independence and density cap are unnecessary for this existence statement.",
+    "The universal essential-density bound is exactly equivalent to the linear interval small-ball inequality P(Q in I)<=C|I|.",
+    "On the account04/B15 separator branch, the completed C_0 theorem yields the corresponding interval bound with its explicit matrix-dependent M_B."
+  ],
+  "new_correction": {
+    "id": "QFORM-COAREA-JOINTCAP-CONTINUITY-FALSE-v1",
+    "statement": "Rank-three curvature plus a bounded joint density does not imply a continuous quadratic pushforward density; normalized shell input for q=|x|^2 gives a discontinuous density. This is not a product-law target counterexample."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5b2073a19b463978d5e0b10df035842a8f3e22ff",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T142847Z-account03-B15-r11/REPORT.md"
+  },
+  "unresolved_implication": "Full universal matrix- and dimension-independent linear small-ball bound remains open; stronger continuity for fully coupled/no-separator product laws remains open and must retain product structure.",
+  "next_step": "For continuity, use an original-coordinate product/bilinear-bank mechanism before projecting to a generic joint law; for the central bound, attack the fully coupled heavy-coordinate small-ball inequality.",
+  "full_qform_status": "OPEN_NOT_PROVED"
+}

@@ -1,0 +1,13 @@
+B05-A023-CHANGING-OVERLAP-SWAP-NOGO-v1
+
+For every finite C, the inequality
+  Lambda~_{y,z}(f) <= Lambda~_{y,x}(f)
+    + C(Inf_x(f)+Inf_z(f))
+fails for genuine Boolean functions.  For odd m, take
+f_m=x on the y=+1 branch and f_m=z Maj_m on the y=-1 branch.  Then
+Inf_x=Inf_z=1/2 exactly, while
+  Lambda~_{y,z}(f_m)-Lambda~_{y,x}(f_m)
+    = m q(a_m^2/2)-1/2
+    = (1/pi) log_2 m + O(1),
+where a_m=binom(m-1,(m-1)/2)/2^(m-1).  This refutes a local changing-overlap
+swap fee, not signed slice transport, GU, or FEI.

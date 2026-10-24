@@ -1,0 +1,69 @@
+{
+  "candidate_id": "C0029",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN: 2025 primary result retains 1+o(1); targeted October-2026 primary search found no exact-coefficient resolution, which is not exhaustive.",
+  "target": "There exist absolute C,c>0 such that for every n>=1 and epsilon>=0, for iid uniform sign B_n, P(s_min(B_n)<=epsilon/sqrt(n))<=epsilon+C exp(-c n).",
+  "normalization": "iid real {-1,+1}, mean 0, variance 1; nonsymmetric square matrix; Euclidean singular value",
+  "ranking_record": "RANKING_2026-09-07.csv line 428: tier 4; attempted_un; Spielman-Teng constant one",
+  "primary_sources": [
+    {
+      "id": "arxiv:2405.20308v2",
+      "url": "https://arxiv.org/html/2405.20308v2",
+      "authors": [
+        "Ashwin Sah",
+        "Julian Sahasrabudhe",
+        "Mehtaab Sawhney"
+      ],
+      "version_date": "2025-01-08",
+      "checked_sections": [
+        "Introduction equation (2)",
+        "Theorem 1.1",
+        "Theorem 1.2"
+      ],
+      "established_result": "For mean-zero variance-one iid subgaussian entries, upper bound (1+C_xi (log n)^(-1/16)) epsilon + exp(-Omega_xi(n)); no exact coefficient-one conclusion."
+    }
+  ],
+  "original_source_check": "VERIFIED by visual inspection of original author PDF page 9, Conjecture 2; text encoding is broken.",
+  "local_prior_attempt_check": "Only C0029-A001 found in the named intake, H/I attempt and Lean packets by exact-ID/eponym scan. No C0029 assignment on current Team O board.",
+  "owner_solved_retired_check": "Top three recall memories and named scars read. The recalled coordinate-submatrix Gaussian result is a different target. Targeted live-store read returned the unsolved C0029 concept and attempted-unsolved record only; no solved/retired certificate found. Absence is not a current-openness proof.",
+  "served_model_evidence": {
+    "status": "UNAVAILABLE",
+    "note": "No response-side served model identity is present in callable tools. Requested gpt-6.1-sol/max/Fast and self-description are not served identity evidence."
+  },
+  "promotion": "DRAFT only; no solved claim; independent review pending",
+  "source_record_precondition": "SOURCE_ROW_PRECONDITION.json",
+  "live_store_error": "STORE_CORRECTION.json includes exact node/revision precondition and proposed corrected body.",
+  "gaussian_law_source": {
+    "url": "https://arxiv.org/pdf/0903.0614",
+    "locator": "Theorem 1.1 equations (1)-(2), page 3; Theorem 1.3",
+    "short_quote": "Limiting distributions for gaussian models"
+  },
+  "recall_seconds": 12.61,
+  "memory_slugs": [
+    "complex_ginibre_average_singular_value_is_decreasing_proved_2026_09_08",
+    "open_problem_least_sv_submatrix_2026_07_06",
+    "an_authors_own_read_is_not_a_review_and_a_name_is_a_family_of_names_2026_09_03",
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "proof_steps_need_derived_joint_structure_2026_09_09"
+  ],
+  "original_primary_source": {
+    "url": "https://www.cs.yale.edu/homes/spielman/PAPERS/icm.pdf",
+    "authors": [
+      "Daniel A. Spielman",
+      "Shang-Hua Teng"
+    ],
+    "title": "Smoothed Analysis of Algorithms",
+    "year": 2002,
+    "locator": "Conjecture 2, page 9",
+    "local_pdf": "sources/spielman_teng_icm2002.pdf",
+    "local_page_image": "sources/icm2002_page9.png",
+    "pdf_sha256": "bbe54a073c5cf27a059dc4c6c6ffe2c8e855512f0e56905ceb16f6c3fda284e0",
+    "short_quote": "Let A be a d-by-d matrix of independently and uniformly chosen",
+    "dimension_note": "The original text writes dimension d and remainder alpha^n; the modern primary formulation in arXiv:2405.20308v2 equation (2) consistently uses n."
+  },
+  "communication_receipts": {
+    "statement_to_w568": "msg-419f526090",
+    "proof_to_w569": "msg-85d608a871",
+    "team_helper_failure": "No active campaigns; direct existing mesh used."
+  }
+}

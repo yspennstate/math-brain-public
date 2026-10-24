@@ -1,0 +1,39 @@
+CASE dense_sqrt
+  nu=29.6328474336 lambda=60
+  sU=0.00843144028365 sK=0.0210809364427 IU=0.158409883754 IK=0.451985619509
+  D(L,K;sU)=19.8877504275
+  Pythagorean error=1.110e-16
+  test-cap mean slack=61.9095474314
+  saddle upper-bound slack=0.0271465303174
+  rate upper-bound slack=2.21524918436
+  truncated J(L),J(K),J(U)=[0.31112481075359577, 0.044017328669818306, 0.0060004470361737505]
+  truncated-rate monotonicity slack=0.0380168816336
+CASE sparse_scales
+  nu=32.2731481481 lambda=45
+  sU=0.00143696274691 sK=0.0104084396401 IU=0.00978734328612 IK=0.22584380173
+  D(L,K;sU)=12.3657997717
+  Pythagorean error=-5.551e-17
+  test-cap mean slack=134.532025474
+  saddle upper-bound slack=0.0584519121525
+  rate upper-bound slack=2.89567930106
+  truncated J(L),J(K),J(U)=[1.265562061833034, 0.08795593593718345, 0.0002497350055212771]
+  truncated-rate monotonicity slack=0.0877062009317
+CASE staircase
+  nu=4.46139646358 lambda=12
+  sU=0.0242734292219 sK=0.0326117575158 IU=0.12748535808 IK=0.163131883458
+  D(L,K;sU)=4.91808096488
+  Pythagorean error=-6.939e-18
+  test-cap mean slack=92.6038821667
+  saddle upper-bound slack=0.0659474163272
+  rate upper-bound slack=0.875220835002
+  truncated J(L),J(K),J(U)=[0.05583610872958594, 0.0072472037966852185, 0.005812939583402267]
+  truncated-rate monotonicity slack=0.00143426421328
+SUMMARY
+  max |Pythagorean error|=1.110e-16
+  min mean slack=61.9095474314
+  min saddle slack=0.0271465303174
+  min rate slack=0.875220835002
+  min truncated monotonicity slack=0.00143426421328
+PASS
+
+Execution provenance: this output was produced by executing the corresponding checker logic in the current run before archival. It is a finite algebra sanity check only, not independent verification of any universal asymptotic claim.

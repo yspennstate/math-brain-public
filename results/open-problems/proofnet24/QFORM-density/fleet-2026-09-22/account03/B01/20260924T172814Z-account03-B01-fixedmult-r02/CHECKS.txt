@@ -1,0 +1,19 @@
+two-star constants
+2*sqrt(e) = 3.2974425414002564
+pi*sqrt(e) = 5.179610631848751
+For r>=1, log(r)<=r-1 implies (2+log r)/r <= 2.
+STATUS=PASS
+
+Theorem marker: source-separated two-star C0 receiver proved in run r02. Full QFORM OPEN.
+
+New result: a source-separated two-star quadratic chamber has a continuous bounded density. The proof conditions on the two physical hub coordinates, uses the one-dimensional product-projection density bound on each independent bank, convolves those two conditional laws, and averages the smaller of the two reciprocal coefficient norms. This pays the exact two-star multiplicity-four stress family uniformly in bank size. It does not prove multiplicity four in general because same-bank quadratic residuals remain uncontrolled.
+
+The precise constant is two times the square root of e, multiplied by K squared and divided by the smaller Euclidean norm of the two star vectors. For the normalized two-star stress where both star norms equal one, the constant is 3.2974425414002564. The conclusion is C0 regularity, not merely essential boundedness.
+
+Conditional step: fix both hub values. For bank i, its coefficient vector is two times the hub value times its star vector plus the bank affine vector. The one-dimensional product-projection theorem bounds the conditional projected-bank density by square-root-e times K divided by the Euclidean norm of that coefficient vector. Since the two banks are independent, the density of their conditional sum is bounded by the smaller of the two individual density caps.
+
+Reciprocal-minimum lemma: if independent real U and V have probability-density caps m and n, set a to the smaller of 2m and 2n and b to the larger. Then the expectation of the smaller of 1/abs(U) and 1/abs(V) is at most a times (2 plus log(b/a)). Proof: the layer-cake tail at level t is the product of the two small-interval probabilities and is bounded by min(1,2m/t) times min(1,2n/t). Integrating over t in the three ranges zero-to-a, a-to-b, and b-to-infinity gives respectively a, a log(b/a), and a.
+
+To apply it, decompose each affine bank vector into its component parallel to the star vector plus an orthogonal component. The coefficient norm is at least the absolute value of two times the star norm times the hub plus the parallel affine coefficient. That scalar random variable has density cap K divided by twice the star norm. If the first star norm is at least the second, the lemma gives K divided by the first norm times (2 plus the log of their ratio). The elementary inequality log(r) at most r minus one bounds this by 2K divided by the second norm. Multiplying by the earlier square-root-e K conditional cap proves the stated theorem.
+
+Continuity: outside a probability-zero set of hub values, both projected-bank coefficients are nonzero. Each conditional density is a convolution of two L1 densities, so it is continuous and vanishes at infinity. The reciprocal-minimum estimate supplies an integrable dominating function over the hubs. Dominated convergence proves that the mixed density is C0.

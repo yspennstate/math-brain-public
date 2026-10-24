@@ -1,0 +1,137 @@
+[
+  {
+    "claim_id": "A008-COMPLETE-QUEUE-DEGREE-WEIGHTED-DETERMINANT-MASS",
+    "version": 1,
+    "exact_statement": "For every fixed finite original forests.tex reference with positive feasible lambda, every nonempty covered A and eligible ownership assignment tau, let V be the used gates, s_u=|A_u|, g=|V|, a=|A|, e=g minus the number of original source SCCs, D=product_all(1+lambda_l*pi_l)-1, and t_u the original size/subset probability. Let T_tau be the incoming-Laplacian forest polynomial weighted by root pi over exactly one root per original source SCC. Define N_s(x^h)=product_u[product_(j in A_u)h_j!/((c_u+1)(c_u+2)*binom(s_u+c_u-1,c_u))], c_u=sum_(j in A_u)h_j. The exact conditioned mass of all distinct actual partition-forest events with this assignment and root restriction is Q_tau=product_used(lambda_u*t_u)*N_s(T_tau)/D. Assignments are disjoint, so Q_part=sum_tau Q_tau<=Q_* is a nonempty output subprobability. For independent per-gate triples B with density 2(1-b), rate-one exponential Y, and uniform simplex Z, N_s(T)=2^(-g)E T(BYZ). With factorial surrogate operator M, 2^(-(a+g+e))*3^(-e)*M(T)<=N_s(T)<=2^(-g)*M(T). Forced e-child sunflower prime assignments have T=pi*x^e and N_s(T)=pi*e!/((e+1)(e+2)*2^e), explicitly separating surrogate credit from complete queue probability. All label, root, subset, size, attachment, child-count and final-output ambiguity factors are retained; no universal O(I) or FEI bound is asserted.",
+    "hypotheses": [
+      "finite fixed nonconstant original gate table and fixed ordered covers, uniform Boolean cube, gamma=6/5",
+      "strictly positive feasible lambda and pi=min(P(h_l=1),1/2)>0",
+      "covered nonempty A; owned subsets nonempty and partition A; each used gate visited once",
+      "exactly one initial root per original source SCC and no additional roots; deterministic original root and attachment occurrence order",
+      "distinct actual child-label sequences are counted, failed/infinite events contribute no output mass",
+      "rational polynomial assertion only when pi rational; original subset factors may be algebraic and are kept explicit",
+      "ideal complete output reference cost; optional physical prefix rounding is not paid by I"
+    ],
+    "statement_sha256": "f64b142a5309e20059893f5fba1082151a3b74f4beb6e13849c6f2b07d5f2f3f",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261013T222820Z-account05-A008-gate-label-compression\\COMPLETE_MASS.md",
+      "code": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261013T222820Z-account05-A008-gate-label-compression\\code\\check.py",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261013T222820Z-account05-A008-gate-label-compression\\out\\CHECK_SUMMARY.json"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locators": [
+          "original queue",
+          "eq:forestconditioning",
+          "eq:forestcost",
+          "thm:posteriorforest"
+        ],
+        "status": "SOURCE_COMPLETE_BASELINE_READ"
+      },
+      {
+        "claim_id": "A006-ACTUAL-FOREST-DETERMINANT-MOMENT-BOUNDS",
+        "version": 1,
+        "statement_sha256": "cb901e12f7b1550d21db4d086a3b1502d57e2595a3a331550515b5687914803c",
+        "status": "INDEPENDENTLY_ACCEPTED_LOCALLY_BY_A008"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A006",
+        "verdict": "FORMAL_STATEMENT_HOLDS_AT_UNCHANGED_SCOPE_WITH_AUXILIARY_SOURCE_ERROR",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261014T011124Z-account05-A006-posterior-forest-optimization\\REVIEW_A008.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261014T011124Z-account05-A006-posterior-forest-optimization\\out\\A008_OPERATOR_REVIEW.json",
+        "method": "Independent full root/count/multiset/child-slot probability reconstruction and integer moment proof; no author code imported",
+        "reviewer_supplied_substantive_repair_to_formal_claim": false,
+        "auxiliary_error": {
+          "source": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261013T222820Z-account05-A008-gate-label-compression\\COMPLETE_MASS.md",
+          "locator": "Exact sharp separation, sentence In (1), each t_u=1/2 (uniform singleton choice)",
+          "verdict": "ERROR",
+          "counterexample": "width-two gate with both endpoint orders has size-one subset draw t=1/4 exactly; any cover gives t<1/2",
+          "formal_claim_affected": false,
+          "dependent_evaluations": "Any complete q evaluation substituting t=1/2 must be recomputed; A009 uses correct 1/4 and is unaffected"
+        },
+        "timestamp_utc": "2026-10-14T01:28:06.515832+00:00"
+      }
+    ],
+    "status": "FORMAL_CLAIM_INDEPENDENTLY_ACCEPTED_LOCALLY_AUXILIARY_SOURCE_ERROR_RECORDED_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "using b_tau*M(T_tau) as exact conditioned queue mass without original size/count/subset/multiset factors"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A009",
+      "A014",
+      "A086",
+      "A094",
+      "B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A006-MAXIMAL-MATCHING-STAR-COMPLETE-MASS",
+    "version": 1,
+    "exact_statement": "For every finite nonempty simple graph G on its covered coordinates, f_G the positive edge-conjunction union, both fixed endpoint orders per width-two prime gate, pi_e=1/4 and any globally fixed strictly positive feasible lambda_e, put D=product_e(1+lambda_e/4)-1 and r_u=sum_{v neighbor u}lambda_uv. For every covered nonempty A and every inclusion-maximal matching M in G[A], let U=A\\V(M). For each choice of a neighbor nu(u) for all u in U, use matching edge gates owning their endpoint pairs, singleton gates {u,nu(u)} owning u as a child at nu(u) if matched or an isolated root otherwise. Let b count outside-A choices and h_v,h_w count child attachments at endpoints of matching edge e={v,w}, c_e=h_v+h_w. These form distinct actual source-SCC partition queue events. Their exact complete conditioned output mass Q_M(A) equals D^-1 product_{e in M}(lambda_e/24) times sum_nu[product_{u in U}(lambda_{u,nu(u)}/8)*4^(-b)*product_{e={v,w} in M} h_v!h_w!/((c_e+1)^2*(c_e+2))]. Different M and neighbor/chronological choices are disjoint actual events. Q_MS=sum_maximal_M Q_M is positive for every covered nonempty A and is an output subprobability <=Q_part<=Q_*. Each Q_M is at least D^-1*48^(-(|M|+|U|))*product_{e in M}lambda_e*product_{u in U}r_u. Normalized posterior q(r)/Q_MS retains final-output witness entropy. Exact rational log intervals certify C_MS=sum_nonempty P_f(A)log2(1/Q_MS(A))<5I(f_G) for all 63 nonempty labelled graph tables on four variables at each of lambda_e=1/maximum_degree and lambda_uv=1/(degree(u)+degree(v)). The mass and lower bound cover every finite graph and feasible weight vector, but no dimension-independent influence payment is claimed.",
+    "hypotheses": [
+      "uniform independent physical signs; positive conjunction for every edge of a finite nonempty simple graph; variables outside covered coordinates omitted",
+      "gate table, both full endpoint orders, pi=1/4 and strictly positive fractional lambda fixed once from f before sampling A",
+      "each selected subset owns either a matched pair or an unmatched singleton, subsets partition A and every used gate visited once",
+      "matchings inclusion-maximal; chronological permutations only within repeated attachment slots, not initial roots or different coordinates",
+      "complete original conditioned queue law, including absent-root normalization, size/subset/count/multiset probabilities and all label draws; failed/infinite runs omitted",
+      "ideal output cross-entropy in bits, no uncharged prefix-rounding/selector costs; n=4 cost theorem is finite only, not extrapolated"
+    ],
+    "statement_sha256": "57407f2dc1875e64d1bf5bdfd7ef15b5486b08f36bd1fe3e7bb5c7c1ad36bab5",
+    "contributors": [
+      "A006"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261014T011124Z-account05-A006-posterior-forest-optimization\\STAR_COMPLETION.md",
+      "trace_certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261014T011124Z-account05-A006-posterior-forest-optimization\\out\\CHECK_4.json",
+      "cost_certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261014T011124Z-account05-A006-posterior-forest-optimization\\out\\COST_4.json"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locators": [
+          "original queue and subset definitions",
+          "eq:forestconditioning",
+          "source-SCC partition runs",
+          "thm:posteriorforest"
+        ],
+        "status": "SOURCE_COMPLETE_BASELINE_READ"
+      },
+      {
+        "claim_id": "A008-COMPLETE-QUEUE-DEGREE-WEIGHTED-DETERMINANT-MASS",
+        "version": 1,
+        "statement_sha256": "f64b142a5309e20059893f5fba1082151a3b74f4beb6e13849c6f2b07d5f2f3f",
+        "status": "FORMAL_STATEMENT_INDEPENDENTLY_RECONSTRUCTED_UNCHANGED_WITH_NONESSENTIAL_AUX_SOURCE_ERROR",
+        "use": "complete-mass interface; star formula also derived directly from original queue"
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTIC_ARBITRARY_GRAPH_MASS_PROVED_EXACT_FINITE_COST_CERTIFIED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B02",
+      "A008",
+      "A009",
+      "A010",
+      "A014",
+      "A015",
+      "B03",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  }
+]

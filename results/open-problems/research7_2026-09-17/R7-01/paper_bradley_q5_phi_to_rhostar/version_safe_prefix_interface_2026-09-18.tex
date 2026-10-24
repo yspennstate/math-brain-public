@@ -1,0 +1,202 @@
+% Additive validation/recovery note for R7-01 / D0033, 2026-09-18 local.
+% This does not replace main.tex and is not an independent audit.
+
+\section{A version-safe prefix-interface lemma for the Peyre tensorization step}
+
+This note isolates and repairs the only audit-sensitive interface left in the
+candidate proof of Bradley Question~5.  The point is not that arbitrary enlarged
+conditioning preserves conditional independence---it does not.  The point is that
+the prefix sigma-field required by Peyre has a special \emph{side-separated}
+form around an intervening Markov separator.
+
+\subsection{Side-separated conditioning preserves a product disintegration}
+
+\paragraph{Lemma (side-separated conditioning).}
+Let $A,B,R$ be random elements of standard Borel spaces and suppose
+\[
+ A\perp\!\!\!\perp B\mid R.
+\]
+Let $C=c(A,R)$ and $D=d(B,R)$ be arbitrary measurable functions.  Then
+\[
+ A\perp\!\!\!\perp B\mid (R,C,D).
+\tag{1}
+\]
+More precisely, regular conditional laws may be chosen so that for
+$\mathsf{Law}(R,C,D)$-almost every $(r,c,d)$,
+\[
+ \mathsf{Law}(A,B\mid R=r,C=c,D=d)
+ =\mathsf{Law}(A\mid R=r,C=c)\otimes
+  \mathsf{Law}(B\mid R=r,D=d).
+\tag{2}
+\]
+
+\paragraph{Proof.}
+Disintegrate the conditional product law as
+\[
+ \mathsf{Law}(A,B\mid R=r)=\alpha_r\otimes\beta_r
+\]
+for $\mathsf{Law}(R)$-almost every $r$.  Under the product measure
+$\alpha_r\otimes\beta_r$, the statistic $C=c(A,r)$ depends only on the first
+coordinate and $D=d(B,r)$ only on the second.  Disintegrating the two factors
+separately therefore gives conditional kernels $\alpha_{r,c}$ and
+$\beta_{r,d}$ and the product kernel
+$\alpha_{r,c}\otimes\beta_{r,d}$.  This kernel has the defining integral
+property for the conditional law of $(A,B)$ given $(R,C,D)$: it is immediate
+for rectangles in the $A,B$ variables and product test functions of $(R,C,D)$,
+and the monotone-class theorem extends it to the full product sigma-field.
+This proves (2), hence (1). \qed
+
+The lemma is deliberately side-separated.  It makes no claim for a statistic
+which mixes information from both sides, such as $c(A,B,R)$.
+
+\subsection{Finite interlacings}
+
+Let $(X_k)_{k\in\mathbb Z}$ be a Markov chain on a standard Borel state space.
+Fix finite nonempty disjoint $S,T\subset\mathbb Z$ with
+$\operatorname{dist}(S,T)\ge n$.  Order $S\cup T$ chronologically and merge
+consecutive selected indices of the same color into maximal monochromatic
+blocks.  Enumerate the $S$-blocks chronologically by $U_1,\dots,U_I$ and the
+$T$-blocks by $V_1,\dots,V_J$, where each $U_i$ and $V_j$ denotes the vector of
+chain coordinates in that block.  For each pair set
+\[
+ \mathcal H_{ij}
+ =\sigma(U_{i'}:i'<i,\;V_{j'}:j'<j).
+\tag{3}
+\]
+For $s<t$ let $K_{s,t}(x,\cdot)$ be a fixed regular transition kernel.  Let
+$A_{s,t}$ be a Borel set of full $\mu_s=\mathsf{Law}(X_s)$ measure on which the
+robust local Hilbertian coefficient of the $s\to t$ channel is bounded by
+$\kappa(n)$ whenever $t-s\ge n$; this is the row-good set constructed in the
+main proof and its SDPI sharpening.
+
+\paragraph{Theorem (finite prefix-interface lemma).}
+For every fixed finite interlacing $S,T$, the subjective correlations required
+by Peyre's minimal-hypothesis theorem satisfy
+\[
+ \boxed{
+ \{U_i:V_j\}_{\mathcal H_{ij}}
+ \le \kappa(n)\,
+ \mathbf 1\{U_i,V_j\text{ are adjacent in the chronological block path}\}.
+ }
+\tag{4}
+\]
+Moreover, the pairwise almost-sure statements in (4) can be realized on one
+simultaneous probability-one event for this fixed finite $S,T$.
+
+\paragraph{Proof: adjacent pair.}
+Assume first that $U_i$ occurs immediately before $V_j$.  Put
+$s=\max U_i$ and $t=\min V_j$ (identifying a block with its set of selected
+indices in this display).  Then $t-s\ge n$.  Because the two blocks are
+adjacent and same-color blocks are indexed chronologically, every coordinate
+appearing in $\mathcal H_{ij}$ occurs strictly before the earlier block $U_i$.
+Consequently the Markov property gives, under a regular conditional law given
+$\mathcal H_{ij}=h$, for almost every $h$,
+\[
+ U_i\longrightarrow X_s\longrightarrow X_t\longrightarrow V_j,
+\tag{5}
+\]
+and the middle transition remains the fixed kernel $K_{s,t}$; only the input
+law of $X_s$ changes.
+
+There is no hidden support assumption here.  Since
+$\mu_s(A_{s,t}^c)=0$,
+\[
+ \mathbb P(X_s\notin A_{s,t}\mid\mathcal H_{ij})=0
+ \quad\text{a.s.}
+\tag{6}
+\]
+Thus the conditional input law of $X_s$ is supported on $A_{s,t}$ for almost
+every prefix $h$.  By the definition of the robust local coefficient and HGR
+data processing along (5),
+\[
+ \rho(U_i,V_j\mid\mathcal H_{ij}=h)
+ \le \rho(X_s,X_t\mid\mathcal H_{ij}=h)
+ \le \kappa(K_{s,t})\le\kappa(n)
+\tag{7}
+\]
+for almost every $h$.  This is exactly Peyre's subjective bound.  The case
+$V_j$ immediately before $U_i$ is identical after reversing the color labels;
+the conditioning field is again strictly earlier than the earlier block.
+
+\paragraph{Proof: nonadjacent pair.}
+Suppose $U_i$ lies before $V_j$ and they are not adjacent.  The $T$-block
+immediately following $U_i$ has index strictly smaller than $j$, so that entire
+intervening block is contained in $\mathcal H_{ij}$.  Choose a time $r$ in
+that intervening block.  Then $X_r$ is $\mathcal H_{ij}$-measurable,
+$U_i$ lies entirely in the pre-$r$ path, and $V_j$ lies entirely in the
+post-$r$ path.
+
+For a Markov chain, the pre-$r$ and post-$r$ paths are conditionally independent
+given $X_r$.  Split the remaining generators of $\mathcal H_{ij}$ according
+to which side of $r$ they occupy.  Because every generator is a vector of chain
+coordinates, its sigma-field can be split at $r$; hence there exist
+\[
+ \mathcal C^-\subseteq\sigma(X_k:k\le r),\qquad
+ \mathcal C^+\subseteq\sigma(X_k:k\ge r)
+\]
+such that
+\[
+ \mathcal H_{ij}=\sigma(X_r)\vee\mathcal C^-\vee\mathcal C^+.
+\tag{8}
+\]
+Apply the side-separated-conditioning lemma with the pre-$r$ path as $A$, the
+post-$r$ path as $B$, $R=X_r$, and with random elements generating
+$\mathcal C^-$ and $\mathcal C^+$.  It follows that the two path sides remain
+conditionally independent given $\mathcal H_{ij}$.  Therefore
+\[
+ \{U_i:V_j\}_{\mathcal H_{ij}}=0.
+\tag{9}
+\]
+If $V_j$ lies before $U_i$, use the intervening $S$-block and the same argument.
+
+There are only finitely many pairs $(i,j)$.  Each adjacent or nonadjacent
+argument has a full-measure set of admissible prefix histories.  Pull these
+sets back to the sample space and take their finite intersection.  This gives
+one probability-one event on which every pairwise assertion needed for this
+fixed interlacing is valid.  No universal null-set assertion over all possible
+interlacings is made or needed. \qed
+
+\subsection{Passage to arbitrary interlacings}
+
+\paragraph{Corollary.}
+Any uniform finite-interlacing correlation bound deduced from (4), in
+particular the Peyre arcsine path bound
+\[
+ \rho\bigl(\sigma(X_s:s\in S),\sigma(X_t:t\in T)\bigr)
+ \le \Psi(\kappa(n)),
+ \qquad
+ \Psi(r)=\sin\!\left((2\arcsin r)\wedge\frac\pi2\right),
+\tag{10}
+\]
+extends from finite $S,T$ to arbitrary countable $S,T\subset\mathbb Z$ with
+$\operatorname{dist}(S,T)\ge n$.
+
+\paragraph{Proof.}
+Choose increasing finite subsets $S_m\uparrow S$ and $T_m\uparrow T$.  For
+centered $f\in L^2(\sigma(X_s:s\in S))$ and
+$g\in L^2(\sigma(X_t:t\in T))$, set
+\[
+ f_m=\mathbb E[f\mid\sigma(X_s:s\in S_m)],\qquad
+ g_m=\mathbb E[g\mid\sigma(X_t:t\in T_m)].
+\]
+The martingale convergence theorem gives $f_m\to f$ and $g_m\to g$ in $L^2$.
+The finite bound applies uniformly to $(f_m,g_m)$; covariance and variance are
+continuous under $L^2$ convergence, so the same bound passes to $(f,g)$.
+Taking the supremum over $f,g$ proves (10). \qed
+
+\subsection{Why the side-separated formulation matters}
+
+Peyre explicitly warns that subjective correlation can behave wildly when the
+reference sigma-field is changed: independent variables can become maximally
+correlated after conditioning on a statistic involving both sides.  Therefore
+the informal phrase ``adding conditioning does not destroy the factorization''
+should never be used as a general principle.  What is valid here is the more
+specific statement proved above: after conditioning on a genuine Markov
+separator, the additional prefix information decomposes into one statistic of
+the past side and one statistic of the future side.  Conditioning a product
+disintegration on such a product statistic preserves its product structure.
+
+This note is a self-stress-test and proof repair, not a P26 or OTHER-track
+independent audit and not a novelty certificate.  It leaves the frozen source
+metric unchanged at $C_{\phi\to\rho^*}=1$ while making the tensorization
+interface hypothesis-exact and null-set safe.

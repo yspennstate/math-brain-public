@@ -1,0 +1,20 @@
+{
+  "target": "For every genuine Boolean f, G(f)<=4I(f)+(3/4)U(f)",
+  "status": "OPEN",
+  "closed_dependencies": [
+    {"id": "signed-row-cut", "statement": "G<=D_ge2+V1/2+(2/ln2)(M1+W2)", "status": "PROVED_SOURCE_PINNED"},
+    {"id": "high-degree-reserve", "statement": "Q_ge3=I-M1-W2 >= W2+3W_ge3", "status": "PROVED_THIS_ASSEMBLY"},
+    {"id": "tensor-prime-localization", "statement": "positive residual localizes to a tensor-prime factor", "status": "PROVED_SOURCE_PINNED"},
+    {"id": "degree-two-exclusion", "statement": "degree<=2 Boolean functions have negative frozen residual unless constant", "status": "PROVED_SOURCE_PINNED"},
+    {"id": "gu-to-fei", "statement": "universal (4,3/4)-GU implies U<=16I and H<=34I", "status": "INDEPENDENTLY_AUDITED"}
+  ],
+  "sole_open_leaf": {
+    "id": "G-GU-SIGNED-KL-DEGREE-GE3-RESERVE",
+    "quantifiers": "Every tensor-prime genuine Boolean f with positive frozen residual and Fourier degree at least three",
+    "statement": "D_ge2+V1/2 <= (4-2/ln2)I+(3/4)U+(2/ln2)Q_ge3",
+    "status": "OPEN"
+  },
+  "preserved_terms": ["sum_i(B_i-Gamma_i)", "all K_{i,A} with |A|>=2", "V1/2", "normalization", "zero-mass conventions", "single-use influence"],
+  "invalidations": ["V1/2<=U is false", "adaptive root-tree payment does not pay the static singleton sum", "B05 fair/disjoint transfer is not universal", "I>=1 conversion is false", "fixed-sign projection and unsigned coefficient four are unavailable", "unrepaired B09 intervals are unavailable"],
+  "review": {"end_to_end_review_1": "PENDING", "end_to_end_review_2": "PENDING"}
+}

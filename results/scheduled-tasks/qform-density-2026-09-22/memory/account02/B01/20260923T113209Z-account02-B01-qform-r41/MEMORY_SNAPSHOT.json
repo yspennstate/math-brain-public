@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B01",
+  "run_id": "20260923T113209Z-account02-B01-qform-r41",
+  "title": "Oscillatory replacement",
+  "execution_context": "scheduled_automation",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "control_start_commit": "7486178d3357a08adca5572d038e763821c51832",
+  "control_prepublication_observed_head": "54dad213aff0f305c81fb820569450d6eb8ad91c",
+  "control_revision": "2026-09-22.15",
+  "actual_hour_login_status": "existing_login_preserved",
+  "target_status": "FULL_CONJECTURE_OPEN",
+  "mathematical_result": {
+    "id": "QFORM-PRESCHUR-RANK2-NOT-SCHUR-STABLE-v1",
+    "status": "REFUTED_INTERMEDIATE_STRUCTURAL_IMPLICATION_PLUS_PAID_TARGET_FAMILY",
+    "statement": "There are strict-N3 target-valid matrices with an invertible indefinite physical pair B and a pre-Schur rank-two original-coordinate bicore of singular product sigma^2>=1 whose exact post-pair Schur cross block is identically zero. For the explicit flat-frame family, conditioning the pair exposes a diffuse rank-four leaf block and current Fresnel-Brascamp-Lieb gives ||p_Q||_infinity<=8/sigma.",
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_commit": "7082c8bddc546596fd36fd2afdb08344d38ee230",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260923T113209Z-account02-B01-qform-r41/REPORT.md",
+    "readback_blob": "a930241e08d205459e3f01c67ce5bce32fe1d68b"
+  },
+  "construction": {
+    "matrix": "A=[[eps H0,cU^T,cH0V^T],[cU,0,sigma UV^T],[cVH0,sigma VU^T,0]], H0=[[0,1],[1,0]], c^2=sigma eps",
+    "pre_schur_bicore_product": "sigma^2",
+    "post_schur_cross": "0 exactly",
+    "spectrum": "{-a,-sigma,-b,b,sigma,a}, a>sigma, b>0",
+    "strict_N3": "For sigma=1 choose eps^2<tau, eps/m<tau, 4/m^2<tau; all diagonals vanish and all physical 2x2 principal determinants are <tau in modulus.",
+    "density_bound": "8/sigma <= 8",
+    "continuity": "C_0 in this branch"
+  },
+  "required_newest_source_application": {
+    "initial_source_commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "current_results_blob": "62e20ee976ddeb3f42d3ee5befd6ed49edc917a5",
+    "current_fourier_blob": "9da148eed6cd43b1046a6f91d0f9329e12921cb4",
+    "current_counterexample_blob": "ee721b237e206f31298b1871979faaab37a1bac2",
+    "application": "Condition the physical pair. The leaf block has rank four, eigenvalues +sigma,+sigma,-sigma,-sigma, and physical row leverage 2/m. Rank-r Theorem F yields |phi(t)|<=min(1,(4pi)^2 sigma^-2 |t|^-2) and ||p_Q||_infinity<=8/sigma. On the natural pair-split cut, Z3=Z5=0."
+  },
+  "partner_result_applied": {
+    "partner": "account03/B01",
+    "id": "QFORM-RANK1-BILINEAR-PLUS-SQUARE-LP-v1",
+    "math_commit": "ffbc3b5d921d1c8c391fe1ea3d8c1264697e8813",
+    "checker_commit": "4efcb4696049e756215fbf29b60205a697809b07",
+    "application": "For disjoint flat unit banks, Q=2(a^TX_I)(b^TX_J)+(z^TX_D)^2 has kappa=rho=1 and nonzero spectrum {-1,1,1}; the p=3 theorem gives ||p_Q||_infinity<=12 and the family is strict N3 as the bank size grows."
+  },
+  "correction_event": {
+    "event_id": "QFORM-PRESCHUR-RANK2-NOT-SCHUR-STABLE-v1",
+    "event_commit": "0cbb3593b96be7338fc870e51e1e5d2859b9a3a1",
+    "event_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/events/account02/B01/20260923T113209Z-account02-B01-qform-r41/QFORM-PRESCHUR-RANK2-NOT-SCHUR-STABLE-v1.json"
+  },
+  "related_prior_result": {
+    "id": "account02/B07-r13-Schur-loss",
+    "source": "yspennstate/math-open-problems@febf0c97f0f85e802b6bc2ab4a475c15109de013",
+    "relationship": "Earlier family showed rank2-to-rank1 loss; r41 strengthens to rank2-to-zero and supplies a pre-Schur F exit."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-PRESCHUR-RANK2-NOT-SCHUR-STABLE-v1"
+  ],
+  "unresolved_implication": "QFORM-N3-PRESCHUR-OR-SCHUR-ROUTING-v1",
+  "next_step": "Prove an exhaustive strict-N3 routing that tests/spends diffuse pre-Schur spectral currency before pair elimination, or else produces a valid post-Schur rank-two packet, rank-one bilinear plus source-disjoint square, volume/hub/ridge/grouped-square/exact-null exit. The hard survivor is destructive overlap plus high-leverage/non-Fresnel pre-Schur geometry with no independent third-curvature packet.",
+  "full_solution": false,
+  "two_independent_end_to_end_reviews": false,
+  "native_receiver_memory_used": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "reasoning_tokens": null,
+  "provider_thinking_seconds": null
+}

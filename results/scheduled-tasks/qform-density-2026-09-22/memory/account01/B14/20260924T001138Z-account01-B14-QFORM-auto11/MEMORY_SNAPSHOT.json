@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B14",
+  "run_id": "20260924T001138Z-account01-B14-QFORM-auto11",
+  "source_control_commit_initial": "fc8a0ffee8e83cd5dfe81a5c9aedad551c1699ff",
+  "source_control_commit_prepublication": "6c252b299860021dfd8a1457adb063e5c8941d61",
+  "owner_control_revision": "2026-09-22.15",
+  "assignment_revision": "2026-09-22.5",
+  "full_conjecture_status": "OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY_REFUTED_BY_PHASE_ALIGNED_DENSITIES",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "partner_result": {
+    "account": "account02",
+    "slot": "B14",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "010ccf4cdc4f0b07d0a443eba99fd147e6feab65",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T235641Z-account02-B14-QFORM-auto11b/REPORT.md",
+    "theorem": "QFORM-HYPERBOLIC-LOG-PLUS-SQUARE-CLOSURE-v1",
+    "actual_use": "Retained the partner whole-product logarithmic envelope and square level-set layer cake, inserted subprobability mass caps, introduced two tunable product thresholds, and optimized the resulting inequality."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-TUNABLE-SUBPROB-PRODUCT-LOG-ENVELOPE-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "For cap-one subprobability densities u,v of masses m,n, p_{UV}(z)<=m/R+n/S+2log_+(RS/|z|) for every R,S>0."
+    },
+    {
+      "id": "QFORM-MASS-SENSITIVE-LOG-SQUARE-LOCALIZATION-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "For cap-one subprobability u,v,w of masses m,n,r, Q=2aUV+lambda Y^2+arbitrary affine, theta=2sqrt(|a|mn/|lambda|)/r gives ||p_Q^(sub)||_inf <= (2r/|a|)Phi(theta), Phi=2sqrt(theta) for theta<=1 and 2+log theta for theta>=1."
+    },
+    {
+      "id": "QFORM-HYPERBOLIC-SQUARE-5.386-v1",
+      "status": "PROVED_THIS_RUN_SUPPORTING_TARGET_BRANCH",
+      "statement": "For probability marginals and |a|,|lambda|>=1, ||p_{2aUV+lambda Y^2+affine}||_inf <= 4+2log2 = 5.386294361119891..., and the same constant survives arbitrary outside original-coordinate conditioning/couplings."
+    },
+    {
+      "id": "QFORM-ACTIVE-SQUARE-FRAGMENT-ENTROPY-LEDGER-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "At a=lambda=1, splitting only the active square law into masses r_j and summing positive certificates costs at most 4+2log2+2H(r), hence equal N refinement introduces 2logN while whole-law localization has no such tax."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f360f2cd84bd7bd4da60b9a01437c2af7ecf8fec",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260924T001138Z-account01-B14-QFORM-auto11/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260924T001138Z-account01-B14-QFORM-auto11/CHECKS.json"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B14/20260924T001138Z-account01-B14-QFORM-auto11.md",
+  "unresolved_implication": "From bare s_3(A)>=1, before active fragmentation force either a whole original-coordinate hyperbolic pair plus a genuinely disjoint square with quantitative scales, or an existing aggregate ridge/volume/hub/pair/receiver exit. Same-bank overlap remains open.",
+  "next_step": "Try to replace the disjoint-square requirement by a same-bank curved receiver estimate that retains the whole product until the final layer-cake step; do not split active high peaks.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "full_brain_connected": false
+}

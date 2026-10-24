@@ -1,0 +1,27 @@
+PROB10-06 exact sibling-chord branch-gap checker
+
+Executed separately because each exact adaptive rectangle is a complete certificate.
+
+$ python 20260920T1410Z_sibling_chord_branch_gap_check.py A
+RECT_A lambda=[20021/10000,12/5] p=[18/25,1]
+visited=3583 accepted=1792 max_depth=18
+product_upper<99/100
+rho_upper<199/200
+worst_product_upper_float=0.989933555326678
+worst_rho_upper_float=0.992176306329698
+derivative_margin=1/729
+TYPE_VECTOR_ITERATIONS=30 ROUNDING_GRID=1e-9
+ALL_EXACT_CHECKS_PASS
+
+$ python 20260920T1410Z_sibling_chord_branch_gap_check.py B
+RECT_B lambda=[12/5,247/100] p=[3/4,1]
+visited=6133 accepted=3067 max_depth=18
+product_upper<9999/10000
+rho_upper<199/200
+worst_product_upper_float=0.999892284154447
+worst_rho_upper_float=0.992327095154839
+derivative_margin=4/299209
+TYPE_VECTOR_ITERATIONS=30 ROUNDING_GRID=1e-9
+ALL_EXACT_CHECKS_PASS
+
+All accept/reject decisions and the displayed derivative-margin identities are exact Fraction arithmetic. The floating-point worst values are diagnostics only.

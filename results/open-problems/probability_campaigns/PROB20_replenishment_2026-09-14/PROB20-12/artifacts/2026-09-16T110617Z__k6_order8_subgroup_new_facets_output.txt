@@ -1,0 +1,71 @@
+PROB20-12 2026-09-16T110617Z — equivalent in-session exact computation record
+
+The archived certificate source was assembled from the same exact logic used in-session.
+The uploaded bytes were not separately re-executed after GitHub upload.  The following
+values were obtained by exact integer/rational computations performed during this run;
+exploratory unitary optimization is listed separately and is not part of the proof.
+
+states 90
+catalog_start 6880
+wall 001122 002211
+ordered_edge_stabilizer 16
+
+H7 order 8
+H7 state_orbits 16
+H7 fixed_wall_dim 7
+H7 exact_extreme_rays 20
+H7 uncovered_against_6880 4
+H7 missing_fixed_rays
+  (0,0,0,1,1,3,0,2,2,0,0,2,0,0,0,2)
+  (0,0,0,1,3,1,2,0,2,0,2,0,0,0,0,2)
+  (0,0,0,2,0,2,1,3,1,0,0,2,0,0,2,0)
+  (0,0,0,2,2,0,3,1,1,0,2,0,0,0,2,0)
+H7 each_missing_zero_rank 36
+H7 each_lifted_face_dim 2
+H7 each_lifted_face_extreme_rays 2
+new3 orbit_size 1080
+new3 stabilizer_order 4
+new3 equality_states 46
+new3 active_rank 37
+new3 selected_37x37_minor_det 2
+new3 slack_counts {0:46,1:40,2:4}
+catalog_after_new3 7960
+H7 uncovered_after_new3 0
+
+H8 order 8
+H8 state_orbits 18
+H8 fixed_wall_dim 8
+H8 exact_extreme_rays 18
+H8 uncovered_against_7960 2
+H8 missing_fixed_rays
+  (0,2,0,0,2,1,1,1,1,2,0,0,0,0,0,0,0,2)
+  (0,2,0,1,1,2,0,0,2,1,1,0,0,0,2,0,0,0)
+H8 each_missing_zero_rank 36
+H8 each_lifted_face_dim 2
+H8 each_lifted_face_extreme_rays 2
+new4 orbit_size 540
+new4 stabilizer_order 8
+new4 equality_states 54
+new4 active_rank 37
+new4 selected_37x37_minor_det 1
+new4 objective_counts {0:36,1:54}
+catalog_final 8500
+H8 uncovered_after_new4 0
+
+order8_slices_dim_le_8_after_8500
+  fixed_dim 6 state_orbits 15 exact_rays 11 averaged_dirs 213 uncovered 0
+  fixed_dim 6 state_orbits 17 exact_rays 11 averaged_dirs 213 uncovered 0
+  fixed_dim 7 state_orbits 16 exact_rays 20 averaged_dirs 341 uncovered 0
+  fixed_dim 8 state_orbits 18 exact_rays 18 averaged_dirs 428 uncovered 0
+
+not_exhausted_this_run
+  fixed_dim 9 state_orbits 20
+
+exploratory_complex_unitary_search_NOT_A_PROOF
+  samples 30000
+  new3 best_random_objective -0.07491844802648574 bound 0
+  new3 local_optimized_objective -2.863601196485215e-14
+  new4 best_random_objective 0.9599693657144114 bound 1
+  new4 local_optimized_objective 0.9999999999999705
+
+ALL EXACT COMBINATORIAL CHECKS PASSED

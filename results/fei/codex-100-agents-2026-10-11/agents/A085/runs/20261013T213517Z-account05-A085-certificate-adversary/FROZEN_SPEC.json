@@ -1,0 +1,13 @@
+{
+  "helper_version": "B17 certlog.py LinLog.float_screen as read 2026-10-13; B17-KB4-CENSUS@1 and B17-KB5-CUTOFF@1; A071 five-bit integer lookup@1",
+  "family": "Four-bit point/three-bit point/three-point-path orbit witnesses; five-bit three-point-path cutoff; six-bit matching witness. Float screen is separately tested on integer prime-log forms, not represented as a Boolean family.",
+  "domain": "n fixed in {4,5,6}; generate only claimed finite extremizer orbits. Screen audit: first 600 primes and deterministic positive coefficient rows of length 2..600, exponents <2^50, in C and Fortran layouts. Lookup audit: 17x17 squared-amplitude pairs and seed's five coordinates.",
+  "case_count": {"orbit_tables": 64, "other_orbits": [32,192,640], "prime_logs":600,"screen_prefixes_max":599,"lookup_pairs":289,"cutoff_tables":2},
+  "symmetry": "Cube translations, coordinate permutations and output complement; no affine coordinate mixing. Counts will be independently generated from explicit negative supports and deduplicated.",
+  "arithmetic": "Independent integer Walsh/direct physical edge checks, exact prime-log vectors, rational atanh intervals. Binary64 only as the explicitly audited screening implementation; every claimed screen-error violation certified by rational bounds.",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds": {"pilot":55,"audit":180},
+  "no_census_rerun": true,
+  "no_dimension_escalation": true,
+  "frozen_before_execution": true
+}

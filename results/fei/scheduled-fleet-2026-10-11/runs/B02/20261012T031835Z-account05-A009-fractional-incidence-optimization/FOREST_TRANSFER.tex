@@ -1,0 +1,114 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{A009: a full prime-implicant forest certificate on affine planes}
+\author{A009, B02}\maketitle
+All $\log$ are base two, $\gamma=6/5$. Full FEI remains open.
+Complete source locators, actual-run construction, analytic derivation,
+exact checks and the first universal gap are in \texttt{REPORT.md}.
+
+\begin{theorem}
+For every prime power $q\ge16$, let $f_q$ be the Boolean union of the
+positive conjunctions on all affine lines of $\mathbb F_q^2$.
+These are all its prime implicants. With $N=q(q+1)$, $k=q+1$,
+$\rho=2^{-q}$, $\lambda_l=1/k$, $\pi_l=\rho$, and one fixed full order
+per gate, there exist actual deterministic partition-forest laws with
+complete conditioned residual
+\[
+ R\le\frac{186791}{13540}I(f_q)<14I(f_q).
+\]
+The bound includes $v(\Lambda+\log Z)$, labels, root rarity, all subset
+congestion and ranks. No posterior entropy saving is required.
+\end{theorem}
+\begin{proof}
+When a spectral set is contained in one line, use that gate alone;
+otherwise use first-incidence ownership and a deterministic forest
+rooted at one gate of every source SCC. The queue orders roots and
+attachment occurrences globally, visits each owner once and selects
+disjoint subsets. Every draw has positive probability at the fixed
+packing vector $\lambda$.
+
+Write $K=\sum_l b_l$, $G=2K-1$ and $e=f_q-G$. The elementary bound
+$(K-1)_+^2\le K(K-1)$ and pairwise line intersections give
+\[
+ E_2=\|e\|_2^2\le8N^2\rho^2.
+\]
+For a nonempty Fourier set $A$, $|\widehat G(A)|=2\rho$ times its
+number of containing lines. Sets of size at least two have at most
+one containing line; singletons have multiplicity $k$. Thus the ideal
+mass off the line-supported sets is zero. Let
+\[
+ D=(1+\rho/k)^N-1,\qquad
+ c=q+\log D+\log k=\log N+\delta,\quad
+ 0\le\delta\le q\rho\log e.
+\]
+The complete conditioned cost on a good set is $C_A=c+F_l(A)$.
+The uniform-subset binomial predecessor identity gives mean rank
+cost at most $\gamma q/2$ on one line. Summing over line amplitudes
+and paying coherent singleton amplitudes separately gives
+\[
+ \sum_{\rm good}\widehat G(A)^2\le4N\rho+4q^2k^2\rho^2,
+\]
+\[
+ \sum_{\rm good}\widehat G(A)^2F_l(A)
+ \le2\gamma Nq\rho+4\gamma q^2k^2\rho^2\log q.
+\]
+Since the good cost is nonnegative,
+$\widehat f^2\le2\widehat G^2+2\widehat e^2$ transfers this cost.
+Off the good sets $\widehat f=\widehat e$. Every generic forest has
+$B\le q^2(q+\log k+2\gamma\log q)$.
+For $q\ge16$, $\log D<0$, and
+\[
+ c\le5q/8,\quad \max C_A\le q^2/2,\quad \max B<2q^3.
+\]
+These follow from $\log q\le q/4$, $\log k\le5q/16$,
+$\log N\le9q/16$, and $\delta\le q/16$.
+Consequently
+\[
+ R\le\frac{49}{5}Nq\rho+\frac{37}{5}q^3k^2\rho^2
+       +8N^2(q^2+2q^3)\rho^2.
+\]
+Clean pivotal events give
+$I\ge2Nq\rho(1-2N\rho)>0$. Dividing yields
+\[
+ \frac RI\le
+ \frac{49/5+(37/5)N\rho+8N(q+2q^2)\rho}{2(1-2N\rho)}.
+\]
+Every positive-polynomial term divided by $2^q$ decreases after
+$q=16$: successive ratios are at most $(17/16)^4/2<1$.
+The denominator increases. At $q=16$ the fraction is exactly
+$186791/13540$, leaving margin $2769/13540$ below $14$.
+The proof uses only finite-field incidence and applies to all prime
+powers, independently of the finite checks at $q=2,3$.
+\end{proof}
+
+\begin{theorem}[Full scalar transfer for equal-width linear hypergraphs]
+For $N$ distinct positive width-$w$ conjunctions on $n$ covered
+variables with pairwise support intersection at most one, let $k$ be
+maximum read, $\rho=2^{-w}$, $\lambda_l=1/k$,
+$D=(1+\rho/k)^N-1$, $c=w+\log D+\log k\ge0$.
+The same fixed deterministic forest rule obeys
+\begin{align*}
+ R\le{}&2\{c(4N\rho+4nk^2\rho^2)+2\gamma Nw\rho
+              +4\gamma nk^2\rho^2\log w\}\\
+ &+8N^2\rho^2\{2(c+\gamma w\log w)
+       +n(w+\log k+2\gamma\log w)+\max(0,\log D)\}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Repeat the preceding spectral-error transfer with at most $k$
+singleton overlaps. There are $n$ possible singletons; all sets of
+size at least two have at most one owner support. A good-set maximum
+is $c+\gamma w\log w$ and the generic forest maximum is
+$n(w+\log k+2\gamma\log w)$. If $\log D$ is positive, retain it also
+in the off-support cost. The same $E_2\le8N^2\rho^2$ bound applies.
+The displayed formula follows by substitution, without claiming it
+is uniformly $O(I)$ for arbitrary density.
+\end{proof}
+The stage-1 coordinatewise pressure lower bound, even with A007's
+retained-normalizer refinement, therefore obstructs that coarsening
+only. It does not obstruct PI-J on affine planes. The universal
+missing inequality is an influence-paid full-cost error budget where
+the raw indicator-sum approximation is no longer close to the union.
+\end{document}

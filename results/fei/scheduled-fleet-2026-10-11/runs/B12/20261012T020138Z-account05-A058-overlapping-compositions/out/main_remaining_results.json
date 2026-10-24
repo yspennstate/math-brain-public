@@ -1,0 +1,104 @@
+{
+  "mode": "main",
+  "case_count": 49664,
+  "exact_assertions": 3510245,
+  "elapsed_seconds": 386.2475218999898,
+  "status": "PASS",
+  "next_outer_table": 256,
+  "controls": {
+    "bent_counterfamily": [
+      {
+        "k": 1,
+        "H_old": 3,
+        "H_new": 2,
+        "entropy_increment": -1,
+        "posterior_bits": 1,
+        "KL_bits": 1,
+        "cross_surprisal_bits": 1,
+        "anchor_influence": 1,
+        "data_influence_old": "1/2",
+        "data_influence_new": 1,
+        "exact_deficit_reserve": "Delta H=2 Delta I_data-2"
+      },
+      {
+        "k": 2,
+        "H_old": 4,
+        "H_new": 4,
+        "entropy_increment": 0,
+        "posterior_bits": 1,
+        "KL_bits": 1,
+        "cross_surprisal_bits": 2,
+        "anchor_influence": 1,
+        "data_influence_old": "1",
+        "data_influence_new": 2,
+        "exact_deficit_reserve": "Delta H=2 Delta I_data-2"
+      },
+      {
+        "k": 3,
+        "H_old": 5,
+        "H_new": 6,
+        "entropy_increment": 1,
+        "posterior_bits": 1,
+        "KL_bits": 1,
+        "cross_surprisal_bits": 3,
+        "anchor_influence": 1,
+        "data_influence_old": "3/2",
+        "data_influence_new": 3,
+        "exact_deficit_reserve": "Delta H=2 Delta I_data-2"
+      },
+      {
+        "k": 4,
+        "H_old": 6,
+        "H_new": 8,
+        "entropy_increment": 2,
+        "posterior_bits": 1,
+        "KL_bits": 1,
+        "cross_surprisal_bits": 4,
+        "anchor_influence": 1,
+        "data_influence_old": "2",
+        "data_influence_new": 4,
+        "exact_deficit_reserve": "Delta H=2 Delta I_data-2"
+      }
+    ],
+    "zero_anchor_posterior": "1 bit with I_x=0",
+    "X004": {
+      "H": 0,
+      "I": 2
+    },
+    "X009_splices": [
+      {
+        "core_dimension": 2,
+        "selector_influence": "1/4",
+        "erasure_prime_log_numerator": {
+          "2": 64,
+          "3": -72,
+          "5": 40
+        },
+        "denominator": 64
+      },
+      {
+        "core_dimension": 4,
+        "selector_influence": "1/16",
+        "erasure_prime_log_numerator": {
+          "2": 1024,
+          "3": -720,
+          "5": -800,
+          "13": 624
+        },
+        "denominator": 1024
+      },
+      {
+        "core_dimension": 6,
+        "selector_influence": "1/64",
+        "erasure_prime_log_numerator": {
+          "2": 16384,
+          "7": -14112,
+          "3": -36288,
+          "5": 14400,
+          "41": 9184
+        },
+        "denominator": 16384
+      }
+    ]
+  }
+}

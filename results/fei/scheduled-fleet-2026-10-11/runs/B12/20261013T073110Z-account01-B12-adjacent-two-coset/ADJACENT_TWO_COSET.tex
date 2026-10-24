@@ -1,0 +1,73 @@
+\section*{An adjacency-uniform two-coset payment}
+All logarithms are natural and $\Phi(u)=u\log(1/u)$.
+
+\paragraph{Theorem.}
+Let $A=a+V$ and $B=b+W$ be nonempty disjoint affine cosets in
+$G=\mathbb F_2^m$, let $s=\mathbf1_A+\mathbf1_B$, and put
+$d(x,z)=\mathbf1_{\{x=-1\}}s(z)$.  For the Boolean splice
+$g_-=x$, $g_+=x+2d$, $a_0=x+d$, $h=-x$, and $F=a_0+d$, its signed
+associator satisfies
+\[
+ \Omega=\mathcal E(F)-\mathcal E(a_0)-\mathcal E(d)
+ \le 8\log2\,I(d).
+\]
+
+\paragraph{Spectral collision.}
+Put $L=V+W$, $x=2^{-k_1}=|A|/|G|$, $y=2^{-k_2}=|B|/|G|$, and
+$r=|L^\perp|=2^\ell$.  Disjointness says that
+$t=b-a+L$ is nonzero in $G/L$.  On $L^\perp$ the relative phase is
+therefore a nontrivial character, so half the coefficients add and half
+subtract.  For all $x,y\ge0$,
+\[
+ {\Phi((x+y)^2)+\Phi((x-y)^2)\over2}\le\Phi(x^2)+\Phi(y^2). \tag{1}
+\]
+Indeed, normalize the squared coordinates by $M=x^2+y^2$ and apply the
+Hadamard rotation.  The binary entropy can increase by at most $\log2$;
+the factor $\sqrt2$ in the unnormalized outputs subtracts exactly
+$M\log2$.  Hence
+\[
+ \mathcal E(s)\le\mathcal E(\mathbf1_A)+\mathcal E(\mathbf1_B)
+ =2\log2(xk_1+yk_2).                                      \tag{2}
+\]
+
+\paragraph{Physical collision.}
+Let $m_j$ be the number of physical coordinate axes not contained in the
+direction space of the $j$th coset.  Let
+$J=\{i:e_i+L=t\}$ and $q=|J|$.  These are exactly the joining coordinate
+directions.  Each contains $|V\cap W|$ edges between the pieces, whence
+\[
+ I(s)={xm_1+ym_2\over2}-qxyr.                              \tag{3}
+\]
+In $G/V$, the $q$ joining coordinate columns all have the same nonzero
+image in $G/L$.  Their rank is at most
+$\min(q,k_1-\ell+1)$, while all active coordinate columns must span
+$G/V$.  Thus, for $j=1,2$,
+\[
+ m_j\ge\max(k_j,q+\ell-1).                                \tag{4}
+\]
+
+Set $\alpha=k_1-\ell$, $\beta=k_2-\ell$ and, by symmetry,
+$0\le\alpha\le\beta$.  The integer inequality
+\[
+2q\le2^\beta[1+(q-1-\alpha)_+]
+       +2^\alpha[1+(q-1-\beta)_+]                         \tag{5}
+\]
+follows as follows.  If $q\le\alpha+1$, use
+$2^u\ge u+1$.  If $\alpha+1<q\le\beta+1$, the first term is at least
+$2q$.  If $q>\beta+1$, lower-bound $2^\beta,2^\alpha$ by
+$\beta+1,\alpha+1$; the excess over $2q$ is at least
+$\beta(\beta-\alpha)+\alpha+\beta$.  Rescaling (5) and using (4) gives
+\[
+ 2qxyr\le x(m_1-k_1)+y(m_2-k_2)+x+y.                      \tag{6}
+\]
+Equations (3) and (6) imply
+$xk_1+yk_2\le2I(s)+p$, where $p=x+y$.
+
+\paragraph{Conclusion.}
+The exact selector pairing gives
+$\Omega=\mathcal E(s)+C(p)$ with $C(p)\le0$, and
+$I(d)=I(s)/2+p/4$.  With (2),
+\[
+ \Omega\le2\log2(2I(s)+p)=8\log2\,I(d).
+\]
+The point-coset family makes the constant asymptotically sharp.

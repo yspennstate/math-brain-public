@@ -1,0 +1,26 @@
+[
+  [
+    "arxiv_cancellation",
+    "https://export.arxiv.org/api/query?search_query=all%3A%22cancellation%20norm%22%20OR%20all%3A%22spelling%20length%22%20OR%20%28all%3A%22bi-invariant%22%20AND%20all%3A%22random%20walks%22%29&max_results=30",
+    "OK",
+    19812
+  ],
+  [
+    "openalex_doi",
+    "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.1406.0763",
+    "ERROR",
+    "HTTP Error 429: Too Many Requests"
+  ],
+  [
+    "semantic_citations",
+    "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1406.0763/citations?limit=100&fields=title,authors,year,url",
+    "OK",
+    26
+  ],
+  [
+    "openalex_citing",
+    "https://api.openalex.org/works?filter=cites:https://doi.org/10.48550/arXiv.1406.0763&per-page=100",
+    "ERROR",
+    "HTTP Error 429: Too Many Requests"
+  ]
+]

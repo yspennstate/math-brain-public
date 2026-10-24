@@ -1,0 +1,90 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w556/scripts/verify_packet.py",
+  "gate": {
+    "utc": "2026-10-10T07:23:52.275825+00:00",
+    "kind": "deterministic arithmetic/source check; no simulation, GPU or training",
+    "max_arithmetic_terms": 8192,
+    "planned_arithmetic_terms": 6784,
+    "max_process_seconds": 2.0,
+    "disk_free_bytes": 57106153472,
+    "available_physical_bytes": 8320061440,
+    "approved": true
+  },
+  "process_seconds": 0.0,
+  "witnesses": [
+    {
+      "n": 64,
+      "rayleigh_quotient": 10.475964246886214,
+      "analytic_lower_bound": 2.795728260365467,
+      "uniform_row_square_upper_bound": 5,
+      "finite_row_square_partial_sum": 3.726696193248042,
+      "invalid_row_only_bound_rejected": true
+    },
+    {
+      "n": 256,
+      "rayleigh_quotient": 17.818098542363938,
+      "analytic_lower_bound": 3.9883211614209038,
+      "uniform_row_square_upper_bound": 5,
+      "finite_row_square_partial_sum": 3.9749945995779283,
+      "invalid_row_only_bound_rejected": true
+    },
+    {
+      "n": 1024,
+      "rayleigh_quotient": 28.35939971254437,
+      "analytic_lower_bound": 5.652714582865293,
+      "uniform_row_square_upper_bound": 5,
+      "finite_row_square_partial_sum": 4.099781207498522,
+      "invalid_row_only_bound_rejected": true
+    },
+    {
+      "n": 2048,
+      "rayleigh_quotient": 35.19455734697442,
+      "analytic_lower_bound": 6.724708810390232,
+      "uniform_row_square_upper_bound": 5,
+      "finite_row_square_partial_sum": 4.136373137998788,
+      "invalid_row_only_bound_rejected": true
+    }
+  ],
+  "source_level_admitted_theorems": [
+    {
+      "file": "BenjaminiSchramm.lean",
+      "theorem": "full_main",
+      "declaration_line": 217,
+      "admission_count": 1,
+      "verdict": "NOT_A_FORMAL_PROOF_RECEIPT"
+    },
+    {
+      "file": "BenjaminiSchramm.lean",
+      "theorem": "critical_laws",
+      "declaration_line": 223,
+      "admission_count": 1,
+      "verdict": "NOT_A_FORMAL_PROOF_RECEIPT"
+    },
+    {
+      "file": "BenjaminiSchramm.lean",
+      "theorem": "cayley_main",
+      "declaration_line": 229,
+      "admission_count": 1,
+      "verdict": "NOT_A_FORMAL_PROOF_RECEIPT"
+    },
+    {
+      "file": "CayleyPercolation.lean",
+      "theorem": "arbitrary_cayley",
+      "declaration_line": 68,
+      "admission_count": 1,
+      "verdict": "NOT_A_FORMAL_PROOF_RECEIPT"
+    }
+  ],
+  "claim_rows_checked": 5,
+  "formal_compilation_run": false,
+  "trusted_axioms_obtained": false,
+  "before": {
+    "row_only_inference": "would accept a bounded operator from finite row-square sums"
+  },
+  "after": {
+    "counterexample": "unbounded by the analytic interval lower bound",
+    "finite_witnesses_exceeding_sqrt5": 4,
+    "admitted_comparator_declarations_rejected_as_receipts": 4
+  },
+  "meaning": "Finite arithmetic supports the analytic counterexample; it does not prove the parent conjecture or a deployed recall gain."
+}

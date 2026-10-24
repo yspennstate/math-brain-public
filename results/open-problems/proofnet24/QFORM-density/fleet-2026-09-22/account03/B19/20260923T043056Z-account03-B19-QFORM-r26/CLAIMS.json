@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260923T043056Z-account03-B19-QFORM-r26",
+  "full_target_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-RANK2-CROSS-TRANSVERSE-3D-CURVATURE-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For Q=U^TBU+2U^TCV+V^TDV on two disjoint original product banks, if rank(C)=2 with nonzero singular values s1,s2, range(B) and range(C) lie in one 3D U-side subspace E, and the scalar compression lambda on E intersect range(C)^perp is nonzero, then Q has a continuous density with ||p_Q||inf < 12.01 |lambda|^(-1/4)(s1 s2)^(-3/8)."
+    },
+    {
+      "id": "QFORM-RANK3-RANK2CROSS-TRANSVERSE-PAID-v1",
+      "status": "PROVED_TARGET_LEVEL_BRANCH",
+      "statement": "For an exact-rank-three target A=RMR^T and a full physical partition I union J with rank(R_I)=3 and rank(A_IJ)=2, the preceding theorem applies with E=range(R_I). At |lambda|>=1/64 and the account01/B19 compound-energy threshold e2(CC^T)>=29/3072, ||p_Q||inf<82 and the density is continuous."
+    },
+    {
+      "id": "QFORM-COLLAR-SECOND-GRADIENT-OR-RANKONE-ALIGNMENT-v1",
+      "status": "RETIRED_AS_GLOBAL_MECHANISM_BY_PEER_COUNTEREXAMPLE",
+      "source": "yspennstate/math-open-problems@d294539dec9f048e8da354542b37cc9ac664f020",
+      "note": "The r24 local two-gradient theorem remains valid, but a universal positive lower bound on one physical two-gradient area is false."
+    }
+  ],
+  "first_unresolved_implication": "QFORM-RANK2-CROSS-NEAR-RANGE-SELF-CURVATURE-v1"
+}

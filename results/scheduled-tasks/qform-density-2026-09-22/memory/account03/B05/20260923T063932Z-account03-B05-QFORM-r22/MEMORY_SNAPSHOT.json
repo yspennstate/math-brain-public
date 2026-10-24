@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B05",
+  "run_id": "20260923T063932Z-account03-B05-QFORM-r22",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_automation; WITHOUT_VERIFIED_BRAIN",
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "2d50abfc12e46bb37e72db66f5a6f0e23aca5c1a",
+  "canonical_math_root": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260923T063932Z-account03-B05-QFORM-r22/",
+  "claims": [
+    {
+      "id": "QFORM-RATIOPACKET-SIGMAFREE-PAIRLOG-v1",
+      "status": "PROVED_SUPPORTING_SCOPED",
+      "statement": "In the ratio-variance packet normal form with invertible indefinite scalar pair B, D=|det B|, kappa=sigma_min(B), packet mass m and mu=D|lambda|, ||p_Q||inf <= 8*2^(3/4)*sqrt(5)*(mu*kappa*m)^(-1/4), independent of the ratio residual sigma."
+    },
+    {
+      "id": "QFORM-DOUBLEZERO-RESIDUAL-NULLSCALAR-v1",
+      "status": "PROVED_SUPPORTING_SCOPED",
+      "statement": "For exact B=[[0,c],[c,0]] and residual cross-row norm eta_R, ||p_Q||inf <14.7240 [mu*m*(eta_R/|c|)^2]^(-1/3); thus the exact-double-zero endpoint is kappa-free when eta_R/|c| is bounded below."
+    }
+  ],
+  "partner_application": {
+    "source": "yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/account04/B05/20260923T041255Z-account04-B05-dominant-slope-r2/REPORT.md",
+    "actual_inequality": "mu>=1 and m_*>=1/4 imply ||p_Q||inf<81.91"
+  },
+  "newest_volume_application": {
+    "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+    "actual_inequality": "a=1/4 near-diffuse certificate implies a continuous density with ||p_Q||inf<92"
+  },
+  "first_unpaid_implication": "QFORM-TWOSHEET-NONATOMIC-VANISHING-COUPLING-v1",
+  "first_unpaid_summary": "No positive-mass exact slope atom; kappa tends to zero; at exact double-zero eta_R/kappa tends to zero; no a=1/4 near-diffuse volume certificate. Near-doublezero diagonal terms must be retained exactly.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "NEW_COAREA_RECEIVERS_ESSENTIAL_BOUND_ONLY; VOLUME_STABILITY_EXIT_CONTINUOUS; FULL_TARGET_OPEN",
+  "independent_review_status": "NO_NEW_END_TO_END_REVIEW_CLAIMED"
+}

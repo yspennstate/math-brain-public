@@ -1,0 +1,32 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B05",
+  "primary_packet_id": "A023",
+  "claims": [
+    {
+      "claim_id": "B05-A023-BALANCED-PRECONDITIONED-ACTIVATION",
+      "version": "v1",
+      "exact_statement": "For every genuine Boolean q, every 0<eta<=1, and every c>=3/2+eta, let T(q)(z,y,x)=1 for z=+1 and T(q)(z,y,x)=yq(x) for z=-1, where y,z are fresh uniform signs. With L_{c,eta}=M+(1+eta)U-cI and M=G-B=sum_i(K_i-Gamma_i), one has L_{c,eta}(T(q))<=L_{c,eta}(q)/2. Therefore every base class satisfying L<=0 remains so under output sign, disjoint products, and arbitrary repeated changing-core applications of T. At eta=1/4 and c=7/4 this gives G<=(15/4)I+(3/4)U on the generated endpoint class.",
+      "hypotheses": [
+        "Uniform finite cube and genuine sign-valued Boolean q",
+        "Fresh independent balancing character y and fresh fair selector z",
+        "0<eta<=1 and finite c>=3/2+eta",
+        "Exact signed activation recurrence Delta_i U=B_i-Gamma_i+K_i"
+      ],
+      "statement_sha256": "8c25c0012c0e5b220f3a82f5addb0c1a9ad056b6764d234e1b77d8299a8bb8d6",
+      "contributors": ["account01/B05"],
+      "proof_source": "PROOF.md",
+      "proof_dependencies": [
+        "B05-A023-ACTIVATION-SMR-v1 exact recurrence",
+        "Fresh-character Fourier relabelling, reconstructed in PROOF.md"
+      ],
+      "review_records": [],
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": "Extension from a fresh balancing character to a reused physical coordinate, or closure under restrictions of the balancing input.",
+      "next_consumers": ["A087", "A094", "B01", "B19", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

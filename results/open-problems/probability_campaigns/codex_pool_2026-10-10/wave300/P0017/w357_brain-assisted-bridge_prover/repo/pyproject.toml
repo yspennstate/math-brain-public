@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "math-research-brain"
+version = "0.1.0"
+description = "A privacy-isolated research memory and verification system for mathematics"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "All rights reserved" }
+authors = [{ name = "Mathematical Research Brain contributors" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3",
+  "pytest-cov>=6.0",
+  "ruff>=0.11",
+]
+
+[project.scripts]
+math-brain = "math_brain.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/math_brain"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]
+# the build tree first: a site-packages entry puts an old checkout (math-research-brain/src) on the default path, and
+# plain python -m pytest here tested that one (29 Sep 2026: 11 retrieval tests failed against it while this tree passed)
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]

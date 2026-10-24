@@ -1,0 +1,447 @@
+Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is **not GPT-6 at maximum**; no authenticated runtime reasoning-effort telemetry or binding model/effort selector is exposed. **P0336 `SEL_ID: 0 -> 0` (NO MOVEMENT); methods B14 / B13 / B29; ordinary unchanged-research count `4 -> 5`; status OPEN / PARTIAL.**
+
+# P0336 — scalar field critical window, exact endpoint tangent cones, and a cubic neutrality obstruction
+
+Worker: `R7-05`  
+Native task ID: `6aabe805f32881919992996e1c5cfad6`  
+Canonical target: `P0336`  
+Captured master SHA: `92b5b4f65bc40c74091ba28e7d3ff9cc58f64ac1`  
+Fresh pre-write master SHA: `28de5f655ec4e0affc9f5ff47117615da90d2c7c`  
+Previous report: `research7_2026-09-17/R7-05/runs/2026-09-19/2026-09-19T120000Z__report.md`  
+Previous report creation commit: `6adce834d694a4d9521c01f6a5c507cc2bf12d65`  
+Previous artifact: `research7_2026-09-17/R7-05/artifacts/2026-09-19/2026-09-19T120100Z__P0336_prefix_flow_and_gaussian_innovation_homogenization.md`  
+Previous artifact creation commit: `e6cc2db435e934c037e9e731d5114726c21dd21a`  
+
+Outside source: Eustasio del Barrio, Alberto González-Sanz, Jean-Michel Loubes, David Rodríguez-Vítores, *Distributional Limit Theory for Optimal Transport*, arXiv:2505.19104v2, Problem 4. The current arXiv record was rechecked on 2026-09-19; it displays v2, last revised 13 July 2026. A bounded fresh search on the exact title/arXiv ID, the rectangle selection problem, and recent work by the authors did not surface a later theorem settling this exact unregularized plan-selection question. This is negative evidence only, not an openness or novelty certificate.
+
+## 1. Objective and continuity from the preceding run
+
+The source asks for the limiting empirical Euclidean OT plan between independent uniform samples on `[0,1]^2` and `[2,3] x [0,1]`. The full source-level selector is still unknown.
+
+The preceding recovery run isolated a source-faithful two-horizontal-bin laboratory. In the balanced version there are exactly `m` source observations on each horizontal line `a=0,1` and exactly `m` target observations on each line `b=2,3`, all with independent uniform vertical coordinates. Thus the full sample size on either side is `N=2m`.
+
+That run proved:
+
+1. the horizontal contingency table is determined by one integer;
+2. selected points are matched in vertical order inside every fixed horizontal cell;
+3. a single macroscopic pure-monotone versus pure-crossed comparison has a nondegenerate Brownian limit
+   
+   `Delta = (1/2) I_+ - (5/6) I_-`,
+   
+   where `I_+,I_-` are iid copies of `I=int_0^1 B(u)^2 du`, so `E Delta=-1/18` and `Var Delta=17/810`;
+4. after conditioning on a diverging coarse vertical partition, the local Brownian-bridge innovations self-average and recover a deterministic strict-Monge sign.
+
+The exact missing bridge was a mesoscopic description of the **actual** constrained assignment value as a function of horizontal contingency.
+
+This run attacks that bridge with the assigned nonrepeating methods:
+
+- **B14 — find the group acting:** quotient all irrelevant within-line relabelings and expose the exact scalar contingency coordinate;
+- **B13 — find what only increases:** add a linear field conjugate to the contingency and prove monotonicity plus the exact macroscopic critical scale;
+- **B29 — add the points at infinity / boundary:** analyze the two endpoint tangent cones together with the interior and test whether the first smooth nonlinear correction can select an endpoint.
+
+No code or checker was written because the results below are theorem-sized analytic statements, not finite claims.
+
+## 2. Balanced two-bin setup and the exact scalar quotient
+
+Let the source horizontal marks be `a in {0,1}` and the target marks be `b in {2,3}`. Write the vertical coordinates as `S` and `T` and the horizontal gap as
+
+`D_ab=b-a`,
+
+so
+
+`D_02=2`, `D_03=3`, `D_12=1`, `D_13=2`.
+
+For an edge with vertical displacement `h=t-s`, subtract the matching-independent horizontal baseline and use the nonnegative residual cost
+
+`e_D(h)=sqrt(D^2+h^2)-D >= 0`.
+
+For any perfect matching let `N_ab` be the number of edges in horizontal cell `(a,b)`. Since every source and target line has exactly `m` points,
+
+`N_02+N_03=m`,
+
+`N_12+N_13=m`,
+
+`N_02+N_12=m`,
+
+`N_03+N_13=m`.
+
+Therefore one integer
+
+`k := N_02`
+
+forces
+
+`N_02=N_13=k`,
+
+`N_03=N_12=m-k`,
+
+with `0<=k<=m`.
+
+Thus the normalized population-style parameter is
+
+`p=k/(2m) in [0,1/2]`.
+
+The endpoint `p=1/2` is the horizontal translation/monotone contingency (`0->2`, `1->3`), while `p=0` is the pure crossed contingency (`0->3`, `1->2`).
+
+### Proposition 2.1 — exact quotient by within-line relabeling
+
+For each `k`, define
+
+`C_m(k)`
+
+as the minimum **total residual Euclidean cost** over all perfect matchings having `N_02=k`. Then the full balanced two-bin problem is exactly
+
+`min_{0<=k<=m} C_m(k)`.
+
+Moreover `C_m(k)` depends only on the four vertically ordered samples on horizontal lines `0,1,2,3`, not on the original labels of observations within a line.
+
+#### Proof
+
+The product group `S_m^4` of permutations of labels within the four horizontal lines preserves all edge costs and preserves `k`. Quotienting by this action leaves only four ordered vertical point sets plus the cell-count constraints above. For fixed membership of observations in a cell, strict Monge ordering of `sqrt(D^2+(t-s)^2)` in `(s,t)` implies that the selected source and target subsequences are matched in increasing vertical order. Hence all horizontal information not already encoded by the selected subsequences and the single integer `k` is redundant. Taking the minimum over the selected subsequences gives `C_m(k)`, and taking the minimum over `k` gives the exact global optimum. `QED`.
+
+This is deliberately weaker than claiming that `C_m(k)` is discretely convex. The preceding run exhibited failure of a global Monge property when horizontal marks differ, so no convexity of `k -> C_m(k)` is assumed here.
+
+## 3. B13 — conjugate field and exact monotonicity
+
+Introduce a scalar field `h in R` conjugate to the diagonal contingency and define
+
+`Phi_m(h)=min_{0<=k<=m} [ C_m(k)+h k ].`
+
+This is the lower envelope of finitely many affine functions, hence is concave and piecewise affine.
+
+### Proposition 3.1 — monotone response to the field
+
+Let `h_1<h_2`. If `k_1` is any minimizer at `h_1` and `k_2` any minimizer at `h_2`, then
+
+`k_2 <= k_1`.
+
+At every differentiability point of `Phi_m`,
+
+`Phi_m'(h)=k_m(h)`,
+
+where `k_m(h)` is the unique optimizer.
+
+#### Proof
+
+Optimality gives
+
+`C_m(k_1)+h_1 k_1 <= C_m(k_2)+h_1 k_2`
+
+and
+
+`C_m(k_2)+h_2 k_2 <= C_m(k_1)+h_2 k_1`.
+
+Adding and cancelling the `C_m` terms yields
+
+`(h_2-h_1)(k_2-k_1)<=0`.
+
+Since `h_2-h_1>0`, `k_2<=k_1`. The derivative formula is the elementary envelope formula for a unique active affine branch. `QED`.
+
+This supplies a genuine monovariant even though no global vertical Monge recurrence exists: increasing the penalty on `0->2` edges can never increase their number in an optimum.
+
+### Proposition 3.2 — exact zero-field stability interval
+
+Assume the unpenalized constrained value has a unique minimizer `k_*`. Define
+
+`U_m = min_{0<=j<k_*} [C_m(j)-C_m(k_*)]/(k_*-j)`
+
+with `U_m=+infinity` if `k_*=0`, and
+
+`L_m = min_{k_*<j<=m} [C_m(j)-C_m(k_*)]/(j-k_*)`
+
+with `L_m=+infinity` if `k_*=m`.
+
+Then `k_*` remains an optimizer of `C_m(k)+hk` exactly for
+
+`-L_m <= h <= U_m`.
+
+#### Proof
+
+For `j<k_*`, the inequality
+
+`C_m(k_*)+h k_* <= C_m(j)+h j`
+
+is equivalent to
+
+`h <= [C_m(j)-C_m(k_*)]/(k_*-j)`.
+
+Requiring it for every `j<k_*` gives `h<=U_m`. For `j>k_*`, the same optimality inequality is equivalent to
+
+`h >= -[C_m(j)-C_m(k_*)]/(j-k_*)`.
+
+Requiring it for every such `j` gives `h>=-L_m`. Together these are necessary and sufficient. `QED`.
+
+The result uses no convexity of `C_m`.
+
+## 4. Exact macroscopic field-selection theorem: the critical scale is `1/m`
+
+The previous Brownian endpoint theorem implies that both pure endpoint residuals are tight:
+
+`C_m(0)=O_P(1)`,
+
+`C_m(m)=O_P(1)`.
+
+This can also be read directly from vertical order-statistic matching inside the two occupied cells at either endpoint.
+
+Let `k_m(h)` be any optimizer of `C_m(k)+hk`, and put `r_m(h)=k_m(h)/m in [0,1]`.
+
+### Theorem 4.1 — fields larger than `1/m` force an endpoint
+
+Let `h_m` be deterministic.
+
+1. If `h_m>0` and `m h_m -> +infinity`, then
+
+   `r_m(h_m) -> 0` in probability.
+
+2. If `h_m<0` and `m |h_m| -> +infinity`, then
+
+   `r_m(h_m) -> 1` in probability.
+
+Equivalently, for `p_m(h)=k_m(h)/(2m)`, positive fields larger than order `1/m` force the crossed endpoint `p=0`, while negative fields larger than order `1/m` force the translation endpoint `p=1/2`.
+
+#### Proof
+
+Take `h_m>0`. Fix `epsilon>0`. If an optimizer satisfies `k_m(h_m)>=epsilon m`, then by nonnegativity of residual costs,
+
+`C_m(k_m)+h_m k_m >= epsilon m h_m`.
+
+But the feasible endpoint `k=0` has objective `C_m(0)`. Therefore the event `{k_m>=epsilon m}` implies
+
+`C_m(0)>=epsilon m h_m`.
+
+Since `C_m(0)=O_P(1)` while `m h_m -> infinity`, the probability of this event tends to zero. Hence `r_m(h_m)->0` in probability.
+
+Now take `h_m<0`. Fix `epsilon>0`. If `k_m(h_m)<=m-epsilon m`, then its objective relative to the feasible endpoint `m` satisfies
+
+`[C_m(k_m)+h_m k_m]-[C_m(m)+h_m m]`
+
+`= C_m(k_m)-C_m(m)+|h_m|(m-k_m)`
+
+`>= -C_m(m)+epsilon m|h_m|`.
+
+For such a `k_m` to be optimal, the right side cannot be positive, so the event implies
+
+`C_m(m)>=epsilon m|h_m|`.
+
+Again `C_m(m)=O_P(1)` while `m|h_m|->infinity`, so the probability tends to zero. Therefore `r_m(h_m)->1` in probability. `QED`.
+
+### Corollary 4.2 — an interior zero-field selector is `1/m`-field unstable
+
+Suppose for some fixed `eta in (0,1/2)` the unpenalized unique optimizer satisfies
+
+`eta m <= k_* <= (1-eta)m`.
+
+Then
+
+`U_m <= C_m(0)/(eta m)`,
+
+`L_m <= C_m(m)/(eta m)`.
+
+Consequently, on any sequence of events on which the zero-field optimizer remains macroscopically interior with nonvanishing probability,
+
+`U_m=O_P(1/m)`, `L_m=O_P(1/m)`.
+
+#### Proof
+
+In Proposition 3.2 use the competitors `j=0` and `j=m`. Since `C_m(k_*)>=0`,
+
+`U_m <= [C_m(0)-C_m(k_*)]/k_* <= C_m(0)/(eta m)`
+
+and similarly
+
+`L_m <= [C_m(m)-C_m(k_*)]/(m-k_*) <= C_m(m)/(eta m)`.
+
+Endpoint tightness finishes the claim. `QED`.
+
+This does **not** identify the zero-field optimizer. It does prove that `1/m` is the only field scale on which nontrivial macroscopic horizontal competition can survive.
+
+## 5. Critical window and a nondegenerate endpoint crossover
+
+Set
+
+`h_m=lambda/m`
+
+for fixed `lambda in R`. Between the two pure endpoints, the penalized cost difference is
+
+`[C_m(m)+h_m m]-C_m(0)`
+
+`= C_m(m)-C_m(0)+lambda`.
+
+The preceding run proved
+
+`C_m(m)-C_m(0) => Delta=(1/2)I_+-(5/6)I_-`.
+
+Therefore
+
+### Corollary 5.1 — exact endpoint crossover law at the critical scale
+
+For each fixed `lambda`,
+
+`[C_m(m)+(lambda/m)m]-C_m(0) => Delta+lambda`.
+
+In particular, the pure translation endpoint beats the pure crossed endpoint asymptotically with probability
+
+`P(Delta+lambda<0)`.
+
+At `lambda=0` this probability is strictly larger than `1/2` but strictly smaller than `1`.
+
+This is a source-faithful warning: even at the correctly identified field scale `1/m`, one macroscopic endpoint comparison remains random. A proof of source-level translation selection must exploit interior contingencies and/or mesoscopic self-averaging, not only the two pure endpoints.
+
+## 6. B29 — compactified contingency segment and exact tangent cones
+
+At population scale, every balanced two-bin horizontal coupling has the form
+
+`K_p = [[p, 1/2-p], [1/2-p, p]],    0<=p<=1/2`.
+
+A first-order perturbation preserving both row and column masses must be
+
+`q H`, where `H=[[1,-1],[-1,1]]`.
+
+Nonnegativity gives the exact tangent cones:
+
+- if `0<p<1/2`, then `q in R`;
+- at the crossed endpoint `p=0`, only `q>=0` is feasible;
+- at the translation endpoint `p=1/2`, only `q<=0` is feasible.
+
+Thus the two endpoints are genuine one-sided boundary points of the population-optimal face. In particular, `O(sqrt(N))` off-endpoint edges correspond to a tangent displacement of order `N^(-1/2)` while leaving the weak horizontal limit at an endpoint. This is why endpoint weak convergence cannot be inferred merely by setting all cross edges to zero at finite `N`.
+
+### Candidate strict-Monge innovation functional
+
+The expectation-level local innovation calculation from the preceding runs suggests the horizontal functional
+
+`J(K)=sum_ab K_ab / D_ab`.
+
+On `K_p`,
+
+`J(p)=p/2 +(1/2-p)/3 +(1/2-p)/1 +p/2`
+
+`= 2/3-p/3`.
+
+Hence its unique minimizer is the translation endpoint `p=1/2`, with
+
+`J(1/2)=1/2`, `J(0)=2/3`, `J'(p)=-1/3`.
+
+The endpoint tangent cones are compatible with strict one-sided stability of this candidate functional: moving inward from `p=1/2` raises `J`, while moving inward from `p=0` lowers it.
+
+This is **not** yet a theorem about the empirical selector because no discrete Gamma-development identifying `J` as the first kernel-dependent term has been proved.
+
+## 7. B29 obstruction — the obvious smooth cubic reweighting term is exactly `p`-neutral
+
+A natural hope was that, although the quadratic tangent energy is flat across `p`, its first smooth correction produced by the perturbed edge density might generate the missing `J(p)` slope. It does not.
+
+Work in the balanced smooth two-bin tangent model. Let `f_0(s),f_1(s)` be first-order source density perturbations and `g_2(s),g_3(s)` target perturbations. Put
+
+`F=f_0+f_1`, `G=g_2+g_3`,
+
+and define the total vertical prefix flux `M(s)` by
+
+`M'(s)=F(s)-G(s)`, `M(0)=M(1)=0`.
+
+The universal quadratic optimizer from the preceding tangent analysis is
+
+`u_ab(s) = [M(s)/2] D_ab`.
+
+Let `q_ab(s)` be any first-order edge-density correction satisfying the exact linearized marginal constraints
+
+`sum_b q_ab = f_a`,
+
+`sum_a q_ab - d/ds J_b = g_b`,
+
+where the target vertical flux carried into mark `b` is
+
+`J_b(s)=sum_a K_p(ab) u_ab(s)`.
+
+For `b=2,3`, direct substitution gives
+
+`J_2 = [M/2](p+1/2)`,
+
+`J_3 = [M/2](3/2-p)`.
+
+The cubic density-reweighting contribution to the Euclidean residual expansion is
+
+`R_3(p)=int_0^1 sum_ab q_ab(s) u_ab(s)^2/[2D_ab] ds`
+
+`=int_0^1 [M(s)^2/8] sum_ab q_ab(s)D_ab ds`.
+
+Now
+
+`sum_ab q_ab D_ab`
+
+`=2 sum_a q_a2 +3 sum_a q_a3 - sum_b q_1b`
+
+`=2g_2+3g_3-f_1 + d/ds[2J_2+3J_3]`.
+
+But
+
+`2J_2+3J_3 = M(11/4-p/2)`.
+
+Therefore, for constant `p`,
+
+`sum_ab q_abD_ab = 2g_2+3g_3-f_1 +(11/4-p/2)M'`.
+
+For two horizontal kernels `p,p'`, the difference in the cubic reweighting term is consequently
+
+`R_3(p)-R_3(p')`
+
+`= -(p-p')/16 int_0^1 M(s)^2 M'(s) ds`
+
+`= -(p-p')/48 [M(s)^3]_{0}^{1}`
+
+`=0`.
+
+### Proposition 7.1 — cubic density-reweighting neutrality
+
+For balanced smooth perturbations with zero endpoint flux, the order-three contribution obtained by reweighting the universal quadratic common-slope displacement with the first-order edge-density correction is **exactly independent of `p`**.
+
+The proof is the calculation above and uses only the linearized marginal constraints; it does not depend on a particular choice of `q_ab` beyond those constraints.
+
+### Scope warning
+
+This proposition does **not** claim that the entire third-order Gamma-development of the empirical problem is `p`-independent. Other effects can enter through higher-order displacement corrections, nonlinear pushforward constraints, boundary layers, and—most importantly for the actual empirical assignment—integrality and discrete marked-prefix conservation. The theorem rules out only the most obvious smooth cubic density-reweighting mechanism.
+
+It is nevertheless informative: the candidate strict slope `J'(p)=-1/3` does not arise from simply carrying the already-known smooth common-slope tangent solution one order further through density reweighting. That strengthens the evidence that the selector is a genuinely discrete/homogenized effect.
+
+## 8. What moved mathematically, and what did not
+
+### New exact structure
+
+1. The balanced two-bin empirical problem is exactly a one-parameter constrained value problem `C_m(k)` after quotienting within-line labels.
+2. The conjugate-field optimizer is monotone in the field without any discrete-convexity assumption.
+3. The exact stability interval of an arbitrary zero-field optimizer is given by secant slopes of `C_m`.
+4. Any deterministic field satisfying `m|h_m|->infinity` forces the appropriate horizontal endpoint. Hence the macroscopic critical field scale is at most/order `1/m`.
+5. At the critical field `h=lambda/m`, the pure endpoint competition has the explicit nondegenerate limit `Delta+lambda`.
+6. The interior and endpoint tangent cones of the whole population-optimal horizontal face are explicit.
+7. The first obvious smooth cubic density-reweighting correction is exactly neutral in `p`.
+
+### Still missing
+
+The source asks for the limiting plan in the original **continuous-horizontal** empirical problem. Even the two-bin laboratory is not solved at zero field. The decisive missing object is the stochastic/effective constrained-value curve
+
+`k -> C_m(k)`
+
+inside its `1/m` conjugate-field window, after subtracting the universal coarse-prefix contribution. In particular, we do not yet know whether its global zero-field minimizer satisfies
+
+`k_m/m -> 1`,
+
+converges to an interior deterministic value, or has a nontrivial random limit.
+
+The previous innovation theorem shows one mechanism by which local strict-Monge bias can self-average after coarse conditioning. The present cubic-neutrality theorem shows that an ordinary smooth next-order expansion does not automatically reproduce that bias. What remains is a discrete stochastic homogenization problem.
+
+## 9. Metric, stagnation, and next attack
+
+Frozen metric before: `SEL_ID=0`.  
+Frozen metric after: `SEL_ID=0`.  
+Movement: **NO MOVEMENT**.  
+Ordinary unchanged research count before: `4`.  
+Ordinary unchanged research count after: `5`.  
+Mathematical status: **OPEN / PARTIAL**.
+
+P0336 is `CLOSABLE OUTSIDE`; the six-unchanged retirement rule has **not** fired yet. If the next ordinary research run leaves `SEL_ID=0`, that run must preserve an immutable handoff and retire this target from R7-05 under the owner protocol before selecting a fresh lawful shard-4 successor.
+
+The next nonrepeating methods are fixed as:
+
+1. **B4 — prove something weaker, completely:** derive the full zero-field limit of `C_m(k)` in one source-faithful mesoscopic two-bin block model, rather than another local lemma.
+2. **B9 — randomize:** introduce a random mesoscopic vertical partition independent of the samples so that block-boundary coincidences cannot drive the error, and seek a conditional law of large numbers for local reduced costs.
+3. **B20 — find why the algorithm fails:** characterize exactly which marked-prefix compatibility constraint prevents independent block minimizers from being glued into one global perfect matching; either prove that the gluing defect is lower order or turn it into the effective selector.
+
+No source-level answer, novelty claim, audit request, paper package, or shared-ledger edit is made in this artifact.

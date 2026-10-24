@@ -1,0 +1,137 @@
+[
+  {
+    "problem_id": "P0208",
+    "key": "q-fold-cycle-hitting-times-and-relaxation",
+    "logical_id": "math:probability.markov-chains:q-fold-cycle-hitting-times-and-relaxation",
+    "kind": "lemma",
+    "statement": "For m>=5 and q>=2, the arc-transitive graph C_m[empty_q] has mq vertices and degree 2q. Its mean hitting time from a target twin is mq, and from fiber j!=0 is j(m-j)+m(q-1). Its maximal commute time is 2 floor(m^2/4)+2m(q-1), its stationary mean hitting time is (m^2-1)/6+m(q-1), and its rate-one continuous-time relaxation time is 1/(1-cos(2*pi/m)). For fixed q their maximal-commute to twice stationary-hitting ratio tends to 3/2.",
+    "proof": "~\\brain_workers\\w336\\proofs\\P0208.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "P0208",
+    "key": "q-fold-cycle-commute-and-relaxation-conventions",
+    "logical_id": "math:probability.markov-chains:q-fold-cycle-commute-and-relaxation-conventions",
+    "kind": "concept",
+    "statement": "In the q-fold cycle calculation, tau_star denotes the maximum of E_x T_y+E_y T_x; it is twice the maximum one-way hitting time because the hitting times are symmetric. Tau_2 denotes the relaxation time of the rate-one continuous-time generator P-I. For even m the discrete-time absolute spectral gap is zero and is a different quantity.",
+    "proof": "~\\brain_workers\\w336\\proofs\\P0208.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "P0458",
+    "key": "standard-normal-positive-part-transform-density",
+    "logical_id": "math:probability.distributions:standard-normal-positive-part-transform-density",
+    "kind": "lemma",
+    "statement": "Let Z be standard normal, g(z)=phi(z)+z Phi(z), a=1/sqrt(pi), and v=1/3+(sqrt(3)-2)/(2*pi). Then E[g(Z)]=a and Var(g(Z))=v. W=(a-g(Z))/sqrt(v) has support (-infinity,a/sqrt(v)] and no atom at its finite endpoint. For w<a/sqrt(v), with z=g^{-1}(a-sqrt(v)w), its CDF is 1-Phi(z) and its density is sqrt(v)*phi(z)/Phi(z). This non-Gaussian law is the standardized-degree limit only conditional on the earlier degree/moment convergence being established in a stated regime.",
+    "proof": "~\\brain_workers\\w336\\proofs\\P0458.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "C0129",
+    "key": "finite-cookie-prefix-failure-mean-and-variance",
+    "logical_id": "math:probability.randomenvironment:finite-cookie-prefix-failure-mean-and-variance",
+    "kind": "lemma",
+    "statement": "For independent Bernoulli trials with probabilities p_1,...,p_M followed by fair trials, let F_m count failures before the m-th success. For m>=M and m>=1, s=sum p_i, t=sum p_i(1-p_i), and delta=sum(2p_i-1), E F_m=m-delta and Var F_m=2(m-s)+4t. This is a quenched single-stack identity; it assumes no independence between stacks. It does not settle the stationary-ergodic excited-walk recurrence criterion.",
+    "proof": "~\\brain_workers\\w336\\proofs\\C0129.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "C0129",
+    "key": "cookie-branching-log-mean-route-warning",
+    "logical_id": "math:probability.randomenvironment:cookie-branching-log-mean-route-warning",
+    "kind": "concept",
+    "statement": "With a finite cookie prefix and a fair tail, the large-population expectation of F_(k+1) is k+1-delta once k+1>=M. Its linear coefficient is one at every site. A nontrivial Lyapunov exponent of site-dependent offspring means is therefore not obtained by this calculation; migration and small-population behavior remain relevant. The general stationary-ergodic criterion and the prior periodic-case assertion are not proved by this local identity.",
+    "proof": "~\\brain_workers\\w336\\proofs\\C0129.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "P0087",
+    "key": "forced-network-urn-stationary-beta-law-quadratic-forcing",
+    "logical_id": "math:probability.reinforcement:forced-network-urn-stationary-beta-law-quadratic-forcing",
+    "kind": "lemma",
+    "statement": "Fix a finite irreducible row-stochastic Q with stationary probability pi, p in [0,1]^d, c>0, f=cr^2 and 0<r with r+f<=1. For Z in the state space [0,1]^d, let X_i be conditionally independent Bernoulli((QZ)_i), and update Z prime=(1-r-f)Z+rX+fp. Put pbar=pi.p and K=sum pi_i^2. For 0<pbar<1, as r->0 the unique joint stationary law converges weakly to Y times the all-ones vector, where Y has Beta(2c*pbar/K,2c*(1-pbar)/K) law. At pbar=0 or 1 the stationary law is the corresponding point mass. This concerns stationary laws only; a functional diffusion limit and initial-layer analysis are not asserted.",
+    "proof": "~\\brain_workers\\w336\\proofs\\P0087.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "P0087",
+    "key": "forced-network-urn-stationary-covariance-quadratic-forcing",
+    "logical_id": "math:probability.reinforcement:forced-network-urn-stationary-covariance-quadratic-forcing",
+    "kind": "lemma",
+    "statement": "Fix a finite irreducible row-stochastic Q with stationary probability pi, p in [0,1]^d, c>0, f=cr^2 and 0<r with r+f<=1. For Z in the state space [0,1]^d, let X_i be conditionally independent Bernoulli((QZ)_i), and update Z prime=(1-r-f)Z+rX+fp. The stationary law is unique, has mean f*((r+f)I-rQ)^(-1)p, and Cov(Z) tends as r->0 to K*pbar*(1-pbar)/(2c+K) times the all-ones matrix, where pbar=pi.p and K=sum pi_i^2. For Q=(1), its exact variance is p(1-p)/(1+2c-c^2*r^2). This is a stationary moment result, not a functional diffusion convergence theorem.",
+    "proof": "~\\brain_workers\\w336\\proofs\\P0087.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "P0087",
+    "key": "scalar-forced-urn-wright-fisher-generator-limit",
+    "logical_id": "math:probability.reinforcement:scalar-forced-urn-wright-fisher-generator-limit",
+    "kind": "lemma",
+    "statement": "For the scalar update Z prime=Z+r(X-Z)+cr^2(p-Z), X given Z=z being Bernoulli(z), c>0 and r+cr^2<=1, the one-step generator divided by r^2 converges uniformly on each h in C^3([0,1]) to c(p-z)h prime(z)+(1/2)z(1-z)h double-prime(z). The Taylor remainder divided by r^2 is at most ||h triple-prime|| infinity*r*(1+cr)^3/6 plus ||h double-prime|| infinity*c^2*r^2/2. This identifies a candidate Wright-Fisher generator without proving path convergence.",
+    "proof": "~\\brain_workers\\w336\\proofs\\P0087.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "P0294",
+    "key": "random-routing-workload-exact-zero-finite-population-bias",
+    "logical_id": "math:probability.queueing:random-routing-workload-exact-zero-finite-population-bias",
+    "kind": "lemma",
+    "statement": "For N unit-speed servers with Poisson input N*lambda, independent uniformly chosen destinations, and independent nonnegative job sizes S with rho=lambda*E S<1 and E S^2 finite, the product stationary workload law consists of N independent M/G/1 workloads. The stationary mean workload per server is exactly lambda*E S^2/(2*(1-rho)) for every N. Its first-order 1/N bias and remainder are zero, and off-diagonal covariances are zero. This is the d=1 random-routing case; no zero-bias claim is made for workload-dependent least-of-d routing.",
+    "proof": "~\\brain_workers\\w336\\proofs\\P0294.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "C0020",
+    "key": "query-cost-does-not-bound-revealment-uniformly",
+    "logical_id": "math:probability.boolean-functions:query-cost-does-not-bound-revealment-uniformly",
+    "kind": "lemma",
+    "statement": "For exact algorithms on N bits, expected distinct query cost equals the sum of coordinate revealments, but no universal K bounds every revealment by K times cost/N. Fixed-order OR on fair bits has first revealment 1 and cost 2*(1-2^(-N)). Also any exact algorithm of cost o(N) can be padded by querying a fixed bit first, retaining cost at most the original cost plus one and revealment 1 at that bit. Thus a sublinear crossing query budget alone does not justify a uniform average-revealment premise.",
+    "proof": "~\\brain_workers\\w336\\proofs\\C0020.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "C0074",
+    "key": "tree-volume-and-resistance-orders-do-not-imply-walk-convergence",
+    "logical_id": "math:probability.scaling-limits:tree-volume-and-resistance-orders-do-not-imply-walk-convergence",
+    "kind": "lemma",
+    "statement": "On paths 0,...,n, put conductance c_n=1 for odd n and 2 for even n, normalized counting measure, and spatial scale 1/n. Graph metric-measure spaces converge and resistance is between half and all of graph distance. The stationary variable-speed walks accelerated by n^2 have no common limit of finite-dimensional laws: their cosine two-time covariance tends for t>0 to (1/2)exp(-pi^2*t) along odd n and (1/2)exp(-2*pi^2*t) along even n. This weighted-path example diagnoses the need for actual scaled resistance convergence; it is not a counterexample to an IIC scaling limit.",
+    "proof": "~\\brain_workers\\w336\\proofs\\C0074.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "C0116",
+    "key": "visited-subset-exact-cover-time-recursion",
+    "logical_id": "math:probability.markov-chains:visited-subset-exact-cover-time-recursion",
+    "kind": "lemma",
+    "statement": "For a finite irreducible rational n-state transition matrix P, set V_full=0. For each nonempty proper visited set S, solve (I-P_SS)V_S=1+(sum_(v outside S)P_uv V_(S union {v})(v))_(u in S), in descending size of S. The killed matrix has spectral radius less than one. V_{ {u} }(u) is the exact cover time from u, and their maximum is the worst-start cover time. The method uses O(2^n*n^3) rational arithmetic operations and does not give a polynomial-time approximation algorithm.",
+    "proof": "~\\brain_workers\\w336\\proofs\\C0116.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "P0007",
+    "key": "unbounded-open-convex-domain-contains-ray-from-every-point",
+    "logical_id": "math:geometry.billiards:unbounded-open-convex-domain-contains-ray-from-every-point",
+    "kind": "lemma",
+    "statement": "Every unbounded open convex set in finite-dimensional Euclidean space contains an infinite straight ray starting at each of its points. If such a set is a mirror-complement component, that ray never collides with a mirror and is an escaping launch direction. The assertion needs convexity and does not settle the general all-reflected-rays trapping problem.",
+    "proof": "~\\brain_workers\\w336\\proofs\\P0007.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "P0007",
+    "key": "parabolic-open-corridor-contains-no-infinite-ray",
+    "logical_id": "math:geometry.billiards:parabolic-open-corridor-contains-no-infinite-ray",
+    "kind": "lemma",
+    "statement": "The planar set C={(x,y): x>0 and |y-x^2|<1} is open, connected and unbounded, but contains no straight ray with nonzero direction. A ray with negative x direction exits x>0, a vertical ray exits the bounded vertical strip at its fixed x, and a ray with positive x direction has y-x^2 tending to minus infinity quadratically. This is a geometric counterexample to an unbounded-component implies straight-visibility inference; no permitted mirror configuration or reflected-ray trapping is asserted.",
+    "proof": "~\\brain_workers\\w336\\proofs\\P0007.md",
+    "audit_status": "pending-w346"
+  },
+  {
+    "problem_id": "P0034",
+    "key": "horizontal-new-vertical-old-walk-both-clocks-diverge",
+    "logical_id": "math:probability.self-interacting-walks:horizontal-new-vertical-old-walk-both-clocks-diverge",
+    "kind": "lemma",
+    "statement": "For the planar walk that chooses a fair horizontal step on a first visit and a fair vertical step on a repeat visit, its horizontal and vertical departure counts H_n and V_n both tend to infinity almost surely. The coordinates admit X_n=S^H_(H_n), Y_n=S^V_(V_n), where S^H and S^V are independent simple symmetric walks, and each clock visits every nonnegative integer. Consequently each coordinate is unbounded in both signs and hits zero infinitely often. The clocks depend jointly on the visited set; independence of the time-changed coordinates and infinitely many visits to a single planar site are not asserted.",
+    "proof": "~\\brain_workers\\w336\\proofs\\P0034.md",
+    "audit_status": "pending-w346"
+  }
+]

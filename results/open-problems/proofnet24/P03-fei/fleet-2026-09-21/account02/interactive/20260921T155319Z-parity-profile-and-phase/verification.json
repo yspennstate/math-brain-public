@@ -1,0 +1,135 @@
+{
+  "checks": {
+    "laplace": {
+      "continuum_proof": "analytic in REPORT.md, not inferred from this grid",
+      "exact_direct_formula_comparisons": 1860,
+      "exact_symmetry_grid_cases": 32368,
+      "large_dimension_values": [
+        {
+          "dimension": 16,
+          "entropy_over_expected_size_float": 3.2451124978365313,
+          "expected_size_exact": 4,
+          "m": 2,
+          "ratio_lower_bound_exact": 2
+        },
+        {
+          "dimension": 128,
+          "entropy_over_expected_size_float": 5.396641065872222,
+          "expected_size_exact": 8,
+          "m": 4,
+          "ratio_lower_bound_exact": 4
+        },
+        {
+          "dimension": 768,
+          "entropy_over_expected_size_float": 7.431364819505262,
+          "expected_size_exact": 12,
+          "m": 6,
+          "ratio_lower_bound_exact": 6
+        },
+        {
+          "dimension": 20480,
+          "entropy_over_expected_size_float": 11.441990370528794,
+          "expected_size_exact": 20,
+          "m": 10,
+          "ratio_lower_bound_exact": 10
+        },
+        {
+          "dimension": 41943040,
+          "entropy_over_expected_size_float": 21.442694352958142,
+          "expected_size_exact": 40,
+          "m": 20,
+          "ratio_lower_bound_exact": 20
+        }
+      ],
+      "status": "PASS"
+    },
+    "mean": {
+      "exact_conditional_mean_cases": 2868,
+      "exact_scalar_tensor_cases": 5460,
+      "status": "PASS"
+    },
+    "phase": {
+      "distinct_integer_entropy_comparisons": 32,
+      "exact_corrected_entropy_instances": 43414,
+      "integer_compression_instances": 43414,
+      "status": "PASS",
+      "summaries": [
+        {
+          "all_boolean_functions": 2,
+          "max_H_over_I_float": 0.0,
+          "max_H_over_I_minus_odd_mass_float": 0.0,
+          "minimal_polar_rank_counts": {
+            "0": 2
+          },
+          "n": 0,
+          "quadratic_phase_compatible": 2
+        },
+        {
+          "all_boolean_functions": 4,
+          "max_H_over_I_float": -0.0,
+          "max_H_over_I_minus_odd_mass_float": 0.0,
+          "minimal_polar_rank_counts": {
+            "0": 4
+          },
+          "n": 1,
+          "quadratic_phase_compatible": 4
+        },
+        {
+          "all_boolean_functions": 16,
+          "max_H_over_I_float": 2.0,
+          "max_H_over_I_minus_odd_mass_float": 4.0,
+          "minimal_polar_rank_counts": {
+            "0": 8,
+            "2": 8
+          },
+          "n": 2,
+          "quadratic_phase_compatible": 16
+        },
+        {
+          "all_boolean_functions": 256,
+          "max_H_over_I_float": 2.0,
+          "max_H_over_I_minus_odd_mass_float": 4.0,
+          "minimal_polar_rank_counts": {
+            "0": 16,
+            "2": 112,
+            "not_quadratic": 128
+          },
+          "n": 3,
+          "quadratic_phase_compatible": 128
+        },
+        {
+          "all_boolean_functions": 65536,
+          "max_H_over_I_float": 2.4,
+          "max_H_over_I_minus_odd_mass_float": 4.0,
+          "minimal_polar_rank_counts": {
+            "0": 32,
+            "2": 1120,
+            "4": 42112,
+            "not_quadratic": 22272
+          },
+          "n": 4,
+          "quadratic_phase_compatible": 43264
+        }
+      ],
+      "warning": "entropy ratio maxima are floating diagnostics; compression and corrected-entropy inequality tests are integer-exact; no higher-dimensional quadratic-phase FEI theorem is claimed"
+    },
+    "robust": {
+      "entropy_diagnostics": "floating, never substituted for analytic proof",
+      "influence_increase_example_exact": {
+        "compressed_I": 2,
+        "original_I": 1
+      },
+      "integer_robust_phase_cases": 1536,
+      "max_conditional_entropy_bound_excess_float": 8.881784197001252e-16,
+      "recursive_majority_9_exact": {
+        "H": "5",
+        "I": "9/4",
+        "support": 76
+      },
+      "seed": 20260921,
+      "status": "PASS"
+    }
+  },
+  "full_FEI": "OPEN_NOT_PROVED",
+  "schema_version": 1
+}

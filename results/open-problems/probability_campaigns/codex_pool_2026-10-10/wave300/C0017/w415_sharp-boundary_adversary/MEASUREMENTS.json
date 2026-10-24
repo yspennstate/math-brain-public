@@ -1,0 +1,92 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w415/verify_boundary.py",
+  "graph_cases": [
+    {
+      "delta": "1",
+      "aspect": 1,
+      "vertices": 2,
+      "edges": 1,
+      "configurations": 2,
+      "successes": 1,
+      "probability": "1/2"
+    },
+    {
+      "delta": "1",
+      "aspect": 2,
+      "vertices": 3,
+      "edges": 2,
+      "configurations": 4,
+      "successes": 1,
+      "probability": "1/4"
+    },
+    {
+      "delta": "1/2",
+      "aspect": 1,
+      "vertices": 2,
+      "edges": 1,
+      "configurations": 2,
+      "successes": 1,
+      "probability": "1/2"
+    },
+    {
+      "delta": "1/2",
+      "aspect": 2,
+      "vertices": 3,
+      "edges": 2,
+      "configurations": 4,
+      "successes": 1,
+      "probability": "1/4"
+    },
+    {
+      "delta": "1/1024",
+      "aspect": 1,
+      "vertices": 2,
+      "edges": 1,
+      "configurations": 2,
+      "successes": 1,
+      "probability": "1/2"
+    },
+    {
+      "delta": "1/1024",
+      "aspect": 2,
+      "vertices": 3,
+      "edges": 2,
+      "configurations": 4,
+      "successes": 1,
+      "probability": "1/4"
+    }
+  ],
+  "exact_rational_checks": {
+    "(140/99)^2 < 2": true,
+    "(17/99)^2 < 1/32": true,
+    "8/961 < (1/4)^3": true
+  },
+  "numerical_checks": {
+    "cross_ratio_aspect2": 0.02943725152285944,
+    "elliptic_ratio_aspect2": 1.9999999999999991,
+    "square_cardy_value": 0.4999999999999999,
+    "aspect2_cardy_value": 0.17564689380065532,
+    "aspect2_exact_bond_value": 0.25,
+    "aspect2_difference": 0.07435310619934468,
+    "analytic_gap_lower_bound_display": 0.04733028049087784,
+    "stretched_square_rotation_defect_s2": 0.6487062123986893,
+    "series_terms": [
+      51,
+      10
+    ],
+    "series_truncation_bounds": [
+      5.1486898370973175e-19,
+      9.62243903423721e-19
+    ],
+    "caveat": "Floating-point illustrations only; rounding/gamma error is not certified. Proof uses exact rational inequalities and cited analytic identities."
+  },
+  "before_after": {
+    "square_control_only_false_uniform_bridges_detected": 0,
+    "with_aspect2_witness_false_uniform_bridges_detected": 1,
+    "live_recall_or_store_improvement_measured": false
+  },
+  "wall_seconds": 0.26611760002560914,
+  "cpu_seconds": 0.015625,
+  "passed": true,
+  "formal_proof_receipt": false
+}

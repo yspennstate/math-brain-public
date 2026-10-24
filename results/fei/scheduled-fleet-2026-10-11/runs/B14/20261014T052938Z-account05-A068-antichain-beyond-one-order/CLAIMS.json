@@ -1,0 +1,57 @@
+[
+  {
+    "claim_id": "A068-ACTUAL-IDENTIFICATION-PAID-CLOSURES",
+    "version": 1,
+    "exact_statement": "(A) For every threshold sign core h(t)=sign_ge(sum_i w_i t_i-theta), arbitrary overlapping quadratic sign controls a_i on independent uniform bits, and a2=sigma*a1 with constant sigma=+/-1, both data identifications x2=epsilon*x1 admit a normalized complete reference with H<=Gamma<=Creg I_data(output)+2I_controls(output), by recompiling the merged weight w1+epsilon*sigma*w2, removing zero weights and absorbing negative signs. (B) For any regular weak core g, arbitrary quadratic controls a,b_i on uniform U,Z, and any quadratic relative phase beta with U exactly its active physical support, F=Maj3(x*a,x*a*beta,g(y_i*b_i)) after genuine data identification admits a normalized complete reference with H(F)<=Gamma<=Creg I_(x,y)(F)+2I_Z(F)+8I_U(F)<=Creg I(F), Creg=log2(4+e)+2log2(e*pi)>8. The decoder pays2|U|<=8I_U because each active beta coordinate has influence>=1/2 and every beta-crossing edge changes F with probability1/2. Both terminal references remain. For common relative phase and any Boolean core/arbitrary controls, the tagged-parent entropy minus mean cofactor entropy is exactly H(h)-mean H(h_epsilon), and tag influence is Inf2(h); this identity alone is not a FEI payment for arbitrary controls. No weak/unequal-pair nonconstant-phase or hereditary exposure claim is made.",
+    "hypotheses": [
+      "Independent uniform physical bits, Boolean signs, entropy and reference costs in bits",
+      "PartA core is a threshold with a fixed tie convention; constant relative phase; both tag signs included",
+      "PartB weak core is regular at accepted recovered C001 scope; private x does not occur in weak core/controllers",
+      "All control polynomials in paid parts have F2 degree<=2; arbitrary shared U,Z dependence",
+      "U comprises beta active coordinates; inactive beta coordinates are in Z; constant beta uses empty U",
+      "PartB keeps a balanced private character opposite a core independent of x; no renewal after x exposure"
+    ],
+    "statement_sha256": "1cfff3b2546ceb49420990448f9db6d13b477c7b68aff6a294d1ed34ef5f37da",
+    "contributors": [
+      "account05/A068"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261014T052938Z-account05-A068-antichain-beyond-one-order\\REPORT.md",
+      "locators": "Sections1-4",
+      "certificates": [
+        "out/validation.json",
+        "out/rank2_validation.json",
+        "out/beta_validation.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A068-QUADRATIC-CONTEXT-RANK-REFERENCE",
+        "version": 1,
+        "statement_sha256": "23b8038c7a0da79a4d10c3dd9f897646ea2f5b155814c6c112b2a4efa208f181",
+        "acceptance": "A088 at recovered C001 scope; inherited explicit accepted baseline",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261011T222313Z-account05-A068-antichain-beyond-one-order\\CLAIMS.json"
+      },
+      {
+        "claim_id": "C001",
+        "version": "supplement2026-10-11 / accepted recovered regular-rank source",
+        "source_sha256": "5d87f625fbadad4aa9841416712b8193a869fa9dffcb4e9c200d2f39a62e6a10",
+        "acceptance": "Recovered accepted rank/reference baseline; no new audit"
+      }
+    ],
+    "review_records": [],
+    "status": "NARROW_PACKET_CLOSURES_AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A079",
+      "A034",
+      "B14",
+      "B20"
+    ]
+  }
+]

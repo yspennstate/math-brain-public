@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "programme": "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z",
+  "campaign": "POS3",
+  "account": "account01",
+  "slot": "B19",
+  "run_id": "20260922T024644Z-b19-pos3-r11",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "parent_status": "OPEN_NOT_PROVED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "scientific_report": {
+    "repository": "yspennstate/math-open-problems",
+    "path": "proofnet24/collective-POS3/account01/B19/20260922T024644Z-b19-pos3-r11/REPORT.md",
+    "git_blob": "d1a22bb63b9a5fa57541e1970dac09d7aec14937"
+  },
+  "named_other_account_applied": {
+    "worker": "account02/B10",
+    "run": "20260922T014627Z-account02-B10-pos3-r12",
+    "report_blob": "acdb868b3e35a9248d494126311bfff3bfee150b",
+    "application": "Its strict endpoint cap 2/3<p<7/9 sharpens the singleton-first-block ideal-cut empty-mass to 4/9<pi(empty)<7/9; its two active Hasse-blocker channels identify terminal-label information that a scalar cut-size statistic can lose."
+  },
+  "new_result": {
+    "name": "width-two ideal-cut convolution",
+    "statement": "If c is the first strong-majority element (hence minimal), Q=P\\{c}, and S={z in Q:z||c}, then S is a width-at-most-two ideal and L(P) is in bijection with the disjoint union over ideals I of S of L(I) x {c} x L(Q\\I). Thus e(P)=sum_I e(I)e(Q\\I), with exact pair numerators obtained from uniform smaller-poset laws on I and Q\\I plus deterministic cross-cut orientations.",
+    "hitting_time_form": "For uniform tau in L(Q), if kappa is the initial S-prefix length before the first successor of c, then W_c(tau)=kappa+1 and Pr_P(A)-Pr_Q(A)=Cov_Q(1_A,kappa)/E_Q[kappa+1].",
+    "counterexample_constraint": "In a hypothetical POS3 counterexample, pi(empty)>4/9, every cut inclusion marginal is <1/3, and E[kappa(kappa+1)] < (2|S|/3)E[kappa+1] < 3|S|/2."
+  },
+  "refuted_shortcut": {
+    "claim": "all strong cross pairs force a balanced pair inside the width-two ideal S",
+    "status": "REFUTED",
+    "example": "width-three 7-element poset with covers c<0,0<2,0<4,1<2,2<3; S={1,5}; Pr(c<1)=7/10, Pr(c<5)=57/70, but Pr(1<5)=24/35>2/3"
+  },
+  "first_missing_implication": "Width-two ideal-cut selection lemma: among the uniform-balanced pairs of the smaller Q, choose one whose exact cut-mixture probability remains in [1/3,2/3], using the cut inclusion marginals, empty-cut atom, common majority orientation, and endpoint channel structure. Arbitrary fixed-pair transfer and localization to S are both false.",
+  "verifier": {
+    "path": "proofnet24/collective-POS3/account01/B19/20260922T024644Z-b19-pos3-r11/verify_pos3_ideal_cut.py",
+    "git_blob": "60b04a6cb7ff6a8f466a8688cc6020801497ed05",
+    "sha256": "ca5754304106c7714948b677e474afdfdb5d78dfdcee8b0296bb4c1a12dc8e87",
+    "output_blob": "d839e83aa4e79d7aa2d1425c956adf8094cf2bcf"
+  },
+  "privacy": "sanitized mathematical handoff only; no credentials, scheduler IDs, machine paths, unrelated private data, benchmark gold, email, Drive, public posting, paid/remote compute, or permission changes"
+}

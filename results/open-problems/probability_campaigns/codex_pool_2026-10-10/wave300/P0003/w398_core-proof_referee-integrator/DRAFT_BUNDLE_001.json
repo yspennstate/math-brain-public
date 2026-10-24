@@ -1,0 +1,87 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w398",
+  "bundle_slug": "p0003-source-scope-fixed-versus-chordal-20261010",
+  "entries": [
+    {
+      "key": "grimmett-fixed-length-question",
+      "namespace": "probability.core",
+      "logical_name": "grimmett-question-2-2-fixed-length-honeycomb-saw",
+      "kind": "concept",
+      "title": "Grimmett Question 2.2: uniform n-step honeycomb SAW scaling limit",
+      "statement": "OPEN QUESTION AS POSED IN 2022, current resolution not certified here. Let H be the hexagonal lattice and sample uniformly from all n-step self-avoiding walks starting at its origin. Grimmett asks whether these walks, suitably rescaled as n tends to infinity, converge weakly to an SLE(8/3) random curve. The question does not specify the spatial scale, the continuum endpoint or stopping convention, or a curve topology; any precise proof must state and justify these choices.",
+      "proof_text": null,
+      "assumptions": ["Uniform law on n-step origin-started honeycomb self-avoiding walks", "n tends to infinity"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "grimmett:selected-problems-probability:2205.07318v1:q2.2",
+        "url": "https://arxiv.org/pdf/2205.07318v1#page=3",
+        "revision": "as-read-2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "critical-chordal-conjecture",
+      "namespace": "probability.core",
+      "logical_name": "critical-chordal-honeycomb-saw-sle-eight-thirds-conjecture",
+      "kind": "concept",
+      "title": "Critical boundary-to-boundary honeycomb SAW conjecture",
+      "statement": "DISTINCT CONJECTURE. In a simply connected planar domain with two marked boundary points, approximate the domain by a mesh-delta honeycomb subdomain and sample a self-avoiding walk between nearby boundary points with probability proportional to x_c to the number of visited vertices, where x_c=1/sqrt(2+sqrt(2)). Conjecture 1.5 and Section 3.3 of Bauerschmidt, Duminil-Copin, Goodman and Slade predict convergence as delta tends to zero to chordal SLE(8/3). This is a variable-length two-endpoint ensemble; the cited conjecture does not itself settle Grimmett's uniform fixed-length origin-started question.",
+      "proof_text": null,
+      "assumptions": ["Simply connected domain", "Two distinct marked boundary points", "Critical fugacity x_c=1/sqrt(2+sqrt(2))", "Mesh-delta honeycomb domain approximation"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "bauerschmidt-duminil-copin-goodman-slade:1206.2092:conjecture-1.5-section-3.3",
+        "url": "https://arxiv.org/pdf/1206.2092#page=23",
+        "revision": "as-read-2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "ensemble-scope-guard",
+      "namespace": "probability.core",
+      "logical_name": "fixed-length-versus-critical-chordal-saw-ensemble-distinction",
+      "kind": "concept",
+      "title": "Fixed-length and critical chordal SAW are different ensembles",
+      "statement": "SOURCE-SCOPE GUARD for P0003. Grimmett Question 2.2 samples a uniform n-step walk from one fixed origin with a free endpoint. The critical chordal conjecture samples walks of variable length between two boundary points with fugacity x_c per visited vertex. The two statements have different length and endpoint conditions. The finite path-deletion, martingale and local-observable identities in this packet do not transfer convergence between them; such a transfer requires an additional theorem.",
+      "proof_text": null,
+      "assumptions": ["Compare Grimmett Question 2.2 with arXiv:1206.2092 Conjecture 1.5 and Section 3.3"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w398:P0003:source-scope-comparison:2026-10-10",
+        "url": null,
+        "revision": "2026-10-10-w398-independent-source-check",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "ensemble-scope-guard",
+      "to_key": "grimmett-fixed-length-question",
+      "kind": "depends_on",
+      "rationale": "The scope comparison uses Grimmett's fixed-length, origin-started sampling statement."
+    },
+    {
+      "from_key": "ensemble-scope-guard",
+      "to_key": "critical-chordal-conjecture",
+      "kind": "depends_on",
+      "rationale": "The scope comparison uses the separate variable-length, two-boundary-point conjecture."
+    },
+    {
+      "from_key": "grimmett-fixed-length-question",
+      "to_key": "critical-chordal-conjecture",
+      "kind": "analogous_to",
+      "rationale": "Both propose an SLE(8/3) scaling limit for honeycomb self-avoiding walks, while their ensembles differ in length and endpoint conditions."
+    },
+    {
+      "from_key": "grimmett-fixed-length-question",
+      "to_existing_logical": "math:probability.core:open-problem-p0003-hexagonal-self-avoiding-walk-scaling-limit",
+      "kind": "semantic_association",
+      "rationale": "This source-specific question is the Grimmett Question 2.2 represented by the existing P0003 card."
+    }
+  ]
+}

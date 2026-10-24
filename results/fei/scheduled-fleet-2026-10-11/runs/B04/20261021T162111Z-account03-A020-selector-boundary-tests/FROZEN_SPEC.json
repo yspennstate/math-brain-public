@@ -1,0 +1,14 @@
+{
+  "helper_version": "A020-prefix-reserve-v1",
+  "family": "F=1 at gate0; s*[chi_u(1-A)+chi_q A] at gate1, A=1(v=0), s two-bit point defect",
+  "domain": "k=3..8; q followed by all k v queries; every physical prefix via active/inactive history classification",
+  "case_count": 6,
+  "pilot": "k=3 only",
+  "symmetry": "No function quotient. For fixed q and depth t, all nonzero v prefixes give exactly chi_u; all-zero prefix is retained separately. This exact identity justifies weighted history aggregation.",
+  "arithmetic": "integer Walsh; Fraction reference atoms and physical influences; canonical prime-log forms with outward rational natural-log intervals from archived A020 helper",
+  "memory_estimate_mb": 95,
+  "maximum_runtime_seconds": 60,
+  "max_physical_dimension": 13,
+  "checks": ["same root reference frequency marginals only", "complete terminal costs", "each exact CE telescoping identity", "signed reserve under physical influence removal", "positive constant-leaf deficit", "original half-core bank and previously booked exact first debit including conversion"],
+  "automatic_dimension_growth": false
+}

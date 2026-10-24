@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B20",
+  "run_id": "20260924T125751Z-account03-B20-fixedmult-r2",
+  "objective_id": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "baseline_source_commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+  "baseline_manuscript_blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+  "baseline_source_sha256": "9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69",
+  "release_gate": {
+    "literal_pinned_source": "GAP_REPAIRABLE",
+    "gap": "singular-A paragraph of lem:schur uses a moving threshold in the regularization limit",
+    "repair": "fixed delta>0, pass epsilon->0 at threshold t-delta, then delta->0",
+    "repair_independently_verified_by_this_run": true,
+    "repaired_s17_mathematical_chain": "PASS_IN_THIS_WORKER_RECONSTRUCTION",
+    "exact_source_release_ready": false,
+    "reason": "canonical manuscript blob is still unpatched; exact patched blob needs release review"
+  },
+  "new_mathematics": {
+    "claim_id": "QFORM-S16-TRANSVERSE-PHYSICAL-CROSSING-v1",
+    "premise": "account01/B20 s16 endpoint A0=[[B,M4],[M4^T,C]], rank M4<=4, s16(A0)>=63/64, no-pivot |Aii|<1/100",
+    "conclusion": "one same-bank block has four >=63/64 singular directions transverse to the top-four carrier; a literal physical internal crossing has carrier-transverse operator packet >=1559/6400 and Frobenius packet >=1559/3200",
+    "status": "PROVED_SUPPORTING_LEMMA_NOT_FULL_S16_THEOREM",
+    "first_unresolved_implication": "QFORM-S16-TRANSVERSE-PACKET-PLUS-ORDER4-PHYSICAL-LOCALIZATION-v1"
+  },
+  "math_outputs": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "fc94d091b496961cfae11e595321cb7fcbab9e3d",
+      "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/audits/account03/B20/20260924T125751Z-account03-B20-fixedmult-r2/REVIEW_AMENDMENT.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e180584f1ce8ce22d2b8ef4a47bc7766b7db078b",
+      "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/account03/B20/20260924T125751Z-account03-B20-fixedmult-r2/S16_TRANSVERSE_CARRIER.md"
+    }
+  ],
+  "three_eigenvalue_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "GLOBAL_CONTINUITY_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B09",
+  "run_id": "20260922T150741Z-account02-B09-QFORM-r3",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_initial": "ea595ee1598634e20d9eb4b5d0ff70706af650ea",
+  "source_control_commit_prepublication": "80d5f9d6f5650361f5cc550eec36a10bd70e936c",
+  "status": "ESSENTIAL_STEP_APPLIED_FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "cdf0bb83a38fee4d20cd3fe29b6a4d03e89394bc",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260922T150741Z-account02-B09-QFORM-r3/REPORT.md",
+    "blob": "8b33c7f8a02bc18acdc75d45efc484a676ee8b16"
+  },
+  "partner_result_applied": {
+    "worker": "account03/B09",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fb2f074c2fe11dc9343397ae0a06f20bcc971f65",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/account03-B09-20260922T144807Z-qform11/REPORT.md",
+    "results": [
+      "QFORM-CROSS-SQUARE-CAPS-v1 half-potential inequality",
+      "LPP disjoint-bank marginal density caps"
+    ]
+  },
+  "other_dependencies": [
+    {
+      "worker": "account01/B11",
+      "commit": "2279571f59ade7a9ec478af1e4818f6c117ac224",
+      "result": "QFORM-DEPENDENT-SQUARE-L3-SMOOTHING-v1"
+    },
+    {
+      "worker": "account02/B09",
+      "commit": "a47c679eb9f7788b5c3c2a900ce516ec11de8d9b",
+      "result": "QFORM-RANK2-CROSS-LP-v1 and QFORM-RANK2-SCHUR-PIVOT-v1"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-CROSS-SQUARE-COEFFICIENT-SIDE-ABSORPTION-v1",
+      "status": "PROVED_IN_STATED_SCOPE",
+      "statement": "For independent banks Z,V,W, scalar U=u(Z) with cap M_U, scalar caps M_V,M_W and arbitrary measurable H(Z), H(Z)+2 beta U V+gamma W^2+affine has density cap 4 sqrt(2) M_W sqrt(M_U M_V)/sqrt(|beta gamma|), and a continuous density."
+    },
+    {
+      "id": "QFORM-BANK-RANK2-CROSS-LP-v1",
+      "status": "PROVED_IN_STATED_SCOPE",
+      "statement": "For independent U,V in R^2 with density caps M_U,M_V and invertible cross matrix N, arbitrary both-side quadratic-affine phases give ||p||_p <= p^(1-1/p)(M_U M_V)^((1-1/p)/2)|det N|^(-(1-1/p)/2)."
+    },
+    {
+      "id": "QFORM-DIFFUSE-BANK-SCHUR-PIVOT-v1",
+      "status": "PROVED_IN_STATED_SCOPE",
+      "statement": "For disjoint physical banks compressing to U,V in R^2 and scalar W, if the selected quadratic factors through those projections, d!=0 and Schur cross N=M-rs^T/d is invertible, then ||p_Q||_infinity <=8 sqrt(3)|d|^-1/2|det N|^-1/4."
+    }
+  ],
+  "stress_family": {
+    "formula": "Q_m=(U1+V1)^2-(U2+V2)^2+W^2 with three disjoint diffuse banks",
+    "spectrum": [2, -2, 1],
+    "physical_entry_scale": "O(1/m)",
+    "old_physical_pivot_bound": "4 sqrt(6m) on the natural Schur cut",
+    "new_bank_first_bound": "8 sqrt(3)"
+  },
+  "first_unproved_step": "QFORM-DIFFUSE-PIVOT-OR-NONSEPARABLE-RESIDUAL-v1",
+  "next_step": "Use exterior-three mass and current overlap-class identities to prove a bank-first extraction into regularized diffuse determinant, definite two-bank, rank-one cross-square absorption, or two-by-two bank Schur-plus-square; otherwise isolate a genuine nonseparable residual without rotating away product independence.",
+  "numerical_evidence_used": false,
+  "full_solution": false
+}

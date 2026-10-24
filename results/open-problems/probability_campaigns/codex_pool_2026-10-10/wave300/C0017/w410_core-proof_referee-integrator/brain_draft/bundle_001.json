@@ -1,0 +1,101 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w410",
+  "bundle_slug": "c0017-referee-corrections-001",
+  "entries": [
+    {
+      "key": "c0017-status-audited",
+      "namespace": "probability.percolation",
+      "logical_name": "open-problem-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+      "kind": "concept",
+      "title": "Square-lattice bond percolation conformal invariance: status audit",
+      "statement": "The precise C0017 question asks for Cardy crossing limits and chordal SLE6 convergence for critical p=1/2 bond percolation on the square lattice. A 2026-09-07 intake marked it attempted-unsolved, but Wang Zhou's arXiv:2409.03235v6 Theorem 2 and Corollary 1.1 claim the single Dobrushin-interface SLE6 and Cardy conclusions under Caratheodory domain convergence and Condition C. The 2024 preprint's proof has not been independently verified in this audit. The current resolved/open status of this narrower target is UNKNOWN; do not infer either status from the dated intake or the preprint abstract alone. The stronger full-plane nested CLE limit remains presented as a conjecture in arXiv:2502.08394 Conjecture 5.1, which does not decide the narrower theorem.",
+      "proof_text": null,
+      "assumptions": ["Status as checked on 2026-10-10", "Distinguish one Dobrushin interface from full-plane nested CLE convergence"],
+      "domain": "critical planar percolation",
+      "source": {
+        "source_id": "owner-own-work:w410-C0017-status-audit-20261010",
+        "url": "urn:owner-own-work:20261010:w410-c0017-status",
+        "revision": "primary-source-status-checked-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "supersedes_existing": true
+    },
+    {
+      "key": "q1-fk-standard-spin",
+      "namespace": "probability.percolation",
+      "logical_name": "fk-q1-parafermionic-spin-one-third",
+      "kind": "concept",
+      "title": "Standard q=1 FK parafermionic spin",
+      "statement": "In the standard FK edge parafermionic observable convention on a Dobrushin domain, the spin sigma lies in [0,1] and satisfies sin(pi sigma/2)=sqrt(q)/2 for 0<q<4. At q=1 this gives sigma=1/3. A historical C0017 attempt's value 2/3 is incompatible with this convention.",
+      "proof_text": null,
+      "assumptions": ["Standard spin convention of Definition 3 in arXiv:1208.3787", "q=1"],
+      "domain": "critical planar percolation",
+      "source": {
+        "source_id": "arxiv:1208.3787:definition-3",
+        "url": "https://arxiv.org/pdf/1208.3787",
+        "revision": "as-read-2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "sin(sigma pi/2) = sqrt(q)/2"
+      }
+    },
+    {
+      "key": "corrected-c0017-attempt",
+      "namespace": "probability.percolation",
+      "logical_name": "attempt-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+      "kind": "concept",
+      "title": "Attempt on conformal invariance of critical square-lattice bond percolation (source corrected)",
+      "statement": "Historical C0017-A001 attempted to obtain square-lattice critical bond-percolation conformal invariance using an FK parafermionic observable. In the standard convention for q=1, its spin is sigma=1/3, correcting the old record's 2/3. The known local relation at primal medial vertices alone leaves the dual-vertex relation uncontrolled; the attempt supplied no uniform conditional Cardy limit or SLE6 convergence proof. This is an attempt record, not a theorem or a verified current-open-status claim.",
+      "proof_text": null,
+      "assumptions": ["Historical 2026-09-07 attempt C0017-A001", "Standard FK q=1 spin convention from arXiv:1208.3787 Definition 3"],
+      "domain": "critical planar percolation",
+      "source": {
+        "source_id": "owner-own-work:C0017-A001-corrected-20261010",
+        "url": "urn:owner-own-work:20260907:c0017-a001",
+        "revision": "source-spin-corrected-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "supersedes_existing": true
+    },
+    {
+      "key": "two-cardy-driver-identification",
+      "namespace": "probability.percolation",
+      "logical_name": "two-cardy-martingales-identify-sle6-driver-locally",
+      "kind": "lemma",
+      "title": "Conditional identification of an SLE6 driver by two Cardy martingales",
+      "statement": "Let W be a continuous adapted real chordal Loewner driver, dg_t(z)=2/(g_t(z)-W_t)dt, and let 0<a<b<c. On a stopped interval where X=g_t(a)-W_t, Y1=g_t(b)-W_t and Y2=g_t(c)-W_t stay positive, bounded and uniformly separated, suppose C(X/Y1) and C(X/Y2) are local martingales in the same filtration, with C(u)=B(u;1/3,1/3)/B(1/3,1/3). Then W is a continuous local martingale on that interval with quadratic variation 6dt. This conditional lemma does not establish either Cardy martingale for square-lattice percolation.",
+      "proof_text": "Invert the strictly increasing smooth C on the compact ratio range to recover U=X/Y1 as a semimartingale. Since g_t(a),g_t(b) have finite variation, W=(g_t(a)-U g_t(b))/(1-U) is a semimartingale. Write W=V+N and Q=<N>. Ito applied to f(x,y)=C(x/y) gives dV=-(1/3)(1/X+1/Y_i)(dQ-6dt) for i=1,2, using Af=-3D^2f and D^2f/(2Df)=-(1/3)(1/x+1/y). Their difference has nonzero coefficient 1/Y1-1/Y2, hence dQ=6dt and dV=0 as signed measures.",
+      "assumptions": ["Usual filtration conditions", "Two distinct right boundary marks", "Uniformly positive stopped separation and finite upper bound", "Both Cardy processes local martingales in the same filtration"],
+      "domain": "Schramm-Loewner evolution and critical planar percolation",
+      "source": {
+        "source_id": "owner-own-work:w408-C0017-L1-reviewed-w409-w410",
+        "url": "urn:owner-own-work:20261010:w408-c0017-l1",
+        "revision": "local-stopped-lemma-reviewed-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "q1-fk-standard-spin",
+      "to_key": "corrected-c0017-attempt",
+      "kind": "semantic_association",
+      "rationale": "The q=1 spin card states sigma=1/3; the corrected historical attempt card explicitly replaces its old sigma=2/3 statement."
+    },
+    {
+      "from_key": "corrected-c0017-attempt",
+      "to_key": "c0017-status-audited",
+      "kind": "semantic_association",
+      "rationale": "The corrected attempt is explicitly C0017-A001; the audited C0017 card asks for the square-lattice SLE6 and Cardy limits."
+    },
+    {
+      "from_key": "two-cardy-driver-identification",
+      "to_key": "c0017-status-audited",
+      "kind": "semantic_association",
+      "rationale": "The audited C0017 card asks for SLE6 interface convergence; the conditional lemma identifies the SLE6 driver only if two stopped Cardy martingales are supplied."
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+\section{Critical singularity and quantitative bounds}\label{sec:criticalrates}
+\subsection{Critical square estimates}\label{sec:critical}
+
+Fix an admissible microscopic scale $r_0$ large enough for all four- and six-arm events, and write $\alpha_j(R)=\alpha_j(r_0,R)$. Fixed changes of $r_0$ change these probabilities only by constant factors. The triangular-lattice four-arm exponent is
+\begin{equation}\label{eq:a4}
+ \alpha_4(R)=R^{-5/4+o(1)}.
+\end{equation}
+We use the square spectral lower-tail theorem of \cite[Theorem~1.1 and equation~(1.7)]{GPS}, together with \eqref{eq:a4}; the arm exponent is due to \cite{SW}. These imply, for every fixed $A>0$,
+\begin{equation}\label{eq:small}
+ \Prob(0<|\cS_R|\le A\ln R)\le R^{-1/2+o(1)}.
+\end{equation}
+Indeed, $\E|\cS_R|\asymp R^2\alpha_4(R)=R^{3/4+o(1)}$, and the lower-tail exponent in the normalized spectral size is $2/3+o(1)$. Substituting $A\ln R$ gives \eqref{eq:small}.
+
+We spell out the boundary estimate, since the local algebra only applies to complete interior wheels.
+
+\begin{lemma}\label{lem:boundary}
+Let $B_R=V_R\setminus V_R^\circ$ be a collar of fixed lattice width around the square boundary. Then
+\[
+ \Prob(\cS_R\cap B_R\ne\varnothing)
+ \le\E|\cS_R\cap B_R|\le C R^{-1}.
+\]
+\end{lemma}
+\begin{proof}
+By \eqref{eq:biasedinfluence}, at the fair product measure the one-point probabilities agree:
+\[
+ \Prob(v\in\cS_R)=\Prob(v\in\cP_R).
+\]
+Group collar sites by their dyadic distance $d\ge1$ to the nearest corner. Each group has $O(d)$ sites. Pivotality requires three half-plane arms from fixed scale to $d$, and two quarter-plane arms from scale $d$ to $R$. Use constant buffers to make the annuli disjoint. The side and corner estimates in \cite[equations~(4.12)--(4.13) and Section~7.2]{GPS} bound this probability by
+\[
+ C d^{-2}(d/R)^{1+\zeta}
+\]
+for some $\zeta>0$. At $d\asymp1$ or $d\asymp R$, omit the corresponding bounded-ratio annulus. Summation gives
+\[
+ \E|\cS_R\cap B_R|
+ \le C\sum_{d\le R\text{ dyadic}}d\,d^{-2}(d/R)^{1+\zeta}
+ \le C R^{-1}.
+\]
+Fixed changes in collar width only change the constant.
+\end{proof}
+
+The conformal crossing limit for a square gives $\E f_R\to0$, so $\epsilon_R\to0$; see \cite{Smirnov}. This limit, rather than an assumed finite-lattice symmetry, is enough here. Equations \eqref{eq:small} and Lemma~\ref{lem:boundary} imply $X_R\to\infty$ in probability.
+
+For the constant-factor estimate, we use the more detailed form of \cite[Proposition~4.1]{GPS}. With $\gamma_4(R)=R^2\alpha_4(R)^2$, that proposition bounds the probability of exactly $k$ occupied boxes of the fixed scale $r_0$ by $C g(k)\gamma_4(R)$, where $g$ can be chosen increasing and
+\[
+ g(k)\le\exp\{C\ln^2(k+2)\}.
+\]
+Each site or tile meets at most a fixed number $C_0$ of these boxes. Absorbing this bounded overlap into the constants and into the increasing subexponential function $g$, we obtain
+\begin{equation}\label{eq:gpssize}
+ \Prob(1\le|\cS_R|\le7n)\le Cn g(7n)\gamma_4(R).
+\end{equation}
+Combine this with Lemma~\ref{lem:fibers}. Since $\ln(ng(7n))=o(n)$, there are constants $C,\lambda>0$ such that
+\begin{equation}\label{eq:sizeresolved}
+ \Prob(F_R,\ |\cS_R|=n,\ E_R)
+ \le C\gamma_4(R)e^{-\lambda n},\qquad n\ge1.
+\end{equation}
+
+\begin{proof}[Proof of Theorems~\ref{thm:discrete} and \ref{thm:rate}]
+Sum \eqref{eq:sizeresolved} over $n\ge1$ and add the collar probability from Lemma~\ref{lem:boundary}. Since $R^{-1}=o(\gamma_4(R))$,
+\[
+ \Prob(K_R(\cS_R)=0,\ \cS_R\ne\varnothing)\le C\gamma_4(R).
+\]
+For the reverse inequality, retain the singleton supports in a fixed bulk subsquare. Monotonicity gives
+\[
+ \widehat f_R(\{v\})=\E\partial_vf_R
+ =\Prob(v\in\cP_R)\asymp\alpha_4(R)
+\]
+uniformly for these sites, by the bulk four-arm comparison. There are order $R^2$ such sites. A singleton contains no triangular face, so
+\[
+ \Prob(K_R(\cS_R)=0,\ \cS_R\ne\varnothing)
+ \ge c R^2\alpha_4(R)^2.
+\]
+This proves \eqref{eq:rate}. Adding the empty mass and using $\epsilon_R\to0$ proves the spectral assertion in Theorem~\ref{thm:discrete}. Lemma~\ref{lem:forest} gives the pivotal assertion. The event $\{K_R>0\}$ then proves convergence of total variation to one.
+\end{proof}
+
+\begin{corollary}\label{cor:conditionalsize}
+There are constants $C,\lambda>0$ such that
+\[
+ \Prob(|\cS_R|\ge m\mid F_R,\ \cS_R\ne\varnothing)
+ \le C e^{-\lambda m}+O\bigl(R^{-1}/\gamma_4(R)\bigr).
+\]
+In particular, these conditional size laws are asymptotically tight.
+\end{corollary}
+\begin{proof}
+Sum \eqref{eq:sizeresolved} over $n\ge m$, add the collar bound, and divide by the lower bound in Theorem~\ref{thm:rate}.
+\end{proof}
+
+\subsection{The sharp cost of low face density}\label{sec:lowdensity}
+
+The same rare-event scale governs every fixed face density below the local threshold. This strengthens both the triangle-free estimate and the qualitative density conclusion.
+
+\begin{theorem}\label{thm:lowdensity}
+For critical triangular-site square crossings and each fixed $0\le\delta<\astar/3$, put
+\[
+ F_R^\delta=\{K_R(\cS_R)\le\delta|\cS_R|\},\qquad
+ \gamma_4(R)=R^2\alpha_4(R)^2.
+\]
+There are $C_\delta,\lambda_\delta>0$ such that, for every integer $n\ge1$,
+\begin{equation}\label{eq:lowdensity_size}
+ \Prob(F_R^\delta,\ |\cS_R|=n,\ E_R)
+ \le C_\delta\gamma_4(R)e^{-\lambda_\delta n},
+ \qquad E_R=\{\cS_R\subseteq V_R^\circ\}.
+\end{equation}
+Consequently,
+\begin{equation}\label{eq:lowdensity_mass}
+ \Prob(F_R^\delta,\ \cS_R\ne\varnothing)
+ \asymp_\delta\gamma_4(R)=R^{-1/2+o(1)}.
+\end{equation}
+Moreover, for every integer $m\ge1$,
+\[
+ \Prob\bigl(|\cS_R|\ge m\mid F_R^\delta,\ \cS_R\ne\varnothing\bigr)
+ \le C_\delta e^{-\lambda_\delta m}+C_\delta R^{-1}/\gamma_4(R).
+\]
+\end{theorem}
+\begin{proof}
+Choose $\theta$ with $3\delta<\theta<\astar$, and put
+\[
+ \eta=\frac{1-3\delta/\theta}{14}>0,\qquad
+ d_\theta=D(\theta\Vert\astar)>0.
+\]
+On $E_R\cap\{|\cS_R|=n\}$ the seven center counts satisfy $\sum_cX_c=n$. On $F_R^\delta$, equation~\eqref{eq:Yfaces} gives $\sum_cY_c\le3\delta n$. There must therefore be a color $c$ such that
+\begin{equation}\label{eq:lowdensity_color}
+ X_c\ge\eta n,\qquad Y_c\le\theta X_c.
+\end{equation}
+Indeed, the classes with $X_c<\eta n$ contain fewer than $7\eta n$ centers in total. If every other class had $Y_c>\theta X_c$, then
+\[
+ \sum_cY_c>\theta(1-7\eta)n=\frac12(\theta+3\delta)n>3\delta n,
+\]
+a contradiction.
+
+For each color, use the disjoint fibers $(J,T)$ from the proof of Lemma~\ref{lem:fibers}. Write $k=|J|$ and $\ell=|T|$. The fiber fixes the included centers and the entire support outside their disjoint wheels. Thus the sequential conditional argument of Lemma~\ref{lem:bernoulli} applies within the fiber, and its Chernoff bound is
+\[
+ \Prob(Y_c\le\theta k\mid J,T)\le e^{-d_\theta k}
+\]
+for every positive-probability fiber. No conditioning on total support size is used in this inequality. Only fibers with $k\ge\eta n$ and $\ell+k\le n$ can contribute to \eqref{eq:lowdensity_color} at size $n$. Such a fiber has $k\ge1$, and every one of its supports has size between $\ell+k$ and $\ell+7k\le7n$. Summing over these fibers and over the seven colors gives
+\[
+ \Prob(F_R^\delta,\ |\cS_R|=n,\ E_R)
+ \le7e^{-\eta d_\theta n}\Prob(1\le|\cS_R|\le7n).
+\]
+By \eqref{eq:gpssize}, the right-hand side is at most $C\gamma_4(R)ng(7n)e^{-\eta d_\theta n}$. Since $\ln(ng(7n))=o(n)$, this proves \eqref{eq:lowdensity_size}, for instance with $\lambda_\delta=\eta d_\theta/2$ after increasing $C_\delta$ to cover the finitely many smaller $n$.
+
+Sum over $n\ge1$ and use Lemma~\ref{lem:boundary}; its error $O(R^{-1})$ is $o(\gamma_4(R))$. This proves the upper bound in \eqref{eq:lowdensity_mass}. Every singleton belongs to $F_R^\delta$, including when $\delta=0$, so the bulk singleton argument in the proof of Theorem~\ref{thm:rate} gives its lower bound. Summing \eqref{eq:lowdensity_size} over $n\ge m$, adding the collar error, and dividing by that lower bound proves the conditional estimate.
+\end{proof}
+
+\subsection{The total variation deficit}\label{sec:TV}
+
+Write $\mu_R$ and $\nu_R$ for the discrete spectral and pivotal laws. Their overlap is
+\begin{equation}\label{eq:overlap}
+ 1-\TV(\mu_R,\nu_R)=\sum_A\min\{\mu_R(A),\nu_R(A)\}.
+\end{equation}
+We first construct shared mass on identical singleton supports.
+
+\begin{lemma}\label{lem:singlepiv}
+Uniformly for sites $v$ in a fixed bulk subsquare,
+\[
+ \Prob(\cP_R=\{v\})\ge c\alpha_6(R),
+\]
+where $\alpha_6(R)$ denotes the six-arm probability from fixed microscopic scale to $R$.
+\end{lemma}
+\begin{proof}
+Prescribe six vertex-disjoint arms from a fixed microscopic neighborhood of $v$ to separated boundary intervals, in cyclic order: two open arms to the left, one closed arm to the top, two open arms to the right, and one closed arm to the bottom. The color word is $OOCOOC$. Polychromatic color-order comparison and arm separation give probability at least $c\alpha_6(R)$ for this event with prescribed inner and outer landing intervals; see \cite[Theorem~11, equation~(4.8), Proposition~12, and Proposition~20, equation~(5.2)]{Nolin}. Use the fenced, well-separated version of the arm event. Extensions to the six boundary intervals take place in disjoint corridors of fixed aspect ratio, each with one prescribed color; the locally monotone gluing estimate in \cite[Proposition~12]{Nolin} changes the probability by a constant factor.
+
+Inside the fixed microscopic neighborhood, prescribe six disjoint corridors joining the arms in cyclic order to the six neighbors of $v$, colored $OOCOOC$, and set $v$ open. Choose the neighborhood large enough for these finitely many corridors. This fixed assignment costs a positive constant, independent of $R$ and the bulk site. The prescribed inner landing intervals allow it to be joined to the six exterior arms.
+
+The four open arms form two left--right paths whose only common random site is $v$. Closing $v$ joins the two closed arms to a top--bottom closed path, so $v$ is pivotal. Every other site is avoided by at least one of the two original open crossings and cannot be pivotal. Thus the constructed event implies $\cP_R=\{v\}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:TVrate}]
+Let $O_R$ be the nonempty part of the sum in \eqref{eq:overlap}. By the pivotal triangle prohibition, for any integer $m\ge1$,
+\[
+ O_R\le\nu_R(1\le|\cP_R|\le m)
+       +\mu_R(F_R,\ |\cS_R|>m).
+\]
+The pivotal analogue of the fixed-scale box bound, given in \cite[Remark~4.6]{GPS}, yields
+\[
+ \nu_R(1\le|\cP_R|\le m)\le C m g(m)R^2\alpha_6(R),
+\]
+where $g(m)\le\exp\{C\ln^2(m+2)\}$. The second term is at most $CR^{-1}+q^{m/7}$ by the collar estimate and \eqref{eq:noface}. Take $m=\lceil A\ln R\rceil$ with $A$ sufficiently large. Since
+\[
+ R^2\alpha_6(R)=R^{-11/12+o(1)},
+\]
+we obtain $O_R\le R^{-11/12+o(1)}$.
+
+For the lower bound, at every site in a fixed bulk subsquare,
+\[
+ \mu_R(\{v\})\ge c\alpha_4(R)^2,\qquad
+ \nu_R(\{v\})\ge c\alpha_6(R)
+\]
+by the singleton spectral identity and Lemma~\ref{lem:singlepiv}. The ratio $\alpha_4(R)^2/\alpha_6(R)=R^{5/12+o(1)}$ tends to infinity. Summing the minima over order $R^2$ bulk sites gives
+\[
+ O_R\ge cR^2\alpha_6(R)=R^{-11/12+o(1)}.
+\]
+
+Finally, $\nu_R(\varnothing)$ is bounded below uniformly: require open crossings in two disjoint horizontal strips of fixed aspect ratio. RSW and independence give positive probability, and two disjoint crossings preclude a pivotal. Since $\mu_R(\varnothing)=\epsilon_R\to0$, the empty contribution to \eqref{eq:overlap} is exactly $\epsilon_R$ for all sufficiently large $R$. This proves the theorem.
+\end{proof}
+
+\section{Local criteria and scope extensions}\label{sec:localscope}
+\subsection{An abstract local criterion}\label{sec:criterion}
+
+The preceding proof separates a finite-dimensional condition from spectral-size estimates. The same argument gives a useful criterion for other connection functions.
+
+\begin{proposition}\label{prop:criterion}
+Suppose a sequence of normalized real functions $f_n$ on finite product cubes has tested centers $V_n^\circ$. For each center $v$, suppose there are a finite block $W_v\ni v$ and a local diagonal Fourier projection $T_v\le P_v$ onto an event of the support in $W_v$, with a uniform constant $0<a\le1$, such that
+\[
+ \|T_vAf_n\|_2^2\ge a\|P_vAf_n\|_2^2
+\]
+for every exterior linear operator $A$. Assume the blocks can be partitioned into $C$ disjoint families, where $C$ is independent of $n$. Let $Y_n$ count successful local tests and let $X_n=|\cS_{f_n}\cap V_n^\circ|$. Then
+\[
+ \Prob(Y_n=0,\ X_n\ge m)\le(1-a)^{m/C}.
+\]

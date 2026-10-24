@@ -1,0 +1,172 @@
+{
+  "worker": "064",
+  "task": "Matrix Spencer primary-source scope and status audit",
+  "accessed_date_utc": "2026-09-14",
+  "session_baseline": "8861ffde776a1dbf842e918590cc1003492ff296",
+  "preservation": "Bounded factual extracts and worker annotations only; no complete external paper is redistributed.",
+  "sources": [
+    {
+      "id": "AS_AUGUST",
+      "authors": [
+        "Emrullah Akbas",
+        "Suvrit Sra"
+      ],
+      "title": "A Proof of the Matrix Spencer Conjecture",
+      "urls": [
+        "https://arxiv.org/abs/2608.28816",
+        "https://arxiv.org/html/2608.28816v1",
+        "https://arxiv.org/pdf/2608.28816"
+      ],
+      "version_observed": "v1",
+      "submitted_utc": "2026-08-28T19:28:50Z",
+      "pages_reported": 47,
+      "evidence": "Abstract page and full HTML opened successfully; parsed PDF text was also available.",
+      "exact_short_excerpt": "There exists a universal constant",
+      "excerpt_locator": "Theorem 1.2; HTML displayed lines 96-102",
+      "mathematical_extracts": [
+        {
+          "locator": "Theorem 1.2",
+          "assumptions": "n real symmetric n-by-n matrices, each operator norm at most one",
+          "conclusion_latex": "\\min_{x\\in\\{\\pm1\\}^n}\\|\\sum_{i=1}^n x_i A_i\\|_{op}\\le C\\sqrt n"
+        },
+        {
+          "locator": "Theorem 1.3",
+          "assumptions": "1 <= n <= d; real symmetric d-by-d operator-norm contractions; independent standard real Gaussian coefficients; c_* > 0",
+          "conclusion_latex": "\\Pr(\\|\\sum_i g_i A_i\\|_{op}\\le\\kappa(c_*)\\sqrt n(1+\\log(2d/n))^2)\\ge e^{-c_* n}"
+        }
+      ],
+      "inspected_locations": [
+        "Theorems 1.2-1.4",
+        "Section 3.4 parameter choices",
+        "Section 3.5 final partial-coloring proof",
+        "Lemma 3.10 and Appendix B.7",
+        "Appendix B.8",
+        "Proposition 3.7 statement and displayed curvature argument"
+      ],
+      "status_boundary": "The stated square claim and its scope are confirmed. The entire analytical proof was not independently verified.",
+      "current_metadata": "Only v1 appeared in submission history; no paper-specific withdrawal or journal-reference notice was observed. This is not evidence of community acceptance."
+    },
+    {
+      "id": "DJR",
+      "authors": [
+        "Daniel Dadush",
+        "Haotian Jiang",
+        "Victor Reis"
+      ],
+      "title": "A New Framework for Matrix Discrepancy: Partial Coloring Bounds via Mirror Descent",
+      "urls": [
+        "https://arxiv.org/abs/2111.03171",
+        "https://arxiv.org/pdf/2111.03171"
+      ],
+      "version_observed": "v1",
+      "submitted_utc": "2021-11-04T21:44:53Z",
+      "pages_reported": 24,
+      "evidence": "Abstract metadata and parsed primary PDF text opened.",
+      "mathematical_extracts": [
+        {
+          "locator": "Conjecture 1.2, PDF zero-based page 2",
+          "assumptions": "d >= sqrt(n); n real d-by-d operator-norm contractions",
+          "conclusion_latex": "\\operatorname{disc}_{op}\\lesssim\\sqrt{n\\max(1,\\log(d/n))}",
+          "note": "Worker renamed the paper's matrix dimension m to d."
+        },
+        {
+          "locator": "Theorem 3.1, PDF zero-based page 10",
+          "assumptions": "Symmetric convex set D in R^m, Gaussian measure at least 2^(-alpha*m), current fractional coloring in (-1,1)^m",
+          "conclusion": "A randomized polynomial-time procedure gives a bounded-discrepancy increment, remains in the cube, and freezes at least half the coordinates. The source permits convex sets, so an unbounded discrepancy cylinder is not excluded."
+        },
+        {
+          "locator": "Corollary 1.8, PDF zero-based page 5",
+          "conclusion_latex": "\\exists (A_i),\\ \\|A_i\\|_F\\le1,\\quad \\operatorname{disc}_{op}\\gtrsim\\sqrt{\\min(d,n)}"
+        }
+      ]
+    },
+    {
+      "id": "AS_JUNE",
+      "authors": [
+        "Emrullah Akbas",
+        "Suvrit Sra"
+      ],
+      "title": "An Algebraic Matrix Spencer Theorem",
+      "url": "https://arxiv.org/abs/2606.16005",
+      "version_observed": "v1",
+      "submitted_utc": "2026-06-14T20:19:35Z",
+      "evidence": "Primary abstract and metadata opened; full-text attempts failed.",
+      "factual_extract": "The abstract's structured result concerns contractions in a common finite-dimensional complex C*-algebra with intrinsic complex dimension O(n), and gives O(sqrt(n)) discrepancy."
+    }
+  ],
+  "archive_sources": [
+    {
+      "path": "index/master_index.tex",
+      "url": "https://github.com/yspennstate/math-open-problems/blob/8861ffde776a1dbf842e918590cc1003492ff296/index/master_index.tex",
+      "blob_sha1": "9d19d3bb20e629a1a784ed994120845e08d0f5b8",
+      "cache": "computations/005_sources/index_master_index.tex",
+      "locator": "Paper 12 entry, cached lines 172-208",
+      "annotation": "Structured finite-lift theorem, full-ball entropy obstruction, and June 2026 algebraic-stage update. The inspected entry has no August proof integration."
+    },
+    {
+      "path": "paper12/universal_family_obstruction.tex",
+      "url": "https://github.com/yspennstate/math-open-problems/blob/8861ffde776a1dbf842e918590cc1003492ff296/paper12/universal_family_obstruction.tex",
+      "blob_sha1": "4cc72273e3952a1b8713cb0964cb1db719307592",
+      "cache": "computations/005_sources/universal_family_obstruction.tex",
+      "locator": "Opening section; universal-reduction definition; Proposition prop:masalift",
+      "annotation": "Contains both square/general Matrix Spencer discussion and a distinct fixed-positive-compression assertion refuted by workers 005/043."
+    },
+    {
+      "path": "paper12/matrix_spencer_lifts.tex",
+      "url": "https://github.com/yspennstate/math-open-problems/blob/8861ffde776a1dbf842e918590cc1003492ff296/paper12/matrix_spencer_lifts.tex",
+      "blob_sha1": "639a8a19944c172a9205984acdee43ab7f1c8c87",
+      "bytes_from_tree": 1462113,
+      "annotation": "Worker 064 did not fetch or read this complete manuscript. Its inventory is established here only through the pinned index/addendum. Worker 005 reports an earlier empty-content fetch."
+    }
+  ],
+  "access_failures": [
+    {
+      "url": "https://arxiv.org/html/2606.16005v1",
+      "action": "open",
+      "result": "Internal Error",
+      "consequence": "No full June paper reading claimed."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2606.16005",
+      "action": "open",
+      "result": "Internal Error",
+      "consequence": "Only June primary abstract used."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2608.28816",
+      "action": "screenshot page 1",
+      "result": "Unable to resolve screenshot: content type is not application/pdf and web screenshot is not enabled",
+      "consequence": "Parsed PDF text and HTML accessible; no rendered-page inspection claimed."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2111.03171",
+      "action": "screenshot page 2",
+      "result": "Unable to resolve screenshot: content type is not application/pdf and web screenshot is not enabled",
+      "consequence": "Parsed PDF text used; no rendered-page inspection claimed."
+    }
+  ],
+  "search_limits": {
+    "broad_queries": [
+      "\"2608.28816\" proof correction",
+      "\"Akbas\" \"Sra\" \"Matrix Spencer\" September 2026",
+      "\"Matrix Spencer\" \"Conjecture 1.1\""
+    ],
+    "restricted_queries": [
+      "\"2608.28816\" \"correction\"",
+      "\"Matrix Spencer\" \"September\" \"2026\"",
+      "\"A Proof of the Matrix Spencer Conjecture\" \"withdrawn\""
+    ],
+    "restricted_domains_requested": [
+      "arxiv.org",
+      "tum.de",
+      "suvrit.de"
+    ],
+    "observed": "Some search results were irrelevant despite requested domains. Multi-paper arXiv listing snippets mixed withdrawal language with Matrix Spencer search terms.",
+    "disposition": "No withdrawal inferred from snippets. On opening both listings, find did not locate identifier 2608.28816; the directly opened paper-specific abstract remained v1 with no withdrawal notice.",
+    "listing_urls_checked": [
+      "https://www.arxiv.org/list/math.PR/recent?show=250&skip=82",
+      "https://www.arxiv.org/list/math/recent?show=2000&skip=510"
+    ],
+    "conclusion": "Bounded status check only; absence of a retrieved correction is not proof of correctness, exhaustive search, or consensus."
+  }
+}

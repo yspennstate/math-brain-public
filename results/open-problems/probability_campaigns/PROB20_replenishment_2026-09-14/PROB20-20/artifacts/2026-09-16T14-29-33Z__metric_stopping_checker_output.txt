@@ -1,0 +1,43 @@
+PROB20-20 exact metric/stopping checker
+uniform-prefix
+  states=1001
+  Z=1001
+  Emax_over_n=736/715
+  c_Einv_tau=5171/10010
+  c_over_Etau=3003/6430
+  Etau=1286/1001
+  decimal_chain=1.029370629371 >= 0.516583416583 >= 0.467029548989
+staircase
+  states=1001
+  Z=37573038560
+  Emax_over_n=1301797446/1174157455
+  c_Einv_tau=6106836429/11741574550
+  c_over_Etau=704494473/1495757758
+  Etau=1495757758/1174157455
+  decimal_chain=1.108707729493 >= 0.520103705256 >= 0.470995031938
+irregular
+  states=1001
+  Z=133939740000
+  Emax_over_n=48204466/33484935
+  c_Einv_tau=1577556/2937275
+  c_over_Etau=2232329/4529995
+  Etau=2717997/2232329
+  decimal_chain=1.439586667855 >= 0.537081478581 >= 0.492788402636
+counterexample_first_staircase_scan
+  tested_prefixes=750
+  mean_admissible_prefixes=419
+  best_params_A_B_C_D=(64, 16, 1, 1)
+  best_prefix_mean=213/121 (1.760330578512)
+  best_exact_Emax_over_n=488264862821/540964766418 (0.902581634020)
+  best_partition_Z=180321588806
+  asymptotic_inference=NONE (finite prefix stress test only)
+counterexample_first_concentrated_fragment_scan
+  tested_prefixes=20
+  mean_admissible_prefixes=16
+  best_params_A_B=(1000, 500)
+  best_prefix_mean=1567/839 (1.867699642431)
+  best_exact_Emax_over_n=31901419785112563147452262457289/78354513116114559823765994133905 (0.407142084309)
+  best_partition_Z=705190618045031038413893947205145
+  embeddability_note=finite prefix can be extended by a sparse tail w_Nj=2^(-j)/N_j^2 with N_j growing fast, giving radius one and arbitrarily small added first moment
+  asymptotic_inference=NONE (finite prefix stress test only)
+PASS

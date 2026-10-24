@@ -1,0 +1,7 @@
+# Scoped independent reconstructions
+
+A002-ACTIVATED-FULL-AFFINE-RESET-LEDGER@1: HOLDS at RESET_LEDGER Sections1--2 equations1--5. DERIVATION Section1 reconstructs the mixed-basis optimum by threshold ranks and physical directional disagreements, then applies it to every original terminal and subtracts exact scalar entropy profiles. k>=2 is essential. Deferred control redemption equations7--8 and the source census are read context, outside this acceptance. No substantive repair supplied; A005 remains an independent reviewer at this scope.
+
+A052-RANK-RELEASE-ORIGINAL-PAIR-PAYMENT@1: HOLDS at RANK_PAIR_PROOF Sections1--2 rank ownership and exact bank. Integrating above-threshold basis counts proves both inequalities and greedy equality, with ties and rank0. Independent actual even-hyperplane guards d3,d5 reproduce one gain of1/2, versus false dependent-swap totals3/2,5/2. Source Sections3--5 all-k curvature and original15/4 payment are used as motivation and explicitly re-instantiated by our different tensor-before-activation construction, not accepted here as a whole claim. No repair supplied.
+
+A051 current quantitative upper budgets and A055 latest weak hidden-pair reduction were read as context, not newly independently accepted. Earlier accepted affine-basis characterization is consumed. No source finite-check totals are added to A005 totals. Independent.py uses separate direct characters and physical substitution; it is different-implementation replay by A005, not independent-agent acceptance of the new theorem.

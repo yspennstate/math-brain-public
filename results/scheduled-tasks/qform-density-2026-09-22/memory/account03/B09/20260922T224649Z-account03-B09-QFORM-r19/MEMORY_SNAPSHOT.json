@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260922T224649Z-account03-B09-QFORM-r19",
+  "control_commit_start": "4c19c94352cb257be85398a8b1321626dd1d10bd",
+  "control_commit_prepublication": "6ce6fc6372486e2d5170f613d60a26c002efe167",
+  "control_revision": "2026-09-22.15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "claim": "one-dimensional product projection density cap",
+      "scope": "for a nonzero vector q on an original-coordinate bank, ||p_<q,X>||_infinity <= sqrt(2)/||q||_2 under independent coordinate densities capped by one",
+      "source": "source-pinned in prior account03/B09 reports and compatible QFORM literature worker outputs"
+    },
+    {
+      "claim": "QFORM-PAIRLOG-LP-SCHUR-RESIDUAL-v1",
+      "scope": "for an invertible indefinite physical endpoint pair E and exact Schur residual R with p_R in L^3, ||p_Q||_infinity <= 7(pi/12)^(1/7)|det E|^(-3/14)sigma_min(E)^(-2/7)||p_R||_3^(3/7)",
+      "source": "yspennstate/math-open-problems@77b5307b899cf99953a7b6c81bb41f94c92ff53d:proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/B09-20260922T224934Z-r18/REPORT.md"
+    }
+  ],
+  "partner": {
+    "designated": "account04/B09",
+    "completed_result_found": false,
+    "action": "continued asynchronously; no partner theorem fabricated"
+  },
+  "result": {
+    "status": "SUPPORTING_THEOREM_PROVED",
+    "theorem_ids": [
+      "QFORM-PRODUCT-L2-v1",
+      "QFORM-FOUR-BANK-HYPERBOLIC-CONVOLUTION-v1"
+    ],
+    "core_bounds": [
+      "||p_(XY)||_2 <=4 sqrt(N_X N_Y)",
+      "||p_(2aUV+2bWR+affine)||_infinity <=8 sqrt(N_U N_V N_W N_R/|ab|)",
+      "for four disjoint original-coordinate banks, ||p_T||_infinity <=16/sqrt(s1 s2)"
+    ],
+    "peer_composite_bound": "using account01/B09 pair-log L3 endpoint: ||p_Q||_infinity <12.764 D^(-3/14) kappa^(-2/7) (s1 s2)^(-1/7)",
+    "stress_family": "four flat disjoint size-m banks, two hyperbolic cross blocks, spectrum {-1,-1,1,1}, physical entries 1/m, uniform density bound <=16",
+    "full_target_status": "OPEN",
+    "continuity_status": "standalone four-bank block continuous; general outside-conditioned scope only essential boundedness claimed"
+  },
+  "outputs": {
+    "canonical_math_commit": "e8c7ac4f0294a028d4bc883d1e4bf1c805e11085",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260922T224649Z-account03-B09-QFORM-r19/REPORT.md",
+    "verify_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260922T224649Z-account03-B09-QFORM-r19/verify.py",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260922T224649Z-account03-B09-QFORM-r19/CHECKS.txt",
+    "handoff_commit": "9c0b0b76ba86c5914cd236efbd511389385dd3e9"
+  },
+  "unresolved_implication": "QFORM-INDEFINITE-CURVATURE-DISJOINT-SPLIT-OR-PAID-EXIT-v1",
+  "next_step": "From the remaining one-strong-cross geometry, extract a quantitative second bilinear interaction on two additional disjoint original-coordinate subbanks, or prove the strongly overlapping survivor falls into an existing ridge, endpoint-pair, or aligned-bank paid mechanism."
+}

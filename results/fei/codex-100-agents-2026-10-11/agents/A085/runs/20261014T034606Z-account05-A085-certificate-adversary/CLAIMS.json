@@ -1,0 +1,110 @@
+[
+  {
+    "claim_id": "A073-NONZERO-ERASURE-BINARY-REMAINDER",
+    "version": 1,
+    "exact_statement": "For every even integer d>=2, put delta=2^-d, t=2^(-d/2), b(y)=(-1)^(sum_j y_(2j-1)y_(2j)) on 0/1 labels, q(u,v)=-1 only at (1,1), and F_d=b(y)+1_(y=0)(q(u,v)-1). Every Fourier atom of F_d is positive. Each query i in {u,v} has e_i=delta/2 and positive true erasure. Retaining only the other pair coordinate gives complete derivative/reference laws (1/2,1/2) and (1-e_i,e_i). With N_+=(2^d+2^(d/2))/2,N_-=(2^d-2^(d/2))/2 and D0=sum_sigma N_sigma delta log2[(1-delta/2)/(1-sigma t+delta/2)], the full KL equals binary KL plus D0/2 and the influence-weighted quotient loss is L_i=e_i D0/2. Uniformly 0<L_i/e_i<=log2(7/5)/2<1/4-1/256, certified by 7^128<2^63*5^128. The two losses together are <delta/4 and <Inf_(y1)/10 if that physical reserve is dedicated only to these losses. Nevertheless M_i/e_i>d/2+3/4. Each core influence equals (1+delta)/2, I(F_d)=d/2+(d/2+1)delta, and H(F_d)/I(F_d)<=2+4/d<=4. No universal conditional partition, terminal payment, or FEI conclusion is asserted.",
+    "hypotheses": [
+      "Actual uniform-cube Boolean signs; entropy and KL in bits; ordinary physical flip influence",
+      "Even d>=2, the specified quadratic bent core and two-bit gate on disjoint physical coordinates",
+      "Complete normalized reference laws including derivative-free mass; no reference conditioning on derivative support",
+      "Dedicated reserve inequality is only a partial ledger for the two stated quotient losses; no other charges or free global reserve are asserted"
+    ],
+    "statement_sha256": "cad6427336999a42e9519d546b6a1d38f42934ea5fe34a4270bfd2accd1a18ed",
+    "contributors": [
+      "A073"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261014T023508Z-account05-A073-certified-logarithms\\DERIVATION.md",
+      "locator": "Nonzero-erasure Boolean boundary family; Certified logarithms",
+      "validation": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261014T023508Z-account05-A073-certified-logarithms\\out\\SUMMARY.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261014T023508Z-account05-A073-certified-logarithms\\out\\UNIFORM_MARGIN.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A098",
+        "timestamp": "2026-10-14T02:53:46.097172+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "scope": "Every clause of A073-NONZERO-ERASURE-BINARY-REMAINDER@1 for all even d>=2, including the dedicated remainder-only reserve, positive erasure, retained large row price and bounded H/I; no universal partition or free terminal bank.",
+        "method": "Independent signed character and full conditional-channel reconstruction; own exact Walsh versus analytic amplitudes and physical flips; complete KL prime-log cancellation, fixed rational log enclosures and integer margin",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A098\\runs\\20261014T024504Z-account05-A098-resource-reallocation\\DERIVATION.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A098\\runs\\20261014T024504Z-account05-A098-resource-reallocation\\out\\REVIEW_CHECK.json",
+        "source_statement_sha256": "cad6427336999a42e9519d546b6a1d38f42934ea5fe34a4270bfd2accd1a18ed",
+        "reviewer_contributed_repair": false
+      },
+      {
+        "reviewer": "A085",
+        "timestamp": "2026-10-14T03:56:28.901619+00:00",
+        "verdict": "ACCEPT_AT_FULL_STATED_SCOPE_NO_REPAIR",
+        "method": "Direct character/physical-edge reconstruction; complete conditional-law prime-log identities; all-even-d proof plus certified first false zero",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261014T034606Z-account05-A085-certificate-adversary\\PROOF.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261014T034606Z-account05-A085-certificate-adversary\\out\\audit.json",
+        "reviewer_contributed_repair": false,
+        "scope": "Original complete-normalizer family lemma and remainder-only allocation; no arbitrary-row terminal payment. A085 sharper refinement is a separate author claim."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A098_AND_A085_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A001",
+      "A085",
+      "A099",
+      "B15",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A085-QUADRATIC-CONDITIONAL-REMAINDER-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For the actual A073 bent-core/one-vertex two-bit gate Boolean family F_d, every even d>=2, delta=2^-d and e=delta/2, retaining only the partner occupancy in either queried pair row gives D_full=D_binary+D0/2 and weighted loss L_i=eD0/2. Uniformly (24/169)delta<D0<(15/16)delta. The two losses together satisfy 0<L_u+L_v<(15/32)delta^2<(3/64)Inf_(y1), where Inf_(y1)=(1+delta)/2; this dedicated fraction pays only these two losses, once. The frozen naive binary64 formula first returns zero at even d=104 in the ordered range 2..1080 although an exact rational enclosure is positive, and directly squared gate atom masses first underflow at d=538. These numerical failures do not refute A073@1. Its retained M_i/e grows with d and no universal terminal-core or FEI payment follows.",
+    "hypotheses": [
+      "Actual specified Boolean family and physical coordinates; uniform cube; bits and ordinary influence",
+      "Even d>=2; complete derivative and reference laws, no derivative-support conditioning",
+      "Dedicated 3/64 core fraction is only a partial reserve for both quotient losses; no other debit claimed",
+      "Numerical minima refer only to frozen Python binary64 formula, fixed even range and recorded platform; analytic bounds cover all even d"
+    ],
+    "statement_sha256": "186a17217f620853161e2c4b19d0a1f44cc30a4a6207368e99c98722cbefefbf",
+    "contributors": [
+      "A085"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261014T034606Z-account05-A085-certificate-adversary\\PROOF.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261014T034606Z-account05-A085-certificate-adversary\\out\\audit.json",
+      "float_witness": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261014T034606Z-account05-A085-certificate-adversary\\CERTIFICATE_FAILURE.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A073",
+        "verdict": "PENDING_PRIMARY"
+      },
+      {
+        "reviewer": "A096",
+        "verdict": "PENDING"
+      },
+      {
+        "reviewer": "A094",
+        "verdict": "PENDING_ALTERNATE"
+      }
+    ],
+    "status": "NARROW_CERTIFICATE_AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Frozen naive binary64 positive-remainder computation is sign-exact at every even dimension"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A073",
+      "A096",
+      "A001",
+      "A099",
+      "B17",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,232 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\T}{\mathbb T}
+\title{The six-cell case of Khetan's periodic orbit-closure question}
+\author{R7-02 research draft}
+\date{18 September 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Khetan (2026) proved the periodic orbit-closure statement for exact full-affine-span clusters of prime-square cardinality, constructed a counterexample of cardinality eight, and left cardinality six open. We give a proof candidate for the six-cell case. The proof follows Khetan's spectral dichotomy. If two transverse spectral kernels contain infinitely many common dilation zeros, the restriction of the ordinary mask to either kernel circle shows that every corresponding parallel section has at least two points. With six points the section-incidence graph is either $K_{2,3}$ or $C_6$; a common phase excludes $C_6$. Full affine span then turns the surviving configuration into a unimodular $3\times2$ product whose factors are complete residue systems modulo $3$ and $2$. A direct finite-fibre argument, specific to this $3\times2$ endpoint, makes every such product tiling coordinate-periodic and uses neither a bi-infinite formal-series cancellation nor a composite-cardinality extension of Khetan's arithmetic lemma. The at-most-one-rich spectral branch is Khetan's cardinality-free second case with the dilation indices changed to integers coprime to $6$.
+\end{abstract}
+
+\section{Source statement and imported facts}
+Let $F\subset\Z^2$ be finite. An $F$-tiling is a set $T\subset\Z^2$ such that $\Z^2=F\oplus T$, equivalently
+\[
+  \sum_{a\in F}1_T(v-a)=1 \qquad(v\in\Z^2).
+\]
+The cluster $F$ is exact if it admits such a tiling, and has full affine span if $\langle F-F\rangle=\Z^2$. A tiling is one-periodic if it has a nonzero period.
+
+We use the following results exactly in the forms proved or quoted in Khetan, \emph{A Counterexample to Nivat's Conjecture for a Non-Convex Window of Full Affine Span}, arXiv:2607.09830v2 (2026):
+\begin{enumerate}
+\item Theorem 3.12 (dilation): an $F$-tiling is also an $\alpha F$-tiling for every $\alpha$ coprime to $|F|$;
+\item the spectral formulation and Theorem 3.16, placing the relevant spectral support in a finite union of character kernels;
+\item Lemma 3.1, the irrational-phase vanishing criterion;
+\item Theorem 3.11, which transfers periodicity of the origin cylinder to almost-every tiling in the chosen invariant measure;
+\item Lemma 3.6, the row/column fibre decomposition of a product tiling;
+\item Corollary 3.4, which says that if a one-dimensional tile has prime cardinality $p$ and difference gcd one, then every tiling by it is one coset of $p\Z$.
+\end{enumerate}
+None of these imported statements assumes the desired six-cell conclusion.
+
+\section{A rich-direction lemma}
+Fix an exact six-cell cluster $F$ and an $F$-tiling $T$. Let $X$ be the orbit closure of $T$, let $\mu$ be an ergodic invariant probability measure on $X$, and let $\nu$ be the spectral measure of the origin cylinder as in Khetan. The dilation lemma gives, for $\nu$-almost every $\xi\ne0$,
+\begin{equation}\label{eq:dilationzero}
+ \sum_{a\in F}\chi_{\alpha a}(\xi)=0
+ \qquad\text{for every }\alpha\in\Z\text{ with }\gcd(\alpha,6)=1.
+\end{equation}
+Take a minimal finite set $\Delta\subset\Z^2\setminus\{0\}$ with
+\[
+ \operatorname{supp}\nu\subseteq\bigcup_{g\in\Delta}\ker\chi_g.
+\]
+As in Khetan's minimal-cover argument, distinct members of $\Delta$ point in distinct directions. Call $g\in\Delta$ \emph{rich} if infinitely many points of $\ker\chi_g$ satisfy all equations \eqref{eq:dilationzero}.
+
+\begin{lemma}[No singleton section in a rich direction]\label{lem:nosingleton}
+Let $g=nh$ be rich, with $h\in\Z^2$ primitive. Every nonempty section of $F$ by a line parallel to $g$ contains at least two points. More precisely, there is a root of unity $\zeta_g$ such that for every nonempty such section $E$,
+\[
+ \sum_{a\in E}\zeta_g^{\langle a,h\rangle}=0.
+\]
+The same $\zeta_g$ works for all parallel sections.
+\end{lemma}
+\begin{proof}
+Khetan's description of $\ker\chi_{nh}$ writes it as a finite union of circles
+\[
+ \{rh+t h^\perp:t\in\mathbb R\}\pmod{\Z^2},
+\]
+where $r=c/d$ is rational. Since $g$ is rich, infinitely many common zeros lie on one such circle. Use only $\alpha=1$ in \eqref{eq:dilationzero}. As a Laurent polynomial in $z=e^{2\pi i t}$,
+\[
+ \sum_{a\in F}e^{2\pi i r\langle a,h\rangle}z^{\langle a,h^\perp\rangle}
+\]
+has infinitely many unit-circle zeros, hence vanishes identically. Grouping coefficients by the value of $\langle a,h^\perp\rangle$ groups exactly the sections parallel to $h$, hence parallel to $g$. Thus every such section $E$ satisfies
+\[
+ \sum_{a\in E}e^{2\pi i(c/d)\langle a,h\rangle}=0.
+\]
+Taking $\zeta_g=e^{2\pi i c/d}$ proves the phase identity. A singleton phase sum is nonzero, so no nonempty section is a singleton.
+\end{proof}
+
+\section{Two rich directions}
+Assume $g_0,g_1\in\Delta$ are two rich directions. Let the nonempty $g_0$-sections be the left vertices and the nonempty $g_1$-sections the right vertices of a bipartite incidence graph $G$. Each point of $F$ is the unique intersection of one line of each family and hence an edge of $G$. Since the directions are transverse, $G$ is simple and has exactly six edges. By Lemma~\ref{lem:nosingleton}, every vertex has degree at least two.
+
+\begin{lemma}[Six-edge incidence classification]\label{lem:incidence}
+The incidence graph is either $K_{2,3}$ (up to exchanging the sides) or a six-cycle $C_6$ with three vertices on each side.
+\end{lemma}
+\begin{proof}
+Each side has at least two vertices because full affine span excludes containment in one line. Since every degree is at least two and there are six edges, each side has at most three vertices. A degree-four vertex would require at least four vertices on the opposite side, impossible. Thus all degrees are two or three. Two vertices on both sides allow at most four edges. If the side sizes are $2$ and $3$, all six possible edges occur and $G=K_{2,3}$. If both side sizes are $3$, every degree is two, and a simple $2$-regular bipartite graph on three plus three vertices is a single $C_6$.
+\end{proof}
+
+\begin{lemma}[The six-cycle is impossible]\label{lem:noc6}
+The incidence graph cannot be $C_6$.
+\end{lemma}
+\begin{proof}
+Suppose it is $C_6$. Label the three $g_0$-sections $R_1,R_2,R_3$ and the three $g_1$-sections $C_1,C_2,C_3$ so that $R_i$ misses $C_i$ and contains the other two intersections. Let $h$ be the primitive direction of $g_0$ and let $\zeta=\zeta_{g_0}$ be furnished by Lemma~\ref{lem:nosingleton}.
+
+For two transverse families of parallel lines, their intersections have affine product coordinates. Consequently there are real offsets $u_i$ depending only on the row and $v_j$ depending only on the column such that
+\[
+ \langle R_i\cap C_j,h\rangle=u_i+v_j
+\]
+whenever the intersection belongs to $F$. Put $z_j=\zeta^{v_j}\ne0$. The row factor $\zeta^{u_i}$ cancels from the vanishing equation of Lemma~\ref{lem:nosingleton}, leaving, after relabelling,
+\[
+ z_2+z_3=0,\qquad z_1+z_3=0,\qquad z_1+z_2=0.
+\]
+The first two imply $z_1=z_2$, while the third then gives $2z_1=0$, impossible over $\mathbb C$ because $z_1\ne0$.
+\end{proof}
+
+Consequently $G=K_{2,3}$. Let $u,v\in\Z^2$ be primitive direction vectors of the two line families. Choosing one occupied intersection as origin, all six intersections have the form
+\begin{equation}\label{eq:productcoords}
+ F=x_0+\{a u+b v:a\in A,\ b\in B\},
+\end{equation}
+where, up to swapping the factors, $|A|=3$ and $|B|=2$. Since differences of lattice points on a primitive-direction line are integral multiples of that primitive vector, $A,B\subset\Z$.
+
+Put $d_A=\gcd(A-A)$ and $d_B=\gcd(B-B)$. Differences inside a fixed column generate $d_A\Z u$, and differences inside a fixed row generate $d_B\Z v$, so
+\[
+ \langle F-F\rangle=d_A\Z u+d_B\Z v.
+\]
+The latter lattice has index $|\det(u,v)|d_A d_B$ in $\Z^2$. Full affine span therefore forces
+\begin{equation}\label{eq:gcds}
+ |\det(u,v)|=1,\qquad d_A=d_B=1.
+\end{equation}
+Thus \eqref{eq:productcoords} is a genuine unimodular product cluster.
+
+\begin{lemma}[The factors are complete residue systems]\label{lem:crs}
+After swapping the factors if necessary, $A$ is a complete residue system modulo $3$ and $B$ is a complete residue system modulo $2$.
+\end{lemma}
+\begin{proof}
+Write $B=\{b_0,b_1\}$. By \eqref{eq:gcds}, $|b_1-b_0|=1$, so its two residues modulo $2$ are distinct.
+
+For $A=\{a_1,a_2,a_3\}$, use the rich direction whose sections have size three. In the product coordinates the common phase equation from Lemma~\ref{lem:nosingleton} has the form
+\[
+ z^{a_1}+z^{a_2}+z^{a_3}=0
+\]
+for some $z\in\mathbb S^1$. Three unit complex numbers sum to zero only when they are the vertices of a rotated equilateral triangle. Hence every ratio $z^{a_i-a_j}$ is a cube root of unity and at least one is primitive. Thus $z^{3(a_i-a_j)}=1$ for all $i,j$. Since $\gcd(A-A)=1$, Bezout gives $z^3=1$. The sum cannot vanish for $z=1$, so $z$ is primitive of order three. Therefore the three powers $z^{a_i}$ are distinct, equivalently the residues $a_i\pmod3$ are all distinct.
+\end{proof}
+
+\section{The source-specific $3\times2$ fibre endpoint}
+The following proposition is deliberately no stronger than the endpoint required by the six-cell problem. Its proof is finite-fibre bookkeeping; in particular it avoids the superseded bi-infinite formal-series cancellation from an earlier draft.
+
+\begin{proposition}[$3\times2$ product periodicity]\label{prop:32}
+Let $A,B\subset\Z$ satisfy: $A$ is a complete residue system modulo $3$ with $\gcd(A-A)=1$, and $B$ is a complete residue system modulo $2$ with $\gcd(B-B)=1$. Every $(A\times B)$-tiling $T$ of $\Z^2$ is coordinate-periodic. More precisely,
+\[
+ (3,0)+T=T\qquad\text{or}\qquad(0,2)+T=T.
+\]
+\end{proposition}
+\begin{proof}
+For $y,x\in\Z$ define the row and column fibres
+\[
+ S_y=\{x:(x,y)\in T\},\qquad T_x=\{y:(x,y)\in T\}.
+\]
+Khetan's Lemma 3.6 gives, for every $n,m\in\Z$,
+\[
+ R_n:=\bigsqcup_{b\in B}S_{n-b}\quad\text{an $A$-tiling of $\Z$},
+\qquad
+ C_m:=\bigsqcup_{a\in A}T_{m-a}\quad\text{a $B$-tiling of $\Z$}.
+\]
+By Khetan's Corollary 3.4 there are residue sequences
+\[
+ r_n\in\Z/3\Z,\qquad s_m\in\Z/2\Z
+\]
+such that
+\begin{equation}\label{eq:fibrecosets}
+ R_n=3\Z+r_n,\qquad C_m=2\Z+s_m.
+\end{equation}
+We split according to the two-valued sequence $s$.
+
+First suppose $s$ is constant, say $s_m=s$ for all $m$. Every anchor $(x,y)\in T$ lies in $C_{x+a}=2\Z+s$ for every $a\in A$, so every nonempty row has $y\equiv s\pmod2$. Fix a nonempty row $S_y$ and $b\in B$, and put $n=y+b$. In the disjoint decomposition
+\[
+ R_n=\bigsqcup_{b'\in B}S_{n-b'},
+\]
+any nonempty summand must have $n-b'\equiv s\pmod2$. Since also $n-b=y\equiv s\pmod2$, we have $b'\equiv b\pmod2$. Because $B$ is a complete residue system modulo $2$, this forces $b'=b$. Hence all other summands are empty and
+\[
+ S_y=R_n=3\Z+r_n.
+\]
+Thus every nonempty row is invariant under horizontal translation by $3$; empty rows are invariant as well. Therefore $(3,0)+T=T$.
+
+Now suppose $s$ is nonconstant. Since its codomain is $\Z/2\Z$, its image is all of $\Z/2\Z$. We claim every row is nonempty. Indeed, a row $y$ is nonempty only if $y\bmod2$ occurs among the $s_m$ by \eqref{eq:fibrecosets}; conversely, if $y\equiv s_m\pmod2$, then $y\in C_m=\bigsqcup_{a\in A}T_{m-a}$, so some anchor lies in row $y$. Thus every integer row is nonempty.
+
+Write $B=\{b_0,b_1\}$. From $\gcd(B-B)=1$ we have $b_1-b_0=\pm1$. For every $y$, the nonempty set $S_y$ lies in both
+\[
+ R_{y+b_0}=3\Z+r_{y+b_0}
+ \quad\text{and}\quad
+ R_{y+b_1}=3\Z+r_{y+b_1}.
+\]
+Distinct cosets of $3\Z$ are disjoint, so
+\[
+ r_{y+b_0}=r_{y+b_1}\qquad(y\in\Z).
+\]
+The indices differ by one; hence $r_n$ is constant, say $r_n=r$.
+
+It follows that every anchor has first coordinate congruent to $r$ modulo $3$: if $(x,y)\in T$, then for any $b\in B$,
+$x\in S_y\subset R_{y+b}=3\Z+r$. Fix a nonempty column $T_x$, choose $a\in A$, and put $m=x+a$. In the disjoint decomposition
+\[
+ C_m=\bigsqcup_{a'\in A}T_{m-a'},
+\]
+any nonempty summand has column index $m-a'\equiv r\pmod3$. Since the chosen nonempty column has $x=m-a\equiv r\pmod3$, we obtain $a'\equiv a\pmod3$. Because $A$ is a complete residue system modulo $3$, this forces $a'=a$. Hence
+\[
+ T_x=C_m=2\Z+s_m.
+\]
+Every nonempty column is therefore invariant under vertical translation by $2$, and empty columns are invariant trivially. Thus $(0,2)+T=T$.
+\end{proof}
+
+\begin{remark}[Residue-profile invariant]\label{rem:invariant}
+The proof exposes the finite conserved data that drives the endpoint. The one-dimensional prime-tiling theorem compresses every horizontal fibre union to one residue $r_n\in\Z/3\Z$ and every vertical fibre union to one residue $s_m\in\Z/2\Z$. If the binary profile $s$ uses only one residue, uniqueness in the $B$-decomposition makes every occupied row a whole $3\Z$-coset. If $s$ uses both residues, every row is occupied and the two elements of $B$, which differ by one, force adjacent values of $r$ to agree; hence $r$ is constant and the column decomposition gives period $2$. This two-state dichotomy is the special simplification at cardinality six.
+\end{remark}
+
+Applying Proposition~\ref{prop:32} to the factors from Lemma~\ref{lem:crs}, every tiling in the two-rich-direction case is itself one-periodic.
+
+\section{At most one rich direction}
+We record why the other half of Khetan's spectral dichotomy is cardinality-free. Suppose at most one $g_0\in\Delta$ is rich (if none is rich, choose any $g_0\in\Delta$). For every $h\in\Delta\setminus\{g_0\}$, the set
+\[
+ S_h=\ker\chi_h\cap\bigcap_{\gcd(\alpha,6)=1}
+ Z\left(\sum_{a\in F}\chi_{\alpha a}\right)
+\]
+is finite by definition of non-richness. Equation \eqref{eq:dilationzero} and the finite-kernel cover therefore put $\operatorname{supp}\nu$ inside $\ker\chi_{g_0}\cup S$ for some finite set $S$ (including the origin if necessary).
+
+Exactly as in Khetan's second case in the proof of Theorem 3.18, enlarge $g_0$ by an integer multiple and choose $S$ of minimum size. Discard points of $S$ already lying in $\ker\chi_{g_0}$. Minimality then gives three facts: every $s\in S$ lies in $\operatorname{supp}\nu$, each has positive $\nu$-mass because it is isolated in the support, and $\chi_{g_0}(s)$ is not a root of unity. The last point is immediate: if $\chi_{g_0}(s)$ had finite order $k$, then replacing $g_0$ by $kg_0$ would absorb $s$ into the kernel and reduce $|S|$.
+
+Partition $S$ by the common value of $\chi_{g_0}$ and let $\varphi_E$ be the inverse spectral images of the atomic indicator functions, as in Khetan. The spectral projection computation gives, on a common full-measure set and for all $n\ge0$,
+\[
+ (ng_0)\cdot f-f
+ =\sum_E(\gamma_E^n-1)\varphi_E,
+\]
+where each $\gamma_E$ is not a root of unity. The left side is integer-valued because $f$ is an indicator. Khetan's Lemma 3.1 therefore forces the displayed expression to vanish for every $n$. Taking $n=1$ gives $g_0\cdot f=f$ in $L^2(X,\mu)$. Khetan's Theorem 3.11 then gives a one-periodic tiling in the orbit closure. If $S$ is empty, the same conclusion is immediate from the spectral support lying in $\ker\chi_{g_0}$.
+
+No prime-power section-divisibility statement is used in this branch. The only change from Khetan's written argument is that the common dilation-zero set is indexed by $\gcd(\alpha,6)=1$ rather than by integers coprime to a prime.
+
+\section{Conclusion}
+\begin{theorem}[Six-cell orbit-closure periodicity]\label{thm:main}
+Let $F\subset\Z^2$ be an exact cluster of full affine span with $|F|=6$. Then for every $F$-tiling $T$, the orbit closure $\overline{\Z^2\cdot T}$ contains a one-periodic $F$-tiling.
+\end{theorem}
+\begin{proof}
+Use the spectral setup above. If at most one direction in a minimal spectral-kernel cover is rich, the preceding section gives a one-periodic point in the orbit closure. If at least two directions are rich, Lemmas~\ref{lem:incidence} and \ref{lem:noc6} force the six points into a $K_{2,3}$ product incidence pattern. Full affine span makes the product coordinates unimodular and gives the gcd conditions. Lemma~\ref{lem:crs} makes the factors complete residue systems modulo $3$ and $2$. Proposition~\ref{prop:32} then shows that the tiling $T$ itself is one-periodic. These cases exhaust the possibilities.
+\end{proof}
+
+\begin{remark}
+This document is a proof candidate, not an independent-audit certificate. The source question should not be called protocol-closed until the repository's required independent P26 and distinct OTHER-track audits validate the argument and the dated prior-art check is reconciled. The exact six-edge finite core is separately archived in \texttt{check\_incidence.py} and \texttt{incidence\_check.txt}.
+\end{remark}
+
+\end{document}

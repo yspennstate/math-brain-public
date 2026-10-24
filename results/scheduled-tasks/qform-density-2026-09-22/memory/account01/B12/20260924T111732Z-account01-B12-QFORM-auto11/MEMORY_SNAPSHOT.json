@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260924T111732Z-account01-B12-QFORM-auto11",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "mathematical_status": "PROVED_SUPPORTING_RELATIVE_NORMALITY_DEFECT_SHIELD_FULL_TARGET_OPEN",
+  "new_claim": {
+    "id": "QFORM-RELATIVE-NORMALITY-DEFECT-SHIELD-v1",
+    "statement": "For a full-column original-coordinate carrier M with G=M^TM and arbitrary added physical action N, let B=G^{-1/2}M^TNG^{-1/2}=H+K, D=I+H. For rho>0, let q be the dimension of the D-spectrum in (-rho,rho), and nu=||B^TB-BB^T||. Then ||P_+ K P_-||<=nu/(4rho) and s_{m-q}(M+N)>=s_m(M)(rho-nu/(4rho))_+. An additional coefficient tail of norm delta subtracts at most delta. The proof uses B^TB-BB^T=2[D,K] and a Sylvester integral across the +/- rho spectral gap, then the completed account02/B12 cross-sign skew shield at r=0."
+  },
+  "partner_dependencies": [
+    {
+      "claim": "QFORM-CROSS-SIGN-SKEW-RANK-SHIELD-v1",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "4918f8df2f6b49747f5795085775393350156630",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260924T102338Z-account02-B12-QFORM-auto11/REPORT.md",
+      "actual_application": "With M=2I7, D=diag(I4,-I3), arbitrary within-sign skew blocks and cross-sign skew C of norm <=1/8, q=0 and the r=0 partner estimate gives s7(M+N)>=7/4 independently of the unbounded within-sign skew magnitudes."
+    },
+    {
+      "claim": "QFORM-NO-MARGINAL-D5-CROSS-VOLUME-BOUND",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "actual_application": "After a globally dense signed small-spectrum packet of norm <=1/64, the actual final cross block has s5>=111/64; hence ||p_Q||_infinity<=320 sqrt(2e)/111<6.722 and the scoped density has a continuous C0 representative."
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5c7c0b6fe4173eb3262ea02516be96d91cd8214e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260924T111732Z-account01-B12-QFORM-auto11/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260924T111732Z-account01-B12-QFORM-auto11/CHECK.py"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B12/20260924T111732Z-account01-B12-QFORM-auto11.md",
+    "commit": "90d354c8ca2e8cfe1c1f990d3172811bd404cb37"
+  },
+  "remaining_gap": "From bare s3(A)>=1, force some original-coordinate carrier with at most m-5 relative resonance directions and a quantitatively small whitened nonnormality defect, or show that persistent failure forces one of the already-completed product-preserving physical exits. Added spectral magnitude itself is not the obstruction in this branch.",
+  "continuity": "UNRESTRICTED CONTINUITY NOT PROVED; the concrete D5 family has a continuous C0 density representative",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_requested": "maximum actually supported"
+}

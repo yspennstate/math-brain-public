@@ -1,0 +1,472 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\F}{\mathcal F}
+\newcommand{\U}{\mathcal U}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\diag}{diag}
+\numberwithin{equation}{section}
+\setlist{itemsep=3pt,topsep=5pt}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+
+\hypersetup{pdftitle={Gaussian-integer spectra of random sign matrices},pdfauthor={Yitzchak Shmalo},pdfsubject={Explicit sign-matrix families and Vu's Conjecture 9.5},pdfkeywords={Random sign matrix, Gaussian integer, integral spectrum, block shear}}
+\title{Gaussian-integer spectra of random sign matrices}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{13 October 2026}
+\subjclass[2020]{15B52, 60C05, 15A18}
+\keywords{Random sign matrix, Gaussian-integer spectrum, integral spectrum, block triangularization, exact enumeration}
+
+\begin{document}
+\begin{abstract}
+Let $M_n$ be an $n\times n$ matrix whose entries are independent uniform signs. For every $n\geq1$, we construct $2^{\lceil n^2/2\rceil}3^{\lfloor n/2\rfloor}$ distinct sign matrices whose eigenvalues lie in $\Z[i]$. Hence
+\[
+ \Pp\bigl(\Spec(M_n)\subseteq\Z[i]\bigr)
+ \geq 3^{\lfloor n/2\rfloor}2^{-\lfloor n^2/2\rfloor}.
+\]
+This contradicts Vu's Conjecture~9.5, which predicts the probability $2^{-(1+o(1))n^2}$. The construction uses block shears with triangular diagonal blocks. All matrices in the odd-dimensional family have integer spectra, as do exactly two thirds of the even-dimensional family. We do not obtain a matching upper bound.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+Let $M_n=(\xi_{ij})_{1\leq i,j\leq n}$ have independent entries, each taking the values $1$ and $-1$ with probability $1/2$. Write
+\begin{equation}\label{eq:event}
+ E_n=\{\Spec(M_n)\subseteq\Z[i]\},\qquad p_n=\Pp(E_n),
+\end{equation}
+where $\Z[i]=\{a+bi:a,b\in\Z\}$. Eigenvalues are counted with algebraic multiplicity.
+
+In \cite[Conjecture~9.5]{Vu2021}, Vu proposed
+\begin{equation}\label{eq:conjecture}
+ p_n=2^{-(1+o(1))n^2}.
+\end{equation}
+We prove the following bound.
+
+\begin{theorem}\label{thm:main}
+For every integer $n\geq1$, there is an explicitly defined family $\F_n$ of $n\times n$ sign matrices, each with Gaussian-integer spectrum, such that
+\begin{equation}\label{eq:family-size}
+ |\F_n|=2^{\lceil n^2/2\rceil}3^{\lfloor n/2\rfloor}.
+\end{equation}
+In particular,
+\begin{align}
+ p_n&\geq3^{\lfloor n/2\rfloor}2^{-\lfloor n^2/2\rfloor},\label{eq:main-bound}\\
+ \limsup_{n\to\infty}\frac{-\log_2 p_n}{n^2}&\leq\frac12.\label{eq:rate}
+\end{align}
+\end{theorem}
+
+\subsection{An elementary comparison}
+
+For every $m\times m$ sign matrix $A$, the matrix
+\begin{equation}\label{eq:square-zero}
+ Q(A)=\begin{pmatrix}A&A\\-A&-A\end{pmatrix}
+\end{equation}
+satisfies $Q(A)^2=0$. The upper-left block recovers $A$, so these matrices form a family of cardinality $2^{m^2}$. Therefore
+\begin{equation}\label{eq:square-zero-bound}
+ p_{2m}\geq2^{-3m^2}.
+\end{equation}
+Theorem~\ref{thm:main} improves the quadratic constant in \eqref{eq:square-zero-bound} from $3/4$ to $1/2$ and gives an exact count in both parities.
+
+Vu's Conjecture~9.4 concerns integer spectra in the symmetric sign ensemble. The present theorem concerns the iid ensemble and does not settle that question.
+
+\section{Block shears and local sign counts}\label{sec:local}
+
+\subsection{The block-shear identity}
+
+\begin{lemma}[Block shear]\label{lem:shear}
+Let $A\in\C^{p\times p}$, $B\in\C^{p\times q}$, $C\in\C^{q\times p}$, $D\in\C^{q\times q}$, and $R\in\C^{q\times p}$. Set
+\[
+ M=\begin{pmatrix}A&B\\ C&D\end{pmatrix},\qquad
+ S_R=\begin{pmatrix}I_p&0\\ R&I_q\end{pmatrix}.
+\]
+Then $S_R$ is invertible and
+\begin{equation}\label{eq:shear}
+ S_R^{-1}MS_R=
+ \begin{pmatrix}
+ A+BR&B\\
+ C+DR-RA-RBR&D-RB
+ \end{pmatrix}.
+\end{equation}
+If
+\begin{equation}\label{eq:triangular-conditions}
+ \begin{aligned}
+ X:=A+BR&\quad\text{is upper triangular},\\
+ Y:=C+DR-RA-RBR&=0,\\
+ Z:=D-RB&\quad\text{is lower triangular},
+ \end{aligned}
+\end{equation}
+then
+\begin{equation}\label{eq:char-factor}
+ \det(tI_{p+q}-M)
+ =\prod_{j=1}^p(t-X_{jj})\prod_{j=1}^q(t-Z_{jj}).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The inverse of $S_R$ is
+\[
+ S_R^{-1}=\begin{pmatrix}I_p&0\\-R&I_q\end{pmatrix}.
+\]
+Direct multiplication gives
+\[
+ MS_R=\begin{pmatrix}A+BR&B\\ C+DR&D\end{pmatrix},
+\]
+and then \eqref{eq:shear}. Under \eqref{eq:triangular-conditions}, the conjugate is block upper triangular. Hence
+\[
+ \det(tI_{p+q}-M)=\det(tI_p-X)\det(tI_q-Z).
+\]
+Since $X$ and $Z$ are triangular, this is \eqref{eq:char-factor}.
+\end{proof}
+
+\subsection{Real diagonal coordinates}
+
+\begin{lemma}\label{lem:real-six}
+For each $\varepsilon\in\{-1,1\}$, the equation
+\begin{equation}\label{eq:real-diagonal}
+ c+\varepsilon(d-a)-b=0
+\end{equation}
+has exactly six solutions $(a,b,c,d)\in\{-1,1\}^4$.
+\end{lemma}
+
+\begin{proof}
+If $d=a$, equation~\eqref{eq:real-diagonal} becomes $c=b$. There are two choices for $a$ and two for $b$, giving four solutions. If $d=-a$, the equation is
+\[
+ c-b=2\varepsilon a.
+\]
+For each of the two choices of $a$, it forces $c=\varepsilon a$ and $b=-\varepsilon a$. This gives two further solutions, for a total of six.
+\end{proof}
+
+\subsection{A terminal Gaussian-integer coordinate}
+
+For $\tau\in\C$, define
+\begin{equation}\label{eq:terminal-set}
+ \mathcal T_\tau
+ =\{(a,b,c,d)\in\{-1,1\}^4:
+ c+\tau(d-a)-b\tau^2=0\}.
+\end{equation}
+The terminal parameter will be chosen from the Gaussian units
+\[
+ \U=\{1,-1,i,-i\}.
+\]
+
+\begin{lemma}\label{lem:terminal}
+The set $\mathcal T=\bigcup_{\tau\in\U}\mathcal T_\tau$ has cardinality $12$. The real-unit union $\mathcal T_1\cup\mathcal T_{-1}$ has cardinality $8$, and
+\begin{equation}\label{eq:imaginary-set}
+ \mathcal T_i=\mathcal T_{-i}
+ =\{(a,b,-b,a):a,b\in\{-1,1\}\}
+\end{equation}
+is disjoint from that real-unit union.
+
+Moreover, suppose $(a,b,c,d)\in\mathcal T_\tau$ for a complex number $\tau$, and both $a+b\tau$ and $d-b\tau$ belong to $\Z[i]$. Then $\tau\in\U$.
+\end{lemma}
+
+\begin{proof}
+For $\tau=1$ the condition is $c+d=a+b$, and for $\tau=-1$ it is $a+c=b+d$. Each equation has six solutions by Lemma~\ref{lem:real-six}. Their simultaneous solutions satisfy $d=a$ and $c=b$, and there are four of these. Inclusion--exclusion therefore gives
+\[
+ |\mathcal T_1\cup\mathcal T_{-1}|=6+6-4=8.
+\]
+For $\tau=i$ or $\tau=-i$, separating real and imaginary parts gives $c=-b$ and $d=a$. These are the four solutions in \eqref{eq:imaginary-set}. If such a quadruple also satisfied either real-unit equation, it would force $b=0$, which is impossible. Thus $|\mathcal T|=8+4=12$.
+
+For the last assertion, set $\lambda=a+b\tau\in\Z[i]$. Since $b^2=1$, we have $\tau=b(\lambda-a)\in\Z[i]$. Dividing $c+\tau(d-a)-b\tau^2=0$ by $-b$ shows that $\tau$ is a root of
+\[
+ z^2-\frac{d-a}{b}z-\frac cb.
+\]
+The other root $\tau'=(d-a)/b-\tau$ also belongs to $\Z[i]$, and
+\[
+ \tau\tau'=-c/b\in\{-1,1\}.
+\]
+Taking Gaussian norms gives $|\tau|^2|\tau'|^2=1$. Both factors are nonnegative integers, so $|\tau|^2=1$, which means $\tau\in\U$.
+\end{proof}
+
+\section{The even-dimensional construction}\label{sec:even}
+
+Let $n=2m$, where $m\geq1$, and write an $n\times n$ sign matrix as
+\[
+ M=\begin{pmatrix}A&B\\C&D\end{pmatrix},
+ \qquad A,B,C,D\in\{-1,1\}^{m\times m}.
+\]
+Choose
+\begin{equation}\label{eq:even-R}
+ R=\diag(\varepsilon_1,\ldots,\varepsilon_{m-1},\tau),
+ \qquad \varepsilon_j\in\{-1,1\},\quad \tau\in\U.
+\end{equation}
+When $m=1$, the vector of $\varepsilon$ parameters is empty. We impose the three conditions in \eqref{eq:triangular-conditions}.
+
+For a coordinate $(i,j)$, put
+\[
+ a=A_{ij},\quad b=B_{ij},\quad c=C_{ij},\quad d=D_{ij},
+\]
+and let $r_j=R_{jj}$. Since $R$ is diagonal,
+\begin{equation}\label{eq:local-entries}
+ X_{ij}=a+br_j,\quad
+ Y_{ij}=c+dr_j-r_i a-r_i b r_j,\quad
+ Z_{ij}=d-r_i b.
+\end{equation}
+Thus each constraint involves only the four signs at the same coordinate $(i,j)$, once the parameters are fixed.
+
+\subsection{Off-diagonal coordinates}
+
+If $i>j$, then $j<m$ and $r_j=\varepsilon_j$. The condition $X_{ij}=0$ is
+\[
+ a=-b\varepsilon_j.
+\]
+Substituting in $Y_{ij}$ cancels the two terms involving $r_i$ and yields $c+d\varepsilon_j=0$. Hence all solutions at this coordinate are
+\begin{equation}\label{eq:below}
+ (a,b,c,d)=(-b\varepsilon_j,b,-d\varepsilon_j,d),
+ \qquad b,d\in\{-1,1\}.
+\end{equation}
+There are four choices, independent of $r_i$, including when $i=m$.
+
+If $i<j$, then $i<m$ and $r_i=\varepsilon_i$. The condition $Z_{ij}=0$ gives $d=\varepsilon_i b$. Substitution in $Y_{ij}$ cancels the two terms involving $r_j$ and gives $c=\varepsilon_i a$. All solutions are therefore
+\begin{equation}\label{eq:above}
+ (a,b,c,d)=(a,b,\varepsilon_i a,\varepsilon_i b),
+ \qquad a,b\in\{-1,1\}.
+\end{equation}
+Again there are four choices, independent of the terminal parameter when $j=m$.
+
+\subsection{Diagonal coordinates and spectra}
+
+At a nonterminal diagonal coordinate $i=j<m$, the only constraint is
+\[
+ c+\varepsilon_i(d-a)-b=0,
+\]
+which has six solutions by Lemma~\ref{lem:real-six}. The corresponding two diagonal entries of $X$ and $Z$ are
+\begin{equation}\label{eq:real-eigenvalues}
+ a+b\varepsilon_i,\qquad d-b\varepsilon_i,
+\end{equation}
+both in $\{-2,0,2\}$.
+
+At the terminal coordinate $i=j=m$, the condition is
+\[
+ c+\tau(d-a)-b\tau^2=0.
+\]
+Choose $(a,b,c,d)\in\mathcal T$ and a corresponding $\tau\in\U$ for which $c+\tau(d-a)-b\tau^2=0$. The two remaining eigenvalues are
+\begin{equation}\label{eq:terminal-eigenvalues}
+ a+b\tau,\qquad d-b\tau,
+\end{equation}
+which belong to $\Z[i]$.
+
+The conditions \eqref{eq:below} and \eqref{eq:above} are independent of $\tau$. Thus any choice from $\mathcal T$ can be combined with any permitted choices at the other coordinates. With the corresponding $\tau$, all of \eqref{eq:triangular-conditions} hold, and Lemma~\ref{lem:shear} gives a matrix with Gaussian-integer spectrum.
+
+\subsection{Counting distinct matrices}
+
+Define $\F_{2m}$ to be the union of the matrix families just constructed, over all vectors $(\varepsilon_1,\ldots,\varepsilon_{m-1})$. For a fixed vector, distinct coordinates use disjoint quadruples of matrix entries, so their numbers of choices multiply. There are $m(m-1)$ off-diagonal coordinates, $m-1$ nonterminal diagonal coordinates, and one terminal coordinate. The number of matrices for a fixed vector is therefore
+\begin{equation}\label{eq:even-fixed-vector}
+ 4^{m(m-1)}6^{m-1}\cdot12.
+\end{equation}
+The factor $12$ counts terminal quadruples, including each quadruple only once.
+
+It remains to show that the different $\varepsilon$ vectors give disjoint families. For every $j<m$, equation~\eqref{eq:below} at $(j+1,j)$ recovers
+\begin{equation}\label{eq:even-recovery}
+ \varepsilon_j=-A_{j+1,j}/B_{j+1,j}.
+\end{equation}
+Thus the matrix determines the parameter vector uniquely. Multiplying \eqref{eq:even-fixed-vector} by $2^{m-1}$ gives
+\begin{align}
+ |\F_{2m}|
+ &=2^{m-1}4^{m(m-1)}6^{m-1}\cdot12\notag\\
+ &=2^{2m^2}3^m.\label{eq:even-count}
+\end{align}
+For $m=1$, the recovery condition is empty and the formula simply counts the twelve terminal $2\times2$ matrices.
+
+\section{The odd-dimensional construction}\label{sec:odd}
+
+For $n=1$, take $\F_1=\{(1),(-1)\}$, so $|\F_1|=2$ and $p_1=1$. Let $n=2m+1$ with $m\geq1$.
+
+Split the coordinates into groups of sizes $m$ and $m+1$, and write
+\[
+ M=\begin{pmatrix}A&B\\ C&D\end{pmatrix},
+\]
+where $A$ is $m\times m$, $B$ is $m\times(m+1)$, $C$ is $(m+1)\times m$, and $D$ is $(m+1)\times(m+1)$. All entries are signs. For a vector $\varepsilon=(\varepsilon_1,\ldots,\varepsilon_m)\in\{-1,1\}^m$, let
+\begin{equation}\label{eq:odd-R}
+ R_\varepsilon=
+ \begin{pmatrix}\diag(\varepsilon_1,\ldots,\varepsilon_m)\\0\ \cdots\ 0\end{pmatrix}
+ \in\Z^{(m+1)\times m}.
+\end{equation}
+Use Lemma~\ref{lem:shear} with $p=m$, $q=m+1$, and $R=R_\varepsilon$, and again impose \eqref{eq:triangular-conditions}.
+
+\subsection{The paired core}
+
+For $1\leq i,j\leq m$, the same formulas as in \eqref{eq:local-entries} hold with $r_i=\varepsilon_i$ and $r_j=\varepsilon_j$. To see that the extra coordinate contributes no additional term, note that the last row of $R_\varepsilon$ is zero. In particular,
+\[
+ (BR_\varepsilon)_{ij}=B_{ij}\varepsilon_j,
+ \qquad
+ (R_\varepsilon B R_\varepsilon)_{ij}
+ =\varepsilon_i B_{ij}\varepsilon_j.
+\]
+Equations~\eqref{eq:below} and~\eqref{eq:above} give four choices per off-diagonal coordinate, and Lemma~\ref{lem:real-six} gives six per diagonal coordinate. Thus, for fixed $\varepsilon$, the paired core contributes
+\begin{equation}\label{eq:odd-core}
+ 4^{m(m-1)}6^m
+\end{equation}
+choices.
+
+\subsection{The unpaired coordinate}
+
+There are three further groups of entries. First, lower triangularity of $Z=D-R_\varepsilon B$ at $(i,m+1)$, for $i\leq m$, requires
+\begin{equation}\label{eq:odd-column}
+ D_{i,m+1}=\varepsilon_i B_{i,m+1}.
+\end{equation}
+The $m$ entries $B_{i,m+1}$ are arbitrary signs, giving $2^m$ choices.
+
+Second, the last row of $R_\varepsilon$ is zero, so the condition $Y_{m+1,j}=0$, for $j\leq m$, is
+\begin{equation}\label{eq:odd-row}
+ C_{m+1,j}+D_{m+1,j}\varepsilon_j=0.
+\end{equation}
+The $m$ entries $D_{m+1,j}$ are arbitrary signs, giving another $2^m$ choices.
+
+Third, $D_{m+1,m+1}$ is an arbitrary sign, giving a factor of $2$. Together with the paired core, these choices assign every entry and satisfy \eqref{eq:triangular-conditions}.
+
+For fixed $\varepsilon$, the number of matrices is therefore
+\begin{equation}\label{eq:odd-fixed-vector}
+ 4^{m(m-1)}6^m2^{2m+1}.
+\end{equation}
+The paired diagonal entries of $X$ and $Z$ belong to $\{-2,0,2\}$. The last diagonal entry of $Z$ is $D_{m+1,m+1}\in\{-1,1\}$. Formula~\eqref{eq:char-factor} shows that every matrix counted in \eqref{eq:odd-fixed-vector} has ordinary integer spectrum.
+
+\subsection{Disjointness and the count}
+
+Equation~\eqref{eq:odd-column} recovers every parameter from the matrix:
+\begin{equation}\label{eq:odd-recovery}
+ \varepsilon_i=D_{i,m+1}/B_{i,m+1},\qquad 1\leq i\leq m.
+\end{equation}
+Hence the $2^m$ parameter families are disjoint. Define $\F_{2m+1}$ to be their union. We obtain
+\begin{align}
+ |\F_{2m+1}|
+ &=2^m4^{m(m-1)}6^m2^{2m+1}\notag\\
+ &=2^{2m^2+2m+1}3^m.\label{eq:odd-count}
+\end{align}
+
+\section{Consequences and the remaining exponent}\label{sec:consequences}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The even count \eqref{eq:even-count} is
+\[
+ |\F_n|=2^{n^2/2}3^{n/2},\qquad n=2m.
+\]
+For odd $n=2m+1$, equation~\eqref{eq:odd-count} and
+\[
+ \left\lceil\frac{(2m+1)^2}{2}\right\rceil=2m^2+2m+1
+\]
+give the same formula \eqref{eq:family-size} with floors and ceilings. The case $n=1$ was treated separately. The spectral assertions follow in both constructions from Lemma~\ref{lem:shear}.
+
+Every sign matrix has probability $2^{-n^2}$. Dividing \eqref{eq:family-size} by $2^{n^2}$ proves \eqref{eq:main-bound}. Taking base-two logarithms yields
+\[
+ -\log_2p_n
+ \leq \lfloor n^2/2\rfloor-\lfloor n/2\rfloor\log_2 3.
+\]
+Division by $n^2$ and passage to the upper limit proves \eqref{eq:rate}.
+\end{proof}
+
+\subsection{Ordinary integer spectra}
+
+\begin{corollary}\label{cor:integer}
+Let $q_n=\Pp(\Spec(M_n)\subseteq\Z)$. For every $n\geq1$,
+\begin{equation}\label{eq:integer-bound}
+ q_n\geq c_n3^{\lfloor n/2\rfloor}2^{-\lfloor n^2/2\rfloor},
+ \qquad
+ c_n=\begin{cases}2/3,&n\text{ even},\\1,&n\text{ odd}.\end{cases}
+\end{equation}
+In particular, $\limsup_{n\to\infty}(-\log_2 q_n)/n^2\leq1/2$.
+\end{corollary}
+
+\begin{proof}
+In the even construction, restrict the terminal quadruple to $\mathcal T_1\cup\mathcal T_{-1}$. Lemma~\ref{lem:terminal} replaces its twelve choices by eight, while all other choices and the parameter-recovery argument remain unchanged. Choose a corresponding real unit $\tau$. All diagonal eigenvalues then lie in $\{-2,0,2\}$, giving an ordinary-integer subfamily of cardinality $(2/3)|\F_{2m}|$.
+
+For each of the four discarded terminal quadruples, $d=a$ and $c=-b$, so the two terminal eigenvalues are $a+bi$ and $a-bi$ and are nonreal. Thus the ordinary-integer subfamily is exactly a proportion $2/3$ of $\F_{2m}$. In odd dimensions, the whole family has ordinary integer spectrum, as shown in Section~\ref{sec:odd}. Dividing the counts by $2^{n^2}$ proves the bound, and its logarithmic consequence follows as in Theorem~\ref{thm:main}.
+\end{proof}
+
+\begin{remark}[A fixed real shear already gives the exponent]\label{rem:fixed-shear}
+In even dimensions one may simply fix $R=I_m$ and impose \eqref{eq:triangular-conditions}. Equations~\eqref{eq:below} and~\eqref{eq:above}, together with Lemma~\ref{lem:real-six}, give
+\[
+ 4^{m(m-1)}6^m=2^{2m^2-m}3^m
+\]
+matrices with ordinary integer spectrum. The diagonal-parameter union and the terminal Gaussian units improve the finite-dimensional count; the leading quadratic exponent $1/2$ is already present in this simpler fixed-shear construction.
+\end{remark}
+
+\subsection{What remains undetermined}
+
+A matching upper bound would be
+\begin{equation}\label{eq:missing-upper}
+ p_n\leq2^{-(1/2-o(1))n^2}.
+\end{equation}
+Together with Theorem~\ref{thm:main}, this would give $\lim_{n\to\infty}(-\log_2p_n)/n^2=1/2$. We leave open both the existence of the limit and its value. The same questions arise for $q_n$ in Corollary~\ref{cor:integer}.
+
+Under the extended Riemann hypothesis, Eberhard~\cite{Eberhard2022} proved that the characteristic polynomial of an iid random sign matrix is irreducible with high probability and that its Galois group contains the alternating group. For $n>2$, the event $E_n$ implies reducibility over $\Q$: every root in $\Z[i]$ has minimal polynomial of degree at most two. Eberhard's theorem therefore gives $p_n=o(1)$ under that hypothesis, but not the bound \eqref{eq:missing-upper}.
+
+\appendix
+\section{Exact finite-dimensional verification}\label{sec:checks}
+
+The accompanying script \texttt{verify\_construction.py} enumerates $\F_n$ for $1\leq n\leq4$, checks distinctness, and verifies \eqref{eq:char-factor} for each matrix. It computes $\det(tI-M)$ by the Leibniz formula over $\Z[t]$ and compares it with the stated product of linear factors. Gaussian integers are represented by pairs of integers. The script also checks the local counts and the size of the integer-spectrum subfamily.
+
+\begin{center}
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+$n$ & $|\F_n|$ & Ordinary-integer subfamily & Characteristic polynomials checked\\
+\midrule
+1 & 2 & 2 & 2\\
+2 & 12 & 8 & 12\\
+3 & 96 & 96 & 96\\
+4 & 2304 & 1536 & 2304\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All $2414$ characteristic-polynomial comparisons agree. These are checks of the finite instances; the all-dimension result is proved above.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+This work is part of Math Brain, a project on the use of AI systems in research mathematics. ChatGPT (OpenAI) and separately tasked AI agents assisted with proof review, bibliographic checks, exact finite computations, and preparation of the manuscript. The author directed the work and is responsible for the manuscript and its dissemination.
+
+\section*{Data availability}
+The LaTeX source, verification script, and exact-arithmetic results are available at\par
+\noindent\url{https://github.com/yspennstate/gaussian-integer-spectra}.
+
+\begin{thebibliography}{9}
+
+\bibitem{Eberhard2022}
+S.~Eberhard,
+\emph{The characteristic polynomial of a random matrix},
+Combinatorica \textbf{42} (2022), 491--527.
+\href{https://doi.org/10.1007/s00493-020-4657-0}{doi:10.1007/s00493-020-4657-0}.
+\href{https://arxiv.org/abs/2008.01223}{arXiv:2008.01223}.
+
+\bibitem{Vu2021}
+V.~H.~Vu,
+\emph{Recent progress in combinatorial random matrix theory},
+Probability Surveys \textbf{18} (2021), 179--200.
+\href{https://doi.org/10.1214/20-PS346}{doi:10.1214/20-PS346}.
+\href{https://arxiv.org/abs/2005.02797}{arXiv:2005.02797}.
+
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,102 @@
+% B12 / A058 proof candidate. Full FEI remains open.
+\section*{Sparse quotient-union overlap theorem}
+
+Identify the uniform cube with $\mathbb F_2^n$.  Let
+$L:\mathbb F_2^n\to\mathbb F_2^r$ be surjective, let
+$B\subseteq\mathbb F_2^r$ be nonempty, and put
+\[
+ A=L^{-1}(B),\qquad p=|B|2^{-r},\qquad
+ K(x,z)=1-2\mathbf 1_{\{x=-1\}}\mathbf 1_A(z).
+\]
+Thus $K$ is a genuine Boolean one-bit composition between the
+constant branch and $D_A=1-2\mathbf1_A$.  The parity rows defining
+$L$ may overlap arbitrarily in their physical input coordinates.
+
+\begin{theorem}[Sparse quotient-union overlap]
+If $p\le1/4$ and $\ell=\log_2(1/p)\ge r/2$, then
+\[
+ \mathbf H(K)<8\mathbf I(K).
+\]
+Equivalently, it is enough that $|B|\le2^{r/2}$ and $p\le1/4$.
+The selector influence is exactly $p$, so the theorem has no
+uniform positive selector-energy hypothesis.  If $|B|\ge3$, this
+includes non-affine unions of quotient cells; the two-cell case is
+not new because any two points of $\mathbb F_2^r$ form an affine line.
+\end{theorem}
+
+\begin{proof}
+Write
+\[
+ a_\alpha=\mathbb E_z\left[\mathbf1_A(z)
+       (-1)^{\alpha\cdot Lz}\right],\qquad \alpha\in\mathbb F_2^r.
+\]
+Surjectivity identifies these with the normalized Fourier
+coefficients of $\mathbf1_B$; hence
+\[
+ a_0=p,\qquad \sum_\alpha a_\alpha^2=p.
+\]
+Since
+\[
+ K(x,z)=1-\mathbf1_A(z)+x\mathbf1_A(z),
+\]
+its constant Fourier coefficient is $1-p$.  For every nonzero
+$\alpha$, the two frequencies $L^T\alpha$ and
+$\{x\}\cup L^T\alpha$ have squared coefficient $a_\alpha^2$,
+and the selector singleton has squared coefficient $p^2$.
+Thus the total nonconstant spectral mass is
+\[
+ q=p^2+2\sum_{\alpha\ne0}a_\alpha^2=2p-p^2.
+\]
+There are at most $2^{r+1}-1$ nonconstant atoms.  Conditional
+entropy maximization at fixed total mass therefore gives the exact
+support ledger
+\[
+ \mathbf H(K)
+ \le h_2(q)+q\log_2(2^{r+1}-1)
+ < h_2(q)+q(r+1).                                      \tag{1}
+\]
+
+The selector coordinate contributes exactly $p$.  On data
+coordinates, the two Fourier sectors have equal squared masses, so
+\[
+ \mathbf I(K)=p+2\sum_{\alpha\ne0}|L^T\alpha|a_\alpha^2
+             =p+\tfrac12\mathbf I(D_A).                \tag{2}
+\]
+The cube edge-isoperimetric inequality, applied to the set $A$ of
+density $p\le1/2$, gives
+\[
+ \mathbf I(D_A)\ge2p\log_2(1/p)=2p\ell.
+\]
+Consequently
+\[
+ \mathbf I(K)\ge p(1+\ell).                            \tag{3}
+\]
+
+Because $p\le1/4$, $q\le1/2$.  For $0<q\le1/2$,
+$h_2(q)\le2q\log_2(1/q)$; this follows by comparing the two
+summands of $h_2(q)$.  Also $p\le q\le2p$.  Therefore (1) implies
+\[
+ \mathbf H(K)<4p\ell+2p(r+1).                          \tag{4}
+\]
+Combining (3)--(4),
+\[
+ \frac{\mathbf H(K)}{\mathbf I(K)}
+ <\frac{4\ell+2(r+1)}{\ell+1}
+ =4+\frac{2(r-1)}{\ell+1}<8,
+\]
+where the last inequality uses $\ell\ge r/2$.  This proves the
+claim.  Every quantity in (1)--(4) refers to the actual shared
+physical inputs; no disjoint-block entropy rule is used.
+\end{proof}
+
+\paragraph{Disjoint leaf tensorization.}
+If a Boolean leaf $w$ uses variables disjoint from $(x,z)$ and
+$\mathbf H(w)\le C\mathbf I(w)$, then for $F=wK$ the Fourier law is
+a product and
+\[
+ \mathbf H(F)=\mathbf H(w)+\mathbf H(K),\qquad
+ \mathbf I(F)=\mathbf I(w)+\mathbf I(K).
+\]
+Hence $\mathbf H(F)<\max\{C,8\}\mathbf I(F)$.  This final step is
+explicitly disjoint tensorization; it is not a shared-variable
+product claim.

@@ -1,0 +1,88 @@
+{
+  "problem_id": "C0052",
+  "checked_at": "2026-10-10",
+  "exact_intake_statement": "Prove that the three-dimensional Ising model is non-trivial: its scaling limit is not a Gaussian field (the renormalised coupling constant does not vanish).",
+  "intake_source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:52",
+  "primary_source": {
+    "id": "duminil_copin_ising_potts_2017",
+    "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+    "version": "IHES PDF dated 29 June 2017, printed p.94; 101 PDF pages in direct web retrieval",
+    "url": "https://www.ihes.fr/~duminil/publi/2017_PIMS.pdf",
+    "locator": "Section 7, (7.1)-(7.2), Conjecture 6, Exercise 61",
+    "short_quote": "Prove that the three-dimensional Ising model is non-trivial",
+    "statement_verification": "direct primary-source web read; signed g and limits recovered",
+    "file_hash_verification": "historical intake records a different downloaded PDF hash; not independently rehashed here"
+  },
+  "current_openness": "UNKNOWN",
+  "historical_status": "source_says_open; September intake attempted_unsolved",
+  "novelty_claim": false,
+  "parent_problem_solved": false,
+  "served_model_evidence": {
+    "author": "Not available in this thread; requested settings are not evidence.",
+    "referee": "pending"
+  },
+  "precise_operational_target": {
+    "model": "zero-field nearest-neighbor ferromagnetic Ising on Z^3, free infinite-volume state",
+    "regime": "0<beta<beta_c, beta increases to beta_c",
+    "signed_coupling": "g(beta)=sum U4(0,x2,x3,x4)/(chi(beta)^2 xi(beta)^3)",
+    "chi": "sum_x E_beta[sigma_0 sigma_x]",
+    "xi": "(-lim_n n^(-1) log E_beta[sigma_0 sigma_(n e1)])^(-1)",
+    "quantifier": "g(beta) does not tend to zero; since g<=0, equivalently some epsilon>0 and beta_n increasing to beta_c have -g(beta_n)>=epsilon",
+    "stronger_unproved_routes": [
+      "positive full liminf",
+      "non-Gaussianity of every critical-field subsequential limit",
+      "source-scale uniform endpoint event bound"
+    ]
+  },
+  "prior_work_checks": [
+    {
+      "path": "probability_1000_intake_claude_20260907/problems.jsonl:52",
+      "result": "attempted_unsolved; historical source says open"
+    },
+    {
+      "path": "probability_1000_intake_claude_20260907/attempts.jsonl:42",
+      "result": "variance bound unclosed; heuristic cluster independence and scale equivalence need correction"
+    },
+    {
+      "path": "probability_1000_attempts_H_20260912; probability_1000_attempts_I_20260914",
+      "result": "targeted C0052 search found no exact record"
+    },
+    {
+      "path": "prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md:592",
+      "result": "attempted_un ranking only; no formal proof receipt"
+    },
+    {
+      "path": "other named intake problem/attempt records",
+      "result": "targeted C0052 search found no additional exact record"
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "result": "C0052 absent from listed team tasks"
+    },
+    {
+      "path": "~/Big Open problem in probability theory/README.md; ~/Open problem project/solved_register.md",
+      "result": "named local solved register concerns other problems; no C0052/Ising hit"
+    },
+    {
+      "path": "live_target_receipt.json",
+      "result": "exact target card retrieved from canonical population sqlite in read-only mode"
+    },
+    {
+      "path": "https://arxiv.org/html/1912.07973",
+      "result": "4D Gaussianity and one-sided current sprinkling; no 3D solution"
+    },
+    {
+      "path": "https://arxiv.org/abs/2309.05797",
+      "result": "2025 revision covers effective dimension >=4, including certain long-range lower-dimensional models; does not settle nearest-neighbor 3D"
+    }
+  ],
+  "status_search_limit": "bounded public-primary and named-local search; no resolution identified, not an exhaustive current-open certification",
+  "memory_check": {
+    "recall": "60-second timeout",
+    "fallback_slug": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "lesson": "successful finite checks and pipeline labels do not close the hardest parent proof gap"
+  },
+  "hardest_remaining_gap": "positive subsequential lower bound for the four-distinct-site Ursell sum divided by chi^2 xi^3 under the exact sourced two-current law",
+  "formal_check_receipt": null,
+  "source_check_is_proof": false
+}

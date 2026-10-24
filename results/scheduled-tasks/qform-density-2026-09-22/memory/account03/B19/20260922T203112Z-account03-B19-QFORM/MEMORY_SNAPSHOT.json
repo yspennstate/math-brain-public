@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B19",
+  "run_id": "20260922T203112Z-account03-B19-QFORM",
+  "owner_revision": "2026-09-22.15",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "continuity_full_target": "OPEN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "63568dad79e5381abb3081ef4685ea126fdd4297",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260922T203112Z-account03-B19-QFORM/"
+  },
+  "proved": [
+    {
+      "id": "QFORM-DIFFUSE-2D-TWO-BANK-PARTITION-v1",
+      "statement": "For a two-dimensional Parseval frame with every squared row norm at most 1/2, there is an original-index partition J,K with det(S_J)det(S_K)>=1/640 and lambda_min(S_J),lambda_min(S_K)>=1/640."
+    },
+    {
+      "id": "QFORM-DIFFUSE-2D-TWO-BANK-DENSITY-v1",
+      "statement": "The two disjoint original-coordinate transverse packets from that partition are independent and each has R^2 density cap at most e*sqrt(640)<68.768."
+    },
+    {
+      "id": "QFORM-HIGH-LEVERAGE-NEARNULL-STAR-v1",
+      "statement": "For arbitrary A with s3(A)>=1, selected-three-eigenspace leverage c at coordinate i implies ||A_(i,-i)||^2>=c-A_ii^2 and ||A_(-i,-i)||op>=1; c>=7/9 and |A_ii|<=1/4 give star norm >=sqrt(103)/12."
+    },
+    {
+      "id": "QFORM-NEARNULL-LARGE-ATOM-SMALL-DIAGONAL-v1",
+      "statement": "If in the preceding state some j satisfies |A_ij|>=1/2 and |A_jj|<=1/4, the physical pair theorem gives ||p_Q||infinity<49 for every arbitrary independent cap-one input law."
+    }
+  ],
+  "partner_application": {
+    "partner": "account04/B19",
+    "result": "QFORM-FINITE-UNION-CORE-v1",
+    "source_commit": "02171dc794a56c0235afb1ca394b3e614162bff4",
+    "application": "Transfers the concrete finite-union interval inequality P(Q in I)<=48.658|I| on the near-null physical-pair branch to all arbitrary independent cap-one marginals with no constant loss."
+  },
+  "other_completed_inputs": [
+    "account02/B10 QFORM-NULL-ROW-NESTED-HEAVY-CLOSURE-v1",
+    "account02/B06 QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+    "arbitrary-rank physical indefinite-pair theorem at math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc"
+  ],
+  "first_unpaid_exact_null_implication": "QFORM-NULLROW-TWO-BANK-LEAKAGE-PAYMENT-v1",
+  "near_zero_frontier": "Combine the star lower bound ||b||^2>=c-a^2 and complementary ||C||op>=1 without replacing near-zero by exact-zero. Remaining local-star state has a diffuse star at the 1/2 atom scale or every >=1/2 star atom on a diagonal >1/4.",
+  "corrections_applied": [
+    "no law-uniform pointwise quadratic-phase decay",
+    "no post-rotation independence",
+    "no unrestricted fiber-supremum shortcut",
+    "arbitrary-joint rank-three coarea premise is retracted",
+    "positive conditional projection-density moments are false",
+    "single Schur rank-two extraction is false",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "checker": {
+    "terminator": "QFORM_B19_R19_TWO_BANK_STAR_CHECK_PASS",
+    "pair_constant": 48.657615964587194,
+    "two_bank_density_cap": 68.76769520142155
+  },
+  "scheduler_mutations": 0,
+  "quiet_delivery_changed": false,
+  "email_sent": false,
+  "unknown_telemetry": {
+    "reasoning_effort_configured": "UNKNOWN",
+    "reasoning_tokens": null
+  }
+}

@@ -1,0 +1,15 @@
+Prepared an independent C0041 boundary packet before reading w450's proof. The fixed-ellipticity homogeneous family rules out law-independent speed constants; the critical layered example identifies site independence as the exact missing hypothesis. These do not solve or refute C0041. The new public manuscript claims a full resolution; current openness remains UNKNOWN because its decisive crossing estimate is not independently audited here.
+
+The independent audit keeps w450 L0-L3 within their stated scope and L4 as a signed occupation-drift counterexample. L2's nonnegative local drift is stronger than the target assumptions; a ballisticity corollary still needs the Kalikow implication.
+
+Measured by `python -X utf8 ~/brain_workers/w451/verify_boundary.py`: 504 finite environments, 24 matrix/formula comparisons, PASS in 0.228 seconds. Critical lower crossing bounds grow from 13 at L=6 to 201 at L=100. Same-layer covariance is 3/16; raw mean layered drift is 1/8. By `python -X utf8 ~/brain_workers/w451/audit_exact_bridge.py`: raw mean drift 1/125 but finite-domain Kalikow drift -62753/3982809 (-0.01575597), PASS. Finite exact diagnostics do not certify the probabilistic proof.
+
+Brain handoff: ~/math-brain-inbox/w451/bundle_001.json, six concept/draft entries and six scoped relations, all with owner-own-work source tags. DRAFT_VALIDATION.json checks shape, endpoints and acyclicity. BRAIN_STATES.json separates submitted, reviewed, ingested and retrievable. Independent mathematical and served-model review receipts remain pending; no theorem promotion or measured recall gain is claimed.
+
+Apply: the validating coordinator reviews this packet and ingests the concept draft after the required gates; append HOOK_PROPOSAL.jsonl to the destination named in patches/01_regeneration_boundary_hook.diff only after hook auditors KEEP it. The hook is a local reviewable patch because this worker's write boundary excludes live hook files.
+
+Risk: a layer-iid law must not be recalled as site iid; the first crossing lower bound must not be promoted to a parent-target counterexample; an admitted Lean comparator is not a formal certificate. New public proof status must stay separate from this packet's restricted audit.
+
+NEXT: w452 checks B1-B3, and the integrator retains the exact restricted scope and validates the public manuscript's small-crossing-probability estimate before any solved-status update.
+
+Added the sharp reciprocal-survival threshold for the same critical family: E q^-lambda is finite exactly for 0<=lambda<1, yet crossing mean is infinite. `python -X utf8 ~/brain_workers/w451/verify_inverse_boundary.py` independently solves 126 finite hitting matrices and checks six mean-inverse formulas E[1/a_N]=N+1; PASS in 0.092 seconds. The lambda=1/2 analytic upper bound is 4+2sqrt(3), approximately 7.464102. Extra concept draft: ~/math-brain-inbox/w451/bundle_002.json. Total submission: seven concepts and seven relations across two bundles. Proof and referee gates remain unchanged.

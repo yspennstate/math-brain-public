@@ -1,0 +1,23 @@
+{
+  "schema": "fei-independent-review-verdict/1",
+  "run_id": "20261012T044913Z-account01-B19-b05-separated-hierarchy-review-a094",
+  "review_packet": "A094",
+  "target_packet": "A023",
+  "target_claims": [
+    "B05-A023-SEPARATED-TWO-CORE-U-IDENTITY-v1",
+    "B05-A023-SEPARATED-HIERARCHY-PAYMENT-v1"
+  ],
+  "target_commit": "72824efa4229ee109fc344f1a021840982509ee5",
+  "verdict": "ACCEPTED_AT_DECLARED_SCOPE",
+  "reviewer_contribution": "NONE; independent reconstruction and stress test only",
+  "accepted_scope": "Every finite fresh one-word selector tree whose sibling subtrees have disjoint complete physical variable sets, with arbitrary genuine Boolean leaves retained by their exact reach probabilities.",
+  "accepted_bound": "U(F_root)-sum_leaf w_leaf U(g_leaf) <= C_sep I_sel(F_root), C_sep=3+4(1+2/e)/ln2+2/ln2+2/(e ln2)<16.964.",
+  "not_accepted": [
+    "shared-variable or reused-selector hierarchies",
+    "whole-set addressing with reused address bits",
+    "a universal bound on the retained leaf packets",
+    "full FEI"
+  ],
+  "fresh_review_required": false,
+  "full_fei_status": "OPEN"
+}

@@ -1,0 +1,48 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w539",
+  "bundle_slug": "p0309-reviewed-full-law-pressure-bridge-002",
+  "entries": [
+    {
+      "key": "pressure-cusp-limit-order",
+      "namespace": "probability.riesz-gases",
+      "logical_name": "bounded-order-parameter-pressure-cusp-limit-order",
+      "kind": "lemma",
+      "title": "Pressure cusp and the order of thermodynamic and zero-field limits",
+      "statement": "Fix beta>0. For each N let M_N be symmetric in law with |M_N|<=N, and put p_N(h)=(beta N)^{-1}log E exp(beta h M_N). Suppose p_N(h) converges to a finite p(h) for every h in an open interval (-h0,h0). Then p is even, convex, 1-Lipschitz, p(0)=0, and for 0<2h<h0, p(h)/h <= liminf_N p_N'(h) <= limsup_N p_N'(h) <= [p(2h)-p(h)]/h. Both outer expressions tend to p'_+(0) as h decreases to zero, whereas p_N'(0)=0 for each N.",
+      "proof_text": "The bounded exponential moment is differentiable with p_N'(h)=E_h M_N/N, p_N''(h)=beta Var_h(M_N)/N>=0 and |p_N'|<=1. Symmetry makes p_N even and p_N'(0)=0. Convex secants give p_N(h)/h<=p_N'(h)<=[p_N(2h)-p_N(h)]/h. Take N to infinity, then h down to zero. The first bound tends to the right derivative of the limiting convex p; the last is 2p(2h)/(2h)-p(h)/h and has the same limit.",
+      "assumptions": ["beta>0", "M_N symmetric in law and |M_N|<=N", "pointwise finite pressure limit on an open interval around zero", "N limit precedes h down to zero"],
+      "domain": "probability and equilibrium statistical mechanics",
+      "source": {"source_id":"owner-own-work:w537-P0309-C1-reviewed-w539-20261010","url":"urn:owner-own-work:P0309:w537:20261010:C1","revision":"2026-10-10-w539-independent-review","license":"owner-own-work (w537 author, w539 referee)","excerpt":null}
+    },
+    {
+      "key": "pressure-cusp-probability-cost",
+      "namespace": "probability.riesz-gases",
+      "logical_name": "pressure-cusp-and-subexponential-order-parameter-cost",
+      "kind": "lemma",
+      "title": "Pressure slope equals the subexponential accessibility threshold",
+      "statement": "Under the preceding bounded symmetric order-parameter and pointwise pressure-limit assumptions, write A_N=M_N/N and m=p'_+(0). If 0<=a<m, then liminf_N N^{-1}log P(A_N>=a)=0. If m<a<=1, then limsup_N N^{-1}log P(A_N>=a)<0. Conversely, if a>0 and liminf_N N^{-1}log P(A_N>=a)=0, then m>=a. No assertion is made at a=m.",
+      "proof_text": "For a<m choose small h>0 with p(h)>ha. Splitting the exponential moment at A_N=a gives P(A_N>=a)>=exp(beta N[p_N(h)-h]) [1-exp(beta N[ha-p_N(h)])]. The bracket tends to one; after taking log-rate, let h down to zero, and use that log probabilities have nonpositive rate. For a>m choose h>0 with p(h)/h<a; exponential Markov gives limsup log-rate <=beta[p(h)-ha]<0. Conversely E exp(beta h N A_N)>=exp(beta h N a)P(A_N>=a); zero lower exponential cost implies p(h)>=ha for every h>0, hence m>=a.",
+      "assumptions": ["beta>0", "M_N symmetric in law and |M_N|<=N", "p_N(h) converges pointwise to finite p(h) on an open interval around zero", "strict inequalities a<m or a>m as stated"],
+      "domain": "probability and equilibrium statistical mechanics",
+      "source": {"source_id":"owner-own-work:w537-P0309-C2-reviewed-w539-20261010","url":"urn:owner-own-work:P0309:w537:20261010:C2","revision":"2026-10-10-w539-independent-review","license":"owner-own-work (w537 author, w539 referee)","excerpt":null}
+    },
+    {
+      "key": "bragg-intensity-pressure-slope",
+      "namespace": "probability.riesz-gases",
+      "logical_name": "full-law-circular-bragg-intensity-implies-pressure-slope",
+      "kind": "lemma",
+      "title": "Full-law circular Bragg intensity forces a positive pressure slope",
+      "statement": "Fix beta>0. Let S_N be complex with |S_N|<=N and a law invariant under multiplication by every unit complex phase. Set M_N=Re S_N and p_N(h)=(beta N)^{-1}log E exp(beta h M_N). Assume p_N converges pointwise near zero to finite p. If liminf_N E|S_N/N|^2>=b^2 for some 0<b<=1, then p'_+(0)>=b. The second moment is under the full zero-field law; a conditional ordered branch does not suffice.",
+      "proof_text": "Put R_N=|S_N|/N. Fix 0<a<r<b. The moment assumption and 0<=R_N<=1 give P(R_N>=r)>=(b^2-r^2)/[2(1-r^2)] for all sufficiently large N. Circular invariance says that, conditional on any modulus at least r, the probability that Re(S_N/N)>=a is at least arccos(a/r)/pi. Thus P(M_N/N>=a) is bounded below by a positive constant independent of N. The preceding pressure-cost lemma gives p'_+(0)>=a. Let a increase to b through r between a and b.",
+      "assumptions": ["beta>0", "|S_N|<=N", "the full zero-field law is invariant under every complex phase rotation", "pointwise finite pressure limit near zero", "positive liminf full-law second moment b^2", "no conditional-branch substitution"],
+      "domain": "probability and equilibrium statistical mechanics",
+      "source": {"source_id":"owner-own-work:w537-P0309-C5-reviewed-w539-20261010","url":"urn:owner-own-work:P0309:w537:20261010:C5","revision":"2026-10-10-w539-independent-review","license":"owner-own-work (w537 author, w539 referee)","excerpt":null}
+    }
+  ],
+  "relations": [
+    {"from_key":"pressure-cusp-probability-cost","to_key":"pressure-cusp-limit-order","kind":"depends_on","rationale":"The probability-cost lemma uses the limiting pressure p and its right derivative m furnished by the bounded order-parameter pressure-limit lemma."},
+    {"from_key":"bragg-intensity-pressure-slope","to_key":"pressure-cusp-probability-cost","kind":"depends_on","rationale":"A full-law Bragg second moment plus circular symmetry yields a nonexponentially rare positive real response; the probability-cost lemma then implies the pressure slope bound."},
+    {"from_key":"bragg-intensity-pressure-slope","to_existing_logical":"math:probability.core:open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri","kind":"semantic_association","rationale":"The target seeks a 3D Riesz crystalline Gibbs phase. This conditional bridge would turn an unproved full-law Bragg bound into a pressure cusp, while actual Riesz Bragg intensity, pressure existence, and DLR closure remain open."}
+  ]
+}

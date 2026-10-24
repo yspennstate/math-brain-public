@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A053: quantitative block-descent continuity and its equality boundary}
+All entropies are in bits. Let $\phi(f)=\min_{\varnothing\ne A\subsetneq[n],\ I_A(f)>0}L_A(f)/I_A(f)$, $n\ge2$, and $g=f-2f(v)\mathbf1_v$, $p=2^{-n}$. Set $E_0=E_1=0$, $E_2=2$, $E_3=3$, and $E_m=h_2(u_m)+mu_m$ for $m\ge4$, $u_m=2^{1-\lfloor m/2\rfloor}$. Then for $a=|A|$,
+\[
+|L_A(g)-L_A(f)|\le\eta_{n,a}:=E_n+2^{-a}E_{n-a},\qquad
+|I_A(g)-I_A(f)|\le2ap.
+\]
+If $I_A(f)>2ap$, this gives
+\[
+\phi(g)\le\frac{L_A(f)+\eta_{n,a}}{I_A(f)-2ap}.
+\]
+If every coordinate influence of $f$ is at least $\kappa>2p$, then the proper-block families agree and
+\[
+|\phi(g)-\phi(f)|\le\epsilon_\phi:=\max_{1\le a<n}\frac{\eta_{n,a}}{a(\kappa-2p)}+\frac{4p}{\kappa(\kappa-2p)}.
+\]
+Also for $R=H/I$,
+\[
+|R(g)-R(f)|\le\epsilon_R:=\frac{E_n}{n(\kappa-2p)}+\frac{2p}{\kappa(\kappa-2p)}.
+\]
+Thus $R(f)-\phi(f)>\epsilon_\phi+\epsilon_R$ transfers strict own-ratio descent. The numerator can also be bounded by
+\[
+a(\delta_P+\delta_Q)+h_2(\delta_P)+h_2(\delta_Q),
+\]
+where $\delta_P$ is parent spectral TV and $\delta_Q=2^{-a}$ times the edited child's spectral TV. This follows by common-mixture conditional-entropy continuity, retaining the whole joint physical-query channel.
+
+Exact inheritance at equality fails. Let $d_n=1-2\mathbf1_0$ and $R_n=H(d_n)/(2n2^{-n})$. The proof in \texttt{CONTINUITY\_PROOF.md} shows $R_n$ strictly increases from $0$ to $4$. For $F_n=\chi_{[n]}$ and $G_n=\chi_{[n]}d_n$,
+\[
+\phi(F_n)=R(F_n)=0,\quad I_i(G_n)=1-2^{1-n},\quad
+L_A(G_n)-R(G_n)I_A(G_n)
+=2(n-a)2^{-n}(R_n-R_{n-a})>0.
+\]
+Hence for every $n\ge2$,
+\[
+1<\frac{\phi(G_n)}{R(G_n)}\le\frac n{n-1},\qquad
+\phi(G_n)\sim R(G_n)\sim8\,2^{-n}.
+\]
+The defect is arbitrarily rare, but the exact own-ratio inequality remains reversed. A fixed positive universal descent constant and FEI remain unrefuted. For $n\ge3$ all averaged proper-block tests pass at $R(G_n)$, while an individual two-bit edited descendant has ratio $2>R(G_n)$; true descendant-criticality is stronger.
+\end{document}

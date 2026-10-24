@@ -1,0 +1,27 @@
+{
+  "schema": "fei-restriction-gaps/1",
+  "packet_id": "A087",
+  "target_packet_id": "A028",
+  "target_claim_id": "B06-A028-LTF-TERMINAL-STOPPING-v1",
+  "verdict": "ACCEPTED_WITH_LOCAL_REPAIR_FRESH_REVIEW_REQUIRED",
+  "gaps": [
+    {
+      "gap_id": "B06-A028-M1-ENDPOINT",
+      "status": "REPAIRED",
+      "location": "TERMINAL_CLASS_STOPPING.tex, point-defect estimate after r=2/2^m",
+      "issue": "The inequality -log(1-r)<=r/(1-r) is invoked at m=1, where r=1 and the right side is undefined.",
+      "repair": "Treat m=1 separately: q_1 is a signed dictator, H(q_1)=0 and I(q_1)=1.",
+      "effect": "No change to theorem statement or constant. The auditor is a contributor, so a fresh reviewer is required."
+    },
+    {
+      "gap_id": "B06-A028-REACH-TERMINOLOGY",
+      "status": "SCOPE_CLARIFIED",
+      "location": "TERMINAL_CLASS_STOPPING.tex, theorem item 2",
+      "issue": "The factor P_ell is called a reach weight, although every proper block is physically reached with probability one.",
+      "repair": "Call P_ell H(q) and P_ell I(q) the exact blockwise root-minus-mean-child entropy and influence decrements; P_ell is odd spectral mass.",
+      "effect": "The mathematical telescope and nonreuse ledger remain valid."
+    }
+  ],
+  "unpaid_universal_gap": "No proper-block selection rule is supplied for arbitrary Boolean functions or unequal-spectrum physical children.",
+  "full_fei_status": "OPEN"
+}

@@ -1,0 +1,52 @@
+{
+  "claim_id": "NM13-13-T04-PRODUCT-GAUSS11-43888619-UPPER-11",
+  "date": "2026-09-20",
+  "status": "OPEN/PARTIAL; CANDIDATE_FULL for fixed-count upper endpoint 4.3888619 pending later independent review",
+  "source_model": "classical iid random 3-SAT, m=floor(alpha n), uniform proper signed clauses on three distinct variables",
+  "published_explicit_bracket_before": [3.52, 4.4898],
+  "published_explicit_bracket_after": [3.52, 4.4898],
+  "project_candidate_upper_before": 4.38886365,
+  "project_candidate_upper_after": 4.3888619,
+  "project_candidate_endpoint_gain": 0.00000175,
+  "mechanism": "direct-product X=QQ' complete-tail lower bound using 11-node Gaussian/Hankel quadrature of the X^K-tilted law",
+  "parameters": {
+    "alpha": "43888619/10000000",
+    "K": 2300,
+    "gauss_nodes": 11,
+    "interval_dps": 1200,
+    "survey_support": ["651/100000", "789/10000", "1/2", "9211/10000", "99349/100000"],
+    "survey_weights": ["5581/100000", "3669/20000", "13037/25000", "3669/20000", "5581/100000"]
+  },
+  "certificate": {
+    "A_K": "5.15999678725045645021032251911133e-5",
+    "product_gauss11_tail_lower": "5.16050908763881280621248603789360e-5",
+    "A_upper": "<-5.1230038835635600216e-9",
+    "structural_checks": true
+  },
+  "same_density_mechanism_diagnostic": {
+    "gauss9_A_upper_approx": "+2.2789529149021319e-7",
+    "gauss11_A_upper_certified": "<-5.1230038835635600e-9",
+    "approx_upper_bound_improvement": "2.3301829537377675e-7",
+    "note": "Gauss9 comparator is a 900-digit non-interval diagnostic; the Gauss11 negativity is outward-interval certified."
+  },
+  "prior_failures_preserved": [
+    "arbitrary rescue stars fail composition",
+    "anchored degree-one rescue matching lacks full Diaz-polytope reoptimization",
+    "positive clause-local multiplicative second moments hit identical-pair barrier log(2)/log(5/4)=3.10628...",
+    "sublinear solution-ball quotienting yields only exp(o(n)) savings",
+    "whole-component quotienting leaves an uncontrolled cross-component overlap moment",
+    "whitening/core counting lacks a uniform exponential cluster-multiplicity theorem",
+    "q-binomial radius-two route only reached about 4.5923",
+    "equal-weight two-support hard-field survey stalls near 4.4178"
+  ],
+  "companion_nm13_06": "A/B repair subsystem is dual-Horn and union-closed; exact seed/orientation closure adds C-promotions and D-forbidden triples as the constructive globalization obstruction; make-minus-break is the exact one-flip energy rule.",
+  "artifacts": {
+    "checker_path": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T12-57-34Z__product_gauss11_43888619_interval.py",
+    "checker_commit": "c03a154734e039459120e0e9ba8b207fa0a22603",
+    "output_path": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T12-57-34Z__product_gauss11_43888619_interval.out",
+    "output_commit": "73380b5ba655a8a32e74a8b994913aa32667e541"
+  },
+  "next_attack": "Either interval-certify the observed direct-product Gauss13 endpoint near 4.3888608 with better-conditioned orthogonalization, or switch to a seven-support survey optimized directly against a fixed rigorous product-tail minorant if high-node interval conditioning remains the obstruction.",
+  "runtime_model": "GPT-5.6 Sol",
+  "runtime_effort": "UNVERIFIED"
+}

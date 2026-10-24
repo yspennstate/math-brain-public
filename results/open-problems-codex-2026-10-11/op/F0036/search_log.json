@@ -1,0 +1,136 @@
+[
+  {
+    "service": "arxiv",
+    "url": "https://export.arxiv.org/api/query",
+    "query": {
+      "search_query": "all:\"Brownian net\"",
+      "max_results": 100,
+      "sortBy": "submittedDate",
+      "sortOrder": "descending"
+    },
+    "error": "HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+    "date": "2026-10-12"
+  },
+  {
+    "service": "openalex",
+    "url": "https://api.openalex.org/works?search=Brownian+net&per-page=100",
+    "status": 200,
+    "bytes": 1831557,
+    "date": "2026-10-12"
+  },
+  {
+    "service": "openalex_source",
+    "url": "https://api.openalex.org/works?search=The+Brownian+web+the+Brownian+net+and+their+universality&per-page=5",
+    "status": 200,
+    "bytes": 98739,
+    "date": "2026-10-12"
+  },
+  {
+    "service": "crossref",
+    "url": "https://api.crossref.org/works?query=Brownian+net+most+recent+common+ancestors&rows=40",
+    "status": 200,
+    "bytes": 142199,
+    "date": "2026-10-12"
+  },
+  {
+    "service": "semantic",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1506.00724?fields=title%2Cyear%2CcitationCount%2Ccitations.title%2Ccitations.year%2Ccitations.externalIds",
+    "status": 429,
+    "bytes": 174,
+    "date": "2026-10-12"
+  },
+  {
+    "service": "github",
+    "url": "https://api.github.com/search/repositories?q=%22Brownian+net%22&per_page=30",
+    "status": 200,
+    "bytes": 11362,
+    "date": "2026-10-12"
+  },
+  {
+    "service": "arxiv_exact",
+    "url": "http://export.arxiv.org/api/query",
+    "query": {
+      "search_query": "all:\"potential most recent common ancestors\"",
+      "max_results": 20
+    },
+    "error": "HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+    "date": "2026-10-12"
+  },
+  {
+    "service": "citing_published",
+    "url": "https://api.openalex.org/works?filter=cites%3AW2121110727&per-page=200",
+    "status": 200,
+    "date": "2026-10-12",
+    "bytes": 931676
+  },
+  {
+    "service": "citing_arxiv",
+    "url": "https://api.openalex.org/works?filter=cites%3AW4300525659&per-page=200",
+    "status": 200,
+    "date": "2026-10-12",
+    "bytes": 384
+  },
+  {
+    "service": "crossref_net",
+    "url": "https://api.crossref.org/works?query.title=Brownian+net&rows=50",
+    "status": 200,
+    "date": "2026-10-12",
+    "bytes": 209135
+  },
+  {
+    "service": "semantic_search",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=Brownian+net&limit=100&fields=title%2Cyear%2CexternalIds%2Cabstract",
+    "status": 429,
+    "date": "2026-10-12",
+    "bytes": 174
+  },
+  {
+    "service": "openalex_exact",
+    "url": "https://api.openalex.org/works?search=%22potential+most+recent+common+ancestors%22&per-page=50",
+    "status": 200,
+    "date": "2026-10-12",
+    "bytes": 22888
+  },
+  {
+    "service": "arxiv_retry",
+    "url": "https://export.arxiv.org/api/query",
+    "query": {
+      "search_query": "ti:\"Brownian net\"",
+      "max_results": 50
+    },
+    "error": "HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=50)",
+    "date": "2026-10-12"
+  },
+  {
+    "service": "special_times",
+    "url": "https://arxiv.org/pdf/2512.10761",
+    "status": 200,
+    "date": "2026-10-12",
+    "bytes": 300677,
+    "pages": 22
+  },
+  {
+    "service": "universality",
+    "url": "https://arxiv.org/pdf/2401.09370",
+    "status": 200,
+    "date": "2026-10-12",
+    "bytes": 753232,
+    "pages": 54
+  },
+  {
+    "service": "special_points",
+    "url": "https://arxiv.org/pdf/0806.2326",
+    "status": 200,
+    "date": "2026-10-12",
+    "bytes": 790904,
+    "pages": 55
+  },
+  {
+    "service": "arxiv_direct_pdf_reopened",
+    "url": "https://arxiv.org/pdf/math/0610625",
+    "status": 200,
+    "date": "2026-10-12",
+    "pages": 58,
+    "purpose": "Check image property, backbone rotation, containment in the original Sun\u2013Swart paper."
+  }
+]

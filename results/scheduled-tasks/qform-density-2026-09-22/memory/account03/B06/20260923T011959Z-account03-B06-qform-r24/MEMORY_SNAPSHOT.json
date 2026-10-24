@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260923T011959Z-account03-B06-qform-r24",
+  "assignment": "Curved fiber integration",
+  "source_control_commit": "35662668301dbfa0da45ae5d74c7f1f2dfa737fc",
+  "owner_control_revision": "2026-09-22.15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_conjecture_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_NOT_PROVED_BY_THIS_BRANCH",
+  "result_id": "QFORM-CROSS-E2-FRACTIONAL-L3-AND-THIRD-SINGULAR-SQUARE-v1",
+  "result_status": "PROVED_SUPPORTING_ANALYTIC_RECEIVERS_AND_PAID_SUBBRANCHES",
+  "mathematical_summary": {
+    "aggregate_e2_receiver": "For an original-coordinate cross block B with Delta2=e2(BB^T), 1<=q<3/2, and one-side range leverage <=q/2, the full residual form has an L3 density bounded by [3^(1/6)e^(2/3)/(4q^(1/3))] Beta(1/4,3/(8q)-1/4)^(2/3) Delta2^(-1/6). Extra cross singular directions and arbitrary self/outside terms are retained.",
+    "ridge_fractional_receiver": "For K=BB^T(rho^2I+BB^T)^(-1), theta=tr K, D=det(I+BB^T/rho^2), max diag K<=q/2 and theta>4q/3 imply an explicit L3 density bound with rho^(-2/3). This drops the direct L1 Fourier threshold from theta>2q to theta>4q/3 because an outer square only requires L3.",
+    "outer_square": "Applying account04/B18's dependence-safe conditional square kernel and an optimized L3 half-Riesz estimate gives ||p_Q||inf <=(8/3^(3/4))|a|^(-1/2)||p_R||_3^(3/4), with no fabricated post-completion independence.",
+    "aggregate_endpoint": "Consequently ||p_Q||inf<=C_q |a|^(-1/2) Delta2^(-1/8), where C_1=7.9667094489...; in the inherited h1*h2>(4/5)G^2 chamber this gives <8.424/sqrt(|a|G) whenever one-side range leverage<=1/2.",
+    "third_singular_endpoint": "If sigma_3(B)>=s, choosing q=2 and rho=s/sqrt(24) gives the leverage-free bound ||p_Q||inf <25/sqrt(|a|s). Thus at scale G either sigma_3>=G/64 closes with <200/sqrt(|a|G), or the retained cross block lies in the explicit rank-two operator-norm tube sigma_3<G/64."
+  },
+  "premises": [
+    {
+      "id": "QFORM-REGULARIZED-DETERMINANT",
+      "source": "yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md"
+    },
+    {
+      "id": "QFORM-RIDGE-DENSITY-v1",
+      "source": "yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md"
+    },
+    {
+      "id": "QFORM-DEPENDENT-SQUARE-SMOOTHING-v1",
+      "source": "yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T113729Z-account04-B18-qform-r1/REPORT.md"
+    },
+    {
+      "id": "B06-r23-double-wedge-diffuse-state",
+      "source": "yspennstate/math-open-problems@a1a4bbd38a7a86292c12a53432f2f9a800ed4dab:proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T004812Z-account03-B06-qform-r23/REPORT.md"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-N3-LOCAL-COLLISION-BEFORE-AGGREGATION-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-MIXED-SKELETON-DETERMINANT-ONLY-L1-FALSE-v1"
+  ],
+  "partner": {
+    "designated": "account04/B06",
+    "designated_completed_current_qform_artifact_found": false,
+    "result_actually_applied": "account04/B18 QFORM-DEPENDENT-SQUARE-SMOOTHING-v1",
+    "application": "Applied its conditional Abel/square kernel to the newly proved aggregate-e2 and ridge L3 residual estimates, producing explicit Linfinity endpoints."
+  },
+  "outputs": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_report_commit": "606257652f3c70e90c7b7f80ea7cb76c1abf689b",
+    "math_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T011959Z-account03-B06-qform-r24/REPORT.md",
+    "checker_source_commit": "84e2d48fad0f0e2c6f10564f534a44e8742cc919",
+    "checker_output_commit": "3a9896f667ef3a5b78e3b4aaae3945fb34d553cb",
+    "handoff_commit": "b8eb1904ff54450776606e3adb7b16c3c28b27fe",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B06/20260923T011959Z-account03-B06-qform-r24.md"
+  },
+  "unresolved_implications": [
+    "QFORM-DOUBLE-WEDGE-DIFFUSE-RANK2-TUBE-STABILITY-v1: combine the two-sided diffuse exterior collar with the explicit retained rank-two operator-norm tube before inversion.",
+    "Obtain a universal structural payment for |a|G across the surviving chambers.",
+    "Close zero/near-zero outer pivots and arbitrary higher-rank global assembly.",
+    "Continuity for the full target remains open."
+  ],
+  "next_step": "Construct a physical/grouped product packet inside the double-wedge-diffuse rank-two tube whose aggregate Delta2 has fractional range/ridge leverage below the new L3 threshold, or prove a perturbative aggregate-e2 endpoint that absorbs the nonzero tail without fragment-count or conditional-density losses."
+}

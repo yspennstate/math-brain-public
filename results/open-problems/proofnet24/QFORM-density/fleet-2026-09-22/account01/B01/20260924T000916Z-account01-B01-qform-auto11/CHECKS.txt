@@ -1,0 +1,35 @@
+Deterministic algebra/arithmetic diagnostics for REPORT.md. These are checks only; the proofs are analytic.
+
+1. beta=1/4:
+J_beta = 12.660413817789728
+(8^beta/(1-2 beta)) = 3.363585661014858
+[J_beta*8^beta/(1-2 beta)]^(1/(1+2 beta)) = 12.194582301486003
+coefficient exponents = (-1/2,-1/3,-1/6), sum = -1.
+
+2. beta=1/5:
+J_beta = 12.302924476698900
+three-square leading constant = 11.642698375989223
+coefficient exponents = (-1/2,-5/14,-1/7), sum = -1.
+At three pivot magnitudes >=1/64: 64*constant = 745.1326960633103.
+
+3. Strict support-one cancellation family:
+H=[[2,1,1],[1,1,1],[1,1,2]].
+charpoly(H)=(lambda-1)(lambda^2-4 lambda+1).
+spec(H)={1,2-sqrt(3),2+sqrt(3)}.
+Schur complement at the middle coordinate j: H/j=diag(1,1).
+Appending an outer coefficient 1 gives spectrum {1,1,2-sqrt(3),2+sqrt(3)}, hence exactly three eigenvalues have absolute value >=1.
+The quadratic identity is
+x0^2 + 2i^2 + j^2 + 2k^2 + 2ij + 2ik + 2jk
+= x0^2 + (j+i+k)^2 + i^2 + k^2.
+
+4. Support-two double-cancellation diagnostic.
+Write C=[[alpha,beta],[beta,gamma]], delta=alpha gamma-beta^2, r_l=alpha v_l+beta w_l. Under both cancellation equations alpha d_l-r_l^2=0 (l=j,k), alpha!=0 and
+ d_j=r_j^2/alpha, d_k=r_k^2/alpha.
+The physical pair determinant simplifies symbolically to
+ det H[{j,k}]
+ = - w_j w_k delta/alpha^2 *
+   [2 alpha^2 v_j v_k + 2 alpha beta(v_j w_k+v_k w_j)
+    +(alpha gamma+beta^2)w_j w_k].
+For d_j!=0, the post-j scalar pivot at k is exactly det(H[{j,k}])/d_j; therefore pair singularity implies the remaining k pivot is zero.
+
+STATUS=PASS

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B18",
+  "run_id": "account02-B18-20260923T230752Z-r11",
+  "control_commit_at_start": "15b1ea9b61f0dc035075409821c10fe09e8c1409",
+  "pre_handoff_brain_head": "0a00140041d25d52369938b140c4053a826884fe",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "target_status": "OPEN / NOT PROVED / NOT DISPROVED",
+  "mathematical_result": {
+    "id": "QFORM-DIFFUSE-FOURCORE-VS-FOURBANK-GAP-v1",
+    "status": "proved supporting construction and proof-certificate obstruction",
+    "statement_short": "For exact rank-three projections A=RR^T with max row leverage ell<=1/2, pinned Theorem F gives density <=12, while every applicable direct four-physical-coordinate use of the latest account03/B18 592/s theorem has RHS >=444/ell. A tetrahedral four-bank family has ell=3/m, fixed-four RHS >=148m, but exact disjoint bank aggregation gives <1184.",
+    "math_commit": "3e4aa614ab09df1badb2f169d00141189204134b",
+    "math_report": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/account02-B18-20260923T230752Z-r11/REPORT.md",
+    "math_check": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/account02-B18-20260923T230752Z-r11/CHECK.json",
+    "early_commit": "27c89b3a6d4ade1e9605c67a8964e78040ba049c"
+  },
+  "actual_premises": [
+    "Pinned e5f Theorem F exactly at rank-three diffuse leverage <=1/2.",
+    "Latest completed account03/B18 QFORM-FOUR-SOURCE-RANK3-COMPRESSION-v1 with constant 592/s and its four-disjoint-bank corollary 1184/s.",
+    "Livshyts--Paouris--Pivovarov Theorem 1.1 for genuine product probability densities; cap-one one-dimensional orthogonal marginals have density <=sqrt(2).",
+    "Independence is used only for original coordinates or functions of pairwise disjoint original-coordinate blocks."
+  ],
+  "partner_result_applied": {
+    "commit": "c11bba404e9782ff3a919e1f7d352f39a7100eaf",
+    "check_commit": "2a053b6a128ce68f93b524fa3177d227f0990dbb",
+    "result": "QFORM-FOUR-SOURCE-RANK3-COMPRESSION-v1",
+    "application": "tetrahedral four-bank effective matrix K=I-(1/4)11^T gives <1184 after LPP scaling; every fixed physical four-core has partner RHS >=148m"
+  },
+  "pinned_result_applied": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "result": "Theorem F (Fresnel--Brascamp--Lieb)",
+    "application": "tetrahedral exact rank-three projection has leverage 3/m<=1/2, yielding ||p_Q||inf<=12"
+  },
+  "primary_source_verified": {
+    "citation": "Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1",
+    "hypotheses": "product of one-dimensional probability densities; bounded factors",
+    "cap_one_consequence": "k-dimensional orthogonal marginal density <=2^(k/2)",
+    "not_implied": "independence after projection"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1",
+    "QFORM-B15-NONZERO-SQUARE-AFFINE-SLOPE-RESCUE-FALSE-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1"
+  ],
+  "unresolved_implication": "QFORM-HIGHERRANK-GROUPED-CARRIER-TO-FOURBANK-v1: in the higher-rank/no-pivot survivor, produce either a permitted diffuse rank-three certificate or disjoint original-coordinate low-dimensional banks carrying a uniformly scaled rank-three carrier while retaining same-bank/non-diagonal residual curvature.",
+  "next_step": "Test the newest two-bank/grouped-carrier reductions against the four-bank compression theorem and identify an exact source-preserving carrier condition that survives arbitrary rough cap-one laws without deleting a small residual.",
+  "continuity": "separate; pinned Theorem F branch has L1 characteristic-function decay, but no global continuity claim",
+  "telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_requested": "maximum actually supported",
+    "reasoning_effort_configured": "UNKNOWN",
+    "reasoning_effort_self_report": "UNKNOWN",
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null
+  }
+}

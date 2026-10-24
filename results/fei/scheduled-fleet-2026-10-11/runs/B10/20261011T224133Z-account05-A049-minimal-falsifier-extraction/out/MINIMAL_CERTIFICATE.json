@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "truth_table_order": "X+2Y for X,Y in {0,1}; X=0 means x=-1 in original sign-cube encoding",
+  "truth_table": [
+    1,
+    1,
+    1,
+    -1
+  ],
+  "biases": [
+    "1/4",
+    "1/4"
+  ],
+  "exact_circuit": "f=1-2XY; X=(1+x)/2, Y=(1+y)/2",
+  "squared_spectrum_order": [
+    "empty",
+    "X",
+    "Y",
+    "XY"
+  ],
+  "squared_spectrum": [
+    "49/64",
+    "3/64",
+    "3/64",
+    "9/64"
+  ],
+  "residual_marginal": [
+    "13/16",
+    "3/16"
+  ],
+  "child_spectra": [
+    [
+      "1",
+      "0"
+    ],
+    [
+      "1/4",
+      "3/4"
+    ]
+  ],
+  "debt_formula": "32*(J-M)=48+6 log2(3)+49 log2(7)-52 log2(13)",
+  "integer_left": 52719499781386523982199270969636322098232779259710399315968,
+  "integer_right": 8415003868347247618489696679505181495471801448798649088081,
+  "integer_gap": 44304495913039276363709574290131140602760977810911750227887,
+  "positive_ratio": "52719499781386523982199270969636322098232779259710399315968/8415003868347247618489696679505181495471801448798649088081",
+  "entropy_sign_clear_denominator": 64,
+  "rigorous_debt_bounds_bits": [
+    "1/16",
+    "3/32"
+  ],
+  "minimality": "n<=1 has J=0 because residual spectral set is deterministic"
+}

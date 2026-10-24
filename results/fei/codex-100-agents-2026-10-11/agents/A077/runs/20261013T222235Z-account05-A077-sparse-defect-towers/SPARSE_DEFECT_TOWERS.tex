@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{Actual signed transport with one shared physical data bit}
+\author{A077, B16, stage 3}\maketitle
+Let $G(s,X),H(s,Y)$ be arbitrary Boolean signs on independent uniform inputs with at most one common bit $s$, disjoint private coordinates, and a fresh selector $z$. Put $F=(G+H)/2+z(G-H)/2$ and $\Phi(p,q)=p\log_2(1/p)+q\log_2(1/q)-(p+q)\log_2(1/(p+q))$.
+
+For real $u,d,v$, define
+\[
+S(u,d;v)=\tfrac14[\Phi((u+v)^2,d^2)+\Phi((u-v)^2,d^2)]-\tfrac12\Phi(u^2,d^2).
+\]
+Then $-\Phi(u^2,d^2)/2\le S\le\Phi(v^2,d^2)/2$, hence $-|ud|\le S\le|vd|$. In natural units $\Phi(u^2,d^2)=\int_0^{d^2}\ln(1+u^2/t)\,dt$. The upper comparison follows by integrating
+\[
+\frac{((u+v)^2+t)((u-v)^2+t)}{(u^2+t)^2}
+\le(1+v^2/t)^2.
+\]
+The lower comparison is immediate, and $\Phi(a^2,b^2)\le2|ab|$ is the homogeneous binary-entropy envelope.
+
+At a private $X$ query $i$, only the common rows $C=\varnothing,\{s\}$ collide. With $g_C=\widehat G(C),d_C=\widehat G(C+i),h_C=\widehat H(C)$,
+\[
+B_i(F)=\tfrac12[B_i(G)+B_i(H)]+D_i,\qquad D_i=\sum_C S(g_C,d_C;h_C).
+\]
+Their signed comparison bounds retain the actual $\Phi$ rows. Since $\sum_C|h_C|\le1$ and $\sum_C|g_C|\le1$ for a bounded one-bit conditional mean, while $|d_C|\le\operatorname{Inf}_i(G)$, $|D_i|\le\operatorname{Inf}_i(G)=2\operatorname{Inf}_i(F)$. After $s$ is fixed there is one common row; private $Y$ is symmetric.
+
+At $s$, with $\mu=\widehat G(\varnothing),\nu=\widehat H(\varnothing),a=\widehat G(s),b=\widehat H(s)$,
+\[
+D_s=\tfrac14[\Phi((\mu+\nu)^2,(a+b)^2)+\Phi((\mu-\nu)^2,(a-b)^2)]
+ -\tfrac12[\Phi(\mu^2,a^2)+\Phi(\nu^2,b^2)].
+\]
+The envelope bounds both signed sides by $|a|+|b|\le\operatorname{Inf}_s(G)+\operatorname{Inf}_s(H)=2\operatorname{Inf}_s(F)$. The factor two is sharp at $G=-1,H=s$: $D_s=1$ and $\operatorname{Inf}_s(F)=1/2$.
+
+Every finite adaptive data-only prefix preserves this class, so with its true physical weights
+\[
+B_{\mathcal T}(F)=\tfrac12(B_{\mathcal T}(G)+B_{\mathcal T}(H))+D_{\mathcal T},
+\qquad \sum_vw_v|D_v|\le2[I(F)-\mathbb EI(F_\ell)].
+\]
+The actual shared coordinate is counted once. Both inherited core bills remain explicit.
+
+With $\phi(p)=p\log_2(1/p)$ and the remaining common frequency set $C$,
+\[
+R=2-\sum_C(g_C^2+h_C^2)+\sum_C[\phi((g_C+h_C)^2/4)+\phi((g_C-h_C)^2/4)
+-\phi(g_C^2)/2-\phi(h_C^2)/2],
+\]
+\[
+H(F)=\tfrac12[H(G)+H(H)]+R.
+\]
+The exact terminal entropy keeps the averaged two core entropies plus $\mathbb ER_\ell$. Since $\Delta H=B+JS$ and $0\le JS\le2\operatorname{Inf}/\ln2$, the outer potential obeys
+\[
+|R-\mathbb ER_\ell|\le K\Pi,\qquad K=2+2/\ln2<5,
+\]
+where $\Pi$ is consumed data influence. Completing data revelations leaves a constant or character selector with $R_\ell=0$, so $0\le R\le K I_{\rm data}(F)$, $I_{\rm data}=(I(G)+I(H))/2$. A partial prefix and optional selector suffix split this same data reserve into consumed and remaining parts.
+
+The inherited core entropies are not certified by this transfer. Multiple shared frequencies need a new bound: their conditional mean Fourier $\ell_1$ norm can exceed one. Full FEI remains open. The complete derivation, independent scoped A076 review and exact certificates are supplied in PROOF.md and REPORT.md.
+\end{document}

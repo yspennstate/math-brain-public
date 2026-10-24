@@ -1,0 +1,31 @@
+{
+ "verdicts": {
+  "bandeira-randomstrasse-problem-11-complement-closed-covering-code-reduction": {
+   "verdict": "FAITHFUL",
+   "why": "Matches the record's identification: r·x = n − 2d(r,x), so disc(A) ≥ v exactly when the rows and their complements cover the cube within radius (n−v)/2, which gives D_n = n − 2ρ_n. The draft says 'at most 2n' codewords where the record says 'size 2n'. These are equivalent: repeated rows or complementary row pairs give fewer than 2n distinct codewords, and a smaller complement-closed code can be padded with complement pairs without raising the covering radius, since 2^n ≥ 2n. The parity condition on v is implicit in the record because r·x ≡ n (mod 2). Both K(n,R) consequences (K ≤ n certifies D_n ≥ n−2R; K > 2n rules it out) are stated as in the record. The proof text is the record verbatim. It is labelled unrefereed and author checked, consistent with the record's status.",
+   "statement": ""
+  },
+  "bandeira-randomstrasse-problem-11-six-by-six-extremal-sign-matrix": {
+   "verdict": "FAITHFUL",
+   "why": "The record gives D_6 = 4 with this explicit matrix. I recomputed the matrix's discrepancy by brute force over all 64 sign vectors and it is 4. The next level, 6, has the same parity as n and radius 0; the counting bound gives 6·1 = 6 < 32, which excludes it. That is the method the record cites. The ratio 4/√6 is correct. The proof text is copied from the record without added steps; it also includes the n = 10 exception sentence, which is irrelevant here but is the record's wording.",
+   "statement": ""
+  },
+  "bandeira-randomstrasse-problem-11-nine-by-nine-five-thirds-lower-bound": {
+   "verdict": "FAITHFUL",
+   "why": "The record gives D_9 = 5 with this explicit matrix and the lower bound sup ≥ 5/3. I brute-forced the matrix over all 512 sign vectors and its discrepancy is 5. Level 7 needs radius 1; counting gives 9·10 = 90 < 256, which excludes it, as the record says. The draft states correctly that this does not determine the supremum, and it does not overclaim priority over Spielman's numerical example. The proof text is the record verbatim.",
+   "statement": ""
+  },
+  "bandeira-randomstrasse-problem-11-exact-small-size-computations": {
+   "verdict": "FAITHFUL",
+   "why": "The values for n = 2..11 match the record's table. I rechecked the counting claims: the next level is excluded by counting at every n ≤ 11 except n = 10, level 6, where 10·56 = 560 ≥ 512. That exception is settled in the record by the solver's proved infeasibility and by K(10,2) = 30 > 20. The draft says correctly that only the n = 6 and n = 9 witnesses are written out, and it keeps the remaining entries at the strength of a reported computation without enclosed certificates. It also says correctly that n = 12 and the supremum are left open.",
+   "statement": ""
+  }
+ },
+ "served": [
+  "claude-opus-5-5"
+ ],
+ "stop_reason": "end_turn",
+ "rc": 0,
+ "cost_usd": 0.15022459999999999,
+ "raw": ""
+}

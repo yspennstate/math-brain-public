@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B03",
+  "run_id": "20260924T072538Z-account02-B03-QFORM-auto11-r51",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_publication_refresh": "ca07e004105be85758120d0f149dcfc7806a28f1",
+  "login_control_commit": "65d227cb3416652c03ed29fad5944f88063e8239",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "status": "NEW_SUPPORTING_WEIGHTED_TIME_COMPILER_TARGET_FAMILY_LOCALIZATION_OBSTRUCTION_FULL_QFORM_OPEN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "2d69242a9eb20165a65b4493a66a7f73995c43c2",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260924T072538Z-account02-B03-QFORM-auto11-r51/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "ddc553a0a93c3c676b70e251830f24544a7527b9",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B03/20260924T072538Z-account02-B03-QFORM-auto11-r51.md"
+  },
+  "sources": {
+    "pinned_math_source_commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "pinned_files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "partner_run": "account03/B03/20260924T062502Z-account03-B03-QFORM-auto11-r50",
+    "partner_result": "QFORM-FRESH-HUB-SLOPE-PLANCHEREL-v1 plus QFORM-COMPLEMENTARY-WEIGHT-SPLICE-v1"
+  },
+  "corrections_consumed": [
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-HUBSTAR-FIBERL2-MIXEDNORM-UNIVERSAL-FALSE-v1"
+  ],
+  "proved_or_applied": [
+    "For a two-hub packet H^T B H+2L^T H+R with original cap-one hubs and 2D slope density cap M, A_+ <= (16/3) pi^(3/2) M^(3/4).",
+    "Splicing this with partner r50 gives ||p_(S+T)||_infinity <= 4 sqrt(2/3) K_1^(1/4) K_2^(3/8) for source-disjoint packets.",
+    "For Q_n=2H_0Z_0+2H_1<v_1,Y>+2H_2<v_2,Y>, nonzero spectrum is {+1,+1,+1,-1,-1,-1}; the pinned 2D projection cap K_2<=2 and r50 K_1=1 give ||p_Qn||_infinity <= 2^(23/8)/sqrt(3)=4.235460249537537... .",
+    "On the same family, the assigned whole-copy integral is <=8sqrt(pi), hence E|Q_n-Q_n'|^(-1/2)<=4sqrt(2), with no coordinatewise sum/difference separation.",
+    "Pinned e5f71d79 Theorem B gives the actual but dimension-losing inequality ||p_Qn||_infinity <=2sqrt(2pi)(4+sqrt(2n)).",
+    "Every physical 2x2 minor of the aggregate two-slope matrix is 0 or modulus 2/n, while the full two-dimensional slope density cap remains <=2; bounded-size localization is therefore not the correct positive-half scale on this family."
+  ],
+  "scope_limits": [
+    "The result requires source separation for the complementary-weight splice; it does not solve the partial-overlap case.",
+    "The live mixed-fiber L2 absoluteization mechanism is refuted and is not used.",
+    "The unrestricted QFORM conjecture remains open and unrestricted continuity remains open."
+  ],
+  "first_unpaid_implication": "Prove a product-preserving source-disjointification/partial-overlap theorem exposing a one-hub A_- packet plus an aggregate two-slope A_+ packet at uniform scale, or route overlap-heavy survivors to an already-paid three-slope/grouped-carrier receiver.",
+  "next_step": "Study partial source overlap before absolute values, seeking a deterministic source split or a joint 3D slope-density resource; do not revert to local minor extraction or the refuted mixed-fiber norm."
+}

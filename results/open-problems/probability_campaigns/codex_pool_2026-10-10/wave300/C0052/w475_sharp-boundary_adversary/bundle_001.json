@@ -1,0 +1,67 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w475",
+  "bundle_slug": "c0052-weighted-contact-and-current-bridge-001",
+  "entries": [
+    {
+      "key": "weighted-contact",
+      "namespace": "probability.statmech",
+      "logical_name": "ising-weighted-contact-cumulant-delocalization-bound",
+      "kind": "concept",
+      "title": "DRAFT: repeated-site Ising cumulants vanish for delocalized block weights",
+      "statement": "DRAFT concept; author derivation, finite weighted/transitive bound independently kept by w476; broader block extension pending. Let sigma be mean-zero spin-flip-symmetric +/-1 spins, G(x,y)=E sigma_x sigma_y>=0, w_x>=0 finitely supported and nonzero, V=E(sum w_x sigma_x)^2. For q_x=w_x(sum_y w_y G(x,y))/V, sum q_x=1. Let D be the negative fourth-cumulant sum over ordered quadruples with a repeated site, weighted by the four w factors and divided by V^2. Then U4(x,x,y,z)=-2G(x,y)G(x,z), and 0<=D<=12sum q_x^2<=12max q_x<=12||w||_infinity/sqrt(V)<=12||w||_infinity/||w||_2. Uniform weights on a transitive N-site graph give D<=12/N; arbitrary N-site blocks give D<=12/sqrt(N). This removes exact coincidences only and does not prove critical 3D Ising non-triviality.",
+      "proof_text": null,
+      "assumptions": [
+        "spins +/-1",
+        "spin-flip symmetry",
+        "G>=0",
+        "finite nonnegative nonzero weights"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w475:C0052-boundaries-2026-10-10",
+        "url": "file:///~/brain_workers/w475/ATTEMPT.md",
+        "revision": "author-derived-2026-10-10; scoped independent reviews recorded separately",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "reverse-sprinkling",
+      "namespace": "probability.statmech",
+      "logical_name": "random-current-reverse-sprinkling-path-obstruction",
+      "kind": "concept",
+      "title": "DRAFT: no uniform proportional reverse of current sprinkling",
+      "statement": "DRAFT concept; special-case proof independently kept by w476; model/account diversity gate unverified. In zero-field ferromagnetic Ising on the path 0,...,3m with uniform beta>0, n1,n2 have source sets {0,m},{2m,3m}; n3,n4 are independent sourceless currents, all four independent. Set p=tanh(beta)^2. The original all-four-connected event in n1+n2 has probability p^m. The independent clusters C(n1+n3,0), C(n2+n4,2m) intersect with probability p^m[1+m(1-p)]. Therefore no graph- and scale-uniform c>0 gives original_probability>=c*sprinkled_probability. The four source distances are comparable to m. This refutes a quantitative reverse bridge only; both probabilities vanish at fixed beta, and the full critical Z^3 conjecture is untouched.",
+      "proof_text": null,
+      "assumptions": [
+        "finite path",
+        "uniform beta>0",
+        "zero external field",
+        "stated independent current source sets"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w475:C0052-boundaries-2026-10-10",
+        "url": "file:///~/brain_workers/w475/ATTEMPT.md",
+        "revision": "author-derived-2026-10-10; scoped independent reviews recorded separately",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "weighted-contact",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0052-non-triviality-of-the-scaling-limit-of-the-three-dimensional-ising-mod",
+      "kind": "semantic_association",
+      "rationale": "Exact verified existing C0052 target concerns critical Ising non-Gaussianity. This scoped obstruction guards a proposed proof route and establishes no solution or refutation of the target."
+    },
+    {
+      "from_key": "reverse-sprinkling",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0052-non-triviality-of-the-scaling-limit-of-the-three-dimensional-ising-mod",
+      "kind": "semantic_association",
+      "rationale": "Exact verified existing C0052 target concerns critical Ising non-Gaussianity. This scoped obstruction guards a proposed proof route and establishes no solution or refutation of the target."
+    }
+  ]
+}

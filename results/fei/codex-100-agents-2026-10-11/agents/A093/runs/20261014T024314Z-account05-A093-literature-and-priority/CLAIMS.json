@@ -1,0 +1,43 @@
+[
+  {
+    "claim_id": "A093-GMP26-CLASS-REPAIR",
+    "version": "v1",
+    "exact_statement": "For every finite uniform Boolean restriction stopping tree with a single uniform terminal FEI constant C0, Boolean semi-separated children at each internal node give H(f)<=max(C0,12)I(f); monotone tribe-separated nodes give H(f)<=max(C0,14)I(f). Every GMP delta-tribes function H+(G-H)AND_u, where H is disjoint tribes on m bits and G is OR of those bits and one new bit, satisfies H(f)<=23I(f), with disjoint-tribes terminals paid by the reconstructed 14-rate theorem. These are conservative corrections of the source consequences, not optimality or priority claims.",
+    "hypotheses": [
+      "Uniform measure on {-1,1}^n; f sign-valued; Shannon entropy in bits",
+      "Physical finite restriction tree; no repeated query along a path; node reach weights 2^-depth",
+      "A common dimension-independent C0 for all terminal functions in the class",
+      "Semi-separated children: pq and pr with sign-valued p,q,r on pairwise disjoint coordinate sets",
+      "Tribe-separated node: monotone children h and max(h,k) with h,k on disjoint coordinates",
+      "Delta-tribes: shared AND width u>=1; disjoint positive widths for H; m=0 allowed with H=-1; G includes one fresh bit"
+    ],
+    "statement_sha256": "173599f77b9ce0b630c42026c71119f90cec9fbb9159ef312245331abf77dda3",
+    "contributors": [
+      "A093"
+    ],
+    "proof_source": [
+      "DERIVATION.md",
+      "REPORT.md",
+      "code/check_classes.py",
+      "out/VALIDATION.json",
+      "GMP26 v2 Proposition 6.1 and source class structure"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B19 lead",
+      "A090",
+      "A085",
+      "A028",
+      "A041",
+      "A069",
+      "A095",
+      "A099",
+      "A100"
+    ]
+  }
+]

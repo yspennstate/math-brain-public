@@ -1,0 +1,43 @@
+{
+  "schema": "fei-a077-multiscale-ledger/1",
+  "packet_id": "A077",
+  "claim_version": "B16-A077-COMPENSATED-TOWER-v1",
+  "units": "bits",
+  "scale": {
+    "k_range": "integers k >= 3",
+    "epsilon_k": "2^(-k)",
+    "multiplicity_N_k": "2^(2k)",
+    "biased_core": "g_k(X,Y)=(-1)^(XY), X,Y iid Bernoulli(epsilon_k)",
+    "uniform_realization": "f_k(U,V)=(-1)^(AND(U) AND(V)), |U|=|V|=k"
+  },
+  "one_copy_exact": {
+    "r_k": "4 epsilon_k^2 (1-epsilon_k)",
+    "J_k": "h2(r_k)-epsilon_k h2(4 epsilon_k(1-epsilon_k))",
+    "M_k": "(1-r_k) h2(r_k epsilon_k/(1-r_k))+r_k h2(epsilon_k)",
+    "I_core_total": "2 r_k",
+    "encoder_label_entropy_L_k": "log2(2^k-1)",
+    "encoder_mean_degree_D_k": "k 2^(k-1)/(2^k-1)",
+    "M_code": "M_k+r_k L_k",
+    "I_uniform": "2 r_k D_k = k 2^(2-2k)",
+    "H_uniform": "h2(W_k)+W_k log2(2^(2k)-1), W_k=4*2^(-2k)*(1-2^(-2k))"
+  },
+  "rigorous_bounds": {
+    "J_lower": "r_k (k-log2(e))",
+    "M_upper": "r_k epsilon_k (4k+2log2(e))",
+    "core_ratio_lower": "(k-log2(e))/(2+epsilon_k(4k+2log2(e)))",
+    "core_ratio_limit": "infinity"
+  },
+  "tower_totals": {
+    "collapsed_core_J": "Theta(K^2)",
+    "collapsed_core_I": "Theta(K)",
+    "collapsed_core_M": "O(1)",
+    "uniform_I_exact": "4 sum_{k=3}^K k",
+    "uniform_H": "16 sum_{k=3}^K k + O(K)",
+    "uniform_H_over_I_limit": 4
+  },
+  "scope": {
+    "refutes": "tax-free biased local helper J <= C(I_core+M) for every fixed C",
+    "does_not_refute": "uniform-measure Fourier Entropy-Influence conjecture",
+    "diagnosis": "fair-bit encoding contributes the omitted label entropy and physical influence at the same quadratic order as J"
+  }
+}

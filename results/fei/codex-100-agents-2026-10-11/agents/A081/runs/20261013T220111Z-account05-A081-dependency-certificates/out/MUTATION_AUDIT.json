@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "fixtures": [
+    {
+      "fixture": "final FEI to transfer to final cycle",
+      "PASS": true,
+      "matched_errors": [
+        "CYCLE_THROUGH_FINAL_FEI:FEI-FINAL@1 -> A097-COMPATIBLE-LEAF-REFERENCE-TRANSFER@1 -> FEI-FINAL@1"
+      ]
+    },
+    {
+      "fixture": "canonical dependency replaced by statement-only alias",
+      "PASS": true,
+      "matched_errors": [
+        "DEPENDENCY_HASH:B20-ERASURE-LOW-INFLUENCE-COMPLETE@2"
+      ]
+    },
+    {
+      "fixture": "tail leaf falsely accepted without proof",
+      "PASS": true,
+      "matched_errors": [
+        "ACCEPTED_WITHOUT_EVIDENCE:OPEN-HIGHER-ERASURE-PAYMENT@1"
+      ]
+    },
+    {
+      "fixture": "history route silently assumes FEI",
+      "PASS": true,
+      "matched_errors": [
+        "ROUTE_ASSUMES_CONCLUSION:R-C019-C024-COMPATIBLE"
+      ]
+    },
+    {
+      "fixture": "source locator erased from transfer",
+      "PASS": true,
+      "matched_errors": [
+        "MISSING_LOCATOR:A097-COMPATIBLE-LEAF-REFERENCE-TRANSFER@1"
+      ]
+    },
+    {
+      "fixture": "accepted low-influence uses unpaid tail bound",
+      "PASS": true,
+      "matched_errors": [
+        "ACCEPTED_DEPENDS_ON_UNRESOLVED:B20-ERASURE-LOW-INFLUENCE-COMPLETE@2"
+      ]
+    },
+    {
+      "fixture": "changed parity hypothesis without new hash",
+      "PASS": true,
+      "matched_errors": [
+        "STATEMENT_HASH:A090-PARITY-TAIL-LOW-INFLUENCE-COMPLETENESS@1"
+      ]
+    }
+  ],
+  "count": 7,
+  "scope": "Structural rejection only; analytic proofs are separately reconstructed."
+}

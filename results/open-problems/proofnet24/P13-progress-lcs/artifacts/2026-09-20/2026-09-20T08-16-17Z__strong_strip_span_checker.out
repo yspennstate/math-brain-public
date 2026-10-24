@@ -1,0 +1,18 @@
+P13 exact true-binary strip-span checker
+alphabet order C=(0,0), A=(0,1), B=(1,0), D=(1,1)
+m=2 w=1 prefixes_checked=21 by_depth=[1, 4, 16]
+m=2 maximum_pathwise_span=2 first_witness='AA'
+m=2 B^m_span=2 min=0 max=2
+m=2 B^m_min_state=((0, 1), (1, 0)) B^m_max_state=((0, 0), (0, 0))
+m=4 w=2 prefixes_checked=341 by_depth=[1, 4, 16, 64, 256]
+m=4 maximum_pathwise_span=4 first_witness='AAAA'
+m=4 B^m_span=4 min=0 max=4
+m=4 B^m_min_state=((0, 0, 1, 1), (1, 1, 0, 0)) B^m_max_state=((0, 0, 0, 0), (0, 0, 0, 0))
+m=6 w=3 prefixes_checked=5461 by_depth=[1, 4, 16, 64, 256, 1024, 4096]
+m=6 maximum_pathwise_span=6 first_witness='AAAAAA'
+m=6 B^m_span=6 min=0 max=6
+m=6 B^m_min_state=((0, 0, 0, 1, 1, 1), (1, 1, 1, 0, 0, 0)) B^m_max_state=((0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0))
+proved_all_width_transfer_at_w=6: old_C<=2m=24, new_C<=m=12
+finite_to_infinite_interval_radius_at_w=6: old=24/N new=12/N
+SOURCE_ENDPOINT_NOT_INFERRED_FROM_FINITE_ENUMERATION
+ALL_EXACT_CHECKS_PASS

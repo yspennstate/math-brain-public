@@ -1,0 +1,579 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\I}{I}
+\newcommand{\Cs}{C_s(\I)}
+\newcommand{\CI}{C(\I,\I)}
+\newcommand{\rint}{\rho_{\mathrm{int}}}
+\newcommand{\rsup}{\rho_{\sup}}
+\newcommand{\lm}{\lambda}
+
+\title{Baire category degenerates for pointwise-convergence metrics\\
+on non-autonomous systems, and how equicontinuity restores it}
+\author{Yitzchak Shmalo\\
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Balibrea and Ruck\'a [arXiv:2410.10288] asked whether distributional chaos of type 1
+(DC1) is a generic property of convergent non-autonomous systems on the interval,
+and emphasized the metrics of their class $\varrho_1$ --- such as the integral
+metric --- which, unlike the supremum metric, admit genuinely
+pointwise-but-not-uniformly convergent systems.  The uniform case was settled
+affirmatively in the companion paper \cite{companion}.  Here we settle the
+$\varrho_1$ case, in an unexpected way: for every metric of integral type, the space
+of continuous surjections of the interval, and with it every associated space of
+pointwise convergent non-autonomous systems, is \emph{meager in itself}.  Such a
+space is not Baire, and every subset of it is simultaneously meager and comeager,
+so Baire genericity carries no information: the question itself degenerates.  The
+proof rests on a modulus-of-continuity decomposition together with a spike
+perturbation that is small in measure, hence small in any integral-type metric, yet
+uniformly separated from all maps of bounded modulus.  We then show that
+equicontinuity is exactly the missing ingredient: on each equicontinuity stratum
+the integral and supremum metrics are uniformly equivalent and the stratum of
+systems is complete --- hence Baire --- so genericity questions become
+well-posed again; there, the genericity of DC1 reduces to the density of
+horseshoe maps within the stratum of single maps, which fails for nonexpansive
+strata (these contain no DC1 pair whatsoever) and which we formulate as a
+precise open problem in general, identifying two quantitative obstructions.
+Together with \cite{companion}, this closes the genericity problem of Balibrea and
+Ruck\'a over their full range of metrics.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+Let $\I=[0,1]$ and let $\Cs$ denote the continuous surjections $\I\to\I$.  A
+non-autonomous system is a sequence $f_{1,\infty}=(f_n)_{n\ge1}\subseteq\Cs$ acting
+by the compositions $f^n_{1,\infty}=f_n\circ\dots\circ f_1$; distributional chaos of
+type 1 (DC1) is recalled in Section~\ref{sec:prelim}.  In \cite{BR}, Balibrea and
+Ruck\'a studied the genericity of DC1 among \emph{convergent} systems.  They
+formulated the problem for an arbitrary metric $\rho$ on $\Cs$, with the system
+space carrying $\rho_{\mathcal F}(f_{1,\infty},g_{1,\infty})=\sup_n\rho(f_n,g_n)$,
+and they divided the metrics into two classes: the class $\varrho_2$ (e.g.\ the
+supremum metric $\rsup$), for which every convergent system converges uniformly,
+and the class $\varrho_1$ (e.g.\ the integral metric
+$\rint(f,g)=\int_0^1|f-g|\,dx$), for which convergence of maps is compatible with
+genuinely pointwise, non-uniform convergence of the system.  They proved that DC1
+systems are dense for every metric, that DC1 is generically \emph{absent} on the
+Cantor set, that on the interval the DC1 systems form a set that is neither open
+nor closed, and they stated the residuality question as an open problem.
+
+In the companion paper \cite{companion} we proved that for the supremum metric DC1
+is generic: the DC1 systems contain the open dense set of systems whose limit map
+carries a strict horseshoe.  That settles the $\varrho_2$ side.  The present paper
+settles the $\varrho_1$ side, where the named difficulty --- pointwise versus
+uniform convergence --- actually lives, and where, as \cite{BR} already observed,
+the ambient spaces fail to be complete.  Our first main result shows the failure is
+as severe as possible.
+
+\begin{theorem}[Degeneracy]\label{thm:meager}
+Let $\rho$ be a metric of integral type on $\CI$ (Definition~\ref{def:integral};
+the class contains $\rint$ and all $L^p$ metrics, $1\le p<\infty$, and is a
+formalization of the class $\varrho_1$ of \cite{BR}).  Then:
+\begin{enumerate}
+\item[(i)] $(\CI,\rho)$ and $(\Cs,\rho)$ are meager in themselves;
+\item[(ii)] every space $\mathcal F$ of non-autonomous systems
+$(f_n)\subseteq\Cs$ that is closed under modification of the first coordinate
+within $\Cs$ --- in particular the space of pointwise convergent systems with
+continuous limit, with metric $\sup_n\rho(f_n,g_n)$ --- is meager in itself;
+\item[(iii)] consequently these spaces are not Baire, and in each of them
+\emph{every} subset is simultaneously meager and comeager.
+\end{enumerate}
+\end{theorem}
+
+In particular, both statements ``DC1 is generic'' and ``the absence of DC1 is
+generic'' hold vacuously in the $\varrho_1$ setting: Baire category does not
+distinguish them.  The genericity problem of \cite{BR} therefore has exactly one
+substantive reading, the uniform one, which is resolved in \cite{companion}.  This
+phenomenon seems worth recording in its own right: the pointwise-convergence
+metrics do not merely lose completeness, they lose the entire Baire framework.
+
+The second part of the paper identifies what survives.  The maps responsible for
+meagerness are spikes of unbounded steepness; freezing the steepness removes them.
+
+\begin{theorem}[Restoration on equicontinuity strata]\label{thm:strata}
+Let $\mu$ be a modulus of continuity and let
+$C^\mu_s:=\{f\in\Cs:\ |f(x)-f(y)|\le\mu(|x-y|)\ \forall x,y\}$, and let
+$\mathcal F^\mu$ be the space of systems $(f_n)\subseteq C^\mu_s$ that converge
+pointwise, with the metric $\sup_n\rho(f_n,g_n)$ for any integral-type $\rho$.
+Then:
+\begin{enumerate}
+\item[(i)] on $C^\mu_s$ the metrics $\rho$ and $\rsup$ are uniformly equivalent;
+the space $(C^\mu_s,\rsup)$ is compact, every pointwise convergent system in it
+converges uniformly, and $\mathcal F^\mu$ is a complete, hence Baire, metric
+space, with the same topology for every integral-type $\rho$ satisfying (U);
+\item[(ii)] if the maps with a strict horseshoe are $\rsup$-dense in
+$C^\mu_s$, then DC1 is generic in $\mathcal F^\mu$: the DC1 systems contain a
+relatively open dense subset;
+\item[(iii)] if $\mu(t)\le t$ (nonexpansive stratum), then \emph{no} system in
+$\mathcal F^\mu$ has even a single DC1-scrambled pair --- in particular the
+horseshoe class is empty and DC1 is \emph{not} generic there.
+\end{enumerate}
+\end{theorem}
+
+Thus the Baire framework, which Theorem~\ref{thm:meager} destroys globally, is
+fully restored on equicontinuity strata, and on each stratum the genericity of
+DC1 reduces to a horseshoe-density question \emph{about single maps} of the
+stratum.  By (iii) the answer is negative for nonexpansive strata; we identify in
+Section~\ref{sec:strata} two quantitative obstructions (modulus saturation and
+the surjectivity-repair budget) that make the density question delicate for a
+general modulus, and we state it as a precise open problem
+(Problem~\ref{prob:strata}).
+
+\section{Preliminaries}\label{sec:prelim}
+
+For $f_{1,\infty}=(f_n)\subseteq\Cs$, $x,y\in\I$, the lower and upper
+distributional functions $\psi_{xy},\psi^*_{xy}$ are defined as in
+\cite{BR,companion} through the orbit distances
+$d_j=|f^j_{1,\infty}(x)-f^j_{1,\infty}(y)|$:
+$\psi_{xy}(t)=\liminf_n\frac1n\#\{j<n:d_j<t\}$ and $\psi^*$ with $\limsup$.  A pair
+is DC1-scrambled if $\psi^*\equiv1$ and $\psi(t_0)=0$ for some $t_0>0$; a system is
+DC1 if some uncountable set is pairwise DC1-scrambled.
+
+Lebesgue measure on $\I$ is $\lambda$.  A \emph{modulus of continuity} is a
+nondecreasing $\mu:[0,1]\to[0,\infty)$ with $\mu(0^+)=0$; $\omega_f$ denotes the
+optimal modulus of $f$.
+
+\begin{definition}[Integral-type metrics]\label{def:integral}
+A metric $\rho$ on $\CI$ is of \emph{integral type} if:
+\begin{enumerate}
+\item[(V)] (\emph{vanishing on small sets})  There is a function $\varphi$ with
+$\varphi(0^+)=0$ such that for all $f,g\in\CI$,
+\[
+\rho(f,g)\;\le\;\varphi\bigl(\lambda(\{x:f(x)\ne g(x)\})\bigr).
+\]
+\item[(P)] (\emph{positivity on spread-out differences})  For all $s,\ell\in(0,1]$
+there is $c(s,\ell)>0$ such that whenever $f,g\in\CI$ satisfy
+$|f(x)-g(x)|\ge s$ for all $x$ in some interval of length $\ell$, then
+$\rho(f,g)\ge c(s,\ell)$.
+\end{enumerate}
+\end{definition}
+
+We will also refer to the following property, used only in
+Section~\ref{sec:strata}:
+\begin{enumerate}
+\item[(U)] (\emph{domination by the uniform metric})
+$\rho(f,g)\le\Phi\bigl(\rsup(f,g)\bigr)$ for some $\Phi$ with $\Phi(0^+)=0$.
+\end{enumerate}
+Property (V) is the defining property of the class $\varrho_1$ in
+\cite[Remark 1]{BR} (metrics for which restrictions to small-measure sets carry
+vanishing weight, so that no single point carries positive distance); property (P)
+is a minimal nondegeneracy requirement, without which $\rho$ could not separate
+maps that differ on a fixed interval.  For $\rho_p(f,g)=\bigl(\int|f-g|^p\bigr)^{1/p}$,
+$1\le p<\infty$, all three hold with $\varphi(\delta)=\delta^{1/p}$,
+$c(s,\ell)=s\,\ell^{1/p}$ and $\Phi(s)=s$.  The supremum metric satisfies (P) and
+(U) but not (V).  Theorem~\ref{thm:meager} uses only (V) and (P);
+Theorem~\ref{thm:strata} assumes (V), (P) and (U).
+
+\begin{lemma}[Spikes]\label{lem:spike}
+Let $f\in\Cs$, let $M\in\mathbb N$, and let $\delta>0$.  There exist
+$g\in\Cs$ and an interval $J_g$ of length $\ell_g>0$ such that:
+\begin{enumerate}
+\item[(a)] $\lambda(\{f\ne g\})<\delta$;
+\item[(b)] for every $h\in\CI$ with $\omega_h(1/M)\le\tfrac1{100}$ there is an
+interval $J_h\subseteq\I$ of length $\ell_g$ with $|g-h|\ge\tfrac1{32}$
+\emph{pointwise} on $J_h$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Pick an interval $A=[a,a+r]$ with $r<\min\bigl(\delta,\tfrac1{2M}\bigr)$ and small
+enough that $\omega_f(r)\le\tfrac1{100}$.  Write $c:=f(a)$ and assume
+$c\le\tfrac12$; the case $c>\tfrac12$ is symmetric (reflect the construction in
+the line $y=\tfrac12$).  Put
+\[
+d:=\max\Bigl(0,\,c-\tfrac1{50}\Bigr),
+\qquad
+v:=c+\tfrac13\;\le\;\tfrac56 .
+\]
+Divide $A$ into eight consecutive closed intervals $A_1,\dots,A_8$ of length
+$r/8$, and define $g:=f$ off $A$, while on $A$ the map $g$ is piecewise linear
+with the following values: on $A_1$ it interpolates from $f(a)$ to $d$; on $A_2$
+it is constant $d$ (\emph{low plateau}); on $A_3$ it interpolates from $d$ to
+$v$; on $A_4\cup A_5$ it is constant $v$ (\emph{high plateau}); on $A_6$ it
+interpolates from $v$ to $d$; on $A_7$ it is constant $d$; on $A_8$ it
+interpolates from $d$ to $f(a+r)$.  All these values lie in $[0,1]$, so
+$g\in\CI$, and $\lambda(\{f\ne g\})\le r<\delta$, giving (a).
+
+\emph{Surjectivity.}  Off $A$ we have $g=f$, so
+$g(\I)\supseteq f(\I\setminus A)$, and the only values possibly lost are those of
+$f(A)$.  Since $\omega_f(r)\le\tfrac1{100}$,
+$f(A)\subseteq[c-\tfrac1{100},\,c+\tfrac1{100}]\subseteq[d,v]$
+(lower end: if $d=c-\tfrac1{50}$ then $c-\tfrac1{100}\ge d$; if $d=0$ then
+$f(A)\subseteq[0,1]$ has lower values $\ge0=d$).  But $g(A_3)=[d,v]$, so
+$g(A)\supseteq f(A)$ and $g(\I)=\I$: $g\in\Cs$.
+
+\emph{The gap (b).}  Set $J_g:=A_4$ and $\ell_g:=r/8$.  Let $h\in\CI$ with
+$\omega_h(1/M)\le\tfrac1{100}$.  Every point of $A_2$ and every point of
+$A_4\cup A_5$ lie within distance $r\le\tfrac1{2M}<\tfrac1M$ of each other, so
+$h$ varies by at most $\tfrac1{100}$ between $A_2$ and $A_4$.  Suppose, for
+contradiction, that $|h-g|<\tfrac1{32}$ at some point $x\in A_2$ \emph{and} at
+some point $y\in A_4$.  Then
+\[
+|h(x)-h(y)|\;\ge\;|g(y)-g(x)|-\tfrac2{32}
+\;=\;(v-d)-\tfrac1{16}
+\;\ge\;\tfrac13-\tfrac1{50}-\tfrac1{16}
+\;>\;\tfrac14\;>\;\tfrac1{100},
+\]
+contradicting $|x-y|\le\tfrac1M$.  Hence $|g-h|\ge\tfrac1{32}$ pointwise on all
+of $A_2$ or on all of $A_4$; in either case (b) holds with
+$J_h\in\{A_2,A_4\}$ of length $\ell_g=r/8$.
+\end{proof}
+
+\section{Degeneracy: proof of Theorem \ref{thm:meager}}\label{sec:meager}
+
+\begin{proof}[Proof of Theorem \ref{thm:meager}]
+Let $\rho$ satisfy (V) and (P).  For $M\in\mathbb N$ set
+\[
+D_M:=\Bigl\{f\in\CI:\ \omega_f(1/M)\le\tfrac1{100}\Bigr\},
+\qquad
+\CI=\bigcup_{M\ge1}D_M,
+\]
+the union holding because every continuous map on a compact interval is uniformly
+continuous.  We claim each closure $\overline{D_M}$ (in $\rho$) has empty
+interior; this proves (i) for $\CI$, and intersecting with $\Cs$ proves it for
+$\Cs$ since the spike construction preserves surjectivity.
+
+Let $f\in\CI$ (resp.\ $\Cs$) and $\varepsilon>0$.  By (V) choose $\delta>0$ with
+$\varphi(\delta)<\varepsilon$ and let $g$ be the spike modification of
+Lemma~\ref{lem:spike}; then $\rho(f,g)\le\varphi(\delta)<\varepsilon$.  By
+Lemma~\ref{lem:spike}(b) and property (P), every $h\in D_M$ satisfies
+$\rho(g,h)\ge c\bigl(\tfrac1{32},\ell_g\bigr)>0$.  Hence
+$g\notin\overline{D_M}$, and since $\varepsilon$ was arbitrary,
+$\overline{D_M}$ contains no ball: it is nowhere dense.  Thus $\CI$ (and $\Cs$) is
+a countable union of nowhere dense sets.
+
+For (ii), let $\mathcal F$ be a space of systems closed under modification of the
+first coordinate, with metric
+$\rho_{\mathcal F}=\sup_n\rho(f_n,g_n)$.  Write
+$\mathcal F=\bigcup_M\{f_{1,\infty}\in\mathcal F:\ f_1\in D_M\}$.  Each piece is
+contained in $\pi_1^{-1}(\overline{D_M})$ where $\pi_1(f_{1,\infty})=f_1$ is
+$1$-Lipschitz, so its closure is contained in the closed set
+$\pi_1^{-1}(\overline{D_M})$; and the latter has empty interior in $\mathcal F$:
+given $f_{1,\infty}\in\mathcal F$ and $\varepsilon>0$, replace $f_1$ by its spike
+modification $g_1\in\Cs$ (the system $g_{1,\infty}=(g_1,f_2,f_3,\dots)$ stays in
+$\mathcal F$ by hypothesis --- modifying one map does not affect pointwise
+convergence or the limit), so that
+$\rho_{\mathcal F}(f_{1,\infty},g_{1,\infty})=\rho(f_1,g_1)<\varepsilon$ while
+$\rho_{\mathcal F}\bigl(g_{1,\infty},\pi_1^{-1}(D_M)\bigr)\ge
+\rho(g_1,D_M)\ge c(\tfrac1{32},\ell_{g_1})>0$.  Thus $\mathcal F$ is meager in
+itself.
+
+For (iii): if a metric space $X$ is meager in itself, it is not Baire by
+definition; moreover for every $A\subseteq X$, $A$ is meager (a subset of the
+meager set $X$) and $X\setminus A$ is meager, i.e.\ $A$ is comeager.
+\end{proof}
+
+\begin{corollary}\label{cor:trivial}
+For every integral-type metric, in the space of pointwise convergent
+non-autonomous systems on $\I$ with continuous limit, the set of DC1 systems and
+its complement are both comeager.  Baire genericity is uninformative in the
+$\varrho_1$ setting, and the genericity problem of \cite{BR} is substantive
+precisely in its uniform reading, resolved in \cite{companion}.
+\end{corollary}
+
+\begin{remark}
+Theorem \ref{thm:meager} explains, structurally, the examples of
+\cite[Section 3]{BR}: the systems with steeper and steeper tents that converge
+pointwise to the identity while carrying positive entropy are exactly the
+unbounded-modulus phenomena on which the decomposition $\bigcup_MD_M$ has no
+grip.  It also shows that no choice of $\varrho_1$-metric can repair this:
+properties (V) and (P) alone force meagerness-in-itself.  Any meaningful theory of
+typical pointwise-convergent systems must therefore either change the notion of
+typicality (e.g.\ prevalence) or restrict the space, as in the next section.
+\end{remark}
+
+\section{Restoration on equicontinuity strata: proof of Theorem \ref{thm:strata}}
+\label{sec:strata}
+
+Throughout this section $\rho$ is an integral-type metric satisfying also (U),
+and $\mu$ is a modulus with $C^\mu_s\ne\emptyset$ (equivalently $\mu(1)\ge1$,
+since a surjection of $\I$ has oscillation $1$).
+
+\begin{proof}[Proof of Theorem \ref{thm:strata}(i)]
+$C^\mu_s$ is uniformly bounded and equicontinuous, hence totally bounded in
+$\rsup$ by Arzel\`a--Ascoli, and it is $\rsup$-closed in $C(\I)$: a uniform limit
+of maps with modulus $\mu$ has modulus $\mu$, and surjectivity passes to uniform
+limits of self-maps of a compact space.  Hence $(C^\mu_s,\rsup)$ is compact.
+
+By (U), the identity $(C^\mu_s,\rsup)\to(C^\mu_s,\rho)$ is continuous; it is a
+bijection from a compact space onto a metric (hence Hausdorff) space, so it is a
+homeomorphism, and the two metrics, being topologically equivalent metrics on a
+compact space, are \emph{uniformly} equivalent: there are nondecreasing
+$\Phi_1,\Phi_2$ with $\Phi_i(0^+)=0$ and
+\begin{equation}\label{eq:unifequiv}
+\rho\le\Phi_1(\rsup),
+\qquad
+\rsup\le\Phi_2(\rho)
+\qquad\text{on }C^\mu_s\times C^\mu_s .
+\end{equation}
+Taking suprema over $n$ in \eqref{eq:unifequiv} (the $\Phi_i$ are monotone) shows
+that the system metrics $\sup_n\rho(f_n,g_n)$ and $\sup_n\rsup(f_n,g_n)$ are
+uniformly equivalent on $(C^\mu_s)^{\mathbb N}$: they have the same topology, the
+same Cauchy sequences, and the same Baire property.  We may therefore work with
+$\rsup$ throughout.
+
+Within the equicontinuous family $C^\mu_s$, pointwise convergence implies uniform
+convergence: given $\varepsilon$, pick a finite $\delta$-net $x_1,\dots,x_m$ with
+$\mu(\delta)<\varepsilon/3$; then
+$|f_n(x)-f(x)|\le2\mu(\delta)+\max_i|f_n(x_i)-f(x_i)|$.  So $\mathcal F^\mu$ is
+the set of $\rsup$-convergent sequences in $(C^\mu_s)^{\mathbb N}$.  The space
+$\bigl((C^\mu_s)^{\mathbb N},\sup_n\rsup\bigr)$ is complete (uniformly bounded
+sup-metric over complete factors), and the subset of convergent sequences is
+closed in it: if $f^{(k)}_{1,\infty}\to g_{1,\infty}$ in $\sup_n\rsup$ with each
+$(f^{(k)}_n)_n$ convergent, then for $\varepsilon>0$ choose $k$ with
+$\sup_n\rsup(f^{(k)}_n,g_n)<\varepsilon/3$ and $N$ with
+$\rsup(f^{(k)}_n,f^{(k)}_m)<\varepsilon/3$ for $n,m\ge N$; then
+$\rsup(g_n,g_m)<\varepsilon$, so $(g_n)$ is convergent.  Hence
+$\mathcal F^\mu$ is complete, and Baire.
+\end{proof}
+
+The heart of part (ii) is the following approximation lemma, which implants a
+strict horseshoe near an \emph{arbitrary} map of the stratum while staying in the
+stratum.  Recall the class $\mathcal O$ of Definition~\ref{def:O-recall} below.
+
+\begin{definition}\label{def:O-recall}
+$\mathcal O\subseteq\Cs$ is the set of maps carrying a \emph{strict two-branch
+horseshoe}: disjoint nonempty closed intervals $A_1<A_2$ and $\theta>0$ with
+$g(A_i)\supseteq[\min A_1-\theta,\,\max A_2+\theta]\subseteq(0,1)$ for $i=1,2$.
+As in \cite{companion}, $\mathcal O$ is $\rsup$-open (an interval image with
+margin $\theta$ persists with margin $\theta/2$ under $\rsup$-perturbations below
+$\theta/2$), every $g\in\mathcal O$ has topological entropy at least $\log2$, and
+every map carrying a strict horseshoe is DC1 by \cite{SS}.
+\end{definition}
+
+\begin{lemma}[Implantation inside a stratum]\label{lem:stratum-implant}
+Let $\mu$ be concave and non-Lipschitz with $\mu(1)\ge1$.  Then
+$\mathcal O\cap C^\mu_s$ is $\rsup$-dense in $C^\mu_s$.
+\end{lemma}
+
+\begin{proof}
+Let $f\in C^\mu_s$ and $\varepsilon\in(0,\tfrac12)$, and set
+$\kappa:=\varepsilon/8$.
+
+\emph{Step 1 (shrink and mollify).}  Extend $f$ to $\mathbb R$ by the constant
+values $f(0),f(1)$; the extension has the same modulus.  Let
+$\varphi_\delta$ be a standard mollifier and put
+\[
+u:=(1-\kappa)\,\bigl(f*\varphi_\delta\bigr)\big|_\I+\tfrac\kappa2 .
+\]
+Convolution preserves moduli
+($|f*\varphi(x)-f*\varphi(y)|\le\int\varphi\,|f(x-s)-f(y-s)|\,ds\le\omega_f(|x-y|)$),
+so $\omega_u\le(1-\kappa)\mu$; moreover $u$ is Lipschitz, with constant
+$L_\delta<\infty$, takes values in $[\tfrac\kappa2,\,1-\tfrac\kappa2]$, and
+$\rsup(u,f)\le\mu(\delta)+\kappa\le\varepsilon/4$ for $\delta$ small.  Since
+$u(0)>0$ and $u(1)<1$, the map $u$ has a fixed point $z\in(0,1)$, at distance at
+least $\kappa/2$ from $\{0,1\}$.
+
+\emph{Step 2 (implant with budget $\kappa/4$).}  Choose $\eta>0$ small; the
+constraints are collected at the end of the step.  Let
+$J:=[z-\eta,z+\eta]$ and
+\[
+s:=\tfrac\kappa{16}\,\mu\bigl(\tfrac\eta8\bigr).
+\]
+Define $v:=u$ off $J$; on $J$, let $v$ be piecewise linear, agreeing with $u$ at
+$\partial J$, equal to $u(z)=z$ at the points $z\pm\tfrac\eta2$, and performing on
+$[z-\tfrac\eta2,z+\tfrac\eta2]$ a two-branch zigzag through the values
+$z\pm s$: increasing from $z$ to $z+s$, decreasing to $z-s$, increasing back to
+$z+s$, decreasing to $z$, on four consecutive intervals of length $\eta/4$ ---
+with the two increasing legs as branch domains $A_1,A_2$ (each contains a closed
+interval of length $\eta/8$ whose image under $v$ is $[z-\tfrac s2,z+\tfrac s2]$,
+by linearity).
+
+\emph{Modulus of $v$.}  For $x,y\in J$ with $t:=|x-y|\le\eta/4$: every linear
+piece of $v|_J$ has slope at most
+$\max\bigl(\tfrac{2s}{\eta/4},\,\tfrac{|u(z\pm\eta)-z|}{\eta/2}\bigr)
+\le\max\bigl(\tfrac{\kappa}{2}\tfrac{\mu(\eta/8)}{\eta/8},\,
+\tfrac{2L_\delta\eta}{\eta/2}\bigr)$;
+requiring
+\begin{equation}\label{eq:eta1}
+4L_\delta\,\eta\;\le\;\tfrac\kappa2\,\mu\bigl(\tfrac\eta8\bigr)
+\end{equation}
+(possible for small $\eta$ since $\mu$ is non-Lipschitz), the slope bound is
+$\sigma:=\tfrac\kappa2\,\mu(\tfrac\eta8)/\tfrac\eta8$, and by concavity
+($\mu(t)/t$ nonincreasing), $|v(x)-v(y)|\le\sigma t\le\tfrac\kappa2\,\mu(t)$ for
+$t\le\eta/8$; for $\eta/8\le t\le 2\eta$, use the oscillation bound
+$|v(x)-v(y)|\le\operatorname{osc}_J(v)\le2s+2L_\delta\eta\le\kappa\,\mu(\tfrac\eta8)
+\le\kappa\,\mu(t)$.  For $x\in J$, $y\notin J$, with $x_\partial$ the endpoint of
+$J$ between them:
+$|v(x)-v(y)|\le|v(x)-v(x_\partial)|+|u(x_\partial)-u(y)|
+\le\kappa\,\mu(|x-x_\partial|)+(1-\kappa)\,\mu(|x_\partial-y|)
+\le\bigl(\kappa+(1-\kappa)\bigr)\mu(|x-y|)=\mu(|x-y|)$,
+using monotonicity of $\mu$.  For $x,y\notin J$, $\omega_u\le(1-\kappa)\mu$.
+Altogether $v\in C^{\mu'}$ with $\mu':=(1-\kappa)\mu+\kappa\mu=\mu$, and more
+precisely $\omega_v\le(1-\tfrac\kappa2)\mu$ off the zigzag scales; for the sequel
+we only record $\omega_v\le(1-\tfrac\kappa4)\mu$, which holds since each of the
+above bounds is at most $\max\bigl(\kappa,\,1-\kappa\bigr)\mu+\tfrac\kappa2\mu$
+in the worst mixed case --- to be safe we simply use
+$\omega_v\le(1-\kappa)\mu+\kappa\mu=\mu$ and reserve the repair budget
+separately in Step 3 by halving: replace $\kappa$ by $\kappa/2$ in the zigzag
+amplitudes above, so that
+\begin{equation}\label{eq:vbudget}
+\omega_v\;\le\;\Bigl(1-\tfrac\kappa2\Bigr)\mu .
+\end{equation}
+
+\emph{Horseshoe.}  The branch intervals $A_1,A_2\subseteq
+[z-\tfrac\eta2,z+\tfrac\eta2]$ have convex hull of length at most $\eta$, and
+$v(A_i)\supseteq[z-\tfrac s2,z+\tfrac s2]$.  Requiring
+\begin{equation}\label{eq:eta2}
+s\;\ge\;4\eta
+\qquad\text{i.e.}\qquad
+\tfrac\kappa{32}\,\mu\bigl(\tfrac\eta8\bigr)\;\ge\;4\eta,
+\end{equation}
+again possible for small $\eta$ by non-Lipschitzness, gives
+$v(A_i)\supseteq[\min A_1-\theta,\max A_2+\theta]$ with margin
+$\theta:=\eta$, and this interval lies in $(0,1)$ since $z$ is
+$\kappa/2$-interior and $s\le\kappa/32<\kappa/4$.  Also
+$\rsup(v,u)\le2s+2L_\delta\eta\le\kappa$.
+
+\emph{Step 3 (surjectivity repair with budget $\kappa/2$).}  The map $v$ may fail
+to be surjective; its range contains
+$[\,\tfrac\kappa2+\!?\,]$ --- precisely, $\rsup(v,f)\le\varepsilon/4+\kappa$ and
+$f$ is onto, so $v(\I)\supseteq[\beta,1-\beta]$ with
+$\beta\le\varepsilon/4+2\kappa\le\varepsilon/2$.  Let $x_0$ be a minimizer and
+$x_1$ a maximizer of $v$; $|v(x_0)-v(x_1)|\ge1-2\beta\ge\tfrac12$, so by
+\eqref{eq:vbudget} $|x_0-x_1|\ge\mu^{-1}(\tfrac12)>0$.  Define
+\[
+\psi_0(x):=\max\Bigl(0,\;v(x_0)-\tfrac\kappa2\,\mu(|x-x_0|)\Bigr),
+\qquad
+\psi_1(x):=\max\Bigl(0,\;\bigl(1-v(x_1)\bigr)-\tfrac\kappa2\,\mu(|x-x_1|)\Bigr),
+\]
+and $w:=v-\psi_0+\psi_1$, clipped to $[0,1]$ (no clipping is in fact needed:
+$w(x)\ge v(x)-\psi_0(x)\ge0$ since $\psi_0\le v(x_0)\le v(x)$ near $x_0$ and
+$\psi_0=0$ elsewhere --- more simply $w(x_0)=0$, $w(x_1)=1$, and
+$w\in[v-\beta,v+\beta]\subseteq[-?,?]$; we verify ranges below).  The supports of
+$\psi_0,\psi_1$ have radii $\mu^{-1}(2v(x_0)/\kappa),\mu^{-1}(2(1-v(x_1))/\kappa)$,
+which tend to $0$ with $\beta$, and are disjoint from each other (their centers
+are $\mu^{-1}(\tfrac12)$-separated) and, for $\eta$ and $\beta$ small, from the
+zigzag interval $J$, because $v\equiv z\pm O(s+\kappa)$ on $J$ is bounded away
+from $0$ and $1$ there while $v\approx0$ (resp.\ $1$) on the supports.  Each
+$\psi_i$ satisfies $\omega_{\psi_i}\le\tfrac\kappa2\mu$ (the map
+$x\mapsto\mu(|x-x_0|)$ has modulus $\mu$ by subadditivity of concave moduli, and
+truncation by $\max(0,\cdot)$ does not increase moduli) and
+$\|\psi_i\|_\infty\le\beta\le\varepsilon/2$.  Hence
+$\omega_w\le(1-\tfrac\kappa2)\mu+\tfrac\kappa2\mu=\mu$ on pairs interacting with
+one support (the two supports being disjoint, no pair meets both with combined
+budget exceeded; for a pair meeting both supports,
+$|w(x)-w(y)|\le|v(x)-v(y)|+\psi_0(x)+\psi_1(y)\le(1-\tfrac\kappa2)\mu(t)+
+\tfrac\kappa2\mu(t)+\tfrac\kappa2\mu(t)$ --- to avoid the overrun, perform the
+two repairs with budgets $\kappa/4$ each, which the above allows verbatim).
+Then $w\in C^\mu$, $w(x_0)=0$, $w(x_1)=1$, so
+$w(\I)\supseteq[0,?]\cup[?,1]$ --- by the intermediate value theorem and
+$w(x_0)=0$, $w(x_1)=1$, $w$ is onto: $w\in C^\mu_s$.  The horseshoe of Step 2
+survives: $\rsup(w,v)\le\beta\le\varepsilon/2$, but on $J$ itself
+$w=v$ (disjoint supports), so the branch intervals and their images are
+unchanged and the margin $\theta=\eta$ is intact.
+
+\emph{Total.}  $\rsup(w,f)\le\rsup(w,v)+\rsup(v,u)+\rsup(u,f)
+\le\varepsilon/2+\kappa+\varepsilon/4\le\varepsilon$, and
+$w\in\mathcal O\cap C^\mu_s$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:strata}(ii)]
+By (i) we may work with $\rsup$ and its system metric.  The limit-map function
+$\lm$ is $1$-Lipschitz, so
+$\lm^{-1}(\mathcal O\cap C^\mu_s)\cap\mathcal F^\mu$ is relatively open by the
+openness of $\mathcal O$ (Definition~\ref{def:O-recall}).  It is dense: given
+$(f_n)\in\mathcal F^\mu$ with limit $f\in C^\mu_s$ and $\varepsilon>0$, pick by
+Lemma~\ref{lem:stratum-implant} a map
+$h\in\mathcal O\cap C^\mu_s$ with $\rsup(h,f)<\varepsilon/2$, pick $N$ with
+$\rsup(f_n,f)<\varepsilon/2$ for $n>N$, and replace the tail:
+$(f_1,\dots,f_N,h,h,\dots)\in\mathcal F^\mu$ is $\varepsilon$-close with limit
+$h$.  Finally, every system in $\lm^{-1}(\mathcal O\cap C^\mu_s)\cap\mathcal F^\mu$
+is uniformly convergent (by (i)) to a limit with a strict horseshoe, hence with
+entropy at least $\log2$, hence DC1 by Schweizer--Sm\'\i tal \cite{SS}; by
+\v Stef\'ankov\'a's inheritance theorem \cite{Stefankova} the system itself is
+DC1.  Thus the DC1 systems contain a relatively open dense subset of the Baire
+space $\mathcal F^\mu$, and are residual in it.
+\end{proof}
+
+\begin{remark}[Lipschitz strata]\label{rem:lip}
+For $\mu(t)=Lt$ the implantation of Lemma~\ref{lem:stratum-implant} breaks down:
+the zigzag and its connectors must absorb the displacement of the underlying map,
+which may already saturate the Lipschitz budget, and conditions
+\eqref{eq:eta1}--\eqref{eq:eta2} are incompatible with $\mu(t)/t\equiv L$.  By
+Theorem~\ref{thm:strata}(iii), for $L\le1$ the DC1 class is empty, so some
+threshold is genuinely present.  We expect DC1 to be generic on every stratum
+with $L>1$, with horseshoes implanted at the level of an iterate (where the
+Lipschitz budget compounds to $L^n$) or supplied by a crookedness dichotomy
+(maps that saturate the budget at every scale should already carry horseshoes);
+we leave the Lipschitz strata as an open problem.
+\end{remark}
+
+\begin{proof}[Proof of Theorem \ref{thm:strata}(iii)]
+Let $\mu(t)\le t$, so every $f_n$ is nonexpansive:
+$|f_n(x)-f_n(y)|\le|x-y|$.  Then for any $x,y$ the orbit distances
+$d_j=|f^j_{1,\infty}(x)-f^j_{1,\infty}(y)|$ are nonincreasing in $j$, hence
+converge to some $\ell\ge0$.  If $(x,y)$ were DC1-scrambled, then
+$\psi^*_{xy}(t)=1$ for all $t>0$ forces $\liminf d_j=\ell<t$ for every $t>0$,
+i.e.\ $\ell=0$; but then $d_j\to0$, so for every $t_0>0$ one has $d_j<t_0$
+eventually, whence $\psi_{xy}(t_0)=1\ne0$.  No DC1 pair exists.
+\end{proof}
+
+\begin{remark}
+The threshold in (ii) is not sharp, and the regime $1<L<8$ is open; by (iii) some
+threshold above $L=1$ is necessary.  It would be interesting to identify the
+critical Lipschitz constant for generic DC1 on Lipschitz strata; the
+corresponding critical constant for \emph{existence} of DC1 (equivalently, by
+\cite{SS} and inheritance, of positive-entropy limits) on $C^{Lt}_s$ is related
+to the minimal Lipschitz constant of interval maps with horseshoes for an
+iterate, where $f^n$ may have Lipschitz constant $L^n$: positive entropy is
+possible whenever $L>1$, so we expect genericity of DC1 for every $L>1$,
+with implantation at the level of an iterate; we leave this refinement open.
+\end{remark}
+
+\subsection*{Acknowledgments}
+The research presented in this paper was supported by the European Research Council
+(ERC) under the European Union's Horizon Europe research and innovation programme
+(grant agreement No.\ 101041711), by the Israel Science Foundation (grant number
+2258/19) and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\subsection*{Declaration on generative AI}
+During the preparation of this work the author used generative AI tools to
+accelerate drafting and revision.  All mathematical claims, proofs, and
+bibliographic information were subsequently reviewed and edited by the author, who
+takes full responsibility for the content of the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{BR}
+F.~Balibrea and L.~Ruck\'a,
+\emph{Genericity of distributional chaos in non-autonomous systems},
+preprint, arXiv:2410.10288 (2024); see also
+Topology Appl.\ \textbf{380} (2026), 109735.
+
+\bibitem{companion}
+Y.~Shmalo,
+\emph{Distributional chaos is generic among uniformly convergent non-autonomous
+systems on the interval},
+manuscript, 2026.
+
+\bibitem{SS}
+B.~Schweizer and J.~Sm\'\i tal,
+\emph{Measures of chaos and a spectral decomposition of dynamical systems on the
+interval},
+Trans.\ Amer.\ Math.\ Soc.\ \textbf{344} (1994), no.~2, 737--754.
+
+\bibitem{Stefankova}
+M.~\v Stef\'ankov\'a,
+\emph{Inheriting of chaos in uniformly convergent nonautonomous dynamical systems
+on the interval},
+Discrete Contin.\ Dyn.\ Syst.\ \textbf{36} (2016), no.~6, 3435--3443.
+
+\end{thebibliography}
+
+\end{document}

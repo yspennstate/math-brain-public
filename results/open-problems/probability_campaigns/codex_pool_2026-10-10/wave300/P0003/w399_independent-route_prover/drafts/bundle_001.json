@@ -1,0 +1,145 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w399",
+  "bundle_slug": "p0003-three-probe-loewner-identification-w399-20261010",
+  "entries": [
+    {
+      "key": "jet-matrix",
+      "namespace": "probability.sle",
+      "logical_name": "three-obstacle-loewner-probe-jet-matrix",
+      "kind": "definition",
+      "title": "Three-obstacle Loewner probe jet matrix",
+      "statement": "For a capacity-2 chordal Loewner chain with real driver W and three obstacle-removal conformal maps h_i analytic near W with h_i'(W)>0, set u_i=h_i''(W)/h_i'(W) and c_i=h_i'''(W)/h_i'(W). The three-probe jet matrix J has row i equal to (u_i,c_i,u_i^2). This is algebraic independence of coefficient tests, not probabilistic independence of the obstacles.",
+      "proof_text": null,
+      "assumptions": [
+        "Three conformal maps analytic near the same driver",
+        "Positive map derivatives"
+      ],
+      "domain": "probability theory; Loewner evolution",
+      "source": {
+        "source_id": "owner-own-work:w399:p0003-three-probe-20261010",
+        "url": "file:///~/brain_workers/w399/LEMMA_THREE_PROBE.md",
+        "revision": "author-derived-2026-10-10-pending-w401",
+        "license": "owner-own-work (campaign auxiliary proof; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "identification",
+      "namespace": "probability.sle",
+      "logical_name": "localized-three-probe-loewner-characteristic-identification",
+      "kind": "concept",
+      "title": "DRAFT: local three-probe Loewner characteristic identification",
+      "statement": "Author-derived conditional result, pending independent review: let a capacity-2 chordal Loewner driver be a continuous semimartingale dW=mu dt+dN, with N a continuous local martingale and d<N>=v dt, v>=0 and locally integrable coefficients. Fix constant alpha>0. Before three fixed obstacles are hit, let h_i be their hydrodynamic maps, analytic at W with positive derivative. If each h_i'(W)^alpha is a local martingale on a common positive interval and the matrix with rows (h_i''/h_i',h_i'''/h_i',(h_i''/h_i')^2) is invertible for a.e. time there, then mu=0 and v=8/3 a.e. there and alpha=5/8. Global Brownian-driver/SLE identification additionally needs such intervals to cover all finite times.",
+      "proof_text": null,
+      "assumptions": [
+        "Continuous semimartingale driver with absolutely continuous drift/quadratic variation",
+        "Capacity normalization partial_t g=2/(g-W)",
+        "Common constant alpha>0",
+        "Reflected analytic conformal derivatives and local boundedness stops",
+        "Three local martingales over an interval",
+        "A.e. nondegenerate jet matrix",
+        "Globalization requires explicit coverage of all finite times"
+      ],
+      "domain": "probability theory; Loewner evolution",
+      "source": {
+        "source_id": "owner-own-work:w399:p0003-three-probe-20261010",
+        "url": "file:///~/brain_workers/w399/LEMMA_THREE_PROBE.md",
+        "revision": "author-derived-2026-10-10-pending-w401",
+        "license": "owner-own-work (campaign auxiliary proof; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "stability",
+      "namespace": "probability.sle",
+      "logical_name": "three-vertical-slit-probe-characteristic-stability",
+      "kind": "concept",
+      "title": "DRAFT: quantitative three-slit characteristic stability",
+      "statement": "At the three-slit initial jet matrix J=[[-1/2,-3/4,1/4],[1/2,-3/4,1/4],[-3/4,-9/16,9/16]], corresponding to slit locations/heights (1,1),(-1,1),(1,sqrt(3)), define normalized drift residuals e=J(mu,v/2-4/3,[1+v(alpha-1)]/2). If |e_i|<=epsilon, then |mu|<=2epsilon, |v-8/3|<=(52/9)epsilon and |1+v(alpha-1)|<=(40/3)epsilon. If v>=v_min>0, also |alpha-5/8|<=(31/(2v_min))epsilon. The inverse matrix norm in maximum absolute row sum is 20/3. These are fixed-configuration bounds, pending independent review, with no SAW residual estimate asserted.",
+      "proof_text": null,
+      "assumptions": [
+        "Exactly the displayed jet configuration",
+        "Residual normalized by alpha times the derivative-power process",
+        "Positive variance lower bound required for the exponent estimate",
+        "No global uniform jet control is assumed"
+      ],
+      "domain": "probability theory; Loewner evolution",
+      "source": {
+        "source_id": "owner-own-work:w399:p0003-three-probe-20261010",
+        "url": "file:///~/brain_workers/w399/LEMMA_THREE_PROBE.md",
+        "revision": "author-derived-2026-10-10-pending-w401",
+        "license": "owner-own-work (campaign auxiliary proof; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "degeneracy",
+      "namespace": "probability.sle",
+      "logical_name": "two-symmetric-slit-initial-tests-do-not-identify-loewner-coefficients",
+      "kind": "concept",
+      "title": "DRAFT: two symmetric initial probes leave a coefficient ambiguity",
+      "statement": "For the two symmetric vertical-slit jet rows (-1/2,-3/4,1/4) and (1/2,-3/4,1/4), the coefficient values mu=0,v=14/3,alpha=29/14 give theta=(mu,v/2-4/3,[1+v(alpha-1)]/2)=(0,1,3) and zero initial drift residual in both rows. The third row (-3/4,-9/16,9/16) gives residual 9/8. This exact pointwise algebra does not assert that those wrong coefficients make the first two processes martingales throughout an interval. Independent review is pending.",
+      "proof_text": null,
+      "assumptions": [
+        "Pointwise initial probes only",
+        "No claim of a process satisfying two full interval-martingale conditions"
+      ],
+      "domain": "probability theory; Loewner evolution",
+      "source": {
+        "source_id": "owner-own-work:w399:p0003-three-probe-20261010",
+        "url": "file:///~/brain_workers/w399/LEMMA_THREE_PROBE.md",
+        "revision": "author-derived-2026-10-10-pending-w401",
+        "license": "owner-own-work (campaign auxiliary proof; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.sle",
+      "logical_name": "honeycomb-saw-three-probe-route-continuum-and-ensemble-gates",
+      "kind": "concept",
+      "title": "P0003 three-probe route: unproved continuum and ensemble inputs",
+      "statement": "The P0003 ledger source, Grimmett arXiv:2205.07318 Question 2.2, concerns uniform n-step honeycomb SAW from the origin under suitable rescaling. A related all-length critical boundary-to-boundary chordal conjecture is Duminil-Copin–Smirnov arXiv:1007.0575 Section 4 Conjecture 1. The w399 three-probe route proves only auxiliary conditional Loewner coefficient identification. Its hardest unproved input is convergence of localized random-domain SAW tail partition martingales to three derivative powers with one common positive exponent. Driver/filtration regularity, global probe coverage, curve convergence and transfer to the fixed-n ensemble are also unproved. Current openness is UNKNOWN; no full scaling-limit proof or novelty is claimed.",
+      "proof_text": null,
+      "assumptions": [
+        "Original fixed-n and working chordal ensembles are recorded separately",
+        "Finite identities and exact algebra checks do not discharge continuum inputs"
+      ],
+      "domain": "probability theory; Loewner evolution",
+      "source": {
+        "source_id": "owner-own-work:w399:p0003-three-probe-20261010",
+        "url": "file:///~/brain_workers/w399/LEMMA_THREE_PROBE.md",
+        "revision": "author-derived-2026-10-10-pending-w401",
+        "license": "owner-own-work (campaign auxiliary proof; independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "identification",
+      "to_key": "jet-matrix",
+      "kind": "depends_on",
+      "rationale": "Identification inverts exactly the defined three-obstacle jet matrix; a.e. invertibility is an explicit hypothesis."
+    },
+    {
+      "from_key": "stability",
+      "to_key": "jet-matrix",
+      "kind": "specializes",
+      "rationale": "The stability result uses the concrete three-vertical-slit instance of the defined matrix."
+    },
+    {
+      "from_key": "degeneracy",
+      "to_key": "stability",
+      "kind": "semantic_association",
+      "rationale": "The two-probe ambiguity supplies the explicit pointwise wrong coefficients detected by the third row in the stability configuration."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "identification",
+      "kind": "semantic_association",
+      "rationale": "The SAW route would use the conditional identification only after its stated derivative-power and driver assumptions are proved; the gap entry records that they remain open obligations."
+    }
+  ]
+}

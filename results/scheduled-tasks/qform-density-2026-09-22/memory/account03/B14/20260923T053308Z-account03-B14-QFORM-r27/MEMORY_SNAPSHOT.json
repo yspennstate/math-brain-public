@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260923T053308Z-account03-B14-QFORM-r27",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "control_revision": "2026-09-22.15",
+  "source_control_commit_at_publication_write": "1571168c5317469216f772e9beeddd394a87d9bf",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_conjecture": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity": "OPEN_FOR_FULL_TARGET_NOT_PROVED_BY_THIS_RUN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "premises": [
+    {
+      "name": "account03/B03 heavy-row Schur half-Riesz receiver",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "b580b09027d8c20c3d3bbea0bea6cf8caa04d541",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T045638Z-account03-B03-QFORM-r27/REPORT.md"
+    },
+    {
+      "name": "account02/B06 product-projection Brascamp-Lieb cap",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+      "scope": "unit scalar product projection density cap <=sqrt(e)"
+    }
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B14",
+    "name": "affine-mixture localization compiler",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "19d9434e07142e6b9fe19b4a88bbd46ccec8eeee",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260923T001323Z-account04-B14-affine-mixture-compiler-r5/REPORT.md",
+    "actual_use": "For each outside state omega, transferred the active-core interval inequality with coefficient 2M/[sqrt(|A d Delta|)sqrt(|U(omega)|)] from finite-fragment active laws to arbitrary rough cap-one product laws with identical constant before averaging over omega."
+  },
+  "proved": [
+    {
+      "id": "QFORM-SQUARE-LINEAR-COLOOP-LOCALIZATION-v1",
+      "statement": "For T=A(S+alpha Z+xi)^2+2dU(cS+bZ)+F with S-density cap M, U-density cap L, cap-one Z, independent active/outside blocks, and Delta=b-c alpha nonzero, ||p_T||inf<=4sqrt(2) M sqrt(L)/sqrt(|A d Delta|), with no support/fragment/moment assumptions."
+    },
+    {
+      "id": "QFORM-HEAVY-RIGHT-PLANE-COLOOP-CLOSURE-v1",
+      "statement": "In the source-pinned B03 heavy-right-plane packet, if deletion of the heavy row makes the residual right-plane vectors collinear, then ||p_Q||inf<=48sqrt(10)/s_3(A)."
+    }
+  ],
+  "canonical": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e1ec15be5e4e090ed363243cd31040a460290fb5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T053308Z-account03-B14-QFORM-r27/REPORT.md",
+    "checks": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T053308Z-account03-B14-QFORM-r27/CHECK_OUTPUT.txt"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B14/20260923T053308Z-account03-B14-QFORM-r27.md",
+  "remaining_implication": "QFORM-HEAVY-ROW-NEAR-COLOOP-AGGREGATE-v1: for v_-=c h_-+w with nonzero residual transverse w, aggregate the two-dimensional original product bank before any fiber supremum and obtain a bound stable as h_r->0 and residual area->0."
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B06",
+  "run_id": "20260924T023755Z-account01-B06-QFORM-r45",
+  "assignment": "Curved fiber integration",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "startup_control_commit": "b3cfd47c8cef091a6cec6b51e4528ce883a8bd48",
+  "prepublication_control_commit": "ee37737be38103988f2f3c3936a49189a20f8223",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "correction_inbox_blob": "a884b835aba929c5376e6417ae5cfcd44c0f7a76",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1",
+    "QFORM-TWO-HUB-PLUCKER-ESCAPE-FALSE-v1"
+  ],
+  "partner": {
+    "worker": "account02/B06",
+    "brain_handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B06/account02-B06-20260924T013401Z-1fca9092.md",
+    "canonical_commit": "159d52912827d75566d254e155d93a8183ab254f",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/account02-B06-20260924T013401Z-1fca9092/REPORT.md",
+    "results_actually_applied": [
+      "QFORM-DIAG-RANK1-SQRT-SMALLBALL-v1 indefinite-pair upgrade: ||p_Q||_inf <=18.280856344644523 [|det B| sigma_min(B) ||S||op]^(-1/4)",
+      "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1 factor: product_i (1-ell_i)^(-(1-ell_i)/2) <= exp(k/2)"
+    ]
+  },
+  "new_results": [
+    {
+      "id": "QFORM-DIFFUSE-SEPARABLE-RANKK-FRESNEL-BL-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For a rank-k Parseval carrier R Lambda R^T with k>=3 and max row leverage <=1/2, plus arbitrary coordinate-separable real phases, independent cap-one inputs give a continuous C0 density with ||p||_inf <= e k/(k-2)|det Lambda|^(-1/k). For k=3 the constant is 3e."
+    },
+    {
+      "id": "QFORM-DIAGPLUSRANK3-PRINCIPAL-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "If an original-coordinate principal block is diagonal plus a rank-k carrier with leverage <=1/2, conditioning outside the block preserves the same bound for the full ambient quadratic form."
+    },
+    {
+      "id": "QFORM-SHEAR-FLAT-RANK3-CARRIER-IDENTITY-v1",
+      "status": "PROVED_EXACT_IDENTITY",
+      "statement": "For A=[[B,E],[E^T,C]] and C-E^T B^-1 E=D+lambda ww^T, F=B^-1E gives A=diag(0,0,D)+L with rank(L)=3 and |pdet L|=|lambda det B| det(I+FF^T) w^T(I+F^TF)^(-1)w."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "3145295734fbc4152341278a804b6b39cd2e9167",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260924T023755Z-account01-B06-QFORM-r45/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260924T023755Z-account01-B06-QFORM-r45/CHECKS.txt"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "d39fbdc2700b0e027ce70147e699818c43e040ce",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B06/20260924T023755Z-account01-B06-QFORM-r45.md"
+  },
+  "unresolved_implication": "QFORM-R49-HEAVY-CARRIER-OR-ANISOTROPIC-SHEAR-EXIT-v1: if both the physical-pair currency and the diffuse rank-three carrier exit are weak, convert the resulting heavy-row / anisotropic effectively-rank-one shear geometry into an already paid original-product endpoint while preserving the third spectral resource and all nonzero tails.",
+  "full_target_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "scoped_continuity": "PROVED for the new diffuse rank-k carrier branch",
+  "target_counterexample_found": false,
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  }
+}

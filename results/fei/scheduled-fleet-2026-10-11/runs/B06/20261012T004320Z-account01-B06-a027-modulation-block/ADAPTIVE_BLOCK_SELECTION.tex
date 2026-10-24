@@ -1,0 +1,153 @@
+\section*{A proper-block stopping rule for Boolean modulation hierarchies}
+
+All Fourier transforms use the uniform measure and all entropies are in bits.
+This note proves a restricted, dimension-free block rule.  It does not prove
+the Fourier Entropy--Influence conjecture for arbitrary Boolean functions.
+
+\subsection*{One-block identity}
+
+Let $X=\{x_1,\ldots,x_n\}$ and $Z=\{z_1,\ldots,z_m\}$ be disjoint sets of
+uniform signs.  Let $g:\{-1,1\}^n\to\{-1,1\}$ and let
+$h_i:\{-1,1\}^m\to\{-1,1\}$ be genuine Boolean functions.  Define
+\[
+ F(x,z)=g(x_1h_1(z),\ldots,x_nh_n(z)),
+ \qquad h_S=\prod_{i\in S}h_i.
+\]
+For every $S\subseteq[n]$ and $T\subseteq[m]$, direct expansion gives
+\[
+ \widehat F(S,T)=\widehat g(S)\widehat {h_S}(T).                 \tag{1}
+\]
+Writing $\mu(S)=\widehat g(S)^2$ and
+$\nu_S(T)=\widehat {h_S}(T)^2$, Parseval makes both probability laws and
+yields the exact identities
+\begin{align}
+ H(F)&=H(g)+\sum_S\mu(S)H(h_S),                                \tag{2}\\
+ I_X(F)&=I(g),                                                   \tag{3}\\
+ I_Z(F)&=\sum_S\mu(S)I(h_S).                                   \tag{4}
+\end{align}
+
+These formulas also identify the exact B04--B06 collision terms.  After
+fixing $z$, the branch $g_z(x)=F(x,z)$ has
+\[
+ \widehat g_z(S)=\widehat g(S)h_S(z).
+\]
+Thus its squared spectrum is $\mu$ for every physical child.  In the
+notation of the collision interface, $R_S=\mu(S)$, $r_S$ is uniform on the
+$2^m$ block outcomes, and $\nu_S$ is exactly the squared spectral law of the
+Boolean function $h_S$.  Consequently
+\[
+ B_Z=\sum_S\mu(S)H(h_S),\qquad M_Z=0,                           \tag{5}
+\]
+and hence
+\[
+ H(F)-2^{-m}\sum_zH(g_z)=B_Z+M_Z=B_Z.                          \tag{6}
+\]
+In particular the standard mixing estimate is retained, with room to spare:
+\[
+ 0\le M_Z=0\le \frac{2}{\ln2}I_Z(F).                           \tag{7}
+\]
+
+Query the physical coordinates of $Z$ in any fixed order.  If $p$ ranges
+over assignments to the previously queried coordinates and $F_p$ is the
+corresponding physical restriction, then elementary edge counting gives
+\[
+ \sum_{j=1}^m \mathbb E_p I_{z_j}(F_p)
+ =\sum_{j=1}^m I_{z_j}(F)=I_Z(F).                              \tag{8}
+\]
+Thus the queried-influence telescope charges each block edge once.  No
+influence outside $Z$ is used.
+
+\subsection*{Proper-block rule and terminal debt}
+
+Suppose a constant $C_Z$ satisfies
+\[
+ H(h_S)\le C_Z I(h_S)                                          \tag{9}
+\]
+for every $S$ with $\mu(S)>0$.  Equations (4)--(6) then prove
+\[
+ H(F)-\mathbb E_zH(F_z)=B_Z\le C_ZI_Z(F).                     \tag{10}
+\]
+The selection rule is: query the entire fresh block $Z$, then stop at the
+child $g_z$, retaining its entropy.  When $n\ge1$, $Z$ is a proper block;
+it is never the forbidden choice $W=X\cup Z$.  Since every child is a sign
+flip of $g$, the terminal cost is exactly $H(g)$, not zero and not an
+implicit refund.  If $H(g)\le C_0I(g)$, then
+\[
+ H(F)\le C_0I_X(F)+C_ZI_Z(F)
+ \le \max(C_0,C_Z)I(F).                                       \tag{11}
+\]
+
+The same rule gives a genuinely growing stopping class.  Start with a
+nonconstant Boolean $f_0$ on a nonempty variable set $V_0$.  At level
+$\ell$, add a fresh disjoint block $Z_\ell$ and put
+\[
+ f_\ell(u,z)=f_{\ell-1}
+ \bigl((u_i h_{\ell,i}(z))_{i\in V_{\ell-1}}\bigr).            \tag{12}
+\]
+Here each $h_{\ell,i}$ is Boolean on $Z_\ell$.  Query
+$Z_L,Z_{L-1},\ldots,Z_1$ and then stop at a sign-flipped copy of $f_0$.
+Every selected block is proper, all physical reach probabilities are kept,
+and (2)--(4) telescope without reuse.  If, at level $\ell$, every occupied
+product $h_{\ell,S}$ obeys FEI with constant $C_\ell$, then
+\[
+ H(f_L)\le C_0I(f_0)+
+ \sum_{\ell=1}^LC_\ell\bigl(I(f_\ell)-I(f_{\ell-1})\bigr)
+ \le \max_{0\le\ell\le L}C_\ell\,I(f_L).                     \tag{13}
+\]
+This is an adaptive complete tree: after a block outcome the child signs may
+change, but its squared spectrum is unchanged, so the same next block rule
+continues to apply.
+
+\subsection*{A nonlinear unbounded-depth subclass}
+
+For $m\ge1$, let $q_m$ equal $-1$ at one point of the $m$-cube and $+1$
+elsewhere.  At one hierarchy level take every $h_{\ell,i}=q_m$.  Then
+$h_{\ell,S}$ is $1$ for even $|S|$ and $q_m$ for odd $|S|$.  If
+\[
+ p_{\rm odd}(f)=\sum_{|S|\ {m odd}}\widehat f(S)^2,
+\]
+the exact level increment is
+\[
+ \Delta H=p_{\rm odd}(f)H(q_m),\qquad
+ \Delta I=p_{\rm odd}(f)I(q_m).                               \tag{14}
+\]
+For $N=2^m$ and $\delta=4(N-1)/N^2$,
+\[
+ I(q_m)=\frac{2m}{N},\qquad
+ H(q_m)=h_2(\delta)+\delta\log_2(N-1).                         \tag{15}
+\]
+For $m\ge2$, use $h_2(p)\le p\log_2(e/p)$,
+$2/N\le\delta\le4/N$, and $\log_2(e/2)<1/2$ to obtain
+\[
+ \frac{H(q_m)}{I(q_m)}
+ \le 4+\frac1m\le\frac92.                                    \tag{16}
+\]
+For $m=1$ the ratio is zero, and (15) also shows the ratio tends to $4$.
+Therefore arbitrary depth, arbitrary fresh block sizes, and arbitrary base
+functions already known with constant $C_0$ produce a genuine Boolean class
+with the uniform constant $\max(C_0,9/2)$.  The positive decrement (14)
+quantifies the block benefit and includes all added influence.
+
+\subsection*{Plateau and obstruction controls}
+
+If every $h_{\ell,i}$ is a character of its fresh block, then every product
+$h_{\ell,S}$ is also a character.  Hence $B_{Z_\ell}=M_{Z_\ell}=0$.
+Every partial coordinate restriction through that block preserves spectral
+entropy, so a coordinatewise rule sees an arbitrarily long zero-decrement
+plateau.  The proper-block rule crosses it in one block step but claims no
+false payment: all core entropy remains in the terminal $f_{\ell-1}$, while
+all added influence remains in the ledger.
+
+This theorem does not dispose of the bent-splice obstruction.  A bent splice
+has two branches that are not sign-flipped copies of one common core and can
+satisfy $I_{\rm sel}=2^{-m}$ but
+$\Delta_{\rm sel}H/I_{\rm sel}\ge m-1$.  It therefore lies outside (12),
+exactly where the uniform branch-square law and $M_Z=0$ fail.  Likewise, the
+unrestricted shared signed-dictator embedding would make condition (9) equal
+to FEI itself.  Thus (13) is a noncircular closure theorem for a specified
+growing class, not a universal block-existence claim.
+
+Addressing, near tensors, tribes, or prime Boolean gates may be used as the
+base $f_0$ only at whatever FEI constant has already been proved for that
+base class.  No overlap-product inequality, selector-only increment bound,
+or assumption that a fixed root ratio is universal is used.

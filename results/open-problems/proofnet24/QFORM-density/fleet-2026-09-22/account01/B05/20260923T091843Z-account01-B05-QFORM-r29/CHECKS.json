@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T091843Z-account01-B05-QFORM-r29",
+  "checks": [
+    {
+      "name": "heavy_null_determinant",
+      "identity": "det([[0,beta,0],[beta,alpha,delta],[0,delta,gamma]]) = -beta^2 gamma",
+      "status": "exact"
+    },
+    {
+      "name": "parseval_residual_frame",
+      "identity": "||u||^2=1-c, ||w||=||v||=1, u perp w, u perp v, w perp v",
+      "premise": "R^T R=I3 and heavy row sqrt(c)e1",
+      "status": "exact"
+    },
+    {
+      "name": "normalized_cross_component",
+      "identity": "epsilon=sqrt((1-c)/c), lambda=gamma/(beta sqrt(c))",
+      "status": "exact"
+    },
+    {
+      "name": "density_scale_cancellation",
+      "identity": "(|beta| sqrt(c))^-1 (epsilon |lambda|)^(-1/3) = (|beta|^2 |gamma|)^(-1/3) [c(1-c)]^(-1/6) = |det B|^(-1/3)[c(1-c)]^(-1/6)",
+      "status": "exact",
+      "symbolic_check": "verified in-run with SymPy simplification"
+    },
+    {
+      "name": "fixed_threshold_constant",
+      "premise": "1/2<c<=127/128 and |det B|>=1",
+      "bound": "9.6*256^(1/6)=9.6*2^(4/3)=24.190484157981565",
+      "status": "verified"
+    },
+    {
+      "name": "partner_endpoint",
+      "premise": "c=1 implies u=0 by Parseval, hence exact longitudinal/transverse support separation",
+      "conclusion": "account02/B05 r23 gives ||p_Q||inf<248 because s_min(B)>=1",
+      "status": "applied"
+    }
+  ],
+  "scope_note": "No numerical experiment is used as evidence for the universal conjecture. The only computation is exact algebra/constant evaluation supporting the displayed analytic proof."
+}

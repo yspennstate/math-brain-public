@@ -1,0 +1,84 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w552",
+  "bundle_slug": "c0047-refuted-universal-nonbacktracking-shortcut-v1",
+  "entries": [
+    {
+      "key": "graph",
+      "namespace": "probability.percolation",
+      "logical_name": "cyclic-three-free-product-cyclic-two-tree-of-triangles-graph",
+      "kind": "concept",
+      "title": "Draft graph model: C3*C2 tree of triangles",
+      "statement": "DRAFT, independent review pending. The free product Gamma=C3*C2, with a of order 3 and s of order 2, has simple undirected Cayley graph for S={a,a inverse,s}. It is 3-regular. The a-cosets are triangles, every vertex has one s-bridge, and contracting triangles yields the 3-regular tree. For any finite nonempty vertex set K, |boundary_E K|>=|K|/3+2, so the graph is nonamenable. The proof uses free-product normal form and the forest count on occupied quotient blocks.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Fixed simple Cayley graph of C3*C2 with generators a,a inverse,s"
+      ],
+      "domain": "probability theory: nonamenable percolation",
+      "source": {
+        "source_id": "owner-probability300-C0047-w552-v1:nb-obstruction",
+        "url": "file:///~/brain_workers/w552/NB_ROUTE_OBSTRUCTION.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign route obstruction, independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "shortcut",
+      "namespace": "probability.percolation",
+      "logical_name": "refuted-universal-nonbacktracking-critical-threshold-shortcut",
+      "kind": "concept",
+      "title": "REFUTED route: nonamenability universally supplies pc beta<1",
+      "statement": "REFUTED ROUTE PROPOSAL, NOT AN ACCEPTED THEOREM. For a d-regular nonamenable Cayley graph, let b=d-1, alpha=||A||_2 and beta=sqrt(b) if alpha<=2sqrt(b), otherwise beta=(alpha+sqrt(alpha squared-4b))/2. The proposed universal shortcut p_c beta<1 is false. Its use as an extra sufficient hypothesis in a conditional operator bound remains valid. The fixed C3*C2 tree-of-triangles graph instead has p_c beta>1.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Fixed simple Cayley graph of C3*C2 with generators a,a inverse,s"
+      ],
+      "domain": "probability theory: nonamenable percolation",
+      "source": {
+        "source_id": "owner-probability300-C0047-w552-v1:nb-obstruction",
+        "url": "file:///~/brain_workers/w552/NB_ROUTE_OBSTRUCTION.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign route obstruction, independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "obstruction",
+      "namespace": "probability.percolation",
+      "logical_name": "tree-of-triangles-counterexample-universal-nonbacktracking-input",
+      "kind": "concept",
+      "title": "Draft author proof: obstruction to the universal nonbacktracking shortcut",
+      "statement": "UNREVIEWED AUTHOR PROOF, novelty not asserted. On the 3-regular Cayley graph of C3*C2 with S={a,a inverse,s}, Bernoulli bond percolation explores disjoint triangle blocks with nonroot offspring mean m(p)=2p(p+p squared-p cubed). At p=3/5 this mean is 558/625<1, so p_c>3/5. Constant-on-triangle test vectors give alpha=||A||_2>=2+2sqrt(2)/3. The nonbacktracking root beta=(alpha+sqrt(alpha squared-8))/2 is greater than 5/3, because z+2/z at z=5/3 is 43/15<2+2sqrt(2)/3. Hence p_c beta>1. A closed bridge separates independent surviving half-tree clusters with positive probability for p_c<p<1, yielding p_u=1. This refutes the extra universal spectral shortcut and is a special case of C0047, not a counterexample to it.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Fixed simple Cayley graph of C3*C2 with generators a,a inverse,s"
+      ],
+      "domain": "probability theory: nonamenable percolation",
+      "source": {
+        "source_id": "owner-probability300-C0047-w552-v1:nb-obstruction",
+        "url": "file:///~/brain_workers/w552/NB_ROUTE_OBSTRUCTION.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign route obstruction, independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "obstruction",
+      "to_key": "shortcut",
+      "kind": "refutes",
+      "rationale": "The shortcut requires p_c beta<1 on every nonamenable Cayley graph; this fixed nonamenable graph has p_c beta>1."
+    },
+    {
+      "from_key": "obstruction",
+      "to_key": "graph",
+      "kind": "depends_on",
+      "rationale": "The exact triangle/bridge graph structure gives the block branching law and adjacency test vectors."
+    }
+  ]
+}

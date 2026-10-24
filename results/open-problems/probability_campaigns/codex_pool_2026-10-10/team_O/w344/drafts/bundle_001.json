@@ -1,0 +1,88 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w344",
+  "bundle_slug": "w344-open-problem-p0341-checked-partials-20261010",
+  "entries": [
+    {
+      "key": "fixed-trim-divergent-occupation-counterexample",
+      "namespace": "probability.harmonic_descent",
+      "logical_name": "fixed-trim-divergent-occupation-counterexample",
+      "kind": "lemma",
+      "title": "Fixed-width trimming fails for sparse harmonic-descent occupation tests",
+      "statement": "Let a(n,j) be the probability that the strictly descending chain with transitions q(n,j)=1/((n-j)H_(n-1)), 1<=j<n, visits j, where H_k=sum_(r=1)^k 1/r. Put a(j)=6H_(j-1)/(pi^2(j-1)) and g(j)=j when j=2^r for some r>=1, zero otherwise. For every fixed integer L>=0, along n=2^K+L+1 the ratio [sum_(j=2)^(n-L-1) a(n,j)g(j)]/[sum_(j=2)^n a(j)g(j)] tends to infinity. The same holds with the denominator stopped at n-L-1. Thus deleting any fixed-width near-root band does not repair the divergent-series occupation ansatz for polynomially bounded weights.",
+      "proof_text": "The source is Aldous-Janson, Critical Beta-splitting Random Tree II, arXiv:2303.02529v3 (17 April 2025), Section 3.1, equation (2), and Open Problem 8/Ansatz 20, PDF pp.39-40. The earlier campaign already refuted both clauses by sparse powers-of-two weights. We retain that attribution and extend its failed-repair analysis.\n\nLet H_k=sum_(r=1)^k 1/r. The discrete tagged descent chain jumps n to j<n with probability 1/((n-j)H_(n-1)); a(n,j) is its visiting probability. Fix an integer L>=0, and truncate the occupation sum at j<=n-L-1. Set g(j)=j 1_{j=2^r,r>=1}. Along N=2^K and n=N+L+1, a(n,N)>=1/((L+1)H_(N+L)), since the first jump alone is a visit. Thus the retained sum is at least N/((L+1)H_(N+L)). The comparison coefficients are a(j)=6H_(j-1)/(pi^2(j-1)). For large K, n<2N and the comparison sum, whether stopped at n or n-L-1, has exactly K nonzero terms. Since H_(2^r-1) is of order r, that sum is of order K^2. For fixed L, H_(N+L) is of order K, and the ratio is bounded below by c_L 2^K/K^3 -> infinity. This proves that removing the root, or any fixed number of states just below it, does not repair the divergent-series clause.\n\nThis proof does not cover a growing trimming width, regular test classes, or the general quantitative occupation-bound problem. The first-jump bound needs no recurrence solution. Nineteen exact rational transition-normalization checks, three complete small descent computations, and sixteen finite lower-bound checks are saved in p0341_measurements.json. At K=18 the ratio lower bound is 126.182 for L=1 and 3.88245 for L=64.\n\nA positive repair criterion is available without inventing a rate: for nonnegative b_n(j) supported on j<=n with b_n(j)->b(j) for each fixed j, and f(j)>=0 with S=sum b(j)f(j)<infinity, sum b_n(j)f(j)->S if and only if lim_(M->infinity) limsup_(n->infinity) sum_(j>M) b_n(j)f(j)=0. For fixed M, the finite prefix converges. Tail control gives the forward implication by splitting the sum into prefix and tail; conversely, convergence of total and prefix gives limsup tail=S-sum_(j<=M)b(j)f(j), which tends to zero. This is a criterion requiring weighted tail control, not a proof that the tagged chain satisfies it for any new test class.",
+      "assumptions": [
+        "L is fixed as K tends to infinity",
+        "The chain uses the displayed harmonic-descent transition probabilities"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:fixed-trim-divergent-occupation-counterexample",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "Let a(n,j) be the probability that the strictly descending chain with transitions q(n,j)=1/((n-j)H_(n-1)), 1<=j<n, visits j, where H_k=sum_(r=1)^k"
+      }
+    },
+    {
+      "key": "weighted-tail-criterion-for-occupation-convergence",
+      "namespace": "probability.harmonic_descent",
+      "logical_name": "weighted-tail-criterion-for-occupation-convergence",
+      "kind": "lemma",
+      "title": "Weighted tail criterion for convergence of occupation sums",
+      "statement": "Suppose b_n(j)>=0, b_n(j)=0 for j>n, and b_n(j)->b(j) for every fixed positive integer j. Let f(j)>=0 be finite and S=sum_(j>=1)b(j)f(j)<infinity. Then sum_j b_n(j)f(j)->S if and only if lim_(M->infinity) limsup_(n->infinity) sum_(j>M)b_n(j)f(j)=0. This criterion requires an actual weighted tail estimate; pointwise convergence alone does not supply it.",
+      "proof_text": "The source is Aldous-Janson, Critical Beta-splitting Random Tree II, arXiv:2303.02529v3 (17 April 2025), Section 3.1, equation (2), and Open Problem 8/Ansatz 20, PDF pp.39-40. The earlier campaign already refuted both clauses by sparse powers-of-two weights. We retain that attribution and extend its failed-repair analysis.\n\nLet H_k=sum_(r=1)^k 1/r. The discrete tagged descent chain jumps n to j<n with probability 1/((n-j)H_(n-1)); a(n,j) is its visiting probability. Fix an integer L>=0, and truncate the occupation sum at j<=n-L-1. Set g(j)=j 1_{j=2^r,r>=1}. Along N=2^K and n=N+L+1, a(n,N)>=1/((L+1)H_(N+L)), since the first jump alone is a visit. Thus the retained sum is at least N/((L+1)H_(N+L)). The comparison coefficients are a(j)=6H_(j-1)/(pi^2(j-1)). For large K, n<2N and the comparison sum, whether stopped at n or n-L-1, has exactly K nonzero terms. Since H_(2^r-1) is of order r, that sum is of order K^2. For fixed L, H_(N+L) is of order K, and the ratio is bounded below by c_L 2^K/K^3 -> infinity. This proves that removing the root, or any fixed number of states just below it, does not repair the divergent-series clause.\n\nThis proof does not cover a growing trimming width, regular test classes, or the general quantitative occupation-bound problem. The first-jump bound needs no recurrence solution. Nineteen exact rational transition-normalization checks, three complete small descent computations, and sixteen finite lower-bound checks are saved in p0341_measurements.json. At K=18 the ratio lower bound is 126.182 for L=1 and 3.88245 for L=64.\n\nA positive repair criterion is available without inventing a rate: for nonnegative b_n(j) supported on j<=n with b_n(j)->b(j) for each fixed j, and f(j)>=0 with S=sum b(j)f(j)<infinity, sum b_n(j)f(j)->S if and only if lim_(M->infinity) limsup_(n->infinity) sum_(j>M) b_n(j)f(j)=0. For fixed M, the finite prefix converges. Tail control gives the forward implication by splitting the sum into prefix and tail; conversely, convergence of total and prefix gives limsup tail=S-sum_(j<=M)b(j)f(j), which tends to zero. This is a criterion requiring weighted tail control, not a proof that the tagged chain satisfies it for any new test class.",
+      "assumptions": [
+        "Nonnegative arrays and weights",
+        "Finite limiting weighted sum",
+        "Finite support of each row"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:weighted-tail-criterion-for-occupation-convergence",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "Suppose b_n(j)>=0, b_n(j)=0 for j>n, and b_n(j)->b(j) for every fixed positive integer j. Let f(j)>=0 be finite and"
+      }
+    },
+    {
+      "key": "archival-sparse-ansatz-refutation-scope",
+      "namespace": "probability.harmonic_descent",
+      "logical_name": "archival-sparse-ansatz-refutation-scope",
+      "kind": "concept",
+      "title": "Scope of the archived sparse-test refutation of Ansatz 20",
+      "statement": "The campaign archived on 7-8 September 2026 refutes both clauses of Aldous-Janson Ansatz 20 using powers-of-two weights and a(n,n)=1. This is a partial answer to P0341: it refutes the unrestricted auxiliary ansatz while leaving general quantitative occupation error bounds and regular-weight repairs unresolved. A ranking label candidate_pa does not mean that no substantive prior result exists. This row records archival scope and claims no new priority.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:archival-sparse-ansatz-refutation-scope",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; source-backed scope audit; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "The campaign archived on 7-8 September 2026 refutes both clauses of Aldous-Janson Ansatz 20 using powers-of-two weights and"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "fixed-trim-divergent-occupation-counterexample",
+      "to_existing_logical": "math:probability.core:open-problem-p0341-uniform-occupation-estimates-and-the-polynomial-test-ansatz",
+      "kind": "cites",
+      "rationale": "New end: \"Let a(n,j) be the probability that the strictly descending chain with transitions q(n,j)=1/((n-j)H_(n-1)), 1<=j<n, visits j, where H_k=sum_(r=1)^k\"; existing end: \"Find quantitative bounds on the tagged harmonic-descent occupation probabilities and determine the validity of the displayed weighted-convergence ansatz\". This result addresses or audits P0341; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    },
+    {
+      "from_key": "weighted-tail-criterion-for-occupation-convergence",
+      "to_existing_logical": "math:probability.core:open-problem-p0341-uniform-occupation-estimates-and-the-polynomial-test-ansatz",
+      "kind": "cites",
+      "rationale": "New end: \"Suppose b_n(j)>=0, b_n(j)=0 for j>n, and b_n(j)->b(j) for every fixed positive integer j. Let f(j)>=0 be finite and\"; existing end: \"Find quantitative bounds on the tagged harmonic-descent occupation probabilities and determine the validity of the displayed weighted-convergence ansatz\". This result addresses or audits P0341; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    },
+    {
+      "from_key": "archival-sparse-ansatz-refutation-scope",
+      "to_existing_logical": "math:probability.core:open-problem-p0341-uniform-occupation-estimates-and-the-polynomial-test-ansatz",
+      "kind": "cites",
+      "rationale": "New end: \"The campaign archived on 7-8 September 2026 refutes both clauses of Aldous-Janson Ansatz 20 using powers-of-two weights and\"; existing end: \"Find quantitative bounds on the tagged harmonic-descent occupation probabilities and determine the validity of the displayed weighted-convergence ansatz\". This result addresses or audits P0341; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    }
+  ]
+}

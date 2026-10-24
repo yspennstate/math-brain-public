@@ -1,0 +1,365 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B20",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A096",
+      "stream": "B20",
+      "topic": "Live gap ledger",
+      "target_statement": "Maintain the current claim/dependency/counterexample map from complete saved reports. Select the nearest unpaid lemma and perform a substantive derivation on that lemma each work cycle.",
+      "work_type": "mathematical_coordination",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A096-D1",
+          "description": "LIVE_GAP_LEDGER.json: source-linked current claims, counterexamples, and unpaid leaves",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A096-D2",
+          "description": "NEXT_LEMMA_DERIVATION.tex: one substantive mathematical increment per work cycle",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Update the ledger only from complete saved result records, distinguishing proposed, analytically proved, finite certified, reviewed, and released states.",
+        "Select one nearest unpaid inequality and contribute a concrete derivation or exact failed step; a status-only acknowledgment does not complete the packet's mathematical cycle.",
+        "Keep retired/falsified versions discoverable so a renamed residual or obsolete constant does not reenter the active queue as new work."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A081",
+          "interface": "versioned mathematical dependency graph"
+        },
+        {
+          "agent_id": "A086",
+          "interface": "complete code-review outcomes"
+        },
+        {
+          "agent_id": "A087",
+          "interface": "complete restriction-review outcomes"
+        },
+        {
+          "agent_id": "A088",
+          "interface": "complete analytic-review outcomes"
+        },
+        {
+          "agent_id": "A092",
+          "interface": "accepted counterexamples"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A046",
+          "interface_use": "current complete claim/gap ledger"
+        },
+        {
+          "agent_id": "A081",
+          "interface_use": "complete accepted-result records"
+        },
+        {
+          "agent_id": "A097",
+          "interface_use": "current first unpaid lemma"
+        },
+        {
+          "agent_id": "A098",
+          "interface_use": "current mathematical output and gaps"
+        },
+        {
+          "agent_id": "A100",
+          "interface_use": "live frontier"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 1,
+      "renewal_milestone": "Each renewed cycle changes one exact mathematical leaf or records a substantive failed derivation with a distinct next action.",
+      "source_ids": [
+        "assignment_source",
+        "plan_source",
+        "math_revised_plan",
+        "supplement_campaign"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F20"
+      ]
+    },
+    {
+      "agent_id": "A097",
+      "stream": "B20",
+      "topic": "Cross-route transfer",
+      "target_statement": "Try to transfer a proved lemma from one route into the exact missing term of another. Write the substitution with all hypotheses and constants; analogies alone do not count.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A097-D1",
+          "description": "CROSS_ROUTE_SUBSTITUTION.tex: explicit source lemma applied to an exact target term",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A097-D2",
+          "description": "TRANSFER_HYPOTHESIS_CHECK.json: every matched and unmatched assumption",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Write the substitution algebraically and verify variables, measures, normalizers, constants, and conditional laws.",
+        "Use a proved source lemma; replacing the target residual with another unproved universal endpoint is not a transfer.",
+        "Quantify the amount of the target debt now paid and state the exact remaining term or structural restriction."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A037",
+          "interface": "posterior-credit identity"
+        },
+        {
+          "agent_id": "A027",
+          "interface": "exact block debt"
+        },
+        {
+          "agent_id": "A057",
+          "interface": "coherent remainder"
+        },
+        {
+          "agent_id": "A014",
+          "interface": "congestion theorem"
+        },
+        {
+          "agent_id": "A096",
+          "interface": "current first unpaid lemma"
+        }
+      ],
+      "next_consumers": [],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "One nontrivial bound transfers between routes with every hypothesis satisfied, or a precise incompatibility rules out the proposed transfer.",
+      "source_ids": [
+        "assignment_source",
+        "plan_source",
+        "math_revised_plan",
+        "supplement_campaign"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F20"
+      ]
+    },
+    {
+      "agent_id": "A098",
+      "stream": "B20",
+      "topic": "Resource reallocation",
+      "target_statement": "At each campaign checkpoint compare mathematical output against predefined milestones. Reassign packets within available authorized capacity to distinct next lemmas; do not create extra workers or schedules.",
+      "work_type": "resource_coordination",
+      "priority": "P0",
+      "mathematical_design_status": "OPERATIONAL_WORK",
+      "deliverables": [
+        {
+          "deliverable_id": "A098-D1",
+          "description": "CHECKPOINT_ALLOCATION.json: active packet, pilot cycles used, outputs, and next assignment per stream",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A098-D2",
+          "description": "ALLOCATION_RATIONALE.md: mathematical evidence for keep/pivot/retire decisions",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Count only the twenty existing B-stream schedules and the hypothetical 100 A-packet design; A labels do not add 100 live workers or another twenty coordinators.",
+        "At each natural run choose one ready packet within the B-stream's five-item backlog, resume its exact gap, and record attempt/cycle use.",
+        "Renew a pilot only after its stated mathematical milestone or a justified new attack; when review queues are full, finish/review existing candidates rather than add more.",
+        "Never infer token prices, paid capacity, continuous runtime, or completed scheduled execution from this matrix."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A096",
+          "interface": "current mathematical output and gaps"
+        },
+        {
+          "agent_id": "A081",
+          "interface": "proof-status evidence"
+        },
+        {
+          "agent_id": "A085",
+          "interface": "verification bottlenecks"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A100",
+          "interface_use": "execution evidence"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 1,
+      "renewal_milestone": "A source-grounded checkpoint decision preserves authorized capacity and changes the next concrete mathematical task where warranted.",
+      "source_ids": [
+        "assignment_source",
+        "plan_source",
+        "math_revised_plan",
+        "supplement_campaign"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F20"
+      ]
+    },
+    {
+      "agent_id": "A099",
+      "stream": "B20",
+      "topic": "Candidate assembly",
+      "target_statement": "Assemble the strongest fully supported proof into a single source with complete lemmas and references. Preserve open leaves as explicit conjectures until both independent audits close them.",
+      "work_type": "proof_assembly",
+      "priority": "P0",
+      "mathematical_design_status": "PROOF_ASSEMBLY_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A099-D1",
+          "description": "CANDIDATE_MANUSCRIPT.tex: complete statements, proofs, constants, and references",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A099-D2",
+          "description": "ASSEMBLY_STATUS.json: closed dependencies, explicit open leaves, and review evidence",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Assemble original complete derivations, not a chain of status summaries or undocumented cross-agent claims.",
+        "Keep unresolved leaves as conjectures/conditional hypotheses, with resulting theorem scope changed accordingly.",
+        "A full-FEI label requires both independent complete-chain reviews and closure of every all-dimensional, normalization, and limit obligation; a restricted theorem does not wait for full FEI to become useful."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A081",
+          "interface": "accepted versioned proof graph"
+        },
+        {
+          "agent_id": "A090",
+          "interface": "independent reconstruction"
+        },
+        {
+          "agent_id": "A094",
+          "interface": "second complete-chain verdict"
+        },
+        {
+          "agent_id": "A095",
+          "interface": "complete scoped result"
+        },
+        {
+          "agent_id": "A093",
+          "interface": "exact primary citations"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A093",
+          "interface_use": "assembled theorem statements"
+        },
+        {
+          "agent_id": "A100",
+          "interface_use": "complete candidate source and scope"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One coherent candidate source accurately states exactly what has been proved and what remains open.",
+      "source_ids": [
+        "assignment_source",
+        "plan_source",
+        "math_revised_plan",
+        "supplement_campaign"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F20"
+      ]
+    },
+    {
+      "agent_id": "A100",
+      "stream": "B20",
+      "topic": "Release and continuation ledger",
+      "target_statement": "Prepare the final accepted-theorem list, failed-route archive, proof status, and next ten precise research questions. Verify durable private artifacts and distinguish configured, executed, saved, reviewed, and publicly released work.",
+      "work_type": "release_record",
+      "priority": "P0",
+      "mathematical_design_status": "OPERATIONAL_WORK",
+      "deliverables": [
+        {
+          "deliverable_id": "A100-D1",
+          "description": "FINAL_RESEARCH_LEDGER.md: accepted results, failed routes, proof status, and ten precise questions",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A100-D2",
+          "description": "ARTIFACT_RECEIPTS.json: actual saved versions, review records, and release receipts",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Every accepted theorem and failed route links to its complete source and the relevant independent evidence.",
+        "Distinguish configured, invoked, completed, saved, reviewed, and publicly released work; an assignment or upload is not a mathematical proof or execution receipt.",
+        "Keep the campaign report/research in the private destinations; any later public result uses the author's applicable dissemination authorization and an actual publication receipt.",
+        "Provide ten nonredundant continuation questions with precise hypotheses, target inequality, and first action."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A099",
+          "interface": "complete candidate source and scope"
+        },
+        {
+          "agent_id": "A092",
+          "interface": "verified failure archive"
+        },
+        {
+          "agent_id": "A093",
+          "interface": "source and priority status"
+        },
+        {
+          "agent_id": "A096",
+          "interface": "live frontier"
+        },
+        {
+          "agent_id": "A098",
+          "interface": "execution evidence"
+        }
+      ],
+      "next_consumers": [],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 1,
+      "renewal_milestone": "At the final checkpoint the durable record is complete and honest; update only on new actual results or receipts.",
+      "source_ids": [
+        "assignment_source",
+        "plan_source",
+        "math_revised_plan",
+        "supplement_campaign"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F20"
+      ]
+    }
+  ]
+}

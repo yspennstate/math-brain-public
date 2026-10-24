@@ -1,0 +1,12 @@
+R09 Tang Q4.11 checker
+triangle-block offspring pgf = -2*p**3*t**2 + 2*p**3*t + 3*p**2*t**2 - 4*p**2*t + p**2 + 2*p*t - 2*p + 1
+critical equation h(p)=c-a = -2*p**3 + 2*p**2 + 2*p - 1
+pc bracket: 2/5 < pc < 41/100
+theta_C3*C3(p) = (2*p**3 - 4*p**2 + 2*p - 1)*(2*p**3 - 2*p**2 - 2*p + 1)/(p**4*(2*p - 3)**2)
+theta'' = -12*(p - 1)**2*(2*p**4 - 12*p**3 + 30*p**2 - 34*p + 15)/(p**6*(2*p - 3)**4)
+R Bernstein form = 2*p**4 - 12*p**3 + 30*p**2 - 34*p + 15
+all Bernstein coefficients positive: 15, 13/2, 3, 3/2, 1
+=> theta''<0 on (pc,1) for this transitive Cayley graph
+stem operator second derivative identity = p**(k - 2)*(2*k*p*Derivative(f(p), p) + k*(k - 1)*f(p) + p**2*Derivative(f(p), (p, 2)))
+T3 theta'' = 4
+PASS

@@ -1,0 +1,13 @@
+R11 I0054 C013 Ewens-Feller logarithmic-channel exact self-check
+checks=41957
+C013 parameters: R_N=N, theta_N=1/N, raw time theta_N
+N=3 activation probabilities: p1=1/4, p2=1/7, p3=1/10
+N=3 exact root state law:
+  (0, (1, 1)): 1/144
+  (0, (2,)): 559/5040
+  (1, (1,)): 39/280
+  (2, ()): 26/35
+N=3 reduced first-visible root degree-3 probability = 35/1296
+U003 concrete profile: sup_r |r p_r/theta - 1| = theta/(1+theta)
+uniform projected-rate error checked: B-q_theta <= 2/(R+1)+theta*B
+ALL_EXACT_CHECKS_PASS

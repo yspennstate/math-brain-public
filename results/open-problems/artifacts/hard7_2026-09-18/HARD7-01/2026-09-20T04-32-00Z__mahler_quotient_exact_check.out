@@ -1,0 +1,52 @@
+WEIGHT_BUDGET_CHECK_N4
+r=5 MIN_FEASIBLE_E=4 EQUALITY=[(1, 1, 1, 1)] PASS=True
+r=6 MIN_FEASIBLE_E=5 EQUALITY=[(1, 1, 1, 1, 1)] PASS=True
+r=7 MIN_FEASIBLE_E=6 EQUALITY=[(1, 1, 1, 1, 1, 1)] PASS=True
+r=8 MIN_FEASIBLE_E=7 EQUALITY=[(1, 1, 1, 1, 1, 1, 1)] PASS=True
+r=9 MIN_FEASIBLE_E=8 EQUALITY=[(1, 1, 1, 1, 1, 1, 1, 1)] PASS=True
+r=10 MIN_FEASIBLE_E=9 EQUALITY=[(1, 1, 1, 1, 1, 1, 1, 1, 1)] PASS=True
+FULL_SPARK_NORMALS_R4
+subset=(0, 1, 2, 3) det=1 PASS=True
+subset=(0, 1, 2, 4) det=1 PASS=True
+subset=(0, 1, 3, 4) det=-1 PASS=True
+subset=(0, 2, 3, 4) det=1 PASS=True
+subset=(1, 2, 3, 4) det=-1 PASS=True
+PAIRWISE_CIRCUIT_LINES_R2
+pair=(0, 1) det=1 PASS=True
+pair=(0, 2) det=2 PASS=True
+pair=(0, 3) det=3 PASS=True
+pair=(0, 4) det=4 PASS=True
+pair=(1, 2) det=1 PASS=True
+pair=(1, 3) det=2 PASS=True
+pair=(1, 4) det=3 PASS=True
+pair=(2, 3) det=1 PASS=True
+pair=(2, 4) det=2 PASS=True
+pair=(3, 4) det=1 PASS=True
+ABSTRACT_DIRECTIONAL_RIGIDITY_AT_R6_E5
+omitted=() rankH=0 active=(0, 1, 2, 3, 4) rankC=2 PASS=True
+omitted=(0,) rankH=1 active=(1, 2, 3, 4) rankC=2 PASS=True
+omitted=(1,) rankH=1 active=(0, 2, 3, 4) rankC=2 PASS=True
+omitted=(2,) rankH=1 active=(0, 1, 3, 4) rankC=2 PASS=True
+omitted=(3,) rankH=1 active=(0, 1, 2, 4) rankC=2 PASS=True
+omitted=(4,) rankH=1 active=(0, 1, 2, 3) rankC=2 PASS=True
+omitted=(0, 1) rankH=2 active=(2, 3, 4) rankC=2 PASS=True
+omitted=(0, 2) rankH=2 active=(1, 3, 4) rankC=2 PASS=True
+omitted=(0, 3) rankH=2 active=(1, 2, 4) rankC=2 PASS=True
+omitted=(0, 4) rankH=2 active=(1, 2, 3) rankC=2 PASS=True
+omitted=(1, 2) rankH=2 active=(0, 3, 4) rankC=2 PASS=True
+omitted=(1, 3) rankH=2 active=(0, 2, 4) rankC=2 PASS=True
+omitted=(1, 4) rankH=2 active=(0, 2, 3) rankC=2 PASS=True
+omitted=(2, 3) rankH=2 active=(0, 1, 4) rankC=2 PASS=True
+omitted=(2, 4) rankH=2 active=(0, 1, 3) rankC=2 PASS=True
+omitted=(3, 4) rankH=2 active=(0, 1, 2) rankC=2 PASS=True
+omitted=(0, 1, 2) rankH=3 active=(3, 4) rankC=2 PASS=True
+omitted=(0, 1, 3) rankH=3 active=(2, 4) rankC=2 PASS=True
+omitted=(0, 1, 4) rankH=3 active=(2, 3) rankC=2 PASS=True
+omitted=(0, 2, 3) rankH=3 active=(1, 4) rankC=2 PASS=True
+omitted=(0, 2, 4) rankH=3 active=(1, 3) rankC=2 PASS=True
+omitted=(0, 3, 4) rankH=3 active=(1, 2) rankC=2 PASS=True
+omitted=(1, 2, 3) rankH=3 active=(0, 4) rankC=2 PASS=True
+omitted=(1, 2, 4) rankH=3 active=(0, 3) rankC=2 PASS=True
+omitted=(1, 3, 4) rankH=3 active=(0, 2) rankC=2 PASS=True
+omitted=(2, 3, 4) rankH=3 active=(0, 1) rankC=2 PASS=True
+ALL_EXACT_CHECKS_PASS = True

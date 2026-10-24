@@ -1,0 +1,454 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{question}[theorem]{Question}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\bp}{\boxplus}
+\newcommand{\supp}{\operatorname{supp}}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\ext}{ext}
+
+\title[Sharp unimodality threshold for free Brownian motion]{The sharp diameter threshold for unimodality of free Brownian motion}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{\today}
+
+\begin{document}
+
+\begin{abstract}
+Let $\mu$ be a compactly supported probability measure on $\R$ whose support has diameter $D_\mu$, and let $S(0,t)$ be the semicircle law of variance $t$. Hasebe and Ueda proved that the free Brownian motion started from $\mu$, whose law at time $t$ is $\mu\bp S(0,t)$, is unimodal for every $t\ge 4D_\mu^2$, and asked for the optimal constant $C$ in the statement ``$\mu\bp S(0,t)$ is unimodal for all $t\ge C D_\mu^2$''. We show that $C=1$: $\mu\bp S(0,t)$ is unimodal for every $t\ge D_\mu^2$, the symmetric two-point law is the only measure that is not unimodal at every earlier time, and every other measure of the same diameter becomes unimodal strictly before $t=D_\mu^2$. Two proofs are given. Both reduce the level-set criterion of Biane's density formula to measures with two atoms, one through an extreme-point decomposition, the other through a pair of moment inequalities, and both end in an explicit polynomial inequality in three variables. The same argument gives the sharp constant $D_\mu^2/4$ for classical Brownian motion and a criterion for symmetric kernels which recovers the classical two-Gaussian and two-Cauchy thresholds. The polynomial core of both proofs is verified in Lean~4, and the thresholds are computed numerically from the density itself.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+A probability measure on $\R$ is \emph{unimodal} if it is of the form $c\,\delta_a+f(x)\,dx$ with $c\ge 0$ and $f$ nondecreasing on $(-\infty,a)$ and nonincreasing on $(a,\infty)$. For a law with a continuous density $p$ vanishing at $\pm\infty$ this says that $p$ increases up to a mode and decreases afterwards. Unimodality of Brownian motion with an initial distribution is a classical question. Let $\mu*N(0,t)$ be the law at time $t$ of a Brownian motion started from $\mu$, and, in the free probability of Voiculescu \cite{Voiculescu86, NicaSpeicher}, let $\mu\bp S(0,t)$ be the law at time $t$ of the free Brownian motion started from $\mu$, the free additive convolution of $\mu$ with the semicircle law
+\[
+S(0,t)(dx)=\frac{1}{2\pi t}\sqrt{4t-x^2}\,\mathbf 1_{[-2\sqrt t,2\sqrt t]}(x)\,dx
+\]
+of mean zero and variance $t$. Hasebe and Ueda \cite{HasebeUeda} studied when these laws become unimodal at large time. For the free case with compactly supported initial law they proved the following.
+
+\begin{theorem}[{\cite[Theorem 3.2]{HasebeUeda}}]\label{thm:HU}
+Let $\mu$ be a compactly supported probability measure on $\R$ and let $D_\mu=\sup\{|x-y|: x,y\in\supp\mu\}$ be the diameter of its support. Then $\mu\bp S(0,t)$ is unimodal for every $t\ge 4D_\mu^2$.
+\end{theorem}
+
+They then asked \cite[Problem 3.3]{HasebeUeda}: \emph{what is the optimal universal constant $C>0$ such that $\mu\bp S(0,t)$ is unimodal for all $t\ge CD_\mu^2$ and all probability measures $\mu$ with compact support?} Their Example 2.1 shows that for the symmetric Bernoulli law $\mu=\frac12(\delta_{-1}+\delta_1)$, the law $\mu\bp S(0,t)$ is unimodal if and only if $t\ge 4$; since $D_\mu=2$, this gives $C\ge 1$. The present paper closes the gap from above.
+
+\begin{theorem}\label{thm:main}
+Let $\mu$ be a compactly supported probability measure on $\R$ with $D=D_\mu>0$. Then $\mu\bp S(0,t)$ is unimodal for every $t\ge D^2$. The constant is sharp: for the symmetric two-point law $\mu=\frac12(\delta_{-c}+\delta_c)$, which has $D=2c$, the law $\mu\bp S(0,t)$ is not unimodal for any $t<4c^2=D^2$. Hence the optimal constant in Problem~3.3 of \cite{HasebeUeda} is $C=1$.
+\end{theorem}
+
+Write $t^*(\mu)$ for the least $t_0\ge 0$ such that $\mu\bp S(0,t)$ is unimodal for every $t\ge t_0$. \Cref{thm:main} says $t^*(\mu)\le D_\mu^2$. The extremal measure is unique.
+
+\begin{theorem}[rigidity]\label{thm:rigid}
+For every compactly supported $\mu$ with $D_\mu>0$ one has $t^*(\mu)\le D_\mu^2$, with equality if and only if $\mu=\frac12(\delta_{a}+\delta_{a+D_\mu})$ for some $a\in\R$.
+\end{theorem}
+
+The proofs run through the description of the density of $\mu\bp S(0,t)$ due to Biane \cite{Biane97}, in the form used in \cite{HasebeUeda}: unimodality follows once, for every $R>0$, the equation
+\begin{equation}\label{eq:levelset}
+\xi_R(u):=\int_\R\frac{d\mu(x)}{(x-u)^2+R^2}=\frac1t
+\end{equation}
+has at most two solutions $u\in\R$. A third solution forces a local minimum of $\xi_R$ at height at most $1/t$, so everything reduces to a lower bound on the height of a local minimum of the profile $\xi_R$, uniform in $R$, for measures of diameter one. That bound is $1$, and it is attained only by the symmetric two-point law at one particular radius. We prove it in two ways. The first (\Cref{sec:choquet}) observes that the stationarity and convexity conditions at the local minimum are linear in $\mu$, so by an extreme-point argument the problem collapses to measures with two atoms; in the elementary symmetric functions of the two atom positions the conditions become two quadratic polynomials whose signs settle everything. The second (\Cref{sec:moments}) reweights $\mu$ by the square of the kernel and uses two moment inequalities for a centred random variable in an interval of length $D$. The two proofs are independent and were found independently (see the declaration at the end).
+
+The classical companion is settled by the same argument (\Cref{sec:classical}): $\mu*N(0,t)$ is unimodal for every $t\ge D_\mu^2/4$, and the constant is again sharp exactly at the symmetric two-point law. For two-point initial laws this is the classical fact that an equal mixture of two Gaussians with means $\pm m$ and common variance $\sigma^2$ is unimodal if and only if $\sigma\ge m$ \cite{Eisenberger, RobertsonFryer, Behboodian}; the statement for arbitrary compactly supported $\mu$ is presumably also known in some form, and extreme-point methods for the modes of mixtures go back at least to Kemperman \cite{Kemperman}. We include the short proof because it exhibits the mechanism, and because it yields a criterion for general symmetric kernels (\Cref{thm:kernel}). Compared with the bound $t\ge 36\log(2\alpha)/\varepsilon$ of \cite[Theorem 1.3]{HasebeUeda} under a Gaussian moment condition $\alpha=\int e^{\varepsilon x^2}d\mu<\infty$, which for a measure of diameter $D$ gives $t\ge 9D^2$ as $\varepsilon\to\infty$, the sharp constant is smaller by a factor of thirty-six. The two constants sit oddly next to each other: measured in the variance of the added semicircle or Gaussian, free Brownian motion needs four times as long as classical Brownian motion to make a two-point law unimodal.
+
+A remark on the source. In the paragraph following Problem~3.3, \cite{HasebeUeda} derive from the Bernoulli example the bracket $2\le C\le 4$. The example gives $t\ge 4$ with $D_\mu=2$, hence $C\cdot D_\mu^2=4C\ge 4$ and $C\ge 1$; the printed lower bound $2$ compares the threshold with $D_\mu$ rather than with $D_\mu^2$. With \Cref{thm:main} the bracket closes at $C=1$.
+
+\Cref{sec:numerics} reports numerical checks that do not use the level-set criterion: the density of $\mu\bp S(0,t)$ is computed from Biane's parametrisation and its modes counted, for a collection of measures of diameter one, and the resulting thresholds lie strictly below $1$ except for the symmetric pair, which sits at $1$ to five decimal places. \Cref{sec:lean} describes a Lean~4 verification of the polynomial core of both proofs. \Cref{sec:open} lists some questions the answer raises.
+
+\section{The level-set criterion}\label{sec:criterion}
+
+We recall the facts from \cite{Biane97} in the form stated in \cite[Section 2.2]{HasebeUeda}. Fix a compactly supported probability measure $\mu$ and $t>0$. For $u\in\R$ let $v_t(u)$ be the positive solution $v$ of
+\begin{equation}\label{eq:vt}
+\int_\R\frac{d\mu(x)}{(x-u)^2+v^2}=\frac1t
+\end{equation}
+when one exists, and $v_t(u)=0$ otherwise; the left side is decreasing in $v$, so the solution is unique. Let $U_t=\{u: v_t(u)>0\}$, and
+\begin{equation}\label{eq:psi}
+\psi_t(u)=u+t\int_\R\frac{(u-x)\,d\mu(x)}{(u-x)^2+v_t(u)^2}.
+\end{equation}
+Then $v_t$ is continuous, $U_t$ is a bounded open set, $\psi_t$ is an increasing homeomorphism of $\R$, the law $\mu\bp S(0,t)$ is absolutely continuous with a continuous density $p_t$, and
+\begin{equation}\label{eq:biane}
+p_t(\psi_t(u))=\frac{v_t(u)}{\pi t}\qquad(u\in\R).
+\end{equation}
+(In terms of Cauchy transforms this is the subordination equation
+\[
+G_{\mu\bp S(0,t)}(z)=G_\mu\big(z-tG_{\mu\bp S(0,t)}(z)\big),
+\]
+read at $\omega=u+iv_t(u)$ and $z=\psi_t(u)$, where the imaginary part of the right side is $-\pi p_t(z)$. The numerical code of \Cref{sec:numerics} implements exactly \eqref{eq:vt}--\eqref{eq:biane}, and reproduces the semicircle law itself from $\mu=\delta_0$.)
+
+\begin{lemma}\label{lem:unimodal}
+Let $g:\R\to[0,\infty)$ be continuous, not identically zero, with $g(u)\to 0$ as $|u|\to\infty$. If for every $\lambda>0$ the level set $\{u: g(u)=\lambda\}$ has at most two points, then $g$ is unimodal: there is $c$ with $g$ nondecreasing on $(-\infty,c]$ and nonincreasing on $[c,\infty)$.
+\end{lemma}
+
+\begin{proof}
+Let $c$ be a point where $g$ attains its maximum. If $g$ were not nondecreasing on $(-\infty,c]$ there would be $p<q\le c$ with $g(p)>g(q)$. Pick $\lambda$ with $g(q)<\lambda<g(p)$; then $\lambda<g(p)\le g(c)$ and $\lambda>0$. By the intermediate value theorem $g$ takes the value $\lambda$ on $(-\infty,p)$, since $g\to0$ at $-\infty$, on $(p,q)$, and on $(q,c)$: three points, a contradiction. The other side is symmetric.
+\end{proof}
+
+\begin{lemma}[{\cite[Lemma 3.1]{HasebeUeda}}]\label{lem:HU}
+Let $t>0$. If for every $R>0$ the equation \eqref{eq:levelset} has at most two solutions $u\in\R$, then $\mu\bp S(0,t)$ is unimodal.
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:biane} and the fact that $\psi_t$ is an increasing homeomorphism, $p_t$ is unimodal if and only if $v_t$ is. The function $v_t$ is continuous, nonnegative, vanishes outside the bounded set $U_t$, and $\{u: v_t(u)=R\}=\{u:\xi_R(u)=1/t\}$ for every $R>0$. \Cref{lem:unimodal} applies.
+\end{proof}
+
+We also record the two elementary facts about the profile that the proofs use. For $R>0$ the function $\xi_R$ is real-analytic (it is $R^{-1}$ times the imaginary part of the Cauchy transform of $\mu$ at $u+iR$), positive, and tends to $0$ at $\pm\infty$. Its derivative is
+\begin{equation}\label{eq:xiprime}
+\xi_R'(u)=2\int_\R\frac{(x-u)\,d\mu(x)}{((x-u)^2+R^2)^2},
+\end{equation}
+which is positive for $u<\min\supp\mu$ and negative for $u>\max\supp\mu$; so every stationary point of $\xi_R$ lies in the convex hull of $\supp\mu$.
+
+\begin{lemma}\label{lem:threesol}
+If \eqref{eq:levelset} has three solutions $u_1<u_2<u_3$, then $\xi_R$ has a local minimum $u_0\in(u_1,u_3)$ with $\xi_R(u_0)\le 1/t$; in particular $\xi_R'(u_0)=0$ and $\xi_R''(u_0)\ge0$.
+\end{lemma}
+
+\begin{proof}
+Let $u_0$ be a point of $[u_1,u_3]$ where $\xi_R$ attains its minimum over that interval. If the minimum is smaller than $1/t$ it is attained in the open interval, since both endpoints have the value $1/t$, and we are done. Otherwise $\xi_R\ge 1/t$ on $[u_1,u_3]$ and $\xi_R(u_2)=1/t$, so $u_2$ is an interior local minimum with value $1/t$.
+\end{proof}
+
+So \Cref{thm:main} follows from a lower bound on the height of a local minimum of $\xi_R$. By scaling it suffices to treat diameter one: if $\mu$ has diameter $D$ and $\mu_D$ is its image under $x\mapsto x/D$, then $\mu_D\bp S(0,t/D^2)$ is the image of $\mu\bp S(0,t)$ under the same map, and unimodality is invariant under affine maps.
+
+\begin{proposition}\label{prop:height}
+Let $\mu$ be a probability measure on $\R$ whose support has diameter at most $1$, let $R>0$, and let $u_0$ satisfy $\xi_R'(u_0)=0$ and $\xi_R''(u_0)\ge 0$. Then $\xi_R(u_0)\ge 1$. Equality holds only if $\mu=\frac12(\delta_{u_0-1/2}+\delta_{u_0+1/2})$ and $R^2=3/4$, and in that case $u_0$ is a strict local maximum of $\xi_R$.
+\end{proposition}
+
+\begin{proof}[Proof of \Cref{thm:main} from \Cref{prop:height}]
+Scale to $D=1$. Suppose $t\ge 1$ and $\mu\bp S(0,t)$ is not unimodal. By \Cref{lem:HU} some equation \eqref{eq:levelset} has three solutions, and by \Cref{lem:threesol} $\xi_R$ has a local minimum $u_0$ with $\xi_R(u_0)\le 1/t\le 1$. \Cref{prop:height} gives $\xi_R(u_0)\ge 1$, so $\xi_R(u_0)=1$, and the equality clause says that $u_0$ is a strict local maximum, which a local minimum of a nonconstant real-analytic function is not. The sharpness half is proved in \Cref{sec:sharp}.
+\end{proof}
+
+\section{First proof: two atoms at a time}\label{sec:choquet}
+
+Throughout this section $\mu$, $R$ and $u_0$ are as in \Cref{prop:height}. Translate so that $u_0=0$, write $s=R^2$, and put, for a finite positive measure $\nu$ on $S:=\supp\mu$,
+\begin{equation}\label{eq:FGH}
+F(\nu)=\int\frac{d\nu(x)}{x^2+s},\qquad
+G(\nu)=\int\frac{x\,d\nu(x)}{(x^2+s)^2},\qquad
+H(\nu)=\int\frac{(3x^2-s)\,d\nu(x)}{(x^2+s)^3}.
+\end{equation}
+Then $F(\mu)=\xi_R(0)$, $G(\mu)=-\frac12\xi_R'(0)$ and $H(\mu)=\frac12\xi_R''(0)$, so the hypotheses read $G(\mu)=0$ and $H(\mu)\ge0$, and the claim is $F(\mu)\ge 1$. All three functionals are linear in $\nu$ and continuous for the weak topology on measures on the compact set $S$.
+
+\subsection{Reduction to two atoms}
+
+Let $K$ be the set of probability measures $\nu$ on $S$ with $G(\nu)=0$. It is convex, and closed in the weak topology, hence compact and metrizable.
+
+\begin{lemma}\label{lem:extreme}
+Every extreme point of $K$ has support of at most two points.
+\end{lemma}
+
+\begin{proof}
+This is a case of Winkler's theorem on the extreme points of moment sets \cite{Winkler}; the argument is short. Let $\nu\in K$ have at least three points in its support. Then there are disjoint Borel sets $S_1,S_2,S_3\subset S$ with $\nu(S_i)>0$, and for $\nu_i=\nu|_{S_i}$ the two linear conditions $\sum_i\alpha_i\nu_i(S)=0$, $\sum_i\alpha_iG(\nu_i)=0$ have a solution $(\alpha_1,\alpha_2,\alpha_3)\ne0$. For $|\varepsilon|\max_i|\alpha_i|<1$ the measures $\nu\pm\varepsilon\sum_i\alpha_i\nu_i$ are positive, of mass one, and satisfy $G=0$; their average is $\nu$, so $\nu$ is not extreme.
+\end{proof}
+
+By Choquet's theorem \cite{Phelps} there is a probability measure $P$ on the extreme points $\ext K$ with $\mu=\int_{\ext K}\kappa\,dP(\kappa)$, and since $F$ and $H$ are continuous and linear,
+\begin{equation}\label{eq:choquet}
+F(\mu)=\int F(\kappa)\,dP(\kappa),\qquad H(\mu)=\int H(\kappa)\,dP(\kappa).
+\end{equation}
+An extreme point with one atom is $\delta_x$ with $G(\delta_x)=x/(x^2+s)^2=0$, so $x=0$: it is $\delta_0$, with
+\begin{equation}\label{eq:delta0}
+F(\delta_0)=\frac1s,\qquad H(\delta_0)=-\frac1{s^2}<0.
+\end{equation}
+An extreme point with two atoms has $G=0$, and $x/(x^2+s)^2$ has the sign of $x$, so the atoms lie on opposite sides of $0$: $\kappa=w_-\delta_{-a}+w_+\delta_b$ with $a,b>0$ and, since both atoms lie in $S$, $a+b\le1$.
+
+\subsection{A pair}
+
+Fix such a pair and write $A=a^2+s$, $B=b^2+s$. The condition $G(\kappa)=0$ reads $w_-a/A^2=w_+b/B^2$, so
+\[
+w_-=\frac{bA^2}{\Delta},\qquad w_+=\frac{aB^2}{\Delta},\qquad \Delta=bA^2+aB^2>0.
+\]
+A direct computation, which the Lean file of \Cref{sec:lean} checks, gives
+\begin{equation}\label{eq:pairFH}
+\begin{gathered}
+F(\kappa)-1=\frac{\Phi}{\Delta},\qquad H(\kappa)=\frac{\Psi}{\Delta AB},\\
+\Phi=bA(1-A)+aB(1-B),\qquad \Psi=bB(3a^2-s)+aA(3b^2-s).
+\end{gathered}
+\end{equation}
+In the elementary symmetric functions $D=a+b$ and $m=ab$ of the atom positions both numerators collapse:
+\begin{equation}\label{eq:collapse}
+\frac{\Psi}{D}=3m^2+s(6m-D^2)-s^2,\qquad
+\frac{\Phi}{D}=3m^2+m(1-D^2)+s(1-2m)-s^2.
+\end{equation}
+Note that $0<m\le D^2/4$ and, for a pair in $S$, $0<D\le1$.
+
+\begin{lemma}[Lemma A]\label{lem:A}
+If $\Psi\ge0$ then $s\le\frac34D^2$.
+\end{lemma}
+
+\begin{proof}
+The polynomial $\Psi/D$ in \eqref{eq:collapse} has $m$-derivative $6m+6s>0$, so it is largest at $m=D^2/4$, where it equals
+\[
+\frac{3D^4}{16}+\frac{sD^2}{2}-s^2=\frac{(3D^2-4s)(D^2+4s)}{16}.
+\]
+This is nonnegative only if $s\le\frac34D^2$.
+\end{proof}
+
+\begin{lemma}[Lemma B]\label{lem:B}
+If $0\le s\le\frac34$ and $D\le1$ then $\Phi\ge0$, with equality if and only if $D=1$, $m=\frac14$ and $s=\frac34$.
+\end{lemma}
+
+\begin{proof}
+The polynomial $\Phi/D$ in \eqref{eq:collapse} is concave in $s$ (the coefficient of $s^2$ is $-1$), so on $[0,\frac34]$ it is least at an endpoint. At $s=0$ it equals $m(3m+1-D^2)$, which is positive since $D\le1$ and $m>0$. At $s=\frac34$ it equals $3m^2-m(D^2+\frac12)+\frac3{16}$, a convex quadratic in $m$ whose derivative at $m=D^2/4$ is $\frac32D^2-D^2-\frac12=\frac{D^2-1}2\le0$; so it is decreasing on $(0,D^2/4]$ and least at $m=D^2/4$, where its value is
+\[
+\frac{3D^4}{16}-\frac{D^4}{4}-\frac{D^2}8+\frac3{16}=\frac{(1-D^2)(D^2+3)}{16}\ge0.
+\]
+Equality forces $s=\frac34$ (the value at $s=0$ is positive), then $D=1$, and then $m=D^2/4$ since the quadratic is strictly decreasing on $(0,D^2/4)$ when its derivative at the right endpoint is $0$ and it is strictly convex.
+\end{proof}
+
+\subsection{Assembly}
+
+\begin{proof}[Proof of \Cref{prop:height}]
+Since $H(\mu)\ge0$, by \eqref{eq:choquet} some extreme point $\kappa$ has $H(\kappa)\ge0$. By \eqref{eq:delta0} it is not $\delta_0$, so it is a pair, and \Cref{lem:A} gives $s\le\frac34D_\kappa^2\le\frac34$.
+
+Now every extreme point has $F\ge1$: for $\delta_0$ this is $F=1/s\ge\frac43$, and for a pair it is \Cref{lem:B}, which needs only $s\le\frac34$ and $D_\kappa\le1$ and does not depend on the sign of that pair's own $H$. Integrating against $P$ in \eqref{eq:choquet} gives $F(\mu)\ge1$.
+
+If $F(\mu)=1$ then $F(\kappa)=1$ for $P$-almost every $\kappa$. Since $F(\delta_0)\ge\frac43$, $P$ is carried by pairs with $\Phi=0$, and by the equality clause of \Cref{lem:B} each of them has $D_\kappa=1$, $m=\frac14$, $s=\frac34$; that is $a=b=\frac12$, and then $G(\kappa)=0$ forces $w_-=w_+=\frac12$. There is only one such pair, so $\mu=\frac12(\delta_{-1/2}+\delta_{1/2})$ and $R^2=\frac34$. For this measure, with $c=\frac12$ and $R^2=3c^2$, one computes (\Cref{sec:lean} checks the identity)
+\begin{equation}\label{eq:bernoulli-profile}
+\xi_R(u)-\frac1{4c^2}=\frac12\Big(\frac1{(c-u)^2+3c^2}+\frac1{(c+u)^2+3c^2}\Big)-\frac1{4c^2}
+=-\frac{u^4}{4c^2\,(u^4+4c^2u^2+16c^4)},
+\end{equation}
+which is negative for every $u\ne0$: the origin is a strict local maximum.
+\end{proof}
+
+\section{Second proof: two moment inequalities}\label{sec:moments}
+
+The second proof of \Cref{prop:height} avoids the extreme-point decomposition. Translate again so that $u_0=0$, put $y=R^2$, and reweight $\mu$ by the square of the kernel:
+\[
+Z=\int\frac{d\mu(x)}{(x^2+y)^2},\qquad dQ(x)=\frac{1}{Z}\,\frac{d\mu(x)}{(x^2+y)^2}.
+\]
+Under $Q$ the coordinate $X$ is a random variable supported in an interval of length at most $1$, and the stationarity $\xi_R'(0)=0$ says exactly $\E_Q X=0$. Write $a=\E_QX^2$ and $b=\E_QX^4$.
+
+\begin{lemma}\label{lem:moments}
+Let $X$ be a centred random variable supported in an interval of length $D$, with $a=\E X^2$ and $b=\E X^4$. Then
+\[
+a\le\frac{D^2}4,\qquad b+3a^2\le D^2a .
+\]
+\end{lemma}
+
+\begin{proof}
+If the interval is $[l,h]$ then $(X-l)(h-X)\ge0$, and taking expectations with $\E X=0$ gives $a\le-lh$; since $l\le0\le h$ and $h-l=D$, $-lh\le D^2/4$. For the second inequality let $X'$ be an independent copy of $X$. Pointwise $|X-X'|\le D$, so $(X-X')^4\le D^2(X-X')^2$; taking expectations, $\E(X-X')^4=2b+6a^2$ and $\E(X-X')^2=2a$, which gives $2b+6a^2\le 2D^2a$.
+\end{proof}
+
+Differentiating under the integral (legitimate for $R>0$ and compact support),
+\begin{equation}\label{eq:second}
+\frac{\xi_R''(0)}{2Z}=\E_Q\frac{3X^2-y}{X^2+y}=3-4y\,\E_Q\frac1{X^2+y}.
+\end{equation}
+By Jensen's inequality applied to the convex function $z\mapsto 1/(z+y)$ on $[0,\infty)$,
+\[
+\E_Q\frac1{X^2+y}\ge\frac1{a+y},
+\]
+so $\xi_R''(0)\ge0$ forces $3\ge\frac{4y}{a+y}$, that is
+\begin{equation}\label{eq:y3a}
+y\le3a .
+\end{equation}
+Finally the normalisation of $Q$ gives an exact expression for the reciprocal of the profile,
+\begin{equation}\label{eq:recip}
+\frac1{\xi_R(0)}=\frac{\int(x^2+y)^{-2}\,(x^2+y)^2\,d\mu}{\int(x^2+y)^{-2}\,(x^2+y)\,d\mu}
+=\frac{\E_Q[(X^2+y)^2]}{\E_Q[X^2+y]}=\frac{b+2ay+y^2}{a+y}.
+\end{equation}
+
+\begin{proof}[Second proof of \Cref{prop:height}]
+With $D\le 1$, \Cref{lem:moments}, \eqref{eq:y3a} and \eqref{eq:recip} give
+\[
+\frac1{\xi_R(0)}-D^2\le\frac{D^2a-3a^2+2ay+y^2-D^2(a+y)}{a+y}
+=\frac{(y-3a)(y+a)+(4a-D^2)\,y}{a+y}\le0,
+\]
+because $y\le3a$ and $4a\le D^2$. Hence $\xi_R(0)\ge1/D^2\ge1$. Equality requires $y=3a$ and $4a=D^2=1$, and then equality in the first inequality of \Cref{lem:moments}, which forces $Q$ to be supported on the two endpoints of an interval of length $1$ centred at $0$, with equal weights by centring; since the reweighting density $(x^2+y)^{-2}$ takes the same value at $\pm\frac12$, $\mu$ is the same symmetric two-point law, and the identity \eqref{eq:bernoulli-profile} finishes the proof as before.
+\end{proof}
+
+\section{Sharpness and rigidity}\label{sec:sharp}
+
+\begin{proposition}\label{prop:sharp}
+Let $\mu=\frac12(\delta_{-c}+\delta_c)$ with $c>0$, so $D_\mu=2c$. For $c^2<t<4c^2$ the law $\mu\bp S(0,t)$ is not unimodal, and for $t\ge4c^2$ it is.
+\end{proposition}
+
+\begin{proof}
+The second statement is \Cref{thm:main} (it is also \cite[Example 2.1]{HasebeUeda}). For the first, let $c^2<t<4c^2$. At $u=0$ the equation \eqref{eq:vt} reads $1/(c^2+v^2)=1/t$, so $v_t(0)=\sqrt{t-c^2}>0$, and $v_t$ is real-analytic near $0$ by the implicit function theorem. Differentiating \eqref{eq:vt} twice at $u=0$, where $v_t'(0)=0$ by symmetry, gives
+\[
+v_t''(0)=\frac{3c^2-v_t(0)^2}{v_t(0)\,(c^2+v_t(0)^2)}=\frac{4c^2-t}{t\sqrt{t-c^2}}>0 .
+\]
+So $v_t$ has a strict local minimum at $0$ with $v_t(0)>0$, and since $v_t$ is continuous, positive on the bounded set $U_t\ni 0$ and zero outside it, $v_t$ has a local maximum on each side of $0$: it is not unimodal, and by \eqref{eq:biane} neither is $p_t$.
+\end{proof}
+
+Together with \Cref{thm:main} this gives $t^*\big(\frac12(\delta_{-c}+\delta_c)\big)=4c^2=D_\mu^2$, which is the sharpness statement of \Cref{thm:main}: no constant $C<1$ works, since for such a $C$ any $t$ with $\max(C,\tfrac14)D^2<t<D^2$ satisfies $t\ge CD^2$ while $\mu\bp S(0,t)$ is not unimodal.
+
+\begin{proof}[Proof of \Cref{thm:rigid}]
+The inequality and the ``if'' direction are \Cref{thm:main,prop:sharp}. For ``only if'', scale to $D_\mu=1$ and suppose $t^*(\mu)=1$. Then there are $t_n\uparrow1$ with $\mu\bp S(0,t_n)$ not unimodal, hence, by \Cref{lem:HU,lem:threesol}, radii $R_n>0$ and local minima $u_n$ of $\xi_{R_n}$ with
+\[
+1\le\xi_{R_n}(u_n)\le\frac1{t_n}\to1,
+\]
+the lower bound being \Cref{prop:height}. By \eqref{eq:xiprime} the points $u_n$ lie in the convex hull $[\alpha,\beta]$ of $\supp\mu$, where $\beta-\alpha=1$, and by \Cref{lem:A} (applied to the extreme point with $H\ge0$ in the decomposition at $u_n$) we have $s_n=R_n^2\le\frac34$. Pass to a subsequence with $u_n\to u_\infty$ and $s_n\to s_\infty\in[0,\frac34]$.
+
+If $s_\infty>0$, the kernels in \eqref{eq:FGH} converge uniformly on $S$, so at $(u_\infty,s_\infty)$ we have $G(\mu)=0$, $H(\mu)\ge0$ and $F(\mu)=1$, and the equality clause of \Cref{prop:height} says that $\mu$ is the symmetric two-point law of diameter one.
+
+If $s_\infty=0$: for $\delta\in(0,\frac12)$ let $B_n=\{x:|x-u_n|<1-\delta\}$. Since $\supp\mu\subset[u_n-1,u_n+1]$,
+\[
+\xi_{R_n}(u_n)\ \ge\ \frac{\mu(B_n)}{(1-\delta)^2+s_n}+\frac{1-\mu(B_n)}{1+s_n}
+=\frac1{1+s_n}+\mu(B_n)\Big(\frac1{(1-\delta)^2+s_n}-\frac1{1+s_n}\Big),
+\]
+and the bracket tends to $(1-\delta)^{-2}-1>0$ while the left side tends to $1$; so $\mu(B_n)\to0$. But $u_n\to u_\infty\in[\alpha,\beta]$, and every point of $[\alpha,\beta]$ other than the endpoint farthest from $u_\infty$ lies within distance less than $1-\delta$ of $u_n$ for $n$ large once $\delta$ is small enough; letting $\delta\downarrow0$ along a sequence shows that $\mu$ is a point mass, contradicting $D_\mu=1$. So $s_\infty=0$ does not occur.
+\end{proof}
+
+\section{The classical companion and a criterion for symmetric kernels}\label{sec:classical}
+
+Let $\varphi_t$ be the centred Gaussian density of variance $t$, so $\mu*N(0,t)$ has the smooth positive density $f(x)=\int\varphi_t(x-y)\,d\mu(y)$, which vanishes at $\pm\infty$.
+
+\begin{theorem}\label{thm:classical}
+Let $\mu$ be a probability measure whose support lies in an interval of length $D>0$. Then $\mu*N(0,t)$ is unimodal for every $t\ge D^2/4$. The constant is sharp, and $t^*_{\mathrm{cl}}(\mu)=D^2/4$ if and only if $\mu=\frac12(\delta_a+\delta_{a+D})$ for some $a$.
+\end{theorem}
+
+\begin{proof}
+If $f$ is not unimodal it has a local minimum $x_0$ with a local maximum on each side (\Cref{lem:unimodal} applied to $f$, or directly). Since $f'(x)=-t^{-1}\int(x-y)\varphi_t(x-y)\,d\mu(y)$, $f'<0$ above the convex hull of $\supp\mu$ and $f'>0$ below it, so $x_0$ lies in the hull. Translate $x_0$ to $0$ and let $\rho$ be the image of $\mu$ under $y\mapsto-y$, carried by an interval $J$ of length $D$ containing $0$. The conditions at the local minimum are
+\[
+G_t(\rho):=\int d\,\varphi_t(d)\,d\rho(d)=0,\qquad H_t(\rho):=\int(d^2-t)\,\varphi_t(d)\,d\rho(d)\ge0,
+\]
+being $-tf'(0)$ and $t^2f''(0)$; both are linear and weakly continuous in $\rho$. As in \Cref{sec:choquet}, the set of probability measures on $J$ with $G_t=0$ is compact and convex with extreme points of at most two atoms, and some extreme point $\kappa$ in a Choquet decomposition of $\rho$ has $H_t(\kappa)\ge0$. A single atom $\delta_c$ with $G_t=0$ has $c=0$ and $H_t(\delta_0)=-t\varphi_t(0)<0$. So $\kappa=p\delta_{-a}+q\delta_b$ with $a,b>0$ straddling the origin (since $d\varphi_t(d)$ has the sign of $d$), and $G_t(\kappa)=0$ reads $pa\varphi_t(a)=qb\varphi_t(b)=:\theta>0$. Then
+\begin{equation}\label{eq:classical-pair}
+H_t(\kappa)=\frac\theta a(a^2-t)+\frac\theta b(b^2-t)=\theta\,(a+b)\Big(1-\frac t{ab}\Big),
+\end{equation}
+so $H_t(\kappa)\ge0$ if and only if $t\le ab$, and $ab\le(a+b)^2/4\le D^2/4$. Hence a local minimum with a maximum on each side exists only if $t\le D^2/4$, which proves unimodality for $t>D^2/4$. At $t=D^2/4$ every pair has $H_t\le0$ with equality only for $a=b=D/2$, so $H_t(\rho)\ge0$ forces $\rho$, hence $\mu$, to be the symmetric two-point law at spacing $D$; that law is unimodal at $t=D^2/4$ by the classical two-Gaussian criterion \cite{Eisenberger, RobertsonFryer, Behboodian}, which is also the case $a=b$ of \eqref{eq:classical-pair}. So the conclusion holds for every $t\ge D^2/4$.
+
+Sharpness and the ``if'' half of the equality statement are the classical fact that the equal mixture of $N(\pm D/2,t)$ is bimodal for $t<D^2/4$. For ``only if'', if $t^*_{\mathrm{cl}}(\mu)=D^2/4$, take $t_n\uparrow D^2/4$ and local minima $x_n$ in the hull with $G_{t_n}=0$, $H_{t_n}\ge0$ at $x_n$; a subsequence converges to a point $x_\infty$ with $G_{D^2/4}=0$ and $H_{D^2/4}\ge0$ at $x_\infty$, since $t\mapsto\varphi_t$ is continuous for $t>0$, and the equality analysis just given shows $\mu$ is the symmetric two-point law.
+\end{proof}
+
+Nothing in the proof used the Gaussian beyond the symmetry of the kernel and the two integrals. Let $p$ be a symmetric density on $\R$, smooth and positive, with $p'<0$ on $(0,\infty)$, and put
+\[
+\psi(x)=-\frac{p''(x)}{p'(x)}=-\big(\log|p'(x)|\big)'\qquad(x>0).
+\]
+
+\begin{theorem}\label{thm:kernel}
+Every probability measure $\mu$ whose support has diameter at most $D$ has $\mu*p$ unimodal if and only if
+\[
+\psi(a)+\psi(b)\le0\qquad\text{for all }a,b>0\text{ with }a+b\le D.
+\]
+\end{theorem}
+
+\begin{proof}
+The ``if'' direction is the proof of \Cref{thm:classical} verbatim: an extreme pair $w_1\delta_{-a}+w_2\delta_b$ with $-(\mu*p)'(0)=0$ satisfies $w_1|p'(a)|=w_2|p'(b)|=:\theta$, and then $(\mu*p)''(0)=w_1p''(a)+w_2p''(b)=-\theta(\psi(a)+\psi(b))$, so a local minimum exists only if $\psi(a)+\psi(b)\ge0$ for some admissible pair. Conversely, given $a,b>0$ with $a+b\le D$ and $\psi(a)+\psi(b)>0$, let $\mu=w_1\delta_{-a}+w_2\delta_b$ with $w_1|p'(a)|=w_2|p'(b)|$; then $(\mu*p)'(0)=0$ and $(\mu*p)''(0)>0$, so $0$ is a strict local minimum of a positive density vanishing at $\pm\infty$, which therefore has a mode on each side.
+\end{proof}
+
+For the Gaussian of variance $t$, $\psi(x)=(x^2-t)/(tx)$ and the supremum over $a+b\le D$ sits at $a=b=D/2$: the criterion reads $t\ge D^2/4$. For the Cauchy density $p(x)=\pi^{-1}(1+x^2)^{-1}$, $\psi(x)=-1/x+4x/(1+x^2)$, and the criterion gives $D\le2/\sqrt3$, which is the classical threshold for an equal mixture of two Cauchy densities at $\pm a$ to be unimodal, $a\le1/\sqrt3$. For the Laplace density $\psi\equiv1$, so no positive $D$ is admissible: a two-atom law convolved with a Laplace kernel is bimodal however close the atoms are, each atom contributing a cusp. In general, if $p$ is smooth at its peak with $p''(0)<0$ then $\psi(x)\sim-1/x$ as $x\downarrow0$ and the admissible $D$ are a nondegenerate interval $[0,c(p)]$; the Laplace kernel fails because of the corner at its mode.
+
+\section{Numerical checks}\label{sec:numerics}
+
+The theorem was tested without the level-set criterion, on the density itself. For an atomic measure $\mu=\sum_iw_i\delta_{x_i}$ the code solves \eqref{eq:vt} by bisection for each $u$ on a fine grid, evaluates $\psi_t(u)$ from \eqref{eq:psi} and $p_t(\psi_t(u))$ from \eqref{eq:biane}, counts the strict local maxima of the sampled density, and finds the least $t$ at which the count is one by bisection in $t$. As a control, the code applied to $\mu=\delta_0$ reproduces the semicircle law of variance $t$ to machine precision. \Cref{tab:thresholds} gives the results for nine measures of diameter one, together with the threshold obtained from the level-set criterion (the least $t$ such that no $\xi_R$ has an interior local minimum below $1/t$) and the classical threshold for the same measure. Every free threshold is at most $1$, the symmetric pair is at $1$ to five decimal places, and every other measure is well below; the classical thresholds are at most $1/4$ with the symmetric pair at $0.25$, as \Cref{thm:classical} predicts. \Cref{fig:bernoulli} shows the density of the symmetric Bernoulli law on $\{-1,1\}$ at $t=2$, $4$ and $6$, and \Cref{fig:pair} the threshold of a two-point law at $\pm\frac12$ as a function of the weight, which falls away steeply from the symmetric case as the rigidity statement predicts (for a pair the exact threshold is available from \eqref{eq:collapse}, and the plotted values agree with it).
+
+\begin{table}[ht]
+\centering
+\caption{Thresholds for measures of diameter one. Free: from the density (\Cref{sec:numerics}) and from the level-set criterion; classical: from the Gaussian density. Bound: $1$ (free), $1/4$ (classical).}
+\label{tab:thresholds}
+\begin{tabular}{lccc}
+\toprule
+measure (diameter one) & free, density & free, criterion & classical \\
+\midrule
+two equal atoms at $\pm\tfrac12$ & 1.00000 & 0.99824 & 0.25000 \\
+atoms at $\pm\tfrac12$, weights $0.3$, $0.7$ & 0.55180 & 0.55157 & 0.13570 \\
+atoms at $\pm\tfrac12$, weights $0.1$, $0.9$ & 0.50681 & 0.50668 & 0.09103 \\
+three equal atoms at $-\tfrac12, 0, \tfrac12$ & 0.25000 & 0.24772 & 0.05880 \\
+three equal atoms at $-\tfrac12, 0.1, \tfrac12$ & 0.32037 & 0.31812 & 0.07791 \\
+two atoms at $\pm\tfrac12$ and a spike at $0.45$ & 0.73568 & 0.73556 & 0.18907 \\
+four atoms, Dirichlet weights & 0.19736 & 0.19720 & 0.05287 \\
+nine equally spaced atoms & 0.06013 & 0.06012 & 0.01134 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{bernoulli_densities.pdf}
+\caption{The density of $\frac12(\delta_{-1}+\delta_1)\bp S(0,t)$ at $t=2$, $4$, $6$, from Biane's parametrisation. The diameter is $2$ and the threshold is $t=4$: two modes at $t=2$, one from $t=4$ on.}
+\label{fig:bernoulli}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.55\textwidth]{pair_threshold.pdf}
+\caption{$t^*(\mu)$ for $\mu=w\delta_{-1/2}+(1-w)\delta_{1/2}$ as a function of $w$, computed from the density. The bound $D^2=1$ is attained only at $w=\frac12$.}
+\label{fig:pair}
+\end{figure}
+
+\section{Formal verification}\label{sec:lean}
+
+The algebraic content of both proofs was checked in Lean~4 (version 4.33.1) against Mathlib. The file \texttt{FreeUnimodality.lean}, available with the code, contains the identities \eqref{eq:pairFH} and \eqref{eq:collapse} for the pair, \Cref{lem:A} and \Cref{lem:B} with the equality case of \Cref{lem:B}, the factorisation and sign in the second proof of \Cref{prop:height}, the identity \eqref{eq:bernoulli-profile} and the strict inequality it implies, the pair identity \eqref{eq:classical-pair}, and the bound $ab\le(a+b)^2/4$ with its consequence $t\le D^2/4$ for the classical case. Each statement is proved over the real field with hypotheses exactly as in the text; \texttt{\#print axioms} on every theorem reports only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}. What is not formalised is Biane's description of the density, \Cref{lem:HU}, the extreme-point reduction, and the measure-theoretic assembly of \Cref{sec:choquet}; these are cited or proved in the text. The compiled declarations certify the polynomial inequalities that carry the argument, not the theorem as a whole.
+
+\section{Open questions}\label{sec:open}
+
+\begin{question}
+For measures of unbounded support the diameter is unavailable but the variance is not. Is there a constant $C'$ such that $\mu\bp S(0,t)$ is unimodal for every $t\ge C'\operatorname{Var}(\mu)$ and every $\mu$ of finite variance, under a moment or tail hypothesis, and what is the sharp $C'$? Section 3.2 of \cite{HasebeUeda} shows that some hypothesis is needed.
+\end{question}
+
+\begin{question}
+Replace the semicircle by a symmetric free $\alpha$-stable law of scale $s$, $\alpha\in(0,2)$. Scaling shows that the threshold for measures of diameter $D$ has the form $D<c_{\mathrm{free}}(\alpha)\,s$, that is $t>(D/c_{\mathrm{free}}(\alpha))^\alpha$ in the natural time $t=s^\alpha$. Is the symmetric two-point law extremal for every $\alpha$, as it is at $\alpha=2$, and what is $c_{\mathrm{free}}(\alpha)$? Exploratory computations by subordination, probing with the symmetric pair only, suggest that $c_{\mathrm{free}}(\alpha)$ increases as the tails get heavier, whereas the classical constant $c(\alpha)$ of \Cref{thm:kernel} falls steeply; the semicircle is the one kernel for which the level-set criterion takes the clean form \eqref{eq:levelset}.
+\end{question}
+
+\begin{question}
+The functional $t^*$ is maximised, among measures of a given diameter, only at the symmetric two-point law. Is $t^*$ continuous for the weak topology on measures of bounded diameter, or merely upper semicontinuous?
+\end{question}
+
+\begin{question}
+For the $q$-deformed convolutions interpolating between the classical ($q=1$) and free ($q=0$) cases, is there a sharp constant $C(q)$ of the same kind, and does it move from $\frac14$ to $1$ monotonically?
+\end{question}
+
+\section*{Funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+This paper is a product of an ongoing project on the use of AI systems for research mathematics, provisionally called Math Brain, which studies how to make such systems better at solving open problems; the project and its tooling will be released publicly in due course. Every part of the mathematical and technical work reported here was carried out by AI systems, and the record of what each did is as follows.
+\begin{enumerate}
+\item The problem was selected by an automated survey of open problems in the probability literature run with OpenAI's Codex (model GPT-6 Astra) on 6--8 September 2026, which read \cite{HasebeUeda} and recorded Problem~3.3 with the observation that its printed lower bound did not follow from its example.
+\item The first proof (\Cref{sec:moments}, the moment inequalities and the reciprocal identity) was found by a Codex (GPT-6 Astra) worker on 8 September 2026, including the sharpness computation of \Cref{prop:sharp}.
+\item That proof was independently re-derived step by step on 8 September 2026 by a Claude session (Anthropic; Claude Opus 5 and Claude Fable 5.1), which also re-derived the Bernoulli threshold in the source's own framework and recorded the discrepancy in the printed bracket.
+\item The second proof (\Cref{sec:choquet}, the extreme-point reduction and the polynomials in $D$ and $m$), the classical companion and the kernel criterion (\Cref{sec:classical}), and the first numerical checks were found on 14 September 2026 by a Claude session (Claude Opus 5 and Claude Fable 5.1).
+\item On 14 September 2026 a Claude Fable 5.1 session ranked the results of the project, commissioned three independent referee reviews and a five-member vote (all Claude Fable 5.1), which re-derived both proofs and selected this result for publication; it then read the source's Lemma 3.1 and Problem 3.3 from the text, carried out the literature search (Semantic Scholar citation graph of \cite{HasebeUeda}, arXiv and web searches), wrote the rigidity argument of \Cref{thm:rigid}, the numerical code of \Cref{sec:numerics}, the Lean file of \Cref{sec:lean}, and this manuscript.
+\end{enumerate}
+The author's role was to set the goals of the project, to commission and direct the runs, and to approve the release; the author did not carry out the mathematics, the verification, the computations or the writing, and does not claim to have done so. The mathematical statements and their proofs have been machine-checked where indicated and re-derived by several independent AI reviewers, but they have not been refereed by a human mathematician; the author takes responsibility for the decision to publish.
+
+\section*{Data and code availability}
+The numerical code, the Lean file with its build log and axiom report, and the \LaTeX{} source are available at
+\begin{center}
+\url{https://github.com/yspennstate/free-brownian-unimodality-sharp-constant}
+\end{center}
+
+\begin{thebibliography}{99}
+
+\bibitem{Behboodian} J. Behboodian, On the modes of a mixture of two normal distributions, \emph{Technometrics} 12 (1970), 131--139.
+
+\bibitem{Biane97} P. Biane, On the free convolution with a semi-circular distribution, \emph{Indiana Univ. Math. J.} 46 (1997), 705--718.
+
+\bibitem{Eisenberger} I. Eisenberger, Genesis of bimodal distributions, \emph{Technometrics} 6 (1964), 357--363.
+
+\bibitem{HasebeUeda} T. Hasebe and Y. Ueda, Large time unimodality for classical and free Brownian motions with initial distributions, \emph{ALEA Lat. Am. J. Probab. Math. Stat.} 15 (2018), 353--374. arXiv:1710.08240.
+
+\bibitem{Kemperman} J. H. B. Kemperman, Mixtures with a limited number of modal intervals, \emph{Ann. Statist.} 19 (1991), 2120--2144.
+
+\bibitem{NicaSpeicher} A. Nica and R. Speicher, \emph{Lectures on the Combinatorics of Free Probability}, London Math. Soc. Lecture Note Ser. 335, Cambridge University Press, 2006.
+
+\bibitem{Phelps} R. R. Phelps, \emph{Lectures on Choquet's Theorem}, 2nd ed., Lecture Notes in Math. 1757, Springer, 2001.
+
+\bibitem{RobertsonFryer} C. A. Robertson and J. G. Fryer, Some descriptive properties of normal mixtures, \emph{Skand. Aktuarietidskr.} 52 (1969), 137--146.
+
+\bibitem{Voiculescu86} D. Voiculescu, Addition of certain non-commuting random variables, \emph{J. Funct. Anal.} 66 (1986), 323--346.
+
+\bibitem{Winkler} G. Winkler, Extreme points of moment sets, \emph{Math. Oper. Res.} 13 (1988), 581--587.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,40 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B16-A079-RARE-CELL-ENERGY",
+      "version": 1,
+      "packet_id": "A079",
+      "attempt_id": "A079-SHARED-RARE-CELL-1",
+      "gap_id": "G-BIASED-TAX",
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "exact_statement": "For every k>=1, every n, and arbitrary deterministic U,V:{0,1}^n->{0,1} on the uniform cube having the independent Bernoulli(2^-k) output law, f=(-1)^(UV) satisfies I(f)>=4k*2^(-2k). For the A077/B09 gain J_k=h2(r)-2^-k h2(s), r=4*2^(-2k)(1-2^-k), s=4*2^-k(1-2^-k), one has J_k/I(f)<=1+log2(e)/k. Hence correlated/shared-variable realization of this same gate law cannot produce an unbounded helper-to-physical-influence ratio.",
+      "hypotheses": [
+        "Uniform physical cube",
+        "U and V deterministic",
+        "Their joint output law is the independent Bernoulli(2^-k) law",
+        "Total influence uses the standard uniform-cube normalization"
+      ],
+      "units": "bits",
+      "contributors": ["B16"],
+      "proof_source": "CORRELATED_AUXILIARY_CONSTRUCTION.tex",
+      "proof_dependencies": [
+        "Known edge-isoperimetric inequality on the discrete cube",
+        "B16-A077-COMPENSATED-TOWER-v1 for the definition of J_k"
+      ],
+      "review_records": [],
+      "scope_exclusions": [
+        "Not full FEI",
+        "Does not exclude a different gate or gain not localized on the rare joint cell",
+        "Does not claim universal conditional spectral entropy control"
+      ],
+      "supersedes": null,
+      "refutes": [
+        "The proposed escape in which correlated encoders preserve the B09 gate law but make its physical influence o(k*2^(-2k))"
+      ],
+      "first_unproved_line": "No barrier is proved for a different gate whose gain is not a function of a rare output cell.",
+      "next_consumers": ["A034", "A080", "B20"],
+      "independent_reviewers": ["A092", "A088"]
+    }
+  ]
+}

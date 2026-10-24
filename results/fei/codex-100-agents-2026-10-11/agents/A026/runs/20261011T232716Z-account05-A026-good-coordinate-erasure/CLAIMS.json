@@ -1,0 +1,30 @@
+[
+  {
+    "claim_id": "A026-TRIBES-SINGLETON-ERASURE-UNIFORM",
+    "version": 1,
+    "exact_statement": "For disjoint equal-width tribes f=1-2 product_(j=1)^m(1-AND_w), all w,m>=1, p=2^-w,b=1-p,a=b^m,t=b^(m-1), and bit entropy Phi(A,E)=-(A log2 A)-(E log2 E)+(A+E)log2(A+E), singleton erasure is B_i=4p(1-2p)t+4(t-t^2)Phi(b^2,p^2)+Phi((1-2a)^2,4p^2t^2). With I_i=2pt, 2(1-2p)<=B/I<=2(1-2p)+8pw+(4+4/e)p/ln2 and 4b(1-1/w)<=H/I<=4b+6/(w ln2). Consequently B/I->2,H/I->4,B/H->1/2 uniformly over arbitrary m=m(w)>=1 as w->infinity.",
+    "hypotheses": [
+      "Uniform finite cube; Boolean sign output; m disjoint blocks of common width w; m,w positive integers; entropy in bits; zero logarithm terms interpreted continuously."
+    ],
+    "statement_sha256": "8b71d469c4557eb484e932a0c3420623c2239fe38deae8f198c3923e08b9c5b5",
+    "contributors": [
+      "A026"
+    ],
+    "proof_source": "TRANSITIVE_ERASURE.md sections 1-2; out/transitive_certificates.json; code/transitive_v3.py; code/children.py",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A087",
+      "A094",
+      "A076",
+      "A029",
+      "A061",
+      "A003",
+      "B06 lead"
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+# Owner focus: finish the full FEI conjecture
+
+Current owner revision **2026-10-12.1 / FULL-FEI-ONLY-20261012**, 12 October 2026. This is an operational priority amendment for the existing research fleet; the current B01–B20 streams, A001–A100 packet ownership, exact mathematical acceptance criteria, source/access boundaries and existing fixed end dates remain in force.
+
+## Authoritative direction
+
+Every existing covered schedule here and the owner's requested 60 remaining schedules across the other dots now works exclusively toward one finite dimension-independent bound H(f)<=C I(f) for every genuine Boolean function. A rigorous unbounded Boolean counterfamily would also settle the conjecture. Full FEI remains OPEN until the complete proof or counterfamily is independently verified.
+
+Read the complete private [owner order](https://github.com/yspennstate/math-research-brain/blob/40210272c19f43fed84f6a67653f9a04b0e11e28/scheduled_tasks/work/shared/full-fei-only-2026-10-12/ORDER.md) and the [current assignment package](https://github.com/yspennstate/math-research-brain/tree/main/scheduled_tasks/work/shared/full-fei-only-2026-10-12). The current CASE_TARGETS.json gives each existing B stream an exact next mathematical target, a practical attempt, its surviving universal gap and separate growth, stress and independent-review probes for the other intended cohorts. It is an overlay on the existing five-packet contracts, not a second backlog or extra workers.
+
+Grow examples into proofs: identify the starting class and the new case/family; state all quantifiers; track the constant as each parameter grows or degenerates; write the lemma that would generalize the pattern and attempt its proof. Preserve meaningful exact/interval checks, failed approaches and source-bound counterexamples. A finite census, an optimized old constant, a proper-class theorem or another unproved equivalent condition does not by itself close the all-dimensional gap.
+
+The current sources point particularly to the upper-set U payment, complete biased coherent hierarchy remainder, arbitrary multi-weight/all-bias thresholds, selectors with vanishing correlation gaps, growing spectral-address classes, overlap/witness/height payments and complete proof assembly. Read the original newest reports and their corrections. The published threshold/regular-function manuscript is a reusable input; submission polish does not select work for these proof-focused schedules.
+
+## Verified adoption and live handoff
+
+- Twenty enabled native tasks in the current authenticated connection were updated and independently re-read at 2026-10-12T03:18:03Z. Titles, IDs, schedules, timezones, enabled states and other exposed stable fields were preserved; five disabled historical tasks were untouched. [Native readback receipt](https://github.com/yspennstate/math-research-brain/blob/4eeadac7bc2fae2cd0beaa0375cca32accd86a9b/scheduled_tasks/work/shared/full-fei-only-2026-10-12/receipts/ACCOUNT01_NATIVE_ADOPTION_20261012.json).
+- The full shared control package was read back at 40210272c19f43fed84f6a67653f9a04b0e11e28. The Brain's owner message, wake/guide and protocol/roles entry points, plus the documented legacy movie-reminder stop marker, were read back at 3f7f4ff75690e06a4be9d83e4865b233f9dcaabc.
+- [The source-bound request to all four registered dots and both coordinators](https://github.com/yspennstate/math-research-brain/blob/11c976fab343c3d4dc0d357ce2125c20fc2d4c50/scheduled_tasks/handoffs/brain-inbox/messages/REQ-20261012T031958Z-FULL-FEI-OWNER--owner-relay-fei-control--send-r1.json) asks each owner to verify and update its actual existing task set, report overlaps, preserve its existing deadline and return saved-prompt evidence. Posted instructions and unread indexing are not native adoption. The requested remaining 60 are unverified until those receipts arrive.
+- B20 should read the shared package's current MANIFEST and source-bound replies during its bounded normal coordination, maintain the actual adoption count and preserve unknown/blocker states. This is a supporting duty alongside its substantive FEI lemma, not a separate operational campaign.
+- The Brain coordinator must verify the STOP_DOTS_SPEEDUP marker in the actual deployed checkout; a repository marker alone does not establish that the old hourly movie instruction has stopped on the machine.
+
+All new mathematics and detailed coordination stay in the existing private routes. Do not change plan/claim hashes merely because an owner directive was posted. This note preserves the complete earlier README/CURRENT_STATUS text and changes no mathematical claim status.

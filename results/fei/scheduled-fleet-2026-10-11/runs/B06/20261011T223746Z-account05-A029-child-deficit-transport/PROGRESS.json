@@ -1,0 +1,65 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T223746Z-account05-A029-child-deficit-transport",
+  "stream": "B06",
+  "packet_id": "A029",
+  "gap_id": "G-R-MISMATCH",
+  "attempt_id": "A029-child-deficit-transport-01",
+  "method": "Certified exhaustive depth<=2 comparison; actual-child B05 analytic reserve; physical-cut ownership controls",
+  "mathematical_delta": "Maximum r1-r2 exactly 2 through n=4; all 976 ties classified; B05 selector debt paid by proved actual child D4 for all even k>=4; repeated-slack sum falsified by parity",
+  "deliverable_status": "COMPLETE_LOCAL_SAVED_PENDING_REVIEW",
+  "mathematical_status": "SCOPED_BENCHMARKS_PROVED_FULL_FEI_OPEN",
+  "claim_versions_used": [
+    {
+      "claim_id": "C005",
+      "version": "source ERASURE_REDUCTION.md sections 1,2",
+      "status": "PROVED_BASELINE"
+    },
+    {
+      "claim_id": "B06-R2",
+      "version": "STREAM_NOTES.md v1 2026-10-11 22:38Z",
+      "status": "BASELINE_REUSED_NOT_RECLAIMED"
+    },
+    {
+      "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+      "version": 1,
+      "status": "INDEPENDENTLY_REVIEWED_CONSTRUCTION_ONLY"
+    }
+  ],
+  "claims_created_or_changed": [
+    {
+      "claim_id": "A029-CHILD-DEFICIT-BENCHMARKS",
+      "version": 1
+    }
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "CLAIMS.json",
+    "SPEC.json",
+    "VERIFY_SPEC.json",
+    "STRUCTURE_SPEC.json",
+    "B05_TRANSPORT.md",
+    "CHILD_DEFICIT_TRANSPORT.tex",
+    "SLACK_FLOW.json",
+    "out/census_n4.json",
+    "out/verification.json",
+    "out/structure.json"
+  ],
+  "next_consumers": [
+    "A028",
+    "A052",
+    "A064",
+    "A087",
+    "A094",
+    "B06 lead"
+  ],
+  "next_action": "Test depth-two gain<=2 on an arbitrary-core physical selector; derive a structural bound or explicit counterfamily while retaining actual terminal deficits",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Universal arbitrary-seed terminal deficit remains unproved",
+    "Independent agent review and supervisor mirror verification pending"
+  ],
+  "packet_ids": [
+    "A029"
+  ]
+}

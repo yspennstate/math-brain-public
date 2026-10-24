@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B09",
+  "run_id": "20260923T164801Z-account01-B09-QFORM-auto11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_target_continuity_status": "OPEN",
+  "control_commit_initial": "15d5ecc437ef47d46394d4d5ce502f8482abd90a",
+  "control_commit_prepublication": "66ce008df8dd8df27ebcb6aed5b2271c6998d1ea",
+  "assignment": {
+    "title": "Bilinear block mechanism",
+    "pathway": "GEOMETRY",
+    "method": "analytic derivation and exact structural identities",
+    "partner": "account02/B09"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "source_results_applied": [
+    {
+      "source": "yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae",
+      "path": "proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md",
+      "result": "Claude continuation Theorems 6.3 and 6.5",
+      "actual_use": "Theorem 6.5 pays the diffuse fixed-pair aggregate-volume partition after the exact row-share identity; Theorem 6.3 pays the complementary heavy-singleton branch by promoting one literal leaf to a third hub."
+    },
+    {
+      "source": "yspennstate/math-open-problems@c27ff5b752bf25d2933cbdfac5a870b0dcf71181",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T154445Z-account02-B09-QFORM-r15/REPORT.md",
+      "result": "QFORM-RANKONE-LEAF-ANCHORED-VOLUME-IDENTITY-v1 and target-valid Q_delta family",
+      "actual_use": "The exact partner identity gives V_ab(S)=1/4 on Q_delta; substituting V>=1/4 into the new theorem yields ||p_Qdelta||inf<9.807 uniformly in delta, with continuity and linear interval bound."
+    },
+    {
+      "source": "yspennstate/math-open-problems@82f6ea83f0e981f756fd18080ffdd11a447b60a8",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T144532Z-account03-B09-QFORM-r35/REPORT.md",
+      "result": "localized fixed physical hub pair with V_ab(S)>=27 G_*/400",
+      "actual_use": "Since the global fixed-pair aggregate V contains V_ab(S), the new theorem gives ||p_Q||inf<12.198 G_*^(-1/6) uniformly in pair-core rank/sign and arbitrary leaf curvature."
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "QFORM-FIXEDPAIR-AGGREGATE-THREEVOLUME-v1",
+      "status": "SUPPORTING_THEOREM_PROVED_FROM_COMPLETED_SOURCE_THEOREMS",
+      "statement": "For any two literal physical coordinates H={a,b}, define V=sum_i sum_{T subset H^c\\{i}, |T|=3} det A[H union {i},T]^2. If V>0, then every independent cap-one product law gives a continuous density with ||p_Q||inf <=5.35(256/27)^(1/6)V^(-1/6)<7.784V^(-1/6), and the same coefficient times interval length. The physical pair core and arbitrary leaf curvature are unrestricted."
+    },
+    {
+      "id": "QFORM-FIXEDPAIR-PARTITION-IDENTITY-v1",
+      "status": "EXACT_IDENTITY_PROVED",
+      "statement": "For a literal leaf partition I,J, Delta_J=det(A[H,J]A[H,J]^T), Pi_J projection onto row(A[H,J]), and c_i=A[i,J](I-Pi_J), one has Delta_J||c_i||^2=sum_{T subset J,|T|=3} det A[H union {i},T]^2. Consequently E W=(1-p)p^3V under Bernoulli partition."
+    },
+    {
+      "id": "QFORM-LOCALIZED-HUBPAIR-GENERAL-LEAFCURVATURE-ROUTING-v1",
+      "status": "PAID_INSIDE_ACCOUNT03_B09_R35_LOCALIZED_PAIR_BRANCH",
+      "statement": "The r35 fixed pair has V>=27G_*/400; therefore the new aggregate theorem gives a continuous density bound <12.198G_*^(-1/6) uniformly across all physical pair core strata and arbitrary leaf curvature."
+    }
+  ],
+  "actual_target_application": {
+    "source_family": "account02/B09 r15 Q_delta",
+    "target_validity": "at least three eigenvalues have absolute value >=1 for every real delta",
+    "partner_volume_identity": "V_ab(S)=1/4",
+    "new_bound": "||p_Qdelta||inf<9.807 and P(Qdelta in B)<9.807|B| uniformly in delta; continuous density",
+    "comparison": "partner low-rank-specific theorem is sharper (<4.399); new theorem gains arbitrary same-side leaf curvature."
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "finalized_commit": "d8c63e3d3ac15159a5950501f6eb05eb6969bcfc",
+    "report_creation_commit": "63f4d98c3dbb6ded41c88b1a128910f0507fb566",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T164801Z-account01-B09-QFORM-auto11/REPORT.md",
+    "report_blob": "138cfe77255ab2151604819e4105221a5af6323b",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T164801Z-account01-B09-QFORM-auto11/CHECKS.md",
+    "checks_blob": "893bfd441c346138ac0283eb3a6b87c6b9352126",
+    "prepublication_refresh_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T164801Z-account01-B09-QFORM-auto11/PREPUBLICATION_REFRESH.md"
+  },
+  "handoff": {
+    "commit": "c07c0e20428a3ba81ce9f8d06291a84d473203d2",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B09/20260923T164801Z-account01-B09-QFORM-auto11.md",
+    "blob": "5a202565fcaf3e5ee6daa48f904a4fa108c4c7c7"
+  },
+  "unresolved_implication": "QFORM-FIXEDPAIR-VOLUME-OR-PAID-EXIT-v1",
+  "next_step": "In the remaining no-pivot/high-hub configurations, prove that either some literal physical pair has aggregate anchored three-volume at universal normalized scale or route to an already-paid three-hub, ridge/diffuse, grouped-coordinate, definite/singular-pair, or low-rank carrier theorem. Use aggregate source-coordinate currency; do not assert one uniformly good minor.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  }
+}

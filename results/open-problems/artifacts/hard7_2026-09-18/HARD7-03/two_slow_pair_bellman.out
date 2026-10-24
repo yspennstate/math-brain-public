@@ -1,0 +1,28 @@
+HARD7-03 exact two-slow-site controlled-current certificate
+lambda=71/219
+sum_p=1
+stationary_balance:
+  (0, 0): 0
+  (0, 1): 0
+  (0, 2): 0
+  (1, 0): 0
+  (1, 1): 0
+  (1, 2): 0
+  (2, 0): 0
+  (2, 1): 0
+  (2, 2): 0
+maximal_reservoir_exit_current=71/219
+bellman_coefficients:
+  (0, 0): internal=0, inj_coeff=71/219, exit_coeff=None, max=71/219
+  (0, 1): internal=0, inj_coeff=17/73, exit_coeff=40/219, max=71/219
+  (0, 2): internal=0, inj_coeff=19/219, exit_coeff=104/219, max=71/219
+  (1, 0): internal=18/73, inj_coeff=17/219, exit_coeff=None, max=71/219
+  (1, 1): internal=32/219, inj_coeff=3/73, exit_coeff=20/73, max=71/219
+  (1, 2): internal=0, inj_coeff=1/73, exit_coeff=136/219, max=71/219
+  (2, 0): internal=71/219, inj_coeff=None, exit_coeff=None, max=71/219
+  (2, 1): internal=37/219, inj_coeff=None, exit_coeff=68/219, max=71/219
+  (2, 2): internal=0, inj_coeff=None, exit_coeff=142/219, max=71/219
+potential_min=0
+potential_max=316/219
+finite_time_consequence: E[N_exit(t)] <= (71/219)t + h(X_0) <= (71/219)t + 316/219
+ALL_EXACT_CHECKS_PASS

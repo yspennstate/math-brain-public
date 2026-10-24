@@ -1,0 +1,103 @@
+[
+  {
+    "claim_id": "A009-AFFINE-PLANE-FULL-PIJ-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For every prime power q>=16, the Boolean OR of all positive affine-line conjunctions on q^2 fair coordinates has exactly those line gates as its prime implicants. With uniform global lambda_l=1/(q+1), pi_l=2^-q, M_l=1 and any fixed line orders, the explicit one-line-when-possible/source-SCC-otherwise deterministic actual partition-forest law has complete conditioned residual R<=186791 I/13540<14I. No actual-run posterior entropy credit is required. The scalar linear-hypergraph transfer inequality (T) in REPORT.md holds for every distinct positive equal-width gate table with pairwise intersections at most one; it is not asserted O(I) at arbitrary density. The affine result is a full PI-J upper certificate, not an optimal value or a universal FEI claim.",
+    "hypotheses": [
+      "uniform Boolean cube",
+      "q prime power >=16",
+      "all positive line prime implicants; one global packing vector",
+      "actual terminating partition forests",
+      "bits; gamma=6/5"
+    ],
+    "statement_sha256": "a54467cae4d43b8632a905a00dd9049317c34498d64d70134eb592a808a310c9",
+    "contributors": [
+      "A009"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261012T031835Z-account05-A009-fractional-incidence-optimization\\REPORT.md",
+      "locators": "Derivation 2-6",
+      "companion": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261012T031835Z-account05-A009-fractional-incidence-optimization\\FOREST_TRANSFER.tex"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "locator": "eq:forestpacking, eq:forestconditioning, eq:forestcost, thm:posteriorforest",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "status": "SOURCE_COMPLETE_BASELINE"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A007",
+      "A010",
+      "A014",
+      "A086",
+      "A094",
+      "B02",
+      "B03",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A009-SCOPED-REVIEW-A007-AFFINE-NORMALIZER",
+    "version": 1,
+    "exact_statement": "The affine-plane retained-normalizer clause of A007-PIJ-ACTIVATION-CLOSURE-AND-NORMALIZER-DIAGNOSTIC v1 holds: for all prime powers q>=16, all positive feasible global weights and all pivotal tie rules, P+v log2 Z >= [7 log2((q+1)/2)-5]I. This review does not assert acceptance of the bundled activation theorem or a lower bound for whole-set PI-J.",
+    "hypotheses": [
+      "source exact affine-plane scope",
+      "uniform Boolean cube",
+      "positive incidence vector",
+      "bits"
+    ],
+    "statement_sha256": "3f6e6069a8feb85ae36cf99fedea86d55f15583e44e2865f6e2de881de04f450",
+    "contributors": [
+      "A009"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261012T031835Z-account05-A009-fractional-incidence-optimization\\REPORT.md",
+      "locator": "Derivation 1",
+      "original": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261011T234502Z-account05-A007-root-normalization\\REPORT.md"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A007-PIJ-ACTIVATION-CLOSURE-AND-NORMALIZER-DIAGNOSTIC",
+        "version": 1,
+        "statement_sha256": "d5eea951a3d89ebb208ca411df14c89720942cca0d4765e80344f57574b0f84d",
+        "used_scope": "affine normalization clause only; independently reconstructed here"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A009",
+        "source_claim_id": "A007-PIJ-ACTIVATION-CLOSURE-AND-NORMALIZER-DIAGNOSTIC",
+        "source_version": 1,
+        "source_statement_sha256": "d5eea951a3d89ebb208ca411df14c89720942cca0d4765e80344f57574b0f84d",
+        "scope": "Only the affine-plane retained-normalizer clause in derivation A2; not the bundled activated-tribes theorem",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "supplied_substantive_repair": false,
+        "method": "Independent reconstruction of row-mass Holder/Jensen, root-product lower bound and total-scale monotonicity",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261012T031835Z-account05-A009-fractional-incidence-optimization\\REPORT.md"
+      }
+    ],
+    "status": "SCOPED_INDEPENDENT_REVIEW_COMPLETE_LOCALLY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A007",
+      "A010",
+      "A014",
+      "A086",
+      "A094",
+      "B02",
+      "B03",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "schema": "fei-a045-gate-boundary-audit/1",
+  "packet_id": "A045",
+  "claim_version": "B09-A045-BIASED-REALIZABILITY-DOMAIN-v1",
+  "cases": [
+    {
+      "case": "interior_product_bias",
+      "status": "PROVED",
+      "rule": "Use the normalized product basis and require every coefficient of g^2-1 to vanish; Parseval alone is insufficient."
+    },
+    {
+      "case": "deterministic_coordinate",
+      "status": "PROVED",
+      "rule": "Contract the coordinate to its unique positive-mass value before Fourier expansion; delete it from the active cube."
+    },
+    {
+      "case": "finite_uniform_encoder_bias",
+      "status": "PROVED",
+      "rule": "Exactly the dyadic probabilities are realizable; arbitrary finite dyadic vectors are jointly realizable on disjoint blocks."
+    },
+    {
+      "case": "all_real_bias_extension",
+      "status": "CONDITIONAL",
+      "rule": "Density extends a uniform dyadic gate inequality only after every potential term receives a specified continuous extension; the dyadic encoder infimum alone supplies none."
+    },
+    {
+      "case": "repeated_physical_child",
+      "status": "REFUTED_AS_PRODUCT_MODEL",
+      "witness": "For G(y1,y2)=y1*y2 and balanced h, G(h,h)=1 but G(h1,h2) with disjoint fresh copies is balanced parity."
+    },
+    {
+      "case": "physical_vs_spectral_conditioning",
+      "status": "DISTINCT",
+      "witness": "A uniform dictator has spectral support {i}; either physical child is constant with spectral support empty."
+    },
+    {
+      "case": "normalized_nonboolean_spectral_law",
+      "status": "EXACT_COUNTEREXAMPLE",
+      "witness": "At p=1/4 the one-bit masses (1/2,1/2) satisfy Parseval but no coefficient signs satisfy the nonempty Booleanity equation."
+    }
+  ],
+  "weighted_controls": {
+    "WEIGHTED_TC": "physical conditional-input total correlation only",
+    "WEIGHTED_PIVOTAL_CREDIT": "coefficient one only",
+    "WEIGHTED_LOCAL_TC": "not existential spectral-coordinate selection"
+  },
+  "full_fei_status": "OPEN"
+}

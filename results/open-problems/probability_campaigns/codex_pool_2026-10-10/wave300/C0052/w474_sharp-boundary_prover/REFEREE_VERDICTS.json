@@ -1,0 +1,52 @@
+{
+  "source": "~\\brain_workers\\w476\\REVIEW.jsonl",
+  "reviewer": "w476",
+  "rows": [
+    {
+      "row_id": "w476.R1",
+      "artifact": "~/brain_workers/w474/ATTEMPT.md#L1",
+      "claim_id": "w474-L1",
+      "verdict": "KEEP",
+      "reviewer": "w476",
+      "reproduction": "For r=cos(theta), uniform planar Gaussian angle gives E[sign X sign Y]=1-2theta/pi=(2/pi)arcsin r. Gaussian regression gives E[X sign Y]=sqrt(2/pi)r. Therefore E[H(X)H(Y)]=(2/pi)(arcsin r-r). The arcsin series after its linear term has nonnegative coefficients and degrees >=3; each r^k<=r^3 for 0<=r<=1. The coefficient sum at r=1 is pi/2-1, giving the stated sharp constant, attained at r=1.",
+      "scope": "Exact Gaussian-sign special case only; no critical Ising conclusion.",
+      "remaining_gap": "Show a theorem connecting this surrogate to nearest-neighbor critical 3D Ising, or use only as a boundary example.",
+      "status": "independently checked proof"
+    },
+    {
+      "row_id": "w476.R7",
+      "artifact": "~/brain_workers/w474/ATTEMPT.md#L2",
+      "claim_id": "w474-L2",
+      "verdict": "KEEP",
+      "reviewer": "w476",
+      "reproduction": "R_gamma(z)=(1+|z|^2)^(-gamma/2) is a positive mixture of e^(-t|z|^2), each positive definite by Gaussian Fourier transform. Thus a stationary Gaussian G exists, and sign(G) has covariance (2/pi)arcsin R_gamma by R1. Gaussian interpolation from independent copies to identical copies with cross covariance sC yields derivative sum_ij C_ij E[partial_i F partial_j H]>=0 for coordinatewise increasing F,H because C_ij>=0; approximation transfers association to signs. Writing sign(G)=sqrt(2/pi)G+H, R1 bounds |Cov(H_0,H_z)|<=C R_gamma(z)^3. The normalized variance is <=C N^(-3+gamma) sum_{|z|<=CN}(1+|z|^2)^(-3gamma/2), yielding N^(-2gamma), N^(-2)log N, or N^(-(3-gamma)) in the three stated regimes. Covariance of the Gaussian linear part is a Riemann sum for |u-v|^(-gamma); its diagonal neighborhood contributes at most C[N^(gamma-3)+delta^(3-gamma)], so it converges for 0<gamma<3. L2 convergence of the remainder transfers joint finite-dimensional convergence.",
+      "scope": "Smeared finite-dimensional limits of a specially constructed associated sign-Gaussian field; no nearest-neighbor Gibbs law, random-current identity, full distribution-space tightness, or 3D Ising conclusion.",
+      "remaining_gap": "The parent C0052 still needs a distinct-site random-current lower bound or another model-specific mechanism.",
+      "status": "independently checked proof"
+    },
+    {
+      "row_id": "w476.R8",
+      "artifact": "~/brain_workers/w474/ATTEMPT.md#Boundary verdict",
+      "claim_id": "w474-C1",
+      "verdict": "KEEP",
+      "reviewer": "w476",
+      "reproduction": "Set gamma=1+eta with 0<eta<2 in R7. The field is stationary, spin-flip symmetric, bounded +/-1 and positively associated, with two-point decay of exponent 1+eta and on-site U4=-2, yet its normalized smeared finite-dimensional limits are Gaussian. Thus the stated auxiliary implication is false.",
+      "scope": "Counterexample only to the explicitly listed broad auxiliary implication, not to C0052 or a statement retaining nearest-neighbor Ising/random-current hypotheses.",
+      "remaining_gap": "No model-specific non-Gaussianity proof follows.",
+      "status": "independently checked proof"
+    },
+    {
+      "row_id": "w476.R9",
+      "artifact": "~/brain_workers/w474/ATTEMPT.md#L3",
+      "claim_id": "w474-L3",
+      "verdict": "KEEP_DEDUP",
+      "reviewer": "w476",
+      "reproduction": "The six pair-coincidence planes each sum to 2chi^2. Subtract excess multiplicities: triple-singleton tuples contribute 8(chi-1) and were counted three times, two-pair tuples contribute 6(B-1) and were counted twice, and the all-equal value 2 was counted six times. Hence K_D=12chi^2-16chi-6B+12. On an N-site fully locked cyclic field, chi=B=N and K_D/chi^2=12-22/N+12/N^2->12, proving sharpness over the stated class.",
+      "scope": "Same exact contact formula independently derived by w475; integrate once, citing both authors. The finite cyclic sharpness does not imply isotropic critical Z^3 behavior.",
+      "remaining_gap": "Distinct-site cumulants remain uncontrolled.",
+      "status": "independently checked proof"
+    }
+  ],
+  "served_model_account_gate": "UNKNOWN",
+  "mathematical_scope": "Special cases and broad-bridge counterexample only; no C0052 solution."
+}

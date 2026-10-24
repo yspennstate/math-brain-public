@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260922T132111Z-qform-a01-b02-r12",
+  "control_revision": "2026-09-22.5",
+  "control_commit_at_refresh": "a6e699e962eb9ca0a8e8f86945e01c32ff5ab5eb",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "premises": [
+    {
+      "name": "reviewed diffuse/separable Fourier theorem",
+      "source": "yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb:proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md",
+      "scope_used": "rank-two geometric Brascamp-Lieb plus sharp Hausdorff-Young calculation through the endpoint |phi_R(t)| <= B pi |det S|^-1/2 |t|^-1; not its r>=3 final L1 conclusion"
+    },
+    {
+      "name": "account02/B02 localized-row endpoint",
+      "source": "yspennstate/math-open-problems@400f82c8b98fc5623f567581b6ccb0b4298974e8:proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/B02-20260922T120900Z-qform-r11/REPORT.md",
+      "scope_used": "d^2+sigma^2=||Ae_k||^2 lower bound and |phi_Q(t)| <= (pi sqrt(2)/(sigma |t|))^(1/2) after random-linear averaging"
+    },
+    {
+      "name": "fresh regularized determinant branch",
+      "source": "yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md",
+      "scope_used": "compatibility/context only: full-spectrum diffuse-range branch; no independent review duplicated"
+    }
+  ],
+  "new_result": {
+    "classification": "ESSENTIAL_STEP_APPLIED",
+    "statement": "For rank-exactly-three A=U Lambda U^T with exactly one heavy row c>1/2 and d=A_kk!=0, ||p_Q||_infinity <=4 sqrt(2e)(c|d||det Lambda|)^(-1/4). If |d|>=1/4 and |det Lambda|>=1, the bound is <15.69. Essential boundedness only; continuity not proved.",
+    "integrated_fourier_identity": "For the rank-two residual R=Z^T S Z, int |t|^(-1/2)|phi_R(t)|dt <=8sqrt(e pi)|det S|^(-1/4), hence sup_s E|s-R|^(-1/2)<=4sqrt(2e)|det S|^(-1/4).",
+    "partner_application": "Residual |d|<1/4 forces sigma>sqrt(7)/4 and therefore |phi_Q(t)| <=(4 pi sqrt(2)/sqrt(7))^(1/2)|t|^(-1/2).",
+    "canonical_output": {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "46bf287da00dc002c585ea9f280309af81787935",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260922T132111Z-qform-a01-b02-r12/REPORT.md",
+      "blob": "977eb7b76cb42834b21d6ef382f967c6feb502f1"
+    }
+  },
+  "unresolved_implication": "QFORM-UNIQUE-HEAVY-CROSS-CLOSURE-v1: gain the missing additional half-order in the unique-heavy small-diagonal branch while preserving original-coordinate product structure; after that handle at least two heavy rows and arbitrary additional eigendirections.",
+  "next_step": "Seek a mixed Plancherel/Riesz estimate coupling the transverse rank-two frame to the partner random-linear aggregate, rather than conditioning on a conjugate transformed variable.",
+  "full_target_status": "OPEN",
+  "continuity_full_target": "OPEN"
+}

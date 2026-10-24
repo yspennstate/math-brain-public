@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260923T043653Z-account03-B02-qform-r20",
+  "control_commit_initial": "f74c15439aa485a978d3d52b6a23360136445cdc",
+  "control_commit_publication_refresh": "8839f2409b12a2e9183e0e4a30b0599adadfbffd",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "premises": [
+    {
+      "id": "fractional-three-volume-fourier",
+      "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "scope": "Original-coordinate cross block, E3>0, all row three-volume marginals <=q/2, 1<=q<3/2; arbitrary self phases/outside couplings; continuous density bound."
+    },
+    {
+      "id": "plucker-entropy-bl",
+      "source": "yspennstate/math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a:proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260922T123512Z-b07-qform-minors-11/REPORT.md",
+      "scope": "Determinant-weighted alternative basis law with inclusion marginals <=1/2; entropy cost exp(D/2) in BL and disjoint-basis balancing."
+    },
+    {
+      "id": "collective-tail-E3",
+      "source": "yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md",
+      "scope": "E3(M)>=s1(M)^2 s2(M)^2 T2 with T2=sum_{j>=3}s_j(M)^2; supporting cross-block tail certificate."
+    },
+    {
+      "id": "partner-zero-diagonal-triple",
+      "source": "yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7:proofnet24/QFORM-density/fleet-2026-09-22/account04/B02/20260922T193108Z-account04-B02-QFORM-r2/REPORT.md",
+      "scope": "Nonsingular physical principal 3x3 block with a zero diagonal entry; continuous density and integral |phi|^2 <=6pi 2^(2/3)|det B|^(-1/3)."
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-GLOBAL-VOLUME-DISJOINT-ENTROPY-L1-v1",
+    "status": "supporting_theorem_full_target_open",
+    "statement": "For a physical cross block M with Z=E3(M)>0, let w_{R,T}=det(M[R,T])^2/Z, mu its row-triple marginal and delta=P(R cap S=empty) for iid R,S~mu. If delta>0 then |phi_Q(t)|<=min(1,e^(3/2)pi^(3/2)delta^(-1/4)Z^(-1/4)|t|^(-3/2)) and ||p_Q||infinity<=3e delta^(-1/6)Z^(-1/6), with continuous density. Moreover delta=E_R[E3(M[R^c])/E3(M)], so some row triple has residual E3 at most delta E3; in exact rank three this localizes a singular-frame direction with at least 1-delta^(1/3) energy on that triple.",
+    "canonical_source": "yspennstate/math-open-problems@aa76b8c1d3d2e6ef6477500d94220c1d54bff4b8:proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T043653Z-account03-B02-qform-r20/REPORT.md"
+  },
+  "partner_application": {
+    "partner": "account04/B02",
+    "source": "yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7",
+    "derived_inequality": "||p_Q||infinity <=2^(5/3)3^(1/4)e^(3/4) delta^(-1/8) Z^(-1/8)|det B|^(-1/12)<8.845408 delta^(-1/8) Z^(-1/8)|det B|^(-1/12) on the overlap."
+  },
+  "checks": {
+    "source": "yspennstate/math-open-problems@aa76b8c1d3d2e6ef6477500d94220c1d54bff4b8:proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T043653Z-account03-B02-qform-r20/CHECK_OUTPUT.txt",
+    "status": "PASS",
+    "scope": "Finite algebra regression only; symbolic proof is primary."
+  },
+  "unresolved_implication": "QFORM-THREEROW-VOLUME-CONCENTRATION-ROUTING-v1: route E3(M[R^c]) << E3(M), retaining arbitrary self curvature and extra spectrum, to a bounded physical core, mixed-hub/grouped-hyperbolic exit, or another cross block with nontrivial determinant-weighted disjointness, without reciprocal payment to a tiny individual minor.",
+  "full_target_status": "OPEN",
+  "target_wide_unweighted_L1_fourier_status": "OPEN_NOT_REFUTED",
+  "continuity_status": "PROVED_ONLY_ON_THE_NEW_DELTA_POSITIVE_BRANCH",
+  "login_status": "canonical 2026-09-23T04Z/B02 login already belonged to 20260923T040049Z-account03-B02-qform-r19; not overwritten",
+  "state_mutations": "none outside authorized worker-owned mathematical/handoff/memory/run artifacts"
+}

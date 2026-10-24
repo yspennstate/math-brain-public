@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B12",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260923T231212Z-qform-eigenvalue-r43",
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "ebb9416d7ec781fab7ad250c50951f6a803ef7c1",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T231212Z-qform-eigenvalue-r43/REPORT.md",
+  "correction_refresh_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260923T231212Z-qform-eigenvalue-r43/CORRECTION_REFRESH_ADDENDUM.md",
+  "result_ids": [
+    "QFORM-SPECTRAL-PACKET-SCHUR-BUDGET-v1",
+    "QFORM-SPECTRAL-PACKET-SIGNED-COUNTS-v1",
+    "QFORM-SPECTRAL-PACKET-SCALAR-RECEIVER-v1"
+  ],
+  "main_result": "For symmetric A0 and arbitrary symmetric added E with delta_q=s_{q+1}(E), final A=A0+E, and any invertible r-coordinate original physical pivot with Schur complement S, s_k(S)>=max(0,s_{q+r+k}(A0)-delta_q). The q leading added eigenmodes may be arbitrarily large, signed and oriented; the remaining full-rank tail is charged only by delta_q. Positive and negative threshold counts separately lose at most q+r after the same threshold shift.",
+  "proof_mechanism": "spectral truncate E=R+T with rank(R)<=q and ||T||=delta_q; singular-value rank interlacing A0=(A0+R)-R; Weyl for T; exact rank-r latent Schur factorization of final A; no probabilistic separation of X^TEX",
+  "source_matching_not_reclaimed": [
+    "math-open-problems@93d2aedf7856c66f42a4ece7156b773db2589efe already records exact Schur rank-perturbation inheritance with no pre-added packet",
+    "math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc already proves the r=2,k=1 arbitrary-rank physical-pair receiver"
+  ],
+  "partner_result_applied": "account04/B12 r7 @3df1475f988c811570dc5c249a7756d24adb51bf: local sqrt(lambda_6((A_p^2)[H,H]))>=7/4 implies s_6(A_p)>=7/4. After a further arbitrary E with s_4(E)<=1/4, every final scalar pivot leaves s_2(S)>=3/2 and every final invertible pair leaves ||S||>=3/2.",
+  "density_compilation": "Using the completed source two-large-mode half-potential theorem, a final scalar pivot beta gives ||p_Q||ess <=(G2+1)/sqrt(beta(a-delta_q)). Using the completed indefinite-pair receiver gives 3*400^(1/3)[D_B^2*kappa*(a-delta_q)]^(-1/6). Essential boundedness only; no new continuity claim.",
+  "finite_checks": {
+    "profile_tests": 10000,
+    "profile_violations": 0,
+    "minimum_profile_margin": 0.08072169893144793,
+    "sign_tests": 5000,
+    "sign_violations": 0,
+    "minimum_sign_integer_slack": 0,
+    "status": "sanity checks only"
+  },
+  "latest_control_observed": {
+    "prepublication_main": "c4445ef9c24eb6bc5de33dd21fe2720998e4ca4f",
+    "owner_control_revision": "2026-09-22.15",
+    "programme_revision": "2026-09-22.5",
+    "later_owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+    "scope_change": "none; QFORM remains sole target"
+  },
+  "newer_corrections_consumed": [
+    "QFORM-RANK1-SAMEBANK-HALFRIESZ-FALSE-v1 @33836fccce9b2f9cbf625f8cb9b1ead8a8d4b4a8; no conflict because r43 half-Riesz is invoked only after two residual singular values are proved",
+    "QFORM-B01-COMPOUND-ALTERNATIVES-NOT-EXCLUSIVE-v1 @f2cf1b956023e808a060560ea478d25df136c1f3; unrelated wording correction"
+  ],
+  "unresolved_implication": "The bare three-mode target still lacks reserve after q+r modes are spent. When exactly three final large modes remain and all quantitative physical pivots are small, need a product-preserving diffuse/grouped/ridge/projected-crossing carrier; r43 cannot manufacture extra reserve modes.",
+  "next_mechanism": "QFORM-SPECTRAL-PACKET-TO-DIFFUSE-CARRIER-v1; change mechanism away from the r40-r42 common-plane tail loop",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "FULL_TARGET_CONTINUITY_OPEN; no general continuity claim in r43",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

@@ -1,0 +1,16 @@
+{
+  "helper_version": "A097-negative-cell-floor-v1 independent signed Walsh and physical-edge checker",
+  "family": "negative full-point edit of g=1-2 AND_a with b dummy bits under r fresh point controls",
+  "domain": "a=1..4,b=0..3,r=1..3; negative active cell at zero, all labelled dummy edit points",
+  "case_count": 180,
+  "reference_cases": "three normalized references per root: exact source spectrum, uniform all-data reference, increasing rational weights; 540 cases",
+  "symmetry": "active negative point/control point fixed by physical sign translations; all dummy points explicitly tested; no arbitrary-function quotient",
+  "arithmetic": "integer FWHT and independent physical edges; Fraction mixture/ref normalizers/posterior likelihood identities; outward32-term atanh logarithms to2^-90",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds_per_job": 60,
+  "internal_cutoff_seconds": 55,
+  "maximum_truth_table_dimension": 10,
+  "jobs": ["pilot a1..2,b0..1,r1..2 (12 roots)", "full domain split by active width; one sequential job per a"],
+  "automatic_dimension_escalation": false,
+  "tensor_domain": "a2,b1,r1 negative edit at zero; all sixteen labelled two-bit terminal signs, three normalized terminal refs, three source refs;144 reference cases; maxdimension6"
+}

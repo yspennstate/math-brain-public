@@ -1,0 +1,43 @@
+[
+  {
+    "claim_id": "A025-THREE-CORE-DATA-RELEASE-PRICE-NOGO",
+    "version": 1,
+    "exact_statement": "For every even m>=4, let b(y)=(-1)^(y0*y1+...+y_(m-2)*y_(m-1)), let z be an independent balancing sign, x a fair data bit, and v=0,w=e0. On the same data cube take g0=z b, g1=z b[1-2*1_(y=v)*1_(x=0)], g2=z b[1-2*1_(y=w)*1_(x=0)]. Two fresh fair point selectors form F=g0+A[g1+B(g2-g1)-g0], with original terminal probabilities (1/2,1/4,1/4). At the mixed query x, d=Inf_x(F)=2^-m/2, symmetric bank R_star=2 sum_(j<k)pi_j pi_k I(gj*gk) releases exactly 3d/2, and true erasure B_x/d>=3/2+m/4. Hence actual entropy decrement D_x satisfies (D_x-lambda*release)/d>=m/4+(3/2)(1-lambda). For every finite K,lambda>=0, an even m>4K+6(lambda-1) refutes the proposed local rule D_x<=K d+lambda release without inherited child surplus. Common point activation of all three cores by width t scales d,release,B_x,D_x by2^-t; t=m gives actual rare signs in dimension2m+4 with I->0 and minority probability2^(-m-1). F has H<3I, activated families H<6I. The remaining bank is positive, all terminal entropy retained, and the result refutes neither conservation nor a selected global stopping route or FEI.",
+    "hypotheses": [
+      "Actual uniform Boolean signs, bit entropy and physical reaches",
+      "Three distinct nonconstant shared-data cores; fresh independent two-bit nested point selectors",
+      "Query x while both selectors remain unresolved; pi=(1/2,1/4,1/4) stays fixed through this data query",
+      "False local rule permits queried influence and release of a fixed symmetric bank only, with no inherited child/terminal surplus",
+      "Common rare activation is part of each of the same three data cores; new activation-direction capacities remain in both x children"
+    ],
+    "statement_sha256": "d172473613bece7a113dd9273622ff6ad976cca2edc33b3bf135ec3d4fe280f8",
+    "contributors": [
+      "A025/account05"
+    ],
+    "proof_source": {
+      "run_id": "20261014T062819Z-account05-A025-rare-event-counterfamily",
+      "proof": "PROOF.md",
+      "source_bank_reconstruction": "REVIEW_A029.md",
+      "exact_certificates": "out/RESULTS.json",
+      "independent_replay": "out/REPLAY_RESULTS.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_AT_STATED_SCOPE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Explicit local mixed-data rule D_i<=K Inf_i+lambda released_R_star for all finite K,lambda>=0 without an additional inherited child surplus; no existing indexed source theorem refuted"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "Claude B05",
+      "A023",
+      "A028",
+      "A029",
+      "A027",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  }
+]

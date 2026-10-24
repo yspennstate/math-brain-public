@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B16",
+  "run_id": "20260922T163840Z-account02-B16-qform-r13",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.7",
+  "source_control_commit_prewrite": "01686147838502919c0555d470566010ab6dcbb3",
+  "status": "PROVED_SUPPORTING_THEOREM_FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "assignment": "Projection-product interaction",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "account": "account03",
+    "slot": "B16",
+    "run_id": "20260922T150329Z-account03-B16-qform-r12",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "aee79a848b8d1a5ee1187ce01056b31de32f9505",
+    "report_blob": "23cee7df2597df3700859473cc51de2b809b477f",
+    "scope_used": "conditional-product L3 theorem and L3-to-dependent-square smoothing for the null heavy-row specialization"
+  },
+  "additional_completed_dependency": {
+    "account": "account01",
+    "slot": "B16",
+    "run_id": "account01-B16-20260922T161036Z-r11",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "40b2fb6ac12a8860860b157327f98f90ecd48a34",
+    "report_blob": "fa3139413a09562d7c89cd76e76e4f517f137a48",
+    "scope_used": "normalized one-dimensional projection density cap sqrt(2) and translated independent-bank square smoothing"
+  },
+  "prior_self_dependency": {
+    "run_id": "20260922T153609Z-account02-B16-QFORM-auto11",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "85c527c3172670ca9e6200138e1364be554413ac",
+    "report_blob": "e919e8c6811b687ad32a6e73a7c32962248ccac0",
+    "scope_used": "binary indefinite Frostman interval concentration and inverse-square-root potential"
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-TRIANGULAR-INDEFINITE-FROSTMAN-v1",
+      "status": "PROVED",
+      "scope": "binary nondegenerate indefinite quadratic polynomial when the slicing variable has marginal density cap K2 and the other coordinate has conditional density cap K1; independence not required"
+    },
+    {
+      "id": "QFORM-HEAVY-ROW-PROJECTED-RANK2-RIESZ-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "scope": "arbitrary rank-two orthonormal projection of independent cap-one inputs, arbitrary translation, invertible indefinite 2x2 quadratic form, with one physical projection row of positive leverage"
+    }
+  ],
+  "main_bound": "sup_t E|t-Y^T S Y|^(-1/2) <= 2^(1/4) C_ind ell_i^(-1/4)|det S|^(-1/4), C_ind=8*3^(3/4)*5^(1/4)/sqrt(e)",
+  "eta_1_over_32_constant": 46.78118102154024,
+  "translated_disjoint_square_constant_at_eta_1_over_32": 66.15858066449306,
+  "null_row_partner_constant_at_eta_1_over_32": 22.62741699796952,
+  "math_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d2e3dd1587a3fa93707631ea847c48279f3dc6dc",
+    "report_blob": "55a73f1235309d4a24075509392298d769fc1c55",
+    "checker_blob": "c94b33f27eb2760ee916178af087de5513edee84",
+    "checker_output_blob": "949d3fdc307ab243b14bec8cbc3c3af3738c9ce2"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B16/20260922T163840Z-account02-B16-qform-r13.md",
+  "unresolved_implication": "Prove an overlap-safe square smoother or innovation-extraction theorem for a generic rank-three frame, where the final square direction reuses physical coordinates from the rank-two residual; then synthesize the low-leverage branch with the ridge-window theorem while retaining arbitrary additional spectral components.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "NOT_PROVED"
+}

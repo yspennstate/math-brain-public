@@ -1,0 +1,63 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w350",
+  "bundle_slug": "p0017-weighted-surrogate-obstruction-w350-003",
+  "entries": [
+    {
+      "key": "exponential-prior-bound",
+      "namespace": "probability.core",
+      "logical_name": "exponential-prior-poincare-bound-half-line-sobolev-draft",
+      "kind": "concept",
+      "title": "Exponential prior Poincare bound: explicit draft calculation",
+      "statement": "AUTHOR PROOF DRAFT; independent review pending. The rate-one exponential law, and its centered translate Exp(1)-1, have C_P<=4. For centered h use g=h exp(-y/2), integrate by parts on the half-line and use g(0)^2<=integral g_prime^2 from the centering constraint. The complete boundary and Sobolev calculation is in OPERATOR_WEIGHTED_COUNTEREXAMPLE.md section 1. No novelty is claimed.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite variance and finite weighted derivative energy; other cases follow by the extended-energy interpretation"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-w350-20261010:weighted-surrogate-counterexample",
+        "url": "urn:owner-probability-campaign:P0017:w350:weighted-surrogate-counterexample",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; written derivation; independent review requested from w353",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "weighted-surrogate-counterexample",
+      "namespace": "probability.core",
+      "logical_name": "variance-weighted-posterior-operator-norm-surrogate-counterexample-draft",
+      "kind": "concept",
+      "title": "Draft obstruction to a variance-weighted posterior covariance surrogate",
+      "statement": "AUTHOR COUNTEREXAMPLE DRAFT; independent review pending. In dimension one, no universal T>0 and finite K bound B_mu(t,f)=E[A_t Var(f(X)|Y_t)]/E Var(f(X)|Y_t) for all compact isotropic log-concave priors, all fixed smooth f and almost every t in (0,T), where Y_t=tX+sqrt(t)G and A_t=Var(X|Y_t). For the original prior X=Exp(1)-1 and f_c=exp(cx), B_mu(t,f_c) tends to 1/t as c increases to 1/2. Under the f_c^2 weighting used in the proof, A_t is still the ORIGINAL prior posterior variance. Truncation and whitening transfer a strict violation to compact priors and a time interval. This challenges the stronger operator-norm surrogate only; the actual estimate E|Cov_mu_t(f,X)|^2<=K E Var_mu_t(f) remains a separate unproved input. The full derivation and limit domination are in OPERATOR_WEIGHTED_COUNTEREXAMPLE.md. No parent solution or novelty claim is made.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent standard Gaussian observation noise",
+        "The counterexample concerns the stronger operator-norm variance-weighted estimate, not the actual covariance estimate (W)",
+        "The compact transfer uses recentering, whitening and smooth tests agreeing with the exponential on compact prior support"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-w350-20261010:weighted-surrogate-counterexample",
+        "url": "urn:owner-probability-campaign:P0017:w350:weighted-surrogate-counterexample",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; written derivation; independent review requested from w353",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "weighted-surrogate-counterexample",
+      "to_key": "exponential-prior-bound",
+      "kind": "depends_on",
+      "rationale": "The denominator is bounded below using the C_P<=4 special case and the Gaussian retention bridge."
+    },
+    {
+      "from_key": "weighted-surrogate-counterexample",
+      "to_existing_logical": "math:probability.core:open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
+      "kind": "semantic_association",
+      "rationale": "The counterargument concerns an attempted sufficient surrogate input, and does not refute or solve the parent statement."
+    }
+  ]
+}

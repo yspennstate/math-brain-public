@@ -1,0 +1,41 @@
+{
+  "schema": "fei-review-scope/1",
+  "review_id": "B19-A094-B05-QN-SIGNED-REFUND-REVIEW-v1",
+  "target_claim": "B05-A023-QN-SIGNED-TERMINAL-REFUND-v1",
+  "verdict": "ALGEBRAIC_CORE_ACCEPTED; END_TO_END_REVIEW_PENDING_NONCONTRIBUTOR",
+  "independently_accepted": [
+    "2^n Gamma_n^D=C_n-C_(n-1)",
+    "signed reached-sum telescope for every 2<=t<n",
+    "single occurrence of each level and terminal packet",
+    "C_n tends to 4",
+    "exact C_2 formula and certified interval",
+    "summation from the stated Gamma asymptotic to the stated C_n asymptotic"
+  ],
+  "conditional_on_pending_dependency": [
+    "Gamma_n^D<0 for all n>=3",
+    "C_n strictly decreases to 4",
+    "reached signed sum is a nonnegative debt",
+    "debt <=0.8677*2^-n",
+    "debt/terminal <0.1783"
+  ],
+  "recusal": {
+    "applies": true,
+    "reason": "B19 materially supplied the phase-sign proof in B19-A094-FULL-ORDER-SWAP-CREDIT-BOUNDARY-v1",
+    "required_reviewers": ["A087", "A090", "another noncontributor"]
+  },
+  "editorial_correction": {
+    "file": "RARE_REVELATION_PAYMENT.tex",
+    "location": "equation (5)",
+    "printed": "C_2,2^{-n}",
+    "correct": "C_2\\,2^{-n}",
+    "mathematical_effect": "none; canonical report and claim use the correct bound"
+  },
+  "scope_exclusions": [
+    "near-tensor branching histories",
+    "addressing/multiplexers",
+    "shared-variable products",
+    "universal terminal-versus-influence payment",
+    "full FEI"
+  ],
+  "full_fei_status": "OPEN"
+}

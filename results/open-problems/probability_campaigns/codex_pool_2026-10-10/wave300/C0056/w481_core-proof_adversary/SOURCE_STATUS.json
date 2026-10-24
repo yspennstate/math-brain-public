@@ -1,0 +1,82 @@
+{
+  "worker": "w481",
+  "target": "C0056",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "parent_problem_solved": false,
+  "ranking": {
+    "date": "2026-09-07",
+    "tier": 5,
+    "historical_status": "attempted_un",
+    "locator": "RANKING_2026-09-07.csv:543"
+  },
+  "intake": {
+    "file": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 56,
+    "source_id": "bourgade_band_icm_2018",
+    "statement": "Prove existence of absolutely continuous spectrum (delocalised states) for the random Schrodinger operator -Delta + lambda V on Z^3 at small disorder lambda, and GOE local statistics for its finite-volume restriction.",
+    "prior_verification": "unreviewed; current_status unverified"
+  },
+  "primary_source": {
+    "title": "Paul Bourgade, Random band matrices, ICM 2018",
+    "url": "https://math.nyu.edu/~bourgade/papers/ICMProceedings.pdf",
+    "arxiv": "https://arxiv.org/abs/1807.03031",
+    "locator": "Section 2.1, printed page 7",
+    "read_scope": "Model and Anderson/finite-volume discussion in Section 2.1 only",
+    "model": "Adjacency hopping with spectrum [-2d,2d], iid centered potentials with variance 1, disorder lambda>0; periodic finite-volume boxes and microscopic eigenvalue scaling by volume.",
+    "short_quote": "there is no clear understanding about how extended states imply GOE spectral statistics",
+    "scope_correction": "The intake contains two goals. Absolute continuity alone does not settle GOE. The source is a survey discussion, without a fully quantified universal potential-law hypothesis.",
+    "intake_recorded_pdf_sha256": "b8b15c02ac7b675471097e9c499a6d588cfd7b0c591c49b0135f2a42eaedddb0",
+    "hash_status": "Recorded intake hash, not reverified against a new local download. No mathematical proof status follows from it."
+  },
+  "working_spectral_statement": {
+    "operator": "H_lambda=-A+lambda V on l2(Z3), nearest-neighbor adjacency A, iid V uniform[-1,1].",
+    "goal": "There exist a deterministic nonempty open J inside (-6,6) and lambda0>0 such that for each fixed 0<lambda<lambda0, almost surely chi_J(H_lambda) is nonzero and its range is absolutely continuous.",
+    "normalization": "This uniform law has variance 1/3. The source's variance-one convention is W=sqrt(3)V and lambda_working=sqrt(3)lambda_source. Hopping signs are unitarily equivalent on Z3.",
+    "scope": "Uniform-law spectral subproblem only; no GOE or all-laws claim."
+  },
+  "recent_primary_claim": {
+    "title": "Absolutely Continuous Spectrum for Weak-Disorder Anderson Models in Dimensions at Least Three",
+    "date": "2026-09-23",
+    "url": "https://github.com/openai/math/tree/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026",
+    "statement_url": "https://raw.githubusercontent.com/openai/math/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/build/01-introduction.tex",
+    "locator": "Main theorem, lines 30-59 as accessed",
+    "reported_scope": "For iid uniform[-1,1], every fixed sufficiently small coupling and fixed d>=3, pure AC and nonzero spectral weight on a fixed interval. The reported d=3 interval is (-6+e2/2,-6+e2), 0<e2<1/100.",
+    "proof_verification": "Full proof not audited. The statement and part of the spectral conversion were read; neither certifies the full result.",
+    "goe_claim": false,
+    "owner_solved_retired_match": "Not established. Do not infer owner attribution or target retirement from repository authorship."
+  },
+  "prior_work": {
+    "C0056_A001": "Exact attempt row read: tree recursion does not close on Z3; finite kinetic-time estimates are not the fixed-disorder boundary limit.",
+    "intakes_D_through_I": "Scoped C0056 search found only dedup/title references beyond the original intake.",
+    "attempts_H_and_I": "No C0056 hit in the scoped text/JSON search.",
+    "lean": "No filename containing 0056 found; no generic project or proof bank read.",
+    "team_O": "No C0056 holder listed on the board.",
+    "store": "Read-only query completed; 2 relevant Anderson nodes found, plus one unrelated C0056 metadata collision. See STORE_TARGET_CHECK.json. The store records are not a proof or retirement certificate."
+  },
+  "memory": {
+    "recall": "Timed out after 55 seconds. Targeted index fallback had no match; named scars read directly.",
+    "slugs": [
+      "perceptron_proof_open_gaps_fleet_2026_07_12",
+      "proof_steps_need_derived_joint_structure_2026_09_09"
+    ]
+  },
+  "provenance": {
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "max",
+    "requested_service_tier": "Fast",
+    "served_model": "UNKNOWN",
+    "served_reasoning": "UNKNOWN",
+    "served_service_tier": "UNKNOWN",
+    "response_side_evidence": null,
+    "promotion_gate": "Author/referee response-side identity evidence and independent review remain required."
+  },
+  "submission": {
+    "submitted": true,
+    "draft_path": "~\\math-brain-inbox\\w481\\bundle_001.json",
+    "reviewed": false,
+    "ingested": false,
+    "retrievable": false,
+    "note": "Staged DRAFT only. Independent mathematical and provenance gates remain pending; worker did not run the live integrator."
+  }
+}

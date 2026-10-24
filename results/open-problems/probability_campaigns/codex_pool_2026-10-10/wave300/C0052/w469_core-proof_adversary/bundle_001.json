@@ -1,0 +1,174 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w469",
+  "bundle_slug": "c0052-current-law-and-nongaussianity-audit-w469",
+  "entries": [
+    {
+      "key": "corridor",
+      "namespace": "probability.statmech",
+      "logical_name": "independent-connected-path-large-mean-small-intersection",
+      "kind": "concept",
+      "title": "Large expected overlap does not force intersection",
+      "statement": "DRAFT; independent mathematical review pending. Two independent connected paths with specified pairs of endpoints can have E I=N tending to infinity while P(I>0)=1/N tends to zero, where I counts their common vertices. In the explicit corridor construction E I=N, E I^2=N^3, P(I>0)=1/N; the graph can have maximum degree three.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent uniform corridor labels J,K in {1,...,N}",
+        "L=N^2 common vertices in each disjoint corridor",
+        "Four distinct source endpoints; only equal labels cause intersection"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-proofswarm-w469:corridor",
+        "url": "local:brain_workers/w469/INDEPENDENT.md",
+        "revision": "campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "limit",
+      "namespace": "probability.statmech",
+      "logical_name": "uniform-fourth-moment-deficit-nongaussian-weak-limit",
+      "kind": "concept",
+      "title": "A fourth-moment deficit survives weak convergence",
+      "statement": "DRAFT; independent mathematical review pending. If centered real X_n have E X_n^2=1 and E X_n^4<=3-delta for fixed delta>0, every weak subsequential limit is centered, has variance one and fourth moment at most 3-delta, and is non-Gaussian. Fourth-moment equality under the limit is unnecessary; second-moment uniform integrability and a truncated fourth-moment bound suffice.",
+      "proof_text": null,
+      "assumptions": [
+        "Centered real random variables",
+        "Variance one for every n",
+        "Uniform positive fourth-moment deficit",
+        "Scalar weak subsequential convergence"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-proofswarm-w469:limit",
+        "url": "local:brain_workers/w469/INDEPENDENT.md",
+        "revision": "campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "weighted",
+      "namespace": "probability.statmech",
+      "logical_name": "ising-original-current-weighted-fourth-moment-criterion",
+      "kind": "concept",
+      "title": "The original-current weighted fourth-moment criterion",
+      "statement": "DRAFT; independent mathematical review pending. For a finite free-boundary zero-field ferromagnetic Ising model and weights f_x>=0, let V=E(sum f_x sigma_x)^2>0. Under Q_f(x1,...,x4)=f1 f2 f3 f4 G12 G34/V^2, E X_f^4=3-2 E_Q p, where p is connection of x1 to x3 in the original union of two currents with parity source pairs 12 and 34. A uniform positive E_Q p gives a scalar fourth-moment deficit. Its 3D lower bound remains unproved.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite graph, zero field, nonnegative couplings, free boundary",
+        "Nonnegative nonzero weights",
+        "Source sets are modulo two",
+        "Define p arbitrarily, e.g. zero, on zero-Q tuples with unsupported sources"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-proofswarm-w469:weighted",
+        "url": "local:brain_workers/w469/ATTEMPT.md",
+        "revision": "campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "nonlinear",
+      "namespace": "probability.statmech",
+      "logical_name": "finite-tree-original-augmented-current-quadratic-comparison",
+      "kind": "concept",
+      "title": "A quadratic current comparison on finite trees",
+      "statement": "DRAFT; independent mathematical review pending. For finite ferromagnetic trees at zero field and free boundary, original two-source-current connection q and meeting r of the independently sourceless-augmented source components satisfy q >= (e/4) r^2. The constant is asymptotically sharp among paths. This rules out treating failure of a linear comparison as failure of every quantitative transfer; the full cyclic Z^3 case remains unproved.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite connected tree",
+        "Source-pair current measures exist",
+        "Four independent currents with source pairs ab,cd,empty,empty",
+        "No cyclic-graph transfer"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-proofswarm-w469:nonlinear",
+        "url": "local:brain_workers/w469/TREE_NONLINEAR.md",
+        "revision": "campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-criterion",
+      "namespace": "probability.statmech",
+      "logical_name": "ising-three-dimensional-nontriviality-source-quantifiers",
+      "kind": "concept",
+      "title": "C0052 source quantifiers and normalization",
+      "statement": "DRAFT; independent mathematical review pending. The original source definition asks g(beta) not to tend to zero; it is equivalent to a nonzero limsup of -g, not by definition to an infimum over every scale and unspecified source placement of a current intersection probability. For zero-field nearest-neighbor Ising on Z^3, g=sum U4(0,x2,x3,x4)/(chi^2 xi^3)<=0, with xi the exponential correlation length. The original goal is a sequence beta_n increasing to beta_c with -g(beta_n)>=epsilon>0; uniqueness or all-subsequence non-Gaussianity is not supplied by this definition.",
+      "proof_text": null,
+      "assumptions": [
+        "g as in Duminil-Copin equations (7.1)-(7.2)",
+        "g<=0",
+        "No theorem equating unspecified pointwise and integrated criteria is assumed"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-proofswarm-w469:source-criterion",
+        "url": "local:brain_workers/w469/SOURCE_STATUS.json",
+        "revision": "campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "cycle-law",
+      "namespace": "probability.statmech",
+      "logical_name": "sourceless-cycle-current-parity-mixture-dependence",
+      "kind": "concept",
+      "title": "Cycle parity blocks tree edge independence",
+      "statement": "DRAFT; independent mathematical review pending. For a sourceless random current on a uniform four-edge cycle at t>0, the odd-edge indicators are all the same Bernoulli variable of parameter h=tanh(t)^4/(1+tanh(t)^4). Hence E[B_e B_f]=h>h^2=E B_e E B_f for distinct edges; conditioning on the source set alone does not give independent edge values. The finite-tree comparison q>=e*r^2/4 therefore requires a new dependence argument before any extension to the full critical Z^3 lattice.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite four-cycle, zero field, free boundary",
+        "Positive uniform parameter t",
+        "One current with empty parity source set"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-proofswarm-w469:cycle-law",
+        "url": "local:brain_workers/w469/CYCLE_OBSTRUCTION.md",
+        "revision": "campaign-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "weighted",
+      "to_key": "limit",
+      "kind": "depends_on",
+      "rationale": "The weighted criterion yields E X^4=3-2 E_Q p; the weak-limit lemma turns a uniform deficit into non-Gaussianity."
+    },
+    {
+      "from_key": "weighted",
+      "to_key": "corridor",
+      "kind": "cites",
+      "rationale": "The corridor example supplies E I=N but P(I>0)=1/N, showing why an expected-count lower bound alone cannot prove the required E_Q p floor."
+    },
+    {
+      "from_key": "nonlinear",
+      "to_key": "weighted",
+      "kind": "analogous_to",
+      "rationale": "The finite-tree q>=e*r^2/4 comparison addresses transferring an augmented meeting lower bound to original-current connection; no cyclic-lattice transfer is claimed."
+    },
+    {
+      "from_key": "source-criterion",
+      "to_existing_logical": "math:probability.statmech:ising-3d-nontriviality-reduces-to-current-intersection-lower-bound",
+      "kind": "cites",
+      "rationale": "Existing unverified card asserts equivalence to inf over scales L. This draft records the source nonzero-limsup criterion, exact normalization, and the missing endpoint/cutoff argument."
+    },
+    {
+      "from_key": "cycle-law",
+      "to_key": "nonlinear",
+      "kind": "cites",
+      "rationale": "The nonlinear entry requires a finite tree, where sources fix each edge parity. The cycle entry exhibits a shared parity bit with E[B_e B_f]=h rather than h^2, documenting why that factorization cannot extend unchanged."
+    }
+  ]
+}

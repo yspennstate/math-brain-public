@@ -1,0 +1,47 @@
+{
+  "arithmetic": "Exact integer forest counts; reduced-Laplacian inversion modulo 1,000,000,007 is exact because every induced spanning-tree count <= tau(K9)=4,782,969 < modulus; final Rayleigh numerators use signed 128-bit integers.",
+  "baseline_relation": "Grimmett-Winkler Theorem 1.5 already certifies all n=9 graphs with <=18 edges; this exact dense certificate covers the complementary 19..36 edge sector. Thus all simple n=9 graphs are covered mathematically, while the new computational contribution is only the dense sector.",
+  "claim_id": "HARD10-N9-DENSE-UNIT-PAIR-20260916-01",
+  "compiler": "g++ -O3 -std=c++17 -fopenmp -Wall -Wextra -pedantic",
+  "coverage": {
+    "complement_histogram_symmetry": "PASS",
+    "dense_classes_19_36": 120314,
+    "dense_pair_checks": 25304635,
+    "edge_histogram": [1,1,2,5,11,25,63,148,345,771,1637,3252,5995,10120,15615,21933,27987,32403,34040,32403,27987,21933,15615,10120,5995,3252,1637,771,345,148,63,25,11,5,2,1,1],
+    "n7_base_classes": 1044,
+    "n8_canonical_classes": 12346,
+    "n8_raw_extensions": 133632,
+    "n9_burnside_target": 274668,
+    "n9_canonical_classes": 274668,
+    "n9_raw_extensions": 3160576,
+    "negative_gaps": 0,
+    "zero_gaps": 177482
+  },
+  "elapsed_seconds_reported": 19.15,
+  "enumeration": "Complete canonical augmentation from all 1044 NetworkX graph-atlas n=7 classes, with exact canonical coding and independent Burnside U9=274668 count. Direct nauty/geng binary was unavailable in this runtime; this is not falsely labeled as nauty execution.",
+  "extrema": {
+    "max_forest_count": 10026505,
+    "max_forest_graph6": "H~~~~~~",
+    "max_gap": 946567157600,
+    "max_gap_edge_indices": [0,1],
+    "max_gap_graph6": "H~~~~~~",
+    "min_positive_edge_indices": [0,1],
+    "min_positive_gap": 4464,
+    "min_positive_graph6": "HGC[~Nf"
+  },
+  "files": {
+    "atlas7_codes": {"local_name":"atlas7_codes.txt","sha256":"0fa67599d3960dbd42549d8599c5d104b7aaff774d4e801b379ec21c3345b232"},
+    "atlas7_generator": {"local_name":"gen_atlas7_codes.py","sha256":"357d0141cb6ce2cad83dd3ec05074f80c78dad060b30731ca7532d1a84c15811"},
+    "checker_source": {"local_name":"HARD10_n9_dense_checker.cpp","sha256":"b0fb71ac7e0ddc5c062f4229e1bde61bfbf742246106c9e550e6c1418c6cb811"},
+    "checker_stderr": {"local_name":"HARD10_n9_dense_checker.err","sha256":"0af228dea1f21bd8fe7f8ea890a0bb110914d8314c6c7a3beb7025bc0f7af1d9"},
+    "checker_stdout": {"local_name":"HARD10_n9_dense_checker.out","sha256":"bc9137f5957a6192ab54ebd54e751aa8ac021c5f8721b22b1188504eb92972bb"},
+    "k9_check_output": {"local_name":"HARD10_k9_independent_check.out","sha256":"d7d84d47a8661beabaf5c181f4e4b9adf9fe834c8e1ebf391b309fc1d79ac68f"},
+    "k9_check_source": {"local_name":"HARD10_k9_independent_check.py","sha256":"e421bc0233213cdc407efed97f3f792f6924421c19325ae4043124aeb95ad5ac"}
+  },
+  "independent_K9_check": {"Delta_adjacent":946567157600,"Delta_disjoint":42677731850,"Z":10026505,"Ze":2022555,"Zef_adjacent":313585,"Zef_disjoint":403735},
+  "p14_coordination": "P14 completed repository n=8 and named full n=9 as its next obligation. HARD10-01 intentionally checked only the previously unresolved dense n=9 sector 19..36, avoiding duplication of P14 completed n=8 work.",
+  "scope": {"edge_count_max":36,"edge_count_min":19,"edge_pairs":"all distinct present pairs","simple_graphs":true,"vertices":9,"weights":"unit"},
+  "source_target": "Grimmett-Winkler 2003/2004 Conjecture 1.1, uniform-forest half; unweighted pairwise edge negative correlation",
+  "status": "PASS",
+  "threads": 5
+}

@@ -1,0 +1,67 @@
+{
+  "exact_assertions": 164,
+  "young_loss": "13057/524288",
+  "scope": "Exact determinant checks; high-precision finite eigenvalues are diagnostics, not a universal sign proof.",
+  "full_hessian_cases": [
+    {
+      "name": "rational_asymmetric",
+      "a": "1/101",
+      "v1": "1/32",
+      "v2": "1/64",
+      "raw_frobenius_gap": "25/85572190208",
+      "scaled_slack_min_eigenvalue": "0.750001393978662869693983689574",
+      "scaled_slack_max_eigenvalue": "121.381684642091905246571231186",
+      "precision_decimal_digits": 150
+    },
+    {
+      "name": "near_radius",
+      "a": "1/10",
+      "v1": "1/12",
+      "v2": "1/12",
+      "raw_frobenius_gap": "1/1843200",
+      "scaled_slack_min_eigenvalue": "0.750124583032099441998509841266",
+      "scaled_slack_max_eigenvalue": "121.299780968302546956014069812",
+      "precision_decimal_digits": 150
+    },
+    {
+      "name": "rare_center",
+      "a": "1/1000000000000000001",
+      "v1": "1/32",
+      "v2": "1/64",
+      "raw_frobenius_gap": "3814697265625/128000000000000000256000000000000000128",
+      "scaled_slack_min_eigenvalue": "0.750001404334756108607856227072",
+      "scaled_slack_max_eigenvalue": "121.384355071216010414994232861",
+      "precision_decimal_digits": 150
+    },
+    {
+      "name": "rare_and_unbalanced",
+      "a": "1/1000001",
+      "v1": "1/100",
+      "v2": "1/1000000000000",
+      "raw_frobenius_gap": "1/80000160000080000000000000000000000",
+      "scaled_slack_min_eigenvalue": "0.750000013847591813075326932531",
+      "scaled_slack_max_eigenvalue": "121.268234729130466808480558594",
+      "precision_decimal_digits": 150
+    },
+    {
+      "name": "reverse_unbalanced",
+      "a": "1/1000001",
+      "v1": "1/1000000000000",
+      "v2": "1/100",
+      "raw_frobenius_gap": "1/80000160000080000000000000000000000",
+      "scaled_slack_min_eigenvalue": "0.75000001384469611188210350805",
+      "scaled_slack_max_eigenvalue": "121.231784797595041053536199503",
+      "precision_decimal_digits": 150
+    },
+    {
+      "name": "near_one",
+      "a": "1000000000000000000/1000000000000000001",
+      "v1": "1/32",
+      "v2": "1/64",
+      "raw_frobenius_gap": "3814697265625/128000000000000000256000000000000000128",
+      "scaled_slack_min_eigenvalue": "0.750001401680032636691005423365",
+      "scaled_slack_max_eigenvalue": "121.117384564287585666497817912",
+      "precision_decimal_digits": 150
+    }
+  ]
+}

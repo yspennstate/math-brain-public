@@ -1,0 +1,2 @@
+STATE: Stage7 saved: full-span affine-minimal Boolean path codes refute singleton-only pair collision bound; exact child exclusion;84247 predicates PASS; A051 reviewed; FEI OPEN.
+NEXT: Use actual physical-child eligibility quantitatively to bound a selected pair signed interaction relative to the SAME unused D+S_pair bank, retaining all terminals and A055 mixed T; affine minimum-basis inequalities alone cannot remove orientation.

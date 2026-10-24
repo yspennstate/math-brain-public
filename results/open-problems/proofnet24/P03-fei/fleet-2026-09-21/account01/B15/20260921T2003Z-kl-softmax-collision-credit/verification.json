@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "random_trials": 10000,
+  "random_seed": 20260921,
+  "worst_identity_error": 5.995204332975845e-15,
+  "checks": [
+    "collision = KL/2 + softmax residual",
+    "softmax residual nonnegative",
+    "softmax residual <= raw collision",
+    "remote-gap displayed split"
+  ],
+  "remote_gap_rows": [
+    {"k": 2, "raw": 0.5, "kl_part": 0.2262349610210055, "softmax_residual": 0.2737650389789945},
+    {"k": 4, "raw": 1.0, "kl_part": 0.5564803281465223, "softmax_residual": 0.44351967185347774},
+    {"k": 8, "raw": 2.0, "kl_part": 1.1167658160117715, "softmax_residual": 0.8832341839882286},
+    {"k": 16, "raw": 4.0, "kl_part": 2.1249372764907593, "softmax_residual": 1.8750627235092405},
+    {"k": 32, "raw": 8.0, "kl_part": 4.124999998111587, "softmax_residual": 3.8750000018884134}
+  ],
+  "scope": "finite numerical sanity checks only; universal statements are proved analytically in REPORT.md and VARIATIONAL_ADDENDUM.md"
+}

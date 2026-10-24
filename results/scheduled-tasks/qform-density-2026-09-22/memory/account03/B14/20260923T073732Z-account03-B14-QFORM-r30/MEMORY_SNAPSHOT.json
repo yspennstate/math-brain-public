@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260923T073732Z-account03-B14-QFORM-r30",
+  "status": "PROVED_SUPPORTING_THEOREM_FULL_QFORM_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "control_commit_start": "93d5e64cab69d47a00eb4fd140862a55c7930cc1",
+  "control_commit_prepublication": "e662b45c1964ab30736e22d27a1d3f9d1463d5b1",
+  "control_revision": "2026-09-22.15",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1",
+      "source": "yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md",
+      "scope_used": "invertible indefinite original-coordinate pair; random pair translations may depend on the same remainder variables; remainder small-ball H sqrt(rho) implies density <=4sqrt(2H)(|det B| sigma_min(B))^(-1/4)"
+    },
+    {
+      "id": "QFORM-RANK1-AFFINE-SMALLBALL",
+      "source": "same pair-log proof, Section 7 / source dependency e542b1a6ef471b329e4e88a6553e1aacb45acc1a",
+      "scope_used": "rank-one quadratic plus arbitrary affine term on independent cap-one original coordinates has concentration <=10 sqrt(rho/|lambda|)"
+    },
+    {
+      "id": "QFORM-AFFINE-FAMILY-LOCALIZATION-COMPILER",
+      "source": "yspennstate/math-open-problems@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee:proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260923T001323Z-account04-B14-affine-mixture-compiler-r5/REPORT.md",
+      "scope_used": "uniform active-block interval inequality transfers from compact finite-fragment indicator products to arbitrary cap-one product laws with no constant loss, leaving outside laws untouched"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-DISJOINT-SCHUR-BANK-LOCALIZATION-v1",
+    "statement": "If a fixed original-coordinate pair block B is invertible indefinite and a disjoint bank principal block of the Schur complement has rank one with sole nonzero eigenvalue magnitude s, then every affine perturbation has density cap 8sqrt(5)(|det B| sigma_min(B) s)^(-1/4), uniformly in all pair-bank/outside couplings, shifts, dimensions, supports, fragments and moments.",
+    "continuity": "not_claimed",
+    "full_target": "open"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f762fa44abe357031aa4020eb614478ab47588e3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T073732Z-account03-B14-QFORM-r30/REPORT.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B14/20260923T073732Z-account03-B14-QFORM-r30.md",
+  "stress_test": "Diffuse bank a_N=N^-1/2(1,...,1), B=[[0,2],[2,0]], S_VV=2a_Na_N^T, pair-bank cross C=[(3/2)a_N^T;0]. Active characteristic polynomial 4x^3-8x^2-25x+32 has roots in (-3,-2),(1,6/5),(3,4); theorem gives <=4sqrt(5).",
+  "unresolved_implication": "The bare s_3(A)>=1 hypothesis does not yet force a uniformly conditioned indefinite physical pair together with a rank-one Schur bank of universal scale. Higher-rank same-bank Schur curvature remains the next aggregation target.",
+  "next_step": "Attempt a grouped-bank extension where the Schur bank has rank >=2 but decomposes into disjoint original-coordinate subbanks, preserving product provenance before reciprocal minor payment."
+}

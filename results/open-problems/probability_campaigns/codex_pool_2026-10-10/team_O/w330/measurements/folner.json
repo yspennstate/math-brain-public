@@ -1,0 +1,61 @@
+{
+  "exact_geometry_cases": 5,
+  "rows": [
+    {
+      "L": 2,
+      "volume": 10,
+      "boundary": 18,
+      "ratio": 1.8,
+      "corridor_open_upper_bound": 0.421875
+    },
+    {
+      "L": 4,
+      "volume": 36,
+      "boundary": 38,
+      "ratio": 1.0555555555555556,
+      "corridor_open_upper_bound": 0.2373046875
+    },
+    {
+      "L": 8,
+      "volume": 136,
+      "boundary": 78,
+      "ratio": 0.5735294117647058,
+      "corridor_open_upper_bound": 0.07508468627929688
+    },
+    {
+      "L": 16,
+      "volume": 528,
+      "boundary": 158,
+      "ratio": 0.29924242424242425,
+      "corridor_open_upper_bound": 0.00751694681821391
+    },
+    {
+      "L": 32,
+      "volume": 2080,
+      "boundary": 318,
+      "ratio": 0.1528846153846154,
+      "corridor_open_upper_bound": 7.533931929047496e-05
+    }
+  ],
+  "nested_exhaustion_cases": [
+    {
+      "L": 1,
+      "volume": 10,
+      "boundary": 18
+    },
+    {
+      "L": 8,
+      "volume": 528,
+      "boundary": 158
+    },
+    {
+      "L": 64,
+      "volume": 32896,
+      "boundary": 1278
+    }
+  ],
+  "scope": "Connected Folner geometry does not force internal coarse connectivity",
+  "experiment": "folner",
+  "seconds": 0.0316,
+  "command": "python -X utf8 experiments.py folner"
+}

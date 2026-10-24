@@ -1,0 +1,51 @@
+[
+  {
+    "date": "2026-10-12",
+    "service": "openalex_correct_source",
+    "url": "https://api.openalex.org/works/https://doi.org/10.1090/bull/1573",
+    "query": {},
+    "status": 429,
+    "request_url": "https://api.openalex.org/works/https://doi.org/10.1090/bull/1573"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "openalex_citing_source",
+    "url": "https://api.openalex.org/works",
+    "query": {
+      "filter": "cites:https://doi.org/10.1090/bull/1573",
+      "per-page": 100
+    },
+    "status": 429,
+    "request_url": "https://api.openalex.org/works?filter=cites%3Ahttps%3A%2F%2Fdoi.org%2F10.1090%2Fbull%2F1573&per-page=100"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "semantic_citing_lps",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1309.3267/citations",
+    "query": {
+      "limit": 100,
+      "fields": "title,year,authors,externalIds,abstract"
+    },
+    "status": 200,
+    "request_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1309.3267/citations?limit=100&fields=title%2Cyear%2Cauthors%2CexternalIds%2Cabstract"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "arxiv_superharmonic_dimension",
+    "url": "https://export.arxiv.org/api/query",
+    "query": {
+      "search_query": "all:superharmonic AND (all:sandpile OR all:\"integer-valued\") AND (all:dimension OR all:matrices)",
+      "max_results": 80
+    },
+    "status": 200,
+    "request_url": "https://export.arxiv.org/api/query?search_query=all%3Asuperharmonic+AND+%28all%3Asandpile+OR+all%3A%22integer-valued%22%29+AND+%28all%3Adimension+OR+all%3Amatrices%29&max_results=80"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "f_lattice_retry",
+    "url": "https://arxiv.org/pdf/2110.07556v2",
+    "query": {},
+    "status": 200,
+    "request_url": "https://arxiv.org/pdf/2110.07556v2"
+  }
+]

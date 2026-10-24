@@ -1,0 +1,293 @@
+SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account account01, slot B02, 2026-09-24T10:19:30Z.
+attacking: the r48 residual Schur hub by promoting a generic physical-edge quarter-Riesz estimate through a second literal scalar square, then spending the original scalar pivot for an actual bounded-density exit.
+
+# account01/B02 r49 — quarter-to-half square fusion and a nested-pivot physical-edge receiver
+
+Programme: `QFORM-DENSITY-3EIG-20260922`  
+Assignment: Integrated Fourier estimate  
+Status: **ESSENTIAL SUPPORTING THEOREM + LIVE DENSITY EXIT / FULL QFORM OPEN / TARGET-WIDE FOURIER-L1 OPEN_NOT_REFUTED**  
+Regularity: the new receiver proves an essentially bounded density; continuity is not claimed.  
+Brain status: `WITHOUT_VERIFIED_BRAIN`.
+
+The exact owner target remains unchanged: independent ORIGINAL real coordinates with probability densities bounded by one; arbitrary real symmetric coefficient matrix; at least three eigenvalues of modulus at least one. No moment, support, log-concavity, connected-support, post-rotation independence, arbitrary conditional density cap, or deletion of a nonzero coefficient is used below.
+
+Fresh control immediately before publication remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread. In particular this proof does not use the false law-uniform scalar quadratic pointwise decay, the false arbitrary-joint coarea gate, a post-rotation independence claim, or the false shortcut that one physical edge alone always gives half-Riesz credit.
+
+## 1. Source pins actually used
+
+Immediate predecessor:
+
+`yspennstate/math-open-problems@68bcd6197ea7d1232649352406bb8556a31d602b`
+
+`proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260924T093207Z-account01-B02-qform-auto11-r48/REPORT.md`.
+
+On its live diagonal-pivot branch, after an exact original-coordinate scalar completion,
+
+`Q = a (X_h + H(X_{h^c}))^2 + S(X_{h^c})`,
+
+with
+
+`|a|>1/228`.
+
+In the controlled-row subbranch r48 proves `s_2(S)>=1/4`; if its diffuse two-eigenvalue window does not pay the branch, it produces a remaining original coordinate `j` with either
+
+`|S_jj|>1/912`
+
+or
+
+`||S[j,j^c]||_2>1/912`.
+
+The present run attacks the first of those two residual certificates.
+
+The generic physical-edge quarter-Riesz theorem used below is account02/B01:
+
+`yspennstate/math-open-problems@25a695084d9acb02a3c81da41ef3e23953fb1a34`
+
+`proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260924T050513Z-account02-B01-qform-auto11/REPORT.md`.
+
+It proves, for any real quadratic polynomial `R` in the original product coordinates, if two distinct physical coordinates have off-diagonal coefficient `mu!=0`, with all diagonals, all other quadratic coefficients and all affine terms arbitrary, then
+
+`H_(1/4)(R):=sup_w E|R-w|^(-1/4)
+ <= C_edge |mu|^(-1/4)`,
+
+where
+
+`C_edge = 16 c_(1/4) pi^(1/4)
+        = 3.179662567631707...`,
+
+and
+
+`c_alpha = 2^(1-alpha) Gamma((1-alpha)/2) /
+           (2 sqrt(pi) Gamma(alpha/2))`.
+
+This theorem is itself obtained from the genuine bilinear `|t|^{-1/2}` Plancherel envelope and a weighted Fourier/fractional-potential integral; it does not use scalar van der Corput.
+
+The translated quadratic kernel is from the completed orientation-free rank-two source
+
+`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+
+`proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+
+For
+
+`Psi(y)=1+log(1/|y|)` for `0<|y|<=1`,
+`Psi(y)=|y|^(-1/4)` for `|y|>=1`,
+
+that source proves, for every cap-one probability density `f`, every real shift, and every nonzero quadratic coefficient, the translated square kernel bound used in Section 3 below.
+
+The newest completed designated partner account02/B02 is
+
+`yspennstate/math-open-problems@6b5539d7c55c495c8b0f410b90dbf704c70c3a50`
+
+`proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260924T080656Z-account02-B02-QFORM-auto11/REPORT.md`.
+
+It proves both the local two-sided rank-two Fourier-L1 obstruction and the scalar-pivot/full-2x2 density receiver. Section 6 applies the latter to an actual target matrix.
+
+## 2. Elementary bridge: the logarithmic square kernel is dominated by a quarter power
+
+### Lemma 2.1 — `QFORM-PSI-QUARTER-DOMINATION-v1`
+
+For every `y!=0`,
+
+`boxed: Psi(y) <= 4 e^(-3/4) |y|^(-1/4).`                     (2.1)
+
+### Proof
+
+For `|y|>=1`, `Psi(y)=|y|^(-1/4)` and `4e^(-3/4)>1`.
+
+For `0<|y|<=1`, write `|y|=e^(-x)`, `x>=0`. Then
+
+`Psi(y)|y|^(1/4)=(1+x)e^(-x/4)`.
+
+Its derivative is
+
+`e^(-x/4) [1-(1+x)/4]`,
+
+so the maximum occurs at `x=3` and equals `4e^(-3/4)`. QED.
+
+This tiny inequality is the key endpoint repair: a quarter-Riesz input is already strong enough to average the logarithmic translated-square singularity.
+
+## 3. New theorem: a literal scalar square promotes quarter-Riesz to half-Riesz
+
+### Theorem 3.1 — `QFORM-QUARTER-TO-HALF-SQUARE-FUSION-v1`
+
+Let `X` be one original coordinate with probability density at most one, independent of the remaining original coordinates `Z`. Let `d!=0`, let `h(Z)` be arbitrary measurable real-valued data, and let `T(Z)` be any real random variable generated by the remaining coordinates. Put
+
+`R = d (X+h(Z))^2 + T(Z)`.
+
+Then
+
+`boxed:
+H_(1/2)(R)
+ <= 32 e^(-3/4) |d|^(-1/4) H_(1/4)(T).
+}`                                                                  (3.1)
+
+No independence between `h(Z)` and `T(Z)` is required.
+
+### Proof
+
+Fix a target `w` and condition on `Z`. By translation of the cap-one density and the translated quadratic kernel from the source above,
+
+`E_X |R-w|^(-1/2)
+ <= 8 |d|^(-1/2)
+      Psi((w-T(Z))/d).`                                           (3.2)
+
+Apply Lemma 2.1:
+
+`Psi((w-T)/d)
+ <=4e^(-3/4)|d|^(1/4)|T-w|^(-1/4).`
+
+Therefore
+
+`E |R-w|^(-1/2)
+ <=32 e^(-3/4)|d|^(-1/4)
+      E|T-w|^(-1/4).`
+
+Take the supremum over `w`. QED.
+
+The theorem is a value-space formulation of a weighted integrated-Fourier gain. It is deliberately weaker than claiming unweighted Fourier L1 for `R`: the newest account02/B02 counterexample shows that such a local claim can fail in the two-sided rank-two setting.
+
+## 4. New theorem: two literal scalar pivots plus one physical edge give a full density bound
+
+### Theorem 4.1 — `QFORM-TWOPIVOT-EDGE-DENSITY-v1`
+
+Suppose the full quadratic form admits two successive exact ORIGINAL-coordinate scalar completions:
+
+`Q = a (X_i+h_i)^2 + S`,             `a!=0`,
+
+and inside the exact first Schur remainder,
+
+`S = d (X_j+h_j)^2 + T`,             `d!=0`,
+
+where `i!=j` and each `h` may depend arbitrarily on the later original coordinates. Suppose the exact second Schur remainder `T` has a literal physical off-diagonal coefficient
+
+`T_kl = mu !=0`
+
+between two remaining original coordinates `k!=l`.
+
+Then `Q` has an essentially bounded density and
+
+`boxed:
+||p_Q||_infinity
+ <= C_nested |a|^(-1/2)|d mu|^(-1/4),
+}`                                                                  (4.1)
+
+where
+
+`C_nested
+ = 32 e^(-3/4) C_edge
+ = 512 e^(-3/4)c_(1/4)pi^(1/4)
+ = 48.06291987045865... .`                                        (4.2)
+
+Continuity is not claimed.
+
+### Proof
+
+The completed account02/B01 edge theorem applies to the full second Schur remainder, including all its other quadratic and affine coefficients:
+
+`H_(1/4)(T)<=C_edge |mu|^(-1/4).`                                (4.3)
+
+Theorem 3.1 therefore gives
+
+`H_(1/2)(S)
+ <=32e^(-3/4)C_edge |d mu|^(-1/4).`                              (4.4)
+
+Finally use the completed scalar-square peel at the first pivot:
+
+`||p_Q||_infinity <= |a|^(-1/2) H_(1/2)(S).`                     (4.5)
+
+Combining (4.4)-(4.5) gives (4.1). Every completion is performed in literal independent coordinates; no random variable is rotated. QED.
+
+The theorem is useful precisely because a generic edge does **not** by itself have a half-Riesz bound: `(X+Y)^2` is the source-valid obstruction. The inner scalar square supplies the missing quarter exponent, and the outer scalar square then converts half-Riesz credit to an actual density bound.
+
+## 5. Actual live r48 branch payment
+
+Return to the live r48 diagonal-pivot branch. We already have
+
+`|a|>1/228`.
+
+On the residual-diagonal certificate take the original coordinate `j` for which
+
+`|d|=|S_jj|>1/912`,
+
+and form its **exact** second Schur remainder `T`; no coefficient is deleted. If `T` has any literal physical edge satisfying
+
+`|mu|>=1/912`,
+
+then Theorem 4.1 pays the entire ambient law:
+
+`||p_Q||_infinity
+ < C_nested sqrt(228) (912^2)^(1/4).`
+
+Since `912=4*228`,
+
+`sqrt(228)*(912^2)^(1/4)=sqrt(228*912)=456`,
+
+so
+
+`boxed: ||p_Q||_infinity < 21916.692.`                            (5.1)
+
+This is a new universal exit from the r48 residual-diagonal branch. No bound on the Schur row of `j` is needed; arbitrarily large correlations are absorbed exactly into the second Schur complement before the edge theorem is invoked.
+
+The surviving part of that branch is now sharply stated: after the strong residual diagonal `|S_jj|>1/912` is pivoted exactly, **every individual physical off-diagonal coefficient of the second Schur remainder is `<1/912`**. This entrywise statement is not promoted to an operator-norm statement; many small edges can still aggregate in high dimension. The separate r48 residual-row-hub certificate also remains unpaid.
+
+## 6. Required account02/B02 application at an actual inequality
+
+Use the exact target matrix from the newest account02/B02 report,
+
+`A_* =`
+`[[1,0,1,0,0],`
+` [0,1,0,1,0],`
+` [1,0,1,0,0],`
+` [0,1,0,1,0],`
+` [0,0,0,0,1]],`
+
+whose spectrum is `{0,0,1,2,2}`.
+
+Pivot the fifth coordinate `W`. Here `a=1`, and the exact Schur remainder is
+
+`Q4=(U1+V1)^2+(U2+V2)^2`.
+
+Its physical `U x V` cross block is `I_2`, hence its second singular value is `sigma=1`. The completed designated-partner theorem
+
+`QFORM-SCALARPIVOT-FULL2X2-TWOSIDED-DENSITY-v1`
+
+therefore gives the actual inequality
+
+`boxed: ||p_(Q_*)||_infinity < 201.`                              (6.1)
+
+This is exactly within the theorem's scope and makes no untwisted-bank assumption.
+
+The present theorem gives a stronger bound on the same target family. Inside `Q4`, pivot `U1`; its coefficient is `d=1`. The exact second Schur remainder on `(U2,V1,V2)` is
+
+`T=(U2+V2)^2`,
+
+with `V1` absent and literal edge `mu=1` between `U2,V2`. Hence Theorem 4.1 yields
+
+`boxed: ||p_(Q_*)||_infinity < 48.063.`                            (6.2)
+
+The same designated-partner report proves
+
+`integral |phi_(Q4)(t)| dt = infinity`.
+
+Thus (6.2) is a concrete demonstration of the intended mechanism: one must not demand local unweighted Fourier L1 from the rank-two intermediate remainder. Fractional integrated-Fourier credit survives and becomes sufficient only after the genuine third smoothing resource is spent.
+
+## 7. Status and next unpaid implication
+
+No exact-target counterexample to the universal target-wide estimate
+
+`integral_R |E exp(it X^T A X)| dt <= C`
+
+was found. It remains `OPEN_NOT_REFUTED`. The partner's `Q4` example refutes only a local two-sided-rank-two L1 receiver; it is not itself in the three-large-eigenvalue target until the third square is restored.
+
+The new first B02 interface is
+
+`QFORM-R48-SECOND-SCHUR-SMALLEDGE-AGGREGATE-v1`:
+
+on the live residual-diagonal branch, after exact second pivoting, handle the case in which every individual second-Schur edge has modulus `<1/912` but aggregate off-diagonal/ridge mass may be large. The natural next split is aggregate physical ridge/E2 currency versus a genuinely diagonal-dominated second Schur remainder, while preserving the outer and inner pivots exactly. The r48 residual-row-hub branch remains a parallel interface.
+
+Full QFORM remains OPEN. Full-target continuity remains OPEN.
+
+MODEL: GPT-5.6 Sol.  
+THINKING LEVEL: UNKNOWN; source=not_exposed; requested=maximum actually supported.  
+THINKING USAGE: NOT_EXPOSED; provider thinking time=NOT_EXPOSED; coverage=unavailable.

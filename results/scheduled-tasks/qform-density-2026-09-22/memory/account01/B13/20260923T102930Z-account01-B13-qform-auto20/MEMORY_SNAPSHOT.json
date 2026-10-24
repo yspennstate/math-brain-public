@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260923T102930Z-account01-B13-qform-auto20",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_login": "06d95e5c969097fe1954442c7d2dc471f0c9a418",
+  "fresh_control_observed_before_publication": "86ffc4ad5c159dcbd82e459911c27d42c1d4841f",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_usage": null,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "law-uniform small-matrix perturbation forbidden"
+  ],
+  "designated_partner": {
+    "account_slot": "account02/B13",
+    "run_id": "20260923T085705Z-account02-B13-extremal-r24",
+    "canonical_commit": "cc40e95933db0262eddb6e679211145a84dca081",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260923T085705Z-account02-B13-extremal-r24/REPORT.md",
+    "result_applied": "QFORM-CUTFREE-DR-v1",
+    "actual_application": "For an actual slab ratio rho, used D_5^perp(A) <= (10 sqrt(2e)/rho)^10 and combined it with the new exterior-ratio skeleton and a D_1 lower bound."
+  },
+  "other_premises": [
+    {
+      "commit": "e542b1a6ef471b329e4e88a6553e1aacb45acc1a",
+      "path": "proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md",
+      "scope": "rank-three physical-principal block receiver with arbitrary outside couplings"
+    },
+    {
+      "commit": "66b5ff888a219c7c8e754dd25062fac6aecb2f22",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260923T002634Z-account01-B13-qform-auto12/REPORT.md",
+      "scope": "symmetric Nystrom completion used inside the new exterior-ratio average"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-EXACT-BARYCENTRIC-PRODUCT-PURIFICATION-v1",
+      "status": "PROVED_SUPPORTING_REDUCTION",
+      "statement": "Every cap-one probability density is an exact measure barycenter of indicators of arbitrary measurable unit-measure sets; tensoring gives an exact product-indicator mixture identity for every nonnegative measurable kernel."
+    },
+    {
+      "id": "QFORM-EXTERIOR-RATIO-FROBENIUS-SKELETON-v1",
+      "status": "PROVED_SUPPORTING_STRUCTURAL_THEOREM",
+      "statement": "If D_r^perp(A)>0, then A=D+R+E with D diagonal, rank(R)<=4r, E zero diagonal and zero on a 2r-coordinate core, and ||E||op<=||E||F<=(r+1)sqrt(D_{r+1}^perp/D_r^perp)."
+    },
+    {
+      "id": "QFORM-LOW-OFFDIAG-FROBENIUS-PAID-v1",
+      "status": "PROVED_TARGET_LEVEL_BRANCH",
+      "statement": "Under s_3(A)>=1, D_1^perp<=1/16 implies ||p_Q||inf<=128(3/32)^(-1/4)=231.322112924... via a robust physical 3x3 principal block."
+    },
+    {
+      "id": "QFORM-HIGHRATIO-RANK16-OPNORM-SKELETON-v1",
+      "status": "PROVED_TARGET_LEVEL_STRUCTURAL_CONSEQUENCE",
+      "statement": "Any actual slab witness with rho>231.323 admits A=D+R+E with rank(R)<=16, physical core<=8, and either E=0 or ||E||op<362.296 rho^(-5/4)."
+    }
+  ],
+  "key_formulas": {
+    "exact_product_mixture": "P_f(Q in J)=E_E |{x in product E_i: x^T A x in J}| with |E_i|=1",
+    "exterior_ratio_skeleton": "||E||op <= (r+1) sqrt(D_{r+1}^perp/D_r^perp)",
+    "partner_D5": "D_5^perp <= (10 sqrt(2e)/rho)^10",
+    "high_ratio_tail": "||E||op < 362.296 rho^(-5/4), rank(R)<=16, core<=8"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4be4c9842b3828e8a862e58d7e6eec894a85317c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260923T102930Z-account01-B13-qform-auto20/REPORT.md",
+    "readback": true
+  },
+  "handoff": {
+    "commit": "3cc27b38b563c913e04210dea574a5511e2f6cfe",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B13/20260923T102930Z-account01-B13-qform-auto20.md"
+  },
+  "unresolved_implication": "QFORM-DIAG-RANK16-OPNORM-TAIL-PRODUCT-CLOSURE-v1",
+  "scope_warning": "The operator-small tail is not perturbatively discarded. Arbitrary translated and fragmented product laws remain in scope. Independent end-to-end review has not occurred."
+}

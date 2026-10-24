@@ -1,0 +1,80 @@
+[
+  {
+    "claim_id": "A082-FINITE-TRUE-ERASURE",
+    "version": 1,
+    "exact_statement": "For every nonconstant Boolean sign f on at most four uniform physical variables there exists a relevant i with H(S_i|S_-i)<=Kstar Inf_i(f), where Kstar=4+(5/2)log2(5)-(9/2)log2(3)<107/40. Kstar is optimal over this domain.",
+    "hypotheses": [
+      "Boolean sign truth table",
+      "uniform cube",
+      "at most four physical variables",
+      "entropy in bits"
+    ],
+    "statement_sha256": "b7c26774325a8310ff52af2d16afa9f442d576f2af2f9cd8d0c9335d9242ee6e",
+    "contributors": [
+      "A082"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-account05-A082-finite-inequalities\\EXHAUSTIVENESS_LEMMA.tex, Theorem 1; ~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-account05-A082-finite-inequalities\\FINITE_INEQUALITY_CERTIFICATE.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCAL_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A026",
+      "A027",
+      "A028",
+      "A061",
+      "A073",
+      "A075",
+      "A083",
+      "A084",
+      "A085",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A082-AFFINE4-ERASURE-BRIDGE",
+    "version": 1,
+    "exact_statement": "For every finite physical dimension, every nonconstant Boolean sign with nonzero Fourier support contained in c+V with dim_F2(V)<=4, and every disjoint product of such factors, has a relevant i with B_i<=Kstar I_i at every physical restriction, and H(f)<=(Kstar+2/ln(2))I(f).",
+    "hypotheses": [
+      "Boolean sign",
+      "uniform finite physical cube",
+      "affine Fourier support dimension at most four per disjoint factor",
+      "entropy in bits"
+    ],
+    "statement_sha256": "05fd129921164b843d8df2a86b3cf679ce7481519742b2500124e52cf25c46a5",
+    "contributors": [
+      "A082",
+      "A026 (source of affine-support reduction; reconstructed here)"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-account05-A082-finite-inequalities\\EXHAUSTIVENESS_LEMMA.tex, Theorem 2; ~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-account05-A082-finite-inequalities\\FINITE_INEQUALITY_CERTIFICATE.json",
+    "proof_dependencies": [
+      {
+        "claim_id": "A082-FINITE-TRUE-ERASURE",
+        "version": 1
+      }
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCAL_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A026",
+      "A027",
+      "A028",
+      "A061",
+      "A073",
+      "A075",
+      "A083",
+      "A084",
+      "A085",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B01",
+  "run_id": "20260923T011018Z-b01-qform-auto11",
+  "control_revision": "2026-09-22.15",
+  "control_refresh_head": "35fb1c48fca03525ba026ec7f5a94d1c2903c660",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuity_full_target_status": "OPEN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "branch": "master",
+    "commit": "95197f6ad61beff66b1f22fef7cddbb0dcc8d01f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T011018Z-b01-qform-auto11/REPORT.md"
+  },
+  "proved": [
+    {
+      "id": "QFORM-PAIR-WEDGE-L32-v1",
+      "statement": "For arbitrary symmetric S and independent cap-one physical coordinates, if two original-coordinate rows into a disjoint bank have Gram determinant D>0, then |phi_R(t)|<=min(1,pi*sqrt(2)*D^(-1/4)/|t|), int|phi_R|^(3/2)<=6*pi*sqrt(2)*D^(-1/4), and ||p_R||_3<=3^(2/3)*2^(1/3)*D^(-1/6). Arbitrary self terms, mutual edge, bank quadratic phase, and all outside couplings are retained.",
+      "regularity": "absolute continuity with L3 density; continuity not asserted"
+    },
+    {
+      "id": "QFORM-SCALAR-SQUARE-PAIR-WEDGE-LIFT-v1",
+      "statement": "After completing one nonzero physical scalar pivot a, if the Schur residual has such a pair-wedge D>0, then ||p_Q||_infinity <= 2^(15/4)*3^(-1/4)*|a|^(-1/2)*D^(-1/8) = 10.223089667940359... |a|^(-1/2)D^(-1/8).",
+      "regularity": "essentially bounded density; continuity not proved"
+    },
+    {
+      "id": "QFORM-COHEAVY-PAIR-WEDGE-TRANSVERSE-IDENTITY-v1",
+      "statement": "For natural squared-3-volume law of a physical cross block M with Z=e3(M^TM), pair inclusion mass p_ik satisfies p_ik Z = D_ik R_ik, where D_ik=||r_i wedge r_k||^2 and R_ik is total squared energy of all other rows after projection orthogonal to span(r_i,r_k). If alpha_i>1/2 and P(k|i)>1/2 then D_ik R_ik>Z/4."
+    }
+  ],
+  "partner_application": {
+    "source": "yspennstate/math-open-problems@3280d9fab56fe4878189ae89176887e3da29f569:proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260922T233020Z-account02-B01-qform-r31/REPORT.md",
+    "partner_fact": "For heavy row h, e2(N^TN)>=alpha Z/||r_h||^2 after deleting h.",
+    "new_inequality": "If one residual physical pair carries fraction theta of this e2, then ||p_Q||_infinity <= C_* |a|^(-1/2)[theta alpha Z/||r_h||^2]^(-1/8), C_*=10.223089667940359..."
+  },
+  "preserved_corrections": [
+    "No law-uniform positive-power pointwise decay for one arbitrary-density quadratic phase; phase-aligned fragmented supports remain a counterexample.",
+    "No spectral-coordinate independence after rotations.",
+    "Do not infer a uniformly good physical pair/minor from the three-large-eigenvalue hypothesis."
+  ],
+  "first_unpaid_implication": {
+    "id": "QFORM-DIFFUSE-E2-AFTER-COHEAVY-v1",
+    "statement": "When clustered natural 3-volume leaves the partner-guaranteed e2 spread over many physical row pairs, spend the whole pair-volume jointly, using variable-order/fractional Brascamp-Lieb or a grouped transverse-bank recursion, before selecting a physical pair. Preserve p_ik Z=D_ik R_ik as normalization."
+  },
+  "checker": {
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T011018Z-b01-qform-auto11/CHECK_OUTPUT.txt",
+    "status": "PASS",
+    "trials": 200,
+    "max_normalized_pair_wedge_identity_error": 1.2664341715451387e-15,
+    "role": "sanity/regression only; analytic proof is canonical"
+  }
+}

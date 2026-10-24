@@ -1,0 +1,8 @@
+{
+  "command": "python -X utf8 ~\\.claude\\dreaming\\lean_check.py --stmt \"example (z : Int) : 0 <= z * (z - 1) := by by_cases h : z <= 0; exact mul_nonneg_of_nonpos_of_nonpos h (by omega); exact mul_nonneg (by omega) (by omega)\"",
+  "exit_code": 1,
+  "output": "RUNTIME_UNVERIFIED in 122.8s; source_sha256: aeb8afb4c2198fd4874a4662a11ba036d4106afdb162fe3b3e8a87d456b59dab; Translation fidelity: UNVERIFIED",
+  "rung": "not Lean-checked",
+  "scope": "integer scalar kernel only; no certificate and no assumption audit available",
+  "followup": "no retry or heavy job; analytic proof and exact finite checks retained"
+}

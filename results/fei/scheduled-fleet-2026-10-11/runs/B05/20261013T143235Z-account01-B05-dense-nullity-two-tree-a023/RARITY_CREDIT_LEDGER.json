@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "family": "arbitrary-orientation rank-(m-2) Boolean shields",
+  "tree": "finite adaptive/pruned physical restriction tree on shield variables",
+  "node_charge": "Delta_i U = B_i - Gamma_i + K_i, retained with sign",
+  "first_revelation_credit": "w_v Inf_{i_v}(P_v), spent only at the first query on each root-to-leaf path",
+  "terminal_packet": "sum_l w_l[2I(P_l)-U(P_l)], retained with sign",
+  "common_core": "U(h) cancels exactly once by disjoint tensor additivity",
+  "complete_bound": "sum_v w_v Delta_v U <= 2I(P)",
+  "constant": 2,
+  "parameter_dependence": "none in dimension, orientation, depth, dyadic rarity, bias, pruning, or terminal-core complexity",
+  "control_first_boundary": "rank-essential row deletion can create a nullity-three child, so the root certificate is not reissued locally",
+  "data_first_property": "column deletion preserves nullity at most two",
+  "unpaid": "arbitrary higher-nullity coherent core changes introduced through a hierarchy"
+}

@@ -1,0 +1,113 @@
+\section*{An explicit all-parameter rare-bias tail for the two-bit half-tax inequality}
+
+All logarithms in the proof are natural.  Let
+\[
+ 0<p\le {1\over64},\qquad 0\le q\le1,
+\]
+and put
+\[
+ s=4q(1-q),\quad c=4q^2,\quad b=1-sp,\quad
+ a={cp(1-p)\over b}.
+\]
+For $h(x)=-x\log x-(1-x)\log(1-x)$, define
+\[
+ d(p,q)=b h(a)+sp h(p)-h(sp)+p h(s)
+          +{p\over2}\log{1-p\over p}.                 \tag{1}
+\]
+Thus $d=(\log 2)D$, where
+\[
+ D=M_A+\tfrac12\Delta_A-J_A
+\]
+is the bit-valued margin in the frozen two-bit AND candidate.
+
+\paragraph{Theorem.}
+For every $0<p\le1/64$ and every $q\in[0,1]$,
+\[
+ \boxed{d(p,q)>0.}                                     \tag{2}
+\]
+Equivalently, $J_A<M_A+\Delta_A/2$ throughout the complete rare-bias
+tail, uniformly in the second bias.
+
+\paragraph{Removing the singular parameter.}
+Write
+\[
+ \ell(x)=-(1-x)\log(1-x),\qquad
+ \psi(x)={\ell(x)\over x}\ (x>0),\quad\psi(0)=1,
+\]
+and $\phi(x)=x\log(1/x)$, with $\phi(0)=0$.  Expanding
+$h(x)=x\log(1/x)+\ell(x)$ in (1), using $ba=cp(1-p)$, and cancelling the
+$s\log s$ terms gives the exact identity
+\[
+ {d(p,q)\over p}=A(p,q)\log{1\over p}+F(p,q),           \tag{3}
+\]
+where
+\[
+ A(p,q)=8(q-\tfrac14)^2+p(s-c),                         \tag{4}
+\]
+and
+\begin{align*}
+ F(p,q)={}&c(1-p)\log{b\over1-p}+(1-p)\phi(c)
+       +c(1-p)\psi(a)\\
+ &+sp\psi(p)-s\psi(sp)+\ell(s)+\tfrac12\log(1-p).
+                                                               \tag{5}
+\end{align*}
+Every term in (5) extends continuously to $p=0$; in particular there is
+no numerical $0/0$ endpoint.
+
+The coefficient (4) is nonnegative on the full closed rectangle.  For
+$q\le1/2$, both terms in (4) are nonnegative.  For $q\ge1/2$, the second
+term is nonpositive, so its worst value occurs at $p=1/64$, and
+\[
+ 16A(p,q)\ge128(q-\tfrac14)^2+q(1-2q)
+             =126q^2-63q+8>0,                          \tag{6}
+\]
+because the last quadratic has discriminant $63^2-4(126)(8)=-63$.
+Since $\log(1/p)\ge\log64$, (3)--(6) imply
+\[
+ {d(p,q)\over p}\ge E_{64}(p,q):=A(p,q)\log64+F(p,q). \tag{7}
+\]
+The right side is continuous on the compact rectangle
+$[0,1/64]\times[0,1]$.  This is the analytic tail/compactness reduction;
+the interval computation below certifies this continuous remainder, not
+the singular original expression.
+
+\paragraph{Directed-rounding certificate.}
+The accompanying program encloses $E_{64}$ using 80-decimal Decimal
+arithmetic with ROUND\_FLOOR for every lower endpoint and ROUND\_CEILING
+for every upper endpoint.  Besides interval arithmetic, it uses only the
+following proved one-variable facts:
+\[
+ \psi'(x)={\log(1-x)+x\over x^2}\le0,
+\]
+$\ell$ has its unique maximum $1/e$ at $1-1/e$, and $\phi$ has its unique
+maximum $1/e$ at $1/e$.  The functions $s=4q(1-q)$ and $c=4q^2$ are
+enclosed with their exact monotonicity.  The known inequality $A\ge0$ from
+(6) is used only to intersect its interval enclosure with $[0,\infty)$.
+
+Adaptive bisection visited 175 boxes, accepted 88 leaves, reached depth 8,
+and left no unresolved box.  Its smallest certified lower endpoint is
+\[
+ E_{64}>0.0116100600538253879943401888136485579611459563.
+\]
+Together with (7), this proves (2).  No floating-point value is used in a
+sign decision.
+
+\paragraph{Exact scope and GU relevance.}
+This theorem removes the formerly nonexplicit joining radius in the
+$p\downarrow0$ argument for the two-bit Boolean AND kernel.  It is not a
+universal GU theorem.  In any proposed GU assembly where the local
+restriction mismatch contains this kernel, it permits the sharp payment
+$J_A-M_A\le\Delta_A/2$ uniformly down to deterministic bias.  A universal
+conclusion still needs (i) the corresponding bound for every higher-arity
+Boolean block and (ii) a proof that the $M_A$ terms cancel or telescope and
+that the physical $\Delta_A/2$ taxes are not reused.  Under precisely those
+two additional assembly hypotheses, summing the local inequalities gives
+the displayed sufficient implication
+\[
+ \sum J_A\le\sum M_A+\tfrac12\sum\Delta_A,quad
+ \sum M_A\text{ cancelled},\quad \sum\Delta_A\le I(f)
+ \quad\Longrightarrow\quad G(f)\le\tfrac12 I(f).       \tag{8}
+\]
+Neither higher arity nor the two global single-use premises in (8) is
+proved here; full FEI remains open.
+

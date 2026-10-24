@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B11",
+  "run_id": "20260922T231431Z-account01-B11-QFORM-r11",
+  "owner_control_revision": "2026-09-22.15",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1a3ddfc9f1a8e04dcf3806ca286d08526020f36a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/20260922T231431Z-account01-B11-QFORM-r11/REPORT.md"
+  },
+  "partner_applied": {
+    "worker": "account02/B11",
+    "run_id": "20260922T221830Z-account02-B11-QFORM-r16",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a93d62ee254b5d17d8608a39f25aa3a5d87628f4",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260922T221830Z-account02-B11-QFORM-r16/REPORT.md",
+    "application": "Diffuse orthogonal hub-square branch: ||p||_inf <= 3 e^(2/3)|kappa|^(-2/3)|lambda|^(-1/3)=3 e^(2/3)|det H|^(-1/3)<5.844 under target normalization."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-MINORITY-SCHUR-HALF-RIESZ-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For exact rank three A=RMR^T, if original pivot a=A_ii has the minority inertia sign and c=||r_i||^2, then ||p_Q||_inf <=4 sqrt(pi)[c|a||det M|]^(-1/4). Essential boundedness only."
+    },
+    {
+      "id": "QFORM-ORTHOGONAL-HUB-SQUARE-HUBCURV-FULL-v1",
+      "status": "PROVED_TARGET_SUBCLASS",
+      "statement": "For Q=aX0^2+2kappa X0<b,X>+lambda<d,X>^2 with orthonormal b,d and exact-rank-three nonzero eigenvalues all of modulus >=1, arbitrary real a is allowed and ||p_Q||_inf<=256 for both indefinite signatures."
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-ONESTAR-ARBITRARY-SELF-HALFRIESZ-FALSE-v1",
+    "QFORM-NO-UNIFORM-COEFFICIENT-PERTURBATION-CONTINUITY-v1",
+    "QFORM-GENERATED-MISMATCH-RANK2-FALSE-v1"
+  ],
+  "continuity": "Diffuse partner branch C0; the full 256 subclass theorem and minority-pivot theorem currently establish essential boundedness only.",
+  "rank_two_control": "For centered unit uniforms, p_{2XY}(t)=log(1/(2|t|)) on 0<|t|<1/2; third curvature removes the critical singularity via |t|^-3/2 Fresnel decay or a definite Schur remainder plus half-Riesz averaging.",
+  "unresolved_implication": "QFORM-HUB-FRESNEL-DENSE-LEAF-SELFCOUPLING-v2",
+  "next_step": "Retain original-coordinate product provenance while adding arbitrary dense symmetric leaf remainder; force scalar-pivot, indefinite-pair, ridge, or bank aggregation before any reciprocal small coefficient payment.",
+  "full_target_status": "OPEN"
+}

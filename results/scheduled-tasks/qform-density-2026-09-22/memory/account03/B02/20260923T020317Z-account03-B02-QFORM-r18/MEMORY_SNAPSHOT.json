@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260923T020317Z-account03-B02-QFORM-r18",
+  "control_commit_at_start": "b2cdd0fdca38bfc42416fd3275869fbbd13bc9af",
+  "control_commit_prepublication": "6ba74569bff6d22b21994e6d8c0b667f0a297843",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "Integrated Fourier estimate",
+  "target_status": "OPEN",
+  "continuity_status": "PROVED_ON_NEW_OUTSIDE_LINEAR_BRANCH_ONLY",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "name": "mass-sensitive physical shear Fourier estimate",
+      "source": "yspennstate/math-open-problems@cf838adcab387ff12ba3b7140191433d0b80c357:proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T005036Z-account03-B09-QFORM-auto11/REPORT.md",
+      "use": "route context and independently rederived constant-affine slice L4 estimate"
+    },
+    {
+      "name": "one-dimensional product marginal density cap",
+      "source": "Livshyts-Paouris-Pivovarov, On sharp bounds for marginal densities of product measures, Theorem 1.1; already source-pinned in account03/B02 r17",
+      "use": "||p_(theta^T W)||_infinity <= sqrt(2) for ||theta||_2=1"
+    },
+    {
+      "name": "designated partner zero-diagonal triple Fourier L2 theorem",
+      "source": "yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7:proofnet24/QFORM-density/fleet-2026-09-22/account04/B02/20260922T193108Z-account04-B02-QFORM-r2/REPORT.md",
+      "use": "actual low-frequency inequality in the hybrid overlap bound"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-DOUBLE-NULL-OUTSIDE-LINEAR-OR-GLOBAL-KERNEL-v1",
+    "statement_short": "For a physical scalar plus an invertible physical 2x2 cross packet, after the exact left shear, if a_L=r_L=0 then either t_L!=0 and the full form has continuous density <=[25*3^(3/5)/2^(7/2)] [||t_L|| |det B|^2]^(-1/5), or t_L=0 and (1,-kappa,0,0) is an exact global kernel vector.",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "a3d95679414f21ac90b90ee08acdac45e606d014",
+    "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T020317Z-account03-B02-QFORM-r18/REPORT.md",
+    "report_blob": "9cbdc64903e32b45d5d053da20010694a4620d50",
+    "check_status": "PASS"
+  },
+  "partner_application": {
+    "partner": "account04/B02",
+    "result": "QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1",
+    "applied_inequality": "integral |phi_Q|^2 <= 6*pi*2^(2/3)|det P|^(-1/3)",
+    "derived_overlap": "||p_Q||_infinity <=3*2^(31/36)|det P|^(-1/18)|det B|^(-1/3)||t_L||^(-1/6)"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B02/20260923T020317Z-account03-B02-QFORM-r18.md",
+  "handoff_commit": "afaf582466a598c409c1de9d1d4519995ce48a94",
+  "unresolved_implication": "QFORM-PAID-PACKET-OR-DIFFUSE-AGGREGATION-v1: from s_3(A)>=1 aggregate paid physical packets before reciprocal-minor payment, or route to a completed diffuse/ridge/grouped-hyperbolic branch; a uniformly good fixed minor is not forced.",
+  "target_wide_L1_fourier_status": "OPEN_NEITHER_PROVED_NOR_REFUTED",
+  "next_step": "Develop an aggregate determinant/outside-coupling functional whose total mass is controlled by the three-large-eigenvalue spectral hypothesis and whose negative 1/5 costs can be averaged before selecting a physical packet.",
+  "telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_configured": "UNKNOWN",
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null
+  }
+}

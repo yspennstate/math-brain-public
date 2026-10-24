@@ -1,0 +1,12 @@
+HARD7-02 joint-channel exact algebra self-check
+q_plus = eta/(a**2 + eta**2)
+q_minus = eta/(b**2 + eta**2)
+Z = (a*b + eta**2)/((a**2 + eta**2)*(b**2 + eta**2))
+X = (a*b - eta**2)/((a**2 + eta**2)*(b**2 + eta**2))
+quadratic_logdet_coefficient = -2*(a*b - eta**2)/((a**2 + eta**2)*(b**2 + eta**2))
+endpoint_Z = 1/(a**2 + eta**2)
+positive_overlap_recursion = True
+same_sign_overlap_recursion = True
+schur_quadratic_coefficient = True
+endpoint_Ward_identity = True
+ALL_EXACT_CHECKS_PASS = True

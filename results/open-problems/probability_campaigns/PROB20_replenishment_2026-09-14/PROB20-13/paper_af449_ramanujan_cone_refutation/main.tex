@@ -1,0 +1,253 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+
+\title{The Diameter Replacement in Aldous--Fill Open Problem 4.49(ii) Fails}
+\author{}
+\date{16 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Aldous and Fill record a multicommodity-flow estimate of the form
+$\inf_{\mathbf f}\psi(\mathbf f)\le K\tau_2\log n$ and ask in Open Problem 4.49(ii) whether graph diameter can replace $\log n$ for a universal constant.  We give a negative construction.  Cones over sufficiently large fixed-degree bipartite Ramanujan graphs have diameter two and bounded relaxation time, while an explicit feasible metric in the weak dual forces the optimal stationary-demand congestion to grow without bound.  More precisely, for every $M>0$ there is a finite connected simple unweighted graph $G$ with
+\[
+ \frac{F(G)}{\tau_{\rm rel}(G)D(G)}>M,
+\]
+where $F(G)=\inf_{\mathbf f}\psi(\mathbf f)$ in the Aldous--Fill normalization.
+\end{abstract}
+
+\section{Source normalization and statement}
+Let $G=(V,E)$ be a finite connected simple unweighted graph, let $P$ be simple random walk, and let
+\[
+ \pi_x=\frac{\deg(x)}{2|E|}.
+\]
+For every $a\in V$, let $f^{(a)}$ be an antisymmetric edge flow with divergence
+\[
+ \operatorname{div}f^{(a)}=\delta_a-\pi.
+\]
+Aldous--Fill define
+\[
+ \psi(\mathbf f)=
+ \max_{\{i,j\}\in E}
+ \frac{\sum_a\pi_a|f_{ij}^{(a)}|}{\pi_iP_{ij}},
+ \qquad
+ F(G):=\inf_{\mathbf f}\psi(\mathbf f).
+\]
+Write
+\[
+ \tau_{\rm rel}(G)=\frac1{1-\lambda_2(P)},
+ \qquad
+ D(G)=\operatorname{diam}(G),
+\]
+where $\lambda_2(P)$ is the second largest eigenvalue, not the second largest eigenvalue in absolute value.
+
+Aldous--Fill equation (4.49) has the form
+\[
+ F(G)\le K\tau_{\rm rel}(G)\log |V|,
+\]
+and Open Problem 4.49(ii) asks whether $\log |V|$ can be replaced by $D(G)$ for a universal finite $K$.
+
+\begin{theorem}\label{thm:main}
+For every $M>0$ there exists a finite connected simple unweighted graph $G$ such that
+\[
+ \frac{F(G)}{\tau_{\rm rel}(G)D(G)}>M.
+\]
+Consequently no universal constant $K$ can make the diameter replacement in Aldous--Fill Open Problem 4.49(ii) valid for all such graphs.
+\end{theorem}
+
+\section{A weak metric dual bound}
+For an unoriented edge $e=\{u,v\}$ put
+\[
+ c_e:=\pi_uP_{uv}=\pi_vP_{vu}.
+\]
+For nonnegative edge lengths $\ell=(\ell_e)$, let $d_\ell$ denote the induced shortest-path metric.
+
+\begin{lemma}[Weak metric duality]\label{lem:dual}
+If
+\[
+ \sum_{e\in E}c_e\ell_e\le1,
+\]
+then
+\[
+ F(G)\ge \sum_{a,b}\pi_a\pi_b d_\ell(a,b).
+\]
+\end{lemma}
+
+\begin{proof}
+Fix $a$ and set $\phi_a(v)=-d_\ell(a,v)$.  On every edge $e=\{u,v\}$,
+$|\phi_a(u)-\phi_a(v)|\le\ell_e$.  Summation by parts against
+$\operatorname{div}f^{(a)}=\delta_a-\pi$ gives
+\[
+ \sum_b\pi_b d_\ell(a,b)
+ \le \sum_e \ell_e |f_e^{(a)}|.
+\]
+Multiply by $\pi_a$ and sum over $a$.  By the definition of $\psi$,
+\[
+ \sum_a\pi_a|f_e^{(a)}|\le \psi(\mathbf f)c_e.
+\]
+Therefore
+\[
+ \sum_{a,b}\pi_a\pi_b d_\ell(a,b)
+ \le \psi(\mathbf f)\sum_ec_e\ell_e
+ \le \psi(\mathbf f).
+\]
+Taking the infimum over feasible flow families proves the claim.
+\end{proof}
+
+\section{Ramanujan bases and cone geometry}
+Fix an integer $s\ge4$ and set
+\[
+ d=s^2,\qquad r=s.
+\]
+Marcus--Spielman--Srivastava proved that for every degree $d>2$ there are infinite families of $d$-regular bipartite Ramanujan graphs.  Choose a connected simple member $H$ with $n$ vertices so large that
+\[
+ n\ge2B(d,r),
+ \qquad
+ B(d,r):=1+d\sum_{j=0}^{r-2}(d-1)^j.
+\]
+The selected 2-lift family may be taken connected: a disconnected 2-lift of a connected $d$-regular graph would produce a new adjacency eigenvalue $d$, whereas the selected new eigenvalues satisfy $|\theta|\le2\sqrt{d-1}<d$.  Simplicity is preserved by a 2-lift of a simple seed.
+
+For independent uniform vertices $U,V$ of $H$, the ball bound implies
+\[
+ \Pr\{d_H(U,V)\ge r\}\ge\frac12,
+\]
+so
+\begin{equation}\label{eq:truncdist}
+ \E\min\{d_H(U,V),r\}\ge\frac r2.
+\end{equation}
+
+Form the cone
+\[
+ G=K_1\vee H
+\]
+with hub $h$.  Then
+\[
+ |E(G)|=\frac{n(d+2)}2,
+ \qquad
+ D(G)=2.
+\]
+The hub has degree $n$, every base vertex has degree $d+1$, and hence
+\begin{equation}\label{eq:pi}
+ \pi_h=\frac1{d+2},
+ \qquad
+ \pi_v=\frac{d+1}{n(d+2)}\quad(v\in H).
+\end{equation}
+Every physical edge has conductance
+\begin{equation}\label{eq:cond}
+ c_e=\frac1{n(d+2)}.
+\end{equation}
+
+\section{Relaxation time of the cone}
+Let $A_Hv=\theta v$ with $v\perp\mathbf 1$ on the base.  Extending $v$ by zero at the hub gives a cone transition eigenvector with eigenvalue
+\[
+ \frac{\theta}{d+1}.
+\]
+On the two-dimensional subspace constant on the base together with the hub coordinate, the remaining eigenvalues are
+\[
+ 1,\qquad -\frac1{d+1}.
+\]
+Since $H$ is Ramanujan,
+\[
+ |\theta|\le2\sqrt{d-1}
+\]
+for every nontrivial adjacency eigenvalue.  Therefore
+\[
+ \lambda_2(P_G)\le\frac{2\sqrt{d-1}}{d+1}
+ <\frac{2s}{s^2+1},
+\]
+and hence
+\begin{equation}\label{eq:gap}
+ \frac1{\tau_{\rm rel}(G)}=1-\lambda_2(P_G)
+ >\frac{(s-1)^2}{s^2+1}.
+\end{equation}
+
+\section{An exact feasible metric and the congestion lower bound}
+Assign every spoke the length
+\[
+ x:=\frac{r(d+2)}{d+r}
+\]
+and every base edge the length
+\[
+ y:=\frac{2(d+2)}{d+r}.
+\]
+Then
+\[
+ 2x=ry
+\]
+and, using \eqref{eq:cond},
+\[
+ \sum_ec_e\ell_e
+ =\frac{nx+(nd/2)y}{n(d+2)}=1.
+\]
+Thus Lemma~\ref{lem:dual} applies.
+
+The induced metric satisfies
+\[
+ d_\ell(h,v)=x,
+ \qquad
+ d_\ell(u,v)=y\min\{d_H(u,v),r\}
+ \quad(u,v\in H).
+\]
+Indeed, any path using the hub pays at least two spokes, of total cost $2x=ry$, while every hub-free path lies in $H$ and costs at least $y d_H(u,v)$.
+
+Let
+\[
+ \alpha:=\pi(H)=\frac{d+1}{d+2}.
+\]
+Using both ordered hub--base directions and \eqref{eq:truncdist}, Lemma~\ref{lem:dual} yields
+\begin{align*}
+ F(G)
+ &\ge 2\frac1{d+2}\alpha x
+ +\alpha^2y\E\min\{d_H(U,V),r\}\\
+ &\ge
+ \frac{r(d+1)(d+3)}{(d+2)(d+r)}.
+\end{align*}
+Combining this with $D(G)=2$ and \eqref{eq:gap}, then substituting $d=s^2$ and $r=s$, gives
+\begin{equation}\label{eq:Ls}
+ \frac{F(G)}{\tau_{\rm rel}(G)D(G)}
+ >L_s:=
+ \frac{(s-1)^2(s^2+3)}{2(s+1)(s^2+2)}.
+\end{equation}
+Finally,
+\begin{equation}\label{eq:diverge}
+ L_s-\frac{s-3}{2}
+ =\frac{5s^2-2s+9}{2(s+1)(s^2+2)}>0.
+\end{equation}
+Hence the ratio in Theorem~\ref{thm:main} is larger than $(s-3)/2$ and is therefore unbounded.  This proves Theorem~\ref{thm:main}.
+
+\section{Exact arithmetic certificate and audit status}
+The accompanying script `check.py` uses Python's exact `fractions.Fraction` arithmetic to verify the length-budget identities, the simplification leading to \eqref{eq:Ls}, and the identity \eqref{eq:diverge} at several values of $s$.  In particular,
+\[
+ L_{64}=\frac{5422977}{177580}=30.5382193940759\ldots .
+\]
+The finite arithmetic is not a substitute for the proof or the external existence theorem.
+
+The repository contains two independent claim-scoped audits of the theorem used here:
+\begin{itemize}
+\item `P26-AUDIT-C31-AF449-DIRECT-DUALITY-02 = PASS`;
+\item `C30-AUDIT-C31-AF449-RAMANUJAN-CONE-01 = PASS`.
+\end{itemize}
+The present document is a packaging of that audited source-level claim.  No novelty or priority claim is made; a bounded literature search on 16 September 2026 found no prior published resolution of the exact Open Problem 4.49(ii), but no exhaustive bibliographic database audit was available.
+
+\begin{thebibliography}{9}
+\bibitem{AF}
+D. Aldous and J. Fill,
+\emph{Reversible Markov Chains and Random Walks on Graphs},
+Chapter 4, Section 4.3.5 and Open Problem 4.49(ii),
+\url{https://www.stat.berkeley.edu/~aldous/RWG/Book_Ralph/Ch4.S7.html}.
+
+\bibitem{MSS}
+A. W. Marcus, D. A. Spielman, and N. Srivastava,
+Interlacing families I: Bipartite Ramanujan graphs of all degrees,
+\emph{Annals of Mathematics} 182 (2015), 307--325.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,39 @@
+account03/B18 r13 deterministic check ledger
+run_id=20260924T150952Z-account03-B18-fixedmult-audit-r13
+objective=QFORM-FIXED-MULTIPLICITY-AUDIT-20260924
+
+No-pivot cross-entry cap:
+eta=1/100
+eta+eta^2=101/10000
+2(eta+eta^2)=101/5000
+[2(eta+eta^2)]^2=10201/25000000=0.00040804
+
+Robust anchor:
+delta_*=97/100-(297 sqrt(2)+3 sqrt(202))/4000
+delta_*=0.8543351401911338...
+g0=delta_*^2/2=0.3649442658827021...
+g0/3=0.12164808862756736...
+Thus the hypothetical two-high cross minor lower bound exceeds the no-pivot upper bound by factor >298.
+
+LPP source sharpening:
+C3_sharp=6^(4/3)=10.902723556992836...
+kappa=1/6400
+(kappa^3/64)^(-1/6)=160 exactly
+C3_sharp*160=1744.4357691188538... <1745
+
+Other branches of normalized s8 proof:
+scalar-pivot five-direction half potential H5=98.82209736742384...; outer eta^(-1/2) factor gives 988.2209736742384... <990
+definite pair pivot <10*pi <32
+indefinite pair pivot=10*(6+log(16)+L0)+1/e=192.4712831609333... <193, L0=4+4log5
+terminal one-high branch old constant=23.478932894359914... <23.48
+LPP-sharpened incident constant C_inc=6sqrt(2), giving terminal bound 19.135303891601215... <19.136
+
+Historical account04/B18 partner example:
+A=B direct_sum I_5, B=[[0,1,0,0],[1,0,0,0],[0,0,1,0],[0,0,0,0]]
+B spectrum={1,-1,1,0}, so A has eight eigenvalues |lambda|>=1
+account04/B18 r5 at s=L=a=1 gives ||p_Q||_infinity <=576^(1/3)=8.320335292207616...
+
+STATUS=PASS_ONE_INDEPENDENT_END_TO_END_S8_REVIEW
+SECOND_INDEPENDENT_REVIEW_STILL_REQUIRED
+GLOBAL_CONTINUITY_NOT_PROVED
+FULL_THREE_EIGENVALUE_TARGET_OPEN

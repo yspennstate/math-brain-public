@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B09",
+  "run_id": "20260923T091527Z-account01-B09-QFORM-auto11",
+  "source_control_commit_prepublication": "106f428c228edf6864cc3b463263209c8ce0c31d",
+  "owner_control_revision": "2026-09-22.15",
+  "control_readme_blob": "fca13a89d221115332ce5e60d49554ee0e213efa",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "execution_context": "scheduled_automation",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "partner_applied": {
+    "worker": "account02/B09",
+    "run_id": "20260923T064043Z-account02-B09-QFORM-r13",
+    "claim": "QFORM-TWOHUB-PLUCKER-SMOOTHING-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bc348aa1a3631b0a0a3a9939cbb6b023578e9abc",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T064043Z-account02-B09-QFORM-r13/REPORT.md",
+    "application": "For Q_m=2X1<c1,Y>+2X2<c2,Y>+<v,Y>^2 with three disjoint size-m flat physical banks, G=I_3, lambda=1 and rho=(1-1/m)^3. The partner r=1 theorem gives ||p_Q||inf<3.157 at m=16. Its quotient form gives ||p_Q||inf <=(5/3)e^(3/5)[rho |lambda| det(C^T P_(v^perp) C)]^(-1/5)."
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-QUOTIENT-GRAM-IDENTITY-v1",
+      "status": "PROVED_EXACT_IDENTITY",
+      "statement": "For W=[V,C], det(W^TW)=det(V^TV)det(C^T P_(V^perp)C). Physical hub directions are counted modulo the displayed curvature span."
+    },
+    {
+      "id": "QFORM-ZEROHUB-PLUCKER-SMOOTHING-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For r>2 exact displayed leaf-square directions with Pluecker disjointness rho>0, ||p_Q||inf <= [r/(r-2)]e[rho det(V^TV)prod|lambda|]^(-1/r), with a continuous density."
+    },
+    {
+      "id": "QFORM-PLUCKER-PUNCTURE-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "If theta is deleted full-frame leverage and q is the maximum surviving full-frame leverage in a d-dimensional coefficient frame, theta+dq<1 implies rho_I det(G_I)>=(1-theta-dq)det G."
+    },
+    {
+      "id": "QFORM-MULTIHUB-PUNCTURE-SMOOTHING-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For h literal hubs and a surviving diagonal-plus-rank-r leaf packet, r+2h>2 and theta+(r+h)q<1 imply a continuous density with ||p_Q||inf<=C_(h,r)[(1-theta-(r+h)q)det(G)prod|lambda|]^(-1/(r+2h))."
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "6f8979f8a677663e955befaeb1b4aebb3f0b6a2b",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T091527Z-account01-B09-QFORM-auto11/REPORT.md",
+    "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/20260923T091527Z-account01-B09-QFORM-auto11/CHECKS.md",
+    "report_blob": "cb6de49bc3f9822d3623e7026e01bfc4ff922eae",
+    "check_blob": "7cbc7734b0ca5dd8013cf24226c826adbb0410f8"
+  },
+  "continuity": "PROVED_FOR_NEW_BRANCHES",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "unresolved_implication": "QFORM-QUOTIENT-FRAME-DEGENERATION-ROUTING-v1",
+  "next_step": "Show that failure of every quantitative quotient-frame puncture certificate forces an already-paid bounded physical core, physical pair, ridge/diffuse, grouped-square or cross-volume/tail branch. The survivor must concentrate nontrivial coefficient leverage on rows that cannot be conditioned away."
+}

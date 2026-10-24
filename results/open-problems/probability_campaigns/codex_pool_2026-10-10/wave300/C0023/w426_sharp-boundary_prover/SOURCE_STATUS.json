@@ -1,0 +1,117 @@
+{
+  "worker": "w426",
+  "target_id": "C0023",
+  "checked_date": "2026-10-10",
+  "exact_target": "For each integer 3<=d<=10, independent nearest-neighbor Bernoulli bond percolation on Z^d has theta_d(p_c(d))=0, with theta_d(p)=P_p(|C(0)|=infinity) and p_c(d)=inf{p in [0,1]:theta_d(p)>0}.",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "primary_math_source": {
+    "authors": [
+      "Gady Kozma",
+      "Shahaf Nitzan"
+    ],
+    "title": "A reduction of the theta(p_c)=0 problem to a conjectured inequality",
+    "url": "https://arxiv.org/html/2401.12397v1",
+    "version": "v1, 2024-01-22",
+    "locators": [
+      "Section 2.1 independent bond measure",
+      "Conjecture 1 product gluing",
+      "Conjecture 2 joint-event gluing",
+      "Conjecture 3 uniform near-one gluing",
+      "Theorem 6 lattice implication"
+    ],
+    "short_source_quote": "If conjecture 3 holds then P(|C(0)|=infinity)=0 at the critical probability for Z^d for any d>=2.",
+    "use": "Precise mathematical statement and published conditional route; not present-day openness certification."
+  },
+  "historical_high_dimension_source": {
+    "url": "https://arxiv.org/abs/1506.07977",
+    "authors": [
+      "Robert Fitzner",
+      "Remco van der Hofstad"
+    ],
+    "title": "Mean-field behavior for nearest-neighbor percolation in d>10",
+    "scope": "Nearest-neighbor percolation d>=11; no result for 3<=d<=10 supplied by this source."
+  },
+  "intake_reads": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "locator": "line 539, exact C0023",
+      "result": "tier 5, attempted_un"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+      "locator": "line 23, C0023; line 94, C0094",
+      "result": "Dated, bounded unreviewed search; duplicate locator identified."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "locator": "line 22, C0023-A001",
+      "result": "Half-space restriction does not preserve connectedness; unproved hyperplane gluing and half-space susceptibility steps remain in that attempt."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_G_20260910/attempts.jsonl",
+      "locator": "G0001-A001",
+      "result": "Site-percolation tail reformulation leaves the critical case; not transferred to the bond model."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md",
+      "locator": "C0023 and P0043 duplicate discussion",
+      "result": "Ranking/duplicate record, not a formal proof."
+    }
+  ],
+  "bounded_negative_checks": [
+    {
+      "paths": [
+        "~/<private-repo>/06_math_research/probability_1000_attempts_H_20260912",
+        "~/<private-repo>/06_math_research/probability_1000_attempts_I_20260914"
+      ],
+      "result": "No exact C0023 ID match in targeted text search and no percolation-named artifact in targeted filename search; not an exhaustive semantic search."
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "result": "No C0023 match on this board; related general-graph C0084 is listed."
+    },
+    {
+      "path": "~/Big Open problem in probability theory",
+      "result": "No percolation/C0023-named file returned by the constrained filename search. Owner solved/retired status not certified."
+    },
+    {
+      "path": "~/math-brain-build/export/population",
+      "result": "No percolation/C0023-named file returned by constrained filename search; canonical node query recorded separately."
+    }
+  ],
+  "recent_claim": {
+    "secondary_url": "https://lowrank.github.io/latent-seminar/2026-Fall/on-the-continuity-of-the-percolation-phase-transition",
+    "claim": "Claims a 2026-08-28 Anthropic formal artifact proving the bond target for all d>=2.",
+    "primary_repository_checked": "https://github.com/anthropics/formal-math",
+    "result": "Retrieved repository listing and README do not give a percolation theorem receipt. The pinned claimed proof was not obtained or kernel/semantically checked. Neither acceptance nor rejection of the mathematical claim follows.",
+    "formal_theorem_verified": false,
+    "axioms_verified": false,
+    "independent_kernel_run": false
+  },
+  "brain_scar": {
+    "recall_query": "C0023 critical percolation proof boundary mistakes",
+    "recall_result": "60-second timeout",
+    "fallback_index_result": "No relevant index match",
+    "named_source_read": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "lesson": "A local result and passing finite checks do not close the hardest global proof gap."
+  },
+  "own_result_source_tag": "owner-own-work",
+  "review": {
+    "independent_reviewer": "w428",
+    "status": "pending",
+    "adversary": "w427",
+    "statement_message": "msg-d37e8bae8b"
+  },
+  "brain_pipeline": {
+    "prepared": true,
+    "submitted": true,
+    "reviewed": false,
+    "ingested": false,
+    "retrievable": false,
+    "draft_path": "~/math-brain-inbox/w426/bundle_001.json",
+    "schema_check": "local PASS, live integrator not run"
+  },
+  "hardest_remaining_gap": "Uniform conditioning-safe near-one gluing on arbitrary cyclic weighted graphs, independent of relay count.",
+  "canonical_store_lookup": "STORE_LOOKUP.json; read-only bounded title query"
+}

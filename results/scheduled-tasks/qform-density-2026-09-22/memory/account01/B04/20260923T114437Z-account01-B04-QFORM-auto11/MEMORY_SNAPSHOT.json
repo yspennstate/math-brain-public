@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260923T114437Z-account01-B04-QFORM-auto11",
+  "source_control_commit_start": "e78a8eceb31205a6599db91c524ef4cf803682fd",
+  "source_control_commit_prepublication": "220baa53d89f0fc7118ef2c947cd7f89cd727a22",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "correction_inbox_latest_commit_observed": "a7d1a164807ea6a96ef0bd1d46ce2820e064b816",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "result_ids": [
+    "QFORM-HYPERBOLIC-SQUARE-GENERAL-CAPS-C0-v1",
+    "QFORM-ALIGNED-THREEBANK-HYPERBOLIC-SQUARE-C0-v1"
+  ],
+  "main_result": "For three disjoint original-coordinate banks S=c^T X_I, T=d^T X_J, U=e^T X_K, Q=2aST+H(T)+b(U+theta(T))^2 has a C0 density with ||p||inf <= 8/(||e|| sqrt(||c||||d||) sqrt(|ab|)) and integral |phi|^2 <=16pi/(same denominator).",
+  "partner_result_applied": {
+    "source": "yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/B04-20260922T181702Z-dac07509/REPORT.md",
+    "theorem": "QFORM-RANK1-BANK-HOLDER-LIFT-v1",
+    "application": "On Q_m=3ST+(1/2)TU+(3/2)U^2, sigma=3/2, alpha=1/2, K=4/sqrt(3/2), yielding ||p||inf <=(4/3)(3+2log4)=7.696784962986375; the new aligned theorem gives 16/3 and C0."
+  },
+  "source_match_pivot": {
+    "existing_overlap_safe_threebank": "yspennstate/math-open-problems@f8c400b6278ed70e1bf3eb9b7d0ccf4920f1cb06:proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/B04-20260922T215045Z-r19/REPORT.md",
+    "existing_physical_square_threebank": "yspennstate/math-open-problems@19a5e6e88d2d5756ebd92e85b00122ec0bdec699:proofnet24/QFORM-density/fleet-2026-09-22/account01/B09/B09-20260922T164451Z-r14/REPORT.md",
+    "new_scope": "aggregate square bank plus arbitrary one-sided active-bank H(T), with C0 and Fourier-L2"
+  },
+  "explicit_target_family": {
+    "form": "Q_m=3ST+(1/2)TU+(3/2)U^2 over three flat disjoint m-coordinate banks",
+    "spectral_certificate": "aggregate B is a 1/4-op-norm perturbation of spectrum {-3/2,3/2,3/2}; all three nonzero eigenvalues have modulus >=5/4",
+    "new_density_cap": "16/3",
+    "continuity": "C0",
+    "fourier_L2_squared_integral_cap": "32pi/3"
+  },
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "177417be17518e1e3014cf28cdb4a3169230ea53",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T114437Z-account01-B04-QFORM-auto11/REPORT.md",
+  "handoff_commit": "6c8212156f7693b09705ab0ad7b163c9721ef6a6",
+  "unresolved_implication": "QFORM-ALIGNED-THREEBANK-OR-MULTIDEFECT-ROUTING-v1: from bare s3(A)>=1 force target-scale aligned disjoint-bank currency or route failure to a completed higher-rank/ridge/volume/hub/pair endpoint without reciprocal local coefficients.",
+  "full_target_status": "OPEN",
+  "continuity_full_target_status": "OPEN",
+  "continuity_supporting_branch": "PROVED_C0",
+  "independent_review_status": "PENDING",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

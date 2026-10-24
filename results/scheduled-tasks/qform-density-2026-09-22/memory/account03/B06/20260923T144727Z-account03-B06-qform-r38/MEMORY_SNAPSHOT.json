@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260923T144727Z-account03-B06-qform-r38",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "control_revision": "2026-09-22.15",
+  "startup_control_commit": "7fb5426d0bc64cd47b2729bb9b3ba2076f6db83d",
+  "prepublication_control_observed_commit": "eb1e2aea23c68d499e9a1e706019f8a01b03df4e",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "result_id": "QFORM-ANCHORED-COFACTOR-E3-OR-RECURSIVE-RANK2-v1",
+  "result_status": "PROVED_SUPPORTING_DICHOTOMY",
+  "full_conjecture_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "FULL_OPEN; PAID_THREE_VOLUME_BRANCHES_INHERIT_SOURCE_CONTINUITY_ONLY",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "branch": "master",
+    "publication_refresh_commit": "ba023626f934128aadad51710c9ee8428dfe33c7",
+    "report_first_commit": "bf6b02303fd30b7778f75c335a3f410805159899",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T144727Z-account03-B06-qform-r38/REPORT.md",
+    "refresh_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T144727Z-account03-B06-qform-r38/PUBLICATION_REFRESH.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T144727Z-account03-B06-qform-r38/check_r38.py",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T144727Z-account03-B06-qform-r38/CHECKS.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "8327620dbde3e02b4e12fb5691a62ce18a63b38c",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B06/20260923T144727Z-account03-B06-qform-r38.md"
+  },
+  "actual_premises": [
+    "account04/B20 QFORM-N3-THREE-SINGULAR-CROSSCUT-v1 at math-open-problems@3671f29afb89083947437ffc4ebbb037aba58a4d: E=||N||_F^2>11907/16384 on an ORIGINAL-coordinate cut",
+    "account03/B06 r37 at math-open-problems@fa9d5dd3cc78a092484480b536872d332e22c90a: anchored cofactor C=bD-cr^T satisfies ||C||_F>(sqrt(3937)/1024)E in the low-disjointness branch",
+    "source-pinned D-prime/volume receiver at math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+    "fresh account02/B01 QFORM-VOLUME-MARGINAL-TO-THREE-HUB-v1 at math-open-problems@31608e4193b3ba491084081cb7c000e254c01a82"
+  ],
+  "new_math": [
+    "For N=[[b,r^T],[c,D]], C=bD-cr^T and b!=0, the sum of squared physical 3x3 minors containing both anchors equals b^(-2)e_2(C^TC).",
+    "If e_2(C^TC)<tau b^2||C||_F^2, then dist_F(C,rank<=1)^2<2tau b^2 and dist_F(D,rank<=2)<sqrt(2tau).",
+    "At tau=1/64 in the live r37 branch, enough cofactor second exterior volume forces e_3(N^TN)>3.098491835956674e-5; fresh volume-marginal routing gives density <127.023 or <47.879, otherwise a <=2-heavy-by-<=2-heavy third-volume concentration class.",
+    "If the exterior-volume test fails and |b|<1/32, more than 98.46 percent of cofactor Frobenius energy lies in its top singular direction; on the large-core branch more than 93.84 percent of D Frobenius energy lies in its top two singular directions."
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "partner": {
+    "designated": "account04/B06",
+    "designated_completed_current_qform_artifact_found": false,
+    "fabricated": false,
+    "compatible_account04_result_actually_applied": "account04/B20 QFORM-N3-THREE-SINGULAR-CROSSCUT-v1"
+  },
+  "unresolved": [
+    "Upgrade the high-disjointness half-Riesz credit sup_s E|Q-s|^-1/2<24.121 to a true L-infinity density without assuming a fresh independent square.",
+    "Pay the recursive absolute rank-two core while retaining its nonzero cross tail and arbitrary same-bank curvature, or route it to <=2x<=2 heavy-volume/mixed-hub/physical-pair receivers."
+  ],
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {"reasoning_tokens": null, "provider_thinking_seconds": null, "source": "not_exposed"},
+  "quiet_delivery": true
+}

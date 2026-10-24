@@ -1,0 +1,134 @@
+{
+  "target": "C0047",
+  "records": [
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+      "line": 37,
+      "row": {
+        "attempt_id": "C0047-A001",
+        "author": "claude-probability-1000-continue-0907",
+        "independent_check": "",
+        "key_identity": "",
+        "method": "Attempt the non-amenable direction through the spectral radius criterion of Benjamini-Schramm and Hutchcroft's p_c <= 1/spectral radius... type bounds.",
+        "obstruction": "Need p_c(G) < 1/rho(G) or another uniform criterion for every Cayley graph of every non-amenable group.",
+        "problem_id": "C0047",
+        "recorded_at": "2026-09-07T06:38:45Z",
+        "result": "Known route: if p_c < 1/rho where rho is the spectral radius of simple random walk, then at p slightly above p_c the expected number of open paths of length n to distance n grows slower than the number of returns... this gives p_c < p_u for graphs where p_c(G) < 1/(rho ... ) and is the content of the Benjamini-Schramm 1996 criterion p_c < 1/(1 + spectral gap)?; the general conjecture needs p_c < p_u even when p_c is close to 1/rho... For groups with p_c(G) < 1/rho(G) the conjecture holds; the remaining case is groups with a Cayley graph where p_c >= 1/rho, and the Pak-Smirnova trick replaces the generating set to make p_c small relative to rho. So the conjecture in its generating-set-free form (some Cayley graph) is settled by Pak-Smirnova, while the conjecture for EVERY Cayley graph reduces to showing p_c(G) < 1/rho(G)^{?}... I checked the inequality p_c <= 1/(1 + h) where h is the Cheeger constant... Benjamini-Schramm prove p_c <= 1/(1+h) and p_u >= 1/(1+h)?? no. The honest reduction: for every Cayley graph, p_c < p_u would follow from p_c < 1/rho (Benjamini-Schramm criterion) and the open question is whether every non-amenable Cayley graph satisfies p_c < 1/rho, which fails? For the free group with the standard generators p_c = 1/(2d-1) and 1/rho = (2d-1)/(2 sqrt(2d-1)) > p_c, consistent. No counterexample and no proof.",
+        "schema": "probability-attempt.v1",
+        "substantive": true
+      },
+      "row_sha256": "bce708dfedeba3ecb8c4507290f4a249031ac9f689056b5c8a3ea7a9b4969b26"
+    },
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+      "line": 47,
+      "row": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "C0047",
+        "historical_status": "source_says_open",
+        "intake": "claude_20260907",
+        "locator": "Conjecture 2, p. 4",
+        "problem_id": "C0047",
+        "recorded_at": "2026-09-07T06:38:45Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "duminil_copin_icm_2018",
+        "statement": "For a Cayley graph G of a finitely generated infinite group, p_c(G) < p_u(G) if and only if the group is non-amenable.",
+        "status_search": "Amenable direction is known (Burton-Keane uniqueness gives p_c = p_u). The non-amenable direction is known for many classes (Pak-Smirnova for some generating sets, Hutchcroft for several classes including nonunimodular and hyperbolic settings); not verified in a bounded search whether the full conjecture has been settled by 2026.",
+        "title": "Benjamini-Schramm conjecture: p_c < p_u if and only if the group is non-amenable",
+        "verification": "unreviewed"
+      },
+      "row_sha256": "a6ba3484d486c204bb29a790f2490d0728e7d50626084ac34fce76d84036e7fb"
+    },
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\sources.jsonl",
+      "line": 8,
+      "row": {
+        "access_evidence": "arXiv 1712.04651",
+        "acquired_at": "2026-09-07T06:19:55Z",
+        "acquisition_status": "validated_and_extracted",
+        "bytes": 1131571,
+        "extracted_characters": 73158,
+        "extracted_sha256": "30ec55d98be90e7aacddfad608b27a8da5bb51844608cbc78c9062db74023f21",
+        "final_url": "https://arxiv.org/pdf/1712.04651",
+        "http_status": 200,
+        "intake": "claude_20260907",
+        "kind": "pdf",
+        "page_count": 21,
+        "raw_relative_to_downloads": "sources/duminil_copin_icm_2018/source.pdf",
+        "reading_status": "unread",
+        "schema": "probability-source.v1",
+        "sha256": "d46fd63bd798736d1a463aade6e4c04f365da2e45d05d956a1812ec9c55950f2",
+        "source_id": "duminil_copin_icm_2018",
+        "statement_validation": "not_started",
+        "text_relative_to_downloads": "sources/duminil_copin_icm_2018/text.txt",
+        "title": "Duminil-Copin: Sixty years of percolation, ICM 2018",
+        "url": "https://arxiv.org/pdf/1712.04651"
+      },
+      "row_sha256": "8f2fb1d722185ecb8e6659d2ff269b6a2faf46926cd878255d8cf5fc148dab49"
+    }
+  ],
+  "coverage": [
+    {
+      "folder": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907",
+      "exact_C0047_rows": 2,
+      "scope": "top-level jsonl target-id rows only",
+      "absence_is_not_retired_status": true
+    },
+    {
+      "folder": "~\\<private-repo>\\06_math_research\\probability_1000_intake_D_20260908",
+      "exact_C0047_rows": 0,
+      "scope": "top-level jsonl target-id rows only",
+      "absence_is_not_retired_status": true
+    },
+    {
+      "folder": "~\\<private-repo>\\06_math_research\\probability_1000_intake_E_20260908",
+      "exact_C0047_rows": 0,
+      "scope": "top-level jsonl target-id rows only",
+      "absence_is_not_retired_status": true
+    },
+    {
+      "folder": "~\\<private-repo>\\06_math_research\\probability_1000_intake_F_20260908",
+      "exact_C0047_rows": 0,
+      "scope": "top-level jsonl target-id rows only",
+      "absence_is_not_retired_status": true
+    },
+    {
+      "folder": "~\\<private-repo>\\06_math_research\\probability_1000_intake_G_20260910",
+      "exact_C0047_rows": 0,
+      "scope": "top-level jsonl target-id rows only",
+      "absence_is_not_retired_status": true
+    },
+    {
+      "folder": "~\\<private-repo>\\06_math_research\\probability_1000_intake_H_20260914",
+      "exact_C0047_rows": 0,
+      "scope": "top-level jsonl target-id rows only",
+      "absence_is_not_retired_status": true
+    },
+    {
+      "folder": "~\\<private-repo>\\06_math_research\\probability_1000_intake_I_20260914",
+      "exact_C0047_rows": 0,
+      "scope": "top-level jsonl target-id rows only",
+      "absence_is_not_retired_status": true
+    },
+    {
+      "folder": "~\\<private-repo>\\06_math_research\\probability_1000_attempts_H_20260912",
+      "exact_C0047_rows": 0,
+      "scope": "top-level jsonl target-id rows only",
+      "absence_is_not_retired_status": true
+    },
+    {
+      "folder": "~\\<private-repo>\\06_math_research\\probability_1000_attempts_I_20260914",
+      "exact_C0047_rows": 0,
+      "scope": "top-level jsonl target-id rows only",
+      "absence_is_not_retired_status": true
+    },
+    {
+      "folder": "~\\<private-repo>\\06_math_research\\prob1000_lean_20260908",
+      "exact_C0047_rows": 0,
+      "scope": "top-level jsonl target-id rows only",
+      "absence_is_not_retired_status": true
+    }
+  ]
+}

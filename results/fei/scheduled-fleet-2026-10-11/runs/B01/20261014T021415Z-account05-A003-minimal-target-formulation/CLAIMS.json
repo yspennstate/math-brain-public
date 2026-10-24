@@ -1,0 +1,54 @@
+[
+  {
+    "claim_id": "A003-INTERLEAVED-SHADOW-SIGNED-OWNERSHIP",
+    "version": 1,
+    "exact_statement": "For every disjoint actual Boolean substitution F=A+hD, f(z,r)=A+zD, and every adaptive physical prefix interleaving encoder and data queries, let V_v=Var(h_v)B_z(f_v), Q=sum_encoder w gamma_v^2 B_z(f_v), and R=sum_data w Var(h_v)[B_z(f_v)-average B_z(f_child)]. Then Q+R=V_root-E V_leaf exactly; R may be negative and physical data influence uses encoder-output bias q=(1+E h_v)/2. With A026 C0=log2(32/27)+2/(e ln2), a=2/ln2, H(root)<=E H(leaf)+E_inner+E_data+V_root-E V_leaf-R+(C0+a)S_encoder+a S_data. For every even k>=4, source bent-flip g(s,y)=b(y)-1_0+s1_0, f(z,u,y)=g(zu,y), encoder h=Maj3, querying u then completing only the encoder gives R=-B_s(g), Q=B_s(g)>=2^-k(k-1), spent unlocking plus encoder influence=(5/2)2^-k, so no uniform local price funds this bank even using both accounts. Actual unlocking erasure is zero, terminal entropy is [k+H(b-2*1_0)]/2, and E_inner=2^-k. A single actual terminal K=2 surplus S2>=2k*2^-k pays Q+E_inner<S2 once. H(F)/I(F)<3; no FEI disproof or arbitrary-seed reserve follows.",
+    "hypotheses": [
+      "Entropy in bits; actual fair physical restriction weights; encoder support disjoint from outer data; fresh auxiliary shadow z is not physically queried.",
+      "Use current actual restricted f_v,h_v and retain terminal V and entropy; no assumption that signed data drops are nonnegative.",
+      "Bent control b is the tensor quadratic bent sign positive at the origin; all-k ownership/no-go scope even k>=4; no data-core coordinates y queried in its stated policy."
+    ],
+    "statement_sha256": "b6571d2ea63da7628fc88e624c34cdb25ad12e84a4ff2ccd9fb5a9981665cde1",
+    "contributors": [
+      "A003; consumes the explicit A096 bent-flip/parity-pair family"
+    ],
+    "proof_source": {
+      "run_id": "20261014T021415Z-account05-A003-minimal-target-formulation",
+      "path": "DERIVATION.md",
+      "locator": "sections 1-5",
+      "validation": [
+        "out/VALIDATION.json",
+        "out/TERMINAL_OWNER.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A026-SIGNED-ROW-UNIFORM-SHADOW-TRANSFER",
+        "version": 1,
+        "review": "scoped independent reconstruction in REVIEW.md"
+      },
+      {
+        "source": "A096 stage4 DERIVATION.md",
+        "locator": "section 4 explicit bent-flip/parity-pair construction; directly reconstructed, full KL chain not assumed"
+      }
+    ],
+    "review_records": [],
+    "status": "SCOPED_AUTHOR_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Uniform local price for negative data-shadow drop from its queried physical influence",
+      "Uniform shadow-bank price using the unlocking bit plus entire downstream encoder influence while excluding the terminal data core"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A026",
+      "A004",
+      "A087",
+      "A094",
+      "A096",
+      "B01",
+      "B06",
+      "B20"
+    ]
+  }
+]

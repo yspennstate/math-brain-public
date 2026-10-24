@@ -1,0 +1,75 @@
+{
+  "helper_version": "A006@1/A007@1 independent queue and activation audit v1",
+  "family": "sunflower truth tables and all partition runs; every nonconstant <=3-bit seed activated on a fresh conjunction; XOR of equal-width AND signs",
+  "domain": {
+    "sunflower_m": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "auxiliary_theta": [
+      "2/5",
+      "1/2"
+    ],
+    "seed_dimensions": [
+      1,
+      2,
+      3
+    ],
+    "activation_r": [
+      1,
+      2,
+      3
+    ],
+    "xor_pairs": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  "case_count": {
+    "sunflower_parameter_pairs": 10,
+    "activated_seeds": 810,
+    "xor_parameter_pairs": 9
+  },
+  "symmetry": "none for Boolean seeds or assignments; coordinate-order invariance proved analytically, reverse order also checked",
+  "arithmetic": "integer FWHT, exact Fraction probabilities and moments; symbolic logarithm vector for rank identity; all-dimensional signs supplied analytically",
+  "memory_estimate_MB": 40,
+  "max_runtime_seconds": 60,
+  "automatic_dimension_escalation": false
+}

@@ -1,0 +1,9 @@
+{
+  "controls": "Same physical x coordinates at every level; no fresh-block assumption.",
+  "address_recurrence": "M_t=A_t M_(t-1)+B_t over F_2",
+  "phase_recurrence": "q_t=q_(t-1)+p_t with degree(p_t)<=2",
+  "two_edits": "Fixed distinct u,v; M_t(u+v)=0 for each shared-fiber stage",
+  "gate_labels": "Same address z reuses the same actual y_z. Different labels use independent signs.",
+  "ledger": "Evaluate DERIVATION section 1 at each stage; increments are differences, including coherent signed cancellations.",
+  "tree": "Address-active physical controls first, then restricted nonzero polar rows; retain edited linear-phase terminals and one weighted data influence."
+}

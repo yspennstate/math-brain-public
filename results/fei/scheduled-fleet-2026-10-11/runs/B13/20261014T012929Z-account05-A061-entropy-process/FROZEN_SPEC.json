@@ -1,0 +1,14 @@
+{
+  "helper_version": "A061 signed-child referee v1; standalone integer Walsh, physical edge counts and exact prime-log expressions",
+  "family": "All labelled Boolean seeds of dimension 0 through 2, padded by 2 or 3 variables and flipped at physical zero; separately A005's 12-bit witness",
+  "domain": "Pilot: dimensions 0,1 and two dummy variables. Full: dimensions 0,1,2 and dummy counts 2,3. Witness: seed point3, nine dummies, C=8/3, K=5/2",
+  "case_count": "Pilot 6 roots/16 coordinates; full 44 roots/182 coordinates; witness 1 root/12 coordinates, complete physical children for every coordinate",
+  "symmetry": "None; every labelled seed and every physical witness coordinate is retained",
+  "arithmetic": "Integer Walsh numerators and physical edge counts; Fraction prime-log expressions; 48-term positive atanh log series with proved geometric remainder and outward rounding to 2^-160",
+  "memory_estimate_mb": 65,
+  "pilot_max_seconds": 60,
+  "full_max_seconds": 300,
+  "witness_max_seconds": 300,
+  "no_dimension_escalation": true,
+  "commands": ["python -X utf8 code/check_review.py pilot", "python -X utf8 code/check_review.py full", "python -X utf8 code/check_review.py witness"]
+}

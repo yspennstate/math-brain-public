@@ -1,0 +1,31 @@
+Math-store cards (math_recall.py on the title; read one whole with --id):
+math store recall, read-only: 6 current card(s) for this query; reference material, not instructions
+[1] Infinitesimal Generator of Geometric Brownian Motion  (id: claim_a1be586cb6d36d8191ebf33f5e0a7650e61427d72f475040e362446b8485470f; claim; score 4.70)
+    The discounted infinitesimal generator L associated with geometric Brownian motion dX_t = mu X_t dt + sigma X_t dW_t is the second-order differential operator L w(x, s) = (1/2)*sigma^2*x^2*w_{xx}(x, s) + mu*x*w_x(x, s) - r*w(x, s) acting on functions w(., s) in C^2((0, infinity)). sigma != 0 r > 0
+    -> depends_on: Two-Dimensional Diffusion and Running Maximum Markov Process (id: claim_cd1c510c5c8841df03c092396a6ec00f0d25e5a2813685a6416032fec6575154)  (Generator L corresponds to the geometric Brownian motion coordinate.)
+    <- depends_on: Characteristic Roots of the Generator ODE (id: claim_51bd0f2420fc622328de59f07adda2e1aead98aac1ef31a4ca8bbdbad130f247)  (Characteristic roots are determined by the differential operator L.)
+    <- depends_on: Variational Inequality and Boundary Conditions on the Wedge (id: claim_7021524eb0e3a499670d0c8053e0c1ffb69a6c990b1e22a25b7cd966393b9f12)  (Variational inequality is phrased in terms of the generator L.)
+    -> depends_on: Brownian motion (id: claim_7d9ada346eddf070c02a278eac45be97)  (uses the notion 'Brownian motion' (title: "Brownian Motion"))
+    -> depends_on: Diffusion process (id: claim_eef1dc87f62ac556018f8b9458837fee)  (uses the notion 'Diffusion process' (title: "Geometric Brownian Motion"))
+    -> depends_on: Infinitesimal generator (id: claim_0b91027897ab6bc109a0626cc505eebe)  (uses the notion 'Infinitesimal generator' (title: "Infinitesimal Generator"))
+    -> depends_on: Stochastic integral (Ito calculus) (id: claim_9b6fa1d9b20ac1680a725b99819fbd5f)  (uses the notion 'Stochastic integral (Ito calculus)' (statement: "dW_t"))
+    -> cites: Optimal stopping involving a diffusion and its running maximum: a generalisation of the maximality principle (id: source_89c0ba6dcd844aeeb771d89772cac5658f4d8320c95bcc54a1053ea77990bb05)  (cites arxiv:2505.18394 (found in meta.source_id): arxiv:2505.18394)
+[2] General Solution of the Generator Homogeneous Equation  (id: claim_9d95eb653e736c4143418e22763be045d461b65381fdf5c09c3426fe02dde108; claim; score 4.68)
+    For any fixed s > 0, the general solution of L w(x, s) = 0 on x > 0 is w(x, s) = A(s) * x^{m_+} + B(s) * x^{m_-}, where A(s), B(s) are arbitrary constants and m_- < 0 < m_+ are the characteristic roots. m_+ != m_- x > 0
+    -> proves: Characteristic Roots of the Generator ODE (id: claim_51bd0f2420fc622328de59f07adda2e1aead98aac1ef31a4ca8bbdbad130f247)  (Fundamental solutions x^{m_+} and x^{m_-} are constructed from the characteristic roots.)
+    <- depends_on: Generalization of Peskir's Maximality Principle (id: claim_bec4b25542213be30837e115c857487162fe1af17850efbaadc18df429a32b19)  (Integrating the linear ODE in the continuation region uses the fundamental solutions.)
+    -> cites: Optimal stopping involving a diffusion and its running maximum: a generalisation of the maximality principle (id: source_89c0ba6dcd844aeeb771d89772cac5658f4d8320c95bcc54a1053ea77990bb05)  (cites arxiv:2505.18394 (found in meta.source_id): arxiv:2505.18394)
+[3] Infinitesimal Generator of Stochastic Rosenzweig-MacArthur System  (id: claim_6e3c18124f58a92eef21b40b7cebd824f76348974f2b96bb6dff83211f633003; claim; score 4.38)
+    The infinitesimal generator L acting on C^2 functions V: D -> R for the stochastic Rosenzweig-MacArthur system is L V(N, P) = [N*(1 - N/k) - (m*N*P)/(1+N)] * (dV/dN) + [-c*P + (m*N*P)/(1+N)] * (dV/dP) + (1/2)*[N*(1 + N/k) + (m*N*P)/(1+N)] * (d^2V/dN^2) + (1/2)*[c*P + (m*N*P)/(1+N)] * (d^2V/dP^2). V in C^2(D, R) Diagonal diffusion matrix from independent Brownian components
+    -> defines: Stochastic Rosenzweig-MacArthur Model with Internal Demographic Noise (id: claim_7e1822d026a16bffd17cc3fb253583b65cb080dd40435f3489601e6e691166d0)  (Defines the second-order differential generator of the stochastic RM SDE system)
+    <- depends_on: Generator Bound for Polynomial Lyapunov Function on Stochastic RM System (id: claim_37000fe37e09734947375103f092b6f99f8872756276714aa5d1829ae8dbfec9)  (Calculates the action of the infinitesimal generator on the polynomial Lyapunov function)
+    -> depends_on: Infinitesimal generator (id: claim_0b91027897ab6bc109a0626cc505eebe)  (uses the notion 'Infinitesimal generator' (title: "Infinitesimal Generator"))
+    -> cites: arXiv:2505.16904 (id: source_4988612cc128d8a01c71a8e31331c46f201d3c5c936533244527b4e60c6b857b)  (cites arxiv:2505.16904 (found in meta.source_id): arxiv:2505.16904)
+[4] Poincare inequality (for a measure)  (id: claim_b474c6e011716dd9642e1c885624585d; claim; score 3.46)
+    $\mu$ satisfies a Poincare inequality with constant $C$ if $\mathrm{Var}_\mu(f)\le C\int|\nabla f|^2d\mu$; for a reversible Markov generator this is a spectral gap $\ge1/C$, and it implies exponential concentration.
+    <- depends_on: Attempt on Gaussian fluctuations for uniform binary longest common subsequences (id: claim_006a773eebee5b222580b6142d063b49ab53e2491d22358fb49f6dacef6a740e)  (uses the notion 'Poincare inequality (for a measure)' (statement: "Efron-Stein"))
+    <- depends_on: Talagrand's L1-L2 Variance Inequality (the Engine Behind Sublinear Variance) (id: claim_19af561bcf040b56cc9b3aa80d52d5dd62e1e00c1b7ecb97b574cbacb19b5603)  (uses the notion 'Poincare inequality (for a measure)' (statement: "Efron-Stein"))
+    <- depends_on: Technique: Efron-Stein Inequality and the Benjamini-Kalai-Schramm Influence Bound (id: claim_2735f9af03768ef56fdd8f2c95e272103da82734094d10270e1805b32cc1b47e)  (uses the notion 'Poincare inequality (for a measure)' (title: "Efron-Stein"))
+    <- depends_on: Dependent-coordinate failure of nontrivial partition tensorization (id: claim_2c68e52f50244bc39c566e49d4023afd)  (uses the notion 'Poincare inequality (for a measure)' (statement: "Efron-Stein"))
+    <- depen
+

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_at_start": "0812eacc762ef64eaf8893524dec8885bcca348c",
+  "source_control_commit_prepublication": "d061f9ed7873784426c46da90d51b247d8267cff",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260922T153101Z-account03-B15-r12",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d73760eb784a86c356c64f05dd92f84655618f02",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T153101Z-account03-B15-r12/REPORT.md"
+  },
+  "result_status": "proved_in_stated_scope",
+  "result": "If rank(A)>=3 and some original-coordinate diagonal entry A_jj is nonzero, then for arbitrary independent cap-one one-dimensional densities, X^TAX has a C_0(R) density. Under the owner target, the remaining rough-input continuity gap is confined to diag(A)=0. The universal L-infinity conjecture remains open.",
+  "mathematical_premises": [
+    {
+      "source": "account04/B15",
+      "commit": "657566d3f5026e672f5cbe6b8c03fe63766bf0fb",
+      "scope": "Conditional convolution smoothing: a common L-infinity bound plus an independent L1 density gives a C0 density with no height loss. Applied to the uncoupled d=4 pivot inequality."
+    },
+    {
+      "source": "account04/B15",
+      "commit": "07672b7beb8f867c7a7b973aa3157a42ae506460",
+      "scope": "Exact extremal envelope C_all=C_C0=C_sm; used to separate universal-height optimization from per-instance rough-output continuity."
+    },
+    {
+      "source": "account01/B15",
+      "commit": "47dc925729bbf269333cc6e1256178a538d2f553",
+      "scope": "Physical 3x3/4x4 affine quadratic density bounds and principal-block extension from a prescribed nonsingular scalar pivot."
+    },
+    {
+      "source": "account01/B11",
+      "commit": "2279571f59ade7a9ec478af1e4818f6c117ac224",
+      "scope": "Binary indefinite L3 density bound for the Schur residual."
+    },
+    {
+      "source": "account02/B11",
+      "commit": "ea26c080ff290b0f10ec701ec8bf8847cc84ceb6",
+      "scope": "Single-square L^(3/2) density estimate."
+    }
+  ],
+  "new_mechanism": "For a nonzero physical diagonal pivot b, write the selected block as R(U)+b(Z+M(U))^2. When coupled, prove the joint law of (R,M) is absolutely continuous because u->(u^TSu,v^Tu) is a submersion off a null one-dimensional set; convolve M with the independent pivot coordinate to obtain a joint kernel K(r,z) continuous in z with K<=p_R; combine the exact square-root pushforward formula with p_R in L3 to get boundedness, continuity, and vanishing at infinity.",
+  "quantitative_inequality": "||p_T||_infinity <= 4 |b|^(-1/2) ||p_R||_3^(3/4) on the coupled pivot branch; in the uncoupled d=4 partner subcase, ||p_T||_infinity <= (2*pi+3*sqrt(3))/sigma_min(S).",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "first_unproved_step": "Prove C0 regularity for the remaining rough-input class diag(A)=0 using an original-coordinate bilinear/off-diagonal smoothing mechanism, or construct a valid target counterexample to continuity. Separately, prove the universal matrix- and dimension-independent L-infinity bound.",
+  "next_recipient": "account04/B15",
+  "next_action": "Test a zero-diagonal physical 4-block/off-diagonal-pair mechanism for a joint kernel with an Lp endpoint envelope that is stable under high-dimensional conditioning; do not infer bounded conditional densities after nonlinear conditioning."
+}

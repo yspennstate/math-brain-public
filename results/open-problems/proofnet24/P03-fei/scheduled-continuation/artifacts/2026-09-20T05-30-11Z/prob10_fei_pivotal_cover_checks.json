@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "seed": 20260920,
+  "exact_boolean_adaptive_tree_cases_n_le_3": 1380,
+  "random_boolean_adaptive_tree_cases_n_4_5": 600,
+  "identity_failures": 0,
+  "checked_exact_identities": [
+    "Q_T = sum_i E[piv_i * 1{i queried}]",
+    "I_L = sum_i E[piv_i * 1{i survives}]",
+    "C_T = sum_{i<k} E[square_piv_{ik} * 1{i or k queried}]",
+    "descendant_influence_sum = sum_i E[piv_i * lifetime_i]",
+    "C_2(root) = C_T + average_leaf_C_2"
+  ],
+  "cubic_star_central_query": [
+    {"r":1,"Q":"1/4","I_L":"1/2","C":"1/1","C_over_Q":4.0,"two_account_KL_exact":2},
+    {"r":2,"Q":"3/8","I_L":"1/1","C":"2/1","C_over_Q":5.333333333333333,"two_account_KL_exact":2},
+    {"r":3,"Q":"7/16","I_L":"3/2","C":"3/1","C_over_Q":6.857142857142857,"two_account_KL_exact":2},
+    {"r":4,"Q":"15/32","I_L":"2/1","C":"4/1","C_over_Q":8.533333333333333,"two_account_KL_exact":2},
+    {"r":5,"Q":"31/64","I_L":"5/2","C":"5/1","C_over_Q":10.32258064516129,"two_account_KL_exact":2},
+    {"r":6,"Q":"63/128","I_L":"3/1","C":"6/1","C_over_Q":12.19047619047619,"two_account_KL_exact":2}
+  ],
+  "one_point_full_order_lifetime_over_J": [[2,1,2],[3,1,1],[4,3,2],[5,2,1],[6,5,2],[7,3,1],[8,7,2],[9,4,1],[10,9,2],[11,5,1],[12,11,2]],
+  "addressing_natural_address_tree_lifetime_over_J": [
+    [1,0.6666666666666666,"1/1","3/2"],[2,1.25,"5/2","2/1"],[3,1.8,"9/2","5/2"],[4,2.3333333333333335,"7/1","3/1"],[5,2.857142857142857,"10/1","7/2"],[6,3.375,"27/2","4/1"],[7,3.888888888888889,"35/2","9/2"],[8,4.4,"22/1","5/1"],[9,4.909090909090909,"27/1","11/2"],[10,5.416666666666667,"65/2","6/1"],[11,5.923076923076923,"77/2","13/2"],[12,6.428571428571429,"45/1","7/1"]
+  ],
+  "note": "Exact Fraction checks validate identities on finite cases only; all-dimensional claims rely on proofs in the report. No independent audit or Lean verification."
+}

@@ -1,0 +1,45 @@
+# A096 stage6: carry the paid reference, keep the ancestor account
+
+## exact target, quantifiers, hypotheses and units
+
+Continue the actual paid supplied-reference floor through physical data queries while preserving one original bank and complete terminals. For every finite uniform Boolean sign and every complete normalized finite-cost Q, derive the exact conservative child-reference account. Apply it conditionally to the all-parameter A097 negative-cell floor at a>=1,b>=0,r>=1 and c<=C0 I(g). Costs are ideal bits, influence is ordinary physical flip probability. Closed target: arbitrary finite adaptive NO-RESET history payment from the original paid floor. Full FEI and prescribed fresh-reference reset remain OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Read current BOARD (2026-10-14 09:43 UTC), own STATUS and B20 STREAM_NOTES v2 (still2026-10-11 23:39Z). Lead T12 task was independently accepted earlier, so dispatch consumes new reference/history dependencies. Entire execution-v2 protocol reread. Critical originals: A097 stage5 full REPORT/DERIVATION/CLAIMS, sections1-5 floor, source-bank and hereditary boundary; A098 stage5 complete REPORT reconstruction and source CLAIMS; A081 stage6 REPORT/CLAIMS, thirty already-closed second-query policies, original A096 acceptance and A082 review normalization objection; A082 stage5 REPORT/REVIEW/CLAIMS; A001 stage6 REPORT/DERIVATION and checker interface; A050 stage5 REPORT distinguishing conditional envelope/reset payment. Own stage5 proof/checker supplies history, no new acceptance inferred. Source bytes pinned in out/SOURCE_MANIFEST.json. No external literature or brain query needed. Earlier campaign/paper reads remain prior-stage provenance.
+
+Full saved-report intake: 493 reports, 923 source claim records, 1135 dependency entries, all100 packets, 101 new reports since stage5. Complete report text is bundled in out/REPORT_SOURCE_BUNDLE.txt. This source ledger is a proposed canonical delta, not independent acceptance of every bundled theorem or a second shared registry.
+
+## complete derivation or exact first unsupported line
+
+DERIVATION sections1-2 prove the elementary complete-reference identity CE_parent=B_j+mean CE_children+R_j. BOTH child references are Q marginalized over spectral coordinate j; actual child laws still use signed Fourier amplitudes. R_j is the nonnegative conditional occupancy KL on full reference support. No ghost mass, empty atom or actual terminal H+D is discarded. Adaptive telescoping retains previously executed debits and increases the original remaining ancestor account only by these measured refunds. KL alone can increase by the phase discrimination J_j; it is not mistaken for the full CE account. This chain rule is baseline information theory, not a newly claimed universal FEI reduction.
+
+Section3 applies that exact mechanism to A097's independently accepted paid floor, keeping the SAME incoming Q and all its actual normalizers. For every finite adaptive data/control stopping history, erasures plus full expected terminal CE are <=original CE<=(2C0+10)I(F), or18I(F) for its structural source. This is a substantive all-depth conditional continuation of the supplied-reference construction; no descendant floor is reset or renewed. An independent untouched arbitrary terminal keeps its entire prescribed CE with coefficient one and funds nothing.
+
+Section4 gives the honest boundary: at a=2,b=0,r=1 the root Q even equals the actual spectrum, but one active query has a constant child with inherited Q=(5/8,1/8,1/8,1/8), full CE=log2(8/5)>0 and physical influence0. Thus the ancestor account cannot be promoted to an individual descendant influence bound. First unsupported universal line: construct an O(I) initial complete reference for arbitrary Boolean sources, or jointly fund specified fresh-reference resets and complementary complete terminals from unused ancestor capacity. The proof does not price those additional bills.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+out/FROZEN_SPEC.json preceded computation: a=1..3,b=0..2,r=1..2, three supplied source references (structural spectrum, uniform, increasing rational weights); every labeled first data coordinate, every ordered distinct two-data-coordinate policy and one outcome-adaptive policy per root. Each root additionally tensors every16 two-bit Boolean terminal with its untouched uniform complete reference. No symmetry reduction; maximum edit dimension7 and tensor dimension9. All-dimensional continuation is analytic, not a finite extrapolation.
+
+Commands: python -X utf8 runs/20261014T094929Z-account05-A096-live-gap-ledger/code/bootstrap.py; python -X utf8 runs/20261014T094929Z-account05-A096-live-gap-ledger/code/check.py --pilot; python -X utf8 runs/20261014T094929Z-account05-A096-live-gap-ledger/code/check.py. Pilot3 roots/30policies/1911assertions PASS in0.276s. Initial full attempt stopped after53 completed roots because unrounded Fraction interval serialization exceeded Python's integer digit limit. ATTEMPT_1 preserves that failure; no mathematical assertion failed or partial total credited. Frozen revision2 rounds interval endpoints outward to2^-90 before output, with the same32-term rational atanh bounds, case domain, runtime and memory. It does not increase precision or the digit limit. Final PASS: 54 root-reference cases, 612 policies, 1513 actual exposure nodes, 74816 exact assertions in7.8176s. Integer Walsh/direct physical edge counts, Fraction normalization, exact prime-log identities and rational log intervals check complete transport, source prices, full-terminal telescopes and the actual local-rate witness. Nonnegative general conditional KL uses its analytic Gibbs proof; not every row is separately interval-tested.
+
+Memory estimate100MB, peak unmeasured; each job capped55s. No >300MB job, so memok gate not triggered. No heavy/background/GPU job or automatic dimension increase.
+
+## proof dependencies and changed downstream conclusions
+
+The general transport identity and constant-child obstruction are self-contained. The priced floor application explicitly depends on A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK@1, independently accepted in full by A098; no new A096 review or author status edit is claimed. Consume A081's full-scope acceptance of own non-flat remainder and A082's full-scope price-five acceptance. Review-only A082 empty-mask derivative mass delta*a_i^2/E_i is corrected to a_i^2/E_i by summing all2^d atoms then dividing by e_i=delta E_i. Original A096 statement/loss is unchanged. out/REVIEW_CORRECTION.json records exact scope; no accepted author theorem is retracted.
+
+A081 already closed the thirty AND3 second-query policies, so those are retired from A096 work. A097/A099 may now distinguish automatic conservative no-reset ancestor transfer from the genuinely unpaid fresh-floor/local-rate conversion. Their previous boundary is narrowed only for the specified continuation; arbitrary canonical reset and universal FEI remain open. Universal constant improvement is zero.
+
+## one next mathematical action and independent reviewer
+
+After one weak non-flat active query, price a specified fresh descendant floor relative to the SAME marginalized incoming Q and remaining ancestor account, including complementary full terminal, old debit and signed reset; do not repeat automatic no-reset transport. A097 primary independent reviewer, A081 or A094 alternate; A099/A001 mathematical consumers. This is a source-bound local handoff, with no messages or remote adoption asserted.
+
+## actual persistence receipts or precise save blocker
+
+Four exact protocol files, DERIVATION, frozen spec/revision, initial failure, independent checker, final rational outputs, source-bound acceptance/correction receipts, complete source ledger and byte manifest saved in this assigned run. Rolling STATUS two lines, WORKLOG appended and LEARNED updated. code/finalize.py checks exact schemas, statement hashes, compatibility identity and size ceilings, then out/PERSISTENCE_RECEIPTS.json records bytes and SHA256. No local save blocker. Independent review of the new claims, canonical adoption, supervisor copy and remote mirrors are unverified.
+
+## Universal bridge
+
+C024 history transfer and C019 stopping payment advance from A097's paid root floor to ALL finite adaptive no-reset histories at unchanged rate2C0+10 (18 structurally), with full terminal CE and one original bank; the general mechanism is an elementary exact chain rule. A matching-reference constant child proves that this cannot silently become a local influence-scaled leaf guarantee. Universal FEI constant improvement is zero: arbitrary cheap source-reference construction and the signed price of prescribed fresh descendant resets remain unpaid. NEXT isolates that actual reset and complementary terminal against the SAME remaining ancestor capacity, the shortest route because conservative no-reset transfer is now automatic and further root or shallow-history checks would repeat paid work.

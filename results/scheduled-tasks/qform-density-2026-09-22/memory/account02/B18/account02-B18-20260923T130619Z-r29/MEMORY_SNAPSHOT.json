@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B18",
+  "run_id": "account02-B18-20260923T130619Z-r29",
+  "control_start_commit": "9365dc1ceddab41377a01cc1aa0eff90779a62a0",
+  "control_prepublication_commit": "6ff955a07283c630c676355e19f79a08ea2b94ae",
+  "control_revision": "2026-09-22.15",
+  "status": "SUPPORTING_THEOREM_AND_TARGET_VALID_STRESS_FAMILY_CLOSURE_FULL_QFORM_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "partner_applied": {
+    "account": "account03",
+    "slot": "B18",
+    "run_id": "20260923T120257Z-account03-B18-QFORM-r28",
+    "math_commit": "43b16ba3992035298289170540682e8aa62a9ad4",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T120257Z-account03-B18-QFORM-r28/REPORT.md",
+    "result": "QFORM-SCHUR-NULLHUB-TRANSVERSE-COMPILER-v1"
+  },
+  "pinned_e5f_applied": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md",
+    "result": "ruled one-sheet rank-three estimate p_Q(t)<=pi*sqrt(2) on the majority-sign half-line"
+  },
+  "primary_source_checked": [
+    {
+      "source": "Livshyts-Paouris-Pivovarov arXiv:1507.07949 Theorem 1.1",
+      "scope": "product one-dimensional probability densities; cap-one implies k-dimensional orthogonal marginal density <=2^(k/2); no moments/support/logconcavity/iid; no projected-coordinate independence"
+    },
+    {
+      "source": "Glazer-Mikulincer arXiv:2108.04268",
+      "scope": "relevant dimension-free polynomial Fourier decay requires isotropic log-concave product measures; rejected as non-source-matching for arbitrary cap-one QFORM target"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-CIRCULAR-TWOSHEET-CLOSED-v1",
+      "statement": "For the B18 circular family and every m>=4, ||p_Qm||inf <=3*2^(4/3)(1+m^(-2))^(1/3) <=7.713844771974705, with continuous C0 density."
+    },
+    {
+      "id": "QFORM-NULLHUB-TRIPLE-MINOR-LEDGER-v1",
+      "statement": "With transverse Parseval columns alpha,beta and w_ij=(alpha_i beta_j-alpha_j beta_i)^2, |det A[{0,i,j}]|=r^2|det D| w_ij, sum_{i<j}w_ij=1, and sum_{j!=i}w_ij=q_i. Hence total hub-triple absolute determinant mass is r^2|detD| and the i-anchor mass is r^2|detD|q_i."
+    },
+    {
+      "id": "QFORM-NULLHUB-DENSITY-OR-ANCHOR-STAR-v1",
+      "statement": "For target-normalized exact-rank-three Schur-isotropic null-hub packets with r>=1/2, either max q_j<=1/2 and ||p_Q||inf<=12.9266081401913 continuously, or some original residual coordinate i anchors sum_{j!=i}|det A[{0,i,j}]|>1/10."
+    }
+  ],
+  "canonical_math": {
+    "commit": "05da7f7ad6e42cdc6cce7d2b6f36ec1f06f9e905",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/account02-B18-20260923T130619Z-r29/REPORT.md",
+    "early_commit": "71ec51a0bf5f0bc6fe322e0607927a81d7a71e89",
+    "early_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/account02-B18-20260923T130619Z-r29/EARLY_CHECKPOINT.md"
+  },
+  "handoff": {
+    "commit": "e3aad032c54cf519d744bf1e7f29485c41e5de24",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B18/account02-B18-20260923T130619Z-r29.md"
+  },
+  "unresolved_implication": "QFORM-NULLHUB-ANCHOR-STAR-AGGREGATION-v1: turn fixed-anchor aggregate principal-triple determinant mass >1/10 into a whole-line density bound while preserving original-coordinate product provenance and avoiding selection of a tiny individual minor.",
+  "next_step": "Exploit the exact weights w_ij as an original-coordinate weighted/grouped curvature distribution before conditioning; compare only to the exact hypotheses of existing grouped-anchor/mixed-Fresnel theorems.",
+  "full_qform_status": "OPEN",
+  "global_continuity_status": "OPEN"
+}

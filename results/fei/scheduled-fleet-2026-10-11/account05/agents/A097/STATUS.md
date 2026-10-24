@@ -1,0 +1,2 @@
+STATE: A097 stage17 saved: A096 active-reset v1 independently HOLDS; ALL eligible mixed active/control reset orders paid SAME rate18, >=12e original reserve;9649 single + 5889 mixed exact checks PASS; FEI OPEN, new review pending.
+NEXT: A096/A094/A086 review; price actual dummy-data exposure or off-branch canonical reset from SAME remaining source bank, retaining all mixed debits and full terminals.

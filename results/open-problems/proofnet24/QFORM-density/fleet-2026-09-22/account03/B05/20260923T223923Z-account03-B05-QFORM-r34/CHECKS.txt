@@ -1,0 +1,37 @@
+account03/B05 r34 diagnostic checks
+run_id: 20260923T223923Z-account03-B05-QFORM-r34
+
+These checks are regression diagnostics only. The proof in REPORT.md is exact.
+
+1. Schur factorization checked algebraically:
+   H=[[C,P],[P^T,B]], C-P B^{-1}P^T=L e1 e1^T.
+   With A=B^{-1}P^T,
+   K=[[1,0,0,0],[A11,A12,1,0],[A21,A22,0,1]], D=diag(L,B),
+   exact expansion gives H=K^T D K and det(D)=L det(B).
+
+2. Cauchy-Binet selected minor:
+   K(g_i,0,0)^T=(xi_i,*,*)^T,
+   K(0,0,eta_j,0)^T=eta_j e2,
+   K(0,0,0,zeta_k)^T=zeta_k e3.
+   Their determinant is exactly xi_i eta_j zeta_k.
+   Summing squared selected minors gives
+   det F_L >= s_I y_L^2 z_L^2 and det F_R >= s_J y_R^2 z_R^2.
+
+3. Rectangular crossing-volume identity checked numerically on 2000 random Schur configurations (discarding nearly singular random B only for numerical conditioning):
+   M_cross=Phi_L H Phi_R^T,
+   Pi_3=product of top three singular values,
+   RHS=|det D| sqrt(det(K D_L K^T) det(K D_R K^T)).
+   Maximum relative floating discrepancy observed: 1.71e-13.
+   No violation of the lower bound
+   Pi_3 >= |det D| y_L y_R z_L z_R sqrt(s_I s_J)
+   was observed.
+
+4. Constants:
+   standard packet m>=3/20.
+   Heavy Schur row partner branch:
+   51.6*(2/(3/20))^(1/3) = 122.35712967445816.
+   Scalar-diffuse cross branch q_Y,q_Z<=3/4:
+   Delta >= (sqrt(3)/16)*(3/20)*(1/4),
+   6*Delta^(-1/3) = 37.612073799219154.
+
+5. No histogram, random-law extremality inference, or numerical proof claim is made.

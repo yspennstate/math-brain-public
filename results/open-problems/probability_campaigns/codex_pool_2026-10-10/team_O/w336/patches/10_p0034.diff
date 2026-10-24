@@ -1,0 +1,45 @@
+--- a/~/math-brain-inbox/w336/bundle_010.json
++++ b/~/math-brain-inbox/w336/bundle_010.json
+@@ -0,0 +1,42 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w336",
++  "bundle_slug": "w336-p0034-checked-attempt-20261010",
++  "audit_status": "PENDING_W346_KEEP; do not promote to audited or solved",
++  "entries": [
++    {
++      "key": "horizontal-new-vertical-old-walk-both-clocks-diverge",
++      "namespace": "probability.self-interacting-walks",
++      "logical_name": "horizontal-new-vertical-old-walk-both-clocks-diverge",
++      "kind": "lemma",
++      "title": "Both clocks diverge in the horizontal-new vertical-old walk",
++      "statement": "For the planar walk that chooses a fair horizontal step on a first visit and a fair vertical step on a repeat visit, its horizontal and vertical departure counts H_n and V_n both tend to infinity almost surely. The coordinates admit X_n=S^H_(H_n), Y_n=S^V_(V_n), where S^H and S^V are independent simple symmetric walks, and each clock visits every nonnegative integer. Consequently each coordinate is unbounded in both signs and hits zero infinitely often. The clocks depend jointly on the visited set; independence of the time-changed coordinates and infinitely many visits to a single planar site are not asserted.",
++      "proof_text": "# P0034: both coordinate clocks diverge\n\nStatus: proof written; w346 KEEP pending. The joint recurrence question remains unresolved here.\n\nFor the horizontal-on-first-visit, vertical-on-repeat-visit walk on Z^2, let H_n and V_n be its numbers of horizontal and vertical departures before step n. Then, almost surely, H_n and V_n both tend to infinity. Each coordinate is unbounded in both signs and returns to zero infinitely many times. These statements do not assert infinitely many visits to a single planar site.\n\nProof: construct the walk from two independent one-dimensional simple symmetric random-walk sign streams, reading the next horizontal or vertical sign according to the axis determined by the past. This produces exactly the stipulated transition law. Pathwise, X_n=S^H_(H_n) and Y_n=S^V_(V_n), with H_n+V_n=n. On a probability-one event, each underlying one-dimensional walk is recurrent and unbounded in both signs.\n\nIf H_n were bounded, it would eventually be constant, so X_n would eventually be fixed and V_n would tend to infinity. The vertical stream would then visit arbitrarily high and low rows on that fixed column. Only finitely many sites were visited before horizontal motion stopped. A newly reached row outside that finite set is a first visit and forces a horizontal departure, a contradiction.\n\nIf V_n were bounded, Y_n would eventually be fixed and H_n would tend to infinity. The recurrent horizontal stream visits zero infinitely often; on the fixed row, the resulting site (0,Y) is therefore revisited and forces a vertical departure, again a contradiction. Thus both clocks diverge.\n\nEach clock is integer-valued, starts at zero, increases only by zero or one, and is unbounded, so it attains every integer value. The underlying walk's arbitrarily large positive and negative values and infinitely many zero indices are attained at arbitrarily late global times. This proves the coordinate claims. The two clocks depend on the entire visited set; their zero indices need not coincide. Synchronization of coordinate returns is the missing recurrence step.\n\nChecks: simulation with separate sign streams verifies the pathwise time-change representation and H_n equals the number of distinct sites departed from. Finite observations are construction checks and do not prove recurrence or asymptotic clock rates.\n",
++      "assumptions": [
++        "All hypotheses and scope restrictions in the statement apply."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner:campaign:w336:P0034:horizontal-new-vertical-old-walk-both-clocks-diverge",
++        "url": "~\\brain_workers\\w336\\proofs\\P0034.md",
++        "revision": "author-proof-2026-10-10; independent audit w346 pending",
++        "license": "owner-own-work; campaign proof, no novelty claim",
++        "excerpt": "For the planar walk that chooses a fair horizontal step on a first visit and a fair vertical step on a repeat "
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "horizontal-new-vertical-old-walk-both-clocks-diverge",
++      "to_existing_logical": "math:probability.core:open-problem-p0034-recurrence-of-the-planar-horizontal-new-vertical-old-walk",
++      "kind": "cites",
++      "rationale": "New: \"For the planar walk that chooses a fair horizontal step on a first visit and a fair vertical step on a repeat visit, its horizontal and vertical departure counts H_n and V_n both t\"; existing: \"Start at the origin in Z^2; after first visiting a site step horizontally with either sign equally likely, and after a repeat visit step vertically with either sign equally likely. Does any site receive infinitely many visits with positive \". The new result addresses the stated problem or continues the recorded route within its explicit scope."
++    },
++    {
++      "from_key": "horizontal-new-vertical-old-walk-both-clocks-diverge",
++      "to_existing_logical": "math:probability.core:attempt-p0034-recurrence-of-the-planar-horizontal-new-vertical-old-walk",
++      "kind": "cites",
++      "rationale": "New: \"For the planar walk that chooses a fair horizontal step on a first visit and a fair vertical step on a repeat visit, its horizontal and vertical departure counts H_n and V_n both t\"; existing: \"The axis of the next step is predictable from the past, while its sign is fair. Both coordinates are martingales, their cross quadratic covariation is zero, and E|X_n|^2=n. Bounded increments and Azuma give summable bounds for P(|X_n|>epsil\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
++    }
++  ]
++}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260923T165827Z-account03-B13-qform-r29",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start_observed": "a7ca43de162752c23edbc379977be6e670cb6ec2",
+  "control_commit_publication_refresh": "bd28bc32b369929b523f73e3a0688cb078760ec1",
+  "owner_request_acknowledged": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "correction_inbox_blob_publication_refresh": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "result_ids": [
+    "QFORM-ROW-ANCHORED-E3-PROJECTION-IDENTITY-v1",
+    "QFORM-BIHUB-VOLUME-CASCADE-CLOSURE-v1"
+  ],
+  "main_result": "For every disjoint original-coordinate physical cross block B=A[L,R] in a slab witness of ratio rho, conditional on the source-pinned grouped projected-crossing receiver, s_3(B) <= 9 sqrt(3e)/rho. The physical third-volume bi-hub branch is closed by a three-stage 1-hub/2-cross, 2-hub/1-cross, 3-hub volume cascade.",
+  "mathematical_premises": [
+    {
+      "source": "yspennstate/math-open-problems@f6ad7b994c1ba509af30fceaf45e8b464db86af8",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260923T155736Z-account02-B13-rank4star-r30/REPORT.md",
+      "scope": "physical cross-block alternative s3<=9sqrt(3e)/rho or row/column third-volume bi-hub"
+    },
+    {
+      "source": "yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a",
+      "path": "proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+      "scope": "grouped projected-crossing Fourier receiver and exact-rank crossing theorem; complete written supporting argument, independent review pending"
+    },
+    {
+      "source": "yspennstate/math-open-problems@82f9b7e9372c2434f27fd1f5a65e7148663516a7",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260923T121154Z-account04-B13-nonattained-bathtub-r1/REPORT.md",
+      "scope": "designated partner no-attainment product purification; applied to the actual strict slab inequality"
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "a23ddf469392d77526db53d0811248a52a84d088",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T165827Z-account03-B13-qform-r29/REPORT.md",
+    "checks_commit": "43fde0f45e636fd7bc56acfa800f0e7e9ba6e47c",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T165827Z-account03-B13-qform-r29/CHECKS.json",
+    "clarification_commit": "c9a6c9160e063f07856a62fc89a2ba62b857d3cf",
+    "clarification_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T165827Z-account03-B13-qform-r29/POSTREFRESH_ADDENDUM.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B13/20260923T165827Z-account03-B13-qform-r29.md",
+  "handoff_commit": "c621e7afee0b05e544caf30314c4d2b33453ab49",
+  "full_qform_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_GLOBALLY_RECEIVER_BRANCHES_CONTINUOUS",
+  "unresolved_implication": "QFORM-GLOBAL-RANK2-CROSS-STRUCTURE-v1: use s3(A[L,R])<=25.702/rho for every disjoint physical cut to classify/pay global approximate rank-two off-diagonal geometry without deleting small quadratic tails on unbounded inputs.",
+  "next_step": "Build a deterministic rank-two-cross structure theorem compatible with the singleton-plus-two-bank obstruction, targeting finite original hubs plus grouped rank-two banks or an existing aggregate bank receiver.",
+  "integrity_note": "The stage-1/stage-2 projected-crossing applications condition every original coordinate outside L union R so the receiver's projected crossing matrix and row-volume marginals are exactly the matrices used in the proof. No post-rotation independence is asserted."
+}

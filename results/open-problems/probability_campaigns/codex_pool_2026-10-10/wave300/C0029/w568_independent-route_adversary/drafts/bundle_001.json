@@ -1,0 +1,74 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w568",
+  "bundle_slug": "c0029-scalar-obstruction-and-gaussian-limit-correction",
+  "review_state": "DRAFT",
+  "entries": [
+    {
+      "key": "c0029-real-gaussian-scope",
+      "namespace": "probability.random-matrices",
+      "logical_name": "c0029-real-gaussian-finite-versus-limiting-law",
+      "kind": "concept",
+      "title": "C0029 source correction: real Gaussian finite and limiting laws",
+      "statement": "DRAFT source correction, independent review pending. For an n by n real Gaussian matrix with independent N(0,1) entries, the CDF of sqrt(n)s_min converges, at each fixed t>=0, to F(t)=1-exp(-t-t^2/2). This is not an exact finite-n identity: at n=1 the CDF is erf(t/sqrt(2)), with right derivative sqrt(2/pi) at zero, while F has derivative one. The C0029-A001 exact-law wording must retain the limiting qualifier. This correction does not solve the Bernoulli conjecture.",
+      "proof_text": null,
+      "assumptions": [
+        "real standard Gaussian iid entries",
+        "fixed t>=0 before n tends to infinity",
+        "source audit is pending referee acceptance"
+      ],
+      "domain": "random matrix probability",
+      "source": {
+        "source_id": "owner-own-work:w568:c0029-gaussian-source-correction",
+        "url": "file:///~/brain_workers/w568/SOURCE_CORRECTION.json",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (elementary counterexample and attributed source correction)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "c0029-scalar-obstruction",
+      "namespace": "probability.random-matrices",
+      "logical_name": "c0029-intermediate-scale-scalar-cdf-obstruction",
+      "kind": "concept",
+      "title": "C0029 draft obstruction to combining scalar universality bounds",
+      "statement": "DRAFT author-derived scalar obstruction; w569 independent review pending. Let F(t)=1-exp(-t-t^2/2), eta_n=(log(n+e))^(-1/16), a_n=exp(-sqrt(n)), q_n=2^(-n), m_n=eta_n F(a_n)/2. For t>=0 set G_n(t)=q_n+(1-q_n)[(1-m_n)F(t)+m_n 1_{t>=a_n}], and set G_n(t)=0 for t<0. These CDFs have G_n(0)=q_n, uniform error |G_n-F|<=(eta_n/2)F+q_n, and G_n(t)<=(3/2)t+q_n. For every fixed d>0, eventually G_n(t)<=t for all t>=n^(-d). Yet eventually G_n(a_n)-a_n>=eta_n a_n/16, which defeats every bound t+C exp(-cn) with fixed C,c>0. The reference F is limiting; no realization by iid Bernoulli matrices or counterexample to their conjecture is asserted.",
+      "proof_text": null,
+      "assumptions": [
+        "n is a positive integer",
+        "t>=0",
+        "d is fixed before the eventual dimension threshold",
+        "artificial scalar probability distributions",
+        "no finite-n Gaussian comparison or Bernoulli realization is asserted"
+      ],
+      "domain": "probability proof auditing",
+      "source": {
+        "source_id": "owner-own-work:w568:c0029-scalar-obstruction",
+        "url": "file:///~/brain_workers/w568/OBSTRUCTION_PROOF.md",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign refuted route, unreviewed concept)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "c0029-real-gaussian-scope",
+      "to_existing_logical": "math:probability.random-matrices:attempt-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr",
+      "kind": "cites",
+      "rationale": "The existing C0029-A001 card says exact real-Gaussian law; this draft provides the finite-n counterexample and limiting-law qualifier."
+    },
+    {
+      "from_key": "c0029-scalar-obstruction",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr",
+      "kind": "semantic_association",
+      "rationale": "The target requires exact coefficient one at small scales; the scalar example identifies why endpoint and relative-error estimates alone do not fill that window."
+    },
+    {
+      "from_key": "c0029-scalar-obstruction",
+      "to_key": "c0029-real-gaussian-scope",
+      "kind": "semantic_association",
+      "rationale": "Both entries require distinguishing the limiting reference law from the finite-n law; the scalar construction does not claim to instantiate the matrix comparison theorem."
+    }
+  ]
+}

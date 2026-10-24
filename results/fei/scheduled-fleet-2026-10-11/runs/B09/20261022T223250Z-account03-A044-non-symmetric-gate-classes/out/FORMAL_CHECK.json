@@ -1,0 +1,10 @@
+{
+  "rung": "NOT_RUN_ADMISSION_HELD",
+  "memok_exit_code": 1,
+  "memok_output": "WAIT: physical free 2.7 GB (need 4.0), commit free 24.5 GB (need 8.0)",
+  "source": "code/tail_band.lean",
+  "source_sha256": "d811432f027fee272e4fd0251a3d117d4e39ce738b3b75d4cc5fbffb3605b78c",
+  "planned_target": "A044_tail_band",
+  "compiler_started": false,
+  "reason": "Campaign admission forbids starting a >300 MB job while memok exits 1. lean_check.py states approximately 4.1 GB compile commitment. No admission override and no Lean certification."
+}

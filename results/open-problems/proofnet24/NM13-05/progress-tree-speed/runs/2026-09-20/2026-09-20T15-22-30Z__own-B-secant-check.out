@@ -1,0 +1,14 @@
+JOINT_UB_SECANT_DIRECTED_INTERVAL_CHECK
+MODE=cross_59_100 intended_p0=59/100 intended_L=3001/1000 intended_q=999/1000 outer_p0=0.58999999999999986 outer_L=3.0010000000000003 safe_q=0.99899999999999989
+PASS visited=8831 accepted=4416 worst_prod=0.99899946348742841 worst_rho=0.98267766308291193 min_theta=0.5268097899333396 min_delta=0.0025597254224779642 min_mu=0.15702874440795031 maxdepth=28
+MODE=two_thirds_623_200 intended_p0=2/3 intended_L=623/200 intended_q=999/1000 outer_p0=0.66666666666666652 outer_L=3.1150000000000007 safe_q=0.99899999999999989
+PASS visited=5925 accepted=2963 worst_prod=0.99897815318834049 worst_rho=0.98140620013185964 min_theta=0.60154463519206369 min_delta=0.0021803871823693282 min_mu=0.14379132616348059 maxdepth=25
+MODE=four_fifths_337_100 intended_p0=4/5 intended_L=337/100 intended_q=999/1000 outer_p0=0.79999999999999993 outer_L=3.3700000000000006 safe_q=0.99899999999999989
+PASS visited=3983 accepted=1992 worst_prod=0.99898006430781727 worst_rho=0.9824435420648816 min_theta=0.73973518566306362 min_delta=0.0012801042121820675 min_mu=0.1077641940313054 maxdepth=24
+ALL_RIGOROUS_INTERVAL_CHECKS_PASS
+
+Compiled and executed locally with:
+g++ -O2 -std=c++17 -frounding-math -ffp-contract=off 2026-09-20T15-22-30Z__own-B-secant-check.cpp -o ownBcheck
+./ownBcheck
+
+The intended rational theorem boxes are outward-rounded before subdivision, and the q comparisons use a downward-rounded binary value. Printed decimals are diagnostics only; acceptance is by directed one-ulp interval enclosures over the entire rectangles, not point sampling or speed simulation.

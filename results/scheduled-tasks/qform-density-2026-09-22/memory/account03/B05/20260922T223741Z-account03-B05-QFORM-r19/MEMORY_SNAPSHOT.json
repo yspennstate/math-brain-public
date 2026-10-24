@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B05",
+  "run_id": "20260922T223741Z-account03-B05-QFORM-r19",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "repository": "yspennstate/math-research-brain",
+    "branch": "main",
+    "login_commit": "9da72edaf6197a11c3d7c23447670757ea1e86ac",
+    "owner_revision": "2026-09-22.15"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "70f181cf738aa51ee6fb7043a329ac9e8b22c4ec",
+    "root": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260922T223741Z-account03-B05-QFORM-r19/",
+    "report": "REPORT.md",
+    "claims": "CLAIMS.json",
+    "checker": "CHECK.py",
+    "checker_output": "CHECK_OUTPUT.txt"
+  },
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY refuted / phase-aligned densities",
+    "FIBER-SUP-DIMENSION-FREE refuted",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-PAIR-LOG-SMALLBALL-SMOOTHING-v1",
+      "scope": "two independent cap-one original-coordinate scalars with a fixed invertible indefinite quadratic block; arbitrary dependent shifts through an independent remainder; bound 4 sqrt(2H)(D kappa)^(-1/4) when the completed remainder has H sqrt(rho) small-ball control",
+      "source": "yspennstate/math-open-problems:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md"
+    },
+    {
+      "id": "QFORM-RANK1-AFFINE-SMALLBALL",
+      "scope": "rank-one quadratic of a unit original-coordinate linear projection plus arbitrary affine term; small-ball <=10 sqrt(rho/|lambda|)",
+      "source": "yspennstate/math-open-problems:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md"
+    },
+    {
+      "id": "QFORM-MIXEDBANK-TRIPARTITION-v1 / account03-B10-r20 packet",
+      "scope": "fresh exact-rank-three near-span branch supplies three disjoint original-coordinate banks with aggregate physical principal-triple determinant mass mu>=1/512",
+      "source": "yspennstate/math-open-problems@7acd371ee2ee83a7fae12d7bedb38bc99c051b6d"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-RANK2BANK-AGGREGATE-SCHUR-IDENTITY-v1",
+      "status": "PROVED_IN_REPORT",
+      "content": "For one spectral-rank-two bank and two spectral-rank-one banks, |det B| |lambda_S| equals the complete aggregate physical principal-triple determinant mass mu."
+    },
+    {
+      "id": "QFORM-ONE-RANK2-TWO-RANK1-BANK-COAREA-v1",
+      "status": "PROVED_IN_REPORT",
+      "content": "If the two scalar-bank compressed pair B is invertible indefinite with kappa=sigma_min(B), then ||p_Q||_infinity <= 8*2^(3/4)*sqrt(5)*(kappa*mu)^(-1/4)."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "designated_partner": "account04/B05",
+    "designated_partner_status": "NO_COMPLETED_CURRENT_QFORM_ARTIFACT_FOUND_AT_FINAL_SOURCE_CHECK",
+    "compatible_result": "account04/B18 QFORM-DEPENDENT-SQUARE-SMOOTHING-v1",
+    "compatible_source_commit": "441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+    "actual_inequality": "with an additional disjoint translated square coefficient a, ||p_Q||_infinity <10.971 |a|^(-1/2)(kappa*mu)^(-1/8)"
+  },
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "NOT_PROVED_BY_THIS_RUN",
+  "first_unpaid_implication": "QFORM-RANK2BANK-NEAR-ISOTROPIC-SCALARPAIR-v1",
+  "next_step": "In the same three-bank packet, route the singular/kappa->0 compressed scalar-pair case through the rank-two bank before reciprocal kappa payment; then handle packets with two or three spectral-rank-two banks.",
+  "telemetry": {
+    "reasoning_effort_configured": "UNKNOWN",
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "coverage": "unavailable"
+  }
+}

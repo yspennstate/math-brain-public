@@ -1,0 +1,261 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{conjecture*}{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\hT}{\widehat T}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\one}{\mathbf 1}
+
+\hypersetup{pdftitle={Moments of level widths in conditioned Galton-Watson trees},pdfauthor={Yitzchak Shmalo}}
+
+\title[Moments of level widths]{Moments of level widths in conditioned\\ Galton--Watson trees}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{12 October 2026}
+\subjclass[2020]{60J80, 05C05, 60C05}
+\keywords{Conditioned Galton--Watson tree, simply generated tree, level width, uniform integrability, size-biased tree, local limit theorem}
+
+\begin{document}
+\begin{abstract}
+Let $T_n$ be a simply generated random tree with $n$ vertices, for instance a conditioned Galton--Watson tree, and let $l_k(T_n)$ be the number of vertices at distance $k$ from the root. Janson conjectured that, when the generating function of the weights has a positive radius of convergence, $\E\, l_k(T_n)^r\to\E\, l_k(\hT)^r\le\infty$ for all integers $r\ge1$ and $k\ge1$, where $\hT$ is the local limit of $T_n$, and that the same holds for non-integer $r>0$. We show that if the offspring distribution is critical and has a finite moment of order $r+1$ for a real number $r\ge1$, then the random variables $l_k(T_n)^r$, $n\ge1$, are uniformly integrable for every $k$, and $\E\, l_k(T_n)^r\to\E Z_k^{r+1}$, where $Z_k$ is the size of generation $k$ of the unconditioned Galton--Watson process. Together with the cases that follow from Fatou's lemma, this proves the conjecture for every integer $r\ge1$, and for every real $r>0$ except in the case where $0<r<1$ and the offspring distribution is critical with infinite variance and a finite moment of order $r+1$. The proof bounds the density of the law of the first $k$ generations of $T_n$ with respect to that of the unconditioned tree by means of the local limit theorem.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $w=(w_j)_{j\ge0}$ be a sequence of nonnegative weights with $w_0>0$ and $w_j>0$ for some $j\ge2$. The simply generated random tree $T_n$ is the random ordered rooted tree with $n$ vertices whose probability of being a given tree $t$ is proportional to $\prod_{v\in t}w_{d_t(v)}$, where $d_t(v)$ is the number of children of $v$ in $t$; only those $n$ are considered for which some tree with $n$ vertices has positive weight. If $w$ is a probability distribution, $T_n$ is a Galton--Watson tree with offspring distribution $w$ conditioned to have $n$ vertices. We use the notation of Janson's survey \cite{J12}, to which we refer for background.
+
+Let $\Phi(z)=\sum_j w_jz^j$, let $\rho$ be its radius of convergence, let $\Psi(t)=t\Phi'(t)/\Phi(t)$, and let $\nu=\lim_{t\uparrow\rho}\Psi(t)\le\infty$. We assume $\rho>0$, which is equivalent to $\nu>0$. If $\nu\ge1$ let $\tau\in(0,\rho]$ be the solution of $\Psi(\tau)=1$, and if $\nu<1$ let $\tau=\rho$. Then $\pi_j=\tau^jw_j/\Phi(\tau)$ is a probability distribution with mean $\min(\nu,1)$, and $T_n$ has the law of a Galton--Watson tree with offspring distribution $\pi$ conditioned to have $n$ vertices \cite[Section~4]{J12}. Let $\xi$ be a random variable with distribution $\pi$ and let $\sigma^2=\operatorname{Var}\xi\le\infty$. If $\nu>1$ then $\tau<\rho$ and $\xi$ has finite exponential moments; in particular $\sigma^2=\infty$ is possible only when $\nu\le1$.
+
+By \cite[Theorem~7.1]{J12}, $T_n$ converges in distribution, in the topology of local convergence, to an infinite random tree $\hT$. When $\nu\ge1$, the tree $\hT$ is the size-biased Galton--Watson tree of Kesten \cite{Kes86} (see also \cite{LPP95} and \cite[Section~5]{J12}): it has an infinite path from the root, the spine, whose vertices have offspring distribution $\Pp(\hat\xi=j)=j\pi_j$, one child of each spine vertex, chosen uniformly, being the next spine vertex, while all other vertices have offspring distribution $\pi$, everything independent. When $0<\nu<1$, the tree $\hT$ has a vertex of infinite degree.
+
+For a rooted tree $T$ let $l_k(T)$ be the number of vertices at distance $k$ from the root. Janson \cite[Section~21.1]{J12} showed that $l_k(T_n)\to l_k(\hT)$ in distribution for every $k$; when $\nu\ge1$ the limit is finite, and when $0<\nu<1$ the convergence holds in $[0,\infty]$ and $\Pp(l_k(\hT)<\infty)=\nu^k$. He also showed that $\E\, l_k(T_n)\to\E\, l_k(\hT)\le\infty$ for every $k$; for $\nu\ge1$ and $\sigma^2<\infty$ this rests on the uniform integrability of $l_k(T_n)$, $n\ge1$, see \cite[Section~10]{J06}, and for $\nu>1$ the convergence was shown earlier by Meir and Moon \cite{MM78}. For $r\ge1$, Fatou's lemma gives $\E\, l_k(T_n)^r\to\E\, l_k(\hT)^r=\infty$ when $0<\nu<1$ or $\E\xi^{r+1}=\infty$ \cite[Section~21.1]{J12}. If $r$ is an integer and $\E\xi^{r+1}<\infty$, the moments $\E\, l_k(T_n)^r$ are bounded uniformly in $n$ by \cite[Theorem~1.13]{J06}, so that $\E\, l_k(T_n)^r\to\E\, l_k(\hT)^r$ when $\E\xi^{r+2}<\infty$. Janson conjectured that the $(r+1)$-st moment suffices.\footnote{In the arXiv version of \cite{J12} the conjecture is Conjecture~20.1, and Lemma~15.9, used below, is Lemma~14.9.}
+
+\begin{conjecture*}[{Janson \cite[Conjecture~21.1]{J12}}]
+For every integer $r\ge1$ and every $k\ge1$, if $\nu>0$, then
+\begin{equation}\label{eq:conj}
+\E\, l_k(T_n)^r\to\E\, l_k(\hT)^r\le\infty.
+\end{equation}
+This holds also for non-integer $r>0$.
+\end{conjecture*}
+
+Janson conjectured that, when $\E\xi^{r+1}<\infty$, the variables $l_k(T_n)^r$, $n\ge1$, are uniformly integrable, which together with the convergence in distribution of $l_k(T_n)$ yields \eqref{eq:conj}. The following theorem proves this for every real $r\ge1$.
+
+\begin{theorem}\label{thm:main}
+Suppose that $\nu\ge1$, let $r\ge1$ be a real number, and suppose that $\E\xi^{r+1}<\infty$. Then for every $k\ge1$ the random variables $l_k(T_n)^r$, $n\ge1$, are uniformly integrable, and
+\begin{equation}\label{eq:limit}
+\E\, l_k(T_n)^r\to\E\, l_k(\hT)^r=\E Z_k^{r+1}<\infty,
+\end{equation}
+where $Z_k$ is the number of vertices at distance $k$ from the root in a Galton--Watson tree with offspring distribution $\pi$.
+\end{theorem}
+
+\begin{corollary}\label{cor:conj}
+Let $\nu>0$ and $k\ge1$. Then \eqref{eq:conj} holds for every real $r\ge1$. For $0<r<1$ it holds unless $\nu=1$, $\sigma^2=\infty$ and $\E\xi^{r+1}<\infty$. In particular the conjecture holds for every integer $r\ge1$.
+\end{corollary}
+
+In the remaining case $\nu=1$, $\sigma^2=\infty$, $0<r<1$, $\E\xi^{r+1}<\infty$, the limit $\E\, l_k(\hT)^r=\E Z_k^{r+1}$ is finite, and the question whether $\E\, l_k(T_n)^r$ converges to it remains open; the proof below uses $\sigma^2<\infty$ through the local limit theorem (Lemma~\ref{lem:llt}).
+
+The proof of Theorem~\ref{thm:main} rests on an explicit formula for the law of the first $k$ generations of $T_n$ (Lemma~\ref{lem:density}), which is a special case of \cite[Lemma~15.9]{J12}, a lemma that Janson uses in the proof of \cite[Theorem~7.1]{J12}. On trees with at least one vertex at distance $k$ from the root, this law has a density $W_n$ with respect to the law of the first $k$ generations of the unconditioned Galton--Watson tree, and $W_n$ converges to the number of vertices at distance $k$. The local limit theorem bounds $W_n$ by a constant times this number as long as the first $k$ generations contain at most half of the vertices, and the event that they contain more is controlled by the moment $\E\xi^{r+1}$.
+
+\begin{remark}\label{rem:adj}
+For integer $r$ the bound of \cite[Theorem~1.13]{J06} is uniform in $k$: if $\E\xi^{r+1}<\infty$ then $\E\, l_k(T_n)^r=O(k^r)$ uniformly in $k\ge1$ and $n\ge1$. Addario-Berry, Devroye and Janson conjectured that this holds for all real $r\ge1$ \cite[Section~1]{ADJ13}. Under its hypotheses, Theorem~\ref{thm:main} implies $\sup_n\E\, l_k(T_n)^r<\infty$ for each $k$ and real $r\ge1$, but the bound given by the proof grows faster than $k^r$, and that conjecture is not addressed here.
+\end{remark}
+
+\section{The first \texorpdfstring{$k$}{k} generations of \texorpdfstring{$T_n$}{Tn}}\label{sec:prelim}
+
+Throughout this section $\nu\ge1$, so that $\E\xi=1$. Since $\pi_0>0$, the variance $\sigma^2$ is positive. Let $T$ be a Galton--Watson tree with offspring distribution $\pi$; then $T_n$ is $T$ conditioned on $|T|=n$, where $|T|$ is the number of vertices, and $n$ ranges over the integers with $\Pp(|T|=n)>0$. Let $h\ge1$ be the span of $\xi$, the largest integer such that $\xi\in h\Z$ almost surely. Let $\xi_1,\xi_2,\dots$ be independent copies of $\xi$ and $S_m=\xi_1+\dots+\xi_m$. For an ordered rooted tree $t$ and $j\ge0$, let $t^{[j]}$ be the subtree formed by the vertices at distance at most $j$ from the root. Let $Z_j=l_j(T)$ be the generation sizes of $T$, and let $\cF_j$ be the $\sigma$-field generated by $T^{[j]}$.
+
+Fix $k\ge1$. A \emph{$k$-truncation} is a finite ordered rooted tree of height at most $k$. For a $k$-truncation $t$ let $N(t)$ be the number of its vertices at distance less than $k$ from the root, and let $l_k(t)$ be the number at distance $k$. Write
+\[
+p(t)=\Pp(T^{[k]}=t)=\prod_{v}\pi_{d_t(v)},
+\]
+the product over the vertices $v$ of $t$ at distance less than $k$ from the root. Thus $\E f(T^{[k]})=\sum_t f(t)p(t)$ for every $f\ge0$, the sum over all $k$-truncations, and $l_k(T^{[k]})=Z_k$, $N(T^{[k]})=Z_0+\dots+Z_{k-1}$.
+
+We use Dwass's formula \cite{Dwa69}: for $l\ge1$ and $m\ge1$, the total number of vertices of a forest of $l$ independent copies of $T$ equals $m$ with probability $\frac lm\Pp(S_m=m-l)$. For $l=1$ it reads $\Pp(|T|=m)=\frac1m\Pp(S_m=m-1)$; see also \cite[Theorem~15.5]{J12}.
+
+\begin{lemma}\label{lem:density}
+Let $t$ be a $k$-truncation with $N=N(t)$ and $l=l_k(t)\ge1$, and let $n$ satisfy $\Pp(|T|=n)>0$. Then $\Pp(T_n^{[k]}=t)=p(t)W_n(t)$, where
+\begin{equation}\label{eq:W}
+W_n(t)=\frac{n\,l\,\Pp(S_{n-N}=n-N-l)}{(n-N)\,\Pp(S_n=n-1)}\quad\text{if } n>N,\qquad W_n(t)=0\quad\text{if } n\le N.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Conditionally on $T^{[k]}=t$, the subtrees of $T$ rooted at the $l$ vertices at distance $k$ from the root are independent copies of $T$, and $|T|$ is $N$ plus their total number of vertices. By Dwass's formula, $\Pp(T^{[k]}=t,\ |T|=n)=p(t)\frac{l}{n-N}\Pp(S_{n-N}=n-N-l)$ for $n>N$, while for $n\le N$ the left side is $0$ because $l\ge1$. Dividing by $\Pp(|T|=n)=\frac1n\Pp(S_n=n-1)$ gives the claim.
+\end{proof}
+
+Lemma~\ref{lem:density} is the case of \cite[Lemma~15.9]{J12} in which the fixed subtree consists of the vertices of $t$ at distance less than $k$ from the root, with the numbers of children prescribed by $t$. Note that $W_n(t)=0$ when $N<n<N+l$, since then $n-N-l<0$.
+
+\begin{lemma}\label{lem:llt}
+Suppose that $\sigma^2<\infty$.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item There is $C_1<\infty$ such that $\Pp(S_m=j)\le C_1m^{-1/2}$ for all $m\ge1$ and $j\in\Z$.
+\item If $N\ge1$ and $l\ge0$ are integers with $N+l-1\in h\Z$, then $\Pp(S_{n-N}=n-N-l)/\Pp(S_n=n-1)\to1$ as $n\to\infty$ with $n\in1+h\Z$.
+\item $c_2=\inf\{n^{1/2}\Pp(S_n=n-1):\ n\ge1,\ \Pp(S_n=n-1)>0\}>0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Since $\pi_0>0$, the variable $\xi$ takes values in $h\Z$, and $h$ is the maximal span. The local limit theorem for lattice distributions \cite[Theorem~4.2.1]{IL71} gives
+\[
+\sup_{j\in h\Z}\Big|\frac{\sigma m^{1/2}}{h}\Pp(S_m=j)-\varphi\Big(\frac{j-m}{\sigma m^{1/2}}\Big)\Big|\to0\qquad(m\to\infty),
+\]
+where $\varphi$ is the standard normal density, and $S_m\in h\Z$. Since $\varphi\le(2\pi)^{-1/2}$, (i) holds for $m\ge m_0$, and for $m<m_0$ we use $\Pp(S_m=j)\le1\le(m_0/m)^{1/2}$. In (ii) both $n-N-l$ and $n-1$ lie in $h\Z$, and $l(n-N)^{-1/2}\to0$, $n^{-1/2}\to0$, so both probabilities equal $(1+o(1))\,h\,(2\pi\sigma^2n)^{-1/2}$. For (iii), $\Pp(S_n=n-1)>0$ forces $n\in1+h\Z$, and along $n\in1+h\Z$ we have $n^{1/2}\Pp(S_n=n-1)\to h(2\pi\sigma^2)^{-1/2}>0$; the finitely many remaining values of $n$ give positive terms.
+\end{proof}
+
+\begin{lemma}\label{lem:moments}
+Let $0\le j\le i$ and $s>0$. Then $\E[Z_i^s\mid\cF_j]\le C\,Z_j^s$ almost surely, where $C=\E Z_{i-j}^s\le\infty$ if $s\ge1$ and $C=1$ if $s\le1$. Moreover $\E Z_g^s\le(\E\xi^s)^g$ for $s\ge1$ and $g\ge0$.
+\end{lemma}
+
+\begin{proof}
+Conditionally on $\cF_j$, $Z_i$ is the sum of $Z_j$ independent copies of $Z_{i-j}$, namely the generation sizes at depth $i-j$ of the subtrees rooted at the vertices of generation $j$. For $s\ge1$, Minkowski's inequality in $L^s$ gives $\E[Z_i^s\mid\cF_j]^{1/s}\le Z_j(\E Z_{i-j}^s)^{1/s}$. For $s\le1$, Jensen's inequality for the concave function $x\mapsto x^s$ and $\E[Z_i\mid\cF_j]=Z_j$ give $\E[Z_i^s\mid\cF_j]\le Z_j^s$. Taking $i=g$ and $j=g-1$ in the first claim gives $\E Z_g^s\le\E\xi^s\,\E Z_{g-1}^s$, and the last claim follows by induction since $Z_0=1$.
+\end{proof}
+
+\begin{lemma}\label{lem:sizebias}
+For every $k$-truncation $t$, $\Pp(\hT^{[k]}=t)=l_k(t)\,p(t)$. Consequently $\E f(l_k(\hT))=\E[Z_kf(Z_k)]$ for every measurable $f\ge0$, and in particular $\E\, l_k(\hT)^r=\E Z_k^{r+1}$ for $r>0$.
+\end{lemma}
+
+\begin{proof}
+If $l_k(t)=0$, both sides vanish, because the spine of $\hT$ has a vertex at distance $k$ from the root. Otherwise let $u$ be a vertex of $t$ at distance $k$ from the root, with ancestors $u_0,\dots,u_{k-1}$, where $u_0$ is the root; put $u_k=u$, and note that $d_t(u_i)\ge1$ for $i<k$ since $u_{i+1}$ is a child of $u_i$. The probability that $\hT^{[k]}=t$ and that the spine passes through $u$ is
+\[
+\prod_{i=0}^{k-1}\Big(d_t(u_i)\pi_{d_t(u_i)}\cdot\frac1{d_t(u_i)}\Big)\prod_{v}\pi_{d_t(v)}=p(t),
+\]
+where the second product is over the vertices of $t$ at distance less than $k$ from the root other than $u_0,\dots,u_{k-1}$. Summing over the $l_k(t)$ choices of $u$ gives the first claim. Then $\E f(l_k(\hT))=\sum_tf(l_k(t))l_k(t)p(t)=\E[Z_kf(Z_k)]$.
+\end{proof}
+
+\begin{lemma}\label{lem:local}
+Suppose that $\sigma^2<\infty$. Then $\Pp(T_n^{[k]}=t)\to\Pp(\hT^{[k]}=t)$ as $n\to\infty$ for every $k$-truncation $t$. Consequently $l_k(T_n)\to l_k(\hT)$ in distribution.
+\end{lemma}
+
+\begin{proof}
+If $p(t)=0$, both sides are $0$. If $l_k(t)=0$, then $T_n^{[k]}=t$ forces $T_n=t$, so the left side is $0$ for $n>N(t)$, and so is the right side. Suppose $p(t)>0$ and $l=l_k(t)\ge1$, and let $N=N(t)$. Every $d_t(v)$ with $v$ at distance less than $k$ from the root lies in $h\Z$, and the sum of these numbers is the number of vertices of $t$ other than the root, which is $N+l-1$. Hence $N+l-1\in h\Z$, and Lemma~\ref{lem:llt}(ii) and $n/(n-N)\to1$ give $W_n(t)\to l$. By Lemmas~\ref{lem:density} and~\ref{lem:sizebias}, $\Pp(T_n^{[k]}=t)=p(t)W_n(t)\to l\,p(t)=\Pp(\hT^{[k]}=t)$. The $k$-truncations form a countable set, and $\sum_tl_k(t)p(t)=\E Z_k=1$, so by Scheff\'e's lemma the law of $T_n^{[k]}$ converges in total variation to that of $\hT^{[k]}$; in particular $l_k(T_n)\to l_k(\hT)$ in distribution.
+\end{proof}
+
+Lemma~\ref{lem:local} also follows from \cite[Theorem~7.1]{J12}, which does not assume $\sigma^2<\infty$; the proof above uses only Lemmas~\ref{lem:density}, \ref{lem:llt} and~\ref{lem:sizebias}.
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+Let $\nu\ge1$, let $r\ge1$ be real with $\E\xi^{r+1}<\infty$, and fix $k\ge1$. Since $r+1\ge2$, $\sigma^2<\infty$, so Lemmas~\ref{lem:llt} and~\ref{lem:local} apply, and $\E Z_j^{r+1}\le(\E\xi^{r+1})^j<\infty$ for every $j$ by Lemma~\ref{lem:moments}.
+
+\emph{Bounds on the density.} Let $C_3=C_1/c_2$, with $C_1$ and $c_2$ from Lemma~\ref{lem:llt}. Let $t$ be a $k$-truncation with $N=N(t)$ and $l=l_k(t)\ge1$, and let $n$ satisfy $\Pp(|T|=n)>0$. The two bounds below are trivial when $W_n(t)=0$, so suppose $W_n(t)>0$; then $n-N\ge l$ by \eqref{eq:W}. By \eqref{eq:W} and Lemma~\ref{lem:llt}(i),(iii),
+\begin{equation}\label{eq:W1}
+W_n(t)\le\frac{n\,l\,C_1(n-N)^{-1/2}}{(n-N)\,c_2n^{-1/2}}=C_3\,l\Big(\frac n{n-N}\Big)^{3/2},
+\end{equation}
+and, since $n-N\ge l$,
+\begin{equation}\label{eq:W2}
+W_n(t)\le C_3\,n^{3/2}\,l^{-1/2}.
+\end{equation}
+
+\emph{Uniform integrability.} Let $K\ge1$. Since $l_k(T_n)=l_k(T_n^{[k]})$, Lemma~\ref{lem:density} gives
+\begin{equation}\label{eq:tail}
+\E\big[l_k(T_n)^r;\ l_k(T_n)>K\big]=\sum_{t:\,l_k(t)>K}l_k(t)^rp(t)W_n(t)=\E\big[Z_k^r\,W_n(T^{[k]})\,\one\{Z_k>K\}\big].
+\end{equation}
+Let $N_k=N(T^{[k]})=Z_0+\dots+Z_{k-1}$, and split the right side of \eqref{eq:tail} according to whether $N_k\le n/2$.
+
+On $\{N_k\le n/2\}$, \eqref{eq:W1} gives $W_n(T^{[k]})\le2^{3/2}C_3Z_k$, so this part of \eqref{eq:tail} is at most
+\begin{equation}\label{eq:partA}
+2^{3/2}C_3\,\E\big[Z_k^{r+1};\ Z_k>K\big].
+\end{equation}
+
+On $\{N_k>n/2\}$ some $j\in\{0,\dots,k-1\}$ has $Z_j>n/(2k)$, and \eqref{eq:W2} gives $Z_k^rW_n(T^{[k]})\le C_3n^{3/2}Z_k^{s}$ with $s=r-\frac12\ge\frac12$. Let $C_4=\max\big(1,\max_{1\le g\le k}\E Z_g^s\big)$, which is finite because $s<r+1$. By Lemma~\ref{lem:moments} with $i=k$,
+\begin{align*}
+\E\big[Z_k^s\,\one\{Z_j>n/(2k)\}\big]&=\E\big[\E[Z_k^s\mid\cF_j]\,\one\{Z_j>n/(2k)\}\big]\le C_4\,\E\big[Z_j^s\,\one\{Z_j>n/(2k)\}\big]\\
+&\le C_4\Big(\frac{2k}n\Big)^{3/2}\E\big[Z_j^{r+1};\ Z_j>n/(2k)\big],
+\end{align*}
+where the last step uses $Z_j^s=Z_j^{r+1}Z_j^{-3/2}\le(2k/n)^{3/2}Z_j^{r+1}$ on $\{Z_j>n/(2k)\}$. Summing over $j$, this part of \eqref{eq:tail} is at most
+\begin{equation}\label{eq:partB}
+\delta_n=C_3C_4(2k)^{3/2}\sum_{j=0}^{k-1}\E\big[Z_j^{r+1};\ Z_j>n/(2k)\big],
+\end{equation}
+which does not depend on $K$ and tends to $0$ as $n\to\infty$ by dominated convergence, since $\E Z_j^{r+1}<\infty$.
+
+Let $\varepsilon>0$. Choose $n_0$ such that $\delta_n\le\varepsilon$ for $n\ge n_0$, and $K_0\ge n_0$ such that $2^{3/2}C_3\E[Z_k^{r+1};Z_k>K_0]\le\varepsilon$. Let $K\ge K_0$. For $n<n_0$ we have $l_k(T_n)<n<K$, so the left side of \eqref{eq:tail} vanishes; for $n\ge n_0$ it is at most $2\varepsilon$ by \eqref{eq:partA} and \eqref{eq:partB}. Since $\{l_k(T_n)^r>K^r\}=\{l_k(T_n)>K\}$, this gives $\sup_n\E[l_k(T_n)^r;\ l_k(T_n)^r>M]\le2\varepsilon$ for all $M\ge K_0^r$, so the variables $l_k(T_n)^r$, $n\ge1$, are uniformly integrable.
+
+\emph{The limit.} By Lemma~\ref{lem:local}, $l_k(T_n)^r\to l_k(\hT)^r$ in distribution. Uniform integrability and convergence in distribution imply convergence of the means, so $\E\, l_k(T_n)^r\to\E\, l_k(\hT)^r$, which equals $\E Z_k^{r+1}\le(\E\xi^{r+1})^k<\infty$ by Lemmas~\ref{lem:sizebias} and~\ref{lem:moments}. This proves Theorem~\ref{thm:main}.\qed
+
+\section{Proof of Corollary~\ref{cor:conj}}\label{sec:cor}
+
+Let $\nu>0$, $k\ge1$ and $r>0$. We use the convergence in distribution of $l_k(T_n)$ to $l_k(\hT)$ from \cite[Section~21.1]{J12}, quoted in Section~\ref{sec:intro}, and the following form of Fatou's lemma: if $X_n\to X$ in distribution in $[0,\infty]$, then $\liminf_n\E X_n^r\ge\E X^r$, because $x\mapsto\min(x,M)^r$ is bounded and continuous on $[0,\infty]$ for every $M>0$.
+
+\emph{Case $0<\nu<1$.} Here $\Pp(l_k(\hT)=\infty)=1-\nu^k>0$, so $\E\, l_k(\hT)^r=\infty$, and Fatou's lemma gives $\E\, l_k(T_n)^r\to\infty$.
+
+\emph{Case $\nu\ge1$ and $\E\xi^{r+1}=\infty$.} The event $\{Z_{k-1}\ge1\}$ has positive probability, and on it $Z_k$ is at least the number of children of the first vertex of generation $k-1$, which is independent of $\cF_{k-1}$ and distributed as $\xi$. Hence $\E Z_k^{r+1}\ge\Pp(Z_{k-1}\ge1)\E\xi^{r+1}=\infty$, so $\E\, l_k(\hT)^r=\infty$ by Lemma~\ref{lem:sizebias}, and Fatou's lemma gives $\E\, l_k(T_n)^r\to\infty$.
+
+\emph{Case $\nu\ge1$, $\E\xi^{r+1}<\infty$ and $r\ge1$.} This is Theorem~\ref{thm:main}.
+
+\emph{Case $\nu\ge1$, $0<r<1$ and $\sigma^2<\infty$.} Theorem~\ref{thm:main} with exponent $1$ shows that the variables $l_k(T_n)$, $n\ge1$, are uniformly integrable, as was already shown in \cite[Section~10]{J06}. Since $x^r\le x$ for $x\ge1$, for $K\ge1$
+\[
+\E\big[l_k(T_n)^r;\ l_k(T_n)^r>K\big]\le\E\big[l_k(T_n);\ l_k(T_n)>K^{1/r}\big],
+\]
+so the variables $l_k(T_n)^r$ are uniformly integrable as well, and \eqref{eq:conj} follows from the convergence in distribution.
+
+These cases cover every $r\ge1$. For $0<r<1$ the only case left out is $\nu\ge1$, $\sigma^2=\infty$, $\E\xi^{r+1}<\infty$, and $\sigma^2=\infty$ forces $\nu=1$ because $\xi$ has finite exponential moments when $\nu>1$. This proves Corollary~\ref{cor:conj}.\qed
+
+\section{Computer checks}\label{sec:checks}
+
+Lemma~\ref{lem:density} and the inequalities of Lemma~\ref{lem:moments} were checked by computer. The script \texttt{code/checks.py} in the repository listed under Data availability uses only the Python standard library and runs in under a minute; its output is \texttt{code/checks.out}. It takes five critical offspring distributions: the geometric distribution $\pi_j=2^{-j-1}$, the binomial distribution with parameters $2$ and $\frac12$, the uniform distribution on $\{0,2\}$ (span $2$), the distribution with $\pi_0=\frac12$, $\pi_1=\pi_3=\frac14$, and the distribution with $\pi_0=\frac23$, $\pi_3=\frac13$ (span $3$). For each of them and each $n$ from $2$ to $12$ it enumerates all ordered trees with $n$ vertices whose numbers of children lie in the support, computes the exact law of $T_n^{[k]}$ for $k=1,2,3$, and compares it with $p(t)W_n(t)$ for every $k$-truncation $t$ with $l_k(t)\ge1$ and $N(t)+l_k(t)\le n$, so that a truncation that does not occur must receive the value $0$; a truncation with $l_k(t)=0$, which is a whole tree of height less than $k$, is compared with $\Pp(T=t)/\Pp(|T|=n)$ if it has $n$ vertices and with $0$ otherwise; the probabilities $\Pp(S_m=j)$ are computed separately by convolution. All $35{,}302$ comparisons agree, and Dwass's formula $\Pp(|T|=n)=\frac1n\Pp(S_n=n-1)$ holds in every case. For the four distributions with finite support the script also checks $\E[Z_i\mid Z_j=m]=m$ and the inequalities of Lemma~\ref{lem:moments} for $m\in\{1,2,3,4\}$ and $i-j\in\{1,2,3\}$, with $s\in\{1,2,3\}$ in exact arithmetic and $s\in\{\frac12,\frac32,\frac52\}$ in floating point; all $336$ checks pass. These computations test the identities and inequalities used in the proof; they are not part of it.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. Conjecture~21.1 of \cite{J12} was one of the open problems in probability on which the project's agents worked in September 2026. On 14 September 2026 Claude Fable~5.1 (Anthropic) found the proof of Theorem~\ref{thm:main} and Corollary~\ref{cor:conj}. On 12 October 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, wrote the proofs in their present form, searched the literature, and wrote the computer checks and the manuscript. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at \url{https://github.com/yspennstate/level-width-moments}.
+
+\begin{thebibliography}{9}
+
+\bibitem{ADJ13}
+L.~Addario-Berry, L.~Devroye and S.~Janson, Sub-Gaussian tail bounds for the width and height of conditioned Galton--Watson trees, \emph{Ann. Probab.} \textbf{41} (2013), no.~2, 1072--1087.
+
+\bibitem{Dwa69}
+M.~Dwass, The total progeny in a branching process and a related random walk, \emph{J. Appl. Probab.} \textbf{6} (1969), 682--686.
+
+\bibitem{IL71}
+I.~A. Ibragimov and Yu.~V. Linnik, \emph{Independent and Stationary Sequences of Random Variables}, Wolters-Noordhoff, Groningen, 1971.
+
+\bibitem{J06}
+S.~Janson, Random cutting and records in deterministic and random trees, \emph{Random Structures Algorithms} \textbf{29} (2006), no.~2, 139--179.
+
+\bibitem{J12}
+S.~Janson, Simply generated trees, conditioned Galton--Watson trees, random allocations and condensation, \emph{Probab. Surv.} \textbf{9} (2012), 103--252.
+
+\bibitem{Kes86}
+H.~Kesten, Subdiffusive behavior of random walk on a random cluster, \emph{Ann. Inst. H. Poincar\'e Probab. Statist.} \textbf{22} (1986), no.~4, 425--487.
+
+\bibitem{LPP95}
+R.~Lyons, R.~Pemantle and Y.~Peres, Conceptual proofs of $L\log L$ criteria for mean behavior of branching processes, \emph{Ann. Probab.} \textbf{23} (1995), no.~3, 1125--1138.
+
+\bibitem{MM78}
+A.~Meir and J.~W. Moon, On the altitude of nodes in random trees, \emph{Canad. J. Math.} \textbf{30} (1978), 997--1015.
+
+\end{thebibliography}
+\end{document}

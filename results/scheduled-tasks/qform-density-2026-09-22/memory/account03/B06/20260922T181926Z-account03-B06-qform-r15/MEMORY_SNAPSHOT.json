@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B06",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260922T181926Z-account03-B06-qform-r15",
+  "control_revision": "2026-09-22.11",
+  "control_refresh_commit_observed": "0b8f80cccf683c1bd0cc6db9182a5c88fdc273ae",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null,
+  "provider_reasoning_usage": null,
+  "source_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e9064dc270a3f8b27be00279146080fdae0ec098",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260922T181926Z-account03-B06-qform-r15/REPORT.md"
+  },
+  "checker": {
+    "source_commit": "9268b443cd76230809d45a1d3c4e2477f6e67150",
+    "output_commit": "a5a6e69c679ae611a616c1b5fa0e13840c787126",
+    "terminal": "QFORM_B06_R15_CHECK_PASS",
+    "role": "finite arithmetic sanity check only"
+  },
+  "claims": [
+    {
+      "id": "QFORM-E2-TO-ARBITRARY-COLLAR-RIDGE-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "If x_j in [0,1] and e_2(x)>=2/3, then for every 0<epsilon<=1/2, with C0=4+2sqrt(3), sum_j x_j/(epsilon/C0+x_j)>=2-epsilon."
+    },
+    {
+      "id": "QFORM-TRANSVERSE-ARBITRARY-COLLAR-RIDGE-CLOSURE-v1",
+      "status": "PROVED_IN_SOURCE_UNDER_EXISTING_TRANSVERSE_SETUP",
+      "statement": "In the completed shear-invariant B08 O0 transverse setup with a nonzero original physical scalar pivot a, set g_epsilon=gamma sqrt(epsilon/(4+2sqrt(3))). If max diag K_g(H)<=1-epsilon, then Q has an essentially bounded density with ||p_Q||_infinity<=C_epsilon/sqrt(|a|gamma), where C_epsilon is explicit in the report."
+    },
+    {
+      "id": "QFORM-TRANSVERSE-31/32-COLLAR-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "At epsilon=1/32, max diag K_{gamma/sqrt(32(4+2sqrt(3)))}(H)<=31/32 implies ||p_Q||_infinity<2101/sqrt(|a|gamma)."
+    }
+  ],
+  "dependencies_actually_used": [
+    {"source":"account03/B08","commit":"053ed5a463b2d66682876bd9fd7ba9f55d5ae29a","use":"shear-invariant transverse e2 reserve"},
+    {"source":"full-form ridge theorem","commit":"9c1167db05c7b0f520f060796fde921ed769a4e7","use":"fractional characteristic-function envelope"},
+    {"source":"account04/B18","commit":"441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3","use":"dependence-safe one-sided square-kernel domination on the actual original-coordinate scalar completion"}
+  ],
+  "designated_partner": {
+    "slot": "account04/B06",
+    "completed_current_qform_result_visible_at_final_refresh": false,
+    "action": "no result or PASS fabricated; proceeded asynchronously and used compatible completed account04/B18 inequality"
+  },
+  "corrections_preserved": [
+    "no law-uniform pointwise quadratic-phase decay",
+    "no arbitrary-joint rank-three coarea from only a joint-density cap",
+    "no fixed positive worst-conditional spectral-projection density moment",
+    "no unrestricted fiber supremum",
+    "no generic X-ray-only indefinite pushforward bound",
+    "no post-rotation independence",
+    "no fixed-good-minor or post-hoc reciprocal-minor averaging"
+  ],
+  "full_conjecture_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "NOT_PROVED_BY_THIS_BRANCH",
+  "next_debt": {
+    "id": "QFORM-TRANSVERSE-NEAR-COLOOP-PAYMENT-v1",
+    "statement": "For a fixed collar such as epsilon=1/32, convert a surviving residual original physical row with ridge leverage >31/32 at the explicit small scale into a paid indefinite physical pair, a second independent bank/ridge direction after deletion, or a disjoint grouped-coordinate smoother."
+  },
+  "scheduler_or_notification_mutation": false,
+  "quiet_delivery_preserved": true,
+  "email_sent": false
+}

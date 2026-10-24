@@ -1,0 +1,52 @@
+{
+  "schema": "fei-search-domain/1",
+  "run_id": "20261011T210906Z-account01-B15-A071-two-address-domain",
+  "packet_id": "A071",
+  "target_claim": {
+    "id": "C022",
+    "version": "supplement CLAIMS.md blob d7279735b4dcfaf7552cf271b7413fc5c0f427b6",
+    "question": "Does the frozen edge-partition subfamily contain H/I > 40/17?",
+    "known_baseline": "one address has constant 2; two-address witness has 40/17"
+  },
+  "variables": {
+    "address_bits": 2,
+    "physical_bits": 4,
+    "total_bits": 6
+  },
+  "family": {
+    "formula": "F(y,x)=g(x)+chi_01(y)1_E01(x)+chi_10(y)1_E10(x)+chi_11(y)1_E11(x)",
+    "edges": "three pairwise vertex-disjoint 4-cube edges",
+    "residual": "g is zero on their six-vertex union and arbitrary +/-1 on the complement",
+    "retention": "the normalized squared Walsh law of g is product",
+    "boolean_realizability": "pointwise exactly one summand is nonzero and sign-valued"
+  },
+  "symmetry_reduction": {
+    "global_output_negation": "fix first complement sign to +1",
+    "edge_slice_signs": "fixed because they do not change squared spectra or influence",
+    "edge_partition_per_union": "one representative; each edge slice has identical entropy and expected physical degree and labels have total degree 4",
+    "cube_automorphisms": "not quotiented; enumeration is redundant",
+    "completeness": "complete for H/I within the displayed family, not for all C022 functions"
+  },
+  "case_count": {
+    "cube_edges": 32,
+    "three_edge_matchings": 2496,
+    "distinct_six_vertex_unions": 1984,
+    "sign_patterns_per_union": 512,
+    "total_representatives": 1015808
+  },
+  "exact_conventions": {
+    "truth_table_order": "integers x=0..15; y=0..3 varies fastest in full table; bit 0 least significant",
+    "signs": "+1/-1 Boolean convention",
+    "walsh": "unnormalized integer transform; normalized coefficients divide by 16 for residual and 64 for full function",
+    "entropy_units": "bits",
+    "influence": "sum_S |S| fhat(S)^2"
+  },
+  "result": {
+    "retained_product_candidates": 3584,
+    "distinct_ordered_residual_squared_laws": 8,
+    "larger_than_40_over_17": 0,
+    "equal_to_40_over_17": 1792,
+    "other_signature": "H=5,I=5/2,H/I=2",
+    "finite_domain_maximum": "40/17"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "q_values": [
+    "1/10",
+    "1/4",
+    "1/2",
+    "3/4",
+    "9/10",
+    "1"
+  ],
+  "p_values": [
+    "1/10",
+    "1/4",
+    "1/2",
+    "3/4",
+    "9/10"
+  ],
+  "graph_controls": [
+    {
+      "graph": "tree",
+      "edge_configurations": 8,
+      "parameter_pairs": 30
+    },
+    {
+      "graph": "triangle",
+      "edge_configurations": 8,
+      "parameter_pairs": 30
+    },
+    {
+      "graph": "cactus_two_triangles",
+      "edge_configurations": 64,
+      "parameter_pairs": 30
+    },
+    {
+      "graph": "theta_K23",
+      "edge_configurations": 64,
+      "parameter_pairs": 30
+    },
+    {
+      "graph": "K4",
+      "edge_configurations": 64,
+      "parameter_pairs": 30
+    }
+  ],
+  "all_upset_parameter_checks": 150,
+  "triangle_brute_upset_evaluations": 600,
+  "negative_control_detected": true,
+  "violations": [],
+  "elapsed_seconds": 0.11675019992981106,
+  "problem_id": "C0146",
+  "audit_status": "PENDING w347",
+  "command": "python -B -X utf8 checks/batch_three.py"
+}

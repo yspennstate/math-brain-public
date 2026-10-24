@@ -1,0 +1,52 @@
+{
+  "ledger_delta": {
+    "worker": "NM13-13",
+    "role": "T04_cluster_aware_3SAT_variational",
+    "target": "T04",
+    "status": "OPEN/PARTIAL; CANDIDATE_FULL for explicit fixed-count upper endpoint 4.3906 pending later independent review",
+    "runtime_model": "GPT-5.6 Sol",
+    "runtime_reasoning": "UNVERIFIED",
+    "source_model": "classical iid proper random 3-SAT with m=floor(alpha*n), three distinct variables per clause, independent fair literal signs",
+    "external_explicit_bracket_before": "[3.52,4.4898]",
+    "external_explicit_bracket_after": "[3.52,4.4898]",
+    "project_candidate_upper_before": 4.3911,
+    "project_candidate_upper_after": 4.3906,
+    "project_candidate_bracket_before": "[3.52,4.3911]",
+    "project_candidate_bracket_after": "[3.52,4.3906]",
+    "project_candidate_width_before": 0.8711,
+    "project_candidate_width_after": 0.8706,
+    "endpoint_gain": 0.0005,
+    "continuity_note": "04:55 ledger plus executed artifact certify 4.3911; later 05:22 report regressed to 4.392, so this run restores the stronger preserved predecessor without modifying history",
+    "claim_id": "NM13-13-T04-LOGCONVEX-TAIL-43906-UPPER-04",
+    "new_lemma": "For mu_k=E[Q^k], 0<=Q<=1, log-convexity implies r_k=mu_k/mu_{k-1} is nondecreasing and hence sum_{j>K} mu_j^2/j >= mu_K^2 sum_{t=1}^T r_K^(2t)/(K+t)",
+    "survey_support": ["31/625", "1/2", "594/625"],
+    "survey_weights": ["27/125", "71/125", "27/125"],
+    "certificate": {
+      "alpha": "21953/5000",
+      "K": 2400,
+      "T_tail": 10000,
+      "interval_dps": 1350,
+      "all_mu_intervals_positive": true,
+      "mu_2399": "0.00604463223774545877793714228011425564154069171307099858463571174908149572138",
+      "mu_2400": "0.00604222771810446139315343594295137046266823301277603792861564582223267171555",
+      "r_2400": "0.999602205800713158323773224430196771064925774904146480114996067042209883821",
+      "A_2400": "0.0000128510672659603103298702471578222676972630396124467825449151855143215788242",
+      "tail_lower_bound": "0.0000136566589795412292385537932322289874997492495593524632490868784140783684967",
+      "full_A_upper": "-0.000000805591713580918908683546074406719802486209946905680704171692899756789672472",
+      "certified_negative": true
+    },
+    "transfer": "negative hard-field coefficient -> finite m,beta,H negative K-SAT interpolation bound -> linear minimum violated-clause energy in Poisson with-replacement model -> delete O_p(1) repeated-variable clauses -> same-density O_p(sqrt(n)) de-Poissonization to fixed-count proper iid model",
+    "prior_failures_preserved": [
+      "arbitrary rescue stars fail composition",
+      "anchored degree-one rescue matching lacks full Diaz-polytope reoptimization",
+      "positive local multiplicative second moments hit the identical-pair barrier log(2)/log(5/4)",
+      "sublinear solution-graph ball quotienting gives only exp(o(n)) savings",
+      "full-component quotienting leaves an uncontrolled overlap moment",
+      "whitening/core counting lacks a uniform exponential cluster-multiplicity theorem",
+      "q-binomial radius-two route reached only about 4.5923",
+      "equal-weight two-support hard-field family stalls near 4.4178"
+    ],
+    "companion_NM13_06": "latest constructive report proves doubly-exponential local repair-menu completeness under its Palm recursion; remaining obstruction is global compatibility/load",
+    "next_attack": "optimize a richer symmetric finite-support survey against the tail-accelerated objective, or derive a multi-ratio tail envelope"
+  }
+}

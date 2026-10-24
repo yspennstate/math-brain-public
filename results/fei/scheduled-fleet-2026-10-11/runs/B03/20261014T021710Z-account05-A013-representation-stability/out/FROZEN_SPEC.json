@@ -1,0 +1,37 @@
+{
+  "helper_version": "A013-three-bit-profile-v2",
+  "family": "G=c on three shared bits; H=c with one shared point flipped only when all r private controllers are zero; fresh physical selector. Independent A012 two-shared-bit ownership recheck and fixed common terminal product.",
+  "domain": {
+    "c": "all 256 labelled signs",
+    "w": "all 8 shared points",
+    "r": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "source_review": "16 x 16 fixed labelled three-bit branch subset",
+    "terminal": "16 two-bit signs x four named phases x r=0,1 x three fixed references",
+    "actual_spectrum_c": [
+      255,
+      3,
+      7,
+      1
+    ]
+  },
+  "case_counts": {
+    "profiles": 128,
+    "phase_point_classification": 2048,
+    "scalar_interval_certificates": 8,
+    "source_review_pairs": 256,
+    "proper_nonmember_partitions": 7,
+    "retained_terminal_reference_cases": 384
+  },
+  "symmetry": "All 2048 labelled c,w classified exactly. Four representative phases, all 8 points and r=0,1,2,3 give 128 actual spectrum checks. All-dimensional proof relies on the four relative-point Walsh patterns and the explicit coefficient formula, not extrapolation from representatives.",
+  "arithmetic": "Integer FWHT; Fraction; exact prime-log vectors; 20-term rational atanh with geometric tail for logarithm signs.",
+  "memory_estimate_MB": 70,
+  "maximum_runtime_seconds": 50,
+  "pilot_max_seconds": 60,
+  "no_automatic_escalation": true,
+  "helper_provenance": "Copied local stage3 elementary rational log arithmetic; new independent spectra/ownership and profile checker; no A012 or A095 code imported."
+}

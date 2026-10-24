@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T171213Z-account02-B19-qform-r14",
+  "status": "CORRECTS_PRIMARY_SNAPSHOT_CONSTANT",
+  "canonical_math_commit": "59b8c468c9814e99833f427dcebfc67f6197fedd",
+  "correction_blob": "4830d4b5c4b6489ccf7e50906e9d60c0165eceb0",
+  "corrected_verifier_blob": "39ee792530a1c1e7c40fef2a5b4f7b83d8a8a349",
+  "corrected_output_blob": "b6a754dcd10635d5aff1bc26669491a68d5a45fb",
+  "correction": {
+    "theorem_id": "QFORM-CROSSCUT-HALF-HOLDER-v1-corrected",
+    "statement": "P(F(U)+2U^T C V+G(V) in K)<=sqrt(2e) pi^(1/4)|K|^(1/2)(s1(C)s2(C))^(-1/4).",
+    "reason": "The primary report divided the TT* interval length by the factor 2 twice. The correct conditional interval probability is h*sqrt(e)/||C^TZ||.",
+    "tau_3_over_10_constant": 13.9371688286,
+    "qualitative_branch_impact": "none; exponent 1/2 and QFORM-HIGH-SCHUR-OFFDIAG-PAID-v1 remain valid"
+  },
+  "random_cut_proof_correction": "The two-channel branch does not always have s1>7tau/16, but it does have s1s2>7tau^2/256 by a two-range argument. The near-rank-one branch s2<tau/16 still has s1>7tau/16.",
+  "supersedes_primary_snapshot_fields": [
+    "canonical_math.commit",
+    "verification.half_holder_constant_at_tau_3_over_10",
+    "new_results[QFORM-CROSSCUT-HALF-HOLDER-v1].numerical_constant"
+  ],
+  "corrected_verifier_terminator": "QFORM_CROSSCUT_HALF_HOLDER_CORRECTION_PASS",
+  "full_target_status": "OPEN"
+}

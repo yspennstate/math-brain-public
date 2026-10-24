@@ -1,0 +1,40 @@
+ledger_delta:
+  track: NM13-08
+  parent: T07
+  source: "Grimmett-Winkler uniform-all-forests pairwise edge negative correlation"
+  runtime_model: "GPT-5.6 Sol"
+  runtime_reasoning: "UNVERIFIED"
+  parent_status_before: OPEN
+  parent_status_after: OPEN
+  source_complete_order_before: 9
+  source_complete_order_after: 9
+  source_counterexample_order_lower_bound_before: 10
+  source_counterexample_order_lower_bound_after: 10
+  mechanism_before: "independent three-terminal right P5 layers: 59/61 Newton-positive orbit polynomials plus two exact two-corner certificates"
+  mechanism_after: "independent three-terminal right P6 layers: exact 15-state path-tail recurrence, 77/81 Newton-positive orbit polynomials, four exact two-corner certificates"
+  restricted_claim: T07-RIGHT-P6-FOREST-PNC-13
+  restricted_status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+  new_class: "F6_{p,r}=K_{3,6p+r} + (p P6 disjoint_union r K1), all p,r>=0, three independent terminals"
+  new_decomposition_lemma: T07-PATH-TAIL-RECURRENCE-13
+  path_frontier_characteristic: "(lambda-1)^5 (lambda^2-6 lambda+2)^5"
+  path_frontier_minimal: "(lambda-1)^2 (lambda^2-6 lambda+2)^3"
+  induced_order8_recurrence: "a[n+8]=20a[n+7]-151a[n+6]+534a[n+5]-918a[n+4]+816a[n+3]-380a[n+2]+88a[n+1]-8a[n]"
+  p6_transfer: "23396 I + 37512 N + 25562 N^2, N^3=0"
+  orbit_count: 81
+  positive_newton_orbits: 77
+  exceptional_orbits: 4
+  exceptional_geometry: "same P6 block, different-terminal spokes at path distance >=3; representatives (0,3),(0,4),(0,5),(1,4)"
+  exceptional_certificates:
+    v0_v3: "shifts (3,0),(0,15) plus 45-point exact box"
+    v0_v4: "shifts (9,0),(0,56) plus 504-point exact box"
+    v0_v5: "shifts (24,0),(0,153) plus 3672-point exact box"
+    v1_v4: "shifts (3,0),(0,17) plus 51-point exact box"
+  exact_checker_result: ALL_EXACT_CHECKS_PASS
+  direct_example: "F6_{1,0}: n=9,m=23,Z=326816,minDelta=10756032"
+  p14_scope_recovered: "GW <=8 and n=9,m<=18; repository complementary dense n=9 sector; minimal counterexample may be taken 3-connected"
+  erickson_scope_recovered: "stronger all-positive-weight Rayleigh/SOS theorem for series-parallel graphs only"
+  later_scope_note: "Huang restricted arboreal-gas results; Bado wheels; Tang-Zhang complete-graph fixed-component families do not settle arbitrary-graph all-forest conjecture"
+  novelty_priority: UNVERIFIED
+  residual_obstruction: "the path-length recurrence is unmarked/tail-local; no uniform sign theorem yet for all P_l marked-spoke quartics, and the worst corner threshold grows sharply at distance 5"
+  next_attack: "use the exact frontier recurrence to derive a recurrence in path length for fixed-position marked-spoke Rayleigh quartics, then test whether the distance>=3 exceptional family admits a uniform eventual-corner bound or produces a source-valid negative point"
+  parent_closed: false

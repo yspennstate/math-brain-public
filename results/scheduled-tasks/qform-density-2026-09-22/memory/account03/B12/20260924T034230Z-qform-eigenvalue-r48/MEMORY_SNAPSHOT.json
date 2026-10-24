@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260924T034230Z-qform-eigenvalue-r48",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "source_control_refresh_commit": "b6b3f28b19b5a9788e536ad15347313a305ddc7e",
+  "correction_inbox_blob": "a884b835aba929c5376e6417ae5cfcd44c0f7a76",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "result_ids": [
+    "QFORM-NEAR-RESONANCE-TRANSVERSE-REPAIR-v1",
+    "QFORM-NEAR-RESONANCE-DENSITY-STABILITY-v1"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1e1ba593e3832d65ece87d00c7e14cdf48632881",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260924T034230Z-qform-eigenvalue-r48/REPORT.md"
+  },
+  "actual_mathematical_premises": [
+    "Exact original-coordinate carrier decomposition from account01/B12@6bbaa340406b8febd0270e186cc79040af81872a: (A0+E)P=M0L+W with M0^T W=0.",
+    "Completed account03/B12 r47 five-mode compiler@8f9128b3f3ce222f941a3b138460658059957a83: lambda5((A^2)[H,H])>=g^2 on m>=5 original coordinates implies continuous C0 density bounded by sqrt(24*pi*m+K3^2)/g.",
+    "Only original-coordinate conditioning/product provenance; no post-rotation independence or random-error smallness."
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B12",
+    "commit": "71b7db02d3bd2f5cb6bf07e800caa6bd13a1a3e5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260924T021341Z-account04-B12-resonance-repair-r9/REPORT.md",
+    "equation_level_application": "For the partner exact resonance F=2(I-e1e1^T), W=-2e1e1^T and K=span(e1), the new formula has a=b=2,c=0,rho=2. After the partner local tails 1/32 and 1/64, s6(AP_H)>=125/64, hence the r47 five-mode compiler gives continuous ||p_Q||infinity<12.157."
+  },
+  "new_theorem": {
+    "statement": "Let K be the q-dimensional bottom right-singular subspace of F=G0^(1/2)L. With a=s_(m-q)(F)>0, b=inf_{x in K,||x||=1}||Wx||>0, c=||W P_(K^perp)||op and S=a^2+b^2+c^2, define rho^2=(S-sqrt(S^2-4a^2b^2))/2. Then s_m((A0+E)P)>=rho>=ab/sqrt(S). If later additions satisfy S0P=0 and ||TP||<=epsilon, then s_m(AP)>=[rho-epsilon]_+.",
+    "scope": "Arbitrary signed spectral packet E, including exact or near finite-dimensional destructive resonances; arbitrary carrier-invisible later spectrum; local-action-bounded further signed remainder.",
+    "continuity": "The deterministic theorem itself is matrix-only. When [rho-epsilon]_+>0 and m>=5, the five-mode compiler yields a continuous C0 target density with the stated universal-in-law height for that coefficient branch."
+  },
+  "finite_checks": {
+    "seed": 20260924,
+    "instances": 10000,
+    "violations": 0,
+    "minimum_actual_minus_rho": 0.0009979653641402075,
+    "status": "sanity_check_only"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1"
+  ],
+  "unresolved_implication": "From s3(A)>=1 alone, force a bounded original-coordinate carrier for which relative gain is quantitatively nonresonant, or its low-singular subspace has quantitative transverse repair, or failure routes to an already-proved physical-pair/grouped-hub/projected-crossing/ridge/common-plane/diffuse-volume receiver.",
+  "next_step": "Relate failure of both nonresonance and transverse repair to an explicit physical crossing/volume certificate rather than introducing any dependent convolution argument."
+}

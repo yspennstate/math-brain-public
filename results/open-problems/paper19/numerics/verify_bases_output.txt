@@ -1,0 +1,33 @@
+================================================================
+A. Scalar small-ball exponents  P{|g_F|<=t} ~ c t^{d_F}
+================================================================
+  real      : fitted exponent = 0.999   (theory d_F=1)
+  complex   : fitted exponent = 1.992   (theory d_F=2)
+  quaternion: fitted exponent = 4.069   (theory d_F=4)
+================================================================
+B. One-matrix hard edge  P{sigma_min(G_m)<=t} ~ t^{d_F}  (m=20)
+================================================================
+  real      : fitted exponent = 1.008   (theory d_F=1)
+  complex   : fitted exponent = 2.000   (theory d_F=2)
+================================================================
+C. Overlap Beta laws and quaternion overlap moment
+================================================================
+  real       overlap |rho|^2: mean=0.1668 (Beta mean a/(a+b)=0.1667); E[(1-|rho|^2)^(-d/2)]=1.1318
+  complex    overlap |rho|^2: mean=0.1666 (Beta mean a/(a+b)=0.1667); E[(1-|rho|^2)^(-d/2)]=1.2495
+  quaternion D= 4: E[(1-|rho|^2)^(-2)] emp=2.1003  formula=2.1000  (1+2/D=1.5000)
+  quaternion D= 6: E[(1-|rho|^2)^(-2)] emp=1.5279  formula=1.5278  (1+2/D=1.3333)
+  quaternion D= 8: E[(1-|rho|^2)^(-2)] emp=1.3461  formula=1.3462  (1+2/D=1.2500)
+  quaternion D=12: E[(1-|rho|^2)^(-2)] emp=1.2047  formula=1.2048  (1+2/D=1.1667)
+  quaternion D=20: E[(1-|rho|^2)^(-2)] emp=1.1125  formula=1.1126  (1+2/D=1.1000)
+================================================================
+D. Extremal base  (1/m) log M_m  vs  -h(gamma)/d_F   (real, N=2m-1 => -log4)
+================================================================
+  target -h(2)/1 = -log4 = -1.3863
+  m=4: (1/m)log M_m mean=-1.1582 std=0.3050  [#subs=35]  gap to -log4 = +0.2281
+  m=5: (1/m)log M_m mean=-1.2336 std=0.2583  [#subs=126]  gap to -log4 = +0.1527
+  m=6: (1/m)log M_m mean=-1.2364 std=0.1957  [#subs=462]  gap to -log4 = +0.1499
+  m=7: (1/m)log M_m mean=-1.2665 std=0.1823  [#subs=1716]  gap to -log4 = +0.1198
+  m=8: (1/m)log M_m mean=-1.3045 std=0.1565  [#subs=6435]  gap to -log4 = +0.0818
+
+(Finite-size: the o(m) correction is large for small m; the gap should shrink as m grows.)
+DONE.

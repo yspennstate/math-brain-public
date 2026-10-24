@@ -1,0 +1,64 @@
+S(singleton)=
+Matrix([[4, 1, 1, 1, 1], [0, 4, 0, 0, 2], [0, 0, 4, 0, 2], [0, 0, 0, 4, 2], [0, 0, 0, 0, 4]])
+P7 layer=
+Matrix([[132088, 247492, 247492, 247492, 1460284], [0, 132088, 0, 0, 494984], [0, 0, 132088, 0, 494984], [0, 0, 0, 132088, 494984], [0, 0, 0, 0, 132088]])
+N^3=0: PASS
+P7 = 132088 I + 247492 N + 202132 N^2: PASS
+frontier characteristic polynomial = (lam - 1)**5*(lam**2 - 6*lam + 2)**5
+minimal polynomial = (lambda-1)^2 (lambda^2-6 lambda+2)^3: PASS
+coefficient recurrence A_{n+2}=6A_{n+1}-2A_n: PASS
+coefficient recurrence B annihilator (lambda^2-6lambda+2)^2: PASS
+coefficient recurrence C annihilator (lambda^2-6lambda+2)^3: PASS
+P7 coefficients from recurrence: (132088, 247492, 202132)
+Z/(132088^p 4^r) = (45939217548*p**2 + 12259021236*p*r + 26800323172*p + 817839363*r**2 + 3543970573*r + 4361809936)/4361809936
+closed forest-count formula: PASS
+universal witness: 60 edges, 1770 pairs, 110 automorphism orbits: PASS
+104/110 orbit polynomials lie in the nonnegative Newton cone: PASS
+six Newton failures are exactly same-P7 different-terminal spoke pairs at path distance >=3: PASS
+minimum positive Newton coefficient among regular orbits = 27/32
+minimum positive regular-orbit constant = 36
+EXCEPTION 7 A0:v0-T0 A0:v3-T1
+  negative Newton coefficients = [((0, 3), -1928232), ((1, 2), -451759657986/43681), ((2, 1), -33690753214430760/721216991), ((3, 0), -1420363492002921141144/11908013738401)]
+  denominator cleared by 95264109907208
+  x-corner shift (2,0): all coefficients positive; min=668861223672245769
+  z-corner shift (0,13): all coefficients positive; min=152398759824055998
+  residual box: 26 exact values; min=1137426243523113402180608 at (0,0)
+  two-corner lattice sign certificate: PASS
+EXCEPTION 9 A0:v0-T0 A0:v4-T1
+  negative Newton coefficients = [((0, 3), -566118), ((1, 2), -1086310510685316/272613121), ((2, 1), -125719203065564833704/4501115240831), ((3, 0), -14479745380085535058695312/74317913741360641)]
+  denominator cleared by 74317913741360641
+  x-corner shift (8,0): all coefficients positive; min=32774199959940042681
+  z-corner shift (0,55): all coefficients positive; min=1560676188568573461
+  residual box: 440 exact values; min=922549857521472401456554880 at (0,0)
+  two-corner lattice sign certificate: PASS
+EXCEPTION 11 A0:v0-T0 A0:v5-T1
+  negative Newton coefficients = [((0, 3), -231075/2), ((1, 2), -231575219002575/272613121), ((2, 1), -28101189615125026050/4501115240831), ((3, 0), -3408691498731510781437900/74317913741360641)]
+  denominator cleared by 594543309930885128
+  x-corner shift (24,0): all coefficients positive; min=16721530591806144225
+  z-corner shift (0,173): all coefficients positive; min=16721530591806144225
+  residual box: 4152 exact values; min=7466254681152210746223810048 at (0,0)
+  two-corner lattice sign certificate: PASS
+EXCEPTION 13 A0:v0-T0 A0:v6-T1
+  negative Newton coefficients = [((0, 3), -48177/2), ((1, 2), -48857900813379/272613121), ((2, 1), -6001544399206988142/4501115240831), ((3, 0), -737169648313727899248300/74317913741360641)]
+  denominator cleared by 297271654965442564
+  x-corner shift (60,0): all coefficients positive; min=668861223672245769
+  z-corner shift (0,448): all coefficients positive; min=668861223672245769
+  residual box: 26880 exact values; min=3791106994881320195122899968 at (0,0)
+  two-corner lattice sign certificate: PASS
+EXCEPTION 39 A0:v1-T0 A0:v4-T1
+  negative Newton coefficients = [((0, 3), -1910790), ((1, 2), -3024507697985340/272613121), ((2, 1), -265428512223640383240/4501115240831), ((3, 0), -19376927642803467203918640/74317913741360641)]
+  denominator cleared by 148635827482721282
+  x-corner shift (3,0): all coefficients positive; min=819354998998501067025
+  z-corner shift (0,16): all coefficients positive; min=187281142628228815320
+  residual box: 48 exact values; min=1756683966554770616522568640 at (0,0)
+  two-corner lattice sign certificate: PASS
+EXCEPTION 41 A0:v1-T0 A0:v5-T1
+  negative Newton coefficients = [((0, 3), -517725), ((1, 2), -1001705811486975/272613121), ((2, 1), -117015619403671959600/4501115240831), ((3, 0), -13621235946454906660844100/74317913741360641)]
+  denominator cleared by 1189086619861770256
+  x-corner shift (9,0): all coefficients positive; min=418038264795153605625
+  z-corner shift (0,63): all coefficients positive; min=234101428285286019150
+  residual box: 567 exact values; min=14616151839719357955269318912 at (0,0)
+  two-corner lattice sign certificate: PASS
+unique zero-constant orbit = [(108, 'O0:v0-T0', 'O0:v0-T1')] ; equality only for F7_{0,1}=K_{3,1}: PASS
+DIRECT F7_{1,0}: n=10 m=27 Z=2334848 min_gap=413667072 pair= (('i', 0, 1), ('i', 4, 5))
+ALL_EXACT_CHECKS_PASS

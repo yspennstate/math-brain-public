@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "helper_version": "A058-common-phase-all-history-v1",
+  "state_rows": [
+    {
+      "shared": 0,
+      "states": 32,
+      "data_checks": 32
+    },
+    {
+      "shared": 1,
+      "states": 64,
+      "data_checks": 128
+    },
+    {
+      "shared": 2,
+      "states": 256,
+      "data_checks": 768
+    },
+    {
+      "shared": 3,
+      "states": 4096,
+      "data_checks": 16384
+    }
+  ],
+  "states": 4448,
+  "data_checks": 17312,
+  "selector_checks": 4448,
+  "zero_selector_states": 612,
+  "full_walsh_fixtures": 578,
+  "exact_mean_only_representation_assertions": 1734,
+  "first_private_rate12_assertions": 578,
+  "certified_log_grid": "log2 prime in [floor(log2(prime^1024))/1024,(floor+1)/1024], endpoints certified by BigInt bitlength",
+  "runtime_seconds": 6.059,
+  "arithmetic": "exact integer/dyadic coefficients; BigInt sign certification; floating point only exact powers-of-two dyadics and runtime",
+  "independent_review": "pending"
+}

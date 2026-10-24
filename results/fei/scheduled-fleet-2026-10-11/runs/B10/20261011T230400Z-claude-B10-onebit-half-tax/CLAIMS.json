@@ -1,0 +1,66 @@
+[
+ {
+  "claim_id": "B10L-ONEBIT-HALF-TAX",
+  "version": 1,
+  "exact_statement": "For every p in (0,1), every finite product-biased cube, every coordinate i of bias p and every real f whose two restrictions f_0,f_1 have unit L2 norm (in particular every Boolean f): J_i - M_i = h2(p) - sum_T q_T F(t_T) <= tau*(p) := h2(p) - min_t F(t) <= (1/2)[h2(p) + log2 max(p,1-p)], where F(t) = h2(sin^2 t) + h2(sin^2(t-b)), sin^2 b = min(p,1-p), (sqrt(1-p)G_T, sqrt(p)H_T) = sqrt(q_T)(cos t_T, sin t_T). The last inequality is strict for p != 1/2, and tau*(p) = (p/2)log2(1/p) - 0.2787p + o(p), so the constant 1/2 is sharp as p -> 0.",
+  "hypotheses": [
+   "finite product-biased cube",
+   "selector coordinate independent with bias p in (0,1)",
+   "children of unit L2 norm in a common orthonormal product basis",
+   "entropy in bits"
+  ],
+  "statement_sha256": "263cbaaf9f37e8e5da651f9b88b238d9bd5c5735fa76518e36c611c576a3cd20",
+  "contributors": [
+   "claude-B10-lead"
+  ],
+  "proof_source": "REPORT.md (reduction, lemma A, lemma B); code/certify_half_tax.py + out/certificate.json (interval box certificate)",
+  "proof_dependencies": [
+   "B09/A047 parent-mass formulas a_T, b_T (exact algebra, re-derived here)"
+  ],
+  "review_records": [],
+  "status": "CERTIFIED_LOCALLY_REVIEW_PENDING (computer-assisted: mpmath interval arithmetic)",
+  "supersedes": [],
+  "refutes": [
+   "any claim that the one-bit B09 tax coefficient 1 is needed at finite p"
+  ],
+  "first_unproved_line": "none for one bit; independent review of lemma A/B and of the interval code is pending",
+  "next_consumers": [
+   "A092",
+   "A087",
+   "A046",
+   "A047",
+   "A050",
+   "A048"
+  ]
+ },
+ {
+  "claim_id": "B10L-BLOCK-HALF-TAX-PRODUCT",
+  "version": 1,
+  "exact_statement": "For a block A of coordinates with independent biases p_i (product law) and every real f whose physical children have unit L2 norm: J_A - M_A <= H(Z_A) - min_{unit w} [H(w^2) + H((U_A w)^2)], U_A the tensor product of the one-bit rotations; if the optimal Shannon uncertainty bound is additive for local measurement pairs, then J_A - M_A <= sum_{i in A} tau*(p_i) <= Delta_A/2.",
+  "hypotheses": [
+   "product-biased block",
+   "unit-norm physical children",
+   "additivity theorem for optimal Shannon uncertainty bounds (Schwonnek 2018), cited not re-proved"
+  ],
+  "statement_sha256": "63dfb03b38d04ca58bcffc45530a6cf93ff3a5057b166358d4a42dcd4bcd797c",
+  "contributors": [
+   "claude-B10-lead"
+  ],
+  "proof_source": "REPORT.md reduction; out/checks.json two-bit float evidence",
+  "proof_dependencies": [
+   "B10L-ONEBIT-HALF-TAX",
+   "R. Schwonnek, Additivity of entropic uncertainty relations, Quantum 2, 59 (2018) - not re-read"
+  ],
+  "review_records": [],
+  "status": "CONDITIONAL",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": "min over entangled real unit w of H(w^2)+H((U_A w)^2) equals sum_i min_t F_i(t) (additivity) - cited, not checked in this run",
+  "next_consumers": [
+   "A049",
+   "A048",
+   "A050",
+   "A092"
+  ]
+ }
+]

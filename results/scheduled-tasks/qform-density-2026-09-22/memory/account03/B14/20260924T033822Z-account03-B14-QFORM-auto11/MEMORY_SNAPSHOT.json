@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260924T033822Z-account03-B14-QFORM-auto11",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "startup_control_commit_observed": "f1e8a06c7378c5e4f3f0a183ed7b5b999ef16b12",
+  "publication_refresh_commit": "593deed09ab9dbbdf300be616994562c362f162e",
+  "control_revision": "2026-09-22.15",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "corrections_consumed": [
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-SMOOTH-CONNECTED-SLICE-ROUGH-HUB-FALSE-v1",
+    "bounded-density-does-not-imply-law-uniform-pointwise-quadratic-phase-decay",
+    "interval-only-frozen-slice-profile-does-not-imply-rough-hub-Linfinity"
+  ],
+  "premises": [
+    {
+      "id": "ACCOUNT04-B14-R10-SCALED-SCHUR-LOCALIZATION",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260924T001624Z-account04-B14-scaled-schur-localization-r10/REPORT.md",
+      "scope": "invertible physical 3x3 principal block B with sigma=min abs eig(B) gives essential output density cap 6sqrt(pi)/sigma, uniform in outside coupling, shifts, fragments, tails and moments"
+    },
+    {
+      "id": "ACCOUNT03-B14-AGGREGATE-ROW-PROJECTION-CAP",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "34b68b60ef29a9fbac49e9d16663592fc1f7917b",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T203535Z-account03-B14-QFORM-auto11/REPORT.md",
+      "scope": "source-valid one-dimensional product projection cap C(v)=min(||v||inf^-1,sqrt(2)||v||2^-1) used to compile disjoint diffuse banks"
+    },
+    {
+      "id": "INTERACTIVE-MIXED-SQUARE-RECEIVER",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c1d2f72c5206c55f41c229457b6407d9e23c0b20",
+      "path": "proofnet24/QFORM-density/interactive/20260923T211300Z-hub-square-receivers/REPORT.md",
+      "scope": "nearby non-overlapping square plus capped random slope theorem; present run extends square-vertex dependence to the transverse hub"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-TRANSVERSE-VERTEX-RANDOM-SLOPE-LOCALIZATION-v1",
+      "status": "PROVED_IN_CURRENT_REPORT",
+      "statement": "For Q=a(W+Phi(U,Z))^2+D(Z)U+R(Z), W,U,Z mutually independent, density caps KW,KU, and D marginal density cap M, the output has essential density cap <=4sqrt(2) KW sqrt(KU M/|a|), uniformly in arbitrary measurable Phi(U,Z), R(Z), translations, fragments, support and moments."
+    },
+    {
+      "id": "QFORM-DIFFUSE-THREE-BANK-SQUARE-CROSS-v1",
+      "status": "COROLLARY_EXACT_TARGET_FAMILY",
+      "statement": "For three disjoint normalized diffuse banks W,U,S, Q=W^2+2US has spectrum {1,1,-1} and output density cap <=8 uniformly in bank size and all cap-one product laws."
+    },
+    {
+      "id": "QFORM-OVERLAPPING-VERTEX-STAR-CONSTANT-2-v1",
+      "status": "COROLLARY_EXACT_TARGET_FAMILY",
+      "statement": "For arbitrary independent cap-one W,U,S and arbitrary affine terms, Q=2(W+U)^2+4US+affine has essential density cap <=2; its homogeneous matrix has three eigenvalues of modulus >1."
+    }
+  ],
+  "partner_result_actually_applied": "account04/B14 r10 applied to A_*=[[2,2,0],[2,2,2],[0,2,0]]: r10 yields 6sqrt(pi)/sigma_* with sigma_*>1; current theorem yields 2, hence the combined proved inequality is min(2,6sqrt(pi)/sigma_*)=2.",
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "eac495331ac51a64b786478b490564b25a06c233",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260924T033822Z-account03-B14-QFORM-auto11/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260924T033822Z-account03-B14-QFORM-auto11/CHECKS.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B14/20260924T033822Z-account03-B14-QFORM-auto11.md",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "unresolved_implication": "From s3(A)>=1 alone, force or synthesize a source-valid square/random-slope decomposition whose transverse Schur self-curvature is absent or separately paid, without allowing cancellation of the affine smoothing resource.",
+  "next_step": "Work on a compensated Schur branch that tolerates a nonzero transverse U^2 residual by combining the random-slope one-sided Riesz payment with an existing definite/pair receiver before any reciprocal small pivot is paid.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_effort_requested": "maximum actually supported",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  },
+  "full_brain_connected": false,
+  "notifications": {
+    "email_enabled": false,
+    "push_enabled": false,
+    "source": "fresh account03 inventory observed 2026-09-24T00:46:59Z; no mutations this run"
+  }
+}

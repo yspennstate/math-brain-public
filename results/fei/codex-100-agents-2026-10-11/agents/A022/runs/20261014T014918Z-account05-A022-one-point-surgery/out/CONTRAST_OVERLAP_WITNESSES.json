@@ -1,0 +1,159 @@
+{
+  "cases": 7,
+  "checks": 482,
+  "runtime_seconds": 0.2433498999744188,
+  "verdict": "PASS",
+  "records": [
+    {
+      "kind": "controller-first point switch",
+      "k": 4,
+      "d": "1/16",
+      "B_over_d_interval": [
+        "12631722391428018968749917/2417851639229258349412352",
+        "394741324732125592773437/75557863725914323419136"
+      ],
+      "B_prime_expression": [
+        [
+          2,
+          "1"
+        ],
+        [
+          3,
+          "-45/64"
+        ],
+        [
+          5,
+          "-25/32"
+        ],
+        [
+          13,
+          "39/64"
+        ]
+      ],
+      "K4_bad_certified": true,
+      "counterclaim": "No refutation of tree payment: data-first paired access is good."
+    },
+    {
+      "kind": "controller-first point switch",
+      "k": 6,
+      "d": "1/64",
+      "B_over_d_interval": [
+        "17860087229655736078639885/2417851639229258349412352",
+        "17860087229655736078640463/2417851639229258349412352"
+      ],
+      "B_prime_expression": [
+        [
+          2,
+          "1"
+        ],
+        [
+          3,
+          "-567/256"
+        ],
+        [
+          5,
+          "225/256"
+        ],
+        [
+          7,
+          "-441/512"
+        ],
+        [
+          41,
+          "287/512"
+        ]
+      ],
+      "K4_bad_certified": true,
+      "counterclaim": "No refutation of tree payment: data-first paired access is good."
+    },
+    {
+      "kind": "controller-first point switch",
+      "k": 8,
+      "d": "1/256",
+      "B_over_d_interval": [
+        "91188133685605668137591523/9671406556917033397649408",
+        "22797033421401417034399619/2417851639229258349412352"
+      ],
+      "B_prime_expression": [
+        [
+          2,
+          "1"
+        ],
+        [
+          3,
+          "-3825/4096"
+        ],
+        [
+          5,
+          "-825/2048"
+        ],
+        [
+          17,
+          "-4335/4096"
+        ],
+        [
+          29,
+          "2175/4096"
+        ],
+        [
+          113,
+          "1921/4096"
+        ]
+      ],
+      "K4_bad_certified": true,
+      "counterclaim": "No refutation of tree payment: data-first paired access is good."
+    },
+    {
+      "kind": "three overlapping events",
+      "operator": "OR",
+      "controller_mask": 60608,
+      "k": 4,
+      "t": 4,
+      "alpha": "7/16",
+      "I_data": "71/32",
+      "I_ctrl": "3/32",
+      "I_terminal_data": "71/64",
+      "inherited_H_coefficient": "1/16",
+      "access_bad_credit": "0"
+    },
+    {
+      "kind": "three overlapping events",
+      "operator": "OR",
+      "controller_mask": 60608,
+      "k": 8,
+      "t": 4,
+      "alpha": "7/16",
+      "I_data": "1031/256",
+      "I_ctrl": "3/512",
+      "I_terminal_data": "1031/512",
+      "inherited_H_coefficient": "1/256",
+      "access_bad_credit": "0"
+    },
+    {
+      "kind": "three overlapping events",
+      "operator": "XOR",
+      "controller_mask": 44224,
+      "k": 4,
+      "t": 4,
+      "alpha": "3/8",
+      "I_data": "35/16",
+      "I_ctrl": "7/64",
+      "I_terminal_data": "35/32",
+      "inherited_H_coefficient": "1/16",
+      "access_bad_credit": "0"
+    },
+    {
+      "kind": "three overlapping events",
+      "operator": "XOR",
+      "controller_mask": 44224,
+      "k": 8,
+      "t": 4,
+      "alpha": "3/8",
+      "I_data": "515/128",
+      "I_ctrl": "7/1024",
+      "I_terminal_data": "515/256",
+      "inherited_H_coefficient": "1/256",
+      "access_bad_credit": "0"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+ledger_delta:
+  slot: NM13-08
+  parent: T07_uniform_forest_pairwise_negative_edge_correlation
+  source_status_before: OPEN
+  source_status_after: OPEN
+  complete_all_graph_order_before: 9
+  complete_all_graph_order_after: 9
+  counterexample_order_lower_bound_before: 10
+  counterexample_order_lower_bound_after: 10
+  new_mechanism:
+    - universal_three_terminal_symmetric_layer_transfer_aI_plus_bN_plus_cN2
+    - arbitrary_marked_disjoint_layer_commutation
+    - multivariate_Newton_cone_sign_certificate
+  new_restricted_theorem:
+    family: "L_{p,m,r}=K_{3,3p+2m+r} plus right induced p P3 disjoint_union m K2 disjoint_union r K1"
+    parameters: "p,m,r >= 0"
+    verdict: "Delta(e,f)>=0 for every distinct edge pair; strict except L_{0,0,1}=K_{3,1}"
+    proof_type: exact_symbolic_46_orbit_Newton_certificate
+    status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+  nonoverlap:
+    invariant: "mu(G)=minimum deletions to maximum-degree<=1"
+    formula_new_family: "mu(L_{p,m,r})=min(3p+2m+r,p+3)"
+    escapes_NM13_04_minor_closure: "p>=2"
+    escapes_split5_minor_closure: "p>=3"
+    escapes_biclique_width30_minor_route: "p>=28"
+  literature_scope:
+    grimmett_winkler: "all <=8 vertices and 9 vertices with <=18 edges; all-forest law"
+    p14_repository: "dense 9-vertex complement; complete order 9; minimal counterexample may be 3-connected"
+    erickson: "series-parallel all-positive-weight SOS/Rayleigh theorem"
+    huang: "restricted arboreal-gas results; general question open"
+    bado: "wheels, uniform all forests"
+    tang_zhang: "complete-graph specified ensembles including fixed-component forests; not arbitrary-graph all-forest law"
+  exact_checker: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T04-38-00Z__right-linear-forest-checker.py
+  exact_output: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T04-38-00Z__right-linear-forest-checker.out
+  exact_result: ALL_EXACT_CHECKS_PASS
+  residual_obstruction: marked_edge_sign_cone_for_general_internal_right_layers
+  next_attack: P4_right_layer_marked_orbit_Newton_positivity
+  parent_closed: false

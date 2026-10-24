@@ -1,0 +1,91 @@
+\section*{A sharp local payment for three parallel affine cosets}
+
+All logarithms are natural.  Let $G=\mathbb F_2^m$, let $V\leq G$ have
+codimension $k\geq2$, and let $A_1,A_2,A_3$ be three distinct cosets of
+$V$.  Put $s=\mathbf1_{A_1\cup A_2\cup A_3}$ and $y=2^{-k}$.  For an
+independent selector $x\in\{-1,1\}$ define
+\[
+ d(x,z)=\mathbf1_{\{x=-1\}}s(z),\qquad a_0=x+d,\qquad F=x+2d,
+\]
+and write $\mathcal E(g)=\sum_S\Phi(\widehat g(S)^2)$ with
+$\Phi(u)=u\log(1/u)$.  The local coherent associator is
+\[
+ \Omega=\mathcal E(F)-\mathcal E(a_0)-\mathcal E(d).
+\]
+
+\paragraph{Theorem.}  For every $m,V,A_1,A_2,A_3$ as above,
+\[
+ \boxed{\Omega\leq 8\log2\,I(d).}
+\]
+The constant is independent of dimension, codimension, physical orientation,
+and coordinate overlap.  It is the sharp supremum within this class.
+
+\paragraph{Two-level geometry.}
+The three quotient points $A_j/V$ determine a unique affine two-plane.  Let
+$D$ be its inverse image and let $E$ be the fourth $V$-coset in $D$.  Then
+$s=\mathbf1_D-\mathbf1_E$.  If $U$ is the direction of $D$, then
+$V\subset U$, $\dim(U/V)=2$, and the spectrum has exactly two nonzero shells:
+\[
+ |\widehat s(\gamma)|=
+ \begin{cases}
+ 3y,&\gamma\in U^\perp,\\
+ y,&\gamma\in V^\perp\setminus U^\perp,\\
+ 0,&\text{otherwise}.
+ \end{cases}
+\]
+Consequently
+\[
+ \mathcal E(s)
+ =\frac1{4y}\Phi(9y^2)+\frac3{4y}\Phi(y^2)
+ =6ky\log2-\frac92y\log3.                         \tag{1}
+\]
+
+\paragraph{Exact physical influence.}
+Let $m_V=|\{i:e_i\notin V\}|$ and
+$m_U=|\{i:e_i\notin U\}|$.  A coordinate in $V$ creates no boundary.  A
+coordinate in $U\setminus V$ only swaps the missing coset $E$ with one
+included coset and contributes $y/2$.  A coordinate outside $U$ translates
+the whole affine plane away from itself and contributes $3y/2$.  Hence
+\[
+ I(s)=\frac y2(m_V+2m_U).                              \tag{2}
+\]
+The physical coordinate columns span the quotients, so
+$m_V\geq k$ and $m_U\geq k-2$.  Tensor differentiation in the selector gives
+\[
+ I(d)=\frac12I(s)+\frac{3y}{4}
+ \geq\frac y4(3k-1).                                  \tag{3}
+\]
+
+\paragraph{Associator payment.}
+The exact selector-kernel identity from the preceding B12 work is
+\[
+ \Omega=\mathcal E(s)+C(p),\qquad p=3y,
+\]
+where
+\[
+ C(p)=\Phi((1-p)^2)-3\Phi(p^2/4)-\Phi((1-p/2)^2)
+      -p(1-p)\log4\leq0.                              \tag{4}
+\]
+Combining (1)--(4),
+\[
+ \Omega\leq 6ky\log2-\frac92y\log3
+ \leq (6k-2)y\log2
+ \leq8\log2\,I(d),
+\]
+because $(9/2)\log3>2\log2$.
+
+For sharpness take $m=k$, $V=\{0\}$, and three points in the plane spanned
+by the first two coordinate axes.  Then $m_V=k$, $m_U=k-2$, equality holds
+in (3), and $C(3\cdot2^{-k})=O(2^{-k})$.  Dividing by
+$I(d)\asymp k2^{-k}$ shows $\Omega/I(d)\to8\log2$.
+
+\paragraph{Scope correction.}
+This theorem is local.  The B19/A091 independent review at commit
+\texttt{0f2769f79b04a9a98ad26b3c9fa1c2d94f9cac98} proved that pathwise
+coordinate nonreuse does not imply
+$\sum_vw_vI(d_v)\leq I(b)$: adjoining and revealing free coordinates repeats
+the same positive local charge.  Thus the theorem must not be summed over an
+adaptive hierarchy using complete reached-source influence.  A valid global
+transfer still needs a directional owned-block bound or an explicit
+edge-disjoint/terminal-reserve ledger.
+

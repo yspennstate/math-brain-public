@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "control_revision": "2026-09-22.3",
+  "state_revision": "FEI-20260922T1000Z-v1",
+  "assignment": {
+    "id": "FEI-20260922-account02-B06",
+    "account": "account02",
+    "slot": "B06",
+    "pathway": "A",
+    "title": "Finite-complexity critical reduction",
+    "task": "Seek an influence- and entropy-controlled reduction of a hypothetical balanced excess violation to a finite structural core. Method: Use junta/decision-tree ideas only with proved original-coordinate costs and no n times small-error entropy bound.",
+    "target_claim_or_gap": "Seek an influence- and entropy-controlled reduction of a hypothetical balanced excess violation to a finite structural core.",
+    "target_status": "OPEN_TARGET_NOT_ESTABLISHED",
+    "method": "Use junta/decision-tree ideas only with proved original-coordinate costs and no n times small-error entropy bound.",
+    "inputs": [
+      {
+        "source_id": "BALANCED",
+        "url": "https://github.com/yspennstate/math-open-problems/blob/7d20a4bb4067085af7c5e7c9a82aef31998a7d36/proofnet24/P03-fei/fleet-2026-09-21/account02/B18/20260922T093253Z-balanced-slice-admission/REPORT.md",
+        "scope_note": "Balanced slice is same-constant FEI, so safe shape optimization is not a smaller universal problem."
+      },
+      {
+        "source_id": "IPROJ",
+        "url": "https://github.com/yspennstate/math-open-problems/blob/4bd6d05f1eb8325d665f2748f4d74dcee2550a04/proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+        "scope_note": "Exact influence-marginal I-projection and R=B_inf+K_occ."
+      },
+      {
+        "source_id": "EQUALITY",
+        "url": "https://github.com/yspennstate/math-open-problems/blob/84c69136ca6b008badb76f15bf1071d029c927aa/proofnet24/P03-fei/fleet-2026-09-21/account03/B15/20260922T085625Z-product-equality-rigidity/REPORT.md",
+        "scope_note": "Balanced uniform K_occ=0 classification; quantitative stability remains open."
+      },
+      {
+        "source_id": "HIERARCHY",
+        "url": "https://github.com/yspennstate/math-open-problems/blob/2bf247373576eb406ca91bb3ea5f3ce5e5ab8588/proofnet24/P03-fei/fleet-2026-09-21/account04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md",
+        "scope_note": "Exact disjoint-composition and hierarchy KL; do not discard the hierarchy term."
+      },
+      {
+        "source_id": "SELECTOR_DEBIT",
+        "url": "https://github.com/yspennstate/math-open-problems/blob/4ccd51ad517f425a529daa52c3352905b86ea69d/proofnet24/P03-fei/fleet-2026-09-21/account02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md",
+        "scope_note": "Use Sections 2-4 selector-debit theorem and child-defect identity. Section 5 candidate c=0.337 is now refuted."
+      }
+    ],
+    "deliverable": {
+      "repository": "yspennstate/math-open-problems",
+      "path": "proofnet24/P03-fei/fleet-2026-09-22/account02/B06/<actual-run-id>/",
+      "required": "REPORT.md containing the exact target statement, new derivation or construction, all assumptions, consumed peer result, proof or precise failed step, and the next unpaid implication. Include CLAIMS.json with status and dependencies. For a theorem include a complete proof; for computational or counterexample claims include the exact source construction and executable certificate actually used.",
+      "handoff": "yspennstate/math-research-brain:scheduled_tasks/work/shared/fei-all-team-2026-09-22/handoffs/account02/B06/<actual-run-id>.md"
+    },
+    "acceptance": "A dimension-independent reduction under an explicit verifiable extra hypothesis, or an actual Boolean family refuting the proposed reduction.",
+    "falsification": "If the proposed target is false, give an explicit genuine Boolean function/gate or a rigorously specified infinite Boolean family satisfying every claimed hypothesis, compute the exact violated quantity, and state which intermediate claim it refutes. A counterexample to a potential, lower certificate, or terminal-payment lemma is not a counterexample to FEI.",
+    "partner": "account03/B06",
+    "recipient": "account04/B17",
+    "collaboration_action": "Consume the latest compatible completed result from account03/B06; apply one exact expression to this target. Send the complete source-bound mathematical handoff to account04/B17 through the shared repository. Work from available complete snapshots without waiting for a synchronous reply.",
+    "first_run_action": "Read the current owner order, research state and correction ledger at one fresh control commit; compare the immutable source scopes listed here with later corrections. Then attempt this mathematical target. Do not rerun old scans or recreate the same missing implication under a new name.",
+    "if_blocked": "After three substantive attempts leaving the same implication unpaid, change the mathematical mechanism within this assigned FEI target, using the partner's newest result. Preserve unsuccessful derivations and classify them accurately. Never replace mathematics with status-only work.",
+    "full_problem_status": "OPEN_NOT_PROVED",
+    "caretaker_secondary": null
+  }
+}

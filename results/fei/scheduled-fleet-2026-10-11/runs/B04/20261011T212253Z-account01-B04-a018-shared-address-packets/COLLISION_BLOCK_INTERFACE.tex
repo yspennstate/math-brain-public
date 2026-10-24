@@ -1,0 +1,125 @@
+\section*{Exact shared-data collision interface and a packetized addressing control}
+
+All entropies are in bits.  Let $x\in\{-1,1\}^a$ be a fresh uniform
+selector, let $N=2^a$, and let $g_b$ be Boolean functions on a common data
+cube.  Define $F(x,y)=g_x(y)$.  For each data Fourier set $T$, put
+\[
+R_T=\frac1N\sum_b\widehat g_b(T)^2.
+\]
+When $R_T>0$, define
+\[
+r_T(b)=\frac{\widehat g_b(T)^2}{NR_T},\qquad
+u_T(b)=\frac{\widehat g_b(T)}{\sqrt{NR_T}},
+\]
+and let $\nu_T$ be the squared-coordinate law of the normalized Walsh
+transform of $u_T$:
+\[
+\nu_T(S)=\left(\frac1{\sqrt N}\sum_b\chi_S(b)u_T(b)\right)^2.
+\]
+Zero-mass $T$ are omitted.  Parseval shows that $r_T$ and $\nu_T$ are
+probability laws and that
+\[
+\widehat F(S,T)^2=R_T\nu_T(S).
+\]
+The physical joint law
+\[
+\Pr(B=b,T)=N^{-1}\widehat g_b(T)^2
+\]
+has entropy $a+N^{-1}\sum_bH(g_b)$, marginal $R$, and conditional law
+$r_T$.  Applying the chain rule once to this law and once to the spectral
+law of $F$ gives the exact collision identity
+\[
+H(F)=a+\frac1N\sum_bH(g_b)
+ +\sum_{T:R_T>0}R_T\bigl[H(\nu_T)-H(r_T)\bigr].
+\]
+Equivalently, if
+\[
+B_W=\sum_T R_TH(\nu_T),\qquad
+M_W=a-\sum_T R_TH(r_T),
+\]
+then
+\[
+H(F)-\frac1N\sum_bH(g_b)=B_W+M_W.
+\]
+The source proof also gives
+\[
+0\le M_W\le\frac{2}{\ln2}I_{\rm sel}(F).
+\]
+This is the frozen B04--B06 interface.  It includes $T=\varnothing$ and
+does not replace a coherent sum by an incoherent mixture.
+
+\subsection*{Shared-address packet family}
+
+Let $t,k\ge1$, $N=2^t$, and introduce mutually distinct fair data signs
+$y_{r,b}$ for $1\le r\le k$ and $b\in\{-1,1\}^t$.  Define
+\[
+F_{t,k}(x,y)=\prod_{r=1}^k y_{r,x}.
+\]
+The branch $g_b=\prod_r y_{r,b}$ has one Fourier atom, at the data set
+$D_b=\{(r,b):1\le r\le k\}$.  For $T=D_b$,
+\[
+R_T=N^{-1},\qquad r_T=\delta_b,\qquad
+\nu_T=\operatorname{Unif}(2^{[t]}).
+\]
+Therefore
+\[
+B_W=t,\qquad M_W=t,
+\]
+and the exact squared Fourier law is
+\[
+\Pr\{(S,T)=(S,D_b)\}=N^{-2}
+\quad(b\in\{-1,1\}^t,\ S\subseteq[t]).
+\]
+It follows that
+\[
+H(F_{t,k})=2t,qquad I(F_{t,k})=\frac t2+k.
+\]
+
+This law supplies a lossless joint packet code.  First encode the packet
+label $B=b$ (cost $t$ bits), then the selector Fourier subset $S$ given the
+packet (cost $t$ bits); the data set $D_b$ is deterministic within the
+packet.  The corresponding expected rank is
+\[
+\mathbb E|S|+|D_B|=t/2+k.
+\]
+Every selector coordinate occurs in all $N$ packet descriptions, so the
+unweighted worst-case read is $N$.  With the actual packet weights $1/N$,
+its spectral congestion is only
+\[
+\sum_b\frac1N\Pr(i\in S\mid B=b)=\frac12.
+\]
+Every data coordinate has congestion $1/N$.  Thus the cover has unbounded
+worst-case read but uniformly bounded fractional spectral congestion, with
+all label and rank costs included.
+
+By contrast, coordinatewise marginal-entropy accounting gives
+\[
+\sum_i h_2(I_i)=t+kN h_2(N^{-1}),
+\]
+because selector influences are $1/2$ and data-coordinate influences are
+$1/N$.  Taking $k=t$ yields
+\[
+\frac{\sum_i h_2(I_i)}{I(F_{t,t})}\longrightarrow\infty,
+\qquad
+\frac{H(F_{t,t})}{I(F_{t,t})}=\frac43.
+\]
+The divergence is therefore repeated address-label payment, not FEI
+growth.  The joint packet code charges the label exactly once.
+
+\subsection*{Boundary controls}
+
+If every branch is identical, $r_T$ is uniform while $\nu_T$ is a point
+mass, so $B_W=M_W=0$ and the complete selector cost cancels.  Multiplying
+the common branch by a selector character merely moves that point mass and
+has the same entropy cancellation.  At the opposite boundary, the accepted
+bent-splice source has one selector bit with
+\[
+I_{\rm sel}=2^{-m},\qquad
+\Delta_{\rm sel}H/I_{\rm sel}\ge m-1.
+\]
+Thus no selector-only increment bound follows from this packetization.
+The unrestricted shared signed-dictator choice $g_b(y)=h(b)y$ makes the
+remaining packet entropy exactly $H(h)$ and selector influence exactly
+$I(h)$; controlling it universally is FEI itself.  The packet theorem is a
+constructive repair for the displayed family, not a universal existence
+theorem.

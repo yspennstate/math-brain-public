@@ -1,0 +1,13 @@
+{
+  "helper_version": "A009-leafless-bipartite-v1",
+  "family": "Uniform Boolean positive edge DNF on K_(a,b); SAME all ab positive primes and both endpoint orders; lambda=1/b for 1<=a<=b",
+  "domain": "Pilot 1<=a<=b<=3; full 1<=a<=b<=5, plus exact compressed sector identities 1<=a<=b<=64",
+  "case_count": {"pilot_physical_functions": 6, "full_physical_functions": 15, "compressed_pairs": 2080},
+  "symmetry": "Exchange the two named parts to assume a<=b; no quotient on physical inputs or Fourier subsets",
+  "arithmetic": "integer Walsh and flip counts, Fraction probabilities, rational positive atanh log enclosures with proved remainder; no floating sign decisions",
+  "memory_estimate_mb": 35,
+  "max_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "checks_that_can_fail": ["root-count probability for two attachment slots", "double-star source-SCC and chronology", "full subprobability including all absent roots", "one-sided label sum over distinct edges", "squared-spectrum sector probabilities", "physical influence normalization", "a=b=1 and empty selected sides", "all-dimensional scalar bound and original denominator positivity"],
+  "status": "FROZEN_BEFORE_EXECUTION"
+}

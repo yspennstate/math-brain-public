@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B17",
+  "run_id": "20260922T193840Z-account01-B17-QFORM-r11",
+  "source_control_commit": "f571209fbad50281e9cbe2065102fe9dc8aa5a0f",
+  "owner_control_revision": "2026-09-22.15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "classification": "AUXILIARY_ONLY / SHARP-WITNESS_EXCLUSION",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWO-HEAVY-RADIAL-LAPLACE-DOMINATION-FALSE-v1",
+    "QFORM-R15-AREA-BANK-SINGLE-PACKET-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B17",
+    "theorem": "QFORM-TWO-ORTHOGONAL-SAMESIGN-HEAVY-NOESCAPE-v1",
+    "brain_handoff_commit": "bfce8a62af9b865ff5ae0fa6a7ed3234707d14a0",
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "26ab15f7356940c8c4ef5c6eab412a38f5bb9498",
+    "math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260922T184751Z-r12/REPORT.md",
+    "applied_inequality": "E exp(-a[sqrt(12ell)X+sqrt(1-ell)G]^2) <= (1+2a)^(-1/2)"
+  },
+  "mathematical_change": {
+    "id": "QFORM-PARALLEL-PAIR-ORTHOGONAL-HEAVY-CENTRAL-NOESCAPE-v1",
+    "statement": "For H1=sqrt(6)(X1+X2), H2=sqrt(12ell)X3+sqrt(1-ell)G2, H3=G3 with independent cap-one Xi and standard Gaussian Gj, p_{H1^2+H2^2-H3^2}(0) <= pi^{-1} int_0^1 (1-s)K0(3s^2) ds < 1/(2sqrt(2)).",
+    "physical_upper": 4.147510483978529,
+    "gaussian_barrier": 4.242640687119285,
+    "centered_interval_exact_peak": 4.12671848503573
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "72a1c5edfe0cbce5ba477064635ef8598bc879bc",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260922T193840Z-account01-B17-QFORM-r11/REPORT.md",
+    "checker_commit": "dad850f983fb2f67622349413e1b877ad519a3fb",
+    "checker_output_commit": "7e77281a99806ad0b00118745c83106fd2f12c21"
+  },
+  "unresolved_implication": "Extend the integrated half-Riesz comparison to genuinely nonparallel/nonorthogonal multiple heavy rows and control off-center peaks/finite-row local spikes; full QFORM remains open.",
+  "next_step": "Attack the angle interpolation between the new parallel endpoint and account02/B17's orthogonal endpoint without reviving the refuted pointwise radial-Laplace domination."
+}

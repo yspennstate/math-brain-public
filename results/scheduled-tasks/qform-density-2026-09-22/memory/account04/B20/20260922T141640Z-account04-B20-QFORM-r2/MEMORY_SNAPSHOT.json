@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account04",
+  "slot": "B20",
+  "run_id": "20260922T141640Z-account04-B20-QFORM-r2",
+  "source_control_commit": "0ef3b2ceaa381522e8d6b64407725c8ef6eaed16",
+  "programme_revision": "2026-09-22.5",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE"
+  ],
+  "status": "ESSENTIAL_STEP_APPLIED_FULL_TARGET_OPEN",
+  "result_id": "QFORM-CONDITIONED-WHITENED-DIFFUSE-v1",
+  "result_scope": "If an original-coordinate residual frame has S positive definite with delta=lambda_min(S)>0 and whitened row leverage at most 1/32, Q has a continuous density bounded by (96e/(7sqrt(2)))/delta.",
+  "premises": [
+    {
+      "source": "math-open-problems",
+      "commit": "a302aab3477c64757b511e80d3907f982e04873a",
+      "scope": "full-spectrum diffuse-range theorem including coordinate-separable phases"
+    },
+    {
+      "source": "math-open-problems",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B19/20260922T121338Z-b19-qform-r11/REPORT.md",
+      "scope": "hard saddle family and near-diagonal branch"
+    }
+  ],
+  "partner_result_applied": "No completed current-QFORM account01/B20 artifact was available; completed OTHER-account account01/B19 hard saddle family was applied to diagnose singular residual Gram and connect to aggregate bound.",
+  "scientific_commit": "94bf446b8547b1124a37033e940ef594c460b64f",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B20/20260922T141640Z-account04-B20-QFORM-r2/REPORT.md",
+  "scientific_blob": "e1e6af01078bf3ca69de681af2ba873e49128c14",
+  "unresolved_implication": "Either find a heavy original-coordinate set with universal residual spectral floor and diffuse whitened leverage, or extract a controlled disjoint-block aggregate/localized normal form.",
+  "regularity": "Continuity proved in this conditional-diffuse branch; full-target continuity remains open.",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "native_prompt_readback": {
+    "tasks": 20,
+    "exact_title_prompt_matches": 20,
+    "schedules_preserved": true,
+    "enablement_preserved": true,
+    "notifications_not_modified": true
+  },
+  "updated_at_utc": "2026-09-22T14:24:00Z"
+}

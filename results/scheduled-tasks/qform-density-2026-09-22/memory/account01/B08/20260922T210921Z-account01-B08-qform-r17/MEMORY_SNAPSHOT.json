@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260922T210921Z-account01-B08-qform-r17",
+  "source_control_commit_at_final_refresh": "43f4f6f026a3d9e549d534a55d5635ad710db545",
+  "owner_control_revision": "2026-09-22.15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-SCALAR-REMAINDER-CONDITIONAL-CAP-FALSE"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-FINITE-RANK-FLOATING-PAVING-v1",
+      "source": "yspennstate/math-open-problems@c37badc7438c808fa283f574d22a8cb4db87216e:proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260922T144029Z-account01-B08-qform-r13/REPORT.md",
+      "scope": "Parseval m-frame with max row leverage epsilon admits physical half-paving error sqrt(m(m+1)/8) epsilon"
+    },
+    {
+      "id": "QFORM-RIDGE-WINDOW",
+      "source": "yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md",
+      "scope": "one-scale physical cross-block ridge criterion and perturbative row leverage"
+    },
+    {
+      "id": "QFORM-DOUBLE-INCIDENT-RANK2-GROUPED-L3-v1",
+      "source": "yspennstate/math-open-problems@c248abc9be918698c6d5a68108c615ba1c4790b3:proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/B08-20260922T204103Z-1dd824/REPORT.md",
+      "scope": "exact rank-two whole determinant-bank L3 payment plus genuine outer-square Linfinity endpoint"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-FINITE-WINDOW-FLOATING-RIDGE-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "source": "yspennstate/math-open-problems@aeba6444e0605d6617696719f8798ed1d76fb970:proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260922T210921Z-account01-B08-qform-r17/REPORT.md"
+    },
+    {
+      "id": "QFORM-RANK3-WINDOW-FLOATING-1OVER7-v1",
+      "status": "PROVED_SUPPORTING_COROLLARY",
+      "statement": "rank high window at |lambda|>=1/64 equal 3 and max projector diagonal <=1/7 implies continuous C0 density with norm <253"
+    },
+    {
+      "id": "PARTNER-GROUPED-BANK-TARGET-FAMILY",
+      "status": "PARTNER_RESULT_APPLIED",
+      "statement": "explicit target family A_r=diag(1,[[0,C],[C,0]]) has density norm <8.622 by account02/B08 grouped bank theorem"
+    }
+  ],
+  "checker": "yspennstate/math-open-problems@aeba6444e0605d6617696719f8798ed1d76fb970:proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260922T210921Z-account01-B08-qform-r17/check_output.txt",
+  "unresolved_implication": "QFORM-RANK3-WINDOW-HEAVY-OR-HIGHER-WINDOW-CLOSURE-v1",
+  "next_step": "Convert leverage-heavy rank-three windows or rank>=4 high windows into a product-preserving paid pair, pivot/ridge, grouped determinant bank, or global ridge certificate.",
+  "privacy_review": "Scoped manual review of the changed mathematical/operational text only; no credentials, scheduler IDs, machine paths, unrelated private data, email, Drive, or public release. Repository-wide automated privacy scanner was not exposed through the available connector."
+}

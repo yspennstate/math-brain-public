@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "account": "account01",
+  "slot": "B18",
+  "run_id": "20260924T005631Z-account01-B18-qform-auto11-r42",
+  "source_control_commit_at_start": "6e030fbee91a58a28f143e7f8a63f9cd6e614219",
+  "source_control_commit_before_publish": "8e9a4544a0e3d8cf476b50cc7769ac606228f113",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_solution_status": "OPEN_NOT_PROVED",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "primary_sources": [
+    {
+      "source": "Livshyts-Paouris-Pivovarov, arXiv:1507.07949",
+      "premise": "A cap-one product density has every k-dimensional orthogonal marginal density bounded by 2^(k/2).",
+      "scope_used": "k=1 and k=2 only; marginal density cap, not independence"
+    },
+    {
+      "source": "Rudelson-Vershynin, arXiv:1402.4492, Theorem 1.2",
+      "premise": "A normalized linear combination of independent density-cap-K coordinates has density at most sqrt(2)K.",
+      "scope_used": "one-dimensional projection cross-check"
+    },
+    {
+      "source": "Herry-Malicet-Poly, arXiv:2303.09488",
+      "premise": "quadratic-form regularity under iid smooth Gaussian-functional hypotheses",
+      "scope_used": "hypothesis mismatch only; not used positively"
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account02/B18",
+    "claim": "QFORM-ONE-SIDED-ANCHOR-CROSS-SQUARE-LP-v1",
+    "commit": "39fec6de415da54a5947972780a6aa76816bdca0",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260924T000400Z-account02-B18-QFORM-auto11/REPORT.md",
+    "actual_inequality": "||p||_infinity <= 12/2^(1/3)=9.524406311809196... on the partner near-null target family"
+  },
+  "new_claim": {
+    "id": "QFORM-TWOSIDED-ANCHOR-TRANSVERSE-RANK2-v1",
+    "status": "PROVED_SUPPORTING_TARGET_LEVEL_IMPLICATION",
+    "statement": "For T=X^T M Y+alpha^T X+(g^T X)W+H(Y,W) on disjoint original-coordinate cap-one product banks, if the top two singular values s1>=s2>0 of P_g M are positive, then ||p_T||_infinity <=4 sqrt(2 pi)/(s1 s2)^(1/2).",
+    "continuity": "NOT_CLAIMED"
+  },
+  "target_valid_application": {
+    "family": "Q_delta=2(u1^T X)(v1^T Y)+(u2^T X)(v2^T Y)+2W(u3^T X)+delta W^2",
+    "spectrum_note": "exactly three eigenvalues of modulus >=1 for every delta>0",
+    "bound": "||p_Qdelta||_infinity <=4 sqrt(pi)=7.0898154036220635..."
+  },
+  "canonical_math_commit": "51558527d4343f70fd9d43eb1ef86edda4863d38",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260924T005631Z-account01-B18-qform-auto11-r42/REPORT.md",
+  "canonical_math_blob": "21a43c1385d09c283bea773f47f91b52f0eb7037",
+  "handoff_commit": "0e6775a3b6b3717ec537a5b80444c50894b7a118",
+  "unresolved_implication": "Compile the bare s3(A)>=1 hypothesis into a one-sided square/cross packet, or a two-sided packet with two transverse cross singular directions at universal scale, or an already-paid alternate branch. The residual two-sided interface has rank(P_g M)<=1 or retained X-X curvature.",
+  "next_step": "Try a deterministic aggregate-volume dichotomy showing transverse-rank<=1 forces a paid ridge/principal-pair/grouped-source packet while retaining arbitrary extra spectrum."
+}

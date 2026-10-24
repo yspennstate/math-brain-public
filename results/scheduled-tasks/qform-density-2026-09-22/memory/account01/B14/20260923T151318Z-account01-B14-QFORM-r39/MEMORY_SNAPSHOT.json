@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B14",
+  "run_id": "20260923T151318Z-account01-B14-QFORM-r39",
+  "control_commit_at_start": "4ad6a2132d76d24dc4693f4cf64d12f78e44adc7",
+  "control_commit_before_delivery": "a8b9b6979d965f35f7022e956424b0f213fc16e6",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_qform_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "partner": {
+    "account_slot": "account02/B14",
+    "run_id": "20260923T135912Z-account02-B14-QFORM-r37",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T135912Z-account02-B14-QFORM-r37/REPORT.md",
+    "result_used": "exact translated active-interval square-root critical-budget identity",
+    "actual_application": "random outside translation c^T W leaves K_eff,N=(12-8sqrt(2))N exactly while the physical-space target family has conditional density <=4"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-AFFINE-EXTREME-LOCALIZATION-v1",
+      "status": "SUPPORTING_THEOREM_UNREVIEWED",
+      "statement": "For a fixed symmetric active block B, the exact affine-uniform concentration constant over arbitrary cap-one product probability laws equals the same supremum restricted to indicator densities of bounded finite unions of intervals of total measure one, with no fixed fragment-count or diameter restriction."
+    },
+    {
+      "id": "QFORM-OUTSIDE-AFFINE-ZERO-TAX-v1",
+      "status": "SUPPORTING_THEOREM_UNREVIEWED",
+      "statement": "Any affine-uniform active-block small-ball constant is preserved exactly after adjoining arbitrary outside original-coordinate quadratic curvature and active-outside couplings, by conditioning on the outside coordinates."
+    },
+    {
+      "id": "QFORM-SUBPROB-HYPERBOLIC-LP-v1",
+      "status": "SUPPORTING_LEMMA_UNREVIEWED",
+      "statement": "For cap-one subprobability densities of masses m,n, ||p_{2c(U-a)(V-b)}||_p <= p |c|^{-1+1/p}(mn)^{1/p}."
+    },
+    {
+      "id": "QFORM-RANDOM-TRANSLATED-TWO-HYPERBOLIC-v1",
+      "status": "TARGET_VALID_SUPPORTING_THEOREM_UNREVIEWED",
+      "statement": "A full matrix containing two disjoint original-coordinate hyperbolic blocks of coefficient one, with arbitrary outside block and active-outside couplings, has output density <=4 for arbitrary cap-one product laws."
+    },
+    {
+      "id": "QFORM-POSITIVE-COMPILER-MASS-TEST-v1",
+      "status": "PROOF_INTERFACE_DIAGNOSTIC",
+      "statement": "Positive piecewise bounds whose mass exponent is alpha<1 and whose other certificate parameters do not improve under equal refinement necessarily lose N^(1-alpha); linear mass homogeneity is the zero-tax threshold absent cancellation or compensating parameter decay."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "75342a3343ad2965df82032178b179189223e7fe",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260923T151318Z-account01-B14-QFORM-r39/REPORT.md",
+    "blob": "e96cd703e3848a65b72099eb22d14929d63137c8"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "57ef132f2f894a22a47a937accc5c24f45a41176",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B14/20260923T151318Z-account01-B14-QFORM-r39.md"
+  },
+  "unresolved_implication": "Derive from bare s3(A)>=1 a whole-active affine-uniform certificate with universal parameters before certificate-active fragmentation; localization/support geometry alone is not the remaining obstruction.",
+  "next_step": "Test whether current volume-stability/ridge exits plus grouped physical pairs exhaust the no-pivot states before active refinement; retain arbitrary affine terms throughout.",
+  "independent_review": "NONE_YET"
+}

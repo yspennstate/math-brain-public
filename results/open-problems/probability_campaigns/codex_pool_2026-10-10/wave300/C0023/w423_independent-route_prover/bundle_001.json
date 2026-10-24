@@ -1,0 +1,181 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w423",
+  "bundle_slug": "c0023-reverse-thinning-bridge-obstruction-w423-001",
+  "entries": [
+    {
+      "key": "pivotal-cost",
+      "namespace": "probability.percolation",
+      "logical_name": "finite-event-conditional-open-pivotal-logarithmic-derivative",
+      "kind": "concept",
+      "title": "Conditional open pivotal count gives the exact finite-event probability loss",
+      "statement": "DRAFT AUTHOR RESULT, pending w425. For a nonempty increasing event A on finitely many independent Bernoulli(p) edges, f(p)=P_p(A)>0 and N_A counts open pivotal edges. Then lambda_A(p)=E_p[N_A|A]=p f'(p)/f(p), and f(a)/f(b)=exp(-integral_a^b lambda_A(s)/s ds) for 0<a<b<1. No independence between different pivotal indicators is assumed.",
+      "proof_text": null,
+      "assumptions": [
+        "finite edge set",
+        "increasing event A",
+        "positive event probability",
+        "0<a<b<1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w423:C0023-reverse-thinning:pivotal-cost",
+        "url": "file:///~/brain_workers/w423/LEMMAS.md",
+        "revision": "2026-10-10-author-checked-independent-review-pending:L1",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "interval-criterion",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-lattice-one-arm-backward-interval-pivotal-cost-criterion",
+      "kind": "concept",
+      "title": "A bounded integrated pivotal cost would contradict positive critical percolation",
+      "statement": "DRAFT CONDITIONAL RESULT, pending w425. On nearest-neighbour iid bond percolation on Z^d with 0<p_c<1, let A_n be the event that 0 connects to the vertex boundary of [-n,n]^d using edges inside it, and lambda_n(s) the conditional mean open pivotal count given A_n. If theta(p_c)>0 and some fixed 0<a<p_c has liminf_n integral_a^{p_c} lambda_n(s)/s ds finite, then theta(a)>0, contradicting a<p_c. The integrated bound is an unproved additional hypothesis. This is an analytic reduction, not a proof of critical nonpercolation.",
+      "proof_text": null,
+      "assumptions": [
+        "nearest-neighbour independent bond law",
+        "0<a<p_c<1",
+        "theta(p_c)>0",
+        "liminf integrated conditional pivotal load finite"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w423:C0023-reverse-thinning:interval-criterion",
+        "url": "file:///~/brain_workers/w423/LEMMAS.md",
+        "revision": "2026-10-10-author-checked-independent-review-pending:L2",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "endpoint-counterexample",
+      "namespace": "probability.percolation",
+      "logical_name": "locally-finite-critical-jump-despite-all-endpoint-pivotal-moments",
+      "kind": "concept",
+      "title": "A critical jump can coexist with bounded endpoint pivotal exponential moments",
+      "statement": "DRAFT AUTHOR COUNTEREXAMPLE, pending w425. Let Gamma have terminals a_0,a_1,..., joining a_{n-1} to a_n by n^2 2^{n+1} internally disjoint length-(n+1) paths, with all internal vertices distinct across paths and blocks. Independent Bernoulli bond percolation has p_c=1/2 and theta_Gamma(1/2)>3/5. For A_N={a_0 connects to a_N}, for every fixed t>=0 the conditional exponential moment E_{1/2}[exp(t N_{A_N})|A_N] is bounded uniformly in N; the conditional mean is less than 3. Yet for every 0<a<1/2 its integrated conditional pivotal cost from a to 1/2 tends to infinity. There is almost surely one infinite critical cluster. Gamma is simple and locally finite but has unbounded degrees and is not transitive, so it is not a counterexample to the Z^d target.",
+      "proof_text": null,
+      "assumptions": [
+        "explicit graph Gamma",
+        "independent bonds",
+        "terminal connection event A_N",
+        "fixed moment parameter t>=0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w423:C0023-reverse-thinning:endpoint-counterexample",
+        "url": "file:///~/brain_workers/w423/LEMMAS.md",
+        "revision": "2026-10-10-author-checked-independent-review-pending:L3",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "endpoint-shortcut",
+      "namespace": "probability.percolation",
+      "logical_name": "refuted-endpoint-pivotal-control-to-backward-critical-continuity-route",
+      "kind": "concept",
+      "title": "Refuted route: endpoint pivotal control alone implies backward continuity",
+      "statement": "REFUTED ROUTE, author-checked and pending w425: the proposed inference from uniformly bounded conditional pivotal moments at p_c to bounded pivotal cost on one fixed interval below p_c is false on general locally finite graphs. Even all conditional exponential moments at the endpoint and uniqueness of the infinite critical cluster do not suffice. The explicit chain of parallel-path blocks provides the obstruction. Whether Z^d geometry supplies the missing interval estimate is not settled by this refutation.",
+      "proof_text": null,
+      "assumptions": [
+        "general locally finite graphs",
+        "claim uses endpoint information only",
+        "lattice-specific hypotheses must be handled separately"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w423:C0023-reverse-thinning:endpoint-shortcut",
+        "url": "file:///~/brain_workers/w423/LEMMAS.md",
+        "revision": "2026-10-10-author-checked-independent-review-pending:L3",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "quenched-fragility",
+      "namespace": "probability.percolation",
+      "logical_name": "hypothetical-critical-lattice-cluster-quenched-thinning-threshold-one",
+      "kind": "concept",
+      "title": "Any hypothetical infinite critical lattice cluster has thinning threshold one",
+      "statement": "DRAFT AUTHOR RESULT, pending w425. For almost every Bernoulli(p_c) nearest-neighbour bond configuration Omega on Z^d with 0<p_c<1, independent retention of its open edges with any q<1 yields no infinite component almost surely conditional on Omega. Thus every hypothetical infinite component of Omega has quenched bond-percolation threshold 1. This statement does not assert that an infinite critical component exists. The simultaneous almost-everywhere statement uses the annealed Bernoulli(p_c q) law, Fubini, rational q and monotonicity.",
+      "proof_text": null,
+      "assumptions": [
+        "countable lattice",
+        "independent original Bernoulli bonds",
+        "independent retention conditional on Omega",
+        "0<p_c<1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w423:C0023-reverse-thinning:quenched-fragility",
+        "url": "file:///~/brain_workers/w423/LEMMAS.md",
+        "revision": "2026-10-10-author-checked-independent-review-pending:L4",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "resilience-gap",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-lattice-reverse-thinning-geometric-resilience-gap",
+      "kind": "concept",
+      "title": "Unproved geometric resilience step for the independent C0023 route",
+      "statement": "OPEN PROOF STEP, not a theorem: under the hypothetical theta_d(p_c)>0 on nearest-neighbour iid Z^d bond percolation, derive lattice-specific control of bridge creation over a fixed nonzero interval below p_c. Sufficient analytic form: an integrable uniform bound for lambda_n(s)/s on [p_c-delta,p_c], with 0<delta<p_c. Alternative quenched form: prove a hypothetical infinite critical cluster retains percolation for some q<1 on a set of original configurations of positive probability. The exact loss identity and quenched-fragility lemma explain how either estimate would yield a contradiction; neither estimate is established here. Finite-volume continuity, uniqueness and endpoint moment bounds alone leave this step open.",
+      "proof_text": null,
+      "assumptions": [
+        "hypothetical positive critical order parameter",
+        "exact iid Z^d bond geometry",
+        "a fixed parameter interval, not scale-dependent deltas"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w423:C0023-reverse-thinning:resilience-gap",
+        "url": "file:///~/brain_workers/w423/LEMMAS.md",
+        "revision": "2026-10-10-author-checked-independent-review-pending:Hardest remaining gap",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "interval-criterion",
+      "to_key": "pivotal-cost",
+      "kind": "depends_on",
+      "rationale": "The end stating 'liminf_n integral_a^{p_c}' uses the end stating 'f(a)/f(b)=exp(-integral_a^b' to pass a positive finite probability to the one-arm limit. Supporting proof: L2 applies L1."
+    },
+    {
+      "from_key": "endpoint-counterexample",
+      "to_key": "endpoint-shortcut",
+      "kind": "refutes",
+      "rationale": "The counterexample end has 'conditional mean is less than 3' and interval cost 'tends to infinity'; the route end rejects the inference from endpoint moments to interval cost. Supporting proof: L3, disjoint-block reliability and moment formulas."
+    },
+    {
+      "from_key": "resilience-gap",
+      "to_key": "interval-criterion",
+      "kind": "depends_on",
+      "rationale": "The gap's 'integrable uniform bound' is a sufficient hypothesis for the criterion's bounded 'liminf_n integral_a^{p_c}'. This relation records a proposed route, not a proved geometric bound."
+    },
+    {
+      "from_key": "resilience-gap",
+      "to_key": "quenched-fragility",
+      "kind": "depends_on",
+      "rationale": "The gap asks for retention 'for some q<1' on a positive-measure set; the fragility end gives 'no infinite component' for every q<1. If the unproved resilience step were established, L4 would supply the contradiction."
+    },
+    {
+      "from_key": "endpoint-counterexample",
+      "to_key": "pivotal-cost",
+      "kind": "depends_on",
+      "rationale": "The counterexample's integrated cost divergence follows from the exact finite-event probability loss identity and its positive critical/product-zero subcritical limits. Supporting proof: L3 invokes L1 on A_N."
+    },
+    {
+      "from_key": "quenched-fragility",
+      "to_key": "interval-criterion",
+      "kind": "semantic_association",
+      "rationale": "Both ends concern retaining a positive connection probability below a hypothetical positive critical phase: one by conditional thinning, the other by integrated finite-event pivotal cost. No equivalence of their hypotheses is asserted."
+    }
+  ]
+}

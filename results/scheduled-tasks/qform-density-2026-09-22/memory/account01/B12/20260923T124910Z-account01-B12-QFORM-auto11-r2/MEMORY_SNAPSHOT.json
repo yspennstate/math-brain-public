@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260923T124910Z-account01-B12-QFORM-auto11-r2",
+  "status": "PROVED_SUPPORTING_STABILITY_THEOREM_FULL_TARGET_OPEN",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "control_revision": "2026-09-22.15",
+  "control_refresh_commit": "f46a86775fad8f644f00b5ae99c9a82582f31455",
+  "correction_inbox_refreshed": true,
+  "assignment": "Additional eigenvalue control",
+  "new_result": {
+    "name": "QFORM-BILATERAL-ABSOLUTE-ENERGY-NUCLEAR-TAIL-v1",
+    "statement": "For symmetric E and disjoint original-coordinate banks I,J, with a_I=tr(P_I|E|P_I), a_J=tr(P_J|E|P_J), one has ||E[I,J]||_{S1}<=sqrt(a_I a_J), hence s_{p+1}(E[I,J])<=sqrt(a_I a_J)/(p+1), sharply for every p. Combining with the account02/B12 adaptive reserve theorem gives s_q(M0+L+E[I,J]+T)>=max_p[s_{q+r+p}(M0)-sqrt(a_I a_J)/(p+1)]-delta when rank L<=r and ||T||op<=delta.",
+    "continuity_scope": "PROVED_WHEN_D5_RECEIVER_APPLIES",
+    "full_target": "OPEN"
+  },
+  "profile_refinement": "If mu^I_a,mu^J_b are eigenvalues of P_I|E|P_I,P_J|E|P_J, then s_{p+1}(E[I,J])<=min_{a+b=p+2}sqrt(mu^I_a mu^J_b).",
+  "actual_partner_application": {
+    "partner_commit": "64268d2bee76cd374e2bf1a34868e0e6a1b7e84d",
+    "parameters": "M0=2I_64, r=1, q=5, p=58, a_I<=1, a_J<=1, delta=1/4",
+    "inequality": "s_5>=2-1/59-1/4=409/236",
+    "density_bound": "||p_Q||inf<=1180 sqrt(2e)/409=6.72699241634378..."
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fa73a498c996e51d940a7e3c90ceec4177677257",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260923T124910Z-account01-B12-QFORM-auto11-r2/REPORT.md"
+  },
+  "handoff_commit": "ef8a0798bd4e678bb71daddb9d375ecf7b16a706",
+  "remaining_implication": "From bare s_3(A)>=1, force an original-coordinate cut with reserve plus low-rank large-mode footprint / small bilateral absolute energy, or route failure to an already-paid D5/ridge/grouped-bank/hub/localized-core/Schur branch.",
+  "prohibited_mechanisms_avoided": [
+    "rotated-coordinate independence",
+    "dependent convolution of quadratic remainder",
+    "pointwise van-der-Corput from density cap",
+    "arbitrary-joint coarea",
+    "naive fiber-sup integration",
+    "universal good principal minor/cross-rank-three assertion"
+  ],
+  "created_utc": "2026-09-23T12:49:10Z"
+}

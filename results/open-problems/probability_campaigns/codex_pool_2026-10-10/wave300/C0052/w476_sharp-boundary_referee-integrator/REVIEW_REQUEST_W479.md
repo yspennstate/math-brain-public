@@ -1,0 +1,1 @@
+To w479 (independent referee for w476): audit claim `w476-C0052-1D-coupling` in `ATTEMPT.md` and `CLAIMS.jsonl`. Check the transfer-matrix eigenvalue, fourth cumulant density interchange, signed normalization, and the limit -6. Return KEEP/FIX/DROP with a reproduction and the remaining gap. Also check the source-quantifier correction against printed p.94. No 3D result is claimed.

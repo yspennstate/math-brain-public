@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{A periodic-tree counterexample to concavity of the percolation function}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Tang asked whether the Bernoulli bond-percolation function $\theta(p)$ is concave on $(p_c,1)$ for a transitive graph or a periodic rooted tree. We give an elementary counterexample to the periodic-tree clause. Take a three-edge path from the root and attach a full rooted binary tree at its endpoint. This tree is periodic in Tang's definition, has $p_c=1/2$, and for $p>1/2$ its percolation probability is $\theta(p)=2p^2-p$. Hence $\theta''(p)=4$ throughout the supercritical interval. The separate transitive-graph clause is not addressed.
+\end{abstract}
+
+\section{Statement}
+Let $T_3$ be the rooted tree obtained from a path
+\[
+v_0=o-v_1-v_2-v_3
+\]
+by making $v_3$ the root of a full infinite rooted binary tree. Bond percolation retains each edge independently with probability $p$.
+
+\begin{theorem}
+The rooted tree $T_3$ is periodic in the sense used by Tang. Its critical probability is
+\[
+p_c(T_3)=\frac12,
+\]
+and for every $p\in(1/2,1)$,
+\[
+\theta_{T_3}(p)=2p^2-p.
+\]
+Consequently
+\[
+\theta_{T_3}''(p)=4>0,
+\qquad p\in(1/2,1),
+\]
+so the universal periodic-tree concavity assertion in Tang's Question 4.11 is false.
+\end{theorem}
+
+\section{Proof}
+We verify separately periodicity, the physical percolation branch, and the curvature.
+
+\subsection{Periodicity}
+Tang calls a rooted tree periodic if there is a finite $N$ such that for every vertex $x$, the forward subtree rooted at $x$ is isomorphic by an adjacency-preserving rooted bijection to a forward subtree whose root has depth at most $N$.
+
+For a stem vertex $v_i$, $0\le i\le3$, use the identity map from its forward subtree to itself; its depth is at most $3$. Every strict descendant $x$ of $v_3$ has a full rooted binary forward subtree, hence its forward subtree is isomorphic to the forward subtree rooted at $v_3$, whose depth is $3$. Therefore $T_3$ is $3$-periodic.
+
+\subsection{The physical binary-tail branch}
+Let $q=q(p)$ be the extinction probability for open descendants from the root of the full binary tail. Since the two child edges are independent,
+\[
+q=(1-p+pq)^2.
+\]
+Equivalently,
+\[
+q-(1-p+pq)^2
+=-p^2(q-1)\left(q-\frac{(1-p)^2}{p^2}\right).
+\]
+The extinction probability is the smallest fixed point in $[0,1]$. Thus for $p\le1/2$ the physical fixed point is $q=1$, while for $p>1/2$ it is
+\[
+q(p)=\left(\frac{1-p}{p}\right)^2.
+\]
+Hence the binary-tail survival probability is
+\[
+\beta(p)=1-q(p)=\frac{2p-1}{p^2},
+\qquad p>\frac12.
+\]
+In particular, the finite stem does not alter the positivity threshold, and so $p_c(T_3)=1/2$.
+
+\subsection{Root survival and curvature}
+For the root $o=v_0$ to percolate, all three stem edges must be open and the binary tail from $v_3$ must survive. These events depend on disjoint edge sets. Therefore
+\[
+\theta_{T_3}(p)=p^3\beta(p)
+=p^3\frac{2p-1}{p^2}
+=2p^2-p,
+\qquad p>\frac12.
+\]
+Differentiating twice gives
+\[
+\theta_{T_3}''(p)=4,
+\]
+which is strictly positive on the full supercritical interval. This contradicts concavity and proves the theorem.\qed
+
+\section{A simple family}
+The same calculation works for a stem of $k$ edges followed by the binary tree. For $p>1/2$,
+\[
+\theta_k(p)=p^k\beta(p)=p^{k-2}(2p-1),
+\]
+and
+\[
+\theta_k''(p)
+=(k-2)p^{k-4}\bigl(2(k-1)p-(k-3)\bigr).
+\]
+For every $k\ge3$ this is positive on $(1/2,1)$. Thus the phenomenon is not isolated. The case $k=2$ is the neutral boundary $\theta_2(p)=2p-1$.
+
+\begin{remark}[Scope]
+This note refutes only the periodic-tree clause of Tang's question. It does not prove or disprove concavity for all transitive graphs.
+\end{remark}
+
+\begin{remark}[Prior art]
+The binary-tree/Galton--Watson calculation is classical. A bounded literature search through 17 September 2026 did not locate a later primary source explicitly resolving Tang's periodic-tree concavity question with this finite-stem counterexample. This negative search does not establish novelty of the observation.
+\end{remark}
+
+\begin{thebibliography}{9}
+\bibitem{Tang}
+P.~Tang,
+\emph{A note on some critical thresholds of Bernoulli percolation},
+Electron. J. Probab. 28 (2023), arXiv:2012.01135v2.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,13 @@
+P0162 is not solved. w509 independently derived and kept all three scoped mathematical claims: the one-point Boolean obstruction, the sparse-flip extension for every bent function and every allowed flip set, and the coordinate logarithmic bound with sharp additive coefficient 3/ln 2. The exact KEEP rows are in REVIEW_RECEIPTS.jsonl. The claims are independently checked analytically; the submitted inbox entries remain concepts/drafts pending integration gates. No novelty claim is made.
+
+The result identifies a false proof step: charging every coordinate entropy split by a constant times its influence. The sparse-flip bound quantifies that obstruction. Global FEI still needs a universal good-coordinate or aggregate argument. Related logarithmic restriction bounds and arbitrary-coordinate obstructions already occur in the owner's canonical store.
+
+Measurements: three scoped analytic KEEP verdicts are recorded. The resumed command python -X utf8 fresh_compute_gate.py saw 26.68-second-old telemetry with status warn, CPU 83.9%, physical availability 6169 MB and effective commit availability 68221 MB, and denied the run. Author experiments executed = 0; numerical passes = 0. MEASUREMENTS.json does not exist. The referee's auxiliary finite run lacks a central fresh-gate receipt and is not counted as an author run. No before/after brain-performance improvement or formal proof-assistant check is claimed.
+
+The command python -X utf8 inspect_model_evidence.py inspected 10 model-bearing records in the author's exact native transcript. None contained response-side served-model metadata. Author and referee served identities, and the different-model gate, remain UNKNOWN/unverified. Requested models and turn_context are excluded as evidence.
+
+Apply: codex-01a12190 can validate and deduplicate ~/math-brain-inbox/w508/bundle_001.json using INTEGRATION_HANDOFF.json and BUNDLE_SPEC.md. Preserve concept/draft status until the applicable model and proof gates pass. Separately apply patches/01_fei_hook_proposal.diff only if the hook is kept. This worker did not mutate a live store or run an integrator. Submission, analytic review, model gate, ingestion and retrieval have separate states.
+
+Risks: confusing an every-coordinate obstruction with an existential good-coordinate claim, promoting a local constant to the global FEI constant, duplicate restriction-ledger concepts, or treating packaging or an ungated finite run as proof. Current global openness remains UNKNOWN.
+
+NEXT: codex-01a12190 resolves served-model evidence and deduplication, then validates integration and retrieval for the scoped draft bundle.

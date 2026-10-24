@@ -1,0 +1,108 @@
+{
+  "target_id": "C0120",
+  "author_agent": "w493",
+  "checked_at": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "historical_status": "attempted_unsolved; intake unreviewed and current_status unverified",
+  "intake_statement": "Improve the bound Var(log Z_n) = O(n/log n) for directed polymers in random environment in general dimension to a power improvement n^{1-eps}.",
+  "primary_source": {
+    "title": "Chaos, concentration, and multiple valleys",
+    "author": "Sourav Chatterjee",
+    "url": "https://arxiv.org/abs/0810.4221",
+    "locator": "Section 12, problem (3), printed page 59",
+    "body_verified": true,
+    "revision": "0810.4221v2, 2008-12-16",
+    "exact_model": "Independent unit Gaussian weights on Z_+^2; n-vertex up/right paths from origin with free endpoint; M_n=max path sum, negative of ground-state energy.",
+    "historical_question_quote": "Improve the fluctuation exponent in directed polymers.",
+    "source_bound": "Var(M_n)<=C n/log n; Theorem 8.1",
+    "scope_correction": "log Z_n and general-dimension variants require distinct primary sources."
+  },
+  "prior_work": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+      "locator": "line 120",
+      "finding": "Exact C0120 intake recovered; needs primary-model scope check."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "locator": "line 98, C0120-A001",
+      "finding": "Quantitative chaos or transversal-fluctuation rate absent; reduction only, not proof."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_attempts_H_20260912",
+      "finding": "Targeted rg C0120: no matches."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_attempts_I_20260914",
+      "finding": "Targeted rg C0120: no matches."
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "finding": "Targeted beginning of board: no C0120 holder seen; no board mutation."
+    }
+  ],
+  "brain_scars": [
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "proof_steps_need_derived_joint_structure_2026_09_09"
+  ],
+  "recall": "60-second timeout; named scar fallback used",
+  "served_model_evidence": "unavailable; requested settings do not certify served identity",
+  "submission_state": "submitted DRAFT only",
+  "review_state": "w494 scoped KEEP for claims 001-005; source correction still requires Claude gate",
+  "ingestion_state": "not confirmed",
+  "retrieval_state": "not checked",
+  "precise_session_target": "Exist delta in (0,1), finite C, and n0 such that Var(M_n)<=C n^(1-delta) for all n>=n0 in the exact source model.",
+  "paired_proof_read_after_independent_save": true,
+  "independent_save_sha256_before_peer_read": "fb468e88e4a45cc46a3e69f81e7cdd7dd43061d9b73d806b716ee5c56874f2f1",
+  "served_identity": {
+    "author": "UNVERIFIED",
+    "referee": "UNVERIFIED",
+    "reason": "No response-side served-model receipt available; requested settings and identifiers do not establish it."
+  },
+  "primary_literature_checks": [
+    {
+      "url": "https://arxiv.org/abs/0909.1352",
+      "scope": "Higher-dimensional last-passage sublinear variance; not a verified resolution of the precise power target."
+    },
+    {
+      "url": "https://arxiv.org/abs/1204.1819",
+      "scope": "Finite-temperature nearly-gamma concentration at square-root(n/log n) scale; different cited model."
+    },
+    {
+      "url": "https://arxiv.org/abs/2509.21453",
+      "scope": "Moment-matching intermediate-disorder universality; not fixed-model Gaussian ground-state power variance."
+    },
+    {
+      "url": "https://arxiv.org/abs/2603.06574",
+      "scope": "Continuous Gaussian polymers, spatial covariance, and high-temperature diffusion; distinct model."
+    }
+  ],
+  "openness_limit": "Targeted owner prior-work and primary literature checks did not provide a solved/retired certificate; absence of a match is not proof of present openness.",
+  "store_targets": [
+    {
+      "id": "claim_2b6b7c1da300a8ed1c28367cabd584f2c02769a03a64ed519cf081b1af04693d",
+      "logical": "math:probability.gaussian:open-problem-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro",
+      "finding": "Unsupported log-Z/general-dimension scope in source card."
+    },
+    {
+      "id": "claim_7891e285a213a1ead9b1e54b02b29177a06d86c6f3df76b6447ca94dbe6add7f",
+      "logical": "math:probability.gaussian:attempt-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro",
+      "finding": "Attempt record inherits broader scope and ambiguous noise-size parameter."
+    }
+  ],
+  "shared_source_correction": "~/brain_workers/w492/patches/01_c0120_source_scope.diff; w493 independent scoped KEEP; Claude/source-correction review pending.",
+  "checked_at_utc": "2026-10-10T07:12:50.226595+00:00",
+  "publication_lease": {
+    "acquired": true,
+    "agent": "w493",
+    "claim_id": "clm-aa6f06f4e4",
+    "resource": "topic:C0120:w493:layer-mean-and-n2",
+    "mode": "exclusive",
+    "expires_at": "2026-10-10T08:12:52Z",
+    "scope": "Own two-node draft only; no peer proof or live store mutation"
+  },
+  "canonical_population_check": "Read-only SQLite SELECT by the two exact C0120 node IDs confirmed unsupported scope in both cards; no live store write.",
+  "team_delivery": "team_comm.py claim to w492 and review to w494 each reported sent=1 on retry; narrow triad C0120-w492-w493-w494",
+  "referee_receipt": "~/brain_workers/w493/REFEREE_RECEIPT.json"
+}

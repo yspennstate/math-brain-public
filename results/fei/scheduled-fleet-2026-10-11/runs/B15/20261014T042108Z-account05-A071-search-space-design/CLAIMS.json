@@ -1,0 +1,104 @@
+[
+  {
+    "claim_id": "A075-MIXED-EXCURSION-OUTPUT-ENTROPY-BUDGET",
+    "version": 1,
+    "exact_statement": "For every nonconstant actual Boolean sign g0 on an arbitrary finite uniform cube, and every finite admissible word of six-disjoint-identical-copy substitutions, let g_s be the actual cores, reoriented to minority-negative outputs. Allowed steps are h on the minority orientation when minority<=7/32 or its complement otherwise, and J_j=-h(x xor(1<<j)) for any one flipped block j when minority<=1/16; h is negative exactly on {0,1,2,4,8,16,32,6,17,40}. With entropy in bits and Psi(g)=h2(p_min(g))/I(g), Psi is nonincreasing and 0<Psi<=1, and sum_(s<d) |H(g_(s+1))/I(g_(s+1))-H(g_s)/I(g_s)|<=64(Psi(g0)-Psi(g_d))<=64. If the starting core is rare, p_min<=1/16, this budget is<=44. Every level retains H_next=Q H+C and I_next=Q I, with Q the total actual outer pivotal probability and C=H_p(outer)-Q h2(4p(1-p)); the full arbitrary starting entropy is retained. The existing A080 actual core g0=h,g1=h(g0^6),g2=h((-g1)^6),g3=h(g2^6) has H/I<12 at every finite admissible mixed descendant, as certified by H(g3)/I(g3)+64Psi(g3)<12. This is a bounded composition ledger and fixed-seed mechanism closure, not an absolute bound on unknown starting cores, a nonnegative erasure reserve theorem, or physical restriction-tree payment.",
+    "hypotheses": [
+      "Actual finite arbitrary-dimensional Boolean core on independent uniform physical bits, nonconstant",
+      "Specified two-gate library and allowed chosen bias domains; six identical cores on disjoint supports at each finite level",
+      "Every finite admissible word, including arbitrarily repeated escapes and returns; no uniform length required",
+      "All input/output sign changes preserve complete squared spectrum and physical influence; one-flip positions equivalent by matching automorphisms",
+      "Entropy units bits; ordinary binary output entropy h2(p_min) is distinct from spectral entropy H"
+    ],
+    "statement_sha256": "329456072857a03fe4dfc64a015a86828e01fa2929c12c481e7b8d461f85c9de",
+    "contributors": [
+      "A075"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A075\\runs\\20261014T034311Z-account05-A075-search-to-theorem-bridge\\PROOF.md",
+      "report": "~\\brain_workers\\FEI100_20261011\\agents\\A075\\runs\\20261014T034311Z-account05-A075-search-to-theorem-bridge\\REPORT.md",
+      "certificates": [
+        "out/COMPACT_PAYMENT_CERTIFICATE.json",
+        "out/GATE_POLYNOMIALS.json",
+        "out/EXISTING_HIGH_E_CORE_ONEFLIP_PAYMENT.json"
+      ],
+      "validation": [
+        "out/VALIDATION.json",
+        "out/RATIONAL_PROFILES.json",
+        "out/PHYSICAL_FIXTURES.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A071",
+        "decision": "ACCEPT_AT_STATED_SCOPE_WITHOUT_REPAIR",
+        "independence": "Independent chain-rule information derivation of output potential; factorwise polynomial intervals instead of Bernstein bounds on all256 boxes; exact FWHT of all28 tagged two-bit-core compositions and all336 physical edges; independent existingg3 interval from own prior stage. No source code imported or executed.",
+        "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261014T042108Z-account05-A071-search-space-design\\PROOF_REVIEW.md",
+        "source_statement_hash_preserved": true,
+        "certificates": [
+          "out/validation.json",
+          "out/boxes_partial.json",
+          "out/physical_partial.json"
+        ],
+        "scope_boundary": "Accepts original64 statement only. Separate contributed48 corollary remains independently unreviewed. Prior one-flip target supplied by A071 is acknowledged; no repair of this source version supplied."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_UNCHANGED_SCOPE_A071_LOCAL_RECORD",
+    "supersedes": [],
+    "refutes": [
+      "Unbounded H/I from a fixed finite seed through arbitrarily repeated named one-flip/common-sign excursions"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A071",
+      "A072",
+      "A074",
+      "A080",
+      "A084",
+      "A089",
+      "A092",
+      "B15",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A071-MIXED-EXCURSION-PRICE48-REFINEMENT",
+    "version": 1,
+    "exact_statement": "For every nonconstant actual Boolean starting core on a finite independent uniform physical cube, and every finite legal word in the exact gate/policy scope of A075-MIXED-EXCURSION-OUTPUT-ENTROPY-BUDGET@1, the absolute variation of R=H/I is at most48(Psi_start-Psi_end)<=48, where Psi=h2(p_min)/I. If p_min(start)<=1/16 the budget is at most33. The full arbitrary starting R is retained. On the existing actual core g0=h,g1=h(g0^6),g2=h((-g1)^6),g3=h(g2^6), R(g3)+48Psi(g3)<10, hence every finite legal mixed descendant has H/I<10. Here h is negative exactly on {0,1,2,4,8,16,32,6,17,40}; common steps choose minority input when minority<=7/32 and its complement otherwise, and one-flip J_j=-h(x xor(1<<j)) steps are permitted only when minority<=1/16; outputs are reoriented to minority-negative. All substitutions use six identical disjoint physical copies. Entropy is in bits. No absolute bound on unknown starting cores, nonnegative erasure-reserve theorem, or physical restriction-tree payment follows.",
+    "hypotheses": [
+      "Actual arbitrary finite uniform Boolean nonconstant starting core; entropy bits",
+      "Exactly the source-named common/oneflip policy and its bias domains; arbitrary finite admissible word",
+      "Identical independent copies on disjoint supports; no overlap or extra gates/sign patterns",
+      "All six unequal J pivotal probabilities retained; oneflip locations matched by actual gate automorphisms",
+      "Scope-preserving quantitative refinement; independent acceptance of this48 version pending"
+    ],
+    "statement_sha256": "9be032ff15d3afd12944a6af9afe4e2aa7571e6beaee48cf6cc04fbf3cf638f2",
+    "contributors": [
+      "A075 (original output-entropy potential/payment mechanism)",
+      "A071 (independent price audit and scope-preserving quantitative refinement)"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261014T042108Z-account05-A071-search-space-design\\PROOF_REVIEW.md",
+    "proof_dependencies": [
+      "A075-MIXED-EXCURSION-OUTPUT-ENTROPY-BUDGET@1 chain independently reconstructed and accepted unchanged here; source finite-word mechanism and scope retained",
+      "Own stage4 actualg3 state reconstructed from Boolean seed; ordinary entropy/Fourier/edge identities",
+      "Exact256-box factorwise certificate and analytic endpoint prices14,40,48 in PROOF_REVIEW.md"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPE_PRESERVING_QUANTITATIVE_REFINEMENT_REVIEW_PENDING_FEI_OPEN",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A075",
+      "A072",
+      "A074",
+      "A080",
+      "A084",
+      "A089",
+      "A092",
+      "B15",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "helper_version": "check_signed-v1",
+  "family": "Every Boolean sign truth table on each fixed cube n=0,1,2,3,4; point defects n=3..12 for separate certified entropy checks",
+  "domain": "Fixed n=0..4 exhaustive; no escalation",
+  "case_count": 65814,
+  "symmetry": "None; both output signs and all tables retained",
+  "arithmetic": "Integer FWHT and integer signed convolution, all occupied anchors, integer Cauchy certificate after LCM denominators. Separate logarithms use exact Fraction atanh series with 36 terms and a proved rational tail. Exhaustive weights are rational information proxies, not claimed exact logs except at power-of-two magnitudes; full Gram identity makes the analytic theorem valid for all real weights.",
+  "memory_estimate": "Under 40 MB; tables streamed, dimension at most 4; no memok needed",
+  "maximum_runtime_seconds": 60,
+  "pilot": true,
+  "command": "python -X utf8 code/check_signed.py",
+  "stop": "Abort before 60 seconds rather than silently shrink or enlarge the domain"
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "relation": {
+      "from_key": "P2",
+      "to_key": "P1",
+      "kind": "depends_on",
+      "rationale": "P2 sums P1 joint partition probabilities with signed Stirling weights."
+    },
+    "from_statement": "AUTHOR PROOF; INDEPENDENT REVIEW PENDING. Let B_n be n by n with mutually independent uniform {-1,1} entries. Let E_n mean that some two rows or some two columns agree up to sign. The probability E_n of any projective row or column collision equals 1-2^(-(n-1)^2) sum_{a,b=1}^n s(n,a)s(n,b)2^((a-1)(b-1)), where s are signed Stirling numbers of the first kind.",
+    "to_statement": "AUTHOR PROOF; INDEPENDENT REVIEW PENDING. Let B_n be n by n with mutually independent uniform {-1,1} entries. Let E_n mean that some two rows or some two columns agree up to sign. For an iid uniform sign n by n matrix, projective equality within row partition pi with a blocks and column partition tau with b blocks has probability 2^(-((n-1)^2-(a-1)(b-1))).",
+    "review_status": "PENDING"
+  },
+  {
+    "relation": {
+      "from_key": "P3",
+      "to_key": "P1",
+      "kind": "depends_on",
+      "rationale": "P3 uses P1 one- and two-pair intersection probabilities in Bonferroni bounds."
+    },
+    "from_statement": "AUTHOR PROOF; INDEPENDENT REVIEW PENDING. Let B_n be n by n with mutually independent uniform {-1,1} entries. Let E_n mean that some two rows or some two columns agree up to sign. With A=binom(n,2), m=2^(n-1), 2A/m-(3A^2-A)/m^2 <= P(E_n) <= 2A/m. Hence P(E_n)=(2+o(1))n(n-1)2^-n and no fixed K makes epsilon+K2^-n an upper bound for the full least-singular-value tail for all n,epsilon.",
+    "to_statement": "AUTHOR PROOF; INDEPENDENT REVIEW PENDING. Let B_n be n by n with mutually independent uniform {-1,1} entries. Let E_n mean that some two rows or some two columns agree up to sign. For an iid uniform sign n by n matrix, projective equality within row partition pi with a blocks and column partition tau with b blocks has probability 2^(-((n-1)^2-(a-1)(b-1))).",
+    "review_status": "PENDING"
+  },
+  {
+    "relation": {
+      "from_key": "P2",
+      "to_key": "collision-event",
+      "kind": "cites",
+      "rationale": "The probability in P2 is exactly the event E_n defined here."
+    },
+    "from_statement": "AUTHOR PROOF; INDEPENDENT REVIEW PENDING. Let B_n be n by n with mutually independent uniform {-1,1} entries. Let E_n mean that some two rows or some two columns agree up to sign. The probability E_n of any projective row or column collision equals 1-2^(-(n-1)^2) sum_{a,b=1}^n s(n,a)s(n,b)2^((a-1)(b-1)), where s are signed Stirling numbers of the first kind.",
+    "to_statement": "For a sign matrix B_n, E_n means that some two distinct rows or some two distinct columns agree up to a global sign. E_n implies singularity by a left or right kernel vector supported on two coordinates. The converse is false; E_n is a specified subset of singularity, not all singularity.",
+    "review_status": "PENDING"
+  },
+  {
+    "relation": {
+      "from_key": "P3",
+      "to_key": "collision-event",
+      "kind": "cites",
+      "rationale": "The lower singular atom comes from E_n, a subset of singularity."
+    },
+    "from_statement": "AUTHOR PROOF; INDEPENDENT REVIEW PENDING. Let B_n be n by n with mutually independent uniform {-1,1} entries. Let E_n mean that some two rows or some two columns agree up to sign. With A=binom(n,2), m=2^(n-1), 2A/m-(3A^2-A)/m^2 <= P(E_n) <= 2A/m. Hence P(E_n)=(2+o(1))n(n-1)2^-n and no fixed K makes epsilon+K2^-n an upper bound for the full least-singular-value tail for all n,epsilon.",
+    "to_statement": "For a sign matrix B_n, E_n means that some two distinct rows or some two distinct columns agree up to a global sign. E_n implies singularity by a left or right kernel vector supported on two coordinates. The converse is false; E_n is a specified subset of singularity, not all singularity.",
+    "review_status": "PENDING"
+  },
+  {
+    "relation": {
+      "from_key": "P4",
+      "to_key": "sparse-bridge",
+      "kind": "refutes",
+      "rationale": "P4 constructs singular sign matrices of rank n-1 with no two-coordinate left or right witness; it refutes this bridge only."
+    },
+    "from_statement": "AUTHOR PROOF; INDEPENDENT REVIEW PENDING. For every n>=5 there exists a real {-1,1} matrix of rank n-1, with no +/- equal row or column pair, and with both left and right two-coordinate restricted least singular values at least sqrt(2).",
+    "to_statement": "The proposed universal bridge is: every singular real sign matrix has a left or right nonzero kernel vector supported on at most two coordinates. This bridge is false even for corank-one matrices of every dimension n>=5. A counterexample to this bridge is not a refutation of the Spielman-Teng conjecture.",
+    "review_status": "PENDING"
+  },
+  {
+    "relation": {
+      "from_key": "P4",
+      "to_key": "collision-event",
+      "kind": "cites",
+      "rationale": "P4 lies outside E_n and verifies why E_n is not all singularity."
+    },
+    "from_statement": "AUTHOR PROOF; INDEPENDENT REVIEW PENDING. For every n>=5 there exists a real {-1,1} matrix of rank n-1, with no +/- equal row or column pair, and with both left and right two-coordinate restricted least singular values at least sqrt(2).",
+    "to_statement": "For a sign matrix B_n, E_n means that some two distinct rows or some two distinct columns agree up to a global sign. E_n implies singularity by a left or right kernel vector supported on two coordinates. The converse is false; E_n is a specified subset of singularity, not all singularity.",
+    "review_status": "PENDING"
+  },
+  {
+    "relation": {
+      "from_key": "gaussian-scope-correction",
+      "to_existing_logical": "math:probability.random-matrices:attempt-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr",
+      "kind": "refutes",
+      "rationale": "Scope: refutes only the asserted exact finite-n Gaussian CDF sentence; the prior attempt itself remains an attempted-unsolved record."
+    },
+    "from_statement": "For G_1=[Z] with Z standard normal, P(s_min(G_1)<=t)=erf(t/sqrt(2)) for t>=0; its derivative at zero is sqrt(2/pi). Thus 1-exp(-t-t^2/2) is not the exact finite-n Gaussian least-singular-value CDF. It is the limiting CDF as n tends to infinity (Rudelson-Vershynin ICM 2010 survey). The finite-n bound P(s_min(G_n)<=t/sqrt(n))<=t is a separate statement. This corrects only the exact-law sentence in the 2026-09-07 C0029 attempt record.",
+    "to_statement": "Existing attempt node: false exact finite-n law; see ATTEMPT.md prior digest.",
+    "review_status": "PENDING"
+  }
+]

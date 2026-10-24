@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B17",
+  "run_id": "20260923T223540Z-account01-B17-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_start": "dece2b7180757c224a53634b0f26ee71196127b7",
+  "control_commit_at_refresh": "a76256ec46b8388caebd9cfcf21c7bebee078771",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "SEPARATE_OPEN_TARGET",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "new_result": {
+    "id": "QFORM-SECOND-ORDER-SHARP-BANK-RIGIDITY-v1",
+    "scope": "Independent centered unit intervals grouped into three normalized Parseval banks; exact physical matrices with nonzero spectrum {1,1,-1}; local asymptotics around the first-order optimal unequal-bank allocation and aligned negative spectral axis.",
+    "conclusion": "With x_*=(sqrt(38)-2)/17, y_*=(1-x_*)/2 and K_*=63/160+3sqrt(38)/80, the optimal aligned cone-tip expansion has H_*=(-1299963+108550sqrt(38))/13619200=-0.046318128816503... at order N^-2. Under m_j/N=p_j^*+d_j/sqrt(N)+o(N^-1/2) and N(u_1+u_2)->ell, the coefficient becomes H_*-Q_alloc(d)-c_theta ell with Q_alloc positive definite on d_1+d_2+d_3=0 and c_theta=21/160+87sqrt(38)/1520>0. The exact rational dense rotated sequence w_N=(2N^2,4N^2,N^4-5)/(N^4+5) attains 3sqrt(2)[1-K_*/N+H_*/N^2+O(N^-3)].",
+    "status": "PROVED_SUPPORTING_SHARP_WITNESS_THEOREM"
+  },
+  "dependency_applied": {
+    "source": "yspennstate/math-open-problems@a7639f687efd2a693ba6ad74e87a94a3aed5cfe2:proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260923T221053Z-account03-B17-QFORM-auto11/REPORT.md",
+    "scope": "Uniform second-order Edgeworth/coarea formula for three-bank independent-uniform Parseval witnesses."
+  },
+  "partner_result_applied": {
+    "partner": "account02/B17",
+    "id": "QFORM-HOUSEHOLDER-ROUGH-ONESHEET-REARRANGEMENT-v1",
+    "source": "yspennstate/math-open-problems@b2deb6e86032549777cc1197407cadf01f8cc6e6:proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260923T214642Z-4c9d/REPORT.md",
+    "actual_inequality": "For the exact six-variable Householder pair-sum matrix and the explicit two-fragment supports E_{2j-1}=[M-1/4,M+1/4] union [-M-1/4,-M+1/4], E_{2j}=[-M+M^{-j}-1/4,-M+M^{-j}+1/4] union [M-M^{-j}-1/4,M-M^{-j}+1/4], ess sup_{s>=0} p_Q(s) <= p_*(0)<508/125<3sqrt(2)."
+  },
+  "canonical_math": {
+    "commit": "67b115a423e8d8774f20e1fe0176d280818e3d09",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260923T223540Z-account01-B17-QFORM-auto11/REPORT.md",
+    "checker_status": "PASS QFORM_B17_SECOND_ORDER_RIGIDITY"
+  },
+  "handoff": {
+    "commit": "b74696b917cc66064c59be2aff26aaca1a29af47",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B17/20260923T223540Z-account01-B17-QFORM-auto11.md"
+  },
+  "unresolved_implication": "The universal upper constant remains unknown. The three-bank diffuse lower obstruction is now second-order rigid locally, while the account02/B17 majority-sheet rough Householder family is uniformly below 3sqrt(2); unpaid witness mechanisms include off-zero/two-sheet concentration, several macroscopic shared rows, rough laws with a genuinely nonseparable residual, and additional active spectrum.",
+  "next_step": "Probe the minority-sign/two-sheet side and shared intermediate-leverage rough families for a source-valid peak above the diffuse 3sqrt(2) obstruction, while retaining exact product provenance and avoiding the refuted two-sheet X-ray-only shortcut."
+}

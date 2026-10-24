@@ -1,0 +1,58 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261014T111508Z-account01-B01-global-augmented-candidate-a004",
+  "claims": [
+    {
+      "claim_id": "B01-A004-POSITIVE-ORBIT-LIFT-NOGO",
+      "version": "v1",
+      "exact_statement": "For c=29/2+2/ln(2) and eta=1, the universal positive-orbit activation contraction L_c,1(Af)+2 Theta_{X union {z}}(Af) <= (L_c,1(f)+2 Theta_X(f))/2 is false. The three-bit one-point defect with X all three physical coordinates has residual greater than 0.2459047472656179 bits.",
+      "hypotheses": [
+        "genuine Boolean functions on finite uniform cubes",
+        "fresh fair activation A with selector z",
+        "Theta is the reviewed physical-orbit potential",
+        "X may contain reused physical coordinates"
+      ],
+      "statement_sha256": "19277116d926340c61f777b80297f5e3d2989e7810f99af0dc9f84f5c174dec6",
+      "contributors": ["account01/B01"],
+      "proof_source": "PROOF.md sections 2-3; CERTIFY_ORBIT_LIFT.py; CERTIFY_ORBIT_LIFT.out",
+      "proof_dependencies": [
+        "B01-A004-COMPLETE-ACTIVATION-CORRECTION-v1",
+        "B05-A023-SIGNED-ORBIT-OWNERSHIP-v1",
+        "B19-A094-SIGNED-ORBIT-OWNERSHIP-REVIEW-v1",
+        "B19-A094-HALF-PACKET-REVIEW-v1"
+      ],
+      "review_records": [],
+      "status": "PROVED_ROUTE_REFUTATION_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": "universal positive-orbit activation contraction at c=29/2+2/ln(2), eta=1, coefficient 2",
+      "first_unproved_line": null,
+      "next_consumers": ["A086", "A090", "B20"]
+    },
+    {
+      "claim_id": "B01-A004-SOLD-REDUCTION",
+      "version": "v1",
+      "exact_statement": "If every nonconstant finite-cube Boolean f admits a complete physical restriction tree and adapted active blocks satisfying Delta_x L_c,1(f_v)+2(R_v-O_v)<=0 at every internal node, then L_c,1(f)+2 Phi(f)<=0 for every Boolean f. For c=29/2+2/ln(2), this implies universal GU with (a,b)=(33/2+2/ln(2),0) and H<=(35+4/ln(2))I.",
+      "hypotheses": [
+        "genuine Boolean functions on finite uniform cubes",
+        "complete physical restriction tree",
+        "adapted active blocks containing each queried coordinate",
+        "signed opening and terminal terms retained"
+      ],
+      "statement_sha256": "d0199c89f98bdd9b8561b902e1a3cbc15127a451a7d9a3f687a3ab5ad0e7c0b0",
+      "contributors": ["account01/B01"],
+      "proof_source": "PROOF.md section 4",
+      "proof_dependencies": [
+        "B05-A023-SIGNED-ORBIT-OWNERSHIP-v1",
+        "B19-A094-SIGNED-ORBIT-OWNERSHIP-REVIEW-v1",
+        "U-UNIVERSAL-SIGNED-MISMATCH-REDUCTION",
+        "U-UNIVERSAL-THEOREM-G"
+      ],
+      "review_records": [],
+      "status": "PROVED_CONDITIONAL_REDUCTION_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": "Existence of a complete adapted physical tree satisfying SOLD(c_dagger) at every internal node.",
+      "next_consumers": ["A086", "A090", "B20"]
+    }
+  ]
+}

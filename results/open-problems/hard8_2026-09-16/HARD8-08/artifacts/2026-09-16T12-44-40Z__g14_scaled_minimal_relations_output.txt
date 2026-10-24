@@ -1,0 +1,52 @@
+G14_SCALED_EXACT_DISTANCE_COUNTS unit=27 sqrt3=18 2sqrt3=5
+UNIT_BASE_NORMALIZED_5_COLORINGS 50261
+DISTINCT_VIOLATION_MASKS 21177
+INCLUSION_MINIMAL_MASKS 19 sizes {1: 18, 2: 1}
+MANDATORY_NONUNIT_EDGES 18
+  M i0--i2[sqrt3]
+  M i0--i4[sqrt3]
+  M i0--a2[sqrt3]
+  M i0--a4[sqrt3]
+  M i1--i3[sqrt3]
+  M i1--a1[sqrt3]
+  M i1--a3[sqrt3]
+  M i2--i4[sqrt3]
+  M i2--a4[2sqrt3]
+  M i3--i5[sqrt3]
+  M i3--a3[2sqrt3]
+  M i3--a5[2sqrt3]
+  M i4--a2[2sqrt3]
+  M i5--a1[sqrt3]
+  M i5--a5[sqrt3]
+  M a1--a3[sqrt3]
+  M a1--a5[sqrt3]
+  M a3--a5[2sqrt3]
+EITHER_ONE_OF
+  A i1--i5[sqrt3]
+  A a2--a4[sqrt3]
+MINIMUM_NONUNIT_EDGE_COUNT 19
+COMPLETION 1 sqrt3 14 2sqrt3 5
+COMPLETION 2 sqrt3 14 2sqrt3 5
+CHOSEN_COMPLETION_EDGES_TOTAL 46 ALPHA 3 EXAMPLE_MAX_INDEPENDENT ('i5', 'a3', 'a4')
+CHOSEN_COMPLETION_6_COLORING [('i0', 'i3'), ('a1', 'O'), ('i1', 'h0', 'a2'), ('i5', 'a3', 'i2'), ('a5', 'h1', 'i4'), ('a4',)]
+MINIMAL_MASK_WITNESSES
+  ['i0--i2[sqrt3]'] : [('O', 'a1'), ('i0', 'i2', 'a3'), ('i3', 'h0', 'a2'), ('i5', 'h1', 'a4'), ('i1', 'i4', 'a5')]
+  ['i0--i4[sqrt3]'] : [('O', 'a1'), ('i0', 'i4', 'a5'), ('i1', 'h0', 'a2'), ('i3', 'h1', 'a4'), ('i2', 'i5', 'a3')]
+  ['i0--a2[sqrt3]'] : [('O', 'a1'), ('i0', 'i3', 'a2'), ('i1', 'i4', 'h0'), ('i2', 'h1', 'a5'), ('i5', 'a3', 'a4')]
+  ['i0--a4[sqrt3]'] : [('O', 'a1'), ('i0', 'i3', 'a4'), ('i1', 'h0', 'a2'), ('i4', 'h1', 'a5'), ('i2', 'i5', 'a3')]
+  ['i1--i3[sqrt3]'] : [('O', 'a1'), ('i0', 'a5'), ('i1', 'i3', 'h0', 'a2'), ('i2', 'i5', 'h1'), ('i4', 'a3', 'a4')]
+  ['i1--a1[sqrt3]'] : [('O', 'a2', 'a5'), ('i0', 'i3'), ('i2', 'h0', 'a3'), ('i5', 'h1', 'a4'), ('i1', 'i4', 'a1')]
+  ['i1--a3[sqrt3]'] : [('O', 'a1'), ('i0', 'i3'), ('i1', 'i4', 'h0', 'a3'), ('i5', 'h1', 'a4'), ('i2', 'a2', 'a5')]
+  ['i2--i4[sqrt3]'] : [('O', 'a1'), ('i0', 'i3'), ('i1', 'h0', 'a2'), ('i2', 'i4', 'h1', 'a5'), ('i5', 'a3', 'a4')]
+  ['i2--a4[2sqrt3]'] : [('O', 'a1'), ('i0', 'i3'), ('i1', 'h0', 'a2'), ('i4', 'h1', 'a5'), ('i2', 'i5', 'a3', 'a4')]
+  ['i3--i5[sqrt3]'] : [('O', 'a1'), ('i0', 'a3'), ('i1', 'i4', 'h0'), ('i3', 'i5', 'h1', 'a4'), ('i2', 'a2', 'a5')]
+  ['i3--a3[2sqrt3]'] : [('O', 'a1'), ('i0', 'i3', 'a3'), ('i1', 'i4', 'h0'), ('i5', 'h1', 'a4'), ('i2', 'a2', 'a5')]
+  ['i3--a5[2sqrt3]'] : [('O', 'a1'), ('i0', 'i3', 'a5'), ('i1', 'h0', 'a2'), ('i2', 'i5', 'h1'), ('i4', 'a3', 'a4')]
+  ['i4--a2[2sqrt3]'] : [('O', 'a1'), ('i0', 'i3'), ('i1', 'i4', 'h0', 'a2'), ('i2', 'h1', 'a5'), ('i5', 'a3', 'a4')]
+  ['i5--a1[sqrt3]'] : [('O', 'a3', 'a4'), ('i0', 'i3'), ('i1', 'h0', 'a2'), ('i4', 'h1', 'a5'), ('i2', 'i5', 'a1')]
+  ['i5--a5[sqrt3]'] : [('O', 'a1'), ('i0', 'i3'), ('i1', 'h0', 'a2'), ('i2', 'i5', 'h1', 'a5'), ('i4', 'a3', 'a4')]
+  ['a1--a3[sqrt3]'] : [('O', 'a1', 'a3'), ('i0', 'i3'), ('i1', 'i4', 'h0'), ('i5', 'h1', 'a4'), ('i2', 'a2', 'a5')]
+  ['a1--a5[sqrt3]'] : [('O', 'a1', 'a5'), ('i0', 'i3'), ('i1', 'h0', 'a2'), ('i2', 'i5', 'h1'), ('i4', 'a3', 'a4')]
+  ['a3--a5[2sqrt3]'] : [('O', 'a1'), ('i0', 'a3', 'a5'), ('i1', 'i4', 'h0'), ('i3', 'h1', 'a4'), ('i2', 'i5', 'a2')]
+  ['i1--i5[sqrt3]', 'a2--a4[sqrt3]'] : [('O', 'a1'), ('i0', 'i3'), ('i2', 'h0', 'a3'), ('i4', 'h1', 'a5'), ('i1', 'i5', 'a2', 'a4')]
+ALL_CHECKS_PASSED

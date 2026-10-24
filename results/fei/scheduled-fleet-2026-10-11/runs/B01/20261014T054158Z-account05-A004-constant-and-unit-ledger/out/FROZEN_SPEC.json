@@ -1,0 +1,42 @@
+{
+  "helper_version": "A004-point-edit-ledger-v1",
+  "family": "all positive-endpoint single-vertex edits through three dimensions; A003 point-constant pair; padded AND3 edits with destroyed or neutral origin edges",
+  "domain": {
+    "exhaustive_n": [
+      1,
+      2,
+      3
+    ],
+    "masks": "all truth tables",
+    "vertex": "every vertex at which b=+1",
+    "point_dimensions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "padded_AND3_dummy_bits": [
+      1,
+      2,
+      3
+    ],
+    "tensor_test": "independent dictator on point pairs"
+  },
+  "case_count": {
+    "exhaustive_positive_endpoint_pairs": 1060,
+    "point_pairs": 10,
+    "padded_AND3_pairs": 3,
+    "tensor_checks": 10
+  },
+  "symmetry": "global sign symmetry covers negative endpoints; all labelled positive-endpoint pairs retained; no permutation quotient",
+  "arithmetic": "integer FWHT, independent physical edge counts, Fraction, exact prime-log identities, proved rational atanh enclosures; all-dimensional source review analytic",
+  "memory_estimate_MB": 80,
+  "max_runtime_seconds": 60,
+  "automatic_dimension_escalation": false
+}

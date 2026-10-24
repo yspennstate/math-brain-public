@@ -1,0 +1,862 @@
+# ProofNet24 P25 — Controlled / Operator K-Theory
+
+**Run timestamp:** 2026-09-14 22:39:17 Asia/Jerusalem  
+**Scope:** controlled/operator K-theory near P01 coefficient-free Baum–Connes and P17/P18 magnetic/topological K-theory; **NO number theory**.
+
+## Executive result
+
+The latest P01 state changes the highest-value controlled-K target.  P01 now proves that for every fixed Rips scale \(d\),
+
+\[
+T_d(G):=\tau_*\mu_d(K_0^G(P_d(G)))=q_d(G)\mathbb Z\subset\mathbb Q
+\]
+
+is a discrete cyclic rational subgroup, and that convergent non-eventually-constant assembled traces force topological preimage scales to escape.  Its stated next problem is quantitative: bound \(q_d(G)\) from the finite proper quotient and stabilizer/Bredon data.
+
+This run proves a finite-lattice reduction of exactly that problem.
+
+### `P25-RIPS-CHERN-LATTICE-07` — PROVED
+
+Let \(X\) be a finite proper \(G\)-CW complex and
+
+\[
+\mu_X:K_0^G(X)\to K_0(C_r^*(G))
+\]
+
+the coefficient-free reduced assembly map restricted to \(X\).  Put
+
+\[
+K_X=K_0^G(X)/\operatorname{tors}.
+\]
+
+Using Lück's localized equivariant Chern character, define the natural integral Chern-data lattice \(\mathcal C_X\) from the free parts of \(K_0(C_GC\backslash X^C)\), the integral lattices in the primitive cyclic representation summands \(\operatorname{im}\theta_C\), and the Weyl-group relations, for finite cyclic \(C\) with \(X^C\ne\varnothing\).  Rationally,
+
+\[
+\operatorname{ch}_X:\mathcal C_X\otimes\mathbb Q
+\stackrel{\cong}{\longrightarrow}
+K_X\otimes\mathbb Q.
+\]
+
+Define the **Chern saturation exponent**
+
+\[
+E_X=\exp\!\left(
+K_X/
+\bigl(K_X\cap\operatorname{ch}_X(\mathcal C_X)\bigr)
+\right),
+\]
+
+and the cyclic-isotropy lcm
+
+\[
+L_X=\operatorname{lcm}\{|C|: C\le G \text{ finite cyclic},\ X^C\ne\varnothing\},
+\]
+
+with \(L_X=1\) when only \(C=\{1\}\) occurs.  Then
+
+\[
+\boxed{
+\tau_*\mu_X(K_0^G(X))
+\subset (E_XL_X)^{-1}\mathbb Z.
+}
+\tag{P25.07.1}
+\]
+
+Therefore, if the image is nonzero and equals \(q_X\mathbb Z\),
+
+\[
+\boxed{q_X\ge(E_XL_X)^{-1}.}
+\tag{P25.07.2}
+\]
+
+The finite integer \(E_X\) is exactly computable by Smith normal form.  In integral bases, let
+
+\[
+A\in GL_r(\mathbb Q)
+\]
+
+be the matrix of \(\operatorname{ch}_X\), choose \(a\ge1\) with \(M=aA\in M_r(\mathbb Z)\), and write
+
+\[
+UMV=\operatorname{diag}(s_1,\ldots,s_r)
+\]
+
+in Smith normal form.  Then
+
+\[
+\boxed{
+E_X=
+\operatorname{lcm}_{j}
+\frac{s_j}{\gcd(s_j,a)}.
+}
+\tag{P25.07.3}
+\]
+
+Consequently
+
+\[
+E_X\le |\det M|\le(\sqrt r\,H)^r,
+\qquad H=\max_{i,j}|M_{ij}|.
+\tag{P25.07.4}
+\]
+
+Thus the qualitative fixed-scale spacing problem is reduced to one explicit finite integer-matrix invariant.
+
+### `P25-RIPS-TRACE-DENOM-07` — PROVED
+
+For \(X=P_d(G)\), let \(b_d=|B_d(e)|\).  If a finite cyclic \(C\) fixes a Rips point, it stabilizes a Rips simplex.  Choosing a vertex \(v\), every \(c\in C\) satisfies
+
+\[
+|v^{-1}cv|\le d,
+\]
+
+so a conjugate of \(C\) lies in \(B_d(e)\).  Hence \(|C|\le b_d\) and
+
+\[
+L_d\mid\operatorname{lcm}(1,\ldots,b_d).
+\]
+
+Therefore
+
+\[
+\boxed{
+T_d(G)\subset
+\frac1{E_d\operatorname{lcm}(1,\ldots,b_d)}\mathbb Z,
+}
+\tag{P25.07.5}
+\]
+
+and, when \(T_d(G)\ne0\),
+
+\[
+\boxed{
+q_d(G)\ge
+\frac1{E_d\operatorname{lcm}(1,\ldots,b_d)}.
+}
+\tag{P25.07.6}
+\]
+
+### `P25-FFS-PADIC-SCALE-07` — PROVED
+
+For the one-prime Fournier-Facio–Sauer partial sums
+
+\[
+s_N=\sum_{i=1}^Np^{-k_i},
+\qquad k_1<\cdots<k_N,
+\]
+
+the reduced denominator is exactly \(p^{k_N}\), since
+
+\[
+p^{k_N}s_N=1+\sum_{i<N}p^{k_N-k_i}\equiv1\pmod p.
+\]
+
+If the corresponding assembled class has a preimage at scale \(d\), then
+
+\[
+p^{k_N}\mid E_dL_d,
+\]
+
+so
+
+\[
+\boxed{
+k_N\le v_p(E_d)+\lfloor\log_p|B_d(e)|\rfloor.
+}
+\tag{P25.07.7}
+\]
+
+This is the first exact bridge in the P01 chain from an assembled trace denominator to a quantitative Rips-scale obstruction, modulo the single finite saturation integer \(E_d\).
+
+The factor \(E_X\) is substantive.  For \(G=C_p\times C_p\) and \(X=\mathrm{pt}\), every nontrivial cyclic subgroup has order \(p\), so \(L_X=p\), but the averaging projection
+
+\[
+e_G=p^{-2}\sum_{g\in G}g
+\]
+
+has canonical trace \(p^{-2}\).  Hence cyclic isotropy orders alone do **not** control the denominator.  The missing \(p\)-factor is an Artin/Chern lattice-saturation effect.
+
+The latest P17 state was also recovered in full.  General arbitrary-hull **topological** bulk-boundary is now proved:
+
+\[
+\partial_B^+\mu_B^\Omega=\mu_B^\parallel\iota^*.
+\]
+
+The remaining magnetic problems are measured longitudinal index/gap-labelling, exact magnetic two-form normalization, and mobility/localization instantiation.  The prior P25 quotient-gap theorem already handles the abstract K-theory mechanism, so this run prioritizes P01's newly finite denominator target.
+
+---
+
+## 1. Exact source state
+
+### 1.1 Latest P01
+
+Source: Gmail message `1a0a15ab9a3316cc`, subject  
+`[ProofNet24] P01 | Baum–Connes research | 2026-09-14 22:00 Asia/Jerusalem`.
+
+P01 remains OPEN.  New claim `P01-P24` states:
+
+\[
+T_d(G)=\tau_*\mu_d(K_0^G(P_d(G)))=q_d(G)\mathbb Z,
+\]
+
+with \(T_d\subset T_{d'}\) for \(d\le d'\) and
+
+\[
+\tau_*(\operatorname{im}\mu)=\bigcup_dT_d.
+\]
+
+It also proves that any sequence of assembled classes with convergent non-eventually-constant traces must use Rips preimage scales tending to infinity.  For the FFS one-prime finite partial sums, this escape occurs concretely.
+
+The P01 report explicitly names the next attack: use a finite cellular/Bredon presentation to bound \(q_d\) from stabilizer orders and integer matrices.  That is the target of this run.
+
+### 1.2 Latest P17
+
+Read in full: `P17_magnetic_algebra_K_theory_2026-09-14_21-52-38.md`, Library file id `file_00000000c1ec81fd8b728773cb55311d`.
+
+Its newest theorems are:
+
+- `P17-M11-PV-HOMOTOPY-NAT-04`;
+- `P17-M11-GENERAL-PV-RESTRICTION-04`.
+
+For
+
+\[
+A_B(\Omega)=C(\Omega)\rtimes_{\tau,\sigma_B,r}\mathbb Z^d,
+\qquad
+\sigma_B(n,m)=e^{\pi i n^TBm},
+\]
+
+and the tangential algebra \(D_B\),
+
+\[
+\boxed{\partial_B^+\mu_B^\Omega=\mu_B^\parallel\iota^*.}
+\]
+
+Because \(\mathbb Z^d\) is amenable, full and reduced twisted crossed products coincide **in this magnetic track only**.  The result does not repair P01's nonamenable reduced-functoriality problem.
+
+P17's remaining main theorem is the general measured arbitrary-hull longitudinal magnetic index formula; mobility/localized crossings remain separate.
+
+### 1.3 Latest P25
+
+Read in full: `2026-09-14_21-37-29__run-report.md`, Library file id `file_000000003bc481f5acae4e304aa9509b`.
+
+It proves:
+
+- `P25-MOBILITY-QUOTIENT-06`;
+- `P25-MOBILITY-BOUNDARY-NAT-06`;
+- `P25-MOBILITY-CONTROLLED-06`;
+- `P25-ESSGAP-LIFT-CE-06`.
+
+It also confirms that P01's fixed-homotopy controlled-extraction layer is no longer the obstruction; the remaining P01 issue is moving quantitative complexity.
+
+---
+
+## 2. Primary-source verification
+
+Primary source used here:
+
+Wolfgang Lück, **The relation between the Baum-Connes Conjecture and the Trace Conjecture**, *Inventiones Mathematicae* 149 (2002), 123–152, DOI 10.1007/s002220200215.
+
+Lück defines, for a proper \(G\)-CW complex \(X\),
+
+\[
+\Lambda_G(X)=
+\mathbb Z\left[
+|H|^{-1}:H\le G,\ X^H\ne\varnothing
+\right],
+\]
+
+and proves an equivariant Chern-character isomorphism after this localization.  Its source is a direct sum over finite cyclic subgroups \(C\) with \(X^C\ne\varnothing\), involving \(K_0(C_GC\backslash X^C)\) and the primitive representation summand \(\operatorname{im}\theta_C\).
+
+Lück's Theorem 5.4 identifies assembly after this Chern character with the explicit map built from:
+
+1. ordinary pushforward to \(K_0(\mathrm{pt})=\mathbb Z\);
+2. the finite cyclic representation datum;
+3. induction from \(C\) to \(G\).
+
+For finite cyclic \(C\), a one-dimensional character \(\chi\) gives the projection
+
+\[
+p_\chi=\frac1{|C|}\sum_{c\in C}\overline{\chi(c)}c,
+\]
+
+so
+
+\[
+\tau_C(p_\chi)=|C|^{-1}.
+\]
+
+Hence for a virtual cyclic representation \(V\),
+
+\[
+\boxed{
+\tau_G(\operatorname{ind}_C^G[V])=\frac{\dim V}{|C|}.
+}
+\tag{2.1}
+\]
+
+Thus the trace of **integral Chern data** has denominators only from the cyclic orders.  The additional denominator needed for an arbitrary integral equivariant K-homology class is exactly the integral lattice-saturation defect measured by \(E_X\).
+
+No Baum–Connes surjectivity assumption is used.
+
+---
+
+## 3. Integral Chern lattice
+
+Let \(J_X\) be the finite set of conjugacy classes of finite cyclic \(C\) with \(X^C\ne\varnothing\).  For each \(C\), put
+
+\[
+V_C=\operatorname{im}(\theta_C:\mathbb Q\otimes R(C)\to\mathbb Q\otimes R(C)),
+\]
+
+and take the full integral lattice
+
+\[
+R_C^{\rm prim}=V_C\cap R(C).
+\]
+
+Using the free parts of \(K_0(C_GC\backslash X^C)\), tensor with \(R_C^{\rm prim}\), impose the Weyl-group relations, and take the image modulo torsion in the rational Chern-data space.  Denote the resulting full lattice by
+
+\[
+\mathcal C_X.
+\]
+
+Then
+
+\[
+\mathcal C_X\otimes\mathbb Q
+\stackrel{\operatorname{ch}_X}{\cong}
+K_X\otimes\mathbb Q.
+\]
+
+The construction is finite for finite proper \(X\).
+
+The key point is that \(\mathcal C_X\) is **not asserted to equal** the integral lattice \(K_X\).  The mismatch is the theorem's central invariant.
+
+---
+
+## 4. Proof of the trace-lattice theorem
+
+Set
+
+\[
+\Lambda_X^{\rm int}
+=
+K_X\cap\operatorname{ch}_X(\mathcal C_X).
+\]
+
+The two groups are full lattices in one rational vector space, hence
+
+\[
+Q_X=K_X/\Lambda_X^{\rm int}
+\]
+
+is finite.  Let
+
+\[
+E_X=\exp(Q_X).
+\]
+
+Then
+
+\[
+E_XK_X\subset\Lambda_X^{\rm int}.
+\]
+
+Take \(x\in K_X\).  There exists \(c\in\mathcal C_X\) such that
+
+\[
+E_Xx=\operatorname{ch}_X(c)
+\]
+
+rationally.  Apply assembly and canonical trace.  By Lück's Theorem 5.4 and (2.1),
+
+\[
+\tau_*\mu_X(\operatorname{ch}_X(c))
+\in L_X^{-1}\mathbb Z.
+\]
+
+Therefore
+
+\[
+E_X\tau_*\mu_X(x)\in L_X^{-1}\mathbb Z,
+\]
+
+so
+
+\[
+\tau_*\mu_X(x)\in(E_XL_X)^{-1}\mathbb Z.
+\]
+
+Torsion classes map to zero under a real-valued trace.  This proves `(P25.07.1)` and `(P25.07.2)`.
+
+---
+
+## 5. Exact Smith formula
+
+Choose integral bases and let \(A\in GL_r(\mathbb Q)\) represent \(\operatorname{ch}_X\).  Choose \(a\) with \(M=aA\) integral and write
+
+\[
+UMV=\operatorname{diag}(s_1,\ldots,s_r).
+\]
+
+Unimodular changes preserve \(\mathbb Z^r\), so the lattice pair is equivalent to
+
+\[
+\mathbb Z^r,\qquad
+\bigoplus_j(s_j/a)\mathbb Z.
+\]
+
+In one coordinate,
+
+\[
+\mathbb Z\cap(s/a)\mathbb Z
+=
+\frac{s}{\gcd(s,a)}\mathbb Z.
+\]
+
+Hence
+
+\[
+Q_X
+\cong
+\bigoplus_j
+\mathbb Z/
+\left(
+\frac{s_j}{\gcd(s_j,a)}
+\right)\mathbb Z
+\]
+
+and
+
+\[
+E_X=
+\operatorname{lcm}_j
+\frac{s_j}{\gcd(s_j,a)}.
+\]
+
+This is basis-independent because it describes the intrinsic finite quotient \(Q_X\).  A nonminimal clearing denominator \(a\) does not change the actual intersection lattice; the displayed gcd correction recovers the same quotient.
+
+The determinant and Hadamard bounds follow immediately.
+
+---
+
+## 6. Rips fixed-point bound
+
+For \(X=P_d(G)\), if finite cyclic \(C\) fixes a point, it stabilizes the minimal simplex containing that point.  Pick a vertex \(v\).  Then \(cv\) lies in the same simplex for every \(c\in C\), so
+
+\[
+d_G(v,cv)\le d.
+\]
+
+For the left-invariant word metric,
+
+\[
+d_G(v,cv)=|v^{-1}cv|,
+\]
+
+hence
+
+\[
+v^{-1}Cv\subset B_d(e).
+\]
+
+Thus \(|C|\le b_d\), yielding
+
+\[
+L_d\mid\operatorname{lcm}(1,\ldots,b_d).
+\]
+
+Barycentric subdivision may be inserted to remove simplex inversions; it does not alter the fixed-point/order argument.
+
+---
+
+## 7. FFS p-adic consequence
+
+For
+
+\[
+s_N=\sum_{i=1}^Np^{-k_i},\qquad k_1<\cdots<k_N,
+\]
+
+multiplication by \(p^{k_N}\) yields a numerator congruent to \(1\pmod p\).  Hence the reduced denominator is exactly \(p^{k_N}\).
+
+If \(s_N\in(E_dL_d)^{-1}\mathbb Z\),
+
+\[
+p^{k_N}\mid E_dL_d.
+\]
+
+Since every cyclic order entering \(L_d\) is at most \(b_d\),
+
+\[
+v_p(L_d)\le\lfloor\log_pb_d\rfloor.
+\]
+
+Therefore
+
+\[
+k_N\le v_p(E_d)+\lfloor\log_pb_d\rfloor.
+\]
+
+This converts P01-P24F's qualitative scale escape into an explicit obstruction once \(v_p(E_d)\) is bounded.
+
+---
+
+## 8. Counterexample to the naive cyclic-lcm claim
+
+Take
+
+\[
+G=C_p\times C_p,\qquad X=\mathrm{pt}.
+\]
+
+All nontrivial cyclic subgroups have order \(p\), so \(L_X=p\).  Yet the trivial representation yields the averaging projection
+
+\[
+e_G=p^{-2}\sum_{g\in G}g
+\]
+
+with
+
+\[
+\tau(e_G)=p^{-2}.
+\]
+
+Therefore
+
+\[
+T_X\not\subset p^{-1}\mathbb Z.
+\]
+
+So a theorem using only cyclic stabilizer orders is false.  The integral Chern/Artin saturation factor is necessary.
+
+For torsion-free \(G\), by contrast, only \(C=\{1\}\) occurs and Lück's free-action Chern map is integral, so
+
+\[
+E_X=L_X=1
+\]
+
+and the theorem recovers integer trace.
+
+---
+
+## 9. Independent peer audit
+
+### `P25-AUDIT-P01-P24-07`
+
+**Source:** Gmail `1a0a15ab9a3316cc`  
+**Claim:** `P01-P24`  
+**Verdict:** **PROVED / PASS**, with barycentric subdivision made explicit when torsion causes simplex inversions.
+
+Audit:
+
+1. **G-finite:** every simplex orbit has a representative containing \(e\); all vertices then lie in finite \(B_d(e)\), hence finitely many simplex orbits.
+
+2. **Proper:** a simplex stabilizer injects into its finite vertex set via \(h\mapsto hv\), because the left action on vertices is free; hence stabilizers are finite.
+
+3. **Finite generation:** after subdivision, finite equivariant cell filtration and
+   \[
+   K_0^H(\mathrm{pt})=R_{\mathbb C}(H),\qquad K_1^H(\mathrm{pt})=0
+   \]
+   for finite \(H\) imply \(K_0^G(P_d)\) is finitely generated.
+
+4. **Rational trace range:** Lück's theorem applies to classes in the assembly image unconditionally; scalar Baum–Connes surjectivity is not assumed.
+
+5. **Cyclicity:** a finitely generated subgroup of \(\mathbb Q\) is cyclic.
+
+6. **Monotonicity:** inclusions \(P_d\hookrightarrow P_{d'}\) and assembly naturality give \(T_d\subset T_{d'}\).
+
+7. **Direct limit:** the increasing Rips union is the standard universal proper model after subdivision, so the full topological assembly source is the direct limit.
+
+No defect was found in `P01-P24`.
+
+---
+
+## 10. Exact categorical distinctions
+
+**Full vs reduced.** P01 uses \(C_r^*(G)\) for potentially nonamenable \(G\).  No quotient-induced reduced map is assumed.  P17's full=reduced statement is specific to amenable \(\mathbb Z^d\).
+
+**Norm vs strong/von Neumann.** The new result concerns ordinary stable reduced \(K_0\).  It does not promote a strong-limit or von Neumann projection into \(C_r^*(G)\).
+
+**Finite matrices vs von Neumann projections.** The P01 counterexample route still needs an isolated reduced spectral zero so the kernel projection is an actual finite-matrix reduced C*-class.
+
+**Scalar vs coefficient Baum–Connes.** P01 is coefficient-free.  Lück's restriction on the trace of already-assembled classes is unconditional.  P17 uses coefficient Baum–Connes only for amenable \(\mathbb Z^d\) in Gillaspy's theorem.
+
+**Stable vs unstable.** Every conclusion is stable K-theory.  No fixed matrix-size homotopy is asserted.
+
+**Integral vs rational Chern theory.** The rational Chern isomorphism does not identify integral lattices.  The finite mismatch is precisely \(E_X\).
+
+---
+
+## 11. Failed-route graveyard
+
+- Marked convergence alone transports moving reduced K-theory — **DISPROVED**.
+- Nonamenable group quotients automatically induce reduced C*-maps — **FALSE**.
+- Fixed-homotopy extraction is still the main P01 obstruction — **REJECTED** by P18/P25.
+- Fixed-scale trace discreteness already gives an explicit denominator — **FALSE**.
+- Cyclic stabilizer lcm alone controls the denominator — **DISPROVED** by \(C_p\times C_p\).
+- Rational Chern isomorphism is an integral isomorphism — **FALSE**.
+- P17 amenability can be exported to P01 — **FALSE**.
+- A quotient mobility gap forces the full Fermi projection to be continuous — **DISPROVED** by prior P25.
+- A topological P17 bulk-boundary theorem automatically gives arbitrary-hull measured gap labelling — **FALSE**.
+- Exact Fermi functional calculus preserves finite propagation — **FALSE**; controlled representatives require polynomial/Jackson calculus.
+
+---
+
+## 12. Cumulative ledger
+
+### PROVED — inherited
+
+- P25 controlled spectral/projector, magnetic Jackson, Toeplitz/corner/Morita, cyclic numerical, B-M naturality and smooth-Fermi lemmas from prior runs.
+- `P25-UE-MESH-TRANSFER-05`, `P25-POLAR-TRUNC-05`, `P25-MOVING-K1-CE-05`.
+- `P25-MOBILITY-QUOTIENT-06`, `P25-MOBILITY-BOUNDARY-NAT-06`, `P25-MOBILITY-CONTROLLED-06`, `P25-ESSGAP-LIFT-CE-06`.
+- P01 reduced-norm moving formal comparison and fixed-scale Rips stability inputs.
+- P18 controlled K0/K1 mesh extraction.
+- P17 arbitrary-hull K-group theorem, PV homotopy naturality, and general topological restriction theorem.
+
+### PROVED — new
+
+- `P25-RIPS-CHERN-LATTICE-07`.
+- Smith formula
+  \[
+  E_X=\operatorname{lcm}_j s_j/\gcd(s_j,a).
+  \]
+- Hadamard bound
+  \[
+  E_X\le(\sqrt rH)^r.
+  \]
+- `P25-RIPS-TRACE-DENOM-07`.
+- `P25-FFS-PADIC-SCALE-07`.
+- \(C_p\times C_p\) counterexample showing \(E_X\) is necessary.
+- `P25-AUDIT-P01-P24-07` — PASS.
+
+### CONDITIONAL / protocol-open
+
+- The new theorem needs two OTHER independent audits before closure.
+- A useful P01 asymptotic bound still requires quantitative control of \(E_d\).
+- P01 moving reverse transfer separately requires
+  \[
+  4[k((q_j+1)^2+8)+1]R_j<L_j.
+  \]
+- P17 mobility requires a source-specific localization ideal or pairing-level substitute.
+- P17 general measured formula requires a verified measured longitudinal index theorem and exact magnetic normalization.
+
+### DISPROVED / REJECTED
+
+- moving marked convergence alone transports K-relations;
+- automatic reduced functoriality for nonamenable quotients;
+- strong/von Neumann approximation suffices for ordinary reduced K0;
+- cyclic stabilizer orders alone control trace denominators;
+- rational Chern equivalence is integral equivalence;
+- quotient gap protects pairings which see localized K0;
+- magnetic amenability solves P01.
+
+### OPEN
+
+1. `P25-RIPS-CHERN-INDEX-08`: bound \(E_d\) from the sparse finite Rips/Bredon/Chern matrices.
+2. Compute Smith invariant factors for a concrete P01 approximation family.
+3. Compare \(v_p(E_d)+\log_p|B_d|\) with marked relation depth.
+4. Combine topological scale control with the analytic P01 gate.
+5. P01 finite group-ring matrix with isolated reduced zero and forbidden scalar trace.
+6. P17 arbitrary-hull measured longitudinal magnetic index theorem.
+7. Exact magnetic two-form normalization for \(e^{\pi in^TBm}\).
+8. Source-specific mobility/localization ideal or Sobolev pairing theorem.
+9. Magnetic-loop monodromy.
+10. Two OTHER audits of the new P25 theorem.
+
+---
+
+## 13. Exact dependency graph
+
+### P01 trace-scale branch
+
+\[
+P_d(G)\text{ finite proper}
+\]
+
+\[
+\Downarrow
+\]
+
+\[
+K_d=K_0^G(P_d)/\operatorname{tors}
+\text{ finite-rank lattice}
+\]
+
+\[
+\Downarrow
+\quad\text{Lück Chern character}
+\]
+
+\[
+\mathcal C_d\otimes\mathbb Q
+\cong
+K_d\otimes\mathbb Q
+\]
+
+\[
+\Downarrow
+\]
+
+\[
+E_dK_d
+\subset
+K_d\cap\operatorname{ch}_d(\mathcal C_d)
+\]
+
+and Lück Theorem 5.4 gives
+
+\[
+\tau\mu_d(\operatorname{ch}_d\mathcal C_d)\subset L_d^{-1}\mathbb Z.
+\]
+
+Therefore
+
+\[
+\boxed{
+T_d\subset(E_dL_d)^{-1}\mathbb Z.
+}
+\]
+
+For Rips complexes,
+
+\[
+L_d\mid\operatorname{lcm}(1,\ldots,|B_d|).
+\]
+
+For FFS p-power traces,
+
+\[
+\boxed{
+k_N\le v_p(E_d)+\lfloor\log_p|B_d|\rfloor.
+}
+\]
+
+Thus the qualitative P01 scale escape is reduced to the growth of a finite Smith exponent.
+
+### P01 analytic branch
+
+Separately, common uniform exactness and local relation matching give finite-formal reduced-norm comparison; P18 controlled meshes plus P25 transfer stable K-relations when
+
+\[
+4[k((q_j+1)^2+8)+1]R_j<L_j.
+\]
+
+A full reverse-transfer theorem must satisfy both the **topological scale** inequality above and this **analytic support-complexity** gate.
+
+### Magnetic branch
+
+Uniform-gap arbitrary-hull topological bulk-boundary is solved:
+
+\[
+[P_B]=\mu_B^\Omega(E_H),
+\qquad
+\partial_B^+\mu_B^\Omega=\mu_B^\parallel\iota^*.
+\]
+
+Mobility remains:
+
+\[
+\text{physical localization}
+\Longrightarrow
+\text{quotient/pairing-annihilation mechanism},
+\]
+
+and the measured branch remains:
+
+\[
+\mathcal T_{\mu,B,*}\mu_B^\Omega(E)
+\stackrel{?}{=}
+\text{measured longitudinal magnetic index}.
+\]
+
+---
+
+## 14. Highest-value next attack
+
+### `P25-RIPS-CHERN-INDEX-08`
+
+For \(X=P_d(G)\), form the finite rational Chern matrix \(A_d\).  After clearing denominators,
+
+\[
+M_d=a_dA_d\in M_{r_d}(\mathbb Z).
+\]
+
+Exploit the actual sparse structure of:
+
+- simplex stabilizers;
+- cyclic subgroup posets;
+- Weyl actions;
+- Artin induction matrices;
+- equivariant AHSS differentials;
+
+to bound
+
+\[
+\boxed{
+E_d=
+\operatorname{lcm}_j
+\frac{s_j(M_d)}{\gcd(s_j(M_d),a_d)}
+}
+\]
+
+sharply enough to compare with the marked relation radius.
+
+Even a p-primary estimate
+
+\[
+v_p(E_d)\le F_p(d)
+\]
+
+would combine with this run to force
+
+\[
+k_N\le F_p(d)+\log_p|B_d|.
+\]
+
+The parallel magnetic target remains source-specific: construct the actual cut-invariant localization ideal \(J_B\) with quotient gap and pairing descent, or prove a Sobolev/localization pairing theorem showing localized spectral-flow classes are invisible to the physical cyclic pairings.
+
+---
+
+## Bottom line
+
+P01's new fixed-scale trace lattice has now been decomposed into two finite pieces:
+
+\[
+\boxed{
+\text{cyclic isotropy denominator }L_d
+\quad\text{and}\quad
+\text{integral Chern saturation }E_d.
+}
+\]
+
+The second is an exact Smith-normal-form invariant.  Consequently,
+
+\[
+\boxed{
+q_d(G)\ge
+\frac1{E_d\operatorname{lcm}(1,\ldots,|B_d|)}
+}
+\]
+
+when \(T_d(G)\ne0\), and FFS p-power partial sums satisfy
+
+\[
+\boxed{
+k_N\le v_p(E_d)+\lfloor\log_p|B_d|\rfloor.
+}
+\]
+
+The \(C_p\times C_p\) example proves the saturation factor cannot be omitted.
+
+P01 remains OPEN, but its newest qualitative topological obstruction has been converted into a concrete finite integer-matrix growth problem.
+
+The next P25/P01 bottleneck is therefore:
+
+\[
+\boxed{
+\text{bound the Smith saturation exponent }E_d
+\text{ sharply enough to compare with marked relation depth.}
+}
+

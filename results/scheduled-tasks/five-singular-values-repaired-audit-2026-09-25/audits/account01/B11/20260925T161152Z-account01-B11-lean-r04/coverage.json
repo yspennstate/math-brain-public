@@ -1,0 +1,99 @@
+{
+  "run_id": "20260925T161152Z-account01-B11-lean-r04",
+  "objective": "QFORM-FIVE-270-REPAIRED-AUDIT-20260925",
+  "source_commit": "4e530247ec0ef4101a6e5ecf621bd35a969c42aa",
+  "source_blob": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+  "owner_mode": "LEAN_ONLY_BY_LATER_OWNER_MESSAGE",
+  "clauses": [
+    {
+      "clause_id": "LEM2.5-STMT",
+      "lines": "143-145",
+      "source_status": "PASS",
+      "formal_status": "PARTIAL",
+      "derivation": "Independent best-rank argument rechecked; current compiled ApproxGE theorems verify perturbation, rank shift and compression only in approximation-number threshold form.",
+      "dependencies": [
+        "Eckart-Young best-rank characterization",
+        "FiveS2Weyl.approx_perturb",
+        "FiveS2Weyl.approx_rank_perturb",
+        "FiveS2Weyl.approx_of_compress"
+      ],
+      "downstream_impact": "Literal numerical singular-value version remains outside the kernel-checked dependency graph."
+    },
+    {
+      "clause_id": "LEM2.5-EY-BRIDGE",
+      "lines": "147-149",
+      "source_status": "PASS",
+      "formal_status": "UNCHECKED",
+      "derivation": "Paper's padded-zero and SVD/kernel proof is mathematically valid. No compiled theorem currently identifies ApproxGE with Mathlib LinearMap.singularValues.",
+      "dependencies": [
+        "Mathlib SingularValues.lean at 5e932f97"
+      ],
+      "downstream_impact": "Needed to upgrade Lemma 2.5 from approximation-number-form verification to literal singularValues verification."
+    },
+    {
+      "clause_id": "LEM2.5-NAIVE-BRIDGE-EMPTY-DOMAIN",
+      "lines": "143-149",
+      "source_status": "NOT_MATHEMATICAL",
+      "formal_status": "GAP",
+      "derivation": "For empty column type and j>=1, ApproxGE j 0 T is false (no nonzero v), while zero-padded singularValues(j-1)=0, so 0<=sv is true. A bridge stated for all finite domains and sigma>=0 is false.",
+      "dependencies": [
+        "definition ApproxGE",
+        "Mathlib singularValues zero padding"
+      ],
+      "downstream_impact": "Use sigma>0 bridge plus zero/nonpositive branch split, or assume Nonempty domain/revise predicate. Does not affect manuscript theorem."
+    },
+    {
+      "clause_id": "LEM2.6-STMT",
+      "lines": "151-153",
+      "source_status": "PASS",
+      "formal_status": "PASS",
+      "derivation": "QformFiveB.schur_count' gives exact non-strict threshold count with t>0 for arbitrary finite block types.",
+      "dependencies": [
+        "FiveS2Schur.schur_sqapprox",
+        "FiveS2Schur.card_abs_eig_of_sqapprox",
+        "FiveS2Schur.schur_isHermitian"
+      ],
+      "downstream_impact": "Schur spectral-loss dependency is kernel-verified, including singular ambient matrices and equality threshold."
+    },
+    {
+      "clause_id": "LEM2.6-PROOF",
+      "lines": "155-160",
+      "source_status": "PASS",
+      "formal_status": "PASS_ALTERNATE_PROOF",
+      "derivation": "Lean uses direct eigenframe/rank-nullity proof rather than inverse/interlacing/epsilon; independent rank-decomposition check also closes the statement.",
+      "dependencies": [
+        "FiveS2Schur.schur_count'"
+      ],
+      "downstream_impact": "Paper statement fully covered even though formal proof route differs."
+    }
+  ],
+  "build_evidence": {
+    "FiveS2Weyl": {
+      "blob": "5a9727173f6985eacb0cdaa61196931b9a14da6e",
+      "axiom_log_blob": "359563330d9c71b57bbd10508b1434091bed20fa",
+      "exit": "0",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "FiveS2Schur": {
+      "blob": "418e1187df335719ccbca1a5cf1b4115c0dbad5e",
+      "axiom_log_blob": "f453447f1f40175f843e9a1a94caf76554f41e38",
+      "exit": "0",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "MathlibSingularValues": {
+      "mathlib_ref": "5e932f97",
+      "blob": "29e365fda845fccedec7631613487ba61f611a85"
+    }
+  },
+  "rendered_pdf": "UNCHECKED",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

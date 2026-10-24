@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B07",
+  "run_id": "20260923T110409Z-account03-B07-qform-r29",
+  "control_start_commit": "0e96ac4a4f21b42f18eac9d39744304266b1e76d",
+  "control_prepublication_commit": "7374d0294e834e4e53a125ab6d8324690b52b420",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_automation",
+  "execution_state": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "Coordinate minor selection; dimension-free averaging/selection of physical coordinate minors under the three-large-eigenvalue target.",
+  "correction_boundary": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "incoming_sources": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "842652e93680813d356fde0f15f12ab70b59c3c3",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B07/20260923T091740Z-account04-B07-actual-core-diffuse-banks-r1/REPORT.md",
+      "use": "designated partner actual heavy row/column stars: norm >h and coordinate cap h/8"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "309a7cf35906f05d767ff2fcf1be74367f479d1c",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260922T224159Z-account03-B07-qform-r19/REPORT.md",
+      "use": "two-anchor coefficient-plane receiver at an exact zero anchor block"
+    }
+  ],
+  "partner_result_application": "Applied the completed designated account04/B07 heavy-star/cap inequality. After deleting at most one mutual-anchor coefficient, H=(sqrt(63)/8)h and H^2/(h/8)^2=63, so one simultaneous four-coloring yields four disjoint designated banks and compiles the partner survivor to aggregate E2 >=H^4/4096 or a quantitative same-bank rank-one tube.",
+  "new_results": [
+    {
+      "id": "QFORM-TWO-STAR-JOINT-FOURCOLOR-v1",
+      "status": "PROVED_SUPPORTING_LEMMA_IN_THIS_RUN_INDEPENDENT_REVIEW_PENDING",
+      "statement": "If ||u||,||v||>=H and coordinate caps are <=a with H^2/a^2>=63, a single four-color partition gives ||u_S1||,||u_S2||,||v_T1||,||v_T2||>=H/(2sqrt(2))."
+    },
+    {
+      "id": "QFORM-TWO-STAR-E2-OR-COMMON-R1-v1",
+      "status": "PROVED_SUPPORTING_LEMMA_IN_THIS_RUN_INDEPENDENT_REVIEW_PENDING",
+      "statement": "The joint coloring forces either disjoint-bank exterior energy >=H^4/64, common-bank E2>=H^4/4096, or a same-bank rank-one tube with both norms >H/4, residual <H/16, and common component >sqrt(15)H/16."
+    }
+  ],
+  "exact_zero_subbranch": {
+    "status": "CONTINUOUS_DENSITY_PAID",
+    "scope": "physical two-anchor quadratic block exactly zero plus either aggregate-E2 alternative",
+    "bound": "||p_Q||inf <=16sqrt(2)/H =19618608.905139368"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7ad9327f11c39bd465780bd1539d52de9feaacdd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260923T110409Z-account03-B07-qform-r29/REPORT.md",
+    "checks": "CHECKS.txt STATUS=PASS; arithmetic regression only"
+  },
+  "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B07/20260923T110409Z-account03-B07-qform-r29.md",
+  "remaining_implication": "QFORM-COMMON-BANK-R1-AND-NONZERO-ANCHOR-RECEIVER-v1: consume aggregate E2 under a small but genuinely nonzero physical two-anchor block, or the common-bank rank-one tube, while retaining arbitrary within-bank curvature, outside couplings and additional spectrum.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "PROVED_ONLY_ON_EXACT_ZERO_ANCHOR_AGGREGATE_E2_SUBBRANCH; FULL_TARGET_OPEN"
+}

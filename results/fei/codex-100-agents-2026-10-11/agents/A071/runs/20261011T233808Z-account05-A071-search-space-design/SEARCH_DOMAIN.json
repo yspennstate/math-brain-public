@@ -1,0 +1,20 @@
+{
+  "helper_version": "B15-L5-SPARSE-MAXIMUM@1 (optimization target: max min_i B_i/Inf_i on minority size <=6)",
+  "lead_target": "E*(5)=max over all nonconstant 5-bit Boolean signs of min over relevant i B_i/Inf_i; stream notes v2 2026-10-11 23:25 UTC",
+  "family": "f_A=-1 exactly on A subset F2^5 with 1<=|A|<=6, +1 elsewhere; output complements included through invariance",
+  "parameter_domain": {"n":5,"anchored_sets":"A contains 0, other elements an increasing subset of 1..31","support_sizes":[1,2,3,4,5,6]},
+  "case_count": 206368,
+  "case_count_by_support_size": {"1":1,"2":31,"3":465,"4":4495,"5":31465,"6":169911},
+  "raw_sparse_sets_before_translation": 1149016,
+  "symmetry": "Translation x->x xor a changes only Fourier signs and preserves B_i and Inf_i. Translate any a in A to 0. Output complement preserves the spectrum. Anchored representatives overlap translation orbits; no claim of a unique representative. Coordinate permutations preserve the objective but are not quotiented by the main enumerator. General invertible affine maps do not preserve physical-coordinate influence and are forbidden as a quotient.",
+  "completeness": "Complete for all 5-bit functions whose smaller output class has size <=6, modulo proved translation/output invariances. Not complete for E*(5): support sizes 7..16 require a separate exclusion certificate or census.",
+  "arithmetic": "Python integers, half-Walsh coefficients c_0=16-|A|, c_s=-sum_A(-1)^(s dot x) for nonzero s; squared masses c_s^2/256. Erasure numerators from exact packet pairs; rational outward atanh log intervals at 96-bit output and 128-bit natural-log fixed scale, 48 terms. Equal prime-log coefficient vectors certify exact ties. No floating decision.",
+  "memory_estimate_mb": 80,
+  "cpu": "one serial Python process; no GPU or workers",
+  "maximum_runtime_seconds": 600,
+  "pilot": {"support_cap":3,"case_count":497,"maximum_runtime_seconds":55},
+  "runtime_enforcement": "deadline checked at every set; checkpoint every 10000 cases and immediately on each improved incumbent",
+  "reason": "Tests whether the five-bit lower bound supplied by the lead survives all sparse edits up to six minority points, giving exact obstructions and structural seeds for the universal erasure-selection bridge.",
+  "script": "code/sparse_search.py",
+  "frozen_before_execution": true
+}

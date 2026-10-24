@@ -1,0 +1,3 @@
+The frozen mathematical domain and helper implementation were written before the pilot. The spec's proposed hash-receipt timing was not implemented: SHA256 receipts were produced after the calculations, not before. They bind the saved code but are not evidence of a pre-pilot hash timestamp. No mathematical domain, dimension, bias grid, symmetry, precision or search target changed between pilot and full run.
+
+The search estimate was 120 MB; peak RSS was not measured. No greater-than-300-MB job was expected or launched. Main runtime was 48.831366 seconds, below the 1,200-second maximum; pilot runtime was 2.712464 seconds, below 60 seconds.

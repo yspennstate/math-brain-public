@@ -1,0 +1,27 @@
+{
+  "parameters": "even k>=2,r>=1,a=2^-k,b=2^(-k/2),q=2^-r,c=(1-b+a)/2",
+  "rare_private_scale": {
+    "actual_removed_influence": "qa/2",
+    "signed_collision": "q(2^k-1)S(-a,a;b)+q(1-q)S(-a,a;b-1)+S(1-qa,qa;1-q+qb)",
+    "lower_ratio": "k-4 for even k>=4, uniformly over r",
+    "not_paid_by": "rarity alone or the same removed private influence"
+  },
+  "activation_scales": {
+    "live_depth_d": "0<=d<r",
+    "reach_probability": "2^-d",
+    "remaining_activation_probability": "2^-(r-d)",
+    "weighted_physical_influence_per_depth": "qc",
+    "sum_consumed": "rqc",
+    "erasure_price": "<=4rqc"
+  },
+  "surviving_core": {
+    "reach_probability": "q",
+    "retained_entropy": "qH(F)=q(H(G)+H(H))/2+qR(G,H)",
+    "remaining_influence": "qI(F)",
+    "subsequent_actual_policy_price": "<=5qI(F)",
+    "final_selector": "character or constant; B=JS=0, remaining influence consumed explicitly"
+  },
+  "one_physical_budget": "I(W)=rqc+qI(F)",
+  "combined_complete_erasure_bill": "<=4rqc+5qI(F)<=5I(W)",
+  "first_unpaid_transport": "Arbitrary interleaving: debit weighted bad private exposure to one unqueried mismatch/terminal reserve without reusing either activation or terminal influence."
+}

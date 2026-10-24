@@ -1,0 +1,31 @@
+B13 harmonic-marker regression: partial run before diagnostic repair
+functions_sign_normalized=32906
+nonconstant=32902
+active_coordinate_rows=130933
+checks=328357
+C_marker=3.416127927200970
+C_atom=2.000000000000000
+C_paid=5.416127927200970
+max_chain_error=8.882e-16
+max_residual_geometric_form_error=8.882e-16
+max_one_charge_mean_error=4.441e-16
+max_coordinate_marker_excess=-1.872e-01
+max_marker_over_I=1.312500000000000
+max_atom_over_I=1.571120584507094
+max_paid_over_I=2.508620584507094
+max_residual_over_I=0.893854966691493
+stress=one_point n=4 H/I=3.402475551199 marker/I=0.937500000000 residual/I=0.893854966691
+stress=one_point n=8 H/I=3.842782591898 marker/I=0.747070312500 residual/I=1.243711060937
+stress=one_point n=12 H/I=3.906044566734 marker/I=0.597347877623 residual/I=1.402105144882
+stress=one_point n=16 H/I=3.930271404541 marker/I=0.499992370605 residual/I=1.499974360115
+stress=majority n=3 H/I=1.333333333333 marker/I=1.056641667147 residual/I=0.276691666186
+stress=majority n=5 H/I=1.773533749351 marker/I=1.238361650607 residual/I=0.535172098744
+stress=majority n=7 H/I=1.998622789366 marker/I=1.283362250083 residual/I=0.715260539283
+stress=majority n=9 H/I=2.137457900890 marker/I=1.288096508523 residual/I=0.849361392368
+point_indicator_row m=4 H=3.863608638148 mean_Kplus1=2.580645161290 H_over_mean=1.497148347282
+point_indicator_row m=8 H=7.905671979050 mean_Kplus1=4.508806262231 H_over_mean=1.753384714104
+point_indicator_row m=12 H=11.936491456744 mean_Kplus1=6.500793553901 H_over_mean=1.836159133154
+FAIL diagnostic=point_indicator_mean_closed_form m=16
+exception=AssertionError
+cause=naive atomwise floating accumulation exceeded an unnecessarily tight equality tolerance; analytic theorem unaffected
+exit_code=1

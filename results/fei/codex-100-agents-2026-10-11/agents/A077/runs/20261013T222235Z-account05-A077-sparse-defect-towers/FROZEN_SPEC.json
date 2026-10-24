@@ -1,0 +1,13 @@
+{
+  "helper_version": "A077-shared-bit-v1",
+  "family": "F(z,s,X,Y)=G(s,X) for z=0, H(s,Y) for z=1; exactly one declared common data bit and a fresh selector",
+  "domain": "all labelled G,H with private widths (0,0),(0,1),(1,0),(1,1),(2,0),(0,2); additionally 36 fixed (2,2) fixtures from the six declared core masks; three data-only prefix policies per root",
+  "case_count": "2448 exhaustive roots plus 36 fixed roots = 2484; complete first, complete last, and one-query maximum-influence prefixes = 7452 trees; pilot only (0,0), 16 roots, 48 trees",
+  "symmetry": "none; retain constant, biased and irrelevant shared-bit cases; private coordinates disjoint between branches",
+  "arithmetic": "integer FWHT/Fraction and exact rational prime-log expressions; signs checked by 32-term atanh intervals and outward 2^100 rounding; exact zero expressions handled symbolically",
+  "memory_estimate_mb": 120,
+  "pilot_max_runtime_seconds": 60,
+  "max_runtime_seconds": 180,
+  "candidate": "actual B_i(F)=half B_i(G)+half B_i(H)+D_i with |D_i|<=2 Inf_i(F), and adaptive-prefix sum |w D_i|<=2 consumed data influence; retain complete terminal core entropy",
+  "stop_rule": "fixed domains only, assertion failure stops; no GPU, automatic escalation or background job"
+}

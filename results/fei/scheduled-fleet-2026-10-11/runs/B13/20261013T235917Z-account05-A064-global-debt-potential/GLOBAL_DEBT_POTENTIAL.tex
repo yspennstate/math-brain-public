@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{A064: exclusive-controller lift of priced prefix reserves}
+\author{A064, B13}\date{14 October 2026}\maketitle
+Entropy is in bits. Let a finite uniform physical controller select independent
+Boolean cores $u_j$ on disjoint data cubes, or constant signs. Merge selectors
+for the same physical core. Let $C_j$ be the exclusive indicators, $q_j=EC_j$,
+$\ell_j=\log_2(1/q_j)$, with zero-$q_j$ terms zero. Controls are unqueried
+during a finite adaptive data-only prefix. Physical histories retain fair
+independent unrevealed coordinates. Every core follows a prescribed finite
+continuation tree with a nonnegative reserve $r_j$ satisfying
+\[
+D_j\le C d_j+r_j-E r_j(\text{child}),\qquad C\ge0.
+\]
+Each $r_j$ depends only on its own core history and any initially fixed independent seed.
+These core reserves are assumptions or independently supplied certificates,
+not universal FEI conclusions. Interleaving respects those trees but can be
+history-dependent and stopped at any reached prefix.
+
+\begin{theorem}[Initial resource, drift, terminal boundary]
+Put $\alpha=C+11/2$ and explicitly define
+\[
+R_t=\sum_j q_jr_j(u_{j,t})+\sum_j q_j\ell_j\operatorname{Var}(u_{j,t}).
+\]
+Then $R_t\ge0$ and at every actual data query
+\[
+D_F\le\alpha d_F+R_t-E[R_{t+1}\mid\mathcal F_t].
+\]
+Its initial resource satisfies
+\[
+R_0\le\sum_jq_jr_j(u_j)+2I_{\rm ctrl}(F).
+\]
+At a stopped prefix $\sigma$, its actual value is the displayed sum over the
+remaining cores. In particular
+\[
+E R_\sigma\le R_0+C\Pi_{I,\rm data},
+\]
+where $\Pi_{I,\rm data}$ is the same prefix's consumed physical data influence.
+If every core is exhausted to a constant and the supplied core reserves have
+zero constant leaves, $R_\sigma=0$ exactly. The Fourier entropy of the remaining
+control function $F_\sigma$ is still retained.
+\end{theorem}
+\begin{proof}
+At a data query of core $j$, write $m=Eu_j$, $\beta=\widehat u_j(i)$,
+$t=\beta^2$, $v=1-m^2$, and $d=\operatorname{Inf}_i(u_j)$. The exact
+signed sector identity gives
+\[
+D_F=q_j[D_j-p(m,\beta)]+M(t)+J,
+\quad d_F=q_jd.
+\]
+Here $\phi(s)=s\log_2(1/s)$ and
+$p(a,b)=\phi(a^2)+\phi(b^2)-E_\pm\phi((a\pm b)^2)$.
+It is nonnegative: with $\Phi(A,B)=\phi(A)+\phi(B)-\phi(A+B)$,
+\[
+p(a,b)=\Phi(a^2,b^2)+\phi(a^2+b^2)-E_\pm\phi((a\pm b)^2)\ge0.
+\]
+The first term is homogeneous binary entropy; the last difference is
+nonnegative by concavity, including zero endpoints.
+
+The independently reconstructed selector envelope is
+\[
+M(t)\le q_jt[\ell_j+1/\ln2]+q_jt\log_2(1/t),\quad
+0\le J\le2q_jt/\ln2.
+\]
+Indeed $M(v)\le h_2(q_jv)$, and the scaling envelope
+$M(t)\le tM(v)/v+q_jt\log_2(v/t)$ cancels the variance logarithm.
+Boolean derivatives give $|\beta|\le d$ and $t\le d$, while
+$t\log_2(1/t)\le2d/(e\ln2)$. Thus
+\[
+M(t)+J\le\kappa q_jd+q_j\ell_jt,\qquad
+\kappa=(3+2/e)/\ln2<11/2.
+\]
+The rational certificate uses $e>65/24$, $\ln2>56/81$ and
+$(3+48/65)(81/56)<11/2$. No floating constant comparison is used.
+The core reserve and the variance drift $v-Ev_{\rm child}=t$ prove
+the claimed inequality. Other cores have unchanged conditional quantities.
+
+For the initial resource, indicator edge isoperimetry gives
+$I(C_j)\ge2q_j\ell_j$ in probability-of-change normalization.
+At an original control edge between distinct states $j,k$, actual pivotal
+probability is $(1-m_jm_k)/2$, while the charged variance sum is at most
+$2(1-m_jm_k)$. Constants have variance zero. Summing each original edge once
+gives $\sum_jv_jI(C_j)\le4I_{\rm ctrl}$ and hence
+$\sum_jq_j\ell_jv_j\le2I_{\rm ctrl}$. Edge isoperimetry follows by
+cube slice induction and $h_2(s)\ge2\min(s,1-s)$, so the influence units
+are explicit. For the expected terminal bound, finite summation of the core
+reserve inequalities gives $E\sum q_jr_j(\sigma)\le\sum q_jr_j(0)
++C\Pi_{I,\rm data}-\sum_jq_jE\sum D_j$. Variances decrease in expectation.
+The discarded terms are nonnegative. All statements are for finite trees;
+no unbounded optional stopping or dimension-limit exchange is invoked.
+\end{proof}
+
+\begin{theorem}[Snell domination and actual controller continuation]
+Let $Q_\alpha$ be the least nonnegative reserve on a prescribed physical tree:
+$Q_\alpha(v)=[D_v-\alpha d_v+E Q_\alpha(\text{child})]_+$, zero at its
+specified leaves. On the above data-only tree, $Q_\alpha(F)\le R_0$.
+For a complete-data frontier, choose a declared control continuation at each
+actual $F_\sigma$ and let $b_\sigma$ dominate its $Q_\alpha$.
+Then adding $A_t=E[b_\sigma\mid\mathcal F_t]$ yields a valid nonnegative
+potential for the full grafted rule and
+\[
+Q_\alpha(F,\text{full rule})\le
+\sum_jq_jr_j(u_j)+2I_{\rm ctrl}(F)+E b_\sigma.
+\]
+No linear bound on $E b_\sigma$ is assumed. If one is proved at rate $L$
+against this same remaining control influence, the total controller account
+has rate $2+L$, not $\max(2,L)$.
+\end{theorem}
+\begin{proof}
+Backward induction gives minimality and domination by any nonnegative
+supersolution with dominating leaves. $A$ is a nonnegative martingale,
+so adding it does not change the data drift. At the complete-data boundary
+$R=0$, hence $R+A=b_\sigma$ matches the actual continuation reserve.
+This glues the declared rule without changing its frontier or reference.
+\end{proof}
+
+\paragraph{Arbitrary retained boundary.}
+For any Boolean sign $h(z)$, choose two independent dictator cores and put
+$F=((1+h)/2)y_0+((1-h)/2)y_1$. Data-first leaves are constant when
+$y_0=y_1$ and $\pm h$ otherwise. Therefore
+\[
+E H(F_\sigma)=H(h)/2,\quad E I(F_\sigma)=I(h)/2=I_{\rm ctrl}(F),
+\quad E Q_\alpha(F_\sigma,T)=Q_\alpha(h,T)/2
+\]
+for consistently sign-translated copies of one declared control tree $T$.
+Each data core has zero reserve. A universal linear entropy payment of this
+actual frontier would be FEI. The new prefix potential does not supply it.
+
+\paragraph{Growing branch.}
+For $q=1/4$ selecting $u=(1,1,1,-1)$ with constant fallback and $C=4$,
+the core reserve is zero. The rarity potential is $3/8$ at the root and
+$1/2$ on its nonconstant first-data child, a strict increase of $1/8$.
+Its other child has value zero. Conditional expected drift, rather than
+pathwise monotonicity, is what the theorem proves.
+\end{document}

@@ -1,0 +1,106 @@
+{
+  "ledger_delta": {
+    "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+    "target_id": "RS-2026-CL-A",
+    "report_kind": "NEW_METHODS_RESEARCH",
+    "input_snapshot_sha": "0de128f400e252b0455c5ca02f3a6ff152440896",
+    "source": {
+      "author": "Anastasia Kireeva",
+      "venue": "Randomstrasse 101",
+      "title": "Low-degree hardness of finding the largest clique in Erdos-Renyi graph (problems 36-38)",
+      "posted": "2026-06-05",
+      "locator": "first displayed Open Problem 35",
+      "url": "https://randomstrasse101.math.ethz.ch/posts/clique-low-degree/",
+      "fresh_check_date": "2026-09-18",
+      "fresh_status": "LIVE_OPEN"
+    },
+    "previous_report": {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-18/2026-09-18T13-50-30Z__report.md",
+      "creation_commit": "daf5b49778de3409b6f9a55188c2e5c7a326b67f",
+      "blob": "d80ed5cf5f2a06b584df1a569f5c83258a3defed",
+      "history_gap": false
+    },
+    "report": {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-18/2026-09-18T14-44-58Z__report.md",
+      "creation_commit": "369cbfe94848369f5cc212133d735abf8c1d9fbc",
+      "readback_blob": "7b038ee2b41713d33b13447b0fbc0389b4497f0c"
+    },
+    "model": {
+      "actual_exposed_model": "GPT-5.6 Sol",
+      "reasoning_effort": "UNVERIFIED",
+      "requested_model": "GPT-6",
+      "requested_reasoning": "maximum",
+      "selector_status": "The exposed scheduler/task-control interface has no authenticated model-family selector or reasoning-effort selector; prompt-only request cannot certify runtime assignment."
+    },
+    "fixed_metric": {
+      "name": "E_framework",
+      "domain": [0, 1],
+      "before": 1,
+      "after": 1,
+      "movement": "NO_METRIC_MOVEMENT",
+      "never_lower_reset_redefine": true
+    },
+    "mathematical_status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / REVERSIBLE_DEGREE_GATE_AND_LOCALIZED_COLLISION_PRESSURE_PROGRESS",
+    "hard_recovery_cycles_consumed": 1,
+    "remaining_obligation_stagnation_count": 0,
+    "qualifying_audits": {
+      "count": "0/2",
+      "p26": null,
+      "other": null
+    },
+    "methods": [
+      {
+        "id": "B17",
+        "name": "LOOK FOR YOUR NUMBERS SOMEWHERE ELSE",
+        "outcome": "PROGRESS",
+        "result": "Reconciled the scalar path law with classical Ehrenfest/Krawtchouk and Davies/Combes-Thomas machinery and proved a self-adjoint finite-band degree-distance semigroup gate: ||Pi_<=D exp(-tA) Pi_>=K|| <= exp[-s(K-D)-(kappa-beta cosh(sw))t] when beta cosh(sw)<kappa."
+      },
+      {
+        "id": "B4",
+        "name": "PROVE SOMETHING WEAKER, COMPLETELY",
+        "outcome": "PROGRESS_KNOWN_POSITIVE_CLASS_TRANSLATION",
+        "result": "Translated Chen-Li arXiv:2608.06279 into the pressure framework: their vanishing-LDA plus low-interface/treewidth hypotheses imply chi2(q_*) -> 0 for every fixed q_*<1, hence Psi(q_*)=0 and q_c=1. This is known in substance from Chen-Li and remains a restricted PARTIAL class relative to the source."
+      },
+      {
+        "id": "B30",
+        "name": "DO ONE SCALE, ONE DIRECTION AT A TIME",
+        "outcome": "PROGRESS",
+        "result": "Proved a central-band orbit-collision theorem: for a symmetrized binary linear code of dimension k in E coordinates, at retention q the collision contribution from weights |j-qE/(1+q)| <= sqrt((k+2)ln2 E/2) is at least 4^{-(k+1)}(1+q)^E. For Mao, pressure is therefore localized at j=(q/(1+q)+o(1))E >> D_n."
+      }
+    ],
+    "new_results": [
+      "Reversible exponential source-degree distance gate under diagonal coercivity, symmetric transition budget, and finite degree bandwidth.",
+      "Explicit pressure bridge q_c=1 for the Chen-Li low-interface/treewidth positive class under their vanishing low-degree premise.",
+      "MacWilliams/Hoeffding/Cauchy central-band localization of symmetrized code collision pressure; Mao's fixed-noise pressure lies near the binomial tilt degree qE/(1+q)."
+    ],
+    "prior_art_cautions": [
+      "Ehrenfest/Krawtchouk birth-death spectral theory is classical.",
+      "Davies exponential conjugation and Combes-Thomas/block-Jacobi off-diagonal methods are classical.",
+      "Chen-Li's planted-subgraph positive theorem is prior art; only its pressure-language bridge is recorded here.",
+      "MacWilliams/Delsarte identities, Reed-Muller weight-distribution/list-decoding theory, binomial large deviations, and group averaging are classical.",
+      "Bounded negative search is not novelty proof; inference-specific novelty remains UNVERIFIED."
+    ],
+    "dated_literature_checks": [
+      "2026-09-18: Randomstrasse source live/open.",
+      "2026-09-18: Hsieh et al. arXiv:2601.05850 / STOC 2026 remains a positive comparator.",
+      "2026-09-18: Mao arXiv:2607.20318 remains the decisive post-source counterexample.",
+      "2026-09-18: Chen-Li arXiv:2608.06279 remains the principal later planted-subgraph positive comparator.",
+      "2026-09-18: Kaufman-Lovett-Porat 2012 and classical code-weight literature checked as relevant prior art."
+    ],
+    "remaining_obligation": [
+      "Derive model-level reference-pressure upper control under bounded (not only vanishing) low-degree advantage.",
+      "Determine the sharp positive-rate code/noise boundary for dual distance above the source cutoff and positive critical radius.",
+      "Combine reversible degree transport control with one-reference pressure into a broad nonproduct source-valid sufficient theorem.",
+      "Complete prior-art reconciliation against block-Jacobi/Combes-Thomas/Davies and second-order/complete code weight enumerators/association schemes.",
+      "Obtain actual P26 plus one distinct OTHER full theorem/source audit before closure."
+    ],
+    "next_methods": ["B12", "B26", "B11"],
+    "artifact_refs": [
+      "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-18/2026-09-18T14-44-58Z__report.md",
+      "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-18T14-44-58Z__ledger_delta.json"
+    ],
+    "shared_root_edits": false,
+    "peer_immutable_edits": false,
+    "github_only_delivery": true
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260924T132948Z-account03-B15-fixed-multiplicity-audit-r12",
+  "objective_id": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_start": "2c0c11fe7519116a5a05ac4a1360f8c1ff504d29",
+  "control_commit_before_publication": "151089982c920b92cda941aa3020f9393efb844b",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "baseline": {
+    "repository": "yspennstate/math-open-problems",
+    "source_commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+    "path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex",
+    "blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "sha256": "9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69"
+  },
+  "audit_status": "PASS_RECONFIRMED_NO_FATAL_GAP",
+  "mathematical_outputs": [
+    "The written s_17 theorem was reread end-to-end and passed this audit; the only retained issue is a nonfatal product-projection summation wording ambiguity.",
+    "The previous package gap is resolved: SOURCE_MANIFEST.json, proof_map.csv, verify.py and checks.json are present; checks.json reports PASS for its scoped suite.",
+    "Combining the manuscript interval domination with completed affine fixed-instance rank>=3 C0 regularity upgrades the affine s_17 theorem to a canonical C0 density with the same universal height 10000 K^2/s.",
+    "Applying completed account04/B15 same-constant compiler to the actual normalized homogeneous s_17 interval inequality gives homogeneous C0 with identical height, then scaling gives 10000 K^2/s.",
+    "In the normalized no-pivot s_13 chamber, the order-four envelope yields sup_a E|Q-a|^{-1/2} <= 8 sqrt(80e) < 118.",
+    "Combining fresh account03/B01 finite-Lq endpoint work with completed fixed-instance affine C0 regularity shows s_13 outputs are canonical C0 and universally controlled in every finite Lq, while uniform Linfinity remains open.",
+    "The leverage-interpolated order-four theorem closes s_13 only when the volume-good cut has max physical row leverage h<1; the remaining threshold debt is the uniform h->1 chamber."
+  ],
+  "partner_applied": {
+    "account": "account04",
+    "slot": "B15",
+    "repository": "yspennstate/math-open-problems",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260923T221909Z-account04-B15-ruled-trace-c0-r8/REPORT.md",
+    "result": "same-constant C0 compiler",
+    "actual_inequality": "P{Y^T(A/s)Y in I} <= 10000 |I| after Y=KX"
+  },
+  "corrections_consumed": [
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "owner correction: bounded marginal density does not imply uniform pointwise quadratic-phase decay"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "480bd5efd86f6af3ec41be8f9c5b3460afaa7b1f",
+    "audit_path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/audits/account03/B15/20260924T132948Z-account03-B15-fixed-multiplicity-audit-r12/REPORT.md",
+    "improvement_path": "proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/account03/B15/20260924T132948Z-account03-B15-fixed-multiplicity-audit-r12/REGULARITY_UPGRADE.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "24ec5fcd1d0e7c629531f54b701bf1e756a25419",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B15/20260924T132948Z-account03-B15-fixed-multiplicity-audit-r12.md"
+  },
+  "unresolved": "No unconditional 17-to-13 Linfinity reduction is proved. Need a uniform high-leverage endpoint receiver. Full three-eigenvalue QFORM remains open.",
+  "next_step": "Attack the order-four high-leverage h->1 chamber without weakening arbitrary affine/product/sign hypotheses; attempt to convert a nearly essential crossing row into a dependence-safe physical hub/slope or second crossing currency before absolute Fourier inversion.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "provider_reasoning_counters": null,
+  "notifications_changed": false,
+  "schedule_changed": false
+}

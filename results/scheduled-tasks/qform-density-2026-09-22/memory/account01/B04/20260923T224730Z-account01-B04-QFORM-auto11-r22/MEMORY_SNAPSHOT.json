@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260923T224730Z-account01-B04-QFORM-auto11-r22",
+  "source_control_commit_at_start": "171c649365a8c2ed732779b66114eb98afc51827",
+  "source_control_commit_refresh": "ce753289dbc5fdc3eb8125c00ec740a6465cf01d",
+  "control_revision": "2026-09-22.15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "claim": "QFORM-CLEANBANK-TOPTWO-REARRANGEMENT-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "dfe442ee899867f5677e5ced85a196eca922fe64",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260923T211520Z-account02-B04-qform/REPORT.md",
+    "applied_equation": "After conditioning a physical curvature cover R with C[L,L]=0, the residual Q=F_r(X)+2X^T M_L Y_L+beta_r^T Y_L+c_r is exactly in the clean-bank theorem."
+  },
+  "new_claim": {
+    "id": "QFORM-CURVATURE-VERTEX-COVER-REARRANGEMENT-v1",
+    "status": "SUPPORTING_THEOREM_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "statement": "For Q=F(X)+2X^T M Y+Y^T C Y+b^T Y+c on original product banks, if R is a physical curvature cover with C[L,L]=0 and M[:,L] has top two singular values s1>=s2>0, then ||p_Q||_infinity<=2sqrt(pi)(s1s2)^(-1/2) and p_Q has a C0 representative. With top-two X-projection density cap L_X the numerator improves to sqrt(2pi L_X).",
+    "structural_identity": "M_L M_L^T=M M^T-M_R M_R^T, so s2(M_L)^2>=s2(M)^2-||M_R||_op^2."
+  },
+  "explicit_application": {
+    "family": "Two-coordinate X-bank, diffuse m-leaf crossing L_m with half columns (2/sqrt(m))(1,1) and half (2/sqrt(m))(1,-1), plus an order-one Y-curvature star centered at one conditioned physical coordinate.",
+    "spectral_check": "Two positive and two negative ambient eigenvalues have modulus at least (7-sqrt(5))/4>1 by Weyl.",
+    "grouped_currency": "L_m L_m^T=4I_2 while each nonzero individual leaf-pair determinant equals 8/m.",
+    "density_bound_partner": "sqrt(pi)",
+    "density_bound_refined": "sqrt(pi/2)=1.253314137315500...",
+    "continuity": "C0"
+  },
+  "outputs": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "eea98efa620f25dd55c55c07a4412f59ebb550a4",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T224730Z-account01-B04-QFORM-auto11-r22/REPORT.md",
+    "early_calc_commit": "b280d61054474f1463aaebd2bc0fac493f10a547",
+    "checks_commit": "ae9b308c5694a97ee89fdd2ed510701b162e526e",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T224730Z-account01-B04-QFORM-auto11-r22/CHECKS.json"
+  },
+  "unresolved_implication": "QFORM-C1-ROUGH-CURVATURE-COVER-OR-INTERTWINED-ROUTING-v1",
+  "next_step": "Analyze the strongly intertwined dense-curvature case: prove that if every physical curvature vertex cover deletes a target-scale portion of the second grouped crossing direction, then one of the completed pair/D5/ridge/projected-crossing/grouped-hub receivers must fire.",
+  "full_target_proved": false,
+  "full_target_disproved": false,
+  "continuity_full_target_proved": false,
+  "continuity_supporting_branch_proved": true
+}

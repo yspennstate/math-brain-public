@@ -1,0 +1,154 @@
+[
+  {
+    "claim_id": "A095-RANK-KL-EQUIVALENCE",
+    "version": 4,
+    "exact_statement": "For every Boolean f and every order sigma, normalize Q_(sigma,k)(S)=prod_{i in positions_sigma(S)}i^(-2)/Z_(n,k), set beta_(n,k)=ln(Z_(n,k)(k!)^2), D_sigma=sum_k P(|S|=k)D_nat(P(S||S|=k)||Q_(sigma,k)), and T_sigma=2R_sigma-D_sigma. Then (ln2)H(f)=H_nat(|S|)+T_sigma+E beta, with 0<=beta_(n,k)<=k ln(pi^2/4). If K_T=sup_nonconstant_f min_sigma T_sigma/I(f) and C_FEI=sup H/I, then K_T/ln2<=C_FEI<=log2(4+e)+log2(pi^2/4)+K_T/ln2 in the extended real sense. Thus K_T finite iff uniform-cube FEI holds. Concrete paid application: for any Boolean g with known bias mu and supplied normalized core reference R positive on its spectrum, empty calibration to R0(empty)=mu^2 is CE-nonincreasing. For r>=1,p=2^-r,F=1+A_r(g-1), the full reference Q(vac)=[1-p(1-mu)]^2, Q(U!=empty,T=empty)=p^2(1-mu)^2, Q(U,T!=empty)=p^2 R0(T) is normalized and has CE_F-H(F)=p D(P_g||R0) and CE_F<=p CE_g_cal+6rp(1-mu). For g=q product_j(1-2 A_(L_j)) on disjoint private blocks and a supplied terminal reference, its fixed occupied-block/uniform-nonempty-subset reference gives CE_F<=p CE_q_cal+4p sum_j I(h_j)+6rp(1-mu_g), with I(F)=p[I(q)+sum_j I(h_j)+r(1-mu_g)]. Thus a terminal cost <=C I(q) yields full cost <=max(C,6)I(F); q=1 yields CE<=6I uniformly in r, widths and number of blocks. For r=0,q=1 the same block reference has CE=H<4I. No universal terminal reference bound or incompatible shared-control extension is claimed. Further complete-reference application: for every integer t>=2, Boolean children G(s,X), H(s,Y) sharing a uniform t-bit block s with disjoint arbitrary private cubes, fresh selector z and F=(G+H)/2+z(G-H)/2, put d=Inf_z(F), d*=min(d,1-d). Shared-collision minority mass delta obeys delta<=min(d*,2^t d*^2) and B_C<=h2(delta). Consequently Delta=H(F)-(H(G)+H(H))/2 <= (t+2+3/ln2)d*. Every supplied normalized finite-cost positive-support child reference can be calibrated at all shared-only atoms, decreasing CE by exact categorical KL; their lifted single normalized full-output reference Q retains exact debt D(P_F||Q)=(D(P_G||R_Gc)+D(P_H||R_Hc))/2 and CE_F<=(c_Gc+c_Hc)/2+(t+2+3/ln2)d*. I(F)=(I(G)+I(H))/2+d, counting shared physical bits once. Given supplied child CE bounds K_G I(G), K_H I(H), this closes CE_F<=max(K_G,K_H,t+2+3/ln2)I(F). If kappa_t=sup Delta/d* over all such children and private dimensions with 0<d*<=1/2, then t-1-log2(16/9)<=kappa_t<=t+2+3/ln2 for t>=4, and kappa_t/t tends to 1. These dimension-dependent transfers do not give an absolute selector-only coefficient, a universal arbitrary-terminal reference, or a full FEI bound. Further support-completion application: let any Boolean core g on k>=1 bits have true Fourier support S and supplied normalized positive-support finite-cost reference R, CE c; pad by m>=0 dummy bits, n=k+m, delta=2^-n, flip any full vertex a to h_a=g-2g(a_x)1_a and select g,h_a by one fresh fair bit. M_a has full Fourier support; if j is the original incident pivotal degree then I(M_a)=I(g)+delta(n+1-2j). Calibrate R to S with cost c_S=c+log2 R(S)<=c. Set w=2delta-|S|delta^2 and use Q_M=(1-w)R_S on selector/padding-absent old-support atoms, delta^2 on every complementary atom. This is a normalized complete reference with D_M=(1-w)D(P_M(.|old)||R_S) and CE_M<=c_S+delta[(5/4)2^k c_S+4n+3]. For K>=4 the single source bank KI(g)-c sufficient payment is at least delta[(5/4)2^k c+(4-K)n+K(2j-1)+3]. If c<=K0 I(g), K0>=0, K>=4 and K>K0, then every edit vertex is paid at CE_M<=K I(M_a) whenever 2^-m[(5/4)K0+kK+(3-K)/2]<=K-K0; constant cores are paid at4 for every m. In particular a supplied4I core admits6I output for 2^m>=3k+7/4, uniformly in growing core dimensions and all vertices. This applies to the explicit occupied-block references of products of disjoint point-defect signs. Any independent prescribed terminal q retains c_q+D_q through a product reference; one fresh point activation retains p times total debt minus its exact empty-sector KL saving, and costs at most p c_q+p K I(M_a)+6rp(1-mu). The padding/slack and supplied-core hypotheses remain explicit. A fixed one-bit dictator/constant edit with R(empty)=2^-b and R(character)=1-2^-b has unchanged-source cost<=1 but same-R lifted cost 1+[b-log2(1-2^-b)]/2 unbounded; the support-completed reference costs2. This is a reference-shock obstruction, not an FEI counterexample.",
+    "hypotheses": [
+      "Boolean sign function",
+      "uniform measure",
+      "H in bits, D and beta in nats",
+      "zero-mass levels omitted",
+      "k=0 reference assigns mass one to empty set",
+      "References normalized and positive on actual support",
+      "Earlier activation application only: Shared controls form one common signed conjunction; all remaining private blocks and terminal cube are disjoint",
+      "Bias is fixed known instance data; references chosen before spectral sampling",
+      "Ideal negative-log probability costs; no optional binary prefix-rounding bit included",
+      "The new selector application uses t>=2 arbitrary shared uniform bits and disjoint private cubes; it does not use the common-spine hypothesis of the earlier activation application",
+      "d*=min(d,1-d) is justified by sign folding; child spectra and all entropy costs are preserved",
+      "All references are calibrated and fixed before spectral sampling; complete off-target reference mass retained",
+      "New support-completion application: arbitrary Boolean core with supplied normalized R and known original support; no universal core admission",
+      "Padding condition or signed source-bank certificate is required for new K-output bound; all edit vertices and lost original edges retained",
+      "K0>=0,K>=4,K>K0 for explicit padding consequence; exact debt remains conditional old-sector KL"
+    ],
+    "statement_sha256": "7f25b27913501048de5147d49019490a1b6cf157b9ad2f07761519c92f207d9f",
+    "contributors": [
+      "A095; A097/A086 collision-calibration transfer and bent-flip lower witness credited as prior inputs",
+      "A095 support-completed arbitrary nonuniform core-reference continuation; earlier arbitrary leaf shock/created-erased-edge guard credited to A011 and all-vertex sharp stress to A094"
+    ],
+    "proof_source": {
+      "retained_v3": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T010024Z-account05-A095-restricted-result-extraction\\DERIVATION.md",
+      "older_v2_and_equivalence": {
+        "original_equivalence": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261011T231526Z-account05-A095-restricted-result-extraction\\REPORT.md",
+        "retained_v2": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261013T213857Z-account05-A095-restricted-result-extraction\\DERIVATION.md",
+        "new_linear_tax_and_sharpness": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T010024Z-account05-A095-restricted-result-extraction\\DERIVATION.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T010024Z-account05-A095-restricted-result-extraction\\out\\EXACT_RESULTS.json"
+      },
+      "new_support_completion": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T034647Z-account05-A095-restricted-result-extraction\\DERIVATION.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T034647Z-account05-A095-restricted-result-extraction\\out\\EXACT_RESULTS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 3,
+        "scope": "Earlier statements retained; product-point-defect4I reference and biased activation only used for new concrete class/tensor insertion",
+        "status": "Shared-t and activation clauses independently accepted at scope by A094; old broad rank/equivalence bundle not blanket accepted"
+      },
+      "Elementary Boolean Fourier granularity, incident edge enumeration, support-calibration KL and exact old/new probability expansion; no A094 quadratic phase invariance assumed for general cores"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A094/account05/B19",
+        "at": "2026-10-14T03:31:29.050055+00:00",
+        "verdict": "HOLDS_AT_EXPLICIT_DEPENDENCY_CLAUSES_ONLY",
+        "scope": "Only new shared-t linear-tax/collision-cap/complete-reference/sharp-leading-coefficient clauses and retained biased-activation normalization/calibration/debt/six-influence clauses. Older rank/KL equivalence and common-spine/block applications are not blanket reviewed.",
+        "method": "Independent complete signed Fourier/physical edge/entropy-sector/KL reconstruction; own exact checker and outward rational certificates, no author checker imported",
+        "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T031253Z-account05-A094-proof-chain-challenger\\AUDIT.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T031253Z-account05-A094-proof-chain-challenger\\out\\EXACT_RESULTS.json",
+        "source_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T010024Z-account05-A095-restricted-result-extraction\\CLAIMS.json",
+        "source_claims_sha256": "435124421626f94b5c73f3f062324a804f3a411f0ac5735f3c39413187e0caa8",
+        "substantive_repair_supplied": false,
+        "contributor_conflict": false,
+        "declared_statement_sha256": "0e0f8156b244b72893f9cdd56d20be4257ff2cceb04252dc0805766411a2c4cb",
+        "plain_statement_sha256": "0e0f8156b244b72893f9cdd56d20be4257ff2cceb04252dc0805766411a2c4cb",
+        "canonical_statement_hypotheses_sha256": "5e7ad9716415733e1d7a2fd91a0bca81afd813503049cacc5cc0e796874d5dcf",
+        "known_hash_form_match": true,
+        "reviewed_version": 3
+      }
+    ],
+    "status": "AUTHOR_PROVED_NEW_SUPPORT_COMPLETION_PENDING_INDEPENDENT_REVIEW; PRIOR_CLAUSES_SCOPED_REVIEWED",
+    "supersedes": [
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 3,
+        "scope": "Existing C020 candidate retained; explicit support-completed nonuniform-core surgery and logarithmic-padding class theorem added"
+      }
+    ],
+    "refutes": [
+      "Prospective bounded unchanged-reference point-edit terminal shock inferred solely from an influence-paid original core reference"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A094",
+      "A097",
+      "A011",
+      "A039",
+      "A086",
+      "A099",
+      "B19",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A094-SHARP-ALL-VERTEX-COLLISION-RESERVE",
+    "version": 1,
+    "exact_statement": "For every even k>=4 and m>=0 put n=k+m,delta=2^-n,G(x,y)=(-1)^(sum_{j=1}^{k/2}x_(2j-1)x_(2j)) with m dummy uniform bits. For every vertex a, let H_a=G-2G(a)1_a and let M_a be their fresh fair selector. The complete squared-coefficient multisets and thus H(H_a),H(M_a) are independent of a; with w(a) the active Hamming weight, I(H_a)=k/2+2delta(n-2w), I(M_a)=k/2+delta(n+1-2w), Inf_z=delta. The exact optimal full-family entropy/influence constant is C_pt=(16/29)[8-(180log2 3+300log2 5)/256], with 2.297<C_pt<2.299: H(M_a)<=C_pt I(M_a) for all parameters, attained at k4,m0,a1111. All n>=6 have ratio<34/15; the only n5 case has worst ratio below34/15 by an exact rational-log certificate. The k4,m0,a1111 selector has I=29/16 and H>(17/8)I, refuting only a prospective unchanged-price all-location extension, not the actual zero-point source theorem. For exact structural child references, S_Cpt=[C_pt I(G)-H(G)+C_pt I(H_a)-H(H_a)]/2 pays Delta-C_pt delta once, with zero margin at the sharp extremizer. For any independent arbitrary Boolean q and supplied normalized positive-support finite-cost R_q, the fixed product reference R_q tensor P_Ma retains CE=c_q+H(M_a), KL=D_q and I=I(q)+I(M_a); conditional c_q<=C I(q) gives CE<=max(C,C_pt)I. One fresh r-point activation, p=2^-r,mu=E(qM_a), retains exact debt p[D_q-D_Ber(P_qMa(empty)||Q_qMa(empty))] and has CE<=p c_q+C_pt p I(M_a)+6rp(1-mu), with physical I=p[I(q)+I(M_a)+r(1-mu)], hence conditional max(C,6) full payment. More generally, for any Boolean G on n bits an actual flip at a with j(a) incident originally pivotal edges obeys I(H_a)=I(G)+2delta[n-2j(a)] and I(M_a)=I(G)+delta[n+1-2j(a)], with coefficient shift G(a)delta chi_T(a); no generic entropy or universal child-reserve bound is inferred.",
+    "hypotheses": [
+      "finite uniform Boolean physical cubes; even quadratic active width k>=4 and any nonnegative dummy width m",
+      "actual sign flip of the full vertex value; fresh fair selector; all flip vertices included",
+      "arbitrary terminal cube independent of M variables but physically shared by both children; normalized reference positive on true support and finite cost",
+      "point-activation controls fresh and distinct; bias/calibration fixed before spectral sampling",
+      "all entropy/CE/KL units bits; ideal reference cost and separate single-word rounding",
+      "the final generic physical edge identity assumes only an actual Boolean point flip and does not imply entropy invariance outside the stated quadratic family"
+    ],
+    "statement_sha256": "afd73fd2169e30ac772135ff40909fd6ab584757e0bed5429889f7543528e73b",
+    "contributors": [
+      "A094/account05; zero-flip source reserve credited to A097, original tensor stress to A094/A086 and activation/linear-tax dependencies to A095"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T031253Z-account05-A094-proof-chain-challenger\\AUDIT.md",
+      "locators": "Sections 4-5; generic identity Section4; exact out/SHARP_VERTEX_CERTIFICATE.json and all-vertex/composition outputs"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A097-PADDED-COLLISION-EXCLUSIVE-RESERVE",
+        "version": 1,
+        "status": "Entire exact source claim independently reconstructed here; zero-flip all-parameter17/8 bound used for analytic tail"
+      },
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 3,
+        "scope": "Only retained biased-activation clauses",
+        "status": "independently reconstructed at exact clauses here"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A095",
+        "verdict": "HOLDS_AT_FULL_STATED_SCOPE",
+        "scope": "Full A094 sharp all-location quadratic-family claim, generic destroyed-edge identity, arbitrary-terminal tensor and fresh activation; no generic unequal-amplitude entropy invariance assumed",
+        "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T034647Z-account05-A095-restricted-result-extraction\\REVIEW_A094.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T034647Z-account05-A095-restricted-result-extraction\\out\\EXACT_RESULTS.json",
+        "source_claims_sha256": "2af616ff514020a32472e9158bd40c65cea161b645b572694b11985364918e1e",
+        "substantive_repair_supplied": false,
+        "contributor_conflict": false,
+        "own_prior_lemma_qualification": "A095 source lemmas are consumed, not independently accepted by their author; new A094 claim and A097 prerequisite reconstructed without repairs"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_FULL_STATED_SCOPE_LOCALLY",
+    "supersedes": [],
+    "refutes": [
+      "Prospective unchanged price17/8 extension to arbitrary flip vertices of the padded bent family despite destruction of original pivotal edges"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A086",
+      "A085",
+      "A097",
+      "A095",
+      "A039",
+      "A064",
+      "B19",
+      "B20"
+    ]
+  }
+]

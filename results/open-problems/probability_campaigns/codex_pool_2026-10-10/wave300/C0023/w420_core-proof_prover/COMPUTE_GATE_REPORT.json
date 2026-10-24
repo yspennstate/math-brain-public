@@ -1,0 +1,28 @@
+{
+  "source": "~\\.claude\\compute\\compute_state.json",
+  "sample": {
+    "ts": "2026-10-10 09:45:02",
+    "host": "<machine>",
+    "status": "distress",
+    "mode": "throttle",
+    "reasons": [
+      "process_critical"
+    ],
+    "cpu_pct": 79.8,
+    "mem_avail_mb": 2921,
+    "commit_avail_mb": 6392,
+    "commit_used_pct": 93.9,
+    "disk_queue": 0,
+    "disk_free_gb": 41.8,
+    "hung_windows": 0
+  },
+  "age_seconds": 7.619972,
+  "allowed": false,
+  "hold_reasons": [
+    "local status distress",
+    "critical physical or commit memory pressure"
+  ],
+  "finished_epoch": 1791614709.6200256,
+  "workload": "One serial pure-Python finite proof check, 256 masks plus three boundary cases, 16 domino states, no GPU/model/sweep",
+  "throttle_response": "parallelism fixed at one; no extra worker or background process; bounded tiny batch"
+}

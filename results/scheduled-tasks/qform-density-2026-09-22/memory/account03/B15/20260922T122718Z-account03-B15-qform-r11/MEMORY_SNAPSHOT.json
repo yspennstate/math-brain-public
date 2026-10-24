@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_at_start": "0b9ed2ab2d9e5b21fa5513aabeb2bb631fc9d5f9",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260922T122718Z-account03-B15-qform-r11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH_PENDING_REVIEW"
+  ],
+  "partner_results_applied": [
+    {
+      "worker": "account04/B15",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "1d658cd8ef6386a8f8ef7e6b9aaf26fdafe68de3",
+      "scope": "Interval domination iff L-infinity density; continuity separated by Steklov regularity."
+    },
+    {
+      "worker": "account01/B13",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f5c63b29011eb394cd621ecc887fe3331aa485af",
+      "scope": "Admissible marginal-density class is the L1-closed convex hull of measure-one indicators; product laws are TV limits of finite mixtures; finite-fragment localization."
+    }
+  ],
+  "new_results": [
+    "QFORM-LINFINITY-EXTREME-TRANSFER-v1: the extended output density functional M(mu)=sup_I mu(I)/|I| is convex and TV-lower-semicontinuous, so its exact supremum over all admissible measurable product densities equals its supremum over product-indicator laws, and via the consumed localization over bounded finite unions of intervals of total measure one.",
+    "QFORM-CONTINUITY-MODULUS-EXTREME-TRANSFER-v1: a common output continuity modulus plus common L-infinity bound on the extreme product-indicator class transfers to every admissible product density by finite mixtures, TV pushforward and Arzela-Ascoli.",
+    "Continuity of each extreme output plus a common L-infinity bound alone does not transfer under TV limits; mollified unit-interval densities give the abstract obstruction."
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "40946450aa2bfb06068a2c688d4407be10470c22",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T122718Z-account03-B15-qform-r11/REPORT.md"
+  },
+  "handoff_commit": "a7c9893e3514d3a9882f037f3515c299bed99c12",
+  "full_target_status": "OPEN",
+  "first_unresolved_implication": "Dimension-free interval small-ball bound uniformly over target-admissible A and products of bounded finite unions of intervals E_i with |E_i|=1, with arbitrary fragmentation complexity and separation.",
+  "continuity_unresolved_implication": "Obtain a common Steklov/equicontinuity modulus on the extreme finite-fragment class; essential boundedness alone cannot supply it.",
+  "next_step": "Apply a completed geometry/small-ball result to the finite-fragment extreme class; separately derive a common output modulus from the same shell estimate if possible."
+}

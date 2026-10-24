@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "seed": 20260920,
+  "counts": {
+    "graph_partition_factorization_checks": 108506,
+    "leaf_tables_checked": 171150,
+    "exhaustive_symmetric_core_graph_cases": 67732,
+    "exhaustive_partition_core_graph_linear_cases": 29896,
+    "random_product_part_symmetric_cases": 840,
+    "universal_pair_budget_function_graph_cases": 2084,
+    "universal_pair_budget_coordinate_checks": 4640,
+    "symbolic_entropy_cancellation_certificates": 1
+  },
+  "arithmetic": "Integer Walsh transforms and influence counts; Fraction atanh-series logarithm enclosures, outward rounded at 2^-80.",
+  "tested_constant": "301/25 + log2(maximum number of symmetric parts in any independent factor)",
+  "stronger_defect_payment_tested": "H <= C*(J - |E_cross|/2 - |E_mixed|/4) + 2*(|E_cross|+|E_mixed|)",
+  "compression_shortcut_counterexample": {
+    "original": [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "compressed": [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "original_metrics": {
+      "dimension": 3,
+      "H_interval": [
+        "2",
+        "2"
+      ],
+      "I": "2",
+      "J": "1",
+      "influences": [
+        "1",
+        "1/2",
+        "1/2"
+      ]
+    },
+    "compressed_metrics": {
+      "dimension": 3,
+      "H_interval": [
+        "0",
+        "0"
+      ],
+      "I": "1",
+      "J": "0",
+      "influences": [
+        "1",
+        "0",
+        "0"
+      ]
+    }
+  },
+  "higher_degree_counting_obstruction": [
+    {
+      "degree": 4,
+      "dimension": 5,
+      "nonzero_folded_influence": "1/8"
+    },
+    {
+      "degree": 5,
+      "dimension": 6,
+      "nonzero_folded_influence": "1/16"
+    },
+    {
+      "degree": 6,
+      "dimension": 7,
+      "nonzero_folded_influence": "1/32"
+    },
+    {
+      "degree": 7,
+      "dimension": 8,
+      "nonzero_folded_influence": "1/64"
+    },
+    {
+      "degree": 8,
+      "dimension": 9,
+      "nonzero_folded_influence": "1/128"
+    },
+    {
+      "degree": 9,
+      "dimension": 10,
+      "nonzero_folded_influence": "1/256"
+    },
+    {
+      "degree": 10,
+      "dimension": 11,
+      "nonzero_folded_influence": "1/512"
+    }
+  ],
+  "scope": "Finite exact checks of the stated class and proof ingredients. Not a proof of full FEI, a priority clearance, independent review, or formal verification."
+}

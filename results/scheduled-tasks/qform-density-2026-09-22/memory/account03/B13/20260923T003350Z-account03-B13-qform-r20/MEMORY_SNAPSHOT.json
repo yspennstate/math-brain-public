@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260923T003350Z-account03-B13-qform-r20",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_read_before_mathematical_write": "98a729103250c230bc762bebbafd96ca254231f3",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_automation",
+  "without_verified_brain": true,
+  "full_brain_connected": false,
+  "assignment": "Extremal product laws",
+  "result_ids": [
+    "QFORM-ENTROPIC-3VOLUME-OR-SIX-HUB-v1"
+  ],
+  "result_status": "PROVED_SUPPORTING_STRUCTURAL_ANALYTIC_THEOREM_FULL_QFORM_OPEN_CONTINUITY_OPEN",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5d38cf0af8ff126d75857cd2011f928d6704b690",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T003350Z-account03-B13-qform-r20/REPORT.md"
+  },
+  "partner_applied": {
+    "worker": "account04/B13",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e1a56859520ae79b7a1f049a9eedf41972ddf1e1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260922T231352Z-account04-B13-rough-geometric-transfer-r5/REPORT.md",
+    "result": "no-attainment extreme-product purification for bounded product kernels",
+    "application": "zero-loss transfer of the paid entropic-three-volume slab inequality from unit product indicators to arbitrary independent cap-one marginals"
+  },
+  "other_dependencies": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "d21000e145ff5e4756c0abc8727a7c7aa1a02e4d",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260922T233245Z-account03-B13-qform-r19/REPORT.md",
+      "result": "strict no-pivot countable rational-grid extreme-product reduction"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "66b5ff888a219c7c8e754dd25062fac6aecb2f22",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T001242Z-b01-qform-auto11/REPORT.md",
+      "result": "mixed-order minor Fourier theorem; fixed-order-three density bound 6 sqrt(e) K^(-1/6)"
+    }
+  ],
+  "proved_inference": "For every physical cross block M with Z=e3(M^T M)>0 and every L>0, either there is a probability law on nonzero 3x3 physical minors with every row load at most 1/2 and KL cost at most L, yielding ||p_Q||_infinity <= 6 sqrt(e) exp(L/6) Z^(-1/6), or at most six physical rows can be deleted so the surviving e3 is less than exp(-L)Z. If no row-capped minor law exists, five rows suffice and surviving e3 is zero. At L=log64 the paid prefactor is 12 sqrt(e), while the hub branch leaves less than Z/64 residual three-volume.",
+  "proof_mechanisms": [
+    "exact identity K(mu)=Z exp(-D(mu||w)) for the natural determinant-squared minor law",
+    "fractional matching / fractional vertex-cover LP duality for infeasible row cap",
+    "finite-alphabet entropy-projection convex dual for feasible but high-KL row cap",
+    "threshold H={i:lambda_i>=sum(lambda)/6} producing at most six hubs",
+    "completed fixed-order-three mixed-minor Fourier inequality",
+    "account04/B13 exact extreme-product transfer"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "unresolved_implication": "QFORM-SIX-HUB-LOW-3VOLUME-GLUING-v1: in the strict no-1/16-pivot rational-grid extreme-product class, turn a bounded physical hub set plus low residual three-volume into a universal completed branch without deleting the residual perturbatively and without reciprocal single-minor loss.",
+  "next_step": "Combine the six-hub alternative with the completed mixed-hub/Fresnel and D5 robust exits; seek a bounded-hub augmented-frame theorem in which residual low e3 is paid jointly rather than discarded.",
+  "continuity_status": "OPEN_FULL_TARGET; PROVED_IN_PAID_ENTROPIC_3VOLUME_BRANCH",
+  "full_qform_status": "OPEN",
+  "checker_status": "QFORM_B13_R20_ENTROPIC_HUB_CHECK_PASS",
+  "telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_configured": "UNKNOWN",
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null
+  }
+}

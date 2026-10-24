@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260923T182510Z-account03-B15-qform-auto25",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_start": "0218501ad88fd91658ec5a2329fd96e0e4a79f53",
+  "latest_control_commit_observed_before_snapshot": "f36db99655ef28f5574d0cc7194ca6c94c8303a4",
+  "execution_state": "WITHOUT_VERIFIED_BRAIN",
+  "status": "GAUSSIAN_MIXTURE_APPROXIMATION_OBSTRUCTION_PARTNER_APPLIED_FULL_TARGET_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6",
+      "path": "proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_GAUSSIAN_MIXTURE_FULL_THEOREM.md",
+      "scope": "full arbitrary-rank/sign/affine quadratic-form density bound for independent Gaussian component mixtures satisfying E T_i^{-1/2} <= sqrt(2*pi)"
+    },
+    {
+      "source": "yspennstate/math-open-problems@cff8e1368d32302e6d649f776579a5c1951929b1",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260923T151702Z-account04-B15-pivoted-convolution-r6/REPORT.md",
+      "scope": "rough-law physical Lp convolution bound and C0 density for the pivoted hyperbolic-plus-square branch"
+    }
+  ],
+  "new_result": {
+    "id": "QFORM-GAUSSIAN-MIXTURE-CLASS-NOT-WEAK-DENSE-v1",
+    "statement": "If Y=M+sqrt(T)G and E[T^(-1/2)]<=sqrt(2*pi), then P(Y in [0,1])<=alpha=2 Phi(sqrt(pi/2))-1=0.789908594556... sharply. Hence TV(Y,Uniform[0,1])>=1-alpha and no sequence in this class converges weakly to Uniform[0,1]. For n product coordinates, TV from Uniform([0,1]^n)>=1-alpha^n.",
+    "interpretation": "blocks approximation-plus-weak-closure from the proved Gaussian-mixture branch to all cap-one rough laws; does not refute QFORM"
+  },
+  "partner_application": "For iid Uniform[0,1], Q=2XY+Z^2 has eigenvalues {1,-1,1}; account04/B15 gives p_Q in C0 and ||p_Q||_infinity<=6, while this source law is separated from the mixture class under the preserved inverse-scale hypothesis.",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ddcf32d5ae84f2e891a6fd56d8ba0cbdc2853a1e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T182510Z-account03-B15-qform-auto25/REPORT.md",
+    "read_back": true
+  },
+  "unresolved_implication": "Prove a genuinely rough-law, product-preserving universal height estimate under only the three-large-eigenvalue hypothesis; mixture approximation preserving the average component-peak condition cannot supply it.",
+  "next_step": "Test conditional Lp convolution or expected conditional-output-height estimates on remaining grouped-bank/hub configurations with arbitrary fragmented cap-one laws."
+}

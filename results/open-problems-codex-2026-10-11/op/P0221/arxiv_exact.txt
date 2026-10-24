@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/zPgwU2IwGLvw7pooFg61DdUV9QM</id>
+  <title>arXiv Query: search_query=all:"online random" AND all:"spanning"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-10-11T15:44:59Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22online+random%22+AND+all:%22spanning%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1907.08031v4</id>
+    <title>Very fast construction of bounded-degree spanning graphs via the semi-random graph process</title>
+    <updated>2020-09-26T22:15:39Z</updated>
+    <link href="https://arxiv.org/abs/1907.08031v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.08031v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Semi-random processes involve an adaptive decision-maker, whose goal is to achieve some predetermined objective in an online randomized environment. They have algorithmic implications in various areas of computer science, as well as connections to biological processes involving decision making. In this paper, we consider a recently proposed semi-random graph process, described as follows: we start with an empty graph on $n$ vertices, and in each round, the decision-maker, called Builder, receives a uniformly random vertex $v$, and must immediately (in an online manner) choose another vertex $u$, adding the edge $\{u,v\}$ to the graph. Builder's end goal is to make the constructed graph satisfy some predetermined monotone graph property.
+  We consider the property of containing a spanning graph $H$ as a subgraph. It was asked by N. Alon whether for any bounded-degree $H$, Builder can construct a copy of $H$ w.h.p. in $O(n)$ rounds. We answer this question positively in a strong sense, showing that any graph with maximum degree $Δ$ can be constructed w.h.p. in $(3Δ/2 + o(Δ)) n$ rounds. This is tight (even for the offline case) up to a multiplicative factor of $3 + o_Δ(1)$. Furthermore, for the special case where $H$ is a spanning forest of maximum degree $Δ$, we show that $H$ can be constructed w.h.p. in $O(n \log Δ)$ rounds. This is tight up to a multiplicative constant, even for the offline setting. Finally, we show a separation between adaptive and non-adaptive strategies, proving a lower bound of $Ω(n\sqrt{\log n})$ on the number of rounds necessary to eliminate all isolated vertices w.h.p. using a non-adaptive strategy. This bound is tight, and in fact there are non-adaptive strategies for constructing a Hamilton cycle or a $K_r$-factor, which are successful w.h.p. within $O(n\sqrt{\log n})$ rounds.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-18T13:06:58Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Omri Ben-Eliezer</name>
+    </author>
+    <author>
+      <name>Lior Gishboliner</name>
+    </author>
+    <author>
+      <name>Dan Hefetz</name>
+    </author>
+    <author>
+      <name>Michael Krivelevich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.07589v2</id>
+    <title>Semi-random process without replacement</title>
+    <updated>2022-03-17T14:58:33Z</updated>
+    <link href="https://arxiv.org/abs/2009.07589v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.07589v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Semi-random processes involve an adaptive decision-maker, whose goal is to achieve some pre-determined objective in an online randomized environment. We introduce and study a semi-random multigraph process, which forms a no-replacement variant of the process that was introduced by Ben-Eliezer, Hefetz, Kronenberg, Parczyk, Shikhelman and Stojaković (2020). The process starts with an empty graph on the vertex set $[n]$. For every positive integers $q$ and $1\leq r\leq n$, in the $((q-1)n+r)$th round of the process, the decision-maker, called \emph{Builder}, is offered the vertex $π_q(r)$, where $π_1, π_2, \ldots$ is a sequence of permutations in $S_n$, chosen independently and uniformly at random. Builder then chooses an additional vertex (according to a strategy of his choice) and connects it by an edge to $π_q(r)$.
+  For several natural graph properties, such as $k$-connectivity, minimum degree at least $k$, and building a given spanning graph (labeled or unlabeled), we determine the typical number of rounds Builder needs in order to construct a graph having the desired property. Along the way we introduce and analyze an urn model which may also have independent interest.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-16T10:31:21Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Journal of Combinatorics, Vol. 14, No. 2 (2023), pp. 167-196</arxiv:journal_ref>
+    <author>
+      <name>Shoni Gilboa</name>
+    </author>
+    <author>
+      <name>Dan Hefetz</name>
+    </author>
+    <arxiv:doi>10.4310/JOC.2023.v14.n2.a2</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4310/JOC.2023.v14.n2.a2" title="doi"/>
+  </entry>
+</feed>

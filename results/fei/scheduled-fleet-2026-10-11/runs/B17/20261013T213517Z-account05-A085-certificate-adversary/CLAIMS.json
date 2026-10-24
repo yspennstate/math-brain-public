@@ -1,0 +1,102 @@
+[
+  {
+    "claim_id": "A085-CERTLOG-GENERAL-ERROR-BOUND-FAILURE",
+    "version": 1,
+    "exact_statement": "The audited B17 certlog.py SHA256 1990ab0cd16537a6ae3f9d03bbcb1ca5c16db9f1a54590385dd0ec096fadb99f has a false documented 2^(-46) S error bound for its allowed up-to-600-term integer prime-log screen: in NumPy 2.4.3 the saved Fortran-contiguous (2,130) input with primes through 733 and exponents below 2^50 has exact certified positive summation error between 8.0557 and 8.0558, while 2^(-46) S<8.0001, for both exact and source-computed S. For the intended matching-dimension first-m-prime domain, m<=600, checked log constants have relative error <=u=2^(-53); under normal IEEE round-to-nearest products and sums, error is bounded by eta_m S with eta_m=(m+1)/(2^53-m)<2^(-43). Hence the existing 2^(-40) computed-S sign threshold is safe. In the actual m=54 four-bit census domain eta_54<2^(-46), so no original finite Boolean constant is refuted.",
+    "hypotheses": [
+      "Saved exact coefficient vector in out/small_failure_certificate.json; integer dtype, |e|<2^50",
+      "Fortran-contiguous (2,130) input, NumPy 2.4.3, source helper version pinned by SHA256",
+      "Safe-bound theorem assumes matching coefficient/prime dimensions with first m primes, m<=600",
+      "IEEE binary64 round-to-nearest; normal finite products and sum; source prime constants independently certified within relative error 2^-53",
+      "No assertion that the screen-error witness is a Boolean spectrum; no globally smallest failure claim"
+    ],
+    "statement_sha256": "b185c051b1b32a01dda1ff186bc5c537bce8b342f3f7221c0b32b6a5d5afda54",
+    "contributors": [
+      "A085/account05"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "code/audit.py",
+      "out/small_failure_certificate.json",
+      "out/screen_pilot.json",
+      "out/screen_audit.json"
+    ],
+    "proof_dependencies": [
+      "Positive atanh series with proved rational remainder",
+      "Elementary IEEE rounding-factor bound gamma_m=mu/(1-mu)"
+    ],
+    "review_records": [],
+    "status": "EXACT_COUNTEREXAMPLE_AND_SCOPED_REPAIR_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "source_file": "~\\brain_workers\\FEI100_20261011\\claude\\B17\\runs\\20261011T224300Z-claude-B17-erasure-census-affine-bridge\\code\\certlog.py",
+        "source_sha256": "1990ab0cd16537a6ae3f9d03bbcb1ca5c16db9f1a54590385dd0ec096fadb99f",
+        "locator": "LinLog.float_screen docstring",
+        "exact_false_statement": "Integer entries <2^50 and <=600 terms imply |computed form-true form|<2^-46 S without any layout restriction."
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A081",
+      "A082",
+      "A083",
+      "A090",
+      "A094",
+      "B17",
+      "B15",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "B17-KB5-CUTOFF",
+    "version": 1,
+    "exact_statement": "Let g:{0,1}^5->{-1,1}, g(x)=-1 iff sum_j x_j 2^j is in {5,12,13} (equivalently x1=0, x2=1, x4=0 and (x0 or x3)). All five coordinates are relevant; for i in {1,2,4}: I_i=3/16 and B_i/I_i = 16/3-(3/8)log2 3-(169/24)log2 13+(89/24)log2 89 (=2.6958875...); for i in {0,3}: I_i=1/16 and B_i/I_i = 16-(63/8)log2 3+15 log2 5-(169/8)log2 13+(85/8)log2 17 (=3.6048453...). Hence min_i B_i/I_i(g) > 107/40 > 4+(5/2)log2 5-(9/2)log2 3, and K_B(5) > K_B(4).",
+    "hypotheses": [
+      "f: {0,1}^n -> {-1,1}, uniform measure",
+      "S random with P(S)=fhat(S)^2",
+      "entropies in bits, 0 log 0 = 0",
+      "I_i = sum over S containing i of fhat(S)^2",
+      "B_i = H(S_i | S_-i)",
+      "Delta_i H = H(f) - (H(f|x_i=0)+H(f|x_i=1))/2, JS_i = Delta_i H - B_i"
+    ],
+    "statement_sha256": "5c663114fa7a8e4f1292101b89294b2ebce902c7eeee7f767bd0494ca7145992",
+    "contributors": [
+      "claude-B17-lead"
+    ],
+    "proof_source": {
+      "original_run": "~\\brain_workers\\FEI100_20261011\\claude\\B17\\runs\\20261011T224300Z-claude-B17-erasure-census-affine-bridge",
+      "original_proof_source": "20261011T224300Z-claude-B17-erasure-census-affine-bridge/code/search_n56.py certify(), out/search_n56.json; exact forms in out/family_scan.json; Walsh vector in the report, section (8)",
+      "independent_reconstruction": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261013T213517Z-account05-A085-certificate-adversary\\REPORT.md",
+      "own_output": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261013T213517Z-account05-A085-certificate-adversary\\out\\math_audit.json"
+    },
+    "proof_dependencies": [
+      "B17-KB4-CENSUS v1 (value of K_B(4))"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A085/account05",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "at_utc": "2026-10-13T21:49:31.228282+00:00",
+        "method": "Independent Walsh/direct character/inverse/physical edge reconciliation; exact prime forms and rational signs at every coordinate",
+        "substantive_original_repair": false,
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261013T213517Z-account05-A085-certificate-adversary\\REPORT.md"
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      "the statement K_B = K_B(4), i.e. any extension of the four-coordinate erasure constant to five relevant coordinates; the A082 claims are scoped and are not refuted"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A082 exact K_B(5)",
+      "G-R-SELECT",
+      "B15",
+      "A081 graph",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

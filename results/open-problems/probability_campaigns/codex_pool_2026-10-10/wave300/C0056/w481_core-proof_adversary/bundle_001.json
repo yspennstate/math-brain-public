@@ -1,0 +1,120 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w481",
+  "bundle_slug": "anderson-cavity-limits-w481-001",
+  "entries": [
+    {
+      "key": "cavity",
+      "namespace": "probability.random-operators",
+      "logical_name": "single-site-cavity-damping",
+      "kind": "definition",
+      "title": "DRAFT: Single-site cavity damping",
+      "statement": "For a bounded self-adjoint block operator H=[[s,h*],[h,B]], its deleted-site cavity is B. At z=E+i eta with eta>0, define S(z)=<h,(B-z)^(-1)h> and b(E,eta)=eta+Im S(z)>0. For a lattice root, h contains its hopping coefficients. This definition applies to finite and infinite cavities; it does not assert any uniform small-eta lower bound.",
+      "proof_text": null,
+      "assumptions": [
+        "H bounded self-adjoint",
+        "eta>0"
+      ],
+      "domain": "probability and spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w481:C0056-core-audit-20261010",
+        "url": null,
+        "revision": "draft-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "annealed",
+      "namespace": "probability.random-operators",
+      "logical_name": "annealed-first-moment-does-not-imply-quenched-ac",
+      "kind": "concept",
+      "title": "DRAFT: Averaged first moments do not prove sample spectral purity",
+      "statement": "Independent review pending. For the diagonal operator D delta_x=X_x delta_x on l2(Z3), with iid uniform[-1,1] variables, every realization has site measure delta_(X_x) and a complete eigenbasis. Yet sup_(E real,eta>0) E Im<(delta_0),(D-E-i eta)^(-1)delta_0> <= pi/2 and integral_R Im G00 dE=pi in each sample. Thus these first-moment controls do not imply quenched AC. This refutes a proof implication, not the nearest-neighbor weak-disorder Anderson conjecture.",
+      "proof_text": null,
+      "assumptions": [
+        "Diagonal iid uniform[-1,1] model",
+        "No hopping"
+      ],
+      "domain": "probability and spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w481:C0056-core-audit-20261010",
+        "url": null,
+        "revision": "draft-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "log-route",
+      "namespace": "probability.random-operators",
+      "logical_name": "uniform-anderson-log-cavity-damping-proof-obligation",
+      "kind": "concept",
+      "title": "DRAFT: Logarithmic cavity damping is an unproved Anderson input",
+      "statement": "Independent review pending. For H=-A+lambda V on l2(Z3), iid uniform[-1,1] V, fixed lambda>0, and bounded open J, the infinite-volume premise sup_(0<eta<=1) E integral_J log(1+1/b_0(E,eta)) dE < infinity implies almost-sure pure AC on J. Single-site integration bounds the expected normalized Poisson entropy by (1/(2 lambda)) times that logarithmic functional; a Fatou subsequence and null-set argument exclude singular mass. The logarithmic premise is NOT proved for weak disorder. Nonzero mass and finite-volume GOE statistics are separate. No parent solution is claimed.",
+      "proof_text": null,
+      "assumptions": [
+        "Genuine nearest-neighbor Z3 operator",
+        "Uniform site law independent of the deleted-site cavity",
+        "lambda fixed before eta->0",
+        "The explicitly unproved logarithmic premise"
+      ],
+      "domain": "probability and spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w481:C0056-core-audit-20261010",
+        "url": null,
+        "revision": "draft-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "joint-limit",
+      "namespace": "analysis.spectral-theory",
+      "logical_name": "fixed-volume-log-divergence-allows-coupled-limits",
+      "kind": "concept",
+      "title": "DRAFT: Fixed-size divergence permits a controlled coupled limit",
+      "statement": "Independent review pending. Let D_N have diagonal grid v_j=-1+(2j+1)/N, let u_N be the normalized all-ones vector, and let B_N,h_N be the cavity blocks in a basis starting with u_N. On J=(-1/2,1/2), eta_N=N^(-1/4), N>=16, the scalar resolvent g_N has Im g_N>=pi/8 and |g_N|<=C+1/4, C=(log3)/2+pi/2. Hence b_N=Im g_N/|g_N|^2>=pi/[8(C+1/4)^2]>0 and its integrated log(1+1/b_N) is uniformly bounded along eta_N. At every fixed N the same functional diverges as eta->0. Thus fixed-size divergence does not force successive limits. This is an abstract finite-cavity example, not an Anderson proof.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite deterministic midpoint-grid model",
+        "Root u_N",
+        "Coupled N and eta_N limits"
+      ],
+      "domain": "spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w481:C0056-core-audit-20261010",
+        "url": null,
+        "revision": "draft-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "log-route",
+      "to_key": "cavity",
+      "kind": "depends_on",
+      "rationale": "The unproved logarithmic input uses precisely the defined deleted-site damping b."
+    },
+    {
+      "from_key": "joint-limit",
+      "to_key": "cavity",
+      "kind": "depends_on",
+      "rationale": "The coupled-limit example uses the same cavity damping in a finite root decomposition."
+    },
+    {
+      "from_key": "annealed",
+      "to_key": "log-route",
+      "kind": "semantic_association",
+      "rationale": "The diagonal example rules out replacing the route's logarithmic input by an annealed first-moment bound."
+    },
+    {
+      "from_key": "log-route",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor",
+      "kind": "semantic_association",
+      "rationale": "The conditional uniform-law logarithmic route addresses only the AC part of this existing two-part C0056 record; GOE remains outside it."
+    }
+  ]
+}

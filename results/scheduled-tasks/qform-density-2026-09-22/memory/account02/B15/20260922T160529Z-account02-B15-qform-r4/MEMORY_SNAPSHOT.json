@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B15",
+  "run_id": "20260922T160529Z-account02-B15-qform-r4",
+  "source_control_commit_at_start": "b574260004ea36eefe6869942d01285ff1b0ecf2",
+  "source_control_commit_before_delivery": "7bdf0a84e0098eb587776ed2e891e5a4a10fa0c5",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account03/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d73760eb784a86c356c64f05dd92f84655618f02",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T153101Z-account03-B15-r12/REPORT.md",
+    "scope_used": "C0 output for rank>=3 with a nonzero original-coordinate diagonal entry; isolates diag(A)=0 as the complementary rough-input regularity class"
+  },
+  "other_dependencies": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e",
+      "scope": "continuous density and matrix-dependent height for any invertible physical 3x3/4x4 affine product quadratic, plus principal-block reduction"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "40946450aa2bfb06068a2c688d4407be10470c22",
+      "scope": "exact L-infinity extremal transfer to measure-one product indicators and bounded finite-fragment sets"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "07672b7beb8f867c7a7b973aa3157a42ae506460",
+      "scope": "sharp universal constant equals smooth compact-input and C0-output envelopes"
+    }
+  ],
+  "new_result": {
+    "classification": "TARGET_LEVEL_REGULARITY_THEOREM",
+    "statement": "For every independent cap-one product input and every real symmetric A with rank(A)>=3, X^TAX has a bounded density in C0(R). For a chosen invertible principal block B of order d=3 or4 the available height is C_d/sigma_min(B), hence instance-dependent.",
+    "new_local_tail": "For an invertible d=3 or4 block, the pushforward restricted to |x|>=R has interval-density constant <= d^(3/2)/(sigma_min(B) R). After completing the square, p(t)<=d^(3/2)*sqrt(2||B||)/(sigma_min(B)*sqrt(|t-c0|)).",
+    "target_reformulation": "The sharp universal constant equals the supremum of attained pointwise maxima over finite-fragment measure-one product-indicator witnesses; if infinite, there is a genuine sequence of continuous attained peaks tending to infinity."
+  },
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "28ddaf28bf6779837fb1212a025d8a8b9d329f8a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T160529Z-account02-B15-qform-r4/REPORT.md"
+  },
+  "handoff_commit": "622d442d47ee1b7627ae3d53510a7d73d7e5ef25",
+  "full_problem_status": "OPEN",
+  "first_unproved_step": "Prove one dimension- and matrix-independent bound on sup_t p_Q(t), equivalently on the attained maxima of the finite-fragment extreme outputs, or construct a target-valid sequence whose maxima diverge.",
+  "next_step": "Combine the current ridge-certified low-leverage spectral window with a source-valid high-leverage/product-bank aggregate mechanism; do not pay a single deteriorating principal minor or use a refuted cross-rank dichotomy."
+}

@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A052: affine spectral disorder forced by physical criticality}
+All entropies are in bits. Let $f:\{0,1\}^n\to\{-1,1\}$ be Boolean,
+$p_s=\widehat f(s)^2$, $S\sim p$, and $I_A=\sum_{i\in A}\Pr(S_i=1)$.
+Let $V$ be a rank-$r$ binary matrix, and let $A$ be $r$ physical coordinates
+such that the square matrix $V_A$ is invertible. Put $C=A^c$ and $Y=VS$.
+For any $y_0\in\mathbb F_2^r$ define
+\[
+ e_0(t)=V_A^{-1}(y_0+V_Ct),\qquad
+ b_{V,A,y_0}=\mathbb E|S_A+e_0(S_C)|,\qquad
+ \epsilon_{V,y_0}=\Pr(Y\ne y_0).
+\]
+The weight is physical Hamming weight, so $b\le r\epsilon$.
+
+\paragraph{Universal channel lemma.}
+For the actual uniform physical restriction $X_A=x$, draw $T$ from the
+squared Fourier law of $f_x$. Then
+\[
+ L_A:=H(f)-\mathbb E_xH(f_x)
+ =H(Y\mid S_C)+I(X_A;T)
+ \le H(Y\mid S_C)+\frac{2}{\ln2}b_{V,A,y_0}.\tag{1}
+\]
+This is valid for every $V,A,y_0$, without criticality.
+
+\paragraph{Proof.}
+For each $t$ put $v_t(x)=\sum_e\widehat f(e,t)\chi_e(x)$ and
+$q(t)=\mathbb E_xv_t(x)^2$. Booleanity implies that $v_t(x)^2$ is a
+probability law in $t$ for every $x$. Parseval gives the actual $S_C$
+marginal $q$. Thus
+\[
+ (\ln2)I(X_A;T)=\sum_t\operatorname{Ent}_x(v_t^2),
+ \quad \operatorname{Ent}(u)=\mathbb E[u\ln(u/\mathbb Eu)].
+\]
+Set $w_t=\chi_{e_0(t)}v_t$. Its squared modulus agrees with that of $v_t$.
+The uniform-cube logarithmic Sobolev inequality in the normalization
+\[
+ \operatorname{Ent}(w^2)\le\tfrac12\sum_{i\in A}
+ \mathbb E(|w(x)|-|w(x+e_i)|)^2
+ \le2\sum_{i\in A}\|D_iw\|_2^2
+\]
+and Parseval give
+\[
+ \sum_t\operatorname{Ent}(v_t^2)
+ \le2\sum_{t,e}|e+e_0(t)|\widehat f(e,t)^2=2b.
+\]
+The logarithmic Sobolev inequality and its two-point proof are supplied in
+the accompanying report; no Fourier-fiber demodulation is asserted to be
+a physical descendant or a Boolean function. Since $V_A$ is invertible,
+$S_A\mapsto Y$ is bijective for fixed $S_C$, proving
+$H(S_A\mid S_C)=H(Y\mid S_C)$. The physical restriction entropy identity
+then proves (1).
+
+\paragraph{Critical structure.}
+Suppose $I(f)>0$ and every proper physical restriction $g$ satisfies
+$H(g)\le R(f)I(g)$, where $R(f)=H(f)/I(f)$; constants satisfy this with
+both sides zero. The exact influence identity and this hypothesis give
+$L_A\ge R(f)I_A$. Consequently, for every pivot block and every $y_0$,
+\[
+ R(f)I_A\le H(Y\mid S_C)+\frac2{\ln2}b
+ \le h_2(\epsilon)+\epsilon\log_2(2^r-1)
+                  +\frac{2r}{\ln2}\epsilon.\tag{2}
+\]
+More generally if $D_K(f)=H(f)-KI(f)>0$ and every proper physical child
+has $D_K\le0$, replace the left side by $KI_A+D_K(f)$. A least-essential-
+dimension $K$-witness has precisely this property. This is the exact line
+where criticality enters; it is not inherited by the children.
+
+\paragraph{One-dimensional form.}
+For any nonempty physical flip mask $u$ and any $i\in\operatorname{supp}u$,
+let $\epsilon_u=(1-|\mathbb E[f(x)f(x+u)]|)/2$. Then
+\[
+ R(f)I_i\le h_2(\epsilon_u)+(2/\ln2)\epsilon_u.\tag{3}
+\]
+Thus a positive-entropy critical source has no exact signed translation
+symmetry in its essential coordinates, and approximate symmetries have
+an explicit influence-dependent obstruction. The threshold-critical
+form of (3) has left side $KI_i+D_K(f)$. No dimension-independent lower
+bound on $\epsilon_u$ follows when influences tend to zero.
+
+\paragraph{Scope.}
+Component deletion is not a physical restriction. Neither (1) nor (2)
+asserts component entropy subadditivity, component ratio pruning,
+connectedness of physical support, or a universal bound on $H/I$.
+The first unpaid implication is that every prospective critical witness
+has a proper pivot block with $H(Y\mid S_C)+(2/\ln2)b\le KI_A$ for one
+absolute $K$. Exact replay of the two historical pruning failures and
+the all-dimensional activation limitation are in \texttt{PRUNING_SCOPE.md}.
+\end{document}

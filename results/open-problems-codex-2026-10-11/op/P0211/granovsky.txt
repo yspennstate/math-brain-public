@@ -1,0 +1,829 @@
+PAGE 1
+Journal of Theoretical Probability, Vol. 12, No. 2, 1999
+The Equilibrium Behavior of Reversible
+Coagulation-Fragmentation Processes
+Richard Durrett,1 Boris L. Granovsky,2 and Shay Gueron2
+Received September 9, 1997; revised October 1, 1998
+The coagulation-fragmentation process models the stochastic evolution of a pop-
+ulation of N particles distributed into groups of different sizes that coagulate and
+fragment at given rates. The process arises in a variety of contexts and has been
+intensively studied for a long time. As a result, different approximations to the
+model were suggested. Our paper deals with the exact model which is viewed as
+a time-homogeneous interacting particle system on the state space ON, the set of
+all partitions of N. We obtain the stationary distribution (invariant measure) on
+ON for the whole class of reversible coagulation-fragmentation processes, and
+derive explicit expressions for important functionals of this measure, in par-
+ticular, the expected numbers of groups of all sizes at the steady state. We also
+establish a characterization of the transition rates that guarantee the reversibility
+of the process. Finally, we make a comparative study of our exact solution and
+the approximation given by the steady-state solution of the coagulation-fragmen-
+tation integral equation,which is known in the literature. We show that in some
+cases the latter approximation can considerably deviate from the exact solution.
+1. INTRODUCTION
+The coagulation-fragmentation process (CFP) models the stochastic evolu-
+tion in time of a population of N particles, distributed into groups that
+coagulate and fragment at different rates. The model arises in different con-
+texts of application. Some examples are polymer kinetics, astrophysics,
+aerosols, and biological phenomena such as animal grouping and blood
+1 Department of Mathematics, Cornell University, Ithaca, New York 14853. E-mail:
+rtdl@cornell.edu
+2 Department of Mathematics, Technion, Israel Institute of Technology, Haifa, 32000, Israel.
+E-mail:mar18aa@techunix.{shay@math} technion.ac.il.
+KEY WORDS: Coagulation-fragmentation processes; 
+interacting particle
+systems; reversibility; equilibrium.
+447
+0894-9840/99/0400-0447$16.00/0 © 1999 Plenum Publishing Corporation
+
+PAGE 2
+cell aggregation [see e.g., Barrow,(6) Hidy and Brock (eds.),(17) and
+Okubo(23)]. Our paper focuses on the study of the steady state of the pro-
+cess, and is organized as follows.
+Section 2 describes the history of the problem, mainly the following two
+approximations to the model: (i) the dynamical system of Smoluchowski
+differential equations and (ii) the coagulation-fragmentation integral equa-
+tion derived from (i) by passing to the continuum state space.
+In Section 3, we present the definition of the exact model viewed as a
+time-homogeneous interacting particle system on the state space of all par-
+titions of the total number N of particles, the approach that was suggested
+in a recent paper by Gueron.(14)
+Section 4, which is divided into three subsections, contains the main
+results of our study of the steady state distributions of the whole class of
+reversible CFPs. We establish a characterization of transition rates provid-
+ing the reversibility, and find explicitly the invariant measure of the pro-
+cesses considered. Further, we construct the generating function for the
+sequence of values of the partition function of the reversible invariant
+measure for different N, and derive explicit formulas for a variety of impor-
+tant quantities associated with the steady state.
+In Section 5, we compare the known steady state solution f(x), x>0
+of the coagulation-fragmentation integral equation with the corresponding
+exact solution given by the functional f(N; k) (=the expected number of
+groups of size k<N 
+at equilibrium). We prove that for a fixed x = k,
+f(N; k) ~ f(x), as N -> I. However, we also discover the possibility of a
+considerable deviation of the approximation f ( x ) from the exact solution in
+the case when k is large, i.e., k = k(N)~N, as N-> I.
+Finally, Section 6 discusses three particular CFPs. Implementing the
+results of our previous study we obtain for these processes the explicit
+expressions for partition functions and other quantities of interest. The
+CFPs considered provide examples where the previously mentioned devia-
+tion indeed occurs.
+2. THE HISTORY OF THE PROBLEM
+There is a huge literature on CFP dispersed in a variety of journals in
+different fields of science. We describe here briefly only the lines of research
+immediately related to the subject of our paper,
+2.1. The Smoluchowski System of Coagulation-Fragmentation
+Differential Equations
+To the best of our knowledge, the systematical study of the deterministic
+version of CFP started at the beginning of the century by Smoluchowski
+448
+Durrett, Granovsky, and Gueron
+
+PAGE 3
+Coagulation-Fragmentation Processes
+449
+[see Drake,(9) Ernst,(12) and Jeon,(18) for reference], who derived a system
+of differential equations approximating the time evolution of the density
+(per unit volume) Cj = Cj(t), t>0 of clusters (groups) of particles Aj of
+size j, j= 1, 2,..., in a population of infinite size. This system, generalized
+to CFP (Smoluchowski considered only pure coagulation), can be written
+as
+Here, the reaction coefficients Kjk = Kkj and Fjk = Fkj represent the rates
+of the reactions Ak + Aj -> Ak+j and Aj+k->Aj + Ak, respectively. The
+Becker-Doring equation, derived in 1935, is a particular case of (2.1) when
+only reactions of the type Ak + A 1->A k + 1 and Aj->Aj-1 + A1 are
+possible [Ball et al.,(5) and Penrose(24,25)].
+Note that the dynamical system (2.1) can be viewed as an approxima-
+tion of the Kolmogorov backward equations for the expected density Cj(t),
+t>0, obtained by neglecting dependence between clusters.
+Questions concerning the existence and uniqueness of solutions to
+(2.1), exact solutions for special reaction rates, the phenomenon of gelation
+(the appearance of an infinitely large cluster), and total mass conservation,
+pose difficult mathematical problems, some of which have been solved
+[e.g., Drake,(9) Hendriks et al.,(16) McLeod,(20) Spouge,(27) van Dongen
+and Ernest,(34,35) White,(36) Ziff and McGrady,(38) and Jeon(18)].
+Gueron(14) raised the question of the validity of the system (2.1) for
+the description of time dynamics of CFPs. The CFP as defined by
+Gueron(14) is a continuous-time homogeneous Markov chain on the state
+space ON of all partitions of N. Based on this approach, the exact version
+of (2.1) was derived, and for small values of N a numerical procedure for
+computing the stationary distribution of group sizes was proposed.
+Comprehensive expository papers by Aldous(2,3) focus on Smoluchowski
+equations for pure coagulation, viewed as a deterministic model. The main
+emphasis in these papers is given to construction of abstract coalescing
+stochastic models, seemingly unrelated to the coagulation context, and
+such that the expected density of clusters at any time t>0 satisfies the
+equations (2.1) under F=0. 
+Aldous(2) describes a number of open
+problems related to (2.1) and their continuous analogue represented in the
+next section.
+
+PAGE 4
+2.2. The Coagulation-Fragmentation Integral Equation
+Difficulties in treatment of the Smoluchowski equations lead to for-
+mulation of a continuous (in state space) model of the CFP. Assuming that
+the size of groups x ranges in [0, + I ) , the following integro-differential
+equation describing the evolution of c(x, t), t>0, the expected number of
+groups of size x at time t, was derived:
+Here, the symmetric (in x > 0 and y > 0) kernels F(x, y) > 0, K(x, y) > 0
+represent, correspondingly, the rate of fragmentation of a group of size
+x + y into two groups of sizes x and y, and the rate of coagulation of two
+groups of sizes x and y into one group of size x + y. Equation (2.2), for-
+mulated in 1945 by Blatz and Tobolsky (for the case F = 0) [for references
+see Aizenman and Bak(1)], has been subsequently studied by many
+authors. A crucial contribution was made by Aizenman and Bak(1) that
+proved the existence and uniqueness of solutions, and convergence to the
+equilibrium (stationary solution) as t -> I, in the case where the kernels K
+and F are constant and equal to each other. They also proved the exponen-
+tial decay (in time) of the free energy of the system. The latter result,
+viewed as an analogue of the Bolzmann's H-theorem, provided the ther-
+modynamic justification of (2.2). Stewart and Dubovskii(32) generalized
+most of the results(1) to constant kernels that are not necessarily equal.
+Problems concerning the uniqueness and existence of solutions of (2.2) for
+bounded and unbounded kernels, in particular for the special cases of pure
+coagulation (F=0) or pure fragmentation (K = 0), have been addressed in
+a number of papers. Some of this work can be found in Stewart,(29-31) and
+Dubovskii and Stewart,(10) and the references therein.
+Gueron and Levin(15) investigated (2.2) in the context of animal
+grouping, studying the solution in the case when the kernels are of the form
+450
+Durrett, Granovsky, and Gueron
+
+PAGE 5
+Coagulation-Fragmentation Processes
+451
+They showed that, for a given population size M> 0, the unique stationary
+solution f(x) := limt->I c(x, t), x>0 in this case is given by the function
+where the coefficient A is subject to the condition
+As we now explain, the form (2.3) is a particular case of kernels
+satisfying the detailed balance condition for f(x). In fact, for f ( x ) to be the
+equilibrium solution of (2.2), it is sufficient that it satisfy
+These two conditions are satisfied simultaneously if we require the "deter-
+ministic detailed balance" (see the next section) with respect to f(x):
+It is easy to see that the kernels in (2.3) indeed satisfy (2.7).
+3. DEFINITION OF THE MODEL
+We follow the formulation of the model suggested by Gueron.(14) Con-
+sider a population of N particles distributed into groups of various sizes
+that undergo stochastic evolutions (in time) of coagulation (merging) and
+fragmentation (splitting). The possible events are merging of two groups
+into one, and splitting of one group into two groups (fragments). The
+stochastic process is a time-homogenous interacting particle system (IPS) Pt,
+t > 0 defined as follows.
+For a given N, denote by n a partition of the whole population N into
+ni groups of size i, i= 1, 2,..., N, namely, n = (n1,..., nN), where the numbers
+of groups ni > 0 are subject to the condition:
+
+PAGE 6
+The finite set O = O N = { n } of all partitions (configurations) of N is the
+state space of the process pt, t>0. The rates of the infinitesimal (in time)
+transitions are assumed to depend only on the sizes of the interacting
+groups, and are given by:
+1. For i and j such that 2>i + j<N we denote by C(i, j) the rate of
+merging (i, j)->(i + j) of two groups of sizes i and j into one
+group of size i + j;
+2. The rate of splitting, (i + j) -> (i, j), of a group of size i + j into
+two fragments of sizes i and j, is denoted by P(i, j).
+Hereafter, we refer to the coagulation and fragmentation rates C(i, j),
+and P(i, j) as intensities. The intensities are required to satisfy C(i, j) =
+C(j, i) > 0 and P(i, j) = P(j, i) > 0. We also assume that the total intensi-
+ties of merging C(i, j; n) and splitting P(i, j; n]) at a configuration n =
+(n1,..., nN) E ON are given by:
+4. REVERSIBLE CFP
+4.1. Reversible Measures
+Reversibility is known to be an effective tool in the study of the equi-
+librium of Markov processes. We can recommend Liggett(21) Kelly,(19) and
+Whittle(37) as excellent references for the subject.
+Recall that the physical interpretation of the reversibility of a Markov
+process (pt, t > 0 with respect to a probability measure u on the state space
+of the process is that for all t> 0 the two processes pu, 0 
+< s< t and p u
+t - s,
+0 < s < t starting from the same initial distribution u have the same finite-
+dimensional distributions. The importance of reversible measures is based
+on the following two facts:
+where G > 0. Note that the case y = 1 corresponds to the mass action
+kinetics which is a physically motivated assumption. Finally, observe that
+if the intensities C(i, j), P(i, j) are such that the CFP is an irreducible
+Markov chain on ON, then the process has a unique stationary distribu-
+tion.
+Durrett, Granovsky, and Gueron
+452
+
+PAGE 7
+1. Reversible measures form a subset of steady-state distributions of
+a Markov process. This implies that if a reversible process is
+ergodic its unique stationary distribution is the reversible measure;
+2. The detailed balance equation (see (4.10) later) provides, in the
+cases to which it applies, an efficient way for explicit derivation of
+reversible measures of a process.
+We first characterize the class of intensities P and C providing the
+reversibility of the CFPs. This characterization is given in terms of the
+ratios of intensities, rather then intensities themselves, as one can expect
+from the detailed balance condition. To that end, we need some more nota-
+tion.
+For some given i, j and a fixed N, let n = (n 1,...,n N)EO N be a con-
+figuration such that ni,nj,>0). The configuration obtained from n via
+the transition (i, j) ->(i + j) is denoted by n(i, j).
+Similarly, if 77 is a configuration such that ni+j> 0, we denote by n ( i , j )
+the configuration obtained from n via the transition (i + j) -> (i, j).
+We agree to write n(i, j) = n and n(i, j) = n if n is not of the form
+required before.
+For n = £ E ON, we denote the total intensity of infinitesimal transition
+from n to £ by V(n, £). It follows from the definion of CFP that V(n, £)
+is equal to either C(i, j; n), or P(i, j; n) or 0. By (3.2), the total inten-
+sities are of the form V(n, £) = v(n, C) h(n, C), where v and h denote,
+respectively, the intensity and the weight function corresponding to the
+transition n->C.
+In this paper, we study only the case where for each pair i, j : 2 < i + j < N ,
+we have either P(i, j) C(i, j) > 0 or P(i, j) = C(i, j) = 0. Consequently, we
+define the ratios of intensities
+Theorem 1. Suppose that
+Coagulation-Fragmentation Processes
+453
+
+PAGE 8
+454
+Durrett, Granovsky, and Gueron
+Then the CFP <pt, t>O is reversible iff the ratios of the intensities are of
+the form
+for some function a = a(i) > 0, i = 1,..., N.
+Proof. 
+The proof is obtained by using the Kolmogorov cycle condi-
+tion [for references see Anderson(4)], For given partitions (C n E O denote
+by
+a path of length k in O, from £ to n, and define the following three quan-
+tities associated with the path L(c, n):
+We have ,A = BH, for any path L in Q. Next, for any closed path (cycle)
+L(C, C) = (n0 = C, n1,...., nk-1, nk = C) we define the cycle L'(c, c,) in the reverse
+direction, i.e., L'(C,C) = (nk = £, nk-1,...., n1, n0 = C).
+The Kolmogorov cycle criterion states that a CFP is reversible iff
+(i) 
+F(C, n) = 0 implies V(n, C) = 0, C,n e O;
+(ii) A(L(C,C) = A(L'(C, C)), C e O, for all closed non-self-intersecting
+paths L in Q.
+If q(i, j) = 1 for all i, j such that 2 < i + j < N, one can verify directly that
+(i) and (ii)1are satisfied. Therefore, from condition (ii) and the fact that the
+weight function h is the same for all intensities, we have H(L(C,C)) =
+H(L'(C, C)), £EO and, consequently,
+for all reversible CFPs. In view of (i) and the assumption (4,2), we further
+assume that the considered paths L are such that B > 0, i.e., v(n1, r 1 + 1) > 0,
+
+PAGE 9
+Denote U ( O N - 1 ) = ON c ON. By the assumption q(i, j)>0, the mapping
+U induces a one-to-one mapping of the set of all paths in ON-1 into the
+set of paths in ON. The latter implies that the intensities P(i, j), C(i, j),
+2 <i + j < N —1 of a reversible CFP on ON should satisfy the condition
+(4.6) and, by the induction hypothesis, the ratios q(i, j), 2<i + j<N - 1
+should be of the required form (4.3), defined by the values a(i)>0,
+i=l,...,N-\.
+Now it is left to show that the same is true for the rest of the ratios
+q(i, N-i), 1<i<N-1. First, given a(N-1), a(1), q(1,N-1)>0, define
+a(N) = a(N- 1) a(1) q(1, N-1). By the assumption q(i, j) > 0, 2 < i +j < N,
+there exists a path L1(C, n) in ON from £ = (1, 0,..., 0, 1, 0) to n = (0, 1,..., 0,
+1,0,0) that does not pass through the state n1 = (0,..., 0, 1) E ON. Define
+the path L2(n, £) = (n, n1, £) of length 3 in ON. Finally, applying (4.6) to
+the cycle L1(C, n) u L2(n, £) shows that, by virtue of the cycle condition, the
+only unknown ratio, q(2, N —2), is uniquely determined by the rest of the
+ratios associated with the cycle. Hence, q(2, N — 2) must be of the required
+form. The same argument proves the assertion for the values q(i, N—i),
+i = 3,...,N-1. 
+S
+Remark 1.
+(i) 
+Our inspiration for the form (4.3) of the ratios of reversible
+intensities came from the celebrated paper by Spitzer, 1977, in
+which he introduced nearest-particle systems [see Liggett,(21)
+Chap. 7].
+(ii) The form (4.3) of the nonzero ratios of the intensities together
+with our assumption (4.1) are equivalent to what is known in
+a variety of applied sciences as the deterministic detailed bal-
+ance condition on intensities [see for references Kelly(19) and
+Whittle(37)]. In our setting, the above condition on the inten-
+sities C and P reads
+Coagulation-Fragmentation Processes
+455
+for some a(i)>0, i= 1,..., N.
+l = 0,1,...,k—1. It is straightforward to see that the condition (4.6) is
+satisfied under (4.3), which proves the sufficiency part of the theorem.
+The proof that (4.6) implies (4.3) is obtained by induction on N. The
+case N = 2 is obvious. Assuming that the claim is true for N— 1, we define
+the mapping U: ON-1 -> ON given by
+
+PAGE 10
+It is easy to see that N— 1 arbitrary quantities q(1, j) > 0, j = 1,..., N-1
+conform with the representation (4.3), which implies that all the CFP of
+the type considered are reversible. As we already mentioned in Section 2.1,
+the approximation to the time dynamics of these processes is given by the
+Becker-Doring equation that has been extensively studied by many
+authors.
+Example 1 demonstrates that without the assumption (4.2), the repre-
+sentation (4.3) for positive ratios q(i, j) is not a necessary condition for the
+reversibility of an irreducible CFP, i.e., in this case stochastic reversibility
+does not imply (4.7).
+Example 1. Let N = 7. Then the state space O7 consists of 15 states n.
+Consider the CFP on O7 having the following 12 ratios of intensities:
+q(2, 1) = q(2, 3) =q(3, 1) = q(1, 5) = q(2,5) = 0, q(1,6) = 2 and q(1,1) =
+q(1, 4) = q(2, 2)=q(3, 3) = q(2, 4) = q(3, 4)=1. Now, assume that the
+representation (4.3) holds for the last 6 ratios and denote a(1) = b>0.
+Then, q(1, 1) = 1 implies a(2) = b2, and consequently, q(2, 2) = 1 implies
+a(4) = b4 q(2, 4) = 1 implies a(6) = b6, q(3, 3) = 1 implies a(3) = b3,
+q(1, 4) = 1 implies a(5) = b5. Finally, q(3, 4) = 1 implies a(7) = b7. This says
+that q(1, 6) = 2 is not of the required form under any choice of b > 0.
+For the convenience of the reader, we give in Fig. 1, (as explained in
+the Appendix), a scheme of the state space of the above CFP. This helps
+verifying the irreducibility and the reversibilty of the process.
+Hereafter, we restrict our study to reversible CFPs, denoting their
+unique invariant measure on ON by u = uN. Our next result provides the
+explicit expression for uN.
+456
+Durrett, Granovsky, and Gueron
+For the case G = 1, Morgan(22) proved Kendall's conjecture that,
+under a technical condition similar to (4.2), deterministic rever-
+sibilty (4.7) is equivalent to stochastic reversibility (= stochastic
+detailed balance), as defined by (4.10) later. Our Theorem 1
+provides a quite different and shorter proof of this fact, under
+the condition (4.2), for all G > 0.
+(iii) In applications, there is also some interest in irreducible CFPs
+that do not satisfy the condition (4.2). In this case one can
+verify, using the cycle condition, that the process is still revers-
+ible if the representation (4.3) holds for all nonzero ratios q(i, j).
+An important example of such CFPs is
+
+PAGE 11
+Coagulation-Fragmentation Processes
+457
+Fig. 1. A graphic illustration of the example given in Section 4. See detailed explanation in
+the Appendix.
+Theorem 2. Suppose that all nonzero ratios of intensities q(i, j) are
+of the form (4.3), being generated by r, 2 < r < N values a(i1),..., a(ir),
+1<i1,...,ir<N of a function a = a(i)>0, i=1,2,...,N. Then the corre-
+sponding CFP pt, t>0 on ON is reversible with respect to the invariant
+measure u = uN given by
+where CN= CN(a) is the partition function that depends only on the func-
+tion a.
+Proof. 
+The proof follows from verifying that uN, given by (4.9),
+satisfies the condition of detailed balance:
+for q(i, j) and u, as in the statement of the theorem. In fact, it follows from
+the preceding definitions, that it is enough to check (4.10) for those pairs
+
+PAGE 12
+The same argument can be used in the case i = 
+j 
+S
+Remark 2.
+(i) 
+For the case G=1 the equilibrium distribution (4.9) is known in
+the context of clustering and chemical kinetics processes obeying
+the deterministic detailed balance condition, see Kelly,(19) and
+Whittle.(37)
+(ii) 
+Let, for a moment, Zi, i= 1,..., N be independent Poisson ran-
+dom variables with respective means a(i)>0, i= 1,...,N. Then it
+is easy to see that the distribution uN has the following meaning:
+n = (n 1,...,n N)EO N
+4.2. Functionals of the Invariant Measure
+We deal hereafter only with the case g = 1, and q(i, j)>0 
+for all
+2<i + j < N . Our objective now is to derive explicit expressions for some
+458
+Durrett, Granovsky, and Gueron
+of configurations n, n(i, j) E ON, for which q(i, j ) = 0 . In this case we have
+from (4.9), (3.2) and (4.3)
+In the case when nonzero ratios of the intensities of a reversible CFP are
+not of the form (4.3), the expression for uN is different from (4.9).
+Example 1'. Figure 1 indicates that the state space Q7 of the CFP
+considered can be represented as the union of the following two connected
+and disjoint sets of states n (numbered as explained in the Appendix):
+A1 = {1,2,4,5,7,8,9,10,11,13} and A2 = {3, 6, 12, 14, 15}. The only
+"bridge" between the sets A1 and A2 is the arrow (1, 6). Now with the help
+of (4.11), we arrive at the following expression for u7:
+where C7 is the normalizing constant and u7(n) = (n 1!)
+- G. . .(n 7!) - G,
+n = (n1,...,n7) E O7.
+
+PAGE 13
+Coagulation-Fragmentation Processes
+459
+important functionals of the invariant measure uN, given by (4.9) in the
+case r = N.
+For a given reversible CFP with an invariant measure uN on ON,
+define the random varibles nk(n), k = 1, 2,..., N as the number of groups of
+size k in a configuration n e ON. We also define the following associated
+quantities:
+Letting r = N in (4.9), we denote through the rest of the paper
+Theorem 3. Let uN be given by (4.9) for r = N. Then
+Proof. 
+The relationship (4.15) follows from the identity
+which is easy to obtain from (4.14). The relationship (4.16) can be derived
+by differentiating (4.18) with respect to a(l), l = k. Finally, the relationship
+(4.17) is obtained by differentiating the first two terms of (4.18) with
+respect to a(k). 
+S
+To implement Theorem 3 we need the expression for CN. Usually, the
+calculation of partition functions is a difficult mathematical problem
+treated in statistical physics [see Thompson(33)]. Our treatment of the
+
+PAGE 14
+460
+Durrett, Granovsky, and Gueron
+problem is based on the following approach. We assume that the ratios
+q(i, j) = a(i + j)/a(i) a(j), i,j=1,2,..., of the intensities are generated by
+the coefficients an = a(n) > 0, n = 1, 2,... of the Taylor series expansion of the
+function S(x) defined by
+We further assume that the radius of convergence Rs of the series is given
+by
+The key result for our subsequent study is contained in the following
+lemma:
+Lemma 1. Under these assumptions, we have
+1. The values cn, n = 1, 2,... are the coefficients of the Taylor series
+expansion of the function g(x) defined by
+where Dg = Ds.
+2. The coefficients cn, n = 0, 1,... are determined by the difference
+equation c0 = 1, c1 = a(1),
+Proof. 
+By the definition of the function S(x), we write
+We expand now each term of the infinite product in the left-hand side of
+this identity into the Taylor series
+and collect terms of these expansions. The coefficient CN of the power XN
+in the product is the sum of all contributions of factors of the type
+
+PAGE 15
+Coagulation-Fragmentation Processes
+461
+xn1x2n2x3n4...xNnN, such that n1 + 2n2 + ... + NnN = N. Since the coefficient
+of each term of this type is equal to
+our first assertion follows from (4.14).
+Finally, the two relationships g(x) = eS(x) and g'(x) = g(x) S'(x) imply
+Dg = Ds, while the difference equation (4.21) follows from the second of
+the above relationships. 
+S
+Remark 3.
+(i) 
+The exponential generating function (4.20) for the sequence cn,
+n=1, 2,..., is known in physical chemistry and queuing theory in
+the context of CFPs satisfying the deterministic detailed balance
+condition [see e.g., Kelly,(19) Chap. 8].
+(ii) The relationship between the two sequences {cn} and {an} is a
+known topic in the theory of univalent functions in the complex
+domain [see Pommerenke,(26) and references therein]. The topic
+is related to the Bieberbach conjecture which is now a theorem.
+Note also that identities analogous to (4.20) are common in
+enumerative combinatorics literature [see e.g., Stanley(28)].
+(iii) The recurrence formula (4.21) can be obtained straightforward
+from (4.15) and the total mass conservation law (3.1).
+In view of the first assertion of the Lemma 1, we denote hereafter
+R = Rs = Rg. The following theorem describes the limiting behavior, as
+N-I 
+of the quantities considered in Theorem 3.
+Theorem 4. Suppose that
+Then, for a fixed k, we have
+
+PAGE 16
+462
+Durrett, Granovsky, and Gueron
+Proof. 
+From (4.22), we have
+Consequently, all three assertions follow from Theorem 3. 
+S
+Remark 4. As we pointed in Section 2.1, the Smoluchowski approxi-
+mation is based on the assumption of independence (zero interactions)
+between the densities of different groups (clusters) during the time evolu-
+tion of CFP. Our result (4.24) provides a partial justification of this
+assumption for large N at the steady state of reversible CFPs. It should be
+noted that a phenomenon of independence of sites in a system of interact-
+ing particles at the steady state, is widely known in statistical physics for
+mean-field models [see Durrett,(11) and Beguin et al.(7) for explanation and
+references]. It is not difficult to understand that a CFP approaches a
+mean-field, as N -> I, which explains (4.24).
+Refering to our assumption (4.22), the following natural conjecture
+related to the relationship between the two sequences {an} and {cn} turns
+out to be a challenging analytical problem:
+Conjecture. The existence of the limit in (4.19) implies the existence
+of the limit in (4.22).
+In the conclusion of this section, we address the following question
+which is common in statistical mechanics: What is the the probability, say
+pI, 
+of a cluster of infinite size at the steady state, as N-> I? First, we
+easily obtain the following general statement for the CFP considered:
+Corollary 1. For CFPs obeying the conditions of Theorem 4, pI< 1.
+Proof. 
+It follows from (4.23) that, for N = I, the probability to have
+a cluster of a given finite size k is greater than zero, if a(k) > 0, which
+proves our claim. 
+S
+To study the existence ( = p I > 0 ) of a cluster of infinite size at the
+steady state, a more subtle analysis is required. Clearly, for pI > 0 it is suf-
+ficient that
+
+PAGE 17
+Coagulation-Fragmentation Processes
+463
+By (4.15), this is equivalent to the following condition:
+for some a, as before. We will show in Section 6 that p I > 0 for all three
+models considered there. Our study will be based on the asymptotics of CN,
+as N-> I, and the following argument:
+where dN : = min a N < K < a 1 Nc - 1c N - k, 0 <a < a1 < 1.
+Finally, note that the formation of a giant cluster is related to the
+violation of the total mass conservation law as N -> I. This phenomenon
+is known in a variety of applied sciences. A rigorous explanation of the
+physical meaning of the phenomenon in the context of chemical kinetics of
+clusters is given by Penrose.(25)
+5. COMPARISON WITH THE STEADY STATE SOLUTION OF THE
+INTEGRAL EQUATION (2.2)
+As explained in Section 2.2 (see (2.4)), the steady state solution of
+(2.2) for the ratios of intensities ( = kernels of the integral equation) of the
+form (4.3), is given by
+where the constant L = L(M)>0, M>0 is determined by the value of the
+total mass M. Recall that f(x) denotes here the expected number of groups
+of size x, x >0 at the steady state. Therefore, to study the validity of (2.2),
+we take M = N, x = k and compare the values of f(N; k) and f ( k ) for large
+N and fixed k From (4.23) we have
+First observe that the limit in the right-hand side of (5.2) exists. In fact,
+differentiating both sides of the mass conservation law in (5.1) with respect
+
+PAGE 18
+464
+Durrett, Granovsky, and Gueron
+to N, and using the fact that a(x) > 0, x > 0, yields L ' ( N ) < 0, N > 0. Viewing
+the left-hand side of the conservation law as the Laplace transform of the
+function a(x), x>0, we make the standard assumption that
+Now we can justify the steady state solution (5.1) of (2.2) as an approxima-
+tion to f(N; k) for large N and fixed k.
+Assertion. For all functions a(x), x>0 satisfying (5.3) we have
+Proof. 
+Under the assumptions (4.19) and (5.3),
+Moreover, it is easy to see from the mass conservation law and the preceding
+discussion that
+Now (5.2) implies the assertion. 
+S
+However, a close look at the expressions for the two quantities
+indicates the possibility of a considerable difference in their asymptotic
+behavior when N>k = k(N) -> I, as N - > I . In the three models con-
+sidered in the next section, we demonstrate that this phenomenon indeed
+occurs.
+6. EXAMPLES
+In this section we consider three particular reversible CFPs with posi-
+tive coagulation and fragmentation intensities, generated by the functions
+(1) a(i) = B/i; (2) a(i) =B and (3) a(i)=Bi, where B>0 and i= 1, 2,....
+The steady state solutions f ( x ) of the integral equation (2.2) for these
+cases were derived by Aizenman and Bak,(1) (for B= 1) and Stewart and
+Dubovskii,(32) for case (2), and Gueron and Levin(15) for all three cases.
+The values of the constant L for these models can be found explicitly from
+the mass conservation law: (1) L = B/N; (2) L = RB/N and (3) L = 
+R2B/N.
+
+PAGE 19
+Coagulation-Fragmentation Processes
+465
+6.1. The Case a(i) = B/i, i= 1, 2,..., B > 0
+Here we have
+with R = 1. Consequently,
+As a result,
+g(x)=1
+Note that the corresponding distribution uN is the widely known Ewens
+sampling formula [for references see Ewens(13)] originated in population
+genetics.
+Further, from (6.3) we have
+which gives the following limiting behavior of the partition function:
+This implies that 1 is a critical value of the parameter B for the CFP con-
+sidered. Also, observe that by (4.15) and (6.3) we have
+which explains the physical meaning of the critical value. Here, f(N; N) is
+interpreted as the probability of coagulation into one cluster (total consen-
+sus). Now we are able to identify the crucial difference in the asymptotic
+
+PAGE 20
+466
+Durrett, Granovsky, and Gueron
+behavior of f ( N ; k ( N ) ) 
+and f(k(N)), 
+in the case when k ( N ) - > I , 
+as
+N-> I. Namely, we have:
+and for all 0<a< 1,
+Next, it follows from Theorem 4 that
+for any fixed k=1, 2,.... Particularly, in the case B = 1, the expected number
+of groups of size k does not depend on N and is equal to
+Figure 2 plots f ( x ) and f ( N ; k ) 
+for the values B =1/2, 1, 5 and
+N = 100. Note the difference between these two quantities for B= 1/2.
+Regarding the existence of an infinite cluster, (4.29) and (6.4) give
+So,
+This shows the existense of a cluster of size of order a.N, 0 < a < 1. In this
+connection, note that, by (4.15) and (6.4), the probability to have in
+the case considered a cluster of a given size k(N), such that k(N),
+N—k(N) -> I, as N-> I, goes to zero.
+6.2. The Case a(i) = 0, i= 1, 2,...
+This is an important test case for the validity of (2.2) as an approxi-
+mation to the exact solution, particularly since, for constant kernels, (2.2)
+
+PAGE 21
+Coagulation-Fragmentation Processes
+467
+Fig. 2. f ( N , k) as a function of k and f ( x ) as a function of x for the case a(i) = a0/i. The
+values used are N=100 and a0= 1,5, 1/2 for panels (a), (b), and {c}, respectively. The
+horizontal axis represents k for f(N, k) and x for f(x). See explanation in the text.
+
+PAGE 22
+468
+Durrett, Granovsky, and Gueron
+has a unique solution c(x; t), x, t>0, that approaches the equilibrium solu-
+tion f(x)= 
+Be-RBx/RN, 
+as 
+t->I 
+[Aizenman and Bak,(1) Stewart and
+Dubovskii(32)].
+From Theorem 4 we have limN->I f ( N ; k) = B for any fixed k. To find
+the asymptotic behavior of f(N; k) as it approaches this limit, we derive
+another recurrence relation for cn which is easier to analyze as n -> I than
+(4.21).
+Assertion 1. In the case a(i) =B, i= 1, 2..., we have
+1. c 0=l, c1= B (n + 1)c n + 1 = (2n + B ) c n - ( n - 1 ) c n - 1 , n = l, 2,....
+2. The sequence cn is monotonically increasing.
+3. The function f(N; k) is monotonically decreasing in k, 1<k<N.
+Proof. 
+In our case, g(x) = e(Bx/1-x), x>0. Consequently, (1 — x)2 g'(x)
+= Bg(x), x>0, which implies our first claim. Now the second claim can be
+proved by induction, while the last claim follows from the fact that in the case
+considered f(N; k) = Bc N - k/c N, k = 1,..., N. 
+S
+We now get the rate of convergence of f(N; k) to its limit, as N-> I
+and k is fixed.
+Assertion 2. In the considered case, for a fixed k= 1, 2,..., we have
+Proof. 
+We compute the leading term of the asymptotic expansion of
+cn using the WKB method [Bender and Orszag(8)], assuming that the
+expansion exists. For any sequence of numbers, {tn}, we define the forward
+difference Dtn = tn+1 — tn, n = 0, 1, 2
+We rewrite the recurrence equation in Assertion 1 as
+We set now cn = esn, n = 0, 1,... and assume the following two asymptotic
+inequalities for large n:
+This leads to
+
+PAGE 23
+Coagulation-Fragmentation Processes
+469
+As a result, we obtain from (6.9)
+which, for large n, yields
+Now we conclude that for large n,
+This verifies the validity of the assumptions (6.10). Finally, under the con-
+dition of the assertion, we have, by (6.14)
+as required. 
+S
+To compare with the case 6.1, this assertion says that for a fixed k the
+asymptotic behavior of f(N; k) is identical to that of f ( k ) , and the same is
+true for all N>k = k(N): N — k(N) -> I, as N - > I . However, with the
+help of (6.14) one can again identify the disagreement between the two
+quantities when N>k = k(N) -> I, as N —> I. In particular, for k =
+N — k 1 , k1<N fixed, we obtain:
+To illustrate, we plotted f(x) and f(N; k) for the values B= 1 and N= 100
+in Fig. 3a.
+Finally, by virtue of (4.28) and (6.14), we have
+Since f(N; N) -> 0, as N -> I, the latter yields 
+faN(I) 
+= 0, while (6.8)
+implies that
+
+PAGE 24
+470
+Durrett, Granovsky, and Gueron
+Fig. 3. f ( N , k) as a function of k and f ( x ) as a function of x for the case (a) a(i) = a0 and
+(b) a(i) = a0i and for the values x0=1 and N=100. The horizontal axis represents k for
+f ( N , k) and x for f(x). See explanation in the text.
+Hence, in our case, for a given 0 < a < 1 there is a probability to have a
+cluster of size of order a RN, while the probability to have any cluster of
+size of order a.N, 0 < a < 1, goes to zero, as N-> I.
+6.3. The Case a(i) = Bi, i = 1, 2,..., B > 0
+Here we have
+
+PAGE 25
+Coagulation-Fragmentation Processes
+471
+Note that the above function S(x), |x| < 1 is the real part of the well
+known Koebe function [Pommerenke(26)].
+The following result is helpful in the analysis of the asymptotic
+behavior of the sequence cn.
+Assertion 1. In the case considered, c-1 = 0, c0= 1, c1 = B,
+for n = 2, 3,... and the sequence cn is monotonically increasing.
+Proof. 
+Both claims follow from the relationship
+In a procedure similar to the one detailed in the proof of Assertion 2
+in the previous example, we use the WKB method to obtain
+Thus, (6.18) implies
+Thus, regarding the comparative asymptotic behavior of f(N; k) and
+f ( k ) , we have here exactly the same situation as in the case 6.2. In par-
+ticular, (6.18) implies:
+To illustrate, Fig. 3b plots f ( x ) and f ( N , k ) for the values B=1 and
+N=100.
+Analysis identical to the one for the model 6.2 shows that, in our case,
+formation of infinite clusters has the same features.
+APPENDIX
+Figure 1 illustrates the example given in Section 4. We first explain
+how this figure should be read. The 15 states n of the CFP are the 15 parti-
+tions of N = 7. They are ordered lexicographically, and displayed clockwise
+
+PAGE 26
+as circles. The components of these states (i.e., the components of the parti-
+tions) are indicated in the circles. For example, the circle containing the
+numbers 1 1 2 3 corresponds to the partition 1 + 1+2 + 3 = 7 of 7, that is,
+a state with two groups of size 1, one group of size 2 and one of size 3. The
+double headed arrows show the possible transitions between the states via
+coagulations or fragmentations of groups. The pairs of numbers near each
+arrow indicate the interacting groups in the related transition. For exam-
+ple, consider partitions number 5 and 7 (in the order, as defined earlier)
+that are connected by the arrow (1, 4). This says that the coagulation of
+two groups of size 1 and 4 moves the system from the 5th state to the 7th,
+while the fragmentation of a group of size 5 into two groups of sizes 1 and
+4 moves the system from the 7th state to the 5th state.
+One can easily verify from the figure that this CFP is irreducible, and
+also that the interaction (1, 6) is not a part of any cycle of the displayed
+graph. Therefore, for all cycles of the graph, we have q(i, j) = 1, which says
+that the process satisfies the Kolmogorov cycle condition for any choice of
+q(1,6).
+ACKNOWLEDGMENTS
+The research of R. Durrett was partially supported by an NSF grant.
+The research of B. Granovsky and S. Gueron was partially supported by
+the Technion V.P.R. fund and by the Fund for the Promotion of Research
+at the Technion.
+We are grateful to David Aldous who pointed to us important referen-
+ces and to a referee for his thoughtful and stimulating remarks.
+REFERENCES
+1. Aizenman, M., and Bak, T. A. (1979). Convergence to equilibrium in a system of reacting
+polymers. Commun. Math. Phys. 65, 203-230.
+2. Aldous, D. (1997). Deterministic and stochastic models for coalescence (aggregation,
+coagulation): A review of the mean-field theory for probabilists. Preprint.
+3. Aldous, D. (1998). Stochastic coalescence. Documenta Mathematica, Proc. Int'l. Congress
+of Mathematicians, Vol. III, Invited Lectures, Berlin, pp. 205-211.
+4. Anderson, W. (1990). Continuous-Time Markov Chains, Springer-Verlag, New York.
+5. Ball, J. M., Carr, J., and Penrose, O. (1986). The Becker-Doring cluster equations: Basic
+properties and asymptotic behavior of solutions. Commun. Math. Phys. 104, 657-692.
+6. Barrow, J. D. (1981). Coagulation with fragmentation. J. Phys. A: Math. Gen. 14,
+729-733.
+472
+Durrett, Granovsky, and Gueron
+
+PAGE 27
+7. Beguin, M., Gray, L., and Ycart, B. (1998). The load transfer model. Ann. Appl. Prob.
+8(2), 337 353.
+8. Bender, C. M., and Orszag, S. A. (1978). Advanced Mathematical Methods for Scientists
+and Engineers, McGraw-Hill, New York.
+9. Drake, R. L. (1972). A general mathematical survey of the coagulation equation. Topics
+in Current Aerosol Res., Part 2, 3, 201-376.
+10. Dubovskii, P. B., and Stewart, I. W. (1995). The order of singularity of solutions for the
+stationary coagulation equation. Appl. Math. Lett. 8, 17-20.
+11. Durrett, R. (1995). Ten lectures on particle systems, Springer, New York, Lecture Notes
+in Math. 1608, 97-201.
+12. Ernst, M. H. (1986). Kinetics of clustering in irreversible aggregation. Fractals in Physics,
+pp. 289-302.
+13. Ewens, W. J. (1995). Remarks on the law of succession. Lecture Notes in Statist. 114,
+229-244.
+14. Gueron, S. The steady-state distributions of coagulation-fragmentation processes. J. Math.
+Biol. (in press).
+15. Gueron, S., and Levin, S. A. (1995). The dynamics of group formation. Math. Biosci. 128,
+243 264.
+16. Hendriks, E. M., Ernst, M. H., and Ziff, R. M. (1983). Coagulation equations with gela-
+tion. J. Statist. Phys. 31, 519-563.
+17. Hidy, G. M., and Brock, J. R. (eds.) (1972). Topics in current aerosol research. Int. Rev.
+in Aerosol Phys. and Chem., Pergamon Press, Oxford.
+18. Jeon, I. (1997). Gelation phenomena. Preprint.
+19. Kelly, F. (1979). Reversibility and Stochastic Networks, Wiley.
+20. McLeod, J. H. (1962). On an infinite set of nonlinear differential equations I. Quart.
+J. Math. Oxford 13(2), 119-128.
+21. Liggett, T. (1985). Interacting Particle Systems, New York.
+22. Morgan, B. J. T. (1976). Stochastic models of grouping changes. Adv. Appl. Prob. 8, 30-57.
+23. Okubo, A. (1986). Dynamical aspects of minimal grouping; swarms, schools, flocks and
+herds. Adv. Biophys. 22, 1-94.
+24. Penrose, O. (1989). Metastable states for the Becker-Doring cluster equations. Commun.
+Math. Phys. 124, 515-541.
+25. Penrose, O. (1997). The Becker-Doring equations at large times and their connection with
+the LSW theory of coarsening. J. Statist. Phys. 89(1/2), 305-320.
+26. Pommerenke, C. (1975). Univalent Functions, Gottingen.
+27. Spouge, J. L. (1984). An existence theorem for the discrete coagulation-fragmentation
+equations. Math. Proc. Camb. Phil. Soc: 96, 351 356.
+28. Stanley, R. (1986). Enumerative Combinatorics, Wadsworth and Brooks, California.
+29. Stewart, I. W. (1989). A global existence theorem for the general coagulation-fragmenta-
+tion equation with unbounded kernels. Math. Methods Appl. Sci. 11, 627-648.
+30. Stewart, I. W. A uniqueness theorem for the coagulation-fragmentation equation. Math.
+Proc. Camb. Phil. Soc. 107, 573-578.
+31. Stewart, I. W. (1991). Density conservation for a coagulation equation. J. Appl. Math.
+Phys. 42, 746-756.
+32. Stewart, I. W., and Dubovskii, P. B. (1996). Approach to equilibrium for the coagulation
+fragmentation equation via a Lyapunov functional. Math. Methods. Appl. Sci. 19, 171-184.
+33. Thompson, C. J. (1988). Classical Equilibrium Statistical Mechanics, Oxford University
+Press, Oxford.
+34. van Dongen, P. G. J., and Ernst, M. H. (1984). Kinetics of reversible polymerization.
+J. Stat. Phys. 37, 301 324.
+Coagulation-Fragmentation Processes
+473
+
+PAGE 28
+35. van Dongen, P. G. V., and Ernst, M. H. (1985). Cluster size distribution in irreversible
+aggregation at large times. J. Phys. A: Math. Gen, 18, 2779-2793.
+36. White, W. H. (1980). A global existence theorem for Smoluchowski's coagulation equa-
+tions. Proc. Amer. Math. Soc. 80, 273-276.
+37. Whittle, P. (1986). Systems in Stochastic Equilibrium, Wiley.
+38. Ziff, R. M., and McGrady, A. A. (1985). The kinetics of cluster fragmentation and
+depolymerization. J. Phys. A 18, 3027-3037.
+474
+Durrett, Granovsky, and Gueron

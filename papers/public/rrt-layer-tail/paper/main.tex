@@ -1,0 +1,235 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\PP}{\mathbb P}
+\newcommand{\E}{\mathbb E}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\lb}{\bar\ell}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\diam}{\operatorname{diam}}
+
+\hypersetup{pdftitle={The layer distribution of the random recursive tree and the minimum of the Poisson-weighted infinite tree},pdfauthor={Yitzchak Shmalo}}
+
+\title[Layers of the random recursive tree]{The layer distribution of the random recursive tree\\ and the minimum of the Poisson-weighted infinite tree}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{18 October 2026}
+\subjclass[2020]{60J80, 05C80, 60C05}
+\keywords{random recursive tree, leaf stripping, onion decomposition, branching random walk, Poisson-weighted infinite tree}
+
+\begin{document}
+\begin{abstract}
+The layer of a vertex of a tree is the number of rounds of leaf removal after which the vertex is a leaf. Stepanyants, Krapivsky, Hartle and Krioukov computed the limiting proportion $\ell_k$ of vertices at layer $k$ in a random recursive tree as an integral of an iterated nonlinear recursion, showed $e^{-k}\lesssim\sum_{j\ge k}\ell_j\lesssim e^{-k/e}$, and conjectured that $\ell_k=\exp[-k/e-\tfrac{3}{2e}\log k-O(1)]$. We prove that $\ell_k e^{k/e}k^{3/(2e)}$ converges to a positive finite constant. The recursion is the law of the minimal position $M_k$ in generation $k$ of the Poisson-weighted infinite tree, so that $\sum_{j\ge k}\ell_j=\E e^{-M_k}$, and the asymptotics follow from the results of Addario-Berry and Ford and of A\"id\'ekon on that branching random walk. We also prove the layer half of their second conjecture: the largest layer $L_n$ of a random recursive tree on $n$ vertices equals half its diameter rounded down, and $L_n=e\log n-\tfrac32\log\log n+O_\PP(1)$.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+Let $T$ be a finite tree. Put $T_0=T$, and for $j\ge0$ let $T_{j+1}$ be the tree obtained from $T_j$ by deleting every vertex of degree at most one in $T_j$. The \emph{layer} of a vertex $v$ is $\lambda_T(v)=\max\{j:v\in T_j\}$: the vertex $v$ is a leaf (or the last vertex standing) after $\lambda_T(v)$ rounds of leaf removal. Leaves of $T$ have layer $0$. In the language of network science the layers form the onion decomposition of the $1$-core.
+
+The random recursive tree $T_n$ on the vertex set $\{1,\dots,n\}$ is built by attaching each vertex $t+1$, for $1\le t<n$, to a uniformly chosen vertex of $\{1,\dots,t\}$, independently. Stepanyants, Krapivsky, Hartle and Krioukov~\cite{SKHK} showed that the expected proportion of vertices of $T_n$ at layer at least $k$ converges, as $n\to\infty$, to
+\begin{equation}\label{eq:SKHK}
+\lb_k=\int_0^\infty s_k(y)\,e^{-y}\,dy,\qquad s_0\equiv1,\qquad s_i(y)=1-\exp\Big(-\int_0^y s_{i-1}(z)\,dz\Big)\quad(i\ge1),
+\end{equation}
+\cite[Theorem~2]{SKHK}; for instance $\lb_1=1/2$ and $\lb_2=3-e$. Write $\ell_k=\lb_k-\lb_{k+1}$ for the limiting proportion of vertices at layer exactly $k$. They proved $e^{-k}\lesssim\lb_k\lesssim e^{-k/e}$ \cite[Theorem~4]{SKHK}, and a travelling-wave analysis of~\eqref{eq:SKHK}, in which the selection of the extremal front velocity $1/e$ is left open, led them to the following statements \cite[Conjectures~1 and~2]{SKHK}.
+
+\begin{conjecture}[Stepanyants, Krapivsky, Hartle, Krioukov]\label{conj:SKHK}
+\textup{(1)} $\ell_k=\exp\big[-\tfrac1e k-\tfrac{3}{2e}\log k-O(1)\big]$.
+\textup{(2)} The largest layer $L$ in a random recursive tree on $n$ vertices satisfies $L\approx e\log n-\tfrac32\log\log n$.
+\end{conjecture}
+
+Part~(2) also contains a statement about the largest rank, the largest distance from a vertex to its nearest leaf, which is not treated here. Our first result gives part~(1) with a limit in place of the $O(1)$.
+
+\begin{theorem}\label{thm:main}
+There is a constant $C_*\in(0,\infty)$ such that, as $k\to\infty$,
+\[
+\lb_k\,e^{k/e}\,k^{3/(2e)}\to C_*\qquad\text{and}\qquad \ell_k\,e^{k/e}\,k^{3/(2e)}\to\big(1-e^{-1/e}\big)C_*.
+\]
+In particular $\ell_k=\exp[-k/e-\tfrac{3}{2e}\log k-O(1)]$, and there are constants $0<c<C<\infty$ with $c\le\lb_k e^{k/e}k^{3/(2e)}\le C$ for all $k\ge1$.
+\end{theorem}
+
+The proof rests on an exact identification. Let $\cT$ be the Poisson-weighted infinite tree~\cite{AS}: the root sits at position $0$; the positions of its children are the points $\xi_1<\xi_2<\cdots$ of a Poisson process of rate one on $(0,\infty)$; and every vertex at position $x$ has children at $x+\xi'_1<x+\xi'_2<\cdots$ for an independent copy $(\xi'_j)$ of that process. Let $M_k$ be the smallest position in generation $k$ of $\cT$, with $M_0=0$.
+
+\begin{proposition}\label{prop:dict}
+For every $k\ge0$ and $y\ge0$, $s_k(y)=\PP(M_k\le y)$. Consequently $\lb_k=\E\,e^{-M_k}$ and $\ell_k=\E\big[e^{-M_k}-e^{-M_{k+1}}\big]$.
+\end{proposition}
+
+So the travelling wave of~\cite[Appendix~A]{SKHK} is the distribution function of the minimum of a branching random walk, and the front velocity is the speed of that minimum. The walk is the basic example of a branching random walk with exponential steps in the sense of Addario-Berry and Ford~\cite{ABF}, who determined the median of $M_k$ to within $O(1)$; A\"id\'ekon's theorem~\cite{Aid} gives convergence in law of the recentred minimum. Theorem~\ref{thm:main} follows from these two results and uniform integrability.
+
+For the largest layer $L_n=\max_v\lambda_{T_n}(v)$ we use a deterministic description of the layer and the height theorem of~\cite{ABF}.
+
+\begin{theorem}\label{thm:maxlayer}
+For every finite tree $T$, $\max_v\lambda_T(v)=\lfloor\diam(T)/2\rfloor$, where $\diam(T)$ is the largest graph distance between two vertices. For the random recursive tree,
+\[
+L_n=e\log n-\tfrac32\log\log n+O_\PP(1),
+\]
+that is, the family $\{L_n-e\log n+\tfrac32\log\log n:n\ge3\}$ is tight.
+\end{theorem}
+
+To this precision the largest layer and the height $H_n$ of $T_n$, the largest distance from the vertex $1$, agree: by~\cite[Corollary~1.3]{ABF}, $H_n=e\log n-\tfrac32\log\log n+O_\PP(1)$. The two largest branches at the vertex $1$ both have linear size, and each loses only $O_\PP(1)$ of height.
+
+The rest of the paper proves Proposition~\ref{prop:dict} (Section~\ref{sec:dict}), Theorem~\ref{thm:main} (Section~\ref{sec:main}) and Theorem~\ref{thm:maxlayer} (Section~\ref{sec:max}). Section~\ref{sec:remarks} identifies $C_*$ in terms of the derivative martingale and records numerical values.
+
+\section{The recursion is the minimum of the Poisson-weighted infinite tree}\label{sec:dict}
+
+\begin{proof}[Proof of Proposition~\ref{prop:dict}]
+Put $F_i(y)=\PP(M_i>y)$ and $u_i=1-s_i$. Then~\eqref{eq:SKHK} reads
+\begin{equation}\label{eq:u}
+u_0\equiv0,\qquad u_i(y)=\exp\Big(-\int_0^y\big(1-u_{i-1}(z)\big)\,dz\Big)\qquad(i\ge1,\ y\ge0).
+\end{equation}
+Since $M_0=0$, $F_0(y)=0=u_0(y)$ for $y\ge0$, and $F_0(y)=1$ for $y<0$; more generally $F_i(y)=1$ for $y<0$, because all positions in $\cT$ are nonnegative. Let $i\ge1$. Every vertex of generation $i$ descends from exactly one child of the root, and the subtree hanging from the child at $\xi_j$, shifted by $-\xi_j$, is a copy of $\cT$; these copies are independent of each other and of $(\xi_j)$. If $M^{(j)}_{i-1}$ denotes the minimum of generation $i-1$ in the $j$-th copy, then $M_i=\inf_j(\xi_j+M^{(j)}_{i-1})$ and
+\[
+F_i(y)=\E\prod_j F_{i-1}(y-\xi_j)=\exp\Big(-\int_0^\infty\big(1-F_{i-1}(y-t)\big)\,dt\Big)=\exp\Big(-\int_0^y\big(1-F_{i-1}(z)\big)\,dz\Big).
+\]
+The second equality is the formula $\E\prod_j g(\xi_j)=\exp(-\int_0^\infty(1-g(t))\,dt)$ for a rate-one Poisson process and a measurable $g$ with values in $[0,1]$; the third uses $F_{i-1}(y-t)=1$ for $t>y$. (The infimum is attained, since only finitely many $\xi_j$ lie below any level, so $\{M_i>y\}$ is the event that every term exceeds $y$.) This is~\eqref{eq:u}, so $F_i=u_i$ on $[0,\infty)$ for every $i$, that is, $s_i(y)=\PP(M_i\le y)$.
+
+By Fubini, $\lb_k=\int_0^\infty\PP(M_k\le y)e^{-y}\,dy=\E\int_{M_k}^\infty e^{-y}\,dy=\E\,e^{-M_k}$, and $\ell_k=\lb_k-\lb_{k+1}$ gives the last formula. Note that $M_{k+1}>M_k$ almost surely, since every vertex of generation $k+1$ lies strictly to the right of its parent.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:main}
+
+\subsection{Two results on the minimum}
+The displacements of the children of a vertex of $\cT$ are $X=(\xi_1,\xi_2,\dots)$, and $\xi_i$ is the sum of $i$ independent standard exponential variables: in the terminology of~\cite{ABF}, $X$ has exponential steps, and $\cT$ is the example singled out there. Write $\widetilde M_k=\sup\{x:\PP(M_k<x)<1/2\}$ for the median, $m_k=k/e+\tfrac{3}{2e}\log k$ for $k\ge1$, and $D_k=M_k-\widetilde M_k$.
+
+\begin{theorem}[{\cite[Theorems~1.1 and~1.2]{ABF}}]\label{thm:ABF}
+$\widetilde M_k=m_k+O(1)$. For every $c_1<e$ there is $K_1$ with $\PP(M_k\le\widetilde M_k-x)\le K_1e^{-c_1x}$ for all $k\ge1$ and $x\ge0$.
+\end{theorem}
+
+Theorem~1.2 of~\cite{ABF} also gives an exponential bound on the upper tail, which we do not need. For the convergence in law we use A\"id\'ekon's theorem in the normalisation of~\cite{Aid}. Put $V(u)=e\,x(u)-|u|$ for a vertex $u$ of $\cT$ at position $x(u)$ in generation $|u|$. Then $(V(u))$ is a branching random walk whose first generation is the point process $\{e\xi_j-1\}$, and with $\theta=e$,
+\[
+\E\sum_{|u|=1}e^{-V(u)}=e\int_0^\infty e^{-et}\,dt=1,\qquad \E\sum_{|u|=1}V(u)e^{-V(u)}=e\int_0^\infty(et-1)e^{-et}\,dt=0,
+\]
+so the walk is in the boundary case~\cite[(1.1)]{Aid}; the first generation is infinite, which~\cite{Aid} allows. Further $\E\sum_{|u|=1}V(u)^2e^{-V(u)}=\int_0^\infty(r-1)^2e^{-r}\,dr=1$, which is~\cite[(1.3)]{Aid}. The variables $X=\sum_{|u|=1}e^{-V(u)}$ and $\widetilde X=\sum_{|u|=1}V(u)_+e^{-V(u)}$ are integrals of bounded functions against a Poisson process, of the form $\sum_j f(\xi_j)$ with $f\ge0$ and $\int_0^\infty f^2<\infty$, so $\E X^2$ and $\E\widetilde X^2$ are finite and~\cite[(1.4)]{Aid} holds. The point process $\{e\xi_j-1\}$ is not supported on a lattice. Hence~\cite[Theorem~1.1]{Aid} applies: $\min_{|u|=k}V(u)-\tfrac32\log k$ converges in law to a real random variable $W$, with $\PP(W\ge w)=\E\exp(-c\,e^wD_\infty)$ for a constant $c\in(0,\infty)$ and the almost sure limit $D_\infty>0$ of the derivative martingale $\sum_{|u|=k}V(u)e^{-V(u)}$. Since $M_k=(k+\min_{|u|=k}V(u))/e$,
+\begin{equation}\label{eq:law}
+M_k-m_k\Rightarrow M^*:=W/e\qquad(k\to\infty).
+\end{equation}
+
+\subsection{Uniform integrability}
+\begin{lemma}\label{lem:ui}
+For $1\le p<e$, $\sup_{k\ge1}\E\,e^{-p(M_k-m_k)}<\infty$.
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{thm:ABF} there is $A$ with $|\widetilde M_k-m_k|\le A$ for all $k$, so $e^{-p(M_k-m_k)}\le e^{pA}e^{-pD_k}$. Take $c_1\in(p,e)$. Since $e^{-pD_k}\le e^{p(j+1)}$ on $\{-j-1<D_k\le-j\}$ and $e^{-pD_k}\le1$ on $\{D_k>0\}$,
+\[
+\E\,e^{-pD_k}\le1+\sum_{j\ge0}e^{p(j+1)}\PP(D_k\le-j)\le1+K_1e^{p}\sum_{j\ge0}e^{-(c_1-p)j}<\infty,
+\]
+with a bound that does not depend on $k$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+By Proposition~\ref{prop:dict}, $\lb_k\,e^{k/e}k^{3/(2e)}=\E\,e^{-(M_k-m_k)}$. By~\eqref{eq:law} and the continuous mapping theorem, $e^{-(M_k-m_k)}\Rightarrow e^{-M^*}$, and Lemma~\ref{lem:ui} with $p=2$ makes the family uniformly integrable, so $\E\,e^{-(M_k-m_k)}\to C_*:=\E\,e^{-M^*}$. This limit is finite by Fatou's lemma and Lemma~\ref{lem:ui}, and positive because $M^*$ is a real random variable. Since $m_{k+1}-m_k\to1/e$,
+\[
+\frac{\lb_{k+1}}{\lb_k}=e^{-(m_{k+1}-m_k)}\,\frac{\E\,e^{-(M_{k+1}-m_{k+1})}}{\E\,e^{-(M_k-m_k)}}\to e^{-1/e},
+\]
+and $\ell_k e^{k/e}k^{3/(2e)}=\lb_k e^{k/e}k^{3/(2e)}\,(1-\lb_{k+1}/\lb_k)\to(1-e^{-1/e})C_*$. A sequence of positive numbers with a positive finite limit is bounded above and away from zero, which gives the constants $c$ and $C$.
+\end{proof}
+
+\begin{remark}
+The two-sided bound alone needs only Theorem~\ref{thm:ABF}: Lemma~\ref{lem:ui} gives the upper bound, and $\E\,e^{-D_k}\ge\PP(D_k\le0)\ge1/2$ gives the lower bound for $\lb_k$. In the dictionary of Proposition~\ref{prop:dict} the upper bound $\lb_k\lesssim e^{-k/e}$ of~\cite[Theorem~4]{SKHK} is the first-moment bound for $M_k$, which is sharp in the exponential rate, and the lower bound $\lb_k\gtrsim e^{-k}$ is the contribution of a single line of descent.
+\end{remark}
+
+\section{The largest layer}\label{sec:max}
+
+For a vertex $v$ of a finite tree $T$ and a neighbour $u$ of $v$, the \emph{branch} of $T$ at $v$ through $u$ is the component of $u$ in $T$ with the edge $\{u,v\}$ removed, and its height $h(v,u)$ is the largest number of vertices on a path in the branch starting at $u$. Thus a branch consisting of $u$ alone has height $1$.
+
+\begin{lemma}\label{lem:strip}
+For every $j\ge1$, $T_j$ is the set of vertices $v$ of $T$ having at least two neighbours $u$ with $h(v,u)\ge j$. Consequently $\lambda_T(v)$ is the second largest of the numbers $h(v,u)$, $u$ a neighbour of $v$, with the convention that it is $0$ when $v$ has at most one neighbour.
+\end{lemma}
+
+\begin{proof}
+Write $S_j$ for the set described. For $j=1$ both $T_1$ and $S_1$ are the vertices of degree at least two. Suppose $T_j=S_j$ for some $j\ge1$, and let $v\in S_j$. We claim that a neighbour $u$ of $v$ lies in $S_j$ if and only if $h(v,u)\ge j+1$. If $h(v,u)\ge j+1$, there is a path of $j+1$ vertices starting at $u$ inside the branch at $v$ through $u$, and it continues through a neighbour $w\ne v$ of $u$, so $h(u,w)\ge j$; and since $v\in S_j$, $v$ has a neighbour $u'\ne u$ with $h(v,u')\ge j$, whence $h(u,v)\ge j+1$. So $u\in S_j$. Conversely, if $u\in S_j$ then $u$ has two neighbours of branch height at least $j$, and one of them, $w$, is not $v$; prefixing $u$ to the corresponding path gives $h(v,u)\ge j+1$. This proves the claim. Every neighbour in $T$ of a vertex of $T_j$ that belongs to $T_j$ is a neighbour in $T_j$, because $T_j$ is an induced subtree, so the degree of $v$ in $T_j$ is the number of neighbours $u$ with $h(v,u)\ge j+1$. Therefore $v\in T_{j+1}$, which means that $v\in T_j$ has degree at least two in $T_j$, if and only if $v\in S_{j+1}$; and $S_{j+1}\subseteq S_j$. Thus $T_{j+1}=S_{j+1}$.
+
+For the second statement, $v\in T_j$ for $j\ge1$ if and only if the second largest branch height at $v$ is at least $j$.
+\end{proof}
+
+\begin{lemma}\label{lem:diam}
+For every finite tree $T$ and every vertex $r$ of $T$, $\max_v\lambda_T(v)=\lfloor\diam(T)/2\rfloor\le\max_v\operatorname{dist}(r,v)$.
+\end{lemma}
+
+\begin{proof}
+Let $P$ be a path with $\diam(T)=D$ edges and let $v$ be a vertex of $P$ at distance $\lfloor D/2\rfloor$ from one end and $\lceil D/2\rceil$ from the other. The two branches at $v$ containing the two parts of $P$ have height at least $\lfloor D/2\rfloor$, so $\lambda_T(v)\ge\lfloor D/2\rfloor$ by Lemma~\ref{lem:strip}. Conversely, if $\lambda_T(v)=j\ge1$ then two branches at $v$ have height at least $j$, and joining the two corresponding paths through $v$ gives a path with $2j$ edges, so $2j\le D$. Finally, a path between $a$ and $b$ passes through the vertex $c$ of the path from $a$ to $r$ closest to $r$ that also lies on the path from $b$ to $r$, so $\operatorname{dist}(a,b)\le\operatorname{dist}(a,r)+\operatorname{dist}(b,r)\le2\max_v\operatorname{dist}(r,v)$, and therefore $\lfloor D/2\rfloor\le\max_v\operatorname{dist}(r,v)$.
+\end{proof}
+
+\begin{lemma}\label{lem:split}
+Remove the edge $\{1,2\}$ from $T_n$, $n\ge2$; let $A$ be the component of $2$, of size $N$, and $B$ the component of $1$. Then $N$ is uniform on $\{1,\dots,n-1\}$, and conditionally on $N=m$, the trees $A$ and $B$, each relabelled by the increasing bijection onto $\{1,\dots,m\}$ and $\{1,\dots,n-m\}$, are independent random recursive trees of sizes $m$ and $n-m$.
+\end{lemma}
+
+\begin{proof}
+For $t\ge2$, vertex $t+1$ joins $A$ with probability $|A_t|/t$, where $A_t$ is the component of $2$ after $t$ vertices; given that it joins $A_t$, its parent is uniform on $A_t$, and given that it joins $B_t$, uniform on $B_t$. So $|A_t|$ is a P\'olya urn started from one ball of each colour, which makes $N=|A_n|$ uniform on $\{1,\dots,n-1\}$; and given the sequence of the sides chosen, the attachments inside $A$ and inside $B$ are independent uniform attachments in order of arrival, which is the second statement.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:maxlayer}]
+The first statement is Lemma~\ref{lem:diam}. Write $h_n=e\log n-\tfrac32\log\log n$ for $n\ge3$ and let $H_m$ be the height of a random recursive tree of size $m$, the largest distance from the vertex $1$. By~\cite[Corollary~1.3]{ABF} there are constants $A$, $K$, $c>0$ with $|\E H_m-h_m|\le A$ for $m\ge3$ and $\PP(|H_m-\E H_m|\ge x)\le Ke^{-cx}$ for all $m\ge1$, $x\ge1$.
+
+Upper bound: by Lemma~\ref{lem:diam} with $r=1$, $L_n\le H_n$, so $\PP(L_n\ge h_n+A+x)\le Ke^{-cx}$.
+
+Lower bound: let $\eps\in(0,1/4)$ and $x\ge1$. On the event $G=\{\eps n\le N\le(1-\eps)n\}$, by Lemma~\ref{lem:split} and the bound above applied to $A$ and $B$ separately,
+\[
+\PP\big(G\cap\{\min(H(A),H(B))\le\min_{\eps n\le m\le n}h_m-A-x\}\big)\le2Ke^{-cx},
+\]
+where $H(A)$ is the largest distance from $2$ within $A$ and $H(B)$ the largest distance from $1$ within $B$. The path from a vertex of $A$ farthest from $2$, through the edge $\{2,1\}$, to a vertex of $B$ farthest from $1$ shows $\diam(T_n)\ge H(A)+H(B)+1$. For $n\ge n_0(\eps):=3/\eps$ and $\eps n\le m\le n$ we have $h_m\ge h_n+e\log\eps$, and $\PP(G^c)\le3\eps$ by Lemma~\ref{lem:split}. Hence, for $n\ge n_0(\eps)$,
+\[
+\PP\Big(L_n\le h_n+e\log\eps-A-x-1\Big)\le\PP\Big(\tfrac12\diam(T_n)\le h_n+e\log\eps-A-x\Big)\le3\eps+2Ke^{-cx}.
+\]
+Given $\delta>0$, choose $\eps$ and $x$ with $3\eps+2Ke^{-cx}<\delta$; the finitely many $n<n_0(\eps)$ are covered by enlarging the constant. Together with the upper bound this proves tightness.
+\end{proof}
+
+Both tails are in fact exponential: the upper tail by the argument above, and the lower tail by taking $\eps=e^{-x/(2e)}$ for $x\ge8$, which gives $\PP(L_n\le h_n-\tfrac32x-A-1)\le3e^{-x/(2e)}+2Ke^{-cx}$ for $n$ large in terms of $x$.
+
+\section{Remarks}\label{sec:remarks}
+
+\subsection{The constant}
+The law of $W$ is a mixture: $W$ has the law of $\log(\zeta/(cD_\infty))$ with $\zeta$ a standard exponential variable independent of $D_\infty$, since both have the tail $\E\exp(-ce^wD_\infty)$. Hence
+\[
+C_*=\E\,e^{-W/e}=c^{1/e}\,\Gamma\big(1-\tfrac1e\big)\,\E\big[D_\infty^{1/e}\big],
+\]
+so in particular $\E[D_\infty^{1/e}]<\infty$. A closed form for $C_*$ is not known to us. Numerically (Section~\ref{sec:num}), $b_k=\lb_k e^{k/e}k^{3/(2e)}$ rises slowly, from $0.722$ at $k=1$ to $1.080$ at $k=20$, $1.174$ at $k=100$ and $1.242$ at $k=300$, so the convergence in Theorem~\ref{thm:main} is slow.
+
+\subsection{Numerical checks}\label{sec:num}
+The script in~\cite{code} checks Lemmas~\ref{lem:strip} and~\ref{lem:diam} on all $46{,}234$ recursive trees with at most nine vertices ($409{,}113$ vertices), integrates~\eqref{eq:SKHK} (recovering $\lb_1=1/2$ and $\lb_2=3-e$ to six digits), compares $\PP(M_k\le3)$ and $\E e^{-M_k}$ from a direct simulation of $\cT$ with the recursion for $k\le8$, and compares the proportion of vertices at layer at least $k$ in ten random recursive trees with $200{,}000$ vertices with $\lb_k$ for $k\le7$; the differences are below $3\times10^{-4}$. These computations are not used in the proofs.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. On 14 September 2026 a Claude agent (Anthropic), working in Claude Code, found the identification of Proposition~\ref{prop:dict}, the reduction of Conjecture~\ref{conj:SKHK}(1) to~\cite{ABF} and~\cite{Aid}, and the argument for Theorem~\ref{thm:maxlayer}, with numerical checks. On 18 October 2026 Claude Opus~5.5, working in Claude Code, checked the proofs line by line, verified the hypotheses of the cited theorems, and wrote the computer checks and the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/rrt-layer-tail}.
+
+\begin{thebibliography}{99}
+\bibitem{ABF} L.~Addario-Berry and K.~Ford, \emph{Poisson--Dirichlet branching random walks}, Ann. Appl. Probab. \textbf{23} (2013), 283--307.
+\bibitem{Aid} E.~A\"id\'ekon, \emph{Convergence in law of the minimum of a branching random walk}, Ann. Probab. \textbf{41} (2013), 1362--1426.
+\bibitem{AS} D.~Aldous and J.~M.~Steele, \emph{The objective method: probabilistic combinatorial optimization and local weak convergence}, in: Probability on Discrete Structures, Encyclopaedia Math. Sci. \textbf{110}, Springer, Berlin, 2004, 1--72.
+\bibitem{SKHK} H.~Stepanyants, P.~L.~Krapivsky, H.~Hartle and D.~Krioukov, \emph{The rank and layer distributions in random recursive trees}, arXiv:2608.04303v2 (2026).
+\bibitem{code} Y.~Shmalo, \emph{Code for the layer distribution of the random recursive tree}, \url{https://github.com/yspennstate/rrt-layer-tail}, 2026.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,1368 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\emp}{\bar\mu_N}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\Hess}{\operatorname{Hess}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\Acal}{\mathcal A}
+\newcommand{\Zcal}{\mathcal Z}
+\newcommand{\Ncal}{\mathcal N}
+
+\title{The interpolation law of the uniform doubling condition\\
+for curved truncations}
+\author{Yitzchak Shmalo\\
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In companion papers the critical scaling of the uniform doubling condition of
+[Shmalo, \emph{Ann.\ Math.\ Artif.\ Intell.} (2024)] for i.i.d.\ samples was
+determined to be $\Theta\bigl((\log N/N)^{2/(2n-j)}\bigr)$ at every transversal
+boundary stratum of dimension $j$, first in the orthogonal model and then for
+all simplicial (half-space) truncations in general position, the upper bound
+resting on a witness-box section lemma that diagonalizes the active
+constraints.  Those arguments use the flatness of the truncating surfaces in
+two places: the level constraint of a half-space is linear, and the slice of a
+half-space by a coordinate hyperplane is again a half-space.  Here we remove
+both uses for a \emph{fixed} smooth strictly convex truncation family.  Let
+$G=K\cap\bigcap_{i=1}^k\{g_i\le0\}$ with $K$ and the $g_i$ fixed and $C^2$, the
+surfaces $\{g_i=0\}$ and $\partial K$ strictly convex and meeting transversally
+in general position along a $j$-dimensional stratum.  We prove that the cap of
+depth $h$ at the stratum has volume $\asymp h^{(2n-j)/2}$ with the same exponent
+as in the flat case, the constant now depending on the joint second fundamental
+form of $K$ and the $g_i$ but bounded above and below for fixed $C^2$ data; and
+that the slice of $G$ by a level set of one constraint is an admissible
+$(n-1,k-1)$ curved configuration, with curvature bounds depending on the fixed
+configuration and uniform along the sliced stratum, closing the
+slicing induction.  Consequently the interpolation law
+$\Theta\bigl((\log N/N)^{2/(2n-j)}\bigr)$ holds for the fixed curved family.
+The mechanism that survives curvature is the steep/shallow trichotomy at the
+angular threshold $\sqrt h$: a strictly convex constraint contributes a factor
+$h$ through its linear part when the slab direction is transversal to its
+normal, and degrades continuously to a factor $\sqrt h$ exactly when the slab
+direction approaches that normal, at which point a lower-dimensional stratum
+becomes active and the exponent law reports the correct larger value.  We
+isolate honestly what is and is not obtained: for a fixed family the constants
+are uniform over the stratum and over directions in any fixed compact subcone
+of the active normal cone, which suffices for the fixed-family interpolation
+law; a curvature-band-uniform lower/slab constant near the multiply-tangent
+directions remains open, and we state the residual estimate precisely.  We also
+prove a conditional uniform theorem: if iterated slices keep a uniform
+curvature floor and all simultaneously projected near-tangent normals have a
+uniform Gram lower bound, then the slab constants and the interpolation law are
+uniform over that resolved subfamily.  As an immediate consequence, every
+finite atlas of fixed curved configurations, and every compact atlas whose
+resolved constants vary continuously and stay positive, has a uniform law with
+atlas-dependent constants.  Resolved geometry is also stable under
+\(C^2\)-small perturbations, so any compact \(C^2\)-continuous resolved atlas is
+uniform by a finite subcover.  The same statement is locally uniform on every
+compact stage of a \(\sigma\)-compact resolved atlas, and becomes globally
+uniform exactly when the resolved constants have a positive global floor.  For
+one curved truncation, the resolved hypotheses are automatic under quantitative
+splaying, and also under an explicit curvature-dominance inequality that allows
+controlled oblique intersections; in particular, nonobtuse one-cut contact is
+uniform.
+\end{abstract}
+
+\section{Setting and results}\label{sec:intro}
+
+We keep the framework of the companion papers
+\cite{companion2,companion3,companion4,companion11,companion6}.  Let $K\subset\R^n$
+be a convex body, $\mu$ a probability measure with density bounded above and
+below on $K$, and $T=\{X_1,\dots,X_N\}$ i.i.d.\ samples with empirical measure
+$\emp$.  For a unit vector $u$, center $s$, width $w$ and a truncation region
+$G$, the truncated slab is
+$S_w=\{x:|\langle x-s,u\rangle|\le\frac w2\}\cap G$, and the uniform doubling
+condition (UDC) with constants $(\kappa,\delta,\sigma,\beta,\ell)$ requires
+$\emp(S_{\ell\kappa^{i+1}})\ge\min\{\delta,(1+\sigma)\emp(S_{\ell\kappa^{i}})\}$
+for every truncated slab generated by the family and every grid scale
+$\ell\kappa^i<\beta$.  By \cite{companion3,companion4,companion11,companion6} the
+critical scaling of $\ell$ for half-space truncation families in general
+position is $\Theta\bigl((\log N/N)^{2/(2n-j)}\bigr)$, where $j$ is the
+dimension of the lowest transversal boundary stratum; the lower bound comes
+from a second-moment count over $\asymp(N/\log N)^{j/(2n-j)}$ congruent caps
+along the stratum, and the upper bound from a deterministic slab-volume
+estimate $\vol(G\cap\{|\langle y-x,u\rangle|\le L\})\gtrsim L^{(2n-j)/2}$ fed
+into the proof skeleton of \cite{companion2}.
+
+The immediately preceding companion \cite{companion9} removes the orthogonality
+and roundness of the orthogonal model, treating a $C^2$ strictly convex body $K$
+cut by half-spaces in general position, and reduces the interpolation law to the
+flat-truncation case; it leaves open exactly the configurations whose truncating
+\emph{surfaces} are themselves curved.  This note treats that case.
+
+\begin{definition}[Admissible curved configuration]\label{def:config}
+Fix $n\ge2$ and $0\le k\le n-2$, and put $j:=n-1-k$.  Let
+$K\subset\R^n$ be a compact convex body with $C^2$ boundary whose principal
+curvatures lie in $[c_K,C_K]$, $0<c_K\le C_K$, and let
+$g_1,\dots,g_k\in C^2(\R^n)$ be convex, with
+\begin{equation}\label{eq:reg}
+0<\gamma_0\le|\nabla g_i|\le\Gamma_0,
+\qquad
+c_g\,I\preceq\Hess g_i\preceq C_g\,I
+\quad\text{on a neighborhood of }G,
+\end{equation}
+($0<c_g\le C_g$), so that each $\{g_i=0\}$ is a $C^2$ strictly convex
+hypersurface.  Write
+$G:=K\cap\bigcap_{i=1}^k\{g_i\le0\}$ and let $n_i:=\nabla g_i/|\nabla g_i|$ be
+the outward unit normal of the $i$-th surface.  We call the data
+\emph{admissible} if $G$ has nonempty interior, contains a ball of a fixed
+radius $r_0>0$, and the surfaces meet \emph{transversally in general position
+along a $j$-dimensional stratum}
+\[
+E:=\partial K\cap\bigcap_{i=1}^k\{g_i=0\},
+\]
+a compact $C^2$ $j$-manifold, meaning: at every $p\in E$ the $k+1$ outward unit
+normals $\nu_K(p),n_1(p),\dots,n_k(p)$ have Gram matrix
+$M(p)$ with smallest eigenvalue $\ge\gamma>0$, uniformly in $p\in E$.  We call
+$(c_K,C_K,c_g,C_g,\gamma_0,\Gamma_0,\gamma,r_0)$ the \emph{structure constants}.
+\end{definition}
+
+The simplicial model of \cite{companion11} is the degenerate case $C_g=0$,
+$\Hess g_i\equiv0$ (linear $g_i$), with $K=B^n$.  Our standing example is a
+ball truncated by two spheres, $K=B^n$ and
+$g_i(x)=|x-z_i|^2-\rho_i^2$ with the $z_i$ placed so that the two spheres and
+$\partial K$ meet transversally along an $(n-3)$-sphere.
+
+For $p\in E$ the maximum of a linear functional over $G$ is governed, to first
+order, by the active constraints at $p$.  As in \cite{companion11} the relevant
+extremal directions are those of the \emph{deepest corner}: $u$ for which the
+maximizer of $\langle\cdot,u\rangle$ over $G$ is the single point $p\in E$ with
+\emph{all $k+1$ Karush--Kuhn--Tucker multipliers strictly positive}.  These
+form the relative interior of the normal cone of $E$ at $p$,
+\[
+\mathcal U_p:=\operatorname{relint}\Bigl\{\lambda_K\nu_K(p)+\sum_{i=1}^k\lambda_i n_i(p):
+\ \lambda_K,\lambda_i\ge0\Bigr\}\cap S^{n-1}.
+\]
+
+\begin{theorem}[Cap volume at a curved stratum]\label{thm:cap}
+Let the data be admissible with structure constants as above, and fix
+$\theta\in(0,1]$.  There are $h_1>0$ and $b_2>0$ depending on the fixed
+configuration data, and $b_1=b_1(\theta)>0$ depending in addition on $\theta$,
+such that for every $p\in E$, every $u\in\mathcal U_p$ at sphere-distance at
+least $\theta$ from $\partial\mathcal U_p$, and every $0<h\le h_1\theta^2$,
+\[
+b_1(\theta)\,h^{\frac{2n-j}2}\;\le\;
+\mu\bigl(\{x\in G:\ \langle x,u\rangle\ge\tau_{\max}(u)-h\}\bigr)
+\;\le\;b_2\,h^{\frac{2n-j}2},
+\qquad\tau_{\max}(u):=\max_{x\in G}\langle x,u\rangle .
+\]
+The upper constant $b_2$ is uniform over the whole cone (no $\theta$); the lower
+constant degrades as $\theta\to0$ ($b_1(\theta)\gtrsim\theta^{\,k+j}$), staying
+positive for each fixed $\theta$.  In particular, for $u$ ranging over any
+compact subcone of $\mathcal U_p$ (fixed $\theta$), the cap exponent is exactly
+$(2n-j)/2$, independent of the curvatures, with constants determined by the
+fixed configuration data and $\theta$.
+\end{theorem}
+
+\begin{theorem}[Section lemma and slab bound]\label{thm:slab}
+For each fixed configuration satisfying Definition~\ref{def:config} there are $a_1>0$ and
+$L_0>0$, depending on that configuration, such that for
+every $x\in G$, every unit $u$, and every $0<L\le L_0$,
+\[
+\vol\Bigl(G\cap\{y:\ |\langle y-x,u\rangle|\le L\}\Bigr)\;\ge\;a_1\,L^{\frac{2n-j}2}.
+\]
+\end{theorem}
+
+\begin{corollary}[Interpolation law, fixed curved family]\label{cor:law}
+Let the data be admissible.  Then the critical scaling of the uniform doubling
+condition for the (single fixed) curved truncation family
+$\{g_1,\dots,g_k\}$ on $K$ is
+\[
+\ell_N\;\asymp\;\Bigl(\frac{\log N}{N}\Bigr)^{2/(2n-j)},
+\qquad j=n-1-k,
+\]
+both bounds holding with probability $1-o(1)$, exponent and logarithm exact.
+The implied constants depend on the fixed configuration data (equivalently, on
+the structure constants together with the nondegeneracy constants of this
+family), but not on $N$.
+\end{corollary}
+
+Section~\ref{sec:cap} proves Theorem~\ref{thm:cap}; Section~\ref{sec:slice}
+proves the slicing induction behind Theorem~\ref{thm:slab} and assembles
+Corollary~\ref{cor:law}; Section~\ref{sec:uniform} states precisely what
+uniformity is and is not obtained, isolates the residual open estimate, and
+proves a conditional uniform theorem under resolved multi-tangent geometry.
+
+\section{The cap-volume proposition with curved constraints}\label{sec:cap}
+
+Throughout this section fix $p\in E$ and $u\in\mathcal U_p$ at sphere-distance
+$\ge\theta$ from $\partial\mathcal U_p$.  After a fixed rotation and translation
+we place $p$ at the origin with $u=e_1$ pointing in the direction of increasing
+$\tau=\langle\cdot,u\rangle$; thus $\tau_{\max}(u)=0$ and the cap of depth $h$ is
+\[
+C(h)=\{x\in G:\ x_1\ge-h\}.
+\]
+Write $x=(x_1,\xi)$ with $\xi\in\R^{n-1}$ the slab coordinates (the orthogonal
+complement of $u$).
+
+\subsection{The local floor}\label{ss:floor}
+
+At $p=0$ the $k+1$ active surfaces are $\partial K$ and $\{g_i=0\}$,
+$i=1,\dots,k$.  Each is a $C^2$ graph over its tangent plane at $0$; since all
+$k+1$ outward normals lie in the open half-space $\{x_1>0\}$-side (because
+$u=e_1$ is a strictly positive combination of them), each surface is, near $0$,
+a graph $x_1=\psi_\bullet(\xi)$ over the slab, with
+\begin{equation}\label{eq:graphs}
+\psi_K(\xi)=-\langle a_K,\xi\rangle-\tfrac12\xi^\top Q_K\,\xi+O(|\xi|^3),
+\qquad
+\psi_i(\xi)=-\langle a_i,\xi\rangle-\tfrac12\xi^\top Q_i\,\xi+O(|\xi|^3),
+\end{equation}
+where $a_\bullet\in\R^{n-1}$ is the slab-gradient of the surface at $0$ and
+$Q_\bullet\succeq0$ is its second fundamental form in the slab coordinates
+(positive semidefinite by convexity of $K$ and of the $g_i$; positive definite
+on the $j$ stratum directions for $K$, see below).  The $O(|\xi|^3)$ remainders
+are uniform on $E$ for fixed $C^2$ data.  The region $G$ near $0$ is
+\begin{equation}\label{eq:feasible}
+C(h)=\Bigl\{(x_1,\xi):\ -h\le x_1\le\min\bigl(\psi_K(\xi),\,\psi_1(\xi),\dots,\psi_k(\xi)\bigr)\Bigr\}.
+\end{equation}
+The \emph{floor} is the function $\Phi(\xi):=\min_\bullet\psi_\bullet(\xi)$, and
+the cap is the region between the height $-h$ and the floor wherever the floor
+exceeds $-h$.
+
+The linear data $a_\bullet$ encode the angle between $u$ and the surface
+normals.  Indeed if $\nu$ is the outward unit normal of a surface
+$\{x_1=\psi(\xi)\}$ at $0$, then writing $\nu=(\nu_1,\nu')$ with
+$\nu_1=\langle\nu,u\rangle$ one has $a=-\nu'/\nu_1$, hence
+\begin{equation}\label{eq:beta}
+|a_\bullet|=\frac{|\nu'_\bullet|}{\langle\nu_\bullet,u\rangle}
+=\frac{\sin\angle(\nu_\bullet,u)}{\cos\angle(\nu_\bullet,u)}=\tan\angle(\nu_\bullet,u),
+\qquad
+\beta_\bullet:=\frac1{\sqrt{1+|a_\bullet|^2}}=\langle\nu_\bullet,u\rangle .
+\end{equation}
+The quantity $\beta_\bullet=\langle\nu_\bullet,u\rangle\in(0,1]$ is the cosine of
+the angle between $u$ and the $\bullet$-normal, and
+$m_\bullet:=|a_\bullet|=\tan\angle(\nu_\bullet,u)=\sqrt{1-\beta_\bullet^2}/\beta_\bullet$
+is the slope of the surface graph in the slab coordinates.  The slope governs
+the pinning: along the steepest slab direction
+$\hat a_\bullet:=a_\bullet/|a_\bullet|$ the floor $\psi_\bullet$ decreases at
+unit rate $m_\bullet$, so the constraint $x_1\le\psi_\bullet$ at height
+$x_1\ge-h$ confines that coordinate to a window of length
+$\asymp h/m_\bullet$.  A \emph{steep} surface (slope $m_\bullet$ bounded, $u$
+transversal to the normal) has a window of length $\asymp h$; a \emph{shallow}
+one ($m_\bullet$ large, $u$ near the surface's tangent plane,
+$\beta_\bullet\to0$) has a shorter window, but the surface curvature then caps
+the relevant extent at $\sqrt h$.  This is the curved analogue of the
+$u_i$-window $h/(8ku_i)$ of \cite{companion11}, where $u_i=\langle u,e_i\rangle$
+is exactly the cosine $\beta_i$ for the orthogonal model.  We record the two
+structural facts.
+
+\begin{lemma}[Curvature is positive definite on the stratum]\label{lem:pd}
+Let $V\subseteq\R^{n-1}$ be the slab-image of $T_pE$, the tangent space of the
+stratum, $\dim V=j$.  Then there is a structure constant $c'_K\asymp c_K>0$ such
+that for every $p\in E$ and every admissible $u$,
+\[
+Q_K\big|_V\;\succeq\;c'_K\,I_V,
+\]
+so the floor is strictly convex along the stratum directions.  Consequently the
+joint tangential form $Q_K\big|_V+\sum_i Q_i\big|_V\succeq c'_K I_V$ as well,
+since each $Q_i\succeq0$ by convexity of $g_i$.
+\end{lemma}
+
+\begin{proof}
+$\partial K$ has second fundamental form $\mathrm{I\!I}_K\succeq c_K I$ on its
+tangent plane $T_p\partial K$.  Writing $\partial K$ near $p$ as a graph
+$x_1=\psi_K(\xi)$ over the slab $u^\perp$, tilted from $T_p\partial K$ by the
+angle $\alpha=\angle(\nu_K,u)$, the graph Hessian is
+$Q_K=\mathrm{I\!I}_K/\cos^3\!\alpha$ in the tilt direction and
+$\mathrm{I\!I}_K/\cos\alpha$ transversally, hence $Q_K\succeq\mathrm{I\!I}_K
+\succeq c_K I$ on $u^\perp$ (tilting only increases the graph curvature).
+Restricting to $V$, the slab projection $T_pE\to V$ is a linear isomorphism with
+singular values bounded above by $1$, so $Q_K|_V\succeq c'_K I_V$ with a
+structure constant $c'_K\asymp c_K$ that does \emph{not} degrade as $u$
+approaches a facet (the tilt makes $Q_K$ larger, not smaller).  The last
+sentence is immediate from $Q_i\succeq0$.
+\end{proof}
+
+\begin{lemma}[Transversal lower bound on the corner angle]\label{lem:angle}
+There is a structure constant $\beta_*>0$ (depending on $\gamma$ and on $n,k$)
+such that for every $p\in E$ and every $u\in\mathcal U_p$ at sphere-distance
+$\ge\theta$ from $\partial\mathcal U_p$,
+\[
+\beta_\bullet=\langle\nu_\bullet,u\rangle\;\ge\;\beta_*\,\theta
+\qquad\text{for each active normal }\nu_\bullet\in\{\nu_K,n_1,\dots,n_k\}.
+\]
+\end{lemma}
+
+\begin{proof}
+Write $u=\sum_\bullet\lambda_\bullet\nu_\bullet$ with $\lambda_\bullet\ge0$ and,
+since $|u|=1$, $\lambda^\top M\lambda=1$, where $M\succeq\gamma I$ is the Gram
+matrix.  Hence $|\lambda|\le\gamma^{-1/2}$, and
+$\langle\nu_\bullet,u\rangle=(M\lambda)_\bullet$.  If $u$ lies at
+sphere-distance $\ge\theta$ from $\partial\mathcal U_p$, then $u$ is not within
+$\theta$ of any facet $\{\lambda_\bullet=0\}$ of the cone; equivalently each
+$\lambda_\bullet$ is bounded below by a multiple of $\theta$ (the facet
+distance is comparable to the smallest multiplier, with comparison constants
+fixed by $M\in[\gamma,\Gamma_0^2]$).  Thus
+$(M\lambda)_\bullet\ge\gamma\lambda_\bullet\ge\beta_*\theta$.  Consequently the
+slope is bounded, $m_\bullet=\sqrt{1-\beta_\bullet^2}/\beta_\bullet\le
+1/\beta_\bullet\le1/(\beta_*\theta)$.
+\end{proof}
+
+\subsection{The witness box}\label{ss:box}
+
+We now run the witness-box construction of \cite{companion11} with the linear
+constraint $x_i\le0$ replaced by the curved floor \eqref{eq:graphs}, and the
+orthogonality $\langle w,\tilde u\rangle=0$ replaced by working directly in the
+slab coordinates $\xi$, in which the height $x_1$ is the free fibre direction.
+Split the active surfaces by the slope threshold at the angular scale
+$\sqrt h$: with $C_*:=C_g+C_K$ bounding all floor curvatures,
+\begin{equation}\label{eq:trichotomy}
+\Acal:=\bigl\{\bullet:\ m_\bullet\le C_*^{-1/2}h^{-1/2}\bigr\},
+\qquad
+\Zcal:=\bigl\{\bullet:\ m_\bullet> C_*^{-1/2}h^{-1/2}\bigr\}.
+\end{equation}
+We call $\Acal$ the \emph{steep} surfaces (bounded slope: $u$ transversal to the
+normal, $\beta_\bullet$ not too small) and $\Zcal$ the \emph{shallow}
+(slope $\gtrsim h^{-1/2}$: $u$ near the surface's tangent plane,
+$\beta_\bullet\lesssim\sqrt h$).  By Lemma~\ref{lem:angle},
+$m_\bullet\le1/(\beta_*\theta)$ for $u$ at facet-distance $\ge\theta$, so every
+active surface is steep, $\Zcal=\varnothing$, once
+$1/(\beta_*\theta)\le C_*^{-1/2}h^{-1/2}$, i.e.\ once
+$h\le\beta_*^2\theta^2/C_*=:h_1\theta^2$.  This is the depth range asserted in
+Theorem~\ref{thm:cap}; we carry out the argument there.  The role of the
+trichotomy across the transition $\Zcal\ne\varnothing$ is deferred to
+Section~\ref{sec:uniform}.
+
+Fix $h\le h_1\theta^2$, so every $m_\bullet\le C_*^{-1/2}h^{-1/2}$, equivalently
+the pinned window $h/m_\bullet\ge\sqrt{h/C_*}\cdot$(a constant) and the linear
+part of each $\psi_\bullet$ dominates its quadratic part at scale $h$.  Let $V$
+be the slab-image of $T_pE$ as in Lemma~\ref{lem:pd}, and let
+$W:=V^\perp\subseteq\R^{n-1}$, $\dim W=k$.  The slab-projected constraint normals
+$P_u n_1,\dots,P_u n_k$ span $W$; by transversality their Gram is bounded below
+by a structure constant, so there is a \emph{biorthogonal (dual) frame}
+$f_1,\dots,f_k\in W$,
+\begin{equation}\label{eq:dual}
+\langle f_i,\,P_u n_{i'}\rangle=\delta_{ii'},
+\qquad |f_i|\le F_0\ \text{(a structure constant)},
+\end{equation}
+bounded because the Gram is bounded away from singular.  This frame plays the
+role of the orthogonality $\langle w,\tilde u\rangle=0$ of \cite{companion11}: it
+provides coordinates $s_i:=\langle\xi,P_u n_i\rangle$ for $\xi\in\R^{n-1}$ in
+which the $i$-th constraint depends, to leading order, only on $s_i$, namely
+$\psi_i(\xi)=-s_i-\frac12\xi^\top Q_i\xi+O(|\xi|^3)$ (the linear part of
+$\psi_i$ is $-\langle a_i,\xi\rangle$ with $a_i=-P_u n_i/\beta_i$, so
+$-\langle a_i,\xi\rangle=s_i/\beta_i$; we absorb the bounded factor $1/\beta_i$
+into the unit by rescaling $s_i$, keeping $|s_i|\asymp\dist$ to the $i$-th
+surface).  Write $\xi=(y,z)$ with $y\in V$ the stratum coordinates and
+$z=\sum_i s_i f_i\in W$ the pinned coordinates.
+
+For the cap-volume bounds of Theorem~\ref{thm:cap} we work at fixed
+facet-distance $\theta$, where by Lemma~\ref{lem:angle} every slope is bounded
+by the \emph{fixed} constant $M_0:=1/(\beta_*\theta)$ and every cosine
+$\beta_\bullet\ge\beta_*\theta$.  Pin each constraint at scale $h$: define the
+\emph{curved witness box} $\widehat W$ in coordinates $(x_1,y,z)$ by
+\begin{equation}\label{eq:cwbox}
+|y|\le\eta\sqrt h,
+\qquad
+-\eta\,h\le s_i\le 0\ \ (i=1,\dots,k),
+\qquad
+-h\le x_1\le-\tfrac h2,
+\end{equation}
+for a small structure constant $\eta>0$ (we will need $\eta\le\beta_*\theta$ and
+$\eta$ small in absolute constants); $s_i\le0$ is the inward side of the $i$-th
+constraint.  The pinned windows have length $\eta h\asymp h$ --- this is the
+range that produces the factor $h$ per constraint --- so $|z|\le F_0\sum_i|s_i|
+\le kF_0\eta h\le c\,h$, while the stratum coordinates carry $|y|\le\eta\sqrt h$.
+Thus $|z|=O(h)$ but $|y|=O(\sqrt h)$, and $|\xi|^2=|y|^2+|z|^2\le\eta^2 h+c^2h^2
+\le c_1\eta^2 h$ for $h$ small.
+
+\paragraph{$\widehat W$ lies in the cap.}
+We verify $x_1\le\Phi(\xi)=\min_\bullet\psi_\bullet(\xi)$ on $\widehat W$.  The
+curvature term of each $\psi_\bullet$ is
+$\frac12|\xi^\top Q_\bullet\xi|\le\frac12 C_*c_1\eta^2 h\le\frac h8$ ($\eta$
+small), and the cubic remainder is $O((\eta^2 h)^{3/2})\le\frac h8$ ($h$ small).
+For the linear term $-\langle a_\bullet,\xi\rangle=-\langle a_\bullet|_V,y\rangle
+-\langle a_\bullet|_W,z\rangle$:
+\begin{itemize}
+\item \emph{Constraint $\bullet=i$.}  By the dual frame \eqref{eq:dual},
+$\langle a_i,\xi\rangle=-s_i/\beta_i$ has stratum part zero
+($a_i|_V$ contributes through $y$ only at quadratic order, absorbed above, since
+$P_un_i\perp V$) and pinned part $-s_i/\beta_i\ge0$ for $s_i\le0$.  Hence
+$-\langle a_i,\xi\rangle=s_i/\beta_i\le0$: the pinning term only \emph{helps}
+$x_1\le\psi_i$.  Its size is $|s_i|/\beta_i\le\eta h/(\beta_*\theta)\le h$ by
+$\eta\le\beta_*\theta$, well within budget.
+\item \emph{Body $\bullet=K$.}  Since the contact point is the deepest corner,
+$0$ maximizes $\tau$ over $K$ along the whole stratum, so $a_K|_V=0$.  The pinned
+part has slope $\le M_0$, so $|\langle a_K|_W,z\rangle|\le M_0|z|\le M_0c\,h
+\le\frac h8$ ($\eta$ small, since $|z|\le c\eta h$ carries the smallness).
+\end{itemize}
+Collecting, $\psi_\bullet(\xi)\ge-\frac h8-\frac h8-\frac h8\ge-\frac h2\ge x_1$
+on $\widehat W$, so $\widehat W\subseteq C(h)$.  The essential point is that the
+pinned coordinates sit at scale $h\ll\sqrt h$, so they contribute nothing at the
+curvature scale; only the stratum coordinates $y$ reach scale $\sqrt h$, and
+there the body is critical ($a_K|_V=0$) and contributes only its quadratic drop,
+itself $\le\frac h8$.
+
+\paragraph{The pinning is genuinely linear.}
+This is the heart of the curved estimate.  Along the $i$-th constraint
+direction the floor is $\psi_i=s_i/\beta_i-\frac12\xi^\top Q_i\xi+O(|\xi|^3)$.
+The \emph{linear} coefficient of $s_i$ is $1/\beta_i\ge1$, bounded below, so the
+feasibility $\psi_i\ge-h$ permits $|s_i|\le\beta_i h+O(h^{3/2})\asymp h$ (the
+window length used in \eqref{eq:cwbox}); the \emph{quadratic} term
+$\frac12 Q_i s_i^2=O(C_g h^2)\ll h$ cannot change this.  This is the exact
+analogue of the linear constraint $x_i\le0$ of \cite{companion11} pinning
+$w_i\in[-h/(8ku_i),0]$, with $u_i=\beta_i$; curvature perturbs the window only by
+a factor $1+O(h)$.  The mechanism that could change the exponent --- the slope
+$m_i$ growing to scale $h^{-1/2}$, so the linear coefficient $1/\beta_i$ itself
+reaches $h^{-1/2}$ and the window contracts toward $\sqrt h$ --- does not occur
+at fixed $\theta$, where $\beta_i\ge\beta_*\theta$ is bounded below; it is the
+subject of Section~\ref{sec:uniform}.
+
+\paragraph{Volume.}
+The $k$ pinned coordinates $s_i$ range over intervals of length $\eta h$; the
+dual frame $\{f_i\}$ has bounded Gram, so the $z$-Jacobian is a structure
+constant; the $j$ stratum coordinates $y$ range over a ball of radius
+$\eta\sqrt h$; and the height fibre has length $\frac h2$.  Hence
+\begin{equation}\label{eq:lower}
+\mu(C(h))\;\ge\;\frac{\vol(\widehat W)}{\vol(B^n)}
+\;\ge\;c_2\cdot \tfrac h2\cdot\prod_{i=1}^k(\eta h)\cdot(\eta\sqrt h)^{j}
+\;=\;c_3\,h^{\,1+k+j/2}\;=\;c_3\,h^{\frac{2n-j}2},
+\end{equation}
+since $1+k+j/2=1+k+(n-1-k)/2=(n+1+k)/2=(2n-j)/2$.  Here $c_3\asymp\eta^{\,k+j}$
+times structure constants; with the admissible choice $\eta=\beta_*\theta$ this
+gives $b_1(\theta)\asymp\theta^{\,k+j}$, the stated $\theta$-dependence of the
+lower constant (positive for each fixed $\theta>0$, degrading as
+$\theta\to0$ --- consistent with the cap growing as $u$ nears
+$\partial\mathcal U_p$).  This proves the lower bound of Theorem~\ref{thm:cap}.
+
+\subsection{The upper bound}\label{ss:upper}
+
+For the upper bound, by \eqref{eq:feasible} the cap is contained in
+$\{-h\le x_1\le\Phi(\xi)\}\cap\{\Phi(\xi)\ge-h\}$.  Fix any single steep
+constraint, say $K$ (steep for all admissible $h$).  Its graph gives
+$x_1\le\psi_K(\xi)=-\langle a_K,\xi\rangle-\frac12\xi^\top Q_K\xi+O(|\xi|^3)$,
+and the height fibre has length at most $\psi_K(\xi)+h$, so
+\[
+\mu(C(h))\;\le\;\frac1{\vol(B^n)}\int_{\{\Phi\ge-h\}}\bigl(\Phi(\xi)+h\bigr)_+\,d\xi
+\;\le\;\frac1{\vol(B^n)}\int_{\{\psi_K\ge-h\}}\bigl(\psi_K(\xi)+h\bigr)\,d\xi .
+\]
+We bound the integration domain $\{\psi_K\ge-h\}\cap\bigcap_i\{\psi_i\ge-h\}$.
+The body constraint $\psi_K\ge-h$, by strict convexity $Q_K|_V\succeq c'_K I_V$
+(Lemma~\ref{lem:pd}) and $a_K|_V=0$, forces $\frac12 c'_K|y|^2\le h+o(h)$, i.e.
+$|y|\le C\sqrt{h}$ in the stratum directions.  Each constraint $\psi_i\ge-h$,
+whose linear coefficient $1/\beta_i\ge1$ in the pinned coordinate $s_i$ is
+bounded below, forces $|s_i|\le\beta_i h+O(h^{3/2})\le 2h$ (using $\beta_i\le1$)
+in the pinned directions.  The integrand $\psi_K(\xi)+h$ is $\le 2h$.  Hence,
+with the bounded $z$-Jacobian of the dual frame,
+\[
+\mu(C(h))\;\le\;C\cdot\underbrace{(C\sqrt h)^{\,j}}_{y\text{-ball}}\cdot
+\underbrace{\prod_{i=1}^k(2h)}_{s_i\text{-intervals}}\cdot\underbrace{(2h)}_{\text{fibre}}
+\;=\;C'\,h^{j/2}\cdot h^{k}\cdot h\;=\;b_2\,h^{\frac{2n-j}2},
+\]
+the exponent being $j/2+k+1=(2n-j)/2$.  Here the pinned length $|s_i|\le2h$ is
+curvature- and $\theta$-independent (it uses only $\beta_i\le1$ and the lower
+bound $1/\beta_i\ge1$ on the linear coefficient), so $b_2$ depends only on the
+structure constants --- in particular the upper bound is uniform over the whole
+normal cone, not just at fixed facet-distance.  This proves
+Theorem~\ref{thm:cap}.\qquad$\square$
+
+\begin{remark}[Why the constant no longer factors]\label{rem:factor}
+In the simplicial model the cap constant factored as a product of a
+stratum-curvature factor (from $Q_K$) and one factor per truncation depending
+only on its angle, because the constraints were mutually orthogonal and the
+floor split as a sum of decoupled coordinates.  With curved $g_i$ the cross
+blocks of the floor $\sum_\bullet\frac12\xi^\top Q_\bullet\xi$ couple the
+stratum directions $y$ to the pinned directions $z$, and the dual frame
+\eqref{eq:dual} (which inverts the joint Gram of all active normals) mixes the
+truncation curvatures $Q_i$ with the stratum curvature $Q_K$.  Completing the
+square --- shifting $y\mapsto y-Lz$ to remove the $y$--$z$ cross block, with
+$L$ bounded because $Q_K|_V\succeq c'_K I_V$ is invertible --- moves $y$ by
+$O(z)=O(h)\ll\sqrt h$ and changes the $z$-part at $O(h^2)\ll h$, so the product
+volume count survives with a constant depending on the joint form
+$Q_K|_V+\sum_iQ_i|_V$ rather than on $Q_K$ and the $Q_i$ separately.  The
+exponent is untouched precisely because the shift is lower order at the cap
+scale.
+\end{remark}
+
+\section{The slicing induction for curved slices}\label{sec:slice}
+
+The cap-volume proposition of Section~\ref{sec:cap} handles the
+\emph{stratum-direction} extremes ($u\in\mathcal U_p$).  As in
+\cite{companion11}, the general direction is reduced to the stratum case by an
+induction that slices off one constraint at a time.  In the simplicial model
+the slice of a half-space by a coordinate hyperplane is again a half-space, so
+the slice stays in class trivially.  Here the slice is a curved hypersurface
+and we must verify it remains an admissible $(n-1,k-1)$ curved configuration
+with curvatures bounded for the fixed configuration.
+
+\subsection{The slice is in class}\label{ss:inclass}
+
+Fix a constraint, say $g_{i_0}$, and a level $s\in\R$ near $0$.  Let
+\[
+\Sigma_s:=\{x:\ g_{i_0}(x)=s\},
+\qquad
+G^{(i_0)}_s:=G\cap\Sigma_s
+=K\cap\Sigma_s\cap\bigcap_{i\ne i_0}\{g_i\le0\}.
+\]
+$\Sigma_s$ is a $C^2$ strictly convex hypersurface (principal curvatures in
+$[c_g/\Gamma_0,\,C_g/\gamma_0]$ by \eqref{eq:reg} and the formula for the
+curvature of a level set, $\kappa=(\nu^\top\Hess g_{i_0}\,\nu)/|\nabla
+g_{i_0}|$ for tangent $\nu$).  We regard $G^{(i_0)}_s$ as a subset of the
+$(n-1)$-manifold $\Sigma_s$, equipped with its induced Riemannian metric, and
+must produce on it the data of Definition~\ref{def:config} in dimension $n-1$
+with $k-1$ constraints.
+
+\begin{lemma}[Slice is an admissible curved configuration]\label{lem:slice}
+There are slice constants $c'_K\le C'_K$, $c'_g\le C'_g$, $\gamma'>0$,
+$r'_0>0$ and $\delta_0>0$, depending on the fixed original configuration
+and on $n,k$, such that for every $|s|\le\delta_0$ the sliced configuration
+$G^{(i_0)}_s\subset\Sigma_s$ is admissible with structure constants
+$(c'_K,C'_K,c'_g,C'_g,\gamma',r'_0)$, with stratum
+$E^{(i_0)}_s:=E\cap\Sigma_s$ of dimension $j-1=(n-1)-1-(k-1)$.
+\end{lemma}
+
+\begin{proof}
+We verify the three ingredients of Definition~\ref{def:config} for the body
+$K\cap\Sigma_s$ inside the manifold $\Sigma_s$ and the constraints
+$\{g_i|_{\Sigma_s}\le0\}$, $i\ne i_0$.
+
+\emph{(a) The sliced body is strictly convex with bounded curvature.}  The body
+for the lower-dimensional section lemma is the convex region cut from the convex
+surface $\Sigma_s$ by $\partial K$; its boundary in $\Sigma_s$ is the
+transversal intersection $\partial K\cap\Sigma_s$ of the two strictly convex
+hypersurfaces $\partial K$ and $\Sigma_s$.  Its normal curvature in $\Sigma_s$
+is given by the same intersection-curvature formula \eqref{eq:intersection}
+below, with $\mathrm{I\!I}_{g_i}$ replaced by $\mathrm{I\!I}_K\succeq c_KI$ and
+$\omega=\angle(\nu_K,\nu_{\Sigma_s})$ the dihedral angle, bounded away from
+$0,\pi$ by transversality.  Since $\Sigma_s$ is a truncation surface of $K$ with
+the body on the inward side, the two surfaces are mutually convex
+($\cos\omega\le0$ generically), so the numerator is $\succeq c_K|X|^2$ and the
+sliced body has curvature in a band $[c'_K,C'_K]$ fixed by the original
+fixed-configuration data.  This yields $c'_K,C'_K$.
+
+\emph{(b) The restricted constraints are strictly convex hypersurfaces of
+$\Sigma_s$ with bounded curvature.}  This is the delicate ingredient, and we
+state the mechanism, the regime where it is clean, and the regime where its
+\emph{uniformity} is part of the open problem of \S\ref{sec:uniform}.  What we
+need is not that the function $\tilde g_i:=g_i|_{\Sigma_s}$ be convex, but that
+the truncating \emph{surface} $\Sigma'_i:=\{g_i=0\}\cap\Sigma_s$ be a strictly
+convex $C^2$ hypersurface of $\Sigma_s$, curving toward the kept region, with
+principal curvatures (intrinsic to $\Sigma_s$) bounded in a band $[c'_g,C'_g]$.
+The surface $\Sigma'_i$ is the transversal intersection of the two convex
+hypersurfaces $\{g_i=0\}$ and $\Sigma_s$.  Its normal curvature in $\Sigma_s$,
+in a tangent direction $X\in T\Sigma'_i$, is given by the intersection-curvature
+formula
+\begin{equation}\label{eq:intersection}
+\kappa_{\Sigma'_i,\Sigma_s}(X)
+=\frac{\mathrm{I\!I}_{g_i}(X,X)-\cos\omega\,\mathrm{I\!I}_{\Sigma_s}(X,X)}{\sin\omega},
+\qquad\omega:=\angle\bigl(n_i,\nu_{\Sigma_s}\bigr),
+\end{equation}
+There is only one power of \(\sin\omega\): the unit conormal of the intersection
+inside \(\Sigma_s\) is \((n_i-\cos\omega\,\nu_{\Sigma_s})/\sin\omega\).
+where $\mathrm{I\!I}_{g_i},\mathrm{I\!I}_{\Sigma_s}\succeq0$ are the (convex)
+second fundamental forms of the two surfaces and $\omega$ is their dihedral
+angle, bounded away from $0$ and $\pi$ by the transversality constant
+$\gamma$ (so $\sin\omega\ge\gamma'$, $|\cos\omega|\le1-\gamma''$).  The numerator
+is $\succeq c_g\,|X|^2-(1-\gamma'')C_g\,|X|^2$; this is the term that can fail to
+be positive if the truncation curvature $c_g$ is small relative to $C_g$ at an
+oblique angle.
+
+\emph{Clean regime.}  If the two surfaces are \emph{mutually convex} at the
+contact ($\cos\omega\le0$, normals splaying apart, the generic transversal
+configuration for two truncations bounding a common region), then the numerator
+is $\succeq c_g|X|^2$ and $\kappa_{\Sigma'_i,\Sigma_s}\in[c_g,(C_g+C_g)/\gamma']$:
+the sliced surface is strictly convex with curvature bounded by structure
+constants, giving $c'_g,C'_g$.  For our standing example (a ball truncated by
+spheres whose centers lie outside, so the truncation normals splay), and more
+generally whenever the truncations bound $G$ from genuinely distinct directions,
+this is the operative case and the slice is unconditionally in class.
+
+\emph{Oblique regime (uniformity caveat).}  When $\cos\omega>0$ and
+$c_g<(1-\gamma'')C_g$, \eqref{eq:intersection} does not by itself certify
+positivity, and the strict convexity of $\Sigma'_i$ uses the global convexity of
+$\{g_i\le0\}\cap\Sigma_s$ rather than the pointwise curvature: the kept region is
+still convex (an intersection of convex sets restricted to the convex surface
+$\Sigma_s$), so $\Sigma'_i$ is convex toward it, but its curvature lower bound
+$c'_g$ now depends on the angle $\omega$ and degrades as $\omega\to0$.  For a
+\emph{fixed} configuration $\omega$ is bounded away from $0$ along the compact
+stratum, so $c'_g>0$ is a genuine constant and the induction proceeds; a bound on
+$c'_g$ uniform over all families with the given structure constants, as
+$\omega$ ranges, is exactly Problem~\ref{prob:factor}.  The gradient bounds
+$\gamma'_0,\Gamma'_0$ are the slab-projections of $\nabla g_i$, bounded by
+structure constants in this clean regime and by the fixed-configuration data in
+the general fixed-family regime.
+
+\emph{(c) Transversality survives.}  The $k$ outward normals
+$\{\nu_K,n_i:i\ne i_0\}$ restricted to $T\Sigma_s$ are the slab projections of
+the original normals onto the tangent space of $\Sigma_s$.  Their Gram matrix is
+the original Gram matrix $M$ with the row and column $i_0$ removed and the rest
+projected orthogonally to $n_{i_0}$; this is the Schur complement of $M$ with
+respect to its $i_0$-th entry, which is $\succeq\gamma I$ because $M\succeq\gamma
+I$ and the Schur complement of a matrix $\succeq\gamma I$ along a unit direction
+is again $\succeq\gamma I$ on the orthogonal complement.  Hence $\gamma'=\gamma$
+works.  Finally $G^{(i_0)}_s$ contains a ball of radius $r'_0\ge c\,r_0$ in
+$\Sigma_s$ for $|s|\le\delta_0$, because the inner ball $B(c^-,r_0)\subseteq G$
+of the original configuration meets the slab of slices in a cap of inradius
+$\ge c r_0$ inside $\Sigma_s$.
+\end{proof}
+
+\subsection{The induction and the slab bound}\label{ss:induction}
+
+With the slice in class, the induction of \cite[\S4, Case 2]{companion11} runs
+verbatim with the affine slice replaced by the curved slice $\Sigma_s$ and the
+flat radius $\sqrt{1-s^2}$ replaced by the bounded geometry of
+Lemma~\ref{lem:slice}.
+
+\begin{proposition}[Cap mass, all directions]\label{prop:allcap}
+For each fixed configuration satisfying Definition~\ref{def:config} there are
+$b>0$ and $h_0>0$, depending on that configuration, such that for every unit $u$ with
+$\tau_{\max}(u)$ attained on $E$ and every $0<h\le h_0$,
+\[
+\Lambda_u(h):=\mu\bigl(\{x\in G:\ \langle x,u\rangle\ge\tau_{\max}(u)-h\}\bigr)
+\;\ge\;b\,h^{\frac{2n-j}2}.
+\]
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Induction on $k$.  The base case $k=0$ ($G$ a strictly convex body) is the
+rolling-ball cap bound of \cite{companion4}: a cap of depth $h$ on a body with
+principal curvatures in $[c_K,C_K]$ has the section identity
+$r(h)^2=(\rho-g+h)(\rho+g-h)\ge h\rho$ with $\rho=1/C_K$, hence mass
+$\ge c\,h^{(n+1)/2}=c\,h^{(2n-j)/2}$ at $j=n-1$.
+
+For the inductive step fix $u$ with extreme on $E$.  If $u\in\mathcal U_p$ at
+facet-distance $\ge\theta_0$ for a fixed threshold $\theta_0>0$ chosen from the
+fixed configuration data,
+Theorem~\ref{thm:cap} gives the bound directly.  Otherwise $u$ is within
+$\theta_0$ of a facet of the normal cone.  Write $u=\sum_\bullet\lambda_\bullet
+\nu_\bullet$ with $\lambda^\top M\lambda=1$, $M\succeq\gamma I$; then
+$\max_\bullet\lambda_\bullet\ge(k+1)^{-1}\gamma^{1/2}$, so \emph{some} active
+constraint $g_{i_0}$ has a multiplier bounded below, hence (by
+$\beta_{i_0}=(M\lambda)_{i_0}\ge\gamma\lambda_{i_0}$) angle bounded away from
+$\pi/2$: $\beta_{i_0}\ge c>0$ a structure constant.  This strongly-active
+constraint is the one to slice (exactly as \cite{companion11} slices the
+coordinate $i_0$ with $u_{i_0}$ bounded below in its Case~2).  For $s$ in an interval of length $\asymp h$ below the
+extreme level, the slice $G^{(i_0)}_s$ is an admissible $(n-1,k-1)$ curved
+configuration (Lemma~\ref{lem:slice}) and the restricted direction
+$u':=P_{\Sigma_s}u/|P_{\Sigma_s}u|$ has its extreme on the sliced stratum
+$E^{(i_0)}_s$, at depth $h_*\asymp h$.  By the induction hypothesis applied in
+dimension $n-1$ with $k-1$ constraints (stratum dimension
+$(n-1)-1-(k-1)=j-1$),
+\[
+\Lambda^{(n-1,k-1)}_{u'}(h_*)\;\ge\;b'\,h^{\frac{2(n-1)-(j-1)}2}
+=b'\,h^{\frac{2n-j-1}2}.
+\]
+Integrating over the slicing interval ($\asymp h$) by the curved coarea formula
+(the Jacobian $|\nabla g_{i_0}|$ is bounded above and below by \eqref{eq:reg},
+so the coarea factor is a structure constant) gives
+\[
+\Lambda_u(h)\;\ge\;c\cdot h\cdot b'\,h^{\frac{2n-j-1}2}
+\;=\;c'\,h^{\frac{2n-j}2}.
+\]
+The exponent telescopes exactly as in the flat case: one slice supplies a factor
+$h$ (the slicing interval), and the induction supplies
+$h^{(2n-j-1)/2}$, so the product is $h^{1+(2n-j-1)/2}=h^{(2n-j)/2}$, with the
+codimension count $j\to j-1$ matching $(n,k)\to(n-1,k-1)$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:slab}]
+This is the anchor--unimodality conversion of \cite{companion4,companion11},
+which uses only: (i) the cap-mass bound of Proposition~\ref{prop:allcap} at both
+$u$-extremes; (ii) the unimodality of the level-section area $A_u$, which holds
+by Brunn--Minkowski because $G$ is convex; and (iii) the inner ball
+$B(c^-,r_0)\subseteq G$ providing a bulk anchor of value $a_1(n,k)>0$ at a depth
+$h^\dagger\ge c(k)>0$.  Define $A_u(h):=\vol_{n-1}(G\cap\{\langle x,u\rangle
+=\tau_{\max}-h\})$.  Below the mode of $A_u$, $A_u(h)\ge\Lambda_u(h)/h\ge
+b\,h^{(2n-j-1)/2}$ by Proposition~\ref{prop:allcap}; above the mode,
+unimodality gives $A_u(h)\ge A_u(h^\dagger)\ge a_1$.  Anchoring at depth $L/4$
+from each of the $u$- and $(-u)$-extremes and integrating over the middle of the
+$\tau$-range (whose complement has length $\le L/2$, while the range has length
+$\ge2r_0\ge2L$) yields
+$\vol(G\cap\{|\langle y-x,u\rangle|\le L\})\ge a_1 L^{(2n-j)/2}$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:law}]
+\emph{Upper bound.}  Insert Theorem~\ref{thm:slab} into the proof skeleton of
+\cite{companion2,companion4}: the population dichotomy holds with the inner-ball
+radius $r_0$; the VC relative deviation bounds apply to slabs cut by $k$ fixed
+$C^2$ convex constraints, whose graphs $\{g_i\le0\}$ together with two parallel
+slab walls form a family of sets of finite VC dimension (the class
+$\{g_i\le t\}$ is a translate of a fixed graph, hence a VC class, and finite
+intersections multiply the dimension); thus a sample point in $S_w$ yields
+$\mu(S_{\kappa w})\ge32u_N$ for all $w\ge\ell_N:=C(u_N)^{2/(2n-j)}\asymp
+(\log N/N)^{2/(2n-j)}$, and the UDC holds with probability $1-1/N$.
+
+\emph{Lower bound.}  The second-moment scheme of
+\cite{companion4,companion11} applies with the curved stratum caps of
+Theorem~\ref{thm:cap} in place of the flat ones.  The cap directions are the
+stratum directions $u_p\in\mathcal U_p$ at a fixed facet-distance $\theta_0$
+(any fixed interior direction of the normal cone), so Theorem~\ref{thm:cap}
+gives two-sided cap masses $\asymp h^{(2n-j)/2}$ with $\theta_0$-dependent but
+$N$-independent constants.  The footprint of a depth-$H$ cap is $\asymp\sqrt H$
+(the $y$-ball radius), so a maximal $2c\sqrt{H_N}$-separated family on the
+$j$-manifold $E$ has $M\ge c H_N^{-j/2}\ge c'(N/\tau_N)^{j/(2n-j)}$ members with
+pairwise disjoint outer caps.  The first/second moment computation is identical
+to \cite{companion11}: with $\tau_N=\varepsilon\log N$ chosen so that the
+per-cap gap probability is $N^{-2q\varepsilon}$ with
+$q=(4\kappa^2)^{(2n-j)/2}b_2/b_1$, one gets $\E X\to\infty$ and
+$\PP(X=0)=o(1)$ by Chebyshev, forcing $\ell\ge c(\log N/N)^{2/(2n-j)}$.
+\end{proof}
+
+\section{What uniformity is and is not obtained}\label{sec:uniform}
+
+We now state precisely the scope of Corollary~\ref{cor:law} and the residual
+open problem.
+
+\subsection{Obtained: fixed family, uniform over the stratum and compact subcones}
+
+For a \emph{fixed} admissible configuration (a fixed body $K$ and fixed $C^2$
+strictly convex $g_1,\dots,g_k$), Corollary~\ref{cor:law} gives the exact law
+$\Theta((\log N/N)^{2/(2n-j)})$.  The constants in
+Theorems~\ref{thm:cap}--\ref{thm:slab} are uniform:
+\begin{itemize}
+\item \emph{over the stratum} $p\in E$: the structure constants
+$(c_K,C_K,c_g,C_g,\gamma_0,\Gamma_0,\gamma,r_0)$ and the $C^2$ Taylor remainders
+are uniform on the compact manifold $E$;
+\item \emph{over directions} $u$ in any fixed compact subcone of the normal cone
+(facet-distance $\ge\theta_0$): the cap exponent is exactly $(2n-j)/2$, with the
+constant determined by the fixed configuration and \(\theta_0\), for all depths
+$h\le h_1\theta_0^2$.  The upper bound constant $b_2$ is uniform over the cone,
+while the lower bound constant $b_1(\theta_0)$ degrades as the subcone
+approaches the boundary; this is the loss coming from the pinned lengths
+$s_i\le Ch/(\beta_*\theta_0)$.
+\end{itemize}
+This is the regime needed for both directions of the law: the slab-volume bound
+(Theorem~\ref{thm:slab}) is a statement for \emph{all} $u$, obtained by the
+slicing induction which always slices the most binding constraint and so always
+operates at definite angle; and the lower-bound caps may be taken at a single
+fixed interior direction $\theta_0=\frac12\operatorname{diam}\mathcal U_p$, say.
+
+\subsection{The exponent is curvature-robust but direction-sensitive}
+
+The exponent $(2n-j)/2$ does not depend on the magnitudes of the curvatures: for
+a fixed active set and fixed interior direction the slopes $m_i$ are fixed
+constants, so $h\to0$ keeps every constraint steep ($m_i\le C_*^{-1/2}h^{-1/2}$
+automatically once $h$ is small), and each pinned coordinate contributes a clean
+factor $h$ regardless of $Q_i$.  High truncation curvature only inflates the
+constant (through $\sqrt{h/c_g}$ in the shallow regime and the joint form in
+Remark~\ref{rem:factor}); it never changes the exponent.
+
+The exponent \emph{does} change as $u$ approaches the boundary of the normal
+cone $\mathcal U_p$, and this is correct rather than a defect.  Two equivalent
+descriptions of the boundary: a multiplier vanishes ($\lambda_{i_0}\to0$, the
+$i_0$-th constraint becomes first-order inactive at the maximizer), or
+equivalently the slab tilts toward tangency with surface $i_0$
+($\beta_{i_0}=\langle n_{i_0},u\rangle\to0$, slope $m_{i_0}\to\infty$), so that
+$p$ ceases to be the strict $\tau$-maximum and the extreme spreads onto a
+\emph{larger} stratum $E'$ of dimension $j+1$.  There the cap is governed by the
+$(2n-j')/2$ law with $j'=j+1$: a \emph{larger} cap.  The natural single formula
+across the closed cone is the \emph{trichotomy interpolant}: with the per-surface
+pinned length
+\[
+\lambda_i(h):=\min\Bigl(\frac{h}{m_i},\ \sqrt{h/c_g}\Bigr),
+\qquad m_i=\tan\angle(n_i,u),
+\]
+one expects
+\begin{equation}\label{eq:interp}
+\mu(C(h))\;\asymp\;h^{1+j/2}\,\prod_{i=1}^k\lambda_i(h),
+\end{equation}
+which interpolates: when all $m_i$ are $O(1)$, $\lambda_i(h)\asymp h$ and
+\eqref{eq:interp} is $\asymp h^{1+j/2}\cdot h^k=h^{(2n-j)/2}$; when $m$ of the
+slopes exceed $h^{-1/2}$ (those $\beta_i\lesssim\sqrt h$), the curvature cap
+gives $\lambda_i(h)\asymp\sqrt h$ and the exponent rises to $(2n-(j+m))/2$,
+exactly matching the larger stratum that has become active.  The crossover is at
+$m_i\asymp h^{-1/2}$, i.e.\ $\beta_i\asymp\sqrt h$, the same $\sqrt h$ angular
+threshold as the simplicial trichotomy $\mathcal A/\mathcal Z$ of
+\cite{companion11} (there $\lambda_i=\min(h/(8ku_i),\sqrt h/8)$ with
+$u_i=\beta_i$); curvature does not move the threshold, since the shallow length
+$\sqrt{h/c_g}$ and the steep length $h/m_i$ are sandwiched between the flat-case
+values with constants from $[c_g,C_g]$.  We obtain \eqref{eq:interp} as a valid
+\emph{upper} bound for all $u$ (the per-surface lengths $\lambda_i(h)$ each cap
+the $i$-th coordinate independently); the matching lower bound is
+Theorem~\ref{thm:cap} away from $\partial\mathcal U_p$, and is open in a
+shrinking neighborhood of the multiply-tangent directions, where the pinned
+block can degenerate jointly even though each $\lambda_i$ is controlled.
+
+\subsection{Open: uniformity over curvature-bounded families}
+
+The hypotheses we cannot remove --- and which constitute the residual open
+problem --- concern uniformity \emph{across a family} of configurations rather
+than for a single fixed one.  Two distinct gaps:
+
+\begin{problem}[Uniform constant near multiply-tangent directions]\label{prob:uniform}
+Let $\mathcal F(c_K,C_K,c_g,C_g,\gamma_0,\Gamma_0,\gamma,r_0)$ be the class of
+\emph{all} admissible configurations with the given structure constants.  Is the
+slab-volume bound of Theorem~\ref{thm:slab} uniform over $\mathcal F$ --- i.e.\
+are $a_1,L_0$ functions of the structure constants alone, with no dependence on
+the individual configuration?  Equivalently, in \eqref{eq:interp}, is the
+\emph{lower} bound uniform as $u$ approaches a codimension-$\ge2$ face of the
+normal cone, where two or more $\beta_i\to0$ simultaneously?
+\end{problem}
+
+\noindent The obstruction is genuine.  When a single $\beta_{i_0}\to0$, the
+slicing induction handles it (slice on $g_{i_0}$).  When two angles
+$\beta_{i_0},\beta_{i_1}\to0$ together, the slab projections $P_un_{i_0},
+P_un_{i_1}$ of the two near-tangent normals can themselves become nearly
+parallel, so the dual frame \eqref{eq:dual} blows up, $|f_i|\to\infty$, and the
+joint Gram of the pinned block degrades.  The trichotomy bound \eqref{eq:interp}
+remains a valid \emph{upper} bound there (it only uses the diagonal $\beta_i$),
+but the matching \emph{lower} bound requires the joint Gram of
+$\{P_un_i:\beta_i\ \text{small}\}$ to stay bounded below, which is an extra
+non-degeneracy hypothesis not implied by the per-surface structure constants.
+For a fixed configuration this is automatic (the finite set of multiply-tangent
+directions has its own positive Gram lower bound, absorbed into the
+configuration's constants); uniformly over $\mathcal F$ it is open, because the
+Gram lower bound can be made to deteriorate within the class while keeping the
+structure constants fixed.
+
+There is, however, a clean conditional positive statement.  It isolates exactly
+the extra geometry that the proof needs beyond the per-surface structure
+constants.
+
+\begin{definition}[Resolved multi-tangent geometry]\label{def:resolved}
+Fix structure constants and numbers \(\Gamma,c_{\rm sl}>0\).  A subfamily
+\(\mathcal F_{\Gamma,c_{\rm sl}}\subseteq
+\mathcal F(c_K,C_K,c_g,C_g,\gamma_0,\Gamma_0,\gamma,r_0)\) is called
+\emph{\((\Gamma,c_{\rm sl})\)-resolved} if the following two properties hold
+for every configuration in the subfamily and for every iterated one-constraint
+slice that can occur in the induction of Lemma~\ref{lem:slice}.
+\begin{enumerate}
+\item[(R1)] Every sliced truncating surface remains strictly convex with lower
+principal curvature at least \(c_{\rm sl}\) and with upper curvature and
+gradient bounds controlled by the original structure constants and
+\(c_{\rm sl}^{-1}\).
+\item[(R2)] Let \(p\) be a point of the active stratum, let \(u\) lie in the
+closed normal cone at \(p\), and let \(P_u\) denote orthogonal projection onto
+\(u^\perp\).  For every subset \(I\) of active curved truncating normals for
+which \(P_un_i(p)\ne0\), the normalized projected vectors
+\[
+e_i(u,p):=\frac{P_un_i(p)}{|P_un_i(p)|},\qquad i\in I,
+\]
+have Gram matrix bounded below by \(\Gamma I\).
+\end{enumerate}
+Condition (R1) is automatic in the clean slicing regime of
+Lemma~\ref{lem:slice}; condition (R2) is automatic for a fixed configuration
+but is not forced uniformly by the structure constants alone.
+\end{definition}
+
+\begin{proposition}[Uniform curved law under resolved multi-tangent geometry]
+\label{prop:resolved-uniform}
+On every \((\Gamma,c_{\rm sl})\)-resolved subfamily
+\(\mathcal F_{\Gamma,c_{\rm sl}}\), the slab bound of
+Theorem~\ref{thm:slab} is uniform: there are \(a_*,L_*>0\), depending only on
+the structure constants, \(n,k,\Gamma\), and \(c_{\rm sl}\), such that every
+configuration in \(\mathcal F_{\Gamma,c_{\rm sl}}\) satisfies
+\[
+\vol\Bigl(G\cap\{y:\ |\langle y-x,u\rangle|\le L\}\Bigr)
+\ge a_*\,L^{\frac{2n-j}2}
+\]
+for every \(x\in G\), every unit \(u\), and every \(0<L\le L_*\).
+Consequently the interpolation law of Corollary~\ref{cor:law} holds uniformly
+over \(\mathcal F_{\Gamma,c_{\rm sl}}\), with UDC constants depending only on
+the displayed parameters and not on the individual curved configuration.
+\end{proposition}
+
+\begin{proof}
+Repeat the proof of Proposition~\ref{prop:allcap} and
+Theorem~\ref{thm:slab}, tracking constants.  Away from a face of the normal
+cone, the lower witness box in Theorem~\ref{thm:cap} only uses bounded
+Taylor remainders, the curvature bands, and the bounded inverse of the Gram
+matrix of the projected active normals.  Condition (R2) supplies that inverse
+bound uniformly, so the dual frame \eqref{eq:dual} has
+\(|f_i|\le C(\Gamma,k)\) throughout the resolved subfamily.
+
+Near a face, the induction slices on a strongly active constraint exactly as in
+the proof of Proposition~\ref{prop:allcap}.  Condition (R1) says that the sliced
+configuration remains in the same quantitative class, while the Schur-complement
+transversality argument in Lemma~\ref{lem:slice} gives the same lower Gram bound
+for the remaining unsliced normals.  Condition (R2), imposed on all iterated
+slices, prevents the only remaining loss: simultaneous projected-normal
+degeneration in the pinned block.  Hence the inductive constants in the cap
+lower bound are functions only of \(n,k\), the structure constants,
+\(\Gamma\), and \(c_{\rm sl}\).  The coarea interval has length \(\asymp h\)
+with constants controlled by the gradient bounds, so the exponent telescopes as
+before and yields a uniform version of Proposition~\ref{prop:allcap}.
+
+The conversion from uniform cap mass to the uniform slab estimate is the same
+anchor--unimodality argument used in Theorem~\ref{thm:slab}; the inner-ball
+radius is part of the structure constants.  Finally the empirical UDC proof
+skeleton of the companion papers uses only this slab constant, the fixed VC
+dimension of the family, and the density bounds, so the high-probability
+interpolation law is uniform on the resolved subfamily.
+\end{proof}
+
+\begin{corollary}[Finite curved atlases are uniform]
+\label{cor:finite-atlas}
+Let \(\mathcal F_0=\{(K^a,g^a_1,\ldots,g^a_k):1\le a\le M\}\) be a finite
+collection of admissible curved configurations with the same \(n,k\).  After
+enlarging the structure constants to dominate the finitely many members, there
+are \(a_0,L_0>0\), depending on the finite atlas \(\mathcal F_0\), such that
+every configuration in \(\mathcal F_0\) satisfies
+\[
+\vol\Bigl(G^a\cap\{y:\ |\langle y-x,u\rangle|\le L\}\Bigr)
+\ge a_0\,L^{\frac{2n-j}2}
+\]
+for every \(a\), every \(x\in G^a\), every unit \(u\), and every
+\(0<L\le L_0\).  Consequently, for any common density bounds, the interpolation
+law of Corollary~\ref{cor:law} holds uniformly over the whole finite atlas.
+\end{corollary}
+
+\begin{proof}
+For each fixed member of the atlas, the discussion following
+Definition~\ref{def:resolved} gives constants
+\(\Gamma_a,c_{{\rm sl},a}>0\) for which that single configuration is
+\((\Gamma_a,c_{{\rm sl},a})\)-resolved: compactness and fixed-configuration
+admissibility give positive Gram minima for the projected normals and positive
+curvature floors for the slices.  Since the atlas is finite,
+\[
+  \Gamma_0:=\min_a\Gamma_a>0,\qquad
+  c_0:=\min_a c_{{\rm sl},a}>0 .
+\]
+Thus \(\mathcal F_0\) is \((\Gamma_0,c_0)\)-resolved after using common
+structure constants for all members.  Proposition~\ref{prop:resolved-uniform}
+gives the displayed slab estimate and the uniform interpolation law.
+\end{proof}
+
+\begin{corollary}[Compact resolved curved atlases are uniform]
+\label{cor:compact-atlas}
+Let \(T\) be a compact parameter space, and let
+\[
+  \mathcal F_T=\{(K^\tau,g^\tau_1,\ldots,g^\tau_k):\tau\in T\}
+\]
+be a family of admissible curved configurations with the same \(n,k\) and
+common structure constants.  Suppose there are continuous functions
+\[
+  \Gamma:T\to(0,\infty),\qquad c_{\rm sl}:T\to(0,\infty),
+\]
+such that the configuration indexed by \(\tau\) is
+\((\Gamma(\tau),c_{\rm sl}(\tau))\)-resolved.  Then there are \(a_0,L_0>0\),
+depending on the compact atlas \(\mathcal F_T\), such that every
+\(\tau\in T\) satisfies
+\[
+\vol\Bigl(G^\tau\cap\{y:\ |\langle y-x,u\rangle|\le L\}\Bigr)
+\ge a_0\,L^{\frac{2n-j}2}
+\]
+for every \(x\in G^\tau\), every unit \(u\), and every \(0<L\le L_0\).
+Consequently, for any common density bounds, the interpolation law of
+Corollary~\ref{cor:law} holds uniformly over the whole compact atlas.
+\end{corollary}
+
+\begin{proof}
+By compactness and continuity,
+\[
+  \Gamma_0:=\min_{\tau\in T}\Gamma(\tau)>0,\qquad
+  c_0:=\min_{\tau\in T}c_{\rm sl}(\tau)>0 .
+\]
+Thus the whole atlas is \((\Gamma_0,c_0)\)-resolved.  Apply
+Proposition~\ref{prop:resolved-uniform}.
+\end{proof}
+
+\begin{corollary}[\(C^2\)-neighborhoods of resolved configurations]
+\label{cor:resolved-neighborhood}
+Let
+\[
+  \{(K^\tau,g^\tau_1,\ldots,g^\tau_k):\tau\in T\}
+\]
+be a parametrized family of admissible curved configurations with common
+structure constants, and suppose the data vary continuously in \(C^2\) in the
+following local sense: after choosing finitely many graph charts for the active
+stratum and for every iterated one-constraint slice occurring in
+Lemma~\ref{lem:slice}, the graph functions, their first derivatives, and their
+Hessians depend continuously on \(\tau\) on compact chart domains.  If the
+configuration at \(\tau_0\) is \((\Gamma_0,c_0)\)-resolved, then there is a
+neighborhood \(U\) of \(\tau_0\) such that every configuration with
+\(\tau\in U\) is \((\Gamma_0/2,c_0/2)\)-resolved, after possibly restricting
+the slice-depth parameter in Lemma~\ref{lem:slice} by a factor depending only
+on the common structure constants and on the chosen charts.
+
+Consequently, on \(U\) the slab bound of Theorem~\ref{thm:slab} and the
+interpolation law of Corollary~\ref{cor:law} hold uniformly, with constants
+depending only on the common structure constants, \(n,k,\Gamma_0\), and \(c_0\).
+\end{corollary}
+
+\begin{proof}
+For the fixed configuration \(\tau_0\), the quantities in (R1) and (R2) are
+positive minima of continuous functions over compact incidence spaces: the
+active stratum is compact, there are only finitely many orders in which the
+induction can slice the \(k\) constraints, the permitted slice parameters lie
+in a compact interval after the standard depth restriction, the unit normal
+directions and pinned subsets range over compact sets, and the list of active
+subsets is finite.  By hypothesis these functions vary continuously in the
+chosen \(C^2\) charts.  Hence their minima are lower semicontinuous at
+\(\tau_0\).  After shrinking the parameter neighborhood \(U\), all sliced
+curvature floors stay above \(c_0/2\), and all projected-normal Gram minima in
+(R2) stay above \(\Gamma_0/2\).  Upper curvature, gradient, and transversality
+bounds remain controlled because the family has common structure constants and
+the charts vary \(C^2\)-continuously.  Thus the nearby configurations are
+\((\Gamma_0/2,c_0/2)\)-resolved.  Proposition~\ref{prop:resolved-uniform}
+then gives the uniform slab and UDC conclusions.
+\end{proof}
+
+\begin{corollary}[Compact \(C^2\)-continuous resolved atlases]
+\label{cor:c2-compact-atlas}
+Let \(T\) be compact, and let
+\[
+  \mathcal F_T=\{(K^\tau,g^\tau_1,\ldots,g^\tau_k):\tau\in T\}
+\]
+be a \(C^2\)-continuous atlas in the sense of
+Corollary~\ref{cor:resolved-neighborhood}, with common structure constants.
+Assume that each individual configuration in the atlas is resolved in the
+sense of Definition~\ref{def:resolved}.  Then there are \(a_0,L_0>0\) such
+that every \(\tau\in T\) satisfies
+\[
+\vol\Bigl(G^\tau\cap\{y:\ |\langle y-x,u\rangle|\le L\}\Bigr)
+\ge a_0\,L^{\frac{2n-j}2}
+\]
+for every \(x\in G^\tau\), every unit \(u\), and every \(0<L\le L_0\).
+Consequently, for any common density bounds, the interpolation law of
+Corollary~\ref{cor:law} holds uniformly over the whole compact atlas.
+\end{corollary}
+
+\begin{proof}
+For each \(\tau\in T\), choose resolved constants
+\((\Gamma_\tau,c_\tau)\) for that single configuration.  By
+Corollary~\ref{cor:resolved-neighborhood}, there is a neighborhood
+\(U_\tau\) on which the atlas is
+\((\Gamma_\tau/2,c_\tau/2)\)-resolved.  Compactness gives a finite subcover
+\(U_{\tau_1},\ldots,U_{\tau_M}\).  Set
+\[
+  \Gamma_*:=\frac12\min_{1\le a\le M}\Gamma_{\tau_a}>0,\qquad
+  c_*:=\frac12\min_{1\le a\le M}c_{\tau_a}>0 .
+\]
+Then the whole atlas is \((\Gamma_*,c_*)\)-resolved after using the common
+structure constants.  Proposition~\ref{prop:resolved-uniform} gives the
+uniform slab estimate and the uniform interpolation law.
+\end{proof}
+
+\begin{corollary}[Exhaustive resolved curved atlases]
+\label{cor:exhaustive-atlas}
+Let \(T=\bigcup_{q\ge1}T_q\), where \(T_q\subset T_{q+1}\) are compact
+parameter spaces, and let
+\[
+  \mathcal F_T=\{(K^\tau,g^\tau_1,\ldots,g^\tau_k):\tau\in T\}
+\]
+be a family of admissible curved configurations with the same \(n,k\) and common
+structure constants.  Suppose there are functions
+\[
+  \Gamma:T\to(0,\infty),\qquad c_{\rm sl}:T\to(0,\infty),
+\]
+continuous on each \(T_q\), such that the configuration indexed by \(\tau\) is
+\((\Gamma(\tau),c_{\rm sl}(\tau))\)-resolved.  Then, for each \(q\), there are
+constants \(a_q,L_q>0\) such that
+\[
+\vol\Bigl(G^\tau\cap\{y:\ |\langle y-x,u\rangle|\le L\}\Bigr)
+\ge a_q\,L^{\frac{2n-j}2}
+\]
+for every \(\tau\in T_q\), every \(x\in G^\tau\), every unit \(u\), and every
+\(0<L\le L_q\).  Consequently, for any common density bounds, the interpolation
+law of Corollary~\ref{cor:law} holds uniformly on each compact stage \(T_q\).
+
+If, in addition,
+\[
+  \inf_{\tau\in T}\Gamma(\tau)>0,\qquad
+  \inf_{\tau\in T}c_{\rm sl}(\tau)>0,
+\]
+then \(a_q,L_q\) may be chosen independently of \(q\), and the interpolation law
+is uniform over the whole atlas \(\mathcal F_T\).
+\end{corollary}
+
+\begin{proof}
+For each fixed \(q\), Corollary~\ref{cor:compact-atlas} applies to the compact
+subatlas over \(T_q\), giving constants \(a_q,L_q\).  If the two displayed
+infima over \(T\) are positive, then the whole family lies in one resolved class
+with
+\[
+  \Gamma_0=\inf_{\tau\in T}\Gamma(\tau),\qquad
+  c_0=\inf_{\tau\in T}c_{\rm sl}(\tau).
+\]
+Proposition~\ref{prop:resolved-uniform} gives one pair of constants for all
+\(\tau\in T\).
+\end{proof}
+
+\begin{corollary}[Uniform one-cut curved law under splaying]
+\label{cor:onecut-uniform}
+Fix structure constants as in Definition~\ref{def:config} and fix
+\(\chi>0\).  Let \(\mathcal F_{1,\chi}\) be the class of admissible curved
+configurations with \(k=1\) such that, for every \(p\in E\),
+\[
+  \langle \nu_K(p),n_1(p)\rangle\le -\chi .
+\]
+Then the slab bound of Theorem~\ref{thm:slab} is uniform on
+\(\mathcal F_{1,\chi}\): there are \(a_\chi,L_\chi>0\), depending only on
+\(n\), the structure constants, and \(\chi\), such that every configuration in
+\(\mathcal F_{1,\chi}\) satisfies
+\[
+\vol\Bigl(G\cap\{y:\ |\langle y-x,u\rangle|\le L\}\Bigr)
+\ge a_\chi\,L^{\frac{n+2}2}
+\]
+for every \(x\in G\), every unit \(u\), and every \(0<L\le L_\chi\).
+Consequently the interpolation law is uniform on \(\mathcal F_{1,\chi}\):
+\[
+  \ell_N\asymp\Bigl(\frac{\log N}{N}\Bigr)^{2/(n+2)}
+\]
+with constants depending only on \(n\), the density bounds, the structure
+constants, and \(\chi\).
+\end{corollary}
+
+\begin{proof}
+For \(k=1\) there is no simultaneous multi-tangent block of curved truncating
+normals.  Thus condition (R2) in Definition~\ref{def:resolved} is automatic
+with \(\Gamma=1\), since every relevant projected-normal family has at most one
+unit vector.
+
+It remains to check that the one possible slice has uniform geometry.  Slice by
+\(g_1=s\).  After this slice there are no remaining truncating surfaces, so the
+only lower-dimensional body is \(K\cap\Sigma_s\subset\Sigma_s\), where
+\(\Sigma_s=\{g_1=s\}\).  The splaying condition and the \(C^2\) bounds imply,
+after choosing \(|s|\le\delta_\chi\) with \(\delta_\chi\) depending only on the
+displayed parameters, that the dihedral angle between \(\partial K\) and
+\(\Sigma_s\) still satisfies
+\[
+  \cos\omega\le-\chi/2,\qquad \sin\omega\ge c(\gamma,\chi)>0 .
+\]
+The intersection-curvature formula \eqref{eq:intersection}, with
+\(\mathrm{I\!I}_{g_i}\) replaced by \(\mathrm{I\!I}_K\), then gives
+\[
+  \kappa_{\partial K\cap\Sigma_s,\Sigma_s}(X)
+  =
+  \frac{\mathrm{I\!I}_K(X,X)-\cos\omega\,\mathrm{I\!I}_{\Sigma_s}(X,X)}
+       {\sin\omega}
+  \ge c_\chi |X|^2
+\]
+and also an upper curvature bound \(C_\chi |X|^2\), with constants depending
+only on the structure constants and \(\chi\).  The sliced inradius and
+transversality bounds are inherited from the original inner-ball and Gram
+assumptions, as in Lemma~\ref{lem:slice}.  Hence the family
+\(\mathcal F_{1,\chi}\) is \((1,c_\chi)\)-resolved in the sense of
+Definition~\ref{def:resolved}.  Proposition~\ref{prop:resolved-uniform} gives
+the uniform slab estimate and the uniform interpolation law.  Since
+\(j=n-1-k=n-2\), the exponent is \(2/(2n-j)=2/(n+2)\).
+\end{proof}
+
+\begin{corollary}[Uniform one-cut curved law under curvature dominance]
+\label{cor:onecut-curvdom}
+Fix structure constants as in Definition~\ref{def:config} and fix
+\(\chi>0\).  Let \(\mathcal F^{\rm dom}_{1,\chi}\) be the class of admissible
+curved configurations with \(k=1\) such that, for every \(p\in E\),
+\[
+  c_K-\max\{\langle\nu_K(p),n_1(p)\rangle,0\}\,\frac{C_g}{\gamma_0}\ge\chi .
+\]
+Then the slab bound of Theorem~\ref{thm:slab} is uniform on
+\(\mathcal F^{\rm dom}_{1,\chi}\): there are \(a_{\rm dom},L_{\rm dom}>0\),
+depending only on \(n\), the structure constants, and \(\chi\), such that every
+configuration in \(\mathcal F^{\rm dom}_{1,\chi}\) satisfies
+\[
+\vol\Bigl(G\cap\{y:\ |\langle y-x,u\rangle|\le L\}\Bigr)
+\ge a_{\rm dom}\,L^{\frac{n+2}2}
+\]
+for every \(x\in G\), every unit \(u\), and every \(0<L\le L_{\rm dom}\).
+Consequently the interpolation law is uniform on
+\(\mathcal F^{\rm dom}_{1,\chi}\):
+\[
+  \ell_N\asymp\Bigl(\frac{\log N}{N}\Bigr)^{2/(n+2)}.
+\]
+In particular, if \(c_K>C_g/\gamma_0\), then every one-cut admissible family
+with the given structure constants is covered, with
+\(\chi=c_K-C_g/\gamma_0\).
+\end{corollary}
+
+\begin{proof}
+As in Corollary~\ref{cor:onecut-uniform}, condition (R2) of
+Definition~\ref{def:resolved} is automatic for \(k=1\), because there is at
+most one projected truncating normal in any pinned block.  We only need a
+uniform lower curvature bound for the single slice \(K\cap\Sigma_s\subset
+\Sigma_s\), where \(\Sigma_s=\{g_1=s\}\).
+
+The level-surface curvature bound in the proof of Lemma~\ref{lem:slice} gives
+\(\mathrm{I\!I}_{\Sigma_s}\preceq (C_g/\gamma_0)I\).  The margin assumption and
+the \(C^2\) bounds imply that, after restricting to \(|s|\le\delta_\chi\) with
+\(\delta_\chi\) depending only on the displayed parameters,
+\[
+  c_K-\max\{\cos\omega,0\}\,\frac{C_g}{\gamma_0}\ge\chi/2,
+  \qquad \sin\omega\ge c(\gamma)>0,
+\]
+for the dihedral angle \(\omega\) between \(\partial K\) and \(\Sigma_s\).
+Therefore the intersection-curvature formula \eqref{eq:intersection}, again
+with \(\mathrm{I\!I}_{g_i}\) replaced by \(\mathrm{I\!I}_K\), yields
+\[
+  \kappa_{\partial K\cap\Sigma_s,\Sigma_s}(X)
+  =
+  \frac{\mathrm{I\!I}_K(X,X)-\cos\omega\,\mathrm{I\!I}_{\Sigma_s}(X,X)}
+       {\sin\omega}
+  \ge c_{\rm dom}|X|^2,
+\]
+with \(c_{\rm dom}>0\) depending only on the structure constants and \(\chi\).
+The corresponding upper curvature, inradius, and transversality bounds are
+controlled in the same way as in Lemma~\ref{lem:slice}.  Hence
+\(\mathcal F^{\rm dom}_{1,\chi}\) is \((1,c_{\rm dom})\)-resolved, and
+Proposition~\ref{prop:resolved-uniform} gives the uniform slab estimate and the
+uniform interpolation law.  The final assertion follows because
+\(\max\{\langle\nu_K,n_1\rangle,0\}\le1\).
+\end{proof}
+
+\begin{corollary}[Uniform one-cut law under nonobtuse contact]
+\label{cor:onecut-nonobtuse}
+Fix structure constants as in Definition~\ref{def:config}.  Let
+\(\mathcal F^{\rm no}_{1}\) be the class of admissible curved configurations
+with \(k=1\) such that, for every \(p\in E\),
+\[
+  \langle\nu_K(p),n_1(p)\rangle\le0 .
+\]
+Then the slab bound of Theorem~\ref{thm:slab} is uniform on
+\(\mathcal F^{\rm no}_{1}\): there are \(a_{\rm no},L_{\rm no}>0\), depending
+only on \(n\) and the structure constants, such that every configuration in
+\(\mathcal F^{\rm no}_{1}\) satisfies
+\[
+\vol\Bigl(G\cap\{y:\ |\langle y-x,u\rangle|\le L\}\Bigr)
+\ge a_{\rm no}\,L^{\frac{n+2}2}
+\]
+for every \(x\in G\), every unit \(u\), and every \(0<L\le L_{\rm no}\).
+Consequently the interpolation law is uniform on \(\mathcal F^{\rm no}_{1}\):
+\[
+  \ell_N\asymp\Bigl(\frac{\log N}{N}\Bigr)^{2/(n+2)} .
+\]
+\end{corollary}
+
+\begin{proof}
+For every configuration in \(\mathcal F^{\rm no}_{1}\),
+\[
+  c_K-\max\{\langle\nu_K(p),n_1(p)\rangle,0\}\frac{C_g}{\gamma_0}
+  \ge c_K
+  \qquad(p\in E).
+\]
+Thus the class is contained in
+\(\mathcal F^{\rm dom}_{1,c_K/2}\).  Corollary~\ref{cor:onecut-curvdom}
+gives the uniform slab estimate and interpolation law.
+\end{proof}
+
+\begin{problem}[Separation of curvatures]\label{prob:factor}
+In the simplicial model the cap constant factored through the stratum curvature
+$Q$ and the truncation angles separately.  Quantify the failure for curved data:
+find the sharp dependence of $b_1,b_2$ on the joint second fundamental form
+$Q_K|_V+\sum_iQ_i|_V$ versus the separate forms, and determine whether a
+factorized lower bound
+$b_1\ge c\,(\det Q_K|_V)^{-1/2}\prod_i\phi(\text{angle}_i)$ holds with $\phi$
+independent of the cross-curvature.  Remark~\ref{rem:factor} shows the cross
+blocks are lower order at the cap scale, so a factorized bound holds \emph{up to
+a multiplicative constant depending on the condition number of the joint form};
+whether that constant can be removed --- giving a clean product formula as in the
+flat case --- is open.
+\end{problem}
+
+We summarize the honest status.  \emph{Fixed smooth strictly convex family, in
+general position, transversal along a $j$-stratum: the interpolation law
+$\Theta((\log N/N)^{2/(2n-j)})$ holds, with the same exponent and logarithm as
+the flat case, and constants determined by the configuration's curvature and
+transversality data} (Corollary~\ref{cor:law}).  Away from multiply-tangent
+directions the estimates are controlled by the stated nondegeneracy constants;
+Corollary~\ref{cor:onecut-uniform} gives a fully uniform one-curved-cut theorem
+under quantitative splaying, and Corollary~\ref{cor:onecut-curvdom} gives the
+same uniform law in the curvature-dominated oblique one-cut regime, with
+Corollary~\ref{cor:onecut-nonobtuse} recording the nonobtuse-contact
+specialization.  The atlas
+corollaries, Corollaries~\ref{cor:finite-atlas} and \ref{cor:compact-atlas},
+cover any finite menu of fixed curved geometries, and any compact atlas whose
+resolved constants vary continuously and stay positive; the local stability and
+finite-subcover form in Corollaries~\ref{cor:resolved-neighborhood} and
+\ref{cor:c2-compact-atlas} show that resolved \(C^2\)-continuous compact
+atlases are uniform even when one checks the resolved geometry point by point.
+The remaining curvature-band-uniform slab/lower constants are open only where
+these one-cut slice-curvature criteria fail, where no compact \(C^2\)-resolved
+atlas controls the degeneration, or in the shrinking multi-tangent regime
+(Problems~\ref{prob:uniform}--\ref{prob:factor}).
+As a fixed-family assertion, the exponent is settled for every first-order
+active stratum: it is $(2n-j)/2$ for that stratum, and the trichotomy bound
+\eqref{eq:interp} is the fixed-configuration interpolant across strata.
+
+\section{Concluding remarks}\label{sec:concl}
+
+The curved case isolates exactly which features of the simplicial proof are
+essential and which are conveniences.  The orthogonality $\langle
+w,\tilde u\rangle=0$ of the orthogonal model and the biorthogonal frame
+$\langle f_i,a_{i'}\rangle=\delta_{ii'}$ of the general-position simplicial
+proof are conveniences: both are devices to decouple the $k$ constraints in the
+level functional, and both are replaced here by a single completing-the-square
+in the slab coordinates, valid because the cross blocks of the joint second
+fundamental form are lower order ($O(h)$) at the cap scale ($\sqrt h$).  The
+essential feature is the \emph{linear pinning}: each transversal constraint
+contributes a full factor $h$ through its first-order part, and this survives
+curvature because the strictly convex correction is quadratic, hence $O(h^2)$ in
+the pinned variable.  The only place curvature could change the exponent is the
+near-tangent regime $\beta_i\lesssim\sqrt h$, and there it does not change the
+exponent of the relevant stratum --- it relabels which stratum is active, with
+the trichotomy threshold $\sqrt h$ identical to the flat case.
+
+Within the stability theory of \cite{BJS,ShmaloUDC} the conclusion is the same
+as for flat truncations for each fixed smooth activation geometry: the finest
+resolution at which i.i.d.\ data certify the doubling condition is set by the
+most isolated extremal sample point of the lowest transversal stratum of the
+truncation geometry, with the exponent ladder $\frac2{n+1},\dots,\frac1n$
+governed by the stratum dimension and \emph{not} by the curvature of the
+truncating surfaces.  The remaining quantitative question --- a curvature-band-
+and transversality-band-uniform lower/slab constant near the multiply-tangent
+directions --- is the
+honest residue, and is the natural next target.
+
+\subsection*{Acknowledgments}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and innovation
+programme (grant agreement No.\ 101041711), by the Israel Science Foundation
+(grant number 2258/19) and by the Israel Science Foundation (ISF Grant
+4101/25).
+
+\subsection*{Declaration on generative AI}
+During the preparation of this work the author used generative AI tools to
+accelerate drafting and revision.  All mathematical claims, proofs, and
+bibliographic information were subsequently reviewed and edited by the author,
+who takes full responsibility for the content of the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{BJS}
+L.~Berlyand, P.-E.~Jabin and C.~A.~Safsten,
+\emph{Stability for the training of deep neural networks and other classifiers},
+Math.\ Models Methods Appl.\ Sci.\ \textbf{31} (2021), 2345--2390.
+
+\bibitem{ShmaloUDC}
+Y.~Shmalo,
+\emph{Stability of accuracy for the training of DNNs via the uniform doubling
+condition}, Ann.\ Math.\ Artif.\ Intell.\ (2024),
+DOI 10.1007/s10472-023-09919-1.
+
+\bibitem{companion2}
+Y.~Shmalo, \emph{The uniform doubling condition holds with high probability for
+independent samples}, manuscript, 2026.
+
+\bibitem{companion3}
+Y.~Shmalo, \emph{The critical scaling of the uniform doubling condition: smooth
+bodies versus truncations}, manuscript, 2026.
+
+\bibitem{companion4}
+Y.~Shmalo, \emph{The logarithm is necessary: exact critical scaling of the
+uniform doubling condition on the ball}, manuscript, 2026.
+
+\bibitem{companion11}
+Y.~Shmalo, \emph{The interpolation law for the critical scaling of the uniform
+doubling condition}, manuscript, 2026.
+
+\bibitem{companion6}
+Y.~Shmalo, \emph{The edge exponent of the uniform doubling condition and an
+interpolation conjecture}, manuscript, 2026.
+
+\bibitem{companion9}
+Y.~Shmalo, \emph{The interpolation law for the uniform doubling condition in
+general position}, manuscript, 2026.
+
+\end{thebibliography}
+
+\end{document}

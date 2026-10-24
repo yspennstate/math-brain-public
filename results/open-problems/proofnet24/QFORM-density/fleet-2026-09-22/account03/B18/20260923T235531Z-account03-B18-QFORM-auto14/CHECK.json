@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T235531Z-account03-B18-QFORM-auto14",
+  "result_id": "QFORM-ONE-SIDED-CROSS-SQUARE-LP-v1",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "rv_linear_form_scaling",
+      "claim": "normalized coefficient vector gives density cap sqrt(2)/||c|| for c^T X",
+      "status": "PASS"
+    },
+    {
+      "name": "negative_moment_bathtub",
+      "claim": "if density h<=K and 0<theta<1 then E|Z|^-theta <= (2K)^theta/(1-theta)",
+      "status": "PASS"
+    },
+    {
+      "name": "cross_bank_Lp",
+      "claim": "||p_R||_p <= [q/(q-1)](4/sigma)^(1/q), p=q/(q-1)",
+      "status": "PASS"
+    },
+    {
+      "name": "square_Lq",
+      "claim": "||p_(aW^2+dW)||_q <= [2^(q-1)/(2-q)]^(1/q)|a|^(-1+1/q)",
+      "status": "PASS"
+    },
+    {
+      "name": "q_three_halves_constant",
+      "claim": "general coefficient is 12*2^(1/3) multiplying (|a| sigma^2)^(-1/3)",
+      "numeric": 15.119052598738475,
+      "status": "PASS"
+    },
+    {
+      "name": "physical_2buv_constant",
+      "claim": "for sigma=2|b| coefficient becomes 12/2^(1/3) multiplying (|a|b^2)^(-1/3)",
+      "numeric": 9.524406311809196,
+      "status": "PASS"
+    },
+    {
+      "name": "partner_coefficient",
+      "claim": "576^(1/3)",
+      "numeric": 8.320335292207616,
+      "status": "PASS"
+    },
+    {
+      "name": "partner_crossing_threshold",
+      "claim": "new q=3/2 bound beats partner B18 r5 on B_c iff c > (12/2^(1/3))/576^(1/3)",
+      "numeric": 1.1447142425533319,
+      "status": "PASS"
+    },
+    {
+      "name": "c64_comparison",
+      "new_bound": 2.381101577952299,
+      "partner_bound": 133.12536467532183,
+      "status": "PASS"
+    },
+    {
+      "name": "continuity_gate",
+      "claim": "p_R in L^p and square density in L^q for conjugate finite p,q imply convolution in C_0",
+      "status": "PASS"
+    }
+  ],
+  "forbidden_shortcuts_used": [],
+  "full_target_status": "OPEN",
+  "continuity": "PROVED_IN_THE_STATED_SUPPORTING_SCOPE_ONLY",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

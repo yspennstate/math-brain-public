@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260924T041058Z-account01-B15-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit": "3f2118cc9b0bf54a56927d642e7183d7f4413318",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "no-uniform-pointwise-quadratic-Fourier-decay",
+    "no-rotated-independence-assumption",
+    "no-projection-X-ray-only-shortcut",
+    "no-worst-fibre-conditional-cap-shortcut"
+  ],
+  "mathematical_premises": [
+    "Weak convergence plus a common L-infinity density cap preserves that cap in the limit by Portmanteau and outer regularity.",
+    "For probability measures, the bounded-Lipschitz metric metrizes weak convergence.",
+    "L1 convolution belongs to C0; L-infinity*L1 Young inequality preserves a paid height.",
+    "Latest designated partner account02/B15 source-pinned at math-open-problems@dbd7533d035ea02a097cf9ff573e9a5d65038f7a proves ||p_R||inf<=2+3log2 for R=4XY+U^2+2UV+V^2/4 under arbitrary independent cap-one laws, and the stated one-sheet tent inequality."
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-WEAK-HEIGHT-TO-UNIFORM-C0-v1",
+      "status": "proved_supporting_lemma",
+      "statement": "If mu_n=>mu, every mu_n has density p_n with ||p_n||inf<=M, and g is any fixed probability density, then mu has density p with ||p||inf<=M and ||p_n*g-p*g||inf->0; every convolved density lies in C0 and retains height <=M. The result extends to g_n->g in L1."
+    },
+    {
+      "id": "QFORM-TENT-HEIGHT-CERTIFICATE-v1",
+      "status": "proved_supporting_lemma",
+      "statement": "For a finite positive measure nu, nu<=M dx iff int (epsilon-|x-y|)_+ dnu(x)<=M epsilon^2 for every y and epsilon>0."
+    },
+    {
+      "id": "QFORM-WEAK-NOT-UNIFORM-WITHOUT-SMOOTHING-v1",
+      "status": "proved_interface_obstruction",
+      "statement": "p_n=[1/2+(1/4)sin(pi n x)]1_[0,2] are cap-one probability densities converging weakly to (1/2)1_[0,2], while ||p_n-p||inf=1/4 for every n."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "source": "yspennstate/math-open-problems@dbd7533d035ea02a097cf9ff573e9a5d65038f7a:proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260924T030155Z-account02-B15-auto11-62cf32/REPORT.md",
+    "application": "For R=4XY+U^2+2UV+V^2/4, partner pays M_*=2+3log2. Adding an independent original-coordinate W^2 gives Q=R+W^2 with p_Q in C0 and ||p_Q||inf<=M_*. Under coordinatewise weak perturbation of the first four cap-one inputs, the smoothed output densities converge uniformly with the same height cap. The partner one-sheet tent inequality also yields the exact submeasure bound nu<=pi dx through the new tent certificate."
+  },
+  "canonical_scientific_commit": "d37b09c54dff562de63a77020dfcaa1a6e1720da",
+  "canonical_scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260924T041058Z-account01-B15-auto11/REPORT.md",
+  "handoff_commit": "3bd5e18736f4c9775125e45e68c6cd967c4d64d2",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B15/20260924T041058Z-account01-B15-auto11.md",
+  "unresolved_implication": "The full universal height remains open because a general s_3(A)>=1 matrix need not split in original coordinates into a universally paid receiver plus an independent additive AC smoothing block. A dimension-free aggregate-before-inversion/coupled receiver is still required before regularity compilers can finish the argument.",
+  "next_step": "Seek a coupled analogue of the weak-height smoothing compiler that can retain a smoothing coordinate in the presence of original-coordinate cross terms, without conditioning to a worst-fibre cap; alternatively feed the compiler only after a grouped/ridge aggregate receiver has paid a universal height.",
+  "status": "WEAK_HEIGHT_TO_UNIFORM_C0_COMPILER_PROVED_PARTNER_APPLIED_FULL_QFORM_OPEN",
+  "updated_utc": "2026-09-24T04:18:30Z"
+}

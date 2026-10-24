@@ -1,0 +1,126 @@
+[
+  {
+    "claim_id": "A096-SELECTIVE-FRONTIER-LIKELIHOOD-TRANSFER",
+    "version": 1,
+    "exact_statement": "Let g be any Boolean function on a finite uniform cube, m=ghat(empty)^2. Let D be a nonnegative subprobability with D(empty)=m and finite c=CE(P_g,D). Supply normalized S,Q with S>=D, Q(empty)>=m, and Q(T)>=gamma D(T) for every nonempty T, 0<gamma<=1. For every finite adaptive tree querying fresh physical coordinates per path, at any chosen subset of stopping leaves reset to the direct marginal of S with ONE final vacuum calibration to the actual child mean-square, using the explicit empty point law for constant children; all other leaves retain the full inherited direct marginal of Q. Expected spectral erasure debits plus all complete terminal cross entropies are at most c+(1-m^2)log2(1/gamma). More sharply the excess is at most log2(1/gamma) times the sum over retained leaves of physical reach times [(1-m)+m Var(g_leaf)]. An arbitrary continuation below a fresh frontier leaf, with further calibrations of the CURRENT inherited reference, is paid by the complete-reference chain and nonpositive calibration costs; retained old frontier leaves admit no-reset continuation. This supplies no influence-priced reference, no likelihood floor for arbitrary incoming profiles, and no repeated return to the ORIGINAL source marginal after intervening calibrations. Entropy units bits.",
+    "hypotheses": [
+      "Uniform finite Boolean physical cube; fresh physical coordinates per path; arbitrary finite adaptive stopping",
+      "D is only an auxiliary subprobability, never an actual supplied reference",
+      "Normalized S,Q, supplied occupied-support likelihood floor and finite source comparison cost",
+      "All final references include their full vacuum, ghosts and normalizers; each first reset uses one final calibration from the original S marginal; later calibrations use the CURRENT reference"
+    ],
+    "statement_sha256": "8b8a71cb40c53d689cc4939c1b157a41d6c345a377c865d963a587da89bfc7da",
+    "contributors": [
+      "A096; occupied-support likelihood floor credited to A085 and upstream A097/A073; original live bank credited to A096/A097/A073"
+    ],
+    "proof_source": {
+      "run_id": "20261023T010221Z-account03-A096-live-gap-ledger",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check.py",
+        "out/FROZEN_SPEC.json",
+        "out/VALIDATION.json",
+        "out/POSITIVE_RESET_WITNESS.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "ANALYTIC_PROOF_WITH_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A085",
+      "A094",
+      "A097",
+      "A073",
+      "A050",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-ARBITRARY-EXIT-FRONTIER-SAME-ANCESTOR",
+    "version": 1,
+    "exact_statement": "For every negative-cell point edit F=1-2A_a+2A_(a+b+r), a>=1,b>=0,r>=1,d=b+r>=2, supply an original finite-cost source reference with raw CE<=C0 I(1-2A_a), C0>=0, and use exactly the upstream canonical complete references and eligible paid live active/dummy/control substitutions. In each retained exit created by a dummy query b>=1 or control query r>=2, permit any finite adaptive physical query tree, with any chosen terminal subset reset to the direct marginal of the source R at its creating live node followed by ONE final empty calibration (constant children use explicit point laws); every other terminal keeps its complete inherited old reference. For any collection of such exits, all actual live and exit erasure debits and all complete terminal CE are paid by the SAME original K I(F_root), K=2C0+10, with residual at least 7e_root, e_root=2^(1-a_root-b_root-r_root). Local exit cost is <c+22e, and its creating nonactive transaction costs <W+13e, W=c+10e(a+b+r). Structural R=P_g permits C0=4 and retains original rate18. Further CURRENT-reference calibrations below fresh frontier leaves, and no-reset continuations, are paid. No descendant bank is renewed; repeated returns to ORIGINAL source marginals after intermediate calibration are outside scope. This is a supplied-source theorem, not universal FEI.",
+    "hypotheses": [
+      "Actual negative-cell point edit and eligible creating query with b+r>=2",
+      "All upstream paid live substitutions are used at their exact source-bound scope",
+      "Each exit has an unreset original inherited Q; first resets occur at a stopping frontier; subsequent CURRENT-reference calibration is paid; repeated original-source resets are outside scope",
+      "Original source-price hypothesis supplied once; signed reset costs may be positive"
+    ],
+    "statement_sha256": "f4473c247ebca38c5ce095a4826ea6b6266c99d970540fbc79990f31a9af18a4",
+    "contributors": [
+      "A096; occupied-support likelihood floor credited to A085 and upstream A097/A073; original live bank credited to A096/A097/A073"
+    ],
+    "proof_source": {
+      "run_id": "20261023T010221Z-account03-A096-live-gap-ledger",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check.py",
+        "out/FROZEN_SPEC.json",
+        "out/VALIDATION.json",
+        "out/POSITIVE_RESET_WITNESS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A096-SELECTIVE-FRONTIER-LIKELIHOOD-TRANSFER",
+        "version": 1,
+        "statement_sha256": "8b8a71cb40c53d689cc4939c1b157a41d6c345a377c865d963a587da89bfc7da",
+        "source": "CLAIMS.json"
+      },
+      {
+        "claim_id": "A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK",
+        "version": 1,
+        "statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A097\\runs\\20261014T050248Z-account05-A097-cross-route-transfer\\CLAIMS.json",
+        "scope": "Complete canonical floor source cost and original K=2C0+10 source bank."
+      },
+      {
+        "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "880fb220d1fc83bf09b9dfca52d0f140e30153bf914870518799efdd2074d91c",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261021T210221Z-account03-A096-live-gap-ledger\\CLAIMS.json",
+        "scope": "Paid live active substitutions and explicit last-active boundary; original author proof now independently reviewed in A097 source record."
+      },
+      {
+        "claim_id": "A097-MIXED-ACTIVE-CONTROL-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "5088d7a3a3a3b0711a953971e4faf8a884d2f24692a79bb4d1766378f33d91bf",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A097\\runs\\20261021T232544Z-account03-A097-cross-route-transfer\\CLAIMS.json",
+        "scope": "Eligible control live substitution and ancestor reserve only."
+      },
+      {
+        "claim_id": "A073-DUMMY-DATA-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "a401aa4e8fbc271219f0edd6985a2c6594aaf1ba7d461957fbda24e556be907e",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261022T211534Z-account03-A073-certified-logarithms\\CLAIMS.json",
+        "scope": "Eligible dummy live substitution, source marginalization policy, root reserve."
+      },
+      {
+        "claim_id": "A085-POSTQUERY-EXIT-DIRECT-SOURCE-RESET",
+        "version": 1,
+        "statement_sha256": "61e5992e820e9708808f972d707a3b71d8431c8fa2d17c15787c7279f9000e84",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A085\\runs\\20261022T234859Z-account03-A085-certificate-adversary\\CLAIMS.json",
+        "scope": "Only PROOF.md section2 occupied-support likelihood floor; its coefficient algebra is reconstructed in this run, not blanket acceptance of the integrated candidate."
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTIC_PROOF_WITH_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A085",
+      "A094",
+      "A097",
+      "A073",
+      "A050",
+      "A099",
+      "B20"
+    ]
+  }
+]

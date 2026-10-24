@@ -1,0 +1,46 @@
+{
+  "helper": "A015-SUBPROB-TRANSPORT-AND-CENTRAL-REVIEW@1",
+  "pilot": true,
+  "transport": {
+    "functions": 8,
+    "queries": 96,
+    "source_orders": 24,
+    "negative_control": {
+      "table": 232,
+      "function": "Maj3",
+      "reference": 3,
+      "wrong_exp": "1485580754685888/2635510670700625",
+      "power": 4,
+      "correct_exp": "2241043066502564337113666420736/2133116898874719645251892435625",
+      "correct_power": 4
+    }
+  },
+  "central": {
+    "physical": [
+      {
+        "k": 1,
+        "n": 4,
+        "I": "3/2",
+        "sectors": [
+          "1/64",
+          "27/64",
+          "27/64",
+          "9/64"
+        ]
+      }
+    ],
+    "queue": [
+      {
+        "k": 1,
+        "outputs": 15,
+        "good": 8,
+        "bad": 7,
+        "selected_mass_upper": "159453990119167801556293350883013442601167161090322813533937664/523266025780992325995411081880157184939568095300503618206490625"
+      }
+    ],
+    "threshold_FEI_dependency": "Established threshold Theorem A, Creg<9; analytic review is conditional only on this accepted source baseline"
+  },
+  "assertions": 1831,
+  "elapsed_seconds": 0.0906,
+  "script_sha256": "2fd53c12825dfa36d900de4e4b41a78478b264aa1559751a28f20a4700e8609b"
+}

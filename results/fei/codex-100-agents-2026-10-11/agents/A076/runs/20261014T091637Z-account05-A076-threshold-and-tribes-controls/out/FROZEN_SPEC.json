@@ -1,0 +1,13 @@
+{
+  "helper_version": "A076 exact FWHT/Fraction log helper copied byte-for-byte from stage5 arithmetic.py; check_phase.py v1",
+  "actual_Boolean_family": "F(s,x)=quadratic_bent_H(s)*(1+1{s=0}*(V(x)-1)); all labelled V up to 3 private bits; separate point-edit original mux private histories and literal/parity obstructions",
+  "parameter_domain": {"pilot_k": [4], "pilot_private_n": [0,1,2], "full_k": [4,6], "full_private_n": [0,1,2,3], "point_history_k": [4,6], "point_history_m": [2,3,4], "compressed_k": [4,6,8,16,32,64]},
+  "case_count": "Pilot22 roots, full556 roots (2*(2+4+16+256)); all labelled root private coordinates and both actual children. Point histories6 roots; compressed12 literal/parity fixtures. No symmetry quotient.",
+  "arithmetic": "Integer FWHT, Fraction spectra/edges, rational log expressions with 24-term atanh-series proved remainder and outward70-bit dyadic enclosures; exact prime-exponent zero tests",
+  "memory_estimate_MB": 180,
+  "maximum_runtime_seconds": 300,
+  "pilot_maximum_runtime_seconds": 60,
+  "symmetry": "none; compressed high-k uses proved bent row multiplicities rather than sampling truth tables",
+  "no_automatic_dimension_escalation": true,
+  "frozen_before_search": true
+}

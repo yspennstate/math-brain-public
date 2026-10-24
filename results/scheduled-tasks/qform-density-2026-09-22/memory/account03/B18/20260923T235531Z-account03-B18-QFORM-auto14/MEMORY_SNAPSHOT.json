@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B18",
+  "run_id": "20260923T235531Z-account03-B18-QFORM-auto14",
+  "control_start_commit": "21a9017c63297ddde032b58a83f739815ee8e21f",
+  "control_publication_refresh_commit": "34bacffd69ad98d6af3c73646612c4eed6d8e5a2",
+  "control_revision": "2026-09-22.15",
+  "owner_request_acknowledged": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "new_result_ids": [
+    "QFORM-ONE-SIDED-CROSS-SQUARE-LP-v1"
+  ],
+  "scientific_repository": "yspennstate/math-open-problems",
+  "scientific_commit": "a39a4b80dcf523ed26c8e978d738520fbf8feaf1",
+  "scientific_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260923T235531Z-account03-B18-QFORM-auto14/",
+  "handoff_commit": "f6fee95f98a637449fb11d6b2293057c54e87e8b",
+  "mathematical_premises": [
+    {
+      "source": "Rudelson-Vershynin arXiv:1402.4492 Theorem 1.2",
+      "scope": "independent one-dimensional inputs with densities bounded by K; normalized scalar linear form density <= sqrt(2)K"
+    },
+    {
+      "source": "elementary bathtub rearrangement",
+      "scope": "negative moments under a scalar density cap"
+    },
+    {
+      "source": "account03/B15 correction QFORM-B15-NONZERO-SQUARE-AFFINE-SLOPE-RESCUE-FALSE-v1",
+      "scope": "translation-uniform square Lq bound; nonzero affine slope gives no extra universal smoothing"
+    }
+  ],
+  "partner_result_applied": {
+    "account": "account04",
+    "slot": "B18",
+    "result": "QFORM-4COORD-NULLHUB-WINDOW-EDGE-DICHOTOMY-v1",
+    "scientific_commit": "84fa5922df082f90064dea4d22a600a60e799803",
+    "application": "on B_c with spectrum {1,-1,c,0}, partner gives 576^(1/3)c^(2/3) and new theorem gives (12/2^(1/3))c^(-1/3); at c=64 values are 133.12536 and 2.38110"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-B15-NONZERO-SQUARE-AFFINE-SLOPE-RESCUE-FALSE-v1"
+  ],
+  "unresolved_implication": "From bare s3(A)>=1, extract at uniform scale a product-preserving one-sided zero-curvature cross bank plus disjoint scalar square, or route failure into an existing paid receiver while retaining arbitrary extra spectrum.",
+  "next_step": "Test the fully source-entangled failure of the one-sided-cross-plus-square pattern against grouped-cross/ridge/volume decomposition; seek an aggregate alternative that spends the square without requiring an exactly zero X-side quadratic block.",
+  "full_target_status": "OPEN",
+  "continuity_status": "PROVED_ONLY_IN_NEW_SUPPORTING_SCOPE; FULL_TARGET_OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "native_receiver_use": false,
+  "privacy_review": "abstract mathematics and public source metadata only; no credentials, personal, financial, company/client, machine-path, signed-URL, or scheduler-ID content"
+}

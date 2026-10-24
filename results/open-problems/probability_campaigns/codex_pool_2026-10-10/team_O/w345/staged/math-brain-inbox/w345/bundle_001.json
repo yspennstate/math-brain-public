@@ -1,0 +1,535 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w345",
+  "bundle_slug": "w345-first-ten-problem-results-20261010",
+  "entries": [
+    {
+      "key": "c0143-question-context",
+      "namespace": "probability.percolation",
+      "logical_name": "exponential-infinite-cluster-contact-tail-transitive-graphs-question",
+      "kind": "concept",
+      "title": "C0143: exponential tail for finite-cluster contacts, cached question",
+      "statement": "CACHED QUESTION; current resolution not verified. For a transitive graph G, is the probability that a finite origin cluster has more than n graph-edge contacts with an infinite open cluster bounded by C_p exp(-c_p n) for every fixed p>p_c(G)? The cached intake attributes this to Pete, Conjecture 12.32, p.169, and leaves the possible unimodularity hypothesis unsettled. This context node records the question, not an accepted theorem or an up-to-date openness claim.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:c0143-question-context",
+        "url": "file:///~/brain_workers/w345/proofs/c0143-question-context.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "CACHED QUESTION; current resolution not verified. For a transitive graph G, is the probability that a finite origin cluster has more than n graph-edge contacts with an infinite ope"
+      }
+    },
+    {
+      "key": "fringe-clt-uniform-error-threshold",
+      "namespace": "probability.random-trees",
+      "logical_name": "fringe-clt-uniform-error-threshold",
+      "kind": "lemma",
+      "title": "Quantitative sufficient condition for transferring a leaf-sum CLT",
+      "statement": "Let X_n and Y_n be integrable sums of n leaf scores on one coupled probability space. Suppose every corresponding score differs in absolute value by at most epsilon_n, and sqrt(n)*epsilon_n tends to zero. If (Y_n-E Y_n)/sqrt(n) converges in distribution to N(0,sigma^2), then (X_n-E X_n)/sqrt(n) has the same limit. In particular, a sufficient quantitative locality condition is a coupling of finite-tree scores to the stationary scores with uniform score error o(n^(-1/2)). Scope: No such coupling or error bound has been proved here for DTCS(n). A stationary CLT and qualitative local convergence alone do not provide it.",
+      "proof_text": "Author-checked proof; independent audit pending. The pathwise sum difference is bounded by n*epsilon_n and the difference of the expectations by the same quantity. Hence the absolute difference of the centered normalized sums is at most 2*sqrt(n)*epsilon_n, which tends to zero. For any real x and eta>0, their distribution functions are squeezed between the distribution function of the Y sum at x-eta and x+eta for all sufficiently large n. Continuity of the Gaussian distribution function proves the assertion, including a constant limit by the usual convergence-in-probability version. This is an explicit transfer criterion, not a proof that the beta-splitting model supplies the coupling.",
+      "assumptions": [
+        "Integrable scores and a common coupling",
+        "A deterministic uniform per-score error bound",
+        "sqrt(n)*epsilon_n -> 0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:fringe-clt-uniform-error-threshold",
+        "url": "file:///~/brain_workers/w345/proofs/fringe-clt-uniform-error-threshold.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "Let X_n and Y_n be integrable sums of n leaf scores on one coupled probability space. Suppose every corresponding score differs in absolute value by at most epsilon_n, and sqrt(n)*"
+      }
+    },
+    {
+      "key": "retained-root-fringe-perturbation-threshold",
+      "namespace": "probability.random-trees",
+      "logical_name": "retained-root-fringe-perturbation-threshold",
+      "kind": "lemma",
+      "title": "Three fluctuation regimes for the earlier retained-root perturbation",
+      "statement": "Assume finite binary trees retain an identifiable original degree-two root after leaf rerooting, and their ordered root split law is q_n(i)=n/(2 H_(n-1) i(n-i)), 1<=i<n. Let B_n indicate min(i,n-i)<=floor(sqrt(n)), let p_n=E B_n, and give every leaf the same score f_a=n^(-a)(B_n-p_n), with score zero on infinite trees and a>0. The finite centered score sum divided by sqrt(n) is n^(1/2-a)(B_n-p_n). It is not tight for 0<a<1/2, converges to a two-point law at a=1/2, and tends uniformly to zero for a>1/2. Every infinite-tree score is zero. Scope: This is a conditional topology-specific obstruction with a degenerate infinite CLT. It is not a checked solution of Open Problem 12. A concrete nondegenerate beta-splitting counterexample remains open in this packet.",
+      "proof_text": "Author-checked proof; independent audit pending. For n>=9 put k=floor(sqrt(n))<n/2. Since q_n(i)=(1/i+1/(n-i))/(2 H_(n-1)), symmetry gives p_n=(H_k+H_(n-1)-H_(n-k-1))/H_(n-1). The first numerator term is (1/2) log n+O(1), and the other difference is at most k/(n-k)=O(n^(-1/2)); H_(n-1)=log n+O(1). Thus p_n ->1/2. Both possible values of B_n-p_n have absolute value approaching 1/2. Multiplication by n^(1/2-a) gives the three stated regimes. The scores have expectation zero exactly. On bounded-degree trees with the retained-root topology, every finite tree is isolated locally, while convergence to an infinite tree forces the leaf count to diverge. Therefore |f_a|<=n^(-a) proves continuity at infinite trees. This generalizes the earlier a=1/4 obstruction; it does not verify the retained-root assumption in the original problem's precise topology.",
+      "assumptions": [
+        "The original degree-two root is retained and identifiable",
+        "The displayed critical root-split law",
+        "The local topology and score domain retain that root",
+        "a>0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:retained-root-fringe-perturbation-threshold",
+        "url": "file:///~/brain_workers/w345/proofs/retained-root-fringe-perturbation-threshold.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "Assume finite binary trees retain an identifiable original degree-two root after leaf rerooting, and their ordered root split law is q_n(i)=n/(2 H_(n-1) i(n-i)), 1<=i<n. Let B_n in"
+      }
+    },
+    {
+      "key": "survival-compensator-exhaustion-criterion",
+      "namespace": "probability.planarmaps",
+      "logical_name": "survival-compensator-exhaustion-criterion",
+      "kind": "lemma",
+      "title": "Discovery from a divergent conditional survival compensator",
+      "statement": "Let T>=1 be an integer-valued stopping time for a filtration (F_n), possibly infinite, and set p_n=E[1_{T=n+1}|F_n] and A_m=sum_(n<m) p_n. Then P(T=infinity and A_infinity=infinity)=0. For countably many targets this implies almost sure discovery of all targets if each target's compensator diverges on its never-discovered event outside a null set. Divergence is a sufficient condition, not a necessary one. Scope: For filled-in peeling, the lower bound by a perimeter-only q(S_n) and the divergence for all critical weight sequences are still required. The earlier unreviewed equivalence is not imported as a theorem.",
+      "proof_text": "Author-checked proof; independent audit pending. Because p_n=0 after T, Z_m=1_{T>m} exp(A_m) is a nonnegative supermartingale with Z_0=1: its conditional next expectation is Z_m*(1-p_m)*exp(p_m)<=Z_m. For K>0 stop at sigma_K=inf{m:A_m>=K}. Bounded optional stopping at sigma_K wedge r gives P(sigma_K<=r,T>sigma_K)<=exp(-K). Let r increase, and then K increase, to obtain the result. The countable-target conclusion follows by a countable union of null sets. If deterministic a_n in [0,1] satisfy p_n>=a_n on {T>n}, the direct recursion P(T>n+1)<= (1-a_n)P(T>n) gives the product tail bound and hence P(T>m)<=exp(-sum_(n<m)a_n). For a_n=c/(n+1), 0<c<=1, this is at most (m+1)^(-c). Necessity fails when T=1 deterministically, since A_infinity=1 although discovery is certain.",
+      "assumptions": [
+        "T is a stopping time relative to the actual exploration history",
+        "p_n are actual target-specific conditional probabilities",
+        "The countable application verifies divergence separately on each survival event"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:survival-compensator-exhaustion-criterion",
+        "url": "file:///~/brain_workers/w345/proofs/survival-compensator-exhaustion-criterion.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "Let T>=1 be an integer-valued stopping time for a filtration (F_n), possibly infinite, and set p_n=E[1_{T=n+1}|F_n] and A_m=sum_(n<m) p_n. Then P(T=infinity and A_infinity=infinity"
+      }
+    },
+    {
+      "key": "stopped-hazard-divergence-not-necessary",
+      "namespace": "probability.planarmaps",
+      "logical_name": "stopped-hazard-divergence-not-necessary",
+      "kind": "lemma",
+      "title": "Certain discovery with a finite stopped-hazard sum",
+      "statement": "For a target discovered at time T=1 deterministically, p_n=P(T=n+1|F_n) equals one at n=0 and zero thereafter. Thus discovery has probability one, while sum_n p_n=1 is finite. This refutes a general necessity claim for the actual stopped target hazard. It does not refute a perimeter-only equivalence specific to critical Boltzmann maps; that would require a model-specific argument. Scope: A generic counterexample only. It supplies no critical weight sequence whose map is or is not exhausted.",
+      "proof_text": "Author-checked proof; independent audit pending. Take any probability space with the trivial filtration and T=1. The event {T=1} is certain and all other {T=n+1} events are empty. Taking conditional probabilities gives p_0=1 and p_n=0 for n>=1. Summing proves the assertion. A conditional Borel-Cantelli sufficiency statement cannot supply the converse from this example.",
+      "assumptions": [
+        "Hazards refer to discovery of one fixed target and are stopped at its discovery"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:stopped-hazard-divergence-not-necessary",
+        "url": "file:///~/brain_workers/w345/proofs/stopped-hazard-divergence-not-necessary.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "For a target discovered at time T=1 deterministically, p_n=P(T=n+1|F_n) equals one at n=0 and zero thereafter. Thus discovery has probability one, while sum_n p_n=1 is finite. This"
+      }
+    },
+    {
+      "key": "annular-skoro-distance-expansion",
+      "namespace": "probability.reflected-brownian-motion",
+      "logical_name": "annular-skoro-distance-expansion",
+      "kind": "lemma",
+      "title": "Exact finite-time expansion in the annular Skorokhod problem",
+      "statement": "For the smooth bounded connected annulus D={x in R^2:1<|x|<3}, normal reflection driven by w(t)=(-t,0) can increase the distance of two synchronously driven paths. Start X(0)=(1,0) and Y(0)=(cos(theta),sin(theta)), 0<theta<pi/2. Until t<log(cot(theta/2)), X(t)=(1,0) and Y(t)=(cos(phi(t)),sin(phi(t))) with phi(t)=2 arctan(exp(t)tan(theta/2)); the squared distance has derivative 2 sin(phi(t))^2>0. Scope: Finite-time deterministic expansion does not establish positive long-time limsup for reflected Brownian motion. A Brownian support argument and recurrence of expansion episodes would be separate steps; neither is claimed here.",
+      "proof_text": "Author-checked proof; independent audit pending. On the inner circle the inward normal of the annulus is the outward radial vector. For X, take reflection regulator L_X(t)=t, so dX=(-1,0)dt+(1,0)dL_X=0. For Y, choose dL_Y=cos(phi)dt, which is nonnegative while phi<pi/2. The Skorokhod equation then gives Y'=(-1,0)+cos(phi)(cos(phi),sin(phi))=(-sin(phi)^2,cos(phi)sin(phi)). This equals (-sin(phi),cos(phi))*phi' when phi'=sin(phi), and the displayed solution solves that ODE. Both regulators increase only on the inner boundary, both paths stay in the closed annulus, and neither reaches the outer boundary. Their squared distance is 2(1-cos(phi)), with derivative 2 sin(phi)^2. This is a complete deterministic calculation.",
+      "assumptions": [
+        "Deterministic continuous finite-variation driving path",
+        "Normal Skorokhod reflection on the closed annulus",
+        "Boundary starting points and 0<theta<pi/2",
+        "0<=t<log(cot(theta/2))"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:annular-skoro-distance-expansion",
+        "url": "file:///~/brain_workers/w345/proofs/annular-skoro-distance-expansion.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "For the smooth bounded connected annulus D={x in R^2:1<|x|<3}, normal reflection driven by w(t)=(-t,0) can increase the distance of two synchronously driven paths. Start X(0)=(1,0)"
+      }
+    },
+    {
+      "key": "critical-immigration-logarithmic-lower-bound",
+      "namespace": "probability.spatial-growth",
+      "logical_name": "critical-immigration-logarithmic-lower-bound",
+      "kind": "lemma",
+      "title": "Logarithmic city-count lower bound under the earlier founding-rate estimate",
+      "statement": "Let (M_t) be an adapted nondecreasing integer process, t>=1, with M_1>=1, whose increments are zero or one. Suppose P(M_(t+1)=M_t+1|F_t)>=1/[2(1+K*t*M_t^d)] for constants K>0,d>0. Then constants kappa,c>0 exist such that, for all large integer t, P(M_t<floor(kappa*(log t)^(1/(d+1))))<=exp(-c*(log t)^(1/(d+1))). Moreover almost surely liminf M_t/(log t)^(1/(d+1))>0. Under the earlier city-model founding estimate at alpha=1 and beta>2, d=beta/2-1, giving exponent 2/beta. Scope: The process lemma is proved. Its application to the spatial immigration model is conditional on checking the earlier disk-area bound against the primary model formula. This does not give the matching upper bound or comparable city populations.",
+      "proof_text": "Author-checked proof; independent audit pending. Set m=floor(kappa*(log t)^(1/(d+1)))>=1. Before M reaches m, the founding chance at step s is at least a_s=1/[2(1+K*s*m^d)]>=1/[2(1+K)*s*m^d] for s>=1. Using independent uniforms to realize the adapted Bernoulli increments, compare with independent Bernoulli(a_s) variables until the threshold; after the threshold extend the comparison success variables arbitrarily. If M_t<m then the threshold was never reached, so the sum B of comparison successes from s=1 to t-1 is smaller than m. Its mean mu is at least H_(t-1)/[2(1+K)*m^d]. Choose kappa so kappa^(d+1)<=1/[16(1+K)]. For large t the harmonic sum is at least (log t)/2, implying mu>=4m and mu is bounded below by a positive multiple of (log t)^(1/(d+1)). The Chernoff lower-tail bound P(B<=mu/2)<=exp(-mu/8) proves the probability assertion. For the almost sure statement use t_j=ceil(exp(j^(d+1))) and sum the bounds exp(-c*j). Borel-Cantelli gives the lower bound eventually on these times. Monotonicity of M_t and log(t_(j+1))/log(t_j)->1 interpolate it to all large t.",
+      "assumptions": [
+        "Adapted city-count process with increments in {0,1}",
+        "The displayed conditional founding-rate bound at every step",
+        "K>0 and d>0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:critical-immigration-logarithmic-lower-bound",
+        "url": "file:///~/brain_workers/w345/proofs/critical-immigration-logarithmic-lower-bound.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "Let (M_t) be an adapted nondecreasing integer process, t>=1, with M_1>=1, whose increments are zero or one. Suppose P(M_(t+1)=M_t+1|F_t)>=1/[2(1+K*t*M_t^d)] for constants K>0,d>0. "
+      }
+    },
+    {
+      "key": "decorated-poisson-level-count-criterion",
+      "namespace": "probability.gaussian",
+      "logical_name": "decorated-poisson-level-count-criterion",
+      "kind": "lemma",
+      "title": "Conditional deep-level law from truncated marked-Poisson moments",
+      "statement": "Fix alpha>0 and z>=0 finite. Let heights h_i form a Poisson process on R of intensity z*exp(-alpha*h) dh, carrying independent identically distributed measurable nonnegative marks K_i(s), s>=0, independent of the heights. Suppose exp(-alpha*s)*E K(s)->c in (0,infinity) and E K(s)^2<=C*exp(2*alpha*s) for every s>=0. Set S_t=sum_(h_i>=-t) K_i(t+h_i). Then S_t/(t*exp(alpha*t))->c*z in probability as t->infinity. The same conclusion holds with a finite almost-sure random intensity Z conditionally on Z and unconditionally, without assuming E Z<infinity. This is a conditional criterion for the limiting DGFF cluster process, not a proof of its moment hypotheses or the finite-N limit. Scope: The moment hypotheses and the exchange or iterated use of the finite-N and deep-level limits are not verified for DGFF. The full limiting sum can have infinite expectation even while its normalized values converge in probability.",
+      "proof_text": "Author-checked proof; independent audit pending. For a fixed upper cutoff H and t+H>=0 define S_t^H using -t<=h_i<=H. Poisson integration and the change of variable s=t+h give E S_t^H=z*exp(alpha*t)*integral_0^(t+H) exp(-alpha*s)*E K(s) ds. Cesaro averaging implies this divided by t*exp(alpha*t) tends to c*z. Its variance divided by t^2*exp(2*alpha*t) is at most z*C*exp(alpha*H)/(alpha*t^2), so the truncated variable converges in L2 for fixed H. The probability that the full and truncated sums differ is at most the probability of any height above H, namely 1-exp(-z*exp(-alpha*H)/alpha). First send t to infinity, then H to infinity, to prove convergence in probability. For random finite Z, these conditional error probabilities tend to zero and are bounded by one, so dominated convergence applies; E Z is not required. For finitely many disjoint spatial sets the same argument and a finite union bound give joint convergence with their respective intensity masses. Notice that E S_t is infinite whenever z>0 under the stated first-moment asymptotic: its integral extends over s in [0,infinity). Thus full-sum L2 convergence or uniform integrability must not be silently assumed. The earlier intake integral with exp(+alpha*s) inside reverses the change-of-variable sign.",
+      "assumptions": [
+        "A marked Poisson process with the stated intensity and independent identically distributed decorations",
+        "alpha>0 and finite z (or a.s. finite random Z)",
+        "The two explicit first and second decoration moment hypotheses"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:decorated-poisson-level-count-criterion",
+        "url": "file:///~/brain_workers/w345/proofs/decorated-poisson-level-count-criterion.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "Fix alpha>0 and z>=0 finite. Let heights h_i form a Poisson process on R of intensity z*exp(-alpha*h) dh, carrying independent identically distributed measurable nonnegative marks "
+      }
+    },
+    {
+      "key": "truncated-decoration-poisson-mean",
+      "namespace": "probability.gaussian",
+      "logical_name": "truncated-decoration-poisson-mean",
+      "kind": "lemma",
+      "title": "Exact truncated expectation and infinite full expectation for exponential decoration growth",
+      "statement": "For Poisson heights of intensity z*exp(-alpha*h) dh, with z>=0 finite and alpha>0, and independent identically distributed nonnegative decoration marks K(s), the truncated sum S_t^H=sum_(-t<=h_i<=H) K_i(t+h_i), H>=-t, has expectation z*exp(alpha*t)*integral_0^(t+H) exp(-alpha*s)*E K(s) ds. If z>0 and exp(-alpha*s)*E K(s)->c>0, the full sum over h_i>=-t has infinite expectation for each fixed t. With E K(s)=exp(alpha*s), the truncated mean is exactly z*exp(alpha*t)*(t+H). Scope: Infinite expectation does not imply an infinite realized sum: only finitely many heights exceed -t almost surely, and finite decorations can yield a finite realized total. No DGFF decoration moment asymptotic is proved here.",
+      "proof_text": "Author-checked proof; independent audit pending. For a nonnegative marked-Poisson integral, Tonelli and the Poisson first-moment identity give E S_t^H=z*integral_(-t)^H exp(-alpha*h)*E K(t+h) dh, allowing either side to be infinite. Put s=t+h to obtain the displayed identity with exp(-alpha*s), not exp(+alpha*s). Sending H to infinity and applying monotone convergence gives the full expectation z*exp(alpha*t)*integral_0^infinity exp(-alpha*s)*E K(s) ds. A strictly positive limiting integrand makes this integral diverge. The special exponential mark makes the integrand identically one, proving the exact truncated formula.",
+      "assumptions": [
+        "A marked Poisson process with the displayed intensity",
+        "Nonnegative measurable marks independent of the height process",
+        "alpha>0 and H>=-t"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:truncated-decoration-poisson-mean",
+        "url": "file:///~/brain_workers/w345/proofs/truncated-decoration-poisson-mean.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "For Poisson heights of intensity z*exp(-alpha*h) dh, with z>=0 finite and alpha>0, and independent identically distributed nonnegative decoration marks K(s), the truncated sum S_t^"
+      }
+    },
+    {
+      "key": "susceptibility-derivative-inference-refuted",
+      "namespace": "probability.percolation",
+      "logical_name": "susceptibility-derivative-inference-refuted",
+      "kind": "lemma",
+      "title": "The recorded derivative inequality does not imply susceptibility divergence",
+      "statement": "The implications theta(delta)~delta and theta'(delta)<=C*chi(delta), even with theta,chi positive and smooth on 0<delta<1, do not imply chi(delta)>=c/delta for any c>0. Therefore the earlier C0065 attempt's claimed inverse-distance lower bound does not follow from the two displayed premises. This refutes that inference, not the percolation lower bound itself. Scope: No claim is made that the actual high-dimensional finite-cluster susceptibility has this counterexample behavior. The claimed percolation theorem must be re-proved from valid percolation-specific inputs.",
+      "proof_text": "Author-checked proof; independent audit pending. Take theta(delta)=delta, chi(delta)=1 and C=1. Then theta'(delta)=1<=C*chi(delta), and theta(delta)/delta=1 exactly. However delta*chi(delta)=delta->0, so no positive c can satisfy chi(delta)>=c/delta for all sufficiently small delta. Both functions meet the stated smoothness and positivity requirements. Extra percolation inequalities could still prove a susceptibility lower bound, but they are additional premises and are not supplied by this derivative comparison.",
+      "assumptions": [
+        "Only the two derivative-and-order premises quoted in the earlier attempt are being tested"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:susceptibility-derivative-inference-refuted",
+        "url": "file:///~/brain_workers/w345/proofs/susceptibility-derivative-inference-refuted.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "The implications theta(delta)~delta and theta'(delta)<=C*chi(delta), even with theta,chi positive and smooth on 0<delta<1, do not imply chi(delta)>=c/delta for any c>0. Therefore t"
+      }
+    },
+    {
+      "key": "binary-tree-finite-susceptibility-exponent",
+      "namespace": "probability.percolation",
+      "logical_name": "binary-tree-finite-susceptibility-exponent",
+      "kind": "lemma",
+      "title": "Exact supercritical finite susceptibility on the degree-three tree",
+      "statement": "For Bernoulli bond percolation on the infinite degree-three tree, 1/2<p<1, write chi_f(p)=E_p[|C_o|*1_{|C_o|<infinity}]. Then chi_f(p)=((1-p)/p)^3*(2-p)/(2*p-1), and (p-1/2)*chi_f(p)->3/4 as p decreases to 1/2. Below criticality chi(p)=(1+p)/(1-2*p), with (1/2-p)*chi(p)->3/4. Thus the finite-susceptibility exponents agree and equal one on this tree. Scope: This is a branching-tree special case. It proves neither the high-dimensional lattice result nor the spatial correlation-length exponents; graph distance on a tree has different geometry.",
+      "proof_text": "Author-checked proof; independent audit pending. Let t be the probability that a directed edge does not lead to infinity. Independence of the two forward branches gives t=1-p+p*t^2; the smaller root for p>1/2 is t=(1-p)/p. The root cluster is finite exactly when all three outward edge branches fail, an event of probability t^3. Conditional on such failure, each edge is open and has a finite forward subtree with probability r=p*t^2/t=p*t=1-p. The finite cluster therefore has root offspring Binomial(3,r), then Binomial(2,r) offspring thereafter. The mean total size conditional on finiteness is 1+3*r/(1-2*r)=(2-p)/(2*p-1). Multiplication by t^3 proves the formula and the limit. For p<1/2 all branches die, and the same offspring computation with r=p gives the subcritical formula.",
+      "assumptions": [
+        "The infinite degree-three tree",
+        "Independent Bernoulli bond percolation",
+        "Susceptibility uses the unconditioned finite-cluster first moment"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:binary-tree-finite-susceptibility-exponent",
+        "url": "file:///~/brain_workers/w345/proofs/binary-tree-finite-susceptibility-exponent.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "For Bernoulli bond percolation on the infinite degree-three tree, 1/2<p<1, write chi_f(p)=E_p[|C_o|*1_{|C_o|<infinity}]. Then chi_f(p)=((1-p)/p)^3*(2-p)/(2*p-1), and (p-1/2)*chi_f("
+      }
+    },
+    {
+      "key": "finite-mean-scale-free-edge-decay",
+      "namespace": "probability.percolation",
+      "logical_name": "finite-mean-scale-free-edge-decay",
+      "kind": "lemma",
+      "title": "Finite weight means fix the annealed one-edge decay exponent",
+      "statement": "Let iid positive weights W_x have finite mean mu, and conditionally independent edges have probability 1-exp(-lambda*W_x*W_y*|x-y|^(-b)), with b,lambda>0. Then the annealed one-edge probability is asymptotic to lambda*mu^2*|x-y|^(-b) as |x-y|->infinity. In particular for Pareto weights P(W>w)=w^(-rho), w>=1, rho>1, its coefficient is lambda*(rho/(rho-1))^2. A tail exponent b*rho cannot be inferred for this finite-mean regime from the weight-tail parameter. Scope: The annealed one-edge probability is different from the annealed connectedness function. No mean-field boundary, critical dimension or continuity of theta is deduced.",
+      "proof_text": "Author-checked proof; independent audit pending. Set V=W_x*W_y and s=lambda*|x-y|^(-b). For V>=0, 0<=(1-exp(-s*V))/s<=V, and the expression tends pointwise to V as s decreases to zero. Independence and the finite weight mean give E V=mu^2<infinity. Dominated convergence yields the asymptotic. For a Pareto variable the density rho*w^(-rho-1) on w>=1 gives E W=rho/(rho-1). This is an edge-probability calculation; it does not compute the connectedness two-point function or a critical exponent.",
+      "assumptions": [
+        "Independent identically distributed positive weights with finite mean",
+        "The displayed conditional edge law",
+        "Fixed positive b and lambda"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:finite-mean-scale-free-edge-decay",
+        "url": "file:///~/brain_workers/w345/proofs/finite-mean-scale-free-edge-decay.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "Let iid positive weights W_x have finite mean mu, and conditionally independent edges have probability 1-exp(-lambda*W_x*W_y*|x-y|^(-b)), with b,lambda>0. Then the annealed one-edg"
+      }
+    },
+    {
+      "key": "shared-weight-edge-covariance",
+      "namespace": "probability.percolation",
+      "logical_name": "shared-weight-edge-covariance",
+      "kind": "lemma",
+      "title": "Shared vertex weights strictly correlate annealed adjacent edges",
+      "statement": "In the same scale-free edge model, take three distinct vertices 0,1,2, independent positive weights, and positive edge coefficients a,b. Let I_01 and I_02 be their edge indicators, conditionally independent given all weights. Then Cov(I_01,I_02)=Cov(g_a(W_0),g_b(W_0)), where g_a(w)=E[1-exp(-a*w*W_1)]. This covariance is positive when W_0 is nondegenerate. Thus an independent-edge model with the same edge marginals already disagrees on two-edge events. Scope: This invalidates direct substitution by independent edges at the level of joint laws. It does not rule out proving suitable stochastic comparisons or universality by a separate argument.",
+      "proof_text": "Author-checked proof; independent audit pending. Given W_0, integrating the independent endpoint weights leaves I_01 and I_02 independent Bernoulli variables with parameters g_a(W_0) and g_b(W_0), respectively. Conditional covariance is zero, so the covariance identity follows by conditioning. Each g is strictly increasing because the other weights are positive almost surely. For an independent copy W_0', covariance equals one half of E[(g_a(W_0)-g_a(W_0'))*(g_b(W_0)-g_b(W_0'))]. The integrand is nonnegative everywhere and strictly positive on {W_0!=W_0'}, which has positive probability for a nondegenerate distribution. All quantities are bounded and hence integrable, even for infinite-mean weights.",
+      "assumptions": [
+        "Independent positive vertex weights",
+        "Conditional edge independence",
+        "Positive edge coefficients",
+        "Nondegenerate shared weight for strict positivity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:shared-weight-edge-covariance",
+        "url": "file:///~/brain_workers/w345/proofs/shared-weight-edge-covariance.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "In the same scale-free edge model, take three distinct vertices 0,1,2, independent positive weights, and positive edge coefficients a,b. Let I_01 and I_02 be their edge indicators,"
+      }
+    },
+    {
+      "key": "regular-tree-infinite-contact-exponential-tail",
+      "namespace": "probability.percolation",
+      "logical_name": "regular-tree-infinite-contact-exponential-tail",
+      "kind": "lemma",
+      "title": "Exponential infinite-cluster contact tail on every regular tree above criticality",
+      "statement": "On the (b+1)-regular tree with b>=2, independent Bernoulli bond percolation at fixed p in (1/b,1), there are constants C,c>0 such that P_p(|C_o|<infinity and J_o>n)<=C*exp(-c*n), where J_o counts all graph edges from C_o to vertices in any infinite open cluster. The assertion also holds trivially at p=1. Scope: This does not give the requested estimate on arbitrary transitive graphs. The constants deteriorate toward criticality; no uniform rate in p is asserted.",
+      "proof_text": "Author-checked proof; independent audit pending. Let t in (0,1) be the smaller solution of t=1-p+p*t^b. The root cluster is finite with probability t^(b+1). Conditional on finiteness, each outward edge opens into a finite branch with probability r=p*t^(b-1); this gives root offspring Binomial(b+1,r) and later offspring Binomial(b,r), independently. Strict convexity of f(x)=1-p+p*x^b-x, with roots t and 1, gives f'(t)<0, hence b*r<1. The forward progeny equation is F=z*(1-r+r*F)^b. The analytic implicit function theorem at (z,F)=(1,1), whose derivative in F is 1-b*r>0, gives a positive fixed point F_*(z)>1 for some z>1 sufficiently close to one. In fact F_*(z)>=z. The generating functions of generation-truncated progeny start at F_0(z)=z and satisfy F_(m+1)(z)=z*(1-r+r*F_m(z))^b. They increase and are bounded above by F_*(z), by induction. Monotone convergence then proves that the full progeny has a finite exponential moment at this z. The root-size generating function is z*(1-r+r*F(z))^(b+1), also finite. Markov's inequality gives an exponential tail for the finite cluster size. A finite connected tree with N vertices has exactly (b-1)*N+2 boundary edges by the degree sum, so J_o<=(b-1)*N+2. This transfers the size bound to J_o, with constants depending on b,p. At p=1 the finite-cluster event is empty.",
+      "assumptions": [
+        "A regular tree of degree b+1, integer b>=2",
+        "Independent Bernoulli bond percolation",
+        "Fixed p>1/b",
+        "Contacts count graph edges, which must be closed at a finite open-cluster boundary"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:regular-tree-infinite-contact-exponential-tail",
+        "url": "file:///~/brain_workers/w345/proofs/regular-tree-infinite-contact-exponential-tail.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "On the (b+1)-regular tree with b>=2, independent Bernoulli bond percolation at fixed p in (1/b,1), there are constants C,c>0 such that P_p(|C_o|<infinity and J_o>n)<=C*exp(-c*n), w"
+      }
+    },
+    {
+      "key": "holder-boundary-terminal-angle",
+      "namespace": "probability.brownian-motion",
+      "logical_name": "holder-boundary-terminal-angle",
+      "kind": "lemma",
+      "title": "Quantitative hemisphere containment at a Holder differentiable boundary",
+      "statement": "Suppose a domain near a boundary point z is, in coordinates with outward unit normal e_d, contained in {x_d<g(x')}, with g(0)=0 and |g(x')|<=C*|x'|^(1+gamma), gamma>0. For any interior x approaching z=0, its normalized approach vector u=(z-x)/|z-x| satisfies e_d dot u>=-C*|z-x|^gamma. Consequently every limiting approach direction lies in the closed outward hemisphere. This applies pathwise to Brownian exits at such points. Scope: Containment does not establish that every hemisphere direction occurs. Arbitrary nonsmooth domains need not have the displayed boundary graph.",
+      "proof_text": "Author-checked proof; independent audit pending. Write r=|x|. Because x_d<=g(x')<=C*|x'|^(1+gamma)<=C*r^(1+gamma), the outward component of u=-x/r is -x_d/r>=-C*r^gamma. Let r decrease to zero along any convergent sequence of directions. The error vanishes, giving e_d dot u>=0. This is a deterministic local boundary statement, so continuity of a Brownian exit path is the only stochastic ingredient in this containment conclusion.",
+      "assumptions": [
+        "A local boundary graph at the exit point with the displayed remainder bound",
+        "The orientation e_d is outward",
+        "Interior points approach that boundary point"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:holder-boundary-terminal-angle",
+        "url": "file:///~/brain_workers/w345/proofs/holder-boundary-terminal-angle.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "Suppose a domain near a boundary point z is, in coordinates with outward unit normal e_d, contained in {x_d<g(x')}, with g(0)=0 and |g(x')|<=C*|x'|^(1+gamma), gamma>0. For any inte"
+      }
+    },
+    {
+      "key": "halfspace-terminal-hemisphere-sketch",
+      "namespace": "probability.brownian-motion",
+      "logical_name": "halfspace-terminal-hemisphere-sketch",
+      "kind": "concept",
+      "title": "Half-space case via reversal and logarithmic-time Gaussian recurrence",
+      "statement": "PROOF SKETCH, pending independent verification: Brownian motion started inside a half-space in dimension d>=2 should have the whole closed outward hemisphere as its cluster set of normalized approach directions at its first boundary hit. The proposed route uses the conditional reversed normal path as a three-dimensional Bessel bridge, the reversed tangential paths as Brownian bridges, and dense Gaussian directions in logarithmic time. Scope: Only a sketch is claimed; it is a concept card, not an accepted theorem. It does not cover arbitrary domains in d>2.",
+      "proof_text": null,
+      "assumptions": [
+        "Half-space domain",
+        "Brownian motion starting at positive normal height",
+        "The conditional reversal and bridge absolute-continuity identities still need a full check"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:halfspace-terminal-hemisphere-sketch",
+        "url": "file:///~/brain_workers/w345/proofs/halfspace-terminal-hemisphere-sketch.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "PROOF SKETCH, pending independent verification: Brownian motion started inside a half-space in dimension d>=2 should have the whole closed outward hemisphere as its cluster set of "
+      }
+    },
+    {
+      "key": "ergodic-forests-arbitrary-finite-component-count",
+      "namespace": "probability.spanning-forests",
+      "logical_name": "ergodic-forests-arbitrary-finite-component-count",
+      "kind": "lemma",
+      "title": "Invariant ergodic spanning forests can have every finite component count",
+      "statement": "For each integer k>=2, the Cayley graph G_k of Z with generators {+1,-1,+k,-k} has a deterministic translation-invariant spanning forest with exactly k components. Keep exactly the length-k edges. Its point-mass law is ergodic under translations. Thus translation invariance and ergodicity alone cannot exclude any finite component count greater than one. Scope: This refutes a proposed inference from ergodicity, not the one-or-infinity classification for the actual FUSF law. It adds no nonunimodular FUSF counterexample.",
+      "proof_text": "Author-checked proof; independent audit pending. Each retained component is one residue class modulo k, with edges between consecutive elements of that class. It is a bi-infinite path and hence has no cycle. Every integer belongs to exactly one of these k residue classes, so the forest spans G_k and has k components. Translation by one permutes the classes and preserves the whole edge set, proving invariance. A point-mass probability measure assigns every measurable event probability zero or one, and is therefore ergodic. The earlier k=2 example is its first instance. None of these deterministic forests is asserted to be a free uniform spanning forest.",
+      "assumptions": [
+        "k is an integer at least two",
+        "G_k has both length-one and length-k edges",
+        "Only length-k edges are retained"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w345:ergodic-forests-arbitrary-finite-component-count",
+        "url": "file:///~/brain_workers/w345/proofs/ergodic-forests-arbitrary-finite-component-count.md",
+        "revision": "author-checked-2026-10-10-independent-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "For each integer k>=2, the Cayley graph G_k of Z with generators {+1,-1,+k,-k} has a deterministic translation-invariant spanning forest with exactly k components. Keep exactly the"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "fringe-clt-uniform-error-threshold",
+      "kind": "cites",
+      "rationale": "From: \"Let X_n and Y_n be integrable sums of n leaf scores on one coupled probability space. Suppose every corresponding score differs in absolute value by a\"; to: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Determine w\". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.core:open-problem-p0342-transferring-a-stationary-fringe-process-clt-to-finite-beta-splitting"
+    },
+    {
+      "from_key": "retained-root-fringe-perturbation-threshold",
+      "kind": "cites",
+      "rationale": "From: \"Assume finite binary trees retain an identifiable original degree-two root after leaf rerooting, and their ordered root split law is q_n(i)=n/(2 H_(n-\"; to: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Determine w\". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.core:open-problem-p0342-transferring-a-stationary-fringe-process-clt-to-finite-beta-splitting"
+    },
+    {
+      "from_key": "survival-compensator-exhaustion-criterion",
+      "kind": "cites",
+      "rationale": "From: \"Let T>=1 be an integer-valued stopping time for a filtration (F_n), possibly infinite, and set p_n=E[1_{T=n+1}|F_n] and A_m=sum_(n<m) p_n. Then P(T=in\"; to: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Corollary 27 shows that for a critical weight sequence o\". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.planarmaps:open-problem-c0057-filled-in-peeling-discovers-the-whole-map-for-every-critical-weight-se"
+    },
+    {
+      "from_key": "stopped-hazard-divergence-not-necessary",
+      "kind": "cites",
+      "rationale": "From: \"For a target discovered at time T=1 deterministically, p_n=P(T=n+1|F_n) equals one at n=0 and zero thereafter. Thus discovery has probability one, whi\"; to: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Corollary 27 shows that for a critical weight sequence o\". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.planarmaps:open-problem-c0057-filled-in-peeling-discovers-the-whole-map-for-every-critical-weight-se"
+    },
+    {
+      "from_key": "annular-skoro-distance-expansion",
+      "kind": "cites",
+      "rationale": "From: \"For the smooth bounded connected annulus D={x in R^2:1<|x|<3}, normal reflection driven by w(t)=(-t,0) can increase the distance of two synchronously \"; to: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Does some bounded connect\". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.core:open-problem-p0024-failure-of-synchronous-contraction-in-a-bounded-planar-domain"
+    },
+    {
+      "from_key": "critical-immigration-logarithmic-lower-bound",
+      "kind": "cites",
+      "rationale": "From: \"Let (M_t) be an adapted nondecreasing integer process, t>=1, with M_1>=1, whose increments are zero or one. Suppose P(M_(t+1)=M_t+1|F_t)>=1/[2(1+K*t*M\"; to: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Prove the proposed balanc\". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.core:open-problem-p0218-growth-exponents-in-the-spatial-city-formation-model"
+    },
+    {
+      "from_key": "decorated-poisson-level-count-criterion",
+      "kind": "cites",
+      "rationale": "From: \"Fix alpha>0 and z>=0 finite. Let heights h_i form a Poisson process on R of intensity z*exp(-alpha*h) dh, carrying independent identically distributed\"; to: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). There is c in (0,infinity) such that for each open A in \". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0005-size-of-deep-extremal-level-sets-of-the-2d-dgff-converges-to-the-extre"
+    },
+    {
+      "from_key": "truncated-decoration-poisson-mean",
+      "kind": "cites",
+      "rationale": "From: \"For Poisson heights of intensity z*exp(-alpha*h) dh, with z>=0 finite and alpha>0, and independent identically distributed nonnegative decoration mark\"; to: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). There is c in (0,infinity) such that for each open A in \". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0005-size-of-deep-extremal-level-sets-of-the-2d-dgff-converges-to-the-extre"
+    },
+    {
+      "from_key": "susceptibility-derivative-inference-refuted",
+      "kind": "cites",
+      "rationale": "From: \"The implications theta(delta)~delta and theta'(delta)<=C*chi(delta), even with theta,chi positive and smooth on 0<delta<1, do not imply chi(delta)>=c/\"; to: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove that the supercritical critical exponents gamma', \". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0065-existence-and-equality-of-the-supercritical-exponents-gamma-nu-nu-2-in"
+    },
+    {
+      "from_key": "binary-tree-finite-susceptibility-exponent",
+      "kind": "cites",
+      "rationale": "From: \"For Bernoulli bond percolation on the infinite degree-three tree, 1/2<p<1, write chi_f(p)=E_p[|C_o|*1_{|C_o|<infinity}]. Then chi_f(p)=((1-p)/p)^3*(2-\"; to: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove that the supercritical critical exponents gamma', \". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0065-existence-and-equality-of-the-supercritical-exponents-gamma-nu-nu-2-in"
+    },
+    {
+      "from_key": "finite-mean-scale-free-edge-decay",
+      "kind": "cites",
+      "rationale": "From: \"Let iid positive weights W_x have finite mean mu, and conditionally independent edges have probability 1-exp(-lambda*W_x*W_y*|x-y|^(-b)), with b,lambd\"; to: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For scale-free percolation with parameters alpha (long-r\". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0090-critical-behaviour-of-scale-free-percolation"
+    },
+    {
+      "from_key": "shared-weight-edge-covariance",
+      "kind": "cites",
+      "rationale": "From: \"In the same scale-free edge model, take three distinct vertices 0,1,2, independent positive weights, and positive edge coefficients a,b. Let I_01 and \"; to: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For scale-free percolation with parameters alpha (long-r\". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0090-critical-behaviour-of-scale-free-percolation"
+    },
+    {
+      "from_key": "regular-tree-infinite-contact-exponential-tail",
+      "kind": "cites",
+      "rationale": "From: \"On the (b+1)-regular tree with b>=2, independent Bernoulli bond percolation at fixed p in (1/b,1), there are constants C,c>0 such that P_p(|C_o|<infin\"; to: \"CACHED QUESTION; current resolution not verified. For a transitive graph G, is the probability that a finite origin cluster has more than n graph-edge\". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_key": "c0143-question-context"
+    },
+    {
+      "from_key": "holder-boundary-terminal-angle",
+      "kind": "cites",
+      "rationale": "From: \"Suppose a domain near a boundary point z is, in coordinates with outward unit normal e_d, contained in {x_d<g(x')}, with g(0)=0 and |g(x')|<=C*|x'|^(1\"; to: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For Brownian motion exiti\". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.core:open-problem-p0019-brownian-exit-approach-directions-in-higher-dimensions"
+    },
+    {
+      "from_key": "halfspace-terminal-hemisphere-sketch",
+      "kind": "cites",
+      "rationale": "From: \"PROOF SKETCH, pending independent verification: Brownian motion started inside a half-space in dimension d>=2 should have the whole closed outward hem\"; to: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For Brownian motion exiti\". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.core:open-problem-p0019-brownian-exit-approach-directions-in-higher-dimensions"
+    },
+    {
+      "from_key": "ergodic-forests-arbitrary-finite-component-count",
+      "kind": "cites",
+      "rationale": "From: \"For each integer k>=2, the Cayley graph G_k of Z with generators {+1,-1,+k,-k} has a deterministic translation-invariant spanning forest with exactly \"; to: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). On every transitive netwo\". Connects this scoped result to its original problem; no full solution is claimed.",
+      "to_existing_logical": "math:probability.core:open-problem-p0048-one-or-infinitely-many-free-forest-components-without-unimodularity"
+    },
+    {
+      "from_key": "retained-root-fringe-perturbation-threshold",
+      "kind": "generalizes",
+      "rationale": "From: \"Assume finite binary trees retain an identifiable original degree-two root after leaf rerooting, and their ordered root split law is q_n(i)=n/(2 H_(n-\"; to: \"n^-1/4*(B_n-p_n)\". The relation concerns this quoted step, with the result assumptions and scope retained.",
+      "to_existing_logical": "math:probability.core:attempt-p0342-transferring-a-stationary-fringe-process-clt-to-finite-beta-splitting"
+    },
+    {
+      "from_key": "annular-skoro-distance-expansion",
+      "kind": "analogous_to",
+      "rationale": "From: \"For the smooth bounded connected annulus D={x in R^2:1<|x|<3}, normal reflection driven by w(t)=(-t,0) can increase the distance of two synchronously \"; to: \"Convexity makes both contributions nonpositive\". The relation concerns this quoted step, with the result assumptions and scope retained.",
+      "to_existing_logical": "math:probability.core:attempt-p0024-failure-of-synchronous-contraction-in-a-bounded-planar-domain"
+    },
+    {
+      "from_key": "critical-immigration-logarithmic-lower-bound",
+      "kind": "analogous_to",
+      "rationale": "From: \"Let (M_t) be an adapted nondecreasing integer process, t>=1, with M_1>=1, whose increments are zero or one. Suppose P(M_(t+1)=M_t+1|F_t)>=1/[2(1+K*t*M\"; to: \"Put theta=(1-alpha)/(1+d)\". The relation concerns this quoted step, with the result assumptions and scope retained.",
+      "to_existing_logical": "math:probability.core:attempt-p0218-growth-exponents-in-the-spatial-city-formation-model"
+    },
+    {
+      "from_key": "susceptibility-derivative-inference-refuted",
+      "kind": "refutes",
+      "rationale": "From: \"The implications theta(delta)~delta and theta'(delta)<=C*chi(delta), even with theta,chi positive and smooth on 0<delta<1, do not imply chi(delta)>=c/\"; to: \"dtheta/dp <= C chi^f(p) and theta ~ (p - p_c) give chi^f(p) >= c/(p - p_c)\". The relation concerns this quoted step, with the result assumptions and scope retained.",
+      "to_existing_logical": "math:probability.percolation:attempt-c0065-existence-and-equality-of-the-supercritical-exponents-gamma-nu-nu-2-in"
+    },
+    {
+      "from_key": "holder-boundary-terminal-angle",
+      "kind": "specializes",
+      "rationale": "From: \"Suppose a domain near a boundary point z is, in coordinates with outward unit normal e_d, contained in {x_d<g(x')}, with g(0)=0 and |g(x')|<=C*|x'|^(1\"; to: \"every limit of (z-B_s)/|z-B_s|\". The relation concerns this quoted step, with the result assumptions and scope retained.",
+      "to_existing_logical": "math:probability.core:attempt-p0019-brownian-exit-approach-directions-in-higher-dimensions"
+    },
+    {
+      "from_key": "ergodic-forests-arbitrary-finite-component-count",
+      "kind": "generalizes",
+      "rationale": "From: \"For each integer k>=2, the Cayley graph G_k of Z with generators {+1,-1,+k,-k} has a deterministic translation-invariant spanning forest with exactly \"; to: \"The two components are the even and odd integers\". The relation concerns this quoted step, with the result assumptions and scope retained.",
+      "to_existing_logical": "math:probability.core:attempt-p0048-one-or-infinitely-many-free-forest-components-without-unimodularity"
+    },
+    {
+      "from_key": "decorated-poisson-level-count-criterion",
+      "kind": "depends_on",
+      "rationale": "From: \"Fix alpha>0 and z>=0 finite. Let heights h_i form a Poisson process on R of intensity z*exp(-alpha*h) dh, carrying independent identically distributed\"; to: \"For Poisson heights of intensity z*exp(-alpha*h) dh, with z>=0 finite and alpha>0, and independent identically distributed nonnegative decoration mark\". The cutoff expectation identity is used in the conditional law-of-large-numbers proof.",
+      "to_key": "truncated-decoration-poisson-mean"
+    },
+    {
+      "from_key": "survival-compensator-exhaustion-criterion",
+      "kind": "cites",
+      "rationale": "From: \"Let T>=1 be an integer-valued stopping time for a filtration (F_n), possibly infinite, and set p_n=E[1_{T=n+1}|F_n] and A_m=sum_(n<m) p_n. Then P(T=in\"; to: \"For a target discovered at time T=1 deterministically, p_n=P(T=n+1|F_n) equals one at n=0 and zero thereafter. Thus discovery has probability one, whi\". The deterministic example separates sufficient divergence from an unjustified necessity claim.",
+      "to_key": "stopped-hazard-divergence-not-necessary"
+    },
+    {
+      "from_key": "binary-tree-finite-susceptibility-exponent",
+      "kind": "analogous_to",
+      "rationale": "From: \"For Bernoulli bond percolation on the infinite degree-three tree, 1/2<p<1, write chi_f(p)=E_p[|C_o|*1_{|C_o|<infinity}]. Then chi_f(p)=((1-p)/p)^3*(2-\"; to: \"On the (b+1)-regular tree with b>=2, independent Bernoulli bond percolation at fixed p in (1/b,1), there are constants C,c>0 such that P_p(|C_o|<infin\". Both use the explicit finite-cluster law conditioned on extinction; neither supplies a lattice result.",
+      "to_key": "regular-tree-infinite-contact-exponential-tail"
+    },
+    {
+      "from_key": "fringe-clt-uniform-error-threshold",
+      "kind": "analogous_to",
+      "rationale": "From: \"Let X_n and Y_n be integrable sums of n leaf scores on one coupled probability space. Suppose every corresponding score differs in absolute value by a\"; to: \"Assume finite binary trees retain an identifiable original degree-two root after leaf rerooting, and their ordered root split law is q_n(i)=n/(2 H_(n-\". Both expose the square-root scale that qualitative local convergence does not control.",
+      "to_key": "retained-root-fringe-perturbation-threshold"
+    }
+  ]
+}

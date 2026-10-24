@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A035: exact cancellation and scope audit}
+All entropy is in bits. Put $p_S=\widehat f(S)^2$ and
+$H_\infty=-\log_2\max_Sp_S$.
+
+For the quadratic bent sign on even $n$ bits,
+$b(x)=(-1)^{\sum_{j=1}^{n/2}x_{2j-1}x_{2j}}$ (binary inputs),
+every Fourier amplitude has magnitude $2^{-n/2}$.
+Consequently, for every $U\ne\varnothing$,
+\[
+ \sum_S\widehat b(S)\widehat b(S\triangle U)=0,
+ \qquad\sum_S|\widehat b(S)\widehat b(S\triangle U)|=1.
+\]
+Thus the absolute autocorrelation sum over nonzero shifts is
+$2^n-1$, whereas $I(b)=n/2$. There is no finite universal $K$
+paying that unsigned sum by $K I$. The valid triangle inequality
+is $|\sum a_Sa_{S\triangle U}|\le\sum|a_Sa_{S\triangle U}|$;
+it supplies no upper bound on the right side from the zero left
+side. Equality, or an inequality in the reverse direction, is the
+first false proof step. This does not invalidate a signed target.
+
+\section*{The min-entropy gap retains the full conjecture}
+For any Boolean $h$ and positive integer $t$, define on fresh inputs
+\[
+ g=y\prod_{j=1}^t h(x^{(j)}),\qquad
+ F(z,y,x)=\frac{1+z}{2}+\frac{1-z}{2}g(y,x).
+\]
+The sign $g$ is balanced. The constant and $z$ coefficients of $F$
+are both $1/2$; each nonzero coefficient of $g$ supplies two
+coefficients of magnitudes $|\widehat g(S)|/2$. Hence
+\[
+ H(F)=2+\frac{tH(h)}2,\quad H_\infty(F)=2,\quad
+ I(F)=1+\frac{tI(h)}2.
+\]
+A uniform bound $H-H_\infty\le K I$ applied to $F$, divided by
+$t/2$, and followed by $t\to\infty$ gives $H(h)\le K I(h)$.
+The converse follows from $H-H_\infty\le H$.
+Therefore the two optimal universal constants are equal, including
+the possibility of infinity. This is an application of the exact
+activation/selector identities, not a new entropy payment.
+
+\section*{Two actual Boolean refutations}
+Let $h_{w,m}$ be OR of $m$ disjoint width-$w$ AND gates, identified
+with a sign. Set $q=2^{-w}$, $r=1-q$. The constant coefficient is
+$1-2r^m$. Every Fourier set touching exactly $j$ tribes has squared
+coefficient $4q^{2j}r^{2(m-j)}$ and multiplicity
+$\binom mj(2^w-1)^j$. Moreover $I(h_{w,m})=2wmq r^{m-1}$.
+For $w=2,m=3$, the squared-law histogram is
+\[
+ \{25/1024:1,\;81/1024:9,\;9/1024:27,\;1/1024:27\}.
+\]
+Thus $I=27/16$ and $H_\infty=10-4\log_2 3>27/8=2I$,
+certified by $3^{32}<2^{53}$.
+
+For $h=h_{2,8}$, $I(h)=2187/2048$ and independent rational
+logarithm bounds certify
+$4.623452413789<H(h)<4.623452413790$.
+Taking $t=32$ in the preceding selector gives an actual sign on
+$32\cdot16+2=514$ bits, $I(F)=2315/128$, $H_\infty(F)=2$, and
+\[
+ H(F)-H_\infty(F)-4I(F)
+ \in[1.631488620635,1.631488620636].
+\]
+Only the constants $2$ and $4$ in the respective proposed helpers
+are refuted. No unbounded Boolean entropy/influence ratio results.
+
+\section*{Non-Boolean controls, separately}
+The normalized real sign sum $\psi_n=n^{-1/2}\sum_i x_i$ has
+$I=1$ and $H=H_\infty=\log_2n$. It defeats constant-2 FMEI for
+$n>4$, but its gap is zero. To test the gap instead, let
+\[
+ \phi_t=\frac34+\frac1{4\,2^t}\sum_{i=1}^{7\,4^t}x_i\quad(t\ge1).
+\]
+This is a normalized real function with dyadic amplitudes,
+$p_\varnothing=9/16$ and $I=7/16$.
+Its gap satisfies $(H-H_\infty)/I=2t+\log_2 9\to\infty$.
+It violates full Booleanity already on singleton shifts:
+$\sum_Sa_Sa_{S\triangle\{i\}}=3/(8\,2^t)>0$.
+These are missing-hypothesis diagnostics, not Boolean witnesses.
+\end{document}

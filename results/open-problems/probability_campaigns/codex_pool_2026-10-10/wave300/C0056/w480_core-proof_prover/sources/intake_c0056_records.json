@@ -1,0 +1,72 @@
+{
+  "problems.jsonl": [
+    {
+      "line": 56,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "anderson_delocalization_d3",
+        "historical_status": "source_says_open",
+        "intake": "claude_20260907",
+        "locator": "Section 2.1, p. 7",
+        "problem_id": "C0056",
+        "recorded_at": "2026-09-07T06:38:45Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "bourgade_band_icm_2018",
+        "statement": "Prove existence of absolutely continuous spectrum (delocalised states) for the random Schrodinger operator -Delta + lambda V on Z^3 at small disorder lambda, and GOE local statistics for its finite-volume restriction.",
+        "status_search": "",
+        "title": "Extended states for the three-dimensional Anderson model at weak disorder",
+        "verification": "unreviewed"
+      },
+      "raw_line_sha256": "2da1a36c0b72afca2f49428ce734878f5cac2c527c57377c6a79cdcd4aa06a54"
+    }
+  ],
+  "attempts.jsonl": [
+    {
+      "line": 45,
+      "record": {
+        "attempt_id": "C0056-A001",
+        "author": "claude-probability-1000-continue-0907",
+        "independent_check": "",
+        "key_identity": "",
+        "method": "Review the failure of perturbation theory and test a restricted version on a tree-like subgraph.",
+        "obstruction": "Absence of a closed self-consistency equation on Z^3; kinetic-regime results stop at finite times.",
+        "problem_id": "C0056",
+        "recorded_at": "2026-09-07T06:38:45Z",
+        "result": "On the Bethe lattice a.c. spectrum is known (Klein; Aizenman-Warzel) because the self-consistent equation for the Green function has a stable solution; on Z^3 the corresponding equation is not closed. A known partial statement is that the disorder-averaged Green function has diffusive behaviour up to times lambda^{-2-delta} (Erdos-Salmhofer-Yau), which is the kinetic regime and does not reach the infinite-time statement. I tested the possibility of transferring the tree result through a spanning tree of Z^3: the operator restricted to a spanning tree is not the operator on Z^3, and removing the edges changes the spectrum non-perturbatively, so no transfer. No result; the problem is recorded as attempted with the explicit obstruction that the only tools proving a.c. spectrum are tree-specific.",
+        "schema": "probability-attempt.v1",
+        "substantive": true
+      },
+      "raw_line_sha256": "df2698acf44165186038deadc48e81aad162023b0d530f4c1cca963198fe3d86"
+    }
+  ],
+  "sources.jsonl": [
+    {
+      "line": 7,
+      "record": {
+        "access_evidence": "arXiv 1807.03031",
+        "acquired_at": "2026-09-07T06:19:51Z",
+        "acquisition_status": "validated_and_extracted",
+        "bytes": 1146641,
+        "extracted_characters": 60343,
+        "extracted_sha256": "94becc31961db4aac94611aa72da6eb502984d68650e03a539e8340255dc49bd",
+        "final_url": "https://arxiv.org/pdf/1807.03031",
+        "http_status": 200,
+        "intake": "claude_20260907",
+        "kind": "pdf",
+        "page_count": 16,
+        "raw_relative_to_downloads": "sources/bourgade_band_icm_2018/source.pdf",
+        "reading_status": "unread",
+        "schema": "probability-source.v1",
+        "sha256": "b8b15c02ac7b675471097e9c499a6d588cfd7b0c591c49b0135f2a42eaedddb0",
+        "source_id": "bourgade_band_icm_2018",
+        "statement_validation": "not_started",
+        "text_relative_to_downloads": "sources/bourgade_band_icm_2018/text.txt",
+        "title": "Bourgade: Random band matrices, ICM 2018 survey",
+        "url": "https://arxiv.org/pdf/1807.03031"
+      },
+      "raw_line_sha256": "5c51523eec358602836fa8f0de588495e1f3279d71234498c37cb4d37a5c2a48"
+    }
+  ]
+}

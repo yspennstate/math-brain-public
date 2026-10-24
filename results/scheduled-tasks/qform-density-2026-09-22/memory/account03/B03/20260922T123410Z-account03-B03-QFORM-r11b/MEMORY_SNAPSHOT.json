@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260922T123410Z-account03-B03-QFORM-r11b",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commits_observed": [
+    "223f71f1bbd6169b8a31ce7c611fdf089b2396e7",
+    "c07107fb5797dde08fef20841e5261da01425ed5",
+    "623a8258994fb893dbaa3d48bbeea005cd4fede3"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "719c114f8dad72a6780b194cbea124cfa4cf6d44",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260922T123410Z-account03-B03-QFORM-r11b/REPORT.md",
+    "blob": "4d1e570b1cc016640845be8a943aeafc69c2cff5"
+  },
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "REFUTED_UNIFORM_POINTWISE_OSCILLATORY_DECAY"
+  ],
+  "premises_preserved": [
+    "X_i independent only in original coordinates",
+    "each original-coordinate density <=1",
+    "A real symmetric with at least three eigenvalues of magnitude >=1",
+    "continuity separate from essential boundedness",
+    "within each two-copy pair (U_i,V_i), dependence is retained"
+  ],
+  "partner_status": {
+    "designated_partner": "account04/B03",
+    "completed_current_result_observed": false,
+    "compatible_applied_result": "account04/B18 Schur-pivot square smoothing, canonical math report commit 441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+    "additional_applied_result": "account03/B11 arbitrary indefinite binary half-potential, canonical math report commit 860d849b7f2e0198bf7c3531a71b14e59f03e430"
+  },
+  "new_results": [
+    "Exact Gaussian-mollified all-order time hierarchy J_m(eps)=integral p_eps^m with positive iid collision representation.",
+    "Uniform bounds J_m(eps)<=B^(m-1) for every m>=2 and eps>0 are equivalent to an essential density bound <=B.",
+    "Any one fixed copy order yields only small-ball exponent 1-1/m through Holder, so the two-copy level alone does not pay linear scaling.",
+    "If A has an invertible disjoint physical 3x3 cross minor M, then the two-copy difference has density <=C_bil |det M|^(-1/3), C_bil=(27 sqrt(3) pi/2)^(1/3)<4.189, and ||p_Q||_2^2 obeys the same bound."
+  ],
+  "unresolved": "Prove a dimension-free exponential all-order collision bound from the three-large-eigenvalue spectral condition, without choosing a dimension-degrading fixed physical block and without false pointwise oscillatory decay.",
+  "next_mechanism": "Aggregate-minor/exterior-power control at collision order m, starting with the localized rank-three indefinite cross-energy branch; seek a multiplicative bound across copy layers rather than another m=2 estimate.",
+  "full_target_status": "OPEN",
+  "continuity_status": "SEPARATE_OPEN",
+  "full_brain_connected": false
+}

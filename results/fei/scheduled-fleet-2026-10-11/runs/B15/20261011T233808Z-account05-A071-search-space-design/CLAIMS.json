@@ -1,0 +1,46 @@
+[
+  {
+    "claim_id": "A071-EXACT-FIVEBIT-ERASURE-SELECTION",
+    "version": 1,
+    "exact_statement": "On the uniform five-bit cube, E*(5)=max_{f nonconstant} min_{i:Inf_i(f)>0} H(S_i|S_-i)/Inf_i(f) equals K5=16/3-(3/8)log2(3)-(169/24)log2(13)+(89/24)log2(89). Equality holds exactly for the 640 truth tables whose minority class is {t,t xor e_i,t xor e_j}, with t in F2^5 and distinct coordinates i,j, allowing output complement. The associated spectral law is P(S)=fhat(S)^2 and entropy is in bits.",
+    "hypotheses": [
+      "Actual Boolean sign functions on the uniform cube F2^5",
+      "Only relevant physical coordinates participate in the minimum",
+      "Base-two Shannon entropy of the squared normalized Walsh spectrum"
+    ],
+    "statement_sha256": "7e30279e1c16bc098377bb8dad61dc8357cff0fe4f760865a4766e2ff3de1a67",
+    "contributors": [
+      "account05/A071"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "SEARCH_DOMAIN.json",
+      "FULL_DOMAIN.json",
+      "code/sparse_search.py",
+      "code/full_census.py",
+      "code/check_final.py",
+      "out/search.json",
+      "out/full_census.json",
+      "out/final_certificate.json",
+      "out/candidate_certificates.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "EXACT_FINITE_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A075",
+      "A074",
+      "A073",
+      "A085",
+      "A092",
+      "A026",
+      "A028",
+      "A082",
+      "B15",
+      "B20"
+    ]
+  }
+]

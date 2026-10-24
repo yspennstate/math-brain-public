@@ -1,0 +1,12 @@
+{
+  "helper_version":"A043-independent-generation-v1",
+  "family":"all 3 choices of 2-coordinate inner block, all 16 inner binary truth tables, all 16 outer binary truth tables",
+  "domain":"n=3 only, plus 16 physical assignments for the four-input bias witness",
+  "case_count":768,
+  "comparison":"all 256 three-input truth tables, checking all 218 essential ones against generated composable tables",
+  "symmetry":"none; labeled blocks; set deduplication only after exact generation",
+  "arithmetic":"integer truth-table sets and exact equality",
+  "memory_estimate_mb":20,
+  "max_runtime_seconds":60,
+  "command":"python -X utf8 code/check_independent.py"
+}

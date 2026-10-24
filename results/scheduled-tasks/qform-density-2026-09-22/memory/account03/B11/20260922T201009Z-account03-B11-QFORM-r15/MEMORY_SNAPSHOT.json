@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260922T201009Z-account03-B11-QFORM-r15",
+  "control_start_commit": "b866f597fc6938cac575ef36cd9249b62353d7b2",
+  "control_refresh_commit": "39accdfcf68fbbd773c88885ac3890bb73f12cad",
+  "control_revision": "2026-09-22.15",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-PARABOLIC-CONDITIONAL-CAP-INSUFFICIENT-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-LOCALIZED-3BLOCK-REPAIR-v1",
+      "source": "yspennstate/math-open-problems@a9f23a3a387c9be219fcaf08ef66079f8c124e0c:proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260922T192514Z-account03-B11-QFORM-r14/REPORT.md",
+      "scope": "three independent cap-one scalar variables; symmetric 3x3 matrix sigma_min>=s; arbitrary affine terms; density <=128*2^(1/4)/s"
+    },
+    {
+      "id": "ONE_DIMENSIONAL_PRODUCT_MARGINAL",
+      "source": "account03/B09 r16 and its cited completed projection input",
+      "scope": "nonzero linear projection of an original-coordinate independent cap-one bank has density <=sqrt(2)/||u||_2"
+    }
+  ],
+  "partner_result_applied": {
+    "worker": "account04/B11",
+    "id": "QFORM-PARABOLIC-CONDITIONAL-CAP-INSUFFICIENT-v1",
+    "source": "yspennstate/math-open-problems@797dcde430e982a020d7642b54cadc281cbc9bc1:proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260922T191727Z-account04-B11-nullgraph-obstruction-r2/REPORT.md",
+    "application": "For Y=OZ with Z the three independent normalized product-bank projections, QFORM-ALIGNED-THREE-BANK-COMPILER-v1 gives ||p_(Y^T H0 Y)||_infinity<=256*2^(1/4); partner identity then gives the actual null-graph trace N(h_Y)<=512*2^(1/4)<608.875."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-ALIGNED-THREE-BANK-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "Three disjoint original-coordinate banks with exact rank-one aligned self/cross blocks and norm-compressed symmetric matrix C satisfying sigma_min(C)>=s have ambient density <=256*2^(1/4)/s, with aligned outside couplings and arbitrary outside curvature."
+    },
+    {
+      "id": "QFORM-THREE-RAY-EXACT-RANK3-v1",
+      "status": "PROVED_COROLLARY",
+      "statement": "Exact-rank-three forms whose physical spectral rows lie on three disjoint projective rays satisfy the same <304.438/s density bound."
+    },
+    {
+      "id": "QFORM-ORTHOGONAL-THREE-BANK-NULLTRACE-v1",
+      "status": "PROVED_COROLLARY",
+      "statement": "For h_Y obtained by an orthogonal mixing of three independent normalized product-bank projections, the canonical (+,+,-) parabolic null-graph trace obeys N(h_Y)<=512*2^(1/4)<608.875."
+    }
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "c686350b50e449c404031fc3573ccd6675cd11e2",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260922T201009Z-account03-B11-QFORM-r15/REPORT.md"
+  },
+  "checker_source_commit": "e22d67345c40d3ac019ed4419f2da083d3dd6617",
+  "handoff_commit": "ec26c8506ede11028dc1d365f34f12cf9a338109",
+  "unresolved_implication": "QFORM-APPROXIMATE-THREE-BANK-OR-RIDGE-v1: force a universal-scale grouped aligned bank or already-paid wedge/triangle/ridge/diffuse certificate from the bare three-large-eigenvalue hypothesis, or directly pay genuinely unaligned curvature without moment assumptions.",
+  "continuity_status": "OPEN_NOT_PROVED",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

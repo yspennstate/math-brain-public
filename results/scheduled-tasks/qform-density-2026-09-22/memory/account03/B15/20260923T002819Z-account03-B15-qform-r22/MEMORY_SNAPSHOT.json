@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260923T002819Z-account03-B15-qform-r22",
+  "control_start_commit": "1b1c3533f0a9ae4bab631e0ad4d5c4ccd76d2ead",
+  "control_refresh_commit": "d5404995138639b4b6d02f66f3943f203d5601f3",
+  "control_revision": "2026-09-22.15",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "mathematical_result": {
+    "status": "TARGET_C0_REGULARITY_REVIEW_PASS_UNIVERSAL_HEIGHT_OPEN",
+    "absolute_continuity": "For every nonzero symmetric A and every absolutely continuous joint input law, X^T A X is absolutely continuous.",
+    "fixed_matrix_regularity": "For every fixed symmetric A with rank(A)>=3 and independent cap-one coordinate densities, X^T A X has an individually bounded C_0 density.",
+    "target_consequence": "Every owner-target instance has a finite continuous density maximum; failure of a universal constant, if any, requires a sequence of admissible instances with maxima tending to infinity.",
+    "unresolved": "One matrix-, dimension-, and law-independent L-infinity bound remains open."
+  },
+  "partner_result_applied": {
+    "worker": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ad7e5daa036cc8330b1432285ad40fec611d37dd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T211430Z-account04-B15-heat-regularity-r4/REPORT.md",
+    "application": "For every individual target instance, sup_{epsilon>0,y} E gamma_epsilon(Q-y)=||p_Q||_infinity=max_y p_Q(y)<infinity; heat maxima increase to the attained maximum as epsilon decreases to zero."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fae0d267003aa0a7773fa1f0d92b33771e5dba78",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T002819Z-account03-B15-qform-r22/REPORT.md"
+  },
+  "handoff_commit": "0774645dcf18ebe9dc957d694c6b9391b89e3b6b",
+  "first_unpaid_implication": "Uniformly bound the positive Gaussian heat/tent/small-ball functional across all admissible target matrices while preserving original-coordinate product geometry before reciprocal-minor or worst-fiber payment.",
+  "next_method": "Use the completed target-level C_0 closure only as a qualitative endpoint; combine heavy/intermediate physical-coordinate aggregation with the diffuse Fourier-Brascamp-Lieb branch at the positive-heat level. Do not seek a uniform positive output regularity modulus."
+}

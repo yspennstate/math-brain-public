@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B01",
+  "run_id": "20260923T030247Z-account02-B01-qform-r35",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "prepublication_commit": "3b690d6559eb31feb48c366cd20dc51e85a72622",
+    "owner_control_revision": "2026-09-22.15",
+    "paused_for_this_slot": false,
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "new_result": {
+    "id": "QFORM-TWO-PHYSICAL-HUB-CRITICAL-HALF-RIESZ-v1",
+    "statement": "For mutually independent cap-one X1,X2,Y1,...,Ym, arbitrary symmetric C, arbitrary rank-two M in R^{2xm}, fixed c and arbitrary measurable R(Y), S=X^T C X+2X^T(MY+c)+R(Y) satisfies sup_s E|S-s|^{-1/2} <= 2^(11/4) det(MM^T)^(-1/8).",
+    "proof_currency": "2D product-projection density cap + L2 slope density + Plancherel in two original physical hubs + half-Riesz integration",
+    "pointwise_scalar_fresnel_used": false,
+    "continuity_claimed": false
+  },
+  "target_level_corollary": "After an original nonzero scalar pivot a is completed, if its Schur residual exposes two original-coordinate hub rows with rank-two cross-slope M, then ||p_Q||inf <= 2^(11/4)|a|^(-1/2)det(MM^T)^(-1/8), retaining arbitrary other Schur curvature and affine terms.",
+  "newest_source_application": {
+    "source_commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "source_directory": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "result": "Theorem H applied to S0=2cX1(u^TY)+2cX2(v^TY): |phi(t)|<=min(1,4pi^2 c^-2 |t|^-2), hence ||p||inf<=4/c. The 2D product-projection density cap <=2 is used in the new proof."
+  },
+  "partner_application": {
+    "partner": "account03/B01",
+    "source_commit": "f651c96b5c87b1b0df9a5701b9b47293d08dc94c",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260923T013054Z-auto11/REPORT.md",
+    "result_used": "rank-two volume half-Riesz",
+    "actual_inequality": "For M0=c[u v] with row marginals 1/m<=1/2 and Z2=c^4, H_{1/2}(S)<=4sqrt(2e)c^-1/2; after an independent grouped square, density <=8sqrt(e)c^-1/2."
+  },
+  "strict_n3_application": {
+    "family": "Q_{m,eta}=2cX1 u^TY+2cX2 v^TY+eta Y^T K_mY+(w^TW)^2, c=1+eta, K_m symmetric normalized Sylvester Hadamard",
+    "scope": "0<eta<=1/4; 2m a Sylvester size; arbitrary independent cap-one input laws",
+    "spectral_fact": "at least two eigenvalues >=1, two <=-1, plus an independent eigenvalue 1",
+    "no_pivot_fact": "all physical diagonals and physical 2x2 principal determinants tend to zero as m grows",
+    "bound": "||p_Q||inf <= 2^(13/4)c^-1/2 < 9.514"
+  },
+  "math_outputs": {
+    "report_commit": "0bc769a70ba86df2c5bc5b73b5e5bbfe6021cfd8",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260923T030247Z-account02-B01-qform-r35/REPORT.md",
+    "checkpoint_commit": "765c1445e6c15432648281412ec78629dc6c4746",
+    "checker_source_commit": "38077b09c9b14824b6f620ee0f024c6ca71d2131",
+    "checker_output_commit": "42ce13bd6ed0bc9a8bba0011e71fa8fbf53ed0a1",
+    "checker_status": "PASS_AUXILIARY_ONLY"
+  },
+  "brain_handoff_commit": "8e08686a05d1561926913c2cb33f9d716a14094b",
+  "unresolved_implication": {
+    "id": "QFORM-CRITICAL-TWO-ROW-TO-N3-ROUTING-v1",
+    "statement": "Route every general strict-N3 survivor to a quantitative scalar-pivot/two-hub Gram certificate, an independent/grouped third-curvature packet, or an already-paid structural branch without paying an uncontrolled reciprocal tiny physical determinant first."
+  },
+  "review_status": "new supporting proof; no two independent end-to-end reviews; not a full-proof candidate",
+  "next_step": "Attack the structural N3 routing, especially high-overlap two-hub states with no safe scalar pivot or independent third-curvature packet, while retaining original-coordinate product provenance."
+}

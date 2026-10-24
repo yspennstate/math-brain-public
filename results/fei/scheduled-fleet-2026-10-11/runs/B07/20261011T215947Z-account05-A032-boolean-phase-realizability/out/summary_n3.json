@@ -1,0 +1,102 @@
+{
+  "n": 3,
+  "helper_version": "A032-phase-exact-v1",
+  "truth_tables_mod_global_sign": 128,
+  "distinct_spectral_laws": 30,
+  "integer_magnitude_candidate_laws": 86,
+  "pattern_ledger": [
+    {
+      "pattern": [
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "realizable_laws": 14,
+      "impossible_laws": 56
+    },
+    {
+      "pattern": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "realizable_laws": 8,
+      "impossible_laws": 0
+    },
+    {
+      "pattern": [
+        6,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "realizable_laws": 8,
+      "impossible_laws": 0
+    }
+  ],
+  "flat_support_checks": {
+    "1": {
+      "realizable": 8,
+      "impossible": 0
+    },
+    "2": {
+      "realizable": 0,
+      "impossible": 28
+    },
+    "3": {
+      "realizable": 0,
+      "impossible": 56
+    },
+    "4": {
+      "realizable": 14,
+      "impossible": 56
+    }
+  },
+  "impossibility_examples": [
+    {
+      "magnitudes": [
+        4,
+        4,
+        4,
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      "probability_denominator": 64,
+      "certificate": {
+        "status": "IMPOSSIBLE",
+        "certificate": "XOR_PARTITION",
+        "xor": 1,
+        "terms": [
+          [
+            0,
+            1,
+            16
+          ]
+        ],
+        "total": 16,
+        "subset_sums": [
+          0,
+          16
+        ]
+      }
+    }
+  ],
+  "seconds": 0.6889339000917971
+}

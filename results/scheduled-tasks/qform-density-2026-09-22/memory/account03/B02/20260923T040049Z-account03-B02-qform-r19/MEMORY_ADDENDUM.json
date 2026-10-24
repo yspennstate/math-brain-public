@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260923T040049Z-account03-B02-qform-r19",
+  "status": "STRONGER_POST_SNAPSHOT_RESULT",
+  "full_target_status": "OPEN",
+  "new_claims": [
+    {
+      "id": "QFORM-BALANCED-CROSSMINOR-ENTROPY-L1-v1",
+      "status": "SUPPORTING_PROOF_SUPPLIED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For any original-coordinate cross block B of rank at least three, let W3=sum of squared physical 3x3 cross minors and w be the determinant-weighted minor law. Any minor law mu with row inclusion marginals <=1/2 gives ||p_Q||inf <=(3e/sqrt(2))exp(D(mu||w)/6)W3^(-1/6), with arbitrary same-bank curvature and arbitrary outside couplings; the density is continuous because phi_Q is L1."
+    },
+    {
+      "id": "QFORM-DISJOINT-CROSSMINOR-L1-v1",
+      "status": "SUPPORTING_PROOF_SUPPLIED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "If delta_row is the probability that two iid determinant-weighted physical 3x3 minors have disjoint row triples, then ||p_Q||inf <=(3e/sqrt(2))delta_row^(-1/6)W3(B)^(-1/6); transpose gives the column version."
+    },
+    {
+      "id": "QFORM-COMPOUND-HUB-DICHOTOMY-v1",
+      "status": "STRUCTURAL_LEMMA_PROVED",
+      "statement": "Small row-disjointness delta_row produces a fixed physical row triple H with W3(B without H rows)<=delta_row W3(B); small column-disjointness similarly gives L. If both are small, at least 1-delta_row-delta_col of determinant-weighted three-minor mass touches both H and L."
+    },
+    {
+      "id": "QFORM-RANDOM-CUT-DISJOINT-THREEVOLUME-v1",
+      "status": "STRUCTURAL_IDENTITY_PROVED",
+      "statement": "If T^(0) is the squared 3x3 minor mass of symmetric A over disjoint row/column triples, then for a random physical bipartition E W3(A[I,J])=T^(0)/64."
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "601f3b5a79ffc72be9e2ef68b8d23c679eebdf50",
+    "run_folder": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260923T040049Z-account03-B02-qform-r19/",
+    "main_report": "REPORT.md",
+    "analytic_addendum": "ADDENDUM_BALANCED_CROSSMINOR.md",
+    "structural_corollary": "STRUCTURAL_COROLLARY.md",
+    "crossminor_checker": "CROSSMINOR_CHECK.py",
+    "crossminor_check_results": "CROSSMINOR_CHECK_RESULTS.txt"
+  },
+  "brain_handoff_addendum_commit": "d948f0a3d812f89fcacc8fc545ca0d0d7c2b3077",
+  "brain_handoff_addendum_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B02/20260923T040049Z-account03-B02-qform-r19-crossminor-addendum.md",
+  "unresolved_implication": "QFORM-COMPOUND-HUB-OR-OVERLAP-COMPILER-v1: starting from e3(A^2)>=1, pay the disjoint-minor branch by random cut plus the new crossminor L1 theorem unless it creates the six-coordinate compound hub; aggregate the hub and overlap-one/two/principal classes into completed physical-pair, pivot/Schur, zero-diagonal/principal, grouped-star, ridge or diffuse exits without selecting a tiny minor.",
+  "target_wide_L1_fourier_status": "OPEN_NOT_PROVED_NOT_REFUTED",
+  "continuity_status": "CONTINUOUS_ON_NEW_CROSSMINOR_BRANCH; FULL_TARGET_CONTINUITY_OPEN",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

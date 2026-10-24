@@ -1,0 +1,612 @@
+--- a/~/math-brain-inbox/w330/bundle_001.json
++++ b/~/math-brain-inbox/w330/bundle_001.json
+@@ -0,0 +1,609 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w330",
++  "bundle_slug": "w330-open-problems-ten-20261010",
++  "entries": [
++    {
++      "key": "randomized-forward-filling-invariant-mass-criterion",
++      "namespace": "probability.measure",
++      "logical_name": "randomized-forward-filling-invariant-mass-criterion",
++      "kind": "lemma",
++      "title": "Randomized forward filling: invariant component mass is the exact criterion",
++      "statement": "Let T be an invertible measure-preserving transformation of a standard Borel probability space (E,P), I its invariant sigma-field modulo P-null sets, and Q=fP with f>=0 and integral f dP=1. On an extension with independent uniforms, there is an almost surely finite integer N>=0 and Z~P such that T^N Z~Q if and only if E[f|I]=1 almost surely. N need not be a path-filtration stopping time or have finite mean.",
++      "proof_text": "# P0032: exact invariant-measure criterion for randomized forward filling\n\n2026-10-10. Label: author proof, awaiting w346 blind KEEP. Novelty unverified. This extends the recorded candidate lemma; it does not announce an open-problem solution.\n\nLet T be an invertible measure-preserving transformation of a standard Borel probability space (E,P), let I be its invariant sigma-field modulo null sets, and let Q=fP, with f>=0 and integral f dP=1. There exists an extension with independent uniforms and an almost surely finite N>=0 such that T^N Z has law Q for Z~P if and only if E[f|I]=1 almost surely. No finite mean for N, stopping-time property for a path filtration, or deterministic shift is asserted.\n\nNecessity: an invariant event A has 1_A(T^N Z)=1_A(Z), outside the union of countably many null sets. Hence Q(A)=P(A) for every A in I, exactly the conditional expectation criterion.\n\nSufficiency: put Lh=h composed with T^{-1}, a_0=1, b_0=f, m_n=min(a_n,b_n), a_{n+1}=L(a_n-m_n), b_{n+1}=b_n-m_n. Then 0<=a_n<=1, b_n decreases to b_inf in L1, integral a_n=integral b_n, and sum integral m_n<=1. Iterating gives a_n=1-sum_{k<n}L^{n-k}m_k. For each fixed k, Birkhoff's theorem and boundedness 0<=m_k<=1 give the Cesaro mean of its L-iterates tending in L1 to E[m_k|I]. Truncating k at K leaves an L1 error at most sum_{k>=K} integral m_k, uniformly in the averaging length. Therefore the Cesaro mean of a_n tends in L1 to\n\n    h=1-sum_k E[m_k|I]=E[b_inf|I].\n\nHere 0<=h<=1 and h is I-measurable. If b_inf has positive mass, h has positive mass. Some epsilon>0 has H={h>=epsilon} with integral_H b_inf=integral_H h>0. Then for some delta>0 the set B=H intersect {b_inf>=delta} has positive probability. On B,\n\n    m_n >= min(a_n,delta) >= min(1,delta) a_n.\n\nAveraging and integrating over B gives a positive limiting lower bound min(1,delta)*integral_B h. But the Cesaro mean of integral_B m_n tends to zero, since sum integral m_n<=1. This contradiction gives b_inf=0 almost surely and sum_n m_n=f.\n\nAccept stage n with independent uniform probability m_n/a_n evaluated at T^n Z, taking probability zero where a_n=0. The active law before stage n is a_n P; its accepted law is m_n P and its pushed residual law is a_{n+1}P. Thus P(N>=n)=integral a_n tends to zero and law(T^N Z)=sum m_n P=fP.\n\nFor an ergodic T the criterion is automatic. The two-sided Wiener unit shift is ergodic by its iid unit-increment blocks. Lifting a one-sided density f gives the previously recorded finite Brownian-prefix construction, with auxiliary randomness and arbitrary finite selection time. The disintegration step uses standard Borel path spaces. The complete earlier proof is Downloads/Probability_1000_20h_20260906/proofs/P0032_brownian_prefix_candidate.md; its own label is a candidate under review.\n\nThe boundary is exact: on a finite permutation, each orbit must receive its original total target mass. Nonergodicity alone does not preclude filling. A target that changes an orbit's mass cannot be reached by any almost surely finite orbit shift.\n\nChecks to run: exact finite cycles with zero target entries, balanced multi-orbit targets, unbalanced multi-orbit rejection, pushforward orientation, accepted law and mass invariants. The Lean artifact checks only preservation of an invariant predicate under a point-dependent finite iteration, not Birkhoff, measure disintegration, or the Brownian theorem.\n",
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:randomized-forward-filling-invariant-mass-criterion",
++        "url": "file:///~/brain_workers/w330/reports/P0032_invariant_criterion.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "critical-beta-splitting-joint-sackin-colless-polynomial",
++      "namespace": "probability.trees",
++      "logical_name": "critical-beta-splitting-joint-sackin-colless-polynomial",
++      "kind": "lemma",
++      "title": "Exact joint Sackin-Colless law at finite size in the critical beta-splitting model",
++      "statement": "For n>=2 let q_n(i)=n/(2 H_{n-1} i(n-i)), 1<=i<n, where H_m=sum_{j=1}^m 1/j. Conditional on a split i,n-i assume independent daughter trees of their respective sizes. If S is external path length and C is the sum of the absolute differences of daughter leaf counts, then G_n(u,v)=E[u^S v^C] satisfies G_1=1 and G_n=sum_i q_n(i) u^n v^{abs(n-2i)} G_i G_{n-i}. This identifies each finite-n joint law; it does not identify a limiting law.",
++      "proof_text": "# P0347: joint finite-n laws and an exact one-split correction\n\n2026-10-10. Label: proof of finite-n recurrences, awaiting w346 KEEP. The asymptotic joint distribution remains unresolved; novelty is unverified.\n\nUse the critical beta=-1 Markov branching model: q_n(i)=n/(2 H_{n-1} i(n-i)), 1<=i<n, and conditional on I=i the two daughter trees are independent copies of sizes i and n-i. Let S be external path length and C the Colless sum, both zero for one leaf. Then S_n=n+S_i+S_{n-i} and C_n=|n-2i|+C_i+C_{n-i}. Consequently their joint probability polynomial is exactly\n\n    G_1(u,v)=1,\n    G_n(u,v)=sum_{i=1}^{n-1} q_n(i) u^n v^{|n-2i|} G_i(u,v)G_{n-i}(u,v).\n\nThis gives an exact algorithm for every fixed n and the full joint law, including all dependence between the indices. It does not identify a limiting normalization or limiting law.\n\nFor the one-split minimum M=min(I,n-I), pairing i with n-i gives\n\n    E M = n/H_{n-1} * (H_{n-1}-H_floor(n/2) + 1_{n even}/n).\n\nThus the exact Colless root toll is n-2 E M. The center term when n is even must occur once, not twice. This sharpens the recorded bound E M<=n/H_{n-1}. It also confirms the earlier quadratic root identity E(n-2I)^2=n^2-2n(n-1)/H_{n-1}.\n\nFor any additive index with deterministic root toll t_n(i), define d_n(i)=t_n(i)+mu_i+mu_{n-i}-mu_n. Conditional independence and total variance give\n\n    mu_n=sum_i q_n(i)(t_n(i)+mu_i+mu_{n-i}),\n    V_n=sum_i q_n(i)(V_i+V_{n-i}+d_n(i)^2).\n\nFor two indices A,B the corresponding covariance is sum_i q_n(i)(K_i+K_{n-i}+d_n^A(i)d_n^B(i)). These recurrences require no unproved occupation ansatz. Initial means, variances and covariance at n=1 are zero.\n\nIndependent failure checks: q sums to one; exact joint probabilities normalize; direct one-split sums agree with the harmonic formula for odd/even n; the joint law has S>=C and S-C even; its moments agree with the total-variance recurrences. Conditional subtree independence is a model assumption, not inferred merely from the split probabilities.\n\nSources read: P0347-A001 in the existing campaign ledger and the corresponding store attempt card. The cached Aldous-Janson paper supplies q and Markov branching. Its distributional request remains open in the local corpus; a negative literature search is not a current global status certificate.\n",
++      "assumptions": [
++        "Critical beta=-1 Markov branching, including conditional daughter independence"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:critical-beta-splitting-joint-sackin-colless-polynomial",
++        "url": "file:///~/brain_workers/w330/reports/P0347_joint_balance.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "critical-beta-splitting-exact-minimum-child-toll",
++      "namespace": "probability.trees",
++      "logical_name": "critical-beta-splitting-exact-minimum-child-toll",
++      "kind": "lemma",
++      "title": "Exact minimum-child and quadratic root tolls for a critical beta split",
++      "statement": "For I with probabilities q_n(i)=n/(2 H_{n-1} i(n-i)), n>=2, E[min(I,n-I)]=(n/H_{n-1})(H_{n-1}-H_floor(n/2)+1_{n even}/n), E[abs(n-2I)]=n-2 E[min(I,n-I)], and E[(n-2I)^2]=n^2-2n(n-1)/H_{n-1}. The even central split is counted once.",
++      "proof_text": "# P0347: joint finite-n laws and an exact one-split correction\n\n2026-10-10. Label: proof of finite-n recurrences, awaiting w346 KEEP. The asymptotic joint distribution remains unresolved; novelty is unverified.\n\nUse the critical beta=-1 Markov branching model: q_n(i)=n/(2 H_{n-1} i(n-i)), 1<=i<n, and conditional on I=i the two daughter trees are independent copies of sizes i and n-i. Let S be external path length and C the Colless sum, both zero for one leaf. Then S_n=n+S_i+S_{n-i} and C_n=|n-2i|+C_i+C_{n-i}. Consequently their joint probability polynomial is exactly\n\n    G_1(u,v)=1,\n    G_n(u,v)=sum_{i=1}^{n-1} q_n(i) u^n v^{|n-2i|} G_i(u,v)G_{n-i}(u,v).\n\nThis gives an exact algorithm for every fixed n and the full joint law, including all dependence between the indices. It does not identify a limiting normalization or limiting law.\n\nFor the one-split minimum M=min(I,n-I), pairing i with n-i gives\n\n    E M = n/H_{n-1} * (H_{n-1}-H_floor(n/2) + 1_{n even}/n).\n\nThus the exact Colless root toll is n-2 E M. The center term when n is even must occur once, not twice. This sharpens the recorded bound E M<=n/H_{n-1}. It also confirms the earlier quadratic root identity E(n-2I)^2=n^2-2n(n-1)/H_{n-1}.\n\nFor any additive index with deterministic root toll t_n(i), define d_n(i)=t_n(i)+mu_i+mu_{n-i}-mu_n. Conditional independence and total variance give\n\n    mu_n=sum_i q_n(i)(t_n(i)+mu_i+mu_{n-i}),\n    V_n=sum_i q_n(i)(V_i+V_{n-i}+d_n(i)^2).\n\nFor two indices A,B the corresponding covariance is sum_i q_n(i)(K_i+K_{n-i}+d_n^A(i)d_n^B(i)). These recurrences require no unproved occupation ansatz. Initial means, variances and covariance at n=1 are zero.\n\nIndependent failure checks: q sums to one; exact joint probabilities normalize; direct one-split sums agree with the harmonic formula for odd/even n; the joint law has S>=C and S-C even; its moments agree with the total-variance recurrences. Conditional subtree independence is a model assumption, not inferred merely from the split probabilities.\n\nSources read: P0347-A001 in the existing campaign ledger and the corresponding store attempt card. The cached Aldous-Janson paper supplies q and Markov branching. Its distributional request remains open in the local corpus; a negative literature search is not a current global status certificate.\n",
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:critical-beta-splitting-exact-minimum-child-toll",
++        "url": "file:///~/brain_workers/w330/reports/P0347_joint_balance.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "markov-branching-additive-index-covariance-recursion",
++      "namespace": "probability.trees",
++      "logical_name": "markov-branching-additive-index-covariance-recursion",
++      "kind": "lemma",
++      "title": "Total-variance and covariance recurrences for additive branching indices",
++      "statement": "In a finite-leaf Markov branching tree with split probabilities q_n(i) and independent daughter trees conditional on i, an additive index A with deterministic root toll t^A_n(i) has mean mu^A_n=sum_i q_n(i)(t^A_n(i)+mu^A_i+mu^A_{n-i}). Put d^A_n(i)=t^A_n(i)+mu^A_i+mu^A_{n-i}-mu^A_n. For two finite-second-moment additive indices A,B, their covariance K_n=sum_i q_n(i)(K_i+K_{n-i}+d^A_n(i)d^B_n(i)). Setting B=A gives the variance recursion. Initial one-leaf values are deterministic.",
++      "proof_text": "# P0347: joint finite-n laws and an exact one-split correction\n\n2026-10-10. Label: proof of finite-n recurrences, awaiting w346 KEEP. The asymptotic joint distribution remains unresolved; novelty is unverified.\n\nUse the critical beta=-1 Markov branching model: q_n(i)=n/(2 H_{n-1} i(n-i)), 1<=i<n, and conditional on I=i the two daughter trees are independent copies of sizes i and n-i. Let S be external path length and C the Colless sum, both zero for one leaf. Then S_n=n+S_i+S_{n-i} and C_n=|n-2i|+C_i+C_{n-i}. Consequently their joint probability polynomial is exactly\n\n    G_1(u,v)=1,\n    G_n(u,v)=sum_{i=1}^{n-1} q_n(i) u^n v^{|n-2i|} G_i(u,v)G_{n-i}(u,v).\n\nThis gives an exact algorithm for every fixed n and the full joint law, including all dependence between the indices. It does not identify a limiting normalization or limiting law.\n\nFor the one-split minimum M=min(I,n-I), pairing i with n-i gives\n\n    E M = n/H_{n-1} * (H_{n-1}-H_floor(n/2) + 1_{n even}/n).\n\nThus the exact Colless root toll is n-2 E M. The center term when n is even must occur once, not twice. This sharpens the recorded bound E M<=n/H_{n-1}. It also confirms the earlier quadratic root identity E(n-2I)^2=n^2-2n(n-1)/H_{n-1}.\n\nFor any additive index with deterministic root toll t_n(i), define d_n(i)=t_n(i)+mu_i+mu_{n-i}-mu_n. Conditional independence and total variance give\n\n    mu_n=sum_i q_n(i)(t_n(i)+mu_i+mu_{n-i}),\n    V_n=sum_i q_n(i)(V_i+V_{n-i}+d_n(i)^2).\n\nFor two indices A,B the corresponding covariance is sum_i q_n(i)(K_i+K_{n-i}+d_n^A(i)d_n^B(i)). These recurrences require no unproved occupation ansatz. Initial means, variances and covariance at n=1 are zero.\n\nIndependent failure checks: q sums to one; exact joint probabilities normalize; direct one-split sums agree with the harmonic formula for odd/even n; the joint law has S>=C and S-C even; its moments agree with the total-variance recurrences. Conditional subtree independence is a model assumption, not inferred merely from the split probabilities.\n\nSources read: P0347-A001 in the existing campaign ledger and the corresponding store attempt card. The cached Aldous-Janson paper supplies q and Markov branching. Its distributional request remains open in the local corpus; a negative literature search is not a current global status certificate.\n",
++      "assumptions": [
++        "Finite second moments",
++        "Deterministic one-leaf values",
++        "Conditional daughter independence"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:markov-branching-additive-index-covariance-recursion",
++        "url": "file:///~/brain_workers/w330/reports/P0347_joint_balance.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "young-diagram-infinite-bad-top-corner-move-family",
++      "namespace": "combinatorics.partitions",
++      "logical_name": "young-diagram-infinite-bad-top-corner-move-family",
++      "kind": "lemma",
++      "title": "An infinite family refutes the naive dimension-increasing top-corner move",
++      "statement": "For a>=2 and b>=0, set lambda=(a,a-1,1^b) and mu=(a-1,a-1,1^{b+1}). Their standard Young tableau dimensions satisfy dim(mu)/dim(lambda)=a(a+b-1)/(2(a+b)(b+1)). In particular, for a=b+4 and b>=2 the diagram lambda has width minus number of rows equal to two, yet moving its top-right box to a new bottom row strictly decreases dimension. The ratio tends to 1/2. This refutes that specific move rule, not maximal-dimension uniqueness.",
++      "proof_text": "# C0062: an infinite counterexample family for the naive top-corner move\n\n2026-10-10. Label: proof awaiting w346 KEEP. This refutes a proof route; it does not refute uniqueness up to conjugation or solve the finite-n maximization problem.\n\nThe earlier memo found (6,5,1,1) -> (5,5,1,1,1), dimensions 5720 -> 5005. It also already enumerated n<=90 and cited prior exhaustive computations beyond that. Repeating n<=40 would add no result.\n\nLet lambda=(a,a-1,1^b), a>=2, b>=0. Move the top-right box to a new bottom row, giving mu=(a-1,a-1,1^{b+1}). Both have 2a+b-1 boxes. Direct hook products are\n\n    H(lambda)=(a+b+1)(a+b-1) a! (a-2)! b! / 2,\n    H(mu)=(a+b+1)(a+b) (a-1)! (a-2)! (b+1)!.\n\nThe row-1 hooks outside column 1 in lambda contribute a!/2; row 2 contributes (a-2)!; the b singleton rows contribute b!. For mu the analogous factors are (a-1)!, (a-2)! and (b+1)!. The first two column-1 hooks are displayed above. The hook-length formula therefore yields\n\n    dim(mu)/dim(lambda)=a(a+b-1)/(2(a+b)(b+1)).\n\nSet a=b+4 and b>=2. The original diagram has width minus number of rows exactly 2, yet the ratio is\n\n    (b+4)(2b+3)/(2(2b+4)(b+1)) < 1,\n\nbecause denominator minus numerator is 2b^2+b-4>0. The ratio tends to 1/2. Thus there are infinitely many counterexamples to the proposed rule that moving the top-right corner to a new row increases dimension whenever width exceeds height by at least two. The first is the previously observed n=13 example; new family sizes are n=3b+7.\n\nThis says nothing about a different corner move, a sequence of moves, or whether lambda itself is a maximizer. The stronger rule 'some corner to some outer corner improves dimension' survives this example and stays a conjectural route.\n\nChecks: compute each hook product independently from its cell definition, compare exact rational ratios for b=2..100, and check the n=13 dimensions against the old memo. Include small a=2 and b=0 boundary cases to detect missing singleton factors.\n",
++      "assumptions": [
++        "Standard hook-length formula for tableau dimensions"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:young-diagram-infinite-bad-top-corner-move-family",
++        "url": "file:///~/brain_workers/w330/reports/C0062_corner_family.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "two-sided-brownian-concatenation-external-noniid-lengths",
++      "namespace": "probability.stochastic",
++      "logical_name": "two-sided-brownian-concatenation-external-noniid-lengths",
++      "kind": "lemma",
++      "title": "Two-sided Brownian concatenation for externally chosen non-iid lengths",
++      "statement": "Let (B^k)_{k in Z} be mutually independent standard Brownian drivers, and let the entire sequence of positive finite lengths (L_k) be independent of every driver, with partial sums diverging in both directions. Concatenate B^k restricted to [0,L_k] and pin the join between -1 and 0 at time and value zero. The resulting process has two-sided Wiener law at that origin. The lengths may have any joint law; no iid, uniform bound or finite-mean assumption is needed. Path-dependent Brownian stopping lengths are not covered.",
++      "proof_text": "# P0028: an independent, non-identically distributed special case\n\n2026-10-10. Label: proof of a special case, awaiting w346 KEEP. The general independent stopped-piece question is unresolved in this packet.\n\nKnown literature answer for the iid finite-mean subclass: Burdzy and Scheutzow, Forward Brownian motion (2014), arXiv:1302.6958, Theorem 5.1. P0028-A002 already records this as a known theorem. No new solution is claimed by repeating the stationary Palm argument.\n\nSpecial case: let (B^k) indexed by all integers be mutually independent standard Brownian drivers. Let (L_k) be a sequence of positive finite random lengths independent of the entire driver family, with sums divergent in both directions. The length sequence itself need not be iid, independent across k, stationary, bounded, or integrable. Glue the restriction of B^k to [0,L_k] at a common origin between indices -1 and 0. The resulting process, pinned to zero at that origin, has the law of two-sided Brownian motion without an additional random shift.\n\nProof: condition on the full length sequence. The boundaries are deterministic and locally finite, since the partial sums diverge. Each increment over a deterministic interval is a sum of independent Gaussian driver increments with total variance the interval's length. Disjoint time intervals use disjoint increments, even if they cut the same segment, and are independent. On the negative side, time reversal within each deterministic segment preserves the Gaussian increment law; its drivers are disjoint from those on the positive side. Continuity holds at the joins and every compact interval intersects finitely many segments. Thus the conditioned pinned process has exactly the two-sided Wiener law, which does not depend on the lengths. Integrating the conditional law proves the claim.\n\nFailure check: ordinary path-dependent stopping times are excluded from this conditioning proof. Conditioning on their lengths biases the segment paths. Independence of different stopped pieces does not make lengths independent of their own Brownian drivers. This special case therefore cannot be promoted to the full question.\n",
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:two-sided-brownian-concatenation-external-noniid-lengths",
++        "url": "file:///~/brain_workers/w330/reports/P0028_external_lengths.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "hammersley-rsk-stationary-mixture-certified-truncation",
++      "namespace": "probability.interacting-particles",
++      "logical_name": "hammersley-rsk-stationary-mixture-certified-truncation",
++      "kind": "lemma",
++      "title": "Certified truncation error for the stationary Hammersley rank mixture",
++      "statement": "Assume the ordered stationary drift-jump particle law has its consistent RSK rank representation: first-row labels B=(1=b_1<...<b_k) from uniform permutations restricted to their smallest M labels, and independent unit-rate Poisson arrival spacings, giving independent conditional gamma gaps of shapes b_i-b_{i-1}, with X_1 of shape one. Truncating the nonnegative mixture to b_k<=M omits exactly epsilon_{k,M}=(1/M!) sum_{lambda partition of M, lambda_1<k}(f^lambda)^2, where f^lambda is the number of standard Young tableaux of shape lambda. The density L1 error is epsilon_{k,M}; all event-probability errors and the total variation after normalization are at most epsilon_{k,M}, using sup-event total variation. For k=2 epsilon=1/M!.",
++      "proof_text": "# P0220: explicit first-two law and a certified truncation of the known series\n\n2026-10-10. Label: proof conditional on the existing patience-sorting stationary representation; awaiting w346 KEEP. No novelty or full-problem closure claim.\n\nThe cached Aldous problem page specifies drift dX_i/dt=X_i, with rate-one Poisson space-time left jumps. Constant-speed Rayleigh models are a different process. The previous P0220-A001 gives the established representation: first-row labels B=(1=b_1<...<b_k), independent unit-rate Poisson arrival times, and weights\n\n    q_B=(1/b!)*sum_{lambda partition of b, lambda_1=k} f^lambda T(lambda,B), b=b_k,\n\nwhere T counts standard tableaux with first row B. Conditional gamma gaps give the density exp(-x_k)*sum_B q_B product_{i>=2}(x_i-x_{i-1})^{b_i-b_{i-1}-1}/(b_i-b_{i-1}-1)!.\n\nFor k=2, a tableau with first row (1,b) must have shape (2,1^{b-2}): any box below its second column would need a label greater than b. There is exactly one such tableau and its shape dimension is b-1. Hence q_(1,b)=(b-1)/b!, b>=2. Put g=x_2-x_1. Then\n\n    p(x_1,x_2)=exp(-x_2) F(g),\n    F(g)=sum_{r>=0}(r+1)g^r/(r!(r+2)!)\n        =I_1(2 sqrt(g))/sqrt(g)-I_2(2 sqrt(g))/g.\n\nHere I_j(2 sqrt(g)) means the convergent series sum_{r>=0} g^{r+j/2}/(r!(r+j)!). The expression at g=0 is interpreted by continuity, F(0)=1/2. The density factors into exp(-x_1) times exp(-g)F(g). Thus X_1~Exp(1) is independent of the first gap. Its marginal consistency is integral_0^{x_2} F(g) dg=I_2(2 sqrt(x_2)); therefore P(X_2>x)=exp(-x) I_0(2 sqrt(x)), consistent with the old small-k calculation.\n\nFor every k, truncate the mixture at b_k<=M. Its omitted mass is exactly\n\n    epsilon_{k,M}=P(B_k>M)=1/M! * sum_{lambda partition of M, lambda_1<k}(f^lambda)^2.\n\nThe equality uses consistency of restriction to labels <=M and the RSK count of uniform permutations of each shape. All omitted mixture terms are nonnegative and each conditional gamma density integrates to one. Hence the full density minus the truncated subdensity has L1 norm epsilon_{k,M}; every event's absolute probability error is at most epsilon_{k,M}. Normalizing the truncated mixture gives total variation at most epsilon_{k,M}, by the elementary mixture decomposition, using sup-event total variation.\n\nFor k=2 this is exactly 1/M!; for k=3 the finite partition sum can be computed exactly without trusting an asymptotic approximation. This turns the previously unquantified infinite series into an approximation with an exact error bound. It does not make large-k coefficient generation efficient.\n\nChecks: compare hook dimensions to the independent removable-corner tableau recurrence; check sum dimensions squared=M!; check q_(1,b) sums to 1-1/M!; calculate finite partition sums for k=3 at M=8,12,16,20. Published small-k work predates this packet, so these formulas are consequences for the brain, not advertised discoveries.\n",
++      "assumptions": [
++        "Established consistent stationary RSK representation",
++        "M>=k>=1"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:hammersley-rsk-stationary-mixture-certified-truncation",
++        "url": "file:///~/brain_workers/w330/reports/P0220_certified_series.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "hammersley-first-two-density-and-independent-gap",
++      "namespace": "probability.interacting-particles",
++      "logical_name": "hammersley-first-two-density-and-independent-gap",
++      "kind": "lemma",
++      "title": "First two Hammersley particles: explicit density and independence of the first gap",
++      "statement": "Under the stationary RSK rank mixture for drift dX_i/dt=X_i and rate-one Poisson space-time left jumps, the first-row label pair is (1,b) with weight (b-1)/b!, b>=2. For 0<x_1<x_2, put g=x_2-x_1. Its joint density is exp(-x_2) F(g), where F(g)=sum_{r>=0}(r+1)g^r/(r!(r+2)!). Consequently X_1~Exp(1) is independent of X_2-X_1, whose density is exp(-g)F(g); F(0)=1/2. The marginal tail is P(X_2>x)=exp(-x) sum_{r>=0}x^r/(r!)^2.",
++      "proof_text": "# P0220: explicit first-two law and a certified truncation of the known series\n\n2026-10-10. Label: proof conditional on the existing patience-sorting stationary representation; awaiting w346 KEEP. No novelty or full-problem closure claim.\n\nThe cached Aldous problem page specifies drift dX_i/dt=X_i, with rate-one Poisson space-time left jumps. Constant-speed Rayleigh models are a different process. The previous P0220-A001 gives the established representation: first-row labels B=(1=b_1<...<b_k), independent unit-rate Poisson arrival times, and weights\n\n    q_B=(1/b!)*sum_{lambda partition of b, lambda_1=k} f^lambda T(lambda,B), b=b_k,\n\nwhere T counts standard tableaux with first row B. Conditional gamma gaps give the density exp(-x_k)*sum_B q_B product_{i>=2}(x_i-x_{i-1})^{b_i-b_{i-1}-1}/(b_i-b_{i-1}-1)!.\n\nFor k=2, a tableau with first row (1,b) must have shape (2,1^{b-2}): any box below its second column would need a label greater than b. There is exactly one such tableau and its shape dimension is b-1. Hence q_(1,b)=(b-1)/b!, b>=2. Put g=x_2-x_1. Then\n\n    p(x_1,x_2)=exp(-x_2) F(g),\n    F(g)=sum_{r>=0}(r+1)g^r/(r!(r+2)!)\n        =I_1(2 sqrt(g))/sqrt(g)-I_2(2 sqrt(g))/g.\n\nHere I_j(2 sqrt(g)) means the convergent series sum_{r>=0} g^{r+j/2}/(r!(r+j)!). The expression at g=0 is interpreted by continuity, F(0)=1/2. The density factors into exp(-x_1) times exp(-g)F(g). Thus X_1~Exp(1) is independent of the first gap. Its marginal consistency is integral_0^{x_2} F(g) dg=I_2(2 sqrt(x_2)); therefore P(X_2>x)=exp(-x) I_0(2 sqrt(x)), consistent with the old small-k calculation.\n\nFor every k, truncate the mixture at b_k<=M. Its omitted mass is exactly\n\n    epsilon_{k,M}=P(B_k>M)=1/M! * sum_{lambda partition of M, lambda_1<k}(f^lambda)^2.\n\nThe equality uses consistency of restriction to labels <=M and the RSK count of uniform permutations of each shape. All omitted mixture terms are nonnegative and each conditional gamma density integrates to one. Hence the full density minus the truncated subdensity has L1 norm epsilon_{k,M}; every event's absolute probability error is at most epsilon_{k,M}. Normalizing the truncated mixture gives total variation at most epsilon_{k,M}, by the elementary mixture decomposition, using sup-event total variation.\n\nFor k=2 this is exactly 1/M!; for k=3 the finite partition sum can be computed exactly without trusting an asymptotic approximation. This turns the previously unquantified infinite series into an approximation with an exact error bound. It does not make large-k coefficient generation efficient.\n\nChecks: compare hook dimensions to the independent removable-corner tableau recurrence; check sum dimensions squared=M!; check q_(1,b) sums to 1-1/M!; calculate finite partition sums for k=3 at M=8,12,16,20. Published small-k work predates this packet, so these formulas are consequences for the brain, not advertised discoveries.\n",
++      "assumptions": [
++        "Established stationary RSK rank mixture"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:hammersley-first-two-density-and-independent-gap",
++        "url": "file:///~/brain_workers/w330/reports/P0220_certified_series.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "integer-monotone-exponential-count-real-pole-nonconvergence",
++      "namespace": "analysis.tauberian",
++      "logical_name": "integer-monotone-exponential-count-real-pole-nonconvergence",
++      "kind": "lemma",
++      "title": "An integer monotone count can have a simple real Laplace pole without a growth limit",
++      "statement": "For h>=0 put F(h)=floor(exp(h)(1+sin(h)/4)). This is a finite integer-valued nondecreasing right-continuous counting function, realized by nonnegative deterministic heights. For L(beta)=integral_0^infinity exp(-beta h)F(h) dh, beta>1, (beta-1)L(beta)->1 as beta decreases to one, while exp(-h)F(h) has subsequential limits 5/4 and 3/4. Thus a real-axis pole residue and monotonicity do not alone imply the pointwise exponential-growth limit. This array is not a DGFF cluster.",
++      "proof_text": "# C0006: a simple Laplace pole does not give the desired cluster-count limit\n\n2026-10-10. Label: proof of a refuted generic route, awaiting w346 KEEP. This is not a counterexample to the DGFF cluster law.\n\nThe earlier cluster attempt records the Tonelli identity G(beta)=beta integral_0^infinity exp(-beta h) E[F_h] dh for nonnegative cluster heights, when beta>alpha and the quantities are finite. If exp(-alpha h) E[F_h] -> c, an Abelian argument yields (beta-alpha)G(beta)/beta -> c as beta decreases to alpha. The converse does not follow from monotonicity of the count alone.\n\nAn explicit counting-function control uses alpha=1. Let H(h)=exp(h)(1+(1/4)sin h) for h>=0, and F(h)=floor(H(h)). The derivative H'(h)=exp(h)(1+(1/4)sin h+(1/4)cos h) is strictly positive, because its bracket is at least 1-sqrt(2)/4. F is an integer-valued, nondecreasing, right-continuous count with F(0)=1 and finite values at every finite h. It is realized by countably many deterministic nonnegative heights: put one at zero and assign the n-th height as the unique solution H(h)=n for n>=2.\n\nFor the unrounded H,\n\n    integral_0^infinity exp(-beta h) H(h) dh\n      =1/(beta-1)+(1/4)/((beta-1)^2+1).\n\nRounding changes this integral by at most 1/beta. Therefore its normalized Abelian residue tends to 1. In contrast exp(-h)F(h) approaches 5/4 along h=pi/2+2 pi k and 3/4 along h=3 pi/2+2 pi k. It has no limit.\n\nThe toy height array has no Gaussian-field or DGFF-cluster structure. Its role is to show that even an integer monotone counting function and the correct real-axis pole residue need an extra Tauberian hypothesis to yield the pointwise exponential-growth limit. A claimed reduction using only those facts is incomplete; complex-boundary control or an appropriate renewal/nonoscillation theorem must be supplied.\n",
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:integer-monotone-exponential-count-real-pole-nonconvergence",
++        "url": "file:///~/brain_workers/w330/reports/C0006_pole_obstruction.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "bounded-critical-branching-variance-oscillating-survival-constant",
++      "namespace": "probability.branching",
++      "logical_name": "bounded-critical-branching-variance-oscillating-survival-constant",
++      "kind": "lemma",
++      "title": "Critical branching with bounded generation variances can lack a survival constant",
++      "statement": "Consider independent offspring in generation j with pgf f_{a_j}(s)=1-(1-s)/(1+a_j(1-s)), a_j in {1,2}. Each generation has mean one and variance 2a_j. Survival to generation n from one ancestor has probability p_n=1/(1+sum_{j=1}^n a_j). Alternating a_j=1 and 2 in blocks of lengths 10^(2^(k+1)), k>=0, yields order-1/n survival but n p_n has subsequential limits one and one-half. This refutes a generic inference from bounded critical branching comparisons to an exact constant, not a percolation conjecture.",
++      "proof_text": "# C0066: a bounded-variance branching comparison does not certify a sharp constant\n\n2026-10-10. Label: proof in a comparison model, awaiting w346 KEEP. Not a counterexample to homogeneous critical percolation.\n\nFor a>0 the probability generating function f_a(s)=1-(1-s)/(1+a(1-s)) has offspring mass P(0)=a/(1+a), P(j)=a^{j-1}/(1+a)^{j+1} for j>=1. It is a probability law with mean one and variance 2a. Its deficit map is q -> q/(1+a q).\n\nA critical branching process with generation parameters a_1,...,a_n has exact survival probability\n\n    p_n=1/(1+sum_{j=1}^n a_j),\n\nbecause reciprocals of deficits add under composing these linear-fractional maps, beginning at deficit 1. This remains true if the generating functions are composed in the reverse order.\n\nChoose a_j alternating between 1 and 2 on successive blocks with lengths 10^(2^(k+1)), k=0,1,... . Each new block dominates all preceding lengths. At alternating block endpoints, (sum a_j)/n tends to 1 and 2. Consequently n p_n has subsequential limits 1 and 1/2 although every generation is critical, every offspring variance lies between 2 and 4, and 1/(1+2n)<=p_n<=1/(1+n).\n\nThe example rigorously separates an exponent bound of order 1/n from convergence of n p_n, even for independent offspring. For this comparison family the needed extra condition is convergence of the Cesaro mean of a_j; if that mean tends to a_bar>0, then n p_n ->1/a_bar. No claim is made that high-dimensional percolation is this branching process. Any transfer must prove the required homogeneous effective variance and error control, which the earlier attempt did not establish.\n",
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:bounded-critical-branching-variance-oscillating-survival-constant",
++        "url": "file:///~/brain_workers/w330/reports/C0066_varying_environment.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "finite-asymptotic-series-prefix-does-not-identify-radius",
++      "namespace": "analysis.series",
++      "logical_name": "finite-asymptotic-series-prefix-does-not-identify-radius",
++      "kind": "lemma",
++      "title": "A finite coefficient prefix cannot identify a formal series radius of convergence",
++      "statement": "For arbitrary real coefficients a_0,...,a_m, the polynomial P(z)=sum_{j<=m}a_j z^j and the formal series P(z)+sum_{n>m}n! z^n have identical supplied coefficients, but radii of convergence infinity and zero respectively. Alternating factorial signs still give zero radius. A factorial upper bound alone is compatible with either alternative. This gives no divergence result for actual self-avoiding-walk coefficients.",
++      "proof_text": "# C0097: finite coefficients and factorial upper bounds cannot establish divergence\n\n2026-10-10. Label: proof of an information obstruction, awaiting w346 KEEP. The SAW connective-constant expansion is not solved here.\n\nGiven any finite coefficient prefix a_0,...,a_m, the polynomial P(z)=sum_{j<=m}a_j z^j is entire and matches it. The formal series P(z)+sum_{n>m}n! z^n matches the same prefix and has radius zero. Indeed n! >= (floor(n/2))^{ceil(n/2)}, so (n!)^(1/n) tends to infinity and Cauchy-Hadamard gives zero radius. If alternating signs are demanded, use (-1)^n n!, with the same radius. Thus any number of exact low-order coefficients, and ratios observed on them, are compatible with both alternatives.\n\nA factorial upper bound alone is also insufficient: polynomial tails and factorial tails both satisfy |a_n|<=C K^n n! after adjusting C,K for the fixed prefix. A lower bound |a_n|>=c K^n n! along an unbounded subsequence would suffice. The missing step identified in the earlier attempt is signed non-cancellation of the actual lace-diagram coefficients; this note supplies neither that bound nor an analytic continuation for the connective constant.\n\nThe experiment uses a deliberately artificial four-term prefix only as a control. It never labels those numbers as connective-constant coefficients. The asymptotic problem's current global status remains unverified from the local cached corpus.\n",
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:finite-asymptotic-series-prefix-does-not-identify-radius",
++        "url": "file:///~/brain_workers/w330/reports/C0097_finite_coefficients.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "factorial-coefficient-subsequence-sufficient-zero-radius",
++      "namespace": "analysis.series",
++      "logical_name": "factorial-coefficient-subsequence-sufficient-zero-radius",
++      "kind": "lemma",
++      "title": "A factorial lower bound on an unbounded coefficient subsequence forces zero radius",
++      "statement": "If a formal power series sum_n a_n z^n has constants c,K>0 and an unbounded sequence n_j such that abs(a_{n_j})>=c K^{n_j} n_j!, then its radius of convergence is zero by Cauchy-Hadamard. Counting unsigned lace diagrams or bounding remainders above does not supply this signed coefficient lower bound.",
++      "proof_text": "# C0097: finite coefficients and factorial upper bounds cannot establish divergence\n\n2026-10-10. Label: proof of an information obstruction, awaiting w346 KEEP. The SAW connective-constant expansion is not solved here.\n\nGiven any finite coefficient prefix a_0,...,a_m, the polynomial P(z)=sum_{j<=m}a_j z^j is entire and matches it. The formal series P(z)+sum_{n>m}n! z^n matches the same prefix and has radius zero. Indeed n! >= (floor(n/2))^{ceil(n/2)}, so (n!)^(1/n) tends to infinity and Cauchy-Hadamard gives zero radius. If alternating signs are demanded, use (-1)^n n!, with the same radius. Thus any number of exact low-order coefficients, and ratios observed on them, are compatible with both alternatives.\n\nA factorial upper bound alone is also insufficient: polynomial tails and factorial tails both satisfy |a_n|<=C K^n n! after adjusting C,K for the fixed prefix. A lower bound |a_n|>=c K^n n! along an unbounded subsequence would suffice. The missing step identified in the earlier attempt is signed non-cancellation of the actual lace-diagram coefficients; this note supplies neither that bound nor an analytic continuation for the connective constant.\n\nThe experiment uses a deliberately artificial four-term prefix only as a control. It never labels those numbers as connective-constant coefficients. The asymptotic problem's current global status remains unverified from the local cached corpus.\n",
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:factorial-coefficient-subsequence-sufficient-zero-radius",
++        "url": "file:///~/brain_workers/w330/reports/C0097_finite_coefficients.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "connected-nested-folner-dumbbells-corridor-obstruction",
++      "namespace": "probability.percolation",
++      "logical_name": "connected-nested-folner-dumbbells-corridor-obstruction",
++      "kind": "lemma",
++      "title": "A connected nested Folner exhaustion can retain exponentially unreliable corridors",
++      "statement": "In nearest-neighbor Z^2, for L=8^j join squares [-L,L-1]^2 and [3L,5L-1] x [-L,L-1] by {(x,-L):L<=x<3L}. The induced sets are connected, nested and exhausting, have volume 8L^2+2L and edge boundary 20L-2, hence form a Folner exhaustion. Any internal path between their squares uses all 2L+1 corridor edges. In iid bond percolation with p<1, its probability is at most p^(2L+1). This does not disprove existence of a different good Folner sequence.",
++      "proof_text": "# C0144: connected Folner geometry alone cannot ensure one internal giant\n\n2026-10-10. Label: exact geometric lemma and conditional percolation consequence, awaiting w346 KEEP. Not a disproof of existence of a good Folner sequence.\n\nIn the nearest-neighbor square lattice, take two L by L vertex squares, [0,L-1]^2 and [2L,3L-1] x [0,L-1], and join their bottom corners by the one-vertex-wide corridor {(x,0): L<=x<2L}. The induced set F_L is connected, has volume 2L^2+L and edge boundary 10L-2. Hence its boundary/volume tends to zero: it is a connected Folner sequence.\n\nEvery path inside F_L from one square to the other must use all L+1 horizontal corridor edges. Under iid bond percolation with p<1, the probability of such a connection is at most p^(L+1), regardless of infinite-cluster uniqueness in the ambient lattice. It tends to zero, while the geometric boundary ratio does too.\n\nThe example can be nested and exhausting as well: use F_{2L} translated by (-L,-L), and L=8^n. Its first square is [-L,L-1]^2, its second is [3L,5L-1] x [-L,L-1], its corridor lies at y=-L, volume is 8L^2+2L, boundary 20L-2, and crossing needs 2L+1 open edges. At the next scale the first square already contains the entire previous set, since 5L<8L. These sets exhaust Z^2. Thus requiring a connected nested Folner exhaustion does not remove the geometric obstruction.\n\nConditional consequence: if each square's restricted infinite cluster has a giant of size (theta(p)+o(1))L^2, then with probability tending to one the two giants belong to different components inside F_L. The second largest is then macroscopic. With the usual stronger assumption that all other components in either square are o(L^2), their ratio tends to one and the largest density in F_L tends to theta(p)/2. This last claim explicitly depends on a finite-box giant theorem, rather than being derived solely from the corridor calculation.\n\nThus neither connectedness nor the Folner boundary condition alone supplies the coarse internal connectivity needed by the earlier route. The original question asks for existence of a suitable sequence, so a bad sequence on Z^2 does not answer it negatively. No unverified extension to exponential-growth amenable graphs is asserted.\n\nSource warning: the ledger labels its locator 'Question 12.34, p.170'. The cached Pete notes instead have Exercise 12.34 on PDF page 140 about invariant finite-cluster percolation. A scan for the exact giant-component question did not locate it. This is a version/locator mismatch awaiting resolution, not a certificate that the stated question is absent from all versions or solved. The geometric lemma above is self-contained and independent of that attribution.\n",
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:connected-nested-folner-dumbbells-corridor-obstruction",
++        "url": "file:///~/brain_workers/w330/reports/C0144_connected_dumbbells.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "folner-dumbbell-two-giants-conditional-consequence",
++      "namespace": "probability.percolation",
++      "logical_name": "folner-dumbbell-two-giants-conditional-consequence",
++      "kind": "lemma",
++      "title": "Conditional two-giant consequence for a connected Folner dumbbell",
++      "statement": "For the two-square Folner exhaustion with side 2L and a width-one corridor of length 2L, assume under fixed iid bond percolation p<1 that each square restricted to the ambient infinite cluster has one component of size (theta+o_P(1))4L^2, theta>0, and all its other components are o_P(L^2). Then with probability tending to one the two giants are separate within the exhaustion. The second-largest/largest ratio tends to one in probability, and the largest density tends to theta/2. The conclusion is conditional on those finite-square giant assumptions.",
++      "proof_text": "# C0144: connected Folner geometry alone cannot ensure one internal giant\n\n2026-10-10. Label: exact geometric lemma and conditional percolation consequence, awaiting w346 KEEP. Not a disproof of existence of a good Folner sequence.\n\nIn the nearest-neighbor square lattice, take two L by L vertex squares, [0,L-1]^2 and [2L,3L-1] x [0,L-1], and join their bottom corners by the one-vertex-wide corridor {(x,0): L<=x<2L}. The induced set F_L is connected, has volume 2L^2+L and edge boundary 10L-2. Hence its boundary/volume tends to zero: it is a connected Folner sequence.\n\nEvery path inside F_L from one square to the other must use all L+1 horizontal corridor edges. Under iid bond percolation with p<1, the probability of such a connection is at most p^(L+1), regardless of infinite-cluster uniqueness in the ambient lattice. It tends to zero, while the geometric boundary ratio does too.\n\nThe example can be nested and exhausting as well: use F_{2L} translated by (-L,-L), and L=8^n. Its first square is [-L,L-1]^2, its second is [3L,5L-1] x [-L,L-1], its corridor lies at y=-L, volume is 8L^2+2L, boundary 20L-2, and crossing needs 2L+1 open edges. At the next scale the first square already contains the entire previous set, since 5L<8L. These sets exhaust Z^2. Thus requiring a connected nested Folner exhaustion does not remove the geometric obstruction.\n\nConditional consequence: if each square's restricted infinite cluster has a giant of size (theta(p)+o(1))L^2, then with probability tending to one the two giants belong to different components inside F_L. The second largest is then macroscopic. With the usual stronger assumption that all other components in either square are o(L^2), their ratio tends to one and the largest density in F_L tends to theta(p)/2. This last claim explicitly depends on a finite-box giant theorem, rather than being derived solely from the corridor calculation.\n\nThus neither connectedness nor the Folner boundary condition alone supplies the coarse internal connectivity needed by the earlier route. The original question asks for existence of a suitable sequence, so a bad sequence on Z^2 does not answer it negatively. No unverified extension to exponential-growth amenable graphs is asserted.\n\nSource warning: the ledger labels its locator 'Question 12.34, p.170'. The cached Pete notes instead have Exercise 12.34 on PDF page 140 about invariant finite-cluster percolation. A scan for the exact giant-component question did not locate it. This is a version/locator mismatch awaiting resolution, not a certificate that the stated question is absent from all versions or solved. The geometric lemma above is self-contained and independent of that attribution.\n",
++      "assumptions": [
++        "The two stated finite-square giant hypotheses",
++        "Fixed p<1 and theta>0"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:folner-dumbbell-two-giants-conditional-consequence",
++        "url": "file:///~/brain_workers/w330/reports/C0144_connected_dumbbells.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "planar-finite-crossing-arcs-accessible-adjacency-equivalence",
++      "namespace": "topology.planar",
++      "logical_name": "planar-finite-crossing-arcs-accessible-adjacency-equivalence",
++      "kind": "lemma",
++      "title": "Finite-crossing arcs are equivalent to finite accessible component chains",
++      "statement": "For a closed K subset of R^2, call a boundary point z accessible from a component U of R^2 minus K if a continuous path starts at z and lies in U at every positive parameter. Join two complement components in a graph when some point of K is accessible from both. Two distinct points outside K can be joined by an arc meeting K finitely many times exactly when their components are joined by a finite graph path. Thus the simultaneous all-pairs property is equivalent to connectivity of this countable graph. Closure contact alone is insufficient.",
++      "proof_text": "# P0020: exact deterministic reduction to the accessible adjacency graph\n\n2026-10-10. Label: proof of a deterministic reduction, awaiting w346 KEEP. Showing its graph is almost surely connected for a planar Brownian trace remains the open probabilistic step.\n\nLet K be a closed subset of the plane. A boundary point z of a component U of the open complement is accessible from U if there is a continuous path gamma:[0,1]->closure(U) with gamma(0)=z and gamma(t) in U for every t>0. Form a graph on the complement components, joining U,V when one point z in K is accessible from both. Distinct outside points can be joined by an arc meeting K finitely many times if and only if their components are joined by a finite path in this graph.\n\nNecessity: parameterize the arc injectively. Remove its finitely many K-points. The intervening open parameter intervals lie in complement components. The arc's one-sided pieces at a crossing provide access paths from the neighboring components. Crossings with the same component on both sides can be ignored in the graph walk.\n\nSufficiency: along a finite graph path, choose one common accessible point for each edge. In each component join the chosen access paths' interior endpoints by polygonal paths; an open connected planar set is polygonally connected. Include polygonal joins to the requested outside endpoints. Concatenate the finitely many pieces. It is a continuous path whose image meets K only at the chosen finite set. The elementary arc-extraction theorem for a path in a metric space gives an arc between its distinct endpoints inside that image, so it has no additional K-contacts. Equivalently, apply that theorem to the compact, locally connected path image. This topological step needs no property peculiar to Brownian motion.\n\nConsequently the simultaneous all-pairs question is equivalent to connectedness of this graph. The vertices are countable, because distinct open components contain distinct rational points. Mere intersection of closures does not supply accessible edges.\n\nNegative deterministic control: K is the union of the unit circle and the circles of radii 1+1/n, n>=1. This is compact. Any path from the origin to a point of radius 3 meets every one of the infinitely many circles, by the intermediate value theorem. The inner disk is isolated in the accessible adjacency graph: none of the annular complement components has the unit circle in its boundary. So arbitrary compact sets need not have the desired property. Finite nested-circle sets instead have a connected finite path graph. Neither observation certifies anything about Brownian traces.\n",
++      "assumptions": [
++        "Arc extraction for a continuous path image in a metric space"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:planar-finite-crossing-arcs-accessible-adjacency-equivalence",
++        "url": "file:///~/brain_workers/w330/reports/P0020_accessible_graph.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "compact-nested-circles-infinite-crossing-obstruction",
++      "namespace": "topology.planar",
++      "logical_name": "compact-nested-circles-infinite-crossing-obstruction",
++      "kind": "lemma",
++      "title": "A compact union of nested circles can force infinitely many arc contacts",
++      "statement": "Let K be the unit circle together with all circles of radii 1+1/n, n>=1. K is compact. Every continuous path from the origin to a point of radius three intersects each of those circles by the intermediate value theorem, so no such path has finitely many K-contacts. The inner disk is isolated in the accessible adjacency graph. This is a deterministic compact-set example, not Brownian-trace evidence.",
++      "proof_text": "# P0020: exact deterministic reduction to the accessible adjacency graph\n\n2026-10-10. Label: proof of a deterministic reduction, awaiting w346 KEEP. Showing its graph is almost surely connected for a planar Brownian trace remains the open probabilistic step.\n\nLet K be a closed subset of the plane. A boundary point z of a component U of the open complement is accessible from U if there is a continuous path gamma:[0,1]->closure(U) with gamma(0)=z and gamma(t) in U for every t>0. Form a graph on the complement components, joining U,V when one point z in K is accessible from both. Distinct outside points can be joined by an arc meeting K finitely many times if and only if their components are joined by a finite path in this graph.\n\nNecessity: parameterize the arc injectively. Remove its finitely many K-points. The intervening open parameter intervals lie in complement components. The arc's one-sided pieces at a crossing provide access paths from the neighboring components. Crossings with the same component on both sides can be ignored in the graph walk.\n\nSufficiency: along a finite graph path, choose one common accessible point for each edge. In each component join the chosen access paths' interior endpoints by polygonal paths; an open connected planar set is polygonally connected. Include polygonal joins to the requested outside endpoints. Concatenate the finitely many pieces. It is a continuous path whose image meets K only at the chosen finite set. The elementary arc-extraction theorem for a path in a metric space gives an arc between its distinct endpoints inside that image, so it has no additional K-contacts. Equivalently, apply that theorem to the compact, locally connected path image. This topological step needs no property peculiar to Brownian motion.\n\nConsequently the simultaneous all-pairs question is equivalent to connectedness of this graph. The vertices are countable, because distinct open components contain distinct rational points. Mere intersection of closures does not supply accessible edges.\n\nNegative deterministic control: K is the union of the unit circle and the circles of radii 1+1/n, n>=1. This is compact. Any path from the origin to a point of radius 3 meets every one of the infinitely many circles, by the intermediate value theorem. The inner disk is isolated in the accessible adjacency graph: none of the annular complement components has the unit circle in its boundary. So arbitrary compact sets need not have the desired property. Finite nested-circle sets instead have a connected finite path graph. Neither observation certifies anything about Brownian traces.\n",
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:compact-nested-circles-infinite-crossing-obstruction",
++        "url": "file:///~/brain_workers/w330/reports/P0020_accessible_graph.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0032-candidate-proof-provenance-note",
++      "namespace": "probability.open-problems",
++      "logical_name": "p0032-candidate-proof-provenance-note",
++      "kind": "concept",
++      "title": "P0032 proof provenance: raw titles do not establish the active audited status",
++      "statement": "The inspected store contains PROVED and CANDIDATE titles for one P0032 logical ID, while the cited 2026-09-06 construction explicitly says no independent review and no novelty claim. Raw nodes may be historical revisions; this observation does not establish a current serving defect or refute the construction. Before counting a new full solution, check the active revision, an independent KEEP and the full proof, including permitted prefix randomness and time dependence.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:p0032-candidate-proof-provenance-note",
++        "url": "file:///~/brain_workers/w330/reports/REVIEW_LIMITS.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0144-cached-source-locator-unverified",
++      "namespace": "probability.open-problems",
++      "logical_name": "c0144-cached-source-locator-unverified",
++      "kind": "concept",
++      "title": "C0144 cached locator needs a source-version check",
++      "statement": "The assigned C0144 ledger cites Question 12.34, p.170 in Pete notes for a Folner giant-component question. The inspected cached notes instead locate Exercise 12.34 at PDF page 140, concerning invariant percolation with finite clusters, and a targeted search did not locate the giant question. Keep this source locator and current global status unverified until the matching source version is supplied. This is not an absence claim about all versions.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:c0144-cached-source-locator-unverified",
++        "url": "file:///~/brain_workers/w330/reports/REVIEW_LIMITS.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "refuted-route-width-gap-forces-top-corner-improvement",
++      "namespace": "combinatorics.partitions",
++      "logical_name": "refuted-route-width-gap-forces-top-corner-improvement",
++      "kind": "concept",
++      "title": "Refuted route width gap forces top corner improvement",
++      "statement": "REFUTED ROUTE: width at least height plus two always makes the move from the top-right box to a new row increase tableau dimension. An infinite family disproves this specific rule.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:refuted-route-width-gap-forces-top-corner-improvement",
++        "url": "file:///~/brain_workers/w330/reports/C0062_corner_family.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "refuted-route-real-laplace-pole-and-monotonicity-force-count-limit",
++      "namespace": "analysis.tauberian",
++      "logical_name": "refuted-route-real-laplace-pole-and-monotonicity-force-count-limit",
++      "kind": "concept",
++      "title": "Refuted route real laplace pole and monotonicity force count limit",
++      "statement": "REFUTED ROUTE: a monotone integer count with a real-axis simple exponential Laplace pole must have a pointwise normalized limit. An explicit oscillating counting function disproves this generic implication.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:refuted-route-real-laplace-pole-and-monotonicity-force-count-limit",
++        "url": "file:///~/brain_workers/w330/reports/C0006_pole_obstruction.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "refuted-route-bounded-branching-variance-forces-arm-constant",
++      "namespace": "probability.branching",
++      "logical_name": "refuted-route-bounded-branching-variance-forces-arm-constant",
++      "kind": "concept",
++      "title": "Refuted route bounded branching variance forces arm constant",
++      "statement": "REFUTED ROUTE: critical offspring means and uniformly positive bounded variances, without time homogeneity or variance averaging, force convergence of n times survival probability. A varying-environment example disproves this implication.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:refuted-route-bounded-branching-variance-forces-arm-constant",
++        "url": "file:///~/brain_workers/w330/reports/C0066_varying_environment.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "refuted-route-finite-coefficient-growth-certifies-series-divergence",
++      "namespace": "analysis.series",
++      "logical_name": "refuted-route-finite-coefficient-growth-certifies-series-divergence",
++      "kind": "concept",
++      "title": "Refuted route finite coefficient growth certifies series divergence",
++      "statement": "REFUTED ROUTE: rapid growth of an arbitrary finite coefficient prefix certifies zero convergence radius. Entire and zero-radius tails can share every supplied coefficient. Actual coefficient non-cancellation still needs proof.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:refuted-route-finite-coefficient-growth-certifies-series-divergence",
++        "url": "file:///~/brain_workers/w330/reports/C0097_finite_coefficients.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0144-folner-single-giant-question-source-unverified",
++      "namespace": "probability.open-problems",
++      "logical_name": "c0144-folner-single-giant-question-source-unverified",
++      "kind": "concept",
++      "title": "C0144: the Folner single-giant question, source locator unverified",
++      "statement": "Recorded open question: for an amenable transitive graph under supercritical iid percolation, with its unique infinite cluster C_infinity and density theta(p), is there a connected Folner sequence F_n such that almost surely the largest component of F_n intersect C_infinity has density theta(p) in F_n and the second-largest/largest size ratio tends to zero? Folner means edge boundary divided by volume tends to zero. This is a question, not a theorem. The cached primary locator and current global resolution status are unverified.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner-campaign:w330:c0144-folner-single-giant-question-source-unverified",
++        "url": "file:///~/brain_workers/w330/reports/REVIEW_LIMITS.md",
++        "revision": "2026-10-10-author-proof-pending-w346",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "randomized-forward-filling-invariant-mass-criterion",
++      "to_existing_logical": "math:probability.core:open-problem-p0032-embedding-an-equivalent-brownian-law-by-adding-a-finite-prefix",
++      "kind": "cites",
++      "rationale": "Source: \"Let T be an invertible measure-preserving transformation of a standard Borel probability space (E,P), I its invariant sigma-field modulo P-null sets, and Q=fP with f>=0 and integral f dP=1. On an extension with independent uniforms, there is an almost surely finite integer N>=0 and Z~P such that T^N Z~Q if and only if E[f|I]=1 almost surely. N need not be a path-filtration stopping time or have finite mean.\" Target: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_full_solution). Given a process whose law on nonnegative time is equivalent to Wiener measure, can a random finite prefix be added, on an enlarged probability space i\""
++    },
++    {
++      "from_key": "critical-beta-splitting-joint-sackin-colless-polynomial",
++      "to_existing_logical": "math:probability.core:open-problem-p0347-distributions-of-balance-indices-for-critical-beta-splitting-trees",
++      "kind": "cites",
++      "rationale": "Source: \"For n>=2 let q_n(i)=n/(2 H_{n-1} i(n-i)), 1<=i<n, where H_m=sum_{j=1}^m 1/j. Conditional on a split i,n-i assume independent daughter trees of their respective sizes. If S is external path length and C is the sum of the absolute differences of daughter leaf counts, then G_n(u,v)=E[u^S v^C] satisfies G_1=1 and G_n=sum_i q_n(i) u^n v^{abs(n-2i)} G_i G_{n-i}. This identifies each finite-n joint law; it does not identify a limiting law.\" Target: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Analyze the distributions of the source balance indices under DTCS(n), beyond the preliminary expectation heuristics. Source: Aldous-Janson: \""
++    },
++    {
++      "from_key": "critical-beta-splitting-exact-minimum-child-toll",
++      "to_existing_logical": "math:probability.core:open-problem-p0347-distributions-of-balance-indices-for-critical-beta-splitting-trees",
++      "kind": "cites",
++      "rationale": "Source: \"For I with probabilities q_n(i)=n/(2 H_{n-1} i(n-i)), n>=2, E[min(I,n-I)]=(n/H_{n-1})(H_{n-1}-H_floor(n/2)+1_{n even}/n), E[abs(n-2I)]=n-2 E[min(I,n-I)], and E[(n-2I)^2]=n^2-2n(n-1)/H_{n-1}. The even central split is counted once.\" Target: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Analyze the distributions of the source balance indices under DTCS(n), beyond the preliminary expectation heuristics. Source: Aldous-Janson: \""
++    },
++    {
++      "from_key": "markov-branching-additive-index-covariance-recursion",
++      "to_existing_logical": "math:probability.core:open-problem-p0347-distributions-of-balance-indices-for-critical-beta-splitting-trees",
++      "kind": "cites",
++      "rationale": "Source: \"In a finite-leaf Markov branching tree with split probabilities q_n(i) and independent daughter trees conditional on i, an additive index A with deterministic root toll t^A_n(i) has mean mu^A_n=sum_i q_n(i)(t^A_n(i)+mu^A_i+mu^A_{n-i}). Put d^A_n(i)=t^A_n(i)+mu^A_i+mu^A_{n-i}-mu^A_n. For two finite-second-moment additive indices A,B, their covariance K_n=sum_i q_n(i)(K_i+K_{n-i}+d^A_n(i)d^B_n(i)). Setting B=A gives the variance recursion. Initial one-leaf values are deterministic.\" Target: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Analyze the distributions of the source balance indices under DTCS(n), beyond the preliminary expectation heuristics. Source: Aldous-Janson: \""
++    },
++    {
++      "from_key": "young-diagram-infinite-bad-top-corner-move-family",
++      "to_existing_logical": "math:combinatorics.partitions:open-problem-c0062-uniqueness-and-description-of-the-maximal-dimension-young-diagram-for",
++      "kind": "cites",
++      "rationale": "Source: \"For a>=2 and b>=0, set lambda=(a,a-1,1^b) and mu=(a-1,a-1,1^{b+1}). Their standard Young tableau dimensions satisfy dim(mu)/dim(lambda)=a(a+b-1)/(2(a+b)(b+1)). In particular, for a=b+4 and b>=2 the diagram lambda has width minus number of rows equal to two, yet moving its top-right box to a new bottom row strictly decreases dimension. The ratio tends to 1/2. This refutes that specific move rule, not maximal-dimension uniqueness.\" Target: \"OPEN PROBLEM (source_says_open; current status unverified; result status partial_result). For finite n, describe the shape of maximal dimension (the partition of n maximising the number of standard Young tableaux) explicitly or by an efficient algorithm, prove it is unique, and i\""
++    },
++    {
++      "from_key": "two-sided-brownian-concatenation-external-noniid-lengths",
++      "to_existing_logical": "math:probability.core:open-problem-p0028-bounded-independent-brownian-pieces-and-two-sided-brownian-motion",
++      "kind": "cites",
++      "rationale": "Source: \"Let (B^k)_{k in Z} be mutually independent standard Brownian drivers, and let the entire sequence of positive finite lengths (L_k) be independent of every driver, with partial sums diverging in both directions. Concatenate B^k restricted to [0,L_k] and pin the join between -1 and 0 at time and value zero. The resulting process has two-sided Wiener law at that origin. The lengths may have any joint law; no iid, uniform bound or finite-mean assumption is needed. Path-dependent Brownian stopping lengths are not covered.\" Target: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Concatenate independent Brownian path segments cut at stopping times indexed by all integers, with lengths uniformly bounded by a deterministic constant an\""
++    },
++    {
++      "from_key": "hammersley-rsk-stationary-mixture-certified-truncation",
++      "to_existing_logical": "math:probability.core:open-problem-p0220-explicit-stationary-law-of-the-leftmost-hammersley-drift-jump-particle",
++      "kind": "cites",
++      "rationale": "Source: \"Assume the ordered stationary drift-jump particle law has its consistent RSK rank representation: first-row labels B=(1=b_1<...<b_k) from uniform permutations restricted to their smallest M labels, and independent unit-rate Poisson arrival spacings, giving independent conditional gamma gaps of shapes b_i-b_{i-1}, with X_1 of shape one. Truncating the nonnegative mixture to b_k<=M omits exactly epsilon_{k,M}=(1/M!) sum_{lambda partition of M, lambda_1<k}(f^lambda)^2, where f^lambda is the number of standard Young tableaux of shape lambda. The density L1 error is epsilon_{k,M}; all event-probability errors and the total variation after normalization are at most epsilon_{k,M}, using sup-event total variation. For k=2 epsilon=1/M!.\" Target: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Give a useful explicit joint stationary law for the ordered particles which drift at speed x and jump left at rate1 Poisson space-time points. Source: Aldo\""
++    },
++    {
++      "from_key": "hammersley-first-two-density-and-independent-gap",
++      "to_existing_logical": "math:probability.core:open-problem-p0220-explicit-stationary-law-of-the-leftmost-hammersley-drift-jump-particle",
++      "kind": "cites",
++      "rationale": "Source: \"Under the stationary RSK rank mixture for drift dX_i/dt=X_i and rate-one Poisson space-time left jumps, the first-row label pair is (1,b) with weight (b-1)/b!, b>=2. For 0<x_1<x_2, put g=x_2-x_1. Its joint density is exp(-x_2) F(g), where F(g)=sum_{r>=0}(r+1)g^r/(r!(r+2)!). Consequently X_1~Exp(1) is independent of X_2-X_1, whose density is exp(-g)F(g); F(0)=1/2. The marginal tail is P(X_2>x)=exp(-x) sum_{r>=0}x^r/(r!)^2.\" Target: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Give a useful explicit joint stationary law for the ordered particles which drift at speed x and jump left at rate1 Poisson space-time points. Source: Aldo\""
++    },
++    {
++      "from_key": "integer-monotone-exponential-count-real-pole-nonconvergence",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0006-existence-of-the-limit-of-e-alpha-h-e-nu-f-h-for-the-dgff-cluster-law",
++      "kind": "cites",
++      "rationale": "Source: \"For h>=0 put F(h)=floor(exp(h)(1+sin(h)/4)). This is a finite integer-valued nondecreasing right-continuous counting function, realized by nonnegative deterministic heights. For L(beta)=integral_0^infinity exp(-beta h)F(h) dh, beta>1, (beta-1)L(beta)->1 as beta decreases to one, while exp(-h)F(h) has subsequential limits 5/4 and 3/4. Thus a real-axis pole residue and monotonicity do not alone imply the pointwise exponential-growth limit. This array is not a DGFF cluster.\" Target: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For the cluster law nu and the functionals f_h counting points at depth h in the cluster, the limit lim_{h -> infinity} e^{-alpha h} E_nu(f_h) exists in (0,infinity). Source: Biskup: Ext\""
++    },
++    {
++      "from_key": "bounded-critical-branching-variance-oscillating-survival-constant",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0066-sharp-intrinsic-and-extrinsic-one-arm-exponents-in-high-dimensions",
++      "kind": "cites",
++      "rationale": "Source: \"Consider independent offspring in generation j with pgf f_{a_j}(s)=1-(1-s)/(1+a_j(1-s)), a_j in {1,2}. Each generation has mean one and variance 2a_j. Survival to generation n from one ancestor has probability p_n=1/(1+sum_{j=1}^n a_j). Alternating a_j=1 and 2 in blocks of lengths 10^(2^(k+1)), k>=0, yields order-1/n survival but n p_n has subsequential limits one and one-half. This refutes a generic inference from bounded critical branching comparisons to an exact constant, not a percolation conjecture.\" Target: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove that the limits a_in = lim n P_{p_c}(exists x with intrinsic distance d_{C(0)}(0,x) >= n) and a_ex = lim n^2 P_{p_c}(0 <-> boundary of the box of side n) exist for percolation on Z\""
++    },
++    {
++      "from_key": "finite-asymptotic-series-prefix-does-not-identify-radius",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0097-divergence-of-the-1-d-expansion-of-the-connective-constant",
++      "kind": "cites",
++      "rationale": "Source: \"For arbitrary real coefficients a_0,...,a_m, the polynomial P(z)=sum_{j<=m}a_j z^j and the formal series P(z)+sum_{n>m}n! z^n have identical supplied coefficients, but radii of convergence infinity and zero respectively. Alternating factorial signs still give zero radius. A factorial upper bound alone is compatible with either alternative. This gives no divergence result for actual self-avoiding-walk coefficients.\" Target: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove that the asymptotic expansion of the connective constant mu(d) of Z^d in powers of 1/(2d) has radius of convergence zero (expected but unproved; coefficients known to order 11 grow\""
++    },
++    {
++      "from_key": "factorial-coefficient-subsequence-sufficient-zero-radius",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0097-divergence-of-the-1-d-expansion-of-the-connective-constant",
++      "kind": "cites",
++      "rationale": "Source: \"If a formal power series sum_n a_n z^n has constants c,K>0 and an unbounded sequence n_j such that abs(a_{n_j})>=c K^{n_j} n_j!, then its radius of convergence is zero by Cauchy-Hadamard. Counting unsigned lace diagrams or bounding remainders above does not supply this signed coefficient lower bound.\" Target: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove that the asymptotic expansion of the connective constant mu(d) of Z^d in powers of 1/(2d) has radius of convergence zero (expected but unproved; coefficients known to order 11 grow\""
++    },
++    {
++      "from_key": "connected-nested-folner-dumbbells-corridor-obstruction",
++      "to_key": "c0144-folner-single-giant-question-source-unverified",
++      "kind": "cites",
++      "rationale": "Source: \"In nearest-neighbor Z^2, for L=8^j join squares [-L,L-1]^2 and [3L,5L-1] x [-L,L-1] by {(x,-L):L<=x<3L}. The induced sets are connected, nested and exhausting, have volume 8L^2+2L and edge boundary 20L-2, hence form a Folner exhaustion. Any internal path between their squares uses all 2L+1 corridor edges. In iid bond percolation with p<1, its probability is at most p^(2L+1). This does not disprove existence of a different good Folner sequence.\" Target: \"Recorded open question: for an amenable transitive graph under supercritical iid percolation, with its unique infinite cluster C_infinity and density theta(p), is there a connected Folner sequence F_n such that almost surely the largest component of F_n intersect C_infinity has d\""
++    },
++    {
++      "from_key": "folner-dumbbell-two-giants-conditional-consequence",
++      "to_key": "c0144-folner-single-giant-question-source-unverified",
++      "kind": "cites",
++      "rationale": "Source: \"For the two-square Folner exhaustion with side 2L and a width-one corridor of length 2L, assume under fixed iid bond percolation p<1 that each square restricted to the ambient infinite cluster has one component of size (theta+o_P(1))4L^2, theta>0, and all its other components are o_P(L^2). Then with probability tending to one the two giants are separate within the exhaustion. The second-largest/largest ratio tends to one in probability, and the largest density tends to theta/2. The conclusion is conditional on those finite-square giant assumptions.\" Target: \"Recorded open question: for an amenable transitive graph under supercritical iid percolation, with its unique infinite cluster C_infinity and density theta(p), is there a connected Folner sequence F_n such that almost surely the largest component of F_n intersect C_infinity has d\""
++    },
++    {
++      "from_key": "planar-finite-crossing-arcs-accessible-adjacency-equivalence",
++      "to_existing_logical": "math:probability.core:open-problem-p0020-finite-crossing-arcs-through-a-planar-brownian-trace",
++      "kind": "cites",
++      "rationale": "Source: \"For a closed K subset of R^2, call a boundary point z accessible from a component U of R^2 minus K if a continuous path starts at z and lies in U at every positive parameter. Join two complement components in a graph when some point of K is accessible from both. Two distinct points outside K can be joined by an arc meeting K finitely many times exactly when their components are joined by a finite graph path. Thus the simultaneous all-pairs property is equivalent to connectivity of this countable graph. Closure contact alone is insufficient.\" Target: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Almost surely, can every two points outside the trace of planar Brownian motion on [0,1] be connected by a Jordan arc meeting the trace at only finitely ma\""
++    },
++    {
++      "from_key": "compact-nested-circles-infinite-crossing-obstruction",
++      "to_existing_logical": "math:probability.core:open-problem-p0020-finite-crossing-arcs-through-a-planar-brownian-trace",
++      "kind": "cites",
++      "rationale": "Source: \"Let K be the unit circle together with all circles of radii 1+1/n, n>=1. K is compact. Every continuous path from the origin to a point of radius three intersects each of those circles by the intermediate value theorem, so no such path has finitely many K-contacts. The inner disk is isolated in the accessible adjacency graph. This is a deterministic compact-set example, not Brownian-trace evidence.\" Target: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Almost surely, can every two points outside the trace of planar Brownian motion on [0,1] be connected by a Jordan arc meeting the trace at only finitely ma\""
++    },
++    {
++      "from_key": "p0032-candidate-proof-provenance-note",
++      "to_existing_logical": "math:probability.core:open-problem-p0032-embedding-an-equivalent-brownian-law-by-adding-a-finite-prefix",
++      "kind": "cites",
++      "rationale": "Source: \"The inspected store contains PROVED and CANDIDATE titles for one P0032 logical ID, while the cited 2026-09-06 construction explicitly says no independent review and no novelty claim. Raw nodes may be historical revisions; this observation does not establish a current serving defect or refute the construction. Before counting a new full solution, check the active revision, an independent KEEP and the full proof, including permitted prefix randomness and time dependence.\" Target: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_full_solution). Given a process whose law on nonnegative time is equivalent to Wiener measure, can a random finite prefix be added, on an enlarged probability space i\""
++    },
++    {
++      "from_key": "c0144-cached-source-locator-unverified",
++      "to_key": "c0144-folner-single-giant-question-source-unverified",
++      "kind": "cites",
++      "rationale": "Source: \"The assigned C0144 ledger cites Question 12.34, p.170 in Pete notes for a Folner giant-component question. The inspected cached notes instead locate Exercise 12.34 at PDF page 140, concerning invariant percolation with finite clusters, and a targeted search did not locate the giant question. Keep this source locator and current global status unverified until the matching source version is supplied. This is not an absence claim about all versions.\" Target: \"Recorded open question: for an amenable transitive graph under supercritical iid percolation, with its unique infinite cluster C_infinity and density theta(p), is there a connected Folner sequence F_n such that almost surely the largest component of F_n intersect C_infinity has d\""
++    },
++    {
++      "from_key": "refuted-route-width-gap-forces-top-corner-improvement",
++      "to_existing_logical": "math:combinatorics.partitions:open-problem-c0062-uniqueness-and-description-of-the-maximal-dimension-young-diagram-for",
++      "kind": "cites",
++      "rationale": "Source: \"REFUTED ROUTE: width at least height plus two always makes the move from the top-right box to a new row increase tableau dimension. An infinite family disproves this specific rule.\" Target: \"OPEN PROBLEM (source_says_open; current status unverified; result status partial_result). For finite n, describe the shape of maximal dimension (the partition of n maximising the number of standard Young tableaux) explicitly or by an efficient algorithm, prove it is unique, and i\""
++    },
++    {
++      "from_key": "refuted-route-real-laplace-pole-and-monotonicity-force-count-limit",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0006-existence-of-the-limit-of-e-alpha-h-e-nu-f-h-for-the-dgff-cluster-law",
++      "kind": "cites",
++      "rationale": "Source: \"REFUTED ROUTE: a monotone integer count with a real-axis simple exponential Laplace pole must have a pointwise normalized limit. An explicit oscillating counting function disproves this generic implication.\" Target: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For the cluster law nu and the functionals f_h counting points at depth h in the cluster, the limit lim_{h -> infinity} e^{-alpha h} E_nu(f_h) exists in (0,infinity). Source: Biskup: Ext\""
++    },
++    {
++      "from_key": "refuted-route-bounded-branching-variance-forces-arm-constant",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0066-sharp-intrinsic-and-extrinsic-one-arm-exponents-in-high-dimensions",
++      "kind": "cites",
++      "rationale": "Source: \"REFUTED ROUTE: critical offspring means and uniformly positive bounded variances, without time homogeneity or variance averaging, force convergence of n times survival probability. A varying-environment example disproves this implication.\" Target: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove that the limits a_in = lim n P_{p_c}(exists x with intrinsic distance d_{C(0)}(0,x) >= n) and a_ex = lim n^2 P_{p_c}(0 <-> boundary of the box of side n) exist for percolation on Z\""
++    },
++    {
++      "from_key": "refuted-route-finite-coefficient-growth-certifies-series-divergence",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0097-divergence-of-the-1-d-expansion-of-the-connective-constant",
++      "kind": "cites",
++      "rationale": "Source: \"REFUTED ROUTE: rapid growth of an arbitrary finite coefficient prefix certifies zero convergence radius. Entire and zero-radius tails can share every supplied coefficient. Actual coefficient non-cancellation still needs proof.\" Target: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove that the asymptotic expansion of the connective constant mu(d) of Z^d in powers of 1/(2d) has radius of convergence zero (expected but unproved; coefficients known to order 11 grow\""
++    },
++    {
++      "from_key": "randomized-forward-filling-invariant-mass-criterion",
++      "to_existing_logical": "math:probability.measure:randomized-nonnegative-shift-to-absolutely-continuous-ergodic-law",
++      "kind": "generalizes",
++      "rationale": "Source: \"Let T be an invertible measure-preserving transformation of a standard Borel probability space (E,P), I its invariant sigma-field modulo P-null sets, and Q=fP with f>=0 and integral f dP=1. On an extension with independent uniforms, there is an almost surely finite integer N>=0 and Z~P such that T^N Z~Q if and only if E[f|I]=1 almost surely. N need not be a path-filtration stopping time or have finite mean.\" Target: \"Author-checked proof, not independently reviewed; novelty unassessed. If theta is an invertible measurable ergodic P-preserving map of a standard Borel probability space with measurable inverse, and Q=fP is a probability law, then on an extension with independent uniforms there i\""
++    },
++    {
++      "from_key": "young-diagram-infinite-bad-top-corner-move-family",
++      "to_key": "refuted-route-width-gap-forces-top-corner-improvement",
++      "kind": "refutes",
++      "rationale": "Source: \"For a>=2 and b>=0, set lambda=(a,a-1,1^b) and mu=(a-1,a-1,1^{b+1}). Their standard Young tableau dimensions satisfy dim(mu)/dim(lambda)=a(a+b-1)/(2(a+b)(b+1)). In particular, for a=b+4 and b>=2 the diagram lambda has width minus number of rows equal to two, yet moving its top-right box to a new bottom row strictly decreases dimension. The ratio tends to 1/2. This refutes that specific move rule, not maximal-dimension uniqueness.\" Target: \"REFUTED ROUTE: width at least height plus two always makes the move from the top-right box to a new row increase tableau dimension. An infinite family disproves this specific rule.\""
++    },
++    {
++      "from_key": "integer-monotone-exponential-count-real-pole-nonconvergence",
++      "to_key": "refuted-route-real-laplace-pole-and-monotonicity-force-count-limit",
++      "kind": "refutes",
++      "rationale": "Source: \"For h>=0 put F(h)=floor(exp(h)(1+sin(h)/4)). This is a finite integer-valued nondecreasing right-continuous counting function, realized by nonnegative deterministic heights. For L(beta)=integral_0^infinity exp(-beta h)F(h) dh, beta>1, (beta-1)L(beta)->1 as beta decreases to one, while exp(-h)F(h) has subsequential limits 5/4 and 3/4. Thus a real-axis pole residue and monotonicity do not alone imply the pointwise exponential-growth limit. This array is not a DGFF cluster.\" Target: \"REFUTED ROUTE: a monotone integer count with a real-axis simple exponential Laplace pole must have a pointwise normalized limit. An explicit oscillating counting function disproves this generic implication.\""
++    },
++    {
++      "from_key": "bounded-critical-branching-variance-oscillating-survival-constant",
++      "to_key": "refuted-route-bounded-branching-variance-forces-arm-constant",
++      "kind": "refutes",
++      "rationale": "Source: \"Consider independent offspring in generation j with pgf f_{a_j}(s)=1-(1-s)/(1+a_j(1-s)), a_j in {1,2}. Each generation has mean one and variance 2a_j. Survival to generation n from one ancestor has probability p_n=1/(1+sum_{j=1}^n a_j). Alternating a_j=1 and 2 in blocks of lengths 10^(2^(k+1)), k>=0, yields order-1/n survival but n p_n has subsequential limits one and one-half. This refutes a generic inference from bounded critical branching comparisons to an exact constant, not a percolation conjecture.\" Target: \"REFUTED ROUTE: critical offspring means and uniformly positive bounded variances, without time homogeneity or variance averaging, force convergence of n times survival probability. A varying-environment example disproves this implication.\""
++    },
++    {
++      "from_key": "finite-asymptotic-series-prefix-does-not-identify-radius",
++      "to_key": "refuted-route-finite-coefficient-growth-certifies-series-divergence",
++      "kind": "refutes",
++      "rationale": "Source: \"For arbitrary real coefficients a_0,...,a_m, the polynomial P(z)=sum_{j<=m}a_j z^j and the formal series P(z)+sum_{n>m}n! z^n have identical supplied coefficients, but radii of convergence infinity and zero respectively. Alternating factorial signs still give zero radius. A factorial upper bound alone is compatible with either alternative. This gives no divergence result for actual self-avoiding-walk coefficients.\" Target: \"REFUTED ROUTE: rapid growth of an arbitrary finite coefficient prefix certifies zero convergence radius. Entire and zero-radius tails can share every supplied coefficient. Actual coefficient non-cancellation still needs proof.\""
++    },
++    {
++      "from_key": "folner-dumbbell-two-giants-conditional-consequence",
++      "to_key": "connected-nested-folner-dumbbells-corridor-obstruction",
++      "kind": "depends_on",
++      "rationale": "Source: \"For the two-square Folner exhaustion with side 2L and a width-one corridor of length 2L, assume under fixed iid bond percolation p<1 that each square restricted to the ambient infinite cluster has one component of size (theta+o_P(1))4L^2, theta>0, and all its other components are o_P(L^2). Then with probability tending to one the two giants are separate within the exhaustion. The second-largest/largest ratio tends to one in probability, and the largest density tends to theta/2. The conclusion is conditional on those finite-square giant assumptions.\" Target: \"In nearest-neighbor Z^2, for L=8^j join squares [-L,L-1]^2 and [3L,5L-1] x [-L,L-1] by {(x,-L):L<=x<3L}. The induced sets are connected, nested and exhausting, have volume 8L^2+2L and edge boundary 20L-2, hence form a Folner exhaustion. Any internal path between their squares uses all 2L+1 corridor edges. In iid bond percolation with p<1, its probability is at most p^(2L+1). This does not disprove existence of a different good Folner sequence.\""
++    }
++  ]
++}

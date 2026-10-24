@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260922T223635Z-account03-B13-qform-r18",
+  "observed_utc_start": "2026-09-22T22:36:35Z",
+  "observed_utc_end": "2026-09-22T22:51:20Z",
+  "control": {
+    "initial_commit": "ef38bcb74a902f1d826b371d25fae2fd3523c265",
+    "publication_commit": "a271b5f75f5d8204f0769847181fa79e0c7a688e",
+    "owner_control_revision": "2026-09-22.15",
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe"
+  },
+  "directive_acknowledgments": {
+    "qform_exclusive_only": "implemented",
+    "proof_first_full_target": "implemented",
+    "mandatory_sign_in": "implemented",
+    "extremal_product_assignment": "implemented",
+    "fresh_control_and_corrections_before_publication": "implemented",
+    "preserve_task_state_and_quiet_delivery": "implemented",
+    "native_brain_receiver_use": "not_available_without_verified_receiver_context"
+  },
+  "execution": {
+    "brain_status": "WITHOUT_VERIFIED_BRAIN",
+    "full_brain_connected": false,
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_requested": "maximum actually supported",
+    "reasoning_effort_configured": "UNKNOWN",
+    "reasoning_effort_source": "not_exposed",
+    "thinking_usage": {
+      "reasoning_tokens": null,
+      "provider_thinking_seconds": null,
+      "source": "not_exposed",
+      "coverage": "unavailable"
+    },
+    "thinking_proxy": {
+      "start_utc": "2026-09-22T22:36:35Z",
+      "end_utc": "2026-09-22T22:51:20Z",
+      "elapsed_seconds": 885,
+      "source": "utc_clock",
+      "scope": "observed invocation window",
+      "label": "elapsed_execution_not_pure_thinking",
+      "tool_calls_made": null,
+      "tool_call_count_source": "not_instrumented"
+    }
+  },
+  "mathematics": {
+    "classification": "ESSENTIAL_STEP_APPLIED_TARGET_LEVEL_EXTREMAL_REDUCTION_FULL_QFORM_OPEN",
+    "result_ids": [
+      "QFORM-COUNTABLE-EXTREME-WITNESS-v1",
+      "QFORM-CONVEX-OUTPUT-EXTREMALITY-v1",
+      "QFORM-AFFINE-COUNTABLE-EXTREME-WITNESS-v1"
+    ],
+    "canonical_theorem_commit": "dbd31282f36494993f2fe8c838116dd8c63538eb",
+    "canonical_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260922T223635Z-account03-B13-qform-r18/",
+    "report_blob": "86c01881b3b6b468c1f03ec1d473e515b7c4c654",
+    "affine_addendum_blob": "d39f440783f134cfd26e245a32db58f69a64fcac",
+    "convex_extremality_blob": "be28f891b03fb23a932e94db1673a6d2e3b872bc",
+    "checker_terminal": "QFORM_B13_R18_HYPERSIMPLEX_CHECK_PASS",
+    "full_qform_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+    "continuity_status": "OPEN"
+  },
+  "partner_use": [
+    {
+      "source": "account04/B13 fixed-volume random-set representation",
+      "commit": "7229e8caa8374eb8e74b07e70cadd0c0ccb05d39",
+      "application": "exact output-law barycenter applied to the full density-norm functional"
+    },
+    {
+      "source": "account04/B14 finite-mixture localization",
+      "commit": "321ec7899f4972d125d641408512fe9e5e9dcf4c",
+      "application": "safe compact rational-grid refinement and TV passage"
+    }
+  ],
+  "corrections_respected": [
+    "did not use the later infinite-space threshold attainment argument flagged for nonattainment",
+    "no single-interval, centered-law, bounded-diameter, bounded-support, or uniform-fragment-count assumption",
+    "no post-rotation independence",
+    "no law-uniform pointwise scalar quadratic van-der-Corput decay",
+    "no arbitrary-joint coarea shortcut",
+    "no deconvolution from the four-copy collision theorem to one-copy bounded density"
+  ],
+  "delivery": {
+    "login_written": true,
+    "start_written": true,
+    "finish_written": true,
+    "handoff_written": true,
+    "memory_snapshot_written": true,
+    "memory_latest_advanced": true,
+    "report_read_back": true,
+    "task_state_mutated": false,
+    "notification_state_mutated": false,
+    "email_sent": false,
+    "drive_write": false,
+    "public_release": false,
+    "remote_workflow": false,
+    "paid_model_or_api": false,
+    "codex_used": false
+  },
+  "privacy_review": {
+    "method": "manual changed-file allowlist review",
+    "formal_repo_scanner_run": false,
+    "limitation": "no repository privacy scanner was exposed in this run",
+    "result": "no credentials, scheduler IDs, machine paths, unrelated private data, or raw private transcripts intentionally written"
+  },
+  "next_action": "Prove a one-copy linear slab bound in the one-heavy/two-cross-bank near-null residual on the finite rational-grid extreme-product class, with constants independent of mesh, support radius, translations, gaps and fragment count."
+}

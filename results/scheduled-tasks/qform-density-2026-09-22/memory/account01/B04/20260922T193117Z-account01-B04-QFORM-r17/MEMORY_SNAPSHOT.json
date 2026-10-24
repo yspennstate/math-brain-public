@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260922T193117Z-account01-B04-QFORM-r17",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "control_revision": "2026-09-22.15",
+  "control_commit_prepublication": "bd32ca06bfd86b4242b941b3e24d67ad292ddef7",
+  "target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES",
+  "outcome": "ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREM_PROVED / FULL_TARGET_OPEN",
+  "full_target_proved": false,
+  "continuity_full_target_proved": false,
+  "branch_continuity_proved": true,
+  "new_claim": {
+    "id": "QFORM-HYPERBOLIC-MATCHING-E2-v1",
+    "statement": "For an exact original-coordinate zero-diagonal induced hyperbolic matching with coefficients c_k, arbitrary outside quadratic curvature and arbitrary outside-to-selected linear couplings, if E2=sum_{i<j} c_i^2 c_j^2>0 then the full form has a continuous density with sup norm at most sqrt(3)*Gamma(1/4)^2/(2*pi)*E2^(-1/4).",
+    "constant": 3.623622178340184
+  },
+  "core_lemmas": [
+    "For every cap-one input X, E exp(-u X^2) <= (1+u/6)^(-1/2) by bathtub rearrangement plus an exact differential inequality.",
+    "For R^2=sum c_k^2 U_k^2, E R^(-1) <= sqrt(3/2)*Gamma(1/4)^2/pi * e_2(c_k^2)^(-1/4)."
+  ],
+  "partner_result_applied": {
+    "account_slot": "account02/B04",
+    "claim": "QFORM-HYPERBOLIC-PAIR-DENSITY-TRANSFER-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4bea103ece44732c1c7c31368fec4e33b35e1fdd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/B04-20260922T174702Z-r15/REPORT.md",
+    "application": "B<=C_match E2(d)^(-1/4) substituted into ||p_Q||_inf<=|c0|^(-1)+4B, yielding coefficient 14.494488713360736."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "ca22213aee4c4087cdaedcdf84ecf344f7033397",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260922T193117Z-account01-B04-QFORM-r17/REPORT.md",
+    "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260922T193117Z-account01-B04-QFORM-r17/check.py",
+    "exact_check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260922T193117Z-account01-B04-QFORM-r17/EXACT_CHECK.md"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "unresolved_implication": "QFORM-WEIGHTED-MATCHING-OR-CURVATURE-ROUTING-v1: force universal E2 currency on an exact product-preserving zero-diagonal induced matching, or route quantitative failure to an already-paid triangle/color/ridge/square/grouped-curvature branch without selecting a vanishing local minor.",
+  "next_step": "Derive a weighted graph/Schur structural dichotomy relating total off-diagonal spectral currency to induced-matching E2 versus triangle/color/grouped-curvature certificates, retaining nonzero diagonal curvature exactly.",
+  "privacy": "Authorized mathematics and repository source pins only; no credentials, scheduler IDs, machine paths, unrelated private data, email, Drive, public release, paid API, or permission changes."
+}

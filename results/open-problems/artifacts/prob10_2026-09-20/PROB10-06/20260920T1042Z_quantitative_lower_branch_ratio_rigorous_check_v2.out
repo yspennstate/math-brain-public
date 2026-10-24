@@ -1,0 +1,25 @@
+Compilation/execution command:
+  g++ -O2 -std=c++17 -frounding-math -ffp-contract=off 20260920T1042Z_quantitative_lower_branch_ratio_rigorous_check_v2.cpp -o prob10_checker_v2
+  ./prob10_checker_v2
+
+A_PASS visited=20737 accepted=10369
+A_product_upper<0.999 worst_accepted=0.99899482596885103
+A_rho_upper<0.99 worst_accepted=0.9895962541248019
+A_min_theta_lower=0.69036849124033051 min_ratio_lower=0.82093058038242983
+A_derivative_margin_float=0.00015996800479936018
+B_PASS visited=18017 accepted=9009
+B_product_upper<0.97999999999999998 worst_accepted=0.97999430690155442
+B_rho_upper<0.99 worst_accepted=0.98902608781129497
+B_min_theta_lower=0.70763580455878583 min_ratio_lower=0.82197073807387999
+B_derivative_margin_float=0.0031619428557877424
+C_PASS visited=17923 accepted=8962
+C_product_upper<0.96999999999999997 worst_accepted=0.96999579146492754
+C_rho_upper<0.99 worst_accepted=0.98986063025054394
+C_min_theta_lower=0.76047282091466151 min_ratio_lower=0.82494817344763771
+C_derivative_margin_float=0.0045244603638420243
+ALL_RIGOROUS_INTERVAL_CHECKS_PASS
+
+Observed wall-clock time in the execution container: 0.13 seconds.
+Exit status: 0.
+
+Endpoint note: the checker expands each requested rectangle endpoint outward by one adjacent IEEE-754 number and compares against thresholds rounded strictly downward. Thus the machine rectangles contain the exact intended rational/decimal rectangles, rather than merely the nearest floating-point endpoints.

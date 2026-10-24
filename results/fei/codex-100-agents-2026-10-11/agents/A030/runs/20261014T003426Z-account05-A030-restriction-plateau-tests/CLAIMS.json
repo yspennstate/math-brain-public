@@ -1,0 +1,34 @@
+[
+  {
+    "claim_id": "A030-FIRST-COLLISION-CONTROLLER-RESERVE-TRANSFER",
+    "version": 1,
+    "exact_statement": "For every Boolean h on a finite uniform control cube, with b=E h, let F_h=((1+h)/2)y0+((1-h)/2)y1 for independent fresh fair data signs. For any prescribed finite adaptive fresh-control restriction tree T with constant h leaves, followed by the remaining dictator queries, define Q_C=[D-Cd+E Q_child]_+ with zero specified terminal reserve and C>=0. Set A(b)=phi((1+b)^2/4)+phi((1-b)^2/4)+1-b^2-phi(b^2)/2, phi(p)=p log2(1/p). At every control history H(F_h)=H(h)/2+A(b), control query influence d_F=d_h/2, and D_F=D_h/2+A(b)-E A(child mean). The function A lies in [0,2] and is 4-Lipschitz. Consequently [Q_C(h,T)/2+A(b)-2]_+<=Q_C(F_h,T_control-first)<=Q_C(h,T)/2+A(b), and Q_(C+8)(F_h,T_control-first)<=Q_C(h,T)/2. For balanced h the same-price reserve lies between Q_C(h,T)/2 and Q_C(h,T)/2+2. The upper additive two is attained for h a dictator and C=0. The two-state rarity release does not by itself pay the control erasure: on that dictator query it releases1 while D_F=2 and D_h=0. All actual stopping terminal entropies are retained; no intrinsic controller reserve bound is asserted.",
+    "hypotheses": [
+      "Boolean sign outputs; uniform finite cubes; entropies in bits",
+      "Two independent fresh dictator data cores, disjoint from the control cube",
+      "C>=0; prescribed finite adaptive fresh-coordinate controller policy, constant h leaves, controls before data",
+      "Least nonnegative Bellman reserve at zero terminal potential; actual terminal entropy is accounted separately"
+    ],
+    "statement_sha256": "bf432672947fa16573d4fb48fbeb2587654d87c02e34bfa08bfdcd450fb74a0f",
+    "contributors": [
+      "A030; wrapper boundary fixture credited to A064; rarity-release scope credited to A038"
+    ],
+    "proof_source": "PROOF.md; out/VALIDATION.json; REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Identifying the exclusive-selector rarity release with the entire first control-query entropy decrement"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A064",
+      "A065",
+      "A038",
+      "A087",
+      "A094",
+      "B06"
+    ]
+  }
+]

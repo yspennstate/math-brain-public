@@ -1,0 +1,44 @@
+track: C27
+source: "Bálint Tóth (1993); exact accessible finite-volume formulation Ioffe–Tóth (2020), §1.6, Conjecture 1(ii)"
+target: "unweighted identity-start nearest-neighbor interchange on Z^3; source-matching finite-box positive-density macroscopic-cycle theorem with explicit beta_0"
+metric:
+  name: theta_block
+  normalization: "same deterministic block-visitation event V(B), same total cross-heat H_beta(B) <= (k-1)/(4e), same archived scale map"
+  before: "590451719447/1250000000000 = 0.4723613755576"
+  after: "1/2 + 1/(16 e log 2) = 0.5331711153389402..."
+  rational_certificate: "theta_block > 53/100"
+  movement: true
+status: "PARTIAL / source OPEN"
+physical_orbit_propagating_cube_exponent: UNMEASURED
+explicit_source_beta_0: NOT_PROVED
+historical_stuck_recovery_count: 1
+current_no_movement_streak: 0
+methods_this_run: [7, 21, 30]
+claims:
+  - id: C27-FRESH-PAIR-01
+    status: PROVED_PARTIAL_AUXILIARY
+    claim: "under an admissible no-peeking fresh-region filtration, two tagged interchange strands in d=3 satisfy P(approach within r by T | F) <= C r/D + exit_probability for D>=2r, via the relative SRW and capacity"
+  - id: C27-ANTICIPATIVE-P3-02
+    status: EXACT_COUNTEREXAMPLE_TO_SHORTCUT
+    claim: "on P3 at T=log2, beta=2log2, conditioning on A=pi_beta(0)=1 biases W(A): (37/108,10/27,31/108) versus fresh deterministic-label law (7/24,5/12,7/24)"
+audit:
+  id: C27-AUDIT-C28-LOCAL-R2-04
+  verdict: PASS
+  scope: "claim-scoped strict radius-two local maximality only; not global p=73 optimality and not Bandeira Conjecture 29"
+reserve:
+  I0012: "preserved in reserve; comb-collision handoff untouched"
+  DLA: "retired; not restarted"
+  ORRW: "not restarted"
+shared_ledger_action: "P26 should reconcile stale C27 1/4 entry to the supported same-normalization theta_block above; C27 did not edit shared root ledgers"
+report:
+  path: "proofnet24/C27-toth-interchange/runs/2026-09-16/2026-09-16T17-24-00Z__run-report.md"
+  commit: "8700e07155036fd224b1c1d18ac2fb363b838e17"
+checker:
+  path: "proofnet24/C27-toth-interchange/artifacts/2026-09-16T17-24-00Z__fresh_pair_selection_exact.py"
+  commit: "2ce25a8ef4f9429ac22a00a0c6f4b0597b21af4e"
+  blob: "d226448464f0ab545fc9095666008f88ec353df3"
+output:
+  path: "proofnet24/C27-toth-interchange/artifacts/2026-09-16T17-24-00Z__fresh_pair_selection_exact.out"
+  commit: "95a5a2c349eb92c41aacf2c23bd43eb3f24090d7"
+  blob: "de494ef831890fa76c54fde93f7c4b2c2369e457"
+  last_line: ALL_EXACT_CHECKS_PASS

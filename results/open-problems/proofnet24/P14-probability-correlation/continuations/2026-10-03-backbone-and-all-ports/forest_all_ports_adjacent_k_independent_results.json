@@ -1,0 +1,630 @@
+{
+  "status": "PASS independent literal original-graph all-port adjacent audit",
+  "arithmetic": "exact Fraction; full connectivity state retained",
+  "cases": [
+    {
+      "name": "four common ports: nonuniform K4 backbone, rho below one",
+      "backbone_vertices": 4,
+      "nonzero_profiles": 4,
+      "backbone_edges": 6,
+      "profile": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "columns": [
+        "2",
+        "3",
+        "7"
+      ],
+      "outer_activity": "2/5",
+      "whole_literal_triangle_coefficients": [
+        "2177351618",
+        "157645034",
+        "92163464",
+        "4854704",
+        "122721530",
+        "4854704",
+        "4854704",
+        "0"
+      ],
+      "four_marked_coefficients": [
+        "2226440230",
+        "797934578/5",
+        "470526728/5",
+        "4854704"
+      ],
+      "apex_polynomial_coefficients": [
+        "4448",
+        "48928",
+        "12505",
+        "1065",
+        "30"
+      ],
+      "D_Dprime_Dsecond": [
+        "4854704",
+        "1016488",
+        "153530"
+      ],
+      "U_Gamma_logsecond": [
+        "2182719/2427352",
+        "108880230059/1473009432976",
+        "-8997035907/736504716488"
+      ],
+      "Rayleigh": "105231838885852784/25",
+      "lower_bound": "105206647185313184/25",
+      "strict": true,
+      "status": "PASS"
+    },
+    {
+      "name": "five common ports: cyclic backbone, rho zero",
+      "backbone_vertices": 5,
+      "nonzero_profiles": 5,
+      "backbone_edges": 6,
+      "profile": [
+        "1",
+        "3",
+        "2",
+        "4",
+        "5"
+      ],
+      "columns": [
+        "1",
+        "2",
+        "3"
+      ],
+      "outer_activity": "0",
+      "whole_literal_triangle_coefficients": [
+        "7962863400",
+        "753380736",
+        "433246032",
+        "33077652",
+        "673347060",
+        "33077652",
+        "33077652",
+        "0"
+      ],
+      "four_marked_coefficients": [
+        "7962863400",
+        "753380736",
+        "433246032",
+        "33077652"
+      ],
+      "apex_polynomial_coefficients": [
+        "19500",
+        "292500",
+        "251988",
+        "64728",
+        "5646",
+        "120"
+      ],
+      "D_Dprime_Dsecond": [
+        "33077652",
+        "15962724",
+        "5791656"
+      ],
+      "U_Gamma_logsecond": [
+        "6669473/2756471",
+        "2990847114792/7598132373841",
+        "-439126221031/7598132373841"
+      ],
+      "Rayleigh": "63006389988502752",
+      "lower_bound": "62943155812674288",
+      "strict": true,
+      "status": "PASS"
+    },
+    {
+      "name": "six common ports: zero middle column",
+      "backbone_vertices": 6,
+      "nonzero_profiles": 6,
+      "backbone_edges": 5,
+      "profile": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "columns": [
+        "2",
+        "0",
+        "3"
+      ],
+      "outer_activity": "1/7",
+      "whole_literal_triangle_coefficients": [
+        "2558153000",
+        "2558153000",
+        "2558153000",
+        "101639120",
+        "101639120",
+        "101639120",
+        "101639120",
+        "0"
+      ],
+      "four_marked_coefficients": [
+        "18008710120/7",
+        "18008710120/7",
+        "18008710120/7",
+        "101639120"
+      ],
+      "apex_polynomial_coefficients": [
+        "2520",
+        "52920",
+        "147000",
+        "139356",
+        "57404",
+        "10608",
+        "720"
+      ],
+      "D_Dprime_Dsecond": [
+        "101639120",
+        "87326620",
+        "61715880"
+      ],
+      "U_Gamma_logsecond": [
+        "20470949/5081956",
+        "100649485027747/129131383929680",
+        "-3382977068497/25826276785936"
+      ],
+      "Rayleigh": "311500914043667153600/49",
+      "lower_bound": "311500914043667153600/49",
+      "strict": true,
+      "status": "PASS"
+    },
+    {
+      "name": "six common ports: all columns positive",
+      "backbone_vertices": 6,
+      "nonzero_profiles": 6,
+      "backbone_edges": 5,
+      "profile": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "columns": [
+        "1",
+        "2",
+        "3"
+      ],
+      "outer_activity": "0",
+      "whole_literal_triangle_coefficients": [
+        "102152185440",
+        "7097936184",
+        "4043826168",
+        "226188648",
+        "6334408680",
+        "226188648",
+        "226188648",
+        "0"
+      ],
+      "four_marked_coefficients": [
+        "102152185440",
+        "7097936184",
+        "4043826168",
+        "226188648"
+      ],
+      "apex_polynomial_coefficients": [
+        "2520",
+        "52920",
+        "147000",
+        "139356",
+        "57404",
+        "10608",
+        "720"
+      ],
+      "D_Dprime_Dsecond": [
+        "226188648",
+        "168796584",
+        "103929504"
+      ],
+      "U_Gamma_logsecond": [
+        "31813646/9424527",
+        "10784249039839/19738157594162",
+        "-2884613873263/29607236391243"
+      ],
+      "Rayleigh": "5597155364734377792",
+      "lower_bound": "5592170751961379328",
+      "strict": true,
+      "status": "PASS"
+    },
+    {
+      "name": "backbone conditioning merges common-neighbor vertices",
+      "backbone_vertices": 5,
+      "nonzero_profiles": 5,
+      "backbone_edges": 6,
+      "profile": [
+        "1",
+        "3",
+        "2",
+        "4",
+        "5"
+      ],
+      "columns": [
+        "2",
+        "5",
+        "3"
+      ],
+      "outer_activity": "1/3",
+      "whole_literal_triangle_coefficients": [
+        "832977144",
+        "37862784",
+        "29129904",
+        "1184688",
+        "44849088",
+        "1184688",
+        "1184688",
+        "0"
+      ],
+      "four_marked_coefficients": [
+        "847926840",
+        "38257680",
+        "29524800",
+        "1184688"
+      ],
+      "apex_polynomial_coefficients": [
+        "288",
+        "4320",
+        "4212",
+        "720",
+        "0",
+        "0"
+      ],
+      "D_Dprime_Dsecond": [
+        "1184688",
+        "304560",
+        "51624"
+      ],
+      "U_Gamma_logsecond": [
+        "12129/8227",
+        "39304575/270734116",
+        "-3047691/135367058"
+      ],
+      "Rayleigh": "125021598238080",
+      "lower_bound": "124926802857216",
+      "strict": true,
+      "status": "PASS"
+    },
+    {
+      "name": "all columns zero: exact apex derivatives at scalar zero",
+      "backbone_vertices": 4,
+      "nonzero_profiles": 4,
+      "backbone_edges": 6,
+      "profile": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "columns": [
+        "0",
+        "0",
+        "0"
+      ],
+      "outer_activity": "7",
+      "whole_literal_triangle_coefficients": [
+        "4448",
+        "4448",
+        "4448",
+        "4448",
+        "4448",
+        "4448",
+        "4448",
+        "0"
+      ],
+      "four_marked_coefficients": [
+        "35584",
+        "35584",
+        "35584",
+        "4448"
+      ],
+      "apex_polynomial_coefficients": [
+        "4448",
+        "48928",
+        "12505",
+        "1065",
+        "30"
+      ],
+      "D_Dprime_Dsecond": [
+        "4448",
+        "48928",
+        "25010"
+      ],
+      "U_Gamma_logsecond": [
+        "256599/2224",
+        "2755409/2224",
+        "-256599/2224"
+      ],
+      "Rayleigh": "1107943424",
+      "lower_bound": "1107943424",
+      "strict": true,
+      "status": "PASS"
+    },
+    {
+      "name": "all profiles zero: equality without outer edge",
+      "backbone_vertices": 5,
+      "nonzero_profiles": 0,
+      "backbone_edges": 6,
+      "profile": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "columns": [
+        "2",
+        "3",
+        "5"
+      ],
+      "outer_activity": "0",
+      "whole_literal_triangle_coefficients": [
+        "19500",
+        "19500",
+        "19500",
+        "19500",
+        "19500",
+        "19500",
+        "19500",
+        "0"
+      ],
+      "four_marked_coefficients": [
+        "19500",
+        "19500",
+        "19500",
+        "19500"
+      ],
+      "apex_polynomial_coefficients": [
+        "19500",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "D_Dprime_Dsecond": [
+        "19500",
+        "0",
+        "0"
+      ],
+      "U_Gamma_logsecond": [
+        "0",
+        "0",
+        "0"
+      ],
+      "Rayleigh": "0",
+      "lower_bound": "0",
+      "strict": false,
+      "status": "PASS"
+    },
+    {
+      "name": "outer column zero: bridge equality",
+      "backbone_vertices": 4,
+      "nonzero_profiles": 4,
+      "backbone_edges": 6,
+      "profile": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "columns": [
+        "0",
+        "2",
+        "3"
+      ],
+      "outer_activity": "0",
+      "whole_literal_triangle_coefficients": [
+        "9810326",
+        "9810326",
+        "713588",
+        "713588",
+        "9810326",
+        "713588",
+        "713588",
+        "0"
+      ],
+      "four_marked_coefficients": [
+        "9810326",
+        "9810326",
+        "713588",
+        "713588"
+      ],
+      "apex_polynomial_coefficients": [
+        "4448",
+        "48928",
+        "12505",
+        "1065",
+        "30"
+      ],
+      "D_Dprime_Dsecond": [
+        "713588",
+        "268853",
+        "65960"
+      ],
+      "U_Gamma_logsecond": [
+        "1516123/713588",
+        "211334701639/509207833744",
+        "-25213671129/509207833744"
+      ],
+      "Rayleigh": "0",
+      "lower_bound": "0",
+      "strict": false,
+      "status": "PASS"
+    },
+    {
+      "name": "five common ports plus a non-neighbor backbone vertex",
+      "backbone_vertices": 6,
+      "nonzero_profiles": 5,
+      "backbone_edges": 7,
+      "profile": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "0"
+      ],
+      "columns": [
+        "2",
+        "3",
+        "5"
+      ],
+      "outer_activity": "1/3",
+      "whole_literal_triangle_coefficients": [
+        "2671330281970",
+        "144590637166",
+        "93920392060",
+        "3839956316",
+        "122070528230",
+        "3839956316",
+        "3839956316",
+        "0"
+      ],
+      "four_marked_coefficients": [
+        "8136061374140/3",
+        "437611867814/3",
+        "285601132496/3",
+        "3839956316"
+      ],
+      "apex_polynomial_coefficients": [
+        "320616",
+        "4809240",
+        "4967383",
+        "1578065",
+        "136874",
+        "3480",
+        "0"
+      ],
+      "D_Dprime_Dsecond": [
+        "3839956316",
+        "1299072400",
+        "338467466"
+      ],
+      "U_Gamma_logsecond": [
+        "2815013617/1919978158",
+        "265389622747947065/1843158063598536482",
+        "-48486102076818093/1843158063598536482"
+      ],
+      "Rayleigh": "31256084258390655679024/9",
+      "lower_bound": "31245611260342062970936/9",
+      "strict": true,
+      "status": "PASS"
+    },
+    {
+      "name": "rational fields on every edge and profile",
+      "backbone_vertices": 4,
+      "nonzero_profiles": 4,
+      "backbone_edges": 6,
+      "profile": [
+        "1/2",
+        "2/3",
+        "3/5",
+        "5/7"
+      ],
+      "columns": [
+        "2/5",
+        "3/7",
+        "5/11"
+      ],
+      "outer_activity": "7/13",
+      "whole_literal_triangle_coefficients": [
+        "5257812553515670702/24981618439903125",
+        "1063725696379492177/6423844741689375",
+        "5216922445253479256/32119223708446875",
+        "2695993571322736/23530566819375",
+        "195312066627577043/1189600878090625",
+        "2695993571322736/23530566819375",
+        "2695993571322736/23530566819375",
+        "0"
+      ],
+      "four_marked_coefficients": [
+        "97062436989957544447/324761039718740625",
+        "1460036751363934369/6423844741689375",
+        "7198477720175690216/32119223708446875",
+        "2695993571322736/23530566819375"
+      ],
+      "apex_polynomial_coefficients": [
+        "51056/2805",
+        "13300088/294525",
+        "519357217/26801775",
+        "2077027/714714",
+        "1/7"
+      ],
+      "D_Dprime_Dsecond": [
+        "2695993571322736/23530566819375",
+        "107147603254/970132625",
+        "131977972876/2063736675"
+      ],
+      "U_Gamma_logsecond": [
+        "124307378120421991/105143749281586704",
+        "89603136160255261459807577003395/141733436063963647865611075251072",
+        "-8765774892146115893079150953525/23622239343993941310935179208512"
+      ],
+      "Rayleigh": "14059959018372229140733408243897816/842158801333270061594469140625",
+      "lower_bound": "262405702907313451091672015119155004/16001017225332131170294913671875",
+      "strict": true,
+      "status": "PASS"
+    },
+    {
+      "name": "zero-activity backbone field",
+      "backbone_vertices": 4,
+      "nonzero_profiles": 4,
+      "backbone_edges": 6,
+      "profile": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "columns": [
+        "2",
+        "3",
+        "7"
+      ],
+      "outer_activity": "2/5",
+      "whole_literal_triangle_coefficients": [
+        "1907773982",
+        "138196766",
+        "80794436",
+        "4257996",
+        "107582190",
+        "4257996",
+        "4257996",
+        "0"
+      ],
+      "four_marked_coefficients": [
+        "1950806858",
+        "699499822/5",
+        "412488172/5",
+        "4257996"
+      ],
+      "apex_polynomial_coefficients": [
+        "3372",
+        "37092",
+        "10435",
+        "975",
+        "30"
+      ],
+      "D_Dprime_Dsecond": [
+        "4257996",
+        "916092",
+        "142910"
+      ],
+      "U_Gamma_logsecond": [
+        "1913411/2128998",
+        "55777355641/755438747334",
+        "-9613097671/755438747334"
+      ],
+      "Rayleigh": "80872207937691184/25",
+      "lower_bound": "80852020432582084/25",
+      "strict": true,
+      "status": "PASS"
+    }
+  ],
+  "case_count": 11
+}

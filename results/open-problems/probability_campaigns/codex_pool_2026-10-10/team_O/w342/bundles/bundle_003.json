@@ -1,0 +1,96 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w342",
+  "bundle_slug": "w342-p0001-partial-results",
+  "entries": [
+    {
+      "key": "p0001-w342-result-scope",
+      "namespace": "probability.research.attempts",
+      "logical_name": "p0001-w342-result-scope",
+      "kind": "concept",
+      "title": "Result scope and audit status for P0001",
+      "statement": "The uniform-forest question asks for nonpositive covariance of every distinct edge pair on every finite simple graph. The w342 proof establishes this for graphs whose blocks are bridges or generalized theta graphs, including arbitrary positive fugacities. Arbitrary graphs and general negative association are not settled here. The proof awaits w346 KEEP.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0001:p0001-w342-result-scope",
+        "url": "file:///~/brain_workers/w342/proofs/P0001.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "weighted-theta-block-forests-pairwise-negative-correlation",
+      "namespace": "probability.forests",
+      "logical_name": "weighted-theta-block-forests-pairwise-negative-correlation",
+      "kind": "theorem",
+      "title": "Pairwise negative correlation in weighted theta-block forests",
+      "statement": "Let G be a finite graph whose blocks are bridges or unions of r>=2 internally vertex-disjoint paths between two distinct terminals. Give every edge a positive finite fugacity w_e and sample an acyclic edge set A with probability proportional to product_{e in A}w_e. For every distinct pair e,f, Cov(1_{e in A},1_{f in A})<=0. The assertion includes the uniform-forest law and makes no claim of full negative association.",
+      "proof_text": "# P0001: weighted negative correlation on generalized theta graphs\n\nStatus: proof awaiting w346. Extends the prior cactus special case to a block with arbitrarily many internally disjoint paths between two terminals. General finite graphs remain unresolved here.\n\nLet G be the union of r>=2 paths between two distinct terminals, with all internal vertices disjoint and no other edges. Give each edge e a positive fugacity w_e; a forest A has probability proportional to product_{e in A} w_e. The uniform-forest law is w_e=1. Parallel single-edge paths are allowed for the proof; simple graphs are included by using longer paths.\n\nUnder the independent product measure, an edge is present with p_e=w_e/(1+w_e). A subset is acyclic iff at most one of the r paths is completely present, since every cycle is the union of two complete terminal-to-terminal paths. Write P_j=product_{e in path j}p_e, t_j=P_j/(1-P_j), and S=1+sum_j t_j. Conditional on being a forest, the vector of complete-path indicators has probability 1/S for no complete path and t_j/S for just path j. Conditional on this vector, the paths are independent: a complete path has all its edges, and a noncomplete path has its product edge law conditioned not to be complete.\n\nFor edges e and f on distinct paths i and j, let r_e=(p_e-P_i)/(1-P_i) be the occupancy probability conditional on path i not being complete, and similarly r_f. The conditional expectation is r_e+(1-r_e)I_i. Conditional covariance across different paths is zero, so\n\n    Cov(X_e,X_f)=-(1-r_e)(1-r_f)t_i t_j/S^2 <= 0.\n\nFor distinct edges e,f on the same path i, integrate out the other paths. The marginal is the original independent product measure on path i tilted by 1-alpha_i 1_{path i complete}, where\n\n    alpha_i=sum_{j!=i}t_j/(1+sum_{j!=i}t_j),\n    Z_i=1-alpha_i P_i.\n\nIndeed, when path i is complete all other paths must be incomplete; when it is not complete, the others may have at most one complete path. Thus\n\n    E X_e=(p_e-alpha_i P_i)/Z_i,\n    E[X_e X_f]=(p_e p_f-alpha_i P_i)/Z_i,\n    Cov(X_e,X_f)=-alpha_i P_i(1-p_e)(1-p_f)/Z_i^2 <= 0.\n\nEvery edge pair therefore has nonpositive covariance for all positive fugacities. Graphs whose blocks are bridges or generalized theta graphs inherit this pairwise assertion: cycle constraints and weights factor over blocks, so distinct blocks are independent. This extension does not claim negative association for general increasing functions.\n\nSource and continuation: the prior P0001-A001 cactus proof and its warning that generic decreasing-event conditioning does not preserve negative correlation. Here the complete-path exclusion is explicitly computed rather than assumed to preserve it.\n",
+      "assumptions": [
+        "Finite graph of the stated block form",
+        "Positive finite edge fugacities"
+      ],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0001:weighted-theta-block-forests-pairwise-negative-correlation",
+        "url": "file:///~/brain_workers/w342/proofs/P0001.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0001-w342-validation-evidence",
+      "namespace": "probability.research.attempts",
+      "logical_name": "p0001-w342-validation-evidence",
+      "kind": "concept",
+      "title": "Finite validation evidence for P0001",
+      "statement": "Measured validation evidence for P0001: {\"accepted_forests_with_case_multiplicity\": 2898, \"command\": \"python -X utf8 verify_structural.py\", \"exact_pair_formula_checks\": 420, \"formula_mismatches\": 0, \"label\": \"exact finite checks; separate written proof awaiting audit\", \"positive_covariances\": 0, \"seconds\": 0.032, \"subset_checks\": 3672, \"weighted_graph_cases\": 21}. These finite checks support the written proof and do not replace its independent audit or establish the full open problem.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0001:p0001-w342-validation-evidence",
+        "url": "file:///~/brain_workers/w342/p0001_measurements.json",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0001-w342-result-scope",
+      "kind": "cites",
+      "rationale": "FROM \"The uniform-forest question asks for nonpositive covariance of every distinct edge pair on every finite simple graph. The w342 proof establishes this for graphs whose blocks are bridges or generalized theta graphs, including arbitrary positive fugacities.\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status no_resolution_found_in_documented_search; result status partial_result). For every finite simple graph, does its uniform acyclic edge subset have pairwise nonpositive edge\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0001-negative-correlation-in-uniform-forests"
+    },
+    {
+      "from_key": "weighted-theta-block-forests-pairwise-negative-correlation",
+      "kind": "cites",
+      "rationale": "FROM \"Let G be a finite graph whose blocks are bridges or unions of r>=2 internally vertex-disjoint paths between two distinct terminals. Give every edge a positive finite fugacity w_e and sample an acyclic edge set A with probability proportional to product_{e in\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status no_resolution_found_in_documented_search; result status partial_result). For every finite simple graph, does its uniform acyclic edge subset have pairwise nonpositive edge\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0001-negative-correlation-in-uniform-forests"
+    },
+    {
+      "from_key": "weighted-theta-block-forests-pairwise-negative-correlation",
+      "kind": "cites",
+      "rationale": "FROM \"Let G be a finite graph whose blocks are bridges or unions of r>=2 internally vertex-disjoint paths between two distinct terminals. Give every edge a positive finite fugacity w_e and sample an acyclic edge set A with probability proportional to product_{e in\"; TO \"The uniform-forest question asks for nonpositive covariance of every distinct edge pair on every finite simple graph. The w342 proof establishes this for graphs whose blocks are bridges or generalized theta graphs, including arbitrary positive fugacities.\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0001-w342-result-scope"
+    },
+    {
+      "from_key": "p0001-w342-validation-evidence",
+      "kind": "cites",
+      "rationale": "FROM \"Measured validation evidence for P0001: {\"accepted_forests_with_case_multiplicity\": 2898, \"command\": \"python -X utf8 verify_structural.py\", \"exact_pair_formula_checks\": 420, \"formula_mismatches\": 0, \"label\": \"exact finite checks; separate written proof\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status no_resolution_found_in_documented_search; result status partial_result). For every finite simple graph, does its uniform acyclic edge subset have pairwise nonpositive edge\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0001-negative-correlation-in-uniform-forests"
+    },
+    {
+      "from_key": "p0001-w342-validation-evidence",
+      "kind": "cites",
+      "rationale": "FROM \"Measured validation evidence for P0001: {\"accepted_forests_with_case_multiplicity\": 2898, \"command\": \"python -X utf8 verify_structural.py\", \"exact_pair_formula_checks\": 420, \"formula_mismatches\": 0, \"label\": \"exact finite checks; separate written proof\"; TO \"The uniform-forest question asks for nonpositive covariance of every distinct edge pair on every finite simple graph. The w342 proof establishes this for graphs whose blocks are bridges or generalized theta graphs, including arbitrary positive fugacities.\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0001-w342-result-scope"
+    }
+  ]
+}

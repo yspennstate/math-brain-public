@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260923T123728Z-account01-B08-qform-r29",
+  "status": "PROVED_SUPPORTING_ROUTER_FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "control": {
+    "programme": "QFORM-DENSITY-3EIG-20260922",
+    "owner_control_revision": "2026-09-22.15",
+    "initial_commit": "21a3b3edd393a7e9e8a1e8f411c587c0ae3c6848",
+    "prepublication_refresh_commit": "5e118717683c2f6a3b69517ee6f302734acd413f"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "42c6a9acdf59aae2e339634e7da3aaecc1d7e32c",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T123728Z-account01-B08-qform-r29/REPORT.md"
+  },
+  "partner_applied": {
+    "worker": "account02/B08",
+    "result": "QFORM-ACTUAL-GATE-D5-RANK4-ROUTER-v1 / actual k=1 gate",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ac7e9c4772e977672044e7cacd55b74c91ea8b6d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/20260923T104126Z-account02-B08-qform-diffuse-r26/REPORT.md",
+    "actual_use": "If s5(B)>=L/64 then continuous density <306/L; otherwise retain the literal s5(B)<L/64 survivor with |lambda|>=(1/2)sqrt(3/5)L and s2(B)>=(3/16)sqrt(3/5)L."
+  },
+  "new_result": {
+    "id": "QFORM-K1-DIFFUSE-RECOLOR-THIRD-CROSS-v1",
+    "statement": "For C=A[I,I], B=A[I,J], top child eigenpair (lambda,u), r=s2(C), top-two cross left singular plane V, epsilon=s3(B), d=dist(u,Ran V), and combined frame F=[V,w] with max physical row leverage <=1/64, some original-coordinate split I=S union T gives s3(A[S,T union J]) >= (3d/(8sqrt(2))) min(s2(B),|lambda|)-sqrt(r^2+epsilon^2).",
+    "actual_gate_constants": {
+      "eta_over_L": 0.006807978538255225,
+      "recolored_s3_over_L": 0.009627935581145497,
+      "paid_density_constant_over_L": 1027.4609277167406,
+      "bilateral_star_over_L": 0.003930588241698849
+    },
+    "continuity": "continuous C0 only on the paid robust-s3 and D5 Fourier branches; no continuity claim on structural survivors"
+  },
+  "unresolved_implication": "QFORM-K1-ALIGNMENT-OR-SECONDCHILD-STAR-COMPILER-v1",
+  "next_step": "Pay the strong alignment, second-child, or bilateral-star survivors while retaining arbitrary same-bank curvature and the complete complementary spectrum; route localized combined-frame rows into existing physical-coordinate machinery.",
+  "full_solution": false,
+  "full_brain_connected": false
+}

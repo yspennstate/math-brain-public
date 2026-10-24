@@ -1,0 +1,108 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w535",
+  "bundle_slug": "p0309-dlr-support-boundary-w535-20261010",
+  "entries": [
+    {
+      "key": "nonnegative-dlr-spec",
+      "namespace": "probability.gibbs",
+      "logical_name": "nonnegative-grand-canonical-dlr-specification",
+      "kind": "definition",
+      "title": "Nonnegative grand-canonical DLR specification",
+      "statement": "For a locally finite exterior eta, finite z>0 and beta>0, and nonnegative pair potential v, the conditional law in bounded B assigns the n-particle sector unnormalized density z^n/n! times exp(-beta H_B), where H_B is the sum of internal pair interactions and interactions with eta. The empty configuration has weight one. There is no neutralizing background or fixed particle-count constraint; the partition sum includes n=0.",
+      "proof_text": null,
+      "assumptions": [
+        "Ordinary grand-canonical DLR law on locally finite configurations",
+        "Finite activity 0<z<infinity and finite 0<beta<infinity",
+        "Nonnegative pair interaction, zero empty energy",
+        "No neutralizing background, negative external energy, or fixed local count"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w535:p0309-dlr-boundary-20261010",
+        "url": "file:///~/brain_workers/w535/INDEPENDENT.md",
+        "revision": "author-derived-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "void-bound-draft",
+      "namespace": "probability.gibbs",
+      "logical_name": "repulsive-grand-canonical-dlr-void-obstruction-draft",
+      "kind": "concept",
+      "title": "Draft: uniform DLR void bound and arbitrarily large holes",
+      "statement": "DRAFT campaign derivation, awaiting independent reviewer w536. For an ordinary grand-canonical DLR law with finite z>0, finite beta>0, nonnegative pair interaction, zero empty energy, no background and no fixed local count, 1<=Xi_B<=exp(z|B|), so the conditional void probability is at least exp(-z|B|). For m disjoint equal-volume regions of volume V, the probability all are occupied is at most (1-exp(-zV))^m, by exterior conditioning and induction, without independence. Countably many tails and integer radii imply arbitrarily large empty balls almost surely. Such a configuration cannot be a uniformly bounded displacement of any full-rank lattice, even a configuration-dependent lattice. This covers ordinary three-dimensional Riesz DLR laws with s>3; it does not rule out lattice-periodic probability laws or address renormalized s<=3 specifications. Equality of the universal finite bound holds for the zero-potential Poisson specification.",
+      "proof_text": null,
+      "assumptions": [
+        "Ordinary grand-canonical DLR law on locally finite configurations",
+        "Finite activity 0<z<infinity and finite 0<beta<infinity",
+        "Nonnegative pair interaction, zero empty energy",
+        "No neutralizing background, negative external energy, or fixed local count"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w535:p0309-dlr-boundary-20261010",
+        "url": "file:///~/brain_workers/w535/INDEPENDENT.md",
+        "revision": "author-derived-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "global-displacement-bridge",
+      "namespace": "probability.gibbs",
+      "logical_name": "global-bounded-displacement-crystal-bridge-under-audit",
+      "kind": "concept",
+      "title": "Auxiliary global-displacement bridge under audit",
+      "statement": "Auxiliary bridge to audit, not a statement of P0309: an ordinary finite-temperature, finite-activity grand-canonical Gibbs law with nonnegative pair interaction is supported on configurations admitting a bijection from some full-rank lattice whose displacement is bounded everywhere. This requirement is stronger than invariance of a probability law under lattice translations. The companion DRAFT void result proposes a refutation under the explicit ordinary-DLR assumptions; independent review is pending. No implication is asserted for a fixed-count or renormalized long-range specification.",
+      "proof_text": null,
+      "assumptions": [
+        "Ordinary grand-canonical DLR law on locally finite configurations",
+        "Finite activity 0<z<infinity and finite 0<beta<infinity",
+        "Nonnegative pair interaction, zero empty energy",
+        "No neutralizing background, negative external energy, or fixed local count"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w535:p0309-dlr-boundary-20261010",
+        "url": "file:///~/brain_workers/w535/INDEPENDENT.md",
+        "revision": "author-derived-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "void-bound-draft",
+      "to_key": "nonnegative-dlr-spec",
+      "kind": "depends_on",
+      "rationale": "The conditional void estimate uses the n=0 weight and nonnegative interaction of this exact specification."
+    },
+    {
+      "from_key": "global-displacement-bridge",
+      "to_key": "nonnegative-dlr-spec",
+      "kind": "depends_on",
+      "rationale": "The auxiliary bridge is explicitly restricted to the same ordinary grand-canonical specification."
+    },
+    {
+      "from_key": "void-bound-draft",
+      "to_key": "global-displacement-bridge",
+      "kind": "refutes",
+      "rationale": "Draft refutation pending independent review: arbitrarily large holes contradict the finite covering radius plus globally bounded displacement; the original P0309 target is not refuted."
+    },
+    {
+      "from_key": "void-bound-draft",
+      "to_existing_logical": "math:probability.core:attempt-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "analogous_to",
+      "rationale": "Both address a limitation of using local harmonic localization to conclude a full Gibbs crystal: the prior card explicitly leaves defect and competing-configuration control open."
+    },
+    {
+      "from_key": "void-bound-draft",
+      "to_existing_logical": "math:probability.core:open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "semantic_association",
+      "rationale": "P0309 seeks low-positive-temperature Riesz crystalline Gibbs phases; this draft constrains one stronger configuration-support criterion in its ordinary s>3 regime."
+    }
+  ]
+}

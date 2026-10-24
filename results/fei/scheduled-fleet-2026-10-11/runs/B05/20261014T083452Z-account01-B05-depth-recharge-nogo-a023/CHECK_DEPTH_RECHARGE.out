@@ -1,0 +1,20 @@
+status=PASS
+dimension=4
+function=f(y,x,z,u)=x if y=1 else z*u
+X={y,x}
+Y={y,z}
+E_X_empty=1/2
+E_Y_empty=0
+E_Y_x=1/2
+E_Y_u=1/2
+Inf_x=Inf_y=Inf_z=Inf_u=1/2
+I_total=2
+Lambda_X=2.442695040888963
+Lambda_Y=3.885390081777927
+D=Lambda_Y-Lambda_X=1.442695040888963
+one_over_ln2=1.442695040888963
+r=1 swaps=1 positive_variation=1.442695040888963 refunds=0.000000000000000 signed_total=1.442695040888963
+r=2 swaps=3 positive_variation=2.885390081777927 refunds=1.442695040888963 signed_total=1.442695040888963
+r=5 swaps=9 positive_variation=7.213475204444817 refunds=5.770780163555854 signed_total=1.442695040888964
+r=20 swaps=39 positive_variation=28.853900817779270 refunds=27.411205776890306 signed_total=1.442695040888964
+r=100 swaps=199 positive_variation=144.269504088896326 refunds=142.826809048007362 signed_total=1.442695040888964

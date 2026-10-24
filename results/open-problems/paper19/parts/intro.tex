@@ -1,0 +1,103 @@
+Let \(\F\in\{\R,\C\}\), let \(d_\F=\dim_\R \F\), and let
+\[
+  h(\gamma)=\gamma\log\gamma-(\gamma-1)\log(\gamma-1),
+  \qquad
+  c_\gamma=e^{h(\gamma)}=\frac{\gamma^\gamma}{(\gamma-1)^{\gamma-1}}.
+\]
+Here \(\gamma\) denotes the row aspect ratio \(N_m/m\), and throughout this paper
+\(T\) denotes a selected row index set.
+The source theorem of \cite{ShmaloExtremal2026} says that if
+\(A_m\in\F^{N_m\times m}\) has independent standard Gaussian entries and
+\(N_m/m\to\gamma>1\), then
+\[
+  M_m^\F(A_m):=\min_{\substack{T\subset[N_m]\\ |T|=m}}\smin(A_{m,T})
+  =c_\gamma^{-m/d_\F+o_\PP(m)}.
+\]
+Equivalently,
+\[
+  \frac{1}{m}\log M_m^\F(A_m)\xrightarrow{\PP}-\frac{h(\gamma)}{d_\F}.
+\]
+For \(N_m=\gamma m+O(1)\) the same paper gives an \(O_\varepsilon(m^{-1})\)
+probability rate for deviations of \((1/m)\log M_m^\F\) from this limit.
+
+The phase-retrieval application is the real critical case \(N=2m-1\).  For a
+full-spark matrix \(A\in\R^{(2m-1)\times m}\), the Balan--Wang stability
+parameter \cite{BalanCasazzaEdidin2006,BalanWang2015,BandeiraCahillMixonNelson2014} is
+\[
+  \omega(A)=
+  \min_{\substack{T\subset[2m-1]\\ |T|=m}}\smin(A_T).
+\]
+Thus \cite{ShmaloExtremal2026} proves
+\[
+  \frac{1}{m}\log\omega(A_m)\xrightarrow{\PP}-\log 4,
+  \qquad
+  \omega(A_m)=4^{-m+o_\PP(m)}
+\]
+for iid real Gaussian measurements.  This answers Randomstrasse Open Problem
+21 at the exponential-base level: the problem asks for the value of
+\(\omega(A)\) and the exponential base in the Balan--Wang conjecture for iid
+Gaussian measurements \cite{BandeiraStablePhase}.
+The same base remains true after normalizing every Gaussian measurement vector
+to unit Euclidean norm: the random row scalings have subexponential extrema
+over \(O(m)\) rows, so they do not affect the \(m^{-1}\log\) scale.  The same
+pathwise transfer also covers positive diagonal column preconditioning with
+subexponential logarithmic extrema, including column-normalized Gaussian matrices;
+in the phase-retrieval interpretation this is a coordinate preconditioning of
+the unknown signal rather than measurement-vector normalization.
+
+The continuous assumption is essential for the full-spark reduction.  In the
+opposite atomic direction, Proposition~\ref{prop:finite-alphabet-obstruction}
+gives a deterministic projective-pair obstruction for finite alphabets, and
+Proposition~\ref{prop:sign-critical} shows in particular that
+every real sign matrix with \(2m-1\) rows and \(m\ge2\) columns has a singular
+\(m\)-row submatrix.  Thus critical Rademacher frames fail the real
+phase-retrieval injectivity condition deterministically, not merely with high
+probability.
+
+The present note separates the mechanism from the Gaussian input.  The
+mechanism is the competition
+\[
+  \text{number of tested submatrices}\quad\hbox{versus}\quad
+  \text{small-ball exponent of one least singular value}.
+\]
+If \(|\mathcal T_m|=\exp((H+o(1))m)\) and a typical variable
+\(Y_T\) has \(\PP\{Y_T\le t\}\approx t^a\) at exponential scales, then the
+predicted extremal scale is
+\[
+  \min_{T\in\mathcal T_m}Y_T=\exp\{-(H/a+o_\PP(1))m\}.
+\]
+The lower bound is usually a union bound.  The upper bound is the real work:
+one must prove that enough of the events \(\{Y_T\le t\}\) decorrelate.  The
+Gaussian paper proves that decorrelation for square row submatrices by a
+second-moment argument.  Below we state the abstract principle, prove the
+distribution-free lower side under explicit one-matrix small-ball hypotheses,
+including density-rate and smoothed deterministic-frame variants, and reduce the
+non-Gaussian second-moment step to a single decorrelation estimate for random
+normals, which we then establish for all iid bounded-density entries through an
+elementary off-support resolvent estimate
+(Appendix~\ref{sec:app-keystone}), proved self-contained by a leave-one-out argument
+(Hanson--Wright and the Mar\v{c}enko--Pastur fixed point), with the anisotropic local
+law an optional citation and full error control.
+Because the lower-side failure probabilities are exponentially summable once an
+\(\varepsilon\)-slack is fixed, the same union-bound estimates also give
+almost-sure lower envelopes by the first Borel--Cantelli lemma.  This is only a
+lower-envelope statement; matching almost-sure exact laws would require
+summable upper-side or pair-correlation estimates.
+At the finite-budget level, a chosen summable budget \(\sum_m e^{-u_m}<\infty\)
+gives an eventual almost-sure lower bound at the full displayed threshold,
+including the polynomial hard-edge factors and the \(u_m\)-slack.
+The Gaussian exact base is also stable under Poissonization or other random
+row-count models with \(N_m/m\to\gamma>1\), by a monotone squeeze between
+deterministic row counts.  On the square row-submatrix scale, the same exact
+base is stable under positive real prefix row weights and one global all-column
+right factor with subexponential absolute singular-value scale; positive column
+diagonals and full-prefix Gaussian column normalization are special cases.
+For independent rows with directional anti-concentration, the lower-side method
+also extends from square row submatrices to fixed-excess tall submatrices: a
+cofactor row-block certificate replaces the square negative-second-moment
+identity and exposes the \(r+1\) scalar constraints responsible for the
+fixed-excess exponent.
+
+No Toeplitz, Hankel, circulant, or structured-symbol matrices are used here.
+All extensions stay in the row-submatrix and random-frame setting of the source
+paper.

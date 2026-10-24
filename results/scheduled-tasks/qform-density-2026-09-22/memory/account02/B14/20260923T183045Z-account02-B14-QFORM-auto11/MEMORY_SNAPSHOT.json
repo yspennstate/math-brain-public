@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B14",
+  "run_id": "20260923T183045Z-account02-B14-QFORM-auto11",
+  "status": "GAUSSIAN_MIXTURE_ROUGH_LOCALIZATION_BARRIER_FULL_QFORM_OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a0ba2bed1c4d0e364c42e7c99103ad7c57d5ac19",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T183045Z-account02-B14-QFORM-auto11/REPORT.md"
+  },
+  "early_checkpoint": {
+    "commit": "63a2a870eb9c436108e17ada3f1ca4584466ac8f",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T183045Z-account02-B14-QFORM-auto11/EARLY.md"
+  },
+  "handoff": {
+    "commit": "67debdc775c9d2c7c578f09d372342aaf26d5240",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B14/20260923T183045Z-account02-B14-QFORM-auto11.md"
+  },
+  "proved_claims": [
+    {
+      "id": "QFORM-GAUSSIAN-MIXTURE-BV-BUDGET-v1",
+      "statement": "For g(x)=E phi_T(x-M) with H=E T^{-1/2}<infinity, Var(g)<=sqrt(2/pi) H, with arbitrary dependence of M and T and no moment condition on M."
+    },
+    {
+      "id": "QFORM-FRAGMENTED-EXTREME-GAUSSIAN-APPROX-BARRIER-v1",
+      "statement": "For E_N=union_{j=1}^N[4j,4j+1/N], f_N=1_{E_N}, and any Gaussian location-scale mixture density g with inverse-scale budget H, H>=N sqrt(2pi)(1-||g-f_N||_1). Therefore H<=sqrt(2pi) implies ||g-f_N||_1>=1-1/N."
+    },
+    {
+      "id": "QFORM-RANDOM-CENTER-COMPONENT-INVERSION-BARRIER-v1",
+      "statement": "For X_N=M_N+(2N)^{-1}G with M_N uniform on {4,8,...,4N}, the marginal density is <0.799 while E T^{-1/2}=2N. For three independent copies and A=I_3, the conditional Gaussian component certificate is (2 I_3/pi)N^2 whereas completed source Theorem A gives ||p_Q||inf<=6sqrt(pi) uniformly in N."
+    }
+  ],
+  "partner_used": {
+    "account_slot": "account03/B14",
+    "source": "yspennstate/math-open-problems@d72f85bd91f01034df4df7f1544aef854771f0a6:proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T174117Z-account03-B14-QFORM-auto11b/REPORT.md",
+    "use": "Its exact finite-fragment law E_N was inserted into the BV budget theorem to obtain the quantitative inverse-scale approximation lower bound. Its rank-two receiver counterexample was not promoted to the QFORM target."
+  },
+  "required_source_used": {
+    "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md",
+    "result": "Theorem A",
+    "use": "Applied to Q_N=sum_{i=1}^3 X_{N,i}^2, A=I_3, to obtain ||p_QN||inf<=6sqrt(pi) uniformly in N and translations."
+  },
+  "other_source_used": {
+    "source": "yspennstate/math-open-problems@9dabaf2aaf66687c2b4437fdb359b1aeb4a804bc:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_GAUSSIAN_MIXTURE_FULL_THEOREM.md",
+    "use": "Conditional Gaussian Fourier density bound and inverse-scale hypothesis; used to quantify the N^2 component-first loss."
+  },
+  "corrections_respected": [
+    "No arbitrary-joint coarea reduction.",
+    "No post-rotation independence.",
+    "No bounded-diameter or fixed-fragment localization.",
+    "No moment/support/log-concavity assumptions.",
+    "Partner rank-two receiver obstruction is not a QFORM counterexample.",
+    "Continuity remains separate."
+  ],
+  "first_unpaid_implication": {
+    "id": "QFORM-ROUGH-CENTER-AGGREGATION-BEFORE-SCALE-INVERSION-v1",
+    "statement": "Before reciprocal component scale or curvature is paid, aggregate translation/fragment labels at whole-law level, or use a whole-law D'/D5/projected-crossing/hub/pair/ridge certificate. Uniform inverse-scale Gaussian-mixture approximation of arbitrary cap-one finite-fragment laws is quantitatively impossible."
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null
+}

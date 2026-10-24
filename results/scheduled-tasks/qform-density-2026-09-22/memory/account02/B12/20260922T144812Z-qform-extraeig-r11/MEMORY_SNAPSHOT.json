@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B12",
+  "run_id": "20260922T144812Z-qform-extraeig-r11",
+  "control_revision": "2026-09-22.5",
+  "control_commits": {
+    "startup": "6878c2c5ab2ca3f34dc80abdcb8ba60e3b1b9620",
+    "pre_handoff": "0d955f6fd1d4fa2164b5017cb8cd3b946b52f08f"
+  },
+  "brain_status": "AUTHENTICATED_PRIVATE_REPOSITORY_RETRIEVAL_USED_NATIVE_LEARNED_MEMORY_UNVERIFIED",
+  "full_brain_connected": false,
+  "correction_state": "Live correction inbox re-read through pre-handoff main; no listed correction challenges the singular-value rank perturbation, operator-norm Weyl step, or source-valid physical conditioning used here.",
+  "correction_ids_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "dependencies_applied": [
+    {
+      "result": "regularized cross-block determinant theorem",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "a302aab3477c64757b511e80d3907f982e04873a",
+      "path": "proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md",
+      "scope_used": "five physical cross singular values >=sigma imply continuous density cap 5e/(2sigma), no leverage condition"
+    },
+    {
+      "result": "independent review of determinant Sections 3--6",
+      "worker": "account02/B02",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e3fe4ce35f6aa4a90cca913051886c96c7febfc3",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260922T140817Z-account02-B02-qform-r11/REPORT.md",
+      "scope_used": "PASS on constants/exponents/orientation needed for five-cross consequence"
+    },
+    {
+      "result": "QFORM-TWO-SAMESIGN-THREEBLOCK-v1",
+      "worker": "account03/B12",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "b3c543b40dfaef13468466fa82625303a7719af8",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md",
+      "scope_used": "physical definite triple survives one arbitrary rank-one spectral perturbation with constant C*=24.183038289961516..."
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-CROSS-SPECTRAL-TAIL-STABILITY-v1",
+      "status": "PROVED_SUPPORTING_STABILITY_THEOREM",
+      "statement": "If s_{5+r}(A0[I,J])>=sigma and E=R+S with rank(R)<=r and ||S||op<=delta<sigma, then s5((A0+E)[I,J])>=sigma-delta and ||p||infinity<=5e/[2(sigma-delta)]."
+    },
+    {
+      "id": "QFORM-DEFINITE-TRIPLE-SPIKE-TAIL-STABILITY-v1",
+      "status": "PROVED_SUPPORTING_STABILITY_THEOREM_USING_PARTNER",
+      "statement": "A physical definite triple of gap L survives E=tau vv^T+S with arbitrary tau,v and ||S||op<=delta<L, with density cap C*/(L-delta)."
+    },
+    {
+      "id": "QFORM-DEFINITE-PAIR-MONOTONE-ADDITION-v1",
+      "status": "PROVED_SUPPORTING_STABILITY_THEOREM",
+      "statement": "A physical definite pair of gap L survives arbitrary same-Loewner-sign additions of any rank and magnitude with density cap pi/L."
+    },
+    {
+      "id": "QFORM-CROSS-REDUNDANCY-r-SHARP-v1",
+      "status": "PROVED_MECHANISM_COUNTEREXAMPLE",
+      "statement": "For every r>=1, 4+r strong singular directions in one physical cross block can be reduced to exactly four by an arbitrary rank-r spectral addition while every final full-matrix eigenvalue keeps absolute value sigma; hence the +r redundancy needed to preserve five cross directions is algebraically necessary for this fixed-certificate route."
+    }
+  ],
+  "canonical_output": {
+    "report_commit": "e962f1e44ab23c8ad3e9a9b6cd58f21ed574930d",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260922T144812Z-qform-extraeig-r11/REPORT.md",
+    "checker_commit": "1a460d00888e04752856dc1fa2641c93ed43e568",
+    "checker_output_commit": "911a5ae7e4b1d9c7a0c36af4e8c075e476372d6e",
+    "handoff_commit": "27701f72d23beeee6e8a8d27f21424aeb7291340"
+  },
+  "full_target_status": "OPEN_NOT_PROVED",
+  "unresolved_implication": "From only three globally large eigenvalues, derive an aggregate product-preserving structural decomposition which routes spectral mass into a stable physical definite/cross certificate or an existing bank/hyperbolic aggregate mechanism before inverse local conditioning payment.",
+  "next_attack": "Combine overlap-channel aggregate identities with certificate-stability monotonicity; seek a dichotomy stated in summed resources rather than a single fixed minor/cut, which is already refuted.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  }
+}

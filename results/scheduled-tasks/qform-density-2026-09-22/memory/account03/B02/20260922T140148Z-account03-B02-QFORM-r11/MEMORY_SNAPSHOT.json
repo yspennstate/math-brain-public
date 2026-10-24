@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_at_final_refresh": "115643c64818d9b050ba7164d4b996145c9130f4",
+  "account": "account03",
+  "slot": "B02",
+  "run_id": "20260922T140148Z-account03-B02-QFORM-r11",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "partner": {
+    "assigned": "account04/B02",
+    "completed_current_handoff_observed": false,
+    "compatible_results_applied": [
+      "account01/B02@e58461e07b19315b290cb4b397929090ec6f48b9"
+    ]
+  },
+  "results": [
+    {
+      "id": "QFORM-SINGLE-SQUARE-L3-FOURIER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "If V has density <=1 and d!=0, then dV^2 has L^(3/2) density norm <=2|d|^(-1/3) and characteristic-function L^3 norm <=2*3^(1/6)*pi^(1/3)|d|^(-1/3). Conditioning shows every arbitrary coupled quadratic form with nonzero physical diagonal d=A_kk has the same global L^3_t bound.",
+      "continuity": "NOT_IMPLIED_BY_THIS_RESULT"
+    },
+    {
+      "id": "QFORM-DIAGONAL-L1-FOURIER-v1",
+      "status": "PROVED_SCOPED_SUPPORTING_THEOREM",
+      "statement": "For a diagonal quadratic form with three coefficients |d_j|>=1, ||phi_Q||_1<=8sqrt(3)pi and Q has a bounded continuous density <=4sqrt(3).",
+      "continuity": "PROVED"
+    },
+    {
+      "id": "QFORM-INDEPENDENT-SHIFT-RESIDUAL-L1-v1",
+      "status": "PROVED_SCOPED_SUPPORTING_THEOREM_USING_COMPLETED_PEER_RESULT",
+      "statement": "If Q=d(X+H)^2+R with X independent of (H,R), H independent of R, and phi_R in L^(3/2), then ||phi_Q||_1<=2*3^(1/6)pi^(1/3)|d|^(-1/3)||phi_R||_(3/2). Applied to the account01/B02 unique-heavy diffuse residual, the small pivot cancels and the target-normalized overlap-free branch has continuous density <9.732.",
+      "continuity": "PROVED_ON_STATED_BRANCH"
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f70e9260accfb191c44e874bfc20085580b69b23",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260922T140148Z-account03-B02-QFORM-r11/REPORT.md",
+    "blob": "87372e8b6074d143014ba4dc09a7f455b710a553"
+  },
+  "first_unresolved_implication": "QFORM-OVERLAPPED-SHIFT-RESIDUAL-FOURIER-v1: in the rank-three unique-heavy decomposition Q=d(X_k+H(Y))^2+R(Y), remove the false independence condition H independent of R while retaining the original product structure and at least one Fresnel/time cancellation.",
+  "next_step": "Derive a phase-retaining mixed-norm Fourier/Brascamp-Lieb estimate for the joint square-shift and diffuse rank-two residual. Do not take the entire spectral transform in absolute value, because the live phase-Wiener correction refutes that universal route."
+}

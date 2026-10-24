@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B02",
+  "run_id": "20260922T192922Z-account01-B02-qform-auto11",
+  "control_revision": "2026-09-22.14",
+  "control_head_observed_before_report": "9a044e9ad82db8d6e7246d64b6f0f1a6ee051de6",
+  "assignment": "Integrated Fourier estimate",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "math_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "960599513eef0d6048af1e0e1d279650d2d67e75",
+    "blob": "39ad0cafd4ad1a6896f0a35dfc4a648bb32cec79",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B02/20260922T192922Z-account01-B02-qform-auto11/REPORT.md"
+  },
+  "handoff_commit": "1ff5c4585915fd44e6b4184a1dcaa6d954676749",
+  "new_results": [
+    "QFORM-AFFINE-HYPERBOLIC-FRACTIONAL-TRACE-SHARP-v1",
+    "QFORM-PAIR-HYPERBOLIC-FRACTIONAL-CASCADE-v1",
+    "determinant-free critical half-Riesz endpoint for the pair-plus-affine-hyperbolic branch",
+    "square-plus-one-hyperbolic constant improved from 8sqrt(2) to 4sqrt(2)"
+  ],
+  "key_inequalities": [
+    "H_alpha(2aXU+H(X,V)) <= 2^alpha/(1-alpha)^2 * (M/|a|)^alpha for 0<alpha<1",
+    "H_1/2(R) <= 4sqrt(2)*sqrt(M/|a|)",
+    "||p_Q||inf <= 16sqrt(2)*sqrt(M/(kappa|a|)) in the indefinite-pair plus affine-hyperbolic branch",
+    "||p_Q||inf <= 4sqrt(2)*sqrt(M/(|ad|)) in the square plus affine-hyperbolic branch",
+    "int |phi_Q|^2 <= 32pi sqrt(2)*sqrt(M/(kappa|a|)) in the pair branch"
+  ],
+  "partner_result_applied": {
+    "worker": "account02/B02",
+    "result": "QFORM-PAIR-FRACTIONAL-TRACE-TRANSDUCER-v1",
+    "report_commit": "853a4e86c7ff9789891c473905eeb57b13f615ed",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260922T190827Z-account02-B02-40617e89/REPORT.md",
+    "premise": "invertible indefinite original-coordinate pair; residual fractional trace H_alpha; arbitrary residual-dependent pair translation permitted"
+  },
+  "additional_peer_dependency": {
+    "worker": "account03/B02",
+    "report_commit": "056867164c939f4e70988e762258f2542e32fd75",
+    "correction_addendum_commit": "c83d7f618cd630af9757c44d4c8b5f74b3962de9",
+    "scope": "affine hyperbolic packet has no hidden U-dependent curvature; square shift may depend on remaining variables"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "unweighted_characteristic_function_L1": "OPEN_NOT_USED; no exact-product target counterexample produced this run",
+  "continuity": "NOT_PROVED_BY_THIS_RUN",
+  "first_unpaid_implication": "QFORM-PAIR-HYPERBOLIC-ENDPOINT-EXTRACTION-v1: from surviving O0/O1/O2/O3 geometry force an already-paid branch, or a product-preserving indefinite physical pair plus genuinely affine hyperbolic residual with kappa*|a|/M bounded below, or a square pivot plus affine hyperbolic packet with |a*d|/M bounded below. Pair determinant D is no longer required in the first branch.",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "scope": "unavailable"
+  }
+}

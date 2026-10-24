@@ -1,0 +1,12 @@
+{
+  "helper_version": "A062-reserve-v2",
+  "family": "canonical B05 quadratic bent point splice; even k>=4, r>=2k",
+  "parameter_domain": "same core, odd, activation and selector cases as FROZEN_SPEC.json; core t=2,4,6,8,10,12, control s=1..8 with k=4,6, selector k=4,6,8,10,12 at r=2k",
+  "case_count": "6 even roots + 5 odd roots + 32 activation nodes + 5 selector roots; C=6 and exact lead price 32609/5000",
+  "symmetry": "proved adjacent-pair state classification; no additional search reduction",
+  "arithmetic": "integer Walsh + Fraction; 48-term rational atanh-series bounds with explicit tail; log2 intervals rounded outward to denominator 2^120 using rational floor/ceiling",
+  "memory_estimate_MB": 60,
+  "maximum_runtime_seconds": 60,
+  "dimension_escalation": false,
+  "reason_for_revision": "v1 serialization failed on huge exact fractions; new proof improves C to 6"
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "claim_id": "A068-CYCLIC-ONEPOINT-FULLREF",
+    "version": 1,
+    "exact_statement": "For every odd q>=5, let F_q(x,z)=MAJ_q(x_i*(-1)^(u_i*u_(i+1))) on q distinct private data bits and q cyclic uniform control bits. Pad to any N>=2q and flip any one input to obtain G. Let R0 be the normalized data-level rank/affine-quadratic-fiber reference of the accepted A068 base theorem, extended by zero on padding frequencies, delta=2^-N, and R_delta=(1-delta)R0+delta U_N. Then R_delta is normalized with full support, H(G)<=Gamma_delta(G)<=C_reg I_x(G)+2I_z(G)-(287/1920)I_x(F_q), where C_reg=log2(4+e)+2log2(e*pi), I_x(F_q)=q binom(q-1,(q-1)/2)/2^(q-1), and I_z includes padding. For fixed q under padding and a one-point edit, Gamma_delta(G) tends to Gamma0(F_q).",
+    "hypotheses": [
+      "Independent uniform physical bits; actual Boolean signs; entropy and expected reference cost in bits",
+      "Odd q>=5; q private data labels; controls are the specified cyclic quadratic signs; one edit at any input",
+      "Complete R0 base reference and its C001 rank-cost estimate at the source accepted by A088",
+      "Uniform fallback prior is delta=2^-N and is fixed before observing the Fourier set"
+    ],
+    "statement_sha256": "14b3300225fa7e6eaef78c59e5977ee0f8dbd50a2e3e2eedca04c73ec71a3333",
+    "contributors": [
+      "account05/A068"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261013T234128Z-account05-A068-antichain-beyond-one-order\\REPORT.md",
+      "locators": "Target and Sections 1-4",
+      "predecessor_sha256": "3c53ca43f4455a89c327a1671567e10bb825ce6d0b8dce5d4f943f859a0927be"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A068-QUADRATIC-CONTEXT-RANK-REFERENCE",
+        "version": 1,
+        "statement_sha256": "23b8038c7a0da79a4d10c3dd9f897646ea2f5b155814c6c112b2a4efa208f181",
+        "acceptance": "A088 AUDIT.md lines 73-79, accepted at source-bound C001 scope",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261011T222313Z-account05-A068-antichain-beyond-one-order\\CLAIMS.json"
+      },
+      {
+        "claim_id": "C001",
+        "version": "supplement 2026-10-11 / accepted recovered regular-rank source",
+        "source_sha256": "5d87f625fbadad4aa9841416712b8193a869fa9dffcb4e9c200d2f39a62e6a10",
+        "acceptance": "Inherited explicit accepted baseline, not a new full-paper proof audit"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "account05/A070",
+        "verdict": "ACCEPT_REPORTED_THEOREM_AT_STATED_SCOPE",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261013T212602Z-account05-A070-analytic-route-referee\\DERIVATION.md",
+        "method": "Independent analytic reconstruction and own exact code; no author implementation imported",
+        "reviewer_conflict": false,
+        "source_path": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261012T022241Z-account05-A068-antichain-beyond-one-order\\REPORT.md",
+        "source_sha256": "3c53ca43f4455a89c327a1671567e10bb825ce6d0b8dce5d4f943f859a0927be",
+        "shared_registry_adoption": "PENDING_B20",
+        "no_mathematical_repair": true,
+        "implementation": "16 selected edits independently certified complete reference costs; all-q proof reconstructed separately",
+        "package_completion": "Source CLAIMS/PROGRESS/PACKET_DELTA and full validation output absent at read cutoff"
+      }
+    ],
+    "status": "PROVED_AT_SCOPE_INDEPENDENT_A070_RECONSTRUCTION_REGISTRY_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A068-IDENTIFIED-DATA-INHERITED-REFERENCE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For regular AND2 with constant quadratic orientations (+1,-1), identify x2=x1. The parent rank reference (1/4,2/5,1/10,1/4) pushes forward to (1/2,1/2), while the output is constant -1. Complete inherited-reference cost is one bit and output entropy and influence are zero. Thus this inherited cost is not universally bounded by K times output influence for any finite K. This does not refute FEI or an adaptive output reference.",
+    "hypotheses": [
+      "Uniform parent bits; entropy and costs in bits",
+      "The specified parent reference is pushed forward, not replaced by an optimized output reference"
+    ],
+    "statement_sha256": "d84ff00539b99fc4df83ecc104f4510f1180e7f8c819827f34b4cf953451682d",
+    "contributors": [
+      "account05/A068"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261013T234128Z-account05-A068-antichain-beyond-one-order\\REPORT.md",
+      "locator": "Section 6",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261013T234128Z-account05-A068-antichain-beyond-one-order\\out\\collision.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A068-QUADRATIC-CONTEXT-RANK-REFERENCE",
+        "version": 1,
+        "scope": "Reference definition only; witness checked exactly"
+      }
+    ],
+    "review_records": [],
+    "status": "EXACT_BOOLEAN_OBSTRUCTION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered proposed universal inherited-reference cost <= K I after data identification"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A034",
+      "A070",
+      "A094",
+      "B14",
+      "B20"
+    ]
+  }
+]

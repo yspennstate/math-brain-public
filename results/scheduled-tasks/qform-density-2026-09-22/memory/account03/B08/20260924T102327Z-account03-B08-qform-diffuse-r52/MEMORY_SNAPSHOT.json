@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B08",
+  "run_id": "20260924T102327Z-account03-B08-qform-diffuse-r52",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "startup_control_commit": "407f0ba059093734615f779f22761137f4c78952",
+  "prepublication_control_commit": "25ed4739f5cfb1ec43a8718ceff52ce14bd0656f",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "actual_hour_login_commit": "53d64d49ef2a3d96ffef4e8493009090b5686f0d",
+  "start_record_commit": "e283a21975cbaf5078cd4cfb141feb3056c41f7c",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-PROJECTION-ALONE-NOT-INDEFINITE-PUSHFORWARD",
+    "NO_SMALL_RANDOM_QUADRATIC_DELETION",
+    "QFORM-NONZERO-PUNCTURE-FIBERWISE-TMINUS1-FALSE-v1",
+    "QFORM-HUBSTAR-FIBERL2-MIXEDNORM-UNIVERSAL-FALSE-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "fc449241245b5ca5762686d95cedee5acfd2f2e9",
+    "root": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B08/20260924T102327Z-account03-B08-qform-diffuse-r52/",
+    "report": "REPORT.md",
+    "check": "CHECKS.txt",
+    "check_status": "QFORM_B08_R52_CHECK_PASS"
+  },
+  "handoff_commit": "67ef649630785b3ca9b65b07cb60be5015ffcbb4",
+  "proved_this_run": [
+    {
+      "id": "QFORM-SPLIT-MISMATCH-DIFFUSE-THIRDDIRECTION-v1",
+      "conclusion": "With the r51 balanced physical cut, w=(V_J H delta,-V_K G delta) is orthogonal to range(V), ||w||^2=delta^TGHdelta, and max_i w_i^2/||w||^2 <= (1/16)(1-g)/g = 0.130864771. If beta>4e then U=[V,u/beta] has maximum physical row leverage <0.436741<1/2."
+    },
+    {
+      "id": "QFORM-EXACTTAIL-SPLITMISMATCH-SCHUR-FRESNEL-v1",
+      "conclusion": "For exact rank-two child C=V Lambda V^T, beta>4e and nonzero physical hub pivot a, completing the physical square creates an exact rank-three Schur core with det M=-(beta^2/a)det Lambda; the spread rank-three Fresnel receiver and half-Riesz square peel give ||p_Q||_infinity <=4sqrt(6)[|a| beta sqrt(|det Lambda|)]^(-1/3)."
+    },
+    {
+      "id": "QFORM-B08-EXACTTAIL-COLLAR-SHRINK-v1",
+      "conclusion": "At eta=2^-20 in the inherited B08 exact-tail state, either a literal crossing pays continuously by <2368.360/L, or beta<=5.39479661e-6 L, or when |a|>=L/64 the new Schur-Fresnel branch pays essentially by <2242.477/L."
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account04/B08",
+    "id": "QFORM-DISTRIBUTED-STAR-DERIVATIVE-SPLIT-v1",
+    "source": "yspennstate/math-open-problems@f324267086411b9725aa0733e108ab6efc2e760a",
+    "actual_inequality": "On the same exact-tail survivor, sup_t P(|Q-t|<eps)<=4*2^(1/4)sqrt(eps/||b||)<190.311 sqrt(eps/L), retaining the entire rank-two child. This remains a square-root small-ball estimate and is not promoted to a density bound."
+  },
+  "sharpened_survivor": "For the exact rank-two child endpoint, the broad split-slope mismatch has been paid except for an ultra-transverse puncture beta<=5.395e-6 L or a near-null physical hub |a|<L/64. The exact aligned beta=0 point was already paid in an earlier run.",
+  "unresolved": "QFORM-EXACTTAIL-ULTRATRANSVERSE-OR-NEARNULL-HUB-COMPILER-v1",
+  "next_step": "Close the exact-rank-two child when 0<beta<=5.395e-6 L or |a|<L/64 without continuity-in-coefficients or a negative power of beta; then return to 0<s_3(C)<L/4096 while retaining the child tail jointly.",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN globally; C_0 on the literal third-compound branch; essential boundedness only on the new Schur-Fresnel/square-peel branch."
+}

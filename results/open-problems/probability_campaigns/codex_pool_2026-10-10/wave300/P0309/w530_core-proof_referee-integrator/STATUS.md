@@ -1,0 +1,6 @@
+STATE: NEEDS_REVIEW
+NEXT: Construct a two-cell dipole-carrier repair and bound its actual Riesz energy change and pushforward density uniformly in carrier distance.
+
+2026-10-10 08:12 Asia/Jerusalem: Started source and assignment checks. Audit window in the opening call ended at 03:30; current clock is 08:12.
+2026-10-10 08:52 Asia/Jerusalem: Recovered exact campaign wording from op-p0309 but mathematical scope remains underspecified. Independently audited w528 L1-L6 and w529 C1-C8; detailed verdicts in REVIEW.md. L3 needs centered-moment wording before brain use. Hard missing input is a full-dimensional, entropy-controlled phase-fitted contour repair for the unrestricted Riesz Gibbs law.
+2026-10-10 09:40 Asia/Jerusalem: Completed final referee packet: w528 L1-L7 and w529 C1-C8 KEEP only in their exact scopes, w528 L3 ATTEMPT notation FIX (bundle statement already centered), full P0309 NOT PROVED. SOURCE_STATUS.json and five CLAIMS.jsonl rows saved. Four-entry/four-relation draft submitted at ~/math-brain-inbox/w530/bundle_001.json; read-only parent link and packet validation passed. Ingestion/retrieval and served-model/account gates remain unverified. Team broadcast attempted twice but team registration rejected it; PROGRESS_OUTBOX.jsonl records the one-line event.

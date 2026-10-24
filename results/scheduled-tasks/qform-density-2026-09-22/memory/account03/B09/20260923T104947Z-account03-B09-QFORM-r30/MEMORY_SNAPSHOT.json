@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260923T104947Z-account03-B09-QFORM-r30",
+  "control_commit_start": "96b95ee808d5b5e5600fb45e2ea4de41ac7c111e",
+  "control_commit_prepublication": "6eebcb58e71236951b05abaeba26066703ab6d49",
+  "control_revision": "2026-09-22.15",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+      "source_repository": "yspennstate/math-open-problems",
+      "commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md",
+      "scope": "joint density cap for an orthonormal linear projection of independent cap-one original coordinates; no projected-coordinate independence"
+    },
+    {
+      "id": "QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1",
+      "partner": "account04/B09",
+      "source_repository": "yspennstate/math-open-problems",
+      "commit": "c0d3f34e557a374f41b2639994c43af4f950b682",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B09/20260923T101659Z-account04-B09-dense-self-cross-fourier-r1/REPORT.md",
+      "blob": "a2292a47ee56cf3d66556e324bd8b234bd2157f1",
+      "scope": "invertible equal-size physical cross block of rank r>2 with arbitrary same-side curvature"
+    }
+  ],
+  "results": [
+    {
+      "id": "QFORM-GROUPED-CROSS-RANK-r-SMOOTHING-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For a disjoint original-coordinate cut with physical cross block B of rank r>2, thin SVD B=P Sigma R^T, ||p_Q||_infinity <= r/(r-2) [B(P)B(R)]^(1/r) Delta_r(B)^(-1/r) <= e r/(r-2) Delta_r(B)^(-1/r), with the same coefficient times interval length and with continuous density; arbitrary same-side quadratic blocks and outside couplings remain allowed."
+    },
+    {
+      "id": "QFORM-RANK2-NOAUGMENT-DIAG-PLUS-SPAN-v1",
+      "status": "PROVED_STRUCTURAL_LEMMA",
+      "statement": "For rank-two grouped cross A[H,I]=P C^T, if deleting each leaf row preserves rank two and every singleton-augmented cut still has rank at most two, then A[I,I]=C M C^T+Lambda for symmetric 2x2 M and original-coordinate diagonal Lambda."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "partner": "account04/B09",
+    "inequality": "||p_Q||_infinity <= 3 |det C|^(-1/3) for an invertible literal physical 3x3 cross block C; combined with the grouped theorem via a minimum of the two certificates."
+  },
+  "stress_test": {
+    "family": "Walsh N x 3 frame P_N, B_N=P_NP_N^T, A_N=[[0,B_N],[B_N,0]]",
+    "spectrum": [-1, -1, -1, 1, 1, 1],
+    "grouped_bound_N16": 7.377116686411,
+    "best_physical_minor_partner_bound_N16": 19.048812623618,
+    "uniform_bound": "<3e<8.155"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "readback_commit": "0257b7a08990f303da16797bcbad0d3e6a1e6538",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T104947Z-account03-B09-QFORM-r30/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T104947Z-account03-B09-QFORM-r30/CHECK.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T104947Z-account03-B09-QFORM-r30/CHECK_OUTPUT.txt"
+  },
+  "unresolved_implication": "QFORM-RANK2-NOAUGMENT-QUANTITATIVE-STABILITY-v1",
+  "next_step": "Quantify the exact diagonal-plus-slope-span lemma without treating a small residual as a random error; route a quantitative coloop to existing physical-pivot exits and a stable diagonal transverse component to grouped-Pluecker/one-Fresnel payments.",
+  "notes": [
+    "The canonical 2026-09-23T10Z account03/B09 login already belonged to run 20260923T100501Z-account03-B09-QFORM-r28 and was preserved rather than overwritten.",
+    "Repository transport is not verified native brain ingestion."
+  ]
+}

@@ -1,0 +1,25 @@
+Exact/numeric arithmetic checks for REPORT.md
+
+Write x=epsilon^2 and gamma=1/2 for the account02/B04 balanced family.
+
+D_(1/2) = 289(1+4x)/64.
+m2 = 128(x+2)/(289(4x+1)).
+ell_strong/m2 = 17(4x+1)/(32(x+2)).
+ell_weak/m2 = 289x/(64(x+2)).
+
+The q=1 transfer gate requires both ratios <=1/2.
+Strong-row inequality gives x<=15/52 = 0.28846153846153844...
+Weak-row inequality gives x<=64/257 = 0.24902723735408560...
+Hence the combined sufficient range is
+  epsilon^2 <= 64/257,
+  epsilon <= 0.49902628924144427...
+
+At q=1, E2=16+8epsilon^2 and
+  8 e^(1/4) E2^(-1/8)
+  <= 4 sqrt(2)e^(1/4)
+  = 7.263544634846275...
+
+At epsilon=1e-6 this equals
+  7.263544634845820...
+
+These checks verify arithmetic only; the analytic argument is in REPORT.md.

@@ -1,0 +1,71 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "RS-2026-DC35",
+  "report_kind": "research",
+  "input_snapshot_sha": "2daa2ae92548fc8f846be32e6641b59382a0df22",
+  "report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-DC35/runs/2026-09-17/2026-09-17T05-49-55Z__report.md",
+  "report_creation_commit": "28908b5751c102c9777a865efccd5426bb364c96",
+  "report_blob_sha": "45cefe6ff8bfc7210631d32567c899ad4a60ae3e",
+  "report_readback_verified": true,
+  "previous_report_path": null,
+  "previous_report_commit": null,
+  "history_status": "HISTORY_GAP: no prior RS-2026-DC35 current-target report recovered by path-scoped commit history; neighboring C29 RS-2026-DC34 history was recovered and used",
+  "exclusive_claim_path": "operations/claims/RS-2026-DC35.md",
+  "exclusive_claim_creation_commit": "dc99adfe5fdd338d902566fec84223de0355dcf4",
+  "exclusive_claim_blob_sha": "5ee4127eaee3388075ce927eb61e50e9dfad3e53",
+  "predecessor_terminal_report": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/I0067/runs/2026-09-17/2026-09-17T04-44-50Z__report.md",
+  "predecessor_terminal_commit": "dc20aa77a606adf4d638b726049fd5565de98614",
+  "source": {
+    "author": "Chiara Meroni",
+    "year": 2026,
+    "title": "Directional Convexity (problems 34 and 35)",
+    "locator": "Randomstrasse 101, Open Problem 35 (Conditions for semialgebraic D-convex hulls)",
+    "url": "https://randomstrasse101.math.ethz.ch/posts/DirectionalConvexity/",
+    "posted": "2026-02-23",
+    "updated": "2026-06-05",
+    "current_status_check_date": "2026-09-17",
+    "current_status": "OPEN in the proposer page; bounded current search found no general necessary-and-sufficient functional-hull characterization",
+    "novelty_status": "UNVERIFIED; a negative search is not a novelty certificate"
+  },
+  "frozen_metric": {
+    "name": "E_characterization",
+    "domain": "{0,1}",
+    "before": 0,
+    "after": 0,
+    "movement": "NO MOVEMENT",
+    "unchanged_count": 1
+  },
+  "methods": [2, 18, 30],
+  "method_outcomes": {
+    "B2": "Refuted the invented necessary condition that raw D must be semialgebraic: a dense rational-direction cone has full projective closure and therefore ordinary polytope hulls. Also proved a semialgebraic boundary cannot contain open 2D patches in infinitely many distinct affine planes, and isolated generic noncoincidence as only one part of a future wildness proof.",
+    "B18": "Proved projective-closure invariance for spanning D and an exact finite-dimensional Jensen-weight dual characterization of finite-set hull membership. This reframes positive semialgebraicity as finite semialgebraic elimination for the Jensen-weight relation; novelty of the convex-duality formulation is not claimed.",
+    "B30": "Proved exact affine-coset/span reduction, the two-point dichotomy, and complete semialgebraicity for dim span(D)<=1. These are proper-subclass results and do not move the source-complete metric."
+  },
+  "new_exact_results": [
+    "Affine-coset decomposition over V=span(D)",
+    "Functional D-convexity and hulls depend only on the closed projective direction set Omega_D",
+    "GL/projective invariance",
+    "Two-point dichotomy: segment iff the connecting direction lies in Omega_D, otherwise just the two endpoints",
+    "All finite collinear hulls exactly classified; every cone with span dimension <=1 has semialgebraic finite hulls",
+    "Finite-dimensional Jensen-weight separation criterion for membership",
+    "Infinite pairwise-distinct open planar boundary patches obstruct semialgebraicity"
+  ],
+  "neighbor_coordination": {
+    "target": "RS-2026-DC34 / Conjecture 34",
+    "report": "proofnet24/C29-closure-brownian-shapes/runs/2026-09-16/2026-09-16T23-36-35Z__six-run-rotation-handoff.md",
+    "reused_history": "four-point, five-point, one-defect and centered-two-defect finite stabilization; infinite-grid candidate-plane coincidence obstruction",
+    "duplication_avoided": true
+  },
+  "later_and_citing_checks": [
+    "Meroni-Raita arXiv:2509.07541, current v2 dated 2026-08-04, finite triangular 2x2 rank-one hull semialgebraic",
+    "Basu-Amini Khorasgani-Maji-Nguyen arXiv:2608.07794 dated 2026-08-07, symbolic elimination and semialgebraic lamination hulls for coordinate-subspace unions; not a functional-hull classification",
+    "Exact-title/problem-phrase and author/citation searches through 2026-09-17 did not surface a general source-matching characterization"
+  ],
+  "mathematical_status": "PARTIAL",
+  "source_status": "OPEN under bounded current check",
+  "audit_refs": [],
+  "artifact_refs": [],
+  "next_methods": [11, 5, 24],
+  "next_obligation": "For the source three-plane geometry, derive either a finite semialgebraic description of the Jensen-weight relation for arbitrary finite K, or an exact structurally nonperiodic plane-coefficient return map with actual boundary realization.",
+  "runtime_model_claim": "GPT-5.6 Sol as exposed by the chat runtime; reasoning level UNVERIFIED. GPT-6/maximum remains prompt-only because the native scheduler exposes no authenticated model or reasoning selector."
+}

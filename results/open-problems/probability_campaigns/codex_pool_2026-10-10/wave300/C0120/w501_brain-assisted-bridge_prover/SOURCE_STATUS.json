@@ -1,0 +1,120 @@
+{
+  "schema": "w501-source-status-v1",
+  "target": "C0120",
+  "as_of": "2026-10-10T07:13:18.169255+00:00",
+  "current_openness": "UNKNOWN",
+  "parent_problem_solved": false,
+  "novelty_claim": false,
+  "source_scope_mismatch": true,
+  "exact_target": "For independent standard Gaussian weights g_v on Z_+^2, let M_n=max_p sum_{v in p}g_v over all n-vertex up/right paths starting at (0,0), with endpoint free. Improve Chatterjee's Var(M_n)<=C n/log n to Var(M_n)<=C_epsilon n^(1-epsilon) for some epsilon>0 independent of n>=2. This is the concrete power-improvement formulation of Section 12(3) in the Section 8 model. The general-dimensional fixed-temperature log Z_n problem is a separate related formulation, supported for nearly gamma disorder by Alexander-Zygouras arXiv:1204.1819; it is not the observable in the cited Chatterjee theorem. Current openness is UNKNOWN.",
+  "primary_source": {
+    "source_id": "chatterjee_chaos_2008",
+    "url": "https://arxiv.org/html/0810.4221",
+    "version": "v2, 2008-12-16",
+    "locator": "Section 8 and Section 12(3), printed p.59",
+    "access": "verified primary HTML and PDF through web tool",
+    "quote": "Improve the fluctuation exponent in directed polymers.",
+    "intake_declared_pdf_sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+    "declared_hash_recomputed_here": false
+  },
+  "related_source": {
+    "url": "https://arxiv.org/html/1204.1819v2",
+    "locator": "Theorem 1.1 and Definition 2.1",
+    "model": "free-endpoint nearest-neighbor simple walk; fixed beta>0 and d>=1; i.i.d. centered nearly gamma disorder; exp(4 beta |omega|) moment",
+    "role": "related positive-temperature formulation; not identical to original target"
+  },
+  "prior_records": [
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+      "line": 120
+    },
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+      "line": 98
+    }
+  ],
+  "bounded_prior_checks": {
+    "named_intakes": "C0120 found in original intake; other named intake matches were indices only",
+    "attempts_H_and_I": "targeted rg returned no C0120 record in the two named attempt directories",
+    "lean_campaign": "matching ranking row only; no formal proof receipt recovered",
+    "Team_O_board": "no C0120 row returned by the targeted board search",
+    "owner_research_directory": "no polymer/C0120/variance/retired/solved filename matched; not an exhaustive semantic audit",
+    "recent_primary_literature": "bounded arXiv searches found no verified resolution of this exact model; this is not an openness certificate"
+  },
+  "served_model_evidence": {
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "max",
+    "requested_tier": "Fast",
+    "system_declared_family": "GPT-6",
+    "response_side_served_model": null,
+    "verified": false,
+    "note": "Requested settings and system description are not a response-side attestation. No prohibited profile or credential file was read."
+  },
+  "review": {
+    "independent_adversary": "w502",
+    "referee": "w503",
+    "statement_first_message_id": "msg-35a67c6b7b",
+    "author_claim_is_not_audit": true,
+    "formal_check_receipt": null
+  },
+  "measurements": {
+    "native_memory_recall": {
+      "query": "C0120 directed polymer Gaussian overlap variance proof mistakes",
+      "timeout_seconds": 60,
+      "elapsed_seconds": 63.20594640006311,
+      "exit_code": null,
+      "timed_out": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    "native_recall_actual_query": "C0120 directed polymer Gaussian overlap variance proof mistakes 3",
+    "query_argument_count_fixed_for_future": true,
+    "sqlite_title_scan": "interrupted at configured 15 s progress deadline; no complete timing receipt",
+    "export_fallback": {
+      "source": "~/math-brain-build/export/population/nodes.jsonl",
+      "command": [
+        "rg",
+        "-i",
+        "-m",
+        "20",
+        "hypercontract|superconcentr|Gaussian covariance|Ornstein.Uhlenbeck|C0120",
+        "~/math-brain-build/export/population/nodes.jsonl"
+      ],
+      "deadline_seconds": 20,
+      "limit": 20,
+      "method": "targeted_rg_export_fallback",
+      "exit_code": 0,
+      "timed_out": false,
+      "returned": 20,
+      "stderr": "",
+      "elapsed_seconds": 5.73474189999979
+    },
+    "indexed_card_lookup": {
+      "elapsed_seconds": 0.004189800005406141,
+      "returned": 4,
+      "mode": "ro"
+    },
+    "comparison_limit": "Different channels and queries; no global recall speedup or quality improvement is inferred.",
+    "math_checks": {
+      "schema": "w501-math-check-v1",
+      "elapsed_seconds": 0.00839319999795407,
+      "n2_exact_variance": 1.6816901138162093,
+      "n2_integrated_overlap": 1.6816901138162585,
+      "n2_absolute_error": 4.929390229335695e-14,
+      "envelope_cases": 24,
+      "n2_hypercontractive_certificate": 1.7791020160331268,
+      "n2_certificate_minus_actual_variance": 0.09741190221691753,
+      "passed": true,
+      "is_proof_of_parent_problem": false,
+      "formal_check": false
+    }
+  },
+  "reported_peer_audit": {
+    "agent": "w502",
+    "reported_verdict": "SCOPED KEEP L1-L4",
+    "artifact": "~/brain_workers/w502/PAIR_AUDIT.md",
+    "source": "direct mesh message read with team_comm.py; not a re-audit",
+    "served_model_evidence_verified": false,
+    "not_a_completed_referee_gate": true
+  }
+}

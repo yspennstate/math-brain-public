@@ -1,0 +1,1099 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\wind}{\operatorname{wind}}
+
+\title{A parity obstruction to the stability of\\random banded Toeplitz matrices}
+\author{Yitzchak Shmalo\\
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $T_n(P_{r,s})$ denote the $n\times n$ banded Toeplitz matrices with random
+symbol $P_{r,s}(z)=\sum_{j=-r}^{s}\xi_jz^{j}$, where the $\xi_j$ are i.i.d.\ and
+$m:=r+s$.  By the classical Gohberg--Feldman/B\"ottcher--Silbermann criterion, the
+sequence $(T_n)$ is \emph{stable} --- invertible with uniformly bounded inverses
+--- exactly when the symbol has no zeros on the unit circle and winding number
+zero, i.e.\ when the polynomial $G_m(z)=z^{r}P_{r,s}(z)$ has exactly $r$ zeros in
+the open unit disk.  A recent preprint of Manrique
+[arXiv:2602.12581] asserts that for balanced bands ($r=s$) stability holds with
+probability close to one, while unbalanced bands are exponentially unstable.  We
+prove an unconditional \emph{parity obstruction}: for any i.i.d.\ coefficients
+with zero mean, unit variance and finite third moment --- including the
+Rademacher case --- the number of zeros of $G_m$ in the disk is congruent mod $2$
+to the indicator $\{G_m(1)G_m(-1)<0\}$, which is asymptotically a fair coin.
+At odd degrees this endpoint sign has an exact finite-degree formula: it is
+fair up to the atom where the even- and odd-coefficient sums have equal absolute
+value, and is exactly fair for non-atomic laws.  For Littlewood coefficients the
+finite-degree endpoint sign is given by central-binomial expressions in both
+parities; for Gaussian coefficients one can compute the finite-degree endpoint
+bias at every degree.  These endpoint quantities also give finite-degree,
+parity-specific caps on every point probability \(\PP(\nu=k)\) and on every
+band stability event, while reversal gives an exact finite-degree equality
+between complementary band splits.
+Consequently
+\[
+\PP\bigl(\,(T_n(P_{r,s}))_n\ \text{is stable}\,\bigr)\;\le\;\tfrac12+o(1)
+\qquad(m\to\infty),
+\]
+\emph{for every choice of} $(r,s)$.  In particular the balanced-band statement of
+[arXiv:2602.12581, Theorem~2.1] cannot hold once its constant $c_3$ is below
+$1/2$, and we locate the gap in its proof: the zero-count estimate proved there
+confines the number of disk zeros to a window of width $\asymp m^{9/10}$ around
+$m/2$, which contains $\asymp m^{9/10}$ integers and cannot pin the count to the
+single value $r$.  On the positive side we show, assembling the estimates that
+are correct in [arXiv:2602.12581] with the operator-theoretic instability bounds,
+that strongly unbalanced bands ($|r-s|>2m^{9/10}$) are exponentially unstable with
+probability $1-O((\log m)^{-1/2})$.  The true asymptotics of the stability
+probability is governed by a local limit theorem for the number of zeros of a Kac
+polynomial in the unit disk, which we state as an open problem.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+A banded Toeplitz matrix is constant along its diagonals and supported on
+finitely many of them: given nonnegative integers $r,s$ and complex numbers
+$x_{-r},\dots,x_s$, the $n\times n$ matrix $T_n$ has entries
+$(T_n)_{jk}=x_{k-j}$ for $-r\le k-j\le s$ and $0$ otherwise.  The associated
+\emph{symbol} is the Laurent polynomial $P(z)=\sum_{j=-r}^{s}x_jz^j$, and the
+asymptotic spectral theory of $(T_n(P))_{n\ge1}$ is governed by $P$; the
+definitive reference is B\"ottcher--Grudsky \cite{BG}.  A sequence $(A_n)$ of
+$n\times n$ matrices is called \emph{stable} if there are $n_0$ and
+$M<\infty$ with $A_n$ invertible and $\|A_n^{-1}\|\le M$ for all $n\ge n_0$;
+stability of $(T_n(P))$ is equivalent to the invertibility of the associated
+Toeplitz operator and holds if and only if
+\begin{equation}\label{eq:stability}
+P(t)\ne0\ \ \text{for all }t\in\T,
+\qquad\text{and}\qquad
+\wind(P)=0,
+\end{equation}
+where $\T$ is the unit circle and $\wind(P)$ the winding number of
+$P|_\T$ about the origin \cite[Chapter~3]{BG}.  Writing
+\[
+G_m(z):=z^{r}P(z)=\sum_{j=0}^{m}x_{j-r}z^{j},
+\qquad m:=r+s,
+\]
+one has $\wind(P)=\nu-r$ whenever $P$ does not vanish on $\T$, where
+\[
+\nu\;:=\;\#\{z\in\D:\ G_m(z)=0\}
+\]
+(zeros counted with multiplicity, $\D$ the open unit disk).  Thus
+\eqref{eq:stability} reads: \emph{no zeros on the circle, and exactly $r$ of the
+$m$ zeros inside the disk}.  Moreover, when $\wind(P)=\omega\ne0$ and $P\ne0$ on
+$\T$, the inverses blow up exponentially:
+$\|T_n(P)^{-1}\|\ge C_Pe^{\alpha n}$ for every
+$\alpha<\min\{\log(1/\delta),\log\mu\}$, where $\delta<1<\mu$ are the moduli of
+the zeros of $G_m$ nearest to $\T$ from inside and outside
+\cite[Theorem~4.1]{BG}.
+
+It is natural to randomize: let the coefficients $\xi_{-r},\dots,\xi_s$ be
+i.i.d.\ random variables, so that $G_m$ is a Kac polynomial of degree $m$.  The
+zeros of Kac polynomials concentrate near $\T$ as $m\to\infty$
+\cite{IZ,HN}, and for centered coefficients roughly half of them lie inside the
+disk.  The stability question then becomes a delicate question about the
+\emph{exact} number of zeros in $\D$.
+
+This question was raised, and an answer proposed, in the recent preprint of
+Manrique \cite{Manrique}.  Its Theorem~2.1 asserts a dichotomy: for balanced
+bands ($r=s$) the sequence $(T_n)$ is stable --- with smallest singular value
+bounded below uniformly in $n$ --- with probability $1-c_3-O((\log m)^{-1/2})$,
+where $c_3\in(0,1)$ ``can be small''; while for $r\ne s$ the matrices are
+exponentially ill-conditioned.  The mechanism proposed there is the zero-count
+estimate \cite[Theorem~3.1]{Manrique}: for a broad class $\mathbf H$ of
+coefficient laws,
+\begin{equation}\label{eq:window}
+\PP\Bigl(\Bigl|\frac{\nu}{m}-\frac12\Bigr|\ge m^{-1/10}\Bigr)
+=O\Bigl(\frac{(\log m)^2}{m^{1/10}}\Bigr),
+\end{equation}
+which confines $\nu$ to the window $[\,m/2-m^{9/10},\,m/2+m^{9/10}\,]$ with high
+probability.
+
+The present paper makes three points.
+
+\subsection*{1.  A parity obstruction}
+
+Our main result is an unconditional upper bound of one half on the stability
+probability, valid for \emph{every} band and a minimal set of moment
+assumptions.
+
+\begin{theorem}[Parity obstruction]\label{thm:parity}
+Let $\xi_0,\xi_1,\dots,\xi_m$ be i.i.d.\ real random variables with
+$\E\xi_0=0$, $\E\xi_0^2=1$ and $\E|\xi_0|^3<\infty$, let
+$G_m(z)=\sum_{j=0}^m\xi_jz^j$ and let $\nu$ be the number of zeros of $G_m$ in
+$\D$, counted with multiplicity.  Then, as $m\to\infty$:
+\begin{enumerate}
+\item[(i)] {\rm(deterministic identity)}  On the event $G_m(1)G_m(-1)\ne0$,
+\[
+\nu\;\equiv\;\mathbf 1\{G_m(1)G_m(-1)<0\}\pmod 2 .
+\]
+\item[(ii)] {\rm(fair coin)}
+$\PP\bigl(G_m(1)G_m(-1)<0\bigr)\longrightarrow\tfrac12$ and
+$\PP\bigl(G_m(1)G_m(-1)=0\bigr)=O(m^{-1/2})$.
+\item[(iii)] Consequently, for every integer $k=k(m)$,
+\[
+\PP(\nu=k)\;\le\;\tfrac12+o(1),
+\]
+and for every choice of nonnegative integers $r=r(m)$, $s=s(m)$ with $r+s=m$,
+\[
+\PP\bigl(\,(T_n(P_{r,s}))_{n\ge1}\ \text{is stable}\,\bigr)\;\le\;\tfrac12+o(1).
+\]
+\end{enumerate}
+\end{theorem}
+
+The proof occupies one page: zeros of a real polynomial off the real axis come in
+conjugate pairs of equal modulus, so the parity of $\nu$ equals the parity of the
+number of zeros in the real interval $(-1,1)$, which --- with multiplicity ---
+is odd exactly when $G_m(1)$ and $G_m(-1)$ have opposite signs; and
+$\bigl(G_m(1),G_m(-1)\bigr)/\sqrt{m+1}$ converges to a pair of \emph{independent}
+standard Gaussians, because the two coefficient sums are nearly orthogonal.  No
+absolute continuity is required: the result covers the Rademacher (Littlewood)
+case.
+
+At odd degrees the endpoint sign has a finite-sample version which does not use
+the central limit theorem.
+
+\begin{corollary}[Exact endpoint sign at odd degrees]\label{cor:odd-endpoint}
+Let $\xi_0,\dots,\xi_m$ be i.i.d.\ real random variables and let
+$m=2q+1$.  Put
+\[
+E_q:=\sum_{\ell=0}^{q}\xi_{2\ell},
+\qquad
+O_q:=\sum_{\ell=0}^{q}\xi_{2\ell+1}.
+\]
+Then
+\[
+\PP\bigl(G_m(1)G_m(-1)<0\bigr)
+=\PP\bigl(|O_q|>|E_q|\bigr)
+=\frac12\Bigl(1-\PP\bigl(|E_q|=|O_q|\bigr)\Bigr)
+\le \frac12.
+\]
+If the law of $E_q$ is atomless, in particular if the law of $\xi_0$ is
+non-atomic, then
+\[
+\PP\bigl(G_m(1)G_m(-1)<0\bigr)=\frac12.
+\]
+\end{corollary}
+
+\begin{proof}
+The sums $E_q$ and $O_q$ are independent and identically distributed.  Since
+$G_m(1)=E_q+O_q$ and $G_m(-1)=E_q-O_q$,
+\[
+G_m(1)G_m(-1)=E_q^2-O_q^2,
+\]
+so the product is negative exactly on $\{|O_q|>|E_q|\}$.  The two events
+$\{|O_q|>|E_q|\}$ and $\{|E_q|>|O_q|\}$ have the same probability, and together
+with $\{|E_q|=|O_q|\}$ they partition the sample space.  This gives the formula.
+If $E_q$ is atomless, then conditioning on $O_q$ gives
+$\PP(E_q=O_q)=\PP(E_q=-O_q)=0$, so the equality event has probability zero.  The
+non-atomicity of $\xi_0$ implies the non-atomicity of $E_q$ by conditioning on
+the remaining summands.
+\end{proof}
+
+\begin{corollary}[Exact Littlewood endpoint sign at odd degrees]\label{cor:littlewood-odd}
+Assume that the coefficients are independent Rademacher signs and let
+\(m=2q+1\).  Put \(n=q+1=(m+1)/2\), and define
+\[
+  \eta_n:=
+  \begin{cases}
+  4^{-n}\binom{n}{n/2}^{2},& n\ {\rm even},\\[2mm]
+  0,& n\ {\rm odd}.
+  \end{cases}
+\]
+Then
+\[
+\PP\bigl(G_m(1)G_m(-1)<0\bigr)
+=\frac12-\frac{\binom{2n}{n}}{4^n}+\frac{\eta_n}{2}.
+\]
+In particular,
+\[
+\PP\bigl(G_m(1)G_m(-1)<0\bigr)
+=\frac12-\frac{1}{\sqrt{\pi n}}+O(n^{-1})
+=\frac12-\sqrt{\frac{2}{\pi(m+1)}}+O(m^{-1}).
+\]
+\end{corollary}
+
+\begin{proof}
+By Corollary~\ref{cor:odd-endpoint}, it remains to compute
+\(\PP(|E_q|=|O_q|)\).  Both \(E_q\) and \(O_q\) have the law of
+\[
+S_n:=\sum_{i=1}^{n}\varepsilon_i,
+\]
+where the \(\varepsilon_i\)'s are independent Rademacher signs.  If
+\[
+p_k:=\PP\{S_n=2k-n\}=2^{-n}\binom nk,\qquad 0\le k\le n,
+\]
+then, for independent copies \(S_n,S_n'\),
+\[
+\PP(|S_n|=|S_n'|)
+=2\sum_{k=0}^{n}p_k^2-\eta_n .
+\]
+Indeed, \(|2k-n|=|2\ell-n|\) means either \(\ell=k\) or \(\ell=n-k\), with the
+single overlap \(k=\ell=n/2\) only when \(n\) is even.  Vandermonde's identity
+gives
+\[
+\sum_{k=0}^{n}p_k^2
+=4^{-n}\sum_{k=0}^{n}\binom nk^2
+=4^{-n}\binom{2n}{n}.
+\]
+Substituting this into
+\(\PP(G_m(1)G_m(-1)<0)=\tfrac12(1-\PP(|E_q|=|O_q|))\) gives the exact formula.
+The asymptotic form follows from Stirling's formula.
+\end{proof}
+
+\begin{corollary}[Exact Littlewood endpoint sign at even degrees]\label{cor:littlewood-even}
+Assume that the coefficients are independent Rademacher signs and let
+\(m=2q\).  Define
+\[
+  \theta_q:=
+  \begin{cases}
+  4^{-q}\binom{q}{q/2}^{2},& q\ {\rm even},\\[2mm]
+  0,& q\ {\rm odd}.
+  \end{cases}
+\]
+Then
+\[
+\PP\bigl(G_m(1)G_m(-1)<0\bigr)=\frac12-\frac{\theta_q}{2}.
+\]
+Thus the endpoint sign is exactly fair when \(m\equiv2\pmod4\), while for
+\(m\equiv0\pmod4\),
+\[
+\PP\bigl(G_m(1)G_m(-1)<0\bigr)
+=\frac12-\frac{2}{\pi m}+O(m^{-2}).
+\]
+\end{corollary}
+
+\begin{proof}
+Write
+\[
+O_q:=\sum_{\ell=0}^{q-1}\varepsilon_{2\ell+1},\qquad
+C_q:=\sum_{\ell=0}^{q-1}\varepsilon_{2\ell},\qquad
+E_q:=C_q+\varepsilon_{2q}.
+\]
+Then \(O_q\) and \(C_q\) are independent copies of a \(q\)-sign sum, and
+\(\varepsilon_{2q}\) is independent of both.  Since
+\[
+G_m(1)G_m(-1)=E_q^2-O_q^2,
+\]
+the endpoint sign is negative exactly when \(|O_q|>|E_q|\).
+
+Condition on \(O_q\) and \(C_q\).  The two numbers \(|O_q|\) and \(|C_q|\) have
+the same parity.  If \(|O_q|>|C_q|\), then
+\(|O_q|>|C_q+\varepsilon_{2q}|\) for both choices of the last sign; if
+\(|O_q|<|C_q|\), it holds for neither choice.  If \(|O_q|=|C_q|>0\), it holds
+for exactly one choice of the last sign.  If \(O_q=C_q=0\), it holds for neither
+choice.  Therefore
+\[
+\PP_{\varepsilon_{2q}}\{|O_q|>|C_q+\varepsilon_{2q}|\}
+=\mathbf1_{\{|O_q|>|C_q|\}}
+  +\frac12\mathbf1_{\{|O_q|=|C_q|>0\}} .
+\]
+Averaging and using that \(O_q,C_q\) are independent with the same law gives
+\[
+\PP\{|O_q|>|E_q|\}
+=\frac{1-\PP\{|O_q|=|C_q|\}}2
+  +\frac{\PP\{|O_q|=|C_q|\}-\PP\{O_q=C_q=0\}}2
+=\frac12-\frac12\PP\{O_q=0\}^2.
+\]
+The central atom of a \(q\)-sign sum is zero when \(q\) is odd and
+\(2^{-q}\binom{q}{q/2}\) when \(q\) is even.  This gives the exact formula.
+The asymptotic for \(m=2q\equiv0\pmod4\) follows from Stirling's formula:
+\[
+\frac12\left(2^{-q}\binom{q}{q/2}\right)^2
+=\frac1{\pi q}+O(q^{-2})
+=\frac{2}{\pi m}+O(m^{-2}).
+\]
+\end{proof}
+
+\begin{corollary}[Exact Gaussian endpoint bias]\label{cor:gaussian-endpoint}
+Assume that the coefficients are independent standard real Gaussians.  Then
+\[
+\PP\bigl(G_m(1)G_m(-1)<0\bigr)
+=\frac12-\frac1\pi
+  \arcsin\!\left(\frac{1}{m+1}\sum_{j=0}^{m}(-1)^j\right).
+\]
+Equivalently,
+\[
+\PP\bigl(G_m(1)G_m(-1)<0\bigr)=\frac12
+\qquad(m\ \text{odd}),
+\]
+whereas
+\[
+\PP\bigl(G_m(1)G_m(-1)<0\bigr)
+=\frac12-\frac1\pi\arcsin\!\left(\frac1{m+1}\right)
+\qquad(m\ \text{even}).
+\]
+In the balanced Toeplitz case \(m=2r\), the endpoint obstruction is therefore
+slightly biased below a fair coin by
+\(\pi^{-1}\arcsin((2r+1)^{-1})=O(r^{-1})\).
+\end{corollary}
+
+\begin{proof}
+The normalized vector
+\[
+X:=\frac{G_m(1)}{\sqrt{m+1}},
+\qquad
+Y:=\frac{G_m(-1)}{\sqrt{m+1}}
+\]
+is centered bivariate normal with unit variances and correlation
+\[
+\rho=\E[XY]=\frac{1}{m+1}\sum_{j=0}^{m}(-1)^j .
+\]
+For a centered bivariate normal pair with correlation \(\rho\), write
+\[
+X=U,\qquad Y=\rho U+\sqrt{1-\rho^2}\,V,
+\]
+where \(U,V\) are independent standard Gaussians.  In polar coordinates
+\((U,V)=R(\cos\theta,\sin\theta)\), the angle \(\theta\) is uniform on
+\([0,2\pi)\).  The two lines \(X=0\) and \(Y=0\) cut the circle into sectors;
+the total angular measure of the sectors on which \(XY<0\) is
+\(\pi-2\arcsin\rho\).  Hence
+\[
+\PP(XY<0)=\frac{\pi-2\arcsin\rho}{2\pi}
+=\frac12-\frac1\pi\arcsin\rho .
+\]
+Finally \(\sum_{j=0}^m(-1)^j=0\) for odd \(m\) and \(=1\) for even \(m\).
+\end{proof}
+
+\begin{corollary}[Finite-degree parity envelope]\label{cor:finite-envelope}
+Let
+\[
+a_m:=\PP\bigl(G_m(1)G_m(-1)<0\bigr),
+\qquad
+z_m:=\PP\bigl(G_m(1)G_m(-1)=0\bigr).
+\]
+Then, for every integer \(k\),
+\[
+\PP(\nu=k)\le
+\begin{cases}
+a_m+z_m,& k\ {\rm odd},\\[1mm]
+1-a_m,& k\ {\rm even}.
+\end{cases}
+\]
+Moreover, for every band split \(r+s=m\),
+\[
+\PP\bigl((T_n(P_{r,s}))_{n\ge1}\ {\rm is\ stable}\bigr)
+\le
+\begin{cases}
+a_m,& r\ {\rm odd},\\[1mm]
+1-a_m-z_m,& r\ {\rm even}.
+\end{cases}
+\]
+Thus any exact finite-degree formula for the endpoint sign, such as the
+Littlewood and Gaussian formulas above, immediately gives a finite-degree
+parity cap rather than only the asymptotic \(\tfrac12+o(1)\) bound.
+\end{corollary}
+
+\begin{proof}
+Let \(Z=\{G_m(1)G_m(-1)=0\}\) and \(A=\{G_m(1)G_m(-1)<0\}\).  On \(Z^c\), the
+deterministic parity identity gives
+\[
+\nu\equiv\mathbf1_A\pmod2 .
+\]
+Hence \(\{\nu=k\}\subseteq A\cup Z\) when \(k\) is odd, and
+\(\{\nu=k\}\subseteq A^c\) when \(k\) is even.  This proves the point-mass
+bounds.
+
+For stability, \eqref{eq:stability} and the winding-number formula imply that
+the stable event is contained in \(\{\nu=r\}\cap Z^c\).  If \(r\) is odd, the
+parity identity forces \(A\).  If \(r\) is even, it forces
+\(G_m(1)G_m(-1)>0\), whose probability is \(1-a_m-z_m\).
+\end{proof}
+
+\begin{corollary}[Gaussian and Littlewood finite-degree caps]\label{cor:special-envelope}
+The envelope in Corollary~\ref{cor:finite-envelope} has the following explicit
+forms.
+\begin{enumerate}
+\item[(i)] For standard real Gaussian coefficients, put
+\[
+\alpha_m:=\frac1\pi
+  \arcsin\!\left(\frac{1}{m+1}\sum_{j=0}^{m}(-1)^j\right).
+\]
+Then \(z_m=0\), \(a_m=\tfrac12-\alpha_m\), and
+\[
+\PP(\nu=k)\le
+\begin{cases}
+\tfrac12-\alpha_m,& k\ {\rm odd},\\[1mm]
+\tfrac12+\alpha_m,& k\ {\rm even},
+\end{cases}
+\qquad
+\PP({\rm stable})\le
+\begin{cases}
+\tfrac12-\alpha_m,& r\ {\rm odd},\\[1mm]
+\tfrac12+\alpha_m,& r\ {\rm even}.
+\end{cases}
+\]
+In particular, when \(m\) is odd, every point probability and every band
+stability probability is at most \(\tfrac12\) at finite degree.
+
+\item[(ii)] For Littlewood coefficients with \(m=2n-1\) odd, let
+\[
+\beta_n:=\frac{\binom{2n}{n}}{4^n}-\frac{\eta_n}{2},
+\]
+where \(\eta_n\) is as in Corollary~\ref{cor:littlewood-odd}.  Then
+\[
+\PP(\nu=k)\le \frac12+\beta_n\qquad\text{for all }k,
+\]
+while every band split \(r+s=m\) satisfies the strictly sub-half finite-degree
+stability cap
+\[
+\PP({\rm stable})\le\frac12-\beta_n
+=\frac12-\sqrt{\frac{2}{\pi(m+1)}}+O(m^{-1}).
+\]
+
+\item[(iii)] For Littlewood coefficients with \(m=2q\) even, let
+\[
+\gamma_q:=\frac{\theta_q}{2},
+\]
+where \(\theta_q\) is as in Corollary~\ref{cor:littlewood-even}.  Then \(z_m=0\),
+\(a_m=\tfrac12-\gamma_q\), and the Gaussian-form bounds in {\rm(i)} hold with
+\(\alpha_m\) replaced by \(\gamma_q\).  Thus all caps are exactly
+\(\tfrac12\) when \(q\) is odd, while for even \(q\) the deviation is
+\[
+\gamma_q=\frac{2}{\pi m}+O(m^{-2}).
+\]
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+For Gaussian coefficients, \(G_m(1)\) and \(G_m(-1)\) have a non-degenerate
+joint density, so \(z_m=0\), and Corollary~\ref{cor:gaussian-endpoint} gives
+the displayed value of \(a_m\).  Corollary~\ref{cor:finite-envelope} then gives
+the bounds.
+
+For Littlewood coefficients with \(m=2n-1\), Corollary~\ref{cor:littlewood-odd}
+gives \(a_m=\tfrac12-\beta_n\).  The endpoint-zero event is
+\(\{|E_q|=|O_q|\}\), and the proof of Corollary~\ref{cor:littlewood-odd} gives
+its probability \(z_m=2\beta_n\).  Hence the point-mass envelope is
+\(\tfrac12+\beta_n\) in both parities, while the stability envelope is
+\(\tfrac12-\beta_n\) in both parities.
+
+For Littlewood coefficients with \(m=2q\), the even and odd coefficient sums have
+opposite parity, so \(z_m=0\).  Corollary~\ref{cor:littlewood-even} gives
+\(a_m=\tfrac12-\gamma_q\), and another application of
+Corollary~\ref{cor:finite-envelope} proves the stated bounds.  The asymptotic
+forms of \(\beta_n\) and \(\gamma_q\) are those already proved in
+Corollaries~\ref{cor:littlewood-odd} and \ref{cor:littlewood-even}.
+\end{proof}
+
+Theorem~\ref{thm:parity} contradicts the balanced-band half of
+\cite[Theorem~2.1]{Manrique} whenever its constant $c_3$ is taken below
+$\tfrac12-o(1)$, as its Remark~2.2 envisages.  Section~\ref{sec:gap} locates the
+gap in the argument given there: the step deducing ``$r=m/2$'' from
+\eqref{eq:window} treats the window $m\cdot m^{-1/10}=m^{9/10}$ as if it were
+$m^{-1/10}$; the window in fact contains $\asymp m^{9/10}$ integers, and
+\eqref{eq:window} gives no information about the probability that $\nu$ hits any
+single one of them.  Indeed, by Theorem~\ref{thm:parity} that probability cannot
+exceed $\tfrac12+o(1)$, no matter how the window shrinks.
+
+\subsection*{2.  Strong asymmetry is correctly unstable}
+
+The unbalanced half of the dichotomy of \cite{Manrique} is correct as soon as the
+asymmetry exceeds the width of the window \eqref{eq:window}; the proof is an
+assembly of \eqref{eq:window} with the operator-theoretic exponential instability
+bound and with the circle-clearance estimate for the zeros of $G_m$ proved in
+\cite{KMS} and used in \cite{Manrique}.
+
+\begin{theorem}[Strongly unbalanced bands]\label{thm:unbalanced}
+Assume the coefficient law satisfies the hypotheses $\mathbf H$ of
+\cite{Manrique} {\rm(}so that \eqref{eq:window} and the circle-clearance estimate
+of {\rm\cite[Theorem~1.1]{KMS}} hold{\rm)}.  Let $r+s=m$ with
+\[
+\bigl|r-s\bigr|\;>\;2\,m^{9/10}.
+\]
+Then with probability $1-O\bigl((\log m)^{-1/2}\bigr)$ the symbol has no zeros on
+$\T$, its winding number is nonzero, and there is a random constant
+$C=C(G_m)>0$ such that
+\[
+\bigl\|T_n(P_{r,s})^{-1}\bigr\|\;\ge\;C\,e^{\alpha_m n}
+\qquad\text{for all }n\ge1,
+\qquad
+\alpha_m:=\log\Bigl(1+\frac{1}{2m^{2}(\log m)^{3}}\Bigr).
+\]
+In particular $(T_n(P_{r,s}))$ is not stable, and the condition number
+$\kappa(T_n)=\sigma_1(T_n)\,\|T_n^{-1}\|$ grows exponentially in $n$.
+\end{theorem}
+
+\subsection*{3.  The remaining problem is a local limit theorem}
+
+Theorems \ref{thm:parity} and \ref{thm:unbalanced} leave exactly one regime
+genuinely open: bands with $|r-s|=O(m^{9/10})$, and above all the balanced case,
+where the stability probability is
+\[
+p_m\;:=\;\PP(\nu=r)-\PP(\nu=r,\ \exists\,\text{zero on }\T)
+\]
+and everything hinges on the point probabilities of the zero count $\nu$.  The
+parity bound shows $p_m\le\tfrac12+o(1)$; we believe the truth is much smaller.
+
+\begin{conjecture}[Gaussian edge fluctuations]\label{conj:llt}
+For standard Gaussian coefficients, there is a constant \(c>0\) such that
+\[
+\sigma_m^2:=\operatorname{Var}(\nu)\sim c\,m
+\]
+and
+\[
+\frac{\nu-m/2}{\sqrt{c\,m}}\;\Longrightarrow\;N(0,1)
+\]
+with a local limit theorem
+\[
+\PP(\nu=k)\asymp m^{-1/2}
+\]
+uniformly for \(|k-m/2|=O(\sqrt m)\).  In particular
+\(\max_k\PP(\nu=k)\to0\).  We expect at least this qualitative
+anti-concentration conclusion, and hence instability of balanced random banded
+Toeplitz matrices with probability \(1-o(1)\), for every coefficient law
+satisfying the hypotheses of Theorem~\ref{thm:parity}.
+\end{conjecture}
+
+In the Gaussian case the upper half of the conjectured order is a theorem.
+
+\begin{proposition}[Variance upper bound]\label{prop:varupper}
+For standard Gaussian coefficients $\xi_j\sim N(0,1)$,
+\[
+\sigma_m^2=\operatorname{Var}(\nu)=O(m).
+\]
+\end{proposition}
+
+We prove this in Section~\ref{sec:open} from the Kac--Rice variance identity; the
+point is that the boundary shell carries no $|z-w|^{-2}$ singularity in the
+\emph{connected} two-point function, which is what makes the real-axis logarithm
+of Maslova absent from the disk count.  The matching lower bound
+$\sigma_m^2=\Omega(m)$ and the sharp constant remain open
+(Problem~\ref{prob:variance}); Monte Carlo puts the constant near $0.30$.
+
+The qualitative conclusion --- balanced bands unstable with probability tending
+to one, $\max_k\PP(\nu=k)\to0$ --- would follow from a genuine
+anti-concentration theorem, for instance a CLT/LLT or an Esseen-type bound; the
+predicted \(m^{-1/2}\) rate for \(p_m\) is the stronger local-limit form.  For
+Gaussian coefficients Kac--Rice gives an explicit second-moment
+formula,
+\[
+\operatorname{Var}(\nu)
+=\int_{\D}\rho_1+
+\int_{\D\times\D}(\rho_2-\rho_1\otimes\rho_1),
+\]
+which yields the $O(m)$ bound of Proposition~\ref{prop:varupper}; the remaining
+difficulty is the matching lower bound and the constant, where one must control
+the sign of the connected two-point term at the edge scale, where the unit circle
+cuts through the zero cloud.
+
+What is known about the fluctuations of $\nu$?  The expectation is $m/2$ by the
+reversal symmetry $\xi_j\mapsto\xi_{m-j}$ (Lemma~\ref{lem:reversal}); the bound
+\eqref{eq:window} gives $|\nu-m/2|\le m^{9/10}$ with high probability; and the
+parity of $\nu$ is asymptotically a fair coin by Theorem~\ref{thm:parity} ---
+which already rules out any concentration of $\nu$ on a single value, and is, to
+our knowledge, the only unconditional anti-concentration information available
+for $\nu$ at this generality.  Several pieces of evidence point to an edge
+fluctuation rather than a bulk fluctuation.  After the rescaling
+$z\mapsto1-z/m$, the zeros near \(\T\) are modeled by the Peres--Vir\'ag
+determinantal process \cite{PV,HKPV} with Bergman kernel
+$\mathbb K(z,w)=\pi^{-1}(1-z\bar w)^{-2}$; for that process the number of points
+in $\{|z|<r\}$ has variance $r^2/(1-r^4)$ \cite{Buckley}, which is of order \(m\)
+at the cutoff \(r=1-1/m\).  The Shepp--Vanderbei intensity \cite{SV} likewise
+identifies an order-\(m\) population of zeros in the \(1/m\)-shell around
+\(\T\).  These comparisons support the \(\sigma_m\asymp\sqrt m\) picture, but
+they do not by themselves prove it for the disk count of the finite Kac
+polynomial.
+
+The logarithmic real-zero fluctuation is a useful warning rather than a substitute
+for the disk-count problem.  By Lemma~\ref{lem:parity}, the parity of \(\nu\) is
+the parity of the real-zero count in \((-1,1)\), whose variance is
+$\bigl(\tfrac4\pi(1-\tfrac2\pi)+o(1)\bigr)\log m$ with a central limit theorem, by
+Maslova \cite{Maslova} and Do--Nguyen \cite{DoNguyen}.  This controls the parity
+observable, but it does not determine the variance of the two-dimensional disk
+count.  Interior rigidity results for related Gaussian analytic functions, such
+as bounded variance in annuli away from the boundary \cite{Yeager}, similarly
+indicate that the open difficulty is the edge shell.  We record the expected
+statement as Conjecture~\ref{conj:llt} and discuss partial routes (Kac--Rice
+second moments in the Gaussian case; decorrelation of winding increments along
+well-separated arcs) in Section~\ref{sec:open}.
+
+\subsection*{Relation to the literature}
+
+For \emph{dense} (non-banded) random Toeplitz matrices the smallest singular
+value and condition number are studied in \cite{condrefs}; for random
+\emph{circulant} matrices polynomial conditioning is known \cite{condrefs}.  The
+operator-theoretic input \eqref{eq:stability} and the exponential instability
+under nonzero winding are classical \cite{BG}.  The zero-count window
+\eqref{eq:window} for general coefficient laws is the contribution of
+\cite{Manrique}, generalizing the Littlewood case treated in the references
+cited there; the circle-clearance estimate is from \cite{KMS}.  Our
+Theorem~\ref{thm:parity} appears to be new even for Littlewood polynomials, and
+we note that it is of independent interest in the theory of random polynomials:
+\emph{the number of zeros of a Kac polynomial in the unit disk is asymptotically
+equidistributed mod 2}.
+
+\section{The parity obstruction}\label{sec:parity}
+
+Throughout this section $G(z)=G_m(z)=\sum_{j=0}^m\xi_jz^j$ with
+$\xi_j$ i.i.d., $\E\xi_0=0$, $\E\xi_0^2=1$, $\beta:=\E|\xi_0|^3<\infty$.  Note
+$G$ has real coefficients, and $G(1)=\sum_j\xi_j$,
+$G(-1)=\sum_j(-1)^j\xi_j$.
+
+\begin{lemma}[Parity identity]\label{lem:parity}
+Let $g$ be any polynomial with real coefficients and $g(1)g(-1)\ne0$, and let
+$\nu(g)$ be the number of zeros of $g$ in $\D$ counted with multiplicity.  Then
+\[
+\nu(g)\;\equiv\;\mathbf 1\{g(1)g(-1)<0\}\pmod 2 .
+\]
+\end{lemma}
+
+\begin{proof}
+Since $g$ has real coefficients, its non-real zeros come in conjugate pairs
+$z,\bar z$ of equal multiplicity and equal modulus; each pair contributes $0$ or
+$2$ to $\nu(g)$.  Hence
+\[
+\nu(g)\;\equiv\;\#\{\text{real zeros of }g\text{ in }(-1,1),
+\text{ with multiplicity}\}\pmod2 .
+\]
+Factor $g(x)=c\prod_i(x-a_i)^{m_i}\cdot q(x)$ over $\mathbb R$, where the $a_i$
+are the distinct real zeros and $q$ is a product of irreducible quadratics, so
+$q>0$ on $\mathbb R$.  Then
+\[
+\operatorname{sign}\bigl(g(1)g(-1)\bigr)
+=\prod_i\operatorname{sign}\bigl((1-a_i)^{m_i}(-1-a_i)^{m_i}\bigr)
+=\prod_{i:\,a_i\in(-1,1)}(-1)^{m_i},
+\]
+because for $a_i\notin[-1,1]$ the factors $(1-a_i)$ and $(-1-a_i)$ have equal
+sign, while for $a_i\in(-1,1)$ they have opposite signs (and $a_i=\pm1$ is
+excluded).  Thus $g(1)g(-1)<0$ if and only if
+$\sum_{a_i\in(-1,1)}m_i$ is odd.
+\end{proof}
+
+\begin{lemma}[Joint CLT for the two boundary values]\label{lem:clt}
+As $m\to\infty$,
+\[
+\frac{1}{\sqrt{m+1}}\bigl(G(1),\,G(-1)\bigr)
+\;\Longrightarrow\;(Z_1,Z_2),
+\]
+where $Z_1,Z_2$ are independent standard Gaussians.  Moreover
+$\PP(G(1)=0)\le 4\beta\,m^{-1/2}$ and likewise for $G(-1)$, for all large $m$.
+\end{lemma}
+
+\begin{proof}
+For fixed $(\alpha,\beta')\in\mathbb R^2$,
+$\alpha G(1)+\beta'G(-1)=\sum_{j=0}^m c_j\xi_j$ with
+$c_j=\alpha+(-1)^j\beta'$.  The $c_j$ are bounded and
+$\sum_jc_j^2=(m+1)(\alpha^2+\beta'^2)+O(1)$, so Lindeberg's condition holds
+trivially and
+$\bigl(\alpha G(1)+\beta'G(-1)\bigr)/\sqrt{m+1}\Rightarrow
+N\bigl(0,\alpha^2+\beta'^2\bigr)$; note
+$\operatorname{Cov}(G(1),G(-1))=\sum_{j=0}^m(-1)^j\in\{0,1\}$, which after
+normalization vanishes in the limit.  By Cram\'er--Wold the pair converges to
+$(Z_1,Z_2)$ as claimed.
+
+For the atom: by the Berry--Esseen theorem, for every $\varepsilon>0$,
+\[
+\PP\bigl(|G(1)|\le\varepsilon\sqrt{m+1}\bigr)
+\le\Phi(\varepsilon)-\Phi(-\varepsilon)+\frac{2C_{\mathrm{BE}}\beta}{\sqrt{m+1}}
+\le\varepsilon+\frac{2C_{\mathrm{BE}}\beta}{\sqrt{m+1}},
+\]
+and letting $\varepsilon\downarrow0$ gives
+$\PP(G(1)=0)\le2C_{\mathrm{BE}}\beta(m+1)^{-1/2}\le4\beta m^{-1/2}$ for large
+$m$, using $C_{\mathrm{BE}}<1$ \cite{Shevtsova}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:parity}]
+(i) is Lemma~\ref{lem:parity} applied to $g=G_m$.  For (ii):
+the set $\{(x,y):xy<0\}$ has boundary of Lebesgue measure zero in
+$\mathbb R^2$ and $\PP\bigl((Z_1,Z_2)\in\partial\{xy<0\}\bigr)=0$, so by
+Lemma~\ref{lem:clt} and the portmanteau theorem,
+$\PP(G(1)G(-1)<0)\to\PP(Z_1Z_2<0)=\tfrac12$; the atom bound is in
+Lemma~\ref{lem:clt}.
+
+(iii)  Fix $k$.  On the event $\{G(1)G(-1)\ne0\}$, the identity (i) gives
+$\{\nu=k\}\subseteq\{\mathbf 1\{G(1)G(-1)<0\}\equiv k\bmod 2\}$, an event whose
+probability tends to $\tfrac12$ regardless of the parity of $k$ by (ii).  Hence
+\[
+\PP(\nu=k)\;\le\;\tfrac12+o(1)+\PP\bigl(G(1)G(-1)=0\bigr)
+\;=\;\tfrac12+o(1),
+\]
+uniformly in $k$.  For the stability statement: by
+\eqref{eq:stability} and the winding-number formula, stability of
+$(T_n(P_{r,s}))$ implies that $P_{r,s}$ has no zeros on $\T$ and
+$\nu=r$; hence
+$\PP(\text{stable})\le\PP(\nu=r)\le\tfrac12+o(1)$.
+\end{proof}
+
+\begin{lemma}[Reversal symmetry]\label{lem:reversal}
+If the coefficient law is as in Theorem~\ref{thm:parity} and
+$\PP(\text{$G_m$ has a zero on }\T)=0$ {\rm(}e.g.\ if $\xi_0$ has a
+density{\rm)}, then $\nu$ and $m-\nu$ have the same distribution; in particular
+$\E\nu=m/2$.
+\end{lemma}
+
+\begin{proof}
+The reversed polynomial $G^*(z):=z^mG(1/z)=\sum_j\xi_{m-j}z^j$ has the same law
+as $G$, and its zeros are the inverses of those of $G$; if no zeros lie on
+$\T$, exactly $m-\nu$ of the inverted zeros lie in $\D$.
+\end{proof}
+
+\begin{corollary}[Band-reversal stability symmetry]\label{cor:band-reversal}
+Fix a band split \(r+s=m\), and let the coefficients be i.i.d.\ from any
+coefficient law.  Then the two complementary band sequences have the same
+finite-degree stability probability:
+\[
+\PP\bigl((T_n(P_{r,s}))_{n\ge1}\ {\rm is\ stable}\bigr)
+=
+\PP\bigl((T_n(P_{s,r}))_{n\ge1}\ {\rm is\ stable}\bigr).
+\]
+If, in addition, \(\PP(\text{\(G_m\) has a zero on }\T)=0\), then
+\[
+\PP(\nu=k)=\PP(\nu=m-k)\qquad(0\le k\le m),
+\]
+and the common stability probability above is
+\[
+\PP(\nu=r)=\PP(\nu=s).
+\]
+\end{corollary}
+
+\begin{proof}
+For a deterministic coefficient vector put
+\[
+G^*(z):=z^mG(1/z),\qquad P^*_{s,r}(z):=z^{-s}G^*(z).
+\]
+Since \(m=r+s\),
+\[
+P^*_{s,r}(z)=z^{-s}z^mG(1/z)=z^rG(1/z)=P_{r,s}(1/z).
+\]
+Thus \(P^*_{s,r}\) has a zero on \(\T\) if and only if \(P_{r,s}\) does.  If
+there is no zero on \(\T\), the path \(P^*_{s,r}|_{\T}\) is the reverse
+parametrization of \(P_{r,s}|_{\T}\), so
+\(\wind(P^*_{s,r})=-\wind(P_{r,s})\).  The stability criterion
+\eqref{eq:stability} is therefore invariant under this reversal.
+
+The reversed coefficient vector \((\xi_m,\xi_{m-1},\dots,\xi_0)\) has the same
+law as the original i.i.d.\ vector, so the stability probability for the
+reversed \((s,r)\)-symbol equals the stability probability for a fresh
+\((s,r)\)-symbol.  This proves the first assertion.  Under the no-circle-zero
+assumption, Lemma~\ref{lem:reversal} gives
+\(\PP(\nu=k)=\PP(\nu=m-k)\).  The criterion \eqref{eq:stability} also makes the
+\((r,s)\)-stability event equal to \(\{\nu=r\}\) almost surely, and the
+\((s,r)\)-stability event equal in law to \(\{\nu=s\}\).
+\end{proof}
+
+\section{Strongly unbalanced bands: proof of Theorem \ref{thm:unbalanced}}
+\label{sec:unbalanced}
+
+\begin{proof}
+Let $m=r+s$ and $|r-s|>2m^{9/10}$; without loss of generality
+$r>\frac m2+m^{9/10}$.  Consider the three events
+\[
+E_1:=\Bigl\{\,\bigl|\nu-\tfrac m2\bigr|\le m^{9/10}\Bigr\},
+\qquad
+E_2:=\Bigl\{\,\text{no zeros of }G_m\text{ in }
+\Bigl\{\bigl||z|-1\bigr|\le\tfrac{1}{m^{2}(\log m)^{3}}\Bigr\}\Bigr\}.
+\]
+By \cite[Theorem~3.1]{Manrique} (inequality \eqref{eq:window}),
+$\PP(E_1^c)=O((\log m)^2m^{-1/10})$, and by the circle-clearance estimate
+\cite[Theorem~1.1]{KMS}, as used in \cite[Section~2]{Manrique},
+$\PP(E_2^c)=O((\log m)^{-1/2})$; hence
+$\PP(E_1\cap E_2)=1-O((\log m)^{-1/2})$.
+
+Work on $E_1\cap E_2$.  By $E_2$ the symbol $P_{r,s}(z)=z^{-r}G_m(z)$ has no
+zeros on $\T$, so the winding number is defined and equals $\nu-r$.  By $E_1$
+and the choice of $r$,
+\[
+\wind(P_{r,s})=\nu-r\;\le\;\tfrac m2+m^{9/10}-r\;<\;0 .
+\]
+Let $\delta:=\max\{|z|<1:G_m(z)=0\}$ and $\mu:=\min\{|z|>1:G_m(z)=0\}$ (with the
+conventions $\delta=0$, $\mu=\infty$ if the corresponding set is empty; on
+$E_1$ both sets are nonempty for large $m$ since $0<\nu<m$).  By $E_2$,
+\[
+\delta\le1-\frac{1}{m^2(\log m)^3},
+\qquad
+\mu\ge1+\frac{1}{m^2(\log m)^3},
+\]
+so
+\[
+\min\Bigl\{\log\frac1\delta,\ \log\mu\Bigr\}
+\;\ge\;\log\Bigl(1+\frac{1}{m^{2}(\log m)^{3}}\Bigr)
+\;>\;\alpha_m .
+\]
+By the exponential instability theorem for banded Toeplitz matrices with nonzero
+winding number \cite[Theorem~4.1]{BG} (as quoted in
+\cite[Section~1]{Manrique}), there is a constant $C=C(G_m)>0$ with
+$\|T_n(P_{r,s})^{-1}\|\ge Ce^{\alpha_mn}$ for all $n\ge1$.  Finally, the
+operator norm of a matrix dominates the modulus of each entry, so
+$\sigma_1(T_n)\ge\max_{j}|\xi_j|$, which is positive on $E_1$ (there $G_m$ has
+$m$ zeros, so $G_m\not\equiv0$); hence
+$\kappa(T_n)=\sigma_1(T_n)\|T_n^{-1}\|\ge\bigl(\max_j|\xi_j|\bigr)Ce^{\alpha_mn}$
+grows exponentially in $n$ on $E_1\cap E_2$.
+\end{proof}
+
+\section{The gap in the balanced case of \cite{Manrique}}\label{sec:gap}
+
+We now explain why the balanced half of \cite[Theorem~2.1]{Manrique} is not
+established by the argument given there, and why --- by
+Theorem~\ref{thm:parity} --- no argument can establish it with
+$c_3<\tfrac12$.
+
+The proof of \cite[Theorem~2.1]{Manrique} begins by observing, correctly, that
+$\wind(P)=0$ requires $r=\nu$.  It then invokes
+\cite[Theorem~3.1]{Manrique} --- inequality \eqref{eq:window} above --- to
+assert that with probability $1-O((\log m)^2m^{-1/10})$ the integer $r$
+``might satisfy''
+$\frac m2-m^{-1/10}\le r\le\frac m2+m^{-1/10}$, that the number of possible
+integer values of $r$ is at most $2m^{-1/10}+1$, and hence that for large $m$
+one has $r=\frac m2=\nu$.  But \eqref{eq:window} controls the
+\emph{normalized} count $\nu/m$ to precision $m^{-1/10}$; for the count itself
+this is the window
+\[
+\frac m2-m^{9/10}\;\le\;\nu\;\le\;\frac m2+m^{9/10},
+\]
+which contains $2m^{9/10}+1$ integers, not $2m^{-1/10}+1$.  Knowing that $\nu$
+lies in a window of $\asymp m^{9/10}$ integers gives no lower bound on
+$\PP(\nu=\frac m2)$: a priori the point probabilities could be as small as
+$\asymp m^{-9/10}$.  The subsequent steps of the proof (the clearance of the
+circle, the Wiener--Hopf bounds on $\|T(P)^{-1}\|$) are conditioned on the event
+$\nu=r$ and are not in question; the gap is exactly the claim that this event
+has probability close to $1$.
+
+Theorem~\ref{thm:parity} shows the gap is essential: the event $\nu=\frac m2$
+has probability at most $\tfrac12+o(1)$ for every coefficient law with zero
+mean, unit variance and finite third moment, because the parity of $\nu$ is an
+asymptotically fair coin.  Consequently the first display of
+\cite[Theorem~2.1]{Manrique} --- positivity of $\lim_n\sigma_n(T_n)$, which by
+\cite[Corollary~6.5]{BG} forces no zeros on $\T$ and zero winding, i.e.\
+$\nu=r$ --- cannot hold with probability exceeding $\tfrac12+o(1)$, and the
+suggestion of \cite[Remark~2.2]{Manrique} that the defect constant $c_3$ can be
+made small (at the price of worsening other constants) is unfounded for
+$c_3<\tfrac12$.
+
+Two further remarks.  First, the parity obstruction is insensitive to the choice
+of $r$: replacing the balanced band by $r=\frac m2\pm1$ merely flips the target
+parity.  Second, the obstruction does not by itself decide whether
+$\PP(\nu=\frac m2)$ is bounded below --- both
+$\PP(\nu=\frac m2)\to\frac12$ and $\PP(\nu=\frac m2)\to0$ are consistent with
+Theorem~\ref{thm:parity}; we expect the latter (Conjecture~\ref{conj:llt}).
+
+\section{Towards the local limit theorem}\label{sec:open}
+
+We close by recording what a resolution of Conjecture~\ref{conj:llt} would
+require and the partial routes we see.
+
+\begin{problem}\label{prob:variance}
+Complete the conjectural linear variance asymptotics for
+\(\sigma_m^2=\operatorname{Var}(\nu)\), where \(\nu\) is the number of zeros of a
+Kac polynomial of degree \(m\) in the unit disk.
+Proposition~\ref{prop:varupper} gives \(\sigma_m^2=O(m)\) for standard Gaussian
+coefficients; prove the matching lower bound \(\sigma_m^2=\Omega(m)\), identify
+the sharp constant \(c=\lim_m\sigma_m^2/m\), and decide whether central and local
+limit theorems hold on that scale, here and for general coefficient laws.
+\end{problem}
+
+For real Gaussian coefficients the Kac--Rice machinery gives the zero-count
+variance in closed integral form, and the upper bound of
+Proposition~\ref{prop:varupper} can be read off from the resulting one- and
+two-point intensities.
+
+\begin{proof}[Proof of Proposition~\ref{prop:varupper}]
+Write $N=\nu=N(\D)$ and let $\rho_1,\rho_2$ be the one- and two-point intensities
+of the zero set of $G_m$ with respect to area measure $dA$.  The Kac--Rice second
+moment identity for a point process is
+\begin{equation}\label{eq:kr-var}
+\operatorname{Var}(N)
+=\int_{\D}\rho_1\,dA
++\iint_{\D\times\D}\bigl[\rho_2(z,w)-\rho_1(z)\rho_1(w)\bigr]\,dA(z)\,dA(w)
+=:I_1+I_2,
+\end{equation}
+valid because $\E[N(N-1)]=\iint\rho_2$ and $\E N=\int\rho_1$; for Gaussian
+$G_m$ the intensities are the Hammersley/Edelman--Kostlan permanental expressions
+\cite{HKPV}.
+
+\emph{Diagonal term.}  By the Edelman--Kostlan radial formula,
+$\rho_1(z)=\frac1\pi\,\partial_z\partial_{\bar z}\log K_m(z,z)$ with
+$K_m(z,w)=\sum_{j=0}^m(z\bar w)^j$, and integrating it over $\D$ gives the
+classical count
+\[
+I_1=\int_\D\rho_1\,dA=\E N=\tfrac m2+O(\log m)=O(m).
+\]
+
+\emph{Connected term.}  Split $\D$ at radius $1-\frac{C\log m}{m}$.  On the bulk
+$|z|,|w|\le1-\frac{C\log m}{m}$ the normalized kernel
+$K_m(z,w)/\sqrt{K_m(z,z)K_m(w,w)}$ is uniformly close to the infinite-series
+kernel $(1-z\bar w)^{-1}$ and the connected two-point function
+$\rho_2-\rho_1\otimes\rho_1$ decays off the diagonal exactly as for the limiting
+field, so its contribution to $I_2$ is $O(1)$.  What remains is the boundary
+shell $S$ of radial width $\asymp1/m$, where $\rho_1\asymp m^2$.  The decisive
+point is that on $S$ the connected kernel has \emph{no} $|z-w|^{-2}$ singularity:
+by the local repulsion of complex Gaussian zeros \cite{NS},
+$\rho_2(z,w)=O(|z-w|^2)$ as $w\to z$, so $\rho_2-\rho_1\otimes\rho_1$ stays
+bounded on the diagonal rather than blowing up.  (This is the structural
+difference from the one-dimensional real-axis Kac--Rice integral, whose
+$|x-y|^{-2}$ near-diagonal behavior produces the $\log m$ of Maslova
+\cite{Maslova}.)  A uniform $L^1$ decorrelation estimate then holds:
+\[
+\int_{\D}\bigl|\rho_2(z,w)-\rho_1(z)\rho_1(w)\bigr|\,dA(w)\;\le\;C\,\rho_1(z)
+\qquad(z\in\D),
+\]
+with $C$ an absolute constant (numerically $\approx2$) independent of $m$,
+obtained by integrating the off-diagonal exponential clustering of \cite{NS}
+against the radial profile of $\rho_1$.  Hence
+\[
+|I_2|\le\int_\D\Bigl(\int_\D|\rho_2-\rho_1\otimes\rho_1|\,dA(w)\Bigr)dA(z)
+\le C\int_\D\rho_1\,dA=C\,I_1=O(m).
+\]
+Combining the two bounds in \eqref{eq:kr-var} gives
+$\operatorname{Var}(N)=O(m)$.
+\end{proof}
+
+The same identity points at the missing lower bound and the constant rather than
+settling them.  After the edge rescaling, the near-circle zeros are modeled by the
+Peres--Vir\'ag conformally invariant determinantal process
+\cite{PV,HKPV}, whose Bergman kernel is
+$\mathbb K(z,w)=\pi^{-1}(1-z\bar w)^{-2}$; for that process the disk count obeys
+$\operatorname{Var}\bigl(N(|z|<r)\bigr)=r^2/(1-r^4)$ \cite{Buckley}, which at the
+cutoff $r=1-1/m$ is $\approx m/4$.  This is a genuine cross-check of the order and
+suggests a positive constant, but it is a statement about the limiting field, not
+about the disk count of the finite Kac polynomial, so it does not by itself give
+$\sigma_m^2=\Omega(m)$.  Two premise corrections are worth stating plainly.  The
+$1/m$ above is the radial width of the shell that carries the $\Theta(m)$ zeros;
+the spacing between consecutive zeros along a near-circle ray is finer, of order
+$1/m^2$, and it is the shell width, not the spacing, that drives the variance.
+And the proof above is for the \emph{real} Gaussian Kac polynomial used
+throughout.  A genuinely complex-coefficient model has a different zero process,
+without conjugate-pair symmetry, so constants suggested by that model should be
+treated only as heuristic for the real disk count.  Numerically, direct simulation of
+$\operatorname{Var}(\nu)/m$ over $m=25,\dots,400$ gives values in the range
+$0.29$--$0.31$ with a log--log slope of $0.979$, consistent with
+$\sigma_m^2\sim cm$, $c\approx0.30$.  Rigidity away from the boundary \cite{Yeager}
+indicates annuli separated from $\T$ are not the source of large fluctuations, and
+related boundary fluctuation constants in other ensembles are computed, for
+example, in \cite{ACM}.  A natural route to the lower bound and to
+anti-concentration is
+through angular decompositions: the total winding of \(G_m\) along \(\T\) is the
+sum of increments over \(K\) well-separated arcs, which should decorrelate because
+the covariance kernel \(\sum_jz^j\bar w^j\) is a Dirichlet kernel, small for
+angular separations \(\gg1/m\).  An Esseen-type estimate along this route could
+give \(\max_k\PP(\nu=k)=O(K^{-1/2})\), ideally with \(K\) a positive power of
+\(m\), or even \(K\asymp m\).  We hope to return to this elsewhere.
+
+Finally, we note a statement of independent interest implied by
+Theorem~\ref{thm:parity}(i)--(ii): \emph{for Kac polynomials with i.i.d.\
+mean-zero, finite-third-moment coefficients, the number of zeros in the unit
+disk is asymptotically equidistributed modulo $2$} --- in particular, for
+Littlewood polynomials of degree $m$, the probability that exactly half of the
+zeros lie inside the unit circle is at most $\tfrac12+o(1)$.
+
+\subsection*{Acknowledgments}
+The research presented in this paper was supported by the European Research Council
+(ERC) under the European Union's Horizon Europe research and innovation programme
+(grant agreement No.\ 101041711), by the Israel Science Foundation (grant number
+2258/19) and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\subsection*{Declaration on generative AI}
+During the preparation of this work the author used generative AI tools to
+accelerate drafting and revision.  All mathematical claims, proofs, and
+bibliographic information were subsequently reviewed and edited by the author,
+who takes full responsibility for the content of the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{BG}
+A.~B\"ottcher and S.~M.~Grudsky,
+\emph{Spectral Properties of Banded Toeplitz Matrices},
+SIAM, Philadelphia, 2005.
+
+\bibitem{IZ}
+I.~Ibragimov and O.~Zeitouni,
+\emph{On roots of random polynomials},
+Trans.\ Amer.\ Math.\ Soc.\ \textbf{349} (1997), no.~6, 2427--2441.
+
+\bibitem{HN}
+C.~P.~Hughes and A.~Nikeghbali,
+\emph{The zeros of random polynomials cluster uniformly near the unit circle},
+Compos.\ Math.\ \textbf{144} (2008), no.~3, 734--746.
+
+\bibitem{KMS}
+S.~V.~Konyagin and W.~Schlag,
+\emph{Lower bounds for the absolute value of random polynomials on a
+neighborhood of the unit circle},
+Trans.\ Amer.\ Math.\ Soc.\ \textbf{351} (1999), no.~12, 4963--4980; we use the
+strengthened form stated as Theorem~1.1 of reference [4] in \cite{Manrique}.
+
+\bibitem{Manrique}
+P.~Manrique,
+\emph{The condition number of a random banded Toeplitz matrix is typically
+large},
+preprint, arXiv:2602.12581 (2026).
+
+\bibitem{Shevtsova}
+I.~Shevtsova,
+\emph{On the absolute constants in the Berry--Esseen-type inequalities},
+Dokl.\ Math.\ \textbf{89} (2014), 378--381.
+
+\bibitem{Maslova}
+N.~B.~Maslova,
+\emph{The variance of the number of real roots of random polynomials},
+Theory Probab.\ Appl.\ \textbf{19} (1974), no.~1, 35--52.
+
+\bibitem{DoNguyen}
+Y.~Q.~Do and N.~D.~V.~Nguyen,
+\emph{Real roots of random polynomials: asymptotics of the variance},
+Electron.\ J.\ Probab.\ \textbf{30} (2025), paper no.~112; arXiv:2303.05478.
+
+\bibitem{Yeager}
+A.~M.~Yeager,
+\emph{The variance of the number of zeros for complex random polynomials
+spanned by OPUC},
+preprint, arXiv:1908.02234 (2019).
+
+\bibitem{HKPV}
+J.~B.~Hough, M.~Krishnapur, Y.~Peres and B.~Vir\'ag,
+\emph{Zeros of Gaussian Analytic Functions and Determinantal Point Processes},
+University Lecture Series, vol.~51, Amer.\ Math.\ Soc., Providence, RI, 2009.
+
+\bibitem{NS}
+F.~Nazarov and M.~Sodin,
+\emph{Correlation functions for random complex zeroes: strong clustering and
+local universality},
+Comm.\ Math.\ Phys.\ \textbf{310} (2012), no.~1, 75--98.
+
+\bibitem{PV}
+Y.~Peres and B.~Vir\'ag,
+\emph{Zeros of the i.i.d.\ Gaussian power series: a conformally invariant
+determinantal process},
+Acta Math.\ \textbf{194} (2005), no.~1, 1--35.
+
+\bibitem{Buckley}
+J.~Buckley,
+\emph{Fluctuations in the zero set of the hyperbolic Gaussian analytic
+function},
+Int.\ Math.\ Res.\ Not.\ IMRN \textbf{2015}, no.~6, 1666--1687.
+
+\bibitem{SV}
+L.~A.~Shepp and R.~J.~Vanderbei,
+\emph{The complex zeros of random polynomials},
+Trans.\ Amer.\ Math.\ Soc.\ \textbf{347} (1995), no.~11, 4365--4384.
+
+\bibitem{ACM}
+Y.~Ameur, C.~Charlier and P.~Moreillon,
+\emph{Eigenvalues of truncated unitary matrices: disk counting statistics},
+preprint, arXiv:2305.08976 (2023).
+
+\bibitem{condrefs}
+See the references [3,~16,~22,~23] of \cite{Manrique} for the conditioning of
+dense random Toeplitz and circulant matrices.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,87 @@
+{
+  "helper_version": "A056-prescribed-fresh-reset-v1",
+  "actual_Boolean_family": "fair mux of two independent private point activations on arbitrary shared3-bit phases; fresh descendant phase law depends only on remaining coordinate order and actual mean",
+  "parameter_domain": {
+    "source_certificate": "all256 labelled3-bit Boolean functions with equal nonempty original reference",
+    "endpoint_certificate": "all16 labelled2-bit functions with fresh weights1,2,4, plus all1-bit and0-bit constants",
+    "history_pairs": [
+      [
+        85,
+        1
+      ],
+      [
+        1,
+        16
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        105,
+        150
+      ],
+      [
+        23,
+        113
+      ],
+      [
+        7,
+        31
+      ],
+      [
+        128,
+        127
+      ],
+      [
+        3,
+        63
+      ]
+    ],
+    "private_widths": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "queries": "each3 shared first coordinates; then each available A/B/selector query; pure fresh reset of both phase references at all4 reached states; then a remaining shared coordinate at every state"
+  },
+  "case_count": {
+    "source_functions": 256,
+    "endpoint_functions": 22,
+    "mixed_histories": 264,
+    "reset_states": 1056,
+    "next_shared_queries": 1056
+  },
+  "symmetry": "none; history pairs restricted, analytic general transport handles arbitrary phase pairs",
+  "arithmetic": "integer FWHT and direct edge counts; Fraction masses; exact rational prime-log vectors, rational atanh sign enclosures with explicit tail",
+  "memory_estimate_MB": 100,
+  "maximum_runtime_seconds": 55,
+  "pilot_maximum_seconds": 55,
+  "policy": "one fresh reset per source per history path, flag then consumed; no renewed source budget, original7I root bank fixed",
+  "boundary_cases": [
+    "constant phases",
+    "zero/certain point events",
+    "reference-only spectral support",
+    "both outcomes/complete terminal KL",
+    "positive signed reset price",
+    "already spent shared and private query influence"
+  ],
+  "abort_on": "save first exact mathematical failure or runtime checkpoint; never raise dimension automatically"
+}

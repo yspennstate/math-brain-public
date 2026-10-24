@@ -1,0 +1,85 @@
+{
+  "status": "PARTIAL",
+  "full_FEI": "OPEN",
+  "brain": "WITHOUT_VERIFIED_BRAIN",
+  "candidate": {
+    "name": "projected_zeta_palm_elimination_E_cstar",
+    "c_star": 2.3239949902626468,
+    "implied_FEI_constant_if_proved": 6.647989980525294,
+    "classification": "OPEN"
+  },
+  "exhaustive_boolean_all_projections": {
+    "scope": "all Boolean truth tables modulo global sign; every nonempty coordinate projection; floating entropy evaluation",
+    "max_over_f_R_min_coordinate_drop_over_influence": {
+      "1": 0.0,
+      "2": 1.0,
+      "3": 1.450067264945063,
+      "4": 1.5986262864861307
+    },
+    "max_over_f_R_min_palm_log_term": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.3304820237218406,
+      "4": 0.42510992953527305
+    },
+    "classification": "COMPUTATIONAL_EVIDENCE_ONLY"
+  },
+  "numaro_external_seed": {
+    "truth_table_sha256": "f8a7bb2c738d86368305111633376b1a3a83d8ee1f1abcc9a37d841b0f9c7839",
+    "I_exact": "261/128",
+    "I": 2.0390625,
+    "B_can": 2.4147760445697815,
+    "B_can_over_I": 1.184257983543801,
+    "max_full_state_coordinate_drop_over_influence": 2.0999462531209474,
+    "greedy_path_max_drop_over_influence": 1.439873600991221,
+    "greedy_path_max_palm_log_term": 0.055013879112037596,
+    "auxiliary_first_drop_over_influence": [
+      2.0999462531209474,
+      2.240943756716547,
+      2.354199232568476,
+      2.438970652978014,
+      2.521364851784483,
+      2.5893302446750113,
+      2.646628033790762,
+      2.700039129662173,
+      2.7496083600918837
+    ],
+    "auxiliary_first_palm_log_term": [
+      0.8767673630850085,
+      0.965235407506691,
+      1.0433240614806714,
+      1.1090219746244923,
+      1.1730102639971185,
+      1.2305197428846002,
+      1.2808963556590631,
+      1.3283364590085829,
+      1.3728768176390174
+    ],
+    "classification": "EXACT_SOURCE_HASH_PLUS_FLOATING_COMPUTATION"
+  },
+  "arbitrary_subset_law": {
+    "theta": "1/16",
+    "t": 9,
+    "c": "1/72900",
+    "alpha_exact": "1/21600",
+    "local_drop_over_influence": 2.538865093660809,
+    "empty_phase_edge_weight": 0.0030517368813046766,
+    "sum_other_phase_edge_weights": 0.002221240771854085,
+    "exact_phase_polygon_rejection": true,
+    "classification": "VALID_RANDOM_SET_NOT_BOOLEAN_SPECTRAL_BY_EXACT_NECESSARY_CONDITION"
+  },
+  "negative_association_counterexample": {
+    "truth_table": [-1,1,1,-1,-1,-1,-1,-1],
+    "spectral_support_masks": [0,3,4,7],
+    "mass_each": "1/4",
+    "P_coordinate_0": "1/2",
+    "P_coordinate_1": "1/2",
+    "P_both": "1/2",
+    "covariance": "1/4",
+    "classification": "EXACT_REFUTATION_OF_UNIVERSAL_NEGATIVE_ASSOCIATION"
+  },
+  "reused_reproducer": {
+    "path": "proofnet24/P03-fei/fleet-2026-09-21/account03/B13/20260921T160134Z-zeta-palm-elimination/reproduce_zeta_palm.py",
+    "git_blob": "b276214ac8a83d5d648c3899594974da3b5cf703"
+  }
+}

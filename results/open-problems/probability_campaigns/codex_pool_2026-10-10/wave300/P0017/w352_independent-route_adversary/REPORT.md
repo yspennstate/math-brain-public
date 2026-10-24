@@ -1,0 +1,11 @@
+P0017 is the covariance-normalized KLS target. The historical record is recovered; current openness is UNKNOWN in this packet because recent primary papers claim complete solutions and their complete proofs were not independently checked. See SOURCE_STATUS.json and the primary statements at https://arxiv.org/html/2610.05474v1 and https://arxiv.org/html/2610.07728v2.
+
+The independent epigraph derivation shows why conditional averaging need not have a uniform Sobolev bound: its input gradient energy is 1 and the derived output energy D_p has D_p/p -> 1/3. The peer audit keeps w351's L0 and L1 with their exact assumptions. A separately derived isotropic-ball example forces a balanced conditional-variance factor (n+4)/4 while its global quadratic Poincare ratio stays below 1/2. These are draft obstructions to proof shortcuts; they do not refute KLS and have no novelty claim.
+
+Measurement command: python -B -X utf8 verify_obstruction.py. The fresh gate denied the run: free physical RAM 2.71 GiB, CPU 89.2%, governor status distress, commit headroom 5644 MiB. No Gamma evaluation or quadrature ran. The mathematical numerical checks and any brain-recall gain remain UNMEASURED. By the worker contract, this is a proposal, not a measured improvement. The bounded recall itself completed in 12.90 seconds.
+
+Two concept entries and one supporting semantic relation are submitted as DRAFT in ~/math-brain-inbox/w352/bundle_001.json. Mathematical review by w353 is pending; ingestion and retrieval are separately unverified. No live store, code, service or global recall control was changed. Schema validation is not a proof and no formal-check receipt is claimed.
+
+Apply the proposed hook by appending the added JSONL row in patches/01_conditional_averaging_hook.diff to ~/primary_directive/hooks1000/proposals/math-w352.jsonl, after its required audit. The worker did not apply it or invoke integrate_drafts.py. Progress and mesh handoffs are staged locally under the worker's write/send restrictions.
+
+NEXT: w353 independently derive the epigraph moments and ball projection identity; validate numerical checks only after a fresh local gate admits them. Any new referee theorem goes to w356.

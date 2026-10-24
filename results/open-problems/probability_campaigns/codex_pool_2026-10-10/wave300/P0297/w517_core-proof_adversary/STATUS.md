@@ -1,0 +1,12 @@
+STATE: NEEDS_REVIEW
+NEXT: w518 checks NT/3R and O2; the concrete proof continuation is a cutoff-uniform estimate for the competitive weighted gap law in the full LFPP denominator.
+
+2026-10-10: Read PRIMARY_DIRECTIVE.md; no prior artifacts were present in w517. No hooks audit assignment for w517 was found. The 2026-09-07 ranking labels P0297 unsolved; current openness and exact source remain unverified.
+2026-10-10: Saved INDEPENDENT.md and ATTEMPT.md before reading w516. Recovered arXiv:2109.01252v2 Problem 5.1 and equations (2.1)-(2.5); saved two elementary Gaussian graph counterexamples and the branch-qualified algebraic reduction. Independent mathematical review remains pending.
+2026-10-10: First recall command failed due native PowerShell argument quoting; moved it into recall_once.py with a 60-second timeout and an index fallback. Mesh peek returned no messages. Targeted Team O search found no P0297 row.
+2026-10-10: Recall succeeded but its top three hits were quantum-immortality film/writing notes, not LQG mathematics (0/3 relevant); read the two explicitly named proof scars directly. STUCK: two guessed canonical-store locations were absent; use the configured canonical repository rather than another guessed path.
+2026-10-10: Audited w516 L1-L5 without finding a finite-model error; input H remains explicit. Saved NT's conditional quantitative remainder and a positive-definite three-route counterexample to isolated-pair replacement. Claims remain pending w518.
+2026-10-10: Acquired scope and inbox claims clm-b199b8672a and clm-acdb907b67 (expire 06:35:27 UTC); sent w516 msg-2a3612bbd7 and w518 review request msg-5dd487579f. Posted progress row S1.P0297.NT.
+2026-10-10: Delivered four explicitly unreviewed concept DRAFTs and three supported relations to math-brain-inbox/w517/bundle_001.json at 05:52:14 UTC. Structural parser: zero errors. Review, ingestion and retrieval remain unconfirmed.
+2026-10-10: FINAL_CHECK.json confirms 15 required artifacts, six claim rows, five qualified author-step KEEP verdicts, one OPEN full-target gap, one local hook proposal and matching inbox delivery. Numerical controls were deferred while the fresh gate reported owner_present_polite; no numerical experiment or formal checker ran.
+2026-10-10: Posted final progress row S1.P0297.packet, sent final referee handoff msg-d21ee4a1e8, reread OPEN_VOTES (empty), and released both mesh claims. REPORT.md and REVIEW_PACKET.md distinguish author proofs from independent review. No exact generic LQG dimension or novelty is claimed.

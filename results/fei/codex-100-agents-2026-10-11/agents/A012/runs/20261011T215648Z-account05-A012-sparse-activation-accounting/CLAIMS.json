@@ -1,0 +1,37 @@
+[
+  {
+    "claim_id": "A012-HEREDITARY-ACTIVATION-ADMISSION",
+    "version": 1,
+    "exact_statement": "For any Boolean function class C containing constants and literals and closed under sign reversal, physical coordinate restrictions, disjoint Boolean products and point activation on fresh controls, for every Boolean f and integers t,r>=1, membership of f in C is equivalent to membership of g_t=z*product_{j=1}^t f(x^(j)) and equivalent to membership of 1+A_r(g_t-1). Furthermore, Let R consist of Boolean signs with finite globally read-once AND/OR/parity/negation formula certificates, literal or constant leaves and no opaque Boolean leaves. R is closed under restrictions, sign reversal, disjoint substitution, disjoint products, balancing and point activation on fresh controls. Every f in R satisfies corrected product-biased E(f)<=C0*(I(f)-Var(f)), C0=2+4/ln(2), and H(f)<=C0*I(f) for uniform original inputs. The balanced three-bit multiplexer M(x,y,z)=(1+x)y/2+(1-x)z/2 and all its activated balanced tensor powers are outside R. Overlapping OR substitution does not preserve R. For the control-first r-bit point activation of a fresh literal y, with p=2^(-r), the expected control depth D=2(1-p), I_sel=rp, I=p(r+1), and the uncompressed two-bits-per-query transcript has cost/I=4(2^r-1)/(r+1), tending to infinity. Every exact finite spectral witness W retaining its physical leaf label satisfies H(W|S)>=D-H(F)>=2(1-p)-4rp-2p*log2(e), whose displayed lower bound tends to two bits.",
+    "hypotheses": [
+      "Uniform cubes of arbitrary finite dimension",
+      "Fresh independent blocks and sign z",
+      "A_r is a single-point indicator on r fresh controls",
+      "All five class hypotheses are required",
+      "Each original input label occurs at most once globally",
+      "Arbitrary finite gate fan-in and depth",
+      "Product inputs for corrected E; uniform inputs for H/I",
+      "Delete deterministic children before dividing by child variance"
+    ],
+    "statement_sha256": "504db88a7c77fd5cc5e70b09a6e3f3bad5897cac0261c68a2e8af4a4ed0ea795",
+    "contributors": [
+      "account05/A012"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T215648Z-account05-A012-sparse-activation-accounting\\HIDDEN_CORE_TEST.md",
+      "deliverable": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T215648Z-account05-A012-sparse-activation-accounting\\ACTIVATION_ADMISSION.tex"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A011",
+      "A013",
+      "A086",
+      "A094"
+    ]
+  }
+]

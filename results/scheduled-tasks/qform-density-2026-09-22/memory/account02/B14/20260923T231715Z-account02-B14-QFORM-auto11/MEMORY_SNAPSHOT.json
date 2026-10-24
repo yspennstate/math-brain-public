@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B14",
+  "title": "Translations and localization",
+  "run_id": "20260923T231715Z-account02-B14-QFORM-auto11",
+  "execution_context": "scheduled_run",
+  "source_control_commit": "3eeed8243e52874c0eb47bf7b710c96f65aa8b16",
+  "final_control_commit_observed": "0f81e098eb546a9780af771cfb4bda8f0a0b03c9",
+  "status": "TRANSLATION_FRAME_COMPILER_AND_SATURATED_FRAGMENT_BARRIER_PROVED_FULL_QFORM_OPEN",
+  "execution_mode": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "provider_reasoning_tokens": null,
+  "provider_thinking_time": null,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "premises": [
+    {
+      "id": "PARTNER-SMOOTH-CONNECTED-SUPPORT-ZERO-LOSS",
+      "source": "yspennstate/math-open-problems@46f817e053914df4ed718042194c1ff39f425e46",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T223632Z-account03-B14-QFORM-auto11/REPORT.md",
+      "scope": "zero-loss reduction of the full target to smooth compact marginals with connected interval support, positive interior and strict cap below one, with no uniform support diameter or density floor"
+    },
+    {
+      "id": "CLAUDE-THEOREM-A",
+      "source": "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md",
+      "scope": "proved dimension-three full-spectrum estimate ||p_Q||_infinity <= 6 sqrt(pi)/sigma with arbitrary linear terms; applied to A=I_3 to certify a uniform true output while fragment-first domination budgets diverge"
+    }
+  ],
+  "new_results": [
+    "QFORM-TRANSLATION-FRAME-COMPILER-v1",
+    "QFORM-PEAK-MASS-DOMINATION-TRADEOFF-v1",
+    "QFORM-SATURATED-FRAGMENT-DOMINATION-BARRIER-v1",
+    "QFORM-WHOLE-ACTIVE-CERTIFICATE-BEFORE-PEAK-DOMINATION-v1"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "913b551de4902c3dd9ddf2feb6174a085f228d17",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T231715Z-account02-B14-QFORM-auto11/REPORT.md"
+  },
+  "early_checkpoint_commit": "913b551de4902c3dd9ddf2feb6174a085f228d17",
+  "handoff_commit": "6aad35e60f3ba9a6587ffed25964d6bf45f148db",
+  "first_unpaid_implication": "QFORM-WHOLE-ACTIVE-CERTIFICATE-BEFORE-PEAK-DOMINATION-v1",
+  "next_step": "On the smooth connected-support strict-subcap class supplied by account03/B14, prove a whole-active affine-uniform estimate for every remaining no-pivot/near-degenerate configuration uniformly as support diameter grows and bridge floor vanishes, or produce an aggregate submeasure functional whose coefficient carries a full power of fragment mass despite peak near one. Translation itself is no longer the debt; concentration before aggregation is.",
+  "continuity_status": "OPEN_SEPARATE",
+  "full_qform_status": "OPEN"
+}

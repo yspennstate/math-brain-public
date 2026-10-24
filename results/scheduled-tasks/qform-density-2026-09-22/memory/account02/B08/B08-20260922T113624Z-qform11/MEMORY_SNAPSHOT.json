@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B08",
+  "run_id": "B08-20260922T113624Z-qform11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "source_control_commit": "720400272e3e997e24a49825b22fb62753f986f7",
+  "correction_status": {
+    "inbox_commit": "720400272e3e997e24a49825b22fb62753f986f7",
+    "events_consumed": [],
+    "standing_corrections_used": [
+      "POINTWISE-OSCILLATORY-DECAY refuted by phase-aligned densities",
+      "FIBER-SUP-DIMENSION-FREE refuted by cube projection"
+    ]
+  },
+  "premises": [
+    {
+      "source": "account03/B16 20260922T113226Z-qform-r11",
+      "commit": "2dac8145f316ba9ecced5c98093efc681522a878",
+      "blob": "07109b1e3a16125ab7965e557a73c58e44d10715",
+      "scope": "law-uniform pointwise quadratic oscillatory decay is false; diagonal supporting theorem"
+    },
+    {
+      "source": "account02/B15 principal-triple report",
+      "commit": "d5392d73398e2811f58b612fb8f191aa79d8ee5e",
+      "blob": "1da4167bbf6b2785659bd50007cab5f04b9c3084",
+      "scope": "localized physical-coordinate principal-triple comparison"
+    },
+    {
+      "source": "classical rank-one geometric Brascamp-Lieb inequality",
+      "scope": "tight-frame integral inequality"
+    },
+    {
+      "source": "Beckner sharp Hausdorff-Young inequality",
+      "scope": "one-dimensional Fourier Lp-to-Lq bound for 1<=p<=2"
+    }
+  ],
+  "partner": {
+    "named": "account03/B08",
+    "current_programme_artifact_found": false,
+    "note": "No completed partner handoff or canonical report was present at the fresh read; none was fabricated."
+  },
+  "new_claims": [
+    {
+      "id": "QFORM-DIFFUSE-RANK3-BL-v1",
+      "status": "SOURCE_REPORTED_PROVED",
+      "statement": "If A=U Lambda U^T has rank exactly 3, all |lambda_j|>=1, U has orthonormal columns, and every row leverage ||u_i||^2<=1/2, then for arbitrary independent input densities <=1, X^TAX has a bounded continuous density with sup norm <=3e."
+    },
+    {
+      "id": "QFORM-DIFFUSE-FULLY-LARGE-RANK-v1",
+      "status": "SOURCE_REPORTED_PROVED",
+      "statement": "For rank r>=3, if every nonzero eigenvalue has magnitude >=1 and every range leverage score is <=1/2, the same mechanism yields density sup norm <= e r/(r-2) <=3e."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0b5925a458d36c1ec1cf8ab344c9676260a97c8a",
+    "blob": "212febc02c4c1f3a8e6c073d0a8ed5d2d6b4ea0a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/B08-20260922T113624Z-qform11/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "8862602a14b6ba7d130ea06d018387bb2c278d1b",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B08/B08-20260922T113624Z-qform11.md"
+  },
+  "unresolved_implication": "QFORM-RANK3-HYBRID-HEAVY-LIGHT-v1",
+  "next_step": "Combine physical/coarea smoothing for leverage-heavy rows with Fourier-Brascamp-Lieb smoothing on a residual diffuse frame, preserving the product law and avoiding normalized conditional densities; then address extra small nonzero spectral directions separately.",
+  "full_target_status": "OPEN",
+  "full_brain_connected": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

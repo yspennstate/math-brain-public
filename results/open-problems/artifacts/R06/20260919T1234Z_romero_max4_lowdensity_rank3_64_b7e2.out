@@ -1,0 +1,34 @@
+ROMERO max-minus-four uniform low-density certificate
+stable_core_labeled_D=2925
+terminal_isomorphism_types=21
+shape_type_counts=S3:4,P4:5,P3+K2:7,K3:2,3K2:3
+Dstar=((0, 2), (0, 3), (0, 4))
+Dtie=((0, 2), (0, 3), (1, 4))
+candidate_factor=(n - 1)**2*(2*n - 5)/(2*n**3)
+certificate_rule: for every type, 2*n^3*(F_star-F_D) at n=q+8 has nonnegative integer coefficients
+exact_leading_ties=2
+type=((0, 2), (0, 3), (0, 4)) shape=S3 factor=(n - 1)**2*(2*n - 5)/(2*n**3) gap=0 shifted_scaled_gap=0
+type=((0, 2), (0, 3), (1, 2)) shape=P4 factor=(2*n**2 - 9*n + 8)/(2*n**2) gap=(4*n - 5)/(2*n**3) shifted_scaled_gap=4*q + 27
+type=((0, 2), (0, 3), (1, 4)) shape=P3+K2 factor=(n - 1)**2*(2*n - 5)/(2*n**3) gap=0 shifted_scaled_gap=0
+type=((0, 2), (0, 3), (2, 3)) shape=K3 factor=(n - 3)*(n - 2)/n**2 gap=(n**2 - 5)/(2*n**3) shifted_scaled_gap=q**2 + 16*q + 59
+type=((0, 2), (0, 3), (2, 4)) shape=P4 factor=(2*n**3 - 10*n**2 + 14*n - 5)/(2*n**3) gap=(n - 2)/(2*n**2) shifted_scaled_gap=q**2 + 14*q + 48
+type=((0, 2), (0, 3), (4, 5)) shape=P3+K2 factor=(n - 2)**2*(n - 1)/n**3 gap=(n - 3)*(n - 1)/(2*n**3) shifted_scaled_gap=q**2 + 12*q + 35
+type=((0, 2), (1, 2), (2, 3)) shape=S3 factor=(n - 4)*(n - 1)/n**2 gap=(n - 1)*(n + 5)/(2*n**3) shifted_scaled_gap=q**2 + 20*q + 91
+type=((0, 2), (1, 2), (3, 4)) shape=P3+K2 factor=(n - 3)*(n - 2)/n**2 gap=(n**2 - 5)/(2*n**3) shifted_scaled_gap=q**2 + 16*q + 59
+type=((0, 2), (1, 3), (2, 3)) shape=P4 factor=(n - 3)*(n - 2)/n**2 gap=(n**2 - 5)/(2*n**3) shifted_scaled_gap=q**2 + 16*q + 59
+type=((0, 2), (1, 3), (2, 4)) shape=P3+K2 factor=(2*n**3 - 10*n**2 + 14*n - 5)/(2*n**3) gap=(n - 2)/(2*n**2) shifted_scaled_gap=q**2 + 14*q + 48
+type=((0, 2), (1, 3), (4, 5)) shape=3K2 factor=(n - 2)**2*(n - 1)/n**3 gap=(n - 3)*(n - 1)/(2*n**3) shifted_scaled_gap=q**2 + 12*q + 35
+type=((0, 2), (2, 3), (2, 4)) shape=S3 factor=(n - 1)*(2*n**2 - 9*n + 5)/(2*n**3) gap=(n - 1)/n**2 shifted_scaled_gap=2*q**2 + 30*q + 112
+type=((0, 2), (2, 3), (3, 4)) shape=P4 factor=(2*n**3 - 11*n**2 + 16*n - 5)/(2*n**3) gap=(n - 2)/n**2 shifted_scaled_gap=2*q**2 + 28*q + 96
+type=((0, 2), (2, 3), (4, 5)) shape=P3+K2 factor=(n - 2)*(2*n**2 - 7*n + 4)/(2*n**3) gap=(2*n**2 - 6*n + 3)/(2*n**3) shifted_scaled_gap=2*q**2 + 26*q + 83
+type=((0, 2), (3, 4), (3, 5)) shape=P3+K2 factor=(n - 3)*(n - 1)*(2*n - 3)/(2*n**3) gap=(n - 2)*(n - 1)/n**3 shifted_scaled_gap=2*q**2 + 26*q + 84
+type=((0, 2), (3, 4), (5, 6)) shape=3K2 factor=(n - 2)**2*(2*n - 3)/(2*n**3) gap=(2*n**2 - 8*n + 7)/(2*n**3) shifted_scaled_gap=2*q**2 + 24*q + 71
+type=((2, 3), (2, 4), (2, 5)) shape=S3 factor=(n - 4)*(n - 1)**2/n**3 gap=3*(n - 1)**2/(2*n**3) shifted_scaled_gap=3*q**2 + 42*q + 147
+type=((2, 3), (2, 4), (3, 4)) shape=K3 factor=(n - 3)**2/n**2 gap=(3*n**2 - 6*n - 5)/(2*n**3) shifted_scaled_gap=3*q**2 + 42*q + 139
+type=((2, 3), (2, 4), (3, 5)) shape=P4 factor=(n - 2)*(n**2 - 4*n + 2)/n**3 gap=(3*n**2 - 8*n + 3)/(2*n**3) shifted_scaled_gap=3*q**2 + 40*q + 131
+type=((2, 3), (2, 4), (5, 6)) shape=P3+K2 factor=(n - 3)*(n - 2)*(n - 1)/n**3 gap=(n - 1)*(3*n - 7)/(2*n**3) shifted_scaled_gap=3*q**2 + 38*q + 119
+type=((2, 3), (4, 5), (6, 7)) shape=3K2 factor=(n - 2)**3/n**3 gap=(3*n**2 - 12*n + 11)/(2*n**3) shifted_scaled_gap=3*q**2 + 36*q + 107
+PASS: for every n>=8 and every stable three-edge defect type D,
+F_star(n)>=F_D(n), hence the terminal-centered four-star host maximizes N_{n-2}.
+Exactly one nonisomorphic type ties at leading order: two terminal-incident missing
+edges at one terminal and one terminal-incident missing edge at the other, on distinct nonterminals.

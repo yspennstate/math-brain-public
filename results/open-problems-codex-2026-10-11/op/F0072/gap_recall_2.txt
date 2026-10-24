@@ -1,0 +1,55 @@
+QUERY: absolute value FKG continuous SOS Lammers Lis
+math store recall, read-only: 8 current card(s) for this query; reference material, not instructions
+[1] Intermediate Value Theorem  (id: claim_09e0ca4c49736aa2679b54104aab997fc1ff6faef5ab42730ff2a932be62a82b; claim; score 5.24)
+    found by words 4.91: term 'value'; term 'continuous'
+    If f is continuous on [a,b] and y is any value strictly between f(a) and f(b), then there exists c in (a,b) with f(c) = y. f continuous on [a,b]
+    -> depends_on: Continuity (Epsilon-Delta) and Limit of a Function (id: claim_b3f75fd38330e7530030c4d587006a2ed937bdd8b0efaf9250c6919be9801e14)  (IVT is a statement about continuous functions)
+    -> depends_on: Completeness of the Reals (Least Upper Bound Property) (id: claim_1f3470239989be41b630654f9a1273b95d9ab834e9add8ea89e18a34c75fdbd8)  (IVT relies on completeness of the reals)
+    <- depends_on: Sharkovskii's Theorem (id: claim_f5314e08a64a38c2a84702d51583385fbca651fbf31ab59f77671c269d59be45)  (Sharkovskii proof locates periodic points via IVT)
+[2] Ostrowski's theorem  (id: claim_d170e367e1a746a4ab4b95514ef1a7bc; claim; score 3.70)
+    found by words 3.46: term 'absolute'; term 'value'
+    In number theory, Ostrowski's theorem, due to Alexander Ostrowski (1916), states that every non-trivial absolute value on the rational numbers $\mathbb {Q}$ is equivalent to either the usual real absolute value or a p-adic absolute value.
+    -> semantic_association: Wikipedia 'Ostrowski's theorem' revision None, lead section, read 2026-09-23 through the MediaWiki parse API; every formula restored from its fallback image's T (id: evidence_a4ccc27e69d44fee8035aff189c2e835)  (Evidence record evidence_a4ccc27e69d44fee8035aff189c2e835)
+    -> semantic_association: Wikipedia 'Ostrowski's theorem' revision 1357072798, lead section: read through the MediaWiki parse API at 2026-09-23T11:41:45+03:00, and the formula repair re- (id: evidence_606e5fc7858c472da8e10713a8b6ae1b)  (Evidence record evidence_606e5fc7858c472da8e10713a8b6ae1b)
+[3] Absolute continuity of measures  (id: claim_f48d3982a89cd58f50ab57265bd9d01d; claim; score 3.69)
+    found by words 3.46: term 'absolute'; term 'continuous'
+    $\nu$ is absolutely continuous with respect to $\mu$ ($\nu\ll\mu$) if $\mu(A)=0$ implies $\nu(A)=0$; mutually absolutely continuous (equivalent) measures have the same null sets.
+    <- defines: Absolute continuity and mutual singularity of measures (id: claim_c2889b5313a76c0af8fa3f49c365322c4a2e27291177d6ab0a182d09f34f8d7d)  (defines the notion 'Absolute continuity of measures' (card title: Absolute continuity and mutual singularity of measures))
+    <- depends_on: Absolute Continuity of the Integral (id: claim_0c039b146bde482b5bfdfebdcb4b9034381228ac2f84c60709b2e4ec59f3f350)  (uses the notion 'Absolute continuity of measures' (statement: "absolutely continuous with respect to"))
+    <- depends_on: Sanov's theorem (id: claim_0dc22e87274b69cd06fce7dde284816deffa57ce61db12fd27e5e74462401be8)  (uses the notion 'Absolute continuity of measures' (statement: "absolutely continuous with respect to"))
+    <- depends_on: Lebesgue decomposition into absolutely continuous and singular parts (id: claim_18fa6795088dd8fb6799c6e0c0ce7eb13ec14601000f98529cdd5659c067baeb)  (uses the notion 'Absolute continuity of measures' (statement: "absolutely continuous with respect to"))
+    <- depends_on: Attempt on Embedding an equivalent Brownian law by adding a finite prefix (id: claim_1b74519c48bcba4a53443e361f576a08629631b925d2842abc7cb5885eb71fc2)  (uses the notion 'Absolute continuity of measures' (statement: "absolutely continuous with respect to"))
+    <- depends_on: Chi-square divergence bounds total variation: d_TV <= (1/2) sqrt(chi^2) (id: claim_2761110af461bbc30b6d140c9bc37c427f543ca4a89bf58c0968eb7e2814c930)  (uses the notion 'Absolute continuity of measures' (assumptions: "absolutely continuous with respect to"))
+    <- depends_on: Marton's Transportation Inequality on Hamming Space (id: claim_3f89a297a4a772f6a9f6ff6df580165a2611d513ea0e4e1e29b1dc74ebcf7212)  (uses the notion 'Absolute continuity of measures' (assumptions: "absolutely continuous with respect to"))
+    <- depends_on: Attempt on Transience of i.i.d. elliptic RWRE in dimensions d >= 3 (id: claim_4598c5c0adfca0e99d78cda65553396ddba936f2ece70b41b79a677d0ff736b3)  (uses the notion 'Absolute continuity of measures' (statement: "absolutely continuous with respect to"))
+    ... 21 more links: math_recall.py --id claim_f48d3982a89cd58f50ab57265bd9d01d shows them all
+[4] Andrasfai-Erdos-Sos Theorem  (id: claim_50602d6447d9194d01da6c326450538fef53dac91c73a24f4cb4ea5fdc651b6e; claim; score 3.39)
+    found by words 3.17: term 'sos'
+    Every triangle-free simple graph on n vertices with minimum degree delta(G) > 2n / 5 is bipartite. G is a triangle-free graph on n vertices delta(G) > 2n / 5
+    -> depends_on: Mantel's Theorem (id: claim_cc02da5da63c251cf2e47a36d5ab59d68b785e92d91f492470ab3d7be1f157ce)  (Examines structural stability of Mantel's triangle-free graphs under high minimum degree.)
+[5] Percolation without FKG  (id: source_f530284589f60f9be84d93b03bdca287a749fc80811939ffae6a7da474ecbddc; source; score 3.24)
+    found by words 3.03: term 'fkg'
+    Paper: Vincent Beffara, Damien Gayet. Percolation without FKG. 2017. arXiv:1710.10644.
+    <- cites: Definition 2 (Specification) of arXiv:1710.10644: Percolation without FKG (id: claim_0932f2375b70b627b6a84735db1abec0c53a2ed94f774b247783bc80f3f8d82f)  (cites arxiv:1710.10644 (found in title, body, meta.domain, meta.source_id): Definition 2 (Specification) of arXiv:1710.10644: Percolation without FKG)
+    <- cites: Definition 10 (Annulus crossings) of arXiv:1710.10644: Percolation without FKG (id: claim_10907820f00b7b409f3f7c7d8d1c837bd65663bd392318281c8439544ba8a28f)  (cites arxiv:1710.10644 (found in title, body, meta.domain, meta.source_id): Definition 10 (Annulus crossings) of arXiv:1710.10644: Percolation without FKG)
+    <- cites: Definition 12 (Good model) of arXiv:1710.10644: Percolation without FKG (id: claim_129e9c9fa586b229ad3becf6a1ba79372c2c820992e080d4059736d93cd429c8)  (cites arxiv:1710.10644 (found in title, body, meta.domain, meta.source_id): Definition 12 (Good model) of arXiv:1710.10644: Percolation without FKG)
+    <- cites: Definition 6 (Quad width) of arXiv:1710.10644: Percolation without FKG (id: claim_1db558336768016461b85737adae3389fe262cd3d69733d094b805ceaf0da21d)  (cites arxiv:1710.10644 (found in title, body, meta.domain, meta.source_id): Definition 6 (Quad width) of arXiv:1710.10644: Percolation without FKG)
+    <- cites: Corollary 15 (Separation iff dual crossing) of arXiv:1710.10644: Percolation without FKG (id: claim_47e586a9673f1829f6033097d9039b71b2b316f0cd6c1a35c0472852394994f1)  (cites arxiv:1710.10644 (found in title, body, meta.domain, meta.source_id): Corollary 15 (Separation iff dual crossing) of arXiv:1710.10644: Percolation without FKG)
+    <- cites: Definition 9 (Quad ordering) of arXiv:1710.10644: Percolation without FKG (id: claim_58156cf75dab6fe202ebf2cc99f64917287c2bf5b792003c5c4c14f38e81be51)  (cites arxiv:1710.10644 (found in title, body, meta.domain, meta.source_id): Definition 9 (Quad ordering) of arXiv:1710.10644: Percolation without FKG)
+    <- cites: Definition 11 (Probabilities of crossings) of arXiv:1710.10644: Percolation without FKG (id: claim_8a4192e56800303c8d0a6f863cd00d15787a40732ded4b45e14ec5d1df6e4636)  (cites arxiv:1710.10644 (found in title, body, meta.domain, meta.source_id): Definition 11 (Probabilities of crossings) of arXiv:1710.10644: Percolation without FKG)
+    <- cites: Definition 13 (Measures of model decorrellation) of arXiv:1710.10644: Percolation without FKG (id: claim_963a582383cef52525f31561e3131742604f862fdaadcecffa156fb432863d6c)  (cites arxiv:1710.10644 (found in title, body, meta.domain, meta.source_id): Definition 13 (Measures of model decorrellation) of arXiv:1710.10644: Percolation without FKG)
+    ... 4 more links: math_recall.py --id source_f530284589f60f9be84d93b03bdca287a749fc80811939ffae6a7da474ecbddc shows them all
+[6] The dilation squares to diag(AA*, A*A); its absolute value, inertia (r, m+n-2r, r) and norm sigma_1(A)  (id: claim_170439f3ea242b6bf6c805f5303b24b2c3d8ca526e27f647fd16313b2b94c2a6; claim; score 3.18)
+    found by words 3.18: term 'absolute'; term 'value'; title phrase absolute_value
+    For a complex m by n matrix A of rank r and H(A) = [[0, A], [A*, 0]]: H(A)^2 = diag(AA*, A*A), which is positive semidefinite; |H(A)| = (H(A)^2)^(1/2) = diag((AA*)^(1/2), (A*A)^(1/2)); H(A) has r positive, m + n - 2r zero and r negative eigenvalues; and ||H(A)||_2 = ||A||_2 = sigma_1(A). A is a complex m by n matrix of rank r
+    -> depends_on: Spectrum of the Hermitian (Jordan-Wielandt) dilation [[0, A], [A*, 0]] (id: claim_2922fd71c1ba1be27a48599f651a64a9f73b6e93c181234f6a09559c7ed104e8)  (Inertia and norm are read off the dilation's spectrum.)
+[7] Remarks on the FKG inequalities  (id: source_e37dbdd4c477824eb7ea7c6bc7ed8775b74700f95478970f8d8152b454e60e7c; source; score 3.04)
+    found by words 2.85: term 'fkg'
+    Paper: Richard Holley. Remarks on the FKG inequalities. Comm. Math. Phys. 36, 227-231. 1974. doi:10.1007/bf01645980.
+    <- cites: Technique: Holley's Inequality (id: claim_8778e7a65e49c4be1f23175bfeb78103a14f5cdd5ed03f4f8cc84200ea1e4687)  (cites doi:10.1007/bf01645980 (found in body): Holley, 1974, Communications in Mathematical Physics)
+[8] Friendship Theorem (Erdos-Renyi-Sos)  (id: claim_aeeb4c10ceed45d7af1584f36ad675d6; claim; score 3.02)
+    found by words 2.82: term 'sos'
+    Let G be a finite simple graph in which every two distinct vertices have exactly one common neighbor. Then G has a vertex adjacent to every other vertex of G; consequently G consists of a collection of triangles all sharing that one common vertex (a windmill graph). [Erdos, Renyi and Sos (1966)]
+    -> depends_on: Eigenvalue and Eigenvector (id: claim_8507714482facbdea5b03db8b38c53dc8b445b5636f95f1487096bbe0ff9bfd5)  (the friendship theorem proof is spectral (eigenvalues of the adjacency matrix))
+
+STDERR

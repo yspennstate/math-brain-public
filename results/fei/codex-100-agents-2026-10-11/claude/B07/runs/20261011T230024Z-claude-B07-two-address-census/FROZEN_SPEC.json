@@ -1,0 +1,16 @@
+{
+  "frozen_at_utc": "20261011T230024Z",
+  "author": "claude-B07-lead",
+  "purpose": "Exact checks for B07: (P1) independent re-derivation of A032's ten-atom coupled-phase obstruction and of its n=4 pattern count; (P2) exhaustive n<=4 check of A032's uniform-affine/even-rank admission; (P3) the generic min-entropy inequality p_max(H-H_inf)^2<=(1-p_max)Var_p(ell) evaluated on n-bit point defects; (P4) exhaustive census of two-address conditional-product Boolean functions in N=4 and N=5 variables, plus exact verification of the six-variable 40/17 witness.",
+  "families": {
+    "P1": "magnitudes (8,8,4,4,4,4,4,4,4,4,0,0,0,0,0,0) on n=4; all 1024 vertex sign vectors; all 65536 Boolean truth tables on 4 bits",
+    "P2": "all Boolean truth tables for n=1,2,3,4",
+    "P3": "f=1-2*1{x=x0}, n=3..40, closed forms; A031 anchor quantities by float FWHT for n=3..14 (illustration only)",
+    "P4": "F(y1,y2,x) Boolean, x in {+-1}^n, n=2,3; address = the two y coordinates (WLOG by coordinate permutation); every slice g_J=(1/4)sum_y chi_J(y)F(y,.) with positive mass must have product normalized squared spectrum"
+  },
+  "symmetry": "P4 fixes the address pair as the first two coordinates; this is without loss of generality for maxima over (F, address pair) because coordinate permutations preserve H and I. No other symmetry reduction.",
+  "arithmetic": "integer Walsh transforms; product test c_T*Z^(n-1)==prod_i marginal counts in integers; entropy inequalities H<=(a/b)I decided exactly by comparing integers Ztot^(b*Ztot) and 2^(a*sum|S|C)*prod C^(b*C); floats only for ranking and illustration",
+  "memory_estimate_MB": 200,
+  "max_runtime_seconds": 900,
+  "no_automatic_dimension_escalation": true
+}

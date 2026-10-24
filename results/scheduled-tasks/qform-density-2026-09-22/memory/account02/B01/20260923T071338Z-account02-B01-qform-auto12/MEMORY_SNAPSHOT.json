@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B01",
+  "run_id": "20260923T071338Z-account02-B01-qform-auto12",
+  "source_snapshot": {
+    "brain_control_commit": "5249736fdc2deed4829454ca559271695b3e9a54",
+    "control_revision": "2026-09-22.15",
+    "required_claude_pin": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "latest_partner_math_commit": "e37f094a72721e92fa82334f3b55ee4dd6d6695b",
+    "latest_partner_handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B01/account03-B01-20260923T065657Z-auto11-detarea.md",
+    "canonical_math_commit": "4a5bd4766e2a53a748c780160dad3ff93cfb48cb",
+    "canonical_math_dir": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260923T071338Z-account02-B01-qform-auto12/",
+    "handoff_commit": "ee22c4a8e32c191826c23480b0752f264e3ea86a"
+  },
+  "status": "KERNEL_COFACTOR_SYNCHRONIZATION + TWO_HUB_AND_DETAREA_APPLICATION / FULL_TARGET_OPEN",
+  "proved": [
+    {
+      "claim": "QFORM-KERNEL-COFACTOR-SYNCHRONIZATION-v1",
+      "statement": "For a 3-coordinate symmetric center B and rank-two cross block K with unit v spanning ker K^T and Bv=0, adj(B)=c vv^T and adj(KK^T)=Delta^2 vv^T. Thus det B_hatk=c v_k^2 and det(K_hatk K_hatk^T)=Delta^2 v_k^2 for every deletion k; one physical pair simultaneously carries at least |c|/3 self determinant and Delta/sqrt(3) cross area."
+    },
+    {
+      "claim": "QFORM-KERNEL-ALIGNED-N3-STRESS-FAMILY-v1",
+      "statement": "The family A=[[eps u1u1^T+delta vv^T, U V_m^T],[V_m U^T,0]] has at least three eigenvalues of modulus >=1, enters strict N3 for small eps,delta and large m, has local partner d=delta,g=0, yet is uniformly controlled by source Theorem H (<5.265) and by the newest account03/B01 determinant-area receiver (<=2sqrt(pi)<3.545)."
+    }
+  ],
+  "partner_application": {
+    "latest": "QFORM-CROSS-2AREA-AFFINE-RECEIVER-v1",
+    "bound_on_stress_family": "2sqrt(pi)=3.5449077018...",
+    "predecessor_comparison": "The earlier logarithmic transverse receiver gives (135e/32)[4+log_+(1/delta)] and is certificate-nonuniform as delta->0 on the same target-valid family."
+  },
+  "required_claude_application": {
+    "result": "Theorem H, two physical hubs with diagonal leaf self block",
+    "bound": "4*3^(1/4) Delta^(-1/2) on the synchronized pair when the full rank-two leaf bank is active and leverage<=1/2",
+    "pointwise_scalar_decay_used": false
+  },
+  "first_unpaid_implication": "QFORM-KERNEL-COFACTOR-TO-TWO-SIDED-CURVED-ROUTING-v1: at Bv=0 in strict N3, route the synchronized physical pair and surviving cross area to the one-sided-affine determinant-area receiver, Theorem-H diagonal/low-rank leaf receiver, or another paid packet; the residual is substantial nonlinear curvature on both active banks with no product-preserving exit.",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN in full target; only scoped source branches provide continuity where stated",
+  "independent_reviews": 0,
+  "full_brain_connected": false,
+  "without_verified_brain": true,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_tokens": null,
+  "provider_thinking_time": null
+}

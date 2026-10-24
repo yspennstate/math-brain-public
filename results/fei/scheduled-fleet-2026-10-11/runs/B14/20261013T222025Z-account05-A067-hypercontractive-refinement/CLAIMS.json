@@ -1,0 +1,327 @@
+[
+  {
+    "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+    "version": 2,
+    "exact_statement": "For every Boolean sign on a finite uniform cube, with natural logarithms, K=(H_nat-p_empty ln(1/p_empty))/2=integral J, every physical block B obeys 2[K(f)-E_y K(f_y)]=M_B^++C_B^++ell_B. q_T=sum_{U subset B}p_{U union T}=E_y p_y(T), M_T=sum_U p_{U union T}ln(q_T/p_{U union T}), C_T=E_y p_y(T)ln(p_y(T)/q_T), plus omits T=empty, and ell_B=sum_{nonempty U subset B}p_U ln(1/p_U); all terms nonnegative. This identity telescopes for every finite adaptive block-query tree with terminal K retained. ONLY for singleton-query trees, the cumulative paid channel-plus-level charge is <=beta[I(root)-E I(leaf)], beta=2+2/e^2, because C_i^+<=2(Inf_i-p_{i}) and |hat f({i})|<=Inf_i. No such price is asserted for arbitrary block-query trees. Also 0<=B_nat-R_nat<=(1+2/e)I; R_nat=sum_i M_i^+, B_nat=sum_i H_nat(S_i|S_without_i). For F_m=y product_j g(x^(j)) on disjoint copies, R_nat(F_m)=m B_nat(g), I(F_m)=m I(g)+1. Hence the optimal universal constants for R_nat/I and B_nat/I coincide. A universal R_nat<=A I implies FEI bits constant (A+2)/ln2 via C018; A remains unproved.",
+    "hypotheses": [
+      "Finite uniform cube; Boolean outputs in {-1,1}",
+      "Natural logarithms; zero-mass log terms vanish",
+      "Actual physical restrictions; influence prices only for singleton queries unless explicit D_ref retained",
+      "Finite trees; terminal K retained"
+    ],
+    "statement_sha256": "f4e17fe2ea1958f354c32e260e8ffc5a5ae95c5c61abab893f0c307994216644",
+    "contributors": [
+      "account05/A066",
+      "account05/A088 (v1 scope objection and countercertificate; no acceptance of v2 asserted)"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261013T215841Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+        "version": 1,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+        "acceptance_scope": "Prior source-bound A067/A088 acceptance; finite-cube endpoint integrability and identity only."
+      },
+      {
+        "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+        "version": 1,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T233317Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+        "acceptance_scope": "Only sections 1-3 all-block identity, singleton proofs, and exact character/tensor admission. Unqualified serialized block-tree price rejected; replaced by v2."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A088",
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261012T024518Z-account05-A088-booleanity-referee\\REPORT.md",
+        "reviewed_version": 1,
+        "verdict": "GAP_SCOPE_CLARIFICATION on v1; singleton components valid; new v2 not yet reviewed"
+      },
+      {
+        "reviewer": "account05/A067",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261013T222025Z-account05-A067-hypercontractive-refinement\\REVIEW_AND_CORRECTIONS.md",
+        "method": "Independent row-entropy, scalar joint-budget, finite-refinement, coupling and projection-operator reconstructions. Original statement/hypotheses/hash preserved.",
+        "registry_adoption": "PENDING_B20"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT",
+    "supersedes": [
+      {
+        "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+        "version": 1
+      }
+    ],
+    "refutes": [
+      {
+        "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+        "version": 1,
+        "scope": "Serialized unqualified cumulative channel-plus-level <=(2+2/e) influence drop for all block-query trees",
+        "witness": "n128 Boolean point defect, whole relevant block; proper-block variant by dummy coordinate",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261013T215841Z-account05-A066-semigroup-dissipation\\out\\CHECK_FULL.json"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B14",
+      "A067",
+      "A070",
+      "A064",
+      "A088",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A066-BLOCK-REFINEMENT-HEAT-TRANSFER",
+    "version": 1,
+    "exact_statement": "For every Boolean sign and physical block B, any singleton refinement querying exactly B with the same actual children satisfies C_B^++ell_B=P_ref+D_ref, D_ref=R_ref-M_B^+, where R_ref=sum_internal w M_i^+ and P_ref=sum_internal w(C_i^++ell_i)<= (2+2/e^2)I_B. D_ref is signed and must be retained in any block-tree payment. For f_n=1-2 indicator of one vertex, I=n2^(1-n), q=2^-n, whole-cube block M_B^+=C_B^+=0, ell_B/I=4(1-1/n)(1-q)ln2. A complete singleton refinement has R_ref/I=C_ref^+/I=[2-(4/n)(1-q)]ln2, L_ref/I=(4/n)[1-(n+1)q]ln2, P_ref/I=2(1-2q)ln2. Thus the block price tends to 4ln2, refined paid price to 2ln2, and retained transfer to 2ln2. At n=128, ell_B/I>11/4>2+2/e; appending an irrelevant coordinate produces the same obstruction with B a proper ambient subset. No universal price of the retained transfer is asserted.",
+    "hypotheses": [
+      "Finite uniform cube; Boolean outputs in {-1,1}",
+      "Natural logarithms; zero-mass log terms vanish",
+      "Actual physical restrictions; influence prices only for singleton queries unless explicit D_ref retained",
+      "Finite trees; terminal K retained"
+    ],
+    "statement_sha256": "93233016c30b4eaee35cf35d050fb05743b386e9d130e0e784ad8aafa8f8b335",
+    "contributors": [
+      "account05/A066"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261013T215841Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+        "version": 2,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261013T215841Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+        "acceptance_scope": "Author-proved; pending independent review"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "account05/A067",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261013T222025Z-account05-A067-hypercontractive-refinement\\REVIEW_AND_CORRECTIONS.md",
+        "method": "Independent row-entropy, scalar joint-budget, finite-refinement, coupling and projection-operator reconstructions. Original statement/hypotheses/hash preserved.",
+        "registry_adoption": "PENDING_B20"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT",
+    "supersedes": [],
+    "refutes": [
+      {
+        "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+        "version": 1,
+        "scope": "Serialized unqualified cumulative channel-plus-level <=(2+2/e) influence drop for all block-query trees",
+        "witness": "n128 Boolean point defect, whole relevant block; proper-block variant by dummy coordinate",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261013T215841Z-account05-A066-semigroup-dissipation\\out\\CHECK_FULL.json"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B14",
+      "A067",
+      "A070",
+      "A064",
+      "A088",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "B14-LEAD-POINT-DEFECT-NEUTRALIZATION",
+    "version": 2,
+    "exact_statement": "For every Boolean sign f on n>=0 uniform bits, every integer N>n with N>=2 and every input x0, put delta=2^-N and g_N=f(x_1,...,x_n)(1-2*1{x=x0}). Then ghat_N(S)=fhat(S)1{S subset [n]}-2delta f(x0)chi_S(x0); every coefficient is nonzero, so every character anchor has top coefficient nonzero and d=N on all sets. U(g_N)=N Var(g_N)-I(g_N), each physical coordinate influence changes by at most 2delta, and ||p(g_N)-p(f)||_1<=4delta(2^(n/2)+1). Put eta=min(2delta(2^(n/2)+1),1-2^-N). Then |H(g_N)-H(f)|<=h2(eta)+eta log2(2^N-1). For every fixed nonconstant seed, H and I converge to seed values and U/I diverges. For any nonnegative support weight psi with max_s psi(s,N)=o(2^N), its edited expectation on nonempty atoms minus sum_nonempty fhat(S)^2 psi(|S|,N) tends to zero. FEI with a fixed constant on this corrected padded-edited class implies FEI with the same constant on every Boolean seed; constants are handled separately.",
+    "hypotheses": [
+      "Uniform probability measure; Boolean outputs in {-1,1}; entropy in bits",
+      "n>=0, N>n, N>=2; seed fixed in every limiting statement",
+      "d_g(S)=max degree of a supported superset; U sums over nonempty positive Fourier masses",
+      "The entropy-continuity cap uses monotonicity below 1-1/2^N and the global N-bit entropy bound above it",
+      "The support-weight statement requires nonnegative psi and max_s psi(s,N)=o(2^N)"
+    ],
+    "statement_sha256": "96787d5a41dca47e724296e2913418019a83d79cde34aade7c723599ef17eb5c",
+    "contributors": [
+      "Claude B14 lead: original valid asymptotic theorem",
+      "account05/A070: boundary/domain repair; recused from independent acceptance",
+      "account05/A067: earlier identification of eps-domain caveat"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261013T212602Z-account05-A070-analytic-route-referee\\DERIVATION.md Section 1",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A067",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261013T222025Z-account05-A067-hypercontractive-refinement\\REVIEW_AND_CORRECTIONS.md",
+        "method": "Independent row-entropy, scalar joint-budget, finite-refinement, coupling and projection-operator reconstructions. Original statement/hypotheses/hash preserved.",
+        "registry_adoption": "PENDING_B20"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT",
+    "supersedes": [
+      {
+        "claim_id": "B14-LEAD-POINT-DEFECT-NEUTRALIZATION",
+        "version": 1,
+        "scope": "Corrects only small-dimension anchor and entropy-domain scope; asymptotic mechanism unchanged"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A088",
+      "A094",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A070-TWO-EDIT-PROJECTION-CROSS-LEDGER",
+    "version": 1,
+    "exact_statement": "For any fixed singleton-leaf partition tree with internal cells C_v and child arities b_v, put L(S)=1+sum_v b_v*1{S meets C_v} and <u,v>_L=sum_S uhat(S)vhat(S)L(S). For arbitrary real u,v, <u,v>_L=(1+sum_v b_v)E[uv]-sum_v b_v E[(E[u|C_v^c])(E[v|C_v^c])]. For distinct one-point Boolean edits e_x=-2g(x)1{X=x}, e_y=-2g(y)1{X=y}, the cross is -4g(x)g(y)2^(-2N)sum_v b_v*2^(N-|C_v|)*1{x,y agree outside C_v}. It can be positive despite disjoint physical edit supports: the two-bit x1 seed with edits (+,+),(-,+) gives cross=1/2, individual energies 5/2 and combined energy 6. Moreover for any Boolean core h on a nonempty Y, let g=x1*h(Y), Z={x1,x2}, and join the binary Z tree and any binary Y tree under a binary root. Disjoint proper subcube edits D1={x1=+,x2=+},D2={x1=-,x2=+} have cross=(1+(Eh)^2)/2>=1/2. Their final sign is f=-x1*x2*h, with Gamma(f)=Gamma(g)=5+E_(S_h)W_Y, H(f)=H(g)=H(h), and I(f)=I(g)+1. Thus no finite physical-intersection-density-only bound controls the signed or absolute edit cross; the exact source/edit rebate and retained-core cost cannot be discarded.",
+    "hypotheses": [
+      "Uniform finite cubes; code lengths/energies in bits; partition tree fixed before observing frequency sample",
+      "General projection identity requires only real u,v; Boolean signs are required for the physical edit witnesses and influence statements",
+      "Proper-subcube family keeps Y nonempty and arbitrary Boolean h; W_Y is the whole Y subtree mask bill, not assumed paid",
+      "Sequential overlapping flips have final difference e1+e2-2e12; union-once edits instead have e1+e2-e12",
+      "This is an exact transport/refutation interface, not a universal Gamma<=K I theorem"
+    ],
+    "statement_sha256": "7f7a1fd4055d75c327ccc004c10a78c772172353afbe7011c5c307731dd75890",
+    "contributors": [
+      "account05/A070"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261013T212602Z-account05-A070-analytic-route-referee\\DERIVATION.md Section 4",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account05/A067",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261013T222025Z-account05-A067-hypercontractive-refinement\\REVIEW_AND_CORRECTIONS.md",
+        "method": "Independent row-entropy, scalar joint-budget, finite-refinement, coupling and projection-operator reconstructions. Original statement/hypotheses/hash preserved.",
+        "registry_adoption": "PENDING_B20"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT",
+    "supersedes": [],
+    "refutes": [
+      "Hypothetical universal <e1,e2>_L<=K P(D1 intersection D2) or absolute-value variant; no registered A069 theorem asserted this"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A069",
+      "A067",
+      "A088",
+      "A094",
+      "B05",
+      "B13",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f on a finite uniform cube and physical block B, K(f)=integral J_f=(H_nat(f)-p_empty ln(1/p_empty))/2 obeys 2[K(f)-E_y K(f_y)]=M_B^+ + C_B^+ + ell_B, where q_T=sum_{U subset B}p_{U union T}=E_y p_y(T), M_T=sum_U p_{U union T}ln(q_T/p_{U union T}), C_T=E_y p_y(T)ln(p_y(T)/q_T), plus omits T=empty, and ell_B=sum_{nonempty U subset B}p_U ln(1/p_U). All three terms are nonnegative. For B={i}, C_i^+<=2 Inf_i and ell_i<=(2/e)Inf_i. The identity telescopes in every finite physical stopping tree, with retained terminal K and cumulative channel-plus-level cost <=(2+2/e)[I(f)-E I(leaf)]. If R_nat=sum_i M_i^+ and B_nat=sum_i H_nat(S_i|S_without_i), then 0<=B_nat-R_nat<=(1+2/e)I. Moreover R_nat(y product_{j=1}^m g(x^(j)))=m B_nat(g) and I=m I(g)+1, so the optimal universal constants for R_nat/I and B_nat/I are equal. A universal R_nat<=A I implies FEI in bits with constant (A+2)/ln2 via C018; no such A is proved here.",
+    "hypotheses": [
+      "Finite uniform cube; Boolean outputs in {-1,1}",
+      "Natural logarithms; entropy bits = nats/ln2",
+      "Zero-mass log terms vanish",
+      "Physical restrictions and actual coherent child Fourier coefficients"
+    ],
+    "statement_sha256": "91cb0a1f21648d5372e658f92219b45f224f832a7e835cebff58f0143f5fc5bb",
+    "contributors": [
+      "account05/A066"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T233317Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+        "version": 1,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-account05-A066-semigroup-dissipation\\DERIVATION.md",
+        "acceptance_scope": "Source-bound independent A067 and A088 acceptance at stated scope; central adoption not asserted"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "account05/A067",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261012T004014Z-account05-A067-hypercontractive-refinement\\REVIEW_B14_QUEUE.md",
+        "scope": "Independent analytic reconstruction; no central registry adoption asserted."
+      },
+      {
+        "reviewer": "account05/A067",
+        "verdict": "RETRACT_UNQUALIFIED_ALL_BLOCK_ACCEPTANCE; ACCEPT_SINGLETON_COMPONENT_ONLY",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261013T222025Z-account05-A067-hypercontractive-refinement\\REVIEW_AND_CORRECTIONS.md",
+        "witness": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261013T222025Z-account05-A067-hypercontractive-refinement\\out\\CHECK_FULL.json",
+        "supplied_source_repair": false,
+        "replacement": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER v2; all-block identity and signed transfer retained"
+      }
+    ],
+    "status": "GAP_SCOPE_UNQUALIFIED_BLOCK_TREE_BUDGET; SINGLETON_COMPONENT_VALID",
+    "supersedes": [],
+    "refutes": [
+      "Channel-only restriction heat payment; refuted by majority calibration in second claim"
+    ],
+    "first_unproved_line": "Unqualified cumulative channel-plus-level price on every finite physical block-query tree; n128 point-defect whole-cube tree has rate >11/4>2+2/e.",
+    "next_consumers": [
+      "A067",
+      "A070",
+      "A064",
+      "A088",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A067-BOUNDED-FIBER-TWO-EVENT-ACCESS-RESERVE",
+    "version": 1,
+    "exact_statement": "For every Boolean seed g on m>=0 uniform core coordinates X, r control coordinates Z, and final physical edit mask E, put F(x,z)=g(x)(-1)^1_E(x,z). Assume every core fiber E_x has at most k assignments, k>=1 and k2^-r<=1/4. Let I_Z and I_X be the final F control/core influence sums, and Q=H(F)-E_z H(F_z), with entropy in bits. Then Q <= K I_Z+2 I_X, K=4r/(r-log2 k)+2/ln2. The core reserve is allocated once to the combined mask; I_X(F)>=I_X(1-2*1_E)>=2 P(E)log2(1/P_X(E_x nonempty)). Empty edit sets have Q=I_Z=0. In particular k=1,r>=2 gives K=4+2/ln2 and k=2,r>=3 gives K<=6+2/ln2. Two graph-controlled events with arbitrary shared core/domains/control maps have <=2 assignments per fiber after either XOR or union-once editing. Every complete physical control-reveal tree has this access price and retains all actual core leaves. If every complete leaf satisfies U<=bI, b>=0, the reviewed local granularity certificate gives H(F)<=max(K,4+2b)I(F). For earlier control-only stopping trees with U-certified leaves, the valid bound is H(F)<=(K+2+2b)I(F), retaining remaining control influence. No arbitrary core-leaf admission is asserted. Dropping the sparse-fiber cap invalidates the ownership inequality: g=(-1)^x and E={(0,0),(1,1)} on one core and one control bit give I_X(F)=0<I_X(1-2*1_E)=1.",
+    "hypotheses": [
+      "Actual Boolean signs on finite uniform cubes; entropy in bits; standard physical pivotal influence.",
+      "The seed g is independent of the r control coordinates; the edit mask is the actual final physical XOR or union mask.",
+      "Every fiber has cardinality <=k and k2^-r<=1/4; this implies r>=2 and r-log2 k>0.",
+      "The full access tree exposes every control and retains the exact actual core restrictions; its reserve is not renewed at descendants.",
+      "The U conditions are hypotheses for terminal entropy payment, not consequences of the access bound."
+    ],
+    "statement_sha256": "bff928c14877300aff73932ed9c66ba2a6c57b4ad6fc101b08283a88bccd8f25",
+    "contributors": [
+      "account05/A067"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261013T222025Z-account05-A067-hypercontractive-refinement\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A067-LOCAL-BOOLEAN-GRANULARITY",
+        "version": 1,
+        "acceptance_scope": "Independent A088/A070 acceptance at stated scope; needed only for conditional U-leaf corollaries, not the main access payment.",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-account05-A067-hypercontractive-refinement\\CLAIMS.json"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACT_CERTIFICATES_PASSED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A069",
+      "A061",
+      "A064",
+      "B05",
+      "B06",
+      "B13",
+      "B14",
+      "B20"
+    ]
+  }
+]

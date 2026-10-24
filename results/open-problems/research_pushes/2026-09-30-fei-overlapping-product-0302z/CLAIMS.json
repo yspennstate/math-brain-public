@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-30T03:02:00Z",
+  "full_FEI": "OPEN",
+  "claims": [
+    {
+      "id": "FEI-OVERLAPPING-PRODUCT-ENTROPY-NOGO-20260930",
+      "status": "PROVED_COUNTEREXAMPLE",
+      "rejected_statement": "H(fg)<=H(f)+H(g) for arbitrary Boolean functions sharing variables",
+      "proof": "REPORT.md Sections 1-2",
+      "evidence": "Seven-variable explicit truth table and eleven-variable shared rare-clause construction, full integer Walsh checks and rational-log intervals",
+      "exact_consequences": [
+        "A single-point flip can increase H by more than the entropy of a single-point defect",
+        "No dimension-independent additive constant repairs the all-dimensional overlapping-product subadditivity assertion, by disjoint tensor amplification"
+      ],
+      "not_refuted": [
+        "FEI",
+        "disjoint-variable entropy additivity",
+        "translation-averaged product entropy subadditivity",
+        "multiplicative-constant or other/global influence-dependent corrected statements; the actual-pivotal-overlap correction is separately refuted below"
+      ],
+      "attribution": "Broad no-go and n11 witness recovered from Sept20; n7 singlepoint witness is a distinct certificate with novelty unverified."
+    },
+    {
+      "id": "FEI-TWO-INPUT-TRANSLATION-LEDGER-20260930",
+      "status": "PROVED_RETAINED_IDENTITY",
+      "statement": "H(f)+H(g)-E_z H(f g(.+z))=H(S|S xor T)+I(U;Z), with 0<=I(U;Z)<=H(S|S xor T)",
+      "attribution": "Two-input form of the archived self-derivative uncertainty argument; no novelty claim",
+      "proof": "REPORT.md Section 3",
+      "verification": "All 128 translated spectra and seven influence coordinates of the explicit witness checked exactly",
+      "remaining_obligation": "No justified uniformly affordable adaptive choice or reconstruction rule is supplied"
+    },
+    {
+      "id": "FEI-BOUNDED-OVERLAP-ENTROPY-REPAIR-20260930",
+      "status": "PROVED_RESTRICTED_BOUND",
+      "statement": "If f,g share at most k physical coordinates and otherwise have disjoint supports, H(fg)<=H(f)+H(g)+2k",
+      "proof": "REPORT.md Section 3, bounded-overlap repair",
+      "attribution": "Direct consequence of standard restriction B+JS ledger; no novelty claim",
+      "remaining_obligation": "k is not bounded by influence uniformly, so this is not full FEI"
+    },
+    {
+      "id": "FEI-PRODUCT-PIVOTAL-OVERLAP-NOGO-20260930",
+      "status": "PROVED_OBSTRUCTION",
+      "statement": "No finite C makes H(fg)<=H(f)+H(g)+C[I(f)+I(g)-I(fg)] universal",
+      "proof": "REPORT.md equation (2.6), using the source-credited rare-clause family and newly displayed asymptotic",
+      "scope": "Actual common-pivotal-overlap budget only; no other influence correction or FEI is refuted"
+    }
+  ],
+  "verification_scope": "analytic constructions and exact finite self-check; no independent review or formalization",
+  "publication_novelty": "UNVERIFIED",
+  "minimal_dimension": "UNVERIFIED",
+  "attribution_correction": "2026-09-30T03:06Z: the n11 rare-clause counterexample and broad product no-go were already proved by Sept20 directional-compression Section7; independently rediscovered here, not new."
+}

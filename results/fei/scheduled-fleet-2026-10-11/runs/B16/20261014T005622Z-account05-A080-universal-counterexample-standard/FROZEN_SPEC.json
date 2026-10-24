@@ -1,0 +1,11 @@
+{
+ "helper_version":"A080-signed-f6-orbit-v1",
+ "actual_Boolean_family":"h negative on {0,1,2,4,8,16,32,6,17,40}; seed g0=h; g_(r+1)=h(sigma_r*g_r in six disjoint copies), sigma chosen by exact minority threshold 7/32 for the first three levels; at level three audit both next signs",
+ "domain":"Pilot seed plus one composition. Full seed, three prescribed compositions, and both fourth-level sign choices; no further levels.",
+ "case_count":{"pilot":2,"full":6},
+ "symmetry":"Matched-pair swaps and permutations act transitively on the six gate inputs; identical disjoint cores recursively give transitivity on every physical coordinate. Output signs are retained.",
+ "arithmetic":"Integer Walsh seed, Fraction biased conditional-section packets, certified base-2 logarithm intervals via 32-term positive atanh expansion, outward 2^-80 output rounding and 2^-128 z brackets. Compressed exact composition, including full H(g), terminal C_p and physical I.",
+ "memory_estimate_MB":100,
+ "maximum_runtime_seconds":{"pilot":60,"full":180},
+ "target":"Check whether a legitimately reached actual high-E core enters minority bias below 1/16, and whether both next signs have negative reserve. Finite bounded ratios are not FEI disproofs. Prove rare-sector absorption analytically."
+}

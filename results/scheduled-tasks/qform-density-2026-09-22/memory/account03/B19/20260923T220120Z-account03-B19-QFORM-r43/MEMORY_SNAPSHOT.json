@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B19",
+  "run_id": "20260923T220120Z-account03-B19-QFORM-r43",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "source_control_commit": "51b537ed05163aaabf18632886e57f6267896c17",
+  "owner_control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "native_brain_ingestion_verified": false,
+  "mathematical_status": "NEW_TARGET_LEVEL_PRINCIPAL_MINIMAL_REDUCTION_FULL_TARGET_OPEN",
+  "new_claims": [
+    {
+      "id": "QFORM-PRINCIPAL-MINIMAL-INDUCTIVE-REDUCTION-v1",
+      "status": "PROVED_TARGET_LEVEL_REDUCTION",
+      "scope": "Affine-strengthened QFORM. A uniform interval-density constant on matrices with N_A(1)>=3 and every proper original-coordinate principal submatrix having N<=2 implies the same constant for all dimensions, by exact original-coordinate conditioning and strong induction with no constant loss."
+    },
+    {
+      "id": "QFORM-PRINCIPAL-MINIMAL-SPECTRAL-COUNT-v1",
+      "status": "PROVED_STRUCTURAL_COROLLARY",
+      "scope": "Every principal-minimal target has N_A(1)=3 or 4; count four must have mixed signs. Matrices with at least five threshold-large eigenvalues, or four all of one sign, are dimension-reducible by Cauchy interlacing."
+    }
+  ],
+  "premises": [
+    {
+      "name": "account03/B20 r39 finite-core pairwise-weak closure",
+      "source": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B20/20260923T214857Z-account03-B20-QFORM-r39/REPORT.md",
+      "scope_used": "Unpaid finite-core state has |H|<=124, H-self within 0.000370786548 of rank<=2, H-L cross within 1/64 of rank<=2, yielding rank<=6 carrier plus retained error <0.015995786548 over exact A[L,L]."
+    },
+    {
+      "name": "Cauchy eigenvalue interlacing",
+      "source": "standard linear algebra",
+      "scope_used": "For one-coordinate principal deletion, positive threshold count falls by at most one and negative threshold count falls by at most one."
+    }
+  ],
+  "designated_partner_applied": {
+    "account": "account04",
+    "slot": "B19",
+    "source": "yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a:proofnet24/QFORM-density/fleet-2026-09-22/account04/B19/20260922T222052Z-account04-B19-QFORM-r2/REPORT.md",
+    "actual_inequality": "In the theorem's exact residual-diffuse null-coloop scope, 2^-40<=D_res<=1 implies ||p_Q||_infinity<34 sqrt(log(e 2^40))=182.228224018926<183, with continuous density."
+  },
+  "canonical_math_commit": "ef38106705da5fab5a2fb6dbdd64745206580f62",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260923T220120Z-account03-B19-QFORM-r43/",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B19/20260923T220120Z-account03-B19-QFORM-r43.md",
+  "checker_marker": "QFORM_B19_R43_CHECK_PASS",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_FULL_TARGET",
+  "first_unresolved_implication": "QFORM-PRINCIPALMINIMAL-RANK6-CARRIER-BASESUBCRITICAL-PAYMENT-v1",
+  "next_step": "Pay the retained-error r39 carrier under exact N_{A[L,L]}(1)<=2 and full N_A(1)=3 or mixed-sign 4, uniformly as subthreshold eigenvalues of A[L,L] approach +/-1. Do not divide by a spectral gap to threshold and do not delete the nonzero collar.",
+  "task_schedule_mutations": 0,
+  "notification_mutations": 0,
+  "email_mutations": 0,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null,
+  "reasoning_counters": null
+}

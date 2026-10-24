@@ -1,0 +1,14 @@
+{
+  "helper_version": "A062-reserve-v1",
+  "family": "B05 canonical quadratic bent point splice with k data bits and r>=2k point controls",
+  "parameter_domain": "core stages t=2,4,6,8,10,12; activation control stages s=1,...,8 for both cores at k=4 and k=6; selector roots (k,r)=(4,8),(6,12),(8,16),(10,20),(12,24)",
+  "case_count": "6 even core roots + 5 odd core roots + 32 activation nodes + 5 selector roots; exact complete tree compressed by the proved state classification",
+  "symmetry": "canonical adjacent quadratic pairs; all-zero restrictions retain point edit, any nonzero data restriction removes it; this is an algebraic classification, not an assumed NPN reduction",
+  "arithmetic": "integer Walsh + Fraction histograms; exact rational atanh-series outward log2 bounds, 48 terms with a proved geometric tail; Bellman intervals rounded outward by rational arithmetic",
+  "memory_estimate_MB": 60,
+  "maximum_runtime_seconds": 60,
+  "C": "7",
+  "mu": "min(P[g=-1],P[g=+1]), physical output minority",
+  "tree": "selector, controls, adjacent data pairs, omit irrelevant coordinates; complete constant leaves",
+  "dimension_escalation": false
+}

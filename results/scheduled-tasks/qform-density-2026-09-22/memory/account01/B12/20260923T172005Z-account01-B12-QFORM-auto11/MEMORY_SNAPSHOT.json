@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260923T172005Z-account01-B12-QFORM-auto11",
+  "source_control_commit_at_start": "024ee50356d85ec54a0594263a6d5136ea05af97",
+  "owner_control_revision": "2026-09-22.15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "target_status": "FULL_TARGET_OPEN",
+  "result_status": "PROVED_SUPPORTING_STABILITY_THEOREM_NOT_INDEPENDENTLY_REVIEWED",
+  "correction_inbox_refreshed_before_publication": true,
+  "correction_ids_materially_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE"
+  ],
+  "new_result": {
+    "name": "QFORM-DESTRUCTIVE-GRAM-DEFECT-STABILITY-v1",
+    "statement": "For physical cross matrices M0,D let N=[M0^T M0-(M0+D)^T(M0+D)]_+ with eigenvalues nu_j. Then for k+rho<=d, s_k(M0+D)^2 >= (s_{k+rho}(M0)^2-nu_{rho+1})_+. A further operator-norm tail eta costs only eta by singular-value Weyl.",
+    "scope": "deterministic original-coordinate matrix stability; no probabilistic rotation or convolution",
+    "continuity": "not intrinsic to compiler; continuous density follows in the D5 receiver branch"
+  },
+  "spectral_split_corollary": "For E=sum theta_a v_a v_a^T, take D_h=E_{|theta|>h}[I,J]. High modes have arbitrary signs/magnitudes and are charged only through their destructive Gram-defect profile; all modes |theta|<=h cost only h, plus any dense tail norm delta.",
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B12",
+    "name": "QFORM-ADAPTIVE-RESERVE-ENVELOPE-v1",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260923T115313Z-account02-B12-qform-r33/REPORT.md",
+    "application": "For M=M0+D+L+R+T, rank L<=ell, applied s_q(M)>=max_p[s_{q+ell+p}(M0+D)-s_{p+1}(R)]-delta to the new Gram-defect lower profile."
+  },
+  "actual_example": {
+    "baseline_cross": "M0=2I_20",
+    "large_packet": "D=tJ0, J0^T=-J0 and J0^T J0=I; symmetric dilation has 20 eigenvalues +|t| and 20 eigenvalues -|t| for arbitrary t",
+    "identity": "(2I+tJ0)^T(2I+tJ0)=(4+t^2)I, hence destructive Gram defect N=0",
+    "other_packets": "rank-one arbitrary L; arbitrary R with s_6(R)<=1/5; full symmetric T with ||T||op<=1/10",
+    "actual_cross_gap": "s_5>=17/10",
+    "density_bound": "||p_Q||infinity <= 50 sqrt(2e)/17 = 6.85777641646213...",
+    "density_continuity": true,
+    "exact_target_check": "three untouched eigenvalue-2 spectators before T imply s_3(A)>=19/10 after T"
+  },
+  "mathematical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "f1e799d2521c0af50ea1a1322cf05d32484d42b8",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260923T172005Z-account01-B12-QFORM-auto11/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "3e411ad531974349818c4956667595432f1a7ef4",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B12/20260923T172005Z-account01-B12-QFORM-auto11.md"
+  },
+  "unresolved_implication": "From only s_3(A)>=1, force a product-preserving physical certificate with sufficient D5 reserve and controlled destructive Gram defect, or route failure to a completed non-D5 branch. Exact rank-three matrices show D5 alone cannot be universal.",
+  "next_step": "Seek a structural dichotomy in terms of destructive Gram deficit versus localized/aggregate rank-three exits, rather than another norm-only stability compiler."
+}

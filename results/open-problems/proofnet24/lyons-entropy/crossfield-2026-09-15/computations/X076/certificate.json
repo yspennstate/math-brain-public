@@ -1,0 +1,62 @@
+{
+  "exact_checks": {
+    "scalar_hessian_xx": true,
+    "scalar_hessian_xl": true,
+    "scalar_hessian_ll": true,
+    "transformed_A": true,
+    "transformed_R": true,
+    "quadratic_degree": true,
+    "Bernstein_plus": true,
+    "Bernstein_minus": true,
+    "Bernstein_middle": true,
+    "Bernstein_decomposition": true,
+    "active_acceleration_0": true,
+    "active_acceleration_1": true,
+    "active_acceleration_2": true,
+    "active_acceleration_3": true,
+    "null_Lagrangian_compensation": true,
+    "physical_velocity_channel_squares": true
+  },
+  "number_exact_checks": 16,
+  "example": {
+    "active_kernel": [
+      [
+        "2/5",
+        "1/5"
+      ],
+      [
+        "1/5",
+        "3/5"
+      ]
+    ],
+    "spectator": "1/3",
+    "active_direction": [
+      [
+        "1",
+        "2 - I/7"
+      ],
+      [
+        "2 + I/7",
+        "1"
+      ]
+    ],
+    "spectator_direction": "1/2",
+    "active_direction_determinant": "-148/49",
+    "conditional_means": [
+      "1/2",
+      "2/3"
+    ],
+    "physical_negative_Hessian": "18.549580944690317110649313988037820",
+    "channel_square_sum": "16.125254753666663683327321603973165",
+    "determinant_margin": "2.4243261910236534273219923840646544",
+    "six_square_terms": [
+      "1.10533137369538231514296240659",
+      "11.7672532832844380057611931202",
+      "0.245761595709955671352911783566",
+      "2.85858491562792769032529362389",
+      "0.0947582422357454948749857914999",
+      "0.0535653431132145058699748781831"
+    ]
+  },
+  "scope": "Universal scalar inequalities are proved analytically in X076.md; numerical displays do not replace their proof."
+}

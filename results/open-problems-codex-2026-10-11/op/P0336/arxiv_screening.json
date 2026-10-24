@@ -1,0 +1,1127 @@
+[
+  {
+    "search_file": "arxiv.txt",
+    "title": "A Unifying Approach to Distributional Limits for Empirical Optimal Transport",
+    "id": "http://arxiv.org/abs/2202.12790v1",
+    "published": "2022-02-25T16:08:25Z",
+    "authors": [
+      "Shayan Hundrieser",
+      "Marcel Klatt",
+      "Thomas Staudt",
+      "Axel Munk"
+    ],
+    "abstract": "We provide a unifying approach to central limit type theorems for empirical optimal transport (OT). In general, the limit distributions are characterized as suprema of Gaussian processes. We explicitly characterize when the limit distribution is centered normal or degenerates to a Dirac measure. Moreover, in contrast to recent contributions on distributional limit laws for empirical OT on Euclidean spaces which require centering around its expectation, the distributional limits obtained here are centered around the population quantity, which is well-suited for statistical applications. At the heart of our theory is Kantorovich duality representing OT as a supremum over a function class $\\mathcal{F}_{c}$ for an underlying sufficiently regular cost function $c$. In this regard, OT is considered as a functional defined on $\\ell^{\\infty}(\\mathcal{F}_{c})$ the Banach space of bounded functionals from $\\mathcal{F}_{c}$ to $\\mathbb{R}$ and equipped with uniform norm. We prove the OT functional to be Hadamard directional differentiable and conclude distributional convergence via a functional delta method that necessitates weak convergence of an underlying empirical process in $\\ell^{\\infty}(\\mathcal{F}_{c})$. The latter can be dealt with empirical process theory and requires $\\mathcal{F}_{c}$ to be a Donsker class. We give sufficient conditions depending on the dimension of the ground space, the underlying cost function and the probability measures under consideration to guarantee the Donsker property. Overall, our approach reveals a noteworthy trade-off inherent in central limit theorems for empirical OT: Kantorovich duality requires $\\mathcal{F}_{c}$ to be sufficiently rich, while the empirical processes only converges weakly if $\\mathcal{F}_{c}$ is not too complex."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "From What to Which: Decoding Modifier Grounding in Frozen MLLMs",
+    "id": "http://arxiv.org/abs/2610.12305v1",
+    "published": "2026-10-08T16:53:59Z",
+    "authors": [
+      "Barbara Toniella Corradini",
+      "Caterina Gallegati",
+      "Ludovica Genovese",
+      "Vittorio Murino"
+    ],
+    "abstract": "As Multimodal Large Language Models (MLLMs) can describe increasingly complex visual scenes, token-level grounding becomes crucial. Yet, when an MLLM generates \"the yellow banana on the left\", established grounding approaches focus on what is in the image (\"banana\"), overlooking tokens that help describe which instance is meant (\"yellow\", \"left\"). In this work, we ask whether frozen MLLM representations contain decodable grounding information about the referred instance across generated tokens, extending to modifiers such as attributes, spatial expressions, and relational/action terms. To address this question, we introduce OTTER, a lightweight supervised probe over frozen MLLM representations that uses Optimal Transport (OT) to align generated tokens with visual regions and produce compact grounding maps. Our results show that (i) instance-discriminative visual information can be decoded from modifier tokens, with the clearest evidence for spatial terms, but (ii) is not confined to them, as contextualized object nouns also carry referential information; (iii) the recovered grounding remains informative under context perturbations, while selected regions remain relevant to generation; and (iv) the learned OT-based grounding extends beyond the controlled setting to free generation and cross-dataset transfer."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "First-order $Γ$-expansion for entropic optimal transport with non-degenerate costs",
+    "id": "http://arxiv.org/abs/2610.10257v1",
+    "published": "2026-10-07T15:33:27Z",
+    "authors": [
+      "Luca Nenna",
+      "Brendan Pass",
+      "Paul Pegon",
+      "Louis Tocquec"
+    ],
+    "abstract": "Entropy-regularized optimal transport (EOT) has become a key tool in optimal transport, providing both theoretical insight and efficient computation via the Sinkhorn algorithm. We study the first-order \\(Γ\\)-expansion of EOT as the regularization parameter \\(\\varepsilon\\) vanishes, by rewriting EOT as the minimization of a relative entropy with respect to a Gibbs measure \\(\\gibbs\\) associated with the duality gap energy. Using a mild extension of the Laplace method, we prove the convergence of the Gibbs measures and derive this \\(Γ\\)-expansion for non-degenerate ground costs, under suitable assumptions on the duality gap, the contact set and the marginals. This yields at the same time an entropic selection principle and an expansion of the EOT cost up to \\(o(\\varepsilon)\\) for this class of ground costs, generalizing existing results."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Which modelling choices shape your interpolation map? An Optimal Transport sensitivity analysis for groundwater sulfate concentration",
+    "id": "http://arxiv.org/abs/2610.06101v1",
+    "published": "2026-10-05T10:34:17Z",
+    "authors": [
+      "Corinna Perchtold",
+      "Jérémy Rohmer",
+      "Augustin Thomas",
+      "Julie Lions"
+    ],
+    "abstract": "Spatial prediction maps are crucial for environmental management yet highly sensitive to subjective modelling choices such as, e.g., covariates, spatial dependence structures, or mesh resolution. We develop a workflow that attributes the resulting map uncertainty to these choices and is applicable to any spatial model, since it operates only on an ensemble of maps produced by propagating the choices through spatial prediction. This ensemble is then filtered to retain only models with acceptable predictive performance, reduced in dimension by principal component (PC) analysis, and the sensitivity of the resulting scores to each choice is quantified by global sensitivity analysis based on optimal transport (OT) metrics. We demonstrate the framework with Bayesian geostatistics applied to the spatial mapping of sulphate concentrations in groundwater of Paris Basin (France), which is key for assessing groundwater chemical quality and establishing the natural geochemical baseline of aquifers. For this application, the covariates, mesh resolution, covariance models, and priors are combined into 18000 candidate configurations. These are filtered by cross-validated root mean square error (RMSE) and 95% coverage of the prediction interval, and the retained configurations are then inferred on a high-resolution grid and reduced to its three PCs. The OT analysis identifies covariate selection (under 95% coverage) and mesh resolution (under RMSE) as the dominant sources of uncertainty to the PCs, and a negligible one for the choice of the covariance model."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "TacOT: Learning Contact-Rich Dexterous Manipulation from Human Demonstrations via Tactile-Guided Optimal Transport",
+    "id": "http://arxiv.org/abs/2610.04363v1",
+    "published": "2026-10-03T08:00:56Z",
+    "authors": [
+      "Xingting Li",
+      "Yifan Han",
+      "Zijian Lin",
+      "Wei Hou",
+      "Chuqiao Lyu",
+      "Shoujie Li",
+      "Wenbo Ding"
+    ],
+    "abstract": "Learning contact-rich dexterous manipulation from human demonstrations provides a scalable source of interaction data, yet transferring such skills to robots remains challenging due to unreliable human--robot correspondence. Existing human-to-robot transfer methods typically rely on visual appearance or motion similarity, which may associate similar motions with different contact states and force patterns. Tactile dynamics provide interaction-aware cues to distinguish manipulation processes with similar motions but different contact states. We introduce tactile-guided optimal transport (TacOT), a framework for human-to-robot contact-rich manipulation. TacOT leverages action--tactile dynamic time warping to identify human--robot demonstration correspondences with consistent interaction dynamics and uses these correspondences to guide soft optimal transport alignment in a shared policy representation space. This enables human demonstrations to provide contact-rich supervision for robot policy learning without requiring predefined frame-level human--robot pairing. Across four real-world dexterous manipulation tasks, TacOT improves closed-loop success rates over action-guided OT by up to 17 points on in-distribution tasks and 20 points under targeted human-to-robot out-of-distribution transfer. Further analyses show that tactile-guided correspondence selects demonstration pairs with more consistent contact dynamics and produces latent representations that better reflect interaction-state evolution. These results demonstrate that tactile dynamics provide an effective semantic signal for establishing reliable human-to-robot correspondence in contact-rich dexterous manipulation."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "VDOT++: Unified Few-Step Video Generation via Unbalanced Optimal Transport Distillation",
+    "id": "http://arxiv.org/abs/2610.03221v1",
+    "published": "2026-10-02T12:37:55Z",
+    "authors": [
+      "Yutong Wang",
+      "Xingtong Ge",
+      "Enhuai Liu",
+      "Yunke Wang",
+      "Tianfan Xue",
+      "Yu Qiao",
+      "Yaohui Wang",
+      "Xinyuan Chen",
+      "Chang Xu"
+    ],
+    "abstract": "Video creation spans text-to-video (T2V), image-to-video (I2V), and condition-based generation, yet video diffusion models remain costly because they repeatedly evaluate large backbones during sampling. Distribution matching distillation (DMD) reduces this cost, but its reverse Kullback--Leibler (KL) objective can provide unstable or incomplete guidance when the student and teacher distributions have limited overlap. VDOT addressed this issue by adding optimal transport distillation (OTD), whose explicit coupling supplies geometric directions for condition-based generation. Balanced OTD, however, performs full-mass matching between the spatial tokens of each corresponding student--teacher frame pair. This assumption weakens for T2V and I2V, where one condition admits many valid outputs and spatial content need not align across different realizations. We present VDOT++, a unified distillation framework that applies the same training recipe separately to generators for the three task families. It makes OTD robust to output diversity through an asymmetric unbalanced formulation that allows unreliable student tokens to carry less mass while maintaining coverage of the teacher tokens. An $\\ell_1$ ground cost further replaces mean-based aggregation with a more mode-preserving weighted median that limits the influence of distant transport targets. The two changes respectively determine whom to match and how the selected targets should be aggregated. We additionally combine distribution matching and adversarial refinement through sequential backward passes, and exploit the decoupled score networks for cross-scale distillation, where larger score networks improve a compact generator. Experiments on UVCBench, VBench, VBench-I2V, and the VACE benchmark show that the resulting four-step generators are competitive with many-step teachers and strong few-step baselines across all three task families."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Budgeted-GS: Real-Time Large-Scale Gaussian Splatting via Factoring LOD",
+    "id": "http://arxiv.org/abs/2610.03162v1",
+    "published": "2026-10-02T11:42:49Z",
+    "authors": [
+      "Haipeng Wang"
+    ],
+    "abstract": "3D Gaussian Splatting achieves excellent visual quality with real-time rendering, but at the scale of entire cities it does not fit: a trained model carries millions of primitives and gigabytes of memory, and real-time rendering at high quality on a consumer GPU remains out of reach. We introduce Budgeted-GS, a post-hoc method that turns any trained 3DGS model into a factoring tree, a multi-resolution hierarchy of moment-matched aggregates. After a construction pass of a few seconds, a single quality parameter selects, for each view, the level of detail that fits the memory of the target device, so the same city-scale model serves GPUs with widely different memory capacities. When a new scene is to be trained, the same theory applies: instead of growing a full-sized model and compressing it afterwards, budget-centered training first measures how many primitives the scene needs and then trains the model directly at that size, avoiding the wasted effort of optimizing primitives that are later discarded. Both methods are grounded in a measurable capacity floor, a budget-error law derived from optimal transport in phase space; selection rules certified by recent covering theorems decide which primitives are redundant. The floor answers how many primitives a scene actually needs and how many can safely be given up. We validate the floor on 13 public scenes under a preregistered protocol, and exercise both methods from object scenes to an official city capture, rendering it at native 1920x1080, full SH, in real time on one consumer GPU."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Low-Budget Active Learning through Entropic Optimal Transport",
+    "id": "http://arxiv.org/abs/2610.01199v1",
+    "published": "2026-10-01T07:11:24Z",
+    "authors": [
+      "Rim Hajal",
+      "Mathieu Besançon",
+      "Jérôme Malick"
+    ],
+    "abstract": "We consider low-budget active learning, which consists of selecting a limited number of points, the coreset, such that a model can be trained to high accuracy on the selection only. This problem is particularly relevant in contexts where labeling requires costly expert intervention, as in medical applications. We leverage features extracted from a pretrained self-supervised model to represent the data, and perform coreset selection directly in this feature space. In this paper, we use entropic optimal transport, specifically the Sinkhorn divergence, as the coreset selection criterion, which first allows us to get dimension-free sample complexity results, and second admits computationally efficient gradient evaluations. This opens the way to using gradient-based algorithms to rapidly compute solution candidates, further improved by a swap-based local search, with guarantees on the solution quality. Experiments on image benchmarks and medical datasets show that our method outperforms state-of-the-art heuristics in low-budget settings."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Gromov-Wasserstein Distillation for Inductive Multi-View Embedding",
+    "id": "http://arxiv.org/abs/2609.40047v1",
+    "published": "2026-09-30T16:14:13Z",
+    "authors": [
+      "Rafael Pereira Eufrazio",
+      "Eduardo Fernandes Montesuma",
+      "Charles Casimiro Cavalcante"
+    ],
+    "abstract": "Gromov-Wasserstein multidimensional scaling (GW-MDS) learns low-dimensional representations from relational data but remains transductive, providing no explicit mapping for unseen samples. We introduce an inductive framework based on barycentric distillation. A GW-MDS teacher learns a latent support and an optimal transport plan from the training data, and barycentric projection converts the resulting coupling into sample-aligned targets. A neural student then learns an explicit out-of-sample mapping, avoiding additional relational-matrix construction and GW optimization at inference. We formulate the approach for single-view data and extend it to Mean-GWMDS and Multi-GWMDS teachers through consensus and selected-projection targets learned by a multi-view student with view-specific encoders. We also investigate a direct neural baseline trained solely with a GW objective. Experiments on synthetic and real-world data using Euclidean, geodesic, and cosine relations show that the distilled models preserve the teacher geometry on unseen samples and consistently outperform direct neural GW training in sample-indexed relational preservation. These results establish barycentric projection as an effective bridge between transductive GW embeddings and inductive neural mappings."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Unlocking Geodesic Gromov-Wasserstein Distances for 3D Modeling",
+    "id": "http://arxiv.org/abs/2609.32824v2",
+    "published": "2026-09-26T17:49:27Z",
+    "authors": [
+      "Krzysztof Marcin Choromanski",
+      "Derek Long",
+      "Ananya Parashar",
+      "Dwaipayan Saha"
+    ],
+    "abstract": "\\textit{Gromov-Wasserstein Distances} (GWDs) provide quantitative ways of comparing probabilistic distributions defined on different metric spaces by applying techniques from the optimal transport theory. As such, GWD can be potentially useful in a large variety of applications ranging from graph matching problems to 3D object detection. However its practical use at scale is significantly limited by cubic time complexity computations involving dense intra-space distance matrices. Even though in the Euclidean metric spaces several techniques (e.g. involving scalable kernel methods) were proposed to address it, to the best of our knowledge, analogous techniques for general geodesic distances on manifolds, or shortest-path distance on graphs in their discretized variants, were not developed. In this paper, we present \\textbf{E}fficient \\textbf{G}eodesic \\textbf{Gro}mov-\\textbf{W}asserstein methods (EGGroW), a new class of efficient algorithms designed to calculate geodesic Gromov-Wasserstein distances with entropic Sinkhorn-like approaches, leveraging recently introduced \\textit{GenusSink} methods \\citep{genussink} and the theory of random features. We provide important downstream applications, namely: 3D pose estimation and 3D template detection. In the latter setting, we formulate a partial 3D template recovery as a staged problem: capacity-constrained scene selection is followed by semi-relaxed recovery of template visibility and correspondence. Our empirical findings show that EGGroW provides accurate solutions when standard Euclidean-based techniques fail and is characterized by light computational footprint, as our theoretical analysis predicts."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Generative models for simulation based filtering: Formulations and Empirical Comparisons",
+    "id": "http://arxiv.org/abs/2609.16317v1",
+    "published": "2026-09-14T20:31:29Z",
+    "authors": [
+      "Mohammad Al-Jarrah",
+      "Wei Deng",
+      "Bamdad Hosseini",
+      "Amirhossein Taghvaei"
+    ],
+    "abstract": "This letter presents a unified formulation and a controlled numerical comparison of generative-model approaches to the nonlinear filtering problem. Under this formulation the analysis step is realized by a transport of the forecast distribution to the posterior, the approaches differing only in how that transport is selected and learned. We derive three new filters, based on stochastic interpolants, their deterministic flow-matching limit, and Schrödinger bridges realized through forward--backward SDEs. We develop a two-stage tuning procedure that separates the training of the generative model from its online refinement. The resulting methods are compared against the optimal transport filter (OTF), the Knothe--Rosenblatt filter (KRF), the sequential importance resampling (SIR) particle filter and the ensemble Kalman filter (EnKF), in terms of accuracy, computational time, and sensitivity to ensemble size and state dimension. The results indicate that every generative filter resolves multimodal posteriors that the EnKF and SIR do not, that no single generative framework dominates, the preferred method being set by the available online budget and ensemble size, and that the filters differ in the regularity of the particle trajectories they produce."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Bridging Control, Inference, Transport, and Thermodynamics: From Theory to Applications in Learning",
+    "id": "http://arxiv.org/abs/2609.15897v1",
+    "published": "2026-09-14T17:16:33Z",
+    "authors": [
+      "Emmy Blumenthal",
+      "Nikolas Claussen",
+      "Benjamin Eysenbach",
+      "Catherine Ji",
+      "Gautam Reddy",
+      "Colin Scheibner",
+      "Benjamin Sorkin"
+    ],
+    "abstract": "The last decade has seen the development of powerful methods for learning complex structure from high-dimensional data. These advances have brought to the foreground fundamental connections between subdisciplines of physics, applied mathematics, and machine learning. In this review, we bring together some of these ideas, often expressed in different languages, to highlight a conceptual thread that links five distinct fields: control theory, optimal transport, probabilistic inference, non-equilibrium thermodynamics, and machine learning. A common theme is the optimization of free-energy-like functionals under dynamical or statistical constraints. We offer a guided tour through this thread and present selected applications in reinforcement learning, variational inference, and generative modeling. The review does not assume prior familiarity with these topics, and begins with principles originating from physics."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "The Generalized Excursion Coupling as the Limit of Concave Optimal Transport",
+    "id": "http://arxiv.org/abs/2609.13587v1",
+    "published": "2026-09-11T22:52:00Z",
+    "authors": [
+      "Yash Kanoria"
+    ],
+    "abstract": "The Monge-Kantorovich problem with the Euclidean distance cost is degenerate, typically admitting infinitely many optimal plans. A unique optimal plan is selected by perturbing the distance to a strictly convex or increasing strictly concave cost and passing to the limit: the convex side gives the plan induced by the map which is monotone on each transport ray, while the concave side was understood only on the real line, where Juillet proved that power-cost optimizers converge to the so-called excursion coupling, which is induced by a map when the source is atomless. This paper extends the concave selection to $\\mathbb{R}^n$ for mutually singular finite positive Borel measures $μ$ and $ν$ with equal total mass and finite first moments, assuming that $μ$ is absolutely continuous with respect to the Lebesgue measure: for a broad class of increasing strictly concave perturbations of the distance with a well-defined first-order profile, the corresponding optimal maps converge in $μ$-measure to the same intrinsic limit $t_\\#$, independent of the perturbation family and its profile. The map $t_\\#$ is obtained by disintegrating the transport along its maximal rays and applying the one-dimensional excursion coupling on each ray. The same limit is established for the power costs $\\|x-y\\|^{1-\\varepsilon}$ under a finite $\\|x\\|\\ln(1+\\|x\\|)$ moment condition, establishing a conjecture of Juillet."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "UniStream: Multi-Expert Residual Vector Quantization for 48 kHz Causal Streaming Audio Coding",
+    "id": "http://arxiv.org/abs/2609.09866v1",
+    "published": "2026-09-09T08:16:52Z",
+    "authors": [
+      "Mingyu Zhao",
+      "Zhiyong Wu"
+    ],
+    "abstract": "We present UniStream, a fully causal 48 kHz neural audio codec for streaming speech, music, and environmental sounds. At its core is Multi-Expert Residual Vector Quantization (ME-RVQ), which replaces the single shared codebook in each residual quantization layer with four expert codebooks controlled by a deterministic Top-K router. Because routing decisions are derived solely from previously decoded quantized states, the decoder can reproduce the selected experts without transmitting expert identifiers, thereby expanding quantization capacity while adding 5.5M parameters. We further introduce an auxiliary Optimal Transport Conditional Flow Matching (OT-CFM) objective to regularize the quantized latent space during training. The flow module is removed entirely at inference and therefore incurs no runtime overhead. UniStream supports a 12 kbps Top-1 mode and a 22.5 kbps Top-2 mode within a causal 48 kHz encoder-decoder framework, while achieving real-time GPU inference. To complement narrow-band speech metrics, we report 48 kHz ViSQOL audio mode, ViSQOL speech mode, standard VGGish-FAD, DNSMOS P.835, and higher-rate reference comparisons with Opus and EnCodec. At 12 kbps, UniStream-Top1 achieves PESQ and UTMOS scores comparable to EnCodec while reducing speech Mel-D from 13.07 to 8.21. At 22.5 kbps, UniStream-Top2 achieves a ViSQOL speech-mode score of 4.67 and an environmental audio-mode score of 3.96, exceeding all evaluated systems operating at 12 kbps or below in the latter setting. It also comes within 0.03 MOS-LQO of Opus at 24 kbps on speech in ViSQOL audio mode. Ablation studies confirm that ME-RVQ is the primary source of quality improvement, whereas OT-CFM provides perceptual gains on speech with a mild trade-off in spectral distortion."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "From plans to maps: Nonlocal regularization of optimal transport",
+    "id": "http://arxiv.org/abs/2609.05062v1",
+    "published": "2026-09-04T12:25:04Z",
+    "authors": [
+      "Marcello Carioni",
+      "Leonardo Del Grande",
+      "José A. Iglesias",
+      "Hidde Schönberger"
+    ],
+    "abstract": "We introduce a nonlocal regularization of optimal transport that bridges Kantorovich and Monge formulations. The regularization penalizes oscillations through an interaction kernel singular near the diagonal. We show that, for sufficiently strong singularities, every finite-energy transport plan is induced by a map, yielding equivalence between the regularized Kantorovich and Monge problems. For fractional kernels, the regularizer reduces to a fractional Sobolev seminorm that can allow jump discontinuities, leading to existence results for broad classes of source and target measures. We derive first-order optimality conditions and analyze the vanishing-regularization limit. The regularized functionals $Γ$-converge to the classical Kantorovich problem, while the first-order $Γ$-limit selects, whenever they exist, finite-energy Monge minimizers with minimal nonlocal energy. When no such minimizer exists, we identify a different asymptotic regime and establish a sharp scaling law in a prototypical mass-splitting example. Finally, after lifting the problem to the product of transport plans, we derive a dual formulation using the cone of copositive functions and propose a fixed-point numerical scheme illustrating the regularization."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Residual Optimal Transport-Based Experts Collaboration Towards Modality-Aware Infrared-Visible Object Detection",
+    "id": "http://arxiv.org/abs/2609.03516v1",
+    "published": "2026-09-03T08:17:40Z",
+    "authors": [
+      "Yue Zhao",
+      "Hua Yu",
+      "Yukun Zhao",
+      "Yuzhi Zhang",
+      "Maoguo Gong",
+      "Xin Mei",
+      "Zhuping Hu",
+      "Yanchi Li",
+      "A. K. Qin"
+    ],
+    "abstract": "Infrared-visible object detection (IVOD) integrates complementary evidence from visible and infrared sensors for reliable perception in challenging scenes. In practice, sensors may fail or drop frames, leaving one modality unavailable or intermittent. Existing methods for IVOD assume both modalities are always present, and fixed fusion collapses when one stream is missing. Furthermore, it remains a critical challenge to reliably estimate semantic correlation across heterogeneous modalities, especially under spectral distribution discrepancy. We present FlexibleFusion, a unified and adaptive method that flexibly allocates integration pathways and fusion strength, operating seamlessly across complete and missing-modality regimes. At its core, the Modality-Aware Experts Collaboration (MAEC) mechanism selectively activates and aggregates cross-modal or intra-modal expert pathways. It allows cross-modal fusion when full modalities are available and falls back to self-fusion under missing conditions. Additionally, we design Residual Self-Paced Entropic Optimal Transport (RSPEOT) to align heterogeneous feature distributions from a transport perspective. Instead of relying on the fixed sparsity coefficient in standard entropic optimal transport (EOT), RSPEOT introduces a residual-driven self-paced update that prioritizes reliable matches and progressively refines harder ones. This design alleviates the additional optimization burden of standard EOT while preserving reliable semantic alignment. Comprehensive experiments under complete and missing-modality protocols show consistent performance across arbitrary modality configurations. Code will be released upon publication."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Weighted persistence intensity regression",
+    "id": "http://arxiv.org/abs/2609.01387v1",
+    "published": "2026-09-01T15:16:51Z",
+    "authors": [
+      "Matteo Pegoraro",
+      "Mario Beraha"
+    ],
+    "abstract": "Persistence diagrams summarize the multiscale topological structure of data, and in applications they often arrive paired with covariates. We develop nonparametric methodology and theory for estimating the expected weighted persistence diagram conditional on a Euclidean covariate. Representing each weighted diagram as a finite random measure on a compact window, we take the density of its conditional expectation as the regression target, the conditional weighted persistence intensity. For a conditional double-kernel estimator we establish finite-sample sup-norm rates with a matching minimax lower bound, uniform rates in partial optimal transport, and an unbiased-risk cross-validation criterion for bandwidth selection. Simulations with analytically known intensities corroborate the theory and show that cross-validation selects the oracle candidate bandwidth in the exact-intensity design. The method is illustrated by studying how radial geometry in cerebral artery trees varies with age."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Mathematical modelling of a multicluster open system: transfer-operator recovery from aggregate data under a least-action prior",
+    "id": "http://arxiv.org/abs/2609.29628v1",
+    "published": "2026-08-28T17:14:28Z",
+    "authors": [
+      "A. P. Nevecheria"
+    ],
+    "abstract": "Many open systems are observed only through aggregate snapshots, while the rule that moves objects between states stays hidden. This paper studies the inverse problem of recovering the transfer operator of a multicluster open system from two adjacent snapshots. The consistent operators fill an affine manifold: the data fix the aggregate flows and leave the internal routing free, so every recovery method commits to a prior that selects one operator. Tikhonov regularisation with a zero reference gives the uniform outflow on each source simplex, which underestimates retention in an inertial system. We propose least action on the operator trajectory, under which the rule changes as little as the data permit. In discrete time this is exact as a probability statement: the action prices a trajectory by its likelihood under a Gaussian reference drawn toward full retention, so least action selects the most probable trajectory consistent with the balance. A causal construction keeps the balance exact by moving the operator only inside the null space of the constraints, and we relate it to optimal transport, to Perron-Frobenius coarse-graining, and to the Schrödinger bridge. Two instantiations carry it: the Russian labour market and a radiation-damped relativistic electron ensemble. The construction holds the balance to machine precision where temporal smoothing corrupts it by twelve percent on the labour series and sixty percent in the physical one. The spectral gap is non-identifiable from aggregate snapshots but available from micro-trajectories, where Ulam's method reproduces the Landau-Lifshitz rate to within six percent. On the short labour series no method beats the naive forecast in point accuracy at conventional significance levels. The value is structural: an interpretable operator, an exactly preserved balance, and an explicit information limit of aggregate observation."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "High-Dimensional Spectral Limits for Gaussian KL-Unbalanced Optimal Transport",
+    "id": "http://arxiv.org/abs/2608.26693v1",
+    "published": "2026-08-27T06:51:32Z",
+    "authors": [
+      "Jiaping Yang",
+      "Yunxin Zhang"
+    ],
+    "abstract": "We study high-dimensional random-matrix limits of Gaussian Kullback--Leibler unbalanced optimal transport (KL-UOT). Under equal marginal penalties, the covariance action admits an exact log-determinant representation in terms of a nonlinear ridge product, together with a positive-semidefinite extension that remains finite at arbitrary aspect ratios. For independent real Wishart samples, strong asymptotic freeness gives the limiting free multiplicative convolution and almost-sure Hausdorff convergence of the ridge-product spectrum; independent Haar orientations yield the corresponding first-order limit for deformed populations. In the symmetric nonsingular identity-Wishart model, we derive an explicit $η$-transform and a low-degree algebraic equation that select the physical branch and determine the support interval, square-root edges, and extreme-eigenvalue limits. We further obtain all-aspect one-sample Marchenko--Pastur limits under finite fourth moments, real-Gaussian Bai--Silverstein fluctuations for $c<1$, and a joint random-matrix/penalty limit showing that sample-covariance noise produces the critical scale $τ_p\\asymp p$."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "4DGS-JEPA: Temporally Compositional Joint-Embedding Prediction for Dynamic Gaussian Splatting",
+    "id": "http://arxiv.org/abs/2609.25036v1",
+    "published": "2026-08-24T22:02:10Z",
+    "authors": [
+      "Yongchao Huang"
+    ],
+    "abstract": "Dynamic Gaussian Splatting provides an explicit representation of evolving 3D scenes, but existing approaches are primarily optimized for reconstruction, future-state generation, or rendering rather than for learning reusable predictive dynamics. We propose 4DGS-JEPA, a Gaussian-native joint-embedding predictive architecture for causal multi-horizon prediction over dynamic Gaussian scenes. The model uses a hierarchical scene-, motion-group-, and Gaussian-level representation together with a horizon-conditioned transition operator that supports both direct prediction and recursive rollout. Its central principle is temporal composition: different chronological transition paths reaching the same future endpoint should produce compatible predictive states. Endpoint and multi-horizon path supervision anchor these predictions to future target embeddings, while a selective geometry decoder and geometry-level composition ground the learned dynamics in consistent group motion and Gaussian geometry without requiring complete future appearance reconstruction. We further introduce a hybrid correspondence mechanism that combines persistent canonical identity with residual optimal-transport matching under reordering and topology change. We characterize zero-loss path agreement and finite-error rollout accumulation theoretically. Three controlled experiments provide mechanism-level evidence that temporal composition reduces latent path dependence while retaining predictive accuracy, geometry-level composition improves consistency of decoded motion, and hybrid correspondence preserves reliable identity while remaining robust when correspondence becomes ambiguous. Together, 4DGS-JEPA provides a predictive, temporally compositional formulation of dynamic Gaussian worlds."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Building atomistic models of heterointerfaces with optimal transport",
+    "id": "http://arxiv.org/abs/2608.19933v1",
+    "published": "2026-08-20T11:46:06Z",
+    "authors": [
+      "Yuxuan Tang",
+      "Keith T. Butler"
+    ],
+    "abstract": "Heterogeneous interfaces underpin technologies from microelectronics to energy conversion and storage, but their configurational complexity precludes exhaustive first-principles screening of interface registries. Although data-driven approaches can alleviate this burden, they remain limited by sparse interface datasets. Here, we introduce an energy-independent workflow that represents coherent interfaces as attributed graphs, quantifies their similarity to parent bulk environments using the fused Gromov-Wasserstein (FGW) distance, and couples this metric with Bayesian optimization over the in-plane registry space. We assess the approach for KI/NaCl, GaP/GaAs and GaN/$\\mathrm{Al_{2}O_{3}}$ interfaces spanning ionic, covalent and mixed-bonding regimes, using hierarchical validation with MACE and density functional theory (DFT). Comparison with single-point energy landscapes shows that the FGW distance captures registry-dependent periodicity, while interfaces exhibit deviations between structural and energetic extrema, reflecting additional chemistry-specific contributions. Furthermore, FGW distances show an overall association with relaxed energies. Under limited screening budgets, FGW-guided registry selection consistently outperforms random search and is more robust across interface systems than selection guided by pretrained MACE energies. The workflow converts the qualitative notion of bulk-like continuity into a quantitative prescreening criterion, enabling efficient registry exploration and providing physically informed candidate structures for materials discovery workflows."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "EMS Coreset: An Efficient Expectation-Maximization Algorithm for Sinkhorn Coreset",
+    "id": "http://arxiv.org/abs/2608.16101v1",
+    "published": "2026-08-17T04:46:34Z",
+    "authors": [
+      "Haoyun Yin",
+      "Chuanhui Liu",
+      "Xiao Wang"
+    ],
+    "abstract": "Coresets distill large datasets into small, representative subsets for efficient downstream learning. Yet Optimal Transport (OT)-based selection typically requires intensive computation of transport plans, limiting scalability. We introduce a scalable Sinkhorn coreset method that permits closed-form updates of the entropically regularized OT coupling by allowing non-uniform coreset weights. This produces centroids that generalize k-means via soft assignments. We establish asymptotic consistency of the selected measure and Lipschitz stability to data perturbations, providing accuracy and robustness guarantees. Across synthetic and real-world benchmarks, the proposed method achieves competitive or improved approximation quality while substantially reducing runtime compared to Wasserstein- and standard Sinkhorn-based coreset selection, especially at large scale."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Wasserstein Filtering: A Sample Selection Method for Robust Distribution Learning",
+    "id": "http://arxiv.org/abs/2608.13418v1",
+    "published": "2026-08-13T16:12:28Z",
+    "authors": [
+      "Yikai Xu",
+      "Zhao Chen",
+      "Jian Huang"
+    ],
+    "abstract": "Given a dataset where a portion of the samples are contaminated, our goal is to recover the underlying clean population distribution. To this end, we propose Wasserstein Filtering (WF), a novel sample selection framework that discards a fraction of suspicious samples and estimates the target distribution using the empirical measure of the remaining data. The core insight is to select a subset of samples whose empirical distribution maximizes its Wasserstein distance to the fully contaminated empirical distribution, thereby preferentially isolating and removing geometrically influential outliers. To render this optimization computationally tractable, we introduce three algorithms: a marginal screening scheme, SinkMarg, and two joint optimization algorithms, SinkWF and SlicedWF, leveraging entropic optimal transport and sliced Wasserstein approximations, respectively. On the theoretical front, we introduce the Far Exclusion and Local Projection (FELP) contamination model, which characterizes corruptions consisting of well-separated outliers and locally indistinguishable perturbations. Under this model, we prove that the WF estimator achieves minimax optimality over distribution families with bounded covariance. Extensive numerical experiments on synthetic datasets, benchmark anomaly detection suites, and robust generative learning with diffusion models demonstrate that WF serves as a highly practical, model-agnostic preprocessing tool. It delivers competitive outlier detection performance and provides substantial downstream benefits for generative modeling under heavy contamination."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "CoverPrune: Coverage-Driven Token Pruning for 3D VLMs via Optimal Transport",
+    "id": "http://arxiv.org/abs/2608.13226v1",
+    "published": "2026-08-13T13:29:15Z",
+    "authors": [
+      "Peng Ling",
+      "Yingda Yin",
+      "Lingting Zhu",
+      "Weikai Chen",
+      "Shengju Qian",
+      "Zeyu Hu",
+      "Xin Wang",
+      "Wenming Yang"
+    ],
+    "abstract": "While 3D Vision-Language Models (3D VLMs) have demonstrated remarkable spatial reasoning capabilities, they suffer from massive visual token counts that create severe computational bottlenecks during inference. Existing token pruning methods primarily rely on diversity-based selection, discarding similar tokens to maximize dispersion. However, in 3D environments, this approach frequently drops representative prototype tokens in favor of outliers, breaking the multi-view consistencies and geometric structures essential for spatial reasoning. In this paper, we propose a paradigm shift for 3D VLM token pruning: from maximizing diversity to preserving visual evidence coverage. We introduce CoverPrune, a training-free framework that formulates inference-time token pruning as an Optimal Transport (OT) problem. To overcome the intractable combinatorial subset selection inherent in this formulation, we design the Feature-Spatial-Temporal (FST) transport cost and target capacity, along with an efficient Spatial-Guided Greedy Selection (SGS) algorithm to approximate the OT objective. Furthermore, we propose CoverPrune-Lite, an accelerated variant utilizing spatially structured local matching for minimal overhead. Extensive experiments across multiple 3D visual-spatial reasoning benchmarks demonstrate that our methods achieve state-of-the-art token efficiency, maintaining robust reasoning performance even under highly aggressive pruning budgets. Visit our project website at https://github.com/Brucess/CoverPrune."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Towards Truly Unsupervised Evaluation of Feature Selection -- Extended Version",
+    "id": "http://arxiv.org/abs/2608.12057v4",
+    "published": "2026-08-12T13:39:49Z",
+    "authors": [
+      "Hafiz Saud Arshad",
+      "Muhammad Rajabinasab",
+      "Arthur Zimek"
+    ],
+    "abstract": "Feature selection is one of the most important and fundamental tasks in data mining, tackled by a family of methods with an established set of evaluation techniques to measure the quality of a specific method. Most of the methods commonly used for the unsupervised evaluation of feature selection algorithms suffer from critical design flaws which question their unsupervised nature. In this paper, we provide a critical discussion on the established allegedly unsupervised evaluation techniques, and shed light on the reasons why they are not truly unsupervised but, at best, supervised evaluation under an unsupervised downstream task. We also propose a novel, truly unsupervised evaluation framework to measure the quality of the feature selection algorithms without any form of information about the labels. The proposed framework utilizes unsupervised Principal Component Analysis, and optimal transport to measure the quality of the feature selection methods in a truly unsupervised manner."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Pair-Centric Graph Rewiring for Over-Squashing via Optimal Transport-Guided Communication Alignment",
+    "id": "http://arxiv.org/abs/2608.10619v1",
+    "published": "2026-08-11T08:05:32Z",
+    "authors": [
+      "Yan Wang",
+      "Chuan-Xian Ren"
+    ],
+    "abstract": "Message-passing neural networks (MPNNs) often struggle when task-relevant information is distributed across distant regions of a graph, since local propagation must compress remote signals through limited structural interfaces. Graph rewiring provides a structural response to over-squashing. Most existing methods rely on edge-level bottleneck scores or graph-level connectivity surrogates. With a limited rewiring budget, the key question is which pairwise communications most need structural support. This paper proposes PairAlign, a pair-centric graph rewiring framework that makes this question explicit through demand-support shortage. Specifically, PairAlign combines original-graph structural demand with current-graph finite-hop propagation support; their ratio highlights interactions whose communication demand is poorly supported by topology, and our theory shows that this score provides a computable proxy for the corresponding Jacobian-based shortage with a pair-level interpretation of over-squashing. Our theory reveals a two-sided effect of edge insertion: a new edge can create useful walks and simultaneously dilute existing normalized transition mass. Guided by this observation, PairAlign optimizes shortage to favor edge additions that alleviate over-squashing. Beyond selecting useful additions, PairAlign further introduces an Optimal Transport-guided rewiring mechanism to coordinate the finite edge budget for pair-level structural compatibility and shortage-target coverage. It formulates communication alignment between the candidate edge budget and the shortage targets, and the theory shows that this allocation covers shortage targets more broadly and effectively than a greedy-local assignment. Experiments on standard graph benchmarks show PairAlign's improvement across message-passing backbones, validating pair-level repair as an effective route for alleviating over-squashing."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "SLAP: Selective Local Vision-Language Alignment for Fish Re-Identification via Partial Optimal Transport",
+    "id": "http://arxiv.org/abs/2608.08840v1",
+    "published": "2026-08-09T18:04:41Z",
+    "authors": [
+      "Cigdem Beyan",
+      "Tonje Knutsen Sordalen",
+      "Kim Tallaksen Halvorsen"
+    ],
+    "abstract": "Individual fish re-identification (ReID) is a fine-grained recognition problem in which identity-discriminative cues are often localized to specific body regions rather than distributed uniformly across the animal. Nevertheless, recent CLIP-based ReID methods rely predominantly on global image-text alignment, allowing background and weakly discriminative regions to contribute to cross-modal supervision. We propose a selective local vision-language alignment framework that establishes localized correspondences between visual patch embeddings and multiple identity-aware prompt embeddings through Partial Optimal Transport (POT). Rather than enforcing exhaustive correspondence, POT enables selective matching between visual patches and prompt embeddings, allowing the model to emphasize the strongest cross-modal correspondences while avoiding forced alignment of weakly matching regions, thereby yielding more discriminative visual representations for retrieval. The framework is trained end-to-end, while only the adapted visual encoder is retained during inference. Experiments on the longitudinal Symphodus melops dataset demonstrate consistent improvements over recent CLIP-based ReID methods under both closed-set and open-set evaluation protocols. Additional evaluations on other datasets further demonstrate the generalization capability of the proposed method across diverse marine ReID benchmarks."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Control-Anchored Residual Flow Matching Conditioned on Gene Geometry for Virtual Cell Perturbation Modeling",
+    "id": "http://arxiv.org/abs/2608.06824v1",
+    "published": "2026-08-07T05:29:00Z",
+    "authors": [
+      "Quanquan Li",
+      "Yihe Chi",
+      "Liuyang Song",
+      "Hongbo Zhang",
+      "Jingyu Li",
+      "Xidong Xi",
+      "Conghua Wei",
+      "Yijie Sun",
+      "Yu Chen",
+      "Xin Liu",
+      "Qi Hu",
+      "Jing Ke",
+      "Guitao Cao"
+    ],
+    "abstract": "A central task in virtual cell modeling is predicting single-cell transcriptional responses to unseen genetic perturbations and drug combinations, and biological networks provide valuable priors on gene relationships. Existing graph-based models commonly use the same network to structure gene representations and mediate intergene interactions, thereby implicitly treating stable associations as perturbation-response pathways. Gene Ontology and control-derived coexpression networks encode relatively stable relationships rather than intervention-specific response directions or magnitudes. We therefore propose GeneGeoFlow, which conditions a control-anchored residual flow on gene-wise geometry derived from biological networks to learn intervention-specific transcriptional responses. GeneGeoFlow derives multi-scale spectral coordinates from Gene Ontology and control-derived coexpression networks. A perturbation-conditioned, gene-wise gating module selects relevant structural scales and network sources, yielding intervention-specific gene geometry. The resulting geometry conditions a control-anchored residual flow without explicitly propagating target-derived signals along the graph. Condition-wise optimal transport couples unpaired control and perturbed populations for training, while a Delta-correlation objective aligns the predicted and observed condition-level expression-shift directions. GeneGeoFlow achieves Pearson Delta scores of 0.8979 on the Norman additive benchmark and 0.9088 on five held-out drug combinations in the fixed ComboSciPlex test split. These results support perturbation-conditioned gene geometry as an effective structural prior for intervention-specific response prediction, without conflating stable gene relationships with response propagation."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "One Knob to Rule Them All: A Unified Optimal Transport View of Cold-Start Active Learning",
+    "id": "http://arxiv.org/abs/2608.03249v1",
+    "published": "2026-08-04T07:21:39Z",
+    "authors": [
+      "Ning Zhu",
+      "Xiaochuan Ma",
+      "Juntao Xu",
+      "Jingze Liang",
+      "Mengfei Zhao",
+      "An Chen",
+      "Liang-Jian Deng"
+    ],
+    "abstract": "Cold-Start Active Learning (CSAL) aims to select a valuable subset from an unlabeled pool without any prior knowledge or human assistance. Existing methods take diverse routes based on typicality, coverage, or diversity. Each rests on its own inductive bias and therefore performs well on some tasks yet poorly on others. We argue that the real challenge is not to design yet another selection heuristic, but to make CSAL adapt automatically to the data and task at hand. To this end, we revisit CSAL through the lens of optimal transport. First, we propose a generalized transport selection framework that reveals the shared allocation structure of existing methods and exactly subsumes representative formulations. Second, we introduce a theoretical analysis that characterizes the trade-off controlled by entropic regularization and establishes a task-agnostic minimax bound for cold-start selection. These results provide a principled foundation for adapting the regularization strength to the unlabeled data. Third, we derive a data-adaptive regularization rule and present a novel Sinkhorn-based CSAL algorithm, termed $ε$-Adaptive Selection ($ε$-AS). Extensive experiments on six public datasets and multiple annotation budgets show that $ε$-AS consistently achieves state-of-the-art performance. On ImageNet-1k, it improves the average accuracy over ActiveFT by 1.29% while reducing selection time by 56.2%. Code will be released at https://github.com/Z-yiwei/OT-CSAL"
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Counterexamples and Sufficient Conditions: Comments on \"Optimally-Transported Generalized Method of Moments\"",
+    "id": "http://arxiv.org/abs/2609.20260v1",
+    "published": "2026-08-04T02:51:56Z",
+    "authors": [
+      "Masahiro Kato"
+    ],
+    "abstract": "We comment on the optimally-transported generalized method of moments (OTGMM) estimator proposed by Schennach & Starck (2026a) and give counterexamples to Theorems 2-6 under their stated assumptions. First, the assumptions used in the small-error analysis are insufficient for consistency in Theorem 2 and asymptotic normality in Theorem 3. Next, we consider the large-error analysis, in which Theorem 4 states that the OTGMM estimator is equivalent to a GMM estimator with modified moments. We show that in a scalar model, Theorem 4 selects a value that differs from the unique OTGMM minimizer and violates the OTGMM sample moment restriction. In an overidentified model satisfying the assumptions used in Theorems 5 and 6, the first component of the Lagrange multiplier has different probability limits under the OTGMM estimator and the GMM estimator with modified moments. Under misspecification, the population value selected by OTGMM depends on the transport metric and on which variables may be adjusted. We give a sufficient condition under which solutions of the modified moment equations also solve the original constrained problem at a given parameter value, and separate conditions for consistency and asymptotic normality of the OTGMM estimator. We also show that Assumption 16 does not imply the matrix bound used in the supplemental proofs and replace Assumption 16 with a matrix condition that yields the bound."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "A Unified Benchmark and Modality-Adaptive Network for Day-and-Night Drone-View Geo-Localization",
+    "id": "http://arxiv.org/abs/2607.25778v1",
+    "published": "2026-07-28T14:34:57Z",
+    "authors": [
+      "Songtianhao Xu",
+      "Zhongwei Chen",
+      "Zhao-Xu Yang",
+      "Weifeng Wang"
+    ],
+    "abstract": "Most existing drone-view geo-localization (DVGL) benchmarks contain drone imagery captured under a single illumination condition and lack geographically aligned visible drone images, infrared drone images, and satellite images from the same locations. To evaluate the generalization capability of DVGL methods under challenging illumination conditions, some methods train models on a visible benchmark and test them on an independent infrared benchmark. This protocol essentially constitutes transfer between datasets, which makes it difficult to systematically evaluate DVGL across daytime and nighttime conditions within a unified benchmark. To address this limitation, we construct IRCHN,a real-world DVGL benchmark designed for localization across different illumination conditions. IRCHN contains 26,460 images collected from 8,820 geographic locations across four representative scene categories, including farmland, coastline, forest, and urban areas. Each location provides one visible drone image, one infrared drone image, and one corresponding satellite image, which enables unified evaluation of DVGL methods across different illumination conditions and sensing modalities. We further propose the Modality-Adaptive State-Space Transport Relation Network (MASTR-Net), a DVGL framework tailored to localization under varying illumination conditions. MASTR-Net integrates modality-adaptive feature enhancement, bidirectional selective state-space relation modeling, and soft optimal transport relation alignment to jointly reduce modality gaps and view-induced structural discrepancies. Extensive experiments demonstrate that MASTR-Net outperforms existing state-of-the-art methods on IRCHN for localization under varying illumination conditions and achieves competitive performance on two infrared benchmarks, IR-VL328 and CVGL-RGBT. Code: https://github.com/SongtianhaoXu/MASTR-Net"
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "DrainSinkhorn: Safe Elimination for Batched Entropic Optimal Transport",
+    "id": "http://arxiv.org/abs/2607.24741v3",
+    "published": "2026-07-27T17:59:36Z",
+    "authors": [
+      "Xinyang Wen"
+    ],
+    "abstract": "Fast entropic optimal transport backends reduce the cost of each Sinkhorn update, but static batches still run at full width until the slowest problem finishes. We introduce DrainSinkhorn, a verifier-gated active-packing layer for batches of independent Sinkhorn problems. It combines candidate-axis packing, a Sinkhorn-specific one-sided screen, verifier-gated retirement under the backend's configured two-sided residual check, and physical compaction of all candidate-indexed state. The EOT objective, per-instance Sinkhorn map, and stopping rule are unchanged; later kernels run only on unfinished problems. We characterize the removable work exactly. If completion depths differ within a packed window, active execution removes the padding between the static batch rectangle and the observed survival curve. A quotient nonlinear Perron-Frobenius analysis gives a local explanation for these finite-tolerance depth differences: convergence depends on the full modal spectrum and proposal alignment, not only on the slowest mode. DrainSinkhorn achieves state-of-the-art execution performance on the tested heterogeneous batched-EOT workloads within matched backend families. The complete Flash-backed OT path is 4.110x faster on MetroPT-3, 3.798x faster on ImageNet-32 feature couplings, and 1.250-1.270x faster across a five-tolerance Packer19 sweep. Independent implementations reach 2.600x on ImageNet-32 with OTT-JAX, 3.174x on A2D2 LiDAR with PyKeOps, and 1.415x on large ImageNet-32 PyKeOps couplings. End-to-end speedups remain 4.074x on MetroPT-3 and 2.786x on ImageNet-32 feature-space OT flow matching, with all reported residual, consumer-output, and training-quality checks passing."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Image Editing Models are Numerical Solvers",
+    "id": "http://arxiv.org/abs/2607.18787v1",
+    "published": "2026-07-21T07:06:46Z",
+    "authors": [
+      "Ulysse Mizrahi"
+    ],
+    "abstract": "We investigate whether a pretrained generative image-editing model can provide a common interface for numerical simulation. Physical inputs and solutions are rendered as images, while scalar quantities such as material properties, diffusivity, and loading parameters enter through lightweight adapters. Using established numerical and analytic solvers for supervision, we apply the same architecture and training protocol to heterogeneous elliptic equations, forced heat and Burgers evolution, complex Ginzburg-Landau dynamics, two-dimensional Navier-Stokes prediction, potential flow, elasticity, eikonal travel time, phase-field fracture, and entropic optimal transport. The results show that a pretrained image model can represent diverse static and time-dependent physical mappings, including unstable and shock-like behavior, when each task is expressed through a suitable visual encoding. This work is a capability study rather than an attempt to surpass specialized solvers. It also identifies fundamental constraints: image and latent representations complicate numerical range selection and direct enforcement of governing equations or invariants, while a failed Kuramoto-Sivashinsky experiment indicates that representation errors prevent meaningful long-horizon simulation of chaotic systems."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Entropic optimal transport need not select a zero-temperature limit",
+    "id": "http://arxiv.org/abs/2607.16881v1",
+    "published": "2026-07-18T16:43:29Z",
+    "authors": [
+      "Maja Gwozdz"
+    ],
+    "abstract": "We construct a compact metric space with an atomless probability measure and a bounded Lipschitz cost for which the entropic optimal-transport minimisers have no zero-temperature weak limit. More precisely, $P_\\varepsilon$ does not converge as $\\varepsilon\\downarrow0$. In the example, every unregularised minimiser is singular with respect to $μ\\otimesμ$, so that the entropy on the optimal face is identically $+\\infty$. We describe the cluster set by \\[ \\operatorname{Clust}(P_\\varepsilon)=\\{P_w:w\\in\\mathcal W\\}, \\] where $P_w$ is the mixture of the two zero-cost graph couplings with weight $w$, and where $\\mathcal W\\subset[0,1]$ is a non-degenerate compact interval. We then compute two explicit points $w^-<w^+$ in this interval. This shows that compactness, atomlessness, and Lipschitz regularity of the cost do not imply zero-temperature convergence. We also present a compactness theorem for the general problem. If $C\\in L^1(μ\\otimesν)$ is continuous and bounded from below on Polish spaces, then the zero-temperature cluster set is a nonempty weakly compact connected subset of the optimal face. In the proof, we apply the cluster-point theorem of Bernton, Ghosal, and Nutz and the continuity of $\\varepsilon\\mapstoπ_\\varepsilon$. Finally, we give local and exterior first-order criteria for full convergence and cluster membership. We show that nonconvergence is possible, but only through a connected continuum of optimal plans."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Semismooth Newton methods for degenerate polyhedral projection",
+    "id": "http://arxiv.org/abs/2607.12551v1",
+    "published": "2026-07-14T09:23:43Z",
+    "authors": [
+      "Chao Ding",
+      "Fuxiaoyue Feng",
+      "Xudong Li"
+    ],
+    "abstract": "In this paper, we study dual semismooth Newton (SSN) methods for degenerate polyhedral projection problems, where generalized Jacobians of the dual residual may remain singular even arbitrarily close to the solution set. Rather than regularizing these singular systems, we exploit the nonuniqueness of the dual representation. We introduce a primal--dual lifted projection-equivalent set that always possesses extreme points without additional structural assumptions on the polyhedron, and show that its extreme-point geometry identifies dual representatives at which nonsingular generalized Jacobians of the dual residual can be constructed. This geometry is further linked to a full-column-rank condition and a generalized weak strict Robinson constraint qualification, showing that the regularity required by the Newton step can be recovered rather than imposed \\emph{a priori}. We also establish displacement bounds that connect representative selection throughout the algorithm with the local Newton mechanism. Building on this variational framework, we develop an inexact dual SSN method with local superlinear convergence and a globalized version combining monotone representative selection with a Wolfe line search. The resulting method is globally convergent and eventually recovers the fast local rate. Numerical experiments on regularized optimal transport, battery-scheduling feasibility restoration, and occupation-measure projection demonstrate its robustness in highly degenerate settings."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Context-Constrained Transfer Learning for Tabular Foundation Models via Data Distillation",
+    "id": "http://arxiv.org/abs/2607.04809v1",
+    "published": "2026-07-06T08:46:47Z",
+    "authors": [
+      "Yijun Lin",
+      "Sai Li"
+    ],
+    "abstract": "Tabular Foundation Models (TFMs) have demonstrated strong empirical performance as black-box inference engines through in-context learning. However, their use in transfer learning is limited by two obstacles: strict context-size constraints and sensitivity to distribution shifts between source and target tasks. Directly pooling heterogeneous source data can therefore lead to negative transfer. To address these challenges, we propose Context-Constrained Transfer Learning via ANchoring and DIstillation (TL-ANDI), a posterior-aware distillation framework for TFMs. TL-ANDI constructs a compact source context by solving a budget-constrained optimal transport problem whose cost jointly measures target covariate coverage and posterior compatibility. The selected anchor samples are then equipped with locally distilled labels and combined with a residual calibration step using target data."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Transition-Aware best-of-N sampling for Longitudinal Chest X-ray Reports",
+    "id": "http://arxiv.org/abs/2606.28393v1",
+    "published": "2026-06-23T23:11:59Z",
+    "authors": [
+      "Halil Ibrahim Gulluk",
+      "Max Van Puyvelde",
+      "Wim Van Criekinge",
+      "Olivier Gevaert"
+    ],
+    "abstract": "In longitudinal clinical practice, every chest X-ray is read in the context of the patients prior exam, and much of what the radiologist communicates is the change from one visit to the next. To the best of our knowledge, we present the first training-free best-of-N sampling scheme for pre-trained chest X-ray report generators that is explicitly aware of this longitudinal prior to current transition. We call it transition-aware best-of-N sampling, each report is split into sentences and embedded into an unordered set in Rd; each (prior, current) pair is reduced to a fixed-dim directional vector via a set-to-set distance designed to encode the change between the two sets; and candidates are scored by cosine distance from their candidate transition vector to a cached bank of ground-truth training transition vectors, aggregated as min or kNN. We instantiate the framework with four directional set distances (mean-shift, novelty residual, directed-Hausdorff anchor, and cost-weighted optimal transport) and evaluate on a multi-visit AP-PA cohort, running inference under three prompts on three vision-language generators. Transition-aware best-of-N outperforms random selection across the board, with the largest relative gains on the Impression section."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "A Transport-Based Geometry of Belief-Cost",
+    "id": "http://arxiv.org/abs/2606.21585v5",
+    "published": "2026-06-19T16:41:28Z",
+    "authors": [
+      "Laurent Caraffa"
+    ],
+    "abstract": "A finite agent, a machine's digital twin or any bounded reasoner, infers a fixed and noisy world through finite sensors, so its coherent output is a belief: a probability density over states (the Bayes posterior). Such an agent stops short of certainty, and revising a belief carries a cost. We propose a framework for belief costs based on optimal transport, motivated by these facts. We pose two postulates. P0 (the arena): a revision cost is a scalar price on optimal transport, so beliefs live in Wasserstein space. P1 (uniform pricing): one nat of knowledge costs the same metric length everywhere, the eikonal condition. Among conceivable pricing rules we study this one. Under P0 and P1 the cost metric is optimal transport conformally reweighted by Fisher information, $\\tilde g_{e,U}=2(e+U)\\,g_{W_2}$, and the Fisher family is a characterization: among continuous reliefs, uniform pricing is equivalent to $U=cJ$. Two consequences follow on the conformal class. Certainty sits at infinite cost-distance once the relief dominates the Fisher information, so a well-posed inference has a cost floor diverging at certainty (necessity conjectural beyond power laws). On location-scale leaves the geometry is hyperbolic, and the Stam bound places the Gaussian as the most curved one (at $e=0$). The results are geometric, in nats, and hold up to units: a change of cost unit rescales all distances and preserves every conclusion (boundary, eikonal family, hyperbolicity, Gaussian extremum), a gauge theorem; a global change of state units at $e=0$ is an isometry; the content lies in signs, rankings and ratios. Via Landauer (one nat worth $k_BT$) the cost floor becomes an energy floor: revising toward certainty would demand unbounded energy. Physics anchors the unit and enters no theorem. Removing either postulate leaves the selection open."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Understanding Latent Flow Models for Tabular Data Synthesis: Targets, Paths, and Sampling",
+    "id": "http://arxiv.org/abs/2606.20878v1",
+    "published": "2026-06-18T19:09:21Z",
+    "authors": [
+      "Bahrul Ilmi Nasution"
+    ],
+    "abstract": "Synthetic tabular data enables microdata sharing in regulated domains, yet deploying continuous-time generative models requires balancing analytical utility, disclosure risk, and computational cost. Latent-space flow models are flexible, but theoretical equivalences across learning targets, probability paths, and sampling dynamics can translate into different behaviour under finite-step integration and explicit compute budgets. We present an empirical study of tabular latent flow models across seven datasets, evaluating velocity, score, noise, and posterior matching objectives under optimal transport (OT) and variance-preserving (VP) paths, ODE and SDE sampling, and varying integration budgets. Our contributions are threefold: (1) we show that the learning target largely determines the utility-risk operating regime, with velocity and posterior matching tending to yield higher utility, while score and noise matching tend to achieve lower disclosure risk; (2) we demonstrate that configuration and sampling choices shift performance, with midpoint often improving distributional fidelity and OT paths often tolerating earlier stopping than VP, enabling compute savings under fixed budgets or risk thresholds; and (3) we distil these findings into actionable defaults and practical configuration guidance to support pre-release model selection under disclosure risk and resource constraints. The code implementation and supplementary materials can be accessed in https://github.com/rulnasution/tabular-latent-flow/."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Fast Computation of Free-Support Wasserstein Medians",
+    "id": "http://arxiv.org/abs/2606.19148v1",
+    "published": "2026-06-17T14:50:29Z",
+    "authors": [
+      "Kisung You",
+      "Mauro Giuffré",
+      "Dennis Shung"
+    ],
+    "abstract": "The Wasserstein median is a robust alternative to the Wasserstein barycenter for averaging probability measures, but exact empirical computation can be expensive. A natural metric-space Weiszfeld scheme updates the current candidate by solving a weighted Wasserstein barycenter problem at each outer iteration, producing a nested optimization problem. We propose a direct fixed-weight free-support solver that avoids this inner barycenter loop. At each iteration, the method solves exact optimal transport (OT) subproblems from the current candidate to the input measures, computes barycentric projections of the selected plans, and relocates each support atom to an inverse-distance-weighted average of its projected destinations. For a smoothed median objective, we show that this relocation is the exact minimizer of a tight majorization--minimization surrogate. This yields monotone descent for exact transport subproblems, convex-hull invariance, a finite-time best-residual rate, residual-to-gradient control under differentiability, and fixed-point and stationarity characterizations. We also give smoothing, stability, and resolution-consistency results clarifying the fixed-weight approximation. In exact-OT benchmarks, the direct solver attains median objectives close to tightly solved nested Weiszfeld baselines while using substantially fewer exact transport subproblems. Additional contamination, posterior aggregation, and image-prototype experiments show that the direct solver produces median summaries comparable to nested computation and less sensitive to outlying distributions than Wasserstein barycenters."
+  },
+  {
+    "search_file": "arxiv_selection.txt",
+    "title": "Quantifying and Auditing LLM Evaluation via Positive--Unlabeled Learning",
+    "id": "http://arxiv.org/abs/2606.19057v1",
+    "published": "2026-06-17T13:26:04Z",
+    "authors": [
+      "Zilong Zhang",
+      "Yi-Ting Hung",
+      "Lei Ding",
+      "Chi-Kuang Yeh"
+    ],
+    "abstract": "Large Language Models (LLMs) are increasingly used as judges for scalable evaluation, yet such LLM--as--a--Judge systems exhibit systematic biases that are decoupled from semantic quality, most notably verbosity bias. Meanwhile, human supervision is costly and typically selective, yielding reliable positive judgments but leaving most outputs unlabelled and potentially mixed in quality. We formulate LLM evaluation under selective human supervision as a positive--unlabelled learning problem and propose a geometric auditing framework based on Partial Optimal Transport. By aligning a small set of human--verified positives with a reliable subset of unlabelled outputs in a fixed embedding space, our method identifies human--consistent preferences and corrects biased judges without retraining. Experiments demonstrate improved alignment with human preferences, increased robustness to presentation biases, and interpretable confidence estimates, offering a scalable and statistically grounded alternative to existing LLM--as--a--judge pipelines."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Improving Function Space Flow Matching with Kernel Optimal Transport",
+    "id": "http://arxiv.org/abs/2609.38049v1",
+    "published": "2026-09-29T17:20:54Z",
+    "authors": [
+      "Fred Xu",
+      "Thomas Markovich",
+      "Barbora Barancikova",
+      "Yizhou Sun"
+    ],
+    "abstract": "Generative models for function-valued data, such as time series and solutions of partial differential equations, must learn distributions over infinite-dimensional spaces. Functional Flow Matching (FFM) extends Flow Matching to this setting, learning a velocity field whose flow transports a Gaussian prior to the data distribution, but it inherits the independent endpoint pairing of standard Flow Matching: in each batch, prior and data samples are matched arbitrarily, so the conditional bridge must traverse both the shared global structure of the dataset and instance-specific residuals. In function space this is harder to fix than in finite dimensions, since optimal transport (OT) on function spaces is delicate to formulate and a flat Euclidean surrogate ignores the geometry that distinguishes function-valued data. We propose kernel Functional Flow Matching (kFFM), which replaces the independent pairing by entropic OT under a kernel-induced cost, the coupling underlying the Hilbert Sinkhorn Divergence (HSD), leaving the FFM neural-operator architecture unchanged. We prove that the kernel cost and the HSD objective are uniformly bounded and well-posed on Banach ambient spaces, derive an error decomposition against quadratic-cost OT on compact metric spaces that isolates an irreducible kernel-cost mismatch term, and prove a discretization-invariance bound whose rate is governed by Sobolev regularity. Empirically, kFFM improves distributional matching over FFM, diffusion, adversarial, and finite-dimensional OT baselines on time-series and PDE benchmarks, with significant paired-seed gains over FFM and improvements that persist under non-kernel and physics-based diagnostics, including a turbulent Navier-Stokes benchmark. Bounded kernel costs already outperform raw $L^2$ Sinkhorn, and function-space-aware kernels (signature, Sobolev RBF) give further gains on rough or path-valued data."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Probabilistic Geodesic Flow Matching on Location-Scale Families",
+    "id": "http://arxiv.org/abs/2609.34613v1",
+    "published": "2026-09-28T08:40:30Z",
+    "authors": [
+      "Zeyuan Yu",
+      "Zhi Chang",
+      "Shiwei Lan"
+    ],
+    "abstract": "Flow matching (FM) has recently emerged as a promising framework for generative modeling due to its conceptual simplicity and strong empirical performance. In FM, samples are transported along a vector field parameterized by a neural network, inducing a probability path that evolves from a simple noise distribution to the target data distribution, governed by an ordinary differential equation (ODE). However, existing FM approaches predominantly rely on probability paths derived from optimal transport (OT) between Gaussian distributions, which may be suboptimal for capturing complex data with inhomogeneous structures such as heavy tail or sharp contrast. In this work, we generalize FM to the broader class of location-scale families for handling data inhomogeneity and introduce a novel class of probability paths defined as geodesics on the manifold of probability distributions. We name this approach probabilistic geodesic flow matching to distinguish it from prior geodesic (Riemannian) FM methods defined in input space. We argue that Euclidean OT-based paths are not necessarily optimal in probability space and may limit modeling flexibility. Through synthetic benchmarks and scientific datasets at different scales, we demonstrate that the proposed method more effectively captures complex distributions, leading to improved or comparable performance compared with SOTA geometry-motivated generative models."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Unlocking Geodesic Gromov-Wasserstein Distances for 3D Modeling",
+    "id": "http://arxiv.org/abs/2609.32824v2",
+    "published": "2026-09-26T17:49:27Z",
+    "authors": [
+      "Krzysztof Marcin Choromanski",
+      "Derek Long",
+      "Ananya Parashar",
+      "Dwaipayan Saha"
+    ],
+    "abstract": "\\textit{Gromov-Wasserstein Distances} (GWDs) provide quantitative ways of comparing probabilistic distributions defined on different metric spaces by applying techniques from the optimal transport theory. As such, GWD can be potentially useful in a large variety of applications ranging from graph matching problems to 3D object detection. However its practical use at scale is significantly limited by cubic time complexity computations involving dense intra-space distance matrices. Even though in the Euclidean metric spaces several techniques (e.g. involving scalable kernel methods) were proposed to address it, to the best of our knowledge, analogous techniques for general geodesic distances on manifolds, or shortest-path distance on graphs in their discretized variants, were not developed. In this paper, we present \\textbf{E}fficient \\textbf{G}eodesic \\textbf{Gro}mov-\\textbf{W}asserstein methods (EGGroW), a new class of efficient algorithms designed to calculate geodesic Gromov-Wasserstein distances with entropic Sinkhorn-like approaches, leveraging recently introduced \\textit{GenusSink} methods \\citep{genussink} and the theory of random features. We provide important downstream applications, namely: 3D pose estimation and 3D template detection. In the latter setting, we formulate a partial 3D template recovery as a staged problem: capacity-constrained scene selection is followed by semi-relaxed recovery of template visibility and correspondence. Our empirical findings show that EGGroW provides accurate solutions when standard Euclidean-based techniques fail and is characterized by light computational footprint, as our theoretical analysis predicts."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "ICE: Task-Aligned Clifford Latent Fields for Multimodal Graph Foundation Models",
+    "id": "http://arxiv.org/abs/2609.29398v1",
+    "published": "2026-09-24T11:24:08Z",
+    "authors": [
+      "Xunkai Li",
+      "Xu Wang",
+      "Yinlin Zhu",
+      "Xiong Yongfu",
+      "Yi Liu",
+      "Rong-Hua Li",
+      "Guoren Wang"
+    ],
+    "abstract": "Multimodal attributed graphs connect entities, visual content, language, and observed relations. Learning one foundation across such graphs requires more than compressing each node into a fused Euclidean vector. The representation must preserve entity semantics, construct interaction state from graph neighborhoods, and expose that state to prediction units with different geometry. Our empirical study shows why these requirements are inseparable. Higher-grade channels recover pair relations across the foundation graphs, specialized queries reveal information hidden by a generic readout, and rigid blade isolation removes cross-grade capacity. We therefore introduce ICE (Interaction-aware Clifford Encoder), a multimodal graph foundation model built on a node-indexed Clifford latent field. Topology, text, and images enter explicit Cl(3) addresses. Edge-aware geometric products transform these directions into scalar, bivector, and trivector relations over observed neighborhoods. A protected Grade-1 route preserves entity semantics, while the full grade and depth bank remains available to fresh node and link heads. We establish exact cross-grade reachability, node-permutation equivariance, and a bound on the task residual around the semantic score. Experiments span one shared foundation over eleven graphs, six node-classification datasets, three link-prediction datasets, and matched few-shot tasks. ICE ranks first in all 30 reported supervised and few-shot comparisons. Core removals reduce every task summary, and mechanism controls connect the gains to higher-order transport, retained multidepth structure, semantic protection, and direct field access."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Riemannian Density-Driven Optimal Control: Tangent-Space LQR for Second-Order Multi-Agent Systems on Curved Manifolds",
+    "id": "http://arxiv.org/abs/2609.22678v1",
+    "published": "2026-09-19T01:17:56Z",
+    "authors": [
+      "Kooktae Lee",
+      "Ruchika Singh"
+    ],
+    "abstract": "Density-Driven Optimal Control (D2OC) provides an effective framework for steering multi-agent systems toward prescribed spatial distributions. However, existing D2OC formulations are primarily developed for Euclidean domains and do not directly account for intrinsic manifold geometry. This paper extends D2OC to second-order multi-agent systems evolving on Riemannian manifolds. The proposed Riemannian D2OC (R-D2OC) constructs a local distribution objective in the tangent space of each agent through logarithmic maps and uses its weighted center as the reference for a finite-horizon LQR. The resulting control is executed on the manifold through intrinsic second-order dynamics and parallel transport within a receding-horizon scheme. We establish local curvature-dependent bounds that quantify the approximation introduced by the tangent-space reduction and characterize the resulting target bias. Furthermore, we derive a conditional discrete-descent result showing that the closed-loop objective decreases when a local velocity-alignment condition is satisfied. Numerical simulations on a 3D ellipsoidal manifold demonstrate distribution-level control and empirically support the proposed approximation and descent results."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Geometry-Aware Bayesian Parameter-Efficient Fine-Tuning on the Stiefel Manifold via Stein Variational Gradient Descent",
+    "id": "http://arxiv.org/abs/2609.08354v1",
+    "published": "2026-09-08T07:24:54Z",
+    "authors": [
+      "Quang-Duy Tran",
+      "Trung Le",
+      "Bao Duong",
+      "Phuoc Nguyen",
+      "Thin Nguyen"
+    ],
+    "abstract": "Several geometry-aware approaches to low-rank adaptation have emerged for parameter-efficient fine-tuning of large pre-trained models. These methods aim to take full advantage of the geometric structure of low-rank manifolds for improving the efficiency in subspace utilization and reducing redundancy by enforcing orthogonality constraints during optimization. The strong empirical results of these techniques have motivated further study into whether predictions from such geometry-based adaptation methods could be overconfident. In this paper, we build on the singular value decomposition factorization of adapters to develop a framework based on Stein variational gradient descent (SVGD). In this formulation, the low-rank matrices are transported along the Stiefel manifold to match the targeted distributions while retaining their crucial geometric structure. Since this geometry-aware SVGD approach provides multiple solutions during inference, it supports uncertainty quantification and produces better-calibrated adapters on the Stiefel manifold. Extensive experiments show that our method delivers strong model calibration and attains higher prediction accuracy than SVGD and related uncertainty estimation methods that are formulated in Euclidean space."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Target-adapted Green-Bessel SVGD: uniform-in-time propagation of chaos and last-iterate consistency",
+    "id": "http://arxiv.org/abs/2609.08122v1",
+    "published": "2026-09-08T01:54:50Z",
+    "authors": [
+      "Trevor Teolis",
+      "Maarten V. de Hoop"
+    ],
+    "abstract": "We prove uniform-in-time propagation of chaos and last-iterate consistency for a target-adapted Stein variational gradient descent (SVGD) flow on compact connected manifolds. The target has a smooth positive density, and the particles start independently from a fixed smooth nonnegative density ratio. The construction uses the Green--Bessel operator $Q_{r,π}=A_π^{-1}(\\mathrm{Id}+A_π)^{-r}$ of the reversible target Langevin generator. Sufficient Bessel smoothing gives a scalar kernel with finite diagonal, and a positive matrix lift realizes its potential force as a Stein velocity. Population and empirical flows then dissipate the same finite target discrepancy. Population entropy and the target spectral gap give decay of this discrepancy; a finite-time particle comparison reaches a time after which common-energy monotonicity controls every later time. The resulting expected uniform discrepancy is $O((\\log N)^{-1/2})$, with a corresponding logarithmic $W_1$ bound and consistency along every sequence $t_N\\to\\infty$. We also prove an exact finite-mode approximation theorem with an explicit spatial-resolution error and a feature-factorized particle implementation. For confining Euclidean targets, we establish static kernel and moment results and give a conditional dynamical extension under explicit population-regularity and transport hypotheses."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Sample Complexity for the 2-Gromov-Wasserstein Distance",
+    "id": "http://arxiv.org/abs/2607.27514v1",
+    "published": "2026-07-29T23:08:18Z",
+    "authors": [
+      "Pui Kuen Leung",
+      "Riku Okada",
+      "Samuel Lok-Hei Wong"
+    ],
+    "abstract": "In this paper, we study the sample complexity of the empirical plug-in estimator for the $2$-Gromov-Wasserstein distance $D_2$ between compactly supported probability measures on Euclidean spaces. Let $μ$ and $ν$ be supported on compact subsets of $\\mathbb{R}^{d_x}$ and $\\mathbb{R}^{d_y}$, respectively, and let $\\widehatμ_n$ and $\\widehatν_n$ be their empirical measures based on independent samples of size $n$. We prove that \\[ \\mathbb{E}\\left|D_2^2(\\widehatμ_n,\\widehatν_n)-D_2^2(μ,ν)\\right| \\lesssim n^{-2/((d_x\\wedge d_y)\\vee 4)} (\\log n)^{\\mathbf 1_{\\{d_x\\wedge d_y=4\\}}}. \\] This rate is sharp up to the logarithmic factor in the critical dimension. The proof is based on a geometric representation of the Euclidean distance as a squared $L^2$-distance between half-space feature maps. This yields a variational dual formulation of the Gromov-Wasserstein functional in terms of a family of classical optimal transport problems indexed by an infinite-dimensional auxiliary parameter. Although the resulting cost functions need not be semiconcave in either argument, we introduce a marginal recentering of the costs that restores the concavity structure needed for sharp metric-entropy bounds. Combining this representation with empirical-process estimates gives a rate governed by the smaller of the two ambient dimensions."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Uniform Convergence of Generalized Conditional Fréchet Means with Applications to Weighted Fréchet Aggregation and Exceedance Set Estimation",
+    "id": "http://arxiv.org/abs/2607.26837v1",
+    "published": "2026-07-29T12:27:28Z",
+    "authors": [
+      "Houren Hong",
+      "Jiazhen Xu",
+      "Andrew T. A. Wood"
+    ],
+    "abstract": "The statistical analysis of object oriented data in non-Euclidean spaces heavily relies on generalized conditional Fréchet means, notably in the context of Fréchet regression. However, establishing the uniform convergence of these estimators presents several theoretical challenges. The difficulties are caused primarily by the absence of linear structures in general metric spaces, rendering standard techniques for verifying the asymptotic uniform equicontinuity of the estimator largely intractable. To overcome this limitation, this paper introduces an alternative theoretical framework for establishing uniform convergence that bypasses the need to verify uniform equicontinuity, under a novel structural condition on the empirical cost function of the generalized conditional Fréchet means. We demonstrate that this analytical condition is satisfied by various prominent Fréchet regression models across broad classes of metric spaces. Leveraging these foundational uniform convergence guarantees, we subsequently extend two widely used frameworks from Euclidean to non-Euclidean spaces: (i) a weighted Fréchet aggregation framework that facilitates both distributed regression and robust median-of-means regression; and (ii) an exceedance set estimation framework to identify critical covariate regions where the conditional generalized Fréchet mean surpasses a prescribed threshold, alongside a metric to quantify the aggregate magnitude of the exceedance. The theoretical properties of these proposed methods are empirically validated through Monte Carlo simulations and an application to dynamic transportation networks in New York City."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Symmetrized Sinkhorn-Gibbs Inference for Oscillatory Inverse Problems",
+    "id": "http://arxiv.org/abs/2607.26264v1",
+    "published": "2026-07-28T20:51:50Z",
+    "authors": [
+      "Gabriel Huerta",
+      "Mohammad Motamed"
+    ],
+    "abstract": "Oscillatory inverse problems often exhibit highly nonconvex discrepancy landscapes due to signal misalignment and cycle-skipping phenomena, posing significant challenges for uncertainty quantification. While Gibbs posteriors provide a flexible framework for incorporating problem-specific discrepancy measures, their performance depends strongly on the empirical risk landscape induced by the chosen discrepancy measure. Optimal transport accounts for the spatial and temporal structure of the underlying feature domain when comparing oscillatory signals. However, the direct application of classical optimal transport is precluded because observed and predicted signals are typically signed and therefore do not satisfy the positivity requirements of classical transport formulations. We introduce a symmetrized Sinkhorn-Gibbs inference framework for oscillatory inverse problems. The proposed approach combines a normalization procedure for signed signals with a symmetrized Sinkhorn loss that exploits complementary transport information from the normalized signals and their normalized negations. The resulting loss is incorporated into the Gibbs posterior framework, yielding a Gibbs inference methodology tailored to oscillatory data. We establish smoothness properties of the proposed loss, prove well-definedness of the resulting Gibbs posterior, derive robustness guarantees, and develop an adaptive sampling strategy for posterior computation. Numerical experiments demonstrate less oscillatory empirical risk landscapes with fewer spurious local minima, more accurate posterior inference, greater robustness to observational noise, and improved population-level recovery than Gibbs posteriors based on Euclidean and trace-wise Wasserstein losses."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Learning sufficient low-dimensional structures through conditional optimal transport",
+    "id": "http://arxiv.org/abs/2607.18861v1",
+    "published": "2026-07-21T08:51:44Z",
+    "authors": [
+      "Kaiqiang Alan Zeng",
+      "Efstathia Bura"
+    ],
+    "abstract": "Sufficient dimension reduction seeks a low-dimensional covariate representation that preserves the conditional law of a response. We introduce SDR-COT, which represents that law by conditional optimal transport from an independent reference response. On separable Hilbert spaces, sufficiency forces the response component of the optimal triangular map to factor through the reduction. For quadratic cost, the induced interpolation has a Borel current-state velocity on every truncated time interval, without global injectivity of the terminal map, and this velocity has the same factorisation. These results motivate a conditional-flow-matching criterion. For linear reductions, we prove consistency using a suitably tuned relaxed empirical coupling. Euclidean responses are treated through slicewise Caffarelli bounds; Hilbert-valued responses are treated through Gaussian Sobolev regularity, interpolation compression and uniqueness of a Gaussian continuity equation. Numerical studies with Euclidean and functional data show competitive performance, especially when sufficient information is not solely contained in the conditional mean."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Intrinsic Flow Matching on Quantum Pure-State Manifolds with Phase-Aligned Transport",
+    "id": "http://arxiv.org/abs/2606.21256v1",
+    "published": "2026-06-19T09:32:21Z",
+    "authors": [
+      "Jian Xu",
+      "Delu Zeng",
+      "John Paisley",
+      "Qibin Zhao"
+    ],
+    "abstract": "Quantum pure-state ensembles live on complex projective space, making flat Euclidean generative modeling geometrically mismatched. We introduce Intrinsic Flow Matching (IFM), a deterministic transport framework on $\\mathbb{CP}^{d-1}$ that learns tangent velocity fields using Pancharatnam phase-aligned conditional paths. IFM replaces local score teachers and reverse-time stochastic sampling with manifold probability flow, while horizontal parameterization removes redundant ambient directions. We show that the IFM objective recovers the induced marginal transport field, represents deterministic projective ensemble flows, and yields endpoint and stability guarantees. Empirically, IFM often improves over ambient Euclidean flow matching across higher-qubit, multimodal, spin-coherent, physics-inspired, and amplitude-encoded MNIST image-vector benchmarks, with strongest gains on high-dimensional and coherence-sensitive tasks but not uniformly across every metric."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Generative Modeling on Metric Graphs via Neural Optimal Transport",
+    "id": "http://arxiv.org/abs/2606.16273v1",
+    "published": "2026-06-15T06:21:50Z",
+    "authors": [
+      "Alessandro Micheli",
+      "Yueqi Cao",
+      "Anthea Monod",
+      "Samir Bhatt"
+    ],
+    "abstract": "We introduce, to our knowledge, the first deep generative modeling framework for probability distributions continuously supported on compact metric graphs. Given source and target measures on a metric graph, our method embeds the graph into a smooth ambient space, solves an entropic Kantorovich problem via a neural semidual parameterization, and projects generated samples back onto the original graph. We study two embedded geometries: an extrinsic Euclidean realization and the intrinsic tropical Abel--Jacobi embedding into the Jacobian torus. In both cases, the resulting generator is graph-supported by construction. We prove that, in the joint limit of increasing neural expressivity, the learned generator converges weakly to a valid transport coupling between the original graph measures. Empirically, across a range of geometrically distinct graphs, our method matches or improves upon heuristic transport baselines based on discrete graph OT, while scaling more favorably. Finally, we demonstrate scalability on real-world urban mobility data by training our model on one million Uber pickup locations in Manhattan, New York City."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Self-Consistent Closure of Fractal Dimension, Nonextensive Statistics, and Non-Markovian Dynamics in Critical Systems",
+    "id": "http://arxiv.org/abs/2606.15750v1",
+    "published": "2026-06-14T11:22:41Z",
+    "authors": [
+      "O. Sotolongo-Costa",
+      "J. Weberszpil",
+      "M. E. Mora-Ramos"
+    ],
+    "abstract": "Self-organized critical systems often exhibit three macroscopic features simultaneously: nonextensive thermodynamics (quantified by the Tsallis index $q$), structural fractality (measured by the Hausdorff dimension $D$), and non-Markovian dynamics (characterized by the memory exponent $α$). Historically, these parameters have been treated as independent, to be empirically fitted case by case. Here we demonstrate that phase-space self-consistency imposes a unique algebraic closure: $α=D/(2D-1)$. This relation, together with $q=1+1/D$ derived from the extensivity of Tsallis entropy on fractal supports, yields the known result $α=1/(3-q)$ as a consequence, not as an independent assumption. The closure contains no free parameters and satisfies the physical boundary conditions $α(1)=1$ (ballistic transport in Euclidean spaces) and $α\\to1/2$ as $D\\to\\infty$ (maximally subdiffusive regime). We validate the Troika relation across eight independent experimental systems, including seismicity, electromagnetic precursors, EEG, urban networks, botanical architectures, and space plasma. All measured values fall within error bars of the theoretical prediction, establishing the universality of the closure."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Active Timepoint Selection for Learning Measure-Valued Trajectories",
+    "id": "http://arxiv.org/abs/2605.30625v1",
+    "published": "2026-05-28T22:22:35Z",
+    "authors": [
+      "Nicolas Huynh",
+      "Mihaela van der Schaar"
+    ],
+    "abstract": "Inferring continuous probability paths from sparse snapshots is a fundamental challenge in domains like single-cell biology, where high-fidelity data acquisition is often destructive and constrained by prohibitive sequencing costs. This motivates the need for active learning strategies to strategically select optimal measurement times. However, designing active learning policies for this setting remains an open problem: the target objects reside on the infinite dimensional Wasserstein space where standard Euclidean metrics are ill-defined, and current interpolation methods lack epistemic uncertainty quantification. We introduce a framework which extends active experimentation to the space of measures. By leveraging Linearized Optimal Transport (LOT), we map distributional snapshots into a tangent space amenable to Gaussian Process modeling, allowing us to construct a tractable probabilistic surrogate for the underlying probability path. This yields an acquisition policy that iteratively selects measurement times to minimize uncertainty. Empirical results demonstrate that our strategy outperforms uncertainty-agnostic baselines on both synthetic and real-world datasets."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Empirical Convergence of Even-Order Gromov-Wasserstein Functionals",
+    "id": "http://arxiv.org/abs/2605.11108v2",
+    "published": "2026-05-11T18:13:22Z",
+    "authors": [
+      "Vasyl Paliy"
+    ],
+    "abstract": "We study the sample complexity of empirical plug-in estimation for the powered even-order Gromov-Wasserstein functional between compactly supported probability measures on $\\mathbb{R}^{d_x}$ and $\\mathbb{R}^{d_y}$. For every fixed pair of integers $r,k\\geq 1$, we prove that the two-sample empirical error is bounded at the rate $n^{-2/\\max\\{\\min\\{d_x,d_y\\},4\\}}$, up to a logarithmic factor in the critical case $\\min\\{d_x,d_y\\}=4$. This extends the known quadratic Euclidean upper rate to the full powered even-order family. The proof uses a polynomial decomposition of the even-order GW functional, a generalized duality formula reducing the coupling-dependent term to a compact family of ordinary optimal transport problems, and entropy estimates for semiconcave dual potentials."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "The Wristband Gaussian Loss: Deterministic, Composable Latents via a Sphere-Interval Decomposition",
+    "id": "http://arxiv.org/abs/2605.08749v1",
+    "published": "2026-05-09T07:25:37Z",
+    "authors": [
+      "Mikhail Parakhin",
+      "André M. Carvalho",
+      "Patrick Haluptzok"
+    ],
+    "abstract": "We present the Wristband Gaussian Loss, a deterministic batch loss for Gaussianizing point embeddings without sampling, KL terms, or iterative transport. Each $x \\in \\mathbb{R}^d$ is mapped to a direction $u = x/\\|x\\|$ and a CDF-transformed radius $t = F_{χ^2_d}(\\|x\\|^2)$ on the wristband $S^{d-1} \\times [0,1]$. We prove (and machine-verify in Lean~4) that for $d \\ge 2$ the pushforward wristband map equals $σ_{d-1} \\otimes \\mathrm{Unif}[0,1]$ iff the source is $\\mathcal{N}(0, I_d)$, and that the Neumann-reflected wristband repulsion energy is uniquely minimized at the uniform target. We compute this reflected-kernel objective in two ways: a nearest three-image pairwise truncation at $O(N^2 d)$, and a spectral Neumann path joining angular and radial Mercer modes (spherical-harmonic and cosine) at $O(N d K)$, with empirically matched gradients. A 1D Wasserstein radial term and a moment penalty serve as finite-sample accelerators with the same optimum, and Monte-Carlo null calibration turns the components into a single standardized statistic. We evaluate direct point-cloud Gaussianization with a calibrated barycentric $W_2$ score: a deterministic Gaussian reference batch is built by recursive Hungarian averaging, with each method reported as a $z$-score against same-size Gaussian batches. On the axis-uniform X benchmark, Wristband is competitive in 2D and gives the best 10D score. On a harder radial--angular-copula impostor whose Gaussian radial and angular marginals are correct but dependent, Wristband gives the best 10D and 128D scores. Coupled with learnable-key Euclidean attention and exact invertible flows, the resulting Deterministic Gaussian Autoencoder delivers a Gaussian-latent interface for counterfactual sampling with independent factors and a context/residual construction for dependent factors."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Entropic Riemannian Neural Optimal Transport",
+    "id": "http://arxiv.org/abs/2605.04255v1",
+    "published": "2026-05-05T19:43:03Z",
+    "authors": [
+      "Alessandro Micheli",
+      "Silvia Sapora",
+      "Anthea Monod",
+      "Samir Bhatt"
+    ],
+    "abstract": "Many machine learning problems involve data supported on curved spaces such as spheres, rotation groups, hyperbolic spaces, and general Riemannian manifolds, where Euclidean geometry can distort distances, averages, and the resulting optimal transport (OT) problem. Existing manifold OT methods have pursued amortized out-of-sample maps, while entropic regularization has made discrete OT more scalable, but these advantages have remained largely disjoint. We propose Entropic Riemannian Neural Optimal Transport (Entropic RNOT), a unified framework that combines intrinsic entropic OT with amortized out-of-sample evaluation on Riemannian manifolds. Our method learns a single target-side Schrödinger potential through a neural pullback parameterization, recovers the induced Gibbs coupling, and uses the resulting conditional laws to construct intrinsic transport surrogates. These include barycentric projections on Cartan-Hadamard manifolds and heat-smoothed conditional surrogates on stochastically complete manifolds, the latter turning possibly atomic target laws into absolutely continuous ones. For fixed regularization $\\varepsilon>0$, we prove that the proposed hypothesis class recovers the entropic optimal coupling in strong probabilistic metrics. As consequences, barycentric surrogates converge in $L^2$, while heat-smoothed surrogates are stable at fixed heat time and asymptotically unbiased as the heat time vanishes. The guarantees hold for compactly supported data on possibly noncompact manifolds. Empirically, our method matches or improves over Euclidean, tangent-space, and log-Euclidean baselines on benchmarks over $\\mathbb{S}^2$, $\\mathrm{SO}(3)$, $\\mathrm{SPD}(3)$, $\\mathrm{SE}(3)$, and $\\mathbb{H}^2$, scales favorably relative to discrete manifold Sinkhorn, and in a protein-ligand docking application, refines poses on $\\mathrm{SE}(3)$ without retraining or per-instance optimization."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Intrinsic effective sample size for manifold-valued Markov chain Monte Carlo via kernel discrepancy",
+    "id": "http://arxiv.org/abs/2605.03266v1",
+    "published": "2026-05-05T01:37:41Z",
+    "authors": [
+      "Kisung You"
+    ],
+    "abstract": "Effective sample size is a standard summary of Markov chain Monte Carlo output, but it is usually attached to scalar or Euclidean summaries chosen by the analyst. For manifold-valued samples this choice is not canonical: coordinate-wise effective sample sizes can change under rotations, chart changes, or alternative embeddings of the same underlying path. We propose an intrinsic effective sample size based on kernel discrepancy. The proposed quantity is the number of independent draws that would yield the same expected squared kernel discrepancy between the empirical distribution and the target distribution. This gives an exact finite-sample risk interpretation, an asymptotic integrated-autocorrelation representation, and a coordinate-free diagnostic whenever the kernel respects the geometry of the state space. We establish invariance under transported kernels, operator and principal-direction interpretations, and consistency of a lag-window estimator under boundedness and absolute-regularity conditions. We also discuss valid kernel constructions on manifolds, emphasizing that geodesic Gaussian kernels are not generally positive definite on curved spaces. Sphere experiments illustrate rotation invariance and calibration of the proposed diagnostic against empirical distributional error."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Statistical Estimation of Monge Transport Maps via Brenier Potentials",
+    "id": "http://arxiv.org/abs/2604.22366v2",
+    "published": "2026-04-24T08:58:56Z",
+    "authors": [
+      "Elsa Cazelles",
+      "Edouard Pauwels",
+      "Léo Portales"
+    ],
+    "abstract": "We introduce and analyze a statistical estimator for Monge transport maps: solutions to the quadratic optimal transport problem in the Euclidean space. For absolutely continuous source measures, this map is uniquely defined as the gradient of a convex function, a result known as Brenier's theorem. Without absolute continuity, the problem is relaxed, maps are replaced by coupling measures, and optimal couplings are supported on the subdifferential of a convex function, called a Brenier potential. This potential is the basis for our transport map statistical estimator, for measures known only through finite samples. We construct an explicit optimal Brenier potential for the empirical problem, with a simple closed form expression based on dual solutions. Our transport map estimator is then defined as a suitable subdifferential selection, and can be extended to $\\mathbb{R}^d$. We exhibit convergence rates for this estimator based on a new error bound for the quadratic optimal transport problem. In the semi-discrete setting, where the target measure is finitely supported, our estimator enjoys sharper convergence rates. Our methodology does not rely on smoothness or continuity of the target Monge transport map and requires no computation beyond primal-dual solutions of the empirical finite dimensional problem. Finally, using similar proof techniques, we provide novel convergence rates for empirical couplings."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Approximation Models for Shared Mobility Rebalancing Under Structured Spatial Imbalance",
+    "id": "http://arxiv.org/abs/2604.04412v1",
+    "published": "2026-04-06T04:27:10Z",
+    "authors": [
+      "Wenbo Fan",
+      "Zhouyun Chen",
+      "Weihua Gu"
+    ],
+    "abstract": "Shared mobility systems (e.g., shared cars and ride-hailing services) generate persistent spatial imbalances as vehicles concentrate at popular destinations, leaving trip origins depleted of supply. Operators incur substantial costs in repositioning empty vehicles, and quantifying the theoretical minimum rebalancing distance is practically important. Exact computation requires solving a transportation linear program that is challenging at the city scale. Closed-form approximation models are derived for the minimum rebalancing distance in rectangular service regions. Parallel derivations are presented for the Manhattan metric (grid road networks) and the Euclidean metric (unconstrained movement). A scalar spatial imbalance index condenses the full demand pattern into a single interpretable quantity. Both models share a unified structure: the per-vehicle rebalancing distance scales with the square root of service area, the imbalance index, and a shape factor that depends solely on the aspect ratio. Calibration and validation against 500 exact LP solutions per metric confirm the area-scaling exponent to within 2\\% of the theoretical prediction, across three demand distribution families. An empirical case study using January 2026 New York City for-hire vehicle trip data across 263 traffic analysis zones confirms that the formula generalizes to real-world, network-constrained demand. The results equip operators and system designers with solver-free, theoretically grounded tools for benchmarking rebalancing performance and optimizing service, rebalancing frequency, and demand-management interventions."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Correcting Source Mismatch in Flow Matching with Radial-Angular Transport",
+    "id": "http://arxiv.org/abs/2604.04291v1",
+    "published": "2026-04-05T22:20:17Z",
+    "authors": [
+      "Fouad Oubari",
+      "Mathilde Mougeot"
+    ],
+    "abstract": "Flow Matching is typically built from Gaussian sources and Euclidean probability paths. For heavy-tailed or anisotropic data, however, a Gaussian source induces a structural mismatch already at the level of the radial distribution. We introduce \\textit{Radial--Angular Flow Matching (RAFM)}, a framework that explicitly corrects this source mismatch within the standard simulation-free Flow Matching template. RAFM uses a source whose radial law matches that of the data and whose conditional angular distribution is uniform on the sphere, thereby removing the Gaussian radial mismatch by construction. This reduces the remaining transport problem to angular alignment, which leads naturally to conditional paths on scaled spheres defined by spherical geodesic interpolation. The resulting framework yields explicit Flow Matching targets tailored to radial--angular transport without modifying the underlying deterministic training pipeline. We establish the exact density of the matched-radial source, prove a radial--angular KL decomposition that isolates the Gaussian radial penalty, characterize the induced target vector field, and derive a stability result linking Flow Matching error to generation error. We further analyze empirical estimation of the radial law, for which Wasserstein and CDF metrics provide natural guarantees. Empirically, RAFM substantially improves over standard Gaussian Flow Matching and remains competitive with recent non-Gaussian alternatives while preserving a lightweight deterministic training procedure. Overall, RAFM provides a principled source-and-path design for Flow Matching on heavy-tailed and extreme-event data."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Learning Monge maps with constrained drifting models",
+    "id": "http://arxiv.org/abs/2603.25182v3",
+    "published": "2026-03-26T08:51:51Z",
+    "authors": [
+      "Théo Dumont",
+      "Théo Lacombe",
+      "François-Xavier Vialard"
+    ],
+    "abstract": "We study the estimation of optimal transport (OT) maps between an arbitrary source probability measure and a log-concave target probability measure. Our contributions are twofold. First, we propose a new evolution equation in the set of transport maps. It can be seen as the gradient flow of a lift of some user-chosen divergence (e.g., the KL divergence, or relative entropy) to the space of transport maps, constrained to the convex set of optimal transport maps. We prove the existence of long-time solutions to this flow as well as its convergence toward the OT map as time goes to infinity, under standard convexity conditions on the divergence. Second, we study the practical implementation of this constrained gradient flow. We propose two time-discrete computational schemes-one explicit, one implicit-, and we prove the convergence of the latter to the OT map as time goes to infinity. We then parameterize the OT maps with convexity-constrained neural networks and train them with these discretizations of the constrained gradient flow. We show that this is equivalent to performing a natural gradient descent of the lift of the chosen divergence in the neural networks' parameter space, similarly to drifting generative models. Empirically, our scheme outperforms the standard Euclidean gradient descent methods used to train convexity-constrained neural networks in terms of approximation results for the OT map and convergence stability, and it still yields better results than the same approach combined with the widely used Adam optimizer."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Sinkhorn Based Associative Memory Retrieval Using Spherical Hellinger Kantorovich Dynamics",
+    "id": "http://arxiv.org/abs/2603.20656v1",
+    "published": "2026-03-21T05:25:15Z",
+    "authors": [
+      "Aratrika Mustafi",
+      "Soumya Mukherjee"
+    ],
+    "abstract": "We propose a dense associative memory for empirical measures (weighted point clouds). Stored patterns and queries are finitely supported probability measures, and retrieval is defined by minimizing a Hopfield-style log-sum-exp energy built from the debiased Sinkhorn divergence. We derive retrieval dynamics as a spherical Hellinger Kantorovich (SHK) gradient flow, which updates both support locations and weights. Discretizing the flow yields a deterministic algorithm that uses Sinkhorn potentials to compute barycentric transport steps and a multiplicative simplex reweighting. Under local separation and PL-type conditions we prove basin invariance, geometric convergence to a local minimizer, and a bound showing the minimizer remains close to the corresponding stored pattern. Under a random pattern model, we further show that these Sinkhorn basins are disjoint with high probability, implying exponential capacity in the ambient dimension. Experiments on synthetic Gaussian point-cloud memories demonstrate robust recovery from perturbed queries versus a Euclidean Hopfield-type baseline."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Fréchet regression of multivariate distributions with nonparanormal transport",
+    "id": "http://arxiv.org/abs/2603.07014v2",
+    "published": "2026-03-07T03:21:12Z",
+    "authors": [
+      "Junyoung Park",
+      "Irina Gaynanova"
+    ],
+    "abstract": "Regression with distribution-valued responses and Euclidean predictors has gained increasing scientific relevance. While methodology for univariate distributional data has advanced rapidly in recent years, multivariate distributions, which additionally encode dependence across univariate marginals, have received less attention and pose computational and statistical challenges. In this work, we address these challenges with a new regression approach for multivariate distributional responses, in which distributions are modeled within the semiparametric nonparanormal family. By incorporating the nonparanormal transport (NPT) metric -- an efficient closed-form surrogate for the Wasserstein distance -- into the Fréchet regression framework, our approach decomposes the problem into separate regressions of marginal distributions and their dependence structure, facilitating both efficient estimation and granular interpretation of predictor effects. We provide theoretical justification for NPT, establishing its bi-Lipschitz equivalence to the Wasserstein distance and proving that it mitigates the curse of dimensionality. We further prove uniform convergence guarantees for regression estimators, both when distributional responses are fully observed and when they are estimated from empirical samples, attaining fast convergence rates comparable to the univariate case. The utility of our method is demonstrated via simulations and an application to continuous glucose monitoring data."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "A Sieve M-Estimator for Entropic Optimal Transport",
+    "id": "http://arxiv.org/abs/2512.21981v4",
+    "published": "2025-12-26T11:04:43Z",
+    "authors": [
+      "Rami V. Tabri"
+    ],
+    "abstract": "Entropically regularized optimal transport between probability measures supported on compact subsets of Euclidean space admits a representation as an information projection under moment inequality constraints. Exploiting this structure, I develop a sieve-based approximation of the Fenchel dual, yielding a sequence of finite-dimensional convex programs whose sample analogues provide tractable estimators of the regularized optimal value and associated dual optimizers. Under minimal assumptions--compact support and continuity of the cost function--I establish almost sure consistency of these estimators. I further derive finite-sample bounds for the estimation error of the optimal value, featuring only logarithmic dependence on sieve complexity, and obtain asymptotic stochastic bounds characterized by suprema of centered Gaussian processes. The results furnish general statistical guarantees for sieve-based estimation of entropic optimal transport and apply to settings not covered by existing theory for the empirical Sinkhorn divergence and other sieve-based methods."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "General Divergence Regularized Optimal Transport: Sample Complexity and Central Limit Theorems",
+    "id": "http://arxiv.org/abs/2510.02489v2",
+    "published": "2025-10-02T18:52:52Z",
+    "authors": [
+      "Jiaping Yang",
+      "Yunxin Zhang"
+    ],
+    "abstract": "We study empirical divergence-regularized optimal transport on arbitrary Polish spaces. For bounded continuous costs and dual-regular conjugates $ψ\\in C^1(\\mathbb R)$, we establish a dimension-free $n^{-1/2}$ bound for the empirical transport value using dual interpolation, Hoeffding projection, and bounded-difference arguments. For the asymptotic theory, we isolate the population identifiability condition needed for stability and give sufficient conditions for population uniqueness. In particular, active-set identifiability implies uniqueness of the canonical population potentials, and connectedness of either population support is sufficient. This condition requires neither compactness nor Euclidean structure and covers quadratic regularization, whose conjugate is $C^1$ but not $C^2$. We also give finite-support and large-regularization criteria. Under a bounded Lipschitz cost, the empirical potentials are stable, the transport value is asymptotically linear, and one- and two-sample central limit theorems hold with population centering. This includes noncompact and infinite-dimensional Polish state spaces."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "A Particle-Flow Algorithm for Free-Support Wasserstein Barycenters",
+    "id": "http://arxiv.org/abs/2509.11435v2",
+    "published": "2025-09-14T21:05:04Z",
+    "authors": [
+      "Kisung You"
+    ],
+    "abstract": "The Wasserstein barycenter extends the Euclidean mean to the space of probability measures by minimizing the weighted sum of squared 2-Wasserstein distances. We develop a free-support algorithm for computing Wasserstein barycenters that avoids entropic regularization and instead follows the formal Riemannian geometry of Wasserstein space. In our approach, barycenter atoms evolve as particles advected by averaged optimal-transport displacements, with barycentric projections of optimal transport plans used in place of Monge maps when the latter do not exist. This yields a geometry-aware particle-flow update that preserves sharp features of the Wasserstein barycenter while remaining computationally tractable. We establish theoretical guarantees, including consistency of barycentric projections, monotone descent and convergence to stationary points, stability with respect to perturbations of the inputs, and resolution consistency as the number of atoms increases. Empirical studies on averaging probability distributions, Bayesian posterior aggregation, image prototypes and classification, and large-scale clustering demonstrate accuracy and scalability of the proposed particle-flow approach, positioning it as a principled alternative to both linear programming and regularized solvers."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "HOTA: Hamiltonian framework for Optimal Transport Advection",
+    "id": "http://arxiv.org/abs/2507.17513v2",
+    "published": "2025-07-23T13:51:06Z",
+    "authors": [
+      "Nazar Buzun",
+      "Daniil Shlenskii",
+      "Maxim Bobrin",
+      "Dmitry V. Dylov"
+    ],
+    "abstract": "Optimal transport (OT) has become a natural framework for guiding the probability flows. Yet, the majority of recent generative models assume trivial geometry (e.g., Euclidean) and rely on strong density-estimation assumptions, yielding trajectories that do not respect the true principles of optimality in the underlying manifold. We present Hamiltonian Optimal Transport Advection (HOTA), a Hamilton-Jacobi-Bellman based method that tackles the dual dynamical OT problem explicitly through Kantorovich potentials, enabling efficient and scalable trajectory optimization. Our approach effectively evades the need for explicit density modeling, performing even when the cost functionals are non-smooth. Empirically, HOTA outperforms all baselines in standard benchmarks, as well as in custom datasets with non-differentiable costs, both in terms of feasibility and optimality."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "GradNetOT: Learning Optimal Transport Maps with GradNets",
+    "id": "http://arxiv.org/abs/2507.13191v2",
+    "published": "2025-07-17T14:59:24Z",
+    "authors": [
+      "Shreyas Chaudhari",
+      "Srinivasa Pranav",
+      "José M. F. Moura"
+    ],
+    "abstract": "Monotone gradient functions play a central role in solving the Monge formulation of the optimal transport (OT) problem, which arises in modern applications ranging from fluid dynamics to robot swarm control. When the transport cost is the squared Euclidean distance, Brenier's theorem guarantees that the unique optimal transport map satisfies a Monge-Ampère equation and is the gradient of a convex function. In [arXiv:2301.10862] [arXiv:2404.07361], we proposed Monotone Gradient Networks (mGradNets), neural networks that directly parameterize the space of monotone gradient maps. In this work, we leverage mGradNets to directly learn the optimal transport mapping by minimizing a training loss function defined using the Monge-Ampère equation. We empirically show that the structural bias of mGradNets facilitates the learning of optimal transport maps across both image morphing tasks and high-dimensional OT problems."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Sobolev Gradient Ascent for Optimal Transport: Barycenter Optimization and Convergence Analysis",
+    "id": "http://arxiv.org/abs/2505.13660v2",
+    "published": "2025-05-19T18:59:24Z",
+    "authors": [
+      "Kaheon Kim",
+      "Bohan Zhou",
+      "Changbo Zhu",
+      "Xiaohui Chen"
+    ],
+    "abstract": "This paper introduces a new constraint-free concave dual formulation for the Wasserstein barycenter. Tailoring the vanilla dual gradient ascent algorithm to the Sobolev geometry, we derive a scalable Sobolev gradient ascent (SGA) algorithm to compute the barycenter for input distributions discretized over a regular grid. Despite the algorithmic simplicity, we provide a global convergence analysis that achieves the same rate as the classical subgradient descent methods for minimizing nonsmooth convex functions in the Euclidean space. A central feature of our SGA algorithm is that the computationally expensive $c$-concavity projection operator enforced on the Kantorovich dual potentials is unnecessary to guarantee convergence, leading to significant algorithmic and theoretical simplifications over all existing primal and dual methods for computing the exact barycenter. Our numerical experiments demonstrate the superior empirical performance of SGA over the existing optimal transport barycenter solvers."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Principal Curves In Metric Spaces And The Space Of Probability Measures",
+    "id": "http://arxiv.org/abs/2505.04168v2",
+    "published": "2025-05-07T06:44:34Z",
+    "authors": [
+      "Andrew Warren",
+      "Anton Afanassiev",
+      "Forest Kobayashi",
+      "Young-Heon Kim",
+      "Geoffrey Schiebinger"
+    ],
+    "abstract": "We introduce principal curves in Wasserstein space, and in general compact metric spaces. Our motivation for the Wasserstein case comes from optimal-transport-based trajectory inference, where a developing population of cells traces out a curve in Wasserstein space. Our framework enables new experimental procedures for collecting high-density time-courses of developing populations of cells: time-points can be processed in parallel (making it easier to collect more time-points). However, then the time of collection is unknown, and must be recovered by solving a seriation problem (or one-dimensional manifold learning problem). We propose an estimator based on Wasserstein principal curves, and prove it is consistent for recovering a curve of probability measures in Wasserstein space from empirical samples. This consistency theorem is obtained via a series of results regarding principal curves in compact metric spaces. In particular, we establish the validity of certain numerical discretization schemes for principal curves, which is a new result even in the Euclidean setting."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Discussion of \"Robust Distance Covariance\" by S. Leyder, J. Raymaekers, and P.J. Rousseeuw",
+    "id": "http://arxiv.org/abs/2503.22021v1",
+    "published": "2025-03-27T22:26:52Z",
+    "authors": [
+      "Hallin Marc",
+      "Davide La Vecchia",
+      "Hang Liu",
+      "Xinyi Xu"
+    ],
+    "abstract": "Distance covariance and distance correlation have long been regarded as natural measures of dependence between two random vectors, and have been used in a variety of situations for testing independence. Despite their popularity, the robustness of their empirical versions remain highly undiscovered. The paper named \"Robust Distance Covariance\" by S. Leyder, J. Raymaekers, and P.J. Rousseeuw (below referred to as [LRR]), which this article is discussing about, has provided a welcome addition to the literature. Among some intriguing results in [LRR], we find ourselves particularly interested in the so-called \"robustness by transformation\" that was highlighted when they used a clever trick named \"the biloop transformation\" to obtain a bounded and redescending influence function. Building on the measure-transportation-based notions of directional ranks and signs, we show how the \"robustness via transformation\" principle emphasized by [LRR] extends beyond the case of bivariate independence that [LRR] has investigated and also applies in higher-dimension Euclidean spaces and on compact manifolds. The case of directional variables (taking values on (hyper)spheres) is given special attention."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Distance-Based Tree-Sliced Wasserstein Distance",
+    "id": "http://arxiv.org/abs/2503.11050v1",
+    "published": "2025-03-14T03:36:44Z",
+    "authors": [
+      "Hoang V. Tran",
+      "Khoi N. M. Nguyen",
+      "Trang Pham",
+      "Thanh T. Chu",
+      "Tam Le",
+      "Tan M. Nguyen"
+    ],
+    "abstract": "To overcome computational challenges of Optimal Transport (OT), several variants of Sliced Wasserstein (SW) has been developed in the literature. These approaches exploit the closed-form expression of the univariate OT by projecting measures onto (one-dimensional) lines. However, projecting measures onto low-dimensional spaces can lead to a loss of topological information. Tree-Sliced Wasserstein distance on Systems of Lines (TSW-SL) has emerged as a promising alternative that replaces these lines with a more advanced structure called tree systems. The tree structures enhance the ability to capture topological information of the metric while preserving computational efficiency. However, at the core of TSW-SL, the splitting maps, which serve as the mechanism for pushing forward measures onto tree systems, focus solely on the position of the measure supports while disregarding the projecting domains. Moreover, the specific splitting map used in TSW-SL leads to a metric that is not invariant under Euclidean transformations, a typically expected property for OT on Euclidean space. In this work, we propose a novel class of splitting maps that generalizes the existing one studied in TSW-SL enabling the use of all positional information from input measures, resulting in a novel Distance-based Tree-Sliced Wasserstein (Db-TSW) distance. In addition, we introduce a simple tree sampling process better suited for Db-TSW, leading to an efficient GPU-friendly implementation for tree systems, similar to the original SW. We also provide a comprehensive theoretical analysis of proposed class of splitting maps to verify the injectivity of the corresponding Radon Transform, and demonstrate that Db-TSW is an Euclidean invariant metric. We empirically show that Db-TSW significantly improves accuracy compared to recent SW variants while maintaining low computational cost via a wide range of experiments."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Geodesic Difference-in-Differences",
+    "id": "http://arxiv.org/abs/2501.17436v2",
+    "published": "2025-01-29T06:31:45Z",
+    "authors": [
+      "Yidong Zhou",
+      "Daisuke Kurisu",
+      "Taisuke Otsu",
+      "Hans-Georg Müller"
+    ],
+    "abstract": "Difference-in-differences (DID) is a widely used quasi-experimental design for causal inference, traditionally applied to scalar or Euclidean outcomes, while extensions to outcomes residing in non-Euclidean spaces remain limited. Existing methods for such outcomes have primarily focused on univariate distributions, leveraging linear operations in the space of quantile functions, but these approaches cannot be directly extended to outcomes in general metric spaces. In this paper, we propose geodesic DID, a novel DID framework for outcomes in uniquely geodesic metric spaces that admit a geodesic transport structure, including distributions, networks, and manifold-valued data. To address the absence of algebraic operations in these spaces, we use geodesics as proxies for differences and introduce the geodesic average treatment effect on the treated (ATT) as the causal estimand. We establish the identification of the geodesic ATT and derive the convergence rate of its sample versions, employing tools from metric geometry and empirical process theory. This framework is further extended to the case of staggered DID settings, allowing for multiple time periods and varying treatment timings. To illustrate the practical utility of geodesic DID, we analyze health impacts of the Soviet Union's collapse using age-at-death distributions and assess effects of U.S. electricity market liberalization on electricity generation compositions."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Stiefel Flow Matching for Moment-Constrained Structure Elucidation",
+    "id": "http://arxiv.org/abs/2412.12540v2",
+    "published": "2024-12-17T05:07:10Z",
+    "authors": [
+      "Austin Cheng",
+      "Alston Lo",
+      "Kin Long Kelvin Lee",
+      "Santiago Miret",
+      "Alán Aspuru-Guzik"
+    ],
+    "abstract": "Molecular structure elucidation is a fundamental step in understanding chemical phenomena, with applications in identifying molecules in natural products, lab syntheses, forensic samples, and the interstellar medium. We consider the task of predicting a molecule's all-atom 3D structure given only its molecular formula and moments of inertia, motivated by the ability of rotational spectroscopy to measure these moments. While existing generative models can conditionally sample 3D structures with approximately correct moments, this soft conditioning fails to leverage the many digits of precision afforded by experimental rotational spectroscopy. To address this, we first show that the space of $n$-atom point clouds with a fixed set of moments of inertia is embedded in the Stiefel manifold $\\mathrm{St}(n, 4)$. We then propose Stiefel Flow Matching as a generative model for elucidating 3D structure under exact moment constraints. Additionally, we learn simpler and shorter flows by finding approximate solutions for equivariant optimal transport on the Stiefel manifold. Empirically, enforcing exact moment constraints allows Stiefel Flow Matching to achieve higher success rates and faster sampling than Euclidean diffusion models, even on high-dimensional manifolds corresponding to large molecules in the GEOM dataset."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Relax and Merge: A Simple Yet Effective Framework for Solving Fair $k$-Means and $k$-sparse Wasserstein Barycenter Problems",
+    "id": "http://arxiv.org/abs/2411.01115v3",
+    "published": "2024-11-02T02:50:12Z",
+    "authors": [
+      "Shihong Song",
+      "Guanlin Mo",
+      "Qingyuan Yang",
+      "Hu Ding"
+    ],
+    "abstract": "The fairness of clustering algorithms has gained widespread attention across various areas, including machine learning, In this paper, we study fair $k$-means clustering in Euclidean space. Given a dataset comprising several groups, the fairness constraint requires that each cluster should contain a proportion of points from each group within specified lower and upper bounds. Due to these fairness constraints, determining the optimal locations of $k$ centers is a quite challenging task. We propose a novel ``Relax and Merge'' framework that returns a $(1+4ρ+ O(ε))$-approximate solution, where $ρ$ is the approximate ratio of an off-the-shelf vanilla $k$-means algorithm and $O(ε)$ can be an arbitrarily small positive number. If equipped with a PTAS of $k$-means, our solution can achieve an approximation ratio of $(5+O(ε))$ with only a slight violation of the fairness constraints, which improves the current state-of-the-art approximation guarantee. Furthermore, using our framework, we can also obtain a $(1+4ρ+O(ε))$-approximate solution for the $k$-sparse Wasserstein Barycenter problem, which is a fundamental optimization problem in the field of optimal transport, and a $(2+6ρ)$-approximate solution for the strictly fair $k$-means clustering with no violation, both of which are better than the current state-of-the-art methods. In addition, the empirical results demonstrate that our proposed algorithm can significantly outperform baseline approaches in terms of clustering cost."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Wasserstein Wormhole: Scalable Optimal Transport Distance with Transformers",
+    "id": "http://arxiv.org/abs/2404.09411v4",
+    "published": "2024-04-15T01:58:18Z",
+    "authors": [
+      "Doron Haviv",
+      "Russell Zhang Kunes",
+      "Thomas Dougherty",
+      "Cassandra Burdziak",
+      "Tal Nawy",
+      "Anna Gilbert",
+      "Dana Pe'er"
+    ],
+    "abstract": "Optimal transport (OT) and the related Wasserstein metric (W) are powerful and ubiquitous tools for comparing distributions. However, computing pairwise Wasserstein distances rapidly becomes intractable as cohort size grows. An attractive alternative would be to find an embedding space in which pairwise Euclidean distances map to OT distances, akin to standard multidimensional scaling (MDS). We present Wasserstein Wormhole, a transformer-based autoencoder that embeds empirical distributions into a latent space wherein Euclidean distances approximate OT distances. Extending MDS theory, we show that our objective function implies a bound on the error incurred when embedding non-Euclidean distances. Empirically, distances between Wormhole embeddings closely match Wasserstein distances, enabling linear time computation of OT distances. Along with an encoder that maps distributions to embeddings, Wasserstein Wormhole includes a decoder that maps embeddings back to distributions, allowing for operations in the embedding space to generalize to OT spaces, such as Wasserstein barycenter estimation and OT interpolation. By lending scalability and interpretability to OT approaches, Wasserstein Wormhole unlocks new avenues for data analysis in the fields of computational geometry and single-cell biology."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Lipschitz Transport Maps via the Follmer Flow",
+    "id": "http://arxiv.org/abs/2309.03490v1",
+    "published": "2023-09-07T05:59:55Z",
+    "authors": [
+      "Yin Dai",
+      "Yuan Gao",
+      "Jian Huang",
+      "Yuling Jiao",
+      "Lican Kang",
+      "Jin Liu"
+    ],
+    "abstract": "Inspired by the construction of the F{ö}llmer process, we construct a unit-time flow on the Euclidean space, termed the F{ö}llmer flow, whose flow map at time 1 pushes forward a standard Gaussian measure onto a general target measure. We study the well-posedness of the F{ö}llmer flow and establish the Lipschitz property of the flow map at time 1. We apply the Lipschitz mapping to several rich classes of probability measures on deriving dimension-free functional inequalities and concentration inequalities for the empirical measure."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Lower Complexity Adaptation for Empirical Entropic Optimal Transport",
+    "id": "http://arxiv.org/abs/2306.13580v4",
+    "published": "2023-06-23T16:06:13Z",
+    "authors": [
+      "Michel Groppe",
+      "Shayan Hundrieser"
+    ],
+    "abstract": "Entropic optimal transport (EOT) presents an effective and computationally viable alternative to unregularized optimal transport (OT), offering diverse applications for large-scale data analysis. In this work, we derive novel statistical bounds for empirical plug-in estimators of the EOT cost and show that their statistical performance in the entropy regularization parameter $ε$ and the sample size $n$ only depends on the simpler of the two probability measures. For instance, under sufficiently smooth costs this yields the parametric rate $n^{-1/2}$ with factor $ε^{-d/2}$, where $d$ is the minimum dimension of the two population measures. This confirms that empirical EOT also adheres to the lower complexity adaptation principle, a hallmark feature only recently identified for unregularized OT. As a consequence of our theory, we show that the empirical entropic Gromov-Wasserstein distance and its unregularized version for measures on Euclidean spaces also obey this principle. Additionally, we comment on computational aspects and complement our findings with Monte Carlo simulations. Our techniques employ empirical process theory and rely on a dual formulation of EOT over a single function class. Crucial to our analysis is the observation that the entropic cost-transformation of a function class does not increase its uniform metric entropy by much."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Concentration of empirical barycenters in metric spaces",
+    "id": "http://arxiv.org/abs/2303.01144v1",
+    "published": "2023-03-02T10:47:27Z",
+    "authors": [
+      "Victor-Emmanuel Brunel",
+      "Jordan Serres"
+    ],
+    "abstract": "Barycenters (aka Fréchet means) were introduced in statistics in the 1940's and popularized in the fields of shape statistics and, later, in optimal transport and matrix analysis. They provide the most natural extension of linear averaging to non-Euclidean geometries, which is perhaps the most basic and widely used tool in data science. In various setups, their asymptotic properties, such as laws of large numbers and central limit theorems, have been established, but their non-asymptotic behaviour is still not well understood. In this work, we prove finite sample concentration inequalities (namely, generalizations of Hoeffding's and Bernstein's inequalities) for barycenters of i.i.d. random variables in metric spaces with non-positive curvature in Alexandrov's sense. As a byproduct, we also obtain PAC guarantees for a stochastic online algorithm that computes the barycenter of a finite collection of points in a non-positively curved space. We also discuss extensions of our results to spaces with possibly positive curvature."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Gromov-Wasserstein Distances: Entropic Regularization, Duality, and Sample Complexity",
+    "id": "http://arxiv.org/abs/2212.12848v3",
+    "published": "2022-12-25T03:30:47Z",
+    "authors": [
+      "Zhengxin Zhang",
+      "Ziv Goldfeld",
+      "Youssef Mroueh",
+      "Bharath K. Sriperumbudur"
+    ],
+    "abstract": "The Gromov-Wasserstein (GW) distance, rooted in optimal transport (OT) theory, quantifies dissimilarity between metric measure spaces and provides a framework for aligning heterogeneous datasets. While computational aspects of the GW problem have been widely studied, a duality theory and fundamental statistical questions concerning empirical convergence rates remained obscure. This work closes these gaps for the quadratic GW distance over Euclidean spaces of different dimensions $d_x$ and $d_y$. We treat both the standard and the entropically regularized GW distance, and derive dual forms that represent them in terms of the well-understood OT and entropic OT (EOT) problems, respectively. This enables employing proof techniques from statistical OT based on regularity analysis of dual potentials and empirical process theory, using which we establish the first GW empirical convergence rates. The derived two-sample rates are $n^{-2/\\max\\{\\min\\{d_x,d_y\\},4\\}}$ (up to a log factor when $\\min\\{d_x,d_y\\}=4$) for standard GW and $n^{-1/2}$ for EGW, which matches the corresponding rates for standard and entropic OT. The parametric rate for EGW is evidently optimal, while for standard GW we provide matching lower bounds, which establish sharpness of the derived rates. We also study stability of EGW in the entropic regularization parameter and prove approximation and continuity results for the cost and optimal couplings. Lastly, the duality is leveraged to shed new light on the open problem of the one-dimensional GW distance between uniform distributions on $n$ points, illuminating why the identity and anti-identity permutations may not be optimal. Our results serve as a first step towards a comprehensive statistical theory as well as computational advancements for GW distances, based on the discovered dual formulations."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Graphical and uniform consistency of estimated optimal transport plans",
+    "id": "http://arxiv.org/abs/2208.02508v1",
+    "published": "2022-08-04T07:39:08Z",
+    "authors": [
+      "Johan Segers"
+    ],
+    "abstract": "A general theory is provided delivering convergence of maximal cyclically monotone mappings containing the supports of coupling measures of sequences of pairs of possibly random probability measures on Euclidean space. The theory is based on the identification of such a mapping with a closed subset of a Cartesian product of Euclidean spaces and leveraging tools from random set theory. Weak convergence in the appropriate Fell space together with the maximal cyclical monotonicity then automatically yields local uniform convergence of the associated mappings. Viewing such mappings as optimal transport plans between probability measures with respect to the squared Euclidean distance as cost function yields consistency results for notions of multivariate ranks and quantiles based on optimal transport, notably the empirical center-outward distribution and quantile functions."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "A Unifying Approach to Distributional Limits for Empirical Optimal Transport",
+    "id": "http://arxiv.org/abs/2202.12790v1",
+    "published": "2022-02-25T16:08:25Z",
+    "authors": [
+      "Shayan Hundrieser",
+      "Marcel Klatt",
+      "Thomas Staudt",
+      "Axel Munk"
+    ],
+    "abstract": "We provide a unifying approach to central limit type theorems for empirical optimal transport (OT). In general, the limit distributions are characterized as suprema of Gaussian processes. We explicitly characterize when the limit distribution is centered normal or degenerates to a Dirac measure. Moreover, in contrast to recent contributions on distributional limit laws for empirical OT on Euclidean spaces which require centering around its expectation, the distributional limits obtained here are centered around the population quantity, which is well-suited for statistical applications. At the heart of our theory is Kantorovich duality representing OT as a supremum over a function class $\\mathcal{F}_{c}$ for an underlying sufficiently regular cost function $c$. In this regard, OT is considered as a functional defined on $\\ell^{\\infty}(\\mathcal{F}_{c})$ the Banach space of bounded functionals from $\\mathcal{F}_{c}$ to $\\mathbb{R}$ and equipped with uniform norm. We prove the OT functional to be Hadamard directional differentiable and conclude distributional convergence via a functional delta method that necessitates weak convergence of an underlying empirical process in $\\ell^{\\infty}(\\mathcal{F}_{c})$. The latter can be dealt with empirical process theory and requires $\\mathcal{F}_{c}$ to be a Donsker class. We give sufficient conditions depending on the dimension of the ground space, the underlying cost function and the probability measures under consideration to guarantee the Donsker property. Overall, our approach reveals a noteworthy trade-off inherent in central limit theorems for empirical OT: Kantorovich duality requires $\\mathcal{F}_{c}$ to be sufficiently rich, while the empirical processes only converges weakly if $\\mathcal{F}_{c}$ is not too complex."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Input Convex Gradient Networks",
+    "id": "http://arxiv.org/abs/2111.12187v1",
+    "published": "2021-11-23T22:51:25Z",
+    "authors": [
+      "Jack Richter-Powell",
+      "Jonathan Lorraine",
+      "Brandon Amos"
+    ],
+    "abstract": "The gradients of convex functions are expressive models of non-trivial vector fields. For example, Brenier's theorem yields that the optimal transport map between any two measures on Euclidean space under the squared distance is realized as a convex gradient, which is a key insight used in recent generative flow models. In this paper, we study how to model convex gradients by integrating a Jacobian-vector product parameterized by a neural network, which we call the Input Convex Gradient Network (ICGN). We theoretically study ICGNs and compare them to taking the gradient of an Input-Convex Neural Network (ICNN), empirically demonstrating that a single layer ICGN can fit a toy example better than a single layer ICNN. Lastly, we explore extensions to deeper networks and connections to constructions from Riemannian geometry."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "On the quadratic random matching problem in two-dimensional domains",
+    "id": "http://arxiv.org/abs/2110.14372v1",
+    "published": "2021-10-27T12:15:10Z",
+    "authors": [
+      "Luigi Ambrosio",
+      "Michael Goldman",
+      "Dario Trevisan"
+    ],
+    "abstract": "We investigate the average minimum cost of a bipartite matching, with respect to the squared Euclidean distance, between two samples of n i.i.d. random points on a bounded Lipschitz domain in the Euclidean plane, whose common law is absolutely continuous with strictly positive H{ö}lder continuous density. We confirm in particular the validity of a conjecture by D. Benedetto and E. Caglioti stating that the asymptotic cost as n grows is given by the logarithm of n multiplied by an explicit constant times the volume of the domain. Our proof relies on a reduction to the optimal transport problem between the associated empirical measures and a Whitney-type decomposition of the domain, together with suitable upper and lower bounds for local and global contributions, both ultimately based on PDE tools. We further show how to extend our results to more general settings, including Riemannian manifolds, and also give an application to the asymptotic cost of the random quadratic bipartite travelling salesperson problem."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Averaging on the Bures-Wasserstein manifold: dimension-free convergence of gradient descent",
+    "id": "http://arxiv.org/abs/2106.08502v3",
+    "published": "2021-06-16T01:05:19Z",
+    "authors": [
+      "Jason M. Altschuler",
+      "Sinho Chewi",
+      "Patrik Gerber",
+      "Austin J. Stromme"
+    ],
+    "abstract": "We study first-order optimization algorithms for computing the barycenter of Gaussian distributions with respect to the optimal transport metric. Although the objective is geodesically non-convex, Riemannian GD empirically converges rapidly, in fact faster than off-the-shelf methods such as Euclidean GD and SDP solvers. This stands in stark contrast to the best-known theoretical results for Riemannian GD, which depend exponentially on the dimension. In this work, we prove new geodesic convexity results which provide stronger control of the iterates, yielding a dimension-free convergence rate. Our techniques also enable the analysis of two related notions of averaging, the entropically-regularized barycenter and the geometric median, providing the first convergence guarantees for Riemannian GD for these problems."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Aligning Hyperbolic Representations: an Optimal Transport-based approach",
+    "id": "http://arxiv.org/abs/2012.01089v1",
+    "published": "2020-12-02T11:22:19Z",
+    "authors": [
+      "Andrés Hoyos-Idrobo"
+    ],
+    "abstract": "Hyperbolic-spaces are better suited to represent data with underlying hierarchical relationships, e.g., tree-like data. However, it is often necessary to incorporate, through alignment, different but related representations meaningfully. This aligning is an important class of machine learning problems, with applications as ontology matching and cross-lingual alignment. Optimal transport (OT)-based approaches are a natural choice to tackle the alignment problem as they aim to find a transformation of the source dataset to match a target dataset, subject to some distribution constraints. This work proposes a novel approach based on OT of embeddings on the Poincaré model of hyperbolic spaces. Our method relies on the gyrobarycenter mapping on Möbius gyrovector spaces. As a result of this formalism, we derive extensions to some existing Euclidean methods of OT-based domain adaptation to their hyperbolic counterparts. Empirically, we show that both Euclidean and hyperbolic methods have similar performances in the context of retrieval."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Measuring Association on Topological Spaces Using Kernels and Geometric Graphs",
+    "id": "http://arxiv.org/abs/2010.01768v2",
+    "published": "2020-10-05T04:25:09Z",
+    "authors": [
+      "Nabarun Deb",
+      "Promit Ghosal",
+      "Bodhisattva Sen"
+    ],
+    "abstract": "In this paper we propose and study a class of simple, nonparametric, yet interpretable measures of association between two random variables $X$ and $Y$ taking values in general topological spaces. These nonparametric measures -- defined using the theory of reproducing kernel Hilbert spaces -- capture the strength of dependence between $X$ and $Y$ and have the property that they are 0 if and only if the variables are independent and 1 if and only if one variable is a measurable function of the other. Further, these population measures can be consistently estimated using the general framework of graph functionals which include $k$-nearest neighbor graphs and minimum spanning trees. Moreover, a sub-class of these estimators are also shown to adapt to the intrinsic dimensionality of the underlying distribution. Some of these empirical measures can also be computed in near linear time. Under the hypothesis of independence between $X$ and $Y$, these empirical measures (properly normalized) have a standard normal limiting distribution. Thus, these measures can also be readily used to test the hypothesis of mutual independence between $X$ and $Y$. In fact, as far as we are aware, these are the only procedures that possess all the above mentioned desirable properties. Furthermore, when restricting to Euclidean spaces, we can make these sample measures of association finite-sample distribution-free, under the hypothesis of independence, by using multivariate ranks defined via the theory of optimal transport. The recent correlation coefficient proposed in Dette et al. (2013), Chatterjee (2019), and Azadkia and Chatterjee (2019) can be seen as a special case of this general class of measures."
+  },
+  {
+    "search_file": "arxiv_specific.txt",
+    "title": "Sequential Quadratic Optimization for Nonlinear Optimization Problems on Riemannian Manifolds",
+    "id": "http://arxiv.org/abs/2009.07153v3",
+    "published": "2020-09-15T15:06:34Z",
+    "authors": [
+      "Mitsuaki Obara",
+      "Takayuki Okuno",
+      "Akiko Takeda"
+    ],
+    "abstract": "We consider optimization problems on Riemannian manifolds with equality and inequality constraints, which we call Riemannian nonlinear optimization (RNLO) problems. Although they have numerous applications, the existing studies on them are limited especially in terms of algorithms. In this paper, we propose Riemannian sequential quadratic optimization (RSQO) that uses a line-search technique with an ell_1 penalty function as an extension of the standard SQO algorithm for constrained nonlinear optimization problems in Euclidean spaces to Riemannian manifolds. We prove its global convergence to a Karush-Kuhn-Tucker point of the RNLO problem by means of parallel transport and the exponential mapping. Furthermore, we establish its local quadratic convergence by analyzing the relationship between sequences generated by RSQO and the Riemannian Newton method. Ours is the first algorithm that has both global and local convergence properties for constrained nonlinear optimization on Riemannian manifolds. Empirical results show that RSQO finds solutions more stably and with higher accuracy compared with the existing Riemannian penalty and augmented Lagrangian methods."
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B15",
+  "run_id": "20260922T185309Z-account02-B15-qform-r6",
+  "control": {
+    "observed_main_commit_at_start": "6902cec3703f453cb5e46d81af10690001ab92ed",
+    "owner_control_revision": "2026-09-22.11"
+  },
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "assignment": "Absolute continuity and regularity; complementary constructions/source-valid counterexamples",
+  "corrections_consumed": [
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SCALAR-QPRIME-SUP-CONDITIONAL-HEIGHT-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "worker": "account03/B15",
+    "run_id": "20260922T162724Z-account03-B15-r13",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4813f09ed4f518a1ee172b77a0f1d315989a84e1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T162724Z-account03-B15-r13/REPORT.md",
+    "scope_used": "Every fixed rank>=3 symmetric matrix has a finite matrix-dependent L-infinity bound and C0 output for all independent cap-one inputs, at worker-candidate scope."
+  },
+  "new_result": {
+    "status": "REFUTED_INTERMEDIATE_MECHANISM",
+    "event_id": "QFORM-SCALAR-QPRIME-WEIGHTED-23-MOMENT-FALSE-v1",
+    "statement": "There is a fixed simple-spectrum target matrix A with eigenvalues 1,2,-3,1/2 and independent cap-one product inputs indexed by M for which E ||rho_{123|Q'}||_infinity^(2/3) >= (M/2)^(2/3), while the actual output density remains bounded uniformly in M by a finite constant depending only on A.",
+    "mechanism": "Fragment one physical marginal into M far-separated intervals of total measure one. The one-dimensional spectral remainder becomes M disjoint scalar packets. Orthogonal indicator geometry gives ||rho_{123|Y4=s}||_infinity=1/p4(s), so the conditional 2/3 moment equals int p4^(1/3), which grows like M^(2/3).",
+    "canonical_report_repository": "yspennstate/math-open-problems",
+    "canonical_report_commit": "d00907b4362875219cc3525ceb04f90186b8c065",
+    "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T185309Z-account02-B15-qform-r6/REPORT.md",
+    "checker_commit": "96bffac8ebc6327bac989955f61f62ff4e9b1533"
+  },
+  "full_target_status": "OPEN",
+  "unresolved_implication": "Find a translation-aware scalar-conditioning or grouped-coordinate estimate that controls sup_t int p_Q'(b) p_{Q3|b}(t-b) db without replacing the shifted conditional profiles by their individual suprema or positive conditional-height moments.",
+  "next_step": "Quantify overlap/packing of the shifted conditional profiles in the scalar remainder variable, or switch to an aggregate product-coordinate curvature/bank estimate that keeps the scalar shift before the supremum.",
+  "source_pins": {
+    "handoff_commit": "3aa0c42c6c74f7c09a3342b3f47c23065e55c5c9",
+    "correction_event_commit": "9c39b8d752fb4e553b47e19902cfa46302018f78"
+  }
+}

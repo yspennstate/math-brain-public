@@ -1,0 +1,61 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target": "RS-2026-CL-A",
+  "category": "HARD OUTSIDE",
+  "run_utc": "2026-09-19T03:50:00Z",
+  "captured_master_before_report_write": "2a3f1f0aa426fb3353735d51d94c7fe08d159156",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T03-00-00Z__report.md",
+    "creation_commit": "0dd98f889e874f6af84478e6608b51a11d20c074",
+    "readback_blob": "6293837efce5905b27b7de0f6a0521d48f58d43e"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T03-50-00Z__report.md",
+    "creation_commit": "e9b095bf11ac7d20edb81b654aadd4b45033848a",
+    "readback_blob": "b17ffdbd8583869af6eed241d37809888bb5963a"
+  },
+  "metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": "NO_FROZEN_METRIC_MOVEMENT"
+  },
+  "status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / BULK_NEUTRALITY_AND_SHARP_GAP_PROGRESS",
+  "historical_initial_methods": ["B2", "B27", "B21"],
+  "methods": ["B6", "B27", "B20"],
+  "method_outcomes": {
+    "B6": "Proved aggregate latent free-energy identity and exact bulk-neutrality theorem. Normalizer-balanced latent priors reduce mixture likelihood to W/EW; osc(log W) bounds log(1+chi2). Exact sign-latent quadrature permits constant-amplitude extensive component fields with only o(D) defect cost.",
+    "B27": "Derived optimized pressure-to-degree-loss profile Psi_{n,t}(g)=sup_s(sg+delta_n(s)t) and inverse gap function. If pressure Pi_n=o(D_n), noised low-degree control survives through D_n-o(D_n), improving the earlier fixed-fraction loss.",
+    "B20": "Constructed exact translated-interval product-null obstruction: planted intervals have geometric boundary 2 but collision pressure at least m_n log(1+tanh(lambda)^2)-log n. Proved universal diagonal entropy lower bound sum_z pi_z^2 K(z,z), identifying latent collision entropy versus self-overlap bulk cost as necessary for chi-square pressure control."
+  },
+  "mathematical_delta": {
+    "aggregate_pressure": "Lambda_n = osc_x log sum_z c_z w_{n,z}(x); log(1+chi2) <= Lambda_n",
+    "bulk_neutrality": "If sum_z c_z w_z^(0)(x) is pointwise constant and |U_z|<=R_n for w_z=w_z^(0)e^{U_z}, then log(1+chi2)<=2R_n",
+    "sharp_gap": "Adv^{<=D_n-g_n}(P_n S_{n,t},Q_n) <= Adv^{<=D_n}(P_n,Q_n) + exp(Pi_n/2-Psi_{n,t}(g_n+1))",
+    "diagonal_obstruction": "1+chi2 >= sum_z pi_z^2 K(z,z); if K(z,z)>=e^{b_n}, pressure >= b_n-H_2(pi)"
+  },
+  "source_status": {
+    "checked_date": "2026-09-19",
+    "randomstrasse": "LIVE_OPEN_IN_BOUNDED_CHECK",
+    "mao_2607_20318": "MANDATORY_NEGATIVE_STRESS",
+    "later_source_wide_characterization_found": false,
+    "novelty": "UNVERIFIED"
+  },
+  "audits": {
+    "P26": 0,
+    "OTHER": 0,
+    "qualifying_total": "0/2"
+  },
+  "hard_recovery_cycles_consumed": 1,
+  "same_obligation_stagnation": 0,
+  "checker": "NONE_NEW_THEOREM_SIZED_ANALYTIC_CLAIMS_ONLY",
+  "next_methods": ["B28", "B11", "B4"],
+  "next_obligation": [
+    "Replace uniform defect control by posterior-typical exponential-moment/tail control under the bulk-neutral latent posterior.",
+    "Derive approximate partition-of-unity / cluster-interface pressure for broad bounded-arity Gibbs classes with bulk free-energy cancellation.",
+    "Dualize residual pressure into a variational entropy-versus-bulk-defect condition and test near-necessity.",
+    "Instantiate one explicit weak-Ising cycle/torus constant-amplitude bulk-neutral class end to end.",
+    "Obtain P26 and one distinct OTHER full theorem/source audit before closure."
+  ]
+}

@@ -1,0 +1,75 @@
+[
+  {
+    "claim_id": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT",
+    "version": 5,
+    "exact_statement": "Version5 retains v4 and earlier conclusions at their original scopes. For every Boolean sign controller a=1-2c on a fresh uniform physical cube and arbitrary Boolean branches G,H on an independent data cube, with any amount of shared data, put p=Ec, gamma=Pr(G!=H), F=(1-c)G+cH, Q=gamma I(a), R=2p(1-p)I(GH). The complete control-only stopping-tree signed entropy bill Pi=H(F)-(1-p)H(G)-pH(H) obeys Pi<=gamma Hplus(a)+log2(e)gamma Var(a)+2log2(e)Q+R <=gamma Hplus(a)+3log2(e)Q+R, where Hplus is raw nonempty Fourier entropy. Thus controller Hplus<=K I gives rate K+3log2(e) against Q, plus the one R bank; a strong Hplus<=T(I-Var) certificate gives max(T,log2(e))+2log2(e). With certified terminal allowances L_G,L_H, full path plus terminal cost is at most max(K+3log2(e),L_G+2p,L_H+2(1-p))I(F), with the analogous strong-controller substitution. Calibrating all shared-only atoms yields one normalized complete output reference with CE=(1-p)CE_Gcal+pCE_Hcal+Pi and KL=(1-p)D_Gcal+pD_Hcal, including off-target private mass. Under arbitrary adaptive physical control/data interleaving the same source boundary bank is a nonnegative supermartingale: controller release=(p0-p1)^2 I(GH)/2; data release=2p(1-p)Inf_i(GH)<=2Inf_i(F). For every stopped tree Rroot=sum reach-weighted releases+expected terminal R; marks are not reissued. Release-alone data entropy payment is false even for a dictator controller,G=+1,H=data dictator: root H=2, data release1/2, excess3/2, so an added local data price must be at least3 in the tested residual rule. No local mixed-query entropy price, nested renewal, universal controller/terminal FEI certificate, integer prefix rounding or full FEI is asserted.",
+    "hypotheses": [
+      "Uniform physical cube; Boolean sign controller and Boolean data branches; entropy/KL/CE bits",
+      "Controller coordinates absent from both data branches; branches may share their entire data support",
+      "Control-only complete block for the entropy theorem; arbitrary physical interleaving only for bank conservation",
+      "Certified controller and terminal allowances must be supplied, not inferred from rarity",
+      "Exact signed entropy increments; normalized supplied references positive on true support; shared-atom calibration and off-target private mass retained",
+      "Boundary marks issued once; no inference of local entropy payment from martingale budget alone"
+    ],
+    "statement_sha256": "66a08477db58867a640a8dc7202d62a73c1f8d766491eaf3a2cd26e896317b7d",
+    "contributors": [
+      "A028"
+    ],
+    "proof_source": {
+      "report": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261014T051435Z-account05-A028-stopping-tree-payment\\REPORT.md",
+      "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261014T051435Z-account05-A028-stopping-tree-payment\\DERIVATION.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261014T051435Z-account05-A028-stopping-tree-payment\\out\\full_validation.json",
+      "bank": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261014T051435Z-account05-A028-stopping-tree-payment\\out\\mixed_bank_full.json",
+      "countercertificate": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261014T051435Z-account05-A028-stopping-tree-payment\\out\\drift_probe.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT@4",
+        "scope": "unchanged earlier components",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261014T022306Z-account05-A028-stopping-tree-payment\\REPORT.md",
+        "sha256": "286ffeb9d70f94c4101620e7ac5323fab4550b1f350f7001d5bd0b32f30814b7"
+      },
+      {
+        "claim": "A023-OVERLAP-EXPOSURE-GOOD-CONTROL-LEDGER@3",
+        "scope": "arbitrary-shared-data one-whole-point-controller block, marked R=2p(1-p)I(GH), source ownership and full terminal entropy",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A023\\runs\\20261014T022245Z-account05-A023-amortized-rarity-budget\\PROOF.md",
+        "status": "SCOPED_EXISTING_A025_A029_REVIEWS_CONSUMED; arbitrary-controller extension reconstructed independently"
+      },
+      "Elementary scalar entropy inequality plus product tensorization; recovered cube block-JS bound proved directly here",
+      "Boolean disagreement-set edge isoperimetry and physical influence conservation; both reconstructed",
+      "A056@3 compatible-reference history scope credited; current theorem proves root reference algebra, does not accept its entire history chain"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT",
+        "version": 4,
+        "reason": "Same stopping-payment packet: arbitrary certified controller and mixed-history bank extension, earlier scopes unchanged"
+      }
+    ],
+    "refutes": [
+      {
+        "exact_statement": "data entropy residual <= released R alone",
+        "scope": "tentative local upgrade only; no published/source theorem withdrawn",
+        "actual_witness": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261014T051435Z-account05-A028-stopping-tree-payment\\out\\drift_probe.json"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A025",
+      "A027",
+      "A029",
+      "A030",
+      "A039",
+      "A056",
+      "A064",
+      "A087",
+      "A091",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  }
+]

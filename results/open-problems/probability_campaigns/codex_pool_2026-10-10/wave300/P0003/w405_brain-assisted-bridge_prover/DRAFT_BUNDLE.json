@@ -1,0 +1,241 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w405",
+  "bundle_slug": "p0003-buffer-and-ensemble-bridge-w405-20261010",
+  "entries": [
+    {
+      "key": "finite-restriction",
+      "namespace": "probability.saw_bridges",
+      "logical_name": "w405-finite-restriction",
+      "kind": "lemma",
+      "title": "DRAFT: finite weighted-path restriction and fixed-length counting",
+      "statement": "On a finite embedded graph, weighted vertex-simple marked paths avoiding a closed obstacle have probability Z_deleted/Z_original; conditioning on positive-probability avoidance gives the same weighted law on the deleted graph. For uniform n-step rooted paths, summed over free endpoints, the analogous probability is c_n(deleted)/c_n(original).",
+      "proof_text": "Surviving paths are exactly avoiding paths, by deletion of both vertices and crossed edges. The correspondence preserves each weight and length. Summing and normalizing proves the ratio and the positive-mass conditional law. A locally finite graph has finitely many n-step paths from a fixed root, so the counting argument also applies there.",
+      "assumptions": [
+        "Graph finite; alternatively locally finite and only fixed-n rooted paths are used",
+        "Original path mass or count is positive",
+        "Obstacle avoids the marks",
+        "Delete every vertex and embedded closed edge trace meeting the obstacle",
+        "Surviving path weights and endpoint conventions are unchanged"
+      ],
+      "domain": "probability theory; self-avoiding walks",
+      "source": {
+        "source_id": "owner:campaign:P0003:w405:finite-restriction",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "outer-buffer-transfer",
+      "namespace": "probability.saw_bridges",
+      "logical_name": "w405-outer-buffer-transfer",
+      "kind": "lemma",
+      "title": "DRAFT: avoidance transfer through positive outer buffers",
+      "statement": "Let K_n converge weakly to K in the Hausdorff space of nonempty compact subsets of compact metric S. For nonempty closed A, closed A_m obey N_r_m(A) subset A_m subset N_R_m(A), with 0<r_m<=R_m tending to zero. If every fixed-m avoidance probability has limit q_m and q_m tends to q, then P(K avoids A)=q, even with positive contact mass.",
+      "proof_text": "Write d_n=dist(K_n,A) and d=dist(K,A). The distance map is Hausdorff-Lipschitz. Buffer inclusions give P(d_n>R_m)<=P(K_n avoids A_m)<=P(d_n>r_m). Portmanteau yields P(d>R_m)<=q_m<=P(d>=r_m). Both outer probabilities tend to P(d>0) as positive radii vanish. Compactness identifies positive distance with avoidance. No diagonal limit or atom-free hypothesis is used.",
+      "assumptions": [
+        "S compact metric; all random sets nonempty compact",
+        "A nonempty closed",
+        "A_m closed",
+        "Both radii positive and tend to zero",
+        "First take n to infinity for each fixed m; q_m exists",
+        "Then take m to infinity; q_m tends to q"
+      ],
+      "domain": "probability theory; self-avoiding walks",
+      "source": {
+        "source_id": "owner:campaign:P0003:w405:outer-buffer-transfer",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "raw-avoidance-route",
+      "namespace": "probability.saw_bridges",
+      "logical_name": "w405-raw-avoidance-route",
+      "kind": "concept",
+      "title": "REFUTED route: unconditional weak-limit avoidance transfer",
+      "statement": "The inference that uniform or weak convergence of simple curves automatically preserves avoidance of every fixed closed boundary hull is false. The event can change at a contact-only limiting trace.",
+      "proof_text": null,
+      "assumptions": [
+        "Refuted inference, not a theorem",
+        "No positive outer-buffer probability information is supplied"
+      ],
+      "domain": "probability theory; self-avoiding walks",
+      "source": {
+        "source_id": "owner:campaign:P0003:w405:raw-avoidance-route",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "boundary-contact-example",
+      "namespace": "probability.saw_bridges",
+      "logical_name": "w405-boundary-contact-example",
+      "kind": "lemma",
+      "title": "DRAFT: simple-curve boundary-hull contact counterexample",
+      "statement": "In D=(-1,1)^2 with a=(-1,0), b=(1,0), let A=[-1/4,1/4] times [-1,0]. The simple polygonal curves a->(0,1/n)->b avoid A and converge uniformly to a trace hitting A. Their deterministic avoidance probabilities are 1 and 0 respectively.",
+      "proof_text": "Above x in [-1/4,1/4] the curve has height (1/n)(1-|x|)>0. Its limiting horizontal segment has height zero there and meets A. The maximum uniform distance between these parameterizations is 1/n.",
+      "assumptions": [
+        "Closed rectangular boundary hull",
+        "Positive n",
+        "Same piecewise linear parameterization for comparison"
+      ],
+      "domain": "probability theory; self-avoiding walks",
+      "source": {
+        "source_id": "owner:campaign:P0003:w405:boundary-contact-example",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "length-mixture",
+      "namespace": "probability.saw_bridges",
+      "logical_name": "w405-length-mixture",
+      "kind": "lemma",
+      "title": "DRAFT: length-mixture identity and non-transfer example",
+      "statement": "For a finite path ensemble with c_k paths of length k, fugacity-weighted obstacle avoidance is sum_k pi_x(k)p_k, with pi_x(k)=x^k c_k/sum_j x^j c_j and p_k=c_k(deleted)/c_k. This average need not equal a fixed-length p_n. On a marked cycle with two arcs of lengths N,N+2 and an obstacle on the longer arc, p_N=1, p_(N+2)=0, and the weighted ratio is 1/(1+x^2), for every N>=2.",
+      "proof_text": "Group the path weights by length in the finite restriction identity. On the example cycle there is one path of each stated length. Only the shorter path avoids the obstacle. Division of x^N by x^N+x^(N+2) gives 1/(1+x^2), differing from p_N by x^2/(1+x^2).",
+      "assumptions": [
+        "Finite ensemble; or absolutely convergent positive total fugacity sum",
+        "x>0 and positive denominator",
+        "Terms with c_k=0 omitted",
+        "For the example, precisely the two simple marked cycle paths are allowed"
+      ],
+      "domain": "probability theory; self-avoiding walks",
+      "source": {
+        "source_id": "owner:campaign:P0003:w405:length-mixture",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "ensemble-substitution-route",
+      "namespace": "probability.saw_bridges",
+      "logical_name": "w405-ensemble-substitution-route",
+      "kind": "concept",
+      "title": "REFUTED route: fugacity mixture determines fixed-length paths",
+      "statement": "One cannot identify a uniform fixed-n path law from a fugacity-weighted avoidance ratio alone. Fugacity weights cancel at fixed n, while the unrestricted-length law mixes n. Concentration, coefficient estimates, or an actual ensemble transfer theorem is an additional input.",
+      "proof_text": null,
+      "assumptions": [
+        "Refuted general inference",
+        "The cycle example is not claimed to refute the honeycomb scaling conjecture"
+      ],
+      "domain": "probability theory; self-avoiding walks",
+      "source": {
+        "source_id": "owner:campaign:P0003:w405:ensemble-substitution-route",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "chordal-conditional-route",
+      "namespace": "probability.saw_bridges",
+      "logical_name": "w405-chordal-conditional-route",
+      "kind": "concept",
+      "title": "DRAFT conditional chordal SLE route; not a P0003 solution",
+      "statement": "In a bounded Jordan domain with smooth marked boundary neighborhoods, assume curve tightness with simple interior limits, all fixed-buffer critical endpoint partition ratios equal to the normalized boundary conformal derivative to power 5/8, and convergence of that derivative along the actual buffer hulls. Finite restriction and positive outer-buffer transfer then give the smooth-hull avoidance law used by LSW Proposition 3.3 and Theorem 6.1 to identify SLE(8/3). None of the SAW tightness or ratio inputs is proved here. This is a distinct ensemble from P0003.",
+      "proof_text": null,
+      "assumptions": [
+        "Curve metric is uniform modulo increasing reparameterization",
+        "Every subsequential limit is simple, connects the fixed marks, and otherwise lies in the domain",
+        "Closed buffers satisfy the two-sided positive metric neighborhood inclusions and preserve simple connectivity",
+        "For each fixed buffer, the critical two-endpoint partition-ratio limit exists and is the stated 5/8 derivative",
+        "Actual buffer derivatives converge",
+        "After mapping to H, traces are connected, unbounded, meet R only at 0, and have connected complement in C",
+        "The standard measurable passage from oriented simple traces to curve classes needs referee confirmation"
+      ],
+      "domain": "probability theory; self-avoiding walks",
+      "source": {
+        "source_id": "owner:campaign:P0003:w405:chordal-conditional-route",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0003-ensemble-ledger",
+      "namespace": "probability.saw_bridges",
+      "logical_name": "w405-p0003-ensemble-ledger",
+      "kind": "concept",
+      "title": "DRAFT source correction: P0003 is fixed-length with a free endpoint",
+      "statement": "The verified primary locator for P0003 is Grimmett, arXiv:2205.07318v1, Question 2.2, PDF p.3: uniformly chosen n-step honeycomb walks rooted at the origin, with a free endpoint, under suitable rescaling, are conjectured to approach SLE(8/3). The source question leaves normalization, curve metric and SLE geometry unspecified. The critical chordal boundary-endpoint conjecture is related but not interchangeable without a proved bridge. Current openness remains UNKNOWN.",
+      "proof_text": null,
+      "assumptions": [
+        "Primary mathematical question recovered, not a current openness certificate",
+        "The related chordal source is Duminil-Copin--Smirnov arXiv:1007.0575v2 Conjecture 1",
+        "No ensemble equivalence has been proved in this packet"
+      ],
+      "domain": "probability theory; self-avoiding walks",
+      "source": {
+        "source_id": "owner:campaign:P0003:w405:p0003-ensemble-ledger",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "outer-buffer-transfer",
+      "to_key": "raw-avoidance-route",
+      "kind": "semantic_association",
+      "rationale": "The refuted route says raw avoidance need not pass to a weak limit; the buffer lemma supplies the stated positive-buffer hypotheses under which an avoidance probability does pass."
+    },
+    {
+      "from_key": "boundary-contact-example",
+      "to_key": "raw-avoidance-route",
+      "kind": "refutes",
+      "rationale": "The route asserts automatic preservation of every fixed closed-hull avoidance event; the example's probabilities are explicitly 1 before the uniform limit and 0 at the limit."
+    },
+    {
+      "from_key": "length-mixture",
+      "to_key": "finite-restriction",
+      "kind": "depends_on",
+      "rationale": "The finite restriction identity is a ratio of path weights; grouping those same weights by length proves the mixture identity."
+    },
+    {
+      "from_key": "length-mixture",
+      "to_key": "ensemble-substitution-route",
+      "kind": "refutes",
+      "rationale": "The rejected inference identifies a fugacity average with a fixed-n value; the two-arc example gives 1/(1+x^2) versus 1 for every N."
+    },
+    {
+      "from_key": "chordal-conditional-route",
+      "to_key": "finite-restriction",
+      "kind": "depends_on",
+      "rationale": "The conditional chordal route uses exact edge-deleted partition ratios as discrete avoidance probabilities."
+    },
+    {
+      "from_key": "chordal-conditional-route",
+      "to_key": "outer-buffer-transfer",
+      "kind": "depends_on",
+      "rationale": "The conditional chordal route takes the fixed-buffer mesh limits and then the buffer limit using the lemma's exact quantifier order."
+    },
+    {
+      "from_key": "chordal-conditional-route",
+      "to_key": "p0003-ensemble-ledger",
+      "kind": "semantic_association",
+      "rationale": "One entry concerns fixed boundary endpoints and mixed lengths; the other concerns origin-rooted fixed length and a free endpoint. This is an explicit distinction, not a claimed reduction."
+    },
+    {
+      "from_key": "p0003-ensemble-ledger",
+      "to_existing_logical": "math:probability.core:open-problem-p0003-hexagonal-self-avoiding-walk-scaling-limit",
+      "kind": "cites",
+      "rationale": "The existing card says 'rescaled uniform n-step' and cites Grimmett Question 2.2; the campaign observation recovers the primary source and records the free endpoint and unspecified geometry."
+    }
+  ]
+}

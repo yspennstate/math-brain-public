@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{A082: sharp finite erasure certificate and its precise bridge}
+\author{A082, stream B17}\maketitle
+All entropies are in bits. For a Boolean sign $f$ let $P(S)=\widehat f(S)^2$,
+$I_i=\sum_{S\ni i}P(S)$ and $B_i=H(S_i\mid S_{-i})$.
+Put $K_*=4+\frac52\log_2 5-\frac92\log_2 3$.
+
+\begin{theorem}[Finite certificate]
+Every nonconstant Boolean sign on at most four uniform variables has a relevant
+physical coordinate $i$ with $B_i\le K_* I_i$. This constant is optimal over
+this finite domain. Moreover $K_*<107/40$.
+\end{theorem}
+\begin{proof}
+For $N=2^n$ let $W_S=N\widehat f(S)$, $q_S=W_S^2$ and
+$D_i=\sum_{S\ni i}q_S=N^2I_i$. Then
+\[
+ N^2 B_i=\sum_{T\not\ni i}\big[(q_T+q_{T+i})\log_2(q_T+q_{T+i})
+ -q_T\log_2 q_T-q_{T+i}\log_2 q_{T+i}\big]=E_i.
+\]
+Zero terms are omitted. Thus $B_i\le K_*I_i$ is equivalent to
+\[
+ 2E_i-8D_i\log_2 2+9D_i\log_2 3-5D_i\log_2 5\le0.
+\]
+Factoring every integer in this expression into primes gives integer exponents
+$c_p$. The statement is precisely the integer comparison
+$\prod_{c_p>0}p^{c_p}\le\prod_{c_p<0}p^{-c_p}$.
+The supplied code checks every relevant coordinate of every truth table,
+fixing only $f(0)=+1$ by output-negation invariance. The domain counts are
+$2,8,128,32768$ in dimensions $1,2,3,4$; hence $32906$ representatives,
+four constant representatives, and $32902$ nonconstant ones. Gray traversal
+toggling one nonzero vertex updates each Walsh coefficient by its signed
+character value times $2$; Parseval is checked at every case. The exact products
+admit a selectable coordinate in every nonconstant case. A second implementation
+reconstructs each truth table and Walsh transform from scratch, verifies influence
+by physical boundaries, and checks the selected inequality using outward rational
+log intervals; exact symbolic zero vectors handle equality.
+
+Sharpness requires no enumeration: on three variables use $f=1-2\mathbf1_{x=x_0}$.
+Its squared Walsh masses are $9/16$ at the empty set and $1/16$ at each other set.
+Each $I_i=1/4$ and
+$B_i=(10/16)h_2(1/10)+6/16$.
+Thus $B_i/I_i=(5/2)h_2(1/10)+3/2=K_*$ for every relevant coordinate.
+Adding irrelevant fourth variables gives the same lower bound. Finally
+$K_*<107/40$ is equivalent to $2^{53}5^{100}<3^{180}$,
+checked by integer exponentiation.
+\end{proof}
+
+\begin{theorem}[Separate exhaustiveness theorem]
+In every finite physical dimension, a nonconstant Boolean sign whose nonzero
+Fourier support lies in an affine space $c+V\subseteq\mathbb F_2^n$ with
+$\dim V\le4$ has a relevant $i$ with $B_i\le K_* I_i$.
+The statement remains valid at every physical restriction and for every disjoint
+product of such factors. This class has $H(f)\le(K_*+2/\ln2)I(f)$.
+\end{theorem}
+\begin{proof}
+If a relevant $i$ satisfies $e_i\notin V$, no two supported Fourier sets
+differ by $e_i$. Every conditional bit is deterministic and $B_i=0$.
+Otherwise all relevant unit vectors belong to $V$, so their linear independence
+limits the number of relevant physical coordinates to four. Deleting irrelevant
+coordinates reduces exactly to the finite certificate, without a change of
+influence or erasure entropy. Under restriction $x_i=\pm1$, each new Fourier
+coefficient is $\widehat f(T)\pm\widehat f(T+i)$, so its support is contained
+in the coordinate projection of $c+V$. Projection cannot increase affine
+dimension. Thus the hypothesis is hereditary, including cancellation cases.
+Disjoint products have independent squared spectra, giving factorwise equality
+of $I_i$ and $B_i$; restriction preserves both factorization and each support bound.
+
+For completeness let $u=\widehat f(T)$ and $v=\widehat f(T+i)$, and
+$P_\pm(T)=(u\pm v)^2$. The chain rule yields
+\[
+ H(f)-\tfrac12(H(f_+)+H(f_-))=B_i+\operatorname{JS}(P_+,P_-).
+\]
+The elementary inequality
+$[(1+z)\ln(1+z)+(1-z)\ln(1-z)]/2\le1-\sqrt{1-z^2}$
+gives a packet JS bound $2\min(u^2,v^2)/\ln2$, and hence
+$\operatorname{JS}\le2I_i/\ln2$.
+The scalar inequality follows by differentiating: the difference of the
+derivatives of the right and left sides is nonnegative, since its derivative
+is $(1-z^2)^{-3/2}-(1-z^2)^{-1}\ge0$, and both begin at zero.
+The physical identity
+$I(f)=I_i+\tfrac12(I(f_+)+I(f_-))$ and induction on physical dimension
+now prove the stated entropy bound. The terminal constant has zero entropy;
+no leaf entropy is dropped. When $e_i\notin V$, $uv=0$ packetwise and JS is
+also exactly zero.
+\end{proof}
+
+\paragraph{Scope and first unsupported universal line.}
+The bridge exhausts the affine-dimension-four class and its disjoint products,
+not all Boolean functions. For general Fourier support one cannot assert that
+at most four physical variables remain once zero-erasure coordinates have been
+removed. The first unproved line is a bounded-cost proper block or stopping-tree
+reduction of every unrestricted residual to these hereditary leaves, with the
+full entropy decrements paid once by influence. An arbitrary invertible linear
+Fourier change is not a physical-coordinate reduction and does not conserve
+the required influence budget. Parity lifts with $B=0$ are not certified terminal
+leaves without the hereditary affine-support hypothesis. No full FEI claim is made.
+\end{document}

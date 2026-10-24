@@ -1,0 +1,1 @@
+Candidate: F(x,z)=h(x_i chi_{A_i}(z)). Fourier support is graph S -> (S, XOR_{i in S} A_i). H(F)=H(h); I_xi(F)=I_i(h). Conditional x-pivotal fibers are oriented antichains depending on z. Reference pushforward is normalized and pays no per-set control label, since control set is determined by data set. Full proof and comparison pending.

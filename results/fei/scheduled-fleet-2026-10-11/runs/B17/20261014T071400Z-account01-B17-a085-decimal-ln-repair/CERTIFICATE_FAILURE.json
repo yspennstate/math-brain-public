@@ -1,0 +1,11 @@
+{
+  "schema": "fei-certificate-adversary/1",
+  "reviewed_claim": "B17-A084-TWO-BIT-COMPLETE-v2",
+  "defect": "Decimal.ln always rounds with ROUND_HALF_EVEN, so the source checker's floor/ceiling contexts did not create outward logarithm bounds.",
+  "smallest_reproducer": "At precision 10, Decimal(2).ln() is 0.6931471806 under both ROUND_FLOOR and ROUND_CEILING.",
+  "severity": "MATERIAL_CERTIFICATE_RIGOR_DEFECT",
+  "mathematical_statement_status": "SURVIVES_REPAIRED_CERTIFICATE_PENDING_FRESH_REVIEW",
+  "repair": "Correctly rounded 114-digit logarithm bracketed by next_minus/next_plus, then outward-rounded to 90 digits.",
+  "universal_GU_status": "OPEN",
+  "full_FEI_status": "OPEN"
+}

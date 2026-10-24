@@ -1,0 +1,42 @@
+{
+  "positive_four_site": {
+    "FI": 16.359977449019087,
+    "J": 0.2173272157732341,
+    "negative_entropy_curvature": 15.587258459603143,
+    "design_eigenvalue": 2.6791292618413114,
+    "uniform_log_bound": 1.0216512475319814,
+    "max_face_log": 0.5297868542939788
+  },
+  "signed_four_site": {
+    "FI": 9.531289064830517,
+    "J": 0.011593730343797262,
+    "negative_entropy_curvature": 9.490066912497015,
+    "design_eigenvalue": 2.016524767398076,
+    "uniform_log_bound": 0.11778303565638346,
+    "max_face_log": 0.01690544001692192
+  },
+  "signed_64_site": {
+    "occupation_atoms": "18446744073709551616",
+    "orbit_records": 83521,
+    "FI": 0.5981506001133179,
+    "J": 0.0010515184998794054,
+    "negative_entropy_curvature": 0.5944118676693022,
+    "proved_lower_bound": 0.025660317666192155,
+    "minimum_atom_factor": 0.48000000000000015
+  },
+  "design_obstruction": {
+    "epsilon": "1/1000000",
+    "J": 6.155717330593937,
+    "design_eigenvalue": 3.999992000024,
+    "conclusion": "The universal stronger condition J<=Lambda is false."
+  },
+  "checks": 83752,
+  "status": "PASS",
+  "verification_provenance": {
+    "four_site_algebra": "Exact rational SymPy atom, covariance, and determinant identities.",
+    "four_site_log_identities": "Residuals evaluated at 50 decimal digits; signs proved in report.",
+    "design_eigenvalues": "Double-precision numerical verification of the proved inequality.",
+    "64_site_orbits": "Exact integer binomial multiplicities; double-precision weighted sums.",
+    "universal_signs": "Elementary inequalities in agents/X046.md, not numerical sampling."
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w442",
+  "bundle_slug": "probability-percolation-p0043-adversary-w442-001",
+  "entries": [
+    {
+      "key": "rooted-expansion",
+      "namespace": "probability.percolation.audit",
+      "logical_name": "rooted-edge-expansion-notation-w442",
+      "kind": "definition",
+      "title": "Rooted asymptotic edge expansion",
+      "statement": "For an infinite connected locally finite graph H rooted at o, define iota_*(H,o)=liminf_{n->infinity} inf{ |boundary_H(S)|/|S| : S is a finite connected vertex set containing o and |S|>=n }. The boundary counts H-edges having exactly one endpoint in S.",
+      "proof_text": null,
+      "assumptions": [
+        "H infinite, connected and locally finite",
+        "o a vertex of H"
+      ],
+      "domain": "Bernoulli bond percolation / proof auditing",
+      "source": {
+        "source_id": "owner:P0043:w442:rooted-expansion",
+        "url": "~/brain_workers/w442/ATTEMPT.md",
+        "revision": "draft-pending-independent-referee-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "endpoint",
+      "namespace": "probability.percolation.audit",
+      "logical_name": "infinite-path-critical-endpoint-obstruction-draft-w442",
+      "kind": "concept",
+      "title": "Critical endpoint obstruction on the infinite path (draft)",
+      "statement": "Draft deduction awaiting referee w443: For iid Bernoulli bond percolation on the undirected infinite path G=(Z,{{n,n+1}:n in Z}), G is connected, locally finite and vertex-transitive, p_c(G)=1, and theta_G(p_c)=1. Thus theta_G(p_c)=0 for every infinite locally finite quasi-transitive graph is false unless additional assumptions exclude this case.",
+      "proof_text": null,
+      "assumptions": [
+        "iid Bernoulli bond percolation",
+        "undirected infinite path",
+        "theta_G(p)=P_p(0 belongs to an infinite open component)",
+        "p_c=inf{p in [0,1]:theta_G(p)>0}"
+      ],
+      "domain": "Bernoulli bond percolation / proof auditing",
+      "source": {
+        "source_id": "owner:P0043:w442:endpoint",
+        "url": "~/brain_workers/w442/ATTEMPT.md",
+        "revision": "draft-pending-independent-referee-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "continuity-countermodel",
+      "namespace": "probability.percolation.audit",
+      "logical_name": "finite-radius-continuity-quantifier-countermodel-draft-w442",
+      "kind": "concept",
+      "title": "Finite continuity does not give one common lower parameter (draft)",
+      "statement": "Draft deduction awaiting referee w443: For every fixed a in (0,1), the array f_n(p)=min{1,(p/a)^n}, p in [0,1], n>=1, is continuous and increasing in p and decreasing in n, satisfies inf_n f_n(a)=1, and satisfies inf_n f_n(q)=0 for every q<a. Consequently positivity at a and continuity of each finite-scale function do not imply a single q<a with positive infimum over all scales.",
+      "proof_text": null,
+      "assumptions": [
+        "a in (0,1)",
+        "abstract array of scalar functions; no claim that these are target-graph percolation probabilities"
+      ],
+      "domain": "Bernoulli bond percolation / proof auditing",
+      "source": {
+        "source_id": "owner:P0043:w442:continuity-countermodel",
+        "url": "~/brain_workers/w442/ATTEMPT.md",
+        "revision": "draft-pending-independent-referee-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "subexponential-obstruction",
+      "namespace": "probability.percolation.audit",
+      "logical_name": "subexponential-subgraph-anchored-expansion-obstruction-draft-w442",
+      "kind": "concept",
+      "title": "Subexponential ambient growth forbids positive anchored expansion (draft)",
+      "statement": "Draft deduction awaiting referee w443: Let G be an infinite connected graph of maximum degree Delta<infinity and limsup_r |B_G(o,r)|^(1/r)=1. For every infinite connected subgraph H of G containing o, the anchored edge-isoperimetric constant iota_*(H,o), defined using finite connected vertex sets containing o, equals zero. Here iota_*(H,o) is the liminf, as n tends to infinity, of the infimum of |boundary_H(S)|/|S| over finite connected H-vertex sets S containing o with |S|>=n; boundary_H counts H-edges with exactly one endpoint in S.",
+      "proof_text": null,
+      "assumptions": [
+        "uniform degree bound Delta<infinity",
+        "subexponential ambient volume growth at o",
+        "H infinite and connected",
+        "edge boundary counts only H-edges",
+        "rooted finite connected sets in the definition of anchored expansion"
+      ],
+      "domain": "Bernoulli bond percolation / proof auditing",
+      "source": {
+        "source_id": "owner:P0043:w442:subexponential-obstruction",
+        "url": "~/brain_workers/w442/ATTEMPT.md",
+        "revision": "draft-pending-independent-referee-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "finite-continuity-route",
+      "namespace": "probability.percolation.audit",
+      "logical_name": "finite-continuity-uniform-parameter-route-audit-w442",
+      "kind": "concept",
+      "title": "Refuted generic finite-continuity inference",
+      "statement": "Audited candidate inference, false for abstract arrays: if f_n:[0,1]->[0,1] is continuous and increasing in its parameter, decreasing with n, and inf_n f_n(a)>0 for a in (0,1), then some q<a has inf_n f_n(q)>0. The failure is the exchange of for-every-scale/there-exists-parameter with there-exists-parameter/for-every-scale. This is not asserted as a valid theorem.",
+      "proof_text": null,
+      "assumptions": [
+        "abstract arrays of functions",
+        "no graph-specific premise added"
+      ],
+      "domain": "Bernoulli bond percolation / proof auditing",
+      "source": {
+        "source_id": "owner:P0043:w442:finite-continuity-route",
+        "url": "~/brain_workers/w442/ATTEMPT.md",
+        "revision": "draft-pending-independent-referee-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "anchored-route",
+      "namespace": "probability.percolation.audit",
+      "logical_name": "positive-anchored-expansion-critical-cluster-route-audit-w442",
+      "kind": "concept",
+      "title": "Impossible anchored-expansion premise on subexponential graphs",
+      "statement": "Audited proposed bridge: a hypothetical infinite Bernoulli critical cluster H inside a bounded-degree graph G of subexponential volume growth has positive anchored edge expansion. This proposed premise is impossible: for any infinite connected subgraph H containing o, iota_*(H,o)=0 when limsup_r |B_G(o,r)|^(1/r)=1. Its failure obstructs that sufficient-condition route; it does not prove the critical cluster finite.",
+      "proof_text": null,
+      "assumptions": [
+        "bounded-degree subexponential ambient graph",
+        "a hypothetical infinite connected subgraph"
+      ],
+      "domain": "Bernoulli bond percolation / proof auditing",
+      "source": {
+        "source_id": "owner:P0043:w442:anchored-route",
+        "url": "~/brain_workers/w442/ATTEMPT.md",
+        "revision": "draft-pending-independent-referee-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "exploration-gap",
+      "namespace": "probability.percolation.audit",
+      "logical_name": "finite-exploration-domination-criticality-bridge-gap-w442",
+      "kind": "concept",
+      "title": "Finite exploration domination leaves a uniform-history bridge",
+      "statement": "Source comparison, still draft material: arXiv:2304.12110v3, Definition 4 and Lemma 7, requires finite E and a nonanticipating exploration with deterministic first edge. For every positive-probability complete transcript, the same q bounds conditional next-edge opening after every prefix. Marginals do not suffice. An infinite-cluster application needs those history-uniform bounds, a percolating comparison object and a justified limit argument. The unverified harvested fragment omits the global finite-graph and exploration definitions.",
+      "proof_text": null,
+      "assumptions": [
+        "this is an audit of a retrieved concept card, not a promotion to theorem",
+        "finite exploration histories must be specified"
+      ],
+      "domain": "Bernoulli bond percolation / proof auditing",
+      "source": {
+        "source_id": "owner:P0043:w442:exploration-gap",
+        "url": "~/brain_workers/w442/ATTEMPT.md",
+        "revision": "draft-pending-independent-referee-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "clean-exploration-hypotheses",
+      "namespace": "probability.percolation.audit",
+      "logical_name": "finite-exploration-domination-full-hypotheses-draft-w442",
+      "kind": "concept",
+      "title": "Finite exploration domination with complete hypotheses (draft correction)",
+      "statement": "Draft source correction awaiting referee w443: Let G=(V,E) be a finite graph, mu a probability law on {0,1}^E, and q in [0,1]. Fix an exploration e(omega) ordering every edge once, with deterministic first edge and each next edge determined only by previously revealed edge indices and bits. For each complete transcript (a,x) with positive mu probability, let Expl_k(a,x) denote agreement with its first k revealed edge indices and bits. Suppose mu(omega_{a_{k+1}}=1 | Expl_k(a,x))>=q for every such transcript and every k=0,...,|E|-1. Then iid Bernoulli-q on E is stochastically dominated by mu: for every increasing event A, P_q(A)<=mu(A).",
+      "proof_text": null,
+      "assumptions": [
+        "finite graph G and finite edge set E",
+        "mu a probability law on {0,1}^E",
+        "q in [0,1]",
+        "first explored edge deterministic",
+        "later edge choices depend only on revealed indices and bits",
+        "conditional next-edge lower bound q at every prefix of every positive-probability complete transcript"
+      ],
+      "domain": "Bernoulli bond percolation / source hypothesis audit",
+      "source": {
+        "source_id": "owner:P0043:w442:C004-source-audit",
+        "url": "~/brain_workers/w442/BRIDGE_COMPARISON.md",
+        "revision": "draft-pending-independent-referee-2026-10-10",
+        "license": "owner-own-work (campaign source correction; primary source attributed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "subexponential-obstruction",
+      "to_key": "rooted-expansion",
+      "kind": "depends_on",
+      "rationale": "The obstruction uses exactly the rooted edge-boundary constant defined at the target end."
+    },
+    {
+      "from_key": "subexponential-obstruction",
+      "to_key": "anchored-route",
+      "kind": "refutes",
+      "rationale": "The source end gives iota_*=0 for every infinite connected subgraph in this graph class; the candidate premise requires iota_*>0 in the same class."
+    },
+    {
+      "from_key": "continuity-countermodel",
+      "to_key": "finite-continuity-route",
+      "kind": "refutes",
+      "rationale": "The source end has inf_n f_n(a)=1 and inf_n f_n(q)=0 for every q<a, satisfying the candidate hypotheses and contradicting its conclusion."
+    },
+    {
+      "from_key": "exploration-gap",
+      "to_existing_logical": "math:harvest.arxiv.owner-math:arxiv-2304-12110-lemma-7-72467d",
+      "kind": "cites",
+      "rationale": "The existing end requires the lower conditional edge probability after every eligible positive-probability exploration history; the audit end identifies those hypotheses as a missing bridge. The existing card is unverified concept material."
+    },
+    {
+      "from_key": "clean-exploration-hypotheses",
+      "to_existing_logical": "math:harvest.arxiv.owner-math:arxiv-2304-12110-lemma-7-72467d",
+      "kind": "cites",
+      "rationale": "Primary Definition 4 supplies finite E and nonanticipating exploration with deterministic first edge. Lemma 7 supplies the history-uniform conditional q bound. These global definitions are absent from the standalone stored fragment."
+    }
+  ]
+}

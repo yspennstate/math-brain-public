@@ -1,0 +1,51 @@
+{
+  "helper_version": "A046-correlated-post-controller-reset-v2",
+  "reason": "Initial18 cases exercised real resets but their signed costs were nonpositive. Strengthen prescribed fresh factor tilt to1/7 instead of root1/8, and include empty-data-prefix after an actual active x/a query to certify positive reset cost. Exact7^4<2*6^4 preserves the all-dimensional allowance bound; no numerical constant repair.",
+  "root_reference_tilt": "1/8 unchanged",
+  "prescribed_fresh_reference_tilt": "1/7; qnew(nonempty)=(6/7)p+(v/7)delta_full; empty mass unchanged",
+  "case_count": {
+    "pilot": 1,
+    "main": 27
+  },
+  "main_domain": {
+    "m_r": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "prefix": [
+      "none",
+      "first",
+      "adaptive"
+    ],
+    "controller": [
+      "x",
+      "a",
+      "mixed"
+    ]
+  },
+  "pilot_domain": [
+    1,
+    2,
+    "none",
+    "x"
+  ],
+  "physical_dimension_max": 9,
+  "symmetry": "none",
+  "arithmetic": "unchanged exact intervals and integer spectra",
+  "memory_MB": 100,
+  "max_runtime_seconds": 55,
+  "new_predicates": [
+    "at least one positive signed full-reference reset",
+    "fresh KL < (1/4)m v_r log2(7/6) < m2^-r/4"
+  ]
+}

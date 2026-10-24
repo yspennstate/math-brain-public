@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B09",
+  "run_id": "20260923T101630Z-account03-B09-QFORM-r29",
+  "control": {
+    "startup_commit": "c393c6af9218e1c22871c899ce8a3823556b6ee9",
+    "owner_revision": "2026-09-22.15",
+    "prepublication_control_refreshed": true,
+    "sole_target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES"
+  },
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "premises": [
+    {
+      "id": "QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+      "source": "yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5",
+      "scope_used": "For orthonormal P with h columns and cap-one original product input, ||p_(P^T X)||_inf <= exp(h/2)."
+    },
+    {
+      "id": "QFORM-TWOHUB-PLUCKER-SMOOTHING-v1",
+      "source": "yspennstate/math-open-problems@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc",
+      "scope_used": "Determinant-weighted Pluecker/entropy Brascamp-Lieb Fourier integral for diagonal-plus-low-rank leaf curvature."
+    },
+    {
+      "id": "QFORM-MULTIHUB-PLUCKER-SMOOTHING-v1",
+      "source": "yspennstate/math-open-problems@b7fca6f016b94984bfdfdb30e4c183fafff77443",
+      "scope_used": "Literal-physical-hub analogue used as consistency target; current run extends to grouped dependent hub projection."
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-GROUPED-HUB-PLUCKER-SMOOTHING-v1",
+      "status": "SUPPORTING_ANALYTIC_THEOREM",
+      "statement_short": "An arbitrary original-coordinate hub bank may be collapsed to the h-dimensional range of its cross block; arbitrary hub-bank quadratic curvature remains as a conditional complex amplitude. The density bound gains only M^(2/(r+2h)), where M is the grouped projection density cap."
+    },
+    {
+      "id": "QFORM-GROUPED-CROSS-PLUCKER-LINF-v1",
+      "status": "SUPPORTING_COROLLARY",
+      "statement_short": "Using the weighted affine-fiber projection cap, ||p_Q||_inf <= e (r+2h)/(r+2h-2) [rho det(G) prod|lambda|]^(-1/(r+2h)); continuous density and O(interval length)."
+    }
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ba035d3e65b7687b9ec8c05320f6340caabc34bb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T101630Z-account03-B09-QFORM-r29/REPORT.md",
+    "check_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T101630Z-account03-B09-QFORM-r29/CHECK_OUTPUT.txt"
+  },
+  "handoff": {
+    "commit": "695d6b4c25c8b6a3f0aab295898b8006d279828d",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B09/20260923T101630Z-account03-B09-QFORM-r29.md"
+  },
+  "designated_partner": {
+    "partner": "account04/B09",
+    "completed_current_qform_artifact_found": false,
+    "action": "continued asynchronously; no partner result fabricated"
+  },
+  "same_hour_login": {
+    "path": "scheduled_tasks/status/account03/logins/2026-09-23T10Z/B09.json",
+    "owner_run_id": "20260923T100501Z-account03-B09-QFORM-r28",
+    "action": "preserved; this r29 run uses separate start/finish/receipt records"
+  },
+  "unresolved_implication": "QFORM-GROUPED-CROSS-TO-GENERAL-LEAF-CURVATURE-v1",
+  "next_step": "Starting from a quantitative grouped cross block, retain general opposite-bank quadratic curvature jointly with product structure, or route it to a determinant-balanced diagonal-plus-low-rank packet without worst conditional fiber bounds or deletion of small coefficients.",
+  "full_target_status": "OPEN",
+  "full_target_continuity_status": "OPEN"
+}

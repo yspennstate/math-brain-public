@@ -1,0 +1,126 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w564",
+  "bundle_slug": "c0029-exact-row-extension-and-refuted-shortcut-v1",
+  "entries": [
+    {
+      "key": "schur",
+      "namespace": "probability.random-matrices",
+      "logical_name": "exact-row-extension-least-singular-threshold",
+      "kind": "concept",
+      "title": "Exact row-extension threshold (draft proof)",
+      "statement": "DRAFT, author proof pending independent review. Let n>=2, r>=0, D be a real (n-1)-by-n matrix, and A append X^T. If d=s_min(D)<=r, then s_min(A)<=r. If d>r, choose unit kernel v and orthonormal right singular pairs (v_i,s_i). Exactly s_min(A)<=r iff |<v,X>|^2<=r^2(1+sum_i <v_i,X>^2/(s_i^2-r^2)). This is a Schur-complement identity, not the coefficient-one conjecture.",
+      "proof_text": null,
+      "assumptions": [
+        "Real matrices; n>=2; r>=0",
+        "Use the cone formula only when d>r; deficient rank is handled separately"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability300:w564-C0029:schur",
+        "url": "urn:owner-work:probability300:w564:C0029:schur",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work; unreviewed mathematical reduction or refuted route; no theorem promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "replacement",
+      "namespace": "probability.random-matrices",
+      "logical_name": "signed-row-replacement-gap-for-spielman-teng",
+      "kind": "concept",
+      "title": "Signed replacement estimate still missing",
+      "statement": "UNPROVED INPUT. Let D_k have k-1 iid standard Gaussian rows and n-k iid sign rows, all independent, and let Q_mu(D,r) be the exact row-extension probability. The algebraic identity p_sign(epsilon)-F_n(epsilon)=sum_k E(Q_sign(D_k,r)-Q_Gaussian(D_k,r)), r=epsilon/sqrt(n), is proved in the draft; deficient-skeleton terms cancel. The missing estimate sum_k E(Q_sign-Q_Gaussian)<=epsilon-F_n(epsilon)+q^n, uniformly for one q<1, is equivalent to the coefficient-one conjecture and is not proved.",
+      "proof_text": null,
+      "assumptions": [
+        "n>=2; 0<=epsilon<1",
+        "Mutually independent mixed rows; F_n is the finite-n real Gaussian CDF"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability300:w564-C0029:replacement",
+        "url": "urn:owner-work:probability300:w564:C0029:replacement",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work; unreviewed mathematical reduction or refuted route; no theorem promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "obstruction",
+      "namespace": "probability.random-matrices",
+      "logical_name": "flat-hadamard-skeleton-obstructs-pointwise-gaussian-replacement",
+      "kind": "concept",
+      "title": "Flat Hadamard obstruction (draft proof)",
+      "statement": "DRAFT COUNTEREXAMPLE, review pending. For n=2^m>=2 delete the all-ones row of a Sylvester Hadamard matrix to get D. All chosen singular directions are flat. At r=1/[8(n+1)], an independent sign row has conditional small-singular probability binomial(n,n/2)/2^n>=1/(n+1), while a Gaussian row has probability <=2r. Their difference is >=3/[4(n+1)]. Flatness alone does not imply pointwise Gaussian domination. This does not refute an average over iid random skeletons or estimates imposing large arithmetic LCD.",
+      "proof_text": null,
+      "assumptions": [
+        "Deterministic Sylvester Hadamard skeleton",
+        "Independent product sign or standard Gaussian last row"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability300:w564-C0029:obstruction",
+        "url": "urn:owner-work:probability300:w564:C0029:obstruction",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work; unreviewed mathematical reduction or refuted route; no theorem promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "shortcut",
+      "namespace": "probability.random-matrices",
+      "logical_name": "refuted-flatness-only-gaussian-row-domination",
+      "kind": "concept",
+      "title": "Refuted shortcut: flatness gives domination",
+      "statement": "REFUTED ROUTE. The proposed statement that every rectangular sign skeleton with flat kernel and flat orthonormal singular directions obeys Q_sign(D,r)<=Q_Gaussian(D,r)+exp(-cn) uniformly for some c>0 is false. The Hadamard family gives a positive threshold with excess >=3/[4(n+1)]. Orthogonal sign projections are not generally independent, because their squared norms sum to the deterministic value n.",
+      "proof_text": null,
+      "assumptions": [
+        "This is a failed proof route, not an accepted theorem",
+        "No arithmetic or typical-spectrum hypotheses are imposed in the refuted route"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability300:w564-C0029:shortcut",
+        "url": "urn:owner-work:probability300:w564:C0029:shortcut",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work; unreviewed mathematical reduction or refuted route; no theorem promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gaussian-scope",
+      "namespace": "probability.random-matrices",
+      "logical_name": "finite-real-gaussian-cdf-versus-hard-edge-limit",
+      "kind": "concept",
+      "title": "Gaussian finite-n scope correction (draft)",
+      "statement": "DRAFT SCOPE CORRECTION, review pending. For an iid standard real Gaussian n-by-n G_n and each fixed t>=0, P(sqrt(n) s_min(G_n)<=t) converges as n->infinity to 1-exp(-t-t^2/2). The limiting expression is not the finite-n CDF: for n=1 the CDF is erf(t/sqrt(2)), with derivative sqrt(2/pi) at zero. The finite-n bound P(sqrt(n) s_min(G_n)<=t)<=t is separate. The old C0029-A001 attempt incorrectly used equality for finite n. Supporting primary source: Rudelson-Vershynin ICM 2010, Theorem 3.1 and equation (3.2).",
+      "proof_text": null,
+      "assumptions": [
+        "Real Gaussian entries iid N(0,1)",
+        "The asymptotic statement fixes t before letting n tend to infinity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability300:w564-C0029:gaussian-scope",
+        "url": "urn:owner-work:probability300:w564:C0029:gaussian-scope",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work; unreviewed mathematical reduction or refuted route; no theorem promotion",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "replacement",
+      "to_key": "schur",
+      "kind": "depends_on",
+      "rationale": "The exact replacement identity uses the exact row-extension event: schur states “Exactly s_min(A)<=r iff ...”; replacement states “sum_k E(Q_sign-Q_Gaussian)”. Neither asserts the missing inequality."
+    },
+    {
+      "from_key": "obstruction",
+      "to_key": "shortcut",
+      "kind": "refutes",
+      "rationale": "obstruction gives excess “>=3/[4(n+1)]” on flat Hadamard skeletons; shortcut proposes excess “<=exp(-cn)” uniformly. Polynomial excess eventually exceeds any such exponential."
+    }
+  ]
+}

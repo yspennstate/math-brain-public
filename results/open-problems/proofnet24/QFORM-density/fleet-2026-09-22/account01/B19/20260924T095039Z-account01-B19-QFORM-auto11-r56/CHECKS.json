@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T095039Z-account01-B19-QFORM-auto11-r56",
+  "status": "PASS",
+  "constants": {
+    "tau": 0.0000152587890625,
+    "b0": 0.011048543456039804,
+    "beta": 0.011033284666977304,
+    "theta_star": 0.0013829779184588303,
+    "R0": 0.015625,
+    "delta_physical": 5.960464477539063e-8,
+    "epsilon_star": 0.000021668634620694615,
+    "eta_star": 0.006955631713242971,
+    "spectral_cutoff_t": 0.046875,
+    "mss_lower_gram": 0.26813071563975677,
+    "residual_s5_gate": 0.1875,
+    "cross_s3_lower": 0.003399509182454394,
+    "C_E3": 10.550168831164775,
+    "direct_transverse_density_bound": 54495.77408812539,
+    "residual_s5_density_bound": 3103.4388392349374,
+    "retained_tail_r12": 0.1875152587890625,
+    "retained_tail_r11_collapse": 0.1876220703125
+  },
+  "assertions": {
+    "beta_positive": true,
+    "eta_improves_previous_0p085414": true,
+    "mss_lower_gram_positive": true,
+    "cross_s3_lower_positive": true,
+    "direct_transverse_density_bound_lt_54496": true,
+    "residual_s5_density_bound_lt_3104": true,
+    "r12_tail_below_one_fifth": true,
+    "r11_tail_below_one_fifth": true
+  },
+  "notes": [
+    "Numerical checks only support the exact derivations in REPORT.md; they are not proof substitutes.",
+    "No coefficient tail is deleted in the reported mathematics."
+  ]
+}

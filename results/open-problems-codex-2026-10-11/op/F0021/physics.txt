@@ -1,0 +1,1544 @@
+
+=== PAGE 1 ===
+Revisiting Directed Polymers with heavy-tailed disorder
+Thomas Gueudre and Pierre Le Doussal
+CNRS-Laboratoire de Physique Th´eorique de l’Ecole Normale Sup´erieure, 24 rue Lhomond,75231 Cedex 05, Paris, France
+Jean-Philippe Bouchaud
+CFM, 21 rue de l’universit´e, 75007 Paris France
+Alberto Rosso
+Paris-Sud, LPTMS, UMR 8626, Orsay F-91405, France
+(Dated: August 22, 2018 – heavy-tails-v7)
+In this mostly numerical study, we revisit the statistical properties of the ground state of a
+directed polymer in a d = 1 + 1 “hilly” disorder landscape, i.e. when the quenched disorder has
+power-law tails.
+When disorder is Gaussian, the polymer minimizes its total energy through a
+collective optimization, where the energy of each visited site only weakly contributes to the total.
+Conversely, a hilly landscape forces the polymer to distort and explore a larger portion of space to
+reach some particularly deep energy sites. As soon as the ﬁfth moment of the disorder diverges, this
+mechanism radically changes the standard “KPZ” scaling behaviour of the directed polymer, and
+new exponents prevail. After conﬁrming again that the Flory argument accurately predicts these
+exponent in the tail-dominated phase, we investigate several other statistical features of the ground
+state that shed light on this unusual transition and on the accuracy of the Flory argument. We
+underline the theoretical challenge posed by this situation, which paradoxically becomes even more
+acute above the upper critical dimension.
+PACS numbers: 68.35.Rh
+I.
+INTRODUCTION
+The so-called “Directed Polymer” (DP) problem has
+attracted an enormous amount of interest in the last
+thirty years [1–3]. It is stylized model for the pinning of
+directed one-dimensional elastic objects (polymers, vor-
+tex lines, dislocations,...)
+by random impurities.
+It is
+perhaps the simplest model that captures the notion of
+“frustration” that is so crucial in many more complex
+disordered materials, such as spin-glasses: the elasticity
+of the polymer competes with the energy of very favor-
+able, but distant pinning sites that would lead to a costly
+distortion of the polymer. The huge amount of work on
+this problem is justiﬁed not only because of its intrinsic
+interest, but also because it can be mapped to a host
+of other problems: the Stochastic Heat Equation [4], it-
+self mapped onto the Kardar-Parisi-Zhang equation [5]
+and the stochastic Burgers’ equation [6], population dy-
+namics [7], problems of jammed transport (TASEP) and
+crystal growth [8].
+In 1+1 dimensions (one transverse, one longitudinal,
+often taken as the “time” dimension), the problem is con-
+sidered to be exactly solved, at least in some special limits
+and for some particular observables [9–11]. It is now well
+established that in the limit of “long” polymers of length
+t →∞, the transverse excursions x are of order tζ with
+ζ = 2/3, i.e. much larger than
+√
+t that would correspond
+to the thermal excursion of the polymer in the absence
+of disorder. Moreover the total free energy ﬂuctuations
+scale with an anomalous exponent θ = 1/3. Although
+these scaling exponents have been known at the level of
+physical rigour since the 80’s (using either replica the-
+ory [12], the exact stationary state of the corresponding
+KPZ equation [13], RG techniques [5] or Mode-Coupling
+theory [14]), it is fair to say that there is up to now
+no simple, heuristic derivation of these exponents that
+would a) unveil the deep physical origin of these results
+and b) allow one to extend these results to other, simi-
+lar problems, such as the Directed Polymer problem in
+d + 1 dimensions, for which the situation is still quite
+unclear [15–18]. For example, the existence of an upper
+critical dimension dc beyond which ζ = 1/2 even in the
+low temperature, pinned phase, is still highly debated
+[19]. In d = 1 recent results have shown that the total
+free-energy of the polymer can be written as −ct + ξt1/3,
+where c is a non universal constant and ξ is proportional
+to a random variable with a Tracy-Widom distribution,
+identical to the one governing the statistics of the largest
+eigenvalue of random matrices (GOE or GUE, depending
+on the boundary conditions) [20–24].
+In spite of these numerous exact results, it is fair to
+say that even the 1+1 directed polymer problem is far
+from understood. Consider for example the role of the
+distribution of the pinning energy on the large scale prop-
+erties of the polymer. One would naively expect that, as
+with many other problems, the existence and ﬁniteness
+of the second moment of the distribution is enough to en-
+sure that the above scaling results (valid for Gaussian or
+exponential disorder) hold asymptotically. Surprisingly,
+though, this does not seem to be the case.
+A heuris-
+tic, Flory-type argument that dates back from the early
+90’s [25–27] suggest that as soon as the ﬁfth moment
+of the distribution diverges, one should leave the realm
+of the standard DP/KPZ 2/3 scaling, and enter a new
+arXiv:1411.1242v1  [cond-mat.dis-nn]  5 Nov 2014
+
+
+=== PAGE 2 ===
+2
+regime, where the extreme values taken by the pinning
+potential matter and change the scaling results. In fact,
+the same Flory argument suggests that the situation be-
+comes worse and worse as the dimension increases [27].
+In fact, any sub-exponential tail of the potential should
+play a crucial role at and above dc. [It can indeed be
+checked explicitely that the Derrida-Spohn solution of
+the DP on a tree breaks down as soon as the potential
+has sub-exponential tails [28].]
+The sensitive dependence of large scale properties on
+the far-tails of the disorder is certainly unusual and high-
+lights our poor grasp of the standard case. It also raises
+many technical questions, for example on the validity of
+techniques that have been exploited in the context of
+Gaussian disorder, such as replica method or the func-
+tional RG. It is clear that if conﬁrmed, these far-tailed
+induced eﬀects would require new, speciﬁc theoretical
+methods that could, indirectly, shed new light on the
+DP problem altogether.
+Before embarking on such a
+program, we wanted to revisit the 1+1 DP problem
+with heavy-tailed disorder, and establish numerically,
+as convincingly as possible, the violation of the stan-
+dard DP/KPZ 2/3 scaling and the corresponding Tracy-
+Widom statistics. Our results are, quite remarkably, in
+perfect agreement with the naive Flory predictions for the
+diﬀusion exponent ζ and the energy exponent θ, which
+conﬁrms that the value ζ = 2/3 only holds if the proba-
+bility density of the pinning energy V decays faster that
+1/|V |6! We study various statistical properties of the DP
+in the anomalous regime, and attempt to deﬁne and mea-
+sure certain quantities that directly validates the main
+assumption of the Flory argument, namely that the ac-
+cesible extreme values of the pinning potential dominate
+the scaling behaviour.
+We conclude with several open
+problems.
+II.
+THE MODEL
+Here we consider a one dimensional directed polymer
+growing on the two dimensional square lattice depicted
+in Fig. 1.
+Directed paths grow along the diagonals of the lattice
+with only (0, 1) or (1, 0) moves (hard constraint condi-
+tion), starting in (0, 0) and with the second end left free.
+To each site of the lattice is associated a i.i.d. random
+number V (x, t). The time coordinate is given by t = i+j
+and the space coordinate by x = (i −j)/2. The total en-
+ergy of the polymer is the minimum over all paths γt
+growing from (0, 0) up to time t is deﬁned as
+E(t) = min
+γt
+X
+(x,τ)∈γt
+V (x, τ)
+(1)
+with 2x ∈[[−t, t]] and τ ∈[[0, t]]. The energy of the poly-
+mer satisﬁes the following transfer matrix recurrence re-
+lation:
+Ex,t+1 = min(Ex−1
+2 ,t, Ex+ 1
+2 ,t) + V (x, t + 1)
+(2)
+x
+t
+i
+j
+1
+O
+FIG. 1: Sketch of the directed polymer model. The blue solid
+line corresponds to a polymer growing over the square lattice
+under the hard constraint condition.
+50
+100
+150
+200
+t
+-100
+-50
+50
+100
+x
+FIG. 2: Optimal path (t = 512) for three diﬀerent random
+environments: the Gaussian disorder (in yellow), the heavy-
+tailed disorder with µ = 0.1 (in blue) and with µ = 2.5 (in
+red). The shape of the path is strongly aﬀected by the under-
+lying disorder. Because of the hard constrain, the path can
+only evolve inside the cone delimited by the dashed lines.
+with Ex,0 = δx,0. The free end ground state is computed
+by taking the minimum of the energies over all endpoints
+E(t) = minx E(x, t). In this paper, we study the proper-
+ties of the DP for diﬀerent disorder distributions P(V ),
+in particular we focus on heavy-tailed pdf decaying as:
+P(V ) ∼V →−∞
+1
+|V |1+µ
+(3)
+It is known that, in one dimension, the search for an
+optimal path in a disorder landscape leads to excursions
+larger than the thermal ones, which are of order
+√
+t. The
+shape of the optimal path strongly depends on the under-
+lying disorder landscape, as shown in Fig. 2. In particu-
+lar, the excursions are more important for a heavy-tailed
+disorder than for a Gaussian disorder. Those diﬀerences
+correspond to diﬀerent optimisation strategies, as illus-
+trated in Fig. 3:
+• For a Gaussian disorder, the optimisation strat-
+
+
+=== PAGE 3 ===
+3
+●
+●
+●
+●
+●
+●
+●
+■
+■
+■
+■
+■
+■
+■
+50
+100
+500
+1000 t
+1.5
+2.0
+2.5
+3.0
+3.5
+4.0
+R(t)
+FIG. 3: Ratio R(t) = minτ<t V (τ)/ minτ<t X(τ) of the mini-
+mum energy contribution along the ground state of a polymer
+of length t to the minimum of a sequence {X(τ)} of t random
+variables independently drawn from the very same disorder
+distribution, Eq. (3). Blue circles correspond to µ = 3, yellow
+squares µ = 8. In dashed lines are plotted either a constant
+(for µ = 8) or tθµ−1/µ = t4/15 (using minτ<t X(τ) ∼t1/µ
+and θ3 = 3/5. One clearly sees that the optimal polymer for
+µ = 8 does hardly better than for purely random sequences,
+the elitist optimization in µ = 3 leads to power-law growth of
+R(t) with t, i.e. the optimization has led the polymer to go
+through much deeper sites.
+egy is collective: the total energy of the polymer
+is equally shared between all the sites.
+• For an heavy-tailed pdf with 1 < µ < 5, the opti-
+misation strategy is elitist: an important fraction
+of the total energy is hold by a small fraction of the
+sites belonging to the path.
+• For an heavy-tailed pdf with µ < 1, the optimisa-
+tion strategy is individual: most of the total energy
+of the polymer is localized on one particularly deep
+site.
+Such diﬀerences in optimization have marked eﬀects
+on the ﬂuctuations properties at large t, in particular on
+the observables:
+x(t)2 ∼t2ζ
+(4)
+E(t)2c = E2(t) −E(t)
+2 ∼t2θ .
+(5)
+Here θ and ζ are respectively the energy and the rough-
+ness exponents and show some universal features: they
+only depend on the behaviour of the disorder tails,
+namely the index µ. Note that other important quan-
+tities, as the average energy E(t), strongly depend on all
+the microscopic details of the chosen model.
+For a fast decaying disorder, the value of the expo-
+nents is known to be ζ = 2/3 and θ = 1/3 ([12, 13]) and
+has been recently proved, via mathematical ([29, 30]) and
+physical ([10, 23]) approaches, for speciﬁc fast decaying
+distributions such as the Gaussian, the exponential or the
+LogGamma distribution [31]. For heavy-tailed disorder,
+where extremes play a major role in the choice of the
+optimal path, the values of the exponents appear to rely
+on the balance between the energy of the deepest sites
+and the deformation energy it would cost to reach them
+µ > 5
+5 > µ > 2
+2 > µ > 0
+θµ
+1/3
+3/(2µ −1)
+2/µ
+ζµ
+2/3
+(1 + µ)/(2µ −1)
+1
+TABLE I: θµ and ζµ as a function of µ. For 0 < µ < 5 the
+values of the exponents are estimated by scaling arguments.
+On the contrary in the collective optimization regime (µ > 5)
+no simple scaling argument is known.
+([25–27]). Noting t the length and x the size of a typical
+excursion of the polymer, a result from extreme statis-
+tics of heavy-tailed distributions gives, for the volume xt
+available to the polymer, an estimation of the energy of
+the deepest sites: Emin ∼(xt)1/µ. On the other hand,
+for the model with hard constraint the deformation cost
+is entropic and, provided that x ≪t, follows a scaling
+similar to an elastic energy as S ∼−x2/t.
+Balancing
+both estimations, Emin ∼S, leads to the estimates:
+ζµ = 1 + µ
+2µ −1
+(6)
+θµ =
+3
+2µ −1
+(7)
+We can guess that those formula are valid for 2 ≤
+µ ≤5, i.e. whenever ζµ > 2/3. Note that the values
+of the exponents are compatible with the scaling rela-
+tion θ = 2ζ −1. This relation comes from the statistical
+tilt symmetry (STS), originating in the invariance of the
+problem upon tilting transformation x(τ) →x(τ)+ϵτ in
+the large scale limit [32].
+Above µ = 5, the Flory argument leads to ζµ < 2/3:
+instead of a strategy focusing on deep sites of the dis-
+order, the behaviour of the polymer is dominated by a
+collective strategy similar to the Gaussian case. On the
+other hand for µ = 2 we have ζµ = 1 so that x ∼t and
+the entropy can not be approximated by an elastic en-
+ergy. Due to the hard constraint, the excursions of the
+polymer are conﬁned in a cone. This observation leads to
+a new estimation of the exponents ζµ = 1 and θµ = 2/µ
+for 0 < µ < 2. Note that the STS symmetry is violated
+in that regime. All these Flory estimates are summarized
+in Table I.
+When µ < 1, the ﬁrst moment of the disorder dis-
+tribution diverges. That leads to a huge separation of
+energy scale in the disorder, where all the sites can be ne-
+glected compared to the value of the most profound site
+through which the optimal path has to go. Hence the op-
+timization becomes individual and it allows to construct
+recursively the optimal path by picking the deepest site
+that pins the polymer, and applying the same strategy
+amongst the sites inside the area delimited by the hard
+constraint. Such a hierarchical optimization strategy was
+coined greedy in [33], where some of its properties were
+studied for the limit µ →0+. Here we will show that this
+approximation seemingly becomes asymptotically exact
+
+
+=== PAGE 4 ===
+4
+as t →∞for all µ ≤1. In particular the end point dis-
+tribution of the polymer is computed analytically for the
+greedy strategy and very well reproduces the numerical
+behavior for all µ < 1.
+III.
+NUMERICAL SIMULATIONS
+In this section, we present numerical simulations done
+with the matrix transfer method, which allows to keep
+track of both the energy and the position of the optimal
+path at every time t.
+We compare the numerical values of θ and ζ with
+the predictions of the (Flory) scaling arguments given
+in the the previous section, and obtain additional infor-
+mation about the whole pdf of the ﬂuctuations of the
+total energy E. The Flory estimates have been conjec-
+tured (see [26]) to be a good approximation only in the
+limit µ →2+. However a careful analysis of ﬁnite eﬀects
+leads to the conclusion that the Flory argument may in
+fact be asymptotically exact [34]. Finally, we give strong
+numerical evidence of the existence of diﬀerent optimiza-
+tion strategies as µ varies. This supports the correctness
+of the scaling argument in the regime of strong disorder
+for µ < 5.
+A.
+The scaling exponents
+To measure the exponents θ and ζ, we can use the def-
+initions given in Eq. 5. However, in Fig. 4, we observe
+that the statistical estimator for E2c never averages out
+when µ < 4 and shows large jumps even for a very impor-
+tant sampling sizes. Note that the statistical estimator
+of E2c converges only if both E2c and its statistical er-
+ror (E4c/N)1/2 are ﬁnite. But, due to the presence of
+heavy tails in the disorder, high enough moments of the
+distribution of energy P(E) could diverge. We will see
+in Sec.III B that for 2 < µ < 4, E2c is ﬁnite while E4c
+diverges.
+Another estimator of the spread of the distribution is
+the mean absolute deviation (MAD) ∆E:
+∆E = 1
+N
+X
+i
+|Ei −E|
+(8)
+This estimator is more resilient to extreme events and
+works better with heavy-tailed distributions. Contrary
+to the standard deviation, which squares the distance
+from the average, MAD is well controlled as soon as the
+second moment of the pdf exists (in our case for µ > 2),
+and allows us to properly extract θnum (see Fig. 4). Note
+that x2(t) does not present this kind of problem, because
+it is compactly supported due to the hard constraint (see
+Fig. 4).
+The numerical values of the exponents for diﬀerent val-
+ues of µ, and its comparison with the Flory prediction,
+are summarized in Table II. The numerical estimations
+5
+10
+20
+50
+100
+t
+2
+5
+10
+20
+50
+E2 HtL
+c
+x2 HtL
+DEHtL
+FIG. 4: Stability analysis of our numerical results. The av-
+erages are performed over N = 105 samples.
+The mean
+squared displacement x2(t) shows a well-deﬁned smooth be-
+haviour, while the variance of the energy E2(t)
+c displays a
+jump around t = 70, which stems from a very deep single pin.
+This makes E2(t)
+c numerically unstable. On the contrary, for
+µ > 2, the quantity ∆E(t) displays a well-deﬁned behaviour
+allowing for a reliable estimation of the exponent θnum.
+ææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææ
+àààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààà
+500
+200
+300
+150
+700
+t
+10
+50
+20
+30
+15
+70
+x HtL212
+200
+400
+600
+800
+1000
+0.27
+0.28
+0.29
+0.30
+0.31
+0.32
+0.33
+0.34
+x HtL212
+tΖΜ
+t
+FIG. 5: Mean square displacement of the end position of the
+optimal path for µ = 3 (in red) and µ = 4 (in blue). Dashed
+lines correspond to the Flory estimate given in Table.I. Inset:
+x(t)2/tζµ showing saturation at large t in both cases.
+have been made with the maximum likelihood method.
+Figs. 5 and 6 illustrate how good the Flory prediction
+is: see in particular the insets where we show the quan-
+tities x(t)2/tζµ and |E −E|(t)/tθµ that should saturate
+to a constant when t ≫1 if the scaling argument is cor-
+rect.
+The saturation time should however grow larger
+and larger as µ →5−, explaining the observed diﬀerence
+between µ = 3 and µ = 4.
+Indeed, in this limit, the
+strategy remains elitist, but the eﬀect of deep sites is not
+as strong and needs a large value of t to be clearly dis-
+tinguished from the rest of the “crowd”. For µ > 5, the
+strategy becomes collective, and the exponents θ = 1/3
+and ζ = 2/3 are recovered.
+
+
+=== PAGE 5 ===
+5
+ææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææææ
+àààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààààà
+500
+200
+300
+150
+700
+t
+1
+2
+5
+10
+20
+DEHtL
+200
+400
+600
+800
+1000
+0.60
+0.65
+0.70
+0.75
+0.80
+DE HtL
+tΘ Μ
+t
+FIG. 6: Mean absolute deviation ∆E of the optimal energy for
+µ = 3 (in red) and µ = 4 (in blue). Dashed lines correspond to
+the Flory estimate given in Table.I. Inset: ∆E(t)/tθµ showing
+saturation at large t in both cases.
+µ
+θµ
+θnum
+ζµ
+ζnum
+3 3/5 = 0.60 0.605 ± 0.006 4/5 = 0.80 0.802 ± 0.004
+4 3/7 ≃0.43
+0.44 ± 0.02
+5/7 ≃0.714 0.715 ± 0.005
+5
+1/3
+0.36 ± 0.03
+2/3
+0.69 ± 0.04
+7
+1/3
+0.338 ± 0.008
+2/3
+0.669 ± 0.004
+TABLE II: Flory predictions of θ and ζ compared to numerical
+estimates for several values of µ. The agreement is extremely
+good (see also Figs. 5 and 6), except close to the transition
+value µ = 5, where the numerical estimate is less precise due
+to important size eﬀects.
+B.
+Space and time ﬂuctuations of the total energy
+In this section, we present results for the probability
+distribution of the ﬂuctuations of the ground state energy
+E.
+The Gaussian (or fast decaying disorder) case has
+been studied extensively in the past. On the other hand,
+there is currenly no study of its equivalent in the heavy-
+tailed disorder.
+It has been shown that for some particular, fast de-
+caying disorder distributions (see [23, 29, 30]), after the
+proper rescaling, the probability distribution converges
+to a family of distributions, called the Tracy-Widom
+(TW) distributions.
+It is believed that this universal-
+ity extends to all fast decaying distributions. We deﬁne
+the rescaled variable:
+s(t) = (E(t) −E(t))/(E2c(t))1/2
+(9)
+and compute in Fig. 7 the rescaled energy distribution
+φ(s) for diﬀerent µ’s.
+It seems numerically clear that
+the TW universality class extends for any disorder with
+µ > 5. Note that, for very negative s, φ(s) remains al-
+gebraic beyond some time dependent threshold s < s∗
+t .
+However, when t →∞, the crossover towards the alge-
+braic behaviour s∗
+t moves to −∞.
+On the contrary, for 0 < µ < 5, the limiting distribu-
+tion is very diﬀerent. The family of limiting distributions
+Fµ depends only on µ and on the boundary conditions.
+Its analytical expression is still unknown; inspired by re-
+sults from extreme statistics, a natural guess would be
+the Frechet distribution P(X < x) = exp(−a|x|−µ′) or
+some convolutions thereof (see [27]). Similarly, one would
+intuitively assume that the tails exponents are preserved,
+as for the pdf of the minimum of independent random
+variables and so α = µ. However, the interplay with the
+elastic energy might lead to a shift in this exponent. This
+fact was already noticed in [35] for the model of a particle
+in a disorder landscape conﬁned by an harmonic poten-
+tial. In this simpler model, the shift can be understood
+heuristically as follows: assuming again that the polymer
+is controlled by a very deep site, from record statistics, it
+is known that the tail of the minimum of N heavy-tailed
+random variables decays as ∼
+N
+|V |1+µ . Balancing elastic
+energy and potential leads to Etot ∼u2 ∼|V |, and then
+to N ∼u ∼|V |1/2. Hence the dependence of N with
+V , inherent to the fact that large deviations in the disor-
+der allows the particle to explore a larger space, which in
+turn leads to a modiﬁed exponent µ′ = µ−1/2 of the tail
+of the total energy. Since for the heavy-tailed directed
+polymer case, the ground state is supposedly controlled
+by few deep sites, on which elastic energy and potential
+compete in a similar way, the above argument could also
+possibly describe the tails, and yield µ′ = µ −1/2. How-
+ever, this exponent is rather hard to extract from numer-
+ics, as it comes from large deviations in the free energy
+ﬂuctuations, and hence from rare disorder realizations.
+Simulations up to t = 213 for more that N = 2 · 106 sam-
+ples nonetheless indicate a clear departure of µ′ from the
+value µ and tend indeed to favor the above conjecture
+µ′ = µ −1/2 (see Fig.9).
+Let us add that those numerical results indicate that
+the support of the limiting distributions Fµ is the whole
+real line, unlike the standard Frechet distribution for
+heavy-tailed extreme statistics.
+An interesting feature
+of Fµ is the fact that its right tail, corresponding this
+time to unfavourable conﬁgurations of the disorder, ap-
+pears to decay as e−αs3, similarly to TW. This fact would
+support a mixture of some Frechet and TW distribution
+as a possible guess.
+For future reference, the tail analysis of Fµ(s) for the
+special case µ = 3 leads to the following numerical esti-
+mations: the left tail decays as
+R s dx F3(x) ≈1.5 |s|−2.5
+for s →−∞while for the right tail F3(s) ≈1.8 e−1.5s3
+for s →∞(see Fig. 8).
+Let us now turn to the dependence of the ground state
+energy on its ﬁnal position, E(x, t), when the latter is im-
+posed. In the Gaussian case, for inﬁnite systems at large
+time, this process has been characterized as an Airy pro-
+cess, dependent of the initial conditions.
+For small x,
+E(x, t) behaves as a mere Brownian motion in x, but its
+correlations saturate for x ≫t2/3. [It is worthwhile to
+mention that, in the discrete grid model used presently,
+E(x, t) does not have Gaussian spatial increments, and
+
+
+=== PAGE 6 ===
+6
+-3
+-2
+-1
+0
+1
+2
+s
+0.001
+0.005
+0.010
+0.050
+0.100
+ΦHsL
+FIG. 7:
+Collapse of the pdf φ(s),
+for several lengths
+(from the farthest to the closest to the dashed line) t =
+24 (blue), 27 (red), 28 (yellow) for an disorder pdf with µ = 8.
+Comparison is made with the Tracy Widom distribution F2
+after centring and rescaling (in dotted black). Average over
+N = 2 × 105 samples.
+these increments are in fact weakly correlated. Nonethe-
+less, the correlation length does not grow with t and in
+the continuum limit E(x, t) indeed converges (for small
+x) to a Brownian motion]. For a heavy-tailed disorder
+with µ > 5, our results are consistent with the scenario
+where this convergence holds, as can be seen in the inset
+of Fig. 10.
+The situation is quite diﬀerent in the elitist optimiza-
+tion strategy. Because the increments of the stationary
+process are controlled by the deep sites, they exhibit
+jumps of all sizes with power-law tails. Furthermore, the
+increments are, through scaling arguments, expected to
+behave as ∆E(x) ∼xθ/ζ with θ/ζ = 3/(1 + µ) > 1/2
+as soon as µ < 5. Hence the time stationary process of
+E(x, t) is super-diﬀusive (in x), with strongly correlated
+heavy-tailed increments of index µ (see Fig.10). A more
+precise characterization of this process (which is neither
+a fractional Brownian motion nor a L´evy walk) would be
+quite interesting and is left for future investigations.
+C.
+Zooming into the optimisation strategies
+Although the scaling argument gives the correct esti-
+mates, it relies on the assumption that the ﬂuctuations
+of E are controlled by the ﬂuctuations of the deepest
+sites in the disorder. This stems from the fact that the
+optimal path does large excursions speciﬁcally to reach
+some favorable pinning sites. Note that, at variance with
+the case µ < 1 where one site dominates over all the the
+others, when 1 < µ < 5 there is still a large population
+of sites with local energy of order Vmin – there is in that
+case no obvious dominance. Hence to check the validity
+of the elitist optimisation strategy, one has to test the
+fact that the optimal path indeed picks up some sites
+amongst the deepest available, whereas in the collective
+-5
+-4
+-3
+-2
+-1
+0
+1
+s
+10-5
+10-4
+0.001
+0.01
+0.1
+ΦHsL
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0.10
+0.50
+0.20
+0.30
+0.15
+ΦHsL
+s3
+FIG.
+8:
+Collapse
+of
+φ(s),
+for
+several
+lengths
+t
+=
+24 (blue), 27 (red), 210 (yellow) and for an disorder pdf with
+µ = 3. Comparison is made with the Tracy Widom distri-
+bution F2 after centring and rescaling (in dotted black). The
+decay estimate of index α = µ −1/2 is plotted in dashed
+black. Inset: far right tail of φ(s) compared to a decay of
+e−1.5s3 (in dotted black). Average over N = 2 × 105 samples.
+1
+10
+-s
+10-6
+10-4
+10-2
+1
+ϕ(-s)
+FIG. 9: The algebraic left tail of φ(s) on a log-log scale, com-
+pared with both decays of exponent µ and µ −1/2, for µ = 3.
+Polymers are of length t = 213, for a sampling of N = 2 · 106
+samples.
+case this is not so.
+We have therefore formulated the elitist optimisation
+hypothesis as follows: Consider a paraboloid region R(α)
+of length t and width tα/2, containing a number of sites
+∝t1+α. We then compute the probability Pc(α) that the
+minimum energy site along the polymer is one among
+the µ log(t) deepest sites within the region R(α). [The
+choice of log t sites corresponds to a rough estimate of
+the number of completely independent paths in region
+R(α).]
+Intuitively, we expect that for the elitist strategy, the
+minimum energy along the polymer should be deeper
+than the minimum restriced to R(α) ⊂R(ζ) when α < ζ.
+On the contrary, whenever α > ζ, the minimum along
+the polymer should be higher than the minimum in R(α),
+
+
+=== PAGE 7 ===
+7
+-2
+0
+2
+4 ΔE
+10-3
+10-2
+0.05
+0.10
+0.50
+1
+P(ΔE)
+-4
+-2
+0
+2
+4
+10-4
+10-3
+10-2
+0.1
+1
+ΔE
+P(ΔE)
+FIG. 10:
+Probability distribution of ∆E for various sizes
+of the increments ∆x of the stationary distribution for the
+disorder with µ = 3: from the most peaked to the least,
+∆x = 4 (blue) and 64 (yellow).
+The variance of the distri-
+butions is normalized to 1. Tails survive even for large in-
+crements.
+The dashed black line is the Gaussian distribu-
+tion. Inset: same probability distributions for a disorder with
+µ = 8, with convergence towards a gaussian distribution at
+large increments. The time used in simulation is t = 105.
+since the elastic energy prevents it from reaching this par-
+ticularly favourable site. Therefore, when t →∞, Pc(α)
+should become more and more peaked around α = ζ for
+the elitist strategy. In the collective regime, on the other
+hand, Pc(α) should vanish for all α since the global opti-
+misation has nothing to do whatsoever with the value of
+the deepest available site.
+Fig. 11 suggests a diﬀerent qualitative behaviour for
+µ = 3 and µ = 7, in agreement with the above predic-
+tion.
+Note that the maxima of the curves in Fig.
+11
+corresponding to an estimation of the rugosity exponent
+ζ are moving to the left as t increases.
+They are ex-
+pected to converge towards ζ3 = 4/5 for t →∞, although
+the convergence appears to be very slow. Such a diﬀer-
+ence in optimization strategy is reﬂected in the extremal
+statistics observed along the polymer path. Granted the
+Gaussian optimal path is not relying on extremal sites,
+the position of minimum energy sity should be (asymp-
+totically) ﬂat over [1, t] (see Fig.
+12), with ﬁnite size
+eﬀects coming from the smaller entropy at the very ex-
+tremities of the polymer. On the other hand, for µ < 5
+and for periodic boudary conditions, the position of the
+minimum site is related to the maximum entropy of the
+polymer, hence the mode should be located right in the
+middle of the path. In the greedy case µ →0+, the prob-
+ability distribution of this minimum is easily computed
+and represented in Fig.12, as the limiting distribution for
+every disorder with µ < 1.
+IV.
+DISTRIBUTION OF THE END POINT
+Another observable of interest is the distribution of the
+end point of the (unconstrained) optimal path.
+Com-
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ æ
+à
+à
+à
+à
+à
+à
+à
+à
+à
+à
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ò
+ò
+ò
+ò
+ò
+ò
+ò
+ò
+ò
+0.75
+0.80
+0.85
+0.90
+0.95
+Α
+0.6
+0.7
+0.8
+0.9
+Pc
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+à
+à
+à
+à
+à
+à
+à
+à
+à
+à
+à
+à
+à
+à
+à
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ì
+ò
+ò
+ò
+ò
+ò
+ò
+ò
+ò
+ò
+ò
+ò
+ò
+ò
+ò
+ò
+0.65 0.70 0.75 0.80 0.85 0.90 0.95
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+Α
+Pc
+FIG. 11: Probability Pc(α) as deﬁned in the text for a heavy
+tailed disorder with µ = 3, corresponding to an elitist op-
+timisation.
+Symbols correspond to diﬀerent lenghts:
+t =
+26 (circles), 29 (squares), 211 (losanges), 212 (triangles).
+The
+averages are performed over N = 2 × 105 samples. As ex-
+pected, Pc(α) appears to peak around the value 0.9, which
+should converge to ζ3 = 0.8 for very large sizes. Inset: the
+same analysis performed for µ = 8, corresponding to a collec-
+tive optimisation. In this case, Pc(α) decreases as a function
+of t, indicating that the minimum energy site becomes less
+and less relevant as the size of the polymer increases.
+0.2
+0.4
+0.6
+0.8
+1.0 xmin
+0.5
+1.0
+1.5
+2.0
+P(xmin)
+FIG. 12:
+Histograms for P(xmin) of the position of the
+minimum xmin (normalized in [0, 1]) of site energy along
+the polymer in the with both extremities ﬁxed, for vari-
+ous disorder.
+From the most peaked to the ﬂattest, µ =
+0.5 (blue) , 3 (yellow)
+and Gaussian disorder (green).
+In
+dashed black, both the uniform distribution and the distribu-
+tion of the minimum for the greedy case, to which disorders
+with µ < 1 converge. t = 512 and N = 105 samples. We ex-
+pect that the distribution converges to a uniform distribution
+at large t for µ > 5, but to remain non trivial for µ < 5.
+pared to the ﬂuctuations of the energy E(t), we know
+much less about the statistics of x(t). One expects the
+rescaled position z = x(t)/tζ to converge in law towards
+a limiting distribution Qζ(z), but the analytic shape of
+Qζ(z) is unknown even in the Gaussian case ζ = 2/3.
+For an exponential distribution of the disorder, the whole
+
+
+=== PAGE 8 ===
+8
+æ æ æ æ æ æ æ æ æ
+æ æ
+æ æ æ
+æ æ
+æ
+æ
+æ
+æ æ
+æ
+æ
+æ æ
+æ
+æ
+æ
+æ æ
+æ
+æ
+æ
+æ æ
+æ æ
+æ
+æ
+æ
+æ æ
+æ
+æ æ
+æ
+æ
+æ
+æ æ
+æ
+æ
+æ
+æ
+æ
+æ æ æ
+æ
+æ
+æ æ
+æ
+æ
+æ
+æ æ
+æ æ æ
+æ æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ æ
+æ
+æ æ
+æ
+æ æ
+æ æ
+æ æ æ æ æ æ æ æ æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ æ
+æ
+æ æ
+æ æ
+æ æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ æ
+æ
+æ
+æ
+æ æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ æ
+æ
+æ
+æ
+æ æ æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ
+æ æ
+æ
+æ
+æ
+æ æ
+æ
+æ
+æ
+æ
+æ
+æ æ
+æ
+æ æ
+æ
+æ
+æ
+æ
+-0.4
+-0.2
+0.0
+0.2
+0.4
+z
+0.5
+1.0
+1.5
+2.0
+QHzL
+FIG. 13: The pdf Q(z) of the position of the free end as a
+function of z = x(t)/t. In blue for a disorder pdf of µ = 1.5,
+in red µ = 0.5.
+In dotted black, the theoretical parabolic
+prediction. We also show the symmetric Beta distribution ﬁt,
+with ν = 3.8. t = 211 and N = 2 × 105.
+process E(t, x) is characterized as the so-called Airy pro-
+cess [36], which allows one to extract the joint distribu-
+tion of the position and total energy of the optimal path
+P(E(t), x(t)). Although the marginal Q2/3(z) cannot be
+computed explicitly, it has been shown that it has an
+inﬁnite support with a rather weak departure from the
+Gaussian distribution [37, 38].
+The heavy-tailed disorder case exhibits a radically dif-
+ferent behaviour, since Qζ(z) is strongly inﬂuenced by
+the large excursions of the optimal path to reach pin-
+ning sites. For µ < 2, ζ saturates to 1 due to the hard
+constraint and the support of Qµ(z) reduce to the inter-
+val [−1/2, 1/2]: the extremity has a ﬁnite probability to
+reach any point of the available space, even at large t.
+Denoting z = x(t)/t ∈[−1/2, 1/2], the distribution
+Qµ(z) can be explicitly computed for the greedy strategy,
+where the optimization becomes a hierarchical recursive
+process. In Appendix A we give the details of the com-
+putation and our ﬁnal result reads:
+Qgreedy(z) = 6
+1
+4 −z2
+
+(10)
+This results becomes exact for very small µ, but, in Sec.II
+it was argued that the greedy strategy should asymptot-
+ically hold for every µ < 1. This assumption is further
+conﬁrmed by numerics for Qµ(z) (see Fig. 13), retaining
+its parabolic shape until µ = 1. For µ > 1, the support
+still remains the interval [−1/2, 1/2], but Qµ(z) is mod-
+iﬁed. The numerical results are relatively well ﬁtted by
+the Beta distributions family B(ν, ν) = cν(1/4 −x2)ν,
+where ν is a ﬁtting parameter that depends on µ (see
+Fig.13).
+Let us now consider the case 2 < µ < 5.
+We
+could expect that the tails of Qµ(z) are again controlled
+by the position of the deepest available site.
+The de-
+cay exponents may therefore be inferred from the zero-
+dimensional particle model, as in Section III B above.
+This approach predicts [35]:
+Qµ(z) ∼
+1
+z2µ .
+(11)
+In practice, it is delicate to estimate accurately the tail
+exponent of Qµ(z), because of the presence of the cut-oﬀ
+imposed by the hard constraint of our discrete numeri-
+cal model. Our results are nevertheless consistent with
+the above prediction Eq. (11). Such an algebraic tail
+is important conceptually when comparing with e.g. the
+Functional RG approach.
+Indeed moments of the po-
+sition are related to the moments of the renormalized
+disorder in that method [39]. In our case moments of
+suﬃcently high orders diverge, implying that the loop
+expansion of the standard Gaussian disorder case [40]
+needs to be reconsidered as soon as µ < 5, even when the
+two-body correlator of the disorder is perfectly deﬁned
+(i.e. when µ > 2).
+V.
+CONCLUSION
+We presented a detailed investigation of the modiﬁca-
+tion of the KPZ universality class due to heavy-tailed dis-
+order, building upon several previous studies [25, 26, 33].
+These modiﬁcations are deep and to some extent un-
+expected since the KPZ universality class breaks down
+as soon as the ﬁfth moment of the disorder diverges –
+when one would have naively expected that the conver-
+gence of the second moment (the variance) of the disorder
+would suﬃce. As we emphasized in the introduction, this
+paradox becomes even more acute above the upper crit-
+ical dimension – see [27].
+From a KPZ point of view,
+this shows that the interplay between non-linearities and
+rare but large events is highly non trivial and requires
+new analytical methods. Nonetheless, new universality
+classes emerge, since both the exponents and correspond-
+ing probability distributions seem uniquely controlled by
+the behaviour of the tail, the bulk of disorder distribution
+being irrelevant.
+However, our hope to get a better grasp on the KPZ
+class itself by studying its surrounding is clearly thwarted
+by the dearth of analytical tools adapted to heavy-tailed
+noise.
+Exact results are scarce and numerical simula-
+tions have been extensively used to enlighten the situ-
+ation. They indicate a sharp transition when the ﬁfth
+moment of the distribution diverges, between the Gaus-
+sian KPZ/DP regime characterized by the standard ex-
+ponents (θ = 1/3, ζ = 2/3) and some non-trivial values
+(θµ, ζµ) that seem to be exactly predicted by a simple
+Flory-like argument. The full ground state energy distri-
+bution also changes from Tracy-Widom to a new family of
+functions, with a power-law tail for large negative values
+of the energy and the Tracy-Widom e−s3 behaviour for
+anomalously “bad” ground state energies. Several other
+quantites have been investigated – such as the process
+governing the energy as a function of the end point of the
+polymer or the distribution of this end point – which are
+
+
+=== PAGE 9 ===
+9
+also markedly diﬀerent from their Gaussian counterpart
+in the tail-dominated regime. Finally, we have attempted
+to obtain direct evidence that the deepest available sites
+play a special role in the tail-dominated regime, giving
+support to the validity of the Flory argument. Still, there
+are many outstanding open problems. For example, the
+largest eigenvalue of random matrices with heavy-tailed
+distributed entries are known to leave the Tracy-Widom
+universality class when the fourth moment (rather than
+the ﬁfth) diverges [27]. This questions the existence of
+an exact mapping between the DP problem and random
+matrices ensembles for heavy-tailed disorder (see the dis-
+cussion in [27]).
+A very important issue (in our minds) is the exten-
+sion of the Functional RG approach to heavy-tailed situ-
+ations. This might shed considerable light on the method
+itself, and on the deep underlying mechanisms at play in
+pinning problems and in non-linear (KPZ like) stochas-
+tic partial diﬀerential equations. Our detailed numeri-
+cal study of the directed polymer has unveiled that the
+new statistics appears to possess an underlying recur-
+sive structure. This hypothesis is backed by the solvable
+“greedy” limit of an exponentially wide disorder. This
+calls for the development of theoretical tools able to han-
+dle these hierarchical processes.
+Appendix A: Appendix: Derivation of Qµ(x) in µ →0
+The derivation is eased by taking the continuum limit,
+where for convenience we rescale the position of the end
+point to z ∈[−1, 1]. We introduce the sequence of vari-
+ables ξi = xi+yi
+2
+and 2ri = yi−xi, (xi, yi) being the coor-
+dinates of the pinning site chosen at step i. The measure
+being uniform over the space of intervals, it stays uni-
+form if we ﬁx the center of mass, under the constrain
+that the end points cannot leave [−1/2, 1/2]. The joint
+probability distribution is, constrained on [−1, 1] × [0, 1]:
+P0(ξ, r)dξdr = Θ(r ≤1 −|ξ|)dξdr
+(A1)
+Due to self similarity of the process, there are recursive
+relations between the end point after i steps and i + 1
+steps. We are eventually interested in the limit of the
+following process z∞, describing the position of the end
+point at n →∞:
+z∞= ξ1 + r1ξ2 + r1r2ξ3 + · · ·
+(A2)
+All couples (ξi, ri) having the same joint distribution
+P0 and being independent for i ̸= j.
+this bears some
+similarities with Kesten variables [41] but note that ξi
+and ri are not independent themselves. The variable z∞
+obeys the following equation:
+z∞=law ξ + rz∞
+(A3)
+This leads to an integral equation for P(z∞) the PDF
+of the end point, for example if we choose to condition
+over the value of z∞in the above equation:
+P(z) =
+Z
+r,u
+P0(z −ru, r)P(u)du dr
+=
+Z
+r,u
+Θ(r < 1 −|z −ru|)P(u)du dr
+(A4)
+Although there is no generic way to solve such inte-
+gral equations, we can recursively compute the moments
+or use the above equation to write down a diﬀerential
+equation for φ(λ) = E(eiλz∞). Or one can simply check
+that a parabola P(z) = 3
+4(1 −z2) is the proper solution.
+Θ(r < 1 −|z −ru|) is non zero for r < 1+z
+1+x if z < x and
+r < 1−z
+1−x if x < z. Hence, the right side of Eq.A4 is equal
+to:
+3
+4
+Z
+−1<x<z
+1 + z
+1 + x(1 −x2)dx
++
+Z
+z<x<1
+1 −z
+1 −x(1 −x2)dx
+
+= 3
+4(1 −z2)
+And the result follows as given Eq.10 after the rescaling
+z →z/2.
+[1] Timothy Halpin-Healy and Yi-Cheng Zhang.
+Kinetic
+roughening phenomena, stochastic growth, directed poly-
+mers and all that. aspects of multidisciplinary statistical
+mechanics. Physics Reports, 254(46):215 – 414, 1995.
+[2] Paul Meakin. The growth of rough surfaces and inter-
+faces. Physics Reports, 235(45):189 – 289, 1993.
+[3] Thomas Kriecherbauer and Joachim Krug.
+A pedes-
+trian’s view on interacting particle systems, kpz univer-
+sality and random matrices. Journal of Physics A: Math-
+ematical and Theoretical, 43(40):403001, 2010.
+[4] Ivan Corwin.
+The Kardar–Parisi–Zhang equation and
+universality class. Random matrices: Theory and appli-
+cations, 1(01), 2012.
+[5] Mehran Kardar, Giorgio Parisi, and Yi-Cheng Zhang.
+Dynamic scaling of growing interfaces. Physical Review
+Letters, 56(9):889–892, March 1986.
+[6] J´er´emie Bec and Konstantin Khanin. Burgers turbulence.
+Physics Reports, 447(12):1 – 66, 2007.
+[7] Thomas Gueudr´e, Alexander Dobrinevski, and Jean-
+Philippe Bouchaud.
+Explore or exploit?
+A generic
+model and an exactly solvable case.
+Phys. Rev. Lett.,
+112:050602, Feb 2014.
+[8] Joachim Krug and Herbert Spohn. Kinetic roughening
+of growing surfaces. C. Godreche, Cambridge University
+Press, Cambridge, 1(99):1, 1991.
+[9] Kurt
+Johansson.
+Shape
+ﬂuctuations
+and
+random
+
+
+=== PAGE 10 ===
+10
+matrices.
+Communications in Mathematical Physics,
+209(2):437–476, 2000.
+[10] Tomohiro
+Sasamoto
+and
+Herbert
+Spohn.
+One-
+dimensional Kardar-Parisi-Zhang equation: An exact so-
+lution and its universality. Phys. Rev. Lett., 104:230602,
+Jun 2010.
+[11] Herbert Spohn.
+Exact solutions for KPZ-type growth
+processes, random matrices, and equilibrium shapes of
+crystals. Physica A: Statistical Mechanics and its Appli-
+cations, 369(1):71 – 99, 2006. Fundamental Problems in
+Statistical Physics Proceedings of the 11th International
+Summerschool on ’Fundamental problems in statistical
+physics’, September 4–17, 2005, Leuven, Belgium 11th
+International Summerschool on ’Fundamental problems
+in statistical physics’.
+[12] Mehran Kardar and Yi-Cheng Zhang.
+Scaling of di-
+rected polymers in random media.
+Phys. Rev. Lett.,
+58(20):2087–2090, May 1987.
+[13] David A. Huse, Christopher L. Henley, and Daniel S.
+Fisher. Huse, henley, and ﬁsher respond. Physical Review
+Letters, 55(26):2924–2924, December 1985.
+[14] Francesca Colaiori and M. A. Moore. Upper critical di-
+mension, dynamic exponent, and scaling functions in the
+mode-coupling theory for the Kardar-Parisi-Zhang equa-
+tion. Phys. Rev. Lett., 86:3946–3949, Apr 2001.
+[15] Timothy Halpin-Healy. (2+1)-dimensional directed poly-
+mer in a random medium: Scaling phenomena and uni-
+versal distributions. Phys. Rev. Lett., 109:170602, Oct
+2012.
+[16] Timothy Halpin-Healy. Extremal paths, the stochastic
+heat equation, and the three-dimensional kardar-parisi-
+zhang universality class. Phys. Rev. E, 88:042118, Oct
+2013.
+[17] Jeﬀrey Kelling and G´eza ´Odor.
+Extremely large-scale
+simulation of a Kardar-Parisi-Zhang model using graph-
+ics cards. Phys. Rev. E, 84:061150, Dec 2011.
+[18] Vladimir G. Miranda and F´abio D. A. Aar˜ao Reis. Nu-
+merical study of the kardar-parisi-zhang equation. Phys.
+Rev. E, 77:031134, Mar 2008.
+[19] Moshe Schwartz and Ehud Perlsman. Upper critical di-
+mension of the Kardar-Parisi-Zhang equation. Phys. Rev.
+E, 85:050103, May 2012.
+[20] Gideon Amir, Ivan Corwin, and Jeremy Quastel. Prob-
+ability distribution of the free energy of the continuum
+directed random polymer in 1 + 1 dimensions. Commu-
+nications on Pure and Applied Mathematics, 64(4):466–
+537, 2011.
+[21] V. Dotsenko.
+Bethe ansatz derivation of the Tracy-
+Widom distribution for one-dimensional directed poly-
+mers. EPL (Europhysics Letters), 90(2):20003, 2010.
+[22] Victor Dotsenko and Boris Klumov.
+Bethe ansatz so-
+lution for one-dimensional directed polymers in random
+media. Journal of Statistical Mechanics: Theory and Ex-
+periment, 2010(03):P03022, 2010.
+[23] Pasquale Calabrese, Pierre Le Doussal, and Alberto
+Rosso.
+Free-energy distribution of the directed poly-
+mer at high temperature. Euro. Phys. Lett., 90(2):20002,
+April 2010.
+[24] Pierre Le Doussal and Pasquale Calabrese.
+The KPZ
+equation with ﬂat initial condition and the directed poly-
+mer with one free end. Journal of Statistical Mechanics:
+Theory and Experiment, 2012(06):P06001, 2012.
+[25] Yi-Cheng Zhang. Growth anomaly and its implications.
+Physica A: Statistical Mechanics and its Applications,
+170(1):1–13, December 1990.
+[26] Joachim Krug. Kinetic roughening by exceptional ﬂuctu-
+ations. Journal de Physique I, 1(1):9–12, January 1991.
+[27] Giulio Biroli, Jean-Philippe Bouchaud, and Marc Pot-
+ters. Extreme value problems in random matrix theory
+and other disordered systems. Journal of Statistical Me-
+chanics: Theory and Experiment, 2007(07):P07019, 2007.
+[28] Bernard Derrida and Herbert Spohn. Polymers on disor-
+dered trees, spin glasses, and traveling waves. Journal of
+Statistical Physics, 51(5-6):817–840, 1988.
+[29] Kurt Johansson. Shape ﬂuctuations and random matri-
+ces. Comm Math Phys, 209(2):437–476, February 2000.
+[30] Michael Praehofer and Herbert Spohn. Universal distri-
+butions for growth processes in 1+1 dimensions and ran-
+dom matrices. Phys. Rev. Lett., 84(21):4882–4885, May
+2000.
+[31] Thimoth´ee Thiery and Pierre Le Doussal. Log-gamma di-
+rected polymer with ﬁxed endpoints via the replica bethe
+ansatz. arXiv preprint arXiv:1406.5963, 2014.
+[32] Ulrich Schulz, Jean Villain, Edouard Br´ezin, and Henri
+Orland. Thermal ﬂuctuations in some random ﬁeld mod-
+els. Journal of Statistical Physics, 51(1-2):1–27, 1988.
+[33] Ben Hambly and James B. Martin. Heavy tails in last-
+passage percolation. Probab. Theory Relat. Fields, 137(1-
+2):227–275, January 2007.
+[34] Chi-Hang Lam and Leonard M. Sander. Surface growth
+with power-law noise.
+Phys. Rev. Lett., 69:3338–3341,
+Dec 1992.
+[35] Thomas Gueudr´e and Pierre Le Doussal.
+Statistics of
+shocks in a toy model with heavy tails. Phys. Rev. E,
+89:042111, Apr 2014.
+[36] Kurt Johansson.
+Discrete polynuclear growth and de-
+terminantal processes.
+Commun. Math. Phys., 242(1-
+2):277–329, November 2003.
+[37] Gregory Schehr. Extremes of n vicious walkers for large n:
+Application to the directed polymer and kpz interfaces.
+Journal of Statistical Physics, 149(3):385–410, 2012.
+[38] Gregorio Moreno Flores, Jeremy Quastel, and Daniel Re-
+menik. Endpoint distribution of directed polymers in 1
++ 1 dimensions. Commun. Math. Phys., 317(2):363–380,
+January 2013.
+[39] Pierre Le Doussal.
+Exact results and open questions
+in ﬁrst principle functional RG.
+Annals of Physics,
+325(1):49 – 150, 2010. January 2010 Special Issue.
+[40] Pierre Le Doussal, Kay J¨org Wiese, and Pascal Chauve.
+Functional renormalization group and the ﬁeld theory of
+disordered elastic systems. Phys. Rev. E, 69:026112, Feb
+2004.
+[41] Harry Kesten. Random diﬀerence equations and renewal
+theory for products of random matrices. Acta Mathemat-
+ica, 131(1):207–248, 1973.

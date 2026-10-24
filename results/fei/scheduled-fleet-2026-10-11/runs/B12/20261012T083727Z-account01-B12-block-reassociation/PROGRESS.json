@@ -1,0 +1,104 @@
+{
+  "schema": "fei-run-progress/2",
+  "run_id": "20261012T083727Z-account01-B12-block-reassociation",
+  "stream": "B12",
+  "packet_ids": ["A057"],
+  "primary_packet_id": "A057",
+  "attempt_id": "B12-A057-ATTEMPT-08",
+  "attempt_counter": 8,
+  "bounded_objective": "Expand the exact shared-coordinate four-channel identity through two consecutive physical queries, decide whether internal source/crossed channels cancel, and derive the correct blockwise law.",
+  "source_registry": {
+    "owner_control_revision": "2026-10-12.1",
+    "owner_order_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "owner_order_blob": "81b6d6f988aee4489512c6e62543253900620453",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "current_status_blob": "c416d4b4a83fc67965cb95d06a0cc80c5c29a520",
+    "stream_contract_blob": "40935ac651643a17815d0addf664ec4c1c0313cc",
+    "obstruction_registry_blob": "e111933338dff1d7798c5e59b43700bbf30f7b96",
+    "canonical_source_head_read": "4727db5e5d42dcff9995aeadc1edb1f3b2fe67cc",
+    "brain_source_head_read": "d1c5106393f0cd027309844b8bf29561128eabcc"
+  },
+  "input_handoffs_used": [
+    {
+      "description": "exact shared-coordinate four-channel law and signed-remainder Bellman falsifier",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5a81561e90069c06ef245e4a2d3ec968713b7c5",
+      "path": "reports/fei-2026-10-11/runs/B12/20261012T074154Z-account01-B12-shared-four-channel/"
+    },
+    {
+      "description": "Brain mirror of the exact predecessor package",
+      "repository": "yspennstate/math-research-brain",
+      "commit": "bc3857b1f66c464c4d204fbe9d7d75fce833a3e0",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B12/20261012T074154Z-account01-B12-shared-four-channel/"
+    }
+  ],
+  "claim_versions": [
+    "B12-A057-BLOCK-CHANNEL-IDENTITY-v1",
+    "B12-A057-REASSOCIATION-TRANSFER-v1"
+  ],
+  "gap_id": "B12-A057-COHERENT-HIERARCHY",
+  "gap_version": "v8",
+  "prior_mathematical_status": "The exact one-query shared-coordinate identity was proved, but its source/crossed/remainder channels had not been propagated through two queries or an arbitrary block.",
+  "new_mathematical_status": "PARTIAL_PROVED_AND_TERM_BY_TERM_CANCELLATION_REFUTED: an exact arbitrary-block channel identity and exact sequential/block reassociation theorem are proved; internal channel cancellation is replaced by an order-dependent signed transfer.",
+  "mathematical_delta": "The multi-query algebra is now exact. A block B has one source and 2^|B|-1 selector-frequency channels. Sequential and simultaneous groupings differ by T_pi, which moves with opposite sign between source/crossed and child/remainder ledgers. A genuine activation-irreducible two-bit witness has T_(0,1)=-2ln2+(9/8)ln3 and T_(1,0)=0.",
+  "previous_value": "one-query exact four-channel identity; no block closure",
+  "new_value": "arbitrary-block exact identity plus L_pi=L_B+T_pi and M_pi=M_B-T_pi; termwise S/X cancellation false",
+  "unchanged_obstruction_count": 0,
+  "case_extension": {
+    "starting_class": "one shared physical query with arbitrary coherent convolution",
+    "new_class": "every finite shared-coordinate block and every sequential query order",
+    "exact_quantifiers": "every finite dimension, Boolean g_+,g_-,h, finite physical block B, and coordinate ordering pi",
+    "prior_constant": "exact at one query only",
+    "new_constant": "exact identities with no parameter loss; no aggregate FEI constant obtained",
+    "parameter_dependence": "identities independent of dimension, bias and overlap; raw channel count is 2^|B|-1",
+    "proof_status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+    "universal_gap": "compress or pay the aggregate channel/remainder ledger without exponential block-size loss"
+  },
+  "acceptance": {
+    "A057-D1": "ADVANCED_TO_EXACT_ARBITRARY_BLOCK_IDENTITY",
+    "A057-D2": "MET_FOR_QUERY_ORDER_ACTIVATION_SIGN_AND_CONVOLUTION_CONTROLS",
+    "criterion_complete_source_remainder": "EXACTLY_DECOMPOSED_ON_EVERY_BLOCK_BUT_NOT_PAID",
+    "criterion_logarithmic_counterexample": "MET_AND_RETAINED",
+    "criterion_nonreusing_physical_hierarchy": "EXACT_BLOCK_TOWER_PROVED; DIMENSION_FREE_AGGREGATE_PAYMENT_OPEN",
+    "packet_complete": false
+  },
+  "finite_check": {
+    "status": "PASS",
+    "scope": [
+      "all 4096 Boolean triples on two bits and both query orders",
+      "2688 nonzero reassociation transfers",
+      "1792 order-dependent transfers",
+      "960 activation-irreducible order-dependent transfers",
+      "exact displayed witness values and integer sign certificate"
+    ],
+    "arithmetic": "exact Fraction Walsh arithmetic and exact rational log-prime vectors; Decimal only for displayed values",
+    "seed": null,
+    "command": "python3 check_block_reassociation.py",
+    "output": "check_block_reassociation.out",
+    "limitation": "finite enumeration validates implementation and scope counts; the identities and witness calculation are proved analytically"
+  },
+  "failed_or_insufficient_approaches": [
+    "Internal source/crossed channels do not cancel termwise under coherent sequential conditioning.",
+    "Their allocation is order-dependent even though the complete entropy decrement is order-independent.",
+    "Separately enveloping 2^|B|-1 selector-frequency channels has no demonstrated dimension-free bound.",
+    "The reassociation witness is an obstruction to a bookkeeping mechanism, not an FEI counterexample."
+  ],
+  "review": {
+    "previous_claim_review": "No independent review of the immediately preceding four-channel claims was observed.",
+    "new_claim_contributor_check": "complete",
+    "new_claim_independent_review": "PENDING",
+    "requested_packets": ["A091", "A090"]
+  },
+  "routing": {
+    "next_consumers": ["A058", "A059", "A085", "A091", "A090", "A094", "A097", "B20"],
+    "note": "Use the exact block identity and reassociation transfer. Do not assert termwise S/X cancellation or envelope all selector-frequency channels separately."
+  },
+  "deliverable_status": {
+    "local_package": "COMPLETE",
+    "canonical": "COMPLETE_10_FILE_BYTE_EQUAL_READBACK_VERIFIED_AT_18d5b0dc013098acd424e967cecb65b770c61071",
+    "brain_mirror": "COMPLETE_10_FILE_BYTE_EQUAL_READBACK_VERIFIED_AT_0a8fe7769985dffa8ef3c87fa279e34d73efa959",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "next_action": "Express the two-block reassociation transfer as a normalized spectral-mixture KL associator; test a three-query cocycle identity and whether it telescopes to one terminal reserve without channel-by-channel loss.",
+  "full_fei_status": "OPEN"
+}

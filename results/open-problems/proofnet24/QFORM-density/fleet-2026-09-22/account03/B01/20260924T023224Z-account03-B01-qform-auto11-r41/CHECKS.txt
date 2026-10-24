@@ -1,0 +1,18 @@
+account03/B01 r41 deterministic check output
+run_id=20260924T023224Z-account03-B01-qform-auto11-r41
+
+joint compiler endpoint constant: 1.8898815748423097
+after partner q2 and K projection constant: 3.0
+q0=2 r=2 C=3 scale_exponent=0
+q0=3 r=1.5 C=3.82717036769 scale_exponent=0
+q0=4 r=1.33333333333 C=4.83295511233 scale_exponent=-1.11022302463e-16
+stress eigenvalues: -1.801937735805 -1.246979603717 -0.445041867913 0.445041867913 1.246979603717 1.801937735805
+num |lambda|>=1: 4
+
+Interpretation:
+- 3*2^(-2/3)=1.8898815748423097 for the r=2 joint-density compiler.
+- Multiplying the partner hyperbolic L2 factor sqrt(2) and the product-projection factor sqrt(2), each to exponent 2/3, cancels to exact full constant 3.
+- The k-scaling exponent vanishes for r=q0/(q0-1), q0=2,3,4.
+- The six-coordinate directly hub-entangled stress matrix has four eigenvalues with modulus >=1, so it is target-valid.
+
+STATUS=PASS

@@ -1,0 +1,399 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{problem}{Problem}
+\renewcommand{\theproblem}{\arabic{problem}}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\HS}{\mathcal L_2}
+\hypersetup{pdftitle={Maximal energy bounds fail for the stochastic Allen-Cahn equation with critical quadratic noise},pdfauthor={Yitzchak Shmalo}}
+\title[Maximal energy bounds and critical quadratic noise]{Maximal energy bounds fail for the stochastic Allen--Cahn equation with critical quadratic noise}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{11 October 2026}
+\subjclass[2020]{60H15, 60H10, 60J60, 60G44}
+\keywords{Stochastic Allen--Cahn equation, quadratic multiplicative noise, critical variational setting, maximal estimates, strict local martingales, Bessel processes}
+
+\begin{document}
+\begin{abstract}
+We consider the stochastic Allen--Cahn equation $du=(\Delta u+u-u^3)\,dt+\sqrt2\,u^2\,dW$ on the one-dimensional torus, driven by a single real Brownian motion. For every positive constant initial value and every $T>0$ the solution satisfies $\E\sup_{t\le T}\|u(t)\|_{L^2}^2=\infty$, although $\E\|u(t)\|_{L^2}^2$ is finite at each fixed time. The equation satisfies the hypotheses of the global well-posedness theorem in the critical variational setting of Agresti and Veraar, and $\sqrt2$ is the largest noise constant for which it does. The example therefore answers Problems~4 and~5 of their 2025 survey in the negative: the maximal second moment is not controlled by the initial data, and the solutions started at $1/n$ converge to zero in $L^p(\Omega;L^2(0,T;H^1)\cap C([0,T];L^2))$ for every $p<2$, while their norms in $L^2(\Omega;C([0,T];L^2))$ are infinite. The solution started from a constant is $e^t/\sqrt2$ times the reciprocal of a time-changed four-dimensional Bessel process. Its squared running maximum has two-sided tail bounds of order $1/y$ with explicit constants, its maximal moments are finite exactly below order two, and its fixed-time moments are finite exactly below order four.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Agresti and Veraar \cite{AV24} developed a critical variational setting for stochastic evolution equations
+\begin{equation}\label{eq:abstract}
+ du+Au\,dt=F(u)\,dt+\bigl(Bu+G(u)\bigr)\,dW,\qquad u(0)=u_0,
+\end{equation}
+on a Gelfand triple $V\hookrightarrow H\hookrightarrow V^*$. The nonlinearities $F$ and $G$ are only required to be locally Lipschitz in the interpolation norms of $(V^*,V)_{\beta,1}$, with growth exponents $\rho$ allowed up to the critical scaling $(2\beta-1)(\rho+1)=1$. Under the coercivity condition
+\begin{equation}\label{eq:coerc}
+ \langle v,Av-F(v)\rangle-\tfrac12\|Bv+G(v)\|_{\HS(U,H)}^2\ge\theta'\|v\|_V^2-M'\|v\|_H^2-M',\qquad v\in V,
+\end{equation}
+Theorem~6.4 of their survey \cite{AV25}, which also assumes that the linear part is coercive, $\langle v,Av\rangle-\frac12\|Bv\|_{\HS(U,H)}^2\ge\theta\|v\|_V^2-M\|v\|_H^2$ \cite[Assumption~6.1(1)]{AV25}, gives a unique global solution $u\in L^2_{\mathrm{loc}}([0,\infty);V)\cap C([0,\infty);H)$ for every $\mathcal F_0$-measurable $u_0$ with values in $H$, together with the bounds
+\[
+ \sup_{t\le T}\E\|u(t)\|_H^2+\E\int_0^T\|u(t)\|_V^2\,dt\le C_T\bigl(1+\E\|u_0\|_H^2\bigr)
+\]
+and
+\[
+ \E\sup_{t\le T}\|u(t)\|_H^p+\E\Bigl|\int_0^T\|u(t)\|_V^2\,dt\Bigr|^{p/2}\le C_{p,T}\bigl(1+\E\|u_0\|_H^p\bigr),\qquad 0<p<2.
+\]
+The solutions also depend continuously on the initial data: if $u_0^n\to u_0$ in $L^2(\Omega;H)$, then $u^n\to u$ in $L^p(\Omega;L^2(0,T;V)\cap C([0,T];H))$ for $0<p<2$ \cite[Theorem~3.8]{AV24}. Problems~4 and~5 in the list of open problems at the end of \cite{AV25} ask whether the second bound and this continuity extend to $p=2$.
+
+\setcounter{problem}{3}
+\begin{problem}[{\cite{AV25}}]
+In the variational setting of Theorem~6.4 of \cite{AV25}, is there a constant $C_T$ such that $\E\sup_{t\le T}\|u(t)\|_H^2\le C_T(1+\E\|u_0\|_H^2)$ for all $u_0\in L^2_{\mathcal F_0}(\Omega;H)$?
+\end{problem}
+
+\begin{problem}[{\cite{AV25}}]
+Under the assumptions of Theorem~6.4 of \cite{AV25}, let $u_0^n\to u_0$ in $L^2(\Omega;H)$. Do the corresponding solutions satisfy $u^n\to u$ in $L^2(\Omega;L^2(0,T;V)\cap C([0,T];H))$?
+\end{problem}
+
+As a model case for Problem~4 the survey names the Allen--Cahn equation on the one-dimensional torus with quadratic noise, $du=(\Delta u+u-u^3)\,dt+\gamma u^2\,dW$. For $\gamma^2<2$ the maximal $L^2$ bound follows from a strengthened coercivity condition \cite[Section~6.3.1]{AV25}, and the authors write that for $\gamma^2=2$ they do not know whether it holds. At $\gamma^2=2$ the equation is still covered by Theorem~6.4, and the coercivity condition fails for every $\gamma^2>2$ (Remark~\ref{rem:threshold}); for the Allen--Cahn equation with Dirichlet boundary conditions, \cite[Remark~7.2]{AV25} allows noise coefficients bounded by $L(1+|y|)+\sqrt2\,|y|^2$ and notes that the factor $\sqrt2$ is optimal for the coercivity condition. We show that the bound fails at $\gamma^2=2$.
+
+Throughout, $\T=\R/\mathbb Z$ has volume one, $W$ is a real standard Brownian motion, and stochastic differentials are It\^o differentials. Consider
+\begin{equation}\label{eq:spde}
+ du=(\Delta u+u-u^3)\,dt+\sqrt2\,u^2\,dW_t,\qquad u(0,x)=a>0.
+\end{equation}
+The same Brownian motion acts at every point of $\T$, so a constant initial value produces a spatially constant solution, and everything reduces to the scalar equation
+\begin{equation}\label{eq:sde}
+ dU_t=(U_t-U_t^3)\,dt+\sqrt2\,U_t^2\,dW_t,\qquad U_0=a.
+\end{equation}
+Put
+\begin{equation}\label{eq:constants}
+ S_T=\frac{e^{2T}-1}{2},\qquad c_{a,T}=a^2\exp\Bigl(-\frac{1}{4a^2S_T}\Bigr),\qquad K_{a,T}=a^2e^{2T}.
+\end{equation}
+
+\begin{theorem}\label{thm:main}
+For every $a>0$, \eqref{eq:sde} has a unique global strong solution $U^a$, and $U^a$ is positive. For $T>0$ let $Z_T^a=\sup_{0\le t\le T}(U_t^a)^2$. Then $Z_T^a<\infty$ almost surely and
+\begin{equation}\label{eq:tail}
+ \frac{c_{a,T}}{y}\le\Pp(Z_T^a\ge y)\le\frac{K_{a,T}}{y},\qquad y>K_{a,T}.
+\end{equation}
+Consequently
+\begin{equation}\label{eq:subcritical}
+ \E\sup_{t\le T}|U_t^a|^p\le\frac{a^pe^{pT}}{1-p/2},\qquad 0<p<2,
+\end{equation}
+while $\E\sup_{t\le T}|U_t^a|^p=\infty$ for every $p\ge2$. At each fixed $t>0$,
+\begin{equation}\label{eq:second}
+ \E(U_t^a)^2=e^{2t}a^2\Bigl(1-\exp\Bigl[-\frac{1}{4a^2S_t}\Bigr]\Bigr),
+\end{equation}
+and, for $p>0$, $\E|U_t^a|^p<\infty$ if and only if $p<4$.
+\end{theorem}
+
+\begin{corollary}\label{cor:spde}
+The solution of \eqref{eq:spde} is $u(t,x)=U_t^a$, and $\E\sup_{t\le T}\|u(t)\|_{L^2(\T)}^2=\infty$ for every $T>0$. Equation \eqref{eq:spde} satisfies the assumptions of \cite[Theorem~6.4]{AV25} with $V=H^1(\T)$ and $H=L^2(\T)$, so the answer to Problem~4 is negative. Let $u^{(n)}$ be the solutions with initial values $1/n$, driven by the same Brownian motion. Then $u^{(n)}\to0$ in $L^p(\Omega;L^2(0,T;H^1(\T))\cap C([0,T];L^2(\T)))$ for every $0<p<2$, but $\E\|u^{(n)}\|_{C([0,T];L^2(\T))}^2=\infty$ for every $n$. Since the solution with initial value $0$ is $0$, the answer to Problem~5 is negative as well.
+\end{corollary}
+
+In both problems the obstruction is the same: the solutions belong to $L^p(\Omega;C([0,T];L^2))$ for every $p<2$ but not for $p=2$, so the endpoint estimate and the endpoint continuity both fail because the relevant norms are infinite. The solutions are global, and their second moments at fixed times are finite and given by \eqref{eq:second}. After Problem~5, \cite{AV25} states that the continuity question seems open even if Assumption~6.1 holds, $B=0$, $G\colon V\to\HS(U,H)$ and $\langle v,F(v)\rangle\lesssim1+\|v\|_H^2$, and that in this case the solutions have $L^2$-moments whenever $u_0\in L^2(\Omega;H)$. Equation~\eqref{eq:spde} satisfies these conditions as stated (in the realization of Section~\ref{sec:framework}, $F(v)=2v-v^3$ and $\langle v,F(v)\rangle\le2\|v\|_{L^2}^2$), and its maximal second moment is infinite. The moment bounds of \cite[Section~6.3]{AV25} use more than this. Section~6.3.1 assumes \eqref{eq:coerc} with $\frac12$ replaced by $\frac12+\eta$ for some $\eta>0$, and obtains this from \eqref{eq:coerc} when $\|G(v)\|_{\HS(U,H)}\le C(1+\|v\|_V)$; Section~6.3.2 assumes that $\|G(v)\|_{\HS(U,H)}/\|v\|_V\to0$ as $\|v\|_V\to\infty$. Neither growth condition holds for $G(v)=\sqrt2\,v^2$, since $\|G(\lambda)\|_{L^2}=\sqrt2\,\lambda^2$ and $\|\lambda\|_{H^1}=|\lambda|$ for constants $\lambda$, and the strengthened coercivity condition fails at $\gamma^2=2$ (Remark~\ref{rem:threshold}). Under the hypotheses of either subsection the solutions have maximal second moments, and the continuity question in that class is not addressed here.
+
+The threshold is sharp. For the noise $\gamma u^2$ the quartic terms in \eqref{eq:coerc} contribute $(1-\gamma^2/2)\int_\T v^4$, so the condition of \cite[Theorem~6.4]{AV25} holds exactly when $\gamma^2\le2$, and the strengthened condition of \cite[Section~6.3.1]{AV25} holds exactly when $\gamma^2<2$ (Remark~\ref{rem:threshold}). Thus for $\gamma^2<2$ every solution with $u_0\in L^2(\Omega;L^2(\T))$ satisfies $\E\sup_{t\le T}\|u(t)\|_{L^2}^2\le C_T(1+\E\|u_0\|_{L^2}^2)$, with an explicit constant for constant initial values (Remark~\ref{rem:gamma}), while for $\gamma^2=2$ the maximal second moment is infinite for every nonzero constant initial value (for negative constants replace $u$ by $-u$ and $W$ by $-W$).
+
+The mechanism is classical. If $R$ is a Bessel process of dimension $\delta>2$ started away from zero, then $R^{2-\delta}$ is a local martingale that is not a martingale; for $\delta=3$ this is the example of Johnson and Helms \cite{JH63}. Elworthy, Li and Yor \cite{ELY97} showed that if $M$ is a nonnegative continuous local martingale with $\E M_0<\infty$, then $x\Pp(\sup_{t\ge0}M_t\ge x)\to\E M_0-\E M_\infty$ as $x\to\infty$, so a strict loss of expectation forces a tail of order $1/x$ for the supremum; see also \cite{ELY99}. For \eqref{eq:sde}, $e^{-2t}(U_t^a)^2=\frac12R_{S_t}^{-2}$ for a four-dimensional Bessel process $R$, and the loss of expectation is visible in \eqref{eq:second}. Applied to $M_s=R^{-2}_{s\wedge S_T}$, the theorem of Elworthy, Li and Yor together with Lemma~\ref{lem:gaussian} and \eqref{eq:sandwich} already gives $\E\sup_{t\le T}(U_t^a)^2=\infty$. Section~\ref{sec:bessel} proves two-sided finite-horizon bounds with explicit constants, and these give \eqref{eq:tail} for every $y>K_{a,T}$.
+
+Section~\ref{sec:bessel} collects the facts about the four-dimensional Bessel process, Section~\ref{sec:construction} constructs $U^a$ and proves Theorem~\ref{thm:main}, and Section~\ref{sec:framework} checks the hypotheses of \cite[Theorem~6.4]{AV25} and proves Corollary~\ref{cor:spde}. Section~\ref{sec:defect} gives a second proof that $\E Z_T^a=\infty$, and Section~\ref{sec:lean} describes a Lean verification of some of the steps.
+
+\section{The four-dimensional Bessel process}\label{sec:bessel}
+
+Let $\mathbf B$ be a Brownian motion in $\R^4$ started at $x\ne0$, put $r=|x|$ and $R_s=|\mathbf B_s|$. Away from the origin, It\^o's formula gives
+\begin{equation}\label{eq:bessel}
+ dR_s=dw_s+\frac{3}{2R_s}\,ds,
+\end{equation}
+where $w_s=\int_0^s|\mathbf B_u|^{-1}\mathbf B_u\cdot d\mathbf B_u$ is a real Brownian motion by L\'evy's characterization: the gradient of $|x|$ has norm one and its Laplacian is $3/|x|$. Nonattainment of the origin is proved in Lemma~\ref{lem:stopping}, so \eqref{eq:bessel} holds for all $s\ge0$. These facts are classical \cite[Chapter~XI]{RY99}; the finite-time constants below are what the proof of Theorem~\ref{thm:main} needs.
+
+For $0<b<r$ let $\tau_b=\inf\{s\ge0:R_s=b\}$. Since
+\[
+ \nabla|x|^{-2}=-2x|x|^{-4},\qquad \Delta|x|^{-2}=-8|x|^{-4}+8|x|^2|x|^{-6}=0\quad\text{on }\R^4\setminus\{0\},
+\]
+the process $R_{s\wedge\tau_b}^{-2}$ is a local martingale bounded by $b^{-2}$, hence a martingale. (It\^o's formula applies to $|x|^{-2}$ up to $\tau_b$ because the stopped path stays in $\{|x|\ge b\}$, where this function is smooth with bounded gradient.)
+
+\begin{lemma}\label{lem:stopping}
+For $S>0$ and $0<b<r$,
+\begin{equation}\label{eq:stopping}
+ \frac{\Pp(\tau_b\le S)}{b^2}=\frac1{r^2}-\E\bigl[R_S^{-2};\tau_b>S\bigr].
+\end{equation}
+In particular $\Pp(\tau_b\le S)\le b^2/r^2$. Almost surely $R$ never reaches zero, and it has a strictly positive minimum on every compact interval.
+\end{lemma}
+
+\begin{proof}
+The stopped martingale has expectation $r^{-2}$. At time $S$ it equals $b^{-2}$ on $\{\tau_b\le S\}$ and $R_S^{-2}$ on the complement, which gives \eqref{eq:stopping}; the last term is nonnegative, which gives the upper bound. A continuous path that reaches zero by time $S$ reaches every $b\in(0,r)$ by time $S$, so letting $b\downarrow0$ in the upper bound shows that this event is null. A countable union over integer $S$ gives nonattainment for all times, and a positive continuous function attains a positive minimum on a compact interval.
+\end{proof}
+
+\begin{lemma}\label{lem:gaussian}
+For $S>0$,
+\begin{equation}\label{eq:gaussian}
+ \E R_S^{-2}=\frac{1-e^{-r^2/(2S)}}{r^2}.
+\end{equation}
+In particular $\E R_S^{-2}<r^{-2}$.
+\end{lemma}
+
+\begin{proof}
+For $z\ne0$, $|z|^{-2}=\int_0^\infty e^{-\lambda|z|^2}\,d\lambda$, and Tonelli's theorem applies because the integrand is nonnegative. In each coordinate, completing the square in the Gaussian integral gives the factor $(1+2S\lambda)^{-1/2}\exp(-\lambda x_i^2/(1+2S\lambda))$, so
+\[
+ \E e^{-\lambda|\mathbf B_S|^2}=(1+2S\lambda)^{-2}\exp\Bigl(-\frac{\lambda r^2}{1+2S\lambda}\Bigr).
+\]
+With the substitution $v=(1+2S\lambda)^{-1}$, for which $d\lambda=-dv/(2Sv^2)$ and $\lambda/(1+2S\lambda)=(1-v)/(2S)$,
+\[
+ \E R_S^{-2}=\int_0^\infty(1+2S\lambda)^{-2}e^{-\lambda r^2/(1+2S\lambda)}\,d\lambda
+ =\frac1{2S}\int_0^1e^{-r^2(1-v)/(2S)}\,dv=\frac{1-e^{-r^2/(2S)}}{r^2}.\qedhere
+\]
+\end{proof}
+
+\begin{proposition}\label{prop:hitting}
+For $S>0$ and $0<b<r$,
+\begin{equation}\label{eq:hitting}
+ \frac{b^2}{r^2}\,e^{-r^2/(2S)}\le\Pp(\tau_b\le S)\le\frac{b^2}{r^2},
+\end{equation}
+and
+\begin{equation}\label{eq:hittinglimit}
+ \lim_{b\downarrow0}\frac{\Pp(\tau_b\le S)}{b^2}=\frac{e^{-r^2/(2S)}}{r^2}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+In \eqref{eq:stopping}, bound $\E[R_S^{-2};\tau_b>S]$ below by $0$ and above by \eqref{eq:gaussian}. By Lemma~\ref{lem:stopping}, almost surely $\tau_b>S$ for all small $b$, and $R_S^{-2}\mathbf 1_{\{\tau_b>S\}}$ is dominated by the integrable variable $R_S^{-2}$; dominated convergence in \eqref{eq:stopping} gives \eqref{eq:hittinglimit}.
+\end{proof}
+
+\begin{remark}\label{rem:ely}
+With $x=b^{-2}$, the event $\{\tau_b\le S\}$ is $\{\sup_{s\le S}R_s^{-2}\ge x\}$, so \eqref{eq:hittinglimit} is the case $M_s=R_{s\wedge S}^{-2}$ of the theorem of Elworthy, Li and Yor quoted in the introduction \cite[Theorem~1]{ELY97}, whose limit is $\E M_0-\E M_\infty=r^{-2}-\E R_S^{-2}$. The upper bound in \eqref{eq:hitting} is the probability $\Pp(\tau_b<\infty)=b^2/r^2$ that $R$ ever reaches $b$; the lower bound shows that a fixed fraction $e^{-r^2/(2S)}$ of it is realized before time $S$, uniformly in $b$.
+\end{remark}
+
+\section{Construction of the solution and its moments}\label{sec:construction}
+
+Let $r=(\sqrt2a)^{-1}$, let $R$ be as in Section~\ref{sec:bessel} with $R_0=r$, and define
+\begin{equation}\label{eq:representation}
+ U_t=\frac{e^t}{\sqrt2\,R_{S_t}},\qquad S_t=\frac{e^{2t}-1}{2}.
+\end{equation}
+Equivalently, $1/U_t=\sqrt2\,|Y_t|$, where $Y_t=e^{-t}\mathbf B_{S_t}$ satisfies $dY_t=-Y_t\,dt+d\widetilde{\mathbf B}_t$ for a Brownian motion $\widetilde{\mathbf B}$ in $\R^4$, because the martingale part of $e^{-t}\mathbf B_{S_t}$ has quadratic variation $e^{-2t}\,dS_t=dt$ in each coordinate. Thus $1/U$ is a multiple of the four-dimensional radial Ornstein--Uhlenbeck process, a process of the class studied in \cite{ELY99}, and its drift is $3/V-V$ at $V=1/U$.
+
+By Lemma~\ref{lem:stopping}, $U$ is positive and finite on every compact interval. Let $X_s=(\sqrt2R_s)^{-1}$. By It\^o's formula and \eqref{eq:bessel},
+\[
+ dX_s=-\frac{dR_s}{\sqrt2R_s^2}+\frac{ds}{\sqrt2R_s^3}=-\sqrt2X_s^2\,dw_s-X_s^3\,ds,
+\]
+since the two drift terms are $-3/(2\sqrt2R_s^3)$ and $1/(\sqrt2R_s^3)$, whose sum is $-X_s^3$. The process $\widetilde W_t=\int_0^{S_t}(1+2s)^{-1/2}\,dw_s$ is a Brownian motion with respect to the time-changed filtration $(\mathcal G_{S_t})_{t\ge0}$, where $(\mathcal G_s)$ is the filtration of $\mathbf B$, because its quadratic variation is $\frac12\log(1+2S_t)=t$; moreover $dw_{S_t}=e^t\,d\widetilde W_t$ and $dS_t=e^{2t}\,dt$. The product rule applied to $U_t=e^tX_{S_t}$ gives
+\[
+ dU_t=(U_t-U_t^3)\,dt-\sqrt2\,U_t^2\,d\widetilde W_t,
+\]
+which is \eqref{eq:sde} with $W=-\widetilde W$.
+
+This constructs a global weak solution. The coefficients of \eqref{eq:sde} are locally Lipschitz, so pathwise uniqueness holds up to explosion, and the Yamada--Watanabe theorem gives a unique strong solution for every Brownian motion, with the law just constructed \cite[Chapter~IX]{RY99}. In particular the strong solution does not explode: for each $n$, uniqueness in law for the equation with coefficients truncated outside $[-n,n]$ shows that its exit time from $(-n,n)$ has the same law as that of the constructed solution, which does not explode.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Let $N_S=\sup_{0\le s\le S}(2R_s^2)^{-1}$. Since $t\mapsto S_t$ maps $[0,T]$ onto $[0,S_T]$ and $1\le e^{2t}\le e^{2T}$ there,
+\begin{equation}\label{eq:sandwich}
+ N_{S_T}\le Z_T^a\le e^{2T}N_{S_T}.
+\end{equation}
+For $y>a^2$ the event $\{N_S\ge y\}$ is the event $\{\tau_b\le S\}$ with $b=(2y)^{-1/2}<r$. Since $1/(2r^2)=a^2$, Proposition~\ref{prop:hitting} gives
+\[
+ \frac{a^2e^{-1/(4a^2S)}}{y}\le\Pp(N_S\ge y)\le\frac{a^2}{y}.
+\]
+The lower bound and the first inequality in \eqref{eq:sandwich} give the lower bound in \eqref{eq:tail}; the upper bound, applied at $ye^{-2T}>a^2$, and the second inequality give the upper bound.
+
+For a nonnegative random variable $Z$ and $q>0$, $\E Z^q=q\int_0^\infty y^{q-1}\Pp(Z>y)\,dy$ in $[0,\infty]$. For $0<q<1$, using $\Pp(Z_T^a>y)\le\min(1,K_{a,T}/y)$,
+\[
+ \E(Z_T^a)^q\le q\int_0^{K_{a,T}}y^{q-1}\,dy+qK_{a,T}\int_{K_{a,T}}^\infty y^{q-2}\,dy=\frac{K_{a,T}^q}{1-q},
+\]
+and $q=p/2$ gives \eqref{eq:subcritical}. For $q\ge1$ the integral diverges by the lower bound in \eqref{eq:tail}; for $z>y>K_{a,T}$ one has $\Pp(Z_T^a>y)\ge\Pp(Z_T^a\ge z)\ge c_{a,T}/z$, and letting $z\downarrow y$ gives $\Pp(Z_T^a>y)\ge c_{a,T}/y$.
+
+At a fixed time $t>0$, \eqref{eq:representation} and Lemma~\ref{lem:gaussian} give \eqref{eq:second}. More generally, $R_{S_t}$ is the norm of a nondegenerate Gaussian vector in $\R^4$, whose density is bounded above and below by positive constants on a small ball around the origin. The integral of $|z|^{-p}$ over that ball is a positive multiple of $\int_0^\varepsilon s^{3-p}\,ds$, which is finite exactly when $p<4$, and $|z|^{-p}$ is bounded outside the ball. Hence $\E|U_t^a|^p<\infty$ if and only if $p<4$.
+\end{proof}
+
+\begin{corollary}\label{cor:truncated}
+For $L>K_{a,T}$,
+\[
+ c_{a,T}\log\frac{L}{K_{a,T}}\le\E(Z_T^a\wedge L)\le K_{a,T}\Bigl(1+\log\frac{L}{K_{a,T}}\Bigr).
+\]
+\end{corollary}
+
+\begin{proof}
+Use $\E(Z\wedge L)=\int_0^L\Pp(Z>y)\,dy$ with the bounds from the proof of Theorem~\ref{thm:main}, discarding $[0,K_{a,T}]$ for the lower bound.
+\end{proof}
+
+\begin{remark}\label{rem:mc}
+The divergence of $\E Z_T^a$ is only logarithmic in the truncation level: by \eqref{eq:hittinglimit} and \eqref{eq:sandwich}, every limit point of $\E(Z_T^a\wedge L)/\log L$ as $L\to\infty$ lies in $[c_{a,T},e^{2T}c_{a,T}]$, and $c_{a,T}$ is extremely small when $a^2S_T$ is small. A sample mean of $Z_T^a$ over a moderate number of simulated paths can therefore look stable.
+\end{remark}
+
+\begin{remark}\label{rem:gamma}
+The construction applies to every noise constant. For $\gamma>0$ let $\delta=3+2/\gamma^2$, let $R$ be a Bessel process of dimension $\delta$ started at $r=(\gamma a)^{-1}$, and put $U_t=e^t/(\gamma R_{S_t})$. The computation above, with $\sqrt2$ replaced by $\gamma$ and the drift $3/(2R_s)$ in \eqref{eq:bessel} replaced by $(\delta-1)/(2R_s)=(1+\gamma^{-2})/R_s$, shows that $U$ solves $dU_t=(U_t-U_t^3)\,dt+\gamma U_t^2\,dW_t$ with $U_0=a$; for $\gamma^2=2$ this is \eqref{eq:representation}. Since $R^{2-\delta}$ is a local martingale and $R_s\to\infty$ almost surely, $\Pp(\inf_{s\ge0}R_s\le b)=(b/r)^{\delta-2}$ for $0<b<r$ \cite[Chapter~XI]{RY99}. Integrating this tail, for $\gamma^2<2$,
+\[
+ \E\sup_{t\le T}U_t^2\le\frac{e^{2T}}{\gamma^2}\,\E\sup_{s\ge0}R_s^{-2}=a^2e^{2T}\,\frac{2+\gamma^2}{2-\gamma^2}.
+\]
+The bound degenerates as $\gamma^2\uparrow2$, and at $\gamma^2=2$ the left side is infinite by Theorem~\ref{thm:main}.
+\end{remark}
+
+\section{The critical variational setting}\label{sec:framework}
+
+The setting of \cite[Section~6]{AV25} consists of a Gelfand triple $V\hookrightarrow H\hookrightarrow V^*$, operators $A\in\mathcal L(V,V^*)$ and $B\in\mathcal L(V,\HS(U,H))$ with
+\[
+ \langle v,Av\rangle-\tfrac12\|Bv\|_{\HS(U,H)}^2\ge\theta\|v\|_V^2-M\|v\|_H^2,
+\]
+nonlinearities $F$ and $G$ that are locally Lipschitz in the sense of \cite[Assumption~6.1(2)]{AV25} with indices $\beta_j\in(1/2,1)$ and $\rho_j\ge0$ satisfying $(2\beta_j-1)(\rho_j+1)\le1$, and, for global well-posedness, the coercivity condition \eqref{eq:coerc}. We give two realizations of \eqref{eq:spde}.
+
+\subsection{A scalar realization}
+Take $V=H=V^*=\R$, $U=\R$, and
+\[
+ Av=v,\qquad B=0,\qquad F(v)=2v-v^3,\qquad G(v)=\sqrt2\,v^2.
+\]
+Then \eqref{eq:abstract} is \eqref{eq:sde}. Linear coercivity holds with $\theta=1$ and $M=0$, and
+\begin{equation}\label{eq:coercivity}
+ v\bigl(Av-F(v)\bigr)-\tfrac12|G(v)|^2=-v^2\ge|v|^2-2|v|^2-2,
+\end{equation}
+so \eqref{eq:coerc} holds with $\theta'=1$ and $M'=2$. Factoring the differences and using $|uv|\le(u^2+v^2)/2$,
+\[
+ |F(u)-F(v)|\le\bigl(2+\tfrac32(u^2+v^2)\bigr)|u-v|,\qquad |G(u)-G(v)|\le\sqrt2\,(|u|+|v|)\,|u-v|,
+\]
+and $|u|+|v|\le1+(u^2+v^2)/2$. All interpolation spaces of $(\R,\R)$ are $\R$, so the Lipschitz condition holds with $\rho=2$ and $\beta=2/3$, for which $(2\beta-1)(\rho+1)=1$.
+
+\subsection{The torus}
+Take $V=H^1(\T)$, $H=L^2(\T)$, $U=\R$, $A=I-\Delta$, $B=0$, and the same pointwise $F$ and $G$. Integration by parts gives
+\[
+ \langle v,Av-F(v)\rangle-\tfrac12\|G(v)\|_{L^2}^2=\|\partial_xv\|_{L^2}^2-\|v\|_{L^2}^2=\|v\|_{H^1}^2-2\|v\|_{L^2}^2,
+\]
+because the quartic terms $\int_\T v^4$ cancel; so \eqref{eq:coerc} holds with $\theta'=1$ and $M'=2$, and linear coercivity follows from $\langle v,(I-\Delta)v\rangle=\|v\|_{H^1}^2$. For the Lipschitz condition we use
+\[
+ (H^{-1}(\T),H^1(\T))_{2/3,1}\hookrightarrow(H^{-1}(\T),H^1(\T))_{2/3,2}=H^{1/3}(\T)\hookrightarrow L^6(\T).
+\]
+The first embedding holds because real interpolation spaces increase with the second index, and the identification follows from the interpolation of weighted $\ell^2$ spaces applied to Fourier coefficients \cite[Chapters~3 and~5]{BL76}. The second embedding is the Sobolev inequality on the torus \cite{BO13}. By H\"older's inequality,
+\[
+ \|u^3-v^3\|_{H^{-1}}\le\|u^3-v^3\|_{L^2}\le\tfrac32\bigl(\|u\|_{L^6}^2+\|v\|_{L^6}^2\bigr)\|u-v\|_{L^6},\qquad
+ \|u^2-v^2\|_{L^2}\le\bigl(\|u\|_{L^4}+\|v\|_{L^4}\bigr)\|u-v\|_{L^4},
+\]
+and $L^6(\T)\hookrightarrow L^4(\T)$ on the unit torus, while the linear term of $F$ is bounded in the same norms. For a one-dimensional noise the Hilbert--Schmidt norm of $G(v)$ is $\|G(v)\|_{L^2}$. Absorbing first powers into $1+$ squares, \cite[Assumption~6.1]{AV25} holds with $\rho=2$ and $\beta=2/3$. The indices $\beta=5/8$ and $\rho=2$ also work, through $L^1(\T)\hookrightarrow H^{-1}(\T)$ and $H^{1/4}(\T)\hookrightarrow L^4(\T)$, and give $(2\beta-1)(\rho+1)=3/4$; the equation is subcritical in the sense of scaling, and what is critical here is the noise constant. The spatially constant process $u(t,x)=U_t^a$ solves \eqref{eq:spde}, its paths lie in $C([0,T];H)$ and $L^2(0,T;V)$, and by uniqueness \cite[Theorem~6.4]{AV25} it is the solution.
+
+\begin{remark}\label{rem:threshold}
+For the noise $\gamma u^2$ the left side of \eqref{eq:coerc} on the torus is $\|v\|_{H^1}^2-2\|v\|_{L^2}^2+(1-\gamma^2/2)\int_\T v^4$. For constants $v\equiv\lambda$, where $\|v\|_{H^1}=|\lambda|$, it equals $-\lambda^2+(1-\gamma^2/2)\lambda^4$, so \eqref{eq:coerc} fails for $\gamma^2>2$. The strengthened condition of \cite[Section~6.3.1]{AV25} replaces $\frac12$ by $\frac12+\eta$ in front of the noise term; the quartic coefficient becomes $1-(\frac12+\eta)\gamma^2$, which is nonnegative for some $\eta>0$ exactly when $\gamma^2<2$. When it is negative, testing with constants as above shows that the strengthened condition fails. Corollary~\ref{cor:spde} shows that at $\gamma^2=2$ the conclusion of \cite[Section~6.3.1]{AV25} itself fails, not only its hypothesis.
+\end{remark}
+
+\begin{proof}[Proof of Corollary~\ref{cor:spde}]
+On the unit torus a constant satisfies $\|u(t)\|_{L^2}=\|u(t)\|_{H^1}=|U_t^a|$, so the first statement is Theorem~\ref{thm:main}, and the hypotheses of \cite[Theorem~6.4]{AV25} were checked above. Let $a_n=1/n$. By strong existence and uniqueness, the solutions $U^{a_n}$ can be built on one probability space with one Brownian motion, simultaneously for all $n$. The solution started at $0$ is $0$. By Theorem~\ref{thm:main}, $\E\|u^{(n)}\|_{C([0,T];L^2)}^2=\infty$ for every $n$, and the norm of $L^2(0,T;H^1)\cap C([0,T];L^2)$ dominates that of $C([0,T];L^2)$, so $u^{(n)}$ does not converge to $0$ in $L^2(\Omega;L^2(0,T;H^1)\cap C([0,T];L^2))$. For $0<p<2$, \eqref{eq:subcritical} bounds $\E\sup_{t\le T}|U_t^{a_n}|^p$ by $n^{-p}e^{pT}/(1-p/2)$, and for constants $\|u\|_{L^2(0,T;H^1)}\le\sqrt T\,\|u\|_{C([0,T];L^2)}$, so $u^{(n)}\to0$ in $L^p(\Omega;L^2(0,T;H^1)\cap C([0,T];L^2))$.
+\end{proof}
+
+\section{A second proof that the maximal second moment is infinite}\label{sec:defect}
+
+\begin{lemma}\label{lem:defect}
+Let $F_n$, $f$ and $D$ be random variables with $F_n\to f$ almost surely, $|F_n|\le D$ almost surely, $\E F_n=c$ for every $n$, and $f$ integrable with $\E f<c$. Then $D$ is not integrable.
+\end{lemma}
+
+\begin{proof}
+If $D$ were integrable, dominated convergence would give $\E f=\lim_n\E F_n=c$.
+\end{proof}
+
+Take $b_n=r/(n+2)$, $F_n=R_{S\wedge\tau_{b_n}}^{-2}$, $f=R_S^{-2}$ and $D=\sup_{s\le S}R_s^{-2}$. The martingale property of Section~\ref{sec:bessel} gives $\E F_n=r^{-2}$; by Lemma~\ref{lem:stopping}, almost surely $F_n=f$ for all large $n$; clearly $F_n\le D$; and Lemma~\ref{lem:gaussian} gives $\E f<r^{-2}$. By Lemma~\ref{lem:defect}, $D$ is not integrable, and \eqref{eq:sandwich} gives $\E Z_T^a=\infty$ without the tail bounds. (The maximum of a continuous process over a compact interval is the supremum over a countable dense set, so all these variables are measurable.)
+
+The same computation explains why the usual energy argument stops at $p<2$. By It\^o's formula,
+\[
+ d(U_t^2)=2U_t^2\,dt+2\sqrt2\,U_t^3\,dW_t.
+\]
+The quartic terms cancel exactly as in \eqref{eq:coercivity}, but the stochastic integral is only a local martingale, and \eqref{eq:second} shows that $e^{-2t}U_t^2$ loses expectation: $\E e^{-2t}U_t^2<a^2$ for every $t>0$.
+
+\section{Lean verification}\label{sec:lean}
+
+The file \texttt{lean/EndpointCore.lean} in the accompanying repository is checked with Lean~4 \cite{Lean} (version~4.33.1) and Mathlib \cite{Mathlib} (tag v4.33.1, commit \texttt{0df444a3}). It contains nine declarations, each of which depends only on the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}:
+\begin{itemize}[leftmargin=2em]\raggedright
+\item \texttt{no\_integrable\_dominator\_of\_expectation\_defect}: Lemma~\ref{lem:defect} for an arbitrary measure, with almost-everywhere hypotheses, proved from Mathlib's dominated convergence theorem;
+\item \texttt{nonintegrable\_of\_nonnegative\_lower\_bound}: if $N$ is almost everywhere strongly measurable, $0\le N\le Z$ almost everywhere and $N$ is not integrable, then $Z$ is not integrable (the step from $N_{S_T}$ to $Z_T^a$ via \eqref{eq:sandwich});
+\item \texttt{gaussian\_expectation\_defect} and \texttt{gaussian\_defect\_identity}: the inequality $(1-e^{-r^2/(2S)})/r^2<1/r^2$ and the difference $e^{-r^2/(2S)}/r^2$;
+\item \texttt{critical\_coercivity\_identity} and \texttt{critical\_coercivity\_bound}: the identity and the bound in \eqref{eq:coercivity};
+\item \texttt{critical\_interpolation\_indices}: $1/2<2/3<1$ and $(2\cdot\frac23-1)(2+1)=1$;
+\item \texttt{reciprocal\_ito\_coefficients}: the It\^o drift $-1/U+3U$ of $1/U$ computed from the coefficients of \eqref{eq:sde}, as an algebraic identity; this is the drift $3/V-V$ of $V=1/U=\sqrt2\,|Y|$ in Section~\ref{sec:construction};
+\item \texttt{finite\_time\_hitting\_bounds}: the deduction of \eqref{eq:hitting} from \eqref{eq:stopping} and the bound $0\le\E[R_S^{-2};\tau_b>S]\le(1-e^{-r^2/(2S)})/r^2$, with these as hypotheses.
+\end{itemize}
+No other step is formalized. In particular, Brownian motion in $\R^4$ and the Bessel process, It\^o's formula and the time change, the optional stopping argument of Lemma~\ref{lem:stopping}, the Gaussian integral of Lemma~\ref{lem:gaussian}, the limit \eqref{eq:hittinglimit}, existence and uniqueness for \eqref{eq:sde}, the sandwich \eqref{eq:sandwich}, the passage from tails to moments in Theorem~\ref{thm:main} and Corollary~\ref{cor:truncated}, the fixed-time criterion $p<4$, Remark~\ref{rem:gamma}, and the function spaces and embeddings of Section~\ref{sec:framework} are not formalized.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. The construction of Section~\ref{sec:construction} and the answers to Problems~4 and~5 were first found on 6 September 2026 by an OpenAI Codex agent (model gpt-6-astra) working through open problems in probability, and on 10 September 2026 Codex agents wrote a first manuscript and the Lean file described in Section~\ref{sec:lean}. In October 2026, Claude Opus~5.5 (Anthropic), working in Claude Code, checked the proofs and the hypotheses of \cite{AV25}, added Remark~\ref{rem:gamma}, searched the literature, ran the Lean verification again and rewrote the manuscript; a separate Claude Opus~5.5 instance reviewed it. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The Lean verification is available at \url{https://github.com/yspennstate/critical-allen-cahn-noise}.
+
+\begin{thebibliography}{99}
+
+\bibitem{AV24}
+A.~Agresti and M.~Veraar,
+\emph{The critical variational setting for stochastic evolution equations},
+Probab. Theory Related Fields \textbf{188} (2024), 957--1015.
+\href{https://doi.org/10.1007/s00440-023-01249-x}{doi:10.1007/s00440-023-01249-x}.
+
+\bibitem{AV25}
+A.~Agresti and M.~Veraar,
+\emph{Nonlinear SPDEs and maximal regularity: an extended survey},
+NoDEA Nonlinear Differential Equations Appl. \textbf{32} (2025), Paper No.~123.
+\href{https://doi.org/10.1007/s00030-025-01090-2}{doi:10.1007/s00030-025-01090-2};
+\href{https://arxiv.org/abs/2501.18561}{arXiv:2501.18561}.
+
+\bibitem{BL76}
+J.~Bergh and J.~L\"ofstr\"om,
+\emph{Interpolation Spaces. An Introduction},
+Grundlehren der mathematischen Wissenschaften \textbf{223}, Springer, Berlin, 1976.
+\href{https://doi.org/10.1007/978-3-642-66451-9}{doi:10.1007/978-3-642-66451-9}.
+
+\bibitem{BO13}
+\'A.~B\'enyi and T.~Oh,
+\emph{The Sobolev inequality on the torus revisited},
+Publ. Math. Debrecen \textbf{83} (2013), 359--374.
+\href{https://doi.org/10.5486/PMD.2013.5529}{doi:10.5486/PMD.2013.5529}.
+
+\bibitem{ELY97}
+K.~D.~Elworthy, X.-M.~Li and M.~Yor,
+\emph{On the tails of the supremum and the quadratic variation of strictly local martingales},
+in: S\'eminaire de Probabilit\'es XXXI, Lecture Notes in Math. \textbf{1655}, Springer, Berlin, 1997, 113--125.
+\href{https://doi.org/10.1007/BFb0119298}{doi:10.1007/BFb0119298}.
+
+\bibitem{ELY99}
+K.~D.~Elworthy, X.-M.~Li and M.~Yor,
+\emph{The importance of strictly local martingales; applications to radial Ornstein--Uhlenbeck processes},
+Probab. Theory Related Fields \textbf{115} (1999), 325--355.
+\href{https://doi.org/10.1007/s004400050240}{doi:10.1007/s004400050240}.
+
+\bibitem{JH63}
+G.~Johnson and L.~L.~Helms,
+\emph{Class $D$ supermartingales},
+Bull. Amer. Math. Soc. \textbf{69} (1963), 59--62.
+\href{https://doi.org/10.1090/S0002-9904-1963-10857-5}{doi:10.1090/S0002-9904-1963-10857-5}.
+
+\bibitem{Lean}
+L.~de~Moura and S.~Ullrich,
+\emph{The Lean~4 theorem prover and programming language},
+in: Automated Deduction -- CADE~28, Lecture Notes in Comput. Sci. \textbf{12699}, Springer, Cham, 2021, 625--635.
+\href{https://doi.org/10.1007/978-3-030-79876-5_37}{doi:10.1007/978-3-030-79876-5\_37}.
+
+\bibitem{Mathlib}
+The mathlib Community,
+\emph{The Lean mathematical library},
+in: Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020), ACM, New York, 2020, 367--381.
+\href{https://doi.org/10.1145/3372885.3373824}{doi:10.1145/3372885.3373824}.
+
+\bibitem{RY99}
+D.~Revuz and M.~Yor,
+\emph{Continuous Martingales and Brownian Motion}, third edition,
+Grundlehren der mathematischen Wissenschaften \textbf{293}, Springer, Berlin, 1999.
+\href{https://doi.org/10.1007/978-3-662-06400-9}{doi:10.1007/978-3-662-06400-9}.
+
+\end{thebibliography}
+\end{document}

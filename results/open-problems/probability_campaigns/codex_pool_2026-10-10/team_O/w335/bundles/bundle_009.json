@@ -1,0 +1,70 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w335",
+  "bundle_slug": "w335-p0004-20261010",
+  "entries": [
+    {
+      "key": "p0004-nonstationary-tree",
+      "namespace": "probability.percolation",
+      "logical_name": "bounded-degree-tree-without-rooted-connective-limit",
+      "kind": "lemma",
+      "title": "Bounded degree alone does not give a connective limit [draft; pending w347]",
+      "statement": "There is an infinite connected tree of maximum degree three whose rooted self-avoiding-walk counts c_n satisfy liminf c_n^(1/n)=1 and limsup c_n^(1/n)=2. Use successive level-block lengths 2^(2^j), with one child in even blocks and two in odd blocks. Rooted scalar submultiplicativity already fails at c_1=c_2=1,c_3=2. This refutes a generic bounded-degree existence route, but the example is not a stationary iid percolation cluster of Z^2.",
+      "proof_text": "Let c_n(o) count length-n self-avoiding walks from the root of an infinite spherically symmetric tree. At level l, all vertices have b_l children. Partition the levels into successive blocks of lengths L_j=2^(2^j), j=0,1,... . Give one child at every level in even blocks and two children in odd blocks. This is an infinite connected tree with maximum degree three.\n\nEvery self-avoiding root walk moves outward, so c_n(o)=product_{l<n} b_l. At the end N_j=sum_{h<=j} L_h, write B_j for the number of two-child levels among those N_j. Then log(c_{N_j}(o))/(N_j*log 2)=B_j/N_j. The earlier blocks have total at most j*L_{j-1}=j*sqrt(L_j), negligible relative to L_j. Along odd block ends this ratio tends to one; along even block ends it tends to zero. Since every ratio lies in [0,1],\n\n    liminf c_n(o)^(1/n)=1,  limsup c_n(o)^(1/n)=2.\n\nThe exponential limit therefore does not exist even on an infinite connected bounded-degree graph. On the first three levels, c_1=c_2=1 but c_3=2, directly refuting scalar rooted submultiplicativity c_{n+m}(o)<=c_n(o)*c_m(o). This tree lacks the translation-stationary percolation structure of P0004 and is not a counterexample to that problem.",
+      "assumptions": [
+        "Infinite spherically symmetric rooted tree",
+        "Nonstationary alternating branching blocks",
+        "Rooted self-avoiding-walk counts"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w335:p0004-nonstationary-tree",
+        "url": "file:///~/brain_workers/w335/P0004_proof.md",
+        "revision": "author-checked-20261010-pending-independent-w347",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0004-full-lattice-boundary",
+      "namespace": "probability.percolation",
+      "logical_name": "full-square-lattice-connective-limit-submultiplicativity-boundary",
+      "kind": "lemma",
+      "title": "Translation invariance proves the full-lattice boundary limit [draft; pending w347]",
+      "statement": "For the p=1 bond-percolation configuration on Z^2, let c_n(v) count length-n self-avoiding walks from v. Translation invariance and prefix splitting give c_{n+m}(0)<=c_n(0)*c_m(0). Thus c_n(v)^(1/n) has a common limit in [2,3] by Fekete subadditivity, independent of v. This boundary result does not prove the quenched limit for p in (p_c,1).",
+      "proof_text": "Translate each prefix endpoint to zero; the permitted suffixes inject into all length-m origin walks. This gives scalar submultiplicativity. Fekete applied to log c_n gives the limit. There are 2^n monotone northeast walks and at most 4*3^(n-1) walks without immediate reversal, giving the bounds. Translation preserves the counts.",
+      "assumptions": [
+        "p=1 on the square lattice",
+        "Finite-length self-avoiding walks"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w335:p0004-full-lattice-boundary",
+        "url": "file:///~/brain_workers/w335/P0004_proof.md",
+        "revision": "author-checked-20261010-pending-independent-w347",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0004-nonstationary-tree",
+      "to_existing_logical": "math:probability.core:open-problem-p0004-existence-of-the-quenched-connective-limit",
+      "kind": "analogous_to",
+      "rationale": "New card: \"the example is not a stationary iid percolation cluster of Z^2\"; existing card: \"On the infinite supercritical bond-percolation cluster of Z^2, does c_n(v)^(1/n) converge almost surely, independently of v? Source: Selected problems in probability theory, Question 2.3, PDF pages 3-4.\nPosed in Selected problems in probability theory\nStatus as recorded in the ca\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    },
+    {
+      "from_key": "p0004-nonstationary-tree",
+      "to_existing_logical": "math:probability.core:attempt-p0004-existence-of-the-quenched-connective-limit",
+      "kind": "semantic_association",
+      "rationale": "New card: \"Rooted scalar submultiplicativity already fails\"; existing card: \"No stationary scalar subadditive process or liminf lower bound was obtained\"."
+    },
+    {
+      "from_key": "p0004-full-lattice-boundary",
+      "to_existing_logical": "math:probability.core:open-problem-p0004-existence-of-the-quenched-connective-limit",
+      "kind": "specializes",
+      "rationale": "New card: \"This boundary result does not prove the quenched limit\"; existing card: \"On the infinite supercritical bond-percolation cluster of Z^2, does c_n(v)^(1/n) converge almost surely, independently of v? Source: Selected problems in probability theory, Question 2.3, PDF pages 3-4.\nPosed in Selected problems in probability theory\nStatus as recorded in the ca\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    }
+  ]
+}

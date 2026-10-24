@@ -1,0 +1,17 @@
+Deterministic regression for QFORM-R3-HEAVYSET-EXTERIOR-PACKET-FUNNEL-v1
+Seed/constructions: explicit disjoint-support orthonormal three-frames exercising all four structural branches.
+
+ diffuse_restriction eigG=[0.4,0.3,0.2] c=[0.336,0.452,0.188,0.024] |K|=18 light_max_leverage=0.05
+ heavy_triple eigG=[0.6,0.4,0.3] c=[0.168,0.436,0.324,0.072] |K|=26
+ heavy_pair_leaf eigG=[0.6,0.3,0.1] c=[0.252,0.514,0.216,0.018] |K|=20
+ heavy_singleton_twoleaf eigG=[0.6,0.2,0.1] c=[0.288,0.536,0.164,0.012] |K|=18
+
+Maximum coefficient identity numerical error: 1.168e-13.
+Constants checked:
+ C(72,3)=59640; 32*C(72,3)=1908480.
+ C(72,2)=2556; (32*C(72,2))/3=27264.
+ singleton-to-two-leaf denominator=256.
+
+PASS
+
+These computations are regression checks only. The proof is the exact weighted Cauchy-Binet derivation in REPORT.md.

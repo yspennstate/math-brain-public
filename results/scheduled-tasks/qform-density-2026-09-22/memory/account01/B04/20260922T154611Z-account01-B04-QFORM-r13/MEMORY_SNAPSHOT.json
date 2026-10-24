@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260922T154611Z-account01-B04-QFORM-r13",
+  "source_control_commit_start": "a292efbaf27868f79d31844adeca5d0e645b770a",
+  "source_control_revision": "2026-09-22.5",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "account_slot": "account02/B04",
+    "theorem": "QFORM-SQUARE-ASSISTED-EK-AGGREGATE-v1 plus QFORM-RANK2-RANDOM-CUT-E2-v1 and product-density rearrangement endpoint",
+    "sources": [
+      "yspennstate/math-open-problems@69c4571401b4376ffb84ad34aff2a748330acf8a:proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/B04-20260922T152028Z-qform-r11/REPORT.md",
+      "yspennstate/math-open-problems@ffc6e40587293d6019b29680fff19eb0d9179fb5:proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/B04-20260922T152028Z-qform-r11/RANK2_RANDOM_CUT_ADDENDUM.md",
+      "yspennstate/math-open-problems@b7168a1b0b52fbf69705170ff9795435efeb849f:proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/account02-B04-20260922T122057Z-01c809a1/REPORT.md"
+    ]
+  },
+  "proved_results": [
+    {
+      "id": "QFORM-AGGREGATE-QUARTER-RIESZ-v1",
+      "scope": "Regularized-determinant residual cross block C; 2k>q; gives sup_u E|R-u|^-1/4 <= K(q,k) E_k(C)^-1/(8k)."
+    },
+    {
+      "id": "QFORM-INDEFINITE-FACE-AGGREGATE-CROSS-v1",
+      "scope": "Physical indefinite two-coordinate face plus a Schur-residual cross block with aggregate E_k currency; gives explicit L-infinity density bound. q=2,k=2 is unconditional in cross leverage."
+    },
+    {
+      "id": "QFORM-ZERO-DIAGONAL-FACE-AGGREGATE-CROSS-v1",
+      "scope": "Exact zero-diagonal indefinite physical pair plus residual aggregate cross currency; partner product rearrangement supplies quarter-power singularity."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a347c0cfc8f8cfdfa4223fd5659a820769ad57ee",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260922T154611Z-account01-B04-QFORM-r13/REPORT.md",
+    "blob": "b6f8e17bc2ef44ec2f65b878e37e0c0ed2980eee"
+  },
+  "explicit_example": "Fully coupled 6x6 indefinite matrix in report; all six eigenvalues have modulus >1 and density bound <=7.6771267543 for all admissible product laws.",
+  "continuity_proved": false,
+  "essentially_bounded_density_proved_in_scope": true,
+  "full_target_proved": false,
+  "unresolved_implication": "QFORM-INDEFINITE-FACE-AGGREGATE-EXTRACTION-v1",
+  "next_step": "From only three eigenvalues of modulus at least one, force or globally aggregate a physical indefinite pair plus leverage-valid residual E1 or unconditional residual E2 currency, or route its failure into an already completed diffuse/ridge/scalar-square/hyperbolic branch without a reciprocal tiny local minor."
+}

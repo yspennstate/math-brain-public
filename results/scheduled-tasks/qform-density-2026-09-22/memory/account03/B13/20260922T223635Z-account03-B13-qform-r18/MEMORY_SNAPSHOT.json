@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260922T223635Z-account03-B13-qform-r18",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_commit_publication": "a271b5f75f5d8204f0769847181fa79e0c7a688e",
+  "control_revision": "2026-09-22.15",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "dbd31282f36494993f2fe8c838116dd8c63538eb",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260922T223635Z-account03-B13-qform-r18/",
+  "result_ids": [
+    "QFORM-COUNTABLE-EXTREME-WITNESS-v1",
+    "QFORM-CONVEX-OUTPUT-EXTREMALITY-v1",
+    "QFORM-AFFINE-COUNTABLE-EXTREME-WITNESS-v1"
+  ],
+  "proved": [
+    "The full essential slab constant equals the supremum over rational symmetric matrices with s3>1, rational intervals and compact finite rational-grid unit-measure product indicators.",
+    "Every strict violation of a proposed finite density constant has such a finite rational-grid witness.",
+    "The same countable reduction holds with arbitrary affine leakage, after rationalizing affine coefficients on the compact extreme support.",
+    "For any measurable output map and any convex TV-lower-semicontinuous output-law functional, the worst cap-one product input equals the supremum over compact finite-grid product indicators.",
+    "For D(eta)=sup_I eta(I)/|I|, D is exactly the L-infinity density norm when finite, so the whole output density norm can be extremalized to one sequence of finite-grid product laws rather than interval-by-interval supports."
+  ],
+  "partner_dependencies": [
+    {
+      "name": "account04/B13 fixed-volume random-set representation",
+      "commit": "7229e8caa8374eb8e74b07e70cadd0c0ccb05d39",
+      "use": "exact product/output-law barycenter and continuity transfer under a common bound"
+    },
+    {
+      "name": "account04/B14 finite-mixture localization",
+      "commit": "321ec7899f4972d125d641408512fe9e5e9dcf4c",
+      "use": "compact rational-grid finite mixtures and TV convergence; safe nonattainment repair"
+    }
+  ],
+  "corrections_preserved": [
+    "Do not use the later account04/B13 infinite-space threshold attainment argument; the Claude-attributed review records nonattainment for w(x)=1-exp(-|x|).",
+    "No single-interval, centered-law, bounded-diameter, bounded-support or uniform fragment-count extremality is asserted.",
+    "Finite-grid parameters may diverge along an extremizing sequence.",
+    "TV approximation transfers essential density bounds but not continuity."
+  ],
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN",
+  "previous_live_gap": "QFORM-NEARNULL-TWOBANK-LINEARIZE-SQRT-TO-LINEAR-v1",
+  "next_action": "Use the rational-grid/extreme-product formulation to prove a one-copy linear slab bound in the one-heavy/two-cross-bank near-null residual, with constants independent of mesh, support radius, translations, gaps and fragment count; do not infer one-copy bounded density from the four-copy collision theorem.",
+  "checker": "QFORM_B13_R18_HYPERSIMPLEX_CHECK_PASS"
+}

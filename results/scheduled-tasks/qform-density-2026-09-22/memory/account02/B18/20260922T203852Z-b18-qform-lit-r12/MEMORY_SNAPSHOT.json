@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "account": "account02",
+  "slot": "B18",
+  "run_id": "20260922T203852Z-b18-qform-lit-r12",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit": "cfdbbb83797255914f5ac130cecf10867956ebe3",
+  "status": "PROVED_SUPPORTING_TARGET_LEVEL_REDUCTION_FULL_TARGET_OPEN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "name": "QFORM ridge spectral-window density theorem",
+      "scope": "s_3(A)>=1 and spectral projection onto |lambda|>=1/64 with max physical leverage <=1/32 implies continuous density <64; arbitrary small nonseparable tails allowed",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "9c1167db05c7b0f520f060796fde921ed769a4e7",
+      "source_path": "proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md"
+    },
+    {
+      "name": "account03/B18 QFORM-RIDGE-HALF-RIESZ-TWOEIG-v1",
+      "scope": "s_2(S)>=s and diffuse |lambda|>=s/64 window imply half-Riesz bound C_H s^-1/2; after a nonzero physical pivot gives density C_H/sqrt(|a|s)",
+      "source_repository": "yspennstate/math-open-problems",
+      "source_commit": "42c1368934f9c5fdfd1723329382ae2bbb408003",
+      "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260922T195803Z-account03-B18-QFORM-r16/REPORT.md"
+    },
+    {
+      "name": "Livshyts-Paouris-Pivovarov marginal-density theorem",
+      "scope": "cap-one product density; every k-dimensional orthogonal marginal density <=2^(k/2), hence every unit linear bank <=sqrt(2)",
+      "source": "arXiv:1507.07949; Israel J. Math. 216 (2016)"
+    }
+  ],
+  "partner_result_applied": {
+    "partner": "account03/B18",
+    "run_id": "20260922T195803Z-account03-B18-QFORM-r16",
+    "source_commit": "42c1368934f9c5fdfd1723329382ae2bbb408003",
+    "application": "Alternative 3 of QFORM-TWO-STAGE-WINDOW-STARPAIR-v1: a physical pivot |a|>=1/512 with diffuse two-eigenvalue Schur window has ||p_Q||_infinity<576."
+  },
+  "new_results": [
+    {
+      "name": "QFORM-TWO-STAGE-WINDOW-STARPAIR-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "Every target A either lies in the solved overall diffuse branch (<64), lies in the solved nonzero-pivot/diffuse-Schur branch (<576), or has an original near-zero heavy star, a physical 2x2 principal determinant >=2^-18, or a heavy star in a physical Schur residual."
+    },
+    {
+      "name": "QFORM-HEAVY-STAR-PRODUCT-PROVENANCE-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For the outer heavy-star branch Q=aX_i^2+2 beta X_iY+R(X_rest) with |a|<1/512 and beta>1/512, Y is a unit original-coordinate linear bank with ||p_Y||_infinity<=sqrt(2), and X_i is independent of the entire source generating (Y,R); no independence between Y and R is claimed."
+    }
+  ],
+  "output_sources": {
+    "report_commit": "6cda809756c61201f08cdee2dd7e07f20e5d5596",
+    "report_blob": "8b66574d76cd6ea7f23f23ed511a15a65a3d1085",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260922T203852Z-b18-qform-lit-r12/REPORT.md",
+    "handoff_commit": "2f450751ce867603126381f2bf3c50f040249744",
+    "handoff_blob": "fbe8b205806e299e8ebe461d2f719f1727608caf",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B18/20260922T203852Z-b18-qform-lit-r12.md"
+  },
+  "unresolved_implication": "QFORM-DEPENDENCE-SAFE-STAR-THIRD-CURVATURE-v1: uniformly bound the normalized star aX^2+2 beta XY+R with |a|<1/512, beta>1/512, X an original cap-one scalar independent of the full product source generating (Y,R), Y a unit linear projection with marginal cap sqrt(2), while preserving possible dependence between Y and R; alternatively pay the quantitative physical-pair branch from s_3(A)>=1.",
+  "next_step": "Attack the normalized star with aggregate-before-conditioning or derive a rank-one/fractional-trace packet from the physical pair plus the third singular direction; do not replace marginal cap by conditional cap or post-rotation independence.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "execution": "WITHOUT_VERIFIED_BRAIN"
+}

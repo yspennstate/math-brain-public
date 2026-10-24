@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B10",
+  "run_id": "20260923T015725Z-account01-B10-QFORM-r23",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "owner_control_revision": "2026-09-22.15",
+  "source_control_commit_prepublication": "87630581e34d4781b33a6dee2acc47c5cd154f64",
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "classification": [
+    "ESSENTIAL_STEP_APPLIED",
+    "PROVED_SUPPORTING_LEMMA",
+    "FULL_TARGET_OPEN"
+  ],
+  "mathematical_premises": [
+    "account02/B10 auto11 heavy-hub delete-or-isolate state: Parseval active frame, |det N|>=2^-18, sigma_min(N)>=2^-18, L>511/512, fixed-hub exterior packet T_h>=1/512",
+    "account01/B10 r21 exact transverse identity T_h=L tr(adj(S2)S3), S2+S3=I_2",
+    "weighted affine-fiber Brascamp-Lieb projection theorem for normalized original-product linear forms"
+  ],
+  "corrections_consumed": [
+    "bounded density does not imply uniform pointwise quadratic-phase decay",
+    "arbitrary-joint rank-three coarea density cap is false",
+    "positive conditional projection-density height moments can diverge",
+    "post-rotation spectral coordinates are not independent",
+    "naive fiber-sup integration is not dimension-free",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B10",
+    "run_id": "20260922T225540Z-account02-B10-QFORM-auto11",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9005415f079b7b46c0618c0187bf29b3f8d44167",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B10/20260922T225540Z-account02-B10-QFORM-auto11/REPORT.md",
+    "actual_inequality": "|det N| T_h /4 >= 2^-29"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-HUB-N-ORIENTED-TRANSVERSE-SPLIT-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "For 0<=S<=I_2 and every transverse ONB, if S=[[alpha,gamma],[gamma,beta]], then alpha(1-beta)+(1-alpha)beta >= (1/2) tr(adj(S)(I-S)); hence one opposite-bank product is >= one quarter of the packet."
+    },
+    {
+      "id": "QFORM-NULL-HUB-HYPERBOLIC-CURVATURE-PACKET-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "At an exact null singleton hub, orient e2 parallel to P_perp N e1 and e3 perpendicular. Then N=[[0,R,0],[R,p,q],[0,q,d]], R^2|d|=|det N|, and for a selected pair of disjoint original-coordinate banks, (R sqrt(L) sigma_Y)^2 |d| sigma_Z^2 >= |det N|T_h/4 >=2^-29."
+    }
+  ],
+  "unresolved_implication": "QFORM-ORTHOGONAL-LEAKAGE-BORDERED-HYPERBOLIC-v1: retain the original-product linear provenance and coefficient orthogonality of the longitudinal leakage while using the N-oriented hyperbolic-square coefficient packet; do not condition to a profile supremum.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "NO_NEW_CONTINUITY_FOR_UNPAID_HUB_STATE",
+  "canonical_report_repository": "yspennstate/math-open-problems",
+  "canonical_report_commit": "144420aee51d6e70b9bc4daa6cc5cd4f3cc56da6",
+  "canonical_report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B10/20260923T015725Z-account01-B10-QFORM-r23/REPORT.md",
+  "canonical_report_blob": "3038263e7598da92e9cb2c47f3421de853ed4a19",
+  "handoff_commit": "62717a7687da68b56d7d163e2a45448f9073b592",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B10/20260923T015725Z-account01-B10-QFORM-r23.md"
+}

@@ -1,0 +1,62 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T233123Z-account05-A051-near-extremizer-definition",
+  "stream": "B11",
+  "packet_id": "A051",
+  "gap_id": "FEI-B11-UNIVERSAL-PROPER-BLOCK-DESCENT",
+  "attempt_id": "A051-DESCENT-COMPOSITIONS-1",
+  "method": "Universal co-singleton/finite-optimizer squeeze; exhaustive read-once NAND formula and block-orbit certificates; independent physical-child reproduction",
+  "mathematical_delta": "Proved M_n<=K_desc(n)<=nM_n/(n-1), so the asymptotic block-descent constant equals C_* and phi/R<=1.33 at n>=4 is automatic. Exact1150-formula6..9 census covers470340 labelled blocks, all phi<4.54;8-bit binary NAND attains phi/R=8/7;7 repeated-variable seed controls also below4.54. Census140692 checks and independent reproduction4927 checks passed. No absolute universal payment obtained.",
+  "deliverable_status": "COMPLETE_LOCAL_ARTIFACT_REVIEW_PENDING",
+  "mathematical_status": "UNIVERSAL_SUPPORTING_LEMMA_AND_EXACT_FINITE_CERTIFICATES_FULL_FEI_OPEN",
+  "claim_versions_used": [
+    {
+      "claim_id": "A051-PROPER-BLOCK-DESCENT-SQUEEZE",
+      "version": 1,
+      "use": "Finite sharpness interpretation; intra-run acyclic dependency"
+    }
+  ],
+  "claims_created_or_changed": [
+    {
+      "claim_id": "A051-PROPER-BLOCK-DESCENT-SQUEEZE",
+      "version": 1
+    },
+    {
+      "claim_id": "A051-NAND-SEED-DESCENT-CERTIFICATES",
+      "version": 1
+    }
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "UNIVERSAL_DESCENT_SQUEEZE.md",
+    "COMPOSITION_CERTIFICATES.md",
+    "CLAIMS.json",
+    "code/descent_compositions.py",
+    "code/check_seeded_and_replay.py",
+    "code/aggregate_certificates.py",
+    "out/FROZEN_CENSUS.json",
+    "out/AGGREGATE_CERTIFICATES.json",
+    "out/full_SUMMARY.json",
+    "out/SEEDED_FULL_SUMMARY.json",
+    "out/SOURCE_MANIFEST.json",
+    "out/RECEIPTS.json"
+  ],
+  "next_consumers": [
+    "A052",
+    "A053",
+    "A055",
+    "A090",
+    "A094",
+    "B11 lead",
+    "B20"
+  ],
+  "next_action": "A090/A094 reconstruct squeeze/orbit/log certificates; A052 derive a fixed-K recentred small/pivot-block payment on actual dimension-critical witnesses using beta_A, challenged by saved8/9-bit extrema and repeated-variable seed recursion, with terminal entropy retained.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Independent review and supervisor mirror verification pending",
+    "No absolute bound on M_n or K_desc(n); finite NAND census cannot establish universal admission"
+  ],
+  "packet_ids": [
+    "A051"
+  ]
+}

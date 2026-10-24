@@ -1,0 +1,14 @@
+{
+  "helper_version": "A001 independent Walsh and rational log intervals v1",
+  "actual_Boolean_family": "Six-bit b=+1 iff first three bits zero; c=b-2*1_origin; balanced Maj3 encoder h; F=(b+c)/2+h*(b-c)/2 after the physical unlocking query",
+  "domain": "All six labeled proper core queries j=0..5, then fixed full Maj3 coordinate order 0,1,2; retain all five remaining core bits in every terminal",
+  "case_count": 6,
+  "pilot": "j=0 only",
+  "symmetry": "None: all labeled coordinates materialized; equal active/dummy outputs may be observed but not used to remove cases",
+  "arithmetic": "Integer FWHT, Fraction spectra/direct edge influences; 32-term range-reduced atanh with rational remainder, outward base-two logarithm intervals at 2^-90",
+  "memory_estimate_MB": 80,
+  "maximum_runtime_seconds": 55,
+  "automatic_dimension_growth": false,
+  "incoming_reference": "Complete parent squared spectrum accompanied by actual signed Walsh amplitudes; every physical restriction is computed as a_T +/- a_(T+j), with all normalization mass retained",
+  "ownership": "One original S4=4*avg(I_b,I_c)-avg(H_b,H_c); initial Q+delta booked, transported to B_data+avg(Q_child)+delta; no new source surplus or floor"
+}

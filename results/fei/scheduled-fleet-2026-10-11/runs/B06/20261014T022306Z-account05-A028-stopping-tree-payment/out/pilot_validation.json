@@ -1,0 +1,50 @@
+{
+  "helper": "A028-shared-point-selector-v1",
+  "mode": "pilot",
+  "status": "PASS",
+  "cases": 291,
+  "assertions_passed": 2332,
+  "compute_seconds": 0.28561699998681433,
+  "fixtures": [
+    {
+      "k": 4,
+      "r": 1,
+      "d": "1/16",
+      "Q": "1/16",
+      "Pi_prime_log": {
+        "3": "9/64",
+        "2": "3",
+        "5": "-75/64"
+      },
+      "ratio_lower_proved": "2"
+    },
+    {
+      "k": 4,
+      "r": 2,
+      "d": "1/16",
+      "Q": "1/16",
+      "Pi_prime_log": {
+        "5": "-125/256",
+        "2": "9/2",
+        "11": "-363/256",
+        "3": "81/64"
+      },
+      "ratio_lower_proved": "3"
+    },
+    {
+      "k": 4,
+      "r": 4,
+      "d": "1/16",
+      "Q": "1/32",
+      "Pi_prime_log": {
+        "17": "-1445/4096",
+        "2": "65/8",
+        "47": "-6627/4096",
+        "3": "405/256"
+      },
+      "ratio_lower_proved": "15/4"
+    }
+  ],
+  "arithmetic": "integer/Fraction/prime-log/outward-rational-atanh24",
+  "all_dimension_scope": "Analytic proof; finite checks corroborate only"
+}

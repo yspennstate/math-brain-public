@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B14",
+  "run_id": "20260924T061035Z-account01-B14-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "control_commit_initial": "63c47f7c35f6eb53079746d8862c41a64b32357d",
+  "control_commit_prewrite": "f52ac95eef1521c1cb0a4f1eda0e07d4d480ff31",
+  "owner_request": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "status": "SUPPORTING_LOCALIZATION_THEOREM_PROVED_FULL_QFORM_OPEN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "94e823105d6db55240b495d0ab49d38713156e35",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260924T061035Z-account01-B14-QFORM-auto11/REPORT.md",
+    "blob_sha": "59dc7660d5a1cfb12ffc5f686bb5e639193cfedf",
+    "checks_commit": "aff8fce372aa0ec2871a7a87be04c444e5b07cca"
+  },
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B14",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "bdb2475cb1079bd054f8e502059a851d3ee3dcd3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260924T053625Z-account02-B14-QFORM-auto11/REPORT.md",
+    "blob_sha": "e53dbed28891bd00f8fe6c2da3b9a8c57d8bcdab",
+    "premise": "finite-measure same-sign Beta compiler, used pointwise in the environment to obtain H=pi L_W L_U/sqrt(|ad|)"
+  },
+  "new_result": {
+    "id": "QFORM-OVERLAP-BETA-THIRD-SQUARE-SUBMEASURE-v1",
+    "statement": "For a same-sign overlap pair of cap H and active output mass M, an independent shifted square sigma e(Y+psi(z))^2 with density cap L_Y and mass m_Y yields ||p||inf <= m_Z min(H m_Y, 2 L_Y sqrt(H M/|e|)); arbitrary independent environment localization remains exactly mass-linear.",
+    "actual_target_application": "principal block [[2,1,0],[1,2,0],[0,0,-4]] has spectrum {3,1,-4}; arbitrary affine terms and outside couplings satisfy ||p||inf <= sqrt(pi/sqrt(3)) = 1.3467736870885985...",
+    "fragment_diagnostic": "for the {3,1,-1} block, one active U-submeasure of mass m has certificate min(pi/sqrt(3), 2 sqrt(pi) 3^(-1/4) sqrt(m)); equal N>=3 fragments cost O(sqrt(N)), while masses 6/(pi^2 j^2) still give divergent sqrt-mass sum"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE"
+  ],
+  "unresolved_implication": "QFORM-WHOLE-ACTIVE-THIRD-SMOOTHER-OR-MASS-LINEAR-EXIT-v1: derive from only s3(A)>=1 a whole overlap plus source-disjoint smoother, or a genuinely mass-linear aggregate slope/volume/ridge/grouped-bank/whole-active exit, before active spatial normalization.",
+  "next_step": "Try to combine the square-root active-fragment branch with a source-disjoint aggregate receiver whose finite-measure exponent upgrades 1/2 to 1, or prove that a surviving matrix chamber forces such a receiver before localization.",
+  "continuity": "separate; not claimed",
+  "full_qform": "OPEN"
+}

@@ -1,0 +1,62 @@
+% Consolidation proposal (referee MED item: ~10 near-identical finite-budget corollaries).
+% Replace the scattered finite-budget corollaries (II.A-fin, II.A-fin-row, II.A-fin-ent,
+% II.A-fin-dir, III.A-fin, III.A-het-row, III.A-het-entry, III.C-fin, ...) by ONE master theorem
+% + a specialization table. Each former corollary becomes a one-line budget computation.
+% This is the union-bound finite-budget principle (A-fin-w) applied to the selected small-ball.
+
+\subsection*{A master finite-budget lower bound}
+
+All of the distribution-free lower-side results have the same two-line proof: a per-submatrix
+small-ball bound feeds the finite-budget principle.  We isolate this once.
+
+\begin{theorem}[Master finite-budget lower bound]\label{thm:master-budget}
+Let $\mathcal T_m$ be a finite family of selectors, and for each $T\in\mathcal T_m$ let $Y_T\ge0$
+satisfy the per-selector small-ball bound
+\[
+  \PP\{Y_T\le t\}\le C_T\,t^{a_m},\qquad 0<t\le1,
+\]
+with a common exponent $a_m>0$ and deterministic constants $C_T\ge0$.  Put the
+\emph{budget} $B_m=\sum_{T\in\mathcal T_m}C_T$.  Then for every $u_m>0$,
+\[
+  \PP\Bigl\{\min_{T\in\mathcal T_m}Y_T\le \exp\bigl[-(\log B_m+u_m)/a_m\bigr]\Bigr\}\le e^{-u_m},
+\]
+and on any common coupling with $\sum_m e^{-u_m}<\infty$ the event fails only finitely often a.s.
+\end{theorem}
+
+\begin{proof}
+Set $t=\exp[-(\log B_m+u_m)/a_m]$, so $B_m t^{a_m}=e^{-u_m}$.  A union bound gives
+$\PP\{\min_T Y_T\le t\}\le\sum_T C_T t^{a_m}=B_m t^{a_m}=e^{-u_m}$.  Summability and the first
+Borel--Cantelli lemma give the almost-sure statement.  No independence is used.
+\end{proof}
+
+Every finite-budget lower side in the paper is Theorem~\ref{thm:master-budget} with the selector
+small-ball constant $C_T$ supplied by the negative-second-moment distance estimate (the row
+distance, resp.\ column distance and Cauchy--Binet block for tall and two-sided cases).  The
+table records the data; in each row $C_F$ absorbs the universal $d_\F$-dimensional ball constant
+and the $m^{O(1)}$ polynomial loss from the $\sqrt m$ in the distance bound.
+
+\begin{center}\small
+\begin{tabular}{l l l l}
+\hline
+ensemble / selector & exponent $a_m$ & selector constant $C_T$ & budget $B_m$\\
+\hline
+square, uniform density $K_m$ & $d_\F$ & $C_F K_m m^{d_\F}$ & $\binom{N_m}{m}C_F K_m m^{d_\F}$\\
+square, row densities $K_{m,i}$ & $d_\F$ & $C_F m^{d_\F}\!\sum_{i\in T}K_{m,i}$ & $C_F m^{d_\F}\binom{N_m-1}{m-1}\!\sum_i K_{m,i}$\\
+square, entry densities $K_{m,i,j}$ & $d_\F$ & $C_F m^{d_\F}\!\sum_q \max_{i\in T}K_{m,i,q}$ & $\sum_{|T|=m}C_T$\\
+square, directional $L_{m,i}$ & $d_\F$ & $C_F m^{d_\F}\!\sum_{i\in T}L_{m,i}$ & $C_F m^{d_\F}\binom{N_m-1}{m-1}\!\sum_i L_{m,i}$\\
+rectangular excess $r$, density $K_m$ & $d_\F(r{+}1)$ & $C_{F,r}K_m^{\,r+1}m^{d_\F(r+1)}$ & $\binom{N_m}{m+r}C_T$\\
+rectangular excess $r$, row $K_{m,i}$ & $d_\F(r{+}1)$ & $C_{F,r}m^{d_\F(r+1)}\max_{S\subset T,|S|=r+1}\prod_{i\in S}K_{m,i}$ & $\sum_{|T|=m+r}C_T$\\
+$k$-th singular value (Gaussian) & $d_\F k^2$ & $C_{F,k}m^{O_k(1)}$ & $\binom{N_m}{m}C_T$\\
+two-sided $k\times k$, density $K_k$ & $d_\F$ & $C_F K_k m^{d_\F}$ & $\binom{N_m}{k}\binom{n_m}{k}C_T$\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{remark}
+Taking $u_m=a_m\varepsilon m$ in Theorem~\ref{thm:master-budget} recovers each
+convergence-in-probability lower side $\liminf_m\tfrac1m\log\min_T Y_T\ge-\lim\tfrac{\log B_m}{a_m m}$,
+and a summable $u_m$ (e.g.\ $u_m=2\log m$) gives the almost-sure lower envelope.  Thus the
+density-rate ($K_m=e^{(\kappa+o(1))m}$), smoothed-frame ($K_m=C\sigma_m^{-d_\F}$),
+moving-aspect (finite-entropy), and conditioning-transfer statements are all read off from the
+single $\log B_m/a_m$ formula by substituting the corresponding budget.
+\end{remark}

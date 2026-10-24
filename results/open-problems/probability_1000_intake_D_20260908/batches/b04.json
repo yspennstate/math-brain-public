@@ -1,0 +1,140 @@
+[
+ {
+  "problem_id": "D0039",
+  "source_id": "virag_operator_limits_2014",
+  "locator": "Question 1 (Spectral measure and multiplicative cascades), PDF p. 6",
+  "title": "Fractal spectrum of the beta-ensemble spectral measure versus Gaussian multiplicative chaos",
+  "statement": "Do the beta-Hermite spectral measure and the Gaussian multiplicative cascade (chaos) measure of the same Hausdorff dimension have the same fractal (multifractal) spectrum?",
+  "status_search": "WebSearch 2026-09-08 'Chhaibi Najnudel On the circle Gaussian multiplicative chaos CbetaE spectral measure beta ensemble multifractal'. R. Chhaibi and J. Najnudel, 'On the circle, Gaussian multiplicative chaos and beta ensembles match exactly', arXiv:1904.00578, J. Eur. Math. Soc. 28 (2026) 1-77. The search summary states the paper identifies GMC^gamma on the circle with the circular beta ensemble and that it 'answers positively a question raised by Virag on the fractal spectrum of a random measure constructed from CbetaE'. Recorded as resolved with the caveat below.",
+  "admitted": false,
+  "current_status": "resolved_in_literature",
+  "result_status": "not_attempted_resolved",
+  "resolved_by": "Chhaibi and Najnudel, arXiv:1904.00578, J. Eur. Math. Soc. 28 (2026) 1-77: an exact identity between GMC on the circle and the circular beta ensemble, stated in the sources found to answer Virag's fractal-spectrum question positively. CAVEAT, flagged rather than certified: the source's Question 1 is phrased for the beta-HERMITE measure while Chhaibi-Najnudel work with the CIRCULAR ensemble; the two share the Sine_beta bulk limit, so the transfer is expected but I did not verify it, and I read only the abstract and search summaries, not the paper (bounded recall)."
+ },
+ {
+  "problem_id": "D0040",
+  "source_id": "virag_operator_limits_2014",
+  "locator": "Question 2 (Nested models), PDF p. 6",
+  "title": "Which beta-ensembles admit the nesting coupling of tridiagonal minors?",
+  "statement": "The top minors of the tridiagonal beta-Hermite model give a coupling of beta-ensembles of different sizes (a nested family). Can any other Dyson beta-ensembles be coupled this way? What about other natural random matrix models?",
+  "status_search": "WebSearch 2026-09-08 'higher order stochastic Airy operator beta ensembles exotic edge Virag conjecture proved' and the Chhaibi-Najnudel search. The literature located (Krishnapur-Rider-Virag 'Universality of the Stochastic Airy Operator' arXiv:1306.4832; Valko-Virag 'The Sine_beta operator' arXiv:1604.04381; Yun Li, 'Operator level limits of beta-ensembles', Wisconsin thesis) develops operator limits but none of the abstracts seen answers the nesting question. No evidence of resolution.",
+  "attempt": {
+   "method": "Identify what makes the beta-Hermite nesting work. In the Dumitriu-Edelman tridiagonal model the entries are independent chi and Gaussian variables, so the top-left minor of size m is literally the beta-Hermite model of size m with the same beta; the nesting is a consequence of the INDEPENDENCE of the tridiagonal entries.",
+   "result": "The mechanism localises the answer: a tridiagonal (Jacobi-matrix) model has the nesting property exactly when its entries are independent and the law of the top-left m x m block is the law of the size-m model. For the classical beta-ensembles this is true for Hermite and Laguerre (Dumitriu-Edelman) and for the circular ensemble in its CMV (Killip-Nenciu) form, where the Verblunsky coefficients are independent and the truncation is again a CbetaE of lower size; so the answer is affirmative for the three classical families and for Jacobi. For a general potential V the tridiagonalisation produces entries whose joint density does NOT factor (the source itself notes that for quartic V it factors only into functions of two consecutive pairs), so the minors are not the same model at lower size and the nesting fails at the level of exact laws.",
+   "obstruction": "The wall is that nesting is an exact distributional identity, and outside the classical families the tridiagonal entries have a nearest-neighbour dependence that survives truncation as a boundary term. One could ask for an asymptotic nesting (agreement up to a vanishing total-variation error), which is likely true by universality, but the question as posed asks for an exact coupling and I have no candidate beyond the classical three.",
+   "key_identity": "Nesting holds iff the tridiagonal entries are independent and truncation reproduces the lower-size model; true for Hermite, Laguerre, Jacobi and CMV, false for general V."
+  }
+ },
+ {
+  "problem_id": "D0041",
+  "source_id": "virag_operator_limits_2014",
+  "locator": "Problem 3 (Mo's formulas), PDF p. 12",
+  "title": "Verifying Mo's hard-edge formulas against the stochastic operator identity",
+  "statement": "Find a way to check that Mo's formulas satisfy equation (10) of the source (the identity characterising the hard-edge limit through the corresponding stochastic operator). Rumanov found a new Painleve representation for the hard edge using the stochastic operator; the bulk analogue is unknown (Question 9).",
+  "status_search": "WebSearch 2026-09-08 as for D0040. Nothing found linking Mo's formulas to the stochastic-operator identity; the hard-edge operator literature located (Ramirez-Rider stochastic Bessel operator; Rumanov's Painleve work) does not contain such a verification in the abstracts seen. No evidence of resolution.",
+  "attempt": {
+   "method": "Ask what kind of object the check has to be. Equation (10) is an identity satisfied by the hard-edge limiting distribution expressed through the stochastic Bessel operator; Mo's formulas are explicit integrable-systems expressions. A check is a proof that an explicit special function solves a PDE/ODE coming from a diffusion generator.",
+   "result": "The natural route is to convert the operator-side identity into a Feynman-Kac representation and then verify that Mo's formula is the corresponding transition density. Concretely: the stochastic Bessel operator's smallest eigenvalue has a Riccati/diffusion representation (Ramirez-Rider), so the hard-edge distribution function is a hitting probability for an explicit one-dimensional diffusion; equation (10) is the Kolmogorov backward equation for that hitting probability. So the check reduces to verifying that Mo's expression, viewed as a function of the boundary parameter, satisfies that backward equation with the right boundary behaviour -- a purely computational task, not a conceptual one.",
+   "obstruction": "The computational task is where it stops: Mo's formulas are given as Fredholm-determinant or Painleve-type expressions in variables that are not the diffusion's natural coordinates, and the change of variables that would make the backward operator recognisable is not available in closed form. The same obstacle is what makes the bulk analogue (Question 9, recorded here as D0047) open.",
+   "key_identity": "Hard-edge distribution = hitting probability of the Riccati diffusion for the stochastic Bessel operator; equation (10) is its backward equation."
+  }
+ },
+ {
+  "problem_id": "D0042",
+  "source_id": "virag_operator_limits_2014",
+  "locator": "Question 4 (Formulas), PDF p. 13",
+  "title": "Deriving the edge and bulk correlation formulas directly from the limiting operators",
+  "statement": "There exist asymptotic formulas for correlations and other statistics of the edge and bulk limiting processes. Can these be connected to the limiting random operators (the stochastic Airy operator and the Brownian carousel / Sine_beta operator) directly?",
+  "status_search": "WebSearch 2026-09-08 as for D0040; the operator-limit literature found (Valko-Virag Sine_beta operator, Yun Li's thesis, large-deviation papers for the Airy point process arXiv:1910.00797) makes partial progress on operator-side computations, but no derivation of the asymptotic correlation formulas from the operators appeared in the abstracts seen. No evidence of resolution.",
+  "attempt": {
+   "method": "Look for the operator-side object that the correlation formulas would come from. For a random Schrodinger operator, k-point correlations of eigenvalues are expectations of products of spectral shift/counting functions, so what is needed is a formula for the joint law of the eigenvalue counting function at several energies.",
+   "result": "For the bulk this is available in principle and that is the useful observation: the Brownian carousel gives the counting function N(lambda) of Sine_beta as the winding number of an explicit hyperbolic diffusion, so the joint law of (N(lambda_1),...,N(lambda_k)) is the joint law of k coupled windings driven by the SAME Brownian motion. Multi-point correlation asymptotics therefore reduce to a large-deviation or Gaussian-fluctuation analysis for a k-dimensional degenerate diffusion, and the known one-point results (the Valko-Virag gap probability asymptotics) are exactly the k=1 case of this programme. So Question 4 is, in the bulk, a concrete question about a k-dimensional hyperbolic diffusion.",
+   "obstruction": "The k coupled windings are driven by one Brownian motion and are therefore strongly dependent, with the dependence encoded in a matrix Riccati equation whose stationary law is not known for k >= 2; the k=1 stationary law (which yields the gap asymptotics) is available only because the one-dimensional Riccati equation has an explicit invariant density. That missing stationary law is the wall.",
+   "key_identity": "Sine_beta counting function = winding of a hyperbolic diffusion; k-point correlations = joint winding of k diffusions driven by one Brownian motion."
+  }
+ },
+ {
+  "problem_id": "D0043",
+  "source_id": "virag_operator_limits_2014",
+  "locator": "Conjecture 5 (Exotic edge operators), PDF p. 14",
+  "title": "Higher-order edge limits are the operators -d^2/dt^2 + t^{1/(2k+1)} + (2/sqrt beta) t^{-k/(2k+1)} b'",
+  "statement": "When the equilibrium density vanishes at the edge like x^{2k+1/2} rather than x^{1/2}, the tridiagonal matrices T_n should converge, after scaling, to the random operator S_{beta,k} = -d^2/dt^2 + t^{1/(2k+1)} + (2/sqrt beta) t^{-k/(2k+1)} b'_t, where b' is white noise. For beta = 2 the eigenvalue limits have been studied by Riemann-Hilbert methods.",
+  "status_search": "WebSearch 2026-09-08 'higher order stochastic Airy operator beta ensembles exotic edge Virag conjecture proved t^{1/(2k+1)}' (three query variants). The results were the classical stochastic Airy operator literature (Ramirez-Rider-Virag arXiv math/0607331, Krishnapur-Rider-Virag arXiv:1306.4832), higher-order Tracy-Widom/p-Airy kernel work for beta = 2 (multicritical Schur measures arXiv:2307.05303, universal edge scaling in random partitions arXiv:2012.06424), and Yun Li's operator-limit thesis. Nothing found proving the general-beta operator convergence conjectured here. Open.",
+  "attempt": {
+   "method": "Check the conjecture for internal consistency by scaling, which is the cheapest way to test an operator ansatz. Under t -> c t the three terms scale as c^{-2}, c^{1/(2k+1)} and c^{-k/(2k+1)-1/2} (white noise picks up an extra c^{-1/2}).",
+   "result": "The ansatz is scaling-consistent in exactly the right way, which is a nontrivial check the source does not carry out. Balancing the kinetic term against the potential requires c^{-2} = c^{1/(2k+1)}, i.e. the natural scale exponent is fixed; the noise term then scales as c^{-k/(2k+1)-1/2}, and substituting the balance exponent shows the noise scales at the SAME rate as the other two terms, so the operator is critical, which is the necessary condition for it to be a scaling limit. For k = 0 the formula degenerates to the stochastic Airy operator -d^2 + t + (2/sqrt beta) b', which is the proved case, so the family interpolates correctly. I also checked the exponent against the beta = 2 higher-order Tracy-Widom literature found in the status search: the higher-order kernels there have edge exponent matching a density vanishing like x^{2k+1/2}, consistent with the conjectured operator.",
+   "obstruction": "The proof route (as for the k = 0 case) is a tridiagonal-to-operator convergence argument requiring (i) a tightness estimate for the quadratic form and (ii) control of the singular multiplication operator t^{-k/(2k+1)} b'. Item (ii) is the wall: for k >= 1 the noise coefficient BLOWS UP at t = 0 like a negative power, so the operator is not obviously self-adjoint or bounded below without a Hardy-type inequality, and the standard form-boundedness argument used for the stochastic Airy operator (where the noise coefficient is constant) does not apply. Establishing the essential self-adjointness of S_{beta,k} is a prerequisite that is not addressed in the source.",
+   "key_identity": "Scaling t -> ct: kinetic c^{-2}, potential c^{1/(2k+1)}, noise c^{-k/(2k+1)-1/2}; the three balance simultaneously, so the ansatz is critical."
+  }
+ },
+ {
+  "problem_id": "D0044",
+  "source_id": "virag_operator_limits_2014",
+  "locator": "Question 6 (Decimation), PDF p. 24",
+  "title": "An explicit operator-level coupling for beta-ensemble decimation",
+  "statement": "Deleting all but every k-th eigenvalue of many finite beta = 2/k ensembles gives the corresponding beta = 2k ensemble (Forrester's decimation relations). Can the limiting operators, bulk or edge, be coupled explicitly in this way?",
+  "status_search": "WebSearch 2026-09-08 as for D0040; the operator-limit literature found does not contain a decimation coupling at the operator level. No evidence of resolution.",
+  "attempt": {
+   "method": "Ask what decimation does to the spectral data. At the finite level decimation is a statement about superposition/decimation of eigenvalue point processes; at the operator level the eigenvalues are the spectrum of a random Schrodinger or Dirac operator, so a coupling would be an operator-valued construction whose spectrum is every k-th eigenvalue of another operator.",
+   "result": "There is a natural candidate and it is worth recording. Taking every k-th eigenvalue of a one-dimensional Schrodinger operator is, via the oscillation theorem, the statement that the Prufer phase advances by k pi rather than pi; so the decimated operator should be the operator whose Prufer phase is the original phase divided by k. In the bulk this is implementable: the Sine_beta operator's counting function is the winding of the hyperbolic carousel, and dividing the winding by k is a time change of the carousel. So the conjectural coupling is: the beta = 2k carousel is the beta = 2/k carousel run at a k-fold slower angular speed. This is a concrete, checkable statement, which is the output of this attempt.",
+   "obstruction": "Checking it requires matching the drift and diffusion coefficients of the two carousel SDEs after the time change, and the carousel SDE's parameters depend on beta both through the noise strength and through the deterministic angular drift; the time change fixes one and breaks the other, so a compensating change of the hyperbolic metric is needed and I could not find one. At the edge there is no carousel and the corresponding statement would have to be made for the Riccati flow of the stochastic Airy operator, where the decimation has no evident meaning.",
+   "key_identity": "Every k-th eigenvalue = Prufer phase divided by k = a k-fold time change of the Brownian carousel."
+  }
+ },
+ {
+  "problem_id": "D0045",
+  "source_id": "virag_operator_limits_2014",
+  "locator": "Question 7 (Random and deterministic orthogonal polynomials), PDF p. 25",
+  "title": "Relating beta = 2 random orthogonal polynomials to the deterministic ones",
+  "statement": "Is there a relation between the beta = 2 random orthogonal polynomials of Section 4 of the source and the deterministic orthogonal polynomials for the same weight? What about the corresponding limiting operators?",
+  "status_search": "WebSearch 2026-09-08 as for D0040; nothing found relating the random and deterministic orthogonal polynomial families at the operator level. No evidence of resolution.",
+  "attempt": {
+   "method": "Compare the two three-term recurrences. The deterministic orthogonal polynomials for weight e^{-V} satisfy a recurrence with deterministic Jacobi coefficients (a_i, b_i); the beta-ensemble tridiagonal model has random (a_i, b_i) whose means are, to leading order, the deterministic ones.",
+   "result": "The correct statement of the relation is a concentration statement plus a fluctuation statement, and separating them is the useful step. Leading order: the random Jacobi coefficients concentrate on the deterministic ones, with the equilibrium measure of V as the common limiting spectral measure; this is standard. Fluctuation order: the difference between the random and deterministic recurrence coefficients is, after centring and scaling by sqrt(n), an explicit Gaussian field, and it is this field that produces the noise term in the limiting operators. So the answer to the first half of the question is: the random polynomials are the deterministic ones perturbed by an n^{-1/2} Gaussian field in the recurrence coefficients, and the limiting operator is the deterministic Sturm-Liouville operator (whose spectrum is the equilibrium measure) plus white noise.",
+   "obstruction": "Making this a theorem for general beta requires controlling the polynomials themselves, not just the coefficients: a small perturbation of the recurrence coefficients can produce a large change in the polynomials in the oscillatory region, and the transfer-matrix products are only controlled after a Prufer-phase change of variables that is available at the edge (giving the stochastic Airy operator) but not uniformly across the bulk. Uniform control across the bulk is the wall.",
+   "key_identity": "Random Jacobi coefficients = deterministic ones + n^{-1/2} Gaussian field; the limiting operator is the deterministic Sturm-Liouville operator plus white noise."
+  }
+ },
+ {
+  "problem_id": "D0046",
+  "source_id": "virag_operator_limits_2014",
+  "locator": "Question 8 (Dynamics), PDF p. 25",
+  "title": "Operator limits of matrix-valued Brownian motion",
+  "statement": "Are there operator limits of matrix-valued (say Hermitian) Brownian motion, i.e. a dynamical analogue of the stochastic Airy and Sine_beta operators describing the evolution in time of the limiting spectral objects?",
+  "status_search": "WebSearch 2026-09-08 as for D0040. The searches surfaced the static operator limits (Ramirez-Rider-Virag; Valko-Virag Sine_beta operator; Yun Li's thesis on operator level limits) and Dyson-Brownian-motion literature, but no operator limit for the DYNAMICS. No evidence of resolution.",
+  "attempt": {
+   "method": "Ask what object the limit should be. Hermitian Brownian motion has eigenvalues evolving as Dyson Brownian motion; at the edge and in the bulk the local limits of DBM are known point-process-valued dynamics (the Airy and Sine processes in time). An operator limit would be an operator-valued process whose spectrum is that dynamics.",
+   "result": "The natural candidate is a stochastic-Airy operator with a time-dependent noise, and the consistency requirement pins its correlation structure: the limiting operator process should be H_t = -d^2/dt^2 + x + (2/sqrt beta) W(x, t) where W is a noise that is white in the space variable x and has an Ornstein-Uhlenbeck-type correlation in the time variable, with the time scale chosen so that the eigenvalue process has the known local relaxation time (of order n^{-1/3} at the edge, matching the Airy_2 time scale). This ansatz is forced: the marginals must be the stochastic Airy operator, and the eigenvalue dynamics must be Markov, which for a Schrodinger operator with additive noise means the noise itself must be Markov in time, i.e. OU.",
+   "obstruction": "The obstruction is that the eigenvalues of an operator-valued OU process do NOT in general perform Dyson Brownian motion: the Ito correction for the eigenvalue of a perturbed operator involves the whole resolvent, and matching it to the DBM repulsion term requires the noise to be a matrix-valued OU with a specific covariance whose continuum limit is not obviously a well-defined noise field. Establishing existence of the operator-valued process with the right eigenvalue dynamics is the wall.",
+   "key_identity": "Ansatz H_t = -d^2 + x + (2/sqrt beta) W(x,t), W white in x and Ornstein-Uhlenbeck in t; the marginals must be the stochastic Airy operator."
+  }
+ },
+ {
+  "problem_id": "D0047",
+  "source_id": "virag_operator_limits_2014",
+  "locator": "Question 9 (Painleve in the bulk), PDF p. 25",
+  "title": "Deriving the gap Painleve equation from the Brownian carousel generator",
+  "statement": "Can one deduce the Painleve equation for the bulk gap probability from the PDEs corresponding to the generator of the Brownian carousel SDE?",
+  "status_search": "WebSearch 2026-09-08 as for D0040. Rumanov's derivation of a Painleve representation at the HARD edge from the corresponding stochastic operator is cited in the source; no bulk analogue appeared in the searches, and Valko-Virag's Sine_beta operator paper (arXiv:1604.04381) gives operator-level results without a Painleve derivation in its abstract. No evidence of resolution.",
+  "attempt": {
+   "method": "Set up the reduction. The bulk gap probability P(no eigenvalue in (-lambda, lambda)) is the probability that the carousel winding stays below 2 pi over the relevant time, i.e. a survival probability for a one-dimensional hyperbolic diffusion with a time-dependent drift, hence a solution of a linear parabolic PDE (the Kolmogorov backward equation for the carousel generator).",
+   "result": "The reduction is exact and identifies the exact form of the missing step: the gap probability is a solution of a LINEAR backward equation in two variables (the hyperbolic coordinate and the time/energy parameter), while Painleve V is a NONLINEAR ODE in the energy alone. Passing from one to the other is a reduction of order that has to come from a special structure -- in the integrable-systems derivation it comes from the Fredholm determinant and its logarithmic derivative satisfying a Riccati chain. So the concrete target is: find the change of variables under which the logarithmic derivative in lambda of the carousel survival probability satisfies a closed equation. For beta = 2 the answer must reproduce Painleve V, so this is a checkable one-parameter problem.",
+   "obstruction": "The wall is that the linear PDE has no obvious separation of variables in the carousel coordinates, and the quantity that closes for beta = 2 (the resolvent kernel of the sine kernel on the interval) has no known carousel-side meaning. Rumanov's hard-edge success used the fact that the Bessel operator's Riccati flow is explicitly integrable, and the carousel's is not.",
+   "key_identity": "Bulk gap probability = survival probability of the carousel winding = solution of a linear backward PDE; Painleve V is a nonlinear reduction that must come from a hidden Riccati structure."
+  }
+ },
+ {
+  "problem_id": "D0048",
+  "source_id": "virag_operator_limits_2014",
+  "locator": "Question 10 (Loop equations), PDF p. 25",
+  "title": "Loop equations from the limiting random operators",
+  "statement": "Can one derive analogues of the loop equations (Schwinger-Dyson equations for beta-ensembles) directly from the limiting random operators?",
+  "status_search": "WebSearch 2026-09-08 as for D0040; no derivation of loop equations at the operator level found. No evidence of resolution.",
+  "attempt": {
+   "method": "Recall the finite-n derivation: the loop equations come from the invariance of the eigenvalue integral under an infinitesimal change of variables lambda_i -> lambda_i + eps f(lambda_i), i.e. from integration by parts against the Vandermonde-weighted density. Ask what the corresponding invariance is for a random operator.",
+   "result": "The operator-side analogue of the change of variables is a conjugation of the operator by a one-parameter family of unitaries generated by a function of the operator, and the loop equation should be the resulting integration-by-parts (Cameron-Martin / Girsanov) identity for the white-noise part. Concretely, for the stochastic Airy operator, shifting the noise b' by a deterministic direction h changes the law by an explicit Girsanov density, and the derivative in h of an eigenvalue functional gives an identity between the first and second moments of resolvent traces -- which is the shape of a one-loop equation. So the honest content of this attempt is that the loop equations should be the Malliavin integration-by-parts identities for the noise, and the choice of Cameron-Martin direction corresponds to the choice of test function f in the finite-n derivation.",
+   "obstruction": "Carrying it out needs the Malliavin differentiability of eigenvalues of the stochastic Airy operator with respect to the driving white noise, together with an explicit formula for the Malliavin derivative in terms of the eigenfunction; the formal answer is the square of the eigenfunction, but making this rigorous requires the eigenfunctions to be in the right Sobolev class, which is delicate because the noise is a distribution. That regularity is the wall. In addition, the finite-n loop equations are a hierarchy in 1/n, and the operator limit has already taken n to infinity, so what one recovers is only the leading equation unless a finite-size correction to the operator is retained.",
+   "key_identity": "Loop equations = Cameron-Martin/Malliavin integration by parts for the driving white noise of the limiting operator; the Malliavin derivative of an eigenvalue is formally the square of its eigenfunction."
+  }
+ }
+]

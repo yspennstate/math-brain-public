@@ -1,0 +1,109 @@
+\begin{theorem}[Affine-code row completion]
+Let
+\[
+ f:\{-1,1\}^X\times\{-1,1\}^Y\longrightarrow\{-1,1\}
+\]
+be Boolean under the uniform product law, and suppose its $X$-Fourier
+degree is at most the integer $d\geq1$.  Put
+\[
+ a_R(y)=\mathbb E_x f(x,y)\chi_R(x),\qquad
+ p_R=\mathbb E_y a_R(y)^2=\sum_T\widehat f(R,T)^2.
+\]
+Assume that for every $R$ with $p_R>0$ there is a Boolean function
+$\sigma_R:\{-1,1\}^Y\to\{-1,1\}$ such that
+\[
+ a_R(y)=\sqrt{p_R}\,\sigma_R(y),                                      \tag{1}
+\]
+after absorbing a constant sign into $\sigma_R$, and that each nonconstant
+$\sigma_R$ is an affine-code defect: after identifying the $Y$-cube with
+$\mathbb F_2^Y$,
+\[
+ \sigma_R(y)=1-2\mathbf 1_{A_R}(y),                                   \tag{2}
+\]
+where $A_R$ is a coset of a linear subspace of codimension $k_R\geq1$.
+Then the full conditional spectral entropy is paid by physical
+$Y$-influence:
+\[
+ H(S_Y\mid S_X)=\sum_Rp_R H(\widehat{\sigma_R}^{,2})
+ \leq4\sum_Rp_R I(\sigma_R)=4I_Y(f).                                  \tag{3}
+\]
+Consequently, with the Boolean-granularity deficit $\Gamma_d$ from the
+preceding phase-energy theorem,
+\[
+ \boxed{
+ H(f)\leq\left(4+{2\over\ln2}\right)I_Y(f)+2(d-1)
+          -\mathbb E_y\Gamma_d(f_y).}                                  \tag{4}
+\]
+No Fourier entropy--influence inequality is assumed in this conclusion.
+\end{theorem}
+
+\begin{proof}
+Equation (1) gives
+$\widehat f(R,T)=\sqrt{p_R}\,\widehat{\sigma_R}(T)$.  Hence the positive
+conditional fiber $q_R(T)=\widehat f(R,T)^2/p_R$ is precisely
+$\widehat{\sigma_R}(T)^2$, and
+\[
+ I_Y(f)=\sum_{R,T}|T|\widehat f(R,T)^2
+       =\sum_Rp_R I(\sigma_R).                                        \tag{5}
+\]
+
+It remains to prove the constant four for one affine-code defect.  Let
+$A=z+V\subseteq\mathbb F_2^Y$ have codimension $k$, let
+$\delta=|A|/2^{|Y|}=2^{-k}$, and let $W=V^\perp$.  Fourier inversion for
+the coset indicator gives
+\[
+ \widehat{\mathbf1_A}(T)=
+ \begin{cases}
+   \delta(-1)^{T\cdot z},&T\in W,\\
+   0,&T\notin W.
+ \end{cases}
+\]
+Therefore the squared Fourier law of $\sigma=1-2\mathbf1_A$ has mass
+$(1-2\delta)^2$ at $\varnothing$ and mass $4\delta^2$ at every one of the
+$2^k-1$ nonzero words of $W$.  If
+$\varepsilon=4\delta(1-\delta)$, then exactly
+\[
+ H(\widehat\sigma^{,2})
+   =h_2(\varepsilon)+\varepsilon\log_2(2^k-1).                         \tag{6}
+\]
+
+Let $r$ be the number of active coordinates of $W$, i.e. the size of the
+union of the supports of its words.  Every active coordinate equals one
+on exactly half of $W$, so
+\[
+ I(\sigma)=4\delta^2\sum_{T\in W}|T|
+          =4\delta^2r2^{k-1}=2r\delta\geq2k\delta.                    \tag{7}
+\]
+For $k\geq3$, the elementary binary-entropy estimate used in the anchored
+tail theorem gives
+\[
+ h_2(\varepsilon)\leq k\varepsilon,
+ \qquad
+ H(\widehat\sigma^{,2})\leq2k\varepsilon
+ \leq8k\delta\leq4I(\sigma).                                        \tag{8}
+\]
+For $k=1$ the spectrum is a character and its entropy is zero.  For $k=2$
+the entropy equals two bits, while (7) gives $I(\sigma)\geq1$, so the same
+constant-four assertion holds (in fact with constant two).  Averaging this
+bound in $R$ and using (5) proves (3).  Adding (3) to the already proved
+marginal phase-energy estimate
+\[
+ H(S_X)\leq {2\over\ln2}I_Y(f)+2(d-1)-\mathbb E_y\Gamma_d(f_y)
+\]
+proves (4).
+\end{proof}
+
+\paragraph{Tensor guard.}
+For a separated tensor $f(x,y)=u(x)g(y)$, every nonzero normalized row in
+(1) equals $\pm g$.  Thus (2) admits the tensor only when $g$ itself is an
+affine-code defect (or a constant).  If a positive-entropy affine-code
+defect has codimension $k\geq2$ and minority density $\delta=2^{-k}$,
+the minority density of $g^{\otimes2}$ is
+\[
+ 2\delta(1-\delta)={2^k-1\over2^{2k-1}},
+\]
+which is not a reciprocal power of two.  It therefore cannot be the density
+of an affine subspace coset.  Hence no repeated positive-entropy tensor core
+is admitted by the row condition; characters are the only repeatable
+affine-code defects, and they have zero spectral entropy.
+

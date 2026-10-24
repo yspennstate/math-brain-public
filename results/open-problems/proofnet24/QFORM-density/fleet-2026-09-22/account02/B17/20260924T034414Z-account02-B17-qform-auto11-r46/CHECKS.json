@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T034414Z-account02-B17-qform-auto11-r46",
+  "claim": "QFORM-ZEROPIVOT-THREEVAR-SHARP-BARRIER-v1",
+  "symbolic_checks": {
+    "rotated_matrix": "[[r,d,L],[d,kappa,0],[L,0,0]]",
+    "determinant": "det(A)=-L^2*kappa",
+    "spectral_row_payment": "A^2 >= I => L^2=(A^2)_22>=1",
+    "determinant_payment": "all |lambda_j|>=1 => |det A|>=1 => |kappa|>=L^-2",
+    "u_marginal_cap": "u=alpha X+beta Z, alpha^2+beta^2=1 => ||m||_infty<=1/max(|alpha|,|beta|)<=sqrt(2)",
+    "parabola_cap": "I_s(u)<=2*sqrt(2L|u|/|kappa|)",
+    "capacity_crossover": "u0=|kappa|/(4L)",
+    "core_mass": "sqrt(2)|kappa|/(3L)",
+    "case1_bound": "(48/(L^2|kappa|))^(1/3)<=2sqrt(2)",
+    "case2_bound": "sqrt(2)/L*[2+log(sqrt(2)L/|kappa|+1/3)]",
+    "case2_spectral_reduction": "<=sqrt(2)/L*[2+log(sqrt(2)L^3+1/3)]",
+    "monotonicity": "with z=sqrt(2)L^3+1/3, derivative sign = 1-1/z-log(z)<=0",
+    "universal_zero_pivot_constant": "sqrt(2)*(2+log(sqrt(2)+1/3))"
+  },
+  "numerical_checks": {
+    "C0": 3.617859563383761,
+    "three_sqrt_two": 4.242640687119286,
+    "gap": 0.6247811237355245,
+    "triangle_spectrum": [2, -1, -1],
+    "triangle_global_bound": 2.8472978603872034,
+    "triangle_pinned_onesheet_bound": 3.6275987284684357,
+    "triangle_gaussian_partner_peak": 3.4641016151377544
+  },
+  "triangle_exact": {
+    "matrix": "[[0,1,1],[1,0,1],[1,1,0]]",
+    "characteristic_polynomial": "(lambda-2)(lambda+1)^2",
+    "pivot_parameters": "L=sqrt(2), |kappa|=1, K=1/sqrt(2)",
+    "global_bound": "2+log(7/3)",
+    "pinned_application": "Theorem C applied to -A: 2pi/sqrt(3) on s>=0 for -Q, equivalently s<=0 for Q",
+    "partner_application": "account03/B17 r46 Gaussian strict-slack theorem with v0=1/12,s=1,delta=1: exact 2sqrt(3)"
+  },
+  "scope_guards": {
+    "post_rotation_independence_used": false,
+    "moments_used": false,
+    "support_bound_used": false,
+    "log_concavity_used": false,
+    "continuity_claimed_globally": false,
+    "full_qform_claimed": false
+  },
+  "status": "PASS"
+}

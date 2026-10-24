@@ -1,0 +1,100 @@
+\section*{Row-wise bent lifts of product-conditioned address constructions}
+
+Let $y\in\mathbb F_2^a$, $x\in\mathbb F_2^m$, and suppose
+\[
+ F_0(y,x)=\sum_{z\in\mathbb F_2^a}\chi_z(y)h_z(x),
+ \qquad h_z:\mathbb F_2^m\to\{0,\pm1\},
+\]
+where for every $x$ exactly one $h_z(x)$ is nonzero.  Thus $F_0$ is a
+Boolean sign.  Put
+\[
+ \alpha_z=\mathbb E_xh_z(x)^2.
+\]
+Assume that for every $z$ with $\alpha_z>0$, the normalized squared Walsh
+law
+\[
+ P_z(s)=\widehat h_z(s)^2/\alpha_z
+\]
+is a product law on $\mathbb F_2^m$.
+
+For $k\ge0$, define the quadratic bent sign
+\[
+ B_k(u_1,\ldots,u_{2k})
+ =(-1)^{u_1u_2+u_3u_4+\cdots+u_{2k-1}u_{2k}}.
+\]
+Its squared Walsh law is uniform on $\mathbb F_2^{2k}$, hence has entropy
+$2k$ and mean Fourier degree $k$.
+
+Choose arbitrary integers $k_z\ge0$ and let $K=\max_z k_z$.  Regard
+$B_{k_z}$ as a sign on a common $u\in\mathbb F_2^{2K}$ by ignoring the last
+$2(K-k_z)$ coordinates, and define
+\[
+ F_{\boldsymbol k}(y,x,u)
+ =\sum_z\chi_z(y)h_z(x)B_{k_z}(u).
+\]
+
+\paragraph{Theorem.}
+$F_{\boldsymbol k}$ is a genuine Boolean sign for every
+$\boldsymbol k=(k_z)_z$.  Every address-conditioned squared spectral row
+remains a product law, and
+\[
+ \mathcal H(F_{\boldsymbol k})
+ =\mathcal H(F_0)+2\sum_z\alpha_zk_z,
+ \qquad
+ \mathcal I(F_{\boldsymbol k})
+ =\mathcal I(F_0)+\sum_z\alpha_zk_z.                 \tag{1}
+\]
+
+\paragraph{Proof.}
+At a fixed $x$, exactly one row is active, so
+$F_{\boldsymbol k}(y,x,u)$ is a product of three signs and is therefore
+Boolean.  Orthogonality of the $y$-characters gives
+\[
+ \widehat F_{\boldsymbol k}(z,s,t)
+ =\widehat h_z(s)\widehat B_{k_z}(t),                \tag{2}
+\]
+where the unused $u$-coordinates have deterministic zero Fourier frequency.
+The row mass is still $\alpha_z$.  Conditional on $z$, (2) is the tensor
+product of $P_z$, $2k_z$ fair spectral bits, and deterministic zero bits;
+it is therefore a product law.
+
+The global squared spectrum first chooses $z$ with probability $\alpha_z$.
+The entropy chain rule and (2) give
+\[
+ H(F_{\boldsymbol k})
+ =H(\alpha)+\sum_z\alpha_z\{H(P_z)+2k_z\}.
+\]
+The same formula at $\boldsymbol k=0$ yields the entropy identity in (1).
+Fourier degree splits as $|z|+|s|+|t|$.  The first two terms reproduce
+$\mathcal I(F_0)$, while the uniform $2k_z$-bit spectral law has mean degree
+$k_z$.  This proves the influence identity.\qed
+
+\paragraph{The six-variable $40/17$ seed.}
+For the A071 seed, the four row masses are
+\[
+ (\alpha_0,\alpha_1,\alpha_2,\alpha_3)
+ =\left(\frac58,\frac18,\frac18,\frac18\right),
+\]
+and
+\[
+ H(F_0)=5,\qquad I(F_0)=\frac{17}{8}.
+\]
+Writing
+\[
+ L=5k_0+k_1+k_2+k_3,
+\]
+formula (1) becomes
+\[
+ H(F_{\boldsymbol k})=5+\frac L4,
+ \qquad I(F_{\boldsymbol k})=\frac{17+L}{8},
+ \qquad
+ \frac{H}{I}=\frac{40+2L}{17+L}.                     \tag{3}
+\]
+Thus
+\[
+ \frac{H(F_{\boldsymbol k})}{I(F_{\boldsymbol k})}
+ \le\frac{40}{17},
+\]
+with equality only at $L=0$, and the ratio tends to $2$ whenever
+$L\to\infty$.
+

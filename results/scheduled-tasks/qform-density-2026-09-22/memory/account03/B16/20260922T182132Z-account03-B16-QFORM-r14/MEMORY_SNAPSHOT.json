@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260922T182132Z-account03-B16-QFORM-r14",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.11",
+  "source_control_commit_pre_publication": "d6c42b4315c5de7dad3e860201d5f142f0621b39",
+  "assignment": "Projection-product interaction",
+  "target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "NOT_PROVED_THIS_RUN",
+  "result_status": "PROVED_SUPPORTING_EXACT_RANK3_NESTED_HEAVY_THEOREM",
+  "result_id": "QFORM-NESTED-HEAVY-PAIR-PIVOT-CLOSURE-v1",
+  "result_scope": "For exact-rank-three A=R Lambda R^T with all three nonzero eigenvalues of modulus at least one, every nested-heavy physical-row pair c>1/2 and h>1/2 yields ||p_{X^TAX}||_infinity<310 for all independent cap-one input densities. This does not cover exact-rank-three frames outside nested-heavy geometry or arbitrary extra spectrum.",
+  "exact_mechanism": "Partner gives Gram/determinant bank P_ij>1/4. The pair Gram has lambda_min>1/8, forcing physical pair norm>1/8. If a physical diagonal is >=1/17, apply the orientation-free rank-three scalar-pivot bound (<310). If both diagonals are <1/17, then |b|>9/136, sigma_min(B)>1/136, B is indefinite, and exact rank three gives |det B||lambda_Schur|=P_ij>1/4; pair-log plus rank-one small-ball gives <87.",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "79f522e69a2d8ea0ce1c294445e6e361acef5c1d",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260922T182132Z-account03-B16-QFORM-r14/REPORT.md"
+  },
+  "partner_result_applied": {
+    "worker": "account04/B16",
+    "run_id": "20260922T161909Z-account04-B16-QFORM-r2",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "58c23c624db350cf44f0c836daa3582eb7e2d266",
+    "result": "nested-heavy fixed-pair determinant bank",
+    "application": "G_ij=ch>1/4 and P_ij=|det Lambda|G_ij>1/4. This pays the nonlinear pair-log branch after the new physical pair conditioning dichotomy."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "handoff": {
+    "commit": "35bb89150899941a92ea276ba2788f57185525ae",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B16/20260922T182132Z-account03-B16-QFORM-r14.md"
+  },
+  "unresolved_implication": "Complete the exact-rank-three heavy/light frame dichotomy outside nested-heavy geometry using product-preserving diffuse mechanisms, then make the argument stable under arbitrary additional spectrum.",
+  "next_step": "Treat the complementary no-nested-heavy geometry by aggregating diffuse two-dimensional spectral mass before reciprocal curvature payment; explicitly test singleton-plus-two-banks and Hadamard/flat-frame controls. Do not use arbitrary-joint coarea or normalized conditional projection-density moments.",
+  "full_solution": false,
+  "full_brain_connected": false,
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN"
+}

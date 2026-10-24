@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B17",
+  "run_id": "20260922T170559Z-account03-B17-QFORM-r13",
+  "source_control_commit_at_start": "1d592be85fec31522f1583c06994dbc0d2035860",
+  "source_control_commit_before_publication": "08956a85efb73ffa385eb5833f486f128abf00cb",
+  "owner_control_revision": "2026-09-22.8",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "assignment": "Sharp constant and witnesses",
+  "corrections_consumed": [
+    "bounded-density pointwise van-der-Corput shortcut is false",
+    "QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1"
+  ],
+  "mathematical_premises": [
+    {
+      "claim": "The general universal constant must satisfy C >= 3 sqrt(2).",
+      "scope": "known diffuse Gaussian-limit lower bound; not a proof of an upper bound"
+    },
+    {
+      "claim": "For a fixed finite tight frame W with W^T W=I_3, repeated interval summands admit the standard fixed-dimensional local Edgeworth expansion obtained from the exact sinc characteristic function.",
+      "scope": "centered iid Unif[-1/2,1/2] physical inputs and fixed W only"
+    },
+    {
+      "claim": "account04/B18 Schur-pivot theorem: ||p_Q||_inf <= 2 sqrt(pi)/|a det B|^(1/4) when the selected physical 3x3 block has a nonzero pivot a and definite Schur complement.",
+      "scope": "compatible completed partner-account theorem, not the designated B17 partner"
+    }
+  ],
+  "new_result": {
+    "status": "PROVED_SUBCLASS_SHARP_WITNESS_EXCLUSION",
+    "statement": "For every fixed finite d x 3 tight frame W, repeated m times at scale m^{-1/2}, A_m=R_m diag(1,1,-1) R_m^T has exact nonzero spectrum {1,1,-1}. With iid density-one centered interval inputs, p_Qm(0)=3sqrt(2)[1-A_W/(20m)+O_W(m^-2)], where A_W=(3/32) sum_k(19x_k^2+40x_k y_k+8y_k^2)>0. In physical dimension N=dm the first relative coefficient gamma_W is at least gamma_*=(63+6sqrt(38))/160, and this infimum is sharp across finite patterns.",
+    "scope_limits": "Does not cover arbitrary cap-one laws, frame patterns growing with m, mesoscopic fragmentation, extra spectral directions, or the full conjecture."
+  },
+  "partner_result_applied": {
+    "requested_partner": "account04/B17",
+    "requested_partner_completed_artifact_visible": false,
+    "actual_partner_artifact": "account04/B18 handoff 20260922T113729Z-account04-B18-qform-r1",
+    "actual_partner_source_commit": "441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+    "application": "On the near-optimal split (p,q)=(3,1) repeated frame, a=-1/m and det B=-1/(3m^3), giving ||p_Q||_inf <= 2*3^(1/4)*sqrt(pi)*m. This is valid but diverges and therefore diagnoses the loss from paying one physical minor before aggregation."
+  },
+  "outputs": {
+    "repository": "yspennstate/math-open-problems",
+    "scientific_commit": "3bb57a5517de87855824e393ec1601b8921abc13",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T170559Z-account03-B17-QFORM-r13/REPORT.md",
+    "report_blob": "6856efba376ddd4bf4732bd65c6ffeb9466d2233",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T170559Z-account03-B17-QFORM-r13/edgeworth_frame_check.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T170559Z-account03-B17-QFORM-r13/edgeworth_frame_check.out",
+    "checker_output_blob": "5ec406c814369116d11c6598b72e34ceaf0bd967"
+  },
+  "unresolved_implication": "A witness above 3sqrt(2), if it exists, must escape the fixed-pattern repeated centered-uniform regime; the full dimension-free upper bound is also still open.",
+  "next_step": "Use a materially different mechanism: growing-pattern shared frames with fragmented density-one laws, or finite/mesoscopic exact rotated witnesses; do not repeat fixed-frame CLT families.",
+  "continuity_status": "Point density and continuity in the repeated-uniform subclass for sufficiently large m; full-target continuity not proved.",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null,
+  "reasoning_tokens": null,
+  "provider_thinking_time": null
+}

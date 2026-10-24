@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B15",
+  "run_id": "20260923T073059Z-account03-B15-qform-auto15",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "startup_commit": "30cc1bbc7e9dfc0d681bd4d0e135e53d0306f9a9",
+    "prewrite_commit": "c73bd7b17ddc8eaca6d62c6503e4a7f9a728d52e",
+    "prefinish_refresh_commit": "ecfac640b0dba57e29c8fb6453ea53f685ff1bdc",
+    "owner_control_revision": "2026-09-22.15",
+    "assignment_revision": "QFORM-DENSITY-3EIG-20260922"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "mathematical_result": {
+    "id": "QFORM-GAUSSIAN-MODE-POSTERIOR-SUBGAUSSIAN-v1",
+    "status": "PROVED_SUPPORTING_LEMMA",
+    "statement": "At every global Gaussian heat mode y_* of any finite positive law, the Gaussian-tilted standardized residual U=(Z-y_*)/epsilon satisfies E exp(vU)<=exp(v^2/2) for all real v; conversely this MGF condition characterizes global heat modes.",
+    "qform_compiler": "If C_* is the scale-invariant optimal QFORM density constant and S_R is the fixed-radius centered small-ball ratio evaluated at the best global unit-Gaussian heat mode, then S_R<=C_*<=[2R/(sqrt(2pi)(1-R^-2))]S_R for R>1. At R=sqrt(3), the factor is 3sqrt(3)/sqrt(2pi)=2.072964896828013."
+  },
+  "partner_applied": {
+    "worker": "account04/B15",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ad7e5daa036cc8330b1432285ad40fec611d37dd",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260922T211430Z-account04-B15-heat-regularity-r4/REPORT.md",
+    "application": "Used the exact heat-height identity plus scalar homogeneity to obtain C_*=sup_A s_3(A) max_y E gamma_1(Q_A-y), then derived the mode-centered small-ball comparison."
+  },
+  "regularity_context": {
+    "fixed_matrix_C0_source": "yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056",
+    "fixed_matrix_C0_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T200544Z-account02-B15-qform-r11/REPORT.md",
+    "scope": "Every fixed rank>=3 target instance has an individually bounded C_0 density; constants are matrix dependent and do not settle universal height."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "30e0239b97649cbaa02bd11bd3bd5a5bd514b5f0",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260923T073059Z-account03-B15-qform-auto15/REPORT.md",
+    "readback_blob": "218f92f100274168647fd8a077f0b1e8ded5bb9f"
+  },
+  "handoff": {
+    "commit": "8c8a089f5e73579e30ea059955f04d7c1557109c",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B15/20260923T073059Z-account03-B15-qform-auto15.md"
+  },
+  "unresolved_implication": "Prove a uniform bound on the mode-centered fixed-radius small-ball functional S_sqrt3 using original-coordinate product geometry, preferably in the low-volume/high-leverage or minority/two-sheet endpoint before any fiber supremum or reciprocal-small-minor payment.",
+  "full_solution": false,
+  "native_brain_ingestion_verified": false
+}

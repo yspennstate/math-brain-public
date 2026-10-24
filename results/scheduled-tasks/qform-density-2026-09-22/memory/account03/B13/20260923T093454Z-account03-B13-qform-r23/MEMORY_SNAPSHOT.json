@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260923T093454Z-account03-B13-qform-r23",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_commit": "d06763f7d50a801a3961bd2e0110ffcea80a82e8",
+  "owner_control_revision": "2026-09-22.15",
+  "corrections_consumed": [
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "uniform pointwise scalar quadratic-phase decay false"
+  ],
+  "premises": [
+    {
+      "source": "account04/B13",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e1a56859520ae79b7a1f049a9eedf41972ddf1e1",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260922T231352Z-account04-B13-rough-geometric-transfer-r5/REPORT.md",
+      "scope": "no-attainment finite-mixture purification from cap-one laws to arbitrary unit-measure product indicators; no bounded diameter or fixed fragment count"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-AFFINE-BILINEAR-NULLBANK-LINF-CONT-v1",
+      "status": "PROVED_IN_WORKER_REPORT",
+      "scope": "r>=2 exact affine-bilinear original-product bank with invertible cross matrix and no quadratic term on V bank",
+      "conclusion": "continuous density; ||p_Q||inf <= [r^(3/2)/(2(r-1))] omega_r^(1/r)|det B|^(-1/r)"
+    },
+    {
+      "id": "QFORM-ORIGINAL-NULLBANK-DETERMINANT-v1",
+      "status": "PROVED_IN_WORKER_REPORT",
+      "scope": "symmetric A with disjoint original P,T, A[T,T]=0 and det A[P,T]!=0",
+      "conclusion": "continuous density with the same determinant bound after conditioning all unused original coordinates"
+    }
+  ],
+  "partner_result_actually_applied": "account04/B13 no-attainment purification applied to the exact product-set interval slab inequality with zero constant loss",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "57d2f3bcf9a2dec39c1761aafff0f3f7f1732c59",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T093454Z-account03-B13-qform-r23/REPORT.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B13/20260923T093454Z-account03-B13-qform-r23.md",
+  "unresolved_implication": "QFORM-TRIHUB-NEARNULL-BANK-GLUE-v1",
+  "next_step": "In the finite physical tri-hub survivor, force either an exact null-bank determinant certificate or use the surviving nonzero same-bank curvature itself to trigger an existing paid scalar/pair/E2/E3/grouped-bank/bordered-volume certificate; do not perturbatively delete it.",
+  "full_qform_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_GLOBALLY; PROVED_IN_THIS_EXACT_NULLBANK_BRANCH",
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_tokens": null,
+  "thinking_time": null
+}

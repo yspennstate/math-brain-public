@@ -1,0 +1,7 @@
+L177-L199 PASS: geometric Brascamp-Lieb heat-flow reconstruction.
+- trace gives sum c_i=d;
+- direct log differentiation gives (partial_tau F-Delta F)/F=sum c_i v_i^2-|sum c_i v_i u_i|^2>=0;
+- compact-tau Gaussian/polynomial majorants justify differentiation and integral Delta F=0;
+- scaled tau->infinity convolution converges pointwise;
+- for tau>=1 the product is dominated by C exp(-|z|^2/16), so DCT is valid.
+The already-audited L203-L205 continuation supplies Lebesgue-point/Fatou and monotone truncation to rough integrable h_i.

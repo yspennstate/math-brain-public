@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B04",
+  "run_id": "20260923T021315Z-account01-B04-QFORM-auto11",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_start": "992ba9d860bf9f28ed9898c410b47a07399681bb",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "outcome": "ESSENTIAL_STEP_APPLIED_SUPPORTING_THEOREM_PROVED_FULL_TARGET_OPEN",
+  "full_target_proved": false,
+  "continuity_full_target_proved": false,
+  "continuity_supporting_branch_proved": true,
+  "new_claim": {
+    "id": "QFORM-ENTROPY-WEIGHTED-THREE-VOLUME-v1",
+    "scope": "Original-coordinate physical cross block M with Z=e3(M^T M)>0; arbitrary self blocks, outside couplings and affine terms retained; arbitrary cap-one independent input laws.",
+    "statement": "For any probability weight w on the nonzero 3x3 minor support with row marginals alpha_i<=q/2, 1<=q<3/2, ||p_Q||inf <= [3e/((3-2q)sqrt(q))] Z^(-1/6) exp(KL(w||v)/6), with continuous density. The optimized effective volume Z_eff=Z exp(-inf KL) has dual inf_{lambda>=0} exp((q/2)sum lambda_i)e3(M^T diag(exp(-lambda_i))M).",
+    "review_status": "independent_review_not_yet_recorded"
+  },
+  "example": {
+    "family": "A_epsilon=[[0,M_epsilon],[M_epsilon^T,0]], M_epsilon=U diag(1,1,1,1,epsilon,epsilon,epsilon)(I-(2/7)11^T)^T",
+    "spectral_certificate": "+/-1 multiplicity four each and +/-epsilon multiplicity three each",
+    "epsilon_0_05_new_bound": 6.613114657572972,
+    "epsilon_0_05_canonical_Dprime_bound": 473.4710956054595,
+    "epsilon_0_05_partner_rank7_bound": 13.740634938992596,
+    "epsilon_to_zero_new_bound": 6.629548713390117
+  },
+  "source_premises": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c2414ef633b9d4b7f04a83e1aeefbe713ed82bba",
+      "path": "proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md",
+      "use": "sharp q-dependent three-volume Fourier/BL proof extended by weighted AM-GM"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "8f8913581643a7e7bcbe7d8c178a2255194dfc3d",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/20260922T233213Z-account02-B04-QFORM-r22/REPORT.md",
+      "use": "designated OTHER-account exact-rank r two-sided-contamination theorem applied to the same M_epsilon"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "620e2e46e058a9aab018de7995fad7b885f1fad3",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T015241Z-account01-B04-QFORM-auto11/REPORT.md",
+      "use": "previous B04 mechanism retained as history; current run changes from exact-rank-three random-cut aggregation to higher-rank entropy reweighting"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "no-uniformly-good-local-minor interfaces from live correction inbox"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ad092e24351080080ea0f06b6527a0c4031c054a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T021315Z-account01-B04-QFORM-auto11/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B04/20260923T021315Z-account01-B04-QFORM-auto11/CHECKS.json"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B04/20260923T021315Z-account01-B04-QFORM-auto11.md",
+  "first_unproved_step": "QFORM-ENTROPY-VOLUME-OR-HUB-ROUTING-v1",
+  "next_action": "Use the diagonal-scaling dual to characterize simultaneous small Z_eff across physical cuts and derive a quantitative high-leverage hub/ridge/grouped-coordinate exit without reciprocal local-minor selection.",
+  "scheduler_mutated": false,
+  "notifications_mutated": false,
+  "email_sent": false,
+  "drive_used": false,
+  "public_release": false,
+  "paid_model_or_api_used": false,
+  "cross_account_authentication": false,
+  "permissions_expanded": false
+}

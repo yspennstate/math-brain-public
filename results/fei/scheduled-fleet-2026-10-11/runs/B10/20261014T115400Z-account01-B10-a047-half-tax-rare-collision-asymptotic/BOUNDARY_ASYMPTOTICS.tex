@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{The simultaneous rare/balanced corner of the half-tax inequality}
+Put \(s=4q(1-q)\), \(c=4q^2\), and
+\[
+R=M+\tfrac12\Delta-J,
+\quad J=h_2(sp)-p h_2(s),
+\]
+\[
+M=(1-sp)h_2\!\left(\frac{cp(1-p)}{1-sp}\right)+sp h_2(p),
+\quad \Delta=p\log_2\frac{1-p}{p}.
+\]
+The frozen candidate on this two-bit gate is \(R\ge0\).
+
+Let \(h(x)=-x\ln x-(1-x)\ln(1-x)\) and
+\(\mathcal R=(\ln2)R\). Uniformly for \(q\) in every compact
+subinterval of \((0,1)\),
+\[
+\mathcal R(p,q)=p\left[(c+\tfrac12-s)\ln\frac1p+C(q)\right]
++O\!\left(p^2\ln\frac1p\right),                                      \tag{1}
+\]
+where
+\[
+C(q)=c(1-\ln c)-s(1-\ln s)+h(s)
+=c-s-c\ln c-(1-s)\ln(1-s).                                           \tag{2}
+\]
+Indeed \(h(ap)=ap(\ln(1/p)-\ln a+1)+O(p^2)\) uniformly here, and
+\(cp(1-p)/(1-sp)=cp+O(p^2)\). Substitution gives (1), retaining all
+normalization terms.
+
+The logarithmic coefficient factors exactly:
+\[
+c+\tfrac12-s=8(q-\tfrac14)^2,                                        \tag{3}
+\]
+while
+\[
+C(1/4)=\ln2-\tfrac12>0.                                               \tag{4}
+\]
+Therefore, for every sequence \(p_k\downarrow0\), \(q_k\to1/4\), and
+\(\eta_k=q_k-1/4\),
+\[
+\frac{R(p_k,q_k)}{p_k}
+=8\eta_k^2\log_2\frac1{p_k}
++1-\frac1{2\ln2}+o(1).                                                \tag{5}
+\]
+Consequently
+\[
+\liminf_{k\to\infty}\frac{R(p_k,q_k)}{p_k}
+\ge1-\frac1{2\ln2}=0.2786524795\ldots>0.                              \tag{6}
+\]
+Thus an open collar \(0<p<\varepsilon\), \(|q-1/4|<\delta\) satisfies
+\(R>0\). This is a local two-bit theorem; it does not prove the remaining
+bias strips, higher arity, nonreusing transport, universal GU, or FEI.
+\end{document}

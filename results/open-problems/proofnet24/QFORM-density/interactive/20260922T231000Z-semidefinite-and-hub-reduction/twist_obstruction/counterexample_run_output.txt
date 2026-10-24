@@ -1,0 +1,22 @@
+(a) exact grid computation, n = 2, v = (1,1)/sqrt2, kappa = 1
+  C=  4 N=  2  J(kappa vv^T) =    11.643   J/(2 pi N) = 0.927   rigorous LB =    9.775   J(0) <= 6.283   max density = 1.000000   [0s]
+  C=  4 N=  4  J(kappa vv^T) =    22.803   J/(2 pi N) = 0.907   rigorous LB =   19.575   J(0) <= 6.283   max density = 1.000000   [0s]
+  C=  4 N=  6  J(kappa vv^T) =    34.073   J/(2 pi N) = 0.904   rigorous LB =   29.364   J(0) <= 6.283   max density = 1.000000   [2s]
+  C=  4 N=  8  J(kappa vv^T) =    45.369   J/(2 pi N) = 0.903   rigorous LB =   39.153   J(0) <= 6.283   max density = 1.000000   [3s]
+  C=  4 N= 12  J(kappa vv^T) =    67.991   J/(2 pi N) = 0.902   rigorous LB =   58.729   J(0) <= 6.283   max density = 1.000000   [22s]
+  C=  8 N=  2  J(kappa vv^T) =    12.574   J/(2 pi N) = 1.001   rigorous LB =   12.549   J(0) <= 6.283   max density = 1.000000   [22s]
+  C=  8 N=  4  J(kappa vv^T) =    25.105   J/(2 pi N) = 0.999   rigorous LB =   25.064   J(0) <= 6.283   max density = 1.000000   [22s]
+  C=  8 N=  6  J(kappa vv^T) =    37.653   J/(2 pi N) = 0.999   rigorous LB =   37.593   J(0) <= 6.283   max density = 1.000000   [23s]
+  C=  8 N=  8  J(kappa vv^T) =    50.202   J/(2 pi N) = 0.999   rigorous LB =   50.124   J(0) <= 6.283   max density = 1.000000   [29s]
+  C=  8 N= 12  J(kappa vv^T) =    75.302   J/(2 pi N) = 0.999   rigorous LB =   75.185   J(0) <= 6.283   max density = 1.000000   [62s]
+(b) rigorous lower bound, any kappa (the bound depends on kappa only through alpha^2 + kappa^2)
+  n=2 kappa= 1.00  N=5:   31.33   N=10:   62.65   N=20:  125.31   N=40:  250.62
+  n=2 kappa= 0.10  N=5:   31.33   N=10:   62.65   N=20:  125.31   N=40:  250.62
+  n=2 kappa= 0.01  N=5:   31.33   N=10:   62.65   N=20:  125.31   N=40:  250.62
+  n=4 kappa= 1.00  N=5:   31.33   N=10:   62.65   N=20:  125.31   N=40:  250.62
+  n=4 kappa= 0.10  N=5:   31.33   N=10:   62.65   N=20:  125.31   N=40:  250.62
+  n=4 kappa= 0.01  N=5:   31.33   N=10:   62.65   N=20:  125.31   N=40:  250.62
+(a') exact grid computation, n = 4, v = (1,1,1,1)/2 (leverages 1/4), kappa = 1, C = 8
+  N=2  components=16  J =   12.571  J/(2 pi N) = 1.000  rigorous LB =  12.549  max density = 1.000000  [63s]
+  N=3  components=81  J =   18.831  J/(2 pi N) = 0.999  rigorous LB =  18.802  max density = 1.000000  [64s]
+  N=4  components=256  J =   25.103  J/(2 pi N) = 0.999  rigorous LB =  25.064  max density = 1.000000  [73s]

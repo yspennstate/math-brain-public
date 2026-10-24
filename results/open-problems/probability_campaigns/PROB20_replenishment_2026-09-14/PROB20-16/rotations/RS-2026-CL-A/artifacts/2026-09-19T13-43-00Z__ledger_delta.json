@@ -1,0 +1,90 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target": "RS-2026-CL-A",
+  "report_kind": "research_progress",
+  "captured_master_sha": "266149e02e270206fbfbd5795b2d14332552d1aa",
+  "source": {
+    "author": "Anastasia Kireeva",
+    "venue": "Randomstrasse 101",
+    "post_title": "Low-degree hardness of finding the largest clique in Erdős–Rényi graph (problems 36-38)",
+    "posted": "2026-06-05",
+    "displayed_problem": "Open Problem 35",
+    "status_check_date": "2026-09-19",
+    "bounded_status": "LIVE_OPEN"
+  },
+  "metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": "NO_FROZEN_METRIC_MOVEMENT"
+  },
+  "mathematical_status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / CODE_WEIGHT_ENUMERATOR_CONNECTED_GAUGE_GIBBS_AND_WEIGHTED_KP_PROGRESS",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T12-40-43Z__report.md",
+    "creation_commit": "27da901831a4880f05233563b071128913506661",
+    "blob": "68080b289da7973c86f307390e7cc2b5fe8236df"
+  },
+  "current_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T13-43-00Z__report.md",
+    "creation_commit": "21e77cdb191172d598461dcaf632482f1680647d",
+    "readback_blob": "ece9aaeed8ad15e3729d3d925238a0f0e0a9b1d6"
+  },
+  "historical_initial_methods": ["B2", "B27", "B21"],
+  "methods": [
+    {
+      "id": "B1",
+      "outcome": "Identified the analytic source-degree pressure exactly with a binary linear-code Hamming weight enumerator for parity-conditioned gauge coordinates. Derived an exact hard-core polymer representation on the generator-intersection graph and a private-coordinate cancellation certificate yielding an interior zero-free/KP pressure bound even when boundary chi-square is exponential."
+    },
+    {
+      "id": "B15",
+      "outcome": "Showed overlap itself is harmless until code distance collapses; built a connected visible arity-4 gauge-Gibbs null preserving exact low-degree orthogonality and proved fixed local gauge refresh drives chi-square and TV to zero. Breaking gauge symmetry by pairwise coupling creates an exact exponentially small degree-two leakage coefficient, identifying the first missing hypothesis for a pairwise-Ising extension."
+    },
+    {
+      "id": "B30",
+      "outcome": "Derived an exact bounded-arity factor-table representation of the code weight enumerator and one-table softened two-replica Fourier coefficients. Isolated the all-order gluing obstruction: actual degree is symmetric-difference degree, so weighted KP needs a cancellation/no-cancellation profile rather than ordinary unweighted factor size."
+    }
+  ],
+  "key_new_claims": [
+    "For linearly independent parity generators on iid gauge coordinates, 1+G_h(z)=W_C(z)=sum_{c in C} z^{|c|}, so zero source LDA through D is exactly d_min(C)>D while boundary collision is W_C(1)=2^M.",
+    "If every generator row has at least u private coordinates and the generator-intersection degree is bounded, connected polymer activities satisfy |w_z(gamma)|<=|z|^{u|gamma|}, giving a standard KP zero-free/interior-pressure certificate; u_n>=cD_n makes fixed interior pressure vanish for M_n<=n.",
+    "The connected visible Gibbs null Q(a,b) proportional exp[J sum A_iB_i + K sum (A_iB_i)(A_{i+1}B_{i+1})] factorizes into iid local gauges G_i=A_i and an interacting Y_i=A_iB_i Ising chain, so parity-code planting remains exactly orthogonal although the visible factor graph is connected and arity at most four.",
+    "Under local gauge refresh, 1+chi2(P S_t^G||Q)=W_C(e^{-2t}); hence the connected gauge-Gibbs subclass has zero source LDA through D_n and TV->0 for every fixed t even when log(1+chi2(P||Q))=M_n log 2 is much larger than D_n.",
+    "Adding pairwise gauge-breaking epsilon sum A_iA_{i+1} creates exact degree-two leakage rho^{m/2-1} sqrt(1-rho^2)/(1+rho^{m/2}), rho=tanh epsilon, for an even length-m parity condition.",
+    "A local weighted polymer upper bound must use cancellation-aware symmetric-difference degree |triangle S_a|; naive multiplication of individual z^{|S_a|} discounts can under-estimate true high-degree activity after coordinate cancellations."
+  ],
+  "source_and_literature_checks": {
+    "date": "2026-09-19",
+    "source": "Randomstrasse Open Problem 35 still live/open in bounded fresh check.",
+    "negative_stress": "Songtao Mao arXiv:2607.20318 remains mandatory; framework exclusions must be substantive, not model-name exclusions.",
+    "positive_comparators": ["Hsieh et al. arXiv:2601.05850", "Chen-Li arXiv:2608.06279"],
+    "later_source_wide_characterization_found": false,
+    "novelty": "UNVERIFIED"
+  },
+  "prior_art_state": "Binary linear-code weight enumerators and Tutte/MacWilliams/Greene theory, Kotecky-Preiss/tree-graph cluster expansions and zero-free consequences, local gauge symmetries, Walsh noise stability, Gibbs heat-bath dynamics, Kato/Toda transport, and Renyi/collision divergence are classical. The source-directed synthesis is not claimed novel.",
+  "audits": {
+    "qualifying_count": "0/2",
+    "p26_full_claim_pass": false,
+    "distinct_other_full_claim_pass": false
+  },
+  "recovery": {
+    "hard_recovery_cycles_consumed": 1,
+    "same_obligation_stagnation_count": 0,
+    "stuck": false
+  },
+  "artifacts": [],
+  "next_methods": [
+    {
+      "id": "B14",
+      "attack": "Generalize local Z2 gauge symmetry to finite local groups; use irreducible representations and minimum nontrivial representation support as a code-distance analogue, seeking a complete weight-enumerator/character partition function."
+    },
+    {
+      "id": "B6",
+      "attack": "Deform the exact connected gauge model by a small pairwise gauge-breaking coupling and bound the entire low-source-degree projection through D_n using high-temperature expansion, aiming for a genuinely connected pairwise-Ising subclass."
+    },
+    {
+      "id": "B24",
+      "attack": "Optimize the interior weight enumerator at fixed row size, generator-intersection degree and cancellation/private-coordinate budget to sharpen the local cancellation profile beyond the conservative private-coordinate KP bound."
+    }
+  ]
+}

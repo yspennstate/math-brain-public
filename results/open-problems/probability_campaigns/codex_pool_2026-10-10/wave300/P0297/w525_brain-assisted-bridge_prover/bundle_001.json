@@ -1,0 +1,314 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w525",
+  "bundle_slug": "p0297-finite-gaussian-lfpp-response-w525-001",
+  "entries": [
+    {
+      "key": "canonical",
+      "namespace": "probability.lqg",
+      "logical_name": "canonical-lqg-lfpp-parameter-relations",
+      "kind": "concept",
+      "title": "Canonical LQG and LFPP parameter relations",
+      "statement": "For gamma in (0,2), let d_gamma be the almost-sure Hausdorff dimension of the canonical gamma-LQG metric and set xi=gamma/d_gamma and Q=2/gamma+gamma/2. The circle-average LFPP metric on epsilon Z^2 uses vertex cost epsilon*exp(xi*h_epsilon(v)); its left-right crossing exponent satisfies lambda(xi)=1-xi*Q. The Brownian value d_sqrt(8/3)=4 gives xi=1/sqrt(6), Q=5/sqrt(6), and lambda=1/6. These relations do not compute d_gamma at other gamma.",
+      "proof_text": null,
+      "assumptions": [
+        "gamma in (0,2)",
+        "Canonical LQG metric",
+        "Standard whole-plane GFF normalization",
+        "Epsilon included in the LFPP vertex cost"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1903.09561:equation-1.5",
+        "url": "https://arxiv.org/pdf/1903.09561",
+        "revision": "as-read-2026-10-10; equation (1.5)",
+        "license": "arxiv-nonexclusive (facts paraphrased)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "response",
+      "namespace": "probability.lqg",
+      "logical_name": "finite-gaussian-lfpp-log-distance-interpolation",
+      "kind": "lemma",
+      "title": "Finite Gaussian LFPP interpolation with route fluctuations",
+      "statement": "Let X~N(0,C) on a finite V with C PSD, and P a finite nonempty family of nonempty paths with positive deterministic weights a_pv. Put f_p(y)=log(sum_{v in p} a_pv exp(y_v)), r_p=grad f_p, q_p=exp(-beta*f_p)/sum_s exp(-beta*f_s), F_beta=-(1/beta)log(sum_p exp(-beta*f_p)), and rbar=sum_p q_p*r_p, beta>0. Define A_beta=sum_p q_p[sum_i r_pi*C_ii-r_p^T*C*r_p] and B_beta=sum_p q_p*r_p^T*C*r_p-rbar^T*C*rbar. For xi>=0, (d/dxi) E F_beta(xi X)=xi E[A_beta(xi X)-beta B_beta(xi X)]. A_beta>=0 and B_beta>=0. This is a finite lemma with independent adversary derivation; it does not compute an LQG dimension.",
+      "proof_text": "Let V be finite, X~N(0,C) where C is positive semidefinite, and P a finite nonempty family of nonempty paths. For each p, let a_pv>0 on its support. Set\n\nf_p(y)=log(sum_{v in p} a_pv exp(y_v)),\nr_pv(y)=a_pv exp(y_v)/(sum_{w in p} a_pw exp(y_w)) on p and 0 elsewhere,\nq_p(y)=exp(-beta f_p(y))/sum_s exp(-beta f_s(y)), beta>0,\nF_beta(y)=-(1/beta)log(sum_p exp(-beta f_p(y))).\n\nEach r_p is a probability vector. Let rbar=sum_p q_p r_p and\n\nA_beta(y)=sum_p q_p[sum_v r_pv C_vv-r_p^T C r_p],\nB_beta(y)=sum_p q_p r_p^T C r_p-rbar^T C rbar.\n\nFor m_beta(xi)=E F_beta(xi X), xi>=0,\n\nm_beta'(xi)=xi E[A_beta(xi X)-beta B_beta(xi X)].\n\nProof. Direct differentiation gives grad f_p=r_p and Hess f_p=diag(r_p)-r_p r_p^T. Differentiating q gives grad F_beta=rbar and\n\nHess F_beta=sum_p q_p Hess f_p-beta[sum_p q_p r_p r_p^T-rbar rbar^T].\n\nAt fixed finite beta, its derivatives through order two are uniformly bounded, and |F_beta(y)| is bounded by a deterministic constant plus max_v |y_v|. Differentiating the Gaussian expectation is legitimate by dominated convergence. Gaussian integration by parts, applied after writing X=C^(1/2)G if C is singular, yields\n\nE[X dot grad F_beta(xi X)]=xi E tr(C Hess F_beta(xi X)),\n\nwhich is the asserted identity, including xi=0. Positivity follows from\n\nsum_v r_pv C_vv-r_p^T C r_p=sum_v r_pv (e_v-r_p)^T C(e_v-r_p)>=0,\nB_beta=sum_p q_p (r_p-rbar)^T C(r_p-rbar)>=0.\n\nNo independence of coordinates or selected routes is assumed. Positivity of both terms does not determine the sign of their difference.",
+      "assumptions": [
+        "V finite",
+        "X centered Gaussian with PSD covariance C, singular covariance allowed",
+        "Finite nonempty family P of nonempty paths",
+        "Positive deterministic weights on each path support",
+        "xi>=0; beta>0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w525-finite-lfpp-bridge",
+        "url": "~/brain_workers/w525/ATTEMPT.md",
+        "revision": "author-proof-2026-10-10; independent-referee-pending",
+        "license": "owner-own-work (campaign proof; no claim to solve P0297)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "integrated",
+      "namespace": "probability.lqg",
+      "logical_name": "finite-gaussian-lfpp-integrated-soft-min-limit",
+      "kind": "lemma",
+      "title": "Integrated soft-min limit for finite Gaussian LFPP",
+      "statement": "Let X be a centered finite Gaussian with PSD covariance C, and P a finite nonempty family of nonempty positively weighted paths. Let D_xi=min_p sum_{v in p} a_pv exp(xi X_v) and F_beta(y)=-(1/beta)log sum_p exp[-beta log(sum_{v in p} a_pv exp(y_v))]. For 0<=a<b, E log D_b-E log D_a=lim_{beta->infinity} integral_a^b xi E tr[C Hess F_beta(xi X)] dxi. Each endpoint has soft-min error at most log|P|/beta. This assertion does not exchange the beta limit with a derivative.",
+      "proof_text": "Let D_xi=min_p sum_{v in p} a_pv exp(xi X_v), K=|P|. For 0<=a<b<infinity,\n\nE log D_b-E log D_a=lim_{beta->infinity} integral_a^b xi E[A_beta(xi X)-beta B_beta(xi X)] dxi.\n\nProof. For every y, min_p f_p(y)-(log K)/beta <= F_beta(y) <= min_p f_p(y). Apply Lemma 1 and the fundamental theorem of calculus at fixed beta. The error in each endpoint is at most (log K)/beta. Hence the identity follows with endpoint-difference error at most 2(log K)/beta. There is no exchange of a limit with a derivative or a separately convergent A/B integral.\n\nExactly solvable obstruction. With two singleton paths, a=1, C=I_2, and xi>=0, log D_xi=xi min(X_1,X_2). Since min(X_1,X_2)=(X_1+X_2-|X_1-X_2|)/2 and X_1-X_2~N(0,2), E log D_xi=-xi/sqrt(pi). Each f_p is affine, so A_beta=0. But B_beta=2q_1q_2 and beta*xi*E B_beta->1/sqrt(pi) for every xi>0. Pointwise q becomes a single chosen route almost surely; nevertheless the beta-weighted expectation does not vanish.\n\nIndeed, writing t=beta*xi and u=t(X_1-X_2)/2 gives\n\nt E B_beta=(1/(2 sqrt(pi))) integral_R sech^2(u) exp(-u^2/t^2) du ->1/sqrt(pi).\n\nDropping route fluctuations predicts derivative 0 instead of -1/sqrt(pi). At xi=0, each fixed-beta derivative is 0 while the hard minimum has right derivative -1/sqrt(pi); another reason to retain the integrated identity.",
+      "assumptions": [
+        "V finite",
+        "X centered Gaussian with PSD covariance C, singular covariance allowed",
+        "Finite nonempty family P of nonempty paths",
+        "Positive deterministic weights on each path support",
+        "xi>=0; beta>0",
+        "0<=a<b<infinity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w525-finite-lfpp-bridge",
+        "url": "~/brain_workers/w525/ATTEMPT.md",
+        "revision": "author-proof-2026-10-10; independent-referee-pending",
+        "license": "owner-own-work (campaign proof; no claim to solve P0297)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "switch",
+      "namespace": "probability.lqg",
+      "logical_name": "two-gaussian-routes-retain-selection-response",
+      "kind": "lemma",
+      "title": "Two Gaussian routes refute omission of path changes",
+      "statement": "If X_1,X_2 are independent N(0,1), D_xi=min(exp(xi X_1),exp(xi X_2)), and xi>=0, then E log D_xi=-xi/sqrt(pi). For the soft minimum of the two affine path logs, A_beta=0, B_beta=2q_1q_2, q_i=exp(-beta*xi*X_i)/sum_j exp(-beta*xi*X_j), and beta*xi*E B_beta->1/sqrt(pi) for every xi>0. Although beta B_beta->0 almost surely, its expectation does not vanish. At xi=0 the smooth derivatives are zero but the hard-min right derivative is -1/sqrt(pi).",
+      "proof_text": "With two singleton paths, a=1, C=I_2, and xi>=0, log D_xi=xi min(X_1,X_2). Since min(X_1,X_2)=(X_1+X_2-|X_1-X_2|)/2 and X_1-X_2~N(0,2), E log D_xi=-xi/sqrt(pi). Each f_p is affine, so A_beta=0. But B_beta=2q_1q_2 and beta*xi*E B_beta->1/sqrt(pi) for every xi>0. Pointwise q becomes a single chosen route almost surely; nevertheless the beta-weighted expectation does not vanish.\n\nIndeed, writing t=beta*xi and u=t(X_1-X_2)/2 gives\n\nt E B_beta=(1/(2 sqrt(pi))) integral_R sech^2(u) exp(-u^2/t^2) du ->1/sqrt(pi).\n\nDropping route fluctuations predicts derivative 0 instead of -1/sqrt(pi). At xi=0, each fixed-beta derivative is 0 while the hard minimum has right derivative -1/sqrt(pi); another reason to retain the integrated identity.",
+      "assumptions": [
+        "Two singleton paths with equal unit weights",
+        "Independent standard Gaussian coordinates",
+        "xi>=0; beta>0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w525-finite-lfpp-bridge",
+        "url": "~/brain_workers/w525/ATTEMPT.md",
+        "revision": "author-proof-2026-10-10; independent-referee-pending",
+        "license": "owner-own-work (campaign proof; no claim to solve P0297)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "omit-route",
+      "namespace": "probability.lqg",
+      "logical_name": "refuted-fixed-route-differentiation-of-gaussian-minimum",
+      "kind": "concept",
+      "title": "Refuted route: discard Gaussian path selection",
+      "statement": "REFUTED proof route: from almost-sure uniqueness of a minimizing route, discard the path-selection covariance term before differentiating the expectation of a minimum of affine Gaussian path logs. The two independent singleton-route example has zero within-path Hessians but E log D_xi=-xi/sqrt(pi), so it directly refutes the claimed zero derivative. This is a documented invalid proof step, not an asserted theorem.",
+      "proof_text": null,
+      "assumptions": [
+        "Minimum over competing paths",
+        "Parameter differentiation and an expectation or smoothing limit"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w525-finite-lfpp-bridge",
+        "url": "~/brain_workers/w525/ATTEMPT.md",
+        "revision": "author-proof-2026-10-10; independent-referee-pending",
+        "license": "owner-own-work (campaign proof; no claim to solve P0297)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "transfer",
+      "namespace": "probability.lqg",
+      "logical_name": "gaussian-lfpp-mean-median-crossing-exponent-transfer",
+      "kind": "lemma",
+      "title": "Mean and median log-distance exponents agree under variance growth",
+      "statement": "Let D_xi=min_p sum_{v in p} a_pv exp(xi X_v) for a finite nonempty family of nonempty paths, positive deterministic weights, X~N(0,C) with C PSD, and xi>=0. Set v=max_i C_ii. Then Var(log D_xi)<=xi^2*v and every median M satisfies |E log D_xi-M|<=xi*sqrt(v). Thus, for a sequence with L_n->infinity and v_n=O(L_n), convergence of M_n/L_n at a fixed xi implies the same limit for E log D_xi,n/L_n. This transfers an existing crossing exponent; it does not calculate it.",
+      "proof_text": "Let v=max_i C_ii. For xi>=0, Var(log D_xi)<=xi^2 v, and any median M_xi of log D_xi satisfies |E log D_xi-M_xi|<=xi sqrt(v).\n\nProof. The Gaussian-coordinate gradient of f_p(xi C^(1/2)g) is xi (C^(1/2))^T r_p. Jensen for squared norm gives r_p^T C r_p<=sum_i r_pi C_ii<=v. Each f_p is therefore xi sqrt(v)-Lipschitz in g, and the minimum of finitely many functions with that common Lipschitz constant is also Lipschitz. Gaussian Poincare applies to this Lipschitz function and gives the variance bound (ties cause no problem). If a median is above the mean by t>0, Cantelli's inequality and P(Y>=M)>=1/2 imply t<=sqrt(Var Y); the other direction is identical. Constant Gaussian modes, negative covariances, and singular C are allowed.\n\nFor completeness, the Poincare step follows directly from Gaussian integration by parts. If f is smooth and L-Lipschitz and G,H are independent standard Gaussians, set psi(t)=E[f(G)f(tG+sqrt(1-t^2)H)]. For 0<t<1, integration by parts in G and H cancels the second-derivative terms and gives psi'(t)=E[grad f(G) dot grad f(tG+sqrt(1-t^2)H)]<=L^2. Integrating from 0 to 1 yields Var f(G)<=L^2. Mollification preserves the Lipschitz constant; Gaussian L^2 convergence extends the result to Lipschitz f with at most linear growth, including this minimum.\n\nBrain theorem comparison: the corrected Gaussian-concentration card (claim_1dccd5251ab873de59d3ee5a16f929c03c20418aa3790ed1659191840b95b56b) requires a standard Gaussian vector and a globally Euclidean-Lipschitz function. The LFPP field X is correlated, so one must first write X=C^(1/2)G and prove the Lipschitz bound above. The retrieved tail alone gives a weaker sufficient variance bound; the sharp constant used here comes from the displayed Poincare proof. The earlier concentration card is superseded and is not used. The retrieved GMC vocabulary card has gamma in (0,2) but contains neither a crossing-exponent formula nor metric-volume hypotheses and cannot close the remaining gap.\n\nConsequently, for a sequence of finite networks with L_n->infinity and v_n=O(L_n), a median crossing exponent M_xi,n/L_n->-lambda(xi) implies E log D_xi,n/L_n->-lambda(xi). This only transfers an existing exponent. It cannot calculate it.",
+      "assumptions": [
+        "V finite",
+        "X centered Gaussian with PSD covariance C, singular covariance allowed",
+        "Finite nonempty family P of nonempty paths",
+        "Positive deterministic weights on each path support",
+        "xi fixed and nonnegative",
+        "For the sequence: L_n->infinity and v_n=O(L_n)"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w525-finite-lfpp-bridge",
+        "url": "~/brain_workers/w525/ATTEMPT.md",
+        "revision": "author-proof-2026-10-10; independent-referee-pending",
+        "license": "owner-own-work (campaign proof; no claim to solve P0297)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "comparison",
+      "namespace": "probability.lqg",
+      "logical_name": "finite-gaussian-lfpp-quadratic-parameter-comparison",
+      "kind": "lemma",
+      "title": "Finite quadratic comparison of mean Gaussian log distances",
+      "statement": "For centered finite Gaussian X with PSD covariance C, positive deterministic weights, and a finite nonempty family of nonempty paths, let D_xi=min_p sum_v a_pv exp(xi X_v) and v=max_i C_ii. For 0<=a<b, E log D_b-E log D_a <= (v/2)(b^2-a^2). When variance-normalized crossing exponents satisfy v_n/L_n->1 and E log D_xi,n/L_n->-lambda(xi), this implies lambda(b)-lambda(a)>=-(b^2-a^2)/2. The resulting LFPP monotonicity is already known; no new LQG bound is claimed.",
+      "proof_text": "Under the finite hypotheses above, for 0<=a<b, E log D_b-E log D_a <= (v/2)(b^2-a^2), where v=max_i C_ii. Indeed A_beta<=sum_p q_p sum_i r_pi C_ii<=v and B_beta>=0, so Lemma 1 gives m_beta'(xi)<=xi v. Integrate at fixed beta and apply Lemma 2. If v_n/L_n->1 and the crossing exponents exist at a,b, divide by L_n to obtain lambda(b)-lambda(a)>=-(b^2-a^2)/2. This recovers the published monotonicity of lambda(xi)+xi^2/2, recorded in Gwynne-Pfeffer (1903.09561), equation (2.4), and is not a new LQG bound. To improve this step one needs quantitative control of B rather than only its sign.",
+      "assumptions": [
+        "V finite",
+        "X centered Gaussian with PSD covariance C, singular covariance allowed",
+        "Finite nonempty family P of nonempty paths",
+        "Positive deterministic weights on each path support",
+        "0<=a<b<infinity",
+        "Exponent corollary assumes v_n/L_n->1 and endpoint exponent convergence"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w525-finite-lfpp-bridge",
+        "url": "~/brain_workers/w525/ATTEMPT.md",
+        "revision": "author-proof-2026-10-10; independent-referee-pending",
+        "license": "owner-own-work (campaign proof; no claim to solve P0297)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "scale",
+      "namespace": "probability.lqg",
+      "logical_name": "conditional-lfpp-exponent-integrated-gaussian-response",
+      "kind": "lemma",
+      "title": "Conditional scale limit without a derivative-limit exchange",
+      "statement": "For finite Gaussian networks indexed by n, let X_n~N(0,C_n), P_n be a finite nonempty family of nonempty positively weighted paths, K_n=|P_n|, D_xi,n=min_p sum_v a_npv exp(xi X_nv), and F_n,beta(y)=-(1/beta)log sum_p exp[-beta log(sum_v a_npv exp(y_v))]. Suppose L_n->infinity, max_i(C_n)_ii=O(L_n), and medians of log D_xi,n divided by L_n converge to -lambda(xi) at fixed 0<=a<b. If beta_n>0 and log K_n/(beta_n L_n)->0, then lambda(b)-lambda(a)=-lim_n L_n^(-1) integral_a^b xi E tr[C_n Hess F_n,beta_n(xi X_n)] dxi. This conditional reduction does not evaluate the planar limit or assert pointwise derivative convergence.",
+      "proof_text": "Assume the actual LFPP discretization used has covariance diagonals v_n=O(L_n), L_n=log(1/epsilon_n), and medians M_xi,n/L_n->-lambda(xi) at endpoints a,b. Choose beta_n so that log K_n/(beta_n L_n)->0. Lemmas 1-3 imply the exact conditional reduction\n\nlambda(b)-lambda(a)=-lim_n (1/L_n) integral_a^b xi E[A_{n,beta_n}-beta_n B_{n,beta_n}] dxi.\n\nThis is derived by endpoint convergence and the deterministic soft-min error. It does not require existence of pointwise susceptibility limits. On a nearest-neighbor graph with N_n vertices and bounded degree Delta, the number of simple crossing paths is at most N_n^2(Delta+1)^(N_n+1), so log K_n=O(N_n+log N_n); beta_n=N_n^2 suffices when N_n,L_n->infinity. This is an existence bound, not an efficient enumeration algorithm. Positive costs allow minimization over simple paths.",
+      "assumptions": [
+        "Every covariance C_n is PSD and the Gaussian is centered",
+        "All path families finite and nonempty; weights deterministic and positive on supports",
+        "L_n->infinity; maximum variance O(L_n)",
+        "Fixed 0<=a<b; median exponent convergence at both endpoints",
+        "log K_n/(beta_n L_n)->0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w525-finite-lfpp-bridge",
+        "url": "~/brain_workers/w525/ATTEMPT.md",
+        "revision": "author-proof-2026-10-10; independent-referee-pending",
+        "license": "owner-own-work (campaign proof; no claim to solve P0297)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "uniformity",
+      "namespace": "probability.lqg",
+      "logical_name": "growing-gaussian-network-soft-min-bias-counterexample",
+      "kind": "lemma",
+      "title": "Growing path families can retain a soft-min bias",
+      "statement": "For integer n>=1, let L_n=n, K_n=2^(n^2) singleton paths of unit weight, all X_i equal one shared N(0,1) variable Z, and beta_n=n. The covariance is PSD with maximum diagonal 1. Then log D_xi=xi Z but F_beta_n(xi X)=xi Z-n*log 2, so the normalized hard-min mean is 0 and normalized soft-min mean is -log 2, for every fixed xi>=0. Thus beta_n->infinity alone does not transfer individual soft-min levels uniformly in network size. This xi-independent bias cancels in endpoint differences; the example is not an endpoint-difference counterexample or a planar LFPP model.",
+      "proof_text": "All K_n affine path logs equal xi Z. Summing their exponentials in the soft minimum yields F_beta=xi Z-log(K_n)/beta. Since log K_n=n^2 log 2, substituting beta_n=L_n=n gives the two stated normalized means. The hard minimum has no entropy offset. The offset is constant in xi, so it cancels from endpoint differences.",
+      "assumptions": [
+        "Perfectly correlated singleton Gaussian paths",
+        "K_n=2^(n^2)",
+        "L_n=n and beta_n=n"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w526-C526.5-soft-min-uniformity",
+        "url": "~/brain_workers/w526/FINITE_BRIDGE_INDEPENDENT.md",
+        "revision": "author-proof-2026-10-10; independent-referee-pending",
+        "license": "owner-own-work (campaign proof; no claim to solve P0297)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.lqg",
+      "logical_name": "p0297-planar-lfpp-gaussian-response-uncomputed-gap",
+      "kind": "concept",
+      "title": "P0297 gap: compute the planar integrated response",
+      "statement": "OPEN ATTEMPT GAP, not a theorem: for epsilon-normalized circle-average planar LFPP, compute the limiting integrated Gaussian response L_n^(-1) integral_0^xi s E tr[C_n Hess F_n,beta_n(s X_n)] ds with smoothing error controlled relative to L_n=log(1/epsilon_n). The Hessian contains a nonnegative within-path term minus beta_n times a nonnegative path-selection term; neither concentration nor almost-sure path uniqueness evaluates their difference. Canonical xi=gamma/d_gamma and lambda(xi)=1-xi*(2/gamma+gamma/2) then relate this crossing exponent to d_gamma. Current openness UNKNOWN as of this audit; no exact dimension is claimed.",
+      "proof_text": null,
+      "assumptions": [
+        "Canonical gamma-LQG with gamma in (0,2)",
+        "Actual planar LFPP covariance and path family",
+        "Scale and smoothing hypotheses must be verified"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w525-finite-lfpp-bridge",
+        "url": "~/brain_workers/w525/ATTEMPT.md",
+        "revision": "author-proof-2026-10-10; independent-referee-pending",
+        "license": "owner-own-work (campaign proof; no claim to solve P0297)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "integrated",
+      "to_key": "response",
+      "kind": "depends_on",
+      "rationale": "Integrate the finite Gaussian response at fixed beta, then use the uniform soft-min endpoint error."
+    },
+    {
+      "from_key": "switch",
+      "to_key": "omit-route",
+      "kind": "refutes",
+      "rationale": "Both path Hessians vanish while the expectation has nonzero derivative -1/sqrt(pi)."
+    },
+    {
+      "from_key": "switch",
+      "to_key": "response",
+      "kind": "specializes",
+      "rationale": "Take two unit-weight singleton paths and covariance I_2; only the path-selection covariance remains."
+    },
+    {
+      "from_key": "comparison",
+      "to_key": "response",
+      "kind": "depends_on",
+      "rationale": "A_beta<=v and B_beta>=0 bound the finite derivative before integration."
+    },
+    {
+      "from_key": "comparison",
+      "to_key": "integrated",
+      "kind": "depends_on",
+      "rationale": "Pass from the smooth comparison to the hard finite minimum using the endpoint error."
+    },
+    {
+      "from_key": "scale",
+      "to_key": "integrated",
+      "kind": "depends_on",
+      "rationale": "Use the integrated identity with beta_n chosen to make the normalized endpoint error vanish."
+    },
+    {
+      "from_key": "scale",
+      "to_key": "transfer",
+      "kind": "depends_on",
+      "rationale": "Replace median log-distance exponents by mean log-distance exponents under variance growth."
+    },
+    {
+      "from_key": "uniformity",
+      "to_key": "scale",
+      "kind": "semantic_association",
+      "rationale": "Shows why beta_n tending to infinity alone is not a uniform control of individual soft-min levels; does not refute the stated endpoint reduction."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "scale",
+      "kind": "cites",
+      "rationale": "The conditional identity identifies the missing planar quantity without computing it."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "canonical",
+      "kind": "cites",
+      "rationale": "These exact published parameter relations relate the unknown crossing exponent to d_gamma."
+    },
+    {
+      "from_key": "canonical",
+      "to_existing_logical": "math:probability.core:attempt-p0297-exact-hausdorff-dimension-of-liouville-quantum-gravity",
+      "kind": "cites",
+      "rationale": "The read-only P0297 attempt already derives xi*d_gamma=gamma and leaves the normalization exponent unresolved."
+    },
+    {
+      "from_key": "transfer",
+      "to_existing_logical": "math:probability.concentration:gaussian-lipschitz-concentration",
+      "kind": "cites",
+      "rationale": "The corrected card requires standard Gaussian input and global Euclidean Lipschitz continuity; the proof explicitly establishes both after the covariance square root."
+    }
+  ]
+}

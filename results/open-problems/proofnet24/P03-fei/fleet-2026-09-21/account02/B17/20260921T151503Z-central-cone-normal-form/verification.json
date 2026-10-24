@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "balanced_cone_lifts_exhaustively_checked": 78,
+  "balanced_quadratic_gates_checked": 37466,
+  "balanced_quadratic_by_n": {
+    "1": {
+      "balanced_quadratic_phases": 2,
+      "max_cone_ratio": "2/1"
+    },
+    "2": {
+      "balanced_quadratic_phases": 6,
+      "max_cone_ratio": "2/1"
+    },
+    "3": {
+      "balanced_quadratic_phases": 70,
+      "max_cone_ratio": "12/5"
+    },
+    "4": {
+      "balanced_quadratic_phases": 870,
+      "max_cone_ratio": "12/5"
+    },
+    "5": {
+      "balanced_quadratic_phases": 36518,
+      "max_cone_ratio": "12/5"
+    }
+  },
+  "balanced_quadratic_max_cone_ratio": "12/5",
+  "balanced_quadratic_max_witness": {
+    "n": 3,
+    "coeff_mask": 52,
+    "H_f": 2,
+    "I_f": "3/2",
+    "cone_ratio": "12/5"
+  },
+  "finite_scope": "all balanced Boolean f for n<=3; all balanced quadratic ANF phases n<=5; shared-graft endpoint propagation at m=2,7,20",
+  "exact_identities_checked": [
+    "cone squared-Walsh law",
+    "Inf_core(G)=Inf_core(f)/2",
+    "Inf_y(G)=1/2",
+    "balanced quadratic cone ratio <= 12/5 through n<=5"
+  ],
+  "shared_graft_source": {
+    "I": "68013/32768",
+    "H_lower": "7.014850042680291613033104756310658624299893163",
+    "H_upper": "7.014850042680291613033104756310658624299893164",
+    "provenance": "committed SHARED_GRAFT_REPORT.md; this checker only propagates its certified endpoints"
+  },
+  "levels": [
+    {
+      "m": 2,
+      "core_dimension": 26244,
+      "cone_dimension": 26245,
+      "influence_exact": "5699509993/2147483648",
+      "entropy_lower": "12.7874084800928111122602742072409742250910573251389007568359375",
+      "entropy_upper": "12.787408480092811112260274207240974225091057326676696777343750",
+      "ratio_lower": "4.818089738420052522913723958803866131579658573776345461352715975490702153068406770315140668619931306",
+      "ratio_upper": "4.818089738420052522913723958803866131579658574355762255437807072549157648261710837919746761640601970",
+      "exceeds_4": true,
+      "exceeds_readonce_6_4573": false,
+      "exceeds_external_old_upper": false,
+      "margin_over_external_old_upper": "-1.703755972502994052744420014144712336787003719223654538647284024509297846931593229684859331380068694"
+    },
+    {
+      "m": 7,
+      "core_dimension": 2928229434235008,
+      "cone_dimension": 2928229434235009,
+      "influence_exact": "6772555740212755433656547598404549/81129638414606681695789005144064",
+      "entropy_lower": "539.910420095630465626924527484587126082419503228567166735220827635798768203186725754361647600131687",
+      "entropy_upper": "539.9104200956304656269245274845871260824195033052488373087661499411182946654268157479734966482012165",
+      "ratio_lower": "6.467682044837752527483884750123536178910319879217192836575478976125662650373235107266808283156208727",
+      "ratio_upper": "6.467682044837752527483884750123536178910319880135776078308131557094554997954247619833694226247337121",
+      "exceeds_4": true,
+      "exceeds_readonce_6_4573": true,
+      "exceeds_external_old_upper": false,
+      "margin_over_external_old_upper": "-0.054163666085294048174259222825042289456342413782807163424521023874337349626764892733191716843791273"
+    },
+    {
+      "m": 20,
+      "core_dimension": 154988791111977190887085268225368572665266176,
+      "cone_dimension": 154988791111977190887085268225368572665266177,
+      "influence_exact": "4485788883585307986773819087509717139785309039831931290051344218162262592947590722469551743556177/4074071952668972172536891376818756322102936787331872501272280898708762599526673412366794752",
+      "entropy_lower": "7180929.67508279109460144715200624605192586503338383246125892934259618585313443624944119507663605539",
+      "entropy_upper": "7180929.67508279109460144715200624605192586503440750761203079718619120171723215969159300417431752363",
+      "ratio_lower": "6.521845976835246899249924597930368200040422365611185272347965403884806777953330672502975052289742153",
+      "ratio_upper": "6.521845976835246899249924597930368200040422366540904955693945055888379528244429879212332123093485211",
+      "exceeds_4": true,
+      "exceeds_readonce_6_4573": true,
+      "exceeds_external_old_upper": true,
+      "margin_over_external_old_upper": "2.65912200323591780624981789731673760072611185272347965403884806777953330672502975052289742153E-7"
+    }
+  ],
+  "full_FEI_status": "OPEN / NOT PROVED; finite checks only"
+}

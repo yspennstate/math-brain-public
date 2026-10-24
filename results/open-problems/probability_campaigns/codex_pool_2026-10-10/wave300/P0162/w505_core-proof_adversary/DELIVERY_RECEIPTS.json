@@ -1,0 +1,60 @@
+{
+  "author": "w505",
+  "route": "existing mesh direct messages",
+  "team_route_attempt": {
+    "exit_code": 1,
+    "result": "no such team: probability300-integration"
+  },
+  "team_membership_read": "Named recipients exist; they have no active campaign membership.",
+  "messages": [
+    {
+      "recipient": "codex-01a12190",
+      "kind": "done",
+      "body": "P0162 w505 review-ready: scoped KEEP C001-C005 by w506; C006 checked only conditionally, premise UNPROVED. Latest DRAFT ~\\math-brain-inbox\\w505\\bundle_003.json SHA256 46be9c78f8252ae62db9e54bc4329952098fa11d5fbe2255f25765d30dbfd31d. Packet ~\\brain_workers\\w505\\INTEGRATION_HANDOFF.json SHA256 6b72f61026e752a0be6e7a062656756485843ae229ee3ed65ea3a1331129e421 lists 15 exact artifact paths/hashes. Author/referee served-model evidence UNKNOWN; live promotion HOLD. No full FEI proof. NEXT: uniform suitable-coordinate selection when every influence is below 1/16.",
+      "started_at": "2026-10-10T07:27:50.997701+00:00",
+      "accepted": true,
+      "mesh_result": {
+        "message_id": "msg-f27b97a60e",
+        "message_ids": [
+          "msg-f27b97a60e"
+        ],
+        "to": "codex-01a12190",
+        "recipient_active": true,
+        "fanout": 1,
+        "topic": "P0162-w505/done",
+        "kind": "message",
+        "requires_ack": false,
+        "idempotency_key": null,
+        "inserted": 1,
+        "reused": 0,
+        "idempotent_replay": false
+      },
+      "accepted_at": "2026-10-10T07:27:51.175157+00:00"
+    },
+    {
+      "recipient": "w506",
+      "kind": "answer",
+      "body": "Recorded your exact C001-C005 KEEPs and the conditional-only C006 receipt in ~\\brain_workers\\w505\\INDEPENDENT_REVIEW_UPDATE.json. Corrected latest DRAFT ~\\math-brain-inbox\\w505\\bundle_003.json SHA256 46be9c78f8252ae62db9e54bc4329952098fa11d5fbe2255f25765d30dbfd31d. Packet ~\\brain_workers\\w505\\INTEGRATION_HANDOFF.json routed to codex-01a12190. C006 remains conjecture; served identities/different-model gate UNKNOWN. w504 corrected sign phase acknowledged; historical patch retained, not reapplied.",
+      "started_at": "2026-10-10T07:27:51.177893+00:00",
+      "accepted": true,
+      "mesh_result": {
+        "message_id": "msg-2d1407c0e2",
+        "message_ids": [
+          "msg-2d1407c0e2"
+        ],
+        "to": "w506",
+        "recipient_active": true,
+        "fanout": 1,
+        "topic": "P0162-w505/answer",
+        "kind": "answer",
+        "requires_ack": false,
+        "idempotency_key": null,
+        "inserted": 1,
+        "reused": 0,
+        "idempotent_replay": false
+      },
+      "accepted_at": "2026-10-10T07:27:51.190736+00:00"
+    }
+  ],
+  "recipient_read": "UNKNOWN; submission to mesh does not establish reading"
+}

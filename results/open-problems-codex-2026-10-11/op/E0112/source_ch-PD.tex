@@ -1,0 +1,198 @@
+ \chapter{Phase diagram in the $(\b, \nu)$-plane, $d\geq 3$} \label{ch:PD}
+ 
+ In this section, $r>0$ is kept fixed, and we discuss the phase diagram in the remaining parameters $\b, \nu$. 
+ Recall $\psi$ form \eqref{def:excessfreeenergy} and $\psi_t(\b,\nu)= \nu \lambda(\b) r^d - t^{-1} \P[ \ln Z_t(\om, \b)]$ from \eqref{def:psit}. Recall the notations
+ \begin{equation} \nn
+ {\cal D} = \{ (\b,\nu): \psi(\b, \nu)=0 \}, \quad {\cal L}  = \{ (\b,\nu): \psi(\b, \nu)>0\}, \quad {\tt Crit} = {\cal D} \bigcap \overline{\cal L}.
+\end{equation}
+$\cal D$ is is the delocalized phase, $\cal L$ the localized phase.%,  {\tt Crit} is the critical region separing them.  ${\cal D}, {\cal L}$ 
+They are also high temperature/low density and low temperature/high density phases respectively.
+They are separated by the critical curve ${\tt Crit} =\{(\beta_c^+(\nu), \nu); \nu >0\} \cup \{(\beta_c^-(\nu), \nu); \nu > \nu_c\}$. %[DEFINIR $\nu_c$ section 2 ($L^2$)????]
+ We have seen that, in dimension $d=1$ or $ 2$,  ${\cal D}$ reduces to the axis $\b=0$, so  we assume $d \geq 3$ in this section.
+ 
+ We introduce  
+  \begin{equation}\label{def:nuc}
+ \nu_c = \sup\{ \nu >0: \b_c^- = -\8\}\;.
+\end{equation}
+Then, $ \nu_c \in (0, \8)$, and 
+$$
+\nu > \nu_c \iff \b_c^- > -\8 \;.
+$$
+ 
+ 
+ A central question in polymer models is to estimate the critical curve \cite{dHollanderStFl, Giacomin}. 
+ 
+ \section{Strategy for critical curve estimates}
+ 
+ We follow the idea of \cite{CYBMPO2}, that is to
+ \begin{quotation}
+find curves $\nu(\b)$ along which $\psi$ is monotone.
+\end{quotation}
+We now sketch  the strategy. By computing the derivative  with the chain rule
+\begin{equation}\nn
+\frac{d}{d \b}  \psi_t(\b,\nu(\b)) = \nu' \frac{\partial}{\partial \nu}  \psi_t + \frac{\partial}{\partial \b}  \psi_t,
+\end{equation}
+one sees that,  along the smooth curve ${\cal C}_a^\a$
+\begin{equation}\label{eq:curve}
+\nu(\b)= a | \lambda (\b)|^{-\alpha}
+\end{equation}
+for positive constants $a, \alpha$, it takes the amenable form
+\begin{equation} \label{eq:curved}
+t \frac{\partial}{\partial \b}  \psi_t(\b,\nu(\b)) = \nu' \times \P \left[ \int_{(0,t] \times \rd} h_\alpha ( \lambda \gibbs[ \chi_{s,x}])dsdx\right] \;,
+\end{equation}
+where
+\begin{equation} \label{eq:halpha}
+h_\alpha ( u) = u -\frac{u^2}{\alpha(1+u)} - \ln(1+u)
+\end{equation}
+for $u >-1$. Now, the questions boils down to controling the sign of the function on the relevant interval with endpoints 0 and $\lambda(\b)$:
+\begin{equation}\nn
+h_\alpha ( u) \quad
+\left\{
+\begin{array}{ccc}
+ \geq 0 & {\rm if \ } \alpha=2 {\rm \ and }  & u \geq 0,  \\
+ \leq 0 &  {\rm if \ }  \alpha=2 {\rm \ and }  & u \in (-1,0],   \\
+ \leq 0 & {\rm if \ }   \b>0, \alpha\leq \alpha(\b) {\rm \ and }  & u \in [0, \lambda],     \\
+ \geq 0 &  {\rm if \ }   \b<0, \alpha\geq \alpha(\b) {\rm \ and }  & u \in [\lambda,0],
+\end{array}
+\right.
+\end{equation}
+with 
+$\alpha(\b) = \frac{ (e^\b-1)^2}{e^\b(e^\b-1-\b)}, \quad \alpha(0)=2$. With this at hand, we can bound the critical curve from above and below with 
+curves of the form \eqref{eq:curve} and specific $\alpha$'s, as indicated on Figure \ref{f-diag2}.
+ %
+\begin{figure} \centering
+% 
+%
+%
+\includegraphics[scale=0.6]{diagram.eps}
+% 
+%
+\caption{Estimating the critical curve. ${\cal C}^\alpha_a$ denotes the curve \eqref{eq:curve}. } 
+\label{f-diag2}
+%% 
+%
+\end{figure}
+%%%%%%
+
+\section{Main results}
+
+We start with an estimate of the free energy.
+In \cite[Th. 5.3.1]{CYBMPO2}, the asymptotics of the free energy is determined as $\nu  \b^2 $ diverges and $\b$ remains bounded. We state it below, it is key for our results.
+\begin{lemma}\label{lem:boundfe}
+Let $\b_0 \in (0,\8)$ arbitrary. Then, as $\nu  \b^2 \to \8$ and $|\b| \leq \b_0$, we have
+$$ p(\nu,\b) = \b \nu r^d + {\cal O}((\nu  \b^2 r^d)^{5/6}\;.$$
+\end{lemma}
+\noindent We refer to the above paper for the involved, technical proof.
+
+
+Among all the results, we mention:
+\begin{theorem}
+Let $d \geq 3$.
+
+(i) the functions $\be_c^\pm(\nu)$ are locally Lipshitz and strictly monotone;
+
+(ii) we have\footnote{For positive functions we write $f(x) \asymp g(x)$ as $x \to x_0$ if the ratio remains bounded  from 0 and from $\8$  as $x \to x_0$.}
+ \begin{equation} \label{eq:decay*of*b_c+}
+\b^+_c (d, \nu) \asymp \ln (1/\nu)
+\; \; \mbox{as $\nu \searrow 0$};
+\end{equation}
+
+
+(ii) we have 
+\begin{equation} \label{eq:decay*of*b_c2}
+|\b^\pm_c (d,\nu)| \asymp 1/\sqrt{\nu} \quad {\rm as } \quad \nu \nearrow \8.
+\end{equation}
+\end{theorem} 
+%%%%%%%%%%%%
+\section{Main steps}
+
+The derivative of $\psi_t$ in $\b$ has been obtained in \eqref{eq:meanenergy}. We explain how to obtain the derivative in $\nu$, and for clarity,
+in the sequel of the section we write $\P=\P_\nu$ to make the dependence in $\nu$ explicit.
+ %%%%%%%%%%%
+ \begin{lemma} \label{lem:deriveenu}
+%%%%%%%%%%
+We have 
+\begin{equation}
+\label{eq:dnp}
+\frac{\6 }{\6 \nu} \P_\nu[\ln Z_t(\b, \om)]
+ =\int_{[0,t]\times \rd}  dsdx
+\; \P_\nu \;  \ln [1+\ln \gibbs( \chi_{s,x})]  \;.
+\end{equation}
+%%%%%%%%
+\end{lemma}
+%%%%%%%%%%%
+\begin{proof}:
+For $k \geq 1$, let 
+$$
+Z_{t,k}=P[ e^{\b \om(V_t)}; A_k]\;,
+\; \; \; 
+\mbox{with} \; \; A_k=\{B_s \in [-k,k]^d, \;\forall s \leq t\},
+$$
+and $p_{t,k}(\b,\n )=t^{-1} \P_\nu \ln Z_{t,k}$. 
+Let $K^r=[-k-r,k+r]^d$ and $K_t=(0,t]\times K^r$.
+By Proposition \ref{prop:PoissonGirsanov},
+$$
+\P_\nu [ \ln Z_{t,k}]= \P_1 \left[ \rho_{t,\nu} \ln Z_{t,k}\right] 
+\; \; \;\mbox{with}\; \; \; 
+\rho_{t,\nu}=
+%{d \P_\nu |_{K_t}\over d \P_1 |_{K_t}}=
+\exp \left( \om_t(K_t)\ln \nu 
+-  (\nu-1)t|K^r|\ri).
+$$
+Thus, $t p_{t,k}(\b,\nu)$ is differentiable in $\nu$, with derivative %given by differentiating inside the expectation, 
+\begin{eqnarray*} 
+\frac{1}{\nu} \P_\nu
+\left[  \int_{K_t}
+ \overline{\om}(dsdx)   \ln Z_{t,k}\ri]
+&\stackrel{\eqref{eq:IPP}}{=}& 
+\int_{K_t} dsdx \; \P_\nu    \ln 
+\frac{Z_{t,k}(\om+\delta_{s,x})}{Z_{t,k}(\om) }  \\
+%&=& 
+%\int_{[0,t]\times \rd} dsdx \; Q_\n   \ln 
+%\frac{Z_{t,k}(\h_t+\del_{s,x})}{Z_{t,k}(\h_t) }\\
+&=& 
+\int_{[0,t]\times \rd} dsdx \; \P_\nu  
+\ln \left( 1+\ln \gibbs [\chi_{s,x} | A_k]\right).
+\end{eqnarray*}
+ Now, we write
+%%%%%%%%%%%%%
+\begin{equation}\nn
+tp_{t,k}(\b,\nu)-tp_{t,k}(\b,1)
+= \int_1^\nu d\nu' \int_{[0,t]\times \rd} dsdx \; \P_{\nu'}   \ln 
+\left( 1+\ln \gibbs [\chi_{s,x} | A_k]\right).
+\end{equation}
+%%%%%%%%
+By dominated convergence theorem (see details in \cite{CYBMPO2}, Lemma 7.2.1), we can take the limit $k \to \8$, and obtain the desired statement.
+\end{proof} 
+%%%%%%%%
+We come to the core of the proof. With the derivatives of $\psi_t$  in both variables, from Lemma \ref{lem:deriveenu} and   \eqref{eq:meanenergy}, we obtain
+\begin{eqnarray}\nn
+t \frac{d}{d\b}  \psi_t(\b,\nu(\b)) & \!=& \! \nu' t \frac{\partial}{\partial \nu}  \psi_t + t \frac{\partial}{\partial \b}  \psi_t \\
+& \!=& \!
+\nu' \times \P \int_{[0,t]\times \rd} ds dx \left\{ \lambda \gibbs [\chi_{s,x}] +\frac{\nu}{\nu'} e^\b \lambda \frac{ \gibbs [\chi_{s,x}]^2 }{1\! +\!  \lambda  \gibbs [\chi_{s,x}] } 
+-\ln \big( 1 \! + \! \lambda  \gibbs [\chi_{s,x}] \big)\right\}. \nn
+\end{eqnarray}
+Recall that $e^\b=\lambda'$; we recover the simpler formula \eqref{eq:curved} along the curves of equation
+$$
+\frac{\lambda' \nu}{\lambda \nu'} = - \frac{1}{\alpha},
+$$
+that is, the curves $h_\alpha$ from \eqref{eq:halpha}.
+From then on,  the rest of the proof is a tedious but elementary exercise in calculus, performed in  \cite{CYBMPO2}.
+We will not dive any further in the details of the proof, that the reader can find in this reference together with many fine estimates.
+We summarize the section by giving a qualitative picture of the phase diagram in Figure \ref{f-diag}.
+ %
+\begin{figure} \centering
+% 
+%
+%
+\includegraphics[width=10cm,height=70mm]{dia4.eps}
+% 
+%
+\caption{Shape of the phase diagram, $d \geq 3$. }
+\label{f-diag}
+%% 
+%
+\end{figure}
+%%%%%%
+
+

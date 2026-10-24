@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "account01-B07-20260923T053559Z-r17",
+  "control_revision": "2026-09-22.15",
+  "final_control_head_observed": "93ced8b9dd970453826730d28f78d4a64718e5e7",
+  "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "abbd51dd7e691844aa6bfa3d34410af4b23f1cda",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T053559Z-r17/REPORT.md",
+    "report_blob_readback": "02d39dfc62adb0484c1e803f129694cc46d6a7c0",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T053559Z-r17/CHECKS.py",
+    "checks_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T053559Z-r17/CHECKS.txt"
+  },
+  "sources": [
+    {
+      "role": "designated_partner_live_branch",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "67a5863d5e97c6b27499ccf7690d6008965f62c3",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T033624Z-account02-B07-fd9b69f8f3ff/REPORT.md",
+      "used": "E3(M)>=(theta^2/6)F^6, F>kappa/Lambda in the surviving collar, and E5 small after D5 failure"
+    },
+    {
+      "role": "designated_partner_one_sided_receiver",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "5266d24ea98d9bb5902c51a92eca0e3e38112e39",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260922T193347Z-b07-639234ec/REPORT.md",
+      "used": "actual inequality ||p_Q||inf<=3sqrt(e)det(BB^T)^(-1/6) for a physical three-row full-rank cross block"
+    },
+    {
+      "role": "three_sample_volume_compiler",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "d6730c301e46e6337bc3b32e30eb3d04f07dc90b",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T050831Z-account02-B02-QFORM-auto11-f98b4bb5/REPORT.md",
+      "used": "three-sample integrated-Fourier payment and quantitative near-coloop/four-row-support stability"
+    },
+    {
+      "role": "physical_edge_or_incident_E2",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "287729053a28e2b51caa113509e7136c01e3e79d",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260923T033734Z-account03-B07-qform-r23/REPORT.md",
+      "used": "general actual-matrix edge-or-incident-E2 lemma"
+    },
+    {
+      "role": "own_schur_compound_sandwich",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "885b55c191d2964c24a21d8c5d806e32f24cdb53",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T040200Z-r15/REPORT.md",
+      "used": "determinant-weighted physical 2x2 Schur residual averaging"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-E3-MARGINAL-TO-PHYSICAL-ROW-NORM-v1",
+      "status": "analytic_proof_supplied",
+      "statement": "alpha_i E3(M) <= (1/2)||row_i(M)||^2||M||_F^4; with E3(M)>=(theta^2/6)||M||_F^6 and alpha_i>3/4, the physical row norm exceeds theta||M||_F/2; transpose gives the column version."
+    },
+    {
+      "id": "QFORM-TRIPLE-VOLUME-TO-PHYSICAL-BIANCHOR-v1",
+      "status": "analytic_proof_supplied",
+      "statement": "At the live E3 lower bound, either row/column three-sample determinant disjointness pays the full form continuously, or a four-coordinate core pays it continuously by the designated partner theorem, or there are physical row/column anchors with determinant marginals >3/4, physical norms >theta F/2, and joint anchored E3 mass >Z/2."
+    },
+    {
+      "id": "QFORM-BICOLOOP-EDGE-OR-INCIDENT-E2-v1",
+      "status": "analytic_proof_supplied",
+      "statement": "The bi-coloop survivor has either |M_ij|>theta^2 F/16, or star product >15theta^2F^2/64 and sqrt(incident E2 bank)>11theta^2F^2/64."
+    },
+    {
+      "id": "QFORM-BICOLOOP-SCHUR-MIXTURE-STRENGTHENING-v1",
+      "status": "analytic_proof_supplied",
+      "statement": "After D5 failure, good determinant-extension currency exceeds theta^2F^6/24 and each good Schur residual is small-energy or within relative Frobenius distance (8sqrt(6))^(-1/2)<0.225901 of rank two."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "account_slot": "account02/B07",
+    "result": "QFORM-CROSS-FIBER-PLANCHEREL-v1 one-sided r=3 form",
+    "inequality": "||p_Q||inf <= 3sqrt(e)[4/((1-rho_0)Z)]^(1/6) < 6.423 Z^(-1/6) on a four-row determinant-core branch",
+    "continuity": true
+  },
+  "unresolved_implication": "QFORM-BICOLOOP-EDGE-E2-SCHUR-MIXTURE-RECEIVER-v1: spend the strong physical edge/two-star or incident-E2/two-star resource, or the determinant-weighted Schur family before reciprocal inversion, while retaining arbitrary same-bank curvature and the true nonzero residual tail.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_GLOBALLY; proved on the three-sample and four-coordinate paid branches only",
+  "full_brain_connected": false,
+  "execution_context": "WITHOUT_VERIFIED_BRAIN"
+}

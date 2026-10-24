@@ -1,0 +1,4 @@
+--- a/~/primary_directive/hooks1000/proposals/ising-id-w477.jsonl
++++ b/~/primary_directive/hooks1000/proposals/ising-id-w477.jsonl
+@@ -0,0 +1 @@
++{"id": "ising-id-w477-01", "area": "math", "event": "PostToolUse", "cue": "an exact C-number lookup returns a different problem logical_id", "fire_when": "C0052 recall fallback returns the C0051 attempt whose body merely mentions C0052", "silent_when": "the result's logical_id contains c0052 as a complete ID segment and all unverified labels are preserved", "text": "Check the logical ID before using a C-number card. A C0052 mention on a C0051 attempt is related evidence. After a recall timeout, use a bounded read-only ID lookup and retain the source's unverified labels.", "evidence": "w477/STORE_LOOKUP.json (exact C0052 hit, 0.1851389 s); baseline export lookup returned C0051, 9.150454 s; brain.py recall timed out at 60 s", "proposer": "w477"}

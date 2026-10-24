@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B16",
+  "run_id": "20260924T095233Z-account03-B16-QFORM-auto11-r4",
+  "execution_memory": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "startup_control_commit": "a44e5a0ae530726690d3d662260b7e241b15b069",
+  "publication_control_commit": "ca6cb778a18d6c17d61c5fbf7912100db2eae9fd",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1"
+  ],
+  "mathematical_premises": [
+    {
+      "id": "LPP-2D-PROJECTION-CAP",
+      "source": "yspennstate/math-open-problems@7f2bb2d330022b09a6af6e39ab09d054caeaa346:proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260924T041516Z-account04-B16-QFORM-r4/REPORT.md",
+      "scope": "orthonormal two-dimensional projection of a cap-one product law has joint density cap at most 2; dependence between projected coordinates retained"
+    },
+    {
+      "id": "ROGOZIN-BALL-SCALAR-PROJECTION-CAP",
+      "source": "source-pinned in prior B16 mathematics, including math-open-problems@fb28047260afcaa64675fef64af6457e2815af2d",
+      "scope": "unit scalar projection of a cap-one product law has density cap at most sqrt(2)"
+    }
+  ],
+  "partner_applied": {
+    "partner": "account04/B16",
+    "source": "yspennstate/math-open-problems@7f2bb2d330022b09a6af6e39ab09d054caeaa346:proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260924T041516Z-account04-B16-QFORM-r4/REPORT.md",
+    "result": "definite projected-plane exit ||p_Q||_infinity <= 2pi/sqrt(|det H|)",
+    "actual_inequality": "Q_partner=-3R^2+4RZ1+3Z1^2+2Z2^2 has H=diag(3,2) after conditioning on R, hence ||p_Qpartner||_infinity<=2pi/sqrt(6)=2.565099660323728; spectrum {-sqrt(13),2,sqrt(13)}"
+  },
+  "new_results": [
+    {
+      "id": "QFORM-SHAREDBANK-SQUAREHYPERBOLIC-KERNEL-v1",
+      "statement": "If (S,T) has joint density cap M, the genuine S marginal has cap K, and independent V has cap 1, then S^2+2TV has density cap <=sqrt(2)(5+2log2)sqrt(MK)+sqrt(12)M^(3/4)K^(-1/4)."
+    },
+    {
+      "id": "QFORM-SHAREDBANK-SQUAREHYPERBOLIC-PROJECTIONPRODUCT-v1",
+      "statement": "For Q=a(S+d)^2+2b(T+cS+alpha)(V+beta)+r with pair joint cap M, first marginal cap K, independent V cap L, the density cap is <=C1[LMK/(|ab|)]^(1/2)+C2(LM)^(3/4)K^(-1/4)|a|^(-1/4)|b|^(-3/4). The same uniform estimate survives arbitrary parameters measurable in an additional disjoint source bank."
+    },
+    {
+      "id": "QFORM-DEPENDENT-2D-PROJECTION-SQUAREHYPERBOLIC-v1",
+      "statement": "For (S,T) an orthonormal 2D projection of one cap-one product bank and V a unit scalar projection of a disjoint product bank, ||p_(S^2+2TV)||_infinity<24.992 although S,T may be dependent; effective spectrum is exactly {-1,1,1}."
+    }
+  ],
+  "proof_mechanism": "Exact nonlinear product kernel. Use joint cap only on small product coordinate, true first-marginal mass/cap on large product coordinate, then near/far integration across |q-s^2|. This avoids the invalid bounded-joint-density-alone indefinite coarea shortcut.",
+  "canonical_math_commit": "fce7eff1d77ecb95c6cc023af0095a01c5677cfb",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260924T095233Z-account03-B16-QFORM-auto11-r4/REPORT.md",
+  "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260924T095233Z-account03-B16-QFORM-auto11-r4/CHECK.py",
+  "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260924T095233Z-account03-B16-QFORM-auto11-r4/CHECK.out",
+  "handoff_commit": "fa6e2dfa880a4da7831db205be5c1acf293bd31f",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B16/20260924T095233Z-account03-B16-QFORM-auto11-r4.md",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "SCOPED_RESULT_ESSENTIAL_BOUND_ONLY_GLOBAL_OPEN",
+  "resolved_implication": "QFORM-OVERLAPPING-PROJECTEDSQUARE-RANK2-PREABSOLUTE-v2 in its canonical square-hyperbolic normal form",
+  "unresolved_implication": "QFORM-SHAREDBANK-NORMALFORM-OR-EXIT-COMPILER-v1",
+  "next_step": "Compile the live exact-rank-three/small-pivot shared-bank coefficient geometry into either the new square-hyperbolic packet with quantitative coefficients, the account04 definite-plane exit, a source-preserving phase-aligned exit, or another completed fresh-source crossing; otherwise isolate the residual invariant."
+}

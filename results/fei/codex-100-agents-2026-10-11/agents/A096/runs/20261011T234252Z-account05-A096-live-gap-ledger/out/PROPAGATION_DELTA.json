@@ -1,0 +1,194 @@
+{
+  "schema": "a096-source-bound-correction-propagation/1",
+  "stage": "20261011T234252Z-account05-A096-live-gap-ledger",
+  "correction_sources": [
+    "CORRIGENDUM.md",
+    "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T232653Z-account05-A021-rare-core-asymptotics\\REPORT.md"
+  ],
+  "updates": [
+    {
+      "claim_id": "A096-UNIFORM-SINGLETON-HALF-TAX",
+      "version": 1,
+      "proposed_status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A090",
+      "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A090\\runs\\20261011T231429Z-account05-A090-independent-reconstruction\\CLAIMS.json",
+      "statement_unchanged": true,
+      "proof_sentence_correction": "J<=h2(r)-h2(delta)+M",
+      "review_scope": "A090 independently reconstructed the singleton claim and its endpoint, not the general fixed-pair theorem"
+    },
+    {
+      "claim_id": "A096-SHARP-FIXED-PAIR-BIASED-ENDPOINT",
+      "version": 1,
+      "proposed_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "scope_note": "B20 reports its own hand re-derivation; A090 explicitly excludes independent acceptance of this general theorem"
+    },
+    {
+      "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+      "version": 1,
+      "proposed_status": "REFUTED_IN_REMAINDER_INTERVAL_SUPERSEDED_BY_V2",
+      "false_subclaim": "-2cq^3/[3(1-q)]<=R(q)<=0",
+      "replacement": {
+        "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+        "version": 2,
+        "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW"
+      },
+      "source_affected_records": [
+        {
+          "source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T214020Z-account05-A021-rare-core-asymptotics\\CLAIMS.json",
+          "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+          "version": 1,
+          "dependencies": [],
+          "review_records": [],
+          "action": "Compare scope to corrected v2: signed remainder assertions need substitution; exact spectrum/control-KL identities survive."
+        },
+        {
+          "source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T214020Z-account05-A021-rare-core-asymptotics\\CLAIMS.json",
+          "claim_id": "A021-CONTROL-FIRST-KL-LEDGER",
+          "version": 1,
+          "dependencies": [],
+          "review_records": [],
+          "action": "Compare scope to corrected v2: signed remainder assertions need substitution; exact spectrum/control-KL identities survive."
+        },
+        {
+          "source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T232653Z-account05-A021-rare-core-asymptotics\\CLAIMS.json",
+          "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+          "version": 2,
+          "dependencies": [],
+          "review_records": [
+            {
+              "reviewer": "Claude B05",
+              "verdict": "ERROR_FOUND_IN_V1; CONTRIBUTOR_TO_V2",
+              "source": "~\\brain_workers\\FEI100_20261011\\claude\\B05\\runs\\20261011T225000Z-claude-B05-odd-face-transport\\REPORT.md",
+              "independent_acceptance_of_v2": false
+            }
+          ],
+          "action": "Compare scope to corrected v2: signed remainder assertions need substitution; exact spectrum/control-KL identities survive."
+        },
+        {
+          "source": "~\\brain_workers\\FEI100_20261011\\agents\\A023\\runs\\20261011T221608Z-account05-A023-amortized-rarity-budget\\CLAIMS.json",
+          "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+          "version": 1,
+          "dependencies": [],
+          "review_records": [
+            {
+              "reviewer": "A023",
+              "verdict": "ACCEPT_AT_STATED_SCOPE",
+              "source": "~\\brain_workers\\FEI100_20261011\\agents\\A023\\runs\\20261011T221608Z-account05-A023-amortized-rarity-budget\\REVIEW_A021.md",
+              "method": "separate raw-truth-table FWHT/edge checker and analytic series reconstruction; no repair contributed",
+              "registry_adoption": "PENDING_SUPERVISOR"
+            }
+          ],
+          "action": "Compare scope to corrected v2: signed remainder assertions need substitution; exact spectrum/control-KL identities survive."
+        },
+        {
+          "source": "~\\brain_workers\\FEI100_20261011\\agents\\A023\\runs\\20261011T221608Z-account05-A023-amortized-rarity-budget\\CLAIMS.json",
+          "claim_id": "A021-CONTROL-FIRST-KL-LEDGER",
+          "version": 1,
+          "dependencies": [],
+          "review_records": [
+            {
+              "reviewer": "A023",
+              "verdict": "ACCEPT_AT_STATED_SCOPE",
+              "source": "~\\brain_workers\\FEI100_20261011\\agents\\A023\\runs\\20261011T221608Z-account05-A023-amortized-rarity-budget\\REVIEW_A021.md",
+              "method": "separate raw-truth-table FWHT/edge checker and analytic series reconstruction; no repair contributed",
+              "registry_adoption": "PENDING_SUPERVISOR"
+            }
+          ],
+          "action": "Compare scope to corrected v2: signed remainder assertions need substitution; exact spectrum/control-KL identities survive."
+        },
+        {
+          "source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\CLAIMS.json",
+          "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+          "version": 1,
+          "dependencies": [],
+          "review_records": [
+            {
+              "reviewer": "A087",
+              "timestamp": "2026-10-11T22:31:20.333650+00:00",
+              "verdict": "ACCEPT_AT_STATED_SCOPE",
+              "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+              "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+              "validation_sources": [
+                "out/check_results_identity.json",
+                "out/check_results_selection.json",
+                "out/check_results_activation.json",
+                "out/extra_results.json"
+              ],
+              "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+              "source_recorded_statement_sha256": "cf143df5920601dcec3c3e11e0a14be3e6e217e964f3acd2250215079116d382",
+              "local_UTF8_exact_statement_sha256": "96d6b579feecbca75e161d36eb77236421b420d88429aad9656ba288a64055de"
+            }
+          ],
+          "action": "Compare scope to corrected v2: signed remainder assertions need substitution; exact spectrum/control-KL identities survive."
+        },
+        {
+          "source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\CLAIMS.json",
+          "claim_id": "A021-CONTROL-FIRST-KL-LEDGER",
+          "version": 1,
+          "dependencies": [],
+          "review_records": [
+            {
+              "reviewer": "A087",
+              "timestamp": "2026-10-11T22:31:20.333650+00:00",
+              "verdict": "ACCEPT_AT_STATED_SCOPE",
+              "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+              "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+              "validation_sources": [
+                "out/check_results_identity.json",
+                "out/check_results_selection.json",
+                "out/check_results_activation.json",
+                "out/extra_results.json"
+              ],
+              "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+              "source_recorded_statement_sha256": "6afe9b93a0b13174a5b51e23c0357056d3a334ff52b3dbb4d7003459eae91aea",
+              "local_UTF8_exact_statement_sha256": "2981146f37a6b34aad4a8873bf5337429ffb2f00340cf98c55a41ab79d4cc8f9"
+            }
+          ],
+          "action": "Compare scope to corrected v2: signed remainder assertions need substitution; exact spectrum/control-KL identities survive."
+        },
+        {
+          "source": "~\\brain_workers\\FEI100_20261011\\claude\\B05\\runs\\20261011T225000Z-claude-B05-odd-face-transport\\CLAIMS.json",
+          "claim_id": "B05-A021-REMAINDER-SIGN-CORRECTION",
+          "version": 1,
+          "dependencies": [
+            "power series of ln(1-q)"
+          ],
+          "review_records": [],
+          "action": "Compare scope to corrected v2: signed remainder assertions need substitution; exact spectrum/control-KL identities survive."
+        }
+      ],
+      "review_status_action": "A023/A087 full-v1 acceptances must be narrowed; exact spectra and KL ledger survive",
+      "consumers": [
+        "A023",
+        "A025",
+        "A026",
+        "A029",
+        "A064",
+        "A087",
+        "A094",
+        "B05",
+        "B20"
+      ]
+    },
+    {
+      "claim_id": "A096-UNIVERSAL-LEVEL12-ERASURE",
+      "version": 1,
+      "proposed_status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "universal_delta": "Level-one-to-two bill <=16700/2187 I; remaining erasure edges begin at level two",
+      "source": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261011T234252Z-account05-A096-live-gap-ledger\\REPORT.md",
+      "consumers": [
+        "B20",
+        "A031",
+        "A033",
+        "A057",
+        "A064",
+        "A088",
+        "A090",
+        "A094",
+        "A099"
+      ]
+    }
+  ],
+  "shared_registry_mutated": false,
+  "downstream_uses_verified": false,
+  "other_agents_not_modified": true
+}

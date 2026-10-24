@@ -1,0 +1,34 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B01",
+  "primary_packet_id": "A003",
+  "claims": [
+    {
+      "claim_id": "B01-A003-SIGNED-MISMATCH-REFUND-v1",
+      "status": "PROVED_REDUCTION",
+      "statement": "For fixed 0<eta<=1 and finite c, the universal inequality sum_i(K_i-Gamma_i)+(1+eta)U<=cI implies GU'(c+2,1-eta), U<=((c+2)/eta)I, and H<=(2+2(c+2)/eta)I.",
+      "evidence": ["PROOF.md"]
+    },
+    {
+      "claim_id": "B01-A003-SMR-2-ONE-QUARTER-v1",
+      "status": "OPEN_NUMERICALLY_SUPPORTED",
+      "statement": "For every genuine Boolean f, sum_i(K_i-Gamma_i)+(5/4)U(f)<=2I(f). If true it gives GU'(4,3/4) and FEI constant 34.",
+      "scope": "Exhaustive floating falsifier through four variables, deterministic random tests in dimensions five through nine, and selected point-defect, majority, and addressing families. No all-dimensional proof.",
+      "sharpness": "Exact equality on a four-bit flat-spectrum Boolean sign and all of its disjoint tensor powers."
+    },
+    {
+      "claim_id": "B01-A003-LOCAL-SMR-ALLOCATION-NOGO-v1",
+      "status": "PROVED_EXACT_FINITE_FALSIFIER_PENDING_INDEPENDENT_REPRODUCTION",
+      "statement": "The coordinate allocation Delta_iU-B_i+(5/4)u_i^*<=2 Inf_i is false for a genuine five-bit Boolean sign; mask 2624023184 and zero-based coordinate 2 give a strictly positive residual.",
+      "evidence": ["CERTIFY_SIGNED_MISMATCH.py", "CERTIFY_SIGNED_MISMATCH.out"]
+    },
+    {
+      "claim_id": "GU-ASYMMETRY-MISMATCH",
+      "version": "v3.0",
+      "status": "OPEN",
+      "statement": "The remaining sufficient target is the aggregate signed refund SMR_{c,eta} for some finite c and eta>0. Coordinatewise ownership by the normalized upper-set share u_i^* is exactly obstructed."
+    }
+  ],
+  "full_fei_status": "OPEN"
+}
+

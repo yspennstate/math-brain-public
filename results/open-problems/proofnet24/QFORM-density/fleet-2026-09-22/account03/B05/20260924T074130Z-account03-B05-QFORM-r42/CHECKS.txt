@@ -1,0 +1,38 @@
+account03/B05 r42 finite algebra checks
+run_id=20260924T074130Z-account03-B05-QFORM-r42
+
+1. Symbolic curvature cancellation.
+Represent the rotated residual matrix as
+C = alpha*h*h^T + beta*(q*h^T+h*q^T) + gamma*(h*z^T+z*h^T) + delta*z*z^T,
+where h,z,q are an orthonormal frame (q=+/- h cross z).
+A symbolic expansion gives
+h1^2*C22 - 2*h1*h2*C12 + h2^2*C11 = delta*(-h1*z2+h2*z1)^2,
+h2^2*C33 - 2*h2*h3*C23 + h3^2*C22 = delta*(-h2*z3+h3*z2)^2.
+Thus alpha, beta=a*kappa, and gamma cancel exactly.
+
+2. Constant arithmetic.
+C_NH=7.761982175235...
+2*C_NH=15.523964350470...
+For S_i>=1/2 and Gamma>=1/16, S_i*Gamma>=1/32 and
+2*C_NH*(1/32)^(-1/3)=49.2855146813... <49.286.
+
+3. Walsh endpoint.
+u=(1,-1,1,-1)/2, v=(1,1,1,1)/2, w=(1,1,-1,-1)/2, J={1,2}.
+Gram_J in basis (u,v,w) is
+[[1/2,0,0],[0,1/2,1/2],[0,1/2,1/2]],
+with eigenvalues {1,1/2,0}.
+Taking e1=(v+w)/sqrt(2), e2=u, e3=(-v+w)/sqrt(2) yields
+h=O^T e_v=(1/sqrt(2),0,-1/sqrt(2)),
+z=O^T e_w=(1/sqrt(2),0,1/sqrt(2)),
+so p12=p23=0, p13=1, Gamma=0.
+
+4. Partner literal-pair family.
+For Q_kappa=2V(H+kappa U)+W^2 in the Walsh frame, the nonzero spectrum is
+{1,+sqrt(1+kappa^2),-sqrt(1+kappa^2)}.
+For kappa>0, residual physical pair {1,3} has
+[[1/4+kappa/2,-1/4+kappa/2],[-1/4+kappa/2,1/4+kappa/2]]
+with determinant kappa/2 and eigenvalues {1/2,kappa}; hence it is positive definite.
+For kappa<0, pair {2,4} has determinant |kappa|/2 and is positive definite.
+The partner bound is pi*sqrt(2/|kappa|), so for |kappa|>=1/4 it is <=2*sqrt(2)*pi<8.886.
+
+These computations are diagnostic checks only; the report gives exact algebraic proofs. No Monte Carlo/histogram is used.

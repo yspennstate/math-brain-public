@@ -1,0 +1,90 @@
+{
+  "command": "python -X utf8 check_p0004.py",
+  "tree_early_counts": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    8,
+    16,
+    16,
+    16,
+    16,
+    16
+  ],
+  "tree_block_end_cases": [
+    {
+      "block": 0,
+      "length": "2",
+      "total_levels": "2",
+      "two_child_fraction": 0.0,
+      "root_growth_at_block_end": 1.0
+    },
+    {
+      "block": 1,
+      "length": "4",
+      "total_levels": "6",
+      "two_child_fraction": 0.6666666666666666,
+      "root_growth_at_block_end": 1.5874010519681994
+    },
+    {
+      "block": 2,
+      "length": "16",
+      "total_levels": "22",
+      "two_child_fraction": 0.18181818181818182,
+      "root_growth_at_block_end": 1.1343125221954626
+    },
+    {
+      "block": 3,
+      "length": "256",
+      "total_levels": "278",
+      "two_child_fraction": 0.935251798561151,
+      "root_growth_at_block_end": 1.9122243532020395
+    },
+    {
+      "block": 4,
+      "length": "65536",
+      "total_levels": "65814",
+      "two_child_fraction": 0.003950527243443644,
+      "root_growth_at_block_end": 1.0027420493796821
+    },
+    {
+      "block": 5,
+      "length": "4294967296",
+      "total_levels": "4295033110",
+      "two_child_fraction": 0.9999847372538648,
+      "root_growth_at_block_end": 1.9999788414530195
+    },
+    {
+      "block": 6,
+      "length": "18446744073709551616",
+      "total_levels": "18446744078004584726",
+      "two_child_fraction": 2.3283065769428694e-10,
+      "root_growth_at_block_end": 1.000000000161386
+    },
+    {
+      "block": 7,
+      "length": "340282366920938463463374607431768211456",
+      "total_levels": "340282366920938463481821351509772796182",
+      "two_child_fraction": 1.0,
+      "root_growth_at_block_end": 2.0
+    }
+  ],
+  "lattice_counts_through_10": [
+    1,
+    4,
+    12,
+    36,
+    100,
+    284,
+    780,
+    2172,
+    5916,
+    16268,
+    44100
+  ],
+  "exact_lattice_submultiplicativity_checks": 45,
+  "elapsed_seconds": 0.045201,
+  "result": "PASS"
+}

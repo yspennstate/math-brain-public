@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B06",
+  "run_id": "20260923T180458Z-account01-B06-QFORM-r36",
+  "control_revision": "2026-09-22.15",
+  "control_commit_prepublication_observed": "1f8743a1d2bb4479f6f6d4e39a5effd0cfff367a",
+  "owner_continuation_acknowledged": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d13d6e8e5ee6d13d7dcc36ae1dd3fdb661f64b59",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260923T180458Z-account01-B06-QFORM-r36/REPORT.md",
+    "blob": "48e285b9b86bbf58d79dbe6577d556173b2e944e"
+  },
+  "supporting_files": [
+    "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260923T180458Z-account01-B06-QFORM-r36/EARLY_CHECKPOINT.md",
+    "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260923T180458Z-account01-B06-QFORM-r36/CHECKS.md",
+    "proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260923T180458Z-account01-B06-QFORM-r36/PREPUBLICATION_REFRESH.md"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-GSTAR-SCALE-FORCING-FALSE-v1"
+  ],
+  "claims": [
+    {
+      "id": "QFORM-DIFFUSE-PARABOLIC-P2-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_PENDING_REVIEW",
+      "statement": "For orthonormal u,v with coordinate two-frame leverage at most 1/2, <u,X>+c(<v,X>-v0)^2 has a continuous C0 density bounded by 8/sqrt(|c|)."
+    },
+    {
+      "id": "QFORM-DIFFUSE-CURVED-SECTION-BL-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_PENDING_REVIEW",
+      "statement": "For orthonormal w,v,b with three-frame leverage at most 1/2 and lambda beta nonzero, (L,lambda(V-v0)^2+beta B) has continuous joint density bounded by 16/sqrt(|lambda beta|); off-fold this gives 16/(|lambda|r) when |beta|>=|lambda|r^2."
+    },
+    {
+      "id": "QFORM-DIFFUSE-CURVED-SECTION-BETA0-v1",
+      "status": "PROVED_SUPPORTING_THEOREM_PENDING_REVIEW",
+      "statement": "Under the same diffuse frame, at beta=0 the off-fold subprobability pushforward density is bounded by 4/(|lambda|r), using the continuous (L,V) projection density cap 4 and the exact quadratic Jacobian."
+    },
+    {
+      "id": "QFORM-PAIRWISE-COAREA-L1-LOSS-v1",
+      "status": "PROVED_PROOF_INTERFACE_OBSTRUCTION_PENDING_REVIEW",
+      "statement": "A diffuse Walsh orthonormal triple with row leverage 3/n has, for every rotating normal n_theta in span(v,b), squared physical pair minors summing to 1 but absolute minors summing to at least n/2. Thus Cauchy-Binet followed by separate reciprocal physical-pair payment cannot itself yield a dimension-free curved-section bound."
+    }
+  ],
+  "partner_result_applied": {
+    "source": "account02/B06 QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+    "canonical_commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+    "actual_inequality": "On three pairwise disjoint original-coordinate banks, ||p_L||inf, ||p_V||inf, ||p_B||inf <= sqrt(e); the off-fold quadratic Jacobian plus genuine independence gives ||p_(L,Y;off)||inf <= e/(|lambda|r) for every beta."
+  },
+  "newer_partner_context": {
+    "source": "account02/B06 QFORM-FUSED-CONCENTRATION-SQUARE-OR-TRANSVERSE-HUB-v1",
+    "canonical_commit": "e06fb19a6918caacb1b9848ed248f43a9886526b",
+    "use_status": "READ_NOT_PROMOTED_TO_COMPLETE_RECEIVER",
+    "reason": "Its own handoff leaves QFORM-TRANSVERSE-CHAIN-HUB-RECEIVER-v1 unpaid."
+  },
+  "unresolved_implication": "QFORM-CURVED-SECTION-SMALL-NONZERO-BETA-OVERLAPPING-v1: under diffuse three-frame leverage, prove C/(|lambda|r) off-fold uniformly for 0<|beta|<|lambda|r^2 while aggregating the product law before any fiber maximum or reciprocal physical-minor sum, or structurally route this regime to grouped-bank/fused-volume/hub receivers.",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_GLOBALLY",
+  "independent_review_status": "PENDING"
+}

@@ -1,0 +1,24 @@
+QFORM_B03_R26_CHECKS
+
+H1 coefficient = 4*2^(1/4) = 2^(9/4) = 4.756828460010884
+H1^(4/3) coefficient = (2^(9/4))^(4/3) = 2^3 = 8
+H2 coefficient = 12*2^(-1/3)
+(H2/H1^(4/3))^3 coefficient = (12*2^(-1/3)/8)^3 = 27/16
+weighted-energy outside coefficient = sqrt(2*pi)*2^(9/4) = 2^(11/4)*sqrt(pi) = 11.92360071543272
+partner collision outside coefficient = 2*2^(9/4) = 2^(13/4) = 9.513656920021768
+
+Layer-cake crossover:
+r0=(H1/H2)^6, r1=H1^(-2).
+If H2>=H1^(4/3), r0<=r1 and
+small contribution = 3 H1,
+middle = (H1/2) log(r1/r0)=3 H1 log(H2/H1^(4/3)),
+large = H1.
+Total = H1[4+3 log(H2/H1^(4/3))].
+If H2<H1^(4/3), the 2/3 bound alone gives 4 H2^(3/4)<4 H1.
+
+Homogeneity:
+S has coefficient degree 1; Delta=sqrt(det(MM^T)) has degree 2;
+S^2/Delta degree 0; S^(-1/2) degree -1/2.
+With outer square coefficient d, |d|^(-1/2)S^(-1/2) has total quadratic-form coefficient degree -1.
+
+QFORM_B03_R26_CHECK_PASS

@@ -1,0 +1,8 @@
+STATE: DONE
+NEXT: Develop neutral variable-sized block activities or a massless-gradient expansion that controls all energy cumulants in the unrestricted gas.
+VERDICT: PARTIAL
+
+2026-10-12 first attempt: Confirmed source expectation; found no exact literature solution in accessible searches. Proved Var(H_N)<=(N-1)/beta^2 and C^{1,1} regularity of finite normalized limits; identified entropy normalization issue. Full analyticity remained unproved.
+2026-10-12 second attempt at user request: Reopened as WORKING, read ATTEMPT.md, and asked the brain directly about uniform factorial energy-cumulant bounds, Kotecky-Preiss expansions and neighboring transfer-operator methods. Recorded two new approaches in SECOND_ATTEMPT.md and pursued neutral-cell polymer expansions.
+2026-10-12 second attempt result: Proved exact nonnegative pair remainders with r^{-s-2} tails, an explicit volume-uniform zero-free disk and analytic thermodynamic pressure for fixed-cell constrained ensembles, and all-order factorial cumulant estimates there. Proved a positive extensive pressure gap separating narrow fixed-cell ensembles from the actual gas in an overlapping temperature regime. Allowing occupation defects restores the nonsummable r^{-s} monopole interaction; no transfer theorem was obtained.
+2026-10-12 final verification: Lean kernel check of the cluster cutoff exited 0. Periodic-pair, exhaustive connected-graph and finite-spin graph/polymer identity checks passed. Required records updated and 17 claim rows saved. STATE DONE denotes completion of this attempt; P0324 is not solved. Verdict remains PARTIAL.

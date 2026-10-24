@@ -1,0 +1,155 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w534",
+  "bundle_slug": "p0309-simple-cubic-stability-obstruction-w534-001",
+  "entries": [
+    {
+      "key": "heat-relative",
+      "namespace": "probability.riesz",
+      "logical_name": "alternating-plane-riesz-relative-heat-integral",
+      "kind": "lemma",
+      "title": "Alternating-plane Riesz heat difference (specified integral only)",
+      "statement": "For s>0 and real a define Theta(t,a)=sum_{m in Z} exp(-t(m+a)^2), O(t)=sum_{n odd} exp(-t n^2), and D_s(a)=(2 Gamma(s/2))^{-1} integral_0^infinity t^{s/2-1} Theta(t,0) O(t) [Theta(t,a)-Theta(t,0)] dt. This integral is finite; D_s(a)<0 for a not in Z, D_s(a)=0 exactly for a in Z, and D_s''(0)<0. This statement concerns the displayed integral alone, with no physical long-range DLR energy identification. Independent referee w536 kept precisely this scope; novelty UNKNOWN.",
+      "proof_text": "Gaussian Fourier coefficients give Theta(t,a)-Theta(t,0)=2 sqrt(pi/t) sum_{k>=1} exp(-pi^2 k^2/t)(cos(2 pi k a)-1). Every term is nonpositive; k=1 is strictly negative for nonintegral a. Multiply by positive Theta(t,0)O(t)t^{s/2-1}/(2 Gamma(s/2)) and integrate. At t near zero the nonzero Fourier modes and their first two a-derivatives have exponential exp(-pi^2/t) decay; Theta(t,0)O(t)=O(t^-1). At infinity O(t)=O(exp(-t)) while the other factors and derivatives grow at most polynomially on a bounded period interval. Thus the integral and two derivatives converge. Theta_aa(t,0)=-8 pi^2 sqrt(pi/t) sum_{k>=1} k^2 exp(-pi^2 k^2/t)<0, proving D_s''(0)<0. Full bounds: ATTEMPT.md Lemma C; independent review: w536 REVIEW_w534.md C4.",
+      "assumptions": [
+        "s>0",
+        "The displayed integral is the definition of D_s",
+        "No identification with an unspecified Coulomb or long-range Gibbs energy"
+      ],
+      "domain": "probability theory and classical equilibrium statistical mechanics",
+      "source": {
+        "source_id": "owner-p0309-w534-20261010:C4",
+        "url": "urn:owner-own-work:w534:P0309:2026-10-10:C4",
+        "revision": "independently-reviewed-w536-20261010-scoped-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "sc-periodic",
+      "namespace": "probability.riesz",
+      "logical_name": "simple-cubic-riesz-alternating-plane-instability",
+      "kind": "lemma",
+      "title": "Simple cubic Riesz instability under alternating-plane slides",
+      "statement": "For s>3 set X_a={(m+a(n mod 2),l,n):m,l,n in Z}, with two particles per rectangular cell of volume two. Let E_s(a) be its mean per-particle Riesz pair energy with unordered pairs counted once. Then E_s(a)<E_s(0) for every nonintegral a, equality holds exactly for integral a, and E_s''(0)<0. Dilation to intensity rho>0 multiplies the energy by rho^{s/3}. This is a periodic energy result, not a positive-temperature crystalline Gibbs phase theorem. Independent referee w536 kept this statement; novelty UNKNOWN.",
+      "proof_text": "Raw lattice pair sums converge absolutely for s>3. Even- and odd-plane particles see offsets m+a and m-a, which have equal sums after m->-m; same-parity pairs are unchanged. Therefore E_s(a)-E_s(0)=(1/2) sum_{n odd,m,l in Z}[((m+a)^2+l^2+n^2)^(-s/2)-(m^2+l^2+n^2)^(-s/2)]. The gamma integral identifies this difference with D_s(a) in the heat-relative entry. Its strict sign and equality condition follow from positive Gaussian Fourier coefficients. Differentiation gives E_s''(0)=-4 pi^2 sqrt(pi)/Gamma(s/2) integral_0^infinity t^{s/2-3/2}Theta(t,0)O(t)sum_{k>=1}k^2 exp(-pi^2 k^2/t)dt<0, with convergence as in that entry. Full proof: ATTEMPT.md Lemma A; independent review: w536 REVIEW_w534.md C2.",
+      "assumptions": [
+        "Repulsive potential |r|^{-s}",
+        "s>3",
+        "Density one before dilation",
+        "Mean unordered-pair energy includes factor 1/2"
+      ],
+      "domain": "probability theory and classical equilibrium statistical mechanics",
+      "source": {
+        "source_id": "owner-p0309-w534-20261010:C2",
+        "url": "urn:owner-own-work:w534:P0309:2026-10-10:C2",
+        "revision": "independently-reviewed-w536-20261010-scoped-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "sc-compact",
+      "namespace": "probability.riesz",
+      "logical_name": "force-balanced-simple-cubic-riesz-finite-support-instability",
+      "kind": "lemma",
+      "title": "Force-balanced simple cubic Riesz lattice has a finite-support instability",
+      "statement": "For every s>3, the density-one simple cubic lattice Z^3 is stationary for repulsive v_s(r)=|r|^{-s} under every finitely supported displacement, yet it admits a finitely supported negative second-variation direction and arbitrarily small finite-support perturbations lowering relative unordered-pair energy while all exterior particles stay fixed. Independent referee w536 kept this result; novelty UNKNOWN. It does not prove or refute P0309's crystalline Gibbs phase target.",
+      "proof_text": "The absolutely convergent force sum vanishes by r->-r. Put p_x=1_{x in Q_L}1_{x_3 odd}, Q_L={-L,...,L}^3, and displace x by a p_x e_1. Far-field relative energy and its Hessian converge absolutely. If h_s(r)=s[(s+2)r_1^2-|r|^2]|r|^{-s-4}, the second derivative is K_L=(1/2)sum_{r!=0}h_s(r)sum_x(p_{x+r}-p_x)^2. After division by |Q_L|, for fixed r the inner sum tends to 1 when r_3 is odd and 0 otherwise and is bounded by 2. Since sum_r |h_s(r)| is finite, dominated convergence gives K_L/|Q_L| -> (1/2)sum_{r_3 odd}h_s(r)=E_s''(0)<0 from sc-periodic. For a sufficiently large finite L, stationarity and Taylor expansion supply arbitrarily small energy-lowering finite-support displacements. Full proof: ATTEMPT.md Lemma B; independent review: w536 REVIEW_w534.md C3.",
+      "assumptions": [
+        "s>3",
+        "Repulsive |r|^{-s}",
+        "Relative pair energy with a fixed infinite exterior",
+        "Displacements restricted to magnitude at most 1/4"
+      ],
+      "domain": "probability theory and classical equilibrium statistical mechanics",
+      "source": {
+        "source_id": "owner-p0309-w534-20261010:C3",
+        "url": "urn:owner-own-work:w534:P0309:2026-10-10:C3",
+        "revision": "independently-reviewed-w536-20261010-scoped-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "false-bridge",
+      "namespace": "probability.riesz",
+      "logical_name": "refuted-force-balance-implies-riesz-hessian-positivity",
+      "kind": "concept",
+      "title": "Refuted auxiliary bridge: force balance implies Hessian positivity",
+      "statement": "REFUTED AUXILIARY CLAIM: every density-one periodic force-balanced configuration for the repulsive three-dimensional Riesz potential |r|^{-s}, s>3, has nonnegative second variation under every finitely supported displacement. The sc-compact entry is a counterexample: Z^3 is force balanced and has a finite-support negative second variation. This false universal bridge is distinct from P0309 and from a properly conditional harmonic calculation.",
+      "proof_text": null,
+      "assumptions": [
+        "This entry records a false auxiliary statement with its counterexample",
+        "It must not be used as a theorem"
+      ],
+      "domain": "probability theory and classical equilibrium statistical mechanics",
+      "source": {
+        "source_id": "owner-p0309-w534-20261010:false-bridge",
+        "url": "urn:owner-own-work:w534:P0309:2026-10-10:false-bridge",
+        "revision": "independently-reviewed-w536-20261010-scoped-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "stability-guard",
+      "namespace": "probability.riesz",
+      "logical_name": "riesz-crystal-harmonic-stability-prerequisite",
+      "kind": "concept",
+      "title": "Stability prerequisite for a Riesz crystal harmonic expansion",
+      "statement": "Before a harmonic fluctuation calculation can support a low-temperature Riesz crystal argument, the chosen lattice must have a nonnegative displacement Hessian in the relevant directions. Force balance alone is insufficient, as the density-one simple cubic lattice has a finite-support negative second variation for every s>3. Even a valid finite infrared fluctuation integral in dimension three leaves the nonlinear control of defects, competing phases and a symmetry-breaking infinite-volume Gibbs limit open. This is a proof-route guard, not a solution of P0309.",
+      "proof_text": null,
+      "assumptions": [
+        "Classical three-dimensional continuum Riesz crystal proof route",
+        "Reference to the counterexample at s>3 only"
+      ],
+      "domain": "probability theory and classical equilibrium statistical mechanics",
+      "source": {
+        "source_id": "owner-p0309-w534-20261010:stability-guard",
+        "url": "urn:owner-own-work:w534:P0309:2026-10-10:stability-guard",
+        "revision": "independently-reviewed-w536-20261010-scoped-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "sc-periodic",
+      "to_key": "heat-relative",
+      "kind": "depends_on",
+      "rationale": "The periodic entry says 'E_s(a)-E_s(0)' equals the displayed 'D_s(a)' for s>3 by absolute convergence and the gamma integral; the heat-relative entry provides strict sign and curvature for that exact integral."
+    },
+    {
+      "from_key": "sc-compact",
+      "to_key": "sc-periodic",
+      "kind": "depends_on",
+      "rationale": "The compact entry's 'K_L/|Q_L| -> E_s''(0)<0' uses the periodic entry's exact 'E_s''(0)<0'; its proof separately supplies force cancellation and the finite-support limit."
+    },
+    {
+      "from_key": "sc-compact",
+      "to_key": "false-bridge",
+      "kind": "refutes",
+      "rationale": "The bridge asserts that 'every density-one periodic force-balanced configuration ... has nonnegative second variation'; the compact entry proves that 'Z^3 is stationary ... yet it admits a finitely supported negative second-variation direction' under those same s>3 assumptions."
+    },
+    {
+      "from_key": "stability-guard",
+      "to_key": "sc-compact",
+      "kind": "depends_on",
+      "rationale": "The guard says 'Force balance alone is insufficient'; the compact entry supplies the exact force-balanced Z^3 counterexample with a finite-support negative second variation."
+    },
+    {
+      "from_key": "stability-guard",
+      "to_existing_logical": "math:probability.core:attempt-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "cites",
+      "rationale": "The observed canonical prior-attempt card states 'This only checks the Gaussian approximation conditional on a lattice'; the guard supplies the distinct stability prerequisite and preserves that conditional scope."
+    },
+    {
+      "from_key": "stability-guard",
+      "to_existing_logical": "math:probability.core:open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "cites",
+      "rationale": "The observed target card asks for 'existence of a crystalline Gibbs phase at sufficiently low positive temperature'; the guard explicitly leaves the symmetry-breaking infinite-volume Gibbs limit open. No refutes/proves edge to P0309 is asserted."
+    }
+  ]
+}

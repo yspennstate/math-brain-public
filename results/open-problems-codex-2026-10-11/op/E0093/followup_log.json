@@ -1,0 +1,69 @@
+[
+  {
+    "name": "arxiv_general",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22random%20Cayley%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending",
+    "status": 200,
+    "bytes": 82675,
+    "date": "2026-10-12"
+  },
+  {
+    "name": "arxiv_hildebrand",
+    "url": "https://export.arxiv.org/api/query?search_query=ti%3A%22survey%22%20AND%20au%3AHildebrand&max_results=10",
+    "status": 200,
+    "bytes": 1957,
+    "date": "2026-10-12"
+  },
+  {
+    "name": "openalex_source_retry",
+    "url": "https://api.openalex.org/works/https://doi.org/10.3150/12-BEJSP09",
+    "error": "HTTP Error 429: Too Many Requests",
+    "date": "2026-10-12"
+  },
+  {
+    "name": "openalex_citing",
+    "url": "https://api.openalex.org/works?filter=cites:doi:10.3150/12-BEJSP09&per-page=50",
+    "error": "HTTP Error 429: Too Many Requests",
+    "date": "2026-10-12"
+  },
+  {
+    "name": "semantic_source",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1309.7754?fields=title,year,citations.title,citations.year,citations.externalIds",
+    "error": "HTTP Error 429: ",
+    "date": "2026-10-12"
+  },
+  {
+    "name": "crossref_specific",
+    "url": "https://api.crossref.org/works?query.title=mixing%20random%20Cayley%20graphs&rows=25",
+    "status": 200,
+    "bytes": 120428,
+    "date": "2026-10-12"
+  },
+  {
+    "name": "nilpotent_pdf",
+    "url": "https://arxiv.org/pdf/2403.12355",
+    "status": 200,
+    "bytes": 619202,
+    "date": "2026-10-12"
+  },
+  {
+    "name": "abelian_pdf",
+    "url": "https://arxiv.org/pdf/2102.02809",
+    "status": 200,
+    "bytes": 883313,
+    "date": "2026-10-12"
+  },
+  {
+    "name": "dihedral_pdf",
+    "url": "https://arxiv.org/pdf/2510.19942",
+    "status": 200,
+    "bytes": 407166,
+    "date": "2026-10-12"
+  },
+  {
+    "name": "discussion_pdf",
+    "url": "https://arxiv.org/pdf/1911.02975",
+    "status": 200,
+    "bytes": 541838,
+    "date": "2026-10-12"
+  }
+]

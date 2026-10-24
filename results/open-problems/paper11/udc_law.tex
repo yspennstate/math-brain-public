@@ -1,0 +1,529 @@
+﻿\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\emp}{\bar\mu_N}
+\newcommand{\vol}{\operatorname{vol}}
+
+\title{The interpolation law for the critical scaling of the\\
+uniform doubling condition}
+\author{Yitzchak Shmalo\\
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper completes the program, carried out in six companion papers, of
+determining the critical scaling of the uniform doubling condition of
+[Shmalo, \emph{Ann.\ Math.\ Artif.\ Intell.} (2024)] for independent samples.
+For the model truncation regions
+$G_k=B^n\cap\{x_1\le0,\dots,x_k\le0\}$, $0\le k\le n-2$, whose lowest
+transversal boundary stratum --- the sphere
+$\{x\in S^{n-1}:x_1=\dots=x_k=0\}$ --- has dimension $j=n-1-k$, we prove that
+the critical scaling factor is exactly
+\[
+\ell_N\;\asymp\;\Bigl(\frac{\log N}{N}\Bigr)^{2/(2n-j)}
+\;=\;\Bigl(\frac{\log N}{N}\Bigr)^{2/(n+1+k)},
+\]
+with both the upper bound (the condition holds with probability $1-1/N$ at
+this scaling) and the lower bound (it fails with probability $1-o(1)$ below
+this scaling, logarithm included) established for every $k\le n-2$; for
+$k\ge n-1$ the conical exponent $\frac1n$ of the companion papers applies.
+This proves the interpolation law conjectured in
+[\emph{The edge exponent of the uniform doubling condition}] at every stratum
+dimension, in the orthogonal model.  The upper bound rests on a mixed-regime
+section lemma: at depth $h$ below the extreme point of $G_k$ in an arbitrary
+direction, the level section has volume $\ge c\,h^{(n-1+k)/2}$, proved by
+splitting the truncated coordinates at the angular threshold
+$\sqrt h$ --- steep coordinates contribute a factor $h$ through a fibre box,
+shallow ones are absorbed into a spherical cap centered on the stratum, of
+which the all-negative orthant keeps the exact fraction $2^{-k}$ by reflection
+symmetry.  The lower bound is a second-moment argument over
+$\asymp(N/\log N)^{j/(2n-j)}$ congruent caps along the stratum.
+\end{abstract}
+
+\section{Setting and main theorem}\label{sec:intro}
+
+Let $n\ge2$, let $\mu$ be the uniform probability measure on the closed unit
+ball $K=B^n$, and let $T=\{X_1,\dots,X_N\}$ be i.i.d.\ samples with empirical
+measure $\emp$.  For $0\le k\le n-2$ consider the truncation set
+$h_k:=\{(e_1,0),\dots,(e_k,0)\}$ with region
+\[
+G\;=\;G_k\;:=\;\bigl\{x\in B^n:\ x_1\le0,\dots,x_k\le0\bigr\},
+\]
+and the uniform doubling condition (UDC) of \cite{ShmaloUDC} for slabs
+truncated by $h_k$, with constants $(\kappa,\delta,\sigma,\beta,\ell)$, as in
+the companion papers \cite{companion2,companion3,companion4,companion5,
+companion6,companion7}.  The boundary of $G_k$ is stratified by the subsets
+$S\subseteq\{1,\dots,k\}$ of active constraints; its lowest-dimensional
+spherical stratum is
+\[
+E\;:=\;\bigl\{x\in S^{n-1}:\ x_1=\dots=x_k=0\bigr\}\;\cong\;S^{\,j},
+\qquad
+j\;:=\;n-1-k\;\ge\;1 .
+\]
+The region is uniformly thick: with
+$c^-:=-\frac1{2\sqrt k}(e_1+\dots+e_k)$ (for $k\ge1$; $c^-:=0$ for $k=0$),
+\begin{equation}\label{eq:thick}
+B\Bigl(c^-,\ \tfrac1{2\sqrt k}\wedge\tfrac12\Bigr)\;\subseteq\;G_k .
+\end{equation}
+
+\begin{theorem}[Interpolation law, orthogonal model]\label{thm:main}
+Fix $n\ge2$ and $0\le k\le n-2$, and fix $\kappa>1$, $\sigma>0$, $\beta>0$,
+$\delta\ge\frac3N$ where relevant.
+\begin{enumerate}
+\item[(i)] {\rm(Upper bound.)}  With the $N$-independent constants of
+\cite{companion2} {\rm(}$\kappa=151$, $\sigma=1$, $\delta=\delta(n,k)>0$,
+$\beta=2$, thickness radius $r_0=\frac1{2\sqrt k}\wedge\frac12${\rm)}, there
+are $C(n,k)$ and $N_0$ such that for $N\ge N_0$, with probability at least
+$1-\frac1N$, the sample satisfies the UDC for the truncation set $h_k$ with
+scaling factor
+\[
+\ell_N\;=\;C(n,k)\,\Bigl(\frac{\log N}{N}\Bigr)^{2/(n+1+k)} .
+\]
+\item[(ii)] {\rm(Lower bound.)}  There are $c(n,k,\kappa)>0$ such that with
+probability $1-o(1)$, the doubling inequality fails for some slab truncated by
+$h_k$ at every grid scale below $c\,(\log N/N)^{2/(n+1+k)}$; hence the UDC
+requires $\ell\ge c\,(\log N/N)^{2/(n+1+k)}$.
+\end{enumerate}
+Consequently the critical scaling is exactly
+$\Theta\bigl((\log N/N)^{2/(2n-j)}\bigr)$ for every stratum dimension
+$1\le j\le n-1$, while for truncation geometry with conical points
+{\rm(}$j=0${\rm)} it is $\Theta\bigl((\log N/N)^{1/n}\bigr)$ by
+\cite{companion3,companion5}.  The interpolation law of
+\cite[Conjecture 1.2]{companion6} holds at every $j$ in the orthogonal model.
+\end{theorem}
+
+The cases $k=0,1$ are the companion results
+\cite{companion4,companion6,companion7}; we treat all $k\le n-2$ uniformly,
+and the reader may keep $k=2$, $n=4$ in mind.  Throughout,
+$x=(x_1,\dots,x_k,x^\flat)$ splits coordinates into the truncated ones and the
+rest, and for a unit vector $u$ we write $u=(u_1,\dots,u_k,u^\flat)$.
+
+\section{Caps at the stratum}\label{sec:caps}
+
+\begin{lemma}[Extreme points]\label{lem:extreme}
+Let $u$ be a unit vector, $P:=\{i\le k:\ u_i>0\}$, and let
+$\hat u$ be $u$ with the $P$-coordinates replaced by $0$.  If
+$\hat u\ne0$, then
+\[
+\max_{x\in G_k}\langle x,u\rangle\;=\;|\hat u|,
+\]
+attained exactly at $p:=\hat u/|\hat u|\in G_k$, which satisfies $p_i=0$ for
+$i\in P$ and $p_i\le0$ for $i\le k$, $i\notin P$.
+\end{lemma}
+
+\begin{proof}
+For $x\in G_k$: $\langle x,u\rangle=\sum_{i\in P}u_ix_i
++\langle x,\hat u\rangle\le0+|x|\,|\hat u|\le|\hat u|$, since $u_i>0$ and
+$x_i\le0$ for $i\in P$; equality forces $x_i=0$ ($i\in P$), $|x|=1$ and
+$x\parallel\hat u$.  Finally $p\in G_k$ because $\hat u_i=u_i\le0$ for
+$i\le k$, $i\notin P$.
+\end{proof}
+
+If $\hat u=0$ (i.e.\ $u$ is supported on $P$), the maximum $0$ is attained on
+the entire face stratum $\{x\in G_k:\ x_i=0,\ i\in P\}$, a set of positive
+$(n-|P|)$-dimensional volume; this degenerate case only makes the section
+bounds below easier and is handled separately in Lemma~\ref{lem:section}.
+
+For $p\in E$ define the \emph{stratum direction} and \emph{stratum cap}
+\[
+u_p:=\frac{e_1+\dots+e_k+p}{\sqrt{k+1}},
+\qquad
+C_p(h):=\Bigl\{x\in G_k:\ \langle x,u_p\rangle\ge\tfrac1{\sqrt{k+1}}-h\Bigr\}.
+\]
+By Lemma~\ref{lem:extreme} (here $P=\{1,\dots,k\}$, $\hat u_p=p/\sqrt{k+1}$),
+the maximum of $\langle x,u_p\rangle$ over $G_k$ is $\frac1{\sqrt{k+1}}$,
+attained at $p$.
+
+\begin{lemma}[Stratum cap volume and footprint]\label{lem:capmass}
+There are $0<c_1(n,k)\le c_2(n,k)$ and $h_1(n,k)>0$ such that for all
+$p\in E$ and $0<h\le h_1$,
+\[
+c_1\,h^{\frac{n+1+k}2}\;\le\;\mu\bigl(C_p(h)\bigr)\;\le\;
+c_2\,h^{\frac{n+1+k}2},
+\qquad
+C_p(h)\subseteq\{x:\ |x-p|\le c_3(k)\sqrt h\,\}.
+\]
+\end{lemma}
+
+\begin{proof}
+By the symmetry of $G_k$ under rotations fixing $e_1,\dots,e_k$ we may take
+$p=e_{k+1}$.  Write $x_i=-t_i$ ($t_i\ge0$) for $i\le k$, let
+$y:=x_{k+1}$, and let $x''\in\R^{n-k-1}$ collect the remaining coordinates.
+With $h':=h\sqrt{k+1}$ the cap is
+\[
+\Bigl\{\,t_i\ge0,\ |x|\le1,\ y\;\ge\;1-h'+\textstyle\sum_it_i\,\Bigr\},
+\]
+and $|x|\le1$ gives $y\le\sqrt{1-\sum t_i^2-|x''|^2}\le1-\frac{\sum
+t_i^2+|x''|^2}2$.  \emph{Upper bound:} the constraints force
+$\sum_it_i\le h'$ (so each $t_i\le h'$), $|x''|^2\le2h'$, and the
+$y$-fibre has length at most $h'$; hence
+$\vol\le h'\cdot(h')^k\cdot\omega_{n-k-1}(2h')^{\frac{n-k-1}2}
+\le C h^{\frac{n+1+k}2}$.  \emph{Lower bound:} restrict to
+$t_i\le\frac{h'}{8k}$ ($i\le k$) and $|x''|^2\le\frac{h'}2$; then
+$\sum t_i\le\frac{h'}8$, $\sum t_i^2\le\frac{h'^2}{64k}\le\frac{h'}{64}$
+(for $h'\le1$), and the fibre length is at least
+\[
+\Bigl(1-\tfrac{\sum t_i^2+|x''|^2}2\Bigr)-\Bigl(1-h'+\sum t_i\Bigr)
+\;\ge\;h'\Bigl(1-\tfrac18-\tfrac1{128}-\tfrac14\Bigr)\;\ge\;\tfrac{h'}2,
+\]
+using $\sum t_i\le\frac{h'}8$, $\frac{\sum t_i^2}2\le\frac{h'}{128}$ and
+$\frac{|x''|^2}2\le\frac{h'}4$; so
+$\vol\ge\frac{h'}2(\frac{h'}{8k})^k\omega_{n-k-1}(\frac{h'}2)^{\frac{n-k-1}2}
+\ge c\,h^{\frac{n+1+k}2}$.  \emph{Footprint:} on the cap,
+$1\ge y\ge1-h'$, $t_i\le h'$, $|x''|^2\le2h'$, so
+$|x-p|^2\le kh'^2+h'^2+2h'\le c_3^2h$.
+\end{proof}
+
+\begin{lemma}[Stall]\label{lem:stall}
+Fix $\kappa>1$, $\sigma>0$, $\delta\ge\frac3N$, $p\in E$ and
+$0<h\le\frac H4$, $H\le h_1$.  If exactly one sample point lies in
+$C_p(H)$ and it lies in $C_p(h)$, then for every $w\le H/\kappa$ the slab
+with direction $u_p$, center that sample point, and truncation set $h_k$
+violates the doubling inequality; hence the UDC fails for every
+$\ell\le H/\kappa^2$.
+\end{lemma}
+
+\begin{proof}
+Identical to the companion stall lemmas: for $w'\le H$ the slab is contained
+in $C_p(h+\frac{w'}2)\subseteq C_p(H)$, so the empirical masses of $S_w$ and
+$S_{\kappa w}$ both equal $\frac1N<\min\{\delta,(1+\sigma)\frac1N\}$.
+\end{proof}
+
+\section{The lower bound}\label{sec:lower}
+
+\begin{proof}[Proof of Theorem \ref{thm:main}(ii)]
+This is the second-moment scheme of
+\cite{companion4,companion5,companion6} verbatim, with the cap data of
+Lemma~\ref{lem:capmass}.  Set $q:=(4\kappa^2)^{\frac{n+1+k}2}\frac{c_2}{c_1}$,
+$\varepsilon_3:=\frac{j}{4q(2n-j)}$, $\tau_N:=\varepsilon_3\log N$; define
+$h_N$ by $\mu(C_p(h_N))=\frac{\tau_N}N$ (independent of $p$ by symmetry), so
+$h_N\asymp(\tau_N/N)^{2/(n+1+k)}$, and $H_N:=4\kappa^2h_N$, so
+$\mu(C_p(H_N))\le\frac{q\tau_N}N$.  By Lemma~\ref{lem:capmass} the caps have
+footprint $c_3\sqrt{H_N}$, so a maximal $2c_3\sqrt{H_N}$-separated family
+$p_1,\dots,p_M\in E\cong S^{\,j}$ gives pairwise disjoint outer caps with
+$M\ge c\,H_N^{-j/2}\ge c'(N/\tau_N)^{\frac{j}{n+1+k}}$ --- note
+$\frac{j}{n+1+k}=\frac{j}{2n-j}$.  With
+$E_\alpha$ the event that $C_{p_\alpha}(H_N)$ contains exactly one sample
+point and that point lies in $C_{p_\alpha}(h_N)$, and
+$X:=\sum_\alpha\mathbf1_{E_\alpha}$:
+\[
+p:=\PP(E_\alpha)=\tau_N\bigl(1-\mu(C(H_N))\bigr)^{N-1}
+\ge\tau_NN^{-2q\varepsilon_3},
+\qquad
+\E X=Mp\ge c'N^{\frac j{2n-j}-2q\varepsilon_3}\tau_N^{1-\frac j{2n-j}}
+\ge c'N^{\frac j{2(2n-j)}}\to\infty,
+\]
+and the disjoint-cap correlation ratio is
+$\exp(O(N\mu(C(H_N))^2))=1+o(1)$, so
+$\PP(X=0)\le(\E X)^{-1}+o(1)=o(1)$ by Chebyshev.  On $\{X\ge1\}$,
+Lemma~\ref{lem:stall} forces
+$\ell>H_N/\kappa^2=4h_N\ge c(\log N/N)^{2/(n+1+k)}$.
+\end{proof}
+
+\section{The section lemma}\label{sec:section}
+
+For a unit vector $u$ with $\hat u\ne0$ let
+$\tau(x):=\langle x,u\rangle$, $\tau_{\max}:=|\hat u|$ (Lemma
+\ref{lem:extreme}), and
+$A_u(h):=\vol_{n-1}(G_k\cap\{\tau=\tau_{\max}-h\})$.
+
+\begin{lemma}[Section lemma]\label{lem:section}
+There are $a(n,k)>0$ and $h_0(n,k)>0$ such that for every unit vector $u$ and
+every $0<h\le h_0$,
+\[
+A_u(h)\;\ge\;a(n,k)\,h^{\frac{n-1+k}2} .
+\]
+\end{lemma}
+
+\begin{proof}
+As in \cite{companion7}, it suffices to prove the cap-mass bound
+\begin{equation}\label{eq:cap}
+\Lambda^{(n,k)}_u(h):=\mu\bigl(\{x\in G_k:\ \tau(x)\ge\tau_{\max}-h\}\bigr)
+\;\ge\;b(n,k)\,h^{\frac{n+1+k}2}
+\qquad(0<h\le h_0),
+\end{equation}
+for every unit $u$ with $\hat u\ne0$, together with a bulk anchor; the
+conversion to sections is given at the end.  We prove \eqref{eq:cap} by
+induction on $k$; the base case $k=0$ is the standard spherical cap bound
+$\Lambda^{(n,0)}_u(h)\ge c(n)h^{\frac{n+1}2}$.
+
+\emph{Case 1: $|\hat u|\ge\frac12$.}  With $p=\hat u/|\hat u|$, split the
+truncated indices into
+\[
+\mathcal A:=\Bigl\{i\le k:\ u_i\ge\tfrac{\sqrt h}{2k}\Bigr\},
+\quad
+\mathcal Z:=\Bigl\{i\le k:\ i\notin\mathcal A,\
+u_i>0\ \text{ or }\ |p_i|<2\sqrt h\Bigr\},
+\quad
+\mathcal N:=\{1,\dots,k\}\setminus(\mathcal A\cup\mathcal Z),
+\]
+so that $u_i\le0$ and $p_i\le-2\sqrt h$ for $i\in\mathcal N$.  Let
+$\tilde u$ be $u$ with the $\mathcal A\cup\mathcal Z$-coordinates replaced by
+$0$.  Every coordinate zeroed in $\tilde u$ but present in $\hat u$ lies in
+$\mathcal Z\setminus P$ and satisfies
+$|\hat u_i|=|u_i|\le\max\bigl(\tfrac{\sqrt h}{2k},\,2\sqrt h\bigr)\le2\sqrt h$,
+whence
+\[
+|\hat u|^2-|\tilde u|^2\;\le\;4kh,
+\qquad
+|\hat u|-|\tilde u|\;\le\;\frac{4kh}{|\hat u|}\;\le\;8kh,
+\]
+and $|\tilde u|\in[\tfrac14,1]$ for $h\le h_0(k)$.  Set
+$\tilde p:=\tilde u/|\tilde u|\in G_k$; then $\tilde p_i=0$ for
+$i\in\mathcal A\cup\mathcal Z$, and for $i\in\mathcal N$,
+$|\tilde p_i|=|u_i|/|\tilde u|\ge|u_i|\ge2\sqrt h\,|\hat u|\ge\sqrt h$, with
+$\tilde p_i<0$.
+
+Decompose $x=y\,\tilde p+w$, $w\perp\tilde p$.  Since
+$\tilde p\perp e_i$ for $i\in\mathcal A\cup\mathcal Z$, the coordinates
+$w_i:=x_i$ ($i\in\mathcal A\cup\mathcal Z$) are coordinates of the
+hyperplane $\tilde p^\perp$; let $w^\perp$ denote the remaining component of
+$w$.  Define the witness box $W$ by
+\[
+w_i\in\Bigl[-\min\Bigl(\frac{h}{8k\,u_i},\frac{\sqrt h}8\Bigr),\,0\Bigr]
+\ (i\in\mathcal A),
+\qquad
+w_i\in\Bigl[-\frac{\sqrt h}{8\sqrt k},\,0\Bigr]\ (i\in\mathcal Z),
+\qquad
+|w^\perp|\le\frac{\sqrt h}8,
+\]
+\[
+1-\frac{h}{4|\tilde u|}\;\le\;y\;\le\;\sqrt{1-|w|^2}.
+\]
+
+\emph{$W$ is nonempty with a long fibre.}  We have
+$|w|^2\le k\cdot\frac h{64k}+k\cdot\frac h{64k}+\frac h{64}\le\frac{3h}{64}$,
+so $\sqrt{1-|w|^2}\ge1-\frac{3h}{64}$, while
+$\frac h{4|\tilde u|}\ge\frac h4$; the $y$-fibre has length at least
+$\frac h4-\frac{3h}{64}\ge\frac h8$.
+
+\emph{$W\subseteq G_k$.}  For $i\in\mathcal A\cup\mathcal Z$:
+$x_i=w_i\le0$.  For $i\in\mathcal N$:
+$x_i=y\tilde p_i+(w^\perp)_i\le(1-h)(-\sqrt h)+\frac{\sqrt h}8<0$ for
+$h\le\frac12$.  And $|x|^2=y^2+|w|^2\le1$.
+
+\emph{$W$ lies in the cap, after rescaling.}  Since $w\perp\tilde p$ and
+$u-\tilde u$ is supported on $\mathcal A\cup\mathcal Z$,
+\[
+\tau(x)=y\,\langle\tilde p,u\rangle+\langle w,u\rangle
+=y\,|\tilde u|+\sum_{i\in\mathcal A\cup\mathcal Z}u_iw_i ,
+\]
+using $\langle\tilde p,u\rangle=\langle\tilde p,\tilde u\rangle=|\tilde u|$
+and $\langle w,\tilde u\rangle=|\tilde u|\langle w,\tilde p\rangle=0$.  Now
+$\sum_{\mathcal A}u_i|w_i|\le k\cdot\frac h{8k}=\frac h8$, and on
+$\mathcal Z$ every coordinate has $|u_i|\le2\sqrt h$ {\rm(}either
+$0<u_i<\frac{\sqrt h}{2k}$, or $u_i\le0$ with
+$|u_i|=|p_i|\,|\hat u|<2\sqrt h${\rm)}, so
+$\sum_{\mathcal Z}|u_i||w_i|\le k\cdot2\sqrt h\cdot
+\frac{\sqrt h}{8\sqrt k}\le\frac{\sqrt k\,h}{4}$.  Hence on $W$,
+\[
+\tau(x)\;\ge\;\Bigl(1-\frac h{4|\tilde u|}\Bigr)|\tilde u|
+-\frac h8-\frac{\sqrt k\,h}{4}
+\;\ge\;|\tilde u|-\Bigl(\frac38+\frac{\sqrt k}4\Bigr)h
+\;\ge\;|\hat u|-8kh-kh
+\;\ge\;\tau_{\max}-9kh ,
+\]
+using $\frac38+\frac{\sqrt k}4\le k$ for $k\ge1$.
+Replacing $h$ by $h/(9k)$ in the whole construction (which only changes
+constants), $W$ lies in the cap of depth $h$.
+
+\emph{Volume.}  Each $\mathcal A$-window has length
+$\min\bigl(\frac h{8ku_i},\frac{\sqrt h}8\bigr)\ge\frac h{8k}$ (using
+$u_i\le1$ and $h\le k^2$); each $\mathcal Z$-window has length
+$\frac{\sqrt h}{8\sqrt k}$; the $w^\perp$-ball has dimension
+$n-1-|\mathcal A|-|\mathcal Z|$; the fibre has length $\ge\frac h8$.  Hence
+\[
+\Lambda^{(n,k)}_u(h)\;\ge\;\frac{\vol(W)}{\vol(B^n)}
+\;\ge\;c(n,k)\,h\cdot h^{|\mathcal A|}\cdot
+h^{\frac{|\mathcal Z|+(n-1-|\mathcal A|-|\mathcal Z|)}2}
+\;=\;c(n,k)\,h^{\frac{n+1+|\mathcal A|}2}
+\;\ge\;c(n,k)\,h^{\frac{n+1+k}2},
+\]
+proving \eqref{eq:cap} in Case 1.
+
+\emph{Case 2: $|\hat u|<\frac12$ (induction on $k$).}  Then
+$\sum_{i\in P}u_i^2=1-|\hat u|^2>\frac34$, so some $i_0\in P$ has
+$u_{i_0}>\frac{\sqrt3}{2\sqrt k}\ge\frac1{2\sqrt k}$.  Write
+$x=(x_{i_0},x')$ and $u=(u_{i_0},u')$; note $u'\ne0$ would fail only if
+$u=e_{i_0}$, in which case $\hat u=0$, excluded.  For
+$s\in[-\frac{h}{2u_{i_0}},0]$ --- an interval of length
+$\frac h{2u_{i_0}}\ge\frac h2$ --- the slice
+$G_k\cap\{x_{i_0}=s\}$ contains $\sqrt{1-s^2}\,\cdot G'$, where
+$G'$ is the orthogonal model with parameters $(n-1,k-1)$ in the coordinates
+$x'$ {\rm(}the slice is exactly the ball of radius $\sqrt{1-s^2}$
+intersected with the $k-1$ remaining half-spaces{\rm)}.  On the slice,
+$\tau(x)=u_{i_0}s+\langle x',u'\rangle\ge-\frac h2+\langle x',u'\rangle$.
+The maximum of $\langle x',u'\rangle$ over the unscaled slice region equals
+$|\widehat{u'}|=|\hat u|$ {\rm(}zeroing the positive truncated coordinates of
+$u'$ gives the same vector $\hat u$, supported away from
+$i_0${\rm)}, and scaling by $\sqrt{1-s^2}\ge1-h$ changes it by at most
+$|\hat u|h\le h$.  Hence the cap of depth $h$ for $(G_k,u)$ contains, over
+each slice, the image of the cap of depth $h_*$ for
+$(G',u'/|u'|)$ with
+$h_*:=\frac{h/4}{|u'|}\ge\frac h4$, provided
+$u_{i_0}|s|+\,$scaling loss$\,\le\frac h2+h\le2h$ and the slice-cap depth
+$\frac h4$ are budgeted within a total depth $4h$; replacing $h$ by
+$h/4$ throughout, the inclusion holds at depth $h$.  By the induction
+hypothesis applied to $(n-1,k-1)$ at depth $\min(h_*,h_0)$ --- if
+$h_*>h_0$ use monotonicity $\Lambda(h_*)\ge\Lambda(h_0)\ge b\,h_0^{(n+k-1)/2}
+\ge b'h^{(n+k-1)/2}$ --- and Fubini over $s$,
+\[
+\Lambda^{(n,k)}_u(h)\;\ge\;c\cdot\frac h2\cdot
+b(n-1,k-1)\,h^{\frac{(n-1)+1+(k-1)}2}
+\;=\;c'\,h^{1+\frac{n+k-1}2}\;=\;c'\,h^{\frac{n+1+k}2}.
+\]
+
+\emph{Conversion to sections.}  Exactly as in \cite{companion7}: by
+Brunn--Minkowski, $A_u$ is unimodal in the depth; the inner ball
+\eqref{eq:thick} provides a bulk depth
+$h^\dagger\ge c(k)>0$ with $A_u(h^\dagger)\ge a_1(n,k)>0$ {\rm(}its
+$\tau$-range is an interval of length $2r_0$ inside the range of $G_k$,
+whose sections at distance $\le\frac{r_0}2$ from its center have radius
+$\ge\frac{\sqrt3}2r_0${\rm)}.  For $h\le h_0\le h^\dagger$: if $h$ is below
+the mode of $A_u$, then $A_u$ is nondecreasing on $[0,h]$ and
+$A_u(h)\ge\Lambda_u(h)/h\ge b\,h^{\frac{n-1+k}2}$ by \eqref{eq:cap}; if $h$
+is above the mode, unimodality gives
+$A_u(h)\ge A_u(h^\dagger)\ge a_1\ge a_1h^{\frac{n-1+k}2}$.
+\end{proof}
+
+\begin{remark}
+The witness box exploits the key orthogonality $\langle w,\tilde u\rangle=0$:
+once the shallow coordinates are zeroed into the anchor direction
+$\tilde p$, the level constraint involves only the $\mathcal A\cup\mathcal
+Z$ coordinates, so all remaining directions are free at scale $\sqrt h$ and
+the volume count telescopes.  The induction of Case 2 is the mechanism by
+which face strata inherit the law from lower-dimensional models, one
+truncation per dimension.
+\end{remark}
+
+\section{Slab bound and proof of the upper bound}\label{sec:upper}
+
+\begin{theorem}[Slab volume]\label{thm:slab}
+There are $c(n,k)>0$, $L_0(n,k)>0$ with
+\[
+\vol\Bigl(G_k\cap\{|\langle y-x,u\rangle|\le L\}\Bigr)
+\;\ge\;c\,L^{\frac{n+1+k}2}
+\qquad(x\in G_k,\ u\in S^{n-1},\ 0<L\le L_0).
+\]
+\end{theorem}
+
+\begin{proof}
+Anchor--unimodality as in \cite{companion3,companion7}: anchors at depth
+$\frac L4$ from each $u$-extreme with value
+$a(n,k)(\frac L4)^{\frac{n-1+k}2}$ by Lemma~\ref{lem:section} applied to
+$u$ and $-u$; unimodality spreads the minimum anchor value over the middle
+of the range, whose complement has length $\frac L2$; the range has length at
+least $2r_0\ge2L$ by \eqref{eq:thick}; and the slab retains length
+$\ge L$ in the range, of which $\ge\frac L2$ in the middle.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:main}(i)]
+Insert Theorem~\ref{thm:slab} into the proof skeleton of
+\cite{companion2,companion3}: the population dichotomy holds with
+$r_0=\frac1{2\sqrt k}\wedge\frac12$ by \eqref{eq:thick}; the VC relative
+deviation bounds apply to slabs with $k$ truncations; and a sample point in
+$S_w$ yields $\mu(S_{\kappa w})\ge32u_N$ for all
+$w\ge\ell_N:=C(n,k)(u_N)^{2/(n+1+k)}\asymp(\log N/N)^{2/(n+1+k)}$.
+\end{proof}
+
+\section{Concluding remarks}\label{sec:concl}
+
+The orthogonal model is the normal form of transversal stratified truncation:
+for half-spaces in general position meeting $\partial K$ and each other at
+dihedral angles bounded below, the same two-step scheme applies with
+constants depending on the angles, the witness-box and reflection arguments
+being replaced by their affine images.  The UDC constants themselves are stable
+under a fixed nonsingular affine change of variables: by the affine-transfer
+lemma of the high-probability companion paper \cite{companion2}, an affine map
+with singular values in $[\lambda,\Lambda]$ sends constants
+$(\kappa,\delta,\sigma,\beta,\ell)$ to
+$(\kappa^2,\delta,\sigma,\lambda\beta/\kappa,\Lambda\ell)$ in the grid form,
+and to $(\kappa,\delta,\sigma,\lambda\beta,\Lambda\ell)$ in the all-width form.
+Thus extending the interpolation law beyond the orthogonal model reduces to the
+local section-volume estimates, not to a new doubling-formalism issue.  Within
+the model, the program of the seven papers is complete:
+for every stratum dimension $j\in\{0,1,\dots,n-1\}$ the critical scaling of
+the uniform doubling condition is
+\[
+\ell_N\;\asymp\;\Bigl(\frac{\log N}{N}\Bigr)^{2/(2n-j)}
+\quad(1\le j\le n-1),
+\qquad
+\ell_N\;\asymp\;\Bigl(\frac{\log N}{N}\Bigr)^{1/n}
+\quad(j=0),
+\]
+exponents and logarithms exact.  In the language of the stability theory of
+\cite{BJS,ShmaloUDC}: the finest resolution at which i.i.d.\ data can certify
+the doubling condition is set by the most isolated extremal sample point of
+the worst boundary stratum of the activation geometry, and degrades
+gracefully --- through the explicit exponent ladder
+$\frac{2}{n+1},\frac{2}{n+2},\dots,\frac1n$ --- as the truncation geometry
+sharpens from smooth to conical.
+
+\subsection*{Acknowledgments}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.\ 101041711), by the Israel Science
+Foundation (grant number 2258/19) and by the Israel Science Foundation (ISF
+Grant 4101/25).
+
+\subsection*{Declaration on generative AI}
+During the preparation of this work the author used generative AI tools to
+accelerate drafting and revision.  All mathematical claims, proofs, and
+bibliographic information were subsequently reviewed and edited by the
+author, who takes full responsibility for the content of the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{BJS}
+L.~Berlyand, P.-E.~Jabin and C.~A.~Safsten,
+\emph{Stability for the training of deep neural networks and other
+classifiers}, Math.\ Models Methods Appl.\ Sci.\ \textbf{31} (2021),
+2345--2390.
+
+\bibitem{ShmaloUDC}
+Y.~Shmalo,
+\emph{Stability of accuracy for the training of DNNs via the uniform doubling
+condition}, Ann.\ Math.\ Artif.\ Intell.\ (2024),
+DOI 10.1007/s10472-023-09919-1.
+
+\bibitem{companion2}
+Y.~Shmalo, \emph{The uniform doubling condition holds with high probability
+for independent samples}, manuscript, 2026.
+
+\bibitem{companion3}
+Y.~Shmalo, \emph{The critical scaling of the uniform doubling condition:
+smooth bodies versus truncations}, manuscript, 2026.
+
+\bibitem{companion4}
+Y.~Shmalo, \emph{The logarithm is necessary: exact critical scaling of the
+uniform doubling condition on the ball}, manuscript, 2026.
+
+\bibitem{companion5}
+Y.~Shmalo, \emph{The exact critical scaling of the uniform doubling
+condition with truncations}, manuscript, 2026.
+
+\bibitem{companion6}
+Y.~Shmalo, \emph{The edge exponent of the uniform doubling condition and an
+interpolation conjecture}, manuscript, 2026.
+
+\bibitem{companion7}
+Y.~Shmalo, \emph{The edge exponent of the uniform doubling condition, II:
+the matching upper bound}, manuscript, 2026.
+
+\end{thebibliography}
+
+\end{document}

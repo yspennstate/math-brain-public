@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B01",
+  "run_id": "account03-B01-20260922T155128Z-r14",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_at_refresh": "fc1ce39df9220d4c90d43d68cf668e7f3f28f4f5",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "assignment": "Oscillatory replacement",
+  "result_status": "PROVED_SUPPORTING_THEOREM_FULL_TARGET_OPEN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "af5fc5be9cdae6d915c5d864c7cd398a2a1b95c5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260922T155128Z-r14/REPORT.md",
+    "blob": "bb9639aec8a0a94b610e14a4635f38385728f38c"
+  },
+  "partner_result_applied": {
+    "worker": "account04/B01",
+    "theorem": "QFORM-SIGNED-FEJER-EXACT-INTERFACE-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a3693ed6d50e8e4143b2f33bf997c5de2cb52d79",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md",
+    "application": "converted the new L-infinity density branch into an exact uniform signed Fejer bound"
+  },
+  "other_premises": [
+    {
+      "source": "account01/B01",
+      "commit": "508b0985ba8bb658a7f6a935af5138a195cb89de",
+      "scope": "random-slope Plancherel identity and source-transferred bounded-density projection theorem"
+    },
+    {
+      "source": "account03/B01 prior run",
+      "commit": "a80bb254a3a1e2883cbfabdf03b53919d6621990",
+      "scope": "sharp dependence-safe square smoothing from residual L3 to output L-infinity"
+    }
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION"
+  ],
+  "new_claim": {
+    "id": "QFORM-SCHUR-RANK2-CROSSVOLUME-v1",
+    "statement": "If d=A_00 is nonzero and, after Schur completing that original coordinate, some physical residual pair I has rank-two cross matrix C=H[I,J] with s_I=sqrt(det(CC^T))>0, then ||p_Q||_infinity <= 2 sqrt(pi) 3^(1/4) C_RV^(1/2) |d|^(-1/2) s_I^(-1/4).",
+    "continuity": "NOT_PROVED",
+    "scope": "supporting branch only, not universal"
+  },
+  "stress_test": {
+    "family": "[1] direct_sum J_m/m direct_sum (-J_m/m)",
+    "exact_cross_volume": "s_I=(m-1)/m^2",
+    "aggregate_reciprocal_loss": "s_I^(-1/4) ~ m^(1/4)",
+    "fixed_minor_loss": "m^(1/2)",
+    "interpretation": "strict improvement but not uniform closure"
+  },
+  "unresolved_implication": "derive an exhaustive product-preserving combination over multiple physical pairs/pivots, or combine this certificate with the ridge-window/diffuse branches, so that the bare three-large-eigenvalue hypothesis yields a dimension-free branch",
+  "next_step": "attempt multi-pair or multi-pivot signed-Fejer aggregation rather than another fixed local certificate"
+}

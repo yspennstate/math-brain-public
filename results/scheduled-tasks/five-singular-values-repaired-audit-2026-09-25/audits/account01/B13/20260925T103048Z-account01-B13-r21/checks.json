@@ -1,0 +1,28 @@
+{
+  "objective_id": "QFORM-FIVE-270-REPAIRED-AUDIT-20260925",
+  "source_commit": "4e530247ec0ef4101a6e5ecf621bd35a969c42aa",
+  "source_blob": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+  "reviewed": "400-518",
+  "finding": {
+    "line": 435,
+    "status": "GAP",
+    "issue": "signed Jacobian is branch/orientation dependent; absolute Jacobian is 1/(2sqrt(D))",
+    "repair": "insert 'absolute'",
+    "constant_loss": 0
+  },
+  "old_repairs_verified": [
+    "scalar density at critical point",
+    "C01 slit-plane/null seam",
+    "C03 critical level",
+    "J(0)",
+    "h(0)"
+  ],
+  "concentration_local": {
+    "status": "PASS_LOCAL_ONLY",
+    "exact_margin_19_fourth_power": "39009533/78125"
+  },
+  "complete_passes": 0,
+  "direct_pdf_visual": "UNCHECKED",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

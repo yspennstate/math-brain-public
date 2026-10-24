@@ -1,0 +1,28 @@
+{
+  "run_id": "20260923T231842Z-account01-B12-QFORM-auto11",
+  "theorem": "QFORM-HUB-ALIGNED-SPECTRAL-PACKET-STABILITY-v1",
+  "symbolic_checks": {
+    "shear_identity": "[[I,0],[-Q^T,I]] [[C,B],[B^T,D]] [[I,-Q],[0,I]] = [[C,B-CQ],[B^T-Q^TC,D-Q^TB-B^TQ+Q^TCQ]]",
+    "spectral_mode_defect": "for v=(a,b), e=b-Q^Ta: T_Q^T(theta vv^T)T_Q=theta(a,e)(a,e)^T",
+    "rank_one_shear_min_singular_value": "gamma(t)=(sqrt(t^2+4)-t)/2",
+    "partner_application": "s2(B#) >= s3(P_H A)-s2(C)-eta_m h >= g_L-2 epsilon-H_L"
+  },
+  "numerical_family": {
+    "m": 3,
+    "L": 4.0,
+    "q0": 1.0,
+    "epsilon": 0.01,
+    "d": 2.0,
+    "r": 2.0,
+    "gamma": 0.6180339887498949,
+    "g_L": 1.2360679774997898,
+    "alpha_L": 1.32,
+    "H_L": 0.1099198750747144,
+    "Delta_L": 1.1061481024250754,
+    "density_upper_bound": 5.567226402756524,
+    "row_s3_lower_bound": 1.2260679774997898,
+    "target_check": "row_s3_lower_bound > 1, hence s3(A)>1 because P_H is a contraction"
+  },
+  "calculation_method": "direct double-precision evaluation of the displayed closed forms; no simulation or Monte Carlo",
+  "status": "PASS"
+}

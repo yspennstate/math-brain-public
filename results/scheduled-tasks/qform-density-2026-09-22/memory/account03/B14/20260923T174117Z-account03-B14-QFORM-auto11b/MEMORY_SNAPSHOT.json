@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B14",
+  "run_id": "20260923T174117Z-account03-B14-QFORM-auto11b",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "startup_control_commit": "dbce8d8c240977172f159ddd4c4abaf3cb43d032",
+  "latest_control_refresh_seen": "abe04bc81444056d3deab4aba90445a241b39914",
+  "owner_request_ack": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "latest owner correction: interval-only frozen-slice square-root bound is not a Borel profile for an arbitrary rough hub"
+  ],
+  "new_event": "QFORM-INTERVAL-SLICE-ROUGH-HUB-RECEIVER-FALSE-v1",
+  "mathematical_result": {
+    "status": "REFUTED_INTERMEDIATE_INTERFACE",
+    "statement": "For N=ceil(1/epsilon), E_N=union_{k=1}^N[4k,4k+1/N], independent X,X' with density 1_{E_N}, and independent L~Unif[epsilon,epsilon+1], put Y=-2LX'. Then every unnormalised L=l slice obeys mu_l(I)<=|I|^(1/2) for every interval I with constant 1, but T=2LX+Y=2L(X-X') satisfies p_T(0)=(1/2)log((1+epsilon)/epsilon), unbounded as epsilon->0.",
+    "scope_guard": "The associated quadratic matrix has eigenvalues sqrt(2),-sqrt(2),0, so the construction refutes only the interval-only rough-hub receiver interface and is not a counterexample to the three-large-eigenvalue conjecture."
+  },
+  "partner_result_applied": {
+    "worker": "account04/B14",
+    "source": "QFORM-SCALE-COVARIANT-CONJUGATE-SHEAR-v1, r7",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260923T051013Z-account04-B14-scale-shear-r7/REPORT.md",
+    "application": "On the same fragmented X,X', 2U1U2+(1/2)(X+X'-beta)^2 has spectrum {1,-1,1,0} and ||p||_infinity<=4+2log8<8.159 uniformly in fragmentation and translation."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5c3fc0194e365748648fd21ecfb8e9fe160c5afe",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T174117Z-account03-B14-QFORM-auto11b/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T174117Z-account03-B14-QFORM-auto11b/CHECKS.md"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B14/20260923T174117Z-account03-B14-QFORM-auto11b.md",
+  "unresolved_implication": "Repair heavy-null rough-hub localization by retaining original-coordinate product Fourier provenance through the hub integration, or prove a genuine stronger Borel/L2 slice profile; interval Frostman control alone cannot close it.",
+  "next_step": "Estimate the joint hub-slice Fourier integral before taking absolute values that erase distant-fragment phase geometry.",
+  "full_qform_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN",
+  "brain_state": "WITHOUT_VERIFIED_BRAIN"
+}

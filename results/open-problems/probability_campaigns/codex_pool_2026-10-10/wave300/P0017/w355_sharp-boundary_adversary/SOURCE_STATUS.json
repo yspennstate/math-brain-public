@@ -1,0 +1,82 @@
+{
+  "target_id": "P0017",
+  "as_of": "2026-10-10",
+  "exact_target": "There exists a finite universal C such that for every n >= 1, every full-dimensional log-concave probability measure mu on R^n with mean zero and Cov(mu)=I, and every locally Lipschitz f in L2(mu), Var_mu(f) <= C integral |gradient f|^2 dmu. Equivalently after an affine change, C_P(mu) <= C ||Cov(mu)||_op; the lower bound ||Cov(mu)||_op <= C_P(mu) follows from linear functions. Cheeger constants use the boundary/min(mass,1-mass) convention and equivalence up to universal constants, not equality of constants.",
+  "dated_ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 548,
+    "row": "5,P0017,Dimension-free log-concave Poincare or Cheeger constant,attempted_un,KLS-type dimension-free Poincare/Cheeger for log-concave",
+    "certifies_current_openness": false
+  },
+  "primary_sources": [
+    {
+      "url": "https://www.renyi.hu/~miki/KannanLovSimIso.pdf",
+      "authors": "Kannan, Lovasz, Simonovits",
+      "year": 1995,
+      "doi": "10.1007/BF02574061",
+      "role": "Original geometric source; Section 4 defines mean-zero covariance-identity isotropy and Section 5 conjectures that a hyperplane cut is within a universal factor of the optimal cut."
+    },
+    {
+      "url": "https://arxiv.org/html/2603.29571v1",
+      "arxiv": "2603.29571v1",
+      "authors": "Bandeira, Dmitriev, Lucca, Nizic-Nikolac, Rodder (Entry 13 by Rodder)",
+      "location": "Entry 13, Definition 13.1 and Conjecture 30",
+      "role": "Exact primary reference named by op-p0017 intake",
+      "observed_statement": "For every dimension and log-concave measure, h(mu)>=c/sqrt(||Cov(mu)||_op); in isotropic position h(mu)>=c. Cheeger uses boundary/min(mass,1-mass).",
+      "verification": "Primary displayed covariance formulation and Poincare formulation checked; current-status commentary dates from March 2026."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.05474v1",
+      "arxiv": "2610.05474v1",
+      "authors": "Pierre Bizeul, Boaz Klartag, Joseph Lehec",
+      "submitted": "2026-10-04",
+      "location": "Introduction, equations (5)-(6), Theorem 1.1",
+      "source_quote": "We present here a proof of this conjecture.",
+      "observed_claim": "A universal dimension-free Poincare bound for every isotropic log-concave probability measure.",
+      "verification": "Primary theorem statement checked; full proof not independently audited here."
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.07728v2",
+      "arxiv": "2610.07728v2",
+      "authors": "Krishnakumar Balasubramanian, Shiva Kasiviswanathan",
+      "submitted": "2026-10-06",
+      "revised": "2026-10-08",
+      "location": "Abstract",
+      "observed_claim": "An explicit Poincare constant at most 25 for every isotropic log-concave probability measure.",
+      "verification": "Primary abstract checked; theorem and full proof not independently audited here."
+    }
+  ],
+  "current_openness": "UNKNOWN: primary October preprints now claim resolution; the September open/attempted label is stale evidence. This packet does not certify either continued openness or validity of the announced full proofs.",
+  "novelty_claim": false,
+  "owner_solved_retired_check": {
+    "scope": "Targeted exact-ID/title searches in the named intake directories, H/I attempts, Lean annotations, then matching current store nodes opened read-only.",
+    "original_problem_record": "brain_bundle_C006p01.json: op-p0017; current status explicitly unverified; source Randomstrasse101 Conjecture 30, Entry 13.",
+    "prior_attempt_record": "brain_bundle_C006a04.json: at-p0017; Gaussian Hermite expansion special case only, no independent review, no full-target claim.",
+    "H_I_attempts": "No matching P0017 ID/title found in the two named directories by targeted rg.",
+    "lean_annotation": "RANKED_LIST_2026-09-07_annotated.md line 598 records attempted_un; no formal-check receipt was identified.",
+    "store": "file:~/math-brain-build/local/population/brain.sqlite3?mode=ro, PRAGMA query_only=ON; only the original unverified problem and Gaussian-attempt records matched the bounded query.",
+    "limitation": "This bounded check does not prove absence of every owner solution elsewhere."
+  },
+  "independent_derivation_saved_before_paired_proof": "ATTEMPT.md sections 1-5; w354's proof has not been read.",
+  "hardest_remaining_piece": "For an attempted slicing proof, retain conditional covariance inside the energy-weighted integral and control the transverse/conditional-mean terms. An essential-supremum conditional bound does not follow from isotropy.",
+  "exact_cheeger_target": "There exists c>0, independent of n and mu, such that every isotropic log-concave probability measure on R^n has h(mu)>=c. Here h is inf over 0<mu(A)<1 of mu^+(A)/min(mu(A),1-mu(A)), with outer Euclidean Minkowski boundary (lower limit when necessary). The cited covariance-scaled statement is h(mu)>=c/sqrt(||Cov(mu)||_op).",
+  "recall": {
+    "receipt": "RECALL_RECEIPT.json",
+    "timeout_seconds": 60,
+    "observed_elapsed_seconds": 74.58142450009473,
+    "fallback_index": "No targeted KLS/Poincare match found in MEMORY.md",
+    "scar_read": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "application": "Arithmetic/status success does not establish the hardest unverified proof step."
+  },
+  "independent_boundary_review": {
+    "reviewer": "w356",
+    "claims": [
+      "w355-P0017-C001",
+      "w355-P0017-C002"
+    ],
+    "verdict": "KEEP",
+    "receipt": "REFEREE_VERDICTS.jsonl",
+    "full_KLS_proof_audited": false,
+    "two_different_login_keeps_claimed": false
+  }
+}

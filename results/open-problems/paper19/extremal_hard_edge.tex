@@ -1,0 +1,132 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Sp}{Sp}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\smin}{\sigma_{\min}}
+
+\title[The extremal hard edge]{The extremal hard edge: minimal least singular values
+of random submatrices, with universality, large deviations, and phase-retrieval stability}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Givat Ram, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+
+\date{\today}
+
+\begin{document}
+\begin{abstract}
+For a tall random matrix $A\in\F^{N\times m}$ we study the smallest least singular value over
+all of its square row submatrices, $M_m=\min_{|T|=m}\smin(A_T)$, and its generalizations.
+Building on the Gaussian theorem that fixes the exponential base $M_m=c_\gamma^{-m/d_\F+o_\PP(m)}$
+when $N/m\to\gamma>1$, we isolate the mechanism --- the competition between the combinatorial
+entropy of the submatrix family and the small-ball exponent of a single least
+singular value --- as an abstract first/second moment principle.  This gives a
+  rigorous distribution-free lower side, including finite-entropy moving-aspect
+  and summable-budget almost-sure forms, whenever a one-matrix least-singular-value
+  tail is available.  This covers
+  real and complex iid entries with bounded or
+  subexponentially growing scalar density bounds, entrywise density profiles,
+  independent rows with directional anti-concentration, including fixed-excess
+  lower sides, real isotropic log-concave rows on the lower side, and smoothed
+  deterministic frames,
+  including row-dependent smoothing budgets, spherical-direction ensembles with
+  controlled radial weights, together with row- and column-normalized Gaussian
+  variants, and deterministic Gram/sample-covariance transfers.  The matching
+  non-Gaussian upper side, for iid bounded-density entries, is reduced to a single
+  decorrelation estimate for random normals and then established through an
+  elementary off-support resolvent estimate, proved self-contained by a
+  leave-one-out argument (Hanson--Wright and the Mar\v{c}enko--Pastur fixed point;
+  the anisotropic local law gives an alternative route), with full error control.  The lower-side estimates have
+summable failure probabilities and hence yield almost-sure lower envelopes on
+any common coupling, while Gaussian row-count Poissonization and square
+row/right-factor conditioning are handled by monotone and pathwise squeezes.
+We also record fixed-excess
+rectangular and two-sided templates, correct the scale for proportional
+rectangular excess, prove the fixed-\(k\) Gaussian higher-singular-value lower
+  side, its fixed-excess extension, the quaternion fixed-excess fixed-\(k\)
+  lower-side analogue, and their Gram-eigenvalue transfers with finite-entropy
+  budgets, extend the subexponential deterministic conditioning
+transfer to these fixed-excess fixed-\(k\) lower sides, record the
+endpoint aspect asymptotics of the entropy base,
+isolate the atomic first-moment obstruction without claiming
+a high-probability discrete dichotomy, prove a deterministic finite-alphabet
+projective-pair obstruction whose sign case gives failure of critical real sign
+frames, and derive the corresponding lower-side Balan--Wang statement for
+continuous critical real frames, including normalized Gaussian measurements and
+diagonal coordinate preconditionings.  The final section lists open problems on
+universality, fluctuations, atomic full spark, complex phase retrieval, and
+concentration for the extremal stability constant.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+% Part 0: motivation, the source theorem, the entropy/small-ball mechanism, statement of results.
+\input{parts/intro.tex}
+
+\section{The abstract extremal small-ball principle}\label{sec:principle}
+\input{parts/principle.tex}
+
+\section{Universality across entry distributions}\label{sec:universality}
+\input{parts/universality.tex}
+
+\section{Atomic laws and exact singularity}\label{sec:atomic}
+\input{parts/atomic.tex}
+
+\section{Geometric generalizations: rectangular, higher, and two-sided submatrices}\label{sec:geometric}
+\input{parts/geometric.tex}
+
+\section{Large deviations of the extremal hard edge}\label{sec:ldp}
+\input{parts/ldp.tex}
+
+\section{Other ensembles: division algebras, variance profiles, sample covariance, general rows}\label{sec:ensembles}
+\input{parts/ensembles.tex}
+\input{parts/rotinv_universality.tex}
+
+\section{Phase retrieval stability, generalized}\label{sec:pr}
+\input{parts/phaseretrieval.tex}
+
+\section{Numerical confirmation}\label{sec:numerics}
+\input{parts/numerics.tex}
+
+\section{Open problems}\label{sec:open}
+\input{parts/open_problems.tex}
+
+\appendix
+\section{Proof of the two-projection anti-concentration lemma}\label{sec:app-two-proj}
+\input{parts/appendix_two_proj.tex}
+
+\section{Reduction of the pair-correlation condition to one decorrelation estimate}\label{sec:app-keystone}
+\input{parts/appendix_keystone.tex}
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}

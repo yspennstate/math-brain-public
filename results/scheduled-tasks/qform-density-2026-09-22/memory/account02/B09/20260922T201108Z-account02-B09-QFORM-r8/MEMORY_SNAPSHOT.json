@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B09",
+  "run_id": "20260922T201108Z-account02-B09-QFORM-r8",
+  "status": "ESSENTIAL_STEP_APPLIED+CANDIDATE_REFUTED_FULL_TARGET_OPEN",
+  "source_control_commit": "8d88b8a0f0c629b892444e56cf0657fc9419bc25",
+  "owner_control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_automation",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "cd083758331a386d7fccb353aea19e702ad0cdad",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260922T201108Z-account02-B09-QFORM-r8/REPORT.md",
+    "blob": "f149eab0664b3b8da9eed5626001e459788bdf6d"
+  },
+  "partner_result_applied": {
+    "worker": "account03/B09",
+    "run_id": "20260922T194535Z-account03-B09-QFORM-r16",
+    "theorem": "QFORM-THREE-BANK-RANKONE-TRIANGLE-v1",
+    "source_commit": "5e92c0aa0681b3d24630451076ab511f92dc718c",
+    "application": "If the aggregate zero-self 3x3 bank compression G has sigma_min(G)>=tau, then |G12 G13 G23|>=tau^3/2 and the partner theorem yields ||p_Q||_infinity<=2^(4/3)(3+log 8)/tau=12.7993906401.../tau."
+  },
+  "other_dependencies": [
+    {
+      "theorem": "QFORM-RANK2-AFFINE-HALF-RIESZ-v1",
+      "source_commit": "e542b1a6ef471b329e4e88a6553e1aacb45acc1a"
+    },
+    {
+      "theorem": "QFORM-PAIR-LOG-SMALLBALL-SMOOTHING-v1",
+      "source_commit": "f7f0fedb2d93b46824f96cac1164af6f8a55626f"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-THREE-SCALAR-CURVED-COMPRESSION-v1",
+      "statement": "For three independent cap-one scalars and symmetric 3x3 H with sigma_min(H)>=s, arbitrary affine perturbations have density at most 128*2^(1/4)/s<153/s."
+    },
+    {
+      "id": "QFORM-THREE-BANK-CURVED-SCALAR-COMPRESSION-v1",
+      "statement": "For three disjoint product banks whose active quadratic dependence factors through scalar projections with aggregate compression G and sigma_min(G)>=tau, density is at most 256*2^(1/4)/tau<305/tau."
+    }
+  ],
+  "new_correction": {
+    "id": "QFORM-CROSS-CYCLE-ARBITRARY-SELF-CURVATURE-FALSE-v1",
+    "event_commit": "ec721c7cff0759e9daf10b251bd26c05bc2cd3c8",
+    "summary": "U,V,W iid Uniform[-1/2,1/2] and Q=(U+V+W)^2 have three unit cross strengths but unbounded output density; coefficient spectrum is {3,0,0}, so this refutes only the intermediate cross-cycle-with-arbitrary-self-curvature claim, not QFORM."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1"
+  ],
+  "unresolved_implication": "QFORM-GAPPED-SCALAR-COMPRESSION-OR-GENUINE-BANK-CURVATURE-v1",
+  "next_step": "From s_3(A)>=1, product-preservingly aggregate banks and force a paid wedge/ridge, partner triangle, or gapped scalar compression; otherwise retain the genuinely orthogonal within-bank curvature inside a translation-uniform half-Riesz/ridge estimate. Cross strengths alone are insufficient by the new all-ones rank-one falsifier.",
+  "continuity": "OPEN",
+  "full_target": "OPEN"
+}

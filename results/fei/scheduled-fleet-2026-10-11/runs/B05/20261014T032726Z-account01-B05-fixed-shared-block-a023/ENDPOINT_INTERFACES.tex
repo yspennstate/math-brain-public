@@ -1,0 +1,26 @@
+% Checkable interface exported by B05-FIXED-SHARED-BLOCK-TRANSPORT-v1.
+\newcommand{\qpot}[1]{#1\log_2(1/#1)+2#1/\ln 2}
+\[
+E_X^f(S):=\sum_{A\subseteq X}\widehat f(S\cup A)^2,
+\qquad
+\Lambda_X(f):=|X|q(E_X^f(\varnothing))
+ +\sum_{i\notin X}q(E_X^f(\{i\})).
+\]
+For Boolean $f(X,U)$ and $g(X,V)$ with $U\cap V=\varnothing$,
+\[
+\Phi(fg)\le
+\sum_{i\in U}q(E_X^f(i))+\sum_{j\in V}q(E_X^g(j))
++|X|q\!\left(\min\{E_X^f(\varnothing),E_X^g(\varnothing)\}\right)
+\le \Lambda_X(f)+\Lambda_X(g).
+\]
+For $x\in X$,
+\[
+\mathbb E_{\sigma}\Lambda_{X\setminus\{x\}}(f\mid x=\sigma)
+\le\Lambda_X(f),
+\qquad
+\mathbb E_{\xi\in\{-1,1\}^X}\Phi(f\mid X=\xi)
+\le\Lambda_X(f).
+\]
+The unresolved universal interface is removal of the $|X|$ empty-orbit
+coefficient and compatibility across changing, overlapping shared blocks.
+

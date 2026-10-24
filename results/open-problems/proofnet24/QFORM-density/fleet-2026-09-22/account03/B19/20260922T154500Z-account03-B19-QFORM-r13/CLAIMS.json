@@ -1,0 +1,38 @@
+{
+  "run_id": "20260922T154500Z-account03-B19-QFORM-r13",
+  "full_target_status": "OPEN",
+  "continuity_full_target": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-CRITICAL-VALUE-QUARTER-SPLICE-v1",
+      "status": "PROVED_IN_STATED_SCOPE",
+      "statement": "For an indefinite physical 2x2 pivot block B=[[a,c],[c,-b]] with a,b>=m>0 and Delta=ab+c^2, if the exact Schur critical value kappa has concentration P(|kappa-t|<=r)<=L sqrt(r) for r<=1, then the full quadratic form has ||p||_infinity<=4 Delta^(-1/4)m^(-1/4)max(1,sqrt(L))."
+    },
+    {
+      "id": "QFORM-LIVE-SCHUR-DIAGONAL-CLOSURE-v1",
+      "status": "PROVED_TARGET_LEVEL_BRANCH",
+      "statement": "In the live account03/B19 one-effective residue, any exact Schur diagonal |S_ii|>=9/1120 yields ||p_Q||_infinity<25 for all admissible product laws."
+    },
+    {
+      "id": "QFORM-LIVE-SCHUR-CROSS-FORCING-v1",
+      "status": "PROVED_STRUCTURAL_IMPLICATION",
+      "statement": "In the same residue, if all |S_ii|<9/1120 then some disjoint original-coordinate cut I,J satisfies s_1(S[I,J])>27/2240."
+    },
+    {
+      "id": "QFORM-DIFFUSE-RANK1-SCHUR-SPLICE-v1",
+      "status": "PROVED_TARGET_LEVEL_BRANCH",
+      "statement": "If the live exact Schur complement has S=D+mu w w^T for the previous diffuse outside vector max w_i^2<7/27, the full quadratic-form density is universally bounded; the displayed constants give ||p_Q||_infinity<36."
+    },
+    {
+      "id": "QFORM-SCHUR-CROSS-LOWRIDGE-STABILITY-v1",
+      "status": "OPEN",
+      "statement": "After excluding the paid Schur-diagonal, ridge-certified and exact diffuse-rank-one endpoints, force either a second independent cross/ridge direction or perturbative reduction to a diffuse rank-one-plus-diagonal Schur form."
+    }
+  ],
+  "designated_partner_applied": {
+    "partner": "account04/B19",
+    "claim": "QFORM-FINITE-UNION-CORE-v1",
+    "source_commit": "02171dc794a56c0235afb1ca394b3e614162bff4",
+    "application": "transfer of the <25 physical-Schur-diagonal interval inequality from the bounded finite-union product testing core to the full arbitrary cap-one product-density class"
+  }
+}

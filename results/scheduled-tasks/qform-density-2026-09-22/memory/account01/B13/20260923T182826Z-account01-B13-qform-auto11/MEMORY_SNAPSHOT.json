@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B13",
+  "run_id": "20260923T182826Z-account01-B13-qform-auto11",
+  "control_revision": "2026-09-22.15",
+  "control_commit_at_login": "d7e5aa06b6e0659d57c0bb798e043c8a013519c0",
+  "fresh_control_observed_before_publication": "bbce6f338d76cf687cebce3528e48f4613bd24bf",
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-GSTAR-SCALE-FORCING-FALSE-v1",
+    "volume-sampled skeleton equality corrected to upper bound; robust corollary retained"
+  ],
+  "designated_partner": {
+    "account_slot": "account02/B13",
+    "result": "unconditional D5 global exterior-volume theorem plus localized physical-triple receiver",
+    "canonical_commit": "4db7e9f914c201c3162b6213dd63b577755b8a36",
+    "addendum_commit": "9a272828dbb4008db19bf92034bdfdc583909d7b",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/account02-B13-20260923T1811Z/REPORT.md",
+    "actual_application": "D5 gave V5(A)<=4^5 C5^10 rho^-10 on an actual slab witness; the localized physical-triple receiver gave the new V1 spectral floor."
+  },
+  "new_results": [
+    "QFORM-V1-SPECTRAL-FLOOR-v1",
+    "QFORM-EXTERIOR-DECAY-BOOTSTRAP-v1",
+    "QFORM-D5-RHO54-RANK16-SKELETON-v1",
+    "QFORM-DIFFUSE-CARRIER-RANK4-COLLAPSE-v1"
+  ],
+  "key_formulas": {
+    "V1_floor": "sqrt(V1)>=0.5*(1-6*sqrt(pi)/rho) for rho>6*sqrt(pi)",
+    "V5_bound": "V5<=4^5*(5*sqrt(2e))^10*rho^-10",
+    "rank16_tail": "||E||_F<=604.995109*(1-6*sqrt(pi)/rho)^(-1/4)*rho^(-5/4)",
+    "rank16_simple": "rho>=12*sqrt(pi) => ||E||_F<=719.464489*rho^-5/4",
+    "diffuse_rank4": "max leverage<=1/2048 => A=D'+R4+F, rank R4<=4, ||F||_op<=8*C5/rho+9||E||_F"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d46798d03befd93be417b47527c369fc9d8195bc",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260923T182826Z-account01-B13-qform-auto11/REPORT.md",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B13/20260923T182826Z-account01-B13-qform-auto11/CHECKS.json"
+  },
+  "handoff": {
+    "commit": "bbce6f338d76cf687cebce3528e48f4613bd24bf",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B13/20260923T182826Z-account01-B13-qform-auto11.md"
+  },
+  "unresolved_implication": "QFORM-DIAG-RANK16-RHO54-TWIST-GLUE-v1",
+  "scope_warning": "The O(rho^-5/4) zero-diagonal residual is retained. Frobenius/operator smallness alone does not imply the random quadratic twist is small under arbitrary translated or fragmented cap-one laws. Full QFORM and continuity remain open."
+}

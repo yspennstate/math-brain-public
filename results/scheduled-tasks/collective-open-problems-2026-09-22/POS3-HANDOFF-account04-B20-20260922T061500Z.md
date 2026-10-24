@@ -1,0 +1,55 @@
+# POS3 handoff — account04/B20 — 20260922T061500Z
+
+Outcome: `ESSENTIAL_STEP_APPLIED`; parent POS3 remains `OPEN / NOT PROVED`.
+Execution context: `WITHOUT_VERIFIED_BRAIN`.
+
+## Source-bound inputs
+
+- Team lead: `proofnet24/collective-POS3/account04/B10/20260922T051259Z-B10-POS3-r14/REPORT.md`, blob `50bac494667235f3630991a512438eac42c30521`.
+- Required OTHER-account partner: `proofnet24/collective-POS3/account01/B19/20260922T054717Z-b19-pos3-r13/REPORT.md`, blob `19f1baa7b3bbe4ed45e19df6ca396f97f6fa5131`.
+- Crossed-neighborhood identity: `proofnet24/collective-POS3/account04/B10/20260922T034709Z-B10-POS3-r12/REPORT.md`, blob `4759a4ecb5f2963a3d190f66fc6728459bb1a46e`.
+
+## New universal step
+
+Let `x||y_0`, `Pred(x) subseteq Pred(y_0)`, and suppose `Succ(y_0) not subseteq Succ(x)`. There is a saturated successor staircase
+
+`y_0 lessdot y_1 lessdot ... lessdot y_m`
+
+with every `y_i||x` and terminal `Succ(y_m) subseteq Succ(x)`. Put `q_i=Pr(y_i<x)` under the original uniform law on all full linear extensions.
+
+Then the cover-gap events
+
+`G_i={y_i<x<y_(i+1)}`
+
+are pairwise disjoint and satisfy
+
+`Pr(G_i)=q_i-q_(i+1)`.
+
+At the terminal crossed pair, the exact crossed-neighborhood identity contains the lower-fringe event `{x<y_(m-1)}`. Therefore
+
+`1-2q_m >= 1-q_(m-1)`,
+
+so
+
+`q_m <= q_(m-1)/2 <= q_0/2`.
+
+Consequently the non-crossed successor exit carries the exact disjoint charge
+
+`sum_i Pr(G_i)=q_0-q_m >= q_0/2`.
+
+If the incoming actual minority packet is the account01/B19 `3/11` selector, this gives at least `3/22` of full-extension mass in pairwise-disjoint literal cover-gap events. If merely `q_0>1/6`, the charge is `>1/12`. If `q_0<1/3`, the terminal crossed pair has majority `Pr(x<y_m)>5/6`.
+
+This pays the successor-nesting-failure subtype of the first non-exact boundary defect. It does not prove POS3: the charge can be split across an arbitrarily long staircase and still needs global width-three realization/recycling.
+
+## Canonical scientific artifact
+
+- Report: `proofnet24/collective-POS3/account04/B20/20260922T061500Z-b20-auto11-pos3-r17/REPORT.md`, blob `e7008d3798641a3b15703607e548536a75f2dc4d`.
+- Verifier: `proofnet24/collective-POS3/account04/B20/20260922T061500Z-b20-auto11-pos3-r17/verify_successor_staircase.py`, blob `450a7bd3cc39a237280a1294aab53e35fc998d09`.
+- Captured output: `proofnet24/collective-POS3/account04/B20/20260922T061500Z-b20-auto11-pos3-r17/verify_successor_staircase.out`, blob `b486fa548cfb0ff8b38e338ca2e370abf3421dbc`.
+- Regression marker: `POS3_SUCCESSOR_STAIRCASE_HALF_CHARGE_PASS` over 5228 naturally labelled transitive closures through six vertices, 18967 non-crossed successor starts, and 23323 terminal-cover tests, with zero failures. The finite regression is not the proof; the report contains the arbitrary-size symbolic proof.
+
+## Next unpaid implication
+
+Combine this disjoint staircase packet, or the analogous charge at a crossed multi-distinguisher exit, with width-three channel capacity / bridge-fork geometry / conserved `K` to prove that repeated recycling forces an actual balanced pair, strict strong-majority span descent, or a proper autonomous nonchain.
+
+No benchmark material, credentials, scheduler IDs, machine paths, unrelated private data/transcripts, email/Drive content, paid model/API/Codex use, remote workflow, public posting, or native brain activation is included.

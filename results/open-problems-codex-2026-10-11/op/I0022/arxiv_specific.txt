@@ -1,0 +1,1210 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/uygQPz43I9bUQhJTaTZi1X46Dak</id>
+  <title>arXiv Query: search_query=all:condensation AND all:scaling&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-10-11T15:34:53Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:condensation+AND+all:scaling&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>6247</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1601.04495v1</id>
+    <title>Superfluidity and Phase Correlations of Driven Dissipative Condensates</title>
+    <updated>2016-01-18T12:57:10Z</updated>
+    <link href="https://arxiv.org/abs/1601.04495v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1601.04495v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We review recent results on the coherence and superfluidity of driven dissipative condensates, i.e., systems of weakly-interacting non-conserved Bosons, such as polariton condensates. The presence of driving and dissipation has dramatically different effects depending on dimensionality and anisotropy. In three dimensions, equilibrium behaviour is recovered at large scales for static correlations, while the dynamical behaviour is altered by the microscopic driving. In two dimensions, for an isotropic system, drive and dissipation destroy the algebraic order that would otherwise exist, however a sufficiently anisotropic system can still show algebraic phase correlations. We discuss the consequences of this behaviour for recent experiments measuring phase coherence, and outline potential measurements that might directly probe superfluidity.</summary>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-01-18T12:57:10Z</published>
+    <arxiv:comment>27 pages, 3 figures. This manuscript has been submitted as a chapter to the book "Universal Themes of Bose-Einstein Condensation" (Cambridge University Press, in press 2016), edited by David Snoke, Nikolaos Proukakis and Peter Littlewood. This manuscript is the original submitted version, and does not include corrections suggested by the editors</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.quant-gas"/>
+    <arxiv:journal_ref>Universal Themes of Bose-Einstein Condensation, N.P. Proukakis, D.W. Snoke and P.B. LIttlewood (Eds.) (Cambridge University Press, 2017)</arxiv:journal_ref>
+    <author>
+      <name>J. Keeling</name>
+    </author>
+    <author>
+      <name>L. M. Sieberer</name>
+    </author>
+    <author>
+      <name>E. Altman</name>
+    </author>
+    <author>
+      <name>L. Chen</name>
+    </author>
+    <author>
+      <name>S. Diehl</name>
+    </author>
+    <author>
+      <name>J. Toner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.05011v3</id>
+    <title>Navigating Complexity: Toward Lossless Graph Condensation via Expanding Window Matching</title>
+    <updated>2024-06-18T12:38:51Z</updated>
+    <link href="https://arxiv.org/abs/2402.05011v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.05011v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph condensation aims to reduce the size of a large-scale graph dataset by synthesizing a compact counterpart without sacrificing the performance of Graph Neural Networks (GNNs) trained on it, which has shed light on reducing the computational cost for training GNNs. Nevertheless, existing methods often fall short of accurately replicating the original graph for certain datasets, thereby failing to achieve the objective of lossless condensation. To understand this phenomenon, we investigate the potential reasons and reveal that the previous state-of-the-art trajectory matching method provides biased and restricted supervision signals from the original graph when optimizing the condensed one. This significantly limits both the scale and efficacy of the condensed graph. In this paper, we make the first attempt toward \textit{lossless graph condensation} by bridging the previously neglected supervision signals. Specifically, we employ a curriculum learning strategy to train expert trajectories with more diverse supervision signals from the original graph, and then effectively transfer the information into the condensed graph with expanding window matching. Moreover, we design a loss function to further extract knowledge from the expert trajectories. Theoretical analysis justifies the design of our method and extensive experiments verify its superiority across different datasets. Code is released at https://github.com/NUS-HPC-AI-Lab/GEOM.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-07T16:32:02Z</published>
+    <arxiv:comment>Lossless graph condensation method</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yuchen Zhang</name>
+    </author>
+    <author>
+      <name>Tianle Zhang</name>
+    </author>
+    <author>
+      <name>Kai Wang</name>
+    </author>
+    <author>
+      <name>Ziyao Guo</name>
+    </author>
+    <author>
+      <name>Yuxuan Liang</name>
+    </author>
+    <author>
+      <name>Xavier Bresson</name>
+    </author>
+    <author>
+      <name>Wei Jin</name>
+    </author>
+    <author>
+      <name>Yang You</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.04924v5</id>
+    <title>Two Trades is not Baffled: Condensing Graph via Crafting Rational Gradient Matching</title>
+    <updated>2024-09-27T09:57:42Z</updated>
+    <link href="https://arxiv.org/abs/2402.04924v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.04924v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Training on large-scale graphs has achieved remarkable results in graph representation learning, but its cost and storage have raised growing concerns. As one of the most promising directions, graph condensation methods address these issues by employing gradient matching, aiming to condense the full graph into a more concise yet information-rich synthetic set. Though encouraging, these strategies primarily emphasize matching directions of the gradients, which leads to deviations in the training trajectories. Such deviations are further magnified by the differences between the condensation and evaluation phases, culminating in accumulated errors, which detrimentally affect the performance of the condensed graphs. In light of this, we propose a novel graph condensation method named \textbf{C}raf\textbf{T}ing \textbf{R}ationa\textbf{L} trajectory (\textbf{CTRL}), which offers an optimized starting point closer to the original dataset's feature distribution and a more refined strategy for gradient matching. Theoretically, CTRL can effectively neutralize the impact of accumulated errors on the performance of condensed graphs. We provide extensive experiments on various graph datasets and downstream tasks to support the effectiveness of CTRL. Code is released at https://github.com/NUS-HPC-AI-Lab/CTRL.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-07T14:49:10Z</published>
+    <arxiv:comment>An effective method for graph condensation</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Tianle Zhang</name>
+    </author>
+    <author>
+      <name>Yuchen Zhang</name>
+    </author>
+    <author>
+      <name>Kun Wang</name>
+    </author>
+    <author>
+      <name>Kai Wang</name>
+    </author>
+    <author>
+      <name>Beining Yang</name>
+    </author>
+    <author>
+      <name>Kaipeng Zhang</name>
+    </author>
+    <author>
+      <name>Wenqi Shao</name>
+    </author>
+    <author>
+      <name>Ping Liu</name>
+    </author>
+    <author>
+      <name>Joey Tianyi Zhou</name>
+    </author>
+    <author>
+      <name>Yang You</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/9403010v1</id>
+    <title>Condensate Formation in a Bose Gas</title>
+    <updated>1994-03-03T07:59:00Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/9403010v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/9403010v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Using magnetically trapped atomic hydrogen as an example, we investigate the prospects of achieving Bose-Einstein condensation in a dilute Bose gas. We show that, if the gas is quenched sufficiently far into the critical region of the phase transition, the typical time scale for the nucleation of the condensate density is short and of $O(\hbar/k_{B}T_{c})$. As a result we find that thermalizing elastic collisions act as a bottleneck for the formation of the condensate. In the case of doubly-polarized atomic hydrogen these occur much more frequently than the inelastic collisions leading to decay and we are lead to the conclusion that Bose-Einstein condensation can indeed be achieved within the lifetime of the gas.</summary>
+    <category term="cond-mat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1994-03-03T07:59:00Z</published>
+    <arxiv:comment>22 PAGES AND 4 POSTSCRIPT FIGURES, REVTEX 3.0, INVITED TALK AT THE INTERNATIONAL WORKSHOP ON BOSE-EINSTEIN CONDENSATION (TRENTO, 1993), ITF9402S</arxiv:comment>
+    <arxiv:primary_category term="cond-mat"/>
+    <author>
+      <name>H. T. C. Stoof</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1307.8024v2</id>
+    <title>Bose Einstein condensation of the classical axion field in cosmology?</title>
+    <updated>2013-12-04T06:54:50Z</updated>
+    <link href="https://arxiv.org/abs/1307.8024v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1307.8024v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The axion is a motivated cold dark matter candidate, which it would be interesting to distinguish from weakly interacting massive particles. Sikivie has suggested that axions could behave differently during non-linear galaxy evolution, if they form a Bose-Einstein condensate, and argues that ``gravitational thermalisation'' drives them to a Bose-Einstein condensate during the radiation dominated era. Using classical equations of motion during linear structure formation, we explore whether the gravitational interactions of axions can generate entropy. At linear order in Newton's constant, we interpret that the principle activities of gravity are to expand the Universe and grow density fluctuations. To quantify the rate of entropy creation we use the anisotropic stress to estimate a short dissipation scale for axions, which does not confirm previous estimates of their gravitational thermalisation rate.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-07-30T15:51:37Z</published>
+    <arxiv:comment>version accepted for publication, modified intro to Bose Einstein condensation</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Sacha Davidson</name>
+    </author>
+    <author>
+      <name>Martin Elmer</name>
+    </author>
+    <arxiv:doi>10.1088/1475-7516/2013/12/034</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1475-7516/2013/12/034" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0901.3595v3</id>
+    <title>Ghost condensate and generalized second law</title>
+    <updated>2009-09-06T14:32:16Z</updated>
+    <link href="https://arxiv.org/abs/0901.3595v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0901.3595v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Dubovsky and Sibiryakov recently proposed a scenario in which particles of different species propagate with different speeds due to their direct couplings to ghost condensate. It was argued that this extended version of ghost condensate allows a gedanken experiment leading to violation of the generalized second law. However, in the original ghost condensate scenario, difference in propagation speeds is suppressed by M^2/M_{Pl}^2, where M is the order parameter of spontaneous Lorentz breaking and M_{Pl} is the Planck scale. In this case the energy transfer necessary for the gedanken experiment is so slow that the timescale of decrease of entropy, if any, is always longer than the Jeans timescale of ghost condensate. Hence the generalized second law is not violated by the gedanken experiment in the original ghost condensate scenario. This conclusion trivially extends to gauged ghost condensation by taking into account accretion of gauged ghost condensate into a black hole.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-01-23T06:14:59Z</published>
+    <arxiv:comment>17 pages; comment on negative energy added, gauged ghost condensation considered (v2); version accepted for publication in JHEP (v3)</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <arxiv:journal_ref>JHEP 0909:070,2009</arxiv:journal_ref>
+    <author>
+      <name>Shinji Mukohyama</name>
+    </author>
+    <arxiv:doi>10.1088/1126-6708/2009/09/070</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1126-6708/2009/09/070" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/0211303v3</id>
+    <title>Condensate cosmology -- dark energy from dark matter</title>
+    <updated>2003-06-06T15:39:47Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/0211303v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/0211303v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Imagine a scenario in which the dark energy forms via the condensation of dark matter at some low redshift. The Compton wavelength therefore changes from small to very large at the transition, unlike quintessence or metamorphosis. We study CMB, large scale structure, supernova and radio galaxy constraints on condensation by performing a 4 parameter likelihood analysis over the Hubble constant and the three parameters associated with Q, the condensate field: Omega_Q, w_f and z_t (energy density and equation of state today, and redshift of transition). Condensation roughly interpolates between Lambda CDM (for large z_t) and sCDM (low z_t) and provides a slightly better fit to the data than Lambda CDM. We confirm that there is no degeneracy in the CMB between H and z_t and discuss the implications of late-time transitions for the Lyman-alpha forest. Finally we discuss the nonlinear phase of both condensation and metamorphosis, which is much more interesting than in standard quintessence models.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2002-11-13T20:58:36Z</published>
+    <arxiv:comment>13 pages, 13 colour figures. Final version with discussion of TE cross-correlation spectra for condensation and metamorphosis in light of the WMAP results</arxiv:comment>
+    <arxiv:primary_category term="astro-ph"/>
+    <arxiv:journal_ref>Phys.Rev. D68 (2003) 043504</arxiv:journal_ref>
+    <author>
+      <name>Bruce A. Bassett</name>
+      <arxiv:affiliation>Portsmouth</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Martin Kunz</name>
+      <arxiv:affiliation>Sussex</arxiv:affiliation>
+    </author>
+    <author>
+      <name>David Parkinson</name>
+      <arxiv:affiliation>Portsmouth</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Carlo Ungarelli</name>
+      <arxiv:affiliation>Birmingham, Portsmouth</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.68.043504</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.68.043504" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.03937v2</id>
+    <title>A universal scaling of condensation temperature in quantum fluids</title>
+    <updated>2025-05-15T19:20:09Z</updated>
+    <link href="https://arxiv.org/abs/2503.03937v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.03937v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The phenomena of superconductivity and superfluidity are believed to originate from the same underlying physics, namely the condensation of either bosons or pairs of fermions (Cooper pairs). In this work I complied and analyzed literature data for a number of quantum fluids and showed that indeed they all follow the same simple scaling law. The critical temperature for condensation T$_c$ is found to scale with the condensate coherence length $ξ$ and the effective mass of condensing particles m$^{\ast}$. The scaling plot includes members of most known classes of superconductors, as well as a number of superfluids and condensates, such as $^3$He, $^4$He, dilute Bose and Fermi gases, excitons, polaritons, neutron superfluid and proton superconductor in neutron stars, nuclear pairing, quark--antiquark condensate and Higgs condensate. The scaling plot spans more that 24 orders of magnitude of critical temperatures, albeit the scaling exponent is not the one predicted by theory. The plot might help the search for a QCD axion.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-05T22:13:00Z</published>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <author>
+      <name>S. V. Dordevic</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.17355v1</id>
+    <title>Bi-Directional Multi-Scale Graph Dataset Condensation via Information Bottleneck</title>
+    <updated>2024-12-23T07:32:02Z</updated>
+    <link href="https://arxiv.org/abs/2412.17355v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.17355v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dataset condensation has significantly improved model training efficiency, but its application on devices with different computing power brings new requirements for different data sizes. Thus, condensing multiple scale graphs simultaneously is the core of achieving efficient training in different on-device scenarios. Existing efficient works for multi-scale graph dataset condensation mainly perform efficient approximate computation in scale order (large-to-small or small-to-large scales). However, for non-Euclidean structures of sparse graph data, these two commonly used paradigms for multi-scale graph dataset condensation have serious scaling down degradation and scaling up collapse problems of a graph. The main bottleneck of the above paradigms is whether the effective information of the original graph is fully preserved when consenting to the primary sub-scale (the first of multiple scales), which determines the condensation effect and consistency of all scales. In this paper, we proposed a novel GNN-centric Bi-directional Multi-Scale Graph Dataset Condensation (BiMSGC) framework, to explore unifying paradigms by operating on both large-to-small and small-to-large for multi-scale graph condensation. Based on the mutual information theory, we estimate an optimal ``meso-scale'' to obtain the minimum necessary dense graph preserving the maximum utility information of the original graph, and then we achieve stable and consistent ``bi-directional'' condensation learning by optimizing graph eigenbasis matching with information bottleneck on other scales. Encouraging empirical results on several datasets demonstrates the significant superiority of the proposed framework in graph condensation at different scales.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-23T07:32:02Z</published>
+    <arxiv:comment>Accepted by the Main Technical Track of the 39th Annual AAAI Conference on Artificial Intelligence (AAAI-2025)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xingcheng Fu</name>
+    </author>
+    <author>
+      <name>Yisen Gao</name>
+    </author>
+    <author>
+      <name>Beining Yang</name>
+    </author>
+    <author>
+      <name>Yuxuan Wu</name>
+    </author>
+    <author>
+      <name>Haodong Qian</name>
+    </author>
+    <author>
+      <name>Qingyun Sun</name>
+    </author>
+    <author>
+      <name>Xianxian Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1704.06750v4</id>
+    <title>The finite density scaling laws of condensation phase transition in zero range processes on scale-free networks</title>
+    <updated>2019-11-02T06:09:08Z</updated>
+    <link href="https://arxiv.org/abs/1704.06750v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1704.06750v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The dynamics of zero-range processes on complex networks is expected to be influenced by the topological structure of underlying networks. A real space complete condensation phase transition in the stationary state may occur. We have studied the finite density effects of the condensation transition in both the stationary and dynamical zero-range process on scale-free networks. By means of grand canonical ensemble method, we predict analytically the scaling laws of the average occupation number with respect to the finite density for the steady state. We further explore the relaxation dynamics of the condensation phase transition. By applying the hierarchical evolution and scaling ansatz, a scaling law for the relaxation dynamics is predicted. Monte Carlo simulations are performed and the predicted density scaling laws are nicely validated.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-04-22T05:53:29Z</published>
+    <arxiv:comment>9 pages, 3 figures, v3</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Guifeng Su</name>
+    </author>
+    <author>
+      <name>Xiaowen Li</name>
+    </author>
+    <author>
+      <name>Yi Zhang</name>
+    </author>
+    <author>
+      <name>Xiaobing Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0703585v6</id>
+    <title>Finite temperature scaling theory for the collapse of Bose-Einstein condensate</title>
+    <updated>2009-09-07T08:35:54Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0703585v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0703585v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We show how to apply the scaling theory in an inhomogeneous system like harmonically trapped Bose condensate at finite temperatures. We calculate the temperature dependence of the critical number of particles by a scaling theory within the Hartree-Fock approximation and find that there is a dramatic increase in the critical number of particles as the condensation point is approached.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-03-22T16:00:53Z</published>
+    <arxiv:comment>Published online [6 pages, 3 figures]</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Eur. Phys. J. D 55, 653-658 (2009)</arxiv:journal_ref>
+    <author>
+      <name>Shyamal Biswas</name>
+    </author>
+    <arxiv:doi>10.1140/epjd/e2009-00221-7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1140/epjd/e2009-00221-7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.12231v3</id>
+    <title>Disentangled Condensation for Large-scale Graphs</title>
+    <updated>2025-01-24T14:18:45Z</updated>
+    <link href="https://arxiv.org/abs/2401.12231v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.12231v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph condensation has emerged as an intriguing technique to save the expensive training costs of Graph Neural Networks (GNNs) by substituting a condensed small graph with the original graph. Despite the promising results achieved, previous methods usually employ an entangled paradigm of redundant parameters (nodes, edges, GNNs), which incurs complex joint optimization during condensation. This paradigm has considerably impeded the scalability of graph condensation, making it challenging to condense extremely large-scale graphs and generate high-fidelity condensed graphs. Therefore, we propose to disentangle the condensation process into a two-stage GNN-free paradigm, independently condensing nodes and generating edges while eliminating the need to optimize GNNs at the same time. The node condensation module avoids the complexity of GNNs by focusing on node feature alignment with anchors of the original graph, while the edge translation module constructs the edges of the condensed nodes by transferring the original structure knowledge with neighborhood anchors. This simple yet effective approach achieves at least 10 times faster than state-of-the-art methods with comparable accuracy on medium-scale graphs. Moreover, the proposed DisCo can successfully scale up to the Ogbn-papers100M graph containing over 100 million nodes with flexible reduction rates and improves performance on the second-largest Ogbn-products dataset by over 5%. Extensive downstream tasks and ablation study on five common datasets further demonstrate the effectiveness of the proposed DisCo framework. Our code is available at https://github.com/BangHonor/DisCo.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-18T09:59:00Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Zhenbang Xiao</name>
+    </author>
+    <author>
+      <name>Yu Wang</name>
+    </author>
+    <author>
+      <name>Shunyu Liu</name>
+    </author>
+    <author>
+      <name>Bingde Hu</name>
+    </author>
+    <author>
+      <name>Huiqiong Wang</name>
+    </author>
+    <author>
+      <name>Mingli Song</name>
+    </author>
+    <author>
+      <name>Tongya Zheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.02664v2</id>
+    <title>Structure-free Graph Condensation: From Large-scale Graphs to Condensed Graph-free Data</title>
+    <updated>2023-10-23T05:28:43Z</updated>
+    <link href="https://arxiv.org/abs/2306.02664v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.02664v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph condensation, which reduces the size of a large-scale graph by synthesizing a small-scale condensed graph as its substitution, has immediate benefits for various graph learning tasks. However, existing graph condensation methods rely on the joint optimization of nodes and structures in the condensed graph, and overlook critical issues in effectiveness and generalization ability. In this paper, we advocate a new Structure-Free Graph Condensation paradigm, named SFGC, to distill a large-scale graph into a small-scale graph node set without explicit graph structures, i.e., graph-free data. Our idea is to implicitly encode topology structure information into the node attributes in the synthesized graph-free data, whose topology is reduced to an identity matrix. Specifically, SFGC contains two collaborative components: (1) a training trajectory meta-matching scheme for effectively synthesizing small-scale graph-free data; (2) a graph neural feature score metric for dynamically evaluating the quality of the condensed data. Through training trajectory meta-matching, SFGC aligns the long-term GNN learning behaviors between the large-scale graph and the condensed small-scale graph-free data, ensuring comprehensive and compact transfer of informative knowledge to the graph-free data. Afterward, the underlying condensed graph-free data would be dynamically evaluated with the graph neural feature score, which is a closed-form metric for ensuring the excellent expressiveness of the condensed graph-free data. Extensive experiments verify the superiority of SFGC across different condensation ratios.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-05T07:53:52Z</published>
+    <arxiv:comment>Accepted by NeurIPS 2023</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xin Zheng</name>
+    </author>
+    <author>
+      <name>Miao Zhang</name>
+    </author>
+    <author>
+      <name>Chunyang Chen</name>
+    </author>
+    <author>
+      <name>Quoc Viet Hung Nguyen</name>
+    </author>
+    <author>
+      <name>Xingquan Zhu</name>
+    </author>
+    <author>
+      <name>Shirui Pan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1303.2775v1</id>
+    <title>Finite-size scaling behavior of Bose-Einstein condensation in the 1D Bose gas</title>
+    <updated>2013-03-12T04:01:55Z</updated>
+    <link href="https://arxiv.org/abs/1303.2775v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1303.2775v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Through exact numerical solutions we show Bose-Einstein condensation (BEC) for the one-dimensional (1D) bosons with repulsive short-range interactions at zero temperature by taking a particular large size limit. Following the Penrose-Onsager criterion of BEC, we define condensate fraction by the fraction of the largest eigenvalue of the one-particle reduced density matrix. % We show the finite-size scaling behavior such that condensate fraction is given by a scaling function of one-variable: interaction parameter multiplied by a power of particle number. Condensate fraction is nonzero and constant for any large value of particle number or system size, if the interaction parameter is proportional to the negative power of particle number. %Here the interaction parameter is defined by the coupling constant of the delta-function potentials devided by the density. %With the scaling behavior we derive various themodynamic limits where condensate fraction is constant for any large system size; for instance, it is the case even in the system of a finite particle number.</summary>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-03-12T04:01:55Z</published>
+    <arxiv:comment>5pages, 4figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.quant-gas"/>
+    <author>
+      <name>Jun Sato</name>
+    </author>
+    <author>
+      <name>Eriko Kaminishi</name>
+    </author>
+    <author>
+      <name>Tetsuo Deguchi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0409120v2</id>
+    <title>Complete Condensation in a Zero Range Process on Scale-Free Networks</title>
+    <updated>2005-05-19T14:37:57Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0409120v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0409120v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We study a zero range process on scale-free networks in order to investigate how network structure influences particle dynamics. The zero range process is defined with the particle jumping rate function $p(n)=n^δ$. We show analytically that a complete condensation occurs when $δ\leq δ_c \equiv 1/(γ-1)$ where $γ$ is the degree distribution exponent of the underlying networks. In the complete condensation, those nodes whose degree is higher than a threshold are occupied by macroscopic numbers of particles, while the other nodes are occupied by negligible numbers of particles. We also show numerically that the relaxation time follows a power-law scaling $τ\sim L^z$ with the network size $L$ and a dynamic exponent $z$ in the condensed phase.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-09-06T09:37:02Z</published>
+    <arxiv:comment>4 pages, 2 EPS figures, and 1 table (some revision for relational dynamics parts)</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Phys.Rev.Lett.94:198701,2005</arxiv:journal_ref>
+    <author>
+      <name>Jae Dong Noh</name>
+    </author>
+    <author>
+      <name>G. M. Shim</name>
+    </author>
+    <author>
+      <name>Hoyun Lee</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.94.198701</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.94.198701" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1602.01118v2</id>
+    <title>Dynamics of condensate formation in stochastic transport with pair-factorized steady states: Nucleation and coarsening time scales</title>
+    <updated>2016-07-26T21:44:06Z</updated>
+    <link href="https://arxiv.org/abs/1602.01118v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1602.01118v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Driven diffusive systems such as the zero-range process (ZRP) and the pair-factorized steady states (PFSS) stochastic transport process are versatile tools that lend themselves to the study of transport phenomena on a generic level. While their mathematical structure is simple enough to allow significant analytical treatment, they offer a variety of interesting phenomena. With appropriate dynamics, the ZRP and PFSS models feature a condensation transition where for a supercritical density the translational symmetry breaks spontaneously and excess particles form a single-site or spatially extended condensate, respectively. In this paper we numerically study the typical time scales of the two stages of this condensation process: Nucleation and coarsening. Nucleation is the first stage of condensation where the bulk system relaxes to its stationary distribution and droplet nuclei form in the system. These droplets then gradually grow or evaporate in the coarsening regime to finally coalesce in a single condensate when the system finally relaxes to the stationary state.
+  We use the ZRP condensation model to discuss the choice of the estimation method for the nucleation time scale and present scaling exponents for the ZRP and PFSS condensation models with respect to the choice of the typical droplet mass. We then proceed to present scaling exponents in the coarsening regime of the ZRP for partial-asymmetric dynamics and the PFSS model for symmetric and asymmetric dynamics.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-02-02T21:24:25Z</published>
+    <arxiv:comment>12 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Phys. Rev. E 93, 052112 (2016)</arxiv:journal_ref>
+    <author>
+      <name>Hannes Nagel</name>
+    </author>
+    <author>
+      <name>Wolfhard Janke</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.93.052112</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.93.052112" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1601.01847v2</id>
+    <title>The Origin of Condensation Energy Scaling of the Fe-based superconductors</title>
+    <updated>2016-08-18T06:34:17Z</updated>
+    <link href="https://arxiv.org/abs/1601.01847v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1601.01847v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by the recent experiment of the non-BCS scaling relation of the condensation energy $ΔCE$ vs. $T_c$ ($ΔCE \sim T_c ^β, β\approx 3.5$) [PRB 89 140503 (2014)] for the Fe-based superconductors, we studied the CE and $T_c$ of the multiband BCS superconductors. We showed that the experimentally observed anomalous scaling relation $ΔCE \sim T_c ^{3.5}$ is well reproduced by the two-band BCS superconductor paired by a dominant interband interaction ($V_{inter} &gt; V_{intra}$). Our result implies that this seemingly non-BCS-like scaling behavior, on the contrary to the common expectation, is in fact a strong experimental evidence that the pairing mechanism of the Fe-based superconductors is genuinely a BCS mechanism, meaning that "the Cooper pairs are formed by the itinerant carriers glued by a pairing interaction."</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-01-08T12:13:58Z</published>
+    <arxiv:comment>7 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>EPL 115 (2016) 27002</arxiv:journal_ref>
+    <author>
+      <name>Yunkyu Bang</name>
+    </author>
+    <arxiv:doi>10.1209/0295-5075/115/27002</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1209/0295-5075/115/27002" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1707.05942v1</id>
+    <title>Scale Invariant Top Condensate</title>
+    <updated>2017-07-19T06:03:45Z</updated>
+    <link href="https://arxiv.org/abs/1707.05942v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1707.05942v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a scale invariant model of dynamical electroweak symmetry breaking via top condensation within the minimal top condensate see-saw model. The classical scale invariance is realized nonlinearly by introducing conformal compensator scalar field, the dilaton, which plays crucial role in successful predictions for the Higgs boson. The dilaton mass and its mixing with the composite Higgs boson appears only at 2-loop level, both being proportional to the hierarchy between the electroweak and compositeness scales, $\propto v/Λ$. The mass scales in our model are generated via the mechanism of dimensional transmutation and the hierarchy $v/Λ\ll 1$ is radiatively stable, thus resolving the fine-tuning problem of the standard top condensate models.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-07-19T06:03:45Z</published>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Archil Kobakhidze</name>
+    </author>
+    <author>
+      <name>Shelley Liang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0802.3586v1</id>
+    <title>Condensation in a zero range process on weighted scale-free networks</title>
+    <updated>2008-02-25T10:11:19Z</updated>
+    <link href="https://arxiv.org/abs/0802.3586v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0802.3586v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We study the condensation phenomenon in a zero range process on weighted scale-free networks in order to show how the weighted transport influences the particle condensation. Instead of the approach of grand canonical ensemble which is generally used in a zero range process, we introduce an alternate approach of the mean field equations to study the dynamics of particle transport. We find that the condensation on scale-free network is easier to occur in the case of weighted transport than in the case of weight-free. In the weighted transport, especially, a dynamical condensation is even possible for the case of no interaction among particles, which is impossible in the case of weight-free.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-02-25T10:11:19Z</published>
+    <arxiv:comment>6 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Physical Review E 74, 036101 (2006)</arxiv:journal_ref>
+    <author>
+      <name>Ming Tang</name>
+    </author>
+    <author>
+      <name>Zonghua Liu</name>
+    </author>
+    <author>
+      <name>Jie Zhou</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.74.036101</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.74.036101" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.11238v1</id>
+    <title>Capillary condensation under atomic-scale confinement</title>
+    <updated>2020-09-23T16:19:08Z</updated>
+    <link href="https://arxiv.org/abs/2009.11238v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.11238v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Capillary condensation of water is ubiquitous in nature and technology. It routinely occurs in granular and porous media, can strongly alter such properties as adhesion, lubrication, friction and corrosion, and is important in many processes employed by microelectronics, pharmaceutical, food and other industries. The century-old Kelvin equation is commonly used to describe condensation phenomena and shown to hold well for liquid menisci with diameters as small as several nm. For even smaller capillaries that are involved in condensation under ambient humidity and, hence, of particular practical interest, the Kelvin equation is expected to break down, because the required confinement becomes comparable to the size of water molecules. Here we take advantage of van der Waals assembly of two-dimensional crystals to create atomic-scale capillaries and study condensation inside. Our smallest capillaries are less than 4 angstroms in height and can accommodate just a monolayer of water. Surprisingly, even at this scale, the macroscopic Kelvin equation using the characteristics of bulk water is found to describe accurately the condensation transition in strongly hydrophilic (mica) capillaries and remains qualitatively valid for weakly hydrophilic (graphene) ones. We show that this agreement is somewhat fortuitous and can be attributed to elastic deformation of capillary walls, which suppresses giant oscillatory behavior expected due to commensurability between atomic-scale confinement and water molecules. Our work provides a much-needed basis for understanding of capillary effects at the smallest possible scale important in many realistic situations.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-23T16:19:08Z</published>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <arxiv:journal_ref>Nature 588, 250 - 253 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Qian Yang</name>
+    </author>
+    <author>
+      <name>P. Z. Sun</name>
+    </author>
+    <author>
+      <name>L. Fumagalli</name>
+    </author>
+    <author>
+      <name>Y. V. Stebunov</name>
+    </author>
+    <author>
+      <name>S. J. Haigh</name>
+    </author>
+    <author>
+      <name>Z. W. Zhou</name>
+    </author>
+    <author>
+      <name>I. V. Grigorieva</name>
+    </author>
+    <author>
+      <name>F. C. Wang</name>
+    </author>
+    <author>
+      <name>A. K. Geim</name>
+    </author>
+    <arxiv:doi>10.1038/s41586-020-2978-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41586-020-2978-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.02532v4</id>
+    <title>Common behavior of the scaled condensation energy for both high-$T_c$ and conventional superconductors</title>
+    <updated>2024-04-21T21:14:57Z</updated>
+    <link href="https://arxiv.org/abs/2402.02532v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.02532v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We analyze the scaling of the condensation energy $E_Δ$ divided by $γ$, $E_Δ/γ\simeq N(0)Δ_1^2/γ$, of both conventional superconductors and unconventional high-$T_c$ one, where $N(0)$ is the density of states, $Δ_1$ is the maximum value of the superconducting gap and $γ$ is the Sommerfeld coefficient. For the first time, we show that the universal scaling of $E_Δ/γ\propto T_c^2$ applies equally to conventional superconductors and unconventional high-$T_c$ ones. Our consideration is based on both facts: Bogoliubov quasiparticles act in conventional and unconventional superconductors, and the corresponding flat band is deformed by the unconventional superconducting state. As a result, our theoretical observations based on the fermion condensation theory are in good agreement with experimental facts.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-04T15:27:33Z</published>
+    <arxiv:comment>7 pages, 3 figures. arXiv admin note: substantial text overlap with arXiv:cond-mat/0305092</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Crystals 14(9), 826 (2024)</arxiv:journal_ref>
+    <author>
+      <name>V. R. Shaginyan</name>
+    </author>
+    <author>
+      <name>A. Z. Msezane</name>
+    </author>
+    <author>
+      <name>S. A. Artamonov</name>
+    </author>
+    <arxiv:doi>10.3390/cryst14090826</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3390/cryst14090826" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.09457v2</id>
+    <title>Scaling theory for the collapse of a trapped Bose gas in a synthetic magnetic field: a critical study at the condensation point</title>
+    <updated>2025-04-17T11:46:08Z</updated>
+    <link href="https://arxiv.org/abs/2411.09457v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.09457v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We have analytically explored both the zero temperature and the finite temperature scaling theory for the collapse of an attractively interacting 3-D harmonically trapped Bose gas in a synthetic magnetic field. We have considered short-ranged (contact) attractive inter-particle interactions and Hartree-Fock approximation for the same. We have separately studied the collapse of both the condensate and the thermal cloud below and above the condensation point, respectively. We have obtained an anisotropy, artificial magnetic field, and temperature-dependent critical number of particles for the collapse of the condensate. We have found a dramatic change in the critical exponent (from $α=1$ to $0$) of the specific heat ($C_v\propto|T-T_c|^α$) when the thermal cloud is about to collapse with the critical number of particles ($N=N_c$) just below and above the condensation point. All the results obtained by us below and around the condensation point are experimentally testable within the present-day experimental set-up for the ultracold systems in the magneto-optical traps.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-14T14:06:36Z</published>
+    <arxiv:comment>12 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>J. Stat. Mech. (2025) 043101</arxiv:journal_ref>
+    <author>
+      <name>Bikram Keshari Behera</name>
+    </author>
+    <author>
+      <name>Shyamal Biswas</name>
+    </author>
+    <arxiv:doi>10.1088/1742-5468/adc711</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1742-5468/adc711" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.21197v2</id>
+    <title>A Large-Scale Study on Video Action Dataset Condensation</title>
+    <updated>2025-03-12T03:28:28Z</updated>
+    <link href="https://arxiv.org/abs/2412.21197v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.21197v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, dataset condensation has made significant progress in the image domain. Unlike images, videos possess an additional temporal dimension, which harbors considerable redundant information, making condensation even more crucial. However, video dataset condensation still remains an underexplored area. We aim to bridge this gap by providing a large-scale study with systematic design and fair comparison. Specifically, our work delves into three key aspects to provide valuable empirical insights: (1) temporal processing of video data, (2) the evaluation protocol for video dataset condensation, and (3) adaptation of condensation algorithms to the space-time domain. From this study, we derive several intriguing observations: (i) labeling methods greatly influence condensation performance, (ii) simple sliding-window sampling is effective for temporal processing, and (iii) dataset distillation methods perform better in challenging scenarios, while sample selection methods excel in easier ones. Furthermore, we propose a unified evaluation protocol for the fair comparison of different condensation algorithms and achieve state-of-the-art results on four widely-used action recognition datasets: HMDB51, UCF101, SSv2 and K400. Our code is available at https://github.com/MCG-NJU/Video-DC.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-30T18:58:29Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yang Chen</name>
+    </author>
+    <author>
+      <name>Sheng Guo</name>
+    </author>
+    <author>
+      <name>Bo Zheng</name>
+    </author>
+    <author>
+      <name>Limin Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/9702214v1</id>
+    <title>The Physical Origin of Galaxy Scaling Relations</title>
+    <updated>1997-02-25T13:39:20Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/9702214v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/9702214v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  A standard paradigm is now available for the recent evolution (z &lt; 10) of structure on galactic and larger scales. Most of the matter is assumed to be dark and dissipationless and to cluster hierarchically from gaussian initial conditions. Gas moves under the gravitational influence of this dark matter, settling dissipatively at the centres of dark halos to form galaxies. The evolution of the dark matter component has been studied extensively by N-body simulations. The abundances, density profiles, shape and angular momentum distributions and the formation histories of the dark halo population can all be predicted reliably for any hierarchical cosmogony. The systematic variation of these properties with halo mass can produce scaling relations in the galaxy population. Simple hypotheses for how galaxies condense within dark halos lead to characteristic luminosities, sizes, and spins which are close to those of real spiral and elliptical galaxies. Furthermore, correlations similar to the Tully-Fisher, Faber-Jackson and luminosity-metallicity relations arise quite naturally. A quantitative explanation of the fundamental plane of elliptical galaxies appears within reach.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1997-02-25T13:39:20Z</published>
+    <arxiv:comment>12 pages. Invited review for the 3rd ESO-VLT Workshop "Galaxy Scaling Relations: Origins, Evolution and Applications", Garching, 18-20 November 1996</arxiv:comment>
+    <arxiv:primary_category term="astro-ph"/>
+    <author>
+      <name>Simon D. M. White</name>
+      <arxiv:affiliation>MPA, Garching</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.05971v2</id>
+    <title>Genesis of electroweak and dark matter scales from a bilinear scalar condensate</title>
+    <updated>2016-03-30T07:47:09Z</updated>
+    <link href="https://arxiv.org/abs/1505.05971v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.05971v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The condensation of scalar bilinear in a classically scale invariant strongly interacting hidden sector is used to generate the electroweak scale, where the excitation of the condensate is identified as dark matter. We formulate an effective theory for the condensation of the scalar bilinear and find in the self-consistent mean field approximation that the dark matter mass is of $O(1)$ TeV with the spin-independent elastic cross section off the nucleon slightly below the LUX upper bound.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-05-22T07:18:31Z</published>
+    <arxiv:comment>12 pages, 2 figures, published version</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <arxiv:journal_ref>Phys. Rev. D 93, 075016 (2016)</arxiv:journal_ref>
+    <author>
+      <name>Jisuke Kubo</name>
+    </author>
+    <author>
+      <name>Masatoshi Yamada</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.93.075016</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.93.075016" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.06711v2</id>
+    <title>Large-scale homogeneity and isotropy versus fine-scale condensation. A model based on Muckenhoupt type densities</title>
+    <updated>2023-04-09T23:03:39Z</updated>
+    <link href="https://arxiv.org/abs/2303.06711v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.06711v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this brief note we aim to provide, through a well known class of singular densities in harmonic analysis, a simple approach to the fact that the homogeneity of the universe on scales of the order of a hundred millions light years is completely compatible with the fine-scale condensation of matter and energy. We give precise and quantitative definitions of homogeneity and isotropy on large scales. Then we show that Muckenhoupt densities have the ingredients required to a model for the large-scale homogeneity and the fine-scale condensation of the universe. In particular, these densities can take locally infinitely large values (black holes) and at once, in the large scales they are independent of the location. We also show some locally singular densities satisfying the large scale isotropy property.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-12T17:23:37Z</published>
+    <arxiv:comment>9 pages, 1 figure. We add a comment on page 5 and two references. The article has been accepted for publication in the Revista de la Union Matematica Argentina</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Hugo Aimar</name>
+    </author>
+    <author>
+      <name>Federico Morana</name>
+    </author>
+    <arxiv:doi>10.33044/revuma.3670</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.33044/revuma.3670" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/0106236v1</id>
+    <title>Large-Scale Structure from Spatial Condensation and Reproducing Dark Mass</title>
+    <updated>2001-06-13T13:15:35Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/0106236v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/0106236v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Accounting for large-scale structure in our universe will require not only reasonably accurate mathematical models of its cosmogony, topology and cosmology, but also a more deeper understanding of our fundamental physical concepts of space, time and energy. The foundations for a new "Spatial Condensation (SC-)" cosmological model for our closed 3-D universe has already been presented and this paper will explore the new and different predictions for the evolution of its large-scale structure. Accounting begins with a spatial condensation solution of the "cosmological constant" problem for the infamous 10^120 factor for vacuum energy. The newly derived "expansion forces" demark that distance where gravity gives way to the Hubble flow and decelerates peculiar velocities towards "rest" in the comoving reference frame. The postulated new dark mass, that scales differently than matter with the expansion, provides the seeds for the condensation of matter and the formation of black holes even before the decoupling of matter and radiation. Graphics of the predicted size of large-scale structures are presented versus astronomical measurements.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2001-06-13T13:15:35Z</published>
+    <arxiv:comment>19 pages, 8 figures, PDF, Submitted to AJ</arxiv:comment>
+    <arxiv:primary_category term="astro-ph"/>
+    <author>
+      <name>Charles B. Leffert</name>
+      <arxiv:affiliation>Wayne State University</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0809.1658v3</id>
+    <title>The Planck Scale from Top Condensation</title>
+    <updated>2010-03-02T16:36:51Z</updated>
+    <link href="https://arxiv.org/abs/0809.1658v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0809.1658v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We propose a scenario in which the Planck scale is dynamically linked to the electroweak scale induced by top condensation. The standard model field content, without the Higgs, is promoted to a 5D warped background. There is also an additional 5D fermion with the quantum numbers of the right-handed top. Localization of the zero-modes leads, at low energies, to a Nambu-Jona-Lasinio model that also stabilizes the radion field dynamically thus explaining the hierarchy between the Planck scale and v_EW = 174 GeV. The top mass arises dynamically from the electroweak breaking condensate. The other standard model fermion masses arise naturally from higher-dimension operators, and the fermion mass hierarchies and flavor structure can be explained from the localization of the zero-modes in the extra dimension. If any other contributions to the radion potential except those directly related with electroweak symmetry breaking are engineered to be suppressed, the KK scale is predicted to be about two orders of magnitude above the electroweak scale rendering the model easily consistent with electroweak precision data. The model predicts a heavy (composite) Higgs with a mass of about 500 GeV and standard-model-like properties, and a vector-like quark with non-negligible mixing with the top quark and mass in the 1.6 - 2.9 TeV range. Both can be within the reach of the LHC. It also predicts a radion with a mass of a few GeV that is very weakly coupled to standard model matter.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-09-10T17:48:20Z</published>
+    <arxiv:comment>41 pages, 7 figures; added references, minor changes in the electroweak precision constraints section; final version in PRD</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <arxiv:journal_ref>Phys.Rev.D81:065004,2010</arxiv:journal_ref>
+    <author>
+      <name>Yang Bai</name>
+    </author>
+    <author>
+      <name>Marcela Carena</name>
+    </author>
+    <author>
+      <name>Eduardo Ponton</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.81.065004</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.81.065004" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.06547v2</id>
+    <title>Chiral--Maxwell Cavity EFT: Reduced Gauge-Mode Condensation and Quantum-Optics Limits</title>
+    <updated>2026-09-11T16:56:19Z</updated>
+    <link href="https://arxiv.org/abs/2603.06547v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.06547v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a finite-volume Chiral--Maxwell effective field theory in which a topologically nontrivial hadronic sector acts as a nonlinear medium for a reduced cavity gauge mode. Starting from the SU(2) nonlinear sigma model minimally coupled to Maxwell theory, we construct an equivariant low-mode sector that retains the topological charge structure while projecting the dynamics onto an effective 1+1 theory. Both mass-like scales in the reduced action are finite-volume kinematic gaps---arising from transverse winding energy and holonomy curvature, respectively---with no explicit symmetry breaking, in direct analogy with the Hosotani mechanism on compact cycles. Both gaps vanish in the infinite-volume limit, consistently with massless photons and pions in bulk ChPT. In one hierarchy, Coleman duality yields a gauge-invariant one-loop effective potential for the reduced gauge coordinate; we identify its domain of validity and establish that the locally stable nontrivial branch satisfies the EFT hierarchy condition. In the complementary hierarchy, integrating out the gauge mode produces a one-loop deformed sine-Gordon EFT for the chiral sector with a closed-form kink tension correction. Upon quantization, the reduced theory maps onto nonlinear cavity Hamiltonians whose trivial and locally condensed branches obey distinct selection rules, providing experimentally accessible diagnostics.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-06T18:35:26Z</published>
+    <arxiv:comment>54 pages, 6 figures. Replaced with the version accepted in Eur. Phys. J. C: title, abstract, narrative, and references updated (reduced gauge-mode condensation). DOI: 10.1140/epjc/s10052-026-16250-6</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Fabrizio Canfora</name>
+    </author>
+    <author>
+      <name>Mauricio Ipinza</name>
+    </author>
+    <author>
+      <name>Simón Riquelme</name>
+    </author>
+    <arxiv:doi>10.1140/epjc/s10052-026-16250-6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1140/epjc/s10052-026-16250-6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.17602v1</id>
+    <title>KPZ scaling in one-dimensional arrays of photon condensates</title>
+    <updated>2026-08-18T10:08:33Z</updated>
+    <link href="https://arxiv.org/abs/2608.17602v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.17602v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Bose-Einstein condensates of photons in dye filled microcavities are known to feature many properties of the ideal bose gas at thermal equilibrium. Nevertheless, the finite photon life time renders them driven dissipative systems where losses are balanced by continuous driving by a pump laser. We show here with simulations based on a classical field model that their driven-dissipative nature causes their first order coherence to feature Kardar-Parisi-Zhang (KPZ) scaling, a phenomenon well known in the related condensates of exciton-polaritons. Remarkably, we find that the KPZ scaling even occurs in a regime with large density fluctuations. We discuss the modification of the scaling by the occupation of excited states and how to recover the universal scaling behavior by spectral filtering.</summary>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T10:08:33Z</published>
+    <arxiv:primary_category term="cond-mat.quant-gas"/>
+    <author>
+      <name>Michiel Yzewyn</name>
+    </author>
+    <author>
+      <name>Michiel Wouters</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1412.5579v3</id>
+    <title>Scaling properties of one-dimensional driven-dissipative condensates</title>
+    <updated>2015-10-19T15:33:27Z</updated>
+    <link href="https://arxiv.org/abs/1412.5579v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1412.5579v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We numerically investigate the scaling properties of a one-dimensional driven-dissipative condensate described by a stochastic complex Ginzburg-Landau equation (SCGLE). We directly extract the static and dynamical scaling exponents from the dynamics of the condensate's phase field, and find that both coincide with the ones of the one-dimensional Kardar-Parisi-Zhang (KPZ) equation. We furthermore calculate the spatial and the temporal two-point correlation functions of the condensate field itself. The decay of the temporal two-point correlator assumes a stretched-exponential form, providing further quantitative evidence for an effective KPZ description. Moreover, we confirm the observability of this non-equilibrium scaling for typical current experimental setups with exciton-polariton systems, if cavities with a reduced $Q$ factor are used.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-12-17T20:58:48Z</published>
+    <arxiv:comment>7 pages</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Phys. Rev. B 92, 155307 (2015)</arxiv:journal_ref>
+    <author>
+      <name>Liang He</name>
+    </author>
+    <author>
+      <name>Lukas M. Sieberer</name>
+    </author>
+    <author>
+      <name>Ehud Altman</name>
+    </author>
+    <author>
+      <name>Sebastian Diehl</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.92.155307</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.92.155307" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1302.3304v2</id>
+    <title>Kibble-Zurek scaling and its breakdown for spontaneous generation of Josephson vortices in Bose-Einstein condensates</title>
+    <updated>2013-05-03T02:45:56Z</updated>
+    <link href="https://arxiv.org/abs/1302.3304v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1302.3304v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Atomic Bose-Einstein condensates confined to a dual-ring trap support Josephson vortices as topologically stable defects in the relative phase. We propose a test of the scaling laws for defect formation by quenching a Bose gas to degeneracy in this geometry. Stochastic Gross-Pitaevskii simulations reveal a -1/4 power-law scaling of defect number with quench time for fast quenches, consistent with the Kibble-Zurek mechanism. Slow quenches show stronger quench-time dependence that is explained by the stability properties of Josephson vortices, revealing the boundary of the Kibble-Zurek regime. Interference of the two atomic fields enables clear long-time measurement of stable defects, and a direct test of the Kibble-Zurek mechanism in Bose-Einstein condensation.</summary>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-02-14T04:06:41Z</published>
+    <arxiv:comment>5 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.quant-gas"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 110, 215302 (2013)</arxiv:journal_ref>
+    <author>
+      <name>Shih-Wei Su</name>
+    </author>
+    <author>
+      <name>Shih-Chuan Gou</name>
+    </author>
+    <author>
+      <name>Ashton Bradley</name>
+    </author>
+    <author>
+      <name>Oleksandr Fialko</name>
+    </author>
+    <author>
+      <name>Joachim Brand</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.110.215302</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.110.215302" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0402089v2</id>
+    <title>Complex scaling approach to the decay of Bose-Einstein condensates</title>
+    <updated>2006-01-18T17:42:58Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0402089v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0402089v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The mean-field dynamics of a Bose-Einstein condensate is studied in presence of a microscopic trapping potential from which the condensate can escape via tunneling through finite barriers. We show that the method of complex scaling can be used to obtain a quantitative description of this decay process. A real-time propagation approach that is applied to the complex-scaled Gross-Pitaevskii equation allows us to calculate the chemical potentials and lifetimes of the metastably trapped Bose-Einstein condensate. The method is applied to a one-dimensional harmonic confinement potential combined with a Gaussian envelope, for which we compute the lowest symmetric and antisymmetric quasibound states of the condensate. A comparison with alternative approaches using absorbing boundary conditions as well as complex absorbing potentials shows good agreement.</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-02-03T15:24:49Z</published>
+    <arxiv:comment>10 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <author>
+      <name>Peter Schlagheck</name>
+    </author>
+    <author>
+      <name>Tobias Paul</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevA.73.023619</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevA.73.023619" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/hep-th/9908147v2</id>
+    <title>Scales of Gaugino Condensation and Supersymmetry Breaking in Nonstandard M-Theory Embeddings</title>
+    <updated>1999-08-31T17:14:57Z</updated>
+    <link href="https://arxiv.org/abs/hep-th/9908147v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/hep-th/9908147v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We investigate the formation of dynamical gaugino condensates and supersymmetry breaking in the compactifications of Horava-Witten theory with perturbative nonstandard embeddings. Specific models are considered where the underlying massless charged states of the condensing sector are determined by the spectra of $Z_2 \times Z_2 $ and $Z_4 $ orbifolds with nonstandard embeddings. We find among them viable examples where gaugino condensation is triggered on the wall with the weakest gauge coupling at $M_{GUT} $. In all these cases the magnitude of the condensate formed is below the energy scales at which extra dimensions are resolved, and so justifies the analysis of condensation in an effective 4-dimensional framework. We make some comments concerning the size of the largest extra dimension in the models considered. We discuss racetrack scenarios in the framework of perturbative nonstandard embeddings.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1999-08-21T18:37:22Z</published>
+    <arxiv:comment>28 pages, 7 figures, Latex file; typos corrected</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <arxiv:journal_ref>Nucl.Phys. B575 (2000) 151-176</arxiv:journal_ref>
+    <author>
+      <name>Zygmunt Lalak</name>
+    </author>
+    <author>
+      <name>Steven Thomas</name>
+    </author>
+    <arxiv:doi>10.1016/S0550-3213(00)00083-3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/S0550-3213(00)00083-3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2001.05796v1</id>
+    <title>Slow-to-Start Traffic Model: Condensation, Saturation and Scaling Limits</title>
+    <updated>2020-01-16T13:43:19Z</updated>
+    <link href="https://arxiv.org/abs/2001.05796v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2001.05796v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider a one-dimensional traffic model with a slow-to-start rule. The initial position of the cars in $\mathbb R$ is a Poisson process of parameter $λ$. Cars have speed 0 or 1 and travel in the same direction. At time zero the speed of all cars is 0; each car waits an exponential time to switch speed from $0$ to $1$ and stops when it collides with a stopped car. When the car is no longer blocked, it waits a new exponential time to assume speed one, and so on. We study the emergence of condensation for the saturated regime $λ&gt;1$ and the critical regime $λ=1$, showing that in both regimes all cars collide infinitely often and each car has asymptotic mean velocity $1/λ$. In the saturated regime the moving cars form a point process whose intensity tends to 1. The remaining cars condensate in a set of points whose intensity tends to zero as $1/\sqrt t$. We study the scaling limit of the traffic jam evolution in terms of a collection of coalescing Brownian motions.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-01-16T13:43:19Z</published>
+    <arxiv:comment>24 pages, 12 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Pablo A. Ferrari</name>
+    </author>
+    <author>
+      <name>Leonardo T. Rolla</name>
+    </author>
+    <arxiv:doi>10.1007/s10955-020-02555-7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10955-020-02555-7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1204.4670v3</id>
+    <title>Planck-scale effects on Bose-Einstein condensates</title>
+    <updated>2012-06-20T14:07:04Z</updated>
+    <link href="https://arxiv.org/abs/1204.4670v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1204.4670v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The effects of a Planck-scale deformation of the Minkowski energy-momentum dispersion relation on the phenomenology of non-trapped Bose-Einstein condensates (BECs) are examined. Such a deformation is shown to cause a shift in the condensation temperature $T_{c}$ of the BEC and, for a specific functional form of deformation, this shift can be as large as the current measured precision on $T_{c}$. For a $_{37}^{85}Rb$ cold-atom BEC with a particle density $n\simeq 10^{12}cm^{-3}$ we find a fractional shift of order $10^{-4}$, but this can be much larger for even more dilute BECs. We discuss the possibility of planning specific experiments with BECs that might provide phenomenological constraints on Planck-scale physics. These corrections to $T_{c}$ are found to be extremely small for ultrarelativistic BECs implying that, in some cases, Planck-scale effects may be more important in low- rather than high-energy processes.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-04-20T16:29:53Z</published>
+    <arxiv:comment>5 pages, some references added, version published in EPL</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <arxiv:journal_ref>EPL 98 (2012) 60001</arxiv:journal_ref>
+    <author>
+      <name>F. Briscese</name>
+    </author>
+    <author>
+      <name>M. Grether</name>
+    </author>
+    <author>
+      <name>M. de Llano</name>
+    </author>
+    <arxiv:doi>10.1209/0295-5075/98/60001</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1209/0295-5075/98/60001" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/physics/0403125v1</id>
+    <title>Scaling theory of excitations in trapped fermionic condensates</title>
+    <updated>2004-03-26T00:15:44Z</updated>
+    <link href="https://arxiv.org/abs/physics/0403125v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/physics/0403125v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Formulas are derived for the coupled quadrupolar and monopolar oscillations of a fermion condensate trapped in a axially symmetric harmonic potential. We consider two-component condensates with a large particle-particle scattering length and in the limits of frequencies either small (adiabatic) or large (diabatic) compared to the pairing gap. Using the method of coordinate scaling, we reproduce Stringari's results for adiabatic excitations and present new results for the diabatic limit. Unlike the adiabatic oscillations, the diabatic ones show sensitivity to the interaction between particles.</summary>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-03-26T00:15:44Z</published>
+    <arxiv:comment>4 pages and no figures</arxiv:comment>
+    <arxiv:primary_category term="physics.atom-ph"/>
+    <author>
+      <name>G. F. Bertsch</name>
+    </author>
+    <author>
+      <name>A. Bulgac</name>
+    </author>
+    <author>
+      <name>R. A. Broglia</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.13092v3</id>
+    <title>Squeeze, Recover and Relabel: Dataset Condensation at ImageNet Scale From A New Perspective</title>
+    <updated>2024-02-11T20:34:51Z</updated>
+    <link href="https://arxiv.org/abs/2306.13092v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.13092v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a new dataset condensation framework termed Squeeze, Recover and Relabel (SRe$^2$L) that decouples the bilevel optimization of model and synthetic data during training, to handle varying scales of datasets, model architectures and image resolutions for efficient dataset condensation. The proposed method demonstrates flexibility across diverse dataset scales and exhibits multiple advantages in terms of arbitrary resolutions of synthesized images, low training cost and memory consumption with high-resolution synthesis, and the ability to scale up to arbitrary evaluation network architectures. Extensive experiments are conducted on Tiny-ImageNet and full ImageNet-1K datasets. Under 50 IPC, our approach achieves the highest 42.5% and 60.8% validation accuracy on Tiny-ImageNet and ImageNet-1K, outperforming all previous state-of-the-art methods by margins of 14.5% and 32.9%, respectively. Our approach also surpasses MTT in terms of speed by approximately 52$\times$ (ConvNet-4) and 16$\times$ (ResNet-18) faster with less memory consumption of 11.6$\times$ and 6.4$\times$ during data synthesis. Our code and condensed datasets of 50, 200 IPC with 4K recovery budget are available at https://github.com/VILA-Lab/SRe2L.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-22T17:59:58Z</published>
+    <arxiv:comment>NeurIPS 2023 spotlight. Code at https://github.com/VILA-Lab/SRe2L</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Zeyuan Yin</name>
+    </author>
+    <author>
+      <name>Eric Xing</name>
+    </author>
+    <author>
+      <name>Zhiqiang Shen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.16561v3</id>
+    <title>Quantum Scaling Dimension from the Equivalence principle</title>
+    <updated>2024-07-27T11:38:56Z</updated>
+    <link href="https://arxiv.org/abs/2312.16561v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.16561v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a method to constrain the scaling dimension of the operators of the strongly interacting systems (SIS) using the holographic setup. %where the (d+1)-dimensional black hole is used to describe the d-dimensional SIS.
+  We demonstrate our method using the holographic superconductor theory. The idea is to consider the inside as well as the outside of the AdS black hole in which the gap equations has higher order singularities. Then the equivalence principle requests the solution be smoothly connected at the horizon, which request the vanishing of log divergent term as well as an indefinite conditionally convergent terms that can lead to any real number according to Riemann.
+  As a result, one gets quantized values of the scaling dimension of the condensing operator. This is a pleasant surprise because so far one gets the constraints on the scaling dimension only by a hard analysis with bootstrap ansatz.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-27T12:57:36Z</published>
+    <arxiv:comment>21 pages. We revise a paper and add one author. We apply the general coordinate system for inside solution such as (1) ordinary point centered coordinate (2) horizon centered coordinate (3) singularity centered coordinate. And we show that scaling dimension is still quantized and its value is invariant to coordinate transformations</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Yoon-Seok Choun</name>
+    </author>
+    <author>
+      <name>Ki-Seok Kim</name>
+    </author>
+    <author>
+      <name>Sang-Jin Sin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0711.2496v1</id>
+    <title>The two flavour Schwinger model: scaling of the scalar condensate</title>
+    <updated>2007-11-15T19:48:33Z</updated>
+    <link href="https://arxiv.org/abs/0711.2496v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0711.2496v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We investigate the continuum limit scaling of the scalar condensate in the $N_f=2$ Schwinger model on the lattice. We employ maximally twisted mass Wilson fermions and overlap fermions. We compute the scalar condensate by taking the trace of the propagator (direct method) and by utilizing the integrated Ward-Takahashi identity. While the scalar condensate comes out consistent using these two methods for a given kind of lattice fermions, we find --quite surprisingly-- large discrepancies for the scalar condensate between twisted mass and overlap fermions. These discrepancies are only resolved when using the point split current for twisted mass fermions.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-11-15T19:48:33Z</published>
+    <arxiv:comment>7 pages, 5 figures, contribution to Lattice 2007, Regensburg, Germany, 30 July - 4 August 2007</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>PoS LAT2007:270,2007</arxiv:journal_ref>
+    <author>
+      <name>Kei-ichi Nagai</name>
+    </author>
+    <author>
+      <name>Nils Christian</name>
+    </author>
+    <author>
+      <name>Karl Jansen</name>
+    </author>
+    <author>
+      <name>Beatrix Pollakowski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1711.08355v1</id>
+    <title>The shape of the emerging condensate in effective models of condensation</title>
+    <updated>2017-11-22T15:55:46Z</updated>
+    <link href="https://arxiv.org/abs/1711.08355v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1711.08355v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider effective models of condensation where the condensation occurs as time t goes to infinity. We provide natural conditions under which the build-up of the condensate occurs on a spatial scale of 1/t and has the universal form of a Gamma density. The exponential parameter of this density is determined only by the equation and the total mass of the condensate, while the power law parameter may in addition depend on the decay properties of the initial condition near the condensation point. We apply our results to some examples, including simple models of Bose-Einstein condensation.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-11-22T15:55:46Z</published>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Volker Betz</name>
+    </author>
+    <author>
+      <name>Steffen Dereich</name>
+    </author>
+    <author>
+      <name>Peter Mörters</name>
+    </author>
+    <arxiv:doi>10.1007/s00023-018-0673-7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00023-018-0673-7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1506.01641v1</id>
+    <title>Numerical survey of the tunable condensate shape and scaling laws in pair-factorized steady states</title>
+    <updated>2015-06-04T16:30:41Z</updated>
+    <link href="https://arxiv.org/abs/1506.01641v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1506.01641v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We numerically survey predictions on the shapes and scaling laws of particle condensates that emerge as a result of spontaneous symmetry breaking in pair- factorized steady states of a stochastic transport process. The specific model consists of indistinguishable particles that stochastically hop between sites controlled by a tunable potential. We identify the different condensate shapes within their respective parameter regimes as well as determine precisely the condensate width scaling.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-06-04T16:30:41Z</published>
+    <arxiv:comment>17 pages, 12 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>J. Phys. A: Math. Theor. 47 (2014) 125001</arxiv:journal_ref>
+    <author>
+      <name>Eugen Ehrenpreis</name>
+    </author>
+    <author>
+      <name>Hannes Nagel</name>
+    </author>
+    <author>
+      <name>Wolfhard Janke</name>
+    </author>
+    <arxiv:doi>10.1088/1751-8113/47/12/125001</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1751-8113/47/12/125001" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/hep-lat/9909009v1</id>
+    <title>Finite-Volume Scaling of the Quenched Chiral Condensate</title>
+    <updated>1999-09-02T07:30:06Z</updated>
+    <link href="https://arxiv.org/abs/hep-lat/9909009v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/hep-lat/9909009v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In the large-volume limit $V\to\infty$ with $V &lt;&lt; 1/m_π^4$ the mass-dependent chiral condensate is predicted to satisfy exact finite-volume scaling laws that fall into three major universality classes. We test these analytical predictions with staggered fermions and overlap fermions in gauge field sectors of fixed topological charge $ν$.</summary>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1999-09-02T07:30:06Z</published>
+    <arxiv:comment>Talk at Lattice99(topology), 3 pages</arxiv:comment>
+    <arxiv:primary_category term="hep-lat"/>
+    <arxiv:journal_ref>Nucl.Phys.Proc.Suppl. 83 (2000) 434-436</arxiv:journal_ref>
+    <author>
+      <name>P. H. Damgaard</name>
+    </author>
+    <author>
+      <name>R. G. Edwards</name>
+    </author>
+    <author>
+      <name>U. M. Heller</name>
+    </author>
+    <author>
+      <name>R. Narayanan</name>
+    </author>
+    <arxiv:doi>10.1016/S0920-5632(00)91697-9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/S0920-5632(00)91697-9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1801.00805v1</id>
+    <title>From particle condensation to polymer aggregation</title>
+    <updated>2018-01-02T19:17:50Z</updated>
+    <link href="https://arxiv.org/abs/1801.00805v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1801.00805v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We draw an analogy between droplet formation in dilute particle and polymer systems. Our arguments are based on finite-size scaling results from studies of a two-dimensional lattice gas to three-dimensional bead-spring polymers. To set the results in perspective, we compare with in part rigorous theoretical scaling laws for canonical condensation in a supersaturated gas at fixed temperature, and derive corresponding scaling predictions for an undercooled gas at fixed density. The latter allows one to efficiently employ parallel multicanonical simulations and to reach previously not accessible scaling regimes. While the asymptotic scaling can not be observed for the comparably small polymer system sizes, they demonstrate an intermediate scaling regime also observable for particle condensation. Altogether, our extensive results from computer simulations provide clear evidence for the close analogy between particle condensation and polymer aggregation in dilute systems.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-01-02T19:17:50Z</published>
+    <arxiv:comment>10 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Wolfhard Janke</name>
+    </author>
+    <author>
+      <name>Johannes Zierenberg</name>
+    </author>
+    <arxiv:doi>10.1088/1742-6596/955/1/012003</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1742-6596/955/1/012003" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0701437v1</id>
+    <title>On the theory of Bose-Einstein condensation of quasiparticles: on the possibility of condensation of magnons at high temperatures</title>
+    <updated>2007-01-18T09:28:13Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0701437v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0701437v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Bose condensation of quasiparticles in physical systems of finite size iz considered for the case of ferromagnetic thin films. It is shown that in accordance with present-day experimental capabilities which permit one to achieve densities of long-wave spin excitation of 1018-1019 cm-3, in such films the formation of condensate of such quasiparticles begins at temperatures T~100 K (room one including). It is found that Bose condensation is accompanied by scaling phenomenon according to which the main thermodynamic variable is not the number N of particles but the ratio N/T. This indicates that condensation of magnons can be observed at relatively low magnon densities. The roles played by the shape of the spectrum and film thickness are analyzed.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-01-18T09:28:13Z</published>
+    <arxiv:comment>28 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Low Temp. Phys. v.33, No 1 (January) (2007)</arxiv:journal_ref>
+    <author>
+      <name>A. I. Bugrij</name>
+    </author>
+    <author>
+      <name>V. M. Loktev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/hep-ph/9509369v2</id>
+    <title>Universal scaling of the valence quark mass dependence of the chiral condensate</title>
+    <updated>1995-09-26T20:03:26Z</updated>
+    <link href="https://arxiv.org/abs/hep-ph/9509369v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/hep-ph/9509369v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Recently, the Columbia group obtained the valence quark mass dependence of the chiral condensate for lattice QCD simulations with dynamical fermions for a series of couplings close to the critical temperature. In this letter we show that the data for temperatures below $T_c$ and sufficiently small valence quark masses can be rescaled to fall on a universal curve. Using chiral random matrix theory we obtain an exact analytical expression for the shape of this curve. We also discuss the universal scaling behavior of the mass dependence of the mass derivatives of the chiral condensate (scalar susceptibilities).</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1995-09-22T19:44:53Z</published>
+    <arxiv:comment>Replaced the figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <arxiv:journal_ref>Phys.Lett. B368 (1996) 137-142</arxiv:journal_ref>
+    <author>
+      <name>J. J. M. Verbaarschot</name>
+      <arxiv:affiliation>SUNY Stony Brook, NY</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1016/0370-2693(95)01492-6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/0370-2693(95)01492-6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.14951v2</id>
+    <title>Simple Graph Condensation</title>
+    <updated>2024-07-18T03:34:50Z</updated>
+    <link href="https://arxiv.org/abs/2403.14951v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.14951v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The burdensome training costs on large-scale graphs have aroused significant interest in graph condensation, which involves tuning Graph Neural Networks (GNNs) on a small condensed graph for use on the large-scale original graph. Existing methods primarily focus on aligning key metrics between the condensed and original graphs, such as gradients, output distribution and trajectories of GNNs, yielding satisfactory performance on downstream tasks. However, these complex metrics necessitate intricate external parameters and can potentially disrupt the optimization process of the condensation graph, making the condensation process highly demanding and unstable. Motivated by the recent success of simplified models across various domains, we propose a simplified approach to metric alignment in graph condensation, aiming to reduce unnecessary complexity inherited from intricate metrics. We introduce the Simple Graph Condensation (SimGC) framework, which aligns the condensed graph with the original graph from the input layer to the prediction layer, guided by a pre-trained Simple Graph Convolution (SGC) model on the original graph. Importantly, SimGC eliminates external parameters and exclusively retains the target condensed graph during the condensation process. This straightforward yet effective strategy achieves a significant speedup of up to 10 times compared to existing graph condensation methods while performing on par with state-of-the-art baselines. Comprehensive experiments conducted on seven benchmark datasets demonstrate the effectiveness of SimGC in prediction accuracy, condensation time, and generalization capability. Our code is available at https://github.com/BangHonor/SimGC.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-22T05:04:48Z</published>
+    <arxiv:comment>ECML-PKDD 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zhenbang Xiao</name>
+    </author>
+    <author>
+      <name>Yu Wang</name>
+    </author>
+    <author>
+      <name>Shunyu Liu</name>
+    </author>
+    <author>
+      <name>Huiqiong Wang</name>
+    </author>
+    <author>
+      <name>Mingli Song</name>
+    </author>
+    <author>
+      <name>Tongya Zheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1003.5466v1</id>
+    <title>Potential energy of atmospheric water vapor and the air motions induced by water vapor condensation on different spatial scales</title>
+    <updated>2010-03-29T09:00:00Z</updated>
+    <link href="https://arxiv.org/abs/1003.5466v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1003.5466v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Basic physical principles are considered that are responsible for the origin of dynamic air flow upon condensation of water vapor, the partial pressure of which represents a store of potential energy in the atmosphere of Earth. Quantitative characteristics of such flow are presented for  several spatial scales. It is shown that maximum condensation-induced velocities reach 160 m/s and are realized in compact circulation patterns like tornadoes.</summary>
+    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.gen-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-03-29T09:00:00Z</published>
+    <arxiv:comment>37 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.ao-ph"/>
+    <author>
+      <name>Anastassia M. Makarieva</name>
+    </author>
+    <author>
+      <name>Victor G. Gorshkov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.17411v2</id>
+    <title>Condensate Fraction Scaling and Berezinskii-Kosterlitz-Thouless Transition of Superconductivity and Superfluidity</title>
+    <updated>2026-06-29T08:36:55Z</updated>
+    <link href="https://arxiv.org/abs/2505.17411v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.17411v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Characterizing the superconducting and superfluid transitions in two-dimensional (2D) many-body systems is of broad interest and remains a fundamental issue. In this study, we establish the {\it condensate fraction} scaling as a highly efficient tool to achieve that and accordingly propose efficient schemes to accurately determine the associated Berezinskii-Kosterlitz-Thouless (BKT) transitions. Using the 2D attractive Fermi-Hubbard model as a testbed and applying numerically exact auxiliary-field quantum Monte Carlo simulations, we access unprecedented system sizes (up to $64\times 64 = 4096$ lattice sites) and perform a comprehensive analysis for the temperature dependence and finite-size scaling of {\it condensate fraction} across the BKT transition. We demonstrate that this quantity exhibits algebraic scaling below the transition and exponential scaling above it, with significantly reduced finite-size effects comparing to the extensively studied on-site pairing correlator. This greatly improves the determination of BKT transition using moderate system sizes. We also extract finite-size BKT transition temperature from condensate fraction, and confirm its logarithmic correction on system size. Based on the accurately determined transition, we reveal that the specific heat displays an anomaly, showing a peak at a temperature slightly above BKT transition. Our findings should be generally applicable to 2D fermionic and bosonic systems hosting superconductivity or superfluidity.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-23T02:54:58Z</published>
+    <arxiv:comment>5 pages, 4 figures; Supplementary Material</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Chin. Phys. Lett. 43 080703 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Yuan-Yao He</name>
+    </author>
+    <arxiv:doi>10.1088/0256-307X/43/8/080703</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0256-307X/43/8/080703" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0209647v1</id>
+    <title>Condensate density and superfluid mass density of a dilute Bose gas near the condensation transition</title>
+    <updated>2002-09-27T17:09:33Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0209647v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0209647v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We derive, through analysis of the structure of diagrammatic perturbation theory, the scaling behavior of the condensate and superfluid mass density of a dilute Bose gas just below the condensation transition. Sufficiently below the critical temperature, $T_c$, the system is governed by the mean field (Bogoliubov) description of the particle excitations. Close to $T_c$, however, mean field breaks down and the system undergoes a second order phase transition, rather than the first order transition predicted in Bogoliubov theory. Both condensation and superfluidity occur at the same critical temperature, $T_c$ and have similar scaling functions below $T_c$, but different finite size scaling at $T_c$ to leading order in the system size. Through a simple self-consistent two loop calculation we derive the critical exponent for the condensate fraction, $2β\simeq 0.66$.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2002-09-27T17:09:33Z</published>
+    <arxiv:comment>4 pages</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 90, 040402 (2003)</arxiv:journal_ref>
+    <author>
+      <name>Markus Holzmann</name>
+    </author>
+    <author>
+      <name>Gordon Baym</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.90.040402</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.90.040402" title="doi"/>
+  </entry>
+</feed>

@@ -1,0 +1,332 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\emp}{\bar\mu_N}
+\newcommand{\vol}{\operatorname{vol}}
+
+\title{The edge exponent of the uniform doubling condition\\
+and an interpolation conjecture}
+\author{Yitzchak Shmalo\\
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel\\
+\small \texttt{yitzchak.shmalo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In a sequence of companion papers we determined the critical scaling of the
+uniform doubling condition of
+[Shmalo, \emph{Ann.\ Math.\ Artif.\ Intell.} (2024)] for i.i.d.\ samples in
+two regimes: $\Theta((\log N/N)^{2/(n+1)})$ for pure slabs over smooth convex
+bodies, and $\Theta((\log N/N)^{1/n})$ in the presence of conical truncations.
+This note locates the first intermediate exponent.  For the unit ball
+truncated by a \emph{single transversal half-space} --- so that the boundary
+of the truncation region has an $(n-2)$-dimensional edge but no
+lower-dimensional strata --- we prove that with probability $1-o(1)$ the
+doubling inequality fails at every grid scale below
+$c\,(\log N/N)^{2/(n+2)}$, $n\ge3$.  The obstruction is the most isolated
+sample point of the \emph{edge caps}, whose volumes scale as
+$h^{(n+2)/2}$, intermediate between the smooth cap exponent
+$\frac{n+1}2$ and the conical exponent $n$.  A second-moment argument over
+$\asymp(N/\log N)^{(n-2)/(n+2)}$ congruent caps along the edge upgrades the
+failure probability to $1-o(1)$, with the logarithm.  We conjecture the general
+interpolation law: for truncation families whose regions have all boundary
+strata of dimension at least $j$ and transversal intersections, the critical
+exponent is $\frac{2}{2n-j}$ --- recovering
+$\frac{2}{n+1}$ for smooth boundaries ($j=n-1$), $\frac{2}{n+2}$ for edges
+($j=n-2$), and $\frac1n$ for conical points ($j=0$) --- and we explain what a
+matching upper bound requires.
+\end{abstract}
+
+\section{Setting and result}\label{sec:intro}
+
+Let $K=B^n\subset\R^n$ be the closed unit ball, $n\ge3$, $\mu$ the uniform
+probability measure on $K$, and $T=\{X_1,\dots,X_N\}$ i.i.d.\ samples with
+empirical measure $\emp$.  Truncated slabs
+$S_w=\{x:|\langle x-s,u\rangle|\le\frac w2\}\cap H$ and the uniform doubling
+condition (UDC) with constants $(\kappa,\delta,\sigma,\beta,\ell)$ are as in
+\cite{ShmaloUDC,companion2}.  The critical scaling of the smallest admissible
+scaling factor $\ell$ is known in two regimes
+\cite{companion3,companion4,companion5}: exactly
+$\Theta((\log N/N)^{2/(n+1)})$ for pure slabs ($k=0$) over bodies with a
+rolling ball, and exactly $\Theta((\log N/N)^{1/n})$ for thick conical
+truncation geometry.  Here we consider the geometrically intermediate case:
+a single half-space truncation
+\[
+H:=\{x:\ x_1\le0\},
+\qquad
+G:=K\cap H,
+\]
+whose boundary consists of two smooth $(n-1)$-dimensional pieces (a spherical
+cap and a flat disk) meeting transversally (at dihedral angle $\pi/2$) along
+the $(n-2)$-dimensional edge
+\[
+E\;:=\;\partial K\cap\partial H\;=\;\{x:\ |x|=1,\ x_1=0\}.
+\]
+The region $G$ is uniformly thick (it contains the ball
+$B(-\tfrac12e_1,\tfrac14)$), and the upper bound of \cite{companion2} applies:
+the UDC holds with probability $1-\frac1N$ at scaling
+$\ell_N=O((\log N/N)^{1/n})$.  We prove that the true critical scale for this
+single truncation is governed by a new exponent.
+
+\begin{theorem}\label{thm:main}
+Let $n\ge3$ and fix $\kappa>1$, $\sigma>0$, $\beta>0$, $\delta\ge\frac3N$.
+There are constants $\varepsilon_2(n,\kappa)>0$ and $c(n,\kappa)>0$ such that,
+with probability $1-o(1)$ as $N\to\infty$, the doubling inequality fails for
+some slab truncated by the single truncation set $\{(e_1,0)\}$ at every grid
+scale below $c\,(\log N/N)^{2/(n+2)}$.  Consequently, with probability
+$1-o(1)$, the UDC for this truncation requires
+\[
+\ell\;\ge\;c\,\Bigl(\frac{\log N}{N}\Bigr)^{2/(n+2)} .
+\]
+\end{theorem}
+
+Since $\frac{2}{n+2}>\frac1n$ would fail and indeed
+$\frac{2}{n+2}<\frac{2}{n+1}$, the bound interpolates strictly between the two
+known regimes: a single transversal truncation of a smooth body already
+destroys the smooth exponent $\frac{2}{n+1}$, but does not produce the conical
+exponent $\frac1n$ --- for that, by \cite{companion3}, genuinely conical
+(lowest-dimensional) boundary strata are needed.  We record the natural guess
+suggested by the three data points.
+
+\begin{conjecture}[Interpolation law]\label{conj:law}
+For i.i.d.\ samples with density bounded above and below on a convex body, and
+truncation families of bounded size whose nonempty regions are uniformly thick
+and have all boundary strata transversal and of dimension at least $j$, the
+critical scaling of the uniform doubling condition is
+\[
+\ell_N\;\asymp\;\Bigl(\frac{\log N}{N}\Bigr)^{2/(2n-j)} ,
+\]
+where for $j=n-1$ (smooth, rolling-ball boundary) this is the proven
+$\frac{2}{n+1}$ \cite{companion4}, for $j=n-2$ (transversal edges) it is the
+exponent $\frac{2}{n+2}$ of Theorem~\ref{thm:main}, and for $j=0$ (conical
+points) it is the proven $\frac1n$ \cite{companion3,companion5}.
+\end{conjecture}
+
+The heuristic behind the law is uniform: the critical resolution is the
+isolation depth of the most isolated extremal sample point, and a cap of depth
+$h$ at a $j$-dimensional transversal stratum has volume
+$\asymp h^{\,(2n-j)/2}$ --- each of the $n-1-j$ transverse flat directions
+contributes a factor $h$, the normal direction contributes $h$, and each of
+the $j$ curved stratum directions contributes $\sqrt h$.  Theorem
+\ref{thm:main} verifies the count for $j=n-2$:
+$h^{2}\cdot h^{(n-2)/2}=h^{(n+2)/2}$.
+
+\section{Edge caps}\label{sec:caps}
+
+Fix the angle $\varphi=\frac\pi4$ and, for a point $p\in E$, the direction
+\[
+u_p\;:=\;\tfrac1{\sqrt2}\,e_1+\tfrac1{\sqrt2}\,p .
+\]
+Note $\langle x,u_p\rangle$ is maximized over $G$ at $x=p$, with maximum
+$\tfrac1{\sqrt2}$: for $x\in G$,
+$\langle x,u_p\rangle=\tfrac1{\sqrt2}\bigl(x_1+\langle x,p\rangle\bigr)
+\le\tfrac1{\sqrt2}\bigl(0+|x|\,|p|\bigr)\le\tfrac1{\sqrt2}$,
+with equality iff $x_1=0$ and $x=p$.  Define the \emph{edge cap}
+\[
+C_p(h)\;:=\;\Bigl\{x\in G:\ \langle x,u_p\rangle\ge\tfrac1{\sqrt2}-h\Bigr\} .
+\]
+
+\begin{lemma}[Edge cap volume]\label{lem:cap}
+There are constants $0<c_8(n)\le c_9(n)$ such that for all $p\in E$ and
+$0<h\le h_0(n)$,
+\[
+c_8\,h^{\frac{n+2}2}\;\le\;\mu\bigl(C_p(h)\bigr)\;\le\;c_9\,h^{\frac{n+2}2}.
+\]
+\end{lemma}
+
+\begin{proof}
+By rotational symmetry about the $e_1$-axis we may take $p=e_2$.  Write
+$x=(x_1,x_2,x'')$ with $x''\in\R^{n-2}$, and $h':=\sqrt2\,h$.  The cap is
+\[
+C_p(h)=\Bigl\{x:\ |x|\le1,\ x_1\le0,\ x_2-|x_1|\ge1-h'\Bigr\}
+\]
+(using $x_1\le0$ to write $x_1=-|x_1|$).  On $|x|\le1$ we have
+$x_2\le\sqrt{1-x_1^2-|x''|^2}\le1-\tfrac{x_1^2+|x''|^2}2$, and
+$x_2\ge1-h'+|x_1|$ forces
+\begin{equation}\label{eq:constraints}
+|x_1|\;\le\;h',\qquad |x''|^2\;\le\;2h',\qquad
+1-h'+|x_1|\;\le\;x_2\;\le\;\sqrt{1-x_1^2-|x''|^2}.
+\end{equation}
+\emph{Upper bound:} the $x_2$-fibre has length at most
+$\bigl(1-\tfrac{x_1^2+|x''|^2}2\bigr)-(1-h'+|x_1|)\le h'$, so
+$\vol(C_p(h))\le h'\cdot(2h')\cdot\omega_{n-2}(2h')^{\frac{n-2}2}
+\le C(n)h^{\frac{n+2}2}$, where the three factors bound the
+$x_2$-, $x_1$- and $x''$-ranges.  \emph{Lower bound:} restrict to
+$|x_1|\le\frac{h'}{8}$, $|x''|^2\le\frac{h'}2$; then, for
+$h'\le h_0$ small, using $\sqrt{1-t}\ge1-t$ for $t\in[0,1]$,
+\[
+\sqrt{1-x_1^2-|x''|^2}-(1-h'+|x_1|)
+\;\ge\;h'-|x_1|-x_1^2-|x''|^2
+\;\ge\;h'-\tfrac{h'}8-\tfrac{h'}{64}-\tfrac{h'}2\;\ge\;\tfrac{h'}4,
+\]
+so the fibre length is at least $\frac{h'}4$ on a set of
+$(x_1,x'')$-measure $\frac{h'}4\cdot\omega_{n-2}(\frac{h'}2)^{\frac{n-2}2}$,
+giving $\vol(C_p(h))\ge c(n)h^{\frac{n+2}2}$.  Dividing by
+$\vol(B^n)$ gives the bounds for $\mu$.
+\end{proof}
+
+\begin{lemma}[Footprint and disjointness]\label{lem:disjoint}
+There is $c_{10}(n)$ such that
+$C_p(h)\subseteq\{x:\ |x-p|\le c_{10}\sqrt h\}$ for $h\le h_0$.  Consequently,
+if $p_1,\dots,p_M\in E$ are pairwise at distance greater than
+$2c_{10}\sqrt H$, the caps $C_{p_j}(H)$ are pairwise disjoint, and on the
+$(n-2)$-dimensional sphere $E$ one may choose
+\begin{equation}\label{eq:M}
+M\;\ge\;c_{11}(n)\,H^{-\frac{n-2}2}
+\end{equation}
+such points.
+\end{lemma}
+
+\begin{proof}
+From \eqref{eq:constraints} (with $p=e_2$): $|x_1|\le h'$,
+$|x''|\le\sqrt{2h'}$ and $1\ge x_2\ge1-h'+|x_1|\ge1-h'$, so
+$|x-e_2|^2\le h'^2+2h'+h'^2\le4h'$.  The packing bound on the
+$(n-2)$-dimensional sphere $E$ --- of dimension $n-2\ge1$ for $n\ge3$ --- is
+the standard volumetric estimate.
+\end{proof}
+
+\begin{lemma}[Stall]\label{lem:stall}
+Fix $\kappa>1$, $\sigma>0$, $\delta\ge\frac3N$, $p\in E$, and depths
+$0<h\le\frac H4$, $H\le h_0$.  Suppose exactly one sample point lies in
+$C_p(H)$ and that point, $X^*$, lies in $C_p(h)$.  Then for every
+$w\le H/\kappa$ the slab with direction $u_p$, center $X^*$, and truncation
+$\{(e_1,0)\}$ satisfies
+$\emp(S_w)=\emp(S_{\kappa w})=\frac1N<\min\{\delta,(1+\sigma)\emp(S_w)\}$;
+hence the doubling inequality fails at every scale $w\le H/\kappa$, and the
+UDC with scaling factor $\ell\le H/\kappa^2$ fails.
+\end{lemma}
+
+\begin{proof}
+For $w'\le H$:
+$S_{w'}\subseteq G\cap\{\langle x,u_p\rangle\ge\langle X^*,u_p\rangle
+-\frac{w'}2\}\subseteq C_p\bigl(h+\frac{w'}2\bigr)\subseteq C_p(H)$, since
+$h+\frac{w'}2\le\frac H4+\frac H2<H$; the rest is as in
+\cite{companion4,companion5}.
+\end{proof}
+
+\section{Proof of Theorem \ref{thm:main}}\label{sec:proof}
+
+\begin{proof}
+Set $q:=(4\kappa^2)^{\frac{n+2}2}\frac{c_9}{c_8}$,
+$\varepsilon_2:=\frac{n-2}{2(n+2)\,q}$ and $\tau_N:=\varepsilon_2\log N$.
+Define $h_N$ by $\mu(C_p(h_N))=\frac{\tau_N}N$ (the cap mass is continuous and
+strictly increasing in $h$, and independent of $p$ by symmetry); by
+Lemma~\ref{lem:cap}, $h_N\asymp(\tau_N/N)^{2/(n+2)}$.  Set
+$H_N:=4\kappa^2h_N$, so by Lemma~\ref{lem:cap},
+$\mu(C_p(H_N))\le q\,\frac{\tau_N}N$.
+
+Choose $p_1,\dots,p_M\in E$ as in Lemma~\ref{lem:disjoint} with
+$M\ge c_{11}H_N^{-\frac{n-2}2}\ge c_{12}(N/\tau_N)^{\frac{n-2}{n+2}}$, and let
+\[
+E_j:=\Bigl\{\#\bigl(T\cap C_{p_j}(H_N)\bigr)=1,\
+T\cap C_{p_j}(H_N)\subseteq C_{p_j}(h_N)\Bigr\},
+\qquad
+X:=\sum_{j\le M}\mathbf1_{E_j}.
+\]
+Exactly as in \cite{companion4}:
+\[
+p:=\PP(E_j)=N\cdot\frac{\tau_N}N\bigl(1-\mu(C_{p_j}(H_N))\bigr)^{N-1}
+\ge\tau_N\,e^{-2q\tau_N}=\tau_N\,N^{-2q\varepsilon_2}
+=\tau_N\,N^{-\frac{n-2}{n+2}},
+\]
+so $\E X=Mp\ge c_{12}\,\tau_N^{1-\frac{n-2}{n+2}}\to\infty$; replacing
+$\varepsilon_2$ by $\varepsilon_2/2$ gives the safer
+$\E X\ge c_{12}N^{\frac{n-2}{2(n+2)}}\to\infty$.  The caps being disjoint, the
+two-cap correlation ratio is
+$\exp(O(N\mu(C(H_N))^2))=\exp(O((\log N)^2/N))=1+o(1)$ as in
+\cite{companion4}, so $\PP(X=0)\le\frac1{\E X}+o(1)=o(1)$ by Chebyshev.
+With probability $1-o(1)$ some $E_j$ occurs, and Lemma~\ref{lem:stall} forces
+$\ell>H_N/\kappa^2=4h_N\ge c(n,\kappa)(\log N/N)^{2/(n+2)}$.
+\end{proof}
+
+\section{Towards the matching upper bound}\label{sec:upper}
+
+Conjecture~\ref{conj:law} predicts that for the single transversal truncation
+of Theorem~\ref{thm:main} the UDC in fact \emph{holds} with high probability at
+scaling $\ell_N=O((\log N/N)^{2/(n+2)})$.  By the proof skeleton of
+\cite{companion2,companion4}, this reduces to a deterministic geometric
+estimate: a uniform lower bound
+\[
+\vol\Bigl(G\cap\bigl\{y:\ |\langle y-x,u\rangle|\le L\bigr\}\Bigr)
+\;\ge\;c\,L^{\frac{n+2}2}
+\qquad(x\in G,\ u\in S^{n-1},\ 0<L\le L_0),
+\]
+the analogue for $G=K\cap H$ of the rolling-ball slab-volume bound of
+\cite{companion4}.  The anchor--unimodality framework of \cite{companion4}
+reduces this to lower bounds on the level-section volumes
+$A(\tau)$ of $G$ at depth $h$ below the $u$-extreme, for every direction: the
+required anchor value is $A\gtrsim h^{n/2}$ at some depth $h\le L/4$.  Three
+regimes occur: extremes on the smooth spherical part (where the rolling-ball
+sections give the stronger rate $h^{(n-1)/2}$, but the half-space may cut
+them), extremes on the flat disk (where the sections contain
+$(n-1)$-dimensional disk caps of volume $\asymp h^{n/2}$), and extremes on the
+edge (where the explicit computation of Lemma~\ref{lem:cap} gives sections of
+volume $\asymp h^{n/2}$).  A convex-segment witness from the extreme point to
+the deepest point of the cut rolling ball shows that the section's penetration
+depth into $H$ grows at least linearly in $h$, which controls the cut in the
+first regime.  Assembling these into a single uniform constant --- in
+particular through the transition directions where the extreme point migrates
+from the spherical part across the edge to the flat disk --- requires a
+careful case analysis that we have not completed, and which we leave, together
+with the general law of Conjecture~\ref{conj:law}, as the open problem of this
+note.  We emphasize that all three regime computations individually produce
+the predicted exponent $\frac{n+2}2=\frac{2n-j}2$ with $j=n-2$, in agreement
+with the stratum-counting heuristic.
+
+\subsection*{Acknowledgments}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.\ 101041711), by the Israel Science
+Foundation (grant number 2258/19) and by the Israel Science Foundation (ISF
+Grant 4101/25).
+
+\subsection*{Declaration on generative AI}
+During the preparation of this work the author used generative AI tools to
+accelerate drafting and revision.  All mathematical claims, proofs, and
+bibliographic information were subsequently reviewed and edited by the author,
+who takes full responsibility for the content of the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{ShmaloUDC}
+Y.~Shmalo,
+\emph{Stability of accuracy for the training of DNNs via the uniform doubling
+condition},
+Ann.\ Math.\ Artif.\ Intell.\ (2024), DOI 10.1007/s10472-023-09919-1.
+
+\bibitem{companion2}
+Y.~Shmalo,
+\emph{The uniform doubling condition holds with high probability for
+independent samples}, manuscript, 2026.
+
+\bibitem{companion3}
+Y.~Shmalo,
+\emph{The critical scaling of the uniform doubling condition: smooth bodies
+versus truncations}, manuscript, 2026.
+
+\bibitem{companion4}
+Y.~Shmalo,
+\emph{The logarithm is necessary: exact critical scaling of the uniform
+doubling condition on the ball}, manuscript, 2026.
+
+\bibitem{companion5}
+Y.~Shmalo,
+\emph{The exact critical scaling of the uniform doubling condition with
+truncations}, manuscript, 2026.
+
+\end{thebibliography}
+
+\end{document}

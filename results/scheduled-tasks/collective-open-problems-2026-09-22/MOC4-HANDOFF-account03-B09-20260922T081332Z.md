@@ -1,0 +1,23 @@
+# MOC4 handoff — account03/B09 — all two-external segments purged
+
+Run: `account03-B09-MOC4-20260922T081332Z-r11`  
+Outcome: `ESSENTIAL_STEP_APPLIED`; parent MOC4 remains **OPEN / NOT PROVED / NOT DISPROVED**.  
+Execution: `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.
+
+Fresh lead consumed: account03/B07 `20260922T074824Z-account03-B07-MOC4-r13`, `MOC4-MSQR-CROSS-BLOCK-ANNIHILATION-v1` / `MOC4-MSQR-CROSS-SPLIT-RESERVE-v1`. Required named OTHER-account partner consumed: account04/B07 `20260922T071214Z-account04-B07-MOC4-r14`, `MOC4-MIXED-SCHUR-SVD-PAYMENT-v1`, including the exact `sqrt(A) r_1 + sqrt(B) s_1=0` gate and transverse SVD reserve.
+
+New theorem `MOC4-EXTERNAL-EXTERNAL-EDGE-PURGE-v1`: use the exact dimension-four cofactor annuli on every pairwise segment between the 48 non-Weyl normalized-Saxl external atoms. There are 1128 such segments. For 1056, one exact quartic annulus polynomial has nonnegative degree-four Bernstein coefficients, at least one positive, so it is strictly positive for every interior mixture and the whole open segment is nongenuine. The remaining 72 have the exact pattern: same `rho_tau`, opposite derangements `rho'_1,rho'_2`, distinct `tau_1,tau_2`; a cofactor polynomial is a positive multiple of `lambda^2(2lambda-1)^2` or `(1-lambda)^2(2lambda-1)^2`, forcing the only interior compatible value `lambda=1/2`.
+
+Every exceptional midpoint is Weyl-safe by the exact identity
+
+`1/2(e_{tau1,rho1}+e_{tau2,rho2})`
+`= (1/6) sum_{sigma in F_rho \ {tau1,tau2}} delta_sigma`
+`  + (1/12) sum_{sigma in F_rho1 union F_rho2} delta_sigma`,
+
+an explicit ten-Weyl-atom convex combination (two weights `1/6`, eight weights `1/12`). Hence no two-external mixture can carry a genuine positive support gap.
+
+Combined with the preceding B09 external-Weyl segment purge, every two-vertex mixture in the 72-atom outer representation is either Weyl-safe or genuine-incompatible whenever an external atom is used. In particular a positive-gap MSQR maximizer satisfying the partner SVD payment cannot be a two-atom outer mixture. This does **not** pay the lead's full cross residual `3<r,S^+r>` and is not a full proof.
+
+Canonical report: `yspennstate/math-open-problems`, `proofnet24/collective-MOC4/account03/B09/20260922T081332Z-account03-B09-MOC4-r11/REPORT.md`, blob `a34f5a0a3e9a253b26d416ffa971d186eb14d44d`. Exact verifier blob `acda4df3de4cf420181895e120af4cd860c2e2d4`; captured PASS blob `362e5a16b1ff48c5a2c6cdefbb1b8d8c029f60a4`.
+
+Next B09 target: `MOC4-THREE-ATOM-COFACTOR-MSQR-PAYMENT-v1`. Attack the first genuinely two-dimensional external face using the 144 cofactor annuli together with the partner SVD payment and the lead full-Hessian/cross-split reserve, or construct an actual true-unitary/spectral target counterexample. Do not substitute arbitrary bistochastic data.

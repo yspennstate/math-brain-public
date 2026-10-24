@@ -1,0 +1,79 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w340",
+  "bundle_slug": "w340-open-problems-first-checks-20261010",
+  "entries": [
+    {
+      "key": "p0276-product-without-cutoff-checked-construction",
+      "namespace": "probability.markov",
+      "logical_name": "p0276-product-without-cutoff-checked-construction",
+      "kind": "theorem",
+      "title": "Checked Abelian Cayley family with product condition and no cutoff",
+      "statement": "PROOF FOR THE EXPLICIT FAMILY; independent audit pending. For rate-one continuous-time simple random walk on G_d=(Z/2Z)^d x Z/m_dZ, m_d=max(2,floor(2^d log(d)/4)), with generators (e_i,a) for a!=0 and (h,0) for h!=0, the spectral gap is asymptotic to 2/d, t_mix(1/4) is asymptotic to d log(d)/4, and t_mix(3/4)/t_mix(1/4) tends to log(4/3). Thus this simple unweighted Abelian Cayley family satisfies the spectral product condition and lacks total-variation cutoff. This reconstructs an existing campaign candidate; no priority claim or audited solution of the literature question is made.",
+      "proof_text": "# P0276: checking the previously proposed Abelian Cayley construction\n\nLabel: proof of the explicitly stated construction, pending w346 and exact source-scope reconciliation. The original candidate was already in the campaign; this is a reconstructed proof, not a claim of priority or an audited solution of the source question.\n\nFor integer d tending to infinity, put N=2^d, m=max(2,floor(N log(d)/4)), and D=d(m-1)+N-1. On the Abelian group (Z/2Z)^d times Z/mZ, use the symmetric generator set\n\nS={(e_i,a): 1<=i<=d, a!=0} union {(h,0): h!=0}.\n\nThe sets are disjoint, have no identity, contain no repetitions, and are closed under inversion. They generate the group: all (h,0) are available, and (e_i,a)+(e_i,0)=(0,a). The resulting graph is simple, connected, undirected, unweighted, and D-regular. Consider its continuous-time simple random walk with rate one.\n\nWrite alpha=d(m-1)/D and gamma=N/D. The cube projection is the sum of independent coordinate-flip dynamics at total rate alpha and jumps uniformly to a different cube point at rate (N-1)/D. The latter generator equals gamma(Pi-I), where Pi is uniform averaging, and commutes with coordinate flips. Consequently\n\nLaw(cube at t)=exp(-gamma t) Q_(alpha t)+(1-exp(-gamma t)) pi_cube,\n\nwhere Q_u is rate-one coordinate-flip walk on the d-cube from the origin. Its distance from uniform is exactly exp(-gamma t) d_cube(alpha t).\n\nThe auxiliary coordinate changes only at coordinate-flip events. Conditional on their number k and on every cube increment, its k increments are independent uniform nonzero elements of Z/mZ. For k>=1 the distance of their sum from uniform is (m-1)^(1-k)/m <= 1/m; this follows by Fourier inversion, since every nontrivial auxiliary Fourier coefficient equals (-1/(m-1))^k. For k=0 its distance is at most one. Since k is Poisson(alpha t),\n\n0 <= d_full(t)-exp(-gamma t)d_cube(alpha t) <= exp(-alpha t)+1/m.\n\nThe lower bound is projection; the upper bound compares the joint distribution with the product of its cube marginal and auxiliary uniform law, conditioning on the entire cube event history. This handles possible dependence between the two coordinates.\n\nFor a cube character of Hamming weight k and an auxiliary character j, the eigenvalues of I-P are:\n\n* 0 for k=0,j=0;\n* [2k(m-1)+N]/D for k>=1,j=0, multiplicity binomial(d,k);\n* dm/D for k=0,j!=0, multiplicity m-1;\n* [dm+N-2k]/D for k>=1,j!=0, multiplicity (m-1)binomial(d,k).\n\nThese exhaust Nm characters. The nonzero minimum is asymptotic to 2/d; the auxiliary eigenvalues tend to one. Therefore t_rel is asymptotic to d/2.\n\nFor coordinate flips, each spin has mean exp(-2u/d), independently. Its chi-square distance is (1+exp(-4u/d))^d-1. Thus at u=s d log(d)/4 it tends to zero for s>1. For s<1 the magnetization has mean d exp(-2u/d) and variance at most d, while its stationary mean is zero and variance d. Chebyshev's inequality at half its mean gives d_cube(u)>=1-8/(d exp(-4u/d)), which tends to one. The same conclusions hold with u=alpha s d log(d)/4 because alpha=1-O(1/(d log d)).\n\nPut T=d log(d)/4. Then gamma T tends to one and alpha T tends to infinity. The full distance therefore converges to exp(-s) for 0<s<1 and to zero for s>1. No value at s=1 is needed. Monotonicity and bracketing on either side of the thresholds show\n\nt_mix(3/4)/T -> log(4/3), and t_mix(1/4)/T -> 1.\n\nHence t_mix(3/4)/t_mix(1/4) tends to log(4/3), rather than one, whereas t_mix(1/4)/t_rel is asymptotic to log(d)/2 and diverges. This family has the spectral product condition and no total-variation cutoff for rate-one continuous-time simple random walk. The precise source may restrict its generating sets or use another convention; check that scope before describing P0276 as answered.\n",
+      "assumptions": [
+        "d tends to infinity",
+        "Continuous-time rate-one walk",
+        "Degree is unbounded",
+        "Exact generator set and auxiliary group as stated"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w340:p0276-product-without-cutoff-checked-construction",
+        "url": "urn:owner-own-work:w340:p0276-product-without-cutoff-checked-construction",
+        "revision": "2026-10-10-draft-awaiting-w346",
+        "license": "owner-own-work (campaign proof and local check receipt)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "determinantal-entropy-two-site-fixed-diagonal-concavity",
+      "namespace": "probability.determinantal",
+      "logical_name": "determinantal-entropy-two-site-fixed-diagonal-concavity",
+      "kind": "lemma",
+      "title": "Two-site determinantal entropy is concave with fixed diagonal entries",
+      "statement": "PROOF OF A SPECIAL CASE; independent audit pending. Fix a,b in [0,1] and let K(z)=[[a,z],[conjugate(z),b]]. On the disk |z|^2<=min(ab,(1-a)(1-b)), the Shannon entropy of the determinantal subset measure with kernel K(z) is concave as a function of the complex number z. Its four atom probabilities are ab-|z|^2, (1-a)(1-b)-|z|^2, a(1-b)+|z|^2, and (1-a)b+|z|^2. This covers all two-site Hermitian positive contractions with common diagonals, including boundary kernels, but does not settle jointly varying diagonals or larger kernels.",
+      "proof_text": "# C0033: concavity for every two-site kernel with fixed diagonals\n\nLabel: proof, awaiting w346. This proves a restricted class of the finite-kernel conjecture; it does not settle varying diagonals or higher dimensions.\n\nLet K(z)=[[a,z],[conjugate(z),b]], with fixed a,b in [0,1]. It is a Hermitian positive contraction exactly when |z|^2 <= min(ab,(1-a)(1-b)). This follows from the principal-minor criteria for K and I-K.\n\nPut r=|z|^2, A=ab, B=(1-a)(1-b), C=a(1-b), D=(1-a)b. The four subset probabilities are A-r, B-r, C+r, D+r. They follow from P({1,2} subset X)=det(K) and the one-site inclusion probabilities a,b; they are nonnegative and sum to one. Also AB=CD.\n\nFor interior probabilities let F(r) be their Shannon entropy using natural logarithms. Direct differentiation gives\n\nF'(r)=log((A-r)(B-r)/((C+r)(D+r))) <= 0,\n\nF''(r)=-1/(A-r)-1/(B-r)-1/(C+r)-1/(D+r) < 0.\n\nThe first inequality uses AB=CD and r>=0: each numerator factor decreases and each denominator factor increases. Thus F is concave and nonincreasing on the feasible interval; continuity, with 0 log 0 = 0, includes the endpoints. If the feasible interval consists only of zero, the conclusion is immediate.\n\nFor complex z0,z1 and 0<=t<=1, |t z0+(1-t)z1|^2 <= t|z0|^2+(1-t)|z1|^2. Applying the monotonicity and then concavity of F proves\n\nH(P_K(t z0+(1-t)z1)) >= t H(P_K(z0))+(1-t) H(P_K(z1)).\n\nIn particular H(P_K(z)) <= H(P_K(0)) = h(a)+h(b). The step that remains for the complete two-site conjecture is simultaneous variation of a,b and z; this proof does not supply that step.\n",
+      "assumptions": [
+        "Exactly two sites",
+        "Hermitian positive contractions",
+        "The two diagonal entries are held fixed",
+        "Entropy uses 0 log 0 = 0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w340:determinantal-entropy-two-site-fixed-diagonal-concavity",
+        "url": "urn:owner-own-work:w340:determinantal-entropy-two-site-fixed-diagonal-concavity",
+        "revision": "2026-10-10-draft-awaiting-w346",
+        "license": "owner-own-work (campaign proof and local check receipt)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0276-product-without-cutoff-checked-construction",
+      "to_existing_logical": "math:probability.core:open-problem-p0276-product-condition-and-cutoff-for-unweighted-abelian-cayley-graphs",
+      "kind": "specializes",
+      "rationale": "New end: \"PROOF FOR THE EXPLICIT FAMILY; independent audit pending. For rate-one continuous-time simple random walk on G_d=(Z/2Z)^d x Z/m_dZ, m_d=max(2,floor(2^d log(d)/4)), with generators (e_i,a) for a!=0 and (h,0) for h!=0, the spectral \"; store end: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_full_solution). Is total-variation cutoff equivalent to the spectral product condition for simple random walks on finite Abeli\"; this is the scoped case of the stored question."
+    },
+    {
+      "from_key": "p0276-product-without-cutoff-checked-construction",
+      "to_existing_logical": "math:probability.core:attempt-p0276-product-condition-and-cutoff-for-unweighted-abelian-cayley-graphs",
+      "kind": "cites",
+      "rationale": "New end: \"PROOF FOR THE EXPLICIT FAMILY; independent audit pending. For rate-one continuous-time simple random walk on G_d=(Z/2Z)^d x Z/m_dZ, m_d=max(2,floor(2^d log(d)/4)), with generators (e_i,a) for a!=0 and (h,0) for h!=0, the spectral \"; store end: \"ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Unweighted Abelian auxiliary-factor realization of a rare uniform reset; exact Fourier spectrum Result: The Cayley generator set on H_d times Z_m consists \"; continues the previously recorded route."
+    },
+    {
+      "from_key": "determinantal-entropy-two-site-fixed-diagonal-concavity",
+      "to_existing_logical": "math:probability.determinantal:open-problem-c0033-concavity-of-the-entropy-of-determinantal-measures-in-the-kernel",
+      "kind": "specializes",
+      "rationale": "New end: \"PROOF OF A SPECIAL CASE; independent audit pending. Fix a,b in [0,1] and let K(z)=[[a,z],[conjugate(z),b]]. On the disk |z|^2<=min(ab,(1-a)(1-b)), the Shannon entropy of the determinantal subset measure with kernel K(z) is concave\"; store end: \"OPEN PROBLEM (source_says_open; current status unverified; result status partial_result). For positive contractions Q_1, Q_2 on l^2(E), E finite, Ent(P_{(Q_1+Q_2)/2}) >= (Ent(P_{Q_1}) + Ent(P_{Q_2}))/2; equivalently (Conjecture 5.3) the ent\"; this is the scoped case of the stored question."
+    },
+    {
+      "from_key": "determinantal-entropy-two-site-fixed-diagonal-concavity",
+      "to_existing_logical": "math:probability.determinantal:attempt-c0033-concavity-of-the-entropy-of-determinantal-measures-in-the-kernel",
+      "kind": "cites",
+      "rationale": "New end: \"PROOF OF A SPECIAL CASE; independent audit pending. Fix a,b in [0,1] and let K(z)=[[a,z],[conjugate(z),b]]. On the disk |z|^2<=min(ab,(1-a)(1-b)), the Shannon entropy of the determinantal subset measure with kernel K(z) is concave\"; store end: \"ATTEMPT RECORD (SUPERSEDING REVISION 2026-09-07 12:4x after the Codex holder's review), author-checked only. CORRECTION of C0033-A001 and of the problem statement's 'equivalently': Lyons's Conjecture 2.6 (finite positive contractions) impli\"; continues the previously recorded route."
+    }
+  ]
+}

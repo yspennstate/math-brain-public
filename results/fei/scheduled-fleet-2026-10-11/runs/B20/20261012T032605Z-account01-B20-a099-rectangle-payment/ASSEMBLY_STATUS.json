@@ -1,0 +1,85 @@
+{
+  "schema": "fei-candidate-assembly/1",
+  "run_id": "20261012T032605Z-account01-B20-a099-rectangle-payment",
+  "packet_id": "A099",
+  "candidate_name": "Critical rectangle decrement route",
+  "full_fei_status": "OPEN",
+  "candidate_constant": {
+    "value": 8,
+    "status": "NUMERICAL_ONLY_THROUGH_N4",
+    "warning": "Not proved, not interval-certified, and not valid evidence for arbitrary dimension"
+  },
+  "proved_nodes": [
+    {
+      "id": "A096-CRITICAL-STEP",
+      "statement": "Descendant-critical f of ratio R satisfies Delta_i H >= R I_i at every essential coordinate",
+      "review": "PENDING"
+    },
+    {
+      "id": "A052-TENSOR-PURITY",
+      "statement": "A strict critical endpoint has no nontrivial exact tensor factorization after reduction",
+      "review": "PENDING"
+    },
+    {
+      "id": "A097-RANKONE-CLASSIFICATION",
+      "statement": "Exact rank-one balanced selectors reduce to Boolean tensors and cannot be strict critical endpoints",
+      "review": "PENDING"
+    },
+    {
+      "id": "A054-ANCHORING",
+      "statement": "rho_A averages anchored Boolean product errors and yields a controlled component-excess estimate",
+      "review": "PENDING_AND_DEPENDS_ON_PENDING_A053"
+    },
+    {
+      "id": "A099-BLOCK-PAYMENT",
+      "statement": "rho_A(f) <= min(I_A(f), I_B(f)) for every Boolean f and physical cut",
+      "review": "PENDING"
+    },
+    {
+      "id": "A099-SINGLETON-TREE-BUDGET",
+      "statement": "rho_i=p_i(1-p_i), and weighted singleton rho over a physical restriction tree is at most root influence",
+      "review": "PENDING"
+    }
+  ],
+  "implications": [
+    {
+      "from": ["A054-ANCHORING", "A099-BLOCK-PAYMENT"],
+      "to": "GEOMETRIC_INTERFACE_PAID",
+      "status": "PROVED_PENDING_REVIEW",
+      "remaining_loss": "A054 entropy continuity still has sqrt(rho), n*sqrt(rho), and an*rho terms"
+    },
+    {
+      "from": ["A096-CRITICAL-STEP", "A052-TENSOR-PURITY", "G-CRITICAL-RECTANGLE-DECREMENT-v1"],
+      "to": "FULL_FEI_WITH_C_RECT",
+      "status": "CONDITIONAL",
+      "open_input": "G-CRITICAL-RECTANGLE-DECREMENT-v1"
+    }
+  ],
+  "first_open_leaf": {
+    "gap_id": "G-CRITICAL-RECTANGLE-DECREMENT-v1",
+    "statement": "There exists absolute C_rect such that every nonconstant descendant-critical tensor-prime Boolean f has an essential i with Delta_i H(f) <= C_rect I_i(f)(1-I_i(f)).",
+    "why_smaller_than_full_fei": "Restricted source class and existential one-coordinate conclusion",
+    "known_controls": [
+      "two-bit one-point gate gives ratio Delta/rho=8",
+      "one-point AND family numerically decreases toward 4 through n=12",
+      "parity-zero endpoint has rho=Delta=0",
+      "rare-event logarithm remains in Delta, not rho",
+      "addressing and shared-variable products receive no free selector credit"
+    ],
+    "status": "OPEN"
+  },
+  "coverage": {
+    "verified_local_native_adoptions": 20,
+    "intended_other": 60,
+    "verified_other_native_adoptions": 0,
+    "followup_commit": "0d364f601cb420220924db9191e20c27f3ee3cd3",
+    "delivery_or_adoption_after_followup": "NOT_CLAIMED"
+  },
+  "reviewers": ["A090", "A094"],
+  "next_actions": {
+    "derive": "A087: attack CRD from exact signed restriction entropy identities, retaining terminal terms",
+    "falsify": "A092: search larger tensor-prime descendant-critical gates and near-tensor surgeries for unbounded min_i Delta/rho",
+    "certify": "A085: design exact log-interval certification if a finite extremal reduction or falsifier appears",
+    "assemble": "B20/A099: prove CRD first on the one-point family and then on a restriction-closed class"
+  }
+}

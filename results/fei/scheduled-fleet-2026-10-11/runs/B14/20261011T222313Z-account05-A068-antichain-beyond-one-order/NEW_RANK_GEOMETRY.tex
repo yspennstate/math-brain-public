@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{Context-oriented pivotal cubes with quadratic spectral fibers}
+\author{A068, stream B14}
+\maketitle
+All entropies are in bits; all physical variables are independent uniform signs.
+Write $C_{\rm reg}=\log_2(4+e)+2\log_2(e\pi)<8.937$.
+\begin{theorem}
+Let $h$ be a regular Boolean function on $q$ data coordinates and let
+$Q_i:\mathbb F_2^m\to\mathbb F_2$ have degree at most two. Put
+$a_i(z)=(-1)^{Q_i(u)}$, where $z_j=(-1)^{u_j}$, and
+$F(x,z)=h(x_i a_i(z):i\in[q])$. Then
+\[
+ H(F)\le C_{\rm reg} I_x(F)+2I_z(F)\le C_{\rm reg}I(F).
+\]
+\end{theorem}
+\begin{proof}
+For fixed $z$, the orientation $y_i=x_i a_i(z)$ carries data pivotal
+fibers to the antichains of $h$. Resampling predecessor data coordinates
+keeps this exterior-dependent orientation fixed. Thus the baseline signed
+noise and harmonic rank proof gives derivative rank mean at most $1+\ln2$.
+For $a_S=\prod_{i\in S}a_i$, exact Fourier expansion gives
+\[
+ \widehat F(S,T)=\widehat h(S)\widehat a_S(T),\quad
+ I_x(F)=I(h),\quad I_z(F)=\sum_S\widehat h(S)^2 I(a_S).
+\]
+If $B_S$ is the alternating polar matrix of $\sum_{i\in S}Q_i$ and
+$r_S=\operatorname{rank}B_S$, quadratic autocorrelation and Walsh inversion
+show that $\widehat a_S^2$ is uniform on an affine space $L_S$ of dimension
+$r_S$. Its coordinate support has size at least $r_S$, so
+$r_S=H(a_S)\le2I(a_S)$.
+
+After ranking data coordinates by $h$'s order, define
+\[
+ Z_k=\sum_{|S|=k}\prod_{i\in S}i^{-2},\qquad
+ R_k^F(S,T)=Z_k^{-1}\prod_{i\in S}i^{-2}\,2^{-r_S}
+                 \mathbf1_{T\in L_S}.
+\]
+This is normalized on each data level $k$. Euler's product bounds
+$Z_k\le\pi^{2k}/(2k+1)!$. For $S=\{i_1<\cdots<i_k\}$ its full cost is
+\[
+ -\log_2 R_k^F(S,T)
+ \le\frac2{\ln2}\sum_{j=1}^k\ln(i_j/j)
+                  +k\log_2(\pi^2/4)+r_S.
+\]
+Mix levels with weights $w_k=\Pr_h(|S|=k)$; this is a normalized complete
+reference, charging $\log_2(1/w_k)$ as well. The Boolean level bound
+$H(|S|)\le\log_2(4+e)I(h)$, derivative rank mean, and
+$\sum_S\widehat h(S)^2r_S\le2I_z(F)$ give
+\[
+ H(F)\le\left[\log_2(4+e)+
+       \frac{2(1+\ln2)+\ln(\pi^2/4)}{\ln2}\right]I_x(F)+2I_z(F),
+\]
+as required. The private data coordinates prevent coherent collisions;
+no arbitrary shared-variable entropy subadditivity is used.
+\end{proof}
+The full quadratic autocorrelation derivation, all edge cases, source pins,
+exact checker and separation family are in REPORT.md and
+WIDTH\_SEPARATION\_EXAMPLE.md. This is a class result awaiting independent
+review; full FEI remains open and external novelty is unverified.
+\end{document}

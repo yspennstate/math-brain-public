@@ -1,0 +1,1810 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalise,nameinlink]{cleveref}
+\usepackage{booktabs}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\crefname{lemma}{Lemma}{Lemmas}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{corollary}{Corollary}{Corollaries}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{remark}{Remark}{Remarks}
+
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\Pr}{\mathbb{P}}
+\newcommand{\Inf}{\mathrm{Inf}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Bin}{\mathrm{Bin}}
+\newcommand{\hatg}{\widehat{g}}
+\newcommand{\bits}{\{0,1\}}
+
+\title[Entropy--influence for read-$k$ DNFs and regular functions]{The Fourier entropy--influence inequality for read-$k$ DNF formulas and regular Boolean functions}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{23 September 2026}
+
+\begin{document}
+
+\begin{abstract}
+The Fourier entropy--influence conjecture of Friedgut and Kalai asserts that the spectral entropy of a Boolean
+function is at most a universal constant times its total influence. We prove it with constant $15.1$ for regular
+Boolean functions, a class that contains all linear threshold functions, and with constant $O(\log k)$ for read-$k$
+DNF formulas and, more generally, for unions of regular functions in which every variable is relevant to at most $k$
+of them; for Boolean functions of $m$ regular functions the constant is $O(\log m)$. These classes satisfy the
+stronger inequality of O'Donnell and Tan, so by their composition theorem the conjecture also holds for read-once
+formulas built from such functions and gates of bounded arity, including iterated majorities of any odd fan-in.
+Threshold gates of any fan-in satisfy the biased form of that inequality under every product measure, so the
+conjecture also holds, with an absolute constant, for read-once formulas of any depth over threshold gates of
+unbounded fan-in, including iterated threshold functions with arbitrary thresholds and fan-ins.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+For $f:\bits^n\to\bits$ put $g=1-2f\in\{-1,1\}$ and expand $g=\sum_{A\subseteq[n]}\hatg(A)\chi_A$ with
+$\chi_A(x)=(-1)^{\sum_{i\in A}x_i}$. By Parseval the numbers $P(A)=\hatg(A)^2$ form a probability distribution on
+subsets of $[n]$, the \emph{spectral distribution} of $f$. Its Shannon entropy and its mean size are
+\[
+H(f)=\sum_{A}P(A)\log_2\frac{1}{P(A)},\qquad I(f)=\sum_A|A|\,P(A)=\sum_{i=1}^n\Inf_i(f),
+\]
+where $\Inf_i(f)=\Pr[f(x)\ne f(x\oplus e_i)]$ for uniform $x$. Friedgut and Kalai~\cite{FK96} conjectured that
+$H(f)\le C\,I(f)$ for a universal constant $C$ (the FEI conjecture). The conjecture is open. It is known for
+symmetric functions and read-once decision trees~\cite{OWZ11}, read-once formulas over gates of bounded
+arity~\cite{OT13} and over $\mathrm{AND}$, $\mathrm{OR}$, $\mathrm{XOR}$ and $\mathrm{NOT}$ gates~\cite{CKLS16}, read-$k$ decision trees~\cite{WWW14,Sha18}, random DNF formulas and random linear
+threshold functions~\cite{KLW10,CKKLS18}, plateaued functions~\cite{Pot26}, and $\delta$-tribes functions and functions with
+separation properties~\cite{GMP26}. For every Boolean function, Kelman, Kindler, Lifshitz, Minzer and
+Safra~\cite{KKLMS20} proved $H(f)\le K\sum_A|A|\log_2(|A|+1)P(A)+K\,I(f)$ with an absolute constant $K$, which
+misses the conjecture by a factor logarithmic in the level. The subadditivity of entropy gives
+$H(f)\le\sum_ih(\Inf_i(f))=O\bigl(I(f)+\sum_i\Inf_i(f)\log(1/\Inf_i(f))\bigr)$, with $h$ the binary
+entropy~\cite{KMS12}; Han~\cite{Han25} proved the second bound by an iteration over the levels. The best known lower
+bound on $C$ is
+$6.5218$~\cite{Num26}, following $6.278$~\cite{OT13} and $6.4548$~\cite{Hod17}.
+
+The conjecture implies Mansour's conjecture on the Fourier spectrum of DNF formulas~\cite{Man95,OWZ11}. Mansour's
+conjecture is known for read-$k$ DNF formulas~\cite{KLW10}. The weaker Fourier min-entropy--influence inequality,
+$\log_2(1/\max_A P(A))\le C\,I(f)$, was proved for regular read-$k$ DNF formulas by Shalev~\cite{Sha18} and for all
+read-$k$ DNF formulas, with $C=O(\log k)$, by Arunachalam, Chakraborty, Kouck\'y, Saurabh and de Wolf~\cite{ACKSW21}.
+The entropy inequality itself was open for this class; Shalev~\cite{Sha18} proposed it as a direction.
+
+A DNF formula is a disjunction $\varphi=T_1\vee\cdots\vee T_m$ of terms, each term $T_t$ being the conjunction of
+literals on a nonempty set $V_t$ of variables. It is \emph{read-$k$} if every variable lies in at most $k$ of the
+sets $V_t$. No minimality is assumed.
+
+\begin{theorem}\label{thm:readk}
+Let $f$ be computed by a read-$k$ DNF formula. Then
+\[
+H(f)\le \min\bigl(2.89+9.9\,k,\ 30+5.6\log k\bigr)\,I(f).
+\]
+The same bound holds for functions computed by read-$k$ CNF formulas.
+\end{theorem}
+
+The dependence on $k$ is logarithmic, as in the min-entropy bound of~\cite{ACKSW21}. A DNF formula with $m$ terms is
+read-$m$, so every such formula satisfies $H(f)\le(30+5.6\log m)\,I(f)$.
+
+For linear threshold functions the conjecture was open: Chakraborty, Kulkarni, Lokam and Saurabh~\cite{CKLS16} proved
+$H(f)=O(\sqrt n)$ for them, and~\cite{CKKLS18} treated random ones. A monotone Boolean function $f$ is
+\emph{regular} (or $2$-monotone~\cite{Mur71}) if its coordinates are totally
+preordered by desirability: for all $i\ne j$ either $f(x^{i\leftarrow1,j\leftarrow0})\ge f(x^{i\leftarrow0,j\leftarrow1})$
+for every $x$, or the reverse inequality holds for every $x$. A function is regular if it becomes a monotone
+regular function after negating some of its inputs. Every linear threshold function is regular.
+
+\begin{theorem}\label{thm:regular}
+Every regular Boolean function satisfies $H(f)\le 15.1\,I(f)$.
+\end{theorem}
+
+The proof extends to Boolean combinations of regular functions whose desirability orders are unrelated
+(\cref{thm:multi}): if $h_1,\dots,h_m$ are regular and $F:\bits^m\to\bits$ is arbitrary, then
+$f=F(h_1,\dots,h_m)$ satisfies $H(f)\le(16.5+8.4\ln m)\,I(f)$. In particular the conjecture holds, with constant
+$O(\log m)$, for intersections of $m$ halfspaces. For unions and intersections the dependence on $m$ can be replaced
+by the overlap: if $h_1,\dots,h_m$ are regular and every variable is relevant to at most $k$ of them, then
+$h_1\vee\cdots\vee h_m$ and $h_1\wedge\cdots\wedge h_m$ satisfy $H(f)\le\min(3.9+21.2k,\,54+12.8\log k)\,I(f)$
+(\cref{thm:union,thm:union-log}). This
+contains \cref{thm:readk,thm:regular} up to the constants. The two statements combine: if every $h_l$ is a
+Boolean function of at most $M$ regular functions, the constant is $54+12.8\log k+6.8\log M$ (\cref{thm:union-multi});
+for example, for unions of polytopes with $M$ facets in which every variable enters at most $k$ of them, and, since
+every function of $w$ variables is a function of $w$ dictators, for read-$k$ unions of arbitrary functions of at most
+$w$ variables each.
+
+O'Donnell and Tan~\cite{OT13} introduced a stronger inequality that is preserved under disjoint composition. For
+the uniform measure it reads
+\begin{equation}\label{eq:feiplus}
+H^+(f):=\sum_{A\ne\emptyset}P(A)\log_2\frac1{P(A)}\le C\,\bigl(I(f)-\Var(f)\bigr),
+\end{equation}
+where $\Var(f)=1-P(\emptyset)$, and it implies $H(f)\le\max(C,1/\ln2)\,I(f)$~\cite[Proposition~2.1]{OT13}.
+
+\begin{theorem}\label{thm:plus-intro}
+Inequality \eqref{eq:feiplus} holds with $C=\min(22+28k,\,88+16.4\log k)$ for functions computed by read-$k$ DNF or CNF formulas, with
+$C=60$ for regular functions, with $C=\min(24+66k,\,186+46.2\log k)$ for unions and intersections of regular functions in which every
+variable is relevant to at most $k$ of them, and with $C=66+31\ln m$ for Boolean functions of $m$ regular functions.
+\end{theorem}
+
+Together with the composition theorem of~\cite{OT13}, this gives the conjecture for a class that contains read-once
+formulas, read-$k$ DNF formulas and intersections of halfspaces.
+
+\begin{corollary}\label{cor:compose-intro}
+Let $F$ be a read-once formula and $f=F(f_1,\dots,f_s)$, where $f_1,\dots,f_s$ depend on pairwise disjoint sets of
+variables and each $f_l$ belongs to one of the classes of \cref{thm:plus-intro}. Suppose that every gate of $F$ is an
+$\mathrm{AND}$, $\mathrm{OR}$ or $\mathrm{XOR}$ gate of any fan-in, or has arity at most $a$, or is a threshold gate
+$T_{t,r}(y)=\mathbf 1[y_1+\cdots+y_r\ge t]$ of any fan-in $r$, or belongs to one of these classes and has only
+balanced inputs, that is, inputs equal to $1$ with probability $\frac12$. Then $H(f)\le C\,I(f)$, where $C$ is the
+largest of $C_a=2^{O(a)}$, of $760$ if threshold gates occur ($66.4$ if the inputs of each threshold gate are all
+equal to $1$ with the same probability), and of the constants of \cref{thm:plus-intro} for the classes that occur.
+\end{corollary}
+
+For instance, the corollary applies to unions and intersections of any number of halfspaces on pairwise disjoint
+sets of variables, to majorities of intersections of halfspaces on disjoint sets of variables, and to iterated
+majorities $\mathrm{MAJ}_{r_1}\circ\mathrm{MAJ}_{r_2}\circ\cdots\circ\mathrm{MAJ}_{r_d}$ with odd fan-ins of any
+size, since a majority of an odd number of independent balanced bits is balanced; in these examples the constant is
+$66$, independent of the number of halfspaces and of the fan-ins. Threshold gates satisfy the biased form of
+\eqref{eq:feiplus} under every product measure, with constant $66.4$ when their inputs have a common bias
+(\cref{thm:threshold}) and with constant $760$ in general (\cref{thm:thr-strong}). So the corollary also applies to
+iterated threshold functions $T_{t_1,r_1}\circ T_{t_2,r_2}\circ\cdots\circ T_{t_d,r_d}$ with arbitrary thresholds and
+fan-ins, where the bias changes from level to level, and to thresholds of conjunctions of equal width, with constant
+$66.4$, and to every read-once formula over threshold gates of any fan-in, with constant $760$
+(\cref{cor:thr-formula}). The constant $760$ comes from splitting at pivotal probability $\frac9{10}$: above it the
+other inputs of the gate are nearly deterministic and a direct estimate applies, and below it the weak form loses a
+factor $10$. The weaker inequality of \cref{prop:thr-general}, with $I_\mu$ in place
+of $I_\mu-\Var_\mu$, composes at the cost of adding its constant at each level (\cref{lem:weak-compose}) and gives
+$H(f)\le(38d+\log e)\,I(f)$ for formulas of depth $d$ (\cref{cor:depth}), which is smaller when $d\le19$. Gates $\mathrm{AND}$, $\mathrm{OR}$ and $\mathrm{XOR}$
+of any fan-in are read-once formulas over gates of arity $2$, so~\cite{OT13} already covers them with an unspecified
+constant; \cref{lem:andor} gives them the biased form of \eqref{eq:feiplus} with the sharp constant $2+4\log e$, which
+makes the constant of the corollary explicit for formulas over these gates.
+
+The proofs of the two theorems use different mechanisms. For
+\cref{thm:readk}, the discrete derivative $D_ig$ is supported inside the union of at most $k$ subcubes, one for each
+term containing $i$, and on each subcube it factorises exactly into the indicator of the subcube times a function
+of the remaining coordinates. Consequently the spectral sample, conditioned on containing $i$, contains a uniformly
+random subset of the variables of some term through $i$ (\cref{lem:witness}). This is combined with a Gibbs
+inequality against a reference measure that activates terms independently, and with a path argument that bounds
+the cost of the terms that are not activated (\cref{lem:path}). For the logarithmic bound only one term of each
+connected piece of the cover is activated; the other terms of the piece are reached through shared variables, at a
+cost of order $\log k$ each (\cref{thm:readk-log}). For \cref{thm:regular}, the pivotal set of a
+coordinate, restricted to the coordinates that are at least as desirable, is an antichain; Sperner's theorem then
+shows that the spectral sample, conditioned on containing $i$, contains a positive proportion of the more desirable
+coordinates in a logarithmic average (\cref{lem:ranktail}), and a rank-weighted reference measure converts this into
+an entropy bound. \Cref{thm:union} combines the two: the reference measure activates the functions $h_l$, and the
+uniform filling of a witnessing term is replaced by a level inequality for functions supported on the pivotal set
+of a rarely true $h_l$ (\cref{lem:level}); \cref{thm:union-log} adds the rooted activation of \cref{thm:readk-log}
+and rank laws normalised at the size of the part of $S$ assigned to each $h_l$. For \cref{thm:plus-intro}, two lemmas valid for every Boolean function reduce
+\eqref{eq:feiplus} to the sets with at least two elements (\cref{lem:single,lem:mass}); on those sets both proofs
+go through with small changes (\cref{sec:plus}).
+
+\subsection*{Notation and standard facts}
+Throughout, $x$ is uniform on $\bits^n$, $\log=\log_2$, and $\ln$ is the natural logarithm. $S$ denotes a random set
+with law $P$ (the spectral sample of $f$), so $H(f)=H(S)$, $I(f)=\E|S|$ and $\Pr[i\in S]=\Inf_i(f)$. We write
+$\Var(f)=1-P(\emptyset)=4p(1-p)$ with $p=\Pr[f=1]$, and $h$ for the binary entropy function in bits.
+
+For $i\in[n]$ the discrete derivative
+\[
+D_ig(x)=\tfrac12\bigl(g(x^{i\leftarrow0})-g(x^{i\leftarrow1})\bigr)=f(x^{i\leftarrow1})-f(x^{i\leftarrow0})
+\]
+does not depend on $x_i$, takes values in $\{-1,0,1\}$, and is nonzero exactly on the set $\mathcal P_i$ of points
+at which $i$ is pivotal. Since $g=\E_ig+\chi_{\{i\}}\,D_ig$, we have $\hatg(A)=\widehat{D_ig}(A\setminus\{i\})$ for
+$A\ni i$. Hence $\Inf_i(f)=\E[(D_ig)^2]=\Pr[\mathcal P_i]$, and the law $\nu_i$ of $S\setminus\{i\}$ given $i\in S$
+is $\nu_i(T)=\widehat{D_ig}(T)^2/\Inf_i(f)$.
+
+\emph{Gibbs' inequality.} If $Q\ge0$ is a function on subsets of $[n]$ with $\sum_AQ(A)\le1$ and $Q(A)>0$ whenever
+$P(A)>0$, then $H(f)\le\sum_AP(A)\log(1/Q(A))$.
+
+\emph{Edge isoperimetry}~\cite{Har64,Ber67,Har76}. A set $B\subseteq\bits^n$ of density $\alpha$ has at least
+$\alpha 2^n\log(1/\alpha)$ edges of the cube leaving it. Since $I(f)=2^{1-n}\cdot\#\{\text{edges between }f^{-1}(0)
+\text{ and }f^{-1}(1)\}$, we get $I(f)\ge2\alpha\log(1/\alpha)$ with $\alpha=\min(p,1-p)$.
+
+\begin{lemma}\label{lem:empty}
+$h(\Var(f))\le 2.8854\,I(f)$ and $H(|S|)\le3.8854\,I(f)$.
+\end{lemma}
+
+\begin{proof}
+Let $\alpha=\min(p,1-p)\le1/2$ and $\varepsilon=\Var(f)=4\alpha(1-\alpha)\in[2\alpha,4\alpha]$. Using
+$(1-\varepsilon)\ln\frac1{1-\varepsilon}\le\varepsilon$,
+\[
+h(\varepsilon)\le\varepsilon\log\frac1\varepsilon+\varepsilon\log e\le4\alpha\Bigl(\log\frac1\alpha-1\Bigr)+4\alpha\log e
+\le2I(f)+1.7708\,\alpha\le2.8854\,I(f),
+\]
+where we used $I(f)\ge2\alpha\log(1/\alpha)$ and $I(f)\ge\Var(f)\ge2\alpha$. For the second bound, the chain rule gives
+$H(|S|)=h(\varepsilon)+\varepsilon\,H(|S|\mid S\ne\emptyset)$, and for a random variable $K$ with values in
+$\{1,2,\dots\}$ Gibbs' inequality against the law $2^{-k}$ gives $H(K)\le\E K$. Hence
+$\varepsilon\,H(|S|\mid S\neq\emptyset)\le\varepsilon\,\E[|S|\mid S\ne\emptyset]=I(f)$.
+\end{proof}
+
+\section{Read-$k$ DNF formulas}\label{sec:readk}
+
+Fix a read-$k$ DNF formula computing $f$. Term $t$ is satisfied exactly when $x$ agrees with a fixed assignment
+$a_t\in\bits^{V_t}$ on $V_t$. Put $p_0=\Pr[f=0]$ and $\mu=\sum_t2^{-|V_t|}$.
+
+\begin{lemma}[Path lemma]\label{lem:path}
+$p_0\,\mu\le\frac k4\,I(f)$.
+\end{lemma}
+
+\begin{proof}
+Fix an order on each $V_t$. For a pair $(x,t)$ with $f(x)=0$, change the coordinates of $V_t$ at which $x$ differs
+from $a_t$ one at a time, in this order. The function $f$ is $0$ at the start and $1$ at the end, so the path
+contains a first edge $\{y,y\oplus e_j\}$ with $f(y)=0$ and $f(y\oplus e_j)=1$, and $j\in V_t$. Given this edge
+and $t$, the point $x$ agrees with $y$ outside the set of coordinates of $V_t$ that precede $j$, so at most
+$2^{|V_t|-1}$ pairs $(x,t)$ are mapped to the same edge and the same $t$. Since at most $k$ terms contain $j$,
+\[
+\sum_{x:\,f(x)=0}\ \sum_t2^{-|V_t|}\le\sum_{\text{boundary edges}}\ \sum_{t:\,j\in V_t}2^{|V_t|-1}\,2^{-|V_t|}
+\le\frac k2\cdot2^{n-1}I(f).
+\]
+Dividing by $2^n$ proves the lemma.
+\end{proof}
+
+\begin{lemma}[Witness decomposition]\label{lem:witness}
+Let $i\in[n]$ with $\Inf_i(f)>0$, and let $t_1,\dots,t_r$ ($r\le k$) be the terms whose variable sets contain $i$.
+For $\beta>1$ let $E_i$ be the set of $T\subseteq[n]\setminus\{i\}$ such that
+$|(T\cup\{i\})\cap V_{t_s}|<|V_{t_s}|/\beta$ for every $s$. Then
+\[
+\nu_i(E_i)\le\sum_{s=1}^r\Pr\Bigl[\Bin\bigl(|V_{t_s}|-1,\tfrac12\bigr)<\tfrac{|V_{t_s}|}{\beta}-1\Bigr].
+\]
+\end{lemma}
+
+\begin{proof}
+If $i$ is pivotal at $x$, some term is satisfied at exactly one of $x^{i\leftarrow0},x^{i\leftarrow1}$. That term
+depends on $x_i$, so it is some $t_s$, and $x$ lies in the subcube
+$C_s=\{x:x_j=a_{t_s}(j)\text{ for }j\in W_s\}$, where $W_s=V_{t_s}\setminus\{i\}$. Let $\mathcal P_{i,s}$ be the
+set of pivotal points whose least such index is $s$, and put $d_s=D_ig\cdot1_{\mathcal P_{i,s}}$. The sets
+$\mathcal P_{i,s}$ partition $\mathcal P_i$, so $D_ig=\sum_sd_s$ and $\Inf_i(f)=\sum_s\lambda_s\Inf_i(f)$ with
+$\lambda_s=\|d_s\|_2^2/\Inf_i(f)$.
+
+Write $x=(y,z)$ with $y$ the restriction of $x$ to $W_s$. Because $\mathcal P_{i,s}\subseteq C_s$,
+\[
+d_s(y,z)=\mathbf 1[y=a_{t_s}|_{W_s}]\cdot\psi_s(z),\qquad \psi_s(z)=d_s(a_{t_s}|_{W_s},z).
+\]
+The two factors depend on disjoint sets of coordinates, so Fourier coefficients multiply, and every Fourier
+coefficient of the indicator of a point of $\bits^{W_s}$ has absolute value $2^{-|W_s|}$. Therefore
+$\widehat{d_s}(T)^2=4^{-|W_s|}\,\widehat{\psi_s}(T\setminus W_s)^2$: under the probability measure
+$\nu_{i,s}(T)=\widehat{d_s}(T)^2/\|d_s\|_2^2$ the set $T\cap W_s$ is uniformly distributed over the subsets of $W_s$.
+By the Cauchy--Schwarz inequality, for every $T$,
+$\bigl(\sum_s\widehat{d_s}(T)\bigr)^2\le\bigl(\sum_s\lambda_s\bigr)\bigl(\sum_s\widehat{d_s}(T)^2/\lambda_s\bigr)$,
+the sum running over $s$ with $\lambda_s>0$. Summing over $T\in E_i$ gives $\nu_i(E_i)\le\sum_s\nu_{i,s}(E_i)$.
+Finally $E_i\subseteq\{T:|T\cap W_s|<|V_{t_s}|/\beta-1\}$, and $|T\cap W_s|$ has the law $\Bin(|W_s|,1/2)$ under
+$\nu_{i,s}$.
+\end{proof}
+
+For $\beta>2$ put
+\[
+C_\beta=\sup_{m\ge1}\,m\,\Pr\Bigl[\Bin\bigl(m-1,\tfrac12\bigr)<\tfrac m\beta-1\Bigr],
+\]
+which is finite by the Chernoff bound. A direct computation gives $C_3=13\cdot299/4096=0.9489\ldots$, attained at
+$m=13$.
+
+\begin{theorem}\label{thm:readk-main}
+Let $f$ be computed by a read-$k$ DNF formula and let $\beta>2$. Then
+\[
+H(f)\le\bigl(2.886+k\,(2+2\beta+2C_\beta)\bigr)\,I(f).
+\]
+With $\beta=3$ this gives $H(f)\le(2.886+9.898\,k)\,I(f)$.
+\end{theorem}
+
+\begin{proof}
+\emph{Reference measure.} For a set $U$ of terms let $V(U)$ be the union of their variable sets and
+$q(U)=\prod_{t\in U}\pi_t\prod_{t\notin U}(1-\pi_t)$ with $\pi_t=2^{-|V_t|}$. Put $\varepsilon=\Var(f)$, $Q(\emptyset)=1-\varepsilon$ and,
+for $A\ne\emptyset$, $Q(A)=\varepsilon\,Q_1(A)$ with
+\[
+Q_1(A)=\sum_Uq(U)\,2^{-|V(U)|}\,\mathbf 1[A\subseteq V(U)].
+\]
+Summing first over $A\subseteq V(U)$ shows $\sum_AQ(A)\le1$. A variable that lies in no term is irrelevant to $f$,
+so $Q(A)>0$ whenever $P(A)>0$. Gibbs' inequality gives
+\begin{equation}\label{eq:gibbs}
+H(f)\le h(\varepsilon)+\sum_{A\ne\emptyset}P(A)\log\frac1{Q_1(A)}.
+\end{equation}
+If $U$ covers $A$, then $Q_1(A)\ge q(U)2^{-|V(U)|}$, so
+\begin{equation}\label{eq:cover}
+\log\frac1{Q_1(A)}\le\Lambda+\sum_{t\in U}\Bigl(\log\frac1{\pi_t}+|V_t|\Bigr)=\Lambda+2\sum_{t\in U}|V_t|,
+\qquad \Lambda=\sum_t\log\frac1{1-\pi_t}\le2\mu ,
+\end{equation}
+where the last inequality holds because $\pi_t\le\frac12$ and $\log\frac1{1-x}\le2x$ for $0\le x\le\frac12$ by
+convexity.
+
+\emph{The cover.} For $A\ne\emptyset$ let $D(A)$ be the set of terms with $|A\cap V_t|\ge|V_t|/\beta$. Call $i\in A$
+\emph{sparse} if no term in $D(A)$ contains it, and let $w_i$ be the smallest size of a term containing $i$. Cover
+$A$ by $D(A)$ together with a smallest term through each sparse element. Since every variable lies in at most $k$
+terms, $\sum_{t\in D(A)}|V_t|\le\beta\sum_{t\in D(A)}|A\cap V_t|\le\beta k|A|$, and \eqref{eq:cover} gives
+\[
+\log\frac1{Q_1(A)}\le\Lambda+2\beta k|A|+2\sum_{i\in A\text{ sparse}}w_i .
+\]
+Now $\sum_{A\ni i}P(A)\,\mathbf 1[i\text{ sparse in }A]=\Inf_i(f)\,\nu_i(E_i)$ with $E_i$ as in \cref{lem:witness},
+and a sparse $i$ lies only in terms of size larger than $\beta$. By \cref{lem:witness} and $w_i\le|V_{t_s}|$,
+\[
+w_i\,\nu_i(E_i)\le\sum_s|V_{t_s}|\Pr\Bigl[\Bin\bigl(|V_{t_s}|-1,\tfrac12\bigr)<\tfrac{|V_{t_s}|}\beta-1\Bigr]\le k\,C_\beta .
+\]
+Summing over $A\ne\emptyset$,
+\[
+\sum_{A\ne\emptyset}P(A)\log\frac1{Q_1(A)}\le\varepsilon\Lambda+2\beta k\,I(f)+2kC_\beta\,I(f).
+\]
+
+\emph{The vacuum term.} By \cref{lem:path}, $\varepsilon\Lambda\le4p_0\cdot2\mu\le2k\,I(f)$.
+
+\emph{The empty set.} $h(\varepsilon)\le2.886\,I(f)$ by \cref{lem:empty}. Adding the three bounds proves the theorem.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:readk}]
+For DNF formulas the first bound is \cref{thm:readk-main} with $\beta=3$, and the second is \cref{thm:readk-log},
+proved in \cref{sec:readk-log}. If $f$ is computed by a read-$k$ CNF formula, the dual
+function $f^\ast(x)=1-f(\bar x)$, where $\bar x$ is the complement of $x$, is computed by a read-$k$ DNF formula. Its
+$\pm1$ version is $x\mapsto-g(\bar x)$, whose Fourier coefficients are $\pm\hatg(A)$, so $f$ and $f^\ast$ have the
+same spectral distribution and the same total influence.
+\end{proof}
+
+\begin{remark}\label{rem:readk}
+(1) Averaging the proof of \cref{lem:path} over uniformly random orders of the sets $V_t$ gives
+$p_0\mu\le\frac12\max_j\bigl(\sum_{t\ni j}|V_t|^{-1}\bigr)I(f)$, which improves the vacuum term when all terms are
+long. (2) For monotone formulas one can also take $\pi_t$ to be the probability that $t$ is the unique satisfied
+term divided by the probability that no other term is satisfied; Harris' inequality then bounds $\log(1/\pi_t)$ by
+$|V_t|$ plus the number of terms meeting $V_t$, which leads to a constant of order $k^2$. (3) The dependence on $k$
+enters in three places: the vacuum term, the Cauchy--Schwarz step, and the cover. For the star
+$x_c\wedge(x_1\vee\cdots\vee x_k)$, written as the read-$k$ formula $\bigvee_j(x_c\wedge x_j)$, one has
+$p_0\mu\approx k/8$ while $I(f)\approx1$, so \cref{lem:path} is sharp up to a factor $2$, and the reference measure of
+the proof loses a factor of order $k$ on this formula, which is a read-once formula.
+\end{remark}
+
+\subsection{Logarithmic dependence on $k$}\label{sec:readk-log}
+
+The reference measure of \cref{thm:readk-main} pays for every term of the cover twice, once to activate it and once
+for the variables it adds to $V(U)$, and the dense terms through a single variable can be as many as $k$. The
+following reference measure activates only one term in each connected piece of the cover, reaches the other terms of
+that piece through shared variables at a logarithmic price, and pays for the subset of $V(U)$ according to its
+density.
+
+For $\beta>2$ and integers $w\ge1$ put $\tau_\beta(m)=\Pr[\Bin(m-1,\frac12)<\frac m\beta-1]$,
+\[
+T_\beta(w)=\sup_{m\ge w}m\,\tau_\beta(m),\qquad M_\beta(k)=\sup_{w\ge1}\min\bigl(w,\,k\,T_\beta(w)\bigr).
+\]
+By the Chernoff bound $\tau_\beta(m)\le e^{-(m-1)D_\beta}$, where $D_\beta=\frac1\beta\ln\frac2\beta+
+(1-\frac1\beta)\ln\bigl(2-\frac2\beta\bigr)$ is the relative entropy of the Bernoulli laws with means $\frac1\beta$ and
+$\frac12$. The function $m\mapsto me^{-(m-1)D_\beta}$ increases up to $1/D_\beta$ and decreases afterwards, so
+\begin{equation}\label{eq:Mbound}
+M_\beta(k)\le\max\Bigl(\frac1{D_\beta},\,1+\frac{\ln k}{D_\beta}\Bigr).
+\end{equation}
+Indeed, if $w\ge w_0=1+\ln k/D_\beta$ and $w_0\ge1/D_\beta$, then $k\,T_\beta(w)\le kwe^{-(w-1)D_\beta}\le w_0$, while
+$\min(w,kT_\beta(w))\le w$ always.
+
+\begin{theorem}\label{thm:readk-log}
+Let $f$ be computed by a read-$k$ DNF or CNF formula and let $\beta>2$. Then
+\[
+H(f)\le\Bigl(11.39+\beta+\log k+\log(\beta k+1)+\log(\beta k)+\kappa_\beta M_\beta(k)\Bigr)\,I(f),
+\]
+where $\kappa_\beta=1+(\log e)\bigl(\frac1{\beta k}+\frac1{\beta k+1}\bigr)$. In particular
+$H(f)\le(30+5.6\log k)\,I(f)$ for every $k\ge1$.
+\end{theorem}
+
+\begin{proof}
+By duality, as in the proof of \cref{thm:readk}, it suffices to treat DNF formulas. Put $\lambda=1/k$,
+$\pi_t=2^{-|V_t|}$ and $\varepsilon=\Var(f)$.
+
+\emph{Reference measure.} Consider the following random procedure, which may fail.
+(a) Choose a set $R$ of terms, containing each term $t$ independently with probability $\lambda\pi_t/(1+\lambda\pi_t)$.
+(b) Put the terms of $R$ into a queue. When a term $u$ is taken from the queue, choose an integer $c\ge0$ with
+probability $1/((c+1)(c+2))$, a multiset of $c$ variables of $V_u$ uniformly among the $\binom{|V_u|+c-1}{c}$ such
+multisets, and for each chosen variable $j$ a term containing $j$, uniformly among the at most $k$ such terms; append
+the chosen terms to the queue. Let $U$ be the set of terms taken from the queue once it is empty (the procedure fails
+if it never empties).
+(c) Choose $s\ge1$ with probability $1/(s(s+1))$ and a uniformly random $s$-element subset of $V(U)$ (fail if
+$s>|V(U)|$).
+Let $Q_1(A)$ be the probability that the procedure outputs the set $A$; then $\sum_AQ_1(A)\le1$. If a nonempty set $A$
+is the output of a particular run, $Q_1(A)$ is at least the probability of that run, and so
+\begin{multline}\label{eq:animal}
+\log\frac1{Q_1(A)}\le\Lambda_\lambda+\sum_{r\in R}\log\frac1{\lambda\pi_r}
++\sum_{u\in U}\Bigl(\log\bigl((c_u+1)(c_u+2)\bigr)+\log\binom{|V_u|+c_u-1}{c_u}+c_u\log k\Bigr)\\
++\log\bigl(s(s+1)\bigr)+\log\binom{|V(U)|}{s},
+\end{multline}
+where $c_u$ is the integer chosen when $u$ is processed and $\Lambda_\lambda=\sum_t\log(1+\lambda\pi_t)\le(\log e)\,\mu/k$.
+
+\emph{A run producing $A$.} Let $A\ne\emptyset$ with $P(A)>0$, let $D(A)$ be the set of terms with
+$|A\cap V_t|\ge|V_t|/\beta$, and call $i\in A$ sparse if no term of $D(A)$ contains it, as in the proof of
+\cref{thm:readk-main}. Let $U_d\subseteq D(A)$ be a minimal family covering the non-sparse elements of $A$, and for
+each sparse $i$ let $t_i$ be a smallest term containing $i$, of size $w_i$. Put $U=U_d\cup\{t_i\}$. By minimality every
+term of $U_d$ contains a non-sparse element of $A$ that no other term of $U_d$ contains, and no $t_i$ belongs to
+$D(A)$; hence $|U|\le|A|$. In the graph on $U$ in which two terms are adjacent when their variable sets meet, choose
+in each connected component a root and a breadth-first spanning tree, and let $R$ be the set of roots. Processing the
+terms along these trees, each non-root term being chosen from its parent through a common variable, and then choosing
+$s=|A|$ and the subset $A$ of $V(U)$, is a run that outputs $A$; in it $c_u$ is the number of children of $u$, so
+$\sum_uc_u=|U|-|R|$.
+
+\emph{Cost of the run.} Put $s=|A|$ and $W=\sum_{i\in A\text{ sparse}}w_i$. The roots lie in different components,
+so their variable sets are pairwise disjoint; a root in $U_d$ has $|V_r|\le\beta|A\cap V_r|$, and every other root is
+some $t_i$. Hence
+\[
+\sum_{r\in R}\log\frac1{\lambda\pi_r}=\sum_{r\in R}\bigl(\log k+|V_r|\bigr)\le|R|\log k+\beta s+W.
+\]
+Since $(c+1)(c+2)\le2\cdot3^c$, the first sum over $u$ in \eqref{eq:animal} contributes at most $|U|+(|U|-|R|)\log3
+\le s(1+\log3)$, and the terms $c_u\log k$ together with $|R|\log k$ give $|U|\log k\le s\log k$. Every variable lies
+in at most $k$ terms, so $V_{\mathrm{tot}}=\sum_{u\in U}|V_u|\le\beta\sum_{u\in U_d}|A\cap V_u|+W\le\beta ks+W$. With
+$C=\sum_uc_u\le s$, the bound $\log\binom{n+c-1}{c}\le c\log\frac{e(n+c)}c$ and the log-sum inequality give
+\[
+\sum_{u\in U}\log\binom{|V_u|+c_u-1}{c_u}\le C\log\frac{e(V_{\mathrm{tot}}+C)}{C}\le s\log\frac{e(V_{\mathrm{tot}}+s)}s
+\le s\log\bigl(e(\beta k+1)\bigr)+\frac{(\log e)\,W}{\beta k+1},
+\]
+because $C\mapsto C\log(e(V+C)/C)$ is increasing and $\log(a+x)\le\log a+x\log e/a$. Finally
+$\log(s(s+1))\le s\log3$, and $|V(U)|\le V_{\mathrm{tot}}$ gives
+$\log\binom{|V(U)|}s\le s\log\frac{e|V(U)|}s\le s\log(e\beta k)+(\log e)W/(\beta k)$. Altogether
+\[
+\log\frac1{Q_1(A)}\le\Lambda_\lambda+|A|\bigl(\log k+\beta+1+2\log3+2\log e+\log(\beta k+1)+\log(\beta k)\bigr)
++\kappa_\beta W .
+\]
+
+\emph{Summation.} As in the proof of \cref{thm:readk-main}, $\sum_{A\ne\emptyset}P(A)W(A)=\sum_i\Inf_i(f)\,w_i\,
+\nu_i(E_i)$. By \cref{lem:witness}, $\nu_i(E_i)\le\min(1,k\max_s\tau_\beta(|V_{t_s}|))$, and $w_i\tau_\beta(m)\le
+T_\beta(w_i)$ for $m\ge w_i$, so $w_i\nu_i(E_i)\le\min(w_i,kT_\beta(w_i))\le M_\beta(k)$. By \cref{lem:path},
+$\varepsilon\Lambda_\lambda\le4p_0(\log e)\mu/k\le(\log e)\,I(f)$, and $h(\varepsilon)\le2.886\,I(f)$ by
+\cref{lem:empty}. Inserting these bounds in \eqref{eq:gibbs}, with $Q_1$ in place of the measure used there, and
+using $2.886+\log e+1+2\log3+2\log e<11.39$ proves the first claim.
+
+For the second take $\beta=8$, so that $D_8=0.3163\ldots$ and \eqref{eq:Mbound} gives $M_8(1)\le3.17$ and
+$M_8(k)\le1+2.2\log k$ for $k\ge2$. Since $\log(8k+1)\le3.17+\log k$ and $\log(8k)=3+\log k$, the constant is at most
+$25.56+1.35\cdot3.17<30$ for $k=1$, and at most $25.56+3\log k+1.18\,(1+2.2\log k)<30+5.6\log k$ for $k\ge2$.
+\end{proof}
+
+Optimising $\beta$ for each $k$ improves the constant of \cref{thm:readk-log} to less than $20+4.44\log k$ for
+$k\le10^6$. The bound of \cref{thm:readk-main} is smaller for $k\le2$. The reference measure does not need the
+activation of the dense terms, which is the source of the factor $k$ in \cref{thm:readk-main}: once one term of a
+connected piece of the cover is activated, a term overlapping it is described by a variable of an already chosen term
+and an index among at most $k$ terms, and the variables it brings are paid for only through the density of $A$ in
+$V(U)$, which is at least $1/(\beta k+1)$ up to the sparse terms.
+
+\section{Regular functions}\label{sec:regular}
+
+Negating an input multiplies $\hatg(A)$ by $\pm1$, so we may assume that $f$ is monotone and that its coordinates
+are ordered by decreasing desirability: $f(x^{i\leftarrow1,j\leftarrow0})\ge f(x^{i\leftarrow0,j\leftarrow1})$
+whenever $i<j$. For $i\in[n]$ let $U_i=\{1,\dots,i-1\}$.
+
+\begin{lemma}\label{lem:antichain}
+For every $i$ and every assignment $z$ to the coordinates outside $U_i\cup\{i\}$, the set of $y\in\bits^{U_i}$ such
+that $i$ is pivotal at $(y,z)$ is an antichain of $\bits^{U_i}$.
+\end{lemma}
+
+\begin{proof}
+Suppose $y<y'$ both have $i$ pivotal, choose $j\in U_i$ with $y_j=0<y'_j$, and let $y''=y\oplus e_j\le y'$. By
+monotonicity and since $j<i$,
+\[
+f(y',z,x_i=0)\ge f(y'',z,x_i=0)\ge f(y,z,x_i=1)=1,
+\]
+so $i$ is not pivotal at $(y',z)$.
+\end{proof}
+
+\begin{lemma}[Littlewood--Offord form of Sperner's theorem]\label{lem:sperner}
+If $\mathcal A\subseteq\bits^m$ is an antichain, then $|\mathcal A|\,2^{-m}\le\binom m{\lfloor m/2\rfloor}2^{-m}
+\le\frac{2}{\sqrt\pi}(m+1)^{-1/2}$ for every $m\ge0$.
+\end{lemma}
+
+\begin{proof}
+The first inequality is Sperner's theorem~\cite{Spe28}. For even $m=2r\ge2$, $\binom{2r}r4^{-r}\le(\pi r)^{-1/2}
+=(2/(\pi m))^{1/2}$. For odd $m=2r+1\ge3$, $\binom{2r+1}r2^{-2r-1}=\binom{2r}r4^{-r}\frac{2r+1}{2r+2}$ and
+$(2r+1)^3\le2r(2r+2)^2$, which again gives $\le(2/(\pi m))^{1/2}$; for $m=1$ the bound $1/2\le(2/\pi)^{1/2}$ is
+direct. Finally $(2/(\pi m))^{1/2}\le\frac2{\sqrt\pi}(m+1)^{-1/2}$ for $m\ge1$, and for $m=0$ the claim reads
+$1\le2/\sqrt\pi$.
+\end{proof}
+
+\begin{lemma}[Partial noise sensitivity of the derivative]\label{lem:noise}
+Let $i\ge2$, $N=i$, $0<c\le N$ and $\rho=1-c/N$. Then
+\[
+\sum_{T}\widehat{D_ig}(T)^2\,\rho^{|T\cap U_i|}\le\frac2{\sqrt\pi}\,c^{-1/2}\,\Inf_i(f).
+\]
+\end{lemma}
+
+\begin{proof}
+Write $d=D_ig$. Let $x$ be uniform, let $R\subseteq U_i$ contain each $j\in U_i$ independently with probability
+$c/N$, and let $y$ agree with $x$ outside $R$ and be uniform on $R$, independently of $x$. Then
+$\E[\chi_T(x)\chi_{T'}(y)]=\mathbf 1[T=T']\rho^{|T\cap U_i|}$, so the left side equals
+$\E[d(x)d(y)]\le\E\bigl[|d(x)|\Pr[d(y)\ne0\mid x]\bigr]$. Given $x$ and $R$, the points $y_R$ with $d(y)\ne0$ form
+an antichain of $\bits^R$ by \cref{lem:antichain} (the restriction of an antichain to a subcube is an antichain),
+so \cref{lem:sperner} gives $\Pr[d(y)\ne0\mid x,R]\le\frac2{\sqrt\pi}(|R|+1)^{-1/2}$. The size $|R|$ has the law
+$\Bin(N-1,c/N)$, so $\E[1/(|R|+1)]=(1-(1-c/N)^N)/c\le1/c$ and, by Jensen's inequality,
+$\E[(|R|+1)^{-1/2}]\le c^{-1/2}$. Finally $\E|d(x)|=\Inf_i(f)$.
+\end{proof}
+
+\begin{lemma}\label{lem:ranktail}
+Let $B=3\sqrt{3/\pi}$ and $L_1=2\ln B+2=4.1511\ldots$. For every $i$ with $\Inf_i(f)>0$,
+\[
+\E_{T\sim\nu_i}\Bigl[\ln\frac{i}{|T\cap U_i|+1}\Bigr]\le L_1 .
+\]
+\end{lemma}
+
+\begin{proof}
+For $i=1$ the left side is $0$. Let $i\ge2$, $N=i$ and $\kappa(T)=|T\cap U_i|\in[0,N-1]$. For real $K\ge1$ apply
+\cref{lem:noise} with $c=N/(3K)$, so that $\rho=1-1/(3K)$:
+\[
+\nu_i(\kappa\le K)\le\rho^{-K}\,\E_{\nu_i}\rho^{\kappa}\le\Bigl(1-\frac1{3K}\Bigr)^{-K}\frac{2}{\sqrt\pi}
+\Bigl(\frac{3K}N\Bigr)^{1/2}\le B\Bigl(\frac KN\Bigr)^{1/2},
+\]
+because $-K\ln(1-\frac1{3K})=\sum_{m\ge1}3^{-m}K^{1-m}/m$ is nonincreasing in $K$ and equals $\ln\frac32$ at $K=1$.
+Since $\ln(N/(\kappa+1))\in[0,\ln N]$,
+\[
+\E_{\nu_i}\ln\frac N{\kappa+1}=\int_0^{\ln N}\nu_i\bigl(\kappa+1<Ne^{-u}\bigr)\,du
+\le\int_0^\infty\min\bigl(1,Be^{-u/2}\bigr)\,du=2\ln B+2,
+\]
+using the previous bound with $K=Ne^{-u}\ge1$.
+\end{proof}
+
+\begin{lemma}\label{lem:ranksum}
+$\E_S\bigl[\sum_{i\in S}\ln^+(i/|S|)\bigr]\le L_1\,I(f)$.
+\end{lemma}
+
+\begin{proof}
+For $i\in S$ and $T=S\setminus\{i\}$ we have $|T\cap U_i|+1\le\min(|S|,i)$, hence
+$\ln^+(i/|S|)\le\ln(i/(|T\cap U_i|+1))$. Since $\Pr[S=T\cup\{i\}]=\Inf_i(f)\nu_i(T)$, summing \cref{lem:ranktail}
+with weights $\Inf_i(f)$ proves the claim.
+\end{proof}
+
+\begin{lemma}[Rank-weighted reference measure]\label{lem:rankref}
+For every random subset $S$ of $[n]$ and every $a>1$,
+\[
+H(S\mid|S|)\le\frac1{\ln2}\Bigl(\ln\frac{ea}{a-1}\,\E|S|+a\,\E\sum_{i\in S}\ln^+\frac i{|S|}\Bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+For $k\ge1$ let $\theta_k(s)=\min(1,(k/s)^a)$ and let $\pi_k(A)=Z_k^{-1}\prod_{i\in A}\theta_k(i)$ on $k$-sets,
+where $Z_k$ is the $k$-th elementary symmetric polynomial of $\theta_k(1),\dots,\theta_k(n)$. Then
+$Z_k\le(\sum_s\theta_k(s))^k/k!$, $\sum_s\theta_k(s)\le k+\int_k^\infty(k/s)^a\,ds=\frac{ka}{a-1}$ and
+$k!\ge(k/e)^k$, so $\ln Z_k\le k\ln\frac{ea}{a-1}$. Gibbs' inequality on each level gives
+$H(S\mid|S|=k)\le\frac1{\ln2}\E\bigl[\ln Z_k+a\sum_{i\in S}\ln^+(i/k)\bigm||S|=k\bigr]$; average over $k$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:regular}]
+By the chain rule, \cref{lem:empty}, \cref{lem:rankref} and \cref{lem:ranksum},
+\[
+H(f)=H(|S|)+H(S\mid|S|)\le\Bigl(3.8854+\frac{1+\ln\frac a{a-1}+aL_1}{\ln2}\Bigr)I(f).
+\]
+The bracket is minimised at $a=\frac12\bigl(1+\sqrt{1+4/L_1}\bigr)=1.2006\ldots$, where the second summand equals
+$11.214\ldots$, giving $H(f)\le15.1\,I(f)$.
+\end{proof}
+
+The same argument applies to Boolean functions of several regular functions, even when their desirability orders
+are unrelated.
+
+\begin{theorem}\label{thm:multi}
+Let $h_1,\dots,h_m$ be regular Boolean functions on $\bits^n$, with arbitrary and possibly different desirability
+orders and orientations, and let $F:\bits^m\to\bits$ be arbitrary. Then $f=F(h_1,\dots,h_m)$ satisfies
+\[
+H(f)\le(16.5+8.4\ln m)\,I(f).
+\]
+In particular this holds for every intersection of $m$ halfspaces, and for $x\mapsto G(w\cdot x)$ when
+$G:\mathbb R\to\bits$ changes sign at most $m$ times.
+\end{theorem}
+
+\begin{proof}
+For each $l$ fix an orientation and a desirability order of $h_l$, let $r_l(i)$ be the position of $i$ in the
+$l$-th order and let $U_i^l$ be the set of the $r_l(i)-1$ coordinates that precede $i$ in it. If $i$ is pivotal for
+$f$ at $x$, then it is pivotal for some $h_l$ at $x$. Let $d_{i,l}=D_ig\cdot\mathbf 1[\,l$ is the least index for
+which $i$ is pivotal for $h_l\,]$; these functions have disjoint supports, $D_ig=\sum_ld_{i,l}$, and the support of
+$d_{i,l}$ lies in the pivotal set of $i$ for $h_l$. \Cref{lem:antichain} applied to $h_l$ shows that this support,
+restricted to any subcube spanned by coordinates of $U_i^l$, is an antichain in that subcube. The proof of
+\cref{lem:noise} uses nothing else, so it applies to $d_{i,l}$ with $U_i^l$ in place of $U_i$, and the proof of
+\cref{lem:ranktail} then gives, for the probability measure $\nu_{i,l}(T)=\widehat{d_{i,l}}(T)^2/\|d_{i,l}\|_2^2$ and
+$F_l(T)=\ln\frac{r_l(i)}{|T\cap U_i^l|+1}$,
+\[
+\nu_{i,l}(F_l>u)\le\min(1,Be^{-u/2})\quad(u\ge0),\qquad\text{hence}\qquad
+\E_{\nu_{i,l}}e^{\lambda F_l}\le\frac{B^{2\lambda}}{1-2\lambda}\quad(0<\lambda<\tfrac12).
+\]
+As in the proof of \cref{lem:witness}, the Cauchy--Schwarz inequality gives $\nu_i\le\sum_l\nu_{i,l}$. For
+$G_i=\min_lF_l$, Jensen's inequality and this domination give, with $\lambda=\frac14$,
+\[
+\E_{\nu_i}G_i\le\frac1\lambda\ln\E_{\nu_i}e^{\lambda G_i}\le\frac1\lambda\ln\sum_l\E_{\nu_{i,l}}e^{\lambda F_l}
+\le4\ln m+4\ln2+2\ln B<4\ln m+4.93 .
+\]
+Since $\ln^+\frac{r_l(i)}{|S|}\le F_l(S\setminus\{i\})$ for $i\in S$, summing with weights $\Inf_i(f)$ as in the
+proof of \cref{lem:ranksum} gives $\E_S\sum_{i\in S}\min_l\ln^+\frac{r_l(i)}{|S|}\le(4\ln m+4.93)\,I(f)$.
+
+Now repeat the proof of \cref{lem:rankref} with $\theta_k(i)=\max_l\min\bigl(1,(k/r_l(i))^a\bigr)$. Each order is a
+permutation of $[n]$, so $\sum_i\theta_k(i)\le mka/(a-1)$ and $\ln Z_k\le k\bigl(1+\ln m+\ln\frac a{a-1}\bigr)$, while
+$\ln\frac1{\theta_k(i)}=a\min_l\ln^+\frac{r_l(i)}k$. Together with \cref{lem:empty},
+\[
+H(f)\le\Bigl(3.886+\frac{1+\ln\frac a{a-1}+4.93\,a+(1+4a)\ln m}{\ln2}\Bigr)I(f),
+\]
+and $a=1.2$ gives the stated bound. For $G(w\cdot x)$, write $f$ as a Boolean function of the $m$ threshold
+functions $\mathrm{sgn}(w\cdot x-\theta_l)$ at the sign changes of $G$.
+\end{proof}
+
+When the orders of $h_1,\dots,h_m$ coincide, the supports of the pieces lie in a union of $m$ antichains of the same
+predecessor cube, the bound of \cref{lem:sperner} is simply multiplied by $m$, and the constant improves to
+$3.8854+\min_{a>1}\bigl(1+\ln\frac a{a-1}+a(L_1+2\ln m)\bigr)/\ln2=15.1+O(\log m)$.
+
+\begin{remark}\label{rem:multi-examples}
+\Cref{thm:multi} applies to decision lists whose tests are $m$ threshold functions, to unions and intersections of
+$m$ halfspaces, and to DNF formulas with $m$ terms, each term being a threshold function; for read-$k$ DNF formulas
+with few terms it can be stronger than \cref{thm:readk}. It also applies to every function $f$ that becomes regular
+after fixing the values of a set $K$ of $k$ coordinates (the order may depend on the values): $f$ is a Boolean
+function of the $k$ coordinates in $K$ and of the $2^k$ restrictions $f(a,\cdot)$, $a\in\bits^K$, all of which are
+regular, so $H(f)\le\bigl(16.5+8.4\ln(k+2^k)\bigr)I(f)$.
+\end{remark}
+
+\begin{remark}\label{rem:width}
+The proof of \cref{thm:regular} uses the order only through \cref{lem:antichain}, which needs every coordinate of
+$U_i$ to be at least as desirable as $i$, and through the bound $\sum_s\theta_k(s)\le ka/(a-1)$ in
+\cref{lem:rankref}. Let $f$ be monotone, let $\preceq$ be its desirability preorder, refined inside each class of
+equivalent coordinates by a fixed order, and let $w$ be the largest number of pairwise incomparable coordinates. Take
+$U_i$ to be the set of coordinates above $i$ and $r(i)=|U_i|+1$. \Cref{lem:antichain,lem:noise,lem:ranktail,lem:ranksum}
+hold with the same proofs. By Dilworth's theorem the coordinates form $w$ chains, and the $p$-th element of a chain
+has $r\ge p$, so $\sum_i\min(1,(k/r(i))^a)\le wka/(a-1)$ and $\ln Z_k\le k\bigl(\ln\frac{ea}{a-1}+\ln w\bigr)$.
+Hence $H(f)\le(15.1+\log w)\,I(f)$. A monotone function invariant under $S_{n_1}\times\cdots\times S_{n_w}$ acting on
+$w$ blocks of coordinates has width at most $w$; for these functions, with or without monotonicity, O'Donnell, Wright
+and Zhou~\cite{OWZ11} proved the better bound $H(f)\le(12.04+\log w)\,I(f)$.
+\end{remark}
+
+\begin{remark}
+O'Donnell, Wright and Zhou~\cite[Theorem~5]{OWZ11} proved $H(|S|)\le3I(f)$ for every Boolean function. Using it in
+place of the second bound of \cref{lem:empty}, the constant of \cref{thm:regular} becomes $14.22$, and those of
+\cref{thm:multi} and \cref{rem:width} decrease accordingly. The function
+$\mathrm{AND}_n$ is a threshold function with $H/I\to4$, so the optimal constant for regular functions is at least
+$4$.
+\end{remark}
+
+\section{Unions of regular functions}\label{sec:union}
+
+The two mechanisms combine. In this section $f=h_1\vee\cdots\vee h_m$, where $h_l$ depends exactly on the variables
+in a set $R_l$, and every variable lies in at most $k$ of the sets $R_l$.
+
+\begin{theorem}\label{thm:union}
+If $h_1,\dots,h_m$ are regular and every variable is relevant to at most $k$ of them, then $h_1\vee\cdots\vee h_m$
+and $h_1\wedge\cdots\wedge h_m$ satisfy $H(f)\le(3.9+21.2k)\,I(f)$.
+\end{theorem}
+
+The terms of a DNF formula are threshold functions, so \cref{thm:union} contains \cref{thm:readk,thm:regular} up to
+the constants. It also applies to unions and intersections of halfspaces in which every variable has a nonzero
+weight in at most $k$ of the halfspaces, with a constant that does not depend on their number.
+
+\begin{lemma}\label{lem:upath}
+Let $h_1,\dots,h_m$ be arbitrary Boolean functions, $h_l$ depending only on the variables in $R_l$, with every
+variable in at most $k$ of the sets $R_l$. For $f=h_1\vee\cdots\vee h_m$ and $p_0=\Pr[f=0]$,
+\[
+p_0\sum_l\Pr[h_l=1]\le\frac k4\,I(f).
+\]
+\end{lemma}
+
+\begin{proof}
+Fix $l$, let $x$ be uniform and let $x'$ be obtained from $x$ by resampling the coordinates in $R_l$. Since
+$h_l(x')$ depends only on $x'_{R_l}$, which is independent of $x$, and $f\ge h_l$,
+$\Pr[f(x)=0,\,f(x')=1]\ge p_0\Pr[h_l=1]$. Now resample the coordinates of $R_l$ one at a time. Every intermediate
+point is uniform, and resampling a coordinate $j$ of a uniform point changes $f$ from $0$ to $1$ with probability
+$\Inf_j(f)/4$. If $f(x)=0$ and $f(x')=1$, one of these steps does so, so the probability above is at most
+$\frac14\sum_{j\in R_l}\Inf_j(f)$. Summing over $l$ proves the lemma.
+\end{proof}
+
+In \cref{lem:witness} the subcube structure of a term made the spectral sample fill the witnessing term uniformly.
+For a regular function we use instead that its pivotal set is small when the function is rarely true.
+
+\begin{lemma}\label{lem:level}
+Let $h$ be a Boolean function depending only on the variables in a set $R\ni j$, let $\alpha=\Inf_j(h)$,
+and let $d:\bits^{[n]\setminus\{j\}}\to\{-1,0,1\}$ vanish at every point at which $j$ is not pivotal for $h$. For the
+probability measure $\nu(T)=\widehat d(T)^2/\|d\|_2^2$ and every integer $0\le\ell\le\ln(1/\alpha)$,
+\[
+\nu\bigl(|T\cap R|\le\ell\bigr)\le\varphi_\ell(\alpha),\qquad\text{where }\varphi_0(\alpha)=\alpha\text{ and }
+\varphi_\ell(\alpha)=\alpha\Bigl(\frac{2e\ln(1/\alpha)}{\ell}\Bigr)^{\ell}\text{ for }\ell\ge1.
+\]
+\end{lemma}
+
+\begin{proof}
+Write the argument of $d$ as $(y,z)$ with $y$ the restriction to $R\setminus\{j\}$, put $d_z=d(\cdot,z)$ and
+$W^{\le\ell}[\phi]=\sum_{|U|\le\ell}\widehat\phi(U)^2$. Parseval's identity in $z$ gives
+$\sum_{T:\,|T\cap R|\le\ell}\widehat d(T)^2=\E_zW^{\le\ell}[d_z]$ and $\|d\|_2^2=\E_z\|d_z\|_2^2$. Each $d_z$ takes
+values in $\{-1,0,1\}$ and vanishes outside the set of $y$ at which $j$ is pivotal for $h$, a set of measure
+$\alpha$, so $\|d_z\|_2^2=\alpha_z\le\alpha$. For $\ell=0$, $W^{\le0}[d_z]=(\E d_z)^2\le\alpha_z^2$. For $\ell\ge1$ with
+$\alpha_z>0$ put $\delta=\ell/(2\ln(1/\alpha_z))\le\frac12$. By H\"older's inequality and the hypercontractive
+inequality $\|\phi\|_{1+1/\delta}\le\delta^{-\ell/2}\|\phi\|_2$ for $\phi$ of degree at most $\ell$,
+\[
+W^{\le\ell}[d_z]=\langle d_z,d_z^{\le\ell}\rangle\le\alpha_z^{1/(1+\delta)}\,\delta^{-\ell/2}\,W^{\le\ell}[d_z]^{1/2},
+\]
+hence $W^{\le\ell}[d_z]\le\alpha_z^{2-2\delta}\delta^{-\ell}=\alpha_z^2\bigl(2e\ln(1/\alpha_z)/\ell\bigr)^\ell$. In both
+cases $W^{\le\ell}[d_z]\le\alpha_z\varphi_\ell(\alpha_z)$. The function $\varphi_\ell$ is nondecreasing on
+$(0,e^{-\ell}]$, which contains every $\alpha_z$, so $\E_zW^{\le\ell}[d_z]\le\varphi_\ell(\alpha)\,\E_z\alpha_z$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:union}]
+The complement of $h_1\wedge\cdots\wedge h_m$ is the union of the complements of the $h_l$, which are regular, and a
+function and its complement have the same spectral distribution; so it suffices to treat unions. For each $l$ fix
+an orientation under which $h_l$ is monotone and an order of $R_l$ by decreasing desirability for $h_l$; let
+$r_l(j)$ be the position of $j\in R_l$ and $U^l_j$ the set of the $r_l(j)-1$ variables before it. Put
+$\pi_l=\min(\Pr[h_l=1],\frac12)$, $\varepsilon=\Var(f)$, $a=1.44$, $\beta=5$, $c_1=1+\frac a{a-1}$ and
+$c_2=1+\frac{c_1}\beta$.
+
+\emph{Reference measure.} For $\kappa\ge1$ let $B^l_\kappa$ be the law of the random subset of $R_l$ that contains
+each $j$ independently with probability $\theta^l_\kappa(j)=\frac12\min\bigl(1,(\kappa/r_l(j))^a\bigr)$. Let $L$
+contain each index $l$ independently with probability $\pi_l$, for each $l\in L$ choose $\kappa_l\ge1$ with
+probability $2^{-\kappa_l}$ and then $A_l\sim B^l_{\kappa_l}$, all independently, and let $Q_1(A)$ be the
+probability that $\bigcup_{l\in L}A_l=A$. With $Q(\emptyset)=1-\varepsilon$ and $Q(A)=\varepsilon Q_1(A)$ for
+$A\ne\emptyset$ we have $\sum_AQ(A)\le1$, and $Q(A)>0$ whenever $P(A)>0$, so Gibbs' inequality gives
+\[
+H(f)\le h(\varepsilon)+\sum_{A\ne\emptyset}P(A)\log\frac1{Q_1(A)}.
+\]
+
+\emph{A choice for each $A$.} Fix $A\ne\emptyset$ and put $\kappa_l=|A\cap R_l|$ and
+$\lambda_l=\frac1\beta\log\frac1{\pi_l}$; call $l$ dense if $\kappa_l\ge\lambda_l$. For $j\in A$ and each $l$ with
+$j\in R_l$ put $F^j_l=\ln\frac{r_l(j)}{|A\cap U^l_j|+1}\ge0$ and
+\[
+G_j(l)=\frac a{\ln2}F^j_l+c_2\log\frac1{\pi_l}\,\mathbf 1[\,l\text{ is not dense}\,],
+\]
+let $\tau(j)$ minimise $G_j(l)$ over these $l$, and write $G_j=G_j(\tau(j))$. Let $L_A$ consist of the dense indices
+and the $\tau(j)$, $j\in A$, and for $l\in L_A$ let $A_l=\{j\in A:\tau(j)=l\}$. Then $A=\bigcup_{l\in L_A}A_l$ and
+$\kappa_l\ge1$ for $l\in L_A$. Using $\log\frac1{1-x}\le2x$ for $0\le x\le\frac12$ and
+$\sum_{j\in R_l}\theta^l_\kappa(j)\le\frac12\bigl(\kappa+\int_\kappa^\infty(\kappa/r)^a\,dr\bigr)=\frac{\kappa a}{2(a-1)}$,
+\[
+\log\frac1{B^l_\kappa(A_l)}\le\sum_{j\in A_l}\Bigl(1+a\log^+\frac{r_l(j)}\kappa\Bigr)+\frac{\kappa a}{a-1},
+\]
+and for $j\in A_l$ we have $\kappa_l\ge|A\cap U^l_j|+1$, so that $\log^+(r_l(j)/\kappa_l)\le F^j_l/\ln2$. With
+$\Lambda=\sum_l\log\frac1{1-\pi_l}$ this gives
+\[
+\log\frac1{Q_1(A)}\le\Lambda+\sum_{l\in L_A}\Bigl(\log\frac1{\pi_l}+c_1\kappa_l\Bigr)
++\sum_{j\in A}\Bigl(1+\frac a{\ln2}F^j_{\tau(j)}\Bigr).
+\]
+For dense $l$, $\log\frac1{\pi_l}\le\beta\kappa_l$. A nondense $l\in L_A$ equals $\tau(j)$ for some $j\in A$ and
+satisfies $\log\frac1{\pi_l}+c_1\kappa_l<c_2\log\frac1{\pi_l}$. As $\sum_l\kappa_l\le k|A|$,
+\[
+\log\frac1{Q_1(A)}\le\Lambda+(\beta+c_1)\,k|A|+\sum_{j\in A}(1+G_j).
+\]
+
+\emph{The pieces.} For $j$ with $\Inf_j(f)>0$ let $l_1,\dots,l_r$ ($r\le k$) be the indices with $j\in R_{l_s}$. If
+$j$ is pivotal for $f$ at $x$, then it is pivotal for some $h_{l_s}$ at $x$. As in the proof of \cref{thm:multi},
+split $D_jg$ according to the least such $s$ into pieces $d_s$ with disjoint supports, $d_s$ vanishing where $j$ is
+not pivotal for $h_{l_s}$, and let $\nu_{j,s}$ be the normalised spectral measure of $d_s$. The Cauchy--Schwarz
+inequality gives $\nu_j\le\sum_s\nu_{j,s}$, and $G_j\le G_j(l_s)$ for every $s$, so with $A=T\cup\{j\}$,
+\[
+\E_{T\sim\nu_j}G_j\le\sum_{s=1}^r\Bigl(\frac a{\ln2}\E_{\nu_{j,s}}F^j_{l_s}+c_2\log\frac1{\pi_{l_s}}\;
+\nu_{j,s}\bigl(l_s\text{ is not dense}\bigr)\Bigr).
+\]
+The proof of \cref{thm:multi} gives $\E_{\nu_{j,s}}F^j_{l_s}\le L_1$. Put $\lambda=\lambda_{l_s}$. If $\lambda\le1$, then
+$l_s$ is dense because $j\in A\cap R_{l_s}$. Otherwise $\pi_{l_s}=2^{-\beta\lambda}<\frac12$, and $l_s$ is not dense
+exactly when $|T\cap R_{l_s}|\le\ell:=\lceil\lambda\rceil-2$. At a point where $j$ is pivotal for $h_{l_s}$, one of
+the two neighbours has $h_{l_s}=1$, so $\Inf_j(h_{l_s})\le2\Pr[h_{l_s}=1]=2^{1-\beta\lambda}$; as
+$\ell\le(\beta\lambda-1)\ln2$, \cref{lem:level} gives
+\[
+\log\frac1{\pi_{l_s}}\;\nu_{j,s}\bigl(l_s\text{ is not dense}\bigr)\le\beta\lambda\,\varphi_\ell\bigl(2^{1-\beta\lambda}\bigr)
+\le K:=\max_{\ell\ge0}\,5(\ell+1)\,\varphi_\ell\bigl(2^{-5\ell-4}\bigr)=0.6624\ldots;
+\]
+here we used that for fixed $\ell$ the middle expression decreases in $\lambda\in(\ell+1,\ell+2]$, since its
+logarithmic derivative is $\frac1\lambda-\beta\ln2\,(1-\ell/((\beta\lambda-1)\ln2))<0$, and the maximum is attained at
+$\ell=1$.
+
+\emph{Conclusion.} Since $P(A)=\Inf_j(f)\,\nu_j(A\setminus\{j\})$ for $j\in A$, summing over $A$ gives
+\[
+H(f)\le h(\varepsilon)+\varepsilon\Lambda+(\beta+c_1)k\,I(f)+I(f)+k\Bigl(\frac{aL_1}{\ln2}+c_2K\Bigr)I(f).
+\]
+By \cref{lem:empty}, $h(\varepsilon)\le2.8854\,I(f)$, and by \cref{lem:upath},
+$\varepsilon\Lambda\le4p_0\cdot2\sum_l\pi_l\le2k\,I(f)$. The coefficient of $k$ is
+$2+5+4.273+8.624+1.855\cdot0.6624<21.2$.
+\end{proof}
+
+The device of \cref{sec:readk-log} also applies here, with the witnessing terms replaced by the functions $h_l$ and
+the uniform subsets of $V(U)$ replaced by rank laws.
+
+\begin{theorem}\label{thm:union-log}
+Under the hypotheses of \cref{thm:union}, $H(f)\le(54+12.8\log k)\,I(f)$.
+\end{theorem}
+
+\begin{proof}
+Keep the notation of the proof of \cref{thm:union}, but put $a=1.44$, $\beta=10$ and $\lambda=1/k$, and let
+$\theta^l_s(i)=\min(1,(s/r_l(i))^a)$ for $i\in R_l$ and $Z^l_s$ the $s$-th elementary symmetric function of the numbers
+$\theta^l_s(i)$, $i\in R_l$; as in the proof of \cref{lem:rankref}, $\log Z^l_s\le s\log\frac{ea}{a-1}$.
+
+\emph{Reference measure.} (a) Choose a set $R$ of indices, containing each $l$ independently with probability
+$\lambda\pi_l/(1+\lambda\pi_l)$. (b) Put the indices of $R$ into a queue. When $l$ is taken from the queue, choose
+$s\ge1$ with probability $1/(s(s+1))$ and an $s$-element subset $B_l\subseteq R_l$ with probability
+$\prod_{i\in B_l}\theta^l_s(i)/Z^l_s$; then choose $c\ge0$ with probability $1/((c+1)(c+2))$, a multiset of $c$
+elements of $B_l$ uniformly, and for each chosen element $j$ an index $l'$ with $j\in R_{l'}$, uniformly among the at
+most $k$ such indices; append these indices to the queue. (c) When the queue is empty, output $\bigcup_lB_l$. Let
+$Q_1(A)$ be the probability that the output is $A$.
+
+\emph{A run producing $A$.} Let $A\ne\emptyset$ with $P(A)>0$. Define $F^j_l$, the dense indices and $G_j(l)$ as in the
+proof of \cref{thm:union}, with $c_2$ replaced by $1$, let $\tau(j)$ minimise $G_j(l)$ over the $l$ with $j\in R_l$,
+put $A_l=\{j\in A:\tau(j)=l\}$ and let $\mathcal F$ be the set of $l$ with $A_l\ne\emptyset$. Consider the directed
+graph on $\mathcal F$ with an edge $l\to l'$ when $l\ne l'$ and $A_l\cap R_{l'}\ne\emptyset$, choose one index in each
+strongly connected component that receives no edge from another component, and let $R$ be the set of these roots.
+Every index of $\mathcal F$ is reached from a root; take a breadth-first spanning forest along the edges, attach each
+non-root $l'$ to its parent $l$ through an element of $A_l\cap R_{l'}$, and let $B_l=A_l$ for $l\in\mathcal F$. This is
+a run that outputs $A$, with $|R|+\sum_lc_l=|\mathcal F|\le|A|$, where $c_l$ is the number of children of $l$.
+
+The sets $A\cap R_r$, $r\in R$, are pairwise disjoint. Indeed, if $j\in A\cap R_r\cap R_{r'}$ with $r\ne r'$ and
+$l=\tau(j)$, then either $l\notin\{r,r'\}$ and both $l\to r$ and $l\to r'$ are edges, or $l=r$ and $r\to r'$ is an
+edge, or $l=r'$ and $r'\to r$ is an edge; in each case two roots lie in one strong component or a root's component
+receives an edge from another one, which the choice of roots excludes.
+
+\emph{Cost of the run.} Let $\kappa_l=|A\cap R_l|$ and $N_j=\log\frac1{\pi_{\tau(j)}}\mathbf1[\tau(j)\text{ is not
+dense}]$, so that $G_j:=G_j(\tau(j))=\frac a{\ln2}F^j_{\tau(j)}+N_j$. A dense root has $\log\frac1{\pi_r}\le\beta\kappa_r$,
+and a root that is not dense is $\tau(j)$ for some $j$; by the disjointness just proved,
+$\sum_{r\in R}\log\frac1{\lambda\pi_r}\le|R|\log k+\beta|A|+\sum_{j\in A}N_j$. For $i\in A_l$ with $s=|A_l|$, write
+$u=|A\cap U^l_i|$; then $u+1\le\kappa_l$ and $\ln^+(r_l(i)/s)\le F^i_l+\ln(\kappa_l/s)$, so by the log-sum inequality and
+$\sum_l\kappa_l\le k|A|$,
+\[
+\sum_{l\in\mathcal F}\sum_{i\in A_l}\log\frac1{\theta^l_{|A_l|}(i)}\le\frac a{\ln2}\sum_{j\in A}F^j_{\tau(j)}
++a\sum_l|A_l|\log\frac{\kappa_l}{|A_l|}\le\frac a{\ln2}\sum_{j\in A}F^j_{\tau(j)}+a|A|\log k .
+\]
+The choices of $s$, of $c$, of the multisets and of the indices of the children cost at most $|A|\log3$,
+$|A|(1+\log3)$, $|A|\log(2e)$ and $(|\mathcal F|-|R|)\log k$ in total, as in the proof of \cref{thm:readk-log}, and
+together with $|R|\log k$ from the roots the indices cost $|\mathcal F|\log k\le|A|\log k$. Hence
+\[
+\log\frac1{Q_1(A)}\le\Lambda_\lambda+|A|\Bigl((1+a)\log k+\beta+1+2\log3+\log\frac{ea}{a-1}+\log(2e)\Bigr)
++\sum_{j\in A}G_j,
+\]
+with $\Lambda_\lambda=\sum_l\log(1+\lambda\pi_l)\le(\log e)\sum_l\pi_l/k$.
+
+\emph{The pieces.} Let $d_s$, $\nu_{j,s}$ and $l_s$ be as in the proof of \cref{thm:union}, so that
+$\nu_j\le\sum_s\nu_{j,s}$ and $G_j\le G_j(l_s)$ for every $s$. Put $b_s=\log\frac1{\pi_{l_s}}$. The proof of
+\cref{thm:multi} gives $\nu_{j,s}(F^j_{l_s}>v)\le Be^{-v/2}$, and the argument of the proof of \cref{thm:union} gives
+$\nu_{j,s}(l_s\text{ is not dense})\le g(b_s)$, where $g(b)=\sup\{\varphi_{\ell(b')}(2^{1-b'}):b'\ge b,\ b'>\beta\}$ and
+$\ell(b')=\lceil b'/\beta\rceil-2$. On each interval $(10(\ell+1),10(\ell+2)]$ the logarithm of
+$2^{0.44b}\varphi_\ell(2^{1-b})$ decreases, and its limits at the left end points are $-4.6,-4.04,-4.26,-4.56,\dots$ for
+$\ell=0,1,2,3,\dots$, decreasing from $\ell=1$ on, so $g(b)\le C_g2^{-\gamma b}$ with $\gamma=0.44$ and
+$C_g=2^{-4.04}$. Since $\{G_j(l_s)>u\}\subseteq\{\frac a{\ln2}F^j_{l_s}>\frac u2\}\cup\{l_s\text{ not dense},\,b_s>\frac u2\}$,
+\[
+\nu_j(G_j>u)\le\min\bigl(1,\,kBe^{-u\ln2/(4a)}+k\,C_g2^{-\gamma u/2}\bigr),
+\]
+and integrating, with $\min(1,x+y)\le\min(1,2x)+\min(1,2y)$ and $2C_g<1$,
+\[
+\E_{\nu_j}G_j\le\frac{4a}{\ln2}\bigl(\ln(2kB)+1\bigr)+\frac2\gamma\bigl(\log k+\log e\bigr).
+\]
+
+\emph{Conclusion.} Sum over $A$ as before. We have $h(\varepsilon)\le2.886\,I(f)$, and
+$\varepsilon\Lambda_\lambda\le(\log e)\,I(f)$ because $\varepsilon\le4p_0$ and \cref{lem:upath} gives
+$4p_0\sum_l\pi_l\le k\,I(f)$. The constant is at most $53.7+(1+a+4a+2/\gamma)\log k<54+12.8\log k$.
+\end{proof}
+
+The bound of \cref{thm:union} is smaller for $k\le3$. Optimising $a$ and $\beta$ for each $k$ and integrating the tail
+bounds exactly gives a constant below $61$ for $k\le10$ and below $108$ for $k\le1000$.
+
+The two mechanisms also combine with \cref{thm:multi}: the functions $h_l$ may themselves be Boolean functions of
+several regular functions.
+
+\begin{theorem}\label{thm:union-multi}
+Let $f=h_1\vee\cdots\vee h_m$ or $f=h_1\wedge\cdots\wedge h_m$, where every $h_l$ is a Boolean function of at most $M$
+regular functions, whose desirability orders are arbitrary, and every variable is relevant to at most $k$ of the
+functions $h_l$. Then
+\[
+H(f)\le(54+12.8\log k+6.8\log M)\,I(f)\qquad\text{and}\qquad H^+(f)\le(93+23.1\log k+12.6\log M)\,J(f).
+\]
+\end{theorem}
+
+For instance, unions and intersections of polytopes with at most $M$ facets in which every variable has a nonzero
+weight in at most $k$ of the polytopes satisfy the conjecture with a constant that does not depend on their number,
+and so do read-$k$ DNF formulas in which every term is replaced by a Boolean function of at most $M$ threshold
+functions on its variables. A Boolean function of $w$ variables is a Boolean function of the $w$ dictators $x_j$,
+which are regular, so a union $h_1\vee\cdots\vee h_m$ in which every $h_l$ depends on at most $w$ variables and every
+variable is relevant to at most $k$ of the $h_l$ satisfies $H(f)\le(54+12.8\log k+6.8\log w)\,I(f)$, whatever the
+functions $h_l$ are.
+
+\begin{proof}
+A complement of a Boolean function of $M$ regular functions is again one, so it suffices to treat unions. Write
+$h_l=F_l(h_{l,1},\dots,h_{l,M})$ with $h_{l,r}$ regular, depending on the variables of a set $R_{l,r}\subseteq R_l$,
+and let $r_{l,r}(i)$ be the position of $i$ in a desirability order of $h_{l,r}$ and $U^{l,r}_i$ the set of variables
+before it. The proof of \cref{thm:union-log} applies with three changes.
+
+(i) In the reference measure put $\theta^l_s(i)=\max_r\min\bigl(1,(s/r_{l,r}(i))^a\bigr)$, the maximum over the $r$
+with $i\in R_{l,r}$. Then $\sum_i\theta^l_s(i)\le Msa/(a-1)$, and as in the proof of \cref{lem:rankref},
+$\log Z^l_s\le s\log\frac{eMa}{a-1}$.
+
+(ii) In the run put $F^j_l=\min_r\ln\bigl(r_{l,r}(j)/(|A\cap U^{l,r}_j|+1)\bigr)$, the minimum over the $r$ with
+$j\in R_{l,r}$. For $i\in A_l$ and the $r$ attaining this minimum, $|A\cap U^{l,r}_i|+1\le\kappa_l$, so
+$\ln^+(r_{l,r}(i)/|A_l|)\le F^i_l+\ln(\kappa_l/|A_l|)$ and the rank costs are bounded as before. The per-set bound
+gains the term $|A|\log M$ from (i).
+
+(iii) If $j$ is pivotal for $h_{l_s}$, it is pivotal for some $h_{l_s,r}$. Splitting the piece $d_s$ further
+according to the least such $r$ gives at most $M$ pieces, each vanishing where $j$ is not pivotal for a regular
+function, so the Cauchy--Schwarz inequality and the proof of \cref{thm:multi} give
+$\nu_{j,s}(F^j_{l_s}>v)\le MBe^{-v/2}$, while the bound on $\nu_{j,s}(l_s\text{ is not dense})$, which uses only
+\cref{lem:level}, is unchanged. Hence $\E_{\nu_j}G_j\le\frac{4a}{\ln2}\bigl(\ln(2kMB)+1\bigr)+\frac2\gamma(\log k+\log e)$.
+
+The path lemma (\cref{lem:upath}) holds for arbitrary $h_l$. The constant becomes
+$53.7+12.75\log k+(1+4a)\log M$ with $a=1.44$. For $H^+$ the proof of \cref{thm:plus}(d) applies with the same
+changes. In its second case $\Inf_j(h_{l_s})>1/(2k)$, so some $h_{l_s,r}$ has $\Inf_j(h_{l_s,r})>1/(2kM)$; since the
+influences of a regular function do not increase along its order and their squares sum to at most $1$, this gives
+$r_{l_s,r}(j)<4k^2M^2$ and $G_j<a\log(4k^2M^2)+\log(4k)$ pointwise. The constant becomes
+$92.7+23.05\log k+(1+8a)\log M$.
+\end{proof}
+
+\section{The strengthened inequality and composition}\label{sec:plus}
+
+Recall $H^+(f)=\sum_{A\ne\emptyset}P(A)\log(1/P(A))$ from \eqref{eq:feiplus}, and put
+\[
+W(f)=\sum_{|A|\ge2}P(A),\qquad J(f)=\sum_{|A|\ge2}|A|\,P(A)=\sum_{i=1}^n\Var(D_ig).
+\]
+The second expression for $J(f)$ holds because $\sum_{A\ni i,\,A\ne\{i\}}P(A)=\Inf_i(f)-\widehat{D_ig}(\emptyset)^2
+=\Var(D_ig)$; note that $\widehat{D_ig}(\emptyset)=\hatg(\{i\})$. Since $|A|\le2(|A|-1)$ when $|A|\ge2$, we have
+$J(f)\le2\bigl(I(f)-\Var(f)\bigr)$, so it suffices to bound $H^+(f)$ by a multiple of $J(f)$. The next two lemmas
+hold for every Boolean function.
+
+\begin{lemma}\label{lem:single}
+For every $i\in[n]$, $\;P(\{i\})\log\dfrac1{P(\{i\})}\le\dfrac2{\ln2}\,\Var(D_ig)$.
+\end{lemma}
+
+\begin{proof}
+Let $b=|\hatg(\{i\})|=|\E D_ig|$. Then $b\le\E|D_ig|=\Inf_i(f)$, so $\Var(D_ig)=\Inf_i(f)-b^2\ge b-b^2$. Since
+$\ln(1/b)\le1/b-1$, we get $P(\{i\})\log(1/P(\{i\}))=\frac2{\ln2}\,b^2\ln\frac1b\le\frac2{\ln2}(b-b^2)$.
+\end{proof}
+
+The constant in \cref{lem:single} cannot be improved: for $f=x_1\wedge\neg(x_2\wedge\cdots\wedge x_w)$ and $i=1$
+the ratio of the two sides tends to $2/\ln 2$ as $w\to\infty$.
+
+\begin{lemma}\label{lem:mass}
+$W(f)\log\dfrac1{W(f)}\le8\,J(f)$.
+\end{lemma}
+
+\begin{proof}
+Write $W=W(f)$, $J=J(f)$, $W_1=\sum_iP(\{i\})$ and $\alpha=\min(p,1-p)$. We use four facts.
+(i) $J\ge\sum_i\Inf_i(f)\bigl(1-\Inf_i(f)\bigr)$, since $\Var(D_ig)=\Inf_i(f)-\hatg(\{i\})^2$ and
+$|\hatg(\{i\})|\le\Inf_i(f)$.
+(ii) $W\le J/2$ and $W\le\Var(f)\le4\alpha$.
+(iii) Every edge in direction $i$ along which $f$ changes has an endpoint in the smaller of $f^{-1}(0)$ and
+$f^{-1}(1)$, so $\Inf_i(f)\le2\alpha$. Hence $W_1\le\sum_i\Inf_i(f)^2\le2\alpha\,I(f)$ and
+$J=I(f)-W_1\ge(1-2\alpha)I(f)$.
+(iv) $I(f)\ge2\alpha\log(1/\alpha)$.
+Recall also that $x\log(1/x)$ is increasing on $(0,1/e]$ and never exceeds $(\log e)/e<0.531$.
+
+\emph{Case $\alpha\le1/4$.} By (iii) and (iv), $J\ge I(f)/2\ge\alpha\log(1/\alpha)$. If $4\alpha\le1/e$, then
+(ii) gives $W\log(1/W)\le4\alpha\log\frac1{4\alpha}\le4J$. If $4\alpha>1/e$, then $J\ge\alpha\log(1/\alpha)\ge0.316$,
+so $W\log(1/W)<0.531<1.7\,J$.
+
+\emph{Case $\alpha>1/4$ and $J\ge\delta:=0.024$.} Put $w_0=0.012$. If $W\ge w_0$, then (ii) gives
+$W\log(1/W)\le\frac J2\log\frac1{w_0}<3.2\,J$. If $W<w_0$, then $W\log(1/W)\le w_0\log(1/w_0)<3.2\,\delta\le3.2\,J$.
+
+\emph{Case $\alpha>1/4$ and $J<\delta$.} Now $\Var(f)>3/4$, so $I(f)\ge\Var(f)>3/4$, while $I(f)=W_1+J<1+\delta$.
+By (i), every coordinate has $\Inf_i(f)(1-\Inf_i(f))<\delta$, hence $\Inf_i(f)<2\delta$ or $\Inf_i(f)>1-2\delta$.
+Coordinates of the first kind satisfy $\Inf_i(f)\le\Inf_i(f)(1-\Inf_i(f))/(1-2\delta)$, so their total influence is
+less than $\delta/(1-2\delta)<3/4$. Therefore a coordinate $i^\ast$ of the second kind exists, and it is unique
+because $2(1-2\delta)>1+\delta$. After negating $x_{i^\ast}$ if necessary, $b:=\hatg(\{i^\ast\})=\E D_{i^\ast}g$ satisfies
+$b^2=\Inf_{i^\ast}(f)-\Var(D_{i^\ast}g)>1-3\delta$, so $b>1-3\delta$.
+
+Write $g=A+\chi_{\{i^\ast\}}B$ with $A=\E_{i^\ast}g$ and $B=D_{i^\ast}g$. These are functions of the other
+variables with values in $\{-1,0,1\}$, and exactly one of them vanishes at each point. We have $\hatg(T)=\widehat A(T)$
+for $T\not\ni i^\ast$ and $\hatg(T\cup\{i^\ast\})=\widehat B(T)$. Let $D=1-B\in\{0,1,2\}$ and let $E=\{D\ne0\}$, of
+density $\eta$. From $b=1-\E D$ and $\E D\ge\eta$ we get $\eta\le1-b<3\delta$. The sets with at least two elements
+are the sets $T\not\ni i^\ast$ with $|T|\ge2$ and the sets $T\cup\{i^\ast\}$ with $T\ne\emptyset$; since
+$\|A\|_2^2=\Pr[B=0]=\Pr[D=1]$,
+\[
+W\le\|A\|_2^2+\Var(B)\le\Pr[D=1]+\E[D^2]\le4\eta .
+\]
+On the other hand $J\ge\sum_{T\ne\emptyset}(|T|+1)\widehat B(T)^2\ge\sum_T|T|\widehat D(T)^2=\sum_j\E[(D_jD)^2]$.
+If an edge in direction $j$ leaves $E$, then $|D_jD|\ge\frac12$ at both of its endpoints. Hence
+$\sum_j\E[(D_jD)^2]$ is at least $\frac14$ of the total influence of the indicator of $E$, which is at least
+$2\eta\log(1/\eta)$ by edge isoperimetry. Thus $J\ge\frac\eta2\log\frac1\eta$, and since $4\eta<12\delta<1/e$,
+\[
+W\log\frac1W\le4\eta\log\frac1{4\eta}\le4\eta\log\frac1\eta\le8J.\qedhere
+\]
+\end{proof}
+
+\begin{proposition}\label{prop:reduce}
+Let $f$ be a Boolean function and $Q\ge0$ a function on the subsets of $[n]$ with $\sum_{|A|\ge2}Q(A)\le1$ and
+$Q(A)>0$ whenever $|A|\ge2$ and $P(A)>0$. Then
+\[
+H^+(f)\le\Bigl(\frac2{\ln2}+8\Bigr)J(f)+\sum_{|A|\ge2}P(A)\log\frac1{Q(A)} .
+\]
+\end{proposition}
+
+\begin{proof}
+Split $H^+(f)$ into the contribution of the singletons and that of the sets with at least two elements. By
+\cref{lem:single}, the first is at most $\frac2{\ln2}\sum_i\Var(D_ig)=\frac2{\ln2}J(f)$. If $W=W(f)>0$, Gibbs'
+inequality applied to the probability distribution $P(A)/W$ on $\{A:|A|\ge2\}$ gives
+$\sum_{|A|\ge2}P(A)\log\frac1{P(A)}\le W\log\frac1W+\sum_{|A|\ge2}P(A)\log\frac1{Q(A)}$, and \cref{lem:mass} bounds
+$W\log(1/W)$.
+\end{proof}
+
+\begin{theorem}\label{thm:plus}
+\textup{(a)} If $f$ is computed by a read-$k$ DNF or CNF formula, then $H^+(f)\le\min(10.9+14k,\,44+8.2\log k)\,J(f)$.
+
+\noindent\textup{(b)} If $f$ is regular, then $H^+(f)\le30\,J(f)$.
+
+\noindent\textup{(c)} If $f=F(h_1,\dots,h_m)$ as in \cref{thm:multi}, then $H^+(f)\le(33+15.3\ln m)\,J(f)$.
+
+\noindent\textup{(d)} If $f$ is a union or an intersection of regular functions as in \cref{thm:union}, then
+$H^+(f)\le\min(11.9+33k,\,93+23.1\log k)\,J(f)$.
+\end{theorem}
+
+Since $J(f)\le2(I(f)-\Var(f))$, \cref{thm:plus} implies \cref{thm:plus-intro}.
+
+\begin{proof}[Proof of \cref{thm:plus}\textup{(a)}]
+By duality, as in the proof of \cref{thm:readk}, it suffices to treat DNF formulas. Take $Q=Q_1$ from the proof of
+\cref{thm:readk-main}, a probability measure, and $\beta=3$. For $|A|\ge2$ and $i\in A$ the set $A\setminus\{i\}$
+is nonempty, so the cover used in that proof gives
+\[
+\sum_{|A|\ge2}P(A)\log\frac1{Q_1(A)}\le W(f)\,\Lambda+2\beta k\,J(f)+2\sum_i\Inf_i(f)\,w_i\,\nu_i(E_i\setminus\{\emptyset\}).
+\]
+
+\emph{The vacuum term.} Recall $\Lambda\le2\mu$. If $p_0\ge1/4$, then $\mu\le k\,I(f)$ by \cref{lem:path}, and
+$W(f)I(f)=W(f)W_1+W(f)J(f)\le\frac32J(f)$ by fact (ii) in the proof of \cref{lem:mass}, so $W(f)\Lambda\le3k\,J(f)$.
+If $p_0<1/4$, then $W(f)\le\Var(f)\le4p_0$ and $J(f)\ge I(f)/2$ by fact (iii), so
+$W(f)\Lambda\le8p_0\mu\le2k\,I(f)\le4k\,J(f)$.
+
+\emph{Sparse elements.} We show $w_i\,\nu_i(E_i\setminus\{\emptyset\})\le\max(\log k+2,\,2kC_\beta)\,\nu_i(T\ne\emptyset)$,
+where $\nu_i(T\ne\emptyset)=\Var(D_ig)/\Inf_i(f)$. If $w_i<\log k+2$ this is clear. Otherwise every term through $i$
+has at least $\log k+2$ variables. In the notation of the proof of \cref{lem:witness},
+$\widehat{d_s}(\emptyset)=2^{-|W_s|}\widehat{\psi_s}(\emptyset)$ and $\|d_s\|_2^2=2^{-|W_s|}\|\psi_s\|_2^2$, so
+$|\widehat{d_s}(\emptyset)|\le2^{-|W_s|/2}\|d_s\|_2$, and the Cauchy--Schwarz inequality gives
+\[
+\nu_i(\emptyset)=\frac{\widehat{D_ig}(\emptyset)^2}{\Inf_i(f)}\le\sum_s2^{-|W_s|}\le k\,2^{-\log k-1}=\frac12 .
+\]
+Hence $\nu_i(T\ne\emptyset)\ge\frac12$, while $w_i\nu_i(E_i)\le kC_\beta$ as in the proof of \cref{thm:readk-main}.
+Summing with weights $\Inf_i(f)$, the sparse term is at most $2\max(\log k+2,\,2kC_\beta)\,J(f)$.
+
+With $\beta=3$ and $C_3<0.949$, the three terms add up to at most $\bigl(4k+6k+2\max(\log k+2,1.898k)\bigr)J(f)\le14k\,J(f)$,
+and \cref{prop:reduce} gives $H^+(f)\le(2/\ln2+8+14k)\,J(f)$.
+
+For the logarithmic bound take $Q=Q_1$ from the proof of \cref{thm:readk-log}. The bound on $\log(1/Q_1(A))$ obtained
+there holds for every $A\ne\emptyset$ and has no term independent of $|A|$ other than $\Lambda_\lambda$, so
+\[
+\sum_{|A|\ge2}P(A)\log\frac1{Q_1(A)}\le W(f)\Lambda_\lambda+K_\beta\,J(f)+\kappa_\beta\sum_i\Inf_i(f)\,w_i\,\nu_i(E_i\setminus\{\emptyset\}),
+\]
+with $K_\beta=\log k+\beta+1+2\log3+2\log e+\log(\beta k+1)+\log(\beta k)$. As in the vacuum step above, with
+$\Lambda_\lambda\le(\log e)\mu/k$ in place of $\Lambda\le2\mu$: if $p_0\ge\frac14$ then $W(f)\Lambda_\lambda\le(\log e)
+W(f)I(f)\le\frac32(\log e)J(f)$, and if $p_0<\frac14$ then $W(f)\Lambda_\lambda\le4p_0(\log e)\mu/k\le(\log e)I(f)\le
+2(\log e)J(f)$. The sparse term is at most $\max(\log k+2,\,2M_\beta(k))\,J(f)$ by the argument above, with
+$w_i\nu_i(E_i)\le M_\beta(k)$ from the proof of \cref{thm:readk-log} in place of $kC_\beta$. Hence
+\[
+H^+(f)\le\Bigl(\frac2{\ln2}+8+2\log e+K_\beta+\kappa_\beta\max\bigl(\log k+2,\,2M_\beta(k)\bigr)\Bigr)J(f),
+\]
+and $\beta=8$ with \eqref{eq:Mbound} gives at most $35.00+8.48<44$ for $k=1$ and at most
+$37.35+8.15\log k$ for $k\ge2$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:plus}\textup{(b)}]
+As in \cref{sec:regular}, assume that $f$ is monotone with coordinates ordered by decreasing desirability. Then
+$D_ig\ge0$, so $\hatg(\{i\})=\Inf_i(f)$ and $\nu_i(\emptyset)=\Inf_i(f)$. Influences decrease along the order: if
+$i<j$ and $z$ denotes the remaining coordinates, then
+$\Inf_i(f)-\Inf_j(f)=\E_z\bigl[f(x_i{=}1,x_j{=}0,z)-f(x_i{=}0,x_j{=}1,z)\bigr]\ge0$. Since
+$\sum_i\Inf_i(f)^2=\sum_iP(\{i\})\le1$, a coordinate with $\Inf_i(f)>1/2$ has $i\le3$.
+
+We claim that
+\[
+\sum_{|A|\ge2}P(A)\sum_{i\in A}\ln^+\frac i{|A|}\le2L_1\,J(f).
+\]
+The left side equals $\sum_i\Inf_i(f)\,\E_{\nu_i}\bigl[\ln^+\frac i{|T|+1}\,\mathbf 1[T\ne\emptyset]\bigr]$, and
+$\ln^+\frac i{|T|+1}\le\ln\frac i{|T\cap U_i|+1}$. If $\Inf_i(f)\le\frac12$, then $\nu_i(T\ne\emptyset)\ge\frac12$
+and \cref{lem:ranktail} bounds the expectation by $L_1\le2L_1\,\nu_i(T\ne\emptyset)$. If $\Inf_i(f)>\frac12$, then
+$i\le3$ and the expectation is at most $(\ln3)\,\nu_i(T\ne\emptyset)$. Summing with weights $\Inf_i(f)$ proves the
+claim.
+
+Now let $Q(A)=2^{-(|A|-1)}\pi_{|A|}(A)$ for $|A|\ge2$, with $\pi_k$ as in the proof of \cref{lem:rankref}. Then
+$\sum_{|A|\ge2}Q(A)=1$ and, by the bound on $Z_k$ in that proof,
+$\log\frac1{Q(A)}\le|A|\bigl(1+\log\frac{ea}{a-1}\bigr)+\frac a{\ln2}\sum_{i\in A}\ln^+\frac i{|A|}$. By
+\cref{prop:reduce} and the claim,
+\[
+H^+(f)\le\Bigl(\frac2{\ln2}+9+\log\frac{ea}{a-1}+\frac{2aL_1}{\ln2}\Bigr)J(f),
+\]
+and at $a=1.1087$ the bracket is less than $30$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:plus}\textup{(c)}]
+Use the notation of the proof of \cref{thm:multi}. We claim that for every $i$
+\[
+\E_{\nu_i}\bigl[G_i\,\mathbf 1[T\ne\emptyset]\bigr]\le(8\ln m+9.86)\,\nu_i(T\ne\emptyset).
+\]
+If $\nu_i(T\ne\emptyset)\ge\frac12$, this follows from $\E_{\nu_i}G_i<4\ln m+4.93$. Otherwise
+$\nu_i(\emptyset)>\frac12$, and since $\nu_i(\emptyset)=\hatg(\{i\})^2/\Inf_i(f)\le\Inf_i(f)$ we get $\Inf_i(f)>\frac12$.
+As $\Inf_i(f)\le\sum_l\Inf_i(h_l)$, some $h_l$ has $\Inf_i(h_l)>1/(2m)$. The influences of the regular function $h_l$
+do not increase along its order (see the proof of part (b)) and their squares sum to at most $1$, so
+$r_l(i)<4m^2$, and then $G_i\le F_l\le\ln r_l(i)<2\ln(2m)$ pointwise. This proves the claim, and summing it with
+weights $\Inf_i(f)$ gives
+\[
+\sum_{|A|\ge2}P(A)\sum_{i\in A}\min_l\ln^+\frac{r_l(i)}{|A|}\le(8\ln m+9.86)\,J(f).
+\]
+Now take $Q(A)=2^{-(|A|-1)}\pi_{|A|}(A)$ with the weights $\theta_k$ of the proof of \cref{thm:multi}; as in part (b),
+\cref{prop:reduce} gives
+\[
+H^+(f)\le\Bigl(\frac2{\ln2}+9+\log\frac{ema}{a-1}+\frac{a(8\ln m+9.86)}{\ln2}\Bigr)J(f),
+\]
+and $a=1.2$ gives the stated bound.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:plus}\textup{(d)}]
+By complementation it suffices to treat unions. Take $Q=Q_1$ and the constants of the proof of \cref{thm:union}.
+The bound on $\log(1/Q_1(A))$ obtained there holds for every $A\ne\emptyset$, so
+\[
+\sum_{|A|\ge2}P(A)\log\frac1{Q_1(A)}\le W(f)\Lambda+(\beta+c_1)k\,J(f)+J(f)
++\sum_j\Inf_j(f)\,\E_{\nu_j}\bigl[G_j\,\mathbf 1[T\ne\emptyset]\bigr].
+\]
+The vacuum term is treated as in part (a), with \cref{lem:upath} in place of \cref{lem:path}:
+$W(f)\Lambda\le4k\,J(f)$. We claim that
+$\E_{\nu_j}[G_j\mathbf 1[T\ne\emptyset]]\le2k\bigl(\frac{aL_1}{\ln2}+c_2K\bigr)\nu_j(T\ne\emptyset)$. If
+$\nu_j(T\ne\emptyset)\ge\frac12$, this follows from the bound on $\E_{\nu_j}G_j$ in the proof of \cref{thm:union}.
+Otherwise $\Inf_j(f)\ge\nu_j(\emptyset)>\frac12$ as in part (c); since $\Inf_j(f)\le\sum_s\Inf_j(h_{l_s})$ with at most
+$k$ summands, some $s$ has $\Inf_j(h_{l_s})>1/(2k)$. Then $r_{l_s}(j)<4k^2$ as in part (c), and
+$\Pr[h_{l_s}=1]\ge\Inf_j(h_{l_s})/2>1/(4k)$, so pointwise
+$G_j\le G_j(l_s)<\frac a{\ln2}\ln(4k^2)+c_2\log(4k)\le2k\bigl(\frac{aL_1}{\ln2}+c_2K\bigr)$. Summing the claim with
+weights $\Inf_j(f)$ and using \cref{prop:reduce},
+\[
+H^+(f)\le\Bigl(\frac2{\ln2}+9+\bigl(4+\beta+c_1+2\,\tfrac{aL_1}{\ln2}+2c_2K\bigr)k\Bigr)J(f),
+\]
+and the coefficient of $k$ is $4+5+4.273+17.248+2.457<33$.
+
+For the logarithmic bound take $Q=Q_1$ and the constants of the proof of \cref{thm:union-log}. The bound on
+$\log(1/Q_1(A))$ obtained there holds for every $A\ne\emptyset$ and has no term independent of $|A|$ other than
+$\Lambda_\lambda$, so
+\[
+\sum_{|A|\ge2}P(A)\log\frac1{Q_1(A)}\le W(f)\Lambda_\lambda+K_u\,J(f)+\sum_j\Inf_j(f)\,\E_{\nu_j}\bigl[G_j\,\mathbf
+1[T\ne\emptyset]\bigr],
+\]
+with $K_u=(1+a)\log k+\beta+1+2\log3+\log\frac{ea}{a-1}+\log(2e)$. As in part (a), with $\Lambda_\lambda\le(\log e)
+\sum_l\pi_l/k$ and \cref{lem:upath}, $W(f)\Lambda_\lambda\le2(\log e)J(f)$. If $\nu_j(T\ne\emptyset)\ge\frac12$, then
+$\E_{\nu_j}[G_j\mathbf1[T\ne\emptyset]]\le2E_k\,\nu_j(T\ne\emptyset)$, where $E_k=\frac{4a}{\ln2}(\ln(2kB)+1)+\frac2\gamma
+(\log k+\log e)$ is the bound on $\E_{\nu_j}G_j$ from that proof; otherwise, as above, $G_j<a\log(4k^2)+\log(4k)$
+pointwise. By \cref{prop:reduce},
+\[
+H^+(f)\le\Bigl(\frac2{\ln2}+8+2\log e+K_u+\max\bigl(2E_k,\,a\log(4k^2)+\log(4k)\bigr)\Bigr)J(f)
+\le(93+23.1\log k)\,J(f).
+\]
+\end{proof}
+
+We recall the biased form of \eqref{eq:feiplus}~\cite{OT13}. Let $\mu$ be a product probability measure on
+$\bits^m$ with $q_j=\mu(y_j=1)\in(0,1)$, put $\nu_j=2q_j-1$, $\sigma_j^2=1-\nu_j^2=4q_j(1-q_j)$ and
+$\phi_j(y)=(2y_j-1-\nu_j)/\sigma_j$, so that the products $\phi_A=\prod_{j\in A}\phi_j$ form an orthonormal basis of
+$L^2(\mu)$. For $G:\bits^m\to\bits$ expand $1-2G=\sum_A\widetilde g(A)\phi_A$ and put $P_\mu(A)=\widetilde g(A)^2$,
+$\sigma_A^2=\prod_{j\in A}\sigma_j^2$, $I_\mu(G)=\sum_A|A|P_\mu(A)$ and $\Var_\mu(G)=\sum_{A\ne\emptyset}P_\mu(A)$.
+Then $G$ satisfies the $\mu$-biased form of \eqref{eq:feiplus} with constant $C$ if
+\begin{equation}\label{eq:biased}
+\sum_{A\ne\emptyset}P_\mu(A)\log\frac{\sigma_A^2}{P_\mu(A)}\le C\bigl(I_\mu(G)-\Var_\mu(G)\bigr).
+\end{equation}
+For the uniform measure this is \eqref{eq:feiplus}. Negating an input or the output of $G$ leaves every
+$P_\mu(A)$ unchanged, up to replacing $q_j$ by $1-q_j$.
+
+\begin{lemma}\label{lem:andor}
+For every $m$ and every product measure $\mu$ on $\bits^m$, the functions $\mathrm{OR}_m$ and $\mathrm{AND}_m$
+satisfy \eqref{eq:biased} with $C=2+4\log e=7.7707\ldots$, and $\mathrm{XOR}_m$ satisfies \eqref{eq:biased} with
+$C=2\log e$. The constant $2+4\log e$ cannot be lowered: for $\mathrm{OR}_2$ with $q_1=q_2\to0$ the ratio of the two
+sides of \eqref{eq:biased} tends to it.
+\end{lemma}
+
+\begin{proof}
+First let $a_1,\dots,a_m\in(0,1]$, $Z=\prod_ja_j$, and
+\[
+\Phi(a)=\sum_j(a_j-Z)\ln\frac1{a_j},\qquad R(a)=\sum_j(1-a_j)-1+Z .
+\]
+We claim $\Phi\le2R$. For $m=1$ both sides vanish. Appending a number $b\in(0,1]$ replaces $Z$ by $bZ$ and gives
+\[
+\Phi(a,b)-\Phi(a)=(1-b)\,Z\ln\frac1Z+b\ln\frac1b\,(1-Z),\qquad R(a,b)-R(a)=(1-b)(1-Z),
+\]
+and since $t\ln(1/t)\le1-t$ for $0<t\le1$, the first difference is at most twice the second. The claim follows by
+induction on $m$.
+
+For $\mathrm{OR}_m$ it suffices, after negating the output, to take $G(y)=\prod_j(1-y_j)$, the indicator that all
+inputs vanish. Put $a_j=1-q_j$. Since $1-y_j=a_j-\frac{\sigma_j}2\phi_j$,
+\[
+1-2G=1-2\prod_j\Bigl(a_j-\frac{\sigma_j}2\phi_j\Bigr),\qquad
+P_\mu(A)=4\prod_{j\in A}\frac{\sigma_j^2}4\prod_{j\notin A}a_j^2\quad(A\ne\emptyset),
+\]
+and $P_\mu(\emptyset)=(1-2Z)^2$. Hence $\log(\sigma_A^2/P_\mu(A))=2|A|-2+2\sum_{j\notin A}\log(1/a_j)$ for
+$A\ne\emptyset$. Using $\frac{\sigma_j^2}4+a_j^2=a_j$ one finds $\sum_{A\ne\emptyset,\,A\not\ni j}P_\mu(A)=4a_jZ-4Z^2$,
+$I_\mu(G)=\sum_j\sigma_j^2\prod_{i\ne j}a_i=4Z\sum_j(1-a_j)$ and $\Var_\mu(G)=4Z(1-Z)$, so that
+$I_\mu(G)-\Var_\mu(G)=4ZR$ and the left side of \eqref{eq:biased} equals
+\[
+2\bigl(I_\mu(G)-\Var_\mu(G)\bigr)+8Z\sum_j(a_j-Z)\log\frac1{a_j}
+=8ZR+\frac{8Z\,\Phi}{\ln2}\le\Bigl(2+\frac4{\ln2}\Bigr)\bigl(I_\mu(G)-\Var_\mu(G)\bigr).
+\]
+$\mathrm{AND}_m$ is obtained from $\mathrm{OR}_m$ by negating the inputs and the output. For $m=2$ and $q_1=q_2=q$
+we have $\Phi=2q(1-q)\ln\frac1{1-q}\sim2q^2$ and $R=q^2$, so the ratio of the two sides of \eqref{eq:biased} is
+$2+2\Phi/(R\ln2)\to2+4\log e$ as $q\to0$.
+
+For $\mathrm{XOR}_m$, $1-2G=\pm\prod_j(\nu_j+\sigma_j\phi_j)$, so $P_\mu(A)=\sigma_A^2\prod_{j\notin A}\nu_j^2$ and
+$\log(\sigma_A^2/P_\mu(A))=\sum_{j\notin A}\log(1/\nu_j^2)$. By continuity we may assume $\nu_j\ne0$. With $a_j=\nu_j^2$,
+$\sum_{A\not\ni j}P_\mu(A)=a_j$ and $P_\mu(\emptyset)=Z$, so the left side of \eqref{eq:biased} is $\Phi/\ln2$, while
+$I_\mu(G)-\Var_\mu(G)=\sum_j\sigma_j^2-(1-Z)=R$.
+\end{proof}
+
+\subsection*{Threshold gates with inputs of equal bias}
+For $1\le t\le r$ let $T_{t,r}(y)=\mathbf 1[y_1+\cdots+y_r\ge t]$ on $\bits^r$, and let $\mu$ be the product measure
+with $\mu(y_j=1)=q$ for every $j$, where $0<q<1$. Write $N(y)=y_1+\cdots+y_r$, $N_{-j}=N-y_j$, $\sigma^2=4q(1-q)$
+and $\Lambda=r\sigma^2$, and let $P=P_\mu$, $I=I_\mu(T_{t,r})$, $V=\Var_\mu(T_{t,r})$ and
+$W_k=\sum_{|A|=k}P(A)$. Every coordinate is pivotal with the same probability $\rho=\mu(N_{-j}=t-1)$, and
+$I=\Lambda\rho$.
+
+\begin{theorem}\label{thm:threshold}
+In this setting
+\[
+\sum_{A\ne\emptyset}P(A)\ln\frac{\sigma_A^2}{P(A)}\le 11.49\,I .
+\]
+Consequently $T_{t,r}$ satisfies \eqref{eq:biased} under $\mu$ with $C=66.4$, for every $r$, every $1\le t\le r$ and
+every $q$.
+\end{theorem}
+
+The proof rests on two lemmas. The first is the analogue of \cref{lem:ranktail}.
+
+\begin{lemma}\label{lem:thr-rank}
+$\sum_{k\ge1}kW_k\ln^+(\Lambda/k)\le L'I$, where $L'=2\ln\bigl(3\sqrt{6/\pi}\bigr)+2<4.85$.
+\end{lemma}
+
+\begin{proof}
+Let $d(y')=T_{t,r}(y',1)-T_{t,r}(y',0)=\mathbf 1[N(y')=t-1]$ for $y'\in\bits^{r-1}$, and let $\widetilde d(B)$ be
+its coefficients in the basis $\phi_B$ of $L^2(\mu)$ on $\bits^{r-1}$. Since $\E_{y_r}[h\,\phi_r]=\frac\sigma2
+(h(1)-h(0))$ for every function $h$ of $y_r$, we have $P(B\cup\{r\})=\sigma^2\widetilde d(B)^2$, and by symmetry
+$\sum_{|A|=k,\,A\ni r}P(A)=\frac krW_k$. Hence $kW_k=\Lambda\sum_{|B|=k-1}\widetilde d(B)^2$, and
+$\nu(B)=\widetilde d(B)^2/\rho$ is a probability distribution because $\E d^2=\rho$.
+
+Let $y'$ have law $\mu$, fix $0<\eta\le1$, and let $z$ be obtained from $y'$ by replacing each coordinate,
+independently with probability $\eta$, by a fresh sample from $\mu$. Then $\E[\phi_B(z)\mid y']=(1-\eta)^{|B|}
+\phi_B(y')$, so $\E[d(y')d(z)]=\rho\,\E_\nu(1-\eta)^{|T|}$, while $\E[d(y')d(z)]\le\rho\max_{y'}\Pr[N(z)=t-1\mid y']$.
+Write each replaced coordinate as $z_j=u_j\wedge b_j$ if $q\le\frac12$ and as $z_j=u_j\vee b_j$ if $q>\frac12$, with
+$u_j$ a uniform bit and $b_j$ an independent bit equal to $1$ with probability $2q$, respectively $2q-1$. Given the
+set of replaced coordinates and the bits $b_j$, the replaced coordinates with $b_j=1$ (respectively $b_j=0$) are
+independent uniform bits, say $F$ of them, and every other coordinate of $z$ is fixed; so by \cref{lem:sperner}
+the conditional probability that $N(z)=t-1$ is at most $\frac2{\sqrt\pi}(F+1)^{-1/2}$. The number $F$ has the law
+$\Bin(r-1,2\eta\tilde q)$ with $\tilde q=\min(q,1-q)\ge q(1-q)$, so $\E[1/(F+1)]\le1/(2r\eta\tilde q)\le2/(\eta\Lambda)$
+and, by Jensen's inequality, $\E[(F+1)^{-1/2}]\le(2/(\eta\Lambda))^{1/2}$. For $K\ge1$ take $\eta=1/(3K)$; as in the
+proof of \cref{lem:ranktail},
+\[
+\nu(|T|\le K)\le\Bigl(1-\frac1{3K}\Bigr)^{-K}\E_\nu(1-\eta)^{|T|}\le3\sqrt{6/\pi}\,\Bigl(\frac K\Lambda\Bigr)^{1/2}.
+\]
+Finally $\sum_kkW_k\ln^+(\Lambda/k)=I\,\E_\nu\ln^+\frac\Lambda{|T|+1}$, and the tail bound with $K=\Lambda e^{-u}$ gives
+\[
+\E_\nu\ln^+\frac\Lambda{|T|+1}\le\int_0^\infty\min\bigl(1,3\sqrt{6/\pi}\,e^{-u/2}\bigr)\,du=L'.
+\]
+\end{proof}
+
+The second lemma pays for the normalisation $V\ln(1/V)$. When the inputs are nearly always $0$ and $t\ge2$ this
+term is much larger than $I$, and it is repaid by the factors $\sigma_A^2$; the lemma measures this through the ratio
+$\rho/V$.
+
+\begin{lemma}\label{lem:thr-credit}
+$V\ln(1/V)\le I\ln^+(4\rho/V)+C_2I$, where $C_2=1+\ln2+8/e<4.64$.
+\end{lemma}
+
+\begin{proof}
+Let $\alpha=\min(\mu(T_{t,r}=1),\mu(T_{t,r}=0))$. If $\alpha\ge\frac14$ then $V\ge\frac34$ and
+$V\ln(1/V)\le V\ln\frac43<0.29\,I$. Let $\alpha<\frac14$. Negating all inputs and the output maps $T_{t,r}$ to
+$T_{r-t+1,r}$ and $q$ to $1-q$, and changes none of $V$, $I$, $\rho$; so we may assume $\alpha=\mu(A)$ with
+$A=\{N\ge t\}$. Then $t>rq$, since otherwise $t\le\lfloor rq\rfloor$, which is at most the median of $\Bin(r,q)$
+\cite{KB80}, and $\mu(A)\ge\frac12$. As $V=4\alpha(1-\alpha)\le4\alpha$ and $4(1-\alpha)>1$, we have
+$V\ln(1/V)\le4\alpha\ln(1/\alpha)$.
+
+Let $\mu_A=\mu(\cdot\mid A)$ and let $\mu_A^{(j)}$ be the law of $y_j$ under $\mu_A$. By the chain rule for relative
+entropy with respect to a product measure,
+\[
+\ln\frac1\alpha=D(\mu_A\,\|\,\mu)=\mathrm{TC}(\mu_A)+\sum_jD\bigl(\mu_A^{(j)}\,\big\|\,\mu_j\bigr),\qquad
+\mathrm{TC}(\mu_A)=D\Bigl(\mu_A\,\Big\|\,\textstyle\bigotimes_j\mu_A^{(j)}\Bigr).
+\]
+For a coordinate $j$ put $a=\mu(A\mid y_j=1)$ and $b=\mu(A\mid y_j=0)$, so that $\alpha=qa+(1-q)b$ and $a-b=\rho$.
+Since $b\le\alpha$, $\alpha D(\mu_A^{(j)}\|\mu_j)=qa\ln\frac a\alpha+(1-q)b\ln\frac b\alpha\le qa\ln\frac a\alpha$.
+With $u=(1-q)\rho/\alpha$ we have $a/\alpha=1+u$ and $(1+u)\ln(1+u)\le u(1+\ln(1+u))$, hence
+\[
+\alpha D\bigl(\mu_A^{(j)}\,\big\|\,\mu_j\bigr)\le q(1-q)\rho\,(1+\ln(1+u))\le\frac{\sigma^2\rho}4\Bigl(1+\ln2+\ln^+\frac{4\rho}V\Bigr),
+\]
+using $\ln(1+u)\le\ln2+\ln^+u$ and $\alpha\ge V/4$. Summing over $j$ gives $4\alpha\sum_jD(\mu_A^{(j)}\|\mu_j)\le
+I(1+\ln2+\ln^+(4\rho/V))$.
+
+It remains to show $\alpha\,\mathrm{TC}(\mu_A)\le\frac2eI$. If $t=r$ then $\mu_A$ is a point mass and
+$\mathrm{TC}(\mu_A)=0$. Let $rq<t\le r-1$ and let $R$ be the product measure with $R(y_j=1)=t/r$; its density is
+$dR/d\mu=M^{-1}e^{\lambda N}$ with $\lambda=\ln\frac{t(1-q)}{(r-t)q}>0$ and $M=\E_\mu e^{\lambda N}$. For every
+product measure $R$ we have $D(\mu_A\|R)=\mathrm{TC}(\mu_A)+\sum_jD(\mu_A^{(j)}\|R_j)\ge\mathrm{TC}(\mu_A)$, and here
+\[
+D(\mu_A\,\|\,R)=\ln\frac M\alpha-\lambda\,\E_{\mu_A}N\le\ln\frac{Me^{-\lambda t}}\alpha,\qquad
+\alpha=M\,\E_R\bigl[e^{-\lambda N}\mathbf 1_A\bigr]\ge Me^{-\lambda t}R(N=t).
+\]
+Hence $\mathrm{TC}(\mu_A)\le\ln(1/b^\ast)$, where $b^\ast=R(N=t)=\binom rt(t/r)^t(1-t/r)^{r-t}\ge(8v)^{-1/2}$ with
+$v=t(r-t)/r\ge\frac12$~\cite[Ch.~10, Lemma~7]{MS77}. In the same way
+$\rho=Me^{-\lambda(t-1)}R(N_{-j}=t-1)/(1-q+qe^\lambda)$ and $\alpha\le Me^{-\lambda t}$, and
+$R(N_{-j}=t-1)=\binom{r-1}{t-1}(t/r)^{t-1}(1-t/r)^{r-t}=b^\ast$; since
+$\sigma^2e^\lambda/(1-q+qe^\lambda)=4\frac tr(1-\frac tr)(1-q+qe^\lambda)\ge4\frac tr(1-\frac tr)$, this gives
+$I/\alpha\ge4vb^\ast\ge(2v)^{1/2}$. Therefore
+\[
+\alpha\,\mathrm{TC}(\mu_A)\le\frac12\ln(8v)\,\frac I{(2v)^{1/2}}=\frac{\ln(8v)}{\sqrt{8v}}\,I\le\frac2e\,I,
+\]
+and altogether $V\ln(1/V)\le4\alpha\ln(1/\alpha)\le I\ln^+(4\rho/V)+(1+\ln2+8/e)I$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:threshold}]
+By symmetry $P(A)=W_k/\binom rk$ when $|A|=k$, so the left side equals
+\[
+\sum_{k\ge1}W_k\ln\frac1{W_k}+\sum_{k\ge1}W_k\ln\Bigl(\binom rk\sigma^{2k}\Bigr).
+\]
+The first sum is $V\ln(1/V)+V\,H(K)$, where $K$ has law $W_k/V$ on $\{1,\dots,r\}$ and mean $m=I/V$. Gibbs'
+inequality against the geometric law with mean $m$ gives $H(K)\le1+\ln m$, and $V(1+\ln(I/V))\le I$ because
+$x(1+\ln(1/x))\le1$ for $0<x\le1$. For the second sum, $\binom rk\le(er/k)^k$ gives
+$\ln(\binom rk\sigma^{2k})\le k+k\ln(\Lambda/k)$. If $4m\le\Lambda$, then $\ln^+(4\rho/V)=\ln^+(4m/\Lambda)=0$ and
+$\sum_kkW_k\ln(\Lambda/k)\le L'I$ by \cref{lem:thr-rank}. If $4m>\Lambda$, write
+$\ln\frac\Lambda k=-\ln\frac{4m}\Lambda+\ln\frac{4m}k$ and use $\ln x\le x/e$:
+$\sum_kkW_k\ln(\Lambda/k)\le-I\ln(4\rho/V)+\frac{4m}e V$, and $4mV/e=4I/e<L'I$. In both cases the left side is at most
+\[
+V\ln\frac1V+2I-I\ln^+\frac{4\rho}V+L'I\le(2+L'+C_2)\,I<11.49\,I
+\]
+by \cref{lem:thr-credit}.
+
+For the second statement, \cref{lem:andor} covers $t\in\{1,r\}$. Let $2\le t\le r-1$. The number
+$\rho=\Pr[\Bin(r-1,q)=t-1]$ is the value of a binomial distribution at an interior point; it is $2q(1-q)\le\frac12$
+when $r=3$, and for $r\ge4$ it is at most $\max_{1\le i\le m-1}\binom mi(i/m)^i(1-i/m)^{m-i}\le(m/(2\pi(m-1)))^{1/2}
+<\frac12$ with $m=r-1$~\cite{MS77}. Since $d\ge0$ we have $P(\{j\})=\sigma^2(\E d)^2=\sigma^2\rho^2$ and
+$\sum_{A\ni j}P(A)=\sigma^2\rho$, so $\sum_{|A|\ge2}|A|P(A)=I-\Lambda\rho^2\ge I/2$ and
+$I-V=\sum_{|A|\ge2}(|A|-1)P(A)\ge I/4$. In bits the left side of \eqref{eq:biased} is therefore at most
+$\frac{4\cdot11.49}{\ln2}(I-V)<66.4\,(I-V)$.
+\end{proof}
+
+\begin{remark}\label{rem:threshold}
+The same reduction shows where general Boolean functions behave differently. For the disjunction of $s$ disjoint
+conjunctions of two inputs, each input equal to $1$ with probability $s^{-2}$, the total correlation of $\mu_A$ grows
+like $\ln s$ (it records which conjunction is satisfied) while $I_\mu/\alpha$ stays bounded, and the inequality of
+\cref{lem:thr-credit}, with $\sum_j\Inf_j\ln^+(4\rho_j/V)$ in place of $I\ln^+(4\rho/V)$, fails for these functions.
+\end{remark}
+
+\subsection*{Threshold gates under arbitrary product measures}
+Under an arbitrary product measure the same argument proves the inequality with $I_\mu$ in place of
+$I_\mu-\Var_\mu$ on the right. For read-once formulas this weaker form costs a factor of the depth.
+
+\begin{proposition}\label{prop:thr-general}
+Let $1\le t\le r$ and let $\mu$ be a product measure on $\bits^r$ with $\mu(y_j=1)=q_j\in(0,1)$. Then
+\[
+\sum_{A\ne\emptyset}P_\mu(A)\ln\frac{\sigma_A^2}{P_\mu(A)}\le26.3\,I_\mu(T_{t,r}).
+\]
+\end{proposition}
+
+\begin{proof}
+Write $N$, $N_{-j}$ and $W_k$ as before, $\sigma_j^2=4q_j(1-q_j)$, $\Lambda=\sum_j\sigma_j^2$,
+$\rho_j=\mu(N_{-j}=t-1)$, $\Inf_j=\sigma_j^2\rho_j$, $I=\sum_j\Inf_j$, $V=\Var_\mu(T_{t,r})$, $m=I/V$ and
+$\pi_j=\Inf_j/V$, so that $\sum_j\pi_j=m$.
+
+For $k\ge1$ let $\theta_k(j)=\max\bigl(\sigma_j^2\min(1,k/\Lambda),\,4\pi_j\bigr)$ and let $Z_k$ be the $k$-th elementary
+symmetric polynomial of $\theta_k(1),\dots,\theta_k(r)$. Gibbs' inequality on the sets of size $k$, against the weights
+$\prod_{j\in A}\theta_k(j)$, gives
+\[
+\sum_{|A|=k}P(A)\ln\frac{\sigma_A^2}{P(A)}\le W_k\ln\frac1{W_k}+W_k\ln Z_k+\sum_{|A|=k}P(A)\sum_{j\in A}\ln\frac{\sigma_j^2}{\theta_k(j)}.
+\]
+Since $\sum_j\theta_k(j)\le\min(\Lambda,k)+4m\le k+4m$, we have $Z_k\le(e(k+4m)/k)^k$ and $\ln Z_k\le k+4m$. Moreover
+$\ln(\sigma_j^2/\theta_k(j))\le\min\bigl(\ln^+(\Lambda/k),\ln(V/(4\rho_j))\bigr)\le\ln^+(\Lambda/k)-\ln^+(4\rho_j/V)$.
+Summing over $k$, and bounding $\sum_kW_k\ln(1/W_k)$ by $V\ln(1/V)+I$ as in the proof of \cref{thm:threshold},
+\[
+\sum_{A\ne\emptyset}P(A)\ln\frac{\sigma_A^2}{P(A)}\le V\ln\frac1V+6I+\sum_jI_j'-\sum_j\Inf_j\ln^+\frac{4\rho_j}V,
+\qquad I_j'=\sum_{A\ni j}P(A)\ln^+\frac\Lambda{|A|}.
+\]
+
+For the rank terms, $I_j'=\Inf_j\,\E_{\nu_j}\ln^+\frac\Lambda{|T|+1}$ with $\nu_j(T)=P(T\cup\{j\})/\Inf_j$. If
+$\Lambda\le2$ the expectation is at most $\ln2$. If $\Lambda>2$, the proof of \cref{lem:thr-rank} applies to the
+coordinate $j$, except that a replaced coordinate $i$ is now free with probability $2\eta\tilde q_i\ge\eta\sigma_i^2/2$,
+so that $F$ is a sum of independent indicators with mean at least $\eta(\Lambda-\sigma_j^2)/2\ge\eta\Lambda/4$; for
+such a sum $\E[1/(F+1)]\le1/\E F$, hence $\nu_j(|T|\le K)\le3\sqrt{12/\pi}\,(K/\Lambda)^{1/2}$ and
+$\E_{\nu_j}\ln^+\frac\Lambda{|T|+1}\le2\ln\bigl(3\sqrt{12/\pi}\bigr)+2<5.54$. So $\sum_jI_j'\le5.54\,I$.
+
+It remains to show $V\ln(1/V)\le\sum_j\Inf_j\ln^+(4\rho_j/V)+14.7\,I$, which gives the constant $6+5.54+14.7<26.3$. We
+follow the proof of \cref{lem:thr-credit}. If $\alpha\ge\frac14$ the bound is immediate. Otherwise, after negating all
+inputs if necessary, $\alpha=\mu(A)$ with $A=\{N\ge t\}$, and $t>\E_\mu N$: if $t\le\E_\mu N=r\bar q$, then
+$t\le\lfloor r\bar q\rfloor$, and Hoeffding's comparison with the binomial law~\cite[Theorem~4]{Hoe56} together
+with~\cite{KB80} gives $\mu(A)\ge\Pr[\Bin(r,\bar q)\ge t]\ge\frac12$. The bound
+$4\alpha D(\mu_A^{(j)}\|\mu_j)\le\Inf_j(1+\ln2+\ln^+(4\rho_j/V))$ holds for each coordinate as before. For the total
+correlation, if $t=r$ it vanishes; otherwise let $R$ be the product measure with $dR/d\mu\propto e^{\lambda N}$, with
+$\lambda>0$ chosen so that $\E_RN=t$. As in the proof of \cref{lem:thr-credit}, $\mathrm{TC}(\mu_A)\le\ln(1/R(N=t))$
+and, for each $j$, $\sigma_j^2\rho_j/\alpha\ge4R(y_j{=}1)R(y_j{=}0)R(N_{-j}=t-1)$. Applying the identity
+$\E_R[(y_j-R(y_j{=}1))h(N)]=R(y_j{=}1)R(y_j{=}0)\,\E_R[h(N_{-j}+1)-h(N_{-j})]$ to $h=\mathbf 1[\,\cdot\ge t]$ and summing over
+$j$ gives $\sum_jR(y_j{=}1)R(y_j{=}0)R(N_{-j}=t-1)=\E_R(N-t)^+$, so $I/\alpha\ge4\E_R(N-t)^+=2\E_R|N-t|$. With
+$v=\Var_R(N)$ we have $\E_R(N-t)^4\le v+3v^2$, and H\"older's inequality gives
+$\E_R|N-t|\ge v^{3/2}(v+3v^2)^{-1/2}$; hence $I/\alpha\ge2v(1+3v)^{-1/2}$. By Darroch's theorem~\cite{Dar64}, $t$ is a mode
+of $N$ under $R$. If $v\le\frac12$, Chebyshev's inequality gives $R(N=t)\ge1-v$ and $\mathrm{TC}(\mu_A)\le\ln\frac1{1-v}\le
+2v\ln2$, so $\alpha\,\mathrm{TC}(\mu_A)\le(\ln2)(1+3v)^{1/2}I<1.1\,I$. If $v>\frac12$, let $K=\lceil2\sqrt v\rceil$; by
+Chebyshev's inequality $R(|N-t|\le K)\ge\frac34$, so $R(N=t)\ge\frac3{4(2K+1)}\ge\frac3{4(4\sqrt v+3)}$ and
+$\alpha\,\mathrm{TC}(\mu_A)\le\psi(v)I$ with $\psi(v)=\ln\frac{16\sqrt v+12}3\cdot\frac{(1+3v)^{1/2}}{2v}$. Comparing
+logarithmic derivatives shows that $\psi$ decreases on $[\frac12,\infty)$, and $\psi(\frac12)<3.25$. Hence
+$\alpha\,\mathrm{TC}(\mu_A)\le3.25\,I$ and $V\ln(1/V)\le4\alpha\ln(1/\alpha)\le\sum_j\Inf_j\ln^+(4\rho_j/V)+(1+\ln2+13)I$.
+\end{proof}
+
+\begin{lemma}\label{lem:weak-compose}
+Let $F=G(f_1,\dots,f_k)$, where $f_1,\dots,f_k$ depend on pairwise disjoint sets of variables, and let $\mu$ be the
+product measure with $\mu(y_i=1)=\Pr[f_i=1]$. If $G$ satisfies \eqref{eq:biased} under $\mu$ with $I_\mu(G)$ in place
+of $I_\mu(G)-\Var_\mu(G)$ and with constant $C$, and $H^+(f_i)\le D\,I(f_i)$ for every $i$, then
+$H^+(F)\le(C+D)\,I(F)$.
+\end{lemma}
+
+\begin{proof}
+By the composition formula of~\cite[Section~3]{OT13}, the spectral distribution of $F$ is obtained by choosing $A$
+with law $P_\mu$ and then, independently for $i\in A$, a nonempty set $T_i$ of variables of $f_i$ with law
+$\widehat{f_i}(T_i)^2/\sigma_i^2$, where $\sigma_i^2=\Var(f_i)$. Since $\sum_{T\ne\emptyset}\widehat{f_i}(T)^2=\sigma_i^2$,
+this gives
+\[
+H^+(F)=\sum_{A\ne\emptyset}P_\mu(A)\log\frac{\sigma_A^2}{P_\mu(A)}+\sum_i\frac{\Inf_i^\mu(G)}{\sigma_i^2}H^+(f_i),\qquad
+I(F)=\sum_i\frac{\Inf_i^\mu(G)}{\sigma_i^2}I(f_i),
+\]
+and the claim follows from $\Inf_i^\mu(G)=\frac{\Inf_i^\mu(G)}{\sigma_i^2}\Var(f_i)\le\frac{\Inf_i^\mu(G)}{\sigma_i^2}I(f_i)$.
+\end{proof}
+
+\begin{corollary}\label{cor:depth}
+Let $f$ be computed by a read-once formula of depth $d$ whose gates are $\mathrm{AND}$, $\mathrm{OR}$ and $\mathrm{XOR}$
+gates and threshold gates $T_{t,r}$ of any fan-in, with negations allowed. Then $H(f)\le(38d+\log e)\,I(f)$.
+\end{corollary}
+
+\begin{proof}
+By \cref{prop:thr-general} and \cref{lem:andor}, every gate satisfies the hypothesis of \cref{lem:weak-compose} under
+every product measure with $C=38>26.3/\ln2$; negating an input replaces $q_j$ by $1-q_j$ and changes nothing else. A
+literal has $H^+=0$. By induction on the depth, \cref{lem:weak-compose} gives $H^+(f)\le38d\,I(f)$, and
+$H(f)=H^+(f)+(1-\Var(f))\log\frac1{1-\Var(f)}\le H^+(f)+\Var(f)\log e\le(38d+\log e)\,I(f)$.
+\end{proof}
+
+The inputs of such a formula may also be functions from the classes of \cref{thm:plus-intro}, on disjoint sets of
+variables, at the cost of adding their constant. For formulas of bounded depth the constant does not depend on the
+fan-ins, while~\cite[Theorem~3]{OT13} gives a constant independent of the depth that grows exponentially with the
+fan-ins. The next theorem removes the dependence on $d$.
+
+\subsection*{The strengthened inequality for threshold gates}
+The weak form loses only when one input is pivotal with probability close to one. The other inputs are then nearly
+deterministic, and the left side of \eqref{eq:biased} can be estimated directly.
+
+\begin{theorem}\label{thm:thr-strong}
+Let $1\le t\le r$ and let $\mu$ be a product measure on $\bits^r$ with $\mu(y_j=1)=q_j\in(0,1)$. With
+$J=\sum_{|A|\ge2}|A|\,P_\mu(A)$,
+\[
+\sum_{A\ne\emptyset}P_\mu(A)\ln\frac{\sigma_A^2}{P_\mu(A)}\le263\,J\le526\,\bigl(I_\mu(T_{t,r})-\Var_\mu(T_{t,r})\bigr),
+\]
+so $T_{t,r}$ satisfies \eqref{eq:biased} with $C=760$ under every product measure.
+\end{theorem}
+
+\begin{proof}
+Write $N$, $N_{-j}$, $\sigma_j^2$, $\rho_j=\mu(N_{-j}=t-1)$, $I$ and $V$ as in \cref{prop:thr-general}, and put
+$J_j=\sigma_j^2\rho_j(1-\rho_j)$. The derivative $d_j=\mathbf 1[N_{-j}=t-1]$ has mean $\rho_j$ and
+$P(B\cup\{j\})=\sigma_j^2\widetilde{d_j}(B)^2$ (proof of \cref{lem:thr-rank}), so $P(\{j\})=\sigma_j^2\rho_j^2$,
+$\sum_{A\ni j,\,|A|\ge2}P(A)=\sigma_j^2\Var(d_j)=J_j$ and $J=\sum_jJ_j$. Since $J\ge2\sum_{|A|\ge2}P(A)$, we have
+$I-V=\sum_{|A|\ge2}(|A|-1)P(A)\ge J/2$, which is the second inequality. The sets of size one contribute
+$\sum_j2\sigma_j^2\rho_j^2\ln(1/\rho_j)\le2J$.
+
+If $\rho_j\le\frac9{10}$ for every $j$, then $J\ge I/10$ and \cref{prop:thr-general} gives the bound $263\,J$.
+Otherwise let $j_0$ maximise $\rho_j$, so that $\rho_{j_0}=1-\varepsilon$ with $\varepsilon<\frac1{10}$. Negating all
+inputs and the output maps $T_{t,r}$ to $T_{r-t+1,r}$ and changes none of the quantities involved, so we may assume
+$q:=q_{j_0}\le\frac12$. Let $O=[r]\setminus\{j_0\}$ and $N'=N_{-j_0}$. For $i\in O$ let $\tilde q_i=\min(q_i,1-q_i)$,
+let $\bar y_i$ be the more likely value of $y_i$ and $z_i=\mathbf 1[y_i\ne\bar y_i]$; let
+$U=\{i\in O:\bar y_i=0\}$, $D=\{i\in O:\bar y_i=1\}$, $Z_U=\sum_{i\in U}z_i$, $Z_D=\sum_{i\in D}z_i$,
+$L_U=\sum_{i\in U}\tilde q_i$, $L_D=\sum_{i\in D}\tilde q_i$, $L'=L_U+L_D$, $\Lambda_U=\sum_{i\in U}\sigma_i^2$,
+$\Lambda_D=\sum_{i\in D}\sigma_i^2$ and $\Lambda'=\Lambda_U+\Lambda_D$.
+
+\emph{The other inputs are nearly deterministic.} Resampling every coordinate, as in the proof of
+\cref{lem:thr-rank} with $\eta=1$, and using $\E[1/(F+1)]\le1/\E F$ as in the proof of \cref{prop:thr-general}, gives
+$\mu(N'=k)\le(2/(\pi L'))^{1/2}$ for every $k$, because the number $F$ of free coordinates has mean $2L'$. If $|D|\ne t-1$, then $N'=t-1$ forces some $z_i=1$, so
+$\prod_{i\in O}(1-\tilde q_i)\le\varepsilon<\frac1{10}$; as $\ln(1-x)\ge-\frac32x$ for $0\le x\le\frac12$, this gives
+$L'>\frac23\ln10>1.53$ and $\rho_{j_0}<0.65$, which is impossible. Hence $|D|=t-1$ and $N'-(t-1)=Z_U-Z_D$. A
+configuration with exactly one $z_i=1$ has $N'\ne t-1$, so $\varepsilon\ge L'(1-L')$; since also
+$L'\le2/(\pi\rho_{j_0}^2)<0.79$, this forces $L'<0.113$, and then $L'\le1.128\,\varepsilon$ and
+$\Lambda'\le4L'\le4.51\,\varepsilon\le0.451$.
+
+\emph{Lower bounds for $J$.} For $i\in U$, $N_{-i}=t-1$ exactly when $y_{j_0}+Z_{U\setminus\{i\}}-Z_D=0$, so
+$\rho_i\ge(1-q)(1-L')>0.44$, while $\rho_i\le1-\varepsilon$; by concavity
+$\rho_i(1-\rho_i)\ge\min(0.44\cdot0.56,\,\varepsilon(1-\varepsilon))\ge0.9\,\varepsilon$. For $i\in D$, $N_{-i}=t-1$
+exactly when $y_{j_0}+Z_U-Z_{D\setminus\{i\}}=1$, so $\rho_i\ge q(1-L')\ge0.887\,q$ and $1-\rho_i\ge(1-q)(1-L')>0.44$,
+whence $\rho_i(1-\rho_i)\ge0.49\,q$. Therefore $\sum_{i\in U}J_i\ge0.9\,\varepsilon\Lambda_U$ and
+$\sum_{i\in D}J_i\ge0.49\,q\Lambda_D$.
+
+\emph{Sets containing $j_0$.} With $d=d_{j_0}$, the sets $A\ni j_0$ with $|A|\ge2$ contribute
+\[
+\sigma_{j_0}^2\sum_{B\ne\emptyset}\widetilde d(B)^2\ln\frac{\sigma_B^2}{\widetilde d(B)^2}.
+\]
+Let $U_k$ be the weight of $d$ at level $k$, $U_d=\Var(d)=\varepsilon(1-\varepsilon)$, and $e_k$ the $k$-th elementary symmetric polynomial of
+$(\sigma_i^2)_{i\in O}$, so that $e_k\le\Lambda'^k\le(5.02\,U_d)^k$. Gibbs' inequality on each level against the
+weights $\sigma_B^2$, together with $x\ln(a/x)\le a/e$, gives
+\[
+\sum_{B\ne\emptyset}\widetilde d(B)^2\ln\frac{\sigma_B^2}{\widetilde d(B)^2}\le\sum_kU_k\ln\frac{e_k}{U_k}
+\le\sum_k\Bigl(\frac{U_d^k}e+kU_k\ln5.02\Bigr)\le0.41\,U_d+1.62\,I(d),
+\]
+and $I(d)=\sum_{i\in O}q_i(1-q_i)\,\mu(i\text{ is pivotal for }d)\le\Lambda'/4\le1.26\,U_d$. So these sets contribute
+at most $2.5\,\sigma_{j_0}^2U_d=2.5\,J_{j_0}$.
+
+\emph{Sets avoiding $j_0$.} Put $u=\mathbf 1[Z_U-Z_D\ge1]$ and $v=\mathbf 1[Z_D-Z_U\ge1]$. Since
+$T_{t,r}=u+y_{j_0}(1-u-v)$, for $\emptyset\ne A\subseteq O$ the coefficient of $\phi_A$ in the $\pm1$ version of
+$T_{t,r}$ is $2(1-q)\tilde u(A)-2q\tilde v(A)$, where $\tilde u$ and $\tilde v$ are the coefficients of $u$ and $v$.
+Computing in one coordinate of $A$ as in \cref{lem:thr-rank} and using $\E|\phi_i|=\sigma_i$ gives
+$|\tilde u(A)|,|\tilde v(A)|\le\sigma_A/2$. Moreover, for $A\subseteq D$ we have
+$\tilde u(A)=\E\bigl[\E[u\mid y_D]\,\phi_A\bigr]$ with $0\le\E[u\mid y_D]\le\mu(Z_U\ge1)\le L_U$, so
+$|\tilde u(A)|\le L_U\sigma_A$, and likewise $|\tilde v(A)|\le L_D\sigma_A$ for $A\subseteq U$. We use three
+elementary facts. For $s>0$ and $a^2,b^2\le s$, the function $\varphi_s(x)=x\ln(s/x)$ satisfies
+$\varphi_s((a+b)^2)\le2\varphi_s(a^2)+2\varphi_s(b^2)+2a^2+2b^2$: if $2a^2+2b^2\le s/e$ this follows from the
+monotonicity of $\varphi_s$ on $[0,s/e]$ and $(x+y)\ln\frac s{x+y}\le x\ln\frac sx+y\ln\frac sy$, and otherwise
+$\varphi_s\le s/e<2a^2+2b^2$. For a family $\mathcal F$ of sets and numbers $0\le x_A\le\lambda\sigma_A^2$ with
+$\lambda\le1/e$, the log-sum inequality gives $\sum_{\mathcal F}x_A\ln(\sigma_A^2/x_A)\le\lambda\ln(1/\lambda)
+\sum_{\mathcal F}\sigma_A^2$, and $\frac1e\sum_{\mathcal F}\sigma_A^2$ is a bound when only $x_A\le\sigma_A^2$ is
+known. Finally, over the sets with $|A|\ge2$ that meet $U$, $\sum\sigma_A^2\le\Lambda_U(e^{\Lambda'}-1)\le
+1.57\,\Lambda'\Lambda_U$, and over the sets $A\subseteq D$ with $|A|\ge2$,
+$\sum\sigma_A^2\le\frac12\Lambda_D^2e^{\Lambda_D}\le0.79\,\Lambda_D^2$; the same holds with $U$ and $D$ exchanged. We
+split the sets $A\subseteq O$ with $|A|\ge2$ according to whether they meet $U$ for the terms with
+$a=2(1-q)\tilde u(A)$, and according to whether they meet $D$ for the terms with $b=2q\tilde v(A)$. With $\lambda=1$,
+$4L_U^2$, $q^2$ and $4q^2L_D^2$ in the four families, $L_U\le\Lambda_U/2$, $L_D\le\Lambda_D/2$,
+$x^2(1+2\ln\frac1x)\le0.91\,x$ for $0<x\le0.23$ and $q(1+2\ln\frac1q)\le1.2$ for $q\le\frac12$, these sets contribute
+at most
+\[
+19.4\,\varepsilon\Lambda_U+2.93\,\varepsilon\Lambda_U+1.7\,q\Lambda_D+0.3\,q\Lambda_D
+\le24.9\sum_{i\in U}J_i+4.1\sum_{i\in D}J_i.
+\]
+Adding the three contributions, the left side is at most $2J+2.5\,J_{j_0}+24.9\,(J-J_{j_0})\le26.9\,J$.
+\end{proof}
+
+\begin{corollary}\label{cor:thr-formula}
+Let $f$ be computed by a read-once formula whose gates are threshold gates $T_{t,r}$ and $\mathrm{XOR}$ gates of any
+fan-in, with negations allowed. Then $H(f)\le760\,I(f)$.
+\end{corollary}
+
+\begin{proof}
+By \cref{thm:thr-strong} and \cref{lem:andor}, every gate satisfies \eqref{eq:biased} with $C=760$ under every
+product measure, and negating an input changes nothing. The composition theorem~\cite[Theorem~1]{OT13}, applied at
+each gate from the inputs to the output, gives $H^+(f)\le760\,(I(f)-\Var(f))$, and
+$H(f)\le H^+(f)+\Var(f)\log e\le760\,I(f)$.
+\end{proof}
+
+The inputs of such a formula may again be functions from the classes of \cref{thm:plus-intro}, and gates of bounded
+arity may be added, with the constants of \cref{cor:compose-intro}. For depth $d\le19$, \cref{cor:depth} gives the
+smaller constant $38d+\log e$, and the numerical ratio in \cref{sec:numerics} is below $2+4\log e$ for every threshold
+gate that was computed.
+
+
+\begin{proof}[Proof of \cref{cor:compose-intro}]
+By~\cite[Theorem~2]{OT13}, every gate of arity at most $a$ satisfies the biased form of \eqref{eq:feiplus} with a
+constant $C_a=2^{O(a)}$, for every product measure on its inputs, and by \cref{lem:andor} so do $\mathrm{AND}$,
+$\mathrm{OR}$ and $\mathrm{XOR}$ gates of any fan-in, with constant $7.78$; by \cref{thm:threshold} so does a threshold gate whose inputs have equal biases, with constant
+$66.4$, and by \cref{thm:thr-strong} so does every threshold gate, with constant $760$. By \cref{thm:plus-intro},
+each $f_l$ satisfies
+\eqref{eq:feiplus} with the constant of its class, which is at least $50$, and so does every gate of the last kind,
+because its inputs are independent balanced bits and the product measure that~\cite[Theorem~1]{OT13} puts on them is
+the uniform one. The composition theorem~\cite[Theorem~1]{OT13}, applied at each gate of $F$ from the inputs to the
+output, shows that $f$ satisfies \eqref{eq:feiplus} with constant $C$, and \cite[Proposition~2.1]{OT13} gives the
+bound on $H(f)$.
+\end{proof}
+
+\begin{remark}
+Only the uniform form of \eqref{eq:feiplus} is needed for the inputs $f_l$, because they read the uniformly
+distributed variables directly, and for gates with balanced inputs. Using read-$k$ DNF formulas or regular
+functions as gates with biased inputs would require the biased form of \eqref{eq:feiplus} for these classes, which
+the proofs above do not give, except for $\mathrm{AND}$ and $\mathrm{OR}$ (\cref{lem:andor}) and for threshold gates
+(\cref{thm:threshold,thm:thr-strong}).
+\end{remark}
+
+\section{Numerical examples}\label{sec:numerics}
+
+All quantities below were computed exactly from full truth tables by the Walsh--Hadamard transform. For read-$k$
+DNF formulas the table lists $H/I$ and the right side of \eqref{eq:gibbs}, evaluated exactly with the reference
+measure of \cref{thm:readk-main} and divided by $I$; this is the quantity that the proof of \cref{thm:readk-main}
+bounds from above.
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+formula & $n$ & $k$ & $H/I$ & Gibbs bound $/I$ \\
+\midrule
+tribes, $3$ terms of width $5$ & 15 & 1 & 3.632 & 3.632\\
+stars of a random $3$-regular graph on $12$ vertices & 18 & 2 & 4.128 & 4.366\\
+stars of a random $3$-regular graph on $16$ vertices & 24 & 2 & 4.487 & 4.724\\
+stars of a random $4$-regular graph on $12$ vertices & 24 & 2 & 3.875 & 4.004\\
+random monotone read-$3$ formulas, larger of $2$ & 20 & 3 & 3.942 & 4.145\\
+random read-$k$ formulas with negations, $192$ samples & $\le16$ & $\le5$ & 3.781 & 4.524\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Here the star function of a graph $G$ has one variable per edge and is true when some vertex has all its
+incident edges present; it is computed by a read-$2$ DNF formula with one term per vertex. The last row lists the
+largest values over the $192$ formulas; the two maxima need not be attained by the same formula. On all these
+examples the Gibbs bound exceeds the entropy by at most $1.32\,I$, and the largest ratio is $H/I=4.49$, for the star
+function of a $3$-regular graph. For the reference measure of \cref{thm:readk-log} with $\beta=3$, the upper bound on
+the right side of \eqref{eq:gibbs} given by the runs constructed in its proof, computed from the exact spectral
+distribution of $28$ random read-$k$ formulas with $k\le10$ and $12$ or $14$ variables, lies between $4.5\,I$ and
+$8.4\,I$ and grows slowly with $k$, while $H/I\le3.91$ on the same formulas; the probabilities of these runs sum to
+at most $0.12$ over all sets. For regular functions, $590$ random linear threshold functions and $440$ random
+regular functions obtained as up-sets of shifted families, all with at most $13$ variables, have $H/I\le3.94$.
+Intersections, unions, parities and majorities of two to four linear threshold functions on at most $12$
+variables, with independent random weights or with weights in opposite orders, have $H/I\le3.86$; for these the
+quantity $\E_S\sum_{i\in S}\min_l\ln^+(r_l(i)/|S|)$ in the proof of \cref{thm:multi} is at most $0.24\,I(f)$, and
+the expectation of $F_l$ under each piece $\nu_{i,l}$ is at most $0.74$, against the bounds $4\ln m+4.93$ and $L_1$.
+For $75$ read-$k$ unions of threshold functions with $k\le4$, up to $12$ threshold functions and at most $14$
+variables, $36$ of them built from rarely true threshold functions on $5$ to $9$ variables, $H/I\le4.0$, the ratio of
+the two sides of \cref{lem:upath} is at most $0.96$, the expectation of $F^j_{l_s}$ under each piece is at most $0.73$,
+the quantity bounded by $K$ in the proof of \cref{thm:union} is at most $0.30$, and the upper bound on $H(f)$ given by
+the choice of $L_A$ in that proof, computed from the exact spectral distribution, lies between $H(f)$ and $37\,I(f)$.
+For the reference measure of \cref{thm:union-log} with $a=1.44$ and $\beta=10$, the bound given by the runs
+constructed in its proof, on $13$ random read-$k$ unions of threshold functions with $k\le5$ and $10$ or $12$
+variables, lies between $4.9\,I$ and $7.9\,I$, and the run probabilities sum to at most $0.17$ over all sets.
+For the reference measure of \cref{thm:union-multi}, on $22$ random read-$k$ unions of intersections of two or three
+threshold functions with $k\le3$ and $10$ or $12$ variables, the bound lies between $4.0\,I$ and $7.2\,I$, the run
+probabilities sum to at most $0.16$, and the per-set inequality of the proof holds on every set with a margin of at
+least $13$ bits; on $15$ read-$k$ unions of random functions of $w\le5$ variables each ($k\le3$, $10$ or $12$
+variables), viewed as functions of dictators, the bound lies between $4.0\,I$ and $7.6\,I$, the run probabilities sum
+to at most $0.21$, and the margin is at least $14$ bits.
+
+For the strengthened inequality, the largest values of $H^+(f)/(I(f)-\Var(f))$ observed were $6.35$ on random
+read-$k$ DNF formulas with $k\le6$ and at most $14$ variables, $6.11$ on $320$ random regular and linear threshold
+functions with at most $12$ variables, $5.68$ on intersections, unions, parities and majorities of two to four linear
+threshold functions on the same variables, and $6.38$ on conjunctions, disjunctions, parities and majorities of such
+functions on disjoint sets of variables. In \cref{lem:mass} the largest observed value of
+$W(f)\log(1/W(f))/J(f)$, over all functions of at most $4$ variables, random functions of up to $10$ variables and
+perturbations of dictators, was $1.59$.
+
+For threshold gates with inputs of equal bias every quantity in \cref{thm:threshold} was computed with $50$-digit
+arithmetic from the formula $W_k=\binom rk(q(1-q))^k\bigl(\E\,\Delta^kG(c)\bigr)^2$, where $G(c)=1-2\cdot\mathbf 1[c\ge t]$,
+$\Delta$ is the forward difference and $c$ has the law $\Bin(r-k,q)$: for all $r\le12$, all $1\le t\le r$ and
+$q\in\{10^{-e},1-10^{-e}:e=1,2,4,8,16,30\}\cup\{0.1,0.3,0.5,0.7,0.9\}$, and for $150$ random triples with
+$13\le r\le40$. The left side of \cref{thm:threshold} divided by $I$ is at most $2.94$ (the bound is $11.49$); in
+\cref{lem:thr-rank} the ratio is at most $1.14$ (bound $4.85$); in \cref{lem:thr-credit} the quantity
+$(V\ln(1/V)-I\ln^+(4\rho/V))/I$ is at most $0.68$ (bound $4.64$) and $\alpha\,\mathrm{TC}(\mu_A)/I$ is at most $0.25$
+(bound $2/e$). The ratio of the two sides of \eqref{eq:biased} is at most $7.7708$, the value $2+4\log e$ of
+\cref{lem:andor}, attained by $\mathrm{OR}_2$ as $q\to0$. For linear threshold functions with at most $13$ variables
+under $3{,}000$ random product measures with biases down to $10^{-12}$, $\alpha\,\mathrm{TC}(\mu_A)\le0.24\,I_\mu$ as
+well, while for the disjunctions of \cref{rem:threshold} the ratio grows from $0.23$ to $0.39$ as $s$ goes from $3$
+to $7$. For $3{,}000$ further linear threshold functions with at most $12$ variables, with weights in $\{1,2,3\}$,
+powers of two up to $2^6$, or exponentially distributed, $\alpha\,\mathrm{TC}(\mu_A)\le0.31\,I_\mu$; for these the
+bound $\mathrm{TC}(\mu_A)\le\ln(\chi^*/\alpha)$ given by the exponential tilt, where $\chi^*$ is the Chernoff bound for
+$\alpha$, is far from sufficient: $\alpha\ln(\chi^*/\alpha)/I_\mu$ reaches $1.9\cdot10^3$ on an event of probability
+about $10^{-16}$. Over $1{,}500$ random linear threshold functions with at most $9$ variables, and $60$ searches that
+maximise the ratio of the two sides of \eqref{eq:biased} over the weights, the threshold and the biases of a linear
+threshold function with at most $8$ variables, that ratio never exceeded $2+4\log e$; nor did it for one heavy input
+and up to $32$ light inputs of a common bias, computed exactly by level over a grid of biases and thresholds, where the
+largest value is always attained at the conjunction or disjunction corner. For $1{,}200$ threshold functions with at most $8$ variables and unequal biases down to $10^{-14}$, the
+per-level Gibbs bound in the proof of \cref{prop:thr-general}, computed exactly, lies between the left side and
+$2.1\,I_\mu$ (the bound is $26.3\,I_\mu$), the rank terms are at most $0.79\,I_\mu$ and $\alpha\,\mathrm{TC}(\mu_A)$
+is at most $0.17\,I_\mu$; and for $1{,}500$ threshold functions with at most $9$ variables the ratio of the two sides
+of \eqref{eq:biased} is again at most $2+4\log e$. For \cref{thm:thr-strong}, $1{,}600$ threshold functions with at
+most $10$ variables were computed in $50$-digit arithmetic, half of them built so that one input is pivotal with
+probability above $\frac9{10}$. In that case $L'\le1.05\,\varepsilon$ (the proof uses $1.128\,\varepsilon$),
+$\Lambda'\le4.07\,\varepsilon$ (it uses $4.51\,\varepsilon$), the sets containing $j_0$ contribute at most
+$1.57\,J_{j_0}$ (it uses $2.5\,J_{j_0}$), the sets avoiding $j_0$ at most $6\%$ of the bound used for them, and the
+left side is at most $2.7\,J$ (it uses $26.9\,J$); in the other case the left side is at most $2.1\,I_\mu$.
+
+\section{Concluding remarks}
+
+The proofs for read-once formulas~\cite{OT13}, for regular functions (\cref{thm:regular,thm:multi}) and for
+read-$k$ DNF formulas (\cref{thm:readk}) use unrelated mechanisms: composition, a rank order with the
+Littlewood--Offord inequality, and activation of witnessing terms. \Cref{thm:multi} shows that the rank mechanism
+tolerates several unrelated orders at a logarithmic cost, \cref{thm:union} that the last two mechanisms combine
+when the regular functions overlap boundedly, and \cref{thm:union-multi} that the three combine. The rank order suits threshold-like functions and has no analogue
+for read-once formulas such as recursive majority, whose automorphism group is transitive on the variables. For the
+majority function each variable lies in exponentially many minterms, and the contributions of the corresponding
+subcubes to the derivative superpose coherently, so \cref{lem:witness} gives nothing.
+
+For read-$k$ DNF formulas the dependence on $k$ in \cref{thm:readk} is logarithmic, as for the min-entropy
+bound of~\cite{ACKSW21}. A bound independent of $k$ would be the conjecture for all DNF formulas, since a formula
+with $m$ terms is read-$m$; on the examples we computed, including sunflower formulas, vertex stars of complete $2$-
+and $3$-uniform hypergraphs, graph formulas $\bigvee_{uv\in E}(x_u\wedge x_v)$ of random $k$-regular graphs with
+$k\le10$ and random read-$k$ formulas, $H/I$ stays below $4.5$ and does not grow with $k$. For unions of regular
+functions (\cref{thm:union-log}) the logarithm enters in the same two ways: through the choice among at most $k$
+overlapping functions, and through the Cauchy--Schwarz step, whose factor $k$ costs only $\log k$ because the rank
+tails and the level tails of the pieces decay exponentially. A second
+question is whether the biased form \eqref{eq:biased} holds for read-$k$ DNF formulas and for regular functions
+under all product measures; together with~\cite{OT13} this would allow such functions as gates of read-once
+formulas, not only as inputs, and for threshold functions it would give the conjecture for all read-once threshold
+formulas. Every term on the left of \eqref{eq:biased} is nonnegative: computing $\E[g\phi_A]$ one coordinate at a time
+gives $P_\mu(A)=\sigma_A^2\,4^{-|A|}\bigl(\E\,\partial_Ag\bigr)^2$, where
+$\partial_Ag(x)=\sum_{B\subseteq A}(-1)^{|A\setminus B|}g(x^{A\leftarrow1_B})$ is the mixed difference in the
+coordinates of $A$ and the expectation is over the other coordinates, so the left side of \eqref{eq:biased} equals
+$\sum_{A\ne\emptyset}P_\mu(A)\log\bigl(4^{|A|}/(\E\,\partial_Ag)^2\bigr)$ and involves the biases of the coordinates in
+$A$ only through the weight $\sigma_A^2$. The numerical evidence points to the constant of \cref{lem:andor}. For $60$ threshold functions with at
+most $11$ variables and $40$ read-$k$ DNF formulas with $k\le3$ and at most $12$ variables, with the product measure
+chosen by local search, the largest ratio of the two sides of \eqref{eq:biased}, recomputed with $50$-digit
+arithmetic, is below $2+4\log e$ and approaches it only at extreme biases, where the function behaves like
+$\mathrm{AND}_2$. The same holds, in exact arithmetic, for every symmetric function of at most $8$ variables and
+every symmetric threshold function of at most $30$ variables under product measures with equal biases, at
+fifteen biases between $10^{-8}$ and $1-10^{-8}$. For symmetric threshold functions the ratio is
+bounded by \cref{thm:threshold} under equal biases and by \cref{thm:thr-strong} in general, with a larger constant. Its proof isolates what a general proof needs: after the rank step, the only
+obstacle is the normalisation $V\ln(1/V)$, which the chain rule splits into the marginal divergences of the
+conditional law $\mu_A$, all of them repaid by the factors $\sigma_A^2$, and the total correlation of $\mu_A$. For
+threshold functions under all product measures the total correlation is controlled by the tilt, which gives
+\cref{prop:thr-general}; when one input is pivotal with probability close to one, the other inputs are nearly
+deterministic and \cref{thm:thr-strong} follows by direct estimates. For general linear threshold functions the numerical bound $\alpha\,\mathrm{TC}(\mu_A)\le0.31\,I_\mu$ of
+\cref{sec:numerics} is what a proof would have to establish, and the exponential tilt that gives it for symmetric
+thresholds does not: with unequal weights the Chernoff bound can exceed a rare event's probability by a factor that
+is not controlled by its influence. The inequality \eqref{eq:biased} itself held with the constant $2+4\log e$ of
+\cref{lem:andor} for every linear threshold function that was computed, and a proof would extend
+\cref{cor:thr-formula} to read-once formulas over linear threshold gates of any fan-in.
+
+A route that avoids the total correlation is to divide each set among its elements. For every Boolean function and
+every product measure,
+\[
+\sum_{|A|\ge2}P(A)\ln\frac{\sigma_A^2}{P(A)}=\sum_j\sigma_j^2\,\Psi(d_j),\qquad
+\Psi(d)=\sum_{B\ne\emptyset}\frac{\widetilde d(B)^2}{|B|+1}\ln\frac{\sigma_B^2}{\widetilde d(B)^2},
+\]
+where $d_j$ is the derivative in the $j$-th coordinate. For a function whose derivatives do not change sign, such as
+a linear threshold function, the sets of size one contribute at most $2J$, so a bound $\Psi(d_j)\le C\Var(d_j)$ for
+every $j$ gives \eqref{eq:biased} with constant $2(2+C)/\ln2$. For a threshold gate $d_j$ is the indicator of $\{N_{-j}=t-1\}$, whose
+coefficient on a set $B$ of size $b$ is $\prod_{i\in B}\sqrt{q_i(1-q_i)}$ times the $b$-th backward difference, at
+$t-1$, of the law of the number of ones outside $B$. For the conjunction of $m$ inputs of bias $q$, the slice
+$N=m$, the ratio $\Psi/\Var$ tends to $\ln4+2q\ln(1/q)/(1-q)$ as $m(1-q)\to\infty$, and every slice that was
+computed, with up to $256$ inputs of equal bias or up to $8$ inputs of unequal biases, satisfies
+$\Psi<(2+\ln4)\Var$. For the conjunction this holds under every product measure: there
+$\widetilde d(B)^2=\rho\prod_{i\in B}(1-q_i)\prod_{i\notin B}q_i$, and $q\ln(1/q)\le1-q$ bounds the part of $\Psi/\Var$
+coming from the inputs outside $B$ by $2$, so $2+\ln4$ is the supremum over conjunctions. If $\Psi<(2+\ln4)\Var$ held
+for all slices, \eqref{eq:biased} would follow for threshold gates with constant $2(4+\ln4)/\ln2<15.6$. When $\rho_j\ge\frac12$, the anti-concentration bound used in the proof of
+\cref{thm:thr-strong} forces the other inputs to have $\sigma^2$-mass at most $930\Var(d_j)$, and Gibbs' inequality
+on each level then gives $\Psi(d_j)\le7.04\Var(d_j)$; the open case is a slice far in the tail of the law of $N_{-j}$. For a linear threshold function the bound fails
+coordinate by coordinate: the derivative of a heavy input can be a threshold function of the light inputs, and then
+$\Psi/\Var$ grows like the logarithm of the number of light inputs, although the whole left side stays small.
+Other divisions of the sets among their elements do better: for $\mathbf 1[m\,y_0+y_1+\cdots+y_m\ge m/2]$ with inputs
+of bias $\frac12$ the equal division gives the heavy input the ratio $4.12$ at $m=512$, while giving each set to its
+lightest elements keeps every coordinate at $1.88$, and the best division, found by linear programming, keeps every
+coordinate below $1.84$ for every computed linear threshold function with at most $7$ inputs. What is missing for
+linear threshold functions is an explicit division with this property.
+
+\section*{Funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the European
+Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation
+as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by
+Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation
+(ISF Grant 4101/25). Computational resources were provided in part by Google Cloud through its education credits
+program (credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus
+Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The theorems, proofs and numerical computations in this paper were produced by the AI system Claude (Anthropic),
+working within the author's math-brain project. The case of linear threshold functions in \cref{thm:regular} was
+produced earlier in the same project by Claude agents, and the case of Boolean functions of several threshold
+functions in \cref{thm:multi} was also obtained there by another group of Claude agents, with a different argument
+(interleaving the orders) and a smaller constant for large $m$. The author takes full responsibility for the content
+of the paper.
+
+\begin{thebibliography}{99}
+
+\bibitem{ACKSW21} S.~Arunachalam, S.~Chakraborty, M.~Kouck\'y, N.~Saurabh and R.~de~Wolf, Improved bounds on
+Fourier entropy and min-entropy, \emph{37th International Symposium on Theoretical Aspects of Computer Science
+(STACS 2020)}, LIPIcs 154, 45:1--45:19; \emph{ACM Trans. Comput. Theory} 13 (2021).
+
+\bibitem{Ber67} A.~J.~Bernstein, Maximally connected arrays on the $n$-cube, \emph{SIAM J. Appl. Math.} 15 (1967),
+1485--1489.
+
+\bibitem{CKKLS18} S.~Chakraborty, S.~Karmalkar, S.~Kundu, S.~V.~Lokam and N.~Saurabh, Fourier entropy-influence
+conjecture for random linear threshold functions, \emph{LATIN 2018}, Lecture Notes in Comput. Sci. 10807,
+Springer, 2018, 275--289.
+
+\bibitem{CKLS16} S.~Chakraborty, R.~Kulkarni, S.~V.~Lokam and N.~Saurabh, Upper bounds on Fourier entropy,
+\emph{Theoret. Comput. Sci.} 654 (2016), 92--112.
+
+\bibitem{Dar64} J.~N.~Darroch, On the distribution of the number of successes in independent trials, \emph{Ann. Math.
+Statist.} 35 (1964), 1317--1321.
+
+\bibitem{FK96} E.~Friedgut and G.~Kalai, Every monotone graph property has a sharp threshold, \emph{Proc. Amer.
+Math. Soc.} 124 (1996), 2993--3002.
+
+\bibitem{GMP26} M.~J.~Gonz\'alez, P.~MacManus and M.~C.~Pereyra, Further evidence towards the Fourier
+entropy-influence conjecture, arXiv:2606.00246 (2026).
+
+\bibitem{Han25} X.~Han, A new bound for the Fourier-entropy-influence conjecture, \emph{Combinatorica} 45 (2025).
+
+\bibitem{Har64} L.~H.~Harper, Optimal assignments of numbers to vertices, \emph{J. Soc. Indust. Appl. Math.} 12
+(1964), 131--135.
+
+\bibitem{Har76} S.~Hart, A note on the edges of the $n$-cube, \emph{Discrete Math.} 14 (1976), 157--163.
+
+\bibitem{Hoe56} W.~Hoeffding, On the distribution of the number of successes in independent trials, \emph{Ann. Math.
+Statist.} 27 (1956), 713--721.
+
+\bibitem{Hod17} R.~Hod, Improved lower bound for the Fourier entropy/influence conjecture via lexicographic
+functions, arXiv:1711.00762 (2017).
+
+\bibitem{KB80} R.~Kaas and J.~M.~Buhrman, Mean, median and mode in binomial distributions, \emph{Statist. Neerlandica}
+34 (1980), 13--18.
+
+\bibitem{KKLMS20} E.~Kelman, G.~Kindler, N.~Lifshitz, D.~Minzer and M.~Safra, Towards a proof of the
+Fourier--entropy conjecture?, \emph{Geom. Funct. Anal.} 30 (2020), 1097--1138.
+
+\bibitem{KLW10} A.~Klivans, H.~Lee and A.~Wan, Mansour's conjecture is true for random DNF formulas,
+\emph{Proceedings of the 23rd Conference on Learning Theory (COLT 2010)}, 368--380.
+
+\bibitem{KMS12} N.~Keller, E.~Mossel and T.~Schlank, A note on the entropy/influence conjecture, \emph{Discrete
+Math.} 312 (2012), 3364--3372.
+
+\bibitem{Man95} Y.~Mansour, An $O(n^{\log\log n})$ learning algorithm for DNF under the uniform distribution,
+\emph{J. Comput. System Sci.} 50 (1995), 543--550.
+
+\bibitem{MS77} F.~J.~MacWilliams and N.~J.~A.~Sloane, \emph{The Theory of Error-Correcting Codes}, North-Holland,
+Amsterdam, 1977.
+
+\bibitem{Mur71} S.~Muroga, \emph{Threshold Logic and its Applications}, Wiley-Interscience, New York, 1971.
+
+\bibitem{Num26} Numaro, Certificate archive: improved lower bound $C_{71}>6.521845710923046575$ for the Fourier
+entropy-influence constant ($n=18$ explicit construction), Zenodo, 2026, doi:10.5281/zenodo.21497769.
+
+\bibitem{OT13} R.~O'Donnell and L.-Y.~Tan, A composition theorem for the Fourier entropy-influence conjecture,
+\emph{ICALP 2013}, Lecture Notes in Comput. Sci. 7965, Springer, 2013, 780--791.
+
+\bibitem{OWZ11} R.~O'Donnell, J.~Wright and Y.~Zhou, The Fourier entropy-influence conjecture for certain classes
+of Boolean functions, \emph{ICALP 2011}, Lecture Notes in Comput. Sci. 6755, Springer, 2011, 330--341.
+
+\bibitem{Pot26} V.~N.~Potapov, On the Fourier entropy-influence conjecture for Boolean plateaued functions,
+arXiv:2609.21563, 2026.
+
+\bibitem{Sha18} G.~Shalev, On the Fourier entropy influence conjecture for extremal classes, arXiv:1806.03646
+(2018).
+
+\bibitem{Spe28} E.~Sperner, Ein Satz \"uber Untermengen einer endlichen Menge, \emph{Math. Z.} 27 (1928),
+544--548.
+
+\bibitem{WWW14} A.~Wan, J.~Wright and C.~Wu, Decision trees, protocols and the entropy-influence conjecture,
+\emph{Proceedings of the 5th Conference on Innovations in Theoretical Computer Science (ITCS 2014)}, 67--80.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,51 @@
+[
+  {
+    "claim_id": "A081-VERSIONED-DEPENDENCY-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For the frozen 2026-10-11-execution-v2 registry snapshot, the A081 certificate encodes all three registered versions, preserves the two admitted roots and their five source-bound subclaims, and exposes the pending B09 theorem dependency. Its seven-node admitted subgraph is acyclic with no unresolved dependency. Five alternative FEI routes retain explicit unproved premises; none is a completed FEI proof. The structural cycle checker agrees with independent Kahn elimination on all 66,067 labeled directed graphs of order at most four, including loops.",
+    "hypotheses": [
+      "Only the exact local source bytes and statements pinned in PROOF_DEPENDENCIES.json",
+      "Imported acceptance/certification is limited to the original stated scope",
+      "Source theorem truth, edge entailment and review independence require mathematical reconstruction",
+      "All discrete entropy statements use the units declared on each node"
+    ],
+    "statement_sha256": "f62232cb7cf5356a1da1c61f97d15bf8bd3bd062c715441626d1843a379b4509",
+    "contributors": [
+      "A081"
+    ],
+    "proof_source": {
+      "run_id": "20261011T214745Z-account05-A081-dependency-certificates",
+      "path": "REPORT.md",
+      "certificate": "PROOF_DEPENDENCIES.json",
+      "checker": "code/dependency_check.py",
+      "validation": "out/VALIDATION.json",
+      "exhaustive_check": "out/TEST_RESULTS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+        "version": 1,
+        "statement_sha256": "331eeffbfcb3e4cec0f5a1db9d76852528ecfee2918d3f440ba420f284a20149"
+      },
+      {
+        "claim_id": "B09-TAXFREE-AND-COUNTEREXAMPLE-REPAIRED",
+        "version": 1,
+        "statement_sha256": "3654bf6460ad26235f25803c92c8bad40c0da83b37b5744104c7bbed64b0ec4c"
+      }
+    ],
+    "review_records": [],
+    "status": "LOCAL_CERTIFICATE_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A001",
+      "A083",
+      "A090",
+      "A094",
+      "A096",
+      "A098",
+      "A099"
+    ]
+  }
+]

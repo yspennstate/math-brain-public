@@ -1,0 +1,99 @@
+{
+  "id": "P0174",
+  "ledger_rows": [
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 245,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "free_brownian_sharp_support_diameter_unimodality_threshold",
+        "historical_status": "source_says_open",
+        "locator": "Problem 3.3, arXiv PDF p.6; journal p.359",
+        "problem_id": "P0174",
+        "recorded_at": "2026-09-06T21:19:22Z",
+        "result_status": "candidate_complete_proof",
+        "schema": "probability-problem.v1",
+        "source_id": "free_unimodality_2018",
+        "source_statement_date": "2018-09-14",
+        "statement": "Find the optimal universal C such that every compactly supported law mu becomes unimodal after free convolution with the variance-t semicircle law for all t >= C times the square of its support diameter.",
+        "statement_caveat": "The source prints 2<=C<=4, but its own symmetric-Bernoulli threshold t=4 and diameter 2 imply only C>=1. The candidate proof derives both bounds independently. Manuscript header 2021 differs from the arXiv revision date 2018.",
+        "title": "Sharp support-diameter threshold for free Brownian unimodality",
+        "verification": "author_checked_not_independently_reviewed"
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 368,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "free_brownian_sharp_support_diameter_unimodality_threshold",
+        "historical_status": "source_says_open",
+        "locator": "Problem 3.3, arXiv PDF p.6; journal p.359",
+        "problem_id": "P0174",
+        "proof_file": "proofs/P0174_free_brownian_unimodality_constant_candidate.md",
+        "recorded_at": "2026-09-07T00:19:46Z",
+        "result_status": "candidate_full_solution",
+        "schema": "probability-problem.v1",
+        "source_id": "free_unimodality_2018",
+        "source_statement_date": "2018-09-14",
+        "statement": "Find the optimal universal C such that every compactly supported law mu becomes unimodal after free convolution with the variance-t semicircle law for all t >= C times the square of its support diameter.",
+        "statement_caveat": "The source prints 2<=C<=4, but its own symmetric-Bernoulli threshold t=4 and diameter 2 imply only C>=1. The candidate proof derives both bounds independently. Manuscript header 2021 differs from the arXiv revision date 2018.",
+        "title": "Sharp support-diameter threshold for free Brownian unimodality",
+        "verification": "author_checked_not_independently_reviewed"
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 177,
+      "record": {
+        "attempt_id": "P0174-A001",
+        "depth": "complete_candidate",
+        "full_problem_solved": false,
+        "independent_check": "Second analytic route differentiates v_t directly at critical points. For symmetric Bernoulli on {-c,c}, v_t second derivative at 0 equals (4*c^2-t)/(t*sqrt(t-c^2)), so t<4*c^2=D^2 gives a positive density local minimum. The centered moment inequality follows independently from E[(X-Xprime)^4]<=D^2*E[(X-Xprime)^2]. These are same-author checks, not independent review.",
+        "independent_review": "none",
+        "method": "Centered fourth-moment diameter inequality and reweighted Cauchy-profile critical points",
+        "novelty": "unverified",
+        "obstruction": "No mathematical gap currently identified in the full written candidate. Later-literature novelty is unverified and there is no independent proof review. Check the reweighting normalization, Jensen direction, equality case, and exact source density assumptions before promotion.",
+        "problem_id": "P0174",
+        "proof_path": "proofs/P0174_free_brownian_unimodality_constant_candidate.md",
+        "recorded_at": "2026-09-06T21:19:22Z",
+        "result": "Candidate sharp answer C=1. For any centered law Q of support diameter D, with a=E X^2 and b=E X^4, a<=D^2/4 and b+3a^2<=D^2*a. Reweighting mu by ((x-u)^2+R^2)^(-2) at a stationary Cauchy profile gives y=R^2<=3a when the second derivative is nonnegative, and 1/F=(b+2ay+y^2)/(a+y)<=D^2. Equality forces symmetric endpoint Bernoulli and a strict fourth-order maximum. Thus no local minimum has F<=1/D^2; each level 1/t for t>=D^2 has at most two roots. Biane parametrization and the source level-set lemma imply unimodality. Symmetric Bernoulli gives sharpness.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_complete_candidate"
+      }
+    }
+  ],
+  "store_cards": [
+    {
+      "id": "claim_af577c8a5ad0a3ed82cf47ee944fb5939d556ee322d4bf7e2f92627f4ffdb073",
+      "kind": "claim",
+      "title": "Open problem: Sharp support-diameter threshold for free Brownian unimodality",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_full_solution). Find the optimal universal C such that every compactly supported law mu becomes unimodal after free convolution with the variance-t semicircle law for all t >= C times the square of its support diameter. Source: Hasebe,Ueda: Large time unimodality for classical and free Brownian motions, Problem 3.3, arXiv PDF p.6; journal p.359.\nPosed in Hasebe,Ueda: Large time unimodality for classical and free Brownian motions\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "metadata_json": "{\"artifact_digest\":\"sha256:f48435ccc2b928402ec248acec3fa9dd288c5952ddb0839211cf7af49ed34214\",\"artifact_path\":\"objects/sha256/f4/f48435ccc2b928402ec248acec3fa9dd288c5952ddb0839211cf7af49ed34214.md\",\"bundle_digest\":\"sha256:58d74c8da229fa6b81fe6bac4abdfaadf798d61b07728701a8922a92ccd764b6\",\"bundle_entry_key\":\"op-p0174\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-01\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_009.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0174-sharp-support-diameter-threshold-for-free-brownian-unimodality\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:772492982336f844e436033d99bbb6870cb26f16b277731cabc6cb87e48d4e89\",\"revision_digest\":\"sha256:af577c8a5ad0a3ed82cf47ee944fb5939d556ee322d4bf7e2f92627f4ffdb073\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0174\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_66ee48e25cb303362a772c0e0caa0cd2abbab2730293e9855129c72c9f37f817",
+      "kind": "claim",
+      "title": "Attempt on Sharp support-diameter threshold for free Brownian unimodality",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Centered fourth-moment diameter inequality and reweighted Cauchy-profile critical points Result: Candidate sharp answer C=1. For any centered law Q of support diameter D, with a=E X^2 and b=E X^4, a<=D^2/4 and b+3a^2<=D^2*a. Reweighting mu by ((x-u)^2+R^2)^(-2) at a stationary Cauchy profile gives y=R^2<=3a when the second derivative is nonnegative, and 1/F=(b+2ay+y^2)/(a+y)<=D^2. Equality forces symmetric endpoint Bernoulli and a strict fourth-order maximum. Thus no local minimum has F<=1/D^2; each level 1/t for t>=D^2 has at most two roots. Biane parametrization and the source level-set lemma imply unimodality. Symmetric Bernoulli gives sharpness. Check: Second analytic route differentiates v_t directly at critical points. For symmetric Bernoulli on {-c,c}, v_t second derivative at 0 equals (4*c^2-t)/(t*sqrt(t-c^2)), so t<4*c^2=D^2 gives a positive density local minimum. The centered moment inequality follows independently from E[(X-Xprime)^4]<=D^2*E[(X-Xprime)^2]. These are same-author checks, not independent review. Obstruction: No mathematical gap currently identified in the full written candidate. Later-literature novelty is unverified and there is no independent proof review. Check the reweighting normalization, Jensen direction, equality case, and exact source density assumptions before promotion.\nRefers to the open problem node open-problem-p0174-sharp-support-diameter-threshold-for-free-brownian-unimodality\nNo independent review",
+      "metadata_json": "{\"artifact_digest\":\"sha256:2cc3e516a1f85e3da580ac3b85a83a42307442792e37c2cb756ee60160e1dc7a\",\"artifact_path\":\"objects/sha256/2c/2cc3e516a1f85e3da580ac3b85a83a42307442792e37c2cb756ee60160e1dc7a.md\",\"bundle_digest\":\"sha256:f3e0d4cb2f270970b3a7e311e549325fd4a447f22688326d8e681b699cda8afb\",\"bundle_entry_key\":\"at-p0174\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-04\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_012.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0174-sharp-support-diameter-threshold-for-free-brownian-unimodality\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:705337efabf29cd94bdc3e6e7eb6e032d19e1a439ab1ed1610b6421824e2eead\",\"revision_digest\":\"sha256:66ee48e25cb303362a772c0e0caa0cd2abbab2730293e9855129c72c9f37f817\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0174\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_1801ae5de87c55abfb0fe760dc3e535937e7bfa4e50d638538db8adf10f41b5b",
+      "kind": "claim",
+      "title": "Hasebe-Ueda Problem 3.3 (our id P0174): the optimal universal free-Brownian unimodality constant is C = 1, not 2, and it is attained",
+      "body": "Hasebe and Ueda, Large time unimodality for classical and free Brownian motions with initial distributions, ALEA 15 (2018) 353-374, Problem 3.3 asks for the optimal universal C such that mu (free additive convolution) S(0,t) is unimodal for all t >= C D_mu^2 and all compactly supported mu; the paper proves C <= 4 and prints 2 <= C <= 4. Our result (id P0174, 2026-09-08): C = 1, and it is attained. The function F_R(u) = integral d mu(x) / ((x-u)^2 + R^2) has no local minimum of value <= 1/D^2. Reweighting by dQ proportional to ((x-u)^2 + y)^-2 d mu (with y = R^2), two moment inequalities for a centred variable on an interval of length D (a <= D^2/4 and b + 3 a^2 <= D^2 a) combine with the identity 1/F_R(u) = (b + 2 a y + y^2)/(a + y) and a Jensen-derived second-derivative condition (y <= 3a) to give 1/F_R(u) - D^2 <= [(y - 3a)(y + a) + (4a - D^2) y] / (a + y) <= 0. Equality is attained at the symmetric Bernoulli law with u = 0, y = 3 = 3a and 4a = 4 = D^2, where F_R(0) = 1/4 = 1/D^2 is a strict maximum and never a local minimum. Re-deriving the printed Bernoulli threshold in the authors' own frame gives t >= 4 at D_mu = 2, but since the condition reads t >= C D_mu^2 that only forces C >= 1, not the printed 2 - flagged as either the printed constant dividing by D_mu instead of D_mu^2, or a different reading. Verification as the source words it: each step re-derived (the first moment inequality from E[(X-l)(h-X)] >= 0 with centring, the second from (X-X')^4 <= D^2 (X-X')^2 for an independent copy where E(X-X')^4 = 2b + 6a^2 and E(X-X')^2 = 2a give the coefficient 3 exactly, the second-derivative formula F_R''(u)/(2Z) = 3 - 4 y E_Q[1/((X-u)^2+y)] from scratch, and the factorisation, which expands correctly term by term); and because the prior on a refereed paper slipping is that the reader misread it, the Bernoulli threshold was re-derived inside the authors' own frame with their own criterion. Prior art not cleared.\nmu compactly supported with support diameter D_mu\nS(0,t) the semicircular law of variance t\ny = R^2, a and b the second and fourth centred moments under the reweighted law",
+      "metadata_json": "{\"artifact_digest\":\"sha256:ed4a6b10beaba3329a3122e95ccda3eb1973bef1092983df5f0535b34ee3c73b\",\"artifact_path\":\"objects/sha256/ed/ed4a6b10beaba3329a3122e95ccda3eb1973bef1092983df5f0535b34ee3c73b.md\",\"bundle_digest\":\"sha256:745ed875be729d5bfd14b42c6f87e312f9d72d63db6b4bc5cb58522a25a785f8\",\"bundle_entry_key\":\"p0174\",\"bundle_id\":\"population.probability-campaign-results-p-series-001\",\"claim_kind\":\"theorem\",\"conditions\":[],\"domain\":\"free probability, unimodality, free Brownian motion\",\"draft\":\"claude-m1-probstore-0912/bundle_001.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.open-problems:p0174-hasebe-ueda-problem-3-3-constant-is-one\",\"overlay_schema_version\":1,\"proof_text\":\"Unimodality of the free convolution is decided by the level structure of F_R(u) = integral d mu / ((x-u)^2 + R^2): a local minimum of value at most 1/D^2 is what would create extra modes. Reweighting by ((x-u)^2+y)^-2 turns the question into two moment inequalities for a centred variable on an interval of length D, a <= D^2/4 and b + 3a^2 <= D^2 a. With the identity 1/F_R(u) = (b + 2ay + y^2)/(a+y) and the Jensen condition y <= 3a at a critical point, the difference 1/F_R(u) - D^2 factors into a manifestly nonpositive expression. Symmetric Bernoulli attains equality, so the constant 1 is sharp.\",\"release_manifest_digest\":\"sha256:218890765536141de9a0987b1c815b553a66906fd465e6538e55a9cd7dba73f0\",\"revision_digest\":\"sha256:1801ae5de87c55abfb0fe760dc3e535937e7bfa4e50d638538db8adf10f41b5b\",\"source_id\":\"owner-campaign:P0174 (thirteen-settled memo 2026-09-08; proof file P0174_free_brownian_unimodality_constant_candidate.md)\",\"source_revision\":\"as-read-2026-09-12\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_7db4c9a45de9e4fb4250302a09ea75682e8cba23312f4cb51641bb3e7694176f",
+      "kind": "claim",
+      "title": "Hasebe-Ueda Problem 3.3 (our id P0174): the optimal universal free-Brownian unimodality constant is C = 1, not 2, and it is attained",
+      "body": "[campaign status: candidate_full_solution - author-checked, unrefereed] Hasebe and Ueda, Large time unimodality for classical and free Brownian motions with initial distributions, ALEA 15 (2018) 353-374, Problem 3.3 asks for the optimal universal C such that mu (free additive convolution) S(0,t) is unimodal for all t >= C D_mu^2 and all compactly supported mu; the paper proves C <= 4 and prints 2 <= C <= 4. Our result (id P0174, 2026-09-08): C = 1, and it is attained. The function F_R(u) = integral d mu(x) / ((x-u)^2 + R^2) has no local minimum of value <= 1/D^2. Reweighting by dQ proportional to ((x-u)^2 + y)^-2 d mu (with y = R^2), two moment inequalities for a centred variable on an interval of length D (a <= D^2/4 and b + 3 a^2 <= D^2 a) combine with the identity 1/F_R(u) = (b + 2 a y + y^2)/(a + y) and a Jensen-derived second-derivative condition (y <= 3a) to give 1/F_R(u) - D^2 <= [(y - 3a)(y + a) + (4a - D^2) y] / (a + y) <= 0. Equality is attained at the symmetric Bernoulli law with u = 0, y = 3 = 3a and 4a = 4 = D^2, where F_R(0) = 1/4 = 1/D^2 is a strict maximum and never a local minimum. Re-deriving the printed Bernoulli threshold in the authors' own frame gives t >= 4 at D_mu = 2, but since the condition reads t >= C D_mu^2 that only forces C >= 1, not the printed 2 - flagged as either the printed constant dividing by D_mu instead of D_mu^2, or a different reading. Verification as the source words it: each step re-derived (the first moment inequality from E[(X-l)(h-X)] >= 0 with centring, the second from (X-X')^4 <= D^2 (X-X')^2 for an independent copy where E(X-X')^4 = 2b + 6a^2 and E(X-X')^2 = 2a give the coefficient 3 exactly, the second-derivative formula F_R''(u)/(2Z) = 3 - 4 y E_Q[1/((X-u)^2+y)] from scratch, and the factorisation, which expands correctly term by term); and because the prior on a refereed paper slipping is that the reader misread it, the Bernoulli threshold was re-derived inside the authors' own frame with their own criterion. Prior art not cleared. mu compactly supported with support diameter D_mu S(0,t) the semicircular law of variance t y = R^2, a and b the second and fourth centred moments under the reweighted law",
+      "metadata_json": "{\"artifact_digest\":\"sha256:1b44c468efb225eaee6cca31466bc701fc1acc1e83fc3c82c81ee91be26add9a\",\"artifact_path\":\"objects/sha256/1b/1b44c468efb225eaee6cca31466bc701fc1acc1e83fc3c82c81ee91be26add9a.md\",\"bundle_digest\":\"sha256:4e562ca46d29ca11a9c71a798848111be91db8603bfdd351b6939979b6ae744c\",\"bundle_entry_key\":\"st-p0174-hasebe-ueda-problem-3-3-constant-is-one\",\"bundle_id\":\"population.status-fidelity-20260913\",\"claim_kind\":\"theorem\",\"conditions\":[],\"domain\":\"free probability, unimodality, free Brownian motion\",\"draft\":\"claude-mathbrain-ultracode-0912/bundle_002_status_fidelity.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.open-problems:p0174-hasebe-ueda-problem-3-3-constant-is-one\",\"overlay_schema_version\":1,\"proof_text\":\"Unimodality of the free convolution is decided by the level structure of F_R(u) = integral d mu / ((x-u)^2 + R^2): a local minimum of value at most 1/D^2 is what would create extra modes. Reweighting by ((x-u)^2+y)^-2 turns the question into two moment inequalities for a centred variable on an interval of length D, a <= D^2/4 and b + 3a^2 <= D^2 a. With the identity 1/F_R(u) = (b + 2ay + y^2)/(a+y) and the Jensen condition y <= 3a at a critical point, the difference 1/F_R(u) - D^2 factors into a manifestly nonpositive expression. Symmetric Bernoulli attains equality, so the constant 1 is sharp.\",\"release_manifest_digest\":\"sha256:0f020739c7eb9d3f502c48b509896d6e2f2d6014dcfd996ce6e246851a602551\",\"revision_digest\":\"sha256:7db4c9a45de9e4fb4250302a09ea75682e8cba23312f4cb51641bb3e7694176f\",\"source_id\":\"owner-campaign:P0174 (thirteen-settled memo 2026-09-08; proof file P0174_free_brownian_unimodality_constant_candidate.md)\",\"source_revision\":\"status-fidelity-2026-09-13; title and first sentence now carry the campaign's own result_status (candidate_full_solution), which the served block was clipping away\",\"statement_fidelity_reviewed\":false,\"supersedes\":[\"claim_1801ae5de87c55abfb0fe760dc3e535937e7bfa4e50d638538db8adf10f41b5b\"],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+Candidate: C0049, convergence of critical square-lattice FK Dobrushin interfaces to chordal SLE(kappa), q in (0,4] excluding q=2, kappa=4*pi/arccos(-sqrt(q)/2). Source: Duminil-Copin, arXiv:1208.3787, Conjecture 2. Work below uses a bounded Jordan domain with marked boundary prime ends, square-lattice Dobrushin approximations, and curves modulo increasing reparametrization. These explicit domain/topology choices sharpen the abbreviated conjecture; they are not quoted as a full original theorem. For q<1, self-dual p= sqrt(q)/(1+sqrt(q)) must not silently be called a proved critical point. Current openness UNKNOWN.
+
+Boundary statements for independent adversarial checking (proof omitted):
+
+1. At q=4, the ordinary spin sigma=1 square-medial parafermionic local equation is edge-occupation flux conservation for every p. This is already explicit in source Section 4.3; any deterministic directed path law also satisfies it. Thus the equation alone cannot identify SLE(4).
+2. For a fixed finite FK Dobrushin graph, let q(h)=4*cos(pi*h/2)^2, p(h)=sqrt(q(h))/(1+sqrt(q(h))), 0<h<=1/2. Let F_h,s(e)=E_h[exp(i*s*W) 1_{e in gamma}], G_0(e)=E_0[W exp(i*W) 1_{e in gamma}], N=m+2v where m and v count primal edges and vertices, and L bound absolute winding. Then D_h(e)=(F_h,1-h(e)-F_h,1(e))/(-i*h) converges to G_0(e), with error at most h*L^2/2 + L*(exp(pi^2*N*h^2/4)-1).
+3. Finite-graph convergence in statement 2 supplies no mesh-uniform conclusion by itself. Abstract deterministic winding W_n=2*pi*n and h_n=1/(2*n) already make the first-order difference quotient stay a fixed fraction away from W_n exp(i W_n).
+
+All statements concern an auxiliary bridge, not a proof or refutation of C0049. Source Proposition 10 already states the endpoint local equation; the explicit error bound is the proposed addition.

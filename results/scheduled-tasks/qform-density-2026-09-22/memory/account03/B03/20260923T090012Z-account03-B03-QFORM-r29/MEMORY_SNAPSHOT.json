@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account03",
+  "slot": "B03",
+  "run_id": "20260923T090012Z-account03-B03-QFORM-r29",
+  "control_start_commit": "648e6ea3860d6acc05d68a23aa9528a7a54d5b98",
+  "control_prepublication_commit": "2114640532d3fe41ad67fc5ecccf9b600be2ba8d",
+  "control_revision": "2026-09-22.15",
+  "execution_context": "scheduled_worker",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FULL_TARGET_NOT_PROVED_IN_R29_BRANCH",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "f7c9ef92371b6602f9a432a16555c48c2ed45a51",
+    "bundle_tip": "1ebdc5261f222289d7dd4c977e8f907aacd2af99",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T090012Z-account03-B03-QFORM-r29/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260923T090012Z-account03-B03-QFORM-r29/CHECK_AND_NOTATION.md",
+    "checker_status": "QFORM_B03_R29_CHECK_PASS"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B03/20260923T090012Z-account03-B03-QFORM-r29.md",
+    "commit": "3956935171f976b05de1c0038978292001845b73"
+  },
+  "mathematical_result": {
+    "id": "QFORM-CANCELLED-ROW-RIGHTBANK-L2-v1",
+    "classification": "NEW_SUPPORTING_THEOREM",
+    "statement": "For T=A(h.Y+S)^2+2d U(g0 X+g.Y)+F with X cap-one, Y an independent cap-one product bank, U an independent-background marginal of density cap L, g0!=0, and max_j h_j^2/||h||^2<=1/2, one has |phi_T(t)|<=min(1,K/|t|), K=2*pi*sqrt(L)/(||h||*sqrt(|A*d*g0|)). Hence int|phi|^2<=4K, ||p_T||_2^2<=2K/pi, and int|t|^-1/2|phi|^2<=(16/3)sqrt(K).",
+    "target_normalized_consequence": "At exact heavy-row angular cancellation h_r=0 in the one-sided exact-rank-three packet, the still-unpaid heavy-set geometry makes the remaining square bank 1D-diffuse and gives int|phi_Q|^2<54.27326850232713/s3(A), ||p_Q||_2^2<8.637858959899031/s3(A), and linear collision P(|Q-Q'|<=eps)<17.27571791979806*s3(A)^(-1)*eps, uniformly as the outer pivot a tends to zero.",
+    "continuity": "not proved; phi is L2 but the envelope is critical 1/|t|, not L1"
+  },
+  "partner_result_applied": {
+    "partner": "account04/B03",
+    "source": "yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38:proofnet24/QFORM-density/fleet-2026-09-22/account04/B03/20260922T193150Z-account04-B03-collision-l2-r1/REPORT.md",
+    "valid_part": "P(|Y-Y'|<=eps)<=2 eps ||p_Y||_2^2",
+    "actual_inequality": "P(|Q-Q'|<=eps)<17.27571791979806*s3(A)^(-1)*eps",
+    "excluded_part": "refuted weighted-L2 compiler"
+  },
+  "premises": [
+    "yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837: Fourier/Hausdorff-Young bound int|Psi|^p<=4pi/sqrt(p), p>=2",
+    "yspennstate/math-open-problems@3f8e20afcd53d32515b7c451b1a06c5c54290f4e: account01/B06 r25 heavy-row curved-fiber geometry",
+    "yspennstate/math-open-problems@43345308f06f3224ef0c03a181a7a8c1937dfa97: all-heavy-row near-null consequence",
+    "yspennstate/math-open-problems@b4633364805377102bf4e9da285a695fcb7b55ff: previous B03 exact-cancellation L2 endpoint with outer-pivot loss"
+  ],
+  "first_unresolved_implication": "QFORM-TARGETSCALE-L2-TO-LINF-NEARCOLOOP-v1",
+  "next_step": "Splice the target-scale endpoint with the strict-margin hub-density-augmented BL theorem and exact-coloop real-space closure uniformly through the strict near-coloop collar, retaining the nonzero transverse term.",
+  "quiet_delivery": true,
+  "notifications_changed": false,
+  "email_changed": false,
+  "tasks_changed": false
+}

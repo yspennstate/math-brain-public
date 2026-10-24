@@ -1,0 +1,161 @@
+% B05/A023: odd point-surgery retained-credit payment.
+\section*{Odd point surgeries: a physical one-revelation payment}
+
+All logarithms are base two unless $\ln$ is displayed.  Let
+$g:\{0,1\}^k\to\{-1,1\}$ be bent, where $k$ is even.  Put
+$\delta=2^{-k}$ and $\alpha=\sqrt\delta$.  Choose distinct points
+$x_1,\ldots,x_m$, with $m$ odd, and let $h$ be obtained by flipping
+$g$ at precisely these points.  A fresh $d$-bit physical selector activates
+$h$ at one control word and otherwise returns $g$:
+\[
+ F(z,X)=\begin{cases}h(X),&z=z_\star,\\g(X),&z\ne z_\star,
+ \end{cases}\qquad p=2^{-d}.
+\tag{1}
+\]
+The children disagree on $m\delta$ of the core inputs, so the physical
+selector influence is
+\[
+ I_{\rm ctl}(F)=2pd\,m\delta.                              \tag{2}
+\]
+
+Write $a_T=\widehat g(T)$, $b_T=\widehat h(T)$,
+$e_T=b_T-a_T$, $c_T=(1-p)a_T+pb_T$, and
+\[
+ A_T=\sum_{Q\supseteq T}a_Q^2,\quad
+ B_T=\sum_{Q\supseteq T}b_Q^2,\quad
+ D_T=\sum_{Q\supseteq T}e_Q^2.
+\]
+Walsh summation over the selector block gives the exact identity
+\begin{align}
+ U(F)={}&\sum_Tc_T^2\log\frac{(1-p)A_T+pB_T}{c_T^2}
+ +p(1-p)\sum_Te_T^2\log\frac{D_T}{e_T^2}\\
+ &+\left(\frac{pd}{2}-p^2d\right)\sum_Te_T^2.             \tag{3}
+\end{align}
+This is a physical first-revelation ledger: the selector block is exposed
+once, and no descendant is assigned its credit.
+
+Define the retained-child charge
+\[
+ J=U(F)-(1-p)U(g)-pU(h).                                  \tag{4}
+\]
+Bentness gives $a_T^2=\delta$ and $A_T=2^{-|T|}$.  Set
+\[
+ 1+u_T=B_T/A_T,\qquad 1+v_T=b_T^2/\delta,
+ \qquad 1+w_T=c_T^2/\delta,                               \tag{5}
+\]
+and, using natural logarithms,
+\[
+ \Phi_p(u,v,w)=(1+w)\ln\frac{1+pu}{1+w}
+ -p(1+v)\ln\frac{1+u}{1+v}.                              \tag{6}
+\]
+Then (3) rearranges exactly to
+\[
+ J=\frac{\delta}{\ln2}\sum_T\Phi_p(u_T,v_T,w_T)
+ +p(1-p)K+(1-2p)I_{\rm ctl}(F),                           \tag{7}
+\]
+where
+\[
+ K=\sum_Te_T^2\log\frac{D_T}{e_T^2}
+   -\sum_Te_T^2(k-|T|).                                  \tag{8}
+\]
+
+\subsection*{The odd-parity refund}
+
+For every $T$,
+\[
+ e_T=-2\delta\sum_{j=1}^m g(x_j)\chi_T(x_j).             \tag{9}
+\]
+The displayed integer sum is odd.  Consequently no difference-spectrum
+atom vanishes and
+\[
+ 2\delta\le |e_T|\le2m\delta,
+ \qquad \sum_Te_T^2=4m\delta.                            \tag{10}
+\]
+There are $2^{k-|T|}$ atoms in the upper cone of $T$, hence
+\[
+ D_T\le4m^2\delta^2 2^{k-|T|},\qquad
+ \frac{D_T}{e_T^2}\le m^2 2^{k-|T|}.                    \tag{11}
+\]
+Multiplying (11) by $e_T^2$ and summing proves
+\[
+ K\le2\log m\sum_Te_T^2=8m\delta\log m.                \tag{12}
+\]
+Thus the rare logarithm is retained by the signed difference spectrum; no
+flat per-node price is used.
+
+\subsection*{A uniform odd-$m$ theorem}
+
+Assume
+\[
+ m\alpha\le\frac1{32}.                                   \tag{13}
+\]
+The perturbation bounds following from (9)--(10) are
+\[
+ |u_T|,|v_T|\le4m\alpha+4m^2\delta\le5m\alpha,
+ \qquad |w_T|\le4mp\alpha+4m^2p^2\delta\le5pm\alpha.
+\tag{14}
+\]
+At the origin, $\nabla\Phi_p=(0,p,-1)$, and
+\[
+ pv_T-w_T=p(1-p)e_T^2/\delta\le4m^2p\delta.              \tag{15}
+\]
+On the box in (14), direct differentiation gives
+\[
+ |\Phi_{uu}|\le2.3p, |\Phi_{uv}|\le1.2p,
+ |\Phi_{uw}|\le1.1p, |\Phi_{vv}|\le1.2p,
+ |\Phi_{ww}|\le1.1,quad \Phi_{vw}=0.                  \tag{16}
+\]
+Taylor's theorem, (14)--(16), and $p\le1/2$ therefore give
+\[
+ \Phi_p(u_T,v_T,w_T)
+ \le(4+94.375)m^2p\delta<99m^2p\delta.                 \tag{17}
+\]
+There are $1/\delta$ choices of $T$.  Substitution of (12) and (17)
+into (7), together with $(1-2p)I_{\rm ctl}\le I_{\rm ctl}$, proves
+\[
+ \boxed{
+ J\le C_m I_{\rm ctl}(F),\qquad
+ C_m=1+\frac{99m}{2\ln2}+4\log m.}
+\tag{18}
+\]
+This constant is independent of $k,d,p$, and the locations and phases of
+the $m$ edits.  It is not independent of $m$.
+
+\subsection*{The first higher-order class: three surgeries}
+
+For $m=3$ one can cover every even $k\ge10$, rather than only the range
+in (13).  Here $\alpha\le1/32$ and
+\[
+ |u_T|,|v_T|\le14\alpha\le7/16,
+ \qquad |w_T|\le13p\alpha\le13/64.                       \tag{19}
+\]
+On this larger box one may use
+\[
+ |\Phi_{uu}|\le6p, |\Phi_{uv}|\le1.8p,
+ |\Phi_{uw}|\le1.3p, |\Phi_{vv}|\le1.8p,
+ |\Phi_{ww}|\le1.3.                                     \tag{20}
+\]
+The linear term is at most $36p\delta$.  The Taylor remainder is at most
+$1290.425p\delta$, so
+\[
+ \Phi_p(u_T,v_T,w_T)<1327p\delta.                        \tag{21}
+\]
+Also (12) reads $K\le24\delta\log3$.  Since
+$I_{\rm ctl}=6pd\delta$, (7) gives
+\[
+ \frac{J}{I_{\rm ctl}}
+ <1+\frac{1327}{6d\ln2}+\frac{4\log3}{d}<327.            \tag{22}
+\]
+Hence every triple surgery of every bent Boolean core of even dimension
+$k\ge10$, activated by a fresh physical selector of arbitrary depth
+$d\ge1$, satisfies
+\[
+ \boxed{U(F)-(1-p)U(g)-pU(h)<327 I_{\rm ctl}(F).}         \tag{23}
+\]
+
+This is an unbounded one-node class and a genuine higher-order extension of
+the one- and two-surgery calculations.  It is not closed under arbitrary
+restrictions and does not control a hierarchy of changing coherent cores.  Formula
+(18) identifies the next unpaid step exactly: replace the $O(m)$ scalar
+payment (or amortize it across physical pivotal events) by a constant
+independent of the number of coherent surgeries.

@@ -1,0 +1,61 @@
+{
+  "schema": "fei-packet-delta/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "owner_control_revision": "2026-10-12.1",
+  "run_id": "20261012T101651Z-quarter-bias-half-tax",
+  "stream": "B10",
+  "packet_id": "A046",
+  "primary_packet_id": "A046",
+  "packet_ids": [
+    "A046"
+  ],
+  "gap_id": "G-BIASED-TAX@1",
+  "attempt_id": "account03-B10-A046-QUARTER-BIAS-1",
+  "method": "strict real-qubit binary-entropy series bound plus posterior Fourier fiber coupling",
+  "mathematical_delta": "New all-dimensional singleton half-tax theorem for revealed bias exactly 1/4 or 3/4; explicit strict epsilon_star > 0.03589 bits.",
+  "deliverable_status": "RESTRICTED_PROOF_SOURCE_COMPLETE",
+  "mathematical_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "B10-A046-HALF-BIAS-TAX@1",
+    "B10-A047-TWOBIT-ENDPOINTS@1 (context, not proof dependency)"
+  ],
+  "claims_created_or_changed": [
+    "account03-B10-QUARTER-BIAS-SINGLETON-HALFTAX@1"
+  ],
+  "source_artifacts": [
+    "QUARTER_BIAS_LEMMA.md",
+    "REPORT.md",
+    "SOURCES.json",
+    "CHECK.js",
+    "CHECK.out",
+    "CLAIMS.json",
+    "PROGRESS.json",
+    "PACKET_DELTA.json",
+    "CHECKPOINT.json"
+  ],
+  "next_consumers": [
+    "A087",
+    "A092",
+    "account03/B20"
+  ],
+  "next_action": "Independently check coefficient transform and cubic Q(s) argument, then extend to explicit interval around quarter bias; do not infer full FEI.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Native account03/B10 binding/adoption not independently verified; no schedule changes authorized."
+  ],
+  "review_status": "UNVERIFIED",
+  "independent_testing": "NOT_RUN",
+  "test_counts": {
+    "scalar": 20001,
+    "finite_boolean": 38400,
+    "failures": 0
+  },
+  "destination": "existing private Brain FEI owner-verified fallback for logical account03/B10",
+  "ingestion_status": "NOT_RUN",
+  "claim_versions": [
+    "account03-B10-QUARTER-BIAS-SINGLETON-HALFTAX@1"
+  ],
+  "gap_versions": [
+    "G-BIASED-TAX@1"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-12",
+  "queries": {
+    "arxiv_carousel": "https://export.arxiv.org/api/query?search_query=all%3A%22carousel%22%20AND%20%28all%3A%22Painlev%C3%A9%22%20OR%20all%3A%22Painleve%22%29&max_results=30",
+    "arxiv_gap": "https://export.arxiv.org/api/query?search_query=all%3A%22sine%22%20AND%20all%3A%22Painleve%22&max_results=40",
+    "openalex_retry": "https://api.openalex.org/works?search=Brownian%20carousel&per_page=25",
+    "openalex_source_retry": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.1804.06953",
+    "semantic_retry": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1804.06953?fields=title,citations.title,citations.year,citations.externalIds",
+    "crossref_target": "https://api.crossref.org/works?query=Painleve%20Brownian%20carousel%20bulk%20gap%20generator&rows=30"
+  },
+  "results": [
+    [
+      "arxiv_carousel",
+      "OK",
+      798
+    ],
+    [
+      "arxiv_gap",
+      "OK",
+      25162
+    ],
+    [
+      "openalex_retry",
+      "HTTP Error 429: Too Many Requests"
+    ],
+    [
+      "openalex_source_retry",
+      "HTTP Error 429: Too Many Requests"
+    ],
+    [
+      "semantic_retry",
+      "HTTP Error 429: "
+    ],
+    [
+      "crossref_target",
+      "OK",
+      112401
+    ]
+  ]
+}

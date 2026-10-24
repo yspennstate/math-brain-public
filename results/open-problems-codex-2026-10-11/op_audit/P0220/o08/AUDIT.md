@@ -1,0 +1,77 @@
+VERDICT: PASS (correct and complete)
+
+Independent audit of P0220, 11 October 2026. I read the claimant's STATUS.md, ATTEMPT.md (461 lines), CLAIMS.jsonl, and LITERATURE.md. The verdict concerns the final continuation theorem, not the superseded first-attempt partial verdict. I found no mathematical defect requiring a correction. Historical priority is not established by this audit.
+
+## Exact claim and scope
+
+ATTEMPT.md lines 208–253 claim a formula for every finite collection of events X_k>t, with positive integer indices and nonnegative thresholds, under the unique stationary law of the process with drift dX_i/dt=X_i and Poisson intensity dx dt. At a Poisson point the nearest particle strictly to its right jumps to the point. This matches the live Aldous problem, fetched independently into aldous.html.
+
+After removing zero times, merging equal times by the smallest index, and taking suffix-minimum indices, write the observations as (t_a,k_a), with 0<t_1<...<t_r=T, and put d=k_r-1. For d>0 the marker set consists of (t_a,x), a<r, 0<=x<d-(k_a-1). The claimed survival probability is
+
+    exp(-T) det [[A,F],[-G,-Q]],
+
+with the factorial-series matrices defined at ATTEMPT.md lines 226–244. The matrix has dimension d+q<=rd; for arbitrary thresholds on the first k coordinates this is at most k(k-1). With no positive observations the answer is 1, and with d=0 it is exp(-T).
+
+This is an explicit evaluation using a finite determinant of factorial/Bessel entries. It goes beyond repeating the established patience-sorting/Gamma representation. It supplies all finite-dimensional survival probabilities, hence all rectangle probabilities by inclusion-exclusion and the entire joint law. Negative thresholds, if desired, impose no additional condition because every coordinate is positive. Sparse indices and unordered thresholds are allowed; this is not just a scalar or triple result passed off as the whole problem.
+
+Additional claims are the Bessel-product triple survival function (lines 409–421), the continuous triple density (lines 436–461), independence of X_1 from subsequent gaps, dependence of consecutive gaps, and failure of the spatial-index Markov property (lines 80–151). The all-k theorem is the part that answers the requested problem. The structural results alone would not answer it.
+
+## Proof audit, with locations
+
+1. **Historical input, lines 257–261.** I independently downloaded the actual 1993 notes. Section 4.1, printed/PDF page 37, equations (41)–(42), does give the stabilized pile-top labels B and the law (Gamma(B_1),...,Gamma(B_k)). Page 36 specifies the independent Poisson spatial points and the linear drift. Thus the proof starts from the correct stationary distribution, not the Poisson invariant measure of the ordinary translation-invariant Hammersley process. This inherited representation is an explicitly permitted established input. I have not newly proved its stationarity from the generator.
+
+2. **Joint source identification, lines 263–285.** RSK insertion-tableau first-row entries obey exactly the pile-top update. For a uniform permutation, a fixed standard tableau of shape lambda has f^lambda possible partners, so P and Q have the same entire tableau distribution. Deleting labels above n preserves the pile-top prefix through n. These statements identify every finite truncation of the stable label set with the first-row label set of an infinite recording tableau. They identify the joint label vector, not just separate marginals. The first-row labels of Q are precisely the indices at which its first row grows. The independent-block argument with success probability 1/j! proves that each such hitting index is finite almost surely. Independence of the Poisson arrival times then gives the claimed joint hitting-time law. The auxiliary growth time is a coordinate-threshold parameter, not physical evolution time of the original stationary process; the proof does not confuse those two processes.
+
+3. **Checkpoint weight, lines 287–295.** Conditional on the total number n_r of arrivals, input relative order is uniform. The probability of each recording tableau U is f^(lambda^r)/n_r!. Splitting its labels into the consecutive blocks determined by the checkpoint counts gives exactly the product of skew-tableau counts. Multiplying by independent interval-count probabilities gives equation (8), with both denominators n_r! and product h_a! in their correct places. Transposition preserves the counts, while first-row caps become row-count caps. All earlier shapes are contained in the final one, so the final d-row restriction genuinely permits a d-particle construction for every time layer.
+
+4. **Minor identity, lines 299–326.** A partition with at most d rows corresponds bijectively to d increasing distinct nonnegative positions. In the finite exterior-power proof, the one-coordinate shift increments an occupied site, and a collision annihilates the wedge. A surviving move never crosses another factor and therefore has sign +1. Such moves are box additions; n-step sequences are standard skew tableaux. This rederives the minor f^(mu/lambda)u^n/n!. Noncontainment has no legal path and gives zero. Reversing both orders causes no sign change. The terminal determinant uses parameter 1, correctly accounting for f^mu/|mu|!, rather than adding a second Poisson-time parameter.
+
+5. **Finite occupation constraints, lines 330–336.** Length(mu)<=m is equivalent to occupation of all sites 0,...,d-m-1. Distinct nonnegative positions ensure that these, if occupied, are the lowest positions and correspond to zero bottom parts. Multiple required sites at one time are simultaneous occupations, not alternatives.
+
+6. **Cutoff generating polynomial, lines 340–369.** Repeated finite Cauchy-Binet sums over ordered subsets once, with no d! factor. A diagonal checkpoint factor gives the product of 1+z over occupied marked sites. Its all-marker coefficient is exactly the required intersection event. The semigroup identity is the binomial identity and remains exact at finite cutoff because intermediate right-moving positions lie between the endpoints. Expanding a one-particle path over selected checkpoints gives A_L+FZ(I-QZ)^(-1)G_L. The time indicator in Q must be strictly less, as it is in the text: a single path cannot occupy different sites at the same checkpoint. Consequently QZ is nilpotent and the inverse is a finite polynomial, with no convergence assumption.
+
+7. **Invertibility and coefficient extraction, lines 373–393.** Multiplying A_L on the left by diag(T^b_i) gives the Gram matrix with entries sum_y T^y/[(y-b_i)!(y-b_j)!]. At sites 0,...,d-1 the underlying vectors are triangular with nonzero diagonal. This proves positive definiteness and invertibility for T>0, L>=d-1. Sylvester's determinant identity gives
+
+       det A_L(z)=det A_L det[I+(G_L A_L^(-1)F-Q)Z].
+
+   Multiplication by I-QZ has determinant 1. Column multilinearity makes the all-variable coefficient det A_L det(G_L A_L^(-1)F-Q). The Schur complement in [[A_L,F],[-G_L,-Q]] is exactly G_L A_L^(-1)F-Q. In particular there is no missing (-1)^q. I rederived this algebra independently. I did not rerun the claimant's Lean certificate; accepting this algebra does not depend on that certificate.
+
+8. **Removing cutoff and boundaries, lines 397–405.** The extracted coefficient is a nonnegative event weight. Increasing terminal-position cutoff increases the allowed paths, and every earlier position is bounded by its final position. Every finite tableau path eventually belongs to the cutoff, proving monotone convergence to the desired probability. Entries converge absolutely, with the stated ratio u/[(n+1)(a+n+1-b)] tending to zero; finitely many entries then permit determinant continuity. There is no interchange of an infinite determinant and an infinite ensemble. An empty final partition forces zero arrivals throughout, giving exp(-T). Zero times, repeated times, empty marker lists, and suffix-minimum constraints are handled correctly. The special case k=1 uses the separately specified zero-dimensional case.
+
+9. **Triple formulas, lines 409–461.** Conditioning on X_1>s means no auxiliary arrivals before s. The remaining input is fresh and independent, supplying exp(-s). Expanding the resulting 3-by-3 determinant gives the displayed Bessel product with a=u-s and b=u-t. Its b=0 and b=a reductions are correct, and a=b=0 gives exp(-u). For the density, I independently checked L_j'=L_(j+1) and L_1(b)+bL_2(b)=L_0(b). The signed survival derivative is exp(-z)(Phi_ab-Phi_aab-Phi_abb), which simplifies to equation (19). The inherited Gamma mixture guarantees a continuous density on the strict ordered support, so differentiating there creates no boundary atom.
+
+10. **Structural claims, lines 49–151 and 178–195.** The finite pile-top invariance and the four tableau counts are correct. Conditional on the labels, the two gaps have Gamma shapes b-1 and c-b, giving the precise indices in the entire series C(g,h). Positivity/Tonelli prove normalization; factorial domination justifies all derivatives. Exact recomputation gives C*C_gh-C_g*C_h=-1/2880 and its log-density counterpart -1/80. Conditional independence in spatial index would make R(g,h)=exp(-h)C/F independent of g on each interval 0<g<y. Positivity, Fubini, continuity, and arbitrarily large admissible y extend that to the whole positive quadrant. The boundary derivative R_g(0,0)=1/36 contradicts it. This is a valid argument about continuous conditional densities, not conditioning on a null event or inferring continuous non-Markov behavior from discrete labels. The degree-two remainder envelope and ratio bound u/4 are valid for 0<=u<4; the two exact interior intervals are disjoint.
+
+## Independent computations
+
+I wrote independent_check.py in this audit folder; no claimant code was executed or copied. The saved results are independent_results.json.
+
+- Enumerated every permutation of sizes 0 through 7. The full distributions of final pile-top vectors and LIS-growth birth-label vectors agree at each size. This checks the joint P/Q identification rather than merely equality of lengths.
+- Computed the claimed determinant as exact rational power series through degree seven under common scaling t_a -> v t_a. Independently computed the coefficients of exp(vT) times the survival probability using all chronological-prefix LIS profiles, all Poisson interval-count compositions, and the original unreduced constraints. All coefficients agree in 21 cases. Cases include scalar indices 1, 2, and 4; zero times; repeated times; unordered observations; nonmonotone indices; an early no-arrival constraint; five observation times; and fixed-seed adversarial cases. Largest tested matrix size was 16. These are exact equalities, not floating-point approximations.
+- Compared all 15 Taylor coefficients of the triple-density bracket of total degree at most four against direct pile-top permutation counts through size seven. Every coefficient agrees.
+- Recomputed the three rational obstruction constants -1/2880, -1/80, and 1/36.
+- Independently recomputed the exact rational-tail interior witness. The intervals are approximately [0.33612071473843536,0.33612348859939817] and [0.33639616311933,0.33640600102962903], with their strict separation checked in rational arithmetic. Exact endpoints are saved in interior_results.json.
+
+These finite computations test signs, time order, factorials, coefficients, and preprocessing. They do not prove the all-k formula. Acceptance of that formula rests on the complete finite-algebra and monotone-convergence proof reviewed above. I did not rerun the claimant's positive-growth experiments or formally certify the whole probability proof.
+
+## Independent bounded literature check
+
+All web access used Python requests, not built-in web search. URLs, response statuses, and returned metadata are saved in literature_fetch.json and literature_followup.json, with downloaded PDFs, extracted text, and raw API responses in this folder.
+
+- Aldous's live page still asks for a fairly explicit stationary description and confirms exactly the linear drift, nearest-right-particle jumps, consistency, and uniqueness used here. The 1993 notes independently confirm the old representation and k=2 analysis. Their existence is not new work.
+- Downloaded Borodin–Rains, *Eynard-Mehta theorem, Schur process, and their Pfaffian analogs*, arXiv:math-ph/0409059v2. Page 4, Lemma 1.3 gives Cauchy-Binet normalization; Theorem 1.4 gives the finite product-of-determinants correlation kernel. It supports the classical machinery, but neither is a theorem about the exact stationary linear-drift law at issue. The claimant also proves the finite algebra directly, so no convention-dependent import is needed.
+- Fresh arXiv Hammersley/stationary/drift/leftmost query returned relevant classical stationary-process papers and arXiv:2005.13824 and 2506.19008. I fetched both latter papers. In 2005.13824, Theorem 1.1 is an asymptotic Poisson limit under n+floor(t sqrt(n)) scaling; Corollary 1.4 concerns local bulk-scaled insertion-tableau entries. These are not the finite-leftmost linear-drift distribution. In 2506.19008, Sections 1.1–1.2 explicitly start with homogeneous Poisson particles on R and give left jumps without the drift x. Its decoupling theorem does not settle this question.
+- A further arXiv Plancherel/(hitting or joint) query returned the classical Borodin–Okounkov–Olshanski and Johansson papers, among other results. Their retrieved abstracts concern Poissonized Plancherel correlation formulas and asymptotic row laws, not an explicit source-specific all-coordinate stationary theorem of the present form.
+- OpenAlex search was attempted and returned HTTP 429. Crossref search succeeded but yielded mostly irrelevant titles. Neither failure nor irrelevant results constitute evidence that no earlier solution exists.
+
+No earlier exact solution or counterexample was verified in this bounded search. It does not establish novelty or exhaust the literature. The claimant expressly disclaims historical priority at ATTEMPT.md lines 204 and 425, so that limitation does not invalidate the stated mathematical result.
+
+## Issues and limits of the verdict
+
+No failed identity, missing hypothesis, quantifier reduction, or unresolved mathematical step was found in ATTEMPT.md's final continuation. No proof fix is required for acceptance.
+
+There is an editorial status inconsistency: the earlier LITERATURE.md summary says the positive result is only the non-Markov obstruction, although its appended continuation records the all-k determinant. ATTEMPT.md lines 167–173 likewise describe the earlier unresolved state, but lines 13–15 explicitly label that portion as a preserved first-attempt record and lines 200 onward resolve it. Updating the old literature summary would improve consistency; it is not a gap in the final theorem.
+
+What is proved: the finite determinant evaluates every finite joint survival event under the inherited, source-correct stationary law; consequently it is a useful explicit full joint-law answer. The triple survival, triple density, and continuous non-Markov obstruction also hold.
+
+What is not proved: historical first discovery, absence of an earlier published solution, or a full formal verification of the probabilistic theorem. This verdict is mathematical acceptance of the presented result, not a priority certificate or a SOLVED_IN_LITERATURE finding.

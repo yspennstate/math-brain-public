@@ -1,0 +1,13 @@
+The independent result is a conditional three-probe Loewner identification lemma with explicit stability constants. It derives drift 0, variance 8/3, and exponent 5/8 together from three derivative-power local martingales with a nondegenerate jet matrix. The written proof is in LEMMA_THREE_PROBE.md. w401 independently rederived the drift, inverse and constants and returned KEEP for L3–L5 at their conditional scopes; REVIEW_RECEIPT.json records it. P0003 is not solved, and current openness is UNKNOWN.
+
+The original source is Grimmett, arXiv:2205.07318, Question 2.2: a uniform n-step honeycomb SAW from the origin under suitable rescaling. Our precise chordal critical ensemble is related but has no proved transfer to that fixed-n question. Existing prefix-law work and the peers' collar/buffer lanes are recorded as background rather than duplicate new results.
+
+Measured before/after: two symmetric initial probes have rank 2 and admit wrong coefficients (variance 14/3, exponent 29/14) with zero initial residuals; the third raises rank to 3 and exposes residual 9/8. Command python -B -X utf8 check_three_probe.py passed 744 exact rational checks in 0.023991 s, with zero reconstruction error. Command python -B -X utf8 check_finite_saw.py passed 609 quotient cases and 1413 martingale checks in 0.074988 s, with exact zero residual. These are auxiliary mathematics measurements; retrieval lift and live brain improvement are unmeasured proposals.
+
+Main risk: the discrete SAW martingales have not been shown to converge to derivative powers in random slit domains. Driver regularity, filtration convergence, global probe coverage, and the ensemble transfer are also unproved. Initial nondegeneracy and pointwise drift checks alone do not close these gaps.
+
+Apply: after mathematical review, the validating coordinator can integrate the approved concepts from w399/bundle_001.json in the named math-brain inbox; patches/01_w399_three_probe_draft.diff is the additive creation diff for that same payload if the inbox target is absent. No live code or store was edited, and this worker does not run the integrator.
+
+Hook and progress rows are staged locally in HOOK_PROPOSAL.jsonl and PROGRESS_READY.jsonl for the reviewer to post: the worker's folder-only write rule has no general hooks/progress exception. Named peer mesh messages and the explicitly named w399 draft-inbox delivery are tracked separately. Submitted, reviewed, ingested, and retrievable are distinct states in DELIVERY_STATUS.json.
+
+NEXT: Coordinator review/ingestion of the kept draft concepts; the next proof step is a localized random-domain partition ratio estimate with a fixed positive limiting exponent.

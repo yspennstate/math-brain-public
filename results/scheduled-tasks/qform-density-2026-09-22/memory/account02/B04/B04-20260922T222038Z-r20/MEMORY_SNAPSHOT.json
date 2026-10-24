@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision_final": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B04",
+  "run_id": "B04-20260922T222038Z-r20",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "secondary_status": "CANDIDATE_REFUTED",
+  "target_status": "QFORM-FULL_OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "source_control_start_commit": "950b3edb79c91f05d06c21080b0bdea5b2d46559",
+  "source_control_late_observation": "8dcc7f02353f9453625a8e012850240540338efc",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CONDITIONAL-3D-PROJECTION-CAP-FALSE-v1",
+    "QFORM-TWOBANK-NONZERO-LEAKAGE-RANK3-CROSS-UNIFORM-FALSE-v1"
+  ],
+  "mathematical_premises": [
+    {
+      "id": "QFORM-SQUARE-OVERLAP-HYPERBOLIC-v1",
+      "source": "yspennstate/math-open-problems@c273d6cdcd751214348ab9a4872c2126ea85cdbb:proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/B04-20260922T215045Z-r19/REPORT.md",
+      "scope": "independent scalar cap-one Z,U,V plus outside W; completed square shift may depend on U,V,W; uncontaminated translated hyperbolic defect"
+    },
+    {
+      "id": "QFORM-ORIGINAL-BANK-PROJECTION-CAP",
+      "source": "yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7:proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/B04-20260922T181702Z-dac07509/REPORT.md",
+      "scope": "for a linear form u^T X_I over independent cap-one original coordinates, density cap <=sqrt(2)/||u||_2"
+    },
+    {
+      "id": "QFORM-ORTHOGONAL-LEAKAGE-SEPARATION-v1",
+      "source": "previous account02/B04 run B04-20260922T212021Z",
+      "scope": "disjoint original-coordinate leakage/transverse packet separation with product lower bound 1/24"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-HYPERBOLIC-ONE-SIDED-CONTAMINATION-L3-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "For independent U,V with density caps M_U,M_V, T=2c(U+alpha)(V+beta)+F(U) has ||p_T||_3<=3(M_U M_V/|c|)^(2/3), hence sup_t E|t-T|^(-1/2)<=8sqrt(2)sqrt(M_U M_V/|c|)."
+    },
+    {
+      "id": "QFORM-SQUARE-OVERLAP-ONE-SIDED-CONTAMINATION-v1",
+      "status": "PROVED_THIS_RUN",
+      "statement": "For Q=a[Z+m(U,V,W)]^2+2c[U+alpha(W)][V+beta(W)]+F(U,W)+R(W), independent scalar Z,U,V and outside W, ||p_Q||_infinity<=8sqrt(2) M_Z sqrt(M_U M_V)/sqrt(|ac|)."
+    },
+    {
+      "id": "QFORM-HYPERBOLIC-TWOSIDED-HALFRIESZ-UNIFORM-FALSE-v1",
+      "status": "REFUTED_THIS_RUN",
+      "statement": "No universal half-Riesz bound survives arbitrary F(U)+G(V): independent uniform U,V with F(U)=U^2,G(V)=V^2 give (U+V)^2 and E|U+V|^-1=infinity."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "account": "account03",
+    "slot": "B04",
+    "run": "B04-20260922T215045Z-r19",
+    "source_commit": "c273d6cdcd751214348ab9a4872c2126ea85cdbb",
+    "application": "On Q_(m,0)=2(Z+U-V)^2+8UV, the partner three-bank square/hyperbolic theorem gives ||p||_infinity<=H_6/sqrt(2)=7.508568684463308."
+  },
+  "explicit_rotated_indefinite_estimate": {
+    "family": "Q_(m,1)=2(Z+U-V)^2+8UV+U^2 on three flat disjoint banks",
+    "spectrum": ["4", "(3+sqrt(41))/2", "(3-sqrt(41))/2"],
+    "physical_entries": "all nonzero, magnitude 2/m or 3/m",
+    "bound": "||p||_infinity<=8 for every admissible product input law"
+  },
+  "counterexample_embedding": {
+    "matrix_spectrum": ["-1", "0", "1", "2"],
+    "form": "Q_*=Z^2+(U+V)^2-W^2",
+    "mechanism_failure": "standalone two-sided-contamination half-Riesz residual",
+    "full_form_bound": "||p_Q*||_infinity<=pi for every admissible product input law"
+  },
+  "first_unproved_step": "QFORM-TWOSIDED-CONTAMINATION-JOINT-SPLICE-v1",
+  "next_step": "Keep a second independent square/grouped smoothing factor alive, route one side to a completed rank-two/ridge/multi-bank endpoint, or prove a genuinely joint product-space rearrangement estimate before taking a reciprocal singular kernel.",
+  "report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "7a1f06fbce2a08d1d99b161d2ecb08c0dd4fcbf7",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B04/B04-20260922T222038Z-r20/REPORT.md",
+    "blob": "c118b3ef3d3291dd0e75c5fb079e808fc89d94ca"
+  },
+  "checker_output_blob": "83108ea6936be540e8a145c096cfa0623c54072e",
+  "handoff": {
+    "commit": "29655444683c04e3fae5e069628177fa81bdf5e6",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B04/B04-20260922T222038Z-r20.md",
+    "blob": "e2c229ff96d35d9eec49362fe58f802f7abdf891"
+  }
+}

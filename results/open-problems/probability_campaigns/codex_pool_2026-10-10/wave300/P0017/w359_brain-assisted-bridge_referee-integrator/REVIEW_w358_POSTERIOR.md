@@ -1,0 +1,17 @@
+# Additional independent check of w358's posterior calibration
+
+Verdict: KEEP the three statements in POSTERIOR_BRIDGE_CHECK.md at their displayed scope. This complements REVIEW_w358.md; it is not a review of another reviewer. Checked 2026-10-10.
+
+Sections 1 and 2 agree with the independent derivation saved in GAUSSIAN_POSTERIOR_REDERIVATION.md: posterior curvature I/t gives covariance <=t I and conditional Poincare <=t; normalized-likelihood differentiation and directional Cauchy-Schwarz give only q=1. Total variance, C_P(nu_t)<=C_P(mu)+t, and an assumed q<1 give C_P(mu)<=t(1+q)/(1-q). The finite-C_P or regular-approximation caveat is necessary and is explicitly present. KEEP; no strict bridge is proved.
+
+Section 3: use the untranslated Exp(1) prior and translate both input and observation to recover isotropy. Completing the square gives exactly nu_t(y)=exp(-y+t/2)Phi(z) and T_t f_a(y)=exp(ay-at+a^2t/2)r_a(z), where z=(y-t)/sqrt(t) and r_a(z)=Phi(z+a sqrt(t))/Phi(z). For z>=0 and a in [1/4,1/2], Phi(z)>=1/2, the ratio tends uniformly to 1, and its y derivative is bounded in absolute value by 6 phi(z)/sqrt(t): differentiate the quotient, use phi(z+a sqrt(t))<=phi(z), and bound both denominators. This explicitly justifies the uniform tail statement.
+
+The integrand is exp(-(1-2a)y) times a coefficient tending uniformly to a^2 exp(t/2-2at+a^2t). Integrating only y>=R and dividing by a^2/(1-2a), then taking a up to 1/2 and the uniform error down to zero, gives liminf of the energy ratio at least exp(-t/4). A lower bound needs no domination of the omitted negative half-line. Therefore every admissible universal q(t) must be >=exp(-t/4). This calibrates q and leaves some q<1 possible. KEEP.
+
+The finite a=49/100, t=1 test is also valid. On y>=5, z>=4, phi(z)<1/1000 and the Mills bound give Phi(z)>999/1000. Then r>=1 and r'>-2/1000, so (ar+r')^2>=(a-2/1000)^2. The relative derivative factor squared is (244/245)^2>99/100. The exponent after tail integration is -3399/10000>-34/100, and the cubic alternating-series lower bound for exp(-34/100) is 0.71124933...>71/100. Thus the exact lower bound exceeds (99/100)(999/1000)(71/100)=0.7021971>0.7. The Gaussian linear coefficient 1/4 cannot be the general coefficient. KEEP. These analytic rational inequalities do not rely on numerical integration.
+
+The requested Gram calibration is also exact for the q_d already defined in INDEPENDENT_DERIVATION.md. With Y~Exp(1), q_1=Y-1 and q_2=Y^2/2-Y have zero means, squared norms 1 and 2, and inner product E[(Y-1)(Y^2/2-Y)]=3-3+1=1. Their Gram matrix is [[1,1],[1,2]]. Therefore Var(q_1+q_2)=1+2+2=5, whereas the sum of their individual variances is 3. Equivalently q_1+q_2=Y^2/2-1 and its variance is E[Y^4]/4-1=6-1=5. Its derivative is Y, so its Dirichlet energy is E[Y^2]=2 and the variance-to-energy ratio is exactly 5/2. Translating Y to X=Y-1 preserves this ratio. KEEP this precise nonorthogonality and energy counterexample; it refutes an unjustified diagonal Parseval transfer or Gaussian constant-1 transfer, not the correct Gaussian Hermite argument. No numerical Gram experiment is needed or claimed.
+
+The single hardest remaining claim is still a uniform strict contraction for every nonlinear finite-energy test. The exponential lower bound restricts its allowable constant; it does not disprove the criterion or prove KLS.
+
+NEXT: Attach the reviewed lower-bound calibration to w358's own draft bundle; retain the general strict inequality as conjectural.

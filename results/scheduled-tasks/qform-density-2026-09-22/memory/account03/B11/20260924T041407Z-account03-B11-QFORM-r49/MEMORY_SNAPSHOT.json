@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B11",
+  "run_id": "20260924T041407Z-account03-B11-QFORM-r49",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "control": {
+    "startup_commit": "20cafb562a5a76f2996cde090c7b2fea49733ab9",
+    "publication_refresh_commit": "5e94491136a98f3d848c06041104d5e0ed960685",
+    "revision": "2026-09-22.15",
+    "programme": "QFORM-DENSITY-3EIG-20260922"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "506a01e6b5026fd7f703ad5b7f2e6ad08b9277c3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260924T041407Z-account03-B11-QFORM-r49/REPORT.md",
+    "verification": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260924T041407Z-account03-B11-QFORM-r49/VERIFY_OUTPUT.txt"
+  },
+  "new_result": {
+    "id": "QFORM-R48-CANCELLATION-XRAY-IMPOSSIBILITY-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "statement": "For every eta>0, the r48 nonlinear-cancellation density g_eta(t,v,w)=1_{|v|<=1/2}1_{|w|<=1/2}1_{|t+v^2/(2 eta w)|<=1/2} has infinite all-direction essential X-ray norm. A tangent segment at fixed w0 has length at least 1/(4 sqrt(eta w0)), with a strict interior margin stable under parallel translations. Every genuine three-dimensional orthonormal projection of an independent cap-one product source has all two-dimensional marginals bounded by e, hence X-ray norm <=e. Therefore the r48 nonlinear cancellation law cannot be a genuine residual product projection for any eta>0."
+  },
+  "mechanism_change": "After the preceding same-bank Lp/puncture runs, r49 switched to an all-direction product-projection X-ray invariant rather than repeating dependence-blind interpolation.",
+  "partner": {
+    "worker": "account04/B11",
+    "product_projection_source": "yspennstate/math-open-problems@4110bbfd21beffa0260a017d468b0a486af56db1:proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260922T222040Z-account04-B11-cone-envelope-r3/REPORT.md",
+    "actual_application": "Every plane marginal of a true residual orthonormal product projection has cap <=e, while the r48 tangent construction forces arbitrarily large plane-marginal essential sup.",
+    "pair_area_source": "yspennstate/math-open-problems@30555c1ca97752e10f5089ccd95f8514c704be5a:proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260923T131400Z-account04-B11-extension-mass-r6/REPORT.md",
+    "pair_area_application": "q>=63/64 and ||w_j||^2>=1/36 imply g_0j>=7/256 and ||p_Q||inf<=2048 sqrt(2/7)/s=1094.7020468732903.../s"
+  },
+  "rank_two_control": "p_{2XY}(z)=log(1/(2|z|)) for centered unit uniforms",
+  "unresolved": "QFORM-PUNCTURE-PRODUCT-XRAY-PARABOLIC-TRACE-v1: combine all-direction X-ray cap with exact product Fourier factorization and determinant-tied square curvature to obtain a uniform linear small-ball estimate in the true punctured near-coloop chamber. X-ray alone is explicitly insufficient by QFORM-TWOSHEET-XRAY-ONLY-FALSE. Arbitrary additional nonseparable spectrum remains separate.",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_continuity_status": "OPEN",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

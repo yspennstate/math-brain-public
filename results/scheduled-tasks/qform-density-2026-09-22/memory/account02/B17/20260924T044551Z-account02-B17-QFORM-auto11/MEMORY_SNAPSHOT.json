@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B17",
+  "run_id": "20260924T044551Z-account02-B17-QFORM-auto11",
+  "created_utc": "2026-09-24T04:56:43.473554Z",
+  "status": "FULL_TARGET_OPEN_NEARROOTM_SATELLITE_SHARP_WITNESS",
+  "headline": "For any L_m->infinity with L_m=o(sqrt(m)), an exact entrywise-dense target family with spectrum {1,1,-(1+1/m)} and two-interval cap-one physical inputs can have support gap sqrt(m)/L_m, probability tending one of at least one satellite visit, yet p_Q(0)=6/sqrt(2+1/m)+o(1)->3sqrt(2).",
+  "mathematics": {
+    "math_repository": "yspennstate/math-open-problems",
+    "math_commit": "1308bb6653f7e21fe3f86b001ccdad31b7c57c27",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T044551Z-account02-B17-QFORM-auto11/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T044551Z-account02-B17-QFORM-auto11/CHECK.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260924T044551Z-account02-B17-QFORM-auto11/CHECK_OUTPUT.txt",
+    "result_id": "QFORM-NEARROOTM-SATELLITE-SHARP-WITNESS-v1"
+  },
+  "exact_family": {
+    "latent_normal": "(1,2,3)/sqrt(14)",
+    "latent_matrix": "B_m=I-(2+1/m)nn^T",
+    "spectrum_nonzero": ["1", "1", "-(1+1/m)"],
+    "epsilon": "sqrt(L_m)/m",
+    "satellite_location": "sqrt(m)/L_m",
+    "support_gap": ">=sqrt(m)/L_m-1/2",
+    "satellite_visit_probability": "1-exp(-3sqrt(L_m)+o(1))",
+    "cone_tip": "6/sqrt(2+1/m)+o(1) -> 3sqrt(2)"
+  },
+  "source_application": {
+    "pinned_source_commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "completed_result_used": "Theorem C ruled one-sheet bound",
+    "actual_inequality": "sup_{s>=0} p_m(s) <= 2pi/sqrt(2+1/m)",
+    "saturation_ratio": "3/pi",
+    "ruled_marginal_obstruction": "average required asymptotically >=6/pi; generic cap 2 has relative slack 1-3/pi"
+  },
+  "designated_partner": {
+    "account": "account03",
+    "slot": "B17",
+    "run_id": "20260924T040702Z-account03-B17-QFORM-r11",
+    "scientific_commit": "8eae5b3f9d8ebacc998d7091608a8308cdbe1cad",
+    "consumed_result": "QFORM-ALMOST-SURE-SATELLITE-DIVERGING-GAP-SHARP-WITNESS-v1",
+    "extension": "special exponents epsilon=m^-3/4, R=m^1/8 upgraded to arbitrary near-root-m gap sqrt(m)/L_m with L_m slowly divergent"
+  },
+  "later_source_refresh": {
+    "fixed_dimension_status": "current GEOMETRIC_ROUTE_REPORT proves n=3 and every fixed n with dimension-dependent constants",
+    "remaining_endpoint": "dimension-growing rough no-pivot/hub/coupled configurations; support localization cannot supply sharpness"
+  },
+  "handoff": {
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B17/20260924T044551Z-account02-B17-QFORM-auto11.md",
+    "commit": "975ce3b6fde9f48d4fa49dd8e47d21bc35021c61"
+  },
+  "control": {
+    "owner_revision": "2026-09-22.15",
+    "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+    "status": "active_no_pause",
+    "brain_retrieval_authenticated": true,
+    "without_verified_brain": false
+  },
+  "next_step": "Stress the dimension-growing rough no-pivot/hub endpoint with source-valid multiscale laws; in particular test whether the near-root-m fragmented witness defeats any proposed leakage-uniform rough-law replacement for the Gaussian-mixture/frame-partition mechanism, while separating sharp-constant barriers from genuine unbounded-density counterexamples."
+}

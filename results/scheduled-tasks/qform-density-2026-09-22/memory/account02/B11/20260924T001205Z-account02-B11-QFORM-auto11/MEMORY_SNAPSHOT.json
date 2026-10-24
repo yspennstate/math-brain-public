@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B11",
+  "run_id": "20260924T001205Z-account02-B11-QFORM-auto11",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "source_control_commit_start": "849f113d77e1a6686dcfbe8c673209ee1dbc6b14",
+  "source_control_commit_prepublication": "72f28f79d37cb71ee07b04bd25e637f6a7d6497b",
+  "owner_control_revision": "2026-09-22.15",
+  "owner_request": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "correction_inbox_blob_prepublication": "a884b835aba929c5376e6417ae5cfcd44c0f7a76",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE"
+  ],
+  "required_pinned_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "files_read": [
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md"
+    ],
+    "completed_result_applied": "Theorem C ruled one-sheet estimate applied to R=2HY+2HZ+2YZ: p_R(t)<=pi*sqrt(2) for t<=0 after negation. Theorem H also applied to a two-hub diffuse-star family."
+  },
+  "partner": {
+    "logical_partner": "account03/B11",
+    "latest_compatible_run": "20260923T231333Z-account03-B11-QFORM-r44",
+    "brain_handoff_commit": "42bdf7228e69f51ae5d431fba4100a6ade9d2303",
+    "math_commit": "388ba1f1ccf6a89dad0ca0a0fdb71d281ad6239b",
+    "result_applied": "QFORM-ANYPIVOT-RANKONE-SHAREDHUB-TENSOR-L1-v1: ||p_Q||_infinity <= 3*2^(2/3) T^(-1/6) for rank-one interbank crossing with arbitrary hub pivot and same-bank phases."
+  },
+  "new_results": [
+    {
+      "id": "QFORM-HYPERBOLIC-PAIR-L2-ONE-SIDED-CURVATURE-v1",
+      "statement": "For independent density-capped X,Y, W=cXY+dY+R(X) obeys ||p_W||_2^2<=4FG/|c| for arbitrary measurable R."
+    },
+    {
+      "id": "QFORM-DOUBLE-HYPERBOLA-L2-CONVOLUTION-v1",
+      "statement": "Two genuinely source-disjoint one-sided-curvature hyperbolic pairs have bounded density by L2 convolution; for cap-one 2alpha XY and 2sigma UV the bound is 2/sqrt(|alpha sigma|)."
+    },
+    {
+      "id": "QFORM-SOURCE-DISJOINT-RANK2-CROSSING-L2-v1",
+      "statement": "For independent H,Y,Z,U,V, Q=aH^2+2alpha HY+2beta HZ+2delta YZ+bU^2+2sigma UV+affine has continuous C0 density <=2/sqrt(|alpha sigma|), and <=2/sqrt(|sigma|max(|alpha|,|beta|)) when beta!=0."
+    }
+  ],
+  "target_valid_application": {
+    "form": "Q*=2HY+2HZ+2YZ+2UV",
+    "spectrum": [2, 1, -1, -1, -1],
+    "density_bound": 2.0
+  },
+  "rank_two_log_control": "For centered unit uniforms p_{2XY}(t)=log(1/(2|t|)) on 0<|t|<1/2. The new mechanism does not bound that rank-two density; it uses its L2 integrability. For the exact-rank-three triangle R=2HY+2HZ+2YZ, the Schur complement of the physical pair (H,Y) is -2 Z^2, and the completed pair-log theorem gives ||p_R||_infinity<=8sqrt(5).",
+  "operator_obstruction": "A naive full-rank extension of partner r44's pointwise tensor operator can lose its shared-hub |t|^-1 gain: after shearing, kernel k_t(y+z)e^{i2t delta yz}; choosing an allowed hub square a=1/delta cancels the Fresnel phase and leaves an L2 operator multiplier of order |t delta|^-1/2. This obstructs that proof interface, not QFORM.",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "87c8e16cf9e56242b702321f91e2043e9a44972e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260924T001205Z-account02-B11-QFORM-auto11/",
+    "verifier_marker": "QFORM_B11_R45_HYPERBOLIC_L2_CHECK_PASS"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B11/20260924T001205Z-account02-B11-QFORM-auto11.md",
+  "handoff_commit": "23c6e7260f3f59d9c34e8380638b43475bd304c4",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "PROVED_ONLY_FOR_NEW_SOURCE_DISJOINT_SUBCLASS; FULL_TARGET_OPEN",
+  "first_unpaid_implication": "QFORM-R44-RANK2-CROSSING-SAMEBANK-INTERPOLATION-v1: extend the L2 hyperbolic-pair gain to same-product-bank projected pairs with arbitrary same-bank curvature uniformly as the second crossing singular value tends to zero, or force a source-disjoint physical-pair/volume/square exit; arbitrary additional nonseparable spectrum remains a separate bridge.",
+  "brain_retrieval": {
+    "authenticated_repository_retrieval": true,
+    "receiver_use": true,
+    "without_verified_brain": false
+  },
+  "telemetry": {
+    "model_self_report": "GPT-5.6 Sol",
+    "reasoning_effort_configured": "UNKNOWN",
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null
+  }
+}

@@ -1,0 +1,362 @@
+[
+  {
+    "id": "F01",
+    "title": "Joint witness coding",
+    "goal": "Construct normalized distributions describing each whole Fourier set with a controlled expected root and gate-label cost.",
+    "metric": "Best proved expected total witness cost divided by influence, with the class and all residual terms stated.",
+    "roles": [
+      "Construct finite queue and forest codes",
+      "Compare globally normalized mixtures of root odds",
+      "Find label-cost obstructions on addressing and tribes",
+      "Reconstruct normalization and Gibbs proofs independently",
+      "Transfer a successful code to F02 and F03"
+    ],
+    "moves": [
+      19,
+      20,
+      27
+    ]
+  },
+  {
+    "id": "F02",
+    "title": "Correlated gate assignment",
+    "goal": "Choose coordinate-to-gate assignments jointly so used-gate and overlap-congestion charges improve on coordinatewise read-number bounds.",
+    "metric": "Proved bound for E[used-gate cost + allocation congestion] divided by influence on an explicitly defined class.",
+    "roles": [
+      "Develop correlated assignment rules",
+      "Seek combinatorial dual certificates",
+      "Optimize small exact assignment instances",
+      "Prove or refute dimension-independent congestion bounds",
+      "Connect assignment bounds to complete F01 witnesses"
+    ],
+    "moves": [
+      9,
+      11,
+      25
+    ]
+  },
+  {
+    "id": "F03",
+    "title": "Rare-root amortization",
+    "goal": "Pay sparse-root rarity and scale-selection costs without replacing a necessary logarithm by a bounded local constant.",
+    "metric": "Smallest rigorously bounded global rare-root residual per unit of consumed influence.",
+    "roles": [
+      "Build multiscale root priors",
+      "Analyze activation and point-flip asymptotics",
+      "Find reusable-budget violations",
+      "Prove a non-reuse charging identity",
+      "Combine the root bound with F01 normalization"
+    ],
+    "moves": [
+      5,
+      7,
+      30
+    ]
+  },
+  {
+    "id": "F04",
+    "title": "Rank-free references",
+    "goal": "Replace dependence on the number of coordinate orders by a global spectral reference that uses Boolean structure.",
+    "metric": "Dependence of the proved entropy coefficient on order count, width, or another explicitly defined structural parameter.",
+    "roles": [
+      "Construct references beyond total desirability orders",
+      "Explore adaptive order mixtures",
+      "Search functions forcing large rank cost",
+      "Audit every mixture and normalizer",
+      "Identify a route from structured references to unrestricted functions"
+    ],
+    "moves": [
+      1,
+      14,
+      27
+    ]
+  },
+  {
+    "id": "F05",
+    "title": "Restriction charge",
+    "goal": "Bound the total actual entropy cost of a genuine physical restriction tree with one conserved influence budget.",
+    "metric": "Proved cumulative restriction cost divided by consumed ordinary influence, including the leaf term.",
+    "roles": [
+      "Derive exact entropy-drop identities",
+      "Design adaptive coordinate choices",
+      "Test bent and rare bad-split examples",
+      "Audit the influence telescoping identity",
+      "Find a new restriction-closed class beyond the baseline"
+    ],
+    "moves": [
+      12,
+      19,
+      20
+    ]
+  },
+  {
+    "id": "F06",
+    "title": "Block stopping rules",
+    "goal": "Find useful proper blocks or stopping rules controlling conditional block spectrum entropy while ending at certified leaves.",
+    "metric": "Largest explicit family admitting a terminating block rule with a uniform conditional-entropy charge.",
+    "roles": [
+      "Choose physical blocks from dependence structure",
+      "Combine blocks with threshold or affine leaves",
+      "Construct parity-synergy failures",
+      "Prove termination and budget non-reuse",
+      "Compare block and singleton policies"
+    ],
+    "moves": [
+      3,
+      4,
+      30
+    ]
+  },
+  {
+    "id": "F07",
+    "title": "Erasure and synergy",
+    "goal": "Exploit signed Boolean constraints to control erasure entropy or its downward logarithmic residual; retain high-order parity dependence.",
+    "metric": "A new valid bound for the downward spectral-edge log functional with every residual explicitly identified.",
+    "roles": [
+      "Use Boolean convolution on spectral edges",
+      "Search tensor-stable nonlinear potentials",
+      "Stress-test parity and pair lifts",
+      "Prove exact sign-sensitive inequalities",
+      "Transfer a bound through the known erasure reduction without calling the reduction new"
+    ],
+    "moves": [
+      11,
+      12,
+      18
+    ]
+  },
+  {
+    "id": "F08",
+    "title": "Reveal correlation budget",
+    "goal": "Verify and attack the decaying-threshold reveal-policy correlation integral in the current Brain, retaining the forced-information refund and separating entropy transfer.",
+    "metric": "Best valid bound or counterexample for the exact weighted total-correlation integral after its definitions and source are pinned.",
+    "roles": [
+      "Reconstruct the reveal dynamics and admissibility",
+      "Prove a drift inequality with the refund",
+      "Find multiscale or parity counterexamples",
+      "Certify the integration and boundary terms",
+      "Determine exactly what additional entropy-transfer theorem would imply FEI"
+    ],
+    "moves": [
+      5,
+      12,
+      30
+    ]
+  },
+  {
+    "id": "F09",
+    "title": "Boolean convolution",
+    "goal": "Use the exact signed XOR autocorrelation identities of Boolean spectra in a dimension-independent entropy estimate.",
+    "metric": "Strongest proved entropy or downward-edge inequality under the full Boolean constraints, and sharp counterexamples to relaxations.",
+    "roles": [
+      "Develop algebraic identities from f squared equals one",
+      "Search operator or Gram formulations",
+      "Test relaxed non-Boolean spectral laws",
+      "Derive exact certificates for candidate inequalities",
+      "Connect the signed estimate to F07 or F04"
+    ],
+    "moves": [
+      1,
+      11,
+      18
+    ]
+  },
+  {
+    "id": "F10",
+    "title": "Decision-tree covariance",
+    "goal": "Improve the dependence on read count for decision trees by controlling covariance or whole-path costs beyond the known square-root bound.",
+    "metric": "Proved dependence on k in the read-k decision-tree entropy coefficient, with prior-art comparison.",
+    "roles": [
+      "Reconstruct the best known read-k proof",
+      "Analyze covariance of overlapping paths",
+      "Find hard read-k families",
+      "Prove a logarithmic or sharper intermediate estimate",
+      "Test whether the mechanism can escape the representation parameter"
+    ],
+    "moves": [
+      4,
+      11,
+      25
+    ]
+  },
+  {
+    "id": "F11",
+    "title": "Selector interference",
+    "goal": "Extend selector closure beyond the proved fresh-selector, orthogonal-neighbor or uniformly positive-selector-energy cases, paying coherent interference explicitly.",
+    "metric": "Largest class and smallest explicit interference penalty for which a strong selector inequality is proved.",
+    "roles": [
+      "Derive coefficient-level cross terms",
+      "Search sign or orthogonality conditions",
+      "Build cancellation and reinforcement examples",
+      "Audit entropy and normalization under overlap",
+      "Connect a valid interference budget to F12 or F14"
+    ],
+    "moves": [
+      12,
+      15,
+      20
+    ]
+  },
+  {
+    "id": "F12",
+    "title": "Two spectral addresses",
+    "goal": "Reconstruct the Brain's conditional-product spectral-address results and settle the next two-address case with a valid constant; do not reuse the already refuted constant two.",
+    "metric": "Best proved constant or exact obstruction for the precisely sourced two-address class.",
+    "roles": [
+      "Pin the exact conditional-product definitions",
+      "Develop the two-address entropy identity",
+      "Find asymptotic extremizers",
+      "Prove the corrected constant independently",
+      "Map which larger selector classes the result would cover"
+    ],
+    "moves": [
+      4,
+      16,
+      24
+    ]
+  },
+  {
+    "id": "F13",
+    "title": "Biased weighted thresholds",
+    "goal": "Extend the strong product-measure entropy inequality from symmetric thresholds to genuinely weighted thresholds, with constants uniform in biases and arity.",
+    "metric": "Largest weight class with a uniform corrected FEI-plus coefficient and explicit composition consequence.",
+    "roles": [
+      "Identify the weighted pivotal concentration obstruction",
+      "Prove controlled-weight or few-weight cases",
+      "Test rare biases and near-dictators",
+      "Audit deterministic inputs and corrected entropy",
+      "Transfer a valid gate theorem to read-once weighted-threshold formulas"
+    ],
+    "moves": [
+      3,
+      6,
+      30
+    ]
+  },
+  {
+    "id": "F14",
+    "title": "Shared-variable composition",
+    "goal": "Develop entropy transfer for repeated selector variables or low-energy shared-data compositions beyond the new multiplexer closure, without assuming false product entropy subadditivity.",
+    "metric": "Proved loss per overlap/depth parameter, or a normalized representation theorem that removes one parameter.",
+    "roles": [
+      "Derive exact shared-variable Fourier products",
+      "Search cancellation-sensitive bounds",
+      "Test known product-subadditivity counterexamples",
+      "Prove a compositional invariant",
+      "Connect the result to full-scope gate representations"
+    ],
+    "moves": [
+      1,
+      12,
+      20
+    ]
+  },
+  {
+    "id": "F15",
+    "title": "Sparse extremal structure",
+    "goal": "Use activation-preserving reductions to identify additional structural hypotheses that genuinely simplify FEI; rarity or small influence alone is insufficient.",
+    "metric": "A proved structural theorem or a new exact asymptotic H/I family that changes a live route.",
+    "roles": [
+      "Study balanced-core activations",
+      "Compare high-entropy and low-influence reductions",
+      "Construct sparse bent perturbations",
+      "Certify asymptotic entropy-to-influence ratios",
+      "Identify a non-equivalent restricted core class worth proving"
+    ],
+    "moves": [
+      2,
+      7,
+      24
+    ]
+  },
+  {
+    "id": "F16",
+    "title": "Exact finite search",
+    "goal": "Search Boolean truth tables and structured families for violations of new intermediate inequalities, preserving physical influence and using certified logarithmic comparisons.",
+    "metric": "New certified extremizer, smallest counterexample, or explicitly exhaustive new domain for a live candidate claim.",
+    "roles": [
+      "Implement exact integer Walsh transforms",
+      "Prove safe symmetry reductions",
+      "Search structured or SAT-encoded families",
+      "Certify entropy comparisons with intervals",
+      "Return minimal counterexamples to the proposing team"
+    ],
+    "moves": [
+      8,
+      14,
+      16
+    ]
+  },
+  {
+    "id": "F17",
+    "title": "Asymptotic stress families",
+    "goal": "Turn promising finite obstructions into all-dimensional families and determine whether they refute a route, a fixed constant, or full FEI.",
+    "metric": "A rigorously proved growth law for the targeted cost-to-influence ratio.",
+    "roles": [
+      "Analyze addressing and recursive selectors",
+      "Analyze tribes and sparse activation",
+      "Analyze parity, bent, and tensor constructions",
+      "Prove limiting ratios and quantify all parameters",
+      "Give every live route a matched asymptotic stress test"
+    ],
+    "moves": [
+      2,
+      7,
+      26
+    ]
+  },
+  {
+    "id": "F18",
+    "title": "Certified optimization",
+    "goal": "Convert useful numerical patterns into symbolic inequalities, exact witnesses, or rigorous optimization certificates rather than enlarging brute-force checks without a theorem target.",
+    "metric": "New certified parameter region, dual bound, or exact inequality directly feeding a full-FEI route.",
+    "roles": [
+      "Optimize finite witness assignments",
+      "Search analytic potential coefficients",
+      "Generate rational or interval certificates",
+      "Reconstruct a dimension-free symbolic proof",
+      "Measure whether the certificate resolves a previously unpaid term"
+    ],
+    "moves": [
+      10,
+      11,
+      19
+    ]
+  },
+  {
+    "id": "F19",
+    "title": "Independent proof reconstruction",
+    "goal": "Independently reconstruct the strongest new candidate arguments, identify hidden hypotheses, and prove or refute their missing bridges; formalize only the parts where it reduces concrete risk.",
+    "metric": "A repaired or refuted pivotal lemma, independently reconstructed full proof, or faithful checked formal core.",
+    "roles": [
+      "Rebuild proofs without using their conclusion",
+      "Audit quantifiers and normalization",
+      "Seek adversarial Boolean instances",
+      "Formalize critical finite or induction steps where feasible",
+      "Issue source-pinned mathematical reviews to F20"
+    ],
+    "moves": [
+      2,
+      18,
+      27
+    ]
+  },
+  {
+    "id": "F20",
+    "title": "Full-FEI synthesis",
+    "goal": "Combine compatible proved ingredients into a dimension-independent FEI proof or a rigorous unbounded-ratio Boolean family; maintain the exact remaining gap and reallocate stalled work within FEI.",
+    "metric": "Number and strength of genuinely unpaid universal obligations in the best complete proof outline, with a precise dependency graph.",
+    "roles": [
+      "Construct the global proof from accepted lemmas",
+      "Audit whether reductions only rename full FEI",
+      "Join successful ideas across teams",
+      "Verify theorem-sized candidates with independent teams",
+      "Maintain the campaign summary and authorized publication routing"
+    ],
+    "moves": [
+      1,
+      18,
+      25
+    ]
+  }
+]

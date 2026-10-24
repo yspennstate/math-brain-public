@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "b9015d08d14858af2d31e0b72bf90f91e1300147",
+  "control_commit_prepublication": "642618a0d7a3fec9418b15fb031ee94396997372",
+  "account": "account01",
+  "slot": "B19",
+  "run_id": "20260924T024923Z-account01-B19-QFORM-auto11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_FULL_TARGET",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "b4a77ade04e619a10fec5678d52d7c31480d54c5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B19/20260924T024923Z-account01-B19-QFORM-auto11/REPORT.md"
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "62e3c610585435bc7cdeea1b37e00e49a8cf3892",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B19/20260924T024923Z-account01-B19-QFORM-auto11.md"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1",
+    "NO_NONZERO_TAIL_DELETION",
+    "NO_ONE_GOOD_MINOR_FROM_AGGREGATE"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@ef38106705da5fab5a2fb6dbdd64745206580f62",
+      "result": "QFORM-PRINCIPAL-MINIMAL-INDUCTIVE-REDUCTION-v1",
+      "scope": "same-constant affine interval descent by conditioning original coordinates"
+    },
+    {
+      "source": "yspennstate/math-open-problems@f423fb15e023ae33ee864e6d2468da782c8afd99",
+      "result": "account01/B02 r43 finite-rank tiny-tail carrier and account02/B20 active localized peel",
+      "scope": "exact coefficient decompositions; positive physical-E3 branch separately paid"
+    },
+    {
+      "source": "yspennstate/math-open-problems@da594097550f0b88ea54c6989b252ae347a2d2f3",
+      "result": "QFORM-PRINCIPALMINIMAL-THRESHOLD-NORMALIZED-CARRIER-v1",
+      "scope": "sign-resolved normalized Schur carrier including exact threshold degeneracy"
+    },
+    {
+      "source": "yspennstate/math-open-problems@4ad9d206dba1b22fd917280717c24f4e1dd6ea09",
+      "result": "account02/B19 r11 bilateral two-star and bordered-E3 tradeoff",
+      "scope": "parallel two-star branch after physical E3/D5 exits"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-ACTIVELOCALIZED-PEEL-PULLBACK-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "A localized active stopping vector for the nested orthogonal compression chain is already active for the original carrier K0, since Km u=P_m K0 u and orthogonal projection contracts. Therefore the original tiny residual and original s3 floor can be retained."
+    },
+    {
+      "id": "QFORM-FINITELOCALIZED-THRESHOLD-NORMALIZED-PHYSICAL-ROW-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For a principal-minimal target and a nonempty physical H with |H|<=28224, either ||A[H,H]||op>1/2 or some original coordinate i in H has squared threshold-normalized row energy at least 1/(2|H|). Splitting at signed base threshold 15/16 yields either an ordinary physical star >=0.000744047619... or near-threshold weighted energy >=1/112896."
+    }
+  ],
+  "partner_result_actually_applied": {
+    "worker": "account02/B19",
+    "source": "yspennstate/math-open-problems@da594097550f0b88ea54c6989b252ae347a2d2f3",
+    "equation": "||C P_< (I-sigma D)^(-1/2)||op^2 >=1/2",
+    "new_application": "Frobenius row averaging on a physical H with |H|<=28224 gives one literal source coordinate with normalized row energy >=1/56448; a 15/16 near/far split gives the STAR/NTR dichotomy."
+  },
+  "new_quantitative_constants": {
+    "scaled_back_D_op": 0.007619480067767874,
+    "scaled_back_s3_carrier": 0.05333631238809731,
+    "scaled_back_tail_F": 4.808627781218889e-08,
+    "scaled_back_active_action": 0.0009524350084709843,
+    "normalized_row_norm": 0.004208968935634212,
+    "ordinary_star_floor": 0.000744047619047619,
+    "near_threshold_weight_floor": 8.857709750566894e-06
+  },
+  "first_unresolved_implication": "QFORM-PHYSICAL-NORMALIZED-ROW-OR-FINITEHUB-PAYMENT-v1",
+  "parallel_unresolved": [
+    "account02/B19 r11 same-hub one-sided moving-ridge / distinct-anchor weak-edge-E2 branch",
+    "giant near-rank-one collar"
+  ],
+  "notes": "All new statements are deterministic coefficient reductions. No new full-law continuity claim is made. Positive physical-E3 Fourier branches retain their previously proved C0 continuity."
+}

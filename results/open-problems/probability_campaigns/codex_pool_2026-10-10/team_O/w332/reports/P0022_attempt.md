@@ -1,0 +1,13 @@
+# P0022: dimension obstruction for an approximation route, 2026-10-10
+
+Status: the cached problem card asks whether the infimum of dimensions of nontrivial Jordan arcs inside a planar Brownian trace is almost surely one. The earlier attempt proves the universal lower bound one and correctly notes that polygonal approximations need not lie in the trace. No current literature answer was established.
+
+Lemma: any connected subset C of Euclidean space containing distinct x,y has Hausdorff dimension at least one. Orthogonal projection onto the line through x,y is Lipschitz; its connected image contains an interval of positive length. Hausdorff dimension cannot increase under a Lipschitz map. Thus if the Brownian trace contains a rectifiable nontrivial Jordan arc, the requested infimum is one. This is conditional: no such arc inside the Brownian trace is constructed here.
+
+New route obstruction: let K be a Jordan arc with a homeomorphic parametrization f:[0,1]->K and suppose its subarcs f([j/4^n,(j+1)/4^n]) are similarity copies of K, as for the standard Koch arc. If dim_H K=q>1, then every nontrivial Jordan arc A contained in K also has dimension q. The inverse image f^(-1)(A) is a nondegenerate compact connected subset of [0,1], hence an interval [a,b]. This interval contains one of the base-four subdivision intervals at a sufficiently fine level. Its image has dimension q; monotonicity gives q<=dim_H A<=q.
+
+The standard Koch construction has four similarity pieces of ratio 1/3 and the open-set separation property, giving q=log(4)/log(3)>1. The usual cover by 4^n cells proves the upper dimension bound; the uniform cylinder measure with mass 4^-n and the bounded-intersection estimate for a ball of radius 3^-n proves the lower bound by the mass-distribution argument. These are standard deterministic facts, with the exact self-similarity dimension theorem stated as an input to this obstruction rather than a theorem about Brownian paths.
+
+Consequently a planar continuous path can have polygonal approximations of dimension one while every nontrivial arc in its actual image has dimension greater than one. Even existence of a continuous path and convergence of polygonal approximations cannot supply the missing internal dimension-one subset. This refutes that general route; it does not show any lower bound above one for a Brownian trace.
+
+Check: check_extended.py verifies, for a fixed finite set of rational intervals [a,b], a base-four subdivision interval contained in each, and computes the dimension scaling equation 4*(1/3)^q=1. Numeric geometry is not proof of the random-trace assertion. Auditor w346, pending.

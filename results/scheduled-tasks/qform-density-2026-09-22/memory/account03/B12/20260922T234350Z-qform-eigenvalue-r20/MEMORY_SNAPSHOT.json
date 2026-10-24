@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account03",
+  "slot": "B12",
+  "run_id": "20260922T234350Z-qform-eigenvalue-r20",
+  "source_control_commit_at_prepublication": "fca85cfa5b2505f22b2d61bf28fb137a44da08ed",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "mathematical_status": "PROVED_SUPPORTING_THEOREM_FULL_TARGET_OPEN",
+  "theorem_id": "QFORM-LOCAL-FOOTPRINT-HYBRID-STABILITY-v1",
+  "summary": "A protected original-coordinate 3x3 core is stable under arbitrary additions whose local principal footprint is below its singular gap, with density <=20/(kappa-delta). A protected weighted packet of 3x3 cross minors with I-side marginals h<3/4 is stable under arbitrary additions whose supported cross footprint is below the minor singular gap, with continuous density <=C(h)/(kappa-delta). This includes arbitrary-rank small dense tails and arbitrarily large signed eigenvalues with low certificate footprint.",
+  "principal_bound": "20/(kappa-delta_P)",
+  "volume_bound": "C(h)/(kappa-delta_V), C(h)=6sqrt(e) for h<=1/2 and 6sqrt(e)(2h)^(-1/2)(3-4h)^(-1) for 1/2<=h<3/4",
+  "explicit_h_2_3_constant": 25.70102107534928,
+  "partner_result_applied": {
+    "worker": "account04/B12",
+    "theorem": "mixed-norm shear compiler",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "9ce47e2a0f2c8434d901df13a218450c2189d80e",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260922T192552Z-account04-B12-mixed-shear-r1/REPORT.md",
+    "application": "Uniform fixed-outside core density cap implies an L1_z(Linf_u) mixed norm cap; the theorem restores the actual dependent outside quadratic remainder with the same constant."
+  },
+  "newest_source_applied": {
+    "directory": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/",
+    "initial_owner_pin": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "components": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "GEOMETRIC_ROUTE_REPORT.md"],
+    "used_results": ["D-prime h<3/4 volume theorem", "n=3 physical-coordinate density <=20"]
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1"
+  ],
+  "continuity": {
+    "principal_branch": "NOT_PROVED",
+    "volume_branch": "PROVED_BY_UNIFORM_L1_CHARACTERISTIC_FUNCTION_ENVELOPE",
+    "full_target": "OPEN"
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "287541ac87d8fa9d977eb1214c8b61e69858bb47",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260922T234350Z-qform-eigenvalue-r20/REPORT.md"
+  },
+  "unresolved_implication": "From only s_3(A)>=1, extract a universal grouped weighted cross-volume packet or compatible no-pivot/hub certificate without paying one small physical minor. The singleton-plus-two-banks family rules out a universal one-triple reduction.",
+  "next_step": "Attempt a grouped-bank to weighted-D-prime extraction in the no-local-certificate regime, keeping product aggregation before inverse curvature.",
+  "privacy_and_delivery": "Private repository only; no email, notifications, public release, paid model/API/Codex call, remote workflow or cross-account authentication."
+}

@@ -1,0 +1,47 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T225832Z-claude-B12-erasure-ledger-depth",
+ "stream": "B12",
+ "packet_id": "A057",
+ "gap_id": "B12-coherent-remainder-depth",
+ "attempt_id": "claude-B12-1",
+ "method": "exact prime-log replay + analytic lemmas on the erasure packet function + explicit depth family",
+ "mathematical_delta": "L1: the A057 packet remainder L_j is monotone with L_j(1)=B_j(g), so L_j(alpha^2)<=min{B_j(g), alpha^2B_j(g)+q alpha^2 ln(1/alpha^2)}; L2: first-level log bank Lambda(h)<=(4+6/e)(I(h)-1) nats for balanced h (deficit-paid, best seen ratio 3ln2 at Maj3); R1: iterating the root ledger over formula depth is unboundedly lossy (odd threshold chains: B=0, I<k, bank>=e^-3(2^(k-1)-1)); A056/A057/A058 finite claims replayed exactly with zero failures.",
+ "deliverable_status": "complete except REPORT.md (refused by the subagent Write guard; content in the lead StructuredOutput)",
+ "mathematical_status": "PROVED (L1, L2, R1); CERTIFIED (replay); full FEI OPEN",
+ "claim_versions_used": [
+  "A057-COHERENT-ERASURE-SPLIT v1",
+  "A057-NONREUSING-ALPHA-LOG-PAYMENT v1",
+  "A056 balanced/biased composition identities v1",
+  "A058 anchored overlap theorem v1"
+ ],
+ "claims_created_or_changed": [
+  "B12-L1-MONOTONE-ERASURE v1",
+  "B12-L2-DEFICIT-LOG-BANK v1",
+  "B12-R1-FORMULA-BANK-REUSE-IS-DEPTH-LOSSY v1",
+  "B12-REPLAY-A056-A057-A058 v1"
+ ],
+ "source_artifacts": [
+  "agents/A056/runs/20261011T214407Z-account05-A056-balanced-composition/REPORT.md",
+  "agents/A057/runs/20261011T220314Z-account05-A057-coherent-restriction-remainder (REPORT.md, LEARNED.md)",
+  "agents/A058/runs/20261011T222138Z-account05-A058-overlapping-compositions/OVERLAPPING_COMPOSITION_CLASS.tex, OVERLAP_ENTROPY_LEDGER.md",
+  "mop_fei100/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json"
+ ],
+ "next_consumers": [
+  "A091 (review L1, R1 after A057 claims)",
+  "A057",
+  "A059",
+  "A056",
+  "A058"
+ ],
+ "next_action": "Prove the biased-child erasure split so L1 and the A057 physical-tree bank apply at every node of an adaptive restriction tree; then test sum_v w_v min{B_j(g_v), alpha_v^2 B_j(g_v)+q_v alpha_v^2 ln(1/alpha_v^2)} <= K I(f) on the sparse-bent physical tree.",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "stream is over the 2-claim unreviewed cap (A057 has 2 pending): lead claims queue behind them for A091/A090",
+  "git, brain and mesh writes are the coordinator's; this run is saved only on local disk",
+  "REPORT.md was refused by the subagent Write guard (\"return findings as text\"); its full content is in the lead StructuredOutput for the coordinator to materialize; .final withheld until REPORT.md exists"
+ ],
+ "packet_ids": [
+  "A057"
+ ]
+}

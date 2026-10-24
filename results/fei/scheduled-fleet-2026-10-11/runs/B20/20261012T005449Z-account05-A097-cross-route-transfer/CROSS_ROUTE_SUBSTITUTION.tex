@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{A097 stage 2: prescribed references on the B05 tree}
+\author{A097, B20}\date{12 October 2026}\maketitle
+Information units are bits. Full FEI remains open. This is a scoped
+application of A097 v1; the complete derivation and finite certificates are
+in DERIVATION.md and out/RESULTS.json.
+
+Let $k\ge2$ be even, $\delta=2^{-k}$, $e=2^{-k/2}$, $r=2k$, $p=2^{-r}$.
+Let $b$ be the quadratic bent sign, $b'=b-2\mathbf1_0$, and $h$ the fair
+physical selector between them. Activate $h$ on a point of $r$ fresh controls.
+The tree queries controls until inactive or completely active, then queries
+the selector and stops at the seed. Put $\mu=e-\delta$, $c=1-\mu$.
+
+\begin{theorem}
+Assign either exact seed Fourier laws or uniform data-subset laws
+$Q_b(T)=Q_{b'}(T)=\delta$ to the leaves, with $\delta_\varnothing$ at constant
+leaves, and propagate by the A097 compatible lift. Then
+\[
+ I_{\rm removed}=p(2kc+\delta),\quad
+ I_{\rm terminal}=p(k/2+k\delta),\quad I(F)=I_{\rm removed}+I_{\rm terminal}.
+\]
+The exact erasure/credit residual is
+\[
+ R_k=\frac{B_{\rm sel}-\kappa_{\rm sel}+
+     \sum_{s=1}^{2k}2^s(B_s-\kappa_s)}{2kc+\delta},
+\]
+with the explicit kernels below. For all even $k\ge2$,
+$B_{\rm tree}\le3 I_{\rm removed}$, and the constructed complete root
+reference obeys
+\[
+ \operatorname{CE}(P_F,Q_F)\le(3+2/\ln2)I_{\rm removed}+2I_{\rm terminal}.
+\]
+Under uniform seed references its correction satisfies
+\[
+ 0\le\frac{K_{\rm tree}}{I_{\rm removed}}
+ \le\frac{8\delta(1-\delta)}{(2kc+\delta)\ln2}=O(2^{-k}/k).
+\]
+Both corrected and uncorrected erasure rates tend to $2$. Exact seed
+references give identically zero correction.
+\end{theorem}
+
+\begin{proof}
+The signs of $\widehat b(T)$ have counts
+$N_\pm=(2^k\pm2^{k/2})/2$. The flip subtracts $2\delta$ from every
+coefficient. The core selector coefficients are $\sigma e-\delta,\delta$,
+with marginal $q_\sigma=\delta-2\sigma\delta e+2\delta^2$. Thus
+\[
+B_{\rm sel}=\sum_\sigma N_\sigma
+ \phi((\sigma e-\delta)^2,\delta^2),\qquad
+J_{\rm sel}=H(q)-[k+H(b')]/2.
+\]
+In uniform mode the compatible core reference is
+$Q_h(z,T)=\delta P_h(z,T)/q_\sigma$, so
+$z_0=\delta\mu^2/q_+$ and $\kappa_{\rm sel}=J_{\rm sel}$.
+In exact mode $z_0=\mu^2$ and all corrections vanish.
+
+Set $u_s=2^{-s}$, $d_s=u_s c$, $q_s=1-2d_s+2d_s^2$.
+The B20 activation formula's actual control-coordinate summand is
+\[
+B_s=\phi((1-d_s)^2,d_s^2)+1-q_s.
+\]
+The complete-reference recurrence and its actual physical-child correction are
+\[
+z_s=\frac{(1-d_s)^2}{q_s}\frac{1+z_{s-1}}2,\quad
+w_s=\frac{d_s^2}{q_s}\frac{1+z_{s-1}}2,
+\]
+\[
+\kappa_s=q_s D_2\!\left(
+\frac{(1,(1-2d_s)^2)}{2q_s}\,\middle\Vert\,
+\frac{(1,z_{s-1})}{1+z_{s-1}}\right).
+\]
+Only the residual-empty fiber contributes. Multiply by actual reach
+$p/u_s$ to obtain the ratio and by $p$ for the selector. Point-flip edge
+counting gives $I(b)=k/2$, $I(b')=k/2+2k\delta$, proving the influence split.
+
+Exactly $\chi^2(P_{b'}\Vert\mathrm{uniform})=16\delta(1-\delta)$,
+by expanding $P_{b'}(T)-\delta=\delta(-4\sigma e+4\delta)$ and using the
+average sign $e$. The elementary $\ln t\le t-1$ and A097 v1 give
+$K_{\rm tree}\le p[k-H(b')]/2\le8p\delta(1-\delta)/\ln2$.
+
+For $a+b\le1$, $\phi(a,b)\le b\log_2(e_{\rm Euler}/b)$. Consequently
+\[
+ B_{\rm tree}/p\le4kc+C_0+\delta[k+\log_2 e_{\rm Euler}],
+ \quad C_0=\log_2 e_{\rm Euler}+4+2\log_2(4/3)<13/2.
+\]
+Here $c\in[3/4,1)$, $\sum2^{-s}\le1$, $\sum s2^{-s}\le2$, and
+$B_{\rm sel}\le h_2(\delta)$. For $k\ge6$,
+$2kc\ge9$ and $\delta(k+3/2)\le15/128$, so the ratio is less than $3$.
+The outward rational certificates at $k=2,4$ complete the proof.
+The lower bound $B_{\rm tree}/p\ge4kc-2$ gives the limit $2$;
+the credit bound gives the corrected limit. Both seed reference costs
+are at most $2I(\mathrm{seed})$. Insert these bounds into A097 v1 to finish.
+\end{proof}
+
+\paragraph{Unresolved universal line.}
+This family already has entropy certificates. No reference payment for an
+arbitrary Boolean seed, or for overlapping control histories under a single
+exclusive influence budget, is proved here. The exact terminal costs remain
+part of every transfer.
+\end{document}

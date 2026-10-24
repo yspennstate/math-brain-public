@@ -1,0 +1,2 @@
+STATE: A062 stage6 complete locally: shared-data tagged graft Q_C(F)<=Pr[u!=v]*Q_C(seed)+Q_C(actual profile); false independent-core proxy release1/16; 2150 mixed policies and scoped A030 transport review PASS; FEI OPEN.
+NEXT: Expose the fresh tag while seed unfinished at the unequal shared-core frontier; price its signed collision using carried controller/profile reserves and both actual child references; A087/A094 review general graft.

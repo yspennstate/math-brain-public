@@ -1,0 +1,28 @@
+~/qform_five_lean_2026_09_25/lean/FiveS4Thm_run.lean:79:8: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+'QformFiveB.Thm41.omega_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.omega_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.omega_le_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.omega_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.hub_selection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.decay_const_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.decay_const_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.decay_const_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.omega_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.omega_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.omega_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.sq_sqrt_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.sqrt_pow_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.decay_const_sqrt_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.rpow_neg_half_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.neg_half_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.thm41_of_hub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.thm41_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.thm41_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Thm41.thm41_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT 0

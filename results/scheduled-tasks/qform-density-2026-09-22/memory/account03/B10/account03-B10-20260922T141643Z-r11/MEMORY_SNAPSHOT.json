@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_prepublication": "c3fc194b4e7e2ccead91886b54a085a45182ed94",
+  "account": "account03",
+  "slot": "B10",
+  "run_id": "account03-B10-20260922T141643Z-r11",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "assignment": "Rank-three coupled case",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1"
+  ],
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@ad5aac11726332af91f2f2680a10f755e22d08db",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260922T134741Z-account03-B09-QFORM-r12/REPORT.md",
+      "scope": "Rank-two Schur rectangular bound and exact-rank-three Pluecker aggregation."
+    },
+    {
+      "source": "yspennstate/math-open-problems@1defc84f1bfd79994a103a6d683c887d9dead1e7",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/B16-20260922T135620Z-r11/REPORT.md",
+      "scope": "Cap-one J_* kernel and uniform weak-L2 payment of a quadratic logarithmic ridge."
+    },
+    {
+      "source": "yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T113729Z-account04-B18-qform-r1/REPORT.md",
+      "scope": "Compatible account04 dependent square smoothing / definite-Schur physical-triple theorem, actually applied to equation (5.2) of this run."
+    },
+    {
+      "source": "yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a",
+      "path": "proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md",
+      "scope": "Diffuse entire-range leverage <=1/32 theorem, used only for the exact-rank-three definite-signature corollary."
+    },
+    {
+      "source": "Rudelson-Vershynin / Ball-Rogozin one-dimensional marginal theorem",
+      "scope": "A normalized linear combination of independent variables with densities <=1 has density <=sqrt(2)."
+    }
+  ],
+  "assigned_partner": {
+    "worker": "account04/B10",
+    "completed_current_qform_artifact_observed": false,
+    "action": "No assigned-partner result fabricated; compatible completed account04/B18 mathematics applied asynchronously."
+  },
+  "proved_outputs": [
+    {
+      "id": "QFORM-RANDOM-SHIFT-RESIDUAL-TRACE-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "For a Parseval two-frame, a selected residual row of leverage q>0, and any invertible symmetric 2x2 residual matrix M, the fractional trace is <=16 sqrt(15) 2^(1/4) (q |det M|)^(-1/4), without assuming independence of the two projected bank coordinates."
+    },
+    {
+      "id": "QFORM-RANK3-NONISOTROPIC-PIVOT-v1",
+      "status": "PROVED_EXACT_RANK3_SUPPORTING_THEOREM",
+      "statement": "If exact-rank-three A has a physical pivot d_i!=0 with leverage ell_i, then ||p_Q||_infinity <97 (|d_i| ell_i |det Lambda|)^(-1/4)."
+    },
+    {
+      "id": "QFORM-RANK3-DEFINITE-549-v1",
+      "status": "PROVED_EXACT_RANK3_DEFINITE_BRANCH",
+      "statement": "For exact rank three with all three eigenvalues of one sign and magnitude >=1, ||p_Q||_infinity<549 for arbitrary orientation and arbitrary independent cap-one coordinate laws."
+    }
+  ],
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "5ce98ee83b2fef75136f10cdd0e89741f017d3e0",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B10/account03-B10-20260922T141643Z-r11/REPORT.md",
+    "report_blob": "93c39aa5de0006f05fb3c0174217ec29d1121f41",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B10/account03-B10-20260922T141643Z-r11/CHECK.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B10/account03-B10-20260922T141643Z-r11/CHECK_OUTPUT.txt"
+  },
+  "unresolved_implication": "Indefinite exact-rank-three all-near-isotropic-pivot regime: prove a dimension-free product-preserving hyperbolic bank payment when all usable d_i=u_i^T Lambda u_i are tiny or zero.",
+  "next_step": "Exploit the isotropic-cone geometry of a Parseval rank-three frame to build a two-coordinate or two-bank linear pivot before conditional normalization; test the all-zero-diagonal extreme first.",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity_status": "Not proved for the new pivot theorem or its heavy-row definite branch; proved only in the cited diffuse subbranch."
+}

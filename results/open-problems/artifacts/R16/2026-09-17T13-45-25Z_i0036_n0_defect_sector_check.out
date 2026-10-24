@@ -1,0 +1,15 @@
+m=1
+  defect coefficients: {(0, 2): 1, (1, 8): 1}
+  empty coefficients:  {(0, 0): 1, (1, 6): 1}
+m=2
+  defect coefficients: {(0, 2): 1, (1, 8): 2, (2, 14): 1}
+  empty coefficients:  {(0, 0): 1, (1, 6): 2, (2, 12): 1}
+m=3
+  defect coefficients: {(0, 2): 1, (1, 8): 3, (2, 14): 3, (3, 20): 1}
+  empty coefficients:  {(0, 0): 1, (1, 6): 3, (2, 12): 3, (3, 18): 1}
+IDENTITIES:
+  Z_defect(m=3) = x^2 (1 + n x^6)^3
+  Z_empty(m=3)  =       (1 + n x^6)^3
+  at n=0: Z_defect=x^2 and Z_empty=1
+  d^j/dn^j at n=0 = j! times the exactly-j-loop coefficient
+ALL_EXACT_CHECKS_PASS

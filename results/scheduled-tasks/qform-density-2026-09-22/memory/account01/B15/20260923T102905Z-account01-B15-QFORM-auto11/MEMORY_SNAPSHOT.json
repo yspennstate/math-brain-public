@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "owner_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B15",
+  "run_id": "20260923T102905Z-account01-B15-QFORM-auto11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "final_control_observed": "a8e6205d42d385fb0e856e9ba8d23d726ce7ba29",
+  "math_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "0feb5b58d53a266b5df517982780448aa9b6daf5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B15/20260923T102905Z-account01-B15-QFORM-auto11/REPORT.md"
+  },
+  "partner_applied": {
+    "account_slot": "account02/B15",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260923T090720Z-account02-B15-QFORM-auto11/REPORT.md",
+    "result": "random-critical-value posterior bridge nu(D_B>=d)<=C_B/M+exp(-d^2/2) for ambient original-coordinate indefinite physical 3-blocks"
+  },
+  "new_results": [
+    "Exact ruled cost C_B=int_0^(2pi)[ab+ar cos^2(theta)+br sin^2(theta)]^(-1/2)dtheta for majority magnitudes a<=b and minority magnitude r.",
+    "Ruled conductance rho(B)=sqrt(a(b+r)) gives C_B<=2pi/rho(B); exact harmonic capacity h(B)=1/C_B is homogeneous and h(B)>=rho(B)/(2pi).",
+    "Harmonic bank weights w_j=h_j/sum h turn the partner threshold family into A_h(d)<=N/(M sum h)+exp(-d^2/2).",
+    "Integrating against d exp(-d^2/2) gives soft score S_h=E_nu sum w_j[1-exp(-(D_j^+)^2/2)]<=1/2+N/(M sum h). Under mean capacity >=c s_3(A), any excess S_h>=1/2+delta gives s_3(A)M<=1/(c delta)."
+  ],
+  "corrections_preserved": [
+    "NO_UNIFORM_POINTWISE_QUADRATIC_FOURIER_DECAY",
+    "NO_ROTATED_INDEPENDENCE",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "NO_ARBITRARY_JOINT_COAREA_SHORTCUT",
+    "NO_SINGLE_UNIFORMLY_CONDITIONED_PHYSICAL_MINOR_ASSUMPTION"
+  ],
+  "unresolved": "Establish a universal mean harmonic ruled-capacity bank plus soft-gap excess, or control the complementary soft-shadowing class through a product-sensitive paid branch.",
+  "hourly_login_note": "A B15 login already existed in the 2026-09-23T10Z hour from run 20260923T101407Z-account01-B15-QFORM-r17; create-only policy was respected and it was not overwritten. This run has its own immutable START/REPORT/FINISH artifacts."
+}

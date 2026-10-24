@@ -1,0 +1,76 @@
+\begin{theorem}[Anchored-tail completion of conditional phase energy]
+Let $f:\{-1,1\}^X\times\{-1,1\}^Y\to\{-1,1\}$ be Boolean under the
+uniform product law, with $X$-Fourier degree at most $d\ge1$.  For each
+positive $X$-spectral fiber
+\[
+ q_R(T)=\widehat f(R,T)^2/p_X(R),
+ \qquad p_X(R)=\sum_T\widehat f(R,T)^2,
+\]
+choose an atom of maximum mass $1-\varepsilon_R$.  If
+$\varepsilon_R>0$, let $r_R$ be the normalized law on the remaining
+atoms.  Define
+\[
+ B(q_R)=\min\left\{
+ H_{1/2}(q_R),
+ h_2(\varepsilon_R)+\varepsilon_R H_{1/2}(r_R)
+ \right\},
+ \qquad
+ \mathcal A_{\rm at}(f)=\sum_Rp_X(R)B(q_R),
+\]
+with the second expression interpreted as zero when $\varepsilon_R=0$.
+Then
+\[
+ \boxed{
+ H(f)\le {2\over\ln2}I_Y(f)+2(d-1)
+ -\mathbb E_y\Gamma_d(f_y)+\mathcal A_{\rm at}(f).}
+\]
+Moreover $H(q_R)\le B(q_R)\le H_{1/2}(q_R)$, so this improves the
+previous R\'enyi-half completion and retains the full conditional
+entropy.
+\end{theorem}
+
+\begin{proof}
+For a probability law $q=(1-\varepsilon)\delta_{t_0}+\varepsilon r$,
+the Shannon chain rule gives
+\[
+ H(q)=h_2(\varepsilon)+\varepsilon H(r).
+\]
+Monotonicity of R\'enyi entropy yields both
+$H(q)\le H_{1/2}(q)$ and $H(r)\le H_{1/2}(r)$.  Hence $H(q)\le B(q)$.
+Average over $R$ in the exact chain rule
+$H(f)=H(p_X)+\sum_Rp_X(R)H(q_R)$, then insert the already proved
+Boolean-granularity phase bound for $H(p_X)$.
+\end{proof}
+
+\paragraph{Point-defect payment.}
+Let $q_k$ be $+1$ at one point of the $k$-cube and $-1$ elsewhere,
+$\delta=2^{-k}$.  Its squared Fourier law has one atom of mass
+$(1-2\delta)^2$ and $2^k-1$ atoms of mass $4\delta^2$.  Thus
+\[
+ \varepsilon=4\delta(1-\delta),\qquad
+ B_{\rm tail}=h_2(\varepsilon)+\varepsilon\log_2(2^k-1)=H(q_k).
+\]
+Also $I(q_k)=2k\delta$.  For $k\ge3$, using
+$h_2(u)\le u\log_2(e/u)$, $\log_2e<3/2$, and
+$-\log_2(1-\delta)\le3\delta$, one obtains
+$h_2(\varepsilon)\le k\varepsilon$.  Therefore
+\[
+ B(q_k)\le B_{\rm tail}\le2k\varepsilon
+ \le8k\delta=4I(q_k).
+\]
+The cases $k=1,2$ are exact: the ratios are respectively $0$ and $2$.
+Consequently the completion pays the fixed-R\'enyi point-defect family
+at constant four, rather than charging its nonvanishing
+$H_{1/2}$ cost against vanishing influence.
+
+\paragraph{Tensor guard.}
+For every law $q$, $B(q)\ge H(q)$.  Hence if a fresh non-character
+Boolean factor $g$ is tensored $m$ times into every conditional fiber,
+then
+\[
+ \mathcal A_{\rm at}(f\,g^{\otimes m})
+ \ge mH(\widehat g^{,2}).
+\]
+Thus a fixed anchored-tail cap excludes repeated arbitrary
+positive-entropy tensor cores without assuming FEI.  No universal
+influence bound for $\mathcal A_{\rm at}$ is asserted.

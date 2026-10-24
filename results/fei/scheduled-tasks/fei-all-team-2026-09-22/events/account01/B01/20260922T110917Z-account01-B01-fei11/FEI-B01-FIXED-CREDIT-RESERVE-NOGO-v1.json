@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "event_id": "FEI-B01-FIXED-CREDIT-RESERVE-NOGO-v1",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "control_revision": "2026-09-22.3",
+  "origin": "account01/B01 source-bound mathematical correction",
+  "run_id": "20260922T110917Z-account01-B01-fei11",
+  "action": "REFUTE",
+  "scope_kind": "STRONGER_BELLMAN_INVARIANT",
+  "target_statement": "There exists a symmetric finite-cap potential Gamma and one fixed lambda>0 such that D_Gamma(G;p) >= lambda*v*K_occ(G;p) for every Boolean gate and product bias, equivalently A_{Gamma,lambda}>=0 universally.",
+  "corrected_statement": "The signed-transfer recursion remains exact, but the fixed-positive-reserve invariant is false for every finite-cap Gamma and every fixed lambda>0. A balanced antipodal two-flip dictator family satisfies K_occ >= (n-8)(I-1), so A_{Gamma,lambda}<0 for n>8+Gamma(1/2)/lambda. This does not refute FEI.",
+  "source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "63a1d889005602ab5ed5f15497243c70186689a1",
+    "path": "proofnet24/P03-fei/fleet-2026-09-22/account01/B01/20260922T110917Z-account01-B01-fei11/REPORT.md",
+    "sections": "2-11"
+  },
+  "affected_prior_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "374c4874e914c7414abc9109fadf77cfc3947298",
+    "path": "proofnet24/P03-fei/fleet-2026-09-22/account01/B01/20260922T103250Z-account01-B01-fei-r11/REPORT.md",
+    "scope": "conditional end-to-end strategy requiring A_{Gamma,lambda}>=0; exact recursion and Xi_j example remain valid"
+  },
+  "dependency_effect": "block_positive_descendants_that_require_fixed_positive_global_Kocc_reserve",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "independent_full_proof_review": false
+}

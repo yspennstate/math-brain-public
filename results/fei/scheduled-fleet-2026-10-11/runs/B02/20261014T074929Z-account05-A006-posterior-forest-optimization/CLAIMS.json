@@ -1,0 +1,167 @@
+[
+  {
+    "claim_id": "A006-JOINT-ROOT-LAW-LOWER-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For every fixed finite family of distinct actual once-per-gate partition runs covering the positive nonempty squared Fourier spectrum, write complete output numerators W_A=sum_T k_AT lambda_T and D=sum_T pi_T lambda_T. With p_lambda(T)=pi_T lambda_T/D and K_AT=k_AT/pi_T, Q_A=K_A dot p_lambda. At any positive globally feasible weight vector h_T=sum_A P_A K_AT/Q_A and v=sum_A P_A satisfy p_lambda dot h=v. The complete actual bit cost C is within 2(max_T h_T-v) of its joint infimum over all feasible positive weights and all actual run posteriors in the SAME family. The simplex objective is convex; its relaxation supplies a lower bound without asserting that K is stochastic or that the physical all-weight objective is convex.",
+    "hypotheses": [
+      "Fixed actual gate table, ordered covers, positive rarities and original queue; complete factors and nonempty-root conditioning retained",
+      "Each gate visited at most once and owned subsets partition the output; no duplicate descriptions counted as runs",
+      "Family and physical Boolean f fixed before choosing a Fourier output; positive output mass on positive nonempty spectrum",
+      "C measured in bits; supporting objective G in natural units; ln2>1/2"
+    ],
+    "statement_sha256": "9a0d49375a7a8ba40ae7b26ca9592229e9d3cf10310aa677e5121b90498716d5",
+    "contributors": [
+      "A006"
+    ],
+    "proof_source": {
+      "derivation": "ROOT_LAW_RELAXATION.md",
+      "validation": "out/CHECK_4.json"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locator": "original conditioned queue and thm:posteriorforest",
+        "acceptance": "definition, no universal cost assumption"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A010",
+        "verdict": "WHOLE_SOURCE_DOCUMENT_HOLDS_NO_REPAIR",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A010\\runs\\20261014T062324Z-account05-A010-universal-residual-falsifier\\REVIEW_A006.md",
+        "source_sha256": "ab6186487dfe593904534149709bc3d51bad9f615874d34fc33b9368ea1c8bac",
+        "reviewed_proof_sha256": "4719548182b00fdff159735d98bc99bdc01051f1e29d581f2f101f519e79a924",
+        "scope": "whole unchanged proof document; formal claim registered in this stage after source-bound review"
+      }
+    ],
+    "status": "PROVED; SOURCE_DOCUMENT_INDEPENDENTLY_ACCEPTED_LOCALLY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A010",
+      "A008",
+      "A009",
+      "A086",
+      "A094",
+      "Claude/B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A006-FULL-PARTITION-INCIDENCE-CAP-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For every finite positive width-two graph prime table with both endpoint orders and original queue, every nonempty k-edge root subset T and every nonnegative vertex-price certificate y satisfying y_u+y_v>=1 on T yield p_lambda(T)<=min(1,4^(1-k)(sum_v y_v)^(k-1)/k^k) for all positive graph-packing-feasible weights. Recomputing h from the entire distinct actual partition family and maximizing h dot p over these capped root laws gives a valid global joint weight/posterior bit-gap bound 2 Gamma_cap. For every star f_m=x0 AND OR_m, m>=2, the COMPLETE full partition numerators are W_B=lambda_B/32^k, W_{0}=sum_i lambda_i/32, and W_{0 union B}=lambda_B[a_k+b_k sum_(i outside B)lambda_i], where a_k=(k-1)!/(3*8^k*k*(k+1)), b_k=k!/(16*8^k*(k+1)*(k+2)). At uniform weights1/m the capped root LP reduces exactly to cardinalities and its bit gap is less than (91/24)I for every m. Exact rational certificates improve this to I/3 for every m=2,...,32. On all63 labelled nonempty n4 graph tables at weights1/(2 max degree), full partition recomputation and rational primal-dual certificates give bit gap less than (41/10)I, with57 strict improvements over the uncapped tangent gap. These are optimization-gap statements within the fixed full event family, not universal coding-cost payment.",
+    "hypotheses": [
+      "Uniform physical Boolean signs; spectrum is actual squared Fourier spectrum; full positive graph edge prime table",
+      "Both endpoint orders give singleton subset probability1/4 and pair probability1/6; full original chronological queue probabilities",
+      "Fixed full partition event family with one root per source SCC; distinct complete runs, no overlapping owner blocks or repeated visits",
+      "Positive weights globally packing-feasible; table/family fixed before sampling A; variance and complete bit cross-entropy distinguished from surrogate residual",
+      "Cardinality reduction applies to relaxation at uniform star reference; all-weight infimum is not restricted to symmetric weights",
+      "Finite graph census n4 only and star finite certificate m2..32 only; all-m star bound separately proved"
+    ],
+    "statement_sha256": "c621815c9c2d67358d0218f7d991146f86d318183ce85fda1ac3349c83c7c00c",
+    "contributors": [
+      "A006"
+    ],
+    "proof_source": {
+      "derivation": "FULL_PARTITION_CAPS.md",
+      "code": [
+        "code/star_full.py",
+        "code/incidence_caps.py"
+      ],
+      "certificates": [
+        "out/STAR_FULL.json",
+        "out/GRAPH_CAP_FULL.json",
+        "out/VALIDATION.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A006-JOINT-ROOT-LAW-LOWER-CERTIFICATE",
+        "version": 1,
+        "statement_sha256": "9a0d49375a7a8ba40ae7b26ca9592229e9d3cf10310aa677e5121b90498716d5",
+        "acceptance": "source document independently accepted by A010"
+      },
+      {
+        "claim_id": "A010-ROOT-LAW-GAP-OBSTRUCTION-AND-PACKING-CAPS",
+        "version": 1,
+        "statement_sha256": "8fe13a285543eed587ae80558a5a84279ee27e45240ee127db4b14005140ef84",
+        "acceptance": "whole unchanged claim independently reconstructed in REVIEW_A010.md; author code not imported"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_AND_EXACT_CERTIFICATES; INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A010",
+      "A008",
+      "A009",
+      "A014",
+      "A015",
+      "A086",
+      "A094",
+      "Claude/B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A010-ROOT-LAW-GAP-OBSTRUCTION-AND-PACKING-CAPS",
+    "version": 1,
+    "exact_statement": "For every actual positive star edge DNF f_m, m>=2, its entire positive prime table with pi=1/4, every positive feasible global weight vector, and every fixed finite distinct once-per-gate actual partition event family covering the positive nonempty spectrum, the A006 full-simplex tangent gap Gamma=max_T sum_A P(A)K_AT/Q_A-v is at least m^m/4-1+4^-m. Thus Gamma/I is unbounded uniformly over the weights, while the uniform both-order matching-star complete cost has a choice C_MS<=11I. For star root laws every k-gate subset obeys p_lambda(T)<=4^(1-k)/k^k. Restricting the root-law relaxation to these caps gives a globally valid joint weight/posterior lower certificate G(lambda0)-Gamma_cap, with Gamma_cap exactly the capped-simplex linear-program maximum of h dot p minus v and bit gap at most 2Gamma_cap. At lambda0_i=1/m in the both-order matching-star family every m=2,...,8 has Gamma_cap<I/6, certified by rational LP primal-dual equality. No all-m capped payment, full-forest lower bound from selected events, variational residual growth or FEI disproof is asserted.",
+    "hypotheses": [
+      "Uniform cube and physical squared Fourier spectrum; entropy/cost bits, G natural units",
+      "All positive star prime edges, fixed table and orders before sampling; pi=1/4; weights strictly positive and sum at the hub at most one",
+      "Distinct actual partition events visit gates once, have complete factors and positive mass at every positive nonempty spectral set",
+      "Finite capped numerical certificate concerns matching-star events and m=2,...,8 only; every fixed-family posterior is optimized",
+      "The cost upper lemma is the complete star numerator payment reconstructed in the previous run and independently reviewed by A008"
+    ],
+    "statement_sha256": "8fe13a285543eed587ae80558a5a84279ee27e45240ee127db4b14005140ef84",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": {
+      "derivation": "~\\brain_workers\\FEI100_20261011\\agents\\A010\\runs\\20261014T062324Z-account05-A010-universal-residual-falsifier\\PROOF.md",
+      "code": "~\\brain_workers\\FEI100_20261011\\agents\\A010\\runs\\20261014T062324Z-account05-A010-universal-residual-falsifier\\code\\rootlaw.py",
+      "LP_certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A010\\runs\\20261014T062324Z-account05-A010-universal-residual-falsifier\\out\\caps.json"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261014T035304Z-account05-A006-posterior-forest-optimization\\ROOT_LAW_RELAXATION.md",
+        "sha256": "4719548182b00fdff159735d98bc99bdc01051f1e29d581f2f101f519e79a924",
+        "acceptance": "WHOLE_DOCUMENT_HOLDS_NO_REPAIR; no registered claim version present"
+      },
+      {
+        "claim_id": "A010-WIDTH2-UNIFORM-SCALE-VERSUS-INFIMUM",
+        "version": 1,
+        "statement_sha256": "dc2afe0ebe6b0d91ce63f02ef8d72c86f00455a1fca00e61b7a451b835da07ae",
+        "acceptance": "A008 whole review accepted; complete star numerator sublemma used"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A006",
+        "verdict": "HOLDS_WHOLE_SCOPE_NO_REPAIR",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261014T074929Z-account05-A006-posterior-forest-optimization\\REVIEW_A010.md",
+        "source_sha256": "9dfe91a343bc00b8f1ce83e9d3195f86b141acff1d7ba353bec4c0d36ae74ee2",
+        "certificate": "out/A010_REVIEW_CERTIFICATES.json"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_LOCALLY; UNIVERSAL_EXTENSION_OPEN",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Gamma_cap<=K I in all dimensions for complete full-forest coefficients on shared/leafless incidence.",
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A009",
+      "A086",
+      "A094",
+      "Claude/B02",
+      "B20"
+    ]
+  }
+]

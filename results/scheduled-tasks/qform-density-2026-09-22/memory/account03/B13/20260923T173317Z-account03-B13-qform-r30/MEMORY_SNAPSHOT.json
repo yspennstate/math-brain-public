@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B13",
+  "run_id": "20260923T173317Z-account03-B13-qform-r30",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start_observed": "a059a88996328189c7f3f6c0537a2e882de0f4ef",
+  "control_commit_publication_refresh": "d807616e6b87831c03123841f19528208d0ba623",
+  "owner_request_acknowledged": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1"
+  ],
+  "result_ids": [
+    "QFORM-AGGREGATE-CROSS-E3-SLAB-v1",
+    "QFORM-HIGHRATIO-DIAGONAL-RANK8-FROBENIUS-REDUCTION-v1"
+  ],
+  "main_result": "Conditional on the source-pinned grouped projected-crossing receiver, every disjoint original-coordinate physical cross block B of a slab witness of ratio rho satisfies e3(B^T B)<=(9sqrt(3e)/rho)^6. Consequently the global disjoint-third-minor currency V3(A)<=64(9sqrt(3e))^6 rho^-6. If A has three eigenvalues of modulus at least one and rho>128*2^(1/4)+2, the deterministic skeleton identity plus the localized physical-triple compiler give A=D+R+E with D diagonal, rank(R)<=8, E zero-diagonal and ||E||F<=72(9sqrt(3e))^3/rho; in the V2-small/V1-large branch rank<=4 and ||E||F<6/rho.",
+  "mathematical_premises": [
+    {
+      "source": "yspennstate/math-open-problems@f6ad7b994c1ba509af30fceaf45e8b464db86af8",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260923T155736Z-account02-B13-rank4star-r30/REPORT.md",
+      "scope": "D' third-volume row/column marginal estimate with C3=9sqrt(3e)"
+    },
+    {
+      "source": "yspennstate/math-open-problems@c9a6c9160e063f07856a62fc89a2ba62b857d3cf",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T165827Z-account03-B13-qform-r29/{REPORT.md,POSTREFRESH_ADDENDUM.md}",
+      "scope": "anchored third-volume cascade: heavy row+column and Zij^(1/6)>3^(7/3)sqrt(e)/rho is impossible, conditional on projected-crossing receiver"
+    },
+    {
+      "source": "yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a",
+      "path": "proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md",
+      "scope": "grouped projected-crossing receiver used by r29; complete written supporting argument, independent review pending"
+    },
+    {
+      "source": "yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae",
+      "path": "proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/structure/REPORT.md",
+      "scope": "deterministic volume-sampled skeleton: V_(r+1)<=K V_r implies diagonal + rank<=4r + Frobenius residual <=3(r+1)sqrt(K)"
+    },
+    {
+      "source": "yspennstate/math-open-problems@b097dc81bae17477b60c3af1a56dc6e434f9998f",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T103046Z-account03-B13-qform-r24/REPORT.md",
+      "scope": "localized physical 3x3 principal-block compiler with density bound 128*2^(1/4)/sigma_min"
+    }
+  ],
+  "partner_result_applied": {
+    "source": "yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260922T231352Z-account04-B13-rough-geometric-transfer-r5/REPORT.md",
+    "scope": "no-attainment purification of cap-one product laws to bounded finite-union unit-product indicators",
+    "actual_application": "transfer the strict aggregate inequality e3(B^T B)<=(C3/rho)^6 from product indicators to arbitrary cap-one product densities with zero limiting constant loss"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "feda06c104c0d8c62661daf01eed33c10f55fa99",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T173317Z-account03-B13-qform-r30/REPORT.md",
+    "checks_commit": "73399f1d5184095fcfd61bf258789bf0bba2dba6",
+    "checks_path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B13/20260923T173317Z-account03-B13-qform-r30/CHECKS.json"
+  },
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B13/20260923T173317Z-account03-B13-qform-r30.md",
+  "handoff_commit": "2231a5130ff70818350df3e647ffa2a21c3aea3e",
+  "full_qform_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_GLOBALLY",
+  "unresolved_implication": "QFORM-DIAG-RANK8-SMALL-FROBENIUS-TWIST-GLUE-v1: turn the O(1/rho) Frobenius residual around diagonal+rank<=8 into a universal slab bound without globally deleting the residual on unbounded fragmented product supports.",
+  "next_step": "Combine the diagonal+rank<=8 structural reduction with the slab-conditioned core perturbation transfer and existing exact bounded-rank hub/grouped-bank receivers. Either the exact model inherits a high-ratio slab or positive slab mass must carry large core spread, which must then be converted into product-geometric smoothing.",
+  "integrity_note": "No rotation of random variables, support-radius assumption, single-interval extremality, moment bound, or perturbative deletion is used. The aggregate theorem inherits exactly one pending-review dependency: the grouped projected-crossing receiver used by r29."
+}

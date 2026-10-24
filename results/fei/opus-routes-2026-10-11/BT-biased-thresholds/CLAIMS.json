@@ -1,0 +1,93 @@
+{
+ "route": "BT-biased-thresholds (C004, C025)",
+ "date": "2026-10-12",
+ "full_FEI": "OPEN",
+ "claims": [
+  {
+   "id": "BT-1",
+   "status": "REFUTED",
+   "statement": "There is an absolute C such that V ln(1/V) <= sum_i I_i ln^+(4 rho_i/V) + C I for every weighted threshold under every product law (the extension of the paper's Lemma bias:credit).",
+   "witness": "T_s = 1[s y_0 + y_1 + ... + y_s >= s] = y_0 OR AND_s, q_j = p = 1/(50 s), q_0 chosen so mu_A(y_0=0) = 1/s: excess/I >= ((s-1)/(2s)) ln s - ln 2 - o(1).",
+   "where": "NOTES.md section 3, Proposition 3.1; exact check code/verify_credit_cex.py",
+   "gap": ""
+  },
+  {
+   "id": "BT-2",
+   "status": "REFUTED",
+   "statement": "alpha * TC(mu_A) <= C I for the minority event A of every weighted threshold under every product law (the extension of paper eq. bias:eq-4-5).",
+   "witness": "same family: alpha TC/I -> (ln s + 1)/8.",
+   "where": "NOTES.md section 3, Proposition 3.2",
+   "gap": ""
+  },
+  {
+   "id": "BT-3",
+   "status": "PROVED",
+   "statement": "For any f = 2T-1, any product law and any linear order of coordinates: E_mu(f) = sum_i sigma_i^2 [rho_i^2 ln(1/rho_i^2) + sum_{nonempty B subset U_i} phi_{sigma_B^2}(ehat_i(B)^2)] and Delta_mu(f) = sum_i sigma_i^2 I_mu(e_i), e_i = E[d_i | y_{U_i}].",
+   "where": "NOTES.md Lemma 4.1",
+   "gap": ""
+  },
+  {
+   "id": "BT-4",
+   "status": "PROVED",
+   "statement": "For increasing T with alpha = mu(T=1): ln(1/alpha) = sum_i c_i ln(1/q_i) - DTC(mu_A), c_i = q_i rho_i/alpha, hence alpha ln(1/alpha) <= sum_i q_i ln(1/q_i) rho_i. (The p-biased inequality is the classical biased edge-isoperimetric inequality, KNOWN; the identity is an elementary entropy proof.)",
+   "where": "NOTES.md Lemma 4.2",
+   "gap": ""
+  },
+  {
+   "id": "BT-5",
+   "status": "PROVED",
+   "statement": "Antichains in a product law with marginals r_j have measure <= (2 sum_j min(r_j,1-r_j))^{-1/2}; for regular monotone T, E_{nu_i} ln^+(Lambda_i/(|B cap U_i|+1)) <= 3 + ln 4, Lambda_i = sum_{j<i} sigma_j^2.",
+   "where": "NOTES.md Lemmas 4.4, 4.5",
+   "gap": ""
+  },
+  {
+   "id": "BT-6",
+   "status": "PROVED",
+   "statement": "For every regular monotone T (every weighted threshold) and every product law with 0 < q_i < 1: E_mu(f) <= Var(f) ln(1/Var(f)) + A_0 I_mu(f), A_0 = 2 + ln 7 + (6/5)(3 + ln 4) < 9.21 nats.",
+   "where": "NOTES.md Theorem 5.1",
+   "gap": "The normalization term is not O(I) uniformly in the biases."
+  },
+  {
+   "id": "BT-7",
+   "status": "PROVED",
+   "statement": "Corrected FEI+ under a bias floor: for 0 < delta <= 1/2, every regular monotone T (every weighted threshold) and every product law with all q_i in [delta, 1-delta], H_mu^+(f) <= (2 K_delta/ln 2) Delta_mu(f), K_delta = max(2 A_delta/(delta(1-delta)), 8 A_delta + 18.5), A_delta = A_0 + max(1.661, ln(1/delta)/(1-delta)); constant O(delta^{-1} log(e/delta)), uniform in arity and weights.",
+   "where": "NOTES.md Corollary 5.2 and Theorem 6.1; Case B inequalities checked in code/verify_caseB.py",
+   "gap": "Constant depends on delta."
+  },
+  {
+   "id": "BT-8",
+   "status": "PARTIAL",
+   "statement": "C025: H_mu^+ <= C (I_mu - Var_mu) uniformly for all weighted thresholds and all product laws.",
+   "where": "NOTES.md sections 5-8",
+   "gap": "Proved only with a bias floor (BT-7). Missing: (1) a normalization credit surviving blocks of jointly critical coordinates (candidate (LCR), BT-10); (2) a near-dictator analysis without the bias floor (Theorem 6.1, Case B step (i) and the case split)."
+  },
+  {
+   "id": "BT-9",
+   "status": "CONJECTURE",
+   "statement": "sup over weighted thresholds and product laws of H_mu^+/Delta_mu equals the AND/OR constant 2 + 4/ln 2 = 7.7708.",
+   "where": "NOTES.md section 2 (evidence)",
+   "gap": "Evidence only: exhaustive n <= 5 with optimized biases, 4749 random n <= 11, symmetric m <= 40, two-weight groups up to 24 coordinates with optimized biases; all maxima are AND2/OR2 degenerations."
+  },
+  {
+   "id": "BT-10",
+   "status": "CONJECTURE",
+   "statement": "(LCR) sum_k W_k ln(1/W_k) <= sum_k sum_i W_k pi_i^(k) ln^+(4 pi_i^(k)/sigma_i^2) + C I for every weighted threshold and product law, pi_i^(k) = inclusion probability of i in the level-k spectral sample. PROVED: (LCR) implies E <= (C + 1 + ln 11 + (6/5)(3 + ln 4)) I uniformly; for symmetric thresholds (LCR) follows from the paper's credit lemma by convexity.",
+   "where": "NOTES.md section 7",
+   "gap": "(LCR) itself unproved for weighted thresholds. Evidence: max excess/I = 0.744 over 2277 random thresholds with optimized biases (code/scan_lcr.py); negative on T_s; level-dependent Gibbs bound within 2% of E on T_s and <= 1.42 I on the three-class family."
+  },
+  {
+   "id": "BT-11",
+   "status": "EVIDENCE",
+   "statement": "With exact level normalizers the paper's (level-independent) reference gives a Gibbs bound of about 1.3 I on T_s, while the paper's estimate ln Z_k <= k + 4m gives 5.15-5.62 I growing with s: the loss on T_s is in the normalizer estimate.",
+   "where": "NOTES.md section 7, code/gibbs_bound.py",
+   "gap": ""
+  },
+  {
+   "id": "BT-12",
+   "status": "KNOWN",
+   "statement": "The target inequality is Conjecture 1 (FEI+ for product distributions) of O'Donnell-Tan, arXiv:1304.1347, restricted to weighted thresholds; their Theorem 2 proves it for every gate of arity k with factor 2^{O(k)}, and Theorem 1 gives constant-preserving composition.",
+   "where": "NOTES.md section 0",
+   "gap": ""
+  }
+ ]
+}

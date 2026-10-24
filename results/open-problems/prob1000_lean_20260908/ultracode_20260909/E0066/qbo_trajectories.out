@@ -1,0 +1,19 @@
+191 operators, 414s
+min (c)-slack over all ops (must be >= -1e-9): -1.7763568394002505e-15
+majorisation failures (must be 0): 0
+monotone partial-sum failures (must be 0): 0
+max spread of the sorted vector over the tail (must be small): 1.643379216437202e-05
+operators whose tail did not lock to a period within tolerance: 0
+m=2: periods observed (period: #operators) = {1: 38}
+   non-permutation ops with an interior periodic limit (period>1): []
+m=3: periods observed (period: #operators) = {1: 90, 3: 1}
+   non-permutation ops with an interior periodic limit (period>1): []
+m=4: periods observed (period: #operators) = {1: 60, 2: 2}
+   non-permutation ops with an interior periodic limit (period>1): [('m4: (34) o average(1,2)  [linear]', [(2, 2)])]
+--- explicit examples
+m2: V=(2x1x2, x1^2+x2^2) | periods [1] | clusters [1] | sorted spread 0.00e+00
+m2: swap o (2x1x2, x1^2+x2^2) | periods [1] | clusters [1] | sorted spread 0.00e+00
+m3: 3-cycle permutation operator | periods [3] | clusters [3] | sorted spread 1.11e-16
+m4: (12)(34) permutation operator | periods [2] | clusters [2] | sorted spread 1.11e-16
+m4: (34) o average(1,2)  [linear] | periods [2] | clusters [2] | sorted spread 1.67e-16
+EXIT 0

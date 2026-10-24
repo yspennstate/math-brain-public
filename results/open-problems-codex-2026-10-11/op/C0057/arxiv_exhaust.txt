@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/SOwgxdAM1627SXNVUsaWZuK9eow</id>
+  <title>arXiv Query: search_query=all:"peeling" AND (all:"exhaustion" OR all:"critical weight")&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-11T21:09:59Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22peeling%22+AND+(all:%22exhaustion%22+OR+all:%22critical+weight%22)&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>7</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1506.01590v3</id>
+    <title>The peeling process of infinite Boltzmann planar maps</title>
+    <updated>2016-02-03T15:13:55Z</updated>
+    <link href="https://arxiv.org/abs/1506.01590v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1506.01590v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We start by studying a peeling process on finite random planar maps with faces of arbitrary degrees determined by a general weight sequence, which satisfies an admissibility criterion. The corresponding perimeter process is identified as a biased random walk, in terms of which the admissibility criterion has a very simple interpretation. The finite random planar maps under consideration were recently proved to possess a well-defined local limit known as the infinite Boltzmann planar map (IBPM). Inspired by recent work of Curien and Le Gall, we show that the peeling process on the IBPM can be obtained from the peeling process of finite random maps by conditioning the perimeter process to stay positive. The simplicity of the resulting description of the peeling process allows us to obtain the scaling limit of the associated perimeter and volume process for arbitrary regular critical weight sequences.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-06-04T13:45:12Z</published>
+    <arxiv:comment>29 pages, 5 figures, several improvements</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>The Electronic Journal of Combinatorics 23 (2016) pp.1.28</arxiv:journal_ref>
+    <author>
+      <name>Timothy Budd</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1909.10217v2</id>
+    <title>Simple peeling of planar maps with application to site percolation</title>
+    <updated>2020-08-16T18:37:04Z</updated>
+    <link href="https://arxiv.org/abs/1909.10217v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1909.10217v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The peeling process, which describes a step-by-step exploration of a planar map, has been instrumental in addressing percolation problems on random infinite planar maps. Bond and face percolation on maps with faces of arbitrary degree are conveniently studied via so-called lazy-peeling explorations. During such explorations distinct vertices on the exploration contour may at later stage be identified, making the process less suited to the study of site percolation. To tackle this situation and to explicitly identify site-percolation thresholds, we come back to the alternative "simple" peeling exploration of Angel and uncover deep relations with the lazy-peeling process. Along the way we define and study the random Boltzmann map of the half-plane with a simple boundary for an arbitrary critical weight sequence. Its construction is nontrivial especially in the "dense regime" where the half-planar random Boltzmann map does not possess an infinite simple core.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-09-23T08:32:18Z</published>
+    <arxiv:comment>32 pages, 16 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Timothy Budd</name>
+    </author>
+    <author>
+      <name>Nicolas Curien</name>
+    </author>
+    <arxiv:doi>10.4153/S0008414X21000146</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4153/S0008414X21000146" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.13408v3</id>
+    <title>A catalog of fast matrix multiplication algorithms with exhaustive derivations</title>
+    <updated>2026-08-14T16:41:10Z</updated>
+    <link href="https://arxiv.org/abs/2606.13408v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13408v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The 2022-2026 burst of activity in small-format matrix multiplication (AlphaTensor 2022, AlphaEvolve 2025, Schwartz-Zwecher 2025, and Perminov's open-source flip-graph framework) has produced striking results but scattered them across fields, attribution conventions, and serialisation formats. We present a unified, machine-checkable catalog covering shapes up to &lt;32,32,32&gt; over Q, Z, R, C, F2, and F3, with a separate axis for commutative algorithms (Waksman 1970, Makarov 1986, Rosowski 2019). Derivation over the catalog applies a fixed set of well-defined operators exhaustively - axis-flip, Kronecker (with its serendipitous "bud" variant), axis concatenation, recombination-with-allocation (with optional output peeling and leaf-level pair fusion), and downward projection - iterated to a fixed point.
+  Our derivation layer is closest in spirit to Sedoglavic's FMM-Lille catalog, which likewise layers recursive derivations (Kronecker with serendipity, concatenation, projection) over known bases; we differ by covering more fields (Z, F2, F3, and a commutative axis alongside Q/R/C) and by exploring the derivation space more exhaustively - rather than sampling it stochastically, as the flip-graph / meta-flip-graph methods do.
+  As of the 2026-07-12 snapshot over Q, our derivations improve on the best external catalog (FMM-Lille or Perminov) at 908 shapes - 19% of the 4760 comparable shapes in the large-format band 17 &lt;= max(n,m,p) &lt;= 32; in fact every strict win we produce lands in that band, small formats being saturated. We tie the external best at a further 3688 shapes and trail on only six audited ones, each explained by a single sharing device (fusion kernels) that our composition deliberately forgoes.
+  We refresh the DIS09 comparison tables, split per field with a commutative column, and provide tooling to regenerate them as the catalog evolves.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-11T14:38:02Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Benoit Chatain Lacelle</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1602.01328v2</id>
+    <title>Geometry of infinite planar maps with high degrees</title>
+    <updated>2017-04-14T07:49:47Z</updated>
+    <link href="https://arxiv.org/abs/1602.01328v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1602.01328v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the geometry of infinite random Boltzmann planar maps with vertices of high degree. These correspond to the duals of the Boltzmann maps associated to a critical weight sequence $(q_{k})_{ k \geq 0}$ for the faces with polynomial decay $k^{-a}$ with $a \in ( 3/2, 5/2)$ which have been studied by Le Gall &amp; Miermont as well as by Borot, Bouttier &amp; Guitter. We show the existence of a phase transition for the geometry of these maps at $a = 2$. In the dilute phase corresponding to $a \in (2, 5/2)$ we prove that the volume of the ball of radius $r$ (for the graph distance) is of order $r^{\mathsf{d}}$ with $\mathsf{d}= (a-1/2)/(a-2)$, and we provide distributional scaling limits for the volume and perimeter process. In the dense phase corresponding to $a \in (3/2,2)$ the volume of the ball of radius $r$ is exponential in $r$. We also study the first-passage percolation (FPP) distance with exponential edge weights and show in particular that in the dense phase the FPP distance between the origin and infinity is finite. The latter implies in addition that the random lattices in the dense phase are transient. The proofs rely on the recent peeling process introduced in arXiv:1506.01590 and use ideas of arXiv:1412.5509 in the dilute phase.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-02-03T15:01:42Z</published>
+    <arxiv:comment>37 pages, 12 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Electron. J. Probab. 22 (2017), no. 35</arxiv:journal_ref>
+    <author>
+      <name>Timothy Budd</name>
+    </author>
+    <author>
+      <name>Nicolas Curien</name>
+    </author>
+    <arxiv:doi>10.1214/17-EJP55</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/17-EJP55" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2110.07908v1</id>
+    <title>MHD simulations of small ELMs at low triangularity in ASDEX Upgrade</title>
+    <updated>2021-10-15T07:48:07Z</updated>
+    <link href="https://arxiv.org/abs/2110.07908v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2110.07908v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The development of small- and no-ELM regimes for ITER is a high priority topic due to the risks associated to type-I ELMs. By considering non-linear extended MHD simulations of the ASDEX Upgrade tokamak with the JOREK code, we probe a regime that avoids type-I ELMs completely provided that the separatrix density is high enough. The dynamics of the pedestal in this regime are observed to be qualitatively similar to the so-called quasi-continuous exhaust (QCE) regime in several ways. Repetitive type-I ELMs are substituted by roughly constant levels of outwards transport caused by peeling-ballooning modes (with dominant ballooning characteristics) which are localised in the last 5\% of the confined region (in normalised poloidal flux). The simulated low triangularity plasma transitions to a type-I ELMy H-mode if the separatrix density is sufficiently reduced or if the input heating power is sufficiently increased. The stabilising factors that play a role in the suppression of the small ELMs are also investigated by analysing the simulations, and the importance of including diamagnetic effects in the simulations is highlighted. By considering a scan in the pedestal resistivity and by measuring the poloidal velocity of the modes (and comparing to theoretical estimates for ideal and resistive modes), we identify the underlying instabilities as resistive peeling-ballooning modes. Decreasing the resistivity below experimentally-relevant conditions (i.e., going towards ideal MHD), the peeling-ballooning modes that constrain the pedestal below the type-I ELM stability boundary display sharply decreasing growth rates.</summary>
+    <category term="physics.plasm-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-10-15T07:48:07Z</published>
+    <arxiv:primary_category term="physics.plasm-ph"/>
+    <author>
+      <name>A. Cathey</name>
+    </author>
+    <author>
+      <name>M. Hoelzl</name>
+    </author>
+    <author>
+      <name>G. Harrer</name>
+    </author>
+    <author>
+      <name>M. G. Dunne</name>
+    </author>
+    <author>
+      <name>G. T. A. Huijsmans</name>
+    </author>
+    <author>
+      <name>K. Lackner</name>
+    </author>
+    <author>
+      <name>S. J. P. Pamela</name>
+    </author>
+    <author>
+      <name>E. Wolfrum</name>
+    </author>
+    <author>
+      <name>S. Günter</name>
+    </author>
+    <author>
+      <name>the JOREK team</name>
+    </author>
+    <author>
+      <name>the ASDEX Upgrade Team</name>
+    </author>
+    <author>
+      <name>the EUROfusion MST1 Team</name>
+    </author>
+    <arxiv:doi>10.1088/1361-6587/ac5b4b</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1361-6587/ac5b4b" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.06906v1</id>
+    <title>From Enumeration to Covering: Near-Optimal Densest P-Partite Subgraph Search over Large Heterogeneous Information Networks</title>
+    <updated>2026-08-07T07:41:54Z</updated>
+    <link href="https://arxiv.org/abs/2608.06906v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.06906v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a heterogeneous information network (HIN) and a query meta-path P of length i, the densest P-partite subgraph problem finds the subgraph, spanning the i typed layers of P, that maximizes a parameter-free density: the number of meta-path instances over the geometric mean of the layer sizes. It has applications across bibliographic, e-commerce, and biomedical networks. The state-of-the-art approximation linearizes the geometric-mean objective by fixing per-layer weights, but solves one subproblem for every feasible weight set, of which there are $O((n/i)^i)$, and on each achieves only a $1/i$ approximation. We show that neither the exhaustive enumeration nor the loose guarantee is necessary. First, we replace enumeration by covering: polylogarithmically many representative weight sets, localized further by a data-dependent bound, cover all feasible ones while losing only a tunable factor $1+η$ in density. Second, we cast each fixed-weight subproblem as a weighted supermodular densest-subgraph instance and solve it near-optimally, lifting the overall guarantee to $(1-δ)/(1+η)$. To our knowledge, this is the first near-optimal density approximation beyond the bipartite ($i=2$) case, and it yields a PTAS for every fixed i. Algorithmically, our solver is an adaptive peeling scheme that never materializes the meta-path instances, whose number can exceed the graph size by orders of magnitude. An incumbent-driven reduction further discards representative weight sets before their subproblems are solved. Experiments on five real HINs show that our algorithms achieve substantial speedups over enumeration-based baselines and can further certify the near-optimality of the returned subgraph.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T07:41:54Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Lu Chen</name>
+    </author>
+    <author>
+      <name>Chengfei Liu</name>
+    </author>
+    <author>
+      <name>Rui Zhou</name>
+    </author>
+    <author>
+      <name>Jiajie Xu</name>
+    </author>
+    <author>
+      <name>Jianxin Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1706.04069v4</id>
+    <title>Fast Inverse Nonlinear Fourier Transform</title>
+    <updated>2018-05-08T16:07:39Z</updated>
+    <link href="https://arxiv.org/abs/1706.04069v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1706.04069v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper considers the non-Hermitian Zakharov-Shabat (ZS) scattering problem which forms the basis for defining the SU$(2)$-nonlinear Fourier transform (NFT). The theoretical underpinnings of this generalization of the conventional Fourier transform is quite well established in the Ablowitz-Kaup-Newell-Segur (AKNS) formalism; however, efficient numerical algorithms that could be employed in practical applications are still unavailable. In this paper, we present two fast inverse NFT algorithms with $O(KN+N\log^2N)$ complexity and a convergence rate of $O(N^{-2})$ where $N$ is the number of samples of the signal and $K$ is the number of eigenvalues. These algorithms are realized using a new fast layer-peeling (LP) scheme ($O(N\log^2N)$) together with a new fast Darboux transformation (FDT) algorithm ($O(KN+N\log^2N)$) previously developed by the author. The proposed fast inverse NFT algorithm proceeds in two steps: The first step involves computing the radiative part of the potential using the fast LP scheme for which the input is synthesized under the assumption that the radiative potential is nonlinearly bandlimited, i.e., the continuous spectrum has a compact support and the discrete spectrum is empty. The second step involves addition of bound states using the FDT algorithm. Finally, the performance of these algorithms is demonstrated through exhaustive numerical tests.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-06-10T15:23:03Z</published>
+    <arxiv:comment>page limitation relaxed otherwise very few changes</arxiv:comment>
+    <arxiv:primary_category term="math.NA"/>
+    <arxiv:journal_ref>Phys. Rev. E 98, 013304 (2018)</arxiv:journal_ref>
+    <author>
+      <name>Vishal Vaibhav</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.98.013304</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.98.013304" title="doi"/>
+  </entry>
+</feed>

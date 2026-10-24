@@ -1,0 +1,30 @@
+python rloc.py int 4,8,16
+int N=4 h=0.05  M_glob 1.011  R_loc(0) 0.998 (bound 9.75)  R_loc(EL=0.00) 0.998 (bound 9.75)  max rho 0.422
+int N=4 h=0.10  M_glob 0.951  R_loc(0) 0.936 (bound 9.29)  R_loc(EL=0.00) 0.936 (bound 9.29)  max rho 0.373
+   (15s)
+int N=8 h=0.05  M_glob 0.542  R_loc(0) 0.520 (bound 6.75)  R_loc(EL=0.00) 0.520 (bound 6.75)  max rho 0.103
+int N=8 h=0.10  M_glob 0.459  R_loc(0) 0.443 (bound 5.96)  R_loc(EL=0.00) 0.443 (bound 5.96)  max rho 0.088
+   (13s)
+int N=16 h=0.05  M_glob 0.290  R_loc(0) 0.276 (bound 4.56)  R_loc(EL=0.00) 0.276 (bound 4.56)  max rho 0.026
+int N=16 h=0.10  M_glob 0.165  R_loc(0) 0.160 (bound 3.03)  R_loc(EL=0.00) 0.160 (bound 3.03)  max rho 0.014
+   (15s)
+python rloc.py fine 4,8,16
+fine N=4 h=0.05  M_glob 0.908  R_loc(0) 0.908 (bound 7.86)  R_loc(EL=0.00) 0.908 (bound 7.86)  max rho 0.664
+fine N=4 h=0.10  M_glob 0.838  R_loc(0) 0.838 (bound 7.44)  R_loc(EL=0.00) 0.838 (bound 7.44)  max rho 0.566
+   (15s)
+fine N=8 h=0.05  M_glob 0.769  R_loc(0) 0.769 (bound 7.02)  R_loc(EL=0.00) 0.769 (bound 7.02)  max rho 0.507
+fine N=8 h=0.10  M_glob 0.696  R_loc(0) 0.696 (bound 6.54)  R_loc(EL=0.00) 0.696 (bound 6.54)  max rho 0.449
+   (16s)
+fine N=16 h=0.05  M_glob 0.675  R_loc(0) 0.675 (bound 6.40)  R_loc(EL=0.00) 0.675 (bound 6.40)  max rho 0.440
+fine N=16 h=0.10  M_glob 0.668  R_loc(0) 0.668 (bound 6.35)  R_loc(EL=0.00) 0.668 (bound 6.35)  max rho 0.432
+   (15s)
+python rloc.py sqrt 16,64,256
+sqrt N=16 h=0.05  M_glob 0.381  R_loc(0) 0.381 (bound 4.80)  R_loc(EL=0.00) 0.381 (bound 4.80)  max rho 0.126
+sqrt N=16 h=0.10  M_glob 0.348  R_loc(0) 0.348 (bound 4.49)  R_loc(EL=0.00) 0.348 (bound 4.49)  max rho 0.113
+   (13s)
+sqrt N=64 h=0.05  M_glob 0.174  R_loc(0) 0.174 (bound 2.98)  R_loc(EL=0.00) 0.174 (bound 2.98)  max rho 0.028
+sqrt N=64 h=0.10  M_glob 0.170  R_loc(0) 0.170 (bound 2.92)  R_loc(EL=0.00) 0.170 (bound 2.92)  max rho 0.027
+   (14s)
+sqrt N=256 h=0.05  M_glob 0.093  R_loc(0) 0.093 (bound 2.07)  R_loc(EL=0.00) 0.093 (bound 2.07)  max rho 0.008
+sqrt N=256 h=0.10  M_glob 0.087  R_loc(0) 0.087 (bound 1.98)  R_loc(EL=0.00) 0.087 (bound 1.98)  max rho 0.007
+   (16s)

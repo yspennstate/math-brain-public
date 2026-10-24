@@ -1,0 +1,39 @@
+SMOOTHED_RADEMACHER_CHECK
+sigma=1 fourth_moment=2.5
+sigma=0.5 fourth_moment=1.72
+sigma=0.1 fourth_moment=1.03940790118616
+sigma=0.001 fourth_moment=1.000003999994
+
+FIXED_Q_FINITE_CONVOLUTION_DIVERGENCE
+q= 1 peak_lb_sigma1e-3=199.471239936 peak_lb_sigma1e-4=1994.71141198 ratio=9.99999505
+q= 2 peak_lb_sigma1e-3=141.047466411 peak_lb_sigma1e-4=1410.47396592 ratio=9.99999505
+q= 3 peak_lb_sigma1e-3=86.3735805546 peak_lb_sigma1e-4=863.735377997 ratio=9.99999505
+q= 4 peak_lb_sigma1e-3=74.8017149761 peak_lb_sigma1e-4=748.016779493 ratio=9.99999505
+q= 5 peak_lb_sigma1e-3=55.7539065067 peak_lb_sigma1e-4=557.538789085 ratio=9.99999505
+q=10 peak_lb_sigma1e-3=31.0463727277 peak_lb_sigma1e-4=310.463573598 ratio=9.99999505
+
+RATE_CONDITIONS sigma=m^(-1/3)
+m=         1000 sigma=1.000000e-01 A=3.02793107 B_k=m^.70=1.2854057
+m=      1000000 sigma=1.000000e-02 A=17.8406715 B_k=m^.70=0.307797047
+m=   1000000000 sigma=1.000000e-03 A=126.458137 B_k=m^.70=0.0571263975
+m=1000000000000 sigma=1.000000e-04 A=979.399279 B_k=m^.70=0.00950532025
+
+NEAR_CRITICAL_SMOOTHING sigma=L*sqrt(log m/m), L=log log m
+m=            1000000 L=2.62579 sigma=9.759864e-03 A=16.9207465
+m=         1000000000 L=3.03126 sigma=4.363670e-04 A=21.7941554
+m=      1000000000000 L=3.31894 sigma=1.744608e-05 A=25.4562962
+m=1000000000000000000 L=3.7244 sigma=2.397733e-08 A=30.9990141
+
+FLAT_DIRECTION_DENSITY_AT_ZERO sigma=m^(-1/3)
+m=  100 f0=0.398031983150999 gaussian=0.398942280401433 abs_err=9.102973e-04
+m=  500 f0=0.398749033437028 gaussian=0.398942280401433 abs_err=1.932470e-04
+m= 2000 f0=0.398893037860492 gaussian=0.398942280401433 abs_err=4.924254e-05
+m=10000 f0=0.398932349796945 gaussian=0.398942280401433 abs_err=9.930604e-06
+
+ANTI_CONCENTRATION
+For sigma<=1, conditional Gaussian means are separated by >=sqrt(2).
+Any interval of radius 1/2 has length 1<sqrt(2), hence contains at most one conditional mean.
+The component whose mean is outside the interval contributes <=1/2 conditionally; the other <=1.
+Thus Q_xi(1/2)<= (1/2)*1 + (1/2)*(1/2) = 3/4.
+
+ALL_VANISHING_NOISE_CHECKS_PASS

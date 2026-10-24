@@ -1,0 +1,91 @@
+{
+  "target": "P0043",
+  "worker": "w433",
+  "checked_date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "full_target_proved_here": false,
+  "complete_statement": "For independent Bernoulli bond percolation on every infinite connected locally finite quasi-transitive graph G with p_c(G)<1, G[p_c(G)] has no infinite cluster almost surely.",
+  "original_id_record": {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "lines": [
+      46,
+      143
+    ],
+    "source_id": "lyons_peres_20260819",
+    "locator": "Conjecture 8.15, printed p.285",
+    "historical_status": "source_says_open",
+    "current_status_in_record": "unverified"
+  },
+  "original_attempt": {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 43,
+    "attempt_id": "P0043-A001",
+    "result": "Known regular-tree critical extinction only",
+    "full_problem_solved": false,
+    "independent_review": "none",
+    "gap": "Loops in general critical clusters invalidate an independent-branching replacement"
+  },
+  "ranking_source": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 549,
+    "record_date": "2026-09-07",
+    "status": "attempted_un",
+    "tier": 5
+  },
+  "primary_statement_checked": {
+    "url": "https://comptes-rendus.academie-sciences.fr/mathematique/item/10.1016/j.crma.2016.07.013.pdf",
+    "author": "Tom Hutchcroft",
+    "year": 2016,
+    "locators": [
+      "Introduction",
+      "Conjecture 1.1",
+      "Theorems 1.2-1.3",
+      "Lemmas 1-2",
+      "Theorem 2.5"
+    ],
+    "scope": "Exponential-growth subclass proved; general conjecture stated with p_c<1"
+  },
+  "recent_claim": {
+    "url": "https://github.com/openai/math/blob/main/lean/docs/213.md",
+    "manuscript_title": "No percolation at criticality on quasi-transitive graphs",
+    "manuscript_date": "2026-09-24",
+    "scope_claim": "full quasi-transitive bond theorem with p_c<1",
+    "status": "CLAIMED_RESOLUTION_NOT_REPRODUCED",
+    "receipt": "FORMAL_CHECK_RECEIPT.json"
+  },
+  "prior_work_checked": [
+    "Named P0043 original problems/attempts ledger rows; original regular-tree case already known, no novelty claimed",
+    "Named H0016 duplicate record in probability_1000_intake_H_20260914/problems.jsonl line 16; not an independent graph-wide result",
+    "No P0043-labelled row found by targeted searches in attempts_H_20260912 or attempts_I_20260914; this is not an exhaustive mathematical absence claim",
+    "prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md P0043 row; no formal proof receipt supplied by that row",
+    "Team O board: related C0084 held by w344; w433 avoids that worker's general ten-problem source packet",
+    "Named owner percolation project selected nonuniqueness p_c<p_u on nonamenable graphs, not this criticality theorem; no solved/retired certificate for P0043 inferred",
+    "Named math-brain population nodes: C0084 open-problem card at line 1737 and author-unreviewed attempt mechanism at line 260",
+    "Canonical math-research-brain README and targeted named-store location probe; store result recorded separately if located"
+  ],
+  "brain_scars_used": [
+    "prob1000_proofs_directory_audit_what_is_spent_and_what_is_live_2026_09_08",
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "proof_steps_need_derived_joint_structure_2026_09_09"
+  ],
+  "note": "Source matching and visible theorem declarations do not certify a mathematical or formal proof. No current open/solved classification is asserted.",
+  "original_primary_checked": {
+    "title": "Probability on Trees and Networks, paperback electronic version 19 August 2026",
+    "url": "https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf",
+    "local_text": "~/Downloads/Probability_1000_20h_20260906/sources/lyons_peres_20260819/text.txt",
+    "locator": "Conjecture 8.15, printed p.285",
+    "text_lines": [
+      17168,
+      17169
+    ],
+    "statement_match": "Quasi-transitive graph, p_c(G)<1, theta(p_c(G))=0",
+    "known_fragility_mechanism": "Theorem 8.21 proof at text line 17360 already invokes p_c of the hypothetical critical infinite cluster equal to 1; w433 reduction is a rederivation, not novelty."
+  },
+  "canonical_store_inspection": {
+    "status": "NOT_LOCATED_BY_BOUNDED_NAMED_LOCATION_PROBE",
+    "checked": "Canonical repository README and local child names matching store/population/math/brain; only coverage-pilot directories appeared.",
+    "used_brain_prior": "Named C0084 rows in math-brain-build/export/population/nodes.jsonl",
+    "no_store_absence_or_open_status_inferred": true
+  }
+}

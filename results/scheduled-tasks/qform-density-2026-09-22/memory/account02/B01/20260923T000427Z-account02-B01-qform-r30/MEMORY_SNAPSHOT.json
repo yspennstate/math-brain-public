@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account02",
+  "slot": "B01",
+  "run_id": "20260923T000427Z-account02-B01-qform-r30",
+  "status": "ESSENTIAL_STEP_APPLIED / EXPLICIT_N3_INTERMEDIATE_OBSTRUCTION / SELF_CORRECTED",
+  "full_target_status": "OPEN",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "initial_fresh_main": "8de0098b4ef1ff92ca93efcac679ec5ec636544a",
+    "prepublication_refresh_main": "3a6aa4cc9012e30b6f88f29be8eb845d23f2fcda",
+    "owner_control_revision": "2026-09-22.15",
+    "later_stop_observed": false
+  },
+  "assignment": "Oscillatory replacement",
+  "phase_aligned_pointwise_refutation_preserved": true,
+  "prior_worker_memory_consumed": {
+    "run_id": "20260922T233020Z-account02-B01-qform-r31",
+    "snapshot_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/memory/account02/B01/20260922T233020Z-account02-B01-qform-r31/MEMORY_SNAPSHOT.json",
+    "note": "Repository memory was read for continuity; this is not native learned-memory receiver ingestion."
+  },
+  "newest_sources_applied": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md",
+      "premise": "D' and D5 cross-volume Fourier certificates; mixed-hub Theorem H from the same source package"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926",
+      "path": "proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/GEOMETRIC_ROUTE_REPORT.md",
+      "premise": "no-pivot/hub structural map; hub configurations can evade rank-three cross-volume"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "472b70df7d1edbb3afac23269bc2e4368ae0e371",
+      "path": "proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md",
+      "premise": "full QFORM reduction to strict N3 no-pivot density statement"
+    }
+  ],
+  "mathematics": {
+    "stress_family": "For even m and tau with 1/m<tau, Q_m=2 X_0 (m^{-1/2} sum_j Y_j)+(m^{-1/2}sum_k Z_k)^2 has nonzero spectrum {-1,1,1}; all physical diagonals and 2x2 principal determinants have magnitude <tau.",
+    "cross_volume_obstruction": "For every coordinate cut I,J, A_IJ is the sum of one split-star rank-one block and one split-Z-bank rank-one block, so rank(A_IJ)<=2 and e3(A_IJ^T A_IJ)=e5(A_IJ^T A_IJ)=0. Therefore D' and D5 alone cannot exhaust N3.",
+    "newest_source_application": "Mixed-hub Theorem H applies directly with one hub, one leaf square and augmented Gram I_2; every augmented row leverage is 1/m. Hence |phi_Qm(t)|<=4*pi^(3/2)|t|^(-3/2) and ||p_Qm||_infinity<=3*2^(4/3)<7.560 uniformly in m and arbitrary cap-one input laws.",
+    "self_correction": "A draft attempted to shear a general exact-rank-three null hub by z=X_0+h.X'. This is not a valid route to Theorem H because the transformed amplitude f_0(z-h.x') prod f_j(x_j) is nonseparable; equivalently a nonseparable quadratic twist remains after integrating the hub. The general shear-stable theorem is withdrawn. The stress family and its direct hub estimate do not use this invalid step."
+  },
+  "partner_result_applied": {
+    "partner": "account03/B01",
+    "run_id": "account03-B01-20260922T225725Z-r20",
+    "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B01/account03-B01-20260922T225725Z-r20.md",
+    "application": "On Q_m, physical pair (X_0,Y_1) has D=1/m, kappa=m^{-1/2}; splitting the rank-one Z Schur bank equally gives F=1/2. Partner r20 gives ||p_Qm||_infinity<11.021*2^(1/10)m^(9/20)<11.813m^(9/20), and its logarithmic alternative is <=22.648sqrt(m) for m>=64. This valid nonuniform result diagnoses the loss from paying a tiny pair before aggregation."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-N3-DPRIME-D5-NONEXHAUSTIVE-v1"
+  ],
+  "immutable_outputs": {
+    "report_commit_corrected": "9cb571de79e312d740f10979dadaa943669235f8",
+    "checker_source_commit": "e7972b649970f77c8212322adac3b0b8da5a9ada",
+    "checker_output_commit": "532fe3d1db15ec7ba475302914dddf42e309afe3",
+    "correction_event_commit": "3e5a801b6cb1b5a4bd82b04dce31affb65290937",
+    "handoff_commit_corrected": "1703356b2f5fe1454eef6e8a4a8325e224c973b0"
+  },
+  "unresolved_implication": "QFORM-N3-HUB-OR-VOLUME-ROUTING-v1: in strict no-pivot matrices, route every rank-three-cross-blind configuration to a hub/mixed-Fresnel or grouped-coordinate certificate before paying small physical pivots; cover clustered hub leverage, hybrid hub-plus-dense-tail configurations, and arbitrary higher-rank no-pivot residuals while preserving original-coordinate product provenance.",
+  "next_step": "Seek a quantitative hub-cluster versus volume dichotomy inside N3. The stress family shows D'/D5 cannot be the only branch; the self-correction shows coordinate-dependent shear cannot be used to manufacture the hub normal form.",
+  "full_brain_connected": false
+}

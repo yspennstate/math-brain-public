@@ -1,0 +1,2 @@
+STATE: A007 stage 6 complete: exact all-support root-tilted occupation coefficient; actual overlapping root-average shortcut refuted; same-record J>8 and signed ratio97/98;1458 full exact checks PASS; FEI OPEN.
+NEXT: Pay exact mixed-root occupation coefficient under SAME old determinant/factorial posterior on shared/leafless incidence with all core sectors and inherited pR_g; A015/A008/A086 review transform and falsifier.

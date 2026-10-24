@@ -1,0 +1,10 @@
+STATE: NEEDS_REVIEW
+NEXT: Coordinator inspects peer-bundle patches and source-scope draft; next proof worker bounds mutually avoiding exact-length prefix/suffix counts for one fixed disk collar.
+
+2026-10-10: Started source/status verification. Audit assignment file has no w398 row. Team O board assigns adjacent SAW topics C0095/C0096/P0002 but no P0003 row.
+2026-10-10: Independently checked w397.P0003.001: six-edge circulation has exactly zero vertex residual, bounded magnitude, and fixed adjacent oscillation as mesh tends to zero. KEEP only as a counterexample to inference from the local identity alone; saved REVIEW_w397.md.
+2026-10-10: Recovered Conjecture 1.5 and honeycomb Section 3.3 from arXiv:1206.2092, the original LSW paper, and Duminil-Copin–Smirnov's critical constant/local identity. Saved exact ensemble and explicit topology caveat in SOURCE_STATUS.json.
+2026-10-10: Independently checked w396 L0–L3; KEEP finite and conditional lemmas. Found a citation correction: restriction-law uniqueness is Lemma 3.2, while Theorem 6.1 identifies SLE(8/3)'s avoidance law. H_5/8 and curve tightness remain unproved. Saved REVIEW_w396.md.
+2026-10-10: Corrected primary target after w397's source finding and independent read of Grimmett arXiv:2205.07318v1 Question 2.2: P0003 is uniform fixed-length origin-started SAW. The chordal critical-fugacity formulation is only a related conjecture; no ensemble bridge is proved. SOURCE_STATUS.json now distinguishes them.
+2026-10-10: Checked w396's revised fixed-length L0′ and first-entrance count bound (U), and w397's avoidance discontinuity and contour calculation. KEEP each at its stated finite/conditional scope. H_disk, H_len, tightness and scaling identification remain unproved.
+2026-10-10: Submitted a schema-checked 3-entry/4-relation source-scope draft to math-brain-inbox/w398. Read-only store counts: probability.core 1135, probability.saw 0, probability.selfavoiding 0. Saved three peer-bundle repair patches, a source-scope hook proposal, review packet, attempt and report. Sixteen claim rows parse as JSON; inbox copy matches local bytes. Await coordinator review; no live ingestion claimed.

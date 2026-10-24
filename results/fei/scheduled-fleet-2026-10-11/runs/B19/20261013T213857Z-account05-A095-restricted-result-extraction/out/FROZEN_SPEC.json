@@ -1,0 +1,12 @@
+{
+ "helper_version":"A095-common-spine-reference-v1",
+ "family":"All Boolean cores on 1..3 bits with fixed rational references; unequal defect-block products with optional common controls; A094 diagonal parameters",
+ "domain":"276 labelled Boolean cores, controls r=1..3, three reference laws per core; defect widths 1..4, 1..3 blocks, total private width<=8, common controls r=0..2, total dimension<=10; arbitrary terminal tables on 1..2 bits with private widths (1),(2),(1,1),(1,2),(2,2) and r=1,2; diagonal L=2..32",
+ "case_count":"2484 core/reference/control cases; 81 unequal-block/control cases; 200 terminal-inclusive cases; 31 analytic diagonal cases; program checks counts",
+ "symmetry":"No reduction for Boolean cores; block tuples sorted by width only, justified by permutation of disjoint blocks; direct Walsh transforms and physical edges for every retained case",
+ "arithmetic":"Integer Walsh transforms, Fraction probabilities and influences, exact rational prime-log forms for identities; rational atanh logarithm intervals for inequality signs",
+ "memory_estimate_mb":80,
+ "maximum_runtime_seconds":60,
+ "automatic_dimension_escalation":false,
+ "purpose":"Verify biased normalized-reference transfer, full debt retention, common-spine construction and A094 diagonal obstruction; analytic proofs establish unrestricted parameters"
+}

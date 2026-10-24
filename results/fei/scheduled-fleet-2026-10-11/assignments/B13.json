@@ -1,0 +1,394 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B13",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A061",
+      "stream": "B13",
+      "topic": "Entropy process",
+      "target_statement": "Construct the entropy process along a fair adaptive restriction tree, with its filtration and exact one-step increments. Determine which compensated quantity is a supermartingale under a proved hypothesis.",
+      "work_type": "baseline_interface",
+      "priority": "P0",
+      "mathematical_design_status": "RECOVERED_BASELINE",
+      "deliverables": [
+        {
+          "deliverable_id": "A061-D1",
+          "description": "FAIR_TREE_ENTROPY_PROCESS.tex: filtration, node laws, and exact telescope",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A061-D2",
+          "description": "PROCESS_INTERFACE.json: increments, compensators, and stopping conventions",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Define a fair adaptive physical restriction tree with decisions measurable in the past and actual conditional Boolean functions at nodes.",
+        "Derive the finite-tree entropy identity with its terminal term and separate physical branch probabilities from spectral probabilities.",
+        "Treat the exact process/telescope as a recovered baseline; a new supermartingale payment requires a separately proved drift condition and belongs to A064."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A018",
+          "interface": "exact restriction decrement interface"
+        },
+        {
+          "agent_id": "A004",
+          "interface": "entropy conventions"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A023",
+          "interface_use": "fair-tree entropy telescope"
+        },
+        {
+          "agent_id": "A026",
+          "interface_use": "entropy telescope"
+        },
+        {
+          "agent_id": "A028",
+          "interface_use": "entropy telescope"
+        },
+        {
+          "agent_id": "A029",
+          "interface_use": "exact entropy process"
+        },
+        {
+          "agent_id": "A037",
+          "interface_use": "fair adaptive filtration"
+        },
+        {
+          "agent_id": "A062",
+          "interface_use": "common physical tree and filtration"
+        },
+        {
+          "agent_id": "A063",
+          "interface_use": "physical restriction filtration"
+        },
+        {
+          "agent_id": "A064",
+          "interface_use": "entropy process"
+        },
+        {
+          "agent_id": "A066",
+          "interface_use": "known physical-process comparison"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One source-pinned reusable entropy-process interface is accepted, then retired instead of independently rederived in every stream.",
+      "source_ids": [
+        "reductions_restrictions",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F06",
+        "F08",
+        "F10"
+      ]
+    },
+    {
+      "agent_id": "A062",
+      "stream": "B13",
+      "topic": "Influence compensator",
+      "target_statement": "Use the exact influence telescope to budget entropy increments. Prove optional-stopping for a finite tree first, then justify any passage to randomized stopping or unbounded depth.",
+      "work_type": "baseline_interface",
+      "priority": "P0",
+      "mathematical_design_status": "RECOVERED_BASELINE",
+      "deliverables": [
+        {
+          "deliverable_id": "A062-D1",
+          "description": "FAIR_TREE_INFLUENCE_PROCESS.tex: finite coordinate/block telescope",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A062-D2",
+          "description": "STOPPING_JUSTIFICATION.md: finite proof and explicit conditions for any limit",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Prove I(f)=EΣ queried influence+E I(terminal) for the same physical tree used in the entropy process.",
+        "For a fixed block, relate the query sum to the lost block influence, and distinguish this from spectral support size under an unrelated law.",
+        "Any randomized or unbounded-depth passage supplies integrability/tail control; finite telescoping alone does not justify exchanging all-dimensional limits."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A061",
+          "interface": "common physical tree and filtration"
+        },
+        {
+          "agent_id": "A004",
+          "interface": "total/directional influence conventions"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A023",
+          "interface_use": "influence telescope"
+        },
+        {
+          "agent_id": "A026",
+          "interface_use": "influence telescope"
+        },
+        {
+          "agent_id": "A027",
+          "interface_use": "block influence telescope"
+        },
+        {
+          "agent_id": "A028",
+          "interface_use": "influence telescope"
+        },
+        {
+          "agent_id": "A029",
+          "interface_use": "influence process"
+        },
+        {
+          "agent_id": "A037",
+          "interface_use": "influence resource"
+        },
+        {
+          "agent_id": "A064",
+          "interface_use": "influence compensator"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One reviewed influence interface supplies A023/A026–A029/A037/A064 and then retires as baseline work.",
+      "source_ids": [
+        "reductions_restrictions",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F06",
+        "F08",
+        "F10"
+      ]
+    },
+    {
+      "agent_id": "A063",
+      "stream": "B13",
+      "topic": "Information revelation",
+      "target_statement": "Separate physical branch information from spectral erasure information. Derive a chain rule that measures the information actually revealed by a query rather than assuming they coincide.",
+      "work_type": "interface_derivation",
+      "priority": "P1",
+      "mathematical_design_status": "RECOVERED_BASELINE",
+      "deliverables": [
+        {
+          "deliverable_id": "A063-D1",
+          "description": "QUERY_INFORMATION_IDENTITY.tex: joint variables, kernels, and exact chain rule",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A063-D2",
+          "description": "PHYSICAL_SPECTRAL_DISTINCTION.md: a control where the naive identification fails",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Specify an actual joint probability space before assigning mutual information to a physical query and a spectral label.",
+        "Derive the query's information from the stated kernel, rather than assuming physical child selection equals Fourier erasure.",
+        "Show exactly which term is B_W and which is the mixing/reference correction, including the isospectral and nearly identical branch controls."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A018",
+          "interface": "spectral erasure versus collision mixing"
+        },
+        {
+          "agent_id": "A061",
+          "interface": "physical restriction filtration"
+        },
+        {
+          "agent_id": "A037",
+          "interface": "posterior joint-law conventions"
+        }
+      ],
+      "next_consumers": [],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "A correct reusable revelation identity with a concrete diagnostic example, not a new universal payment claim.",
+      "source_ids": [
+        "reductions_restrictions",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F06",
+        "F08",
+        "F10"
+      ]
+    },
+    {
+      "agent_id": "A064",
+      "stream": "B13",
+      "topic": "Global debt potential",
+      "target_statement": "Build a potential that can temporarily grow on rare branches but has a controlled expected terminal value. Provide a theorem with every boundary term and initial condition stated.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A064-D1",
+          "description": "GLOBAL_DEBT_POTENTIAL.tex: formula, initial bound, drift, and terminal theorem",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A064-D2",
+          "description": "POTENTIAL_OBSTRUCTION_TESTS.md: addressing, rare cores, plateaux, and coherent remainders",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "State the potential explicitly with a defined sign convention; prove its initial resource bound and expected terminal bound instead of assuming them.",
+        "Use only proved parts of upstream interfaces and leave their unproved global hypotheses visible; the final FEI conclusion is never an input.",
+        "Show where μ log(1/μ), the KL rebate, and coherent α² log(1/α²) terms enter and demonstrate that no credit is spent twice.",
+        "Allow local increases only with a proved expectation/telescoping argument on the actual tree."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A023",
+          "interface": "scoped rare first-revelation payment"
+        },
+        {
+          "agent_id": "A029",
+          "interface": "two-child deficit transport"
+        },
+        {
+          "agent_id": "A037",
+          "interface": "nonreuse posterior credit"
+        },
+        {
+          "agent_id": "A061",
+          "interface": "entropy process"
+        },
+        {
+          "agent_id": "A062",
+          "interface": "influence compensator"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A065",
+          "interface_use": "global potential version"
+        },
+        {
+          "agent_id": "A077",
+          "interface_use": "current global debt candidate"
+        },
+        {
+          "agent_id": "A087",
+          "interface_use": "global debt potential"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "One complete drift-and-boundary theorem on a declared class, or a certified obstruction to the exact potential.",
+      "source_ids": [
+        "reductions_restrictions",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F06",
+        "F08",
+        "F10"
+      ]
+    },
+    {
+      "agent_id": "A065",
+      "stream": "B13",
+      "topic": "Stopping-rule falsifier",
+      "target_statement": "Stress-test proposed stopping rules on addressing, rare activations, and coded restriction plateaux. Exhibit a path family where the expected unpaid cost grows if the rule fails.",
+      "work_type": "counterexample_family",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A065-D1",
+          "description": "STOPPING_RULE_COUNTERTEST.tex: exact policy on addressing/rarity/plateau families",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A065-D2",
+          "description": "EXPECTED_COST_CERTIFICATE.json: path probabilities, charges, and terminal cost",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Execute or symbolically follow the actual proposed rule, including tie-breaking and stopping conditions.",
+        "Weight bad paths by their true probabilities; a large charge on one exponentially unlikely branch is not an expected-cost counterexample.",
+        "Prove growth of the total unpaid expectation, retaining terminal entropy and already-earned KL/posterior credits."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A027",
+          "interface": "proposed block selection rule"
+        },
+        {
+          "agent_id": "A028",
+          "interface": "stopping policy and terminal claim"
+        },
+        {
+          "agent_id": "A064",
+          "interface": "global potential version"
+        },
+        {
+          "agent_id": "A030",
+          "interface": "coded plateau controls"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A030",
+          "interface_use": "candidate stopping policies"
+        },
+        {
+          "agent_id": "A087",
+          "interface_use": "policy countertests"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A parameterized expected-cost failure of one exact policy or a rigorous bounded-family validation with its scope stated.",
+      "source_ids": [
+        "reductions_restrictions",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F06",
+        "F08",
+        "F10"
+      ]
+    }
+  ]
+}

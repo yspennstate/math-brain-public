@@ -1,0 +1,84 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T225200Z-claude-B01-erasure-fraction-localization",
+ "stream": "B01",
+ "packet_id": "A003",
+ "gap_id": "G-BOOLEANITY",
+ "attempt_id": "B01-claude-20261011-01",
+ "method": "least-violator (well-ordering) analysis of the restriction recursion, complete proof of the JS coordinate bound, exhaustive certified calibration n<=4",
+ "mathematical_delta": "Proved that a least violator of FEI(C*) has every influence below e^3 2^{-r}, every coordinate with B_i > (r-2/ln 2) Inf_i, and DTC < (2/ln 2) I; hence FEI <=> B <= K I on {DTC < (2/ln 2) I, max Inf < e^3 2^{-K-2/ln 2}} (C = K + 2/ln 2), with a lambda<1 erasure-fraction bridge and a low-influence localization of the good-coordinate route. Remaining: DTC >= cH - KI for low-influence Boolean f (FEI-equivalent; needs Booleanity).",
+ "deliverable_status": "COMPLETE_WITH_SAVE_BLOCKER",
+ "mathematical_status": "REDUCTION_PROVED; FULL_FEI_OPEN",
+ "claim_versions_used": [
+  "C005",
+  "C018",
+  "A001-UNIVERSAL-QUANTIFIER-AND-GAP-MAP v1",
+  "A001-FIXED-BOOLEAN-MARGINAL-TENSOR-ADMISSION v1",
+  "A002-FULL-SUPPORT-ADMISSION v1",
+  "A002-EXACT-HARDENING-LEDGER v1"
+ ],
+ "claims_created_or_changed": [
+  "B01-COORD-JS-BOUND v1",
+  "B01-MINIMAL-VIOLATOR-STRUCTURE v1",
+  "B01-FEI-IFF-LOW-INFLUENCE-ERASURE v1",
+  "B01-ERASURE-FRACTION-BRIDGE v1",
+  "B01-LOW-INFLUENCE-GOOD-COORDINATE v1",
+  "B01-SMALL-N-CALIBRATION v1",
+  "B01-LOW-INFLUENCE-DTC-TARGET v1",
+  "B01-PRODUCT-LAW-RIGIDITY-SMALL-N v1",
+  "B01-PRODUCT-LAW-RIGIDITY v1"
+ ],
+ "source_artifacts": [
+  {
+   "path": "code/calib.py",
+   "sha256": "2c4b5ce52c1f9ce8aa3f258010c8c7f71f985ca7d7d97776f6739b577123d2c6"
+  },
+  {
+   "path": "code/write_records.py",
+   "sha256": "d840e4c79f128d1769516add36b9b88298cab8cced61745a73b6c1c781839ebd"
+  },
+  {
+   "path": "out/FROZEN_SPEC.json",
+   "sha256": "75f6bedea724473e13f780dd8c0585b0b7f9e3c7e17ea759c2cdfeffbf3a8ac6"
+  },
+  {
+   "path": "out/calib_n1_3.json",
+   "sha256": "fe3ce867aea8dcffcfe51c155602f33e8f767b6301eaa22f2b3166b42b85c351"
+  },
+  {
+   "path": "out/calib_n1_4.json",
+   "sha256": "cbb43e704f517911f1b7409c69fd3781aa586d69acb3f61cc558172ddc6dae1c"
+  },
+  {
+   "path": "code/product_laws.py",
+   "sha256": "2cfa7f5420ebc050907ed829c89953fd8461f4423dc91e9f0c058236d1e6abe7"
+  },
+  {
+   "path": "out/product_laws_n1_4.json",
+   "sha256": "58bdf405d49fe70a944d7c28fae1b7fd9379a558bc2362101b3d56449bbcce09"
+  },
+  {
+   "path": "CLAIMS.json",
+   "sha256": "f4f3bcdf6eb3708125e5433616b8ecfd108ec42c9251193d3ef4f5167e363f28"
+  }
+ ],
+ "next_consumers": [
+  "A003",
+  "A051",
+  "A031",
+  "A086",
+  "A094",
+  "B07",
+  "B08",
+  "B14"
+ ],
+ "next_action": "Prove or refute DTC(f) >= c H(f) - K I(f) for Boolean f with all influences <= tau, starting from the U={i} Booleanity identity (psi orthogonal to phi) on near-product spectral laws.",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "REPORT.md, LEARNED.md and the STREAM_NOTES.md update were not written: the harness refused the REPORT.md write ('Subagents should return findings as text, not write report files'); STREAM_NOTES.md v1 (22:39Z) predates the refusal and was not updated; the full report, learned notes and agent targets are in this run's StructuredOutput for the coordinator to persist."
+ ],
+ "packet_ids": [
+  "A003"
+ ],
+ "written_utc": "2026-10-11T23:26:05Z"
+}

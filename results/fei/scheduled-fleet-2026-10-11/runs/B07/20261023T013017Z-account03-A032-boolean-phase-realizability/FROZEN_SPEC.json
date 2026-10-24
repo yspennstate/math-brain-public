@@ -1,0 +1,14 @@
+{
+  "helper_version": "A032-signed-vacuum-reset-v1",
+  "actual_Boolean_family": "F_h(z,u,x)=a(u)+z(1-a(u)^2)h(x), A079 fixed actual 16-entry a; all Boolean seeds on0..3 bits; specified physical u restrictions",
+  "parameter_domain": "All81 controller states for all22 seeds on0..2 bits; root controller for256 three-bit seeds. Incoming seed references: actual spectrum and three positive vacuum probabilities1/4,1/2,3/4 with two nonempty-tail profiles. Prescribed target tails uniform and last-atom point law. Reset mixing epsilon0,1/8. Constants and zero sectors explicit.",
+  "case_count": {"controller_seed_pairs":2038,"root_additional_support_obstruction":1,"reference_cases_per_nonconstant_pair_max":7,"targets_per_reference":2,"mixing_parameters":2},
+  "symmetry": "None; redundant exact references may be deduplicated only if identical rational vectors; no mathematical cases removed.",
+  "arithmetic": "Python integers, Fraction, exact prime-log entropy/CE/KL identities. FWHT primary; direct character sums and physical edges on fixed witnesses. Log signs use proved rational atanh-series bounds. Tail support floors and special release use rational/integer-power certificates.",
+  "memory_estimate_MB": 85,
+  "pilot_max_seconds":60,
+  "maximum_runtime_seconds":60,
+  "automatic_dimension_escalation":false,
+  "expected_failure_tests":["Naive replacement of actual seed mean by sqrt(reference vacuum probability) creates an occupied zero despite finite parent CE","signed vacuum interference omitted","reference-only nonempty labels lost","constant or zero-sector division by zero","tail-reference refresh silently free","old controller/source banks renewed"],
+  "formal_check": "No compiler launch without fresh memok exit0; if resource admission fails record it rather than asserting Lean verification. Core exact power/support guards only, never a formal entropy theorem."
+}

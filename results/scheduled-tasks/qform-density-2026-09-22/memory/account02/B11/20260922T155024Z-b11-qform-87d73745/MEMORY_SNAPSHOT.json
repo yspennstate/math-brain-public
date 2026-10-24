@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "control_commit_start": "acc6eea9f961a8ea779b739cc4c518edad2653a8",
+  "control_commit_prewrite": "bf44619d87f79b0014c2a94b6cda3301e1f55e16",
+  "account": "account02",
+  "slot": "B11",
+  "run_id": "20260922T155024Z-b11-qform-87d73745",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "d56d97c85ced819f45ddad0987deaa5eb4b53cdc",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260922T155024Z-b11-qform-87d73745/REPORT.md",
+    "blob_sha": "5467c34e351b330e8787b30448f47b9d59b70e0a"
+  },
+  "bundle_terminal_commit": "13187adb3f510e24790f60ec9d32ec5ade25d36a",
+  "checker_output_blob": "bae1cda07d99f022da87f6166b5ae70a6f2d1b02",
+  "main_result": "For independent cap-one variables, sum b_k^2=1, Y=sum b_k X_k and Q=2a X0 X1+dY^2, proved ||p_Q||_infinity <=3*2^(4/3)*e^(1/3)|a|^(-2/3)|d|^(-1/3).",
+  "scope": "Arbitrary-size exact-rank-three banked null-pair family with spectrum {a,d,-a}; genuinely indefinite (+,+,-), and by negation (+,-,-). Supporting theorem only.",
+  "premises": [
+    {
+      "source": "account02/B11 20260922T135203Z",
+      "commit": "245a4e2a4414294fbb20b9dd4f292f6b001e5aa2",
+      "statement": "One-dimensional normalized product projection has density cap sqrt(e)."
+    },
+    {
+      "source": "account02/B11 20260922T152031Z",
+      "commit": "e32368258f33ea03369d23721742345e6f22447f",
+      "statement": "Parabolic weak-L^{3/2} theorem for 2ZW+V^2 with Z independent of (V,W)."
+    }
+  ],
+  "partner_applied": {
+    "account_slot": "account03/B11",
+    "run": "20260922T150842Z-account03-B11-QFORM-r12",
+    "commit": "117c1568f8f458706c1123327f893efd750053c5",
+    "application": "For each local triple B_k=[[0,a,0],[a,0,0],[0,0,d b_k^2]], applied the partner 3x3 theorem. In normalized equal-bank examples the local bound grows like sqrt(m), while the new banked theorem stays universal, proving local-triple selection is the wrong assembly mechanism."
+  },
+  "rank_two_control": "Deleting the square bank leaves 2aX0X1; centered uniforms have the required logarithmic density singularity at zero. The third direction is paid by a parabolic weak-L^{3/2} level-set gain, not by pretending the square has bounded density.",
+  "unresolved_implication": "BANK-SEPARATION: in an arbitrary near-null heavy exact-rank-three frame with shared residual coordinates, force either a product-preserving saddle-pair plus independent normalized square bank, an existing diffuse residual certificate, or a dimension-free partner triple; otherwise find a target-valid counterexample.",
+  "next_step": "Use indefinite null-cone geometry of a second high-leverage residual row to test whether strong saddle coupling can be separated from a normalized third-direction bank without false conditional caps.",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "notes": "Repository retrieval/writes are authenticated source transport, not native learned-memory ingestion. Finite checker is regression only."
+}

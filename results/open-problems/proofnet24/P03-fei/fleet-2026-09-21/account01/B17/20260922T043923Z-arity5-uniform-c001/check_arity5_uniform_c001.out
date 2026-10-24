@@ -1,0 +1,21 @@
+PASS
+candidate CERTIFIED-READONCE-LIFT-c0.01 Ccert 6.4573
+total_low_boundary_tables_m_le_16 3425314
+m 1 k 5 mask 0x80000000 Bcomp 5 low_checked 0 exact_equal 32 min_strict_lb None generic_lb 0.0 expr (x1&(x2&(x3&(x4&x5))))
+m 2 k 4 mask 0x8000 Bcomp 8 low_checked 80 exact_equal 80 min_strict_lb 0.56148322526 generic_lb 0.56148322526 expr (x1&(x2&(x3&x4)))
+m 3 k 5 mask 0x80808000 Bcomp 11 low_checked 320 exact_equal 320 min_strict_lb 0.532947475699 generic_lb 0.532947475699 expr (x1&(x2&(x3&(x4|x5))))
+m 4 k 3 mask 0x80 Bcomp 12 low_checked 1360 exact_equal 80 min_strict_lb 0.307162499999 generic_lb 0.675069922144 expr (x1&(x2&x3))
+m 5 k 5 mask 0xaa800000 Bcomp 15 low_checked 960 exact_equal 960 min_strict_lb 0.120229982455 generic_lb 0.120229982455 expr (x1&(((x2&x3)|x4)&x5))
+m 6 k 4 mask 0x8880 Bcomp 16 low_checked 6880 exact_equal 480 min_strict_lb 0.415621093342 generic_lb 0.478815021632 expr (x1&(x2&(x3|x4)))
+m 7 k 5 mask 0xaa808080 Bcomp 19 low_checked 6560 exact_equal 480 min_strict_lb 0.004906502214 generic_lb 0.102023592992 expr (x1&((x2&x3)|(x4&x5)))
+m 8 k 2 mask 0x8 Bcomp 16 low_checked 53160 exact_equal 40 min_strict_lb 0.114325 generic_lb 0.701542494048 expr (x1&x2)
+m 9 k 5 mask 0xe0e0e000 Bcomp 21 low_checked 75040 exact_equal 480 min_strict_lb 0.004906502214 generic_lb 0.485677641898 expr ((x1|x2)&(x3&(x4|x5)))
+m 10 k 4 mask 0xa888 Bcomp 20 low_checked 106320 exact_equal 960 min_strict_lb 0.415621093342 generic_lb 0.426233160059 expr (x1&(x2|(x3&x4)))
+m 11 k 5 mask 0xa8a8a888 Bcomp 21 low_checked 167264 exact_equal 1920 min_strict_lb 0.188315081728 generic_lb 0.412262793417 expr (x1&(x2|(x3&(x4|x5))))
+m 12 k 3 mask 0xa8 Bcomp 20 low_checked 274000 exact_equal 240 min_strict_lb 0.222783593342 generic_lb 0.462666100262 expr (x1&(x2|x3))
+m 13 k 5 mask 0xaaa8a8a8 Bcomp 21 low_checked 516000 exact_equal 960 min_strict_lb 0.119300486391 generic_lb 0.561872925666 expr (x1&(x2|(x3|(x4&x5))))
+m 14 k 4 mask 0xf888 Bcomp 24 low_checked 972960 exact_equal 240 min_strict_lb 0.009813004432 generic_lb 0.752475409541 expr ((x1&x2)|(x3&x4))
+m 15 k 5 mask 0xeaeaea00 Bcomp 25 low_checked 376480 exact_equal 960 min_strict_lb 0.039701149089 generic_lb 0.271536953694 expr ((x1|(x2&x3))&(x4|x5))
+m 16 k 1 mask 0x2 Bcomp 16 low_checked 867930 exact_equal 10 min_strict_lb 0.22865 generic_lb 0.695941189613 expr x1
+symmetry m>16 follows by output complementation
+conclusion all five-input gates at uniform bias satisfy D_Gamma_cert>=0 and hence c_G<=0.01

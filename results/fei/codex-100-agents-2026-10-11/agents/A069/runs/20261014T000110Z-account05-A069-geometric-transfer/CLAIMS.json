@@ -1,0 +1,49 @@
+[
+  {
+    "claim_id": "A069-BOOLEAN-MASK-REFUND",
+    "version": 1,
+    "exact_statement": "For every fixed singleton-leaf hierarchy T with internal arity 2 or 3 and L_T(S)=1+sum_v b_v*1{S meets C_v}, put Gamma_T(u)=sum uhat(S)^2 L_T(S), W_T(u)=Gamma_T(u)-1. For actual Boolean u,w, W_T(uw)=W_T(u)+W_T(w)-4sum_v b_v P(D_v(u)=D_v(w)=1), where D_v is disagreement under independent resampling of C_v with its outside held fixed. For three Boolean signs g,q1,q2, Gamma_T(g*q1*q2)=Gamma_T(g)+W_T(q1)+W_T(q2)-4sum_v b_v P(D_v(g)+D_v(q1)+D_v(q2)>=2). For disjoint nonempty coordinate blocks C,U,V,Y of sizes r,s,t,k, compatible events A={C=c*,U=u*}, B={C=c*,V=v*}, masks q1=1-2*1_A,q2=1-2*1_B and fixed binary tree T=(T_Y,(T_C,(T_U,T_V))), W_T(qj)<=6I(qj) and I(q1)+I(q2)<=2I(q1*q2), hence H(g*q1*q2)<=Gamma_T(g*q1*q2)<=Gamma_T(g)+12I(q1*q2) for every Boolean source g. If g=h(Y) has Gamma_(T_Y)(h)<=K I(h), then H(g*q1*q2)<=max(K+2,12)I(g*q1*q2). Source-dependent cancellation and a universal source-cost payment are not assumed.",
+    "hypotheses": [
+      "Uniform actual Boolean signs; entropy and code lengths in bits; I is physical pivotal influence.",
+      "Tree and ordered child coordinate cells are fixed before sampling the Fourier set.",
+      "D_v uses independent uniform resampling inside C_v and identical outside coordinates.",
+      "Compatible-mask conclusion requires r,s,t,k>=1 and the common assignment c* to agree.",
+      "Edit operation is sequential flips/XOR, so the intersection is flipped twice.",
+      "Arbitrary-source conclusion retains Gamma_T(g); it is not replaced by an unproved K I(g).",
+      "Final-influence closure additionally requires an independent Y-only source with the specified paid core code."
+    ],
+    "statement_sha256": "aa1a04460873eb447b856faa415cf09754940fe50811ca0ab078f305faee0851",
+    "contributors": [
+      "account05/A069"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A069\\runs\\20261014T000110Z-account05-A069-geometric-transfer\\DERIVATION.md",
+      "sha256": "6425db49e63f39ce4eeb0709e5394705f2bc46b3a9e705beda086303453caa84",
+      "locators": "equations (1)-(10)"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A069-STABLE-HIERARCHY-EDIT-PAYMENT",
+        "version": 1,
+        "statement_sha256": "cd5f76a5bb9b392b3cd098f53516f83f2ae8e02fa78de7950f280d64c7245d4a",
+        "acceptance": "A070 independent acceptance at scope, first-stage report",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A069\\runs\\20261011T224507Z-account05-A069-geometric-transfer\\REPORT.md"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A017",
+      "A067",
+      "B05",
+      "B13",
+      "B20"
+    ]
+  }
+]

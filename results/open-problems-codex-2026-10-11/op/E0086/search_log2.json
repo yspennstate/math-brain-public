@@ -1,0 +1,32 @@
+[
+  [
+    "openalex_retry",
+    "https://api.openalex.org/works?search=Topics%20and%20problems%20on%20favorite%20sites%20of%20random%20walks&per_page=3",
+    "ERROR",
+    "HTTP Error 429: Too Many Requests"
+  ],
+  [
+    "semantic_retry",
+    "https://api.semanticscholar.org/graph/v1/paper/search?query=Topics%20and%20problems%20on%20favorite%20sites%20of%20random%20walks&limit=5&fields=title,year,externalIds",
+    "ERROR",
+    "HTTP Error 429: "
+  ],
+  [
+    "arxiv_boundary",
+    "https://export.arxiv.org/api/query?search_query=all%3A%22random+walk%22+AND+%28all%3A%22boundary%22+AND+all%3A%22local+time%22%29&max_results=40&sortBy=submittedDate&sortOrder=descending",
+    "OK",
+    31621
+  ],
+  [
+    "arxiv_covered",
+    "https://export.arxiv.org/api/query?search_query=all%3A%22disc%22+AND+all%3A%22covered%22+AND+all%3A%22random+walk%22&max_results=15",
+    "OK",
+    17493
+  ],
+  [
+    "crossref_boundary",
+    "https://api.crossref.org/works?query=random+walk+frequently+visited+sites+generalized+boundary+Okada&rows=15",
+    "OK",
+    64370
+  ]
+]

@@ -1,0 +1,45 @@
+{
+  "exact_jacobian_checks": 7,
+  "dimensions": [
+    {
+      "M": 2,
+      "N": 3,
+      "jacobian_determinant": "8"
+    },
+    {
+      "M": 3,
+      "N": 7,
+      "jacobian_determinant": "512"
+    },
+    {
+      "M": 4,
+      "N": 11,
+      "jacobian_determinant": "32768"
+    },
+    {
+      "M": 5,
+      "N": 15,
+      "jacobian_determinant": "2097152"
+    },
+    {
+      "M": 6,
+      "N": 19,
+      "jacobian_determinant": "134217728"
+    },
+    {
+      "M": 7,
+      "N": 23,
+      "jacobian_determinant": "8589934592"
+    },
+    {
+      "M": 8,
+      "N": 27,
+      "jacobian_determinant": "549755813888"
+    }
+  ],
+  "violations": 0,
+  "scope": "exact derivatives verify transversality; the IFT and probability conclusion are in the written proof",
+  "command": "python -X utf8 verify_remaining.py",
+  "seconds": 0.557,
+  "label": "finite checks and numerical evidence; separate written proof awaiting audit"
+}

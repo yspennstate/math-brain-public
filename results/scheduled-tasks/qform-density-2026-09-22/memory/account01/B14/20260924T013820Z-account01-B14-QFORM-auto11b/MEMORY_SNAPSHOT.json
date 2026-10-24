@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B14",
+  "run_id": "20260924T013820Z-account01-B14-QFORM-auto11b",
+  "source_control_commit_at_start": "493a46ee16d96e80fe623be43d03633b10611f83",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_qform_status": "OPEN",
+  "new_claim": {
+    "id": "QFORM-SHARED-RECEIVER-HYBRID-10735-v1",
+    "status": "SUPPORTING_THEOREM_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "statement": "For an original-coordinate invertible indefinite 2x2 pair C whose two eigenvalues have modulus at least 1, and an independent receiver bank with Q=X^T C X+hZ^2+2Z c^T Y+Y^T H Y+arbitrary affine terms, sqrt(h^2+||c||_2^2)>=1 implies ||p_Q||_infinity<10.735. The same constant survives arbitrary ambient outside-coordinate extensions by conditioning."
+  },
+  "premises": [
+    "account02/B14 r34 arbitrary-self random-slope theorem: C_*/sqrt(D)+8/[2^(1/4)sqrt(kappa||c||_2)]",
+    "account02/B14 latest whole-product log-plus-square theorem applied in hyperbolic specialization",
+    "source-pinned physical-pair logarithmic density envelope recorded in r34",
+    "cap-one square level-set estimate and mass-capped layer cake",
+    "Cauchy interlacing and operator norm >= any column norm"
+  ],
+  "partner_result_actually_applied": [
+    {
+      "account": "account02",
+      "slot": "B14",
+      "run": "20260923T112750Z-account02-B14-QFORM-r34",
+      "blob": "831ce9789e07dae4cc27275d0b1eb0993048e22f",
+      "application": "leakage branch of the same quadratic inequality"
+    },
+    {
+      "account": "account02",
+      "slot": "B14",
+      "run": "20260923T235641Z-account02-B14-QFORM-auto11b",
+      "application": "literal hyperbolic specialization after conditioning the receiver bank"
+    }
+  ],
+  "corrections_consumed": [
+    "POINTWISE-OSCILLATORY-DECAY refuted",
+    "NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "canonical_report": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "518c4e6996981b116222ca6b32328d7edc6c6428",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260924T013820Z-account01-B14-QFORM-auto11b/REPORT.md",
+    "blob": "3093b6cd78e0bda246d2d033710d731eb49f3fbc"
+  },
+  "controlling_correction": {
+    "commit": "9de3625ca18060c970a7017aeb31f35cfb608b09",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B14/20260924T013820Z-account01-B14-QFORM-auto11b/CORRECTION.md",
+    "blob": "6f9d2f76708fe7f4786baa8568adb75b8782b961"
+  },
+  "constant_check_commit": "cbcce8604cd41a1527db49b38ef5c2f406e7e1a4",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B14/20260924T013820Z-account01-B14-QFORM-auto11b.md",
+  "unresolved_implication": "QFORM-PAIR-PLUS-SHARED-COLUMN-EXTRACTION-OR-AGGREGATE-EXIT-v1: derive from bare s_3(A)>=1 a quantitatively usable original-coordinate indefinite pair plus a disjoint shared receiver column, or invoke another completed whole-law aggregate exit, without assuming a uniformly conditioned fixed minor.",
+  "next_step": "Try to replace the direct-sum target extraction by a Schur-completed pair-plus-column invariant with quantitative threshold preservation, or prove a dichotomy to an existing aggregate bank exit."
+}

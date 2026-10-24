@@ -1,0 +1,118 @@
+[
+  {
+    "claim_id": "A005-SAME-C-VANISHING-PAIR-COLLISION-ADMISSION",
+    "version": 1,
+    "exact_statement": "For every fixed nonconstant uniform Boolean seed h on n relevant bits, take t tensor copies on D=tn bits, append r=min{s:2^s-s-1>=D} physical parity tags with distinct weight-at-least-two labels, then flip physical zero. The actual resulting G_t on N=D+r bits is prime across every nontrivial coordinate partition, has every Fourier coefficient nonzero and every input relevant, and H(G_t)/I(G_t) tends to H(h)/I(h). Every singleton collision is <=8*2^-N; every pair collision and total of its two merging refunds is <=16*2^-N. Hence the sums over all pairs are each <=16*binom(N,2)*2^-N and tend to zero. For every fixed epsilon>0, the class of prime full-Fourier-support signs with both total pair quantities <=epsilon has exactly the universal extended-real optimal FEI constant, with no factor-three loss. If H(h)-K I(h)>0 at fixed K>=0, every actual singleton and pair child of G_t violates FEI(K) for sufficiently large t. Thus no such admitted root is a minimal K-violator. A compressed actual N=200 certificate from the three-bit point defect at t64,K8/3 verifies a positive root gap and uniformly positive deficits of all individual singleton/pair children, without enumerating its truth table.",
+    "hypotheses": [
+      "Finite uniform physical cubes; actual Boolean signs; normalized Walsh Fourier law; entropy in bits",
+      "Fixed nonconstant seed with n relevant inputs and I(h)>0; t grows and r=O(log(t))",
+      "Labels are the first D distinct r-bit nonzero vectors of weight at least two, in increasing integer order; xor defines a fair physical linear substitution",
+      "Pair collision/refund definitions are the actual A052 quartet quantities; zero-denominator terms are zero",
+      "The criticality exclusion is conditional on a fixed positive violating seed gap at K>=0; no minimality or hypothetical unbounded-ratio seed is assumed",
+      "The no-factor-three statement concerns the qualitative endpoint and the systematic-code family, not the exact triple-parity-only family in A053"
+    ],
+    "statement_sha256": "2bdd935eb59bf2f0844117ec2b9b6d51d81afc6183c78f2019ab5cdb196660b5",
+    "contributors": [
+      "account05/A005"
+    ],
+    "proof_source": [
+      "DERIVATION.md Sections1-4",
+      "code/check.py",
+      "out/PILOT_VALIDATION.json",
+      "out/CHUNK0_VALIDATION.json",
+      "out/CHUNK1_VALIDATION.json",
+      "out/CHUNK2_VALIDATION.json",
+      "out/CHUNK3_VALIDATION.json",
+      "out/CONTROL_VALIDATION.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A053-REFUND-ZEROS-AND-SPARSE-CODE-SURGERY",
+        "version": 1,
+        "scope": "Distance-three singleton/pair collision, refund and decrement subset independently rederived; no use of pending classification or triple-substitution acceptance."
+      },
+      "A002 prior tensor/systematic-code ledger (known baseline, explicitly instantiated; source version not inferred)"
+    ],
+    "review_records": [
+      {
+        "reviewer": "account05/A002",
+        "at_utc": "2026-10-14T04:50:03.472356+00:00",
+        "verdict": "HOLDS_AT_EXACT_SCOPED_APPLICATION_STATEMENT",
+        "source": {
+          "path": "~\\brain_workers\\FEI100_20261011\\agents\\A002\\runs\\20261014T043038Z-account05-A002-hardness-preserving-transformations\\GROWING_BLOCK_PROOF.md",
+          "sha256": "f1768c7776551d468249b24d4fc136539c6bc0ae21f02c41992647d77781e8d6"
+        },
+        "locators": "Sections1-3,5,7; out/COMPRESSED_CERTIFICATE.json A005_N200_review",
+        "method": "Independent normalized physical-row fourth-moment formula, code-distance/odd-negative-count proof, actual child spectra and uniform individual-child entropy errors; independently regenerated all192 code labels/tag masses forN200",
+        "scope": "No repair supplied. Prior general coding baseline was authored by A002; this does not assert two independent full major-candidate dependency-chain reviews. Pending A053 classification and A051/A055 critical phase-bank chain are not adopted.",
+        "validation": "120 finite code/edit fixtures; independent N200 rational certificate shows every individual singleton/pair child deficit>3",
+        "full_fei_guard": "No finite absolute universal upper bound or actual unbounded-ratio family claimed"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_SCOPED_APPLICATION_STATEMENT",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B01",
+      "B11",
+      "A002",
+      "A051",
+      "A052",
+      "A053",
+      "A055",
+      "A087",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A002-GROWING-BLOCK-RARE-CODE-ADMISSION",
+    "version": 1,
+    "exact_statement": "For any Boolean core g on D physical uniform bits and maximum block size b with b<=D and r=ceil(2b log2(2D))<=D, a deterministic greedy systematic parity-check code with r tags has minimum spectral distance at least b+1, preserves H(g), and adds at most r Var(g) influence. Every individual restriction of at most b bits preserves entropy and subtracts exactly its queried influence. For a single zero-vertex edit E of any such coded sign on N bits, p=2^-N, epsilon=2p, eta=F(0), each size-a retained row containing one old coefficient c has exact fourth-moment collision (2^a-1)epsilon^2(2^a epsilon-2eta c)^2/(c^2-2eta c epsilon+2^a epsilon^2). Hence C_A(E)<=2^(a+2)p and total C_A through size b is <=4b(2N)^b2^-N. Every fixed nonconstant seed h has actual full-support physically prime representatives E_t with I->0, max influence->0, mean->1 and H/I->H(h)/I(h), using balanced t-copy point activation k=ceil(sqrt(t)), data dimension D_t=tn+1+k, b_t=max(1,floor(sqrt(t)/log2(2D_t)), r_t=ceil(2b_t log2(2D_t)) and the code/edit. Here b_t->infinity and the total collision over every block of size<=b_t tends to0; total A052 pair merging refunds also tends to0. If the seed violates a fixed FEI(K), every individual child of every block of size<=b_t still violates K eventually. For the single seed-independent cutoff q(N)=max(1,floor(cube_root(N))), q(N_t)<=b_t eventually. For every fixed tau,eta,xi>0 the full-support prime class with I,max influence<=tau, mean>=1-eta and total collision through q(N)<=xi has optimal extended-real FEI constant equal to the universal one. It does not admit genuinely K-critical roots through this family. Exact compressed controls cover the original A005 N200 fixture and a new N12470 b4 rare fixture without huge truth-table enumeration. No universal FEI payment is established.",
+    "hypotheses": [
+      "Finite independent uniform physical cubes; actual Boolean signs; normalized Walsh spectrum, entropy in bits",
+      "C_A is the actual weighted physical-row fourth-moment collision; for pairs it agrees with A052 quartet C_ij; it is not aggregate B erasure",
+      "Greedy code asymptotics use b log D=o(D); finite initial indices with r>D are discarded",
+      "Every auxiliary physical influence is retained, with tag influence bounded by original spectral nonempty mass Var(g)",
+      "Fixed nonconstant seed has n relevant bits and I(h)>0; individual-child exclusion additionally assumes a fixed positive seed gap at K>=0",
+      "Full support/primitivity refers to the final one-point edit; no near-erasure B/H->1 admission or quantitative distance-from-products claim",
+      "Compressed fixed controls at K=8/3 are not minimal witnesses and do not instantiate hypothetical K>=4 critical violations"
+    ],
+    "statement_sha256": "a67f766286ac56b09adc1e2292a8e54dd5918d395266de259c3314322661784b",
+    "contributors": [
+      "account05/A002"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A002\\runs\\20261014T043038Z-account05-A002-hardness-preserving-transformations\\GROWING_BLOCK_PROOF.md",
+      "sha256": "f1768c7776551d468249b24d4fc136539c6bc0ae21f02c41992647d77781e8d6"
+    },
+    "proof_dependencies": [
+      "Elementary Fourier character orthogonality and physical influence recursion",
+      "Prior A002 tensor/activation/systematic-code baseline, explicitly instantiated and accounted here",
+      "A052 unconditional pair merging identity, directly reconstructed (higher-order refund identities NOT assumed)",
+      "A005 distance-three scoped application is context and independently reviewed, not an assumed unreviewed broad premise"
+    ],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_SCOPED_HARDENING_EXTENSION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Root primitivity, full support, rarity and tiny total collision over growing block orders imply same-K actual child certification",
+      "Enlarging a root-only small-collision census to unbounded sublinear block scales removes arbitrary tensor seed factors"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B01",
+      "A005",
+      "A051",
+      "A052",
+      "A053",
+      "A055",
+      "A087",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

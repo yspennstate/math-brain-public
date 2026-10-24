@@ -1,0 +1,41 @@
+QFORM_B04_R21_ZERO_TETRAD_CROSS_INVISIBLE_CHECK_PASS
+
+Exact matrix A:
+[[3,1,1/10,1/10,1/10,1/10],
+ [1,-3,1/5,1/5,1/5,1/5],
+ [1/10,1/5,599/200,199/200,199/200,199/200],
+ [1/10,1/5,199/200,599/200,199/200,199/200],
+ [1/10,1/5,199/200,199/200,599/200,199/200],
+ [1/10,1/5,199/200,199/200,199/200,599/200]].
+
+Exact facts checked symbolically:
+- B=[[3,1],[1,-3]], det(B)=-10, B^{-1}=(1/10)B.
+- C has four identical rows (1/10,1/5).
+- Schur complement S=D-CB^{-1}C^T=2 I_4 + 11^T.
+- N_H=det(B)S=-10S: diagonal -30, every off-diagonal -10.
+- J_2(H)=sum_{i != j}(N_H)_{ij}^2=12*100=1200.
+- Every disjoint residual 2x2 tetrad determinant is zero, so D_2^disj(N_H)=0.
+- kappa=199/200 and r=195/199 in A=diagonal+w w^T+r(e1e2^T+e2e1^T).
+
+Exhaustive exact enumeration over all 602 ordered pairs of nonempty disjoint physical banks I,J (each of six coordinates assigned to I,J,or conditioned):
+- maximum rank A[I,J] = 2;
+- rank counts: rank 1 = 502, rank 2 = 100;
+- no rank >=3 crossing exists.
+Therefore every physical E3 and E5 crossing currency is exactly zero.
+
+Rigorous spectral certificate:
+- spec(diag(B,S))={-sqrt(10),2,2,2,sqrt(10),6}.
+- ||C||=sqrt(5)/5; ||CB^{-1}C^T||=1/50.
+- perturbation bound <=sqrt(5)/5+1/50=0.467213595499958... <1.
+- hence all six eigenvalues of A have modulus >1 by Weyl.
+Numerical audit only: eig(A)=(-3.17666914,2,2,2,3.13839042,6.01827872).
+
+Localized physical principal block T={3,4,5}:
+A[T,T]=2 I_3 +(199/200)11^T,
+spectrum=(2,2,997/200).
+Pinned e5 COUNTEREXAMPLE_SEARCH Theorem A therefore yields
+||p_Q||_infinity <=6 sqrt(pi)/2=3 sqrt(pi)=5.317361552716548...
+for every independent cap-one input law after conditioning the other three original coordinates.
+
+Direct ridge obstruction:
+rank(A[I,J])<=2 implies theta_gamma<2 for every positive gamma. The completed ridge gate requires q>=1 and theta_gamma>2q>=2, impossible on every physical cut.

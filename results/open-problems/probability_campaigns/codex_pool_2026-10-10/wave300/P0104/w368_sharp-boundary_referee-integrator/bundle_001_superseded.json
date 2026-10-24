@@ -1,0 +1,143 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w368",
+  "bundle_slug": "fpp-p0104-boundary-refereed-001",
+  "entries": [
+    {
+      "key": "p0104-question",
+      "namespace": "probability.fpp.fluctuations",
+      "logical_name": "lattice-fpp-fluctuation-exponent-question-13",
+      "kind": "concept",
+      "title": "Lattice FPP fluctuation-exponent problem (Question 13)",
+      "statement": "For iid nonnegative nearest-neighbour passage times on Z^d, source Question 13 asks for suitable assumptions on the edge law F under which the fluctuation exponent chi is below 1/2 in every d>=2, and equals 1/3 in d=2. Related Question 15 separately asks for chi>0 in suitable dimensions; the canonical P0104 concept combines them. The source does not fix a unique mathematical definition of chi or exact admissible class of F; specify both before treating a proposed answer as a theorem. A logarithmic variance saving alone does not yield chi<1/2.",
+      "proof_text": null,
+      "assumptions": ["iid nonnegative nearest-neighbour edge weights", "dimension d>=2", "source leaves suitable conditions on F and chi definition open"],
+      "domain": "probability; first-passage percolation",
+      "source": {
+        "source_id": "arxiv:1511.03262v2:Question13",
+        "url": "https://arxiv.org/pdf/1511.03262",
+        "revision": "2016-09-23, checked 2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "under suitable conditions on F, chi < 1/2. If d = 2, show that chi = 1/3"
+      }
+    },
+    {
+      "key": "fixed-endpoint-moment",
+      "namespace": "probability.fpp.fluctuations",
+      "logical_name": "square-lattice-fixed-endpoint-moment-minimum-criterion",
+      "kind": "lemma",
+      "title": "Fixed-endpoint FPP moments and the four-edge minimum",
+      "statement": "Let undirected nearest-neighbour Z^2 edges carry iid finite almost surely nonnegative weights. For each fixed integer n>=1, r>0, T=T(0,n e1), and M the minimum of the four weights incident to 0, E[T^r]<infinity if and only if E[M^r]<infinity. More precisely, for t>=0 and K=n(n+2)^2(n+8), P(M>t)<=P(T>t)<=K P(M>t/(n+8)). In particular, Pareto edge tail P(tau>t)=t^(-alpha) for t>=1 yields E[T^r]<infinity exactly for r<4alpha. This is a fixed-n result and supplies no n-uniform fluctuation exponent.",
+      "proof_text": "Every connecting path starts with one of the four origin edges, so T>=M. Construct four deterministic edge-disjoint connecting paths of lengths n,n+2,n+2,n+8: direct axis, row +1, row -1, and a route via y=2 starting with the west origin edge and ending from the east. Since T is no larger than each path sum, T>t forces all four sums above t. Their edge sets are disjoint, hence their sums independent. Each sum above t has at least one edge above t divided by its path length; a union bound yields P(T>t)<=K P(M>t/(n+8)). Integrate r t^(r-1) times the tails, allowing infinite values. For Pareto tails the fourfold minimum has tail exponent 4alpha.",
+      "assumptions": ["undirected nearest-neighbour Z^2", "iid finite almost surely nonnegative weights", "fixed integer n>=1", "r>0"],
+      "domain": "probability; first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:w366-C1-refereed-w368",
+        "url": "~/brain_workers/w366/LEMMAS.md",
+        "revision": "2026-10-10 referee KEEP in ~/brain_workers/w368/REVIEW.jsonl",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "straight-path-window",
+      "namespace": "probability.fpp.fluctuations",
+      "logical_name": "bounded-weights-straight-path-window",
+      "kind": "lemma",
+      "title": "Sharp finite-size straight-path window",
+      "statement": "On nearest-neighbour Z^d with d>=2 and all edge weights in [a,b], 0<a<b, if n(b-a)<=2a then T(0,n e1) equals the sum of the n straight-axis edges for every configuration. If the weights are iid with essential infimum a and supremum b and n(b-a)>2a, the straight route fails to minimize on an event of positive probability. This sharpness concerns a configuration-uniform finite-size threshold, not large-n fixed-law fluctuations.",
+      "proof_text": "The straight route is the only n-edge route from 0 to n e1. Lattice parity forces every other finite route to use at least n+2 edges. The straight route costs at most nb; alternatives cost at least (n+2)a, proving the identity when n(b-a)<=2a. If the inequality reverses, choose delta>0 so n(b-delta)>(n+2)(a+delta). The upper-row detour has n+2 edges disjoint from the straight route. Essential endpoints and independence give positive probability that every straight edge exceeds b-delta while every detour edge is below a+delta; there the detour wins.",
+      "assumptions": ["nearest-neighbour Z^d, d>=2", "integer n>=1", "0<a<b", "iid and essential endpoints for sharpness direction"],
+      "domain": "probability; first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:w367-C001-refereed-w368",
+        "url": "~/brain_workers/w367/INDEPENDENT_OBSTRUCTION.md",
+        "revision": "2026-10-10 referee KEEP in ~/brain_workers/w368/REVIEW.jsonl",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "uniform-power-bridge",
+      "namespace": "probability.fpp.fluctuations",
+      "logical_name": "law-uniform-edge-normalized-variance-power-bridge-false",
+      "kind": "concept",
+      "title": "False law-uniform variance power bridge",
+      "statement": "The following proposed auxiliary estimate is false for every theta<1: there are finite constants C,N independent of the edge law F such that Var_F T(0,n e1)<=C Var_F(tau_e)n^theta for all n>=N and every iid Uniform[1,1+epsilon] law, epsilon in (0,1]. A law-dependent estimate is a different assertion and is not refuted here.",
+      "proof_text": null,
+      "assumptions": ["d>=2", "uniform laws Uniform[1,1+epsilon]", "C,N proposed to be law-independent"],
+      "domain": "probability; first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:w367-C002-refereed-w368",
+        "url": "~/brain_workers/w367/INDEPENDENT_OBSTRUCTION.md",
+        "revision": "2026-10-10 referee KEEP in ~/brain_workers/w368/REVIEW.jsonl",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "uniform-power-counterexample",
+      "namespace": "probability.fpp.fluctuations",
+      "logical_name": "uniform-near-constant-fpp-variance-uniformity-counterexample",
+      "kind": "lemma",
+      "title": "Continuous bounded-law obstruction to uniform power variance bounds",
+      "statement": "For iid Uniform[1,1+epsilon] nearest-neighbour edge weights on Z^d, d>=2, and integer n>=1 with n epsilon<=2, T(0,n e1) is the sum of the n straight-edge weights and Var T=n epsilon^2/12. Consequently no law-independent C,N can yield Var_F T<=C Var_F(tau_e)n^theta for every epsilon in (0,1] and all n>=N when theta<1. This does not refute law-specific asymptotic exponent claims.",
+      "proof_text": "The straight-path window lemma applies with a=1,b=1+epsilon. Independence gives edge variance epsilon^2/12 and sum variance n epsilon^2/12. For any proposed C,N and theta<1, choose n>N with n^(1-theta)>C and set epsilon=1/n. Then the straight-path identity applies and the proposed inequality reduces to n<=C n^theta, contradiction.",
+      "assumptions": ["nearest-neighbour Z^d, d>=2", "iid Uniform[1,1+epsilon] edge weights", "epsilon in (0,1]", "law-independent constants C,N in the proposed estimate"],
+      "domain": "probability; first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:w367-C002-refereed-w368",
+        "url": "~/brain_workers/w367/INDEPENDENT_OBSTRUCTION.md",
+        "revision": "2026-10-10 referee KEEP in ~/brain_workers/w368/REVIEW.jsonl",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "finite-window-chaos",
+      "namespace": "probability.fpp.fluctuations",
+      "logical_name": "straight-window-exact-resampling-overlap-covariance",
+      "kind": "lemma",
+      "title": "Exact resampling overlap before the FPP detour scale",
+      "statement": "For iid nearest-neighbour Z^2 weights in [1,1+epsilon] with edge variance sigma^2 and integer n>=1 satisfying n epsilon<2, independently refresh each edge with probability delta in [0,1] using an independent weight copy. The original and refreshed geodesics from 0 to n e1 are the same unique straight n-edge path, so their edge overlap is exactly n. Their passage times T,T_delta satisfy Cov(T,T_delta)=(1-delta)n sigma^2 and E[(T-T_delta)^2]=2 delta n sigma^2. This finite law-dependent window does not contradict fixed-law asymptotic chaos.",
+      "proof_text": "The strict n epsilon<2 straight-path comparison makes the straight route uniquely shortest for every configuration in both environments. For one straight edge write tau_delta=(1-B)tau+B tau', where B is independent Bernoulli(delta) and tau' an independent copy. Then Cov(tau,tau_delta)=(1-delta)sigma^2. Different straight-edge pairs are independent, giving the covariance formula by summation. Both sums have variance n sigma^2 and the same mean, so the squared-difference expectation equals 2delta n sigma^2.",
+      "assumptions": ["undirected nearest-neighbour Z^2", "iid weights in [1,1+epsilon]", "n epsilon<2", "independent Bernoulli edge refresh with independent copies"],
+      "domain": "probability; first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:w366-C5-refereed-w368",
+        "url": "~/brain_workers/w366/LEMMAS.md",
+        "revision": "2026-10-10 referee KEEP in ~/brain_workers/w368/REVIEW.jsonl",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "constant-onset-tradeoff",
+      "namespace": "probability.fpp.fluctuations",
+      "logical_name": "uniform-near-constant-variance-bound-constant-onset-tradeoff",
+      "kind": "lemma",
+      "title": "Necessary variance-bound constant or onset tradeoff",
+      "statement": "For iid Uniform[1,1+epsilon] nearest-neighbour Z^d weights, d>=2, fixed epsilon in (0,1], put K=floor(2/epsilon). If C>0, integer N>=1 and theta<1 satisfy Var T(0,n e1)<=C Var(tau_e)n^theta for every integer n>=N, then either N>K or C>=K^(1-theta). This is necessary, not sufficient, for a fixed-law power bound.",
+      "proof_text": "If N<=K, the finite straight-path window applies at n=K because K epsilon<=2, giving Var T_K=K Var(tau_e). Insert this into the proposed inequality and cancel positive Var(tau_e), obtaining C>=K^(1-theta). The other possibility is N>K.",
+      "assumptions": ["nearest-neighbour Z^d, d>=2", "iid Uniform[1,1+epsilon] weights", "fixed 0<epsilon<=1", "C>0, integer N>=1, theta<1"],
+      "domain": "probability; first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:w367-C003-refereed-w368",
+        "url": "~/brain_workers/w367/ATTEMPT.md",
+        "revision": "2026-10-10 referee KEEP in ~/brain_workers/w368/REVIEW.jsonl",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {"from_key":"fixed-endpoint-moment","to_key":"p0104-question","kind":"semantic_association","rationale":"Moment finiteness is a boundary condition for a variance-based exponent formulation but gives no exponent."},
+    {"from_key":"straight-path-window","to_key":"p0104-question","kind":"semantic_association","rationale":"The exact finite-size regime shows where detour optimization has not yet entered."},
+    {"from_key":"uniform-power-bridge","to_key":"p0104-question","kind":"semantic_association","rationale":"The false auxiliary bridge is stronger in law-uniformity than the source question."},
+    {"from_key":"uniform-power-counterexample","to_key":"straight-path-window","kind":"depends_on","rationale":"The exact variance computation uses the straight-path identity."},
+    {"from_key":"uniform-power-counterexample","to_key":"uniform-power-bridge","kind":"refutes","rationale":"Choosing epsilon=1/n makes the normalized ratio n^(1-theta) unbounded."},
+    {"from_key":"finite-window-chaos","to_key":"straight-path-window","kind":"depends_on","rationale":"The deterministic geodesic and passage-time sum follow from the strict straight-path window."},
+    {"from_key":"finite-window-chaos","to_key":"p0104-question","kind":"semantic_association","rationale":"The exact overlap identifies a finite-size obstruction to law-uniform chaos estimates."},
+    {"from_key":"constant-onset-tradeoff","to_key":"straight-path-window","kind":"depends_on","rationale":"The necessary inequality evaluates the exact variance at the last integer inside the window."}
+  ]
+}

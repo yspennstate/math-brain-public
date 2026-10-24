@@ -1,0 +1,35 @@
+QFORM account01/B01 deterministic diagnostics
+run_id=20260924T041020Z-account01-B01-qform-auto11-r12
+status=PASS_DIAGNOSTIC_ONLY_NOT_INDEPENDENT_REVIEW
+
+Constants (mpmath high precision):
+J_1_8 = 13.931514779840125
+C_2 = (2*sqrt(5)*J_1_8)^(4/5) = 27.2653244653667
+128*2^(1/4) = 152.2185107203483
+C_2*2^(1/5) = 31.319633361827144
+128*2^(3/4) = 215.2694823049509
+C_2*2^(3/5) = 41.32650398343757
+partner 2^(23/8) = 7.33603234563737
+
+Rank-two completion diagnostic:
+- 300 seeded random real symmetric 7x7 matrices.
+- chosen leading 2x2 physical pair made nonsingular by deterministic perturbation if necessary.
+- S = C-E^T P^{-1}E.
+- A0=[[P,E],[E^T,E^T P^{-1}E]].
+- max observed third singular value of A0 = 8.50759932358707e-15.
+- min observed ratio ||S||_op/s_3(A) = 1.0228201042614409 >= 1.
+This only checks the algebra/min-max consequence numerically; the report contains the proof.
+
+Concentrated rank-one-arrowhead diagnostic:
+- 10,000 seeded samples with max_l z_l^2/||z||^2>1/2.
+- r chosen with maximal |b_r|, l with maximal |z_l|.
+- checked |b_r z_l| >= ||b|| ||z||/2: zero violations.
+- whenever |uv-m^2|<m^2/2, checked max(|u|,|v|)>=|m|/sqrt(2): zero violations.
+
+Target stress:
+Q_par = X0^2 + H2^2 + (H1+Y)^2.
+Coefficient spectrum = {0,1,1,2}; hence s_3(A)=1.
+After X0 completion, residual pair (H1,Y) is [[1,1],[1,1]], determinant 0.
+The rank-two affine half-Riesz receiver is therefore unavailable on that pair, while the any-sign two-pivot receiver gives C_2=27.2653244653667.
+
+No Monte Carlo density histogram was used for a proof claim.

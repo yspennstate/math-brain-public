@@ -1,0 +1,74 @@
+{
+  "target": "P0017",
+  "worker": "w357",
+  "date": "2026-10-10",
+  "ranking_date": "2026-09-07",
+  "historical_status": "attempted_un",
+  "current_openness": "UNKNOWN",
+  "current_status": "claimed solved in primary preprints; full mathematical acceptance is not independently established in this packet",
+  "exact_statement_verified": true,
+  "target_statement": "There exists C<infinity independent of n and mu such that every isotropic log-concave law mu on R^n satisfies Var_mu f<=C integral |grad f|^2 dmu for square-integrable locally Lipschitz tests of finite energy. Equivalently a numerical Euclidean Cheeger lower bound holds for all such laws.",
+  "normalization": {
+    "mean": "0",
+    "covariance": "I",
+    "C_P": "variance coefficient, not its square root",
+    "boundary": "outer Minkowski liminf"
+  },
+  "original_record": {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "lines": [
+      19,
+      119
+    ],
+    "source_id": "randomstrasse_2025_v1",
+    "locator": "Conjecture 30, Entry 13",
+    "statement_caveat": "Displayed source half-space expression has an S/H mismatch; use the standard outer-boundary definition.",
+    "primary_url": "https://arxiv.org/abs/2603.29571v1",
+    "primary_title_verified": true,
+    "locator_check": "Exact historical intake row; the complete target was separately verified in the October primary theorem statements"
+  },
+  "primary_sources": [
+    {
+      "id": "arxiv:2610.05474v1",
+      "authors": "Pierre Bizeul, Boaz Klartag, Joseph Lehec",
+      "date": "2026-10-04",
+      "url": "https://arxiv.org/html/2610.05474v1",
+      "locator": "Theorem 1.1; equations (5)-(6)",
+      "checked": "complete theorem statement and normalization",
+      "proof_checked": "not in full",
+      "license": "arxiv-nonexclusive"
+    },
+    {
+      "id": "arxiv:2610.01447v2",
+      "authors": "Zhao Song, Xinzhi Zhang",
+      "date": "2026-10-04 revision",
+      "url": "https://arxiv.org/html/2610.01447v2",
+      "locator": "Theorem 1.1; Section 7.1, Lemma 7.2",
+      "checked": "complete target statement and relevant Gaussian posterior identities",
+      "proof_checked": "not in full",
+      "license": "CC-BY-NC-SA-4.0; no prose reproduced into the draft"
+    },
+    {
+      "id": "arxiv:2303.14938",
+      "author": "Boaz Klartag",
+      "url": "https://arxiv.org/html/2303.14938",
+      "locator": "equation (1.7); Theorem 1.3; definitions preceding them",
+      "checked": "positive uniform log-concavity is required; applies to the posterior at curvature 1/t"
+    },
+    {
+      "id": "arxiv:2405.06616v2",
+      "url": "https://arxiv.org/html/2405.06616v2",
+      "locator": "Theorem 3.13",
+      "checked": "retrieved covariance card matches primary theorem: uniform Hessian lower bound Gamma>0 is required"
+    }
+  ],
+  "owner_solved_retired_check": "Original P0017 ledger records only a Gaussian special case and full_problem_solved=false; named H/I folders produced no P0017 proof match; Team O row unchecked; September survey is historical, not an October certificate. Canonical-store check recorded separately.",
+  "worker_parent_problem_solved": false,
+  "novelty_claim": false,
+  "independent_review": "w359 and w358 KEEP L1-L6 at stated scope; no full preprint-proof certification",
+  "canonical_checkout_check": {
+    "path": "~/math-research-brain",
+    "checked": "README and targeted local SQLite path discovery",
+    "result": "Only local audit databases were located; none opened because evaluation material is out of scope. No current solved/retired certification obtained from this checkout."
+  }
+}

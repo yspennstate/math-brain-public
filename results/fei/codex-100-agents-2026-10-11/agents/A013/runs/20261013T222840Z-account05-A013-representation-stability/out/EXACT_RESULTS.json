@@ -1,0 +1,46 @@
+{
+  "helper": "A013-one-shared-bit-v1",
+  "status": "PASS",
+  "Boolean_mux_pairs": 512,
+  "reference_pairs": 4608,
+  "activation_reference_cases": 96,
+  "physical_restrictions": 2048,
+  "bent_boundary_cases": [
+    {
+      "m": 4,
+      "selector_influence": "1/16",
+      "erasure_over_influence_interval": [
+        "1470526027426591/281474976710656",
+        "45953938357081/8796093022208"
+      ]
+    },
+    {
+      "m": 6,
+      "selector_influence": "1/64",
+      "erasure_over_influence_interval": [
+        "2079187802697501/281474976710656",
+        "1039593901348751/140737488355328"
+      ]
+    },
+    {
+      "m": 8,
+      "selector_influence": "1/256",
+      "erasure_over_influence_interval": [
+        "1326961991225917/140737488355328",
+        "2653923982451835/281474976710656"
+      ]
+    },
+    {
+      "m": 10,
+      "selector_influence": "1/1024",
+      "erasure_over_influence_interval": [
+        "804960340011793/70368744177664",
+        "3219841360047173/281474976710656"
+      ]
+    }
+  ],
+  "exact_assertions": 181327,
+  "elapsed_seconds": 1.4589023999869823,
+  "failures": 0,
+  "code_sha256": "bbad6beaba63a8c55234ff2e95df5f0f7e436fb1243c8a4e1110840b7370b196"
+}

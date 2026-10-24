@@ -1,0 +1,1 @@
+STUCK: Two fresh gates refused the exact rational run because shared commit pressure was critical. Alternative: complete the symbolic derivation and original-proof audit; submit concept-only DRAFT material and attach the unrun checker for reviewer execution when the gate permits. Do not weaken the gate or claim a PASS.

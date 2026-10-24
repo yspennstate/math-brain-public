@@ -1,0 +1,15 @@
+# R17 PROB10-02 — idea before code: single-defect edge chain and path coupling
+
+Target remains the true iid-uniform binary Chvatal--Sankoff constant.  The same fresh target bit `v` is tested against the entire raw window, so this is not independent Bernoulli matching.
+
+The preceding R17 run found the exact pathwise disagreement-flux identity for synchronously driven comparable strip fronts.  The next idea is to stop treating an arbitrary multi-defect pair as one large joint state.  Start with a **single Hamming defect**: same raw window `x`, lower gradient `g`, and upper gradient `h=g+e_j`.  Because the previous flux theorem gives `D'<=D` and here `D=1`, one synchronous source-pair update either coalesces the two states or produces another single-defect pair.  Therefore single defects form an exact finite **substochastic edge chain** `Q_m`.
+
+This suggests three materially distinct attacks for this run.
+
+1. **Exact edge-chain/path-coupling theorem.**  Prove that the one-defect chain is closed until absorption, and use monotonicity to decompose an arbitrary same-window pair into at most `m` ordered Hamming edges.  If `alpha_m(T)=||Q_m^T 1||_infinity`, then after `kT` synchronous steps any same-window pair fails to coalesce with probability at most `m alpha_m(T)^k`.  After the raw shift register has synchronized in `m` steps, the same bound holds for arbitrary initial strip states.  This should give a rigorous finite-horizon-to-stationary error from an exact finite boundary process.
+
+2. **Try the simplest width-uniform dual and falsify it if necessary.**  Ask whether a positive weight depending only on the defect position can give one-step contraction.  The previous `m=3` strict-contraction obstruction appears stronger: there is a reachable one-defect pair whose defect stays at the same position under all four source-pair inputs.  If so, every position-only multiplicative dual has contraction factor at least one, proving that any scalable dual must retain environment/history information.
+
+3. **Exact block contraction rather than a universal reset word.**  Compute `alpha_m(4m)` exactly for moderate `m` by backward integer dynamic programming on the edge chain.  This is different from enumerating constant reset words: it counts every input word that leaves a given defect alive, preserving the dependent source process.  If the exact block contraction is strong, combine it with Attack 1 to obtain an explicit additive bias constant for estimating the stationary finite-width reward from a finite horizon.
+
+The source-level metric is the current repository-internal certified width `U_F-L`, where `L=99083249/125000000` and `U_F` is the exact Farey--Collatz upper endpoint in the newest P02 report `proofnet24/P02-progress-lcs/runs/2026-09-20/2026-09-20T04-03-12Z__farey-collatz-dual-report.md`.  This R17 route is complementary to P02's covering/cone work and P13's reset-word recursion.  A mechanism improvement is not source-level movement unless it changes a rigorous endpoint.

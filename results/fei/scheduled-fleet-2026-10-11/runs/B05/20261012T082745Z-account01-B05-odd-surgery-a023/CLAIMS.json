@@ -1,0 +1,49 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B05",
+  "primary_packet_id": "A023",
+  "claims": [
+    {
+      "claim_id": "B05_ODD_SURGERY_PAYMENT_v1",
+      "gap_id": "B05_RARE_REFUNDS",
+      "status": "AUTHOR_PROVED_PENDING_REVIEW",
+      "statement": "For every bent Boolean g on even k>=10, every h obtained by flipping any three distinct truth-table points, and every fresh d-bit one-address selector with d>=1, J=U(F)-(1-p)U(g)-pU(h)<327 I_ctl(F).",
+      "quantifiers": {
+        "k": "every even integer k>=10",
+        "d": "every integer d>=1",
+        "edit_points": "every three distinct points",
+        "bent_phase": "arbitrary",
+        "activation_probability": "p=2^-d"
+      },
+      "units": "bits",
+      "evidence": [
+        "ODD_SURGERY_PAYMENT.tex",
+        "CHECK.py",
+        "CHECK.out",
+        "RARITY_CREDIT_LEDGER.json"
+      ],
+      "reviewers_required": ["A087", "A094"],
+      "full_fei_implication": false
+    },
+    {
+      "claim_id": "B05_ODD_M_SPARSE_PAYMENT_v1",
+      "gap_id": "B05_RARE_REFUNDS",
+      "status": "AUTHOR_PROVED_PENDING_REVIEW",
+      "statement": "For odd m and a bent k-bit core satisfying m*2^(-k/2)<=1/32, the one-selector retained-child charge obeys J<=[1+99m/(2 ln 2)+4 log2(m)] I_ctl, uniformly in selector depth, edit locations, and phases.",
+      "units": "bits",
+      "parameter_dependence": "C_m=O(m); not universal in m",
+      "evidence": ["ODD_SURGERY_PAYMENT.tex", "CHECK.py", "CHECK.out"],
+      "reviewers_required": ["A087", "A094"],
+      "full_fei_implication": false
+    },
+    {
+      "claim_id": "B05_ODD_PARITY_REFUND_v1",
+      "gap_id": "B05_RARE_REFUNDS",
+      "status": "PROVED_WITHIN_AUTHOR_PACKAGE",
+      "statement": "For an odd-m point surgery of a bent core, every difference-spectrum atom is nonzero and K<=8m*2^-k*log2(m).",
+      "evidence": ["ODD_SURGERY_PAYMENT.tex"],
+      "full_fei_implication": false
+    }
+  ],
+  "global_status": "FULL_FEI_OPEN"
+}

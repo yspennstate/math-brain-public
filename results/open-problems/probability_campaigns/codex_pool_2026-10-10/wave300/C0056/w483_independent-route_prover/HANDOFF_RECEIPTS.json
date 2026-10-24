@@ -1,0 +1,56 @@
+[
+  {
+    "action": "assert narrowly held submission leases",
+    "returncode": 0,
+    "stdout": "{\n  \"agent\": \"w483\",\n  \"asserted_at\": \"2026-10-10T07:13:19Z\",\n  \"claims\": [\n    {\n      \"claim_id\": \"clm-b7b39bbff5\",\n      \"claim_resource\": \"~\\\\math-brain-inbox\\\\w483\\\\bundle_001.json\",\n      \"expires_at\": \"2026-10-10T07:31:52Z\",\n      \"mode\": \"write\",\n      \"resource\": \"~\\\\math-brain-inbox\\\\w483\\\\bundle_001.json\"\n    },\n    {\n      \"claim_id\": \"clm-7d79f8a89b\",\n      \"claim_resource\": \"~\\\\primary_directive\\\\hooks1000\\\\proposals\\\\math-w483.jsonl\",\n      \"expires_at\": \"2026-10-10T07:31:52Z\",\n      \"mode\": \"write\",\n      \"resource\": \"~\\\\primary_directive\\\\hooks1000\\\\proposals\\\\math-w483.jsonl\"\n    }\n  ]\n}\n",
+    "stderr": ""
+  },
+  {
+    "action": "send probability300/C0056/referee to w485",
+    "returncode": 0,
+    "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": null,\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"message\",\n  \"message_id\": \"msg-eb84746050\",\n  \"message_ids\": [\n    \"msg-eb84746050\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": false,\n  \"reused\": 0,\n  \"to\": \"w485\",\n  \"topic\": \"probability300/C0056/referee\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "action": "send probability300/C0056/adversary to w484",
+    "returncode": 0,
+    "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": null,\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"message\",\n  \"message_id\": \"msg-9dc65f4bf8\",\n  \"message_ids\": [\n    \"msg-9dc65f4bf8\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": false,\n  \"reused\": 0,\n  \"to\": \"w484\",\n  \"topic\": \"probability300/C0056/adversary\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "action": "send probability300/C0056/lemma-boundary to w480",
+    "returncode": 0,
+    "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": null,\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"message\",\n  \"message_id\": \"msg-e3e760c464\",\n  \"message_ids\": [\n    \"msg-e3e760c464\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": false,\n  \"reused\": 0,\n  \"to\": \"w480\",\n  \"topic\": \"probability300/C0056/lemma-boundary\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "action": "send probability300/C0056/lemma-boundary to w486",
+    "returncode": 0,
+    "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": null,\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"message\",\n  \"message_id\": \"msg-598d61b543\",\n  \"message_ids\": [\n    \"msg-598d61b543\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": false,\n  \"reused\": 0,\n  \"to\": \"w486\",\n  \"topic\": \"probability300/C0056/lemma-boundary\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "action": "send probability300/C0056/lemma-boundary to w489",
+    "returncode": 0,
+    "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": null,\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"message\",\n  \"message_id\": \"msg-4f683191f6\",\n  \"message_ids\": [\n    \"msg-4f683191f6\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": false,\n  \"reused\": 0,\n  \"to\": \"w489\",\n  \"topic\": \"probability300/C0056/lemma-boundary\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "action": "send probability300-integration/C0056 to codex-01a12190",
+    "returncode": 0,
+    "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": null,\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"message\",\n  \"message_id\": \"msg-252c645a80\",\n  \"message_ids\": [\n    \"msg-252c645a80\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": false,\n  \"reused\": 0,\n  \"to\": \"codex-01a12190\",\n  \"topic\": \"probability300-integration/C0056\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "action": "post measured packet progress",
+    "returncode": 0,
+    "stdout": "logged\n",
+    "stderr": ""
+  },
+  {
+    "action": "read after saved batch",
+    "returncode": 0,
+    "stdout": "- 07:10 w484 probability300/C0056/direct-audit: Independent derivation was saved before your core proof; paired statement now checked and consistent. Direct scoped KEEP of L1-L5 in ~/brain_workers/w484/CORE_AUDIT.md, snapshot SHA256 4f99ebdf4c964aacc446b9399db3eab0b6edcecf85ad00534470ccd9c9867338. Exact pair estimate remains assumed. Disjoint cavity bound in ATTEMPT.md L03: conditional normalized Im G squared <=M/(2*pi*lambda*b), a\n- 07:12 w480 probability300-C0056: C0056 boundary claim: w480 developed logarithmic cavity/entropy purity criterion and finite-cavity obstruction. ~\\brain_workers\\w480\\ATTEMPT.md . No certificate construction or GOE claimed.\n- 07:13 w485 C0056-referee: Direct referee KEEP for scoped L1-L8; L6 Minami (1.4) constant is correct, but conditional eigenvector mark bound K/N^2 remains unproved. Source is two targets; Sep 23 preprint only claims AC for uniform law. Review: ~/brain_workers/w485/REVIEW_PACKET.md SHA256 0FA7E98DB2B3E825BD129BCB5E5CF641A53F60A569D95FC33420F47946128ABC\n",
+    "stderr": ""
+  }
+]

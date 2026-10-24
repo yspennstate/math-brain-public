@@ -1,0 +1,159 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w567",
+  "bundle_slug": "c0029-arithmetic-route-and-gaussian-limit-correction-w567-001",
+  "entries": [
+    {
+      "key": "l1",
+      "namespace": "probability.random-matrices",
+      "logical_name": "prescribed-bernoulli-row-proportionality-floor",
+      "kind": "lemma",
+      "title": "Prescribed bernoulli row proportionality floor",
+      "statement": "For n>=2 and iid uniform sign B, P(s_min(B)=0)>=2^(1-n).",
+      "proof_text": "For n>=2, if B has independent uniform sign entries, then P(s_min(B)=0)>=2^(1-n). Conditional on its first row r, the independent second row is uniform on 2^n vectors; exactly r and -r are proportional to r. Either makes B singular. No product of conditional bounds is used.",
+      "assumptions": [
+        "n>=2",
+        "independent uniform {-1,+1} entries"
+      ],
+      "domain": "probability theory and matrix analysis",
+      "source": {
+        "source_id": "owner-own-work:w567:C0029:L1",
+        "url": "file:///~/brain_workers/w567/PROVED_LEMMAS.md",
+        "revision": "draft-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l2",
+      "namespace": "probability.random-matrices",
+      "logical_name": "arithmetic-singular-value-gap-for-sign-matrices",
+      "kind": "lemma",
+      "title": "Arithmetic singular value gap for sign matrices",
+      "statement": "For every nonsingular n by n sign matrix B, n>=2, s_min(B)>=2^(n-1)((n-1)/n^2)^((n-1)/2). Hence for 0<=epsilon<sqrt(n) times this bound, s_min(B)<=epsilon/sqrt(n) if and only if B is singular.",
+      "proof_text": "Using the sign normalization and determinant identity of L3, |det(B)|=2^(n-1)|det(H)|>=2^(n-1) for nonsingular B. Also sum_i s_i^2=n^2. AM-GM on the largest n-1 singular values gives product_{i<n}s_i<=(n^2/(n-1))^((n-1)/2). Divide the determinant product by this bound. The strict-cutoff event equivalence follows immediately.",
+      "assumptions": [
+        "n>=2",
+        "B has entries in {-1,+1}",
+        "nonsingularity only for the positive lower bound"
+      ],
+      "domain": "probability theory and matrix analysis",
+      "source": {
+        "source_id": "owner-own-work:w567:C0029:L2",
+        "url": "file:///~/brain_workers/w567/PROVED_LEMMAS.md",
+        "revision": "draft-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l3",
+      "namespace": "probability.random-matrices",
+      "logical_name": "sign-matrix-normalization-and-bordered-bernoulli-inverse",
+      "kind": "lemma",
+      "title": "Sign matrix normalization and bordered bernoulli inverse",
+      "statement": "An iid sign n by n B has the same singular-value law as C=[[1,1^T],[1,J-2H]], where H is iid {0,1} of size n-1. det(C)=(-2)^(n-1)det(H). For nonsingular H, C^(-1)=[[1-(1/2)1^T H^(-1)1,(1/2)1^T H^(-1)],[(1/2)H^(-1)1,-(1/2)H^(-1)]].",
+      "proof_text": "For iid uniform sign B of size n>=2, there are diagonal sign matrices D_r,D_c such that C=D_r B D_c has first row and column identically 1 and can be written\n\nC = [[1, 1^T], [1, J-2H]],\n\nwhere H is (n-1) by (n-1) with iid uniform {0,1} entries. B and C have exactly the same singular values. Conditional on the entire first row and column of B, the entries of the lower-right block of B remain independent uniform signs. Put (D_c)_{jj}=B_{1j} and (D_r)_{ii}=B_{i1}B_{11}. Then C_{1j}=C_{i1}=1 and for i,j>1,\n\nC_{ij}=B_{i1}B_{11}B_{ij}B_{1j}.\n\nThe conditioned boundary only multiplies each independent interior sign by a fixed sign. Therefore the conditional joint law of C's interior is the uniform product law and does not depend on the boundary. Set H_{i-1,j-1}=(1-C_{ij})/2. Orthogonal diagonal multiplications preserve singular values.\n\nSubtracting the first row from the others gives det(C)=(-2)^(n-1)det(H). In particular, B is nonsingular if and only if H is. For nonsingular H, the exact inverse is\n\nC^(-1) = [[1-(1/2)1^T H^(-1)1, (1/2)1^T H^(-1)], [(1/2)H^(-1)1, -(1/2)H^(-1)]].\n\nThis follows either by direct block multiplication or by the Schur complement S=J-2H-11^T=-2H. Consequently the parent conjecture is equivalent, away from singular H, to an upper-tail estimate for the operator norm of this displayed inverse. The border terms and their dependence on H cannot be dropped.",
+      "assumptions": [
+        "n>=2",
+        "all entries of B independent uniform signs",
+        "H nonsingular for inverse formula"
+      ],
+      "domain": "probability theory and matrix analysis",
+      "source": {
+        "source_id": "owner-own-work:w567:C0029:L3",
+        "url": "file:///~/brain_workers/w567/PROVED_LEMMAS.md",
+        "revision": "draft-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l5",
+      "namespace": "probability.random-matrices",
+      "logical_name": "flat-hadamard-kernel-conditional-small-ball-obstruction",
+      "kind": "lemma",
+      "title": "Flat hadamard kernel conditional small ball obstruction",
+      "statement": "For every n=2^k, k>=1, a sign Hadamard matrix with its all-ones row removed has all positive singular values sqrt(n) and a flat unit kernel vector, yet an independent iid sign last row makes the square matrix singular with probability binom(n,n/2)/2^n>=1/(n+1). Thus these conditioning and flatness hypotheses alone do not imply a uniform conditional bound epsilon+C exp(-c n).",
+      "proof_text": "For every n=2^k, k>=1, let Q_n be the Sylvester sign Hadamard matrix, so Q_n Q_n^T=n I and its first row is all 1. Let R be Q_n with its first row removed. Then all n-1 positive singular values of R equal sqrt(n) and the unit kernel vector v=n^(-1/2)(1,...,1) is perfectly flat. For an independent iid sign row x,\n\nP(s_min([R;x])=0 | R)=P(sum_j x_j=0)=binom(n,n/2)/2^n >= 1/(n+1).\n\nThe matrix is singular exactly when the new row is orthogonal to the one-dimensional kernel of R. The sum vanishes exactly for n/2 positive signs. The central binomial coefficient is the largest of the n+1 binomial coefficients, whose sum is 2^n, proving the lower bound. The construction exists for every power of two by Q_2=[[1,1],[1,-1]] and Q_{2m}=[[Q_m,Q_m],[Q_m,-Q_m]]. Thus no fixed C,c>0 can give a bound epsilon+C exp(-c n) conditional on every block with these spectral and flatness properties: at epsilon=0, 1/(n+1)>C exp(-c n) for all sufficiently large n. This does not refute the unconditional conjecture; the iid rectangular block rarely equals this structured witness. It refutes only that proposed uniform conditional step.",
+      "assumptions": [
+        "n=2^k, k>=1",
+        "R is the displayed deterministic Sylvester Hadamard block",
+        "new row independent uniform signs",
+        "constants C,c fixed as n varies"
+      ],
+      "domain": "probability theory and matrix analysis",
+      "source": {
+        "source_id": "owner-own-work:w567:C0029:L5",
+        "url": "file:///~/brain_workers/w567/PROVED_LEMMAS.md",
+        "revision": "draft-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l6",
+      "namespace": "probability.random-matrices",
+      "logical_name": "bernoulli-proportional-row-collision-floor",
+      "kind": "lemma",
+      "title": "Bernoulli proportional row collision floor",
+      "statement": "For iid sign n by n B, q=2^(n-1), m=binom(n,2), P(B singular)>=1-product_{j=0}^{n-1}(1-j/q)>=m/q-binom(m,2)/q^2. The collision probability is asymptotic to n(n-1)2^(-n), excluding an upper bound C 2^(-n) for fixed C.",
+      "proof_text": "Let n>=2, q=2^(n-1), and m=binom(n,2). For iid sign B,\n\nP(B singular) >= p_n := 1-product_{j=0}^{n-1}(1-j/q) >= m/q-binomial(m,2)/q^2.\n\nMoreover p_n=(1+o(1))n(n-1)2^(-n). In particular there is no absolute C such that P(B singular)<=C 2^(-n) for every sufficiently large n. This does not rule out (1/2+o(1))^n or an arbitrary fixed exponential base greater than 1/2.\n\nNormalize each row by its first entry. Its remaining n-1 entries form an iid uniform vector in a set of q sign vectors; normalized rows are independent across rows. Two original rows are proportional precisely when their normalized vectors coincide. Given the first j distinct vectors, the next independent uniform vector avoids them with probability 1-j/q. Iterating this conditional probability along the filtration generated by the exposed rows gives the displayed product for no collision. This multiplication is justified by the proved conditional probability; it does not assume independence of collision events.\n\nFor the lower bound, apply Bonferroni to the m pair-collision events. Each has probability 1/q. Any two distinct pairs, whether disjoint or sharing a row, both collide with probability 1/q^2, since they impose two equality constraints on iid uniform vectors. Thus their union has probability at least m/q-binomial(m,2)/q^2 and at most m/q. Since m/q tends to zero, the two bounds are asymptotic. A row collision forces singularity, finishing all claims.",
+      "assumptions": [
+        "n>=2",
+        "independent uniform sign entries",
+        "limit n tends to infinity for asymptotic statement"
+      ],
+      "domain": "probability theory and matrix analysis",
+      "source": {
+        "source_id": "owner-own-work:w567:C0029:L6",
+        "url": "file:///~/brain_workers/w567/PROVED_LEMMAS.md",
+        "revision": "draft-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "c1",
+      "namespace": "probability.random-matrices",
+      "logical_name": "real-gaussian-least-singular-value-limit-versus-finite-law",
+      "kind": "concept",
+      "title": "Real gaussian least singular value limit versus finite law",
+      "statement": "For real iid standard Gaussian G_n, 1-exp(-t-t^2/2) is the limiting CDF of sqrt(n)s_min(G_n) at fixed t>=0, not a finite-n exact CDF. At n=1 the exact CDF is erf(t/sqrt(2)), with slope sqrt(2/pi) at zero.",
+      "proof_text": null,
+      "assumptions": [
+        "real standard Gaussian entries",
+        "t fixed>=0",
+        "n tends to infinity for limiting formula"
+      ],
+      "domain": "probability theory and matrix analysis",
+      "source": {
+        "source_id": "owner-own-work:w567:C0029:C1",
+        "url": "https://arxiv.org/pdf/0903.0614",
+        "revision": "draft-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "l2",
+      "to_key": "l3",
+      "kind": "depends_on",
+      "rationale": "L3 gives det(C)=(-2)^(n-1)det(H) with integer H and preserves singular values; L2 combines this divisibility with AM-GM."
+    },
+    {
+      "from_key": "l6",
+      "to_key": "l1",
+      "kind": "generalizes",
+      "rationale": "L1 uses one prescribed proportional-row event. L6 takes the union over all row pairs and derives its exact collision probability."
+    },
+    {
+      "from_key": "c1",
+      "to_existing_logical": "math:probability.random-matrices:attempt-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr",
+      "kind": "cites",
+      "rationale": "C1 corrects only the finite-n exact-law assertion in this attempted-unsolved concept, using the Gaussian limit source and an n=1 counterexample."
+    }
+  ]
+}

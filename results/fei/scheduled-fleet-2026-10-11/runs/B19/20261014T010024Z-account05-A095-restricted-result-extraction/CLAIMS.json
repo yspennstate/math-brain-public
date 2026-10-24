@@ -1,0 +1,63 @@
+[
+  {
+    "claim_id": "A095-RANK-KL-EQUIVALENCE",
+    "version": 3,
+    "exact_statement": "For every Boolean f and every order sigma, normalize Q_(sigma,k)(S)=prod_{i in positions_sigma(S)}i^(-2)/Z_(n,k), set beta_(n,k)=ln(Z_(n,k)(k!)^2), D_sigma=sum_k P(|S|=k)D_nat(P(S||S|=k)||Q_(sigma,k)), and T_sigma=2R_sigma-D_sigma. Then (ln2)H(f)=H_nat(|S|)+T_sigma+E beta, with 0<=beta_(n,k)<=k ln(pi^2/4). If K_T=sup_nonconstant_f min_sigma T_sigma/I(f) and C_FEI=sup H/I, then K_T/ln2<=C_FEI<=log2(4+e)+log2(pi^2/4)+K_T/ln2 in the extended real sense. Thus K_T finite iff uniform-cube FEI holds. Concrete paid application: for any Boolean g with known bias mu and supplied normalized core reference R positive on its spectrum, empty calibration to R0(empty)=mu^2 is CE-nonincreasing. For r>=1,p=2^-r,F=1+A_r(g-1), the full reference Q(vac)=[1-p(1-mu)]^2, Q(U!=empty,T=empty)=p^2(1-mu)^2, Q(U,T!=empty)=p^2 R0(T) is normalized and has CE_F-H(F)=p D(P_g||R0) and CE_F<=p CE_g_cal+6rp(1-mu). For g=q product_j(1-2 A_(L_j)) on disjoint private blocks and a supplied terminal reference, its fixed occupied-block/uniform-nonempty-subset reference gives CE_F<=p CE_q_cal+4p sum_j I(h_j)+6rp(1-mu_g), with I(F)=p[I(q)+sum_j I(h_j)+r(1-mu_g)]. Thus a terminal cost <=C I(q) yields full cost <=max(C,6)I(F); q=1 yields CE<=6I uniformly in r, widths and number of blocks. For r=0,q=1 the same block reference has CE=H<4I. No universal terminal reference bound or incompatible shared-control extension is claimed. Further complete-reference application: for every integer t>=2, Boolean children G(s,X), H(s,Y) sharing a uniform t-bit block s with disjoint arbitrary private cubes, fresh selector z and F=(G+H)/2+z(G-H)/2, put d=Inf_z(F), d*=min(d,1-d). Shared-collision minority mass delta obeys delta<=min(d*,2^t d*^2) and B_C<=h2(delta). Consequently Delta=H(F)-(H(G)+H(H))/2 <= (t+2+3/ln2)d*. Every supplied normalized finite-cost positive-support child reference can be calibrated at all shared-only atoms, decreasing CE by exact categorical KL; their lifted single normalized full-output reference Q retains exact debt D(P_F||Q)=(D(P_G||R_Gc)+D(P_H||R_Hc))/2 and CE_F<=(c_Gc+c_Hc)/2+(t+2+3/ln2)d*. I(F)=(I(G)+I(H))/2+d, counting shared physical bits once. Given supplied child CE bounds K_G I(G), K_H I(H), this closes CE_F<=max(K_G,K_H,t+2+3/ln2)I(F). If kappa_t=sup Delta/d* over all such children and private dimensions with 0<d*<=1/2, then t-1-log2(16/9)<=kappa_t<=t+2+3/ln2 for t>=4, and kappa_t/t tends to 1. These dimension-dependent transfers do not give an absolute selector-only coefficient, a universal arbitrary-terminal reference, or a full FEI bound.",
+    "hypotheses": [
+      "Boolean sign function",
+      "uniform measure",
+      "H in bits, D and beta in nats",
+      "zero-mass levels omitted",
+      "k=0 reference assigns mass one to empty set",
+      "References normalized and positive on actual support",
+      "Earlier activation application only: Shared controls form one common signed conjunction; all remaining private blocks and terminal cube are disjoint",
+      "Bias is fixed known instance data; references chosen before spectral sampling",
+      "Ideal negative-log probability costs; no optional binary prefix-rounding bit included",
+      "The new selector application uses t>=2 arbitrary shared uniform bits and disjoint private cubes; it does not use the common-spine hypothesis of the earlier activation application",
+      "d*=min(d,1-d) is justified by sign folding; child spectra and all entropy costs are preserved",
+      "All references are calibrated and fixed before spectral sampling; complete off-target reference mass retained"
+    ],
+    "statement_sha256": "0e0f8156b244b72893f9cdd56d20be4257ff2cceb04252dc0805766411a2c4cb",
+    "contributors": [
+      "A095; A097/A086 collision-calibration transfer and bent-flip lower witness credited as prior inputs"
+    ],
+    "proof_source": {
+      "original_equivalence": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261011T231526Z-account05-A095-restricted-result-extraction\\REPORT.md",
+      "retained_v2": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261013T213857Z-account05-A095-restricted-result-extraction\\DERIVATION.md",
+      "new_linear_tax_and_sharpness": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T010024Z-account05-A095-restricted-result-extraction\\DERIVATION.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T010024Z-account05-A095-restricted-result-extraction\\out\\EXACT_RESULTS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 2,
+        "status": "Earlier exact equivalence and paid applications retained unchanged; author-proved with independent review pending"
+      },
+      {
+        "claim_id": "A097-ONE-SHARED-DATA-COLLISION-TRANSFER",
+        "version": 1,
+        "status": "Calibration identity and bent-flip witness reconstructed from cited DERIVATION and BOUNDARY; independently accepted by A094 stage 3 at full stated scope; larger-block exponential bound replaced only as an upper estimate, not refuted"
+      },
+      "Elementary Parseval, signed selector expansion, Jensen for binary entropy, scalar JS inequality, and all-parameter calculus in current DERIVATION"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 2,
+        "scope": "Prior statements retained; same C020 candidate extended with a linear all-overlap paid-reference application and sharp asymptotic tax"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A094",
+      "A097",
+      "A086",
+      "A085",
+      "B19",
+      "B20"
+    ]
+  }
+]

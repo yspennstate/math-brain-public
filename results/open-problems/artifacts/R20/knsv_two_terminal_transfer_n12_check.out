@@ -1,0 +1,36 @@
+R20 KNSV exact independent-two-terminal-network n=12 check
+model_arithmetic=integer; numpy.int64 only for exact Laplacian products under proved no-overflow bound
+int64_safety_bound=7243615306752 int64_max=9223372036854775807
+r=1 connected_labelled_networks=1 transfer_types=1
+r=2 connected_labelled_networks=14 transfer_types=8
+r=3 connected_labelled_networks=314 transfer_types=67
+r=4 connected_labelled_networks=12424 transfer_types=701
+positive_compositions_7_into_4=20
+transfer_assignments_per_side=11284
+moment_prefix_elimination:
+  k=1 common_moment_vectors=10 cross_pairs=25170416
+  k=2 common_moment_vectors=143 cross_pairs=2118156
+  k=3 common_moment_vectors=633 cross_pairs=423874
+  k=4 common_moment_vectors=1456 cross_pairs=34824
+  k=5 common_moment_vectors=369 cross_pairs=2715
+  k=6 common_moment_vectors=22 cross_pairs=185
+  k=7 common_moment_vectors=3 cross_pairs=19
+  k=8 common_moment_vectors=1 cross_pairs=2
+  k=9 common_moment_vectors=0 cross_pairs=0
+last_common_trace_1_to_8=(36, 172, 972, 5968, 38456, 255826, 1741160, 12055528)
+last_candidates_counts=2,1
+last_side0_trace9=[84587130, 84587130]
+last_side1_trace9=[84587076]
+near_side0_assignment=((1, 0), (3, 32), (1, 0), (2, 1))
+near_side1_assignment=((3, 20), (2, 3), (1, 0), (1, 0))
+near_side0_graph6=KUwgQSASA_A?
+near_side1_graph6=KUwgWPO?K_Q?
+near_side0_edges=((0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (1, 7), (1, 9), (1, 10), (2, 4), (2, 5), (3, 9), (3, 10), (3, 11), (4, 5), (4, 6), (4, 7), (6, 7), (6, 8))
+near_side1_edges=((0, 2), (0, 3), (0, 4), (0, 10), (0, 11), (1, 3), (1, 4), (1, 8), (2, 4), (2, 5), (3, 8), (3, 10), (3, 11), (4, 5), (4, 6), (4, 7), (5, 6), (8, 9))
+direct_transfer_U_match_side0=True side1=True
+near_U_equal=False
+near_U_sha256_side0=16f9ff67abb0ac19019e9c8761a8151e039e4e105c1d7e7c074545fe27f682f8
+near_U_sha256_side1=f2bf23684917cecf61f25a025fef39d58f51213f950cfba3628090cce967e63e
+first_U_difference=((1, 1, 1, 1, 1, 1, 1, 1, 4), 0) side0=149 side1=147
+VERDICT=PASS: no ordinary-U collision exists in the full independent connected two-terminal replacement family at n=12.
+SCOPE=PARTIAL_ONLY: arbitrary simple 12-vertex graphs and cross-coupled/shared-internal-vertex replacements are not covered; N_sep remains >11.

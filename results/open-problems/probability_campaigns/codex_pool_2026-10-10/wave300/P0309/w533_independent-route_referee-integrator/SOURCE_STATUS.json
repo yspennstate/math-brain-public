@@ -1,0 +1,36 @@
+{
+  "problem_id": "P0309",
+  "checked_at": "2026-10-10",
+  "verdict": "INTAKE_STATEMENT_RECOVERED_PRIMARY_REVIEW_MATCHED_FORMAL_SCOPE_STILL_OPEN",
+  "current_openness": "UNKNOWN",
+  "evidence_rows": [
+    {
+      "source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p02.json:2212-2228, entry op-p0309",
+      "quote": "Prove existence of a crystalline Gibbs phase at sufficiently low positive temperature for the three-dimensional Coulomb or Riesz gas in the regimes predicted in the review.",
+      "verdict": "Exact campaign intake statement recovered. It labels current status unverified and leaves exponent range, Gibbs construction, ensemble, and positional-order criterion to the cited review."
+    },
+    {
+      "source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:555",
+      "quote": "5,P0309,Positive-temperature crystalline Gibbs phases for three-dimensional Riesz gases,unsolved,3D crystalline phase for Riesz gases (crystallisation)",
+      "verdict": "Historical title and status only; no quantifiers or model specification."
+    },
+    {
+      "source": "Mathieu Lewin, Coulomb and Riesz gases: The known and the unknown, arXiv:2202.09240v2, Sec. VI, PDF pp. 58-59, https://arxiv.org/pdf/2202.09240",
+      "quote": "phase transition is that R_s,beta,mu is not reduced to one point",
+      "verdict": "Primary review describes phase transition as nonuniqueness of Gibbs point processes. It explicitly says its finite-beta R_s,beta,mu is defined for s>d; it does not supply a general finite-beta DLR construction in the long-range 3D case."
+    },
+    {
+      "source": "Lewin, arXiv:2202.09240v2, Sec. VI.B, PDF p. 65, https://arxiv.org/pdf/2202.09240",
+      "quote": "it is believed to form a solid",
+      "verdict": "For d=3, s>3, review reports numerical BCC/FCC phase diagram; for s<3, analogous long-range diagram is described as a belief. These are expectations, not a proved theorem or a single quantified conjecture."
+    },
+    {
+      "source": "Lewin, arXiv:2202.09240v2, Sec. IV.B, Conjecture 38, PDF p. 43, https://arxiv.org/pdf/2202.09240",
+      "quote": null,
+      "verdict": "Conjecture 38 is at zero temperature; it must not be substituted for P0309."
+    }
+  ],
+  "candidate_formalization": "For some s>3, density rho>0 and finite beta>0, show a grand-canonical infinite-volume Gibbs state at chemical potential mu with nontrivial periodic order and corresponding symmetry-related nonunique Gibbs states. The exact meaning of periodic order, quantifier over s, beta threshold, and ensemble is not specified by the intake and must be fixed before a solution claim.",
+  "prior_attempt_search": "The named attempts H/I and Lean directory have no exact P0309 proof file. The intake brain_bundle_C006a05.json entry at-p0309 records the historical harmonic-phonon calculation and its defect/anharmonic gap; it is not a proof.",
+  "next": "Check owner solved/retired index and recent primary literature; require a precise formulation before any parent-problem proof verdict."
+}

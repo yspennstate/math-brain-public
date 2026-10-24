@@ -1,0 +1,35 @@
+# exact target, quantifiers, hypotheses and units
+
+For EVERY real C>=6 and every even k>=2, independently settle the proposed same-bank early-tag extension of the shared-core graft on the canonical bent/zero-flip profile and fixed majority3 seed. Entropy is in bits. The result is an all-price policy obstruction, not a solution or disproof of FEI. Current owner deadline October23 supersedes archived October21 metadata; no schedule was changed.
+
+# sources actually read, revisions and theorem locators
+
+Read current BOARD, B13 stream notes, own STATUS/LEARNED/WORKLOG and prior substantive derivations; consumed A065 20261021T171653Z PROOF sections on exact prefix/terminals and fixed-price witness. Read execution protocol revision2026-10-11-execution-v2 and campaign/supplement route material. SOURCE_RECEIPTS records local hashes, text encodings and intake separately from mathematical use. The supplied paper text files require cp1252 decoding; threshold38 Proposition8.6 is context only, and no external paper theorem is a new premise. The singleton entropy/channel baseline is ERASURE_REDUCTION sections1--2. One two-wording read-only math recall found weak general martingale/FEI matches and supplied no premise. Wake warned of stale personal-context notes; owner alerted before reliance. No internet source is required for this self-contained finite Boolean proof.
+
+# complete derivation or exact first unsupported line
+
+PROOF.md proves Q_C(a)=Q_C(M_k)=0 for all stated widths and prices by an explicit two-state paired recurrence. Clean branches are paid at price4. Odd exceptional-state entropy drop is <15/16; even entries of width>=6 have residual <-21/128 at price6. Width2 and width4 are separate proved bases. Both terminal spectra remain: epsilon=D_w(M)+tH(a)-Ct(1+I(a)). Packet charge lambda>t(k-2) gives epsilon>t(k-5C/2). Thus k>5C/2 defeats EVERY fixed finite price C>=6 with the same zero inherited account. Product prefixes add for every finite L; L=2^k makes the absolute debt diverge. Root influence grows too, so this is not an FEI counterfamily.
+
+The first unpaid universal line is an identified unused ancestor source paying early signed collision and both continuations, or a globally paid selected policy preserving the hidden tag. Optional stopping supplies conservation, not this payment. No infinite stopping or changing-dimension limit is used here.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+FROZEN_SPEC precedes computation. Run `python -X utf8 code/check.py --pilot` and then `python -X utf8 code/check.py` from this run. Fixed widths2,4,6,8,10,12 and prices4,32609/5000,8: 18 root comparisons, 162 partial majority assignments with both tag signs, 2557 exact assertions PASS in 0.725495s. Direct complete physical trees through k6 agree with the compressed recurrence; integer Walsh coefficients agree with closed multiplicities, and edge influences agree with Fourier sums. The hidden-tag entropy identity is checked as exact prime-log algebra. Rational outward log enclosures certify strict inequalities and recover the A065 k10 debt>1/100000. Kernel source/remainder are read and pinned; kernel reuse is disclosed.
+
+Supplemental `python -X utf8 code/boundary.py`: four complete physical trees at the actual C=6 boundary (majority3 and profile widths2,4,6), plus exact rational guard/power checks,267 assertions PASS in0.234762s. Main and boundary totals are2824 exact assertions; pilot assertions are counted separately. No dimension escalation or new discovery domain.
+
+The first pilot FAILED an incorrect H(E4)<4+1/8 claim: I omitted the tag sector internal entropy. The saved failure prompted a repair to H(Ek)<=k+h2(2^-k), explicit width4 base and stronger odd min-entropy bound for j>=4. Repaired pilot:1024 assertions in0.0562s; final check includes the repair. This is not hidden as an infrastructure failure. Runtime/memory scope stays below the frozen100MB estimate (peak unmeasured), no heavy mathematical search. Fresh memok precedes the separate500MB-estimated core compiler, with55s limit. The separate core Lean attempt timed out after 57.244s (55s requested cap plus wrapper overhead), status RUNTIME_UNVERIFIED, with no certified theorem. out/LEAN.json preserves the source/compiler hashes. Its intended target is only an integer reserve-reset guard; neither that guard nor the full entropy theorem is claimed Lean-checked. No retry was launched. The mathematical rung is written proof with exact finite checks, pending external independent review; no full Lean certification is claimed.
+
+# proof dependencies and changed downstream conclusions
+
+Finite entropy/influence telescopes and the baseline scalar JS bound suffice; all new family reasoning is reconstructed in PROOF. A065 exact prefix/product clauses independently HOLD at the scoped review in out/A065_REVIEW.json. Its whole bundled enumeration is not adopted. The new all-width zero-profile argument replaces finite evidence for that part. A062 v5 remains valid with delayed tag; raising a fixed price on the early prefix cannot remove that hypothesis. Existing pending reserve candidate is extended to v6 rather than opening a new broad candidate. A064/A065 should retain tag priority or identify a genuinely additional owner. A087/A094 review this extension independently.
+
+# one next mathematical action and independent reviewer
+
+Prove a policy invariant that keeps the tag hidden until seed completion while preserving the SAME ancestor reserve through the next mixed data/seed query, or exhibit an unused signed ancestor source for the early reveal. Every price C>=6 now has an explicit obstruction width, so another price sweep is not useful. Reviewers:A087/A094; consumers:A064/A065/B13/B20.
+
+# actual persistence receipts or precise save blocker
+
+All four protocol artifacts, PROOF, frozen spec, executable code, pilot/final/failure outputs, source pins, scoped A065 review, admission/formal receipts and local hash/schema receipts are in this run. Rolling STATUS is two lines; WORKLOG is appended and LEARNED updated. No git, mail, research-brain write, other-agent/source mutation, trading access, GPU, detached worker, or process termination. Mandatory session wake is the separately required helper. No supervisor copy, mirror verification, adoption or independent acceptance is asserted. No local save blocker remains.
+
+**Universal bridge:** C019 stopping-tree payment and C024 history transfer gain an all-price obstruction: the same inherited controller/profile bank is exactly zero for every even width at C>=6, while an early-tag finite stopped bill exceeds2^-k(k-5C/2). Thus increasing any fixed price cannot repair this extension; both complete terminals and all queried influence are retained. Full FEI still needs a globally payable selected reveal policy or an independently funded signed collision owner. NEXT targets that exact universal ownership step, with delayed-tag priority surviving, rather than adding another isolated finite case.

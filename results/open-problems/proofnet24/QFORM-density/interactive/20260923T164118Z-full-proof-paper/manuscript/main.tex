@@ -1,0 +1,147 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage[round,authoryear]{natbib}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\hypersetup{pdftitle={Density Bounds for Quadratic Forms under Product Measures},pdfauthor={},pdfsubject={Quadratic forms of independent random variables},pdfkeywords={quadratic forms, anti-concentration, bounded densities, product measures, Brascamp-Lieb}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Density bounds for quadratic forms}
+\fancyfoot[C]{\thepage}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{1.2em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=3pt,topsep=5pt}
+\makeatletter
+\renewcommand*{\l@subsection}{\@dottedtocline{2}{1.5em}{3.2em}}
+\makeatother
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\vol}{vol}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\one}{\mathbf1}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+
+\title{Density Bounds for Quadratic Forms under Product Measures}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $X\in\mathbb R^n$ have independent coordinates with Lebesgue densities bounded by one, and let $B$ be an arbitrary real matrix. The quadratic form $X^TBX+b^TX+c$ depends on $B$ only through its symmetric part $A=(B+B^T)/2$. We investigate density bounds under the hypothesis $s_3(A)\ge1$. For every fixed dimension we obtain a bound of order $\sqrt n$ uniformly over $A$, $b$, and the coordinate laws. We prove dimension-free bounds for semidefinite forms, as well as bounds for diagonal forms, forms with suitable coordinate pivots, and several classes of indefinite forms satisfying quantitative geometric conditions. For product Gaussian scale mixtures satisfying an inverse-variance moment condition, the density bound is less than three for matrices of arbitrary rank and signature. Further estimates cover bounded-rank forms with unit-interval inputs and one side of a rank-three indefinite level set. We give a no-pivot reduction and integrability estimates for singular conditional densities. A dimension-free bound for general indefinite forms with arbitrary bounded coordinate densities remains open.
+\end{abstract}
+\clearpage
+\tableofcontents
+\newpage
+
+\section{Introduction}\label{sec:introduction}
+
+Let $X=(X_1,\ldots,X_n)$ have independent coordinates with probability densities $f_i$ satisfying $0\le f_i\le1$ almost everywhere. For a real $n\times n$ matrix $B$, put $A=(B+B^T)/2$ and consider
+\begin{equation}\label{eq:main-form}
+ Q(X)=X^TBX+b^TX+c=X^TAX+b^TX+c,
+\end{equation}
+where $b\in\mathbb R^n$ and $c\in\mathbb R$. Write $s_j(A)$ for the singular values of the symmetric part in decreasing order; these are its eigenvalue moduli in decreasing order. The density norm below is the essential supremum. No moment, centering, identical-distribution, smoothness, bounded-support, connected-support, or log-concavity assumption is imposed unless stated in a particular theorem.
+
+\begin{conjecture}[Uniform three-eigenvalue density bound]\label{conj:main}
+There is a finite absolute constant $C$ such that, for every dimension and every form \eqref{eq:main-form} with $s_3(A)\ge1$,
+\begin{equation}\label{eq:conjecture-density}
+ \|p_Q\|_\infty\le C.
+\end{equation}
+Equivalently, $\mathbb P(Q\in J)\le C|J|$ for every interval $J\subset\mathbb R$.
+\end{conjecture}
+
+The spectral condition concerns $A$, not $B$. Indeed, a full-rank skew-symmetric matrix $B$ in dimension four has $s_3(B)=1$ after normalization, while $x^TBx=0$ for every $x$. All subsequent theorems about symmetric matrices therefore apply to arbitrary real matrices through their symmetric parts.
+
+The homogeneous case $b=c=0$ is the motivating question. Arbitrary affine terms are included because conditioning on original coordinates creates them, often outside the range of the remaining quadratic matrix. Passing from the homogeneous question to an affine-uniform intermediate theorem is consequently a substantive requirement of many proofs. Absolute continuity itself is elementary when $A\ne0$ (Lemma~\ref{geom:ac}); the issue is a uniform density bound. A separate transversality argument gives a continuous density vanishing at infinity for each fixed matrix of rank at least three (Theorem~\ref{fg:fixed-matrix-continuity}); its constants may depend on the matrix and dimension.
+
+The normalization is natural. If $s_3(A)\ge a>0$ and the coordinate densities are bounded by a common $K>0$, then scaling $Y=KX$ reduces the proposed bound to $CK^2/a$. The remaining eigenvalues may be arbitrarily small or arbitrarily large and may have either sign. Replacing $A$ by a spectral truncation is not innocuous: the discarded quadratic part depends on the same coordinates.
+
+\subsection{Principal conclusions}
+
+The principal proved classes and their limitations are as follows. Bounds are stated at spectral scale one unless another scale is displayed.
+
+\begin{longtable}{@{}p{0.27\textwidth}p{0.25\textwidth}p{0.41\textwidth}@{}}
+\toprule
+\textbf{Setting} & \textbf{Conclusion} & \textbf{Scope}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\textbf{Setting} & \textbf{Conclusion} & \textbf{Scope}\tabularnewline
+\midrule
+\endhead
+Diagonal $A$ & $\|p_Q\|_\infty\le\pi$ & All affine terms; $\pi$ is sharp in this class (Theorem~\ref{geom:diagonal}).\tabularnewline
+Arbitrary real $B$ & $\|p_Q\|_\infty\le\frac{2\sqrt{6\pi n}}{s_3(A)}$ & $A=(B+B^T)/2$; every fixed dimension, all remaining spectrum and affine terms (Corollary~\ref{thm:finite-dimension}).\tabularnewline
+Positive or negative semidefinite $A$ & $\|p_Q\|_\infty\le17100/s_3(A)$ & Arbitrary rank, including tiny positive spectral tails and affine terms outside the range (Theorem~\ref{sd:main}).\tabularnewline
+Semidefinite, exact rank three & $\|p_Q\|_\infty\le58/s_3(A)$ & Arbitrary affine terms; $3e/s_3(A)$ suffices when the affine term is in the range.\tabularnewline
+One sign, separated nonzero spectrum & $\|p_Q\|_\infty\le130/\theta$ & Every nonzero eigenvalue has modulus at least $\theta$; arbitrary rank at least three.\tabularnewline
+Indefinite with small absolute spectral diagonal & $\|p_Q\|_\infty<35/s_3(A)$ & Requires $\max_i(|A|)_{ii}\le s_3(A)/680$, where $|A|=(A^2)^{1/2}$. Small $|a_{ii}|$ alone is insufficient for this argument.\tabularnewline
+Physical indefinite $2\times2$ pair & Bound \eqref{eq:full-pair} & Only the determinant of the pair and $s_3(A)$ enter; no rank restriction.\tabularnewline
+Diffuse finite-rank part plus coordinate phases & Integrable Fourier decay & Geometric frame conditions are required; all coordinate phases are allowed (Theorem~\ref{four:diffuse}).\tabularnewline
+Cross-coordinate block with distributed volume & Dimension-free density & Quantitative volume and row-marginal conditions; these conditions are not automatic (Theorem~\ref{four:volume-density}).\tabularnewline
+Hub configurations & Several dimension-free bounds & The independent hub, transverse square, projected crossing, and law-regularity assumptions are stated separately in Section~\ref{sec:hubs}.\tabularnewline
+Gaussian scale mixtures & $\|p_Q\|_\infty<3$ for the full form & Every rank and signature under the average component-peak condition (Theorem~\ref{gm:main}). A separate theorem permits adapted hubs.\tabularnewline
+Exact rank three, unit-interval laws & $\|p_Q\|_\infty<372$ & Every signature and affine term; bounded extra rank is allowed with a rank-dependent factor (Theorem~\ref{geom:interval}).\tabularnewline
+Exact rank three, signature $(2,1)$ & $p_Q\le\pi\sqrt2$ on the ruled side & Affine term in the range only; the opposite side is not included (Theorem~\ref{geom:ruled}).\tabularnewline
+\bottomrule
+\end{longtable}
+
+The dimension-free semidefinite theorem settles a broad portion of the question. For indefinite forms, the fixed-dimensional estimate above does not furnish a constant independent of $n$. The Gaussian-limit argument in Proposition~\ref{geom:threshold} forces any universal constant to be at least $3\sqrt2$.
+
+\subsection{Proof methods}
+
+The proofs use three complementary kinds of information. Coordinate conditioning exploits scalar and two-variable changes of variables while preserving the input product law. Fourier arguments use geometric integral inequalities, decoupling, and the distribution of squared minors of a crossing block. Hub arguments retain the law of a distinguished coordinate when conditioning on that coordinate alone would create a nonuniform bound. Each method controls specific quantities; none permits arbitrary replacement of the joint law of spectral coordinates by a bounded joint density.
+
+The no-pivot reduction in Section~\ref{sec:structure} isolates a class for which a dimension-free density bound is still needed. The integrability estimates in Section~\ref{sec:lower-levels} control logarithmic and half-power singularities. Section~\ref{sec:limitations} gives counterexamples to stronger estimates for general joint densities and describes the open uniform case.
+
+Classical inputs are cited at their points of use and discussed in Section~\ref{sec:literature}.
+
+\subsection{Notation and measure-theoretic conventions}
+
+For a rectangular matrix $M$, $\|M\|$ and $\|M\|_F$ denote its operator and Frobenius norms. The elementary symmetric function of the eigenvalues of $MM^T$ is denoted by $e_k(MM^T)$. By Cauchy--Binet, it is the sum of squared $k\times k$ minors. A principal coordinate block is always formed from original coordinates of $X$. The term \emph{leverage} refers to a diagonal entry of an orthogonal projection, or to the analogous quadratic row norm relative to a positive Gram matrix. We set $\log_+x=\max\{0,\log x\}$ for $x>0$.
+
+Our Fourier convention is $\widehat f(t)=\int e^{itx}f(x)\,dx$, so inverse Fourier transforms carry $(2\pi)^{-1}$ in one dimension. Conditional density formulas are interpreted through Tonelli against nonnegative output test functions. Integrable characteristic functions give bounded continuous density versions; an interval estimate alone gives an essentially bounded density without an additional continuity claim. Smooth approximation of the physical coordinate laws is used when a pointwise level-set calculation could otherwise encounter exceptional slices.
+
+\input{literature}
+\input{geometry}
+\input{fourier}
+\input{rank_two}
+\input{gaussian_mixture}
+\input{semidefinite}
+\input{lower_levels}
+\input{structure}
+\input{hubs}
+\input{gluing}
+\input{supplement}
+\input{gaussian_benchmarks}
+\input{limitations}
+
+\bibliographystyle{plainnat}
+\bibliography{bibliography}
+\end{document}

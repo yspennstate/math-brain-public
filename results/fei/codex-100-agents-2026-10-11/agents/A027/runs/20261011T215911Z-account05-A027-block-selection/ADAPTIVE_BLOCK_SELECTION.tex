@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\section*{Data-first proper-block payment for rare activations}
+All entropies are in bits; Fourier coefficients use the uniform normalized basis.
+Let $u:\{-1,1\}^m\to\{-1,1\}$, $m\ge1$, and let $A_r$ indicate one specified assignment of $r\ge1$ fresh control bits. Write $p=2^{-r}$ and
+\[F(x,z)=1+A_r(z)(u(x)-1),\quad \mu=\mathbb Eu,\quad d=1-\mu,\quad v=1-\mu^2.\]
+At the root select the physical block $W$ of all $m$ core coordinates and stop at its children. This is nonempty and proper, leaving $r$ coordinates. The physical assignment of $W$ is uniform, independently of the controls. Every leaf is a constant or the $r$-bit point defect $D_r=1-2A_r$.
+For the recovered channel notation, $R_T=2^{-m}\sum_b\widehat{F_b}(T)^2$, $r_T(b)=\widehat{F_b}(T)^2/(2^mR_T)$, and $\nu_T$ is the squared normalized Walsh transform across $b$. Thus
+\[B_W=\sum_T R_T H(\nu_T)=H(S_W\mid S_{W^c}),\qquad M_W=m-\sum_T R_TH(r_T),\]
+\[\Delta_WH=B_W+M_W,\qquad 0\le M_W\le (2/\ln2)I_W(F).\]
+\begin{theorem}
+For every such activation, without an FEI assumption on $u$,
+\[B_W(F)\le p(2dm+2)\le6pm.\]
+If $I(u)\ge\eta m$ for a fixed $\eta>0$, this is a proper-block selection theorem with $B_W(F)\le(6/\eta)I_W(F)$. Its complete stopping ledger gives
+\[H(F)\le \max\{6/\eta+2/\ln2,4\}\,I(F).\]
+The parameter bound is uniform in $m,r$, the core bias, and the actual Boolean table of $u$ satisfying the stated influence condition.
+\end{theorem}
+\begin{proof}
+Translate the specified control assignment to the origin, which only changes Fourier signs. For core sets $T\ne\varnothing$, every control coefficient has amplitude $p\widehat u(T)$. For $T=\varnothing$, a nonempty control set has amplitude $p(\mu-1)$, while the empty control set has amplitude $1-pd$.
+For each nonempty control Fourier set $U$, the fiber mass is $R_U=2p^2d$ by $d^2+v=2d$. Its conditional core law is the normalized squared Fourier law of $u-1$, whose entropy is at most $m$. Together these fibers contribute at most $2p(1-p)dm$.
+The empty control fiber has mass
+\[R_0=(1-pd)^2+p^2v=1-2pd+2p^2d.\]
+Its nonempty-core mass is $q=p^2v$. Writing $L$ for the entropy of the core spectrum conditioned on a nonempty set, its contribution is exactly
+\[R_0h_2(q/R_0)+qL.\]
+If $q=0$ interpret this contribution by continuity. Since $L\le\log_2(2^m-1)\le m$ and $R_0\le1$, the elementary entropy estimate gives
+\[R_0h_2(q/R_0)\le q\log_2(eR_0/q)\le q\log_2(e/q).\]
+For $v>0$ the last term is
+\[p^2[2rv+v\log_2(1/v)+v/\ln2]
+\le p^2[2r+(1+1/e)/\ln2]<2p.\]
+Here $rp\le1/2$ for every integer $r\ge1$ and $p\le1/2$. To check the strict numerical inequality without floating point, $\ln2\ge2(1/3+1/81)=56/81$ and $e>8/3$, so $1+1/e<11/8<112/81\le2\ln2$.
+Finally $v=d(2-d)\le2d$, hence
+\[2p(1-p)dm+p^2vm\le2pdm.\]
+This proves the conditional entropy bound.
+Direct physical edge counting yields
+\[I_W(F)=pI(u),\qquad I_{W^c}(F)=rpd,\qquad I(F)=pI(u)+rpd.\]
+The negative core assignments have probability $d/2$. Each gives $D_r$ with $I(D_r)=2rp$, so the average terminal influence is exactly $rpd$. No queried influence is spent at a leaf.
+The point defect has spectrum $(1-2p)^2$ at the empty set and $4p^2$ at each nonempty control set. Therefore
+\[H(D_r)=(1-2p)^2\log_2\frac1{(1-2p)^2}+8p(1-p)(r-1)\le4I(D_r).\]
+For $r=1$ this is zero. For $r\ge2$, $-t\ln t\le1-t$ implies that the first term is at most $4p/\ln2$, and $1/\ln2<2$ finishes the bound. The exact block entropy identity, its stated channel bound, and the terminal bound now give
+\[H(F)\le(6/\eta+2/\ln2)pI(u)+4rpd.\]
+This is the asserted single-use stopping payment.
+\end{proof}
+\section*{Exact cost and hardness guard}
+Write $\delta=(1-\mu)/2$, and for $v>0$ let $L$ be the entropy of the spectrum of $u$ conditioned on a nonempty set. The normalized squared spectrum of $u-1$ has empty atom $\delta$ and nonempty mass $1-\delta$, so its entropy is $h_2(\delta)+(1-\delta)L$. The preceding fiber calculation gives the exact identity
+\[\frac{B_W(F)}p=vL+4\delta(1-p)h_2(\delta)+\frac{R_0}p h_2(p^2v/R_0).\tag{*}\]
+This formula includes the exceptional empty control fiber; when a factor vanishes it is interpreted continuously.
+\begin{theorem}
+Restrict cores to $\mathbb Eu\ge0$. A finite universal constant $K$ with $B_W(1+A_r(u-1))\le KpI(u)$ for all these cores and all $r\ge1$ exists if and only if full FEI holds with a finite constant. More precisely, such a $K$ implies FEI with $C\le K+2$, while FEI with constant $C$ implies this core-block payment with $K\le C+5$.
+\end{theorem}
+\begin{proof}
+We use the elementary bound $h_2(v)\le2I(u)$. Here is a complete derivation: the cube edge-isoperimetric inequality gives $I(u)\ge2\delta\log_2(1/\delta)$ for $0<\delta\le1/2$. For $\delta\le1/4$, $v\le4\delta\le1$ and monotonicity of $t\log_2(e/t)$ give
+\[h_2(v)\le v\log_2(e/v)\le4\delta\log_2(e/(4\delta))\le4\delta\log_2(1/\delta)\le2I(u).\]
+For $1/4\le\delta\le1/2$, concavity shows $2\delta\log_2(1/\delta)\ge1$, so $h_2(v)\le1\le I(u)$. For completeness, the edge-isoperimetric input follows by induction on cube dimension: for a set split into halves of sizes $a\le b$, the two within-half boundaries are at least $a\log_2(2^{m-1}/a)$ and $b\log_2(2^{m-1}/b)$, and the cross boundary is at least $b-a$. The required comparison to $(a+b)\log_2(2^m/(a+b))$ reduces to $h_2(a/(a+b))\ge2a/(a+b)$, which is the concavity chord between $0$ and $1/2$. Dividing the resulting edge boundary by $2^{m-1}$ gives the stated influence bound. Empty sets are handled by continuity.
+In (*) the last term tends to zero as $p\to0$ for a fixed core, by its already proved $O(p(1+r))$ upper bound. Hence
+\[\lim_{r\to\infty}B_W(F)/p=H(u)-h_2(v)+4\delta h_2(\delta).\]
+The assumed core-block payment yields $H(u)\le KI(u)+h_2(v)\le(K+2)I(u)$. Complementing a core changes neither entropy nor influence, extending this to every Boolean core.
+Conversely Poincare's inequality $v\le I(u)$ is immediate from Parseval: every nonempty Fourier set has size at least one. Also $v\log_2(1/v)\le h_2(v)\le2I(u)$. Therefore
+\[\frac1pR_0h_2(p^2v/R_0)\le p[2rv+v\log_2(1/v)+v/\ln2]\le3I(u),\]
+using $rp\le1/2$, $p\le1/2$, and $1/\ln2<2$. Since $4\delta h_2(\delta)\le4\delta\le2I(u)$, (*) gives $B_W(F)/p\le H(u)+5I(u)$. Apply FEI. Constants and $v=0$ have zero block entropy and are included.
+\end{proof}
+\section*{Exact open extension}
+The density condition $m\le I(u)/\eta$ is the unpaid universal step. It is not hereditary under arbitrary restrictions and is not asserted to hold for arbitrary cores. The formula above retains the full entropy of the normalized spectrum of $u-1$ in the nonempty-control fibers. Replacing its dimension bound by a Boolean boundary payment, or choosing smaller physical core blocks while retaining this fiber law, is the next mathematical question. Neither zero aggregate erasure nor rarity certifies a general leaf.
+\end{document}

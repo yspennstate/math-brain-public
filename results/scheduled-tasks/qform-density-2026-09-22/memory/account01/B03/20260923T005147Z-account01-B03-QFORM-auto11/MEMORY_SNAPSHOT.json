@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B03",
+  "run_id": "20260923T005147Z-account01-B03-QFORM-auto11",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "continuity_full_target": "OPEN",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "fresh_control": {
+    "main_commit_at_final_refresh": "92f9380f46a39f17a6c401c7ca2f8f166ce10c69",
+    "owner_revision": "2026-09-22.15",
+    "control_readme_blob": "fca13a89d221115332ce5e60d49554ee0e213efa",
+    "correction_inbox_blob": "c7000cf3822ae4935a2faf43b89ac92ea65ac0fe"
+  },
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "bundle_commit": "bdf2cd05fb3e1d851381043021c47e6bb63a4439",
+    "report_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260923T005147Z-account01-B03-QFORM-auto11/REPORT.md",
+    "checker_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260923T005147Z-account01-B03-QFORM-auto11/CHECK.py",
+    "checker_output_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260923T005147Z-account01-B03-QFORM-auto11/CHECK_OUTPUT.txt",
+    "checker_terminator": "QFORM_B03_MIXED_HUB_BANK_PASS"
+  },
+  "new_claim": {
+    "id": "QFORM-MIXED-HUB-BANK-COLLISION-v1",
+    "statement": "For independent scalar sources A,B,C of density caps M_A,M_B,M_C, independent of arbitrary outside W, T=c(A+alpha(W))(B+beta(W))+lambda(C+gamma(W))^2+R(W) has a continuous density with ||p_T||inf<=4sqrt(3)|c|^(-2/3)|lambda|^(-1/3)(M_A M_B M_C)^(2/3). Its independent-copy weighted collision energy satisfies int |t|^(-1/2)|phi_T(t)|^2 dt <=8sqrt(2pi)3^(1/4)|c|^(-1/3)|lambda|^(-1/6)(M_A M_B M_C)^(1/3)."
+  },
+  "partner_applied": {
+    "partner": "account02/B03",
+    "primary_run_id": "20260922T150949Z-account02-B03-QFORM-r11",
+    "primary_commit": "f40d5d4f5013b0a6af275a19aa3dc0fa2d76c347",
+    "primary_result": "Product L3 endpoint ||p_XY||_3<=2sqrt(3) and product-square L3 x L3/2 density transducer.",
+    "latest_run_id": "20260923T001512Z-account02-B03-QFORM-auto11",
+    "latest_commit": "90b9e0b5438b950fd2a0ed054833c055fdb92967",
+    "latest_application": "On A_m(a,b)=star(a/sqrt(m)) direct_sum (b/m)J_m, applied the partner local collision lower bound I_local>=sqrt(pi/(3|a|))m^(1/4) against the new global bound I_global<26.392|a|^(-1/3)|b|^(-1/6), yielding I_local/I_global>=0.03877520246 m^(1/4)|a|^(-1/6)|b|^(1/6)."
+  },
+  "bank_projection_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "07305f53ba9b8a1d3e6e79f8c851f415f007d4a7",
+    "result": "For a nonzero original-coordinate coefficient vector u over independent cap-one inputs, ||p_(u^T X)||inf<=sqrt(2)/||u||_2."
+  },
+  "target_family_application": {
+    "family": "A_m(a,b)=star_(h,V)(a/sqrt(m)) direct_sum (b/m)J_m",
+    "spectrum": "{+|a|,-|a|,b}",
+    "density_bound": "||p||inf<=4sqrt(3)|a|^(-2/3)|b|^(-1/3)<=6.928204 for |a|,|b|>=1",
+    "continuity": true,
+    "collision_bound": "int |t|^(-1/2)|phi|^2 dt<=8sqrt(2pi)3^(1/4)|a|^(-1/3)|b|^(-1/6)<26.392|a|^(-1/3)|b|^(-1/6)"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1",
+    "QFORM-N3-LOCAL-COLLISION-BEFORE-AGGREGATION-FALSE-v1"
+  ],
+  "first_unpaid_implication": "From only s_3(A)>=1, construct an exhaustive product-preserving compiler into an aligned mixed-hub/rank-one-square packet, a paid ridge/cross-bank packet, or a genuinely hybrid no-pivot packet. Local physical-pair collision selection before aggregation is ruled out by the partner family.",
+  "next_step": "Allow a second low-rank contamination in the mixed-hub packet and seek a multi-packet interpolation that pays aggregate bank singular scales before taking any half-Riesz/collision endpoint.",
+  "do_not_use": [
+    "law-uniform pointwise scalar quadratic-phase decay",
+    "conditional cap for X+X' given X-X' or conversely",
+    "arbitrary-joint rank-three coarea bound",
+    "positive conditional projection-density moments",
+    "universal single-Schur extraction",
+    "fixed local physical-pair collision selection before aggregation"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "claim_scope": "auxiliary Gaussian formulas and quantized-field variance; no microscopic Gibbs proof",
+  "command": "python -X utf8 verify_boundary.py",
+  "gate": {
+    "agent": "w546",
+    "scope": "one deterministic auxiliary-formula verification, no particle simulation or training",
+    "created": "2026-10-10",
+    "max_cpu_seconds": 30,
+    "max_wall_seconds": 120,
+    "max_resident_megabytes": 256,
+    "threads": 1,
+    "largest_bessel_argument": 256,
+    "allowed_command": "python -X utf8 verify_boundary.py",
+    "outputs": [
+      "VERIFICATION.json"
+    ],
+    "rule": "abort between small quadrature cases if CPU or wall budget is exceeded; this gate does not authorize any shared compute or bypass any existing resource governor"
+  },
+  "cpu_seconds": 5.4375,
+  "wall_seconds": 93.32652960007545,
+  "rows": [
+    {
+      "r": 0.3,
+      "C6_elastic": 0.9920050698132981,
+      "negative_log_C6_direct": 0.008027061011434564,
+      "negative_log_C6_exact": 0.008027061011434633,
+      "F_critical": 0.011218412053797816
+    },
+    {
+      "r": 1.0,
+      "C6_elastic": 0.9177124153075038,
+      "negative_log_C6_direct": 0.08587121052741808,
+      "negative_log_C6_exact": 0.08587121052741806,
+      "F_critical": 0.12116524699506911
+    },
+    {
+      "r": 4.0,
+      "C6_elastic": 0.47718679132984,
+      "negative_log_C6_direct": 0.7398472686682004,
+      "negative_log_C6_exact": 0.7398472686682005,
+      "F_critical": 1.2472370741818104
+    },
+    {
+      "r": 12.0,
+      "C6_elastic": 0.47574690549081516,
+      "negative_log_C6_direct": 0.7428692773129699,
+      "negative_log_C6_exact": 0.74286927731297,
+      "F_critical": 2.3877558936735888
+    },
+    {
+      "r": 64.0,
+      "C6_elastic": 0.48902022763578096,
+      "negative_log_C6_direct": 0.7153514250544402,
+      "negative_log_C6_exact": 0.7153514250544403,
+      "F_critical": 4.0424067713404455
+    },
+    {
+      "r": 256.0,
+      "C6_elastic": 0.4885141518752707,
+      "negative_log_C6_direct": 0.7163868378569569,
+      "negative_log_C6_exact": 0.7163868378569571,
+      "F_critical": 5.429377163847106
+    }
+  ],
+  "elastic_plateau": 0.4886067799803316,
+  "angular_log_formula_max_absolute_error": 2.220446049250313e-16,
+  "projector_angular_identity_max_absolute_error": 8.302386556024999e-15,
+  "critical_eta6_exact": 0.125,
+  "critical_eta6_measured_64_to_256": 0.12506095669557366,
+  "positional_eta_exact": 0.07957747154594767,
+  "positional_eta_measured_64_to_256": 0.07958563575045319,
+  "quantized_variance_rows": [
+    {
+      "gaussian_variance": 0.1,
+      "quantized_variance_direct": 0.26438316910413245,
+      "added_variance": 0.16438316910413245,
+      "upper_added_bound": 0.2741556778080377,
+      "mass": 1.0,
+      "mean": 5.5634970611951325e-18
+    },
+    {
+      "gaussian_variance": 1.0,
+      "quantized_variance_direct": 1.1827704501798049,
+      "added_variance": 0.18277045017980487,
+      "upper_added_bound": 0.2741556778080377,
+      "mass": 1.0,
+      "mean": -3.5262794421478595e-17
+    },
+    {
+      "gaussian_variance": 10.0,
+      "quantized_variance_direct": 10.182770451872027,
+      "added_variance": 0.18277045187202745,
+      "upper_added_bound": 0.2741556778080377,
+      "mass": 0.9999999999999999,
+      "mean": 6.360151158227932e-17
+    }
+  ],
+  "formal_proof_receipt": null
+}

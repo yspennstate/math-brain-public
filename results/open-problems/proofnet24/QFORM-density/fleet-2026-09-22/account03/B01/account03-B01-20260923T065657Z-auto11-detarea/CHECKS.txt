@@ -1,0 +1,23 @@
+QFORM-CROSS-2AREA-AFFINE-RECEIVER-v1 deterministic checks
+
+1. Constant:
+2*sqrt(pi) = 3.5449077018110318.
+
+2. Scaling under K -> lambda K:
+(kappa1*kappa2)^(-1/2) -> |lambda|^(-1) (kappa1*kappa2)^(-1/2), exactly matching scalar output-density scaling.
+
+3. Rank-two invariant form:
+If rank(K)=2 then e2(KK^T)=kappa1^2*kappa2^2, hence e2(KK^T)^(-1/4)=(kappa1*kappa2)^(-1/2).
+
+4. Factorization form:
+For K=M^T N with two-row rank-two M,N and a legal internal change M' = T M, N' = T^(-T) N,
+ det(M'M'^T) det(N'N'^T)=det(MM^T) det(NN^T).
+Thus [det(MM^T)det(NN^T)]^(-1/4) is factorization invariant.
+
+5. Comparison with r23 anisotropic receiver:
+If N has singular values n1>=n2>0, old factor is n2^(-1), new N-factor is (n1*n2)^(-1/2). Their ratio new/old=sqrt(n2/n1)<=1. Example n1=10,n2=0.1 gives ratio 0.1.
+
+6. Inverse-radius layer cake:
+For planar density cap L, split int_0^infinity min(1,pi L t^(-2))dt at t0=sqrt(pi L): value =2sqrt(pi L).
+
+STATUS=PASS

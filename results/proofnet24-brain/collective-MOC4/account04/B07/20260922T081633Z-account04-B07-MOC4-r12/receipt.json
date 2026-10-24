@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "account": "account04",
+  "slot": "B07",
+  "run_id": "20260922T081633Z-account04-B07-MOC4-r12",
+  "campaign": "MOC4",
+  "scientific_status": "ESSENTIAL_STEP_APPLIED",
+  "target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "utc_start": "2026-09-22T08:16:32.972239Z",
+  "receipt_snapshot_utc": "2026-09-22T08:32:27.994118Z",
+  "elapsed_execution_seconds_to_receipt_snapshot": 955.022,
+  "elapsed_scope": "observed UTC start to receipt snapshot; includes reasoning, tool/network execution and output overhead; not pure thinking",
+  "control": {
+    "initial_commit": "63377a119a7b7474693650557e7c9b4b33157790",
+    "final_full_reread_commit": "44ed3711916d431be2f94b7e44ea25f9faf83206",
+    "owner_control_revision": "2026-09-22.2",
+    "active_programme": "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z",
+    "read_exact_at_final_commit": [
+      "AGENTS.md",
+      "scheduled_tasks/README.md including full OWNER MESSAGE",
+      "scheduled_tasks/fleet.json",
+      "scheduled_tasks/roles.json",
+      "scheduled_tasks/PROTOCOL.md",
+      "scheduled_tasks/work/shared/collective-open-problems-2026-09-22/ORDER.md",
+      "scheduled_tasks/work/shared/collective-open-problems-2026-09-22/TARGETS.md",
+      "scheduled_tasks/work/shared/collective-open-problems-2026-09-22/ASSIGNMENTS.json"
+    ],
+    "control_readme_git_blob_sha": "3d4a9372c87802ab734141a3374d04c8823372e3",
+    "control_readme_sha256": null,
+    "control_readme_sha256_status": "not_computed_by_available_connector; git blob identity recorded instead rather than fabricating SHA-256",
+    "owner_message_sha256": null,
+    "owner_message_sha256_status": "not_computed_by_available connector; full OWNER MESSAGE was read from exact final control snapshot",
+    "later_stop_observed": false
+  },
+  "directive_acknowledgments": {
+    "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z": "implemented",
+    "STOP_new_installation_and_benchmark_work": "implemented",
+    "MOC4_exact_n4_scope": "implemented",
+    "named_other_account_result_consumption": "implemented",
+    "actual_hour_login_start_finish": "in_progress_at_receipt_snapshot",
+    "source_bound_handoff": "implemented",
+    "WITHOUT_VERIFIED_BRAIN": "implemented"
+  },
+  "scientific_result": {
+    "name": "MOC4-SPIN6-COFACTOR-DEFICIT-v1",
+    "statement_summary": "For the anti-linear block N in every SO(6) exterior-square complex gauge, the singular values are (sqrt(lambda),sqrt(lambda),0), and all nine complementary minors obey |cof_ab(N)|^2=(lambda-r_a)(lambda-c_b).",
+    "strict_cut_witness": "S=diag(1,1/2,1/2) belongs to the two-rook/mass relaxation but violates the cofactor-deficit identity, so that relaxation is strictly larger than the genuine Spin(6) image.",
+    "first_unpaid_implication": "MOC4-STRICT-CURVATURE-COFACTOR-PAYMENT-v1",
+    "full_proof_claimed": false,
+    "moc4_counterexample_claimed": false
+  },
+  "named_other_account_source": {
+    "account_slot": "account03/B07",
+    "run": "20260922T060726Z-account03-B07-MOC4-r11",
+    "result": "MOC4-SPIN4-SATURATION-TO-ZERO-FACE-v1",
+    "source_commit_read": "86ebffd8566c6594c03aeb66f5a209e076098aee",
+    "source_blob": "3c11567e275d39376f217a9b9e3c10693efa3127",
+    "application": "Used only to split a hypothetical positive-gap maximizer into a mixed-Hessian saturation branch reducible to the still-unpaid zero face versus a strict-curvature branch. No zero-face safety claim imported."
+  },
+  "artifacts": {
+    "login": {
+      "path": "scheduled_tasks/status/account04/logins/2026-09-22T08Z/B07.json",
+      "blob": "6ce321d1c0d8f65bfbe0c77fb1ee57d4766985b0",
+      "read_back": true
+    },
+    "start": {
+      "path": "proofnet24/collective-MOC4/account04/B07/20260922T081633Z-account04-B07-MOC4-r12/start.json",
+      "blob": "dd50b6956c208ebd941186e52ee3488b307b4615",
+      "read_back": true
+    },
+    "report": {
+      "path": "proofnet24/collective-MOC4/account04/B07/20260922T081633Z-account04-B07-MOC4-r12/REPORT.md",
+      "commit": "bc65f5e0aed172876957024f8f11fb957c9e7f90",
+      "blob": "c28a23fd9a1234da762ac85a870870f1bba0092f",
+      "read_back": true
+    },
+    "verifier": {
+      "path": "proofnet24/collective-MOC4/account04/B07/20260922T081633Z-account04-B07-MOC4-r12/verify_cofactor_deficit.py",
+      "commit": "078804f98aa5fd4876cc0456fa6a40c8ff8985cb",
+      "blob": "e68db495fcc09e796a6ef19de08d350467a23c8d",
+      "read_back": true
+    },
+    "verifier_output": {
+      "path": "proofnet24/collective-MOC4/account04/B07/20260922T081633Z-account04-B07-MOC4-r12/verify_cofactor_deficit.out",
+      "commit": "e6f482632106f595e5df42a993ba1af044609e87",
+      "blob": "d1b55c7c15770dcb23a96cf6242be7d41d7ee7f5",
+      "read_back": true
+    },
+    "shared_handoff": {
+      "path": "scheduled_tasks/work/shared/collective-open-problems-2026-09-22/MOC4-HANDOFF-account04-B07-20260922T081633Z.md",
+      "commit": "bd9b2ee8cf150ff5c9231a371672df71e540e664",
+      "blob": "a33ef3d4f3032eebcc3f4a11c9314a76dc6c9312",
+      "read_back": true
+    }
+  },
+  "verification": {
+    "method": "exact SymPy rational arithmetic on a generic rational SO(6) product of eight Givens rotations plus an exact rational strict-cut witness",
+    "result": "PASS for all 9 cofactor-deficit identities on the exact sample; strict-cut witness excluded exactly",
+    "provider_or_remote_compute": false
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_requested": "maximum actually supported",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "thinking_usage": {
+    "reasoning_tokens": null,
+    "provider_thinking_seconds": null,
+    "source": "not_exposed",
+    "coverage": "unavailable"
+  },
+  "thinking_proxy": {
+    "observed_start_utc": "2026-09-22T08:16:32.972239Z",
+    "observed_receipt_snapshot_utc": "2026-09-22T08:32:27.994118Z",
+    "wall_seconds": 955.022,
+    "scope": "elapsed_execution_not_pure_thinking",
+    "scientific_report_characters": 10766,
+    "tool_calls": null,
+    "tool_call_count_status": "not_counted_exactly"
+  },
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "current_account_inventory": {
+    "inspection_scope": "current account only",
+    "managed_tasks_observed": 20,
+    "managed_enabled_observed": 20,
+    "hourly_valid_observed": 20,
+    "visible_task_email_push_flags": "off",
+    "account_level_notification_preference": "not_exposed",
+    "scheduler_mutations": 0,
+    "gap_report_to_B20": "none observed in this inventory snapshot"
+  },
+  "privacy_and_permissions": {
+    "changed_file_scope_review": "manual scoped review completed",
+    "benchmark_gold_accessed": false,
+    "credentials_accessed": false,
+    "email_or_drive_used": false,
+    "paid_or_remote_compute_used": false,
+    "public_posting": false,
+    "scheduler_ids_committed": false,
+    "machine_paths_committed": false,
+    "other_account_authentication": false,
+    "scheduler_mutation": false
+  },
+  "unresolved_blocker": "Need MOC4-STRICT-CURVATURE-COFACTOR-PAYMENT-v1 or a source-valid refutation: combine genuine strict Spin(4) Hessian reserve with gauge-conjugate cofactor-deficit identities and same-unitary exterior-minor constraints. The mixed-Hessian saturation branch still requires the separate zero-face support inequality.",
+  "next_action": "Attack the strict-curvature cofactor payment quantitatively; if refuted, preserve the exact witness and switch mechanism on the same MOC4 target after the campaign's unchanged-run threshold."
+}

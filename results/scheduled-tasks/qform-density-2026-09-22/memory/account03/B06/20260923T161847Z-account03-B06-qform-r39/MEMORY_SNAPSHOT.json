@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260923T161847Z-account03-B06-qform-r39",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "control_revision": "2026-09-22.15",
+  "startup_control_commit": "e1a13a8fc3898c98d4dff65adf01266c77df70fd",
+  "publication_refresh_commit": "803b3bcacf2fa57be10d5e931d923cefaf2096bf",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+  ],
+  "mathematical_premises": [
+    {
+      "id": "QFORM-N3-THREE-SINGULAR-CROSSCUT-v1",
+      "source": "yspennstate/math-open-problems@3671f29afb89083947437ffc4ebbb037aba58a4d:proofnet24/QFORM-density/fleet-2026-09-22/account04/B20/20260923T142031Z-account04-B20-QFORM-r10/REPORT.md",
+      "scope_used": "original-coordinate cross block N with E=||N||_F^2>11907/16384 in the no-moderate-diagonal branch"
+    },
+    {
+      "id": "B06-r37-near-rank-two-packet",
+      "source": "yspennstate/math-open-problems@fa9d5dd3cc78a092484480b536872d332e22c90a:proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T141825Z-account03-B06-qform-r37/REPORT.md",
+      "scope_used": "x2>=E/64 and sum_{r>=3}x_r<E/64"
+    },
+    {
+      "id": "QFORM-RIDGE-DENSITY-v1",
+      "source": "yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md",
+      "scope_used": "literal original-coordinate cross block, arbitrary same-bank terms/outside couplings retained"
+    }
+  ],
+  "designated_partner_status": "account04/B06 current-QFORM handoff directory absent at startup and publication refresh; no theorem fabricated",
+  "partner_result_actually_applied": "account04/B20 QFORM-N3-THREE-SINGULAR-CROSSCUT-v1 at E>11907/16384, yielding x2>11907/1048576 in the r37 near-rank-two packet",
+  "results": [
+    {
+      "id": "QFORM-R39-HIGH-RIDGE-PAYMENT-v1",
+      "status": "PROVED_SUPPORTING_DENSITY_BRANCH",
+      "statement": "At gamma=1/64, theta>=9/2 implies continuous density <=288 sqrt(e)<474.832."
+    },
+    {
+      "id": "QFORM-R39-MID-RIDGE-OR-8x8-HUB-v1",
+      "status": "PROVED_SUPPORTING_DICHOTOMY",
+      "statement": "For 9/4<=theta<9/2, one diffuse ridge orientation pays continuous density <=288 sqrt(2e)<671.514; otherwise both physical ridge-heavy sets are nonempty and each has cardinality <=8."
+    },
+    {
+      "id": "QFORM-R39-ULTRATHIN-RANK2-v1",
+      "status": "PROVED_SUPPORTING_REDUCTION",
+      "statement": "theta<9/4 forces sum_{r>=3}x_r<14211/141070336 and dist_F(N,rank<=2)<0.010036782; a ridge-heavy physical coordinate then has top-two singular-plane leverage >10115/48652."
+    },
+    {
+      "id": "QFORM-NEARRANK2-RIDGE-OR-HUB-OR-ULTRATHIN-v1",
+      "status": "PROVED_SUPPORTING_COMPILER",
+      "statement": "The live near-rank-two cross packet is routed to a paid continuous-density ridge branch, a <=8 by <=8 physical ridge-hub obstruction, or an ultra-thin full-tail rank-two tube."
+    }
+  ],
+  "canonical_output": "yspennstate/math-open-problems@8090593e6e2b7476177a70a7728bc2b155861f46:proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T161847Z-account03-B06-qform-r39/REPORT.md",
+  "checker": "QFORM_B06_R39_RIDGE_TAIL_CHECK_PASS",
+  "full_conjecture_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "FULL_OPEN; CONTINUOUS_C0_ONLY_ON_RIDGE_PAID_BRANCHES",
+  "unresolved_implication": "QFORM-ULTRATHIN-RANK2-PRODUCT-RECEIVER-v1",
+  "next_step": "Retain x2>0.0113554, tail energy<0.000100737, all same-bank terms and the complete tail; combine a second product-structured curvature currency with rank-two half-Riesz, or route the >20.79% top-plane anchor / <=8x<=8 ridge hubs to an existing grouped-square, pair-log, third-volume, or finite-bank receiver."
+}

@@ -1,0 +1,82 @@
+{
+  "problem_id": "P0297",
+  "as_checked": "2026-10-10",
+  "title": "Exact Hausdorff dimension of Liouville quantum gravity",
+  "exact_target": "For gamma in (0,2), determine the almost-sure Hausdorff dimension d_gamma of (C,D_h^gamma), with h a whole-plane Gaussian free field normalized by fixing its additive constant and D_h^gamma the canonical gamma-LQG metric. Beyond the known d_sqrt(8/3)=4, no exact value is established by this attempt.",
+  "current_openness": "UNKNOWN",
+  "historical_openness": "Explicitly listed as open in the 2025 primary survey; limited 2026 primary-literature searches did not certify current status.",
+  "novelty_claim": false,
+  "sources": [
+    {
+      "authors": "Remi Rhodes and Vincent Vargas",
+      "title": "Two Decades of Probabilistic Approach to Liouville Conformal Field Theory",
+      "url": "https://arxiv.org/html/2509.21053v1",
+      "revision": "v1, 2025-09-25",
+      "locator": "Section 3, paragraph immediately after construction of the random distance; HTML line 97",
+      "short_quote": "The central open problem related to the distance is to determine the Hausdorff dimension",
+      "supports": "Exact dimension target and the known Brownian value 4; historical open status."
+    },
+    {
+      "authors": "Ewain Gwynne and Jason Miller",
+      "title": "Existence and uniqueness of the Liouville quantum gravity metric for gamma in (0,2)",
+      "url": "https://link.springer.com/article/10.1007/s00222-020-00991-6",
+      "arxiv": "1905.00383",
+      "locator": "Theorems 1.1-1.2; Problem 7.1; online lines 2337-2340",
+      "supports": "Canonical metric, parameter normalization, and exact dimension problem. The source's existence theorem does not compute d_gamma.",
+      "formula_transcription": "xi=gamma/d_gamma and Q=2/gamma+gamma/2"
+    },
+    {
+      "authors": "Ewain Gwynne and Joshua Pfeffer",
+      "title": "Bounds for distances and geodesic dimension in Liouville first passage percolation",
+      "url": "https://arxiv.org/pdf/1903.09561",
+      "locator": "Equation (1.5), printed page 3; equation (2.4), printed page 4",
+      "supports": "Epsilon-normalized circle-average LFPP crossing exponent and Brownian anchor lambda(1/sqrt(6))=1/6. The lower derivative bound lambda'(xi)>=-xi is already published.",
+      "formula_transcription": "lambda(gamma/d_gamma)=1-(gamma/d_gamma)*Q"
+    },
+    {
+      "authors": "Morris Ang",
+      "title": "Comparison of discrete and continuum Liouville first passage percolation",
+      "url": "https://arxiv.org/abs/1904.09285",
+      "locator": "Abstract only checked",
+      "supports": "Known comparison of discrete and continuum distance exponents; exact theorem hypotheses were not recovered and are not assumed by a new proof here."
+    }
+  ],
+  "owner_prior_work": {
+    "records": "PRIOR_RECORDS.json; MATH_BRAIN_EVIDENCE.json",
+    "ranking": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:554",
+    "relevant_attempt": "Population-store attempt-p0297 card: constant-shift identity xi*d=gamma, normalization exponent unresolved, no independent review.",
+    "intake_discrepancy": "D0049-A001 in probability_1000_intake_D_20260908/attempts.jsonl:43 states d_gamma=2Q/xi, contradicted by the Brownian anchor (10 instead of 4). The retrieved P0297 population card states the correct relation; do not allege that this bad equation was found in that card.",
+    "targeted_negative_checks": [
+      {
+        "directory": "probability_1000_attempts_H_20260912",
+        "scope": "Targeted P0297/LQG text search",
+        "outcome": "No matching proof returned"
+      },
+      {
+        "directory": "probability_1000_attempts_I_20260914",
+        "scope": "Targeted P0297/LQG text search",
+        "outcome": "No matching proof returned"
+      },
+      {
+        "directory": "prob1000_lean_20260908",
+        "scope": "Targeted P0297/Watabiki text search",
+        "outcome": "Ranking/annotated list returned; no formal target proof returned"
+      }
+    ],
+    "qualification": "No solved or retired P0297 proof was located in the targeted returned records. This is not an exhaustive owner-work or current-literature audit."
+  },
+  "brain_hypothesis_check": {
+    "store": "~/math-brain-build/local/population/brain.sqlite3",
+    "access": "read-only SQLite URI and query_only; no store write",
+    "relevant_cards": "MATH_BRAIN_EVIDENCE.json contains full bodies and metadata, including the corrected Gaussian-concentration card.",
+    "comparison": "Gaussian concentration requires standard Gaussian input and a globally Euclidean-Lipschitz map. The LFPP covariance must be represented as X=C^(1/2)G, and the minimum's Lipschitz constant must be proved. The GMC vocabulary card supplies no exact metric exponent.",
+    "scar": "perceptron_proof_open_gaps_fleet_2026_07_12: a green local certificate does not close the hardest unchecked proof gap.",
+    "memory_recall_measurement": "measurements/memory_recall.json: 15.215 seconds, top three included two unrelated film memories and an unrelated directed-strip FPP memory; no P0297 match."
+  },
+  "proof_status": "w526 independently derived then KEEP-audited finite Lemmas 1-3 and the conditional scale reduction, including Cantelli median constant and path-count control. Finite comparison Lemma 4 and peer endpoint counterexample C526.6 await w527. No general planar response value or d_gamma was computed.",
+  "formal_check": {
+    "performed": false,
+    "trusted_axioms_receipt": null
+  },
+  "hardest_remaining_gap": "Compute the scale-normalized integrated Gaussian response, with the beta-weighted route fluctuation retained, for the genuine planar LFPP crossing network."
+}

@@ -1,0 +1,71 @@
+No percolation at criticality on quasi-transitive graphs
+OpenAI
+September 24, 2026
+Abstract
+We prove that critical Bernoulli bond percolation has no infinite cluster on any infinite
+connected locally finite quasi-transitive graph with critical probability less than one. This
+resolves the bond form of the criticality conjecture of Benjamini and Schramm.
+Contents
+1 Introduction 2
+1.1 The two subexponential arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.2 History and related methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2 Uniformity and the growth alternatives 4
+2.1 Graph conventions and the threshold . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.2 Ball comparisons . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2.3 Exact clusters and finite witnesses . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3 Two clusters, depth-first search, and entropy 6
+3.1 Adjacent large distinct clusters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.2 Clusters conditioned to avoid one another . . . . . . . . . . . . . . . . . . . . . . . . 8
+3.3 A depth-first pivotal second moment . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+3.4 Entropy of overlapping transcripts . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+4 Finite interpolation 13
+4.1 Contact weights and normalized exposures . . . . . . . . . . . . . . . . . . . . . . . . 14
+4.2 Binary interpolation and its description . . . . . . . . . . . . . . . . . . . . . . . . . 14
+4.3 The two chains and their inverse . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+4.4 Entropy of the sampled configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+4.5 Entropy of the inverse guesses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+5 Subexponential growth faster than every power 18
+6 A joint gluing inequality 21
+6.1 Conditional cluster columns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+6.2 The deletion estimate and column positivity . . . . . . . . . . . . . . . . . . . . . . . 22
+6.3 Nonnegative relay weights . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+1
+7 Nilpotent quotients and bounded projections 25
+7.1 From polynomial scales to the quotient action . . . . . . . . . . . . . . . . . . . . . . 25
+7.2 Cyclic series and the decreasing parameter . . . . . . . . . . . . . . . . . . . . . . . . 26
+7.3 The induction and equivariant coordinates . . . . . . . . . . . . . . . . . . . . . . . . 27
+7.4 Excluding rays with bounded projection . . . . . . . . . . . . . . . . . . . . . . . . . 28
+8 Two approximate coordinate moves 29
+9 Fresh corridors and a subcritical infinite cluster 32
+9.1 The deterministic layout . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+9.2 Relay regions and the order of scales . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+9.3 A transfer estimate in a fresh collar . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+9.4 Adaptive exploration with stored predictions . . . . . . . . . . . . . . . . . . . . . . 37
+10 Completion and the lattice consequence 39
+1 Introduction
+Bernoulli bond percolation on an undirected graphG = (V,E )retains each edge independently with
+probabilityp∈[0, 1]. Retained edges are called open. The open clusterCx of a vertexx consists of
+the vertices joined tox by finite open paths, includingx itself. Writex↔Awhen Cx meets a set
+A⊆V, andx↔ywheny∈Cx. WithP p denoting the product law, the critical probability is
+pc(G) = inf{p∈[0,1] :Pp(there is an infinite open cluster)>0}.
+A graph isquasi-transitiveif its automorphism group has finitely many orbits on vertices. This
+includes every vertex-transitive graph and every Cayley graph of a finitely generated group with a
+finite generating set.
+The criticality problem asks whether an infinite cluster can first appear at the threshold itself.
+Benjamini and Schramm formulated the general quasi-transitive conjecture in their systematic study
+of percolation beyond Euclidean lattices [3, Conjecture 4].
+Theorem 1.1.Let G be an infinite connected locally finite quasi-transitive undirected graph. If
+pc(G)<1, then
+Ppc(G)(there is an infinite open cluster) = 0.
+Equivalently,P pc(G)(|Cx|=∞) = 0for every vertexx.
+Theorem 1.1 resolves the Benjamini–Schramm criticality conjecture positively for Bernoulli
+bond percolation. Its conclusion concerns all vertex orbits. The hypothesispc < 1is necessary:
+at parameter one every edge is open, so an infinite connected graph percolates. In particular, the
+theorem includes nearest-neighbor bond percolation onZd for everyd≥2; see Corollary 10.1.
+1.1 The two subexponential arguments
+For a vertexx, letB(x,r )be the graph-distance ball of integer radiusr. PutV−(r) = minx|B(x,r )|
+and V+(r) = maxx|B(x,r )|. Quasi-transitivity makes these extrema finite and compares them
+up to a bounded shift ofr. It also implies thatV+(r)1/r has a limit. A limit greater than one is
+the exponential case covered by Hutchcroft. In the other case, the proof divides according to the
+following exhaustive alternatives:
+2

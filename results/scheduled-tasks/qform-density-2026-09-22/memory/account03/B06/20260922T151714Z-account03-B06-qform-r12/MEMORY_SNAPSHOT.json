@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "account": "account03",
+  "slot": "B06",
+  "run_id": "20260922T151714Z-account03-B06-qform-r12",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "source_control_commit_initial": "8edc37f8c9e6e2841b01e8c39c9c77db252be25e",
+  "source_control_commit_refresh": "0812eacc762ef64eaf8893524dec8885bcca348c",
+  "classification": "ESSENTIAL_STEP_APPLIED_TWO_STAGE_PIVOT_ENDPOINT_CERTIFICATE",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "8624700dc9342807bbdf427e271fffcc518a0315",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260922T151714Z-account03-B06-qform-r12/REPORT.md"
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-TWOSHEET-XRAY-ONLY-FALSE",
+    "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "partner_status": {
+    "assigned_partner": "account04/B06",
+    "completed_partner_artifact_visible": false,
+    "note": "No completed current-QFORM handoff existed for account04/B06 at startup or final partner-directory refresh; no result was fabricated."
+  },
+  "partner_result_actually_applied": {
+    "source": "account04/B18",
+    "result_id": "QFORM-DEPENDENT-SQUARE-SMOOTHING-v1",
+    "canonical_commit": "441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T113729Z-account04-B18-qform-r1/REPORT.md",
+    "application": "Its one-sided conditional square-kernel domination was applied twice: rank-one residual to rank-two L3, then rank-two L3 to rank-three Linfinity."
+  },
+  "other_premise": {
+    "source": "account03/B02",
+    "canonical_commit": "18fb381e300dd86514835d27eedcf2507ab09227",
+    "statement": "A normalized linear combination of independent cap-one coordinate densities has density at most sqrt(2)."
+  },
+  "new_results": [
+    "QFORM-RANK1-SQUARE-L65-v1",
+    "QFORM-HALF-RIESZ-65-TO-3-v1",
+    "QFORM-RANK2-PHYSICAL-PIVOT-L3-v1",
+    "QFORM-RANK3-TWO-PIVOT-ENDPOINT-v1"
+  ],
+  "main_bound": "For exact rank three, ||p_Q||_infinity <= 94.356 [|A_ii| |A_ii A_kk-A_ik^2|^2 |det Lambda| ||r_i wedge r_k||^2]^(-1/8) whenever the two indicated physical pivots are nonzero.",
+  "determinant_identity": "After eliminating physical coordinates i,k, the sole residual eigenvalue is gamma = det(Lambda) ||r_i wedge r_k||^2 / (A_ii A_kk-A_ik^2).",
+  "checker": {
+    "script_commit": "68205dee3edb5576beec51432d142aca5549dc6e",
+    "output_commit": "2819e4640b65df45c75c7ded99026ef7cbec5d98",
+    "random_identity_checks": 500,
+    "max_relative_error": 5.048e-14,
+    "status": "SANITY_ONLY_NOT_PROOF"
+  },
+  "continuity_status": "NOT_PROVED",
+  "unresolved_implication": {
+    "id": "QFORM-TWO-PIVOT-CERTIFICATE-OR-AGGREGATE-v1",
+    "statement": "From the three-large-eigenvalue hypothesis alone, either produce a quantitatively paid two-pivot certificate or aggregate many small certificate channels before reciprocal inversion by a product-preserving curved-fiber estimate; then handle extra correlated spectral components beyond exact rank three."
+  },
+  "next_step": "Develop a Cauchy-Binet/Pluecker weighted energy inequality for the small-certificate regime, combining many local two-stage half-Riesz channels before taking any reciprocal minimum."
+}

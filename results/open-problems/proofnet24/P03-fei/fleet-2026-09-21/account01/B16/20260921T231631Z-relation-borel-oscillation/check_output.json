@@ -1,0 +1,76 @@
+{
+  "analytic_C_N": {
+    "1024": 0.014975687465866083,
+    "128": 0.08731422563818123,
+    "16": 0.43858361239547033,
+    "256": 0.049072325167215186,
+    "32": 0.2626135049827318,
+    "4": 1.0611872690219362,
+    "64": 0.15296760188386416,
+    "8": 0.7038804296509543
+  },
+  "exact_binomial_envelope_checks": 708,
+  "notes": "Numerical integrals are diagnostics only; the theorem is analytic.",
+  "plaquette_mean_identity_checks": 2336,
+  "quadratic_mean_obstruction": [
+    {
+      "J": "1",
+      "N": 4,
+      "n": 2,
+      "plaquette_negative_fraction": "1"
+    },
+    {
+      "J": "1",
+      "N": 8,
+      "n": 3,
+      "plaquette_negative_fraction": "1"
+    },
+    {
+      "J": "1",
+      "N": 16,
+      "n": 4,
+      "plaquette_negative_fraction": "1"
+    },
+    {
+      "J": "1",
+      "N": 32,
+      "n": 5,
+      "plaquette_negative_fraction": "1"
+    },
+    {
+      "J": "1",
+      "N": 64,
+      "n": 6,
+      "plaquette_negative_fraction": "1"
+    }
+  ],
+  "status": "PASS",
+  "theorem_bound": "4 int_0^infty Var(V_s) ds/s^3 <= ((2 ln N + 8/3 - (2/3) ln 6)/N) J",
+  "universal_shell_integral_diagnostics": {
+    "16": {
+      "analytic_bound": 0.43858361239547033,
+      "simpson_0_to_30N": 0.2837062379668174,
+      "tail_upper_bound": 0.0001388888888888889
+    },
+    "32": {
+      "analytic_bound": 0.2626135049827318,
+      "simpson_0_to_30N": 0.1864851607527592,
+      "tail_upper_bound": 6.944444444444444e-05
+    },
+    "4": {
+      "analytic_bound": 1.0611872690219362,
+      "simpson_0_to_30N": 0.3234939724819738,
+      "tail_upper_bound": 0.0005555555555555556
+    },
+    "64": {
+      "analytic_bound": 0.15296760188386416,
+      "simpson_0_to_30N": 0.11519628284409511,
+      "tail_upper_bound": 3.472222222222222e-05
+    },
+    "8": {
+      "analytic_bound": 0.7038804296509543,
+      "simpson_0_to_30N": 0.38106352536757493,
+      "tail_upper_bound": 0.0002777777777777778
+    }
+  }
+}

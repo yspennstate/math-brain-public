@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "account01-B07-20260922T210652Z-r11",
+  "control_revision": "2026-09-22.15",
+  "initial_control_commit": "4ccdb6c551bc0372651374b3da132ff3ae8a7067",
+  "prewrite_control_commit": "a0ca57f8ad2170f13c1de4dee842239fcd80f420",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-UV-CONDITIONAL-CAP-FALSE",
+    "QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "new_result": {
+    "name": "QFORM-COMPOUND-ORDER-TRANSFER-v1",
+    "statement": "For rank r>=3, E2(B)^3 >= (9/2) r(r-1)/(r-2)^2 E3(B)^2 >= (9/2)E3(B)^2. Therefore E3>=1/256 implies E2>1/25.",
+    "status": "PROVED_SUPPORTING_STRUCTURAL_THEOREM"
+  },
+  "partner_result_applied": {
+    "worker": "account02/B07",
+    "name": "QFORM-EK-EFFECTIVE-DIMENSION-PAYMENT-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1ee49306b266915b9806d78498d9861f5a642b4a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260922T203121Z-account02-B07-QFORM-4f9c2e/REPORT.md",
+    "application": "On O0 E3>=1/256, exact rank3 gives continuous density <20.549; rank>3 with one theta=3 side max ridge leverage<=2/3 gives continuous density <37.751."
+  },
+  "other_result_applied": {
+    "worker": "account03/B07",
+    "name": "QFORM-E2-RIDGE-HALFRIESZ-COLLAR-v1 plus QFORM-TWOSIDED-RIDGE-COLOOP-ANCHOR-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "a20d669ff2c433cc70cb70234f49431da4518fa5",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260922T203738Z-account03-B07-qform-r17/REPORT.md",
+    "application": "The E3->E2 transfer yields H_1/2<120 on the theta=2 moderate branch; otherwise physical anchors carry Mij>1/50 and edge-times-bank or two-star reserve >1/200."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "11a8563c3182c183f6a3091aca195ecde7a76fbb",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260922T210652Z-r11/REPORT.md",
+    "checker_status": "QFORM_COMPOUND_ORDER_TRANSFER_CHECK_PASS"
+  },
+  "continuous_density": "PROVED_ONLY_ON_PARTNER_EXACT-RANK3_AND_THETA3-RIDGE-DIFFUSE_BRANCHES",
+  "full_target": "OPEN",
+  "unresolved_implication": "QFORM-O0-ANCHORED-EDGE-OR-TWOSTAR-PAYMENT-v2: spend the >1/200 physical anchored reserve in a product-preserving density/half-Riesz estimate while retaining arbitrary same-bank curvature and extra spectrum.",
+  "next_step": "Analyze the anchored edge-times-bank and two-star forms jointly with a physical scalar/self-curvature pivot; do not invert one minor."
+}

@@ -1,0 +1,71 @@
+task_id: HARD10-03
+native_task_id: 6aa7ece840848191b8399f1cd1376eae
+category: HARD_OUTSIDE
+source: "Bálint Tóth (1993), random-interchange infinite-cycle conjecture on Z^3"
+target: "Source-matching finite-box positive-density macroscopic cycles with explicit beta_0, followed by justified infinite-volume passage"
+status: PARTIAL
+source_status: OPEN
+snapshot_master_sha: bdd6cb8f4e8c508633e48bfda97605ec3cc5ffc0
+previous_report_path: proofnet24/HARD10-03/runs/2026-09-16/2026-09-16T15-21-39Z__report.md
+previous_report_commit: 11c04fa9c12e68725a530dd854f8fdaed4872d41
+previous_receipt_commit: b369c8989ca59754894d2f06bc840e8c676a40e5
+current_report_path: proofnet24/HARD10-03/runs/2026-09-16/2026-09-16T16-34-18Z__report.md
+current_report_creation_commit: 8f0b78082d884d4697d9cdf5ab28d4c28ddabb47
+current_report_readback_blob: 1681b2fdb17403a8438f9824b1f8841e7dd0b8d0
+frozen_metric:
+  name: epsilon_leak
+  event: "same deterministic connected-block visitation/leakage surrogate V(B) and same scale map r(L)=max(2326,ceil(log2(L)/500)), k(L)=500r(L)+1"
+  beta_regime: "all beta>0 for which H_beta(B) <= (k-1)/(4e); no new beta interval"
+  before: "epsilon_MGF = 0.4723613755576205... (literal prior rational certificate 590451719447/1250000000000)"
+  after: "epsilon_rep = 1/2 + 1/(16 e log 2) = 0.5331711153389402..."
+  movement: true
+  unchanged_count_after: 0
+  physical_orbit_propagating_cube_exponent: UNMEASURED
+new_claims:
+  - id: NEW-L100
+    status: PROVED
+    claim: "P(V(B)) <= exp{-v(k-1)/4 + (e^v-1) H_beta(B)/4} for every v>=0"
+  - id: NEW-L101
+    status: PROVED
+    claim: "under the unchanged H_beta(B)<=(k-1)/(4e), P(V(B)) <= 2^{-epsilon_rep(k-1)} with epsilon_rep=1/2+1/(16 e log2), hence the same frozen scale estimate has exponent epsilon_rep"
+methods:
+  B6:
+    outcome: FAILED_TRANSFER
+    note: "regular/min-two-offspring tree geometry has exponential growth incompatible with Z3 polynomial balls; cycle events are not monotone under adding transposition edges"
+  B21:
+    outcome: FAILED_TRANSFER
+    note: "Ueltschi 2013 explicitly excludes theta=1 from its macroscopic-loop result; Quitmann-Taggi main theorem explicitly does not cover lattice permutations"
+  B30:
+    outcome: SUCCESS
+    note: "m independent binary cuts plus Holder and m->infinity replace worst-cut heat by exact mean H/4 and move the frozen exponent"
+validation:
+  exact_self_check_path: proofnet24/HARD10-03/artifacts/2026-09-16T16-34-18Z__replica_cut_exact_check.py
+  exact_self_check_commit: b21c436f1ccc13e29a58913264fc6ef694a4e8a9
+  exact_self_check_blob: 3813d01cd27f6ca629dcc7287ba6c9101c8e8e34
+  output_path: proofnet24/HARD10-03/artifacts/2026-09-16T16-34-18Z__replica_cut_exact_check.out
+  output_commit: 7f81889546f53e43983e5c98ac0c706c2640fb2f
+  output_blob: a1fa692a588683ea4e3a5337b9364c8228315af6
+  output_last_line: ALL_EXACT_CHECKS_PASS
+  certified_coarse_bound: "epsilon_rep > 53/100"
+source_checks_2026_09_16:
+  - https://arxiv.org/html/2211.17023
+  - https://link.springer.com/article/10.1007/s10955-020-02487-2
+  - https://arxiv.org/abs/1202.1322
+  - https://arxiv.org/abs/1202.1319
+  - https://arxiv.org/abs/1608.08473
+  - https://arxiv.org/html/1301.0811v3
+  - https://arxiv.org/html/2201.04047v3
+neighboring_report:
+  task: C27
+  path: proofnet24/C27-toth-interchange/runs/2026-09-16/2026-09-16_18-24-11__run-report.md
+  commit: e888be8146b76d720e82bbe65e03cfc8a3842677
+closure_audits:
+  P26_same_full_claim: MISSING
+  P26_latest_seen_path: proofnet24/P26-proof-audit-recovery/runs/2026-09-16/2026-09-16_18-56-01__run-report.md
+  second_distinct_qualified_task_same_full_claim: MISSING
+remaining_obligation: "construct a genuinely local finite-dependence no-peeking physical block event that propagates the actual permutation-cycle exploration and leaves renewable fresh randomness; then prove the macroscopic finite-box milestone and infinite-volume passage"
+model_runtime: "GPT-5.6 Sol"
+reasoning_level: UNVERIFIED
+scheduler_model_selector_exposed: false
+scheduler_reasoning_selector_exposed: false
+history_gaps: "full manual verification of every intake row was not possible from truncated connector output; unseen irrelevant intake rows remain HISTORY_GAP"

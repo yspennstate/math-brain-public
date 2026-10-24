@@ -1,0 +1,11 @@
+onepoint2 base H= 2.0 I= 1 VarK= 1/2 pmax= 1/4
+onepoint2 balanced_m2 law_exact=PASS H= 4.0 I= 3 VarK= 1 pmax= 1/16 Hlevel= 2.0306390622295662
+majority3 base H= 2.0 I= 3/2 VarK= 3/4 pmax= 1/4
+majority3 balanced_m2 law_exact=PASS H= 4.0 I= 4 VarK= 3/2 pmax= 1/16 Hlevel= 1.2475562489182659
+majority3 already_balanced_m2 law_exact=PASS H= 4.0 I= 3 VarK= 3/2 pmax= 1/16 Hlevel= 1.2475562489182659
+character3 base H= 0.0 I= 2 VarK= 0 pmax= 1
+character3 balanced_m2 law_exact=PASS H= 0.0 I= 5 VarK= 0 pmax= 1 Hlevel= 0.0
+character3 already_balanced_m2 law_exact=PASS H= 0.0 I= 4 VarK= 0 pmax= 1 Hlevel= 0.0
+constant2 boundary H=0 I=0 VarK=0 pmax=1 FEI_trivial=PASS
+
+Exactness note: Walsh coefficients, spectral probabilities, law comparisons, influences, spectral-size variances, and maximum atoms were computed with Python Fraction arithmetic. Entropy and level-entropy decimal displays use log2 only after the exact law identities were established. This is a targeted stress test of the theorem on admissible Boolean functions, not an exhaustive FEI search.

@@ -1,0 +1,13 @@
+# QFORM correction: genuine-product twisted Wiener proposal is FALSE (2026-09-23 20:22 UTC)
+
+**Status:** proved counterexample to one proposed Fourier lemma; NOT a counterexample to universal bounded density of quadratic forms. Replace the “J(τ) unproved” status in the [20:11 addendum](https://github.com/yspennstate/math-research-brain/blob/c380f264663b4a6e1a4243f6080a86d90e435779/scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/interactive/20260923T201156Z-frontier-addendum.md) and earlier 19:47 handoff with **J(1) FALSE even for original independent cap-one inputs**. Continue the original density problem with coarea/product tube arguments.
+
+Let U=(L,P,V) be an orthonormal 3-frame of six original coordinates with every row leverage 1/2. There are independent probability densities f_i≤1, all normalized and smooth, for which
+J(1)=∫_{R²}|E exp(i(yL+zV+LP))|dy dz ≥ c√N/log(eN)→∞.
+There are no inserted source phases or attenuations. [Full construction and proof, independently audited](https://github.com/yspennstate/math-open-problems/blob/1744824c0eefebf9915d6faf786f3d0c47b61c59/proofnet24/QFORM-density/interactive/20260923T201939Z-genuine-product-twisted-wiener-falsifier/REPORT.md).
+
+Proof mechanism in one paragraph: choose four L/P coefficients (a,a,b,b), (b,b,−a,−a), with a²+b²=1/2 and f=2a²=(N−1)/(2N); V uses two separate coordinates. Put independent N-tooth cap-one comb components into the first four source laws plus distant smooth filler to normalize. Tooth labels produce L=Dm and phase exp(iLP)=exp(−2π i k m²/N) at centers, where k=(N−1)/2 and D²/[f(1−f)]^(1/2)=2π. Narrow teeth retain positive fixed L² mass of the twisted L density; weighted quadratic Gauss cancellation bounds its Fourier L∞ by O(logN/√N), so Fourier L1 grows ≥c√N/logN. A smooth output-L cutoff with bounded Fourier algebra norm isolates the all-comb component from every distant-filler configuration. The V Fourier factor is positive finite. Row leverage and probability normalization are checked in the report.
+
+**Why full QFORM still open:** This construction deliberately puts V in a separate independent physical bank. The exact-rank-two half-potential receiver bounds the associated Q=2HL+V²+2εLP with independent cap-one physical H by ≤128√2(1+ε²)^−1/4 uniformly in N. Large J(1) is an artifact of absolute Fourier values, not a density lower bound. The existing small-hub/overlapping-P case and arbitrary extra spectrum remain unproved.
+
+A newer two-bank product tube method may give r^(3/2) dyadic gain without a spectral gap and r² log(1/r) with |γ|≥1 for unit coefficient P, but uniform ε→0 and the hub-square parameter a remain debts; verify the final scoped report before using. No scheduled-task configuration was changed here.

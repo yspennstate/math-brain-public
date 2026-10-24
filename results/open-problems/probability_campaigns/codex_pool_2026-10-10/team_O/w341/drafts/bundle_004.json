@@ -1,0 +1,102 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w341",
+  "bundle_slug": "w341-p0127-checked-results-20261010",
+  "entries": [
+    {
+      "key": "uniform-rooted-line-lattice-tree-sampler",
+      "namespace": "probability.latticetrees",
+      "logical_name": "p0127-uniform-rooted-line-lattice-tree-sampler",
+      "kind": "lemma",
+      "title": "Exact uniform rooted lattice-tree sampler on the line [audit pending w347]",
+      "statement": "The n-vertex lattice trees in Z containing zero are exactly the n intervals [-L,n-1-L], L=0,...,n-1. Uniform L gives exact uniform rooted sampling using expected O(log n) unbiased random bits and a compact O(log n)-bit endpoint representation. Listing vertices takes O(n) word operations on an O(log n)-bit word RAM and O(n log n) bits of coordinate output. Trees modulo translation instead have one class.",
+      "proof_text": "# P0127: exact line sampler and a failed growth route\n\nStatus: proved special case and exact counterexample, pending w347. Schramm, *Conformally invariant scaling limits: an overview and a collection of problems* (2006v2), Problem 2.9, asks for efficient approximate uniform lattice-tree sampling. Cached text lines 730-740 use trees with n vertices containing the origin. The prior campaign gave a finite but inefficient exact enumeration and warned that a uniform stationary measure does not imply polynomial mixing. The general higher-dimensional question remains unresolved by this packet; current literature status was not verified beyond these caches.\n\nFor Z, every n-vertex lattice tree containing zero is an interval [-L,n-1-L] for a unique L in {0,...,n-1}. Choose L uniformly to obtain the exact uniform rooted sampler. It uses O(log n) unbiased random bits in expectation with integer rejection sampling; a compact endpoint representation uses O(log n) bits. Listing all vertices takes O(n) word operations on a RAM with words of O(log n) bits, and its explicit coordinate encoding occupies O(n log n) bits. If trees are instead identified up to translation, there is just one such interval class. These representation and complexity conventions matter.\n\nUniform frontier growth is biased already at n=3 vertices, in every dimension d>=1. Put D=2d. Start at the origin, choose one of its D edges uniformly, then one of the 2(D-1) available boundary edges uniformly. There are 2D(D-1) equally likely ordered histories. A tree with the root at its center has two histories; a tree with the root at an endpoint has one. There are D(D-1)/2 center-rooted trees and D(D-1) endpoint-rooted trees, for a total of 3D(D-1)/2. Comparing their growth masses with reciprocal total tree count gives total variation exactly 1/6. Therefore this uncorrected growth rule cannot be called an approximately uniform sampler with error tending to zero merely because each local choice was uniform.\n\nExact enumeration checked d=1,2,3,4: 4,24,60,112 histories and 3,18,45,84 distinct trees; every total variation was 1/6. Audit the rooted-versus-translation convention, vertex-versus-edge count, frontier cardinality, history multiplicities and complexity claim. This counterexample concerns this growth rule, not all possible efficient samplers.\n",
+      "assumptions": [
+        "n positive integer",
+        "rooted trees containing zero",
+        "vertex count n",
+        "nearest-neighbor lattice Z",
+        "unbiased random bits",
+        "word RAM for the stated word-operation bound"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:p0127-uniform-rooted-line-lattice-tree-sampler",
+        "url": "file:///~/brain_workers/w341/proofs/P0127_growth_bias.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "uniform-frontier-growth-tv-obstruction",
+      "namespace": "probability.latticetrees",
+      "logical_name": "p0127-uniform-frontier-growth-tv-obstruction",
+      "kind": "lemma",
+      "title": "Uniform frontier growth is biased at three vertices [audit pending w347]",
+      "statement": "On Z^d, d>=1, grow a rooted tree from the origin by choosing uniformly from available boundary edges at each step. At three vertices the resulting distribution has total variation exactly 1/6 from the uniform rooted lattice-tree law. With D=2d there are 2D(D-1) equiprobable growth histories, but center-rooted trees have two histories and endpoint-rooted trees have one. This obstruction concerns this uncorrected growth rule.",
+      "proof_text": "# P0127: exact line sampler and a failed growth route\n\nStatus: proved special case and exact counterexample, pending w347. Schramm, *Conformally invariant scaling limits: an overview and a collection of problems* (2006v2), Problem 2.9, asks for efficient approximate uniform lattice-tree sampling. Cached text lines 730-740 use trees with n vertices containing the origin. The prior campaign gave a finite but inefficient exact enumeration and warned that a uniform stationary measure does not imply polynomial mixing. The general higher-dimensional question remains unresolved by this packet; current literature status was not verified beyond these caches.\n\nFor Z, every n-vertex lattice tree containing zero is an interval [-L,n-1-L] for a unique L in {0,...,n-1}. Choose L uniformly to obtain the exact uniform rooted sampler. It uses O(log n) unbiased random bits in expectation with integer rejection sampling; a compact endpoint representation uses O(log n) bits. Listing all vertices takes O(n) word operations on a RAM with words of O(log n) bits, and its explicit coordinate encoding occupies O(n log n) bits. If trees are instead identified up to translation, there is just one such interval class. These representation and complexity conventions matter.\n\nUniform frontier growth is biased already at n=3 vertices, in every dimension d>=1. Put D=2d. Start at the origin, choose one of its D edges uniformly, then one of the 2(D-1) available boundary edges uniformly. There are 2D(D-1) equally likely ordered histories. A tree with the root at its center has two histories; a tree with the root at an endpoint has one. There are D(D-1)/2 center-rooted trees and D(D-1) endpoint-rooted trees, for a total of 3D(D-1)/2. Comparing their growth masses with reciprocal total tree count gives total variation exactly 1/6. Therefore this uncorrected growth rule cannot be called an approximately uniform sampler with error tending to zero merely because each local choice was uniform.\n\nExact enumeration checked d=1,2,3,4: 4,24,60,112 histories and 3,18,45,84 distinct trees; every total variation was 1/6. Audit the rooted-versus-translation convention, vertex-versus-edge count, frontier cardinality, history multiplicities and complexity claim. This counterexample concerns this growth rule, not all possible efficient samplers.\n",
+      "assumptions": [
+        "nearest-neighbor lattice Z^d",
+        "d>=1",
+        "rooted trees containing origin",
+        "two uniform frontier additions"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:p0127-uniform-frontier-growth-tv-obstruction",
+        "url": "file:///~/brain_workers/w341/proofs/P0127_growth_bias.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-limited-status-20261010",
+      "namespace": "probability.latticetrees",
+      "logical_name": "p0127-source-limited-status-20261010",
+      "kind": "concept",
+      "title": "Source-limited status and scope for P0127 [audit pending w347]",
+      "statement": "Schramm (2006v2), Problem 2.9, asks for efficient approximate uniform sampling of n-vertex lattice trees containing the origin. The supplied prior attempt only gives inefficient enumeration. This packet solves the line special case and disproves uncorrected uniform frontier growth; general higher-dimensional status is unresolved from the supplied caches.",
+      "proof_text": null,
+      "assumptions": [
+        "only the supplied local caches and prior records were consulted",
+        "independent review pending"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:p0127-source-limited-status-20261010",
+        "url": "file:///~/brain_workers/w341/proofs/P0127_growth_bias.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "uniform-frontier-growth-tv-obstruction",
+      "to_key": "uniform-rooted-line-lattice-tree-sampler",
+      "kind": "analogous_to",
+      "rationale": "From: \"On Z^d, d>=1, grow a rooted tree from the origin by choosing uniformly from available boundary edges at each step. At three vertices the resulting distribution has total variation exactly 1/6 from the uniform rooted lattice-tree law. With D=2d there are 2D(D-1) equiprobable growth histories, but center-rooted trees have two histories and endpoint-rooted trees have one. This obstruction concerns this uncorrected growth rule.\" To: \"The n-vertex lattice trees in Z containing zero are exactly the n intervals [-L,n-1-L], L=0,...,n-1. Uniform L gives exact uniform rooted sampling using expected O(log n) unbiased random bits and a compact O(log n)-bit endpoint representation. Listing vertices takes O(n) word operations on an O(log n)-bit word RAM and O(n log n) bits of coordinate output. Trees modulo translation instead have one class.\"."
+    },
+    {
+      "from_key": "uniform-rooted-line-lattice-tree-sampler",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"The n-vertex lattice trees in Z containing zero are exactly the n intervals [-L,n-1-L], L=0,...,n-1. Uniform L gives exact uniform rooted sampling using expected O(log n) unbiased random bits and a compact O(log n)-bit endpoint representation. Listing vertices takes O(n) word operations on an O(log n)-bit word RAM and O(n log n) bits of coordinate output. Trees modulo translation instead have one class.\" To: \"Schramm (2006v2), Problem 2.9, asks for efficient approximate uniform sampling of n-vertex lattice trees containing the origin. The supplied prior attempt only gives inefficient enumeration. This packet solves the line special case and disproves uncorrected uniform frontier growth; general higher-dimensional status is unresolved from the supplied caches.\"."
+    },
+    {
+      "from_key": "uniform-frontier-growth-tv-obstruction",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"On Z^d, d>=1, grow a rooted tree from the origin by choosing uniformly from available boundary edges at each step. At three vertices the resulting distribution has total variation exactly 1/6 from the uniform rooted lattice-tree law. With D=2d there are 2D(D-1) equiprobable growth histories, but center-rooted trees have two histories and endpoint-rooted trees have one. This obstruction concerns this uncorrected growth rule.\" To: \"Schramm (2006v2), Problem 2.9, asks for efficient approximate uniform sampling of n-vertex lattice trees containing the origin. The supplied prior attempt only gives inefficient enumeration. This packet solves the line special case and disproves uncorrected uniform frontier growth; general higher-dimensional status is unresolved from the supplied caches.\"."
+    },
+    {
+      "from_key": "source-limited-status-20261010",
+      "to_existing_logical": "math:probability.core:open-problem-p0127-efficient-approximately-uniform-sampling-of-lattice-trees",
+      "kind": "cites",
+      "rationale": "From: \"Schramm (2006v2), Problem 2.9, asks for efficient approximate uniform sampling of n-vertex lattice trees containing the origin. The supplied prior attempt only gives inefficient enumeration. This packet solves the line special case and disproves uncorrected uniform frontier growth; general higher-dimensional status is unresolved from the supplied caches.\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Give a provably efficient algorithm to sample approximately uniformly from the n-vertex lattice trees containing the origin, or prove an appropriate computational obstruction. Source: Schramm: Conformally invariant scaling limits, overview and collection of problems, 2006v2, Problem2.9, PDF p.18.\". "
+    }
+  ]
+}

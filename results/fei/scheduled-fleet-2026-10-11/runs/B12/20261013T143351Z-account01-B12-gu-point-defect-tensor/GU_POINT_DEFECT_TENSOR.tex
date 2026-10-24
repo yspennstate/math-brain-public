@@ -1,0 +1,127 @@
+\section*{Exact GU tensorization and point-defect factors}
+
+All logarithms in this note are base two.  If $f$ is Boolean, put
+\[
+ p_f(S)=\widehat f(S)^2,
+ \qquad \pi_f(S)=\sum_{T\supseteq S}p_f(T),
+ \qquad U(f)=\sum_Sp_f(S)\log_2\frac{\pi_f(S)}{p_f(S)}.
+\]
+Zero-mass summands are omitted.  Write
+\[
+ \Delta_iU(f)=U(f)-\frac{U(f_{i,+})+U(f_{i,-})}{2},
+ \qquad G(f)=\sum_i\Delta_iU(f).
+\]
+
+\subsection*{Theorem 1 (exact product laws)}
+
+Let $f$ and $g$ be Boolean functions on disjoint physical variable sets and
+let $F=fg$.  Then
+\[
+ U(F)=U(f)+U(g),\qquad G(F)=G(f)+G(g),\qquad I(F)=I(f)+I(g).
+\tag{1}
+\]
+Consequently, if $G(f_r)\le K I(f_r)$ for every factor in a finite disjoint
+product $\prod_r f_r$, then $G(\prod_r f_r)\le K I(\prod_r f_r)$, with no
+loss depending on the number of factors, their arities, or a product-tree
+depth.
+
+\paragraph{Proof.}
+For $S=S_1\sqcup S_2$,
+\[
+ p_F(S)=p_f(S_1)p_g(S_2),\qquad
+ \pi_F(S)=\pi_f(S_1)\pi_g(S_2).
+\]
+The logarithm in $U(F)$ therefore splits and expectation under the product
+spectral law proves the first identity.  If $i$ belongs to the variables of
+$f$, then $F_{i,\pm}=f_{i,\pm}g$, so the first identity gives
+$\Delta_iU(F)=\Delta_iU(f)$; similarly for coordinates of $g$.  Summing
+proves the second identity.  The third is the standard degree expectation
+under a product spectral law. \(\square\)
+
+\subsection*{Theorem 2 (sharp GU constant for point defects)}
+
+Let $d_n$ be a Boolean point defect on $n$ variables: it has one value of
+one sign and $2^n-1$ values of the other sign.  Put $U_n=U(d_n)$ and set
+$U_0=0$.  Then
+\[
+ U_n=(1-2^{1-n})^2\log_2\frac1{(1-2^{1-n})^2}
+       +\frac{2n}{2^n}-\frac{4n}{2^{2n}},
+\tag{2}
+\]
+\[
+ G(d_n)=n\left(U_n-\frac{U_{n-1}}2\right),
+ \qquad I(d_n)=\frac{2n}{2^n}.
+\tag{3}
+\]
+For every $n\ge1$,
+\[
+ G(d_n)\le \kappa_{\rm pd} I(d_n),
+ \qquad
+ \kappa_{\rm pd}=\frac{37}{4}-\frac92\log_2 3
+ =2.117668746754797\ldots,
+\tag{4}
+\]
+and the constant is sharp, attained at $n=3$.
+
+\paragraph{Proof of the formulas.}
+Let $N=2^n$.  The squared Fourier coefficient at the empty set is
+$(1-2/N)^2$ and every nonempty coefficient has square $4/N^2$.  For
+$S\ne\varnothing$,
+\[
+ \pi(S)=\frac{4\,2^{n-|S|}}{N^2},
+ \qquad \log_2\frac{\pi(S)}{p(S)}=n-|S|.
+\]
+Since
+$\sum_{S\ne\varnothing}(n-|S|)=n2^{n-1}-n$, summation gives (2).
+Every coordinate restriction has one constant child and one
+$(n-1)$-dimensional point-defect child, proving the first part of (3).
+The influence formula follows directly from
+$\sum_S|S|=n2^{n-1}$.
+
+\paragraph{Uniform maximization.}
+Put $t=2^{1-n}$ and
+\[
+ \phi(t)=(1-t)^2\log_2\frac1{(1-t)^2},\qquad
+ \delta(t)=\phi(t)-\frac12\phi(2t).
+\]
+For $n\ge2$, division of (3) by $I(d_n)=nt$ gives
+\[
+ \frac{G(d_n)}{I(d_n)}
+ =1+(n-2)t+\frac{\delta(t)}t.
+\tag{5}
+\]
+For $n\ge4$, $0\le t\le1/8$.  Direct differentiation gives
+\[
+ \delta''(s)=\frac{6-4\ln(1-s)+8\ln(1-2s)}{\ln2}
+ \le\frac{6+4/7}{\ln2}<10
+ \quad(0\le s\le1/8),
+\]
+where $-\ln(1-s)\le s/(1-s)\le1/7$ and $\ln2>2/3$ were used.
+As $\delta(0)=\delta'(0)=0$, integration gives $\delta(t)\le5t^2$.
+Thus the ratio in (5) is at most
+\[
+ 1+(n+3)2^{1-n}\le\frac{15}{8}\qquad(n\ge4).
+\]
+The dimensions $n=1,2$ give ratios $0,2$.  At $n=3$, (2)--(3) give
+\[
+ \frac{G(d_3)}{I(d_3)}=\frac{37}{4}-\frac92\log_2 3.
+\]
+This is greater than $2$ because $3^{18}<2^{29}$, and it is less than
+$17/8$ because $3^{12}>2^{19}$.  Hence it is strictly larger than every
+other range just bounded, proving (4). \(\square\)
+
+\subsection*{Corollary 3 (unbounded composition class)}
+
+Let $F=\prod_{r=1}^m d_{n_r}$ on disjoint blocks, where each factor may be
+negated and its exceptional point may be arbitrary.  Then
+\[
+ U(F)=\sum_rU(d_{n_r}),\quad G(F)=\sum_rG(d_{n_r}),\quad
+ I(F)=\sum_rI(d_{n_r}),\quad G(F)\le\kappa_{\rm pd}I(F).
+\tag{6}
+\]
+The constant is independent of $m$, every $n_r$, total dimension, and any
+binary parenthesization of the product.  It is sharp for this class because
+$m=1,n_1=3$ is included.
+
+This is a proper class theorem for GU, not the universal GU inequality.
+It does not prove full Fourier entropy--influence.

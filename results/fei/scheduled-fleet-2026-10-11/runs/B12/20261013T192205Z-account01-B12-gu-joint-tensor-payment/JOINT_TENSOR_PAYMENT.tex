@@ -1,0 +1,115 @@
+\section*{A joint outer--child payment on the tensor reserve obstruction}
+
+All logarithms are base two.  Let $u,v:\{-1,1\}^4\to\{-1,1\}$ be the
+two Boolean slices from the independently accepted tensor-reserve no-go:
+\[
+u=(-1,1,-1,-1,-1,-1,1,-1,1,1,1,-1,1,-1,1,-1)
+\]
+and let $v$ be full parity.  Exact Walsh arithmetic gives
+\[
+ \langle u,v\rangle=\frac18,\qquad I(u)=\frac74,
+ \qquad I(v)=4.
+\]
+For $k\ge1$, put $U_k=u^{\otimes k}$, $V_k=v^{\otimes k}$, and let
+$d_{8k}$ be the point defect which is $+1$ at one point and $-1$
+elsewhere.  Define the genuine Boolean function on $12k$ physical bits
+\[
+ F_k(x,z)=
+ \begin{cases}
+ U_k(z),&d_{8k}(x)=-1,\\
+ V_k(z),&d_{8k}(x)=+1.
+ \end{cases}
+\]
+
+\paragraph{Theorem.}
+For every integer $k\ge1$,
+\[
+ H(F_k)\le \frac{1728}{595}I(F_k)<3I(F_k).
+\]
+Consequently the upper-set potential satisfies
+\[
+ U(F_k)\le \frac{1728}{595}I(F_k).
+\]
+If $\overline\Theta_k$ is the endpoint-centered biased-child cocycle for
+the outer slices $(U_k,V_k)$ at the physical bias
+$\mu_k=-1+2^{1-8k}$, then the complete terminal reserve has the joint
+payment
+\[
+ \overline\Theta_k(\mu_k)
+ \le \frac{1728}{595}I(F_k).
+\]
+The constant is independent of tensor depth, total dimension, bias,
+cap-ratio growth, and coherent collision ratio.
+
+\paragraph{Proof.}
+Write $n=8k$, $r=2^{-n}$, $q=1-r$, and
+\[
+ \mu=-1+2r,\qquad \delta=1-\mu^2=4r(1-r).
+\]
+For the outer gate write $a=(U_k+V_k)/2$ and
+$b=(V_k-U_k)/2$.  Its distinguished-input influence is
+\[
+ \beta_k=\|b\|_2^2=\frac{1-8^{-k}}2\le\frac12.
+\]
+Fourier coefficients of $F_k=a+d_n b$ split into two disjoint sectors:
+\[
+ \widehat F_k(\varnothing,T)=\widehat a(T)+\mu\widehat b(T),
+ \qquad
+ \widehat F_k(S,T)=\widehat d_n(S)\widehat b(T)\quad(S\ne\varnothing).
+\]
+The total squared mass of the nonempty-$x$ sector is
+\[
+ m=\delta\beta_k\le2r=2^{1-8k}.
+\]
+The empty sector has at most $2^{4k}$ atoms, and the nonempty sector has
+fewer than $2^{12k}$ atoms.  Maximizing entropy within each sector gives
+\[
+ H(F_k)\le h_2(m)+4k(1-m)+12km
+          =4k+h_2(m)+8km.
+\]
+Since $h_2(m)\le1\le k$ and
+\[
+8km\le16k\,2^{-8k}\le\frac{k}{16},
+\]
+we obtain
+\[
+ H(F_k)\le\frac{81}{16}k.                         \tag{1}
+\]
+
+Influence has the exact physical mixture identity
+\[
+ I(F_k)=qI(U_k)+rI(V_k)+\beta_k I(d_n).
+\]
+The tensor law for disjoint Boolean products gives
+$I(U_k)=kI(u)=7k/4$.  As $q\ge255/256$,
+\[
+ I(F_k)\ge\frac{255}{256}\frac74 k
+          =\frac{1785}{1024}k.                    \tag{2}
+\]
+Dividing (1) by (2) proves
+\[
+ \frac{H(F_k)}{I(F_k)}
+ \le\frac{81/16}{1785/1024}
+ =\frac{1728}{595}<3.
+\]
+
+For every spectral atom, its upper mass is at most one, so $U(f)\le H(f)$.
+This proves the $U$ estimate.  Finally, the exact biased-child identity is
+\[
+ U(F_k)=\beta_kU(d_n)+\Theta_k(\mu_k),
+\]
+while $\Theta_k(-1)=U(U_k)$ and $\Theta_k(1)=U(V_k)$.  Hence
+\[
+ \overline\Theta_k(\mu_k)
+ =U(F_k)-\beta_kU(d_n)-qU(U_k)-rU(V_k)
+ \le U(F_k).
+\]
+Combining with the proved $U$ estimate finishes the joint payment.\qed
+
+\paragraph{Scope.}
+The child-only ratios from the preceding no-go still diverge: the theorem
+does not repair either false child-only inequality.  It proves instead that
+the exact same Boolean family has a uniform payment once the physical outer
+budget is retained.  The proof uses the special fixed base slices and their
+linear outer influence; it does not establish a universal joint ledger or
+GU for arbitrary Boolean functions.

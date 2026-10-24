@@ -1,0 +1,63 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T225000Z-claude-B09-sharp-uniform-endpoint-tax",
+ "stream": "B09",
+ "packet_id": "A041",
+ "gap_id": "G-BIASED-LTF",
+ "attempt_id": "B09-LEAD-SHARP-ONE-BIT-TAX-01",
+ "method": "fiber rotation identity, one-dimensional reduction, convexity of h2(sin^2 d), Jensen; exhaustive and 60-digit checks",
+ "mathematical_delta": "Proved the sharp dimension-free one-bit endpoint tax J-M<=tau*(p)=h2(p)-m(p), attained up to (1-p) by an AND at q*(p) for p<=0.0832; tau*=(p/2)log2(1/p)-(1-log2(e)/2)p+O(p^2 log), explicit envelope (p/2)log2(1/p)+(log2 e-1)p for p<=e^-3. Closes the A041 endpoint gap [1/2,1] and the A047 first unsupported line; halves the Maassen-Uffink tax in L<=2M+tax.",
+ "deliverable_status": "COMPLETE_LOCAL_REVIEW_PENDING; REPORT.md BLOCKED (subagent harness refused report-file writes; content in StructuredOutput)",
+ "mathematical_status": "ONE_BIT_TAX_SOLVED_UP_TO_FACTOR_1_MINUS_P; WEIGHTED_FEIPLUS_AND_FULL_FEI_OPEN",
+ "claim_versions_used": [
+  {
+   "claim_id": "A041-BOOLEAN-ONE-BIT-ENDPOINT-TAX-LOWER-BOUND",
+   "version": 1,
+   "use": "lower bound, re-derived"
+  },
+  {
+   "claim_id": "A043-DISJOINT-PRIME-ENDPOINT",
+   "version": 1,
+   "use": "composition identity checked"
+  },
+  {
+   "claim_id": "A045-BIASED-REALIZABILITY-REFEREE",
+   "version": 1,
+   "use": "review record"
+  }
+ ],
+ "claims_created_or_changed": [
+  {
+   "claim_id": "B09-CLAUDE-SHARP-ONE-BIT-TAX",
+   "version": 1
+  }
+ ],
+ "source_artifacts": [
+  "CLAIMS.json",
+  "code/check_tax.py",
+  "code/FROZEN_SPEC.json",
+  "code/write_records.py",
+  "out/check_tax_output.json"
+ ],
+ "next_consumers": [
+  "A091",
+  "A090",
+  "A041",
+  "A042",
+  "A043",
+  "A044",
+  "A045",
+  "B20"
+ ],
+ "next_action": "Reveal the inputs of a prime gate one at a time at induced biases and test sum_i tau*(eta_i) <= K delta_eta(g) uniformly in arity on A044 address gates and symmetric thresholds (exact small cases first); A091 reviews Steps 1-5.",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "REPORT.md write refused by the subagent harness (\"Subagents should return findings as text, not write report files\"); coordinator to materialise it from the StructuredOutput",
+  "Full FEI open; charging the taxes and M to the biased deficit on primes is unproved"
+ ],
+ "code_sha256": "1a71f98c0dbc2c357eb42374c1eab588db446f9c9ba107e439c5a7faaf4bc50b",
+ "output_sha256": "e83b32b0ece94f275cc8c443219f1984a26ce6d2416425c797e556135b2a295d",
+ "packet_ids": [
+  "A041"
+ ]
+}

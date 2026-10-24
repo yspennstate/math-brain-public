@@ -1,0 +1,63 @@
+{
+  "schema": "fei-transfer-hypothesis-check/1",
+  "packet_id": "A097",
+  "transfer_id": "B20-A097-CONSTANT-CHILD-CRITICAL-CAP-v1",
+  "source_lemmas": [
+    {
+      "claim": "B05-A023 scalar packet formula as independently reconstructed by B19/A094",
+      "matched": [
+        "genuine Boolean child",
+        "one constant branch",
+        "uniform physical selector",
+        "base-2 entropy",
+        "zero-log endpoint convention"
+      ],
+      "review_status": "ACCEPTED_AT_SCALAR_PACKET_SCOPE"
+    },
+    {
+      "claim": "B12-A060-SELECTOR-TAX-SHARPNESS-v2",
+      "matched": [
+        "same scalar function c(p)",
+        "all p in [0,1]",
+        "rigorous upper interval C_*<4.872322",
+        "genuine Boolean dyadic sharpness"
+      ],
+      "review_status": "PROVED_SOURCE_COMPLETE; INDEPENDENT_REVIEW_PENDING"
+    },
+    {
+      "claim": "B20-A096-CRITICAL-PRUNING-v1 / B01 critical-prime normal form",
+      "matched": [
+        "physical restriction child",
+        "child ratio cannot exceed a restriction-critical parent",
+        "tensor-prime descent preserves or raises H/I"
+      ],
+      "review_status": "PROVED_SOURCE_COMPLETE; INDEPENDENT_REVIEW_PENDING"
+    }
+  ],
+  "normalization_checks": {
+    "selector_probability": "1/2 for each child",
+    "data_influence_multiplier": "1/2",
+    "selector_influence": "p=Pr[D!=c]",
+    "entropy_increment": "p*c(p)",
+    "reference_normalizer": "none; exact Fourier identities",
+    "units": "bits"
+  },
+  "paid_target_debt": "The critical-coordinate search is closed on every relevant coordinate having a constant child: any restriction-critical parent there has H/I<CAP=4.872322.",
+  "unmatched_or_remaining": [
+    "coordinates whose two physical children are both nonconstant",
+    "reused or shared selector variables outside an actual one-coordinate restriction",
+    "a universal bound on min_i Delta_i H/I_i on the surviving class",
+    "independent reconstruction of the B12 sharp optimization",
+    "full FEI"
+  ],
+  "counterexample_controls": {
+    "addressing": "usually survives because both children can remain nonconstant",
+    "bent_selector": "survives; the theorem does not assert arbitrary selector-only payment",
+    "rare_activation": "outer constant-child controls are excluded above the cap, with the active child retained",
+    "near_tensor": "only constant-face surgeries are excluded",
+    "shared_variable_interference": "no product or independence identity is used",
+    "parity_zero_erasure": "no erasure functional is used",
+    "actual_prime_gates": "applies directly if a prime gate has a constant physical face"
+  }
+}
+

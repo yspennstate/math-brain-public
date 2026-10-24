@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A020: exact selector boundary controls}\maketitle
+All cubes are uniform; outputs are signs; entropy is in bits.
+This suite is a falsifier for specified composition assertions, not for FEI.
+
+\paragraph{Signed coefficients.}
+For $F(x,y)=g_x(y)$, $x\in\{0,1\}^a$,
+\[
+ \widehat F(S,T)=2^{-a}\sum_x(-1)^{S\cdot x}\widehat g_x(T).
+\]
+Squaring occurs after this signed sum. Disjoint physical selector cells
+alone do not remove the cross terms.
+
+\paragraph{Coincident support and affine cells.}
+Complementary cells $x_0+x_1=0,1$ with leaves $y,-y$ give
+$F=(-1)^{x_0+x_1}y$ and $(H,I)=(0,3)$.
+The disjoint-Fourier-support mixture identity would give $(2,2)$.
+With identical leaves $y,y$, the actual pair is $(0,1)$, while the same
+false mixture still gives $(2,2)$.
+
+\paragraph{Unequal affine cells.}
+Take $A_0=\{x_0=0\}$, $A_1=\{(1,0)\}$, $A_2=\{(1,1)\}$ with
+leaves $y,-y,y$. Their masses are $1/2,1/4,1/4$.
+The selector sign is a two-bit point defect, with four equal Fourier
+masses $1/4$, so $(H(F),I(F))=(2,2)$.
+For $q_l(S)=\widehat{1_{A_l}}(S)^2/p_l$, the false mixture gives
+\[
+ H(p)+\sum_l p_lH(q_l)=3,\qquad
+ 1+\sum_l p_l\mathbb E_{q_l}|S|=7/4.
+\]
+This violates the claimed identities after deleting their disjoint
+nonempty leaf-Fourier-support hypothesis. It does not violate an upper
+bound that explicitly retains interference.
+
+\paragraph{Recovered nearly identical bent splice: analytic guard.}
+Let $m$ be even, $\delta=2^{-m}$, $e=\sqrt\delta$, and
+\[
+ g(y)=(-1)^{y_0y_1+\cdots+y_{m-2}y_{m-1}},\quad
+ g'(y)=g(y)-2\mathbf1_{y=0},\quad F(0,y)=g(y),\ F(1,y)=g'(y).
+\]
+Then $\widehat g(T)=e\sigma_T$, $\sigma_T\in\{-1,1\}$ and
+$\sum_T\sigma_T=1/e$ because $g(0)=1$. Consequently the actual parent
+coefficients are $e\sigma_T-\delta$ in the empty-selector sector and
+$\delta$ in the occupied-selector sector. The second child has
+coefficients $e\sigma_T-2\delta$. For $m\ge4$ every child coefficient
+is nonzero in both branches, so their Fourier supports coincide fully.
+The physical selector influence is exactly $\delta$.
+
+Here is an explicit asymptotic derivation, to include the recovered guard
+rather than infer impossibility from an upper bound. Set
+$\phi(t)=-t^2\ln(t^2)$, with $\phi(0)=0$, and
+$A_c=\sum_T\phi(e\sigma_T-c\delta)$ for $c=1,2$.
+For $|u|\le1/2$,
+\[
+ (1-u)^2\ln(1-u)^2=-2u+3u^2-\tfrac23u^3+O(u^4),
+\]
+where the remainder constant is uniform by Taylor's theorem on the
+compact interval. The imbalance $\sum\sigma_T=1/e$ makes the summed
+cubic term $O(\delta^2)$; the summed fourth-order remainder is also
+$O(\delta^2)$. Since
+$\sum_T\delta(1-ce\sigma_T)^2=1+(c^2-2c)\delta$, this gives
+\[
+ A_c=-[1+(c^2-2c)\delta]\ln\delta
+       +(2c-3c^2)\delta+O(\delta^2).
+\]
+For $m\ge4$ the Taylor condition holds for both $c$. Thus
+\[
+ H_{\rm nat}(F)=A_1-2\delta\ln\delta
+     =-\ln\delta-\delta\ln\delta-\delta+O(\delta^2),
+\]
+\[
+ \tfrac12[H_{\rm nat}(g)+H_{\rm nat}(g')]
+       =-\ln\delta-4\delta+O(\delta^2).
+\]
+It follows in bits that
+\[
+ \frac{H(F)-[H(g)+H(g')]/2}{I_{\rm sel}(F)}
+        =m+\frac3{\ln2}+O(\delta)\longrightarrow\infty.
+\]
+This refutes any fixed selector-only increment constant, including one
+asserted under nearly identical branches with coincident supports.
+It refutes a uniform-disagreement hypothesis if that hypothesis is
+silently inferred from branch distinctness: disagreement is $2^{-m}$.
+It does not refute the logarithmic selector bound or FEI. Indeed each
+data coordinate has influence $1/2$ in $g$ and $1/2+2\delta$ in $g'$:
+the point flip adds one disagreeing edge to a previously agreeing edge.
+Therefore
+\[
+ I(F)=m/2+(m+1)\delta.
+\]
+The data influence remains available for any complete FEI payment.
+
+\paragraph{Certified finite scope.}
+The saved exhaustive integer-Walsh and rational-log certificate covers
+every table with $a=1,m\le3$ or $a=2,m\le2$:
+\[
+ \Delta\le\frac{171}{200}
+ \left[\frac2{\ln2}I_{\rm sel}+a h_2(I_{\rm sel}/a)\right].
+\]
+All $131620$ tables are included; the inequality is strict when
+$I_{\rm sel}>0$. This finite statement has no claimed universal bridge
+beyond testing a paid stopping-tree interface.
+\end{document}

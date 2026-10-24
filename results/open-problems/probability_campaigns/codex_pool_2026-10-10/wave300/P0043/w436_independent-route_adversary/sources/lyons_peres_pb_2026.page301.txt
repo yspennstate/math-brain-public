@@ -1,0 +1,99 @@
+284
+Chap. 8: The Mass-Transport Technique and Percolation
+To make it even more useful, a converse can be added to Corollary 8.11:
+Proposition 8.12. Let Γ be a quasi-transitive group of automorphisms of a connected, locally
+ﬁnite graph, G. Choose a complete set {o1, . . . , oL} of representatives in 𝖵of the orbits of
+Γ. Let µi be the weight of oi as given by Theorem 8.10. If there exist numbers 𝜈x ≥0 for
+x ∈𝖵(G) such that 0 < ∑
+x 𝜈x < ∞and
+∑
+x∈𝖵
+𝜈x
+∑
+z∈𝖵
+f (x, z) =
+∑
+x∈𝖵
+𝜈x
+∑
+y∈𝖵
+f (y, x)
+(8.13)
+whenever f : 𝖵×𝖵→[0, ∞] is invariant under the diagonal action of Γ, then Γ is unimodular
+and
+µ−1
+i
+=
+∑
+x∈Γoi
+𝜈x
+(8.14)
+for 1 ≤i ≤L.
+Note that (8.11) is the special case of (8.13) where 𝜈x = µ−1
+i
+if x = oi, and 𝜈x = 0 otherwise.
+Proof. Assume that 𝜈x are as stated. Deﬁne
+ai :=
+∑
+x∈Γoi
+𝜈x .
+We ﬁrst show that ai > 0. Let each vertex x send mass 1 to each vertex in Γoi that is nearest
+to x. Since the left-hand side of (8.13) is positive, so is the right-hand side. Since only
+vertices in Γoi receive mass, it follows that ai > 0, as desired.
+To see that Γ is unimodular, consider any j, k and any u ∈Γoj and v ∈Γok.
+Let
+f (x, y) := 1Γu, xv(y). It is straightforward to check that f is diagonally invariant under Γ.
+Note that
+|S(x)z| 1Γx(y) = |Γx,yz|
+for all x, y, z ∈𝖵(G) and that
+z ∈Γu,xv ⇐⇒x ∈Γv,zu .
+(8.15)
+Therefore, we have
+|S(u)v|aj =
+∑
+y
+𝜈y|Γu,yv| =
+∑
+y
+𝜈y
+∑
+x
+1Γu,yv(x)
+=
+∑
+y
+𝜈y
+∑
+x
+f (y, x) =
+∑
+z
+𝜈z
+∑
+x
+f (x, z)
+[by (8.13)]
+=
+∑
+z
+𝜈z
+∑
+x
+1Γu, xv(z) =
+∑
+z
+𝜈z
+∑
+x
+1Γv,zu(x)
+[by (8.15)]
+=
+∑
+z
+𝜈z|Γv,zu| = |S(v)u|ak .
+In other words,
+|S(u)v| aj = |S(v)u| ak .
+(8.16)
+If we take j = k, then we see that Γ is unimodular. In general, comparison of (8.16) with
+(8.7) shows (8.14).
+◀

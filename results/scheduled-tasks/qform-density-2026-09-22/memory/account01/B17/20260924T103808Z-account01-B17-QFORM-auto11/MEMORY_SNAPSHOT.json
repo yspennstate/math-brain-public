@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "programme_revision": "2026-09-22.5",
+  "owner_control_revision": "2026-09-22.15",
+  "account": "account01",
+  "slot": "B17",
+  "run_id": "20260924T103808Z-account01-B17-QFORM-auto11",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "OPEN_SEPARATE",
+  "canonical_math_commit": "65874e307e960615e2da0e659b588fb94490f40e",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B17/20260924T103808Z-account01-B17-QFORM-auto11/",
+  "handoff_path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B17/20260924T103808Z-account01-B17-QFORM-auto11.md",
+  "new_theorem": "QFORM-MULTIMACRO-SECONDORDER-RIGIDITY-v1",
+  "headline": "For any fixed finite collection of compensated macroscopic uniform rows near the isotropic Gaussian reflection, p_Q(0)/(3sqrt2)=1-(3 eps^2/80) sum alpha_j^2 F(t_j)+O(eps^3), F(t)=(19+2t-13t^2)/8>=1. At fixed total macro variance and fixed row count, the unique second-order cone-tip maximizer is equal fragmentation along the minority eigendirection. A two-noncollinear-row exact entrywise-dense spectrum-{1,1,-1} physical family approaches 3sqrt2 as q->0 after m->infinity.",
+  "explicit_noncollinear_pair": {
+    "v1": "e3",
+    "v2": "(2,0,1)/sqrt(5)",
+    "alpha1": "1/2",
+    "alpha2": "1/2",
+    "relative_q2_penalty": "63/2000",
+    "extra_over_equal_collinear_pair": "51/4000"
+  },
+  "partner_result_applied": {
+    "account": "account02",
+    "slot": "B17",
+    "finite_tight_frame_commit": "1e29eef72bce4aa7766f2f81c8ea13fb0786b6c9",
+    "finite_tight_frame_checks": "765da2b09b7612839c204e1899a7363574e10014",
+    "quantitative_location_commit": "f1b5f3b66e19fa17acf395ea31e6615d7ddc7440",
+    "quantitative_location_checks": "97d91254e56ad2f8c79b121a0ce8bf66472a11d9",
+    "actual_inequality": "For the exact dense tetrahedral Parseval-frame Poisson family with lambda_a=R_a=1 and B=I-2nn^T, n=(1,2,4)/sqrt(21), limsup ||p_m||_inf <= 4.14563248192024416656... < 4.146 < 3sqrt2."
+  },
+  "source_dependencies": [
+    "e5f71d79eff325201dd0274053d20268ce65b837",
+    "1e29eef72bce4aa7766f2f81c8ea13fb0786b6c9",
+    "765da2b09b7612839c204e1899a7363574e10014",
+    "f1b5f3b66e19fa17acf395ea31e6615d7ddc7440",
+    "97d91254e56ad2f8c79b121a0ce8bf66472a11d9"
+  ],
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1"
+  ],
+  "checker_status": "PASS_QFORM_B17_MULTIMACRO_SECONDORDER_RIGIDITY",
+  "unresolved_implication": "No proof that 3sqrt2 is the unrestricted sharp constant and no universal upper bound. Remaining sharp-witness mechanisms include nonperturbative multi-macro interactions, rough residual laws without a covariance-floor Gaussian core, and extra active spectrum surviving before rank-three aggregation.",
+  "next_step": "Test nonperturbative two-or-more non-collinear macroscopic rows for off-zero/two-sheet overshoot; if no overshoot, seek a global comparison extending the perturbative rigidity beyond small epsilon."
+}

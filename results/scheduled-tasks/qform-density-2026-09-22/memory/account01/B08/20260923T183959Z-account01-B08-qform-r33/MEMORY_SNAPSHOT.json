@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B08",
+  "run_id": "20260923T183959Z-account01-B08-qform-r33",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "control_commit_start": "f2268894a29f0e4796d88319211c4ae227f58dd1",
+  "control_commit_prepublication_refresh": "f6b6dea6650c7ac4444b446a2fe2074f88e4b272",
+  "owner_request_acknowledged": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FOR_FULL_TARGET; PROVED_C0_ON_PAID_BRANCH_ONLY",
+  "claim_ids": [
+    "QFORM-3FRAME-HEAVY-PEEL-v1",
+    "QFORM-K1-TRANSVERSE-HEAVY-PEEL-v1"
+  ],
+  "canonical_math_repository": "yspennstate/math-open-problems",
+  "canonical_math_commit": "faad78e1fbcbfe0943990210de098df34a96e042",
+  "canonical_math_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T183959Z-account01-B08-qform-r33/REPORT.md",
+  "final_refresh_path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T183959Z-account01-B08-qform-r33/FINAL_REFRESH.md",
+  "partner_result": {
+    "account_slot": "account02/B08",
+    "claim": "QFORM-K1-MACROSCOPIC-3FRAME-HALFCUT-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "66582bd87d50634f3525a57c87acffdbde97aea1",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/20260923T153836Z-account02-B08-qform-r28/REPORT.md",
+    "actual_application": "After original-coordinate heavy-set conditioning, restricted parameters satisfy c' >= cg, beta' >= beta sqrt(g), d' >= d0 sqrt(g), leverage <=1/48; substituting these into the partner kappa formula gives the paid density bound 23/(kappa_g L)."
+  },
+  "main_new_result": {
+    "statement": "For W=[q,U] an orthonormal physical three-frame, H_g={i:||W_i||^2>g/48} has size <144/g. Either a unit frame direction has >1-g mass on H_g, or G=W_T^T W_T>=gI and after conditioning H_g the restricted frame leverage is <=1/48. In the partner transverse k=1 state this degrades child/cross parameters only by explicit powers of g and yields a uniform conditional density bound.",
+    "specialization": "At c=sqrt(3/20), beta=(3/16)sqrt(3/5), d0=g=1/2: either >1/2 frame mass lies on <=287 coordinates, or leakage <=9/(10240 sqrt(6)) L implies ||p_Q||inf <(14720 sqrt(6)/9)/L with a continuous C0 density."
+  },
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-GSTAR-SCALE-FORCING-FALSE-v1"
+  ],
+  "checker": {
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T183959Z-account01-B08-qform-r33/CHECK_OUTPUT.txt",
+    "status": "PASS_SANITY_ONLY",
+    "trials": 1500,
+    "violations": 0
+  },
+  "unresolved_implication": "QFORM-TRANSVERSE-287CORE-LOCALIZED-RECEIVER-v1",
+  "next_step": "Convert the <=287-coordinate concentration certificate into a source-valid localized receiver or an already-paid cross/pivot configuration while retaining complementary spectrum and affine terms; keep the separate large-leakage branch explicit."
+}

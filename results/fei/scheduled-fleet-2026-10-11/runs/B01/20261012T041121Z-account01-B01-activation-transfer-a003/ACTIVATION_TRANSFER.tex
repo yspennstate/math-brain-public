@@ -1,0 +1,142 @@
+% B01/A003: fresh one-point activation transfer for the upper-set potential.
+\section*{Fresh-activation transfer for GU$'$}
+
+All logarithms are base two.  For a Boolean function $h$ write
+\[
+ p_h(S)=\widehat h(S)^2,\qquad
+ \pi_h(S)=\sum_{T\supseteq S}p_h(T),\qquad
+ U(h)=\sum_Sp_h(S)\log\frac{\pi_h(S)}{p_h(S)},
+\]
+and
+\[
+ G(h)=\sum_i\left(U(h)-\mathbb E_{x_i}U(h\mid x_i)\right).
+\]
+
+Let $g:\{-1,1\}^n\to\{-1,1\}$, let
+$r=\Pr[g=-1]$, let $d\geq1$, and put $p=2^{-d}$.  On $d$ fresh
+control bits $z$, choose one activation word $z_\star$ and define
+\[
+ F(z,x)=\begin{cases}g(x),&z=z_\star,\\1,&z\ne z_\star.\end{cases}
+ \tag{1}
+\]
+Set
+\[
+ M(t)=(1-2t)^2\log\frac1{(1-2t)^2}
+\]
+with the continuous convention at $t=1/2$.  Direct Walsh expansion of
+(1) gives
+\begin{align}
+ U(F)&=pU(g)+Q_{p,d}(r),                                      \tag{2}\\
+ Q_{p,d}(r)&=M(pr)+2rpd-pM(r)
+ +4pr^2\log\frac1r-4p^2r^2\log\frac1{pr}.                  \tag{3}
+\end{align}
+The endpoint conventions make (3) valid also at $r=0$.
+
+For completeness, for every nonempty data frequency $T$ and every control
+frequency $A$, the atom of $F$ is $p^2p_g(T)$ and its upper mass is
+$p2^{-|A|}\pi_g(T)$.  The control-only atoms are $(1-2pr)^2$ at the empty
+frequency and $4p^2r^2$ at every nonempty $A$.  Summing their logarithmic
+ratios gives (2)--(3); hence no probabilistic relaxation enters this
+identity.
+
+Define the nonaffine scalar remainder
+\[
+ R_p(r)=Q_{p,d}(r)-2rpd.                                      \tag{4}
+\]
+If $r_{j,+},r_{j,-}$ are the defect rates of the two $x_j$-restrictions of
+$g$, then $r=(r_{j,+}+r_{j,-})/2$.  Therefore (2) gives the exact data-bit
+identity
+\[
+ \Delta_jU(F)=p\Delta_jU(g)+R_p(r)
+ -\frac{R_p(r_{j,+})+R_p(r_{j,-})}{2}.                       \tag{5}
+\]
+For any control coordinate, the exact charge is
+\[
+ \delta_d(r)=M(pr)-\frac12M(2pr)+2pr
+ +4p^2r^2\left(\log\frac1{pr}-2\right).                     \tag{6}
+\]
+Consequently
+\[
+ G(F)=pG(g)+d\delta_d(r)+\sum_{j=1}^n
+ \left(R_p(r)-\frac{R_p(r_{j,+})+R_p(r_{j,-})}{2}\right).   \tag{7}
+\]
+
+We now bound (7) without any dependence on $n,d,p$, or $r$.  Put
+\begin{align*}
+ L_M&=\frac{4(1+2/e)}{\ln2},\\
+ L_R&=4+\frac{14(1+2/e)}{\ln2},\\
+ K_{\rm act}&=\frac{L_R}{2}
+ =2+\frac{7(1+2/e)}{\ln2}<19.530,\\
+ C_\star&=1+\frac{2(1+1/e)}{\ln2}<4.947.
+\end{align*}
+Writing $y=|1-2t|$ and using $y|\ln y|\leq e^{-1}$ gives
+$|M'(t)|\leq L_M$.  Also
+\[
+ \left|\frac d{dr}\left(r^2\log\frac1r\right)\right|
+ \leq\frac{1+2/e}{\ln2}.
+\]
+Since $dp\leq1/2$ for $p=2^{-d}$, termwise differentiation of (4) gives
+\[
+ |R_p'(r)|\leq pL_R.                                         \tag{8}
+\]
+Moreover $|r_{j,+}-r_{j,-}|\leq\operatorname{Inf}_j(g)$, so
+the $j$th Jensen gap in (7) is at most
+$(pL_R/2)\operatorname{Inf}_j(g)$.  Finally, with $x=pr\leq1/2$,
+$M(x)\leq4x/\ln2$ and $x\log(1/x)\leq1/(e\ln2)$ imply
+\[
+ \delta_d(r)\leq2C_\star pr.                                \tag{9}
+\]
+The physical influence identity is
+\[
+ I(F)=pI(g)+I_{\rm ctl},\qquad I_{\rm ctl}=2rpd.             \tag{10}
+\]
+Combining (7)--(10) proves the transfer estimate
+\[
+ \boxed{G(F)\leq pG(g)+K_{\rm act}pI(g)+C_\star I_{\rm ctl}.} \tag{11}
+\]
+
+There is also an exact GU$'$ transfer.  Suppose a restriction-closed base
+class obeys
+\[
+ G(g)\leq aI(g)+bU(g),\qquad 0\leq b<1.                     \tag{12}
+\]
+Since $R_p(0)=0$, (8) gives
+\[
+ Q_{p,d}(r)=I_{\rm ctl}+R_p(r)
+ \geq-(K_{\rm act}-1)I_{\rm ctl}.                           \tag{13}
+\]
+Thus every fresh activation (1) satisfies
+\[
+ G(F)\leq a'I(F)+bU(F),                                     \tag{14}
+\]
+where
+\[
+ \boxed{a'=\max\{a+K_{\rm act},\ C_\star+b(K_{\rm act}-1)\}.} \tag{15}
+\]
+The contraction coefficient $b$ is unchanged.
+
+As a concrete expanding restriction-closed endpoint, let $\mathcal A$ be
+all constants, all signed parities, and every fresh one-point activation
+(1) whose core is a signed parity, with arbitrary data dimension and
+arbitrary $d$.  Restrictions remain in $\mathcal A$.  A signed parity has
+$U=G=0$, so (11) and $C_\star<K_{\rm act}$ yield
+\[
+ G(F)\leq K_{\rm act}I(F)\quad(F\in\mathcal A).             \tag{16}
+\]
+Restriction induction applied to (16) gives
+\[
+ U(F)\leq K_{\rm act}I(F),\qquad
+ H(F)\leq(2+2K_{\rm act})I(F)<41.059I(F).                  \tag{17}
+\]
+Indeed, if $F$ has $N$ relevant coordinates, then
+$NU(F)=G(F)+\sum_i\mathbb E U(F\mid x_i)$ and
+$\sum_i\mathbb E I(F\mid x_i)=(N-1)I(F)$.  The induction hypothesis and
+(16) therefore give $NU(F)\leq NK_{\rm act}I(F)$.
+Here the last implication uses the source-pinned universal inequality
+$H\leq2I+2U$.
+
+The theorem does not control repeated coherent changes of the core.  If
+(15) is applied naively at every nested activation layer, its coefficient
+$a$ grows by $K_{\rm act}$ per layer.  Removing precisely that accumulation,
+or proving cancellation of the corresponding signed Jensen gaps, remains
+the unpaid universal hierarchy estimate.

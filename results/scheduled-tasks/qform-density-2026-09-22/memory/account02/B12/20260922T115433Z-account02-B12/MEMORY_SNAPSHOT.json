@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "account": "account02",
+  "slot": "B12",
+  "run_id": "20260922T115433Z-account02-B12",
+  "source_control_commit": "0a3aca1999f48e33c318c809477ade8feac096ae",
+  "correction_ids_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION"
+  ],
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "premises": [
+    {
+      "source": "yspennstate/math-open-problems@08f387da860f00c13f30de170286a82eb13108e1:proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/account03-B12-20260922T114435Z-349dfcff7c/REPORT.md",
+      "scope": "partner flat exceptional-eigenvector pair/triple stitching theorem and exact remaining nonflatness gap"
+    },
+    {
+      "source": "yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/account02/B15/20260922T110507Z-account02-B15-qform-pivot-r1/REPORT.md",
+      "scope": "definite 2x2 principal-pair density bound pi/sqrt(|det C|), nonsingular 3x3 principal-triple bound (2pi+3sqrt3)/sigma_min, both uniform under linear tilts and outside conditioning"
+    }
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-ARBITRARY-ORIENTATION-ONE-EXCEPTION-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "summary": "Flatness removed: arbitrary unit exceptional eigenvector v in epsilon*lambda*I_4+(mu-epsilon*lambda)vv^T has density cap C_orient/lambda with C_orient<24.193."
+    },
+    {
+      "id": "QFORM-CODIMENSION-ONE-SPECTRAL-STABILITY-v1",
+      "status": "PROVED_TARGET_LEVEL_SUBCLASS",
+      "summary": "For n>=4, n-1 equal same-sign eigenvalues epsilon*lambda and one arbitrary eigenvalue imply density norm <24.193/lambda for arbitrary orientation."
+    },
+    {
+      "id": "QFORM-ONE-EXCEPTION-ONE-PERCENT-STABILITY-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "summary": "A 4x4 original-coordinate block with three eigenvalues within lambda/100 of one common signed value and a fourth arbitrary eigenvalue has affine quadratic density cap <26.697/lambda."
+    }
+  ],
+  "exact_outputs": {
+    "report": "yspennstate/math-open-problems@ffbe643d91659c040e06f33eb688b2d0ad5f0d50:proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260922T115433Z-account02-B12/REPORT.md",
+    "checker": "yspennstate/math-open-problems@84334232f586c98746e327d5714ce2d5cb4a78de:proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260922T115433Z-account02-B12/CHECKER.out",
+    "claims_commit": "ca18a1d3038e91db66694dfd6554343360f8ba1a",
+    "handoff_commit": "f4b4ad90c8733d0624703c5bf729bd9fafe7df36"
+  },
+  "unresolved_implication": "Obtain an aggregate dimension-free pair/triple payment from only three arbitrary large spectral directions; fixed-minor selection can lose dimension on delocalized rank-three projectors.",
+  "next_step": "Test whether Cauchy-Binet determinant mass can be combined with pair/triple small-ball estimates by a weighted cover, without selecting one tiny minor or taking a dimension-losing fiber supremum."
+}

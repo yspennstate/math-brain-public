@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B12",
+  "run_id": "20260924T021612Z-account01-B12-QFORM-auto11",
+  "source_control_commit": "2d599946833908744e03e005cc46016e2e3048e7",
+  "owner_control_revision": "2026-09-22.15",
+  "programme_revision": "2026-09-22.5",
+  "target_status": "FULL_CONJECTURE_OPEN",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "new_result": {
+    "id": "QFORM-RANKONE-CROSS-VOLUME-RESONANCE-REPAIR-v1",
+    "status": "PROVED_SUPPORTING_THEOREM",
+    "summary": "For a full-column physical cross block M and arbitrary signed rank-one update M+theta a b^T, the exact Gram determinant ratio is (1+theta q)^2+theta^2 r, where q=b^T M^dagger a and r=||(I-MM^dagger)a||^2 b^T(M^TM)^{-1}b. Its amplitude/sign-uniform minimum is r/(q^2+r), so a transverse physical component repairs exact scalar resonance. Iterating gives exact multiplicative factors for arbitrary signed spectral packets; arbitrary small signed spectrum with ||E_low||<=h costs only h by physical-block Weyl.",
+    "key_equations": [
+      "det((M+theta a b^T)^T(M+theta a b^T))=det(M^TM)[(1+theta q)^2+theta^2 r]",
+      "inf_theta [(1+theta q)^2+theta^2 r]=r/(q^2+r) when q^2+r>0",
+      "det(M_R^TM_R)=det(M_0^TM_0) product_j F_j for sequential spectral modes",
+      "s_m(A[I,J])>=g_hi-h-delta for ||E_low||<=h and local tail ||T[I,J]||<=delta"
+    ]
+  },
+  "partner_result_applied": {
+    "account_slot": "account02/B12",
+    "id": "QFORM-SIX-MODE-SPECTRAL-SQUARE-CARRIER-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260923T145451Z-account02-B12-QFORM-r36/REPORT.md",
+    "actual_inequality": "For the final six-mode family, s6(A[I,H])>=g=sqrt(2)-1/4, hence lambda6((A^2)[H,H])>=g^2 and s3(A)>=g>1. Plugging m=6,N=15,s=g into the partner theorem gives ||p_Q||_(infinity,ess)<1097."
+  },
+  "canonical_output": {
+    "repository": "yspennstate/math-open-problems",
+    "report_commit": "0777248c6689f6370389c757f04407c6961702fb",
+    "checker_commit": "164abff08c5bd234a09f26ddcb0eeb0f32b9f1b9",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260924T021612Z-account01-B12-QFORM-auto11/REPORT.md",
+    "report_blob": "3fa83e340036b0f72b90adf6b21950d66fdfc268",
+    "checker_paths": [
+      "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260924T021612Z-account01-B12-QFORM-auto11/check_rankone_volume.py",
+      "proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260924T021612Z-account01-B12-QFORM-auto11/CHECKS.json"
+    ]
+  },
+  "handoff": {
+    "repository": "yspennstate/math-research-brain",
+    "commit": "117b0dd6f073ea7fda63625a5808341c17529022",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B12/20260924T021612Z-account01-B12-QFORM-auto11.md"
+  },
+  "unresolved_implication": "From only s3(A)>=1, force aggregate repaired original-coordinate cross volume or route failure quantitatively into an already-paid diffuse-bank/grouped-hub/pair/Schur/half-Riesz mechanism; naive one-good-minor and fixed-cross-rank dichotomies are refuted.",
+  "next_step": "Prove an aggregate resonance-versus-transverse-volume dichotomy using the exact repair factor r/(q^2+r), rather than requiring a Woodbury nonresonance gap.",
+  "continuity": "CONTINUOUS_C0_FOR_EXPLICIT_D5_FAMILY; FULL_TARGET_CONTINUITY_OPEN",
+  "independent_end_to_end_reviews": 0,
+  "quiet_delivery": true
+}

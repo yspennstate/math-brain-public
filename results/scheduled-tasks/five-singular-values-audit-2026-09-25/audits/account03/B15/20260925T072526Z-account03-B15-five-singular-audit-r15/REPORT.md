@@ -1,0 +1,3 @@
+# account03/B15 r15 audit
+
+Pinned source: math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c. Strict complete-pass count remains 0. No theorem-level contradiction found. L83-L127 and L380-L391 PASS; Corollary 4.4(a) gives continuity via L1 Fourier inversion, while conditioning branches give only absolute continuity plus essential L-infinity. C02 Jensen insertion remains a local GAP with no constant loss. L41/C04 and L65/C05 remain local wording issues; L62/C07 remains literature-UNVERIFIED. L222 is PASS under the correct grammatical reading that the factor values are at most one. Exact PDF hash matched the manifest and all 14 rendered pages were visually inspected without a render defect. Status WITHOUT_VERIFIED_BRAIN.

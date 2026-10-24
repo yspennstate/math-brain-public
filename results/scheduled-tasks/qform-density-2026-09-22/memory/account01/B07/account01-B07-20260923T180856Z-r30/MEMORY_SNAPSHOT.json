@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "account01",
+  "slot": "B07",
+  "run_id": "account01-B07-20260923T180856Z-r30",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "initial_control_commit": "8e2b9df1bcfba9e98af51e48b4d3e698802acca0",
+  "owner_request_ack": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "corrections_consumed": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE",
+    "QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1"
+  ],
+  "new_results": [
+    {
+      "id": "QFORM-COMPOUND-EXTENSION-SIGMA-v1",
+      "statement": "For any real A and physical m-by-m anchor A[I,J], the total squared determinant mass of all one-row/one-column extensions is at least sigma_{m+1}(A)^2 det(A[I,J])^2."
+    },
+    {
+      "id": "QFORM-E2-SPECTRAL-EXTENSION-LIFT-v1",
+      "statement": "For arbitrary coefficients 0<=eta<=1 on physical 2x2 minors, the explicitly defined fractional E3 lift has mass Z3>=sigma_3(A)^2 Omega_eta/9; hence Z3>=Omega_eta/9 under the target spectral hypothesis."
+    },
+    {
+      "id": "QFORM-E2-SPECTRAL-EXTENSION-ROLE-LIFT-v1",
+      "statement": "For a disjoint physical cross-E2 packet under sigma_3(A)>=1, some overlap h in {0,1,2} coarse-role fractional E3 packet has mass at least 16 Omega/84375."
+    }
+  ],
+  "partner_result_applied": {
+    "account_slot": "account02/B07",
+    "source_repository": "yspennstate/math-open-problems",
+    "source_commit": "0acebcc13c0843c37694a17afb2c0de1c2925891",
+    "source_path": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T163223Z-account02-B07-QFORM-auto11/REPORT.md",
+    "incoming_inequality": "sqrt(Omega)>462.4798790835328 h0^2 with h0=(2sqrt(2)-1)/1572864",
+    "application": "The new spectral lift yields Z3>=Omega/9 and a role-consistent h=0,1,2 packet P_h>=16 Omega/84375>40.559433681942586 h0^4>7.4069227433e-23."
+  },
+  "scoped_density_payment": "If the active lifted packet has overlap h=0 and a row or column inclusion-marginal maximum <=1/2, the pure E3 BL/HY receiver gives a continuous density with ||p_Q||inf<=3e P_0^{-1/6}<39793.253 at the partner scale.",
+  "canonical_math": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4e714d23f0673acdf71809b29fc99b469b2944aa",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T180856Z-r30/REPORT.md",
+    "checks": "proofnet24/QFORM-density/fleet-2026-09-22/account01/B07/account01-B07-20260923T180856Z-r30/CHECKS.txt"
+  },
+  "handoff": {
+    "commit": "e893d9c54ddef5fd501f66480da4c8710c61adf4",
+    "path": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B07/account01-B07-20260923T180856Z-r30.md"
+  },
+  "unresolved": [
+    "QFORM-LIFTED-E3-H12-OR-CONCENTRATED-H0-RECEIVER-v1",
+    "designated partner's separate global physical rank-one tube",
+    "full unrestricted QFORM density theorem",
+    "global continuity upgrade"
+  ],
+  "next_step": "Use the exact one-shared/two-shared Schur ledgers on the lifted E3 role packet, but aggregate pivot weights before any inverse; seek a mixed-order packet or projected-crossing gate that is uniform on the h=1/h=2 faces.",
+  "status": "ESSENTIAL_STEP_APPLIED_FULL_TARGET_OPEN",
+  "full_brain_connected": false,
+  "execution_mode": "WITHOUT_VERIFIED_BRAIN"
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.15",
+  "account": "account02",
+  "slot": "B07",
+  "run_id": "20260923T183825Z-account02-B07-qform-r11",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "source_control": {
+    "initial_brain_main": "0c15c14199790afed64185ab32189722b0c41bc5",
+    "publication_refresh_brain_main": "dffb9603b719dd03131407605aa09bd4c608ef19",
+    "partner_report_commit": "3a3334245375f0d72687f3cb482b4478d51f3188",
+    "required_e5_commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "finite_core_receiver_commit": "472b70df7d1edbb3afac23269bc2e4368ae0e371",
+    "canonical_report_commit": "12da18e77ea3c2097023c2da5193c86ef3b6478c"
+  },
+  "owner_continuation": "QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z",
+  "correction_ids_consumed": [
+    "QFORM-GSTAR-SCALE-FORCING-FALSE-v1",
+    "QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1",
+    "QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE"
+  ],
+  "partner_result_applied": {
+    "source": "account03/B07 r35",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260923T173750Z-account03-B07-qform-r35/REPORT.md",
+    "premise": "Z=e2(KK^T)>854675.100194511 h^4; heavy spectral pair-volume projection rank <=2; in the low-E3 branch the orthogonal interface tail has Frobenius norm < eps0 h with eps0=3/sqrt(Z0)."
+  },
+  "actual_mathematical_premises": [
+    "K=A[L,R] is a literal ORIGINAL-coordinate cross block in the strict-N3 branch.",
+    "When the r35 heavy compound projection has rank two, each selected spectral pair-volume inclusion marginal exceeds 2/3.",
+    "Physical off-diagonal coefficients on the live branch satisfy |A_ij|<=h/8 and physical diagonals satisfy |A_ii|<h^2/128.",
+    "The finite-dimensional projected-gradient receiver is uniform over arbitrary affine terms after conditioning only outside an ORIGINAL-coordinate physical core."
+  ],
+  "new_result": {
+    "id": "QFORM-R35-R2-CARRIER-PLUECKER-CORE-v1",
+    "statement": "If the r35 low-E3 heavy compound projection has rank two and the left and right rank-two physical Pluecker laws each put at least half their area on supports of size <=131, then an actual principal block on <=262 original coordinates has four eigenvalues of modulus >4.802356499645993e-8; hence ||p_Q||_infinity<2.927e9 by the completed finite-dimensional receiver.",
+    "key_identity": "e2(C[R0,C0]C[R0,C0]^T)=(s_a s_b)^2 det(U_R0^T U_R0) det(V_C0^T V_C0), with (s_a s_b)^2>Z/3 by inclusion-exclusion.",
+    "scope": "supporting branch theorem only; no full-QFORM or continuity claim; no physical minor selected or inverted."
+  },
+  "required_e5_application": [
+    "Flat diffuse rank-two carrier regression: Theorem F gives |phi_Q(t)|<=min(1,16 pi^2 |t|^-2) and ||p_Q||_infinity<=8.",
+    "One-coloop diffuse carrier regression: Theorem H gives |phi_Q(t)|<=min(1,8 pi^2 |t|^-2) and ||p_Q||_infinity<=4 sqrt(2)."
+  ],
+  "exact_regressions": [
+    "Flat constant/alternating two-frame K=UV^T: spectrum of bipartite A is {1,1,-1,-1}, E2=1, tail zero, bounded physical supports capture vanishing Pluecker area and have spectral norm tending to zero.",
+    "One-coloop frame U=[e_h, flat leaves]: hub Pluecker inclusion marginal is 1 but any bounded support captures vanishing area; bounded physical cores still vanish."
+  ],
+  "unresolved_implication": "QFORM-R35-R2-PLUECKER-DIFFUSE-OR-R1-ROUGH-TAIL-RECEIVER-v1",
+  "next_step": "Construct a dependence-safe receiver for the rank<=1 carrier or rank-two Pluecker-support-diffuse branch that reattaches r35's true nonzero rough tail while retaining arbitrary same-bank curvature. Do not invoke the still-open conditional-adaptation (SP), do not condition on rotated coordinates, and do not treat Frobenius-small coefficients as a small random perturbation.",
+  "outputs": {
+    "report": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T183825Z-account02-B07-qform-r11/REPORT.md",
+    "checkpoint": "proofnet24/QFORM-density/fleet-2026-09-22/account02/B07/20260923T183825Z-account02-B07-qform-r11/CHECKPOINT.md",
+    "handoff": "scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B07/20260923T183825Z-account02-B07-qform-r11.md"
+  },
+  "status": "NEW_R35_RANK2_CARRIER_PLUECKER_CORE / EXACT_DIFFUSE_AND_ONECOLOOP_REGRESSIONS / PINNED_E5_FOURIER_APPLIED / FULL_QFORM_OPEN"
+}

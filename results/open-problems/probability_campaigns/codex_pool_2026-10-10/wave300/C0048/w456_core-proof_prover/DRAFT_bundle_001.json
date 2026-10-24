@@ -1,0 +1,174 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w456",
+  "bundle_slug": "potts-c0048-cumulants-gap-001",
+  "entries": [
+    {
+      "key": "powers",
+      "namespace": "probability.potts",
+      "logical_name": "free-fk-cluster-power-sums",
+      "kind": "definition",
+      "title": "Free FK cluster power sums",
+      "statement": "For a finite graph G with N vertices and an FK edge configuration omega, let S_j(omega)=sum_C |C|^j over every open cluster C, including isolated vertices. Thus S_1=N. Cluster sizes are random under the FK law; independent cluster colouring does not make the sizes independent.",
+      "proof_text": null,
+      "assumptions": [
+        "finite graph",
+        "open connected components including isolated vertices"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w456:C0048-campaign",
+        "url": "file:///~/brain_workers/w456/ATTEMPT.md",
+        "revision": "author-checkpoint-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT; independent and served-model gates pending",
+      "parent_problem_status": "C0048 UNSOLVED by this packet; current openness UNKNOWN"
+    },
+    {
+      "key": "cumulants",
+      "namespace": "probability.potts",
+      "logical_name": "draft-free-potts-field-cumulants-through-four",
+      "kind": "concept",
+      "title": "DRAFT: exact free Potts field cumulants",
+      "statement": "AUTHOR-DERIVED FINITE IDENTITY, pending independent proof admission. For a nonempty finite graph, integer q>=2, finite beta>=0, free-boundary zero-field Potts weights exp(beta sum_e 1{same colour}), let X=sum_x(1{sigma_x=1}-1/q), P(h)=N^(-1)log E[exp(hX)], and S_j=sum_C |C|^j under free FK with p=1-exp(-beta). With a2=(q-1)/q^2, a3=(q-1)(q-2)/q^3, a4=(q-1)(q^2-6q+6)/q^4, P second and third derivatives at zero are a2 E[S2]/N and a3 E[S3]/N. The fourth is (a4 E[S4]+3 a2^2 Var(S2))/N. No uniform thermodynamic remainder follows.",
+      "proof_text": null,
+      "assumptions": [
+        "all hypotheses in the statement",
+        "free FK expectations at zero field"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w456:C0048-campaign",
+        "url": "file:///~/brain_workers/w456/ATTEMPT.md",
+        "revision": "author-checkpoint-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT; independent and served-model gates pending",
+      "parent_problem_status": "C0048 UNSOLVED by this packet; current openness UNKNOWN"
+    },
+    {
+      "key": "omission",
+      "namespace": "probability.potts",
+      "logical_name": "draft-potts-fourth-cumulant-variance-omission-obstruction",
+      "kind": "concept",
+      "title": "DRAFT: obstruction to averaging conditional fourth cumulants",
+      "statement": "FINITE DIAGNOSTIC, pending independent proof admission. Under the free, zero-field finite Potts hypotheses of the exact cumulant identity, averaging conditional fourth cumulants misses 3 a2^2 Var(S2)/N, a nonnegative term. Exact spin/FK enumeration on six graphs with q=2,3,4,5 and exp(beta)=1,2,4 found 40 failures in 72 cases when this term was dropped, including two wrong quartic signs. The complete identity had zero failures. This does not prove a critical transition.",
+      "proof_text": null,
+      "assumptions": [
+        "random FK cluster sizes",
+        "conditionally independent uniform cluster colours",
+        "measurement scope explicitly finite"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w456:C0048-campaign",
+        "url": "file:///~/brain_workers/w456/ATTEMPT.md",
+        "revision": "author-checkpoint-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT; independent and served-model gates pending",
+      "parent_problem_status": "C0048 UNSOLVED by this packet; current openness UNKNOWN"
+    },
+    {
+      "key": "exclusion",
+      "namespace": "probability.potts",
+      "logical_name": "draft-quantitative-cubic-stationary-minimum-exclusion",
+      "kind": "concept",
+      "title": "DRAFT: quantitative cubic stationary-minimum exclusion",
+      "statement": "AUTHOR-DERIVED CONDITIONAL LEMMA, pending independent proof admission. Let r0,b>0,C>=0 and differentiable F(m)=a m^2-b_t m^3+R(m) on [0,r0], with b_t>=b, |R(m)|<=C m^4 and |R prime(m)|<=4C m^3. No interior stationary point with F(m)<=F(0)=0 can have 0<m<min(r0,b/(6C)) when C>0; when C=0 no such interior point exists. Substituting stationarity yields F(m)>=b m^3/2-3C m^4.",
+      "proof_text": null,
+      "assumptions": [
+        "all bounds on a common interval",
+        "stationarity",
+        "potential comparison"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w456:C0048-campaign",
+        "url": "file:///~/brain_workers/w456/ATTEMPT.md",
+        "revision": "author-checkpoint-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT; independent and served-model gates pending",
+      "parent_problem_status": "C0048 UNSOLVED by this packet; current openness UNKNOWN"
+    },
+    {
+      "key": "sp",
+      "namespace": "probability.potts",
+      "logical_name": "unproved-uniform-potts-scalar-potential-input",
+      "kind": "concept",
+      "title": "UNPROVED: uniform Potts scalar-potential input",
+      "statement": "MISSING INPUT, not asserted true. Fix integer q,d>=3, zero-field unit-coupling nearest-neighbour Potts on Z^d, and M(beta)=(q mu_beta^1(sigma_0=1)-1)/(q-1), beta_c=inf{beta:M(beta)>0}. Seek delta,r0,b>0,C>=0, independent of beta and volume, so every beta_c<beta<beta_c+delta with 0<M(beta)<r0 admits a differentiable F_beta(m)=a_beta m^2-b_beta m^3+R_beta(m), b_beta>=b, |R_beta|<=C m^4, |R_beta prime|<=4C m^3 on [0,r0], with F_beta prime(M(beta))=0 and F_beta(M(beta))<=F_beta(0)=0. Only the scalar mean-field entropy special case is established. The lattice input, particularly q=d=3, remains unproved.",
+      "proof_text": null,
+      "assumptions": [
+        "unproved proposed input for the actual lattice model",
+        "uniform constants and physical stationarity/minimum link"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w456:C0048-campaign",
+        "url": "file:///~/brain_workers/w456/ATTEMPT.md",
+        "revision": "author-checkpoint-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT; independent and served-model gates pending",
+      "parent_problem_status": "C0048 UNSOLVED by this packet; current openness UNKNOWN"
+    },
+    {
+      "key": "bridge",
+      "namespace": "probability.potts",
+      "logical_name": "draft-uniform-cubic-potential-implies-critical-potts-order",
+      "kind": "concept",
+      "title": "DRAFT: uniform cubic potential implies critical Potts ordering",
+      "statement": "CONDITIONAL REDUCTION ONLY, pending independent proof admission. For integer q,d>=3 and normalized monochromatic-boundary magnetization M(beta), assume the entire uniform-potential input stated in this bundle on (beta_c,beta_c+delta). The exclusion lemma gives M(beta)>=eta=min(r0,b/(6C)) for C>0, or eta=r0 for C=0. Finite-box magnetizations are continuous in beta and decrease with box size; their infimum M is upper semicontinuous and nondecreasing. Hence M is right-continuous at beta_c and M(beta_c)>=eta>0. The uniform-potential input is not proved, so C0048 is not solved.",
+      "proof_text": null,
+      "assumptions": [
+        "all uniform-potential hypotheses",
+        "standard FK domain and parameter comparison",
+        "no conclusion without the unproved input"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w456:C0048-campaign",
+        "url": "file:///~/brain_workers/w456/ATTEMPT.md",
+        "revision": "author-checkpoint-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT; independent and served-model gates pending",
+      "parent_problem_status": "C0048 UNSOLVED by this packet; current openness UNKNOWN"
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "cumulants",
+      "to_key": "powers",
+      "kind": "depends_on",
+      "rationale": "The cumulant identity uses the explicitly defined cluster power sums S2,S3,S4."
+    },
+    {
+      "from_key": "omission",
+      "to_key": "cumulants",
+      "kind": "depends_on",
+      "rationale": "The diagnostic omission is exactly the variance contribution in the complete fourth-cumulant identity."
+    },
+    {
+      "from_key": "bridge",
+      "to_key": "exclusion",
+      "kind": "depends_on",
+      "rationale": "The uniform supercritical lower bound uses the stationary-minimum exclusion inequality."
+    },
+    {
+      "from_key": "bridge",
+      "to_key": "sp",
+      "kind": "depends_on",
+      "rationale": "The critical-order reduction assumes this entire explicitly unproved lattice input."
+    }
+  ]
+}

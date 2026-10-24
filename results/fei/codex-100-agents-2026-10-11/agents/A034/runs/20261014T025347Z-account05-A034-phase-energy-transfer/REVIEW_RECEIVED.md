@@ -1,0 +1,5 @@
+# Received review and interrupted-stage provenance
+
+A079's REVIEW_A034.md in run20261012T044009Z-account05-A079-correlated-auxiliaries independently accepts A034-QUADRATIC-AFFINE-ROW-CONDITIONAL@1 at its exact scope. It reconstructs the affine flat spectrum by signed physical translations and frequency orbits, and reports1920 fixtures/31232 exact assertions. A079 provided no repair. This receipt changes the local rolling status of the original theorem to independently accepted; the immutable original claim file is preserved. External shared registry adoption is not claimed.
+
+The A034 run20261012T034550Z contains a frozen spec and helper but has no durable validation output or complete report. The run20261013T235407Z contains only a supervisor .final marker. Those stages were interrupted; no new theorem or successful execution is assumed from them. Originals are preserved under the protocol's legacy rule. The present stage recovers and proves the signed-autocorrelation idea directly. A032's completed stage3 finite payment supersedes the unfinished finite-search objective, so that old search is not rerun.

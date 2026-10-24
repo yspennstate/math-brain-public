@@ -1,0 +1,17 @@
+PASS
+truth_support [0, 1, 2, 3, 4, 5, 8, 10]
+pivot2_children [0, 1, 2, 3, 4, 6] [0, 1]
+pivot3_children [0, 1, 2, 3, 4, 5] [0, 2]
+exact_grid_cases 1296
+min_grid_max_local_over_global 1/2
+argmin_grid (Fraction(1, 7), Fraction(6, 7), Fraction(1, 7), Fraction(1, 7), Fraction(36, 2401), Fraction(36, 2401), Fraction(72, 2401), Fraction(0, 1))
+selector_theorem max(L2,L3) >= W/2
+cross_identity L3=B2+X; L2=B3+X; W=B2+B3+X
+C0 16137/2500 6.4548
+Cstar 4076157/625000 6.5218512
+astar 41907/156250 0.2682048
+uniform_local_corrected 610407/2500000 0.2441628
+uniform_child_defect 41907/2500000 0.0167628
+uniform_root_defect 326157/1250000 0.2609256
+
+Executed locally with the committed standard-library checker source. The 1296-point rational grid is a regression check only; the selector theorem itself is proved algebraically in REPORT.md.

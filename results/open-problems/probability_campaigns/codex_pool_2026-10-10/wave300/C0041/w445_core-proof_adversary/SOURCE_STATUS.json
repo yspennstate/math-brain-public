@@ -1,0 +1,62 @@
+{
+  "candidate_id": "C0041",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "exact_target": {
+    "model": "One sampled-once iid field of nearest-neighbor transition rows on Z^d, d>=2",
+    "uniform_ellipticity": "exists deterministic kappa>0; all allowed transitions >=kappa almost surely",
+    "direction": "fixed unit vector ell",
+    "premise": "P_0(X_n dot ell -> +infinity)=1",
+    "conclusion": "P_0(liminf (X_n dot ell)/n>0)=1"
+  },
+  "original_source": {
+    "source_id": "drewitz_ramirez_rwre_2014",
+    "url": "https://arxiv.org/pdf/1309.2589",
+    "locator": "Open question 2.20, PDF page 24 (printed page 22)",
+    "quote": "Is the RWRE necessarily ballistic in direction l?",
+    "status": "statement checked against primary source"
+  },
+  "prior_attempt": {
+    "attempt_id": "C0041-A001",
+    "result": "Regeneration-time integrability remains unproved in that attempt",
+    "artifact": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "H_and_I": "No exact C0041 record found in targeted searches",
+    "Lean_ranking": "Annotation only; no proof receipt",
+    "Team_O": "No exact C0041 assignment found in its board",
+    "export_search": "No exact C0041/logical-name hit in the two named population exports; no whole export was loaded"
+  },
+  "recent_claim": {
+    "date": "2026-09-23",
+    "url": "https://github.com/openai/math/blob/main/preprints/Directional-transience-implies-ballisticity-September-23-2026/paper.pdf",
+    "title": "Directional transience implies ballisticity",
+    "claim": "Full target with deterministic velocity and positive directional projection",
+    "audit_scope": "Conditional time-counting step in Proposition 2.5 only; equation (5), spatial inputs and whole proof not certified"
+  },
+  "formal_check": {
+    "performed": false,
+    "comparator_statement_url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalBallisticity.lean",
+    "comparator_has_sorry": true,
+    "comparator_role": "Challenge template; its admission does not refute the separate solution",
+    "configuration_url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalBallisticity.json",
+    "actual_solution_module": "OAI.Probability.Ballisticity.Main",
+    "actual_solution_url": "https://raw.githubusercontent.com/openai/math/main/lean/OAI/Probability/Ballisticity/Main.lean",
+    "actual_top_level_theorem": "OAI.DirectionalTransience.directional_transience_implies_ballisticity",
+    "actual_top_level_proof": "Calls directional_transience_implies_ballisticity_unit",
+    "configuration_permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "transitive_axioms_checked": false,
+    "trusted_axiom_receipt": null,
+    "comparator_success_receipt": null
+  },
+  "independent_derivation_saved_before_paired_proof": true,
+  "submitted": true,
+  "draft_path": "~\\math-brain-inbox\\w445\\bundle_001.json",
+  "reviewed": false,
+  "ingested": false,
+  "retrievable": false,
+  "remaining_gap": "A finite first moment of genuine regeneration duration under the exact conditioned law. For the finite-box route, the quantitative classification premise is unproved; for the recent manuscript, the decisive crossing estimate is unverified here."
+}

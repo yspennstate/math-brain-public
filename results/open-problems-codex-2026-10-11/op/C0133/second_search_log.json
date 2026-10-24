@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-12",
+  "queries": {
+    "zerner_openalex": "https://api.openalex.org/works?search=A%20non-ballistic%20law%20of%20large%20numbers%20for%20random%20walks%20in%20iid%20random%20environment&per-page=3",
+    "zerner_arxiv": "https://export.arxiv.org/api/query?search_query=all%3A%22non-ballistic%22%20AND%20au%3AZerner&max_results=10",
+    "hewitt_crossref": "https://api.crossref.org/works?query.title=Symmetric%20measures%20on%20Cartesian%20products&rows=3"
+  },
+  "results": [
+    [
+      "zerner_openalex",
+      "HTTP Error 429: Too Many Requests"
+    ],
+    [
+      "zerner_arxiv",
+      "HTTP Error 429: Unknown Error"
+    ],
+    [
+      "hewitt_crossref",
+      200,
+      11951
+    ]
+  ]
+}

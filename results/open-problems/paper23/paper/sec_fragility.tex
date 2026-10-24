@@ -1,0 +1,129 @@
+\section{Universal fragility}\label{sec:fragility}
+
+We now assemble the master theorem. The engine is the one-step criterion of \cite{advExt}: if the
+output is small, the gradient large, and the gradient stable along the attack segment, then a single
+gradient step crosses the decision boundary. The submatrix theory of \Cref{sec:gains} supplies the
+gradient facts, and \Cref{sec:small} supplies the small output; the content of this section is that
+the three fit together in the wide Gaussian regime for every architecture in the class, uniformly over
+inputs, with no further hypothesis.
+
+\subsection{The constructive engine}
+\begin{proposition}[One-step crossing; {\cite[Thm 4.1]{advExt}}]\label{prop:engine}
+Let $x_0\in\R^d$, let $a,C_g>0$, and let $f\in C^1$ on a neighborhood of the ball
+$\overline B(x_0,2a/C_g)$ with $f(x_0)\ne0$. Suppose
+\begin{enumerate}
+\item[(A1)] $|f(x_0)|\le a$;\qquad
+\item[(A2)] $\|\nabla f(x_0)\|\ge C_g$;\qquad
+\item[(A3)] $\|\nabla f(x')-\nabla f(x_0)\|\le C_g/3$ for all $\|x'-x_0\|\le 2a/C_g$.
+\end{enumerate}
+Then $x_1=x_0-\sgn(f(x_0))\,\dfrac{2a}{\|\nabla f(x_0)\|^2}\,\nabla f(x_0)$ satisfies
+$\sgn f(x_1)\ne\sgn f(x_0)$ and $\|x_1-x_0\|\le 2a/C_g$.
+\end{proposition}
+
+\begin{proof}
+Write $\sigma_0=\sgn f(x_0)$ and $\varphi(s)=\sigma_0 f(x_0-\sigma_0 s\,\nabla f(x_0))$. By the
+fundamental theorem of calculus and (A3), for $s\le 2a/\|\nabla f(x_0)\|^2$,
+$\varphi'(s)=-\langle\nabla f(x_0-\sigma_0 s\nabla f),\nabla f(x_0)\rangle\le-\|\nabla f(x_0)\|^2+\tfrac{C_g}{3}\|\nabla f(x_0)\|\le-\tfrac23\|\nabla f(x_0)\|^2$,
+using (A2). Integrating to $s^*=2a/\|\nabla f(x_0)\|^2$ gives
+$\varphi(s^*)\le\varphi(0)-\tfrac23\|\nabla f(x_0)\|^2 s^*=|f(x_0)|-\tfrac43 a\le a-\tfrac43a=-\tfrac13a<0$,
+so $\sigma_0 f(x_1)<0$; the step length is $\|x_1-x_0\|=2a/\|\nabla f(x_0)\|\le 2a/C_g$.
+\end{proof}
+
+The Taylor and dual-norm refinements of \cite{advExt} sharpen the constant $6$ implicit in the
+compatibility $a\le C_g^2/(6H)$ to $4$ or $2$ and give an $\ell_\infty$ signed-gradient
+(FGSM) certificate; we use the plain version and note the refinements where relevant.
+
+\subsection{The master theorem}
+\begin{theorem}[Universal fragility of wide Gaussian networks]\label{thm:master}
+Let $F$ be a network as in \Cref{sec:networks} --- fully connected with arbitrary biases,
+convolutional, a fixed-depth residual network, or a simplified vision transformer (\Cref{sec:arch}) ---
+with independent Gaussian weights in the signal-preserving normalization, a random readout
+$w\sim N(0,I_{n_L}/n_L)$, and any $[0,1]$-slope activation satisfying the nondegeneracy of
+\Cref{prop:gradlb} under \Cref{ass:nondeg}. Assume the wide regime $dL\log\bar n=o(\min_\ell n_\ell)$.
+Then there is a constant $C=C(L,c_0,c_1,c)$ such that, with high probability over the weights,
+\emph{simultaneously for every input $x$ on the sphere of radius $R$} with $F(x)\ne0$, the single
+gradient step of \Cref{prop:engine} applied to $F$ changes the sign of $F$, with Euclidean length
+\[
+  \|x_1-x\|\ \le\ C\,\|x\|\,\sqrt{\frac{d\log\bar n}{n_L}}.
+\]
+For any fixed input $x$ the length improves to $C\,\|x\|/\sqrt{n_L}$ (no $d\log\bar n$ factor).
+\end{theorem}
+
+\begin{proof}
+Fix the good event, of probability $1-o(1)$, on which the conclusions of \Cref{prop:readout,prop:gradlb,thm:stability}
+all hold uniformly over the sphere. On this event, for every $x$:
+\begin{itemize}
+\item[(A1)] $|F(x)|\le a:=C_1\|x\|\sqrt{(d\log\bar n)/n_L}$ by \Cref{prop:readout};
+\item[(A2)] $\|\nabla F(x)\|\ge C_g:=c_g\|w\|$ by \Cref{prop:gradlb}, and $\|w\|=1+o(1)$ w.h.p.;
+\item[(A3)] for $\|x'-x\|\le 2a/C_g$, \Cref{thm:stability} gives
+$\|\nabla F(x')-\nabla F(x)\|\le C\|w\|(\eta\log(1/\eta))^{1/2}$ with
+$\eta\asymp(2a/C_g)\sqrt{\bar n}/\|x\|\asymp\sqrt{(d\log\bar n)\,\bar n/n_L}\,/\,c_g$. In the wide
+regime this is $o(\|w\|)=o(C_g)$, so (A3) holds with room to spare once $\bar n\,d\log\bar n=o(n_L\,c_g^{2})$,
+which is the wide regime for the readout width; for square-width networks $\bar n\asymp n_L$ we use the
+sharpened stability radius, see \Cref{rem:widthcond}.
+\end{itemize}
+\Cref{prop:engine} then applies at every $x$, and the step length is $\|x_1-x\|\le 2a/C_g=
+C\|x\|\sqrt{(d\log\bar n)/n_L}$. For a single fixed $x$ the net is unnecessary and \Cref{prop:readout}
+gives $a=C_1\|x\|/\sqrt{n_L}$ directly, so the length is $C\|x\|/\sqrt{n_L}$.
+\end{proof}
+
+\begin{remark}[Width condition]\label{rem:widthcond}
+The clean statement asks $\bar n\,d\log\bar n=o(n_L)$ for the stability step to dominate uniformly.
+When all widths are comparable, $\bar n\asymp n_L\asymp n$, the naive form of (A3) is borderline; the
+Taylor-remainder version of the engine (\cite[Thm 4.6]{advExt}, compatibility constant $2$ and only the
+attack-line curvature) needs only $\|\nabla F(x')-\nabla F(x)\|=o(\|\nabla F\|)$ \emph{along the
+segment}, which the directional form of \Cref{thm:stability} gives whenever $d\log n=o(n)$. So the
+theorem holds in the standard wide regime $d\log n=o(n)$; we state the operator-norm form for
+transparency.
+\end{remark}
+
+\begin{remark}[The scale]\label{rem:scale}
+For a fixed input the radius $C\|x\|/\sqrt{n_L}$ matches the $\tilde O(\|x\|/\sqrt d)$ of
+\cite{danielyS20} when the readout width tracks the input dimension, and the
+$c\sqrt{\log(1/\delta)/d}$ of \cite{bartlettBC21}, but with three differences: the activation is any
+$[0,1]$-slope function rather than ReLU only; the biases are arbitrary; and the constant in the depth
+dependence is controlled by \Cref{prop:gradlb} rather than left exponential. The uniform-over-inputs
+version, with its extra $\sqrt{d\log\bar n}$, is the price of ``every $x$ at once'' and is what the
+arrangement bound of \Cref{lem:arrangement} makes affordable.
+\end{remark}
+
+\subsection{Multiclass}
+For a multiclass network $F(x)=\arg\max_j\langle w_j,h_L(x)\rangle$ the attack targets the margin
+against a fixed competitor.
+
+\begin{theorem}[Multiclass fragility]\label{thm:multiclass}
+Under the hypotheses of \Cref{thm:master} with $K$ classes and independent random readouts
+$w_j\sim N(0,I/n_L)$, w.h.p.\ simultaneously for every $x$ on the sphere with predicted class
+$j=F(x)$ there is a competitor $c\ne j$ and a single gradient step on the margin
+$m_{j,c}(x)=\langle w_j-w_c,h_L(x)\rangle$ of length
+$\|x_1-x\|\le C\|x\|\sqrt{(d\log(Kn))/n_L}$ with $F(x_1)\ne j$.
+\end{theorem}
+
+\begin{proof}
+The margin $m_{j,c}$ is a network of the same class with readout $w_j-w_c\sim N(0,2I/n_L)$, so
+\Cref{prop:readout} bounds $|m_{j,c(x)}(x)|$ for the runner-up $c(x)$ (the class with the largest
+$\langle w_c,h_L\rangle$ below $j$) --- indeed for the runner-up the margin is the smallest positive
+one, hence $\le C\|x\|\sqrt{(d\log(Kn))/n_L}$ by a union bound over the $K$ competitors --- while the
+gradient lower bound and stability apply to $m_{j,c}$ verbatim. \Cref{prop:engine} on $m_{j,c}$ then
+crosses $m_{j,c}=0$, at which point $c$ overtakes $j$. Uniformity is by the same net, with the extra
+$\log K$ absorbed.
+\end{proof}
+
+\subsection{Dual norms}
+The $\ell_2$ step is not the only one: the same three ingredients give an $\ell_\infty$ (signed
+gradient) attack, which is the threat model of most empirical work.
+
+\begin{corollary}[$\ell_\infty$ fragility]\label{cor:linf}
+Under the hypotheses of \Cref{thm:master}, w.h.p.\ simultaneously for every $x$ the signed-gradient
+step $x_1=x-\sgn(F(x))\,\tfrac{2a}{\|\nabla F(x)\|_1}\sgn(\nabla F(x))$ changes the sign of $F$, with
+$\|x_1-x\|_\infty\le 2a/\|\nabla F(x)\|_1$. Since $\|\nabla F(x)\|_1\ge\|\nabla F(x)\|_2\ge c_g\|w\|$
+and typically $\|\nabla F\|_1\asymp\sqrt d\,\|\nabla F\|_2$, the $\ell_\infty$ radius is
+$O\!\bigl(\|x\|\sqrt{\log\bar n}/(\sqrt{n_L}\,)\bigr)$ per coordinate.
+\end{corollary}
+
+\begin{proof}
+Apply the dual-norm engine \cite[Thm 4.7, Cor 4.8]{advExt} with $\|\cdot\|_{\mathcal X}=\ell_\infty$,
+dual $\ell_1$, curvature bounded along the signed-gradient segment by \Cref{thm:stability}; the
+compatibility $2a\,H_\infty<\|\nabla F\|_1^2$ holds because $a=o(1)$ while $\|\nabla F\|_1\ge c_g$ and
+$H_\infty=o(1)$ in the wide regime.
+\end{proof}
